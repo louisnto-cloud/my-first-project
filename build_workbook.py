@@ -24,7 +24,7 @@ from openpyxl.chart import LineChart, BarChart, Reference
 OUT_PATH = "/home/user/my-first-project/MUV_BC_Launch_Forecast_13wk.xlsx"
 
 # Constants
-SKUS = ["Performance", "Daily", "Energy"]
+SKUS = ["Lime Lemon", "Pineapple Passion Fruit", "Raspberry"]
 TIERS = ["A", "B", "C"]
 REGIONS = ["Lower Mainland", "Vancouver Island", "Interior", "North"]
 WEEKS = list(range(1, 14))  # W1..W13
@@ -110,13 +110,14 @@ def generate_doors(n=100):
         city = cities[i % len(cities)]
         tier = tier_cycle[i]
         store_name = f"{banner_short} {city} {(i % 9) + 1:02d}"
-        # SKU authorization heuristic: Tier A all three, Tier B Performance+Daily, Tier C Performance only with some variation
+        # Flavor authorization heuristic: Tier A all three, Tier B Lime Lemon and Pineapple,
+        # Tier C Lime Lemon plus rotation of one of the other two.
         if tier == "A":
-            perf, daily, energy = "Y", "Y", "Y"
+            lime, pineapple, raspberry = "Y", "Y", "Y"
         elif tier == "B":
-            perf, daily, energy = "Y", "Y", ("Y" if i % 3 == 0 else "N")
+            lime, pineapple, raspberry = "Y", "Y", ("Y" if i % 3 == 0 else "N")
         else:
-            perf, daily, energy = "Y", ("Y" if i % 2 == 0 else "N"), "N"
+            lime, pineapple, raspberry = "Y", ("Y" if i % 2 == 0 else "N"), ("Y" if i % 3 == 0 else "N")
         # Launch week: Tier A in week 1, Tier B weeks 1 to 3, Tier C weeks 2 to 5
         if tier == "A":
             launch = 1
@@ -124,7 +125,7 @@ def generate_doors(n=100):
             launch = 1 + (i % 3)
         else:
             launch = 2 + (i % 4)
-        rows.append([door_id, banner_full, store_name, city, region, tier, perf, daily, energy, launch])
+        rows.append([door_id, banner_full, store_name, city, region, tier, lime, pineapple, raspberry, launch])
     return rows
 
 
@@ -153,8 +154,8 @@ def build_inputs(wb):
     ws["C8"] = "COGS per case"
     ws["D8"] = "Source note"
     style_header_row(ws, 8, 4)
-    wholesale_defaults = {"Performance": 36.00, "Daily": 34.00, "Energy": 38.00}
-    cogs_defaults = {"Performance": 18.50, "Daily": 17.25, "Energy": 19.50}
+    wholesale_defaults = {"Lime Lemon": 36.00, "Pineapple Passion Fruit": 36.00, "Raspberry": 36.00}
+    cogs_defaults = {"Lime Lemon": 18.50, "Pineapple Passion Fruit": 18.50, "Raspberry": 18.50}
     for i, sku in enumerate(SKUS):
         r = 9 + i
         ws.cell(row=r, column=1, value=sku)
@@ -190,9 +191,9 @@ def build_inputs(wb):
         ws.cell(row=18, column=2 + j, value=sku)
     style_header_row(ws, 18, 4)
     velocity_defaults = {
-        "A": {"Performance": 18, "Daily": 14, "Energy": 12},
-        "B": {"Performance": 10, "Daily": 8, "Energy": 6},
-        "C": {"Performance": 6, "Daily": 4, "Energy": 3},
+        "A": {"Lime Lemon": 16, "Pineapple Passion Fruit": 14, "Raspberry": 12},
+        "B": {"Lime Lemon": 10, "Pineapple Passion Fruit": 8, "Raspberry": 7},
+        "C": {"Lime Lemon": 5, "Pineapple Passion Fruit": 4, "Raspberry": 3},
     }
     for i, tier in enumerate(TIERS):
         r = 19 + i
@@ -229,7 +230,7 @@ def build_inputs(wb):
     ws["C30"] = "Shopify DTC"
     ws["D30"] = "Source note"
     style_header_row(ws, 30, 4)
-    online_defaults = {"Performance": (180, 90), "Daily": (140, 70), "Energy": (110, 55)}
+    online_defaults = {"Lime Lemon": (160, 80), "Pineapple Passion Fruit": (140, 70), "Raspberry": (120, 60)}
     for i, sku in enumerate(SKUS):
         r = 31 + i
         ws.cell(row=r, column=1, value=sku)
@@ -256,7 +257,7 @@ def build_doors(wb, doors):
     ws["A2"].font = NOTE_FONT
 
     headers = ["Door ID", "Banner", "Store Name", "City", "Region", "Tier",
-               "Performance Auth", "Daily Auth", "Energy Auth", "Launch Week"]
+               "Lime Lemon Auth", "Pineapple Passion Fruit Auth", "Raspberry Auth", "Launch Week"]
     for j, h in enumerate(headers, start=1):
         ws.cell(row=4, column=j, value=h)
     style_header_row(ws, 4, len(headers))
@@ -287,12 +288,12 @@ def build_doors(wb, doors):
     wb.defined_names["DOORS_NAME"] = DefinedName("DOORS_NAME", attr_text=f"Doors!$C$5:$C${last}")
     wb.defined_names["DOORS_REGION"] = DefinedName("DOORS_REGION", attr_text=f"Doors!$E$5:$E${last}")
     wb.defined_names["DOORS_TIER"] = DefinedName("DOORS_TIER", attr_text=f"Doors!$F$5:$F${last}")
-    wb.defined_names["DOORS_PERF"] = DefinedName("DOORS_PERF", attr_text=f"Doors!$G$5:$G${last}")
-    wb.defined_names["DOORS_DAILY"] = DefinedName("DOORS_DAILY", attr_text=f"Doors!$H$5:$H${last}")
-    wb.defined_names["DOORS_ENERGY"] = DefinedName("DOORS_ENERGY", attr_text=f"Doors!$I$5:$I${last}")
+    wb.defined_names["DOORS_LIMELEMON"] = DefinedName("DOORS_LIMELEMON", attr_text=f"Doors!$G$5:$G${last}")
+    wb.defined_names["DOORS_PINEAPPLE"] = DefinedName("DOORS_PINEAPPLE", attr_text=f"Doors!$H$5:$H${last}")
+    wb.defined_names["DOORS_RASPBERRY"] = DefinedName("DOORS_RASPBERRY", attr_text=f"Doors!$I$5:$I${last}")
     wb.defined_names["DOORS_LAUNCH"] = DefinedName("DOORS_LAUNCH", attr_text=f"Doors!$J$5:$J${last}")
 
-    set_col_widths(ws, [10, 26, 26, 18, 18, 8, 16, 14, 14, 14])
+    set_col_widths(ws, [10, 26, 26, 18, 18, 8, 16, 28, 14, 14])
     ws.freeze_panes = "A5"
     ws.sheet_view.showGridLines = False
     return ws
@@ -307,7 +308,8 @@ def build_activations(wb):
     title(ws, "Activation calendar")
     ws["A2"] = (
         "One row per event. Door Scope accepts ALL, TIER_A, TIER_B, TIER_C, or a specific Door ID. "
-        "SKU Scope accepts ALL, Performance, Daily, or Energy. Multiple tiers or SKUs need multiple rows."
+        "SKU Scope accepts ALL, Lime Lemon, Pineapple Passion Fruit, or Raspberry. "
+        "Multiple tiers or flavors need multiple rows."
     )
     ws["A2"].font = NOTE_FONT
 
@@ -335,7 +337,7 @@ def build_activations(wb):
         formula1='"in store demo,retailer sampling,influencer drop,paid social burst,retailer feature,festival sampling"',
         allow_blank=True,
     )
-    dv_sku_scope = DataValidation(type="list", formula1='"ALL,Performance,Daily,Energy"', allow_blank=True)
+    dv_sku_scope = DataValidation(type="list", formula1='"ALL,Lime Lemon,Pineapple Passion Fruit,Raspberry"', allow_blank=True)
     dv_week_range = DataValidation(type="whole", operator="between", formula1=1, formula2=13, allow_blank=True)
     for dv in [dv_type, dv_sku_scope, dv_week_range]:
         ws.add_data_validation(dv)
@@ -371,7 +373,7 @@ def build_bulk_edit(wb):
     title(ws, "Bulk velocity overrides")
     ws["A2"] = (
         "Each enabled row overrides matching Velocity Grid cells. Last matching enabled row wins. "
-        "Tier accepts A, B, C, or ALL. SKU accepts Performance, Daily, Energy, or ALL. "
+        "Tier accepts A, B, C, or ALL. SKU accepts Lime Lemon, Pineapple Passion Fruit, Raspberry, or ALL. "
         "Use to push a flat value into many cells without hand editing the grid."
     )
     ws["A2"].font = NOTE_FONT
@@ -392,7 +394,7 @@ def build_bulk_edit(wb):
     # Validations
     dv_yn = DataValidation(type="list", formula1='"Y,N"', allow_blank=True)
     dv_tier = DataValidation(type="list", formula1='"A,B,C,ALL"', allow_blank=True)
-    dv_sku = DataValidation(type="list", formula1='"Performance,Daily,Energy,ALL"', allow_blank=True)
+    dv_sku = DataValidation(type="list", formula1='"Lime Lemon,Pineapple Passion Fruit,Raspberry,ALL"', allow_blank=True)
     dv_week = DataValidation(type="whole", operator="between", formula1=1, formula2=13, allow_blank=True)
     for dv in [dv_yn, dv_tier, dv_sku, dv_week]:
         ws.add_data_validation(dv)
@@ -440,9 +442,9 @@ def build_scenarios(wb):
     for j, h in enumerate(headers, start=1):
         ws.cell(row=8, column=j, value=h)
     style_header_row(ws, 8, len(headers))
-    defaults = {"Performance": (0.85, 1.00, 1.15),
-                "Daily": (0.85, 1.00, 1.15),
-                "Energy": (0.80, 1.00, 1.20)}
+    defaults = {"Lime Lemon": (0.85, 1.00, 1.15),
+                "Pineapple Passion Fruit": (0.85, 1.00, 1.15),
+                "Raspberry": (0.80, 1.00, 1.20)}
     for i, sku in enumerate(SKUS):
         r = 9 + i
         ws.cell(row=r, column=1, value=sku)
@@ -537,7 +539,7 @@ def build_velocity_grid(wb, doors):
             ws.cell(row=row_idx, column=6, value=f"=Doors!$F${doors_row}")
             ws.cell(row=row_idx, column=7, value=sku)
             # Authorized lookup
-            auth_col = {"Performance": "G", "Daily": "H", "Energy": "I"}[sku]
+            auth_col = {"Lime Lemon": "G", "Pineapple Passion Fruit": "H", "Raspberry": "I"}[sku]
             ws.cell(row=row_idx, column=8, value=f"=Doors!${auth_col}${doors_row}")
             ws.cell(row=row_idx, column=9, value=f"=Doors!$J${doors_row}")
 
@@ -673,7 +675,7 @@ def build_online_forecast(wb):
     style_header_row(ws, 4, len(headers))
 
     row = 5
-    sku_idx_for_online = {"Performance": 1, "Daily": 2, "Energy": 3}
+    sku_idx_for_online = {"Lime Lemon": 1, "Pineapple Passion Fruit": 2, "Raspberry": 3}
     for sku in SKUS:
         sku_i = sku_idx_for_online[sku]
         for ch in ["Amazon.ca", "Shopify DTC"]:
@@ -746,8 +748,9 @@ def build_weekly_forecast(wb, vg_last_row):
 
     # Section A: by Week
     style_section(ws, 4, 1, "By week")
-    headers = ["Week", "Performance units", "Daily units", "Energy units",
-               "Total units", "Performance cases", "Daily cases", "Energy cases", "Total cases"]
+    headers = ["Week",
+               f"{SKUS[0]} units", f"{SKUS[1]} units", f"{SKUS[2]} units", "Total units",
+               f"{SKUS[0]} cases", f"{SKUS[1]} cases", f"{SKUS[2]} cases", "Total cases"]
     for j, h in enumerate(headers, start=1):
         ws.cell(row=5, column=j, value=h)
     style_header_row(ws, 5, len(headers))
@@ -894,7 +897,7 @@ def build_weekly_forecast(wb, vg_last_row):
         attr_text=f"'Weekly Forecast'!${get_column_letter(2+len(WEEKS))}${sb_start+2}:${get_column_letter(2+len(WEEKS))}${sb_start+1+len(SKUS)}"
     )
 
-    set_col_widths(ws, [22, 16, 16, 16, 14, 16, 14, 14, 14, 12, 12, 12, 12, 12, 12])
+    set_col_widths(ws, [22, 18, 26, 16, 14, 18, 26, 16, 14, 12, 12, 12, 12, 12, 12])
     ws.sheet_view.showGridLines = False
     return ws, tot_r
 
@@ -1112,10 +1115,10 @@ def build_risk_flags(wb, vg_last_row, n_doors):
         "Door rows exist but launch week is blank. Velocity Grid treats blanks as week zero and forecasts zero.",
     ))
     checks.append((
-        "Doors with no SKU authorized",
-        '=SUMPRODUCT((DOORS_ID<>"")*(DOORS_PERF<>"Y")*(DOORS_DAILY<>"Y")*(DOORS_ENERGY<>"Y"))',
+        "Doors with no flavor authorized",
+        '=SUMPRODUCT((DOORS_ID<>"")*(DOORS_LIMELEMON<>"Y")*(DOORS_PINEAPPLE<>"Y")*(DOORS_RASPBERRY<>"Y"))',
         ">0",
-        "Door rows where Performance, Daily, and Energy are all set to N.",
+        "Door rows where Lime Lemon, Pineapple Passion Fruit, and Raspberry are all set to N.",
     ))
 
     # Enabled bulk edit rule count for visibility
@@ -1194,9 +1197,9 @@ def build_dashboard(wb):
     # Scenario multiplier panel
     style_section(ws, 4, 4, "Scenario multipliers")
     ws["D5"] = "Scenario"
-    ws["E5"] = "Performance"
-    ws["F5"] = "Daily"
-    ws["G5"] = "Energy"
+    ws["E5"] = "Lime Lemon"
+    ws["F5"] = "Pineapple"
+    ws["G5"] = "Raspberry"
     style_header_row(ws, 5, 4, start_col=4)
     for i, scen in enumerate(["Conservative", "Base", "Stretch"]):
         r = 6 + i
