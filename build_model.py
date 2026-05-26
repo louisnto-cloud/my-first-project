@@ -1,27 +1,28 @@
 """
-Build the enterprise-grade Costco UK Bee Propolis ROI model.
+Build the enterprise-grade Costco UK Bee Propolis ROI model (v3).
 
-Design principles:
-  - Single source of truth: every assumption lives on the Inputs sheet (yellow cells).
-  - Three scenarios (BEST / IDEAL / WORST) share the same formula structure;
-    they only differ in the per-week promo activity & lift the user sets.
-  - Every assumption has a Notes column so anyone can defend the number.
-  - Summary sheet rolls everything up into KPIs (Revenue, GP, GP%, Promo Spend,
-    Net Profit, ROI on Promo Spend) for a side-by-side comparison.
+v3 changes vs v2:
+  - Weeks renumbered W1..W26 (was W2..W27).
+  - New "Test Start Date (Week 1)" input drives a calendar-date sub-header
+    on every week header (Inputs grids and Forecast).
+  - Every calculated input cell now has an Override (col D) next to it.
+    Calc cell uses IF(override blank, formula, override) so users can
+    hand-set Gross Margin/unit, GM%, Base Units/Week, Demo Total £/Week,
+    End Cap Total £/Week without breaking the model.
 """
 
 import openpyxl
+from datetime import date
 from openpyxl.styles import Font, PatternFill, Border, Side, Alignment
 from openpyxl.utils import get_column_letter
-from openpyxl.workbook.defined_name import DefinedName
-from openpyxl.formatting.rule import CellIsRule, FormulaRule
+from openpyxl.formatting.rule import CellIsRule
 
 # --- Styling ------------------------------------------------------------------
 NAVY = "1F4E78"
 BLUE = "2E75B6"
 LIGHT_BLUE = "DDEBF7"
-YELLOW = "FFF2CC"   # input cells
-GREY = "F2F2F2"     # calc cells
+YELLOW = "FFF2CC"
+GREY = "F2F2F2"
 WHITE = "FFFFFF"
 GREEN = "C6EFCE"
 RED = "FFC7CE"
@@ -30,7 +31,6 @@ DARK_GREY = "595959"
 thin = Side(border_style="thin", color="BFBFBF")
 medium = Side(border_style="medium", color=NAVY)
 box = Border(left=thin, right=thin, top=thin, bottom=thin)
-box_bottom = Border(bottom=medium)
 
 f_title = Font(name="Calibri", size=18, bold=True, color=WHITE)
 f_section = Font(name="Calibri", size=12, bold=True, color=WHITE)
@@ -41,6 +41,7 @@ f_calc = Font(name="Calibri", size=11)
 f_note = Font(name="Calibri", size=10, italic=True, color=DARK_GREY)
 f_kpi_val = Font(name="Calibri", size=14, bold=True, color=NAVY)
 f_kpi_label = Font(name="Calibri", size=10, bold=True, color=DARK_GREY)
+f_col_hdr = Font(name="Calibri", size=10, bold=True, color=DARK_GREY)
 
 fill_title = PatternFill("solid", fgColor=NAVY)
 fill_section = PatternFill("solid", fgColor=BLUE)
@@ -59,25 +60,21 @@ FMT_GBP_DEC = '_-£* #,##0.00_-;[Red]-£* #,##0.00_-;_-£* "-"??_-;_-@_-'
 FMT_INT = "#,##0"
 FMT_PCT = "0.0%"
 FMT_MULT = '0.0"x"'
+FMT_DATE = "dd-mmm"
+FMT_DATE_LONG = "dd-mmm-yyyy"
 
-WEEKS = 26  # Week 2 through Week 27 (matches original test horizon)
-FIRST_WEEK_NUM = 2
+WEEKS = 26
+FIRST_WEEK_NUM = 1
+DEFAULT_START_DATE = date(2026, 1, 12)  # Monday
 
 SCENARIOS = [
     {
         "key": "BEST",
         "name": "BEST – x2 Demo (Wks 5-6) + TPD",
-        "color": GREEN,
         "promo": {
-            # promo type -> list of week numbers where active (using Week 2..27 numbering)
-            "Demo":     [5, 6],
-            "End Cap":  [],
-            "Fence":    [],
-            "TPD":      [5, 6],
-            "Markdown": [],
-            "Advert":   [],
+            "Demo": [5, 6], "End Cap": [], "Fence": [],
+            "TPD": [5, 6], "Markdown": [], "Advert": [],
         },
-        # week_num -> lift multiplier vs base demand
         "lift_overrides": {5: 3.0, 6: 3.0},
         "justification": (
             "Two national demo weekends combined with a TPD price promo. "
@@ -88,14 +85,9 @@ SCENARIOS = [
     {
         "key": "IDEAL",
         "name": "IDEAL – x2 Demo + End Cap (Wks 5-6) + TPD",
-        "color": LIGHT_BLUE,
         "promo": {
-            "Demo":     [5, 6],
-            "End Cap":  [5, 6],
-            "Fence":    [],
-            "TPD":      [5, 6],
-            "Markdown": [],
-            "Advert":   [],
+            "Demo": [5, 6], "End Cap": [5, 6], "Fence": [],
+            "TPD": [5, 6], "Markdown": [], "Advert": [],
         },
         "lift_overrides": {5: 3.6, 6: 3.6},
         "justification": (
@@ -107,14 +99,9 @@ SCENARIOS = [
     {
         "key": "WORST",
         "name": "WORST – Demo+EndCap+TPD then Markdown (Wks 18-20)",
-        "color": RED,
         "promo": {
-            "Demo":     [5, 6],
-            "End Cap":  [5, 6],
-            "Fence":    [],
-            "TPD":      [5, 6],
-            "Markdown": [18, 19, 20],
-            "Advert":   [],
+            "Demo": [5, 6], "End Cap": [5, 6], "Fence": [],
+            "TPD": [5, 6], "Markdown": [18, 19, 20], "Advert": [],
         },
         "lift_overrides": {5: 3.0, 6: 3.0, 18: 1.0, 19: 0.3, 20: 8.7},
         "justification": (
@@ -137,15 +124,12 @@ wb.remove(wb.active)
 # =============================================================================
 readme = wb.create_sheet("README")
 readme.sheet_view.showGridLines = False
-
 readme.column_dimensions["A"].width = 4
 readme.column_dimensions["B"].width = 110
 
-readme.merge_cells("B2:B2")
 readme["B2"] = "Costco UK – Bee Propolis Spray 30ml x 2 Pack"
 readme["B2"].font = Font(name="Calibri", size=20, bold=True, color=NAVY)
-
-readme["B3"] = "Market Test ROI Model – v2.0"
+readme["B3"] = "Market Test ROI Model – v3.0"
 readme["B3"].font = Font(name="Calibri", size=12, italic=True, color=DARK_GREY)
 
 readme["B5"] = "HOW TO USE THIS MODEL"
@@ -158,20 +142,27 @@ instructions = [
     "1.  Open the 'Inputs' sheet. Only the YELLOW cells are editable – everything else is calculated.",
     "",
     "2.  Inputs are grouped into four blocks:",
-    "      •  Product & Distribution – test horizon and number of warehouses.",
+    "      •  Product & Distribution – SKU, Test Start Date (Week 1), warehouses, test horizon.",
     "      •  Pricing & Cost – selling price, landed cost (gross margin recalculates automatically).",
     "      •  Base Demand – organic units sold per warehouse per week with no promo support.",
     "      •  Promo Economics – cost per warehouse for Demo / End Cap / Fence / Advertising, "
     "plus the TPD and Markdown discount %.",
     "",
-    "3.  Each of the three scenarios (BEST / IDEAL / WORST) has its own activity grid on the Inputs sheet. "
+    "3.  OVERRIDES (column D). Any cell with a yellow 'Override (opt.)' next to it can be hand-set: "
+    "leave blank to use the calculated value, or type a number to force a specific value. "
+    "This applies to Gross Margin/unit, GM %, Base Units/Week, Demo Total £/Week, and End Cap Total £/Week.",
+    "",
+    "4.  DATES. Set the 'Test Start Date (Week 1)' on Inputs and every week column on every sheet "
+    "shows the week-commencing date automatically. Change one cell, everything updates.",
+    "",
+    "5.  Each of the three scenarios (BEST / IDEAL / WORST) has its own activity grid on the Inputs sheet. "
     "For every week, tick (1) or leave blank (0) for each promo lever, and set the demand lift multiplier. "
     "Base demand is multiplied by the lift to get that week's units.",
     "",
-    "4.  The 'Forecast' sheet shows the week-by-week P&L for each scenario, fully driven off Inputs. "
+    "6.  The 'Forecast' sheet shows the week-by-week P&L for each scenario, fully driven off Inputs. "
     "Do not edit this sheet – it will rebuild itself when Inputs change.",
     "",
-    "5.  The 'Summary' sheet rolls everything up into the six numbers leadership cares about: "
+    "7.  The 'Summary' sheet rolls everything up into the six numbers leadership cares about: "
     "Revenue, Gross Profit, Gross Margin %, Promo Spend, Net Profit, and ROI on Promo Spend.",
     "",
     "",
@@ -202,10 +193,14 @@ concepts = [
     ("Markdown Cost", "Clearance price reduction modelled as % of revenue in the weeks markdown is active."),
     ("ROI on Promo Spend", "Net Profit ÷ Promo Spend. Tells you what every £1 of promo investment "
      "returned. Negative = the promo plan destroyed value."),
+    ("Override (col D)", "Optional manual value next to any calculated cell. Type a number to force the "
+     "model to use that figure instead of the formula result. Leave blank to use the formula. "
+     "Note: overrides on Gross Margin/unit and GM % are display-only (Forecast uses Selling Price "
+     "and Cost Price directly). Overrides on Base Units/Week, Demo Total, and End Cap Total flow into Forecast."),
 ]
 for label, desc in concepts:
     readme.cell(row=row, column=2, value=f"•  {label} — {desc}").alignment = top_wrap
-    readme.row_dimensions[row].height = 38
+    readme.row_dimensions[row].height = 42
     row += 1
 
 row += 1
@@ -229,14 +224,12 @@ for label, color, desc in key_legend:
 inp = wb.create_sheet("Inputs")
 inp.sheet_view.showGridLines = False
 
-# Column widths
 inp.column_dimensions["A"].width = 2
 inp.column_dimensions["B"].width = 38
 inp.column_dimensions["C"].width = 16
-inp.column_dimensions["D"].width = 4
-inp.column_dimensions["E"].width = 70
+inp.column_dimensions["D"].width = 16   # Override column
+inp.column_dimensions["E"].width = 70   # Notes
 
-# Title row
 inp.merge_cells("B2:E2")
 t = inp["B2"]
 t.value = "INPUTS & ASSUMPTIONS — change yellow cells only"
@@ -245,10 +238,21 @@ t.fill = fill_title
 t.alignment = center
 inp.row_dimensions[2].height = 32
 
+# Sub-header explaining columns
+inp["B3"] = "Field"
+inp["C3"] = "Value"
+inp["D3"] = "Override (opt.)"
+inp["E3"] = "Notes / justification"
+for col in ("B3", "C3", "D3", "E3"):
+    inp[col].font = f_col_hdr
+    inp[col].alignment = left if col == "B3" or col == "E3" else center
+    inp[col].fill = fill_calc
+    inp[col].border = box
 
-def section_header(ws, row, text, span=("B", "E")):
-    ws.merge_cells(f"{span[0]}{row}:{span[1]}{row}")
-    c = ws[f"{span[0]}{row}"]
+
+def section_header(ws, row, text, span_start="B", span_end="E"):
+    ws.merge_cells(f"{span_start}{row}:{span_end}{row}")
+    c = ws[f"{span_start}{row}"]
     c.value = text
     c.font = f_section
     c.fill = fill_section
@@ -256,20 +260,44 @@ def section_header(ws, row, text, span=("B", "E")):
     ws.row_dimensions[row].height = 22
 
 
-def input_row(ws, row, label, value, note, fmt=None, formula=False):
+def input_row(ws, row, label, value, note, fmt=None, is_input=True, override=False):
+    """
+    is_input=True  : col C is a direct yellow input (no formula, no override col)
+    is_input=False : col C is a formula (calc, grey); if override=True, col D
+                     is a yellow override input and col C wraps with IF(D="",..,D)
+                     -- caller should pass the FORMULA fragment as `value` (no leading =)
+    """
     ws.cell(row=row, column=2, value=label).font = f_label
     ws.cell(row=row, column=2).alignment = left
-    vc = ws.cell(row=row, column=3, value=value)
-    if formula:
-        vc.font = f_calc
-        vc.fill = fill_calc
-    else:
+
+    vc = ws.cell(row=row, column=3)
+    if is_input:
+        vc.value = value
         vc.font = f_input
         vc.fill = fill_input
+    elif override:
+        d_letter = get_column_letter(4)
+        vc.value = f'=IF({d_letter}{row}="",{value},{d_letter}{row})'
+        vc.font = f_calc
+        vc.fill = fill_calc
+        # Override cell
+        oc = ws.cell(row=row, column=4, value=None)
+        oc.font = f_input
+        oc.fill = fill_input
+        oc.alignment = right
+        oc.border = box
+        if fmt:
+            oc.number_format = fmt
+    else:
+        vc.value = f"={value}"
+        vc.font = f_calc
+        vc.fill = fill_calc
+
     vc.alignment = right
     vc.border = box
     if fmt:
         vc.number_format = fmt
+
     nc = ws.cell(row=row, column=5, value=note)
     nc.font = f_note
     nc.alignment = top_wrap
@@ -278,94 +306,105 @@ def input_row(ws, row, label, value, note, fmt=None, formula=False):
 
 
 # --- Section 1: Product & Distribution ---------------------------------------
-section_header(inp, 4, "1.  Product & Distribution")
-input_row(inp, 5, "SKU", "Bee Propolis Spray 30ml x 2",
-          "Costco UK market test SKU.")
-input_row(inp, 6, "Test Warehouses", 20,
-          "Number of Costco UK warehouses included in the market test.", FMT_INT)
-input_row(inp, 7, "Test Period (Weeks)", WEEKS,
-          f"Forecast horizon. Model is built for {WEEKS} weeks (Week {FIRST_WEEK_NUM} through Week {FIRST_WEEK_NUM+WEEKS-1}).", FMT_INT)
+section_header(inp, 5, "1.  Product & Distribution")
+input_row(inp, 6, "SKU", "Bee Propolis Spray 30ml x 2",
+          "Costco UK market test SKU.", is_input=True)
+input_row(inp, 7, "Test Start Date (Week 1)", DEFAULT_START_DATE,
+          "Week-commencing date of W1. Every week header on every sheet uses this as the anchor.",
+          fmt=FMT_DATE_LONG, is_input=True)
+input_row(inp, 8, "Test Warehouses", 20,
+          "Number of Costco UK warehouses included in the market test.", fmt=FMT_INT, is_input=True)
+input_row(inp, 9, "Test Period (Weeks)", WEEKS,
+          f"Forecast horizon. Model is built for {WEEKS} weeks (W1 through W{WEEKS}).",
+          fmt=FMT_INT, is_input=True)
 
-# Named references
-WH_CELL = "Inputs!$C$6"
-PERIOD_CELL = "Inputs!$C$7"
+START_DATE_CELL = "Inputs!$C$7"
+WH_CELL = "Inputs!$C$8"
+PERIOD_CELL = "Inputs!$C$9"
 
 # --- Section 2: Pricing & Cost ------------------------------------------------
-section_header(inp, 9, "2.  Pricing & Cost (per unit, £)")
-input_row(inp, 10, "Selling Price (MSRP)", 15.99, "Retail price to member per 30ml x 2 pack.", FMT_GBP_DEC)
-input_row(inp, 11, "Cost Price (landed)", 7.29, "Brand's cost to Costco delivered to depot.", FMT_GBP_DEC)
-input_row(inp, 12, "Gross Margin per unit", "=C10-C11",
-          "Calculated. Selling price less landed cost.", FMT_GBP_DEC, formula=True)
-input_row(inp, 13, "Gross Margin %", "=IFERROR((C10-C11)/C10,0)",
-          "Calculated. Healthy supplements benchmark is 45-60%.", FMT_PCT, formula=True)
+section_header(inp, 11, "2.  Pricing & Cost (per unit, £)")
+input_row(inp, 12, "Selling Price (MSRP)", 15.99,
+          "Retail price to member per 30ml x 2 pack.", fmt=FMT_GBP_DEC, is_input=True)
+input_row(inp, 13, "Cost Price (landed)", 7.29,
+          "Brand's cost to Costco delivered to depot.", fmt=FMT_GBP_DEC, is_input=True)
+input_row(inp, 14, "Gross Margin per unit", "C12-C13",
+          "Calculated: Selling Price - Cost Price. Override is display-only "
+          "(Forecast uses SP and Cost directly).",
+          fmt=FMT_GBP_DEC, is_input=False, override=True)
+input_row(inp, 15, "Gross Margin %", "IFERROR((C12-C13)/C12,0)",
+          "Calculated: GP/SP. Healthy supplements benchmark 45-60%. "
+          "Override is display-only.",
+          fmt=FMT_PCT, is_input=False, override=True)
 
-PRICE_CELL = "Inputs!$C$10"
-COST_CELL = "Inputs!$C$11"
+PRICE_CELL = "Inputs!$C$12"
+COST_CELL = "Inputs!$C$13"
 
 # --- Section 3: Base Demand ---------------------------------------------------
-section_header(inp, 15, "3.  Base Demand (no promo support)")
-input_row(inp, 16, "Units / Warehouse / Week", 13.79,
-          "Equivalent to the original assumption '500 × 0.8 / 29' from the prior 30ml SKU test "
+section_header(inp, 17, "3.  Base Demand (no promo support)")
+input_row(inp, 18, "Units / Warehouse / Week", 13.79,
+          "Equivalent to original '500 × 0.8 / 29' from prior 30ml SKU test "
           "(500 lifetime units × 80% sell-through over a 29-week reference window).",
-          FMT_INT)
-input_row(inp, 17, "Base Units / Week (all warehouses)", f"=C16*{WH_CELL.split('!')[1]}",
-          "Calculated. Per-warehouse rate × number of warehouses.", FMT_INT, formula=True)
+          fmt="#,##0.00", is_input=True)
+input_row(inp, 19, "Base Units / Week (all warehouses)", f"C18*{WH_CELL.split('!')[1]}",
+          "Calculated: Per-warehouse rate × number of warehouses. "
+          "OVERRIDE to set the all-warehouse weekly base directly (flows into Forecast).",
+          fmt=FMT_INT, is_input=False, override=True)
 
-BASE_UNITS_CELL = "Inputs!$C$17"
+BASE_UNITS_CELL = "Inputs!$C$19"
 
 # --- Section 4: Promo Economics ----------------------------------------------
-section_header(inp, 19, "4.  Promo Economics")
-input_row(inp, 20, "Demo £ / warehouse / week", 199,
-          "Costco UK standard demo rate per warehouse per weekend.", FMT_GBP)
-input_row(inp, 21, "Demo cost factor (overhead × staffing)", 1.86,
-          "Multiplier on raw demo fee to capture staffing, POS print & overhead.", FMT_MULT)
-input_row(inp, 22, "Demo Total £ / week", f"=C20*{WH_CELL.split('!')[1]}*C21",
-          "Calculated. Demo rate × warehouses × cost factor.", FMT_GBP, formula=True)
-input_row(inp, 23, "End Cap £ / warehouse / 2-week cycle", 850,
-          "Costco UK standard end cap rental per warehouse for a 2-week placement.", FMT_GBP)
-input_row(inp, 24, "End Cap cost factor", 1.86,
-          "Same overhead multiplier as demo.", FMT_MULT)
-input_row(inp, 25, "End Cap Total £ / week", f"=C23*{WH_CELL.split('!')[1]}*C24/2",
-          "Calculated. Rate × warehouses × factor ÷ 2 (booked over 2 weeks).", FMT_GBP, formula=True)
-input_row(inp, 26, "Fence £ / week (when active)", 0,
-          "Optional fence display. Currently not budgeted.", FMT_GBP)
-input_row(inp, 27, "Advertising £ / week (when active)", 0,
-          "External media / coupon insert support. Currently not budgeted.", FMT_GBP)
-input_row(inp, 28, "TPD discount %", 0.25,
-          "Standard TPD: 20% off MSRP. Grossed up by 0.8 retail margin → 25% deduction on net.", FMT_PCT)
-input_row(inp, 29, "Markdown discount %", 0.50,
-          "Clearance pricing in worst-case markdown weeks.", FMT_PCT)
+section_header(inp, 21, "4.  Promo Economics")
+input_row(inp, 22, "Demo £ / warehouse / week", 199,
+          "Costco UK standard demo rate per warehouse per weekend.", fmt=FMT_GBP, is_input=True)
+input_row(inp, 23, "Demo cost factor (overhead × staffing)", 1.86,
+          "Multiplier on raw demo fee to capture staffing, POS print & overhead.",
+          fmt=FMT_MULT, is_input=True)
+input_row(inp, 24, "Demo Total £ / week", f"C22*{WH_CELL.split('!')[1]}*C23",
+          "Calculated: rate × warehouses × cost factor. "
+          "OVERRIDE to set the all-warehouse demo £/week directly.",
+          fmt=FMT_GBP, is_input=False, override=True)
+input_row(inp, 25, "End Cap £ / warehouse / 2-week cycle", 850,
+          "Costco UK standard end cap rental per warehouse for a 2-week placement.",
+          fmt=FMT_GBP, is_input=True)
+input_row(inp, 26, "End Cap cost factor", 1.86,
+          "Same overhead multiplier as demo.", fmt=FMT_MULT, is_input=True)
+input_row(inp, 27, "End Cap Total £ / week", f"C25*{WH_CELL.split('!')[1]}*C26/2",
+          "Calculated: rate × warehouses × factor ÷ 2 (booked over 2 weeks). "
+          "OVERRIDE to set the all-warehouse end-cap £/week directly.",
+          fmt=FMT_GBP, is_input=False, override=True)
+input_row(inp, 28, "Fence £ / week (when active)", 0,
+          "Optional fence display. Currently not budgeted.", fmt=FMT_GBP, is_input=True)
+input_row(inp, 29, "Advertising £ / week (when active)", 0,
+          "External media / coupon insert support. Currently not budgeted.",
+          fmt=FMT_GBP, is_input=True)
+input_row(inp, 30, "TPD discount %", 0.25,
+          "Standard TPD: 20% off MSRP. Grossed up by 0.8 retail margin → 25% deduction on net.",
+          fmt=FMT_PCT, is_input=True)
+input_row(inp, 31, "Markdown discount %", 0.50,
+          "Clearance pricing in worst-case markdown weeks.", fmt=FMT_PCT, is_input=True)
 
-DEMO_COST = "Inputs!$C$22"
-ENDCAP_COST = "Inputs!$C$25"
-FENCE_COST = "Inputs!$C$26"
-AD_COST = "Inputs!$C$27"
-TPD_PCT = "Inputs!$C$28"
-MD_PCT = "Inputs!$C$29"
+DEMO_COST = "Inputs!$C$24"
+ENDCAP_COST = "Inputs!$C$27"
+FENCE_COST = "Inputs!$C$28"
+AD_COST = "Inputs!$C$29"
+TPD_PCT = "Inputs!$C$30"
+MD_PCT = "Inputs!$C$31"
 
 # --- Section 5: Scenario activity grids --------------------------------------
-section_header(inp, 31, "5.  Scenario Activity & Demand Lift "
-                       "(1 = promo active that week, 0 = off; Lift = demand multiplier vs base)")
+section_header(inp, 33, "5.  Scenario Activity & Demand Lift "
+                       "(1 = promo active, 0 = off; Lift = demand multiplier vs base; Dates auto-fill)")
 
-# We need a grid for each scenario:
-#   Row [scenario_top]   : scenario name (merged) + Justification
-#   Row [scenario_top+1] : column headers (Week label)  - F (Demo) through F+25
-#   Rows for each promo type + Lift
-#
-# Layout columns: B = label, F..AE = week 2..27 (26 cols)
-WEEK_START_COL = 6   # column F
+WEEK_START_COL = 6   # column F (note: column D is Override, E is Notes — week grid starts later)
 WEEK_END_COL = WEEK_START_COL + WEEKS - 1  # column AE
 
-# Set widths for week columns
 for col in range(WEEK_START_COL, WEEK_END_COL + 1):
-    inp.column_dimensions[get_column_letter(col)].width = 7
+    inp.column_dimensions[get_column_letter(col)].width = 9
 
-scenario_grid_start = {}  # key -> top row of grid
-
-current_row = 33
+scenario_grid_start = {}
+current_row = 35
 for sc in SCENARIOS:
-    # Scenario title bar (full width)
-    end_col_letter = get_column_letter(WEEK_END_COL)
+    # Title bar
     inp.merge_cells(start_row=current_row, start_column=2,
                     end_row=current_row, end_column=WEEK_END_COL)
     title_cell = inp.cell(row=current_row, column=2, value=sc["name"])
@@ -375,7 +414,7 @@ for sc in SCENARIOS:
     inp.row_dimensions[current_row].height = 22
     current_row += 1
 
-    # Justification line
+    # Justification
     inp.merge_cells(start_row=current_row, start_column=2,
                     end_row=current_row, end_column=WEEK_END_COL)
     j_cell = inp.cell(row=current_row, column=2, value=f"Rationale: {sc['justification']}")
@@ -384,21 +423,36 @@ for sc in SCENARIOS:
     inp.row_dimensions[current_row].height = 32
     current_row += 1
 
-    # Week-number header row
+    # Week header
     inp.cell(row=current_row, column=2, value="Week").font = f_label
     inp.cell(row=current_row, column=2).fill = fill_calc
     inp.cell(row=current_row, column=2).alignment = left
     for i in range(WEEKS):
-        c = inp.cell(row=current_row, column=WEEK_START_COL + i, value=f"W{FIRST_WEEK_NUM + i}")
+        c = inp.cell(row=current_row, column=WEEK_START_COL + i,
+                     value=f"W{FIRST_WEEK_NUM + i}")
         c.font = Font(name="Calibri", size=10, bold=True, color=WHITE)
         c.fill = PatternFill("solid", fgColor=BLUE)
         c.alignment = center
         c.border = box
     current_row += 1
 
+    # Date sub-header (calculated from Start Date)
+    inp.cell(row=current_row, column=2, value="Wk-commencing").font = f_label
+    inp.cell(row=current_row, column=2).fill = fill_calc
+    inp.cell(row=current_row, column=2).alignment = left
+    for i in range(WEEKS):
+        c = inp.cell(row=current_row, column=WEEK_START_COL + i,
+                     value=f"={START_DATE_CELL}+7*{i}")
+        c.font = Font(name="Calibri", size=9, color=DARK_GREY)
+        c.fill = fill_calc
+        c.alignment = center
+        c.border = box
+        c.number_format = FMT_DATE
+    current_row += 1
+
     scenario_grid_start[sc["key"]] = current_row
 
-    # Promo activity rows
+    # Promo rows
     for promo in PROMO_TYPES:
         inp.cell(row=current_row, column=2, value=promo).font = f_label
         active_weeks = set(sc["promo"].get(promo, []))
@@ -413,7 +467,7 @@ for sc in SCENARIOS:
             c.number_format = "0;;;@"
         current_row += 1
 
-    # Lift multiplier row
+    # Lift row
     inp.cell(row=current_row, column=2, value="Lift Multiplier (x base)").font = f_label
     for i in range(WEEKS):
         wknum = FIRST_WEEK_NUM + i
@@ -426,11 +480,9 @@ for sc in SCENARIOS:
         c.number_format = FMT_MULT
     current_row += 1
 
-    # Gap row
-    current_row += 1
+    current_row += 1  # gap
 
-# Freeze panes on Inputs so users keep labels visible while scrolling
-inp.freeze_panes = "F3"
+inp.freeze_panes = "F5"
 
 
 # =============================================================================
@@ -443,10 +495,9 @@ fc.column_dimensions["A"].width = 2
 fc.column_dimensions["B"].width = 32
 for col in range(WEEK_START_COL, WEEK_END_COL + 1):
     fc.column_dimensions[get_column_letter(col)].width = 11
-TOTAL_COL = WEEK_END_COL + 1  # column after the last week
+TOTAL_COL = WEEK_END_COL + 1
 fc.column_dimensions[get_column_letter(TOTAL_COL)].width = 14
 
-# Title
 fc.merge_cells(start_row=2, start_column=2, end_row=2, end_column=TOTAL_COL)
 t = fc.cell(row=2, column=2, value="FORECAST — Weekly P&L (all values calculated, do not edit)")
 t.font = f_title
@@ -454,7 +505,6 @@ t.fill = fill_title
 t.alignment = center
 fc.row_dimensions[2].height = 32
 
-# Build P&L for each scenario
 PNL_ROWS = [
     ("POS Units",             "units"),
     ("Selling Price",         "price"),
@@ -472,16 +522,14 @@ PNL_ROWS = [
     ("Net Profit (after promo)", "net"),
 ]
 
-# row in scenario_grid_start[key] is the first promo row (Demo). Subsequent rows
-# follow the PROMO_TYPES order, then a Lift row.
 PROMO_ROW_OFFSET = {p: i for i, p in enumerate(PROMO_TYPES)}
 LIFT_OFFSET = len(PROMO_TYPES)
 
 fc_row = 4
-scenario_summary_rows = {}  # key -> dict of row indices for Summary sheet
+scenario_summary_rows = {}
 
 for sc in SCENARIOS:
-    # Scenario header
+    # Scenario title
     fc.merge_cells(start_row=fc_row, start_column=2, end_row=fc_row, end_column=TOTAL_COL)
     h = fc.cell(row=fc_row, column=2, value=sc["name"])
     h.font = Font(name="Calibri", size=12, bold=True, color=WHITE)
@@ -490,7 +538,7 @@ for sc in SCENARIOS:
     fc.row_dimensions[fc_row].height = 22
     fc_row += 1
 
-    # Week header row
+    # Week header
     fc.cell(row=fc_row, column=2, value="Week").font = f_label
     for i in range(WEEKS):
         c = fc.cell(row=fc_row, column=WEEK_START_COL + i, value=f"W{FIRST_WEEK_NUM + i}")
@@ -505,7 +553,21 @@ for sc in SCENARIOS:
     tc.border = box
     fc_row += 1
 
-    # Capture the row positions for this scenario's P&L lines
+    # Date sub-header
+    fc.cell(row=fc_row, column=2, value="Wk-commencing").font = f_label
+    for i in range(WEEKS):
+        c = fc.cell(row=fc_row, column=WEEK_START_COL + i,
+                    value=f"={START_DATE_CELL}+7*{i}")
+        c.font = Font(name="Calibri", size=9, color=DARK_GREY)
+        c.fill = fill_calc
+        c.alignment = center
+        c.border = box
+        c.number_format = FMT_DATE
+    # Total col blank date
+    fc.cell(row=fc_row, column=TOTAL_COL, value="").fill = fill_calc
+    fc_row += 1
+
+    # Body
     scenario_pnl_rows = {}
     grid_top = scenario_grid_start[sc["key"]]
     promo_rows_on_inp = {p: grid_top + PROMO_ROW_OFFSET[p] for p in PROMO_TYPES}
@@ -521,46 +583,41 @@ for sc in SCENARIOS:
 
         for i in range(WEEKS):
             week_col = WEEK_START_COL + i
-            wcol_letter = get_column_letter(week_col)
+            wcol = get_column_letter(week_col)
 
             if key == "units":
-                formula = (f"=ROUND({BASE_UNITS_CELL}*Inputs!{wcol_letter}{lift_row_on_inp},0)")
+                formula = f"=ROUND({BASE_UNITS_CELL}*Inputs!{wcol}{lift_row_on_inp},0)"
             elif key == "price":
                 formula = f"={PRICE_CELL}"
             elif key == "rev":
-                formula = (f"={wcol_letter}{scenario_pnl_rows['units']}"
-                           f"*{wcol_letter}{scenario_pnl_rows['price']}")
+                formula = f"={wcol}{scenario_pnl_rows['units']}*{wcol}{scenario_pnl_rows['price']}"
             elif key == "cost":
                 formula = f"={COST_CELL}"
             elif key == "cogs":
-                formula = (f"={wcol_letter}{scenario_pnl_rows['units']}"
-                           f"*{wcol_letter}{scenario_pnl_rows['cost']}")
+                formula = f"={wcol}{scenario_pnl_rows['units']}*{wcol}{scenario_pnl_rows['cost']}"
             elif key == "demo":
-                formula = f"=Inputs!{wcol_letter}{promo_rows_on_inp['Demo']}*{DEMO_COST}"
+                formula = f"=Inputs!{wcol}{promo_rows_on_inp['Demo']}*{DEMO_COST}"
             elif key == "endcap":
-                formula = f"=Inputs!{wcol_letter}{promo_rows_on_inp['End Cap']}*{ENDCAP_COST}"
+                formula = f"=Inputs!{wcol}{promo_rows_on_inp['End Cap']}*{ENDCAP_COST}"
             elif key == "fence":
-                formula = f"=Inputs!{wcol_letter}{promo_rows_on_inp['Fence']}*{FENCE_COST}"
+                formula = f"=Inputs!{wcol}{promo_rows_on_inp['Fence']}*{FENCE_COST}"
             elif key == "tpd":
-                # TPD = active flag × units × selling price × tpd%
-                formula = (f"=Inputs!{wcol_letter}{promo_rows_on_inp['TPD']}"
-                           f"*{wcol_letter}{scenario_pnl_rows['units']}"
-                           f"*{wcol_letter}{scenario_pnl_rows['price']}*{TPD_PCT}")
+                formula = (f"=Inputs!{wcol}{promo_rows_on_inp['TPD']}"
+                           f"*{wcol}{scenario_pnl_rows['units']}"
+                           f"*{wcol}{scenario_pnl_rows['price']}*{TPD_PCT}")
             elif key == "markdown":
-                formula = (f"=Inputs!{wcol_letter}{promo_rows_on_inp['Markdown']}"
-                           f"*{wcol_letter}{scenario_pnl_rows['units']}"
-                           f"*{wcol_letter}{scenario_pnl_rows['price']}*{MD_PCT}")
+                formula = (f"=Inputs!{wcol}{promo_rows_on_inp['Markdown']}"
+                           f"*{wcol}{scenario_pnl_rows['units']}"
+                           f"*{wcol}{scenario_pnl_rows['price']}*{MD_PCT}")
             elif key == "advert":
-                formula = f"=Inputs!{wcol_letter}{promo_rows_on_inp['Advert']}*{AD_COST}"
+                formula = f"=Inputs!{wcol}{promo_rows_on_inp['Advert']}*{AD_COST}"
             elif key == "promo_total":
-                formula = (f"=SUM({wcol_letter}{scenario_pnl_rows['demo']}:"
-                           f"{wcol_letter}{scenario_pnl_rows['advert']})")
+                formula = (f"=SUM({wcol}{scenario_pnl_rows['demo']}:"
+                           f"{wcol}{scenario_pnl_rows['advert']})")
             elif key == "gp":
-                formula = (f"={wcol_letter}{scenario_pnl_rows['rev']}"
-                           f"-{wcol_letter}{scenario_pnl_rows['cogs']}")
+                formula = f"={wcol}{scenario_pnl_rows['rev']}-{wcol}{scenario_pnl_rows['cogs']}"
             elif key == "net":
-                formula = (f"={wcol_letter}{scenario_pnl_rows['gp']}"
-                           f"-{wcol_letter}{scenario_pnl_rows['promo_total']}")
+                formula = f"={wcol}{scenario_pnl_rows['gp']}-{wcol}{scenario_pnl_rows['promo_total']}"
             else:
                 formula = ""
 
@@ -576,8 +633,6 @@ for sc in SCENARIOS:
             else:
                 c.number_format = FMT_GBP
 
-        # Total column
-        total_letter = get_column_letter(TOTAL_COL)
         first_w = get_column_letter(WEEK_START_COL)
         last_w = get_column_letter(WEEK_END_COL)
         if key in ("price", "cost"):
@@ -598,10 +653,7 @@ for sc in SCENARIOS:
 
         fc_row += 1
 
-    # Save references for Summary
     scenario_summary_rows[sc["key"]] = scenario_pnl_rows
-
-    # Spacer rows
     fc_row += 2
 
 fc.freeze_panes = "C4"
@@ -613,13 +665,11 @@ fc.freeze_panes = "C4"
 sm = wb.create_sheet("Summary")
 sm.sheet_view.showGridLines = False
 
-# Column widths
 sm.column_dimensions["A"].width = 2
 sm.column_dimensions["B"].width = 36
 for i, _ in enumerate(SCENARIOS):
     sm.column_dimensions[get_column_letter(3 + i)].width = 22
 
-# Title
 end_col = 2 + len(SCENARIOS)
 sm.merge_cells(start_row=2, start_column=2, end_row=2, end_column=end_col)
 t = sm.cell(row=2, column=2, value="ROI SUMMARY — Scenario Comparison")
@@ -628,8 +678,15 @@ t.fill = fill_title
 t.alignment = center
 sm.row_dimensions[2].height = 32
 
-# Header row with scenario names
-hr = 4
+# Test window sub-header (shows date range from Start Date)
+sm.merge_cells(start_row=3, start_column=2, end_row=3, end_column=end_col)
+sw = sm.cell(row=3, column=2,
+             value=f'="Test window: W1 ("&TEXT({START_DATE_CELL},"dd-mmm-yyyy")&")  →  W"&{PERIOD_CELL}&" ("&TEXT({START_DATE_CELL}+7*({PERIOD_CELL}-1),"dd-mmm-yyyy")&")"')
+sw.font = Font(name="Calibri", size=11, italic=True, color=DARK_GREY)
+sw.alignment = center
+sw.fill = fill_calc
+
+hr = 5
 sm.cell(row=hr, column=2, value="Metric").font = Font(name="Calibri", size=11, bold=True, color=WHITE)
 sm.cell(row=hr, column=2).fill = fill_section
 sm.cell(row=hr, column=2).alignment = left
@@ -641,7 +698,6 @@ for i, sc in enumerate(SCENARIOS):
     c.alignment = center
 sm.row_dimensions[hr].height = 24
 
-# KPI rows
 TOTAL_COL_LETTER = get_column_letter(TOTAL_COL)
 kpi_rows = [
     ("Units Sold",          "units",       FMT_INT,    False),
@@ -700,7 +756,7 @@ for label, key, fmt, bold in kpi_rows:
     sm.row_dimensions[sr].height = 22 if not bold else 26
     sr += 1
 
-# Conditional formatting on Net Profit and ROI rows (color positive green, negative red)
+# Conditional formatting
 net_row = hr + 1 + [k[1] for k in kpi_rows].index("net")
 roi_row = hr + 1 + [k[1] for k in kpi_rows].index("roi")
 last_col_letter = get_column_letter(2 + len(SCENARIOS))
@@ -736,12 +792,10 @@ for sc in SCENARIOS:
     sm.row_dimensions[sr].height = 50
     sr += 1
 
-sm.freeze_panes = "C5"
+sm.freeze_panes = "C6"
 
 
 # =============================================================================
-# Save
-# =============================================================================
-out = "/home/user/my-first-project/Costco_UK_Bee_Propolis_ROI_v2.xlsx"
+out = "/home/user/my-first-project/Costco_UK_Bee_Propolis_ROI_v3.xlsx"
 wb.save(out)
 print(f"Saved: {out}")
