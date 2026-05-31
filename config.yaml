@@ -1,0 +1,114 @@
+# ============================================================================
+#  GRID TRADING BOT  --  SETTINGS
+# ============================================================================
+#  This is the ONE file you normally edit. Every setting has a plain-language
+#  comment. The defaults are deliberately safe and small. Read each one before
+#  you change it. Indentation matters in this file: keep the spacing as-is.
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+#  MODE: how the bot runs. Pick exactly one of: "dry_run", "paper", "live".
+# ----------------------------------------------------------------------------
+#    dry_run -> logs every order it WOULD place, but sends nothing. Zero risk.
+#    paper   -> trades FAKE money against REAL live prices on Alpaca. Safe.
+#    live    -> trades REAL money. Requires the safety latch below AND the
+#               env var I_UNDERSTAND_THIS_IS_REAL_MONEY=true. Don't rush here.
+mode: "dry_run"
+
+# Extra latch for live trading. Must be flipped to true AND the matching
+# environment variable set, or the bot refuses to touch real money.
+i_really_want_live_trading: false
+
+# ----------------------------------------------------------------------------
+#  MARKET: what you trade.
+# ----------------------------------------------------------------------------
+# asset_class: "crypto" (24/7, no day-trade rule) or "stock" (phase two).
+asset_class: "crypto"
+
+# The symbol to trade. For crypto use Alpaca's exact format, e.g. "BTC/USD".
+# For stocks later, use a plain ticker like "SPY" or "AAPL".
+symbol: "BTC/USD"
+
+# ----------------------------------------------------------------------------
+#  FEES: what Alpaca charges. Used to make sure every trade can clear its cost.
+# ----------------------------------------------------------------------------
+# Fee per trade, as a percent. Alpaca crypto is 0.25% per side at the time of
+# writing. One full cycle (buy + sell) therefore costs about 0.50%.
+fee_percent_per_side: 0.25
+
+# ----------------------------------------------------------------------------
+#  GRID: the heart of the strategy.
+# ----------------------------------------------------------------------------
+# The price band you believe the asset will bounce around inside.
+# band_low  = bottom edge of the band (buy zone).
+# band_high = top edge of the band (sell zone).
+# IMPORTANT: these are example numbers. Set them from the backtest before
+# you ever trade. If price closes OUTSIDE this band, the breakout guard fires.
+band_low: 90000.0
+band_high: 110000.0
+
+# How many price steps (grid lines) to split the band into. More steps = more,
+# smaller trades. Each step must still clear fees (see profit_target_percent).
+grid_levels: 6
+
+# Target profit you want to capture on each completed buy->sell cycle, as a
+# percent. MUST be safely above the round-trip fee (~0.50%) plus slippage.
+# Below ~0.7% the bot will warn loudly and refuse to start unless overridden.
+profit_target_percent: 1.0
+
+# Dollars to spend on each individual buy order placed at a grid level.
+order_size_usd: 30.0
+
+# ----------------------------------------------------------------------------
+#  RISK LIMITS: hard caps, checked every single loop. These protect you.
+# ----------------------------------------------------------------------------
+# Largest total position (current holdings value, in dollars) the bot may hold.
+max_position_usd: 200.0
+
+# Largest total dollars the bot may have deployed in open buy orders + holdings.
+max_deployed_usd: 200.0
+
+# Most open orders allowed at once.
+max_open_orders: 12
+
+# If realised + unrealised loss for the day reaches this many dollars, the bot
+# halts ALL trading and cancels open orders until you restart it.
+daily_loss_limit_usd: 20.0
+
+# ----------------------------------------------------------------------------
+#  BREAKOUT GUARD: stops the bot from buying into a runaway trend.
+# ----------------------------------------------------------------------------
+# If true, when price closes outside [band_low, band_high] the bot stops all
+# new buys and alerts you. Strongly recommended to leave this on.
+breakout_guard_enabled: true
+
+# If true, when the breakout guard fires the bot also SELLS its position
+# (flattens) to cash. If false, it just stops buying and holds. Start false
+# so you can decide manually; flip to true once you trust the setup.
+breakout_flatten: false
+
+# ----------------------------------------------------------------------------
+#  TIMING: how often the bot looks at the market.
+# ----------------------------------------------------------------------------
+# Seconds to wait between each decision loop. 30-60s is plenty for a grid bot.
+loop_interval_seconds: 30
+
+# ----------------------------------------------------------------------------
+#  ALERTS: optional notifications. The webhook URL itself lives in .env.
+# ----------------------------------------------------------------------------
+# If true, send a notification when a guard trips, the kill switch fires, or
+# the daily loss limit is hit. Needs ALERT_WEBHOOK_URL set in .env.
+alerts_enabled: false
+
+# ----------------------------------------------------------------------------
+#  FILES: where the bot writes things. Defaults are fine for most people.
+# ----------------------------------------------------------------------------
+# Folder for timestamped log files.
+log_dir: "logs"
+
+# File the bot uses to remember its state across restarts.
+state_file: "state/bot_state.json"
+
+# If this file EXISTS, the bot treats it as a kill switch: cancel everything
+# and stop. Create it any time with:  touch KILL   (Mac/Linux)
+kill_switch_file: "KILL"
