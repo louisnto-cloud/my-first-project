@@ -12,7 +12,7 @@ FY = "FY2026"
 LINE = "Sparkling Daily"
 
 # ---- editable placeholders for the three flavour names -------------------
-FLAVOURS = ["Flavour 1", "Flavour 2", "Flavour 3"]
+FLAVOURS = ["Pineapple", "Passionfruit", "Lime Lemon"]
 FORMATS = ["Singles", "12-Pack"]
 
 # SKU columns: Singles (3 flavours) then 12-Pack (3 flavours)
@@ -362,7 +362,7 @@ def build_readme(ws):
         ("• Low / Base / High / Stretch  — one scenario each. All 6 SKUs across the columns + a TOTAL column.", f_lbl),
         ("", None),
         ("HOW TO USE", f_sec),
-        ("1. Rename the flavours: change the flavour names in row 6 on any scenario tab (or keep Flavour 1/2/3).", f_lbl),
+        ("1. Flavours (Pineapple, Passionfruit, Lime Lemon) sit in row 6 of each scenario tab — edit there if names change.", f_lbl),
         ("2. The only things you normally edit are the YELLOW cells:", f_lbl),
         ("     - Physical Cases  (volume per SKU)", f_lbl),
         ("     - CP / Gross Rev per case  (your wholesale selling price per case)", f_lbl),
