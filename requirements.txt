@@ -1,0 +1,10 @@
+# Pinned dependencies for the grid trading bot.
+# Pinned = locked to one exact version, so the bot behaves the same every install.
+# Install everything with:  pip install -r requirements.txt
+
+alpaca-py==0.33.1        # Official Alpaca SDK: talks to the trading + market-data API
+python-dotenv==1.0.1     # Loads your secret API keys from the .env file
+PyYAML==6.0.2            # Reads the human-friendly config.yaml settings file
+requests==2.32.3         # Sends optional alert webhooks (e.g. to your phone)
+pandas==2.2.3            # Used by the backtest to crunch historical price data
+pytest==8.3.4            # Runs the unit tests that prove the safety math works

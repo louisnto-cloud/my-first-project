@@ -1,0 +1,24 @@
+# --- Secrets: NEVER commit these ---
+.env
+
+# --- Runtime output: logs and saved bot state ---
+logs/
+state/
+*.log
+
+# --- The kill switch file (created on demand) ---
+KILL
+
+# --- Python junk ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# --- OS / editor junk ---
+.DS_Store
+.idea/
+.vscode/
