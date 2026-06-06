@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Beverage Margin Studio</title>
+<style>
+  :root{
+    --bg:#0b0f17; --bg2:#0e1320; --surface:#141b2b; --surface2:#1b2435;
+    --line:#27314a; --line2:#33405e;
+    --text:#e7ecf5; --muted:#93a0ba; --faint:#6b7894;
+    --accent:#36d6c3; --accent2:#5b9dff; --accentdim:#1d6b63;
+    --good:#3ecf8e; --great:#23e0a0; --ok:#ffc24b; --warn:#ff8a4b; --bad:#ff5d6c;
+    --shadow:0 8px 30px rgba(0,0,0,.35);
+    --r:14px; --r2:10px;
+    --mono:'SF Mono',ui-monospace,'Cascadia Code','Roboto Mono',Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:radial-gradient(1200px 600px at 80% -10%, #15203a 0%, transparent 55%),
+               radial-gradient(900px 500px at -10% 10%, #11261f 0%, transparent 50%),
+               var(--bg);
+    color:var(--text); font-family:var(--sans); line-height:1.5;
+    -webkit-font-smoothing:antialiased; min-height:100vh;
+  }
+  a{color:var(--accent2)}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 20px 80px}
+
+  /* Header */
+  header.app{
+    position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
+    background:linear-gradient(180deg, rgba(11,15,23,.92), rgba(11,15,23,.72));
+    border-bottom:1px solid var(--line);
+  }
+  .head-inner{max-width:1240px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:18px;letter-spacing:.2px}
+  .logo{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+        background:linear-gradient(135deg,var(--accent),var(--accent2));color:#06121a;font-size:19px;box-shadow:var(--shadow)}
+  .brand small{display:block;font-weight:500;color:var(--muted);font-size:11px;letter-spacing:.5px;text-transform:uppercase}
+  .toolbar{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .toolbar select,.btn{
+    background:var(--surface2);color:var(--text);border:1px solid var(--line2);
+    border-radius:9px;padding:8px 12px;font-size:13px;font-family:var(--sans);cursor:pointer;
+    transition:.15s;
+  }
+  .btn:hover,.toolbar select:hover{border-color:var(--accent);color:#fff}
+  .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#06121a;border:none;font-weight:600}
+  .btn.ghost{background:transparent}
+
+  /* Tabs */
+  nav.tabs{display:flex;gap:4px;overflow-x:auto;padding:6px 0 0;margin:18px 0 22px;border-bottom:1px solid var(--line)}
+  nav.tabs button{
+    background:none;border:none;color:var(--muted);padding:11px 16px;font-size:14px;cursor:pointer;
+    border-bottom:2px solid transparent;white-space:nowrap;font-family:var(--sans);font-weight:500;transition:.15s
+  }
+  nav.tabs button:hover{color:var(--text)}
+  nav.tabs button.active{color:#fff;border-bottom-color:var(--accent)}
+
+  section.tab{display:none;animation:fade .25s ease}
+  section.tab.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* Cards */
+  .card{background:linear-gradient(180deg,var(--surface),var(--bg2));border:1px solid var(--line);
+        border-radius:var(--r);padding:20px;box-shadow:var(--shadow)}
+  .card h2{margin:0 0 4px;font-size:16px}
+  .card h3{margin:0 0 14px;font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:600}
+  .sub{color:var(--muted);font-size:13px;margin:0 0 18px}
+  .grid{display:grid;gap:18px}
+  .cols-2{grid-template-columns:380px 1fr}
+  .cols-2b{grid-template-columns:1fr 1fr}
+  .cols-3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:900px){.cols-2,.cols-2b,.cols-3{grid-template-columns:1fr}}
+
+  /* Inputs */
+  .field{margin-bottom:16px}
+  .field label{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);margin-bottom:7px;gap:8px}
+  .field label .q{cursor:help;color:var(--faint);border:1px solid var(--line2);border-radius:50%;width:16px;height:16px;
+                  display:inline-grid;place-items:center;font-size:10px;flex:none}
+  .inp{position:relative;display:flex;align-items:center}
+  .inp .pre{position:absolute;left:12px;color:var(--faint);font-size:14px;pointer-events:none}
+  input[type=number],input[type=text]{
+    width:100%;background:var(--bg);border:1px solid var(--line2);color:var(--text);
+    border-radius:9px;padding:10px 12px;font-size:15px;font-family:var(--mono);transition:.15s
+  }
+  input.has-pre{padding-left:24px}
+  input[type=number]:focus,input[type=text]:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(54,214,195,.12)}
+  input[type=range]{width:100%;margin-top:9px;accent-color:var(--accent);height:4px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+  details.adv{margin-top:6px;border-top:1px dashed var(--line2);padding-top:12px}
+  details.adv summary{cursor:pointer;color:var(--accent);font-size:13px;list-style:none;user-select:none}
+  details.adv summary::-webkit-details-marker{display:none}
+  details.adv summary:before{content:'+ ';font-weight:700}
+  details.adv[open] summary:before{content:'– '}
+
+  /* Result metric cards */
+  .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+  @media(max-width:560px){.metrics{grid-template-columns:1fr 1fr}}
+  .metric{background:var(--surface2);border:1px solid var(--line);border-radius:var(--r2);padding:14px 14px 13px;position:relative;overflow:hidden}
+  .metric .k{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);display:flex;align-items:center;gap:6px}
+  .metric .v{font-size:26px;font-weight:700;font-family:var(--mono);margin-top:6px;line-height:1.1}
+  .metric .x{font-size:12px;color:var(--faint);margin-top:3px}
+  .metric.hl{background:linear-gradient(160deg,rgba(54,214,195,.14),rgba(91,157,255,.06));border-color:var(--accentdim)}
+  .metric .bar{position:absolute;left:0;bottom:0;height:3px;background:var(--accent)}
+  .small-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  @media(max-width:560px){.small-metrics{grid-template-columns:1fr 1fr}}
+  .sm{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:11px 12px}
+  .sm .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+  .sm .v{font-size:17px;font-family:var(--mono);font-weight:600;margin-top:3px}
+
+  .pill{display:inline-block;padding:3px 9px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.4px}
+  .badge{font-size:11px;padding:2px 8px;border-radius:6px;font-weight:600}
+
+  /* Tables */
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line)}
+  th:first-child,td:first-child{text-align:left}
+  thead th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px;position:sticky;top:0;background:var(--bg2)}
+  tbody tr:hover{background:rgba(91,157,255,.04)}
+  tfoot td{font-weight:700;border-top:2px solid var(--line2);font-family:var(--mono)}
+  td input{padding:7px 8px;font-size:13px;border-radius:7px;background:var(--bg)}
+  td.calc{font-family:var(--mono);color:var(--text)}
+  .table-scroll{overflow-x:auto;border-radius:var(--r2)}
+  .num{font-family:var(--mono)}
+
+  /* heatmap */
+  .heat td{text-align:center;font-family:var(--mono);font-size:12px;border:1px solid rgba(0,0,0,.25);color:#06121a;font-weight:600;padding:8px 6px;min-width:64px}
+  .heat th{text-align:center;font-size:11px;background:var(--bg2)}
+  .heat .axis{background:var(--surface2);color:var(--muted);font-weight:600}
+  .legend{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted);margin-top:12px;flex-wrap:wrap}
+  .legend .scale{height:12px;width:180px;border-radius:6px;background:linear-gradient(90deg,hsl(0,65%,45%),hsl(60,70%,50%),hsl(120,60%,42%))}
+
+  .note{background:rgba(91,157,255,.07);border:1px solid var(--line2);border-left:3px solid var(--accent2);
+        border-radius:8px;padding:12px 14px;font-size:13px;color:var(--muted);margin-top:14px}
+  .note b{color:var(--text)}
+
+  .kpi-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  .chip{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:10px 14px;flex:1;min-width:120px}
+  .chip .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+  .chip .v{font-size:18px;font-family:var(--mono);font-weight:700;margin-top:3px}
+
+  .formula{font-family:var(--mono);background:var(--bg);border:1px solid var(--line2);border-radius:8px;
+           padding:10px 12px;font-size:13px;color:var(--accent);margin:8px 0;overflow-x:auto}
+  .guide h3{color:var(--accent);margin-top:26px}
+  .guide p,.guide li{color:var(--muted);font-size:14px}
+  .guide strong{color:var(--text)}
+  .guide table{margin-top:10px}
+  .two-col{columns:2;column-gap:30px}
+  @media(max-width:760px){.two-col{columns:1}}
+
+  svg{display:block;max-width:100%}
+  .chart-wrap{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r2);padding:14px;margin-top:14px}
+  .chart-title{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin-bottom:6px}
+  .foot{color:var(--faint);font-size:12px;text-align:center;margin-top:40px}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--surface2);
+         border:1px solid var(--accent);color:var(--text);padding:11px 18px;border-radius:10px;font-size:13px;
+         box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.3s;z-index:100}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  @media print{header.app,nav.tabs,.toolbar,.no-print{display:none!important}
+    section.tab{display:block!important}.card{break-inside:avoid;box-shadow:none}}
+</style>
+</head>
+<body>
+<header class="app">
+  <div class="head-inner">
+    <div class="brand">
+      <div class="logo">&#129380;</div>
+      <div>Beverage Margin Studio
+        <small>Margin &middot; Markup &middot; Profit modeling</small>
+      </div>
+    </div>
+    <div class="toolbar no-print">
+      <select id="currency" title="Display currency">
+        <option value="USD">$ USD</option>
+        <option value="EUR">&euro; EUR</option>
+        <option value="GBP">&pound; GBP</option>
+        <option value="CAD">$ CAD</option>
+        <option value="AUD">$ AUD</option>
+        <option value="JPY">&yen; JPY</option>
+        <option value="INR">&#8377; INR</option>
+        <option value="MXN">$ MXN</option>
+        <option value="BRL">R$ BRL</option>
+        <option value="ZAR">R ZAR</option>
+      </select>
+      <button class="btn" id="btn-save" title="Save to this browser">&#128190; Save</button>
+      <button class="btn" id="btn-print" title="Print / export PDF">&#128424; PDF</button>
+      <button class="btn ghost" id="btn-reset" title="Reset everything">Reset</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="tabs no-print">
+    <button data-tab="calc" class="active">Calculator</button>
+    <button data-tab="cost">Cost Builder</button>
+    <button data-tab="portfolio">Portfolio</button>
+    <button data-tab="sensitivity">Sensitivity</button>
+    <button data-tab="solver">Solver</button>
+    <button data-tab="guide">Guide</button>
+  </nav>
+
+  <!-- ============== CALCULATOR ============== -->
+  <section class="tab active" id="tab-calc">
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Inputs</h3>
+        <div class="field">
+          <label>MSRP &mdash; selling price / unit <span class="q" title="The price the customer pays per unit, excluding sales tax. This is your top-line revenue per unit.">?</span></label>
+          <div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="calc-msrp" step="0.05" min="0"></div>
+          <input type="range" id="calc-msrp-r" min="0" max="50" step="0.05">
+        </div>
+        <div class="field">
+          <label>CP &mdash; cost / unit (landed) <span class="q" title="Your all-in cost to put one sellable unit on the shelf. Use the Cost Builder tab to break this down (base + freight + duty + packaging).">?</span></label>
+          <div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="calc-cost" step="0.05" min="0"></div>
+          <input type="range" id="calc-cost-r" min="0" max="50" step="0.05">
+          <div style="margin-top:8px"><button class="btn ghost" id="pull-cost" style="font-size:12px;padding:5px 10px">&#11014; Use Cost Builder result</button></div>
+        </div>
+        <div class="field">
+          <label>Volume &mdash; units sold <span class="q" title="Number of sellable units over the period you are modeling (e.g. per month, per shipment, per year).">?</span></label>
+          <div class="inp"><input type="number" id="calc-volume" step="100" min="0"></div>
+          <input type="range" id="calc-volume-r" min="0" max="100000" step="100">
+        </div>
+
+        <details class="adv">
+          <summary>Advanced &mdash; fixed costs, case packs, target</summary>
+          <div style="margin-top:14px">
+            <div class="field">
+              <label>Fixed / period costs <span class="q" title="Costs that don't change with volume (slotting fees, marketing, salaries, storage). Used for break-even and net profit.">?</span></label>
+              <div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="calc-fixed" step="100" min="0"></div>
+            </div>
+            <div class="row2">
+              <div class="field">
+                <label>Units / case <span class="q" title="Units per case (e.g. 24). Lets the studio show case-level economics too.">?</span></label>
+                <div class="inp"><input type="number" id="calc-upc" step="1" min="1"></div>
+              </div>
+              <div class="field">
+                <label>Target profit <span class="q" title="A profit goal. The studio computes how many units you must sell to reach it.">?</span></label>
+                <div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="calc-target" step="100" min="0"></div>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div>
+        <div class="metrics">
+          <div class="metric hl">
+            <div class="k">Gross Margin <span class="q" title="(MSRP − CP) ÷ MSRP. The share of each sale you keep before fixed costs. The retailer's view of profitability.">?</span></div>
+            <div class="v" id="m-margin">—</div>
+            <div class="x" id="m-margin-x">of revenue kept</div>
+            <div class="bar" id="m-margin-bar"></div>
+          </div>
+          <div class="metric hl">
+            <div class="k">Markup <span class="q" title="(MSRP − CP) ÷ CP. How much you add on top of cost. The buyer's / pricing view.">?</span></div>
+            <div class="v" id="m-markup">—</div>
+            <div class="x">on top of cost</div>
+          </div>
+          <div class="metric">
+            <div class="k">Profit / unit</div>
+            <div class="v" id="m-unit">—</div>
+            <div class="x" id="m-unit-x">per unit sold</div>
+          </div>
+        </div>
+
+        <div class="small-metrics">
+          <div class="sm"><div class="k">Revenue</div><div class="v num" id="m-rev">—</div></div>
+          <div class="sm"><div class="k">COGS</div><div class="v num" id="m-cogs">—</div></div>
+          <div class="sm"><div class="k">Gross Profit</div><div class="v num" id="m-gp">—</div></div>
+          <div class="sm"><div class="k">Net Profit</div><div class="v num" id="m-net">—</div></div>
+        </div>
+
+        <div class="chart-wrap">
+          <div class="chart-title">Where the money goes (per period)</div>
+          <div id="waterfall"></div>
+        </div>
+
+        <div class="grid cols-2b" style="margin-top:14px">
+          <div class="chart-wrap" style="margin-top:0">
+            <div class="chart-title">Margin health</div>
+            <div id="gauge"></div>
+          </div>
+          <div class="chart-wrap" style="margin-top:0">
+            <div class="chart-title">Net profit vs volume</div>
+            <div id="profitchart"></div>
+          </div>
+        </div>
+
+        <div class="kpi-row" id="calc-kpis"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== COST BUILDER ============== -->
+  <section class="tab" id="tab-cost">
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Build your landed cost (CP)</h3>
+        <p class="sub">Add up everything it takes to get one <em>sellable</em> unit to the shelf. The total becomes your CP.</p>
+        <div class="field">
+          <label>Base unit cost (ex-works / supplier) <span class="q" title="What the supplier charges per unit before any other costs.">?</span></label>
+          <div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="cb-base" step="0.01" min="0"></div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label>Freight / unit <span class="q" title="Inbound shipping & logistics allocated per unit.">?</span></label>
+            <div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="cb-freight" step="0.01" min="0"></div>
+          </div>
+          <div class="field">
+            <label>Duty / excise / unit <span class="q" title="Import duty or alcohol/sugar excise tax per unit, where applicable.">?</span></label>
+            <div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="cb-duty" step="0.01" min="0"></div>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label>Packaging / label / unit <span class="q" title="Secondary packaging, labels, re-work per unit.">?</span></label>
+            <div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="cb-pack" step="0.01" min="0"></div>
+          </div>
+          <div class="field">
+            <label>Deposit / other / unit <span class="q" title="Container deposit or any other per-unit cost.">?</span></label>
+            <div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="cb-deposit" step="0.01" min="0"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Spoilage / breakage allowance <span class="q" title="Percent of units lost to breakage, spoilage or shrink. Raises the cost of each unit you can actually sell: cost ÷ (1 − spoilage%).">?</span></label>
+          <div class="inp"><input type="number" id="cb-spoil" step="0.5" min="0" max="90" style="padding-right:26px"><span class="pre" style="left:auto;right:12px">%</span></div>
+        </div>
+        <div class="note">Spoilage is applied as <b>cost &divide; (1 &minus; spoilage%)</b> &mdash; if 5% of units never sell, the survivors must each carry that loss.</div>
+      </div>
+
+      <div>
+        <div class="metrics" style="grid-template-columns:1fr 1fr">
+          <div class="metric hl">
+            <div class="k">Landed cost / unit (CP)</div>
+            <div class="v" id="cb-landed">—</div>
+            <div class="x">all-in, per sellable unit</div>
+          </div>
+          <div class="metric">
+            <div class="k">Cost per case</div>
+            <div class="v" id="cb-case">—</div>
+            <div class="x" id="cb-case-x">—</div>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <div class="chart-title">Cost composition</div>
+          <div id="cost-bars"></div>
+        </div>
+        <div class="card" style="margin-top:14px;background:var(--bg2)">
+          <h3>Quick margin preview</h3>
+          <div class="field" style="margin-bottom:10px">
+            <label>If I sell at this MSRP&hellip;</label>
+            <div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="cb-msrp" step="0.05" min="0"></div>
+          </div>
+          <div class="kpi-row" id="cb-preview"></div>
+          <button class="btn primary" id="cb-send" style="margin-top:14px">Send CP &amp; MSRP to Calculator &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== PORTFOLIO ============== -->
+  <section class="tab" id="tab-portfolio">
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px">
+        <div>
+          <h2>Portfolio &mdash; compare every SKU at once</h2>
+          <p class="sub" style="margin:4px 0 0">Each row is a product. Edit MSRP, CP and volume to see margin, markup and profit per line, plus blended totals.</p>
+        </div>
+        <div style="margin-left:auto;display:flex;gap:8px" class="no-print">
+          <button class="btn" id="pf-add">+ Add product</button>
+          <button class="btn ghost" id="pf-csv">&#11015; Export CSV</button>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table id="pf-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>MSRP</th>
+              <th>CP</th>
+              <th>Units/case</th>
+              <th>Volume</th>
+              <th>Margin</th>
+              <th>Markup</th>
+              <th>Profit/unit</th>
+              <th>Revenue</th>
+              <th>Gross profit</th>
+              <th class="no-print"></th>
+            </tr>
+          </thead>
+          <tbody id="pf-body"></tbody>
+          <tfoot>
+            <tr>
+              <td>Portfolio total</td>
+              <td colspan="4" style="text-align:right;color:var(--muted);font-weight:400" id="pf-blend-note"></td>
+              <td class="calc" id="pf-t-margin">—</td>
+              <td class="calc" id="pf-t-markup">—</td>
+              <td>—</td>
+              <td class="calc" id="pf-t-rev">—</td>
+              <td class="calc" id="pf-t-gp">—</td>
+              <td class="no-print"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="chart-wrap"><div class="chart-title">Gross profit by product</div><div id="pf-chart"></div></div>
+      <div class="note">Blended margin is profit-weighted across the whole portfolio &mdash; a fast read on whether your mix is healthy, even when individual SKUs vary widely.</div>
+    </div>
+  </section>
+
+  <!-- ============== SENSITIVITY ============== -->
+  <section class="tab" id="tab-sensitivity">
+    <div class="card">
+      <h2>Sensitivity &mdash; how M&amp;P moves when prices and costs shift</h2>
+      <p class="sub">Pick a metric and an axis. Every cell recomputes for a different MSRP &times; (cost or volume) combination, so you can see at a glance where margin holds up and where it collapses.</p>
+      <div class="grid" style="grid-template-columns:repeat(6,1fr);gap:12px" id="sens-controls">
+        <div class="field" style="margin:0"><label>Center MSRP</label><div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="s-price" step="0.05"></div></div>
+        <div class="field" style="margin:0"><label>Center cost</label><div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="s-cost" step="0.05"></div></div>
+        <div class="field" style="margin:0"><label>Volume</label><div class="inp"><input type="number" id="s-vol" step="100"></div></div>
+        <div class="field" style="margin:0"><label>Range &plusmn;%</label><div class="inp"><input type="number" id="s-range" step="5" min="5" max="90"></div></div>
+        <div class="field" style="margin:0"><label>X axis</label><select id="s-axis" style="width:100%"><option value="cost">Cost</option><option value="volume">Volume</option></select></div>
+        <div class="field" style="margin:0"><label>Metric</label><select id="s-metric" style="width:100%"><option value="margin">Margin %</option><option value="markup">Markup %</option><option value="profit">Total profit</option></select></div>
+      </div>
+      <div class="table-scroll" style="margin-top:18px"><table class="heat" id="heat"></table></div>
+      <div class="legend"><span id="heat-lo">low</span><div class="scale"></div><span id="heat-hi">high</span><span style="margin-left:auto" id="heat-cap"></span></div>
+    </div>
+  </section>
+
+  <!-- ============== SOLVER ============== -->
+  <section class="tab" id="tab-solver">
+    <div class="grid cols-2b">
+      <div class="card">
+        <h3>1 &middot; Price me to a target</h3>
+        <p class="sub">Know your cost and the margin (or markup) you need? Get the exact price.</p>
+        <div class="field"><label>Cost / unit (CP)</label><div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="sv-cost" step="0.05" min="0"></div></div>
+        <div class="row2">
+          <div class="field"><label>Target value</label><div class="inp"><input type="number" id="sv-target" step="1" min="0" style="padding-right:26px"><span class="pre" style="left:auto;right:12px">%</span></div></div>
+          <div class="field"><label>Target type</label><select id="sv-type" style="width:100%"><option value="margin">Margin</option><option value="markup">Markup</option></select></div>
+        </div>
+        <div class="kpi-row" id="sv-out1"></div>
+      </div>
+
+      <div class="card">
+        <h3>2 &middot; Max cost at a price</h3>
+        <p class="sub">Price is fixed by the market? Find the highest cost you can pay and still hit your margin.</p>
+        <div class="field"><label>MSRP / unit</label><div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="sv2-price" step="0.05" min="0"></div></div>
+        <div class="field"><label>Target gross margin</label><div class="inp"><input type="number" id="sv2-margin" step="1" min="0" max="99" style="padding-right:26px"><span class="pre" style="left:auto;right:12px">%</span></div></div>
+        <div class="kpi-row" id="sv-out2"></div>
+      </div>
+
+      <div class="card">
+        <h3>3 &middot; Margin &harr; Markup converter</h3>
+        <p class="sub">The two are easy to confuse. Convert either way and read the reference table.</p>
+        <div class="row2">
+          <div class="field"><label>Margin %</label><div class="inp"><input type="number" id="cv-margin" step="1" style="padding-right:26px"><span class="pre" style="left:auto;right:12px">%</span></div></div>
+          <div class="field"><label>Markup %</label><div class="inp"><input type="number" id="cv-markup" step="1" style="padding-right:26px"><span class="pre" style="left:auto;right:12px">%</span></div></div>
+        </div>
+        <div class="table-scroll" style="margin-top:6px"><table id="cv-table"></table></div>
+      </div>
+
+      <div class="card">
+        <h3>4 &middot; Break-even &amp; profit goal</h3>
+        <p class="sub">With fixed costs in play, how many units clear the hurdle?</p>
+        <div class="row2">
+          <div class="field"><label>MSRP</label><div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="be-price" step="0.05" min="0"></div></div>
+          <div class="field"><label>Cost (CP)</label><div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="be-cost" step="0.05" min="0"></div></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label>Fixed costs</label><div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="be-fixed" step="100" min="0"></div></div>
+          <div class="field"><label>Profit goal</label><div class="inp"><span class="pre" data-sym>$</span><input class="has-pre" type="number" id="be-goal" step="100" min="0"></div></div>
+        </div>
+        <div class="kpi-row" id="be-out"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== GUIDE ============== -->
+  <section class="tab guide" id="tab-guide">
+    <div class="card">
+      <h2>How this works &mdash; and what every number means</h2>
+      <p class="sub">Short version: <strong>Margin</strong> answers "what share of the sale do I keep?" and <strong>Markup</strong> answers "how much did I add on top of cost?" They are not the same number, and mixing them up is the most common pricing mistake.</p>
+
+      <h3>The core formulas</h3>
+      <div class="two-col">
+        <p><strong>Unit profit</strong> = MSRP &minus; CP</p>
+        <div class="formula">profit/unit = price − cost</div>
+        <p><strong>Gross margin</strong> &mdash; share of the selling price you keep.</p>
+        <div class="formula">margin % = (price − cost) ÷ price</div>
+        <p><strong>Markup</strong> &mdash; the uplift relative to your cost.</p>
+        <div class="formula">markup % = (price − cost) ÷ cost</div>
+        <p><strong>Revenue / COGS / Gross profit</strong> across your volume.</p>
+        <div class="formula">revenue = price × volume
+cogs    = cost  × volume
+gross   = revenue − cogs</div>
+        <p><strong>Net profit</strong> after fixed costs.</p>
+        <div class="formula">net = gross − fixed costs</div>
+        <p><strong>Break-even</strong> volume with fixed costs.</p>
+        <div class="formula">break-even units = fixed ÷ (price − cost)</div>
+      </div>
+
+      <h3>Margin and markup are linked</h3>
+      <p>For the same price and cost, markup is always the larger number. Convert between them with:</p>
+      <div class="formula">markup = margin ÷ (1 − margin)      margin = markup ÷ (1 + markup)</div>
+      <table>
+        <thead><tr><th>Gross margin</th><th>Equivalent markup</th><th>Feel</th></tr></thead>
+        <tbody>
+          <tr><td>20%</td><td>25%</td><td>Thin &mdash; commodity water / value soda</td></tr>
+          <tr><td>33%</td><td>50%</td><td>Typical distributor line</td></tr>
+          <tr><td>50%</td><td>100% (keystone)</td><td>Healthy retail</td></tr>
+          <tr><td>60%</td><td>150%</td><td>Premium / craft</td></tr>
+          <tr><td>75%</td><td>300%</td><td>Bar / on-premise pour</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Beverage-specific cost reality</h3>
+      <ul>
+        <li><strong>Landed cost &ne; supplier price.</strong> Freight, duty/excise, packaging, deposits and breakage all sit between the invoice and the shelf. Build the real CP in the <em>Cost Builder</em> tab.</li>
+        <li><strong>Three-tier world.</strong> For alcohol especially, value splits across supplier &rarr; distributor &rarr; retailer, each taking a margin. Model each tier as its own row in the <em>Portfolio</em> with the prior tier's price as the next tier's cost.</li>
+        <li><strong>Case packs.</strong> You buy in cases but sell in units &mdash; set <em>units/case</em> so the studio shows both.</li>
+        <li><strong>Excise &amp; deposits</strong> are per-unit costs that quietly crush thin margins; the Cost Builder keeps them visible.</li>
+      </ul>
+
+      <h3>Using each tab</h3>
+      <ul>
+        <li><strong>Calculator</strong> &mdash; one product, live. Watch the gauge and the revenue&rarr;profit waterfall.</li>
+        <li><strong>Cost Builder</strong> &mdash; assemble a defensible CP, then send it straight to the calculator.</li>
+        <li><strong>Portfolio</strong> &mdash; every SKU side by side with a profit-weighted blended margin.</li>
+        <li><strong>Sensitivity</strong> &mdash; a heatmap of how margin/markup/profit react when price and cost move together.</li>
+        <li><strong>Solver</strong> &mdash; work backwards: price-to-target, max-cost, converter, and break-even.</li>
+      </ul>
+      <div class="note">Everything you type is saved in <b>this browser only</b> (nothing leaves your machine). Use <b>Save</b> to persist, <b>PDF</b> to print a board-ready snapshot, and the matching Excel workbook in this project for offline spreadsheet work.</div>
+    </div>
+  </section>
+
+  <div class="foot">Beverage Margin Studio &middot; self-contained, offline-capable &middot; figures are estimates &mdash; validate against your own invoices &amp; tax rules.</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+/* ----------------------------- State ----------------------------- */
+const DEFAULTS = {
+  currency:'USD',
+  calc:{ msrp:3.50, cost:1.20, volume:10000, fixed:0, upc:24, target:0 },
+  cost:{ base:0.85, freight:0.12, duty:0.08, pack:0.10, deposit:0.05, spoil:3, msrp:3.50 },
+  portfolio:[
+    {name:'Sparkling Water 500ml', msrp:1.80, cost:0.55, upc:24, volume:24000},
+    {name:'Cold Brew Can 250ml',   msrp:3.50, cost:1.20, upc:12, volume:9000},
+    {name:'Craft Soda 355ml',      msrp:2.25, cost:0.78, upc:24, volume:14000},
+    {name:'Energy Drink 250ml',    msrp:2.99, cost:0.95, upc:24, volume:7000}
+  ],
+  sens:{ price:3.50, cost:1.20, vol:10000, range:30, axis:'cost', metric:'margin' },
+  solver:{ cost:1.20, target:50, type:'margin', p2:3.50, m2:55,
+           cvMargin:50, beP:3.50, beC:1.20, beFixed:5000, beGoal:10000 }
+};
+let S = structuredClone(DEFAULTS);
+const KEY='bms_state_v1';
+
+function load(){ try{ const r=localStorage.getItem(KEY); if(r){ S=Object.assign(structuredClone(DEFAULTS), JSON.parse(r)); } }catch(e){} }
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+function reset(){ S=structuredClone(DEFAULTS); save(); applyAll(); renderAll(); toast('Reset to defaults'); }
+
+/* ----------------------------- Format ----------------------------- */
+const CURSYM={USD:'$',EUR:'€',GBP:'£',CAD:'$',AUD:'$',JPY:'¥',INR:'₹',MXN:'$',BRL:'R$',ZAR:'R'};
+function money(n,dp){ if(!isFinite(n))return '—'; const d=dp==null?2:dp;
+  try{return new Intl.NumberFormat(undefined,{style:'currency',currency:S.currency,minimumFractionDigits:d,maximumFractionDigits:d}).format(n);}
+  catch(e){return (CURSYM[S.currency]||'$')+n.toFixed(d);} }
+function pct(n){ if(!isFinite(n))return '—'; return (n*100).toFixed(1)+'%'; }
+function pct0(n){ if(!isFinite(n))return '—'; return Math.round(n*100)+'%'; }
+function intf(n){ if(!isFinite(n))return '—'; return new Intl.NumberFormat().format(Math.round(n)); }
+function sym(){ return CURSYM[S.currency]||'$'; }
+
+/* ----------------------------- Core math ----------------------------- */
+function metrics(msrp,cost,volume,fixed){
+  fixed=fixed||0;
+  const up=msrp-cost;
+  const margin=msrp>0?up/msrp:NaN;
+  const markup=cost>0?up/cost:(up>0?Infinity:NaN);
+  const revenue=msrp*volume, cogs=cost*volume, gross=revenue-cogs, net=gross-fixed;
+  const beUnits=up>0?fixed/up:NaN;
+  return {up,margin,markup,revenue,cogs,gross,net,beUnits};
+}
+function marginColor(m){
+  if(!isFinite(m)) return 'var(--muted)';
+  if(m<0) return 'var(--bad)';
+  if(m<0.10) return 'var(--warn)';
+  if(m<0.25) return 'var(--ok)';
+  if(m<0.40) return 'var(--good)';
+  return 'var(--great)';
+}
+function marginLabel(m){
+  if(!isFinite(m))return '';
+  if(m<0)return 'LOSS'; if(m<0.10)return 'THIN'; if(m<0.25)return 'OK';
+  if(m<0.40)return 'HEALTHY'; return 'STRONG';
+}
+
+/* ----------------------------- SVG helpers ----------------------------- */
+function el(html){ const d=document.createElement('div'); d.innerHTML=html.trim(); return d; }
+function svgEl(w,h,inner){ return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="${h}" preserveAspectRatio="xMidYMid meet" font-family="var(--mono)">${inner}</svg>`; }
+
+function gauge(m){
+  const w=320,h=180,cx=160,cy=160,r=120;
+  const lo=-0.20, hi=0.65;
+  const t=v=>Math.max(0,Math.min(1,(v-lo)/(hi-lo)));
+  const pt=(tt)=>{ const a=Math.PI*(1-tt); return [cx+r*Math.cos(a), cy-r*Math.sin(a)]; };
+  const arc=(t0,t1,col,wid)=>{ const [x0,y0]=pt(t0),[x1,y1]=pt(t1);
+    return `<path d="M ${x0} ${y0} A ${r} ${r} 0 0 1 ${x1} ${y1}" stroke="${col}" stroke-width="${wid||16}" fill="none" stroke-linecap="butt"/>`; };
+  let s='';
+  s+=arc(t(-0.20),t(0),'#ff5d6c');
+  s+=arc(t(0),t(0.10),'#ff8a4b');
+  s+=arc(t(0.10),t(0.25),'#ffc24b');
+  s+=arc(t(0.25),t(0.40),'#3ecf8e');
+  s+=arc(t(0.40),t(0.65),'#23e0a0');
+  // needle
+  const tv=t(isFinite(m)?m:0); const [nx,ny]=pt(tv);
+  s+=`<line x1="${cx}" y1="${cy}" x2="${nx}" y2="${ny}" stroke="#e7ecf5" stroke-width="3"/>`;
+  s+=`<circle cx="${cx}" cy="${cy}" r="7" fill="#e7ecf5"/>`;
+  // ticks
+  [0,0.25,0.5].forEach(()=>{});
+  ['-20%','0%','20%','40%','65%'].forEach((lab,i)=>{ const tt=[t(-0.2),t(0),t(0.2),t(0.4),t(0.65)][i];
+    const [lx,ly]=pt(tt); const [ix,iy]=[cx+(r+18)*Math.cos(Math.PI*(1-tt)), cy-(r+18)*Math.sin(Math.PI*(1-tt))];
+    s+=`<text x="${ix}" y="${iy}" fill="#6b7894" font-size="10" text-anchor="middle">${lab}</text>`; });
+  const col=marginColor(m);
+  s+=`<text x="${cx}" y="${cy-30}" fill="${col}" font-size="34" font-weight="700" text-anchor="middle">${pct(m)}</text>`;
+  s+=`<text x="${cx}" y="${cy-12}" fill="#93a0ba" font-size="12" text-anchor="middle" letter-spacing="1">${marginLabel(m)} MARGIN</text>`;
+  return svgEl(w,h,s);
+}
+
+function waterfall(rev,cogs,gross){
+  const w=520,h=210,pad=34,base=h-34,top=20;
+  const max=Math.max(rev,1);
+  const scale=(base-top)/max;
+  const bw=96, gap=(w-2*pad-3*bw)/2;
+  const xs=[pad, pad+bw+gap, pad+2*(bw+gap)];
+  const yOf=v=>base-v*scale;
+  let s='';
+  s+=`<line x1="${pad-6}" y1="${base}" x2="${w-pad+6}" y2="${base}" stroke="#27314a"/>`;
+  // Revenue full bar
+  s+=bar(xs[0],yOf(rev),bw,base-yOf(rev),'url(#gRev)','Revenue',money(rev,0));
+  // COGS floating from rev down to gross (the slice that leaves)
+  const cogsTop=yOf(rev), cogsBot=yOf(Math.max(gross,0));
+  const ch=Math.abs(cogsBot-cogsTop);
+  s+=`<rect x="${xs[1]}" y="${Math.min(cogsTop,cogsBot)}" width="${bw}" height="${Math.max(ch,1)}" rx="5" fill="url(#gCogs)"/>`;
+  s+=`<text x="${xs[1]+bw/2}" y="${Math.min(cogsTop,cogsBot)-8}" fill="#ff8aa0" font-size="12" text-anchor="middle">− COGS</text>`;
+  s+=`<text x="${xs[1]+bw/2}" y="${(cogsTop+cogsBot)/2+4}" fill="#fff" font-size="12" text-anchor="middle">${money(cogs,0)}</text>`;
+  s+=`<line x1="${xs[0]+bw}" y1="${cogsTop}" x2="${xs[1]}" y2="${cogsTop}" stroke="#33405e" stroke-dasharray="3 3"/>`;
+  // Gross profit bar
+  const gcol = gross>=0?'url(#gProf)':'url(#gLoss)';
+  s+=bar(xs[2],yOf(Math.max(gross,0)),bw,Math.abs(base-yOf(Math.max(gross,0))),gcol,'Gross profit',money(gross,0));
+  s+=`<line x1="${xs[1]+bw}" y1="${cogsBot}" x2="${xs[2]}" y2="${cogsBot}" stroke="#33405e" stroke-dasharray="3 3"/>`;
+  const defs=`<defs>
+    <linearGradient id="gRev" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b9dff"/><stop offset="1" stop-color="#2f5fb0"/></linearGradient>
+    <linearGradient id="gCogs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff5d6c"/><stop offset="1" stop-color="#b83948"/></linearGradient>
+    <linearGradient id="gProf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#23e0a0"/><stop offset="1" stop-color="#1a9c87"/></linearGradient>
+    <linearGradient id="gLoss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8a4b"/><stop offset="1" stop-color="#b85a2b"/></linearGradient>
+  </defs>`;
+  function bar(x,y,wd,ht,fill,label,val){
+    return `<rect x="${x}" y="${y}" width="${wd}" height="${Math.max(ht,1)}" rx="5" fill="${fill}"/>`+
+           `<text x="${x+wd/2}" y="${base+18}" fill="#93a0ba" font-size="11" text-anchor="middle">${label}</text>`+
+           `<text x="${x+wd/2}" y="${y-8}" fill="#e7ecf5" font-size="12" text-anchor="middle">${val}</text>`;
+  }
+  return svgEl(w,h,defs+s);
+}
+
+function lineChart(points, opts){
+  opts=opts||{};
+  const w=520,h=210,padL=58,padR=18,padT=16,padB=30;
+  const xs=points.map(p=>p[0]), ys=points.map(p=>p[1]);
+  const xmin=Math.min(...xs), xmax=Math.max(...xs);
+  let ymin=Math.min(0,...ys), ymax=Math.max(...ys,1);
+  if(ymax===ymin) ymax=ymin+1;
+  const X=x=>padL+(x-xmin)/(xmax-xmin||1)*(w-padL-padR);
+  const Y=y=>padT+(1-(y-ymin)/(ymax-ymin||1))*(h-padT-padB);
+  let s='';
+  // grid + y labels
+  for(let i=0;i<=4;i++){ const v=ymin+(ymax-ymin)*i/4; const yy=Y(v);
+    s+=`<line x1="${padL}" y1="${yy}" x2="${w-padR}" y2="${yy}" stroke="#1b2435"/>`;
+    s+=`<text x="${padL-8}" y="${yy+4}" fill="#6b7894" font-size="10" text-anchor="end">${opts.yfmt?opts.yfmt(v):intf(v)}</text>`; }
+  // zero line
+  if(ymin<0){ const zy=Y(0); s+=`<line x1="${padL}" y1="${zy}" x2="${w-padR}" y2="${zy}" stroke="#33405e"/>`; }
+  // area + line
+  const path=points.map((p,i)=>(i?'L':'M')+X(p[0])+' '+Y(p[1])).join(' ');
+  s+=`<path d="${path} L ${X(xmax)} ${Y(Math.max(0,ymin))} L ${X(xmin)} ${Y(Math.max(0,ymin))} Z" fill="rgba(54,214,195,.10)"/>`;
+  s+=`<path d="${path}" stroke="#36d6c3" stroke-width="2.5" fill="none"/>`;
+  // x labels
+  for(let i=0;i<=4;i++){ const xv=xmin+(xmax-xmin)*i/4; s+=`<text x="${X(xv)}" y="${h-8}" fill="#6b7894" font-size="10" text-anchor="middle">${opts.xfmt?opts.xfmt(xv):intf(xv)}</text>`; }
+  // marker
+  if(opts.marker && opts.marker[0]>=xmin && opts.marker[0]<=xmax){ const mx=X(opts.marker[0]),my=Y(opts.marker[1]);
+    s+=`<line x1="${mx}" y1="${padT}" x2="${mx}" y2="${h-padB}" stroke="#ffc24b" stroke-dasharray="4 3"/>`;
+    s+=`<circle cx="${mx}" cy="${my}" r="4" fill="#ffc24b"/>`;
+    if(opts.markerLabel) s+=`<text x="${mx+6}" y="${padT+12}" fill="#ffc24b" font-size="10">${opts.markerLabel}</text>`; }
+  return svgEl(w,h,s);
+}
+
+function hbars(items){ // items:[{label,value,color}]
+  const w=520, rowH=34, h=items.length*rowH+14;
+  const max=Math.max(...items.map(i=>Math.abs(i.value)),1);
+  const padL=150, padR=70;
+  let s='';
+  items.forEach((it,i)=>{ const y=10+i*rowH; const bw=(Math.abs(it.value)/max)*(w-padL-padR);
+    s+=`<text x="${padL-10}" y="${y+15}" fill="#cdd6e8" font-size="12" text-anchor="end">${esc(it.label)}</text>`;
+    s+=`<rect x="${padL}" y="${y+4}" width="${Math.max(bw,2)}" height="16" rx="4" fill="${it.color||'#36d6c3'}"/>`;
+    s+=`<text x="${padL+Math.max(bw,2)+8}" y="${y+16}" fill="#93a0ba" font-size="11">${it.valLabel||intf(it.value)}</text>`; });
+  return svgEl(w,h,s);
+}
+
+function esc(s){ return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+/* ----------------------------- Apply state -> inputs ----------------------------- */
+function setVal(id,v){ const e=document.getElementById(id); if(e) e.value=v; }
+function applyAll(){
+  document.getElementById('currency').value=S.currency;
+  // calc
+  setVal('calc-msrp',S.calc.msrp); setVal('calc-msrp-r',S.calc.msrp);
+  setVal('calc-cost',S.calc.cost); setVal('calc-cost-r',S.calc.cost);
+  setVal('calc-volume',S.calc.volume); setVal('calc-volume-r',S.calc.volume);
+  setVal('calc-fixed',S.calc.fixed); setVal('calc-upc',S.calc.upc); setVal('calc-target',S.calc.target);
+  // cost
+  setVal('cb-base',S.cost.base); setVal('cb-freight',S.cost.freight); setVal('cb-duty',S.cost.duty);
+  setVal('cb-pack',S.cost.pack); setVal('cb-deposit',S.cost.deposit); setVal('cb-spoil',S.cost.spoil); setVal('cb-msrp',S.cost.msrp);
+  // sens
+  setVal('s-price',S.sens.price); setVal('s-cost',S.sens.cost); setVal('s-vol',S.sens.vol);
+  setVal('s-range',S.sens.range); setVal('s-axis',S.sens.axis); setVal('s-metric',S.sens.metric);
+  // solver
+  setVal('sv-cost',S.solver.cost); setVal('sv-target',S.solver.target); setVal('sv-type',S.solver.type);
+  setVal('sv2-price',S.solver.p2); setVal('sv2-margin',S.solver.m2);
+  setVal('cv-margin',S.solver.cvMargin);
+  setVal('be-price',S.solver.beP); setVal('be-cost',S.solver.beC); setVal('be-fixed',S.solver.beFixed); setVal('be-goal',S.solver.beGoal);
+  document.querySelectorAll('[data-sym]').forEach(e=>e.textContent=sym());
+}
+
+/* ----------------------------- Render: Calculator ----------------------------- */
+function renderCalc(){
+  const c=S.calc; const m=metrics(c.msrp,c.cost,c.volume,c.fixed);
+  const mm=document.getElementById('m-margin'); mm.textContent=pct(m.margin); mm.style.color=marginColor(m.margin);
+  document.getElementById('m-margin-x').textContent=marginLabel(m.margin)+' • of revenue kept';
+  const bar=document.getElementById('m-margin-bar'); bar.style.width=Math.max(0,Math.min(100,(m.margin||0)*100))+'%'; bar.style.background=marginColor(m.margin);
+  document.getElementById('m-markup').textContent=isFinite(m.markup)?pct(m.markup):'—';
+  const mu=document.getElementById('m-unit'); mu.textContent=money(m.up); mu.style.color=m.up>=0?'var(--text)':'var(--bad)';
+  document.getElementById('m-unit-x').textContent = c.upc>0 ? money(m.up*c.upc)+' / case' : 'per unit sold';
+  document.getElementById('m-rev').textContent=money(m.revenue,0);
+  document.getElementById('m-cogs').textContent=money(m.cogs,0);
+  const gp=document.getElementById('m-gp'); gp.textContent=money(m.gross,0); gp.style.color=m.gross>=0?'var(--good)':'var(--bad)';
+  const net=document.getElementById('m-net'); net.textContent=money(m.net,0); net.style.color=m.net>=0?'var(--good)':'var(--bad)';
+
+  document.getElementById('waterfall').innerHTML=waterfall(m.revenue,m.cogs,m.gross);
+  document.getElementById('gauge').innerHTML=gauge(m.margin);
+
+  // profit vs volume
+  const vmax=Math.max(c.volume*2, c.fixed>0&&m.up>0? (c.fixed/m.up)*1.6 : c.volume*2, 100);
+  const pts=[]; for(let i=0;i<=40;i++){ const v=vmax*i/40; pts.push([v, m.up*v - c.fixed]); }
+  const be=m.up>0?c.fixed/m.up:NaN;
+  document.getElementById('profitchart').innerHTML=lineChart(pts,{
+    yfmt:v=>sym()+intf(v), xfmt:v=>intf(v),
+    marker: isFinite(be)&&c.fixed>0?[be,0]:null, markerLabel:isFinite(be)&&c.fixed>0?('B/E '+intf(be)):null
+  });
+
+  const kp=[];
+  kp.push(['Break-even', c.fixed>0?(isFinite(m.beUnits)?intf(m.beUnits)+' units':'never'):'— (no fixed)']);
+  if(c.target>0){ const need=m.up>0?(c.fixed+c.target)/m.up:NaN; kp.push(['Units for '+money(c.target,0)+' profit', isFinite(need)?intf(need):'—']); }
+  if(c.upc>0){ kp.push(['Cases sold', intf(c.volume/c.upc)]); kp.push(['Revenue / case', money(c.msrp*c.upc,2)]); }
+  document.getElementById('calc-kpis').innerHTML=kp.map(k=>`<div class="chip"><div class="k">${k[0]}</div><div class="v">${k[1]}</div></div>`).join('');
+}
+
+/* ----------------------------- Render: Cost builder ----------------------------- */
+function landed(){
+  const c=S.cost; const sub=(+c.base)+(+c.freight)+(+c.duty)+(+c.pack)+(+c.deposit);
+  const sp=Math.max(0,Math.min(0.9,(+c.spoil)/100));
+  return { sub, landed: sp<1? sub/(1-sp):sub, sp };
+}
+function renderCost(){
+  const c=S.cost; const L=landed();
+  document.getElementById('cb-landed').textContent=money(L.landed);
+  const upc=S.calc.upc||24;
+  document.getElementById('cb-case').textContent=money(L.landed*upc);
+  document.getElementById('cb-case-x').textContent='at '+upc+' / case';
+  const comp=[
+    {label:'Base cost',value:+c.base,color:'#5b9dff'},
+    {label:'Freight',value:+c.freight,color:'#36d6c3'},
+    {label:'Duty / excise',value:+c.duty,color:'#ffc24b'},
+    {label:'Packaging',value:+c.pack,color:'#a98bff'},
+    {label:'Deposit / other',value:+c.deposit,color:'#ff8a4b'},
+    {label:'Spoilage uplift',value:L.landed-L.sub,color:'#ff5d6c'}
+  ].map(x=>({label:x.label,value:x.value,color:x.color,valLabel:money(x.value)}));
+  document.getElementById('cost-bars').innerHTML=hbars(comp);
+  const m=metrics(c.msrp,L.landed,1,0);
+  document.getElementById('cb-preview').innerHTML=
+    `<div class="chip"><div class="k">Margin</div><div class="v" style="color:${marginColor(m.margin)}">${pct(m.margin)}</div></div>`+
+    `<div class="chip"><div class="k">Markup</div><div class="v">${isFinite(m.markup)?pct(m.markup):'—'}</div></div>`+
+    `<div class="chip"><div class="k">Profit / unit</div><div class="v">${money(m.up)}</div></div>`;
+}
+
+/* ----------------------------- Render: Portfolio ----------------------------- */
+function renderPortfolio(){
+  const body=document.getElementById('pf-body'); body.innerHTML='';
+  S.portfolio.forEach((p,i)=>{
+    const tr=document.createElement('tr');
+    tr.innerHTML=
+      `<td><input type="text" data-i="${i}" data-f="name" value="${esc(p.name)}" style="min-width:150px"></td>`+
+      `<td><input type="number" step="0.05" data-i="${i}" data-f="msrp" value="${p.msrp}" style="width:78px"></td>`+
+      `<td><input type="number" step="0.05" data-i="${i}" data-f="cost" value="${p.cost}" style="width:78px"></td>`+
+      `<td><input type="number" step="1" data-i="${i}" data-f="upc" value="${p.upc}" style="width:64px"></td>`+
+      `<td><input type="number" step="100" data-i="${i}" data-f="volume" value="${p.volume}" style="width:90px"></td>`+
+      `<td class="calc" id="pf-margin-${i}"></td><td class="calc" id="pf-markup-${i}"></td>`+
+      `<td class="calc" id="pf-unit-${i}"></td><td class="calc" id="pf-rev-${i}"></td><td class="calc" id="pf-gp-${i}"></td>`+
+      `<td class="no-print"><button class="btn ghost" data-del="${i}" style="padding:4px 9px;font-size:12px" title="Remove">✕</button></td>`;
+    body.appendChild(tr);
+  });
+  body.querySelectorAll('input').forEach(inp=>inp.addEventListener('input',e=>{
+    const i=+e.target.dataset.i, f=e.target.dataset.f;
+    S.portfolio[i][f]= f==='name'? e.target.value : (parseFloat(e.target.value)||0);
+    refreshPortfolio(); save();
+  }));
+  body.querySelectorAll('[data-del]').forEach(b=>b.addEventListener('click',e=>{
+    S.portfolio.splice(+e.target.dataset.del,1); if(!S.portfolio.length) S.portfolio.push({name:'New product',msrp:0,cost:0,upc:24,volume:0});
+    renderPortfolio(); save();
+  }));
+  refreshPortfolio();
+}
+function refreshPortfolio(){
+  let tRev=0,tCogs=0,tGp=0;
+  const chartItems=[];
+  S.portfolio.forEach((p,i)=>{
+    const m=metrics(p.msrp,p.cost,p.volume,0);
+    const set=(id,val,col)=>{ const e=document.getElementById(id); if(e){e.textContent=val; if(col)e.style.color=col;} };
+    set('pf-margin-'+i,pct(m.margin),marginColor(m.margin));
+    set('pf-markup-'+i,isFinite(m.markup)?pct(m.markup):'—');
+    set('pf-unit-'+i,money(m.up));
+    set('pf-rev-'+i,money(m.revenue,0));
+    set('pf-gp-'+i,money(m.gross,0), m.gross>=0?'var(--good)':'var(--bad)');
+    tRev+=m.revenue; tCogs+=m.cogs; tGp+=m.gross;
+    chartItems.push({label:p.name||('SKU '+(i+1)), value:m.gross, color:m.gross>=0?'#36d6c3':'#ff5d6c', valLabel:money(m.gross,0)});
+  });
+  const blendM=tRev>0?tGp/tRev:NaN; const blendMk=tCogs>0?tGp/tCogs:NaN;
+  const set=(id,v,c)=>{const e=document.getElementById(id);e.textContent=v;if(c)e.style.color=c;};
+  set('pf-t-rev',money(tRev,0)); set('pf-t-gp',money(tGp,0), tGp>=0?'var(--good)':'var(--bad)');
+  set('pf-t-margin',pct(blendM),marginColor(blendM)); set('pf-t-markup',isFinite(blendMk)?pct(blendMk):'—');
+  document.getElementById('pf-blend-note').textContent='blended, profit-weighted →';
+  document.getElementById('pf-chart').innerHTML=hbars(chartItems);
+}
+
+/* ----------------------------- Render: Sensitivity ----------------------------- */
+function heatColor(t){ // 0..1 -> red..green
+  t=Math.max(0,Math.min(1,t)); const hue=120*t; const light=t<0.5?40+t*8:44-(t-0.5)*4;
+  return `hsl(${hue},62%,${light}%)`;
+}
+function renderSensitivity(){
+  const z=S.sens; const n=7; const r=z.range/100;
+  const priceVals=[], xVals=[];
+  for(let i=0;i<n;i++){ const f=1+(-r + 2*r*i/(n-1)); priceVals.push(+z.price*f); }
+  priceVals.reverse(); // high price at top
+  const baseX = z.axis==='cost'? +z.cost : +z.vol;
+  for(let i=0;i<n;i++){ const f=1+(-r + 2*r*i/(n-1)); xVals.push(baseX*f); }
+  const cells=[]; let lo=Infinity,hi=-Infinity;
+  priceVals.forEach(P=>{ const row=[]; xVals.forEach(X=>{
+    let cost=z.axis==='cost'?X:+z.cost; let vol=z.axis==='volume'?X:+z.vol;
+    const m=metrics(P,cost,vol,0);
+    let val = z.metric==='margin'?m.margin : z.metric==='markup'?(isFinite(m.markup)?m.markup:NaN) : m.gross;
+    if(isFinite(val)){ lo=Math.min(lo,val); hi=Math.max(hi,val); }
+    row.push(val);
+  }); cells.push(row); });
+  const fmt = z.metric==='profit'? (v=>money(v,0)) : (v=>pct0(v));
+  const t=document.getElementById('heat');
+  let html='<thead><tr><th class="axis">MSRP &darr; / '+(z.axis==='cost'?'Cost':'Volume')+' &rarr;</th>';
+  xVals.forEach(X=>{ html+='<th>'+(z.axis==='cost'?money(X,2):intf(X))+'</th>'; });
+  html+='</tr></thead><tbody>';
+  priceVals.forEach((P,ri)=>{ html+='<tr><td class="axis">'+money(P,2)+'</td>';
+    cells[ri].forEach(v=>{ const tt=hi>lo?(v-lo)/(hi-lo):0.5; const col=isFinite(v)?heatColor(tt):'#222';
+      html+=`<td style="background:${col}">${isFinite(v)?fmt(v):'—'}</td>`; });
+    html+='</tr>'; });
+  html+='</tbody>'; t.innerHTML=html;
+  document.getElementById('heat-lo').textContent=isFinite(lo)?fmt(lo):'';
+  document.getElementById('heat-hi').textContent=isFinite(hi)?fmt(hi):'';
+  const names={margin:'Gross margin %',markup:'Markup %',profit:'Total gross profit'};
+  document.getElementById('heat-cap').textContent=names[z.metric]+' • ±'+z.range+'%';
+}
+
+/* ----------------------------- Render: Solver ----------------------------- */
+function renderSolver(){
+  const v=S.solver;
+  // 1 price to target
+  const cost=+v.cost, tv=(+v.target)/100;
+  let price, resMargin, resMarkup;
+  if(v.type==='margin'){ price= tv<1? cost/(1-tv):NaN; }
+  else { price= cost*(1+tv); }
+  if(isFinite(price)&&price>0){ resMargin=(price-cost)/price; resMarkup=cost>0?(price-cost)/cost:NaN; }
+  document.getElementById('sv-out1').innerHTML=
+    `<div class="chip"><div class="k">Required price</div><div class="v" style="color:var(--accent)">${isFinite(price)?money(price):'—'}</div></div>`+
+    `<div class="chip"><div class="k">Gives margin</div><div class="v">${pct(resMargin)}</div></div>`+
+    `<div class="chip"><div class="k">Gives markup</div><div class="v">${isFinite(resMarkup)?pct(resMarkup):'—'}</div></div>`;
+  // 2 max cost
+  const p2=+v.p2, m2=(+v.m2)/100; const maxCost= p2*(1-m2);
+  const mk2 = maxCost>0?(p2-maxCost)/maxCost:NaN;
+  document.getElementById('sv-out2').innerHTML=
+    `<div class="chip"><div class="k">Max cost (CP)</div><div class="v" style="color:var(--accent)">${isFinite(maxCost)?money(maxCost):'—'}</div></div>`+
+    `<div class="chip"><div class="k">Profit / unit</div><div class="v">${money(p2-maxCost)}</div></div>`+
+    `<div class="chip"><div class="k">= Markup</div><div class="v">${isFinite(mk2)?pct(mk2):'—'}</div></div>`;
+  // 3 converter table
+  renderConverterTable();
+  // 4 break-even
+  const up=(+v.beP)-(+v.beC);
+  const be= up>0? (+v.beFixed)/up : NaN;
+  const goalUnits= up>0? ((+v.beFixed)+(+v.beGoal))/up : NaN;
+  document.getElementById('be-out').innerHTML=
+    `<div class="chip"><div class="k">Profit / unit</div><div class="v" style="color:${up>=0?'var(--good)':'var(--bad)'}">${money(up)}</div></div>`+
+    `<div class="chip"><div class="k">Break-even</div><div class="v">${isFinite(be)?intf(be)+' u':'—'}</div></div>`+
+    `<div class="chip"><div class="k">Units for goal</div><div class="v">${isFinite(goalUnits)?intf(goalUnits)+' u':'—'}</div></div>`;
+}
+function renderConverterTable(){
+  const rows=[10,15,20,25,30,33.3,40,50,60,66.7,75];
+  let html='<thead><tr><th>Margin</th><th>Markup</th></tr></thead><tbody>';
+  const cur=(+S.solver.cvMargin)/100;
+  rows.forEach(mp=>{ const m=mp/100; const mk=m<1?m/(1-m):Infinity;
+    html+=`<tr><td>${mp.toFixed(mp%1?1:0)}%</td><td>${isFinite(mk)?(mk*100).toFixed(0)+'%':'∞'}</td></tr>`; });
+  html+='</tbody>'; document.getElementById('cv-table').innerHTML=html;
+}
+
+/* ----------------------------- Render all ----------------------------- */
+function renderAll(){ document.querySelectorAll('[data-sym]').forEach(e=>e.textContent=sym());
+  renderCalc(); renderCost(); renderPortfolio(); renderSensitivity(); renderSolver(); }
+
+/* ----------------------------- Wiring ----------------------------- */
+function pair(numId,rangeId,setter){
+  const n=document.getElementById(numId), rg=document.getElementById(rangeId);
+  const fromN=()=>{ let x=parseFloat(n.value); if(isNaN(x))x=0; setter(x); if(rg) rg.value=Math.min(Math.max(x,+rg.min),+rg.max); renderCalc(); save(); };
+  const fromR=()=>{ let x=parseFloat(rg.value); setter(x); n.value=x; renderCalc(); save(); };
+  n.addEventListener('input',fromN); if(rg) rg.addEventListener('input',fromR);
+}
+function simple(id,setter,after){ const e=document.getElementById(id);
+  const h=ev=>{ const t=ev.target; const val=(t.tagName==='SELECT'||t.type==='text')?t.value:(parseFloat(t.value)||0);
+    setter(val); (after||(()=>{}))(); save(); };
+  e.addEventListener('input',h); e.addEventListener('change',h); }
+
+function bind(){
+  document.getElementById('currency').addEventListener('change',e=>{ S.currency=e.target.value; save(); applyAll(); renderAll(); });
+  document.getElementById('btn-save').addEventListener('click',()=>{ save(); toast('Saved to this browser'); });
+  document.getElementById('btn-print').addEventListener('click',()=>window.print());
+  document.getElementById('btn-reset').addEventListener('click',()=>{ if(confirm('Reset all inputs to defaults?')) reset(); });
+
+  // calc
+  pair('calc-msrp','calc-msrp-r',v=>S.calc.msrp=v);
+  pair('calc-cost','calc-cost-r',v=>S.calc.cost=v);
+  pair('calc-volume','calc-volume-r',v=>S.calc.volume=v);
+  simple('calc-fixed',v=>S.calc.fixed=v,renderCalc);
+  simple('calc-upc',v=>S.calc.upc=v,renderCalc);
+  simple('calc-target',v=>S.calc.target=v,renderCalc);
+  document.getElementById('pull-cost').addEventListener('click',()=>{ S.calc.cost=+landed().landed.toFixed(4); applyAll(); renderCalc(); save(); toast('Pulled landed cost '+money(S.calc.cost)); });
+
+  // cost builder
+  ['base','freight','duty','pack','deposit','spoil','msrp'].forEach(f=>simple('cb-'+f,v=>S.cost[f]=v,renderCost));
+  document.getElementById('cb-send').addEventListener('click',()=>{ S.calc.cost=+landed().landed.toFixed(4); S.calc.msrp=+S.cost.msrp; applyAll(); renderCalc(); save(); show('calc'); toast('Sent to Calculator'); });
+
+  // portfolio
+  document.getElementById('pf-add').addEventListener('click',()=>{ S.portfolio.push({name:'New product',msrp:2.00,cost:0.70,upc:24,volume:5000}); renderPortfolio(); save(); });
+  document.getElementById('pf-csv').addEventListener('click',exportCSV);
+
+  // sensitivity
+  ['price','cost','vol','range'].forEach(f=>simple('s-'+f,v=>S.sens[f]=v,renderSensitivity));
+  simple('s-axis',v=>S.sens.axis=v,renderSensitivity); simple('s-metric',v=>S.sens.metric=v,renderSensitivity);
+
+  // solver
+  simple('sv-cost',v=>S.solver.cost=v,renderSolver); simple('sv-target',v=>S.solver.target=v,renderSolver); simple('sv-type',v=>S.solver.type=v,renderSolver);
+  simple('sv2-price',v=>S.solver.p2=v,renderSolver); simple('sv2-margin',v=>S.solver.m2=v,renderSolver);
+  document.getElementById('cv-margin').addEventListener('input',e=>{ S.solver.cvMargin=parseFloat(e.target.value)||0;
+    const m=S.solver.cvMargin/100; const mk=m<1?m/(1-m):Infinity; document.getElementById('cv-markup').value=isFinite(mk)?(mk*100).toFixed(1):''; renderConverterTable(); save(); });
+  document.getElementById('cv-markup').addEventListener('input',e=>{ const mk=(parseFloat(e.target.value)||0)/100; const m=mk/(1+mk);
+    S.solver.cvMargin=+(m*100).toFixed(1); document.getElementById('cv-margin').value=S.solver.cvMargin; renderConverterTable(); save(); });
+  // break-even inputs
+  simple('be-price',v=>S.solver.beP=v,renderSolver); simple('be-cost',v=>S.solver.beC=v,renderSolver);
+  simple('be-fixed',v=>S.solver.beFixed=v,renderSolver); simple('be-goal',v=>S.solver.beGoal=v,renderSolver);
+
+  // tabs
+  document.querySelectorAll('nav.tabs button').forEach(b=>b.addEventListener('click',()=>show(b.dataset.tab)));
+}
+
+function show(tab){
+  document.querySelectorAll('nav.tabs button').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
+  document.querySelectorAll('section.tab').forEach(s=>s.classList.toggle('active',s.id==='tab-'+tab));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function exportCSV(){
+  const rows=[['Product','MSRP','CP','Units/case','Volume','Margin %','Markup %','Profit/unit','Revenue','COGS','Gross profit']];
+  let tRev=0,tCogs=0,tGp=0;
+  S.portfolio.forEach(p=>{ const m=metrics(p.msrp,p.cost,p.volume,0); tRev+=m.revenue;tCogs+=m.cogs;tGp+=m.gross;
+    rows.push([p.name,p.msrp,p.cost,p.upc,p.volume,(m.margin*100).toFixed(1),isFinite(m.markup)?(m.markup*100).toFixed(1):'',m.up.toFixed(3),m.revenue.toFixed(2),m.cogs.toFixed(2),m.gross.toFixed(2)]); });
+  rows.push(['TOTAL','','','','',(tRev>0?(tGp/tRev*100).toFixed(1):''),(tCogs>0?(tGp/tCogs*100).toFixed(1):''),'',tRev.toFixed(2),tCogs.toFixed(2),tGp.toFixed(2)]);
+  const csv=rows.map(r=>r.map(c=>{ const s=String(c); return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s; }).join(',')).join('\n');
+  const blob=new Blob([csv],{type:'text/csv'}); const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='beverage-portfolio.csv'; a.click(); URL.revokeObjectURL(a.href); toast('Portfolio exported');
+}
+
+let toastT;
+function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('show'),1800); }
+
+/* ----------------------------- Boot ----------------------------- */
+load(); applyAll(); bind(); renderAll();
+</script>
+</body>
+</html>
