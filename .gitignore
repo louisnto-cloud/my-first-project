@@ -1,0 +1,13 @@
+# Node (only used transiently for headless testing)
+node_modules/
+package-lock.json
+package.json
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/

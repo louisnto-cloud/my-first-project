@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Organika MÜV Sparkling Electrolytes — CPG P&L Model</title>
+<style>
+  :root{
+    --bg:#0a0e16; --bg2:#0d1320; --surface:#121a2b; --surface2:#19243a; --surface3:#1f2c46;
+    --line:#26314c; --line2:#33415f;
+    --text:#eaf0fb; --muted:#94a3be; --faint:#65748f;
+    --accent:#4f8cff; --accent2:#36d6c3; --indigo:#7c7bff; --gold:#ffc24b;
+    --pos:#34d399; --pos2:#23e0a0; --neg:#ff5d6c; --warn:#ff9e4b;
+    --shadow:0 10px 34px rgba(0,0,0,.4);
+    --r:14px; --r2:10px;
+    --mono:'SF Mono',ui-monospace,'Cascadia Code','Roboto Mono',Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:radial-gradient(1100px 560px at 85% -8%, #14213f 0%, transparent 55%),
+               radial-gradient(820px 460px at -8% 4%, #0f2b2a 0%, transparent 52%), var(--bg);
+    color:var(--text); font-family:var(--sans); line-height:1.5; -webkit-font-smoothing:antialiased; min-height:100vh;
+  }
+  .wrap{max-width:1320px;margin:0 auto;padding:0 20px 90px}
+  a{color:var(--accent)}
+
+  header.app{position:sticky;top:0;z-index:60;backdrop-filter:blur(12px);
+    background:linear-gradient(180deg,rgba(10,14,22,.94),rgba(10,14,22,.74));border-bottom:1px solid var(--line)}
+  .head-inner{max-width:1320px;margin:0 auto;padding:13px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:13px}
+  .logo{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-size:20px;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));color:#06121a;box-shadow:var(--shadow);font-weight:800}
+  .brand b{font-size:16px;letter-spacing:.2px;display:block}
+  .brand small{color:var(--muted);font-size:11px;letter-spacing:.5px;text-transform:uppercase}
+  .toolbar{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  select.ctl,.btn{background:var(--surface2);color:var(--text);border:1px solid var(--line2);border-radius:9px;
+    padding:8px 12px;font-size:13px;font-family:var(--sans);cursor:pointer;transition:.15s}
+  .btn:hover,select.ctl:hover{border-color:var(--accent);color:#fff}
+  .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#06121a;border:none;font-weight:600}
+  .btn.ghost{background:transparent}
+  .scenpill{display:flex;gap:4px;background:var(--bg2);border:1px solid var(--line2);border-radius:9px;padding:3px}
+  .scenpill button{background:none;border:none;color:var(--muted);padding:6px 11px;border-radius:7px;font-size:12px;cursor:pointer;font-family:var(--sans)}
+  .scenpill button.active{background:var(--accent);color:#06121a;font-weight:600}
+
+  nav.tabs{display:flex;gap:4px;overflow-x:auto;padding:6px 0 0;margin:18px 0 22px;border-bottom:1px solid var(--line)}
+  nav.tabs button{background:none;border:none;color:var(--muted);padding:11px 15px;font-size:14px;cursor:pointer;
+    border-bottom:2px solid transparent;white-space:nowrap;font-family:var(--sans);font-weight:500;transition:.15s}
+  nav.tabs button:hover{color:var(--text)}
+  nav.tabs button.active{color:#fff;border-bottom-color:var(--accent)}
+  section.tab{display:none;animation:fade .25s ease}
+  section.tab.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  .card{background:linear-gradient(180deg,var(--surface),var(--bg2));border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow)}
+  .card h2{margin:0 0 4px;font-size:17px}
+  .card h3{margin:0 0 14px;font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:600}
+  .sub{color:var(--muted);font-size:13px;margin:0 0 16px}
+  .grid{display:grid;gap:18px}
+  .cols-side{grid-template-columns:330px 1fr}
+  .cols-2{grid-template-columns:1fr 1fr}
+  @media(max-width:980px){.cols-side,.cols-2{grid-template-columns:1fr}}
+
+  /* KPI cards */
+  .kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:18px}
+  @media(max-width:1100px){.kpis{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}}
+  .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:var(--r2);padding:13px 14px;position:relative;overflow:hidden}
+  .kpi .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+  .kpi .v{font-size:23px;font-weight:700;font-family:var(--mono);margin-top:5px;line-height:1.05}
+  .kpi .x{font-size:11px;color:var(--faint);margin-top:3px}
+  .kpi .spark{position:absolute;right:8px;top:10px;font-size:11px;font-weight:700;padding:2px 7px;border-radius:6px}
+  .kpi.hl{background:linear-gradient(160deg,rgba(79,140,255,.15),rgba(54,214,195,.05));border-color:#2c4a78}
+
+  /* fields */
+  .field{margin-bottom:14px}
+  .field label{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--muted);margin-bottom:6px;gap:8px}
+  .q{cursor:help;color:var(--faint);border:1px solid var(--line2);border-radius:50%;width:15px;height:15px;display:inline-grid;place-items:center;font-size:9.5px;flex:none}
+  .inp{position:relative;display:flex;align-items:center}
+  .inp .pre,.inp .suf{position:absolute;color:var(--faint);font-size:13px;pointer-events:none}
+  .inp .pre{left:11px} .inp .suf{right:11px}
+  input[type=number],input[type=text]{width:100%;background:var(--bg);border:1px solid var(--line2);color:var(--text);
+    border-radius:8px;padding:9px 11px;font-size:14px;font-family:var(--mono);transition:.15s}
+  input.has-pre{padding-left:22px} input.has-suf{padding-right:24px}
+  input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(79,140,255,.13)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+  /* tables */
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line)}
+  th:first-child,td:first-child{text-align:left}
+  thead th{color:var(--muted);font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px}
+  .num{font-family:var(--mono)}
+  .table-scroll{overflow-x:auto;border-radius:var(--r2)}
+  td input,th input{padding:6px 7px;font-size:12.5px;border-radius:6px;background:var(--bg)}
+
+  /* P&L statement */
+  .pnl td,.pnl th{padding:7px 12px}
+  .pnl .lbl{color:var(--text)}
+  .pnl tr.section td{background:var(--surface2);font-weight:700;border-top:1px solid var(--line2)}
+  .pnl tr.total td{font-weight:700;border-top:2px solid var(--line2);font-family:var(--mono)}
+  .pnl tr.total .lbl{font-family:var(--sans)}
+  .pnl tr.deduct .lbl{color:var(--muted);padding-left:24px}
+  .pnl tr.deduct .num{color:#ffb0b8}
+  .pnl tr:hover{background:rgba(79,140,255,.04)}
+  .pnl .pctcol{color:var(--faint);font-family:var(--mono);width:64px}
+  .pos{color:var(--pos)} .neg{color:var(--neg)}
+
+  .chart-wrap{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r2);padding:14px;margin-top:16px;overflow-x:auto}
+  .chart-title{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin-bottom:8px}
+  svg{display:block}
+  .note{background:rgba(79,140,255,.07);border:1px solid var(--line2);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:12.5px;color:var(--muted);margin-top:14px}
+  .note b{color:var(--text)}
+  .heat td{text-align:center;font-family:var(--mono);font-size:12px;border:1px solid rgba(0,0,0,.25);color:#06121a;font-weight:600;padding:7px 6px;min-width:62px}
+  .heat th{text-align:center;font-size:11px}
+  .heat .axis{background:var(--surface2);color:var(--muted)}
+  .legend{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted);margin-top:10px;flex-wrap:wrap}
+  .legend .scale{height:11px;width:170px;border-radius:6px;background:linear-gradient(90deg,hsl(0,65%,46%),hsl(55,70%,50%),hsl(140,55%,42%))}
+  .chip{display:inline-block;padding:3px 9px;border-radius:999px;font-size:11px;font-weight:700}
+  .addbtn{background:transparent;border:1px dashed var(--line2);color:var(--muted);border-radius:8px;padding:6px 11px;font-size:12px;cursor:pointer}
+  .addbtn:hover{border-color:var(--accent);color:var(--accent)}
+  .delx{background:none;border:none;color:var(--faint);cursor:pointer;font-size:13px;padding:2px 6px}
+  .delx:hover{color:var(--neg)}
+  .guide h3{color:var(--accent);margin-top:24px;font-size:14px}
+  .guide p,.guide li{color:var(--muted);font-size:13.5px}
+  .guide strong{color:var(--text)}
+  .glossary dt{color:var(--text);font-weight:700;font-size:13.5px;margin-top:12px}
+  .glossary dd{color:var(--muted);font-size:13px;margin:2px 0 0}
+  .formula{font-family:var(--mono);background:var(--bg);border:1px solid var(--line2);border-radius:8px;padding:9px 12px;font-size:12.5px;color:var(--accent2);margin:8px 0;overflow-x:auto}
+  .foot{color:var(--faint);font-size:12px;text-align:center;margin-top:42px;line-height:1.7}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--surface2);border:1px solid var(--accent);color:var(--text);padding:11px 18px;border-radius:10px;font-size:13px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.3s;z-index:100}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  .pillbar{display:flex;height:9px;border-radius:6px;overflow:hidden;margin-top:8px;background:var(--bg)}
+  .pillbar i{display:block;height:100%}
+  @media print{header.app,nav.tabs,.toolbar,.no-print{display:none!important}section.tab{display:block!important}.card{break-inside:avoid;box-shadow:none}}
+</style>
+</head>
+<body>
+<header class="app">
+  <div class="head-inner">
+    <div class="brand">
+      <div class="logo">M&Uuml;V</div>
+      <div><b>Organika MÜV Sparkling Electrolytes</b><small>Enterprise CPG P&amp;L &amp; margin model</small></div>
+    </div>
+    <div class="toolbar no-print">
+      <div class="scenpill" id="scenpill">
+        <button data-scen="base" class="active">Base</button>
+        <button data-scen="bull">Bull</button>
+        <button data-scen="bear">Bear</button>
+      </div>
+      <select class="ctl" id="currency" title="Display currency (model is currency-agnostic; no FX conversion)">
+        <option value="CAD">$ CAD</option><option value="USD">$ USD</option><option value="EUR">€ EUR</option><option value="GBP">£ GBP</option>
+      </select>
+      <button class="btn" id="btn-save">&#128190; Save</button>
+      <button class="btn" id="btn-csv">&#11015; CSV</button>
+      <button class="btn" id="btn-print">&#128424; PDF</button>
+      <button class="btn ghost" id="btn-reset">Reset</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="tabs no-print">
+    <button data-tab="pnl" class="active">P&amp;L Statement</button>
+    <button data-tab="cogs">COGS / BOM</button>
+    <button data-tab="channels">Channels</button>
+    <button data-tab="levers">Levers</button>
+    <button data-tab="scenarios">Scenarios</button>
+    <button data-tab="unit">Unit Economics</button>
+    <button data-tab="guide">Guide</button>
+  </nav>
+
+  <!-- ============ P&L ============ -->
+  <section class="tab active" id="tab-pnl">
+    <div class="kpis" id="pnl-kpis"></div>
+    <div class="grid cols-side">
+      <div class="card no-print" id="pnl-inputs">
+        <h3>Top-level assumptions</h3>
+        <div class="field">
+          <label>Annual volume <span class="q" title="Total annual cases across all channels. Units = cases × units per case.">?</span></label>
+          <div class="inp"><input type="number" id="a-cases" step="1000" min="0"><span class="suf">cases</span></div>
+          <div style="font-size:11px;color:var(--faint);margin-top:5px" id="a-cases-x"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label>Units / case</label><div class="inp"><input type="number" id="a-upc" step="1" min="1"></div></div>
+          <div class="field"><label>Brand mktg <span class="q" title="Corporate brand/demand marketing beyond channel-level ad spend, as % of net sales.">?</span></label><div class="inp"><input class="has-suf" type="number" id="a-mktg" step="0.5" min="0"><span class="suf">% net</span></div></div>
+        </div>
+        <h3 style="margin-top:18px">Corporate operating costs (annual)</h3>
+        <div class="field"><label>Sales &amp; team salaries</label><div class="inp"><span class="pre" data-cur>$</span><input class="has-pre" type="number" id="a-sales" step="10000" min="0"></div></div>
+        <div class="field"><label>G&amp;A / overhead</label><div class="inp"><span class="pre" data-cur>$</span><input class="has-pre" type="number" id="a-ga" step="10000" min="0"></div></div>
+        <div class="row2">
+          <div class="field"><label>R&amp;D / innovation</label><div class="inp"><span class="pre" data-cur>$</span><input class="has-pre" type="number" id="a-rnd" step="10000" min="0"></div></div>
+          <div class="field"><label>D&amp;A</label><div class="inp"><span class="pre" data-cur>$</span><input class="has-pre" type="number" id="a-da" step="10000" min="0"></div></div>
+        </div>
+        <div class="note">COGS is built on the <b>COGS / BOM</b> tab; revenue &amp; channel costs on the <b>Channels</b> tab. This statement is the blended roll-up.</div>
+      </div>
+
+      <div class="card">
+        <h2>Annual P&amp;L &mdash; gross sales to EBITDA</h2>
+        <p class="sub">Blended across all channels. The right columns show per-case economics and each line as a percent of net sales.</p>
+        <div class="table-scroll">
+          <table class="pnl" id="pnl-table"></table>
+        </div>
+        <div class="chart-wrap"><div class="chart-title">P&amp;L bridge — where every dollar of gross sales goes</div><div id="pnl-bridge"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COGS ============ -->
+  <section class="tab" id="tab-cogs">
+    <div class="grid cols-2">
+      <div class="card">
+        <h2>Bill of materials &mdash; cost to make one can</h2>
+        <p class="sub">Edit any line. Costs are per 355&nbsp;ml can. Groups roll up to landed COGS, then a yield-loss allowance is applied.</p>
+        <div id="bom-groups"></div>
+        <div class="row2" style="margin-top:8px">
+          <div class="field"><label>Inbound freight / unit <span class="q" title="Freight of ingredients & packaging to the co-packer, per unit.">?</span></label><div class="inp"><span class="pre" data-cur>$</span><input class="has-pre" type="number" id="bom-freight" step="0.005" min="0"></div></div>
+          <div class="field"><label>Yield / scrap loss <span class="q" title="Fill losses, spoilage and scrap. Survivors carry the loss: cost ÷ (1 − loss%).">?</span></label><div class="inp"><input class="has-suf" type="number" id="bom-yield" step="0.5" min="0" max="40"><span class="suf">%</span></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="kpis" style="grid-template-columns:1fr 1fr" id="cogs-kpis"></div>
+        <div class="card">
+          <h3>Cost composition / unit</h3>
+          <div id="cogs-bars"></div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <h3>Gross margin at a target shelf price</h3>
+          <div class="row2">
+            <div class="field"><label>Selling price (to brand) / unit</label><div class="inp"><span class="pre" data-cur>$</span><input class="has-pre" type="number" id="cogs-test-price" step="0.05" min="0"></div></div>
+            <div class="field"><label>Trade &amp; selling load</label><div class="inp"><input class="has-suf" type="number" id="cogs-test-load" step="1" min="0"><span class="suf">% gross</span></div></div>
+          </div>
+          <div id="cogs-preview" class="kpis" style="grid-template-columns:repeat(3,1fr);margin:0"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHANNELS ============ -->
+  <section class="tab" id="tab-channels">
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div><h2>Channel economics</h2><p class="sub" style="margin:4px 0 0">Each route to market has its own price realization and cost stack. Edit the assumptions; results and the blended company P&amp;L recompute live.</p></div>
+        <button class="addbtn no-print" id="ch-add" style="margin-left:auto">+ Add channel</button>
+      </div>
+      <div class="table-scroll" style="margin-top:16px">
+        <table id="ch-assump"></table>
+      </div>
+      <div class="chart-wrap"><div class="chart-title">Contribution margin per unit, by channel</div><div id="ch-chart"></div></div>
+      <div class="table-scroll" style="margin-top:16px">
+        <table id="ch-results"></table>
+      </div>
+      <div class="note">The brand's <b>selling price</b> in retail/club channels is what you invoice the distributor — the downstream distributor &amp; retailer margins are already reflected because you sell at that lower price. DTC &amp; Amazon prices sit near shelf, but carry heavy platform, fulfillment and acquisition costs below gross profit.</div>
+    </div>
+  </section>
+
+  <!-- ============ LEVERS ============ -->
+  <section class="tab" id="tab-levers">
+    <div class="card">
+      <h2>Profit levers &mdash; what actually moves EBITDA</h2>
+      <p class="sub">Each bar swings one driver by ±the amount below and shows the EBITDA range. The widest bars are your biggest levers.</p>
+      <div class="row2" style="max-width:420px">
+        <div class="field"><label>Swing each driver by</label><div class="inp"><input class="has-suf" type="number" id="lev-swing" step="1" min="1" max="80"><span class="suf">± %</span></div></div>
+        <div class="field"><label>&nbsp;</label><div style="font-size:12px;color:var(--muted);padding-top:10px">Base EBITDA: <b id="lev-base" class="num"></b></div></div>
+      </div>
+      <div class="chart-wrap"><div class="chart-title">Tornado — EBITDA sensitivity by driver</div><div id="tornado"></div></div>
+    </div>
+    <div class="card" style="margin-top:18px">
+      <h2>Two-way what-if &mdash; price &times; COGS</h2>
+      <p class="sub">Every cell re-runs the full model for a different selling-price and COGS combination. Pick the metric to map.</p>
+      <div class="row2" style="max-width:560px">
+        <div class="field"><label>Metric</label><select class="ctl" id="wi-metric" style="width:100%"><option value="ebitdaPct">EBITDA %</option><option value="ebitda">EBITDA $</option><option value="gmPct">Gross margin %</option><option value="cmPct">Contribution %</option></select></div>
+        <div class="field"><label>Range ±%</label><div class="inp"><input class="has-suf" type="number" id="wi-range" step="5" min="5" max="60"><span class="suf">%</span></div></div>
+      </div>
+      <div class="table-scroll" style="margin-top:8px"><table class="heat" id="wi-heat"></table></div>
+      <div class="legend"><span id="wi-lo"></span><div class="scale"></div><span id="wi-hi"></span><span style="margin-left:auto" id="wi-cap"></span></div>
+    </div>
+  </section>
+
+  <!-- ============ SCENARIOS ============ -->
+  <section class="tab" id="tab-scenarios">
+    <div class="card">
+      <h2>Scenario comparison</h2>
+      <p class="sub">Bull and Bear are transformations of your current Base assumptions. Use them to frame the range you're planning against.</p>
+      <div class="table-scroll"><table id="scen-table"></table></div>
+      <div class="chart-wrap"><div class="chart-title">EBITDA by scenario</div><div id="scen-chart"></div></div>
+      <div class="note" id="scen-note"></div>
+    </div>
+  </section>
+
+  <!-- ============ UNIT ECON ============ -->
+  <section class="tab" id="tab-unit">
+    <div class="kpis" id="unit-kpis"></div>
+    <div class="grid cols-2">
+      <div class="card">
+        <h2>Per-case economics</h2>
+        <p class="sub">The CPG unit of account. Everything below is one average blended case.</p>
+        <div class="table-scroll"><table class="pnl" id="unit-table"></table></div>
+      </div>
+      <div>
+        <div class="card">
+          <h2>Break-even &amp; path to profit</h2>
+          <div id="unit-be" class="kpis" style="grid-template-columns:1fr 1fr;margin-bottom:14px"></div>
+          <div id="be-bar"></div>
+          <div class="note" id="be-note"></div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <h2>Retail velocity</h2>
+          <p class="sub">Distribution reality check for the retail channel.</p>
+          <div class="row2">
+            <div class="field"><label>Stores carrying (#) <span class="q" title="Points of distribution for the retail channel.">?</span></label><div class="inp"><input type="number" id="u-stores" step="50" min="0"></div></div>
+            <div class="field"><label>&nbsp;</label><div style="font-size:12px;color:var(--muted);padding-top:10px">Retail = <b id="u-retail-units" class="num"></b> cans/yr</div></div>
+          </div>
+          <div id="vel-kpis" class="kpis" style="grid-template-columns:1fr 1fr;margin:0"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GUIDE ============ -->
+  <section class="tab guide" id="tab-guide">
+    <div class="card">
+      <h2>How this model works</h2>
+      <p class="sub">A real CPG P&amp;L is a waterfall: you start from gross sales (list price × volume) and subtract progressively — trade, COGS, channel costs, then corporate overhead — to reach EBITDA. The art is knowing which subtraction is worth fighting.</p>
+
+      <h3>The waterfall</h3>
+      <div class="formula">Gross Sales − Trade & promo − Returns                = NET SALES
+NET SALES − COGS                                    = GROSS PROFIT      (Gross Margin %)
+GROSS PROFIT − fulfillment − platform fees − channel ad − slotting
+                                                    = CONTRIBUTION MARGIN (CM %)
+CONTRIBUTION − brand marketing − sales − G&A − R&D  = EBITDA            (EBITDA %)
+EBITDA − D&A                                        = EBIT</div>
+
+      <h3>Why contribution margin is the number to watch</h3>
+      <p>Gross margin flatters DTC and Amazon because their shelf prices are high — but those channels bleed it back through referral fees, fulfillment and customer acquisition. <strong>Contribution margin</strong> is what each channel actually leaves on the table to cover corporate overhead. A channel can have 75% gross margin and still lose money. Manage the mix on contribution, not gross.</p>
+
+      <h3>Where the levers are</h3>
+      <ul>
+        <li><strong>COGS</strong> — every cent off a can flows straight to EBITDA at full volume. With actives like magnesium bisglycinate and Fibersol, the formula is the richest target; cans are the next (aluminium + tariffs).</li>
+        <li><strong>Price &amp; trade</strong> — list price and trade rate are the highest-leverage revenue dials, but trade is sticky once retailers expect it.</li>
+        <li><strong>Mix</strong> — shifting volume toward higher-contribution channels can move EBITDA without touching a single cost.</li>
+        <li><strong>Volume vs fixed cost</strong> — corporate overhead is fixed, so scale is its own lever: the break-even tab shows the volume that turns the model black.</li>
+      </ul>
+
+      <h3>Glossary</h3>
+      <dl class="glossary">
+        <dt>Gross sales</dt><dd>List/invoice price × units, before any deductions.</dd>
+        <dt>Trade spend</dt><dd>Promotional money paid to retailers/distributors — scan-downs, off-invoice allowances, coupons, TPRs. Typically 10–20% of gross in food &amp; beverage.</dd>
+        <dt>Net sales</dt><dd>Gross sales − trade − returns. The top line everyone benchmarks margins against.</dd>
+        <dt>COGS</dt><dd>Landed cost to produce a sellable unit: ingredients + packaging + co-pack conversion + inbound freight, grossed up for yield loss.</dd>
+        <dt>Slotting</dt><dd>Up-front fees retailers charge to list a SKU; amortized per unit here.</dd>
+        <dt>Contribution margin</dt><dd>Gross profit − all variable channel costs (fulfillment, platform fees, channel ad, slotting). What's left to cover fixed overhead.</dd>
+        <dt>EBITDA</dt><dd>Contribution − corporate marketing, sales, G&amp;A and R&amp;D. The headline profitability of the operating business.</dd>
+        <dt>Velocity</dt><dd>Units sold per store per week — the metric retailers use to decide whether you keep the shelf.</dd>
+        <dt>Three-tier / DSD</dt><dd>Supplier → distributor → retailer. You invoice the distributor at a low price; their margin is already baked into that price.</dd>
+      </dl>
+      <p style="margin-top:18px;font-size:12px;color:var(--faint)">Defaults model Organika MÜV Sparkling Electrolytes (355&nbsp;ml can, zero-sugar, stevia; magnesium bisglycinate + Fibersol prebiotic fiber) as a representative premium functional beverage. They are editable estimates — replace with your invoices, co-pack quotes and retailer terms. Figures are not Organika financials.</p>
+    </div>
+  </section>
+
+  <div class="foot">Organika MÜV Sparkling Electrolytes — CPG P&amp;L Model · self-contained &amp; offline-capable · all inputs stay in your browser<br>Estimates for decision support only — validate against actuals, excise/HST rules and customer terms.</div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+/* =================== DEFAULTS =================== */
+function D(){return {
+  meta:{ unitsPerCase:12 },
+  currency:'CAD',
+  volumeCases:250000,
+  bom:{
+    ingredients:[
+      {name:'Carbonated water (RO + CO₂)', cost:0.014},
+      {name:'Sodium / potassium citrate blend', cost:0.055},
+      {name:'Magnesium bisglycinate', cost:0.048},
+      {name:'Fibersol® prebiotic fiber', cost:0.030},
+      {name:'Natural flavour', cost:0.040},
+      {name:'Acids (citric / malic / phosphoric)', cost:0.010},
+      {name:'Stevia extract', cost:0.022}
+    ],
+    primary:[
+      {name:'Aluminium can 355 ml (printed)', cost:0.150},
+      {name:'Can end / lid', cost:0.022},
+      {name:'Tab', cost:0.004}
+    ],
+    secondary:[
+      {name:'Tray (per can)', cost:0.016},
+      {name:'Shrink film (per can)', cost:0.006}
+    ],
+    tertiary:[
+      {name:'Case / carton (per can)', cost:0.006},
+      {name:'Pallet & stretch wrap (per can)', cost:0.003}
+    ],
+    conversion:[
+      {name:'Co-pack fill & seam fee', cost:0.090},
+      {name:'Blending / batching', cost:0.018},
+      {name:'QA / lab / coding', cost:0.008}
+    ],
+    inboundFreight:0.016,
+    yieldLossPct:4
+  },
+  channels:[
+    {name:'DTC (own site)', mixPct:12, srp:2.99, grossPrice:2.99, tradePct:12, spoilPct:2, feePct:3,  adPct:22, varCostUnit:0.85, slottingUnit:0},
+    {name:'Amazon',         mixPct:18, srp:2.99, grossPrice:2.79, tradePct:8,  spoilPct:3, feePct:15, adPct:13, varCostUnit:0.48, slottingUnit:0},
+    {name:'Retail / Distributor', mixPct:52, srp:2.99, grossPrice:1.55, tradePct:15, spoilPct:2, feePct:5, adPct:2, varCostUnit:0.11, slottingUnit:0.07},
+    {name:'Club / Mass',    mixPct:18, srp:2.79, grossPrice:1.40, tradePct:8,  spoilPct:1, feePct:3,  adPct:1,  varCostUnit:0.09, slottingUnit:0.10}
+  ],
+  opex:{ marketingPctNet:8, salesTeam:600000, ga:850000, rnd:180000, da:150000 },
+  unit:{ stores:1500 }
+};}
+let S = D();
+const KEY='organika_pnl_v1';
+let SCEN='base';
+
+function load(){ try{const r=localStorage.getItem(KEY); if(r){S=Object.assign(D(),JSON.parse(r));}}catch(e){} }
+function save(){ try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){} }
+
+/* =================== FORMAT =================== */
+const SYM={CAD:'$',USD:'$',EUR:'€',GBP:'£'};
+function sym(){return SYM[S.currency]||'$';}
+function money(n,dp){ if(!isFinite(n))return '—'; const d=dp==null?0:dp;
+  try{return new Intl.NumberFormat(undefined,{style:'currency',currency:S.currency,minimumFractionDigits:d,maximumFractionDigits:d}).format(n);}catch(e){return sym()+n.toFixed(d);} }
+function money2(n){return money(n,2);}
+function abbr(n){ if(!isFinite(n))return '—'; const s=n<0?'-':''; const a=Math.abs(n);
+  if(a>=1e6)return s+sym()+(a/1e6).toFixed(2)+'M'; if(a>=1e3)return s+sym()+(a/1e3).toFixed(0)+'K'; return s+sym()+a.toFixed(0); }
+function pct(n,dp){ if(!isFinite(n))return '—'; return (n*100).toFixed(dp==null?1:dp)+'%'; }
+function intf(n){ if(!isFinite(n))return '—'; return new Intl.NumberFormat().format(Math.round(n)); }
+function cents(n){ if(!isFinite(n))return '—'; return sym()+n.toFixed(3); }
+
+/* =================== MODEL =================== */
+const BOMGROUPS=[['ingredients','Liquid & ingredients'],['primary','Primary packaging'],['secondary','Secondary packaging'],['tertiary','Tertiary / logistics'],['conversion','Co-pack conversion']];
+function cogsBuild(A){
+  const gt={}; let sum=0;
+  BOMGROUPS.forEach(([g])=>{ const t=A.bom[g].reduce((s,x)=>s+(+x.cost||0),0); gt[g]=t; sum+=t; });
+  const inbound=+A.bom.inboundFreight||0; gt.inbound=inbound;
+  const before=sum+inbound;
+  const loss=Math.max(0,Math.min(0.9,(+A.bom.yieldLossPct||0)/100));
+  const unit=loss<1?before/(1-loss):before;
+  gt.loss=unit-before;
+  return {unit,before,gt,loss};
+}
+function compute(A){
+  const cogs=cogsBuild(A);
+  const upc=+A.meta.unitsPerCase||12;
+  const totalUnits=(+A.volumeCases||0)*upc;
+  const channels=A.channels.map(c=>{
+    const units=totalUnits*(+c.mixPct||0)/100;
+    const gross=(+c.grossPrice||0)*units;
+    const trade=gross*(+c.tradePct||0)/100;
+    const spoil=gross*(+c.spoilPct||0)/100;
+    const net=gross-trade-spoil;
+    const cgs=cogs.unit*units;
+    const gp=net-cgs;
+    const fees=gross*(+c.feePct||0)/100;
+    const ad=gross*(+c.adPct||0)/100;
+    const ful=(+c.varCostUnit||0)*units;
+    const slot=(+c.slottingUnit||0)*units;
+    const chOp=fees+ad+ful+slot;
+    const cm=gp-chOp;
+    return {name:c.name,srp:+c.srp||0,units,gross,trade,spoil,net,cgs,gp,fees,ad,ful,slot,chOp,cm,
+      netUnit:units?net/units:0,cmUnit:units?cm/units:0,gmPct:net?gp/net:0,cmPct:net?cm/net:0};
+  });
+  const sum=k=>channels.reduce((s,c)=>s+c[k],0);
+  const T={units:sum('units'),gross:sum('gross'),trade:sum('trade'),spoil:sum('spoil'),net:sum('net'),
+    cogs:sum('cgs'),gp:sum('gp'),fees:sum('fees'),ad:sum('ad'),ful:sum('ful'),slot:sum('slot'),chOp:sum('chOp'),cm:sum('cm')};
+  const marketing=T.net*(+A.opex.marketingPctNet||0)/100;
+  const salesTeam=+A.opex.salesTeam||0, ga=+A.opex.ga||0, rnd=+A.opex.rnd||0, da=+A.opex.da||0;
+  const corp=marketing+salesTeam+ga+rnd;
+  const ebitda=T.cm-corp;
+  const ebit=ebitda-da;
+  const cases=+A.volumeCases||0;
+  const per=v=>cases?v/cases:0;
+  const pN=v=>T.net?v/T.net:0;
+  const fixed=salesTeam+ga+rnd;
+  const beDenom=per(T.cm)-(+A.opex.marketingPctNet||0)/100*per(T.net);
+  const beCases=beDenom>0?fixed/beDenom:NaN;
+  return {cogs,upc,totalUnits,channels,T,marketing,salesTeam,ga,rnd,da,corp,ebitda,ebit,cases,per,pN,fixed,beCases,beDenom,
+    gmPct:pN(T.gp),cmPct:pN(T.cm),ebitdaPct:pN(ebitda),ebitPct:pN(ebit)};
+}
+
+/* =================== SVG HELPERS =================== */
+function svg(w,h,inner){return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="${h}" preserveAspectRatio="xMidYMid meet">${inner}</svg>`;}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+function waterfall(steps){
+  const barW=46, gap=14, padL=10, padT=26, padB=78, H=360;
+  let run=0; const segs=[];
+  steps.forEach(s=>{ let lo,hi,end;
+    if(s.type==='delta'){ end=run+s.value; lo=Math.min(run,end); hi=Math.max(run,end); }
+    else { end=s.value; lo=Math.min(0,end); hi=Math.max(0,end); }
+    segs.push({...s,lo,hi,end,start:run}); run=end; });
+  const hiAll=Math.max(...segs.map(s=>s.hi),0), loAll=Math.min(...segs.map(s=>s.lo),0);
+  const n=segs.length; const W=padL*2+n*barW+(n-1)*gap;
+  const plotH=H-padT-padB; const sc=plotH/((hiAll-loAll)||1);
+  const Y=v=>padT+(hiAll-v)*sc;
+  let s=''; const zeroY=Y(0);
+  s+=`<line x1="${padL}" y1="${zeroY}" x2="${W-padL}" y2="${zeroY}" stroke="#33415f"/>`;
+  segs.forEach((g,i)=>{ const x=padL+i*(barW+gap);
+    const top=Y(g.hi), bot=Y(g.lo), h=Math.max(bot-top,2);
+    let fill;
+    if(g.type==='start') fill='url(#wfBlue)';
+    else if(g.type==='total') fill = g.end>=0?'url(#wfTeal)':'url(#wfRed)';
+    else fill = g.value>=0?'url(#wfGreen)':'url(#wfRed)';
+    s+=`<rect x="${x}" y="${top}" width="${barW}" height="${h}" rx="4" fill="${fill}"/>`;
+    // connector to next
+    if(i<n-1){ const ny=Y(g.end); s+=`<line x1="${x+barW}" y1="${ny}" x2="${x+barW+gap}" y2="${ny}" stroke="#46557a"/>`; }
+    // value label
+    const vy = g.type==='delta' ? (g.value>=0?top-6:bot+13) : top-6;
+    const vcol = g.type==='delta'? (g.value>=0?'#7be3b0':'#ff9aa6') : (g.end>=0?'#dfe7f5':'#ff9aa6');
+    s+=`<text x="${x+barW/2}" y="${vy}" fill="${vcol}" font-size="10.5" font-family="${'var(--mono)'}" text-anchor="middle">${abbr(g.value)}</text>`;
+    // category label rotated
+    s+=`<text x="${x+barW/2}" y="${H-padB+14}" fill="#94a3be" font-size="10.5" text-anchor="end" transform="rotate(-38 ${x+barW/2} ${H-padB+14})">${esc(g.label)}</text>`;
+  });
+  const defs=`<defs>
+    <linearGradient id="wfBlue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b9dff"/><stop offset="1" stop-color="#3367c0"/></linearGradient>
+    <linearGradient id="wfTeal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#36d6c3"/><stop offset="1" stop-color="#1f9e8f"/></linearGradient>
+    <linearGradient id="wfGreen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#1f9e6e"/></linearGradient>
+    <linearGradient id="wfRed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff5d6c"/><stop offset="1" stop-color="#b83948"/></linearGradient>
+  </defs>`;
+  return svg(W,H,defs+s);
+}
+
+function hbars(items,opts){ opts=opts||{};
+  const rowH=opts.rowH||30, padL=opts.padL||190, padR=84, W=920, H=items.length*rowH+16;
+  const max=Math.max(...items.map(i=>Math.abs(i.value)),1e-9);
+  let s='';
+  items.forEach((it,i)=>{ const y=10+i*rowH; const bw=(Math.abs(it.value)/max)*(W-padL-padR);
+    s+=`<text x="${padL-10}" y="${y+14}" fill="#cdd6e8" font-size="12" text-anchor="end">${esc(it.label)}</text>`;
+    s+=`<rect x="${padL}" y="${y+3}" width="${Math.max(bw,2)}" height="15" rx="4" fill="${it.color||'#4f8cff'}"/>`;
+    s+=`<text x="${padL+Math.max(bw,2)+8}" y="${y+15}" fill="#94a3be" font-size="11" font-family="${'var(--mono)'}">${it.valLabel||abbr(it.value)}</text>`; });
+  return svg(W,H,s);
+}
+
+function tornado(items, base){
+  // items: [{label, lo, hi}] EBITDA values; draw diverging around base
+  const rowH=32, padL=200, padR=20, W=920, H=items.length*rowH+30;
+  const span=Math.max(...items.map(i=>Math.max(Math.abs(i.hi-base),Math.abs(i.lo-base))),1);
+  const cx=padL+(W-padL-padR)/2; const half=(W-padL-padR)/2;
+  const X=v=>cx+((v-base)/span)*half;
+  let s=`<line x1="${cx}" y1="6" x2="${cx}" y2="${H-18}" stroke="#465a86" stroke-dasharray="3 3"/>`;
+  s+=`<text x="${cx}" y="${H-4}" fill="#94a3be" font-size="10" text-anchor="middle">base ${abbr(base)}</text>`;
+  items.forEach((it,i)=>{ const y=8+i*rowH;
+    const x1=X(Math.min(it.lo,it.hi)), x2=X(Math.max(it.lo,it.hi));
+    s+=`<text x="${padL-12}" y="${y+15}" fill="#cdd6e8" font-size="12" text-anchor="end">${esc(it.label)}</text>`;
+    // low (downside) portion red, high (upside) green relative to base
+    const xb=X(base);
+    s+=`<rect x="${Math.min(x1,xb)}" y="${y+4}" width="${Math.max(Math.abs(xb-x1),1)}" height="16" rx="3" fill="#ff5d6c"/>`;
+    s+=`<rect x="${Math.min(x2,xb)}" y="${y+4}" width="${Math.max(Math.abs(x2-xb),1)}" height="16" rx="3" fill="#34d399"/>`;
+    s+=`<text x="${x1-6}" y="${y+16}" fill="#ff9aa6" font-size="10" text-anchor="end" font-family="${'var(--mono)'}">${abbr(it.lo)}</text>`;
+    s+=`<text x="${x2+6}" y="${y+16}" fill="#7be3b0" font-size="10" font-family="${'var(--mono)'}">${abbr(it.hi)}</text>`;
+  });
+  return svg(W,H,s);
+}
+
+function groupBars(groups, series){
+  // groups: ['Base','Bull','Bear']; series: [{label,values:[..],color}]
+  const W=720,H=260,padL=56,padB=40,padT=16,padR=14;
+  const all=series.flatMap(s=>s.values); const max=Math.max(...all,0), min=Math.min(...all,0);
+  const sc=(H-padT-padB)/((max-min)||1); const Y=v=>padT+(max-v)*sc;
+  const gw=(W-padL-padR)/groups.length; const bw=Math.min(46,gw/(series.length+1));
+  let s=`<line x1="${padL}" y1="${Y(0)}" x2="${W-padR}" y2="${Y(0)}" stroke="#33415f"/>`;
+  for(let i=0;i<=4;i++){const v=min+(max-min)*i/4;const y=Y(v);s+=`<text x="${padL-8}" y="${y+4}" fill="#65748f" font-size="9.5" text-anchor="end">${abbr(v)}</text>`;}
+  groups.forEach((g,gi)=>{ const gx=padL+gi*gw+gw/2;
+    s+=`<text x="${gx}" y="${H-padB+18}" fill="#cdd6e8" font-size="12" text-anchor="middle">${esc(g)}</text>`;
+    series.forEach((se,si)=>{ const x=gx-(series.length*bw)/2+si*bw; const v=se.values[gi]; const y=Y(Math.max(v,0)); const h=Math.abs(Y(v)-Y(0));
+      s+=`<rect x="${x}" y="${y}" width="${bw-4}" height="${Math.max(h,1)}" rx="3" fill="${v>=0?se.color:'#ff5d6c'}"/>`;
+      s+=`<text x="${x+(bw-4)/2}" y="${(v>=0?y-4:y+h+11)}" fill="#aeb9d0" font-size="9.5" text-anchor="middle" font-family="${'var(--mono)'}">${abbr(v)}</text>`; }); });
+  return svg(W,H,s);
+}
+
+function heatColor(t){ t=Math.max(0,Math.min(1,t)); const hue=140*t; const light=t<0.5?40+t*8:44-(t-0.5)*4; return `hsl(${hue},60%,${light}%)`; }
+
+/* =================== APPLY STATE -> INPUTS =================== */
+function setVal(id,v){const e=document.getElementById(id);if(e)e.value=v;}
+function applyScalars(){
+  document.getElementById('currency').value=S.currency;
+  setVal('a-cases',S.volumeCases); setVal('a-upc',S.meta.unitsPerCase);
+  setVal('a-mktg',S.opex.marketingPctNet); setVal('a-sales',S.opex.salesTeam);
+  setVal('a-ga',S.opex.ga); setVal('a-rnd',S.opex.rnd); setVal('a-da',S.opex.da);
+  setVal('bom-freight',S.bom.inboundFreight); setVal('bom-yield',S.bom.yieldLossPct);
+  setVal('cogs-test-price',1.55); setVal('cogs-test-load',22);
+  setVal('lev-swing',15); setVal('wi-range',20); setVal('wi-metric','ebitdaPct');
+  setVal('u-stores',S.unit.stores);
+  document.querySelectorAll('[data-cur]').forEach(e=>e.textContent=sym());
+}
+
+/* =================== BUILD INPUT REGIONS (once) =================== */
+function buildBOM(){
+  const wrap=document.getElementById('bom-groups'); wrap.innerHTML='';
+  BOMGROUPS.forEach(([g,label])=>{
+    const box=document.createElement('div'); box.style.marginBottom='14px';
+    box.innerHTML=`<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+      <h3 style="margin:0">${label}</h3>
+      <span style="font-size:11px;color:var(--faint)" id="bomtot-${g}"></span>
+      <button class="addbtn no-print" data-add="${g}" style="margin-left:auto;padding:3px 9px;font-size:11px">+ line</button></div>`;
+    const tbl=document.createElement('table');
+    tbl.innerHTML='<tbody id="bomb-'+g+'"></tbody>'; box.appendChild(tbl); wrap.appendChild(box);
+  });
+  BOMGROUPS.forEach(([g])=>renderBOMRows(g));
+  wrap.querySelectorAll('[data-add]').forEach(b=>b.addEventListener('click',e=>{
+    S.bom[e.target.dataset.add].push({name:'New item',cost:0}); renderBOMRows(e.target.dataset.add); recalc(); save(); }));
+}
+function renderBOMRows(g){
+  const body=document.getElementById('bomb-'+g); body.innerHTML='';
+  S.bom[g].forEach((it,i)=>{
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td style="border:none;padding:3px 4px"><input type="text" data-g="${g}" data-i="${i}" data-f="name" value="${esc(it.name)}" style="min-width:170px"></td>
+      <td style="border:none;padding:3px 4px;width:120px"><div class="inp"><span class="pre" data-cur>${sym()}</span><input class="has-pre" type="number" step="0.005" min="0" data-g="${g}" data-i="${i}" data-f="cost" value="${it.cost}"></div></td>
+      <td style="border:none;padding:3px 4px;width:30px"><button class="delx no-print" data-del-g="${g}" data-del-i="${i}">✕</button></td>`;
+    body.appendChild(tr);
+  });
+  body.querySelectorAll('input').forEach(inp=>inp.addEventListener('input',e=>{
+    const {g,i,f}=e.target.dataset; S.bom[g][+i][f]= f==='name'?e.target.value:(parseFloat(e.target.value)||0);
+    recalc(); save();
+  }));
+  body.querySelectorAll('[data-del-g]').forEach(b=>b.addEventListener('click',e=>{
+    const g=e.target.dataset.delG; S.bom[g].splice(+e.target.dataset.delI,1); renderBOMRows(g); recalc(); save(); }));
+}
+
+const CHFIELDS=[
+  ['mixPct','Volume mix','%',1],['srp','Shelf price (SRP)','$',0.05],['grossPrice','Selling price → brand','$',0.05],
+  ['tradePct','Trade & promo','%',0.5],['spoilPct','Returns / spoilage','%',0.5],['feePct','Platform / broker fee','%',0.5],
+  ['adPct','Channel ad / CAC','%',0.5],['varCostUnit','Fulfillment / freight','$',0.01],['slottingUnit','Slotting / listing','$',0.01]
+];
+function buildChannels(){
+  const t=document.getElementById('ch-assump');
+  let head='<thead><tr><th>Assumption</th>'+S.channels.map((c,i)=>`<th><input type="text" data-ci="${i}" data-cf="name" value="${esc(c.name)}" style="min-width:120px;text-align:left;font-weight:600"> <button class="delx no-print" data-delch="${i}">✕</button></th>`).join('')+'<th>Blended</th></tr></thead>';
+  let body='<tbody>';
+  CHFIELDS.forEach(([k,label,kind])=>{
+    body+=`<tr><td class="lbl" style="color:var(--muted)">${label}</td>`;
+    S.channels.forEach((c,i)=>{
+      const pre=kind==='$'?`<span class="pre" data-cur>${sym()}</span>`:''; const suf=kind==='%'?'<span class="suf">%</span>':'';
+      const cls=(kind==='$'?'has-pre':kind==='%'?'has-suf':'');
+      body+=`<td><div class="inp">${pre}<input class="${cls}" type="number" step="${CHFIELDS.find(f=>f[0]===k)[3]}" data-ci="${i}" data-cf="${k}" value="${c[k]}" style="min-width:78px">${suf}</div></td>`;
+    });
+    body+=`<td class="num" id="chb-${k}" style="color:var(--faint)"></td></tr>`;
+  });
+  body+='</tbody>';
+  t.innerHTML=head+body;
+  t.querySelectorAll('input').forEach(inp=>inp.addEventListener('input',e=>{
+    const i=+e.target.dataset.ci, f=e.target.dataset.cf;
+    S.channels[i][f]= f==='name'?e.target.value:(parseFloat(e.target.value)||0);
+    recalc(); save();
+  }));
+  t.querySelectorAll('[data-delch]').forEach(b=>b.addEventListener('click',e=>{
+    if(S.channels.length<=1)return; S.channels.splice(+e.target.dataset.delch,1); buildChannels(); recalc(); save(); }));
+}
+
+/* =================== RENDER OUTPUTS =================== */
+function pnlRows(R){
+  const rows=[
+    ['Gross sales','total-like',R.T.gross,'section'],
+    ['Trade & promotions','d',-R.T.trade],
+    ['Returns & spoilage','d',-R.T.spoil],
+    ['Net sales','t',R.T.net],
+    ['Cost of goods sold','d',-R.T.cogs],
+    ['Gross profit','t',R.T.gp,'gm'],
+    ['Fulfillment & outbound freight','d',-R.T.ful],
+    ['Platform & selling fees','d',-R.T.fees],
+    ['Channel marketing (PPC / CAC)','d',-R.T.ad],
+    ['Slotting & listing','d',-R.T.slot],
+    ['Contribution margin','t',R.T.cm,'cm'],
+    ['Brand marketing','d',-R.marketing],
+    ['Sales & team','d',-R.salesTeam],
+    ['G&A / overhead','d',-R.ga],
+    ['R&D / innovation','d',-R.rnd],
+    ['EBITDA','t',R.ebitda,'ebitda'],
+    ['Depreciation & amortization','d',-R.da],
+    ['EBIT','t',R.ebit]
+  ];
+  return rows;
+}
+function renderPnL(){
+  const R=compute(S);
+  // KPIs
+  const bench={gm:[0.50,0.60],cm:[0.25,0.35],ebitda:[0.10,0.20]};
+  function badge(v,lo,hi){ if(v>=hi)return['var(--pos)','#0e2a20','ahead']; if(v>=lo)return['var(--gold)','#2a230e','on track']; return['var(--neg)','#2a0e12','below']; }
+  const kp=[
+    {k:'Net sales',v:abbr(R.T.net),x:intf(R.cases)+' cases / yr',hl:1},
+    {k:'Gross margin',v:pct(R.gmPct),x:'vs 50–60% bench',bd:badge(R.gmPct,...bench.gm)},
+    {k:'Contribution',v:pct(R.cmPct),x:'vs 25–35% bench',bd:badge(R.cmPct,...bench.cm)},
+    {k:'EBITDA',v:pct(R.ebitdaPct),x:abbr(R.ebitda),bd:badge(R.ebitdaPct,...bench.ebitda),hl:1},
+    {k:'COGS / case',v:money2(R.cogs.unit*R.upc),x:cents(R.cogs.unit)+' / can'},
+    {k:'Net sales / case',v:money2(R.per(R.T.net)),x:'blended'}
+  ];
+  document.getElementById('pnl-kpis').innerHTML=kp.map(c=>{
+    const spark=c.bd?`<span class="spark" style="color:${c.bd[0]};background:${c.bd[1]}">${c.bd[2]}</span>`:'';
+    const vcol = c.k==='EBITDA'? (R.ebitda>=0?'var(--pos)':'var(--neg)'):'';
+    return `<div class="kpi ${c.hl?'hl':''}">${spark}<div class="k">${c.k}</div><div class="v" style="color:${vcol}">${c.v}</div><div class="x">${c.x}</div></div>`;
+  }).join('');
+  // statement
+  const rows=pnlRows(R);
+  let html='<thead><tr><th>Line</th><th>Total</th><th>Per case</th><th>% net</th></tr></thead><tbody>';
+  rows.forEach(r=>{
+    const [label,kind,val,tag]=r;
+    const cls=kind==='d'?'deduct':(kind==='t'?'total':(tag==='section'?'section':''));
+    const showVal = kind==='d'? `(${abbr(-val)})` : abbr(val);
+    const vcol = (kind==='t'&&val<0)?'neg':'';
+    let mpct='';
+    if(tag==='gm')mpct=`<span class="chip" style="color:var(--pos);background:#0e2a20">GM ${pct(R.gmPct)}</span>`;
+    if(tag==='cm')mpct=`<span class="chip" style="color:var(--accent2);background:#0e2622">CM ${pct(R.cmPct)}</span>`;
+    if(tag==='ebitda')mpct=`<span class="chip" style="color:${R.ebitda>=0?'var(--pos)':'var(--neg)'};background:#15203a">EBITDA ${pct(R.ebitdaPct)}</span>`;
+    html+=`<tr class="${cls}"><td class="lbl">${label} ${mpct}</td>`+
+      `<td class="num ${vcol}">${showVal}</td>`+
+      `<td class="num pctcol">${money2(R.per(val))}</td>`+
+      `<td class="num pctcol">${pct(R.pN(val),0)}</td></tr>`;
+  });
+  html+='</tbody>'; document.getElementById('pnl-table').innerHTML=html;
+  // bridge
+  const steps=[
+    {type:'start',label:'Gross sales',value:R.T.gross},
+    {type:'delta',label:'Trade',value:-R.T.trade},
+    {type:'delta',label:'Returns',value:-R.T.spoil},
+    {type:'total',label:'Net sales',value:R.T.net},
+    {type:'delta',label:'COGS',value:-R.T.cogs},
+    {type:'total',label:'Gross profit',value:R.T.gp},
+    {type:'delta',label:'Fulfilment',value:-R.T.ful},
+    {type:'delta',label:'Fees',value:-R.T.fees},
+    {type:'delta',label:'Channel ad',value:-R.T.ad},
+    {type:'delta',label:'Slotting',value:-R.T.slot},
+    {type:'total',label:'Contribution',value:R.T.cm},
+    {type:'delta',label:'Brand mktg',value:-R.marketing},
+    {type:'delta',label:'Sales',value:-R.salesTeam},
+    {type:'delta',label:'G&A',value:-R.ga},
+    {type:'delta',label:'R&D',value:-R.rnd},
+    {type:'total',label:'EBITDA',value:R.ebitda}
+  ];
+  document.getElementById('pnl-bridge').innerHTML=waterfall(steps);
+  document.getElementById('a-cases-x').textContent=intf(R.totalUnits)+' cans / yr · '+abbr(R.T.gross)+' gross';
+}
+
+function renderCOGS(){
+  const R=compute(S); const c=R.cogs;
+  BOMGROUPS.forEach(([g,label])=>{ const e=document.getElementById('bomtot-'+g); if(e)e.textContent=cents(c.gt[g])+' / can'; });
+  document.getElementById('cogs-kpis').innerHTML=
+    `<div class="kpi hl"><div class="k">Landed COGS / can</div><div class="v">${cents(c.unit)}</div><div class="x">${money2(c.unit*R.upc)} / case</div></div>`+
+    `<div class="kpi"><div class="k">Yield loss uplift</div><div class="v">${cents(c.loss)}</div><div class="x">${pct(S.bom.yieldLossPct/100,1)} scrap</div></div>`;
+  const comp=[
+    {label:'Liquid & ingredients',value:c.gt.ingredients,color:'#4f8cff'},
+    {label:'Primary packaging',value:c.gt.primary,color:'#36d6c3'},
+    {label:'Secondary packaging',value:c.gt.secondary,color:'#7c7bff'},
+    {label:'Tertiary / logistics',value:c.gt.tertiary,color:'#ffc24b'},
+    {label:'Co-pack conversion',value:c.gt.conversion,color:'#ff9e4b'},
+    {label:'Inbound freight',value:c.gt.inbound,color:'#34d399'},
+    {label:'Yield loss',value:c.gt.loss,color:'#ff5d6c'}
+  ].map(x=>({...x,valLabel:cents(x.value)}));
+  document.getElementById('cogs-bars').innerHTML=hbars(comp,{padL:170});
+  // preview
+  const price=parseFloat(document.getElementById('cogs-test-price').value)||0;
+  const load=(parseFloat(document.getElementById('cogs-test-load').value)||0)/100;
+  const net=price*(1-load); const gp=net-c.unit; const gm=net?gp/net:0; const mk=c.unit?(price-c.unit)/c.unit:0;
+  document.getElementById('cogs-preview').innerHTML=
+    `<div class="kpi"><div class="k">Net / unit</div><div class="v">${cents(net)}</div></div>`+
+    `<div class="kpi"><div class="k">Gross margin</div><div class="v" style="color:${gm>=0.5?'var(--pos)':gm>=0.3?'var(--gold)':'var(--neg)'}">${pct(gm)}</div></div>`+
+    `<div class="kpi"><div class="k">Markup on cost</div><div class="v">${isFinite(mk)?pct(mk):'—'}</div></div>`;
+}
+
+function renderChannels(){
+  const R=compute(S);
+  // blended assumption column (weighted by mix)
+  const totMix=S.channels.reduce((s,c)=>s+(+c.mixPct||0),0)||1;
+  const wavg=k=>S.channels.reduce((s,c)=>s+(+c[k]||0)*(+c.mixPct||0),0)/totMix;
+  const blendVals={mixPct:totMix,srp:wavg('srp'),grossPrice:wavg('grossPrice'),tradePct:wavg('tradePct'),spoilPct:wavg('spoilPct'),feePct:wavg('feePct'),adPct:wavg('adPct'),varCostUnit:wavg('varCostUnit'),slottingUnit:wavg('slottingUnit')};
+  CHFIELDS.forEach(([k,,kind])=>{ const e=document.getElementById('chb-'+k); if(!e)return;
+    e.textContent = kind==='%'? (k==='mixPct'?Math.round(blendVals[k])+'%':blendVals[k].toFixed(1)+'%') : cents(blendVals[k]); });
+  // results table
+  const rowsSpec=[
+    ['Units (cans)','units',v=>intf(v)],
+    ['Gross sales','gross',v=>abbr(v)],
+    ['Net sales','net',v=>abbr(v)],
+    ['Net / unit','netUnit',v=>cents(v)],
+    ['COGS','cgs',v=>abbr(v)],
+    ['Gross profit','gp',v=>abbr(v)],
+    ['Gross margin %','gmPct',v=>pct(v)],
+    ['Contribution','cm',v=>abbr(v)],
+    ['CM / unit','cmUnit',v=>cents(v)],
+    ['CM % of net','cmPct',v=>pct(v)]
+  ];
+  let head='<thead><tr><th>Result</th>'+R.channels.map(c=>`<th>${esc(c.name)}</th>`).join('')+'<th>Company</th></tr></thead>';
+  let body='<tbody>';
+  rowsSpec.forEach(([label,key,fmt])=>{
+    body+=`<tr><td class="lbl" style="color:var(--text)">${label}</td>`;
+    R.channels.forEach(c=>{ let col=''; if(key==='cmPct'||key==='cm'||key==='cmUnit')col=c.cm>=0?'':'color:var(--neg)';
+      body+=`<td class="num" style="${col}">${fmt(c[key])}</td>`; });
+    // company column
+    let comp;
+    if(key==='units')comp=R.T.units; else if(key==='gross')comp=R.T.gross; else if(key==='net')comp=R.T.net;
+    else if(key==='netUnit')comp=R.T.units?R.T.net/R.T.units:0; else if(key==='cgs')comp=R.T.cogs;
+    else if(key==='gp')comp=R.T.gp; else if(key==='gmPct')comp=R.gmPct; else if(key==='cm')comp=R.T.cm;
+    else if(key==='cmUnit')comp=R.T.units?R.T.cm/R.T.units:0; else if(key==='cmPct')comp=R.pN(R.T.cm);
+    const ccol=(key.indexOf('cm')===0&&comp<0)?'color:var(--neg)':'';
+    body+=`<td class="num" style="font-weight:700;${ccol}">${fmt(comp)}</td></tr>`;
+  });
+  body+='</tbody>'; document.getElementById('ch-results').innerHTML=head+body;
+  // chart
+  const items=R.channels.map((c,i)=>({label:c.name,value:c.cmUnit,color:c.cmUnit>=0?['#4f8cff','#36d6c3','#7c7bff','#ffc24b','#34d399'][i%5]:'#ff5d6c',valLabel:cents(c.cmUnit)}));
+  document.getElementById('ch-chart').innerHTML=hbars(items,{padL:180});
+}
+
+const LEVERS=[
+  ['Volume (cases)', A=>A.volumeCases, (A,f)=>A.volumeCases*=f],
+  ['Avg selling price', null, (A,f)=>A.channels.forEach(c=>c.grossPrice*=f)],
+  ['COGS / unit', null, (A,f)=>scaleBOM(A,f)],
+  ['Trade & promo rate', null, (A,f)=>A.channels.forEach(c=>c.tradePct*=f)],
+  ['Platform / selling fees', null, (A,f)=>A.channels.forEach(c=>c.feePct*=f)],
+  ['Channel ad / CAC', null, (A,f)=>A.channels.forEach(c=>c.adPct*=f)],
+  ['Fulfillment & freight', null, (A,f)=>A.channels.forEach(c=>c.varCostUnit*=f)],
+  ['Brand marketing', null, (A,f)=>A.opex.marketingPctNet*=f],
+  ['G&A overhead', null, (A,f)=>A.opex.ga*=f]
+];
+function scaleBOM(A,f){ BOMGROUPS.forEach(([g])=>A.bom[g].forEach(x=>x.cost*=f)); A.bom.inboundFreight*=f; }
+function clone(){ return JSON.parse(JSON.stringify(S)); }
+function renderLevers(){
+  const base=compute(S).ebitda;
+  document.getElementById('lev-base').textContent=abbr(base);
+  const swing=(parseFloat(document.getElementById('lev-swing').value)||15)/100;
+  const items=LEVERS.map(([label,,apply])=>{
+    const loA=clone(); apply(loA,1-swing); const loE=compute(loA).ebitda;
+    const hiA=clone(); apply(hiA,1+swing); const hiE=compute(hiA).ebitda;
+    return {label, lo:loE, hi:hiE, span:Math.abs(hiE-loE)};
+  }).sort((a,b)=>b.span-a.span);
+  document.getElementById('tornado').innerHTML=tornado(items, base);
+  renderWhatif();
+}
+function renderWhatif(){
+  const metric=document.getElementById('wi-metric').value;
+  const range=(parseFloat(document.getElementById('wi-range').value)||20)/100;
+  const n=7; const priceF=[],cogsF=[];
+  for(let i=0;i<n;i++){ const f=1+(-range+2*range*i/(n-1)); priceF.push(f); cogsF.push(f); }
+  priceF.reverse(); // high price top
+  const cells=[]; let lo=Infinity,hi=-Infinity;
+  priceF.forEach(pf=>{ const row=[]; cogsF.forEach(cf=>{ const A=clone(); A.channels.forEach(c=>c.grossPrice*=pf); scaleBOM(A,cf);
+    const R=compute(A); let v=R[metric]; if(isFinite(v)){lo=Math.min(lo,v);hi=Math.max(hi,v);} row.push(v); }); cells.push(row); });
+  const isPct=metric.endsWith('Pct'); const fmt=v=>isPct?pct(v,0):abbr(v);
+  const baseR=compute(S);
+  let html='<thead><tr><th class="axis">Price ↓ / COGS →</th>';
+  cogsF.forEach(cf=>html+=`<th class="axis">${cf<1?'−':'+'}${Math.round(Math.abs(cf-1)*100)}%</th>`); html+='</tr></thead><tbody>';
+  priceF.forEach((pf,ri)=>{ html+=`<tr><td class="axis">${pf<1?'−':'+'}${Math.round(Math.abs(pf-1)*100)}%</td>`;
+    cells[ri].forEach(v=>{ const t=hi>lo?(v-lo)/(hi-lo):0.5; html+=`<td style="background:${isFinite(v)?heatColor(t):'#222'}">${isFinite(v)?fmt(v):'—'}</td>`; }); html+='</tr>'; });
+  html+='</tbody>'; document.getElementById('wi-heat').innerHTML=html;
+  const names={ebitdaPct:'EBITDA %',ebitda:'EBITDA $',gmPct:'Gross margin %',cmPct:'Contribution %'};
+  document.getElementById('wi-lo').textContent=isFinite(lo)?fmt(lo):''; document.getElementById('wi-hi').textContent=isFinite(hi)?fmt(hi):'';
+  document.getElementById('wi-cap').textContent=names[metric]+' · centre = base';
+}
+
+const SCENARIOS={
+  base:{label:'Base',xf:A=>A},
+  bull:{label:'Bull',xf:A=>{A.volumeCases*=1.4; A.channels.forEach(c=>{c.grossPrice*=1.05;c.tradePct*=0.85;c.adPct*=0.85;}); scaleBOM(A,0.9);}},
+  bear:{label:'Bear',xf:A=>{A.volumeCases*=0.75; A.channels.forEach(c=>{c.grossPrice*=0.97;c.tradePct*=1.15;c.adPct*=1.2;}); scaleBOM(A,1.1);}}
+};
+function renderScenarios(){
+  const keys=['base','bull','bear'];
+  const results=keys.map(k=>{ const A=clone(); SCENARIOS[k].xf(A); return {k,label:SCENARIOS[k].label,R:compute(A)}; });
+  const metrics=[
+    ['Annual cases',r=>intf(r.R.cases)],
+    ['Net sales',r=>abbr(r.R.T.net)],
+    ['Gross margin %',r=>pct(r.R.gmPct)],
+    ['Contribution %',r=>pct(r.R.cmPct)],
+    ['Contribution $',r=>abbr(r.R.T.cm)],
+    ['EBITDA $',r=>abbr(r.R.ebitda)],
+    ['EBITDA %',r=>pct(r.R.ebitdaPct)],
+    ['Break-even cases',r=>isFinite(r.R.beCases)?intf(r.R.beCases):'—']
+  ];
+  let html='<thead><tr><th>Metric</th>'+results.map(r=>`<th>${r.label}</th>`).join('')+'</tr></thead><tbody>';
+  metrics.forEach(([label,fmt])=>{ html+=`<tr><td class="lbl">${label}</td>`+results.map(r=>{
+    let style=''; if(label==='EBITDA $'||label==='EBITDA %')style=`color:${r.R.ebitda>=0?'var(--pos)':'var(--neg)'};font-weight:700`;
+    return `<td class="num" style="${style}">${fmt(r)}</td>`; }).join('')+'</tr>'; });
+  html+='</tbody>'; document.getElementById('scen-table').innerHTML=html;
+  document.getElementById('scen-chart').innerHTML=groupBars(results.map(r=>r.label),[{label:'EBITDA',values:results.map(r=>r.R.ebitda),color:'#4f8cff'}]);
+  document.getElementById('scen-note').innerHTML='<b>Bull:</b> +40% volume, +5% price, −10% COGS, lighter trade & CAC. &nbsp; <b>Bear:</b> −25% volume, −3% price, +10% COGS, heavier trade & CAC. Edit your Base on the other tabs to reshape all three.';
+}
+
+function renderUnit(){
+  const R=compute(S);
+  document.getElementById('unit-kpis').innerHTML=
+    `<div class="kpi hl"><div class="k">Contribution / case</div><div class="v" style="color:${R.per(R.T.cm)>=0?'var(--pos)':'var(--neg)'}">${money2(R.per(R.T.cm))}</div><div class="x">${cents(R.T.units?R.T.cm/R.T.units:0)} / can</div></div>`+
+    `<div class="kpi"><div class="k">Gross profit / case</div><div class="v">${money2(R.per(R.T.gp))}</div><div class="x">${pct(R.gmPct)} margin</div></div>`+
+    `<div class="kpi"><div class="k">EBITDA / case</div><div class="v" style="color:${R.per(R.ebitda)>=0?'var(--pos)':'var(--neg)'}">${money2(R.per(R.ebitda))}</div><div class="x">${pct(R.ebitdaPct)}</div></div>`+
+    `<div class="kpi"><div class="k">Break-even</div><div class="v">${isFinite(R.beCases)?intf(R.beCases):'—'}</div><div class="x">cases / yr</div></div>`+
+    `<div class="kpi"><div class="k">Net sales / case</div><div class="v">${money2(R.per(R.T.net))}</div></div>`+
+    `<div class="kpi"><div class="k">COGS / case</div><div class="v">${money2(R.cogs.unit*R.upc)}</div></div>`;
+  // per-case statement
+  const rows=pnlRows(R);
+  let html='<thead><tr><th>Line (per case)</th><th>Amount</th><th>% net</th></tr></thead><tbody>';
+  rows.forEach(r=>{ const [label,kind,val]=r; const cls=kind==='d'?'deduct':(kind==='t'?'total':(r[3]==='section'?'section':''));
+    const show= kind==='d'?`(${money2(R.per(-val))})`:money2(R.per(val));
+    html+=`<tr class="${cls}"><td class="lbl">${label}</td><td class="num ${(kind==='t'&&val<0)?'neg':''}">${show}</td><td class="num pctcol">${pct(R.pN(val),0)}</td></tr>`; });
+  html+='</tbody>'; document.getElementById('unit-table').innerHTML=html;
+  // break-even
+  const beCases=R.beCases; const cur=R.cases; const ratio=isFinite(beCases)&&beCases>0?cur/beCases:0;
+  document.getElementById('unit-be').innerHTML=
+    `<div class="kpi"><div class="k">Break-even volume</div><div class="v">${isFinite(beCases)?intf(beCases):'—'}</div><div class="x">cases / yr</div></div>`+
+    `<div class="kpi"><div class="k">Current vs break-even</div><div class="v" style="color:${ratio>=1?'var(--pos)':'var(--gold)'}">${isFinite(beCases)?Math.round(ratio*100)+'%':'—'}</div><div class="x">${ratio>=1?'above break-even':'of break-even volume'}</div></div>`;
+  const pctTo=Math.max(0,Math.min(100,ratio*100));
+  document.getElementById('be-bar').innerHTML=`<div style="font-size:11px;color:var(--muted);margin-bottom:4px">Current volume ${intf(cur)} cases</div><div class="pillbar"><i style="width:${pctTo}%;background:${ratio>=1?'var(--pos)':'linear-gradient(90deg,var(--gold),var(--warn))'}"></i></div>`;
+  const gap=isFinite(beCases)?beCases-cur:NaN;
+  document.getElementById('be-note').innerHTML = !isFinite(beCases)? 'At current per-unit economics, contribution after variable marketing is ≤ 0 — fix unit economics before scaling.' :
+    (gap>0? `Needs <b>${intf(gap)}</b> more cases/yr (${Math.round((gap/cur)*100)}% growth) to reach EBITDA break-even, holding everything else constant. Or close the gap by improving COGS, price or mix.` :
+            `Already <b>${intf(-gap)}</b> cases/yr above break-even — each additional case drops <b>${money2(R.beDenom)}</b> to EBITDA.`);
+  // velocity
+  const stores=parseFloat(document.getElementById('u-stores').value)||0;
+  const retail=R.channels.find(c=>/retail|distrib|grocery/i.test(c.name))||R.channels[0];
+  const retailUnits=retail?retail.units:0;
+  document.getElementById('u-retail-units').textContent=intf(retailUnits);
+  const perStoreWk= stores>0? retailUnits/stores/52 : 0;
+  const srp=retail?retail.srp:0;
+  document.getElementById('vel-kpis').innerHTML=
+    `<div class="kpi"><div class="k">Cans / store / week</div><div class="v">${stores>0?perStoreWk.toFixed(1):'—'}</div><div class="x">retail channel</div></div>`+
+    `<div class="kpi"><div class="k">$ / store / week</div><div class="v">${stores>0?money2(perStoreWk*srp):'—'}</div><div class="x">at ${money2(srp)} SRP</div></div>`;
+}
+
+function renderOutputs(){ renderPnL(); renderCOGS(); renderChannels(); renderLevers(); renderScenarios(); renderUnit(); }
+function recalc(){ renderOutputs(); }
+
+/* =================== WIRING =================== */
+function num(id,setter,after){ const e=document.getElementById(id); if(!e)return;
+  const h=()=>{ setter(parseFloat(e.value)||0); (after||recalc)(); save(); }; e.addEventListener('input',h); }
+function bind(){
+  document.getElementById('currency').addEventListener('change',e=>{ S.currency=e.target.value; save(); buildChannels(); buildBOM(); applyScalars(); recalc(); });
+  document.getElementById('btn-save').addEventListener('click',()=>{save();toast('Saved to this browser');});
+  document.getElementById('btn-print').addEventListener('click',()=>window.print());
+  document.getElementById('btn-csv').addEventListener('click',exportCSV);
+  document.getElementById('btn-reset').addEventListener('click',()=>{ if(confirm('Reset all assumptions to the Organika defaults?')){ S=D(); SCEN='base'; setScenPill(); save(); buildBOM(); buildChannels(); applyScalars(); recalc(); toast('Reset'); }});
+  // scalars
+  num('a-cases',v=>S.volumeCases=v); num('a-upc',v=>S.meta.unitsPerCase=v); num('a-mktg',v=>S.opex.marketingPctNet=v);
+  num('a-sales',v=>S.opex.salesTeam=v); num('a-ga',v=>S.opex.ga=v); num('a-rnd',v=>S.opex.rnd=v); num('a-da',v=>S.opex.da=v);
+  num('bom-freight',v=>S.bom.inboundFreight=v); num('bom-yield',v=>S.bom.yieldLossPct=v);
+  document.getElementById('cogs-test-price').addEventListener('input',renderCOGS);
+  document.getElementById('cogs-test-load').addEventListener('input',renderCOGS);
+  document.getElementById('lev-swing').addEventListener('input',renderLevers);
+  document.getElementById('wi-metric').addEventListener('change',renderWhatif);
+  document.getElementById('wi-range').addEventListener('input',renderWhatif);
+  document.getElementById('u-stores').addEventListener('input',e=>{ S.unit.stores=parseFloat(e.target.value)||0; renderUnit(); save(); });
+  document.getElementById('ch-add').addEventListener('click',()=>{ S.channels.push({name:'New channel',mixPct:0,srp:2.99,grossPrice:1.50,tradePct:10,spoilPct:2,feePct:5,adPct:5,varCostUnit:0.15,slottingUnit:0.05}); buildChannels(); recalc(); save(); });
+  // scenario pills (apply transform to current base, non-destructively previewed by swapping working set)
+  document.querySelectorAll('#scenpill button').forEach(b=>b.addEventListener('click',()=>applyScenario(b.dataset.scen)));
+  // tabs
+  document.querySelectorAll('nav.tabs button').forEach(b=>b.addEventListener('click',()=>show(b.dataset.tab)));
+}
+let BASE_SNAPSHOT=null;
+function setScenPill(){ document.querySelectorAll('#scenpill button').forEach(b=>b.classList.toggle('active',b.dataset.scen===SCEN)); }
+function applyScenario(scen){
+  // Always restore to the user's base first, then apply transform live (so all tabs reflect it).
+  if(scen===SCEN) return;
+  if(SCEN==='base') BASE_SNAPSHOT=clone();        // capture user base when leaving it
+  if(BASE_SNAPSHOT){ S=JSON.parse(JSON.stringify(BASE_SNAPSHOT)); }
+  if(scen!=='base'){ const A=S; SCENARIOS[scen].xf(A); }
+  SCEN=scen; setScenPill();
+  buildBOM(); buildChannels(); applyScalars(); recalc();
+  toast(SCENARIOS[scen].label+' scenario applied live — Save to keep, or switch back to Base');
+}
+
+function show(tab){ document.querySelectorAll('nav.tabs button').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
+  document.querySelectorAll('section.tab').forEach(s=>s.classList.toggle('active',s.id==='tab-'+tab)); window.scrollTo({top:0,behavior:'smooth'}); }
+
+function exportCSV(){
+  const R=compute(S); const rows=[['Organika MÜV Sparkling Electrolytes — P&L'],['Line','Total','Per case','% net']];
+  pnlRows(R).forEach(r=>{ const [label,kind,val]=r; rows.push([label, (kind==='d'?-val:val).toFixed(0), R.per(val).toFixed(3), (R.pN(val)*100).toFixed(1)+'%']); });
+  rows.push([]); rows.push(['Channel','Units','Gross','Net','COGS','Gross profit','GM%','Contribution','CM%']);
+  R.channels.forEach(c=>rows.push([c.name,c.units.toFixed(0),c.gross.toFixed(0),c.net.toFixed(0),c.cgs.toFixed(0),c.gp.toFixed(0),(c.gmPct*100).toFixed(1)+'%',c.cm.toFixed(0),(c.cmPct*100).toFixed(1)+'%']));
+  const csv=rows.map(r=>r.map(c=>{const s=String(c);return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}).join(',')).join('\n');
+  const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'})); a.download='organika-pnl.csv'; a.click(); URL.revokeObjectURL(a.href); toast('P&L exported');
+}
+let toastT; function toast(m){ const t=document.getElementById('toast'); t.textContent=m; t.classList.add('show'); clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('show'),2200); }
+
+/* =================== BOOT =================== */
+load(); buildBOM(); buildChannels(); applyScalars(); bind(); recalc();
+</script>
+</body>
+</html>
