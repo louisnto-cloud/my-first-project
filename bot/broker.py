@@ -118,6 +118,12 @@ class SimulatedBroker:
             if o.status in (NEW, PARTIAL):
                 o.status = CANCELED
 
+    def flatten(self) -> float:
+        """Sell all inventory to cash. Returns the quantity liquidated."""
+        qty = self._position_qty
+        self._position_qty = 0.0
+        return qty
+
 
 # ---------------------------------------------------------------------------
 #  Real Alpaca broker (paper or live).
@@ -253,3 +259,16 @@ class AlpacaBroker:
 
     def cancel_all(self) -> None:
         with_retries(self._client.cancel_orders)
+
+    def flatten(self) -> float:
+        """Liquidate the whole position to cash via Alpaca's close-position."""
+        symbol = self.symbol.replace("/", "")
+
+        def _close():
+            try:
+                self._client.close_position(symbol)
+            except Exception as exc:  # no position is a normal, non-error state
+                logger.info("Nothing to flatten for %s (%s)", symbol, exc)
+
+        with_retries(_close)
+        return 0.0

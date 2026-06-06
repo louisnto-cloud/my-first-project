@@ -20,7 +20,7 @@ from __future__ import annotations
 
 import argparse
 import math
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from bot.config import load_config, ConfigError
 from bot.grid import build_grid
@@ -38,6 +38,7 @@ class BacktestReport:
     strategy_return_pct: float
     start_price: float
     end_price: float
+    equity_curve: list = field(default_factory=list)  # strategy equity per bar
 
     @property
     def win_rate(self) -> float:
@@ -75,6 +76,7 @@ def run_backtest(prices: list[float], cfg) -> BacktestReport:
     peak_equity = 0.0
     max_drawdown = 0.0
     capital_per_order = cfg.order_size_usd
+    equity_curve: list = []
 
     for price in prices:
         # Breakout guard: if price leaves the band, stop opening new buys.
@@ -102,6 +104,7 @@ def run_backtest(prices: list[float], cfg) -> BacktestReport:
         equity = realized + held_value
         peak_equity = max(peak_equity, equity)
         max_drawdown = max(max_drawdown, peak_equity - equity)
+        equity_curve.append(equity)
 
     start_price, end_price = prices[0], prices[-1]
     buy_hold_pct = (end_price - start_price) / start_price * 100.0
@@ -114,6 +117,7 @@ def run_backtest(prices: list[float], cfg) -> BacktestReport:
         bars=len(prices), trades=trades, wins=wins, net_pnl=realized,
         max_drawdown=max_drawdown, buy_hold_return_pct=buy_hold_pct,
         strategy_return_pct=strat_pct, start_price=start_price, end_price=end_price,
+        equity_curve=equity_curve,
     )
 
 

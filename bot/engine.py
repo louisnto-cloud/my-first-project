@@ -135,14 +135,58 @@ class GridEngine:
             level.sell_client_id = cid
             level.status = statemod.SELL_OPEN
 
+    # -- profit/loss helpers ------------------------------------------------
+    def _unrealized_pnl(self, price: float) -> float:
+        """Profit/loss, after fees, if we sold ALL current inventory right now.
+
+        The daily-loss guard uses this so an open drawdown can trip the halt
+        BEFORE it is locked in as a realized loss. Without this, a grid that
+        only books profit on sells would never see a downtrend coming.
+        """
+        total = 0.0
+        for level in self.state.levels:
+            if level.status in (statemod.HOLDING, statemod.SELL_OPEN) and level.qty > 0:
+                total += fees.net_profit(
+                    level.buy_price, price, level.qty, self.cfg.fee_percent_per_side
+                )
+        return total
+
+    def _flatten(self, price: float) -> None:
+        """Actually SELL all inventory to cash. Books P&L and empties levels.
+
+        Cancels resting orders first, books each holding's P&L at the current
+        price, then tells the broker to liquidate. This is what 'flatten' must
+        mean: end up flat, not just stop placing orders.
+        """
+        self.broker.cancel_all()
+        for level in self.state.levels:
+            if level.status in (statemod.HOLDING, statemod.SELL_OPEN) and level.qty > 0:
+                profit = fees.net_profit(
+                    level.buy_price, price, level.qty, self.cfg.fee_percent_per_side
+                )
+                self.state.realized_pnl += profit
+                self.log.warning(
+                    "FLATTEN: sold %.8f from level %d at ~%.2f. P&L after fees: %.4f",
+                    level.qty, level.index, price, profit,
+                )
+            level.qty = 0.0
+            level.filled_qty = 0.0
+            level.status = statemod.EMPTY
+            level.buy_client_id = ""
+            level.sell_client_id = ""
+        self.broker.flatten()
+
     # -- one loop -----------------------------------------------------------
     def tick(self) -> None:
         price = self.broker.get_price()
         self.state.roll_day_if_needed()
         self._process_fills(price)
 
-        # Guard 1: daily loss limit (hard halt).
-        loss = guards.check_daily_loss(self.state.daily_pnl, self.cfg.daily_loss_limit_usd)
+        # Guard 1: daily loss limit (hard halt). Counts realized P&L booked
+        # today PLUS the unrealized loss on anything we're still holding, so a
+        # drawdown trips the halt instead of silently growing.
+        day_pnl = self.state.daily_pnl + self._unrealized_pnl(price)
+        loss = guards.check_daily_loss(day_pnl, self.cfg.daily_loss_limit_usd)
         if not loss.allow and not self._halted:
             self._halted = True
             self.log.error("HALT: %s", loss.reason)
@@ -150,7 +194,7 @@ class GridEngine:
             self.broker.cancel_all()
         buys_allowed = loss.allow and not self._halted
 
-        # Guard 2: breakout (block new buys, optionally flatten).
+        # Guard 2: breakout (block new buys, optionally flatten to cash).
         bo = guards.check_breakout(
             price, self.cfg.band_low, self.cfg.band_high, self.cfg.breakout_guard_enabled
         )
@@ -160,7 +204,7 @@ class GridEngine:
             buys_allowed = False
             if self.cfg.breakout_flatten:
                 self.log.warning("Flattening position due to breakout.")
-                self.broker.cancel_all()
+                self._flatten(price)
 
         self._maybe_place_buys(price, buys_allowed)
         self._maybe_place_sells()
@@ -170,12 +214,14 @@ class GridEngine:
 
     def _status_line(self, price: float) -> None:
         position_usd = self.broker.get_position_qty() * price
-        headroom = self.cfg.daily_loss_limit_usd + self.state.daily_pnl
+        unrealized = self._unrealized_pnl(price)
+        day_pnl = self.state.daily_pnl + unrealized
+        headroom = self.cfg.daily_loss_limit_usd + day_pnl
         self.log.info(
             "STATUS price=%.2f open_orders=%d position=$%.2f realized_pnl=$%.4f "
-            "daily_pnl=$%.4f loss_headroom=$%.2f",
+            "unrealized=$%.4f day_pnl=$%.4f loss_headroom=$%.2f",
             price, self._open_order_count(), position_usd,
-            self.state.realized_pnl, self.state.daily_pnl, headroom,
+            self.state.realized_pnl, unrealized, day_pnl, headroom,
         )
 
     # -- main loop ----------------------------------------------------------
