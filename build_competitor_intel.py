@@ -176,6 +176,97 @@ add(brand="Halo Sport",sku="Halo Sport Sparkling Electrolyte Water",category=C1,
 add(brand="Gorgie",sku="Gorgie Energy Sparkling Water",category=C1,format="355 mL can",pack=12,flavours="Watermelon, Tropical, Strawberry Lemonade, Cherry Limeade",caffeine=120,sodium=10,potassium=None,sugar=0,calories=10,sweetener="Stevia",claims="120 mg natural caffeine, L-theanine, biotin, zero sugar",vband="Low",vsignal="New social-driven entrant; small footprint",message="A lighter, prettier caffeinated sparkling energy",why="Mid-dose caffeine with a clean, lifestyle aesthetic.",unitml=355)
 add(brand="United Sodas",sku="United Sodas of America",category=C1,format="355 mL can",pack=12,flavours="Wild Berry, Black Cherry, Mango Chili, Lemon Lime, Peach Vanilla",caffeine=0,sodium=10,potassium=None,sugar=8,calories=30,sweetener="Cane sugar (small amount)",claims="Low calorie, light sparkling soda, minimalist branding",vband="Low",vsignal="Niche premium soda; design-led",message="A light, low-calorie modern soda",why="Low-calorie soda with a clean, design-forward identity.",unitml=355)
 
+# ===== BREADTH EXPANSION: additional real product LINES (approx attributes, flagged) =====
+# -- more caffeine & energy / RTD coffee / caffeinated tea (C4) --
+add(brand="Full Throttle",sku="Full Throttle Energy",category=C4,format="473 mL can",pack=12,flavours="Original Citrus, Blue Agave, Berry",caffeine=160,sodium=200,potassium=None,sugar=58,calories=220,sweetener="HFCS",claims="High-octane energy blend, taurine",vband="Low",vsignal="Legacy Coca-Cola energy brand",message="Old-school heavy energy can",why="Value legacy energy.",unitml=473)
+add(brand="Venom",sku="Venom Energy",category=C4,format="473 mL can",pack=12,flavours="Black Mamba, Mojave Rattler, Death Adder",caffeine=160,sodium=130,potassium=None,sugar=54,calories=230,sweetener="HFCS",claims="Energy blend, taurine, ginseng",vband="Low",vsignal="Discount-channel energy brand",message="Cheap high-sugar energy",why="Lowest-price energy option.",unitml=473)
+add(brand="AMP",sku="AMP Energy",category=C4,format="473 mL can",pack=12,flavours="Original, Tropical Punch",caffeine=142,sodium=95,potassium=None,sugar=58,calories=220,sweetener="HFCS",claims="Energy blend, B-vitamins",vband="Low",vsignal="Legacy PepsiCo energy",message="Legacy mid-tier energy",why="Familiar legacy brand.",unitml=473)
+add(brand="5-hour Energy",sku="5-hour Energy Shot",category=C4,format="57 mL shot",pack=12,flavours="Berry, Grape, Orange, Pomegranate, Peach Mango, Extra Strength Berry",caffeine=200,sodium=18,potassium=None,sugar=0,calories=4,sweetener="Sucralose",claims="Zero sugar energy shot, B-vitamins, amino acids, no crash",vband="High",vsignal="Dominant energy-shot brand; impulse repeat",message="A tiny no-sugar shot for instant energy",why="Fast caffeine with no sugar and no big can.",unitml=57)
+add(brand="Monster",sku="Monster Java",category=C4,format="444 mL can",pack=12,flavours="Mean Bean, Loca Moca, Salted Caramel, Vanilla",caffeine=188,sodium=200,potassium=None,sugar=32,calories=200,sweetener="Sugar",claims="Coffee + energy, milk, taurine",vband="Medium",vsignal="Coffee-energy crossover",message="Coffee-flavoured energy in a big can",why="Coffee taste plus energy dose.",unitml=444)
+add(brand="Red Bull",sku="Red Bull Editions",category=C4,format="250 mL can",pack=12,flavours="Red (Watermelon), Blue (Blueberry), Yellow (Tropical), Green (Dragon Fruit), Peach (Nectarine), Summer",caffeine=80,sodium=105,potassium=None,sugar=27,calories=112,sweetener="Sucrose + glucose",claims="Flavoured Red Bull energy",vband="High",vsignal="Flavour line extensions of #1 brand",message="Fruit-flavoured Red Bull energy",why="Red Bull energy with flavour variety.",unitml=250)
+add(brand="G FUEL",sku="G FUEL Energy Cans",category=C4,format="473 mL can",pack=12,flavours="Sour Cherry, Blue Ice, Tropical Rain, Fazeberry, Rainbow Sherbet",caffeine=300,sodium=10,potassium=None,sugar=0,calories=10,sweetener="Sucralose + acesulfame-K",claims="300 mg caffeine, zero sugar, gamer focus blend",vband="Medium",vsignal="Gaming-community brand; strong online pull",message="High-caffeine zero-sugar gamer energy",why="Gamer-brand identity plus max caffeine.",unitml=473)
+add(brand="Mtn Dew",sku="Mtn Dew Rise Energy",category=C4,format="473 mL can",pack=12,flavours="Orange Breeze, Berry Blast, Pomegranate Blue Burst, Tropical Sunrise",caffeine=180,sodium=80,potassium=None,sugar=0,calories=15,sweetener="Sucralose + acesulfame-K",claims="180 mg caffeine, zero sugar, vitamins, antioxidants",vband="Medium",vsignal="PepsiCo morning-energy play",message="Morning energy with zero sugar",why="Daytime energy with vitamins, no sugar.",unitml=473)
+add(brand="Adrenaline Shoc",sku="Adrenaline Shoc Smart Energy",category=C4,format="473 mL can",pack=12,flavours="Acai Berry, Sour Slurp, Frozen Fusion, Peach Mango",caffeine=300,sodium=10,potassium=None,sugar=0,calories=15,sweetener="Sucralose",claims="300 mg natural caffeine, nootropics, BCAAs, zero sugar",vband="Low",vsignal="Performance-energy challenger",message="Nootropic high-caffeine energy",why="Max caffeine plus nootropics.",unitml=473)
+add(brand="Arizona",sku="Arizona Green Tea",category=C4,format="680 mL can",pack=12,flavours="Green Tea w/ Honey, Arnold Palmer, Mucho Mango, Watermelon, Lemon Tea",caffeine=15,sodium=20,potassium=None,sugar=51,calories=240,sweetener="HFCS + honey",claims="Big-can iced tea, value 99c brand",vband="High",vsignal="Iconic value big-can tea",message="Huge can of sweet tea for almost nothing",why="Unbeatable size-for-price value.",unitml=680)
+add(brand="Pure Leaf",sku="Pure Leaf Iced Tea",category=C4,format="547 mL bottle",pack=12,flavours="Sweet Tea, Lemon, Unsweetened, Peach, Raspberry, Extra Sweet",caffeine=70,sodium=10,potassium=None,sugar=32,calories=130,sweetener="Sugar",claims="Real brewed tea, no powders",vband="High",vsignal="Leading premium RTD tea",message="Real-brewed bottled iced tea",why="Brewed-tea taste, not from powder.",unitml=547)
+add(brand="Gold Peak",sku="Gold Peak Tea",category=C4,format="547 mL bottle",pack=12,flavours="Sweet Tea, Unsweetened, Green Tea, Lemon, Peach",caffeine=45,sodium=15,potassium=None,sugar=35,calories=140,sweetener="Sugar",claims="Home-brewed taste iced tea",vband="Medium",vsignal="Coca-Cola RTD tea",message="Diner-style sweet tea",why="Familiar home-brewed-style taste.",unitml=547)
+add(brand="Brisk",sku="Brisk Iced Tea",category=C4,format="591 mL bottle",pack=12,flavours="Lemon, Sweet Tea, Half & Half, Raspberry",caffeine=10,sodium=70,potassium=None,sugar=47,calories=180,sweetener="HFCS",claims="Bold value iced tea",vband="Medium",vsignal="Value RTD tea brand",message="Bold cheap iced tea",why="Punchy flavour at a low price.",unitml=591)
+add(brand="Honest Tea",sku="Honest Tea Organic",category=C4,format="473 mL bottle",pack=12,flavours="Honey Green, Peach, Half & Half, Lemon, Just Black",caffeine=42,sodium=10,potassium=None,sugar=21,calories=90,sweetener="Organic cane sugar",claims="Organic, Fair Trade, lower sugar tea",vband="Medium",vsignal="Organic RTD tea",message="Organic, less-sweet bottled tea",why="Organic with restrained sweetness.",unitml=473)
+add(brand="STOK",sku="STOK Cold Brew Coffee",category=C4,format="405 mL bottle",pack=12,flavours="Not Too Sweet Black, Un-Sweet Black, Vanilla, Mocha",caffeine=145,sodium=40,potassium=None,sugar=13,calories=70,sweetener="Sugar",claims="Smooth cold brew, real coffee",vband="Medium",vsignal="Leading RTD cold brew",message="Smooth ready-to-pour cold brew",why="Cafe cold-brew at home.",unitml=405)
+add(brand="Califia Farms",sku="Califia Farms Cold Brew",category=C4,format="355 mL bottle",pack=12,flavours="Black Unsweetened, Mocha, Vanilla, Café Latte",caffeine=120,sodium=30,potassium=None,sugar=9,calories=70,sweetener="Cane sugar (plant-based)",claims="Plant-based, almond/oat cold brew",vband="Medium",vsignal="Premium plant-based coffee",message="Dairy-free cold brew lattes",why="Plant-based coffee without dairy.",unitml=355)
+add(brand="La Colombe",sku="La Colombe Draft Latte",category=C4,format="260 mL can",pack=12,flavours="Original, Vanilla, Mocha, Oatmilk, Triple",caffeine=120,sodium=70,potassium=None,sugar=14,calories=110,sweetener="Cane sugar",claims="Frothy draft latte, real cold-pressed espresso",vband="Medium",vsignal="Premium canned latte",message="Frothy cafe latte from a can",why="Cafe-quality latte texture.",unitml=260)
+add(brand="Starbucks",sku="Starbucks Frappuccino",category=C4,format="281 mL bottle",pack=12,flavours="Mocha, Vanilla, Caramel, Coffee, Dark Chocolate",caffeine=90,sodium=85,potassium=None,sugar=31,calories=200,sweetener="Sugar",claims="Bottled coffee drink",vband="High",vsignal="Mass RTD coffee staple",message="Sweet bottled coffee treat",why="Familiar sweet Starbucks coffee.",unitml=281)
+# -- more sodas & sparkling (C5) --
+add(brand="Pepsi",sku="Pepsi Cola",category=C5,format="355 mL can",pack=12,flavours="Original, Wild Cherry, Vanilla",caffeine=38,sodium=30,potassium=None,sugar=41,calories=150,sweetener="HFCS",claims="Classic cola (no functional claim)",vband="Very High",vsignal="#2 cola; mass volume",message="The other classic cola",why="Cola taste preference and price.",unitml=355)
+add(brand="Pepsi",sku="Pepsi Zero Sugar",category=C5,format="355 mL can",pack=12,flavours="Original, Wild Cherry, Mango",caffeine=69,sodium=35,potassium=None,sugar=0,calories=0,sweetener="Aspartame + acesulfame-K",claims="Zero sugar cola, extra caffeine",vband="High",vsignal="Strong zero-sugar cola",message="Zero-sugar cola with a caffeine kick",why="No sugar, more caffeine.",unitml=355)
+add(brand="Diet Pepsi",sku="Diet Pepsi",category=C5,format="355 mL can",pack=12,flavours="Original",caffeine=35,sodium=35,potassium=None,sugar=0,calories=0,sweetener="Aspartame",claims="Zero calorie cola",vband="High",vsignal="Legacy diet cola",message="Classic diet cola",why="Familiar diet-cola taste.",unitml=355)
+add(brand="Coca-Cola",sku="Coca-Cola Zero Sugar",category=C5,format="355 mL can",pack=12,flavours="Original, Cherry, Vanilla",caffeine=34,sodium=40,potassium=None,sugar=0,calories=0,sweetener="Aspartame + acesulfame-K",claims="Zero sugar, real-cola taste",vband="Very High",vsignal="Fast-growing zero-sugar cola",message="Coke taste, zero sugar",why="Closest zero-sugar match to Coke.",unitml=355)
+add(brand="Diet Coke",sku="Diet Coke",category=C5,format="355 mL can",pack=12,flavours="Original, Cherry, Lime, Caffeine-Free",caffeine=46,sodium=40,potassium=None,sugar=0,calories=0,sweetener="Aspartame",claims="Zero calorie",vband="Very High",vsignal="Iconic diet cola",message="The classic diet cola",why="Distinct diet-cola flavour loyalty.",unitml=355)
+add(brand="Sprite",sku="Sprite Lemon-Lime",category=C5,format="355 mL can",pack=12,flavours="Original, Cherry, Tropical",caffeine=0,sodium=65,potassium=None,sugar=38,calories=140,sweetener="HFCS",claims="Caffeine-free lemon-lime",vband="Very High",vsignal="#1 lemon-lime soda",message="Crisp caffeine-free lemon-lime",why="Clean lemon-lime, no caffeine.",unitml=355)
+add(brand="Sprite",sku="Sprite Zero Sugar",category=C5,format="355 mL can",pack=12,flavours="Original",caffeine=0,sodium=40,potassium=None,sugar=0,calories=0,sweetener="Aspartame + acesulfame-K",claims="Zero sugar lemon-lime",vband="High",vsignal="Zero-sugar variant",message="Zero-sugar lemon-lime",why="Lemon-lime without sugar.",unitml=355)
+add(brand="Fanta",sku="Fanta Orange",category=C5,format="355 mL can",pack=12,flavours="Orange, Grape, Pineapple, Strawberry",caffeine=0,sodium=55,potassium=None,sugar=44,calories=160,sweetener="HFCS",claims="Fruit-flavoured soda",vband="High",vsignal="Leading orange soda",message="Bright fruity orange soda",why="Sweet fruity flavour, no caffeine.",unitml=355)
+add(brand="7UP",sku="7UP Lemon-Lime",category=C5,format="355 mL can",pack=12,flavours="Original, Cherry, Diet",caffeine=0,sodium=45,potassium=None,sugar=38,calories=140,sweetener="HFCS",claims="Caffeine-free lemon-lime",vband="High",vsignal="Legacy lemon-lime",message="Classic lemon-lime soda",why="Lemon-lime alternative to Sprite.",unitml=355)
+add(brand="Mountain Dew",sku="Mountain Dew Citrus",category=C5,format="355 mL can",pack=12,flavours="Original, Code Red, Voltage, Baja Blast, Major Melon",caffeine=54,sodium=60,potassium=None,sugar=46,calories=170,sweetener="HFCS",claims="High-caffeine citrus soda",vband="Very High",vsignal="Cult citrus soda; many flavours",message="Bold caffeinated citrus soda",why="Distinctive sweet citrus and caffeine.",unitml=355)
+add(brand="Dr Pepper",sku="Dr Pepper",category=C5,format="355 mL can",pack=12,flavours="Original, Cherry, Cream Soda, Zero Sugar",caffeine=41,sodium=55,potassium=None,sugar=40,calories=150,sweetener="HFCS",claims="23-flavour soda",vband="Very High",vsignal="Beloved unique-flavour soda",message="The unique 23-flavour soda",why="One-of-a-kind flavour loyalty.",unitml=355)
+add(brand="Canada Dry",sku="Canada Dry Ginger Ale",category=C5,format="355 mL can",pack=12,flavours="Original, Diet, Cranberry, Lemonade",caffeine=0,sodium=35,potassium=None,sugar=36,calories=140,sweetener="HFCS",claims="Real ginger ale (no functional claim)",vband="High",vsignal="#1 ginger ale",message="Crisp classic ginger ale",why="Go-to ginger ale, also for upset stomach.",unitml=355)
+add(brand="Schweppes",sku="Schweppes Ginger Ale",category=C5,format="355 mL can",pack=12,flavours="Original, Diet, Club Soda, Tonic Water",caffeine=0,sodium=40,potassium=None,sugar=33,calories=130,sweetener="HFCS",claims="Ginger ale + mixers",vband="Medium",vsignal="Mixer staple",message="Ginger ale and bar mixers",why="Reliable mixer brand.",unitml=355)
+add(brand="A&W",sku="A&W Root Beer",category=C5,format="355 mL can",pack=12,flavours="Original, Diet, Cream Soda",caffeine=0,sodium=45,potassium=None,sugar=46,calories=170,sweetener="HFCS",claims="Caffeine-free root beer",vband="High",vsignal="#1 root beer",message="Creamy classic root beer",why="Rich caffeine-free root beer.",unitml=355)
+add(brand="Crush",sku="Crush Orange",category=C5,format="355 mL can",pack=12,flavours="Orange, Grape, Pineapple, Cream Soda",caffeine=0,sodium=45,potassium=None,sugar=49,calories=180,sweetener="HFCS",claims="Bold fruit soda",vband="Medium",vsignal="Legacy fruit soda",message="Super-sweet orange soda",why="Bold sweet fruit flavour.",unitml=355)
+add(brand="Fresca",sku="Fresca Sparkling",category=C5,format="355 mL can",pack=12,flavours="Original Citrus, Black Cherry, Peach",caffeine=0,sodium=35,potassium=None,sugar=0,calories=0,sweetener="Aspartame + acesulfame-K",claims="Zero sugar grapefruit-citrus",vband="Medium",vsignal="Cult zero-cal soda",message="Zero-calorie citrus soda",why="Grown-up zero-cal citrus.",unitml=355)
+add(brand="Sunkist",sku="Sunkist Orange",category=C5,format="355 mL can",pack=12,flavours="Orange, Grape, Strawberry, Diet",caffeine=19,sodium=45,potassium=None,sugar=51,calories=190,sweetener="HFCS",claims="Bright orange soda",vband="Medium",vsignal="Legacy orange soda",message="Sweet bright orange soda",why="Big citrus flavour.",unitml=355)
+add(brand="Mug",sku="Mug Root Beer",category=C5,format="355 mL can",pack=12,flavours="Original, Diet, Cream Soda",caffeine=0,sodium=65,potassium=None,sugar=43,calories=160,sweetener="HFCS",claims="Caffeine-free root beer",vband="Medium",vsignal="PepsiCo root beer",message="Creamy root beer",why="Value root beer.",unitml=355)
+add(brand="Dasani",sku="Dasani Sparkling Water",category=C5,format="355 mL can",pack=8,flavours="Black Cherry, Lemon, Berry, Tropical Pineapple",caffeine=0,sodium=0,potassium=None,sugar=0,calories=0,sweetener="None (natural flavours)",claims="Zero-calorie flavoured sparkling water",vband="Low",vsignal="Coca-Cola sparkling water",message="Plain flavoured sparkling water",why="Value zero-cal seltzer.",unitml=355)
+add(brand="Smartwater",sku="Smartwater Sparkling",category=C5,format="591 mL bottle",pack=12,flavours="Original, Lemon, Cucumber-Lime, Watermelon-Mint",caffeine=0,sodium=0,potassium=None,sugar=0,calories=0,sweetener="None",claims="Vapor-distilled sparkling water w/ electrolytes added",vband="Medium",vsignal="Premium water brand",message="Premium distilled sparkling water",why="Premium water brand cachet.",unitml=591)
+# -- more electrolyte RTD (C2) --
+add(brand="Propel",sku="Propel Electrolyte Water",category=C2,format="591 mL bottle",pack=12,flavours="Berry, Grape, Kiwi Strawberry, Watermelon, Lemon, Black Cherry",caffeine=0,sodium=150,potassium=40,sugar=0,calories=5,sweetener="Sucralose + acesulfame-K",claims="Electrolytes + vitamins, zero sugar, fitness water",vband="High",vsignal="Leading zero-sugar electrolyte water (Gatorade family)",message="Zero-sugar workout water with electrolytes",why="Light electrolyte water for everyday workouts.",unitml=591)
+add(brand="Essentia",sku="Essentia Ionized Alkaline Water",category=C2,format="1 L bottle",pack=12,flavours="Original (pH 9.5)",caffeine=0,sodium=10,potassium=None,sugar=0,calories=0,sweetener="None",claims="Ionized alkaline pH 9.5, electrolytes for taste, hydration",vband="High",vsignal="Leading premium alkaline water",message="Smooth alkaline ionized water",why="Alkaline-water believers; smooth taste.",unitml=1000)
+add(brand="Smartwater",sku="Smartwater Alkaline",category=C2,format="1 L bottle",pack=12,flavours="Alkaline pH 9+, Original",caffeine=0,sodium=0,potassium=None,sugar=0,calories=0,sweetener="None",claims="Vapor-distilled, added electrolytes / alkaline variant",vband="High",vsignal="Premium water brand",message="Premium distilled water",why="Brand trust and clean taste.",unitml=1000)
+add(brand="Gatorade",sku="Gatorade G2 Low Sugar",category=C2,format="591 mL bottle",pack=12,flavours="Glacier Freeze, Fruit Punch, Grape, Lemon-Lime",caffeine=0,sodium=270,potassium=75,sugar=7,calories=30,sweetener="Sugar + sucralose",claims="Same electrolytes, lower sugar",vband="Medium",vsignal="Reduced-sugar Gatorade",message="Lower-sugar Gatorade electrolytes",why="Electrolytes with much less sugar.",unitml=591)
+add(brand="Mas+",sku="Mas+ by Messi Hydration",category=C2,format="473 mL bottle",pack=12,flavours="Limon, Berry, Orange, Tropical",caffeine=0,sodium=200,potassium=100,sugar=4,calories=20,sweetener="Cane sugar + stevia",claims="Electrolytes, low sugar, vitamins; Messi-backed",vband="Medium",vsignal="New celebrity hydration entrant",message="Celebrity-backed low-sugar hydration",why="Messi brand plus low-sugar electrolytes.",unitml=473)
+add(brand="Pedialyte",sku="Pedialyte Sport",category=C2,format="495 mL bottle",pack=12,flavours="Berry, Fruit Punch, Cherry",caffeine=0,sodium=490,potassium=350,sugar=11,calories=45,sweetener="Sugar + sucralose",claims="High-electrolyte rapid rehydration for athletes",vband="Medium",vsignal="Sport line of clinical brand",message="Clinical-grade sport rehydration",why="Medical-brand electrolytes for sport.",unitml=495)
+# -- more functional (C3) --
+add(brand="KeVita",sku="KeVita Sparkling Probiotic Drink",category=C3,format="440 mL bottle",pack=12,flavours="Lemon Ginger, Mojita Lime Mint Coconut, Strawberry Acai Coconut, Roots Beer",caffeine=0,sodium=80,potassium=None,sugar=5,calories=25,sweetener="Stevia + juice",claims="Billions of probiotics, sparkling, gut health, low sugar",vband="Medium",vsignal="Mass probiotic drink (PepsiCo)",message="Sparkling probiotic for gut health",why="Probiotics in a light sparkling format.",unitml=440)
+add(brand="Brew Dr",sku="Brew Dr Kombucha",category=C3,format="414 mL bottle",pack=12,flavours="Clear Mind, Superberry, Island Mango, Happiness, Ginger Turmeric",caffeine=15,sodium=10,potassium=None,sugar=10,calories=50,sweetener="Naturally fermented",claims="Organic raw kombucha, probiotics, gut health",vband="Medium",vsignal="Premium organic kombucha",message="Organic raw kombucha with botanicals",why="Organic raw kombucha taste.",unitml=414)
+add(brand="Karma",sku="Karma Wellness Water",category=C3,format="532 mL bottle",pack=12,flavours="Berry Cherry, Orange Mango, Acai Pomegranate, Tropical Pineapple",caffeine=0,sodium=10,potassium=None,sugar=10,calories=40,sweetener="Cane sugar + stevia",claims="Push-cap fresh vitamins, antioxidants, function-by-flavour",vband="Low",vsignal="Niche push-cap vitamin water",message="Fresh-mixed vitamins via push cap",why="Vitamins mixed fresh at opening.",unitml=532)
+add(brand="ALO",sku="ALO Exposed Aloe Vera Drink",category=C3,format="500 mL bottle",pack=12,flavours="Original Aloe + Honey, Mango Mangosteen, Pomegranate Cranberry, Pink Grapefruit Lemon",caffeine=0,sodium=20,potassium=None,sugar=20,calories=90,sweetener="Cane sugar",claims="Real aloe vera pulp, antioxidants, vitamins",vband="Low",vsignal="Leading aloe drink",message="Real aloe pulp wellness drink",why="Aloe pulp and a wellness halo.",unitml=500)
+# -- more functional sparkling (C1) --
+add(brand="Sparkling Ice",sku="Sparkling Ice +Caffeine",category=C1,format="473 mL can",pack=12,flavours="Black Raspberry, Citrus Twist, Orange Passionfruit, Strawberry Citrus, Triple Citrus",caffeine=70,sodium=25,potassium=None,sugar=0,calories=5,sweetener="Sucralose",claims="70 mg caffeine, vitamins, antioxidants, zero sugar",vband="Medium",vsignal="Caffeinated line of mass sparkling brand",message="Zero-sugar sparkling with a caffeine boost",why="Light caffeine plus vitamins, zero sugar.",unitml=473)
+
+# ===== SKU EXPANSION ENGINE (line x flavour x pack-size = one SKU/ASIN row) =====
+import re
+def short_size(ln):
+    m=re.search(r'(\d+(?:\.\d+)?)\s*(mL|L)',ln["format"] or "")
+    if not m: return ""
+    return f'{m.group(1)}{m.group(2)}'
+def pack_configs(ln):
+    v=ln.get("unitml") or 355
+    if v<=70:   return [6,12,24]          # shots
+    if v<=250:  return [12,24]
+    if v<=355:  return [8,12,24]
+    if v<=550:  return [12,24]
+    if v<=700:  return [1,12,24]
+    return [12,24]                          # ~1 L
+def expand(lines):
+    out=[]
+    for ln in lines:
+        flavs=[f.strip() for f in (ln.get("flavours") or "Original").split(",") if f.strip()] or ["Original"]
+        size=short_size(ln)
+        for fl in flavs:
+            for pk in pack_configs(ln):
+                s=dict(ln)
+                packlbl = f"single {size}" if pk==1 else f"{pk}-pack {size}"
+                s["line"]=ln["sku"]
+                s["flavour"]=fl
+                s["flavours"]=fl
+                s["pack"]=pk
+                s["sku"]=f'{ln["sku"]} | {fl} | {packlbl}'
+                out.append(s)
+    return out
+
+LINES=list(P)          # the product lines (line-level tabs use these)
+SKUS=expand(LINES)     # the exploded SKUs (master + pricing tabs use these)
+
+
 # ============================================================
 # PY-SIDE ANALYTICS (for charts, rollups, benchmarks, sorting)
 # ============================================================
@@ -262,7 +353,7 @@ def build_master(category):
     for i,c in enumerate(COLS,1): ws.cell(row=1,column=i,value=c[1])
     style_header(ws,len(COLS))
     ws.freeze_panes="C2"
-    prods=[p for p in P if p["category"]==category]
+    prods=[p for p in SKUS if p["category"]==category]
     r=2
     for p in prods:
         p["_sheet"]=name; p["_row"]=r
@@ -288,7 +379,7 @@ def build_master(category):
                 cell.value=v
                 if key in("caffeine","sodium","potassium","sugar","calories","pack","unitml") and isinstance(v,(int,float)):
                     cell.alignment=Alignment(vertical="top",horizontal="center")
-        ws.row_dimensions[r].height=58
+        ws.row_dimensions[r].height=28
         r+=1
     last=r-1; MASTER_RANGES[name]=(2,last)
     # Excel Table (gives sort/filter + banded rows)
@@ -318,10 +409,11 @@ def build_readme():
     ws=wb.active; ws.title="README & Methodology"; ws.sheet_view.showGridLines=False; tabcolor(ws,"808080")
     widths(ws,[3,30,112])
     ws.cell(row=2,column=2,value="Amazon.ca Beverage - Competitor Intelligence Master File").font=Font(bold=True,size=18,color=NAVY)
-    ws.cell(row=3,column=2,value=f"Build date: {TODAY}   |   v2 Enterprise   |   {len([p for p in P])} products").font=Font(italic=True,size=11,color=BLUE)
+    ws.cell(row=3,column=2,value=f"Build date: {TODAY}   |   v3 Enterprise   |   {len(SKUS)} SKUs from {len(LINES)} product lines / {len(set(p['brand'] for p in LINES))} brands").font=Font(italic=True,size=11,color=BLUE)
     rows=[
      ("CRITICAL - READ FIRST",""),
-     ("Data-access limitation","Generated with NO live access to Amazon.ca (HTTP 403 on search, product, and brand pages). The file therefore contains NO live prices, Subscribe & Save terms, coupons, ratings, review counts, badges, ranks, or URLs. Those cells are intentionally BLANK and amber-highlighted - they are NOT fabricated."),
+     ("Data-access limitation","Generated with NO live access to Amazon (HTTP 403 on search, product, and brand pages). The file therefore contains NO live prices, Subscribe & Save terms, coupons, ratings, review counts, badges, ranks, or URLs. Those cells are intentionally BLANK and amber-highlighted - they are NOT fabricated."),
+     ("SKU model - HOW THE ~1000+ ROWS ARE BUILT","The Master tabs are SKU-level. Because each flavour x pack-size is a separate ASIN on Amazon, every product LINE is exploded into individual SKU rows (line x flavour x pack). These are DERIVED / CANDIDATE SKUs to verify against live listings - NOT confirmed ASINs. Flavour lists are representative not exhaustive, and some specific flavour+pack combinations may not exist exactly as shown. The live catalogue cannot be enumerated without Amazon access; this expansion approximates its shape."),
      ("What IS filled (and its confidence)","Stable attributes - brand, SKU, format/size, typical pack, flavours, caffeine/sodium/potassium/sugar/calories, sweetener, claims, positioning, plus an honest velocity ESTIMATE - filled from manufacturer + secondary sources. Treat all as APPROXIMATE and verify on the live label. Nutrition is per single serving and varies by flavour."),
      ("What is BLANK (capture live)","Fields 6, 9-14, 23-26, 30 and helper H2. All amber. Filled by a live-capture pass (see 'Live-Capture Protocol' tab)."),
      ("Built-in automation","Fields 7,8,11,14 are LIVE FORMULAS. Enter price (F), pack (E), S&S % as decimal (J, e.g. 0.15) and coupon value (H2); per-unit, per-100 mL, S&S price and stacked floor compute instantly and the red row-flag clears."),
@@ -440,7 +532,7 @@ def build_pricing():
      "Spindrift":"Premium; selective S&S to retain.","Electrolit":"Momentum brand; multipack value + S&S.",
      "Ghost":"Flavour-drop hype; bundles.","Zevia":"Clean-label premium; S&S for pantry-loaders."}
     r=2
-    for p in LIVE:
+    for p in SKUS:
         put(ws,r,1,p["brand"]); put(ws,r,2,p["sku"]); put(ws,r,3,p["category"])
         put(ws,r,4,f"={ref(p,'price')}",MONEY,AMBER)
         put(ws,r,5,f"={ref(p,'ss_pct')}",PCT,AMBER)
@@ -465,7 +557,7 @@ def build_subscription():
         ["Brand","SKU","Category","S&S Offered (Y/N)","S&S Discount %","S&S Effective Price","One-Time Price","Saving vs One-Time","Notes"],
         [16,32,24,15,15,16,14,15,40],color=GOLD)
     r=2
-    for p in LIVE:
+    for p in SKUS:
         put(ws,r,1,p["brand"]); put(ws,r,2,p["sku"]); put(ws,r,3,p["category"])
         put(ws,r,4,f"={ref(p,'ss_off')}",fill=AMBER)
         put(ws,r,5,f"={ref(p,'ss_pct')}",PCT,AMBER)
@@ -569,14 +661,16 @@ def build_brandrollup():
         ["Brand","# SKUs in file","Categories played","Avg caffeine (mg)","Avg sugar (g)","Min sugar (g)","Avg Health Score","Avg Functional Score","Velocity (typical)"],
         [18,12,30,14,12,12,14,15,14],color="9966CC")
     brands={}
-    for p in LIVE: brands.setdefault(p["brand"],[]).append(p)
+    for p in LINES: brands.setdefault(p["brand"],[]).append(p)
+    skuct={}
+    for s in SKUS: skuct[s["brand"]]=skuct.get(s["brand"],0)+1
     def avg(vals):
         v=[x for x in vals if isinstance(x,(int,float))]
         return round(sum(v)/len(v),1) if v else "n/a"
     rows=[]
     for b,ps in brands.items():
         cats=sorted(set(x["category"][0:2] for x in ps))
-        rows.append([b,len(ps),", ".join(sorted(set(x["category"].split(")")[0]+")" for x in ps))),
+        rows.append([b,skuct.get(b,0),", ".join(sorted(set(x["category"].split(")")[0]+")" for x in ps))),
             avg([x["caffeine"] for x in ps]),avg([x["sugar"] for x in ps]),
             min([x["sugar"] for x in ps if isinstance(x["sugar"],(int,float))] or [0]),
             avg([py_health(x) for x in ps]),avg([py_func(x) for x in ps]),
@@ -595,7 +689,8 @@ def build_benchmarks():
         ["Category","# Products","# Sugar-free (<=1g)","Avg sugar (g)","Min sugar","Max sugar","Avg caffeine (mg)","Avg calories","Avg Health Score","Avg Functional Score"],
         [28,11,14,12,9,9,14,12,14,15],color="9966CC")
     def stats(cat):
-        ps=[p for p in LIVE if p["category"]==cat]
+        ps=[p for p in LINES if p["category"]==cat]
+        nsku=sum(1 for s in SKUS if s["category"]==cat)
         sug=[p["sugar"] for p in ps if isinstance(p["sugar"],(int,float))]
         caf=[p["caffeine"] for p in ps if isinstance(p["caffeine"],(int,float))]
         cal=[p["calories"] for p in ps if isinstance(p["calories"],(int,float))]
@@ -603,7 +698,7 @@ def build_benchmarks():
         hs=[py_health(p) for p in ps if py_health(p) is not None]
         fs=[py_func(p) for p in ps]
         rnd=lambda L:round(sum(L)/len(L),1) if L else "n/a"
-        return [cat,len(ps),sf,rnd(sug),min(sug) if sug else "n/a",max(sug) if sug else "n/a",
+        return [cat,nsku,sf,rnd(sug),min(sug) if sug else "n/a",max(sug) if sug else "n/a",
                 rnd(caf),rnd(cal),rnd(hs),rnd(fs)]
     r=2
     for cat in CATS:
@@ -616,21 +711,25 @@ def build_benchmarks():
 # ---------- NUTRITION SCOREBOARD ----------
 def build_scoreboard():
     ws=simple("Nutrition Scoreboard",
-        ["Rank","Brand","SKU","Category","Sugar (g)","Caffeine (mg)","Calories","Sugar/100mL","Health Score","Functional Score","Sugar-free?"],
+        ["Rank","Brand","Product line","Category","Sugar (g)","Caffeine (mg)","Calories","Sugar/100mL","Health Score","Functional Score","Sugar-free?"],
         [6,16,32,24,9,11,9,11,12,14,10],color="00B050")
-    ranked=sorted(LIVE,key=lambda p:(-(py_health(p) if py_health(p) is not None else -1)))
+    ranked=sorted(LINES,key=lambda p:(-(py_health(p) if py_health(p) is not None else -1)))
+    ctr=Alignment(horizontal="center")
     r=2
     for i,p in enumerate(ranked,1):
-        put(ws,r,1,i,align=Alignment(horizontal="center"),bold=True)
+        s=num(p["sugar"]); u=num(p["unitml"])
+        s100=round(s/u*100,2) if (s is not None and u) else "n/a"
+        sf="Yes" if (s is not None and s<=1) else ("No" if s is not None else "n/a")
+        put(ws,r,1,i,align=ctr,bold=True)
         put(ws,r,2,p["brand"]); put(ws,r,3,p["sku"]); put(ws,r,4,p["category"])
-        put(ws,r,5,p["sugar"],align=Alignment(horizontal="center"))
-        put(ws,r,6,p["caffeine"] if p["caffeine"] is not None else "Not listed",align=Alignment(horizontal="center"))
-        put(ws,r,7,p["calories"],align=Alignment(horizontal="center"))
-        put(ws,r,8,f"={ref(p,'sugar100')}",'0.00',align=Alignment(horizontal="center"))
-        put(ws,r,9,f"={ref(p,'health')}",align=Alignment(horizontal="center"))
-        put(ws,r,10,f"={ref(p,'func')}",align=Alignment(horizontal="center"))
-        put(ws,r,11,f"={ref(p,'sugarfree')}",align=Alignment(horizontal="center"))
-        ws.row_dimensions[r].height=24; r+=1
+        put(ws,r,5,p["sugar"],align=ctr)
+        put(ws,r,6,p["caffeine"] if p["caffeine"] is not None else "Not listed",align=ctr)
+        put(ws,r,7,p["calories"],align=ctr)
+        put(ws,r,8,s100,'0.00',align=ctr)
+        put(ws,r,9,py_health(p),align=ctr)
+        put(ws,r,10,py_func(p),align=ctr)
+        put(ws,r,11,sf,align=ctr)
+        ws.row_dimensions[r].height=22; r+=1
     last=r-1
     ws.conditional_formatting.add(f"I2:I{last}",DataBarRule(start_type="num",start_value=0,end_type="num",end_value=100,color="63BE7B"))
     ws.conditional_formatting.add(f"J2:J{last}",DataBarRule(start_type="num",start_value=0,end_type="num",end_value=75,color="8FAADC"))
@@ -720,10 +819,9 @@ def build_dashboard():
     ws.cell(row=2,column=2,value="Executive Dashboard").font=Font(bold=True,size=20,color=NAVY)
     ws.cell(row=3,column=2,value=f"Amazon.ca RTD beverage landscape  |  {TODAY}  |  ESTIMATE/secondary data - see README").font=Font(italic=True,color="C00000")
     # KPIs
-    nprod=len(LIVE); nbrand=len(set(p["brand"] for p in LIVE)); ncat=len(CATS)
-    nsf=sum(1 for p in LIVE if isinstance(p["sugar"],(int,float)) and p["sugar"]<=1)
-    avgsugar=round(sum(p["sugar"] for p in LIVE if isinstance(p["sugar"],(int,float)))/sum(1 for p in LIVE if isinstance(p["sugar"],(int,float))),1)
-    kpis=[("Products",nprod),("Brands",nbrand),("Categories",ncat),("Sugar-free SKUs",nsf),("Avg sugar (g)",avgsugar)]
+    nbrand=len(set(p["brand"] for p in LINES)); ncat=len(CATS)
+    avgsugar=round(sum(p["sugar"] for p in LINES if isinstance(p["sugar"],(int,float)))/sum(1 for p in LINES if isinstance(p["sugar"],(int,float))),1)
+    kpis=[("SKUs",len(SKUS)),("Product lines",len(LINES)),("Brands",nbrand),("Categories",ncat),("Avg sugar (g)",avgsugar)]
     c=2
     for label,val in kpis:
         b=ws.cell(row=5,column=c,value=val); b.font=Font(bold=True,size=22,color=BLUE)
@@ -750,11 +848,12 @@ def build_dashboard():
     ws.cell(row=base,column=4,value="Avg sugar (g)"); ws.cell(row=base,column=5,value="Avg caffeine (mg)")
     rr=base+1
     for cat in CATS:
-        ps=[p for p in LIVE if p["category"]==cat]
+        ps=[p for p in LINES if p["category"]==cat]
+        nsku=sum(1 for s in SKUS if s["category"]==cat)
         sug=[p["sugar"] for p in ps if isinstance(p["sugar"],(int,float))]
         caf=[p["caffeine"] for p in ps if isinstance(p["caffeine"],(int,float))]
         ws.cell(row=rr,column=2,value=cat.split(")")[1].strip()[:22])
-        ws.cell(row=rr,column=3,value=len(ps))
+        ws.cell(row=rr,column=3,value=nsku)
         ws.cell(row=rr,column=4,value=round(sum(sug)/len(sug),1) if sug else 0)
         ws.cell(row=rr,column=5,value=round(sum(caf)/len(caf),1) if caf else 0)
         rr+=1
@@ -770,7 +869,7 @@ def build_dashboard():
     sw_last=sr-1
 
     # Charts
-    ch1=BarChart(); ch1.title="Products per category"; ch1.type="col"; ch1.height=7; ch1.width=13
+    ch1=BarChart(); ch1.title="SKUs per category"; ch1.type="col"; ch1.height=7; ch1.width=13
     data=Reference(ws,min_col=3,min_row=base,max_row=cat_last)
     cats=Reference(ws,min_col=2,min_row=base+1,max_row=cat_last)
     ch1.add_data(data,titles_from_data=True); ch1.set_categories(cats); ch1.legend=None
@@ -826,8 +925,8 @@ except Exception:
 wb.save(FNAME)
 
 # audit
-ncat={c:sum(1 for p in P if p["category"]==c) for c in CATS}
 print("Saved:",FNAME)
-for c in CATS: print(f"  {c}: {ncat[c]}")
-print("TOTAL:",sum(ncat.values()),"| brands:",len(set(p['brand'] for p in P)))
+for c in CATS:
+    print(f"  {c}: {sum(1 for s in SKUS if s['category']==c)} SKUs  ({sum(1 for p in LINES if p['category']==c)} lines)")
+print("TOTAL SKUs:",len(SKUS),"| lines:",len(LINES),"| brands:",len(set(p['brand'] for p in LINES)))
 print("Sheets:",len(wb.sheetnames)); print(wb.sheetnames)
