@@ -1,116 +1,112 @@
-# Beverage Margin Studio
+# Beverage P&L & Margin Toolkit
 
-Model beverage **margin, markup and profit** across any combination of MSRP
-(selling price), CP (landed cost) and volume — and understand exactly what is
-driving the numbers.
+Two layers of beverage decision tooling, each shipped as **both** an
+interactive web app and a fully formula-driven Excel workbook:
 
-Two interchangeable tools, same math:
+1. **Organika CPG P&L Model** — an enterprise gross-sales-to-EBITDA model with a
+   bill-of-materials COGS build-up, channel-level economics, a profit-lever
+   tornado, a price×COGS sensitivity heatmap and Base/Bull/Bear scenarios.
+2. **Beverage Margin Studio** — a fast margin / markup / profit calculator for
+   per-unit pricing decisions.
 
-| Tool | File | Best for |
-|------|------|----------|
-| **Interactive web studio** | [`index.html`](index.html) | Live, visual modeling — sliders, gauges, heatmaps, charts |
-| **Excel workbook** | [`beverage-margin-model.xlsx`](beverage-margin-model.xlsx) | Offline spreadsheet work, sharing, your own formulas |
+| Tool | Web app | Excel | Use it for |
+|------|---------|-------|------------|
+| **Organika CPG P&L** | [`organika-pnl.html`](organika-pnl.html) | [`organika-cpg-pnl.xlsx`](organika-cpg-pnl.xlsx) | Full P&L, channel mix, COGS levers, scenarios |
+| **Margin Studio** | [`index.html`](index.html) | [`beverage-margin-model.xlsx`](beverage-margin-model.xlsx) | Quick margin/markup, break-even, target pricing |
 
-> **M&P = Margin & Markup.** Margin asks *"what share of the sale do I keep?"*
-> Markup asks *"how much did I add on top of cost?"* They are linked but never
-> equal — mixing them up is the most common pricing mistake, so the Studio
-> always shows both.
-
----
-
-## Quick start
-
-**Web studio** — just open the file, nothing to install:
-
-```
-open index.html        # macOS
-xdg-open index.html    # Linux
-# or double-click it / drag it into any browser
-```
-
-Everything runs locally in your browser. Inputs are saved in *that browser only*
-(nothing is uploaded). Use **Save** to persist, **PDF** to print a board-ready
-snapshot, and the currency selector to switch symbols.
-
-**Excel workbook** — open `beverage-margin-model.xlsx` in Excel, Google Sheets
-or LibreOffice. Yellow cells are inputs; everything else is a live formula.
-
-To regenerate the workbook from source:
-
-```bash
-pip install openpyxl
-python3 build_workbook.py
-```
+Everything runs locally — open the HTML files in any browser, no install, no
+network, inputs saved only in your browser. Regenerate the workbooks with the
+Python builders (`pip install openpyxl`).
 
 ---
 
-## What's inside
+## 1 · Organika MÜV Sparkling Electrolytes — CPG P&L Model
 
-### Web studio (`index.html`) — 6 tabs
+A real consumer-packaged-goods P&L is a waterfall: start from gross sales and
+subtract progressively — trade, COGS, channel costs, corporate overhead — to
+reach EBITDA. This model makes every subtraction a live, editable lever, grounded
+in realistic premium functional-beverage economics (355 ml can, zero-sugar,
+stevia; magnesium bisglycinate + Fibersol prebiotic fiber).
 
-1. **Calculator** — one product, live. MSRP / CP / volume in, and gross margin,
-   markup, profit/unit, revenue, COGS, gross & net profit, break-even out.
-   Includes a margin-health gauge, a revenue→profit waterfall, and a
-   net-profit-vs-volume chart with the break-even point marked. Advanced inputs
-   add fixed costs, units/case and a target-profit goal.
-2. **Cost Builder** — assemble a *defensible* landed cost from base price +
-   freight + duty/excise + packaging + deposit, with a spoilage allowance
-   (`cost ÷ (1 − spoilage%)`). Send the result straight to the Calculator.
-3. **Portfolio** — every SKU side by side in an editable table with per-line
-   margin/markup/profit and a **profit-weighted blended margin**. Add/remove
-   rows, export to CSV, and compare gross profit by product on a bar chart.
-4. **Sensitivity** — a colour-coded heatmap of how margin, markup or profit
-   react when MSRP and cost (or volume) move together, ±any range.
-5. **Solver** — work backwards: price-to-a-target-margin/markup, max-cost-at-a-price,
-   a margin↔markup converter with reference table, and break-even / profit-goal.
-6. **Guide** — every formula and the beverage context, in plain language.
+**Web app (`organika-pnl.html`) — 7 tabs**
 
-### Excel workbook — 6 sheets
+1. **P&L Statement** — blended gross-sales-to-EBIT statement with Total / per-case
+   / %-of-net columns, benchmark-graded KPIs, and a 16-step P&L bridge waterfall.
+2. **COGS / BOM** — editable bill of materials (ingredients, primary/secondary/
+   tertiary packaging, co-pack conversion, freight, yield loss) rolling up to
+   landed cost per can, with a cost-composition chart and target-price preview.
+3. **Channels** — DTC / Amazon / Retail-Distributor / Club economics side by side,
+   each with its own price realization and cost stack, rolling up to a blended
+   company P&L. Add or remove channels.
+4. **Levers** — a **tornado** ranking every driver by its EBITDA impact, plus a
+   two-way **price × COGS** heatmap. This is where you see what actually moves the
+   bottom line.
+5. **Scenarios** — Base / Bull / Bear transformations compared on every key metric,
+   with an EBITDA bar chart.
+6. **Unit Economics** — per-case statement, break-even volume with a path-to-profit
+   bar, and retail velocity ($/store/week).
+7. **Guide** — the waterfall, why contribution margin is the number to watch, and a
+   CPG glossary.
 
-`Calculator` · `Cost Builder` · `Portfolio` · `Sensitivity` (switchable
-margin/markup heatmap) · `Reference` (margin↔markup converter + table) ·
-`Guide`. Conditional formatting highlights margin health and powers the
-heatmap; a chart summarises portfolio gross profit.
+Multi-currency display, save/CSV/PDF, live recompute on every keystroke.
+
+**Excel workbook (`organika-cpg-pnl.xlsx`) — 6 sheets**
+
+`P&L` · `COGS_BOM` · `Channels` (the engine; per-channel formula columns that
+total into the P&L) · `Sensitivity` (live price×COGS EBITDA% heatmap with a
+colour scale) · `Scenarios` (Base/Bull/Bear via editable multipliers) · `Guide`.
+Yellow cells are inputs; everything else is a formula.
+
+### The CPG waterfall
+
+```
+Gross Sales − Trade & promo − Returns                       = NET SALES
+NET SALES − COGS                                            = GROSS PROFIT  (GM %)
+GROSS PROFIT − fulfillment − platform fees − channel ad − slotting
+                                                            = CONTRIBUTION   (CM %)
+CONTRIBUTION − brand marketing − sales − G&A − R&D          = EBITDA         (EBITDA %)
+EBITDA − D&A                                                = EBIT
+```
+
+**Why contribution margin, not gross margin.** Gross margin flatters DTC and
+Amazon because their shelf prices are high — but those channels bleed it back
+through referral fees, fulfillment and customer acquisition. Contribution margin
+is what each channel actually leaves to cover overhead. Manage the mix on
+contribution.
+
+### Default scenario at a glance
+
+| | Base | Bull | Bear |
+|---|---:|---:|---:|
+| Annual cases | 250,000 | 350,000 | 187,500 |
+| Net sales | $4.96M | $7.44M | $3.54M |
+| Gross margin | 64.9% | 70.5% | 59.3% |
+| Contribution | 27.8% | 36.5% | 18.9% |
+| EBITDA | −$648K (−13.1%) | **+$490K (+6.6%)** | −$1.25M (−35.2%) |
+| Break-even | 415,070 cases | 269,102 | 795,422 |
+
+The Base case is a classic emerging-CPG shape: strong gross margin, but channel
+selling costs plus fixed overhead exceed contribution — so the levers (COGS,
+price, mix, and volume against fixed cost) are where profitability is won.
 
 ---
 
-## The math
+## 2 · Beverage Margin Studio
+
+A fast per-unit pricing tool. **M&P = Margin & Markup** shown side by side
+(margin = share of the sale kept; markup = uplift on cost).
+
+**Web app (`index.html`)** — Calculator (gauge + revenue→profit waterfall),
+Cost Builder (landed cost), Portfolio (multi-SKU blended margin), Sensitivity
+heatmap, Solver (price-to-target, max-cost, converter, break-even), Guide.
+
+**Excel (`beverage-margin-model.xlsx`)** — the same model with live formulas,
+conditional-format heatmaps and a portfolio chart.
 
 ```
-profit / unit     = MSRP − CP
-gross margin %     = (MSRP − CP) ÷ MSRP        ← share of the sale you keep
-markup %           = (MSRP − CP) ÷ CP          ← uplift on top of cost
-revenue            = MSRP × volume
-COGS               = CP × volume
-gross profit       = revenue − COGS
-net profit         = gross profit − fixed costs
-break-even units   = fixed costs ÷ (MSRP − CP)
+gross margin % = (price − cost) ÷ price      markup % = (price − cost) ÷ cost
+markup = margin ÷ (1 − margin)               margin = markup ÷ (1 + markup)
 ```
-
-Margin and markup convert cleanly:
-
-```
-markup = margin ÷ (1 − margin)        margin = markup ÷ (1 + markup)
-```
-
-| Gross margin | Equivalent markup |
-|---:|---:|
-| 20% | 25% |
-| 33% | 50% |
-| 50% | 100% (keystone) |
-| 60% | 150% |
-| 75% | 300% |
-
-### Beverage-specific notes
-
-- **Landed cost ≠ supplier price.** Freight, duty/excise, packaging, deposits
-  and breakage all sit between the invoice and the shelf — build the real CP in
-  the Cost Builder.
-- **Three-tier (esp. alcohol):** supplier → distributor → retailer each take a
-  margin. Model each tier as its own Portfolio row, using the prior tier's price
-  as the next tier's cost.
-- **Case packs:** you buy in cases but sell in units — set *units/case* for
-  case-level economics.
 
 ---
 
@@ -118,9 +114,16 @@ markup = margin ÷ (1 − margin)        margin = markup ÷ (1 + markup)
 
 The logic is tested, not assumed:
 
-- The web app's math and interactions are checked headlessly with **jsdom**.
-- All workbook formulas are evaluated with the **`formulas`** Excel engine and
-  compared against independently-computed expected values (35/35 cells).
+- **Web apps** — math, rendering and interactions are checked headlessly with
+  **jsdom** (the P&L model alone has 30 assertions covering COGS, the channel
+  roll-up, EBITDA, break-even and scenario apply/restore), and every tab is
+  rendered and screenshot-reviewed with headless Chromium.
+- **Workbooks** — every formula is evaluated with the **`formulas`** Excel engine
+  and compared against independently-computed expected values; the P&L workbook
+  and web app reconcile to the dollar (net sales $4,961,478; COGS $0.58125/can;
+  EBITDA −$648,238; break-even 415,070 cases).
 
-Figures are estimates — always validate against your own invoices, excise
-schedules and tax rules.
+> Defaults model Organika MÜV Sparkling Electrolytes as a representative premium
+> functional beverage. They are editable estimates — replace with your invoices,
+> co-pack quotes, retailer terms and excise/HST rules. Figures are not Organika
+> financials.
