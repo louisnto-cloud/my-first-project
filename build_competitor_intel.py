@@ -240,12 +240,12 @@ def short_size(ln):
     return f'{m.group(1)}{m.group(2)}'
 def pack_configs(ln):
     v=ln.get("unitml") or 355
-    if v<=70:   return [6,12,24]          # shots
-    if v<=250:  return [12,24]
-    if v<=355:  return [8,12,24]
-    if v<=550:  return [12,24]
-    if v<=700:  return [1,12,24]
-    return [12,24]                          # ~1 L
+    if v<=70:   return [6,12,18,24]            # shots
+    if v<=250:  return [4,8,12,18,24]
+    if v<=355:  return [1,8,12,15,18,24]
+    if v<=550:  return [1,8,12,18,24]
+    if v<=700:  return [1,6,12,24]
+    return [8,12,24]                            # ~1 L
 def expand(lines):
     out=[]
     for ln in lines:
