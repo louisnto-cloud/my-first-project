@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revenue Forecast — Cases-Sold Model</title>
+<style>
+  :root{
+    --navy:#1f3864; --blue:#2e5496; --light:#d9e1f2; --accent:#2e8b57;
+    --ink:#1c2530; --mut:#6b7785; --line:#e3e8ef; --yell:#fff7db; --bg:#f5f7fb;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       background:var(--bg);color:var(--ink);line-height:1.45}
+  header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:26px 30px}
+  header h1{margin:0;font-size:23px;letter-spacing:.2px}
+  header p{margin:6px 0 0;opacity:.85;font-size:13px}
+  main{max-width:1080px;margin:0 auto;padding:22px 18px 70px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;margin:16px 0;
+        box-shadow:0 1px 3px rgba(20,30,50,.05)}
+  h2{font-size:15px;text-transform:uppercase;letter-spacing:.6px;color:var(--navy);margin:0 0 14px;
+     border-bottom:2px solid var(--light);padding-bottom:8px}
+  label{font-size:12px;color:var(--mut);display:block;margin-bottom:4px;font-weight:600}
+  input[type=number],input[type=text]{font:inherit;padding:8px 10px;border:1px solid #cdd5e0;border-radius:8px;
+        width:100%;background:var(--yell)}
+  input:focus{outline:2px solid var(--blue);outline-offset:-1px}
+  .grid{display:grid;gap:14px}
+  .assume{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+  table{border-collapse:collapse;width:100%;font-size:13.5px}
+  th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line)}
+  th{background:var(--navy);color:#fff;font-weight:600;text-align:right;position:sticky}
+  th:first-child,td:first-child{text-align:left}
+  tbody tr:hover{background:#f8fafd}
+  td input{background:var(--yell);text-align:right;padding:6px 8px}
+  td input.name{text-align:left}
+  tfoot td{font-weight:700;background:#eef2f9;border-top:2px solid var(--navy)}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+  .kpi{background:linear-gradient(135deg,#fff,#f3f6fc);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .kpi .v{font-size:24px;font-weight:800;color:var(--navy);letter-spacing:-.5px}
+  .kpi .l{font-size:11.5px;color:var(--mut);margin-top:3px;text-transform:uppercase;letter-spacing:.4px}
+  .kpi.hero{background:linear-gradient(135deg,var(--navy),var(--blue));border:none}
+  .kpi.hero .v,.kpi.hero .l{color:#fff}
+  .bar{height:18px;border-radius:5px;background:linear-gradient(90deg,var(--blue),var(--accent));min-width:2px}
+  .barwrap{display:flex;align-items:center;gap:8px}
+  .barwrap span{font-size:12px;color:var(--mut);white-space:nowrap}
+  button{font:inherit;border:1px solid var(--blue);background:#fff;color:var(--blue);border-radius:8px;
+         padding:7px 14px;cursor:pointer;font-weight:600}
+  button:hover{background:var(--blue);color:#fff}
+  button.del{border-color:#d98b8b;color:#b54a4a;padding:4px 9px;font-size:12px}
+  button.del:hover{background:#b54a4a;color:#fff}
+  .row-actions{margin-top:12px;display:flex;gap:10px}
+  .note{font-size:12px;color:var(--mut);font-style:italic;margin-top:10px}
+  .pill{display:inline-block;background:var(--light);color:var(--navy);border-radius:20px;padding:2px 10px;
+        font-size:11px;font-weight:700;margin-left:6px}
+  .scroll{overflow-x:auto}
+  .green{background:#eaf4ee}
+  @media(max-width:560px){.kpi .v{font-size:20px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Revenue Forecast &mdash; Cases-Sold Model</h1>
+  <p>How many cases must you sell to hit a revenue target &mdash; and how that changes by price &amp; channel. Yellow fields are editable; everything recalculates live.</p>
+</header>
+
+<main>
+  <!-- 1. Assumptions -->
+  <section class="card">
+    <h2>1 &middot; Targets &amp; assumptions</h2>
+    <div class="grid assume">
+      <div>
+        <label>Annual gross revenue target ($)</label>
+        <input id="target" type="number" value="2500000" min="0" step="50000">
+      </div>
+      <div>
+        <label>Units per case (e.g. bottles)</label>
+        <input id="upc" type="number" value="12" min="1" step="1">
+      </div>
+      <div>
+        <label>Selling days per year</label>
+        <input id="days" type="number" value="260" min="1" step="1">
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Channels -->
+  <section class="card">
+    <h2>2 &middot; Channel mix &amp; pricing <span class="pill">edit your channels</span></h2>
+    <div class="scroll">
+      <table id="chTable">
+        <thead><tr>
+          <th>Channel</th><th>Price / case</th><th>Volume mix (weight)</th>
+          <th>Mix %</th><th>Cases</th><th>Revenue</th><th>% of rev</th><th></th>
+        </tr></thead>
+        <tbody id="chBody"></tbody>
+        <tfoot><tr>
+          <td>Total</td><td id="fPrice"></td><td id="fMix"></td><td id="fMixPct"></td>
+          <td id="fCases"></td><td id="fRev"></td><td id="fRevPct"></td><td></td>
+        </tr></tfoot>
+      </table>
+    </div>
+    <div class="row-actions"><button onclick="addChannel()">+ Add channel</button></div>
+    <p class="note">Mix weights are relative (they don't need to add to 100). Revenue always sums to your target &mdash; changing the mix shows how the <b>case count</b> moves.</p>
+  </section>
+
+  <!-- 3. Headline -->
+  <section class="card">
+    <h2>3 &middot; What it takes to hit the target</h2>
+    <div class="kpis" id="kpis"></div>
+  </section>
+
+  <!-- 4. Channel charts -->
+  <section class="card">
+    <h2>4 &middot; Where the cases &amp; revenue come from</h2>
+    <div class="grid" style="grid-template-columns:1fr;gap:18px">
+      <div><div class="note" style="margin:0 0 8px">Cases by channel</div><div id="casesBars"></div></div>
+      <div><div class="note" style="margin:0 0 8px">Revenue by channel</div><div id="revBars"></div></div>
+    </div>
+  </section>
+
+  <!-- 5. Pure-play comparison -->
+  <section class="card">
+    <h2>5 &middot; &ldquo;If I sold at this price&rdquo; &mdash; one channel at a time</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Channel</th><th>Price / case</th><th>Cases to hit target</th><th>Units needed</th><th>Rev per 1,000 cases</th></tr></thead>
+        <tbody id="pureBody"></tbody>
+      </table>
+    </div>
+    <p class="note">This assumes 100% of volume goes through that single channel &mdash; the realistic answer sits between these rows, set by your mix above.</p>
+  </section>
+
+  <!-- 6. Revenue-at-volume grid -->
+  <section class="card">
+    <h2>6 &middot; Gross revenue at a given number of cases</h2>
+    <div class="scroll"><table id="gridTable"></table></div>
+    <p class="note">Rows = your channels &amp; their price. Columns = cases sold. Each cell = cases &times; price.</p>
+  </section>
+
+  <!-- 7. What-if calculator -->
+  <section class="card">
+    <h2>7 &middot; Two-way calculator</h2>
+    <div class="grid assume">
+      <div>
+        <label>Price / case to test ($)</label>
+        <input id="wfPrice" type="number" value="190" min="0" step="5">
+      </div>
+      <div>
+        <label>Cases sold &rarr; revenue</label>
+        <input id="wfCases" type="number" value="13165" min="0" step="100">
+      </div>
+      <div>
+        <label>Revenue target &rarr; cases</label>
+        <input id="wfRev" type="number" value="2500000" min="0" step="50000">
+      </div>
+    </div>
+    <div class="kpis" id="wfOut" style="margin-top:14px"></div>
+  </section>
+
+  <!-- 8. Sensitivity -->
+  <section class="card">
+    <h2>8 &middot; Price sensitivity</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Price / case</th><th>Cases to hit target</th><th>Units needed</th></tr></thead>
+        <tbody id="sensBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <p class="note">Built as a planning aid &mdash; gross revenue only (before discounts, returns, taxes, COGS). Swap in your real channels, prices and mix to make it yours.</p>
+</main>
+
+<script>
+const $=id=>document.getElementById(id);
+const money=n=>'$'+Math.round(n).toLocaleString();
+const money2=n=>'$'+n.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+const num=n=>Math.round(n).toLocaleString();
+const pct=n=>(n*100).toFixed(1)+'%';
+const VOL=[5000,10000,15000,20000,25000,30000];
+
+// editable channel data (placeholders — overwrite freely)
+let channels=[
+  {name:"Direct-to-Consumer (DTC)",price:300,mix:20},
+  {name:"On-Premise / Food Service",price:216,mix:15},
+  {name:"Off-Premise Retail",price:180,mix:30},
+  {name:"Wholesale / Distributor",price:120,mix:30},
+  {name:"Online Marketplace",price:150,mix:5},
+];
+
+function syncFromDOM(){
+  document.querySelectorAll('#chBody tr').forEach((tr,i)=>{
+    channels[i]={
+      name: tr.querySelector('.name').value,
+      price: parseFloat(tr.querySelector('.price').value)||0,
+      mix: parseFloat(tr.querySelector('.mix').value)||0,
+    };
+  });
+}
+function renderInputs(){
+  const tb=$('chBody'); tb.innerHTML='';
+  channels.forEach((c,i)=>{
+    const tr=document.createElement('tr');
+    tr.innerHTML=`
+      <td><input class="name" type="text" value="${c.name.replace(/"/g,'&quot;')}"></td>
+      <td><input class="price" type="number" min="0" step="5" value="${c.price}"></td>
+      <td><input class="mix" type="number" min="0" step="1" value="${c.mix}"></td>
+      <td class="dMixPct"></td><td class="dCases"></td><td class="dRev"></td><td class="dRevPct"></td>
+      <td><button class="del" title="remove" onclick="delChannel(${i})">✕</button></td>`;
+    tb.appendChild(tr);
+  });
+  tb.querySelectorAll('input').forEach(inp=>inp.addEventListener('input',recompute));
+  recompute();
+}
+function addChannel(){ syncFromDOM(); channels.push({name:"New channel",price:150,mix:5}); renderInputs(); }
+function delChannel(i){ syncFromDOM(); if(channels.length>1) channels.splice(i,1); renderInputs(); }
+
+function recompute(){
+  syncFromDOM();
+  const target=parseFloat($('target').value)||0;
+  const upc=parseFloat($('upc').value)||1;
+  const days=parseFloat($('days').value)||260;
+  const sumMix=channels.reduce((s,c)=>s+c.mix,0)||1;
+  const blended=channels.reduce((s,c)=>s+c.price*c.mix,0)/sumMix||0;
+  const totalCases=blended?target/blended:0;
+
+  // per-channel rows
+  document.querySelectorAll('#chBody tr').forEach((tr,i)=>{
+    const c=channels[i], mixN=c.mix/sumMix, cases=totalCases*mixN, rev=cases*c.price;
+    tr.querySelector('.dMixPct').textContent=pct(mixN);
+    tr.querySelector('.dCases').textContent=num(cases);
+    tr.querySelector('.dRev').textContent=money(rev);
+    tr.querySelector('.dRevPct').textContent=pct(target?rev/target:0);
+  });
+  $('fPrice').textContent=money2(blended);
+  $('fMix').textContent=num(sumMix);
+  $('fMixPct').textContent='100.0%';
+  $('fCases').textContent=num(totalCases);
+  $('fRev').textContent=money(target);
+  $('fRevPct').textContent='100.0%';
+
+  // KPIs
+  $('kpis').innerHTML=`
+    ${kpi(num(totalCases),'Total cases needed',true)}
+    ${kpi(money2(blended),'Blended price / case')}
+    ${kpi(money2(blended/upc),'Implied price / unit')}
+    ${kpi(num(totalCases/12),'Cases / month')}
+    ${kpi(num(totalCases/52),'Cases / week')}
+    ${kpi(num(totalCases/days),'Cases / selling-day')}`;
+
+  // bars
+  const maxCases=Math.max(...channels.map(c=>totalCases*(c.mix/sumMix)),1);
+  const maxRev=Math.max(...channels.map(c=>totalCases*(c.mix/sumMix)*c.price),1);
+  $('casesBars').innerHTML=channels.map(c=>{
+    const v=totalCases*(c.mix/sumMix); return bar(c.name,v/maxCases,num(v)+' cases');}).join('');
+  $('revBars').innerHTML=channels.map(c=>{
+    const v=totalCases*(c.mix/sumMix)*c.price; return bar(c.name,v/maxRev,money(v));}).join('');
+
+  // pure-play
+  $('pureBody').innerHTML=channels.map(c=>`
+    <tr><td>${esc(c.name)}</td><td>${money(c.price)}</td>
+    <td><b>${c.price?num(target/c.price):'—'}</b></td>
+    <td>${c.price?num(target/c.price*upc):'—'}</td>
+    <td>${money(1000*c.price)}</td></tr>`).join('');
+
+  // revenue-at-volume grid
+  let g=`<thead><tr><th>Channel</th><th>Price</th>${VOL.map(v=>`<th>${num(v)} cs</th>`).join('')}</tr></thead><tbody>`;
+  g+=channels.map(c=>`<tr><td>${esc(c.name)}</td><td>${money(c.price)}</td>${
+      VOL.map(v=>`<td class="green">${money(v*c.price)}</td>`).join('')}</tr>`).join('');
+  $('gridTable').innerHTML=g+'</tbody>';
+
+  // sensitivity ladder from min→max channel price (rounded to 20s)
+  const prices=channels.map(c=>c.price).filter(p=>p>0);
+  let lo=Math.floor(Math.min(...prices,target&&100)/20)*20, hi=Math.ceil(Math.max(...prices,1)/20)*20;
+  if(!isFinite(lo)||lo<20)lo=20; if(hi<=lo)hi=lo+200;
+  const step=Math.max(20,Math.round((hi-lo)/10/20)*20);
+  let rows='';
+  for(let p=lo;p<=hi;p+=step) rows+=`<tr><td>${money(p)}</td><td><b>${num(target/p)}</b></td><td>${num(target/p*upc)}</td></tr>`;
+  $('sensBody').innerHTML=rows;
+
+  whatif();
+}
+function whatif(){
+  const p=parseFloat($('wfPrice').value)||0;
+  const cs=parseFloat($('wfCases').value)||0;
+  const rev=parseFloat($('wfRev').value)||0;
+  $('wfOut').innerHTML=`
+    ${kpi(money(cs*p),`Revenue from ${num(cs)} cases @ ${money(p)}`,true)}
+    ${kpi(p?num(rev/p):'—',`Cases for ${money(rev)} @ ${money(p)}`)}
+    ${kpi(p?num(rev/p/12):'—','…per month')}`;
+}
+function kpi(v,l,hero){return `<div class="kpi${hero?' hero':''}"><div class="v">${v}</div><div class="l">${l}</div></div>`;}
+function bar(name,frac,label){
+  return `<div class="barwrap"><div style="width:150px;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(name)}</div>
+    <div class="bar" style="width:${Math.max(2,frac*100)}%"></div><span>${label}</span></div>`;}
+function esc(s){return (s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));}
+
+['target','upc','days','wfPrice','wfCases','wfRev'].forEach(id=>$(id).addEventListener('input',id.startsWith('wf')?whatif:recompute));
+renderInputs();
+</script>
+</body>
+</html>
