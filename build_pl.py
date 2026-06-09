@@ -63,7 +63,14 @@ FMT = {"int": INT, "cur0": CUR0, "cur2": CUR2, "pct": PCT}
 SPACERS = {3: 7.5, 5: 6.0, 7: 7.5, 18: 6.0, 23: 6.0, 25: 6.0}
 PCT_ROWS = (17, 33)
 # input rows (blue) on SKU tabs, for channel columns B..H
-INPUT_ROWS = (9, 19, 20, 21, 26, 27, 29, 30)
+# (COGS rows 29/30 are NOT inputs — they pull from the Cost Build-up tab)
+INPUT_ROWS = (9, 19, 20, 21, 26, 27)
+
+# Cost Build-up tab — output cells the SKU P&Ls reference for COGS per case
+COST_SHEET = "Cost Build-up"
+R_DIRECT, R_INDIRECT = 44, 45
+COST_DIRECT_REF   = f"='{COST_SHEET}'!$D${R_DIRECT}"
+COST_INDIRECT_REF = f"='{COST_SHEET}'!$D${R_INDIRECT}"
 
 
 def build_sheet(ws, title, section, is_total, sku_sheets=None):
@@ -178,6 +185,8 @@ def formula(row, col, is_total, sku_sheets):
         if row == 35: return f"={TOT_COL}32-{TOT_COL}34"
     else:
         # channel columns on a SKU sheet
+        if row == 29: return COST_DIRECT_REF     # COGS direct / case  ← Cost Build-up
+        if row == 30: return COST_INDIRECT_REF   # COGS indirect / case ← Cost Build-up
         if row == 10: return f"={col}26*{col}9"
         if row == 11: return f"={col}27*{col}9"
         if row == 12: return f"={col}10-{col}11"
@@ -316,6 +325,181 @@ def build_dashboard(ws, sku_sheets):
     ws.freeze_panes = "A3"
 
 
+def build_cost_buildup(ws):
+    """Bottom-up COGS from the Bevmax co-packing quote. Outputs feed the SKU P&Ls."""
+    for col, w in {"A": 34, "B": 12, "C": 12, "D": 13, "E": 11}.items():
+        ws.column_dimensions[col].width = w
+    BL, BK = font(10, False, BLUE), font(10, False, BLACK)
+
+    def band(rng, text):
+        first = rng.split(":")[0]; ws.merge_cells(rng)
+        c = ws[first]; c.value = text; c.font = font(10, True, WHITE); c.fill = fill(NAVY)
+        c.alignment = Alignment("left", "center")
+
+    def put(cell, val, *, inp=False, fmt=None, bold=False, align="right"):
+        c = ws[cell]; c.value = val
+        c.font = Font(name="Arial", size=10, bold=bold, color=(BLUE if inp else BLACK))
+        if fmt: c.number_format = fmt
+        c.alignment = Alignment(align, "center")
+
+    def label(row, text, bold=False, indent=False):
+        c = ws[f"A{row}"]; c.value = ("    " + text) if indent else text
+        c.font = font(10, bold, BLACK); c.alignment = Alignment("left", "center")
+
+    ws.merge_cells("A1:E1")
+    t = ws["A1"]; t.value = "ORGANIKA RTD — BOTTOM-UP COST (Bevmax quote)"
+    t.font = font(13, True, WHITE); t.fill = fill(NAVY); t.alignment = Alignment("left", "center")
+    ws.row_dimensions[1].height = 27.75
+    ws.merge_cells("A2:E2")
+    s = ws["A2"]; s.value = ("CDN $ | Quote OG2026-05-21 v15 (4-pk w/ sleeves) | Pack Summer 2026 | "
+                             "FOB Airdrie AB | excl. GST")
+    s.font = font(9, False, GREY); s.alignment = Alignment("left", "center")
+
+    # run parameters
+    band("A4:E4", "RUN PARAMETERS")
+    label(6, "Total run size");      put("D6", 40500, inp=True, fmt=INT);  ws["B6"]="cans"
+    label(7, "Number of SKUs");      put("D7", 3,     inp=True, fmt=INT);  ws["B7"]="SKUs"
+    label(8, "Cans per SKU");        put("D8", "=D6/D7", fmt=INT);          ws["B8"]="cans"
+    label(9, "Cans per case");       put("D9", 24,    inp=True, fmt=INT);  ws["B9"]="cans"
+    label(10, "Cans per 4-pack");    put("D10", 4,    inp=True, fmt=INT);  ws["B10"]="cans"
+    label(11, "Cases per run");      put("D11", "=D6/D9", fmt='#,##0.0');   ws["B11"]="cases"
+    for r in (6,7,8,9,10,11):
+        ws[f"B{r}"].font = font(9, False, GREY)
+
+    # cost lines (Total $ per quote; $/can = Total / run cans)
+    band("A13:E13", "BEVMAX QUOTE — COST LINES")
+    for col, h in zip("ABCDE", ["Cost line","UofM","Rate $","Total $","$/can"]):
+        c = ws[f"{col}14"]; c.value = h; c.font = font(9, True, WHITE); c.fill = fill(MIDBLU)
+        c.alignment = Alignment("left" if col=="A" else "center", "center")
+    lines = [  # label, uom, rate, total (from quote)
+        ("Tolling (blend/fill/pasteurize/carbonate)", "per can", 0.300, 12150.00),
+        ("4-packing", "per can", 0.050, 2025.00),
+        ("Skid packing", "per run", None, 439.45),
+        ("Ingredients", "per can", 0.160, 6480.00),
+        ("Brite can + 202 LOE end", "per can", 0.320, 12960.00),
+        ("Sleeves + application", "per label", 0.163, 6601.50),
+        ("Sleeve-perforation setup (one-time)", "per setup", None, 489.00),
+        ("4-pk printed carton", "per carton", 0.411, 6165.00),
+        ("24-pk white tray", "per tray", 0.860, 1451.25),
+        ("Grip sheets", "per tray", 1.250, 175.78),
+        ("Tray labels", "per tray", 0.050, 168.75),
+    ]
+    r = 15
+    for lab, uom, rate, total in lines:
+        label(r, lab, indent=True)
+        ws[f"B{r}"].value = uom; ws[f"B{r}"].font = font(9, False, GREY)
+        ws[f"B{r}"].alignment = Alignment("center", "center")
+        if rate is not None: put(f"C{r}", rate, inp=True, fmt=CUR2)
+        else: put(f"C{r}", "—", fmt='General', align="center")
+        put(f"D{r}", total, inp=True, fmt=CUR2)
+        put(f"E{r}", f"=D{r}/$D$6", fmt=CUR2)
+        r += 1
+    sub = r
+    label(sub, "Subtotal — Bevmax (FOB Airdrie)", bold=True)
+    put(f"D{sub}", f"=SUM(D15:D{sub-1})", fmt=CUR2, bold=True)
+    put(f"E{sub}", f"=D{sub}/$D$6", fmt=CUR2, bold=True)
+
+    # per-unit from Bevmax
+    label(sub+2, "Bevmax cost / can");      put(f"D{sub+2}", f"=D{sub}/$D$6", fmt=CUR2)
+    label(sub+3, "Bevmax cost / 4-pack");   put(f"D{sub+3}", f"=D{sub+2}*D10", fmt=CUR2)
+    label(sub+4, "Bevmax cost / case (24)");put(f"D{sub+4}", f"=D{sub+2}*D9", fmt=CUR2, bold=True)
+    bev_case = f"D{sub+4}"
+
+    # adders -> landed direct
+    band(f"A{sub+6}:E{sub+6}", "ADDERS TO LANDED COST (per case)")
+    label(sub+7, "Allergen handling (amortized)")
+    put(f"D{sub+7}", f"=167.5/D11", fmt=CUR2)
+    label(sub+8, "Inbound freight to DC");  put(f"D{sub+8}", 0, inp=True, fmt=CUR2)
+    label(sub+9, "Testing / misc");         put(f"D{sub+9}", 0, inp=True, fmt=CUR2)
+    rdir = R_DIRECT  # 44
+    # overhead
+    band(f"A{sub+11}:E{sub+11}", "OVERHEAD (% of landed direct)")
+    label(sub+12, "OH cost %");     put(f"C{sub+12}", 0.05, inp=True, fmt=PCT)
+    label(sub+13, "Other COGS %");  put(f"C{sub+13}", 0.05, inp=True, fmt=PCT)
+
+    # outputs to P&L  (D44 direct, D45 indirect)
+    band(f"A{R_DIRECT-1}:E{R_DIRECT-1}", "→ COGS TO P&L (per case)")
+    label(R_DIRECT, "COGS Direct / case", bold=True)
+    put(f"D{R_DIRECT}", f"={bev_case}+D{sub+7}+D{sub+8}+D{sub+9}", fmt=CUR2, bold=True)
+    label(R_INDIRECT, "COGS Indirect / case", bold=True)
+    put(f"D{R_INDIRECT}", f"=(C{sub+12}+C{sub+13})*D{R_DIRECT}", fmt=CUR2, bold=True)
+    label(R_INDIRECT+1, "COGS Total / case", bold=True)
+    put(f"D{R_INDIRECT+1}", f"=D{R_DIRECT}+D{R_INDIRECT}", fmt=CUR2, bold=True)
+    label(R_INDIRECT+2, "COGS / 4-pack");  put(f"D{R_INDIRECT+2}", f"=D{R_INDIRECT+1}/D9*D10", fmt=CUR2)
+    label(R_INDIRECT+3, "COGS / can");     put(f"D{R_INDIRECT+3}", f"=D{R_INDIRECT+1}/D9", fmt=CUR2)
+    for rr in (R_DIRECT, R_INDIRECT, R_INDIRECT+1):
+        for cc in "ABCDE": ws[f"{cc}{rr}"].fill = fill(LTBLU)
+
+    ws.sheet_view.showGridLines = False
+    ws.freeze_panes = "A3"
+
+
+def build_blended(ws, sku_sheets):
+    """Volume-weighted blended P&L across all channels — per SKU and total."""
+    ttl = "TTL ORGANIKA RTD"
+    ws.column_dimensions["A"].width = 30
+    for col in "BCDE": ws.column_dimensions[col].width = 16
+
+    ws.merge_cells("A1:E1")
+    t = ws["A1"]; t.value = "ORGANIKA RTD — BLENDED (all channels)"
+    t.font = font(13, True, WHITE); t.fill = fill(NAVY); t.alignment = Alignment("left", "center")
+    ws.row_dimensions[1].height = 27.75
+    ws.merge_cells("A2:E2")
+    s = ws["A2"]; s.value = ("CDN $ | Volume-weighted average across all 11 channels | "
+                             "per case = 24 cans | Aug 1 – Nov 1, 2026")
+    s.font = font(9, False, GREY); s.alignment = Alignment("left", "center")
+
+    # header
+    cols = ["B","C","D","E"]
+    names = sku_sheets + ["TOTAL"]
+    for col, nm in zip(cols, names):
+        c = ws[f"{col}4"]; c.value = nm; c.font = font(10, True, WHITE)
+        c.fill = fill(NAVY if nm == "TOTAL" else MIDBLU)
+        c.alignment = Alignment("center", "center", wrap_text=True)
+    ws["A4"].value = "CDN $"; ws["A4"].font = font(10, True, WHITE); ws["A4"].fill = fill(MIDBLU)
+    ws["A4"].alignment = Alignment("left", "center"); ws.row_dimensions[4].height = 28
+
+    def section(row, text):
+        ws.merge_cells(f"A{row}:E{row}")
+        c = ws[f"A{row}"]; c.value = text; c.font = font(11, True, WHITE); c.fill = fill(NAVY)
+        c.alignment = Alignment("left", "center")
+
+    def line(row, lab, src, kind, indent=False, band=False):
+        a = ws[f"A{row}"]; a.value = ("    " + lab) if indent else lab
+        a.font = font(10, False, BLACK); a.alignment = Alignment("left", "center")
+        refs = [f"='{s}'!{TOT_COL}{src}" for s in sku_sheets] + [f"='{ttl}'!{TOT_COL}{src}"]
+        for col, ref in zip(cols, refs):
+            c = ws[f"{col}{row}"]; c.value = ref; c.font = font(10, False, BLACK)
+            c.number_format = FMT[kind]; c.alignment = Alignment("right", "center")
+        if band:
+            for col in ["A"]+cols: ws[f"{col}{row}"].fill = fill(LTBLU)
+
+    section(6, "PERIOD TOTALS (Aug 1 – Nov 1)")
+    rows_tot = [("Physical Cases",9,"int"),("Gross Revenue",10,"cur0"),("Discounts",11,"cur0"),
+                ("Net Sales",12,"cur0"),("COGS Direct",13,"cur0",True),("COGS Indirect",14,"cur0",True),
+                ("Cost of Sales",15,"cur0"),("Gross Profit",16,"cur0"),("GP %",17,"pct",False,True),
+                ("A&P",22,"cur0"),("Contrib After A&P (CAAP)",24,"cur0")]
+    r = 7
+    for spec in rows_tot:
+        lab,src,kind = spec[0],spec[1],spec[2]
+        indent = len(spec)>3 and spec[3]; band = len(spec)>4 and spec[4]
+        line(r, lab, src, kind, indent=indent, band=band); r += 1
+
+    r += 1
+    section(r, "BLENDED PER CASE (avg across channels)"); r += 1
+    rows_pc = [("Gross Rev / case",26,"cur2"),("Discounts / case",27,"cur2"),
+               ("Net Sales / case",28,"cur2"),("COGS / case",31,"cur2"),
+               ("Gross Profit / case",32,"cur2"),("GP %",33,"pct",False,True),
+               ("A&P / case",34,"cur2"),("CAAP / case",35,"cur2")]
+    for spec in rows_pc:
+        lab,src,kind = spec[0],spec[1],spec[2]
+        band = len(spec)>4 and spec[4]
+        line(r, lab, src, kind, band=band); r += 1
+
+    ws.sheet_view.showGridLines = False
+    ws.freeze_panes = "B5"
+
+
 # ---- build workbook ----
 SKUS = ["Lime Lemon", "Passion Fruit Pineapple", "Raspberry"]
 TAB_COLORS = {"Lime Lemon": "FF92D050", "Passion Fruit Pineapple": "FFFFC000", "Raspberry": "FFC00000"}
@@ -332,11 +516,24 @@ for sku in SKUS:
     ws.sheet_properties.tabColor = TAB_COLORS[sku]
     build_sheet(ws, f"ORGANIKA RTD — {sku.upper()}", f"Organika RTD — {sku} (6×4×355 ml)", is_total=False)
 
-# dashboard as the front (leftmost) tab
+# cost build-up (feeds COGS into the SKU P&Ls)
+cost = wb.create_sheet(COST_SHEET)
+cost.sheet_properties.tabColor = "FF548235"
+build_cost_buildup(cost)
+
+# blended (volume-weighted across channels)
+blend = wb.create_sheet("Blended")
+blend.sheet_properties.tabColor = "FF7030A0"
+build_blended(blend, SKUS)
+
+# dashboard
 dash = wb.create_sheet("Dashboard")
 dash.sheet_properties.tabColor = "FF7030A0"
 build_dashboard(dash, SKUS)
-wb.move_sheet("Dashboard", -(len(wb.sheetnames) - 1))
+
+# final tab order: Dashboard, Blended, TTL, SKUs…, Cost Build-up
+order = ["Dashboard", "Blended", "TTL ORGANIKA RTD"] + SKUS + [COST_SHEET]
+wb._sheets = [wb[name] for name in order]
 
 # force recalculation when opened in Excel / Google Sheets / LibreOffice
 wb.calculation = CalcProperties(fullCalcOnLoad=True)
