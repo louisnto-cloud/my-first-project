@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MÜV RTD — 2027 Canada Launch Forecast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;850&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --bg:#0d1326; --panel:#141d36; --panel2:#1b2747; --ink:#eaf0ff; --mut:#9fb0d8;
+  --lime:#9ff04d; --teal:#27d6c6; --blue:#4f8bff; --violet:#a487ff; --amber:#ffcf5c;
+  --rose:#ff7a93; --good:#2ee6a8; --line:#27345c; --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box} html,body{margin:0;padding:0}
+body{background:radial-gradient(1200px 600px at 80% -10%,#1a2b4d 0,transparent 60%),
+  radial-gradient(1000px 500px at -10% 10%,#14233f 0,transparent 55%),var(--bg);
+  color:var(--ink);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1320px;margin:0 auto;padding:22px 22px 60px}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:18px}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--lime),var(--teal) 55%,var(--blue));
+  display:grid;place-items:center;font-weight:800;color:#06223a;font-size:20px;box-shadow:var(--shadow);letter-spacing:-1px}
+.brand h1{font-size:20px;margin:0;font-weight:800;letter-spacing:-.4px}
+.brand p{margin:2px 0 0;color:var(--mut);font-size:12.5px}
+.basis{display:flex;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:5px}
+.basis button{background:transparent;border:0;color:var(--mut);padding:8px 14px;border-radius:9px;cursor:pointer;font-weight:600;font-size:13px}
+.basis button.on{background:linear-gradient(135deg,var(--blue),var(--teal));color:#04121f;box-shadow:var(--shadow)}
+
+.grid{display:grid;gap:16px}
+.hero{grid-template-columns:1.15fr .85fr}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}
+.card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
+  border-radius:18px;padding:18px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 12px;font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut);font-weight:700}
+
+.goalwrap{display:flex;flex-direction:column;gap:10px}
+.goalnum{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.goalnum .big{font-size:42px;font-weight:850;letter-spacing:-1.5px;line-height:1}
+.goalnum .of{color:var(--mut);font-size:15px;font-weight:600}
+.pill{padding:4px 11px;border-radius:999px;font-size:12.5px;font-weight:800}
+.pill.good{background:rgba(46,230,168,.16);color:var(--good);border:1px solid rgba(46,230,168,.4)}
+.pill.warn{background:rgba(255,207,92,.14);color:var(--amber);border:1px solid rgba(255,207,92,.4)}
+.bar{height:16px;border-radius:999px;background:#0c1530;border:1px solid var(--line);overflow:hidden;position:relative}
+.bar .fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--teal),var(--lime));transition:width .35s ease}
+.bar .tick{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--rose)}
+.subrow{display:flex;justify-content:space-between;color:var(--mut);font-size:12px}
+
+.kpis{grid-template-columns:repeat(5,1fr)}
+@media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi .label{color:var(--mut);font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.kpi .val{font-size:25px;font-weight:820;letter-spacing:-.8px;margin-top:6px}
+.kpi .sub{color:var(--mut);font-size:11.5px;margin-top:3px}
+.kpi .val.good{color:var(--good)} .kpi .val.warn{color:var(--amber)}
+
+.charts{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.charts{grid-template-columns:1fr}}
+.chartbox{position:relative;height:300px}
+.chartbox.tall{height:330px}
+
+.controls{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.controls{grid-template-columns:1fr}}
+.slider{display:flex;flex-direction:column;gap:7px}
+.slider .top{display:flex;justify-content:space-between;align-items:center}
+.slider .name{font-weight:700;font-size:13px}
+.slider .v{font-weight:800;font-size:13px;color:var(--teal);font-variant-numeric:tabular-nums}
+input[type=range]{-webkit-appearance:none;appearance:none;height:6px;border-radius:999px;
+  background:linear-gradient(90deg,var(--blue),var(--teal));outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;
+  background:#fff;border:3px solid var(--teal);cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.4)}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--teal);cursor:pointer}
+.reset{margin-top:4px;background:var(--panel);border:1px solid var(--line);color:var(--mut);
+  padding:9px 14px;border-radius:10px;cursor:pointer;font-weight:600;font-size:12.5px}
+.reset:hover{color:var(--ink);border-color:var(--teal)}
+.foot{color:var(--mut);font-size:11.5px;margin-top:18px;line-height:1.6}
+.tag{display:inline-block;background:rgba(159,240,77,.12);color:var(--lime);border:1px solid rgba(159,240,77,.35);
+  padding:2px 8px;border-radius:6px;font-size:10.5px;font-weight:700;letter-spacing:.4px;margin-left:8px;vertical-align:middle}
+</style>
+</head><body><div class="wrap">
+
+<header class="top">
+  <div class="brand">
+    <div class="logo">MÜV</div>
+    <div><h1>MÜV RTD — Annual Sales Forecast <span class="tag">FY2027 • CANADA</span></h1>
+    <p>Sparkling electrolyte RTD • week-by-week gross revenue vs the $3,000,000 goal • <span id="basisLbl"></span></p></div>
+  </div>
+  <div class="basis" id="basisToggle">
+    <button data-basis="Wholesale" class="on">Wholesale</button>
+    <button data-basis="Sell-through">Sell-through</button>
+  </div>
+</header>
+
+<section class="grid hero">
+  <div class="card">
+    <h3>Progress to $3,000,000 goal</h3>
+    <div class="goalwrap">
+      <div class="goalnum"><span class="big" id="goalBig">$0</span><span class="of" id="goalOf"></span>
+        <span class="pill warn" id="goalPill"></span></div>
+      <div class="bar"><div class="fill" id="goalFill" style="width:0%"></div><div class="tick" style="left:100%"></div></div>
+      <div class="subrow"><span id="gapLine"></span><span>$0 &nbsp;→&nbsp; $3.0M</span></div>
+      <div class="chartbox" style="height:212px;margin-top:6px"><canvas id="c_cum"></canvas></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Tune the big drivers</h3>
+    <div class="grid controls" id="sliders" style="grid-template-columns:1fr"></div>
+    <button class="reset" id="resetBtn">↺ Reset to base case</button>
+  </div>
+</section>
+
+<section class="grid kpis" style="margin-top:16px">
+  <div class="card kpi"><div class="label">Annual gross</div><div class="val" id="k_gross">$0</div><div class="sub">selected basis</div></div>
+  <div class="card kpi"><div class="label">Gap to $3M</div><div class="val" id="k_gap">$0</div><div class="sub" id="k_gap_sub"></div></div>
+  <div class="card kpi"><div class="label">Total volume</div><div class="val" id="k_vol">0</div><div class="sub" id="k_vol_sub"></div></div>
+  <div class="card kpi"><div class="label">Avg weekly rev</div><div class="val" id="k_avg">$0</div><div class="sub" id="k_avg_sub"></div></div>
+  <div class="card kpi"><div class="label">Gross margin</div><div class="val" id="k_margin">0%</div><div class="sub" id="k_margin_sub"></div></div>
+</section>
+
+<section class="grid charts" style="margin-top:16px">
+  <div class="card"><h3>Weekly gross revenue</h3><div class="chartbox"><canvas id="c_week"></canvas></div></div>
+  <div class="card"><h3>Monthly totals</h3><div class="chartbox"><canvas id="c_month"></canvas></div></div>
+  <div class="card"><h3>Channel mix</h3><div class="chartbox"><canvas id="c_chan"></canvas></div></div>
+  <div class="card"><h3>Gross by province</h3><div class="chartbox"><canvas id="c_prov"></canvas></div></div>
+  <div class="card"><h3>Flavour mix</h3><div class="chartbox"><canvas id="c_flav"></canvas></div></div>
+  <div class="card"><h3>Gross by SKU</h3><div class="chartbox tall"><canvas id="c_sku"></canvas></div></div>
+</section>
+
+<p class="foot">
+  <b>Illustrative seed inputs.</b> This dashboard mirrors the Excel calculation engine (MUV_RTD_Forecast_v1.xlsx) with identical defaults, so totals match within rounding.
+  Gross-revenue basis defaults to <b>Wholesale</b> (case price × cases + online direct); switch to <b>Sell-through</b> (retail SRP × consumer units) top-right.
+  <br><b>Extensible by config:</b> the engine loops over the <code>CONFIG</code> object — add a flavour, SKU, channel, province, or store tier by adding an entry to the matching array and everything recomputes. No code changes needed.
+</p>
+
+</div>
+<script>const CONFIG = {
+  "settings": {
+    "fiscal_start": "2027-09-01",
+    "n_weeks": 52,
+    "gross_basis": "Wholesale",
+    "target_revenue": 3000000.0,
+    "calib_scalar": 0.36,
+    "velocity_uplift": 0.0,
+    "ramp_speed": 1.0,
+    "price_index": 0.0,
+    "season_amp": 1.0,
+    "online_growth": 0.0
+  },
+  "flavours": [
+    {
+      "name": "Lime",
+      "share": 0.4
+    },
+    {
+      "name": "Lemon",
+      "share": 0.35
+    },
+    {
+      "name": "Raspberry",
+      "share": 0.25
+    }
+  ],
+  "formats": {
+    "4-pack": {
+      "cans_per_pack": 4,
+      "packs_per_case": 6,
+      "cans_per_case": 24
+    },
+    "12-pack": {
+      "cans_per_pack": 12,
+      "packs_per_case": 2,
+      "cans_per_case": 24
+    }
+  },
+  "skus": [
+    {
+      "flavour": "Lime",
+      "format": "4-pack",
+      "cogs_per_case": 15.0,
+      "price_index": 1.0
+    },
+    {
+      "flavour": "Lime",
+      "format": "12-pack",
+      "cogs_per_case": 15.0,
+      "price_index": 1.0
+    },
+    {
+      "flavour": "Lemon",
+      "format": "4-pack",
+      "cogs_per_case": 15.0,
+      "price_index": 1.0
+    },
+    {
+      "flavour": "Lemon",
+      "format": "12-pack",
+      "cogs_per_case": 15.0,
+      "price_index": 1.0
+    },
+    {
+      "flavour": "Raspberry",
+      "format": "4-pack",
+      "cogs_per_case": 15.0,
+      "price_index": 1.0
+    },
+    {
+      "flavour": "Raspberry",
+      "format": "12-pack",
+      "cogs_per_case": 15.0,
+      "price_index": 1.0
+    }
+  ],
+  "channels": [
+    {
+      "name": "Convenience",
+      "format": "4-pack",
+      "launch": 3,
+      "weeks_to_full": 16,
+      "ramp": "S-curve"
+    },
+    {
+      "name": "On Premise",
+      "format": "4-pack",
+      "launch": 5,
+      "weeks_to_full": 18,
+      "ramp": "S-curve"
+    },
+    {
+      "name": "Fitness",
+      "format": "4-pack",
+      "launch": 4,
+      "weeks_to_full": 14,
+      "ramp": "Linear"
+    },
+    {
+      "name": "Costco",
+      "format": "4-pack",
+      "launch": 6,
+      "weeks_to_full": 12,
+      "ramp": "Linear"
+    },
+    {
+      "name": "FDM",
+      "format": "4-pack",
+      "launch": 8,
+      "weeks_to_full": 20,
+      "ramp": "S-curve"
+    },
+    {
+      "name": "Specialty",
+      "format": "4-pack",
+      "launch": 2,
+      "weeks_to_full": 14,
+      "ramp": "Linear"
+    },
+    {
+      "name": "Online",
+      "format": "12-pack",
+      "launch": 1,
+      "weeks_to_full": 1,
+      "ramp": "Linear"
+    }
+  ],
+  "tiers": [
+    {
+      "channel": "Convenience",
+      "tier": "A",
+      "doors": 300,
+      "velocity": 1.5
+    },
+    {
+      "channel": "Convenience",
+      "tier": "B",
+      "doors": 600,
+      "velocity": 0.8
+    },
+    {
+      "channel": "Convenience",
+      "tier": "C",
+      "doors": 1100,
+      "velocity": 0.4
+    },
+    {
+      "channel": "FDM",
+      "tier": "A",
+      "doors": 150,
+      "velocity": 4.0
+    },
+    {
+      "channel": "FDM",
+      "tier": "B",
+      "doors": 300,
+      "velocity": 2.0
+    },
+    {
+      "channel": "FDM",
+      "tier": "C",
+      "doors": 550,
+      "velocity": 1.0
+    },
+    {
+      "channel": "Costco",
+      "tier": "A",
+      "doors": 10,
+      "velocity": 60.0
+    },
+    {
+      "channel": "Costco",
+      "tier": "B",
+      "doors": 8,
+      "velocity": 40.0
+    },
+    {
+      "channel": "Costco",
+      "tier": "C",
+      "doors": 6,
+      "velocity": 25.0
+    },
+    {
+      "channel": "On Premise",
+      "tier": "A",
+      "doors": 120,
+      "velocity": 1.0
+    },
+    {
+      "channel": "On Premise",
+      "tier": "B",
+      "doors": 250,
+      "velocity": 0.6
+    },
+    {
+      "channel": "On Premise",
+      "tier": "C",
+      "doors": 400,
+      "velocity": 0.3
+    },
+    {
+      "channel": "Fitness",
+      "tier": "A",
+      "doors": 100,
+      "velocity": 1.2
+    },
+    {
+      "channel": "Fitness",
+      "tier": "B",
+      "doors": 200,
+      "velocity": 0.7
+    },
+    {
+      "channel": "Fitness",
+      "tier": "C",
+      "doors": 350,
+      "velocity": 0.35
+    },
+    {
+      "channel": "Specialty",
+      "tier": "A",
+      "doors": 150,
+      "velocity": 1.0
+    },
+    {
+      "channel": "Specialty",
+      "tier": "B",
+      "doors": 300,
+      "velocity": 0.6
+    },
+    {
+      "channel": "Specialty",
+      "tier": "C",
+      "doors": 500,
+      "velocity": 0.3
+    }
+  ],
+  "provinces": [
+    {
+      "code": "BC",
+      "modifier": 0.03,
+      "srp_4pack": 12.99,
+      "online_price": 34.99
+    },
+    {
+      "code": "AB",
+      "modifier": 0.02,
+      "srp_4pack": 11.99,
+      "online_price": 34.99
+    },
+    {
+      "code": "SK",
+      "modifier": 0.0,
+      "srp_4pack": 10.99,
+      "online_price": 34.99
+    },
+    {
+      "code": "MB",
+      "modifier": 0.0,
+      "srp_4pack": 10.99,
+      "online_price": 34.99
+    },
+    {
+      "code": "ON",
+      "modifier": 0.02,
+      "srp_4pack": 12.49,
+      "online_price": 34.99
+    },
+    {
+      "code": "QC",
+      "modifier": 0.01,
+      "srp_4pack": 11.99,
+      "online_price": 34.99
+    },
+    {
+      "code": "NB",
+      "modifier": -0.02,
+      "srp_4pack": 10.49,
+      "online_price": 34.99
+    },
+    {
+      "code": "NS",
+      "modifier": -0.02,
+      "srp_4pack": 10.49,
+      "online_price": 34.99
+    },
+    {
+      "code": "PE",
+      "modifier": -0.03,
+      "srp_4pack": 9.99,
+      "online_price": 34.99
+    },
+    {
+      "code": "NL",
+      "modifier": -0.01,
+      "srp_4pack": 10.99,
+      "online_price": 34.99
+    }
+  ],
+  "provinceSplit": {
+    "Convenience": {
+      "BC": 13.35,
+      "AB": 11.29,
+      "SK": 3.08,
+      "MB": 3.59,
+      "ON": 39.02,
+      "QC": 22.59,
+      "NB": 2.46,
+      "NS": 2.67,
+      "PE": 0.41,
+      "NL": 1.54
+    },
+    "On Premise": {
+      "BC": 13.35,
+      "AB": 11.29,
+      "SK": 3.08,
+      "MB": 3.59,
+      "ON": 39.02,
+      "QC": 22.59,
+      "NB": 2.46,
+      "NS": 2.67,
+      "PE": 0.41,
+      "NL": 1.54
+    },
+    "Fitness": {
+      "BC": 13.35,
+      "AB": 11.29,
+      "SK": 3.08,
+      "MB": 3.59,
+      "ON": 39.02,
+      "QC": 22.59,
+      "NB": 2.46,
+      "NS": 2.67,
+      "PE": 0.41,
+      "NL": 1.54
+    },
+    "Costco": {
+      "BC": 16.24,
+      "AB": 16.24,
+      "SK": 1.52,
+      "MB": 2.03,
+      "ON": 40.62,
+      "QC": 20.3,
+      "NB": 1.02,
+      "NS": 1.52,
+      "PE": 0.0,
+      "NL": 0.51
+    },
+    "FDM": {
+      "BC": 13.35,
+      "AB": 11.29,
+      "SK": 3.08,
+      "MB": 3.59,
+      "ON": 39.02,
+      "QC": 22.59,
+      "NB": 2.46,
+      "NS": 2.67,
+      "PE": 0.41,
+      "NL": 1.54
+    },
+    "Specialty": {
+      "BC": 13.35,
+      "AB": 11.29,
+      "SK": 3.08,
+      "MB": 3.59,
+      "ON": 39.02,
+      "QC": 22.59,
+      "NB": 2.46,
+      "NS": 2.67,
+      "PE": 0.41,
+      "NL": 1.54
+    },
+    "Online": {
+      "BC": 15.15,
+      "AB": 12.12,
+      "SK": 2.53,
+      "MB": 3.03,
+      "ON": 40.4,
+      "QC": 18.18,
+      "NB": 2.53,
+      "NS": 3.03,
+      "PE": 1.01,
+      "NL": 2.02
+    }
+  },
+  "baseCp": {
+    "Convenience": 30.0,
+    "FDM": 28.0,
+    "Costco": 26.0,
+    "On Premise": 32.0,
+    "Fitness": 30.0,
+    "Specialty": 30.0
+  },
+  "onlineUnits": [
+    50.0,
+    60.8,
+    71.6,
+    82.4,
+    93.1,
+    103.9,
+    114.7,
+    125.5,
+    136.3,
+    147.1,
+    157.8,
+    168.6,
+    179.4,
+    190.2,
+    201.0,
+    211.8,
+    222.5,
+    233.3,
+    244.1,
+    254.9,
+    265.7,
+    276.5,
+    287.3,
+    298.0,
+    308.8,
+    319.6,
+    330.4,
+    341.2,
+    352.0,
+    362.7,
+    373.5,
+    384.3,
+    395.1,
+    405.9,
+    416.7,
+    427.5,
+    438.2,
+    449.0,
+    459.8,
+    470.6,
+    481.4,
+    492.2,
+    502.9,
+    513.7,
+    524.5,
+    535.3,
+    546.1,
+    556.9,
+    567.6,
+    578.4,
+    589.2,
+    600.0,
+    600.0
+  ],
+  "seasonality": [
+    1.0312,
+    1.0312,
+    1.0312,
+    1.0312,
+    1.0312,
+    0.933,
+    0.933,
+    0.933,
+    0.933,
+    0.8347,
+    0.8347,
+    0.8347,
+    0.8347,
+    0.7856,
+    0.7856,
+    0.7856,
+    0.7856,
+    0.7856,
+    0.7856,
+    0.7856,
+    0.7856,
+    0.7856,
+    0.8347,
+    0.8347,
+    0.8347,
+    0.8347,
+    0.933,
+    0.933,
+    0.933,
+    0.933,
+    0.933,
+    1.0312,
+    1.0312,
+    1.0312,
+    1.0312,
+    1.1294,
+    1.1294,
+    1.1294,
+    1.1294,
+    1.1294,
+    1.2276,
+    1.2276,
+    1.2276,
+    1.2276,
+    1.2767,
+    1.2767,
+    1.2767,
+    1.2767,
+    1.2276,
+    1.2276,
+    1.2276,
+    1.2276,
+    1.2276
+  ]
+};
+
+// ---- engine: mirrors muv_config.compute() exactly ----
+function rampFactor(week, launch, weeksToFull, shape, rampSpeed){
+  if(week < launch) return 0;
+  let x = (week - launch + 1) * rampSpeed / weeksToFull;
+  x = Math.min(1, Math.max(0, x));
+  return shape === "S-curve" ? x*x*(3-2*x) : x;
+}
+function channelDoorvel(name){
+  return CONFIG.tiers.filter(t => t.channel === name)
+                     .reduce((s,t) => s + t.doors * t.velocity, 0);
+}
+function flavShare(name){ const f = CONFIG.flavours.find(f => f.name === name); return f ? f.share : 0; }
+function cogsFor(flav,fmt){ const s = CONFIG.skus.find(s => s.flavour===flav && s.format===fmt); return s ? s.cogs_per_case : 0; }
+function skuPriceIndex(flav,fmt){ const s = CONFIG.skus.find(s => s.flavour===flav && s.format===fmt); return s ? s.price_index : 1; }
+
+function compute(o){
+  o = o || {};
+  const S = CONFIG.settings;
+  const nW    = o.n_weeks        != null ? o.n_weeks        : S.n_weeks;
+  const calib = o.calib_scalar   != null ? o.calib_scalar   : S.calib_scalar;
+  const vup   = 1 + (o.velocity_uplift != null ? o.velocity_uplift : S.velocity_uplift);
+  const pidx  = 1 + (o.price_index     != null ? o.price_index     : S.price_index);
+  const samp  = o.season_amp     != null ? o.season_amp     : S.season_amp;
+  const ogrow = 1 + (o.online_growth   != null ? o.online_growth   : S.online_growth);
+  const rspd  = o.ramp_speed     != null ? o.ramp_speed     : S.ramp_speed;
+  const basis = o.gross_basis    || S.gross_basis;
+  const fstart = new Date(S.fiscal_start + "T00:00:00Z");
+
+  const R = { gross:0, wholesale:0, sellthrough:0, cogs:0, cases:0, cans:0, consumerUnits:0,
+              byChannel:{}, byProvince:{}, byFlavour:{}, byFlavourCases:{}, bySku:{},
+              byWeek:new Array(nW).fill(0), byMonth:{}, byQuarter:{} };
+  CONFIG.channels.forEach(c => R.byChannel[c.name] = 0);
+  CONFIG.provinces.forEach(p => R.byProvince[p.code] = 0);
+  CONFIG.flavours.forEach(f => { R.byFlavour[f.name] = 0; R.byFlavourCases[f.name] = 0; });
+  CONFIG.skus.forEach(s => R.bySku[s.flavour + " " + s.format] = 0);
+
+  for(let w=1; w<=nW; w++){
+    const d = new Date(fstart.getTime() + (w-1)*7*86400000);
+    const month = d.toLocaleString('en-US',{month:'short', year:'numeric', timeZone:'UTC'});
+    const qtr = "Q" + (Math.floor((w-1)/13) + 1);
+    const season = 1 + (CONFIG.seasonality[w-1] - 1) * samp;
+    for(const c of CONFIG.channels){
+      const fmt = c.format;
+      const ramp = rampFactor(w, c.launch, c.weeks_to_full, c.ramp, rspd);
+      for(const p of CONFIG.provinces){
+        const psplit = (CONFIG.provinceSplit[c.name][p.code] || 0) / 100;
+        let cases;
+        if(c.name === "Online"){
+          let units = CONFIG.onlineUnits[w-1] * psplit * ogrow * season;
+          if(w < c.launch) units = 0;
+          cases = units * CONFIG.formats["12-pack"].cans_per_pack / 24;
+        } else {
+          const doorvel = channelDoorvel(c.name) * calib * vup;
+          cases = doorvel * psplit * ramp * season;
+        }
+        if(cases <= 0) continue;
+        const cans = cases * 24;
+        const consumer = cans / CONFIG.formats[fmt].cans_per_pack;
+        let rowWhole=0, rowSell=0, rowCogs=0;
+        for(const f of CONFIG.flavours){
+          const fcases = cases * f.share;
+          let fWhole, fSell;
+          if(c.name === "Online"){
+            const funits = fcases * 24 / CONFIG.formats["12-pack"].cans_per_pack;
+            const oprice = p.online_price * pidx * skuPriceIndex(f.name, fmt);
+            fWhole = funits * oprice; fSell = fWhole;
+          } else {
+            const cp = CONFIG.baseCp[c.name] * (1 + p.modifier) * pidx * skuPriceIndex(f.name, fmt);
+            fWhole = fcases * cp;
+            const fconsumer = fcases * 24 / CONFIG.formats[fmt].cans_per_pack;
+            fSell = fconsumer * p.srp_4pack * pidx;
+          }
+          const fcogs = fcases * cogsFor(f.name, fmt);
+          rowWhole += fWhole; rowSell += fSell; rowCogs += fcogs;
+          const fGross = basis === "Wholesale" ? fWhole : fSell;
+          R.byFlavour[f.name] += fGross;
+          R.byFlavourCases[f.name] += fcases;
+          R.bySku[f.name + " " + fmt] += fGross;
+        }
+        const gross = basis === "Wholesale" ? rowWhole : rowSell;
+        R.gross += gross; R.wholesale += rowWhole; R.sellthrough += rowSell; R.cogs += rowCogs;
+        R.cases += cases; R.cans += cans; R.consumerUnits += consumer;
+        R.byChannel[c.name] += gross;
+        R.byProvince[p.code] += gross;
+        R.byWeek[w-1] += gross;
+        R.byMonth[month] = (R.byMonth[month] || 0) + gross;
+        R.byQuarter[qtr] = (R.byQuarter[qtr] || 0) + gross;
+      }
+    }
+  }
+  R.margin = R.gross - R.cogs;
+  R.marginPct = R.gross ? R.margin / R.gross : 0;
+  R.avgWeekly = nW ? R.gross / nW : 0;
+  R.nWeeks = nW;
+  R.target = CONFIG.settings.target_revenue;
+  R.gap = R.gross - R.target;
+  R.pctToGoal = R.gross / R.target;
+  // cumulative
+  R.cumulative = []; let run = 0;
+  for(let i=0;i<R.byWeek.length;i++){ run += R.byWeek[i]; R.cumulative.push(run); }
+  return R;
+}
+if (typeof module !== 'undefined') { module.exports = { compute, CONFIG }; }
+</script>
+<script>
+const C$ = v => "$" + Math.round(v).toLocaleString('en-US');
+const C$k = v => v>=1e6 ? "$"+(v/1e6).toFixed(2)+"M" : "$"+Math.round(v/1e3)+"k";
+const N0 = v => Math.round(v).toLocaleString('en-US');
+const PALETTE = ['#4f8bff','#27d6c6','#9ff04d','#a487ff','#ffcf5c','#ff7a93','#5ad1a0','#f3a45c','#7aa2ff','#e879c9'];
+
+const state = { gross_basis: CONFIG.settings.gross_basis,
+  velocity_uplift:0, ramp_speed:1, price_index:0, season_amp:1, online_growth:0 };
+
+Chart.defaults.color = '#9fb0d8';
+Chart.defaults.font.family = "'Inter',system-ui,sans-serif";
+Chart.defaults.borderColor = 'rgba(39,52,92,.6)';
+const charts = {};
+
+function mkLine(ctx){ return new Chart(ctx,{type:'line',data:{labels:[],datasets:[]},
+  options:{responsive:true,maintainAspectRatio:false,interaction:{intersect:false,mode:'index'},
+    plugins:{legend:{labels:{boxWidth:12,usePointStyle:true}}},
+    scales:{y:{ticks:{callback:v=>C$k(v)},grid:{color:'rgba(39,52,92,.5)'}},x:{grid:{display:false}}}}});}
+function mkBar(ctx,horizontal){ return new Chart(ctx,{type:'bar',data:{labels:[],datasets:[]},
+  options:{indexAxis:horizontal?'y':'x',responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{[horizontal?'x':'y']:{ticks:{callback:v=>C$k(v)},grid:{color:'rgba(39,52,92,.5)'}},
+            [horizontal?'y':'x']:{grid:{display:false}}}}});}
+function mkDoughnut(ctx){ return new Chart(ctx,{type:'doughnut',data:{labels:[],datasets:[]},
+  options:{responsive:true,maintainAspectRatio:false,cutout:'62%',
+    plugins:{legend:{position:'right',labels:{boxWidth:12,usePointStyle:true,padding:10}},
+      tooltip:{callbacks:{label:c=>c.label+': '+C$k(c.raw)+' ('+(c.parsed/c.dataset._tot*100).toFixed(1)+'%)'}}}}});}
+
+function initCharts(){
+  charts.cum = mkLine(document.getElementById('c_cum'));
+  charts.week = mkBar(document.getElementById('c_week'),false);
+  charts.chan = mkDoughnut(document.getElementById('c_chan'));
+  charts.flav = mkDoughnut(document.getElementById('c_flav'));
+  charts.sku = mkBar(document.getElementById('c_sku'),true);
+  charts.prov = mkBar(document.getElementById('c_prov'),false);
+  charts.month = mkBar(document.getElementById('c_month'),false);
+}
+
+function setKpi(id,val,cls){ const e=document.getElementById(id); e.textContent=val; if(cls){e.className='val '+cls;} }
+
+function render(){
+  const R = compute(state);
+  const onTarget = R.gross >= R.target;
+  // hero
+  document.getElementById('goalBig').textContent = C$(R.gross);
+  document.getElementById('goalOf').textContent = "of " + C$k(R.target) + " goal";
+  const pct = Math.min(100, R.pctToGoal*100);
+  document.getElementById('goalFill').style.width = pct.toFixed(1)+"%";
+  const pill = document.getElementById('goalPill');
+  pill.textContent = (onTarget?"▲ ":"")+ (R.pctToGoal*100).toFixed(1)+"% to goal";
+  pill.className = 'pill '+(onTarget?'good':'warn');
+  document.getElementById('basisLbl').textContent = state.gross_basis + " basis";
+  document.getElementById('gapLine').textContent =
+    (R.gap>=0?"Ahead of goal by ":"Gap to goal: ") + C$(Math.abs(R.gap));
+  // kpis
+  setKpi('k_gross', C$(R.gross), onTarget?'good':'warn');
+  setKpi('k_gap', (R.gap>=0?"+":"–")+C$(Math.abs(R.gap)), onTarget?'good':'warn');
+  document.getElementById('k_gap_sub').textContent = (R.pctToGoal*100).toFixed(1)+"% of $3.0M target";
+  setKpi('k_vol', N0(R.cases)+" cases");
+  document.getElementById('k_vol_sub').textContent = N0(R.cans)+" cans • "+N0(R.consumerUnits)+" consumer units";
+  setKpi('k_avg', C$(R.avgWeekly));
+  document.getElementById('k_avg_sub').textContent = "across "+R.nWeeks+" weeks";
+  setKpi('k_margin', (R.marginPct*100).toFixed(1)+"%");
+  document.getElementById('k_margin_sub').textContent = C$(R.margin)+" gross margin";
+
+  // cumulative vs goal
+  const wk = R.byWeek.map((_,i)=>"W"+(i+1));
+  charts.cum.data.labels = wk;
+  charts.cum.data.datasets = [
+    {label:'Cumulative gross',data:R.cumulative,borderColor:'#27d6c6',backgroundColor:'rgba(39,214,198,.12)',
+     fill:true,tension:.25,pointRadius:0,borderWidth:2.5},
+    {label:'$3M goal',data:wk.map(()=>R.target),borderColor:'#ff7a93',borderDash:[6,5],pointRadius:0,borderWidth:1.5,fill:false},
+    {label:'Goal pace',data:R.byWeek.map((_,i)=>R.target*(i+1)/R.nWeeks),borderColor:'rgba(159,176,216,.5)',
+     borderDash:[2,4],pointRadius:0,borderWidth:1.2,fill:false}];
+  charts.cum.update();
+  // weekly revenue
+  charts.week.data.labels = wk;
+  charts.week.data.datasets = [{data:R.byWeek,backgroundColor:'#4f8bff',borderRadius:3}];
+  charts.week.update();
+  // channel doughnut
+  doughnut(charts.chan, R.byChannel);
+  // flavour doughnut
+  doughnut(charts.flav, R.byFlavour);
+  // sku bar
+  const sku = R.bySku; const skuK=Object.keys(sku);
+  charts.sku.data.labels = skuK;
+  charts.sku.data.datasets=[{data:skuK.map(k=>sku[k]),backgroundColor:skuK.map((_,i)=>PALETTE[i%PALETTE.length]),borderRadius:4}];
+  charts.sku.update();
+  // province bar
+  const pv=R.byProvince; const pvK=Object.keys(pv);
+  charts.prov.data.labels=pvK;
+  charts.prov.data.datasets=[{data:pvK.map(k=>pv[k]),backgroundColor:'#27d6c6',borderRadius:4}];
+  charts.prov.update();
+  // month bar
+  const mo=R.byMonth; const moK=Object.keys(mo);
+  charts.month.data.labels=moK.map(m=>m.replace(' 20',"'"));
+  charts.month.data.datasets=[{data:moK.map(k=>mo[k]),backgroundColor:'#a487ff',borderRadius:4}];
+  charts.month.update();
+}
+function doughnut(ch,obj){
+  const keys=Object.keys(obj).filter(k=>obj[k]>0);
+  const vals=keys.map(k=>obj[k]); const tot=vals.reduce((a,b)=>a+b,0);
+  ch.data.labels=keys;
+  ch.data.datasets=[{data:vals,backgroundColor:keys.map((_,i)=>PALETTE[i%PALETTE.length]),borderWidth:0,_tot:tot}];
+  ch.update();
+}
+
+// ---- controls ----
+const SLIDERS=[
+  {id:'velocity_uplift',name:'Velocity uplift',min:-20,max:50,step:1,unit:'%',scale:0.01},
+  {id:'ramp_speed',name:'Door ramp speed',min:0.5,max:2,step:0.05,unit:'×',scale:1},
+  {id:'price_index',name:'Price index',min:-10,max:20,step:0.5,unit:'%',scale:0.01},
+  {id:'season_amp',name:'Seasonality amplitude',min:0,max:2,step:0.05,unit:'×',scale:1},
+  {id:'online_growth',name:'Online growth',min:-50,max:200,step:5,unit:'%',scale:0.01},
+];
+function fmtSlider(s,raw){ return s.unit==='%' ? (raw>0?'+':'')+raw+'%' : raw.toFixed(2)+'×'; }
+function buildControls(){
+  const host=document.getElementById('sliders');
+  SLIDERS.forEach(s=>{
+    const def = s.scale===1 ? state[s.id] : Math.round(state[s.id]/s.scale);
+    const wrap=document.createElement('div'); wrap.className='slider';
+    wrap.innerHTML=`<div class="top"><span class="name">${s.name}</span><span class="v" id="v_${s.id}">${fmtSlider(s,def)}</span></div>
+      <input type="range" id="r_${s.id}" min="${s.min}" max="${s.max}" step="${s.step}" value="${def}">`;
+    host.appendChild(wrap);
+    const inp=wrap.querySelector('input');
+    inp.addEventListener('input',()=>{
+      const raw=parseFloat(inp.value);
+      state[s.id]= s.scale===1 ? raw : raw*s.scale;
+      document.getElementById('v_'+s.id).textContent=fmtSlider(s,raw);
+      render();
+    });
+  });
+  document.querySelectorAll('.basis button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      state.gross_basis=b.dataset.basis;
+      document.querySelectorAll('.basis button').forEach(x=>x.classList.toggle('on',x===b));
+      render();
+    });
+  });
+  document.getElementById('resetBtn').addEventListener('click',()=>{
+    state.velocity_uplift=0;state.ramp_speed=1;state.price_index=0;state.season_amp=1;state.online_growth=0;
+    SLIDERS.forEach(s=>{ const def=s.scale===1?state[s.id]:Math.round(state[s.id]/s.scale);
+      document.getElementById('r_'+s.id).value=def; document.getElementById('v_'+s.id).textContent=fmtSlider(s,def); });
+    render();
+  });
+}
+window.addEventListener('DOMContentLoaded',()=>{ initCharts(); buildControls(); render(); });
+</script>
+</body></html>
