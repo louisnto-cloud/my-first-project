@@ -1,6 +1,8 @@
 # Community Partnerships Tracker, research and source trail
 
-This file backs the 60 partner rows in `Organika RTD Community Partnerships Tracker_v1.xlsx`.
+v2 note: every Activation Type, Activation Date and activation idea was cleared on purpose. The team books real activations and the Calendar fills itself. Maddie is the single owner. The Suggested Events tab starts empty; the bench list below is raw material for it when Louis wants ideas parked there.
+
+This file backs the 60 partner rows in `Organika RTD Community Partnerships Tracker_v2.xlsx`.
 Every partner was found through web research in 2026 and tagged in the workbook as Verified Web,
 Pending, or Unverified. No contact name, email, phone number, or audience number was invented.
 Anything that could not be verified is left blank or TBD in the workbook and is listed on the gap
@@ -16,7 +18,7 @@ no hyphens.
 - Slow Girls Run Club, Vancouver. https://www.instagram.com/slowgirlsrunclub/ , https://runclubs.ca/vancouver/slow-girls-run-club
 - One Run Club, Vancouver. https://www.instagram.com/onerunclubvan/ , https://runclubs.ca/vancouver/one-run-club
 - Striderz Run Club, Vancouver. https://striderz.com/ , https://www.instagram.com/striderzrunclub/
-- North Shore Womens Trail Running Club, North Vancouver. https://www.instagram.com/northshore__runclub/
+- North Shore Women's Trail Running Club, North Vancouver. https://www.instagram.com/northshore__runclub/
 - North Burnaby Runners, Burnaby. https://www.instagram.com/northburnabyrunners/ , https://runclubs.ca/vancouver/north-burnaby-runners
 - Flight Crew Run Club, Vancouver (audience TBD). https://vanrunco.com/pages/flight-crew , https://www.instagram.com/flightcrewrunclub/
 - Capital City Run Crew, Victoria. https://www.instagram.com/capitalcityruncrew/ , https://www.runvictoriamarathon.com/run-crews
@@ -57,7 +59,7 @@ no hyphens.
 - AMS of UBC, Vancouver. https://www.ams.ubc.ca/
 - SFU Recreation, Burnaby. https://www.sfu.ca/recreation/sports/intramurals.html , https://www.instagram.com/sfurecreation/
 - UVic Vikes Recreation, Victoria. https://vikesrec.ca/
-- Students Union Okanagan of UBC, Kelowna. https://www.suo.ca/ , https://www.instagram.com/suo_ubc/
+- Students' Union Okanagan of UBC, Kelowna. https://www.suo.ca/ , https://www.instagram.com/suo_ubc/
 - Camosun College Student Society, Victoria. https://camosunstudent.org/
 
 ## Wellness and Recovery
@@ -80,7 +82,7 @@ no hyphens.
 - Hilary Ann Yang, Vancouver. https://www.instagram.com/thehilaryann/
 
 ## Charity and Causes
-- BC Childrens Hospital Foundation, Vancouver. RBC Race for the Kids, Jun 8 2026. https://fundraise.bcchf.ca/event/race-for-the-kids/home , https://www.runguides.com/event/27/rbc-race-for-the-kids-vancouver
+- BC Children's Hospital Foundation, Vancouver. RBC Race for the Kids, Jun 8 2026. https://fundraise.bcchf.ca/event/race-for-the-kids/home , https://www.runguides.com/event/27/rbc-race-for-the-kids-vancouver
 - Greater Vancouver Food Bank, Burnaby. Foodstock, Jun 23 2026. https://events.foodbank.bc.ca/ , https://bcaletrail.ca/event/foodstock-at-swangard-stadium/
 - Backpack Buddies, Vancouver. Birdies and Buddies, Jun 8 2026. https://www.backpackbuddies.ca/ , https://www.instagram.com/backpackbuddiesbc/
 - Victoria Hospice, Victoria. Hike for Hospice, May 3 2026. https://victoriahospice.org/event/hike-for-hospice-2026/

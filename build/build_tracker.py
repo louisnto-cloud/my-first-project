@@ -1,5 +1,16 @@
 # -*- coding: utf-8 -*-
-"""Builds Organika RTD Community Partnerships Tracker_v1.xlsx, styled to match the BC Tracker."""
+"""Builds Organika RTD Community Partnerships Tracker_v2.xlsx, styled to match the BC Tracker.
+
+v2 changes per Louis:
+- No proposed activations anywhere. Activation Type, Activation Date and idea text all blank.
+  The Activation Calendar stays live but starts empty and fills as the team books real dates.
+- Sales Team is Maddie only. Maddie is the one owner on the dropdown and is prefilled as
+  Primary Owner on every researched partner row.
+- New Suggested Events tab: an empty, structured parking lot for event ideas farther out.
+- Review pass: auto numbering and auto type label formulas, List Health block on the
+  Dashboard, % to Target on Type Summary, stale amber rule applies to P1 rows only,
+  corrected apostrophes in three partner names, rewritten Guide.
+"""
 import datetime
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
@@ -8,7 +19,7 @@ from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.formatting.rule import CellIsRule, FormulaRule
 from openpyxl.workbook.defined_name import DefinedName
 
-OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v1.xlsx"
+OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v2.xlsx"
 
 # ---------- palette ----------
 C_TITLE   = "FF2E5A4E"   # dark green title bar + KPI numbers
@@ -68,7 +79,7 @@ LASTROW = FIRST + DATA_ROWS - 1           # 32
 
 WIDTHS = {1:5,2:30,3:20,4:14,5:18,6:10,7:16,8:16,9:20,10:16,11:26,12:15,13:26,14:16,15:30,
 16:14,17:12,18:15,19:13,20:28,21:15,22:18,23:15,24:13,25:13,26:12,27:13,28:14,29:26,30:26,
-31:18,32:18,33:22,34:13,35:15,36:15,37:22,38:34}
+31:18,32:18,33:22,34:13,35:15,36:15,37:22,38:44}
 
 # key -> column number
 KEYCOL = {"name":2,"city":4,"hood":5,"prio":6,"status":7,"owner":8,"contact":9,"role":10,
@@ -82,97 +93,94 @@ CENTERCOLS = {1,4,6,7,8,10,12,14,16,17,18,19,21,22,23,24,25,26,27,28,34,35,36,37
 
 # =====================================================================
 # PARTNER DATA  (60 verified rows, Tevah first on Wellness & Recovery)
+# Notes hold research facts only. No activation is proposed anywhere.
 # =====================================================================
 TYPES = ["Run Clubs","Gyms & Studios","Events & Festivals","Sports Teams & Leagues",
          "Campus & Student Groups","Wellness & Recovery","Ambassadors & Creators","Charity & Causes"]
 
-def D(d): return datetime.date(*d)
-
 PARTNERS = {
 "Run Clubs":[
- dict(name="East Van Run Crew",city="Vancouver",hood="East Vancouver",prio="P1",ig="@eastvanruncrew",aud="11,000 IG",audsrc="Instagram @eastvanruncrew follower count, web search 2026",source="Verified Web",acttype="Hydration Station",notes="Hydration station at the Monday night brewery start line."),
- dict(name="Social Run Club YVR",city="Vancouver",hood="Yaletown",prio="P1",ig="@socialrunclub.yvr",aud="12,000 IG",audsrc="Instagram @socialrunclub.yvr follower count, web search 2026",source="Verified Web",acttype="Sampling",notes="Sampling at the Saturday Form Focus run that ends with coffee."),
- dict(name="Slow Girls Run Club",city="Vancouver",hood="Downtown",prio="P1",ig="@slowgirlsrunclub",aud="9,400 IG",audsrc="Instagram @slowgirlsrunclub follower count, web search 2026",source="Verified Web",acttype="Sampling",notes="Sampling at the Saturday 5km social finish. Women focused audience."),
- dict(name="One Run Club",city="Vancouver",hood="West End",prio="P2",ig="@onerunclubvan",aud="7,950 IG",audsrc="Instagram @onerunclubvan follower count, web search 2026",source="Verified Web",acttype="Hydration Station",notes="Hydration at the Wednesday run, restock at the English Bay social."),
- dict(name="Striderz Run Club",city="Vancouver",hood="Olympic Village",prio="P2",ig="@striderzrunclub",aud="1,120 IG",audsrc="Instagram @striderzrunclub follower count, web search 2026",source="Verified Web",acttype="Sampling",notes="Finish line sampling at the free Sunday social run."),
- dict(name="North Shore Womens Trail Running Club",city="North Vancouver",hood="Lynn Valley",prio="P2",ig="@northshore__runclub",aud="2,930 IG",audsrc="Instagram @northshore__runclub follower count, web search 2026",source="Verified Web",acttype="Sampling",notes="Trailhead sampling at the End of the Line General Store meetup."),
- dict(name="North Burnaby Runners",city="Burnaby",hood="North Burnaby",prio="P2",ig="@northburnabyrunners",aud="2,370 IG",audsrc="Instagram @northburnabyrunners follower count, web search 2026",source="Verified Web",acttype="Sampling",notes="Sampling table at the Wednesday social run start at Dageraad Brewing."),
- dict(name="Flight Crew Run Club",city="Vancouver",hood="Kitsilano",prio="P2",ig="@flightcrewrunclub",aud="TBD",audsrc="",source="Verified Web",acttype="Hydration Station",notes="Hydration handout at the Thursday Kitsilano road run. Run by Vancouver Running Company."),
- dict(name="Capital City Run Crew",city="Victoria",hood="Downtown",prio="P2",ig="@capitalcityruncrew",aud="2,820 IG",audsrc="Instagram @capitalcityruncrew follower count, web search 2026",source="Verified Web",acttype="Hydration Station",notes="Hydration station at the Thursday evening downtown run."),
- dict(name="Kelowna Running Club",city="Kelowna",hood="Waterfront Park",prio="P3",ig="@kelownarunningclub",aud="990 IG",audsrc="Instagram @kelownarunningclub follower count, web search 2026",source="Verified Web",acttype="Sampling",notes="Co branded long run social at the Saturday morning start and finish."),
+ dict(name="East Van Run Crew",city="Vancouver",hood="East Vancouver",prio="P1",ig="@eastvanruncrew",aud="11,000 IG",audsrc="Instagram @eastvanruncrew follower count, web search 2026",source="Verified Web",notes="Monday night runs starting from a rotating East Van brewery."),
+ dict(name="Social Run Club YVR",city="Vancouver",hood="Yaletown",prio="P1",ig="@socialrunclub.yvr",aud="12,000 IG",audsrc="Instagram @socialrunclub.yvr follower count, web search 2026",source="Verified Web",notes="Saturday 9:30am Form Focus run that ends with a coffee social."),
+ dict(name="Slow Girls Run Club",city="Vancouver",hood="Downtown",prio="P1",ig="@slowgirlsrunclub",aud="9,400 IG",audsrc="Instagram @slowgirlsrunclub follower count, web search 2026",source="Verified Web",notes="Saturday 8am Social Saturdays 5km. Women focused community."),
+ dict(name="One Run Club",city="Vancouver",hood="West End",prio="P2",ig="@onerunclubvan",aud="7,950 IG",audsrc="Instagram @onerunclubvan follower count, web search 2026. About 1,536 active members on Heylo",source="Verified Web",notes="Wednesday 6:30pm run with a social wrap at English Bay."),
+ dict(name="Striderz Run Club",city="Vancouver",hood="Olympic Village",prio="P2",ig="@striderzrunclub",aud="1,120 IG",audsrc="Instagram @striderzrunclub follower count, web search 2026",source="Verified Web",notes="Free Sunday 8:30am social run from Athletes Way, all paces regroup."),
+ dict(name="North Shore Women's Trail Running Club",city="North Vancouver",hood="Lynn Valley",prio="P2",ig="@northshore__runclub",aud="2,930 IG",audsrc="Instagram @northshore__runclub follower count, web search 2026",source="Verified Web",notes="Trail runs meeting at the End of the Line General Store."),
+ dict(name="North Burnaby Runners",city="Burnaby",hood="North Burnaby",prio="P2",ig="@northburnabyrunners",aud="2,370 IG",audsrc="Instagram @northburnabyrunners follower count, web search 2026",source="Verified Web",notes="Wednesday 6:30pm social run from Dageraad Brewing."),
+ dict(name="Flight Crew Run Club",city="Vancouver",hood="Kitsilano",prio="P2",ig="@flightcrewrunclub",aud="TBD",audsrc="",source="Verified Web",notes="Thursday 6:15pm Kitsilano road run with 3km, 5km and 10km options. Run by Vancouver Running Company."),
+ dict(name="Capital City Run Crew",city="Victoria",hood="Downtown",prio="P2",ig="@capitalcityruncrew",aud="2,820 IG",audsrc="Instagram @capitalcityruncrew follower count, web search 2026",source="Verified Web",notes="Thursday evening downtown run."),
+ dict(name="Kelowna Running Club",city="Kelowna",hood="Waterfront Park",prio="P3",ig="@kelownarunningclub",aud="990 IG",audsrc="Instagram @kelownarunningclub follower count, web search 2026",source="Verified Web",notes="Saturday long runs from rotating spots plus Tuesday speed work. 2026 schedule on the club site."),
 ],
 "Gyms & Studios":[
- dict(name="RIDE Cycle Club",city="Vancouver",hood="Yaletown",prio="P1",ig="@ridecycleclub",aud="23,000 IG",audsrc="Instagram @ridecycleclub follower count, web search 2026. Account covers Vancouver and Toronto",source="Verified Web",acttype="Sampling",notes="Stock a branded cooler in the lobby for riders. Sponsor a themed ride."),
- dict(name="The Hive Bouldering Gym",city="Vancouver",hood="Strathcona",prio="P1",ig="@hiveclimbing",aud="21,000 IG",audsrc="Instagram @hiveclimbing follower count, web search 2026. Brand account, several BC sites",source="Verified Web",acttype="Hydration Station",notes="Branded hydration cooler near the bouldering floor. Community climbing night sampling."),
- dict(name="Progression Bouldering",city="Vancouver",hood="Mount Pleasant",prio="P1",ig="@progressionbouldering",aud="9,700 IG",audsrc="Instagram @progressionbouldering follower count, web search 2026",source="Verified Web",acttype="Contra Product",notes="Place product in the on site licensed cafe. Co branded bouldering challenge."),
- dict(name="Tantra Fitness",city="Vancouver",hood="Kitsilano",prio="P2",ig="@tantrafitness",aud="17,000 IG",audsrc="Instagram @tantrafitness follower count, web search 2026 (single snippet, reverify)",source="Pending",acttype="Sponsorship",notes="Sponsor a community class. Branded cooler across the three locations."),
- dict(name="604 Athletics",city="Vancouver",hood="Mount Pleasant",prio="P2",ig="@604_athletics",aud="6,100 IG",audsrc="Instagram @604_athletics follower count, web search 2026 (single snippet, reverify)",source="Pending",acttype="Sponsorship",notes="Sponsor a community WOD or HYROX prep class, chilled cans at the finish."),
- dict(name="FAR Studio",city="Vancouver",hood="Gastown",prio="P2",ig="@farstudiogym",aud="2,450 IG",audsrc="Instagram @farstudiogym follower count, web search 2026 (single snippet, reverify)",source="Pending",acttype="Hydration Station",notes="Branded hydration cooler at the entrance for post kickboxing recovery."),
- dict(name="The Lab Victoria",city="Victoria",hood="Downtown",prio="P2",ig="@thelabvictoria",aud="3,500 IG",audsrc="Instagram @thelabvictoria follower count, web search 2026 (single snippet, reverify)",source="Pending",acttype="Hydration Station",notes="Lobby hydration cooler for after yoga and pilates. Sponsor a mobility session."),
- dict(name="CrossFit BC",city="Vancouver",hood="Olympic Village",prio="P3",ig="@crossfitbc",aud="TBD",audsrc="",source="Verified Web",acttype="Sampling",notes="Post workout sampling at the front desk on a busy class day."),
- dict(name="CrossFit Zone",city="Victoria",hood="Downtown",prio="P3",ig="@crossfit_zone_",aud="TBD",audsrc="",source="Verified Web",acttype="Sampling",notes="Post workout sampling and a branded cooler for members. Operating since 2008."),
- dict(name="CrossFit Okanagan",city="Kelowna",hood="Kelowna",prio="P3",ig="@crossfitokanagan",aud="4,700 IG",audsrc="Instagram @crossfitokanagan follower count, web search 2026 (single snippet, reverify)",source="Pending",acttype="Sponsorship",notes="Sponsor a community class, branded cooler, front desk sampling."),
+ dict(name="RIDE Cycle Club",city="Vancouver",hood="Yaletown",prio="P1",ig="@ridecycleclub",aud="23,000 IG",audsrc="Instagram @ridecycleclub follower count, web search 2026. Account covers Vancouver and Toronto",source="Verified Web",notes="Spin studio on Hamilton Street, part of a multi city brand."),
+ dict(name="The Hive Bouldering Gym",city="Vancouver",hood="Strathcona",prio="P1",ig="@hiveclimbing",aud="21,000 IG",audsrc="Instagram @hiveclimbing follower count, web search 2026. Brand account, several BC sites",source="Verified Web",notes="Bouldering gym on Industrial Avenue, brand has several BC locations."),
+ dict(name="Progression Bouldering",city="Vancouver",hood="Mount Pleasant",prio="P1",ig="@progressionbouldering",aud="9,700 IG",audsrc="Instagram @progressionbouldering follower count, web search 2026",source="Verified Web",notes="18,000 sq ft bouldering gym with a licensed cafe on site."),
+ dict(name="Tantra Fitness",city="Vancouver",hood="Kitsilano",prio="P2",ig="@tantrafitness",aud="17,000 IG",audsrc="Instagram @tantrafitness follower count, web search 2026 (single snippet, reverify)",source="Pending",notes="Pole and aerial fitness across three Vancouver locations."),
+ dict(name="604 Athletics",city="Vancouver",hood="Mount Pleasant",prio="P2",ig="@604_athletics",aud="6,100 IG",audsrc="Instagram @604_athletics follower count, web search 2026 (single snippet, reverify)",source="Pending",notes="CrossFit box on Main Street, runs HYROX prep classes."),
+ dict(name="FAR Studio",city="Vancouver",hood="Gastown",prio="P2",ig="@farstudiogym",aud="2,450 IG",audsrc="Instagram @farstudiogym follower count, web search 2026 (single snippet, reverify)",source="Pending",notes="Kickboxing and strength studio on Powell Street."),
+ dict(name="The Lab Victoria",city="Victoria",hood="Downtown",prio="P2",ig="@thelabvictoria",aud="3,500 IG",audsrc="Instagram @thelabvictoria follower count, web search 2026 (single snippet, reverify)",source="Pending",notes="Yoga and pilates studio on Fort Street."),
+ dict(name="CrossFit BC",city="Vancouver",hood="Olympic Village",prio="P3",ig="@crossfitbc",aud="TBD",audsrc="",source="Verified Web",notes="CrossFit box on East 1st Avenue."),
+ dict(name="CrossFit Zone",city="Victoria",hood="Downtown",prio="P3",ig="@crossfit_zone_",aud="TBD",audsrc="",source="Verified Web",notes="One of the oldest CrossFit boxes in Victoria, operating since 2008."),
+ dict(name="CrossFit Okanagan",city="Kelowna",hood="Kelowna",prio="P3",ig="@crossfitokanagan",aud="4,700 IG",audsrc="Instagram @crossfitokanagan follower count, web search 2026 (single snippet, reverify)",source="Pending",notes="CrossFit box, also runs a ForeverFit 55 plus program."),
 ],
 "Events & Festivals":[
- dict(name="Richmond Night Market",city="Richmond",hood="Bridgeport",prio="P1",ig="richmondnightmarket.com",aud="1,000,000+ per year",audsrc="vancouversbestplaces and official market materials, over a million visitors annually",source="Verified Web",acttype="Event Booth",actdate=D((2026,8,8)),notes="Runs Apr 24 to Sep 20 2026, Friday to Sunday evenings. Activation Date is a proposed August sampling date, confirm. Branded cooler cart in the food court."),
- dict(name="Vancouver Pride Parade and Festival",city="Vancouver",hood="West End",prio="P1",ig="@vancouverpride",aud="600,000+ attendees (press estimate)",audsrc="misterbandb and Destination Vancouver listings cite 600,000 plus, press estimate not official",source="Verified Web",acttype="Event Booth",actdate=D((2026,8,2)),notes="Pride week Jul 25 to Aug 2 2026, main parade Aug 2. Branded cooler and sampling team at the Sunset Beach festival."),
- dict(name="Concord Pacific Dragon Boat Summer Regatta",city="Vancouver",hood="False Creek",prio="P1",ig="dragonboatbc.ca",aud="TBD",audsrc="",source="Verified Web",acttype="Event Booth",actdate=D((2026,8,22)),notes="Downsized single day regatta in 2026 due to FIFA security cordon, full festival returns 2027. Booth in the paddler village, finish line hydration."),
- dict(name="Italian Day on The Drive",city="Vancouver",hood="Commercial Drive",prio="P2",ig="@italiandayonthedrive",aud="300,000 (press estimate)",audsrc="Vancouver Is Awesome 2026 coverage cites 300,000, press estimate not official",source="Verified Web",acttype="Event Booth",actdate=D((2026,6,14)),notes="Sunday Jun 14 2026, noon to 8 pm, 14 blocks. Sampling booth among the food vendor blocks."),
- dict(name="Khatsahlano Street Party",city="Vancouver",hood="Kitsilano",prio="P2",ig="@khatsahlano",aud="TBD",audsrc="",source="Verified Web",acttype="Event Booth",actdate=D((2026,7,11)),notes="Saturday Jul 11 2026, West 4th Ave, 10 blocks. Branded cooler at a main stage and a roaming sampling team."),
- dict(name="Summer Lights in English Bay",city="Vancouver",hood="West End",prio="P2",ig="vancouver.ca",aud="TBD",audsrc="",source="Verified Web",acttype="Event Booth",actdate=D((2026,7,31)),notes="Friday Jul 31 2026, BC Day long weekend fireworks. City replacement for Celebration of Light. Beachfront sampling before the show."),
- dict(name="Canada Dry Victoria Dragon Boat Festival",city="Victoria",hood="Inner Harbour",prio="P2",ig="victoriadragonboatfestival.com",aud="TBD",audsrc="",source="Verified Web",acttype="Event Booth",actdate=D((2026,6,20)),notes="Saturday Jun 20 2026, more than 30 teams. Moved to June for 2026 only. Booth on the Inner Harbour causeway."),
- dict(name="Kelowna Wine Country Half Marathon",city="Kelowna",hood="Waterfront Park",prio="P2",ig="kelownamarathon.ca",aud="1,800 runners (cap)",audsrc="Event materials note registration normally limited to about 1,800 runners, confirm on site",source="Verified Web",acttype="Hydration Station",actdate=D((2026,6,13)),notes="Saturday Jun 13 2026, finish at Waterfront Park with a post run festival. Finish line hydration and sampling."),
+ dict(name="Richmond Night Market",city="Richmond",hood="Bridgeport",prio="P1",ig="richmondnightmarket.com",aud="1,000,000+ per year",audsrc="vancouversbestplaces and official market materials, over a million visitors annually",source="Verified Web",notes="Runs Apr 24 to Sep 20 2026, Friday to Sunday evenings, near Bridgeport station."),
+ dict(name="Vancouver Pride Parade and Festival",city="Vancouver",hood="West End",prio="P1",ig="@vancouverpride",aud="600,000+ attendees (press estimate)",audsrc="misterbandb and Destination Vancouver listings cite 600,000 plus, press estimate not official",source="Verified Web",notes="Pride week Jul 25 to Aug 2 2026, main parade Sunday Aug 2 ending at Sunset Beach."),
+ dict(name="Concord Pacific Dragon Boat Summer Regatta",city="Vancouver",hood="False Creek",prio="P1",ig="dragonboatbc.ca",aud="TBD",audsrc="",source="Verified Web",notes="One day regatta Aug 22 2026 at False Creek. Downsized for 2026 due to the FIFA security cordon, full festival returns 2027."),
+ dict(name="Italian Day on The Drive",city="Vancouver",hood="Commercial Drive",prio="P2",ig="@italiandayonthedrive",aud="300,000 (press estimate)",audsrc="Vancouver Is Awesome 2026 coverage cites 300,000, press estimate not official",source="Verified Web",notes="Sunday Jun 14 2026, noon to 8pm, 14 blocks of Commercial Drive."),
+ dict(name="Khatsahlano Street Party",city="Vancouver",hood="Kitsilano",prio="P2",ig="@khatsahlano",aud="TBD",audsrc="",source="Verified Web",notes="Saturday Jul 11 2026 on West 4th Ave, 10 blocks, free street festival."),
+ dict(name="Summer Lights in English Bay",city="Vancouver",hood="West End",prio="P2",ig="vancouver.ca",aud="TBD",audsrc="",source="Verified Web",notes="Friday Jul 31 2026 fireworks at English Bay, BC Day long weekend. City replacement for Celebration of Light."),
+ dict(name="Canada Dry Victoria Dragon Boat Festival",city="Victoria",hood="Inner Harbour",prio="P2",ig="victoriadragonboatfestival.com",aud="TBD",audsrc="",source="Verified Web",notes="Saturday Jun 20 2026 at the Inner Harbour, more than 30 teams. Moved to June for 2026 only, back to August in 2027."),
+ dict(name="Kelowna Wine Country Half Marathon",city="Kelowna",hood="Waterfront Park",prio="P2",ig="kelownamarathon.ca",aud="1,800 runners (cap)",audsrc="Event materials note registration normally limited to about 1,800 runners, confirm on site",source="Verified Web",notes="Saturday Jun 13 2026, finish at Waterfront Park with a post run festival."),
 ],
 "Sports Teams & Leagues":[
- dict(name="Urban Rec Vancouver",city="Vancouver",hood="Mount Pleasant",prio="P1",ig="@urbanrec",aud="56,000 members (self stated)",audsrc="Urban Rec Vancouver website states over 56,000 members, brand self stated figure",source="Verified Web",acttype="Sponsorship",notes="Post game sampling at weeknight leagues. Sponsor a summer co ed division, hydration at tournaments."),
- dict(name="Vancouver Dodgeball League",city="Vancouver",hood="Multiple",prio="P2",ig="@vdldodgeball",aud="2,000+ players, 260+ teams",audsrc="VDL sources describe over 260 teams and 2,000 plus players at peak",source="Verified Web",acttype="Sampling",notes="Post game sampling at league nights, hydration station at playoff finals."),
- dict(name="Vancouver Pickleball Association",city="Vancouver",hood="Multiple",prio="P2",ig="@vancouverpickleballassociation",aud="TBD",audsrc="",source="Verified Web",acttype="Hydration Station",notes="Hydration at Box League round robin sessions running Apr to Sep 2026, on court sampling at clinics."),
- dict(name="False Creek Racing Canoe Club",city="Vancouver",hood="Granville Island",prio="P2",ig="@falsecreekcanoeclub",aud="TBD",audsrc="",source="Verified Web",acttype="Hydration Station",notes="Dock hydration during summer dragon boat and paddling training and regattas."),
- dict(name="Victoria Sport and Social Club",city="Victoria",hood="Multiple",prio="P2",ig="@vicsportnsocial",aud="TBD",audsrc="",source="Verified Web",acttype="Sampling",notes="Post game sampling at the sport and pub socials. Sponsor a summer beach volleyball or soccer division."),
- dict(name="Pickleball Kelowna Club",city="Kelowna",hood="Parkinson Rec Centre",prio="P2",ig="@pickleballkelownaclub",aud="700 members",audsrc="Instagram @pickleballkelownaclub states the club is home to 700 members",source="Verified Web",acttype="Hydration Station",notes="Hydration at the outdoor courts during the May to Sep 2026 season, on court sampling at the Kelowna Open."),
+ dict(name="Urban Rec Vancouver",city="Vancouver",hood="Mount Pleasant",prio="P1",ig="@urbanrec",aud="56,000 members (self stated)",audsrc="Urban Rec Vancouver website states over 56,000 members, brand self stated figure",source="Verified Web",notes="Largest sport and social club in Western Canada. Leagues across Vancouver, Richmond and Burnaby."),
+ dict(name="Vancouver Dodgeball League",city="Vancouver",hood="Multiple",prio="P2",ig="@vdldodgeball",aud="2,000+ players, 260+ teams",audsrc="VDL sources describe over 260 teams and 2,000 plus players at peak",source="Verified Web",notes="Non profit dodgeball league playing in school and community gyms."),
+ dict(name="Vancouver Pickleball Association",city="Vancouver",hood="Multiple",prio="P2",ig="@vancouverpickleballassociation",aud="TBD",audsrc="",source="Verified Web",notes="Box league runs Apr to Sep 2026 across community centres and outdoor courts."),
+ dict(name="False Creek Racing Canoe Club",city="Vancouver",hood="Granville Island",prio="P2",ig="@falsecreekcanoeclub",aud="TBD",audsrc="",source="Verified Web",notes="Dragon boat, outrigger and sprint paddling club based on Granville Island."),
+ dict(name="Victoria Sport and Social Club",city="Victoria",hood="Multiple",prio="P2",ig="@vicsportnsocial",aud="TBD",audsrc="",source="Verified Web",notes="Mixed adult leagues, 9 plus sports running for summer 2026."),
+ dict(name="Pickleball Kelowna Club",city="Kelowna",hood="Parkinson Rec Centre",prio="P2",ig="@pickleballkelownaclub",aud="700 members",audsrc="Instagram @pickleballkelownaclub states the club is home to 700 members",source="Verified Web",notes="Plays on 12 fenced outdoor courts, May to Sep season, hosts the Kelowna Open."),
 ],
 "Campus & Student Groups":[
- dict(name="UBC Thunderbirds Athletics",city="Vancouver",hood="UBC",prio="P1",ig="@ubctbirds",aud="33,000 IG",audsrc="Instagram @ubctbirds follower count, web search 2026. 26 varsity teams per gothunderbirds.ca",source="Verified Web",acttype="Event Booth",notes="Hydration sampling at home varsity games, recovery station at the gate."),
- dict(name="AMS of UBC",city="Vancouver",hood="UBC",prio="P1",ig="ams.ubc.ca",aud="60,000 students",audsrc="AMS represents more than 60,000 students per ams.ubc.ca, operates 200 plus clubs",source="Verified Web",acttype="Sampling",notes="Sampling at orientation and frosh week in the AMS Nest, placement at club fairs."),
- dict(name="SFU Recreation",city="Burnaby",hood="Burnaby Mountain",prio="P2",ig="@sfurecreation",aud="4,500 IG",audsrc="Instagram @sfurecreation follower count, web search 2026",source="Verified Web",acttype="Hydration Station",notes="Hydration at intramural league finals and at Conquer The Mountain 2026, sampling at the fitness centre."),
- dict(name="UVic Vikes Recreation",city="Victoria",hood="UVic",prio="P2",ig="vikesrec.ca",aud="22,000 students",audsrc="UVic enrolment over 22,000 students per uvic.ca, Vikes Recreation open to all students",source="Verified Web",acttype="Hydration Station",notes="Hydration at intramural games, sampling at the CARSA recreation centre."),
- dict(name="Students Union Okanagan of UBC",city="Kelowna",hood="UBC Okanagan",prio="P2",ig="@suo_ubc",aud="12,000 students",audsrc="SUO represents over 12,000 students per suo.ca",source="Verified Web",acttype="Sampling",notes="Sampling at The Well student pub and orientation, hydration at the new recreation facility launch."),
- dict(name="Camosun College Student Society",city="Victoria",hood="Lansdowne",prio="P3",ig="camosunstudent.org",aud="9,000+ students",audsrc="CCSS represents the 9,000 plus students of Camosun College per camosunstudent.org",source="Verified Web",acttype="Event Booth",notes="Sampling at club days and student events, wellness booth at the Lansdowne campus."),
+ dict(name="UBC Thunderbirds Athletics",city="Vancouver",hood="UBC",prio="P1",ig="@ubctbirds",aud="33,000 IG",audsrc="Instagram @ubctbirds follower count, web search 2026. 26 varsity teams per gothunderbirds.ca",source="Verified Web",notes="26 varsity teams across 15 sports at the Point Grey campus."),
+ dict(name="AMS of UBC",city="Vancouver",hood="UBC",prio="P1",ig="ams.ubc.ca",aud="60,000 students",audsrc="AMS represents more than 60,000 students per ams.ubc.ca, operates 200 plus clubs",source="Verified Web",notes="Student society running the Nest student union building and 200 plus clubs."),
+ dict(name="SFU Recreation",city="Burnaby",hood="Burnaby Mountain",prio="P2",ig="@sfurecreation",aud="4,500 IG",audsrc="Instagram @sfurecreation follower count, web search 2026",source="Verified Web",notes="Intramural leagues open to students, staff and faculty."),
+ dict(name="UVic Vikes Recreation",city="Victoria",hood="UVic",prio="P2",ig="vikesrec.ca",aud="22,000 students",audsrc="UVic enrolment over 22,000 students per uvic.ca, Vikes Recreation open to all students",source="Verified Web",notes="Campus recreation programs based at the CARSA centre."),
+ dict(name="Students' Union Okanagan of UBC",city="Kelowna",hood="UBC Okanagan",prio="P2",ig="@suo_ubc",aud="12,000 students",audsrc="SUO represents over 12,000 students per suo.ca",source="Verified Web",notes="Runs The Well student pub and The Green Bean cafe. New recreation facility broke ground May 2026."),
+ dict(name="Camosun College Student Society",city="Victoria",hood="Lansdowne",prio="P3",ig="camosunstudent.org",aud="9,000+ students",audsrc="CCSS represents the 9,000 plus students of Camosun College per camosunstudent.org",source="Verified Web",notes="Student society across the Lansdowne and Interurban campuses."),
 ],
 "Wellness & Recovery":[
- dict(name="Tevah Wellness",city="Vancouver",hood="Yaletown",prio="P1",source="Verified Web",inbc="Yes",acttype="Contra Product",aud="TBD",audsrc="",notes="Imported from the BC Tracker Community tab so it is tracked once. Sauna and recovery. Address 955 Pacific Blvd."),
- dict(name="HAVN Saunas",city="Victoria",hood="Inner Harbour",prio="P1",ig="@havn.saunas",aud="34,000 IG",audsrc="Instagram @havn.saunas follower count, web search 2026",source="Verified Web",acttype="Hydration Station",notes="Post sauna and cold plunge hydration sampling on the deck, stock at the rest commons. Floating barge spa."),
- dict(name="Kolm Kontrast Nordic Spa",city="Vancouver",hood="Cambie Village",prio="P1",ig="@kolmkontrast",aud="12,000 IG",audsrc="Instagram @kolmkontrast follower count, web search 2026",source="Verified Web",acttype="Hydration Station",notes="Post sauna hydration sampling at the rest stage between heat and cold cycles."),
- dict(name="RITUAL Nordic Spa",city="Victoria",hood="Harris Green",prio="P2",ig="@ritualnordicspa",aud="9,400 IG",audsrc="Instagram @ritualnordicspa follower count, web search 2026",source="Verified Web",acttype="Contra Product",notes="Stock electrolytes in the onsite cafe, offer along the sauna circuit and salt lounge."),
- dict(name="Float House Vancouver",city="Vancouver",hood="Gastown",prio="P2",ig="@float_house",aud="9,000 IG",audsrc="Instagram @float_house follower count, web search 2026",source="Verified Web",acttype="Contra Product",notes="Post float and cold plunge rehydration station, stock in the recovery area."),
- dict(name="Regen Recovery",city="Vancouver",hood="Downtown",prio="P2",ig="@regenrecovery",aud="3,900 IG",audsrc="Instagram @regenrecovery follower count, web search 2026",source="Verified Web",acttype="Contra Product",notes="Stock electrolytes in the recovery lounge fridge for post sauna, cold plunge and IV clients."),
- dict(name="BioShack",city="Kelowna",hood="Kelowna",prio="P3",ig="@bioshack",aud="TBD",audsrc="",source="Verified Web",acttype="Contra Product",notes="Stock in the self led contrast therapy suite fridge. Located at Sweat Studios."),
+ dict(name="Tevah Wellness",city="Vancouver",hood="Yaletown",prio="P1",source="Verified Web",inbc="Yes",aud="TBD",audsrc="",notes="Imported from the BC Tracker Community tab so it is tracked once. Sauna and recovery. Address 955 Pacific Blvd."),
+ dict(name="HAVN Saunas",city="Victoria",hood="Inner Harbour",prio="P1",ig="@havn.saunas",aud="34,000 IG",audsrc="Instagram @havn.saunas follower count, web search 2026",source="Verified Web",notes="Floating sauna barge on the Inner Harbour with cold plunge circuits."),
+ dict(name="Kolm Kontrast Nordic Spa",city="Vancouver",hood="Cambie Village",prio="P1",ig="@kolmkontrast",aud="12,000 IG",audsrc="Instagram @kolmkontrast follower count, web search 2026",source="Verified Web",notes="Nordic spa at 525 W 8th Ave with heat and cold cycles."),
+ dict(name="RITUAL Nordic Spa",city="Victoria",hood="Harris Green",prio="P2",ig="@ritualnordicspa",aud="9,400 IG",audsrc="Instagram @ritualnordicspa follower count, web search 2026",source="Verified Web",notes="Nordic spa with an onsite cafe and salt lounge."),
+ dict(name="Float House Vancouver",city="Vancouver",hood="Gastown",prio="P2",ig="@float_house",aud="9,000 IG",audsrc="Instagram @float_house follower count, web search 2026",source="Verified Web",notes="Float and cold plunge studio at 70 W Cordova St."),
+ dict(name="Regen Recovery",city="Vancouver",hood="Downtown",prio="P2",ig="@regenrecovery",aud="3,900 IG",audsrc="Instagram @regenrecovery follower count, web search 2026",source="Verified Web",notes="Recovery lounge with sauna, cold plunge and IV services."),
+ dict(name="BioShack",city="Kelowna",hood="Kelowna",prio="P3",ig="@bioshack",aud="TBD",audsrc="",source="Verified Web",notes="Self led contrast therapy suite located at Sweat Studios."),
 ],
 "Ambassadors & Creators":[
- dict(name="Angela Liguori",city="Vancouver",prio="P1",ig="@angelaliggs",aud="908,000 IG",audsrc="Instagram @angelaliggs follower count, web search 2026",source="Verified Web",acttype="Ambassador",notes="Paid summer outdoor ambassador, 3 reels on hikes and trail days, co branded BC trails giveaway."),
- dict(name="Bailey Campbell",city="Kelowna",prio="P1",ig="@basicswithbails",aud="641,000 IG",audsrc="Instagram @basicswithbails follower count, web search 2026. A tracker listed 394,700, reverify",source="Verified Web",acttype="Co Branded Content",notes="Kelowna Foodie. Okanagan recipe and lifestyle reel plus a discount code drop."),
- dict(name="Twin Coast",city="Vancouver",prio="P1",ig="@twincoast",aud="537,000 IG",audsrc="Instagram @twincoast follower count, web search 2026. Also large on TikTok and YouTube",source="Verified Web",acttype="Co Branded Content",notes="Plant based recipe duo. Smoothie or sparkling electrolyte mocktail reel, co branded giveaway."),
- dict(name="Vancouver Dietitians",city="Vancouver",hood="South Granville",prio="P2",ig="@vancouverdietitians",aud="64,000 IG",audsrc="Instagram @vancouverdietitians follower count, web search 2026",source="Verified Web",acttype="Co Branded Content",notes="Dietitian led hydration and electrolytes education reel, recipe content."),
- dict(name="Cam Lee",city="Vancouver",prio="P2",ig="@camleeyoga",aud="47,000 IG",audsrc="Instagram @camleeyoga follower count, web search 2026",source="Verified Web",acttype="Ambassador",notes="Yoga and wellness ambassador, recovery and hydration angle, co branded studio giveaway."),
- dict(name="Caroline Doucet",city="Vancouver",prio="P2",ig="@nourishedbycaroline",aud="38,000 IG",audsrc="Instagram @nourishedbycaroline follower count, web search 2026",source="Verified Web",acttype="Co Branded Content",notes="Registered dietitian, plant friendly audience. Mocktail or hydration recipe plus an education post."),
- dict(name="Trudy Leung",city="Vancouver",prio="P2",ig="@missvancityfoodie",aud="37,000 IG",audsrc="Instagram @missvancityfoodie follower count, web search 2026",source="Verified Web",acttype="Co Branded Content",notes="Miss Vancity Foodie. Local lifestyle content pairing the can with Vancouver spots, co branded giveaway."),
- dict(name="Hilary Ann Yang",city="Vancouver",prio="P2",ig="@thehilaryann",aud="31,000 IG",audsrc="Instagram @thehilaryann follower count, web search 2026",source="Verified Web",acttype="Ambassador",notes="Trail and run creator tied to Squamish. Paid summer ambassador, 3 post run hydration reels, community giveaway."),
+ dict(name="Angela Liguori",city="Vancouver",prio="P1",ig="@angelaliggs",aud="908,000 IG",audsrc="Instagram @angelaliggs follower count, web search 2026",source="Verified Web",notes="Outdoor and hiking creator covering BC trails."),
+ dict(name="Bailey Campbell",city="Kelowna",prio="P1",ig="@basicswithbails",aud="641,000 IG",audsrc="Instagram @basicswithbails follower count, web search 2026. A tracker listed 394,700, reverify",source="Verified Web",notes="Kelowna Foodie. Recipe and lifestyle content."),
+ dict(name="Twin Coast",city="Vancouver",prio="P1",ig="@twincoast",aud="537,000 IG",audsrc="Instagram @twincoast follower count, web search 2026. Also large on TikTok and YouTube",source="Verified Web",notes="Twin sisters, plant based recipe creators with a cookbook brand."),
+ dict(name="Vancouver Dietitians",city="Vancouver",hood="South Granville",prio="P2",ig="@vancouverdietitians",aud="64,000 IG",audsrc="Instagram @vancouverdietitians follower count, web search 2026",source="Verified Web",notes="Registered dietitian duo with a South Granville clinic."),
+ dict(name="Cam Lee",city="Vancouver",prio="P2",ig="@camleeyoga",aud="47,000 IG",audsrc="Instagram @camleeyoga follower count, web search 2026",source="Verified Web",notes="Yoga and wellness creator."),
+ dict(name="Caroline Doucet",city="Vancouver",prio="P2",ig="@nourishedbycaroline",aud="38,000 IG",audsrc="Instagram @nourishedbycaroline follower count, web search 2026",source="Verified Web",notes="Registered dietitian, plant based recipes, non diet approach."),
+ dict(name="Trudy Leung",city="Vancouver",prio="P2",ig="@missvancityfoodie",aud="37,000 IG",audsrc="Instagram @missvancityfoodie follower count, web search 2026",source="Verified Web",notes="Miss Vancity Foodie. Local food and lifestyle content."),
+ dict(name="Hilary Ann Yang",city="Vancouver",prio="P2",ig="@thehilaryann",aud="31,000 IG",audsrc="Instagram @thehilaryann follower count, web search 2026",source="Verified Web",notes="Trail running creator tied to Squamish, runs a women's trail running community."),
 ],
 "Charity & Causes":[
- dict(name="BC Childrens Hospital Foundation",city="Vancouver",hood="Queen Elizabeth Park",prio="P1",ig="fundraise.bcchf.ca",aud="10,000 runners target 2026",audsrc="runguides and BCCHF pages, 2026 aims to welcome more than 10,000 runners",source="Verified Web",acttype="Sponsorship",actdate=D((2026,6,8)),notes="RBC Race for the Kids, Jun 8 2026, Queen Elizabeth Park. Hydration sponsor at the finish and family carnival."),
- dict(name="Greater Vancouver Food Bank",city="Burnaby",hood="Swangard Stadium",prio="P2",ig="foodbank.bc.ca",aud="TBD",audsrc="",source="Verified Web",acttype="Event Booth",actdate=D((2026,6,23)),notes="Foodstock, Jun 23 2026, Swangard Stadium, 19 plus music and food festival. Non alcoholic sampling booth, cause campaign."),
- dict(name="Backpack Buddies",city="Vancouver",hood="Multiple",prio="P2",ig="@backpackbuddiesbc",aud="4,347 IG, 6,800 kids weekly",audsrc="Web search, 4,347 Instagram followers and over 6,800 kids reached weekly, 1.8 million meals in 2025 and 2026",source="Verified Web",acttype="Sponsorship",actdate=D((2026,6,8)),notes="Birdies and Buddies golf tournament Jun 8 2026. Beverage sponsor for on course stations, cause campaign on can sales."),
- dict(name="Victoria Hospice",city="Victoria",hood="Oak Bay",prio="P3",ig="victoriahospice.org",aud="TBD",audsrc="",source="Verified Web",acttype="Sponsorship",actdate=D((2026,5,3)),notes="Hike for Hospice May 3 2026 at Willows Beach. Also a Goddess Run charity of choice. Hydration sponsor and sampling."),
- dict(name="Wild One Run for Youth Mental Health",city="Kelowna",hood="Wilden",prio="P3",ig="wildonerun.ca",aud="TBD",audsrc="",source="Verified Web",acttype="Hydration Station",actdate=D((2026,10,3)),notes="Trail run and walk Oct 3 2026, Wilden trails. Proceeds to Foundry Kelowna. Finish line hydration and sampling."),
+ dict(name="BC Children's Hospital Foundation",city="Vancouver",hood="Queen Elizabeth Park",prio="P1",ig="fundraise.bcchf.ca",aud="10,000 runners target 2026",audsrc="runguides and BCCHF pages, 2026 aims to welcome more than 10,000 runners",source="Verified Web",notes="Hosts RBC Race for the Kids, Jun 8 2026 at Queen Elizabeth Park. 5k plus 2k fun run and a family carnival."),
+ dict(name="Greater Vancouver Food Bank",city="Burnaby",hood="Swangard Stadium",prio="P2",ig="foodbank.bc.ca",aud="TBD",audsrc="",source="Verified Web",notes="Hosts Foodstock, Jun 23 2026 at Swangard Stadium. A 19 plus outdoor music and food festival."),
+ dict(name="Backpack Buddies",city="Vancouver",hood="Multiple",prio="P2",ig="@backpackbuddiesbc",aud="4,347 IG, 6,800 kids weekly",audsrc="Web search, 4,347 Instagram followers and over 6,800 kids reached weekly, 1.8 million meals in 2025 and 2026",source="Verified Web",notes="Hosts the Birdies and Buddies golf tournament Jun 8 2026. School food programs across 83 BC communities."),
+ dict(name="Victoria Hospice",city="Victoria",hood="Oak Bay",prio="P3",ig="victoriahospice.org",aud="TBD",audsrc="",source="Verified Web",notes="Hosts Hike for Hospice, May 3 2026 at Willows Beach. A Goddess Run charity of choice."),
+ dict(name="Wild One Run for Youth Mental Health",city="Kelowna",hood="Wilden",prio="P3",ig="wildonerun.ca",aud="TBD",audsrc="",source="Verified Web",notes="Trail run and walk Oct 3 2026 on the Wilden trails. Proceeds to Foundry Kelowna."),
 ],
 }
 
 # =====================================================================
 # LOOKUPS DATA
 # =====================================================================
-OWNERS = ["Louis To","Aaron","Teresa","Rijo","Jacquie","Kelsey","Caitlin","Maddie",
-"Alisa Beilhartz","Heather Prince","Mercy Anil","Marcelle Correia","Annika Lepik",
-"Ana Miranda","Paula Giancroce","Richard Deutsch"]
+OWNERS = ["Maddie"]
 PRIORITY = ["P1","P2","P3"]
 STATUS = ["Open","Outreach Sent","In Conversation","Proposal Sent","Agreed","Activated",
 "Repeat Partner","Lost","On Hold"]
@@ -197,6 +205,7 @@ HOOD = ["Cambie Village","Coal Harbour","Commercial Drive","Downtown","Dunbar","
 "Mount Pleasant","Multiple","North Burnaby","Oak Bay","Olympic Village","Parkinson Rec Centre",
 "Queen Elizabeth Park","South Granville","Strathcona","Swangard Stadium","UBC","UBC Okanagan",
 "UVic","Bridgeport","Burnaby Mountain","Waterfront Park","West End","Wilden","Willows Beach","Yaletown"]
+EVENTSTATUS = ["Idea","Scoping","Approved","Moved To Events Tab","Passed"]
 
 LU_COLS = [   # (header, list, defined_name)
  ("Owner", OWNERS, "LU_Owner"),
@@ -213,6 +222,7 @@ LU_COLS = [   # (header, list, defined_name)
  ("Role", ROLE, "LU_Role"),
  ("City", CITY, "LU_City"),
  ("Neighbourhood", HOOD, "LU_Neighbourhood"),
+ ("Event Status", EVENTSTATUS, "LU_EventStatus"),
 ]
 
 # =====================================================================
@@ -234,7 +244,7 @@ def hcell(ws, row, col, text):
 print("building lookups...")
 # ---------------- LOOKUPS ----------------
 lu = wb.active; lu.title = "Lookups"
-title_row(lu, "Lookups : edit any column here to update the dropdowns across the file.", "N")
+title_row(lu, "Lookups : edit any column here to update the dropdowns across the file.", "O")
 for i,(hdr,vals,nm) in enumerate(LU_COLS):
     col = i+1
     hc = lu.cell(2,col,hdr); hc.font = font(12, True, WHITE); hc.fill = fill(C_HEADER)
@@ -247,6 +257,7 @@ for i,(hdr,vals,nm) in enumerate(LU_COLS):
     dn = DefinedName(nm, attr_text=f"OFFSET(Lookups!${L}$3,0,0,MAX(1,COUNTA(Lookups!${L}$3:${L}$1000)),1)")
     wb.defined_names[nm] = dn
 lu.freeze_panes = "A3"; lu.row_dimensions[2].height = 30
+lu.sheet_properties.tabColor = "B7C9C1"
 
 # =====================================================================
 # TYPE TABS
@@ -287,9 +298,9 @@ def add_cond_formats(ws):
     for val,clr in [("Verified Web",F_GREEN),("Verified Phone",F_GREEN),("Verified In Person",F_GREEN),
                     ("Pending",F_AMBER),("Unverified",F_P3)]:
         cf(f"P{FIRST}:P{LASTROW}", CellIsRule(operator="equal", formula=[f'"{val}"'], fill=fill(clr)))
-    # Days since activity S : >14 red then >7 amber
+    # Days since activity S : red over 14 for any row, amber over 7 on P1 rows
     cf(f"S{FIRST}:S{LASTROW}", CellIsRule(operator="greaterThan", formula=["14"], fill=fill(F_RED)))
-    cf(f"S{FIRST}:S{LASTROW}", CellIsRule(operator="greaterThan", formula=["7"], fill=fill(F_AMBER)))
+    cf(f"S{FIRST}:S{LASTROW}", FormulaRule(formula=[f'AND($F{FIRST}="P1",$S{FIRST}>7)'], fill=fill(F_AMBER)))
     # Next Action Date past due U
     cf(f"U{FIRST}:U{LASTROW}", FormulaRule(formula=[f'AND($U{FIRST}<>"",$U{FIRST}<TODAY())'], fill=fill(F_RED)))
     # SKU AI:AK
@@ -308,32 +319,31 @@ def build_type_tab(tname):
     for i in range(DATA_ROWS):
         r = FIRST + i
         ws.row_dimensions[r].height = 20
-        ws.cell(r,1, i+1).font = font();
         # default styling for every cell in row
         for c in range(1, NCOL+1):
             cell = ws.cell(r,c)
             cell.font = font(); cell.border = BORD
             cell.alignment = A_CL if c in CENTERCOLS else A_L
-        # Partnership type label only when a partner exists
         d = rows[i] if i < len(rows) else None
         if d:
-            ws.cell(r,3, tname)
             for k,col in KEYCOL.items():
                 if k in d and d[k] not in (None,""):
                     ws.cell(r,col, d[k])
-            # defaults
+            # defaults for researched rows
             if "status" not in d: ws.cell(r,7,"Open")
+            if "owner" not in d: ws.cell(r,8,"Maddie")
             if "warm" not in d: ws.cell(r,17,"Cold")
             if "inbc" not in d: ws.cell(r,34,"No")
-        # formulas (always present so they work as rows fill in)
-        ws.cell(r,19, f'=IF(ISBLANK(R{r}),"",TODAY()-R{r})')          # Days Since Activity
-        ws.cell(r,27, f'=IF(OR($Z{r}="",$Y{r}="",$Y{r}=0),"",$Z{r}/($Y{r}*24))')  # Cost Per Can
+        # live formulas on every row so new entries behave the same
+        ws.cell(r,1, f'=IF($B{r}="","",ROW()-2)')                                   # auto number
+        ws.cell(r,3, f'=IF($B{r}="","","{tname}")')                                 # auto type label
+        ws.cell(r,19, f'=IF(ISBLANK(R{r}),"",TODAY()-R{r})')                        # Days Since Activity
+        ws.cell(r,27, f'=IF(OR($Z{r}="",$Y{r}="",$Y{r}=0),"",$Z{r}/($Y{r}*24))')    # Cost Per Can
         # number formats
         for c in DATECOLS: ws.cell(r,c).number_format = FMT_DATE
         for c in MONEYCOLS: ws.cell(r,c).number_format = FMT_MONEY
         ws.cell(r,27).number_format = FMT_CENTS
         ws.cell(r,19).number_format = FMT_INT
-        ws.cell(r,1).alignment = A_CL
     ws.freeze_panes = "C3"
     ws.auto_filter.ref = f"A2:{LASTCOL}{LASTROW}"
     ws.sheet_properties.tabColor = "4F8A78"
@@ -388,12 +398,13 @@ MLR = "'Master List'!"   # shorthand for formulas, ranges $3:$500
 
 # =====================================================================
 # ACTIVATION CALENDAR  (chronological, soonest first, formula driven)
+# Starts empty on purpose. Fills itself as the team enters Activation Dates.
 # =====================================================================
 print("building activation calendar...")
 cal = wb.create_sheet("Activation Calendar")
 CAL_HDRS = ["Activation Date","Partner","Type","Owner","Cases Committed","Status","Nearby Retail Doors"]
 title_row(cal, "Activation Calendar   (every booked activation, soonest first)", "G")
-subtitle(cal, 2, "Auto sorted from the type tabs. Any row with an Activation Date appears here in date order. This tab is the heartbeat of the file.")
+subtitle(cal, 2, "Starts empty on purpose. Enter an Activation Date on any type tab and that row appears here automatically, in date order. This tab is the heartbeat of the file.")
 for c,htext in enumerate(CAL_HDRS, start=1):
     hcell(cal, 2, c, htext)
 calw = {1:16,2:30,3:22,4:18,5:14,6:18,7:34}
@@ -449,7 +460,7 @@ kpi(11,"Cost Per Can Sampled","=IFERROR(SUM({M}$Y$3:$Y$500)/(24*SUM({M}$X$3:$X$5
 kpi(13,"Days Until Costco Road Show","=MAX(0,DATE(2026,8,1)-TODAY())","#,##0")
 
 def sect(row,col,title,w2="Count"):
-    a=hcell(dash,row,col,title); b=hcell(dash,row,col+1,w2); return
+    hcell(dash,row,col,title); hcell(dash,row,col+1,w2)
 def line(row,col,label,formula,numfmt=None,bold=False):
     a=dash.cell(row,col,label); a.font=font(11,bold,C_DATA); a.alignment=A_L
     b=dash.cell(row,col+1,formula); b.font=font(11,bold,C_DATA); b.alignment=A_CL
@@ -458,6 +469,13 @@ def line(row,col,label,formula,numfmt=None,bold=False):
 sect(7,1,"Pipeline by Stage")
 for i,s in enumerate(STATUS):
     line(8+i,1,s,"=COUNTIF({M}$F$3:$F$500,\"{s}\")".format(M=ML,s=s))
+# List Health (A18)
+sect(18,1,"List Health")
+line(19,1,"Overdue Next Actions",'=COUNTIF({M}$T$3:$T$500,"<"&TODAY())'.format(M=ML))
+line(20,1,"Stale P1 Over 7 Days",'=COUNTIFS({M}$E$3:$E$500,"P1",{M}$R$3:$R$500,">7")'.format(M=ML))
+line(21,1,"Verified Rows","=COUNTIF({M}$O$3:$O$500,\"Verified Web\")+COUNTIF({M}$O$3:$O$500,\"Verified Phone\")+COUNTIF({M}$O$3:$O$500,\"Verified In Person\")".format(M=ML))
+line(22,1,"Pending Rows","=COUNTIF({M}$O$3:$O$500,\"Pending\")".format(M=ML))
+line(23,1,"Unverified Rows","=COUNTIF({M}$O$3:$O$500,\"Unverified\")".format(M=ML))
 # Partners by Type (D7)
 sect(7,4,"Partners by Type")
 for i,t in enumerate(TYPES):
@@ -476,13 +494,13 @@ for i,(lbl,ref,fmt) in enumerate([("Total Budget","=Budget!B14",FMT_MONEY),("Com
         ("Spent","=Budget!D14",FMT_MONEY),("Remaining","=Budget!E14",FMT_MONEY),("% Spent","=Budget!F14",FMT_PCT)]):
     line(8+i,10,lbl,ref,fmt)
 # SKU status (J14)
-a=hcell(dash,14,10,"SKU Status"); hcell(dash,14,11,"Requested"); hcell(dash,14,12,"Sampled"); hcell(dash,14,13,"Stocked")
+hcell(dash,14,10,"SKU Status"); hcell(dash,14,11,"Requested"); hcell(dash,14,12,"Sampled"); hcell(dash,14,13,"Stocked")
 for i,(sku,col) in enumerate([("Raspberry 4338",ml_letter(35)),("Lemon Lime 4336",ml_letter(36)),("Pineapple Passion Fruit 4340",ml_letter(37))]):
     dash.cell(15+i,10,sku).font=font(11,False,C_DATA)
-    for j,st in enumerate(["Requested","Sampled","Stocked"]):
-        cc=dash.cell(15+i,11+j,"=COUNTIF({M}${c}$3:${c}$500,\"{s}\")".format(M=ML,c=col,s=st))
+    for j,stt in enumerate(["Requested","Sampled","Stocked"]):
+        cc=dash.cell(15+i,11+j,"=COUNTIF({M}${c}$3:${c}$500,\"{s}\")".format(M=ML,c=col,s=stt))
         cc.font=font(11,False,C_DATA); cc.alignment=A_CL
-dash.cell(19,1,"Every figure refreshes automatically. To change a record, edit its type tab. The Master List, Calendar and these tiles all update on their own.").font=font(11,False,C_SUB)
+dash.cell(25,1,"Every figure refreshes automatically. To change a record, edit its type tab. The Master List, Calendar and these tiles all update on their own.").font=font(11,False,C_SUB)
 dash.sheet_properties.tabColor = "2E5A4E"
 
 # =====================================================================
@@ -493,10 +511,10 @@ TARGETS = {"Run Clubs":10,"Gyms & Studios":10,"Events & Festivals":8,"Sports Tea
 "Campus & Student Groups":6,"Wellness & Recovery":6,"Ambassadors & Creators":8,"Charity & Causes":4}
 ts = wb.create_sheet("Type Summary")
 ts.sheet_view.showGridLines = False
-title_row(ts, "Type Summary", "J")
-TS_HDR=["Partnership Type","Target (draft)","Partners","P1","P2","P3","In Conversation","Agreed","Activated","Cases Committed"]
+title_row(ts, "Type Summary", "K")
+TS_HDR=["Partnership Type","Target (draft)","Partners","P1","P2","P3","In Conversation","Agreed","Activated","Cases Committed","% to Target"]
 for c,htext in enumerate(TS_HDR,start=1): hcell(ts,2,c,htext)
-tsw={1:24,2:14,3:12,4:8,5:8,6:8,7:16,8:12,9:12,10:16}
+tsw={1:24,2:14,3:12,4:8,5:8,6:8,7:16,8:12,9:12,10:16,11:12}
 for c,w in tsw.items(): ts.column_dimensions[get_column_letter(c)].width=w
 ts.row_dimensions[2].height=50
 for i,t in enumerate(TYPES):
@@ -509,16 +527,24 @@ for i,t in enumerate(TYPES):
       "=COUNTIF('{t}'!$G$3:$G$32,\"In Conversation\")".format(t=t),
       "=COUNTIF('{t}'!$G$3:$G$32,\"Agreed\")".format(t=t),
       "=COUNTIF('{t}'!$G$3:$G$32,\"Activated\")+COUNTIF('{t}'!$G$3:$G$32,\"Repeat Partner\")".format(t=t),
-      "=SUM('{t}'!$X$3:$X$32)".format(t=t)]
+      "=SUM('{t}'!$X$3:$X$32)".format(t=t),
+      "=IFERROR(C{r}/B{r},0)".format(r=r)]
     for c,v in enumerate(vals,start=1):
         cell=ts.cell(r,c,v); cell.font=font(); cell.border=BORD
         cell.alignment=A_L if c==1 else A_CL
+        if c==11: cell.number_format=FMT_PCT
 tr=3+len(TYPES)
 ts.cell(tr,1,"Total").font=font(12,True,C_DATA)
 ts.cell(tr,1).fill=fill(C_TOTAL); ts.cell(tr,1).border=BORD
 for c in range(2,11):
     L=get_column_letter(c); cell=ts.cell(tr,c,"=SUM({L}3:{L}{e})".format(L=L,e=tr-1))
     cell.font=font(12,True,C_DATA); cell.fill=fill(C_TOTAL); cell.alignment=A_CL; cell.border=BORD
+ck=ts.cell(tr,11,"=IFERROR(C{r}/B{r},0)".format(r=tr))
+ck.font=font(12,True,C_DATA); ck.fill=fill(C_TOTAL); ck.alignment=A_CL; ck.border=BORD; ck.number_format=FMT_PCT
+# colour cues on % to Target
+tscf = ts.conditional_formatting.add
+tscf("K3:K{}".format(tr), CellIsRule(operator="greaterThanOrEqual", formula=["1"], fill=fill(F_GREEN)))
+tscf("K3:K{}".format(tr), CellIsRule(operator="greaterThanOrEqual", formula=["0.5"], fill=fill(F_AMBER)))
 ts.cell(tr+2,1,"Targets are a starting draft for Louis to confirm. Edit the Target column any time.").font=font(11,False,C_SUB)
 ts.freeze_panes="A3"; ts.sheet_properties.tabColor="3E7C68"
 
@@ -552,35 +578,62 @@ bud.cell(br+2,1,"Total Budget and Committed are yours to set and start at zero. 
 bud.freeze_panes="A3"; bud.sheet_properties.tabColor="8FB3A6"
 
 # =====================================================================
-# SALES TEAM  (copied verbatim from BC Tracker, phone separators as spaces)
+# SUGGESTED EVENTS  (empty parking lot for ideas farther down the line)
+# =====================================================================
+print("building suggested events...")
+se = wb.create_sheet("Suggested Events")
+SE_HDRS = ["#","Event","City","Venue or Neighbourhood","Expected Window","Audience Size",
+"Audience Source","Source","Priority","Event Status","Owner","Why It Fits","Next Step","Notes"]
+SE_LAST = get_column_letter(len(SE_HDRS))   # N
+title_row(se, "Suggested Events", SE_LAST)
+sew = {1:5,2:30,3:14,4:24,5:18,6:16,7:30,8:14,9:10,10:20,11:14,12:32,13:28,14:40}
+for c,htext in enumerate(SE_HDRS, start=1):
+    hcell(se, 2, c, htext)
+    se.column_dimensions[get_column_letter(c)].width = sew[c]
+se.row_dimensions[2].height = 50
+SE_CENTER = {1,3,5,6,8,9,10,11}
+for i in range(DATA_ROWS):
+    r = FIRST + i
+    se.row_dimensions[r].height = 20
+    for c in range(1, len(SE_HDRS)+1):
+        cell = se.cell(r,c)
+        cell.font = font(); cell.border = BORD
+        cell.alignment = A_CL if c in SE_CENTER else A_L
+    se.cell(r,1, f'=IF($B{r}="","",ROW()-2)')
+# dropdowns
+def se_dv(name, colrange):
+    dv = DataValidation(type="list", formula1=name, allow_blank=True)
+    se.add_data_validation(dv); dv.add(colrange)
+se_dv("LU_City", f"C{FIRST}:C{LASTROW}")
+se_dv("LU_Source", f"H{FIRST}:H{LASTROW}")
+se_dv("LU_Priority", f"I{FIRST}:I{LASTROW}")
+se_dv("LU_EventStatus", f"J{FIRST}:J{LASTROW}")
+se_dv("LU_Owner", f"K{FIRST}:K{LASTROW}")
+# conditional formatting
+secf = se.conditional_formatting.add
+for val,clr in [("Idea",F_GREY),("Scoping",F_PALEBLU),("Approved",F_AMBER),
+                ("Moved To Events Tab",F_GREEN),("Passed",F_RED)]:
+    secf(f"J{FIRST}:J{LASTROW}", CellIsRule(operator="equal", formula=[f'"{val}"'], fill=fill(clr)))
+for val,clr in [("P1",F_P1),("P2",F_P2),("P3",F_P3)]:
+    secf(f"I{FIRST}:I{LASTROW}", CellIsRule(operator="equal", formula=[f'"{val}"'], fill=fill(clr)))
+for val,clr in [("Verified Web",F_GREEN),("Verified Phone",F_GREEN),("Verified In Person",F_GREEN),
+                ("Pending",F_AMBER),("Unverified",F_P3)]:
+    secf(f"H{FIRST}:H{LASTROW}", CellIsRule(operator="equal", formula=[f'"{val}"'], fill=fill(clr)))
+se.freeze_panes = "C3"
+se.auto_filter.ref = f"A2:{SE_LAST}{LASTROW}"
+se.sheet_properties.tabColor = "8FB3A6"
+subtitle(se, LASTROW+2, "Idea parking lot for events farther down the line. It starts empty on purpose. When an idea is approved, add it as a partner row on the Events & Festivals tab and book the activation there. Nothing on this tab feeds the Master List or the Calendar.")
+
+# =====================================================================
+# SALES TEAM  (Maddie only, per Louis)
 # =====================================================================
 print("building sales team...")
 st = wb.create_sheet("Sales Team")
-title_row(st, "Organika Sales Team", "F")
-ST_HDR=["Rep","Email","Cell","Region","Default BC Territory","On BC Owner Dropdown?"]
+title_row(st, "Sales Team", "F")
+ST_HDR=["Rep","Email","Cell","Region","Role on This File","On Owner Dropdown?"]
 for c,htext in enumerate(ST_HDR,start=1): hcell(st,2,c,htext)
 SALES=[
-("Louis To","louisnto@gmail.com","TBD verify","BC","BC RTD launch lead and overall owner","Yes"),
-("Aaron","TBD verify","TBD verify","BC","CEO Organika","Yes"),
-("Teresa","TBD verify","TBD verify","BC","TBD confirm role","Yes"),
-("Rijo","TBD verify","TBD verify","BC","TBD confirm role","Yes"),
-("Jacquie","TBD verify","TBD verify","BC","TBD confirm role","Yes"),
-("Kelsey","TBD verify","TBD verify","BC","TBD confirm role","Yes"),
-("Caitlin","TBD verify","TBD verify","BC","TBD confirm role and territory with Louis","Yes"),
-("Maddie","TBD verify","TBD verify","BC","TBD confirm role and territory with Louis","Yes"),
-("Alisa Beilhartz","alisa.beilhartz@organika.com","778 681 1946","BC","Kitsilano, West Side, UBC","Yes"),
-("Heather Prince","heather.prince@organika.com","604 340 7888","BC","Downtown Vancouver, West End, Coal Harbour","Yes"),
-("Mercy Anil","mercy.anil@organika.com","778 227 4699","BC","North Shore (North Vancouver, West Vancouver, Lynn Valley)","Yes"),
-("Marcelle Correia","marcelle.correia@organika.com","672 513 0641","BC","East Vancouver, Commercial Drive, Strathcona","Yes"),
-("Annika Lepik","annika.lepik@organika.com","778 866 4225","BC","Yaletown, Mount Pleasant, Olympic Village","Yes"),
-("Ana Miranda","ana.miranda@organika.com","778 834 1002","BC","Burnaby, Richmond, Tri Cities, Surrey","Yes"),
-("Paula Giancroce","paula.giancroce@organika.com","416 587 7630","BC","Available on BC owner dropdown per Louis","Yes"),
-("Richard Deutsch","richard@organika.com","780 655 1993","AB","Alberta (Phase 3 entry per slide 13)","Yes"),
-("Christine","christine@organika.com","416 453 9164","ON","Ontario, not on BC owner list","No"),
-("Joleen Gruber","joleen.gruber@organika.com","905 220 8045","ON","Ontario, not on BC owner list","No"),
-("Robert Deutsch","robert.deutsch@sympatico.ca","514 793 4711","QC","Quebec, not on BC owner list","No"),
-("Jimmy","parcsp8@hotmail.com","514 578 9884","QC","Quebec, not on BC owner list","No"),
-("Natasha Fahel","natasha.fahel@organika.com","416 271 1229","ON","Ontario, not on BC owner list","No"),
+("Maddie","TBD verify","TBD verify","BC","Community partnerships owner per Louis","Yes"),
 ]
 stw={1:22,2:30,3:16,4:10,5:40,6:22}
 for c,w in stw.items(): st.column_dimensions[get_column_letter(c)].width=w
@@ -590,6 +643,7 @@ for i,row in enumerate(SALES):
     for c,v in enumerate(row,start=1):
         cell=st.cell(r,c,v); cell.font=font(); cell.border=BORD
         cell.alignment=A_L if c in (1,2,5) else A_CL
+subtitle(st, 5, "Maddie runs this file. To add a rep later, add a row here and add the name to the Owner column on the Lookups tab so it appears on the Primary Owner menu.")
 st.freeze_panes="A3"; st.sheet_properties.tabColor="B7C9C1"
 
 # =====================================================================
@@ -615,16 +669,20 @@ gsec(r,"The boundary rule, BC Tracker or this file"); r+=1
 gline(r,"If it sells cans on a shelf it lives in the BC Tracker. If it samples, sponsors, or creates content it lives here."); r+=1
 gline(r,"A partner can live in both files. Use the In BC Tracker column to flag any partner that also sits in the BC Tracker."); r+=1
 gline(r,"This file is the sister to the BC Tracker. That file tracks retail doors. This file tracks community partnerships and activations."); r+=2
+gsec(r,"Nothing here is pre proposed"); r+=1
+gline(r,"Every partner row carries research facts only: who they are, where they are, audience and source."); r+=1
+gline(r,"Activation Type, Activation Date, cases and budget all start blank. They only fill when the team books something real."); r+=1
+gline(r,"The Activation Calendar starts empty for the same reason. Enter an Activation Date on a type tab and the row appears there on its own, soonest first."); r+=2
 gsec(r,"How to use it, 3 steps"); r+=1
 gline(r,"1.  Open your type tab at the bottom (the green tabs). Each tab is one partnership type."); r+=1
-gline(r,"2.  Add or update a partner on a row. Fill name, city, contact, audience, and the activation idea in Notes."); r+=1
-gline(r,"3.  Use the drop down menus to set Priority, Status, Activation Type, and how each flavour is going."); r+=2
+gline(r,"2.  Work the row. Update Status, Last Contacted, Next Action and Next Action Date as you go."); r+=1
+gline(r,"3.  When a partner agrees to something real, pick the Activation Type and enter the Activation Date. The Calendar and Dashboard update on their own."); r+=2
 gsec(r,"What the colours mean, mapped to the BC Tracker"); r+=1
 gline(r,"Green is Activated and Repeat Partner. Same green the BC Tracker uses for Listed and Won."); r+=1
 gline(r,"Amber is In Conversation, Proposal Sent and Agreed. Same amber the BC Tracker uses for Pitched and In Negotiation."); r+=1
 gline(r,"Pale blue is Outreach Sent. Grey is Open and On Hold. Rose is Lost."); r+=1
 gline(r,"Priority shades match the BC Tracker. P1 is warm orange, P2 is blue, P3 is grey."); r+=1
-gline(r,"A Next Action Date in the past turns rose. Days Since Activity turns amber over 7 days and rose over 14, which flags stale P1 work."); r+=2
+gline(r,"A Next Action Date in the past turns rose. Days Since Activity turns amber over 7 days on P1 rows and rose over 14 days on any row."); r+=2
 gsec(r,"The Source tag on every row"); r+=1
 gline(r,"Verified Web","Confirmed on an official site or public Instagram in 2026."); r+=1
 gline(r,"Pending","The partner is real but a detail such as a follower count rests on a single source. Reverify before outreach."); r+=1
@@ -635,31 +693,32 @@ gline(r,"Raspberry is SKU 4338.  Lemon Lime is SKU 4336.  Pineapple Passion Frui
 gline(r,"Each SKU column takes blank, Requested, Sampled, or Stocked."); r+=2
 gsec(r,"Which tabs do what"); r+=1
 for lbl,desc in [
- ("Dashboard","Live executive overview. Totals, pipeline, activations, budget, SKU status. Read only."),
- ("Activation Calendar","Every booked activation in date order, soonest first. The heartbeat of the file. Read only."),
+ ("Dashboard","Live executive overview. Totals, pipeline, list health, activations, budget, SKU status. Read only."),
+ ("Activation Calendar","Every booked activation in date order, soonest first. Starts empty, fills itself. Read only."),
  ("Master List","Every partner from every type tab in one place. Read only, updates on its own."),
- ("Type Summary","Targets versus actuals per type. Targets are a draft for Louis to confirm. Read only."),
+ ("Type Summary","Targets versus actuals per type with % to target. Targets are a draft for Louis to confirm. Read only."),
  ("Budget","Budget per type. You can fill Total Budget and Committed. Spent rolls up from the type tabs."),
  ("Type tabs","Where the team works. One tab per partnership type. Fully editable."),
+ ("Suggested Events","Idea parking lot for future events. Starts empty. Approved ideas move onto the Events & Festivals tab."),
  ("Lookups","The lists behind every drop down. Add a value here and it appears in the menus."),
- ("Sales Team","Reps, emails and territories. The 16 reps marked Yes drive the Primary Owner menu."),
+ ("Sales Team","Maddie owns this file. Add reps here and on the Lookups Owner column to grow the menu."),
 ]:
     gline(r,lbl,desc); r+=1
 r+=1
 gsec(r,"What each column means"); r+=1
 for lbl,desc in [
  ("Partner Name","The run club, studio, event, team, group, space, creator or cause being pursued."),
- ("Partnership Type","Which of the eight types this partner belongs to."),
+ ("Partnership Type","Which of the eight types this partner belongs to. Fills itself when a name is entered."),
  ("City and Neighbourhood","Where the partner is based. Metro Vancouver first, then Victoria and Kelowna."),
  ("Priority","P1 chase first, P2, or P3."),
  ("Status","Where the partnership sits, from Open through Activated and Repeat Partner."),
- ("Primary Owner","The rep responsible. Drawn from the Sales Team tab."),
+ ("Primary Owner","The rep responsible. Maddie to start, drawn from the Sales Team tab."),
  ("Audience Size and Source","Approximate reach and exactly where that number came from."),
  ("Source","Verified Web, Pending or Unverified. How sure we are the row is real."),
  ("Warm","Warm, Cold, Past Contact or Unknown relationship."),
  ("Last Contacted and Days Since Activity","The most recent contact date and how many days have passed."),
  ("Next Action and Date","The next step and when it is due."),
- ("Activation Type","Sampling, Event Booth, Sponsorship, Ambassador, Contra Product, Co Branded Content or Hydration Station."),
+ ("Activation Type","Sampling, Event Booth, Sponsorship, Ambassador, Contra Product, Co Branded Content or Hydration Station. Pick when you book."),
  ("Activation Date","The date of the activation. Anything with a date shows on the Activation Calendar."),
  ("Cases Committed and Delivered","Cases promised and cases delivered. 24 cans per case."),
  ("Cost and Cost Per Can","Dollars spent and the cost for each can sampled. Cost Per Can fills once both Cost and Cases Delivered exist."),
@@ -672,13 +731,15 @@ for lbl,desc in [
     gline(r,lbl,desc); r+=1
 r+=1
 gsec(r,"Version"); r+=1
-gline(r,"2026 06","First build. Live Dashboard, Activation Calendar, read only Master List, eight type tabs, and this Guide.")
+gline(r,"2026 06  v1","First build. 60 researched partners, live Dashboard, Activation Calendar, read only Master List, eight type tabs.")
+r+=1
+gline(r,"2026 06  v2","Cleared every proposed activation so the team books real ones. Maddie set as the single owner. Added the empty Suggested Events tab, List Health on the Dashboard and % to Target on the Type Summary.")
 gd.sheet_properties.tabColor="B7C9C1"
 
 # =====================================================================
 # ORDER + SAVE
 # =====================================================================
-order = ["Dashboard","Activation Calendar","Master List","Type Summary","Budget"] + TYPES + ["Lookups","Sales Team","Guide"]
+order = ["Dashboard","Activation Calendar","Master List","Type Summary","Budget"] + TYPES + ["Suggested Events","Lookups","Sales Team","Guide"]
 wb._sheets.sort(key=lambda s: order.index(s.title))
 wb.active = 0
 try:
@@ -689,4 +750,3 @@ except Exception:
 wb.save(OUT)
 print("SAVED:", OUT)
 print("master list rows:", ML_ROWS_END, " sheets:", [s.title for s in wb.worksheets])
-
