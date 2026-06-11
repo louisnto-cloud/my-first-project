@@ -3,8 +3,9 @@ import { createContext, useCallback, useContext, useMemo, useState, type ReactNo
 export type Lang = 'vi' | 'en';
 
 const STRINGS: Record<string, { en: string; vi: string }> = {
-  'app.name': { en: 'eTop English', vi: 'eTop English' },
+  'app.name': { en: 'E’TOP English', vi: 'Anh Ngữ E’TOP' },
   'app.tagline': { en: 'Learn English, love English!', vi: 'Học tiếng Anh, yêu tiếng Anh!' },
+  'app.footer': { en: 'E’TOP English Center · Phan Thiết', vi: 'Trung tâm Anh Ngữ E’TOP · Phan Thiết' },
 
   'login.welcome': { en: 'Welcome back!', vi: 'Chào mừng trở lại!' },
   'login.email': { en: 'Email', vi: 'Email' },
@@ -99,8 +100,8 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
   'parent.homework': { en: 'Homework status', vi: 'Tình hình bài tập' },
 
   'feedback.title': { en: 'Feedback', vi: 'Đóng góp ý kiến' },
-  'feedback.subtitle': { en: 'Your ideas help eTop get better 💜', vi: 'Ý kiến của bạn giúp eTop tốt hơn 💜' },
-  'feedback.rating': { en: 'How happy are you with eTop?', vi: 'Bạn hài lòng với eTop thế nào?' },
+  'feedback.subtitle': { en: 'Your ideas help E’TOP get better 💜', vi: 'Ý kiến của bạn giúp E’TOP tốt hơn 💜' },
+  'feedback.rating': { en: 'How happy are you with E’TOP?', vi: 'Bạn hài lòng với E’TOP thế nào?' },
   'feedback.placeholder': { en: 'Share your thoughts, suggestions, or concerns with the center…', vi: 'Chia sẻ ý kiến, góp ý hoặc điều bạn băn khoăn với trung tâm…' },
   'feedback.send': { en: 'Send feedback', vi: 'Gửi ý kiến' },
   'feedback.thanks': { en: 'Thank you for your feedback! 💜', vi: 'Cảm ơn bạn đã góp ý! 💜' },

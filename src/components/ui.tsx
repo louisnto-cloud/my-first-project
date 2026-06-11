@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import type { ReactNode } from 'react';
 import { useApp } from '../store';
 import { useI18n } from '../i18n';
+import { Logo } from './Logo';
 import type { Skill } from '../types';
 import { SKILLS } from '../types';
 
@@ -29,9 +30,9 @@ export function Header({ subtitle }: { subtitle?: string }) {
     <header className="sticky top-0 z-20 border-b border-violet-100 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-3xl items-center justify-between gap-3 px-4 py-3">
         <div className="flex items-center gap-2">
-          <span className="text-2xl">⭐</span>
+          <Logo size={36} />
           <div>
-            <div className="text-lg font-black leading-tight text-violet-700">eTop English</div>
+            <div className="text-lg font-black leading-tight text-violet-700">{t('app.name')}</div>
             {subtitle && <div className="text-xs font-semibold text-violet-400">{subtitle}</div>}
           </div>
         </div>

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useApp } from '../store';
 import { useI18n } from '../i18n';
 import { LangToggle } from '../components/ui';
+import { Logo } from '../components/Logo';
 
 const DEMOS = [
   { key: 'login.demo.student', email: 'minh@etop.vn', emoji: '🦊' },
@@ -32,9 +33,9 @@ export default function Login() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-violet-600 via-violet-500 to-fuchsia-500 p-4">
       <div className="w-full max-w-sm">
-        <div className="mb-6 text-center text-white">
-          <div className="text-6xl">⭐</div>
-          <h1 className="mt-2 text-3xl font-black">eTop English</h1>
+        <div className="mb-6 flex flex-col items-center text-center text-white">
+          <Logo size={88} className="shadow-lg shadow-violet-900/30" />
+          <h1 className="mt-3 text-3xl font-black">{t('app.name')}</h1>
           <p className="font-semibold text-violet-100">{t('app.tagline')}</p>
         </div>
         <div className="card space-y-3 !rounded-3xl p-5">
@@ -83,7 +84,7 @@ export default function Login() {
             </div>
           </div>
         </div>
-        <p className="mt-4 text-center text-xs font-semibold text-violet-100">eTop English Center · Phan Thiết</p>
+        <p className="mt-4 text-center text-xs font-semibold text-violet-100">{t('app.footer')}</p>
       </div>
     </div>
   );
