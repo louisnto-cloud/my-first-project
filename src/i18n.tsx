@@ -5,7 +5,10 @@ export type Lang = 'vi' | 'en';
 const STRINGS: Record<string, { en: string; vi: string }> = {
   'app.name': { en: 'E’TOP English', vi: 'Anh Ngữ E’TOP' },
   'app.tagline': { en: 'Learn English, love English!', vi: 'Học tiếng Anh, yêu tiếng Anh!' },
-  'app.footer': { en: 'E’TOP English Center · Phan Thiết', vi: 'Trung tâm Anh Ngữ E’TOP · Phan Thiết' },
+  'app.footer': {
+    en: 'E’TOP English Center · 166 Nguyễn Hội, Phú Trinh, Phan Thiết · ☎ 089 949 0222',
+    vi: 'Trung tâm Anh Ngữ E’TOP · 166 Nguyễn Hội, P. Phú Trinh, TP. Phan Thiết · ☎ 089 949 0222',
+  },
 
   'login.welcome': { en: 'Welcome back!', vi: 'Chào mừng trở lại!' },
   'login.email': { en: 'Email', vi: 'Email' },
