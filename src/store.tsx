@@ -8,7 +8,12 @@ const SESSION_KEY = 'etop-session-v1';
 function loadDB(): DB {
   try {
     const raw = localStorage.getItem(DB_KEY);
-    if (raw) return JSON.parse(raw) as DB;
+    if (raw) {
+      const db = JSON.parse(raw) as DB;
+      // Migrate databases saved before newer collections existed
+      db.feedback ??= [];
+      return db;
+    }
   } catch {
     // fall through to a fresh seed
   }

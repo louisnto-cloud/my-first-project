@@ -98,6 +98,17 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
   'parent.readonly': { en: 'Read-only view. Contact the center for any questions.', vi: 'Chế độ chỉ xem. Mọi thắc mắc xin liên hệ trung tâm.' },
   'parent.homework': { en: 'Homework status', vi: 'Tình hình bài tập' },
 
+  'feedback.title': { en: 'Feedback', vi: 'Đóng góp ý kiến' },
+  'feedback.subtitle': { en: 'Your ideas help eTop get better 💜', vi: 'Ý kiến của bạn giúp eTop tốt hơn 💜' },
+  'feedback.rating': { en: 'How happy are you with eTop?', vi: 'Bạn hài lòng với eTop thế nào?' },
+  'feedback.placeholder': { en: 'Share your thoughts, suggestions, or concerns with the center…', vi: 'Chia sẻ ý kiến, góp ý hoặc điều bạn băn khoăn với trung tâm…' },
+  'feedback.send': { en: 'Send feedback', vi: 'Gửi ý kiến' },
+  'feedback.thanks': { en: 'Thank you for your feedback! 💜', vi: 'Cảm ơn bạn đã góp ý! 💜' },
+  'feedback.mine': { en: 'Your feedback', vi: 'Ý kiến bạn đã gửi' },
+  'feedback.inbox': { en: 'Feedback inbox', vi: 'Hộp thư góp ý' },
+  'feedback.empty': { en: 'No feedback yet.', vi: 'Chưa có góp ý nào.' },
+  'feedback.cta': { en: 'Have an idea or suggestion?', vi: 'Bạn có ý kiến hoặc đề xuất?' },
+
   'teach.overview': { en: 'Overview', vi: 'Tổng quan' },
   'teach.myClasses': { en: 'My classes', vi: 'Lớp của tôi' },
   'teach.allClasses': { en: 'All classes', vi: 'Tất cả lớp' },

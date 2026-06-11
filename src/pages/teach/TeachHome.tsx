@@ -2,6 +2,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { useApp } from '../../store';
 import { useI18n } from '../../i18n';
 import { Header } from '../../components/ui';
+import { FeedbackInbox } from '../../components/Feedback';
 import { avgPct, studentsInClass } from '../../lib';
 
 export function TeachLayout() {
@@ -72,6 +73,8 @@ export function TeachHome() {
           );
         })}
       </div>
+
+      {isAdmin && <FeedbackInbox />}
 
       <button onClick={resetDemo} className="text-xs font-bold text-slate-300 underline hover:text-slate-400">
         {t('common.resetDemo')}

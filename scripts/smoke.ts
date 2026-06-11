@@ -42,6 +42,13 @@ check((avgPct(db, 's0') ?? 0) > 50, 'minh average suspiciously low');
 check(earnedBadges(db, 's0').length >= 3, `minh should have >=3 badges, got ${earnedBadges(db, 's0').length}`);
 check(leaderboard(db, 'c4').some((r) => r.user.id === 's0'), 'minh missing from class leaderboard');
 
+// feedback entries reference real users with valid ratings
+check(db.feedback.length >= 2, 'expected seeded feedback');
+for (const f of db.feedback) {
+  check(db.users.some((u) => u.id === f.userId), `feedback from unknown user: ${f.id}`);
+  check(f.rating >= 1 && f.rating <= 5, `bad rating: ${f.id}`);
+}
+
 if (fail.length) {
   console.error('SMOKE FAILED:\n' + fail.map((f) => ` - ${f}`).join('\n'));
   process.exit(1);

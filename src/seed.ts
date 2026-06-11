@@ -280,5 +280,16 @@ export function buildSeed(): DB {
     minhLatest.comment = COMMENTS[0];
   }
 
-  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice };
+  const feedback: DB['feedback'] = [
+    {
+      id: 'fb1', userId: 'p0', date: daysAgo(6), rating: 5,
+      message: 'Cảm ơn trung tâm, cháu Minh tiến bộ rõ rệt và rất thích đi học. Mong có thêm hoạt động ngoại khóa bằng tiếng Anh.',
+    },
+    {
+      id: 'fb2', userId: students[students.length - 1].id, date: daysAgo(2), rating: 4,
+      message: 'Lớp học vui và hiệu quả. Nếu có thêm buổi luyện nói với người nước ngoài thì tuyệt vời!',
+    },
+  ];
+
+  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice, feedback };
 }

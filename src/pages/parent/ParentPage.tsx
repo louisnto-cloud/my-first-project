@@ -3,6 +3,7 @@ import { useApp } from '../../store';
 import { useI18n } from '../../i18n';
 import { Header, Pill } from '../../components/ui';
 import { BadgesView, GradesView, HomeworkView, ScheduleView } from '../../components/views';
+import { FeedbackSection } from '../../components/Feedback';
 import { pointsOf, streakOf } from '../../lib';
 
 export default function ParentPage() {
@@ -56,6 +57,8 @@ export default function ParentPage() {
         </div>
 
         <BadgesView studentId={child.id} />
+
+        <FeedbackSection userId={user.id} />
       </main>
     </div>
   );

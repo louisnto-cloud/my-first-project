@@ -5,6 +5,7 @@ import { fmtDate, useI18n, WEEKDAYS } from '../../i18n';
 import { Empty, Header, Pill, scoreColor, TabBar } from '../../components/ui';
 import { BadgesView, GradesView, HomeworkView, LeaderboardView, ScheduleView } from '../../components/views';
 import { FlashcardSession, QuizSession } from '../../components/Flashcards';
+import { FeedbackSection } from '../../components/Feedback';
 import { pointsOf, practicedToday, scoresOf, streakOf, todayISO } from '../../lib';
 import type { VocabList } from '../../types';
 
@@ -135,6 +136,29 @@ export function Dashboard() {
 
       <BadgesView studentId={user.id} />
       {user.classIds[0] && <LeaderboardView classId={user.classIds[0]} highlightId={user.id} />}
+
+      <Link to="/app/feedback" className="card flex items-center justify-between gap-3 hover:border-violet-300">
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">💬</span>
+          <div>
+            <div className="text-sm font-extrabold">{t('feedback.cta')}</div>
+            <div className="text-xs font-semibold text-slate-400">{t('feedback.subtitle')}</div>
+          </div>
+        </div>
+        <span className="text-violet-400">→</span>
+      </Link>
+    </div>
+  );
+}
+
+export function FeedbackPage() {
+  const { user } = useApp();
+  const { t } = useI18n();
+  if (!user) return null;
+  return (
+    <div className="space-y-4">
+      <h1 className="text-xl font-black">💬 {t('feedback.title')}</h1>
+      <FeedbackSection userId={user.id} />
     </div>
   );
 }

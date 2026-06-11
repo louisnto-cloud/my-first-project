@@ -86,6 +86,14 @@ export interface PracticeEvent {
   points: number;
 }
 
+export interface Feedback {
+  id: string;
+  userId: string;
+  date: string; // YYYY-MM-DD
+  rating: number; // 1-5 stars
+  message: string;
+}
+
 export interface DB {
   users: User[];
   classes: ClassInfo[];
@@ -95,4 +103,5 @@ export interface DB {
   homeworkStatus: HomeworkStatus[];
   vocabLists: VocabList[];
   practice: PracticeEvent[];
+  feedback: Feedback[];
 }
