@@ -3,7 +3,7 @@
 export function Logo({ size = 36, className = '' }: { size?: number; className?: string }) {
   return (
     <img
-      src="/logo.png"
+      src={`${import.meta.env.BASE_URL}logo.png`}
       width={size}
       height={size}
       alt="Anh Ngữ E’TOP"
