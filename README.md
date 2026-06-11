@@ -3,10 +3,9 @@
 A student progress & learning app for **Trung tâm Anh Ngữ E’TOP** (Phan Thiết, Vietnam).
 Built mobile-first as a web app, with a fully bilingual Vietnamese/English interface.
 
-> **Branding:** the logo shown across the app (login, header, favicon) is the
-> single file `public/logo.svg` — replace it with the center's real logo to
-> rebrand everything at once. PNG works too: name it `logo.png`, put it in
-> `public/`, and update the path in `src/components/Logo.tsx` and `index.html`.
+> **Branding:** the official E’TOP logo shown across the app (login, header,
+> favicon) is the single file `public/logo.png` — replace it to update the
+> branding everywhere at once.
 
 See [`APP_PROMPT.md`](./APP_PROMPT.md) for the full product spec.
 
