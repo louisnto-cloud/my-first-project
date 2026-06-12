@@ -90,14 +90,14 @@ describe('class scoping (Phase 1 definition of done)', () => {
   it('tutor sees only classes they teach; 403 on a colleague’s class', async () => {
     const token = await login('lan@etop.vn');
     const ids = ((await get('/classes', token)).json() as { id: string }[]).map((c) => c.id).sort();
-    expect(ids).toEqual(['c1', 'c2']);
+    expect(ids).toEqual(['c1', 'c2', 'up1']);
     expect((await get('/classes/c3', token)).statusCode).toBe(403);
   });
 
   it('owner sees every class in the org but cannot see another tenant', async () => {
     const token = await login('zhao@etop.vn');
     const ids = ((await get('/classes', token)).json() as { id: string }[]).map((c) => c.id);
-    expect(ids).toHaveLength(6);
+    expect(ids).toHaveLength(9); // 6 demo classes + Up 1/2/3
     // Cross-tenant by ID: 404, never data
     expect((await get('/classes/cx', token)).statusCode).toBe(404);
   });

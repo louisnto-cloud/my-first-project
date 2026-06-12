@@ -69,6 +69,38 @@ export async function seedDemo(db: DB): Promise<void> {
     await db.query('INSERT INTO enrollments (class_id, student_id) VALUES ($1, $2)', [cls[0], id]);
   }
 
+  // Owner's real class structure: Up 1 / Up 2 / Up 3 with custom codes.
+  const upClasses: [id: string, site: string, teacher: string, name: string, schedule: string][] = [
+    ['up1', 'site_nh', 'u_lan', 'Up 1', 'Thứ 2, 3, 4 · 17:30–19:00'],
+    ['up2', 'site_nh', 'u_david', 'Up 2', 'Thứ 5, 6, 7 · 17:30–19:00'],
+    ['up3', 'site_nh', 'u_trang', 'Up 3', 'Thứ 7 & Chủ nhật · 9:00–10:30'],
+  ];
+  for (const [id, site, teacher, name, schedule] of upClasses) {
+    await db.query('INSERT INTO classes (id, org_id, site_id, teacher_id, name, level, schedule_note) VALUES ($1, $2, $3, $4, $5, $6, $7)', [
+      id, 'org_etop', site, teacher, name, 'a1_movers', schedule,
+    ]);
+  }
+  const upStudents: [name: string, code: string, classId: string][] = [
+    ['Nguyễn Gia Bảo', 'UP1482', 'up1'],
+    ['Trần Khánh Vy', 'UP1739', 'up1'],
+    ['Lê Minh Khôi', 'UP1256', 'up1'],
+    ['Phạm Thuỳ Linh', 'UP2614', 'up2'],
+    ['Võ Quốc Huy', 'UP2358', 'up2'],
+    ['Đặng Mai Anh', 'UP2907', 'up2'],
+    ['Bùi Đức Long', 'UP3171', 'up3'],
+    ['Hoàng Yến Nhi', 'UP3845', 'up3'],
+    ['Ngô Tuấn Kiệt', 'UP3520', 'up3'],
+    ['Lý Thảo Vy', 'UP3693', 'up3'],
+  ];
+  for (let i = 0; i < upStudents.length; i++) {
+    const [name, code, classId] = upStudents[i];
+    const id = `su${i + 1}`;
+    await db.query('INSERT INTO users (id, org_id, site_id, role, name, email, login_code, password_hash) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)', [
+      id, 'org_etop', 'site_nh', 'student', name, `${code.toLowerCase()}@hv.etop.local`, code, pw,
+    ]);
+    await db.query('INSERT INTO enrollments (class_id, student_id) VALUES ($1, $2)', [classId, id]);
+  }
+
   await db.query('INSERT INTO users (id, org_id, site_id, role, name, email, phone, password_hash) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)', [
     'p0', 'org_etop', null, 'parent', 'Trần Văn Hùng', 'phuhuynh@etop.vn', '+84901000001', pw,
   ]);

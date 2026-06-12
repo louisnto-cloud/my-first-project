@@ -142,24 +142,47 @@ export function registerLearningRoutes(app: FastifyInstance, db: DB): void {
   });
 
   // ---------- Roster management (teacher pastes the student list) ----------
+  // Accepts plain names (codes auto-issued) or name+code pairs (the
+  // center's own code scheme, e.g. UP1482). Only codes in this list are
+  // recognized at login — that IS the approval.
   app.post('/classes/:id/students', async (req, reply) => {
     const { id } = req.params as { id: string };
     const ctx = await requireTeach(req, reply, db, id);
     if (!ctx) return;
-    const body = z.object({ names: z.array(z.string().min(1).max(120)).min(1).max(60) }).safeParse(req.body);
+    const body = z
+      .object({
+        names: z.array(z.string().min(1).max(120)).max(60).optional(),
+        students: z
+          .array(z.object({ name: z.string().min(1).max(120), code: z.string().regex(/^[A-Za-z0-9-]{4,20}$/).optional() }))
+          .max(60)
+          .optional(),
+      })
+      .safeParse(req.body);
     if (!body.success) return reply.code(400).send({ error: 'invalid_input' });
+    const entries = [
+      ...(body.data.names ?? []).map((name) => ({ name, code: undefined as string | undefined })),
+      ...(body.data.students ?? []),
+    ];
+    if (entries.length === 0 || entries.length > 60) return reply.code(400).send({ error: 'invalid_input' });
+
+    // Custom codes must be free before any account is created.
+    for (const e of entries) {
+      if (!e.code) continue;
+      const clash = await one(db, 'SELECT 1 AS x FROM users WHERE login_code = $1', [e.code.toUpperCase()]);
+      if (clash) return reply.code(409).send({ error: 'code_taken', code: e.code.toUpperCase() });
+    }
 
     const created = [];
-    for (const name of body.data.names) {
-      const code = await allocateLoginCode(db, 'HV');
+    for (const e of entries) {
+      const code = e.code ? e.code.toUpperCase() : await allocateLoginCode(db, 'HV');
       const sid = rid('s');
       await db.query(
         `INSERT INTO users (id, org_id, site_id, role, name, email, login_code, password_hash)
          VALUES ($1, $2, $3, 'student', $4, $5, $6, $7)`,
-        [sid, ctx.actor.orgId, ctx.cls.siteId, name.trim(), `${code.toLowerCase()}@hv.etop.local`, code, hashPassword(rid('pw'))],
+        [sid, ctx.actor.orgId, ctx.cls.siteId, e.name.trim(), `${code.toLowerCase()}@hv.etop.local`, code, hashPassword(rid('pw'))],
       );
       await db.query('INSERT INTO enrollments (class_id, student_id) VALUES ($1, $2)', [id, sid]);
-      created.push({ id: sid, name: name.trim(), loginCode: code });
+      created.push({ id: sid, name: e.name.trim(), loginCode: code });
     }
     await audit(db, { orgId: ctx.actor.orgId, actorId: ctx.actor.id, action: 'class.students_added', entity: 'class', entityId: id, detail: { count: created.length } });
     return { created };

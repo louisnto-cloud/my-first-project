@@ -81,6 +81,30 @@ describe('roster management', () => {
     expect((await req('POST', '/classes/c3/students', lan, { names: ['X'] })).statusCode).toBe(403);
   });
 
+  it('Up-class students log in with the center’s own UP codes and see only their class', async () => {
+    const tok = (await codeLogin('up1482')).json().token as string; // Nguyễn Gia Bảo
+    const classes = (await req('GET', '/classes', tok)).json() as { id: string; name: string; teacherName: string }[];
+    expect(classes).toHaveLength(1);
+    expect(classes[0]).toMatchObject({ id: 'up1', name: 'Up 1', teacherName: 'Ms. Lan' });
+    // A code from Up 3 cannot open Up 1.
+    const up3 = (await codeLogin('UP3171')).json().token as string;
+    expect((await req('GET', '/classes/up1', up3)).statusCode).toBe(403);
+  });
+
+  it('importing a list with custom codes works; duplicate codes are rejected before anything is created', async () => {
+    const res = await req('POST', '/classes/c1/students', lan, {
+      students: [{ name: 'Mai Tự Chọn', code: 'UP1999' }, { name: 'Hồ Auto Code' }],
+    });
+    const created = res.json().created as { name: string; loginCode: string }[];
+    expect(created.find((c) => c.name === 'Mai Tự Chọn')?.loginCode).toBe('UP1999');
+    expect(created.find((c) => c.name === 'Hồ Auto Code')?.loginCode).toMatch(/^HV\d{4}$/);
+    expect((await codeLogin('up1999')).statusCode).toBe(200);
+
+    // UP1482 already belongs to a seeded student → whole import rejected.
+    const dup = await req('POST', '/classes/c1/students', lan, { students: [{ name: 'X', code: 'UP1482' }] });
+    expect(dup.statusCode).toBe(409);
+  });
+
   it('rotating a student code kills the old one instantly', async () => {
     const rotated = await req('POST', '/students/s0/rotate-code', lan);
     const newCode = rotated.json().loginCode as string;
