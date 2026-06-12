@@ -117,6 +117,23 @@ export const UI = {
 
   // Rose Window
   roseWindow: v('The Rose Window', 'Cửa sổ hoa hồng'),
+
+  // Practices (Mass walkthrough, Rosary trainer)
+  chapelPractices: v('Practices', 'Thực hành'),
+  massTitle: v('Walk through the Mass', 'Bước theo Thánh lễ'),
+  massSubtitle: v('Every moment explained — what to say, when to stand, sit, and kneel.', 'Từng khoảnh khắc được giải thích — nói gì, khi nào đứng, ngồi và quỳ.'),
+  postureStand: v('Stand', 'Đứng'),
+  postureSit: v('Sit', 'Ngồi'),
+  postureKneel: v('Kneel', 'Quỳ'),
+  massPriestSays: v('The priest says', 'Linh mục đọc'),
+  massYouSay: v('You answer', 'Bạn thưa'),
+  massDone: v('You have walked the whole Mass. Next Sunday, none of it will be a stranger to you.', 'Bạn đã đi trọn một Thánh lễ. Chúa nhật tới, sẽ không còn điều gì xa lạ với bạn nữa.'),
+  massPostureNote: v('Postures vary a little from country to country. When unsure, simply follow your neighbors.', 'Tư thế có thể khác đôi chút giữa các nước. Khi không chắc, bạn cứ làm theo những người bên cạnh.'),
+  rosaryTitle: v('The Rosary', 'Kinh Mân Côi'),
+  rosarySubtitle: v('Your own rosary, bead by bead. The Joyful Mysteries.', 'Chuỗi Mân Côi của bạn, từng hạt một. Năm Sự Vui.'),
+  rosaryAnnounce: v('The next mystery', 'Mầu nhiệm tiếp theo'),
+  rosaryTapNext: v('Tap for the next bead', 'Chạm để sang hạt tiếp theo'),
+  rosaryDone: v('A whole rosary, prayed. The beads your fiancé gave you know their purpose now.', 'Trọn một chuỗi Mân Côi đã được nguyện. Những hạt chuỗi vị hôn phu tặng bạn giờ đã biết sứ mạng của mình.'),
 } as const;
 
 export type UIKey = keyof typeof UI;

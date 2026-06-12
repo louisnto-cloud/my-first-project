@@ -51,7 +51,18 @@ export type ArtKind =
   | 'tomb-morning'
   | 'relic-blood'
   | 'emmaus-road'
-  | 'ascension';
+  | 'ascension'
+  // World 3 · Paris, the Mass, and the Rosary
+  | 'notre-dame'
+  | 'pentecost-fire'
+  | 'keys-shepherd'
+  | 'bible-open'
+  | 'mass-altar'
+  | 'monstrance'
+  | 'organ-pipes'
+  | 'visitation'
+  | 'presentation-temple'
+  | 'finding-temple';
 
 export interface Scripture {
   /** Book chapter:verse, e.g. "John 8:12" */

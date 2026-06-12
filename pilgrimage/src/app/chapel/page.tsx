@@ -3,6 +3,7 @@
 // ─── MY CHAPEL: candles, prayers, journal, and quiet settings ────────────────
 
 import { useRef, useState } from 'react';
+import Link from 'next/link';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { PRAYERS } from '@/content/prayers';
@@ -29,6 +30,21 @@ export default function ChapelPage() {
       </header>
 
       <ChapelOfCandles />
+
+      {/* Practices: the two crown jewels */}
+      <section className="rounded-3xl border border-ivory/10 bg-[#141b33] p-5">
+        <h2 className="font-display text-lg text-gold">{t(UI.chapelPractices)}</h2>
+        <div className="mt-3 flex flex-col gap-2">
+          <Link href="/mass" className="rounded-2xl border border-gold/30 px-4 py-3.5">
+            <span className="block font-display text-base text-ivory">{t(UI.massTitle)}</span>
+            <span className="mt-0.5 block text-xs text-incense">{t(UI.massSubtitle)}</span>
+          </Link>
+          <Link href="/rosary" className="rounded-2xl border border-gold/30 px-4 py-3.5">
+            <span className="block font-display text-base text-ivory">{t(UI.rosaryTitle)}</span>
+            <span className="mt-0.5 block text-xs text-incense">{t(UI.rosarySubtitle)}</span>
+          </Link>
+        </div>
+      </section>
 
       <RoseWindow />
 

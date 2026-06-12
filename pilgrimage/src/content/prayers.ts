@@ -111,4 +111,70 @@ export const PRAYERS: Prayer[] = [
   },
 ];
 
+PRAYERS.push(
+  {
+    id: 'apostles-creed',
+    name: { en: 'The Apostles’ Creed', vi: 'Kinh Tin Kính', viStatus: 'verified' },
+    en: [
+      'I believe in God, the Father almighty, Creator of heaven and earth,',
+      'and in Jesus Christ, his only Son, our Lord,',
+      'who was conceived by the Holy Spirit, born of the Virgin Mary,',
+      'suffered under Pontius Pilate, was crucified, died and was buried;',
+      'he descended into hell; on the third day he rose again from the dead;',
+      'he ascended into heaven, and is seated at the right hand of God the Father almighty;',
+      'from there he will come to judge the living and the dead.',
+      'I believe in the Holy Spirit, the holy catholic Church, the communion of saints,',
+      'the forgiveness of sins, the resurrection of the body, and life everlasting.',
+      'Amen.',
+    ],
+    vi: [
+      'Tôi tin kính Đức Chúa Trời là Cha phép tắc vô cùng dựng nên trời đất.',
+      'Tôi tin kính Đức Chúa Giêsu Kitô là Con Một Đức Chúa Cha cùng là Chúa chúng tôi;',
+      'bởi phép Đức Chúa Thánh Thần mà Người xuống thai, sinh bởi Bà Maria đồng trinh:',
+      'chịu nạn đời quan Phongxiô Philatô, chịu đóng đanh trên cây Thánh giá, chết và táng xác;',
+      'xuống ngục tổ tông, ngày thứ ba bởi trong kẻ chết mà sống lại;',
+      'lên trời ngự bên hữu Đức Chúa Cha phép tắc vô cùng;',
+      'ngày sau bởi trời lại xuống phán xét kẻ sống và kẻ chết.',
+      'Tôi tin kính Đức Chúa Thánh Thần. Tôi tin có Hội Thánh hằng có ở khắp thế này, các Thánh thông công.',
+      'Tôi tin phép tha tội. Tôi tin xác loài người ngày sau sống lại. Tôi tin hằng sống vậy.',
+      'Amen.',
+    ],
+    viStatus: 'unverified',
+    about: {
+      en: 'The Church’s oldest summary of the whole faith, prayed at the start of the rosary. You have now met almost every line of it on this road.',
+      vi: 'Bản tóm lược đức tin cổ xưa nhất của Giáo hội, được đọc ở đầu chuỗi Mân Côi. Trên con đường này, bạn đã gặp gần như từng dòng của kinh ấy.',
+      viStatus: 'unverified',
+    },
+  },
+  {
+    id: 'hail-holy-queen',
+    name: { en: 'Hail, Holy Queen', vi: 'Kinh Lạy Nữ Vương', viStatus: 'verified' },
+    en: [
+      'Hail, holy Queen, mother of mercy;',
+      'our life, our sweetness, and our hope.',
+      'To thee do we cry, poor banished children of Eve.',
+      'To thee do we send up our sighs, mourning and weeping in this valley of tears.',
+      'Turn then, most gracious advocate, thine eyes of mercy toward us,',
+      'and after this our exile show unto us the blessed fruit of thy womb, Jesus.',
+      'O clement, O loving, O sweet Virgin Mary.',
+      'Amen.',
+    ],
+    vi: [
+      'Lạy Nữ Vương, Mẹ nhân lành, làm cho chúng con được sống, được vui, được cậy.',
+      'Thân lạy Mẹ, chúng con, con cháu Evà ở chốn khách đày, kêu đến cùng Bà;',
+      'chúng con ở nơi khóc lóc than thở kêu khẩn Bà thương.',
+      'Hỡi ôi! Bà là Chúa bầu chúng con, xin ghé mắt thương xem chúng con.',
+      'Đến sau khỏi đày, xin cho chúng con được thấy Đức Chúa Giêsu, con lòng Bà gồm phúc lạ.',
+      'Ôi khoan thay! Nhân thay! Dịu thay! Thánh Maria trọn đời đồng trinh.',
+      'Amen.',
+    ],
+    viStatus: 'unverified',
+    about: {
+      en: 'The prayer that closes the rosary — the Church saying goodnight to its mother, as it has for nine hundred years.',
+      vi: 'Lời kinh khép lại chuỗi Mân Côi — Giáo hội chúc mẹ mình ngủ ngon, như đã làm suốt chín trăm năm.',
+      viStatus: 'unverified',
+    },
+  },
+);
+
 export const prayerById = (id: string) => PRAYERS.find((p) => p.id === id);

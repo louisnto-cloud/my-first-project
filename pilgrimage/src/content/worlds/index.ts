@@ -2,6 +2,7 @@ import type { L, World } from '../types';
 import { HANOI } from './hanoi';
 import { BRUGES_LESSONS_1 } from './bruges-part1';
 import { BRUGES_LESSONS_2 } from './bruges-part2';
+import { PARIS_LESSONS } from './paris';
 
 const u = (en: string, vi: string): L => ({ en, vi, viStatus: 'unverified' });
 
@@ -23,7 +24,7 @@ const PARIS: World = {
   church: u('Notre-Dame de Paris', 'Nhà thờ Đức Bà Paris'),
   place: u('Paris, France', 'Paris, Pháp'),
   theme: u('The Church and the Mass', 'Giáo hội và Thánh lễ'),
-  lessons: [],
+  lessons: PARIS_LESSONS,
 };
 
 const BRUSSELS: World = {

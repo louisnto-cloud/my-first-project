@@ -182,6 +182,28 @@ export const GLOSSARY: GlossaryEntry[] = [
     viStatus: 'verified',
   },
   {
+    id: 'catholic',
+    term: 'catholic',
+    plain: {
+      en: 'A Greek word meaning “universal” — for everyone, everywhere, in every language.',
+      vi: 'Một từ gốc Hy Lạp nghĩa là “phổ quát” — cho mọi người, mọi nơi, trong mọi ngôn ngữ.',
+      viStatus: 'unverified',
+    },
+    vi: 'công giáo',
+    viStatus: 'verified',
+  },
+  {
+    id: 'liturgy',
+    term: 'liturgy',
+    plain: {
+      en: 'The Church’s public prayer together — the Mass above all — with its words, music, and movements.',
+      vi: 'Lời cầu nguyện chung và công khai của Giáo hội — trên hết là Thánh lễ — với lời kinh, âm nhạc và cử chỉ.',
+      viStatus: 'unverified',
+    },
+    vi: 'phụng vụ',
+    viStatus: 'verified',
+  },
+  {
     id: 'cathedral',
     term: 'cathedral',
     plain: {

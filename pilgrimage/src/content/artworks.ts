@@ -162,6 +162,56 @@ export const ARTWORKS: Artwork[] = [
     title: { en: 'The Ascension', vi: 'Chúa Lên Trời', viStatus: 'verified' },
     credit: 'Original scene.',
   },
+  {
+    id: 'notre-dame',
+    title: { en: 'Notre-Dame de Paris', vi: 'Nhà thờ Đức Bà Paris', viStatus: 'verified' },
+    credit: 'Original scene. Future photo: Wikimedia Commons, Notre-Dame de Paris west façade.',
+  },
+  {
+    id: 'pentecost-fire',
+    title: { en: 'Pentecost', vi: 'Lễ Chúa Thánh Thần Hiện Xuống', viStatus: 'verified' },
+    credit: 'Original scene. Future image: Giotto, Pentecost (Wikimedia Commons).',
+  },
+  {
+    id: 'keys-shepherd',
+    title: { en: 'The keys and the crook', vi: 'Chìa khóa và gậy mục tử', viStatus: 'unverified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'bible-open',
+    title: { en: 'The open book', vi: 'Cuốn sách mở', viStatus: 'unverified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'mass-altar',
+    title: { en: 'The altar', vi: 'Bàn thờ', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'monstrance',
+    title: { en: 'The Blessed Sacrament', vi: 'Thánh Thể Chúa', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'organ-pipes',
+    title: { en: 'The great organ', vi: 'Đại phong cầm', viStatus: 'unverified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'visitation',
+    title: { en: 'The Visitation', vi: 'Đức Mẹ thăm viếng', viStatus: 'verified' },
+    credit: 'Original scene. Future image: Giotto, Visitation (Wikimedia Commons).',
+  },
+  {
+    id: 'presentation-temple',
+    title: { en: 'The Presentation in the Temple', vi: 'Dâng Chúa trong Đền Thánh', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'finding-temple',
+    title: { en: 'The Finding in the Temple', vi: 'Tìm thấy Chúa trong Đền Thánh', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
   { id: 'symbol-water', title: { en: 'Water', vi: 'Nước', viStatus: 'verified' }, credit: 'Original symbol.' },
   { id: 'symbol-light', title: { en: 'Light', vi: 'Ánh sáng', viStatus: 'verified' }, credit: 'Original symbol.' },
   { id: 'symbol-bread', title: { en: 'Bread', vi: 'Bánh', viStatus: 'verified' }, credit: 'Original symbol.' },

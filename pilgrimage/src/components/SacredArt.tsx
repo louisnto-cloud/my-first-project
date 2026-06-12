@@ -785,6 +785,283 @@ function Scene({ kind }: { kind: ArtKind }) {
         </>
       );
 
+    case 'notre-dame':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          <Stars seed={37} n={14} />
+          {/* the west façade: two towers, three portals, the rose */}
+          <g fill="#141b33">
+            <rect x="108" y="60" width="56" height="210" />
+            <rect x="236" y="60" width="56" height="210" />
+            <rect x="164" y="92" width="72" height="178" />
+            <rect x="100" y="52" width="72" height="10" />
+            <rect x="228" y="52" width="72" height="10" />
+          </g>
+          {/* the rose window */}
+          <circle cx="200" cy="136" r="26" fill={LAPIS} stroke={GOLD} strokeWidth="2.5" />
+          {Array.from({ length: 12 }, (_, i) => {
+            const a = (i * Math.PI) / 6;
+            return <line key={i} x1="200" y1="136" x2={200 + Math.cos(a) * 26} y2={136 + Math.sin(a) * 26} stroke={GOLD} strokeWidth="1.2" opacity="0.9" />;
+          })}
+          <circle cx="200" cy="136" r="8" fill={GOLD} opacity="0.85" />
+          {/* gallery of arches */}
+          <g fill={GOLD} opacity="0.7">
+            {[118, 136, 154, 246, 264, 282].map((x) => (
+              <path key={x} d={`M${x} 92a5 8 0 0 1 10 0v14h-10z`} />
+            ))}
+          </g>
+          {/* three portals */}
+          <g fill={GOLD} opacity="0.9">
+            <path d="M120 270v-36a14 18 0 0 1 28 0v36z" />
+            <path d="M182 270v-44a18 22 0 0 1 36 0v44z" />
+            <path d="M252 270v-36a14 18 0 0 1 28 0v36z" />
+          </g>
+          <rect x="0" y="268" width="400" height="32" fill="#10162b" />
+          {/* the Seine reflection */}
+          <path d="M110 284h180" stroke={GOLD} strokeWidth="2" opacity="0.15" />
+        </>
+      );
+
+    case 'pentecost-fire':
+      return (
+        <>
+          <rect width="400" height="300" fill="#10162b" />
+          {/* the upper room, dove descending in wind */}
+          <path d="M200 36l14-8 3 13 11 6-16 8-12-6z" fill={IVORY} />
+          <g stroke={GOLD} strokeWidth="1.5" opacity="0.5">
+            <path d="M150 50q50 18 100 0" fill="none" />
+            <path d="M140 70q60 22 120 0" fill="none" />
+          </g>
+          {/* gathered in a half circle, a small flame above each */}
+          {[70, 124, 178, 232, 286, 340].map((x, i) => (
+            <g key={x}>
+              <path
+                d={`M${x} ${150 - (i % 2) * 10}c5 7 8 11 8 15a8 8 0 0 1-16 0c0-4 3-8 8-15z`}
+                fill={GOLD}
+                className="flame"
+              />
+              <circle cx={x} cy={186 - (i % 2) * 10} r="12" fill={i === 2 ? GARNET : i % 2 ? '#22305c' : '#1a2240'} />
+              <path d={`M${x - 16} 250v-${36 - (i % 2) * 10}c0-12 7-20 16-20s16 8 16 20v${36 - (i % 2) * 10}z`} fill={i === 2 ? GARNET : i % 2 ? '#22305c' : '#1a2240'} />
+            </g>
+          ))}
+          {/* Mary at the center, garnet */}
+          <Halo cx={178} cy={176} r={16} />
+          <rect x="0" y="250" width="400" height="50" fill="#0c1122" />
+        </>
+      );
+
+    case 'keys-shepherd':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          <circle cx="200" cy="150" r="100" fill="#22305c" opacity="0.6" />
+          {/* the crossed keys of Peter */}
+          <g stroke={GOLD} strokeWidth="7" strokeLinecap="round" fill="none">
+            <path d="M150 100L250 210" />
+            <path d="M250 100L150 210" />
+          </g>
+          <g fill="none" stroke={GOLD} strokeWidth="5">
+            <circle cx="142" cy="92" r="14" />
+            <circle cx="258" cy="92" r="14" />
+          </g>
+          <g stroke={GOLD} strokeWidth="6" strokeLinecap="round">
+            <path d="M250 210l12-2M244 196l10-4" />
+            <path d="M150 210l-12-2M156 196l-10-4" />
+          </g>
+          {/* the shepherd's crook rising behind */}
+          <path d="M200 268V90a26 26 0 0 1 52 0c0 12-9 22-22 24" fill="none" stroke={IVORY} strokeWidth="6" strokeLinecap="round" opacity="0.55" />
+        </>
+      );
+
+    case 'bible-open':
+      return (
+        <>
+          <rect width="400" height="300" fill="#10162b" />
+          <circle cx="200" cy="120" r="90" fill={GOLD} opacity="0.08" />
+          {/* the open book on a stand */}
+          <path d="M200 110c-30-16-70-16-100-6v110c30-10 70-10 100 6z" fill={IVORY} opacity="0.95" />
+          <path d="M200 110c30-16 70-16 100-6v110c-30-10-70-10-100 6z" fill={IVORY} opacity="0.85" />
+          <path d="M200 110v114" stroke={INCENSE} strokeWidth="2" />
+          {/* text lines */}
+          <g stroke={INCENSE} strokeWidth="2.5" opacity="0.6" strokeLinecap="round">
+            {[126, 140, 154, 168, 182].map((y) => (
+              <path key={y} d={`M116 ${y + 4}c24-6 50-7 74-3M210 ${y + 1}c24-4 50-3 74 3`} fill="none" />
+            ))}
+          </g>
+          {/* illuminated initial */}
+          <rect x="116" y="120" width="16" height="16" rx="2" fill={GARNET} />
+          <path d="M120 124h8M120 132h8M120 124v8" stroke={GOLD} strokeWidth="1.5" />
+          {/* light rising from the page */}
+          <path d="M200 104V64M186 92l-12-22M214 92l12-22" stroke={GOLD} strokeWidth="2" strokeLinecap="round" opacity="0.6" />
+          <rect x="170" y="240" width="60" height="34" fill="#141b33" />
+        </>
+      );
+
+    case 'mass-altar':
+      return (
+        <>
+          <rect width="400" height="300" fill="#10162b" />
+          {/* sanctuary arch */}
+          <path d="M40 300V120a160 130 0 0 1 320 0v180" fill="none" stroke={GOLD} strokeWidth="2" opacity="0.4" />
+          {/* the altar, vested */}
+          <rect x="110" y="190" width="180" height="14" rx="3" fill={IVORY} opacity="0.9" />
+          <rect x="118" y="204" width="164" height="66" fill={GARNET} />
+          <path d="M200 216v34M188 226h24" stroke={GOLD} strokeWidth="4" strokeLinecap="round" />
+          {/* candles either side */}
+          {[92, 308].map((x) => (
+            <g key={x}>
+              <rect x={x - 5} y="150" width="10" height="40" rx="2" fill={IVORY} opacity="0.9" />
+              <path d={`M${x} 132c5 7 8 11 8 16a8 8 0 0 1-16 0c0-5 3-9 8-16z`} fill={GOLD} className="flame" />
+            </g>
+          ))}
+          {/* the chalice and host above the altar */}
+          <circle cx="200" cy="150" r="17" fill={IVORY} opacity="0.95" />
+          <circle cx="200" cy="150" r="17" fill="none" stroke={GOLD} strokeWidth="2" />
+          <path d="M200 142v16M193 149h14" stroke={INCENSE} strokeWidth="1.5" opacity="0.6" />
+          <circle cx="200" cy="150" r="30" fill={GOLD} opacity="0.12" />
+        </>
+      );
+
+    case 'monstrance':
+      return (
+        <>
+          <rect width="400" height="300" fill="#10162b" />
+          <circle cx="200" cy="130" r="110" fill={GOLD} opacity="0.07" />
+          {/* the sunburst monstrance */}
+          {Array.from({ length: 16 }, (_, i) => {
+            const a = (i * Math.PI) / 8;
+            const len = i % 2 ? 52 : 70;
+            return (
+              <line
+                key={i}
+                x1={200 + Math.cos(a) * 34}
+                y1={130 + Math.sin(a) * 34}
+                x2={200 + Math.cos(a) * len}
+                y2={130 + Math.sin(a) * len}
+                stroke={GOLD}
+                strokeWidth={i % 2 ? 3 : 5}
+                strokeLinecap="round"
+              />
+            );
+          })}
+          <circle cx="200" cy="130" r="30" fill="none" stroke={GOLD} strokeWidth="4" />
+          <circle cx="200" cy="130" r="22" fill={IVORY} opacity="0.97" />
+          <path d="M200 122v16M193 129h14" stroke={INCENSE} strokeWidth="1.5" opacity="0.55" />
+          {/* the stem and base */}
+          <path d="M196 200h8v40h-8z" fill={GOLD} />
+          <path d="M170 252h60l-8-12h-44z" fill={GOLD} />
+          <path d="M200 200v-2" stroke={GOLD} strokeWidth="10" strokeLinecap="round" />
+          <circle cx="200" cy="208" r="7" fill={GOLD} />
+        </>
+      );
+
+    case 'organ-pipes':
+      return (
+        <>
+          <rect width="400" height="300" fill="#10162b" />
+          {/* the great organ case */}
+          {[
+            [60, 120], [105, 80], [150, 50], [195, 36], [240, 50], [285, 80], [330, 120],
+          ].map(([x, y], i) => (
+            <g key={i}>
+              <rect x={x - 16} y={y} width="32" height={270 - y} rx="4" fill="#22305c" stroke={GOLD} strokeWidth="1.5" />
+              <rect x={x - 6} y={y + 14} width="12" height="26" rx="6" fill={GOLD} opacity="0.8" />
+            </g>
+          ))}
+          {/* sound, drawn as rings of gold */}
+          <g fill="none" stroke={GOLD} opacity="0.35">
+            <circle cx="200" cy="150" r="120" strokeWidth="1" />
+            <circle cx="200" cy="150" r="150" strokeWidth="0.8" />
+            <circle cx="200" cy="150" r="180" strokeWidth="0.6" />
+          </g>
+          <rect x="0" y="270" width="400" height="30" fill="#0c1122" />
+        </>
+      );
+
+    case 'visitation':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          <circle cx="200" cy="130" r="100" fill={GOLD} opacity="0.09" />
+          {/* a doorway in the hill country */}
+          <path d="M300 290V160a44 50 0 0 1 88 0v130" fill="#141b33" />
+          {/* the two mothers, embracing */}
+          <g fill={GARNET}>
+            <circle cx="172" cy="128" r="15" />
+            <path d="M140 290v-110c0-26 14-44 32-44s32 18 32 44v110z" />
+          </g>
+          <g fill="#22305c">
+            <circle cx="234" cy="134" r="15" />
+            <path d="M202 290v-104c0-26 14-44 32-44s32 18 32 44v104z" />
+          </g>
+          {/* arms reaching to each other */}
+          <path d="M188 168q14 14 30 2" stroke={IVORY} strokeWidth="5" strokeLinecap="round" fill="none" opacity="0.9" />
+          <Halo cx={172} cy={128} r={21} />
+          <Halo cx={234} cy={134} r={21} />
+          <rect x="0" y="282" width="400" height="18" fill="#10162b" />
+        </>
+      );
+
+    case 'presentation-temple':
+      return (
+        <>
+          <rect width="400" height="300" fill="#10162b" />
+          {/* temple columns */}
+          {[60, 340].map((x) => (
+            <g key={x} fill="#1a2240">
+              <rect x={x - 12} y="60" width="24" height="220" />
+              <rect x={x - 18} y="50" width="36" height="12" />
+            </g>
+          ))}
+          <path d="M40 50h320l-20-22H60z" fill="#1a2240" />
+          {/* old Simeon receiving the child */}
+          <g fill={INCENSE}>
+            <circle cx="250" cy="140" r="15" />
+            <path d="M220 280v-96c0-26 13-44 30-44s30 18 30 44v96z" />
+          </g>
+          {/* the child, light in his arms */}
+          <ellipse cx="216" cy="186" rx="22" ry="12" fill={IVORY} />
+          <circle cx="204" cy="180" r="8" fill={IVORY} />
+          <circle cx="212" cy="184" r="24" fill={GOLD} opacity="0.25" />
+          <Halo cx={204} cy={180} r={12} />
+          {/* Mary and Joseph */}
+          <g fill={GARNET}>
+            <circle cx="130" cy="152" r="13" />
+            <path d="M104 280v-86c0-24 12-40 26-40s26 16 26 40v86z" />
+          </g>
+          {/* two doves of the offering */}
+          <path d="M150 240q7-7 14 0M158 252q7-7 14 0" stroke={IVORY} strokeWidth="2" fill="none" opacity="0.7" />
+          <rect x="0" y="278" width="400" height="22" fill="#0c1122" />
+        </>
+      );
+
+    case 'finding-temple':
+      return (
+        <>
+          <rect width="400" height="300" fill="#10162b" />
+          {/* temple interior arches */}
+          <g fill="none" stroke={INCENSE} strokeWidth="2" opacity="0.5">
+            <path d="M40 290V140a60 70 0 0 1 120 0v150" />
+            <path d="M240 290V140a60 70 0 0 1 120 0v150" />
+          </g>
+          {/* the boy, small, teaching from the step */}
+          <rect x="160" y="210" width="80" height="14" rx="3" fill="#1a2240" />
+          <Halo cx={200} cy={148} r={16} />
+          <circle cx="200" cy="148" r="10" fill={IVORY} />
+          <path d="M186 210v-30c0-12 6-20 14-20s14 8 14 20v30z" fill={IVORY} opacity="0.92" />
+          <path d="M182 184l-14 8M218 184l14 8" stroke={IVORY} strokeWidth="3" strokeLinecap="round" opacity="0.7" />
+          {/* the astonished teachers, larger, seated lower */}
+          {[90, 310].map((x, i) => (
+            <g key={x} fill={i ? '#22305c' : '#1a2240'}>
+              <circle cx={x} cy={210} r="14" />
+              <path d={`M${x - 20} 280v-34c0-14 9-24 20-24s20 10 20 24v34z`} />
+            </g>
+          ))}
+          <rect x="0" y="280" width="400" height="20" fill="#080d1a" />
+        </>
+      );
+
     case 'symbol-water':
       return (
         <>

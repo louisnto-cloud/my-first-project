@@ -15,9 +15,10 @@ function Shell({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
-  // The lesson player owns the full screen; navigation hides there so a whole
-  // lesson can be completed one-handed without distraction.
-  const inLesson = pathname.startsWith('/lesson');
+  // Immersive experiences own the full screen; navigation hides there so each
+  // can be completed one-handed without distraction.
+  const inLesson =
+    pathname.startsWith('/lesson') || pathname.startsWith('/mass') || pathname.startsWith('/rosary');
   const inOnboarding = pathname.startsWith('/onboarding');
 
   useEffect(() => {
