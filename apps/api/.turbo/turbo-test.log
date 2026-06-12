@@ -5,16 +5,16 @@
 
  RUN  v2.1.9 /home/user/my-first-project/apps/api
 
- ✓ test/insights.test.ts (13 tests) 5814ms
- ✓ test/safety.test.ts (14 tests) 5918ms
- ✓ test/learning.test.ts (19 tests) 6166ms
- ✓ test/money.test.ts (15 tests) 4110ms
- ✓ test/experience.test.ts (12 tests) 4212ms
- ✓ test/api.test.ts (15 tests) 4295ms
- ✓ test/code-login.test.ts (10 tests) 2204ms
+ ✓ test/safety.test.ts (14 tests) 5966ms
+ ✓ test/insights.test.ts (13 tests) 6019ms
+ ✓ test/learning.test.ts (19 tests) 6340ms
+ ✓ test/experience.test.ts (12 tests) 3634ms
+ ✓ test/money.test.ts (15 tests) 3854ms
+ ✓ test/api.test.ts (15 tests) 3979ms
+ ✓ test/code-login.test.ts (10 tests) 2092ms
 
  Test Files  7 passed (7)
       Tests  98 passed (98)
-   Start at  10:46:13
-   Duration  15.13s (transform 836ms, setup 0ms, collect 3.60s, tests 32.72s, environment 2ms, prepare 738ms)
+   Start at  10:57:09
+   Duration  14.48s (transform 640ms, setup 0ms, collect 3.66s, tests 31.88s, environment 2ms, prepare 764ms)
 
