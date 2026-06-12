@@ -34,6 +34,24 @@ Correct any assumption and dependent plans adjust.
   classes / 5 staff roles and grows toward Part B's full 250-student demo
   tenant phase by phase as the features that need richer data land.
 
+- **D8 (Phase 2):** Escalation defaults — missing after 15 minutes,
+  10 minutes between steps, cascade = staff → each guardian in contact
+  order (call + SMS) → director. Configurable per org later; defaults
+  shipped and tested.
+- **D9 (Phase 2):** Notification delivery is an outbox with a mock
+  provider that "delivers" instantly (A10). Real SMS/call providers
+  replace one function; failed deliveries page a human in Phase 7.
+- **D10 (Phase 2):** The escalation sweep is an endpoint
+  (`POST /safety/sweep`) invoked by tests and, in production, by a
+  per-minute job runner — the job runner lands with hosting (A10).
+- **D11 (Phase 2):** Cut from this phase per the speed/safety rule:
+  the kiosk UI screen. The hard part — offline queue semantics,
+  idempotent sync protocol, verified dismissal flow — is built and
+  tested server-side; the touch UI ships with the portals in Phase 4.
+- **D12 (Phase 2):** Time is an explicit parameter throughout the safety
+  engine (never read from the clock inside logic) so the cascade is
+  deterministic and testable minute-by-minute.
+
 ## Assumptions (pending owner answers to the context questions)
 
 - **A1 — Identity:** "ETOP" = Trung tâm Anh Ngữ E'TOP, Phan Thiết, Việt Nam

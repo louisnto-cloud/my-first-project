@@ -66,8 +66,39 @@ export async function seedDemo(db: DB): Promise<void> {
     await db.query('INSERT INTO enrollments (class_id, student_id) VALUES ($1, $2)', [cls[0], id]);
   }
 
-  await db.query('INSERT INTO users (id, org_id, site_id, role, name, email, password_hash) VALUES ($1, $2, $3, $4, $5, $6, $7)', [
-    'p0', 'org_etop', null, 'parent', 'Trần Văn Hùng', 'phuhuynh@etop.vn', pw,
+  await db.query('INSERT INTO users (id, org_id, site_id, role, name, email, phone, password_hash) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)', [
+    'p0', 'org_etop', null, 'parent', 'Trần Văn Hùng', 'phuhuynh@etop.vn', '+84901000001', pw,
   ]);
-  await db.query("INSERT INTO guardian_students (guardian_id, student_id) VALUES ('p0', 's0')");
+  await db.query('INSERT INTO users (id, org_id, site_id, role, name, email, phone, password_hash) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)', [
+    'p1', 'org_etop', null, 'parent', 'Lê Thị Thanh', 'phuhuynh2@etop.vn', '+84901000002', pw,
+  ]);
+  await db.query("INSERT INTO guardian_students (guardian_id, student_id, contact_order) VALUES ('p0', 's0', 1), ('p1', 's0', 2)");
+
+  // Verified pickup people for the demo student: grandma (PIN 1234) and a
+  // court-blocked person to exercise the blocked-pickup alert flow.
+  await db.query(
+    `INSERT INTO pickup_people (id, org_id, student_id, name, relation, pin_hash, blocked) VALUES
+     ('pk_grandma', 'org_etop', 's0', 'Bà Nội (Nguyễn Thị Tư)', 'grandmother', $1, false),
+     ('pk_blocked', 'org_etop', 's0', 'Blocked Person', 'restricted', $1, true)`,
+    [hashPassword('1234')],
+  );
+
+  // Today's meetings per class so attendance reconciliation has an
+  // expected roster on first boot.
+  const today = new Date();
+  const meeting = (id: string, cls: (typeof classes)[number], startH: number, startM: number, durMin: number, room: string) => {
+    const start = new Date(today);
+    start.setHours(startH, startM, 0, 0);
+    const end = new Date(start.getTime() + durMin * 60000);
+    return db.query(
+      'INSERT INTO class_meetings (id, org_id, class_id, site_id, room, starts_at, ends_at) VALUES ($1, $2, $3, $4, $5, $6, $7)',
+      [id, 'org_etop', cls[0], cls[1], room, start.toISOString(), end.toISOString()],
+    );
+  };
+  await meeting('m1', classes[0], 17, 30, 90, 'P.101');
+  await meeting('m2', classes[1], 17, 30, 90, 'P.102');
+  await meeting('m3', classes[2], 19, 15, 90, 'P.103');
+  await meeting('m4', classes[3], 19, 15, 90, 'P.201');
+  await meeting('m5', classes[4], 17, 30, 90, 'P.301');
+  await meeting('m6', classes[5], 19, 15, 90, 'P.302');
 }

@@ -1,6 +1,31 @@
 # CHANGELOG.md
 
-## Phase 1 — Foundation (in progress → gate)
+## Phase 2 — Safety core (at gate)
+
+- Attendance reconciliation: concrete class meetings as the expected
+  roster; live today-view per site (expected / present / released).
+- Check-in and verified dismissal: pickup people with photo slot + scrypt
+  PIN, released-by/released-to recorded to the second; wrong PIN rejected
+  and logged; blocked pickup person → hard refusal + instant leadership
+  alerts + safety event (child is never released).
+- Missing-child escalation engine: expected-but-absent after 15 min opens
+  an escalation → staff alert → guardian call+SMS cascade in contact
+  order (one guardian per 10-min interval) → director alert; every step
+  timestamped; check-in resolves instantly; manual resolve with reason.
+- Offline kiosk sync protocol: client-generated event IDs, batch replay
+  applied idempotently in time order; duplicate and re-replayed batches
+  are no-ops (proven by tests).
+- Ratio dashboard (present per running meeting vs limit) and emergency
+  mode (one-tap live evacuation roster with last-known room + guardian
+  quick-dial, start/end events logged).
+- Append-only `safety_events` log — the audit/analytics source of truth
+  for every safety action, separate from operational tables.
+- Notifications outbox with mock provider (Twilio/Zalo swap-in later).
+- 14 new end-to-end tests of the safety state machine (29 total green).
+- Cut from this phase, logged: kiosk UI screen (engine + sync protocol
+  complete; screen ships with the portals in Phase 4 — DECISIONS.md D11).
+
+## Phase 1 — Foundation (shipped)
 
 - Restructured into a Turborepo monorepo: `apps/web-prototype` (the
   original demo SPA, moved intact and still deployed), `apps/api`,

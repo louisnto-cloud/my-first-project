@@ -55,6 +55,20 @@ PGlite (WASM Postgres) for dev and tests — real Postgres semantics, no
 system dependencies, in-memory for tests, on-disk for dev
 (`ETOP_DATA_DIR`). Production: hosted Postgres; only `db.ts` changes.
 
+## Safety core (Phase 2)
+
+`apps/api/src/safety.ts` is the deterministic safety engine: check-in,
+verified dismissal (pickup person + PIN, blocked-person hard stop),
+missing-child escalation cascade, ratio, and emergency roster. Time is
+always an explicit parameter — the cascade is testable minute-by-minute.
+`safety_events` is the append-only source of truth for every safety
+action. Offline kiosks queue events locally with client-generated event
+IDs and replay them through `POST /kiosk/sync`, which applies batches
+idempotently in time order (duplicates and re-replays are no-ops).
+Escalations advance via `POST /safety/sweep` (per-minute job in
+production). Notifications flow through an outbox table with a mock
+provider until real SMS/call credentials exist.
+
 ## Testing & CI
 
 `npx turbo run build test` typechecks and tests every workspace.
