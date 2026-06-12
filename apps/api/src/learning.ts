@@ -171,6 +171,10 @@ export async function recordMastery(db: DB, studentId: string, skillScores: Part
     } else {
       await db.query('INSERT INTO mastery (student_id, skill, score, updated_at) VALUES ($1, $2, $3, $4)', [studentId, skill, next, at.toISOString()]);
     }
+    // History powers growth charts and mastery-velocity analytics.
+    await db.query('INSERT INTO mastery_history (id, student_id, skill, score, recorded_at) VALUES ($1, $2, $3, $4, $5)', [
+      rid('mh'), studentId, skill, next, at.toISOString(),
+    ]);
   }
 }
 

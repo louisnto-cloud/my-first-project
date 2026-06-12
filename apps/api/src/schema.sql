@@ -397,6 +397,7 @@ CREATE TABLE IF NOT EXISTS leads (
   contact TEXT NOT NULL,
   child_name TEXT NOT NULL,
   child_age INT,
+  referral_code TEXT,
   stage TEXT NOT NULL DEFAULT 'inquiry',
   notes TEXT NOT NULL DEFAULT '',
   created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
@@ -498,6 +499,76 @@ CREATE TABLE IF NOT EXISTS refunds (
 
 CREATE INDEX IF NOT EXISTS idx_invoices_status ON invoices(org_id, status, due_on);
 CREATE INDEX IF NOT EXISTS idx_leads_stage ON leads(org_id, stage);
+
+-- ---------- Phase 6: Outcomes & intelligence ----------
+
+-- Every mastery update is also recorded as history → growth charts.
+CREATE TABLE IF NOT EXISTS mastery_history (
+  id TEXT PRIMARY KEY,
+  student_id TEXT NOT NULL REFERENCES users(id),
+  skill TEXT NOT NULL,
+  score REAL NOT NULL,
+  recorded_at TIMESTAMPTZ NOT NULL
+);
+
+-- School report-card grades, logged each term → correlation with the
+-- program ("the renewal conversation" chart).
+CREATE TABLE IF NOT EXISTS school_grades (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  student_id TEXT NOT NULL REFERENCES users(id),
+  term TEXT NOT NULL,
+  subject TEXT NOT NULL DEFAULT 'english',
+  grade REAL NOT NULL, -- Vietnamese 0-10 scale
+  recorded_by TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  UNIQUE (student_id, term, subject)
+);
+
+-- Stalled-student intervention workflow.
+CREATE TABLE IF NOT EXISTS interventions (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  student_id TEXT NOT NULL REFERENCES users(id),
+  opened_by TEXT NOT NULL,
+  note TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'open', -- open | resolved
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  resolved_at TIMESTAMPTZ,
+  resolved_by TEXT
+);
+
+-- NPS / pulse surveys, one response per user per term.
+CREATE TABLE IF NOT EXISTS nps_responses (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  user_id TEXT NOT NULL REFERENCES users(id),
+  term TEXT NOT NULL,
+  score INT NOT NULL, -- 0-10
+  comment TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  UNIQUE (user_id, term)
+);
+
+-- Referral program: parent codes → tracked leads → account credits that
+-- apply automatically on the next invoice run.
+CREATE TABLE IF NOT EXISTS referral_codes (
+  code TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  parent_id TEXT NOT NULL UNIQUE REFERENCES users(id)
+);
+
+CREATE TABLE IF NOT EXISTS account_credits (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  parent_id TEXT NOT NULL REFERENCES users(id),
+  amount_vnd BIGINT NOT NULL,
+  reason TEXT NOT NULL,
+  invoice_id TEXT, -- set when applied
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS idx_mastery_history ON mastery_history(student_id, recorded_at);
 
 CREATE INDEX IF NOT EXISTS idx_users_org ON users(org_id);
 CREATE INDEX IF NOT EXISTS idx_classes_org ON classes(org_id);

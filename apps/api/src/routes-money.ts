@@ -209,11 +209,11 @@ export function registerMoneyRoutes(app: FastifyInstance, db: DB): void {
   app.post('/leads', async (req, reply) => {
     const actor = await requireRole(req, reply, LEAD_ROLES);
     if (!actor) return;
-    const body = z.object({ parentName: z.string().min(1), contact: z.string().min(3), childName: z.string().min(1), childAge: z.number().int().min(3).max(18).optional(), siteId: z.string().optional(), notes: z.string().max(2000).default('') }).safeParse(req.body);
+    const body = z.object({ parentName: z.string().min(1), contact: z.string().min(3), childName: z.string().min(1), childAge: z.number().int().min(3).max(18).optional(), siteId: z.string().optional(), notes: z.string().max(2000).default(''), referralCode: z.string().max(20).optional() }).safeParse(req.body);
     if (!body.success) return reply.code(400).send({ error: 'invalid_input' });
     const id = rid('lead');
-    await db.query('INSERT INTO leads (id, org_id, site_id, parent_name, contact, child_name, child_age, notes) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)', [
-      id, actor.orgId, body.data.siteId ?? actor.siteId, body.data.parentName, body.data.contact, body.data.childName, body.data.childAge ?? null, body.data.notes,
+    await db.query('INSERT INTO leads (id, org_id, site_id, parent_name, contact, child_name, child_age, notes, referral_code) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)', [
+      id, actor.orgId, body.data.siteId ?? actor.siteId, body.data.parentName, body.data.contact, body.data.childName, body.data.childAge ?? null, body.data.notes, body.data.referralCode ?? null,
     ]);
     return { id, stage: 'inquiry' };
   });
@@ -230,9 +230,20 @@ export function registerMoneyRoutes(app: FastifyInstance, db: DB): void {
     const { id } = req.params as { id: string };
     const { stage } = (req.body ?? {}) as { stage?: string };
     if (!stage || !LEAD_STAGES.includes(stage)) return reply.code(400).send({ error: 'invalid_stage' });
-    const lead = await one<{ org_id: string; contact: string; parent_name: string }>(db, 'SELECT org_id, contact, parent_name FROM leads WHERE id = $1', [id]);
+    const lead = await one<{ org_id: string; contact: string; parent_name: string; child_name: string; referral_code: string | null; stage: string }>(db, 'SELECT org_id, contact, parent_name, child_name, referral_code, stage FROM leads WHERE id = $1', [id]);
     if (!lead || lead.org_id !== actor.orgId) return reply.code(404).send({ error: 'not_found' });
     await db.query('UPDATE leads SET stage = $2, updated_at = now() WHERE id = $1', [id, stage]);
+
+    // Referral conversion: enrolling a referred lead credits the referrer.
+    if (stage === 'enrolled' && lead.stage !== 'enrolled' && lead.referral_code) {
+      const referrer = await one<{ parent_id: string }>(db, 'SELECT parent_id FROM referral_codes WHERE code = $1 AND org_id = $2', [lead.referral_code, actor.orgId]);
+      if (referrer) {
+        await db.query('INSERT INTO account_credits (id, org_id, parent_id, amount_vnd, reason) VALUES ($1, $2, $3, $4, $5)', [
+          rid('cr'), actor.orgId, referrer.parent_id, 200000, `Referral: ${lead.child_name ?? lead.parent_name}`,
+        ]);
+        await notify(db, { orgId: actor.orgId, channel: 'push', toUserId: referrer.parent_id, body: 'Cảm ơn bạn đã giới thiệu! 200.000đ đã được cộng vào tài khoản. 💜', at: new Date() });
+      }
+    }
     // Nurture touchpoint on stage change (email channel, mock provider).
     await notify(db, { orgId: actor.orgId, channel: 'push', toContact: lead.contact, body: `E'TOP admissions update for ${lead.parent_name}: ${stage}`, at: new Date() });
     await audit(db, { orgId: actor.orgId, actorId: actor.id, action: 'lead.stage_changed', entity: 'lead', entityId: id, detail: { stage } });

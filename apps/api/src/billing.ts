@@ -122,13 +122,33 @@ export async function runBilling(db: DB, p: { orgId: string; period: string; due
       feeTotal += Number(f.amount_vnd);
     }
 
+    // Apply unspent referral/account credits held by the student's guardians.
+    let preCredit = charge.total + feeTotal;
+    const credits = await many<{ id: string; amount_vnd: number; reason: string }>(
+      db,
+      `SELECT c.id, c.amount_vnd, c.reason FROM account_credits c
+        WHERE c.invoice_id IS NULL AND c.parent_id IN (SELECT guardian_id FROM guardian_students WHERE student_id = $1)
+        ORDER BY c.created_at`,
+      [plan.student_id],
+    );
+    let creditApplied = 0;
+    const appliedCreditIds: string[] = [];
+    for (const c of credits) {
+      if (preCredit - creditApplied <= 0) break;
+      const usable = Math.min(Number(c.amount_vnd), preCredit - creditApplied);
+      creditApplied += usable;
+      appliedCreditIds.push(c.id);
+      lines.push({ label: `Credit — ${c.reason}`, amountVnd: -usable });
+    }
+
     const id = rid('inv');
     await db.query(
       `INSERT INTO invoices (id, org_id, student_id, period, line_items, subtotal_vnd, discount_vnd, total_vnd, due_on)
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
-      [id, p.orgId, plan.student_id, p.period, JSON.stringify(lines), charge.subtotal + feeTotal, charge.discount, charge.total + feeTotal, p.dueOn],
+      [id, p.orgId, plan.student_id, p.period, JSON.stringify(lines), charge.subtotal + feeTotal, charge.discount + creditApplied, charge.total + feeTotal - creditApplied, p.dueOn],
     );
     for (const f of fees) await db.query('UPDATE late_fees SET invoice_id = $2 WHERE id = $1', [f.id, id]);
+    for (const cid of appliedCreditIds) await db.query('UPDATE account_credits SET invoice_id = $2 WHERE id = $1', [cid, id]);
 
     const guardians = await many<{ guardian_id: string }>(db, 'SELECT guardian_id FROM guardian_students WHERE student_id = $1', [plan.student_id]);
     for (const g of guardians) {

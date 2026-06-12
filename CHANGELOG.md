@@ -1,6 +1,29 @@
 # CHANGELOG.md
 
-## Phase 5 — Money & admissions (at gate)
+## Phase 6 — Outcomes & intelligence (at gate)
+
+- Mastery decay: skills untouched 30+ days drift toward review (×0.9 per
+  further 30 idle days); growth endpoint serves history + decay-adjusted
+  current mastery with mastered/developing/review labels.
+- Mastery history recorded on every update → growth charts and velocity
+  analytics.
+- School-grade tracking per term with platform-mastery correlation
+  (Pearson, paired at recording time) — the renewal-conversation chart.
+- Academic quality dashboard (academic director/owner): mastery velocity
+  per tutor over 8 weeks, stalled-student flagging (no movement in 21
+  days) with an open/resolve intervention workflow that clears the flag.
+- NPS pulse surveys (one per parent per term) with promoter/detractor
+  summary and comment feed for the owner.
+- Referral program: parent codes, tracked lead conversion, automatic
+  200,000đ account credit that applies itself to the family's next
+  invoice (consumed exactly once, shown as a line item).
+- Compliance exports: audit log and safety events as CSV for
+  owner/auditor roles — and the export action is itself audited.
+- Tutor suggestion endpoint (D14 delivered): ranked by site, level
+  experience, and load, with an explained recommendation.
+- 13 new tests (88 total green).
+
+## Phase 5 — Money & admissions (shipped)
 
 - Billing engine (deterministic, VND-integer math, fully unit-tested):
   monthly plans with mid-month proration (rounded to 1,000đ), sibling +
