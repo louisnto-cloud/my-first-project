@@ -69,6 +69,28 @@ export async function buildServer(db: DB): Promise<FastifyInstance> {
     return { token, user: { id: user.id, name: user.name, role: user.role } };
   });
 
+  // Code login (mã số học viên / mã số giáo viên): no email, no password.
+  // Students and teachers only; codes are rotatable. Parents and managers
+  // keep email+password.
+  app.post('/auth/login-code', async (req, reply) => {
+    const { code } = (req.body ?? {}) as { code?: string };
+    const clean = code?.trim().toUpperCase();
+    if (!clean || clean.length < 4 || clean.length > 20) return reply.code(400).send({ error: 'invalid_input' });
+
+    const user = await one<{ id: string; org_id: string; name: string; role: string }>(
+      db,
+      `SELECT id, org_id, name, role FROM users WHERE login_code = $1 AND role IN ('student', 'tutor') AND archived = false`,
+      [clean],
+    );
+    if (!user) {
+      await audit(db, { action: 'auth.login_failed', detail: { method: 'login_code' } });
+      return reply.code(401).send({ error: 'invalid_code' });
+    }
+    const token = await issueToken(db, user.id);
+    await audit(db, { orgId: user.org_id, actorId: user.id, action: 'auth.login', detail: { method: 'login_code' } });
+    return { token, user: { id: user.id, name: user.name, role: user.role } };
+  });
+
   app.get('/me', async (req, reply) => {
     const actor = await requireActor(req, reply);
     if (!actor) return;
@@ -78,31 +100,35 @@ export async function buildServer(db: DB): Promise<FastifyInstance> {
   app.get('/classes', async (req, reply) => {
     const actor = await requireActor(req, reply);
     if (!actor) return;
-    // Scoped listing: queries are tenant-filtered at the SQL level.
+    // Scoped listing: queries are tenant-filtered at the SQL level. Every
+    // class card shows its homeroom teacher (GV chủ nhiệm) and schedule.
+    const SELECT = `SELECT c.id, c.name, c.level, c.site_id AS "siteId", c.teacher_id AS "teacherId",
+                           t.name AS "teacherName", c.schedule_note AS "scheduleNote"
+                      FROM classes c LEFT JOIN users t ON t.id = c.teacher_id`;
     switch (actor.role) {
       case 'owner':
       case 'academic_director':
       case 'auditor':
-        return many(db, 'SELECT id, name, level, site_id AS "siteId", teacher_id AS "teacherId" FROM classes WHERE org_id = $1 ORDER BY name', [actor.orgId]);
+        return many(db, `${SELECT} WHERE c.org_id = $1 ORDER BY c.name`, [actor.orgId]);
       case 'site_director':
       case 'staff':
       case 'front_desk':
-        return many(db, 'SELECT id, name, level, site_id AS "siteId", teacher_id AS "teacherId" FROM classes WHERE org_id = $1 AND site_id = $2 ORDER BY name', [actor.orgId, actor.siteId]);
+        return many(db, `${SELECT} WHERE c.org_id = $1 AND c.site_id = $2 ORDER BY c.name`, [actor.orgId, actor.siteId]);
       case 'tutor':
-        return many(db, 'SELECT id, name, level, site_id AS "siteId", teacher_id AS "teacherId" FROM classes WHERE org_id = $1 AND teacher_id = $2 ORDER BY name', [actor.orgId, actor.id]);
+        return many(db, `${SELECT} WHERE c.org_id = $1 AND c.teacher_id = $2 ORDER BY c.name`, [actor.orgId, actor.id]);
       case 'student':
         return many(
           db,
-          `SELECT c.id, c.name, c.level, c.site_id AS "siteId", c.teacher_id AS "teacherId"
-             FROM classes c JOIN enrollments e ON e.class_id = c.id
+          `${SELECT} JOIN enrollments e ON e.class_id = c.id
             WHERE c.org_id = $1 AND e.student_id = $2 ORDER BY c.name`,
           [actor.orgId, actor.id],
         );
       case 'parent':
         return many(
           db,
-          `SELECT DISTINCT c.id, c.name, c.level, c.site_id AS "siteId", c.teacher_id AS "teacherId"
-             FROM classes c
+          `SELECT DISTINCT c.id, c.name, c.level, c.site_id AS "siteId", c.teacher_id AS "teacherId",
+                  t.name AS "teacherName", c.schedule_note AS "scheduleNote"
+             FROM classes c LEFT JOIN users t ON t.id = c.teacher_id
              JOIN enrollments e ON e.class_id = c.id
              JOIN guardian_students g ON g.student_id = e.student_id
             WHERE c.org_id = $1 AND g.guardian_id = $2 ORDER BY c.name`,
@@ -145,9 +171,13 @@ export async function buildServer(db: DB): Promise<FastifyInstance> {
       return reply.code(403).send({ error: 'forbidden' });
     }
 
+    // Teaching/managing roles also see each student's login code so they
+    // can hand codes out; students and parents never see others' codes.
+    const showCodes = ['owner', 'academic_director', 'site_director'].includes(actor.role) || (actor.role === 'tutor' && cls.teacherId === actor.id);
     const roster = await many(
       db,
-      `SELECT u.id, u.name FROM users u JOIN enrollments e ON e.student_id = u.id
+      `SELECT u.id, u.name${showCodes ? ', u.login_code AS "loginCode"' : ''}
+         FROM users u JOIN enrollments e ON e.student_id = u.id
         WHERE e.class_id = $1 AND u.archived = false ORDER BY u.name`,
       [id],
     );

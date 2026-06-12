@@ -38,31 +38,33 @@ export async function seedDemo(db: DB): Promise<void> {
     ['u_desk', 'site_nh', 'front_desk', 'Front Desk NH', 'desk@etop.vn'],
     ['u_bill', null, 'billing_admin', 'Ms. Kế Toán', 'bill@etop.vn'],
   ];
+  const teacherCodes: Record<string, string> = { u_lan: 'GV0001', u_david: 'GV0002', u_trang: 'GV0003' };
   for (const [id, site, role, name, email] of users) {
-    await db.query('INSERT INTO users (id, org_id, site_id, role, name, email, password_hash) VALUES ($1, $2, $3, $4, $5, $6, $7)', [
-      id, 'org_etop', site, role, name, email, pw,
+    await db.query('INSERT INTO users (id, org_id, site_id, role, name, email, login_code, password_hash) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)', [
+      id, 'org_etop', site, role, name, email, teacherCodes[id] ?? null, pw,
     ]);
   }
 
-  const classes: [id: string, site: string, teacher: string, name: string, level: string][] = [
-    ['c1', 'site_nh', 'u_lan', 'Starters A', 'pre_a1_starters'],
-    ['c2', 'site_nh', 'u_lan', 'Movers B', 'a1_movers'],
-    ['c3', 'site_nh', 'u_david', 'Teens A2', 'a2_flyers'],
-    ['c4', 'site_nh', 'u_david', 'Teens B1', 'b1'],
-    ['c5', 'site_tt', 'u_trang', 'Flyers C', 'a2_flyers'],
-    ['c6', 'site_tt', 'u_trang', 'Starters B', 'pre_a1_starters'],
+  const classes: [id: string, site: string, teacher: string, name: string, level: string, schedule: string][] = [
+    ['c1', 'site_nh', 'u_lan', 'Starters A', 'pre_a1_starters', 'Thứ 2 & Thứ 5 · 17:30–19:00'],
+    ['c2', 'site_nh', 'u_lan', 'Movers B', 'a1_movers', 'Thứ 3 & Thứ 6 · 17:30–19:00'],
+    ['c3', 'site_nh', 'u_david', 'Teens A2', 'a2_flyers', 'Thứ 2 & Thứ 5 · 19:15–20:45'],
+    ['c4', 'site_nh', 'u_david', 'Teens B1', 'b1', 'Thứ 3 & Thứ 6 · 19:15–20:45'],
+    ['c5', 'site_tt', 'u_trang', 'Flyers C', 'a2_flyers', 'Thứ 4 & Thứ 7 · 17:30–19:00'],
+    ['c6', 'site_tt', 'u_trang', 'Starters B', 'pre_a1_starters', 'Thứ 4 & Chủ nhật · 9:00–10:30'],
   ];
-  for (const [id, site, teacher, name, level] of classes) {
-    await db.query('INSERT INTO classes (id, org_id, site_id, teacher_id, name, level) VALUES ($1, $2, $3, $4, $5, $6)', [
-      id, 'org_etop', site, teacher, name, level,
+  for (const [id, site, teacher, name, level, schedule] of classes) {
+    await db.query('INSERT INTO classes (id, org_id, site_id, teacher_id, name, level, schedule_note) VALUES ($1, $2, $3, $4, $5, $6, $7)', [
+      id, 'org_etop', site, teacher, name, level, schedule,
     ]);
   }
 
   for (let i = 0; i < STUDENT_NAMES.length; i++) {
     const id = `s${i}`;
     const cls = classes[i % classes.length];
-    await db.query('INSERT INTO users (id, org_id, site_id, role, name, email, password_hash) VALUES ($1, $2, $3, $4, $5, $6, $7)', [
-      id, 'org_etop', cls[1], 'student', STUDENT_NAMES[i], i === 0 ? 'minh@etop.vn' : `s${i}@etop.vn`, pw,
+    const code = `HV${String(i + 1).padStart(4, '0')}`;
+    await db.query('INSERT INTO users (id, org_id, site_id, role, name, email, login_code, password_hash) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)', [
+      id, 'org_etop', cls[1], 'student', STUDENT_NAMES[i], i === 0 ? 'minh@etop.vn' : `s${i}@etop.vn`, code, pw,
     ]);
     await db.query('INSERT INTO enrollments (class_id, student_id) VALUES ($1, $2)', [cls[0], id]);
   }

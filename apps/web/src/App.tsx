@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { api, ApiError, hasToken, setToken, type Me } from './api';
 import { makeT, type Lang } from './i18n';
 import { Player } from './Player';
+import { Landing } from './Landing';
+import { ClassManager } from './ClassManager';
 
 // Phase 4 portal: state-routed views per role on the real API.
 
@@ -28,38 +30,17 @@ function Header({ me, lang, setLang, t, onLogout }: { me: Me; lang: Lang; setLan
   );
 }
 
-function Login({ onDone, t }: { onDone: () => void; t: (k: string) => string }) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [err, setErr] = useState('');
-  const go = async () => {
-    try {
-      const res = await api<{ token: string }>('POST', '/auth/login', { email, password });
-      setToken(res.token);
-      onDone();
-    } catch (e) {
-      setErr(e instanceof ApiError ? e.message : 'error');
-    }
-  };
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-violet-600 to-fuchsia-500 p-4">
-      <div className="card w-full max-w-sm space-y-3">
-        <h1 className="text-center text-2xl font-black text-violet-700">⭐ E’TOP Platform</h1>
-        <input className="input" placeholder={t('email')} value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input className="input" type="password" placeholder={t('password')} value={password} onChange={(e) => setPassword(e.target.value)} />
-        {err && <div className="text-sm font-bold text-rose-500">{err}</div>}
-        <button onClick={go} className="btn-primary w-full">{t('signin')}</button>
-        <p className="text-center text-xs font-semibold text-slate-400">
-          minh@etop.vn · phuhuynh@etop.vn · lan@etop.vn · desk@etop.vn · zhao@etop.vn (etop123)
-        </p>
-      </div>
-    </div>
-  );
+interface ClassInfo {
+  id: string;
+  name: string;
+  level: string;
+  teacherName: string | null;
+  scheduleNote: string;
 }
 
 // ---------- Student ----------
 function Student({ t }: { t: (k: string) => string }) {
-  const [classes, setClasses] = useState<{ id: string; name: string }[]>([]);
+  const [classes, setClasses] = useState<ClassInfo[]>([]);
   const [ach, setAch] = useState<{ points: number; streak: number } | null>(null);
   const [assignments, setAssignments] = useState<Record<string, { id: string; title: string; dueAt: string | null; myStatus: string | null }[]>>({});
   const [playing, setPlaying] = useState<string | null>(null);
@@ -67,7 +48,7 @@ function Student({ t }: { t: (k: string) => string }) {
   const [joinMsg, setJoinMsg] = useState('');
 
   const load = async () => {
-    const cls = await api<{ id: string; name: string }[]>('GET', '/classes');
+    const cls = await api<ClassInfo[]>('GET', '/classes');
     setClasses(cls);
     setAch(await api('GET', '/my/achievements'));
     const all: typeof assignments = {};
@@ -99,7 +80,10 @@ function Student({ t }: { t: (k: string) => string }) {
       <h2 className="font-black">{t('myClasses')}</h2>
       {classes.map((c) => (
         <div key={c.id} className="card space-y-2">
-          <div className="font-extrabold">{c.name}</div>
+          <div className="font-extrabold">🏫 Lớp {c.name}</div>
+          <div className="text-xs font-bold text-slate-400">
+            👩‍🏫 GV chủ nhiệm: {c.teacherName ?? '—'}{c.scheduleNote ? ` · 🗓 ${c.scheduleNote}` : ''}
+          </div>
           {(assignments[c.id] ?? []).map((a) => (
             <button key={a.id} onClick={() => setPlaying(a.id)} className="flex w-full items-center justify-between rounded-2xl bg-violet-50 p-3 font-bold hover:bg-violet-100">
               <span>📝 {a.title}</span>
@@ -233,6 +217,7 @@ function Teacher({ lang, t }: { lang: Lang; t: (k: string) => string }) {
 
   return (
     <div className="space-y-4">
+      <ClassManager />
       <div className="card space-y-2">
         <h2 className="font-black text-violet-700">✍️ {t('gradingQueue')} ({queue.length})</h2>
         {queue.map((s) => (
@@ -385,7 +370,7 @@ export default function App() {
   useEffect(() => { void loadMe(); }, []);
 
   if (!ready) return null;
-  if (!me) return <Login onDone={() => void loadMe()} t={t} />;
+  if (!me) return <Landing onDone={() => void loadMe()} />;
 
   const logout = () => { setToken(''); setMe(null); };
 

@@ -93,6 +93,13 @@ Correct any assumption and dependent plans adjust.
   path: payments are bank-transfer/QR initiated by parents and
   reconciled by the billing admin; dunning replaces retry queues.
 
+- **D25 (owner request):** Login codes (HV####/GV####) replace
+  email+password for students and teachers. A code is a bearer
+  credential: mitigations are role restriction (student/tutor only — no
+  parent/owner/billing access via codes), instant rotation, audit of
+  failures, and rate limiting in Phase 7. Accepted as the right
+  usability/security trade-off for a children's English center.
+
 ## Assumptions (pending owner answers to the context questions)
 
 - **A1 — Identity:** "ETOP" = Trung tâm Anh Ngữ E'TOP, Phan Thiết, Việt Nam

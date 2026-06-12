@@ -5,11 +5,11 @@ import {
   weightedOverall, type ClassRef, type SkillKey, type SkillScore,
 } from '@etop/domain';
 import { type DB, many, one } from './db.js';
-import type { ActorRow } from './auth.js';
+import { hashPassword, type ActorRow } from './auth.js';
 import { audit } from './audit.js';
 import { notify } from './notify.js';
 import {
-  assignmentQuestions, gradeSubmission, isEnrolled, recordMastery, rid, rotateJoinCode, seededShuffle, serializeForStudent,
+  allocateLoginCode, assignmentQuestions, gradeSubmission, isEnrolled, recordMastery, rid, rotateJoinCode, seededShuffle, serializeForStudent,
 } from './learning.js';
 
 async function getClass(db: DB, id: string): Promise<(ClassRef & { name: string }) | null> {
@@ -139,6 +139,49 @@ export function registerLearningRoutes(app: FastifyInstance, db: DB): void {
     }
     await audit(db, { orgId: ctx.actor.orgId, actorId: ctx.actor.id, action: approve ? 'class.join_approved' : 'class.join_rejected', entity: 'class', entityId: jr.class_id, detail: { studentId: jr.student_id } });
     return { ok: true };
+  });
+
+  // ---------- Roster management (teacher pastes the student list) ----------
+  app.post('/classes/:id/students', async (req, reply) => {
+    const { id } = req.params as { id: string };
+    const ctx = await requireTeach(req, reply, db, id);
+    if (!ctx) return;
+    const body = z.object({ names: z.array(z.string().min(1).max(120)).min(1).max(60) }).safeParse(req.body);
+    if (!body.success) return reply.code(400).send({ error: 'invalid_input' });
+
+    const created = [];
+    for (const name of body.data.names) {
+      const code = await allocateLoginCode(db, 'HV');
+      const sid = rid('s');
+      await db.query(
+        `INSERT INTO users (id, org_id, site_id, role, name, email, login_code, password_hash)
+         VALUES ($1, $2, $3, 'student', $4, $5, $6, $7)`,
+        [sid, ctx.actor.orgId, ctx.cls.siteId, name.trim(), `${code.toLowerCase()}@hv.etop.local`, code, hashPassword(rid('pw'))],
+      );
+      await db.query('INSERT INTO enrollments (class_id, student_id) VALUES ($1, $2)', [id, sid]);
+      created.push({ id: sid, name: name.trim(), loginCode: code });
+    }
+    await audit(db, { orgId: ctx.actor.orgId, actorId: ctx.actor.id, action: 'class.students_added', entity: 'class', entityId: id, detail: { count: created.length } });
+    return { created };
+  });
+
+  app.post('/students/:id/rotate-code', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    const { id } = req.params as { id: string };
+    const student = await one<{ org_id: string }>(db, `SELECT org_id FROM users WHERE id = $1 AND role = 'student' AND archived = false`, [id]);
+    if (!student || student.org_id !== actor.orgId) return reply.code(404).send({ error: 'not_found' });
+    const allowed =
+      ['owner', 'academic_director', 'site_director'].includes(actor.role) ||
+      (actor.role === 'tutor' &&
+        !!(await one(db, 'SELECT 1 AS x FROM enrollments e JOIN classes c ON c.id = e.class_id WHERE e.student_id = $1 AND c.teacher_id = $2', [id, actor.id])));
+    if (!allowed) return reply.code(403).send({ error: 'forbidden' });
+
+    // The old code dies the moment the new one is written.
+    const code = await allocateLoginCode(db, 'HV');
+    await db.query('UPDATE users SET login_code = $2 WHERE id = $1', [id, code]);
+    await audit(db, { orgId: actor.orgId, actorId: actor.id, action: 'student.code_rotated', entity: 'student', entityId: id });
+    return { loginCode: code };
   });
 
   // ---------- Question bank ----------

@@ -1,5 +1,27 @@
 # CHANGELOG.md
 
+## Owner-requested changes (post-Phase-6)
+
+- Code login: students sign in with mã số học viên (HV####) and teachers
+  with mã số giáo viên (GV####) — no email or password; codes are
+  case-insensitive, rotatable (old code dies instantly), and the login
+  endpoint accepts only student/tutor roles. Parents and managers keep
+  email+password.
+- Roster management: a teacher pastes a name list into their class and
+  accounts are created, enrolled, and issued codes automatically;
+  teacher-only roster view shows each student's code.
+- Class cards everywhere show the homeroom teacher (GV chủ nhiệm) and a
+  schedule note (e.g. "Thứ 2 & Thứ 5 · 17:30–19:00").
+- New public landing page: E'TOP logo, cartoon playground scene (inline
+  SVG), three login tabs (Học viên / Giáo viên / Phụ huynh & QL), center
+  phone + both addresses, and expandable About / Jobs / Feedback
+  sections. The role portal appears only after login.
+- Teacher portal gains class management: per-class roster with codes,
+  paste-to-import students, code rotation, and assign-to-class from the
+  question bank with one-click publish.
+- 8 new tests (96 total green). Class isolation unchanged and still
+  enforced server-side for code logins (tested).
+
 ## Phase 6 — Outcomes & intelligence (at gate)
 
 - Mastery decay: skills untouched 30+ days drift toward review (×0.9 per

@@ -5,6 +5,16 @@ import { type DB, many, one } from './db.js';
 
 export const rid = (p: string) => `${p}_${randomBytes(8).toString('hex')}`;
 
+/** Allocate an unused login code: HV#### for students, GV#### for teachers. */
+export async function allocateLoginCode(db: DB, prefix: 'HV' | 'GV'): Promise<string> {
+  for (let i = 0; i < 500; i++) {
+    const code = `${prefix}${String(randomInt(1, 10000)).padStart(4, '0')}`;
+    const clash = await one(db, 'SELECT 1 AS x FROM users WHERE login_code = $1', [code]);
+    if (!clash) return code;
+  }
+  throw new Error('no login code available');
+}
+
 // ---------- Child-friendly join codes (BEAR42) ----------
 
 const CODE_WORDS = ['BEAR', 'LION', 'STAR', 'FISH', 'BIRD', 'FROG', 'DUCK', 'MOON', 'TREE', 'CAKE', 'KITE', 'SHIP'];

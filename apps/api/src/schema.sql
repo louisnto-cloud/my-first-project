@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS users (
   name TEXT NOT NULL,
   email TEXT NOT NULL,
   phone TEXT,
+  login_code TEXT UNIQUE, -- kid-friendly login code (students and teachers)
   password_hash TEXT NOT NULL,
   locale TEXT NOT NULL DEFAULT 'vi',
   archived BOOLEAN NOT NULL DEFAULT false,
@@ -47,6 +48,7 @@ CREATE TABLE IF NOT EXISTS classes (
   teacher_id TEXT REFERENCES users(id),
   name TEXT NOT NULL,
   level TEXT NOT NULL DEFAULT '',
+  schedule_note TEXT NOT NULL DEFAULT '', -- e.g. 'Thứ 2 & Thứ 5, 17:30–19:00'
   join_code TEXT,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
