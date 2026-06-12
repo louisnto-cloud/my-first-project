@@ -159,6 +159,26 @@ export function registerSafetyRoutes(app: FastifyInstance, db: DB): void {
     return { ok: true };
   });
 
+  /** Verified pickup people for a student — the kiosk dismissal screen.
+   * Staff at the student's site only; blocked entries are flagged so the
+   * kiosk shows the hard red banner (the server refuses them anyway). */
+  app.get('/students/:id/pickups', async (req, reply) => {
+    const { id } = req.params as { id: string };
+    const student = await one<{ org_id: string; site_id: string | null }>(
+      db,
+      `SELECT org_id, site_id FROM users WHERE id = $1 AND role = 'student' AND archived = false`,
+      [id],
+    );
+    if (!student || student.org_id !== req.actor?.orgId) return reply.code(404).send({ error: 'not_found' });
+    const actor = await requireStaff(req, reply, student.site_id ?? '');
+    if (!actor) return;
+    return many(
+      db,
+      'SELECT id, name, relation, blocked FROM pickup_people WHERE student_id = $1 ORDER BY blocked, name',
+      [id],
+    );
+  });
+
   app.get('/safety/ratio', async (req, reply) => {
     const { siteId } = req.query as { siteId?: string };
     if (!siteId) return reply.code(400).send({ error: 'siteId_required' });

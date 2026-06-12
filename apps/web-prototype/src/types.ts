@@ -94,50 +94,10 @@ export interface Feedback {
   message: string;
 }
 
-// --- Self-study learning programs ---
+// --- Self-study learning programs (content types now live in the shared
+// @etop/curriculum package; re-exported to keep existing imports stable) ---
 
-export type Exercise =
-  | { kind: 'mc'; question: string; options: string[]; answer: string }
-  | { kind: 'fill'; sentence: string; choices: string[]; answer: string } // sentence contains ___
-  | { kind: 'order'; words: string[]; answer: string }
-  | { kind: 'listen'; text: string; options: string[]; answer: string };
-
-export interface LessonGrammar {
-  titleEn: string;
-  titleVi: string;
-  bodyEn: string;
-  bodyVi: string;
-  examples: { en: string; vi: string }[];
-}
-
-export interface Lesson {
-  id: string;
-  emoji: string;
-  titleEn: string;
-  titleVi: string;
-  vocab: { term: string; meaningVi: string; example: string }[];
-  grammar: LessonGrammar;
-  exercises: Exercise[];
-}
-
-export interface Unit {
-  id: string;
-  titleEn: string;
-  titleVi: string;
-  lessons: Lesson[];
-}
-
-export interface Course {
-  id: string;
-  emoji: string;
-  color: string;
-  titleEn: string;
-  titleVi: string;
-  descEn: string;
-  descVi: string;
-  levelKeywords: string[]; // matched against ClassInfo.level to recommend
-  units: Unit[];
-}
+export type { Course, Exercise, Lesson, LessonGrammar, Unit } from '@etop/curriculum';
 
 export interface LessonProgress {
   studentId: string;

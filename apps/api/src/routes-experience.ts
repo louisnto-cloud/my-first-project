@@ -80,6 +80,23 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
     return { points: totalPoints, streak, practiceDays: days.length, submissions, badges };
   });
 
+  /** Lesson ids this student has completed — powers sequential unlocking
+   * of the self-study curriculum in the portal. */
+  app.get('/my/practice/lessons', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    if (actor.role !== 'student') return reply.code(403).send({ error: 'students_only' });
+    const rows = await many<{ lessonId: string | null; best: number | null }>(
+      db,
+      `SELECT detail->>'lessonId' AS "lessonId", MAX((detail->>'pct')::real) AS best
+         FROM practice_events
+        WHERE student_id = $1 AND kind = 'lesson' AND detail->>'lessonId' IS NOT NULL
+        GROUP BY detail->>'lessonId'`,
+      [actor.id],
+    );
+    return rows.filter((r) => r.lessonId).map((r) => ({ lessonId: r.lessonId, bestPct: r.best ?? 0 }));
+  });
+
   app.get('/my/notifications', async (req, reply) => {
     const actor = await requireAuth(req, reply);
     if (!actor) return;

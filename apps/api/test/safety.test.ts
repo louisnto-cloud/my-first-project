@@ -175,6 +175,21 @@ describe('missing child escalation cascade (the most important test in the platf
   });
 });
 
+describe('kiosk pickup list', () => {
+  it('front desk sees a student’s pickup people with blocked flags; parents do not', async () => {
+    const res = await get('/students/s0/pickups', desk);
+    expect(res.statusCode).toBe(200);
+    const people = res.json() as { name: string; blocked: boolean }[];
+    expect(people.find((p) => p.name.includes('Bà Nội'))?.blocked).toBe(false);
+    // The blocked person was reassigned to s12 in the dismissal test above.
+    const s12 = (await get('/students/s12/pickups', desk)).json() as { blocked: boolean }[];
+    expect(s12.some((p) => p.blocked)).toBe(true);
+
+    const parent = await login('phuhuynh@etop.vn');
+    expect((await get('/students/s0/pickups', parent)).statusCode).toBe(403);
+  });
+});
+
 describe('offline kiosk sync', () => {
   it('applies a queued batch idempotently and in time order, even with duplicates', async () => {
     const events = [

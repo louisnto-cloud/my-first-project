@@ -4,6 +4,7 @@ import { makeT, type Lang } from './i18n';
 import { Player } from './Player';
 import { Landing } from './Landing';
 import { ClassManager } from './ClassManager';
+import { PracticeHub } from './Practice';
 
 // Phase 4 portal: state-routed views per role on the real API.
 
@@ -39,7 +40,8 @@ interface ClassInfo {
 }
 
 // ---------- Student ----------
-function Student({ t }: { t: (k: string) => string }) {
+function Student({ lang, t }: { lang: Lang; t: (k: string) => string }) {
+  const [view, setView] = useState<'work' | 'practice'>('work');
   const [classes, setClasses] = useState<ClassInfo[]>([]);
   const [ach, setAch] = useState<{ points: number; streak: number } | null>(null);
   const [assignments, setAssignments] = useState<Record<string, { id: string; title: string; dueAt: string | null; myStatus: string | null }[]>>({});
@@ -77,6 +79,15 @@ function Student({ t }: { t: (k: string) => string }) {
           <span>🔥 {ach.streak} {t('dayStreak')}</span>
         </div>
       )}
+      <div className="flex gap-1 rounded-2xl bg-violet-100 p-1">
+        {([['work', '📝 Bài tập / Assignments'], ['practice', '📖 Tự luyện / Practice']] as const).map(([k, label]) => (
+          <button key={k} onClick={() => setView(k)} className={`flex-1 rounded-xl px-2 py-2 text-sm font-extrabold ${view === k ? 'bg-white text-violet-700 shadow' : 'text-violet-400'}`}>
+            {label}
+          </button>
+        ))}
+      </div>
+      {view === 'practice' && <PracticeHub lang={lang} />}
+      {view === 'practice' ? null : <>
       <h2 className="font-black">{t('myClasses')}</h2>
       {classes.map((c) => (
         <div key={c.id} className="card space-y-2">
@@ -102,6 +113,7 @@ function Student({ t }: { t: (k: string) => string }) {
         </div>
         {joinMsg && <div className="text-sm font-bold">{joinMsg}</div>}
       </div>
+      </>}
     </div>
   );
 }
@@ -180,6 +192,8 @@ function Parent({ lang, t }: { lang: Lang; t: (k: string) => string }) {
         ))}
       </div>
 
+      <ParentInvoices />
+
       <div className="card space-y-2">
         <h2 className="font-black text-violet-700">💬 {t('messages')}</h2>
         {msgs.map((m, i) => (
@@ -190,6 +204,101 @@ function Parent({ lang, t }: { lang: Lang; t: (k: string) => string }) {
           <button onClick={send} className="btn-primary">{t('send')}</button>
         </div>
       </div>
+    </div>
+  );
+}
+
+function ParentInvoices() {
+  const [invoices, setInvoices] = useState<{ id: string; period: string; studentName: string; totalVnd: number; status: string; vietqr: string }[]>([]);
+  const [showQr, setShowQr] = useState<string | null>(null);
+  useEffect(() => {
+    void api<typeof invoices>('GET', '/my/invoices').then(setInvoices).catch(() => {});
+  }, []);
+  if (invoices.length === 0) return null;
+  return (
+    <div className="card space-y-2">
+      <h2 className="font-black text-violet-700">🧾 Học phí / Tuition</h2>
+      {invoices.map((i) => (
+        <div key={i.id} className="rounded-2xl bg-violet-50 p-3">
+          <div className="flex items-center justify-between text-sm font-bold">
+            <span>{i.studentName} · Tháng {i.period}</span>
+            <span className={i.status === 'paid' ? 'text-emerald-600' : i.status === 'overdue' ? 'text-rose-600' : 'text-amber-600'}>
+              {i.totalVnd.toLocaleString('vi-VN')}đ · {i.status === 'paid' ? '✅ Đã đóng' : i.status === 'overdue' ? '⏰ Quá hạn' : '📌 Chờ đóng'}
+            </span>
+          </div>
+          {i.status !== 'paid' && (
+            <button onClick={() => setShowQr(showQr === i.id ? null : i.id)} className="mt-1 text-xs font-extrabold text-violet-600 underline">
+              {showQr === i.id ? 'Ẩn mã chuyển khoản' : '💳 Chuyển khoản VietQR'}
+            </button>
+          )}
+          {showQr === i.id && (
+            <code className="mt-1 block break-all rounded-xl bg-white p-2 text-[10px] font-bold text-slate-500">{i.vietqr}</code>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ---------- Owner / Academic Director dashboard ----------
+function OwnerDash() {
+  const [finance, setFinance] = useState<{ revenue: { period: string; revenueVnd: string | number }[]; arAging: { bucket: string; outstandingVnd: string | number; invoices: number }[] } | null>(null);
+  const [nps, setNps] = useState<{ responses: number; nps: number | null } | null>(null);
+  const [academic, setAcademic] = useState<{ stalled: { id: string; name: string }[]; velocity: { tutorName: string; avgDelta: string | number }[] } | null>(null);
+  const [escalations, setEscalations] = useState<{ studentName: string }[]>([]);
+
+  useEffect(() => {
+    void api<NonNullable<typeof finance>>('GET', '/billing/dashboard').then(setFinance).catch(() => {});
+    void api<NonNullable<typeof nps>>('GET', '/nps/summary').then(setNps).catch(() => {});
+    void api<NonNullable<typeof academic>>('GET', '/academic/dashboard').then(setAcademic).catch(() => {});
+    void Promise.all(
+      ['site_nh', 'site_tt'].map((s) => api<{ studentName: string }[]>('GET', `/escalations?siteId=${s}`).catch(() => [] as { studentName: string }[])),
+    ).then((xs) => setEscalations(xs.flat()));
+  }, []);
+
+  return (
+    <div className="space-y-3">
+      <h2 className="font-black text-violet-700">📊 Tổng quan trung tâm</h2>
+      {escalations.length > 0 && (
+        <div className="card border-rose-300 bg-rose-50 font-black text-rose-700">🚨 Cảnh báo vắng mặt đang mở: {escalations.map((e) => e.studentName).join(', ')}</div>
+      )}
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="card text-center">
+          <div className="text-xl">💰</div>
+          <div className="text-lg font-black text-violet-700">
+            {finance?.revenue.length ? `${Number(finance.revenue[finance.revenue.length - 1].revenueVnd).toLocaleString('vi-VN')}đ` : '—'}
+          </div>
+          <div className="text-[10px] font-bold text-slate-400">Doanh thu gần nhất</div>
+        </div>
+        <div className="card text-center">
+          <div className="text-xl">🧾</div>
+          <div className="text-lg font-black text-violet-700">
+            {finance ? `${finance.arAging.reduce((s, a) => s + a.invoices, 0)}` : '—'}
+          </div>
+          <div className="text-[10px] font-bold text-slate-400">Hóa đơn chưa thu</div>
+        </div>
+        <div className="card text-center">
+          <div className="text-xl">💜</div>
+          <div className="text-lg font-black text-violet-700">{nps?.nps ?? '—'}</div>
+          <div className="text-[10px] font-bold text-slate-400">NPS ({nps?.responses ?? 0} phản hồi)</div>
+        </div>
+        <div className="card text-center">
+          <div className="text-xl">🐢</div>
+          <div className="text-lg font-black text-violet-700">{academic?.stalled.length ?? '—'}</div>
+          <div className="text-[10px] font-bold text-slate-400">HS cần can thiệp</div>
+        </div>
+      </div>
+      {academic && academic.velocity.length > 0 && (
+        <div className="card">
+          <h3 className="mb-1 text-sm font-extrabold text-violet-700">📈 Tiến bộ theo giáo viên (8 tuần)</h3>
+          {academic.velocity.map((v) => (
+            <div key={v.tutorName} className="flex justify-between text-sm font-bold">
+              <span>{v.tutorName}</span>
+              <span className={Number(v.avgDelta) > 0 ? 'text-emerald-600' : 'text-slate-400'}>{Number(v.avgDelta) > 0 ? '+' : ''}{Number(v.avgDelta).toFixed(2)}</span>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -318,12 +427,51 @@ function Kiosk({ me, t }: { me: Me; t: (k: string) => string }) {
     void flush();
   };
 
-  const tap = (s: { id: string; status: string }) => {
+  // Verified dismissal (D20): pickup person + PIN when online; logged
+  // ID-check fallback that also works offline.
+  const [dismissing, setDismissing] = useState<{ id: string; name: string } | null>(null);
+  const [pickups, setPickups] = useState<{ id: string; name: string; relation: string; blocked: boolean }[]>([]);
+  const [pin, setPin] = useState('');
+  const [chosen, setChosen] = useState<string | null>(null);
+  const [otherName, setOtherName] = useState('');
+  const [dismissErr, setDismissErr] = useState('');
+
+  const tap = (s: { id: string; name: string; status: string }) => {
     if (s.status === 'expected') {
       enqueue({ clientEventId: `kio_${Date.now()}_${s.id}`, type: 'check_in', studentId: s.id, at: new Date().toISOString() });
     } else if (s.status === 'present') {
-      const name = prompt('Released to (tên người đón + giấy tờ đã kiểm tra):');
-      if (name) enqueue({ clientEventId: `kio_${Date.now()}_${s.id}`, type: 'check_out', studentId: s.id, at: new Date().toISOString(), releasedToName: name });
+      setDismissing(s);
+      setPickups([]);
+      setPin('');
+      setChosen(null);
+      setOtherName('');
+      setDismissErr('');
+      void api<typeof pickups>('GET', `/students/${s.id}/pickups`).then(setPickups).catch(() => setPickups([]));
+    }
+  };
+
+  const confirmDismiss = async () => {
+    if (!dismissing) return;
+    setDismissErr('');
+    if (chosen) {
+      // PIN-verified path: requires the server (a verification, not a record).
+      try {
+        await api('POST', '/attendance/dismiss', {
+          studentId: dismissing.id, siteId, clientEventId: `kio_${Date.now()}_${dismissing.id}`,
+          at: new Date().toISOString(), pickupPersonId: chosen, pin,
+        });
+        setDismissing(null);
+        void load();
+      } catch (e) {
+        const reason = e instanceof ApiError ? (e.body as { reason?: string }).reason : '';
+        if (reason === 'blocked_pickup') setDismissErr('⛔ NGƯỜI NÀY BỊ CẤM ĐÓN — KHÔNG TRẢ TRẺ. Quản lý đã được báo động.');
+        else if (reason === 'pin_invalid') setDismissErr('Mã PIN sai. Thử lại hoặc kiểm tra giấy tờ.');
+        else setDismissErr('Không kết nối được máy chủ — dùng "Người khác (kiểm tra giấy tờ)" để ghi nhận ngoại tuyến.');
+      }
+    } else if (otherName.trim()) {
+      // Logged ID-check path: offline-safe via the queue.
+      enqueue({ clientEventId: `kio_${Date.now()}_${dismissing.id}`, type: 'check_out', studentId: dismissing.id, at: new Date().toISOString(), releasedToName: `${otherName.trim()} (đã kiểm tra giấy tờ)` });
+      setDismissing(null);
     }
   };
 
@@ -349,6 +497,49 @@ function Kiosk({ me, t }: { me: Me; t: (k: string) => string }) {
           </button>
         ))}
       </div>
+
+      {dismissing && (
+        <div className="fixed inset-0 z-20 flex items-end justify-center bg-black/40 p-4 sm:items-center">
+          <div className="w-full max-w-md space-y-3 rounded-3xl bg-white p-5">
+            <h3 className="text-lg font-black">🏠 Trả học sinh: {dismissing.name}</h3>
+            {dismissErr && <div className={`rounded-2xl p-3 text-sm font-black ${dismissErr.startsWith('⛔') ? 'bg-rose-100 text-rose-700' : 'bg-amber-50 text-amber-700'}`}>{dismissErr}</div>}
+            <div className="space-y-2">
+              {pickups.map((p) => (
+                <button
+                  key={p.id}
+                  onClick={() => { setChosen(p.id); setOtherName(''); }}
+                  className={`block w-full rounded-2xl border-2 p-3 text-left font-bold ${p.blocked ? 'border-rose-400 bg-rose-50 text-rose-700' : chosen === p.id ? 'border-violet-500 bg-violet-50' : 'border-violet-100'}`}
+                >
+                  {p.blocked ? '⛔ ' : '👤 '}{p.name} <span className="text-xs font-semibold text-slate-400">({p.relation})</span>
+                  {p.blocked && <span className="block text-xs font-black">BỊ CẤM ĐÓN — không trả trẻ</span>}
+                </button>
+              ))}
+              {chosen && (
+                <input
+                  className="input text-center text-2xl font-black tracking-widest"
+                  placeholder="Mã PIN"
+                  inputMode="numeric"
+                  maxLength={6}
+                  value={pin}
+                  onChange={(e) => setPin(e.target.value)}
+                />
+              )}
+              <input
+                className="input"
+                placeholder="Người khác — ghi tên (đã kiểm tra giấy tờ)"
+                value={otherName}
+                onChange={(e) => { setOtherName(e.target.value); setChosen(null); }}
+              />
+            </div>
+            <div className="flex gap-2">
+              <button onClick={() => setDismissing(null)} className="btn-soft flex-1">Hủy</button>
+              <button onClick={confirmDismiss} disabled={!(chosen && pin.length >= 4) && !otherName.trim()} className="btn-primary flex-1">
+                ✅ Xác nhận trả
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -378,8 +569,9 @@ export default function App() {
     <div className="min-h-screen pb-10">
       <Header me={me} lang={lang} setLang={setLang} t={t} onLogout={logout} />
       <main className="mx-auto max-w-3xl space-y-4 p-4">
-        {me.role === 'student' && <Student t={t} />}
+        {me.role === 'student' && <Student lang={lang} t={t} />}
         {me.role === 'parent' && <Parent lang={lang} t={t} />}
+        {['owner', 'academic_director'].includes(me.role) && <OwnerDash />}
         {['tutor', 'academic_director', 'owner'].includes(me.role) && <Teacher lang={lang} t={t} />}
         {me.role === 'front_desk' && <Kiosk me={me} t={t} />}
       </main>

@@ -1,4 +1,4 @@
-import type { Course, Exercise, Lesson } from '../types';
+import type { Course, Exercise, Lesson } from './types';
 
 // "English Foundations" — a 20-level path from absolute beginner (Level 1)
 // to low-intermediate (Level 20), for anyone starting English from zero.

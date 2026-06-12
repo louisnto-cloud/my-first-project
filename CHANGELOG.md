@@ -1,5 +1,25 @@
 # CHANGELOG.md
 
+## Completion pass — closing every deferred portal gap
+
+- D19 closed: the 38-lesson curriculum moved to a shared
+  `@etop/curriculum` package (single source for prototype and portal);
+  the student portal gains a "Tự luyện / Practice" tab with the full
+  lesson player (vocab + audio, grammar, 4 exercise types), sequential
+  unlocking driven by server-side practice history
+  (`GET /my/practice/lessons`), and points that feed streaks/badges.
+- D20 closed: kiosk dismissal now lists the student's verified pickup
+  people (`GET /students/:id/pickups`, staff-only, tested) with
+  PIN-verified release; blocked people show the hard red banner and a
+  refused attempt alerts leadership; the logged-ID-check fallback
+  remains offline-safe through the queue.
+- Parent portal gains the tuition section: invoices per child with
+  status and VietQR transfer payload.
+- Owner/Academic-Director dashboard in the portal: revenue, unpaid
+  invoices, NPS, stalled students, open escalation banner, and mastery
+  velocity per tutor.
+- 2 new tests (105 total green).
+
 ## Phase 7 — Hardening (at gate)
 
 - Auth brute-force protection: per-IP rate limiting on /auth/* (50/5min,

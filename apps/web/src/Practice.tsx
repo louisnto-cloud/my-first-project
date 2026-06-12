@@ -1,0 +1,242 @@
+import { useEffect, useState } from 'react';
+import { allLessons, COURSES, type Course, type Exercise, type Lesson } from '@etop/curriculum';
+import { api } from './api';
+
+// Self-study curriculum in the portal (D19 closed): 38 lessons across the
+// Foundations path and three audience courses. Completing a lesson posts a
+// practice event — points, streaks, and badges are computed server-side.
+
+function speak(text: string, rate = 0.95) {
+  try {
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US';
+    u.rate = rate;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+  } catch {
+    /* best effort */
+  }
+}
+
+type Progress = Record<string, number>; // lessonId -> bestPct
+
+function LessonPlayer({ lesson, lang, onExit }: { lesson: Lesson; lang: 'vi' | 'en'; onExit: (completed: boolean) => void }) {
+  const [phase, setPhase] = useState<'vocab' | 'grammar' | 'ex' | 'done'>('vocab');
+  const [idx, setIdx] = useState(0);
+  const [correct, setCorrect] = useState(0);
+  const [picked, setPicked] = useState<string | null>(null);
+  const [order, setOrder] = useState<number[]>([]);
+  const [earned, setEarned] = useState(0);
+
+  const total = lesson.exercises.length;
+  const ex = lesson.exercises[idx];
+
+  const finish = async (c: number) => {
+    const pct = Math.round((c / total) * 100);
+    const points = pct >= 50 ? Math.max(4, Math.round(pct / 10) + 5) : 2;
+    setEarned(points);
+    try {
+      await api('POST', '/practice/events', { kind: 'lesson', points, detail: { lessonId: lesson.id, pct } });
+    } catch {
+      /* offline practice still counts locally next sync — best effort */
+    }
+    setPhase('done');
+  };
+
+  const answer = (ok: boolean) => {
+    const c = correct + (ok ? 1 : 0);
+    setCorrect(c);
+    setTimeout(() => {
+      setPicked(null);
+      setOrder([]);
+      if (idx + 1 >= total) void finish(c);
+      else setIdx(idx + 1);
+    }, ok ? 700 : 1500);
+  };
+
+  const choiceBtn = (opt: string, answerStr: string) => (
+    <button
+      key={opt}
+      disabled={picked !== null}
+      onClick={() => { setPicked(opt); answer(opt === answerStr); }}
+      className={`block w-full rounded-2xl border-2 p-3 text-left font-bold ${
+        picked === null ? 'border-violet-100 bg-white' : opt === answerStr ? 'border-emerald-500 bg-emerald-50' : opt === picked ? 'border-rose-400 bg-rose-50' : 'border-violet-100 opacity-50'
+      }`}
+    >
+      {opt}
+    </button>
+  );
+
+  if (phase === 'vocab') {
+    return (
+      <div className="space-y-3">
+        <button onClick={() => onExit(false)} className="font-bold text-violet-500">←</button>
+        <h2 className="text-lg font-black">{lesson.emoji} {lang === 'vi' ? lesson.titleVi : lesson.titleEn}</h2>
+        {lesson.vocab.map((w) => (
+          <div key={w.term} className="card flex items-center gap-3">
+            <button onClick={() => speak(w.term)} className="h-10 w-10 shrink-0 rounded-full bg-violet-100 text-lg" aria-label="Nghe">🔊</button>
+            <div>
+              <b className="text-violet-700">{w.term}</b> <span className="text-slate-400">· {w.meaningVi}</span>
+              <div className="text-xs font-semibold text-slate-500">“{w.example}”</div>
+            </div>
+          </div>
+        ))}
+        <button onClick={() => setPhase('grammar')} className="btn-primary w-full">Tiếp tục →</button>
+      </div>
+    );
+  }
+
+  if (phase === 'grammar') {
+    const g = lesson.grammar;
+    return (
+      <div className="space-y-3">
+        <button onClick={() => onExit(false)} className="font-bold text-violet-500">←</button>
+        <h2 className="text-lg font-black">💡 {lang === 'vi' ? g.titleVi : g.titleEn}</h2>
+        <div className="card bg-amber-50 text-sm font-semibold">{lang === 'vi' ? g.bodyVi : g.bodyEn}</div>
+        <div className="card space-y-2">
+          {g.examples.map((e) => (
+            <div key={e.en} className="flex items-start gap-2 text-sm">
+              <button onClick={() => speak(e.en)} aria-label="Nghe">🔊</button>
+              <span><b>{e.en}</b><br /><span className="text-xs text-slate-400">{e.vi}</span></span>
+            </div>
+          ))}
+        </div>
+        <button onClick={() => setPhase('ex')} className="btn-primary w-full">Làm bài tập ({total}) →</button>
+      </div>
+    );
+  }
+
+  if (phase === 'done') {
+    const pct = Math.round((correct / total) * 100);
+    return (
+      <div className="card space-y-3 py-8 text-center">
+        <div className="text-5xl">{pct >= 70 ? '🎉' : '💪'}</div>
+        <div className="text-xl font-black text-violet-700">{pct >= 50 ? 'Hoàn thành bài học!' : 'Gần được rồi — thử lại nhé!'}</div>
+        <div className="font-bold text-slate-500">Đúng {correct}/{total} ({pct}%)</div>
+        <div className="mx-auto w-fit rounded-full bg-amber-100 px-4 py-1.5 font-black text-amber-700">+{earned} ⭐</div>
+        <button onClick={() => onExit(pct >= 50)} className="btn-primary">Về danh sách bài</button>
+      </div>
+    );
+  }
+
+  // exercises
+  const remaining = ex.kind === 'order' ? ex.words.map((w, i) => ({ w, i })).filter(({ i }) => !order.includes(i)) : [];
+  return (
+    <div className="space-y-3">
+      <div className="h-2 overflow-hidden rounded-full bg-violet-100">
+        <div className="h-full bg-violet-500 transition-all" style={{ width: `${(idx / total) * 100}%` }} />
+      </div>
+      <div className="card space-y-3">
+        {ex.kind === 'listen' ? (
+          <div className="text-center">
+            <div className="text-xs font-bold text-slate-400">Nghe rồi chọn câu đúng</div>
+            <button onClick={() => speak(ex.text)} className="btn-primary mt-2 !rounded-full !p-5 text-2xl" aria-label="Nghe">🔊</button>
+            <button onClick={() => speak(ex.text, 0.55)} className="ml-2 text-xl" aria-label="Nghe chậm">🐢</button>
+          </div>
+        ) : (
+          <div className="text-lg font-extrabold text-violet-700">{ex.kind === 'fill' ? ex.sentence : ex.kind === 'order' ? 'Xếp các từ thành câu đúng:' : ex.question}</div>
+        )}
+
+        {(ex.kind === 'mc' || ex.kind === 'listen') && ex.options.map((o) => choiceBtn(o, ex.answer))}
+        {ex.kind === 'fill' && ex.choices.map((o) => choiceBtn(o, ex.answer))}
+        {ex.kind === 'order' && (
+          <>
+            <div className="min-h-[44px] rounded-2xl bg-violet-50 p-2 font-black text-violet-700">
+              {order.map((i, pos) => (
+                <button key={pos} onClick={() => setOrder(order.filter((_, p) => p !== pos))} className="m-0.5 rounded-xl bg-white px-2.5 py-1 shadow-sm">
+                  {ex.words[i]}
+                </button>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {remaining.map(({ w, i }) => (
+                <button key={i} onClick={() => setOrder([...order, i])} className="rounded-2xl border-2 border-violet-100 bg-white px-3 py-2 font-bold">{w}</button>
+              ))}
+            </div>
+            <button
+              disabled={order.length !== ex.words.length}
+              onClick={() => answer(order.map((i) => ex.words[i]).join(' ') === ex.answer)}
+              className="btn-primary w-full"
+            >
+              Kiểm tra
+            </button>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export function PracticeHub({ lang }: { lang: 'vi' | 'en' }) {
+  const [progress, setProgress] = useState<Progress>({});
+  const [course, setCourse] = useState<Course | null>(null);
+  const [lesson, setLesson] = useState<Lesson | null>(null);
+
+  const load = async () => {
+    try {
+      const rows = await api<{ lessonId: string; bestPct: number }[]>('GET', '/my/practice/lessons');
+      setProgress(Object.fromEntries(rows.map((r) => [r.lessonId, r.bestPct])));
+    } catch {
+      /* fresh student */
+    }
+  };
+  useEffect(() => { void load(); }, []);
+
+  if (lesson && course) {
+    return <LessonPlayer lesson={lesson} lang={lang} onExit={() => { setLesson(null); void load(); }} />;
+  }
+
+  if (course) {
+    const flat = allLessons(course);
+    return (
+      <div className="space-y-3">
+        <button onClick={() => setCourse(null)} className="font-bold text-violet-500">←</button>
+        <h2 className="text-lg font-black">{course.emoji} {lang === 'vi' ? course.titleVi : course.titleEn}</h2>
+        {course.units.map((u) => (
+          <div key={u.id} className="space-y-2">
+            <h3 className="text-sm font-extrabold text-violet-700">{lang === 'vi' ? u.titleVi : u.titleEn}</h3>
+            {u.lessons.map((l) => {
+              const flatIdx = flat.findIndex((x) => x.id === l.id);
+              const done = (progress[l.id] ?? 0) >= 50;
+              const unlocked = flatIdx === 0 || (progress[flat[flatIdx - 1].id] ?? 0) >= 50;
+              return (
+                <button
+                  key={l.id}
+                  disabled={!unlocked}
+                  onClick={() => setLesson(l)}
+                  className={`card flex w-full items-center gap-3 text-left ${unlocked ? 'hover:border-violet-300' : 'opacity-50'}`}
+                >
+                  <span className="text-2xl">{unlocked ? l.emoji : '🔒'}</span>
+                  <span className="flex-1 font-extrabold">{lang === 'vi' ? l.titleVi : l.titleEn}</span>
+                  {done && <span className="font-black text-emerald-600">✓ {progress[l.id]}%</span>}
+                </button>
+              );
+            })}
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-3">
+      <h2 className="font-black text-violet-700">📖 Tự luyện mỗi ngày</h2>
+      {COURSES.map((c) => {
+        const lessons = allLessons(c);
+        const done = lessons.filter((l) => (progress[l.id] ?? 0) >= 50).length;
+        return (
+          <button key={c.id} onClick={() => setCourse(c)} className="card flex w-full items-center gap-3 text-left hover:border-violet-300">
+            <span className="text-3xl">{c.emoji}</span>
+            <span className="min-w-0 flex-1">
+              <span className="block truncate font-extrabold">{lang === 'vi' ? c.titleVi : c.titleEn}</span>
+              <span className="mt-1 block h-2 overflow-hidden rounded-full bg-violet-100">
+                <span className="block h-full rounded-full bg-emerald-400" style={{ width: `${(done / lessons.length) * 100}%` }} />
+              </span>
+            </span>
+            <span className="text-xs font-bold text-slate-400">{done}/{lessons.length}</span>
+          </button>
+        );
+      })}
+    </div>
+  );
+}

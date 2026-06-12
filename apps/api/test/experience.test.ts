@@ -47,6 +47,16 @@ describe('practice and achievements', () => {
     expect(a.badges.find((b) => b.id === 'points-50')?.earned).toBe(false);
   });
 
+  it('completed lessons are listed with best scores for curriculum unlocking', async () => {
+    const s6 = await login('s6@etop.vn'); // separate student: keeps other totals untouched
+    await req('POST', '/practice/events', s6, { kind: 'lesson', points: 12, detail: { lessonId: 'found_l1', pct: 83 } });
+    await req('POST', '/practice/events', s6, { kind: 'lesson', points: 14, detail: { lessonId: 'found_l1', pct: 100 } });
+    const lessons = (await req('GET', '/my/practice/lessons', s6)).json() as { lessonId: string; bestPct: number }[];
+    const l1 = lessons.find((l) => l.lessonId === 'found_l1')!;
+    expect(l1.bestPct).toBe(100); // best attempt wins
+    expect((await req('GET', '/my/practice/lessons', lan)).statusCode).toBe(403);
+  });
+
   it('points are server-capped and validated', async () => {
     expect((await req('POST', '/practice/events', minh, { kind: 'lesson', points: 9999 })).statusCode).toBe(400);
     expect((await req('POST', '/practice/events', lan, { kind: 'lesson', points: 5 })).statusCode).toBe(403);
