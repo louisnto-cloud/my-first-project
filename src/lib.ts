@@ -86,6 +86,7 @@ export interface BadgeStats {
   practiceCount: number;
   bestPct: number;
   avgPct: number;
+  lessonsDone: number;
 }
 
 export const BADGES: BadgeDef[] = [
@@ -97,6 +98,7 @@ export const BADGES: BadgeDef[] = [
   { id: 'hw-5', emoji: '📚', nameEn: 'Homework Hero', nameVi: 'Anh hùng bài tập', descEn: 'Complete 5 homework tasks', descVi: 'Hoàn thành 5 bài tập', earned: (s) => s.hwDone >= 5 },
   { id: 'ace', emoji: '🏆', nameEn: 'Ace', nameVi: 'Điểm tuyệt đối', descEn: 'Score 90%+ on a test', descVi: 'Đạt 90%+ trong một bài kiểm tra', earned: (s) => s.bestPct >= 90 },
   { id: 'scholar', emoji: '🎓', nameEn: 'Scholar', nameVi: 'Học giả', descEn: 'Keep an 80%+ average', descVi: 'Giữ điểm trung bình trên 80%', earned: (s) => s.avgPct >= 80 },
+  { id: 'lesson-5', emoji: '📖', nameEn: 'Bookworm', nameVi: 'Mọt sách', descEn: 'Complete 5 self-study lessons', descVi: 'Hoàn thành 5 bài học tự luyện', earned: (s) => s.lessonsDone >= 5 },
 ];
 
 export function badgeStats(db: DB, studentId: string): BadgeStats {
@@ -109,6 +111,7 @@ export function badgeStats(db: DB, studentId: string): BadgeStats {
     practiceCount: db.practice.filter((p) => p.studentId === studentId).length,
     bestPct: pcts.length ? Math.max(...pcts) : 0,
     avgPct: pcts.length ? pcts.reduce((a, b) => a + b, 0) / pcts.length : 0,
+    lessonsDone: lessonsDoneCount(db, studentId),
   };
 }
 
@@ -121,6 +124,41 @@ export function leaderboard(db: DB, classId: string): { user: User; points: numb
   return studentsInClass(db, classId)
     .map((user) => ({ user, points: pointsOf(db, user.id) }))
     .sort((a, b) => b.points - a.points);
+}
+
+export function lessonProgressOf(db: DB, studentId: string, lessonId: string) {
+  return db.lessonProgress.find((p) => p.studentId === studentId && p.lessonId === lessonId);
+}
+
+export function lessonsDoneCount(db: DB, studentId: string): number {
+  return db.lessonProgress.filter((p) => p.studentId === studentId && p.stars > 0).length;
+}
+
+export function starsForPct(pct: number): number {
+  if (pct >= 90) return 3;
+  if (pct >= 70) return 2;
+  if (pct >= 50) return 1;
+  return 0;
+}
+
+export function recordLessonResult(db: DB, studentId: string, lessonId: string, pct: number): { stars: number; points: number; firstTime: boolean } {
+  const stars = starsForPct(pct);
+  const existing = lessonProgressOf(db, studentId, lessonId);
+  const firstTime = !existing || existing.stars === 0;
+  if (existing) {
+    existing.attempts += 1;
+    existing.bestPct = Math.max(existing.bestPct, pct);
+    existing.stars = Math.max(existing.stars, stars);
+    if (stars > 0) existing.completedAt = todayISO();
+  } else {
+    db.lessonProgress.push({ studentId, lessonId, bestPct: pct, stars, attempts: 1, completedAt: todayISO() });
+  }
+  let points = 0;
+  if (stars > 0) {
+    points = firstTime ? 10 + stars * 4 : 4;
+    addPractice(db, studentId, 'lesson', points);
+  }
+  return { stars, points, firstTime };
 }
 
 export function uid(prefix: string): string {

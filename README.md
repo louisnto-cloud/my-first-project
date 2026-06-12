@@ -13,7 +13,7 @@ See [`APP_PROMPT.md`](./APP_PROMPT.md) for the full product spec.
 
 | Role | What they get |
 |---|---|
-| 🧑‍🎓 **Student** | Dashboard with streak & points, grades with skill breakdown and progress chart, class schedule, homework checklist, vocabulary flashcards & quizzes, badges and a class leaderboard |
+| 🧑‍🎓 **Student** | Dashboard with streak & points, grades with skill breakdown and progress chart, class schedule, homework checklist, **self-study programs** (3 courses with vocabulary + audio, grammar, and interactive exercises), vocabulary flashcards & quizzes, badges and a class leaderboard |
 | 🧑‍🏫 **Teacher** | Class overview, gradebook (enter scores + comments per student), assign homework, create vocabulary lists |
 | 👩‍💼 **Owner (admin)** | Everything teachers get, plus center-wide stats across all classes |
 | 👨‍👦 **Parent** | Read-only view of their child's grades, schedule, homework, and badges |

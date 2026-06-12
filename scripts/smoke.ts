@@ -1,6 +1,7 @@
 // Sanity checks for the seeded demo database. Run: npx tsx scripts/smoke.ts
 import { buildSeed } from '../src/seed';
 import { avgPct, earnedBadges, leaderboard, pointsOf, scoresOf, streakOf } from '../src/lib';
+import { COURSES } from '../src/learn/content';
 
 const db = buildSeed();
 const fail: string[] = [];
@@ -47,6 +48,38 @@ check(db.feedback.length >= 2, 'expected seeded feedback');
 for (const f of db.feedback) {
   check(db.users.some((u) => u.id === f.userId), `feedback from unknown user: ${f.id}`);
   check(f.rating >= 1 && f.rating <= 5, `bad rating: ${f.id}`);
+}
+
+// learning program content integrity
+const lessonIds = new Set<string>();
+for (const course of COURSES) {
+  check(course.units.length > 0, `course ${course.id} has no units`);
+  for (const unit of course.units) {
+    for (const lesson of unit.lessons) {
+      check(!lessonIds.has(lesson.id), `duplicate lesson id: ${lesson.id}`);
+      lessonIds.add(lesson.id);
+      check(lesson.vocab.length >= 4, `lesson ${lesson.id} has too few words`);
+      check(lesson.exercises.length >= 4, `lesson ${lesson.id} has too few exercises`);
+      check(lesson.grammar.examples.length > 0, `lesson ${lesson.id} grammar has no examples`);
+      lesson.exercises.forEach((ex, i) => {
+        const tag = `${lesson.id} ex${i}`;
+        if (ex.kind === 'mc' || ex.kind === 'listen') {
+          check(ex.options.includes(ex.answer), `${tag}: answer not in options`);
+          check(new Set(ex.options).size === ex.options.length, `${tag}: duplicate options`);
+        } else if (ex.kind === 'fill') {
+          check(ex.sentence.includes('___'), `${tag}: no blank in sentence`);
+          check(ex.choices.includes(ex.answer), `${tag}: answer not in choices`);
+        } else {
+          check(ex.words.join(' ') !== ex.answer ? [...ex.words].sort().join('|') === ex.answer.split(' ').sort().join('|') : true, `${tag}: words don't match answer`);
+          check(ex.answer.split(' ').length === ex.words.length, `${tag}: word count mismatch`);
+        }
+      });
+    }
+  }
+}
+// seeded lesson progress references real lessons
+for (const p of db.lessonProgress) {
+  check(lessonIds.has(p.lessonId), `lesson progress references unknown lesson: ${p.lessonId}`);
 }
 
 if (fail.length) {

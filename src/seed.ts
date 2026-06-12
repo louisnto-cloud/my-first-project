@@ -291,5 +291,10 @@ export function buildSeed(): DB {
     },
   ];
 
-  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice, feedback };
+  // Demo student has finished the first self-study lesson
+  const lessonProgress: DB['lessonProgress'] = [
+    { studentId: 's0', lessonId: 'teens_u1_l1', bestPct: 100, stars: 3, attempts: 1, completedAt: daysAgo(2) },
+  ];
+
+  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice, feedback, lessonProgress };
 }

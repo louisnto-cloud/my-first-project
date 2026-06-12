@@ -12,6 +12,7 @@ function loadDB(): DB {
       const db = JSON.parse(raw) as DB;
       // Migrate databases saved before newer collections existed
       db.feedback ??= [];
+      db.lessonProgress ??= [];
       return db;
     }
   } catch {

@@ -1,13 +1,10 @@
 import { Link, Outlet } from 'react-router-dom';
-import { useState } from 'react';
 import { useApp } from '../../store';
 import { fmtDate, useI18n, WEEKDAYS } from '../../i18n';
-import { Empty, Header, Pill, scoreColor, TabBar } from '../../components/ui';
+import { Header, Pill, scoreColor, TabBar } from '../../components/ui';
 import { BadgesView, GradesView, HomeworkView, LeaderboardView, ScheduleView } from '../../components/views';
-import { FlashcardSession, QuizSession } from '../../components/Flashcards';
 import { FeedbackSection } from '../../components/Feedback';
 import { pointsOf, practicedToday, scoresOf, streakOf, todayISO } from '../../lib';
-import type { VocabList } from '../../types';
 
 export function StudentLayout() {
   const { t } = useI18n();
@@ -24,7 +21,7 @@ export function StudentLayout() {
           { to: '/app/grades', emoji: '📊', label: t('nav.grades') },
           { to: '/app/schedule', emoji: '📅', label: t('nav.schedule') },
           { to: '/app/homework', emoji: '📚', label: t('nav.homework') },
-          { to: '/app/practice', emoji: '🎮', label: t('nav.practice') },
+          { to: '/app/practice', emoji: '📖', label: t('nav.learn') },
         ]}
       />
     </div>
@@ -199,40 +196,3 @@ export function Homework() {
   );
 }
 
-type Mode = { kind: 'pick' } | { kind: 'flash'; list: VocabList } | { kind: 'quiz'; list: VocabList };
-
-export function Practice() {
-  const { db, user } = useApp();
-  const { t } = useI18n();
-  const [mode, setMode] = useState<Mode>({ kind: 'pick' });
-  if (!user) return null;
-
-  const lists = db.vocabLists.filter((v) => user.classIds.includes(v.classId));
-
-  if (mode.kind === 'flash') return <FlashcardSession list={mode.list} studentId={user.id} onExit={() => setMode({ kind: 'pick' })} />;
-  if (mode.kind === 'quiz') return <QuizSession list={mode.list} studentId={user.id} onExit={() => setMode({ kind: 'pick' })} />;
-
-  return (
-    <div className="space-y-4">
-      <h1 className="text-xl font-black">🎮 {t('practice.title')}</h1>
-      <p className="-mt-2 text-sm font-semibold text-slate-400">{t('practice.subtitle')}</p>
-      {lists.length === 0 && <Empty emoji="📖" text={t('grades.empty')} />}
-      {lists.map((list) => (
-        <div key={list.id} className="card">
-          <div className="font-extrabold">{list.title}</div>
-          <div className="text-xs font-semibold text-slate-400">
-            {list.words.length} {t('practice.words')}
-          </div>
-          <div className="mt-3 grid grid-cols-2 gap-2">
-            <button onClick={() => setMode({ kind: 'flash', list })} className="btn-soft text-sm">
-              🃏 {t('practice.flashcards')}
-            </button>
-            <button onClick={() => setMode({ kind: 'quiz', list })} className="btn-primary text-sm">
-              ❓ {t('practice.quiz')}
-            </button>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}

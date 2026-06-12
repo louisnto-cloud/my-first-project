@@ -3,7 +3,8 @@ import type { ReactNode } from 'react';
 import { useApp } from './store';
 import type { Role } from './types';
 import Login from './pages/Login';
-import { Dashboard, FeedbackPage, Grades, Homework, Practice, Schedule, StudentLayout } from './pages/student/StudentApp';
+import { Dashboard, FeedbackPage, Grades, Homework, Schedule, StudentLayout } from './pages/student/StudentApp';
+import LearnHub from './pages/student/Learn';
 import ParentPage from './pages/parent/ParentPage';
 import { TeachHome, TeachLayout } from './pages/teach/TeachHome';
 import ClassDetail from './pages/teach/ClassDetail';
@@ -44,7 +45,7 @@ export default function App() {
           <Route path="grades" element={<Grades />} />
           <Route path="schedule" element={<Schedule />} />
           <Route path="homework" element={<Homework />} />
-          <Route path="practice" element={<Practice />} />
+          <Route path="practice" element={<LearnHub />} />
           <Route path="feedback" element={<FeedbackPage />} />
         </Route>
         <Route

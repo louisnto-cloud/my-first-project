@@ -82,7 +82,7 @@ export interface PracticeEvent {
   id: string;
   studentId: string;
   date: string; // YYYY-MM-DD
-  type: 'vocab' | 'quiz' | 'homework';
+  type: 'vocab' | 'quiz' | 'homework' | 'lesson';
   points: number;
 }
 
@@ -92,6 +92,60 @@ export interface Feedback {
   date: string; // YYYY-MM-DD
   rating: number; // 1-5 stars
   message: string;
+}
+
+// --- Self-study learning programs ---
+
+export type Exercise =
+  | { kind: 'mc'; question: string; options: string[]; answer: string }
+  | { kind: 'fill'; sentence: string; choices: string[]; answer: string } // sentence contains ___
+  | { kind: 'order'; words: string[]; answer: string }
+  | { kind: 'listen'; text: string; options: string[]; answer: string };
+
+export interface LessonGrammar {
+  titleEn: string;
+  titleVi: string;
+  bodyEn: string;
+  bodyVi: string;
+  examples: { en: string; vi: string }[];
+}
+
+export interface Lesson {
+  id: string;
+  emoji: string;
+  titleEn: string;
+  titleVi: string;
+  vocab: { term: string; meaningVi: string; example: string }[];
+  grammar: LessonGrammar;
+  exercises: Exercise[];
+}
+
+export interface Unit {
+  id: string;
+  titleEn: string;
+  titleVi: string;
+  lessons: Lesson[];
+}
+
+export interface Course {
+  id: string;
+  emoji: string;
+  color: string;
+  titleEn: string;
+  titleVi: string;
+  descEn: string;
+  descVi: string;
+  levelKeywords: string[]; // matched against ClassInfo.level to recommend
+  units: Unit[];
+}
+
+export interface LessonProgress {
+  studentId: string;
+  lessonId: string;
+  bestPct: number;
+  stars: number; // 0-3
+  attempts: number;
+  completedAt: string;
 }
 
 export interface DB {
@@ -104,4 +158,5 @@ export interface DB {
   vocabLists: VocabList[];
   practice: PracticeEvent[];
   feedback: Feedback[];
+  lessonProgress: LessonProgress[];
 }
