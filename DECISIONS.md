@@ -80,6 +80,19 @@ Correct any assumption and dependent plans adjust.
   (released-to name recorded); the PIN-verified pickup-person flow is
   fully supported by the API and ships in the kiosk UI next pass.
 
+- **D21 (Phase 5):** Currency is integer VND rounded to 1,000đ. Late fee
+  defaults: 15-minute grace, 20,000đ per started 15-minute block —
+  owner-configurable later.
+- **D22 (Phase 5):** Sibling and scholarship discounts sum (capped at
+  100%) rather than compound — simpler to explain to parents.
+- **D23 (Phase 5):** VietQR payload is a mock format until the center's
+  real bank details exist; childcare tax receipts deferred until the
+  jurisdiction question (Q3) is answered — legal details are never
+  invented.
+- **D24 (Phase 5):** No autopay (Stripe-style) in the Vietnamese rails
+  path: payments are bank-transfer/QR initiated by parents and
+  reconciled by the billing admin; dunning replaces retry queues.
+
 ## Assumptions (pending owner answers to the context questions)
 
 - **A1 — Identity:** "ETOP" = Trung tâm Anh Ngữ E'TOP, Phan Thiết, Việt Nam

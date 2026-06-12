@@ -386,6 +386,119 @@ CREATE TABLE IF NOT EXISTS messages (
 CREATE INDEX IF NOT EXISTS idx_practice_student ON practice_events(student_id, occurred_on);
 CREATE INDEX IF NOT EXISTS idx_messages_thread ON messages(thread_id, created_at);
 
+-- ---------- Phase 5: Money & admissions ----------
+
+-- Admissions pipeline: inquiry → tour → assessment → offered → enrolled | waitlist | lost
+CREATE TABLE IF NOT EXISTS leads (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  site_id TEXT REFERENCES sites(id),
+  parent_name TEXT NOT NULL,
+  contact TEXT NOT NULL,
+  child_name TEXT NOT NULL,
+  child_age INT,
+  stage TEXT NOT NULL DEFAULT 'inquiry',
+  notes TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+-- Digital enrollment packets with typed-name e-signature, versioned.
+CREATE TABLE IF NOT EXISTS enrollment_packets (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  student_id TEXT NOT NULL REFERENCES users(id),
+  version INT NOT NULL DEFAULT 1,
+  title TEXT NOT NULL,
+  body TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'sent', -- sent | signed
+  sent_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  signed_at TIMESTAMPTZ,
+  signed_by_user TEXT,
+  signed_by_name TEXT
+);
+
+CREATE TABLE IF NOT EXISTS billing_plans (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  name TEXT NOT NULL,
+  kind TEXT NOT NULL DEFAULT 'monthly', -- monthly | term | package | dropin
+  price_vnd BIGINT NOT NULL,
+  sessions_count INT
+);
+
+CREATE TABLE IF NOT EXISTS student_plans (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  student_id TEXT NOT NULL REFERENCES users(id),
+  plan_id TEXT NOT NULL REFERENCES billing_plans(id),
+  started_on DATE NOT NULL,
+  ended_on DATE,
+  sibling_discount_pct INT NOT NULL DEFAULT 0,
+  scholarship_pct INT NOT NULL DEFAULT 0,
+  status TEXT NOT NULL DEFAULT 'active'
+);
+
+-- Late-pickup fees accrued from attendance (grace + per-block), swept into
+-- the next invoice run.
+CREATE TABLE IF NOT EXISTS late_fees (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  student_id TEXT NOT NULL REFERENCES users(id),
+  date DATE NOT NULL,
+  minutes_late INT NOT NULL,
+  amount_vnd BIGINT NOT NULL,
+  invoice_id TEXT,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  UNIQUE (student_id, date)
+);
+
+CREATE TABLE IF NOT EXISTS invoices (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  student_id TEXT NOT NULL REFERENCES users(id),
+  period TEXT NOT NULL,            -- e.g. 2026-06
+  line_items JSONB NOT NULL,       -- [{label, amountVnd}]
+  subtotal_vnd BIGINT NOT NULL,
+  discount_vnd BIGINT NOT NULL DEFAULT 0,
+  total_vnd BIGINT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'open', -- open | paid | overdue | void
+  due_on DATE NOT NULL,
+  reminders INT NOT NULL DEFAULT 0,
+  last_reminder_at TIMESTAMPTZ,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  paid_at TIMESTAMPTZ,
+  UNIQUE (student_id, period)
+);
+
+CREATE TABLE IF NOT EXISTS payments (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  invoice_id TEXT NOT NULL REFERENCES invoices(id),
+  amount_vnd BIGINT NOT NULL,
+  method TEXT NOT NULL,            -- vietqr | bank_transfer | cash
+  ref TEXT,
+  recorded_by TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+-- Refunds require explicit approval before processing — no shortcuts.
+CREATE TABLE IF NOT EXISTS refunds (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  invoice_id TEXT NOT NULL REFERENCES invoices(id),
+  amount_vnd BIGINT NOT NULL,
+  reason TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'requested', -- requested | approved | processed | rejected
+  requested_by TEXT NOT NULL,
+  approved_by TEXT,
+  processed_at TIMESTAMPTZ,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS idx_invoices_status ON invoices(org_id, status, due_on);
+CREATE INDEX IF NOT EXISTS idx_leads_stage ON leads(org_id, stage);
+
 CREATE INDEX IF NOT EXISTS idx_users_org ON users(org_id);
 CREATE INDEX IF NOT EXISTS idx_classes_org ON classes(org_id);
 CREATE INDEX IF NOT EXISTS idx_enroll_student ON enrollments(student_id);

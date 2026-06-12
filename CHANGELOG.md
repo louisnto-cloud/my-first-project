@@ -1,6 +1,30 @@
 # CHANGELOG.md
 
-## Phase 4 — Parent & student experience (at gate)
+## Phase 5 — Money & admissions (at gate)
+
+- Billing engine (deterministic, VND-integer math, fully unit-tested):
+  monthly plans with mid-month proration (rounded to 1,000đ), sibling +
+  scholarship discounts (summed, capped at 100%), idempotent invoice
+  runs per (student, period).
+- Late-pickup fees flow straight from attendance: 15-minute grace, then
+  20,000đ per started 15-minute block, accrued per day and swept into
+  the next invoice; double-billing impossible by construction.
+- Payments (VietQR/bank/cash) with partial-payment support; invoices
+  auto-close when fully paid; parent portal endpoint serves invoices
+  with a VietQR payload (mock format until real bank details — D23).
+- Dunning: overdue marking + guardian SMS reminders repeating every
+  3 days, never spamming inside the window.
+- Refunds with a mandatory approval workflow: requested (billing admin)
+  → approved (owner only) → processed; skipping approval is rejected;
+  every step audited.
+- Finance dashboard: revenue by period, AR aging buckets.
+- Admissions pipeline (inquiry → tour → assessment → offered → enrolled
+  / waitlist / lost) with nurture touchpoints and audit trail.
+- Enrollment packets with versioning and typed-name e-signature,
+  guardian-scoped.
+- 15 new tests (75 total green).
+
+## Phase 4 — Parent & student experience (shipped)
 
 - New portal app (`apps/web`) on the real API, role-routed: student,
   parent, teacher, and kiosk views, bilingual VI/EN.

@@ -36,6 +36,7 @@ export async function seedDemo(db: DB): Promise<void> {
     ['u_david', 'site_nh', 'tutor', 'Mr. David', 'david@etop.vn'],
     ['u_trang', 'site_tt', 'tutor', 'Ms. Trang', 'trang@etop.vn'],
     ['u_desk', 'site_nh', 'front_desk', 'Front Desk NH', 'desk@etop.vn'],
+    ['u_bill', null, 'billing_admin', 'Ms. Kế Toán', 'bill@etop.vn'],
   ];
   for (const [id, site, role, name, email] of users) {
     await db.query('INSERT INTO users (id, org_id, site_id, role, name, email, password_hash) VALUES ($1, $2, $3, $4, $5, $6, $7)', [
@@ -131,6 +132,17 @@ export async function seedDemo(db: DB): Promise<void> {
   await q('q_li1', 'listen_mc', 'listening', 'Listen and choose what you hear.', { audioText: 'Good morning, teacher!', options: ['Good morning, teacher!', 'Good night, teacher!', 'Good morning, Peter!'], answer: 'Good morning, teacher!', replayLimit: 2 });
   await q('q_di1', 'dictation', 'writing', 'Listen and type what you hear.', { audioText: 'I like my school.', replayLimit: 2 });
   await q('q_pi1', 'picture', 'writing', 'Describe the picture in 2 sentences.', { imageUrl: null, starters: ['I can see…', 'There is…'] });
+
+  // Billing plans and the demo student's subscription.
+  await db.query(
+    `INSERT INTO billing_plans (id, org_id, name, kind, price_vnd) VALUES
+     ('plan_monthly', 'org_etop', 'Học phí tháng (2 buổi/tuần)', 'monthly', 1500000),
+     ('plan_term', 'org_etop', 'Học phí khóa 3 tháng', 'term', 4200000)`,
+  );
+  await db.query(
+    `INSERT INTO student_plans (id, org_id, student_id, plan_id, started_on, sibling_discount_pct) VALUES
+     ('sp_s0', 'org_etop', 's0', 'plan_monthly', '2026-01-01', 10)`,
+  );
 
   await meeting('m1', classes[0], 17, 30, 90, 'P.101');
   await meeting('m2', classes[1], 17, 30, 90, 'P.102');
