@@ -89,7 +89,11 @@ export function Landing({ onDone }: { onDone: () => void }) {
       setToken(res.token);
       onDone();
     } catch (e) {
-      setErr(e instanceof ApiError && e.status === 401 ? 'Mã số / thông tin không đúng. Vui lòng kiểm tra lại.' : 'Không kết nối được. Thử lại nhé.');
+      setErr(
+        e instanceof ApiError && e.status === 401
+          ? 'Mã số / thông tin không đúng. Vui lòng kiểm tra lại.'
+          : 'Chưa kết nối máy chủ — đây là bản xem trước giao diện. Đăng nhập sẽ hoạt động khi hệ thống được đưa lên hosting.',
+      );
     } finally {
       setBusy(false);
     }

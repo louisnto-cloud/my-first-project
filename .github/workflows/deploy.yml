@@ -25,6 +25,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx turbo run build test
+      # The prototype is the site root; the new platform UI is published
+      # under /platform/ as a visual preview until the API is hosted.
+      - run: mkdir -p apps/web-prototype/dist/platform && cp -r apps/web/dist/* apps/web-prototype/dist/platform/
       # Publishing to the gh-pages branch auto-enables GitHub Pages,
       # which the github-pages deployment API is not allowed to do
       # with the default workflow token.
