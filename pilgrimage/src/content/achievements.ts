@@ -52,10 +52,10 @@ export const ACHIEVEMENTS: Achievement[] = [
     earned: (s) => candleCount(s) >= 7,
   },
   {
-    id: 'hanoi-stamp',
-    title: u('Hà Nội', 'Hà Nội'),
+    id: 'sinai-stamp',
+    title: u('The Desert', 'Sa mạc'),
     how: u('Earn the first passport stamp.', 'Nhận con dấu hộ chiếu đầu tiên.'),
-    earned: (s) => !!s.stamps.hanoi,
+    earned: (s) => !!s.stamps.sinai,
   },
   {
     id: 'ten-steps',
@@ -70,10 +70,10 @@ export const ACHIEVEMENTS: Achievement[] = [
     earned: (s) => prayersKept(s) >= 3,
   },
   {
-    id: 'bruges-stamp',
-    title: u('Bruges', 'Bruges'),
+    id: 'holyland-stamp',
+    title: u('Jerusalem', 'Giêrusalem'),
     how: u('Earn the second passport stamp.', 'Nhận con dấu hộ chiếu thứ hai.'),
-    earned: (s) => !!s.stamps.bruges,
+    earned: (s) => !!s.stamps.holyland,
   },
   {
     id: 'thirty-candles',
@@ -88,16 +88,16 @@ export const ACHIEVEMENTS: Achievement[] = [
     earned: (s) => s.journal.length >= 7,
   },
   {
-    id: 'paris-stamp',
-    title: u('Paris', 'Paris'),
+    id: 'rome-stamp',
+    title: u('Rome', 'Rôma'),
     how: u('Earn the third passport stamp.', 'Nhận con dấu hộ chiếu thứ ba.'),
-    earned: (s) => !!s.stamps.paris,
+    earned: (s) => !!s.stamps.rome,
   },
   {
-    id: 'brussels-stamp',
-    title: u('Brussels', 'Brussels'),
+    id: 'lourdes-stamp',
+    title: u('Lourdes', 'Lộ Đức'),
     how: u('Earn the fourth passport stamp.', 'Nhận con dấu hộ chiếu thứ tư.'),
-    earned: (s) => !!s.stamps.brussels,
+    earned: (s) => !!s.stamps.lourdes,
   },
   {
     id: 'open-missal',
@@ -112,9 +112,9 @@ export const ACHIEVEMENTS: Achievement[] = [
     earned: (s) => (s.seen['rosary'] ?? 0) >= 1,
   },
   {
-    id: 'parish-stamp',
-    title: u('Home', 'Nhà'),
+    id: 'camino-stamp',
+    title: u('Compostela', 'Compostela'),
     how: u('Earn the fifth stamp — the whole main road, walked.', 'Nhận con dấu thứ năm — trọn con đường chính đã đi qua.'),
-    earned: (s) => !!s.stamps.parish,
+    earned: (s) => !!s.stamps.camino,
   },
 ];

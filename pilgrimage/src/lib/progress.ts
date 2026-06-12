@@ -17,12 +17,8 @@ export const allLessons = (): { world: World; lesson: Lesson }[] =>
 
 export function isWorldUnlocked(world: World, save: SaveDoc): boolean {
   if (BONUS_WORLDS.some((w) => w.id === world.id)) {
-    // Bonus roads open as their themes are earned on the main road:
-    // Asia with the first stamp, the Holy Land once she knows Jesus,
-    // the Vatican once she knows the Church.
-    if (world.id === 'asia') return !!save.stamps.hanoi;
-    if (world.id === 'holyland') return !!save.stamps.bruges;
-    if (world.id === 'vatican') return !!save.stamps.paris;
+    // Bonus roads open off the main pilgrimage.
+    if (world.id === 'asia') return !!save.stamps.sinai;
     return false;
   }
   const idx = MAIN_WORLDS.findIndex((w) => w.id === world.id);

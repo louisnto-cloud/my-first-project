@@ -33,7 +33,7 @@ export const RELIQUARY: ReliquaryItem[] = [
   {
     kind: 'verse',
     title: u('Psalm 139', 'Thánh vịnh 139'),
-    text: u('“If I fly to the far side of the sea, even there your hand will guide me.” — written for sailors, true for flight attendants.', '“Dù con bay đến chân trời góc bể, tại đó tay Ngài vẫn dẫn dắt con.” — viết cho người đi biển, vẫn đúng cho tiếp viên hàng không.'),
+    text: u('“If I fly to the far side of the sea, even there your hand will guide me.” — written for sailors, true for every traveler.', '“Dù con bay đến chân trời góc bể, tại đó tay Ngài vẫn dẫn dắt con.” — viết cho người đi biển, vẫn đúng cho tiếp viên hàng không.'),
   },
   {
     kind: 'saint',
@@ -54,12 +54,12 @@ export const RELIQUARY: ReliquaryItem[] = [
   {
     kind: 'verse',
     title: u('John 8:12', 'Gioan 8:12'),
-    text: u('“I am the light of the world. Whoever follows me will never walk in darkness.” — like runway lights guiding a plane home at night.', '“Ta là ánh sáng thế gian. Ai theo Ta sẽ không phải đi trong bóng tối.” — như dãy đèn đường băng dẫn máy bay về nhà trong đêm.'),
+    text: u('“I am the light of the world. Whoever follows me will never walk in darkness.” — like harbour lights guiding boats home at night.', '“Ta là ánh sáng thế gian. Ai theo Ta sẽ không phải đi trong bóng tối.” — như dãy đèn đường băng dẫn máy bay về nhà trong đêm.'),
   },
   {
     kind: 'saint',
     title: u('St. Joseph', 'Thánh Giuse'),
-    text: u('The quiet carpenter who raised Jesus. Not one word of his is recorded — only his faithfulness. Your Hà Nội cathedral carries his name.', 'Bác thợ mộc thầm lặng đã nuôi dưỡng Chúa Giêsu. Không một lời nào của ngài được ghi lại — chỉ có lòng trung tín. Nhà thờ Lớn Hà Nội của bạn mang tên ngài.'),
+    text: u('The quiet carpenter who raised Jesus. Not one word of his is recorded — only his faithfulness. Thousands of churches around the world carry his name.', 'Bác thợ mộc thầm lặng đã nuôi dưỡng Chúa Giêsu. Không một lời nào của ngài được ghi lại — chỉ có lòng trung tín. Nhà thờ Lớn Hà Nội của bạn mang tên ngài.'),
   },
   {
     kind: 'blessing',
@@ -75,7 +75,7 @@ export const RELIQUARY: ReliquaryItem[] = [
   {
     kind: 'verse',
     title: u('Matthew 11:28', 'Mátthêu 11:28'),
-    text: u('“Come to me, all you who are weary, and I will give you rest.” — for jet lag of the body, and of the soul.', '“Hãy đến với Ta, hỡi những ai mệt mỏi, Ta sẽ cho nghỉ ngơi.” — cho sự mệt mỏi của thân xác, và của tâm hồn.'),
+    text: u('“Come to me, all you who are weary, and I will give you rest.” — for the weariness of the body, and of the soul.', '“Hãy đến với Ta, hỡi những ai mệt mỏi, Ta sẽ cho nghỉ ngơi.” — cho sự mệt mỏi của thân xác, và của tâm hồn.'),
   },
   {
     kind: 'saint',

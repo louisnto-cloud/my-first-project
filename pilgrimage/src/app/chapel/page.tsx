@@ -12,7 +12,7 @@ import { exportJSON, importJSON } from '@/lib/storage';
 import { collectUnverified, downloadFile } from '@/lib/review';
 import { ChapelOfCandles } from '@/components/ChapelOfCandles';
 import { RoseWindow } from '@/components/RoseWindow';
-import { OCIAMilestoneTracker } from '@/components/OCIAMilestoneTracker';
+import { RCIAMilestoneTracker } from '@/components/RCIAMilestoneTracker';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { updateSave } from '@/lib/storage';
 
@@ -48,7 +48,7 @@ export default function ChapelPage() {
         </div>
       </section>
 
-      <OCIAMilestoneTracker />
+      <RCIAMilestoneTracker />
 
       <RoseWindow />
 

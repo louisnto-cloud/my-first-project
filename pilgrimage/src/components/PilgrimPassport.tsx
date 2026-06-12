@@ -15,7 +15,7 @@ import { worldProgress } from '@/lib/progress';
 import { playThunk } from '@/lib/sound';
 
 const STAMP_COLORS: Partial<Record<WorldId, string>> = {
-  bruges: '#7A1F2B',
+  holyland: '#7A1F2B',
 };
 const stampColor = (id: WorldId) => STAMP_COLORS[id] ?? '#D9A441';
 
@@ -149,7 +149,7 @@ export function PilgrimPassport({
                 <span>
                   {save.candles.length} {t(UI.passportCandles)}
                 </span>
-                {current.id === 'hanoi' && save.stamps.hanoi && (
+                {current.id === 'sinai' && save.stamps.sinai && (
                   <span>
                     {worldProgress(current, save).done} {t(UI.lessonsWord)}
                   </span>

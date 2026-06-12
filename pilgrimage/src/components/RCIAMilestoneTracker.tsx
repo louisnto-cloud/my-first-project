@@ -1,10 +1,10 @@
 'use client';
 
-// ─── OCIA milestone tracker ──────────────────────────────────────────────────
-// She (or her fiancé) enters the real dates from Father Matthew; the app
-// counts down with encouragement, never pressure.
+// ─── RCIA milestone tracker ──────────────────────────────────────────────────
+// Enter the real dates as your parish gives them; the app counts down with
+// encouragement, never pressure.
 
-import { OCIA_MILESTONES } from '@/content/ocia';
+import { RCIA_MILESTONES } from '@/content/rcia';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { todayISO, updateSave } from '@/lib/storage';
@@ -15,16 +15,16 @@ function daysUntil(iso: string): number {
   return Math.round((target.getTime() - today.getTime()) / 86400000);
 }
 
-export function OCIAMilestoneTracker() {
+export function RCIAMilestoneTracker() {
   const { t, lang, save } = useI18n();
 
   return (
     <section className="rounded-3xl border border-ivory/10 bg-[#141b33] p-5">
-      <h2 className="font-display text-lg text-gold">{t(UI.ociaTitle)}</h2>
+      <h2 className="font-display text-lg text-gold">{t(UI.rciaTitle)}</h2>
       <p className="mt-1 text-xs text-incense">{t(UI.parishNote)}</p>
 
       <ol className="mt-4 flex flex-col gap-3">
-        {OCIA_MILESTONES.map((m) => {
+        {RCIA_MILESTONES.map((m) => {
           const date = save.ocia[m.id];
           const days = date ? daysUntil(date) : null;
           const passed = days !== null && days < 0;
@@ -40,13 +40,13 @@ export function OCIAMilestoneTracker() {
                   {days !== null && !passed && (
                     <p className="mt-1.5 font-story text-base italic text-gold">
                       {days === 0
-                        ? t(UI.ociaToday)
-                        : `${days} ${t(UI.ociaDays)} · ${new Date(date + 'T12:00:00').toLocaleDateString(lang === 'vi' ? 'vi-VN' : 'en-GB')}`}
+                        ? t(UI.rciaToday)
+                        : `${days} ${t(UI.rciaDays)} · ${new Date(date + 'T12:00:00').toLocaleDateString(lang === 'vi' ? 'vi-VN' : 'en-GB')}`}
                     </p>
                   )}
                   {passed && (
                     <p className="mt-1.5 font-story text-base italic text-gold">
-                      {t(UI.ociaPassed)} · {new Date(date + 'T12:00:00').toLocaleDateString(lang === 'vi' ? 'vi-VN' : 'en-GB')}
+                      {t(UI.rciaPassed)} · {new Date(date + 'T12:00:00').toLocaleDateString(lang === 'vi' ? 'vi-VN' : 'en-GB')}
                     </p>
                   )}
                 </div>

@@ -1,23 +1,23 @@
 import type { L, Lesson } from '../types';
 
-// ─── World 5 · Her Parish · "Living It" ─────────────────────────────────────
-// The final world of the main road: the moral life as a way of love, the
-// liturgical year, the saints, hope — and her own OCIA milestones, leading
-// to the font.
+// ─── World 5 · The Camino · "The Way" ──────────────────────────────────────
+// The pilgrim road to Santiago — and the longest road of all, ordinary life.
+// The moral life as a way of love, the liturgical year, the saints, hope,
+// and the RCIA road that ends at a parish font.
 
 const u = (en: string, vi: string): L => ({ en, vi, viStatus: 'unverified' });
 
-export const PARISH_LESSONS: Lesson[] = [
+export const CAMINO_LESSONS: Lesson[] = [
   // ── 1: The Greatest Commandment ────────────────────────────────────────
   {
-    id: 'parish-1',
+    id: 'camino-1',
     title: u('The Greatest Commandment', 'Điều răn lớn nhất'),
     minutes: 4,
     door: {
-      art: 'parish-home',
+      art: 'camino-way',
       line: u(
-        'The last world is the nearest one: your parish, and the question of how to live.',
-        'Chặng đường cuối là chặng gần nhất: giáo xứ của bạn, và câu hỏi phải sống thế nào.',
+        'The last road is the longest and the plainest: ordinary life, walked like a pilgrim.',
+        'Chặng đường cuối là chặng dài nhất và bình dị nhất: cuộc sống thường ngày, được bước đi như một người hành hương.',
       ),
     },
     cards: [
@@ -44,8 +44,8 @@ export const PARISH_LESSONS: Lesson[] = [
         id: 'c2',
         art: 'commandments-tablets',
         text: u(
-          'Your mother taught you a version of this before you ever opened this app: pray for people, be good to people, never pray for money. She was closer to the heart of it than many lifelong believers.',
-          'Mẹ bạn đã dạy bạn một phiên bản của điều này từ trước khi bạn mở ứng dụng: cầu nguyện cho người khác, sống tốt với người khác, đừng bao giờ cầu tiền bạc. Bà gần với cốt lõi hơn nhiều người giữ đạo cả đời.',
+          'Perhaps someone taught you a version of this long before any catechism: pray for people, be good to people, never pray for money. Whoever taught you that was closer to the heart of it than many lifelong believers.',
+          'Có lẽ ai đó đã dạy bạn một phiên bản của điều này từ trước mọi sách giáo lý: cầu nguyện cho người khác, sống tốt với người khác, đừng bao giờ cầu tiền bạc. Người đã dạy bạn điều ấy gần với cốt lõi hơn nhiều người giữ đạo cả đời.',
         ),
       },
       {
@@ -105,7 +105,7 @@ export const PARISH_LESSONS: Lesson[] = [
 
   // ── 2: Ten Words of Freedom ────────────────────────────────────────────
   {
-    id: 'parish-2',
+    id: 'camino-2',
     title: u('Ten Words of Freedom', 'Mười lời của tự do'),
     minutes: 5,
     door: {
@@ -136,8 +136,8 @@ export const PARISH_LESSONS: Lesson[] = [
         id: 'c3',
         art: 'incense-altar',
         text: u(
-          '“Honor your father and your mother” — the fourth word — will sound familiar. Your whole culture is built on it. Vietnam has been keeping the fourth commandment beautifully for a very long time.',
-          '“Thảo kính cha mẹ” — lời thứ tư — nghe thật quen thuộc. Cả nền văn hóa của bạn được xây trên đó. Việt Nam đã giữ điều răn thứ tư một cách tuyệt đẹp từ rất lâu rồi.',
+          '“Honor your father and your mother” — the fourth word — sounds familiar in many languages. Whole cultures are built on it: Việt Nam, China, Korea and many others have kept the fourth commandment beautifully for centuries.',
+          '“Thảo kính cha mẹ” — lời thứ tư — nghe thật quen thuộc trong nhiều ngôn ngữ. Cả những nền văn hóa được xây trên đó: Việt Nam, Trung Quốc, Hàn Quốc và nhiều nơi khác đã giữ điều răn thứ tư một cách tuyệt đẹp suốt bao thế kỷ.',
         ),
       },
       {
@@ -168,7 +168,7 @@ export const PARISH_LESSONS: Lesson[] = [
       {
         id: 'q2',
         kind: 'choice',
-        prompt: u('Which commandment has your culture been keeping all along?', 'Điều răn nào nền văn hóa của bạn vẫn luôn gìn giữ?'),
+        prompt: u('Which commandment have many cultures been keeping all along?', 'Điều răn nào nhiều nền văn hóa vẫn luôn gìn giữ?'),
         options: [
           { text: u('Honor your father and your mother', 'Thảo kính cha mẹ') },
           { text: u('Keep holy the Sabbath', 'Giữ ngày Chúa nhật') },
@@ -198,7 +198,7 @@ export const PARISH_LESSONS: Lesson[] = [
 
   // ── 3: The Beatitudes ──────────────────────────────────────────────────
   {
-    id: 'parish-3',
+    id: 'camino-3',
     title: u('Blessed Are…', 'Phúc cho ai…'),
     minutes: 4,
     door: {
@@ -285,7 +285,7 @@ export const PARISH_LESSONS: Lesson[] = [
 
   // ── 4: The Family Rhythm ───────────────────────────────────────────────
   {
-    id: 'parish-4',
+    id: 'camino-4',
     title: u('The Family Rhythm', 'Nhịp sống của gia đình'),
     minutes: 4,
     door: {
@@ -316,8 +316,8 @@ export const PARISH_LESSONS: Lesson[] = [
         id: 'c3',
         art: 'sky-flight',
         text: u(
-          'A note written for you: travelers are not graded down. When work puts you over an ocean on a Sunday, the obligation yields — and any Mass in any city in any language counts. The family table is everywhere.',
-          'Một ghi chú dành riêng cho bạn: người lữ hành không bị trừ điểm. Khi công việc đặt bạn trên đại dương vào một ngày Chúa nhật, luật buộc được nhường bước — và bất cứ Thánh lễ nào, ở bất cứ thành phố nào, bằng bất cứ ngôn ngữ nào, đều được kể. Bàn ăn của gia đình này có mặt khắp nơi.',
+          'A note for travelers: nobody is graded down for distance. When a journey puts you far from home on a Sunday, the obligation bends — and any Mass in any city in any language counts. The family table is everywhere.',
+          'Một ghi chú cho người lữ hành: không ai bị trừ điểm vì khoảng cách. Khi một chuyến đi đặt bạn xa nhà vào ngày Chúa nhật, luật buộc được nhường bước — và bất cứ Thánh lễ nào, ở bất cứ thành phố nào, bằng bất cứ ngôn ngữ nào, đều được kể. Bàn ăn của gia đình này có mặt khắp nơi.',
         ),
       },
     ],
@@ -340,15 +340,15 @@ export const PARISH_LESSONS: Lesson[] = [
       {
         id: 'q2',
         kind: 'choice',
-        prompt: u('You land in Brussels on a Sunday. Which Mass counts?', 'Bạn hạ cánh ở Brussels vào Chúa nhật. Thánh lễ nào được kể?'),
+        prompt: u('You find yourself far from home on a Sunday. Which Mass counts?', 'Bạn ở xa nhà vào một ngày Chúa nhật. Thánh lễ nào được kể?'),
         options: [
           { text: u('Any Catholic Mass, in any language', 'Bất cứ Thánh lễ Công giáo nào, bằng bất cứ ngôn ngữ nào') },
           { text: u('Only one in Vietnamese', 'Chỉ Thánh lễ tiếng Việt') },
         ],
         answer: 0,
         why: u(
-          'You have already attended Mass in a language you did not speak — it counted, and it moved you. Now you know why it could.',
-          'Bạn đã từng dự Thánh lễ bằng một ngôn ngữ mình không biết — lễ ấy được kể, và đã làm bạn xúc động. Giờ bạn hiểu vì sao điều đó có thể xảy ra.',
+          'A Mass in a language you do not speak still counts — and it can still move you. Now you know why.',
+          'Một Thánh lễ bằng ngôn ngữ bạn không biết vẫn được kể — và vẫn có thể làm bạn xúc động. Giờ bạn đã hiểu vì sao.',
         ),
       },
     ],
@@ -356,8 +356,8 @@ export const PARISH_LESSONS: Lesson[] = [
       kind: 'practice',
       title: u('The traveler’s habit', 'Thói quen của người lữ hành'),
       note: u(
-        'Before your next trip, look up one church near your layover hotel. Even ten minutes inside, on a weekday, with no Mass at all — the red lamp will be burning. You know what it means now.',
-        'Trước chuyến bay tới, hãy tìm một nhà thờ gần khách sạn nơi bạn nghỉ chặng. Dù chỉ mười phút ghé vào, ngày thường, không có Thánh lễ — ngọn đèn đỏ vẫn đang cháy. Giờ thì bạn đã biết nó nghĩa là gì.',
+        'Before your next journey, look up one church near where you will stay. Even ten minutes inside, on a weekday, with no Mass at all — the red lamp will be burning. You know what it means now.',
+        'Trước chuyến đi tới, hãy tìm một nhà thờ gần nơi bạn sẽ ở. Dù chỉ mười phút ghé vào, ngày thường, không có Thánh lễ — ngọn đèn đỏ vẫn đang cháy. Giờ thì bạn đã biết nó nghĩa là gì.',
       ),
     },
     reflection: u('What rhythm already holds your life together?', 'Nhịp sống nào đang giữ đời bạn gắn kết?'),
@@ -369,7 +369,7 @@ export const PARISH_LESSONS: Lesson[] = [
 
   // ── 5: The Living Calendar ─────────────────────────────────────────────
   {
-    id: 'parish-5',
+    id: 'camino-5',
     title: u('The Living Calendar', 'Cuốn lịch sống'),
     minutes: 5,
     door: {
@@ -464,7 +464,7 @@ export const PARISH_LESSONS: Lesson[] = [
 
   // ── 6: The Cloud of Witnesses ──────────────────────────────────────────
   {
-    id: 'parish-6',
+    id: 'camino-6',
     title: u('The Cloud of Witnesses', 'Đám mây nhân chứng'),
     minutes: 4,
     door: {
@@ -548,7 +548,7 @@ export const PARISH_LESSONS: Lesson[] = [
 
   // ── 7: The Hope ────────────────────────────────────────────────────────
   {
-    id: 'parish-7',
+    id: 'camino-7',
     title: u('The Hope', 'Niềm Hy Vọng'),
     minutes: 5,
     door: {
@@ -641,14 +641,14 @@ export const PARISH_LESSONS: Lesson[] = [
 
   // ── 8: The Road to the Font ────────────────────────────────────────────
   {
-    id: 'parish-8',
+    id: 'camino-8',
     title: u('The Road to the Font', 'Con đường đến giếng Rửa tội'),
     minutes: 4,
     door: {
       art: 'font-water',
       line: u(
-        'Your own OCIA path, step by step — so nothing ahead of you is unknown.',
-        'Hành trình OCIA của chính bạn, từng bước một — để không còn điều gì phía trước là ẩn số.',
+        'The RCIA path, step by step — so nothing ahead is unknown.',
+        'Hành trình RCIA, từng bước một — để không còn điều gì phía trước là ẩn số.',
       ),
     },
     cards: [
@@ -656,8 +656,8 @@ export const PARISH_LESSONS: Lesson[] = [
         id: 'c1',
         art: 'parish-home',
         text: u(
-          'OCIA — the Order of Christian Initiation of Adults — is simply the ancient road into the Church, walked at your parish, at your pace, with Father Matthew. It has a few marked gates.',
-          'OCIA — nghi thức khai tâm Kitô giáo cho người trưởng thành — đơn giản là con đường cổ xưa dẫn vào Giáo hội, được đi tại giáo xứ của bạn, theo nhịp của bạn, cùng cha Matthew. Con đường ấy có vài cánh cổng được đánh dấu.',
+          'RCIA — the Rite of Christian Initiation of Adults — is simply the ancient road into the Church, walked at a parish, at your pace, with a priest who knows your name. It has a few marked gates.',
+          'RCIA — nghi thức khai tâm Kitô giáo cho người trưởng thành — đơn giản là con đường cổ xưa dẫn vào Giáo hội, được đi tại một giáo xứ, theo nhịp của bạn, cùng một linh mục biết tên bạn. Con đường ấy có vài cánh cổng được đánh dấu.',
         ),
       },
       {
@@ -680,8 +680,8 @@ export const PARISH_LESSONS: Lesson[] = [
         id: 'c4',
         art: 'font-water',
         text: u(
-          'In Lent, three quiet Sundays called the scrutinies — prayers of strengthening, nothing to fear. And then the night you have already rehearsed: the fire, the water, the white garment. In My Chapel you can now enter the real dates as Father Matthew gives them.',
-          'Trong Mùa Chay là ba Chúa nhật lặng lẽ gọi là các nghi thức khảo hạch — những lời nguyện thêm sức mạnh, không có gì phải sợ. Và rồi đến đêm bạn đã được tập dượt: ngọn lửa, dòng nước, tấm áo trắng. Trong Nhà nguyện, giờ đây bạn có thể ghi các ngày thật khi cha Matthew thông báo.',
+          'In Lent, three quiet Sundays called the scrutinies — prayers of strengthening, nothing to fear. And then the night you have already rehearsed: the fire, the water, the white garment. In My Chapel you can enter the real dates as your parish gives them.',
+          'Trong Mùa Chay là ba Chúa nhật lặng lẽ gọi là các nghi thức khảo hạch — những lời nguyện thêm sức mạnh, không có gì phải sợ. Và rồi đến đêm bạn đã được tập dượt: ngọn lửa, dòng nước, tấm áo trắng. Trong Nhà nguyện, bạn có thể ghi các ngày thật khi giáo xứ thông báo.',
         ),
       },
     ],
@@ -690,7 +690,7 @@ export const PARISH_LESSONS: Lesson[] = [
         id: 'q1',
         kind: 'order',
         afterCard: 3,
-        prompt: u('Put the OCIA road in order.', 'Sắp xếp hành trình OCIA theo thứ tự.'),
+        prompt: u('Put the RCIA road in order.', 'Sắp xếp hành trình RCIA theo thứ tự.'),
         items: [
           u('Rite of Acceptance: the door', 'Nghi thức Tiếp nhận: cánh cửa'),
           u('Catechumenate: the learning seasons', 'Thời kỳ dự tòng: những mùa học hỏi'),
@@ -708,7 +708,7 @@ export const PARISH_LESSONS: Lesson[] = [
         kind: 'choice',
         prompt: u('Who leads this journey?', 'Ai dẫn dắt hành trình này?'),
         options: [
-          { text: u('Your parish and Father Matthew; this app just walks beside you', 'Giáo xứ và cha Matthew; ứng dụng này chỉ đồng hành bên bạn') },
+          { text: u('Your parish and your priest; this app just walks beside you', 'Giáo xứ và cha xứ của bạn; ứng dụng này chỉ đồng hành bên bạn') },
           { text: u('This app', 'Ứng dụng này') },
         ],
         answer: 0,
@@ -722,8 +722,8 @@ export const PARISH_LESSONS: Lesson[] = [
       kind: 'practice',
       title: u('Enter your milestones', 'Ghi các cột mốc của bạn'),
       note: u(
-        'Open My Chapel → Your OCIA road, and add the dates Father Matthew has given you — even if it is only the next one. The app will keep gentle count beside you.',
-        'Mở Nhà nguyện → Hành trình OCIA của bạn, và ghi những ngày cha Matthew đã cho biết — dù chỉ là ngày kế tiếp. Ứng dụng sẽ lặng lẽ đếm ngày cùng bạn.',
+        'Open My Chapel → Your RCIA road, and add the dates your parish has given you — even if it is only the next one. The app will keep gentle count beside you.',
+        'Mở Nhà nguyện → Hành trình RCIA của bạn, và ghi những ngày giáo xứ đã cho biết — dù chỉ là ngày kế tiếp. Ứng dụng sẽ lặng lẽ đếm ngày cùng bạn.',
       ),
     },
     reflection: u('Which gate are you standing before right now?', 'Bạn đang đứng trước cánh cổng nào?'),
@@ -733,87 +733,79 @@ export const PARISH_LESSONS: Lesson[] = [
     },
   },
 
-  // ── Vigil: The Font Is Near ────────────────────────────────────────────
+  // ── Vigil: Compostela ────────────────────────────────────────────────────
   {
-    id: 'parish-vigil',
+    id: 'camino-vigil',
     vigil: true,
-    title: u('Vigil: The Font Is Near', 'Canh thức: Giếng nước đã gần'),
+    title: u('Vigil: Compostela', 'Canh thức: Compostela'),
     minutes: 6,
     door: {
-      art: 'parish-home',
+      art: 'santiago',
       line: u(
-        'The last vigil of the main road. No questions — only everything you have become.',
-        'Đêm canh thức cuối của con đường chính. Không câu hỏi — chỉ có tất cả những gì bạn đã trở thành.',
+        'The last vigil of the main road. No questions — only the arrival, and the turn toward home.',
+        'Đêm canh thức cuối của con đường chính. Không câu hỏi — chỉ có sự cập bến, và bước chân quay về nhà.',
       ),
     },
     cards: [
       {
         id: 'c1',
-        art: 'cathedral-hanoi',
+        art: 'camino-way',
         text: u(
-          'Look back once. Hà Nội: a God who is love, a voice that called the world good, prayers that were always real, saints grown from your own soil.',
-          'Hãy nhìn lại một lần. Hà Nội: một Thiên Chúa là tình yêu, một tiếng phán gọi thế giới là tốt đẹp, những lời cầu vốn luôn là thật, những vị thánh mọc lên từ chính đất quê bạn.',
+          'For a thousand years, pilgrims have walked the Camino — weeks of dust, blisters, strangers turned friends — following scallop shells to Santiago. The last hill is called Monte do Gozo: the Mount of Joy, where the towers first come into view.',
+          'Suốt một ngàn năm, những người hành hương đã đi đường Camino — hàng tuần bụi đường, những vết phồng chân, những người xa lạ thành bạn hữu — lần theo vỏ sò dẫn về Santiago. Ngọn đồi cuối cùng tên là Monte do Gozo: Đồi Hoan Lạc, nơi những ngọn tháp lần đầu hiện ra.',
         ),
       },
       {
         id: 'c2',
-        art: 'basilica-bruges',
+        art: 'santiago',
         text: u(
-          'Bruges: the whole story of Jesus — the yes, the manger, the running father, the cross, the silence, and a morning that says your name.',
-          'Bruges: trọn câu chuyện Chúa Giêsu — tiếng xin vâng, máng cỏ, người cha chạy ra đón, thập giá, sự thinh lặng, và một buổi sáng gọi đúng tên bạn.',
+          'Look back once at your own road. The desert, where a fire knew your name. Jerusalem, where the whole story of Jesus was walked, from the garden to the empty tomb.',
+          'Hãy nhìn lại con đường của chính bạn. Sa mạc, nơi một ngọn lửa biết tên bạn. Giêrusalem, nơi trọn câu chuyện Chúa Giêsu đã được bước qua, từ khu vườn đến ngôi mộ trống.',
         ),
       },
       {
         id: 'c3',
-        art: 'notre-dame',
+        art: 'st-peters',
         text: u(
-          'Paris: the wind and fire, the family with four marks, the Book, the shape of the Mass, and the truth that beauty was a front door all along.',
-          'Paris: gió và lửa, gia đình với bốn dấu chỉ, cuốn Sách, hình dáng Thánh lễ, và sự thật rằng cái đẹp vốn luôn là cửa chính.',
+          'Rome, where the Church became a family with four marks and a fisherman’s grave at its heart. Lourdes, where seven doors of grace opened — the font, the oil, the mercy room, the rings.',
+          'Rôma, nơi Giáo hội hiện ra như một gia đình với bốn dấu chỉ và ngôi mộ người ngư phủ ở trung tâm. Lộ Đức, nơi bảy cánh cửa ân sủng mở ra — giếng nước, dầu thánh, căn phòng thương xót, những chiếc nhẫn.',
         ),
       },
       {
         id: 'c4',
-        art: 'brussels-cathedral',
+        art: 'camino-way',
         text: u(
-          'Brussels: seven doors of grace — and behind the first one, a font with your name already whispered over it.',
-          'Brussels: bảy cánh cửa ân sủng — và sau cánh cửa đầu tiên, một giếng nước mà tên bạn đã được thì thầm bên trên.',
+          'And this last road: the commandments as freedom, the Beatitudes as a portrait, the year as a wheel, the saints as family, hope stronger than death — the Way, walked in ordinary days.',
+          'Và chặng đường cuối này: các điều răn như tự do, các Mối Phúc như một bức chân dung, năm phụng vụ như một bánh xe, các thánh như người nhà, niềm hy vọng mạnh hơn sự chết — Con Đường, được bước đi giữa những ngày thường.',
         ),
       },
       {
         id: 'c5',
         art: 'parish-home',
         text: u(
-          'And now: home. Not a cathedral. A parish — your parish — where Father Matthew waits, where the community knows your face, where the ordinary Sundays will carry you the rest of the way.',
-          'Và giờ đây: nhà. Không phải một nhà thờ chính tòa. Một giáo xứ — giáo xứ của bạn — nơi cha Matthew đang đợi, nơi cộng đoàn biết gương mặt bạn, nơi những Chúa nhật bình thường sẽ đưa bạn đi nốt quãng đường còn lại.',
+          'Here is the pilgrim’s secret, kept for the last card: the true Compostela was never in Spain. It is the church nearest your home — your own parish, where a font waits, where a community will learn your face, where the ordinary Sundays carry you the rest of the way.',
+          'Đây là bí mật của người hành hương, được giữ cho tấm thẻ cuối: Compostela đích thực chưa bao giờ ở Tây Ban Nha. Nó là ngôi nhà thờ gần nhà bạn nhất — giáo xứ của chính bạn, nơi một giếng nước đang đợi, nơi cộng đoàn sẽ quen gương mặt bạn, nơi những Chúa nhật bình thường sẽ đưa bạn đi nốt quãng đường còn lại.',
         ),
       },
       {
         id: 'c6',
-        art: 'wedding-rings',
-        text: u(
-          'October is coming, with its rings. And before it, God willing, a night of fire and water. Two sacraments, one autumn, one completely free yes — yours.',
-          'Tháng Mười đang đến, cùng những chiếc nhẫn. Và trước đó, nếu Chúa muốn, một đêm của lửa và nước. Hai Bí tích, một mùa thu, một tiếng xin vâng hoàn toàn tự do — của bạn.',
-        ),
-      },
-      {
-        id: 'c7',
         art: 'font-water',
         text: u(
-          'The fifth stamp is ready. The last page of your passport stays faintly embossed, reserved — for the day of your baptism. This app will be walking beside you until that page is stamped, and after.',
-          'Con dấu thứ năm đã sẵn sàng. Trang cuối của cuốn hộ chiếu vẫn in chìm mờ nhạt, được dành riêng — cho ngày bạn lãnh nhận Bí tích Rửa tội. Ứng dụng này sẽ đồng hành bên bạn đến khi trang ấy được đóng dấu, và cả sau đó nữa.',
+          'The fifth stamp is ready. The last page of your passport stays faintly embossed, reserved — for a day of fire and water, whenever your free yes brings it. This app will be walking beside you until that page is stamped, and after.',
+          'Con dấu thứ năm đã sẵn sàng. Trang cuối của cuốn hộ chiếu vẫn in chìm mờ nhạt, được dành riêng — cho một ngày của lửa và nước, bất cứ khi nào tiếng xin vâng tự do của bạn đưa nó đến. Ứng dụng này sẽ đồng hành bên bạn đến khi trang ấy được đóng dấu, và cả sau đó nữa.',
         ),
       },
     ],
     questions: [],
     treasure: {
       kind: 'art',
-      art: 'heaven-light',
+      art: 'santiago',
       title: u('The road ahead', 'Con đường phía trước'),
       note: u(
-        'Bonus roads are now open on the map: the saints of Asia, and further pilgrimages being prepared. A pilgrim never really finishes — she just learns to walk in light.',
-        'Những con đường thêm đã mở trên bản đồ: các thánh Á châu, và những cuộc hành hương xa hơn đang được chuẩn bị. Người hành hương không bao giờ thật sự kết thúc — chỉ học cách bước đi trong ánh sáng.',
+        'Bonus roads are open on the map: the saints of Asia, the Holy Land, Rome’s deeper treasures. A pilgrim never really finishes — she just learns to walk in light.',
+        'Những con đường thêm đã mở trên bản đồ: các thánh Á châu và những kho tàng sâu hơn của con đường. Người hành hương không bao giờ thật sự kết thúc — chỉ học cách bước đi trong ánh sáng.',
       ),
     },
-    reflection: u('Write a few lines to the person who will be baptized — to yourself, a little further down the road.', 'Hãy viết vài dòng cho người sẽ được rửa tội — cho chính bạn, ở một quãng xa hơn trên con đường.'),
+    reflection: u('Write a few lines to the person who will finish this road — to yourself, a little further on.', 'Hãy viết vài dòng cho người sẽ đi hết con đường này — cho chính bạn, ở một quãng xa hơn.'),
   },
 ];

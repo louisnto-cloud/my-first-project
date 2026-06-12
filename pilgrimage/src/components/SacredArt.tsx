@@ -1192,9 +1192,6 @@ function Scene({ kind }: { kind: ArtKind }) {
           {/* the cross above, the third strand of the cord */}
           <path d="M200 52v34M188 64h24" stroke={GOLD} strokeWidth="5" strokeLinecap="round" />
           <path d="M200 92v22" stroke={GOLD} strokeWidth="2" strokeDasharray="2 6" opacity="0.7" />
-          <text x="200" y="262" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontStyle="italic" fontSize="17" fill={IVORY} opacity="0.6">
-            10 · 2026
-          </text>
         </>
       );
 
@@ -1384,6 +1381,202 @@ function Scene({ kind }: { kind: ArtKind }) {
           {/* her open hand: the question offered to heaven */}
           <path d="M256 196q14-8 22-4" stroke={IVORY} strokeWidth="5" strokeLinecap="round" fill="none" opacity="0.8" />
           <rect x="0" y="280" width="400" height="20" fill="#080d1a" />
+        </>
+      );
+
+    case 'sinai-bush':
+      return (
+        <>
+          <rect width="400" height="300" fill="#0c1122" />
+          <Stars seed={61} n={22} />
+          {/* desert floor */}
+          <ellipse cx="200" cy="330" rx="280" ry="90" fill="#141b33" />
+          {/* the bush that burns and is not consumed */}
+          <g stroke="#1a2240" strokeWidth="7" strokeLinecap="round" fill="none">
+            <path d="M200 268v-50M200 240l-30-28M200 240l30-28M186 252l-38-18M214 252l38-18" />
+          </g>
+          {Array.from({ length: 7 }, (_, i) => {
+            const xs = [200, 168, 232, 150, 250, 184, 216];
+            const ys = [188, 208, 208, 230, 230, 168, 168];
+            return (
+              <path
+                key={i}
+                d={`M${xs[i]} ${ys[i] - 22}c8 10 12 17 12 23a12 12 0 0 1-24 0c0-6 4-13 12-23z`}
+                fill={GOLD}
+                className="flame"
+                opacity={0.95 - (i % 3) * 0.15}
+              />
+            );
+          })}
+          <circle cx="200" cy="210" r="74" fill={GOLD} opacity="0.12" />
+          {/* sandals, set aside: holy ground */}
+          <g fill={INCENSE} opacity="0.8">
+            <ellipse cx="96" cy="280" rx="16" ry="6" />
+            <ellipse cx="130" cy="284" rx="16" ry="6" />
+          </g>
+        </>
+      );
+
+    case 'sinai-mountain':
+      return (
+        <>
+          <rect width="400" height="300" fill="#0c1122" />
+          <Stars seed={67} n={26} />
+          {/* the mountain of God */}
+          <path d="M-20 300L150 80l60 70 40-40 170 190z" fill="#141b33" />
+          <path d="M150 80l60 70 40-40" fill="none" stroke={INCENSE} strokeWidth="1.5" opacity="0.4" />
+          {/* glory resting on the summit */}
+          <circle cx="150" cy="74" r="26" fill={GOLD} opacity="0.18" />
+          <circle cx="150" cy="74" r="10" fill={GOLD} opacity="0.6" />
+          {/* the monastery at its foot, one lit window */}
+          <g fill="#1a2240">
+            <rect x="284" y="226" width="64" height="54" />
+            <path d="M284 226l32-20 32 20z" />
+          </g>
+          <path d="M316 196v10M312 200h8" stroke={GOLD} strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M306 248a5 7 0 0 1 10 0v14h-10z" fill={GOLD} opacity="0.9" />
+          {/* the pilgrim path up */}
+          <path d="M60 290C100 240 120 180 148 96" stroke={GOLD} strokeWidth="2" strokeDasharray="1 9" fill="none" opacity="0.5" />
+        </>
+      );
+
+    case 'jerusalem-city':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          <Stars seed={71} n={16} />
+          <circle cx="320" cy="56" r="18" fill={IVORY} opacity="0.85" />
+          <circle cx="313" cy="51" r="15" fill={LAPIS} />
+          {/* the old city on its hill: walls, domes, towers */}
+          <ellipse cx="200" cy="320" rx="270" ry="110" fill="#141b33" />
+          <g fill="#1a2240">
+            <rect x="40" y="190" width="320" height="44" />
+            <rect x="40" y="180" width="14" height="54" />
+            <rect x="346" y="180" width="14" height="54" />
+            <rect x="190" y="170" width="20" height="64" />
+          </g>
+          {/* crenellations */}
+          {[60, 84, 108, 132, 156, 224, 248, 272, 296, 320].map((x) => (
+            <rect key={x} x={x} y="184" width="10" height="6" fill="#1a2240" />
+          ))}
+          {/* domes within */}
+          <path d="M96 190a26 26 0 0 1 52 0z" fill="#22305c" stroke={GOLD} strokeWidth="1.5" />
+          <path d="M122 158v8" stroke={GOLD} strokeWidth="2" strokeLinecap="round" />
+          <path d="M252 190a32 30 0 0 1 64 0z" fill="#22305c" stroke={GOLD} strokeWidth="1.5" />
+          <path d="M284 150v12M279 155h10" stroke={GOLD} strokeWidth="2" strokeLinecap="round" />
+          {/* the gate, open */}
+          <path d="M188 234v-30a12 16 0 0 1 24 0v30z" fill={GOLD} opacity="0.85" />
+          {/* olive trees outside the walls */}
+          {[70, 330].map((x) => (
+            <g key={x}>
+              <path d={`M${x} 262v-16`} stroke="#1a2240" strokeWidth="4" strokeLinecap="round" />
+              <circle cx={x} cy={238} r="12" fill="#1a2240" />
+            </g>
+          ))}
+        </>
+      );
+
+    case 'lourdes-grotto':
+      return (
+        <>
+          <rect width="400" height="300" fill="#0c1122" />
+          {/* the rock face and the grotto */}
+          <path d="M0 0h400v300H320c10-90-20-150-90-150S130 210 140 300H0z" fill="#141b33" />
+          <path d="M140 300c-10-90 20-150 90-150s100 60 90 150z" fill="#080d1a" />
+          {/* Our Lady in the niche above */}
+          <ellipse cx="318" cy="92" rx="30" ry="38" fill="#1a2240" />
+          <g>
+            <circle cx="318" cy="74" r="9" fill={IVORY} />
+            <path d="M304 124v-32c0-12 6-20 14-20s14 8 14 20v32z" fill={IVORY} opacity="0.92" />
+            <Halo cx={318} cy={74} r={13} />
+          </g>
+          {/* candles at the grotto mouth */}
+          {[170, 196, 222, 248, 274].map((x, i) => (
+            <g key={x}>
+              <rect x={x - 3} y={262 - (i % 2) * 8} width="6" height={28 + (i % 2) * 8} rx="2" fill={IVORY} opacity="0.9" />
+              <path
+                d={`M${x} ${248 - (i % 2) * 8}c4 5 6 9 6 12a6 6 0 0 1-12 0c0-3 2-7 6-12z`}
+                fill={GOLD}
+                className="flame"
+              />
+            </g>
+          ))}
+          <circle cx="222" cy="252" r="60" fill={GOLD} opacity="0.1" />
+          {/* the spring, running out of the rock */}
+          <path d="M150 300q40-14 70-8t60 8" stroke="#22305c" strokeWidth="8" fill="none" opacity="0.9" />
+          <path d="M160 296q34-10 60-6" stroke={IVORY} strokeWidth="1.5" fill="none" opacity="0.4" />
+        </>
+      );
+
+    case 'camino-way':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          {/* dawn over rolling country */}
+          <circle cx="200" cy="160" r="56" fill={GOLD} opacity="0.65" />
+          <circle cx="200" cy="160" r="90" fill={GOLD} opacity="0.12" />
+          <path d="M0 210q100-44 200-30t200 18v102H0z" fill="#141b33" />
+          <path d="M0 250q120-26 400-10v60H0z" fill="#10162b" />
+          {/* the path, walking into the light */}
+          <path d="M190 300q6-60 10-110" stroke={IVORY} strokeWidth="14" strokeLinecap="round" opacity="0.25" />
+          <path d="M196 300q4-56 8-106" stroke={GOLD} strokeWidth="2" strokeDasharray="2 10" fill="none" opacity="0.7" />
+          {/* the waymark: a scallop shell */}
+          <g transform="translate(90, 232)">
+            <rect x="-8" y="0" width="16" height="48" fill="#1a2240" />
+            <circle cx="0" cy="-12" r="20" fill="#1a2240" />
+            <g stroke={GOLD} strokeWidth="2.5" strokeLinecap="round">
+              {Array.from({ length: 5 }, (_, i) => {
+                const a = -Math.PI / 2 + (i - 2) * 0.4;
+                return <line key={i} x1="0" y1="-4" x2={Math.cos(a) * 14} y2={-12 + Math.sin(a) * 10} />;
+              })}
+            </g>
+          </g>
+          {/* a pilgrim, mid-stride */}
+          <g fill="#1a2240">
+            <circle cx="206" cy="206" r="9" />
+            <path d="M196 258v-30c0-10 5-16 10-16s10 6 10 16v30z" />
+            <path d="M214 226l12 30M198 228l-8 28" stroke="#1a2240" strokeWidth="5" strokeLinecap="round" />
+          </g>
+          <path d="M218 200v54" stroke={INCENSE} strokeWidth="3" strokeLinecap="round" opacity="0.8" />
+        </>
+      );
+
+    case 'santiago':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          <Stars seed={73} n={14} />
+          {/* the baroque west front: two ornate towers */}
+          <g fill="#141b33">
+            <rect x="116" y="90" width="52" height="180" />
+            <rect x="232" y="90" width="52" height="180" />
+            <rect x="168" y="140" width="64" height="130" />
+            <path d="M116 90l26-34 26 34zM232 90l26-34 26 34z" />
+          </g>
+          <path d="M142 44v14M136 49h12M258 44v14M252 49h12" stroke={GOLD} strokeWidth="2" strokeLinecap="round" />
+          <g fill={GOLD} opacity="0.9">
+            <path d="M132 124a8 11 0 0 1 16 0v22h-16z" />
+            <path d="M248 124a8 11 0 0 1 16 0v22h-16z" />
+            <path d="M132 180a8 11 0 0 1 16 0v22h-16z" />
+            <path d="M248 180a8 11 0 0 1 16 0v22h-16z" />
+            <path d="M186 210a14 18 0 0 1 28 0v50h-28z" />
+          </g>
+          {/* the scallop above the door */}
+          <g transform="translate(200, 184)" stroke={GOLD} strokeWidth="2" strokeLinecap="round">
+            {Array.from({ length: 5 }, (_, i) => {
+              const a = -Math.PI / 2 + (i - 2) * 0.45;
+              return <line key={i} x1="0" y1="8" x2={Math.cos(a) * 16} y2={Math.sin(a) * 12} />;
+            })}
+          </g>
+          {/* the square, with small pilgrims arriving */}
+          <rect x="0" y="268" width="400" height="32" fill="#10162b" />
+          {[80, 320].map((x) => (
+            <g key={x} fill="#1a2240">
+              <circle cx={x} cy={252} r="7" />
+              <path d={`M${x - 9} 280v-18c0-7 4-12 9-12s9 5 9 12v18z`} />
+            </g>
+          ))}
+          <ellipse cx="200" cy="272" rx="140" ry="7" fill={GOLD} opacity="0.1" />
         </>
       );
 

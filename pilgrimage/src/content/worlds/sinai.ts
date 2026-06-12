@@ -1,62 +1,62 @@
 import type { L, World } from '../types';
 
-// ─── World 1 · Hanoi · "Beginning" ──────────────────────────────────────────
-// St. Joseph's Cathedral. Home. Where faith meets her own culture.
-// Theme: Who is God? Creation, prayer, and the Vietnamese Catholic story.
+// ─── World 1 · The Desert · "Beginning" ─────────────────────────────────────
+// Mount Sinai, where God first told the world his name.
+// Theme: Who is God? Creation, the dignity of the person, and prayer.
 //
 // All Vietnamese narrative strings are marked 'unverified' and flow into the
 // native-review export. Locked sacred terms follow content/terminology.ts.
 
 const u = (en: string, vi: string): L => ({ en, vi, viStatus: 'unverified' });
 
-export const HANOI: World = {
-  id: 'hanoi',
+export const SINAI: World = {
+  id: 'sinai',
   name: u('Beginning', 'Khởi đầu'),
-  church: u("St. Joseph's Cathedral", 'Nhà thờ Lớn Hà Nội'),
-  place: u('Hà Nội, Việt Nam', 'Hà Nội, Việt Nam'),
+  church: u('Mount Sinai', 'Núi Sinai'),
+  place: u('The Desert', 'Sa mạc'),
   theme: u('Who is God?', 'Thiên Chúa là ai?'),
   lessons: [
-    // ── Lesson 1: The Open Door ──────────────────────────────────────────
+    // ── Lesson 1: The Burning Bush ───────────────────────────────────────
     {
-      id: 'hanoi-1',
-      title: u('The Open Door', 'Cánh cửa mở'),
+      id: 'sinai-1',
+      title: u('The Burning Bush', 'Bụi gai bốc cháy'),
       minutes: 4,
       door: {
-        art: 'cathedral-hanoi',
+        art: 'sinai-bush',
         line: u(
-          'Evening falls on Hà Nội. The great doors of the cathedral stand open.',
-          'Chiều buông xuống Hà Nội. Những cánh cửa lớn của nhà thờ đang rộng mở.',
+          'Night in the desert. A bush is on fire — and it is not burning away.',
+          'Đêm giữa sa mạc. Một bụi gai đang bốc cháy — mà không hề tàn lụi.',
         ),
       },
       cards: [
         {
           id: 'c1',
-          art: 'cathedral-hanoi',
+          art: 'sinai-mountain',
           text: u(
-            'You have stood here before. The grey stone towers, the bells, the quiet inside that feels different from the street outside.',
-            'Bạn đã từng đứng ở đây. Những ngọn tháp đá xám, tiếng chuông, và sự tĩnh lặng bên trong — khác hẳn con phố ồn ào bên ngoài.',
+            'Every pilgrimage starts somewhere. Ours starts at the foot of a mountain in the desert, where a shepherd named Moses saw something impossible and walked toward it.',
+            'Mọi cuộc hành hương đều khởi đầu từ một nơi nào đó. Hành trình của chúng ta bắt đầu dưới chân một ngọn núi giữa sa mạc, nơi một người chăn chiên tên Môsê thấy một điều không thể tin nổi — và đã bước về phía nó.',
           ),
         },
         {
           id: 'c2',
-          art: 'cathedral-door',
+          art: 'sinai-bush',
           text: u(
-            'People built this place for someone. For more than a hundred years, they have come through these doors to meet him.',
-            'Người ta xây nơi này cho một Đấng. Hơn một trăm năm qua, họ bước qua những cánh cửa này để gặp Ngài.',
+            'A bush, on fire, yet not consumed. And out of the fire, a voice that knew his name: “Moses, Moses. Take off your sandals — the ground you stand on is holy.”',
+            'Một bụi gai, bốc cháy, mà không hề thiêu rụi. Và từ giữa ngọn lửa, một tiếng nói biết rõ tên ông: “Môsê, Môsê. Hãy cởi dép ra — nơi ngươi đang đứng là đất thánh.”',
           ),
         },
         {
           id: 'c3',
-          art: 'creation-light',
+          art: 'sinai-bush',
           text: u(
-            'Catholics call him God. Not a force. Not an idea. Someone — who knows you, and made you, and wanted you to exist.',
-            'Người Công giáo gọi Đấng ấy là Thiên Chúa. Không phải một sức mạnh vô hình. Không phải một ý niệm. Mà là một Đấng — biết bạn, dựng nên bạn, và muốn bạn hiện hữu.',
+            'Moses asked the fire its name. The answer was unlike anything ever spoken: “I AM WHO AM.” Not a force. Not an idea. Someone — who is, who knows you, and who wanted you to exist.',
+            'Môsê hỏi tên của ngọn lửa. Câu trả lời không giống bất cứ điều gì từng được nói ra: “TA LÀ ĐẤNG HẰNG HỮU.” Không phải một sức mạnh vô hình. Không phải một ý niệm. Mà là một Đấng — đang hiện hữu, biết rõ bạn, và muốn bạn hiện hữu.',
           ),
         },
         {
           id: 'c4',
           art: 'creation-light',
-          text: u('The Bible says it in three small words.', 'Kinh Thánh nói điều ấy trong mấy chữ thật ngắn.'),
+          text: u('Centuries later, the Bible would say who this someone is, in three small words.', 'Nhiều thế kỷ sau, Kinh Thánh sẽ nói rõ Đấng ấy là ai, trong mấy chữ thật ngắn.'),
           scripture: {
             ref: '1 John 4:8',
             verse: u('God is love.', 'Thiên Chúa là tình yêu.'),
@@ -65,22 +65,22 @@ export const HANOI: World = {
               'Mọi điều Giáo hội dạy đều bắt đầu từ đây. Trước khi có bất cứ điều gì, đã có tình yêu. Thiên Chúa không chỉ có tình yêu — Ngài chính là tình yêu.',
             ),
             bridge: u(
-              'The peace you felt inside the churches you visited — that was not the stone. It was the one the stone was built for.',
-              'Sự bình an bạn cảm nhận trong những ngôi nhà thờ bạn đã ghé thăm — không phải từ đá. Mà từ Đấng mà những viên đá ấy được xây nên cho Ngài.',
+              'The peace some people feel inside a great church, or under a night sky — that is not the stone or the stars. It is the one they were made by.',
+              'Sự bình an mà nhiều người cảm nhận trong một ngôi nhà thờ lớn, hay dưới bầu trời đêm — không đến từ đá hay những vì sao. Mà từ Đấng đã làm nên chúng.',
             ),
           },
         },
         {
           id: 'c5',
-          art: 'cathedral-door',
+          art: 'sinai-bush',
           text: u(
             'Jesus gave God another name. He said: call him Father.',
             'Chúa Giêsu cho chúng ta một tên gọi khác của Thiên Chúa. Ngài nói: hãy gọi Ngài là Cha.',
           ),
           branch: {
             prompt: u(
-              'If you could ask one thing at this door, what would it be?',
-              'Nếu được hỏi một điều nơi cánh cửa này, bạn sẽ hỏi gì?',
+              'If you could ask one thing at this fire, what would it be?',
+              'Nếu được hỏi một điều bên ngọn lửa này, bạn sẽ hỏi gì?',
             ),
             choices: [
               {
@@ -100,8 +100,8 @@ export const HANOI: World = {
               {
                 label: u('“Why am I here?”', '“Sao con lại ở đây?”'),
                 response: u(
-                  'Maybe the same reason the doors are open. Some invitations are quiet.',
-                  'Có lẽ cùng một lý do khiến những cánh cửa kia rộng mở. Có những lời mời rất thầm lặng.',
+                  'Maybe the same reason the bush kept burning. Some invitations are quiet.',
+                  'Có lẽ cùng một lý do khiến bụi gai cứ cháy mãi. Có những lời mời rất thầm lặng.',
                 ),
               },
             ],
@@ -151,14 +151,14 @@ export const HANOI: World = {
       },
       reflection: u('What stayed with you today?', 'Điều gì còn đọng lại trong bạn hôm nay?'),
       deeper: {
-        ccc: [218, 221, 239],
-        note: u('On God as love and as Father.', 'Về Thiên Chúa là tình yêu và là Cha.'),
+        ccc: [205, 218, 221, 239],
+        note: u('On the name of God, and God as love and as Father.', 'Về danh Thiên Chúa, và Thiên Chúa là tình yêu và là Cha.'),
       },
     },
 
     // ── Lesson 2: In the Beginning ───────────────────────────────────────
     {
-      id: 'hanoi-2',
+      id: 'sinai-2',
       title: u('In the Beginning', 'Lúc khởi đầu'),
       minutes: 5,
       door: {
@@ -274,7 +274,7 @@ export const HANOI: World = {
 
     // ── Lesson 3: Made for Love ──────────────────────────────────────────
     {
-      id: 'hanoi-3',
+      id: 'sinai-3',
       title: u('Made for Love', 'Được dựng nên cho tình yêu'),
       minutes: 4,
       door: {
@@ -303,8 +303,8 @@ export const HANOI: World = {
               'Mỗi con người đều mang nét giống với Thiên Chúa, như con giống cha mẹ. Vì thế mỗi người đều quý giá — kể cả bạn, đúng như bạn là.',
             ),
             bridge: u(
-              'In Việt Nam we say con nhà tông không giống lông cũng giống cánh — a child of the family always carries its likeness. The Bible says the whole human family carries God’s.',
-              'Người Việt có câu: con nhà tông không giống lông cũng giống cánh. Kinh Thánh nói cả gia đình nhân loại mang nét giống của Thiên Chúa.',
+              'Almost every language has a saying about children carrying the family likeness. The Bible says the whole human family carries God’s.',
+              'Hầu như ngôn ngữ nào cũng có câu nói về con cái mang nét giống gia đình — như câu “con nhà tông không giống lông cũng giống cánh”. Kinh Thánh nói cả gia đình nhân loại mang nét giống của Thiên Chúa.',
             ),
           },
         },
@@ -320,16 +320,16 @@ export const HANOI: World = {
           id: 'c3',
           art: 'candle-single',
           text: u(
-            'This is why no person is ever worthless to God. Not the stranger in seat 47C. Not the difficult passenger. Not you on your worst day.',
-            'Vì thế không một ai là vô giá trị trước mặt Thiên Chúa. Không phải người lạ ở ghế 47C. Không phải hành khách khó tính. Không phải bạn trong ngày tồi tệ nhất của mình.',
+            'This is why no person is ever worthless to God. Not the stranger in the crowd. Not the difficult neighbor. Not you on your worst day.',
+            'Vì thế không một ai là vô giá trị trước mặt Thiên Chúa. Không phải người xa lạ giữa đám đông. Không phải người hàng xóm khó tính. Không phải bạn trong ngày tồi tệ nhất của mình.',
           ),
         },
         {
           id: 'c4',
-          art: 'cathedral-hanoi',
+          art: 'candle-single',
           text: u(
-            'The woman you saw crying at Mass — she was not crying because she was worthless. Perhaps she had just remembered that she was not.',
-            'Người phụ nữ bạn thấy khóc trong Thánh lễ — chị ấy không khóc vì thấy mình vô giá trị. Có lẽ chị vừa chợt nhớ ra điều ngược lại.',
+            'Perhaps you have seen someone cry quietly in a church. They were not crying because they were worthless. Perhaps they had just remembered that they were not.',
+            'Có lẽ bạn từng thấy ai đó lặng lẽ khóc trong một nhà thờ. Họ không khóc vì thấy mình vô giá trị. Có lẽ họ vừa chợt nhớ ra điều ngược lại.',
           ),
         },
       ],
@@ -385,14 +385,14 @@ export const HANOI: World = {
 
     // ── Lesson 4: You Already Pray ───────────────────────────────────────
     {
-      id: 'hanoi-4',
+      id: 'sinai-4',
       title: u('You Already Pray', 'Bạn vẫn luôn cầu nguyện'),
       minutes: 4,
       door: {
         art: 'prayer-night',
         line: u(
-          'A quiet hotel room, far from home. A thought rises for the people you love.',
-          'Một căn phòng khách sạn yên tĩnh, xa nhà. Một ý nghĩ dâng lên, hướng về những người bạn thương.',
+          'A quiet room, late at night. A thought rises for the people you love.',
+          'Một căn phòng yên tĩnh, đêm khuya. Một ý nghĩ dâng lên, hướng về những người bạn thương.',
         ),
       },
       cards: [
@@ -400,8 +400,8 @@ export const HANOI: World = {
           id: 'c1',
           art: 'prayer-night',
           text: u(
-            'Your mother taught you something true: pray for the health and safety of the people you love. Never for money. Just for them.',
-            'Mẹ bạn đã dạy một điều rất thật: hãy cầu cho những người mình thương được mạnh khỏe, bình an. Đừng cầu tiền bạc. Chỉ cầu cho họ.',
+            'Perhaps someone taught you this — a mother, a grandmother: pray for the health and safety of the people you love. Never for money. Just for them.',
+            'Có lẽ ai đó đã dạy bạn điều này — một người mẹ, một người bà: hãy cầu cho những người mình thương được mạnh khỏe, bình an. Đừng cầu tiền bạc. Chỉ cầu cho họ.',
           ),
         },
         {
@@ -417,8 +417,8 @@ export const HANOI: World = {
           id: 'c3',
           art: 'teacher-hill',
           text: u(
-            'The Church says prayer is simply lifting the heart to God. A long ceremony can be prayer. So can three words whispered over the ocean at 3 a.m.',
-            'Giáo hội nói cầu nguyện đơn giản là nâng tâm hồn lên cùng Thiên Chúa. Một nghi lễ dài có thể là cầu nguyện. Ba lời thì thầm trên đại dương lúc 3 giờ sáng cũng vậy.',
+            'The Church says prayer is simply lifting the heart to God. A long ceremony can be prayer. So can three words whispered in the dark at 3 a.m.',
+            'Giáo hội nói cầu nguyện đơn giản là nâng tâm hồn lên cùng Thiên Chúa. Một nghi lễ dài có thể là cầu nguyện. Ba lời thì thầm trong bóng đêm lúc 3 giờ sáng cũng vậy.',
           ),
         },
         {
@@ -502,7 +502,7 @@ export const HANOI: World = {
 
     // ── Lesson 5: The Prayer Jesus Taught ────────────────────────────────
     {
-      id: 'hanoi-5',
+      id: 'sinai-5',
       title: u('The Prayer Jesus Taught', 'Lời kinh Chúa Giêsu dạy'),
       minutes: 5,
       door: {
@@ -541,8 +541,8 @@ export const HANOI: World = {
           id: 'c4',
           art: 'creation-world',
           text: u(
-            '“Give us this day our daily bread.” Not riches. Just what we need for today — food, strength, enough. Your mother would recognize this prayer.',
-            '“Xin Cha cho chúng con hôm nay lương thực hằng ngày.” Không phải giàu sang. Chỉ là điều cần cho hôm nay — cơm ăn, sức khỏe, vừa đủ. Mẹ bạn hẳn sẽ nhận ra lời cầu này.',
+            '“Give us this day our daily bread.” Not riches. Just what we need for today — food, strength, enough. Whoever taught you to pray for people, not money, would recognize this prayer.',
+            '“Xin Cha cho chúng con hôm nay lương thực hằng ngày.” Không phải giàu sang. Chỉ là điều cần cho hôm nay — cơm ăn, sức khỏe, vừa đủ. Người từng dạy bạn cầu cho con người chứ đừng cầu tiền bạc hẳn sẽ nhận ra lời cầu này.',
           ),
         },
         {
@@ -557,8 +557,8 @@ export const HANOI: World = {
           id: 'c6',
           art: 'prayer-night',
           text: u(
-            'Catholics have prayed these lines every day for two thousand years, in every language on earth — including Vietnamese, in your own city, every evening.',
-            'Người Công giáo đã đọc những dòng này mỗi ngày suốt hai ngàn năm, bằng mọi ngôn ngữ trên trái đất — kể cả tiếng Việt, trong chính thành phố của bạn, mỗi buổi chiều.',
+            'Catholics have prayed these lines every day for two thousand years, in every language on earth — somewhere, someone is praying them this very evening.',
+            'Người Công giáo đã đọc những dòng này mỗi ngày suốt hai ngàn năm, bằng mọi ngôn ngữ trên trái đất — ngay buổi chiều hôm nay, ở đâu đó, vẫn đang có người đọc lên những lời ấy.',
           ),
         },
       ],
@@ -629,14 +629,14 @@ export const HANOI: World = {
 
     // ── Lesson 6: The Family Altar ───────────────────────────────────────
     {
-      id: 'hanoi-6',
+      id: 'sinai-6',
       title: u('The Family Altar', 'Bàn thờ gia đình'),
       minutes: 5,
       door: {
         art: 'incense-altar',
         line: u(
-          'A small shrine at home. Photographs, fruit, and the smell of incense. You know this room.',
-          'Một bàn thờ nhỏ trong nhà. Di ảnh, hoa quả, và mùi hương trầm. Bạn biết rõ căn phòng này.',
+          'A small shrine at home. Photographs, fruit, and the smell of incense. Many of us know this room.',
+          'Một bàn thờ nhỏ trong nhà. Di ảnh, hoa quả, và mùi hương trầm. Nhiều người trong chúng ta biết rõ căn phòng này.',
         ),
       },
       cards: [
@@ -644,8 +644,8 @@ export const HANOI: World = {
           id: 'c1',
           art: 'incense-altar',
           text: u(
-            'In your family’s home there is a shrine. Incense is lit. The dead are remembered with love and respect. You grew up inside this.',
-            'Trong nhà của gia đình bạn có một bàn thờ. Hương được thắp lên. Người đã khuất được tưởng nhớ bằng tình thương và lòng kính trọng. Bạn lớn lên giữa những điều ấy.',
+            'In millions of homes — in Việt Nam, in China, in Korea, in Mexico — there is a family altar. Incense is lit. The dead are remembered with love and respect. Perhaps you grew up with one; perhaps you have stood before one.',
+            'Trong hàng triệu mái nhà — ở Việt Nam, Trung Quốc, Hàn Quốc, Mexico — có một bàn thờ gia đình. Hương được thắp lên. Người đã khuất được tưởng nhớ bằng tình thương và lòng kính trọng. Có lẽ bạn đã lớn lên bên một bàn thờ như thế; có lẽ bạn từng đứng trước một bàn thờ như thế.',
           ),
         },
         {
@@ -687,8 +687,8 @@ export const HANOI: World = {
               'Khói hương quyện theo lời cầu nguyện của dân Chúa, bay lên trước nhan Thiên Chúa.',
             ),
             plain: u(
-              'When you watched incense curl upward at the family shrine, you were looking at the Bible’s own picture of prayer.',
-              'Khi bạn nhìn khói hương uốn mình bay lên nơi bàn thờ gia đình, bạn đang nhìn chính hình ảnh mà Kinh Thánh dùng để nói về cầu nguyện.',
+              'If you have ever watched incense curl upward at a family altar, you were looking at the Bible’s own picture of prayer.',
+              'Nếu bạn từng nhìn khói hương uốn mình bay lên nơi một bàn thờ gia đình, bạn đã nhìn thấy chính hình ảnh mà Kinh Thánh dùng để nói về cầu nguyện.',
             ),
           },
         },
@@ -750,8 +750,8 @@ export const HANOI: World = {
         kind: 'word',
         termId: 'communion-of-saints',
         note: u(
-          'A word for something you have always known: the family does not end at death. Your shrine at home and the candles in a cathedral are nearer to each other than you thought.',
-          'Một từ cho điều bạn vốn đã luôn biết: gia đình không kết thúc nơi sự chết. Bàn thờ ở nhà bạn và những ngọn nến trong nhà thờ gần nhau hơn bạn tưởng.',
+          'A word for something many hearts have always known: the family does not end at death. A family altar at home and the candles in a cathedral are nearer to each other than they look.',
+          'Một từ cho điều mà bao trái tim vốn đã luôn biết: gia đình không kết thúc nơi sự chết. Bàn thờ gia đình ở nhà và những ngọn nến trong nhà thờ gần nhau hơn vẻ ngoài của chúng.',
         ),
       },
       reflection: u('Who would you light a candle for?', 'Bạn muốn thắp một ngọn nến cho ai?'),
@@ -761,149 +761,34 @@ export const HANOI: World = {
       },
     },
 
-    // ── Lesson 7: The Faith Comes to Việt Nam ────────────────────────────
+    // ── Vigil: Night on the Mountain ─────────────────────────────────────
     {
-      id: 'hanoi-7',
-      title: u('The Faith Comes to Việt Nam', 'Đức tin đến Việt Nam'),
-      minutes: 5,
-      door: {
-        art: 'martyrs-palm',
-        line: u(
-          'Four hundred years ago, small boats reached the coast of Việt Nam carrying a story.',
-          'Bốn trăm năm trước, những con thuyền nhỏ cập bờ biển Việt Nam, mang theo một câu chuyện.',
-        ),
-      },
-      cards: [
-        {
-          id: 'c1',
-          art: 'lake-evening',
-          text: u(
-            'In the 1600s, missionaries came to Việt Nam with the {{gospel}}. Among them was Alexandre de Rhodes — the priest whose work helped shape chữ Quốc ngữ, the very alphabet you write with today.',
-            'Vào thế kỷ 17, các nhà truyền giáo đến Việt Nam mang theo {{gospel}}. Trong số đó có cha Alexandre de Rhodes — vị linh mục mà công trình của ngài góp phần hình thành chữ Quốc ngữ, chính bộ chữ bạn đang viết hôm nay.',
-          ),
-          terms: ['gospel'],
-        },
-        {
-          id: 'c2',
-          art: 'lake-evening',
-          text: u(
-            'The faith took root. Villages of fishermen and farmers heard that God is a Father, that the dead are not lost, that every person is loved — and they believed.',
-            'Đức tin bén rễ. Những làng chài, làng ruộng nghe rằng Thiên Chúa là Cha, rằng người đã khuất không hề mất đi, rằng mỗi con người đều được yêu thương — và họ đã tin.',
-          ),
-        },
-        {
-          id: 'c3',
-          art: 'martyrs-palm',
-          text: u(
-            'Then came the hard years. For long stretches of the 1700s and 1800s, being Catholic in Việt Nam could cost you your life. Many were asked to step on a cross to deny their faith. Many would not.',
-            'Rồi đến những năm tháng khắc nghiệt. Trong nhiều giai đoạn của thế kỷ 18 và 19, là người Công giáo ở Việt Nam có thể phải trả giá bằng mạng sống. Nhiều người bị buộc bước qua thập giá để chối đạo. Nhiều người đã không làm.',
-          ),
-        },
-        {
-          id: 'c4',
-          art: 'martyrs-palm',
-          text: u(
-            'One of them was Anrê Dũng Lạc — a poor boy from the north who became a priest, was arrested for it, and gave his life in Hà Nội in 1839. Your city.',
-            'Một trong số đó là cha Anrê Dũng Lạc — cậu bé nghèo miền Bắc trở thành linh mục, bị bắt vì điều ấy, và đã hiến mạng sống tại Hà Nội năm 1839. Chính thành phố của bạn.',
-          ),
-        },
-        {
-          id: 'c5',
-          art: 'martyrs-palm',
-          text: u(
-            'In 1988, the Church named 117 of these Vietnamese {{martyr}}s as saints — St. Andrew Dũng Lạc and his companions. People from your homeland now stand among the saints of the whole world.',
-            'Năm 1988, Giáo hội tuyên phong 117 vị {{martyr}} Việt Nam lên bậc hiển thánh — Thánh Anrê Dũng Lạc và các bạn tử đạo. Những người con của quê hương bạn nay đứng giữa Các Thánh của toàn thế giới.',
-          ),
-          terms: ['martyr'],
-        },
-        {
-          id: 'c6',
-          art: 'cathedral-hanoi',
-          text: u(
-            'Today millions of Vietnamese Catholics fill churches from Hà Nội to Sài Gòn. St. Joseph’s Cathedral — your cathedral — was built in 1886 and has never stopped singing. This story is not foreign. It is yours, too, if you want it.',
-            'Ngày nay hàng triệu người Công giáo Việt Nam quy tụ trong các nhà thờ từ Hà Nội đến Sài Gòn. Nhà thờ Lớn — nhà thờ của bạn — được xây năm 1886 và chưa bao giờ ngừng vang tiếng hát. Câu chuyện này không xa lạ. Nó cũng là của bạn, nếu bạn muốn.',
-          ),
-        },
-      ],
-      questions: [
-        {
-          id: 'q1',
-          kind: 'choice',
-          afterCard: 0,
-          prompt: u('What did Alexandre de Rhodes help shape, besides the early Church in Việt Nam?', 'Ngoài Giáo hội sơ khai tại Việt Nam, cha Alexandre de Rhodes còn góp phần hình thành điều gì?'),
-          options: [
-            { text: u('Chữ Quốc ngữ — the Vietnamese alphabet', 'Chữ Quốc ngữ — bộ chữ tiếng Việt') },
-            { text: u('The railway system', 'Hệ thống đường sắt') },
-            { text: u('The old citadel of Hà Nội', 'Hoàng thành Thăng Long') },
-          ],
-          answer: 0,
-          why: u(
-            'Every Vietnamese word you write touches this history.',
-            'Mỗi chữ tiếng Việt bạn viết đều chạm vào dòng lịch sử này.',
-          ),
-        },
-        {
-          id: 'q2',
-          kind: 'predict',
-          prompt: u(
-            'Soldiers placed a cross on the ground and told the Christians: step on it and go free. What did Anrê Dũng Lạc do?',
-            'Quan quân đặt thập giá xuống đất và bảo các tín hữu: bước qua thì được tha. Cha Anrê Dũng Lạc đã làm gì?',
-          ),
-          options: [
-            { text: u('He would not step on it, whatever it cost', 'Ngài không bước qua, dù phải trả giá nào') },
-            { text: u('He stepped on it and apologized later', 'Ngài bước qua rồi xin lỗi sau') },
-          ],
-          answer: 0,
-          why: u(
-            'He knew what the cross meant: the one who had given everything for him. He would not trade that love for safety.',
-            'Ngài biết thập giá nghĩa là gì: Đấng đã trao tất cả vì ngài. Ngài không đổi tình yêu ấy lấy sự an toàn.',
-          ),
-        },
-      ],
-      treasure: {
-        kind: 'art',
-        art: 'martyrs-palm',
-        title: u('The palm of the martyrs', 'Cành lá của các thánh tử đạo'),
-        note: u(
-          'In sacred art, a palm branch marks a martyr — a sign of victory, not defeat. The feast of the Vietnamese Martyrs is November 24. Your homeland has a day on the calendar of the whole Church.',
-          'Trong nghệ thuật thánh, cành lá vạn tuế là dấu chỉ của một vị tử đạo — dấu của chiến thắng, không phải thất bại. Lễ Các Thánh tử đạo Việt Nam là ngày 24 tháng 11. Quê hương bạn có một ngày riêng trên lịch của toàn thể Giáo hội.',
-        ),
-      },
-      reflection: u('What does it mean to you that saints came from your homeland?', 'Việc quê hương bạn có các vị thánh có ý nghĩa gì với bạn?'),
-      deeper: {
-        ccc: [2473],
-        note: u('On martyrdom as the supreme witness to the truth.', 'Về tử đạo là chứng tá cao cả nhất cho sự thật.'),
-      },
-    },
-
-    // ── Vigil: Evening at the Great Cathedral ────────────────────────────
-    {
-      id: 'hanoi-vigil',
+      id: 'sinai-vigil',
       vigil: true,
-      title: u('Vigil: Evening at the Great Cathedral', 'Canh thức: Chiều tối nơi Nhà thờ Lớn'),
+      title: u('Vigil: Night on the Mountain', 'Canh thức: Đêm trên núi thánh'),
       minutes: 6,
       door: {
-        art: 'lake-evening',
+        art: 'sinai-mountain',
         line: u(
-          'No questions tonight. Only the story, the lights on the lake, and the bells.',
-          'Tối nay không có câu hỏi. Chỉ có câu chuyện, ánh đèn trên mặt hồ, và tiếng chuông.',
+          'No questions tonight. Only the desert, the stars, and everything you have learned.',
+          'Tối nay không có câu hỏi. Chỉ có sa mạc, những vì sao, và tất cả những gì bạn đã học.',
         ),
       },
       cards: [
         {
           id: 'c1',
-          art: 'lake-evening',
+          art: 'sinai-mountain',
           text: u(
-            'Walk with me once more through Hà Nội at dusk. Past the lake, where the lamps are coming on one by one, like candles.',
-            'Hãy cùng đi một lần nữa qua Hà Nội lúc chạng vạng. Ngang mặt hồ, nơi những ngọn đèn đang sáng lên từng chiếc một, như những ngọn nến.',
+            'Night falls on the desert. At the foot of the mountain, the ancient monastery lights one window, like a candle. Pilgrims have climbed this path for seventeen centuries.',
+            'Đêm buông trên sa mạc. Dưới chân núi, tu viện cổ thắp sáng một ô cửa sổ, như một ngọn nến. Mười bảy thế kỷ qua, khách hành hương vẫn leo lên con đường này.',
           ),
         },
         {
           id: 'c2',
-          art: 'cathedral-hanoi',
+          art: 'sinai-bush',
           text: u(
-            'The cathedral rises out of the evening like a ship. Inside, someone is practicing the organ. The sound spills out onto the square.',
-            'Nhà thờ Lớn vươn lên giữa buổi chiều như một con tàu. Bên trong, ai đó đang tập đàn organ. Tiếng đàn tràn ra quảng trường.',
+            'You began at a fire that did not consume, and a voice that knew a shepherd’s name. It knows yours too.',
+            'Bạn đã khởi đầu bên một ngọn lửa không thiêu rụi, và một tiếng nói biết tên người chăn chiên. Tiếng nói ấy cũng biết tên bạn.',
           ),
         },
         {
@@ -918,8 +803,8 @@ export const HANOI: World = {
           id: 'c4',
           art: 'creation-people',
           text: u(
-            'You have learned what you are: his image. Not a servant, not an accident. A daughter.',
-            'Bạn đã học mình là gì: hình ảnh của Ngài. Không phải tôi tớ, không phải tình cờ. Mà là một người con.',
+            'You have learned what you are: his image. Not a servant, not an accident. A child of the family.',
+            'Bạn đã học mình là gì: hình ảnh của Ngài. Không phải tôi tớ, không phải tình cờ. Mà là một người con trong gia đình.',
           ),
         },
         {
@@ -934,35 +819,27 @@ export const HANOI: World = {
           id: 'c6',
           art: 'incense-altar',
           text: u(
-            'You have learned that the incense of your childhood rises in churches too, and that the family — living and dead — is held in one communion.',
-            'Bạn đã biết làn hương của tuổi thơ mình cũng bay lên trong các nhà thờ, và rằng gia đình — người sống lẫn người đã khuất — được giữ trong cùng một mối hiệp thông.',
+            'You have learned that incense rising for the beloved dead rises in churches too, and that the family — living and dead — is held in one communion.',
+            'Bạn đã biết làn hương dâng lên cho người thân đã khuất cũng bay lên trong các nhà thờ, và rằng gia đình — người sống lẫn người đã khuất — được giữ trong cùng một mối hiệp thông.',
           ),
         },
         {
           id: 'c7',
-          art: 'martyrs-palm',
+          art: 'sinai-mountain',
           text: u(
-            'And you have met the saints of your own soil, who loved this story enough to die rather than let it go.',
-            'Và bạn đã gặp các vị thánh của chính quê hương mình, những người yêu câu chuyện này đến mức thà chết chứ không buông bỏ.',
-          ),
-        },
-        {
-          id: 'c8',
-          art: 'cathedral-hanoi',
-          text: u(
-            'The first page of your passport is ready for its stamp. The road now turns west — toward a small basilica in Bruges, and the story of a man named Jesus.',
-            'Trang đầu tiên trong hộ chiếu của bạn đã sẵn sàng để đóng dấu. Con đường giờ rẽ về hướng tây — đến một vương cung thánh đường nhỏ ở Bruges, và câu chuyện về một người tên là Giêsu.',
+            'The first page of your passport is ready for its stamp. The road now leaves the desert — toward Jerusalem, and the story of a man named Jesus.',
+            'Trang đầu tiên trong hộ chiếu của bạn đã sẵn sàng để đóng dấu. Con đường giờ rời sa mạc — hướng về Giêrusalem, và câu chuyện về một người tên là Giêsu.',
           ),
         },
       ],
       questions: [],
       treasure: {
         kind: 'art',
-        art: 'cathedral-hanoi',
-        title: u('Your first church', 'Ngôi nhà thờ đầu tiên của bạn'),
+        art: 'sinai-mountain',
+        title: u('The mountain of the name', 'Ngọn núi của Danh Thánh'),
         note: u(
-          'Built in 1886, modeled on Notre-Dame de Paris — the church you will reach later on this same road. Hà Nội and Paris have always been looking at each other.',
-          'Xây năm 1886, phỏng theo Nhà thờ Đức Bà Paris — ngôi nhà thờ bạn sẽ đến sau này trên chính con đường ấy. Hà Nội và Paris vẫn luôn nhìn về nhau.',
+          'St. Catherine’s Monastery at the foot of Sinai has kept a chapel of the Burning Bush since the year 330 — one of the oldest continuously used churches on earth. The fire, so to speak, has never gone out.',
+          'Tu viện Thánh Catarina dưới chân núi Sinai gìn giữ nhà nguyện Bụi Gai Cháy từ năm 330 — một trong những nhà thờ được sử dụng liên tục lâu đời nhất trái đất. Có thể nói: ngọn lửa ấy chưa bao giờ tắt.',
         ),
       },
       reflection: u('Looking back on this first stretch of road — what surprised you?', 'Nhìn lại đoạn đường đầu tiên này — điều gì khiến bạn ngạc nhiên?'),

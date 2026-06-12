@@ -23,11 +23,11 @@ export const UI = {
   obYourName: v('What should we call you?', 'Chúng tôi nên gọi bạn là gì?'),
   obNamePlaceholder: v('Your name', 'Tên của bạn'),
   obWelcomeLine: v(
-    'This is a quiet road through places you have stood. Walk it at your own pace.',
-    'Đây là một con đường yên tĩnh qua những nơi bạn từng đặt chân đến. Hãy đi theo nhịp của riêng bạn.',
+    'This is a quiet road through the great holy places of the world. Walk it at your own pace.',
+    'Đây là một con đường yên tĩnh qua những nơi thánh thiêng lớn của thế giới. Hãy đi theo nhịp của riêng bạn.',
   ),
   obContinue: v('Continue', 'Tiếp tục'),
-  obMapLine: v('The road begins where you began.', 'Con đường bắt đầu từ nơi bạn đã bắt đầu.'),
+  obMapLine: v('Every pilgrimage begins with a single step.', 'Mọi cuộc hành hương đều bắt đầu bằng một bước chân.'),
   obBegin: v('Step inside', 'Bước vào'),
 
   // Today
@@ -102,8 +102,8 @@ export const UI = {
   importBad: v('That file could not be read.', 'Không thể đọc tệp này.'),
   viReviewExport: v('Vietnamese review list (for a native speaker)', 'Danh sách cần kiểm tra tiếng Việt (cho người bản xứ)'),
   parishNote: v(
-    'Your parish and Father Matthew lead this journey. This app just walks beside you.',
-    'Giáo xứ và cha Matthew dẫn dắt hành trình này. Ứng dụng chỉ đồng hành bên bạn.',
+    'Your parish and your priest lead this journey. This app just walks beside you.',
+    'Giáo xứ và cha xứ của bạn dẫn dắt hành trình này. Ứng dụng chỉ đồng hành bên bạn.',
   ),
 
   // Streak / candles
@@ -130,16 +130,16 @@ export const UI = {
   massDone: v('You have walked the whole Mass. Next Sunday, none of it will be a stranger to you.', 'Bạn đã đi trọn một Thánh lễ. Chúa nhật tới, sẽ không còn điều gì xa lạ với bạn nữa.'),
   massPostureNote: v('Postures vary a little from country to country. When unsure, simply follow your neighbors.', 'Tư thế có thể khác đôi chút giữa các nước. Khi không chắc, bạn cứ làm theo những người bên cạnh.'),
   rosaryTitle: v('The Rosary', 'Kinh Mân Côi'),
-  rosarySubtitle: v('Your own rosary, bead by bead. The Joyful Mysteries.', 'Chuỗi Mân Côi của bạn, từng hạt một. Năm Sự Vui.'),
+  rosarySubtitle: v('Bead by bead, with all four sets of mysteries.', 'Từng hạt một, với cả bốn mầu nhiệm Mân Côi.'),
   rosaryAnnounce: v('The next mystery', 'Mầu nhiệm tiếp theo'),
   rosaryTapNext: v('Tap for the next bead', 'Chạm để sang hạt tiếp theo'),
-  rosaryDone: v('A whole rosary, prayed. The beads your fiancé gave you know their purpose now.', 'Trọn một chuỗi Mân Côi đã được nguyện. Những hạt chuỗi vị hôn phu tặng bạn giờ đã biết sứ mạng của mình.'),
+  rosaryDone: v('A whole rosary, prayed. The beads in your hands know their purpose now.', 'Trọn một chuỗi Mân Côi đã được nguyện. Những hạt chuỗi trong tay bạn giờ đã biết sứ mạng của mình.'),
 
-  // OCIA tracker
-  ociaTitle: v('Your OCIA road', 'Hành trình OCIA của bạn'),
-  ociaDays: v('days to go', 'ngày nữa'),
-  ociaToday: v('Today.', 'Hôm nay.'),
-  ociaPassed: v('Received', 'Đã lãnh nhận'),
+  // RCIA tracker
+  rciaTitle: v('Your RCIA road', 'Hành trình RCIA của bạn'),
+  rciaDays: v('days to go', 'ngày nữa'),
+  rciaToday: v('Today.', 'Hôm nay.'),
+  rciaPassed: v('Received', 'Đã lãnh nhận'),
 
   // Sound
   soundLabel: v('Sound (bell and stamp)', 'Âm thanh (chuông và con dấu)'),
@@ -148,8 +148,6 @@ export const UI = {
   // Bonus roads
   bonusRoads: v('Further roads', 'Những con đường xa hơn'),
   bonusLocked: v('Opens with your first stamp', 'Mở ra cùng con dấu đầu tiên của bạn'),
-  bonusLockedBruges: v('Opens with the Bruges stamp', 'Mở ra cùng con dấu Bruges'),
-  bonusLockedParis: v('Opens with the Paris stamp', 'Mở ra cùng con dấu Paris'),
   bonusPreparing: v('Being prepared', 'Đang được chuẩn bị'),
 
   // Rosary mystery sets

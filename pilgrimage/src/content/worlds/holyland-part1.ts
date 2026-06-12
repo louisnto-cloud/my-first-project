@@ -1,22 +1,22 @@
 import type { L, Lesson } from '../types';
 
-// ─── World 2 · Bruges · lessons 1–7 ─────────────────────────────────────────
-// The Jesus arc, part one: the fall, the waiting, Mary's yes, Bethlehem,
+// ─── World 2 · The Holy Land · lessons, part one ────────────────────────────
+// The Jesus arc: the fall, the waiting, Mary's yes, Bethlehem, Nazareth,
 // Cana, and two parables of mercy.
 
 const u = (en: string, vi: string): L => ({ en, vi, viStatus: 'unverified' });
 
-export const BRUGES_LESSONS_1: Lesson[] = [
+export const HOLYLAND_LESSONS_1: Lesson[] = [
   // ── 1: The Garden and the Fall ─────────────────────────────────────────
   {
-    id: 'bruges-1',
+    id: 'hl-1',
     title: u('The Garden and the Fall', 'Khu vườn và sự sa ngã'),
     minutes: 4,
     door: {
       art: 'eden-tree',
       line: u(
-        'Before Bruges, before everything — a garden, a gift, and a choice.',
-        'Trước Bruges, trước tất cả — một khu vườn, một món quà, và một lựa chọn.',
+        'Before Jerusalem, before everything — a garden, a gift, and a choice.',
+        'Trước Giêrusalem, trước tất cả — một khu vườn, một món quà, và một lựa chọn.',
       ),
     },
     cards: [
@@ -125,7 +125,7 @@ export const BRUGES_LESSONS_1: Lesson[] = [
 
   // ── 2: The Long Waiting ────────────────────────────────────────────────
   {
-    id: 'bruges-2',
+    id: 'hl-2',
     title: u('The Long Waiting', 'Sự chờ đợi dài lâu'),
     minutes: 4,
     door: {
@@ -234,7 +234,7 @@ export const BRUGES_LESSONS_1: Lesson[] = [
 
   // ── 3: Mary's Yes ──────────────────────────────────────────────────────
   {
-    id: 'bruges-3',
+    id: 'hl-3',
     title: u('Mary’s Yes', 'Tiếng "Xin Vâng" của Mẹ Maria'),
     minutes: 5,
     door: {
@@ -390,7 +390,7 @@ export const BRUGES_LESSONS_1: Lesson[] = [
 
   // ── 4: The Night in Bethlehem ──────────────────────────────────────────
   {
-    id: 'bruges-4',
+    id: 'hl-4',
     title: u('The Night in Bethlehem', 'Đêm Bêlem'),
     minutes: 4,
     door: {
@@ -492,9 +492,79 @@ export const BRUGES_LESSONS_1: Lesson[] = [
     },
   },
 
+  // ── Nazareth: the Hidden Years ─────────────────────────────────────────
+  {
+    id: 'hl-naz',
+    title: u('Nazareth, the Hidden Years', 'Nadarét, những năm ẩn dật'),
+    minutes: 4,
+    door: {
+      art: 'parish-home',
+      line: u(
+        'Thirty of Jesus’ thirty-three years were spent here — and the Gospels say almost nothing about them.',
+        'Ba mươi trong ba mươi ba năm của Chúa Giêsu trôi qua ở đây — và các sách Tin Mừng hầu như không nói gì về chúng.',
+      ),
+    },
+    cards: [
+      {
+        id: 'c1',
+        art: 'parish-home',
+        text: u(
+          'A small hill town in Galilee. A workshop smelling of wood shavings. Water carried from the well, bread baked, prayers said at dusk. For thirty years, God’s life on earth looked exactly like ordinary life.',
+          'Một thị trấn nhỏ trên đồi xứ Galilê. Một xưởng mộc thơm mùi vỏ bào. Nước gánh từ giếng về, bánh nướng trong lò, lời kinh đọc lúc chiều tà. Suốt ba mươi năm, cuộc sống của Thiên Chúa nơi trần gian trông y hệt một cuộc sống bình thường.',
+        ),
+      },
+      {
+        id: 'c2',
+        art: 'annunciation',
+        text: u(
+          'Today the great Basilica of the Annunciation stands over a small cave-house — held by tradition as Mary’s home, the room of the yes. Pilgrims from every nation queue to look into one ordinary room.',
+          'Ngày nay, Vương cung thánh đường Truyền Tin đứng trên một ngôi nhà hang đá nhỏ — được lưu truyền là nhà của Đức Mẹ Maria, căn phòng của tiếng xin vâng. Khách hành hương từ mọi dân tộc xếp hàng chỉ để nhìn vào một căn phòng bình thường.',
+        ),
+      },
+      {
+        id: 'c3',
+        art: 'candle-single',
+        text: u(
+          'The hidden years are a doctrine in disguise: if God spent thirty years doing laundry, carpentry, and family dinners, then no ordinary day of yours — no errand, no commute — is too small to be holy.',
+          'Những năm ẩn dật là một bài giáo lý trá hình: nếu Thiên Chúa dành ba mươi năm cho việc giặt giũ, nghề mộc và những bữa cơm gia đình, thì không một ngày bình thường nào của bạn — không một việc vặt, một chuyến đi làm nào — là quá nhỏ bé để nên thánh.',
+        ),
+      },
+    ],
+    questions: [
+      {
+        id: 'q1',
+        kind: 'choice',
+        afterCard: 2,
+        prompt: u('What do the hidden years of Nazareth teach?', 'Những năm ẩn dật ở Nadarét dạy điều gì?'),
+        options: [
+          { text: u('Ordinary life can be holy', 'Cuộc sống bình thường có thể nên thánh') },
+          { text: u('Only public years matter', 'Chỉ những năm hoạt động công khai mới đáng kể') },
+        ],
+        answer: 0,
+        why: u(
+          'Thirty hidden years against three public ones. God’s own ratio says most of holiness is quiet.',
+          'Ba mươi năm ẩn dật so với ba năm công khai. Tỷ lệ của chính Thiên Chúa nói rằng phần lớn sự thánh thiện là thầm lặng.',
+        ),
+      },
+    ],
+    treasure: {
+      kind: 'practice',
+      title: u('A Nazareth day', 'Một ngày Nadarét'),
+      note: u(
+        'Choose one chore this week — washing dishes, making tea, folding clothes — and do it the Nazareth way: unhurried, with love, as if it mattered. It does.',
+        'Hãy chọn một việc nhỏ trong tuần này — rửa chén, pha trà, gấp quần áo — và làm theo cách của Nadarét: không vội vã, với tình yêu, như thể nó quan trọng. Vì nó quan trọng thật.',
+      ),
+    },
+    reflection: u('What is your most “Nazareth” hour of the day?', 'Giờ nào trong ngày của bạn “Nadarét” nhất?'),
+    deeper: {
+      ccc: [531, 533],
+      note: u('On the hidden life of Nazareth.', 'Về đời sống ẩn dật ở Nadarét.'),
+    },
+  },
+
   // ── 5: Water into Wine ─────────────────────────────────────────────────
   {
-    id: 'bruges-5',
+    id: 'hl-5',
     title: u('Water into Wine', 'Nước hóa thành rượu'),
     minutes: 4,
     door: {
@@ -582,8 +652,8 @@ export const BRUGES_LESSONS_1: Lesson[] = [
       kind: 'practice',
       title: u('Mary’s advice', 'Lời khuyên của Mẹ Maria'),
       note: u(
-        '“Do whatever he tells you.” Five words to carry into your wedding year. When you do not know how to pray, you can simply tell him what is missing — “they have no wine” — and leave it with him.',
-        '“Người bảo gì, cứ làm theo.” Một câu để mang theo trong năm cưới của bạn. Khi không biết cầu nguyện thế nào, bạn chỉ cần nói với Ngài điều đang thiếu — “họ hết rượu rồi” — và phó thác cho Ngài.',
+        '“Do whatever he tells you.” Five words to carry anywhere. When you do not know how to pray, simply tell him what is missing — “they have no wine” — and leave it with him.',
+        '“Người bảo gì, cứ làm theo.” Một câu để mang theo bất cứ đâu. Khi không biết cầu nguyện thế nào, bạn chỉ cần nói với Ngài điều đang thiếu — “họ hết rượu rồi” — và phó thác cho Ngài.',
       ),
     },
     reflection: u('What is running low in your life right now?', 'Điều gì trong đời bạn đang dần cạn?'),
@@ -595,7 +665,7 @@ export const BRUGES_LESSONS_1: Lesson[] = [
 
   // ── 6: The Father Who Runs ─────────────────────────────────────────────
   {
-    id: 'bruges-6',
+    id: 'hl-6',
     title: u('The Father Who Runs', 'Người cha chạy ra đón'),
     minutes: 5,
     door: {
@@ -696,8 +766,8 @@ export const BRUGES_LESSONS_1: Lesson[] = [
       kind: 'word',
       termId: 'mercy',
       note: u(
-        'The most important word in this whole world of lessons. If you remember one thing from Bruges, let it be the father, running.',
-        'Từ quan trọng nhất trong cả chặng đường này. Nếu bạn chỉ nhớ một điều từ Bruges, hãy nhớ hình ảnh người cha đang chạy.',
+        'The most important word in this whole world of lessons. If you remember one thing from this road, let it be the father, running.',
+        'Từ quan trọng nhất trong cả chặng đường này. Nếu bạn chỉ nhớ một điều từ con đường này, hãy nhớ hình ảnh người cha đang chạy.',
       ),
     },
     reflection: u('Is there a road you have been afraid to walk back down?', 'Có con đường nào bạn vẫn sợ phải quay bước trở về?'),
@@ -709,7 +779,7 @@ export const BRUGES_LESSONS_1: Lesson[] = [
 
   // ── 7: The Stranger on the Road ────────────────────────────────────────
   {
-    id: 'bruges-7',
+    id: 'hl-7',
     title: u('The Stranger on the Road', 'Người lạ trên đường'),
     minutes: 4,
     door: {

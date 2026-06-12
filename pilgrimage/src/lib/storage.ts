@@ -29,7 +29,7 @@ export interface SaveDoc {
   sound: boolean;
   /** ISO date the Daily Reliquary was last opened. */
   reliquary: string;
-  /** OCIA milestone dates: milestoneId -> yyyy-mm-dd. */
+  /** RCIA milestone dates: milestoneId -> yyyy-mm-dd. (Field kept as `ocia` for save compatibility.) */
   ocia: Record<string, string>;
 }
 

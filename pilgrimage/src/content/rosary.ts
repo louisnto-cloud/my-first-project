@@ -173,8 +173,8 @@ export const LUMINOUS_MYSTERIES: Mystery[] = [
     title: u('The Baptism in the Jordan', 'Chúa chịu phép rửa'),
     art: 'font-water',
     meditation: u(
-      '“This is my beloved Son.” The same words hover over every font — soon, over yours.',
-      '“Đây là Con yêu dấu của Ta.” Những lời ấy phủ trên mọi giếng rửa tội — chẳng bao lâu nữa, trên giếng của bạn.',
+      '“This is my beloved Son.” The same words hover over every font — and, for the catechumen, one day over theirs.',
+      '“Đây là Con yêu dấu của Ta.” Những lời ấy phủ trên mọi giếng rửa tội — và với người dự tòng, một ngày kia, trên giếng của chính họ.',
     ),
   },
   {
@@ -182,8 +182,8 @@ export const LUMINOUS_MYSTERIES: Mystery[] = [
     title: u('The Wedding at Cana', 'Tiệc cưới Cana'),
     art: 'cana-jars',
     meditation: u(
-      '“Do whatever he tells you.” Bring your own wedding into this decade.',
-      '“Người bảo gì, cứ làm theo.” Hãy mang lễ cưới của chính bạn vào chục kinh này.',
+      '“Do whatever he tells you.” Bring any wedding you love into this decade.',
+      '“Người bảo gì, cứ làm theo.” Hãy mang một lễ cưới bạn yêu thương vào chục kinh này.',
     ),
   },
   {

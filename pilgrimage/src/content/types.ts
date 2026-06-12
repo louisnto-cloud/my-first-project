@@ -76,7 +76,14 @@ export type ArtKind =
   | 'heaven-light'
   | 'asia-lanterns'
   | 'st-peters'
-  | 'pieta';
+  | 'pieta'
+  // The universal road
+  | 'sinai-bush'
+  | 'sinai-mountain'
+  | 'jerusalem-city'
+  | 'lourdes-grotto'
+  | 'camino-way'
+  | 'santiago';
 
 export interface Scripture {
   /** Book chapter:verse, e.g. "John 8:12" */
@@ -204,15 +211,13 @@ export interface Lesson {
 }
 
 export type WorldId =
-  | 'hanoi'
-  | 'bruges'
-  | 'paris'
-  | 'brussels'
-  | 'parish'
+  | 'sinai'
+  | 'holyland'
+  | 'rome'
+  | 'lourdes'
+  | 'camino'
   // bonus worlds, unlocked off the main road
-  | 'asia'
-  | 'vatican'
-  | 'holyland';
+  | 'asia';
 
 export interface World {
   id: WorldId;

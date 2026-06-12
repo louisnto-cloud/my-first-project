@@ -11,7 +11,7 @@ import { AppShell } from '@/components/AppShell';
 
 export const metadata: Metadata = {
   title: 'The Pilgrimage',
-  description: 'A quiet road through places you have stood.',
+  description: 'A quiet pilgrimage through the world’s holy places.',
   manifest: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/manifest.webmanifest`,
 };
 

@@ -1,15 +1,15 @@
 import type { L, Lesson } from '../types';
 
-// ─── World 3 · Paris · "The Church" ─────────────────────────────────────────
-// Notre-Dame de Paris, where she sat through an organ concert and felt peace.
-// Theme: the Church, the Mass, and why Catholics worship the way they do.
+// ─── World 3 · Rome · "The Church" ──────────────────────────────────────────
+// St. Peter's, built over a forgiven fisherman's grave. Theme: the Church,
+// the Mass, and why Catholics worship the way they do.
 
 const u = (en: string, vi: string): L => ({ en, vi, viStatus: 'unverified' });
 
-export const PARIS_LESSONS: Lesson[] = [
+export const ROME_LESSONS: Lesson[] = [
   // ── 1: Wind and Fire ───────────────────────────────────────────────────
   {
-    id: 'paris-1',
+    id: 'rome-1',
     title: u('Wind and Fire', 'Gió và Lửa'),
     minutes: 4,
     door: {
@@ -61,10 +61,10 @@ export const PARIS_LESSONS: Lesson[] = [
       },
       {
         id: 'c4',
-        art: 'notre-dame',
+        art: 'st-peters',
         text: u(
-          'Every church you have ever entered — Hà Nội, Bruges, Notre-Dame — grew from that one room. The fire spread for two thousand years, and one spark of it is reading this sentence.',
-          'Mọi ngôi nhà thờ bạn từng bước vào — Hà Nội, Bruges, Nhà thờ Đức Bà — đều lớn lên từ căn phòng ấy. Ngọn lửa lan đi suốt hai ngàn năm, và một tia lửa của nó đang đọc dòng chữ này.',
+          'Every church on earth — the greatest basilica and the smallest village chapel — grew from that one room. The fire spread for two thousand years, and one spark of it is reading this sentence.',
+          'Mọi ngôi nhà thờ trên trái đất — từ vương cung thánh đường lớn nhất đến nhà nguyện làng nhỏ nhất — đều lớn lên từ căn phòng ấy. Ngọn lửa lan đi suốt hai ngàn năm, và một tia lửa của nó đang đọc dòng chữ này.',
         ),
       },
     ],
@@ -117,11 +117,11 @@ export const PARIS_LESSONS: Lesson[] = [
 
   // ── 2: One Family, Four Words ──────────────────────────────────────────
   {
-    id: 'paris-2',
+    id: 'rome-2',
     title: u('One Family, Four Words', 'Một gia đình, bốn dấu chỉ'),
     minutes: 4,
     door: {
-      art: 'notre-dame',
+      art: 'st-peters',
       line: u(
         'One, holy, catholic, apostolic. Four old words, explained over coffee.',
         'Duy nhất, thánh thiện, công giáo, tông truyền. Bốn từ cổ kính, được kể lại như bên tách cà phê.',
@@ -130,10 +130,10 @@ export const PARIS_LESSONS: Lesson[] = [
     cards: [
       {
         id: 'c1',
-        art: 'notre-dame',
+        art: 'st-peters',
         text: u(
-          'The Creed describes the Church with four marks. ONE: a single family across every border. The Mass you attended in Dutch was the same Mass as in Vietnamese — you were never actually a stranger there.',
-          'Kinh Tin Kính mô tả Giáo hội bằng bốn dấu chỉ. DUY NHẤT: một gia đình duy nhất vượt mọi biên giới. Thánh lễ tiếng Hà Lan bạn từng dự cũng chính là Thánh lễ tiếng Việt — bạn chưa bao giờ thật sự là người xa lạ ở đó.',
+          'The Creed describes the Church with four marks. ONE: a single family across every border. A Mass in Tokyo, in Nairobi, in your own town is the same Mass — a Catholic is never actually a stranger at any of them.',
+          'Kinh Tin Kính mô tả Giáo hội bằng bốn dấu chỉ. DUY NHẤT: một gia đình duy nhất vượt mọi biên giới. Một Thánh lễ ở Tokyo, ở Nairobi, hay ở chính quê bạn vẫn là cùng một Thánh lễ — người Công giáo không bao giờ thật sự là khách lạ ở bất cứ Thánh lễ nào.',
         ),
       },
       {
@@ -148,8 +148,8 @@ export const PARIS_LESSONS: Lesson[] = [
         id: 'c3',
         art: 'creation-world',
         text: u(
-          'CATHOLIC: the word simply means {{catholic}} — universal. Vietnamese grandmothers, Belgian students, Brazilian taxi drivers, one table. You have seen this with your own eyes, in four countries.',
-          'CÔNG GIÁO: từ này đơn giản nghĩa là {{catholic}} — phổ quát. Các bà cụ Việt Nam, sinh viên Bỉ, tài xế taxi Brazil, cùng một bàn tiệc. Bạn đã thấy điều này tận mắt, ở bốn quốc gia.',
+          'CATHOLIC: the word simply means {{catholic}} — universal. Vietnamese grandmothers, Belgian students, Brazilian taxi drivers, one table.',
+          'CÔNG GIÁO: từ này đơn giản nghĩa là {{catholic}} — phổ quát. Các bà cụ Việt Nam, sinh viên Bỉ, tài xế taxi Brazil, cùng một bàn tiệc.',
         ),
         terms: ['catholic'],
       },
@@ -157,8 +157,8 @@ export const PARIS_LESSONS: Lesson[] = [
         id: 'c4',
         art: 'keys-shepherd',
         text: u(
-          'APOSTOLIC: the family keeps an unbroken line back to the apostles — the friends from the locked room. Father Matthew was ordained by a bishop, who stands in a chain of hands laid on heads going back to Peter.',
-          'TÔNG TRUYỀN: gia đình này giữ một mạch nối không đứt đoạn về tới các Tông đồ — những người bạn trong căn phòng cài then. Cha Matthew được truyền chức bởi một giám mục, người đứng trong chuỗi những bàn tay đặt trên đầu nối dài về tới thánh Phêrô.',
+          'APOSTOLIC: the family keeps an unbroken line back to the apostles — the friends from the locked room. Every parish priest was ordained by a bishop who stands in a chain of hands laid on heads going back to Peter.',
+          'TÔNG TRUYỀN: gia đình này giữ một mạch nối không đứt đoạn về tới các Tông đồ — những người bạn trong căn phòng cài then. Mỗi cha xứ đều được truyền chức bởi một giám mục đứng trong chuỗi những bàn tay đặt trên đầu nối dài về tới thánh Phêrô.',
         ),
       },
     ],
@@ -189,8 +189,8 @@ export const PARIS_LESSONS: Lesson[] = [
         ],
         answer: 0,
         why: u(
-          'You have prayed in Dutch, walked in French, grown up in Vietnamese. One word covers all of it: universal.',
-          'Bạn đã cầu nguyện bằng tiếng Hà Lan, dạo bước bằng tiếng Pháp, lớn lên bằng tiếng Việt. Một từ ôm trọn tất cả: phổ quát.',
+          'Every language, every continent, every century — one table. One word covers all of it: universal.',
+          'Mọi ngôn ngữ, mọi châu lục, mọi thế kỷ — cùng một bàn tiệc. Một từ ôm trọn tất cả: phổ quát.',
         ),
       },
     ],
@@ -198,11 +198,11 @@ export const PARIS_LESSONS: Lesson[] = [
       kind: 'word',
       termId: 'catholic',
       note: u(
-        'Now the name on the door of every church you have loved makes sense. It was never a club name. It is an invitation addressed to everyone — including a flight attendant from Hà Nội.',
-        'Giờ thì cái tên trên cửa mọi nhà thờ bạn yêu mến đã có nghĩa. Nó chưa bao giờ là tên một hội kín. Nó là lời mời gửi đến mọi người — kể cả một nữ tiếp viên hàng không đến từ Hà Nội.',
+        'Now the name on the church door makes sense. It was never a club name. It is an invitation addressed to everyone — including you, exactly as you are.',
+        'Giờ thì cái tên trên cửa nhà thờ đã có nghĩa. Nó chưa bao giờ là tên một hội kín. Nó là lời mời gửi đến mọi người — kể cả bạn, đúng như bạn là.',
       ),
     },
-    reflection: u('In which church did you most feel you belonged?', 'Ở ngôi nhà thờ nào bạn cảm thấy mình thuộc về nhất?'),
+    reflection: u('Where have you most felt that you belonged?', 'Ở đâu bạn cảm thấy mình thuộc về nhất?'),
     deeper: {
       ccc: [811, 866, 867, 868, 869],
       note: u('On the four marks of the Church.', 'Về bốn đặc tính của Giáo hội.'),
@@ -211,14 +211,14 @@ export const PARIS_LESSONS: Lesson[] = [
 
   // ── 3: The Shepherds ───────────────────────────────────────────────────
   {
-    id: 'paris-3',
+    id: 'rome-3',
     title: u('The Shepherds', 'Các mục tử'),
     minutes: 4,
     door: {
       art: 'keys-shepherd',
       line: u(
-        'A Pope in Rome, a bishop in your city, and Father Matthew in your parish. How it fits together.',
-        'Một Giáo hoàng ở Rôma, một giám mục ở thành phố bạn, và cha Matthew ở giáo xứ bạn. Mọi sự liên kết với nhau thế nào.',
+        'A Pope in Rome, a bishop in your region, and a priest in your parish. How it fits together.',
+        'Một Giáo hoàng ở Rôma, một giám mục trong giáo phận bạn, và một linh mục ở giáo xứ bạn. Mọi sự liên kết với nhau thế nào.',
       ),
     },
     cards: [
@@ -240,10 +240,10 @@ export const PARIS_LESSONS: Lesson[] = [
       },
       {
         id: 'c3',
-        art: 'cathedral-hanoi',
+        art: 'keys-shepherd',
         text: u(
-          'Each region has a bishop — a successor of the apostles — whose chair stands in the {{cathedral}}. That is what made St. Joseph’s in Hà Nội a cathedral: your city’s shepherd sits there.',
-          'Mỗi giáo phận có một giám mục — người kế vị các Tông đồ — với ngai tòa đặt trong {{cathedral}}. Chính điều đó làm Nhà thờ Lớn Hà Nội thành nhà thờ chính tòa: vị mục tử của thành phố bạn ngự ở đó.',
+          'Each region has a bishop — a successor of the apostles — whose chair stands in the {{cathedral}}. That is what makes a church a cathedral: the region’s shepherd has his seat there.',
+          'Mỗi giáo phận có một giám mục — người kế vị các Tông đồ — với ngai tòa đặt trong {{cathedral}}. Chính điều đó làm một nhà thờ thành nhà thờ chính tòa: vị mục tử của giáo phận đặt ngai tòa ở đó.',
         ),
         terms: ['cathedral'],
       },
@@ -251,8 +251,8 @@ export const PARIS_LESSONS: Lesson[] = [
         id: 'c4',
         art: 'teacher-hill',
         text: u(
-          'And in each parish, a priest: ordained to teach, to baptize, to forgive sins in Jesus’ name, and to stand at the altar. Father Matthew is not just a kind man guiding you — he carries the family’s two-thousand-year mandate to do exactly that.',
-          'Và trong mỗi giáo xứ, một linh mục: được truyền chức để giảng dạy, rửa tội, tha tội nhân danh Chúa Giêsu, và đứng nơi bàn thờ. Cha Matthew không chỉ là một người tốt bụng đang đồng hành với bạn — cha mang sứ mạng hai ngàn năm của gia đình này để làm chính những việc ấy.',
+          'And in each parish, a priest: ordained to teach, to baptize, to forgive sins in Jesus’ name, and to stand at the altar. Your parish priest is not just a kind man with a busy week — he carries the family’s two-thousand-year mandate to do exactly that.',
+          'Và trong mỗi giáo xứ, một linh mục: được truyền chức để giảng dạy, rửa tội, tha tội nhân danh Chúa Giêsu, và đứng nơi bàn thờ. Cha xứ của bạn không chỉ là một người tốt bụng bận rộn — cha mang sứ mạng hai ngàn năm của gia đình này để làm chính những việc ấy.',
         ),
       },
     ],
@@ -275,15 +275,15 @@ export const PARIS_LESSONS: Lesson[] = [
       {
         id: 'q2',
         kind: 'choice',
-        prompt: u('Why is St. Joseph’s in Hà Nội called a cathedral?', 'Vì sao Nhà thờ Lớn Hà Nội được gọi là nhà thờ chính tòa?'),
+        prompt: u('What makes a church a “cathedral”?', 'Điều gì làm một nhà thờ thành “nhà thờ chính tòa”?'),
         options: [
           { text: u('Because it is the biggest building', 'Vì đó là tòa nhà lớn nhất') },
           { text: u('Because the bishop’s chair stands there', 'Vì ngai tòa giám mục đặt ở đó') },
         ],
         answer: 1,
         why: u(
-          '“Cathedral” comes from cathedra — the chair. Your home church holds your shepherd’s seat.',
-          '“Chính tòa” đến từ cathedra — chiếc ngai. Ngôi nhà thờ quê hương bạn giữ chỗ ngồi của vị mục tử thành phố.',
+          '“Cathedral” comes from cathedra — the chair. The grandest cathedral is, at heart, a seat for a shepherd.',
+          '“Chính tòa” đến từ cathedra — chiếc ngai. Nhà thờ chính tòa nguy nga nhất, tự bản chất, là chỗ ngồi của một vị mục tử.',
         ),
       },
     ],
@@ -291,8 +291,8 @@ export const PARIS_LESSONS: Lesson[] = [
       kind: 'practice',
       title: u('A prayer for your shepherd', 'Một lời cầu cho vị mục tử của bạn'),
       note: u(
-        'Sometime this week, pray one Our Father for Father Matthew. Shepherds carry more than they show, and almost no one prays for them by name.',
-        'Trong tuần này, hãy đọc một Kinh Lạy Cha cầu cho cha Matthew. Các mục tử mang nhiều gánh nặng hơn vẻ ngoài, và hầu như không ai cầu nguyện cho các ngài bằng chính tên gọi.',
+        'Sometime this week, pray one Our Father for your parish priest, by name. Shepherds carry more than they show, and almost no one prays for them by name.',
+        'Trong tuần này, hãy đọc một Kinh Lạy Cha cầu cho cha xứ của bạn, bằng chính tên ngài. Các mục tử mang nhiều gánh nặng hơn vẻ ngoài, và hầu như không ai cầu nguyện cho các ngài bằng chính tên gọi.',
       ),
     },
     reflection: u('Who shepherds you, when you are honest about it?', 'Thật lòng mà nói, ai đang dẫn dắt bạn?'),
@@ -302,9 +302,102 @@ export const PARIS_LESSONS: Lesson[] = [
     },
   },
 
+  // ── The Fisherman's Tomb ─────────────────────────────────────────────────
+  {
+    id: 'rome-peter',
+    title: u('The Fisherman’s Tomb', 'Ngôi mộ người ngư phủ'),
+    minutes: 4,
+    door: {
+      art: 'st-peters',
+      line: u(
+        'The largest church on earth stands over the grave of a fisherman who once denied he knew Jesus.',
+        'Ngôi nhà thờ lớn nhất trái đất đứng trên phần mộ của một ngư phủ từng chối là mình biết Chúa Giêsu.',
+      ),
+    },
+    cards: [
+      {
+        id: 'c1',
+        art: 'st-peters',
+        text: u(
+          'Rome, year 64. Peter — the fisherman from the lake, the friend who denied Jesus three times and was forgiven three times — is executed in Nero’s circus and buried in a simple grave on Vatican hill.',
+          'Rôma, năm 64. Phêrô — người ngư phủ của hồ xưa, người bạn đã chối Chúa ba lần và được tha thứ ba lần — chịu hành hình trong hý trường của Nêrô và được chôn trong một ngôi mộ đơn sơ trên đồi Vatican.',
+        ),
+      },
+      {
+        id: 'c2',
+        art: 'st-peters',
+        text: u(
+          'Christians never forgot the spot. Sixteen centuries of building later, the high altar of St. Peter’s Basilica stands directly above that grave — measured, excavated, and confirmed in the 1940s.',
+          'Các Kitô hữu không bao giờ quên vị trí ấy. Mười sáu thế kỷ xây dựng sau đó, bàn thờ chính của Vương cung thánh đường Thánh Phêrô đứng ngay trên ngôi mộ ấy — được đo đạc, khai quật và xác nhận vào thập niên 1940.',
+        ),
+      },
+      {
+        id: 'c3',
+        art: 'keys-shepherd',
+        text: u(
+          'That is the whole logic of the place: not a palace built for power, but a basilica built over a friendship that failed and was repaired. The Church’s headquarters is a forgiven man’s grave.',
+          'Đó là trọn ý nghĩa của nơi này: không phải cung điện xây cho quyền lực, mà là một vương cung thánh đường xây trên một tình bạn từng đổ vỡ và được hàn gắn. Trung tâm của Giáo hội là ngôi mộ của một người đã được tha thứ.',
+        ),
+      },
+      {
+        id: 'c4',
+        art: 'st-peters',
+        text: u(
+          'Bernini’s colonnade reaches out from the basilica like two arms around the square. The architecture is a doctrine you already know: the Father who runs, holding the whole world in an embrace.',
+          'Hàng cột của Bernini vươn ra từ thánh đường như hai cánh tay ôm lấy quảng trường. Kiến trúc ấy là một giáo lý bạn đã biết: người Cha chạy ra đón, ôm cả thế giới vào lòng.',
+        ),
+      },
+    ],
+    questions: [
+      {
+        id: 'q1',
+        kind: 'choice',
+        afterCard: 2,
+        prompt: u('What lies beneath the high altar of St. Peter’s?', 'Điều gì nằm dưới bàn thờ chính của Đền Thánh Phêrô?'),
+        options: [
+          { text: u('The grave of Peter the fisherman', 'Phần mộ của ngư phủ Phêrô') },
+          { text: u('The treasury of the popes', 'Kho báu của các giáo hoàng') },
+        ],
+        answer: 0,
+        why: u(
+          'A forgiven friend’s grave. Remember that whenever the Church looks too grand: at its center is mercy, in the ground.',
+          'Ngôi mộ của một người bạn đã được tha thứ. Hãy nhớ điều ấy mỗi khi Giáo hội trông quá nguy nga: ở trung tâm của nó là lòng thương xót, nằm trong lòng đất.',
+        ),
+      },
+      {
+        id: 'q2',
+        kind: 'choice',
+        prompt: u('What do Bernini’s colonnades represent?', 'Hàng cột của Bernini tượng trưng điều gì?'),
+        options: [
+          { text: u('Two arms embracing the world', 'Hai cánh tay ôm lấy thế giới') },
+          { text: u('A defensive wall', 'Một bức tường phòng thủ') },
+        ],
+        answer: 0,
+        why: u(
+          'Bernini said it himself: the church receives the world “with open arms.” Stone can preach.',
+          'Chính Bernini đã nói: thánh đường đón thế giới “bằng vòng tay rộng mở.” Đá cũng biết giảng.',
+        ),
+      },
+    ],
+    treasure: {
+      kind: 'art',
+      art: 'st-peters',
+      title: u('St. Peter’s', 'Đền Thánh Phêrô'),
+      note: u(
+        'If you ever stand in the square at dusk, find the lamps coming on under the colonnade. You will recognize the embrace.',
+        'Nếu có ngày bạn đứng giữa quảng trường ấy lúc hoàng hôn, hãy tìm những ngọn đèn đang thắp lên dưới hàng cột. Bạn sẽ nhận ra vòng tay ấy.',
+      ),
+    },
+    reflection: u('What would you say at the fisherman’s grave?', 'Bạn sẽ nói gì bên ngôi mộ người ngư phủ?'),
+    deeper: {
+      ccc: [552, 881],
+      note: u('On Peter, the rock.', 'Về Phêrô, tảng đá.'),
+    },
+  },
+
   // ── 4: The Book of Books ───────────────────────────────────────────────
   {
-    id: 'paris-4',
+    id: 'rome-4',
     title: u('The Book of Books', 'Cuốn sách của mọi cuốn sách'),
     minutes: 5,
     door: {
@@ -335,8 +428,8 @@ export const PARIS_LESSONS: Lesson[] = [
         id: 'c3',
         art: 'bible-open',
         text: u(
-          'At its heart stand the four {{gospel}}s — Matthew, Mark, Luke, John — four portraits of Jesus by four early believers. Every story you met in Bruges lives in them.',
-          'Trái tim của Kinh Thánh là bốn sách {{gospel}} — Mátthêu, Máccô, Luca, Gioan — bốn bức chân dung về Chúa Giêsu của bốn tín hữu thời đầu. Mọi câu chuyện bạn gặp ở Bruges đều sống trong đó.',
+          'At its heart stand the four {{gospel}}s — Matthew, Mark, Luke, John — four portraits of Jesus by four early believers. Every story you met in the Holy Land lives in them.',
+          'Trái tim của Kinh Thánh là bốn sách {{gospel}} — Mátthêu, Máccô, Luca, Gioan — bốn bức chân dung về Chúa Giêsu của bốn tín hữu thời đầu. Mọi câu chuyện bạn gặp ở Đất Thánh đều sống trong đó.',
         ),
         terms: ['gospel'],
       },
@@ -406,14 +499,14 @@ export const PARIS_LESSONS: Lesson[] = [
 
   // ── 5: The Shape of the Mass ───────────────────────────────────────────
   {
-    id: 'paris-5',
+    id: 'rome-5',
     title: u('The Shape of the Mass', 'Hình dáng của Thánh lễ'),
     minutes: 5,
     door: {
       art: 'mass-altar',
       line: u(
-        'The Mass you sat through without understanding — about to become a place you know by heart.',
-        'Thánh lễ bạn từng dự mà không hiểu gì — sắp trở thành một nơi bạn thuộc nằm lòng.',
+        'If you have ever sat through a Mass without understanding — this lesson is for you.',
+        'Nếu bạn từng dự một Thánh lễ mà không hiểu gì — bài học này dành cho bạn.',
       ),
     },
     cards: [
@@ -421,8 +514,8 @@ export const PARIS_LESSONS: Lesson[] = [
         id: 'c1',
         art: 'mass-altar',
         text: u(
-          'Every Mass on earth — Dutch, Vietnamese, French, Latin — has the same shape. Learn the shape once, and no Mass will ever be foreign again.',
-          'Mọi Thánh lễ trên trái đất — tiếng Hà Lan, tiếng Việt, tiếng Pháp, tiếng Latinh — đều có cùng một hình dáng. Học hình dáng ấy một lần, và sẽ không Thánh lễ nào còn xa lạ nữa.',
+          'Every Mass on earth — in any language, ancient or modern — has the same shape. Learn the shape once, and no Mass will ever be foreign again.',
+          'Mọi Thánh lễ trên trái đất — bằng bất cứ ngôn ngữ nào, cổ xưa hay hiện đại — đều có cùng một hình dáng. Học hình dáng ấy một lần, và sẽ không Thánh lễ nào còn xa lạ nữa.',
         ),
       },
       {
@@ -495,7 +588,7 @@ export const PARIS_LESSONS: Lesson[] = [
         'Kho báu hôm nay là cả một trải nghiệm: mở Nhà nguyện → Bước theo Thánh lễ. Dành năm phút yên tĩnh. Thánh lễ thật tiếp theo bạn tham dự sẽ như trở về một nơi quen, chứ không phải lần đầu đặt chân đến.',
       ),
     },
-    reflection: u('What do you remember from the Mass in Dutch — honestly?', 'Bạn còn nhớ gì về Thánh lễ tiếng Hà Lan ấy — thật lòng?'),
+    reflection: u('Have you ever sat through a Mass you did not understand? What do you remember?', 'Bạn từng dự một Thánh lễ mình không hiểu chưa? Bạn còn nhớ gì về lễ ấy?'),
     deeper: {
       ccc: [1346, 1348],
       note: u('On the fundamental structure of the Mass.', 'Về cấu trúc căn bản của Thánh lễ.'),
@@ -504,7 +597,7 @@ export const PARIS_LESSONS: Lesson[] = [
 
   // ── 6: The Bread That Is Him ───────────────────────────────────────────
   {
-    id: 'paris-6',
+    id: 'rome-6',
     title: u('The Bread That Is Him', 'Tấm Bánh là chính Ngài'),
     minutes: 5,
     door: {
@@ -606,14 +699,14 @@ export const PARIS_LESSONS: Lesson[] = [
 
   // ── 7: Why Beauty? ─────────────────────────────────────────────────────
   {
-    id: 'paris-7',
+    id: 'rome-7',
     title: u('Why Beauty?', 'Vì sao là cái đẹp?'),
     minutes: 4,
     door: {
       art: 'organ-pipes',
       line: u(
-        'The organ concert that moved you in Notre-Dame was not a detour from faith. It was a door.',
-        'Buổi hòa nhạc organ làm bạn xúc động ở Nhà thờ Đức Bà không phải một lối rẽ khỏi đức tin. Nó chính là một cánh cửa.',
+        'If beauty has ever stopped you inside a church — that was not a detour from faith. It was a door.',
+        'Nếu cái đẹp từng khiến bạn lặng người trong một nhà thờ — đó không phải lối rẽ khỏi đức tin. Đó chính là một cánh cửa.',
       ),
     },
     cards: [
@@ -621,13 +714,13 @@ export const PARIS_LESSONS: Lesson[] = [
         id: 'c1',
         art: 'organ-pipes',
         text: u(
-          'You sat under the towers of Notre-Dame and let the great organ wash over you, and felt peace you could not explain. You are in enormous company. Beauty has been carrying people to God for as long as there have been people.',
-          'Bạn đã ngồi dưới những ngọn tháp Nhà thờ Đức Bà, để tiếng đại phong cầm tràn qua mình, và cảm thấy một bình an không giải thích nổi. Bạn không hề đơn độc. Cái đẹp đã dẫn con người đến với Thiên Chúa từ thuở có con người.',
+          'Perhaps a great church has stopped you in your tracks once — an organ, a rose window, a silence with weight to it — and you felt a peace you could not explain. You are in enormous company. Beauty has been carrying people to God for as long as there have been people.',
+          'Có lẽ một ngôi nhà thờ lớn từng khiến bạn dừng bước — một cây đại phong cầm, một cửa sổ hoa hồng, một sự thinh lặng có sức nặng — và bạn cảm thấy một bình an không giải thích nổi. Bạn không hề đơn độc. Cái đẹp đã dẫn con người đến với Thiên Chúa từ thuở có con người.',
         ),
       },
       {
         id: 'c2',
-        art: 'notre-dame',
+        art: 'st-peters',
         text: u(
           'The Church builds beautiful things on purpose. A cathedral is a sermon in stone. A rose window is theology in light. Gregorian chant is prayer that learned to float. None of it is decoration — it is all language.',
           'Giáo hội cố ý xây nên những điều đẹp đẽ. Một nhà thờ chính tòa là một bài giảng bằng đá. Một cửa sổ hoa hồng là thần học bằng ánh sáng. Bình ca Grêgôriô là lời cầu nguyện biết bay. Không gì trong đó là trang trí — tất cả đều là ngôn ngữ.',
@@ -637,8 +730,8 @@ export const PARIS_LESSONS: Lesson[] = [
         id: 'c3',
         art: 'organ-pipes',
         text: u(
-          'That is why the Dutch Mass could move you while the words meant nothing. The music, the candles, the incense, the silence — they were speaking the part of the language you already knew.',
-          'Vì thế Thánh lễ tiếng Hà Lan có thể làm bạn xúc động dù không hiểu lời nào. Âm nhạc, ánh nến, làn hương, sự thinh lặng — chúng nói phần ngôn ngữ mà bạn vốn đã hiểu.',
+          'That is why a Mass in a foreign language can move a visitor to tears while the words mean nothing. The music, the candles, the incense, the silence — they speak the part of the language everyone already knows.',
+          'Vì thế một Thánh lễ bằng ngôn ngữ xa lạ vẫn có thể làm người khách xúc động đến rơi nước mắt dù không hiểu lời nào. Âm nhạc, ánh nến, làn hương, sự thinh lặng — chúng nói phần ngôn ngữ mà ai cũng vốn đã hiểu.',
         ),
       },
       {
@@ -689,49 +782,186 @@ export const PARIS_LESSONS: Lesson[] = [
       art: 'organ-pipes',
       title: u('The great organ', 'Đại phong cầm'),
       note: u(
-        'The organ of Notre-Dame has nearly 8,000 pipes and survived the fire of 2019. When it returned at the reopening in 2024, you were among the first generation to hear it again — at your concert.',
-        'Đại phong cầm của Nhà thờ Đức Bà có gần 8.000 ống và đã sống sót qua vụ cháy năm 2019. Khi nó vang lên trở lại trong ngày mở cửa năm 2024, bạn thuộc thế hệ đầu tiên được nghe lại — trong chính buổi hòa nhạc của bạn.',
+        'The great organ of Notre-Dame de Paris has nearly 8,000 pipes and survived the fire of 2019; it sounded again at the reopening in 2024. Cathedrals burn, and the music keeps coming back.',
+        'Đại phong cầm Nhà thờ Đức Bà Paris có gần 8.000 ống và đã sống sót qua vụ cháy năm 2019; nó vang lên trở lại trong ngày mở cửa năm 2024. Những nhà thờ có thể cháy, nhưng âm nhạc luôn quay trở lại.',
       ),
     },
-    reflection: u('Describe the moment in Notre-Dame, in your own words.', 'Hãy tả lại khoảnh khắc ở Nhà thờ Đức Bà, bằng lời của riêng bạn.'),
+    reflection: u('Describe a moment when beauty stopped you, in your own words.', 'Hãy tả lại một khoảnh khắc cái đẹp khiến bạn lặng người, bằng lời của riêng bạn.'),
     deeper: {
       ccc: [1156, 2502],
       note: u('On sacred music and art as ways to God.', 'Về thánh nhạc và nghệ thuật thánh như những nẻo đường đến với Thiên Chúa.'),
     },
   },
 
-  // ── Vigil: The Organ at Notre-Dame ─────────────────────────────────────
+  // ── The Mother and the Marble ────────────────────────────────────────────
   {
-    id: 'paris-vigil',
-    vigil: true,
-    title: u('Vigil: The Organ at Notre-Dame', 'Canh thức: Đại phong cầm Nhà thờ Đức Bà'),
-    minutes: 6,
+    id: 'rome-pieta',
+    title: u('The Mother and the Marble', 'Người Mẹ và khối cẩm thạch'),
+    minutes: 4,
     door: {
-      art: 'notre-dame',
+      art: 'pieta',
       line: u(
-        'No questions tonight. Take your seat under the rose window one more time.',
-        'Tối nay không có câu hỏi. Hãy ngồi xuống dưới cửa sổ hoa hồng một lần nữa.',
+        'Just inside the basilica’s door stands the most tender sculpture ever cut from stone.',
+        'Ngay bên trong cửa thánh đường là bức tượng dịu dàng nhất từng được tạc từ đá.',
       ),
     },
     cards: [
       {
         id: 'c1',
-        art: 'notre-dame',
+        art: 'pieta',
         text: u(
-          'Evening in Paris. The towers of Notre-Dame hold the last light. Inside, the candles are being lit, one by one, like the ones in your chapel.',
-          'Chiều buông trên Paris. Hai ngọn tháp Nhà thờ Đức Bà giữ lại chút nắng cuối ngày. Bên trong, những ngọn nến đang được thắp lên, từng ngọn một, như những ngọn nến trong nhà nguyện của bạn.',
+          'Michelangelo was twenty-four when he carved the Pietà: Mary holding the body of her son, taken down from the cross. Her face is impossibly young, impossibly calm.',
+          'Michelangelo hai mươi bốn tuổi khi tạc tượng Đức Mẹ Sầu Bi: Mẹ Maria ôm thân xác con mình vừa được hạ xuống khỏi thập giá. Gương mặt Mẹ trẻ đến lạ, bình thản đến lạ.',
         ),
       },
       {
         id: 'c2',
-        art: 'organ-pipes',
+        art: 'pieta',
         text: u(
-          'The organ begins — the same thunder and tenderness you heard at your concert. But now you know what the building is for, and the music has words underneath it.',
-          'Tiếng đàn cất lên — vẫn sấm vang và dịu dàng như trong buổi hòa nhạc của bạn. Nhưng giờ bạn đã biết tòa nhà này để làm gì, và bên dưới âm nhạc đã có lời.',
+          'Look at her left hand: open, palm up. Not clenched in protest — offered. The sculpture holds the hardest prayer in the world: the yes of the small room in Nazareth, said again at the foot of the cross.',
+          'Hãy nhìn bàn tay trái của Mẹ: mở ra, ngửa lên. Không nắm chặt phản kháng — mà dâng hiến. Bức tượng giữ lấy lời cầu nguyện khó nhất thế gian: tiếng xin vâng của căn phòng nhỏ ở Nadarét, được thưa lại dưới chân thập giá.',
         ),
       },
       {
         id: 'c3',
+        art: 'creation-light',
+        text: u(
+          'Everything this world teaches about beauty reaches its peak in this building: Michelangelo’s dome above, and nearby his Sistine ceiling, where God’s finger reaches toward Adam’s. Art this great is not decoration for the faith. It is the faith, thinking out loud.',
+          'Mọi điều chặng đường này dạy về cái đẹp đạt tới đỉnh trong tòa nhà này: mái vòm của Michelangelo trên cao, và gần đó là trần Nhà nguyện Sistina, nơi ngón tay Thiên Chúa vươn về phía ngón tay Ađam. Nghệ thuật lớn đến thế không phải trang trí cho đức tin. Nó chính là đức tin, đang suy tư thành hình.',
+        ),
+      },
+    ],
+    questions: [
+      {
+        id: 'q1',
+        kind: 'choice',
+        afterCard: 1,
+        prompt: u('What does Mary’s open hand in the Pietà say?', 'Bàn tay mở của Đức Mẹ trong tượng Sầu Bi nói điều gì?'),
+        options: [
+          { text: u('Her yes, said again in grief', 'Tiếng xin vâng của Mẹ, được thưa lại trong đau thương') },
+          { text: u('That the sculptor ran out of time', 'Rằng nhà điêu khắc hết thời gian') },
+        ],
+        answer: 0,
+        why: u(
+          'From “let it be done to me” to this open palm — one yes, carried a whole lifetime.',
+          'Từ “xin Chúa cứ làm cho tôi” đến bàn tay mở này — một tiếng xin vâng, mang theo trọn một đời.',
+        ),
+      },
+    ],
+    treasure: {
+      kind: 'art',
+      art: 'pieta',
+      title: u('The Pietà', 'Đức Mẹ Sầu Bi'),
+      note: u(
+        'Michelangelo carved his name on no other work — only this one, on the band across her chest. Even he needed the world to know he had touched this.',
+        'Michelangelo không khắc tên mình lên tác phẩm nào khác — chỉ duy bức này, trên dải băng ngang ngực Mẹ. Ngay cả ông cũng cần thế giới biết mình đã chạm vào điều này.',
+      ),
+    },
+    reflection: u('Which sorrow of yours could be held like that?', 'Nỗi đau nào của bạn có thể được ôm lấy như thế?'),
+    deeper: {
+      ccc: [964],
+      note: u('On Mary at the foot of the cross.', 'Về Đức Mẹ dưới chân thập giá.'),
+    },
+  },
+
+  // ── The Bishop Who Hoped ─────────────────────────────────────────────────
+  {
+    id: 'rome-hope',
+    title: u('The Bishop Who Hoped', 'Vị giám mục của hy vọng'),
+    minutes: 4,
+    door: {
+      art: 'candle-single',
+      line: u(
+        'From Sài Gòn to a prison cell to the Vatican: the story of Phanxicô Xaviê Nguyễn Văn Thuận.',
+        'Từ Sài Gòn đến phòng biệt giam đến Vatican: câu chuyện Đức cha Phanxicô Xaviê Nguyễn Văn Thuận.',
+      ),
+    },
+    cards: [
+      {
+        id: 'c1',
+        art: 'prayer-night',
+        text: u(
+          'In 1975, days after being named bishop in Sài Gòn, Nguyễn Văn Thuận was arrested. He spent thirteen years in prison — nine of them in solitary confinement.',
+          'Năm 1975, ít ngày sau khi được bổ nhiệm Tổng giám mục phó Sài Gòn, Đức cha Nguyễn Văn Thuận bị bắt. Ngài trải qua mười ba năm tù — chín năm trong biệt giam.',
+        ),
+      },
+      {
+        id: 'c2',
+        art: 'last-supper',
+        text: u(
+          'In his cell, he celebrated Mass from memory each day with three drops of smuggled wine in the palm of his hand and a crumb of bread. He wrote messages of hope on scraps of paper that were copied and passed across the country.',
+          'Trong phòng giam, mỗi ngày ngài dâng Thánh lễ thuộc lòng với ba giọt rượu lễ giấu được trong lòng bàn tay và một mẩu bánh nhỏ. Ngài viết những dòng hy vọng trên các mảnh giấy vụn, được chép lại và chuyền tay khắp cả nước.',
+        ),
+      },
+      {
+        id: 'c3',
+        art: 'st-peters',
+        text: u(
+          'His guards kept being transferred away — because he kept converting them with kindness. Released and exiled, he was called to Rome, made a cardinal, and asked by the Pope to preach to the Vatican itself. He is now on the road to sainthood.',
+          'Lính canh của ngài cứ phải thuyên chuyển liên tục — vì ngài cứ cảm hóa họ bằng lòng nhân hậu. Được thả và bị trục xuất, ngài được mời về Rôma, được phong hồng y, và được Đức Giáo hoàng mời giảng tĩnh tâm cho chính giáo triều Vatican. Nay ngài đang trên đường được tuyên thánh.',
+        ),
+      },
+      {
+        id: 'c4',
+        art: 'candle-single',
+        text: u(
+          'His secret, he said, was small: “I will not wait. I live the present moment, filling it to the brim with love.” One sentence, from a prison cell, that fits any life.',
+          'Bí quyết của ngài, như ngài nói, rất nhỏ bé: “Tôi sẽ không chờ đợi. Tôi sống phút hiện tại, và làm cho nó đầy tràn yêu thương.” Một câu nói, từ một phòng giam, vừa vặn với bất cứ cuộc đời nào.',
+        ),
+      },
+    ],
+    questions: [
+      {
+        id: 'q1',
+        kind: 'choice',
+        afterCard: 1,
+        prompt: u('How did he celebrate Mass in prison?', 'Ngài dâng Thánh lễ trong tù bằng cách nào?'),
+        options: [
+          { text: u('Three drops of wine in his palm, from memory', 'Ba giọt rượu trong lòng bàn tay, đọc thuộc lòng') },
+          { text: u('He waited until release', 'Ngài đợi đến khi được thả') },
+        ],
+        answer: 0,
+        why: u(
+          'The Eucharist — the source and summit — fits in the palm of a prisoner’s hand. Nothing about the faith requires a cathedral.',
+          'Thánh Thể — nguồn mạch và tột đỉnh — nằm gọn trong lòng bàn tay một tù nhân. Không điều gì của đức tin đòi buộc phải có một nhà thờ lớn.',
+        ),
+      },
+    ],
+    treasure: {
+      kind: 'practice',
+      title: u('The present moment', 'Phút hiện tại'),
+      note: u(
+        'Once today, when you catch yourself waiting — in a queue, for an answer, for life to start — try his sentence: fill this exact moment to the brim with love. It was tested in a harder place than any waiting room.',
+        'Một lần trong hôm nay, khi thấy mình đang chờ đợi — trong hàng chờ, chờ một câu trả lời, chờ cuộc sống bắt đầu — hãy thử câu nói của ngài: làm cho chính phút này đầy tràn yêu thương. Câu ấy đã được thử lửa ở một nơi khắc nghiệt hơn mọi phòng chờ.',
+      ),
+    },
+    reflection: u('What are you waiting for, that he would tell you to stop waiting for?', 'Bạn đang chờ đợi điều gì mà ngài sẽ khuyên bạn đừng chờ nữa?'),
+  },
+
+  // ── Vigil: Evening in the Eternal City ──────────────────────────────────
+  {
+    id: 'rome-vigil',
+    vigil: true,
+    title: u('Vigil: Evening in the Eternal City', 'Canh thức: Chiều tối nơi Thành đô vĩnh hằng'),
+    minutes: 6,
+    door: {
+      art: 'st-peters',
+      line: u(
+        'No questions tonight. Take a seat in the great square as the lamps come on.',
+        'Tối nay không có câu hỏi. Hãy ngồi xuống giữa quảng trường lớn khi những ngọn đèn thắp lên.',
+      ),
+    },
+    cards: [
+      {
+        id: 'c1',
+        art: 'st-peters',
+        text: u(
+          'Evening in Rome. The dome holds the last light, and under Bernini’s colonnade the lamps come on, one by one, like the candles in your chapel.',
+          'Chiều buông trên Rôma. Mái vòm giữ lại chút nắng cuối ngày, và dưới hàng cột Bernini, những ngọn đèn thắp lên từng chiếc một, như những ngọn nến trong nhà nguyện của bạn.',
+        ),
+      },
+      {
+        id: 'c2',
         art: 'pentecost-fire',
         text: u(
           'You have learned where the Church came from: a locked room, a rushing wind, tongues of fire, and three thousand baptisms before sunset.',
@@ -739,15 +969,15 @@ export const PARIS_LESSONS: Lesson[] = [
         ),
       },
       {
-        id: 'c4',
+        id: 'c3',
         art: 'keys-shepherd',
         text: u(
-          'You have met the shepherds — Peter and his successors, your bishop, your Father Matthew — and the library of books the family has carried across three thousand years.',
-          'Bạn đã gặp các mục tử — thánh Phêrô và các đấng kế vị, vị giám mục của bạn, cha Matthew của bạn — và thư viện sách gia đình này đã mang theo suốt ba ngàn năm.',
+          'You have met the shepherds — Peter and his successors, the bishops, your own parish priest — and stood at the fisherman’s grave the whole basilica is built upon.',
+          'Bạn đã gặp các mục tử — thánh Phêrô và các đấng kế vị, các giám mục, và cha xứ của chính bạn — và đứng bên ngôi mộ người ngư phủ mà cả thánh đường được xây lên trên.',
         ),
       },
       {
-        id: 'c5',
+        id: 'c4',
         art: 'mass-altar',
         text: u(
           'You know the shape of the Mass now — gather, listen, eat, go — and the secret at its center: the bread that is him, the reason for the red lamp, the reason for the tears.',
@@ -755,30 +985,30 @@ export const PARIS_LESSONS: Lesson[] = [
         ),
       },
       {
-        id: 'c6',
-        art: 'monstrance',
+        id: 'c5',
+        art: 'pieta',
         text: u(
-          'And you know that your doorway — beauty — was never a lesser entrance. The whole cathedral was built for people who come in through wonder.',
-          'Và bạn biết rằng cánh cửa của bạn — cái đẹp — chưa bao giờ là lối vào hạng hai. Cả nhà thờ chính tòa này được xây cho những ai bước vào bằng sự ngỡ ngàng.',
+          'And you know that beauty — the dome, the Pietà, the music — was never a lesser entrance. The whole city of churches was built for people who come in through wonder.',
+          'Và bạn biết rằng cái đẹp — mái vòm, tượng Sầu Bi, âm nhạc — chưa bao giờ là lối vào hạng hai. Cả thành phố của những nhà thờ này được xây cho những ai bước vào bằng sự ngỡ ngàng.',
         ),
       },
       {
-        id: 'c7',
-        art: 'notre-dame',
+        id: 'c6',
+        art: 'lourdes-grotto',
         text: u(
-          'The third stamp is ready. The road now turns to Brussels — to the sacraments, and above all to the water that is waiting for you.',
-          'Con dấu thứ ba đã sẵn sàng. Con đường giờ hướng về Brussels — về các Bí tích, và trên hết, về dòng nước đang chờ đợi bạn.',
+          'The third stamp is ready. The road now turns to Lourdes — to a grotto, a spring, and the seven doors of grace. Above all, to the water that waits at the font.',
+          'Con dấu thứ ba đã sẵn sàng. Con đường giờ hướng về Lộ Đức — về một hang đá, một dòng suối, và bảy cánh cửa ân sủng. Trên hết, về dòng nước đang đợi nơi giếng Rửa tội.',
         ),
       },
     ],
     questions: [],
     treasure: {
       kind: 'art',
-      art: 'notre-dame',
-      title: u('Notre-Dame de Paris', 'Nhà thờ Đức Bà Paris'),
+      art: 'st-peters',
+      title: u('St. Peter’s at evening', 'Đền Thánh Phêrô lúc chiều tối'),
       note: u(
-        'Begun in 1163, burned in 2019, reopened in 2024 — and your Hà Nội cathedral is her younger sister, built in her image. The two churches at the ends of your map have always been family.',
-        'Khởi công năm 1163, cháy năm 2019, mở cửa lại năm 2024 — và Nhà thờ Lớn Hà Nội của bạn là người em gái, được xây theo hình ảnh của ngôi nhà thờ này. Hai ngôi nhà thờ ở hai đầu tấm bản đồ của bạn vốn luôn là người một nhà.',
+        'The dome was Michelangelo’s last great work; he refused payment for it, calling it his gift to God. The skyline of Rome is, in part, an old man’s thank-you.',
+        'Mái vòm là công trình vĩ đại cuối cùng của Michelangelo; ông từ chối nhận thù lao, gọi đó là món quà ông dâng Thiên Chúa. Đường chân trời của Rôma, một phần, là lời tạ ơn của một ông lão.',
       ),
     },
     reflection: u('You came in through beauty. Where has the road brought you so far?', 'Bạn đã bước vào bằng cái đẹp. Đến giờ, con đường đã đưa bạn tới đâu?'),

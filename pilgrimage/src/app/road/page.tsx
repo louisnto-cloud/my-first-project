@@ -74,15 +74,7 @@ function RoadContent() {
                     {t(w.name)}
                   </span>
                   <span className="block text-xs text-incense">
-                    {unlocked
-                      ? t(w.theme)
-                      : w.id === 'asia'
-                        ? t(UI.bonusLocked)
-                        : w.id === 'holyland'
-                          ? t(UI.bonusLockedBruges)
-                          : w.id === 'vatican'
-                            ? t(UI.bonusLockedParis)
-                            : t(UI.bonusPreparing)}
+                    {unlocked ? t(w.theme) : t(UI.bonusLocked)}
                   </span>
                 </span>
                 <span className={unlocked ? 'text-gold' : 'text-incense/50'}>{unlocked ? '✦' : '·'}</span>
