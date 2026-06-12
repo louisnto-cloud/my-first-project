@@ -24,9 +24,15 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm ci
-      - run: npm run build
-      # The Pilgrimage lives alongside the E'TOP app, under /pilgrimage.
+
+      # The E'TOP app (repo root) — built for main deploys.
+      - name: Build E'TOP
+        if: github.ref == 'refs/heads/main' || hashFiles('pilgrimage/package.json') == ''
+        run: |
+          npm ci
+          npm run build
+
+      # The Pilgrimage (pilgrimage/) — served under /pilgrimage.
       - name: Build The Pilgrimage
         if: hashFiles('pilgrimage/package.json') != ''
         working-directory: pilgrimage
@@ -35,12 +41,30 @@ jobs:
         run: |
           npm ci
           npm run build
-          mkdir -p ../dist/pilgrimage
-          cp -r out/. ../dist/pilgrimage/
-      # Publishing to the gh-pages branch auto-enables GitHub Pages,
-      # which the github-pages deployment API is not allowed to do
+
+      # On main: publish the whole site (E'TOP at the root, Pilgrimage under
+      # /pilgrimage). Publishing to the gh-pages branch auto-enables GitHub
+      # Pages, which the github-pages deployment API is not allowed to do
       # with the default workflow token.
-      - uses: peaceiris/actions-gh-pages@v4
+      - name: Assemble full site (main)
+        if: github.ref == 'refs/heads/main' && hashFiles('pilgrimage/package.json') != ''
+        run: |
+          mkdir -p dist/pilgrimage
+          cp -r pilgrimage/out/. dist/pilgrimage/
+      - name: Publish full site
+        if: github.ref == 'refs/heads/main' || hashFiles('pilgrimage/package.json') == ''
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+
+      # On the pilgrimage feature branch: overlay only /pilgrimage, leaving
+      # whatever is deployed at the site root untouched.
+      - name: Publish /pilgrimage only (feature branch)
+        if: github.ref != 'refs/heads/main' && hashFiles('pilgrimage/package.json') != ''
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./pilgrimage/out
+          destination_dir: pilgrimage
+          keep_files: true
