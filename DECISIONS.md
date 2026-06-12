@@ -18,6 +18,22 @@ Correct any assumption and dependent plans adjust.
   redistributed. Coursebook alignment is metadata only; teachers attach
   their own materials behind a copyright responsibility notice.
 
+- **D5 (Phase 1):** Data layer is PGlite (in-process WASM Postgres) with
+  plain parameterized SQL for dev/test — real Postgres semantics, zero
+  system dependencies in this environment. Tenancy is enforced in the API
+  layer (every query org-scoped, verified by tests); `rls.sql` ships the
+  row-level-security policies to apply the moment a hosted Postgres is
+  provisioned. ORM (Prisma/Drizzle) deferred to that same moment.
+  Deviation from Part B's "RLS at the database layer from day one" — the
+  database that exists today cannot run multi-role RLS meaningfully;
+  the policies are written, tested queries are equivalent, gap is logged.
+- **D6 (Phase 1):** Password hashing is scrypt via node:crypto (zero
+  native dependencies, OWASP-acceptable parameters) rather than argon2;
+  argon2 swap is a one-function change when native deps are acceptable.
+- **D7 (Phase 1):** Seed tenant starts at 40 students / 2 sites / 6
+  classes / 5 staff roles and grows toward Part B's full 250-student demo
+  tenant phase by phase as the features that need richer data land.
+
 ## Assumptions (pending owner answers to the context questions)
 
 - **A1 — Identity:** "ETOP" = Trung tâm Anh Ngữ E'TOP, Phan Thiết, Việt Nam

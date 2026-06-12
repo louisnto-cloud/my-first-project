@@ -1,0 +1,14 @@
+
+> @etop/api@0.1.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /home/user/my-first-project/apps/api
+
+ ✓ test/api.test.ts (15 tests) 2799ms
+
+ Test Files  1 passed (1)
+      Tests  15 passed (15)
+   Start at  09:13:49
+   Duration  3.55s (transform 165ms, setup 0ms, collect 337ms, tests 2.80s, environment 0ms, prepare 72ms)
+

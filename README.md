@@ -27,13 +27,22 @@ The app is a PWA. Open the live link in the phone's browser, then:
 It appears with the E’TOP icon and opens full-screen like a native app, and
 the app shell works offline after the first visit.
 
+## Repository structure (monorepo)
+
+This repo is now a Turborepo monorepo (see `ARCHITECTURE.md`, `PLAN.md`,
+`DECISIONS.md` for the platform rebuild in progress):
+
+- `apps/web-prototype` — the demo app described below (deployed to Pages)
+- `apps/api` — the real multi-tenant backend (Fastify + Postgres/PGlite)
+- `packages/domain` — shared RBAC policies, schemas, taxonomy
+
 ## Run it
 
 ```bash
 npm install
-npm run dev      # development server
-npm run build    # production build (also type-checks)
-npx tsx scripts/smoke.ts   # sanity-check the seeded demo data
+npx turbo run build test   # typecheck, build, and test everything
+npm run dev:proto          # the demo app on :5173
+npm run dev:api            # the API on :3001 (auto-seeds demo tenant)
 ```
 
 ## Demo accounts (password: `etop123`)

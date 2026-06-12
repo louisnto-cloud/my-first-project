@@ -24,11 +24,11 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npm run build
+      - run: npx turbo run build test
       # Publishing to the gh-pages branch auto-enables GitHub Pages,
       # which the github-pages deployment API is not allowed to do
       # with the default workflow token.
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./apps/web-prototype/dist

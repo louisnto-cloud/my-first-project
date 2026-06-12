@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      # Typecheck + build every workspace, then run all test suites.
+      # Merges are blocked on this job: safety and permission logic
+      # does not ship without green tests.
+      - run: npx turbo run build test
