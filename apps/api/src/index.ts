@@ -12,6 +12,6 @@ if (!(await isSeeded(db))) {
   await seedReal(db);
 }
 
-const app = await buildServer(db);
+const app = await buildServer(db, { logger: true });
 await app.listen({ port: PORT, host: '0.0.0.0' });
-console.log(`ETOP API listening on :${PORT}`);
+console.log(`ETOP API listening on :${PORT}${process.env.DATABASE_URL ? ' (hosted Postgres)' : ' (embedded PGlite)'}`);

@@ -30,10 +30,52 @@ async function requireActor(req: FastifyRequest, reply: FastifyReply): Promise<A
   return req.actor;
 }
 
-export async function buildServer(db: DB): Promise<FastifyInstance> {
-  const app = Fastify({ logger: false });
+export interface ServerOptions {
+  logger?: boolean;
+  /** Auth endpoint rate limit (brute-force protection, D25/D27). */
+  authLimit?: { max: number; windowMs: number };
+  corsOrigin?: string;
+}
+
+export async function buildServer(db: DB, opts: ServerOptions = {}): Promise<FastifyInstance> {
+  const app = Fastify({
+    logger: opts.logger
+      ? { redact: ['req.headers.authorization', '*.password', '*.pin', '*.code'] }
+      : false,
+  });
 
   app.decorateRequest('actor', null);
+
+  // Brute-force protection on /auth/*: fixed window per client IP.
+  const authLimit = opts.authLimit ?? { max: 50, windowMs: 5 * 60_000 };
+  const hits = new Map<string, { count: number; resetAt: number }>();
+  app.addHook('onRequest', async (req, reply) => {
+    if (!req.url.startsWith('/auth/')) return;
+    const now = Date.now();
+    const entry = hits.get(req.ip);
+    if (!entry || entry.resetAt < now) {
+      hits.set(req.ip, { count: 1, resetAt: now + authLimit.windowMs });
+      return;
+    }
+    entry.count++;
+    if (entry.count > authLimit.max) {
+      await reply.code(429).send({ error: 'too_many_attempts' });
+    }
+  });
+
+  // Security headers + CORS on every response.
+  const corsOrigin = opts.corsOrigin ?? process.env.ETOP_WEB_ORIGIN ?? '*';
+  app.addHook('onSend', async (req, reply) => {
+    reply.header('x-content-type-options', 'nosniff');
+    reply.header('x-frame-options', 'DENY');
+    reply.header('referrer-policy', 'no-referrer');
+    reply.header('strict-transport-security', 'max-age=31536000; includeSubDomains');
+    reply.header('cache-control', 'no-store');
+    reply.header('access-control-allow-origin', corsOrigin);
+    reply.header('access-control-allow-headers', 'authorization, content-type');
+    reply.header('access-control-allow-methods', 'GET, POST, PATCH, OPTIONS');
+  });
+  app.options('/*', async (_req, reply) => reply.code(204).send());
 
   app.addHook('preHandler', async (req) => {
     const header = req.headers.authorization;
@@ -42,7 +84,11 @@ export async function buildServer(db: DB): Promise<FastifyInstance> {
     }
   });
 
-  app.get('/health', async () => ({ ok: true }));
+  app.get('/health', async (_req, reply) => {
+    const dbOk = await db.ping();
+    if (!dbOk) return reply.code(503).send({ ok: false, db: false });
+    return { ok: true, db: true, uptimeSec: Math.round(process.uptime()) };
+  });
 
   registerSafetyRoutes(app, db);
   registerLearningRoutes(app, db);

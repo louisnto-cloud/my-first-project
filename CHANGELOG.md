@@ -1,5 +1,24 @@
 # CHANGELOG.md
 
+## Phase 7 — Hardening (at gate)
+
+- Auth brute-force protection: per-IP rate limiting on /auth/* (50/5min,
+  configurable), proven by tests (429 after the limit, per-client not
+  global) — closes the D25 mitigation.
+- Security headers on every response (HSTS, nosniff, frame-deny,
+  no-referrer, no-store) + configurable CORS with preflight handling.
+- Hosted-database support: db layer now speaks PGlite (dev/test) or
+  node-postgres when DATABASE_URL is set; idempotent schema bootstrap on
+  both; `/health` checks the database and reports uptime (503 on loss).
+- Production logging: structured fastify logs with redaction of
+  authorization headers, passwords, PINs, and login codes.
+- Load smoke recorded (50 concurrent: health p95 131 ms, authed reads
+  p95 201 ms) — see RUNBOOK.md.
+- SECURITY.md (posture for a future SOC 2/licensing review), RUNBOOK.md
+  (operations, cron schedule, incident quick reference), render.yaml
+  (one-click Blueprint: API + Postgres + static portal).
+- 5 new tests (103 total green).
+
 ## Owner-requested changes (post-Phase-6)
 
 - Code login: students sign in with mã số học viên (HV####) and teachers

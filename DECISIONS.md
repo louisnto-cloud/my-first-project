@@ -100,6 +100,14 @@ Correct any assumption and dependent plans adjust.
   failures, and rate limiting in Phase 7. Accepted as the right
   usability/security trade-off for a children's English center.
 
+- **D26 (Phase 7):** The node-postgres driver path is code-complete and
+  type-checked but will first run against a real Postgres when the owner
+  provisions hosting; PGlite covers all automated tests. Logged honestly
+  rather than claimed as verified.
+- **D27 (Phase 7):** Auth rate limit defaults 50 attempts / 5 min per
+  IP, in-memory (single node). Moves to a shared store if the API ever
+  scales horizontally.
+
 ## Assumptions (pending owner answers to the context questions)
 
 - **A1 — Identity:** "ETOP" = Trung tâm Anh Ngữ E'TOP, Phan Thiết, Việt Nam
