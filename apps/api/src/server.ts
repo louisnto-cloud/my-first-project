@@ -5,6 +5,7 @@ import { actorFromToken, issueToken, verifyPassword, type ActorRow } from './aut
 import { audit } from './audit.js';
 import { registerSafetyRoutes } from './routes-safety.js';
 import { registerLearningRoutes } from './routes-learning.js';
+import { registerExperienceRoutes } from './routes-experience.js';
 
 declare module 'fastify' {
   interface FastifyRequest {
@@ -43,6 +44,7 @@ export async function buildServer(db: DB): Promise<FastifyInstance> {
 
   registerSafetyRoutes(app, db);
   registerLearningRoutes(app, db);
+  registerExperienceRoutes(app, db);
 
   app.post('/auth/login', async (req, reply) => {
     const parsed = loginSchema.safeParse(req.body);

@@ -1,6 +1,29 @@
 # CHANGELOG.md
 
-## Phase 3 — Learning engine + Part C module (at gate)
+## Phase 4 — Parent & student experience (at gate)
+
+- New portal app (`apps/web`) on the real API, role-routed: student,
+  parent, teacher, and kiosk views, bilingual VI/EN.
+- Student portal: achievements bar (server-computed points/streak/badges
+  from practice events), class list, join-by-code, and the assignment
+  player implementing all 8 Part C question types with continuous
+  autosave, audio with replay limits, and instant/after-review results.
+- Parent portal: child switcher, live daily digest (check-in status,
+  tutor parent-notes, new assignments, grades, practice), approved
+  weekly summaries, and two-way messaging with the class teacher.
+- Teacher portal: grading queue with 3-tap rubric + comment, weekly
+  summary approval queue.
+- Offline-first kiosk screen (per D11): big-touch-target roster,
+  optimistic check-in/dismissal, localStorage event queue with
+  client-generated IDs, auto-sync via /kiosk/sync on reconnect,
+  open-escalation banner.
+- Backend: practice events + achievements, parent daily digest, weekly
+  summary generation (plain-language VI+EN from structured session data)
+  with tutor one-tap approval and guardian notification, messaging
+  threads with director read-only oversight.
+- 12 new tests (60 total green).
+
+## Phase 3 — Learning engine + Part C module (shipped)
 
 - Skills taxonomy knowledge graph: subject → strand → skill with
   prerequisite edges; seeded 16 skills across 4 CEFR levels.

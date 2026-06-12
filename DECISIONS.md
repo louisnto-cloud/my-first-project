@@ -66,6 +66,20 @@ Correct any assumption and dependent plans adjust.
   each) convert to the manual-question score as sum/6 of the points —
   one decision a teacher makes in three taps.
 
+- **D17 (Phase 4):** The portal uses state-based routing and a compact
+  VI/EN dictionary — smallest thing that ships the experience; a router
+  and full i18n library land with the design-system pass in Phase 7.
+- **D18 (Phase 4):** Student-to-anyone messaging is deliberately absent
+  (Part B requires moderated channels for minors); students have no
+  messaging surface yet.
+- **D19 (Phase 4):** The 38-lesson prototype curriculum stays in the
+  prototype for now; the portal's practice/achievements API is live and
+  the curriculum moves into a shared package wired to it as the next
+  experience increment.
+- **D20 (Phase 4):** Kiosk dismissal v1 uses the logged-ID-check path
+  (released-to name recorded); the PIN-verified pickup-person flow is
+  fully supported by the API and ships in the kiosk UI next pass.
+
 ## Assumptions (pending owner answers to the context questions)
 
 - **A1 — Identity:** "ETOP" = Trung tâm Anh Ngữ E'TOP, Phan Thiết, Việt Nam

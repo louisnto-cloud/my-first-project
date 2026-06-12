@@ -330,6 +330,62 @@ CREATE INDEX IF NOT EXISTS idx_assignments_class ON assignments(class_id, status
 CREATE INDEX IF NOT EXISTS idx_submissions_student ON submissions(student_id);
 CREATE INDEX IF NOT EXISTS idx_submissions_grading ON submissions(org_id, status);
 
+-- ---------- Phase 4: Parent & student experience ----------
+
+-- Effort-based practice events (lessons, vocab, quizzes) → achievements.
+CREATE TABLE IF NOT EXISTS practice_events (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  student_id TEXT NOT NULL REFERENCES users(id),
+  kind TEXT NOT NULL,           -- lesson | vocab | quiz | homework
+  points INT NOT NULL,
+  detail JSONB,
+  occurred_on DATE NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+-- Weekly learning summaries: generated from structured session data,
+-- reviewed and one-tap approved by the tutor before parents see them.
+CREATE TABLE IF NOT EXISTS weekly_summaries (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  student_id TEXT NOT NULL REFERENCES users(id),
+  class_id TEXT NOT NULL REFERENCES classes(id),
+  week_start DATE NOT NULL,
+  body_en TEXT NOT NULL,
+  body_vi TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'draft', -- draft | approved
+  created_by TEXT NOT NULL,
+  approved_by TEXT,
+  approved_at TIMESTAMPTZ,
+  UNIQUE (student_id, class_id, week_start)
+);
+
+-- Two-way messaging: one thread per (student, guardian, teacher), with
+-- director oversight. Students message only via moderated channels —
+-- not in scope yet (DECISIONS.md D18).
+CREATE TABLE IF NOT EXISTS threads (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  student_id TEXT NOT NULL REFERENCES users(id),
+  guardian_id TEXT NOT NULL REFERENCES users(id),
+  teacher_id TEXT NOT NULL REFERENCES users(id),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  UNIQUE (student_id, guardian_id, teacher_id)
+);
+
+CREATE TABLE IF NOT EXISTS messages (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  thread_id TEXT NOT NULL REFERENCES threads(id),
+  sender_id TEXT NOT NULL REFERENCES users(id),
+  body TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS idx_practice_student ON practice_events(student_id, occurred_on);
+CREATE INDEX IF NOT EXISTS idx_messages_thread ON messages(thread_id, created_at);
+
 CREATE INDEX IF NOT EXISTS idx_users_org ON users(org_id);
 CREATE INDEX IF NOT EXISTS idx_classes_org ON classes(org_id);
 CREATE INDEX IF NOT EXISTS idx_enroll_student ON enrollments(student_id);
