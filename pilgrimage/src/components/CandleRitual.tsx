@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import type { L } from '@/content/types';
+import { playBell } from '@/lib/sound';
 
 export function CandleRitual({
   reflectionPrompt,
@@ -26,6 +27,7 @@ export function CandleRitual({
 
   const light = () => {
     setLit(true);
+    playBell();
     onLit(text.trim());
   };
 

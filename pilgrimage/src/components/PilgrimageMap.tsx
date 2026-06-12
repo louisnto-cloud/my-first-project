@@ -6,7 +6,7 @@
 // the line from Hanoi toward the baptismal font.
 
 import type { WorldId } from '@/content/types';
-import { WORLDS } from '@/content/worlds';
+import { MAIN_WORLDS } from '@/content/worlds';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { isWorldUnlocked, worldProgress } from '@/lib/progress';
@@ -94,11 +94,11 @@ export function PilgrimageMap({ onSelect }: { onSelect: (id: WorldId) => void })
   // Pilgrim position: between the last stamped stop and the current one.
   const currentIdx = Math.max(
     0,
-    WORLDS.findIndex((w) => !w.lessons.every((l) => save.completed[l.id]) || w.lessons.length === 0),
+    MAIN_WORLDS.findIndex((w) => !w.lessons.every((l) => save.completed[l.id]) || w.lessons.length === 0),
   );
   const cur = STOPS[Math.min(currentIdx, STOPS.length - 1)];
   const prev = STOPS[Math.max(0, Math.min(currentIdx, STOPS.length - 1) - 1)];
-  const world = WORLDS[Math.min(currentIdx, WORLDS.length - 1)];
+  const world = MAIN_WORLDS[Math.min(currentIdx, MAIN_WORLDS.length - 1)];
   const prog = worldProgress(world, save);
   const f = prog.total > 0 ? prog.done / prog.total : 0;
   const pilgrim =
@@ -142,7 +142,7 @@ export function PilgrimageMap({ onSelect }: { onSelect: (id: WorldId) => void })
       />
 
       {STOPS.map((stop, i) => {
-        const w = WORLDS[i];
+        const w = MAIN_WORLDS[i];
         const unlocked = isWorldUnlocked(w, save);
         const stamped = !!save.stamps[w.id];
         const p = worldProgress(w, save);

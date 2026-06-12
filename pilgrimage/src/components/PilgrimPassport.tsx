@@ -6,24 +6,30 @@
 // illuminated manuscript seal. The final page is reserved, faintly embossed,
 // for the day of her baptism.
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { World, WorldId } from '@/content/types';
-import { WORLDS } from '@/content/worlds';
+import { MAIN_WORLDS } from '@/content/worlds';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
-import { stepsWalked, worldProgress } from '@/lib/progress';
+import { worldProgress } from '@/lib/progress';
+import { playThunk } from '@/lib/sound';
 
-const STAMP_COLORS: Record<WorldId, string> = {
-  hanoi: '#D9A441',
+const STAMP_COLORS: Partial<Record<WorldId, string>> = {
   bruges: '#7A1F2B',
-  paris: '#D9A441',
-  brussels: '#D9A441',
-  parish: '#D9A441',
 };
+const stampColor = (id: WorldId) => STAMP_COLORS[id] ?? '#D9A441';
 
 function Stamp({ world, date, animate }: { world: World; date: string; animate: boolean }) {
   const { t, lang } = useI18n();
-  const color = STAMP_COLORS[world.id];
+  const color = stampColor(world.id);
+
+  // The thunk: once, as the stamp presses, only when sound is on.
+  useEffect(() => {
+    if (animate) {
+      const timer = setTimeout(playThunk, 450);
+      return () => clearTimeout(timer);
+    }
+  }, [animate]);
   const churchLine = t(world.church).toUpperCase();
   const dateStr = new Date(date + 'T12:00:00').toLocaleDateString(lang === 'vi' ? 'vi-VN' : 'en-GB', {
     day: 'numeric',
@@ -81,9 +87,9 @@ export function PilgrimPassport({
   stampJustEarned?: WorldId | null;
 }) {
   const { t, save } = useI18n();
-  const pages: (World | 'final')[] = [...WORLDS, 'final'];
+  const pages: (World | 'final')[] = [...MAIN_WORLDS, 'final'];
   const [page, setPage] = useState(() =>
-    stampJustEarned ? Math.max(0, WORLDS.findIndex((w) => w.id === stampJustEarned)) : 0,
+    stampJustEarned ? Math.max(0, MAIN_WORLDS.findIndex((w) => w.id === stampJustEarned)) : 0,
   );
 
   const current = pages[page];

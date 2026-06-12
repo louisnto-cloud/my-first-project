@@ -29,6 +29,8 @@ export interface SaveDoc {
   sound: boolean;
   /** ISO date the Daily Reliquary was last opened. */
   reliquary: string;
+  /** OCIA milestone dates: milestoneId -> yyyy-mm-dd. */
+  ocia: Record<string, string>;
 }
 
 const KEY = 'pilgrimage.v1';
@@ -46,6 +48,7 @@ const fresh = (): SaveDoc => ({
   seen: {},
   sound: false,
   reliquary: '',
+  ocia: {},
 });
 
 let cache: SaveDoc | null = null;

@@ -182,6 +182,39 @@ export const GLOSSARY: GlossaryEntry[] = [
     viStatus: 'verified',
   },
   {
+    id: 'sacrament',
+    term: 'sacrament',
+    plain: {
+      en: 'A visible sign — water, oil, bread, words, rings — through which God truly gives invisible grace.',
+      vi: 'Một dấu chỉ hữu hình — nước, dầu, bánh, lời đọc, nhẫn cưới — qua đó Thiên Chúa thật sự ban Ơn Chúa vô hình.',
+      viStatus: 'unverified',
+    },
+    vi: 'Bí tích',
+    viStatus: 'verified',
+  },
+  {
+    id: 'purgatory',
+    term: 'purgatory',
+    plain: {
+      en: 'A final, loving purification for those who die in God’s friendship but still need to be made ready for heaven — which is why we pray for our dead.',
+      vi: 'Sự thanh luyện cuối cùng, đầy yêu thương, cho những ai qua đời trong tình nghĩa với Chúa nhưng còn cần được chuẩn bị cho Thiên đàng — vì thế chúng ta cầu nguyện cho người đã khuất.',
+      viStatus: 'unverified',
+    },
+    vi: 'luyện ngục',
+    viStatus: 'verified',
+  },
+  {
+    id: 'godparent',
+    term: 'godparent',
+    plain: {
+      en: 'A companion chosen for your baptism who promises to help your faith grow — family by grace rather than blood.',
+      vi: 'Người đồng hành được chọn cho ngày Rửa tội, hứa giúp đức tin của bạn lớn lên — người thân bởi ân sủng chứ không bởi máu mủ.',
+      viStatus: 'unverified',
+    },
+    vi: 'người đỡ đầu (vú/bõ đỡ đầu)',
+    viStatus: 'verified',
+  },
+  {
     id: 'catholic',
     term: 'catholic',
     plain: {

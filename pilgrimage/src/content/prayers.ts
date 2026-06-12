@@ -177,4 +177,33 @@ PRAYERS.push(
   },
 );
 
+PRAYERS.push({
+  id: 'act-of-contrition',
+  name: { en: 'An Act of Contrition', vi: 'Kinh Ăn Năn Tội', viStatus: 'verified' },
+  en: [
+    'My God, I am sorry for my sins with all my heart.',
+    'In choosing to do wrong and failing to do good,',
+    'I have sinned against you, whom I should love above all things.',
+    'I firmly intend, with your help, to do penance,',
+    'to sin no more, and to avoid whatever leads me to sin.',
+    'Our Savior Jesus Christ suffered and died for us.',
+    'In his name, my God, have mercy.',
+    'Amen.',
+  ],
+  vi: [
+    'Lạy Chúa con, Chúa là Đấng trọn tốt trọn lành vô cùng.',
+    'Chúa đã dựng nên con, và cho Con Chúa ra đời chịu nạn chịu chết vì con,',
+    'mà con đã cả lòng phản nghịch lỗi nghĩa cùng Chúa,',
+    'thì con lo buồn đau đớn, cùng chê ghét mọi tội con trên hết mọi sự;',
+    'con dốc lòng chừa cải, và nhờ ơn Chúa thì con sẽ lánh xa dịp tội,',
+    'cùng làm việc đền tội cho xứng. Amen.',
+  ],
+  viStatus: 'unverified',
+  about: {
+    en: 'The prayer said at the end of confession. In plain words: I am sorry, I want to change, and I am asking for help. That is the whole of it.',
+    vi: 'Lời kinh đọc cuối tòa giải tội. Nói đơn giản: con xin lỗi, con muốn đổi thay, và con xin Chúa giúp. Trọn vẹn chỉ có vậy.',
+    viStatus: 'unverified',
+  },
+});
+
 export const prayerById = (id: string) => PRAYERS.find((p) => p.id === id);

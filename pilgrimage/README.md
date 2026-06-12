@@ -14,7 +14,26 @@ npm run dev      # development server
 npm run build    # static export to out/ (PWA, works fully offline)
 ```
 
-## What's in Phase 1 (this build)
+## What's inside (Phases 1–4 complete)
+
+- **Five worlds, 50 lessons, fully bilingual:** Hà Nội (who God is), Bruges
+  (the whole Jesus arc incl. Holy Week), Paris (the Church and the Mass),
+  Brussels (the seven sacraments, baptism front and center), her parish
+  (the moral life, the liturgical year, the saints, hope, and her OCIA road)
+  — plus a bonus "Saints of Asia" world (the 117 Martyrs, Our Lady of
+  La Vang, St. Anê Lê Thị Thành), unlocked with the first stamp.
+- **The crown jewels:** Walk through the Mass (every moment, every response,
+  every posture, EN/VI) and the Rosary trainer (bead by bead, the Joyful
+  Mysteries) — both in My Chapel.
+- **Seven prayers** with traditional Vietnamese texts: Sign of the Cross,
+  Our Father, Hail Mary, Glory Be, Apostles' Creed, Hail Holy Queen, Act of
+  Contrition.
+- **OCIA milestone tracker** with date entry and gentle countdowns;
+  **liturgical season banner** computed from today's date; **Rose Window**
+  achievements; **Daily Reliquary**; synthesized **sound layer** (bell +
+  stamp thunk, off by default).
+
+## Phase 1 details (the spine)
 
 - **Three destinations, ever:** Today (one step, one button), The Road (the
   illuminated atlas map + Pilgrim's Passport), My Chapel (candles, prayers,

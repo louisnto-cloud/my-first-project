@@ -6,7 +6,7 @@ import { Suspense, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import type { WorldId } from '@/content/types';
-import { worldById } from '@/content/worlds';
+import { BONUS_WORLDS, worldById } from '@/content/worlds';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { isWorldUnlocked } from '@/lib/progress';
@@ -54,6 +54,39 @@ function RoadContent() {
       <div className="mt-4">
         <PilgrimageMap onSelect={setSelected} />
       </div>
+
+      {/* Bonus roads, off the main pilgrimage */}
+      <section className="mt-5">
+        <h2 className="font-display text-xs uppercase tracking-[0.3em] text-incense">{t(UI.bonusRoads)}</h2>
+        <div className="mt-2 flex flex-col gap-2 pb-4">
+          {BONUS_WORLDS.map((w) => {
+            const unlocked = isWorldUnlocked(w, save);
+            return (
+              <button
+                key={w.id}
+                onClick={() => setSelected(w.id)}
+                className={`flex min-h-[56px] items-center justify-between rounded-2xl border px-4 py-3 text-left ${
+                  unlocked ? 'border-gold/40' : 'border-ivory/10'
+                }`}
+              >
+                <span>
+                  <span className={`block font-display text-sm ${unlocked ? 'text-ivory' : 'text-incense'}`}>
+                    {t(w.name)}
+                  </span>
+                  <span className="block text-xs text-incense">
+                    {unlocked
+                      ? t(w.theme)
+                      : w.id === 'asia'
+                        ? t(UI.bonusLocked)
+                        : t(UI.bonusPreparing)}
+                  </span>
+                </span>
+                <span className={unlocked ? 'text-gold' : 'text-incense/50'}>{unlocked ? '✦' : '·'}</span>
+              </button>
+            );
+          })}
+        </div>
+      </section>
 
       {/* World sheet */}
       {world && (

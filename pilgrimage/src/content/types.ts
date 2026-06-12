@@ -62,7 +62,19 @@ export type ArtKind =
   | 'organ-pipes'
   | 'visitation'
   | 'presentation-temple'
-  | 'finding-temple';
+  | 'finding-temple'
+  // Worlds 4–5 and bonus
+  | 'brussels-cathedral'
+  | 'font-water'
+  | 'white-garment'
+  | 'confession-light'
+  | 'oil-hands'
+  | 'wedding-rings'
+  | 'parish-home'
+  | 'commandments-tablets'
+  | 'liturgical-wheel'
+  | 'heaven-light'
+  | 'asia-lanterns';
 
 export interface Scripture {
   /** Book chapter:verse, e.g. "John 8:12" */
@@ -185,7 +197,16 @@ export interface Lesson {
   vigil?: boolean;
 }
 
-export type WorldId = 'hanoi' | 'bruges' | 'paris' | 'brussels' | 'parish';
+export type WorldId =
+  | 'hanoi'
+  | 'bruges'
+  | 'paris'
+  | 'brussels'
+  | 'parish'
+  // bonus worlds, unlocked off the main road
+  | 'asia'
+  | 'vatican'
+  | 'holyland';
 
 export interface World {
   id: WorldId;

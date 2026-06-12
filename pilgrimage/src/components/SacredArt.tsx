@@ -1062,6 +1062,277 @@ function Scene({ kind }: { kind: ArtKind }) {
         </>
       );
 
+    case 'brussels-cathedral':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          <Stars seed={41} n={14} />
+          {/* the twin flat-topped gothic towers of St. Michael and St. Gudula */}
+          <g fill="#141b33">
+            <rect x="118" y="70" width="60" height="200" />
+            <rect x="222" y="70" width="60" height="200" />
+            <rect x="170" y="150" width="60" height="120" />
+            <rect x="112" y="62" width="72" height="10" />
+            <rect x="216" y="62" width="72" height="10" />
+          </g>
+          <g fill={GOLD} opacity="0.85">
+            {[130, 154, 234, 258].map((x) => (
+              <path key={x} d={`M${x} 96a6 10 0 0 1 12 0v22h-12z`} />
+            ))}
+            {[130, 154, 234, 258].map((x) => (
+              <path key={`b${x}`} d={`M${x} 160a6 10 0 0 1 12 0v22h-12z`} />
+            ))}
+            <path d="M186 196a14 18 0 0 1 28 0v40h-28z" />
+          </g>
+          {/* the great central window */}
+          <path d="M182 110a18 26 0 0 1 36 0v30h-36z" fill={LAPIS} stroke={GOLD} strokeWidth="2" opacity="0.9" />
+          {/* the long stair up to the doors */}
+          <g stroke={INCENSE} strokeWidth="2" opacity="0.5">
+            {[272, 278, 284].map((y) => (
+              <line key={y} x1={150 - (y - 272) * 6} y1={y} x2={250 + (y - 272) * 6} y2={y} />
+            ))}
+          </g>
+          <rect x="0" y="288" width="400" height="12" fill="#10162b" />
+        </>
+      );
+
+    case 'font-water':
+      return (
+        <>
+          <rect width="400" height="300" fill="#10162b" />
+          <circle cx="200" cy="120" r="96" fill={GOLD} opacity="0.08" />
+          {/* the octagonal font — eight sides, the shape of the eighth day */}
+          <path d="M140 150l18-26h84l18 26v14h-120z" fill="#22305c" stroke={GOLD} strokeWidth="2" />
+          <path d="M156 124h88" stroke={GOLD} strokeWidth="1.5" opacity="0.5" />
+          <ellipse cx="200" cy="124" rx="44" ry="9" fill={LAPIS} stroke={IVORY} strokeWidth="2" opacity="0.95" />
+          {/* the pedestal */}
+          <path d="M186 164h28v52h-28z" fill="#22305c" stroke={GOLD} strokeWidth="1.5" />
+          <path d="M166 216h68l-8 14h-52z" fill="#22305c" stroke={GOLD} strokeWidth="1.5" />
+          {/* water poured from a shell */}
+          <path d="M236 64c14 4 22 14 22 26l-26-6c-2-8 0-15 4-20z" fill={GOLD} opacity="0.9" />
+          <path d="M232 86q-14 20-26 32" stroke={IVORY} strokeWidth="4" strokeLinecap="round" fill="none" opacity="0.85" />
+          <path d="M226 92q-12 16-22 26" stroke={IVORY} strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.5" />
+          {/* rings in the water */}
+          <ellipse cx="196" cy="123" rx="16" ry="3.5" fill="none" stroke={IVORY} strokeWidth="1.5" opacity="0.6" />
+          <ellipse cx="196" cy="123" rx="28" ry="6" fill="none" stroke={IVORY} strokeWidth="1" opacity="0.35" />
+          {/* the dove above */}
+          <path d="M196 40l12-7 2 11 9 5-13 7-10-5z" fill={IVORY} opacity="0.9" />
+        </>
+      );
+
+    case 'white-garment':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          <circle cx="160" cy="140" r="90" fill={GOLD} opacity="0.07" />
+          {/* the small white garment, hanging in light */}
+          <path d="M120 100l40-18 40 18-12 18-12-8v110h-32V110l-12 8z" fill={IVORY} opacity="0.95" />
+          <path d="M134 150h52M134 176h52" stroke={INCENSE} strokeWidth="1" opacity="0.3" />
+          {/* the baptismal candle, lit from the Easter candle */}
+          <rect x="268" y="120" width="18" height="120" rx="4" fill={IVORY} opacity="0.92" />
+          <path d="M277 88c9 12 14 20 14 28a14 14 0 0 1-28 0c0-8 5-16 14-28z" fill={GOLD} className="flame" />
+          <circle cx="277" cy="106" r="30" fill={GOLD} opacity="0.13" />
+          <path d="M270 160h14M270 180h14" stroke={GARNET} strokeWidth="2.5" opacity="0.7" />
+          <rect x="0" y="262" width="400" height="38" fill="#141b33" />
+        </>
+      );
+
+    case 'confession-light':
+      return (
+        <>
+          <rect width="400" height="300" fill="#0c1122" />
+          {/* a warm doorway, light spilling out — mercy, not shame */}
+          <path d="M150 290V130a50 60 0 0 1 100 0v160z" fill={GOLD} opacity="0.92" />
+          <path d="M160 290V134a40 50 0 0 1 80 0v156z" fill={IVORY} opacity="0.85" />
+          {/* the lamp above: green for 'enter' in many confessionals; here, gold */}
+          <circle cx="200" cy="56" r="9" fill={GOLD} className="soft-glow" />
+          <path d="M200 38v8" stroke={INCENSE} strokeWidth="2" />
+          {/* a figure walking in, lighter than when it arrived */}
+          <g fill="#1a2240">
+            <circle cx="120" cy="208" r="12" />
+            <path d="M102 282v-46c0-16 8-26 18-26s18 10 18 26v46z" />
+          </g>
+          <path d="M140 240q30-4 40-2" stroke={GOLD} strokeWidth="2" strokeDasharray="2 6" opacity="0.6" fill="none" />
+          <rect x="0" y="282" width="400" height="18" fill="#080d1a" />
+        </>
+      );
+
+    case 'oil-hands':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          <circle cx="200" cy="130" r="100" fill={GOLD} opacity="0.08" />
+          {/* two hands extended in blessing over a brow */}
+          <g fill={IVORY} opacity="0.9">
+            <path d="M130 92c20-10 38-8 50 2l-12 26c-14-6-28-6-44 0z" />
+            <path d="M270 92c-20-10-38-8-50 2l12 26c14-6 28-6 44 0z" />
+          </g>
+          {/* the face below, at peace */}
+          <circle cx="200" cy="172" r="26" fill={INCENSE} opacity="0.85" />
+          <path d="M188 176q12 10 24 0" stroke={LAPIS} strokeWidth="2" fill="none" />
+          {/* the vessel of oil */}
+          <path d="M188 232h24l-4 26c-2 8-14 8-16 0z" fill={GOLD} />
+          <ellipse cx="200" cy="232" rx="12" ry="4" fill={GOLD} opacity="0.7" />
+          <path d="M200 218v10" stroke={GOLD} strokeWidth="3" strokeLinecap="round" />
+          {/* a drop of oil, falling as light */}
+          <path d="M200 122c4 5 6 9 6 12a6 6 0 0 1-12 0c0-3 2-7 6-12z" fill={GOLD} opacity="0.95" />
+        </>
+      );
+
+    case 'wedding-rings':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          <Stars seed={43} n={10} />
+          <circle cx="200" cy="140" r="104" fill={GOLD} opacity="0.08" />
+          {/* two rings, interlocked beneath a cross */}
+          <circle cx="172" cy="170" r="44" fill="none" stroke={GOLD} strokeWidth="9" />
+          <circle cx="228" cy="170" r="44" fill="none" stroke={IVORY} strokeWidth="9" opacity="0.9" />
+          <path d="M214 136a44 44 0 0 1 14 10" stroke={GOLD} strokeWidth="9" fill="none" strokeLinecap="round" />
+          {/* the cross above, the third strand of the cord */}
+          <path d="M200 52v34M188 64h24" stroke={GOLD} strokeWidth="5" strokeLinecap="round" />
+          <path d="M200 92v22" stroke={GOLD} strokeWidth="2" strokeDasharray="2 6" opacity="0.7" />
+          <text x="200" y="262" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontStyle="italic" fontSize="17" fill={IVORY} opacity="0.6">
+            10 · 2026
+          </text>
+        </>
+      );
+
+    case 'parish-home':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          <Stars seed={47} n={18} />
+          {/* a small parish church, windows warm, door open */}
+          <g fill="#141b33">
+            <rect x="130" y="150" width="140" height="120" />
+            <path d="M130 150l70-50 70 50z" />
+            <rect x="252" y="92" width="34" height="178" />
+            <path d="M252 92l17-22 17 22z" />
+          </g>
+          <path d="M269 56v14M263 61h12" stroke={GOLD} strokeWidth="2.5" strokeLinecap="round" />
+          <g fill={GOLD} opacity="0.92">
+            <path d="M148 190a7 10 0 0 1 14 0v20h-14z" />
+            <path d="M186 250v-44a14 16 0 0 1 28 0v44z" />
+            <path d="M238 190a7 10 0 0 1 14 0v20h-14z" />
+            <path d="M262 120a7 10 0 0 1 14 0v18h-14z" />
+          </g>
+          {/* a path of lamplight leading home */}
+          <path d="M200 270q-10 14-30 26M200 270q12 16 34 28" stroke={GOLD} strokeWidth="2" strokeDasharray="1 8" opacity="0.5" fill="none" />
+          <rect x="0" y="268" width="400" height="32" fill="#10162b" />
+          <ellipse cx="200" cy="272" rx="120" ry="6" fill={GOLD} opacity="0.1" />
+        </>
+      );
+
+    case 'commandments-tablets':
+      return (
+        <>
+          <rect width="400" height="300" fill="#10162b" />
+          <circle cx="200" cy="110" r="100" fill={GOLD} opacity="0.08" />
+          {/* the two tablets, rounded like an open door */}
+          <path d="M110 250V120a45 50 0 0 1 90 0v130z" fill="#22305c" stroke={GOLD} strokeWidth="2.5" />
+          <path d="M200 250V120a45 50 0 0 1 90 0v130z" fill="#22305c" stroke={GOLD} strokeWidth="2.5" />
+          {/* three lines and seven lines: love of God, love of neighbor */}
+          <g stroke={IVORY} strokeWidth="3" strokeLinecap="round" opacity="0.75">
+            {[140, 162, 184].map((y) => (
+              <line key={y} x1="128" y1={y} x2="182" y2={y} />
+            ))}
+            {[136, 152, 168, 184, 200, 216, 232].map((y) => (
+              <line key={`r${y}`} x1="218" y1={y} x2="272" y2={y} />
+            ))}
+          </g>
+          {/* a heart drawn over both — the great commandment */}
+          <path d="M200 96c8-14 26-14 30 0 4 12-12 24-30 36-18-12-34-24-30-36 4-14 22-14 30 0z" fill={GARNET} opacity="0.9" />
+          <rect x="0" y="250" width="400" height="50" fill="#0c1122" />
+        </>
+      );
+
+    case 'liturgical-wheel':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          {/* the year as a wheel of seasons */}
+          <circle cx="200" cy="150" r="104" fill="#141b33" stroke={INCENSE} strokeWidth="2" />
+          {/* Advent + Lent: garnet · Christmas + Easter: ivory/gold · Ordinary: deep green? No — incense */}
+          {[
+            { a0: -90, a1: -50, c: GARNET },
+            { a0: -50, a1: -20, c: IVORY },
+            { a0: -20, a1: 60, c: INCENSE },
+            { a0: 60, a1: 110, c: GARNET },
+            { a0: 110, a1: 170, c: GOLD },
+            { a0: 170, a1: 270, c: INCENSE },
+          ].map(({ a0, a1, c }, i) => {
+            const r0 = 58;
+            const r1 = 98;
+            const rad = (d: number) => (d * Math.PI) / 180;
+            const p = (r: number, d: number) => `${200 + Math.cos(rad(d)) * r},${150 + Math.sin(rad(d)) * r}`;
+            const large = a1 - a0 > 180 ? 1 : 0;
+            return (
+              <path
+                key={i}
+                d={`M${p(r0, a0)} L${p(r1, a0)} A${r1} ${r1} 0 ${large} 1 ${p(r1, a1)} L${p(r0, a1)} A${r0} ${r0} 0 ${large} 0 ${p(r0, a0)} Z`}
+                fill={c}
+                opacity={c === INCENSE ? 0.45 : 0.85}
+                stroke={LAPIS}
+                strokeWidth="2"
+              />
+            );
+          })}
+          {/* the center: the paschal flame the year turns around */}
+          <circle cx="200" cy="150" r="40" fill={LAPIS} stroke={GOLD} strokeWidth="2" />
+          <path d="M200 128c9 11 13 19 13 26a13 13 0 0 1-26 0c0-7 4-15 13-26z" fill={GOLD} className="flame" />
+        </>
+      );
+
+    case 'heaven-light':
+      return (
+        <>
+          <rect width="400" height="300" fill="#10162b" />
+          {/* a great dawn beyond a doorway of clouds */}
+          <circle cx="200" cy="120" r="130" fill={GOLD} opacity="0.1" />
+          <circle cx="200" cy="120" r="84" fill={GOLD} opacity="0.2" />
+          <circle cx="200" cy="120" r="44" fill={IVORY} opacity="0.9" />
+          <ellipse cx="120" cy="190" rx="80" ry="22" fill={IVORY} opacity="0.5" />
+          <ellipse cx="290" cy="200" rx="90" ry="24" fill={IVORY} opacity="0.55" />
+          <ellipse cx="200" cy="226" rx="130" ry="26" fill={IVORY} opacity="0.7" />
+          {/* small figures walking up into the light, together */}
+          <g fill="#1a2240">
+            {[150, 185, 222, 256].map((x, i) => (
+              <g key={x}>
+                <circle cx={x} cy={252 - i * 4} r="7" />
+                <path d={`M${x - 9} 282v-${18 + i * 2}c0-7 4-12 9-12s9 5 9 12v${18 + i * 2}z`} />
+              </g>
+            ))}
+          </g>
+          <rect x="0" y="284" width="400" height="16" fill="#080d1a" />
+        </>
+      );
+
+    case 'asia-lanterns':
+      return (
+        <>
+          <rect width="400" height="300" fill="#0c1122" />
+          <Stars seed={53} n={20} />
+          {/* lanterns rising like prayers over the water — Hội An at night */}
+          {[
+            [80, 110, GOLD], [150, 70, GARNET], [220, 100, GOLD], [290, 60, IVORY], [340, 130, GARNET], [120, 170, IVORY],
+          ].map(([x, y, c], i) => (
+            <g key={i}>
+              <rect x={Number(x) - 14} y={Number(y)} width="28" height="36" rx="10" fill={String(c)} opacity={c === IVORY ? 0.8 : 0.9} />
+              <rect x={Number(x) - 6} y={Number(y) - 7} width="12" height="7" rx="2" fill={String(c)} opacity="0.6" />
+              <circle cx={Number(x)} cy={Number(y) + 18} r="22" fill={String(c)} opacity="0.12" />
+            </g>
+          ))}
+          {/* the water, carrying their light */}
+          <rect x="0" y="220" width="400" height="80" fill="#10182f" />
+          {[80, 150, 220, 290, 340].map((x) => (
+            <path key={x} d={`M${x} 228v40`} stroke={GOLD} strokeWidth="3" opacity="0.18" strokeLinecap="round" />
+          ))}
+          {/* a small cross of light among the lanterns */}
+          <path d="M200 168v22M191 177h18" stroke={GOLD} strokeWidth="3" strokeLinecap="round" opacity="0.9" />
+        </>
+      );
+
     case 'symbol-water':
       return (
         <>

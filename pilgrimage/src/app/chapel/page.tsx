@@ -12,7 +12,9 @@ import { exportJSON, importJSON } from '@/lib/storage';
 import { collectUnverified, downloadFile } from '@/lib/review';
 import { ChapelOfCandles } from '@/components/ChapelOfCandles';
 import { RoseWindow } from '@/components/RoseWindow';
+import { OCIAMilestoneTracker } from '@/components/OCIAMilestoneTracker';
 import { LanguageToggle } from '@/components/LanguageToggle';
+import { updateSave } from '@/lib/storage';
 
 export default function ChapelPage() {
   const { t, lang, save } = useI18n();
@@ -45,6 +47,8 @@ export default function ChapelPage() {
           </Link>
         </div>
       </section>
+
+      <OCIAMilestoneTracker />
 
       <RoseWindow />
 
@@ -108,6 +112,22 @@ export default function ChapelPage() {
         <div className="mt-3 flex items-center justify-between">
           <span className="font-ui text-sm font-semibold text-ivory">{t(UI.language)}</span>
           <LanguageToggle />
+        </div>
+        <div className="mt-3 flex items-center justify-between gap-3">
+          <span className="min-w-0">
+            <span className="block font-ui text-sm font-semibold text-ivory">{t(UI.soundLabel)}</span>
+            <span className="block text-xs text-incense">{t(UI.soundNote)}</span>
+          </span>
+          <button
+            role="switch"
+            aria-checked={save.sound}
+            onClick={() => updateSave({ sound: !save.sound })}
+            className={`relative h-7 w-12 shrink-0 rounded-full transition-colors ${save.sound ? 'bg-gold' : 'bg-ivory/15'}`}
+          >
+            <span
+              className={`absolute top-1 h-5 w-5 rounded-full bg-ivory transition-all ${save.sound ? 'left-6' : 'left-1'}`}
+            />
+          </button>
         </div>
         <div className="mt-4 flex flex-col gap-2">
           <button

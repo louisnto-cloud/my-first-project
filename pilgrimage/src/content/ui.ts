@@ -134,6 +134,21 @@ export const UI = {
   rosaryAnnounce: v('The next mystery', 'Mầu nhiệm tiếp theo'),
   rosaryTapNext: v('Tap for the next bead', 'Chạm để sang hạt tiếp theo'),
   rosaryDone: v('A whole rosary, prayed. The beads your fiancé gave you know their purpose now.', 'Trọn một chuỗi Mân Côi đã được nguyện. Những hạt chuỗi vị hôn phu tặng bạn giờ đã biết sứ mạng của mình.'),
+
+  // OCIA tracker
+  ociaTitle: v('Your OCIA road', 'Hành trình OCIA của bạn'),
+  ociaDays: v('days to go', 'ngày nữa'),
+  ociaToday: v('Today.', 'Hôm nay.'),
+  ociaPassed: v('Received', 'Đã lãnh nhận'),
+
+  // Sound
+  soundLabel: v('Sound (bell and stamp)', 'Âm thanh (chuông và con dấu)'),
+  soundNote: v('Silence is the default, like a church.', 'Thinh lặng là mặc định, như trong một nhà thờ.'),
+
+  // Bonus roads
+  bonusRoads: v('Further roads', 'Những con đường xa hơn'),
+  bonusLocked: v('Opens with your first stamp', 'Mở ra cùng con dấu đầu tiên của bạn'),
+  bonusPreparing: v('Being prepared', 'Đang được chuẩn bị'),
 } as const;
 
 export type UIKey = keyof typeof UI;

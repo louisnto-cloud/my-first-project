@@ -212,6 +212,61 @@ export const ARTWORKS: Artwork[] = [
     title: { en: 'The Finding in the Temple', vi: 'Tìm thấy Chúa trong Đền Thánh', viStatus: 'verified' },
     credit: 'Original scene.',
   },
+  {
+    id: 'brussels-cathedral',
+    title: { en: 'Brussels Cathedral', vi: 'Nhà thờ chính tòa Brussels', viStatus: 'verified' },
+    credit: 'Original scene. Future photo: Wikimedia Commons, Cathedral of St. Michael and St. Gudula.',
+  },
+  {
+    id: 'font-water',
+    title: { en: 'The baptismal font', vi: 'Giếng Rửa tội', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'white-garment',
+    title: { en: 'The white garment and the candle', vi: 'Áo trắng và cây nến', viStatus: 'unverified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'confession-light',
+    title: { en: 'The room of mercy', vi: 'Tòa giải tội', viStatus: 'unverified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'oil-hands',
+    title: { en: 'Oil and hands', vi: 'Dầu thánh và đôi tay', viStatus: 'unverified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'wedding-rings',
+    title: { en: 'The wedding', vi: 'Hôn lễ', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'parish-home',
+    title: { en: 'Your parish', vi: 'Giáo xứ của bạn', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'commandments-tablets',
+    title: { en: 'The ten words', vi: 'Mười điều răn', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'liturgical-wheel',
+    title: { en: 'The living calendar', vi: 'Năm phụng vụ', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'heaven-light',
+    title: { en: 'The hope of heaven', vi: 'Niềm hy vọng Thiên đàng', viStatus: 'unverified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'asia-lanterns',
+    title: { en: 'Saints of Asia', vi: 'Các Thánh Á châu', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
   { id: 'symbol-water', title: { en: 'Water', vi: 'Nước', viStatus: 'verified' }, credit: 'Original symbol.' },
   { id: 'symbol-light', title: { en: 'Light', vi: 'Ánh sáng', viStatus: 'verified' }, credit: 'Original symbol.' },
   { id: 'symbol-bread', title: { en: 'Bread', vi: 'Bánh', viStatus: 'verified' }, credit: 'Original symbol.' },

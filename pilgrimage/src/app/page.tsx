@@ -12,11 +12,14 @@ import { todayISO } from '@/lib/storage';
 import { SacredArt } from '@/components/SacredArt';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { DailyReliquary } from '@/components/DailyReliquary';
+import { currentSeason } from '@/lib/liturgical';
 
 export default function TodayPage() {
   const { t, save } = useI18n();
   const step = nextStep(save);
   const walkedToday = save.candles.includes(todayISO());
+  const season = currentSeason();
+  const seasonDot = { garnet: 'bg-garnet', gold: 'bg-gold', incense: 'bg-incense' }[season.tone];
 
   return (
     <div className="flex min-h-[calc(100dvh-6rem)] flex-col px-5 pt-5">
@@ -27,6 +30,13 @@ export default function TodayPage() {
         </div>
         <LanguageToggle />
       </header>
+
+      {/* The living calendar: a quiet seasonal line */}
+      <p className="mt-3 flex items-center gap-2 text-xs text-incense">
+        <span className={`inline-block h-2 w-2 rounded-full ${seasonDot}`} />
+        <span className="font-bold uppercase tracking-widest">{t(season.name)}</span>
+        <span className="font-story text-sm italic normal-case tracking-normal">{t(season.line)}</span>
+      </p>
 
       <div className="flex flex-1 flex-col justify-center py-6">
         {step ? (
