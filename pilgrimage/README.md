@@ -20,11 +20,13 @@ npm run build    # static export to out/ (PWA, works fully offline)
   (the whole Jesus arc incl. Holy Week), Paris (the Church and the Mass),
   Brussels (the seven sacraments, baptism front and center), her parish
   (the moral life, the liturgical year, the saints, hope, and her OCIA road)
-  — plus a bonus "Saints of Asia" world (the 117 Martyrs, Our Lady of
-  La Vang, St. Anê Lê Thị Thành), unlocked with the first stamp.
+  — plus three bonus worlds unlocked along the way: "Saints of Asia"
+  (the 117 Martyrs, Our Lady of La Vang, St. Anê Lê Thị Thành), "The
+  Holy Land" (Nazareth, the lake, the empty tomb), and "The Vatican"
+  (Peter's tomb, the Pietà, Cardinal Nguyễn Văn Thuận).
 - **The crown jewels:** Walk through the Mass (every moment, every response,
-  every posture, EN/VI) and the Rosary trainer (bead by bead, the Joyful
-  Mysteries) — both in My Chapel.
+  every posture, EN/VI) and the Rosary trainer (bead by bead, all four
+  mystery sets on their traditional days) — both in My Chapel.
 - **Seven prayers** with traditional Vietnamese texts: Sign of the Cross,
   Our Father, Hail Mary, Glory Be, Apostles' Creed, Hail Holy Queen, Act of
   Contrition.
