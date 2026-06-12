@@ -4,11 +4,12 @@
 // Each moment of the liturgy explained as it happens, with what to say and
 // when to stand, sit, or kneel.
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { MASS, MASS_PARTS, type Posture } from '@/content/mass';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
+import { updateSave } from '@/lib/storage';
 import { SacredArt } from '@/components/SacredArt';
 
 function PostureBadge({ posture }: { posture: Posture }) {
@@ -47,6 +48,15 @@ export function MassWalkthrough() {
   const total = MASS.length;
   const done = step >= total;
   const moment = MASS[Math.min(step, total - 1)];
+
+  // A completed walkthrough lights its pane in the Rose Window.
+  useEffect(() => {
+    if (done) {
+      updateSave((d) => ({
+        seen: { ...d.seen, 'mass-walkthrough': (d.seen['mass-walkthrough'] ?? 0) + 1 },
+      }));
+    }
+  }, [done]);
 
   return (
     <div className="flex min-h-dvh flex-col">

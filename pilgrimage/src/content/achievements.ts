@@ -1,5 +1,6 @@
 import type { L } from './types';
 import type { SaveDoc } from '@/lib/storage';
+import { PRAYERS } from './prayers';
 
 // ─── Achievements: panes of one rose window ─────────────────────────────────
 // Badges are earned as individual panes of stained glass that assemble into
@@ -16,6 +17,8 @@ export interface Achievement {
 
 const candleCount = (save: SaveDoc) => save.candles.length;
 const lessonsDone = (save: SaveDoc) => Object.keys(save.completed).length;
+const prayersKept = (save: SaveDoc) =>
+  PRAYERS.filter((p) => (save.seen[p.id] ?? 0) > 0).length;
 
 export const ACHIEVEMENTS: Achievement[] = [
   {
@@ -34,7 +37,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     id: 'first-prayer',
     title: u('A Prayer to Keep', 'Một lời kinh để giữ'),
     how: u('Receive your first prayer.', 'Nhận lời kinh đầu tiên.'),
-    earned: (s) => Object.keys(s.seen).length >= 1,
+    earned: (s) => prayersKept(s) >= 1,
   },
   {
     id: 'first-reflection',
@@ -64,7 +67,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     id: 'three-prayers',
     title: u('A Small Treasury', 'Một kho tàng nhỏ'),
     how: u('Keep three prayers in your chapel.', 'Giữ ba lời kinh trong nhà nguyện.'),
-    earned: (s) => Object.keys(s.seen).length >= 3,
+    earned: (s) => prayersKept(s) >= 3,
   },
   {
     id: 'bruges-stamp',
@@ -89,5 +92,29 @@ export const ACHIEVEMENTS: Achievement[] = [
     title: u('Paris', 'Paris'),
     how: u('Earn the third passport stamp.', 'Nhận con dấu hộ chiếu thứ ba.'),
     earned: (s) => !!s.stamps.paris,
+  },
+  {
+    id: 'brussels-stamp',
+    title: u('Brussels', 'Brussels'),
+    how: u('Earn the fourth passport stamp.', 'Nhận con dấu hộ chiếu thứ tư.'),
+    earned: (s) => !!s.stamps.brussels,
+  },
+  {
+    id: 'open-missal',
+    title: u('The Open Missal', 'Cuốn sách lễ mở ra'),
+    how: u('Walk through the whole Mass.', 'Đi trọn một Thánh lễ.'),
+    earned: (s) => (s.seen['mass-walkthrough'] ?? 0) >= 1,
+  },
+  {
+    id: 'ring-of-roses',
+    title: u('A Ring of Roses', 'Một vòng hoa hồng'),
+    how: u('Pray a whole rosary, bead by bead.', 'Nguyện trọn một chuỗi Mân Côi, từng hạt một.'),
+    earned: (s) => (s.seen['rosary'] ?? 0) >= 1,
+  },
+  {
+    id: 'parish-stamp',
+    title: u('Home', 'Nhà'),
+    how: u('Earn the fifth stamp — the whole main road, walked.', 'Nhận con dấu thứ năm — trọn con đường chính đã đi qua.'),
+    earned: (s) => !!s.stamps.parish,
   },
 ];

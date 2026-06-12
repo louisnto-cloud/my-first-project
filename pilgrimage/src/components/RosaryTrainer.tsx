@@ -4,12 +4,13 @@
 // The beautiful rosary she owns, bead by bead. All four sets of mysteries on
 // their traditional days; tap to advance; no pace, no pressure.
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { buildRosary, MYSTERY_SETS, todaysSet, type MysterySet } from '@/content/rosary';
 import { prayerById } from '@/content/prayers';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
+import { updateSave } from '@/lib/storage';
 import { SacredArt } from '@/components/SacredArt';
 
 function BeadStrip({ position, total }: { position: number; total: number }) {
@@ -37,6 +38,22 @@ export function RosaryTrainer() {
   const [set, setSet] = useState<MysterySet | null>(null);
   const steps = useMemo(() => (set ? buildRosary(set) : []), [set]);
   const [i, setI] = useState(0);
+
+  // A completed rosary lights its pane in the Rose Window.
+  const finished = set !== null && i >= steps.length;
+  useEffect(() => {
+    if (finished) {
+      updateSave((d) => ({
+        seen: {
+          ...d.seen,
+          rosary: (d.seen.rosary ?? 0) + 1,
+          // The rosary's own prayers now rest in her chapel too.
+          'apostles-creed': (d.seen['apostles-creed'] ?? 0) + 1,
+          'hail-holy-queen': (d.seen['hail-holy-queen'] ?? 0) + 1,
+        },
+      }));
+    }
+  }, [finished]);
 
   // ── Screen 1: which mysteries today? ──
   if (!set) {
