@@ -1333,6 +1333,60 @@ function Scene({ kind }: { kind: ArtKind }) {
         </>
       );
 
+    case 'st-peters':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          <Stars seed={59} n={14} />
+          {/* the great dome */}
+          <path d="M140 140a60 60 0 0 1 120 0z" fill="#141b33" stroke={GOLD} strokeWidth="2" />
+          <path d="M150 140a50 52 0 0 1 100 0" fill="none" stroke={GOLD} strokeWidth="1" opacity="0.5" />
+          {[170, 200, 230].map((x) => (
+            <line key={x} x1={x} y1="86" x2={x} y2="138" stroke={GOLD} strokeWidth="1" opacity="0.4" />
+          ))}
+          <rect x="188" y="58" width="24" height="14" fill="#141b33" stroke={GOLD} strokeWidth="1.5" />
+          <path d="M200 38v16M193 44h14" stroke={GOLD} strokeWidth="2.5" strokeLinecap="round" />
+          {/* the façade */}
+          <rect x="110" y="140" width="180" height="70" fill="#141b33" stroke={GOLD} strokeWidth="1.5" />
+          {[130, 162, 194, 226, 258].map((x) => (
+            <rect key={x} x={x} y="154" width="14" height="56" fill={LAPIS} stroke={GOLD} strokeWidth="1" opacity="0.9" />
+          ))}
+          {/* Bernini's embracing colonnade */}
+          <path d="M30 282c40-36 110-54 170-54s130 18 170 54" fill="none" stroke={INCENSE} strokeWidth="3" opacity="0.7" />
+          <path d="M50 286c38-30 100-46 150-46s112 16 150 46" fill="none" stroke={INCENSE} strokeWidth="2" opacity="0.4" />
+          {/* the obelisk and lamps of the square */}
+          <path d="M198 232l2-22 2 22z" fill={IVORY} opacity="0.7" />
+          {[120, 280].map((x) => (
+            <circle key={x} cx={x} cy="252" r="3.5" fill={GOLD} className="soft-glow" />
+          ))}
+          <rect x="0" y="288" width="400" height="12" fill="#10162b" />
+        </>
+      );
+
+    case 'pieta':
+      return (
+        <>
+          <rect width="400" height="300" fill="#0c1122" />
+          <circle cx="200" cy="140" r="110" fill={IVORY} opacity="0.06" />
+          {/* the mother, a mountain of drapery */}
+          <path d="M110 280c0-80 36-130 90-130s90 50 90 130z" fill="#22305c" />
+          <g stroke={LAPIS} strokeWidth="3" opacity="0.6" fill="none">
+            <path d="M150 280c-4-50 10-90 30-110M250 280c4-50-10-90-30-110" />
+            <path d="M170 280c-2-36 6-66 18-84M230 280c2-36-6-66-18-84" />
+          </g>
+          <circle cx="200" cy="134" r="17" fill={IVORY} opacity="0.92" />
+          <path d="M186 122a17 17 0 0 1 28 0l-4 24h-20z" fill="#22305c" />
+          <Halo cx={200} cy={134} r={24} />
+          {/* the son, laid across her lap */}
+          <path d="M120 222q80-26 160 0" stroke={IVORY} strokeWidth="16" strokeLinecap="round" fill="none" opacity="0.92" />
+          <circle cx="128" cy="216" r="11" fill={IVORY} opacity="0.95" />
+          <path d="M276 224l16 12" stroke={IVORY} strokeWidth="7" strokeLinecap="round" opacity="0.85" />
+          {/* her open hand: the question offered to heaven */}
+          <path d="M256 196q14-8 22-4" stroke={IVORY} strokeWidth="5" strokeLinecap="round" fill="none" opacity="0.8" />
+          <rect x="0" y="280" width="400" height="20" fill="#080d1a" />
+        </>
+      );
+
     case 'symbol-water':
       return (
         <>

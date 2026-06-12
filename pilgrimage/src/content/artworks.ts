@@ -267,6 +267,16 @@ export const ARTWORKS: Artwork[] = [
     title: { en: 'Saints of Asia', vi: 'Các Thánh Á châu', viStatus: 'verified' },
     credit: 'Original scene.',
   },
+  {
+    id: 'st-peters',
+    title: { en: 'St. Peter’s Basilica', vi: 'Vương cung thánh đường Thánh Phêrô', viStatus: 'verified' },
+    credit: 'Original scene. Future photo: Wikimedia Commons, St. Peter’s Basilica and square.',
+  },
+  {
+    id: 'pieta',
+    title: { en: 'The Pietà', vi: 'Tượng Đức Mẹ Sầu Bi', viStatus: 'verified' },
+    credit: 'Original scene, after Michelangelo’s Pietà (1499).',
+  },
   { id: 'symbol-water', title: { en: 'Water', vi: 'Nước', viStatus: 'verified' }, credit: 'Original symbol.' },
   { id: 'symbol-light', title: { en: 'Light', vi: 'Ánh sáng', viStatus: 'verified' }, credit: 'Original symbol.' },
   { id: 'symbol-bread', title: { en: 'Bread', vi: 'Bánh', viStatus: 'verified' }, credit: 'Original symbol.' },

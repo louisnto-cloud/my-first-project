@@ -148,7 +148,13 @@ export const UI = {
   // Bonus roads
   bonusRoads: v('Further roads', 'Những con đường xa hơn'),
   bonusLocked: v('Opens with your first stamp', 'Mở ra cùng con dấu đầu tiên của bạn'),
+  bonusLockedBruges: v('Opens with the Bruges stamp', 'Mở ra cùng con dấu Bruges'),
+  bonusLockedParis: v('Opens with the Paris stamp', 'Mở ra cùng con dấu Paris'),
   bonusPreparing: v('Being prepared', 'Đang được chuẩn bị'),
+
+  // Rosary mystery sets
+  rosaryChooseSet: v('Which mysteries today?', 'Hôm nay nguyện mầu nhiệm nào?'),
+  rosaryTodaySet: v('Today’s mysteries', 'Mầu nhiệm của hôm nay'),
 } as const;
 
 export type UIKey = keyof typeof UI;

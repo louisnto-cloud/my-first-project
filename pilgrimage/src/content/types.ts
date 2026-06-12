@@ -74,7 +74,9 @@ export type ArtKind =
   | 'commandments-tablets'
   | 'liturgical-wheel'
   | 'heaven-light'
-  | 'asia-lanterns';
+  | 'asia-lanterns'
+  | 'st-peters'
+  | 'pieta';
 
 export interface Scripture {
   /** Book chapter:verse, e.g. "John 8:12" */
@@ -103,6 +105,10 @@ export interface StoryCard {
   branch?: StoryBranch;
   /** Glossary term ids that appear in this card's text via {{term}} markers. */
   terms?: string[];
+  /** Optional narration audio (path under /public/audio), per language.
+   *  Not yet recorded; the card component is designed so audio can be added
+   *  later without touching content shape. */
+  audio?: { en?: string; vi?: string };
 }
 
 // ─── Question formats ────────────────────────────────────────────────────────

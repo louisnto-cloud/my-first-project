@@ -1,12 +1,12 @@
 'use client';
 
 // ─── The Rosary Trainer: a crown jewel ───────────────────────────────────────
-// The beautiful rosary she owns, bead by bead. Tap to advance; every bead
-// shows its prayer in full, in her language. No pace, no pressure.
+// The beautiful rosary she owns, bead by bead. All four sets of mysteries on
+// their traditional days; tap to advance; no pace, no pressure.
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
-import { buildRosary, JOYFUL_MYSTERIES } from '@/content/rosary';
+import { buildRosary, MYSTERY_SETS, todaysSet, type MysterySet } from '@/content/rosary';
 import { prayerById } from '@/content/prayers';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
@@ -34,24 +34,70 @@ function BeadStrip({ position, total }: { position: number; total: number }) {
 
 export function RosaryTrainer() {
   const { t, lang } = useI18n();
-  const steps = useMemo(() => buildRosary(), []);
+  const [set, setSet] = useState<MysterySet | null>(null);
+  const steps = useMemo(() => (set ? buildRosary(set) : []), [set]);
   const [i, setI] = useState(0);
+
+  // ── Screen 1: which mysteries today? ──
+  if (!set) {
+    const today = todaysSet();
+    return (
+      <div className="flex min-h-dvh flex-col px-5 pt-4">
+        <div className="flex items-center gap-3">
+          <Link href="/chapel" aria-label={t(UI.close)} className="flex h-11 w-11 items-center justify-center rounded-full text-incense">
+            <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current"><path d="M15.5 4.5 8 12l7.5 7.5 1.4-1.4L10.8 12l6.1-6.1z" /></svg>
+          </Link>
+          <p className="font-display text-[10px] uppercase tracking-[0.25em] text-gold">{t(UI.rosaryTitle)}</p>
+        </div>
+
+        <h1 className="mt-6 font-display text-2xl text-ivory">{t(UI.rosaryChooseSet)}</h1>
+        <div className="mt-4 flex flex-col gap-2.5 pb-8">
+          {MYSTERY_SETS.map((s) => (
+            <button
+              key={s.id}
+              onClick={() => setSet(s)}
+              className={`flex min-h-[64px] items-center gap-3 rounded-2xl border px-4 py-3 text-left ${
+                s.id === today.id ? 'border-gold bg-gold/10' : 'border-ivory/15'
+              }`}
+            >
+              <span className="h-14 w-16 shrink-0 overflow-hidden rounded-xl">
+                <SacredArt kind={s.mysteries[0].art} rounded={false} />
+              </span>
+              <span className="min-w-0">
+                <span className="block font-display text-base text-ivory">{t(s.name)}</span>
+                {s.id === today.id && (
+                  <span className="block text-xs font-bold uppercase tracking-widest text-gold">
+                    {t(UI.rosaryTodaySet)}
+                  </span>
+                )}
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // ── Screen 2: the beads ──
   const done = i >= steps.length;
   const step = steps[Math.min(i, steps.length - 1)];
-
-  const mystery = step.mystery ? JOYFUL_MYSTERIES[step.mystery - 1] : null;
+  const mystery = step.mystery ? set.mysteries[step.mystery - 1] : null;
   const prayer = step.announce ? null : prayerById(step.prayerId);
   const art = mystery ? mystery.art : 'candle-single';
 
   return (
     <div className="flex min-h-dvh flex-col">
       <div className="flex items-center gap-3 px-4 pt-4">
-        <Link href="/chapel" aria-label={t(UI.close)} className="flex h-11 w-11 items-center justify-center rounded-full text-incense">
+        <button
+          onClick={() => { setSet(null); setI(0); }}
+          aria-label={t(UI.close)}
+          className="flex h-11 w-11 items-center justify-center rounded-full text-incense"
+        >
           <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current"><path d="M15.5 4.5 8 12l7.5 7.5 1.4-1.4L10.8 12l6.1-6.1z" /></svg>
-        </Link>
+        </button>
         <div className="flex-1">
           <p className="font-display text-[10px] uppercase tracking-[0.25em] text-gold">
-            {t(UI.rosaryTitle)}
+            {t(set.name)}
             {mystery ? ` · ${step.mystery}/5` : ''}
           </p>
           <div className="mt-1 h-0.5 overflow-hidden rounded-full bg-ivory/10">
@@ -107,7 +153,7 @@ export function RosaryTrainer() {
       ) : (
         <div className="flex flex-1 flex-col items-center justify-center gap-5 px-8 text-center">
           <div className="h-40 w-52">
-            <SacredArt kind="annunciation" />
+            <SacredArt kind={set.mysteries[0].art} />
           </div>
           <p className="font-story text-2xl leading-relaxed text-ivory">{t(UI.rosaryDone)}</p>
           <Link

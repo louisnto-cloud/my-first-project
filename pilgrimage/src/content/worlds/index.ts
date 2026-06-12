@@ -6,6 +6,8 @@ import { PARIS_LESSONS } from './paris';
 import { BRUSSELS_LESSONS } from './brussels';
 import { PARISH_LESSONS } from './parish';
 import { ASIA_LESSONS } from './asia';
+import { VATICAN_LESSONS } from './vatican';
+import { HOLYLAND_LESSONS } from './holyland';
 
 const u = (en: string, vi: string): L => ({ en, vi, viStatus: 'unverified' });
 
@@ -62,7 +64,7 @@ const VATICAN: World = {
   church: u('St. Peter’s Basilica', 'Vương cung thánh đường Thánh Phêrô'),
   place: u('Rome', 'Rôma'),
   theme: u('The heart of the family', 'Trái tim của gia đình'),
-  lessons: [],
+  lessons: VATICAN_LESSONS,
 };
 
 const HOLYLAND: World = {
@@ -71,7 +73,7 @@ const HOLYLAND: World = {
   church: u('The Holy Sepulchre', 'Mộ Thánh Chúa'),
   place: u('Jerusalem', 'Giêrusalem'),
   theme: u('Where the story happened', 'Nơi câu chuyện đã diễn ra'),
-  lessons: [],
+  lessons: HOLYLAND_LESSONS,
 };
 
 /** The five stops of the main road, in pilgrimage order. */

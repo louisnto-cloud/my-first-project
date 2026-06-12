@@ -78,7 +78,11 @@ function RoadContent() {
                       ? t(w.theme)
                       : w.id === 'asia'
                         ? t(UI.bonusLocked)
-                        : t(UI.bonusPreparing)}
+                        : w.id === 'holyland'
+                          ? t(UI.bonusLockedBruges)
+                          : w.id === 'vatican'
+                            ? t(UI.bonusLockedParis)
+                            : t(UI.bonusPreparing)}
                   </span>
                 </span>
                 <span className={unlocked ? 'text-gold' : 'text-incense/50'}>{unlocked ? '✦' : '·'}</span>
