@@ -109,6 +109,14 @@ export const UI = {
   // Streak / candles
   streakDays: v('days walked', 'ngày đã đi'),
   restDay: v('rest day', 'ngày nghỉ'),
+
+  // Daily Reliquary
+  reliquaryTitle: v('The Daily Reliquary', 'Hộp thánh tích mỗi ngày'),
+  reliquaryHint: v('Something small waits inside.', 'Một điều nhỏ bé đang đợi bên trong.'),
+  reliquaryOpened: v('Opened today. Another gift tomorrow.', 'Đã mở hôm nay. Ngày mai sẽ có món quà khác.'),
+
+  // Rose Window
+  roseWindow: v('The Rose Window', 'Cửa sổ hoa hồng'),
 } as const;
 
 export type UIKey = keyof typeof UI;

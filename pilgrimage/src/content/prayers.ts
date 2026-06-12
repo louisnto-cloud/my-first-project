@@ -54,6 +54,36 @@ export const PRAYERS: Prayer[] = [
     },
   },
   {
+    id: 'hail-mary',
+    name: { en: 'The Hail Mary', vi: 'Kinh Kính Mừng', viStatus: 'verified' },
+    en: [
+      'Hail Mary, full of grace,',
+      'the Lord is with thee.',
+      'Blessed art thou among women,',
+      'and blessed is the fruit of thy womb, Jesus.',
+      'Holy Mary, Mother of God,',
+      'pray for us sinners,',
+      'now and at the hour of our death.',
+      'Amen.',
+    ],
+    vi: [
+      'Kính mừng Maria đầy ơn phúc,',
+      'Đức Chúa Trời ở cùng Bà,',
+      'Bà có phúc lạ hơn mọi người nữ,',
+      'và Giêsu con lòng Bà gồm phúc lạ.',
+      'Thánh Maria Đức Mẹ Chúa Trời,',
+      'cầu cho chúng con là kẻ có tội,',
+      'khi nay và trong giờ lâm tử.',
+      'Amen.',
+    ],
+    viStatus: 'unverified',
+    about: {
+      en: 'The first half is the angel’s own greeting to Mary, and her cousin Elizabeth’s. The second half simply asks her to pray for us — the way you might ask your mother. This is the prayer of the rosary you own.',
+      vi: 'Nửa đầu là chính lời thiên thần chào Đức Mẹ Maria, và lời bà Êlisabét. Nửa sau chỉ đơn giản xin Mẹ cầu nguyện cho chúng ta — như con xin mẹ mình. Đây là lời kinh của chuỗi Mân Côi bạn đang có.',
+      viStatus: 'unverified',
+    },
+  },
+  {
     id: 'glory-be',
     name: { en: 'The Glory Be', vi: 'Kinh Sáng Danh', viStatus: 'verified' },
     en: [

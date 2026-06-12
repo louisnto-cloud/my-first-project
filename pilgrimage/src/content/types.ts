@@ -32,7 +32,26 @@ export type ArtKind =
   | 'symbol-light'
   | 'symbol-bread'
   | 'symbol-cross'
-  | 'symbol-incense';
+  | 'symbol-incense'
+  // World 2 · Bruges
+  | 'basilica-bruges'
+  | 'eden-tree'
+  | 'prophet-night'
+  | 'annunciation'
+  | 'nativity'
+  | 'cana-jars'
+  | 'prodigal-embrace'
+  | 'samaritan-road'
+  | 'loaves-fishes'
+  | 'storm-sea'
+  | 'palm-gate'
+  | 'last-supper'
+  | 'gethsemane'
+  | 'cross-passion'
+  | 'tomb-morning'
+  | 'relic-blood'
+  | 'emmaus-road'
+  | 'ascension';
 
 export interface Scripture {
   /** Book chapter:verse, e.g. "John 8:12" */

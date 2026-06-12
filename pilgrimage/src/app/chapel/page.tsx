@@ -10,6 +10,7 @@ import { lessonById } from '@/content/worlds';
 import { exportJSON, importJSON } from '@/lib/storage';
 import { collectUnverified, downloadFile } from '@/lib/review';
 import { ChapelOfCandles } from '@/components/ChapelOfCandles';
+import { RoseWindow } from '@/components/RoseWindow';
 import { LanguageToggle } from '@/components/LanguageToggle';
 
 export default function ChapelPage() {
@@ -28,6 +29,8 @@ export default function ChapelPage() {
       </header>
 
       <ChapelOfCandles />
+
+      <RoseWindow />
 
       {/* Prayers she keeps */}
       <section className="rounded-3xl border border-ivory/10 bg-[#141b33] p-5">

@@ -94,6 +94,94 @@ export const GLOSSARY: GlossaryEntry[] = [
     viStatus: 'verified',
   },
   {
+    id: 'sin',
+    term: 'sin',
+    plain: {
+      en: 'Choosing against love — turning away from God and from what is good.',
+      vi: 'Chọn điều nghịch lại tình yêu — quay lưng với Thiên Chúa và với điều thiện.',
+      viStatus: 'unverified',
+    },
+    vi: 'tội lỗi',
+    viStatus: 'verified',
+  },
+  {
+    id: 'mercy',
+    term: 'mercy',
+    plain: {
+      en: 'Love that does not give up on you, even when you have done wrong.',
+      vi: 'Tình yêu không bỏ rơi bạn, ngay cả khi bạn đã lầm lỗi.',
+      viStatus: 'unverified',
+    },
+    vi: 'lòng thương xót',
+    viStatus: 'verified',
+  },
+  {
+    id: 'prophet',
+    term: 'prophet',
+    plain: {
+      en: 'Someone God sent to speak for him, and to keep hope alive while the world waited.',
+      vi: 'Người được Thiên Chúa sai đến để nói thay Ngài, và giữ cho niềm hy vọng sống mãi trong khi thế giới chờ đợi.',
+      viStatus: 'unverified',
+    },
+    vi: 'ngôn sứ',
+    viStatus: 'verified',
+  },
+  {
+    id: 'parable',
+    term: 'parable',
+    plain: {
+      en: 'A short story Jesus told that carries a deep truth inside it, like a seed.',
+      vi: 'Một câu chuyện ngắn Chúa Giêsu kể, mang trong mình một sự thật sâu xa, như một hạt giống.',
+      viStatus: 'unverified',
+    },
+    vi: 'dụ ngôn',
+    viStatus: 'verified',
+  },
+  {
+    id: 'miracle',
+    term: 'miracle',
+    plain: {
+      en: 'A sign of God’s power and love that goes beyond what nature can do on its own.',
+      vi: 'Dấu chỉ quyền năng và tình yêu của Thiên Chúa, vượt quá những gì tự nhiên có thể làm.',
+      viStatus: 'unverified',
+    },
+    vi: 'phép lạ',
+    viStatus: 'verified',
+  },
+  {
+    id: 'relic',
+    term: 'relic',
+    plain: {
+      en: 'Something physical kept from a saint or from the life of Jesus — held with honor, because love keeps what belonged to the beloved.',
+      vi: 'Một vật thể được lưu giữ từ một vị thánh hoặc từ cuộc đời Chúa Giêsu — được tôn kính, vì tình yêu luôn giữ lại những gì thuộc về người mình yêu.',
+      viStatus: 'unverified',
+    },
+    vi: 'thánh tích',
+    viStatus: 'verified',
+  },
+  {
+    id: 'resurrection',
+    term: 'Resurrection',
+    plain: {
+      en: 'Jesus truly rising from death to a new life that can never die again — the center of all Christian hope.',
+      vi: 'Chúa Giêsu thật sự sống lại từ cõi chết, bước vào sự sống mới không bao giờ chết nữa — trung tâm của mọi niềm hy vọng Kitô giáo.',
+      viStatus: 'unverified',
+    },
+    vi: 'sự Phục Sinh',
+    viStatus: 'verified',
+  },
+  {
+    id: 'eucharist',
+    term: 'Eucharist',
+    plain: {
+      en: 'The bread and wine that truly become the Body and Blood of Jesus at Mass — his closest gift.',
+      vi: 'Bánh và rượu thật sự trở nên Mình và Máu Chúa Giêsu trong Thánh lễ — món quà gần gũi nhất của Ngài.',
+      viStatus: 'unverified',
+    },
+    vi: 'Thánh Thể',
+    viStatus: 'verified',
+  },
+  {
     id: 'cathedral',
     term: 'cathedral',
     plain: {

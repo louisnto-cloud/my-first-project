@@ -1,10 +1,12 @@
 import type { L, World } from '../types';
 import { HANOI } from './hanoi';
+import { BRUGES_LESSONS_1 } from './bruges-part1';
+import { BRUGES_LESSONS_2 } from './bruges-part2';
 
 const u = (en: string, vi: string): L => ({ en, vi, viStatus: 'unverified' });
 
 // Future worlds appear on the map as places further down the road.
-// Their lessons arrive in Phases 2–4.
+// Their lessons arrive in Phases 3–4.
 
 const BRUGES: World = {
   id: 'bruges',
@@ -12,7 +14,7 @@ const BRUGES: World = {
   church: u('Basilica of the Holy Blood', 'Vương cung thánh đường Máu Thánh'),
   place: u('Bruges, Belgium', 'Bruges, Bỉ'),
   theme: u('Who is Jesus?', 'Chúa Giêsu là ai?'),
-  lessons: [],
+  lessons: [...BRUGES_LESSONS_1, ...BRUGES_LESSONS_2],
 };
 
 const PARIS: World = {

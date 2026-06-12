@@ -11,6 +11,7 @@ import { nextStep } from '@/lib/progress';
 import { todayISO } from '@/lib/storage';
 import { SacredArt } from '@/components/SacredArt';
 import { LanguageToggle } from '@/components/LanguageToggle';
+import { DailyReliquary } from '@/components/DailyReliquary';
 
 export default function TodayPage() {
   const { t, save } = useI18n();
@@ -50,6 +51,10 @@ export default function TodayPage() {
             <p className="font-story text-2xl leading-relaxed text-ivory">{t(UI.roadComplete)}</p>
           </div>
         )}
+
+        <div className="mt-4">
+          <DailyReliquary />
+        </div>
       </div>
 
       {/* Thumb territory: the one action lives at the bottom */}

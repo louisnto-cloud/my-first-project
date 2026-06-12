@@ -27,6 +27,8 @@ export interface SaveDoc {
   /** Spaced-repetition seed: itemId -> times seen. */
   seen: Record<string, number>;
   sound: boolean;
+  /** ISO date the Daily Reliquary was last opened. */
+  reliquary: string;
 }
 
 const KEY = 'pilgrimage.v1';
@@ -43,6 +45,7 @@ const fresh = (): SaveDoc => ({
   journal: [],
   seen: {},
   sound: false,
+  reliquary: '',
 });
 
 let cache: SaveDoc | null = null;

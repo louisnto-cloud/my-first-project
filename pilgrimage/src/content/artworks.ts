@@ -72,6 +72,96 @@ export const ARTWORKS: Artwork[] = [
     title: { en: 'The cross at dawn', vi: 'Thánh giá lúc bình minh', viStatus: 'unverified' },
     credit: 'Original scene.',
   },
+  {
+    id: 'basilica-bruges',
+    title: { en: 'Basilica of the Holy Blood, Bruges', vi: 'Vương cung thánh đường Máu Thánh, Bruges', viStatus: 'verified' },
+    credit: 'Original scene. Future photo: Wikimedia Commons, Basilica of the Holy Blood.',
+  },
+  {
+    id: 'eden-tree',
+    title: { en: 'The garden and the tree', vi: 'Khu vườn và cái cây', viStatus: 'unverified' },
+    credit: 'Original scene. Future image: Wikimedia Commons, mosaic of Eden.',
+  },
+  {
+    id: 'prophet-night',
+    title: { en: 'The long waiting', vi: 'Sự chờ đợi dài lâu', viStatus: 'unverified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'annunciation',
+    title: { en: 'The Annunciation', vi: 'Truyền Tin', viStatus: 'verified' },
+    credit: 'Original scene. Future image: Fra Angelico, The Annunciation (Wikimedia Commons).',
+  },
+  {
+    id: 'nativity',
+    title: { en: 'The Nativity', vi: 'Chúa Giáng Sinh', viStatus: 'verified' },
+    credit: 'Original scene. Future image: Giotto, Nativity (Wikimedia Commons).',
+  },
+  {
+    id: 'cana-jars',
+    title: { en: 'The wedding at Cana', vi: 'Tiệc cưới Cana', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'prodigal-embrace',
+    title: { en: 'The return of the prodigal son', vi: 'Người con hoang đàng trở về', viStatus: 'unverified' },
+    credit: 'Original scene. Future image: Rembrandt, Return of the Prodigal Son (Wikimedia Commons).',
+  },
+  {
+    id: 'samaritan-road',
+    title: { en: 'The good Samaritan', vi: 'Người Samari nhân hậu', viStatus: 'unverified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'loaves-fishes',
+    title: { en: 'Five loaves and two fish', vi: 'Năm chiếc bánh và hai con cá', viStatus: 'unverified' },
+    credit: 'Original scene. Future image: early Christian mosaic, Tabgha (Wikimedia Commons).',
+  },
+  {
+    id: 'storm-sea',
+    title: { en: 'Walking on the water', vi: 'Đi trên mặt nước', viStatus: 'unverified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'palm-gate',
+    title: { en: 'Palm Sunday', vi: 'Chúa nhật Lễ Lá', viStatus: 'verified' },
+    credit: 'Original scene. Future image: Giotto, Entry into Jerusalem (Wikimedia Commons).',
+  },
+  {
+    id: 'last-supper',
+    title: { en: 'The Last Supper', vi: 'Bữa Tiệc Ly', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'gethsemane',
+    title: { en: 'The garden of Gethsemane', vi: 'Vườn Cây Dầu', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'cross-passion',
+    title: { en: 'The Cross', vi: 'Thánh giá', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'tomb-morning',
+    title: { en: 'Easter morning', vi: 'Sáng Phục Sinh', viStatus: 'verified' },
+    credit: 'Original scene. Future image: Fra Angelico, Resurrection fresco (Wikimedia Commons).',
+  },
+  {
+    id: 'relic-blood',
+    title: { en: 'The relic of the Holy Blood', vi: 'Thánh tích Máu Thánh', viStatus: 'unverified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'emmaus-road',
+    title: { en: 'The road to Emmaus', vi: 'Đường Emmau', viStatus: 'unverified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'ascension',
+    title: { en: 'The Ascension', vi: 'Chúa Lên Trời', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
   { id: 'symbol-water', title: { en: 'Water', vi: 'Nước', viStatus: 'verified' }, credit: 'Original symbol.' },
   { id: 'symbol-light', title: { en: 'Light', vi: 'Ánh sáng', viStatus: 'verified' }, credit: 'Original symbol.' },
   { id: 'symbol-bread', title: { en: 'Bread', vi: 'Bánh', viStatus: 'verified' }, credit: 'Original symbol.' },
