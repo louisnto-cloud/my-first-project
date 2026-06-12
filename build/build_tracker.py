@@ -18,8 +18,13 @@ from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.formatting.rule import CellIsRule, FormulaRule
 from openpyxl.workbook.defined_name import DefinedName
+from openpyxl.chart import BarChart, DoughnutChart, Reference
+from openpyxl.chart.series import DataPoint
+from openpyxl.chart.shapes import GraphicalProperties
+from openpyxl.chart.label import DataLabelList
+from openpyxl.worksheet.properties import PageSetupProperties
 
-OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v2.xlsx"
+OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v3.xlsx"
 
 # ---------- palette ----------
 C_TITLE   = "FF2E5A4E"   # dark green title bar + KPI numbers
@@ -241,6 +246,24 @@ def hcell(ws, row, col, text):
     c = ws.cell(row,col,text); c.font = font(12, True, WHITE); c.fill = fill(C_HEADER)
     c.alignment = A_C; c.border = BORD; return c
 
+BAND = "FFF4F8F6"   # barely there green grey for alternate rows
+def band(ws, first, last, ncol):
+    for r in range(first, last+1):
+        if (r-first) % 2 == 1:
+            for c in range(1, ncol+1):
+                ws.cell(r,c).fill = fill(BAND)
+
+def printsetup(ws, title_rows="1:2"):
+    ws.page_setup.orientation = "landscape"
+    ws.page_setup.fitToWidth = 1; ws.page_setup.fitToHeight = 0
+    ws.sheet_properties.pageSetUpPr = PageSetupProperties(fitToPage=True)
+    if title_rows: ws.print_title_rows = title_rows
+
+def linkcell(cell, value):
+    tgt = ("https://instagram.com/"+value[1:]) if value.startswith("@") else (value if value.startswith("http") else "https://"+value)
+    cell.hyperlink = tgt
+    cell.font = Font(name="Arial", size=12, color=C_HEADER, underline="single")
+
 print("building lookups...")
 # ---------------- LOOKUPS ----------------
 lu = wb.active; lu.title = "Lookups"
@@ -334,6 +357,7 @@ def build_type_tab(tname):
             if "owner" not in d: ws.cell(r,8,"Maddie")
             if "warm" not in d: ws.cell(r,17,"Cold")
             if "inbc" not in d: ws.cell(r,34,"No")
+            if d.get("ig"): linkcell(ws.cell(r,13), d["ig"])   # clickable Instagram or website
         # live formulas on every row so new entries behave the same
         ws.cell(r,1, f'=IF($B{r}="","",ROW()-2)')                                   # auto number
         ws.cell(r,3, f'=IF($B{r}="","","{tname}")')                                 # auto type label
@@ -344,9 +368,11 @@ def build_type_tab(tname):
         for c in MONEYCOLS: ws.cell(r,c).number_format = FMT_MONEY
         ws.cell(r,27).number_format = FMT_CENTS
         ws.cell(r,19).number_format = FMT_INT
+    band(ws, FIRST, LASTROW, NCOL)
     ws.freeze_panes = "C3"
     ws.auto_filter.ref = f"A2:{LASTCOL}{LASTROW}"
     ws.sheet_properties.tabColor = "4F8A78"
+    printsetup(ws)
     add_validations(ws)
     add_cond_formats(ws)
     return ws
@@ -391,9 +417,10 @@ for t in TYPES:
         k.font = font(9, color="FFB7C9C1")
         mr += 1
 ML_ROWS_END = mr-1
+band(ml, 3, ML_ROWS_END, 1 + len(SRCCOLS))
 ml.column_dimensions[get_column_letter(NCOL)].hidden = True
 ml.freeze_panes = "C3"; ml.auto_filter.ref = "A2:{}{}".format(ML_LAST, ML_ROWS_END)
-ml.sheet_properties.tabColor = "6FA392"
+ml.sheet_properties.tabColor = "6FA392"; printsetup(ml)
 MLR = "'Master List'!"   # shorthand for formulas, ranges $3:$500
 
 # =====================================================================
@@ -500,7 +527,35 @@ for i,(sku,col) in enumerate([("Raspberry 4338",ml_letter(35)),("Lemon Lime 4336
     for j,stt in enumerate(["Requested","Sampled","Stocked"]):
         cc=dash.cell(15+i,11+j,"=COUNTIF({M}${c}$3:${c}$500,\"{s}\")".format(M=ML,c=col,s=stt))
         cc.font=font(11,False,C_DATA); cc.alignment=A_CL
-dash.cell(25,1,"Every figure refreshes automatically. To change a record, edit its type tab. The Master List, Calendar and these tiles all update on their own.").font=font(11,False,C_SUB)
+# date stamp, top right
+dash.merge_cells("L2:N2")
+ds=dash.cell(2,12,'="As of  "&TEXT(TODAY(),"yyyy/mm/dd")')
+ds.font=font(11,False,C_SUB); ds.alignment=Alignment(horizontal="right",vertical="center")
+# Region rollup (G17)
+METRO=["Vancouver","Burnaby","North Vancouver","West Vancouver","Richmond","Surrey","Langley","Coquitlam","New Westminster"]
+sect(17,7,"Region")
+line(18,7,"Metro Vancouver","="+"+".join('COUNTIF({M}$C$3:$C$500,"{c}")'.format(M=ML,c=c) for c in METRO))
+line(19,7,"Victoria",'=COUNTIF({M}$C$3:$C$500,"Victoria")'.format(M=ML))
+line(20,7,"Kelowna",'=COUNTIF({M}$C$3:$C$500,"Kelowna")'.format(M=ML))
+dash.cell(25,1,"Every figure and chart refreshes on its own. To change a record, edit its type tab. The Master List, Calendar, tiles and charts all update automatically.").font=font(11,False,C_SUB)
+# live charts
+def style_series(ser, clr):
+    ser.graphicalProperties = GraphicalProperties(solidFill=clr)
+ch1 = BarChart(); ch1.type="bar"; ch1.title="Pipeline by Stage"; ch1.legend=None; ch1.height=7.2; ch1.width=9
+ch1.add_data(Reference(dash,min_col=2,min_row=8,max_row=16)); ch1.set_categories(Reference(dash,min_col=1,min_row=8,max_row=16))
+style_series(ch1.series[0], C_HEADER[2:]); ch1.dataLabels=DataLabelList(); ch1.dataLabels.showVal=True
+dash.add_chart(ch1,"A27")
+ch2 = BarChart(); ch2.type="bar"; ch2.title="Partners by Type"; ch2.legend=None; ch2.height=7.2; ch2.width=9
+ch2.add_data(Reference(dash,min_col=5,min_row=8,max_row=15)); ch2.set_categories(Reference(dash,min_col=4,min_row=8,max_row=15))
+style_series(ch2.series[0], "6FA392"); ch2.dataLabels=DataLabelList(); ch2.dataLabels.showVal=True
+dash.add_chart(ch2,"F27")
+ch3 = DoughnutChart(); ch3.title="Priority Split"; ch3.height=7.2; ch3.width=9
+ch3.add_data(Reference(dash,min_col=8,min_row=8,max_row=10)); ch3.set_categories(Reference(dash,min_col=7,min_row=8,max_row=10))
+pts=[]
+for i,clr in enumerate(["2E5A4E","4F8A78","8FB3A6"]):
+    dp=DataPoint(idx=i); dp.graphicalProperties=GraphicalProperties(solidFill=clr); pts.append(dp)
+ch3.series[0].data_points=pts; ch3.dataLabels=DataLabelList(); ch3.dataLabels.showVal=True
+dash.add_chart(ch3,"K27")
 dash.sheet_properties.tabColor = "2E5A4E"
 
 # =====================================================================
@@ -619,9 +674,10 @@ for val,clr in [("P1",F_P1),("P2",F_P2),("P3",F_P3)]:
 for val,clr in [("Verified Web",F_GREEN),("Verified Phone",F_GREEN),("Verified In Person",F_GREEN),
                 ("Pending",F_AMBER),("Unverified",F_P3)]:
     secf(f"H{FIRST}:H{LASTROW}", CellIsRule(operator="equal", formula=[f'"{val}"'], fill=fill(clr)))
+band(se, FIRST, LASTROW, len(SE_HDRS))
 se.freeze_panes = "C3"
 se.auto_filter.ref = f"A2:{SE_LAST}{LASTROW}"
-se.sheet_properties.tabColor = "8FB3A6"
+se.sheet_properties.tabColor = "8FB3A6"; printsetup(se)
 subtitle(se, LASTROW+2, "Idea parking lot for events farther down the line. It starts empty on purpose. When an idea is approved, add it as a partner row on the Events & Festivals tab and book the activation there. Nothing on this tab feeds the Master List or the Calendar.")
 
 # =====================================================================
@@ -669,7 +725,7 @@ gsec(r,"The boundary rule, BC Tracker or this file"); r+=1
 gline(r,"If it sells cans on a shelf it lives in the BC Tracker. If it samples, sponsors, or creates content it lives here."); r+=1
 gline(r,"A partner can live in both files. Use the In BC Tracker column to flag any partner that also sits in the BC Tracker."); r+=1
 gline(r,"This file is the sister to the BC Tracker. That file tracks retail doors. This file tracks community partnerships and activations."); r+=2
-gsec(r,"Nothing here is pre proposed"); r+=1
+gsec(r,"Nothing is proposed in advance"); r+=1
 gline(r,"Every partner row carries research facts only: who they are, where they are, audience and source."); r+=1
 gline(r,"Activation Type, Activation Date, cases and budget all start blank. They only fill when the team books something real."); r+=1
 gline(r,"The Activation Calendar starts empty for the same reason. Enter an Activation Date on a type tab and the row appears there on its own, soonest first."); r+=2
@@ -734,11 +790,15 @@ gsec(r,"Version"); r+=1
 gline(r,"2026 06  v1","First build. 60 researched partners, live Dashboard, Activation Calendar, read only Master List, eight type tabs.")
 r+=1
 gline(r,"2026 06  v2","Cleared every proposed activation so the team books real ones. Maddie set as the single owner. Added the empty Suggested Events tab, List Health on the Dashboard and % to Target on the Type Summary.")
+r+=1
+gline(r,"2026 06  v3","Polish pass. Live Dashboard charts, clickable Instagram and website links, a region rollup, soft row banding for readability, a date stamp and clean print layout on every tab.")
 gd.sheet_properties.tabColor="B7C9C1"
 
 # =====================================================================
 # ORDER + SAVE
 # =====================================================================
+for ws in wb.worksheets:
+    printsetup(ws, "1:2" if ws.title not in ("Dashboard","Guide") else None)
 order = ["Dashboard","Activation Calendar","Master List","Type Summary","Budget"] + TYPES + ["Suggested Events","Lookups","Sales Team","Guide"]
 wb._sheets.sort(key=lambda s: order.index(s.title))
 wb.active = 0

@@ -5,7 +5,7 @@ import openpyxl
 from openpyxl.utils import get_column_letter
 warnings.filterwarnings("ignore")
 
-OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v2.xlsx"
+OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v3.xlsx"
 SRC = "/root/.claude/uploads/607dab49-f51b-5b86-83ad-5f4c7139295f/029750d9-Organika_RTD_BC_Tracker.xlsx"
 fails=[]; warns=[]
 def ok(m): print("  PASS  "+m)
@@ -213,6 +213,28 @@ print(f"        rows with TBD/blank audience: {len(tbd)}")
 for t,nm in tbd: print("          -",t,"/",nm)
 print(f"        rows tagged Pending or Unverified: {len(pend)}")
 for t,nm,s in pend: print("          -",t,"/",nm,f"({s})")
+
+print("\n[11] v3 POLISH (charts, links, banding, region)")
+dash=wb["Dashboard"]
+ncharts=len(dash._charts)
+if ncharts==3: ok(f"Dashboard carries {ncharts} live charts")
+else: bad(f"Dashboard charts = {ncharts} (expected 3)")
+links=0
+for t in TYPES:
+    ws=wb[t]
+    for r in range(3,33):
+        if ws.cell(r,13).hyperlink is not None: links+=1
+        if ws.cell(r,13).hyperlink is not None and "-" in str(ws.cell(r,13).hyperlink.target or ""):
+            warn(f"hyphen in link target {t}!M{r}")
+if links>=50: ok(f"{links} clickable Instagram or website links on type tabs")
+else: bad(f"only {links} hyperlinks found")
+rc=wb["Run Clubs"]
+banded = rc.cell(4,2).fill.fgColor.rgb=="FFF4F8F6" and (rc.cell(3,2).fill.patternType is None)
+if banded: ok("row banding present on type tabs (alternate rows shaded)")
+else: warn("row banding not detected")
+reg=dash.cell(17,7).value
+if reg=="Region": ok("Region rollup present on the Dashboard")
+else: warn(f"Region cell = {reg!r}")
 
 print("\n================ QA SUMMARY ================")
 print(f"  FAILURES: {len(fails)}")
