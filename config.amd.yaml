@@ -1,0 +1,51 @@
+# ============================================================================
+#  AMD STOCK CONFIG  --  for backtesting / paper trading AMD (Advanced Micro Devices)
+# ============================================================================
+#  Use this with:   python backtest.py --config config.amd.yaml --days 30
+#             or:   python run_bot.py  --config config.amd.yaml
+#
+#  READ THIS FIRST:
+#   * Stocks on Alpaca are commission-free, so fee_percent_per_side is 0.0 here.
+#     BUT you still pay the bid/ask spread + slippage, so keep a real profit
+#     cushion (the 1.0% target below is sensible; do not go tiny).
+#   * PATTERN DAY TRADER RULE: a US account under $25,000 is restricted from
+#     frequent day trades. A grid bot trades a lot, so a small stock account
+#     can get blocked fast. This is exactly why the guide starts with crypto.
+#   * The band_low / band_high below are PLACEHOLDERS. You MUST replace them
+#     with AMD's actual recent low and high (look at a 1-3 month chart, or run
+#     the --days 30 backtest and read the start/end prices it prints).
+# ============================================================================
+
+mode: "dry_run"                  # stay safe; switch to "paper" only after a real backtest
+i_really_want_live_trading: false
+
+asset_class: "stock"
+symbol: "AMD"
+
+# Stocks are commission-free on Alpaca. Slippage/spread are the real cost.
+fee_percent_per_side: 0.0
+
+# >>> PLACEHOLDER BAND — REPLACE WITH AMD'S ACTUAL RECENT RANGE <<<
+band_low: 100.0
+band_high: 140.0
+
+grid_levels: 6
+profit_target_percent: 1.0       # keep a cushion for spread/slippage; don't go tiny
+order_size_usd: 50.0             # small on purpose; scale up deliberately, not on day one
+
+# Risk limits — deliberately small. Do NOT jump to $10,000 before proving it works.
+max_position_usd: 300.0
+max_deployed_usd: 300.0
+max_open_orders: 12
+daily_loss_limit_usd: 30.0
+
+breakout_guard_enabled: true
+breakout_flatten: false
+
+loop_interval_seconds: 30
+
+alerts_enabled: false
+
+log_dir: "logs"
+state_file: "state/bot_state_amd.json"   # separate memory file from the BTC bot
+kill_switch_file: "KILL"
