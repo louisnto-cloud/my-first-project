@@ -18,6 +18,15 @@ See [`APP_PROMPT.md`](./APP_PROMPT.md) for the full product spec.
 | 👩‍💼 **Owner (admin)** | Everything teachers get, plus center-wide stats across all classes |
 | 👨‍👦 **Parent** | Read-only view of their child's grades, schedule, homework, and badges |
 
+## Install it on a phone (no app store needed)
+
+The app is a PWA. Open the live link in the phone's browser, then:
+- **iPhone (Safari):** tap Share → **Add to Home Screen** ("Thêm vào MH chính")
+- **Android (Chrome):** tap ⋮ → **Install app** / **Add to Home screen**
+
+It appears with the E’TOP icon and opens full-screen like a native app, and
+the app shell works offline after the first visit.
+
 ## Run it
 
 ```bash
