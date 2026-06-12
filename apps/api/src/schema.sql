@@ -190,6 +190,146 @@ CREATE INDEX IF NOT EXISTS idx_attendance_date ON attendance_records(date, site_
 CREATE INDEX IF NOT EXISTS idx_escalations_open ON escalations(status, site_id, date);
 CREATE INDEX IF NOT EXISTS idx_safety_events_time ON safety_events(org_id, occurred_at);
 
+-- ---------- Phase 3: Learning engine + Part C classes/assignments ----------
+
+-- Skills taxonomy: subject → strand → skill with prerequisite edges
+-- (knowledge graph). Seeded for English; orgs can extend later.
+CREATE TABLE IF NOT EXISTS skills (
+  id TEXT PRIMARY KEY,
+  subject TEXT NOT NULL DEFAULT 'english',
+  strand TEXT NOT NULL,           -- grammar | reading | listening | writing
+  level TEXT NOT NULL,            -- pre_a1_starters | a1_movers | a2_flyers | b1
+  key TEXT NOT NULL UNIQUE,
+  name TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS skill_prereqs (
+  skill_id TEXT NOT NULL REFERENCES skills(id),
+  prereq_id TEXT NOT NULL REFERENCES skills(id),
+  PRIMARY KEY (skill_id, prereq_id)
+);
+
+-- Class join requests (child enters a code like BEAR42; teacher approves).
+CREATE TABLE IF NOT EXISTS join_requests (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  class_id TEXT NOT NULL REFERENCES classes(id),
+  student_id TEXT NOT NULL REFERENCES users(id),
+  status TEXT NOT NULL DEFAULT 'pending', -- pending | approved | rejected
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  decided_at TIMESTAMPTZ,
+  decided_by TEXT,
+  UNIQUE (class_id, student_id, status)
+);
+
+-- Teacher question bank. Payload is type-specific; answers never leave the
+-- server when serving students. Publisher content must NOT be uploaded
+-- (copyright notice shown at upload; series/unit are metadata only).
+CREATE TABLE IF NOT EXISTS questions (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  owner_id TEXT NOT NULL REFERENCES users(id),
+  type TEXT NOT NULL,   -- mc | mc_multi | fill_blank | fill_gaps | reorder | listen_mc | dictation | picture
+  skill TEXT NOT NULL,  -- grammar | reading | listening | writing (exactly one)
+  level TEXT,
+  series TEXT,          -- coursebook metadata only, e.g. 'Everybody Up'
+  unit TEXT,
+  prompt TEXT NOT NULL DEFAULT '',
+  payload JSONB NOT NULL,
+  shared BOOLEAN NOT NULL DEFAULT false,
+  shared_approved BOOLEAN NOT NULL DEFAULT false,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS assignments (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  class_id TEXT NOT NULL REFERENCES classes(id),
+  created_by TEXT NOT NULL REFERENCES users(id),
+  title TEXT NOT NULL,
+  instructions TEXT NOT NULL DEFAULT '',
+  due_at TIMESTAMPTZ,
+  time_limit_min INT,
+  attempts_allowed INT NOT NULL DEFAULT 1,
+  show_results TEXT NOT NULL DEFAULT 'instant', -- instant | after_review
+  fixed_order BOOLEAN NOT NULL DEFAULT false,   -- true disables per-student shuffle
+  status TEXT NOT NULL DEFAULT 'draft',         -- draft | published | locked
+  published_at TIMESTAMPTZ,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS assignment_questions (
+  assignment_id TEXT NOT NULL REFERENCES assignments(id),
+  question_id TEXT NOT NULL REFERENCES questions(id),
+  position INT NOT NULL,
+  points INT NOT NULL DEFAULT 1,
+  PRIMARY KEY (assignment_id, question_id)
+);
+
+CREATE TABLE IF NOT EXISTS submissions (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  assignment_id TEXT NOT NULL REFERENCES assignments(id),
+  student_id TEXT NOT NULL REFERENCES users(id),
+  attempt INT NOT NULL DEFAULT 1,
+  status TEXT NOT NULL DEFAULT 'in_progress', -- in_progress | submitted | graded
+  answers JSONB NOT NULL DEFAULT '{}',        -- autosaved continuously
+  started_at TIMESTAMPTZ NOT NULL,
+  submitted_at TIMESTAMPTZ,
+  late BOOLEAN NOT NULL DEFAULT false,
+  auto_points REAL,
+  auto_possible REAL,
+  manual_points REAL,
+  manual_possible REAL,
+  skill_scores JSONB,    -- {grammar: {earned, possible}, ...}
+  rubric JSONB,          -- teacher taps: accuracy/vocabulary/structure + comment
+  graded_by TEXT,
+  graded_at TIMESTAMPTZ,
+  UNIQUE (assignment_id, student_id, attempt)
+);
+
+-- Per-skill mastery (broad skills now; knowledge-graph mastery in Phase 6).
+CREATE TABLE IF NOT EXISTS mastery (
+  student_id TEXT NOT NULL REFERENCES users(id),
+  skill TEXT NOT NULL,
+  score REAL NOT NULL,
+  updated_at TIMESTAMPTZ NOT NULL,
+  PRIMARY KEY (student_id, skill)
+);
+
+-- Tutor session logging, designed for one request in under 60 seconds.
+CREATE TABLE IF NOT EXISTS session_logs (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  class_id TEXT NOT NULL REFERENCES classes(id),
+  tutor_id TEXT NOT NULL REFERENCES users(id),
+  student_id TEXT NOT NULL REFERENCES users(id),
+  date DATE NOT NULL,
+  skills JSONB NOT NULL DEFAULT '[]',
+  engagement INT,            -- 1-5
+  note TEXT NOT NULL DEFAULT '',
+  parent_note TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+-- Individual Learning Plans: living, versioned documents.
+CREATE TABLE IF NOT EXISTS ilps (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  student_id TEXT NOT NULL REFERENCES users(id),
+  version INT NOT NULL,
+  goals JSONB NOT NULL,      -- [{skillKey, targetDate, goal, parentFacing}]
+  status TEXT NOT NULL DEFAULT 'active',
+  created_by TEXT NOT NULL REFERENCES users(id),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  UNIQUE (student_id, version)
+);
+
+CREATE INDEX IF NOT EXISTS idx_questions_bank ON questions(org_id, skill, level);
+CREATE INDEX IF NOT EXISTS idx_assignments_class ON assignments(class_id, status);
+CREATE INDEX IF NOT EXISTS idx_submissions_student ON submissions(student_id);
+CREATE INDEX IF NOT EXISTS idx_submissions_grading ON submissions(org_id, status);
+
 CREATE INDEX IF NOT EXISTS idx_users_org ON users(org_id);
 CREATE INDEX IF NOT EXISTS idx_classes_org ON classes(org_id);
 CREATE INDEX IF NOT EXISTS idx_enroll_student ON enrollments(student_id);

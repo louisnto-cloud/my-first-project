@@ -95,6 +95,43 @@ export async function seedDemo(db: DB): Promise<void> {
       [id, 'org_etop', cls[0], cls[1], room, start.toISOString(), end.toISOString()],
     );
   };
+  // Starter skills taxonomy: 4 strands × 4 levels with prerequisite edges
+  // forming a simple chain per strand (knowledge graph grows with content).
+  const strands = ['grammar', 'reading', 'listening', 'writing'];
+  const levels = ['pre_a1_starters', 'a1_movers', 'a2_flyers', 'b1'];
+  for (const strand of strands) {
+    let prev: string | null = null;
+    for (const level of levels) {
+      const id = `sk_${strand}_${level}`;
+      await db.query('INSERT INTO skills (id, subject, strand, level, key, name) VALUES ($1, $2, $3, $4, $5, $6)', [
+        id, 'english', strand, level, `${strand}.${level}`, `${strand[0].toUpperCase()}${strand.slice(1)} — ${level.replace(/_/g, ' ')}`,
+      ]);
+      if (prev) await db.query('INSERT INTO skill_prereqs (skill_id, prereq_id) VALUES ($1, $2)', [id, prev]);
+      prev = id;
+    }
+  }
+
+  // Join codes for every class.
+  const codes = ['BEAR42', 'LION07', 'STAR91', 'FISH23', 'DUCK55', 'MOON38'];
+  for (let i = 0; i < classes.length; i++) {
+    await db.query('UPDATE classes SET join_code = $2 WHERE id = $1', [classes[i][0], codes[i]]);
+  }
+
+  // Starter question bank for Ms. Lan (one of each type, no publisher content).
+  const q = (id: string, type: string, skill: string, prompt: string, payload: object) =>
+    db.query(
+      `INSERT INTO questions (id, org_id, owner_id, type, skill, level, unit, prompt, payload) VALUES ($1, 'org_etop', 'u_lan', $2, $3, 'pre_a1_starters', 'Unit 1', $4, $5)`,
+      [id, type, skill, prompt, JSON.stringify(payload)],
+    );
+  await q('q_mc1', 'mc', 'grammar', 'I ___ a student.', { options: ['am', 'is', 'are', 'be'], answer: 'am' });
+  await q('q_mcm1', 'mc_multi', 'grammar', 'Choose ALL the colour words:', { options: ['red', 'cat', 'blue', 'run'], answers: ['red', 'blue'] });
+  await q('q_fb1', 'fill_blank', 'reading', 'The cat is ___ the table. (under)', { sentence: 'The cat is ___ the table.', choices: ['under', 'eat', 'blue'], answer: 'under' });
+  await q('q_fg1', 'fill_gaps', 'grammar', 'Complete the sentences.', { text: 'I __1__ seven years old. She __2__ my friend.', gaps: [{ id: 1, answer: 'am' }, { id: 2, answer: 'is' }], wordBank: ['am', 'is', 'are'] });
+  await q('q_ro1', 'reorder', 'writing', 'Make a sentence:', { words: ['My', 'name', 'is', 'Mai'], answer: 'My name is Mai' });
+  await q('q_li1', 'listen_mc', 'listening', 'Listen and choose what you hear.', { audioText: 'Good morning, teacher!', options: ['Good morning, teacher!', 'Good night, teacher!', 'Good morning, Peter!'], answer: 'Good morning, teacher!', replayLimit: 2 });
+  await q('q_di1', 'dictation', 'writing', 'Listen and type what you hear.', { audioText: 'I like my school.', replayLimit: 2 });
+  await q('q_pi1', 'picture', 'writing', 'Describe the picture in 2 sentences.', { imageUrl: null, starters: ['I can see…', 'There is…'] });
+
   await meeting('m1', classes[0], 17, 30, 90, 'P.101');
   await meeting('m2', classes[1], 17, 30, 90, 'P.102');
   await meeting('m3', classes[2], 19, 15, 90, 'P.103');

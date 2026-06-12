@@ -1,6 +1,39 @@
 # CHANGELOG.md
 
-## Phase 2 — Safety core (at gate)
+## Phase 3 — Learning engine + Part C module (at gate)
+
+- Skills taxonomy knowledge graph: subject → strand → skill with
+  prerequisite edges; seeded 16 skills across 4 CEFR levels.
+- Class join codes (child-friendly BEAR42 style): teacher rotates anytime
+  (old code dies instantly), student joins once, teacher approves before
+  enrollment; codes are case-insensitive and tenant-scoped.
+- Question bank: all 8 Part C question types (MC single/multi,
+  fill-blank, fill-gaps with word bank, sentence reordering, listening MC
+  with replay limit, dictation, picture description with sentence
+  starters); skill-tagged (exactly one of G/R/L/W); CEFR + coursebook
+  series/unit metadata; share-to-school flow with approval; copyright
+  responsibility notice returned on every upload.
+- Assignment lifecycle: draft → publish (push to every member + guardian
+  digest line) → lock; due dates, attempt limits, time limits,
+  instant-vs-after-review results; one-tap clone.
+- Variation engine: deterministic per-student shuffle of question and
+  option order (two students never see identical papers unless the
+  teacher chooses fixed mode); correct answers never serialized to
+  students (tested on the wire).
+- Student flow: start (membership enforced server-side), continuous
+  autosave (dropped connection loses nothing), submit with autograding
+  of closed types, late flagged but allowed, ETOP-weighted overall
+  (G30/L30/R20/W20, renormalized over skills present).
+- Teacher grading queue with rubric taps (accuracy/vocabulary/structure)
+  + comment; per-class gradebook with weighted overall and per-skill
+  breakdown; sub-60-second whole-class session logging in one request.
+- Mastery model (EMA per broad skill) updated from every submission and
+  grade; versioned ILPs (parents read, never write).
+- Part C definition-of-done e2e: a Class B student receives nothing and
+  is rejected by the API on direct ID access — and the denial is audited.
+- 19 new tests (48 total green).
+
+## Phase 2 — Safety core (shipped)
 
 - Attendance reconciliation: concrete class meetings as the expected
   roster; live today-view per site (expected / present / released).

@@ -52,6 +52,20 @@ Correct any assumption and dependent plans adjust.
   engine (never read from the clock inside logic) so the cascade is
   deterministic and testable minute-by-minute.
 
+- **D13 (Phase 3):** Question-pool mode ("pull N random from a tagged
+  pool") deferred; per-student deterministic shuffle + one-tap clone ship
+  now and already guarantee two students never see identical papers.
+  Pool mode lands with the authoring UI in Phase 4.
+- **D14 (Phase 3):** Tutor matching engine deferred to Phase 6 (ETOP
+  assigns one teacher per class today; matching matters at multi-site
+  tutor scale). Logged as a deviation from the Phase 3 list.
+- **D15 (Phase 3):** Mastery is tracked per broad skill (G/R/L/W) now;
+  per-graph-node mastery with decay lands in Phase 6 with the analytics
+  read model.
+- **D16 (Phase 3):** Rubric taps (accuracy/vocabulary/structure, 0–2
+  each) convert to the manual-question score as sum/6 of the points —
+  one decision a teacher makes in three taps.
+
 ## Assumptions (pending owner answers to the context questions)
 
 - **A1 — Identity:** "ETOP" = Trung tâm Anh Ngữ E'TOP, Phan Thiết, Việt Nam

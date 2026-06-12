@@ -5,11 +5,12 @@
 
  RUN  v2.1.9 /home/user/my-first-project/apps/api
 
- ✓ test/safety.test.ts (14 tests) 3415ms
- ✓ test/api.test.ts (15 tests) 3432ms
+ ✓ test/safety.test.ts (14 tests) 3582ms
+ ✓ test/learning.test.ts (19 tests) 3715ms
+ ✓ test/api.test.ts (15 tests) 3809ms
 
- Test Files  2 passed (2)
-      Tests  29 passed (29)
-   Start at  09:23:35
-   Duration  4.37s (transform 336ms, setup 0ms, collect 912ms, tests 6.85s, environment 0ms, prepare 197ms)
+ Test Files  3 passed (3)
+      Tests  48 passed (48)
+   Start at  09:32:40
+   Duration  4.80s (transform 474ms, setup 0ms, collect 1.64s, tests 11.11s, environment 1ms, prepare 254ms)
 
