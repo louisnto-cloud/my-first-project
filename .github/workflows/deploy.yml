@@ -31,7 +31,13 @@ jobs:
       # Publishing to the gh-pages branch auto-enables GitHub Pages,
       # which the github-pages deployment API is not allowed to do
       # with the default workflow token.
+      #
+      # keep_files: the gh-pages site is shared with The Pilgrimage app
+      # (deployed under /pilgrimage by main and its own branch). Overlay
+      # this build instead of replacing the whole tree, so the two apps
+      # coexist.
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./apps/web-prototype/dist
+          keep_files: true
