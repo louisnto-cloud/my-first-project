@@ -1,14 +1,15 @@
 import { createDb } from './db.js';
 import { buildServer } from './server.js';
-import { isSeeded, seedDemo } from './seed.js';
+import { isSeeded } from './seed.js';
+import { seedReal } from './seed-real.js';
 
 const DATA_DIR = process.env.ETOP_DATA_DIR ?? './.data/etop';
 const PORT = Number(process.env.PORT ?? 3001);
 
 const db = await createDb(DATA_DIR);
 if (!(await isSeeded(db))) {
-  console.log('Empty database — seeding demo tenant…');
-  await seedDemo(db);
+  console.log("Empty database — seeding the real E'TOP tenant…");
+  await seedReal(db);
 }
 
 const app = await buildServer(db);
