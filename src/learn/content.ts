@@ -1,9 +1,11 @@
 import type { Course } from '../types';
+import { FOUNDATIONS } from './foundations';
 
-// The built-in self-study curriculum. Three programs matched to E’TOP's
-// class levels; each lesson = new words + a grammar point + exercises.
+// The built-in self-study curriculum: a 20-level beginner path plus three
+// programs matched to E’TOP's class levels; each lesson = new words + a
+// grammar point + exercises.
 
-export const COURSES: Course[] = [
+const AUDIENCE_COURSES: Course[] = [
   {
     id: 'kids',
     emoji: '🐣',
@@ -678,13 +680,15 @@ export const COURSES: Course[] = [
   },
 ];
 
+export const COURSES: Course[] = [FOUNDATIONS, ...AUDIENCE_COURSES];
+
 export function allLessons(course: Course) {
   return course.units.flatMap((u) => u.lessons);
 }
 
 export function recommendedCourse(classLevels: string[]): Course {
   for (const course of COURSES) {
-    if (classLevels.some((lv) => course.levelKeywords.some((k) => lv.includes(k)))) return course;
+    if (course.levelKeywords.length && classLevels.some((lv) => course.levelKeywords.some((k) => lv.includes(k)))) return course;
   }
-  return COURSES[1]; // teens as a sensible default
+  return FOUNDATIONS;
 }

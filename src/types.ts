@@ -148,6 +148,15 @@ export interface LessonProgress {
   completedAt: string;
 }
 
+export interface CenterEvent {
+  id: string;
+  title: string;
+  date: string; // YYYY-MM-DD
+  time?: string;
+  kind: 'meeting' | 'test' | 'holiday' | 'activity';
+  classId?: string; // undefined = whole center
+}
+
 export interface DB {
   users: User[];
   classes: ClassInfo[];
@@ -159,4 +168,5 @@ export interface DB {
   practice: PracticeEvent[];
   feedback: Feedback[];
   lessonProgress: LessonProgress[];
+  events: CenterEvent[];
 }

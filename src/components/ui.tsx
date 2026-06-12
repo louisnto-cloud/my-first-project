@@ -54,6 +54,7 @@ export interface TabItem {
   emoji: string;
   label: string;
   end?: boolean;
+  badge?: number;
 }
 
 export function TabBar({ items }: { items: TabItem[] }) {
@@ -71,7 +72,14 @@ export function TabBar({ items }: { items: TabItem[] }) {
           >
             {({ isActive }) => (
               <>
-                <span className={`text-xl ${isActive ? 'animate-pop' : ''}`}>{it.emoji}</span>
+                <span className={`relative text-xl ${isActive ? 'animate-pop' : ''}`}>
+                  {it.emoji}
+                  {(it.badge ?? 0) > 0 && (
+                    <span className="absolute -right-2.5 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-rose-500 px-1 text-[9px] font-black text-white">
+                      {it.badge}
+                    </span>
+                  )}
+                </span>
                 {it.label}
               </>
             )}

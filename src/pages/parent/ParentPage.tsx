@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useApp } from '../../store';
 import { useI18n } from '../../i18n';
 import { Header, Pill } from '../../components/ui';
-import { BadgesView, GradesView, HomeworkView, ScheduleView } from '../../components/views';
+import { BadgesView, EventsView, GradesView, HomeworkView, ScheduleView } from '../../components/views';
 import { FeedbackSection } from '../../components/Feedback';
 import { pointsOf, streakOf } from '../../lib';
 
@@ -49,6 +49,7 @@ export default function ParentPage() {
         <p className="text-xs font-semibold text-slate-400">🔒 {t('parent.readonly')}</p>
 
         <GradesView studentId={child.id} />
+        <EventsView classIds={child.classIds} />
         <ScheduleView classIds={child.classIds} />
 
         <div>

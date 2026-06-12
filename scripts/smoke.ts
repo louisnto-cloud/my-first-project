@@ -77,7 +77,12 @@ for (const course of COURSES) {
     }
   }
 }
-check(lessonIds.size >= 18, `expected at least 18 lessons, got ${lessonIds.size}`);
+check(lessonIds.size >= 38, `expected at least 38 lessons, got ${lessonIds.size}`);
+// events reference valid classes and have valid kinds
+for (const e of db.events) {
+  check(!e.classId || db.classes.some((c) => c.id === e.classId), `event references unknown class: ${e.id}`);
+  check(['meeting', 'test', 'holiday', 'activity'].includes(e.kind), `bad event kind: ${e.id}`);
+}
 // seeded lesson progress references real lessons
 for (const p of db.lessonProgress) {
   check(lessonIds.has(p.lessonId), `lesson progress references unknown lesson: ${p.lessonId}`);

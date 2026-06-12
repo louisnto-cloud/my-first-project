@@ -296,5 +296,12 @@ export function buildSeed(): DB {
     { studentId: 's0', lessonId: 'teens_u1_l1', bestPct: 100, stars: 3, attempts: 1, completedAt: daysAgo(2) },
   ];
 
-  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice, feedback, lessonProgress };
+  const events: DB['events'] = [
+    { id: 'ev1', title: 'Họp phụ huynh cuối khóa / End-of-term parent meeting', date: daysAgo(-6), time: '18:00', kind: 'meeting' },
+    { id: 'ev2', title: 'Kiểm tra cuối khóa / End-of-term test', date: daysAgo(-10), time: '19:15', kind: 'test', classId: 'c4' },
+    { id: 'ev3', title: 'English Festival 🎉', date: daysAgo(-15), time: '9:00', kind: 'activity' },
+    { id: 'ev4', title: 'Nghỉ lễ / Public holiday — no classes', date: daysAgo(-20), kind: 'holiday' },
+  ];
+
+  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice, feedback, lessonProgress, events };
 }

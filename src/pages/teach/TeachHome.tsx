@@ -1,9 +1,12 @@
 import { Link, Outlet } from 'react-router-dom';
+import { useState } from 'react';
 import { useApp } from '../../store';
-import { useI18n } from '../../i18n';
+import { fmtDate, useI18n } from '../../i18n';
 import { Header } from '../../components/ui';
 import { FeedbackInbox } from '../../components/Feedback';
-import { avgPct, studentsInClass } from '../../lib';
+import { EVENT_ICONS } from '../../components/views';
+import { avgPct, studentsInClass, todayISO, uid } from '../../lib';
+import type { CenterEvent } from '../../types';
 
 export function TeachLayout() {
   const { user } = useApp();
@@ -74,11 +77,87 @@ export function TeachHome() {
         })}
       </div>
 
+      <EventsManager />
+
       {isAdmin && <FeedbackInbox />}
 
       <button onClick={resetDemo} className="text-xs font-bold text-slate-300 underline hover:text-slate-400">
         {t('common.resetDemo')}
       </button>
+    </div>
+  );
+}
+
+function EventsManager() {
+  const { db, mutate, user } = useApp();
+  const { t, lang } = useI18n();
+  const [title, setTitle] = useState('');
+  const [date, setDate] = useState(todayISO());
+  const [time, setTime] = useState('');
+  const [kind, setKind] = useState<CenterEvent['kind']>('meeting');
+  const [classId, setClassId] = useState('');
+  if (!user) return null;
+
+  const isAdmin = user.role === 'admin';
+  const myClasses = isAdmin ? db.classes : db.classes.filter((c) => user.classIds.includes(c.id));
+  const today = todayISO();
+  const visible = db.events
+    .filter((e) => isAdmin || !e.classId || user.classIds.includes(e.classId))
+    .filter((e) => e.date >= today)
+    .sort((a, b) => a.date.localeCompare(b.date));
+
+  const add = () => {
+    if (!title.trim()) return;
+    mutate((d) =>
+      d.events.push({ id: uid('ev'), title: title.trim(), date, time: time || undefined, kind, classId: classId || undefined }),
+    );
+    setTitle('');
+    setTime('');
+  };
+
+  return (
+    <div className="card space-y-3">
+      <h3 className="font-extrabold text-violet-700">📣 {t('events.manage')}</h3>
+      <div className="space-y-2 rounded-2xl bg-violet-50 p-3">
+        <input className="input" placeholder={t('events.titlePh')} value={title} onChange={(e) => setTitle(e.target.value)} />
+        <div className="flex flex-wrap gap-2">
+          <input className="input !w-auto flex-1" type="date" value={date} onChange={(e) => setDate(e.target.value)} />
+          <input className="input !w-28" type="time" value={time} onChange={(e) => setTime(e.target.value)} />
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <select className="input !w-auto flex-1" value={kind} onChange={(e) => setKind(e.target.value as CenterEvent['kind'])}>
+            {(['meeting', 'test', 'holiday', 'activity'] as const).map((k) => (
+              <option key={k} value={k}>{EVENT_ICONS[k]} {t(`events.kind.${k}`)}</option>
+            ))}
+          </select>
+          <select className="input !w-auto flex-1" value={classId} onChange={(e) => setClassId(e.target.value)}>
+            {isAdmin && <option value="">{t('events.allCenter')}</option>}
+            {!isAdmin && myClasses.length > 1 && <option value="">{t('events.allCenter')}</option>}
+            {myClasses.map((c) => (
+              <option key={c.id} value={c.id}>{c.emoji} {c.name}</option>
+            ))}
+          </select>
+          <button onClick={add} className="btn-primary text-sm">{t('events.add')}</button>
+        </div>
+      </div>
+      {visible.length === 0 ? (
+        <p className="text-sm font-semibold text-slate-400">{t('events.none')}</p>
+      ) : (
+        <ul className="space-y-1.5">
+          {visible.map((e) => {
+            const cls = e.classId ? db.classes.find((c) => c.id === e.classId) : null;
+            return (
+              <li key={e.id} className="flex items-center gap-2 rounded-xl bg-violet-50 px-3 py-2 text-sm font-bold">
+                <span>{EVENT_ICONS[e.kind]}</span>
+                <span className="min-w-0 flex-1 truncate">{e.title}</span>
+                <span className="shrink-0 text-xs font-semibold text-slate-400">
+                  {cls ? cls.emoji : '🏫'} {fmtDate(e.date, lang)}{e.time ? ` · ${e.time}` : ''}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </div>
   );
 }

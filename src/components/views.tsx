@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useApp } from '../store';
 import { fmtDate, useI18n, WEEKDAYS } from '../i18n';
 import { BADGES, badgeStats, leaderboard, scoresOf, todayISO } from '../lib';
@@ -108,15 +109,68 @@ export function ScheduleView({ classIds }: { classIds: string[] }) {
   );
 }
 
+export const EVENT_ICONS: Record<string, string> = { meeting: '👥', test: '📝', holiday: '🌴', activity: '🎉' };
+
+export function EventsView({ classIds }: { classIds: string[] }) {
+  const { db } = useApp();
+  const { t, lang } = useI18n();
+  const today = todayISO();
+  const events = db.events
+    .filter((e) => !e.classId || classIds.includes(e.classId))
+    .filter((e) => e.date >= today)
+    .sort((a, b) => a.date.localeCompare(b.date));
+
+  return (
+    <div className="card">
+      <h3 className="mb-2 font-extrabold text-violet-700">📣 {t('events.title')}</h3>
+      {events.length === 0 ? (
+        <p className="text-sm font-semibold text-slate-400">{t('events.none')}</p>
+      ) : (
+        <ul className="space-y-2">
+          {events.map((e) => {
+            const cls = e.classId ? db.classes.find((c) => c.id === e.classId) : null;
+            return (
+              <li key={e.id} className="flex items-center gap-3 rounded-2xl bg-violet-50 p-3">
+                <span className="text-2xl">{EVENT_ICONS[e.kind]}</span>
+                <div className="min-w-0 flex-1">
+                  <div className="truncate text-sm font-extrabold">{e.title}</div>
+                  <div className="text-xs font-semibold text-slate-400">
+                    {t(`events.kind.${e.kind}`)} · {cls ? `${cls.emoji} ${cls.name}` : t('events.allCenter')}
+                  </div>
+                </div>
+                <div className="shrink-0 text-right text-xs font-black text-violet-600">
+                  {fmtDate(e.date, lang)}
+                  {e.time && <div className="font-bold text-slate-400">{e.time}</div>}
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+function dueInfo(due: string, t: (k: string) => string, lang: 'vi' | 'en'): string {
+  const diff = Math.round((Date.parse(due) - Date.parse(todayISO())) / 86400000);
+  if (diff === 0) return t('hw.dueToday');
+  if (diff === 1) return t('hw.dueTomorrow');
+  if (diff > 1) return `${t('hw.due')}: ${fmtDate(due, lang)} · ${diff} ${t('hw.daysLeft')}`;
+  return `${t('hw.due')}: ${fmtDate(due, lang)}`;
+}
+
 export function HomeworkView({ studentId, canToggle }: { studentId: string; canToggle: boolean }) {
   const { db, mutate } = useApp();
   const { t, lang } = useI18n();
+  const [filter, setFilter] = useState<'todo' | 'done' | 'all'>(canToggle ? 'todo' : 'all');
   const student = db.users.find((u) => u.id === studentId);
-  const items = db.homework
+  const all = db.homework
     .filter((h) => student?.classIds.includes(h.classId))
-    .sort((a, b) => b.dueDate.localeCompare(a.dueDate));
+    .sort((a, b) => a.dueDate.localeCompare(b.dueDate));
+  const isDone = (hwId: string) => db.homeworkStatus.some((s) => s.homeworkId === hwId && s.studentId === studentId && s.done);
+  const items = all.filter((h) => (filter === 'all' ? true : filter === 'done' ? isDone(h.id) : !isDone(h.id)));
 
-  if (items.length === 0) return <Empty emoji="🎈" text={t('hw.empty')} />;
+  if (all.length === 0) return <Empty emoji="🎈" text={t('hw.empty')} />;
 
   const statusOf = (hwId: string) => db.homeworkStatus.find((s) => s.homeworkId === hwId && s.studentId === studentId)?.done ?? false;
 
@@ -137,9 +191,22 @@ export function HomeworkView({ studentId, canToggle }: { studentId: string; canT
   };
 
   const today = todayISO();
+  const todoCount = all.filter((h) => !isDone(h.id)).length;
 
   return (
     <div className="space-y-3">
+      <div className="flex gap-1 rounded-2xl bg-violet-100 p-1">
+        {(['todo', 'done', 'all'] as const).map((f) => (
+          <button
+            key={f}
+            onClick={() => setFilter(f)}
+            className={`flex-1 rounded-xl px-3 py-2 text-xs font-extrabold transition ${filter === f ? 'bg-white text-violet-700 shadow' : 'text-violet-400'}`}
+          >
+            {f === 'todo' ? `📌 ${t('hw.todo')} (${todoCount})` : f === 'done' ? `✅ ${t('hw.done')}` : t('hw.all')}
+          </button>
+        ))}
+      </div>
+      {items.length === 0 && <Empty emoji={filter === 'todo' ? '🎉' : '🗂️'} text={filter === 'todo' ? t('dash.allDone') : t('hw.empty')} />}
       {items.map((hw) => {
         const done = statusOf(hw.id);
         const overdue = !done && hw.dueDate < today;
@@ -163,8 +230,8 @@ export function HomeworkView({ studentId, canToggle }: { studentId: string; canT
             </div>
             <p className="mt-2 text-sm text-slate-600">{hw.description}</p>
             <div className="mt-3 flex items-center justify-between">
-              <span className="text-xs font-bold text-slate-400">
-                {t('hw.due')}: {fmtDate(hw.dueDate, lang)}
+              <span className={`text-xs font-bold ${!done && hw.dueDate === today ? 'text-rose-500' : 'text-slate-400'}`}>
+                {done ? `${t('hw.due')}: ${fmtDate(hw.dueDate, lang)}` : dueInfo(hw.dueDate, t, lang)}
               </span>
               {canToggle && !done && (
                 <button onClick={() => toggle(hw.id)} className="btn-primary text-sm">

@@ -2,13 +2,20 @@ import { Link, Outlet } from 'react-router-dom';
 import { useApp } from '../../store';
 import { fmtDate, useI18n, WEEKDAYS } from '../../i18n';
 import { Header, Pill, scoreColor, TabBar } from '../../components/ui';
-import { BadgesView, GradesView, HomeworkView, LeaderboardView, ScheduleView } from '../../components/views';
+import { BadgesView, EventsView, GradesView, HomeworkView, LeaderboardView, ScheduleView } from '../../components/views';
 import { FeedbackSection } from '../../components/Feedback';
 import { pointsOf, practicedToday, scoresOf, streakOf, todayISO } from '../../lib';
 
 export function StudentLayout() {
   const { t } = useI18n();
-  const { user } = useApp();
+  const { db, user } = useApp();
+  const pendingHw = user
+    ? db.homework.filter(
+        (h) =>
+          user.classIds.includes(h.classId) &&
+          !db.homeworkStatus.some((s) => s.homeworkId === h.id && s.studentId === user.id && s.done),
+      ).length
+    : 0;
   return (
     <div className="min-h-screen pb-24">
       <Header subtitle={user?.name} />
@@ -20,7 +27,7 @@ export function StudentLayout() {
           { to: '/app', emoji: '🏠', label: t('nav.home'), end: true },
           { to: '/app/grades', emoji: '📊', label: t('nav.grades') },
           { to: '/app/schedule', emoji: '📅', label: t('nav.schedule') },
-          { to: '/app/homework', emoji: '📚', label: t('nav.homework') },
+          { to: '/app/homework', emoji: '📚', label: t('nav.homework'), badge: pendingHw },
           { to: '/app/practice', emoji: '📖', label: t('nav.learn') },
         ]}
       />
@@ -179,6 +186,7 @@ export function Schedule() {
   return (
     <div className="space-y-4">
       <h1 className="text-xl font-black">📅 {t('schedule.title')}</h1>
+      <EventsView classIds={user.classIds} />
       <ScheduleView classIds={user.classIds} />
     </div>
   );
