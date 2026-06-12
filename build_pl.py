@@ -5,6 +5,7 @@ from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.comments import Comment
 from openpyxl.utils import get_column_letter
 from openpyxl.workbook.properties import CalcProperties
+from openpyxl.formatting.rule import ColorScaleRule
 
 # ---- palette / styles (matched to the original template) ----
 NAVY   = "FF1F3864"
@@ -14,6 +15,7 @@ BLUE   = "FF0000FF"   # input-cell font
 BLACK  = "FF000000"   # formula-cell font
 GREY   = "FF595959"
 WHITE  = "FFFFFFFF"
+INPUT_FILL = "FFFFF2CC"   # light amber highlight on every editable input
 
 CUR2 = '\\$#,##0.00_);"($"#,##0.00\\);\\-'   # per-case currency
 CUR0 = '\\$#,##0_);"($"#,##0\\);\\-'          # total currency
@@ -71,6 +73,7 @@ COST_SHEET = "Cost Build-up"
 R_DIRECT, R_INDIRECT = 44, 45
 COST_DIRECT_REF   = f"='{COST_SHEET}'!$D${R_DIRECT}"
 COST_INDIRECT_REF = f"='{COST_SHEET}'!$D${R_INDIRECT}"
+COST_TOTAL_REF    = f"'{COST_SHEET}'!$D${R_INDIRECT+1}"   # COGS total / case (no leading =)
 
 
 def build_sheet(ws, title, section, is_total, sku_sheets=None):
@@ -103,7 +106,7 @@ def build_sheet(ws, title, section, is_total, sku_sheets=None):
 
     # row 6 legend
     ws.merge_cells(f"A6:{LAST_COL}6")
-    c = ws["A6"]; c.value = "\U0001F535 Blue = input cell (hardcoded)   ⚫ Black = formula   \U0001F535 Light-blue band = margin %"
+    c = ws["A6"]; c.value = "\U0001F7E1 Yellow box = input (edit these)   ⚫ Black = formula   \U0001F535 Blue band = margin %"
     c.font = font(8, False, GREY); c.alignment = Alignment("left", "center")
     ws.row_dimensions[6].height = 13.5
 
@@ -129,7 +132,9 @@ def build_sheet(ws, title, section, is_total, sku_sheets=None):
             cell.alignment = Alignment("right", "center")
             is_input = (not is_total) and col != TOT_COL and row in INPUT_ROWS
             cell.font = font(10, False, BLUE if is_input else BLACK)
-            if not is_input:
+            if is_input:
+                cell.fill = fill(INPUT_FILL)
+            else:
                 cell.value = formula(row, col, is_total, sku_sheets)
         # pct band fill across the whole row
         if row in PCT_ROWS:
@@ -339,6 +344,7 @@ def build_cost_buildup(ws):
     def put(cell, val, *, inp=False, fmt=None, bold=False, align="right"):
         c = ws[cell]; c.value = val
         c.font = Font(name="Arial", size=10, bold=bold, color=(BLUE if inp else BLACK))
+        if inp: c.fill = fill(INPUT_FILL)
         if fmt: c.number_format = fmt
         c.alignment = Alignment(align, "center")
 
@@ -500,6 +506,129 @@ def build_blended(ws, sku_sheets):
     ws.freeze_panes = "B5"
 
 
+def build_scenarios(ws):
+    """What-if sandbox: trial CP (wholesale) & MSRP points; compare scenarios; sensitivity grids."""
+    cogs = COST_TOTAL_REF   # COGS total / case, from Cost Build-up
+    ws.column_dimensions["A"].width = 30
+    for col in "BCDEFGH": ws.column_dimensions[col].width = 13
+    SCN = ["B","C","D","E","F"]
+
+    def band(rng, text):
+        first = rng.split(":")[0]; ws.merge_cells(rng)
+        c = ws[first]; c.value = text; c.font = font(11, True, WHITE); c.fill = fill(NAVY)
+        c.alignment = Alignment("left", "center")
+    def lab(r, text, bold=False):
+        c = ws[f"A{r}"]; c.value = text; c.font = font(10, bold, BLACK)
+        c.alignment = Alignment("left", "center")
+    def put(cell, val, *, inp=False, fmt=None, bold=False, band_fill=False):
+        c = ws[cell]; c.value = val
+        c.font = Font(name="Arial", size=10, bold=bold, color=(BLUE if inp else BLACK))
+        if inp: c.fill = fill(INPUT_FILL)
+        elif band_fill: c.fill = fill(LTBLU)
+        if fmt: c.number_format = fmt
+        c.alignment = Alignment("right", "center")
+
+    # title
+    ws.merge_cells("A1:H1")
+    t = ws["A1"]; t.value = "ORGANIKA RTD — SCENARIOS & PRICE SENSITIVITY"
+    t.font = font(13, True, WHITE); t.fill = fill(NAVY); t.alignment = Alignment("left", "center")
+    ws.row_dimensions[1].height = 27.75
+    ws.merge_cells("A2:H2")
+    s = ws["A2"]; s.value = ("CDN $ per case (24 cans = 6 × 4-pack) | 🟡 yellow = edit | "
+                             f"COGS pulled live from Cost Build-up ({cogs.split('!')[1]})")
+    s.font = font(9, False, GREY); s.alignment = Alignment("left", "center")
+
+    # ---------- Section 1: scenario comparison ----------
+    band("A4:F4", "SCENARIO COMPARISON  (CP = wholesale price, MSRP = shelf price)")
+    names = ["Conservative", "Base", "Stretch", "Scenario 4", "Scenario 5"]
+    lab(5, "Scenario")
+    for col, nm in zip(SCN, names):
+        c = ws[f"{col}5"]; c.value = nm; c.font = font(10, True, BLUE); c.fill = fill(INPUT_FILL)
+        c.alignment = Alignment("center", "center")
+    seed = {  # col -> (CP, MSRP, promo, volume, A&P/case)
+        "B": (54, 84, 0, 500, 0), "C": (60, 96, 0, 500, 0), "D": (66, 108, 0, 500, 0)}
+    inputs = [(6,"CP — wholesale ($/case)",CUR2,0),(7,"MSRP — retail ($/case)",CUR2,1),
+              (8,"Promo / discount (% off CP)",PCT,2),(9,"Volume (cases)",INT,3),
+              (10,"A&P ($/case)",CUR2,4)]
+    for r, text, fmt, idx in inputs:
+        lab(r, text)
+        for col in SCN:
+            v = seed.get(col, (None,)*5)[idx]
+            put(f"{col}{r}", v, inp=True, fmt=fmt)
+    calcs = [
+        (11, "Net price ($/case)",   lambda c: f"={c}6*(1-{c}8)", CUR2, False),
+        (12, "COGS ($/case)",        lambda c: f"={cogs}",        CUR2, False),
+        (13, "Organika GP ($/case)", lambda c: f"={c}11-{c}12",   CUR2, False),
+        (14, "Organika GP %",        lambda c: f'=IFERROR({c}13/{c}11,"-")', PCT, True),
+        (15, "Customer margin %",    lambda c: f'=IFERROR(({c}7-{c}6)/{c}7,"-")', PCT, True),
+        (16, "CAAP ($/case)",        lambda c: f"={c}13-{c}10",   CUR2, False),
+        (18, "CP / 4-pack",          lambda c: f"={c}6/6",        CUR2, False),
+        (19, "MSRP / 4-pack",        lambda c: f"={c}7/6",        CUR2, False),
+        (20, "Net sales — period ($)",lambda c: f"={c}11*{c}9",   CUR0, False),
+        (21, "Gross profit — period ($)",lambda c: f"={c}13*{c}9",CUR0, False),
+        (22, "CAAP — period ($)",    lambda c: f"={c}16*{c}9",    CUR0, False),
+    ]
+    for r, text, fn, fmt, bandf in calcs:
+        lab(r, text, bold=(r in (14,15)))
+        if bandf: ws[f"A{r}"].fill = fill(LTBLU)
+        for col in SCN:
+            put(f"{col}{r}", fn(col), fmt=fmt, band_fill=bandf)
+    ws["A17"].value = "— per-pack & period —"; ws["A17"].font = font(8, False, GREY)
+    # heatmap on the two margin rows
+    for rng in ("B14:F14", "B15:F15"):
+        ws.conditional_formatting.add(rng, ColorScaleRule(
+            start_type='num', start_value=0, start_color='F8696B',
+            mid_type='num', mid_value=0.35, mid_color='FFEB84',
+            end_type='num', end_value=0.7, end_color='63BE7B'))
+
+    # ---------- Section 2: CP sensitivity ----------
+    band("A24:G24", "PRICE SENSITIVITY — Organika margin as CP varies")
+    for a, t1, b, val, fmt in [("A25","CP start ($/case)","B25",48,CUR2),
+                               ("C25","step ($)","D25",4,CUR2),
+                               ("E25","ref MSRP ($/case)","F25",96,CUR2),
+                               ("G25","promo %","H25",0,PCT)]:
+        ws[a].value = t1; ws[a].font = font(9, False, GREY); ws[a].alignment = Alignment("right","center")
+        put(b, val, inp=True, fmt=fmt)
+    hdr2 = ["CP /case","CP /4-pack","Net /case","COGS /case","GP /case","GP %","Cust margin %"]
+    for col, h in zip("ABCDEFG", hdr2):
+        c = ws[f"{col}26"]; c.value = h; c.font = font(9, True, WHITE); c.fill = fill(MIDBLU)
+        c.alignment = Alignment("center", "center", wrap_text=True)
+    for i in range(10):
+        r = 27 + i
+        put(f"A{r}", f"=$B$25+{i}*$D$25", fmt=CUR2)
+        put(f"B{r}", f"=A{r}/6", fmt=CUR2)
+        put(f"C{r}", f"=A{r}*(1-$H$25)", fmt=CUR2)
+        put(f"D{r}", f"={cogs}", fmt=CUR2)
+        put(f"E{r}", f"=C{r}-D{r}", fmt=CUR2)
+        put(f"F{r}", f'=IFERROR(E{r}/C{r},"-")', fmt=PCT)
+        put(f"G{r}", f'=IFERROR(($F$25-A{r})/$F$25,"-")', fmt=PCT)
+    for rng in ("F27:F36", "G27:G36"):
+        ws.conditional_formatting.add(rng, ColorScaleRule(
+            start_type='num', start_value=0, start_color='F8696B',
+            mid_type='num', mid_value=0.35, mid_color='FFEB84',
+            end_type='num', end_value=0.7, end_color='63BE7B'))
+
+    # ---------- Section 3: CP x MSRP customer-margin grid ----------
+    band("A39:H39", "CUSTOMER (RETAILER) MARGIN %  —  CP (down) × MSRP (across)")
+    ws["A40"].value = "CP ↓  /  MSRP →"; ws["A40"].font = font(9, True, BLACK)
+    ws["A40"].alignment = Alignment("left", "center")
+    msrp_cols = "BCDEFGH"
+    for j, col in enumerate(msrp_cols):
+        put(f"{col}40", 84 + j*6, inp=True, fmt=CUR2)   # MSRP header points (editable)
+    for i in range(8):
+        r = 41 + i
+        put(f"A{r}", f"=$B$25+{i}*$D$25", fmt=CUR2)      # CP ladder (synced to sensitivity)
+        for col in msrp_cols:
+            put(f"{col}{r}", f'=IFERROR(({col}$40-$A{r})/{col}$40,"-")', fmt=PCT)
+    ws.conditional_formatting.add("B41:H48", ColorScaleRule(
+        start_type='num', start_value=0, start_color='F8696B',
+        mid_type='num', mid_value=0.3, mid_color='FFEB84',
+        end_type='num', end_value=0.5, end_color='63BE7B'))
+
+    ws.sheet_view.showGridLines = False
+    ws.freeze_panes = "B5"
+
+
 # ---- build workbook ----
 SKUS = ["Lime Lemon", "Passion Fruit Pineapple", "Raspberry"]
 TAB_COLORS = {"Lime Lemon": "FF92D050", "Passion Fruit Pineapple": "FFFFC000", "Raspberry": "FFC00000"}
@@ -526,13 +655,18 @@ blend = wb.create_sheet("Blended")
 blend.sheet_properties.tabColor = "FF7030A0"
 build_blended(blend, SKUS)
 
+# scenarios / price sensitivity sandbox
+scen = wb.create_sheet("Scenarios")
+scen.sheet_properties.tabColor = "FFED7D31"
+build_scenarios(scen)
+
 # dashboard
 dash = wb.create_sheet("Dashboard")
 dash.sheet_properties.tabColor = "FF7030A0"
 build_dashboard(dash, SKUS)
 
-# final tab order: Dashboard, Blended, TTL, SKUs…, Cost Build-up
-order = ["Dashboard", "Blended", "TTL ORGANIKA RTD"] + SKUS + [COST_SHEET]
+# final tab order: Dashboard, Scenarios, Blended, TTL, SKUs…, Cost Build-up
+order = ["Dashboard", "Scenarios", "Blended", "TTL ORGANIKA RTD"] + SKUS + [COST_SHEET]
 wb._sheets = [wb[name] for name in order]
 
 # force recalculation when opened in Excel / Google Sheets / LibreOffice
