@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { useApp } from '../store';
 import { useI18n } from '../i18n';
 import { addPractice } from '../lib';
+import { sfx, speak } from '../learn/audio';
 import type { VocabList, VocabWord } from '../types';
 
 function shuffle<T>(arr: T[]): T[] {
@@ -27,6 +28,7 @@ export function FlashcardSession({ list, studentId, onExit }: { list: VocabList;
     if (idx + 1 >= cards.length) {
       setKnown(k);
       setFinished(true);
+      sfx.complete();
       mutate((d) => addPractice(d, studentId, 'vocab', Math.max(2, k)));
     } else {
       setKnown(k);
@@ -63,10 +65,24 @@ export function FlashcardSession({ list, studentId, onExit }: { list: VocabList;
           <>
             <div className="text-2xl font-black">{card.meaningVi}</div>
             <p className="text-sm font-semibold text-violet-100">“{card.example}”</p>
+            <span
+              role="button"
+              onClick={(e) => { e.stopPropagation(); speak(card.example); }}
+              className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-lg"
+            >
+              🔊
+            </span>
           </>
         ) : (
           <>
             <div className="text-3xl font-black text-violet-700">{card.term}</div>
+            <span
+              role="button"
+              onClick={(e) => { e.stopPropagation(); speak(card.term); }}
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-violet-100 text-lg"
+            >
+              🔊
+            </span>
             <div className="text-xs font-bold text-slate-300">{t('practice.tapToFlip')}</div>
           </>
         )}
@@ -110,11 +126,14 @@ export function QuizSession({ list, studentId, onExit }: { list: VocabList; stud
     if (picked) return;
     setPicked(opt);
     const ok = opt === q.word.meaningVi;
+    if (ok) sfx.correct();
+    else sfx.wrong();
     const c = correct + (ok ? 1 : 0);
     setCorrect(c);
     setTimeout(() => {
       if (idx + 1 >= questions.length) {
         setFinished(true);
+        sfx.complete();
         mutate((d) => addPractice(d, studentId, 'quiz', Math.max(2, c * 2)));
       } else {
         setIdx(idx + 1);

@@ -121,6 +121,8 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
   'learn.tryAgain': { en: 'Try again', vi: 'Làm lại' },
   'learn.backToCourse': { en: 'Back to lessons', vi: 'Về danh sách bài học' },
   'learn.vocabPractice': { en: 'Vocabulary practice', vi: 'Luyện tập từ vựng' },
+  'learn.dailyGoal': { en: 'Daily goal', vi: 'Mục tiêu hôm nay' },
+  'learn.goalDone': { en: 'Daily goal reached — amazing! 🎉', vi: 'Đã đạt mục tiêu hôm nay — tuyệt vời! 🎉' },
 
   'badges.title': { en: 'Badges', vi: 'Huy hiệu' },
   'badges.locked': { en: 'Locked', vi: 'Chưa mở' },

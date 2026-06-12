@@ -4,20 +4,11 @@ import { useI18n } from '../../i18n';
 import { Empty, Pill } from '../../components/ui';
 import { FlashcardSession, QuizSession } from '../../components/Flashcards';
 import { allLessons, COURSES, recommendedCourse } from '../../learn/content';
-import { lessonProgressOf, recordLessonResult, starsForPct } from '../../lib';
+import { setSoundEnabled, sfx, soundEnabled, speak } from '../../learn/audio';
+import { lessonProgressOf, recordLessonResult, starsForPct, todayISO } from '../../lib';
 import type { Course, Exercise, Lesson, VocabList } from '../../types';
 
-function speak(text: string) {
-  try {
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'en-US';
-    u.rate = 0.92;
-    speechSynthesis.cancel();
-    speechSynthesis.speak(u);
-  } catch {
-    // speech synthesis is best-effort
-  }
-}
+const DAILY_GOAL = 20;
 
 function Stars({ n }: { n: number }) {
   return <span className="text-sm">{'⭐'.repeat(n)}{'☆'.repeat(Math.max(0, 3 - n))}</span>;
@@ -62,10 +53,23 @@ export default function LearnHub() {
   const recommended = recommendedCourse(levels);
   const ordered = [recommended, ...COURSES.filter((c) => c.id !== recommended.id)];
   const lists = db.vocabLists.filter((v) => user.classIds.includes(v.classId));
+  const todayPoints = db.practice.filter((p) => p.studentId === user.id && p.date === todayISO()).reduce((s, p) => s + p.points, 0);
+  const goalPct = Math.min(100, (todayPoints / DAILY_GOAL) * 100);
 
   return (
     <div className="space-y-4">
       <h1 className="text-xl font-black">📖 {t('learn.title')}</h1>
+
+      <div className={`card ${goalPct >= 100 ? 'border-emerald-200 bg-emerald-50' : ''}`}>
+        <div className="flex items-center justify-between">
+          <span className="text-sm font-extrabold text-violet-700">🎯 {t('learn.dailyGoal')}</span>
+          <span className="text-xs font-black text-slate-500">{todayPoints}/{DAILY_GOAL} ⭐</span>
+        </div>
+        <div className="mt-2 h-3 overflow-hidden rounded-full bg-violet-100">
+          <div className={`h-full rounded-full transition-all ${goalPct >= 100 ? 'bg-emerald-400' : 'bg-amber-400'}`} style={{ width: `${goalPct}%` }} />
+        </div>
+        {goalPct >= 100 && <div className="mt-1.5 text-xs font-bold text-emerald-600">{t('learn.goalDone')}</div>}
+      </div>
 
       <h2 className="font-extrabold text-violet-700">🚀 {t('learn.programs')}</h2>
       {ordered.map((course) => {
@@ -128,13 +132,17 @@ function CourseView({ course, studentId, onBack, onOpenLesson }: { course: Cours
         </div>
       </div>
 
-      {course.units.map((unit) => (
+      {course.units.map((unit) => {
+        const flat = allLessons(course);
+        return (
         <div key={unit.id} className="space-y-2">
           <h2 className="font-extrabold text-violet-700">{lang === 'vi' ? unit.titleVi : unit.titleEn}</h2>
-          {unit.lessons.map((lesson, i) => {
+          {unit.lessons.map((lesson) => {
             const progress = lessonProgressOf(db, studentId, lesson.id);
             const done = (progress?.stars ?? 0) > 0;
-            const prevDone = i === 0 || (lessonProgressOf(db, studentId, unit.lessons[i - 1].id)?.stars ?? 0) > 0;
+            // Lessons unlock sequentially across the whole course
+            const flatIdx = flat.findIndex((l) => l.id === lesson.id);
+            const prevDone = flatIdx === 0 || (lessonProgressOf(db, studentId, flat[flatIdx - 1].id)?.stars ?? 0) > 0;
             const locked = !done && !prevDone;
             return (
               <button
@@ -157,7 +165,8 @@ function CourseView({ course, studentId, onBack, onOpenLesson }: { course: Cours
             );
           })}
         </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
@@ -170,6 +179,7 @@ function LessonPlayer({ lesson, studentId, onExit }: { lesson: Lesson; studentId
   const [phase, setPhase] = useState<Phase>({ kind: 'vocab' });
   const [correct, setCorrect] = useState(0);
   const [result, setResult] = useState<{ stars: number; points: number } | null>(null);
+  const [sound, setSound] = useState(soundEnabled);
 
   const total = lesson.exercises.length;
 
@@ -183,6 +193,7 @@ function LessonPlayer({ lesson, studentId, onExit }: { lesson: Lesson; studentId
         const r = recordLessonResult(d, studentId, lesson.id, pct);
         res = { stars: r.stars, points: r.points };
       });
+      if (res.stars > 0) sfx.complete();
       setResult(res);
       setPhase({ kind: 'done', correct: c });
     } else {
@@ -202,6 +213,13 @@ function LessonPlayer({ lesson, studentId, onExit }: { lesson: Lesson; studentId
       <span>
         {lesson.emoji} {lang === 'vi' ? lesson.titleVi : lesson.titleEn}
       </span>
+      <button
+        onClick={() => { const next = !sound; setSound(next); setSoundEnabled(next); if (next) sfx.click(); }}
+        className="rounded-full bg-violet-100 px-2.5 py-1 text-sm"
+        title={sound ? 'Sound on' : 'Sound off'}
+      >
+        {sound ? '🔔' : '🔕'}
+      </button>
     </div>
   );
 
@@ -306,6 +324,8 @@ function ExerciseCard({ ex, onDone }: { ex: Exercise; onDone: (correct: boolean)
 
   const settle = (ok: boolean) => {
     setChecked(ok);
+    if (ok) sfx.correct();
+    else sfx.wrong();
     setTimeout(() => onDone(ok), ok ? 900 : 1800);
   };
 
@@ -329,9 +349,14 @@ function ExerciseCard({ ex, onDone }: { ex: Exercise; onDone: (correct: boolean)
         <div className="card text-center">
           <div className="text-xs font-bold text-slate-400">{isListen ? t('learn.listenTap') : t('learn.chooseAnswer')}</div>
           {isListen ? (
-            <button onClick={() => speak(ex.text)} className="mx-auto mt-2 flex h-16 w-16 items-center justify-center rounded-full bg-violet-600 text-3xl text-white shadow-lg active:scale-95">
-              🔊
-            </button>
+            <div className="mt-2 flex items-center justify-center gap-3">
+              <button onClick={() => speak(ex.text)} className="flex h-16 w-16 items-center justify-center rounded-full bg-violet-600 text-3xl text-white shadow-lg active:scale-95">
+                🔊
+              </button>
+              <button onClick={() => speak(ex.text, 0.55)} title="Slow" className="flex h-11 w-11 items-center justify-center rounded-full bg-violet-100 text-xl active:scale-95">
+                🐢
+              </button>
+            </div>
           ) : (
             <div className="mt-2 text-lg font-black text-violet-700">{ex.question}</div>
           )}

@@ -77,6 +77,7 @@ for (const course of COURSES) {
     }
   }
 }
+check(lessonIds.size >= 18, `expected at least 18 lessons, got ${lessonIds.size}`);
 // seeded lesson progress references real lessons
 for (const p of db.lessonProgress) {
   check(lessonIds.has(p.lessonId), `lesson progress references unknown lesson: ${p.lessonId}`);
