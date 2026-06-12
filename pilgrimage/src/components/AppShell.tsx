@@ -27,9 +27,13 @@ function Shell({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js').catch(() => {
-        // Offline support is progressive; the app works without it.
-      });
+      // Registered with an absolute path so it works from nested routes and
+      // under a hosting subpath alike.
+      navigator.serviceWorker
+        .register(`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/sw.js`)
+        .catch(() => {
+          // Offline support is progressive; the app works without it.
+        });
     }
   }, []);
 

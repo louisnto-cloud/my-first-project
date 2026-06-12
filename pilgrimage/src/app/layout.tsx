@@ -12,7 +12,7 @@ import { AppShell } from '@/components/AppShell';
 export const metadata: Metadata = {
   title: 'The Pilgrimage',
   description: 'A quiet road through places you have stood.',
-  manifest: './manifest.webmanifest',
+  manifest: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/manifest.webmanifest`,
 };
 
 export const viewport: Viewport = {

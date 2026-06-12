@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - claude/english-center-app-yylgv3
+      - claude/pilgrimage-catholic-app-t572l3
       - main
   workflow_dispatch:
 
@@ -25,6 +26,17 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      # The Pilgrimage lives alongside the E'TOP app, under /pilgrimage.
+      - name: Build The Pilgrimage
+        if: hashFiles('pilgrimage/package.json') != ''
+        working-directory: pilgrimage
+        env:
+          NEXT_PUBLIC_BASE_PATH: /my-first-project/pilgrimage
+        run: |
+          npm ci
+          npm run build
+          mkdir -p ../dist/pilgrimage
+          cp -r out/. ../dist/pilgrimage/
       # Publishing to the gh-pages branch auto-enables GitHub Pages,
       # which the github-pages deployment API is not allowed to do
       # with the default workflow token.
