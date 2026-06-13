@@ -9,7 +9,7 @@ It reuses generate_doors from build_workbook so the door set is identical.
 """
 
 import math
-from build_workbook import generate_doors, SKUS, WEEKS
+from build_workbook import generate_doors, SKUS, WEEKS, TIERS
 
 UNITS_PER_CASE = 24
 
@@ -192,6 +192,135 @@ def compute():
         "net_contrib": net_contrib,
         "net_margin_pct": net_margin_pct,
         "zero_auth": zero_auth,
+    }
+
+
+def monte_carlo(n_trials=10000, seed=42):
+    """Probabilistic forecast over velocity, ramp, and online uncertainty.
+
+    Uncertainty is keyed off the confidence ratings used for default velocity.
+    High confidence implies a tight spread, Low implies a wide spread. This is a
+    precomputed simulation. It cannot run live in Excel without macros, so the
+    workbook embeds this snapshot with its assumptions and seed for reproducibility.
+    """
+    import random
+    rng = random.Random(seed)
+    doors = generate_doors(100)
+
+    # Confidence to one sigma relative spread on velocity
+    conf_sigma = {"A": 0.10, "B": 0.20, "C": 0.35}  # tier confidence proxy
+    online_sigma = 0.25
+    ramp_sigma = 0.10
+
+    base = compute()
+    slotting_total = base["slotting_total"]
+    slotting_amort = slotting_total * LAUNCH_MONTHS / SLOTTING_AMORT_MONTHS
+
+    cases_dist = []
+    rev_dist = []
+    op_dist = []
+    net_dist = []
+
+    # Precompute per door per sku base steady velocity and launch
+    door_sku = []
+    for door in doors:
+        tier = door[5]
+        launch = door[9]
+        for sku in SKUS:
+            if door[AUTH_INDEX[sku]] == "Y":
+                door_sku.append((tier, launch, sku, VELOCITY[tier][sku]))
+
+    online_base_total_units = sum(
+        ONLINE_AMZ[s] + ONLINE_DTC[s] for s in SKUS
+    )
+
+    # Precompute online base per channel per week (units before mult)
+    online_cells = []  # (base_units, ramp_pct)
+    for sku in SKUS:
+        for w in WEEKS:
+            rp = online_ramp_pct(w)
+            online_cells.append((ONLINE_AMZ[sku], rp))
+            online_cells.append((ONLINE_DTC[sku], rp))
+
+    for _ in range(n_trials):
+        # Draw multipliers
+        vel_mult = {t: max(0.0, rng.gauss(1.0, conf_sigma[t])) for t in TIERS}
+        ramp_mult = max(0.0, rng.gauss(1.0, ramp_sigma))
+        online_mult = max(0.0, rng.gauss(1.0, online_sigma))
+
+        # Door cases, replicating the spreadsheet exactly: round each cell to
+        # integer units, then CEILING up to a whole case per door week SKU.
+        door_cases = 0
+        for tier, launch, sku, sv in door_sku:
+            v = sv * vel_mult[tier]
+            for w in WEEKS:
+                if w < launch:
+                    continue
+                wsl = w - launch + 1
+                rp = ramp_pct(wsl)
+                rp = min(1.0, rp * ramp_mult) if rp < 1.0 else rp
+                u = int(excel_round(v * rp))
+                if u > 0:
+                    door_cases += math.ceil(u / UNITS_PER_CASE)
+
+        # Online cases, round each channel week up to a whole case
+        online_cases = 0
+        for base_units, rp in online_cells:
+            u = int(excel_round(base_units * rp * online_mult))
+            if u > 0:
+                online_cases += math.ceil(u / UNITS_PER_CASE)
+
+        total_cases = door_cases + online_cases
+        shipped = total_cases * FILL_RATE
+        gross = shipped * sum(WHOLESALE.values()) / len(WHOLESALE)
+        cogs = shipped * sum(COGS.values()) / len(COGS)
+        freight = shipped * FREIGHT
+        op = gross - cogs - freight
+        net = op - slotting_amort
+
+        cases_dist.append(total_cases)
+        rev_dist.append(gross)
+        op_dist.append(op)
+        net_dist.append(net)
+
+    def pct(data, p):
+        s = sorted(data)
+        idx = int(round((p / 100) * (len(s) - 1)))
+        return s[idx]
+
+    def summarize(data):
+        return {
+            "p10": pct(data, 10), "p50": pct(data, 50), "p90": pct(data, 90),
+            "mean": sum(data) / len(data),
+            "min": min(data), "max": max(data),
+        }
+
+    # Target hit probabilities, targets reconciled placeholders
+    target_cases = 3200
+    target_revenue = 115000
+    p_cases = sum(1 for x in cases_dist if x >= target_cases) / n_trials
+    p_rev = sum(1 for x in rev_dist if x >= target_revenue) / n_trials
+
+    # Histogram of cases into 12 bins
+    lo, hi = min(cases_dist), max(cases_dist)
+    nbins = 12
+    width = (hi - lo) / nbins if hi > lo else 1
+    bins = [0] * nbins
+    for x in cases_dist:
+        b = min(nbins - 1, int((x - lo) / width))
+        bins[b] += 1
+    hist = [(lo + i * width, lo + (i + 1) * width, bins[i]) for i in range(nbins)]
+
+    return {
+        "n_trials": n_trials, "seed": seed,
+        "cases": summarize(cases_dist),
+        "revenue": summarize(rev_dist),
+        "operating": summarize(op_dist),
+        "net": summarize(net_dist),
+        "p_cases_hit": p_cases, "p_rev_hit": p_rev,
+        "target_cases": target_cases, "target_revenue": target_revenue,
+        "hist": hist,
+        "conf_sigma": conf_sigma, "online_sigma": online_sigma, "ramp_sigma": ramp_sigma,
     }
 
 

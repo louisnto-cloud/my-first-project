@@ -1579,6 +1579,17 @@ def build_cover(wb):
         ("Methodology", "How the math works and how to use the model"),
         ("Data Dictionary", "Every named range and what it means"),
         ("Calendar", "Week to date mapping for the 13 week horizon"),
+        ("Probabilistic Forecast", "Monte Carlo P10 P50 P90 distribution and target probabilities"),
+        ("Model Validation", "Independent recomputation audit with live comparison"),
+        ("Executive Summary", "One screen narrative with cumulative trend"),
+        ("DC Inventory", "Weekly inventory position with stockout flags"),
+        ("Cohort Analysis", "Doors grouped by launch week with ramp matrix"),
+        ("Cash Flow Timing", "Revenue and payment timing by week"),
+        ("Promo PnL", "Per activation profit and loss with ROI multiple"),
+        ("What If", "Interactive levers with implied outcome deltas"),
+        ("Quarterly Rollup", "Month and quarter view for the board"),
+        ("Action Items", "Launch readiness task tracker"),
+        ("Pre Launch Checklist", "Go live readiness with completion percent"),
     ]
     ws.cell(row=16, column=1, value="Tab").font = Font(bold=True)
     ws.cell(row=16, column=2, value="What it contains").font = Font(bold=True)
@@ -1589,11 +1600,12 @@ def build_cover(wb):
         ws.cell(row=r, column=2, value=desc)
 
     # Version log
-    style_section(ws, 36, 1, "Version log")
-    ws.cell(row=37, column=1, value="Version").font = Font(bold=True)
-    ws.cell(row=37, column=2, value="Date").font = Font(bold=True)
-    ws.cell(row=37, column=3, value="Notes").font = Font(bold=True)
-    style_header_row(ws, 37, 3)
+    vlog_hdr = 17 + len(nav) + 2
+    style_section(ws, vlog_hdr, 1, "Version log")
+    ws.cell(row=vlog_hdr + 1, column=1, value="Version").font = Font(bold=True)
+    ws.cell(row=vlog_hdr + 1, column=2, value="Date").font = Font(bold=True)
+    ws.cell(row=vlog_hdr + 1, column=3, value="Notes").font = Font(bold=True)
+    style_header_row(ws, vlog_hdr + 1, 3)
     history = [
         ("1.0.0", "June 5 2026", "Initial 12 tab model with first generation functional SKU labels."),
         ("1.1.0", "June 5 2026", "SKUs switched to flavor names Lime Lemon, Pineapple Passion Fruit, Raspberry."),
@@ -1601,15 +1613,20 @@ def build_cover(wb):
             "Enterprise rebuild. Added Cover, Methodology, Data Dictionary, Calendar, Sensitivity, Trade Spend Allocation tabs. "
             "Fixed bulk override to last match wins. Added fill rate, freight, slotting, distributor margin, MOQ, safety stock to Inputs. "
             "Added confidence ratings on velocity defaults. Activation ROI now modeled from uplift, not just trial units. "
-            "Per SKU trade spend allocation. Online ramp curve separated from door ramp. Risk Flags expanded to 17 checks. "
-            "Calendar dates surfaced in Weekly Forecast and Production Calendar."),
+            "Per SKU trade spend allocation. Online ramp curve separated from door ramp. Risk Flags expanded to 17 checks."),
         ("3.0.0", BUILD_DATE,
-            "10x layer. Added Executive Summary, DC Inventory simulation, Cohort Analysis, Activation Gantt, "
-            "Cash Flow Timing, Banner Performance, Variance Tracker, Weekly Review template. "
-            "Total tabs grew from 12 to 36 with full enterprise wrappers, narrative reporting, and operational planning views."),
+            "Operational and narrative layer. Added Executive Summary, DC Inventory, Cohort Analysis, Activation Gantt, "
+            "Cash Flow Timing, Banner Performance, Regional Breakdown, Promo PnL, What If, Quarterly Rollup, "
+            "Variance Tracker, Weekly Review, Action Items, Glossary, Pre Launch Checklist, Stakeholder Map."),
+        ("4.0.0", BUILD_DATE,
+            "Validation and probabilistic layer. Restructured slotting as an amortized launch investment so per unit margin "
+            "is not distorted. Reconciled targets to Base output. Added independent recomputation in verify_model.py and a "
+            "Model Validation tab. Confirmed the live formulas with a second method that evaluates the actual Excel formulas, "
+            "both agree to the unit. Added a Monte Carlo Probabilistic Forecast with P10 P50 P90 and target probabilities. "
+            "Swept all formula cells for evaluation errors and cleared the one internal reference warning."),
     ]
     for i, (v, d, n) in enumerate(history):
-        r = 38 + i
+        r = vlog_hdr + 2 + i
         ws.cell(row=r, column=1, value=v).alignment = Alignment(vertical="top")
         ws.cell(row=r, column=2, value=d).alignment = Alignment(vertical="top")
         ws.cell(row=r, column=3, value=n).alignment = Alignment(vertical="top", wrap_text=True)
@@ -1967,9 +1984,9 @@ def build_sensitivity(wb):
                 ws.cell(row=r, column=6,
                         value=f"=D{r}*(AVERAGE(WHOLESALE_TABLE)-AVERAGE(COGS_TABLE)-FREIGHT_PER_CASE)").number_format = '"$"+#,##0;"$"-#,##0;"$"0'
             elif label.startswith("Online"):
-                # Cases impact = delta * online share * total cases (approx)
+                # Cases impact = delta * live online share * total cases
                 ws.cell(row=r, column=4,
-                        value=f"=ROUND({d}*0.20*REV_TOTAL_CASES,0)").number_format = "+#,##0;-#,##0;0"
+                        value=f"=ROUND({d}*IFERROR(ONLINE_TOTAL_CASES/REV_TOTAL_CASES,0)*REV_TOTAL_CASES,0)").number_format = "+#,##0;-#,##0;0"
                 ws.cell(row=r, column=5,
                         value=f"=D{r}*AVERAGE(WHOLESALE_TABLE)").number_format = '"$"+#,##0;"$"-#,##0;"$"0'
                 ws.cell(row=r, column=6,
@@ -2223,9 +2240,14 @@ def build_dc_inventory(wb):
         # Demand outflow = required cases shipped (same week assumption, fill rate applied)
         ws.cell(row=r, column=5, value=f"=ROUND('Production Calendar'!D{5+wi}*FILL_RATE,0)").number_format = "#,##0"
         ws.cell(row=r, column=6, value=f"=MAX(0,C{r}+D{r}-E{r})").number_format = "#,##0"
-        # Safety stock floor = next N weeks of demand
-        ws.cell(row=r, column=7,
-                value=f"=IFERROR(AVERAGE(OFFSET('Production Calendar'!D{5+wi},1,0,MIN(SAFETY_STOCK_WEEKS,{len(WEEKS)-wi-1}),1))*SAFETY_STOCK_WEEKS,0)").number_format = "#,##0"
+        # Safety stock floor = SAFETY_STOCK_WEEKS times next week demand where it
+        # exists, else this week demand. Avoids OFFSET so no internal reference error.
+        if wi < len(WEEKS) - 1:
+            ws.cell(row=r, column=7,
+                    value=f"='Production Calendar'!D{5+wi+1}*SAFETY_STOCK_WEEKS").number_format = "#,##0"
+        else:
+            ws.cell(row=r, column=7,
+                    value=f"='Production Calendar'!D{5+wi}*SAFETY_STOCK_WEEKS").number_format = "#,##0"
         ws.cell(row=r, column=8, value=f"=F{r}-G{r}").number_format = "#,##0"
         ws.cell(row=r, column=9,
                 value=f'=IF(F{r}=0,"Stockout",IF(F{r}<G{r},"Below safety","OK"))')
@@ -3097,6 +3119,103 @@ def build_stakeholder_map(wb):
     return ws
 
 
+def build_probabilistic_forecast(wb, mc):
+    """Embed a precomputed Monte Carlo distribution.
+
+    mc is the dict from verify_model.monte_carlo. Excel cannot run the simulation
+    live without macros, so this is a reproducible snapshot keyed to the Base case
+    with the stated uncertainty assumptions and random seed.
+    """
+    ws = wb.create_sheet("Probabilistic Forecast")
+    title(ws, "Probabilistic forecast")
+    ws["A2"] = (
+        f"Monte Carlo over velocity, ramp, and online uncertainty. {mc['n_trials']:,} trials, seed {mc['seed']}. "
+        "Velocity spread scales with door tier confidence. This is a precomputed snapshot of the Base case. "
+        "Rerun verify_model.py monte_carlo to refresh after changing assumptions or the door list."
+    )
+    ws["A2"].font = NOTE_FONT
+    ws["A2"].alignment = Alignment(wrap_text=True, vertical="top")
+    ws.row_dimensions[2].height = 44
+
+    # Uncertainty assumptions
+    style_section(ws, 4, 1, "Uncertainty assumptions, one sigma relative spread")
+    assum = [
+        ("Tier A velocity spread", mc["conf_sigma"]["A"], "0%"),
+        ("Tier B velocity spread", mc["conf_sigma"]["B"], "0%"),
+        ("Tier C velocity spread", mc["conf_sigma"]["C"], "0%"),
+        ("Online baseline spread", mc["online_sigma"], "0%"),
+        ("Ramp spread", mc["ramp_sigma"], "0%"),
+    ]
+    for i, (label, val, fmt) in enumerate(assum):
+        r = 5 + i
+        ws.cell(row=r, column=1, value=label)
+        ws.cell(row=r, column=2, value=val).number_format = fmt
+
+    # Distribution table
+    style_section(ws, 11, 1, "Outcome distribution")
+    headers = ["Metric", "P10", "P50 median", "P90", "Mean", "Min", "Max"]
+    for j, h in enumerate(headers, start=1):
+        ws.cell(row=12, column=j, value=h)
+    style_header_row(ws, 12, len(headers))
+
+    def stat_row(r, label, d, money=False):
+        ws.cell(row=r, column=1, value=label)
+        fmt = '"$"#,##0' if money else "#,##0"
+        for j, key in enumerate(["p10", "p50", "p90", "mean", "min", "max"], start=2):
+            ws.cell(row=r, column=j, value=round(d[key], 0)).number_format = fmt
+
+    stat_row(13, "Total cases", mc["cases"])
+    stat_row(14, "Gross revenue", mc["revenue"], money=True)
+    stat_row(15, "Operating contribution", mc["operating"], money=True)
+    stat_row(16, "Net contribution after amortized slotting", mc["net"], money=True)
+
+    # Target probabilities
+    style_section(ws, 18, 1, "Probability of hitting targets")
+    ws.cell(row=19, column=1, value=f"Probability total cases at or above {mc['target_cases']:,}")
+    ws.cell(row=19, column=2, value=round(mc["p_cases_hit"], 3)).number_format = "0.0%"
+    ws.cell(row=20, column=1, value=f"Probability gross revenue at or above {mc['target_revenue']:,}")
+    ws.cell(row=20, column=2, value=round(mc["p_rev_hit"], 3)).number_format = "0.0%"
+
+    # Interpretation
+    style_section(ws, 22, 1, "Read this")
+    interp = [
+        f"Median forecast is {round(mc['cases']['p50']):,} cases. The P10 to P90 band is {round(mc['cases']['p10']):,} to {round(mc['cases']['p90']):,}.",
+        "The band is tight relative to the velocity uncertainty. Whole case rounding at the door level absorbs much of the per cell velocity variation, so the case forecast is more robust than the underlying unit forecast.",
+        "Use P10 for conservative production commitments and P90 for upside capacity checks against Bevmax.",
+    ]
+    for i, t in enumerate(interp):
+        ws.cell(row=23 + i, column=1, value=t).alignment = Alignment(wrap_text=True, vertical="top")
+        ws.row_dimensions[23 + i].height = 30
+
+    # Histogram
+    style_section(ws, 28, 1, "Total cases distribution")
+    ws.cell(row=29, column=1, value="Bin lower")
+    ws.cell(row=29, column=2, value="Bin upper")
+    ws.cell(row=29, column=3, value="Trials")
+    style_header_row(ws, 29, 3)
+    for i, (lo, hi, cnt) in enumerate(mc["hist"]):
+        r = 30 + i
+        ws.cell(row=r, column=1, value=round(lo)).number_format = "#,##0"
+        ws.cell(row=r, column=2, value=round(hi)).number_format = "#,##0"
+        ws.cell(row=r, column=3, value=cnt).number_format = "#,##0"
+
+    chart = BarChart()
+    chart.title = "Total cases distribution"
+    chart.y_axis.title = "Trials"
+    chart.x_axis.title = "Cases"
+    data = Reference(ws, min_col=3, min_row=29, max_col=3, max_row=29 + len(mc["hist"]))
+    cats = Reference(ws, min_col=1, min_row=30, max_row=29 + len(mc["hist"]))
+    chart.add_data(data, titles_from_data=True)
+    chart.set_categories(cats)
+    chart.height = 8
+    chart.width = 18
+    ws.add_chart(chart, "E29")
+
+    set_col_widths(ws, [44, 16, 16, 16, 16, 14, 14])
+    ws.sheet_view.showGridLines = False
+    return ws
+
+
 def build_model_validation(wb, expected):
     """Embed an independent recomputation of the Base case for audit.
 
@@ -3252,15 +3371,23 @@ def main():
     build_pre_launch_checklist(wb)
     build_stakeholder_map(wb)
 
-    # Independent validation tab
+    # Independent validation tab and probabilistic forecast
     try:
-        from verify_model import compute as _compute_expected
+        from verify_model import compute as _compute_expected, monte_carlo as _mc
         expected = _compute_expected()
         build_model_validation(wb, expected)
         has_validation = True
     except Exception as e:
         print(f"Validation tab skipped: {e}")
         has_validation = False
+    try:
+        from verify_model import monte_carlo as _mc
+        mc = _mc(10000)
+        build_probabilistic_forecast(wb, mc)
+        has_prob = True
+    except Exception as e:
+        print(f"Probabilistic forecast skipped: {e}")
+        has_prob = False
 
     # Reorder sheets
     order = [
@@ -3272,12 +3399,14 @@ def main():
         "Weekly Forecast", "Cohort Analysis", "Regional Breakdown", "Banner Performance",
         "Production Calendar", "Production Smoothing", "DC Inventory",
         "Revenue and Margin", "Cash Flow Timing", "Quarterly Rollup",
-        "Sensitivity", "What If", "Scenarios",
+        "Sensitivity", "What If", "Scenarios", "Probabilistic Forecast",
         "Pre Launch Checklist", "Variance Tracker", "Weekly Review",
         "Action Items", "Model Validation", "Risk Flags",
     ]
     if not has_validation and "Model Validation" in order:
         order.remove("Model Validation")
+    if not has_prob and "Probabilistic Forecast" in order:
+        order.remove("Probabilistic Forecast")
     wb._sheets = [wb[name] for name in order]
 
     wb.save(OUT_PATH)
