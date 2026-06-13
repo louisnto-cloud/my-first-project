@@ -316,7 +316,14 @@ function Scene({ kind }: { kind: ArtKind }) {
           <circle cx="200" cy="140" r="90" fill={GOLD} opacity="0.08" />
           <circle cx="200" cy="140" r="52" fill={GOLD} opacity="0.12" />
           <rect x="184" y="152" width="32" height="100" rx="5" fill={IVORY} opacity="0.92" />
-          <path d="M200 96c12 15 18 25 18 35a18 18 0 0 1-36 0c0-10 6-20 18-35z" fill={GOLD} className="flame" />
+          {/* a real, living candle flame */}
+          <g filter="url(#sa-fire)" className="flame-sway" style={{ transformOrigin: '200px 150px' }}>
+            <path d="M200 92c14 18 20 30 20 41a20 20 0 0 1-40 0c0-11 6-23 20-41z" fill="url(#sa-flame-outer)" />
+            <g filter="url(#sa-bloom)">
+              <path d="M200 104c9 12 13 21 13 28a13 13 0 0 1-26 0c0-7 4-16 13-28z" fill="url(#sa-flame-inner)" className="flame" />
+              <path d="M200 116c5 7 8 12 8 17a8 8 0 0 1-16 0c0-5 3-10 8-17z" fill={IVORY} />
+            </g>
+          </g>
           <ellipse cx="200" cy="256" rx="70" ry="8" fill={GOLD} opacity="0.12" />
         </>
       );
@@ -872,14 +879,16 @@ function Scene({ kind }: { kind: ArtKind }) {
             <path d="M150 50q50 18 100 0" fill="none" />
             <path d="M140 70q60 22 120 0" fill="none" />
           </g>
-          {/* gathered in a half circle, a small flame above each */}
+          {/* gathered in a half circle, a small tongue of fire above each */}
           {[70, 124, 178, 232, 286, 340].map((x, i) => (
             <g key={x}>
-              <path
-                d={`M${x} ${150 - (i % 2) * 10}c5 7 8 11 8 15a8 8 0 0 1-16 0c0-4 3-8 8-15z`}
-                fill={GOLD}
-                className="flame"
-              />
+              <g filter="url(#sa-fire)" style={{ transformOrigin: `${x}px ${150 - (i % 2) * 10}px` }}>
+                <path
+                  d={`M${x} ${146 - (i % 2) * 10}c6 9 9 14 9 19a9 9 0 0 1-18 0c0-5 3-10 9-19z`}
+                  fill="url(#sa-flame-inner)"
+                  className="flame"
+                />
+              </g>
               <circle cx={x} cy={186 - (i % 2) * 10} r="12" fill={i === 2 ? GARNET : i % 2 ? '#22305c' : '#1a2240'} />
               <path d={`M${x - 16} 250v-${36 - (i % 2) * 10}c0-12 7-20 16-20s16 8 16 20v${36 - (i % 2) * 10}z`} fill={i === 2 ? GARNET : i % 2 ? '#22305c' : '#1a2240'} />
             </g>
@@ -1489,39 +1498,50 @@ function Scene({ kind }: { kind: ArtKind }) {
             />
           ))}
 
-          {/* the fire itself, layered: deep tongues, gold body, ivory heart */}
-          <g>
+          {/* the fire itself, layered: deep tongues, gold body, ivory heart.
+              The whole mass writhes via the living-fire filter, with a gentle
+              sway on top — so it dances rather than merely flickers. */}
+          <g filter="url(#sa-fire)" className="flame-sway" style={{ transformOrigin: '200px 250px' }}>
             {/* outer garnet→gold tongues form the bush silhouette */}
-            <Tongue cx={150} cy={244} h={120} w={66} lean={-22} fill="url(#bushOuter)" opacity={0.95} />
-            <Tongue cx={250} cy={244} h={122} w={66} lean={22} fill="url(#bushOuter)" opacity={0.95} />
-            <Tongue cx={176} cy={250} h={150} w={70} lean={-9} fill="url(#bushOuter)" />
-            <Tongue cx={226} cy={250} h={152} w={70} lean={9} fill="url(#bushOuter)" />
-            <Tongue cx={200} cy={252} h={172} w={74} lean={0} fill="url(#bushOuter)" />
+            <Tongue cx={150} cy={244} h={120} w={66} lean={-22} fill="url(#sa-flame-outer)" opacity={0.95} />
+            <Tongue cx={250} cy={244} h={122} w={66} lean={22} fill="url(#sa-flame-outer)" opacity={0.95} />
+            <Tongue cx={176} cy={250} h={150} w={70} lean={-9} fill="url(#sa-flame-outer)" />
+            <Tongue cx={226} cy={250} h={152} w={70} lean={9} fill="url(#sa-flame-outer)" />
+            <Tongue cx={200} cy={252} h={172} w={74} lean={0} fill="url(#sa-flame-outer)" />
             {/* mid gold body */}
             <Tongue cx={184} cy={246} h={120} w={48} lean={-10} fill={GOLD} opacity={0.95} flicker />
             <Tongue cx={216} cy={246} h={122} w={48} lean={10} fill={GOLD} opacity={0.95} flicker />
             <Tongue cx={200} cy={248} h={146} w={50} lean={0} fill={GOLD} flicker />
             {/* a few side tongues licking outward */}
-            <Tongue cx={128} cy={238} h={70} w={34} lean={-46} fill="url(#bushOuter)" opacity={0.85} flicker />
-            <Tongue cx={272} cy={238} h={72} w={34} lean={46} fill="url(#bushOuter)" opacity={0.85} flicker />
+            <Tongue cx={128} cy={238} h={70} w={34} lean={-46} fill="url(#sa-flame-outer)" opacity={0.85} flicker />
+            <Tongue cx={272} cy={238} h={72} w={34} lean={46} fill="url(#sa-flame-outer)" opacity={0.85} flicker />
             {/* ivory heart of the fire, blooming with light */}
             <g filter="url(#sa-bloom)">
-              <Tongue cx={200} cy={240} h={104} w={26} lean={0} fill="url(#bushInner)" flicker />
+              <Tongue cx={200} cy={240} h={104} w={26} lean={0} fill="url(#sa-flame-inner)" flicker />
               <Tongue cx={191} cy={236} h={74} w={16} lean={-8} fill={IVORY} opacity={0.85} flicker />
               <Tongue cx={209} cy={236} h={76} w={16} lean={8} fill={IVORY} opacity={0.85} flicker />
             </g>
           </g>
 
-          {/* embers rising into the dark */}
+          {/* embers, drifting up off the fire into the dark */}
           {[
-            [168, 96],
-            [238, 80],
-            [200, 60],
-            [150, 130],
-            [256, 120],
-            [214, 104],
+            [168, 200],
+            [238, 210],
+            [200, 190],
+            [150, 215],
+            [256, 205],
+            [214, 198],
+            [186, 208],
           ].map(([x, y], i) => (
-            <circle key={i} cx={x} cy={y} r={1.6 + (i % 3) * 0.7} fill={GOLD} opacity={0.5 + (i % 3) * 0.15} className="soft-glow" />
+            <circle
+              key={i}
+              cx={x}
+              cy={y}
+              r={1.4 + (i % 3) * 0.7}
+              fill={i % 2 ? GOLD : IVORY}
+              className="ember"
+              style={{ ['--d' as string]: `${i * 0.9}s`, ['--x' as string]: `${(i % 2 ? 1 : -1) * (6 + i)}px` }}
+            />
           ))}
         </>
       );
@@ -1757,13 +1777,28 @@ function Scene({ kind }: { kind: ArtKind }) {
 // A shared treatment that lifts every scene out of "flat vector" territory:
 // painterly edge displacement, a warm bloom, film grain, and a gallery
 // vignette — light and texture, the difference between clip-art and craft.
-function Treatment() {
+function Treatment({ still }: { still: boolean }) {
   return (
     <defs>
       {/* gentle organic warp so edges aren't mechanically perfect */}
       <filter id="sa-paint" x="-5%" y="-5%" width="110%" height="110%">
         <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="7" result="n" />
         <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      {/* living fire: turbulence whose frequency breathes, driving a
+          displacement map so flame edges undulate and lick like real fire */}
+      <filter id="sa-fire" x="-40%" y="-50%" width="180%" height="200%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.018 0.045" numOctaves="3" seed="4" result="fn">
+          {!still && (
+            <animate
+              attributeName="baseFrequency"
+              dur="5.5s"
+              values="0.018 0.045; 0.024 0.07; 0.02 0.05; 0.018 0.045"
+              repeatCount="indefinite"
+            />
+          )}
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="fn" scale="16" xChannelSelector="R" yChannelSelector="G" />
       </filter>
       {/* fine film grain, rendered as its own tile and blended soft */}
       <filter id="sa-grain">
@@ -1789,7 +1824,25 @@ function Treatment() {
         <stop offset="0%" stopColor={IVORY} stopOpacity="0.08" />
         <stop offset="100%" stopColor={IVORY} stopOpacity="0" />
       </radialGradient>
+      {/* shared flame gradients, used by every fire in the app */}
+      <linearGradient id="sa-flame-outer" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stopColor={GARNET} />
+        <stop offset="55%" stopColor="#b5572e" />
+        <stop offset="100%" stopColor={GOLD} />
+      </linearGradient>
+      <linearGradient id="sa-flame-inner" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stopColor="#c9772f" />
+        <stop offset="60%" stopColor={GOLD} />
+        <stop offset="100%" stopColor={IVORY} />
+      </linearGradient>
     </defs>
+  );
+}
+
+function prefersReducedMotion(): boolean {
+  return (
+    typeof window !== 'undefined' &&
+    !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
   );
 }
 
@@ -1806,6 +1859,7 @@ export function SacredArt({
   drift?: boolean;
 }) {
   const art = artworkById(kind);
+  const still = prefersReducedMotion();
   return (
     <svg
       viewBox="0 0 400 300"
@@ -1814,7 +1868,7 @@ export function SacredArt({
       aria-label={art?.title.en}
       className={`block h-full w-full ${rounded ? 'rounded-2xl' : ''} ${className}`}
     >
-      <Treatment />
+      <Treatment still={still} />
       <g className={drift ? 'art-drift' : undefined} style={{ transformOrigin: 'center' }}>
         <g filter="url(#sa-paint)">
           <Scene kind={kind} />

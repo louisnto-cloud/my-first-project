@@ -162,6 +162,30 @@ textarea {
   will-change: transform;
 }
 
+/* Fire: a gentle sway layered on top of the turbulence displacement, so the
+   whole flame leans and breathes, not just ripples at the edges. */
+@keyframes flame-sway {
+  0%, 100% { transform: rotate(-1.6deg) scaleY(0.99); }
+  30% { transform: rotate(1.4deg) scaleY(1.04); }
+  60% { transform: rotate(-0.6deg) scaleY(1.01); }
+}
+.flame-sway {
+  animation: flame-sway 3.8s ease-in-out infinite;
+}
+
+/* Embers lifting off the fire and fading into the dark. */
+@keyframes ember-rise {
+  0% { transform: translate3d(0, 0, 0); opacity: 0; }
+  15% { opacity: 0.9; }
+  100% { transform: translate3d(var(--x, 8px), -150px, 0); opacity: 0; }
+}
+.ember {
+  animation: ember-rise 4.5s ease-out infinite;
+  animation-delay: var(--d, 0s);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
 /* Map: the road glows softly */
 @keyframes road-dash {
   to { stroke-dashoffset: -24; }
@@ -180,10 +204,11 @@ textarea {
 /* ─── Reduced motion: respect it everywhere ──────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .flame, .light-bloom, .stamp-press, .ink-bleed, .page-in, .gold-glow,
-  .shard, .road-path, .soft-glow, .art-drift {
+  .shard, .road-path, .soft-glow, .art-drift, .flame-sway, .ember {
     animation: none !important;
   }
   .light-bloom, .stamp-press, .ink-bleed { opacity: 1; }
+  .ember { opacity: 0.6; }
   .art-parallax { transform: scale(1.06); transition: none; }
   * {
     transition-duration: 0.01ms !important;
