@@ -46,6 +46,7 @@ SKU_KEYS = ["units", "cp", "disc", "ingr", "pack", "mfg", "frt", "wh", "apc", "a
 COMPANY = {
     "salaries": 180000, "ga": 60000, "mktg": 40000, "slotting": 20000,
     "log_pct": 0.04, "da": 25000, "interest": 10000, "tax": 0.27,
+    "elast": 0.0,   # price elasticity of demand (advanced; 0 = off, e.g. -1.3 = elastic)
 }
 # ---- scenario levers: volume x, price x, trade-disc delta (decimal) -------
 LEVERS = {
@@ -92,7 +93,7 @@ CASES = "#,##0"; MON = "$#,##0;[Red]($#,##0)"; MON2 = "$#,##0.00;[Red]($#,##0.00
 PCT = "0.0%"; PCT2 = "0.00%"; MULT = "0.00\\x"
 
 # tab colours (grouping)
-TAB = {"Cover": "808A99", "Guide": "808A99", "Review Log": "808A99",
+TAB = {"Home": "0A84FF", "Cover": "808A99", "Guide": "808A99", "Review Log": "808A99",
        "Assumptions": "E8A33D", "Dashboard": "2E7D32",
        "Low": "5B6FA6", "Base": "2E4374", "High": "5B6FA6", "Stretch": "5B6FA6",
        "Monthly": "00838F", "Pricing Lab": "6A1B9A", "Targets": "6A1B9A",
@@ -228,6 +229,7 @@ def build_assumptions(ws):
         ("Marketing overhead (brand)", "mktg", MON), ("Slotting / listing fees", "slotting", MON),
         ("Outbound logistics (% of net sales)", "log_pct", PCT), ("Depreciation & amortisation", "da", MON),
         ("Interest expense", "interest", MON), ("Tax rate", "tax", PCT),
+        ("Price elasticity (advanced; 0 = off)", "elast", "0.0"),
     ]
     for label, key, fmt in comp_rows:
         A["co_" + key] = r
@@ -338,7 +340,7 @@ def build_scenario(ws, name, A):
     # per-SKU columns
     for i, col in enumerate(SKU_COLS):
         ac = col  # Assumptions uses same column letters
-        setcell(ws, f"{col}{SR['cases']}", f"='Assumptions'!{ac}{A['vol']}*{LV}", f_calc, CASES, fill_tot, rght, True)
+        setcell(ws, f"{col}{SR['cases']}", f"='Assumptions'!{ac}{A['vol']}*{LV}*({LP}^'Assumptions'!$C${A['co_elast']})", f_calc, CASES, fill_tot, rght, True)
         setcell(ws, f"{col}{SR['cp']}", f"='Assumptions'!{ac}{A['cp']}*{LP}", f_calc, MON2, fill_tot, rght, True)
         setcell(ws, f"{col}{SR['disc']}", f"='Assumptions'!{ac}{A['disc']}+{LD}", f_calc, PCT, fill_tot, rght, True)
         setcell(ws, f"{col}{SR['cosd']}", f"='Assumptions'!{ac}{A['cogs_d']}", f_calc, MON2, fill_tot, rght, True)
@@ -576,7 +578,9 @@ def build_sensitivity(ws, A):
     setcell(ws, "C7", f"='Assumptions'!C{A['co_log_pct']}", f_calc, PCT, fill_tot, rght, True)
     setcell(ws, "B8", "Base total cases", f_lbl, align=left)
     setcell(ws, "C8", f"=SUM({volr})", f_calc, CASES, fill_tot, rght, True)
-    K1, K2, FX, LOG = "$C$4", "$C$5", "$C$6", "$C$7"
+    setcell(ws, "B9", "Price elasticity (from Assumptions)", f_lbl, align=left)
+    setcell(ws, "C9", f"='Assumptions'!C{A['co_elast']}", f_calc, "0.0", fill_tot, rght, True)
+    K1, K2, FX, LOG, E = "$C$4", "$C$5", "$C$6", "$C$7", "$C$9"
 
     # two-way table
     vol_mults = [0.70, 0.90, 1.00, 1.10, 1.30, 1.50, 1.70]
@@ -592,9 +596,8 @@ def build_sensitivity(ws, A):
         for j, mv in enumerate(vol_mults):
             mcv = f"{get_column_letter(3+j)}${top+1}"   # volume header (row fixed)
             mpr = f"$B{rr}"                                # price header (col fixed)
-            formula = (f"={mpr}*0+{mcv}*({mpr}*{K1}-{K2})-{FX}-{LOG}*{mcv}*{mpr}*{K1}")
-            # simplify: EBITDA = mv*(mp*K1-K2) - FX - LOG*mv*mp*K1
-            formula = f"={mcv}*({mpr}*{K1}-{K2})-{FX}-{LOG}*{mcv}*{mpr}*{K1}"
+            # EBITDA = mv·mp^E·(mp·K1−K2) − Fixed − Log%·mv·mp^(E+1)·K1   (E=0 ⇒ linear)
+            formula = (f"={mcv}*({mpr}^{E})*({mpr}*{K1}-{K2})-{FX}-{LOG}*{mcv}*({mpr}^({E}+1))*{K1}")
             c = setcell(ws, f"{get_column_letter(3+j)}{rr}", formula, f_calc, MON, None, rght, True)
             if abs(mv - 1.0) < 1e-9 and abs(mp - 1.0) < 1e-9:
                 c.fill = fill_tot
@@ -650,6 +653,8 @@ def build_checks(ws, A):
          f"=IF(AND('Assumptions'!C{A['co_tax']}>=0,'Assumptions'!C{A['co_tax']}<=0.5),\"PASS\",\"FAIL\")", PCT),
         ("All scenario volume levers > 0", f"=MIN('Assumptions'!C{A['lever0']}:C{A['lever0']+3})",
          f"=IF(MIN('Assumptions'!C{A['lever0']}:C{A['lever0']+3})>0,\"PASS\",\"FAIL\")", MULT),
+        ("Price elasticity <= 0 (demand sane)", f"='Assumptions'!C{A['co_elast']}",
+         f"=IF('Assumptions'!C{A['co_elast']}<=0,\"PASS\",\"FAIL\")", "0.0"),
         ("Dashboard Net Sales ties to Base tab", f"='Dashboard'!D{4+4}-'Base'!{TOT}{SR['nsales']}",
          f"=IF(ABS('Dashboard'!D{4+4}-'Base'!{TOT}{SR['nsales']})<1,\"PASS\",\"FAIL\")", MON),
     ]
@@ -747,6 +752,12 @@ def build_guide(ws):
     ws.column_dimensions["B"].width = 110
     lines = [
         (f"{LINE} — Model Guide", f_title), ("", None),
+        ("START HERE", f_sec),
+        ("Open the Home tab. Pick a scenario from the dropdown and the KPI cards update instantly.", f_lbl),
+        ("To change the numbers, go to Assumptions and edit the yellow cells. That's the only place you type.", f_lbl),
+        ("Advanced (optional): set Price elasticity on Assumptions to a negative number (e.g. -1.3) to make", f_lbl),
+        ("volume respond to price; the Pricing Lab then highlights the wholesale price that earns the most.", f_lbl),
+        ("", None),
         ("HOW IT FITS TOGETHER", f_sec),
         ("Assumptions is the only place you key numbers. Scenario tabs, Monthly, Dashboard, Sensitivity and Checks all read from it.", f_lbl),
         ("Change a price, cost or volume once on Assumptions and the entire workbook updates.", f_lbl),
@@ -820,6 +831,10 @@ def build_review_log(ws):
          "Colour coding: yellow = input, blue tint = calculated total; freeze panes throughout."),
         ("Flavour names were placeholders.",
          "Set to Pineapple, Passionfruit, Lime Lemon (editable on Assumptions)."),
+        ("Price and volume were independent — raising CP with no volume loss is unrealistic.",
+         "Added optional price elasticity; volume now responds to price. Pricing Lab finds the best CP."),
+        ("Workbook opened on a dense tab — not approachable.",
+         "Added a clean Home screen (scenario picker + live KPI cards + guided navigation); simple-first tab order."),
     ]
     for i, (issue, res) in enumerate(items):
         rr = hdr + 1 + i
@@ -862,7 +877,7 @@ def build_pricing(ws, A):
                 if kind == "gppct":
                     f = f"=IFERROR(1-{cos}/{netpc},0)"
                 elif kind == "contrib":
-                    f = f"={vol}*({netpc}-{cos}-{ap})"
+                    f = f"={vol}*({mc}^'Assumptions'!$C${A['co_elast']})*({netpc}-{cos}-{ap})"
                 else:  # gp per case
                     f = f"={netpc}-{cos}"
                 c = setcell(ws, f"{get_column_letter(3+j)}{rr}", f, f_calc, fmt, None, rght, True)
@@ -876,11 +891,19 @@ def build_pricing(ws, A):
                        mid_type="num", mid_value=0.4, mid_color="FFEB84",
                        end_type="num", end_value=0.6, end_color="63BE7B"))
     t2 = l1 + 3
-    f2, l2 = table(t2, "Annual Contribution $  (by SKU, by CP — at base volume)", "contrib", MON)
+    f2, l2 = table(t2, "Annual Contribution $  (by SKU, by CP — demand-adjusted)", "contrib", MON)
     ws.conditional_formatting.add(f"C{f2}:I{l2}",
         ColorScaleRule(start_type="min", start_color="F8696B",
                        mid_type="percentile", mid_value=50, mid_color="FFEB84",
                        end_type="max", end_color="63BE7B"))
+    # "Best CP in range" insight column (price that maximises contribution within the ladder)
+    hr2 = f2 - 1
+    setcell(ws, f"K{hr2}", "Best CP ×", f_hdr, fill=fill_band, align=center, border=True)
+    for i in range(len(SKU_COLS)):
+        rr = f2 + i
+        setcell(ws, f"K{rr}", f"=INDEX($C${hr2}:$I${hr2},MATCH(MAX(C{rr}:I{rr}),C{rr}:I{rr},0))",
+                f_lblb, MULT, fill_tot, center, True)
+    ws.column_dimensions["K"].width = 11
 
     # chart: GP% vs CP per SKU
     ch = LineChart(); ch.title = "Gross Profit % vs CP"; ch.y_axis.title = "GP %"; ch.x_axis.title = "CP vs base"
@@ -952,7 +975,7 @@ def build_targets(ws, A):
          f"=IFERROR(({EB_T}+{FX})/(({K1}-{KCOS}-{KAP})-{LOG}*{K1}),\"n/a\")", MULT),
         ("→ implied total cases",
          f"=IFERROR(({EB_T}+{FX})/(({K1}-{KCOS}-{KAP})-{LOG}*{K1})*{CASES_C},\"n/a\")", CASES),
-        ("Price × to hit target EBITDA (base volume)",
+        ("Price × to hit target EBITDA (base vol; ε=0 approx)",
          f"=IFERROR(({EB_T}+{FX}+{KCOS}+{KAP})/({K1}*(1-{LOG})),\"n/a\")", MULT),
         ("Break-even volume × (EBITDA = 0, base price)",
          f"=IFERROR({FX}/(({K1}-{KCOS}-{KAP})-{LOG}*{K1}),\"n/a\")", MULT),
@@ -971,11 +994,102 @@ def build_targets(ws, A):
 
 
 # =====================================================================
+#  HOME  (Apple-style front screen — simple, beautiful, live)
+# =====================================================================
+ACCENT = "0A84FF"; CARD = "F4F7FB"; INKSOFT = "5B6472"
+
+
+def build_home(ws, ws_dash, A):
+    ws.sheet_view.showGridLines = False
+    f_eyebrow = Font(name="Calibri", size=11, bold=True, color=ACCENT)
+    f_hero = Font(name="Calibri", size=30, bold=True, color=INK)
+    f_heros = Font(name="Calibri", size=12, color=INKSOFT)
+    f_kval = Font(name="Calibri", size=18, bold=True, color=INK)
+    f_klbl = Font(name="Calibri", size=9, bold=True, color=INKSOFT)
+    f_nav = Font(name="Calibri", size=11, bold=True, color=INK)
+    f_navd = Font(name="Calibri", size=10, color=INKSOFT)
+    card = PatternFill("solid", fgColor=CARD)
+    accent_fill = PatternFill("solid", fgColor=ACCENT)
+
+    ws.column_dimensions["A"].width = 3
+    for c in "BCDEFG":
+        ws.column_dimensions[c].width = 17
+    ws.column_dimensions["B"].width = 19
+
+    setcell(ws, "B2", "ORGANIKA", f_eyebrow, align=left)
+    setcell(ws, "B3", "Sparkling Daily", f_hero, align=left)
+    ws.merge_cells("B3:E3"); ws.row_dimensions[3].height = 40
+    setcell(ws, "B4", f"One-Year Operating Model  ·  {FY}", f_heros, align=left)
+    ws.merge_cells("B4:E4")
+
+    # scenario selector
+    setcell(ws, "B6", "Scenario", f_klbl, align=left)
+    sel = setcell(ws, "C6", "Base", Font(name="Calibri", size=12, bold=True, color="0033AA"),
+                  fill=fill_in, align=center, border=True)
+    dv = DataValidation(type="list", formula1='"Low,Base,High,Stretch"', allow_blank=False)
+    ws.add_data_validation(dv); dv.add(sel)
+    setcell(ws, "D6", "▼ pick a scenario — everything below updates", f_navd, align=left)
+    ws.merge_cells("D6:G6")
+
+    # KPI cards (selected scenario, via INDIRECT)
+    S = "INDIRECT(\"'\"&$C$6&\"'!" + TOT
+    def scn(rk): return f"{S}{SR[rk]}\")"
+    kpis = [
+        ("NET SALES", scn("nsales"), MON), ("GROSS PROFIT %", scn("gppct"), PCT),
+        ("EBITDA", scn("ebitda"), MON), ("EBITDA %", scn("ebitdapct"), PCT),
+        ("NET INCOME", scn("ni"), MON), ("PHYSICAL CASES", scn("cases"), CASES),
+    ]
+    top = 8
+    for j, (label, formula, fmt) in enumerate(kpis):
+        col = get_column_letter(2 + j)
+        lc = setcell(ws, f"{col}{top}", label, f_klbl, fill=card, align=center, border=False)
+        vc = setcell(ws, f"{col}{top+1}", f"={formula}", f_kval, fmt, card, center, False)
+    ws.row_dimensions[top].height = 18
+    ws.row_dimensions[top + 1].height = 30
+
+    # secondary line: break-even + blended CP
+    setcell(ws, f"B{top+3}", "Break-even volume", f_klbl, align=left)
+    setcell(ws, f"C{top+3}", "='Sensitivity'!$C$23", f_kval, CASES, None, left, False)
+    setcell(ws, f"E{top+3}", "Blended CP / case", f_klbl, align=left)
+    setcell(ws, f"F{top+3}", f"={scn('cp')}", f_kval, MON2, None, left, False)
+
+    # EBITDA-by-scenario chart (from Dashboard)
+    er = ws_dash._dash_rows["ebitda"]
+    hdr = 4
+    ch = BarChart(); ch.type = "col"; ch.title = "EBITDA by scenario"; ch.height = 6.5; ch.width = 12
+    ch.legend = None
+    data = Reference(ws_dash, min_col=3, max_col=6, min_row=er, max_row=er)
+    cats = Reference(ws_dash, min_col=3, max_col=6, min_row=hdr, max_row=hdr)
+    ch.add_data(data, titles_from_data=False); ch.set_categories(cats)
+    ws.add_chart(ch, f"E{top+5}")
+
+    # navigation / table of contents
+    nav_top = top + 5
+    setcell(ws, f"B{nav_top}", "EXPLORE", f_eyebrow, align=left)
+    nav = [
+        ("Assumptions", "The one place you type. Edit the yellow cells."),
+        ("Dashboard", "All four scenarios compared, with charts."),
+        ("Base · Low · High · Stretch", "Full P&L for each scenario."),
+        ("Monthly", "Spread a scenario across the year."),
+        ("Pricing Lab", "Find the wholesale price that makes the most money."),
+        ("Targets", "Set a goal — it tells you the price or volume to get there."),
+        ("Sensitivity", "How profit moves with price and volume."),
+        ("Checks", "Built-in health check (should say ALL PASS)."),
+    ]
+    r = nav_top + 1
+    for name, desc in nav:
+        setcell(ws, f"B{r}", name, f_nav, align=left)
+        setcell(ws, f"C{r}", desc, f_navd, align=left)
+        ws.merge_cells(f"C{r}:D{r}")
+        r += 1
+    setcell(ws, f"B{r+1}", f"{VERSION}  ·  built {BUILT}  ·  all $ CDN  ·  figures are placeholders until you add real numbers", f_navd, align=left)
+    ws.merge_cells(f"B{r+1}:G{r+1}")
+
+
+# =====================================================================
 #  ASSEMBLE
 # =====================================================================
-ws_cover = wb.active; ws_cover.title = "Cover"
-ws_guide = wb.create_sheet("Guide")
-ws_review = wb.create_sheet("Review Log")
+ws_home = wb.active; ws_home.title = "Home"
 ws_asmp = wb.create_sheet("Assumptions")
 ws_dash = wb.create_sheet("Dashboard")
 scen_ws = {s: wb.create_sheet(s) for s in SCEN}
@@ -984,12 +1098,15 @@ ws_price = wb.create_sheet("Pricing Lab")
 ws_target = wb.create_sheet("Targets")
 ws_sens = wb.create_sheet("Sensitivity")
 ws_checks = wb.create_sheet("Checks")
+ws_guide = wb.create_sheet("Guide")
+ws_review = wb.create_sheet("Review Log")
+ws_cover = wb.create_sheet("Cover")
 
 A = build_assumptions(ws_asmp)
 for s in SCEN:
     build_scenario(scen_ws[s], s, A)
 build_monthly(ws_month, A)
-build_sensitivity(ws_sens, A)          # build before dashboard/cover (they reference C23)
+build_sensitivity(ws_sens, A)          # before dashboard/cover/home (they reference C23)
 build_pricing(ws_price, A)
 build_targets(ws_target, A)
 build_dashboard(ws_dash)
@@ -997,6 +1114,13 @@ build_checks(ws_checks, A)
 build_cover(ws_cover)
 build_guide(ws_guide)
 build_review_log(ws_review)
+build_home(ws_home, ws_dash, A)
+
+# ---- simple-first tab order (Apple-style) ----
+order = ["Home", "Assumptions", "Dashboard", "Base", "Low", "High", "Stretch",
+         "Monthly", "Pricing Lab", "Targets", "Sensitivity", "Checks",
+         "Guide", "Review Log", "Cover"]
+wb._sheets.sort(key=lambda s: order.index(s.title) if s.title in order else 99)
 
 # ---- named ranges for key inputs (usability) ----
 def dn(name, sheet, cell):
@@ -1020,8 +1144,10 @@ ws_asmp.print_title_rows = "4:5"
 ws_dash.print_title_rows = "4:4"
 ws_month.print_title_rows = "6:6"
 
-ws_cover.sheet_view.tabSelected = True
-wb.active = 0
+for ws in wb.worksheets:
+    ws.sheet_view.tabSelected = False
+ws_home.sheet_view.tabSelected = True
+wb.active = wb._sheets.index(ws_home)
 
 wb.save(OUT)
 print("Saved", OUT)
