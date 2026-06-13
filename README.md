@@ -10,7 +10,7 @@ ends end of August) and tracks progress against a **$3,000,000** gross-revenue g
 | File | What it is |
 |------|------------|
 | **`MUV_RTD_Forecast_v1.xlsx`** | The calculation engine. Editable assumption tables + live formulas (openpyxl). Tabs: Settings, Assumptions, Calc, Summary, **Scenarios**, Charts, ReadMe. Nothing is hard-coded — every result traces back to an input cell. |
-| **`MUV_RTD_Forecast_Dashboard_v1.html`** | A standalone, Apple-clean interactive dashboard (vanilla JS + Chart.js CDN). A goal ring front-and-centre, plain-language status, one-tap "close the gap" actions, Bear/Base/Bull scenario cards, an explore panel (revenue **or** volume, plus a sensitivity tornado), and advanced sliders behind progressive disclosure. Mirrors the Excel math to the cent. |
+| **`MUV_RTD_Forecast_Dashboard_v1.html`** | A standalone, premium **dark-glass** dashboard — fully **self-contained** (Chart.js is inlined, so it works with no internet, behind any firewall). A signature glowing **goal gauge**, plain-language status, one-tap "close the gap" actions, Bear/Base/Bull scenario cards, an explore panel (revenue **or** volume, plus a sensitivity tornado), gradient/glow charts with glassy tooltips, and advanced sliders behind progressive disclosure. Mirrors the Excel math to the cent. |
 
 Both are driven by **editable config**, so you add a SKU, channel, province, or
 store tier by **adding a row** — not by rewriting logic.
