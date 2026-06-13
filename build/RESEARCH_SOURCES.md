@@ -2,7 +2,7 @@
 
 v2 note: every Activation Type, Activation Date and activation idea was cleared on purpose. The team books real activations and the Calendar fills itself. Maddie is the single owner. The Suggested Events tab starts empty; the bench list below is raw material for it when Louis wants ideas parked there.
 
-This file backs the 60 partner rows in `Organika RTD Community Partnerships Tracker_v6.xlsx`.
+This file backs the 80 partner rows in `Organika RTD Community Partnerships Tracker_v7.xlsx`.
 Every partner was found through web research in 2026 and tagged in the workbook as Verified Web,
 Pending, or Unverified. No contact name, email, phone number, or audience number was invented.
 Anything that could not be verified is left blank or TBD in the workbook and is listed on the gap
@@ -96,3 +96,31 @@ no hyphens.
 - Wellness: Pure Float (Yaletown). Othership has no BC location.
 - Creators: Taylor White (micro, 13k) and Pre (micro, 9k).
 - Excluded for risk: Kwantlen Student Association is under a 2026 provincial financial investigation.
+
+
+## v7 additions and gap fills (June 2026 research pass)
+Gap fills, now sourced: Tevah Wellness 7,690 IG (@tevahwellness); Flight Crew Run Club 4,426 IG; CrossFit BC 6,164 IG; CrossFit Zone 2,250 IG; Khatsahlano Street Party about 200,000 attendees (2025 edition, CTV and vancouversbestplaces); Canada Dry Victoria Dragon Boat 30 plus teams; Vancouver Pickleball Association 1,065 IG; False Creek Racing Canoe Club 956 IG. Confirmed and upgraded to Verified Web: Tantra Fitness 17,000 IG, 604 Athletics 6,148 IG, FAR Studio 2,458 IG, The Lab Victoria 3,564 IG, CrossFit Okanagan 4,711 IG.
+
+New partners:
+- Notorious Run Club, Victoria. https://www.instagram.com/notoriousrunclub/
+- NRG Kelowna, Kelowna. https://www.instagram.com/nrgkelowna/
+- the girls vancouver, Vancouver. https://www.instagram.com/thegirlsvancouver/
+- Victoria Queer Run Club, Victoria. https://www.instagram.com/vicqueerrunclub/
+- Sweat Studios, Kelowna. https://www.instagram.com/sweatkelowna/
+- Quantum Yoga and Pilates, Victoria. https://www.instagram.com/quantumyogapilates/
+- F45 Training Downtown Victoria, Victoria. https://www.instagram.com/f45_training_downtownvic/
+- Loyly Floating Sauna Kelowna, Kelowna. https://www.instagram.com/loyly.kelowna/
+- Harmony Arts Festival, West Vancouver, Jul 31 to Aug 9 2026. https://westvancouver.ca/arts-culture/festivals-special-events/harmony-arts-festival
+- Parks Alive Kelowna, Jul to Aug 2026. https://www.festivalskelowna.com/
+- Victoria Pride Festival, Jul 12 2026. https://victoriapridesociety.org/
+- RBC GranFondo Whistler, Sep 12 2026. https://www.rbcgranfondo.com/
+- Kelowna International Dragon Boat Festival, Jul 11 2026. https://www.kelownadragonboatclub.com/festivals/
+- Urban Rec Victoria, Victoria. https://victoria.urbanrec.ca/leagues
+- Kelowna Rowing Club, Kelowna. https://kelownarowing.com/pages/about
+- Simon Fraser Student Society, Burnaby. https://sfss.ca/
+- Okanagan College Students Union, Kelowna. https://www.ocsu.ca/about/
+- BCIT Student Association, Burnaby. https://www.bcitsa.ca/
+- Ryder Hesjedal's Tour de Victoria, Aug 15 2026. https://www.tourdevictoria.com/
+- The Official Vancouver Fitness, Vancouver (Pending, reconfirm count). https://www.instagram.com/vancouver.fitness/
+
+Still TBD or flagged: Concord Pacific Summer Regatta, Summer Lights in English Bay, Foodstock, Victoria Hospice (publishes dollars raised not headcount), Wild One Run, Kelowna Dragon Boat, Urban Rec Victoria, SFSS, BCIT SA, Tour de Victoria. Victoria Sport and Social Club: its @vicsportnsocial handle may be an Ottawa account, reverify. BioShack: the count found is the multi location brand, not the Kelowna studio.

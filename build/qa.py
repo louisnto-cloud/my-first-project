@@ -5,7 +5,7 @@ import openpyxl
 from openpyxl.utils import get_column_letter
 warnings.filterwarnings("ignore")
 
-OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v6.xlsx"
+OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v7.xlsx"
 SRC = "/root/.claude/uploads/607dab49-f51b-5b86-83ad-5f4c7139295f/029750d9-Organika_RTD_BC_Tracker.xlsx"
 fails=[]; warns=[]
 def ok(m): print("  PASS  "+m)
@@ -100,7 +100,7 @@ if wr.cell(3,2).value=="Tevah Wellness" and wr.cell(3,34).value=="Yes": ok("Teva
 else: bad("Tevah row off")
 nmd=sum(1 for t in TYPES for r in range(3,33) if wb[t].cell(r,2).value)
 own_ok=all(wb[t].cell(r,8).value=="Maddie" for t in TYPES for r in range(3,33) if wb[t].cell(r,2).value)
-if nmd==60 and own_ok: ok("60 partners, owner Maddie on every one")
+if nmd==80 and own_ok: ok("80 partners, owner Maddie on every one")
 else: bad(f"partners={nmd} ownerok={own_ok}")
 
 print("\n[7] NO PROPOSED ACTIVATIONS on type tabs; SKU numbers correct")
@@ -154,14 +154,14 @@ try:
           "Activations Booked":g("Dashboard","G5"),"Cans":g("Dashboard","I5"),
           "Days to Costco":g("Dashboard","M5")}
     print("        KPIs:",{k:(round(float(v),2) if isinstance(v,(int,float)) else v) for k,v in kpis.items()})
-    if int(g("Dashboard","A5"))==60: ok("Total Partners = 60")
+    if int(g("Dashboard","A5"))==80: ok("Total Partners = 80")
     else: bad(f"Total Partners={g('Dashboard','A5')}")
     if int(g("Dashboard","G5"))==0 and (g("Dashboard","I5") in (0,0.0)): ok("Activations Booked and Cans Sampled start at 0 (empty Activations tab)")
     else: bad(f"activations/cans not zero: {g('Dashboard','G5')},{g('Dashboard','I5')}")
     al_rows=sum(1 for r in range(3,83) if g("Action List","B"+str(r)) not in (None,"",0))
     al_top=[g("Action List","D"+str(r)) for r in (3,4,5)]
-    if al_rows==60 and all(x=="P1" for x in al_top):
-        ok(f"Action List surfaces all 60 active partners, P1 first ({al_rows} rows, top three P1)")
+    if al_rows==80 and all(x=="P1" for x in al_top):
+        ok(f"Action List surfaces all 80 active partners, P1 first ({al_rows} rows, top three P1)")
     else: bad(f"Action List rows={al_rows} top={al_top}")
 except Exception as e:
     import traceback; traceback.print_exc()
@@ -183,8 +183,8 @@ print("\n[11] v5: partner menu, priority sort, locked read only tabs")
 act=wb["Activations"]
 pdv=[dv for dv in act.data_validations.dataValidation if "LU_Partners" in str(dv.formula1) and "C3" in str(dv.sqref)]
 lp=wb["Lookups"]
-pnames=[lp.cell(r,19).value for r in range(3,63) if lp.cell(r,19).value]
-if pdv and len(pnames)==60: ok(f"Partner menu on the Activations tab lists all {len(pnames)} partners, and lets you type your own")
+pnames=[lp.cell(r,19).value for r in range(3,90) if lp.cell(r,19).value]
+if pdv and len(pnames)==80: ok(f"Partner menu on the Activations tab lists all {len(pnames)} partners, and lets you type your own")
 else: bad(f"partner dropdown={bool(pdv)} names={len(pnames)}")
 # priority sorted within each type tab (first filled row is P1 where P1 exists)
 bad_sort=[]
