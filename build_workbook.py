@@ -2604,9 +2604,11 @@ def build_weekly_review(wb):
         ("Variance percent",
             f'=IFERROR(INDEX(\'Variance Tracker\'!F5:F{4+len(WEEKS)},$B$5),"")', "0.0%"),
         ("Cumulative plan cases",
-            f"=IFERROR(SUM(OFFSET('Variance Tracker'!C5,0,0,$B$5,1)),0)", "#,##0"),
+            f"=SUMPRODUCT((ROW('Variance Tracker'!C5:C{4+len(WEEKS)})-ROW('Variance Tracker'!C5)+1<=$B$5)"
+            f"*'Variance Tracker'!C5:C{4+len(WEEKS)})", "#,##0"),
         ("Cumulative actual cases",
-            f"=IFERROR(SUM(OFFSET('Variance Tracker'!D5,0,0,$B$5,1)),0)", "#,##0"),
+            f"=SUMPRODUCT((ROW('Variance Tracker'!D5:D{4+len(WEEKS)})-ROW('Variance Tracker'!D5)+1<=$B$5)"
+            f"*IFERROR('Variance Tracker'!D5:D{4+len(WEEKS)},0))", "#,##0"),
         ("Bevmax weeks at or over capacity to date",
             f'=IFERROR(SUMPRODUCT((\'Production Calendar\'!A5:A{4+len(WEEKS)}<>"")*('
             f'\'Production Calendar\'!D5:D{4+len(WEEKS)}>=BEVMAX_CAP)*'
