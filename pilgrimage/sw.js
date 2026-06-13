@@ -20,8 +20,9 @@ async function precache() {
     const urls = files.map((p) => new URL(p, self.registration.scope).toString());
     // Add the directory root too, so a bare "/" navigation is covered.
     urls.push(self.registration.scope);
-    await cache.addAll(urls);
-    await self.registration.navigationPreload?.disable();
+    // Cache individually so one unexpected miss cannot abort the whole
+    // install — being mostly-cached offline beats being not-installed.
+    await Promise.allSettled(urls.map((u) => cache.add(u)));
   } catch {
     // If the manifest is missing (e.g. dev), fall back to lazy runtime caching.
   }
