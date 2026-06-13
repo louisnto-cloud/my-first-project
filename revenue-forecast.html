@@ -3,252 +3,249 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Revenue &amp; Profit Forecast — Cases-Sold Planner</title>
+<title>Revenue Planner</title>
 <style>
   :root{
-    --navy:#16243d; --blue:#2e5496; --blue2:#3b6fb5; --light:#dbe4f3; --accent:#2e8b57;
-    --green:#1e7d4f; --red:#c0392b; --amber:#e08a3c; --terra:#e07a5f;
-    --ink:#172033; --mut:#65728a; --line:#e6eaf1; --yell:#fff8e1; --bg:#eef2f8; --card:#fff;
+    --bg:#fbfbfd; --card:#ffffff; --ink:#1d1d1f; --mut:#6e6e73; --line:#e7e7ec;
+    --accent:#0071e3; --accent2:#34c759; --warn:#ff3b30; --amber:#ff9f0a;
+    --soft:#f5f5f7; --shadow:0 4px 24px rgba(0,0,0,.06); --shadow2:0 2px 8px rgba(0,0,0,.05);
+    --r:20px; --rs:14px; --maxw:920px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{--bg:#000; --card:#1c1c1e; --ink:#f5f5f7; --mut:#9b9ba1; --line:#2c2c2e;
+      --accent:#0a84ff; --accent2:#30d158; --warn:#ff453a; --soft:#2c2c2e;
+      --shadow:0 4px 30px rgba(0,0,0,.5); --shadow2:0 2px 10px rgba(0,0,0,.4);}
   }
   *{box-sizing:border-box}
-  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-       background:var(--bg);color:var(--ink);line-height:1.45;font-size:14px}
-  .topbar{background:linear-gradient(120deg,var(--navy),var(--blue));color:#fff;padding:16px 22px;
-          display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;
-          position:sticky;top:0;z-index:30;box-shadow:0 2px 10px rgba(10,20,40,.18)}
-  .topbar h1{margin:0;font-size:18px;letter-spacing:.2px}
-  .topbar .sub{font-size:12px;opacity:.8;margin-top:2px}
-  .tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-  .tools button,.tools select{font:inherit;font-size:13px;border:1px solid rgba(255,255,255,.4);
-       background:rgba(255,255,255,.1);color:#fff;border-radius:8px;padding:6px 11px;cursor:pointer}
-  .tools button:hover{background:rgba(255,255,255,.25)}
-  .tools select{background:rgba(255,255,255,.12)}
-  .tools select option{color:#000}
-  .strip{position:sticky;top:60px;z-index:20;background:#fff;border-bottom:1px solid var(--line);
-         display:grid;grid-template-columns:repeat(6,1fr);gap:0;box-shadow:0 1px 6px rgba(10,20,40,.06)}
-  .strip .s{padding:10px 14px;border-right:1px solid var(--line)}
-  .strip .s:last-child{border-right:none}
-  .strip .v{font-size:19px;font-weight:800;color:var(--navy);letter-spacing:-.4px;line-height:1.1}
-  .strip .v small{font-size:12px;font-weight:700;color:var(--mut)}
-  .strip .l{font-size:10.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.4px;margin-top:2px}
-  .strip .v.pos{color:var(--green)} .strip .v.neg{color:var(--red)}
-  main{max-width:1140px;margin:0 auto;padding:18px 16px 80px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0;
-        box-shadow:0 1px 3px rgba(20,30,50,.05)}
-  h2{font-size:13px;text-transform:uppercase;letter-spacing:.7px;color:var(--navy);margin:0 0 4px}
-  h2 .hint{text-transform:none;letter-spacing:0;font-weight:500;color:var(--mut);font-size:12px}
-  .sec-d{font-size:12.5px;color:var(--mut);margin:0 0 14px;border-bottom:1px solid var(--line);padding-bottom:10px}
-  label{font-size:11.5px;color:var(--mut);display:block;margin-bottom:3px;font-weight:600}
-  input[type=number],input[type=text],select{font:inherit;padding:7px 9px;border:1px solid #cdd5e0;border-radius:8px;width:100%;background:#fff}
-  input.in{background:var(--yell)} input:focus,select:focus{outline:2px solid var(--blue);outline-offset:-1px}
-  .grid{display:grid;gap:13px}
-  .a4{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
-  .two{grid-template-columns:1.3fr .9fr;gap:20px}
-  @media(max-width:820px){.two{grid-template-columns:1fr}.strip{grid-template-columns:repeat(3,1fr)}}
-  @media(max-width:520px){.strip{grid-template-columns:repeat(2,1fr)}}
-  table{border-collapse:collapse;width:100%;font-size:13px}
-  th,td{padding:7px 9px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
-  th{background:var(--navy);color:#fff;font-weight:600}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;line-height:1.5;font-size:17px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  /* top bar */
+  .nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(20px);
+    -webkit-backdrop-filter:saturate(180%) blur(20px);background:color-mix(in srgb,var(--bg) 80%,transparent);
+    border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:52px;gap:14px}
+  .brand{font-weight:600;font-size:18px;letter-spacing:-.02em}
+  .brand .dot{color:var(--accent)}
+  .nav-actions{display:flex;align-items:center;gap:8px}
+  .seg{display:inline-flex;background:var(--soft);border-radius:980px;padding:3px;border:1px solid var(--line)}
+  .seg button{border:none;background:none;color:var(--mut);font:inherit;font-size:13px;font-weight:600;
+    padding:5px 14px;border-radius:980px;cursor:pointer;transition:.2s}
+  .seg button.on{background:var(--card);color:var(--ink);box-shadow:var(--shadow2)}
+  .icon{border:none;background:none;color:var(--mut);font-size:14px;cursor:pointer;padding:6px 9px;border-radius:10px}
+  .icon:hover{background:var(--soft);color:var(--ink)}
+  select.cur{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--ink);
+    border-radius:10px;padding:5px 8px;cursor:pointer}
+  /* hero */
+  .hero{text-align:center;padding:64px 0 30px}
+  .eyebrow{color:var(--accent);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 12px}
+  .hero h1{font-size:clamp(28px,5vw,46px);font-weight:700;letter-spacing:-.03em;margin:0 0 12px;line-height:1.07}
+  .subhead{color:var(--mut);font-size:17px;margin:0 0 26px}
+  .goal-row{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);
+    border-radius:var(--r);padding:14px 22px;box-shadow:var(--shadow);transition:.2s}
+  .goal-row:focus-within{border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 18%,transparent)}
+  .goal-row .cur{font-size:34px;font-weight:600;color:var(--mut)}
+  #goal{font:inherit;font-size:42px;font-weight:700;letter-spacing:-.03em;border:none;background:none;color:var(--ink);
+    width:min(8ch,62vw);text-align:left;outline:none;padding:0}
+  .answer{font-size:clamp(20px,3vw,26px);font-weight:500;margin:30px 0 6px;letter-spacing:-.01em}
+  .answer #cases-big{font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+  .answer .unit{color:var(--mut);font-weight:500}
+  .answer.pop{animation:pop .4s ease}
+  @keyframes pop{0%{transform:scale(.97);opacity:.6}100%{transform:scale(1);opacity:1}}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:12px 20px;justify-content:center;align-items:center;margin-top:18px;color:var(--mut);font-size:15px}
+  .hero-meta .field{display:inline-flex;align-items:center;gap:7px}
+  .hero-meta input{font:inherit;font-size:15px;font-weight:600;color:var(--ink);background:var(--soft);border:1px solid var(--line);
+    border-radius:10px;padding:6px 10px;width:7.5ch;text-align:right;outline:none}
+  .hero-meta input:focus{border-color:var(--accent)}
+  .ghost{border:1px dashed var(--line);background:none;color:var(--accent);font:inherit;font-size:14px;font-weight:600;
+    border-radius:980px;padding:6px 14px;cursor:pointer}
+  .ghost:hover{background:var(--soft)}
+  .profit-hint{font-weight:600;color:var(--accent2)}
+  /* stat strip */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:18px 0 8px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--rs);padding:16px 18px;box-shadow:var(--shadow2)}
+  .stat .v{font-size:26px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .stat .v.green{color:var(--accent2)} .stat .v.red{color:var(--warn)}
+  .stat .l{font-size:13px;color:var(--mut);margin-top:2px}
+  /* panels */
+  .panels{margin:26px 0 60px;display:flex;flex-direction:column;gap:14px}
+  details.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow2);overflow:hidden}
+  details.panel>summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+  details.panel>summary::-webkit-details-marker{display:none}
+  .sm-title{font-size:18px;font-weight:600;letter-spacing:-.01em}
+  .sm-sub{font-size:14px;color:var(--mut);margin-top:2px}
+  .chev{color:var(--mut);transition:transform .25s ease;flex:none}
+  details[open]>summary .chev{transform:rotate(90deg)}
+  .panel-body{padding:4px 22px 24px;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+  .hint-box{background:var(--soft);border-radius:var(--rs);padding:16px 18px;color:var(--mut);font-size:15px}
+  .hint-box b{color:var(--ink)}
+  /* tables */
+  table{border-collapse:collapse;width:100%;font-size:14.5px}
+  th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{font-weight:600;color:var(--mut);font-size:12.5px;text-transform:uppercase;letter-spacing:.03em}
   th:first-child,td:first-child{text-align:left}
-  th.grp{background:var(--blue)}
-  tbody tr:hover{background:#f6f9fd}
-  td input{background:var(--yell);text-align:right;padding:5px 7px;border:1px solid #d8dee8}
-  td input.name{text-align:left}
-  tfoot td{font-weight:700;background:#eef2f9;border-top:2px solid var(--navy)}
-  .calc{color:var(--mut)}
-  .kpi{background:linear-gradient(135deg,#fff,#f3f6fc);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
-  .kpi .v{font-size:21px;font-weight:800;color:var(--navy);letter-spacing:-.4px}
-  .kpi .l{font-size:11px;color:var(--mut);margin-top:2px;text-transform:uppercase;letter-spacing:.3px}
-  .kpi.hero{background:linear-gradient(135deg,var(--navy),var(--blue));border:none}
-  .kpi.hero .v,.kpi.hero .l{color:#fff}
-  .kpi .v.pos{color:var(--green)} .kpi .v.neg{color:var(--red)}
-  .bars .b{display:flex;align-items:center;gap:9px;margin:6px 0}
-  .bars .nm{width:150px;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .bars .track{flex:1;background:#eef1f6;border-radius:6px;height:16px;overflow:hidden}
-  .bars .fill{height:100%;border-radius:6px}
-  .bars .val{font-size:12px;color:var(--mut);width:96px;text-align:right}
-  .legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
-  .legend span{font-size:11.5px;color:var(--mut);display:flex;align-items:center;gap:5px}
-  .legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
-  button.mini{font:inherit;border:1px solid var(--blue);background:#fff;color:var(--blue);border-radius:8px;padding:6px 12px;cursor:pointer;font-weight:600;font-size:13px}
-  button.mini:hover{background:var(--blue);color:#fff}
-  button.del{border:1px solid #d98b8b;color:#b54a4a;border-radius:7px;padding:3px 8px;cursor:pointer;background:#fff;font-size:12px}
-  button.del:hover{background:#b54a4a;color:#fff}
-  .note{font-size:12px;color:var(--mut);font-style:italic;margin-top:10px}
-  .pill{display:inline-block;background:var(--light);color:var(--navy);border-radius:20px;padding:2px 9px;font-size:10.5px;font-weight:700;margin-left:6px;vertical-align:middle}
-  .scroll{overflow-x:auto}
-  .scn{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+  td.calc{color:var(--mut);font-variant-numeric:tabular-nums}
+  tfoot td{font-weight:700;border-top:2px solid var(--line)}
+  .scroll{overflow-x:auto;margin:0 -6px;padding:0 6px}
+  input.cell{font:inherit;font-size:14px;background:var(--soft);border:1px solid var(--line);border-radius:9px;
+    padding:6px 8px;width:8.5ch;text-align:right;color:var(--ink);outline:none}
+  input.cell:focus{border-color:var(--accent)}
+  input.cell.name{text-align:left;width:15ch}
+  .btn{border:1px solid var(--line);background:var(--card);color:var(--accent);font:inherit;font-size:14px;font-weight:600;
+    border-radius:980px;padding:8px 16px;cursor:pointer}
+  .btn:hover{background:var(--soft)}
+  .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .btn.primary:hover{filter:brightness(1.05)}
+  .del{border:none;background:none;color:var(--mut);cursor:pointer;font-size:15px;padding:4px 7px;border-radius:8px}
+  .del:hover{background:color-mix(in srgb,var(--warn) 14%,transparent);color:var(--warn)}
+  .row-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+  /* mini KPI tiles inside panels */
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+  .tile{background:var(--soft);border-radius:var(--rs);padding:14px 16px}
+  .tile .v{font-size:22px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .tile .v.green{color:var(--accent2)} .tile .v.red{color:var(--warn)}
+  .tile .l{font-size:12.5px;color:var(--mut);margin-top:2px}
+  /* charts + misc */
+  .two{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:start}
+  @media(max-width:720px){.two{grid-template-columns:1fr}}
+  .bars .b{display:flex;align-items:center;gap:10px;margin:7px 0}
+  .bars .nm{width:130px;font-size:13px;color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .bars .track{flex:1;background:var(--soft);border-radius:8px;height:14px;overflow:hidden}
+  .bars .fill{height:100%;border-radius:8px;transition:width .5s cubic-bezier(.2,.7,.2,1)}
+  .bars .val{width:96px;text-align:right;font-size:13px;font-variant-numeric:tabular-nums}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;color:var(--mut);font-size:13px}
+  .legend i{width:11px;height:11px;border-radius:3px;display:inline-block;margin-right:6px;vertical-align:middle}
+  .scn{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
   @media(max-width:680px){.scn{grid-template-columns:1fr}}
-  .scn .col{border:1px solid var(--line);border-radius:12px;overflow:hidden}
-  .scn .col h3{margin:0;padding:10px 14px;font-size:13px;color:#fff;background:var(--mut)}
-  .scn .col.base h3{background:var(--blue)} .scn .col.cons h3{background:#7f8aa0} .scn .col.aggr h3{background:var(--green)}
-  .scn .row{display:flex;justify-content:space-between;padding:7px 14px;border-top:1px solid var(--line);font-size:13px}
-  .scn .row b{font-weight:700}
-  .scn .col input{width:120px}
-  .heat td{color:#10306a;font-weight:600;text-align:center;border:1px solid #fff}
-  .barline{position:relative;height:26px;background:#eef1f6;border-radius:6px;margin:8px 0}
-  .barline .be{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--red)}
-  .barline .fillt{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--blue),var(--accent));border-radius:6px}
-  @media print{.topbar,.tools,.strip{position:static} .card{break-inside:avoid;box-shadow:none} body{background:#fff} .noprint{display:none}}
+  .scn .col{border:1px solid var(--line);border-radius:var(--rs);overflow:hidden}
+  .scn .col h4{margin:0;padding:12px 16px;font-size:15px;font-weight:600;background:var(--soft)}
+  .scn .col.base h4{color:var(--accent)} .scn .col.aggr h4{color:var(--accent2)}
+  .scn .ln{display:flex;justify-content:space-between;padding:9px 16px;border-top:1px solid var(--line);font-size:14px}
+  .scn .ln b{font-variant-numeric:tabular-nums}
+  .heat td{text-align:center;border:2px solid var(--card);font-weight:600;color:#0b3b66;font-size:13px;border-radius:6px}
+  .note{font-size:13px;color:var(--mut);margin-top:12px}
+  .help{display:inline-block;width:15px;height:15px;line-height:15px;text-align:center;border-radius:50%;
+    background:var(--soft);color:var(--mut);font-size:10px;font-weight:700;cursor:help;margin-left:5px;border:1px solid var(--line)}
+  .hero{position:relative}
+  .hero::before{content:"";position:absolute;inset:-12% 0 auto;height:360px;z-index:-1;pointer-events:none;
+    background:radial-gradient(58% 120% at 50% 0%,color-mix(in srgb,var(--accent) 15%,transparent),transparent 70%)}
+  .panels.hidden{display:none}
+  .more{text-align:center;margin:8px 0 54px;color:var(--mut);font-size:15px}
+  .more .ghost{margin-left:8px}
+  .mcur{color:var(--mut);font-weight:600;margin-right:-4px}
+  @media print{.nav,.row-actions,.ghost,.more{display:none}.panels.hidden{display:flex}details.panel{box-shadow:none}details>summary{pointer-events:none}.panel-body{display:block!important}}
 </style>
 </head>
 <body>
-<div class="topbar">
-  <div><h1>Revenue &amp; Profit Forecast</h1><div class="sub">Cases-sold planner with channel pricing, margin &amp; break-even</div></div>
-  <div class="tools noprint">
-    <label style="color:#fff;margin:0 4px 0 0;font-weight:600">Currency
-      <select id="cur" style="margin-left:5px"></select></label>
-    <button id="btnCsv">⬇ Export CSV</button>
-    <button id="btnPrint">🖨 Print / PDF</button>
-    <button id="btnReset">↺ Reset sample</button>
+<nav class="nav"><div class="wrap">
+  <div class="brand">Revenue Planner<span class="dot">.</span></div>
+  <div class="nav-actions">
+    <div class="seg" id="seg"><button data-mode="simple" class="on">Simple</button><button data-mode="detailed">Detailed</button></div>
+    <select class="cur" id="cur" title="Currency"></select>
+    <button class="icon" id="btnCsv" title="Export CSV">↓ CSV</button>
+    <button class="icon" id="btnPrint" title="Print / PDF">⎙</button>
+    <button class="icon" id="btnReset" title="Reset">↺</button>
   </div>
-</div>
+</div></nav>
 
-<div class="strip" id="strip"></div>
-
-<main>
-  <section class="card">
-    <h2>1 · Targets &amp; assumptions</h2>
-    <p class="sec-d">Set the goal and the fixed economics. Yellow fields are inputs; everything below recalculates instantly and is saved in your browser.</p>
-    <div class="grid a4">
-      <div><label>Annual gross revenue target</label><input class="in" id="target" type="number" min="0" step="50000"></div>
-      <div><label>Units per case</label><input class="in" id="upc" type="number" min="1" step="1"></div>
-      <div><label>Selling days / year</label><input class="in" id="days" type="number" min="1" step="1"></div>
-      <div><label>Annual fixed costs</label><input class="in" id="fixed" type="number" min="0" step="10000"></div>
-      <div><label>YoY growth (projection)</label><input class="in" id="growth" type="number" step="1"></div>
-      <div><label>Projection years</label><input class="in" id="years" type="number" min="1" max="10" step="1"></div>
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Revenue Planner</p>
+    <h1>What do you want to make next year?</h1>
+    <p class="subhead">Type your revenue goal — see exactly how many cases to sell.</p>
+    <div class="goal-row"><span class="cur" id="goalCur">$</span><input id="goal" type="text" inputmode="numeric" aria-label="Revenue goal"></div>
+    <p class="answer" id="answer">Sell about <span id="cases-big">0</span> cases<span class="unit"> — about <b id="cases-week">0</b> a week.</span></p>
+    <div class="hero-meta">
+      <span class="field">Price per case <span class="mcur">$</span><input id="avgPrice" type="text" inputmode="decimal" aria-label="Average price per case"></span>
+      <span class="field" id="costField" hidden>Cost per case <span class="mcur">$</span><input id="avgCost" type="text" inputmode="decimal" aria-label="Average cost per case"></span>
+      <button class="ghost" id="addCost">+ Add your cost to see profit</button>
+      <span class="profit-hint" id="profitHint"></span>
     </div>
   </section>
 
-  <section class="card">
-    <h2>2 · Channels — pricing &amp; unit economics <span class="pill">edit freely</span></h2>
-    <p class="sec-d">Each channel sells the same product at a different price and cost-to-serve. Net price = gross − trade discount; contribution = net − COGS − selling cost.</p>
-    <div class="scroll">
-      <table id="chTable">
-        <thead>
-          <tr>
-            <th rowspan="2">Channel</th>
-            <th rowspan="2" title="List price the customer pays, per case">Gross / case</th>
-            <th rowspan="2" title="Relative volume weight across channels (need not total 100)">Volume mix</th>
-            <th rowspan="2" title="Cost of goods sold per case">COGS / case</th>
-            <th rowspan="2" title="Trade discount / allowance, % off gross">Trade disc. %</th>
-            <th rowspan="2" title="Cost-to-serve (fees, shipping, commission) as % of net">Selling %</th>
-            <th class="grp" colspan="3">Per case (calc)</th><th class="grp" colspan="3">At target (calc)</th><th rowspan="2"></th>
-          </tr>
-          <tr><th class="grp">Net</th><th class="grp">Contrib.</th><th class="grp">Margin</th>
-              <th class="grp">Cases</th><th class="grp">Gross $</th><th class="grp">Contrib $</th></tr>
-        </thead>
-        <tbody id="chBody"></tbody>
-        <tfoot><tr>
-          <td>Blended / Total</td><td id="fGross"></td><td id="fMix"></td><td id="fCogs"></td><td></td><td></td>
-          <td id="fNet"></td><td id="fContrib"></td><td id="fMargin"></td>
-          <td id="fCases"></td><td id="fGrossT"></td><td id="fContribT"></td><td></td>
-        </tr></tfoot>
-      </table>
-    </div>
-    <div style="margin-top:12px"><button class="mini" id="btnAdd">+ Add channel</button></div>
-  </section>
+  <section class="stats" id="stats"></section>
 
-  <section class="card">
-    <h2>3 · From revenue to profit <span class="hint">— the money waterfall</span></h2>
-    <p class="sec-d">How your gross revenue target turns into operating profit, after discounts, COGS, cost-to-serve and fixed costs.</p>
-    <div class="two">
-      <div id="waterfall"></div>
-      <div class="grid" style="grid-template-columns:1fr 1fr;align-content:start" id="wfKpis"></div>
-    </div>
-  </section>
+  <p class="more" id="moreHint">Want channels, profit, scenarios &amp; sensitivity?<button class="ghost" id="moreBtn">Show detailed view</button></p>
 
-  <section class="card">
-    <h2>4 · Where it comes from</h2>
-    <div id="scorecard" class="note" style="margin:0 0 12px;font-style:normal"></div>
-    <div class="two">
-      <div>
-        <div class="note" style="margin:0 0 6px">Contribution $ by channel</div><div class="bars" id="contribBars"></div>
-        <div class="note" style="margin:14px 0 6px">Cases by channel</div><div class="bars" id="casesBars"></div>
+  <section class="panels" id="panels">
+    <details class="panel" data-adv>
+      <summary><div><div class="sm-title">Sales channels &amp; pricing</div><div class="sm-sub" id="sub-ch"></div></div><span class="chev">›</span></summary>
+      <div class="panel-body">
+        <p class="note">Sell the same product at different prices? Split it into channels — each with its own price and costs. Otherwise one line is all you need.</p>
+        <div class="scroll"><table id="chTable">
+          <thead><tr>
+            <th>Channel</th><th>Price/case</th><th>Mix<span class="help" title="Relative volume weight across channels. They needn't add to 100.">?</span></th>
+            <th>Cost/case<span class="help" title="Cost of goods sold — what it costs you to make one case.">?</span></th>
+            <th>Discount<span class="help" title="Trade discount / allowance, % off the price.">?</span></th>
+            <th>Selling<span class="help" title="Cost to serve — fees, shipping, commission — as % of net price.">?</span></th>
+            <th>Profit/case</th><th>Cases</th><th></th>
+          </tr></thead>
+          <tbody id="chBody"></tbody>
+          <tfoot><tr><td>Blended</td><td id="f-price"></td><td id="f-mix"></td><td id="f-cost"></td><td></td><td></td><td id="f-profit"></td><td id="f-cases"></td><td></td></tr></tfoot>
+        </table></div>
+        <div class="row-actions"><button class="btn" id="btnAdd">+ Add channel</button><button class="btn" id="btnExample">Load multi-channel example</button></div>
       </div>
-      <div style="text-align:center">
-        <div class="note" style="margin:0 0 6px">Gross revenue mix</div>
-        <div id="donut"></div><div class="legend" id="donutLeg" style="justify-content:center"></div>
+    </details>
+
+    <details class="panel" data-adv>
+      <summary><div><div class="sm-title">Profit breakdown</div><div class="sm-sub" id="sub-profit"></div></div><span class="chev">›</span></summary>
+      <div class="panel-body"><div id="profitBody"></div></div>
+    </details>
+
+    <details class="panel" data-adv>
+      <summary><div><div class="sm-title">Scenarios</div><div class="sm-sub">Conservative · Base · Aggressive</div></div><span class="chev">›</span></summary>
+      <div class="panel-body"><div class="scn" id="scn"></div></div>
+    </details>
+
+    <details class="panel" data-adv>
+      <summary><div><div class="sm-title">Your year</div><div class="sm-sub" id="sub-year"></div></div><span class="chev">›</span></summary>
+      <div class="panel-body">
+        <div id="monthChart" style="margin-bottom:8px"></div>
+        <div class="scroll"><table id="monthTable"></table></div>
+        <h4 style="margin:22px 0 8px;font-weight:600">Multi-year outlook</h4>
+        <div class="two"><div class="scroll"><table id="projTable"></table></div><div class="bars" id="projBars"></div></div>
       </div>
-    </div>
-  </section>
+    </details>
 
-  <section class="card">
-    <h2>5 · Break-even</h2>
-    <p class="sec-d">The volume where contribution covers fixed costs. Below this you lose money; above it, each case adds profit.</p>
-    <div id="beText"></div>
-    <div class="barline" id="beBar"><div class="fillt" id="beFill"></div><div class="be" id="beMark"></div></div>
-    <div class="legend"><span><i style="background:linear-gradient(90deg,var(--blue),var(--accent))"></i>Target volume</span><span><i style="background:var(--red)"></i>Break-even</span></div>
-  </section>
+    <details class="panel" data-adv>
+      <summary><div><div class="sm-title">What moves profit most</div><div class="sm-sub">Sensitivity — the biggest levers</div></div><span class="chev">›</span></summary>
+      <div class="panel-body"><div id="sensBody"></div></div>
+    </details>
 
-  <section class="card">
-    <h2>6 · Scenarios <span class="hint">— conservative · base · aggressive</span></h2>
-    <p class="sec-d">Same channel economics, three revenue goals. Edit any target to compare the case counts and profit each implies.</p>
-    <div class="scn" id="scenarios"></div>
-  </section>
+    <details class="panel" data-adv>
+      <summary><div><div class="sm-title">Goal-seek &amp; limits</div><div class="sm-sub">Plan to a profit, or to a capacity</div></div><span class="chev">›</span></summary>
+      <div class="panel-body"><div class="two">
+        <div><label class="note" style="display:block;margin-bottom:6px">Target profit</label>
+          <input class="cell" id="gsProfit" type="text" inputmode="numeric" style="width:12ch">
+          <div class="tiles" id="gsOut" style="margin-top:12px"></div></div>
+        <div><label class="note" style="display:block;margin-bottom:6px">Most cases you can sell</label>
+          <input class="cell" id="capCases" type="text" inputmode="numeric" style="width:12ch">
+          <div class="tiles" id="capOut" style="margin-top:12px"></div></div>
+      </div></div>
+    </details>
 
-  <section class="card">
-    <h2>7 · Multi-year projection</h2>
-    <p class="sec-d">The base target grown at your YoY rate, holding price &amp; cost structure constant.</p>
-    <div class="two">
-      <div class="scroll"><table id="projTable"></table></div>
-      <div><div class="note" style="margin:0 0 6px">Revenue trajectory</div><div class="bars" id="projBars"></div></div>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2>8 · Monthly plan <span class="hint">— seasonality</span></h2>
-    <p class="sec-d">Spread the annual total across the year. Seasonality weights are inputs (relative); set holiday peaks or ramp-ups.</p>
-    <div id="monthChart" style="margin-bottom:10px"></div>
-    <div class="scroll"><table id="monthTable"></table></div>
-  </section>
-
-  <section class="card">
-    <h2>9 · &ldquo;If I sold at this price&rdquo; — one channel at a time</h2>
-    <div class="scroll"><table id="pureTable"></table></div>
-    <p class="note">Assumes 100% of volume through that single channel. Your real answer sits between these rows, set by the mix in section 2.</p>
-  </section>
-
-  <section class="card">
-    <h2>10 · Profit grid <span class="hint">— price × volume → operating profit</span></h2>
-    <p class="sec-d">Operating profit at combinations of price/case and cases sold (using your blended discount, selling &amp; COGS). Green = profit, red = loss.</p>
-    <div class="scroll"><table class="heat" id="heatTable"></table></div>
-  </section>
-
-  <section class="card">
-    <h2>11 · Two-way calculator</h2>
-    <div class="grid a4">
-      <div><label>Price / case to test</label><input class="in" id="wfPrice" type="number" min="0" step="5"></div>
-      <div><label>Cases sold → revenue</label><input class="in" id="wfCases" type="number" min="0" step="100"></div>
-      <div><label>Revenue target → cases</label><input class="in" id="wfRev" type="number" min="0" step="50000"></div>
-    </div>
-    <div class="grid a4" id="wfOut" style="margin-top:13px"></div>
-    <p class="note">Profit here uses blended discount/selling/COGS from your channel mix.</p>
-  </section>
-
-  <section class="card">
-    <h2>12 · Goal-seek <span class="hint">— plan to a profit or a capacity, not just revenue</span></h2>
-    <p class="sec-d">Work backwards: how many cases for a target <b>operating profit</b>, and what a production/sales <b>ceiling</b> delivers.</p>
-    <div class="two">
-      <div>
-        <label>Target operating profit</label><input class="in" id="gsProfit" type="number" step="50000">
-        <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:11px" id="gsOut"></div>
+    <details class="panel" data-adv>
+      <summary><div><div class="sm-title">Reference tables</div><div class="sm-sub">Price-per-channel, profit grid, quick calculator</div></div><span class="chev">›</span></summary>
+      <div class="panel-body">
+        <h4 style="margin:6px 0 8px;font-weight:600">If you sold only through one channel</h4>
+        <div class="scroll"><table id="pureTable"></table></div>
+        <h4 style="margin:22px 0 8px;font-weight:600">Profit grid — price × cases</h4>
+        <p class="note" style="margin-top:0">Operating profit at each combination. Green = profit, red = loss.</p>
+        <div class="scroll"><table class="heat" id="heatTable"></table></div>
+        <h4 style="margin:22px 0 10px;font-weight:600">Quick calculator</h4>
+        <div class="hero-meta" style="justify-content:flex-start">
+          <span class="field">Price <input class="cell" id="wfPrice" type="text" inputmode="decimal"></span>
+          <span class="field">Cases <input class="cell" id="wfCases" type="text" inputmode="numeric"></span>
+        </div>
+        <div class="tiles" id="wfOut" style="margin-top:12px"></div>
       </div>
-      <div>
-        <label>Capacity — max cases you can sell</label><input class="in" id="capCases" type="number" step="500">
-        <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:11px" id="capOut"></div>
-      </div>
-    </div>
+    </details>
   </section>
 
-  <section class="card">
-    <h2>13 · Sensitivity <span class="hint">— which lever moves profit most (±10%)</span></h2>
-    <p class="sec-d">Operating-profit swing if each driver moves ±10%, holding the plan's volumes fixed. The longest bar is where your attention pays off most.</p>
-    <div id="tornado"></div>
-    <div class="legend"><span><i style="background:#88c08f"></i>favourable +10%</span><span><i style="background:#e98a7a"></i>adverse −10%</span></div>
-  </section>
-
-  <p class="note">Planning aid only. Gross revenue = list price × cases (before discounts). Net, contribution and operating profit layer in discounts, COGS, cost-to-serve and fixed costs. Swap in your real numbers — the model is yours.</p>
+  <p class="note" style="text-align:center;margin-bottom:50px">Planning aid · gross revenue is before discounts &amp; taxes. Everything is saved in your browser. <span id="version" style="opacity:.6"></span></p>
 </main>
 
 <script>// engine.js — pure calculation core for the revenue & profit model.
@@ -426,300 +423,246 @@
 </script>
 <script>
 "use strict";
-const $=s=>document.getElementById(s), $$=s=>Array.from(document.querySelectorAll(s));
-const KEY="rfm.v2";
-const CUR=[["$","USD $"],["€","EUR €"],["£","GBP £"],["A$","AUD A$"],["C$","CAD C$"],["¥","JPY ¥"],["₹","INR ₹"]];
-const PALETTE=["#2e5496","#2e8b57","#e08a3c","#7e57c2","#d9534f","#17a2b8","#c2185b","#5d6d7e"];
+const $=id=>document.getElementById(id), $$=s=>Array.from(document.querySelectorAll(s));
+const KEY="rfm.v3";
+const CUR=[["$","USD"],["€","EUR"],["£","GBP"],["A$","AUD"],["C$","CAD"],["¥","JPY"],["₹","INR"]];
+const COLORS=["#0071e3","#34c759","#ff9f0a","#5e5ce6","#ff375f","#64d2ff","#bf5af2","#8e8e93"];
+const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const DEFAULTS={
-  currency:"$", revenueTarget:2500000, unitsPerCase:12, sellingDays:260,
-  fixedCosts:600000, growthRate:0.15, projectionYears:3,
+  currency:"$", uiMode:"simple", showCost:false,
+  revenueTarget:2500000, unitsPerCase:12, sellingDays:260, fixedCosts:0, growthRate:0.10, projectionYears:3,
+  channels:[{name:"All sales", grossPrice:200, mix:1, cogs:0, discountPct:0, sellingPct:0}],
+  seasonality:[1,1,1,1,1,1,1,1,1,1,1,1],
+  scenarios:[{label:"Conservative",target:2000000},{label:"Base",target:2500000},{label:"Aggressive",target:3200000}]
+};
+const EXAMPLE={
+  currency:"$", uiMode:"detailed", showCost:true,
+  revenueTarget:2500000, unitsPerCase:12, sellingDays:260, fixedCosts:600000, growthRate:0.15, projectionYears:3,
   channels:[
-    {name:"Direct-to-Consumer (DTC)", grossPrice:300, mix:20, cogs:90, discountPct:0.05, sellingPct:0.18},
-    {name:"On-Premise / Food Service", grossPrice:216, mix:15, cogs:90, discountPct:0.10, sellingPct:0.05},
-    {name:"Off-Premise Retail",        grossPrice:180, mix:30, cogs:90, discountPct:0.12, sellingPct:0.04},
-    {name:"Wholesale / Distributor",   grossPrice:120, mix:30, cogs:90, discountPct:0.00, sellingPct:0.03},
-    {name:"Online Marketplace",        grossPrice:150, mix:5,  cogs:90, discountPct:0.08, sellingPct:0.15}
-  ],
+    {name:"Direct-to-Consumer", grossPrice:300, mix:20, cogs:90, discountPct:0.05, sellingPct:0.18},
+    {name:"On-Premise",         grossPrice:216, mix:15, cogs:90, discountPct:0.10, sellingPct:0.05},
+    {name:"Retail",             grossPrice:180, mix:30, cogs:90, discountPct:0.12, sellingPct:0.04},
+    {name:"Wholesale",          grossPrice:120, mix:30, cogs:90, discountPct:0.00, sellingPct:0.03},
+    {name:"Online Marketplace", grossPrice:150, mix:5,  cogs:90, discountPct:0.08, sellingPct:0.15}],
   seasonality:[0.7,0.7,0.9,1.0,1.1,1.2,1.2,1.1,1.0,1.0,1.3,1.8],
   scenarios:[{label:"Conservative",target:2000000},{label:"Base",target:2500000},{label:"Aggressive",target:3200000}]
 };
-const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const clone=o=>JSON.parse(JSON.stringify(o));
 let state=load();
 function load(){try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&Array.isArray(s.channels)&&s.channels.length)return Object.assign(clone(DEFAULTS),s);}catch(e){}return clone(DEFAULTS);}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
 
-// formatters
 const C=()=>state.currency||"$";
 const fN=n=>!isFinite(n)?"∞":Math.round(n).toLocaleString();
 const fM=n=>!isFinite(n)?"∞":C()+Math.round(n).toLocaleString();
-const fM2=n=>C()+Number(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+const fM2=n=>C()+Number(n||0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
 const fP=n=>(n*100).toFixed(1)+"%";
 const sM=n=>{const a=Math.abs(n),s=n<0?"-":"";if(a>=1e6)return s+C()+(a/1e6).toFixed(a>=1e7?1:2)+"M";if(a>=1e3)return s+C()+(a/1e3).toFixed(0)+"k";return s+C()+Math.round(a);};
 const esc=s=>(s||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const numv=s=>parseFloat(String(s).replace(/[^0-9.\-]/g,""))||0;
+function hasCosts(){return state.fixedCosts>0||state.channels.some(c=>c.cogs>0||c.discountPct>0||c.sellingPct>0);}
 
-// ---------- SVG chart helpers ----------
-function svgWaterfall(bars){
-  const W=560,H=300,padX=12,padB=46,padT=26;
-  let lo=0,hi=0; bars.forEach(b=>{lo=Math.min(lo,b.lo);hi=Math.max(hi,b.hi);});
-  const span=(hi-lo)||1, y=v=>padT+(hi-v)/span*(H-padT-padB);
-  const gap=(W-2*padX)/bars.length, bw=gap*0.6;
-  const col={gross:"#3b6fb5",net:"#2e5496",contrib:"#2e8b57",profit:"#1e7d4f",loss:"#c0392b",sub:"#e07a5f"};
-  const xL=i=>padX+gap*i+(gap-bw)/2, xR=i=>xL(i)+bw, endLvl=b=>b.val<0?b.lo:b.hi;
-  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Profit waterfall from gross revenue to operating profit">`;
-  s+=`<line x1="${padX}" y1="${y(0).toFixed(1)}" x2="${W-padX}" y2="${y(0).toFixed(1)}" stroke="#c4cdd9"/>`;
-  for(let i=0;i<bars.length-1;i++){const yl=y(endLvl(bars[i])).toFixed(1);
-    s+=`<line x1="${xR(i).toFixed(1)}" y1="${yl}" x2="${xL(i+1).toFixed(1)}" y2="${yl}" stroke="#aab4c2" stroke-dasharray="3 2"/>`;}
-  bars.forEach((b,i)=>{
-    const x=xL(i), yt=y(b.hi), h=Math.max(1.5,y(b.lo)-y(b.hi));
-    s+=`<rect x="${x.toFixed(1)}" y="${yt.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="2" fill="${col[b.kind]||"#888"}"><title>${esc(b.label)}: ${sM(b.val)}</title></rect>`;
-    s+=`<text x="${(x+bw/2).toFixed(1)}" y="${(yt-5).toFixed(1)}" text-anchor="middle" font-size="10.5" font-weight="700" fill="#16243d">${sM(b.val)}</text>`;
-    s+=`<text x="${(x+bw/2).toFixed(1)}" y="${H-padB+16}" text-anchor="middle" font-size="10" fill="#65728a">${b.label}</text>`;
-  });
-  return s+"</svg>";
+// count-up animation (disabled in tests / reduced-motion)
+function setNum(el,val,fmt){
+  fmt=fmt||fN; const target=isFinite(val)?val:0;
+  if(window.__noAnim||matchMedia("(prefers-reduced-motion: reduce)").matches){el.textContent=fmt(target);return;}
+  const from=numv(el.dataset.v||"0"), t0=performance.now(), dur=520;
+  el.dataset.v=target;
+  function step(t){const k=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-k,3); el.textContent=fmt(from+(target-from)*e); if(k<1)requestAnimationFrame(step);}
+  requestAnimationFrame(step);
 }
-function svgTornado(sens){
-  const ds=sens.drivers,n=ds.length,W=560,rowH=32,H=n*rowH+26,padL=128,padR=92,base=sens.base;
-  let mn=base,mx=base; ds.forEach(d=>{mn=Math.min(mn,d.low);mx=Math.max(mx,d.high);});
-  const pad=(mx-mn)*0.04||1, span=(mx-mn+2*pad)||1, x=v=>padL+(v-mn+pad)/span*(W-padL-padR);
-  const xb=x(base);
-  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Sensitivity tornado: operating profit swing from ±${(sens.pct*100).toFixed(0)}% on each driver">`;
-  s+=`<line x1="${xb.toFixed(1)}" y1="4" x2="${xb.toFixed(1)}" y2="${H-16}" stroke="#16243d" stroke-width="1.4"/>`;
-  s+=`<text x="${xb.toFixed(1)}" y="${H-3}" text-anchor="middle" font-size="9.5" fill="#65728a">base ${sM(base)}</text>`;
-  ds.forEach((d,i)=>{const yc=8+i*rowH, h=18;
-    s+=`<rect x="${x(d.low).toFixed(1)}" y="${yc}" width="${Math.max(0,xb-x(d.low)).toFixed(1)}" height="${h}" fill="#e98a7a"><title>${esc(d.driver)} −: ${sM(d.low)}</title></rect>`;
-    s+=`<rect x="${xb.toFixed(1)}" y="${yc}" width="${Math.max(0,x(d.high)-xb).toFixed(1)}" height="${h}" fill="#88c08f"><title>${esc(d.driver)} +: ${sM(d.high)}</title></rect>`;
-    s+=`<text x="6" y="${yc+13}" font-size="11" fill="#16243d">${esc(d.driver)}</text>`;
-    s+=`<text x="${(W-padR+6)}" y="${yc+13}" font-size="9.5" fill="#65728a">±${sM(d.swing/2)}</text>`;
-  });
-  return s+"</svg>";
-}
-function polar(cx,cy,r,deg){const a=(deg-90)*Math.PI/180;return[cx+r*Math.cos(a),cy+r*Math.sin(a)];}
-function arcPath(cx,cy,r,a0,a1){const[x1,y1]=polar(cx,cy,r,a1),[x2,y2]=polar(cx,cy,r,a0),big=(a1-a0)<=180?0:1;return `M${x1.toFixed(2)} ${y1.toFixed(2)} A ${r} ${r} 0 ${big} 0 ${x2.toFixed(2)} ${y2.toFixed(2)}`;}
-function svgDonut(segs){
-  const R=64,th=24,cx=78,cy=78,tot=segs.reduce((s,x)=>s+x.value,0)||1; let a=0,p="";
+function setInput(el,val){if(document.activeElement!==el)el.value=val;}
+
+/* ---------- charts ---------- */
+function bars(items,fmt){const mx=Math.max(...items.map(i=>Math.abs(i.v)),1);
+  return items.map((it,i)=>`<div class="b"><div class="nm" title="${esc(it.name)}">${esc(it.name)}</div><div class="track"><div class="fill" style="width:${Math.max(2,Math.abs(it.v)/mx*100)}%;background:${it.color||COLORS[i%COLORS.length]}"></div></div><div class="val">${fmt(it.v)}</div></div>`).join("");}
+function polar(cx,cy,r,d){const a=(d-90)*Math.PI/180;return[cx+r*Math.cos(a),cy+r*Math.sin(a)];}
+function arc(cx,cy,r,a0,a1){const[x1,y1]=polar(cx,cy,r,a1),[x2,y2]=polar(cx,cy,r,a0),big=(a1-a0)<=180?0:1;return `M${x1.toFixed(2)} ${y1.toFixed(2)} A ${r} ${r} 0 ${big} 0 ${x2.toFixed(2)} ${y2.toFixed(2)}`;}
+function donut(segs){const R=66,th=22,cx=80,cy=80,tot=segs.reduce((s,x)=>s+x.value,0)||1;let a=0,p="";
   segs.forEach(g=>{const sw=g.value/tot*360,a0=a,a1=a+sw;a=a1;
-    if(sw>=359.99){p+=`<circle cx="${cx}" cy="${cy}" r="${R-th/2}" fill="none" stroke="${g.color}" stroke-width="${th}"/>`;}
-    else if(sw>0.01){p+=`<path d="${arcPath(cx,cy,R-th/2,a0,a1)}" stroke="${g.color}" stroke-width="${th}" fill="none"/>`;}});
-  return `<svg viewBox="0 0 156 156" width="156" height="156">${p}<text x="${cx}" y="${cy-2}" text-anchor="middle" font-size="11" fill="#65728a">total</text><text x="${cx}" y="${cy+15}" text-anchor="middle" font-size="14" font-weight="800" fill="#16243d">${sM(tot)}</text></svg>`;
-}
-function svgMonthly(months){
-  const W=560,H=200,padX=28,padB=24,padT=14; const n=months.length;
-  const maxG=Math.max(...months.map(m=>m.gross),1), maxC=months[n-1].cumRev||1;
-  const gap=(W-2*padX)/n, bw=gap*0.6, y=v=>H-padB-(v/maxG)*(H-padT-padB);
-  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" preserveAspectRatio="xMidYMid meet">`;
-  months.forEach((m,i)=>{const x=padX+gap*i+(gap-bw)/2,yt=y(m.gross);
-    s+=`<rect x="${x.toFixed(1)}" y="${yt.toFixed(1)}" width="${bw.toFixed(1)}" height="${(H-padB-yt).toFixed(1)}" rx="2" fill="#3b6fb5"/>`;
-    s+=`<text x="${(x+bw/2).toFixed(1)}" y="${H-8}" text-anchor="middle" font-size="9.5" fill="#65728a">${MON[i]}</text>`;});
-  const pts=months.map((m,i)=>[padX+gap*i+gap/2,H-padB-(m.cumRev/maxC)*(H-padT-padB)]);
-  s+=`<polyline fill="none" stroke="#2e8b57" stroke-width="2" points="${pts.map(p=>p.map(v=>v.toFixed(1)).join(",")).join(" ")}"/>`;
-  pts.forEach(p=>s+=`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="2.4" fill="#2e8b57"/>`);
-  return s+"</svg>";
-}
+    if(sw>=359.99)p+=`<circle cx="${cx}" cy="${cy}" r="${R-th/2}" fill="none" stroke="${g.color}" stroke-width="${th}"/>`;
+    else if(sw>0.01)p+=`<path d="${arc(cx,cy,R-th/2,a0,a1)}" stroke="${g.color}" stroke-width="${th}" fill="none" stroke-linecap="butt"/>`;});
+  return `<svg viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="Revenue by channel">${p}</svg>`;}
+function waterfall(b){const W=560,H=280,padX=12,padB=44,padT=26;let lo=0,hi=0;b.forEach(x=>{lo=Math.min(lo,x.lo);hi=Math.max(hi,x.hi);});
+  const span=(hi-lo)||1,y=v=>padT+(hi-v)/span*(H-padT-padB),gap=(W-2*padX)/b.length,bw=gap*0.58,xL=i=>padX+gap*i+(gap-bw)/2,xR=i=>xL(i)+bw,end=x=>x.val<0?x.lo:x.hi;
+  const col={gross:"#0071e3",net:"#0a84ff",contrib:"#34c759",profit:"#34c759",loss:"#ff3b30",sub:"#ff9f0a"};
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Profit waterfall">`;
+  s+=`<line x1="${padX}" y1="${y(0).toFixed(1)}" x2="${W-padX}" y2="${y(0).toFixed(1)}" stroke="var(--line)"/>`;
+  for(let i=0;i<b.length-1;i++){const yl=y(end(b[i])).toFixed(1);s+=`<line x1="${xR(i).toFixed(1)}" y1="${yl}" x2="${xL(i+1).toFixed(1)}" y2="${yl}" stroke="#b9c0cc" stroke-dasharray="3 2"/>`;}
+  b.forEach((x,i)=>{const px=xL(i),yt=y(x.hi),h=Math.max(1.5,y(x.lo)-y(x.hi));
+    s+=`<rect x="${px.toFixed(1)}" y="${yt.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="3" fill="${col[x.kind]||"#888"}"><title>${esc(x.label)}: ${sM(x.val)}</title></rect>`;
+    s+=`<text x="${(px+bw/2).toFixed(1)}" y="${(yt-5).toFixed(1)}" text-anchor="middle" font-size="10.5" font-weight="600" fill="var(--ink)">${sM(x.val)}</text>`;
+    s+=`<text x="${(px+bw/2).toFixed(1)}" y="${H-padB+16}" text-anchor="middle" font-size="10" fill="var(--mut)">${x.label}</text>`;});
+  return s+"</svg>";}
+function monthly(ms){const W=560,H=190,padX=26,padB=22,padT=12,n=ms.length;const mxG=Math.max(...ms.map(m=>m.gross),1),mxC=ms[n-1].cumRev||1;
+  const gap=(W-2*padX)/n,bw=gap*0.58,y=v=>H-padB-(v/mxG)*(H-padT-padB);
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Monthly revenue">`;
+  ms.forEach((m,i)=>{const x=padX+gap*i+(gap-bw)/2,yt=y(m.gross);s+=`<rect x="${x.toFixed(1)}" y="${yt.toFixed(1)}" width="${bw.toFixed(1)}" height="${(H-padB-yt).toFixed(1)}" rx="3" fill="#0071e3" opacity=".85"/>`;
+    s+=`<text x="${(x+bw/2).toFixed(1)}" y="${H-7}" text-anchor="middle" font-size="9.5" fill="var(--mut)">${MON[i]}</text>`;});
+  const pts=ms.map((m,i)=>[padX+gap*i+gap/2,H-padB-(m.cumRev/mxC)*(H-padT-padB)]);
+  s+=`<polyline fill="none" stroke="#34c759" stroke-width="2" points="${pts.map(p=>p.map(v=>v.toFixed(1)).join(",")).join(" ")}"/>`;
+  return s+"</svg>";}
+function tornado(sn){const ds=sn.drivers,n=ds.length,W=560,rh=30,H=n*rh+24,padL=120,padR=80,base=sn.base;
+  let mn=base,mx=base;ds.forEach(d=>{mn=Math.min(mn,d.low);mx=Math.max(mx,d.high);});const pad=(mx-mn)*0.05||1,span=(mx-mn+2*pad)||1,x=v=>padL+(v-mn+pad)/span*(W-padL-padR),xb=x(base);
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Sensitivity tornado">`;
+  s+=`<line x1="${xb.toFixed(1)}" y1="2" x2="${xb.toFixed(1)}" y2="${H-16}" stroke="var(--ink)" stroke-width="1.3"/>`;
+  s+=`<text x="${xb.toFixed(1)}" y="${H-3}" text-anchor="middle" font-size="9.5" fill="var(--mut)">today ${sM(base)}</text>`;
+  ds.forEach((d,i)=>{const yc=6+i*rh;
+    s+=`<rect x="${x(d.low).toFixed(1)}" y="${yc}" width="${Math.max(0,xb-x(d.low)).toFixed(1)}" height="18" rx="2" fill="#ff8a80"><title>${esc(d.driver)} −10%: ${sM(d.low)}</title></rect>`;
+    s+=`<rect x="${xb.toFixed(1)}" y="${yc}" width="${Math.max(0,x(d.high)-xb).toFixed(1)}" height="18" rx="2" fill="#7fd99a"><title>${esc(d.driver)} +10%: ${sM(d.high)}</title></rect>`;
+    s+=`<text x="4" y="${yc+13}" font-size="11.5" fill="var(--ink)">${esc(d.driver)}</text>`;
+    s+=`<text x="${W-padR+6}" y="${yc+13}" font-size="9.5" fill="var(--mut)">±${sM(d.swing/2)}</text>`;});
+  return s+"</svg>";}
+function tile(v,l,cls){return `<div class="tile"><div class="v ${cls||""}">${v}</div><div class="l">${l}</div></div>`;}
 
-// ---------- input rendering ----------
-function setVals(){
-  $("target").value=state.revenueTarget; $("upc").value=state.unitsPerCase; $("days").value=state.sellingDays;
-  $("fixed").value=state.fixedCosts; $("growth").value=+(state.growthRate*100).toFixed(2); $("years").value=state.projectionYears;
-  const sel=$("cur"); sel.innerHTML=CUR.map(c=>`<option value="${c[0]}"${c[0]===state.currency?" selected":""}>${c[1]}</option>`).join("");
-}
-function renderChannels(){
-  const tb=$("chBody"); tb.innerHTML="";
-  state.channels.forEach((c,i)=>{
-    const tr=document.createElement("tr"); tr.dataset.i=i;
-    const al=lab=>`aria-label="${esc(c.name)} — ${lab}"`;
-    tr.innerHTML=`
-      <td><input class="name" type="text" data-k="name" value="${esc(c.name)}" aria-label="Channel name"></td>
-      <td><input type="number" min="0" step="5" data-k="grossPrice" value="${c.grossPrice}" ${al('gross price per case')}></td>
-      <td><input type="number" min="0" step="1" data-k="mix" value="${c.mix}" ${al('volume mix weight')}></td>
-      <td><input type="number" min="0" step="5" data-k="cogs" value="${c.cogs}" ${al('COGS per case')}></td>
-      <td><input type="number" min="0" max="100" step="1" data-k="discountPct" value="${+(c.discountPct*100).toFixed(1)}" ${al('trade discount percent')}></td>
-      <td><input type="number" min="0" max="100" step="1" data-k="sellingPct" value="${+(c.sellingPct*100).toFixed(1)}" ${al('selling cost percent')}></td>
-      <td class="calc oNet"></td><td class="calc oContrib"></td><td class="calc oMargin"></td>
-      <td class="calc oCases"></td><td class="calc oGross"></td><td class="calc oContribT"></td>
-      <td><button class="del" title="remove">✕</button></td>`;
-    tr.querySelectorAll("input").forEach(inp=>inp.addEventListener("input",e=>{
-      const k=e.target.dataset.k, v=e.target.value;
-      state.channels[i][k]=(k==="name")?v:(k==="discountPct"||k==="sellingPct")?(parseFloat(v)||0)/100:(parseFloat(v)||0);
-      save(); renderOutputs();
-    }));
-    tr.querySelector(".del").addEventListener("click",()=>{if(state.channels.length>1){state.channels.splice(i,1);save();renderChannels();renderOutputs();}});
-    tb.appendChild(tr);
-  });
-}
+/* ---------- build (once) ---------- */
+function buildChannels(){const tb=$("chBody");tb.innerHTML="";
+  state.channels.forEach((c,i)=>{const tr=document.createElement("tr");tr.dataset.i=i;
+    const al=l=>`aria-label="${esc(c.name)} ${l}"`;
+    tr.innerHTML=`<td><input class="cell name" data-k="name" value="${esc(c.name)}" aria-label="Channel name"></td>
+      <td><input class="cell" data-k="grossPrice" inputmode="decimal" value="${c.grossPrice}" ${al('price')}></td>
+      <td><input class="cell" data-k="mix" inputmode="decimal" value="${c.mix}" ${al('mix')}></td>
+      <td><input class="cell" data-k="cogs" inputmode="decimal" value="${c.cogs}" ${al('cost')}></td>
+      <td><input class="cell" data-k="discountPct" inputmode="decimal" value="${+(c.discountPct*100).toFixed(1)}" ${al('discount')}></td>
+      <td><input class="cell" data-k="sellingPct" inputmode="decimal" value="${+(c.sellingPct*100).toFixed(1)}" ${al('selling')}></td>
+      <td class="calc cProfit"></td><td class="calc cCases"></td>
+      <td>${state.channels.length>1?'<button class="del" title="Remove">✕</button>':''}</td>`;
+    tr.querySelectorAll("input").forEach(inp=>inp.addEventListener("input",e=>{const k=e.target.dataset.k,v=e.target.value;
+      state.channels[i][k]=(k==="name")?v:(k==="discountPct"||k==="sellingPct")?numv(v)/100:numv(v);recompute();}));
+    const del=tr.querySelector(".del");if(del)del.addEventListener("click",()=>{state.channels.splice(i,1);buildChannels();recompute();});
+    tb.appendChild(tr);});}
+function buildScenarios(){$("scn").innerHTML=state.scenarios.map((s,i)=>`
+  <div class="col ${i===0?'cons':i===1?'base':'aggr'}"><h4>${esc(s.label)}</h4>
+    <div class="ln"><span>Goal</span><input class="cell" data-si="${i}" inputmode="numeric" value="${s.target}" style="width:10ch"></div>
+    <div class="ln"><span>Cases</span><b id="sc${i}-cases">—</b></div>
+    <div class="ln"><span>Revenue</span><b id="sc${i}-net">—</b></div>
+    <div class="ln" data-cost><span>Profit</span><b id="sc${i}-profit">—</b></div>
+  </div>`).join("");
+  $$('#scn input[data-si]').forEach(inp=>inp.addEventListener("input",e=>{state.scenarios[+e.target.dataset.si].target=numv(e.target.value);recompute();}));}
+function buildMonthly(){let h=`<thead><tr><th>Month</th><th>Weight<span class="help" title="Relative weight — set holiday peaks or a ramp.">?</span></th><th>Share</th><th>Cases</th><th>Revenue</th><th>Cum. cases</th><th>Cum. revenue</th></tr></thead><tbody>`;
+  h+=MON.map((mo,i)=>`<tr><td>${mo}</td><td><input class="cell" data-mi="${i}" inputmode="decimal" value="${state.seasonality[i]}" style="width:6ch"></td>
+    <td class="calc mShare">—</td><td class="calc mCases">—</td><td class="calc mRev">—</td><td class="calc mCum">—</td><td class="calc mCumR">—</td></tr>`).join("");
+  $("monthTable").innerHTML=h+"</tbody>";
+  $$('#monthTable input[data-mi]').forEach(inp=>inp.addEventListener("input",e=>{state.seasonality[+e.target.dataset.mi]=numv(e.target.value);recompute();}));}
 
-// ---------- output rendering ----------
-function renderOutputs(){
-  const m=RevenueEngine.compute(state);
-  // sticky strip
-  $("strip").innerHTML=[
-    [fN(m.totalCases),"cases to sell","Cases needed"],
-    [fM(m.grossTot),"","Gross revenue"],
-    [fM(m.netTot),"","Net revenue"],
-    [fM(m.contribTot),fP(m.contribMargin),"Contribution"],
-    [(m.opProfit>=0?fM(m.opProfit):"−"+fM(-m.opProfit)),fP(m.opMargin),"Operating profit"],
-    [fN(m.breakEvenCases),"","Break-even cases"]
-  ].map((s,idx)=>`<div class="s"><div class="v ${idx===4?(m.opProfit>=0?"pos":"neg"):""}">${s[0]}${s[1]?` <small>${s[1]}</small>`:""}</div><div class="l">${s[2]}</div></div>`).join("");
+/* ---------- recompute / render ---------- */
+function recompute(){
+  const m=RevenueEngine.compute(state), cost=hasCosts();
+  // hero
+  setNum($("cases-big"),m.totalCases,fN);
+  setNum($("cases-week"),m.totalCases/52,fN);
+  setInput($("goal"),fN(state.revenueTarget));
+  setInput($("avgPrice"),Math.round(m.blendedGross));
+  $("goalCur").textContent=C(); $$(".mcur").forEach(e=>e.textContent=C());
+  if(state.showCost){$("costField").hidden=false;$("addCost").hidden=true;setInput($("avgCost"),Math.round(m.blendedCogs));}
+  else{$("costField").hidden=true;$("addCost").hidden=false;}
+  $("profitHint").textContent = (cost && m.netTot>0) ? `Keep about ${sM(m.opProfit)} profit (${fP(m.opMargin)})` : "";
+
+  // stat strip
+  const stats=[[fM(m.grossTot),"Revenue"],[fN(m.totalCases/52),"Cases / week"],[fN(m.totalCases/state.sellingDays),"Cases / day"]];
+  if(cost){stats.push([(m.opProfit>=0?sM(m.opProfit):"−"+sM(-m.opProfit)),"Profit",m.opProfit>=0?"green":"red"]);
+    if(state.fixedCosts>0&&isFinite(m.breakEvenCases))stats.push([fN(m.breakEvenCases),"Break-even (cases)"]);}
+  $("stats").innerHTML=stats.map(s=>`<div class="stat"><div class="v ${s[2]||""}">${s[0]}</div><div class="l">${s[1]}</div></div>`).join("");
 
   // channel rows
-  $$("#chBody tr").forEach(tr=>{const i=+tr.dataset.i,r=m.channels[i];
-    tr.querySelector(".oNet").textContent=fM2(r.netPrice);
-    tr.querySelector(".oContrib").textContent=fM2(r.contribution);
-    tr.querySelector(".oMargin").textContent=fP(r.contribMarginPct);
-    tr.querySelector(".oCases").textContent=fN(r.cases);
-    tr.querySelector(".oGross").textContent=fM(r.gross);
-    tr.querySelector(".oContribT").textContent=fM(r.contribTot);});
-  $("fGross").textContent=fM2(m.blendedGross); $("fMix").textContent=fN(m.sumMix);
-  $("fCogs").textContent=fM2(m.blendedCogs); $("fNet").textContent=fM2(m.blendedNet);
-  $("fContrib").textContent=fM2(m.blendedContrib); $("fMargin").textContent=fP(m.contribMargin);
-  $("fCases").textContent=fN(m.totalCases); $("fGrossT").textContent=fM(m.grossTot); $("fContribT").textContent=fM(m.contribTot);
+  $$("#chBody tr").forEach(tr=>{const r=m.channels[+tr.dataset.i];tr.querySelector(".cProfit").textContent=fM2(r.contribution);tr.querySelector(".cCases").textContent=fN(r.cases);});
+  $("f-price").textContent=fM2(m.blendedGross);$("f-mix").textContent=fN(m.sumMix);$("f-cost").textContent=fM2(m.blendedCogs);
+  $("f-profit").textContent=fM2(m.blendedContrib);$("f-cases").textContent=fN(m.totalCases);
+  $("sub-ch").textContent=`${state.channels.length} channel${state.channels.length>1?"s":""} · ${fM(m.blendedGross)} avg`;
 
-  // waterfall + kpis
-  $("waterfall").innerHTML=svgWaterfall(m.waterfall);
-  $("wfKpis").innerHTML=[
-    ["hero",fN(m.totalCases),"Cases to sell"],
-    ["",fM2(m.blendedGross),"Blended price/case"],
-    ["",fM2(m.blendedGross/state.unitsPerCase),"Price / unit"],
-    ["",fN(m.totalCases/12),"Cases / month"],
-    ["",fN(m.totalCases/52),"Cases / week"],
-    [m.opProfit>=0?"pos":"neg",(m.opProfit>=0?fM(m.opProfit):"−"+fM(-m.opProfit)),"Operating profit"]
-  ].map(k=>`<div class="kpi ${k[0]==='hero'?'hero':''}"><div class="v ${k[0]==='pos'?'pos':k[0]==='neg'?'neg':''}">${k[1]}</div><div class="l">${k[2]}</div></div>`).join("");
-
-  // bars
-  const maxContrib=Math.max(...m.channels.map(r=>Math.abs(r.contribTot)),1);
-  const maxCases=Math.max(...m.channels.map(r=>r.cases),1);
-  $("contribBars").innerHTML=m.channels.map((r,i)=>barRow(r.name,r.contribTot/maxContrib,fM(r.contribTot),PALETTE[i%PALETTE.length])).join("");
-  $("casesBars").innerHTML=m.channels.map((r,i)=>barRow(r.name,r.cases/maxCases,fN(r.cases)+" cs",PALETTE[i%PALETTE.length])).join("");
-
-  // donut
-  const segs=m.channels.map((r,i)=>({label:r.name,value:r.gross,color:PALETTE[i%PALETTE.length]}));
-  $("donut").innerHTML=svgDonut(segs);
-  $("donutLeg").innerHTML=segs.map(s=>`<span><i style="background:${s.color}"></i>${esc(s.label)} ${fP(s.value/(m.grossTot||1))}</span>`).join("");
-
-  // break-even
-  const be=m.breakEvenCases, beRevPctOfTarget=isFinite(be)?be/(m.totalCases||1):1;
-  $("beText").innerHTML=isFinite(be)
-    ? `Break-even at <b>${fN(be)}</b> cases (<b>${fM(m.breakEvenRev)}</b> gross) — that's <b>${fP(beRevPctOfTarget)}</b> of your target volume. Above it you keep <b>${fM2(m.blendedContrib)}</b> contribution per extra case.`
-    : `Contribution per case is ≤ 0 at these prices — the model can't break even. Raise price, cut COGS or reduce discounts.`;
-  const frac=Math.min(1,Math.max(0,beRevPctOfTarget));
-  $("beFill").style.width="100%"; $("beMark").style.left=(frac*100)+"%";
+  // profit breakdown
+  if(cost){
+    $("profitBody").innerHTML=`<div class="two"><div>${waterfall(m.waterfall)}</div>
+      <div class="tiles">${tile(fM(m.grossTot),"Revenue")}${tile(fM(m.netTot),"After discounts")}${tile(fM(m.contribTot),"Contribution ("+fP(m.contribMargin)+")","green")}${tile((m.opProfit>=0?fM(m.opProfit):"−"+fM(-m.opProfit)),"Operating profit",m.opProfit>=0?"green":"red")}</div></div>`;
+    $("sub-profit").textContent=`${fM(m.opProfit)} profit · ${fP(m.opMargin)} margin`;
+  }else{$("profitBody").innerHTML=`<div class="hint-box">Add a <b>cost per case</b> up top (or load the example) and your full profit breakdown — discounts, costs, margin and operating profit — appears here.</div>`;$("sub-profit").textContent="Add costs to unlock";}
 
   // scenarios
-  $("scenarios").innerHTML=m.scenarios.map((s,i)=>{
-    const cls=i===0?"cons":i===1?"base":"aggr";
-    return `<div class="col ${cls}"><h3>${esc(s.label)}</h3>
-      <div class="row"><span>Revenue target</span><input type="number" data-si="${i}" step="50000" value="${s.target}"></div>
-      <div class="row"><span>Cases to sell</span><b>${fN(s.cases)}</b></div>
-      <div class="row"><span>Net revenue</span><b>${fM(s.net)}</b></div>
-      <div class="row"><span>Contribution</span><b>${fM(s.contribution)} <small class="calc">(${fP(s.margin)})</small></b></div>
-      <div class="row"><span>Operating profit</span><b style="color:${s.opProfit>=0?'var(--green)':'var(--red)'}">${s.opProfit>=0?fM(s.opProfit):'−'+fM(-s.opProfit)}</b></div>
-    </div>`;}).join("");
-  $$('#scenarios input[data-si]').forEach(inp=>inp.addEventListener("input",e=>{state.scenarios[+e.target.dataset.si].target=parseFloat(e.target.value)||0;save();renderOutputs();}));
+  m.scenarios.forEach((s,i)=>{$(`sc${i}-cases`).textContent=fN(s.cases);$(`sc${i}-net`).textContent=fM(s.net);
+    const pe=$(`sc${i}-profit`);pe.textContent=cost?(s.opProfit>=0?fM(s.opProfit):"−"+fM(-s.opProfit)):"—";pe.style.color=cost?(s.opProfit>=0?"var(--accent2)":"var(--warn)"):"";});
+  $$('#scn [data-cost]').forEach(e=>e.style.display=cost?"flex":"none");
 
-  // projection
-  let pt=`<thead><tr><th>Year</th><th>Revenue</th><th>Cases</th><th>Contribution</th><th>Op. profit</th></tr></thead><tbody>`;
-  pt+=m.years.map(y=>`<tr><td>Y${y.year}</td><td>${fM(y.revenue)}</td><td>${fN(y.cases)}</td><td>${fM(y.contribution)}</td><td style="color:${y.opProfit>=0?'var(--green)':'var(--red)'}">${y.opProfit>=0?fM(y.opProfit):'−'+fM(-y.opProfit)}</td></tr>`).join("");
-  $("projTable").innerHTML=pt+"</tbody>";
-  const maxRev=Math.max(...m.years.map(y=>y.revenue),1);
-  $("projBars").innerHTML=m.years.map(y=>barRow("Y"+y.year,y.revenue/maxRev,fM(y.revenue),"#2e5496")).join("");
+  // year
+  m.months.forEach((mm,i)=>{const tr=$("monthTable").tBodies[0].rows[i];
+    tr.querySelector(".mShare").textContent=fP(mm.frac);tr.querySelector(".mCases").textContent=fN(mm.cases);
+    tr.querySelector(".mRev").textContent=fM(mm.gross);tr.querySelector(".mCum").textContent=fN(mm.cumCases);tr.querySelector(".mCumR").textContent=fM(mm.cumRev);});
+  $("monthChart").innerHTML=monthly(m.months);
+  let pj=`<thead><tr><th>Year</th><th>Revenue</th><th>Cases</th>${cost?"<th>Profit</th>":""}</tr></thead><tbody>`+
+    m.years.map(y=>`<tr><td>Y${y.year}</td><td>${fM(y.revenue)}</td><td>${fN(y.cases)}</td>${cost?`<td style="color:${y.opProfit>=0?'var(--accent2)':'var(--warn)'}">${y.opProfit>=0?fM(y.opProfit):'−'+fM(-y.opProfit)}</td>`:""}</tr>`).join("")+"</tbody>";
+  $("projTable").innerHTML=pj;
+  $("projBars").innerHTML=bars(m.years.map(y=>({name:"Y"+y.year,v:y.revenue,color:"#0071e3"})),fM);
+  $("sub-year").textContent=`Peaks in ${MON[m.months.reduce((b,x,i,a)=>x.frac>a[b].frac?i:b,0)]} · ${fN(m.totalCases/12)}/mo avg`;
 
-  // monthly
-  $("monthChart").innerHTML=svgMonthly(m.months);
-  let mt=`<thead><tr><th>Month</th><th>Weight</th><th>Mix %</th><th>Cases</th><th>Gross rev</th><th>Contribution</th><th>Cum. cases</th><th>Cum. rev</th></tr></thead><tbody>`;
-  mt+=m.months.map((mm,i)=>`<tr><td>${MON[i]}</td>
-     <td><input type="number" step="0.1" min="0" data-mi="${i}" value="${state.seasonality[i]}" style="width:64px"></td>
-     <td>${fP(mm.frac)}</td><td>${fN(mm.cases)}</td><td>${fM(mm.gross)}</td><td>${fM(mm.contribution)}</td><td>${fN(mm.cumCases)}</td><td>${fM(mm.cumRev)}</td></tr>`).join("");
-  $("monthTable").innerHTML=mt+"</tbody>";
-  $$('#monthTable input[data-mi]').forEach(inp=>inp.addEventListener("input",e=>{state.seasonality[+e.target.dataset.mi]=parseFloat(e.target.value)||0;save();renderOutputs();}));
+  // sensitivity
+  if(cost){$("sensBody").innerHTML=tornado(RevenueEngine.sensitivity(state,0.1))+
+    `<div class="legend"><span><i style="background:#7fd99a"></i>better if +10%</span><span><i style="background:#ff8a80"></i>worse if −10%</span></div>`;}
+  else{$("sensBody").innerHTML=`<div class="hint-box">Add costs to see which lever — <b>price, volume, cost, or discounts</b> — moves your profit the most.</div>`;}
 
-  // pure-play
-  let pp=`<thead><tr><th>Channel</th><th>Gross/case</th><th>Cases to hit target</th><th>Units</th><th>Contribution at that volume</th></tr></thead><tbody>`;
-  pp+=m.channels.map(r=>{const cs=r.grossPrice>0?state.revenueTarget/r.grossPrice:0;return `<tr><td>${esc(r.name)}</td><td>${fM(r.grossPrice)}</td><td><b>${fN(cs)}</b></td><td>${fN(cs*state.unitsPerCase)}</td><td>${fM(cs*r.contribution)}</td></tr>`;}).join("");
-  $("pureTable").innerHTML=pp+"</tbody>";
-
-  // profit heat grid (price × volume)
-  const sumMix=m.sumMix; let disc=0,sell=0,cogs=0;
-  state.channels.forEach((c,i)=>{const w=c.mix/sumMix;disc+=c.discountPct*w;sell+=c.sellingPct*w;cogs+=c.cogs*w;});
-  const contribAt=p=>p*(1-disc)*(1-sell)-cogs;
-  const prices=[0.6,0.8,1.0,1.2,1.4].map(f=>Math.round(m.blendedGross*f/5)*5);
-  const vols=[0.5,0.75,1.0,1.25,1.5,1.75].map(f=>Math.round(m.totalCases*f/100)*100);
-  const cells=[]; prices.forEach(p=>vols.forEach(v=>cells.push(v*contribAt(p)-state.fixedCosts)));
-  const mn=Math.min(...cells,0), mx=Math.max(...cells,0);
-  let ht=`<thead><tr><th>Price ╲ Cases</th>${vols.map(v=>`<th>${fN(v)}</th>`).join("")}</tr></thead><tbody>`;
-  ht+=prices.map(p=>`<tr><td>${fM(p)}</td>${vols.map(v=>{const op=v*contribAt(p)-state.fixedCosts;return `<td style="background:${heat(op,mn,mx)}" title="${fM(op)}">${sM(op)}</td>`;}).join("")}</tr>`).join("");
-  $("heatTable").innerHTML=ht+"</tbody>";
-
-  // two-way calc
-  whatif(disc,sell,cogs);
-
-  // channel scorecard
-  const ranked=m.channels.slice().sort((a,b)=>b.contribution-a.contribution);
-  const best=ranked[0],worst=ranked[ranked.length-1];
-  $("scorecard").innerHTML=`💡 Most profitable per case: <b>${esc(best.name)}</b> at <b>${fM2(best.contribution)}</b>/case (${fP(best.contribMarginPct)} margin). Thinnest: <b>${esc(worst.name)}</b> at <b>${fM2(worst.contribution)}</b>/case. Shifting mix toward the former lifts profit without selling a single extra case.`;
-
-  // sensitivity tornado
-  $("tornado").innerHTML=svgTornado(RevenueEngine.sensitivity(state,0.1));
-
-  // goal-seek & capacity
-  renderGoalCap();
+  // reference
+  $("pureTable").innerHTML=`<thead><tr><th>Channel</th><th>Price</th><th>Cases to hit goal</th>${cost?"<th>Profit</th>":""}</tr></thead><tbody>`+
+    m.channels.map(r=>{const cs=r.grossPrice>0?state.revenueTarget/r.grossPrice:0;return `<tr><td>${esc(r.name)}</td><td>${fM(r.grossPrice)}</td><td><b>${fN(cs)}</b></td>${cost?`<td class="calc">${fM(cs*r.contribution)}</td>`:""}</tr>`;}).join("")+"</tbody>";
+  renderHeat(m,cost); renderQuick(m); renderGoalCap();
+  save();
 }
-function kpiHtml(k){return `<div class="kpi ${k[0]==='hero'?'hero':''}"><div class="v ${k[0]==='pos'?'pos':k[0]==='neg'?'neg':''}">${k[1]}</div><div class="l">${k[2]}</div></div>`;}
-function renderGoalCap(){
-  const tp=parseFloat($("gsProfit").value)||0, mc=parseFloat($("capCases").value)||0;
-  const gs=RevenueEngine.goalSeek(state,tp), cp=RevenueEngine.capacity(state,mc);
-  $("gsOut").innerHTML=[["hero",fN(gs.cases),"Cases needed"],["",fM(gs.gross),"Gross revenue"],["",fM(gs.net),"Net revenue"],["",fM(gs.contribution),"Contribution"]].map(kpiHtml).join("");
-  $("capOut").innerHTML=[[cp.opProfit>=0?"pos":"neg",cp.opProfit>=0?fM(cp.opProfit):"−"+fM(-cp.opProfit),"Operating profit"],["",fM(cp.gross),"Gross revenue"],["",fM(cp.contribution),"Contribution"],["",fP(cp.net>0?cp.opProfit/cp.net:0),"Op margin"]].map(kpiHtml).join("");
-}
-function whatif(disc,sell,cogs){
-  const p=parseFloat($("wfPrice").value)||0, cs=parseFloat($("wfCases").value)||0, rev=parseFloat($("wfRev").value)||0;
-  const contribCase=p*(1-disc)*(1-sell)-cogs, prof=cs*contribCase-state.fixedCosts;
-  $("wfOut").innerHTML=[
-    ["hero",fM(cs*p),`Revenue · ${fN(cs)} cs @ ${fM(p)}`],
-    ["",p>0?fN(rev/p):"—",`Cases for ${fM(rev)} @ ${fM(p)}`],
-    ["",fM2(contribCase),"Contribution / case"],
-    [prof>=0?"pos":"neg",prof>=0?fM(prof):"−"+fM(-prof),"Operating profit"]
-  ].map(k=>`<div class="kpi ${k[0]==='hero'?'hero':''}"><div class="v ${k[0]==='pos'?'pos':k[0]==='neg'?'neg':''}">${k[1]}</div><div class="l">${k[2]}</div></div>`).join("");
-}
-function barRow(name,frac,label,color){
-  const w=Math.max(0,Math.min(100,frac*100));
-  return `<div class="b"><div class="nm" title="${esc(name)}">${esc(name)}</div><div class="track"><div class="fill" style="width:${w}%;background:${color}"></div></div><div class="val">${label}</div></div>`;
-}
-function heat(v,mn,mx){
-  if(v>=0){const t=mx>0?v/mx:0;return `hsl(145 55% ${92-t*42}%)`;}
-  const t=mn<0?v/mn:0;return `hsl(5 70% ${92-t*40}%)`;
-}
+function renderHeat(m,cost){let disc=0,sell=0,cogs=0;const sm=m.sumMix;state.channels.forEach(c=>{const w=c.mix/sm;disc+=c.discountPct*w;sell+=c.sellingPct*w;cogs+=c.cogs*w;});
+  const cAt=p=>p*(1-disc)*(1-sell)-cogs;const prices=[0.6,0.8,1,1.2,1.4].map(f=>Math.round(m.blendedGross*f/5)*5);const vols=[0.5,0.75,1,1.25,1.5].map(f=>Math.max(100,Math.round(m.totalCases*f/100)*100));
+  const cells=[];prices.forEach(p=>vols.forEach(v=>cells.push(v*cAt(p)-state.fixedCosts)));const mn=Math.min(...cells,0),mx=Math.max(...cells,0);
+  let h=`<thead><tr><th>Price ╲ Cases</th>${vols.map(v=>`<th>${fN(v)}</th>`).join("")}</tr></thead><tbody>`+
+    prices.map(p=>`<tr><td>${fM(p)}</td>${vols.map(v=>{const op=v*cAt(p)-state.fixedCosts;return `<td style="background:${heat(op,mn,mx)};color:${op<0?'#7a1c14':'#0b3b2a'}" title="${fM(op)}">${sM(op)}</td>`;}).join("")}</tr>`).join("")+"</tbody>";
+  $("heatTable").innerHTML=h;}
+function renderQuick(m){const p=numv($("wfPrice").value)||0,cs=numv($("wfCases").value)||0;let disc=0,sell=0,cogs=0;const sm=m.sumMix;state.channels.forEach(c=>{const w=c.mix/sm;disc+=c.discountPct*w;sell+=c.sellingPct*w;cogs+=c.cogs*w;});
+  const contrib=p*(1-disc)*(1-sell)-cogs,prof=cs*contrib-state.fixedCosts;
+  $("wfOut").innerHTML=tile(fM(cs*p),`Revenue · ${fN(cs)} @ ${fM(p)}`)+tile(p>0?fN(state.revenueTarget/p):"—",`Cases for ${fM(state.revenueTarget)}`)+(hasCosts()?tile(prof>=0?fM(prof):"−"+fM(-prof),"Profit",prof>=0?"green":"red"):"");}
+function renderGoalCap(){const tp=numv($("gsProfit").value)||0,mc=numv($("capCases").value)||0;const gs=RevenueEngine.goalSeek(state,tp),cp=RevenueEngine.capacity(state,mc);
+  $("gsOut").innerHTML=tile(fN(gs.cases),"Cases needed")+tile(fM(gs.gross),"Revenue");
+  $("capOut").innerHTML=tile(cp.opProfit>=0?fM(cp.opProfit):"−"+fM(-cp.opProfit),"Profit",cp.opProfit>=0?"green":"red")+tile(fM(cp.gross),"Revenue");}
+function heat(v,mn,mx){if(v>=0){const t=mx>0?v/mx:0;return `hsl(145 60% ${94-t*40}%)`;}const t=mn<0?v/mn:0;return `hsl(6 78% ${95-t*38}%)`;}
 
-// ---------- export / wiring ----------
-function exportCsv(){
-  const m=RevenueEngine.compute(state); const rows=[];
-  rows.push(["Revenue & Profit Forecast"]);
-  rows.push(["Currency",state.currency,"Target",state.revenueTarget,"Fixed costs",state.fixedCosts]);
-  rows.push([]);
-  rows.push(["Channel","Gross/case","Mix","COGS","Discount%","Selling%","Net/case","Contrib/case","Margin%","Cases","Gross$","Contrib$"]);
-  m.channels.forEach((r,i)=>{const c=state.channels[i];rows.push([r.name,r.grossPrice,c.mix,r.cogs,(c.discountPct*100).toFixed(1),(c.sellingPct*100).toFixed(1),r.netPrice.toFixed(2),r.contribution.toFixed(2),(r.contribMarginPct*100).toFixed(1),Math.round(r.cases),Math.round(r.gross),Math.round(r.contribTot)]);});
-  rows.push([]);
-  rows.push(["Totals","Blended gross",m.blendedGross.toFixed(2),"Cases",Math.round(m.totalCases),"Gross",Math.round(m.grossTot),"Net",Math.round(m.netTot),"Contribution",Math.round(m.contribTot),"Op profit",Math.round(m.opProfit)]);
-  rows.push(["Break-even cases",Math.round(m.breakEvenCases),"Break-even revenue",Math.round(m.breakEvenRev)]);
-  rows.push([]);
-  rows.push(["Scenario","Target","Cases","Net","Contribution","Op profit"]);
-  m.scenarios.forEach(s=>rows.push([s.label,s.target,Math.round(s.cases),Math.round(s.net),Math.round(s.contribution),Math.round(s.opProfit)]));
-  const csv=rows.map(r=>r.map(x=>{const v=String(x??"");return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;}).join(",")).join("\n");
-  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));a.download="revenue-forecast.csv";a.click();
-}
-function bindAssumptions(){
-  const map={target:"revenueTarget",upc:"unitsPerCase",days:"sellingDays",fixed:"fixedCosts",years:"projectionYears"};
-  Object.keys(map).forEach(id=>$(id).addEventListener("input",()=>{state[map[id]]=parseFloat($(id).value)||0;save();renderOutputs();}));
-  $("growth").addEventListener("input",()=>{state.growthRate=(parseFloat($("growth").value)||0)/100;save();renderOutputs();});
-  $("cur").addEventListener("change",()=>{state.currency=$("cur").value;save();renderOutputs();});
-  ["wfPrice","wfCases","wfRev"].forEach(id=>$(id).addEventListener("input",()=>renderOutputs()));
-  ["gsProfit","capCases"].forEach(id=>$(id).addEventListener("input",renderGoalCap));
-  $("btnAdd").addEventListener("click",()=>{state.channels.push({name:"New channel",grossPrice:150,mix:5,cogs:90,discountPct:0,sellingPct:0.05});save();renderChannels();renderOutputs();});
-  $("btnReset").addEventListener("click",()=>{if(confirm("Reset all inputs to the sample model?")){state=clone(DEFAULTS);save();setVals();initWf();renderChannels();renderOutputs();}});
+/* ---------- hero inputs & rescale ---------- */
+function setAvgPrice(p){const m=RevenueEngine.compute(state),old=m.blendedGross;if(old>0){const r=p/old;state.channels.forEach(c=>c.grossPrice=Math.round(c.grossPrice*r*100)/100);}else state.channels.forEach(c=>c.grossPrice=p);}
+function setAvgCost(v){state.channels.forEach(c=>c.cogs=v);}
+
+/* ---------- ui chrome ---------- */
+function applyMode(){const det=state.uiMode==="detailed";
+  $("panels").classList.toggle("hidden",!det);
+  $("moreHint").style.display=det?"none":"";
+  $$("#seg button").forEach(b=>b.classList.toggle("on",b.dataset.mode===state.uiMode));
+  if(det && !$$("#panels details[open]").length){const first=$("panels").querySelector("details[data-adv]");if(first)first.open=true;}}
+function exportCsv(){const m=RevenueEngine.compute(state),R=[];
+  R.push(["Revenue Planner"]);R.push(["Goal",state.revenueTarget,"Avg price",m.blendedGross.toFixed(2),"Cases",Math.round(m.totalCases)]);
+  R.push([]);R.push(["Channel","Price","Mix","Cost","Disc%","Sell%","Profit/case","Cases","Revenue"]);
+  m.channels.forEach((r,i)=>{const c=state.channels[i];R.push([r.name,r.grossPrice,c.mix,r.cogs,(c.discountPct*100).toFixed(1),(c.sellingPct*100).toFixed(1),r.contribution.toFixed(2),Math.round(r.cases),Math.round(r.gross)]);});
+  R.push([]);R.push(["Revenue",Math.round(m.grossTot),"Net",Math.round(m.netTot),"Contribution",Math.round(m.contribTot),"Operating profit",Math.round(m.opProfit),"Break-even cases",Math.round(m.breakEvenCases)]);
+  const csv=R.map(r=>r.map(x=>{const v=String(x??"");return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;}).join(",")).join("\n");
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));a.download="revenue-plan.csv";a.click();}
+
+function bind(){
+  $("goal").addEventListener("input",e=>{state.revenueTarget=numv(e.target.value);recompute();});
+  $("avgPrice").addEventListener("input",e=>{setAvgPrice(numv(e.target.value));recompute();});
+  $("avgCost").addEventListener("input",e=>{setAvgCost(numv(e.target.value));recompute();});
+  $("addCost").addEventListener("click",()=>{state.showCost=true;const m=RevenueEngine.compute(state);if(m.blendedCogs===0)setAvgCost(Math.round(m.blendedGross*0.4));recompute();$("avgCost").focus();});
+  $("cur").innerHTML=CUR.map(c=>`<option value="${c[0]}"${c[0]===state.currency?" selected":""}>${c[0]} ${c[1]}</option>`).join("");
+  $("cur").addEventListener("change",e=>{state.currency=e.target.value;recompute();});
+  $("btnAdd").addEventListener("click",()=>{state.channels.push({name:"New channel",grossPrice:Math.round(RevenueEngine.compute(state).blendedGross)||150,mix:5,cogs:state.channels[0].cogs||0,discountPct:0,sellingPct:0});buildChannels();recompute();});
+  $("btnExample").addEventListener("click",()=>{state=clone(EXAMPLE);save();boot();});
+  $("btnReset").addEventListener("click",()=>{if(confirm("Reset to a blank plan?")){state=clone(DEFAULTS);save();boot();}});
   $("btnCsv").addEventListener("click",exportCsv);
   $("btnPrint").addEventListener("click",()=>window.print());
+  $("goal").addEventListener("blur",()=>{$("goal").value=fN(state.revenueTarget);});
+  ["wfPrice","wfCases"].forEach(id=>$(id).addEventListener("input",()=>renderQuick(RevenueEngine.compute(state))));
+  ["gsProfit","capCases"].forEach(id=>$(id).addEventListener("input",renderGoalCap));
+  $$("#seg button").forEach(b=>b.addEventListener("click",()=>{state.uiMode=b.dataset.mode;save();applyMode();}));
+  $("moreBtn").addEventListener("click",()=>{state.uiMode="detailed";save();applyMode();window.scrollTo({top:$("panels").offsetTop-60,behavior:"smooth"});});
+  // pop the answer on goal change
+  $("goal").addEventListener("input",()=>{const a=$("answer");a.classList.remove("pop");void a.offsetWidth;a.classList.add("pop");});
 }
-function initWf(){$("wfPrice").value=190;$("wfCases").value=13165;$("wfRev").value=state.revenueTarget;$("gsProfit").value=500000;$("capCases").value=12000;}
-setVals(); initWf(); bindAssumptions(); renderChannels(); renderOutputs();
+function boot(){
+  $("wfPrice").value=Math.round(RevenueEngine.compute(state).blendedGross);$("wfCases").value=Math.round(RevenueEngine.compute(state).totalCases);
+  $("gsProfit").value=state.fixedCosts>0?500000:250000;$("capCases").value=12000;
+  $("version").textContent="v3";
+  buildChannels();buildScenarios();buildMonthly();applyMode();recompute();
+}
+bind();boot();
 </script>
 </body>
 </html>

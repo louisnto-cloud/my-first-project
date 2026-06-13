@@ -8,9 +8,13 @@ fixed costs are taken out. Pricing and economics are modelled **per sales
 channel**, because the same case earns very differently through DTC vs. retail
 vs. a distributor.
 
+**Simple enough to use in five seconds; deep enough for a CFO.** Open the page,
+type your goal, and it tells you how many cases to sell. Everything advanced —
+channels, profit, scenarios, sensitivity — is one tap away under **Detailed**.
+
 | File | What it is |
 |---|---|
-| `revenue-forecast.html` | Self-contained interactive **dashboard** — open in any browser, no install. Edit the yellow fields; KPIs, charts, tables and scenarios recalculate live. State is saved in your browser; export to CSV or print to PDF. |
+| `revenue-forecast.html` | Self-contained interactive **planner** — opens in any browser, no install. **Simple** view: type a goal → see the cases. **Detailed** view reveals channels, profit breakdown, scenarios, the year, sensitivity and goal-seek. Light/dark, count-up animation, saves locally, CSV export, print to PDF. |
 | `revenue-forecast.xlsx` | The same model as a real Excel workbook with **live formulas** (recalculates on open). Sheets: Model · Scenarios · Projection · Profit Grid · Monthly Plan · Channel View. |
 | `engine.js` | The pure calculation core (no UI). Single source of truth, headless-tested. |
 | `build_html.py` / `build_xlsx.py` | Regenerate the HTML (inlines `engine.js`) and the workbook. |
