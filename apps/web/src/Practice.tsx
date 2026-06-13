@@ -1,22 +1,12 @@
 import { useEffect, useState } from 'react';
-import { allLessons, COURSES, type Course, type Exercise, type Lesson } from '@etop/curriculum';
+import { allLessons, COURSES, type Course, type Lesson } from '@etop/curriculum';
 import { api } from './api';
+import { sfx, speak } from './sound';
+import { Celebrate } from './Celebrate';
 
 // Self-study curriculum in the portal (D19 closed): 38 lessons across the
 // Foundations path and three audience courses. Completing a lesson posts a
 // practice event — points, streaks, and badges are computed server-side.
-
-function speak(text: string, rate = 0.95) {
-  try {
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'en-US';
-    u.rate = rate;
-    speechSynthesis.cancel();
-    speechSynthesis.speak(u);
-  } catch {
-    /* best effort */
-  }
-}
 
 type Progress = Record<string, number>; // lessonId -> bestPct
 
@@ -44,6 +34,8 @@ function LessonPlayer({ lesson, lang, onExit }: { lesson: Lesson; lang: 'vi' | '
   };
 
   const answer = (ok: boolean) => {
+    if (ok) sfx.correct();
+    else sfx.wrong();
     const c = correct + (ok ? 1 : 0);
     setCorrect(c);
     setTimeout(() => {
@@ -109,13 +101,13 @@ function LessonPlayer({ lesson, lang, onExit }: { lesson: Lesson; lang: 'vi' | '
   if (phase === 'done') {
     const pct = Math.round((correct / total) * 100);
     return (
-      <div className="card space-y-3 py-8 text-center">
-        <div className="text-5xl">{pct >= 70 ? '🎉' : '💪'}</div>
-        <div className="text-xl font-black text-violet-700">{pct >= 50 ? 'Hoàn thành bài học!' : 'Gần được rồi — thử lại nhé!'}</div>
-        <div className="font-bold text-slate-500">Đúng {correct}/{total} ({pct}%)</div>
-        <div className="mx-auto w-fit rounded-full bg-amber-100 px-4 py-1.5 font-black text-amber-700">+{earned} ⭐</div>
-        <button onClick={() => onExit(pct >= 50)} className="btn-primary">Về danh sách bài</button>
-      </div>
+      <Celebrate
+        title={pct >= 50 ? 'Hoàn thành bài học!' : 'Gần được rồi — thử lại nhé!'}
+        pct={pct}
+        points={earned}
+        onDone={() => onExit(pct >= 50)}
+        doneLabel="Về danh sách bài"
+      />
     );
   }
 

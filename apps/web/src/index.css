@@ -70,3 +70,18 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 .animate-rise { animation: rise 0.4s ease-out both; }
+
+@keyframes fall {
+  to { transform: translateY(420px) rotate(540deg); opacity: 0; }
+}
+
+@keyframes ring {
+  to { stroke-dashoffset: var(--target); }
+}
+
+@keyframes shake {
+  10%, 90% { transform: translateX(-1px); }
+  30%, 70% { transform: translateX(3px); }
+  50% { transform: translateX(-3px); }
+}
+.animate-shake { animation: shake 0.4s ease; }

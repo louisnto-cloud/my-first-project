@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { api } from './api';
+import { sfx, speak } from './sound';
+import { Celebrate } from './Celebrate';
 
 // The assignment player: all 8 Part C question types, continuous autosave,
 // huge touch targets, audio via speech synthesis with replay limits.
@@ -32,28 +34,17 @@ interface Assignment {
   questions: Q[];
 }
 
-function speak(text: string) {
-  try {
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'en-US';
-    u.rate = 0.92;
-    speechSynthesis.cancel();
-    speechSynthesis.speak(u);
-  } catch {
-    /* best effort */
-  }
-}
-
 function Audio({ q, t }: { q: Q; t: (k: string) => string }) {
   const [left, setLeft] = useState(q.replayLimit ?? 2);
-  const play = () => {
+  const play = (rate = 0.95) => {
     if (left <= 0) return;
     setLeft(left - 1);
-    if (q.audioText) speak(q.audioText);
+    if (q.audioText) speak(q.audioText, rate);
   };
   return (
     <div className="flex items-center gap-3">
-      <button onClick={play} disabled={left <= 0} className="btn-primary !rounded-full !p-5 text-2xl">🔊</button>
+      <button onClick={() => play()} disabled={left <= 0} className="btn-primary !rounded-full !p-5 text-2xl shadow-lg">🔊</button>
+      <button onClick={() => play(0.55)} disabled={left <= 0} className="text-2xl" aria-label="Nghe chậm">🐢</button>
       <span className="text-xs font-bold text-slate-400">{left} {t('replaysLeft')}</span>
     </div>
   );
@@ -62,7 +53,7 @@ function Audio({ q, t }: { q: Q; t: (k: string) => string }) {
 function QuestionCard({ q, value, onChange, t }: { q: Q; value: unknown; onChange: (v: unknown) => void; t: (k: string) => string }) {
   const [order, setOrder] = useState<number[]>(Array.isArray(value) && q.words ? (value as string[]).map((w) => q.words!.indexOf(w)).filter((i) => i >= 0) : []);
 
-  const pick = (opt: string) => onChange(opt);
+  const pick = (opt: string) => { sfx.click(); onChange(opt); };
   const pickMulti = (opt: string) => {
     const cur = new Set(Array.isArray(value) ? (value as string[]) : []);
     if (cur.has(opt)) cur.delete(opt);
@@ -195,36 +186,41 @@ export function Player({ assignmentId, onExit, t }: { assignmentId: string; onEx
     setResult(res);
   };
 
-  if (!a) return <div className="card">…</div>;
+  if (!a) return <div className="card animate-pulse text-center text-slate-300">…</div>;
 
   if (result) {
     return (
-      <div className="card space-y-3 text-center">
-        <div className="text-5xl">{result.pendingReview ? '📨' : (result.overall ?? 0) >= 70 ? '🎉' : '💪'}</div>
-        <h2 className="text-xl font-black">{a.title}</h2>
-        {result.late && <div className="font-bold text-amber-600">⏰ {t('late')}</div>}
-        {result.overall != null ? (
-          <div className="text-3xl font-black text-violet-700">{t('yourScore')}: {result.overall}/100</div>
-        ) : (
-          <div className="font-bold text-slate-500">{t('pendingReview')}</div>
-        )}
-        <button onClick={onExit} className="btn-primary">←</button>
-      </div>
+      <Celebrate
+        title={a.title}
+        pct={result.pendingReview ? null : result.overall ?? 0}
+        pending={result.pendingReview}
+        onDone={onExit}
+        doneLabel={t('backToCourse') === 'backToCourse' ? 'Xong' : t('backToCourse')}
+      />
     );
   }
 
+  const answered = a.questions.filter((q) => answers[q.id] != null && answers[q.id] !== '').length;
+  const pct = Math.round((answered / Math.max(1, a.questions.length)) * 100);
+
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <button onClick={onExit} className="font-bold text-violet-500">←</button>
-        <h2 className="text-lg font-black">{a.title}</h2>
-        <span className="text-xs font-bold text-slate-400">{saveState === 'saving' ? t('saving') : saveState === 'saved' ? t('saved') : ''}</span>
+      <div className="sticky top-14 z-10 -mx-4 bg-violet-50/80 px-4 py-2 backdrop-blur">
+        <div className="flex items-center justify-between">
+          <button onClick={onExit} className="text-xl font-bold text-violet-500">←</button>
+          <h2 className="truncate px-2 text-sm font-black text-violet-800">{a.title}</h2>
+          <span className="w-10 text-right text-[11px] font-bold text-slate-400">{answered}/{a.questions.length}</span>
+        </div>
+        <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-violet-100">
+          <div className="h-full rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 transition-all duration-300" style={{ width: `${pct}%` }} />
+        </div>
       </div>
       {a.instructions && <div className="card text-sm font-semibold text-slate-600">{a.instructions}</div>}
       {a.questions.map((q) => (
         <QuestionCard key={q.id} q={q} value={answers[q.id]} onChange={(v) => setAnswer(q.id, v)} t={t} />
       ))}
-      <button onClick={submit} disabled={!submissionId} className="btn-primary w-full">{t('submit')} 🚀</button>
+      <button onClick={submit} disabled={!submissionId} className="btn-primary w-full py-3.5 text-lg">{t('submit')} 🚀</button>
+      <div className="pb-2 text-center text-[11px] font-bold text-slate-400">{saveState === 'saving' ? t('saving') : saveState === 'saved' ? `✓ ${t('saved')}` : ''}</div>
     </div>
   );
 }
