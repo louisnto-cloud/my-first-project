@@ -24,6 +24,7 @@ ACCENT = "FF0071E3"       # Apple-blue accent for steps / emphasis
 INK    = "FF1D1D1F"       # near-black text
 MIST   = "FFF5F5F7"       # soft light-grey panel
 SOFT   = "FFF3F3F6"       # inherited / auto cell tint
+BANDBG = "FFDCE6F4"       # soft-blue section divider (unified look)
 
 CUR2 = '\\$#,##0.00_);"($"#,##0.00\\);\\-'   # per-case currency
 CUR0 = '\\$#,##0_);"($"#,##0\\);\\-'          # total currency
@@ -144,7 +145,7 @@ def build_sheet(ws, title, section, is_total, sku_sheets=None, sku_row=None):
 
     # row 8 section header
     ws.merge_cells(f"A8:{LAST_COL}8")
-    c = ws["A8"]; c.value = section; c.font = font(11, True, WHITE); c.fill = fill(NAVY)
+    c = ws["A8"]; c.value = section; c.font = font(11, True, INK); c.fill = fill(BANDBG)
     c.alignment = Alignment("left", "center")
     ws.row_dimensions[8].height = 15
 
@@ -266,7 +267,7 @@ def build_dashboard(ws, sku_sheets):
     def band(coord_range, text):
         first = coord_range.split(":")[0]
         ws.merge_cells(coord_range)
-        c = ws[first]; c.value = text; c.font = font(10, True, WHITE); c.fill = fill(NAVY)
+        c = ws[first]; c.value = text; c.font = font(10, True, INK); c.fill = fill(BANDBG)
         c.alignment = Alignment("left", "center")
 
     def kpi(r, lab_col, lab, val_col, ref, kind):
@@ -370,7 +371,7 @@ def build_cost_buildup(ws):
 
     def band(rng, text):
         first = rng.split(":")[0]; ws.merge_cells(rng)
-        c = ws[first]; c.value = text; c.font = font(10, True, WHITE); c.fill = fill(NAVY)
+        c = ws[first]; c.value = text; c.font = font(10, True, INK); c.fill = fill(BANDBG)
         c.alignment = Alignment("left", "center")
 
     def put(cell, val, *, inp=False, fmt=None, bold=False, align="right"):
@@ -499,7 +500,7 @@ def build_blended(ws, sku_sheets):
 
     def section(row, text):
         ws.merge_cells(f"A{row}:E{row}")
-        c = ws[f"A{row}"]; c.value = text; c.font = font(11, True, WHITE); c.fill = fill(NAVY)
+        c = ws[f"A{row}"]; c.value = text; c.font = font(11, True, INK); c.fill = fill(BANDBG)
         c.alignment = Alignment("left", "center")
 
     def line(row, lab, src, kind, indent=False, band=False):
@@ -547,7 +548,7 @@ def build_scenarios(ws):
 
     def band(rng, text):
         first = rng.split(":")[0]; ws.merge_cells(rng)
-        c = ws[first]; c.value = text; c.font = font(11, True, WHITE); c.fill = fill(NAVY)
+        c = ws[first]; c.value = text; c.font = font(11, True, INK); c.fill = fill(BANDBG)
         c.alignment = Alignment("left", "center")
     def lab(r, text, bold=False):
         c = ws[f"A{r}"]; c.value = text; c.font = font(10, bold, BLACK)
@@ -669,7 +670,7 @@ def build_assumptions(ws, sku_sheets):
 
     def band(rng, text):
         first = rng.split(":")[0]; ws.merge_cells(rng)
-        c = ws[first]; c.value = text; c.font = font(11, True, WHITE); c.fill = fill(NAVY)
+        c = ws[first]; c.value = text; c.font = font(11, True, INK); c.fill = fill(BANDBG)
         c.alignment = Alignment("left", "center")
     def lab(r, text, col="A", bold=False):
         c = ws[f"{col}{r}"]; c.value = text; c.font = font(10, bold, BLACK)
@@ -851,7 +852,7 @@ def build_exec(ws):
     def tr(cell): return f"='{TTL_SHEET}'!{cell}"
     def band(rng,text):
         first=rng.split(":")[0]; ws.merge_cells(rng)
-        c=ws[first]; c.value=text; c.font=font(11,True,WHITE); c.fill=fill(NAVY); c.alignment=Alignment("left","center")
+        c=ws[first]; c.value=text; c.font=font(11,True,INK); c.fill=fill(BANDBG); c.alignment=Alignment("left","center")
     def kpi(r,lc,lt,vc,ref,fmt,bandf=False):
         a=ws[f"{lc}{r}"]; a.value=lt; a.font=font(10,False,BLACK); a.alignment=Alignment("left","center")
         v=ws[f"{vc}{r}"]; v.value=ref; v.font=font(10, bandf, BLACK); v.number_format=fmt; v.alignment=Alignment("right","center")
@@ -872,7 +873,7 @@ def build_exec(ws):
                "IF('{t}'!M17>=Assumptions!C9,\"🟡 OK — GP% \"&TEXT('{t}'!M17,\"0.0%\")&"
                "\" clears the \"&TEXT(Assumptions!C9,\"0%\")&\" minimum (under target)\","
                "\"❌ BELOW MIN — GP% \"&TEXT('{t}'!M17,\"0.0%\")&\" under \"&TEXT(Assumptions!C9,\"0%\")))").format(t=TTL_SHEET)
-    v=ws["A5"]; v.value=verdict; v.font=font(11,True,BLACK); v.alignment=Alignment("left","center"); ws.row_dimensions[5].height=22
+    v=ws["A5"]; v.value=verdict; v.font=font(12,True,INK); v.alignment=Alignment("left","center"); ws.row_dimensions[5].height=30
     ws.conditional_formatting.add("A5", FormulaRule(formula=['ISNUMBER(SEARCH("PASS",A5))'], fill=GREEN))
     ws.conditional_formatting.add("A5", FormulaRule(formula=['ISNUMBER(SEARCH("OK",A5))'], fill=AMBER))
     ws.conditional_formatting.add("A5", FormulaRule(formula=['ISNUMBER(SEARCH("BELOW",A5))'], fill=RED))
@@ -923,7 +924,7 @@ def build_business_case(ws):
 
     def band(rng, text):
         first = rng.split(":")[0]; ws.merge_cells(rng)
-        c = ws[first]; c.value=text; c.font=font(11,True,WHITE); c.fill=fill(NAVY); c.alignment=Alignment("left","center")
+        c = ws[first]; c.value=text; c.font=font(11,True,INK); c.fill=fill(BANDBG); c.alignment=Alignment("left","center")
     def lab(r, text, col="A", bold=False, sz=10):
         c=ws[f"{col}{r}"]; c.value=text; c.font=font(sz,bold,BLACK); c.alignment=Alignment("left","center")
     def inp(cell, val, fmt):
