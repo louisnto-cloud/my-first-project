@@ -22,7 +22,8 @@ from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.worksheet.table import Table, TableStyleInfo
 from openpyxl.formatting.rule import FormulaRule, ColorScaleRule, DataBarRule
-from openpyxl.chart import BarChart, PieChart, Reference
+from openpyxl.chart import BarChart, PieChart, ScatterChart, Series, Reference
+from openpyxl.chart.marker import Marker
 
 TODAY = datetime.date.today().isoformat()
 FNAME = f"Amazon_ca_Beverage_Competitor_Intel_{TODAY}.xlsx"
@@ -84,6 +85,35 @@ C5="5) Sparkling water & soda"
 CATS=[C1,C2,C3,C4,C5]
 SHEET_FOR={C1:"M1 - Sparkling Electrolyte",C2:"M2 - Electrolyte RTD",
  C3:"M3 - Functional Beverage",C4:"M4 - Caffeine & Energy",C5:"M5 - Sparkling Water & Soda"}
+
+# canonical tab order (single source of truth: drives the TOC and the final sort)
+SHEET_ORDER=["README & Methodology","Executive Dashboard","Strategic Insights","Data Dictionary",
+ SHEET_FOR[C1],SHEET_FOR[C2],SHEET_FOR[C3],SHEET_FOR[C4],SHEET_FOR[C5],
+ "Brand Roll-up","Category Benchmarks","Nutrition Scoreboard",
+ "Pricing & Promo Analysis","Subscription Strategy","Why They Win",
+ "Velocity Estimate","Flavour Map","Live-Capture Protocol","QA & Integrity","Enrichment Log","Sources"]
+TAB_PURPOSE={
+ "README & Methodology":"Start here — honesty model, scoring, scope, this index.",
+ "Executive Dashboard":"KPIs, charts and the top key findings at a glance.",
+ "Strategic Insights":"Synthesized findings, flavour whitespace, positioning map, opportunity shortlist.",
+ "Data Dictionary":"Every field defined — meaning, source class, fill status.",
+ SHEET_FOR[C1]:"SKU-level master: sparkling electrolyte / functional sparkling.",
+ SHEET_FOR[C2]:"SKU-level master: electrolyte beverages (RTD).",
+ SHEET_FOR[C3]:"SKU-level master: functional beverages (still/sparkling).",
+ SHEET_FOR[C4]:"SKU-level master: caffeine & energy beverages.",
+ SHEET_FOR[C5]:"SKU-level master: sparkling water & soda.",
+ "Brand Roll-up":"Per-brand SKU counts, avg nutrition and scores.",
+ "Category Benchmarks":"Per-category averages, ranges and sugar-free counts.",
+ "Nutrition Scoreboard":"All lines ranked by Health Score with data bars.",
+ "Pricing & Promo Analysis":"Live-linked price/floor view (fill amber cells to activate).",
+ "Subscription Strategy":"Subscribe & Save economics, live-linked.",
+ "Why They Win":"One-line buyer rationale + primary draw per line.",
+ "Velocity Estimate":"Estimated demand bands with the signal used.",
+ "Flavour Map":"Brand × flavour-family coverage grid.",
+ "Live-Capture Protocol":"How to fill the live commercial fields.",
+ "QA & Integrity":"Self-audit: confirms no commercial cell is fabricated.",
+ "Enrichment Log":"Every secondary-source nutrition correction, with citations.",
+ "Sources":"Source classes and references behind the stable attributes."}
 
 # ============================================================
 # PRODUCTS
@@ -457,7 +487,18 @@ def build_readme():
      ("Strategic Insights tab","Synthesized 'so what' layer: top findings, a flavour-whitespace matrix (category x family), nutrition positioning by category, the sweetener-strategy mix, and a prioritized opportunity shortlist. Every figure is COMPUTED from the verified stable attributes — no live commercial data required."),
      ("Integrity statement","Nothing in the commercial columns is invented. Where a live figure could not be obtained it is blank and flagged, so the file survives a fact-check against the live listings."),
     ]
+    # ---- clickable Table of Contents (internal hyperlinks to every tab) ----
     r=5
+    toc=ws.cell(row=r,column=2,value="Table of Contents  (click to jump)")
+    toc.font=Font(bold=True,size=13,color=NAVY); r+=1
+    for i,name in enumerate(SHEET_ORDER,1):
+        link=ws.cell(row=r,column=2,value=f"{i:>2}.  {name}")
+        link.hyperlink=f"#'{name}'!A1"
+        link.font=Font(color="0563C1",underline="single",bold=True)
+        link.alignment=WRAP
+        pc=ws.cell(row=r,column=3,value=TAB_PURPOSE.get(name,"")); pc.alignment=WRAP
+        ws.row_dimensions[r].height=18; r+=1
+    r+=1
     for t,b in rows:
         tc=ws.cell(row=r,column=2,value=t)
         tc.font=Font(bold=True,size=13,color="C00000") if t.startswith("CRITICAL") else Font(bold=True,size=11,color=NAVY)
@@ -1053,6 +1094,42 @@ def build_insights():
     r+=1
     note=put(ws,r,2,"All findings derive from verified STABLE attributes (nutrition/flavour/sweetener/positioning). They do NOT depend on live commercial data; price/velocity-dependent conclusions are flagged as pending live capture.")
     note.font=Font(italic=True,color="C00000"); ws.merge_cells(start_row=r,start_column=2,end_row=r,end_column=8)
+    r+=2
+    # --- F. Competitive positioning map (scatter: sugar vs caffeine, normalized /100 mL) ---
+    ws.cell(row=r,column=2,value="F.  Competitive positioning map — sugar vs caffeine (per 100 mL), one series per category").font=Font(bold=True,size=13,color=NAVY)
+    chart_anchor=r+1
+    ws.cell(row=r+1,column=2,value="Bottom-left = light/low-stim waters & seltzers · right = sugary · top = high-caffeine energy. Sparse regions = positioning whitespace.").font=Font(italic=True,size=9,color="808080")
+    # helper data block far to the right (col T+) so the chart never overlaps it
+    hbase=chart_anchor; hcol=20  # T
+    series_specs=[]
+    for i,c in enumerate(CATS):
+        xcol=hcol+2*i; ycol=hcol+2*i+1
+        ws.cell(row=hbase,column=xcol,value=f"{c.split(')')[0]}) sugar/100mL")
+        ws.cell(row=hbase,column=ycol,value=f"{c.split(')')[0]}) caf/100mL")
+        rr=hbase+1; npts=0
+        for p in LINES:
+            if p["category"]!=c: continue
+            s=num(p["sugar"]); caf=num(p["caffeine"]); u=num(p["unitml"])
+            if s is None or caf is None or not u: continue
+            ws.cell(row=rr,column=xcol,value=round(s/u*100,2))
+            ws.cell(row=rr,column=ycol,value=round(caf/u*100,1))
+            rr+=1; npts+=1
+        series_specs.append((c,xcol,ycol,hbase+1,hbase+npts))
+    for ci in range(hcol,hcol+2*len(CATS)):  # hide raw scatter-data columns
+        ws.column_dimensions[get_column_letter(ci)].hidden=True
+    chart=ScatterChart(); chart.title="Sugar vs caffeine positioning (per 100 mL)"
+    chart.x_axis.title="Sugar (g / 100 mL)"; chart.y_axis.title="Caffeine (mg / 100 mL)"
+    chart.height=11; chart.width=20; chart.style=2
+    # openpyxl quirk: axes need delete=False to render titles
+    chart.x_axis.delete=False; chart.y_axis.delete=False
+    for cname,xcol,ycol,r0,r1 in series_specs:
+        if r1<r0: continue
+        xref=Reference(ws,min_col=xcol,min_row=r0,max_row=r1)
+        yref=Reference(ws,min_col=ycol,min_row=r0,max_row=r1)
+        s=Series(yref,xref,title=cname.split(")")[1].strip())
+        s.marker=Marker(symbol="circle",size=6); s.graphicalProperties.line.noFill=True
+        chart.series.append(s)
+    ws.add_chart(chart,f"B{chart_anchor+2}")
     return ws
 
 def build_dashboard():
@@ -1162,13 +1239,8 @@ build_sources()
 build_insights()
 build_dashboard()
 
-# order sheets nicely
-order=["README & Methodology","Executive Dashboard","Strategic Insights","Data Dictionary",
- SHEET_FOR[C1],SHEET_FOR[C2],SHEET_FOR[C3],SHEET_FOR[C4],SHEET_FOR[C5],
- "Brand Roll-up","Category Benchmarks","Nutrition Scoreboard",
- "Pricing & Promo Analysis","Subscription Strategy","Why They Win",
- "Velocity Estimate","Flavour Map","Live-Capture Protocol","QA & Integrity","Enrichment Log","Sources"]
-wb._sheets.sort(key=lambda s: order.index(s.title) if s.title in order else 999)
+# order sheets nicely (single source of truth defined at top: SHEET_ORDER)
+wb._sheets.sort(key=lambda s: SHEET_ORDER.index(s.title) if s.title in SHEET_ORDER else 999)
 
 # force full recalculation when the file is opened (Excel/LibreOffice)
 try:
