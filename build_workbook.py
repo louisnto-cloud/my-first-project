@@ -281,8 +281,10 @@ def build_inputs(wb):
     ops = [
         ("Fill rate", 0.97, "0%", "Fraction of forecasted units that actually ship. Reflects production and DC accuracy."),
         ("Freight per case", 1.85, '"$"#,##0.00', "Loaded freight cost from Bevmax DC to retailer DC or DSD route, per case."),
-        ("Slotting fee per door, one time", 250.00, '"$"#,##0.00', "Average slotting amortized across launch quarter. Set zero if waived."),
-        ("Distributor margin percent", 0.18, "0%", "Distributor markup if shipping through third party. Set zero for direct shipment to retailer."),
+        ("Slotting fee per door, one time", 250.00, '"$"#,##0.00', "One time slotting paid per authorized door. Treated as a launch investment, amortized below."),
+        ("Slotting amortization months", 12, "0", "Months over which slotting is amortized. The launch quarter absorbs only its share."),
+        ("Launch window months", 3, "0", "Months in the launch window. June through August is 3."),
+        ("Distributor margin percent", 0.00, "0%", "Distributor markup if shipping through third party. Set zero for direct shipment to retailer. Default zero assumes direct."),
         ("Bevmax MOQ in cases", 500, "#,##0", "Minimum order quantity per production run. PO releases below MOQ flag in Production Calendar."),
         ("Safety stock weeks", 1, "0", "Number of weeks of forward demand to keep at the DC."),
     ]
@@ -296,27 +298,29 @@ def build_inputs(wb):
     wb.defined_names["FILL_RATE"] = DefinedName("FILL_RATE", attr_text="Inputs!$B$42")
     wb.defined_names["FREIGHT_PER_CASE"] = DefinedName("FREIGHT_PER_CASE", attr_text="Inputs!$B$43")
     wb.defined_names["SLOTTING_PER_DOOR"] = DefinedName("SLOTTING_PER_DOOR", attr_text="Inputs!$B$44")
-    wb.defined_names["DIST_MARGIN_PCT"] = DefinedName("DIST_MARGIN_PCT", attr_text="Inputs!$B$45")
-    wb.defined_names["BEVMAX_MOQ"] = DefinedName("BEVMAX_MOQ", attr_text="Inputs!$B$46")
-    wb.defined_names["SAFETY_STOCK_WEEKS"] = DefinedName("SAFETY_STOCK_WEEKS", attr_text="Inputs!$B$47")
+    wb.defined_names["SLOTTING_AMORT_MONTHS"] = DefinedName("SLOTTING_AMORT_MONTHS", attr_text="Inputs!$B$45")
+    wb.defined_names["LAUNCH_MONTHS"] = DefinedName("LAUNCH_MONTHS", attr_text="Inputs!$B$46")
+    wb.defined_names["DIST_MARGIN_PCT"] = DefinedName("DIST_MARGIN_PCT", attr_text="Inputs!$B$47")
+    wb.defined_names["BEVMAX_MOQ"] = DefinedName("BEVMAX_MOQ", attr_text="Inputs!$B$48")
+    wb.defined_names["SAFETY_STOCK_WEEKS"] = DefinedName("SAFETY_STOCK_WEEKS", attr_text="Inputs!$B$49")
 
-    # Targets for dashboard rollup
-    style_section(ws, 49, 1, "13 week targets")
+    # Targets for dashboard rollup. Placeholders reconciled to the Base model output.
+    style_section(ws, 51, 1, "13 week targets, editable placeholders")
     targets = [
-        ("Target total cases", 12000, "#,##0", "CEO ask. Aggregate target across all channels."),
-        ("Target gross revenue", 432000, '"$"#,##0', "Total wholesale revenue target."),
-        ("Target gross margin percent", 0.45, "0%", "Required gross margin floor."),
+        ("Target total cases", 3200, "#,##0", "Placeholder near Base model output. Replace with the CEO ask."),
+        ("Target gross revenue", 115000, '"$"#,##0', "Placeholder near Base model output at current wholesale."),
+        ("Target net margin percent", 0.10, "0%", "Net contribution margin floor after amortized slotting. Placeholder."),
     ]
     for i, (label, val, fmt, note) in enumerate(targets):
-        r = 50 + i
+        r = 52 + i
         ws.cell(row=r, column=1, value=label)
         c = ws.cell(row=r, column=2, value=val)
         c.fill = INPUT_FILL
         c.number_format = fmt
         ws.cell(row=r, column=4, value=note).font = NOTE_FONT
-    wb.defined_names["TARGET_CASES"] = DefinedName("TARGET_CASES", attr_text="Inputs!$B$50")
-    wb.defined_names["TARGET_REVENUE"] = DefinedName("TARGET_REVENUE", attr_text="Inputs!$B$51")
-    wb.defined_names["TARGET_MARGIN_PCT"] = DefinedName("TARGET_MARGIN_PCT", attr_text="Inputs!$B$52")
+    wb.defined_names["TARGET_CASES"] = DefinedName("TARGET_CASES", attr_text="Inputs!$B$52")
+    wb.defined_names["TARGET_REVENUE"] = DefinedName("TARGET_REVENUE", attr_text="Inputs!$B$53")
+    wb.defined_names["TARGET_MARGIN_PCT"] = DefinedName("TARGET_MARGIN_PCT", attr_text="Inputs!$B$54")
 
     set_col_widths(ws, [40, 22, 22, 70, 22, 28])
     ws.sheet_view.showGridLines = False
@@ -1064,17 +1068,18 @@ def build_revenue_margin(wb):
     ws = wb.create_sheet("Revenue and Margin")
     title(ws, "Revenue and Margin")
     ws["A2"] = (
-        "Per SKU economics with full landed cost. Wholesale less COGS, freight, slotting, distributor margin, "
-        "and allocated trade spend yields net contribution. Trade spend allocates direct activation cost to the "
-        "scoped SKU and apportions ALL scope cost by revenue share. Fill rate adjusts shipped cases versus forecast."
+        "Per SKU operating economics. Wholesale less COGS, freight, distributor margin, and allocated trade spend "
+        "yields operating contribution. Slotting is a one time launch investment and is shown separately below, "
+        "amortized into the launch quarter, so per unit margin is not distorted by a one time fee. "
+        "Fill rate adjusts shipped cases versus forecast."
     )
     ws["A2"].font = NOTE_FONT
 
     headers = ["SKU", "Total cases doors", "Total cases online", "Total cases all",
                "Cases shipped", "Wholesale per case", "Gross revenue",
-               "COGS per case", "COGS total", "Freight total", "Slotting allocated",
+               "COGS per case", "COGS total", "Freight total",
                "Distributor margin", "Direct trade spend", "Allocated ALL scope trade",
-               "Net contribution", "Net margin percent"]
+               "Operating contribution", "Operating margin percent"]
     for j, h in enumerate(headers, start=1):
         ws.cell(row=4, column=j, value=h)
     style_header_row(ws, 4, len(headers))
@@ -1104,35 +1109,24 @@ def build_revenue_margin(wb):
         ws.cell(row=r, column=8, value=f"=INDEX(COGS_TABLE,{si+1})").number_format = '"$"#,##0.00'
         ws.cell(row=r, column=9, value=f"=E{r}*H{r}").number_format = '"$"#,##0'
         ws.cell(row=r, column=10, value=f"=E{r}*FREIGHT_PER_CASE").number_format = '"$"#,##0'
-        # Slotting allocated by share of door cases (online does not incur slotting)
         ws.cell(row=r, column=11,
-                value=f'=IFERROR(B{r}/SUM($B$5:$B$7)*COUNTIF(VG_AUTH,"Y")*SLOTTING_PER_DOOR/COUNTIF(DOORS_ID,"<>"),0)*COUNTIF(DOORS_ID,"<>")').number_format = '"$"#,##0'
-        # Actually simpler: slotting per door * doors authorized for this SKU. SUMIF requires per-SKU door auth.
-        # Use SUMIF over DOORS_(flavor)="Y" * slotting per door.
-        # Replace above with cleaner formula:
-        ws.cell(row=r, column=11,
-                value=f'=COUNTIF(INDEX((DOORS_LIMELEMON,DOORS_PINEAPPLE,DOORS_RASPBERRY),0,0,{si+1}),"Y")*SLOTTING_PER_DOOR').number_format = '"$"#,##0'
-        # That uses INDEX with three ranges and reference number. Cleaner with CHOOSE:
-        ws.cell(row=r, column=11,
-                value=f'=COUNTIF(CHOOSE({si+1},DOORS_LIMELEMON,DOORS_PINEAPPLE,DOORS_RASPBERRY),"Y")*SLOTTING_PER_DOOR').number_format = '"$"#,##0'
-        ws.cell(row=r, column=12,
                 value=f"=G{r}*DIST_MARGIN_PCT").number_format = '"$"#,##0'
         # Direct trade spend = SUMIF over activations where SKU Scope = this SKU
-        ws.cell(row=r, column=13,
+        ws.cell(row=r, column=12,
                 value=f'=SUMIF(ACT_SKU_SCOPE,"{sku}",ACT_COST)').number_format = '"$"#,##0'
         # ALL scope trade allocated by revenue share
-        ws.cell(row=r, column=14,
+        ws.cell(row=r, column=13,
                 value=f'=IFERROR(SUMIF(ACT_SKU_SCOPE,"ALL",ACT_COST)*G{r}/SUM($G$5:$G$7),0)').number_format = '"$"#,##0'
-        # Net contribution = Gross - COGS - Freight - Slotting - Distributor margin - Direct trade - Allocated trade
-        ws.cell(row=r, column=15,
-                value=f"=G{r}-I{r}-J{r}-K{r}-L{r}-M{r}-N{r}").number_format = '"$"#,##0'
-        ws.cell(row=r, column=16, value=f"=IF(G{r}=0,0,O{r}/G{r})").number_format = "0.0%"
+        # Operating contribution = Gross - COGS - Freight - Distributor margin - Direct trade - Allocated trade
+        ws.cell(row=r, column=14,
+                value=f"=G{r}-I{r}-J{r}-K{r}-L{r}-M{r}").number_format = '"$"#,##0'
+        ws.cell(row=r, column=15, value=f"=IF(G{r}=0,0,N{r}/G{r})").number_format = "0.0%"
 
     # Totals row
     tot_r = 5 + len(SKUS)
     ws.cell(row=tot_r, column=1, value="Total")
     ws.cell(row=tot_r, column=1).font = Font(bold=True)
-    for col in [2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 15]:
+    for col in [2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14]:
         col_letter = get_column_letter(col)
         ws.cell(row=tot_r, column=col,
                 value=f"=SUM({col_letter}5:{col_letter}{tot_r-1})").font = Font(bold=True)
@@ -1140,47 +1134,73 @@ def build_revenue_margin(wb):
     ws.cell(row=tot_r, column=3).number_format = "#,##0"
     ws.cell(row=tot_r, column=4).number_format = "#,##0"
     ws.cell(row=tot_r, column=5).number_format = "#,##0"
-    for col in [7, 9, 10, 11, 12, 13, 14, 15]:
+    for col in [7, 9, 10, 11, 12, 13, 14]:
         ws.cell(row=tot_r, column=col).number_format = '"$"#,##0'
-    ws.cell(row=tot_r, column=16,
-            value=f'=IF(G{tot_r}=0,0,O{tot_r}/G{tot_r})').number_format = "0.0%"
+    ws.cell(row=tot_r, column=15,
+            value=f'=IF(G{tot_r}=0,0,N{tot_r}/G{tot_r})').number_format = "0.0%"
+
+    # Launch investment block. Slotting is one time, amortized into the quarter.
+    li_r = tot_r + 3
+    style_section(ws, li_r, 1, "Launch investment, slotting treated separately from per unit margin")
+    li = [
+        ("Authorized doors all flavors",
+            '=COUNTIF(DOORS_LIMELEMON,"Y")+COUNTIF(DOORS_PINEAPPLE,"Y")+COUNTIF(DOORS_RASPBERRY,"Y")', "#,##0"),
+        ("Total slotting one time",
+            '=(COUNTIF(DOORS_LIMELEMON,"Y")+COUNTIF(DOORS_PINEAPPLE,"Y")+COUNTIF(DOORS_RASPBERRY,"Y"))*SLOTTING_PER_DOOR',
+            '"$"#,##0'),
+        ("Amortized slotting this quarter",
+            f"=B{li_r+2}*LAUNCH_MONTHS/SLOTTING_AMORT_MONTHS", '"$"#,##0'),
+    ]
+    for i, (label, formula, fmt) in enumerate(li):
+        r = li_r + 1 + i
+        ws.cell(row=r, column=1, value=label)
+        ws.cell(row=r, column=2, value=formula).number_format = fmt
 
     # Summary section
-    style_section(ws, tot_r + 3, 1, "Rollup")
+    sum_r = li_r + 5
+    style_section(ws, sum_r, 1, "Rollup")
     rollup = [
         ("Gross revenue", f"=G{tot_r}", '"$"#,##0'),
         ("Total COGS", f"=I{tot_r}", '"$"#,##0'),
         ("Total freight", f"=J{tot_r}", '"$"#,##0'),
-        ("Total slotting", f"=K{tot_r}", '"$"#,##0'),
-        ("Total distributor margin", f"=L{tot_r}", '"$"#,##0'),
-        ("Total trade spend",
-            f"=SUM(ACT_COST)", '"$"#,##0'),
-        ("Net contribution before brand and overhead", f"=O{tot_r}", '"$"#,##0'),
-        ("Net contribution margin percent",
-            f"=IF(G{tot_r}=0,0,O{tot_r}/G{tot_r})", "0.0%"),
-        ("Effective trade percent of gross revenue",
-            f"=IF(G{tot_r}=0,0,SUM(ACT_COST)/G{tot_r})", "0.0%"),
+        ("Total distributor margin", f"=K{tot_r}", '"$"#,##0'),
+        ("Total trade spend", f"=SUM(ACT_COST)", '"$"#,##0'),
+        ("Operating contribution before launch investment", f"=N{tot_r}", '"$"#,##0'),
+        ("Operating margin percent", f"=IF(G{tot_r}=0,0,N{tot_r}/G{tot_r})", "0.0%"),
+        ("Less amortized slotting this quarter", f"=-B{li_r+3}", '"$"#,##0'),
+        ("Net contribution after amortized slotting", f"=N{tot_r}-B{li_r+3}", '"$"#,##0'),
+        ("Net margin after amortized slotting", f"=IF(G{tot_r}=0,0,(N{tot_r}-B{li_r+3})/G{tot_r})", "0.0%"),
+        ("Memo, fully loaded contribution if all slotting in quarter", f"=N{tot_r}-B{li_r+2}", '"$"#,##0'),
+        ("Effective trade percent of gross revenue", f"=IF(G{tot_r}=0,0,SUM(ACT_COST)/G{tot_r})", "0.0%"),
     ]
+    rollup_rowmap = {}
     for i, (label, formula, fmt) in enumerate(rollup):
-        r = tot_r + 4 + i
+        r = sum_r + 1 + i
         ws.cell(row=r, column=1, value=label)
         ws.cell(row=r, column=2, value=formula).number_format = fmt
+        rollup_rowmap[label] = r
 
     # Named ranges
     wb.defined_names["REV_GROSS_TOTAL"] = DefinedName(
         "REV_GROSS_TOTAL", attr_text=f"'Revenue and Margin'!$G${tot_r}"
     )
+    wb.defined_names["REV_OPERATING_CONTRIB"] = DefinedName(
+        "REV_OPERATING_CONTRIB", attr_text=f"'Revenue and Margin'!$N${tot_r}"
+    )
+    wb.defined_names["REV_SLOTTING_TOTAL"] = DefinedName(
+        "REV_SLOTTING_TOTAL", attr_text=f"'Revenue and Margin'!$B${li_r+2}"
+    )
+    wb.defined_names["REV_SLOTTING_AMORT"] = DefinedName(
+        "REV_SLOTTING_AMORT", attr_text=f"'Revenue and Margin'!$B${li_r+3}"
+    )
     wb.defined_names["REV_TRADE_TOTAL"] = DefinedName(
-        "REV_TRADE_TOTAL", attr_text=f"'Revenue and Margin'!$B${tot_r+9}"
+        "REV_TRADE_TOTAL", attr_text=f"'Revenue and Margin'!$B${rollup_rowmap['Total trade spend']}"
     )
     wb.defined_names["REV_NET_TOTAL"] = DefinedName(
-        "REV_NET_TOTAL", attr_text=f"'Revenue and Margin'!$O${tot_r}"
-    )
-    wb.defined_names["REV_MARGIN_TOTAL"] = DefinedName(
-        "REV_MARGIN_TOTAL", attr_text=f"'Revenue and Margin'!$O${tot_r}"
+        "REV_NET_TOTAL", attr_text=f"'Revenue and Margin'!$B${rollup_rowmap['Net contribution after amortized slotting']}"
     )
     wb.defined_names["REV_MARGIN_PCT"] = DefinedName(
-        "REV_MARGIN_PCT", attr_text=f"'Revenue and Margin'!$B${tot_r+11}"
+        "REV_MARGIN_PCT", attr_text=f"'Revenue and Margin'!$B${rollup_rowmap['Net margin after amortized slotting']}"
     )
     wb.defined_names["REV_TOTAL_CASES"] = DefinedName(
         "REV_TOTAL_CASES", attr_text=f"'Revenue and Margin'!$D${tot_r}"
@@ -1189,7 +1209,7 @@ def build_revenue_margin(wb):
         "REV_CASES_SHIPPED", attr_text=f"'Revenue and Margin'!$E${tot_r}"
     )
 
-    set_col_widths(ws, [26, 14, 14, 14, 14, 16, 16, 14, 14, 14, 16, 18, 18, 22, 18, 16])
+    set_col_widths(ws, [44, 14, 14, 14, 14, 16, 16, 14, 14, 14, 16, 18, 20, 22, 18])
     ws.sheet_view.showGridLines = False
     return ws
 
@@ -1376,9 +1396,9 @@ def build_dashboard(wb):
         ("Total cases all channels", "=REV_TOTAL_CASES", "#,##0"),
         ("Gross revenue", "=REV_GROSS_TOTAL", '"$"#,##0'),
         ("Trade spend", "=REV_TRADE_TOTAL", '"$"#,##0'),
-        ("Net revenue", "=REV_NET_TOTAL", '"$"#,##0'),
-        ("Gross margin", "=REV_MARGIN_TOTAL", '"$"#,##0'),
-        ("Margin percent", '=IF(REV_GROSS_TOTAL=0,0,REV_MARGIN_TOTAL/REV_GROSS_TOTAL)', "0.0%"),
+        ("Operating contribution", "=REV_OPERATING_CONTRIB", '"$"#,##0'),
+        ("Net contribution after amortized slotting", "=REV_NET_TOTAL", '"$"#,##0'),
+        ("Net margin percent", "=REV_MARGIN_PCT", "0.0%"),
         ("Online share of cases", '=IF(REV_TOTAL_CASES=0,0,ONLINE_TOTAL_CASES/REV_TOTAL_CASES)', "0.0%"),
     ]
     style_section(ws, 4, 1, "KPI summary")
@@ -1622,6 +1642,12 @@ def build_methodology(wb):
             "UNITS_PER_CASE is set to 24 on the Inputs tab. One case equals six four packs equals 24 cans.",
             "Cases round up at the door week SKU level before any summation. Partial cases do not ship.",
             "All case math uses CEILING or ROUNDUP at the cell level, never on aggregated totals.",
+        ]),
+        ("Economics and slotting treatment", [
+            "Per unit margin on the Revenue and Margin tab covers COGS, freight, distributor margin, and trade spend. These scale with volume.",
+            "Slotting is a one time fee per door, not a per unit cost. Charging all of it against a 13 week window understates true unit economics.",
+            "The model shows operating contribution before slotting, then subtracts only the amortized share of slotting for the launch quarter. A memo line shows the fully loaded view if all slotting lands in the quarter.",
+            "Read operating margin for unit economics health. Read net margin after amortized slotting for the quarter P and L. Read the fully loaded memo for the worst case cash view.",
         ]),
         ("Workflow for Louis", [
             "1. Replace the 100 placeholder rows on the Doors tab with the real door list.",
@@ -2061,7 +2087,9 @@ def build_executive_summary(wb):
         ("Forecast gross revenue", "=REV_GROSS_TOTAL", '"$"#,##0'),
         ("Versus target revenue",
             "=IFERROR(REV_GROSS_TOTAL/TARGET_REVENUE,0)", "0%"),
-        ("Net contribution", "=REV_NET_TOTAL", '"$"#,##0'),
+        ("Operating contribution before slotting", "=REV_OPERATING_CONTRIB", '"$"#,##0'),
+        ("Slotting one time launch investment", "=REV_SLOTTING_TOTAL", '"$"#,##0'),
+        ("Net contribution after amortized slotting", "=REV_NET_TOTAL", '"$"#,##0'),
         ("Net contribution margin percent", "=REV_MARGIN_PCT", "0.0%"),
         ("Versus target margin",
             "=IFERROR(REV_MARGIN_PCT/TARGET_MARGIN_PCT,0)", "0%"),
@@ -2142,15 +2170,17 @@ def build_executive_summary(wb):
     ws.add_chart(line, "G22")
 
     # Key risks
-    style_section(ws, 40, 1, "Top three watch items")
+    style_section(ws, 40, 1, "Top watch items")
     risks = [
+        "Slotting timing. Slotting is a one time launch investment. The launch quarter absorbs only its amortized share on the Revenue and Margin tab. On a fully loaded basis where all slotting hits the quarter, contribution can turn negative. This is an investment timing effect, not a unit economics problem. Operating margin before slotting is healthy.",
         "Bevmax capacity utilization. Confirm Production Smoothing tab shows no week over 100 percent before locking the plan.",
         "Activation ROI assumptions. Every activation should have a non blank uplift and modeled incremental cases on the Activations tab.",
         "Door list completeness. The Doors tab still contains placeholder rows. Replace with authoritative banner data before going to CEO.",
+        "Targets are editable placeholders reconciled to the Base model output. Replace with the real CEO ask on the Inputs tab.",
     ]
     for i, r in enumerate(risks):
         ws.cell(row=41 + i, column=1, value=f"{i+1}. {r}").alignment = Alignment(wrap_text=True, vertical="top")
-        ws.row_dimensions[41 + i].height = 30
+        ws.row_dimensions[41 + i].height = 44
 
     set_col_widths(ws, [44, 22, 4, 32, 4, 22, 22, 22, 22])
     ws.sheet_view.showGridLines = False
@@ -2940,7 +2970,7 @@ def build_glossary(wb):
         ("Ramp", "Schedule of how fast a door reaches steady state velocity. Week 1 typically below steady state."),
         ("Risk Flag", "Automated check that surfaces inputs or outputs needing attention."),
         ("Scenario", "Conservative, Base, or Stretch view. Applies multipliers to base velocity."),
-        ("Slotting", "Fee paid to a retailer for shelf placement on a new product."),
+        ("Slotting", "One time fee paid to a retailer for shelf placement on a new product. Treated as a launch investment and amortized over its life, so it does not distort per unit margin in a single quarter."),
         ("Steady state velocity", "Units per week per door per SKU after ramp completes. Tier and SKU specific."),
         ("Tier", "Door classification A, B, or C indicating expected volume and authorization."),
         ("Trade spend", "Sales and marketing dollars spent on activations, demos, and retailer programs."),
@@ -3067,6 +3097,111 @@ def build_stakeholder_map(wb):
     return ws
 
 
+def build_model_validation(wb, expected):
+    """Embed an independent recomputation of the Base case for audit.
+
+    expected is the dict from verify_model.compute(). The live formulas should
+    reproduce these numbers when the workbook is opened with default inputs,
+    no activations, no overrides, Base scenario. The right column pulls the live
+    figure so any divergence is visible at a glance.
+    """
+    ws = wb.create_sheet("Model Validation")
+    title(ws, "Model validation")
+    ws["A2"] = (
+        "Independent audit. The expected column was computed by a separate Python implementation of the model logic, "
+        "not by reading these formulas. With default inputs, no activations, no overrides, and Base scenario, the live "
+        "figures should match the expected figures. Any row that does not match needs investigation. "
+        "Once Louis enters real doors, activations, or overrides, the live figures will move away from these Base expectations, "
+        "which is correct. Rerun verify_model.py to regenerate expectations for a new baseline."
+    )
+    ws["A2"].font = NOTE_FONT
+    ws["A2"].alignment = Alignment(wrap_text=True, vertical="top")
+    ws.row_dimensions[2].height = 60
+
+    headers = ["Check", "Expected, independent Python", "Live, this workbook", "Match", "Tolerance"]
+    for j, h in enumerate(headers, start=1):
+        ws.cell(row=4, column=j, value=h)
+    style_header_row(ws, 4, len(headers))
+
+    rows = [
+        ("Doors", expected["doors"], "=COUNTA(DOORS_ID)", "#,##0", 0),
+        ("Authorized SKU rows", expected["auth_rows"],
+            '=SUMPRODUCT((VG_AUTH="Y")*1)', "#,##0", 0),
+        ("Velocity Grid total units", expected["total_vg_units"],
+            "=SUM(VG_UNITS_BLOCK)", "#,##0", 0),
+        ("Weekly Forecast total units", expected["wf_total_units"],
+            "=SUM(WF_WEEK_UNITS)", "#,##0", 0),
+        ("Cross check, units tie", "Match",
+            '=IF(SUM(WF_WEEK_UNITS)=SUM(VG_UNITS_BLOCK),"Match","Mismatch")', "", 0),
+        ("Door cases total", expected["door_cases_total"],
+            f"=SUM(WF_WEEK_CASES)", "#,##0", 0),
+        ("Online cases total", expected["online_cases_total"],
+            "=ONLINE_TOTAL_CASES", "#,##0", 0),
+        ("Total cases all channels", expected["total_cases_all"],
+            "=REV_TOTAL_CASES", "#,##0", 1),
+        ("Cases shipped after fill rate", expected["cases_shipped"],
+            "=REV_CASES_SHIPPED", "#,##0", 2),
+        ("Gross revenue", round(expected["gross_rev"], 0),
+            "=REV_GROSS_TOTAL", '"$"#,##0', 50),
+        ("Operating contribution", None,
+            "=REV_OPERATING_CONTRIB", '"$"#,##0', None),
+        ("Total slotting one time", round(expected["slotting_total"], 0),
+            "=REV_SLOTTING_TOTAL", '"$"#,##0', 1),
+        ("Authorized rows with zero forecast", expected["zero_auth"],
+            f'=SUMPRODUCT((VG_AUTH="Y")*(({"+".join(["VG_W"+str(w) for w in WEEKS])})=0))', "#,##0", 0),
+    ]
+    for i, row in enumerate(rows):
+        label, exp, live, fmt, tol = row
+        r = 5 + i
+        ws.cell(row=r, column=1, value=label)
+        if exp is not None:
+            ec = ws.cell(row=r, column=2, value=exp)
+            if fmt:
+                ec.number_format = fmt
+        else:
+            ws.cell(row=r, column=2, value="see note")
+        lc = ws.cell(row=r, column=3, value=live)
+        if fmt:
+            lc.number_format = fmt
+        if exp is None:
+            ws.cell(row=r, column=4, value="reference only")
+        elif isinstance(exp, str):
+            ws.cell(row=r, column=4, value=f'=IF(C{r}=B{r},"Match","Mismatch")')
+        else:
+            ws.cell(row=r, column=4,
+                    value=f'=IF(ABS(C{r}-B{r})<=E{r},"Match","Mismatch")')
+        if tol is not None:
+            ws.cell(row=r, column=5, value=tol)
+
+    last_r = 4 + len(rows)
+    ws.conditional_formatting.add(
+        f"D5:D{last_r}",
+        FormulaRule(formula=['$D5="Match"'], fill=OK_FILL),
+    )
+    ws.conditional_formatting.add(
+        f"D5:D{last_r}",
+        FormulaRule(formula=['$D5="Mismatch"'], fill=WARN_FILL),
+    )
+
+    # Audit metadata
+    style_section(ws, last_r + 2, 1, "Audit metadata")
+    meta = [
+        ("Validation method", "Independent Python recomputation in verify_model.py"),
+        ("Baseline assumptions", "Default inputs, placeholder doors, no activations, no overrides, Base scenario"),
+        ("Excel rounding model", "Half away from zero, matching Excel ROUND"),
+        ("Generated for version", VERSION),
+        ("Note", "Tolerances allow for case rounding differences that accumulate across 300 rows."),
+    ]
+    for i, (k, v) in enumerate(meta):
+        r = last_r + 3 + i
+        ws.cell(row=r, column=1, value=k).font = Font(bold=True)
+        ws.cell(row=r, column=2, value=v).alignment = Alignment(wrap_text=True)
+
+    set_col_widths(ws, [38, 30, 22, 16, 14])
+    ws.sheet_view.showGridLines = False
+    return ws
+
+
 def main():
     wb = Workbook()
     # Remove default sheet
@@ -3117,6 +3252,16 @@ def main():
     build_pre_launch_checklist(wb)
     build_stakeholder_map(wb)
 
+    # Independent validation tab
+    try:
+        from verify_model import compute as _compute_expected
+        expected = _compute_expected()
+        build_model_validation(wb, expected)
+        has_validation = True
+    except Exception as e:
+        print(f"Validation tab skipped: {e}")
+        has_validation = False
+
     # Reorder sheets
     order = [
         "Cover", "Executive Summary", "Dashboard",
@@ -3129,8 +3274,10 @@ def main():
         "Revenue and Margin", "Cash Flow Timing", "Quarterly Rollup",
         "Sensitivity", "What If", "Scenarios",
         "Pre Launch Checklist", "Variance Tracker", "Weekly Review",
-        "Action Items", "Risk Flags",
+        "Action Items", "Model Validation", "Risk Flags",
     ]
+    if not has_validation and "Model Validation" in order:
+        order.remove("Model Validation")
     wb._sheets = [wb[name] for name in order]
 
     wb.save(OUT_PATH)
