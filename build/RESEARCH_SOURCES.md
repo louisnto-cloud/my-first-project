@@ -2,7 +2,7 @@
 
 v2 note: every Activation Type, Activation Date and activation idea was cleared on purpose. The team books real activations and the Calendar fills itself. Maddie is the single owner. The Suggested Events tab starts empty; the bench list below is raw material for it when Louis wants ideas parked there.
 
-This file backs the 60 partner rows in `Organika RTD Community Partnerships Tracker_v5.xlsx`.
+This file backs the 60 partner rows in `Organika RTD Community Partnerships Tracker_v6.xlsx`.
 Every partner was found through web research in 2026 and tagged in the workbook as Verified Web,
 Pending, or Unverified. No contact name, email, phone number, or audience number was invented.
 Anything that could not be verified is left blank or TBD in the workbook and is listed on the gap

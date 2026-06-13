@@ -5,7 +5,7 @@ import openpyxl
 from openpyxl.utils import get_column_letter
 warnings.filterwarnings("ignore")
 
-OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v5.xlsx"
+OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v6.xlsx"
 SRC = "/root/.claude/uploads/607dab49-f51b-5b86-83ad-5f4c7139295f/029750d9-Organika_RTD_BC_Tracker.xlsx"
 fails=[]; warns=[]
 def ok(m): print("  PASS  "+m)
@@ -51,15 +51,15 @@ for t in TYPES:
 
 print("\n[3] ACTIVATIONS tab: per flavour can columns + structure")
 act=wb["Activations"]
-ah=[act.cell(2,c).value for c in range(1,16)]
+ah=[act.cell(2,c).value for c in range(1,17)]
 EXP_ACT=["#","Date","Partner","Partnership Type","City","Owner","Status","Activation Type",
-"Assets Needed","Budget","Raspberry 4338 Cans","Lemon Lime 4336 Cans","Pineapple Passion Fruit 4340 Cans","Total Cans","Notes"]
-if ah==EXP_ACT: ok("15 columns incl a can column per flavour and Total Cans")
+"Assets Needed","Budget","Raspberry 4338 Cans","Lemon Lime 4336 Cans","Pineapple Passion Fruit 4340 Cans","Total Cans","Cost Per Can","Notes"]
+if ah[:15]==EXP_ACT[:15] and ah==EXP_ACT: ok("16 columns: a can column per flavour, Total Cans and Cost Per Can")
 else: bad(f"Activations headers: {ah}")
-# empty grid except # and Total Cans formulas
+# empty grid except #, Total Cans, Cost Per Can formulas
 content=[]
 for r in range(3,63):
-    for c in list(range(2,14))+[15]:
+    for c in list(range(2,14))+[16]:
         v=act.cell(r,c).value
         if v not in (None,""): content.append((r,c,v))
 if not content: ok("grid starts empty for the team to fill")
@@ -158,6 +158,11 @@ try:
     else: bad(f"Total Partners={g('Dashboard','A5')}")
     if int(g("Dashboard","G5"))==0 and (g("Dashboard","I5") in (0,0.0)): ok("Activations Booked and Cans Sampled start at 0 (empty Activations tab)")
     else: bad(f"activations/cans not zero: {g('Dashboard','G5')},{g('Dashboard','I5')}")
+    al_rows=sum(1 for r in range(3,83) if g("Action List","B"+str(r)) not in (None,"",0))
+    al_top=[g("Action List","D"+str(r)) for r in (3,4,5)]
+    if al_rows==60 and all(x=="P1" for x in al_top):
+        ok(f"Action List surfaces all 60 active partners, P1 first ({al_rows} rows, top three P1)")
+    else: bad(f"Action List rows={al_rows} top={al_top}")
 except Exception as e:
     import traceback; traceback.print_exc()
 
@@ -197,6 +202,21 @@ else: bad(f"protected tabs: {locked}")
 if wb["Master List"].protection.autoFilter is False and not wb["Run Clubs"].protection.sheet:
     ok("Master List still filters, and the working tabs stay fully editable")
 else: warn("protection flags need a look")
+
+print("\n[12] v6: Action List worklist + collapsed type tab columns")
+al=wb["Action List"]
+alh=[al.cell(2,c).value for c in range(1,10)]
+if alh==["#","Partner","Type","Priority","Status","Next Action","Next Action Date","Days Since","Owner"]:
+    ok("Action List has the worklist columns")
+else: bad(f"Action List headers: {alh}")
+mlkey=wb["Master List"].cell(3,38).value
+if isinstance(mlkey,str) and mlkey.startswith("=IF(AND($A3") and wb["Master List"].column_dimensions["AL"].hidden:
+    ok("Master List drives the Action List from a hidden ranking column")
+else: bad("Action List ranking key missing or visible")
+grp=wb["Run Clubs"].column_dimensions["V"].outlineLevel
+if grp and wb["Run Clubs"].column_dimensions["V"].hidden:
+    ok("type tabs collapse the activation columns that moved to the Activations tab")
+else: warn(f"type tab grouping: outline={grp}")
 
 print("\n================ QA SUMMARY ================")
 print(f"  FAILURES: {len(fails)}   NOTES: {len(warns)}")

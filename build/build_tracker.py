@@ -24,7 +24,7 @@ from openpyxl.chart.shapes import GraphicalProperties
 from openpyxl.chart.label import DataLabelList
 from openpyxl.worksheet.properties import PageSetupProperties
 
-OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v5.xlsx"
+OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v6.xlsx"
 
 # ---------- palette ----------
 C_TITLE   = "FF2E5A4E"   # dark green title bar + KPI numbers
@@ -387,6 +387,7 @@ def build_type_tab(tname):
     printsetup(ws)
     add_validations(ws)
     add_cond_formats(ws)
+    ws.column_dimensions.group('V','AB', hidden=True)
     return ws
 
 print("building type tabs...")
@@ -425,10 +426,12 @@ for t in TYPES:
             cell.font = font(); cell.border = BORD
             cell.alignment = A_CL if src in CENTERCOLS else A_L
             if src in SRCFMT: cell.number_format = SRCFMT[src]
+        ml.cell(mr,38, '=IF(AND($A{r}<>"",$F{r}<>"Lost",$F{r}<>"On Hold",$F{r}<>"Activated",$F{r}<>"Repeat Partner"),IF(ISNUMBER($T{r}),$T{r}+ROW()/1000000,90000+IF($E{r}="P1",1,IF($E{r}="P2",2,3))*10+ROW()/1000000),"")'.format(r=mr)).font=font(9,color="FFB7C9C1")
         mr += 1
 ML_ROWS_END = mr-1
 band(ml, 3, ML_ROWS_END, 1 + len(SRCCOLS))
 ml.freeze_panes = "C3"; ml.auto_filter.ref = "A2:{}{}".format(ML_LAST, ML_ROWS_END)
+ml.column_dimensions[get_column_letter(38)].hidden = True
 ml.sheet_properties.tabColor = "6FA392"; printsetup(ml)
 MLR = "'Master List'!"   # shorthand for formulas, ranges $3:$500
 
@@ -439,16 +442,16 @@ print("building activations...")
 act = wb.create_sheet("Activations")
 ACT_H = ["#","Date","Partner","Partnership Type","City","Owner","Status","Activation Type",
 "Assets Needed","Budget","Raspberry 4338 Cans","Lemon Lime 4336 Cans","Pineapple Passion Fruit 4340 Cans",
-"Total Cans","Notes"]
+"Total Cans","Cost Per Can","Notes"]
 ACT_LASTCOL = get_column_letter(len(ACT_H))   # O
 title_row(act, "Activations", ACT_LASTCOL)
 subtitle(act, 2, "Log each activation here, one row each. Pick from a menu or type your own. Click the Date filter to sort soonest first.")
-actw={1:5,2:13,3:30,4:20,5:14,6:14,7:14,8:18,9:26,10:12,11:13,12:13,13:20,14:12,15:60}
+actw={1:5,2:13,3:30,4:20,5:14,6:14,7:14,8:18,9:26,10:12,11:13,12:13,13:20,14:12,15:13,16:60}
 for c,htext in enumerate(ACT_H, start=1):
     hcell(act,2,c,htext); act.column_dimensions[get_column_letter(c)].width=actw[c]
 act.row_dimensions[2].height=50
 ACT_FIRST=3; ACT_LAST=62
-ACT_CENTER={1,2,5,6,7,8,10,11,12,13,14}
+ACT_CENTER={1,2,5,6,7,8,10,11,12,13,14,15}
 for i in range(ACT_LAST-ACT_FIRST+1):
     r=ACT_FIRST+i
     act.row_dimensions[r].height=20
@@ -457,9 +460,11 @@ for i in range(ACT_LAST-ACT_FIRST+1):
         cell.alignment=A_CL if c in ACT_CENTER else A_L
     act.cell(r,1, f'=IF($C{r}="","",ROW()-2)')                          # auto number
     act.cell(r,14, f'=IF(COUNT($K{r}:$M{r})=0,"",SUM($K{r}:$M{r}))')    # Total Cans
+    act.cell(r,15, f'=IF(OR($J{r}="",$N{r}="",$N{r}=0),"",$J{r}/$N{r})')   # Cost Per Can
     act.cell(r,2).number_format=FMT_DATE
     act.cell(r,10).number_format=FMT_MONEY
     for c in (11,12,13,14): act.cell(r,c).number_format=FMT_INT
+    act.cell(r,15).number_format=FMT_CENTS
 def actdv(name,col):
     dv=DataValidation(type="list",formula1=name,allow_blank=True,showErrorMessage=False)
     act.add_data_validation(dv); dv.add(f"{col}{ACT_FIRST}:{col}{ACT_LAST}")
@@ -473,6 +478,45 @@ acf(f"B{ACT_FIRST}:B{ACT_LAST}", FormulaRule(formula=[f'AND($B{ACT_FIRST}<>"",$B
 band(act, ACT_FIRST, ACT_LAST, len(ACT_H))
 act.freeze_panes="C3"; act.auto_filter.ref=f"A2:{ACT_LASTCOL}{ACT_LAST}"
 act.sheet_properties.tabColor="246B5A"; printsetup(act)
+
+# =====================================================================
+# ACTION LIST  (live worklist, most urgent first, from the Master List)
+# =====================================================================
+print("building action list...")
+al = wb.create_sheet("Action List")
+AL_H=["#","Partner","Type","Priority","Status","Next Action","Next Action Date","Days Since","Owner"]
+title_row(al,"Action List","I")
+subtitle(al,2,"Who to work next, most urgent first. Set a Next Action Date on a type tab and that partner jumps to the top. The P1 partners lead the rest.")
+alw={1:5,2:30,3:20,4:10,5:16,6:30,7:16,8:12,9:14}
+for c,htext in enumerate(AL_H,start=1):
+    hcell(al,2,c,htext); al.column_dimensions[get_column_letter(c)].width=alw[c]
+al.row_dimensions[2].height=50
+AL_FIRST=3; AL_LAST=82
+AL_CENTER={1,4,5,7,8,9}
+ALMAP={2:"B",3:"A",4:"E",5:"F",6:"S",7:"T",8:"R",9:"G"}   # Action List col -> Master List col
+for i in range(AL_LAST-AL_FIRST+1):
+    r=AL_FIRST+i
+    al.row_dimensions[r].height=18
+    al.cell(r,11,"=IFERROR(MATCH(SMALL({M}$AL$3:$AL$500,ROW()-2),{M}$AL$3:$AL$500,0),\"\")".format(M=MLR))
+    for c,col in ALMAP.items():
+        cell=al.cell(r,c,"=IFERROR(INDEX({M}${col}$3:${col}$500,$K{r}),\"\")".format(M=MLR,col=col,r=r))
+        cell.font=font(); cell.border=BORD
+        cell.alignment=A_CL if c in AL_CENTER else A_L
+    al.cell(r,1,'=IF($B{r}="","",ROW()-2)'.format(r=r))
+    al.cell(r,7).number_format=FMT_DATE
+    al.cell(r,8).number_format=FMT_INT
+    al.cell(r,11).font=font(9,color="FFB7C9C1")
+al.column_dimensions["K"].hidden=True
+al.freeze_panes="C3"; al.auto_filter.ref="A2:I{}".format(AL_LAST)
+al.sheet_properties.tabColor="3E7C68"; printsetup(al)
+alcf=al.conditional_formatting.add
+for val,clr in [("P1",F_P1),("P2",F_P2),("P3",F_P3)]:
+    alcf("D{}:D{}".format(AL_FIRST,AL_LAST), CellIsRule(operator="equal", formula=['"{}"'.format(val)], fill=fill(clr)))
+for val,clr in [("Activated",F_GREEN),("Repeat Partner",F_GREEN),("Agreed",F_AMBER),("Proposal Sent",F_AMBER),("In Conversation",F_AMBER),("Outreach Sent",F_PALEBLU),("Open",F_GREY),("Lost",F_RED),("On Hold",F_SLATE)]:
+    alcf("E{}:E{}".format(AL_FIRST,AL_LAST), CellIsRule(operator="equal", formula=['"{}"'.format(val)], fill=fill(clr)))
+alcf("G{}:G{}".format(AL_FIRST,AL_LAST), FormulaRule(formula=['AND($G{}<>"",$G{}<TODAY())'.format(AL_FIRST,AL_FIRST)], fill=fill(F_RED)))
+alcf("H{}:H{}".format(AL_FIRST,AL_LAST), FormulaRule(formula=['AND($D{}="P1",$H{}>7)'.format(AL_FIRST,AL_FIRST)], fill=fill(F_AMBER)))
+
 
 # =====================================================================
 # DASHBOARD
@@ -732,13 +776,14 @@ gline(r,"If it sells cans on a shelf, it goes in the BC Tracker. If it samples, 
 gline(r,"A partner can be in both files. The In BC Tracker column flags the ones that are."); r+=2
 gsec(r,"Working a partner"); r+=1
 gline(r,"Open a green type tab. Each tab is one kind of partner: run clubs, gyms, events, and so on."); r+=1
+gline(r,"A few detail columns are folded away under the plus sign above column V. Click it if you need cost, contra or deliverables."); r+=1
 gline(r,"Keep Status, Last Contacted, Next Action and Next Action Date current as you go."); r+=1
 gline(r,"Click a partner's Instagram or website link to open their page."); r+=1
 gline(r,"Nothing about activations is filled in for you. You decide what runs and when."); r+=2
 gsec(r,"Booking an activation"); r+=1
 gline(r,"Go to the Activations tab and add a row."); r+=1
 gline(r,"Pick the partner, date, status, assets and budget from the menus, or type your own value if it is not on the list."); r+=1
-gline(r,"Log cans used by flavour. Total Cans adds up on its own."); r+=1
+gline(r,"Log cans used by flavour. Total Cans and Cost Per Can fill in on their own."); r+=1
 gline(r,"The Dashboard, Budget and Type Summary all read from this tab."); r+=2
 gsec(r,"Reading the colours"); r+=1
 gline(r,"Green is done: Activated, Repeat Partner, Delivered."); r+=1
@@ -756,6 +801,7 @@ gline(r,"Raspberry is 4338. Lemon Lime is 4336. Pineapple Passion Fruit is 4340.
 gsec(r,"The tabs"); r+=1
 for lbl,desc in [
  ("Dashboard","The numbers and charts at a glance. Read only."),
+ ("Action List","Who to work next, most urgent first. Read only."),
  ("Activations","Where you log each activation. Cans, budget, status, assets, notes."),
  ("Master List","Every partner in one place. Read only, builds itself from the type tabs."),
  ("Type Summary","Targets against actuals per type. Targets are a draft to confirm."),
@@ -778,7 +824,7 @@ for _nm in ("Dashboard","Type Summary"):
     wb[_nm].protection.selectLockedCells = False
 _mp = wb["Master List"].protection
 _mp.sheet = True; _mp.autoFilter = False; _mp.sort = False; _mp.selectLockedCells = False
-order = ["Dashboard","Activations","Master List","Type Summary","Budget"] + TYPES + ["Suggested Events","Lookups","Sales Team","Guide"]
+order = ["Dashboard","Action List","Activations","Master List","Type Summary","Budget"] + TYPES + ["Suggested Events","Lookups","Sales Team","Guide"]
 wb._sheets.sort(key=lambda s: order.index(s.title))
 wb.active = 0
 try:
