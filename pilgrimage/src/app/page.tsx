@@ -12,6 +12,7 @@ import { todayISO } from '@/lib/storage';
 import { SacredArt } from '@/components/SacredArt';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { DailyReliquary } from '@/components/DailyReliquary';
+import { InstallPrompt } from '@/components/InstallPrompt';
 import { currentSeason } from '@/lib/liturgical';
 
 export default function TodayPage() {
@@ -80,6 +81,10 @@ export default function TodayPage() {
 
         <div className="mt-4">
           <DailyReliquary />
+        </div>
+
+        <div className="mt-4">
+          <InstallPrompt />
         </div>
       </div>
 

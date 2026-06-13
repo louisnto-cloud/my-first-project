@@ -119,6 +119,14 @@ export const UI = {
   reliquaryHint: v('Something small waits inside.', 'Một điều nhỏ bé đang đợi bên trong.'),
   reliquaryOpened: v('Opened today. Another gift tomorrow.', 'Đã mở hôm nay. Ngày mai sẽ có món quà khác.'),
 
+  // Install to home screen
+  installTitle: v('Keep it on your home screen', 'Lưu vào màn hình chính'),
+  installBody: v('Install The Pilgrimage like an app — full screen, and it works offline.', 'Cài Hành Hương như một ứng dụng — toàn màn hình, và dùng được khi không có mạng.'),
+  installButton: v('Install', 'Cài đặt'),
+  installHow: v('How to add it', 'Cách thêm vào'),
+  installLater: v('Later', 'Để sau'),
+  installIosHint: v('Tap the Share button at the bottom of the screen, then choose “Add to Home Screen.”', 'Chạm nút Chia sẻ ở cuối màn hình, rồi chọn “Thêm vào MH chính.”'),
+
   // Rose Window
   roseWindow: v('The Rose Window', 'Cửa sổ hoa hồng'),
 
