@@ -100,23 +100,43 @@ def rep_week_col(i):
 # ---------------------------------------------------------------------------
 # Styles
 # ---------------------------------------------------------------------------
-HEADER_FONT = Font(bold=True, color="FFFFFF")
-HEADER_FILL = PatternFill("solid", fgColor="1F4E79")  # navy
-SUBHEADER_FONT = Font(bold=True, color="1F4E79")
-SUBHEADER_FILL = PatternFill("solid", fgColor="D9E1F2")
-SECTION_FONT = Font(bold=True, size=12, color="1F4E79")
-TITLE_FONT = Font(bold=True, size=16, color="1F4E79")
-INPUT_FONT = Font(color="1F4E79")
-CALC_FONT = Font(color="000000")
-LINK_FONT = Font(color="00703C")
-WARN_FONT = Font(color="C00000", bold=True)
+# Apple-inspired palette: restrained, white, one accent.
+APPLE_INK    = "1D1D1F"  # primary text
+APPLE_GREY   = "6E6E73"  # secondary text
+APPLE_SUBTLE = "F5F5F7"  # background tint
+APPLE_BLUE   = "0071E3"  # accent
+APPLE_GREEN  = "34C759"
+APPLE_ORANGE = "FF9500"
+APPLE_RED    = "FF3B30"
+
+HEADER_FONT = Font(name="Helvetica", bold=True, color="FFFFFF", size=11)
+HEADER_FILL = PatternFill("solid", fgColor=APPLE_INK)
+SUBHEADER_FONT = Font(name="Helvetica", bold=True, color=APPLE_INK, size=11)
+SUBHEADER_FILL = PatternFill("solid", fgColor=APPLE_SUBTLE)
+SECTION_FONT = Font(name="Helvetica", bold=True, size=13, color=APPLE_INK)
+TITLE_FONT = Font(name="Helvetica", bold=True, size=22, color=APPLE_INK)
+HERO_FONT = Font(name="Helvetica", bold=True, size=36, color=APPLE_INK)
+HERO_LABEL_FONT = Font(name="Helvetica", size=11, color=APPLE_GREY)
+BODY_FONT = Font(name="Helvetica", size=11, color=APPLE_INK)
+MUTED_FONT = Font(name="Helvetica", size=10, color=APPLE_GREY)
+INPUT_FONT = Font(name="Helvetica", color=APPLE_BLUE, size=11)
+CALC_FONT = Font(name="Helvetica", color=APPLE_INK, size=11)
+LINK_FONT = Font(name="Helvetica", color=APPLE_GREEN, size=11)
+WARN_FONT = Font(name="Helvetica", color=APPLE_RED, bold=True, size=11)
 YELLOW_FILL = PatternFill("solid", fgColor="FFF2CC")
-GREEN_FILL = PatternFill("solid", fgColor="E2EFDA")
-RED_FILL = PatternFill("solid", fgColor="FCE4D6")
-SUBTOTAL_FILL = PatternFill("solid", fgColor="E7E6E6")
+GREEN_FILL = PatternFill("solid", fgColor="D1F2D1")
+RED_FILL = PatternFill("solid", fgColor="FFD6D6")
+SUBTOTAL_FILL = PatternFill("solid", fgColor=APPLE_SUBTLE)
 MONTHLY_FILL = PatternFill("solid", fgColor="FFF8E5")
-THIN = Side(border_style="thin", color="BFBFBF")
+THIN = Side(border_style="thin", color="D2D2D7")
 BOX_BORDER = Border(left=THIN, right=THIN, top=THIN, bottom=THIN)
+
+# Tab color hierarchy: front (blue), inputs (orange), governance (grey), engine (light grey)
+TAB_FRONT      = APPLE_BLUE
+TAB_REPORT     = "1D1D1F"
+TAB_INPUT      = "FF9500"
+TAB_GOVERNANCE = "6E6E73"
+TAB_ENGINE     = "C7C7CC"
 
 
 def style_header_row(ws, row, last_col):
@@ -1609,6 +1629,183 @@ def build_glossary(ws):
     setup_print(ws, landscape=False)
 
 
+def build_home(ws, prod_refs, rev_refs, trade_refs, opex_refs, doors_total_row):
+    """The single tab anyone needs to open. Big numbers, clean type, calm layout."""
+    ws.title = "Home"
+    ws.sheet_properties.tabColor = TAB_FRONT
+    # Hide gridlines for the Apple look
+    ws.sheet_view.showGridLines = False
+
+    fy_col_rev = get_column_letter(rev_refs["fy_col"])
+    fy_col_prod = get_column_letter(prod_refs["fy_col"])
+
+    # Generous gutter
+    ws.column_dimensions["A"].width = 3
+    for col in "BCDE":
+        ws.column_dimensions[col].width = 22
+    ws.column_dimensions["F"].width = 3
+
+    # Brand wordmark line
+    c = ws.cell(row=2, column=2, value="ORGANIKA RTD")
+    c.font = Font(name="Helvetica", bold=True, size=11, color=APPLE_GREY)
+    c2 = ws.cell(row=3, column=2, value="FY26-27 Forecast")
+    c2.font = TITLE_FONT
+    c3 = ws.cell(row=4, column=2,
+                 value="September 1, 2026 - August 31, 2027 . Base scenario . CAD")
+    c3.font = MUTED_FONT
+
+    # Hero KPI strip (4 big numbers across)
+    hero_row = 7
+    hero_label_row = hero_row - 1
+    heroes = [
+        ("REVENUE",        f"=Revenue!{fy_col_rev}{rev_refs['rev_total_row']}",  "$#,##0",  "Annual sales revenue"),
+        ("GROSS PROFIT",   f"=Revenue!{fy_col_rev}{rev_refs['gp_total_row']}",   "$#,##0",  "After landed cost"),
+        ("EBITDA",         (f"=Revenue!{fy_col_rev}{rev_refs['gp_total_row']}-'Trade Spend'!H{trade_refs['total_row']}"
+                            f"-(SUMIFS(OPEX!B{opex_refs['rows_first']}:B{opex_refs['rows_last']},OPEX!C{opex_refs['rows_first']}:C{opex_refs['rows_last']},\"A&P\")"
+                            f"+SUMIFS(OPEX!B{opex_refs['rows_first']}:B{opex_refs['rows_last']},OPEX!C{opex_refs['rows_first']}:C{opex_refs['rows_last']},\"SG&A\")"
+                            f"+SUMIFS(OPEX!B{opex_refs['rows_first']}:B{opex_refs['rows_last']},OPEX!C{opex_refs['rows_first']}:C{opex_refs['rows_last']},\"Logistics\")"
+                            f"+SUMIFS(OPEX!B{opex_refs['rows_first']}:B{opex_refs['rows_last']},OPEX!C{opex_refs['rows_first']}:C{opex_refs['rows_last']},\"G&A\"))"),
+                                                                                  "$#,##0",  "Pre-tax operating income"),
+        ("CASES TO PRODUCE", f"='Production Plan'!{fy_col_prod}{prod_refs['buf_row']}", "#,##0", "With 10% buffer"),
+    ]
+    for i, (lbl, fml, fmt, sub) in enumerate(heroes):
+        col = 2 + i
+        lab = ws.cell(row=hero_label_row, column=col, value=lbl)
+        lab.font = HERO_LABEL_FONT
+        lab.alignment = Alignment(horizontal="left", vertical="center")
+        val = ws.cell(row=hero_row, column=col, value=fml)
+        val.font = HERO_FONT
+        val.number_format = fmt
+        val.alignment = Alignment(horizontal="left", vertical="center")
+        sm = ws.cell(row=hero_row + 1, column=col, value=sub)
+        sm.font = MUTED_FONT
+    ws.row_dimensions[hero_row].height = 48
+
+    # Thin divider
+    div_row = hero_row + 3
+    for col in range(2, 6):
+        cell = ws.cell(row=div_row, column=col, value="")
+        cell.border = Border(top=Side(border_style="thin", color="D2D2D7"))
+
+    # The story (3 columns)
+    story_row = div_row + 2
+    ws.cell(row=story_row, column=2, value="THE STORY").font = HERO_LABEL_FONT
+    ws.cell(row=story_row + 1, column=2,
+            value="Year 1 of a 9-channel national footprint. Ramp from ~360 doors at W1 to ~3,000 at W52. "
+                  "EBITDA is negative this year because of one-time listing + slotting fees and full-scale OPEX. "
+                  "Path to positive in FY27-28 by amortising slotting, scaling revenue, and holding OPEX flat.").font = BODY_FONT
+    ws.row_dimensions[story_row + 1].height = 80
+    ws.merge_cells(start_row=story_row + 1, start_column=2, end_row=story_row + 1, end_column=5)
+    ws.cell(row=story_row + 1, column=2).alignment = Alignment(horizontal="left", vertical="top", wrap_text=True)
+
+    # Quick stats grid (2x4)
+    stats_row = story_row + 4
+    ws.cell(row=stats_row, column=2, value="AT A GLANCE").font = HERO_LABEL_FONT
+    quick = [
+        ("Gross profit margin",       f"=Revenue!{fy_col_rev}{rev_refs['gp_total_row']}/Revenue!{fy_col_rev}{rev_refs['rev_total_row']}", "0.0%"),
+        ("Sales cases (year)",        f"='Production Plan'!{fy_col_prod}{prod_refs['total_sales_row']}",                                   "#,##0"),
+        ("Active doors at year-end",  f"=Doors!{doors_week_col(N_WEEKS)}{doors_total_row}",                                                "#,##0"),
+        ("Revenue per door",          f"=Revenue!{fy_col_rev}{rev_refs['rev_total_row']}/Doors!{doors_week_col(N_WEEKS)}{doors_total_row}", "$#,##0"),
+        ("New-channel revenue share", ("=("
+                                       "SUMIFS('Forecast Weekly'!$BF:$BF,'Forecast Weekly'!$C:$C,\"On-Premise\")+"
+                                       "SUMIFS('Forecast Weekly'!$BF:$BF,'Forecast Weekly'!$C:$C,\"Convenience\")+"
+                                       "SUMIFS('Forecast Weekly'!$BF:$BF,'Forecast Weekly'!$C:$C,\"Gym & Fitness\")+"
+                                       "SUMIFS('Forecast Weekly'!$BF:$BF,'Forecast Weekly'!$C:$C,\"Private Liquor\")+"
+                                       "SUMIFS('Forecast Weekly'!$BF:$BF,'Forecast Weekly'!$C:$C,\"RAS\")"
+                                       f")/Revenue!{fy_col_rev}{rev_refs['rev_total_row']}"), "0.0%"),
+        ("Trade spend % of revenue",  f"='Trade Spend'!H{trade_refs['total_row']}/Revenue!{fy_col_rev}{rev_refs['rev_total_row']}",         "0.0%"),
+        ("Scenario multiplier",       "=Assumptions!B6", "0.00"),
+        ("Production buffer",         "=Assumptions!B5", "0%"),
+    ]
+    for i, (lbl, fml, fmt) in enumerate(quick):
+        r = stats_row + 2 + (i // 2) * 2
+        c = 2 + (i % 2) * 2
+        lab = ws.cell(row=r, column=c, value=lbl)
+        lab.font = MUTED_FONT
+        val = ws.cell(row=r + 1, column=c, value=fml)
+        val.font = Font(name="Helvetica", bold=True, size=18, color=APPLE_INK)
+        val.number_format = fmt
+
+    # Where to go next
+    nav_row = stats_row + 2 + 4 * 2 + 1
+    ws.cell(row=nav_row, column=2, value="WHERE TO GO NEXT").font = HERO_LABEL_FONT
+    nav = [
+        ("Adjust the model", "Control Panel - the 5 inputs that matter most"),
+        ("Read the full P&L", "P&L"),
+        ("Compare scenarios", "Scenarios - Conservative / Base / Stretch side-by-side"),
+        ("Drill into details", "Dashboard - monthly + quarterly roll-ups, by SKU / channel / province"),
+        ("Validate assumptions", "Assumption Register - 30 owned assumptions"),
+        ("Review risks", "Risk Register - 12 risks scored by likelihood x impact"),
+    ]
+    for i, (action, where) in enumerate(nav, start=nav_row + 2):
+        ws.cell(row=i, column=2, value=action).font = Font(name="Helvetica", bold=True, size=11, color=APPLE_INK)
+        ws.cell(row=i, column=3, value=where).font = MUTED_FONT
+        ws.merge_cells(start_row=i, start_column=3, end_row=i, end_column=5)
+
+    # Footer
+    footer = nav_row + 2 + len(nav) + 2
+    ws.cell(row=footer, column=2,
+            value="Owner: Louis . RTD lead, Organika . Source of truth. Supersedes scratch models.").font = MUTED_FONT
+    ws.merge_cells(start_row=footer, start_column=2, end_row=footer, end_column=5)
+
+    setup_print(ws, landscape=False, header_rows=0)
+
+
+def build_control_panel(ws):
+    """One tab with the five inputs that drive the entire model."""
+    ws.title = "Control Panel"
+    ws.sheet_properties.tabColor = TAB_FRONT
+    ws.sheet_view.showGridLines = False
+
+    ws.column_dimensions["A"].width = 3
+    ws.column_dimensions["B"].width = 32
+    ws.column_dimensions["C"].width = 18
+    ws.column_dimensions["D"].width = 60
+
+    ws.cell(row=2, column=2, value="CONTROL PANEL").font = Font(name="Helvetica", bold=True, size=11, color=APPLE_GREY)
+    ws.cell(row=3, column=2, value="Five knobs").font = TITLE_FONT
+    ws.cell(row=4, column=2,
+            value="Edit only these five cells. Everything downstream recalculates automatically.").font = MUTED_FONT
+
+    # Headers
+    ws.cell(row=6, column=2, value="INPUT").font = HERO_LABEL_FONT
+    ws.cell(row=6, column=3, value="VALUE").font = HERO_LABEL_FONT
+    ws.cell(row=6, column=4, value="WHAT IT DOES").font = HERO_LABEL_FONT
+
+    # 5 knobs - all of them already live elsewhere; we just mirror them with links so editing here updates source
+    knobs = [
+        # (label, source_cell_ref, format, description, default)
+        ("Scenario multiplier",   "=Assumptions!B6",  "0.00", "0.85 conservative, 1.00 base, 1.15 stretch. Scales sales cases."),
+        ("Production buffer",     "=Assumptions!B5",  "0%",   "Extra cushion on production. Industry norm 10-15%."),
+        ("Units per case",        "=Assumptions!B4",  "#,##0","Fixed at 24 cans. Do not change unless re-packaging."),
+        ("MUV net case price",    "=Pricing!B6",      "$#,##0.00", "Revenue per case for all three MUV SKUs."),
+        ("LCA net case price",    "=Pricing!B9",      "$#,##0.00", "Revenue per case for LCA Energy."),
+    ]
+    for i, (lbl, src, fmt, desc) in enumerate(knobs, start=8):
+        ws.cell(row=i, column=2, value=lbl).font = Font(name="Helvetica", bold=True, size=12, color=APPLE_INK)
+        c = ws.cell(row=i, column=3, value=src)
+        c.font = Font(name="Helvetica", bold=True, size=14, color=APPLE_BLUE)
+        c.number_format = fmt
+        ws.cell(row=i, column=4, value=desc).font = MUTED_FONT
+        ws.row_dimensions[i].height = 28
+
+    # Pointer to the inputs
+    ws.cell(row=15, column=2, value="DEEPER INPUTS").font = HERO_LABEL_FONT
+    deeper = [
+        ("Door plan",          "Doors - 12 monthly inputs per row drive 52 weekly outputs"),
+        ("Velocity per SKU",   "Velocity - units per door per week, by class A/B/C"),
+        ("Class mix",          "Class Mix - % of doors in each class, per channel"),
+        ("Trade spend",        "Trade Spend - listing, slotting, scan/promo by channel"),
+        ("OPEX",               "OPEX - sales reps, A&P, freight, G&A"),
+        ("Marketing cases",    "Marketing and Sampling - account sampling, events, rep samples"),
+    ]
+    for i, (lbl, where) in enumerate(deeper, start=17):
+        ws.cell(row=i, column=2, value=lbl).font = Font(name="Helvetica", bold=True, size=11, color=APPLE_INK)
+        ws.cell(row=i, column=4, value=where).font = MUTED_FONT
+
+    setup_print(ws, landscape=False, header_rows=0)
+
+
 def build_exec_summary(ws, prod_refs, rev_refs, trade_refs, opex_refs, doors_total_row):
     """One-page executive summary - the only tab a board member needs to read."""
     ws.title = "Exec Summary"
@@ -1856,7 +2053,8 @@ def main():
     readme_ws = wb.active
     build_readme(readme_ws)
 
-    exec_ws = wb.create_sheet("Exec Summary")
+    home_ws = wb.create_sheet("Home")
+    control_ws = wb.create_sheet("Control Panel")
     dashboard_ws = wb.create_sheet("Dashboard")
     pl_ws = wb.create_sheet("P&L")
     scenarios_ws = wb.create_sheet("Scenarios")
@@ -1877,14 +2075,34 @@ def main():
     build_pl(pl_ws, rev_refs, trade_refs, opex_refs)
     build_scenarios(scenarios_ws, rev_refs, trade_refs, opex_refs, prod_refs)
     build_kpis(kpis_ws, rev_refs, prod_refs, doors_total_row)
-    build_exec_summary(exec_ws, prod_refs, rev_refs, trade_refs, opex_refs, doors_total_row)
+    build_home(home_ws, prod_refs, rev_refs, trade_refs, opex_refs, doors_total_row)
+    build_control_panel(control_ws)
     build_dashboard(dashboard_ws, prod_refs, rev_refs, doors_total_row, forecast_total_row)
+
+    # Apply tab colors for visual hierarchy
+    home_ws.sheet_properties.tabColor = TAB_FRONT
+    control_ws.sheet_properties.tabColor = TAB_FRONT
+    for sheet_name in ("Dashboard", "P&L", "Scenarios", "KPIs"):
+        wb[sheet_name].sheet_properties.tabColor = TAB_REPORT
+    for sheet_name in ("Assumptions", "Class Mix", "Velocity", "Doors", "Pricing",
+                        "Trade Spend", "OPEX", "Marketing and Sampling"):
+        wb[sheet_name].sheet_properties.tabColor = TAB_INPUT
+    # README always first
+    readme_ws.sheet_properties.tabColor = TAB_FRONT
 
     ar_ws = wb.create_sheet("Assumption Register"); build_assumption_register(ar_ws)
     rr_ws = wb.create_sheet("Risk Register"); build_risk_register(rr_ws)
     cl_ws = wb.create_sheet("Change Log"); build_change_log(cl_ws)
     gl_ws = wb.create_sheet("Glossary"); build_glossary(gl_ws)
     vl_ws = wb.create_sheet("Validation Lists"); build_validation_lists(vl_ws)
+
+    for s in (ar_ws, rr_ws, cl_ws, gl_ws):
+        s.sheet_properties.tabColor = TAB_GOVERNANCE
+    for s in (wb["Forecast Weekly"], wb["Production Plan"], wb["Revenue"], vl_ws):
+        s.sheet_properties.tabColor = TAB_ENGINE
+
+    # Active sheet defaults to Home so it's the first thing the user sees
+    wb.active = wb.sheetnames.index("Home")
 
     # Named ranges for the validation dropdowns - on Validation Lists tab
     # CHANNELS = A6:A14, PROVINCES = C6:C15, SKUS = E6:E9, BRANDS = G6:G7
