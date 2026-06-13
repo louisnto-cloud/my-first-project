@@ -3,85 +3,141 @@
 @tailwind utilities;
 
 :root {
-  --brand: #7c3aed;
-  --brand-2: #d946ef;
-  --sun: #ffe11a;
+  --ink: #1b1830;
+  --muted: #6b6880;
+  --line: rgba(27, 24, 48, 0.07);
 }
 
-html {
+* {
   -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  @apply bg-violet-50 text-slate-800 font-sans antialiased;
-  background-image: radial-gradient(at 0% 0%, rgba(217, 70, 239, 0.06) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(124, 58, 237, 0.07) 0px, transparent 50%);
+  @apply text-ink antialiased;
+  font-feature-settings: 'ss01', 'cv01';
+  color: var(--ink);
+  background-color: #f6f5fb;
+  /* soft, layered ambient light — not a flat block of colour */
+  background-image:
+    radial-gradient(900px 500px at 100% -10%, rgba(181, 111, 226, 0.10), transparent 60%),
+    radial-gradient(800px 500px at -10% 0%, rgba(106, 81, 223, 0.10), transparent 55%),
+    radial-gradient(700px 600px at 50% 120%, rgba(255, 184, 0, 0.06), transparent 60%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
 }
 
 @layer components {
   .card {
-    @apply bg-white rounded-3xl border border-violet-100/80 p-4 shadow-[0_4px_24px_-8px_rgba(124,58,237,0.18)];
+    @apply rounded-3xl border bg-white/90 p-5 backdrop-blur-sm;
+    border-color: var(--line);
+    box-shadow: 0 1px 0 rgba(27, 24, 48, 0.02), 0 12px 30px -18px rgba(27, 24, 48, 0.22);
+  }
+
+  .surface {
+    @apply rounded-2xl border bg-white;
+    border-color: var(--line);
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 font-bold transition-all duration-150 active:scale-[0.97] disabled:opacity-40 disabled:active:scale-100;
+    @apply inline-flex select-none items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-[15px] font-bold transition-all duration-200 ease-out active:scale-[0.97] disabled:pointer-events-none disabled:opacity-40;
   }
 
   .btn-primary {
-    @apply btn text-white shadow-lg shadow-violet-300/50;
-    background-image: linear-gradient(135deg, #7c3aed, #a855f7);
+    @apply btn text-white;
+    background: linear-gradient(135deg, #7a5fe6 0%, #6a51df 55%, #5a41c4 100%);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 8px 20px -8px rgba(106, 81, 223, 0.6);
   }
   .btn-primary:hover {
-    background-image: linear-gradient(135deg, #6d28d9, #9333ea);
+    filter: brightness(1.05);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 12px 26px -8px rgba(106, 81, 223, 0.7);
   }
 
   .btn-soft {
-    @apply btn bg-violet-100 text-violet-700 hover:bg-violet-200;
+    @apply btn bg-violet-100/70 text-violet-700 hover:bg-violet-100;
+  }
+
+  .btn-ghost {
+    @apply btn text-violet-600 hover:bg-violet-50;
   }
 
   .input {
-    @apply w-full rounded-2xl border-2 border-violet-100 bg-white px-4 py-2.5 outline-none transition focus:border-violet-400 focus:ring-4 focus:ring-violet-100;
+    @apply w-full rounded-2xl border bg-white px-4 py-3 text-[15px] outline-none transition placeholder:text-slate-300;
+    border-color: var(--line);
   }
-
-  .kiosk-btn {
-    @apply rounded-3xl p-6 text-xl font-black shadow-md transition-all active:scale-95;
+  .input:focus {
+    @apply border-violet-400;
+    box-shadow: 0 0 0 4px rgba(106, 81, 223, 0.12);
   }
 
   .chip {
-    @apply inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-extrabold;
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold;
+  }
+
+  .kiosk-btn {
+    @apply rounded-3xl p-6 text-xl font-extrabold shadow-soft transition-all active:scale-95;
+  }
+
+  /* a refined segmented control */
+  .seg {
+    @apply flex rounded-2xl border bg-white p-1;
+    border-color: var(--line);
+  }
+  .seg > button {
+    @apply flex-1 rounded-xl px-3 py-2 text-sm font-bold text-slate-400 transition-all;
+  }
+  .seg > button[data-active='true'] {
+    @apply bg-violet-600 text-white shadow-soft;
   }
 }
 
+/* ---------- motion ---------- */
 @keyframes pop {
   0% { transform: scale(0.7); opacity: 0; }
-  70% { transform: scale(1.06); }
+  70% { transform: scale(1.04); }
   100% { transform: scale(1); opacity: 1; }
 }
-.animate-pop { animation: pop 0.32s cubic-bezier(0.2, 0.9, 0.3, 1.2); }
+.animate-pop { animation: pop 0.34s cubic-bezier(0.2, 0.9, 0.3, 1.25) both; }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-rise { animation: rise 0.45s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* staggered list reveal */
+.stagger > * { animation: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.stagger > *:nth-child(1) { animation-delay: 0.02s; }
+.stagger > *:nth-child(2) { animation-delay: 0.07s; }
+.stagger > *:nth-child(3) { animation-delay: 0.12s; }
+.stagger > *:nth-child(4) { animation-delay: 0.17s; }
+.stagger > *:nth-child(5) { animation-delay: 0.22s; }
+.stagger > *:nth-child(6) { animation-delay: 0.27s; }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-7px); }
 }
-.animate-float { animation: float 4s ease-in-out infinite; }
-
-@keyframes rise {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-rise { animation: rise 0.4s ease-out both; }
+.animate-float { animation: float 5s ease-in-out infinite; }
 
 @keyframes fall {
-  to { transform: translateY(420px) rotate(540deg); opacity: 0; }
+  to { transform: translateY(440px) rotate(560deg); opacity: 0; }
 }
-
 @keyframes ring {
   to { stroke-dashoffset: var(--target); }
 }
-
-@keyframes shake {
-  10%, 90% { transform: translateX(-1px); }
-  30%, 70% { transform: translateX(3px); }
-  50% { transform: translateX(-3px); }
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
 }
-.animate-shake { animation: shake 0.4s ease; }
+.skeleton {
+  @apply relative overflow-hidden rounded-2xl bg-violet-100/50;
+}
+.skeleton::after {
+  content: '';
+  @apply absolute inset-0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 1.4s infinite;
+}

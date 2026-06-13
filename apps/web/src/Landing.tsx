@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { api, ApiError, isDemo, setToken } from './api';
-
-// The public face of E'TOP: logo, cartoon scene, code login, center info,
-// expandable sections — fully bilingual with a VI/EN toggle.
+import { Icon, type IconName } from './Icon';
 
 // TODO(owner): placeholder emails — swap for the center's real addresses.
 const CENTER_EMAIL = 'lienhe.etop@gmail.com';
@@ -12,99 +10,54 @@ const FACEBOOK_URL = 'https://www.facebook.com/ETOP.EnglishCenter.BinhThuan/';
 type Lang = 'vi' | 'en';
 
 const STR: Record<string, { vi: string; en: string }> = {
-  center: { vi: 'Trung tâm Anh Ngữ E’TOP', en: 'E’TOP English Center' },
-  tabStudent: { vi: '🧒 Học viên', en: '🧒 Student' },
-  tabTeacher: { vi: '👩‍🏫 Giáo viên', en: '👩‍🏫 Teacher' },
-  tabStaff: { vi: '👪 Phụ huynh & QL', en: '👪 Parents & Admin' },
+  tagline: { vi: 'Học vui · Tiến bộ · Dẫn đầu', en: 'Learn · Achieve · Lead' },
+  welcome: { vi: 'Chào mừng trở lại', en: 'Welcome back' },
+  sub: { vi: 'Đăng nhập để vào lớp của bạn', en: 'Sign in to enter your class' },
+  tabStudent: { vi: 'Học viên', en: 'Student' },
+  tabTeacher: { vi: 'Giáo viên', en: 'Teacher' },
+  tabStaff: { vi: 'Phụ huynh', en: 'Parent' },
   codeStudent: { vi: 'Mã số học viên', en: 'Student code' },
   codeTeacher: { vi: 'Mã số giáo viên', en: 'Teacher code' },
-  enter: { vi: 'Vào lớp 🚀', en: 'Enter class 🚀' },
+  enter: { vi: 'Vào lớp', en: 'Enter class' },
   signin: { vi: 'Đăng nhập', en: 'Sign in' },
   email: { vi: 'Email', en: 'Email' },
   password: { vi: 'Mật khẩu', en: 'Password' },
-  hintStudent: { vi: 'Chỉ cần mã số — không cần email hay mật khẩu. Quên mã? Hỏi cô giáo nhé!', en: 'Just your code — no email or password. Forgot it? Ask your teacher!' },
-  hintTeacher: { vi: 'Nhận mã từ quản lý trung tâm.', en: 'Get your code from the center manager.' },
-  wrongCode: { vi: 'Mã số / thông tin không đúng. Vui lòng kiểm tra lại.', en: 'Incorrect code or details. Please check and try again.' },
-  noServer: { vi: 'Chưa kết nối máy chủ — đây là bản xem trước giao diện. Đăng nhập sẽ hoạt động khi hệ thống được đưa lên hosting.', en: 'Server not connected — this is a visual preview. Login will work once the system is hosted.' },
-  address1: { vi: '📍 166 Nguyễn Hội, P. Phú Trinh, TP. Phan Thiết', en: '📍 166 Nguyen Hoi St., Phu Trinh Ward, Phan Thiet City' },
-  address2: { vi: '📍 Cơ sở 2: Tôn Thất Thiệp, TP. Phan Thiết', en: '📍 Campus 2: Ton That Thiep St., Phan Thiet City' },
-  fb: { vi: 'Facebook: Trung Tâm Anh Ngữ E’TOP', en: 'Facebook: E’TOP English Center' },
-  aboutTitle: { vi: 'Tìm hiểu thêm về trung tâm', en: 'About the center' },
+  hintStudent: { vi: 'Chỉ cần mã số — không cần email hay mật khẩu.', en: 'Just your code — no email or password.' },
+  hintTeacher: { vi: 'Nhận mã từ quản lý trung tâm.', en: 'Get your code from the center.' },
+  wrongCode: { vi: 'Mã số / thông tin không đúng.', en: 'Incorrect code or details.' },
+  noServer: { vi: 'Đây là bản xem trước. Đăng nhập sẽ hoạt động khi đưa lên hosting.', en: 'Preview only. Login works once hosted.' },
+  tryNow: { vi: 'Trải nghiệm thử ngay', en: 'Try it instantly' },
+  about: { vi: 'Về trung tâm', en: 'About' },
+  jobs: { vi: 'Tuyển dụng', en: 'Careers' },
+  feedback: { vi: 'Góp ý', en: 'Feedback' },
   aboutBody: {
-    vi: 'Với gần 25 năm kinh nghiệm giảng dạy tiếng Anh tại Phan Thiết, E’TOP đồng hành cùng học viên từ 5–15 tuổi (và cả người lớn) qua các cấp độ Starters, Movers, Flyers đến B1 — chú trọng đủ 4 kỹ năng Nghe, Nói, Đọc, Viết. Phương châm của chúng tôi: Learn – Achieve – Lead.',
-    en: 'With nearly 25 years of English teaching experience in Phan Thiet, E’TOP guides learners aged 5–15 (and adults) through Starters, Movers, Flyers and B1 — building all four skills: Listening, Speaking, Reading, Writing. Our motto: Learn – Achieve – Lead.',
+    vi: 'Gần 25 năm giảng dạy tiếng Anh tại Phan Thiết, đồng hành cùng học viên 5–15 tuổi qua các cấp Starters, Movers, Flyers đến B1 — vững cả 4 kỹ năng Nghe, Nói, Đọc, Viết.',
+    en: 'Nearly 25 years of English teaching in Phan Thiet, guiding learners 5–15 through Starters, Movers, Flyers to B1 — all four skills.',
   },
-  jobsTitle: { vi: 'Việc làm tại E’TOP', en: 'Careers at E’TOP' },
-  jobsBody: {
-    vi: 'E’TOP luôn chào đón giáo viên và trợ giảng yêu trẻ, đam mê tiếng Anh. Gửi hồ sơ (CV) về email:',
-    en: 'E’TOP welcomes teachers and assistants who love children and English. Send your CV to:',
-  },
-  jobsCall: { vi: 'hoặc gọi hotline', en: 'or call our hotline' },
-  fbTitle: { vi: 'Đóng góp ý kiến', en: 'Feedback' },
-  fbBody: {
-    vi: 'Trung tâm rất mong nhận góp ý của phụ huynh và học viên! Mọi ý kiến đều được ghi nhận và phản hồi.',
-    en: 'We warmly welcome feedback from parents and students! Every message is recorded and answered.',
-  },
-  fbEmail: { vi: 'Gửi email góp ý:', en: 'Email your feedback:' },
-  fbMsg: { vi: 'Hoặc nhắn tin qua Facebook:', en: 'Or message us on Facebook:' },
-  fbParent: { vi: 'Phụ huynh cũng có thể đăng nhập để nhắn tin trực tiếp với giáo viên.', en: 'Parents can also sign in to message the teacher directly.' },
+  jobsBody: { vi: 'E’TOP chào đón giáo viên & trợ giảng yêu trẻ. Gửi hồ sơ về:', en: 'We welcome teachers who love children. Send your CV to:' },
+  feedbackBody: { vi: 'Mọi góp ý của phụ huynh & học viên đều được lắng nghe. Liên hệ:', en: 'We value your feedback. Reach us at:' },
 };
 
-function CartoonScene() {
+function MeshHero() {
   return (
-    <svg viewBox="0 0 800 360" className="pointer-events-none absolute inset-x-0 bottom-0 w-full" preserveAspectRatio="xMidYMax slice" aria-hidden>
-      <circle cx="700" cy="60" r="38" fill="#FDE047" />
-      <circle cx="700" cy="60" r="50" fill="#FDE047" opacity="0.3" />
-      <g fill="#ffffff" opacity="0.9">
-        <ellipse cx="140" cy="70" rx="46" ry="18" />
-        <ellipse cx="180" cy="60" rx="36" ry="16" />
-        <ellipse cx="520" cy="50" rx="40" ry="15" />
-      </g>
-      <ellipse cx="180" cy="400" rx="380" ry="120" fill="#86EFAC" />
-      <ellipse cx="650" cy="420" rx="420" ry="140" fill="#4ADE80" />
-      <g>
-        <rect x="60" y="210" width="120" height="80" rx="8" fill="#FEF3C7" stroke="#F59E0B" strokeWidth="4" />
-        <polygon points="50,215 120,165 190,215" fill="#F87171" />
-        <rect x="105" y="250" width="30" height="40" rx="4" fill="#A78BFA" />
-        <text x="120" y="240" textAnchor="middle" fontSize="16" fontWeight="900" fill="#7C3AED">ABC</text>
-      </g>
-      <g>
-        <path d="M560 130 L590 160 L560 190 L530 160 Z" fill="#F472B6" stroke="#fff" strokeWidth="3" />
-        <path d="M560 190 Q540 230 510 260" stroke="#94A3B8" strokeWidth="2.5" fill="none" />
-        <circle cx="505" cy="272" r="14" fill="#FCD34D" />
-        <rect x="495" y="284" width="20" height="26" rx="8" fill="#60A5FA" />
-        <line x1="498" y1="312" x2="492" y2="330" stroke="#1E293B" strokeWidth="4" strokeLinecap="round" />
-        <line x1="512" y1="312" x2="518" y2="330" stroke="#1E293B" strokeWidth="4" strokeLinecap="round" />
-      </g>
-      <g>
-        <circle cx="300" cy="270" r="14" fill="#FCA5A5" />
-        <rect x="290" y="282" width="20" height="26" rx="8" fill="#34D399" />
-        <line x1="293" y1="310" x2="287" y2="330" stroke="#1E293B" strokeWidth="4" strokeLinecap="round" />
-        <line x1="307" y1="310" x2="313" y2="330" stroke="#1E293B" strokeWidth="4" strokeLinecap="round" />
-        <circle cx="365" cy="268" r="14" fill="#FDE68A" />
-        <rect x="355" y="280" width="20" height="26" rx="8" fill="#F472B6" />
-        <line x1="358" y1="308" x2="352" y2="328" stroke="#1E293B" strokeWidth="4" strokeLinecap="round" />
-        <line x1="372" y1="308" x2="378" y2="328" stroke="#1E293B" strokeWidth="4" strokeLinecap="round" />
-        <circle cx="333" cy="300" r="12" fill="#fff" stroke="#7C3AED" strokeWidth="4" />
-      </g>
-      <g stroke="#16A34A" strokeWidth="3" strokeLinecap="round">
-        <path d="M120 330 q3 -12 0 -16 M128 330 q-2 -10 2 -16" />
-        <path d="M620 320 q3 -12 0 -16 M628 320 q-2 -10 2 -16" />
-        <path d="M430 335 q3 -12 0 -16 M438 335 q-2 -10 2 -16" />
-      </g>
-    </svg>
+    <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+      <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-violet-400/40 blur-3xl animate-float" />
+      <div className="absolute -right-20 top-10 h-64 w-64 rounded-full bg-fuchsia-400/30 blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
+      <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-amber-300/30 blur-3xl animate-float" style={{ animationDelay: '0.8s' }} />
+    </div>
   );
 }
 
-function Expandable({ icon, title, children }: { icon: string; title: string; children: React.ReactNode }) {
+function Expandable({ icon, title, children }: { icon: IconName; title: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="overflow-hidden rounded-2xl border border-white/40 bg-white/80 backdrop-blur">
-      <button onClick={() => setOpen(!open)} className="flex w-full items-center justify-between px-4 py-3 text-left font-extrabold text-violet-800">
-        <span>{icon} {title}</span>
-        <span>{open ? '▴' : '▾'}</span>
+    <div className="surface overflow-hidden bg-white/70 backdrop-blur">
+      <button onClick={() => setOpen(!open)} className="flex w-full items-center gap-3 px-4 py-3.5 text-left font-bold text-ink">
+        <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-violet-100 text-violet-600"><Icon name={icon} size={17} /></span>
+        <span className="flex-1">{title}</span>
+        <Icon name="chevron" size={18} className={`text-slate-300 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
-      {open && <div className="px-4 pb-4 text-sm font-semibold text-slate-600">{children}</div>}
+      {open && <div className="animate-rise px-4 pb-4 text-sm leading-relaxed text-muted">{children}</div>}
     </div>
   );
 }
@@ -119,10 +72,7 @@ export function Landing({ onDone }: { onDone: () => void }) {
   const [busy, setBusy] = useState(false);
 
   const t = (k: string) => STR[k]?.[lang] ?? k;
-  const setLang = (l: Lang) => {
-    localStorage.setItem('etop-lang', l);
-    setLangState(l);
-  };
+  const setLang = (l: Lang) => { localStorage.setItem('etop-lang', l); setLangState(l); };
 
   const loginWith = async (payload: { code: string } | { email: string; password: string }) => {
     setErr('');
@@ -138,115 +88,121 @@ export function Landing({ onDone }: { onDone: () => void }) {
       setBusy(false);
     }
   };
+  const go = () => loginWith(tab === 'staff' ? { email, password } : { code });
 
-  const go = async () => {
-    await loginWith(tab === 'staff' ? { email, password } : { code });
-  };
+  const tabs = [
+    { k: 'student', icon: 'cap' as IconName, label: t('tabStudent') },
+    { k: 'teacher', icon: 'users' as IconName, label: t('tabTeacher') },
+    { k: 'staff', icon: 'heart' as IconName, label: t('tabStaff') },
+  ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-sky-300 via-sky-200 to-emerald-100">
-      <CartoonScene />
+    <div className="relative min-h-screen overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#efeafe] via-[#f6f3fc] to-[#fdf6ee]" />
+      <MeshHero />
 
-      {/* Language toggle — visible before login, top right */}
-      <div className="absolute right-4 top-4 z-10 flex rounded-full bg-white/90 p-1 shadow">
-        {(['vi', 'en'] as const).map((l) => (
-          <button
-            key={l}
-            onClick={() => setLang(l)}
-            className={`rounded-full px-3 py-1 text-xs font-black uppercase transition ${lang === l ? 'bg-violet-600 text-white' : 'text-violet-500'}`}
-          >
-            {l === 'vi' ? '🇻🇳 VI' : '🇬🇧 EN'}
-          </button>
-        ))}
-      </div>
+      <button
+        onClick={() => setLang(lang === 'vi' ? 'en' : 'vi')}
+        className="absolute right-4 top-4 z-10 flex items-center gap-1.5 rounded-full bg-white/80 px-3 py-1.5 text-xs font-bold text-violet-600 shadow-soft backdrop-blur"
+      >
+        <Icon name="globe" size={15} /> {lang.toUpperCase()}
+      </button>
 
-      <div className="relative mx-auto flex min-h-screen max-w-xl flex-col items-center gap-5 px-4 py-8">
+      <div className="relative mx-auto flex min-h-screen max-w-md flex-col items-center gap-5 px-5 py-10">
+        {/* Brand */}
         <div className="flex flex-col items-center text-center">
-          <img src="./logo.png" alt="Anh Ngữ E’TOP" className="h-24 w-24 rounded-full shadow-xl" />
-          <h1 className="mt-3 text-3xl font-black text-violet-800 drop-shadow-sm">{t('center')}</h1>
-          <p className="font-bold text-violet-600">Learn – Achieve – Lead ⭐</p>
+          <div className="relative">
+            <div className="absolute inset-0 rounded-[28px] bg-violet-500/30 blur-2xl" />
+            <img src="./logo.png" alt="E’TOP" className="relative h-24 w-24 rounded-[26px] shadow-glow ring-1 ring-black/5" />
+          </div>
+          <h1 className="mt-5 font-display text-[34px] font-semibold leading-tight text-ink">Anh Ngữ E’TOP</h1>
+          <p className="mt-1 text-sm font-bold uppercase tracking-[0.18em] text-violet-500">{t('tagline')}</p>
         </div>
 
-        <div className="w-full rounded-3xl bg-white/95 p-5 shadow-2xl backdrop-blur">
-          <div className="mb-4 flex gap-1 rounded-2xl bg-violet-100 p-1">
-            {([['student', t('tabStudent')], ['teacher', t('tabTeacher')], ['staff', t('tabStaff')]] as const).map(([k, label]) => (
-              <button
-                key={k}
-                onClick={() => { setTab(k as typeof tab); setErr(''); }}
-                className={`flex-1 rounded-xl px-2 py-2 text-sm font-extrabold transition ${tab === k ? 'bg-white text-violet-700 shadow' : 'text-violet-400'}`}
-              >
-                {label}
+        {/* Login card */}
+        <div className="card w-full animate-rise !rounded-3.5xl !p-5">
+          <div className="mb-1 text-center">
+            <h2 className="text-lg font-extrabold text-ink">{t('welcome')}</h2>
+            <p className="text-xs font-semibold text-muted">{t('sub')}</p>
+          </div>
+
+          <div className="seg my-4">
+            {tabs.map((x) => (
+              <button key={x.k} data-active={tab === x.k} onClick={() => { setTab(x.k as typeof tab); setErr(''); }}>
+                <span className="flex items-center justify-center gap-1.5"><Icon name={x.icon} size={16} /> {x.label}</span>
               </button>
             ))}
           </div>
 
           {tab !== 'staff' ? (
             <div className="space-y-3">
-              <label className="block text-sm font-extrabold text-slate-600">
-                {tab === 'student' ? t('codeStudent') : t('codeTeacher')}
-              </label>
-              <input
-                className="input text-center text-2xl font-black uppercase tracking-widest"
-                placeholder={tab === 'student' ? 'UP1482' : 'GV0001'}
-                value={code}
-                maxLength={10}
-                onChange={(e) => setCode(e.target.value.toUpperCase())}
-                onKeyDown={(e) => e.key === 'Enter' && go()}
-              />
-              <button onClick={go} disabled={busy || code.length < 4} className="btn-primary w-full text-lg">
-                {t('enter')}
+              <div className="relative">
+                <input
+                  className="input pl-11 text-center text-xl font-extrabold uppercase tracking-[0.25em]"
+                  placeholder={tab === 'student' ? 'UP1482' : 'GV0001'}
+                  value={code}
+                  maxLength={10}
+                  onChange={(e) => setCode(e.target.value.toUpperCase())}
+                  onKeyDown={(e) => e.key === 'Enter' && go()}
+                />
+                <Icon name="cap" size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-violet-400" />
+              </div>
+              <button onClick={go} disabled={busy || code.length < 4} className="btn-primary w-full py-3 text-base">
+                {t('enter')} <Icon name="arrowRight" size={18} />
               </button>
-              <p className="text-center text-xs font-semibold text-slate-400">
-                {tab === 'student' ? t('hintStudent') : t('hintTeacher')}
-              </p>
+              <p className="text-center text-xs font-medium text-muted">{tab === 'student' ? t('hintStudent') : t('hintTeacher')}</p>
             </div>
           ) : (
             <div className="space-y-3">
               <input className="input" placeholder={t('email')} value={email} onChange={(e) => setEmail(e.target.value)} />
               <input className="input" type="password" placeholder={t('password')} value={password} onChange={(e) => setPassword(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && go()} />
-              <button onClick={go} disabled={busy} className="btn-primary w-full">{t('signin')}</button>
+              <button onClick={go} disabled={busy} className="btn-primary w-full py-3">{t('signin')}</button>
             </div>
           )}
           {err && <p className="mt-3 text-center text-sm font-bold text-rose-500">{err}</p>}
 
           {isDemo() && (
-            <div className="mt-4 border-t border-dashed border-violet-200 pt-3">
-              <p className="mb-2 text-center text-xs font-extrabold text-amber-600">
-                ✨ {lang === 'vi' ? 'Thử ngay — chạm để vào:' : 'Try instantly — tap to enter:'}
+            <div className="mt-5 border-t border-[var(--line)] pt-4">
+              <p className="mb-2.5 flex items-center justify-center gap-1.5 text-center text-xs font-extrabold text-amber-600">
+                <Icon name="sparkles" size={14} /> {t('tryNow')}
               </p>
               <div className="grid grid-cols-2 gap-2">
-                <button onClick={() => loginWith({ code: 'UP1482' })} disabled={busy} className="btn-soft text-xs">🧒 {lang === 'vi' ? 'Học viên' : 'Student'} (Up 1)</button>
-                <button onClick={() => loginWith({ code: 'GV0001' })} disabled={busy} className="btn-soft text-xs">👩‍🏫 {lang === 'vi' ? 'Giáo viên' : 'Teacher'} (Ms. Quy)</button>
-                <button onClick={() => loginWith({ email: 'phuhuynh@etop.vn', password: 'x' })} disabled={busy} className="btn-soft text-xs">👪 {lang === 'vi' ? 'Phụ huynh' : 'Parent'}</button>
-                <button onClick={() => loginWith({ email: 'zhao@etop.vn', password: 'x' })} disabled={busy} className="btn-soft text-xs">👑 {lang === 'vi' ? 'Chủ TT' : 'Director'}</button>
+                {[
+                  { icon: 'cap' as IconName, label: t('tabStudent'), payload: { code: 'UP1482' } },
+                  { icon: 'users' as IconName, label: t('tabTeacher'), payload: { code: 'GV0001' } },
+                  { icon: 'heart' as IconName, label: t('tabStaff'), payload: { email: 'phuhuynh@etop.vn', password: 'x' } },
+                  { icon: 'chart' as IconName, label: lang === 'vi' ? 'Chủ TT' : 'Director', payload: { email: 'zhao@etop.vn', password: 'x' } },
+                ].map((x) => (
+                  <button key={x.label} onClick={() => loginWith(x.payload)} disabled={busy} className="surface flex items-center gap-2 px-3 py-2.5 text-sm font-bold text-violet-700 transition hover:border-violet-300 hover:bg-violet-50">
+                    <span className="text-violet-500"><Icon name={x.icon} size={17} /></span> {x.label}
+                  </button>
+                ))}
               </div>
             </div>
           )}
         </div>
 
-        <div className="w-full rounded-3xl bg-white/80 p-4 text-center backdrop-blur">
-          <div className="font-extrabold text-violet-800">📞 089 949 0222 · ✉️ <a className="underline" href={`mailto:${CENTER_EMAIL}`}>{CENTER_EMAIL}</a></div>
-          <div className="text-sm font-semibold text-slate-600">{t('address1')}</div>
-          <div className="text-sm font-semibold text-slate-600">{t('address2')}</div>
-          <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="mt-1 inline-block text-sm font-extrabold text-blue-600 underline">
-            👍 {t('fb')}
-          </a>
+        {/* Contact */}
+        <div className="surface w-full bg-white/70 px-4 py-3.5 text-center text-sm backdrop-blur">
+          <div className="flex items-center justify-center gap-4 font-bold text-ink">
+            <a href="tel:0899490222" className="flex items-center gap-1.5 text-violet-600"><Icon name="phone" size={16} /> 089 949 0222</a>
+            <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-violet-600"><Icon name="message" size={16} /> Facebook</a>
+          </div>
+          <div className="mt-1.5 flex items-center justify-center gap-1.5 text-xs font-medium text-muted">
+            <Icon name="pin" size={14} /> 166 Nguyễn Hội, P. Phú Trinh, TP. Phan Thiết
+          </div>
         </div>
 
-        <div className="w-full space-y-2 pb-8">
-          <Expandable icon="🏫" title={t('aboutTitle')}>
-            {t('aboutBody')}{' '}
-            <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="font-extrabold text-blue-600 underline">Facebook ↗</a>
+        {/* Expandables */}
+        <div className="w-full space-y-2 pb-6 stagger">
+          <Expandable icon="cap" title={t('about')}>
+            {t('aboutBody')} <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="font-bold text-violet-600">Facebook ↗</a>
           </Expandable>
-          <Expandable icon="💼" title={t('jobsTitle')}>
-            {t('jobsBody')} <a className="font-extrabold text-violet-700 underline" href={`mailto:${JOBS_EMAIL}?subject=${encodeURIComponent('Ứng tuyển E’TOP')}`}>{JOBS_EMAIL}</a>{' '}
-            {t('jobsCall')} <b>089 949 0222</b>.
+          <Expandable icon="users" title={t('jobs')}>
+            {t('jobsBody')} <a className="font-bold text-violet-600" href={`mailto:${JOBS_EMAIL}?subject=${encodeURIComponent('Ứng tuyển E’TOP')}`}>{JOBS_EMAIL}</a> · <b>089 949 0222</b>
           </Expandable>
-          <Expandable icon="💬" title={t('fbTitle')}>
-            <p>{t('fbBody')}</p>
-            <p className="mt-1">✉️ {t('fbEmail')} <a className="font-extrabold text-violet-700 underline" href={`mailto:${CENTER_EMAIL}?subject=${encodeURIComponent('Góp ý cho E’TOP')}`}>{CENTER_EMAIL}</a></p>
-            <p className="mt-1">👍 {t('fbMsg')} <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="font-extrabold text-blue-600 underline">Trung Tâm Anh Ngữ E’TOP ↗</a></p>
-            <p className="mt-1 text-xs text-slate-400">{t('fbParent')}</p>
+          <Expandable icon="message" title={t('feedback')}>
+            {t('feedbackBody')} <a className="font-bold text-violet-600" href={`mailto:${CENTER_EMAIL}?subject=${encodeURIComponent('Góp ý cho E’TOP')}`}>{CENTER_EMAIL}</a>
           </Expandable>
         </div>
       </div>

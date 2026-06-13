@@ -5,14 +5,15 @@ import { Player } from './Player';
 import { Landing } from './Landing';
 import { ClassManager } from './ClassManager';
 import { PracticeHub } from './Practice';
+import { Icon } from './Icon';
 
-const ROLE_LABEL: Record<string, { vi: string; en: string; emoji: string }> = {
-  student: { vi: 'Học viên', en: 'Student', emoji: '🧒' },
-  tutor: { vi: 'Giáo viên', en: 'Teacher', emoji: '👩‍🏫' },
-  parent: { vi: 'Phụ huynh', en: 'Parent', emoji: '👪' },
-  owner: { vi: 'Chủ trung tâm', en: 'Director', emoji: '👑' },
-  academic_director: { vi: 'Quản lý học vụ', en: 'Academic Dir.', emoji: '🎓' },
-  front_desk: { vi: 'Lễ tân', en: 'Front desk', emoji: '🖥️' },
+const ROLE_LABEL: Record<string, { vi: string; en: string }> = {
+  student: { vi: 'Học viên', en: 'Student' },
+  tutor: { vi: 'Giáo viên', en: 'Teacher' },
+  parent: { vi: 'Phụ huynh', en: 'Parent' },
+  owner: { vi: 'Chủ trung tâm', en: 'Director' },
+  academic_director: { vi: 'Quản lý học vụ', en: 'Academic Dir.' },
+  front_desk: { vi: 'Lễ tân', en: 'Front desk' },
 };
 
 // Phase 4 portal: state-routed views per role on the real API.
@@ -26,34 +27,35 @@ function useT(): [Lang, (l: Lang) => void, (k: string) => string] {
   return [lang, set, makeT(lang)];
 }
 
-function Header({ me, lang, setLang, t, onLogout }: { me: Me; lang: Lang; setLang: (l: Lang) => void; t: (k: string) => string; onLogout: () => void }) {
+function Header({ me, lang, setLang, onLogout }: { me: Me; lang: Lang; setLang: (l: Lang) => void; t: (k: string) => string; onLogout: () => void }) {
   const role = ROLE_LABEL[me.role];
   return (
-    <header className="sticky top-0 z-10 border-b border-violet-100 bg-white/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-20 border-b border-[var(--line)] bg-cloud/70 backdrop-blur-xl">
       {isDemo() && (
-        <div className="bg-gradient-to-r from-amber-400 to-yellow-300 px-4 py-1 text-center text-[11px] font-black text-amber-900">
-          ✨ {lang === 'vi' ? 'BẢN DÙNG THỬ — dữ liệu mẫu, chạy ngay trên máy bạn' : 'DEMO — sample data, runs in your browser'}
+        <div className="flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-300 px-4 py-1 text-[11px] font-extrabold text-amber-900">
+          <Icon name="sparkles" size={13} strokeWidth={2.2} />
+          {lang === 'vi' ? 'Bản dùng thử — chạy ngay trên trình duyệt' : 'Demo — runs in your browser'}
         </div>
       )}
       <div className="mx-auto flex max-w-3xl items-center justify-between gap-2 px-4 py-2.5">
         <div className="flex items-center gap-2.5">
-          <img src="./logo.png" alt="" className="h-9 w-9 rounded-full shadow-sm" />
+          <img src="./logo.png" alt="" className="h-9 w-9 rounded-2xl shadow-soft ring-1 ring-black/5" />
           <div className="leading-tight">
-            <div className="text-sm font-black text-violet-800">Anh Ngữ E’TOP</div>
-            <div className="text-[11px] font-bold text-slate-400">
-              {role && <span className="text-violet-500">{role.emoji} {lang === 'vi' ? role.vi : role.en}</span>} · {me.name}
+            <div className="text-[15px] font-extrabold tracking-tight text-ink">Anh Ngữ E’TOP</div>
+            <div className="text-[11px] font-semibold text-muted">
+              {role && <span className="text-violet-600">{lang === 'vi' ? role.vi : role.en}</span>} · {me.name}
             </div>
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5">
           <button
             onClick={() => setLang(lang === 'vi' ? 'en' : 'vi')}
-            className="rounded-full bg-violet-100 px-3 py-1.5 text-xs font-black uppercase text-violet-700 transition hover:bg-violet-200"
+            className="surface flex items-center gap-1 px-2.5 py-1.5 text-xs font-bold text-violet-600 transition hover:border-violet-300"
           >
-            {lang === 'vi' ? '🇻🇳' : '🇬🇧'} {lang}
+            <Icon name="globe" size={15} /> {lang.toUpperCase()}
           </button>
-          <button onClick={onLogout} className="rounded-full px-3 py-1.5 text-xs font-bold text-slate-400 transition hover:bg-rose-50 hover:text-rose-500">
-            {t('logout')}
+          <button onClick={onLogout} aria-label="Đăng xuất" className="surface p-2 text-slate-400 transition hover:border-rose-200 hover:text-rose-500">
+            <Icon name="logout" size={17} />
           </button>
         </div>
       </div>
@@ -106,26 +108,27 @@ function Student({ lang, t }: { lang: Lang; t: (k: string) => string }) {
   return (
     <div className="space-y-4">
       {ach && (
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-violet-600 to-fuchsia-500 p-5 text-white shadow-lg shadow-violet-300/40">
-          <div className="flex items-center gap-5">
-            <div className="text-center">
-              <div className="text-3xl font-black">{ach.points}</div>
-              <div className="text-[11px] font-bold text-violet-100">⭐ {t('points')}</div>
+        <div className="relative overflow-hidden rounded-3.5xl bg-gradient-to-br from-violet-600 via-violet-600 to-fuchsia-600 p-5 text-white shadow-lift">
+          <div className="absolute -right-6 -top-8 h-32 w-32 rounded-full bg-white/10 blur-xl" />
+          <div className="relative flex items-center gap-6">
+            <div>
+              <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide text-violet-100"><Icon name="star" size={13} /> {t('points')}</div>
+              <div className="text-4xl font-extrabold leading-tight">{ach.points}</div>
             </div>
-            <div className="h-10 w-px bg-white/30" />
-            <div className="text-center">
-              <div className="text-3xl font-black">{ach.streak}</div>
-              <div className="text-[11px] font-bold text-violet-100">🔥 {t('dayStreak')}</div>
+            <div className="h-11 w-px bg-white/25" />
+            <div>
+              <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide text-violet-100"><Icon name="flame" size={13} /> {t('dayStreak')}</div>
+              <div className="text-4xl font-extrabold leading-tight">{ach.streak}</div>
             </div>
-            <div className="ml-auto text-5xl opacity-90">{ach.streak > 0 ? '🔥' : '🌱'}</div>
+            <div className="ml-auto opacity-90"><Icon name={ach.streak > 0 ? 'flame' : 'sparkles'} size={46} strokeWidth={1.6} /></div>
           </div>
         </div>
       )}
 
-      <div className="flex gap-1 rounded-2xl bg-violet-100 p-1">
-        {([['work', `📝 ${lang === 'vi' ? 'Bài tập' : 'Assignments'}`], ['practice', `📖 ${lang === 'vi' ? 'Tự luyện' : 'Practice'}`]] as const).map(([k, label]) => (
-          <button key={k} onClick={() => setView(k)} className={`flex-1 rounded-xl px-2 py-2.5 text-sm font-extrabold transition ${view === k ? 'bg-white text-violet-700 shadow-sm' : 'text-violet-400'}`}>
-            {label}
+      <div className="seg">
+        {([['work', 'pencil', lang === 'vi' ? 'Bài tập' : 'Assignments'], ['practice', 'book', lang === 'vi' ? 'Tự luyện' : 'Practice']] as const).map(([k, icon, label]) => (
+          <button key={k} data-active={view === k} onClick={() => setView(k)}>
+            <span className="flex items-center justify-center gap-1.5"><Icon name={icon} size={16} /> {label}</span>
           </button>
         ))}
       </div>
