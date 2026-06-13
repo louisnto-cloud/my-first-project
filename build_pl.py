@@ -9,6 +9,7 @@ from openpyxl.formatting.rule import ColorScaleRule, FormulaRule, CellIsRule
 from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.worksheet.properties import PageSetupProperties
 from openpyxl.chart import BarChart, PieChart, Reference
+from openpyxl.chart.shapes import GraphicalProperties
 
 # ---- palette / styles (matched to the original template) ----
 NAVY   = "FF1F3864"
@@ -19,6 +20,10 @@ BLACK  = "FF000000"   # formula-cell font
 GREY   = "FF595959"
 WHITE  = "FFFFFFFF"
 INPUT_FILL = "FFFFF2CC"   # light amber highlight on every editable input
+ACCENT = "FF0071E3"       # Apple-blue accent for steps / emphasis
+INK    = "FF1D1D1F"       # near-black text
+MIST   = "FFF5F5F7"       # soft light-grey panel
+SOFT   = "FFF3F3F6"       # inherited / auto cell tint
 
 CUR2 = '\\$#,##0.00_);"($"#,##0.00\\);\\-'   # per-case currency
 CUR0 = '\\$#,##0_);"($"#,##0\\);\\-'          # total currency
@@ -681,10 +686,21 @@ def build_assumptions(ws, sku_sheets):
     t.font = font(13, True, WHITE); t.fill = fill(NAVY); t.alignment = Alignment("left","center")
     ws.row_dimensions[1].height = 27.75
     ws.merge_cells("A2:I2")
-    s = ws["A2"]; s.value = "🟡 Edit yellow cells only — every other tab reads from here. CDN $ per case (24 cans)."
+    s = ws["A2"]; s.value = "🟡 Type in yellow cells. Start with the Master price (top-right) — that's all you need. CDN $ per case (24 cans)."
     s.font = font(9, False, GREY); s.alignment = Alignment("left","center")
 
-    band("A4:I4", "GLOBAL")
+    # QUICK START — one price drives every channel
+    band("E4:I4", "▶  QUICK START — one price for every channel")
+    for rr,(lt,val,fmt) in [(5,("Master CP  ($/case)",72,CUR2)),(6,("Master MSRP  ($/case)",108,CUR2)),
+                            (7,("Master discount  (%)",0,PCT)),(8,("Master A&P  (% of net)",0.08,PCT))]:
+        ws.merge_cells(f"E{rr}:F{rr}")
+        c=ws[f"E{rr}"]; c.value=lt; c.font=font(10,False,INK); c.alignment=Alignment("left","center")
+        inp(f"G{rr}",val,fmt)
+    ws.merge_cells("E9:I9")
+    nn=ws["E9"]; nn.value="↳ Channels inherit these. Type over any single channel below to override it."
+    nn.font=font(8,False,GREY); nn.alignment=Alignment("left","center")
+
+    band("A4:C4", "GLOBAL")
     lab(5,"Period start");        ws["C5"]="Aug 1, 2026"; ws["C5"].font=font(10,False,BLUE); ws["C5"].fill=fill(INPUT_FILL); ws["C5"].alignment=Alignment("right","center")
     lab(6,"Period end");          ws["C6"]="Nov 1, 2026"; ws["C6"].font=font(10,False,BLUE); ws["C6"].fill=fill(INPUT_FILL); ws["C6"].alignment=Alignment("right","center")
     lab(7,"Cans per case");       inp("C7",24,INT)
@@ -701,17 +717,22 @@ def build_assumptions(ws, sku_sheets):
         lab(16+i, s2); inp(f"C{16+i}", 500, INT)
     lab(19,"TOTAL cases", bold=True); calc("C19","=SUM(C16:C18)",INT,bold=True)
 
-    band("A21:I21", "CHANNEL PRICING & MIX  (applies to all 3 flavours)")
-    heads = ["Channel","CP $/case","MSRP $/case","Disc %","A&P % net","Mix %","CP /4-pack","Cust margin %","Cases (all SKUs)"]
+    band("A21:I21", "CHANNEL MIX  &  (optional) per-channel price overrides")
+    heads = ["Channel","CP $/case","MSRP $/case","Disc %","A&P % net","Mix %  🟡","CP /4-pack","Cust margin %","Cases (all SKUs)"]
     for col,h in zip("ABCDEFGHI", heads):
         c = ws[f"{col}22"]; c.value=h; c.font=font(9,True,WHITE); c.fill=fill(MIDBLU)
         c.alignment=Alignment("left" if col=="A" else "center","center",wrap_text=True)
     ws.row_dimensions[22].height = 28
     mix = [0.12,0.10,0.06,0.18,0.20,0.02,0.08,0.10,0.08,0.04,0.02]   # sums to 1.00
+    def softref(cell, ref, fmt):   # inherits the Master value; user can type over
+        c=ws[cell]; c.value=ref; c.font=font(10,False,INK); c.fill=fill(SOFT)
+        c.number_format=fmt; c.alignment=Alignment("right","center")
     for i,name in enumerate(CHANNELS):
         r = A_CH_ROW0 + i
         lab(r, name)
-        inp(f"B{r}",72,CUR2); inp(f"C{r}",108,CUR2); inp(f"D{r}",0,PCT); inp(f"E{r}",0.08,PCT); inp(f"F{r}",mix[i],PCT)
+        softref(f"B{r}","=$G$5",CUR2); softref(f"C{r}","=$G$6",CUR2)
+        softref(f"D{r}","=$G$7",PCT); softref(f"E{r}","=$G$8",PCT)
+        inp(f"F{r}",mix[i],PCT)
         calc(f"G{r}",f"=B{r}/$C$8",CUR2)
         calc(f"H{r}",f'=IFERROR((C{r}-B{r})/C{r},"-")',PCT)
         calc(f"I{r}",f"=F{r}*$C$19",INT)
@@ -745,9 +766,9 @@ def build_assumptions(ws, sku_sheets):
     pct_dv = DataValidation(type="decimal", operator="between", formula1="0", formula2="1", allow_blank=True)
     pos_dv = DataValidation(type="decimal", operator="greaterThan", formula1="0", allow_blank=True)
     ws.add_data_validation(pct_dv); ws.add_data_validation(pos_dv)
-    for rng in ("C9","C10","C11:C13",f"D{A_CH_ROW0}:D{rt-1}",f"E{A_CH_ROW0}:E{rt-1}",f"F{A_CH_ROW0}:F{rt-1}"):
+    for rng in ("C9","C10","C11:C13","G7","G8",f"D{A_CH_ROW0}:D{rt-1}",f"E{A_CH_ROW0}:E{rt-1}",f"F{A_CH_ROW0}:F{rt-1}"):
         pct_dv.add(rng)
-    for rng in (f"B{A_CH_ROW0}:B{rt-1}", f"C{A_CH_ROW0}:C{rt-1}", "C16:C18"):
+    for rng in ("G5","G6",f"B{A_CH_ROW0}:B{rt-1}",f"C{A_CH_ROW0}:C{rt-1}","C16:C18"):
         pos_dv.add(rng)
 
     ws.sheet_view.showGridLines = False
@@ -755,62 +776,70 @@ def build_assumptions(ws, sku_sheets):
 
 
 def build_cover(ws):
-    """Plain-language guide: what it is, how to use, tab index, sources, key facts."""
-    ws.column_dimensions["A"].width = 4
-    for col in "BCDEFGH": ws.column_dimensions[col].width = 16
-    r = [1]
-    def banner(text, sz=13):
-        ws.merge_cells(f"A{r[0]}:H{r[0]}")
-        c = ws[f"A{r[0]}"]; c.value=text; c.font=font(sz,True,WHITE); c.fill=fill(NAVY)
-        c.alignment=Alignment("left","center"); ws.row_dimensions[r[0]].height=24; r[0]+=1
-    def sub(text):
-        ws.merge_cells(f"A{r[0]}:H{r[0]}")
-        c=ws[f"A{r[0]}"]; c.value=text; c.font=font(9,False,GREY); c.alignment=Alignment("left","center"); r[0]+=1
-    def band(text):
-        ws.merge_cells(f"A{r[0]}:H{r[0]}")
-        c=ws[f"A{r[0]}"]; c.value=text; c.font=font(10,True,WHITE); c.fill=fill(MIDBLU)
-        c.alignment=Alignment("left","center"); r[0]+=1
-    def line(text, bold=False):
-        ws.merge_cells(f"B{r[0]}:H{r[0]}")
-        c=ws[f"B{r[0]}"]; c.value=text; c.font=font(10,bold,BLACK); c.alignment=Alignment("left","center",wrap_text=True)
-        ws.row_dimensions[r[0]].height=15; r[0]+=1
-    def gap(): r[0]+=1
-
-    banner("ORGANIKA RTD — SPARKLING ELECTROLYTES · LAUNCH BUSINESS CASE")
-    sub("CDN $ | Aug 1 – Nov 1, 2026 | 3 SKUs × 11 channels | v1.0 · 2026-06-13"); gap()
-    band("WHAT THIS IS")
-    line("Bottom-up launch P&L for the 6×4×355 ml RTD across 11 sales channels, with a volume-weighted")
-    line("blended view and a price-scenario sandbox. COGS is built up from the Bevmax co-packing quote.")
-    gap()
-    band("HOW TO USE  —  edit only the 🟡 yellow cells")
-    line("• Assumptions tab — per-channel CP (wholesale), MSRP, discount, A&P %, and channel mix %; plus")
-    line("   total cases per flavour, A&P split, and the GM% gate. Enter pricing once; all 3 SKUs use it.")
-    line("• Cost Build-up tab — the Bevmax quote (run size, cost lines, overhead). Drives COGS everywhere.")
-    line("• Scenarios tab — trial CP × MSRP price points; nothing there feeds the plan, it's a sandbox.")
-    line("Everything else is formulas and recalculates automatically.")
-    gap()
-    band("TABS")
-    for nm, desc in [("Executive Summary","headline P&L, margin-gate verdict, scenario snapshot"),
-                     ("Assumptions","the only place you enter pricing, mix and targets"),
-                     ("Dashboard","P&L + by-channel / by-SKU tables and charts"),
-                     ("Scenarios","CP × MSRP what-if + sensitivity heatmaps"),
-                     ("Blended","volume-weighted P&L across all channels"),
-                     ("TTL ORGANIKA RTD","roll-up of the 3 SKUs"),
-                     ("Lime Lemon / Passion Fruit Pineapple / Raspberry","one P&L each"),
-                     ("Cost Build-up","bottom-up COGS from the Bevmax quote")]:
-        line(f"• {nm} — {desc}")
-    gap()
-    band("KEY FACTS")
-    line("• 1 case = 24 cans = 6 × 4-pack (355 ml sleek).")
-    line("• Production run 40,500 cans (13,500 per SKU). Bevmax landed cost $1.21/can = $29.10/case.")
-    line("• Fully-loaded COGS $32.12/case (landed + allergen + 5% OH + 5% other COGS).")
-    line("• Production vs sell-in: run = 1,687.5 cases; sell-in plan = 1,500 cases (500×3) → ~188 cases")
-    line("   (4,500 cans) surplus. Unit cost is based on the 40,500-can run economics.")
-    gap()
-    band("SOURCES")
-    line("• Bevmax co-packing quote OG2026-05-21 v15 (4-pk w/ sleeves), Summer 2026; FOB Airdrie AB, excl. GST.")
-    line("• Contact: elliott.zhong@organika.com.")
+    """Start Here — a friendly, guided home screen. Three steps, what's inside, the numbers."""
+    ws.column_dimensions["A"].width = 5
+    ws.column_dimensions["B"].width = 30
+    for col in "CDEFGH": ws.column_dimensions[col].width = 13
     ws.sheet_view.showGridLines = False
+
+    # hero
+    ws.merge_cells("A1:H3")
+    h = ws["A1"]; h.value = "Organika RTD — Sparkling Electrolytes"
+    h.font = Font(name="Arial", size=22, bold=True, color=WHITE); h.fill = fill("FF0A2540")
+    h.alignment = Alignment("left", "center", indent=1)
+    for rr in (1,2,3): ws.row_dimensions[rr].height = 24
+    ws.merge_cells("A4:H4")
+    s = ws["A4"]; s.value = "   Launch business case  ·  Aug 1 – Nov 1, 2026  ·  CDN $  ·  v1.1"
+    s.font = font(10, False, GREY); s.alignment = Alignment("left", "center")
+    ws.merge_cells("A6:H6")
+    p = ws["A6"]; p.value = "Everything updates automatically. You only do three things 👇"
+    p.font = font(12, True, INK); p.alignment = Alignment("left", "center"); ws.row_dimensions[6].height = 22
+
+    # three step cards
+    steps = [
+        ("1", "Set your price", "On the Assumptions tab, type one Master price (top-right) — every channel uses it. Want different prices per channel? Just type over any channel cell.", "FF0071E3"),
+        ("2", "Set your channel mix", "On Assumptions, enter the % of cases each channel sells. The green check confirms it totals 100%.", "FF34C759"),
+        ("3", "Read the answer", "Open Executive Summary: your margin, a clear go / no-go verdict, the price you'd need to hit target, and best / base / worst.", "FFFF9500"),
+    ]
+    rr = 8
+    for num, title, desc, color in steps:
+        ws.merge_cells(f"A{rr}:A{rr+1}")
+        n = ws[f"A{rr}"]; n.value = num; n.font = Font(name="Arial", size=26, bold=True, color=WHITE)
+        n.fill = fill(color); n.alignment = Alignment("center", "center")
+        tt = ws[f"B{rr}"]; tt.value = title; tt.font = font(13, True, INK); tt.alignment = Alignment("left","bottom")
+        ws.merge_cells(f"B{rr+1}:H{rr+1}")
+        d = ws[f"B{rr+1}"]; d.value = desc; d.font = font(10, False, GREY); d.alignment = Alignment("left","top", wrap_text=True)
+        ws.merge_cells(f"C{rr}:H{rr}")
+        ws.row_dimensions[rr].height = 20; ws.row_dimensions[rr+1].height = 30
+        rr += 3
+
+    def band(row, text):
+        ws.merge_cells(f"A{row}:H{row}")
+        c = ws[f"A{row}"]; c.value = "  " + text; c.font = font(10, True, INK); c.fill = fill(MIST)
+        c.alignment = Alignment("left","center"); ws.row_dimensions[row].height = 18
+    def line(row, text, bold=False):
+        ws.merge_cells(f"B{row}:H{row}")
+        c = ws[f"B{row}"]; c.value = text; c.font = font(10, bold, BLACK)
+        c.alignment = Alignment("left","center", wrap_text=True)
+
+    band(rr, "WHAT'S INSIDE"); rr += 1
+    for nm, desc in [("📋 Executive Summary","the one-screen answer — margin, verdict, scenarios"),
+                     ("💰 Business Case","break-even, ROI, payback, inventory, cannibalization, waterfall"),
+                     ("🎛️  Assumptions","the only place you type — price, mix, targets"),
+                     ("📊 Dashboard","P&L with by-channel / by-SKU tables and charts"),
+                     ("🧪 Scenarios","trial any CP × MSRP; sensitivity heatmaps"),
+                     ("⚖️  Blended","volume-weighted P&L across all channels"),
+                     ("📑 TTL + 3 flavour tabs","the detailed per-SKU P&Ls"),
+                     ("🏭 Cost Build-up","bottom-up cost from the Bevmax quote")]:
+        line(rr, f"{nm}  —  {desc}"); rr += 1
+    rr += 1
+    band(rr, "THE NUMBERS BEHIND IT"); rr += 1
+    for txt in ["1 case = 24 cans = 6 × 4-pack (355 ml).  Production run 40,500 cans (13,500 / flavour).",
+                "Bevmax landed cost $1.21 / can = $29.10 / case.  Fully-loaded COGS $32.12 / case.",
+                "Run = 1,687.5 cases vs sell-in plan 1,500 → ~188 cases surplus inventory.",
+                "Source: Bevmax quote OG2026-05-21 v15 · FOB Airdrie AB, excl. GST · elliott.zhong@organika.com"]:
+        line(rr, txt); rr += 1
+    ws.freeze_panes = "A5"
 
 
 def build_exec(ws):
@@ -882,6 +911,134 @@ def build_exec(ws):
     ws.freeze_panes = "A3"
 
 
+def build_business_case(ws):
+    """Investment-decision layer: break-even, ROI/payback, inventory, category, cannibalization, scenarios + waterfall."""
+    CASES1 = '#,##0.0'
+    GREEN = PatternFill("solid", fgColor="C6EFCE"); RED = PatternFill("solid", fgColor="FFC7CE")
+    for col, w in {"A":36,"B":14,"C":14,"D":14,"E":19,"F":10,"G":10,"H":13,"I":9,"J":9,"K":9}.items():
+        ws.column_dimensions[col].width = w
+    t = lambda c: f"='{TTL_SHEET}'!{c}"
+    cost = lambda c: f"='{COST_SHEET}'!{c}"
+    apb = f"'{TTL_SHEET}'!M22/'{TTL_SHEET}'!M12"   # blended A&P % of net
+
+    def band(rng, text):
+        first = rng.split(":")[0]; ws.merge_cells(rng)
+        c = ws[first]; c.value=text; c.font=font(11,True,WHITE); c.fill=fill(NAVY); c.alignment=Alignment("left","center")
+    def lab(r, text, col="A", bold=False, sz=10):
+        c=ws[f"{col}{r}"]; c.value=text; c.font=font(sz,bold,BLACK); c.alignment=Alignment("left","center")
+    def inp(cell, val, fmt):
+        c=ws[cell]; c.value=val; c.font=font(10,False,BLUE); c.fill=fill(INPUT_FILL)
+        c.number_format=fmt; c.alignment=Alignment("right","center")
+    def calc(cell, val, fmt, bold=False, band=False):
+        c=ws[cell]; c.value=val; c.font=font(10,bold,BLACK); c.number_format=fmt; c.alignment=Alignment("right","center")
+        if band: c.fill=fill(LTBLU)
+    def note(cell, text):
+        c=ws[cell]; c.value=text; c.font=font(8,False,GREY); c.alignment=Alignment("left","center")
+
+    ws.merge_cells("A1:G1")
+    h=ws["A1"]; h.value="ORGANIKA RTD — BUSINESS CASE (break-even, ROI, risk)"
+    h.font=font(13,True,WHITE); h.fill=fill(NAVY); h.alignment=Alignment("left","center"); ws.row_dimensions[1].height=27.75
+    ws.merge_cells("A2:G2")
+    s=ws["A2"]; s.value="CDN $ | Aug 1 – Nov 1, 2026 | pulls from TTL + Cost Build-up | 🟡 edit yellow"
+    s.font=font(9,False,GREY); s.alignment=Alignment("left","center")
+
+    # A — discretionary launch spend (NOT in COGS, to avoid double-count)
+    band("A4:G4","DISCRETIONARY LAUNCH SPEND  (not already in COGS)")
+    lab(5,"Slotting / listing fees");                 inp("B5",10000,CUR0)
+    lab(6,"Fixed launch marketing (beyond A&P %)");   inp("B6",15000,CUR0)
+    lab(7,"Other one-time (not in COGS)");            inp("B7",0,CUR0)
+    lab(8,"Total launch spend", bold=True);           calc("B8","=SUM(B5:B7)",CUR0,bold=True)
+    note("C9","Bevmax setup & allergen are already inside COGS — not added here.")
+
+    # B — break-even, ROI, payback
+    band("A11:G11","BREAK-EVEN · ROI · PAYBACK")
+    lab(12,"Blended CAAP / case (contribution)");     calc("B12",t("M35"),CUR2)
+    lab(13,"Break-even cases (cover launch spend)");  calc("B13",'=IFERROR(B8/B12,"-")',INT,bold=True)
+    lab(14,"Plan cases (period)");                    calc("B14",t("M9"),INT)
+    lab(15,"Margin of safety (cases)");               calc("B15","=B14-B13",INT)
+    lab(16,"Margin of safety (%)");                   calc("B16",'=IFERROR(B15/B14,"-")',PCT,band=True)
+    lab(17,"Total CAAP (period)");                    calc("B17",t("M24"),CUR0)
+    lab(18,"Launch profit (CAAP − launch spend)", bold=True); calc("B18","=B17-B8",CUR0,bold=True)
+    lab(19,"ROI on launch spend");                    calc("B19",'=IFERROR(B18/B8,"-")',PCT,band=True)
+
+    # C — production run & inventory
+    band("A21:G21","PRODUCTION RUN & INVENTORY (sell-through)")
+    lab(22,"Run cost — cash to produce");             calc("B22",cost("D26"),CUR0); note("C22","Bevmax run subtotal")
+    lab(23,"Deposit required (50%, 4 wks pre-prod)"); inp("B23",24552.87,CUR0)
+    lab(24,"Cans produced");                          calc("B24",cost("D6"),INT)
+    lab(25,"Cases produced");                         calc("B25",cost("D11"),CASES1)
+    lab(26,"Cases sold (plan)");                      calc("B26",t("M9"),INT)
+    lab(27,"Sell-through %");                         calc("B27",'=IFERROR(B26/B25,"-")',PCT,band=True)
+    lab(28,"Ending inventory (cases)");               calc("B28","=B25-B26",CASES1)
+    lab(29,"Ending inventory value @ COGS");          calc("B29",f'=B28*{COST_TOTAL_REF}',CUR0)
+    lab(30,"Est. surplus warehousing cost");          calc("B30","=MAX(0,(F28-F29))*ROUNDUP(B28/F30,0)*F31",CUR0)
+    lab(28,"Months stored","E"); inp("F28",6,INT)
+    lab(29,"Free months","E");   inp("F29",3,INT)
+    lab(30,"Cases / pallet","E");inp("F30",60,INT)
+    lab(31,"Warehousing $/pallet/mo","E"); inp("F31",100,CUR0)
+
+    # D — category benchmark & cannibalization
+    band("A33:G33","CATEGORY BENCHMARK & CANNIBALIZATION")
+    lab(34,"Category average GM% (benchmark)");       inp("B34",0.55,PCT)
+    lab(35,"Our blended GP%");                        calc("B35",t("M17"),PCT)
+    lab(36,"vs category (pts)");                      calc("B36","=B35-B34",PCT,band=True)
+    lab(37,"Cannibalization rate (% of our volume)"); inp("B37",0.20,PCT)
+    lab(38,"Existing-SKU CAAP / case (lost)");        inp("B38",20,CUR2)
+    lab(39,"Cannibalized cases");                     calc("B39","=B14*B37",INT)
+    lab(40,"Lost CAAP (cannibalized)");               calc("B40","=B39*B38",CUR0)
+    lab(41,"Net incremental CAAP (after cannib.)", bold=True); calc("B41","=B18-B40",CUR0,bold=True)
+
+    # E — best / base / worst
+    band("A43:G43","BEST / BASE / WORST CASE")
+    for col,nm in zip(["B","C","D"],["Worst","Base","Best"]):
+        c=ws[f"{col}44"]; c.value=nm; c.font=font(10,True,WHITE); c.fill=fill(MIDBLU); c.alignment=Alignment("center","center")
+    ws["A44"].value="Driver"; ws["A44"].font=font(10,True,WHITE); ws["A44"].fill=fill(MIDBLU)
+    lab(45,"CP / case (wholesale)")
+    inp("B45",60,CUR2); inp("C45",72,CUR2); inp("D45",84,CUR2)
+    lab(46,"COGS / case");      calc("B46",f"={COST_TOTAL_REF}*(1+G45)",CUR2); calc("C46",f"={COST_TOTAL_REF}",CUR2); calc("D46",f"={COST_TOTAL_REF}*(1-G46)",CUR2)
+    lab(47,"A&P % of net");     calc("B47",f"={apb}",PCT); calc("C47",f"={apb}",PCT); calc("D47",f"={apb}",PCT)
+    lab(48,"Volume (cases)");   calc("B48","=B14*(1-G47)",INT); calc("C48","=B14",INT); calc("D48","=B14*(1+G48)",INT)
+    lab(49,"CAAP / case");      calc("B49","=B45-B46-B45*B47",CUR2); calc("C49","=C45-C46-C45*C47",CUR2); calc("D49","=D45-D46-D45*D47",CUR2)
+    lab(50,"Total CAAP",bold=True); calc("B50","=B49*B48",CUR0,bold=True); calc("C50","=C49*C48",CUR0,bold=True); calc("D50","=D49*D48",CUR0,bold=True)
+    lab(51,"GP %");             calc("B51",'=IFERROR((B45-B46)/B45,"-")',PCT,band=True); calc("C51",'=IFERROR((C45-C46)/C45,"-")',PCT,band=True); calc("D51",'=IFERROR((D45-D46)/D45,"-")',PCT,band=True)
+    # confidence factors (editable)
+    lab(45,"Worst COGS +%","E"); inp("G45",0.15,PCT)
+    lab(46,"Best COGS −%","E");  inp("G46",0.10,PCT)
+    lab(47,"Worst vol −%","E");  inp("G47",0.25,PCT)
+    lab(48,"Best vol +%","E");   inp("G48",0.20,PCT)
+
+    # checks
+    ws.conditional_formatting.add("B36", FormulaRule(formula=["B36>=0"], fill=GREEN))
+    ws.conditional_formatting.add("B36", FormulaRule(formula=["B36<0"], fill=RED))
+
+    # ---- P&L waterfall (per case) ----
+    hv = {"H4":"P&L bridge / case","H5":"Gross Rev","H6":"Discounts","H7":"COGS","H8":"A&P","H9":"CAAP"}
+    for k,v in hv.items():
+        ws[k]=v; ws[k].font=font(8,False,GREY)
+    # base (invisible) / decrease / increase  (cols I, J, K)
+    ws["I5"]=0;            ws["K5"]=t("M26"); ws["J5"]=0
+    ws["I6"]=t("M28");     ws["J6"]=t("M27"); ws["K6"]=0
+    ws["I7"]=t("M32");     ws["J7"]=t("M31"); ws["K7"]=0
+    ws["I8"]=t("M35");     ws["J8"]=t("M34"); ws["K8"]=0
+    ws["I9"]=0;            ws["K9"]=t("M35"); ws["J9"]=0
+    for r in range(5,10):
+        for c in "IJK": ws[f"{c}{r}"].number_format=CUR2; ws[f"{c}{r}"].font=font(8,False,GREY)
+    wf = BarChart(); wf.type="col"; wf.grouping="stacked"; wf.overlap=100
+    wf.title="P&L bridge — per case"; wf.legend=None; wf.height=8; wf.width=15
+    wf.add_data(Reference(ws,min_col=9,min_row=5,max_row=9), titles_from_data=False)   # base
+    wf.add_data(Reference(ws,min_col=10,min_row=5,max_row=9), titles_from_data=False)  # decrease
+    wf.add_data(Reference(ws,min_col=11,min_row=5,max_row=9), titles_from_data=False)  # increase
+    wf.set_categories(Reference(ws,min_col=8,min_row=5,max_row=9))
+    wf.series[0].graphicalProperties = GraphicalProperties(noFill=True)
+    wf.series[1].graphicalProperties = GraphicalProperties(solidFill="F4B183")  # decreases (orange)
+    wf.series[2].graphicalProperties = GraphicalProperties(solidFill="4472C4")  # totals (blue)
+    wf.y_axis.numFmt = '$#,##0'
+    ws.add_chart(wf, "A53")
+
+    ws.sheet_view.showGridLines = False
+    ws.freeze_panes = "A3"
+
+
 # ---- build workbook ----
 SKUS = ["Lime Lemon", "Passion Fruit Pineapple", "Raspberry"]
 TAB_COLORS = {"Lime Lemon": "FF92D050", "Passion Fruit Pineapple": "FFFFC000", "Raspberry": "FFC00000"}
@@ -909,10 +1066,12 @@ dash = wb.create_sheet("Dashboard"); dash.sheet_properties.tabColor = "FF4472C4"
 build_dashboard(dash, SKUS)
 assum = wb.create_sheet(ASSUMP); assum.sheet_properties.tabColor = "FFFFC000"
 build_assumptions(assum, SKUS)
-cover = wb.create_sheet("Cover"); cover.sheet_properties.tabColor = NAVY
+cover = wb.create_sheet("Start Here"); cover.sheet_properties.tabColor = "FF0A2540"
 build_cover(cover)
 exec_ = wb.create_sheet("Executive Summary"); exec_.sheet_properties.tabColor = "FFC00000"
 build_exec(exec_)
+bcase = wb.create_sheet("Business Case"); bcase.sheet_properties.tabColor = "FFED7D31"
+build_business_case(bcase)
 
 # charts: GP% and volume by channel (Dashboard), CAAP by SKU (Exec)
 def bar(anchor_ws, title, data_col, cat_ws, r0, r1, numfmt=None):
@@ -944,8 +1103,8 @@ for ws in wb.worksheets:
     ws.oddFooter.center.size = 8
 
 # final tab order
-order = ["Cover", "Executive Summary", ASSUMP, "Dashboard", "Scenarios", "Blended",
-         TTL_SHEET] + SKUS + [COST_SHEET]
+order = ["Start Here", "Executive Summary", "Business Case", ASSUMP, "Dashboard", "Scenarios",
+         "Blended", TTL_SHEET] + SKUS + [COST_SHEET]
 wb._sheets = [wb[name] for name in order]
 
 # force recalculation when opened in Excel / Google Sheets / LibreOffice
