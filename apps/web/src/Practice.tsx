@@ -181,26 +181,38 @@ export function PracticeHub({ lang }: { lang: 'vi' | 'en' }) {
   if (course) {
     const flat = allLessons(course);
     return (
-      <div className="space-y-3">
-        <button onClick={() => setCourse(null)} className="font-bold text-violet-500">←</button>
-        <h2 className="text-lg font-black">{course.emoji} {lang === 'vi' ? course.titleVi : course.titleEn}</h2>
+      <div className="space-y-4">
+        <button onClick={() => setCourse(null)} className="text-xl font-bold text-violet-500">←</button>
+        <div className="flex items-center gap-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-100 text-2xl">{course.emoji}</div>
+          <h2 className="text-lg font-black text-violet-800">{lang === 'vi' ? course.titleVi : course.titleEn}</h2>
+        </div>
         {course.units.map((u) => (
           <div key={u.id} className="space-y-2">
-            <h3 className="text-sm font-extrabold text-violet-700">{lang === 'vi' ? u.titleVi : u.titleEn}</h3>
+            <h3 className="px-1 text-xs font-extrabold uppercase tracking-wide text-violet-400">{lang === 'vi' ? u.titleVi : u.titleEn}</h3>
             {u.lessons.map((l) => {
               const flatIdx = flat.findIndex((x) => x.id === l.id);
-              const done = (progress[l.id] ?? 0) >= 50;
+              const pct = progress[l.id] ?? 0;
+              const done = pct >= 50;
               const unlocked = flatIdx === 0 || (progress[flat[flatIdx - 1].id] ?? 0) >= 50;
               return (
                 <button
                   key={l.id}
                   disabled={!unlocked}
                   onClick={() => setLesson(l)}
-                  className={`card flex w-full items-center gap-3 text-left ${unlocked ? 'hover:border-violet-300' : 'opacity-50'}`}
+                  className={`flex w-full items-center gap-3 rounded-2xl border p-3 text-left transition active:scale-[0.99] ${
+                    done ? 'border-emerald-100 bg-emerald-50/60' : unlocked ? 'border-violet-100 bg-white hover:border-violet-300' : 'border-slate-100 bg-slate-50 opacity-60'
+                  }`}
                 >
-                  <span className="text-2xl">{unlocked ? l.emoji : '🔒'}</span>
-                  <span className="flex-1 font-extrabold">{lang === 'vi' ? l.titleVi : l.titleEn}</span>
-                  {done && <span className="font-black text-emerald-600">✓ {progress[l.id]}%</span>}
+                  <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-lg ${done ? 'bg-emerald-100' : unlocked ? 'bg-violet-100' : 'bg-slate-200'}`}>
+                    {done ? '✓' : unlocked ? l.emoji : '🔒'}
+                  </span>
+                  <span className="flex-1 font-extrabold text-slate-700">{lang === 'vi' ? l.titleVi : l.titleEn}</span>
+                  {done ? (
+                    <span className="text-sm">{pct >= 90 ? '⭐⭐⭐' : pct >= 70 ? '⭐⭐' : '⭐'}</span>
+                  ) : unlocked ? (
+                    <span className="chip bg-violet-600 text-white">Học →</span>
+                  ) : null}
                 </button>
               );
             })}
@@ -212,20 +224,24 @@ export function PracticeHub({ lang }: { lang: 'vi' | 'en' }) {
 
   return (
     <div className="space-y-3">
-      <h2 className="font-black text-violet-700">📖 Tự luyện mỗi ngày</h2>
+      <h2 className="px-1 font-black text-violet-800">📖 Tự luyện mỗi ngày</h2>
       {COURSES.map((c) => {
         const lessons = allLessons(c);
         const done = lessons.filter((l) => (progress[l.id] ?? 0) >= 50).length;
+        const pct = Math.round((done / lessons.length) * 100);
         return (
-          <button key={c.id} onClick={() => setCourse(c)} className="card flex w-full items-center gap-3 text-left hover:border-violet-300">
-            <span className="text-3xl">{c.emoji}</span>
+          <button key={c.id} onClick={() => setCourse(c)} className="card flex w-full items-center gap-3 text-left transition active:scale-[0.99] hover:border-violet-300">
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-violet-50 text-2xl">{c.emoji}</span>
             <span className="min-w-0 flex-1">
-              <span className="block truncate font-extrabold">{lang === 'vi' ? c.titleVi : c.titleEn}</span>
-              <span className="mt-1 block h-2 overflow-hidden rounded-full bg-violet-100">
-                <span className="block h-full rounded-full bg-emerald-400" style={{ width: `${(done / lessons.length) * 100}%` }} />
+              <span className="block truncate font-black text-slate-700">{lang === 'vi' ? c.titleVi : c.titleEn}</span>
+              <span className="mt-1.5 block h-2 overflow-hidden rounded-full bg-violet-100">
+                <span className="block h-full rounded-full bg-gradient-to-r from-emerald-400 to-teal-400 transition-all" style={{ width: `${pct}%` }} />
               </span>
             </span>
-            <span className="text-xs font-bold text-slate-400">{done}/{lessons.length}</span>
+            <span className="shrink-0 text-right">
+              <span className="block text-sm font-black text-violet-700">{pct}%</span>
+              <span className="block text-[10px] font-bold text-slate-400">{done}/{lessons.length}</span>
+            </span>
           </button>
         );
       })}

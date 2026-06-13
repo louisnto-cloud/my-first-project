@@ -338,47 +338,52 @@ function OwnerDash() {
     ).then((xs) => setEscalations(xs.flat()));
   }, []);
 
+  const revenue = finance?.revenue.length ? Number(finance.revenue[finance.revenue.length - 1].revenueVnd) : null;
+  const unpaid = finance ? finance.arAging.reduce((s, a) => s + a.invoices, 0) : null;
+  const maxDelta = Math.max(0.01, ...(academic?.velocity.map((v) => Math.abs(Number(v.avgDelta))) ?? [0.01]));
+
   return (
-    <div className="space-y-3">
-      <h2 className="font-black text-violet-700">📊 Tổng quan trung tâm</h2>
+    <div className="space-y-4">
       {escalations.length > 0 && (
-        <div className="card border-rose-300 bg-rose-50 font-black text-rose-700">🚨 Cảnh báo vắng mặt đang mở: {escalations.map((e) => e.studentName).join(', ')}</div>
+        <div className="card animate-pop border-rose-300 bg-rose-50 text-center font-black text-rose-700">
+          🚨 Cảnh báo vắng mặt: {escalations.map((e) => e.studentName).join(', ')}
+        </div>
       )}
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <div className="card text-center">
-          <div className="text-xl">💰</div>
-          <div className="text-lg font-black text-violet-700">
-            {finance?.revenue.length ? `${Number(finance.revenue[finance.revenue.length - 1].revenueVnd).toLocaleString('vi-VN')}đ` : '—'}
-          </div>
-          <div className="text-[10px] font-bold text-slate-400">Doanh thu gần nhất</div>
-        </div>
-        <div className="card text-center">
-          <div className="text-xl">🧾</div>
-          <div className="text-lg font-black text-violet-700">
-            {finance ? `${finance.arAging.reduce((s, a) => s + a.invoices, 0)}` : '—'}
-          </div>
-          <div className="text-[10px] font-bold text-slate-400">Hóa đơn chưa thu</div>
-        </div>
-        <div className="card text-center">
-          <div className="text-xl">💜</div>
-          <div className="text-lg font-black text-violet-700">{nps?.nps ?? '—'}</div>
-          <div className="text-[10px] font-bold text-slate-400">NPS ({nps?.responses ?? 0} phản hồi)</div>
-        </div>
-        <div className="card text-center">
-          <div className="text-xl">🐢</div>
-          <div className="text-lg font-black text-violet-700">{academic?.stalled.length ?? '—'}</div>
-          <div className="text-[10px] font-bold text-slate-400">HS cần can thiệp</div>
-        </div>
+
+      <div className="rounded-3xl bg-gradient-to-br from-violet-700 to-fuchsia-600 p-5 text-white shadow-lg shadow-violet-300/40">
+        <div className="text-xs font-bold text-violet-100">💰 Doanh thu tháng này</div>
+        <div className="mt-1 text-4xl font-black">{revenue != null ? `${revenue.toLocaleString('vi-VN')}đ` : '—'}</div>
       </div>
+
+      <div className="grid grid-cols-3 gap-3">
+        {[
+          { emoji: '🧾', value: unpaid ?? '—', label: 'Hóa đơn chưa thu' },
+          { emoji: '💜', value: nps?.nps ?? '—', label: `NPS · ${nps?.responses ?? 0} ý kiến` },
+          { emoji: '🐢', value: academic?.stalled.length ?? '—', label: 'HS cần hỗ trợ' },
+        ].map((s) => (
+          <div key={s.label} className="card text-center">
+            <div className="text-xl">{s.emoji}</div>
+            <div className="text-2xl font-black text-violet-800">{s.value}</div>
+            <div className="text-[10px] font-bold leading-tight text-slate-400">{s.label}</div>
+          </div>
+        ))}
+      </div>
+
       {academic && academic.velocity.length > 0 && (
-        <div className="card">
-          <h3 className="mb-1 text-sm font-extrabold text-violet-700">📈 Tiến bộ theo giáo viên (8 tuần)</h3>
-          {academic.velocity.map((v) => (
-            <div key={v.tutorName} className="flex justify-between text-sm font-bold">
-              <span>{v.tutorName}</span>
-              <span className={Number(v.avgDelta) > 0 ? 'text-emerald-600' : 'text-slate-400'}>{Number(v.avgDelta) > 0 ? '+' : ''}{Number(v.avgDelta).toFixed(2)}</span>
-            </div>
-          ))}
+        <div className="card space-y-2">
+          <h3 className="text-sm font-extrabold text-violet-800">📈 Tiến bộ học viên theo giáo viên <span className="font-bold text-slate-400">· 8 tuần</span></h3>
+          {academic.velocity.map((v) => {
+            const d = Number(v.avgDelta);
+            return (
+              <div key={v.tutorName} className="flex items-center gap-2 text-sm font-bold">
+                <span className="w-24 shrink-0 truncate">{v.tutorName}</span>
+                <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-violet-50">
+                  <div className={`h-full rounded-full ${d >= 0 ? 'bg-emerald-400' : 'bg-rose-400'}`} style={{ width: `${(Math.abs(d) / maxDelta) * 100}%` }} />
+                </div>
+                <span className={`w-12 text-right ${d >= 0 ? 'text-emerald-600' : 'text-rose-500'}`}>{d >= 0 ? '+' : ''}{d.toFixed(2)}</span>
+              </div>
+            );
+          })}
         </div>
       )}
     </div>
