@@ -486,6 +486,7 @@ def build_readme():
      ("Tabs","README, Executive Dashboard, Strategic Insights, Data Dictionary, 5 Master tabs, Brand Roll-up, Category Benchmarks, Nutrition Scoreboard, Pricing & Promo, Subscription Strategy, Why They Win, Velocity Estimate, Flavour Map, Live-Capture Protocol, QA & Integrity, Enrichment Log, Sources."),
      ("Strategic Insights tab","Synthesized 'so what' layer: top findings, a flavour-whitespace matrix (category x family), nutrition positioning by category, the sweetener-strategy mix, and a prioritized opportunity shortlist. Every figure is COMPUTED from the verified stable attributes — no live commercial data required."),
      ("Integrity statement","Nothing in the commercial columns is invented. Where a live figure could not be obtained it is blank and flagged, so the file survives a fact-check against the live listings."),
+     ("Automated integrity test","'nothing fabricated' is machine-enforced, not just promised: test_competitor_intel.py asserts every commercial cell is blank, every computed column is a formula, nutrition is in range, SKU counts reconcile across tabs, and all TOC links + Enrichment Log citations resolve. It runs automatically at the end of every build and the build fails if any check fails. Run it any time with: python3 test_competitor_intel.py"),
     ]
     # ---- clickable Table of Contents (internal hyperlinks to every tab) ----
     r=5
@@ -850,6 +851,8 @@ def build_qa_clean():
         FormulaRule(formula=[f'LEFT(H{first_data},2)="NO"'],fill=PatternFill("solid",fgColor=RED)))
     note=put(ws,r+2,1,"This tab self-audits live: as you fill the amber cells on the Master tabs, blank counts fall and 'Capture complete?' flips to YES. Today every commercial cell is intentionally blank (no fabrication).")
     note.font=Font(italic=True,color="C00000"); ws.merge_cells(start_row=r+2,start_column=1,end_row=r+2,end_column=8)
+    note2=put(ws,r+3,1,"Automated guarantee: run  python3 test_competitor_intel.py  (also run automatically at the end of every build). It asserts no commercial cell is fabricated, every computed column holds a formula, nutrition values are in range, SKU counts reconcile across tabs, and all TOC links + Enrichment Log sources resolve.")
+    note2.font=Font(italic=True,color="548235"); ws.merge_cells(start_row=r+3,start_column=1,end_row=r+3,end_column=8)
     return ws
 
 # ---------- SOURCES ----------
@@ -1257,3 +1260,13 @@ for c in CATS:
     print(f"  {c}: {sum(1 for s in SKUS if s['category']==c)} SKUs  ({sum(1 for p in LINES if p['category']==c)} lines)")
 print("TOTAL SKUs:",len(SKUS),"| lines:",len(LINES),"| brands:",len(set(p['brand'] for p in LINES)))
 print("Sheets:",len(wb.sheetnames)); print(wb.sheetnames)
+
+# self-validate: run the integrity suite against the file we just wrote.
+# A failed build should NOT ship a workbook that violates the honesty guarantees.
+import os, sys, subprocess
+_test=os.path.join(os.path.dirname(os.path.abspath(__file__)),"test_competitor_intel.py")
+if os.path.exists(_test):
+    print("\nRunning integrity self-check ...")
+    rc=subprocess.run([sys.executable,_test,FNAME]).returncode
+    if rc!=0:
+        sys.exit(rc)
