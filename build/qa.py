@@ -5,7 +5,7 @@ import openpyxl
 from openpyxl.utils import get_column_letter
 warnings.filterwarnings("ignore")
 
-OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v7.xlsx"
+OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v8.xlsx"
 SRC = "/root/.claude/uploads/607dab49-f51b-5b86-83ad-5f4c7139295f/029750d9-Organika_RTD_BC_Tracker.xlsx"
 fails=[]; warns=[]
 def ok(m): print("  PASS  "+m)
@@ -217,6 +217,21 @@ grp=wb["Run Clubs"].column_dimensions["V"].outlineLevel
 if grp and wb["Run Clubs"].column_dimensions["V"].hidden:
     ok("type tabs collapse the activation columns that moved to the Activations tab")
 else: warn(f"type tab grouping: outline={grp}")
+
+print("\n[13] Apple style front door")
+sh=wb["Start Here"]
+locs=set()
+for row in sh.iter_rows():
+    for c in row:
+        if c.hyperlink and getattr(c.hyperlink,"location",None):
+            locs.add(c.hyperlink.location.split("!")[0].strip("\'"))
+need={"Action List","Activations","Dashboard","Master List"}
+if need <= locs: ok("Start Here links to Action List, Activations, Dashboard and Master List with tappable cards")
+else: bad(f"front door links found: {locs}")
+if wb.worksheets[0].title=="Start Here": ok("Start Here is the first tab the file opens on")
+else: bad("Start Here is not first")
+if wb["Run Clubs"].column_dimensions["AG"].outlineLevel: ok("type tabs now fold the whole detail block (V to AG) for a clean core view")
+else: warn("deeper collapse not detected")
 
 print("\n================ QA SUMMARY ================")
 print(f"  FAILURES: {len(fails)}   NOTES: {len(warns)}")
