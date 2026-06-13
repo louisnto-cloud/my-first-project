@@ -147,6 +147,21 @@ textarea {
   animation: shard-fall var(--dur, 3.2s) linear var(--delay, 0s) both;
 }
 
+/* Sacred art: a slow, living drift (Ken Burns), and touch parallax */
+@keyframes art-drift {
+  0% { transform: scale(1.06) translate3d(0, 0, 0); }
+  100% { transform: scale(1.12) translate3d(0, -2.2%, 0); }
+}
+.art-drift {
+  animation: art-drift 22s ease-in-out infinite alternate;
+}
+.art-parallax {
+  /* the layer the pointer/tilt nudges; over-scaled so edges never show */
+  transform: scale(1.12) translate3d(calc(var(--px, 0) * 10px), calc(var(--py, 0) * 10px), 0);
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
 /* Map: the road glows softly */
 @keyframes road-dash {
   to { stroke-dashoffset: -24; }
@@ -165,10 +180,11 @@ textarea {
 /* ─── Reduced motion: respect it everywhere ──────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .flame, .light-bloom, .stamp-press, .ink-bleed, .page-in, .gold-glow,
-  .shard, .road-path, .soft-glow {
+  .shard, .road-path, .soft-glow, .art-drift {
     animation: none !important;
   }
   .light-bloom, .stamp-press, .ink-bleed { opacity: 1; }
+  .art-parallax { transform: scale(1.06); transition: none; }
   * {
     transition-duration: 0.01ms !important;
   }

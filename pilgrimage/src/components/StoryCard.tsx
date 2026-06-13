@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import type { StoryCard as StoryCardT } from '@/content/types';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
-import { SacredArt } from '@/components/SacredArt';
+import { InteractiveArt } from '@/components/InteractiveArt';
 import { RichText } from '@/components/GlossaryTerm';
 import { SpeakerButton } from '@/components/SpeakerButton';
 
@@ -30,8 +30,8 @@ export function StoryCardView({ card, onDone }: { card: StoryCardT; onDone: () =
   return (
     <div className="page-in flex h-full flex-col" key={card.id}>
       <div className="relative min-h-0 flex-1 overflow-hidden">
-        <SacredArt kind={card.art} rounded={false} />
-        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-lapis via-lapis/70 to-transparent" />
+        <InteractiveArt kind={card.art} />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-lapis via-lapis/70 to-transparent" />
       </div>
 
       <div className="-mt-16 relative z-10 flex flex-col gap-4 px-6 pb-6">

@@ -10,7 +10,7 @@ import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { candleStreak, nextStep } from '@/lib/progress';
 import { todayISO } from '@/lib/storage';
-import { SacredArt } from '@/components/SacredArt';
+import { InteractiveArt } from '@/components/InteractiveArt';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { DailyReliquary } from '@/components/DailyReliquary';
 import { InstallPrompt } from '@/components/InstallPrompt';
@@ -64,8 +64,8 @@ export default function TodayPage() {
             className="group block overflow-hidden rounded-[28px] bg-[#141b33] shadow-[0_20px_60px_-20px_rgba(0,0,0,0.7)]"
           >
             <div className="relative aspect-[5/4]">
-              <SacredArt kind={step.lesson.door.art} rounded={false} />
-              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#141b33] via-[#141b33]/60 to-transparent" />
+              <InteractiveArt kind={step.lesson.door.art} />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#141b33] via-[#141b33]/60 to-transparent" />
               <span className="absolute right-4 top-4 rounded-full bg-lapis/60 px-3 py-1 text-[11px] font-semibold text-ivory/90 backdrop-blur-md">
                 {step.lesson.minutes} {t(UI.minutesShort)}
               </span>

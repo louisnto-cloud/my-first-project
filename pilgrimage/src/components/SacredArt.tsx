@@ -1504,10 +1504,12 @@ function Scene({ kind }: { kind: ArtKind }) {
             {/* a few side tongues licking outward */}
             <Tongue cx={128} cy={238} h={70} w={34} lean={-46} fill="url(#bushOuter)" opacity={0.85} flicker />
             <Tongue cx={272} cy={238} h={72} w={34} lean={46} fill="url(#bushOuter)" opacity={0.85} flicker />
-            {/* ivory heart of the fire */}
-            <Tongue cx={200} cy={240} h={104} w={26} lean={0} fill="url(#bushInner)" flicker />
-            <Tongue cx={191} cy={236} h={74} w={16} lean={-8} fill={IVORY} opacity={0.85} flicker />
-            <Tongue cx={209} cy={236} h={76} w={16} lean={8} fill={IVORY} opacity={0.85} flicker />
+            {/* ivory heart of the fire, blooming with light */}
+            <g filter="url(#sa-bloom)">
+              <Tongue cx={200} cy={240} h={104} w={26} lean={0} fill="url(#bushInner)" flicker />
+              <Tongue cx={191} cy={236} h={74} w={16} lean={-8} fill={IVORY} opacity={0.85} flicker />
+              <Tongue cx={209} cy={236} h={76} w={16} lean={8} fill={IVORY} opacity={0.85} flicker />
+            </g>
           </g>
 
           {/* embers rising into the dark */}
@@ -1752,14 +1754,56 @@ function Scene({ kind }: { kind: ArtKind }) {
   }
 }
 
+// A shared treatment that lifts every scene out of "flat vector" territory:
+// painterly edge displacement, a warm bloom, film grain, and a gallery
+// vignette — light and texture, the difference between clip-art and craft.
+function Treatment() {
+  return (
+    <defs>
+      {/* gentle organic warp so edges aren't mechanically perfect */}
+      <filter id="sa-paint" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="7" result="n" />
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      {/* fine film grain, rendered as its own tile and blended soft */}
+      <filter id="sa-grain">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="t" />
+        <feColorMatrix in="t" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.5 0" />
+      </filter>
+      {/* warm light bloom for flames, halos, gilding */}
+      <filter id="sa-bloom" x="-40%" y="-40%" width="180%" height="180%">
+        <feGaussianBlur stdDeviation="5" result="b" />
+        <feMerge>
+          <feMergeNode in="b" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+      {/* a soft inner darkening at the edges, like a lit painting */}
+      <radialGradient id="sa-vignette" cx="50%" cy="44%" r="78%">
+        <stop offset="0%" stopColor="#000000" stopOpacity="0" />
+        <stop offset="72%" stopColor="#000000" stopOpacity="0" />
+        <stop offset="100%" stopColor="#05070f" stopOpacity="0.5" />
+      </radialGradient>
+      {/* a hair of warm light pooled at the top, where grace enters */}
+      <radialGradient id="sa-light" cx="50%" cy="8%" r="60%">
+        <stop offset="0%" stopColor={IVORY} stopOpacity="0.08" />
+        <stop offset="100%" stopColor={IVORY} stopOpacity="0" />
+      </radialGradient>
+    </defs>
+  );
+}
+
 export function SacredArt({
   kind,
   className = '',
   rounded = true,
+  drift = false,
 }: {
   kind: ArtKind;
   className?: string;
   rounded?: boolean;
+  /** Slow Ken-Burns drift — for large hero/story art, not small icons. */
+  drift?: boolean;
 }) {
   const art = artworkById(kind);
   return (
@@ -1770,7 +1814,24 @@ export function SacredArt({
       aria-label={art?.title.en}
       className={`block h-full w-full ${rounded ? 'rounded-2xl' : ''} ${className}`}
     >
-      <Scene kind={kind} />
+      <Treatment />
+      <g className={drift ? 'art-drift' : undefined} style={{ transformOrigin: 'center' }}>
+        <g filter="url(#sa-paint)">
+          <Scene kind={kind} />
+        </g>
+        {/* warm pooled light, then a gallery vignette */}
+        <rect width="400" height="300" fill="url(#sa-light)" pointerEvents="none" />
+        <rect width="400" height="300" fill="url(#sa-vignette)" pointerEvents="none" />
+        {/* film grain, blended soft so it reads as canvas, not noise */}
+        <rect
+          width="400"
+          height="300"
+          filter="url(#sa-grain)"
+          opacity="0.14"
+          style={{ mixBlendMode: 'soft-light' }}
+          pointerEvents="none"
+        />
+      </g>
     </svg>
   );
 }

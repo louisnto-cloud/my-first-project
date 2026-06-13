@@ -12,6 +12,7 @@ import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { getSave, lightCandle, todayISO, updateSave } from '@/lib/storage';
 import { SacredArt } from '@/components/SacredArt';
+import { InteractiveArt } from '@/components/InteractiveArt';
 import { StoryCardView } from '@/components/StoryCard';
 import { QuizEngine } from '@/components/QuizEngine';
 import { CandleRitual } from '@/components/CandleRitual';
@@ -179,8 +180,8 @@ export function LessonPlayer({ world, lesson }: { world: World; lesson: Lesson }
           <button onClick={() => setStep(1)} className="block h-full w-full text-left">
             <div className="relative flex h-[calc(100dvh-60px)] flex-col">
               <div className="relative min-h-0 flex-1 overflow-hidden">
-                <SacredArt kind={lesson.door.art} rounded={false} />
-                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-lapis via-lapis/70 to-transparent" />
+                <InteractiveArt kind={lesson.door.art} />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-lapis via-lapis/70 to-transparent" />
               </div>
               <div className="relative z-10 -mt-28 px-6 pb-12">
                 <p className="font-display text-xs uppercase tracking-[0.3em] text-gold">{t(world.church)}</p>
