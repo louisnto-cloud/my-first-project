@@ -12,6 +12,7 @@ import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { updateSave } from '@/lib/storage';
 import { SacredArt } from '@/components/SacredArt';
+import { SpeakerButton } from '@/components/SpeakerButton';
 
 function BeadStrip({ position, total }: { position: number; total: number }) {
   // Ten beads of the current decade (or the 3 opening beads), as a string.
@@ -102,6 +103,15 @@ export function RosaryTrainer() {
   const prayer = step.announce ? null : prayerById(step.prayerId);
   const art = mystery ? mystery.art : 'candle-single';
 
+  // What the speaker reads for the current bead: the mystery's meditation, or
+  // the prayer's lines. Manual only — the pane itself advances on tap.
+  const spoken =
+    step.announce && mystery
+      ? `${t(mystery.title)}. ${t(mystery.meditation)}`
+      : prayer
+        ? (lang === 'vi' ? prayer.vi : prayer.en).join(' ')
+        : '';
+
   return (
     <div className="flex min-h-dvh flex-col">
       <div className="flex items-center gap-3 px-4 pt-4">
@@ -121,6 +131,7 @@ export function RosaryTrainer() {
             <div className="h-full bg-gold transition-all duration-300" style={{ width: `${(Math.min(i, steps.length) / steps.length) * 100}%` }} />
           </div>
         </div>
+        {!done && spoken && <SpeakerButton id={`rosary-${i}-${lang}`} text={spoken} />}
       </div>
 
       {!done ? (

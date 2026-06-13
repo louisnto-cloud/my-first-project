@@ -14,6 +14,7 @@ import { ChapelOfCandles } from '@/components/ChapelOfCandles';
 import { RoseWindow } from '@/components/RoseWindow';
 import { RCIAMilestoneTracker } from '@/components/RCIAMilestoneTracker';
 import { LanguageToggle } from '@/components/LanguageToggle';
+import { SpeakerButton } from '@/components/SpeakerButton';
 import { updateSave } from '@/lib/storage';
 
 export default function ChapelPage() {
@@ -70,9 +71,14 @@ export default function ChapelPage() {
                 </button>
                 {openPrayer === p.id && (
                   <div className="px-4 pb-4">
-                    {(lang === 'vi' ? p.vi : p.en).map((line, i) => (
-                      <p key={i} className="font-story text-lg leading-relaxed text-ivory">{line}</p>
-                    ))}
+                    <div className="flex items-start gap-3">
+                      <div className="flex-1">
+                        {(lang === 'vi' ? p.vi : p.en).map((line, i) => (
+                          <p key={i} className="font-story text-lg leading-relaxed text-ivory">{line}</p>
+                        ))}
+                      </div>
+                      <SpeakerButton id={`prayer-${p.id}-${lang}`} text={(lang === 'vi' ? p.vi : p.en).join(' ')} />
+                    </div>
                     <p className="mt-3 font-story text-base italic text-incense">{t(p.about)}</p>
                   </div>
                 )}
