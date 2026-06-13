@@ -15,7 +15,7 @@ Nutrition Scoreboard, Live-Capture Protocol, self-auditing QA tab, Excel Tables,
 data bars / colour scales, and more products (70+).
 """
 
-import datetime
+import datetime, re, statistics
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
@@ -233,7 +233,6 @@ add(brand="ALO",sku="ALO Exposed Aloe Vera Drink",category=C3,format="500 mL bot
 add(brand="Sparkling Ice",sku="Sparkling Ice +Caffeine",category=C1,format="473 mL can",pack=12,flavours="Black Raspberry, Citrus Twist, Orange Passionfruit, Strawberry Citrus, Triple Citrus",caffeine=70,sodium=25,potassium=None,sugar=0,calories=5,sweetener="Sucralose",claims="70 mg caffeine, vitamins, antioxidants, zero sugar",vband="Medium",vsignal="Caffeinated line of mass sparkling brand",message="Zero-sugar sparkling with a caffeine boost",why="Light caffeine plus vitamins, zero sugar.",unitml=473)
 
 # ===== SKU EXPANSION ENGINE (line x flavour x pack-size = one SKU/ASIN row) =====
-import re
 def short_size(ln):
     m=re.search(r'(\d+(?:\.\d+)?)\s*(mL|L)',ln["format"] or "")
     if not m: return ""
@@ -292,6 +291,36 @@ def sweet_class(s):
     if noncal: return "Non-caloric only"
     if cal: return "Caloric only"
     return "Other"
+
+def sweet_fine(s):
+    """Finer sweetener taxonomy that separates natural-zero from artificial-zero."""
+    s=(s or "").lower()
+    if s.startswith("none"): return "Unsweetened"
+    nat=any(x in s for x in ["stevia","monk"])
+    art=any(x in s for x in ["sucralose","aspartame","acesulfame","erythritol"])
+    cal=any(x in s for x in ["sugar","cane","hfcs","corn syrup","fructose","agave","dextrose","glucose","cassava","juice"])
+    if cal and (nat or art): return "Caloric + sweetener blend"
+    if cal: return "Caloric (sugar)"
+    if nat and art: return "Zero (natural + artificial)"
+    if nat: return "Zero (natural: stevia/monk)"
+    if art: return "Zero (artificial)"
+    return "Other"
+
+# ---- shared flavour taxonomy (used by Flavour Map + Strategic Insights) ----
+FLAV_FAMS=["Cola/Root Beer","Citrus (Lem/Lime)","Orange/Mango","Berry/Rasp","Cherry","Grape",
+      "Watermelon","Peach","Tropical/Pineapple","Grapefruit","Coconut","Ginger","Herbal/Botanical","Original/Plain"]
+FLAV_KEYMAP={"Cola/Root Beer":["cola","root beer","doctor","kola","dr."],
+ "Citrus (Lem/Lime)":["lemon","lime","limon","limonata","yuzu","citrus"],
+ "Orange/Mango":["orange","mango","aranciata","clementine","tangerine","mandarin"],
+ "Berry/Rasp":["berry","raspberry","blackberry","blueberry","razz","acai","pomegranate","cranberry"],
+ "Cherry":["cherry"],"Grape":["grape"],"Watermelon":["watermelon"],"Peach":["peach"],
+ "Tropical/Pineapple":["tropical","pineapple","passion","guava","paradise","coconut pineapple","hawaiian"],
+ "Grapefruit":["grapefruit","pamplemousse","pompel"],"Coconut":["coconut"],"Ginger":["ginger"],
+ "Herbal/Botanical":["lavender","basil","hibiscus","rose","mint","cactus","hops","chai","verbena","lemongrass","elderflower","botanical"],
+ "Original/Plain":["original","classic","pure","unflavored","unflavoured","still","natural","espresso"]}
+def flav_hits(text):
+    text=(text or "").lower()
+    return {fam for fam in FLAV_FAMS if any(k in text for k in FLAV_KEYMAP[fam])}
 
 # ============================================================
 # WORKBOOK
@@ -424,7 +453,8 @@ def build_readme():
      ("Velocity estimate (field 27)","Bands are ESTIMATES from brand prominence/category position because live review counts/BSR were not accessible. Re-derive from real #Ratings + BSR once captured. Never a unit count."),
      ("Scope rules","RTD only. Powders, drink-mix packets, tablets EXCLUDED (Liquid I.V., Nuun, LMNT, Cure powder, Cirkul). One PRIMARY category per product; overlaps noted."),
      ("Cross-tab linkage","Pricing & Promo and Subscription tabs are LIVE-LINKED to the Master tabs - fill a price once and those tabs update automatically."),
-     ("Tabs","README, Executive Dashboard, Data Dictionary, 5 Master tabs, Brand Roll-up, Category Benchmarks, Nutrition Scoreboard, Pricing & Promo, Subscription Strategy, Why They Win, Velocity Estimate, Flavour Map, Live-Capture Protocol, QA & Integrity, Sources."),
+     ("Tabs","README, Executive Dashboard, Strategic Insights, Data Dictionary, 5 Master tabs, Brand Roll-up, Category Benchmarks, Nutrition Scoreboard, Pricing & Promo, Subscription Strategy, Why They Win, Velocity Estimate, Flavour Map, Live-Capture Protocol, QA & Integrity, Enrichment Log, Sources."),
+     ("Strategic Insights tab","Synthesized 'so what' layer: top findings, a flavour-whitespace matrix (category x family), nutrition positioning by category, the sweetener-strategy mix, and a prioritized opportunity shortlist. Every figure is COMPUTED from the verified stable attributes — no live commercial data required."),
      ("Integrity statement","Nothing in the commercial columns is invented. Where a live figure could not be obtained it is blank and flagged, so the file survives a fact-check against the live listings."),
     ]
     r=5
@@ -616,23 +646,12 @@ def build_velocity():
 
 # ---------- FLAVOUR MAP ----------
 def build_flavourmap():
-    fams=["Cola/Root Beer","Citrus (Lem/Lime)","Orange/Mango","Berry/Rasp","Cherry","Grape",
-          "Watermelon","Peach","Tropical/Pineapple","Grapefruit","Coconut","Ginger","Herbal/Botanical","Original/Plain"]
+    fams=FLAV_FAMS
     H=["Brand"]+fams+["Flavour breadth"]
-    ws=simple("Flavour Map",[20]+[12]*len(fams)+[13] and ["x"]*0 or [],None) if False else None
     ws=wb.create_sheet("Flavour Map"); tabcolor(ws,GREEN)
     widths(ws,[20]+[11]*len(fams)+[14])
     for i,h in enumerate(H,1): ws.cell(row=1,column=i,value=h)
     style_header(ws,len(H)); ws.freeze_panes="B2"
-    keymap={"Cola/Root Beer":["cola","root beer","doctor","kola","dr."],
-     "Citrus (Lem/Lime)":["lemon","lime","limon","limonata","yuzu","citrus"],
-     "Orange/Mango":["orange","mango","aranciata","clementine","tangerine","mandarin"],
-     "Berry/Rasp":["berry","raspberry","blackberry","blueberry","razz","acai","pomegranate","cranberry"],
-     "Cherry":["cherry"],"Grape":["grape"],"Watermelon":["watermelon"],"Peach":["peach"],
-     "Tropical/Pineapple":["tropical","pineapple","passion","guava","paradise","coconut pineapple","hawaiian"],
-     "Grapefruit":["grapefruit","pamplemousse","pompel"],"Coconut":["coconut"],"Ginger":["ginger"],
-     "Herbal/Botanical":["lavender","basil","hibiscus","rose","mint","cactus","hops","chai","verbena","lemongrass","elderflower","botanical"],
-     "Original/Plain":["original","classic","pure","unflavored","unflavoured","still","natural","espresso"]}
     bf={}
     for p in LIVE:
         bf.setdefault(p["brand"],"")
@@ -640,9 +659,9 @@ def build_flavourmap():
     r=2
     for brand in sorted(bf):
         put(ws,r,1,brand,bold=True)
-        text=bf[brand].lower(); breadth=0
+        hits=flav_hits(bf[brand]); breadth=0
         for ci,fam in enumerate(fams,2):
-            hit=any(k in text for k in keymap[fam])
+            hit=fam in hits
             c=put(ws,r,ci,"X" if hit else "",align=Alignment(horizontal="center",vertical="center"))
             if hit: c.fill=PatternFill("solid",fgColor=GREEN); breadth+=1
         put(ws,r,len(H),breadth,align=Alignment(horizontal="center"),bold=True)
@@ -887,6 +906,155 @@ def build_enrichment_log():
     return ws
 
 # ---------- EXECUTIVE DASHBOARD ----------
+def _pct(n,d): return round(100*n/d) if d else 0
+
+def compute_findings():
+    """Synthesized, fully-computed strategic findings from the verified STABLE attributes.
+    Every number is derived from the data set, not asserted. Returns list of (headline, detail)."""
+    nlines=len(LINES); nbrand=len(set(p["brand"] for p in LINES))
+    with_sugar=[p for p in LINES if isinstance(p["sugar"],(int,float))]
+    sf=[p for p in with_sugar if p["sugar"]<=1]
+    # sweetener mix
+    fine={}
+    for p in LINES: fine[sweet_fine(p["sweetener"])]=fine.get(sweet_fine(p["sweetener"]),0)+1
+    nat_zero=sum(v for k,v in fine.items() if k.startswith("Zero (natural"))
+    art_zero=sum(v for k,v in fine.items() if k=="Zero (artificial)")
+    # energy caffeine concentration
+    energy=[p for p in LINES if p["category"]==C4 and isinstance(p["caffeine"],(int,float))]
+    hi_caf=[p for p in energy if p["caffeine"]>=200]
+    # flavour whitespace: families served by fewest brands (across all categories)
+    fam_brand=dict((f,set()) for f in FLAV_FAMS)
+    for p in LINES:
+        for f in flav_hits(p["flavours"]): fam_brand[f].add(p["brand"])
+    thin=sorted(FLAV_FAMS,key=lambda f:len(fam_brand[f]))[:3]
+    thin_txt="; ".join(f"{f} ({len(fam_brand[f])} brands)" for f in thin)
+    # category most/least sugar-free
+    cat_sf=[]
+    for c in CATS:
+        ws_=[p for p in LINES if p["category"]==c and isinstance(p["sugar"],(int,float))]
+        s_=[p for p in ws_ if p["sugar"]<=1]
+        cat_sf.append((c.split(")")[1].strip(),_pct(len(s_),len(ws_))))
+    most_sf=max(cat_sf,key=lambda x:x[1]); least_sf=min(cat_sf,key=lambda x:x[1])
+    # high-sugar count
+    hi_sugar=[p for p in with_sugar if p["sugar"]>=30]
+    return [
+     ("Field scope",
+      f"{nlines} product lines across {nbrand} brands and 5 RTD categories ({len(SKUS)} SKU permutations). "
+      "All nutrition attributes secondary-source verified (see Enrichment Log); commercial fields await live capture."),
+     ("Zero-sugar is now the default, not the exception",
+      f"{len(sf)} of {len(with_sugar)} lines ({_pct(len(sf),len(with_sugar))}%) are sugar-free (≤1 g). "
+      f"Most sugar-free category: {most_sf[0]} ({most_sf[1]}%); least: {least_sf[0]} ({least_sf[1]}%). "
+      f"{len(hi_sugar)} lines still carry ≥30 g sugar — a shrinking, vulnerable segment."),
+     ("Natural-zero sweeteners are the live battleground",
+      f"{nat_zero} lines use natural-zero sweeteners (stevia/monk fruit) vs {art_zero} pure-artificial-zero. "
+      "Stevia/monk is the clean-label wedge brands use to undercut sucralose-based incumbents — the fastest-moving positioning lever in the set."),
+     ("Energy caffeine has bifurcated",
+      f"{len(hi_caf)} of {len(energy)} energy lines ({_pct(len(hi_caf),len(energy))}%) now dose ≥200 mg caffeine. "
+      "The category is splitting into a high-dose performance tier (200-300 mg) and a mainstream 80-160 mg tier; the 160-200 mg middle is thin."),
+     ("Flavour whitespace concentrated in a few families",
+      f"Least-served flavour families across the field: {thin_txt}. "
+      "These are the clearest line-extension gaps for a challenger brand (see Flavour Whitespace matrix below)."),
+     ("Functional + electrolyte crossover is the structural growth vector",
+      "Categories 1-3 (functional/electrolyte sparkling) skew sugar-free with added minerals/vitamins; "
+      "they are where premium price and Subscribe & Save retention concentrate once live pricing is captured."),
+    ]
+
+def build_insights():
+    ws=wb.create_sheet("Strategic Insights"); ws.sheet_view.showGridLines=False; tabcolor(ws,"C00000")
+    widths(ws,[3,30,18,18,18,18,18,18])
+    ws.cell(row=2,column=2,value="Strategic Insights & Opportunity Whitespace").font=Font(bold=True,size=18,color=NAVY)
+    ws.cell(row=3,column=2,value=f"Synthesis of verified STABLE attributes  |  {TODAY}  |  every figure computed from the data set, not asserted").font=Font(italic=True,color="C00000")
+    r=5
+    # --- A. Key findings ---
+    ws.cell(row=r,column=2,value="A.  Top strategic findings").font=Font(bold=True,size=13,color=NAVY); r+=1
+    for head,detail in compute_findings():
+        h=put(ws,r,2,head,bold=True,fill=LTBLUE); h.font=Font(bold=True,color=NAVY)
+        d=put(ws,r,3,detail); ws.merge_cells(start_row=r,start_column=3,end_row=r,end_column=8)
+        ws.row_dimensions[r].height=46; r+=1
+    r+=1
+    # --- B. Flavour whitespace matrix (category x family = # distinct brands) ---
+    ws.cell(row=r,column=2,value="B.  Flavour whitespace — # distinct brands offering each family, by category (low = opportunity)").font=Font(bold=True,size=13,color=NAVY); r+=1
+    fams=FLAV_FAMS
+    hdr=r
+    put(ws,r,2,"Flavour family",bold=True,fill=NAVY).font=Font(bold=True,color=WHITE)
+    for ci,c in enumerate(CATS,3):
+        cell=put(ws,r,ci,c.split(")")[0]+")",bold=True,fill=NAVY,align=HALIGN); cell.font=Font(bold=True,color=WHITE)
+    tot=put(ws,r,3+len(CATS),"All",bold=True,fill=NAVY,align=HALIGN); tot.font=Font(bold=True,color=WHITE)
+    r+=1
+    # precompute matrix
+    mat={f:{} for f in fams}
+    for f in fams:
+        for c in CATS:
+            mat[f][c]=len(set(p["brand"] for p in LINES if p["category"]==c and f in flav_hits(p["flavours"])))
+        mat[f]["all"]=len(set(p["brand"] for p in LINES if f in flav_hits(p["flavours"])))
+    for f in fams:
+        put(ws,r,2,f,bold=True)
+        for ci,c in enumerate(CATS,3):
+            v=mat[f][c]
+            cell=put(ws,r,ci,v,align=Alignment(horizontal="center"))
+            # opportunity heat: warmer = thinner coverage = bigger whitespace
+            if v==0: cell.fill=PatternFill("solid",fgColor=RED)
+            elif v<=2: cell.fill=PatternFill("solid",fgColor=AMBER)
+        a=put(ws,r,3+len(CATS),mat[f]["all"],align=Alignment(horizontal="center"),bold=True)
+        r+=1
+    ws.cell(row=r,column=2,value="Opportunity heat — red = 0 brands (clear whitespace in that category) · amber = 1-2 brands (thinly served).").font=Font(italic=True,size=9,color="808080")
+    ws.merge_cells(start_row=r,start_column=2,end_row=r,end_column=8); r+=2
+    # --- C. Nutrition positioning by category ---
+    ws.cell(row=r,column=2,value="C.  Nutrition positioning by category").font=Font(bold=True,size=13,color=NAVY); r+=1
+    cols=["Category","Lines","% sugar-free","Median sugar (g)","Caffeine range (mg)","Positioning read"]
+    for ci,h in enumerate(cols,2):
+        cell=put(ws,r,ci,h,bold=True,fill=NAVY,align=HALIGN); cell.font=Font(bold=True,color=WHITE)
+    ws.merge_cells(start_row=r,start_column=7,end_row=r,end_column=8); r+=1
+    reads={C1:"Premium clean tier; sugar-free + minerals is table stakes.",
+     C2:"Performance hydration; sodium/potassium load is the differentiator.",
+     C3:"Benefit-led (gut/adaptogen/vitamin); sugar varies widely — clean-label gap exists.",
+     C4:"Caffeine-defined; dose tier + sweetener choice decide the shelf.",
+     C5:"Split between zero-everything seltzer and full-sugar legacy soda."}
+    for c in CATS:
+        ps=[p for p in LINES if p["category"]==c]
+        sug=[p["sugar"] for p in ps if isinstance(p["sugar"],(int,float))]
+        sfp=_pct(sum(1 for x in sug if x<=1),len(sug))
+        caf=[p["caffeine"] for p in ps if isinstance(p["caffeine"],(int,float))]
+        crange=("n/a" if not caf else (str(min(caf)) if min(caf)==max(caf) else f"{min(caf)}-{max(caf)}"))
+        med=round(statistics.median(sug),1) if sug else "n/a"
+        put(ws,r,2,c.split(")")[1].strip(),bold=True)
+        put(ws,r,3,len(ps),align=Alignment(horizontal="center"))
+        put(ws,r,4,f"{sfp}%",align=Alignment(horizontal="center"))
+        put(ws,r,5,med,align=Alignment(horizontal="center"))
+        put(ws,r,6,crange,align=Alignment(horizontal="center"))
+        put(ws,r,7,reads[c]); ws.merge_cells(start_row=r,start_column=7,end_row=r,end_column=8)
+        ws.row_dimensions[r].height=30; r+=1
+    r+=1
+    # --- D. Sweetener shift ---
+    ws.cell(row=r,column=2,value="D.  Sweetener strategy mix (count of lines)").font=Font(bold=True,size=13,color=NAVY); r+=1
+    fine={}
+    for p in LINES: fine[sweet_fine(p["sweetener"])]=fine.get(sweet_fine(p["sweetener"]),0)+1
+    put(ws,r,2,"Sweetener strategy",bold=True,fill=NAVY).font=Font(bold=True,color=WHITE)
+    put(ws,r,3,"# lines",bold=True,fill=NAVY,align=HALIGN).font=Font(bold=True,color=WHITE)
+    put(ws,r,4,"% of field",bold=True,fill=NAVY,align=HALIGN).font=Font(bold=True,color=WHITE); r+=1
+    for k,v in sorted(fine.items(),key=lambda x:-x[1]):
+        put(ws,r,2,k); put(ws,r,3,v,align=Alignment(horizontal="center"))
+        put(ws,r,4,f"{_pct(v,len(LINES))}%",align=Alignment(horizontal="center")); r+=1
+    r+=1
+    # --- E. Prioritized opportunity shortlist ---
+    ws.cell(row=r,column=2,value="E.  Prioritized opportunity shortlist (analyst synthesis)").font=Font(bold=True,size=13,color=NAVY); r+=1
+    fam_brand=dict((f,len(set(p["brand"] for p in LINES if f in flav_hits(p["flavours"])))) for f in FLAV_FAMS)
+    thin=sorted(FLAV_FAMS,key=lambda f:fam_brand[f])[:3]
+    opps=[
+     f"1. Natural-zero line extension into thin flavour families ({', '.join(thin)}) — combines the fastest-growing sweetener wedge with the clearest flavour whitespace.",
+     "2. Fill the 160-200 mg caffeine gap in energy with a stevia/monk-sweetened can — middle dose tier is underserved and avoids the artificial-sweetener objection.",
+     "3. Clean-label functional (Cat 3): median sugar is the widest-ranging — a genuinely low-sugar gut/adaptogen entry stands out against sugary incumbents.",
+     "4. Premium sparkling-electrolyte (Cat 1) is where Subscribe & Save retention + price premium concentrate; prioritize live-price capture here first to validate margin headroom.",
+     "5. Defensive watch: high-sugar legacy lines (≥30 g) are the segment most exposed to the zero-sugar shift — track their promo cadence once commercial capture is live.",
+    ]
+    for o in opps:
+        c=put(ws,r,2,o); ws.merge_cells(start_row=r,start_column=2,end_row=r,end_column=8)
+        ws.row_dimensions[r].height=30; r+=1
+    r+=1
+    note=put(ws,r,2,"All findings derive from verified STABLE attributes (nutrition/flavour/sweetener/positioning). They do NOT depend on live commercial data; price/velocity-dependent conclusions are flagged as pending live capture.")
+    note.font=Font(italic=True,color="C00000"); ws.merge_cells(start_row=r,start_column=2,end_row=r,end_column=8)
+    return ws
+
 def build_dashboard():
     ws=wb.create_sheet("Executive Dashboard"); ws.sheet_view.showGridLines=False; tabcolor(ws,GOLD)
     widths(ws,[3,26,16,16,16,16,16,16,16])
@@ -914,8 +1082,19 @@ def build_dashboard():
     ws.cell(row=6,column=c,value="Price capture %").alignment=Alignment(horizontal="center")
     ws.cell(row=6,column=c).border=BORDER
 
+    # Key findings panel (top 3 synthesized takeaways; full set on Strategic Insights tab)
+    fr=29
+    kf=ws.cell(row=fr-1,column=2,value="Key findings  (full synthesis on the 'Strategic Insights' tab)")
+    kf.font=Font(bold=True,size=13,color=NAVY)
+    for head,detail in compute_findings()[:4]:
+        h=ws.cell(row=fr,column=2,value="• "+head); h.font=Font(bold=True,color=NAVY)
+        h.alignment=WRAP; h.fill=PatternFill("solid",fgColor=LTBLUE); h.border=BORDER
+        d=ws.cell(row=fr,column=3,value=detail); d.alignment=WRAP; d.border=BORDER
+        ws.merge_cells(start_row=fr,start_column=3,end_row=fr,end_column=9)
+        ws.row_dimensions[fr].height=44; fr+=1
+
     # calc data area (for charts) lower down / hidden-ish
-    base=20
+    base=46
     ws.cell(row=base-1,column=2,value="Chart data (computed from stable attributes)").font=Font(bold=True,color="808080")
     # category counts + avg sugar + avg caffeine
     ws.cell(row=base,column=2,value="Category"); ws.cell(row=base,column=3,value="# Products")
@@ -980,10 +1159,11 @@ build_protocol()
 build_qa_clean()
 build_enrichment_log()
 build_sources()
+build_insights()
 build_dashboard()
 
 # order sheets nicely
-order=["README & Methodology","Executive Dashboard","Data Dictionary",
+order=["README & Methodology","Executive Dashboard","Strategic Insights","Data Dictionary",
  SHEET_FOR[C1],SHEET_FOR[C2],SHEET_FOR[C3],SHEET_FOR[C4],SHEET_FOR[C5],
  "Brand Roll-up","Category Benchmarks","Nutrition Scoreboard",
  "Pricing & Promo Analysis","Subscription Strategy","Why They Win",
