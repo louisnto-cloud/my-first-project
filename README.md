@@ -25,6 +25,8 @@ vs. a distributor.
 - **Multi-year projection** at your growth rate.
 - **Monthly plan** with editable seasonality.
 - **Profit grid** — operating profit across price × volume combinations.
+- **Goal-seek** — cases needed for a target *operating profit*, plus a capacity ceiling.
+- **Sensitivity (tornado)** — which lever (price, volume, COGS, fixed, discounts) moves profit most.
 
 ### The core relationships
 

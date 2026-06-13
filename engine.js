@@ -116,6 +116,57 @@
     };
   }
 
-  root.RevenueEngine = { compute: compute, computeChannel: computeChannel };
+  // Goal-seek: what volume hits a target OPERATING PROFIT (not just revenue)?
+  function goalSeek(state, targetProfit) {
+    var m = compute(state);
+    var reqContrib = targetProfit + state.fixedCosts;
+    var cases = m.blendedContrib > 0 ? reqContrib / m.blendedContrib : Infinity;
+    return {
+      targetProfit: targetProfit, cases: cases,
+      gross: cases * m.blendedGross, net: cases * m.blendedNet,
+      contribution: cases * m.blendedContrib, opProfit: targetProfit
+    };
+  }
+
+  // Capacity ceiling: given a max number of cases you can make/sell.
+  function capacity(state, maxCases) {
+    var m = compute(state);
+    var contribution = maxCases * m.blendedContrib;
+    return {
+      cases: maxCases, gross: maxCases * m.blendedGross, net: maxCases * m.blendedNet,
+      contribution: contribution, opProfit: contribution - state.fixedCosts
+    };
+  }
+
+  // One-way sensitivity (tornado): operating-profit swing from ±pct on each
+  // driver, holding the base plan's per-channel case volumes fixed.
+  function sensitivity(state, pct) {
+    pct = pct || 0.1;
+    var m = compute(state);
+    var cs = m.channels.map(function (r) { return r.cases; });
+    var ch = state.channels;
+    function opAt(mult) {
+      var price = mult.price || 1, cogs = mult.cogs || 1, disc = mult.disc || 1, vol = mult.vol || 1, fixed = mult.fixed || 1;
+      var contribTot = 0;
+      ch.forEach(function (c, i) {
+        var gross = c.grossPrice * price;
+        var net = gross * (1 - Math.min(1, c.discountPct * disc));
+        var contrib = net * (1 - c.sellingPct) - c.cogs * cogs;
+        contribTot += cs[i] * vol * contrib;
+      });
+      return contribTot - state.fixedCosts * fixed;
+    }
+    var base = opAt({});
+    var defs = [["Price / case", "price"], ["Sales volume", "vol"], ["COGS / case", "cogs"], ["Fixed costs", "fixed"], ["Trade discounts", "disc"]];
+    var drivers = defs.map(function (d) {
+      var lo = {}, hi = {}; lo[d[1]] = 1 - pct; hi[d[1]] = 1 + pct;
+      var a = opAt(lo), b = opAt(hi);
+      return { driver: d[0], low: Math.min(a, b), high: Math.max(a, b), base: base, swing: Math.abs(b - a) };
+    });
+    drivers.sort(function (x, y) { return y.swing - x.swing; });
+    return { base: base, pct: pct, drivers: drivers };
+  }
+
+  root.RevenueEngine = { compute: compute, computeChannel: computeChannel, goalSeek: goalSeek, capacity: capacity, sensitivity: sensitivity };
   if (typeof module !== "undefined" && module.exports) module.exports = root.RevenueEngine;
 })(typeof window !== "undefined" ? window : globalThis);

@@ -218,6 +218,44 @@ for k in range(len(CHAN)):
     for j in range(len(VP)):
         cc=col(3+j); put(CV,f"{cc}{r}",f"={cc}${s2}*$B{r}",F_CALC,GREEN if (r+j)%2 else GREY,CUR,bd=True)
 
+# ---------------- Goal-Seek & Sensitivity ----------------
+GS=wb.create_sheet("Goal-Seek & Sensitivity"); GS.sheet_view.showGridLines=False
+for c,w in {"A":26,"B":16,"C":16,"D":14}.items(): GS.column_dimensions[c].width=w
+title(GS,"A1:D1","Goal-seek & sensitivity")
+# goal-seek to a target operating profit
+put(GS,"A3","GOAL-SEEK — plan to a profit",F_SECT)
+put(GS,"A4","Target operating profit",F_LBL); put(GS,"B4",500000,F_IN,YELL,CUR,bd=True)
+for lab,ref,f in [("Cases needed","B5","=(B4+Model!$B$8)/Model!$B$36"),
+                  ("Gross revenue","B6","=B5*Model!$B$34"),("Net revenue","B7","=B5*Model!$B$35")]:
+    put(GS,f"A{ref[1:]}",lab,F_LBL); put(GS,ref,f,F_CALC,GREY,NUM if ref=="B5" else CUR,bd=True)
+# capacity ceiling
+put(GS,"A9","CAPACITY — what a ceiling delivers",F_SECT)
+put(GS,"A10","Max cases you can sell",F_LBL); put(GS,"B10",12000,F_IN,YELL,NUM,bd=True)
+for lab,ref,f,fmt in [("Gross revenue","B11","=B10*Model!$B$34",CUR),("Contribution","B12","=B10*Model!$B$36",CUR),
+                      ("Operating profit","B13","=B12-Model!$B$8",CUR)]:
+    put(GS,f"A{ref[1:]}",lab,F_LBL); put(GS,ref,f,F_CALC,GREEN if ref=="B13" else GREY,fmt,bd=True)
+# tornado: operating profit at +/-10% per driver (volumes held at plan)
+put(GS,"A15","SENSITIVITY — operating profit at ±10% (volumes held)",F_SECT)
+for j,h in enumerate(["Driver","−10%","+10%","Swing"]):
+    put(GS,f"{col(j+1)}16",h,F_HDR,BLUE,al=CEN,bd=True)
+J="Model!$J$13:$J$17"; B="Model!$B$13:$B$17"; D="Model!$D$13:$D$17"; E="Model!$E$13:$E$17"; Fp="Model!$F$13:$F$17"
+def sens_row(r,name,lo,hi):
+    put(GS,f"A{r}",name,F_LBL,bd=True)
+    put(GS,f"B{r}",lo,F_CALC,GREY,CUR,bd=True); put(GS,f"C{r}",hi,F_CALC,GREY,CUR,bd=True)
+    put(GS,f"D{r}",f"=ABS(C{r}-B{r})",F_CALC,LIGHT,CUR,bd=True)
+sens_row(17,"Price / case",
+    f"=SUMPRODUCT({J},({B}*0.9)*(1-{E})*(1-{Fp})-{D})-Model!$B$8",
+    f"=SUMPRODUCT({J},({B}*1.1)*(1-{E})*(1-{Fp})-{D})-Model!$B$8")
+sens_row(18,"Sales volume","=Model!$B$27*0.9-Model!$B$8","=Model!$B$27*1.1-Model!$B$8")
+sens_row(19,"COGS / case",
+    f"=SUMPRODUCT({J},{B}*(1-{E})*(1-{Fp})-{D}*0.9)-Model!$B$8",
+    f"=SUMPRODUCT({J},{B}*(1-{E})*(1-{Fp})-{D}*1.1)-Model!$B$8")
+sens_row(20,"Fixed costs","=Model!$B$27-Model!$B$8*0.9","=Model!$B$27-Model!$B$8*1.1")
+sens_row(21,"Trade discounts",
+    f"=SUMPRODUCT({J},{B}*(1-{E}*0.9)*(1-{Fp})-{D})-Model!$B$8",
+    f"=SUMPRODUCT({J},{B}*(1-{E}*1.1)*(1-{Fp})-{D})-Model!$B$8")
+put(GS,"A23","Longest swing = the lever that moves profit most. Price typically dominates.",F_SUB)
+
 wb.calculation.fullCalcOnLoad = True   # force Excel/LibreOffice to recalc on open
 wb.save("revenue-forecast.xlsx")
 print("wrote revenue-forecast.xlsx — sheets:", wb.sheetnames)

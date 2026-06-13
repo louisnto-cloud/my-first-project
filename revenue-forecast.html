@@ -127,8 +127,12 @@
       <table id="chTable">
         <thead>
           <tr>
-            <th rowspan="2">Channel</th><th rowspan="2">Gross / case</th><th rowspan="2">Volume mix</th>
-            <th rowspan="2">COGS / case</th><th rowspan="2">Trade disc. %</th><th rowspan="2">Selling %</th>
+            <th rowspan="2">Channel</th>
+            <th rowspan="2" title="List price the customer pays, per case">Gross / case</th>
+            <th rowspan="2" title="Relative volume weight across channels (need not total 100)">Volume mix</th>
+            <th rowspan="2" title="Cost of goods sold per case">COGS / case</th>
+            <th rowspan="2" title="Trade discount / allowance, % off gross">Trade disc. %</th>
+            <th rowspan="2" title="Cost-to-serve (fees, shipping, commission) as % of net">Selling %</th>
             <th class="grp" colspan="3">Per case (calc)</th><th class="grp" colspan="3">At target (calc)</th><th rowspan="2"></th>
           </tr>
           <tr><th class="grp">Net</th><th class="grp">Contrib.</th><th class="grp">Margin</th>
@@ -156,6 +160,7 @@
 
   <section class="card">
     <h2>4 · Where it comes from</h2>
+    <div id="scorecard" class="note" style="margin:0 0 12px;font-style:normal"></div>
     <div class="two">
       <div>
         <div class="note" style="margin:0 0 6px">Contribution $ by channel</div><div class="bars" id="contribBars"></div>
@@ -219,6 +224,28 @@
     </div>
     <div class="grid a4" id="wfOut" style="margin-top:13px"></div>
     <p class="note">Profit here uses blended discount/selling/COGS from your channel mix.</p>
+  </section>
+
+  <section class="card">
+    <h2>12 · Goal-seek <span class="hint">— plan to a profit or a capacity, not just revenue</span></h2>
+    <p class="sec-d">Work backwards: how many cases for a target <b>operating profit</b>, and what a production/sales <b>ceiling</b> delivers.</p>
+    <div class="two">
+      <div>
+        <label>Target operating profit</label><input class="in" id="gsProfit" type="number" step="50000">
+        <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:11px" id="gsOut"></div>
+      </div>
+      <div>
+        <label>Capacity — max cases you can sell</label><input class="in" id="capCases" type="number" step="500">
+        <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:11px" id="capOut"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>13 · Sensitivity <span class="hint">— which lever moves profit most (±10%)</span></h2>
+    <p class="sec-d">Operating-profit swing if each driver moves ±10%, holding the plan's volumes fixed. The longest bar is where your attention pays off most.</p>
+    <div id="tornado"></div>
+    <div class="legend"><span><i style="background:#88c08f"></i>favourable +10%</span><span><i style="background:#e98a7a"></i>adverse −10%</span></div>
   </section>
 
   <p class="note">Planning aid only. Gross revenue = list price × cases (before discounts). Net, contribution and operating profit layer in discounts, COGS, cost-to-serve and fixed costs. Swap in your real numbers — the model is yours.</p>
@@ -342,7 +369,58 @@
     };
   }
 
-  root.RevenueEngine = { compute: compute, computeChannel: computeChannel };
+  // Goal-seek: what volume hits a target OPERATING PROFIT (not just revenue)?
+  function goalSeek(state, targetProfit) {
+    var m = compute(state);
+    var reqContrib = targetProfit + state.fixedCosts;
+    var cases = m.blendedContrib > 0 ? reqContrib / m.blendedContrib : Infinity;
+    return {
+      targetProfit: targetProfit, cases: cases,
+      gross: cases * m.blendedGross, net: cases * m.blendedNet,
+      contribution: cases * m.blendedContrib, opProfit: targetProfit
+    };
+  }
+
+  // Capacity ceiling: given a max number of cases you can make/sell.
+  function capacity(state, maxCases) {
+    var m = compute(state);
+    var contribution = maxCases * m.blendedContrib;
+    return {
+      cases: maxCases, gross: maxCases * m.blendedGross, net: maxCases * m.blendedNet,
+      contribution: contribution, opProfit: contribution - state.fixedCosts
+    };
+  }
+
+  // One-way sensitivity (tornado): operating-profit swing from ±pct on each
+  // driver, holding the base plan's per-channel case volumes fixed.
+  function sensitivity(state, pct) {
+    pct = pct || 0.1;
+    var m = compute(state);
+    var cs = m.channels.map(function (r) { return r.cases; });
+    var ch = state.channels;
+    function opAt(mult) {
+      var price = mult.price || 1, cogs = mult.cogs || 1, disc = mult.disc || 1, vol = mult.vol || 1, fixed = mult.fixed || 1;
+      var contribTot = 0;
+      ch.forEach(function (c, i) {
+        var gross = c.grossPrice * price;
+        var net = gross * (1 - Math.min(1, c.discountPct * disc));
+        var contrib = net * (1 - c.sellingPct) - c.cogs * cogs;
+        contribTot += cs[i] * vol * contrib;
+      });
+      return contribTot - state.fixedCosts * fixed;
+    }
+    var base = opAt({});
+    var defs = [["Price / case", "price"], ["Sales volume", "vol"], ["COGS / case", "cogs"], ["Fixed costs", "fixed"], ["Trade discounts", "disc"]];
+    var drivers = defs.map(function (d) {
+      var lo = {}, hi = {}; lo[d[1]] = 1 - pct; hi[d[1]] = 1 + pct;
+      var a = opAt(lo), b = opAt(hi);
+      return { driver: d[0], low: Math.min(a, b), high: Math.max(a, b), base: base, swing: Math.abs(b - a) };
+    });
+    drivers.sort(function (x, y) { return y.swing - x.swing; });
+    return { base: base, pct: pct, drivers: drivers };
+  }
+
+  root.RevenueEngine = { compute: compute, computeChannel: computeChannel, goalSeek: goalSeek, capacity: capacity, sensitivity: sensitivity };
   if (typeof module !== "undefined" && module.exports) module.exports = root.RevenueEngine;
 })(typeof window !== "undefined" ? window : globalThis);
 </script>
@@ -382,18 +460,37 @@ const esc=s=>(s||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"
 
 // ---------- SVG chart helpers ----------
 function svgWaterfall(bars){
-  const W=560,H=300,padX=10,padB=46,padT=24;
+  const W=560,H=300,padX=12,padB=46,padT=26;
   let lo=0,hi=0; bars.forEach(b=>{lo=Math.min(lo,b.lo);hi=Math.max(hi,b.hi);});
-  const span=(hi-lo)||1, y=v=>padT+(hi-v)/span*(H-padT-padB), bw=(W-2*padX)/bars.length*0.62, gap=(W-2*padX)/bars.length;
+  const span=(hi-lo)||1, y=v=>padT+(hi-v)/span*(H-padT-padB);
+  const gap=(W-2*padX)/bars.length, bw=gap*0.6;
   const col={gross:"#3b6fb5",net:"#2e5496",contrib:"#2e8b57",profit:"#1e7d4f",loss:"#c0392b",sub:"#e07a5f"};
-  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" preserveAspectRatio="xMidYMid meet" role="img">`;
-  s+=`<line x1="${padX}" y1="${y(0)}" x2="${W-padX}" y2="${y(0)}" stroke="#c4cdd9"/>`;
+  const xL=i=>padX+gap*i+(gap-bw)/2, xR=i=>xL(i)+bw, endLvl=b=>b.val<0?b.lo:b.hi;
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Profit waterfall from gross revenue to operating profit">`;
+  s+=`<line x1="${padX}" y1="${y(0).toFixed(1)}" x2="${W-padX}" y2="${y(0).toFixed(1)}" stroke="#c4cdd9"/>`;
+  for(let i=0;i<bars.length-1;i++){const yl=y(endLvl(bars[i])).toFixed(1);
+    s+=`<line x1="${xR(i).toFixed(1)}" y1="${yl}" x2="${xL(i+1).toFixed(1)}" y2="${yl}" stroke="#aab4c2" stroke-dasharray="3 2"/>`;}
   bars.forEach((b,i)=>{
-    const x=padX+gap*i+(gap-bw)/2, yt=y(b.hi), h=Math.max(1,y(b.lo)-y(b.hi));
-    s+=`<rect x="${x.toFixed(1)}" y="${yt.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="2" fill="${col[b.kind]||"#888"}"/>`;
-    if(i<bars.length-1){const lvl=(b.kind==="sub")?b.lo+(b.val<0?0:b.val):b.hi*Math.sign(b.hi||1)===b.hi?b.hi:b.hi;}
-    s+=`<text x="${(x+bw/2).toFixed(1)}" y="${(yt-5).toFixed(1)}" text-anchor="middle" font-size="11" font-weight="700" fill="#16243d">${sM(b.kind==="sub"?b.val:b.val)}</text>`;
-    s+=`<text x="${(x+bw/2).toFixed(1)}" y="${H-padB+16}" text-anchor="middle" font-size="10.5" fill="#65728a">${b.label}</text>`;
+    const x=xL(i), yt=y(b.hi), h=Math.max(1.5,y(b.lo)-y(b.hi));
+    s+=`<rect x="${x.toFixed(1)}" y="${yt.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="2" fill="${col[b.kind]||"#888"}"><title>${esc(b.label)}: ${sM(b.val)}</title></rect>`;
+    s+=`<text x="${(x+bw/2).toFixed(1)}" y="${(yt-5).toFixed(1)}" text-anchor="middle" font-size="10.5" font-weight="700" fill="#16243d">${sM(b.val)}</text>`;
+    s+=`<text x="${(x+bw/2).toFixed(1)}" y="${H-padB+16}" text-anchor="middle" font-size="10" fill="#65728a">${b.label}</text>`;
+  });
+  return s+"</svg>";
+}
+function svgTornado(sens){
+  const ds=sens.drivers,n=ds.length,W=560,rowH=32,H=n*rowH+26,padL=128,padR=92,base=sens.base;
+  let mn=base,mx=base; ds.forEach(d=>{mn=Math.min(mn,d.low);mx=Math.max(mx,d.high);});
+  const pad=(mx-mn)*0.04||1, span=(mx-mn+2*pad)||1, x=v=>padL+(v-mn+pad)/span*(W-padL-padR);
+  const xb=x(base);
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Sensitivity tornado: operating profit swing from ±${(sens.pct*100).toFixed(0)}% on each driver">`;
+  s+=`<line x1="${xb.toFixed(1)}" y1="4" x2="${xb.toFixed(1)}" y2="${H-16}" stroke="#16243d" stroke-width="1.4"/>`;
+  s+=`<text x="${xb.toFixed(1)}" y="${H-3}" text-anchor="middle" font-size="9.5" fill="#65728a">base ${sM(base)}</text>`;
+  ds.forEach((d,i)=>{const yc=8+i*rowH, h=18;
+    s+=`<rect x="${x(d.low).toFixed(1)}" y="${yc}" width="${Math.max(0,xb-x(d.low)).toFixed(1)}" height="${h}" fill="#e98a7a"><title>${esc(d.driver)} −: ${sM(d.low)}</title></rect>`;
+    s+=`<rect x="${xb.toFixed(1)}" y="${yc}" width="${Math.max(0,x(d.high)-xb).toFixed(1)}" height="${h}" fill="#88c08f"><title>${esc(d.driver)} +: ${sM(d.high)}</title></rect>`;
+    s+=`<text x="6" y="${yc+13}" font-size="11" fill="#16243d">${esc(d.driver)}</text>`;
+    s+=`<text x="${(W-padR+6)}" y="${yc+13}" font-size="9.5" fill="#65728a">±${sM(d.swing/2)}</text>`;
   });
   return s+"</svg>";
 }
@@ -430,13 +527,14 @@ function renderChannels(){
   const tb=$("chBody"); tb.innerHTML="";
   state.channels.forEach((c,i)=>{
     const tr=document.createElement("tr"); tr.dataset.i=i;
+    const al=lab=>`aria-label="${esc(c.name)} — ${lab}"`;
     tr.innerHTML=`
-      <td><input class="name" type="text" data-k="name" value="${esc(c.name)}"></td>
-      <td><input type="number" min="0" step="5" data-k="grossPrice" value="${c.grossPrice}"></td>
-      <td><input type="number" min="0" step="1" data-k="mix" value="${c.mix}"></td>
-      <td><input type="number" min="0" step="5" data-k="cogs" value="${c.cogs}"></td>
-      <td><input type="number" min="0" max="100" step="1" data-k="discountPct" value="${+(c.discountPct*100).toFixed(1)}"></td>
-      <td><input type="number" min="0" max="100" step="1" data-k="sellingPct" value="${+(c.sellingPct*100).toFixed(1)}"></td>
+      <td><input class="name" type="text" data-k="name" value="${esc(c.name)}" aria-label="Channel name"></td>
+      <td><input type="number" min="0" step="5" data-k="grossPrice" value="${c.grossPrice}" ${al('gross price per case')}></td>
+      <td><input type="number" min="0" step="1" data-k="mix" value="${c.mix}" ${al('volume mix weight')}></td>
+      <td><input type="number" min="0" step="5" data-k="cogs" value="${c.cogs}" ${al('COGS per case')}></td>
+      <td><input type="number" min="0" max="100" step="1" data-k="discountPct" value="${+(c.discountPct*100).toFixed(1)}" ${al('trade discount percent')}></td>
+      <td><input type="number" min="0" max="100" step="1" data-k="sellingPct" value="${+(c.sellingPct*100).toFixed(1)}" ${al('selling cost percent')}></td>
       <td class="calc oNet"></td><td class="calc oContrib"></td><td class="calc oMargin"></td>
       <td class="calc oCases"></td><td class="calc oGross"></td><td class="calc oContribT"></td>
       <td><button class="del" title="remove">✕</button></td>`;
@@ -553,6 +651,24 @@ function renderOutputs(){
 
   // two-way calc
   whatif(disc,sell,cogs);
+
+  // channel scorecard
+  const ranked=m.channels.slice().sort((a,b)=>b.contribution-a.contribution);
+  const best=ranked[0],worst=ranked[ranked.length-1];
+  $("scorecard").innerHTML=`💡 Most profitable per case: <b>${esc(best.name)}</b> at <b>${fM2(best.contribution)}</b>/case (${fP(best.contribMarginPct)} margin). Thinnest: <b>${esc(worst.name)}</b> at <b>${fM2(worst.contribution)}</b>/case. Shifting mix toward the former lifts profit without selling a single extra case.`;
+
+  // sensitivity tornado
+  $("tornado").innerHTML=svgTornado(RevenueEngine.sensitivity(state,0.1));
+
+  // goal-seek & capacity
+  renderGoalCap();
+}
+function kpiHtml(k){return `<div class="kpi ${k[0]==='hero'?'hero':''}"><div class="v ${k[0]==='pos'?'pos':k[0]==='neg'?'neg':''}">${k[1]}</div><div class="l">${k[2]}</div></div>`;}
+function renderGoalCap(){
+  const tp=parseFloat($("gsProfit").value)||0, mc=parseFloat($("capCases").value)||0;
+  const gs=RevenueEngine.goalSeek(state,tp), cp=RevenueEngine.capacity(state,mc);
+  $("gsOut").innerHTML=[["hero",fN(gs.cases),"Cases needed"],["",fM(gs.gross),"Gross revenue"],["",fM(gs.net),"Net revenue"],["",fM(gs.contribution),"Contribution"]].map(kpiHtml).join("");
+  $("capOut").innerHTML=[[cp.opProfit>=0?"pos":"neg",cp.opProfit>=0?fM(cp.opProfit):"−"+fM(-cp.opProfit),"Operating profit"],["",fM(cp.gross),"Gross revenue"],["",fM(cp.contribution),"Contribution"],["",fP(cp.net>0?cp.opProfit/cp.net:0),"Op margin"]].map(kpiHtml).join("");
 }
 function whatif(disc,sell,cogs){
   const p=parseFloat($("wfPrice").value)||0, cs=parseFloat($("wfCases").value)||0, rev=parseFloat($("wfRev").value)||0;
@@ -596,12 +712,13 @@ function bindAssumptions(){
   $("growth").addEventListener("input",()=>{state.growthRate=(parseFloat($("growth").value)||0)/100;save();renderOutputs();});
   $("cur").addEventListener("change",()=>{state.currency=$("cur").value;save();renderOutputs();});
   ["wfPrice","wfCases","wfRev"].forEach(id=>$(id).addEventListener("input",()=>renderOutputs()));
+  ["gsProfit","capCases"].forEach(id=>$(id).addEventListener("input",renderGoalCap));
   $("btnAdd").addEventListener("click",()=>{state.channels.push({name:"New channel",grossPrice:150,mix:5,cogs:90,discountPct:0,sellingPct:0.05});save();renderChannels();renderOutputs();});
   $("btnReset").addEventListener("click",()=>{if(confirm("Reset all inputs to the sample model?")){state=clone(DEFAULTS);save();setVals();initWf();renderChannels();renderOutputs();}});
   $("btnCsv").addEventListener("click",exportCsv);
   $("btnPrint").addEventListener("click",()=>window.print());
 }
-function initWf(){$("wfPrice").value=190;$("wfCases").value=13165;$("wfRev").value=state.revenueTarget;}
+function initWf(){$("wfPrice").value=190;$("wfCases").value=13165;$("wfRev").value=state.revenueTarget;$("gsProfit").value=500000;$("capCases").value=12000;}
 setVals(); initWf(); bindAssumptions(); renderChannels(); renderOutputs();
 </script>
 </body>

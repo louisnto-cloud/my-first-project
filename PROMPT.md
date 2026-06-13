@@ -52,6 +52,8 @@ bottom.
 > 8. **Pure-play comparison** — cases to hit target if 100% sold through each single channel = `target / that price`.
 > 9. **Profit grid** — operating profit across price × volume combinations (colour green=profit / red=loss).
 > 10. **Two-way calculator** — cases↔revenue↔profit at a tested price.
+> 11. **Goal-seek** — cases for a target operating profit = `(target profit + fixed) / blended contribution`; plus a capacity ceiling (max cases → resulting revenue & profit).
+> 12. **Sensitivity / tornado** — operating-profit swing from ±10% on price, volume, COGS, fixed costs and discounts, ranked by impact.
 >
 > Gross revenue is before discounts/returns/taxes; contribution and operating
 > profit layer in discounts, COGS, cost-to-serve and fixed costs.
