@@ -24,7 +24,7 @@ from openpyxl.chart.shapes import GraphicalProperties
 from openpyxl.chart.label import DataLabelList
 from openpyxl.worksheet.properties import PageSetupProperties
 
-OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v3.xlsx"
+OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v4.xlsx"
 
 # ---------- palette ----------
 C_TITLE   = "FF2E5A4E"   # dark green title bar + KPI numbers
@@ -73,7 +73,7 @@ HEADERS = ["#","Partner Name","Partnership Type","City","Neighbourhood","Priorit
 "Primary Owner","Contact Name","Role","Contact Email","Contact Phone","Instagram or Website",
 "Audience Size","Audience Source","Source","Warm","Last Contacted","Days Since Activity",
 "Next Action","Next Action Date","Activation Type","Activation Date","Cases Committed",
-"Cases Delivered","Cost ($)","Cost Per Can","Contra Value ($)","Deliverables Promised",
+"Cases Delivered","Cost","Cost Per Can","Contra Value","Deliverables Promised",
 "Deliverables Received","What They Want","Risks","Nearby Retail Doors","In BC Tracker?",
 "Raspberry 4338","Lemon Lime 4336","Pineapple Passion Fruit 4340","Notes"]
 NCOL = len(HEADERS)                       # 38
@@ -120,26 +120,26 @@ PARTNERS = {
  dict(name="RIDE Cycle Club",city="Vancouver",hood="Yaletown",prio="P1",ig="@ridecycleclub",aud="23,000 IG",audsrc="Instagram @ridecycleclub follower count, web search 2026. Account covers Vancouver and Toronto",source="Verified Web",notes="Spin studio on Hamilton Street, part of a multi city brand."),
  dict(name="The Hive Bouldering Gym",city="Vancouver",hood="Strathcona",prio="P1",ig="@hiveclimbing",aud="21,000 IG",audsrc="Instagram @hiveclimbing follower count, web search 2026. Brand account, several BC sites",source="Verified Web",notes="Bouldering gym on Industrial Avenue, brand has several BC locations."),
  dict(name="Progression Bouldering",city="Vancouver",hood="Mount Pleasant",prio="P1",ig="@progressionbouldering",aud="9,700 IG",audsrc="Instagram @progressionbouldering follower count, web search 2026",source="Verified Web",notes="18,000 sq ft bouldering gym with a licensed cafe on site."),
- dict(name="Tantra Fitness",city="Vancouver",hood="Kitsilano",prio="P2",ig="@tantrafitness",aud="17,000 IG",audsrc="Instagram @tantrafitness follower count, web search 2026 (single snippet, reverify)",source="Pending",notes="Pole and aerial fitness across three Vancouver locations."),
- dict(name="604 Athletics",city="Vancouver",hood="Mount Pleasant",prio="P2",ig="@604_athletics",aud="6,100 IG",audsrc="Instagram @604_athletics follower count, web search 2026 (single snippet, reverify)",source="Pending",notes="CrossFit box on Main Street, runs HYROX prep classes."),
- dict(name="FAR Studio",city="Vancouver",hood="Gastown",prio="P2",ig="@farstudiogym",aud="2,450 IG",audsrc="Instagram @farstudiogym follower count, web search 2026 (single snippet, reverify)",source="Pending",notes="Kickboxing and strength studio on Powell Street."),
- dict(name="The Lab Victoria",city="Victoria",hood="Downtown",prio="P2",ig="@thelabvictoria",aud="3,500 IG",audsrc="Instagram @thelabvictoria follower count, web search 2026 (single snippet, reverify)",source="Pending",notes="Yoga and pilates studio on Fort Street."),
+ dict(name="Tantra Fitness",city="Vancouver",hood="Kitsilano",prio="P2",ig="@tantrafitness",aud="17,000 IG",audsrc="Instagram @tantrafitness follower count, web search 2026, single snippet, reverify",source="Pending",notes="Pole and aerial fitness across three Vancouver locations."),
+ dict(name="604 Athletics",city="Vancouver",hood="Mount Pleasant",prio="P2",ig="@604_athletics",aud="6,100 IG",audsrc="Instagram @604_athletics follower count, web search 2026, single snippet, reverify",source="Pending",notes="CrossFit box on Main Street, runs HYROX prep classes."),
+ dict(name="FAR Studio",city="Vancouver",hood="Gastown",prio="P2",ig="@farstudiogym",aud="2,450 IG",audsrc="Instagram @farstudiogym follower count, web search 2026, single snippet, reverify",source="Pending",notes="Kickboxing and strength studio on Powell Street."),
+ dict(name="The Lab Victoria",city="Victoria",hood="Downtown",prio="P2",ig="@thelabvictoria",aud="3,500 IG",audsrc="Instagram @thelabvictoria follower count, web search 2026, single snippet, reverify",source="Pending",notes="Yoga and pilates studio on Fort Street."),
  dict(name="CrossFit BC",city="Vancouver",hood="Olympic Village",prio="P3",ig="@crossfitbc",aud="TBD",audsrc="",source="Verified Web",notes="CrossFit box on East 1st Avenue."),
  dict(name="CrossFit Zone",city="Victoria",hood="Downtown",prio="P3",ig="@crossfit_zone_",aud="TBD",audsrc="",source="Verified Web",notes="One of the oldest CrossFit boxes in Victoria, operating since 2008."),
- dict(name="CrossFit Okanagan",city="Kelowna",hood="Kelowna",prio="P3",ig="@crossfitokanagan",aud="4,700 IG",audsrc="Instagram @crossfitokanagan follower count, web search 2026 (single snippet, reverify)",source="Pending",notes="CrossFit box, also runs a ForeverFit 55 plus program."),
+ dict(name="CrossFit Okanagan",city="Kelowna",hood="Kelowna",prio="P3",ig="@crossfitokanagan",aud="4,700 IG",audsrc="Instagram @crossfitokanagan follower count, web search 2026, single snippet, reverify",source="Pending",notes="CrossFit box, also runs a ForeverFit 55 plus program."),
 ],
 "Events & Festivals":[
  dict(name="Richmond Night Market",city="Richmond",hood="Bridgeport",prio="P1",ig="richmondnightmarket.com",aud="1,000,000+ per year",audsrc="vancouversbestplaces and official market materials, over a million visitors annually",source="Verified Web",notes="Runs Apr 24 to Sep 20 2026, Friday to Sunday evenings, near Bridgeport station."),
- dict(name="Vancouver Pride Parade and Festival",city="Vancouver",hood="West End",prio="P1",ig="@vancouverpride",aud="600,000+ attendees (press estimate)",audsrc="misterbandb and Destination Vancouver listings cite 600,000 plus, press estimate not official",source="Verified Web",notes="Pride week Jul 25 to Aug 2 2026, main parade Sunday Aug 2 ending at Sunset Beach."),
+ dict(name="Vancouver Pride Parade and Festival",city="Vancouver",hood="West End",prio="P1",ig="@vancouverpride",aud="600,000+ attendees, press estimate",audsrc="misterbandb and Destination Vancouver listings cite 600,000 plus, press estimate not official",source="Verified Web",notes="Pride week Jul 25 to Aug 2 2026, main parade Sunday Aug 2 ending at Sunset Beach."),
  dict(name="Concord Pacific Dragon Boat Summer Regatta",city="Vancouver",hood="False Creek",prio="P1",ig="dragonboatbc.ca",aud="TBD",audsrc="",source="Verified Web",notes="One day regatta Aug 22 2026 at False Creek. Downsized for 2026 due to the FIFA security cordon, full festival returns 2027."),
- dict(name="Italian Day on The Drive",city="Vancouver",hood="Commercial Drive",prio="P2",ig="@italiandayonthedrive",aud="300,000 (press estimate)",audsrc="Vancouver Is Awesome 2026 coverage cites 300,000, press estimate not official",source="Verified Web",notes="Sunday Jun 14 2026, noon to 8pm, 14 blocks of Commercial Drive."),
+ dict(name="Italian Day on The Drive",city="Vancouver",hood="Commercial Drive",prio="P2",ig="@italiandayonthedrive",aud="300,000 attendees, press estimate",audsrc="Vancouver Is Awesome 2026 coverage cites 300,000, press estimate not official",source="Verified Web",notes="Sunday Jun 14 2026, noon to 8pm, 14 blocks of Commercial Drive."),
  dict(name="Khatsahlano Street Party",city="Vancouver",hood="Kitsilano",prio="P2",ig="@khatsahlano",aud="TBD",audsrc="",source="Verified Web",notes="Saturday Jul 11 2026 on West 4th Ave, 10 blocks, free street festival."),
  dict(name="Summer Lights in English Bay",city="Vancouver",hood="West End",prio="P2",ig="vancouver.ca",aud="TBD",audsrc="",source="Verified Web",notes="Friday Jul 31 2026 fireworks at English Bay, BC Day long weekend. City replacement for Celebration of Light."),
  dict(name="Canada Dry Victoria Dragon Boat Festival",city="Victoria",hood="Inner Harbour",prio="P2",ig="victoriadragonboatfestival.com",aud="TBD",audsrc="",source="Verified Web",notes="Saturday Jun 20 2026 at the Inner Harbour, more than 30 teams. Moved to June for 2026 only, back to August in 2027."),
- dict(name="Kelowna Wine Country Half Marathon",city="Kelowna",hood="Waterfront Park",prio="P2",ig="kelownamarathon.ca",aud="1,800 runners (cap)",audsrc="Event materials note registration normally limited to about 1,800 runners, confirm on site",source="Verified Web",notes="Saturday Jun 13 2026, finish at Waterfront Park with a post run festival."),
+ dict(name="Kelowna Wine Country Half Marathon",city="Kelowna",hood="Waterfront Park",prio="P2",ig="kelownamarathon.ca",aud="1,800 runners, capacity",audsrc="Event materials note registration normally limited to about 1,800 runners, confirm on site",source="Verified Web",notes="Saturday Jun 13 2026, finish at Waterfront Park with a post run festival."),
 ],
 "Sports Teams & Leagues":[
- dict(name="Urban Rec Vancouver",city="Vancouver",hood="Mount Pleasant",prio="P1",ig="@urbanrec",aud="56,000 members (self stated)",audsrc="Urban Rec Vancouver website states over 56,000 members, brand self stated figure",source="Verified Web",notes="Largest sport and social club in Western Canada. Leagues across Vancouver, Richmond and Burnaby."),
+ dict(name="Urban Rec Vancouver",city="Vancouver",hood="Mount Pleasant",prio="P1",ig="@urbanrec",aud="56,000 members, self stated",audsrc="Urban Rec Vancouver website states over 56,000 members, brand self stated figure",source="Verified Web",notes="Largest sport and social club in Western Canada. Leagues across Vancouver, Richmond and Burnaby."),
  dict(name="Vancouver Dodgeball League",city="Vancouver",hood="Multiple",prio="P2",ig="@vdldodgeball",aud="2,000+ players, 260+ teams",audsrc="VDL sources describe over 260 teams and 2,000 plus players at peak",source="Verified Web",notes="Non profit dodgeball league playing in school and community gyms."),
  dict(name="Vancouver Pickleball Association",city="Vancouver",hood="Multiple",prio="P2",ig="@vancouverpickleballassociation",aud="TBD",audsrc="",source="Verified Web",notes="Box league runs Apr to Sep 2026 across community centres and outdoor courts."),
  dict(name="False Creek Racing Canoe Club",city="Vancouver",hood="Granville Island",prio="P2",ig="@falsecreekcanoeclub",aud="TBD",audsrc="",source="Verified Web",notes="Dragon boat, outrigger and sprint paddling club based on Granville Island."),
@@ -211,6 +211,9 @@ HOOD = ["Cambie Village","Coal Harbour","Commercial Drive","Downtown","Dunbar","
 "Queen Elizabeth Park","South Granville","Strathcona","Swangard Stadium","UBC","UBC Okanagan",
 "UVic","Bridgeport","Burnaby Mountain","Waterfront Park","West End","Wilden","Willows Beach","Yaletown"]
 EVENTSTATUS = ["Idea","Scoping","Approved","Moved To Events Tab","Passed"]
+ACTSTATUS = ["Idea","Pitched","Booked","Confirmed","Delivered","Cancelled"]
+ASSETS = ["Samples","Branded Cooler","Table","Tent","Banner","Signage","Staff","Ice","Swag","Permit","Demo Kit"]
+BUDGETTIER = [0,250,500,1000,2500,5000]
 
 LU_COLS = [   # (header, list, defined_name)
  ("Owner", OWNERS, "LU_Owner"),
@@ -228,6 +231,9 @@ LU_COLS = [   # (header, list, defined_name)
  ("City", CITY, "LU_City"),
  ("Neighbourhood", HOOD, "LU_Neighbourhood"),
  ("Event Status", EVENTSTATUS, "LU_EventStatus"),
+ ("Activation Status", ACTSTATUS, "LU_ActStatus"),
+ ("Assets Needed", ASSETS, "LU_Assets"),
+ ("Budget Tier", BUDGETTIER, "LU_BudgetTier"),
 ]
 
 # =====================================================================
@@ -267,7 +273,7 @@ def linkcell(cell, value):
 print("building lookups...")
 # ---------------- LOOKUPS ----------------
 lu = wb.active; lu.title = "Lookups"
-title_row(lu, "Lookups : edit any column here to update the dropdowns across the file.", "O")
+title_row(lu, "Lookups", "R")
 for i,(hdr,vals,nm) in enumerate(LU_COLS):
     col = i+1
     hc = lu.cell(2,col,hdr); hc.font = font(12, True, WHITE); hc.fill = fill(C_HEADER)
@@ -287,7 +293,7 @@ lu.sheet_properties.tabColor = "B7C9C1"
 # =====================================================================
 def add_validations(ws):
     def mk(name):
-        dv = DataValidation(type="list", formula1=name, allow_blank=True); ws.add_data_validation(dv); return dv
+        dv = DataValidation(type="list", formula1=name, allow_blank=True, showErrorMessage=False); ws.add_data_validation(dv); return dv
     rng = lambda col: f"{col}{FIRST}:{col}{LASTROW}"
     mk("LU_Type").add(rng("C"))
     mk("LU_City").add(rng("D"))
@@ -393,7 +399,7 @@ def ml_letter(src):  # master-list column letter for a given source col
 ML_ACT = ml_letter(23)  # Activation Date column on Master List
 
 ml = wb.create_sheet("Master List")
-title_row(ml, "Master List   (read only, auto updates from the type tabs)", ML_LAST)
+title_row(ml, "Master List", ML_LAST)
 ml.cell(2,1,"Partnership Type"); h = ml.cell(2,1)
 h.font = font(12, True, WHITE); h.fill = fill(C_HEADER); h.alignment = A_C; h.border = BORD
 ml.column_dimensions["A"].width = 20
@@ -413,53 +419,54 @@ for t in TYPES:
             cell.font = font(); cell.border = BORD
             cell.alignment = A_CL if src in CENTERCOLS else A_L
             if src in SRCFMT: cell.number_format = SRCFMT[src]
-        k = ml.cell(mr, NCOL, "=IF({A}{r}=\"\",\"\",{A}{r}+ROW()/100000)".format(A=ML_ACT, r=mr))
-        k.font = font(9, color="FFB7C9C1")
         mr += 1
 ML_ROWS_END = mr-1
 band(ml, 3, ML_ROWS_END, 1 + len(SRCCOLS))
-ml.column_dimensions[get_column_letter(NCOL)].hidden = True
 ml.freeze_panes = "C3"; ml.auto_filter.ref = "A2:{}{}".format(ML_LAST, ML_ROWS_END)
 ml.sheet_properties.tabColor = "6FA392"; printsetup(ml)
 MLR = "'Master List'!"   # shorthand for formulas, ranges $3:$500
 
 # =====================================================================
-# ACTIVATION CALENDAR  (chronological, soonest first, formula driven)
-# Starts empty on purpose. Fills itself as the team enters Activation Dates.
+# ACTIVATIONS  (manual log, one row per activation, menus allow free entry)
 # =====================================================================
-print("building activation calendar...")
-cal = wb.create_sheet("Activation Calendar")
-CAL_HDRS = ["Activation Date","Partner","Type","Owner","Cases Committed","Status","Nearby Retail Doors"]
-title_row(cal, "Activation Calendar   (every booked activation, soonest first)", "G")
-subtitle(cal, 2, "Starts empty on purpose. Enter an Activation Date on any type tab and that row appears here automatically, in date order. This tab is the heartbeat of the file.")
-for c,htext in enumerate(CAL_HDRS, start=1):
-    hcell(cal, 2, c, htext)
-calw = {1:16,2:30,3:22,4:18,5:14,6:18,7:34}
-for c,w in calw.items(): cal.column_dimensions[get_column_letter(c)].width = w
-cal.row_dimensions[2].height = 50
-SRCMAP = {1:ml_letter(23),2:ml_letter(2),3:"A",4:ml_letter(8),5:ml_letter(24),6:ml_letter(7),7:ml_letter(33)}
-CAL_DATA = 120
-for i in range(CAL_DATA):
-    r = 3+i
-    cal.row_dimensions[r].height = 18
-    cal.cell(r,9, "=IFERROR(MATCH(SMALL({M}$AL$3:$AL$500,ROW()-2),{M}$AL$3:$AL$500,0),\"\")".format(M=MLR))
-    for c in range(1,8):
-        col = SRCMAP[c]
-        cell = cal.cell(r,c, "=IFERROR(INDEX({M}${col}$3:${col}$500,$I{r}),\"\")".format(M=MLR, col=col, r=r))
-        cell.font = font(); cell.border = BORD
-        cell.alignment = A_CL if c in (1,3,4,5,6) else A_L
-    cal.cell(r,1).number_format = FMT_DATE
-    cal.cell(r,9).font = font(9, color="FFB7C9C1")
-cal.column_dimensions["I"].hidden = True
-cal.freeze_panes = "C3"; cal.auto_filter.ref = "A2:G{}".format(2+CAL_DATA)
-cal.sheet_properties.tabColor = "246B5A"
-# conditional formatting: status colours + date proximity
-calcf = cal.conditional_formatting.add
-for val,clr in [("Activated",F_GREEN),("Repeat Partner",F_GREEN),("Agreed",F_AMBER),("Proposal Sent",F_AMBER),
-                ("In Conversation",F_AMBER),("Outreach Sent",F_PALEBLU),("Open",F_GREY),("Lost",F_RED),("On Hold",F_SLATE)]:
-    calcf("F3:F{}".format(2+CAL_DATA), CellIsRule(operator="equal", formula=['"{}"'.format(val)], fill=fill(clr)))
-calcf("A3:A{}".format(2+CAL_DATA), FormulaRule(formula=['AND($A3<>"",$A3<TODAY())'], fill=fill(F_SLATE)))
-calcf("A3:A{}".format(2+CAL_DATA), FormulaRule(formula=['AND($A3<>"",$A3>=TODAY(),$A3<=TODAY()+14)'], fill=fill(F_AMBER)))
+print("building activations...")
+act = wb.create_sheet("Activations")
+ACT_H = ["#","Date","Partner","Partnership Type","City","Owner","Status","Activation Type",
+"Assets Needed","Budget","Raspberry 4338 Cans","Lemon Lime 4336 Cans","Pineapple Passion Fruit 4340 Cans",
+"Total Cans","Notes"]
+ACT_LASTCOL = get_column_letter(len(ACT_H))   # O
+title_row(act, "Activations", ACT_LASTCOL)
+subtitle(act, 2, "Log each activation here, one row each. Pick from a menu or type your own. Click the Date filter to sort soonest first.")
+actw={1:5,2:13,3:30,4:20,5:14,6:14,7:14,8:18,9:26,10:12,11:13,12:13,13:20,14:12,15:60}
+for c,htext in enumerate(ACT_H, start=1):
+    hcell(act,2,c,htext); act.column_dimensions[get_column_letter(c)].width=actw[c]
+act.row_dimensions[2].height=50
+ACT_FIRST=3; ACT_LAST=62
+ACT_CENTER={1,2,5,6,7,8,10,11,12,13,14}
+for i in range(ACT_LAST-ACT_FIRST+1):
+    r=ACT_FIRST+i
+    act.row_dimensions[r].height=20
+    for c in range(1,len(ACT_H)+1):
+        cell=act.cell(r,c); cell.font=font(); cell.border=BORD
+        cell.alignment=A_CL if c in ACT_CENTER else A_L
+    act.cell(r,1, f'=IF($C{r}="","",ROW()-2)')                          # auto number
+    act.cell(r,14, f'=IF(COUNT($K{r}:$M{r})=0,"",SUM($K{r}:$M{r}))')    # Total Cans
+    act.cell(r,2).number_format=FMT_DATE
+    act.cell(r,10).number_format=FMT_MONEY
+    for c in (11,12,13,14): act.cell(r,c).number_format=FMT_INT
+def actdv(name,col):
+    dv=DataValidation(type="list",formula1=name,allow_blank=True,showErrorMessage=False)
+    act.add_data_validation(dv); dv.add(f"{col}{ACT_FIRST}:{col}{ACT_LAST}")
+actdv("LU_Type","D"); actdv("LU_City","E"); actdv("LU_Owner","F"); actdv("LU_ActStatus","G")
+actdv("LU_Activation","H"); actdv("LU_Assets","I"); actdv("LU_BudgetTier","J")
+acf=act.conditional_formatting.add
+for val,clr in [("Idea",F_GREY),("Pitched",F_PALEBLU),("Booked",F_AMBER),("Confirmed",F_BLUE),("Delivered",F_GREEN),("Cancelled",F_RED)]:
+    acf(f"G{ACT_FIRST}:G{ACT_LAST}", CellIsRule(operator="equal", formula=[f'"{val}"'], fill=fill(clr)))
+acf(f"B{ACT_FIRST}:B{ACT_LAST}", FormulaRule(formula=[f'AND($B{ACT_FIRST}<>"",$B{ACT_FIRST}<TODAY())'], fill=fill(F_SLATE)))
+acf(f"B{ACT_FIRST}:B{ACT_LAST}", FormulaRule(formula=[f'AND($B{ACT_FIRST}<>"",$B{ACT_FIRST}>=TODAY(),$B{ACT_FIRST}<=TODAY()+14)'], fill=fill(F_AMBER)))
+band(act, ACT_FIRST, ACT_LAST, len(ACT_H))
+act.freeze_panes="C3"; act.auto_filter.ref=f"A2:{ACT_LASTCOL}{ACT_LAST}"
+act.sheet_properties.tabColor="246B5A"; printsetup(act)
 
 # =====================================================================
 # DASHBOARD
@@ -467,96 +474,88 @@ calcf("A3:A{}".format(2+CAL_DATA), FormulaRule(formula=['AND($A3<>"",$A3>=TODAY(
 print("building dashboard...")
 dash = wb.create_sheet("Dashboard")
 dash.sheet_view.showGridLines = False
-title_row(dash, "Organika RTD  ·  Community Partnerships Command Centre", "N")
-subtitle(dash, 2, "Live overview. Every number updates on its own as the team works the type tabs.")
-for c in range(1,15): dash.column_dimensions[get_column_letter(c)].width = 12
-def kpi(col, label, formula, numfmt=None):
-    L1 = get_column_letter(col); L2 = get_column_letter(col+1)
-    dash.merge_cells("{}4:{}4".format(L1,L2)); dash.merge_cells("{}5:{}5".format(L1,L2))
-    a = dash.cell(4,col,label); a.font=font(11,True,WHITE); a.fill=fill(C_HEADER); a.alignment=A_C; a.border=BORD
-    b = dash.cell(5,col,formula); b.font=font(18,True,WHITE); b.fill=fill(C_TITLE); b.alignment=A_C; b.border=BORD
-    if numfmt: b.number_format = numfmt
-dash.row_dimensions[4].height=26; dash.row_dimensions[5].height=40
-ML=MLR
-kpi(1,"Total Partners","=SUM(E8:E15)")
-kpi(3,"P1 Partners","=COUNTIF({M}$E$3:$E$500,\"P1\")".format(M=ML))
-kpi(5,"Active Conversations","=COUNTIF({M}$F$3:$F$500,\"Outreach Sent\")+COUNTIF({M}$F$3:$F$500,\"In Conversation\")+COUNTIF({M}$F$3:$F$500,\"Proposal Sent\")+COUNTIF({M}$F$3:$F$500,\"Agreed\")".format(M=ML))
-kpi(7,"Activations Booked","=COUNT({M}$V$3:$V$500)".format(M=ML))
-kpi(9,"Cans Sampled to Date","=24*SUM({M}$X$3:$X$500)".format(M=ML),"#,##0")
-kpi(11,"Cost Per Can Sampled","=IFERROR(SUM({M}$Y$3:$Y$500)/(24*SUM({M}$X$3:$X$500)),0)".format(M=ML),FMT_CENTS)
-kpi(13,"Days Until Costco Road Show","=MAX(0,DATE(2026,8,1)-TODAY())","#,##0")
-
-def sect(row,col,title,w2="Count"):
-    hcell(dash,row,col,title); hcell(dash,row,col+1,w2)
-def line(row,col,label,formula,numfmt=None,bold=False):
-    a=dash.cell(row,col,label); a.font=font(11,bold,C_DATA); a.alignment=A_L
-    b=dash.cell(row,col+1,formula); b.font=font(11,bold,C_DATA); b.alignment=A_CL
-    if numfmt: b.number_format=numfmt
-# Pipeline by Stage (A7)
-sect(7,1,"Pipeline by Stage")
-for i,s in enumerate(STATUS):
-    line(8+i,1,s,"=COUNTIF({M}$F$3:$F$500,\"{s}\")".format(M=ML,s=s))
-# List Health (A18)
-sect(18,1,"List Health")
-line(19,1,"Overdue Next Actions",'=COUNTIF({M}$T$3:$T$500,"<"&TODAY())'.format(M=ML))
-line(20,1,"Stale P1 Over 7 Days",'=COUNTIFS({M}$E$3:$E$500,"P1",{M}$R$3:$R$500,">7")'.format(M=ML))
-line(21,1,"Verified Rows","=COUNTIF({M}$O$3:$O$500,\"Verified Web\")+COUNTIF({M}$O$3:$O$500,\"Verified Phone\")+COUNTIF({M}$O$3:$O$500,\"Verified In Person\")".format(M=ML))
-line(22,1,"Pending Rows","=COUNTIF({M}$O$3:$O$500,\"Pending\")".format(M=ML))
-line(23,1,"Unverified Rows","=COUNTIF({M}$O$3:$O$500,\"Unverified\")".format(M=ML))
-# Partners by Type (D7)
-sect(7,4,"Partners by Type")
-for i,t in enumerate(TYPES):
-    line(8+i,4,t,"=COUNTA('{t}'!$B$3:$B$32)".format(t=t))
-# Priority (G7)
-sect(7,7,"Priority")
-for i,p in enumerate(PRIORITY):
-    line(8+i,7,p,"=COUNTIF({M}$E$3:$E$500,\"{p}\")".format(M=ML,p=p))
-# Activations coming up (G12)
-sect(12,7,"Activations")
-for i,(lbl,n) in enumerate([("Next 30 Days",30),("Next 60 Days",60),("Next 90 Days",90)]):
-    line(13+i,7,lbl,'=COUNTIFS({M}$V$3:$V$500,">="&TODAY(),{M}$V$3:$V$500,"<="&TODAY()+{n})'.format(M=ML,n=n))
-# Budget committed vs spent (J7)
-sect(7,10,"Budget","$")
-for i,(lbl,ref,fmt) in enumerate([("Total Budget","=Budget!B14",FMT_MONEY),("Committed","=Budget!C14",FMT_MONEY),
-        ("Spent","=Budget!D14",FMT_MONEY),("Remaining","=Budget!E14",FMT_MONEY),("% Spent","=Budget!F14",FMT_PCT)]):
-    line(8+i,10,lbl,ref,fmt)
-# SKU status (J14)
-hcell(dash,14,10,"SKU Status"); hcell(dash,14,11,"Requested"); hcell(dash,14,12,"Sampled"); hcell(dash,14,13,"Stocked")
-for i,(sku,col) in enumerate([("Raspberry 4338",ml_letter(35)),("Lemon Lime 4336",ml_letter(36)),("Pineapple Passion Fruit 4340",ml_letter(37))]):
-    dash.cell(15+i,10,sku).font=font(11,False,C_DATA)
-    for j,stt in enumerate(["Requested","Sampled","Stocked"]):
-        cc=dash.cell(15+i,11+j,"=COUNTIF({M}${c}$3:${c}$500,\"{s}\")".format(M=ML,c=col,s=stt))
-        cc.font=font(11,False,C_DATA); cc.alignment=A_CL
-# date stamp, top right
+title_row(dash, "Organika RTD  ·  Community Partnerships", "N")
+subtitle(dash, 2, "A live snapshot. It updates on its own as the team works the tabs.")
+for c in range(1,15): dash.column_dimensions[get_column_letter(c)].width = 12.3
 dash.merge_cells("L2:N2")
 ds=dash.cell(2,12,'="As of  "&TEXT(TODAY(),"yyyy/mm/dd")')
 ds.font=font(11,False,C_SUB); ds.alignment=Alignment(horizontal="right",vertical="center")
-# Region rollup (G17)
-METRO=["Vancouver","Burnaby","North Vancouver","West Vancouver","Richmond","Surrey","Langley","Coquitlam","New Westminster"]
-sect(17,7,"Region")
-line(18,7,"Metro Vancouver","="+"+".join('COUNTIF({M}$C$3:$C$500,"{c}")'.format(M=ML,c=c) for c in METRO))
-line(19,7,"Victoria",'=COUNTIF({M}$C$3:$C$500,"Victoria")'.format(M=ML))
-line(20,7,"Kelowna",'=COUNTIF({M}$C$3:$C$500,"Kelowna")'.format(M=ML))
-dash.cell(25,1,"Every figure and chart refreshes on its own. To change a record, edit its type tab. The Master List, Calendar, tiles and charts all update automatically.").font=font(11,False,C_SUB)
-# live charts
-def style_series(ser, clr):
-    ser.graphicalProperties = GraphicalProperties(solidFill=clr)
-ch1 = BarChart(); ch1.type="bar"; ch1.title="Pipeline by Stage"; ch1.legend=None; ch1.height=7.2; ch1.width=9
-ch1.add_data(Reference(dash,min_col=2,min_row=8,max_row=16)); ch1.set_categories(Reference(dash,min_col=1,min_row=8,max_row=16))
-style_series(ch1.series[0], C_HEADER[2:]); ch1.dataLabels=DataLabelList(); ch1.dataLabels.showVal=True
-dash.add_chart(ch1,"A27")
-ch2 = BarChart(); ch2.type="bar"; ch2.title="Partners by Type"; ch2.legend=None; ch2.height=7.2; ch2.width=9
-ch2.add_data(Reference(dash,min_col=5,min_row=8,max_row=15)); ch2.set_categories(Reference(dash,min_col=4,min_row=8,max_row=15))
-style_series(ch2.series[0], "6FA392"); ch2.dataLabels=DataLabelList(); ch2.dataLabels.showVal=True
-dash.add_chart(ch2,"F27")
-ch3 = DoughnutChart(); ch3.title="Priority Split"; ch3.height=7.2; ch3.width=9
-ch3.add_data(Reference(dash,min_col=8,min_row=8,max_row=10)); ch3.set_categories(Reference(dash,min_col=7,min_row=8,max_row=10))
-pts=[]
-for i,clr in enumerate(["2E5A4E","4F8A78","8FB3A6"]):
-    dp=DataPoint(idx=i); dp.graphicalProperties=GraphicalProperties(solidFill=clr); pts.append(dp)
+ML=MLR
+ACT="Activations!"
+# hidden helper data that feeds the charts (columns P,Q)
+for c in ("P","Q","R","S"): dash.column_dimensions[c].hidden=True
+def hset(r,lbl,f):
+    dash.cell(r,16,lbl).font=font(10,False,C_SUB); dash.cell(r,17,f)
+for i,s in enumerate(STATUS): hset(4+i,s,'=COUNTIF({M}$F$3:$F$500,"{s}")'.format(M=ML,s=s))
+for i,t in enumerate(TYPES): hset(14+i,t,"=COUNTA('{t}'!$B$3:$B$32)".format(t=t))
+for i,p in enumerate(PRIORITY): hset(23+i,p,'=COUNTIF({M}$E$3:$E$500,"{p}")'.format(M=ML,p=p))
+# KPI cards
+def kpi(col,label,formula,numfmt=None):
+    L1=get_column_letter(col); L2=get_column_letter(col+1)
+    dash.merge_cells("{}4:{}4".format(L1,L2)); dash.merge_cells("{}5:{}6".format(L1,L2))
+    a=dash.cell(4,col,label); a.font=font(11,True,WHITE); a.fill=fill(C_HEADER); a.alignment=A_C; a.border=BORD
+    dash.cell(4,col+1).fill=fill(C_HEADER); dash.cell(4,col+1).border=BORD
+    b=dash.cell(5,col,formula); b.font=font(20,True,WHITE); b.fill=fill(C_TITLE); b.alignment=A_C; b.border=BORD
+    if numfmt: b.number_format=numfmt
+dash.row_dimensions[4].height=24; dash.row_dimensions[5].height=24; dash.row_dimensions[6].height=16
+kpi(1,"Total Partners","=SUM(Q14:Q21)")
+kpi(3,"P1 Partners","=Q23")
+kpi(5,"Active Conversations",'=COUNTIF({M}$F$3:$F$500,"Outreach Sent")+COUNTIF({M}$F$3:$F$500,"In Conversation")+COUNTIF({M}$F$3:$F$500,"Proposal Sent")+COUNTIF({M}$F$3:$F$500,"Agreed")'.format(M=ML))
+kpi(7,"Activations Booked",'=COUNTIF({A}$G$3:$G$500,"Booked")+COUNTIF({A}$G$3:$G$500,"Confirmed")+COUNTIF({A}$G$3:$G$500,"Delivered")'.format(A=ACT))
+kpi(9,"Cans Sampled","=SUM({A}$N$3:$N$500)".format(A=ACT),"#,##0")
+kpi(11,"Cost Per Can","=IFERROR(SUM({A}$J$3:$J$500)/SUM({A}$N$3:$N$500),0)".format(A=ACT),FMT_CENTS)
+kpi(13,"Days to Costco Road Show","=MAX(0,DATE(2026,8,1)-TODAY())","#,##0")
+# section dividers and table blocks
+def divider(r,text):
+    dash.merge_cells(start_row=r,start_column=1,end_row=r,end_column=14)
+    c=dash.cell(r,1,text); c.font=font(11,True,WHITE); c.fill=fill(C_HEADER); c.alignment=A_L
+    dash.row_dimensions[r].height=20
+def block(r,c,title,rows):
+    dash.merge_cells(start_row=r,start_column=c,end_row=r,end_column=c+2)
+    h=dash.cell(r,c,title); h.font=font(11,True,WHITE); h.fill=fill(C_HEADER); h.alignment=A_L; h.border=BORD
+    dash.cell(r,c+1).fill=fill(C_HEADER); dash.cell(r,c+1).border=BORD
+    dash.cell(r,c+2).fill=fill(C_HEADER); dash.cell(r,c+2).border=BORD
+    for i,(lbl,f,fmt) in enumerate(rows):
+        rr=r+1+i
+        dash.merge_cells(start_row=rr,start_column=c,end_row=rr,end_column=c+1)
+        a=dash.cell(rr,c,lbl); a.font=font(11,False,C_DATA); a.alignment=A_L; a.border=BORD
+        dash.cell(rr,c+1).border=BORD
+        b=dash.cell(rr,c+2,f); b.font=font(11,False,C_DATA); b.alignment=A_CL; b.border=BORD
+        if fmt: b.number_format=fmt
+divider(8,"Snapshot")
+def style_series(ser,clr): ser.graphicalProperties=GraphicalProperties(solidFill=clr)
+ch1=BarChart(); ch1.type="bar"; ch1.title="Pipeline by Stage"; ch1.legend=None; ch1.height=6.5; ch1.width=8.8
+ch1.add_data(Reference(dash,min_col=17,min_row=4,max_row=12)); ch1.set_categories(Reference(dash,min_col=16,min_row=4,max_row=12))
+style_series(ch1.series[0],C_HEADER[2:]); ch1.dataLabels=DataLabelList(); ch1.dataLabels.showVal=True
+dash.add_chart(ch1,"A9")
+ch2=BarChart(); ch2.type="bar"; ch2.title="Partners by Type"; ch2.legend=None; ch2.height=6.5; ch2.width=8.8
+ch2.add_data(Reference(dash,min_col=17,min_row=14,max_row=21)); ch2.set_categories(Reference(dash,min_col=16,min_row=14,max_row=21))
+style_series(ch2.series[0],"6FA392"); ch2.dataLabels=DataLabelList(); ch2.dataLabels.showVal=True
+dash.add_chart(ch2,"F9")
+ch3=DoughnutChart(); ch3.title="Priority Split"; ch3.height=6.5; ch3.width=8.8
+ch3.add_data(Reference(dash,min_col=17,min_row=23,max_row=25)); ch3.set_categories(Reference(dash,min_col=16,min_row=23,max_row=25))
+pts=[DataPoint(idx=i) for i in range(3)]
+for dp,clr in zip(pts,["2E5A4E","4F8A78","8FB3A6"]): dp.graphicalProperties=GraphicalProperties(solidFill=clr)
 ch3.series[0].data_points=pts; ch3.dataLabels=DataLabelList(); ch3.dataLabels.showVal=True
-dash.add_chart(ch3,"K27")
-dash.sheet_properties.tabColor = "2E5A4E"
+dash.add_chart(ch3,"K9")
+divider(26,"Detail")
+METRO=["Vancouver","Burnaby","North Vancouver","West Vancouver","Richmond","Surrey","Langley","Coquitlam","New Westminster"]
+block(27,1,"Region",[("Metro Vancouver","="+"+".join('COUNTIF({M}$C$3:$C$500,"{c}")'.format(M=ML,c=c) for c in METRO),None),
+    ("Victoria",'=COUNTIF({M}$C$3:$C$500,"Victoria")'.format(M=ML),None),
+    ("Kelowna",'=COUNTIF({M}$C$3:$C$500,"Kelowna")'.format(M=ML),None)])
+block(27,5,"Activations Ahead",[(lbl,'=COUNTIFS({A}$B$3:$B$500,">="&TODAY(),{A}$B$3:$B$500,"<="&TODAY()+{n})'.format(A=ACT,n=n),None) for lbl,n in [("Next 30 Days",30),("Next 60 Days",60),("Next 90 Days",90)]])
+block(27,9,"Cans by Flavour",[("Raspberry","=SUM({A}$K$3:$K$500)".format(A=ACT),"#,##0"),
+    ("Lemon Lime","=SUM({A}$L$3:$L$500)".format(A=ACT),"#,##0"),
+    ("Pineapple","=SUM({A}$M$3:$M$500)".format(A=ACT),"#,##0"),
+    ("Total Cans","=SUM({A}$N$3:$N$500)".format(A=ACT),"#,##0")])
+block(33,1,"List Health",[("Overdue Actions",'=COUNTIF({M}$T$3:$T$500,"<"&TODAY())'.format(M=ML),None),
+    ("Stale P1 Rows",'=COUNTIFS({M}$E$3:$E$500,"P1",{M}$R$3:$R$500,">7")'.format(M=ML),None),
+    ("Verified",'=COUNTIF({M}$O$3:$O$500,"Verified Web")+COUNTIF({M}$O$3:$O$500,"Verified Phone")+COUNTIF({M}$O$3:$O$500,"Verified In Person")'.format(M=ML),None),
+    ("Pending",'=COUNTIF({M}$O$3:$O$500,"Pending")'.format(M=ML),None)])
+block(33,5,"Budget",[("Total Budget","=Budget!B14",FMT_MONEY),("Committed","=Budget!C14",FMT_MONEY),
+    ("Spent","=Budget!D14",FMT_MONEY),("Remaining","=Budget!E14",FMT_MONEY),("% Spent","=Budget!F14",FMT_PCT)])
+dash.cell(40,1,"Everything here updates on its own. Edit a partner on its type tab, log an activation on the Activations tab, and these tiles and charts refresh.").font=font(11,False,C_SUB)
+dash.sheet_properties.tabColor="2E5A4E"
 
 # =====================================================================
 # TYPE SUMMARY
@@ -567,7 +566,7 @@ TARGETS = {"Run Clubs":10,"Gyms & Studios":10,"Events & Festivals":8,"Sports Tea
 ts = wb.create_sheet("Type Summary")
 ts.sheet_view.showGridLines = False
 title_row(ts, "Type Summary", "K")
-TS_HDR=["Partnership Type","Target (draft)","Partners","P1","P2","P3","In Conversation","Agreed","Activated","Cases Committed","% to Target"]
+TS_HDR=["Partnership Type","Draft Target","Partners","P1","P2","P3","In Conversation","Agreed","Activated","Activations","% to Target"]
 for c,htext in enumerate(TS_HDR,start=1): hcell(ts,2,c,htext)
 tsw={1:24,2:14,3:12,4:8,5:8,6:8,7:16,8:12,9:12,10:16,11:12}
 for c,w in tsw.items(): ts.column_dimensions[get_column_letter(c)].width=w
@@ -582,7 +581,7 @@ for i,t in enumerate(TYPES):
       "=COUNTIF('{t}'!$G$3:$G$32,\"In Conversation\")".format(t=t),
       "=COUNTIF('{t}'!$G$3:$G$32,\"Agreed\")".format(t=t),
       "=COUNTIF('{t}'!$G$3:$G$32,\"Activated\")+COUNTIF('{t}'!$G$3:$G$32,\"Repeat Partner\")".format(t=t),
-      "=SUM('{t}'!$X$3:$X$32)".format(t=t),
+      "=COUNTIF(Activations!$D$3:$D$500,\"{t}\")".format(t=t),
       "=IFERROR(C{r}/B{r},0)".format(r=r)]
     for c,v in enumerate(vals,start=1):
         cell=ts.cell(r,c,v); cell.font=font(); cell.border=BORD
@@ -610,14 +609,14 @@ print("building budget...")
 bud = wb.create_sheet("Budget")
 bud.sheet_view.showGridLines = False
 title_row(bud, "Budget", "F")
-B_HDR=["Partnership Type","Total Budget ($)","Committed ($)","Spent ($)","Remaining ($)","% Spent"]
+B_HDR=["Partnership Type","Total Budget","Committed","Spent","Remaining","% Spent"]
 for c,htext in enumerate(B_HDR,start=1): hcell(bud,2,c,htext)
 budw={1:24,2:16,3:16,4:16,5:16,6:12}
 for c,w in budw.items(): bud.column_dimensions[get_column_letter(c)].width=w
 bud.row_dimensions[2].height=50
 for i,t in enumerate(TYPES):
     r=3+i
-    cells=[t,0,0,"=SUM('{t}'!$Z$3:$Z$32)".format(t=t),"=B{r}-D{r}".format(r=r),"=IFERROR(D{r}/B{r},0)".format(r=r)]
+    cells=[t,0,0,"=SUMIF(Activations!$D$3:$D$500,$A{r},Activations!$J$3:$J$500)".format(r=r),"=B{r}-D{r}".format(r=r),"=IFERROR(D{r}/B{r},0)".format(r=r)]
     for c,v in enumerate(cells,start=1):
         cell=bud.cell(r,c,v); cell.font=font(); cell.border=BORD
         cell.alignment=A_L if c==1 else A_CL
@@ -629,7 +628,7 @@ for c in range(2,6):
     L=get_column_letter(c); cell=bud.cell(br,c,"=SUM({L}3:{L}{e})".format(L=L,e=br-1))
     cell.font=font(12,True,C_DATA); cell.fill=fill(C_TOTAL); cell.alignment=A_CL; cell.border=BORD; cell.number_format=FMT_MONEY
 ce=bud.cell(br,6,"=IFERROR(D{b}/B{b},0)".format(b=br)); ce.font=font(12,True,C_DATA); ce.fill=fill(C_TOTAL); ce.alignment=A_CL; ce.border=BORD; ce.number_format=FMT_PCT
-bud.cell(br+2,1,"Total Budget and Committed are yours to set and start at zero. Spent rolls up the Cost column from each type tab.").font=font(11,False,C_SUB)
+bud.cell(br+2,1,"Total Budget and Committed are yours to set and start at zero. Spent adds up the Budget column on the Activations tab by type.").font=font(11,False,C_SUB)
 bud.freeze_panes="A3"; bud.sheet_properties.tabColor="8FB3A6"
 
 # =====================================================================
@@ -657,7 +656,7 @@ for i in range(DATA_ROWS):
     se.cell(r,1, f'=IF($B{r}="","",ROW()-2)')
 # dropdowns
 def se_dv(name, colrange):
-    dv = DataValidation(type="list", formula1=name, allow_blank=True)
+    dv = DataValidation(type="list", formula1=name, allow_blank=True, showErrorMessage=False)
     se.add_data_validation(dv); dv.add(colrange)
 se_dv("LU_City", f"C{FIRST}:C{LASTROW}")
 se_dv("LU_Source", f"H{FIRST}:H{LASTROW}")
@@ -678,7 +677,7 @@ band(se, FIRST, LASTROW, len(SE_HDRS))
 se.freeze_panes = "C3"
 se.auto_filter.ref = f"A2:{SE_LAST}{LASTROW}"
 se.sheet_properties.tabColor = "8FB3A6"; printsetup(se)
-subtitle(se, LASTROW+2, "Idea parking lot for events farther down the line. It starts empty on purpose. When an idea is approved, add it as a partner row on the Events & Festivals tab and book the activation there. Nothing on this tab feeds the Master List or the Calendar.")
+subtitle(se, LASTROW+2, "A place to park event ideas for later. It starts empty. When you green light one, add it as a partner on the Events & Festivals tab and log the activation on the Activations tab.")
 
 # =====================================================================
 # SALES TEAM  (Maddie only, per Louis)
@@ -708,8 +707,8 @@ st.freeze_panes="A3"; st.sheet_properties.tabColor="B7C9C1"
 print("building guide...")
 gd = wb.create_sheet("Guide")
 gd.sheet_view.showGridLines = False
-title_row(gd, "Guide  ·  How to Use This Workbook", "D")
-gd.column_dimensions["A"].width=30; gd.column_dimensions["B"].width=86
+title_row(gd, "Guide", "D")
+gd.column_dimensions["A"].width=32; gd.column_dimensions["B"].width=84
 gd.column_dimensions["C"].width=4; gd.column_dimensions["D"].width=4
 def gsec(r,txt):
     c=gd.cell(r,1,txt); gd.merge_cells("A{r}:D{r}".format(r=r))
@@ -719,79 +718,48 @@ def gline(r,a,b=None):
     if b is not None:
         cb=gd.cell(r,2,b); cb.font=font(11,False,C_DATA); cb.alignment=A_LW
     gd.row_dimensions[r].height=16
-gd.cell(2,1,"A quick reference for the team. You only ever type into the type tabs or pick from a drop down menu.").font=font(11,False,C_SUB)
+gd.cell(2,1,"How the file works. You type into the green tabs or pick from a menu.").font=font(11,False,C_SUB)
 r=4
-gsec(r,"The boundary rule, BC Tracker or this file"); r+=1
-gline(r,"If it sells cans on a shelf it lives in the BC Tracker. If it samples, sponsors, or creates content it lives here."); r+=1
-gline(r,"A partner can live in both files. Use the In BC Tracker column to flag any partner that also sits in the BC Tracker."); r+=1
-gline(r,"This file is the sister to the BC Tracker. That file tracks retail doors. This file tracks community partnerships and activations."); r+=2
-gsec(r,"Nothing is proposed in advance"); r+=1
-gline(r,"Every partner row carries research facts only: who they are, where they are, audience and source."); r+=1
-gline(r,"Activation Type, Activation Date, cases and budget all start blank. They only fill when the team books something real."); r+=1
-gline(r,"The Activation Calendar starts empty for the same reason. Enter an Activation Date on a type tab and the row appears there on its own, soonest first."); r+=2
-gsec(r,"How to use it, 3 steps"); r+=1
-gline(r,"1.  Open your type tab at the bottom (the green tabs). Each tab is one partnership type."); r+=1
-gline(r,"2.  Work the row. Update Status, Last Contacted, Next Action and Next Action Date as you go."); r+=1
-gline(r,"3.  When a partner agrees to something real, pick the Activation Type and enter the Activation Date. The Calendar and Dashboard update on their own."); r+=2
-gsec(r,"What the colours mean, mapped to the BC Tracker"); r+=1
-gline(r,"Green is Activated and Repeat Partner. Same green the BC Tracker uses for Listed and Won."); r+=1
-gline(r,"Amber is In Conversation, Proposal Sent and Agreed. Same amber the BC Tracker uses for Pitched and In Negotiation."); r+=1
-gline(r,"Pale blue is Outreach Sent. Grey is Open and On Hold. Rose is Lost."); r+=1
-gline(r,"Priority shades match the BC Tracker. P1 is warm orange, P2 is blue, P3 is grey."); r+=1
-gline(r,"A Next Action Date in the past turns rose. Days Since Activity turns amber over 7 days on P1 rows and rose over 14 days on any row."); r+=2
-gsec(r,"The Source tag on every row"); r+=1
+gsec(r,"What this file is for"); r+=1
+gline(r,"This is the sister file to the BC Tracker. The BC Tracker tracks retail doors. This one tracks community partnerships and the activations that come from them."); r+=1
+gline(r,"If it sells cans on a shelf, it goes in the BC Tracker. If it samples, sponsors, or makes content, it goes here."); r+=1
+gline(r,"A partner can be in both files. The In BC Tracker column flags the ones that are."); r+=2
+gsec(r,"Working a partner"); r+=1
+gline(r,"Open a green type tab. Each tab is one kind of partner: run clubs, gyms, events, and so on."); r+=1
+gline(r,"Keep Status, Last Contacted, Next Action and Next Action Date current as you go."); r+=1
+gline(r,"Click a partner's Instagram or website link to open their page."); r+=1
+gline(r,"Nothing about activations is filled in for you. You decide what runs and when."); r+=2
+gsec(r,"Booking an activation"); r+=1
+gline(r,"Go to the Activations tab and add a row."); r+=1
+gline(r,"Pick the partner, date, status, assets and budget from the menus, or type your own value if it is not on the list."); r+=1
+gline(r,"Log cans used by flavour. Total Cans adds up on its own."); r+=1
+gline(r,"The Dashboard, Budget and Type Summary all read from this tab."); r+=2
+gsec(r,"Reading the colours"); r+=1
+gline(r,"Green is done: Activated, Repeat Partner, Delivered."); r+=1
+gline(r,"Amber is in progress: In Conversation, Proposal Sent, Agreed, Booked."); r+=1
+gline(r,"Pale blue is early days. Grey is Open or On Hold. Rose is Lost or Cancelled."); r+=1
+gline(r,"A Next Action Date in the past turns rose. A P1 partner with no contact for over 7 days turns amber."); r+=1
+gline(r,"P1 is warm orange, P2 is blue, P3 is grey, the same as the BC Tracker."); r+=2
+gsec(r,"How sure we are about each partner"); r+=1
 gline(r,"Verified Web","Confirmed on an official site or public Instagram in 2026."); r+=1
-gline(r,"Pending","The partner is real but a detail such as a follower count rests on a single source. Reverify before outreach."); r+=1
-gline(r,"Unverified","Heard of secondhand and not yet confirmed. Treat as a lead only."); r+=1
-gline(r,"Audience numbers came from public sources. Anything that could not be verified is left blank or TBD and sits on the gap list."); r+=2
-gsec(r,"The three SKUs we track"); r+=1
-gline(r,"Raspberry is SKU 4338.  Lemon Lime is SKU 4336.  Pineapple Passion Fruit is SKU 4340.  355ml cans."); r+=1
-gline(r,"Each SKU column takes blank, Requested, Sampled, or Stocked."); r+=2
-gsec(r,"Which tabs do what"); r+=1
+gline(r,"Pending","Real, but one detail such as a follower count needs a second look. Reverify before outreach."); r+=1
+gline(r,"Unverified","Heard of but not confirmed. Treat as a lead only."); r+=1
+gline(r,"Anything we could not confirm is left blank or TBD."); r+=2
+gsec(r,"The three flavours"); r+=1
+gline(r,"Raspberry is 4338. Lemon Lime is 4336. Pineapple Passion Fruit is 4340. 355ml cans."); r+=2
+gsec(r,"The tabs"); r+=1
 for lbl,desc in [
- ("Dashboard","Live executive overview. Totals, pipeline, list health, activations, budget, SKU status. Read only."),
- ("Activation Calendar","Every booked activation in date order, soonest first. Starts empty, fills itself. Read only."),
- ("Master List","Every partner from every type tab in one place. Read only, updates on its own."),
- ("Type Summary","Targets versus actuals per type with % to target. Targets are a draft for Louis to confirm. Read only."),
- ("Budget","Budget per type. You can fill Total Budget and Committed. Spent rolls up from the type tabs."),
- ("Type tabs","Where the team works. One tab per partnership type. Fully editable."),
- ("Suggested Events","Idea parking lot for future events. Starts empty. Approved ideas move onto the Events & Festivals tab."),
- ("Lookups","The lists behind every drop down. Add a value here and it appears in the menus."),
- ("Sales Team","Maddie owns this file. Add reps here and on the Lookups Owner column to grow the menu."),
+ ("Dashboard","The numbers and charts at a glance. Read only."),
+ ("Activations","Where you log each activation. Cans, budget, status, assets, notes."),
+ ("Master List","Every partner in one place. Read only, builds itself from the type tabs."),
+ ("Type Summary","Targets against actuals per type. Targets are a draft to confirm."),
+ ("Budget","Set a budget per type. Spent fills in from the Activations tab."),
+ ("Type tabs","Where you work the partners. One per type."),
+ ("Suggested Events","A parking lot for event ideas. Starts empty."),
+ ("Lookups","The lists behind the menus. Add a value and it shows up everywhere."),
+ ("Sales Team","Maddie owns this file for now."),
 ]:
     gline(r,lbl,desc); r+=1
-r+=1
-gsec(r,"What each column means"); r+=1
-for lbl,desc in [
- ("Partner Name","The run club, studio, event, team, group, space, creator or cause being pursued."),
- ("Partnership Type","Which of the eight types this partner belongs to. Fills itself when a name is entered."),
- ("City and Neighbourhood","Where the partner is based. Metro Vancouver first, then Victoria and Kelowna."),
- ("Priority","P1 chase first, P2, or P3."),
- ("Status","Where the partnership sits, from Open through Activated and Repeat Partner."),
- ("Primary Owner","The rep responsible. Maddie to start, drawn from the Sales Team tab."),
- ("Audience Size and Source","Approximate reach and exactly where that number came from."),
- ("Source","Verified Web, Pending or Unverified. How sure we are the row is real."),
- ("Warm","Warm, Cold, Past Contact or Unknown relationship."),
- ("Last Contacted and Days Since Activity","The most recent contact date and how many days have passed."),
- ("Next Action and Date","The next step and when it is due."),
- ("Activation Type","Sampling, Event Booth, Sponsorship, Ambassador, Contra Product, Co Branded Content or Hydration Station. Pick when you book."),
- ("Activation Date","The date of the activation. Anything with a date shows on the Activation Calendar."),
- ("Cases Committed and Delivered","Cases promised and cases delivered. 24 cans per case."),
- ("Cost and Cost Per Can","Dollars spent and the cost for each can sampled. Cost Per Can fills once both Cost and Cases Delivered exist."),
- ("Contra Value","The dollar value of anything received in trade rather than cash."),
- ("What They Want and Deliverables","What the partner is asking for and what each side promised or received."),
- ("Nearby Retail Doors","Retail doors near the partner that sit in the BC Tracker. Links the two files."),
- ("In BC Tracker","Yes if this partner also sits in the BC Tracker."),
- ("Raspberry, Lemon Lime, Pineapple","The sampling status of each flavour at that partner."),
-]:
-    gline(r,lbl,desc); r+=1
-r+=1
-gsec(r,"Version"); r+=1
-gline(r,"2026 06  v1","First build. 60 researched partners, live Dashboard, Activation Calendar, read only Master List, eight type tabs.")
-r+=1
-gline(r,"2026 06  v2","Cleared every proposed activation so the team books real ones. Maddie set as the single owner. Added the empty Suggested Events tab, List Health on the Dashboard and % to Target on the Type Summary.")
-r+=1
-gline(r,"2026 06  v3","Polish pass. Live Dashboard charts, clickable Instagram and website links, a region rollup, soft row banding for readability, a date stamp and clean print layout on every tab.")
 gd.sheet_properties.tabColor="B7C9C1"
 
 # =====================================================================
@@ -799,7 +767,7 @@ gd.sheet_properties.tabColor="B7C9C1"
 # =====================================================================
 for ws in wb.worksheets:
     printsetup(ws, "1:2" if ws.title not in ("Dashboard","Guide") else None)
-order = ["Dashboard","Activation Calendar","Master List","Type Summary","Budget"] + TYPES + ["Suggested Events","Lookups","Sales Team","Guide"]
+order = ["Dashboard","Activations","Master List","Type Summary","Budget"] + TYPES + ["Suggested Events","Lookups","Sales Team","Guide"]
 wb._sheets.sort(key=lambda s: order.index(s.title))
 wb.active = 0
 try:
