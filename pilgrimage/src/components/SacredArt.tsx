@@ -31,6 +31,45 @@ function Halo({ cx, cy, r }: { cx: number; cy: number; r: number }) {
   );
 }
 
+// A single tongue of flame: base at (cx,cy), rising to height h, width w,
+// leaning by `lean` degrees. Used to build the burning bush from many layered
+// tongues so it reads as living fire rather than a flat blob.
+function Tongue({
+  cx,
+  cy,
+  h,
+  w,
+  lean = 0,
+  fill,
+  opacity = 1,
+  flicker = false,
+}: {
+  cx: number;
+  cy: number;
+  h: number;
+  w: number;
+  lean?: number;
+  fill: string;
+  opacity?: number;
+  flicker?: boolean;
+}) {
+  // A teardrop with a curved, slightly hooked tip — the silhouette of flame.
+  const d = `M0 0
+    C ${-w * 0.55} ${-h * 0.28}, ${-w * 0.5} ${-h * 0.62}, ${-w * 0.12} ${-h * 0.86}
+    C ${-w * 0.05} ${-h * 0.93}, ${w * 0.06} ${-h * 0.98}, 0 ${-h}
+    C ${w * 0.04} ${-h * 0.97}, ${w * 0.5} ${-h * 0.66}, ${w * 0.55} ${-h * 0.3}
+    C ${w * 0.5} ${-h * 0.1}, ${w * 0.3} 0, 0 0 Z`;
+  return (
+    <path
+      d={d}
+      fill={fill}
+      opacity={opacity}
+      transform={`translate(${cx} ${cy}) rotate(${lean})`}
+      className={flicker ? 'flame' : undefined}
+    />
+  );
+}
+
 function Scene({ kind }: { kind: ArtKind }) {
   switch (kind) {
     case 'cathedral-hanoi':
@@ -1387,33 +1426,101 @@ function Scene({ kind }: { kind: ArtKind }) {
     case 'sinai-bush':
       return (
         <>
-          <rect width="400" height="300" fill="#0c1122" />
-          <Stars seed={61} n={22} />
-          {/* desert floor */}
-          <ellipse cx="200" cy="330" rx="280" ry="90" fill="#141b33" />
-          {/* the bush that burns and is not consumed */}
-          <g stroke="#1a2240" strokeWidth="7" strokeLinecap="round" fill="none">
-            <path d="M200 268v-50M200 240l-30-28M200 240l30-28M186 252l-38-18M214 252l38-18" />
+          <defs>
+            <radialGradient id="bushSky" cx="50%" cy="62%" r="75%">
+              <stop offset="0%" stopColor="#2a2440" />
+              <stop offset="45%" stopColor="#161a33" />
+              <stop offset="100%" stopColor="#0a0e1e" />
+            </radialGradient>
+            <radialGradient id="bushGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor={GOLD} stopOpacity="0.55" />
+              <stop offset="35%" stopColor={GOLD} stopOpacity="0.22" />
+              <stop offset="100%" stopColor={GOLD} stopOpacity="0" />
+            </radialGradient>
+            <linearGradient id="bushOuter" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0%" stopColor={GARNET} />
+              <stop offset="55%" stopColor="#b5572e" />
+              <stop offset="100%" stopColor={GOLD} />
+            </linearGradient>
+            <linearGradient id="bushInner" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0%" stopColor="#c9772f" />
+              <stop offset="60%" stopColor={GOLD} />
+              <stop offset="100%" stopColor={IVORY} />
+            </linearGradient>
+            <linearGradient id="bushGround" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#2a2336" />
+              <stop offset="100%" stopColor="#0c1020" />
+            </linearGradient>
+          </defs>
+
+          {/* night sky and stars */}
+          <rect width="400" height="300" fill="url(#bushSky)" />
+          <Stars seed={61} n={26} />
+          <circle cx="64" cy="50" r="13" fill={IVORY} opacity="0.55" />
+          <circle cx="60" cy="47" r="11" fill="url(#bushSky)" />
+
+          {/* Mount Sinai, low on the horizon, lit faintly by the fire */}
+          <path d="M0 232L96 150l46 42 40-30 70 60 60-26 88 56v62H0z" fill="#10142a" />
+          <path d="M96 150l46 42 12-9-40-50z" fill="#161b34" opacity="0.8" />
+
+          {/* warm ground, and the great glow of holy fire */}
+          <rect x="0" y="226" width="400" height="74" fill="url(#bushGround)" />
+          <ellipse cx="200" cy="232" rx="150" ry="26" fill={GOLD} opacity="0.16" />
+          <rect x="40" y="20" width="320" height="280" fill="url(#bushGlow)" />
+
+          {/* the branches — visible through the flames, and not consumed */}
+          <g stroke="#241d14" strokeWidth="5" strokeLinecap="round" fill="none" opacity="0.9">
+            <path d="M200 236V150" />
+            <path d="M200 210c-22-6-34-22-40-44M200 198c20-6 33-20 40-40M200 178c-14-6-22-16-26-30M200 170c14-6 22-16 26-28" />
           </g>
-          {Array.from({ length: 7 }, (_, i) => {
-            const xs = [200, 168, 232, 150, 250, 184, 216];
-            const ys = [188, 208, 208, 230, 230, 168, 168];
-            return (
-              <path
-                key={i}
-                d={`M${xs[i]} ${ys[i] - 22}c8 10 12 17 12 23a12 12 0 0 1-24 0c0-6 4-13 12-23z`}
-                fill={GOLD}
-                className="flame"
-                opacity={0.95 - (i % 3) * 0.15}
-              />
-            );
-          })}
-          <circle cx="200" cy="210" r="74" fill={GOLD} opacity="0.12" />
-          {/* sandals, set aside: holy ground */}
-          <g fill={INCENSE} opacity="0.8">
-            <ellipse cx="96" cy="280" rx="16" ry="6" />
-            <ellipse cx="130" cy="284" rx="16" ry="6" />
+          {/* small leaves that stay green-grey: the bush survives the fire */}
+          {[
+            [166, 168],
+            [236, 162],
+            [176, 196],
+            [228, 192],
+            [200, 150],
+          ].map(([x, y], i) => (
+            <path
+              key={i}
+              d={`M${x} ${y} q -9 -7 0 -16 q 9 9 0 16 Z`}
+              fill={INCENSE}
+              opacity={0.7}
+            />
+          ))}
+
+          {/* the fire itself, layered: deep tongues, gold body, ivory heart */}
+          <g>
+            {/* outer garnet→gold tongues form the bush silhouette */}
+            <Tongue cx={150} cy={244} h={120} w={66} lean={-22} fill="url(#bushOuter)" opacity={0.95} />
+            <Tongue cx={250} cy={244} h={122} w={66} lean={22} fill="url(#bushOuter)" opacity={0.95} />
+            <Tongue cx={176} cy={250} h={150} w={70} lean={-9} fill="url(#bushOuter)" />
+            <Tongue cx={226} cy={250} h={152} w={70} lean={9} fill="url(#bushOuter)" />
+            <Tongue cx={200} cy={252} h={172} w={74} lean={0} fill="url(#bushOuter)" />
+            {/* mid gold body */}
+            <Tongue cx={184} cy={246} h={120} w={48} lean={-10} fill={GOLD} opacity={0.95} flicker />
+            <Tongue cx={216} cy={246} h={122} w={48} lean={10} fill={GOLD} opacity={0.95} flicker />
+            <Tongue cx={200} cy={248} h={146} w={50} lean={0} fill={GOLD} flicker />
+            {/* a few side tongues licking outward */}
+            <Tongue cx={128} cy={238} h={70} w={34} lean={-46} fill="url(#bushOuter)" opacity={0.85} flicker />
+            <Tongue cx={272} cy={238} h={72} w={34} lean={46} fill="url(#bushOuter)" opacity={0.85} flicker />
+            {/* ivory heart of the fire */}
+            <Tongue cx={200} cy={240} h={104} w={26} lean={0} fill="url(#bushInner)" flicker />
+            <Tongue cx={191} cy={236} h={74} w={16} lean={-8} fill={IVORY} opacity={0.85} flicker />
+            <Tongue cx={209} cy={236} h={76} w={16} lean={8} fill={IVORY} opacity={0.85} flicker />
           </g>
+
+          {/* embers rising into the dark */}
+          {[
+            [168, 96],
+            [238, 80],
+            [200, 60],
+            [150, 130],
+            [256, 120],
+            [214, 104],
+          ].map(([x, y], i) => (
+            <circle key={i} cx={x} cy={y} r={1.6 + (i % 3) * 0.7} fill={GOLD} opacity={0.5 + (i % 3) * 0.15} className="soft-glow" />
+          ))}
         </>
       );
 
