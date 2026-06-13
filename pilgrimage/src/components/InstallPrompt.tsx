@@ -71,40 +71,30 @@ export function InstallPrompt() {
   };
 
   return (
-    <div className="rounded-3xl border border-gold/40 bg-gradient-to-b from-gold/10 to-transparent p-4">
+    <div>
       <div className="flex items-center gap-3">
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-lapis">
-          <svg viewBox="0 0 60 80" className="h-7 w-6" aria-hidden>
-            <path d="M30 8c12 16 18 26 18 36a18 18 0 0 1-36 0c0-10 6-20 18-36z" fill="#D9A441" className="flame" />
-            <rect x="22" y="40" width="16" height="34" rx="3" fill="#F3ECDD" />
-          </svg>
-        </span>
-        <div className="min-w-0 flex-1">
-          <p className="font-display text-base text-ivory">{t(UI.installTitle)}</p>
-          <p className="text-xs leading-snug text-incense">{t(UI.installBody)}</p>
-        </div>
-      </div>
-
-      {iosHint && (
-        <p className="mt-3 rounded-2xl bg-lapis/60 p-3 font-story text-base leading-relaxed text-ivory">
-          {t(UI.installIosHint)}
-        </p>
-      )}
-
-      <div className="mt-3 flex gap-2">
         <button
           onClick={install}
-          className="min-h-[44px] flex-1 rounded-xl bg-gold font-ui text-sm font-bold text-lapis"
+          className="flex min-h-[44px] flex-1 items-center gap-2 text-left font-ui text-sm font-semibold text-gold"
         >
-          {deferred ? t(UI.installButton) : t(UI.installHow)}
+          <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
+            <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          {deferred ? t(UI.installTitle) : t(UI.installHow)}
         </button>
         <button
           onClick={dismiss}
-          className="min-h-[44px] rounded-xl border border-ivory/20 px-4 font-ui text-sm font-semibold text-incense"
+          aria-label={t(UI.installLater)}
+          className="flex h-9 w-9 items-center justify-center rounded-full text-incense"
         >
-          {t(UI.installLater)}
+          ✕
         </button>
       </div>
+      {iosHint && (
+        <p className="mt-2 rounded-2xl bg-ivory/[0.04] p-3 font-story text-base leading-relaxed text-ivory/90">
+          {t(UI.installIosHint)}
+        </p>
+      )}
     </div>
   );
 }

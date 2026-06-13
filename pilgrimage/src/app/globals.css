@@ -28,9 +28,21 @@ body {
   color: var(--ivory);
   min-height: 100dvh;
   -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   /* App-like: no rubber-band white gap, no long-press image/callout menus. */
   overscroll-behavior-y: none;
   -webkit-touch-callout: none;
+}
+
+/* Display type carries the calm: stone-carved letters want a little air. */
+.font-display {
+  letter-spacing: 0.01em;
+}
+/* Story type is for reading: generous, never cramped. */
+.font-story {
+  letter-spacing: 0.003em;
 }
 
 /* Selection and the long-press callout still belong on real text inputs. */

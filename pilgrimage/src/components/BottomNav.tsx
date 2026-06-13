@@ -50,24 +50,31 @@ export function BottomNav() {
 
   return (
     <nav
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-ivory/10 bg-lapis/95 backdrop-blur"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-ivory/[0.06] bg-lapis/80 backdrop-blur-xl"
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
     >
-      <div className="mx-auto flex max-w-page items-stretch justify-around">
+      <div className="mx-auto flex max-w-page items-stretch justify-around px-2">
         {tabs.map((tab) => {
           const active = pathname === tab.href || (tab.href !== '/' && pathname.startsWith(tab.href));
           return (
             <Link
               key={tab.href}
               href={tab.href}
-              className={`flex min-h-[56px] min-w-[88px] flex-col items-center justify-center gap-0.5 py-2 ${
-                active ? 'text-gold' : 'text-incense'
+              aria-current={active ? 'page' : undefined}
+              className={`flex min-h-[58px] min-w-[88px] flex-col items-center justify-center gap-1 py-2 transition-colors ${
+                active ? 'text-gold' : 'text-incense/70'
               }`}
             >
-              <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current" aria-hidden>
+              <svg
+                viewBox="0 0 24 24"
+                className={`h-[22px] w-[22px] fill-current transition-transform ${active ? 'scale-105' : ''}`}
+                aria-hidden
+              >
                 {tab.icon}
               </svg>
-              <span className="text-[11px] font-semibold">{t(tab.label)}</span>
+              <span className={`text-[10px] tracking-wide ${active ? 'font-bold' : 'font-semibold'}`}>
+                {t(tab.label)}
+              </span>
             </Link>
           );
         })}
