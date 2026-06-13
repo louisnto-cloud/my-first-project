@@ -24,39 +24,43 @@ from openpyxl.chart.shapes import GraphicalProperties
 from openpyxl.chart.label import DataLabelList
 from openpyxl.worksheet.properties import PageSetupProperties
 
-OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v8.xlsx"
+OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v9.xlsx"
 
-# ---------- palette ----------
-C_TITLE   = "FF2E5A4E"   # dark green title bar + KPI numbers
-C_HEADER  = "FF4F8A78"   # header green
-C_TOTAL   = "FFEAF2ED"   # total row
-C_DATA    = "FF2B3A33"   # data text
-C_SUB     = "FF5A6B62"   # subtitle text
+# ---------- palette (refined, premium, mostly tonal greens + warm neutrals) ----------
+C_TITLE   = "FF22413A"   # deepest evergreen, title bands and big numbers
+C_HEADER  = "FF2E5A4E"   # deep green, table headers and section labels
+C_TOTAL   = "FFEFF4F1"   # total row tint
+C_DATA    = "FF2C3A34"   # body text
+C_SUB     = "FF73827B"   # secondary text, soft grey green
 WHITE     = "FFFFFFFF"
-# status / state fills
-F_GREEN   = "FFDCFCE7"
-F_AMBER   = "FFFEF3C7"
-F_BLUE    = "FFDBEAFE"
-F_PALEBLU = "FFE0F2FE"
-F_RED     = "FFFEE2E2"
-F_GREY    = "FFF4F6F8"
-F_SLATE   = "FFE2E8F0"
-F_P1      = "FFFFEDD5"
-F_P2      = "FFDBEAFE"
-F_P3      = "FFF1F5F9"
+ACCENT    = "FF6FA392"   # soft green accent line
+CARD_BRD  = "FFE5EBE8"   # hairline
+# status / state fills (kept for meaning, muted so they read calm not candy)
+F_GREEN   = "FFE6F5EC"
+F_AMBER   = "FFFBF2DA"
+F_BLUE    = "FFE6EEF8"
+F_PALEBLU = "FFEDF4FB"
+F_RED     = "FFFBE9E9"
+F_GREY    = "FFF5F7F6"
+F_SLATE   = "FFECEFF2"
+F_P1      = "FFFBF0E0"
+F_P2      = "FFE9EFF8"
+F_P3      = "FFF3F6F4"
 
-BORDER_CLR = "FFCFD8D4"
-thin = Side(style="thin", color=BORDER_CLR)
-BORD = Border(left=thin, right=thin, top=thin, bottom=thin)
+BORDER_CLR = "FFE5EBE8"
+_hair = Side(style="thin", color=CARD_BRD)
+BORD = Border(bottom=_hair)                                   # hairline horizontal rule only
+HEADBORD = Border(bottom=Side(style="medium", color=C_HEADER))
 
+FONTNAME = "Helvetica Neue"
 def font(sz=12, b=False, color=C_DATA):
-    return Font(name="Arial", size=sz, bold=b, color=color)
+    return Font(name=FONTNAME, size=sz, bold=b, color=color)
 def fill(c):
     return PatternFill(fill_type="solid", fgColor=c)
 A_C = Alignment(horizontal="center", vertical="center", wrap_text=True)
-A_L = Alignment(horizontal="left", vertical="center", wrap_text=False)
+A_L = Alignment(horizontal="left", vertical="center", wrap_text=False, indent=1)
 A_CL = Alignment(horizontal="center", vertical="center", wrap_text=False)
-A_LW = Alignment(horizontal="left", vertical="center", wrap_text=True)
+A_LW = Alignment(horizontal="left", vertical="center", wrap_text=True, indent=1)
 
 FMT_MONEY = "$#,##0"
 FMT_CENTS = "$#,##0.00"
@@ -268,17 +272,19 @@ LU_COLS = [   # (header, list, defined_name)
 def title_row(ws, text, span_last):
     ws.merge_cells(f"A1:{span_last}1")
     c = ws.cell(1,1,text)
-    c.font = font(20, True, WHITE); c.fill = fill(C_TITLE); c.alignment = A_C
-    ws.row_dimensions[1].height = 34
+    c.font = font(22, True, WHITE); c.fill = fill(C_TITLE)
+    c.alignment = Alignment(horizontal="left", vertical="center", indent=2)
+    ws.row_dimensions[1].height = 40
 
 def subtitle(ws, row, text):
     c = ws.cell(row,1,text); c.font = font(11, False, C_SUB); c.alignment = A_L
+    ws.row_dimensions[row].height = 22
 
 def hcell(ws, row, col, text):
-    c = ws.cell(row,col,text); c.font = font(12, True, WHITE); c.fill = fill(C_HEADER)
-    c.alignment = A_C; c.border = BORD; return c
+    c = ws.cell(row,col,text); c.font = font(11, True, WHITE); c.fill = fill(C_HEADER)
+    c.alignment = A_C; c.border = HEADBORD; return c
 
-BAND = "FFF4F8F6"   # barely there green grey for alternate rows
+BAND = "FFF6F9F7"   # whisper of green for alternate rows
 def band(ws, first, last, ncol):
     for r in range(first, last+1):
         if (r-first) % 2 == 1:
@@ -286,6 +292,7 @@ def band(ws, first, last, ncol):
                 ws.cell(r,c).fill = fill(BAND)
 
 def printsetup(ws, title_rows="1:2"):
+    ws.sheet_view.showGridLines = False
     ws.page_setup.orientation = "landscape"
     ws.page_setup.fitToWidth = 1; ws.page_setup.fitToHeight = 0
     ws.sheet_properties.pageSetUpPr = PageSetupProperties(fitToPage=True)
@@ -294,7 +301,7 @@ def printsetup(ws, title_rows="1:2"):
 def linkcell(cell, value):
     tgt = ("https://instagram.com/"+value[1:]) if value.startswith("@") else (value if value.startswith("http") else "https://"+value)
     cell.hyperlink = tgt
-    cell.font = Font(name="Arial", size=12, color=C_HEADER, underline="single")
+    cell.font = Font(name=FONTNAME, size=12, color=ACCENT, underline="single")
 
 print("building lookups...")
 # ---------------- LOOKUPS ----------------
@@ -369,11 +376,11 @@ def build_type_tab(tname):
     for c,h in enumerate(HEADERS, start=1):
         hcell(ws, 2, c, h)
         ws.column_dimensions[get_column_letter(c)].width = WIDTHS[c]
-    ws.row_dimensions[2].height = 50
+    ws.row_dimensions[2].height = 46
     rows = PARTNERS.get(tname, [])
     for i in range(DATA_ROWS):
         r = FIRST + i
-        ws.row_dimensions[r].height = 20
+        ws.row_dimensions[r].height = 24
         # default styling for every cell in row
         for c in range(1, NCOL+1):
             cell = ws.cell(r,c)
@@ -433,11 +440,11 @@ ml.column_dimensions["A"].width = 20
 for m,src in enumerate(SRCCOLS, start=2):
     hcell(ml, 2, m, HEADERS[src-1])
     ml.column_dimensions[get_column_letter(m)].width = WIDTHS[src]
-ml.row_dimensions[2].height = 50
+ml.row_dimensions[2].height = 46
 mr = 3
 for t in TYPES:
     for tr in range(FIRST, LASTROW+1):
-        ml.row_dimensions[mr].height = 18
+        ml.row_dimensions[mr].height = 22
         a = ml.cell(mr,1, "=IF('{T}'!B{r}=\"\",\"\",\"{T}\")".format(T=t, r=tr))
         a.font = font(); a.border = BORD; a.alignment = A_L
         for m,src in enumerate(SRCCOLS, start=2):
@@ -469,12 +476,12 @@ subtitle(act, 2, "Log each activation here, one row each. Pick from a menu or ty
 actw={1:5,2:13,3:30,4:20,5:14,6:14,7:14,8:18,9:26,10:12,11:13,12:13,13:20,14:12,15:13,16:60}
 for c,htext in enumerate(ACT_H, start=1):
     hcell(act,2,c,htext); act.column_dimensions[get_column_letter(c)].width=actw[c]
-act.row_dimensions[2].height=50
+act.row_dimensions[2].height=46
 ACT_FIRST=3; ACT_LAST=62
 ACT_CENTER={1,2,5,6,7,8,10,11,12,13,14,15}
 for i in range(ACT_LAST-ACT_FIRST+1):
     r=ACT_FIRST+i
-    act.row_dimensions[r].height=20
+    act.row_dimensions[r].height=22
     for c in range(1,len(ACT_H)+1):
         cell=act.cell(r,c); cell.font=font(); cell.border=BORD
         cell.alignment=A_CL if c in ACT_CENTER else A_L
@@ -510,13 +517,13 @@ subtitle(al,2,"Who to work next, most urgent first. Set a Next Action Date on a 
 alw={1:5,2:30,3:20,4:10,5:16,6:30,7:16,8:12,9:14}
 for c,htext in enumerate(AL_H,start=1):
     hcell(al,2,c,htext); al.column_dimensions[get_column_letter(c)].width=alw[c]
-al.row_dimensions[2].height=50
+al.row_dimensions[2].height=46
 AL_FIRST=3; AL_LAST=82
 AL_CENTER={1,4,5,7,8,9}
 ALMAP={2:"B",3:"A",4:"E",5:"F",6:"S",7:"T",8:"R",9:"G"}   # Action List col -> Master List col
 for i in range(AL_LAST-AL_FIRST+1):
     r=AL_FIRST+i
-    al.row_dimensions[r].height=18
+    al.row_dimensions[r].height=22
     al.cell(r,11,"=IFERROR(MATCH(SMALL({M}$AL$3:$AL$500,ROW()-2),{M}$AL$3:$AL$500,0),\"\")".format(M=MLR))
     for c,col in ALMAP.items():
         cell=al.cell(r,c,"=IFERROR(INDEX({M}${col}$3:${col}$500,$K{r}),\"\")".format(M=MLR,col=col,r=r))
@@ -562,12 +569,19 @@ for i,p in enumerate(PRIORITY): hset(23+i,p,'=COUNTIF({M}$E$3:$E$500,"{p}")'.for
 # KPI cards
 def kpi(col,label,formula,numfmt=None):
     L1=get_column_letter(col); L2=get_column_letter(col+1)
+    for r in range(4,7):                       # a clean white card with an accent top rule
+        for c in (col,col+1):
+            cell=dash.cell(r,c); cell.fill=fill(WHITE); sides={}
+            if r==4: sides["top"]=Side(style="medium",color=ACCENT)
+            if r==6: sides["bottom"]=Side(style="thin",color=CARD_BRD)
+            if c==col: sides["left"]=Side(style="thin",color=CARD_BRD)
+            if c==col+1: sides["right"]=Side(style="thin",color=CARD_BRD)
+            cell.border=Border(**sides)
     dash.merge_cells("{}4:{}4".format(L1,L2)); dash.merge_cells("{}5:{}6".format(L1,L2))
-    a=dash.cell(4,col,label); a.font=font(11,True,WHITE); a.fill=fill(C_HEADER); a.alignment=A_C; a.border=BORD
-    dash.cell(4,col+1).fill=fill(C_HEADER); dash.cell(4,col+1).border=BORD
-    b=dash.cell(5,col,formula); b.font=font(20,True,WHITE); b.fill=fill(C_TITLE); b.alignment=A_C; b.border=BORD
+    a=dash.cell(4,col,label); a.font=font(10,False,C_SUB); a.alignment=Alignment(horizontal="left",vertical="center",indent=2)
+    b=dash.cell(5,col,formula); b.font=font(26,False,C_TITLE); b.alignment=Alignment(horizontal="left",vertical="center",indent=2)
     if numfmt: b.number_format=numfmt
-dash.row_dimensions[4].height=24; dash.row_dimensions[5].height=24; dash.row_dimensions[6].height=16
+dash.row_dimensions[4].height=20; dash.row_dimensions[5].height=30; dash.row_dimensions[6].height=12
 kpi(1,"Total Partners","=SUM(Q14:Q21)")
 kpi(3,"P1 Partners","=Q23")
 kpi(5,"Active Conversations",'=COUNTIF({M}$F$3:$F$500,"Outreach Sent")+COUNTIF({M}$F$3:$F$500,"In Conversation")+COUNTIF({M}$F$3:$F$500,"Proposal Sent")+COUNTIF({M}$F$3:$F$500,"Agreed")'.format(M=ML))
@@ -843,46 +857,59 @@ print("building start here...")
 from openpyxl.worksheet.hyperlink import Hyperlink
 home = wb.create_sheet("Start Here")
 home.sheet_view.showGridLines = False
-for c in range(1,18): home.column_dimensions[get_column_letter(c)].width = 9.5
+for c in range(1,18): home.column_dimensions[get_column_letter(c)].width = 9.6
 home.column_dimensions["A"].width = 3
-# hero band
-for col in range(2,18):
-    home.cell(2,col).fill=fill(C_TITLE); home.cell(3,col).fill=fill(C_TITLE); home.cell(4,col).fill=fill(C_HEADER)
+# hero band (deep evergreen) with a thin accent rule beneath
+for r in (2,3,4):
+    for col in range(2,18): home.cell(r,col).fill=fill(C_TITLE)
 home.merge_cells("B2:Q3")
-h=home.cell(2,2,"Community Partnerships"); h.font=Font(name="Arial",size=28,bold=True,color=WHITE)
-h.alignment=Alignment(horizontal="left",vertical="center",indent=1)
+h=home.cell(2,2,"Community Partnerships"); h.font=Font(name=FONTNAME,size=28,bold=True,color=WHITE)
+h.alignment=Alignment(horizontal="left",vertical="center",indent=2)
 home.merge_cells("B4:Q4")
-sst=home.cell(4,2,"Organika RTD  ·  Find partners, book activations, win the summer 2026 Costco road show.")
-sst.font=Font(name="Arial",size=12,bold=False,color=WHITE); sst.alignment=Alignment(horizontal="left",vertical="center",indent=1)
-home.row_dimensions[2].height=34; home.row_dimensions[3].height=18; home.row_dimensions[4].height=26
-# nav cards
+sst=home.cell(4,2,"Organika RTD    ·    Find partners, book activations, win the summer 2026 Costco road show.")
+sst.font=Font(name=FONTNAME,size=12,bold=False,color="FFBFD2CB")
+sst.alignment=Alignment(horizontal="left",vertical="center",indent=2)
+for col in range(2,18): home.cell(5,col).fill=fill(ACCENT)
+home.row_dimensions[2].height=38; home.row_dimensions[3].height=16; home.row_dimensions[4].height=26
+home.row_dimensions[5].height=4; home.row_dimensions[6].height=16
+# nav cards: white cards with a coloured left accent and an arrow cue
 def card(c0, title, desc, target, clr):
     c1=c0+2
-    for rr in range(6,10):
-        for cc in range(c0,c1+1): home.cell(rr,cc).fill=fill(clr); home.cell(rr,cc).border=BORD
-    home.merge_cells(start_row=6,start_column=c0,end_row=7,end_column=c1)
-    home.merge_cells(start_row=8,start_column=c0,end_row=9,end_column=c1)
-    t=home.cell(6,c0,title); t.font=Font(name="Arial",size=14,bold=True,color=WHITE)
-    t.alignment=Alignment(horizontal="left",vertical="center",indent=1,wrap_text=True)
+    for rr in range(7,11):
+        for cc in range(c0,c1+1):
+            cell=home.cell(rr,cc); cell.fill=fill(WHITE); sides={}
+            if rr==7: sides["top"]=Side(style="thin",color=CARD_BRD)
+            if rr==10: sides["bottom"]=Side(style="thin",color=CARD_BRD)
+            if cc==c1: sides["right"]=Side(style="thin",color=CARD_BRD)
+            if cc==c0: sides["left"]=Side(style="thick",color=clr)
+            cell.border=Border(**sides)
+    home.merge_cells(start_row=7,start_column=c0,end_row=8,end_column=c1)
+    home.merge_cells(start_row=9,start_column=c0,end_row=10,end_column=c1)
+    t=home.cell(7,c0,title+"    ›"); t.font=Font(name=FONTNAME,size=14,bold=True,color=C_TITLE)
+    t.alignment=Alignment(horizontal="left",vertical="center",indent=2,wrap_text=True)
     t.hyperlink=Hyperlink(ref=t.coordinate, location="'%s'!A1"%target, display=title)
-    d=home.cell(8,c0,desc); d.font=Font(name="Arial",size=10,bold=False,color=WHITE)
-    d.alignment=Alignment(horizontal="left",vertical="top",indent=1,wrap_text=True)
+    d=home.cell(9,c0,desc); d.font=Font(name=FONTNAME,size=10,bold=False,color=C_SUB)
+    d.alignment=Alignment(horizontal="left",vertical="top",indent=2,wrap_text=True)
     d.hyperlink=Hyperlink(ref=d.coordinate, location="'%s'!A1"%target, display=desc)
-home.row_dimensions[6].height=24; home.row_dimensions[7].height=20; home.row_dimensions[8].height=18; home.row_dimensions[9].height=22
-card(2,"Who to contact","Your worklist, most urgent first.","Action List",C_HEADER)
-card(6,"Log an activation","Samples, budget and cans by flavour.","Activations","3E7C68")
-card(10,"See the picture","Totals, charts and budget.","Dashboard","6FA392")
-card(14,"Browse all partners","Every partner in one place.","Master List","8FB3A6")
+home.row_dimensions[7].height=22; home.row_dimensions[8].height=16; home.row_dimensions[9].height=18; home.row_dimensions[10].height=22
+card(2,"Who to contact","Your worklist, most urgent first.","Action List","FF2E5A4E")
+card(6,"Log an activation","Samples, budget and cans by flavour.","Activations","FF3E7C68")
+card(10,"See the picture","Totals, charts and budget.","Dashboard","FF6FA392")
+card(14,"Browse all partners","Every partner in one place.","Master List","FF8FB3A6")
 # how it works
-hw=home.cell(12,2,"How it works"); hw.font=Font(name="Arial",size=13,bold=True,color=C_TITLE)
+home.row_dimensions[12].height=12
+hw=home.cell(13,2,"How it works"); hw.font=Font(name=FONTNAME,size=14,bold=True,color=C_TITLE)
+hw.alignment=Alignment(horizontal="left",vertical="center",indent=2)
 for i,sline in enumerate([
- "1.   Open the Action List to see who to reach out to first.",
- "2.   Work a partner on its green tab. Keep status and next steps current.",
- "3.   When something is booked, log it on the Activations tab. Everything else updates itself.",
+ "1.    Open the Action List to see who to reach out to first.",
+ "2.    Work a partner on its green tab. Keep status and next steps current.",
+ "3.    When something is booked, log it on the Activations tab. Everything else updates itself.",
 ]):
-    cs=home.cell(13+i,2,sline); cs.font=font(11,False,C_DATA); cs.alignment=A_L; home.row_dimensions[13+i].height=18
-home.cell(17,2,"You only ever type into the green partner tabs and the Activations tab. The other tabs read themselves.").font=font(11,False,C_SUB)
-home.sheet_properties.tabColor="2E5A4E"
+    cs=home.cell(14+i,2,sline); cs.font=font(11,False,C_DATA)
+    cs.alignment=Alignment(horizontal="left",vertical="center",indent=2); home.row_dimensions[14+i].height=20
+ft=home.cell(18,2,"You only ever type into the green partner tabs and the Activations tab. The other tabs read themselves.")
+ft.font=font(11,False,C_SUB); ft.alignment=Alignment(horizontal="left",vertical="center",indent=2)
+home.sheet_properties.tabColor="22413A"
 
 # =====================================================================
 # ORDER + SAVE
