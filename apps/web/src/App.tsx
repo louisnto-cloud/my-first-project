@@ -225,6 +225,13 @@ function Parent({ lang, t }: { lang: Lang; t: (k: string) => string }) {
   const graded = (digest?.graded ?? []) as { title: string; overall: number }[];
   const practice = digest?.practice as { points: number } | undefined;
 
+  const childName = children.find((c) => c.id === childId)?.name ?? '';
+  const status = att?.checkOutAt
+    ? { emoji: '🏠', text: `${t('releasedTo')}: ${att.releasedTo}`, tone: 'bg-slate-100 text-slate-600' }
+    : att?.checkInAt
+      ? { emoji: '✅', text: `${t('checkedIn')} · ${new Date(att.checkInAt).toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })}`, tone: 'bg-emerald-100 text-emerald-700' }
+      : { emoji: '⏳', text: t('notArrived'), tone: 'bg-amber-100 text-amber-700' };
+
   return (
     <div className="space-y-4">
       {children.length > 1 && (
@@ -234,20 +241,30 @@ function Parent({ lang, t }: { lang: Lang; t: (k: string) => string }) {
           ))}
         </div>
       )}
-      <div className="card space-y-2">
-        <h2 className="font-black text-violet-700">📋 {t('today')}</h2>
-        <div className="font-bold">
-          {att?.checkOutAt ? `🏠 ${t('releasedTo')}: ${att.releasedTo}` : att?.checkInAt ? `✅ ${t('checkedIn')} ${new Date(att.checkInAt).toLocaleTimeString()}` : `⏳ ${t('notArrived')}`}
+
+      <div className="rounded-3xl bg-gradient-to-br from-violet-600 to-fuchsia-500 p-5 text-white shadow-lg shadow-violet-300/40">
+        <div className="flex items-center gap-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20 text-2xl">🧒</div>
+          <div>
+            <div className="text-lg font-black">{childName}</div>
+            <span className={`chip ${status.tone}`}>{status.emoji} {status.text}</span>
+          </div>
+          {practice && <div className="ml-auto text-center"><div className="text-2xl font-black">+{practice.points}</div><div className="text-[10px] font-bold text-violet-100">⭐ hôm nay</div></div>}
         </div>
-        {sessions.map((s, i) => (
-          <div key={i} className="rounded-2xl bg-amber-50 p-3 text-sm font-semibold">💬 {s.tutorName} ({s.className}): “{s.parentNote}”</div>
-        ))}
-        {newA.length > 0 && <div className="text-sm font-bold">📌 {t('newAssignments')}: {newA.map((a) => a.title).join(', ')}</div>}
-        {graded.map((g, i) => (
-          <div key={i} className="text-sm font-bold text-emerald-700">✅ {t('gradedToday')}: {g.title} — {g.overall}/100</div>
-        ))}
-        {practice && <div className="text-sm font-bold">🎮 {t('practiceToday')}: +{practice.points} ⭐</div>}
       </div>
+
+      {(sessions.length > 0 || newA.length > 0 || graded.length > 0) && (
+        <div className="card space-y-2">
+          <h2 className="font-black text-violet-800">📋 {t('today')}</h2>
+          {sessions.map((s, i) => (
+            <div key={i} className="rounded-2xl bg-amber-50 p-3 text-sm font-semibold">💬 <b>{s.tutorName}</b> ({s.className}): “{s.parentNote}”</div>
+          ))}
+          {newA.length > 0 && <div className="rounded-2xl bg-violet-50 p-3 text-sm font-bold">📌 {t('newAssignments')}: {newA.map((a) => a.title).join(', ')}</div>}
+          {graded.map((g, i) => (
+            <div key={i} className="rounded-2xl bg-emerald-50 p-3 text-sm font-bold text-emerald-700">✅ {g.title} — {g.overall}/100</div>
+          ))}
+        </div>
+      )}
 
       <div className="card space-y-2">
         <h2 className="font-black text-violet-700">📖 {t('weeklySummaries')}</h2>
