@@ -5,7 +5,7 @@ import openpyxl
 from openpyxl.utils import get_column_letter
 warnings.filterwarnings("ignore")
 
-OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v4.xlsx"
+OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v5.xlsx"
 SRC = "/root/.claude/uploads/607dab49-f51b-5b86-83ad-5f4c7139295f/029750d9-Organika_RTD_BC_Tracker.xlsx"
 fails=[]; warns=[]
 def ok(m): print("  PASS  "+m)
@@ -172,6 +172,31 @@ else: warn(f"dashboard layout markers: {labels}")
 links=sum(1 for t in TYPES for r in range(3,33) if wb[t].cell(r,13).hyperlink)
 if links>=55: ok(f"{links} clickable partner links")
 else: bad(f"links={links}")
+
+print("\n[11] v5: partner menu, priority sort, locked read only tabs")
+# partner dropdown on Activations col C, sourced from a 60 name list
+act=wb["Activations"]
+pdv=[dv for dv in act.data_validations.dataValidation if "LU_Partners" in str(dv.formula1) and "C3" in str(dv.sqref)]
+lp=wb["Lookups"]
+pnames=[lp.cell(r,19).value for r in range(3,63) if lp.cell(r,19).value]
+if pdv and len(pnames)==60: ok(f"Partner menu on the Activations tab lists all {len(pnames)} partners, and lets you type your own")
+else: bad(f"partner dropdown={bool(pdv)} names={len(pnames)}")
+# priority sorted within each type tab (first filled row is P1 where P1 exists)
+bad_sort=[]
+for t in TYPES:
+    pr=[wb[t].cell(r,6).value for r in range(3,33) if wb[t].cell(r,2).value]
+    ranks=[{"P1":0,"P2":1,"P3":2}.get(p,3) for p in pr]
+    if ranks!=sorted(ranks): bad_sort.append(t)
+if not bad_sort: ok("every type tab is sorted P1 first, then P2, then P3")
+else: bad(f"not priority sorted: {bad_sort}")
+if wb["Wellness & Recovery"].cell(3,2).value=="Tevah Wellness": ok("Tevah still pinned as the first Wellness row")
+else: bad("Tevah no longer first")
+locked=[nm for nm in ["Dashboard","Type Summary","Master List"] if wb[nm].protection.sheet]
+if len(locked)==3: ok("Dashboard, Type Summary and Master List are locked so their formulas cannot be edited by accident")
+else: bad(f"protected tabs: {locked}")
+if wb["Master List"].protection.autoFilter is False and not wb["Run Clubs"].protection.sheet:
+    ok("Master List still filters, and the working tabs stay fully editable")
+else: warn("protection flags need a look")
 
 print("\n================ QA SUMMARY ================")
 print(f"  FAILURES: {len(fails)}   NOTES: {len(warns)}")

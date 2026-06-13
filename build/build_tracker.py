@@ -24,7 +24,7 @@ from openpyxl.chart.shapes import GraphicalProperties
 from openpyxl.chart.label import DataLabelList
 from openpyxl.worksheet.properties import PageSetupProperties
 
-OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v4.xlsx"
+OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v5.xlsx"
 
 # ---------- palette ----------
 C_TITLE   = "FF2E5A4E"   # dark green title bar + KPI numbers
@@ -215,6 +215,11 @@ ACTSTATUS = ["Idea","Pitched","Booked","Confirmed","Delivered","Cancelled"]
 ASSETS = ["Samples","Branded Cooler","Table","Tent","Banner","Signage","Staff","Ice","Swag","Permit","Demo Kit"]
 BUDGETTIER = [0,250,500,1000,2500,5000]
 
+PRANK = {"P1":0,"P2":1,"P3":2}
+for _t in PARTNERS:
+    PARTNERS[_t] = sorted(PARTNERS[_t], key=lambda d: PRANK.get(d.get("prio","P3"),3))
+PARTNER_NAMES = sorted({d["name"] for _t in PARTNERS for d in PARTNERS[_t]})
+
 LU_COLS = [   # (header, list, defined_name)
  ("Owner", OWNERS, "LU_Owner"),
  ("Partnership Type", TYPES, "LU_Type"),
@@ -234,6 +239,7 @@ LU_COLS = [   # (header, list, defined_name)
  ("Activation Status", ACTSTATUS, "LU_ActStatus"),
  ("Assets Needed", ASSETS, "LU_Assets"),
  ("Budget Tier", BUDGETTIER, "LU_BudgetTier"),
+ ("Partner", PARTNER_NAMES, "LU_Partners"),
 ]
 
 # =====================================================================
@@ -273,7 +279,7 @@ def linkcell(cell, value):
 print("building lookups...")
 # ---------------- LOOKUPS ----------------
 lu = wb.active; lu.title = "Lookups"
-title_row(lu, "Lookups", "R")
+title_row(lu, "Lookups", "S")
 for i,(hdr,vals,nm) in enumerate(LU_COLS):
     col = i+1
     hc = lu.cell(2,col,hdr); hc.font = font(12, True, WHITE); hc.fill = fill(C_HEADER)
@@ -458,7 +464,7 @@ def actdv(name,col):
     dv=DataValidation(type="list",formula1=name,allow_blank=True,showErrorMessage=False)
     act.add_data_validation(dv); dv.add(f"{col}{ACT_FIRST}:{col}{ACT_LAST}")
 actdv("LU_Type","D"); actdv("LU_City","E"); actdv("LU_Owner","F"); actdv("LU_ActStatus","G")
-actdv("LU_Activation","H"); actdv("LU_Assets","I"); actdv("LU_BudgetTier","J")
+actdv("LU_Partners","C"); actdv("LU_Activation","H"); actdv("LU_Assets","I"); actdv("LU_BudgetTier","J")
 acf=act.conditional_formatting.add
 for val,clr in [("Idea",F_GREY),("Pitched",F_PALEBLU),("Booked",F_AMBER),("Confirmed",F_BLUE),("Delivered",F_GREEN),("Cancelled",F_RED)]:
     acf(f"G{ACT_FIRST}:G{ACT_LAST}", CellIsRule(operator="equal", formula=[f'"{val}"'], fill=fill(clr)))
@@ -767,6 +773,11 @@ gd.sheet_properties.tabColor="B7C9C1"
 # =====================================================================
 for ws in wb.worksheets:
     printsetup(ws, "1:2" if ws.title not in ("Dashboard","Guide") else None)
+for _nm in ("Dashboard","Type Summary"):
+    wb[_nm].protection.sheet = True
+    wb[_nm].protection.selectLockedCells = False
+_mp = wb["Master List"].protection
+_mp.sheet = True; _mp.autoFilter = False; _mp.sort = False; _mp.selectLockedCells = False
 order = ["Dashboard","Activations","Master List","Type Summary","Budget"] + TYPES + ["Suggested Events","Lookups","Sales Team","Guide"]
 wb._sheets.sort(key=lambda s: order.index(s.title))
 wb.active = 0
