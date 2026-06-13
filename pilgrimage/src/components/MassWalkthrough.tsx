@@ -11,6 +11,7 @@ import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { updateSave } from '@/lib/storage';
 import { SacredArt } from '@/components/SacredArt';
+import { SpeakerButton } from '@/components/SpeakerButton';
 
 function PostureBadge({ posture }: { posture: Posture }) {
   const { t } = useI18n();
@@ -43,7 +44,7 @@ function PostureBadge({ posture }: { posture: Posture }) {
 }
 
 export function MassWalkthrough() {
-  const { t } = useI18n();
+  const { t, lang, save } = useI18n();
   const [step, setStep] = useState(0);
   const total = MASS.length;
   const done = step >= total;
@@ -85,7 +86,18 @@ export function MassWalkthrough() {
           </div>
 
           <div className="flex flex-col gap-3 px-6 py-4">
-            <h2 className="font-display text-2xl text-ivory">{t(moment.title)}</h2>
+            <div className="flex items-start gap-3">
+              <h2 className="flex-1 font-display text-2xl text-ivory">{t(moment.title)}</h2>
+              <SpeakerButton
+                id={`mass-${moment.id}-${lang}`}
+                autoStart={save.narrate}
+                text={[
+                  t(moment.what),
+                  ...(moment.say?.flatMap((d) => [t(d.priest), t(d.people)]) ?? []),
+                  t(moment.why),
+                ].join(' ')}
+              />
+            </div>
             <p className="font-story text-xl leading-relaxed text-ivory">{t(moment.what)}</p>
 
             {moment.say?.map((d, i) => (

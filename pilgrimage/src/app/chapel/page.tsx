@@ -121,11 +121,29 @@ export default function ChapelPage() {
           <button
             role="switch"
             aria-checked={save.sound}
+            aria-label={t(UI.soundLabel)}
             onClick={() => updateSave({ sound: !save.sound })}
             className={`relative h-7 w-12 shrink-0 rounded-full transition-colors ${save.sound ? 'bg-gold' : 'bg-ivory/15'}`}
           >
             <span
               className={`absolute top-1 h-5 w-5 rounded-full bg-ivory transition-all ${save.sound ? 'left-6' : 'left-1'}`}
+            />
+          </button>
+        </div>
+        <div className="mt-3 flex items-center justify-between gap-3">
+          <span className="min-w-0">
+            <span className="block font-ui text-sm font-semibold text-ivory">{t(UI.narrateLabel)}</span>
+            <span className="block text-xs text-incense">{t(UI.narrateNote)}</span>
+          </span>
+          <button
+            role="switch"
+            aria-checked={save.narrate}
+            aria-label={t(UI.narrateLabel)}
+            onClick={() => updateSave({ narrate: !save.narrate })}
+            className={`relative h-7 w-12 shrink-0 rounded-full transition-colors ${save.narrate ? 'bg-gold' : 'bg-ivory/15'}`}
+          >
+            <span
+              className={`absolute top-1 h-5 w-5 rounded-full bg-ivory transition-all ${save.narrate ? 'left-6' : 'left-1'}`}
             />
           </button>
         </div>

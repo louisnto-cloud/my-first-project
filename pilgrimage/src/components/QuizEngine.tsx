@@ -37,7 +37,11 @@ function ContinueButton({ onClick, label }: { onClick: () => void; label: string
 function Why({ right, why }: { right: boolean; why: L }) {
   const { t } = useI18n();
   return (
-    <div className={`rounded-2xl p-4 ${right ? 'gold-glow bg-gold/15' : 'bg-ivory/10'}`}>
+    <div
+      role="status"
+      aria-live="polite"
+      className={`rounded-2xl p-4 ${right ? 'gold-glow bg-gold/15' : 'bg-ivory/10'}`}
+    >
       <p className="font-ui text-sm font-bold text-gold">{t(right ? UI.gentleRight : UI.gentleWrong)}</p>
       <p className="mt-1 font-story text-lg leading-relaxed text-ivory">{t(why)}</p>
     </div>

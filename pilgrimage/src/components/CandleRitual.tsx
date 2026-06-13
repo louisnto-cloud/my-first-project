@@ -8,7 +8,8 @@ import { useState } from 'react';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import type { L } from '@/content/types';
-import { playBell } from '@/lib/sound';
+import { haptic, playBell } from '@/lib/sound';
+import { stopNarration } from '@/lib/speech';
 
 export function CandleRitual({
   reflectionPrompt,
@@ -26,8 +27,10 @@ export function CandleRitual({
   const [lit, setLit] = useState(false);
 
   const light = () => {
+    stopNarration(); // any reading of the last card ends as the candle is lit
     setLit(true);
     playBell();
+    haptic([0, 18, 40, 12]); // a soft double pulse, like a struck bell
     onLit(text.trim());
   };
 

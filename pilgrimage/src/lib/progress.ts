@@ -53,3 +53,24 @@ export function worldProgress(world: World, save: SaveDoc): { done: number; tota
 export function stepsWalked(save: SaveDoc): number {
   return Object.keys(save.completed).length;
 }
+
+/** Current run of consecutive days a candle was lit, counting back from today
+ *  (or yesterday, so a day not yet walked does not break the streak). */
+export function candleStreak(candles: string[], today = new Date()): number {
+  if (candles.length === 0) return 0;
+  const set = new Set(candles);
+  const iso = (d: Date) => {
+    const m = `${d.getMonth() + 1}`.padStart(2, '0');
+    const day = `${d.getDate()}`.padStart(2, '0');
+    return `${d.getFullYear()}-${m}-${day}`;
+  };
+  const cursor = new Date(today);
+  // If today is not yet walked, start the count from yesterday.
+  if (!set.has(iso(cursor))) cursor.setDate(cursor.getDate() - 1);
+  let streak = 0;
+  while (set.has(iso(cursor))) {
+    streak += 1;
+    cursor.setDate(cursor.getDate() - 1);
+  }
+  return streak;
+}

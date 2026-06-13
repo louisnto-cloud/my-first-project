@@ -198,7 +198,10 @@ export function LessonPlayer({ world, lesson }: { world: World; lesson: Lesson }
           const item = flow[step - 1];
           if (item.type === 'card') {
             return (
-              <div className="h-[calc(100dvh-60px)]">
+              // Key by card id so each card gets a fresh component instance —
+              // otherwise branch choices and the "original wording" toggle
+              // would leak from one card to the next.
+              <div className="h-[calc(100dvh-60px)]" key={item.card.id}>
                 <StoryCardView card={item.card} onDone={() => setStep(step + 1)} />
               </div>
             );

@@ -32,6 +32,10 @@ export const UI = {
 
   // Today
   todayGreeting: v('Peace be with you', 'Bình an cho bạn'),
+  greetMorning: v('Good morning', 'Chào buổi sáng'),
+  greetAfternoon: v('Good afternoon', 'Chào buổi chiều'),
+  greetEvening: v('Good evening', 'Chào buổi tối'),
+  streakLine: v('day streak', 'ngày liên tiếp'),
   todaysStep: v('Today’s step', 'Bước chân hôm nay'),
   begin: v('Begin', 'Bắt đầu'),
   continueWord: v('Continue', 'Tiếp tục'),
@@ -144,6 +148,13 @@ export const UI = {
   // Sound
   soundLabel: v('Sound (bell and stamp)', 'Âm thanh (chuông và con dấu)'),
   soundNote: v('Silence is the default, like a church.', 'Thinh lặng là mặc định, như trong một nhà thờ.'),
+
+  // Narration
+  narrateLabel: v('Read the stories aloud', 'Đọc các câu chuyện thành tiếng'),
+  narrateNote: v('Your phone reads each story card as it opens. Tap the speaker on any card to listen.', 'Điện thoại sẽ đọc mỗi thẻ chuyện khi nó mở ra. Chạm biểu tượng loa trên thẻ bất kỳ để nghe.'),
+  narratePlay: v('Read this aloud', 'Đọc to phần này'),
+  narrateStop: v('Stop reading', 'Dừng đọc'),
+  narrateNoVoice: v('Your device has no Vietnamese voice installed, so reading may use an English voice.', 'Thiết bị của bạn chưa cài giọng đọc tiếng Việt, nên phần đọc có thể dùng giọng tiếng Anh.'),
 
   // Bonus roads
   bonusRoads: v('Further roads', 'Những con đường xa hơn'),

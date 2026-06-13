@@ -12,7 +12,7 @@ import { MAIN_WORLDS } from '@/content/worlds';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { worldProgress } from '@/lib/progress';
-import { playThunk } from '@/lib/sound';
+import { haptic, playThunk } from '@/lib/sound';
 
 const STAMP_COLORS: Partial<Record<WorldId, string>> = {
   holyland: '#7A1F2B',
@@ -26,7 +26,10 @@ function Stamp({ world, date, animate }: { world: World; date: string; animate: 
   // The thunk: once, as the stamp presses, only when sound is on.
   useEffect(() => {
     if (animate) {
-      const timer = setTimeout(playThunk, 450);
+      const timer = setTimeout(() => {
+        playThunk();
+        haptic(28); // the thunk you can feel: the stamp pressing the page
+      }, 450);
       return () => clearTimeout(timer);
     }
   }, [animate]);

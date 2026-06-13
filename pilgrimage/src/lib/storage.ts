@@ -27,6 +27,8 @@ export interface SaveDoc {
   /** Spaced-repetition seed: itemId -> times seen. */
   seen: Record<string, number>;
   sound: boolean;
+  /** Read story cards aloud (on-device text-to-speech). */
+  narrate: boolean;
   /** ISO date the Daily Reliquary was last opened. */
   reliquary: string;
   /** RCIA milestone dates: milestoneId -> yyyy-mm-dd. (Field kept as `ocia` for save compatibility.) */
@@ -47,6 +49,7 @@ const fresh = (): SaveDoc => ({
   journal: [],
   seen: {},
   sound: false,
+  narrate: false,
   reliquary: '',
   ocia: {},
 });

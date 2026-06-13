@@ -7,7 +7,7 @@
 import Link from 'next/link';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
-import { nextStep } from '@/lib/progress';
+import { candleStreak, nextStep } from '@/lib/progress';
 import { todayISO } from '@/lib/storage';
 import { SacredArt } from '@/components/SacredArt';
 import { LanguageToggle } from '@/components/LanguageToggle';
@@ -21,14 +21,30 @@ export default function TodayPage() {
   const season = currentSeason();
   const seasonDot = { garnet: 'bg-garnet', gold: 'bg-gold', incense: 'bg-incense' }[season.tone];
 
+  const hour = new Date().getHours();
+  const greeting = hour < 12 ? UI.greetMorning : hour < 18 ? UI.greetAfternoon : UI.greetEvening;
+  const streak = candleStreak(save.candles);
+
   return (
     <div className="flex min-h-[calc(100dvh-6rem)] flex-col px-5 pt-5">
       <header className="flex items-center justify-between">
         <div>
-          <p className="font-story text-xl italic text-incense">{t(UI.todayGreeting)},</p>
+          <p className="font-story text-xl italic text-incense">
+            {t(greeting)}{save.name ? ',' : ''}
+          </p>
           <h1 className="font-display text-2xl text-ivory">{save.name || t(UI.passportName)}</h1>
         </div>
-        <LanguageToggle />
+        <div className="flex items-center gap-3">
+          {streak > 1 && (
+            <span className="flex items-center gap-1 rounded-full border border-gold/40 px-2.5 py-1 text-xs font-bold text-gold" aria-label={`${streak} ${t(UI.streakLine)}`}>
+              <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-current" aria-hidden>
+                <path d="M12 3c2.4 2.6 4.5 5 4.5 8a4.5 4.5 0 0 1-9 0c0-1.2.4-2.3 1-3.4.5 1 1.2 1.7 2 2.1-.3-2.3.3-4.6 1.5-6.7Z" />
+              </svg>
+              {streak}
+            </span>
+          )}
+          <LanguageToggle />
+        </div>
       </header>
 
       {/* The living calendar: a quiet seasonal line */}
