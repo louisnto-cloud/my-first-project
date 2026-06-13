@@ -5,7 +5,10 @@ from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.comments import Comment
 from openpyxl.utils import get_column_letter
 from openpyxl.workbook.properties import CalcProperties
-from openpyxl.formatting.rule import ColorScaleRule
+from openpyxl.formatting.rule import ColorScaleRule, FormulaRule, CellIsRule
+from openpyxl.worksheet.datavalidation import DataValidation
+from openpyxl.worksheet.properties import PageSetupProperties
+from openpyxl.chart import BarChart, PieChart, Reference
 
 # ---- palette / styles (matched to the original template) ----
 NAVY   = "FF1F3864"
@@ -75,8 +78,30 @@ COST_DIRECT_REF   = f"='{COST_SHEET}'!$D${R_DIRECT}"
 COST_INDIRECT_REF = f"='{COST_SHEET}'!$D${R_INDIRECT}"
 COST_TOTAL_REF    = f"'{COST_SHEET}'!$D${R_INDIRECT+1}"   # COGS total / case (no leading =)
 
+# Assumptions tab — single control panel; SKU P&Ls reference these cells
+ASSUMP = "Assumptions"
+A_CANS, A_4PK = "$C$7", "$C$8"            # cans/case, 4-packs/case
+A_MINGM, A_TGTGM = "$C$9", "$C$10"        # min / target GM%
+A_SPLIT = ("$C$11", "$C$12", "$C$13")     # A&P split: consumer / trade / sales
+A_TOTROW = {"Lime Lemon": 16, "Passion Fruit Pineapple": 17, "Raspberry": 18}
+A_CH_ROW0 = 23                            # first channel row in the pricing table
+TTL_SHEET = "TTL ORGANIKA RTD"
 
-def build_sheet(ws, title, section, is_total, sku_sheets=None):
+
+def sku_channel_formula(row, col, ci, sku_row):
+    """Driver formulas for a channel column on a SKU sheet — sourced from Assumptions."""
+    ch = A_CH_ROW0 + ci
+    if row == 9:  return f"={ASSUMP}!$C${sku_row}*{ASSUMP}!$F${ch}"          # cases = total × mix%
+    if row == 26: return f"={ASSUMP}!$B${ch}"                                # gross/case = CP
+    if row == 27: return f"={ASSUMP}!$B${ch}*{ASSUMP}!$D${ch}"              # disc/case = CP × disc%
+    if row == 22: return f"={col}12*{ASSUMP}!$E${ch}"                        # A&P = net × A&P%
+    if row == 19: return f"={col}22*{ASSUMP}!{A_SPLIT[0]}"                   # A&P consumer
+    if row == 20: return f"={col}22*{ASSUMP}!{A_SPLIT[1]}"                   # A&P trade
+    if row == 21: return f"={col}22*{ASSUMP}!{A_SPLIT[2]}"                   # A&P sales
+    return formula(row, col, False, None)
+
+
+def build_sheet(ws, title, section, is_total, sku_sheets=None, sku_row=None):
     # column widths
     ws.column_dimensions["A"].width = 30
     for col in CH_COLS + [TOT_COL]:
@@ -106,7 +131,9 @@ def build_sheet(ws, title, section, is_total, sku_sheets=None):
 
     # row 6 legend
     ws.merge_cells(f"A6:{LAST_COL}6")
-    c = ws["A6"]; c.value = "\U0001F7E1 Yellow box = input (edit these)   ⚫ Black = formula   \U0001F535 Blue band = margin %"
+    legend = ("⚫ All values are formulas — edit inputs on the \U0001F7E1 Assumptions tab (pricing, mix, A&P)"
+              if not is_total else "⚫ Roll-up of the three SKU tabs — all formulas")
+    c = ws["A6"]; c.value = legend
     c.font = font(8, False, GREY); c.alignment = Alignment("left", "center")
     ws.row_dimensions[6].height = 13.5
 
@@ -130,19 +157,19 @@ def build_sheet(ws, title, section, is_total, sku_sheets=None):
             cell = ws[f"{col}{row}"]
             cell.number_format = numfmt
             cell.alignment = Alignment("right", "center")
-            is_input = (not is_total) and col != TOT_COL and row in INPUT_ROWS
-            cell.font = font(10, False, BLUE if is_input else BLACK)
-            if is_input:
-                cell.fill = fill(INPUT_FILL)
-            else:
+            cell.font = font(10, False, BLACK)
+            if is_total or col == TOT_COL:
                 cell.value = formula(row, col, is_total, sku_sheets)
+            else:
+                cell.value = sku_channel_formula(row, col, CH_COLS.index(col), sku_row)
         # pct band fill across the whole row
         if row in PCT_ROWS:
             for col in ["A"] + CH_COLS + [TOT_COL]:
                 ws[f"{col}{row}"].fill = fill(LTBLU)
 
-    # target-volume note on the Total cell
-    tgt = "Should total 1,500 cases (500 × 3 flavours)" if is_total else "Should total 500 cases for this flavour"
+    # note on the Total cell
+    tgt = ("Sum of the 3 SKU tabs" if is_total
+           else "= Assumptions total cases × channel mix% (edit on Assumptions)")
     ws[f"{TOT_COL}9"].comment = Comment(tgt, "Model")
 
     ws.freeze_panes = "B9"
@@ -629,13 +656,239 @@ def build_scenarios(ws):
     ws.freeze_panes = "B5"
 
 
+def build_assumptions(ws, sku_sheets):
+    """Single control panel: global drivers, per-flavour volume, per-channel pricing/mix, checks."""
+    for col, w in {"A":30,"B":13,"C":13,"D":11,"E":11,"F":10,"G":12,"H":13,"I":14}.items():
+        ws.column_dimensions[col].width = w
+    GREEN = PatternFill("solid", fgColor="C6EFCE"); RED = PatternFill("solid", fgColor="FFC7CE")
+
+    def band(rng, text):
+        first = rng.split(":")[0]; ws.merge_cells(rng)
+        c = ws[first]; c.value = text; c.font = font(11, True, WHITE); c.fill = fill(NAVY)
+        c.alignment = Alignment("left", "center")
+    def lab(r, text, col="A", bold=False):
+        c = ws[f"{col}{r}"]; c.value = text; c.font = font(10, bold, BLACK)
+        c.alignment = Alignment("left", "center")
+    def inp(cell, val, fmt):
+        c = ws[cell]; c.value = val; c.font = font(10, False, BLUE); c.fill = fill(INPUT_FILL)
+        c.number_format = fmt; c.alignment = Alignment("right", "center")
+    def calc(cell, val, fmt, bold=False):
+        c = ws[cell]; c.value = val; c.font = font(10, bold, BLACK)
+        c.number_format = fmt; c.alignment = Alignment("right", "center")
+
+    ws.merge_cells("A1:I1")
+    t = ws["A1"]; t.value = "ORGANIKA RTD — ASSUMPTIONS (control panel)"
+    t.font = font(13, True, WHITE); t.fill = fill(NAVY); t.alignment = Alignment("left","center")
+    ws.row_dimensions[1].height = 27.75
+    ws.merge_cells("A2:I2")
+    s = ws["A2"]; s.value = "🟡 Edit yellow cells only — every other tab reads from here. CDN $ per case (24 cans)."
+    s.font = font(9, False, GREY); s.alignment = Alignment("left","center")
+
+    band("A4:I4", "GLOBAL")
+    lab(5,"Period start");        ws["C5"]="Aug 1, 2026"; ws["C5"].font=font(10,False,BLUE); ws["C5"].fill=fill(INPUT_FILL); ws["C5"].alignment=Alignment("right","center")
+    lab(6,"Period end");          ws["C6"]="Nov 1, 2026"; ws["C6"].font=font(10,False,BLUE); ws["C6"].fill=fill(INPUT_FILL); ws["C6"].alignment=Alignment("right","center")
+    lab(7,"Cans per case");       inp("C7",24,INT)
+    lab(8,"Four-packs per case"); inp("C8",6,INT)
+    lab(9,"Minimum GM% (gate)");  inp("C9",0.50,PCT)
+    lab(10,"Target GM%");         inp("C10",0.60,PCT)
+    lab(11,"A&P split — Consumer %"); inp("C11",0.50,PCT)
+    lab(12,"A&P split — Trade %");    inp("C12",0.30,PCT)
+    lab(13,"A&P split — Sales %");    inp("C13",0.20,PCT)
+    calc("E11","=C11+C12+C13",PCT); ws["D11"].value="sum →"; ws["D11"].font=font(8,False,GREY); ws["D11"].alignment=Alignment("right","center")
+
+    band("A15:I15", "VOLUME — total cases per flavour (whole period)")
+    for i,s2 in enumerate(sku_sheets):
+        lab(16+i, s2); inp(f"C{16+i}", 500, INT)
+    lab(19,"TOTAL cases", bold=True); calc("C19","=SUM(C16:C18)",INT,bold=True)
+
+    band("A21:I21", "CHANNEL PRICING & MIX  (applies to all 3 flavours)")
+    heads = ["Channel","CP $/case","MSRP $/case","Disc %","A&P % net","Mix %","CP /4-pack","Cust margin %","Cases (all SKUs)"]
+    for col,h in zip("ABCDEFGHI", heads):
+        c = ws[f"{col}22"]; c.value=h; c.font=font(9,True,WHITE); c.fill=fill(MIDBLU)
+        c.alignment=Alignment("left" if col=="A" else "center","center",wrap_text=True)
+    ws.row_dimensions[22].height = 28
+    mix = [0.12,0.10,0.06,0.18,0.20,0.02,0.08,0.10,0.08,0.04,0.02]   # sums to 1.00
+    for i,name in enumerate(CHANNELS):
+        r = A_CH_ROW0 + i
+        lab(r, name)
+        inp(f"B{r}",72,CUR2); inp(f"C{r}",108,CUR2); inp(f"D{r}",0,PCT); inp(f"E{r}",0.08,PCT); inp(f"F{r}",mix[i],PCT)
+        calc(f"G{r}",f"=B{r}/$C$8",CUR2)
+        calc(f"H{r}",f'=IFERROR((C{r}-B{r})/C{r},"-")',PCT)
+        calc(f"I{r}",f"=F{r}*$C$19",INT)
+    rt = A_CH_ROW0 + len(CHANNELS)
+    lab(rt,"TOTAL", bold=True)
+    calc(f"F{rt}",f"=SUM(F{A_CH_ROW0}:F{rt-1})",PCT,bold=True)
+    calc(f"I{rt}",f"=SUM(I{A_CH_ROW0}:I{rt-1})",INT,bold=True)
+    ws.conditional_formatting.add(f"H{A_CH_ROW0}:H{rt-1}", ColorScaleRule(
+        start_type='num',start_value=0,start_color='F8696B',
+        mid_type='num',mid_value=0.3,mid_color='FFEB84',
+        end_type='num',end_value=0.5,end_color='63BE7B'))
+
+    cr = rt + 2
+    band(f"A{cr}:I{cr}", "CHECKS")
+    blended_gp = f"='{TTL_SHEET}'!M17"
+    lab(cr+1,"Channel mix sums to 100%")
+    ws[f"C{cr+1}"] = f'=IF(ABS(F{rt}-1)<0.005,"✓ 100%","✗ "&TEXT(F{rt},"0.0%"))'
+    lab(cr+2,"Blended GP% (live)"); calc(f"C{cr+2}", blended_gp, PCT)
+    lab(cr+3,"GP% ≥ minimum?")
+    ws[f"C{cr+3}"] = f'=IF(C{cr+2}>=C9,"✓ ≥ "&TEXT(C9,"0%"),"✗ below min")'
+    lab(cr+4,"GP% ≥ target?")
+    ws[f"C{cr+4}"] = f'=IF(C{cr+2}>=C10,"✓ ≥ "&TEXT(C10,"0%"),"– below target")'
+    lab(cr+5,"Total CAAP > 0?")
+    ws[f"C{cr+5}"] = f'=IF(\'{TTL_SHEET}\'!M24>0,"✓","✗")'
+    for r in range(cr+1, cr+6):
+        ws[f"C{r}"].alignment = Alignment("right","center"); ws[f"C{r}"].font = font(10,True,BLACK)
+    ws.conditional_formatting.add(f"C{cr+1}:C{cr+5}", FormulaRule(formula=[f'ISNUMBER(SEARCH("✓",C{cr+1}))'], fill=GREEN))
+    ws.conditional_formatting.add(f"C{cr+1}:C{cr+5}", FormulaRule(formula=[f'ISNUMBER(SEARCH("✗",C{cr+1}))'], fill=RED))
+
+    # data validation
+    pct_dv = DataValidation(type="decimal", operator="between", formula1="0", formula2="1", allow_blank=True)
+    pos_dv = DataValidation(type="decimal", operator="greaterThan", formula1="0", allow_blank=True)
+    ws.add_data_validation(pct_dv); ws.add_data_validation(pos_dv)
+    for rng in ("C9","C10","C11:C13",f"D{A_CH_ROW0}:D{rt-1}",f"E{A_CH_ROW0}:E{rt-1}",f"F{A_CH_ROW0}:F{rt-1}"):
+        pct_dv.add(rng)
+    for rng in (f"B{A_CH_ROW0}:B{rt-1}", f"C{A_CH_ROW0}:C{rt-1}", "C16:C18"):
+        pos_dv.add(rng)
+
+    ws.sheet_view.showGridLines = False
+    ws.freeze_panes = "A3"
+
+
+def build_cover(ws):
+    """Plain-language guide: what it is, how to use, tab index, sources, key facts."""
+    ws.column_dimensions["A"].width = 4
+    for col in "BCDEFGH": ws.column_dimensions[col].width = 16
+    r = [1]
+    def banner(text, sz=13):
+        ws.merge_cells(f"A{r[0]}:H{r[0]}")
+        c = ws[f"A{r[0]}"]; c.value=text; c.font=font(sz,True,WHITE); c.fill=fill(NAVY)
+        c.alignment=Alignment("left","center"); ws.row_dimensions[r[0]].height=24; r[0]+=1
+    def sub(text):
+        ws.merge_cells(f"A{r[0]}:H{r[0]}")
+        c=ws[f"A{r[0]}"]; c.value=text; c.font=font(9,False,GREY); c.alignment=Alignment("left","center"); r[0]+=1
+    def band(text):
+        ws.merge_cells(f"A{r[0]}:H{r[0]}")
+        c=ws[f"A{r[0]}"]; c.value=text; c.font=font(10,True,WHITE); c.fill=fill(MIDBLU)
+        c.alignment=Alignment("left","center"); r[0]+=1
+    def line(text, bold=False):
+        ws.merge_cells(f"B{r[0]}:H{r[0]}")
+        c=ws[f"B{r[0]}"]; c.value=text; c.font=font(10,bold,BLACK); c.alignment=Alignment("left","center",wrap_text=True)
+        ws.row_dimensions[r[0]].height=15; r[0]+=1
+    def gap(): r[0]+=1
+
+    banner("ORGANIKA RTD — SPARKLING ELECTROLYTES · LAUNCH BUSINESS CASE")
+    sub("CDN $ | Aug 1 – Nov 1, 2026 | 3 SKUs × 11 channels | v1.0 · 2026-06-13"); gap()
+    band("WHAT THIS IS")
+    line("Bottom-up launch P&L for the 6×4×355 ml RTD across 11 sales channels, with a volume-weighted")
+    line("blended view and a price-scenario sandbox. COGS is built up from the Bevmax co-packing quote.")
+    gap()
+    band("HOW TO USE  —  edit only the 🟡 yellow cells")
+    line("• Assumptions tab — per-channel CP (wholesale), MSRP, discount, A&P %, and channel mix %; plus")
+    line("   total cases per flavour, A&P split, and the GM% gate. Enter pricing once; all 3 SKUs use it.")
+    line("• Cost Build-up tab — the Bevmax quote (run size, cost lines, overhead). Drives COGS everywhere.")
+    line("• Scenarios tab — trial CP × MSRP price points; nothing there feeds the plan, it's a sandbox.")
+    line("Everything else is formulas and recalculates automatically.")
+    gap()
+    band("TABS")
+    for nm, desc in [("Executive Summary","headline P&L, margin-gate verdict, scenario snapshot"),
+                     ("Assumptions","the only place you enter pricing, mix and targets"),
+                     ("Dashboard","P&L + by-channel / by-SKU tables and charts"),
+                     ("Scenarios","CP × MSRP what-if + sensitivity heatmaps"),
+                     ("Blended","volume-weighted P&L across all channels"),
+                     ("TTL ORGANIKA RTD","roll-up of the 3 SKUs"),
+                     ("Lime Lemon / Passion Fruit Pineapple / Raspberry","one P&L each"),
+                     ("Cost Build-up","bottom-up COGS from the Bevmax quote")]:
+        line(f"• {nm} — {desc}")
+    gap()
+    band("KEY FACTS")
+    line("• 1 case = 24 cans = 6 × 4-pack (355 ml sleek).")
+    line("• Production run 40,500 cans (13,500 per SKU). Bevmax landed cost $1.21/can = $29.10/case.")
+    line("• Fully-loaded COGS $32.12/case (landed + allergen + 5% OH + 5% other COGS).")
+    line("• Production vs sell-in: run = 1,687.5 cases; sell-in plan = 1,500 cases (500×3) → ~188 cases")
+    line("   (4,500 cans) surplus. Unit cost is based on the 40,500-can run economics.")
+    gap()
+    band("SOURCES")
+    line("• Bevmax co-packing quote OG2026-05-21 v15 (4-pk w/ sleeves), Summer 2026; FOB Airdrie AB, excl. GST.")
+    line("• Contact: elliott.zhong@organika.com.")
+    ws.sheet_view.showGridLines = False
+
+
+def build_exec(ws):
+    """Executive summary: headline P&L, margin-gate verdict, blended per-case, scenario snapshot."""
+    AMBER = PatternFill("solid", fgColor="FFEB9C"); GREEN = PatternFill("solid", fgColor="C6EFCE")
+    RED = PatternFill("solid", fgColor="FFC7CE")
+    ws.column_dimensions["A"].width=26
+    for col in "BCDEFG": ws.column_dimensions[col].width=14
+    def tr(cell): return f"='{TTL_SHEET}'!{cell}"
+    def band(rng,text):
+        first=rng.split(":")[0]; ws.merge_cells(rng)
+        c=ws[first]; c.value=text; c.font=font(11,True,WHITE); c.fill=fill(NAVY); c.alignment=Alignment("left","center")
+    def kpi(r,lc,lt,vc,ref,fmt,bandf=False):
+        a=ws[f"{lc}{r}"]; a.value=lt; a.font=font(10,False,BLACK); a.alignment=Alignment("left","center")
+        v=ws[f"{vc}{r}"]; v.value=ref; v.font=font(10, bandf, BLACK); v.number_format=fmt; v.alignment=Alignment("right","center")
+        if bandf:
+            ws[f"{lc}{r}"].fill=fill(LTBLU); ws[f"{vc}{r}"].fill=fill(LTBLU)
+
+    ws.merge_cells("A1:G1")
+    t=ws["A1"]; t.value="ORGANIKA RTD — EXECUTIVE SUMMARY"
+    t.font=font(13,True,WHITE); t.fill=fill(NAVY); t.alignment=Alignment("left","center"); ws.row_dimensions[1].height=27.75
+    ws.merge_cells("A2:G2")
+    s=ws["A2"]; s.value="CDN $ | Aug 1 – Nov 1, 2026 | 3 SKUs × 11 channels | blended = volume-weighted"
+    s.font=font(9,False,GREY); s.alignment=Alignment("left","center")
+
+    band("A4:G4","RECOMMENDATION")
+    ws.merge_cells("A5:G5")
+    verdict = ("=IF('{t}'!M17>=Assumptions!C10,\"✅ PASS — blended GP% \"&TEXT('{t}'!M17,\"0.0%\")&"
+               "\" meets the \"&TEXT(Assumptions!C10,\"0%\")&\" target\","
+               "IF('{t}'!M17>=Assumptions!C9,\"🟡 OK — GP% \"&TEXT('{t}'!M17,\"0.0%\")&"
+               "\" clears the \"&TEXT(Assumptions!C9,\"0%\")&\" minimum (under target)\","
+               "\"❌ BELOW MIN — GP% \"&TEXT('{t}'!M17,\"0.0%\")&\" under \"&TEXT(Assumptions!C9,\"0%\")))").format(t=TTL_SHEET)
+    v=ws["A5"]; v.value=verdict; v.font=font(11,True,BLACK); v.alignment=Alignment("left","center"); ws.row_dimensions[5].height=22
+    ws.conditional_formatting.add("A5", FormulaRule(formula=['ISNUMBER(SEARCH("PASS",A5))'], fill=GREEN))
+    ws.conditional_formatting.add("A5", FormulaRule(formula=['ISNUMBER(SEARCH("OK",A5))'], fill=AMBER))
+    ws.conditional_formatting.add("A5", FormulaRule(formula=['ISNUMBER(SEARCH("BELOW",A5))'], fill=RED))
+
+    band("A7:B7","PERIOD TOTALS"); band("D7:E7","BLENDED — PER CASE")
+    left=[("Physical cases","M9","int"),("Gross revenue","M10","cur0"),("Net sales","M12","cur0"),
+          ("Cost of sales","M15","cur0"),("Gross profit","M16","cur0"),("Blended GP %","M17","pct"),
+          ("A&P","M22","cur0"),("CAAP","M24","cur0")]
+    right=[("Net sales / case","M28","cur2"),("COGS / case","M31","cur2"),("Gross profit / case","M32","cur2"),
+           ("Blended GP %","M33","pct"),("A&P / case","M34","cur2"),("CAAP / case","M35","cur2")]
+    for i,(lt,c,fmt) in enumerate(left):
+        kpi(8+i,"A",lt,"B",tr(c),FMT[fmt],bandf=(c=="M17"))
+    for i,(lt,c,fmt) in enumerate(right):
+        kpi(8+i,"D",lt,"E",tr(c),FMT[fmt],bandf=(c=="M33"))
+
+    band("A17:G17","MARGIN GATE  &  PRICE-TO-HIT-MARGIN")
+    kpi(18,"A","Minimum GM%","B","=Assumptions!C9",PCT)
+    kpi(19,"A","Target GM%","B","=Assumptions!C10",PCT)
+    kpi(20,"A","Blended GP% (live)","B",tr("M17"),PCT,bandf=True)
+    # solve the CP (wholesale $/case) needed to hit each margin, at current COGS
+    kpi(18,"D","CP /case to hit min GM%","E",f"={COST_TOTAL_REF}/(1-Assumptions!C9)",CUR2)
+    kpi(19,"D","CP /case to hit target GM%","E",f"={COST_TOTAL_REF}/(1-Assumptions!C10)",CUR2)
+    kpi(20,"D","COGS /case (fully loaded)","E",f"={COST_TOTAL_REF}",CUR2,bandf=True)
+
+    band("A22:G22","PRICE SCENARIOS  (from Scenarios tab)")
+    for col,nm in zip(["B","C","D"],["Conservative","Base","Stretch"]):
+        c=ws[f"{col}23"]; c.value=nm; c.font=font(10,True,WHITE); c.fill=fill(MIDBLU); c.alignment=Alignment("center","center")
+    ws["A23"].value="Scenario"; ws["A23"].font=font(10,True,WHITE); ws["A23"].fill=fill(MIDBLU)
+    for r,(lt,srow,fmt) in [(24,("Organika GP %",14,PCT)),(25,("GP $/case",13,CUR2)),(26,("Retailer margin %",15,PCT))]:
+        ws[f"A{r}"].value=lt; ws[f"A{r}"].font=font(10,False,BLACK); ws[f"A{r}"].alignment=Alignment("left","center")
+        for col,scol in zip(["B","C","D"],["B","C","D"]):
+            c=ws[f"{col}{r}"]; c.value=f"=Scenarios!{scol}{srow}"; c.font=font(10,False,BLACK)
+            c.number_format=fmt; c.alignment=Alignment("right","center")
+
+    ws.sheet_view.showGridLines = False
+    ws.freeze_panes = "A3"
+
+
 # ---- build workbook ----
 SKUS = ["Lime Lemon", "Passion Fruit Pineapple", "Raspberry"]
 TAB_COLORS = {"Lime Lemon": "FF92D050", "Passion Fruit Pineapple": "FFFFC000", "Raspberry": "FFC00000"}
 
 wb = openpyxl.Workbook()
 ttl = wb.active
-ttl.title = "TTL ORGANIKA RTD"
+ttl.title = TTL_SHEET
 ttl.sheet_properties.tabColor = NAVY
 build_sheet(ttl, "ORGANIKA RTD — TOTAL (3 SKUs)", "Organika RTD — All SKUs (Lime Lemon + Passion Fruit Pineapple + Raspberry)",
             is_total=True, sku_sheets=SKUS)
@@ -643,30 +896,56 @@ build_sheet(ttl, "ORGANIKA RTD — TOTAL (3 SKUs)", "Organika RTD — All SKUs (
 for sku in SKUS:
     ws = wb.create_sheet(sku)
     ws.sheet_properties.tabColor = TAB_COLORS[sku]
-    build_sheet(ws, f"ORGANIKA RTD — {sku.upper()}", f"Organika RTD — {sku} (6×4×355 ml)", is_total=False)
+    build_sheet(ws, f"ORGANIKA RTD — {sku.upper()}", f"Organika RTD — {sku} (6×4×355 ml)",
+                is_total=False, sku_row=A_TOTROW[sku])
 
-# cost build-up (feeds COGS into the SKU P&Ls)
-cost = wb.create_sheet(COST_SHEET)
-cost.sheet_properties.tabColor = "FF548235"
+cost = wb.create_sheet(COST_SHEET); cost.sheet_properties.tabColor = "FF548235"
 build_cost_buildup(cost)
-
-# blended (volume-weighted across channels)
-blend = wb.create_sheet("Blended")
-blend.sheet_properties.tabColor = "FF7030A0"
+blend = wb.create_sheet("Blended"); blend.sheet_properties.tabColor = "FF7030A0"
 build_blended(blend, SKUS)
-
-# scenarios / price sensitivity sandbox
-scen = wb.create_sheet("Scenarios")
-scen.sheet_properties.tabColor = "FFED7D31"
+scen = wb.create_sheet("Scenarios"); scen.sheet_properties.tabColor = "FFED7D31"
 build_scenarios(scen)
-
-# dashboard
-dash = wb.create_sheet("Dashboard")
-dash.sheet_properties.tabColor = "FF7030A0"
+dash = wb.create_sheet("Dashboard"); dash.sheet_properties.tabColor = "FF4472C4"
 build_dashboard(dash, SKUS)
+assum = wb.create_sheet(ASSUMP); assum.sheet_properties.tabColor = "FFFFC000"
+build_assumptions(assum, SKUS)
+cover = wb.create_sheet("Cover"); cover.sheet_properties.tabColor = NAVY
+build_cover(cover)
+exec_ = wb.create_sheet("Executive Summary"); exec_.sheet_properties.tabColor = "FFC00000"
+build_exec(exec_)
 
-# final tab order: Dashboard, Scenarios, Blended, TTL, SKUs…, Cost Build-up
-order = ["Dashboard", "Scenarios", "Blended", "TTL ORGANIKA RTD"] + SKUS + [COST_SHEET]
+# charts: GP% and volume by channel (Dashboard), CAAP by SKU (Exec)
+def bar(anchor_ws, title, data_col, cat_ws, r0, r1, numfmt=None):
+    ch = BarChart(); ch.type = "col"; ch.title = title; ch.legend = None
+    ch.height = 7.5; ch.width = 15
+    ch.add_data(Reference(cat_ws, min_col=data_col, min_row=r0, max_row=r1), titles_from_data=False)
+    ch.set_categories(Reference(cat_ws, min_col=1, min_row=r0, max_row=r1))
+    if numfmt: ch.y_axis.numFmt = numfmt
+    return ch
+dash.add_chart(bar(dash, "GP % by channel", 5, dash, 24, 34, "0%"), "A37")
+dash.add_chart(bar(dash, "Volume (cases) by channel", 2, dash, 24, 34), "A54")
+exec_.add_chart(bar(exec_, "CAAP by SKU", 7, dash, 17, 19), "A28")
+
+# negative values flash red (losses) on the summary views
+REDFILL = PatternFill("solid", fgColor="FFC7CE")
+neg = CellIsRule(operator="lessThan", formula=["0"], fill=REDFILL)
+blend.conditional_formatting.add("B7:E27", neg)
+dash.conditional_formatting.add("B8:G35", neg)
+exec_.conditional_formatting.add("B8:E26", neg)
+
+# print / PDF setup: landscape, fit to one page wide, footer with file + tab + page
+for ws in wb.worksheets:
+    ws.page_setup.orientation = "landscape"
+    ws.page_setup.fitToWidth = 1
+    ws.page_setup.fitToHeight = 0
+    ws.sheet_properties.pageSetUpPr = PageSetupProperties(fitToPage=True)
+    ws.print_options.horizontalCentered = True
+    ws.oddFooter.center.text = "&F  |  &A  |  &P of &N"
+    ws.oddFooter.center.size = 8
+
+# final tab order
+order = ["Cover", "Executive Summary", ASSUMP, "Dashboard", "Scenarios", "Blended",
+         TTL_SHEET] + SKUS + [COST_SHEET]
 wb._sheets = [wb[name] for name in order]
 
 # force recalculation when opened in Excel / Google Sheets / LibreOffice
