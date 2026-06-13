@@ -539,9 +539,9 @@ b_mon = breakdown(b_q["last"] + 3, 12, "By Calendar Month", mon_pairs, total=Fal
 
 # ---- Weekly trend (chart data) ----
 wt_top = 3
-title_row(wm, wt_top, 16, 5, "Weekly Trend vs Goal")
+title_row(wm, wt_top, 16, 6, "Weekly Trend vs Goal")
 hr = wt_top + 1
-for j, h in enumerate(["Week", "Weekly $", "Cumulative $", "$3M Goal", "Goal pace"]):
+for j, h in enumerate(["Week", "Weekly $", "Cumulative $", "$3M Goal", "Goal pace", "Weekly cases"]):
     hdr_cell(wm, hr, 16 + j, h)
 wk_first = hr + 1
 for i in range(53):
@@ -554,8 +554,115 @@ for i in range(53):
         (f"=R{rr-1}+Q{rr}" if i > 0 else f"=Q{rr}")); cum.number_format = CUR; cum.font = font(9); cum.border = border
     tgt = wm.cell(rr, 19, "=TargetRev"); tgt.number_format = CUR; tgt.font = font(9, False, "B23B3B"); tgt.border = border
     pace = wm.cell(rr, 20, f"=TargetRev*P{rr}/NWeeks"); pace.number_format = CUR; pace.font = font(9, False, "999999"); pace.border = border
+    cs = wm.cell(rr, 21, f"=SUMIF(CalcWeek,P{rr},CalcBrandCases)"); cs.number_format = NUM0; cs.font = font(9, False, "0E7C7B"); cs.border = border
 wk_last = wk_first + 52
+wm.column_dimensions["U"].width = 12
+
+# ---- By Tier contribution (restores tier visibility; analytic & exact) ----
+tier_pairs = []
+for t in C.TIERS:
+    key = f'{t["channel"]} {t["tier"]}'
+    g = (f'=SUMIF(CalcChannel,"{t["channel"]}",CalcGross)'
+         f'*SUMIFS(TierDoorVel,TierChannel,"{t["channel"]}",TierTier,"{t["tier"]}")'
+         f'/SUMIF(TierChannel,"{t["channel"]}",TierDoorVel)')
+    tier_pairs.append((key, g))
+b_tier = breakdown(b_prov["last"] + 3, 4, "By Store Tier (physical channels)", tier_pairs)
+# ---- Volume by channel (cases) ----
+vol_pairs = [(c["name"], f'=SUMIF(CalcChannel,"{c["name"]}",CalcBrandCases)') for c in C.CHANNELS]
+b_vol = breakdown(b_sku["last"] + 3, 8, "Volume by Channel (cases)", vol_pairs, vfmt=NUM0, pct=False)
+
+dn("AnnualGross", "Summary", "$B$5")
 print("Summary sheet done")
+
+# ============================================================ SCENARIOS sheet
+wsx = wb.create_sheet("Scenarios")
+wsx.sheet_view.showGridLines = False
+for col, wd in {"A": 24, "B": 14, "C": 14, "D": 14, "E": 13, "F": 13, "G": 13}.items():
+    wsx.column_dimensions[col].width = wd
+title_row(wsx, 1, 1, 7, "MÜV RTD  •  Scenarios & What-If  →  Path to $3,000,000")
+
+# ---- live model helpers (everything below is driven by these) ----
+hdr_cell(wsx, 3, 1, "LIVE MODEL", bg=TEAL)
+for c in range(2, 8): wsx.cell(3, c).fill = fill(TEAL)
+def kv2(r, label, formula, fmt=CUR, note=""):
+    wsx.cell(r, 1, label).font = font(10, True); wsx.cell(r, 1).border = border; wsx.cell(r, 1).alignment = left()
+    cc = wsx.cell(r, 2, formula); cc.number_format = fmt; cc.font = font(10, True); cc.border = border; cc.alignment = right()
+    if note:
+        wsx.cell(r, 3, note).font = font(8, False, "667085", it=True); wsx.cell(r, 3).alignment = left()
+kv2(4, "Annual gross (basis)", "=AnnualGross")
+kv2(5, "  Online gross", '=SUMIF(CalcChannel,"Online",CalcGross)')
+kv2(6, "  Physical gross", "=B4-B5")
+kv2(7, "  Physical @ neutral", "=B6/((1+VelocityUplift)*(1+PriceIndex))", "velocity & price stripped out")
+kv2(8, "  Online @ neutral", "=B5/((1+OnlineGrowth)*(1+PriceIndex))", "online growth & price stripped out")
+kv2(9, "Target", "=TargetRev")
+status = wsx.cell(4, 4, '=IF(AnnualGross>=TargetRev,"✓ GOAL MET","GAP: "&TEXT(TargetRev-AnnualGross,"$#,##0")&"  ("&TEXT(AnnualGross/TargetRev,"0.0%")&" to goal)")')
+status.font = font(12, True); wsx.merge_cells("D4:G5"); status.alignment = center()
+wsx.conditional_formatting.add("D4", CellIsRule(operator="greaterThanOrEqual", formula=["TargetRev"], fill=fill(GREEN), font=font(12, True, GREENF)))
+wsx.conditional_formatting.add("D4", CellIsRule(operator="lessThan", formula=["TargetRev"], fill=fill(AMBER), font=font(12, True, "7A5B00")))
+
+# ---- PATH TO $3M (closed-form required single-lever moves; all live) ----
+ptop = 11
+title_row(wsx, ptop, 1, 4, "PATH TO $3,000,000 — any ONE of these moves alone closes the gap")
+for j, h in enumerate(["Lever", "Current", "Needed for $3M", "Move required"]):
+    hdr_cell(wsx, ptop + 1, 1 + j, h)
+path_rows = [
+    ("Price index %", "=PriceIndex", "=IFERROR(TargetRev/AnnualGross*(1+PriceIndex)-1,\"n/a\")", PCT1),
+    ("Velocity uplift %", "=VelocityUplift", "=IFERROR((TargetRev-B5)/B6*(1+VelocityUplift)-1,\"n/a\")", PCT1),
+    ("Online growth %", "=OnlineGrowth", "=IFERROR((TargetRev-B6)/B5*(1+OnlineGrowth)-1,\"n/a\")", PCT1),
+    ("Doors calibration", "=CalibScalar", "=IFERROR(CalibScalar*(TargetRev-B5)/B6,\"n/a\")", '0.0000'),
+]
+for i, (lab, cur, need, fmt) in enumerate(path_rows):
+    rr = ptop + 2 + i
+    wsx.cell(rr, 1, lab).font = font(10); wsx.cell(rr, 1).border = border; wsx.cell(rr, 1).alignment = left()
+    a = wsx.cell(rr, 2, cur); a.number_format = fmt; a.border = border; a.font = font(10)
+    b = wsx.cell(rr, 3, need); b.number_format = fmt; b.border = border; b.font = font(10, True, BLUE)
+    mv = wsx.cell(rr, 4, f"=IF(ISNUMBER(C{rr}),C{rr}-B{rr},\"n/a\")"); mv.number_format = fmt; mv.border = border; mv.font = font(10)
+path_last = ptop + 2 + len(path_rows) - 1
+
+# ---- SCENARIO COMPARISON (closed-form == full engine, to the cent) ----
+stop = path_last + 2
+title_row(wsx, stop, 1, 7, "SCENARIOS — edit the levers; gross recomputes live (green = meets $3M)")
+for j, h in enumerate(["Scenario", "Velocity %", "Price %", "Online %", "Gross $", "% to goal", "Gap $"]):
+    hdr_cell(wsx, stop + 1, 1 + j, h)
+scen_first = stop + 2
+for i, (nm, lev) in enumerate(C.SCENARIOS.items()):
+    rr = scen_first + i
+    wsx.cell(rr, 1, nm).font = font(10, True); wsx.cell(rr, 1).border = border; wsx.cell(rr, 1).alignment = left()
+    for k, key in enumerate(("velocity_uplift", "price_index", "online_growth")):
+        cell = wsx.cell(rr, 2 + k, lev[key]); cell.number_format = PCT1; cell.fill = fill(INPUT)
+        cell.border = border; cell.font = font(10)
+    g = wsx.cell(rr, 5, f"=($B$7*(1+B{rr})+$B$8*(1+D{rr}))*(1+C{rr})")
+    g.number_format = CUR; g.border = border; g.font = font(10, True)
+    pc = wsx.cell(rr, 6, f"=E{rr}/TargetRev"); pc.number_format = PCT1; pc.border = border; pc.font = font(10)
+    gp = wsx.cell(rr, 7, f"=E{rr}-TargetRev"); gp.number_format = CUR; gp.border = border; gp.font = font(10)
+    wsx.conditional_formatting.add(f"E{rr}", CellIsRule(operator="greaterThanOrEqual", formula=["TargetRev"], fill=fill(GREEN), font=font(10, True, GREENF)))
+    wsx.conditional_formatting.add(f"E{rr}", CellIsRule(operator="lessThan", formula=["TargetRev"], fill=fill(RED), font=font(10, True, REDF)))
+scen_last = scen_first + len(C.SCENARIOS) - 1
+
+# ---- 2-WAY SENSITIVITY GRID (doors calibration × price index) ----
+gtop = scen_last + 3
+title_row(wsx, gtop, 1, 6, "SENSITIVITY — annual gross by doors calibration (down) × price index (across). Green ≥ $3M.")
+ghr = gtop + 1
+corner = wsx.cell(ghr, 1, "Calib ╲ Price"); corner.font = font(9, True, WHITE); corner.fill = fill(CALCHDR)
+corner.alignment = center(); corner.border = border
+price_axis = [-0.05, 0.0, 0.05, 0.10, 0.15]
+calib_axis = [0.30, 0.33, 0.36, 0.39, 0.42]
+for j, pv in enumerate(price_axis):
+    c = wsx.cell(ghr, 2 + j, pv); c.number_format = PCT1; c.fill = fill(INPUT); c.font = font(9, True); c.border = border; c.alignment = center()
+for i, cv in enumerate(calib_axis):
+    rr = ghr + 1 + i
+    rc = wsx.cell(rr, 1, cv); rc.number_format = '0.000'; rc.fill = fill(INPUT); rc.font = font(9, True); rc.border = border; rc.alignment = center()
+    for j in range(len(price_axis)):
+        cc = 2 + j; pcol = get_column_letter(cc)
+        cell = wsx.cell(rr, cc, f"=($B$6*($A{rr}/CalibScalar)+$B$5)*(1+{pcol}${ghr})/(1+PriceIndex)")
+        cell.number_format = '#,##0'; cell.border = border; cell.font = font(9)
+        cell.alignment = right()
+        rng = f"{pcol}{rr}"
+        wsx.conditional_formatting.add(rng, CellIsRule(operator="greaterThanOrEqual", formula=["TargetRev"], fill=fill(GREEN), font=font(9, True, GREENF)))
+        wsx.conditional_formatting.add(rng, CellIsRule(operator="lessThan", formula=["TargetRev"], fill=fill(RED), font=font(9, REDF)))
+grid_last = ghr + 1 + len(calib_axis) - 1
+wsx.cell(grid_last + 2, 1, "Tip: type a Scenario's levers into the Settings tab to drive the full live model exactly.").font = font(8, False, "667085", it=True)
+print("Scenarios sheet done")
 
 # ============================================================ CHARTS sheet
 wch = wb.create_sheet("Charts")
@@ -610,6 +717,21 @@ add_pie("Flavour Mix", b_flav["lab"], b_flav["val"], b_flav["first"], b_flav["la
 add_bar("Gross by SKU", b_sku["lab"], b_sku["val"], b_sku["first"], b_sku["last"], "U20", color="6A4FB3", horizontal=True)
 add_bar("Gross by Month", b_mon["lab"], b_mon["val"], b_mon["first"], b_mon["last"], "L37", color="0E7C7B")
 add_pie("Channel Mix", b_chan["lab"], b_chan["val"], b_chan["first"], b_chan["last"], "U37")
+add_bar("Gross by Store Tier", b_tier["lab"], b_tier["val"], b_tier["first"], b_tier["last"], "AE3", color="C77DBB", horizontal=True)
+# Weekly volume (cases)
+vbar = BarChart(); vbar.type = "col"; vbar.title = "Weekly Volume (cases)"; vbar.legend = None
+vbar.height = 8; vbar.width = 18; vbar.y_axis.numFmt = '#,##0'
+vbar.add_data(Reference(wm, min_col=21, min_row=wk_first, max_row=wk_last), titles_from_data=False)
+vbar.set_categories(Reference(wm, min_col=16, min_row=wk_first, max_row=wk_last))
+if vbar.series: vbar.series[0].graphicalProperties.solidFill = "0E7C7B"
+wch.add_chart(vbar, "A37")
+# Scenario gross vs goal (from Scenarios sheet)
+scen = BarChart(); scen.type = "col"; scen.title = "Scenario Gross vs $3M"; scen.legend = None
+scen.height = 8; scen.width = 12; scen.y_axis.numFmt = '#,##0'
+scen.add_data(Reference(wsx, min_col=5, min_row=scen_first, max_row=scen_last), titles_from_data=False)
+scen.set_categories(Reference(wsx, min_col=1, min_row=scen_first, max_row=scen_last))
+if scen.series: scen.series[0].graphicalProperties.solidFill = "2E5CB8"
+wch.add_chart(scen, "AE20")
 print("Charts sheet done")
 
 # ============================================================ README sheet
@@ -626,8 +748,12 @@ readme = [
     ("p", "Settings   – fiscal start, 52/53 weeks, gross-revenue basis, $3M target, calibration scalar, and 5 global driver levers; Flavours, Pack formats, SKUs."),
     ("p", "Assumptions– Channels, Store tiers, Geography (provinces), Province split, Seasonality, Online units curve. SEED PLACEHOLDERS — replace with real data."),
     ("p", "Calc       – the engine: one row per Week × Channel × Province (53 × 70 = 3,710 rows). Tiers roll up; flavours/SKUs split by share."),
-    ("p", "Summary    – KPIs, the $3M goal, and breakdowns by channel / province / flavour / SKU / quarter / month, plus the weekly trend."),
-    ("p", "Charts     – cumulative-vs-goal, weekly revenue, channel/province/SKU/month bars, flavour & channel mix."),
+    ("p", "Summary    – KPIs, the $3M goal, and breakdowns by channel / province / flavour / SKU / store tier / quarter / month, weekly trend + weekly volume."),
+    ("p", "Scenarios  – live PATH TO $3M (the single move on each lever that closes the gap), a Bear/Base/Bull comparison, and a doors×price sensitivity grid."),
+    ("p", "Charts     – cumulative-vs-goal, weekly revenue & volume, channel/province/SKU/tier/month bars, flavour & channel mix, scenario gross."),
+    ("h", "PATH TO $3M & SCENARIOS  (Scenarios tab)"),
+    ("p", "Path-to-$3M shows, live, how far each lever alone must move to hit the goal (e.g. ~+1.3% price, ~+1.7% velocity, ~+6.3% online at the base case)."),
+    ("p", "The scenario gross uses an exact closed form (it equals the full engine to the cent); the sensitivity grid turns green wherever a doors×price combo meets $3M."),
     ("h", "GROSS REVENUE BASIS  (Settings!B6)"),
     ("p", "Wholesale (default) = case price × cases (physical) + online direct revenue. Sell-through = consumer units × retail SRP (physical) + online direct."),
     ("p", "This single choice moves the goal math the most. The label on the Summary always states the active basis."),

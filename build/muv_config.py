@@ -231,11 +231,15 @@ def compute(settings=None):
         "by_flavour": {f["name"]: 0.0 for f in FLAVOURS},
         "by_sku": {}, "by_week": [0.0] * nW, "by_month": {}, "by_quarter": {},
         "by_flavour_cases": {f["name"]: 0.0 for f in FLAVOURS},
+        "by_channel_cases": {}, "by_province_cases": {p: 0.0 for p in PROV_CODES},
+        "by_sku_cases": {}, "by_month_cases": {},
     }
     for c in CHANNELS:
         res["by_channel"][c["name"]] = 0.0
+        res["by_channel_cases"][c["name"]] = 0.0
     for sku in SKUS:
         res["by_sku"][f'{sku["flavour"]} {sku["format"]}'] = 0.0
+        res["by_sku_cases"][f'{sku["flavour"]} {sku["format"]}'] = 0.0
 
     fstart = s["fiscal_start"]
     for w in range(1, nW + 1):
@@ -283,6 +287,7 @@ def compute(settings=None):
                     res["by_flavour"][f["name"]] += f_gross
                     res["by_flavour_cases"][f["name"]] += fcases
                     res["by_sku"][f'{f["name"]} {fmt}'] += f_gross
+                    res["by_sku_cases"][f'{f["name"]} {fmt}'] += fcases
                 gross = row_wholesale if basis == "Wholesale" else row_sellthrough
                 res["gross"] += gross
                 res["wholesale"] += row_wholesale
@@ -293,8 +298,11 @@ def compute(settings=None):
                 res["consumer_units"] += consumer_units
                 res["by_channel"][cname] += gross
                 res["by_province"][pcode] += gross
+                res["by_channel_cases"][cname] += cases
+                res["by_province_cases"][pcode] += cases
                 res["by_week"][w - 1] += gross
                 res["by_month"][month] = res["by_month"].get(month, 0.0) + gross
+                res["by_month_cases"][month] = res["by_month_cases"].get(month, 0.0) + cases
                 res["by_quarter"][qtr] = res["by_quarter"].get(qtr, 0.0) + gross
     res["margin"] = res["gross"] - res["cogs"]
     res["margin_pct"] = res["margin"] / res["gross"] if res["gross"] else 0.0
@@ -312,19 +320,74 @@ def solve_calibration(target=3_000_000.0, basis="Wholesale"):
     scalar = (target - online) / physical
     return round(scalar, 4), full, online, physical
 
+# ----------------------------------------------------------------------------
+# SCENARIOS (lever presets shared by the workbook and the dashboard)
+# ----------------------------------------------------------------------------
+# Scenarios vary the linear business levers (velocity, price, online); ramp speed
+# and seasonality stay neutral so the workbook's closed-form scenario math is exact
+# and matches the dashboard's full-engine result to the cent.
+SCENARIOS = {
+    "Bear":  {"velocity_uplift": -0.15, "ramp_speed": 1.0, "price_index": -0.03,
+              "season_amp": 1.0, "online_growth": -0.25},
+    "Base":  {"velocity_uplift": 0.0,  "ramp_speed": 1.0,  "price_index": 0.0,
+              "season_amp": 1.0,  "online_growth": 0.0},
+    "Bull":  {"velocity_uplift": 0.20, "ramp_speed": 1.0, "price_index": 0.04,
+              "season_amp": 1.0, "online_growth": 0.50},
+}
+
+def components(settings=None):
+    """Physical vs online gross (selected basis) at the given settings."""
+    r = compute(settings)
+    online = r["by_channel"]["Online"]
+    return {"gross": r["gross"], "online": online, "physical": r["gross"] - online}
+
+def required_single_lever(target=3_000_000.0, settings=None):
+    """For each driver, the single value that lands gross exactly on `target`,
+       holding the others at their current setting. Linear levers in closed form;
+       ramp/seasonality solved numerically. Mirrors the dashboard + workbook."""
+    s = dict(SETTINGS);  s.update(settings or {})
+    c = components(s)
+    g, online, phys = c["gross"], c["online"], c["physical"]
+    out = {}
+    out["price_index"]    = (target / g) * (1 + s["price_index"]) - 1 if g else None
+    out["velocity_uplift"] = (target - online) / phys * (1 + s["velocity_uplift"]) - 1 if phys else None
+    out["online_growth"]  = (target - phys) / online * (1 + s["online_growth"]) - 1 if online else None
+    out["calib_scalar"]   = s["calib_scalar"] * (target - online) / phys if phys else None
+    # ramp_speed and season_amp: numeric bisection over a sensible domain
+    for lever, lo, hi in (("ramp_speed", 0.3, 4.0), ("season_amp", 0.0, 6.0)):
+        f = lambda x: compute({**s, lever: x})["gross"] - target
+        flo, fhi = f(lo), f(hi)
+        if flo * fhi > 0:
+            out[lever] = None  # target not reachable by this lever alone in range
+            continue
+        for _ in range(60):
+            mid = (lo + hi) / 2
+            if f(lo) * f(mid) <= 0: hi = mid
+            else: lo = mid
+        out[lever] = (lo + hi) / 2
+    return out
+
 if __name__ == "__main__":
     scalar, full, online, physical = solve_calibration()
     print(f"Uncalibrated gross (Wholesale): ${full['gross']:,.0f}")
     print(f"  physical: ${physical:,.0f}   online: ${online:,.0f}")
     print(f"Solved calibration scalar (doors): {scalar}")
-    SETTINGS["calib_scalar"] = scalar
     cal = compute()
-    print(f"\nCalibrated base case gross (Wholesale): ${cal['gross']:,.0f}")
+    print(f"\nBase case gross (Wholesale, scalar={SETTINGS['calib_scalar']}): ${cal['gross']:,.0f}")
     print(f"  vs target $3,000,000  -> gap ${cal['gross']-3_000_000:,.0f}  ({cal['gross']/3e6*100:.1f}% to goal)")
     print(f"  cases: {cal['cases']:,.0f}  cans: {cal['cans']:,.0f}  margin%: {cal['margin_pct']*100:.1f}%")
     st = dict(SETTINGS); st["gross_basis"] = "Sell-through"
-    cal_st = compute(st)
-    print(f"\nSame inputs, Sell-through basis gross: ${cal_st['gross']:,.0f}")
+    print(f"\nSell-through basis gross: ${compute(st)['gross']:,.0f}")
+    print("\nScenarios (Wholesale):")
+    for nm, lev in SCENARIOS.items():
+        r = compute(lev)
+        print(f"  {nm:5s} ${r['gross']:>11,.0f}  ({r['gross']/3e6*100:5.1f}% to goal)")
+    print("\nSingle-lever moves to hit $3.0M from Base:")
+    for k, v in required_single_lever().items():
+        if v is None: print(f"  {k:16s}: n/a"); continue
+        disp = f"{v*100:+.2f}%" if k in ("price_index","velocity_uplift","online_growth") else f"{v:.3f}"
+        print(f"  {k:16s}: {disp}")
     print("\nBy channel (wholesale basis):")
     for k, v in sorted(cal["by_channel"].items(), key=lambda kv: -kv[1]):
         print(f"  {k:14s} ${v:,.0f}  ({v/cal['gross']*100:4.1f}%)")
+

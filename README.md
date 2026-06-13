@@ -9,11 +9,20 @@ ends end of August) and tracks progress against a **$3,000,000** gross-revenue g
 
 | File | What it is |
 |------|------------|
-| **`MUV_RTD_Forecast_v1.xlsx`** | The calculation engine. Editable assumption tables + live formulas (openpyxl). Tabs: Settings, Assumptions, Calc, Summary, Charts, ReadMe. Nothing is hard-coded — every result traces back to an input cell. |
-| **`MUV_RTD_Forecast_Dashboard_v1.html`** | A standalone interactive dashboard (vanilla JS + Chart.js CDN). KPI cards, the $3M goal front-and-centre, six charts, and live sliders for the big drivers. Mirrors the Excel math with the same defaults. |
+| **`MUV_RTD_Forecast_v1.xlsx`** | The calculation engine. Editable assumption tables + live formulas (openpyxl). Tabs: Settings, Assumptions, Calc, Summary, **Scenarios**, Charts, ReadMe. Nothing is hard-coded — every result traces back to an input cell. |
+| **`MUV_RTD_Forecast_Dashboard_v1.html`** | A standalone, Apple-clean interactive dashboard (vanilla JS + Chart.js CDN). A goal ring front-and-centre, plain-language status, one-tap "close the gap" actions, Bear/Base/Bull scenario cards, an explore panel (revenue **or** volume, plus a sensitivity tornado), and advanced sliders behind progressive disclosure. Mirrors the Excel math to the cent. |
 
 Both are driven by **editable config**, so you add a SKU, channel, province, or
 store tier by **adding a row** — not by rewriting logic.
+
+**Dashboard, at a glance** — designed so anyone can read it in seconds, with the advanced model one tap away:
+- A **goal ring** that fills toward $3M, with the gross number counting up and a plain-English status line.
+- **Close the gap** card: tap *Raise price +1.3%*, *Sell 1.7% faster*, or *Grow online +6.3%* to land exactly on $3M.
+- **Scenario cards** (Bear / Base / Bull) — tap to apply; the model recomputes live.
+- **Explore the mix** by channel / province / flavour / SKU / month, switchable between **revenue and volume**, plus **"What moves it"** (a sensitivity tornado ranking the biggest levers).
+- **Wholesale ⇄ Sell-through** toggle, 52/53-week toggle, and five driver sliders under *Advanced controls*.
+
+**Workbook Scenarios tab** mirrors this for analysts: a live **Path to $3M** (the exact single move on each lever), a **Bear/Base/Bull** comparison (closed-form, equals the full engine to the cent), and a **doors × price sensitivity grid** that turns green wherever a combination meets $3M.
 
 ## Base case (illustrative seed inputs)
 
@@ -54,8 +63,8 @@ goal basis from **Wholesale** to **Sell-through** changes the math the most
 The three implementations agree **to the cent** at the base case:
 
 - Python reference (`build/muv_config.py`) — source of truth.
-- Excel live formulas — independently recomputed with `pycel` (`build/verify.py`).
-- Dashboard JS — recomputed in Node and checked against the reference.
+- Excel live formulas — independently recomputed with `pycel` (`build/verify.py` core; `build/verify2.py` covers the Scenarios tab, Path-to-$3M, sensitivity grid, by-tier and volume).
+- Dashboard JS — recomputed in Node against the reference, and the UI exercised headlessly in jsdom (ring, scenarios, gap-chips, basis toggle, explore) with zero JS errors.
 
 QA invariants checked: province splits = 100% per channel, flavour shares = 100%,
 ramp = 0 before launch and exactly 1.0 at full, no negative/pre-launch volume,
