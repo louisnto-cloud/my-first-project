@@ -1,24 +1,55 @@
 # my-first-project
 
-## Revenue Forecast — Cases-Sold Model
+## Revenue & Profit Forecast — Cases-Sold Planner
 
-Work out **how many cases you need to sell to hit a gross-revenue target**, and
-how that number changes by **price** and **sales channel**.
+Work out **how many cases you must sell to hit a revenue target** — and, just as
+importantly, **what profit that leaves** once discounts, COGS, cost-to-serve and
+fixed costs are taken out. Pricing and economics are modelled **per sales
+channel**, because the same case earns very differently through DTC vs. retail
+vs. a distributor.
 
 | File | What it is |
 |---|---|
-| `revenue-forecast.html` | Interactive model — open in any browser, no install. Edit the yellow fields, everything recalculates live. |
-| `revenue-forecast.xlsx` | The same model as a real Excel workbook with live formulas (4 sheets: Model, Channel Comparison, Sensitivity, Monthly Plan). |
-| `PROMPT.md` | A reusable prompt to (re)generate or extend the model in any AI tool / Excel Copilot. |
-| `build_xlsx.py` | Script that generates the `.xlsx` (`python3 build_xlsx.py`). |
+| `revenue-forecast.html` | Self-contained interactive **dashboard** — open in any browser, no install. Edit the yellow fields; KPIs, charts, tables and scenarios recalculate live. State is saved in your browser; export to CSV or print to PDF. |
+| `revenue-forecast.xlsx` | The same model as a real Excel workbook with **live formulas** (recalculates on open). Sheets: Model · Scenarios · Projection · Profit Grid · Monthly Plan · Channel View. |
+| `engine.js` | The pure calculation core (no UI). Single source of truth, headless-tested. |
+| `build_html.py` / `build_xlsx.py` | Regenerate the HTML (inlines `engine.js`) and the workbook. |
+| `PROMPT.md` | A reusable prompt to regenerate or extend the whole model in any AI tool. |
 
-### The core idea
+### What it calculates
+
+- **Cases needed** to hit a gross-revenue target — overall and per channel.
+- **The full profit cascade:** Gross → Trade discounts → **Net** → COGS → Cost-to-serve → **Contribution** → Fixed costs → **Operating profit**, with margins.
+- **Break-even** volume and revenue.
+- **Scenarios** (Conservative / Base / Aggressive) side by side.
+- **Multi-year projection** at your growth rate.
+- **Monthly plan** with editable seasonality.
+- **Profit grid** — operating profit across price × volume combinations.
+
+### The core relationships
 
 > **Cases needed = revenue target ÷ price per case.**
+> **Contribution per case = net price − COGS − cost-to-serve.**
 
-Example — to hit **$2.5M** next year with the sample channel mix, you need
-**≈ 13,165 cases** at a blended **$189.90/case**. But it swings hard by channel:
-**8,333 cases** if all sold Direct-to-Consumer ($300) vs **20,833 cases** through
-Wholesale ($120). Swap in your real channels, prices and mix to make it yours.
+**Worked example — "$2.5M next year"** (sample channel mix, $90 COGS/case, $600k fixed costs):
 
-*Gross revenue only — before discounts, returns, taxes and COGS.*
+| | |
+|---|---|
+| Blended price / case | **$189.90** |
+| **Cases to hit $2.5M** | **≈ 13,165** |
+| Net revenue (after discounts) | $2.32M |
+| Contribution | **$933k** (40.1% of net) |
+| Operating profit (after $600k fixed) | **$333k** (14.3%) |
+| Break-even | **8,469 cases** / $1.61M |
+
+And the price/channel sensitivity behind the headline — cases to hit $2.5M if **100%** sold through one channel:
+
+| Channel | Price/case | Cases |
+|---|---:|---:|
+| Wholesale | $120 | **20,833** |
+| Online | $150 | 16,667 |
+| Retail | $180 | 13,889 |
+| On-Premise | $216 | 11,574 |
+| DTC | $300 | **8,333** |
+
+*Everything is illustrative — swap in your real channels, prices, mix and costs. Planning aid only; gross revenue is before discounts/returns/taxes.*

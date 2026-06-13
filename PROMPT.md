@@ -1,88 +1,71 @@
-# Reusable prompt — Cases-Sold Revenue Forecast Model
+# Reusable prompt — Cases-Sold Revenue **& Profit** Model
 
-Paste the prompt below into any AI assistant (Claude, ChatGPT, Excel Copilot,
-Google Sheets Gemini) to generate — or regenerate — a revenue model that tells
-you **how many cases you must sell to hit a revenue target**, and how that
-number changes by **price** and **sales channel**.
-
-Fill in the `«...»` placeholders. A worked example (the "$2.5M next year"
-scenario) is filled in at the bottom.
+Paste the block below into any capable AI (Claude, ChatGPT, Excel/Sheets
+Copilot) to generate — or regenerate — a model that tells you **how many cases
+you must sell to hit a revenue target, and what profit that leaves**, modelled
+per sales channel. Fill in the `«...»` placeholders. A worked example is at the
+bottom.
 
 ---
 
 ## ▶️ The prompt (copy everything in this block)
 
-> Build me a **revenue forecast model** that calculates how many **cases** of
-> product I need to sell to hit a gross-revenue target, broken out by sales
-> channel. Deliver it as **«an Excel workbook with live formulas» / «a single
-> self-contained HTML file that recalculates in the browser»** (pick one).
+> Build me a **revenue & profit forecast model** that calculates how many
+> **cases** of product I must sell to hit a gross-revenue target, and the profit
+> that produces, broken out by sales channel. Deliver it as **«a self-contained
+> HTML dashboard that recalculates in the browser» / «an Excel workbook with live
+> formulas»** (pick one). Mark inputs clearly, format money/percentages, and keep
+> everything driven by live formulas.
 >
-> **Inputs I should be able to edit:**
+> **Inputs I can edit:**
 > - Annual gross revenue target: **«$2,500,000»**
-> - Units per case (e.g. bottles): **«12»**
-> - Selling days per year: **«260»**
-> - A table of sales channels, each with a **name**, a **price per case**, and a
->   **volume mix weight** (relative weights, auto-normalised — they need not sum
->   to 100):
->   | Channel | Price / case | Volume mix |
->   |---|---|---|
->   | «Direct-to-Consumer» | «$300» | «20» |
->   | «On-Premise / Food Service» | «$216» | «15» |
->   | «Off-Premise Retail» | «$180» | «30» |
->   | «Wholesale / Distributor» | «$120» | «30» |
->   | «Online Marketplace» | «$150» | «5» |
+> - Units per case: **«12»** · Selling days/year: **«260»**
+> - Annual fixed costs: **«$600,000»** · YoY growth: **«15%»** · Projection years: **«3»**
+> - A channel table — each row has a **name, gross price/case, volume mix weight
+>   (relative), COGS/case, trade-discount %, and selling % (cost-to-serve)**:
+>   | Channel | Gross/case | Mix | COGS/case | Disc % | Sell % |
+>   |---|---|---|---|---|---|
+>   | «DTC» | «$300» | «20» | «$90» | «5%» | «18%» |
+>   | «On-Premise» | «$216» | «15» | «$90» | «10%» | «5%» |
+>   | «Off-Premise Retail» | «$180» | «30» | «$90» | «12%» | «4%» |
+>   | «Wholesale / Distributor» | «$120» | «30» | «$90» | «0%» | «3%» |
+>   | «Online Marketplace» | «$150» | «5» | «$90» | «8%» | «15%» |
 >
-> **Calculations (use these exact formulas):**
-> - Blended price/case = `SUMPRODUCT(prices, mix) / SUM(mix)`
-> - **Total cases needed** = `target / blended price`
+> **Formulas (use exactly these):**
+> - Net price/case = `gross × (1 − discount%)`
+> - Contribution/case = `net × (1 − selling%) − COGS`
+> - Blended price/case = `SUMPRODUCT(gross, mix) / SUM(mix)` (same shape for net & contribution)
+> - **Total cases to hit target** = `target / blended gross price`
 > - Per channel: mix% = `weight / SUM(weights)`; cases = `total cases × mix%`;
->   revenue = `cases × price`. (Revenue should sum to the target.)
-> - Cases per month / week / selling-day = total cases ÷ 12 / 52 / selling-days.
-> - Implied price per unit = blended price ÷ units per case.
+>   then gross/net/COGS/selling/contribution = cases × the per-case figure.
+> - Operating profit = `total contribution − fixed costs`
+> - **Break-even cases** = `fixed costs / blended contribution per case`
 >
 > **Views I want:**
-> 1. **Headline KPIs** — total cases needed, blended price/case, cases per
->    month/week/day.
-> 2. **Channel mix table** — cases, revenue and % of revenue per channel.
-> 3. **Pure-play comparison** — "if 100% of volume went through one channel,
->    cases to hit target" = `target / that channel's price`, for every channel.
-> 4. **Revenue-at-volume grid** — rows = channels, columns = case volumes
->    (5k, 10k, 15k, 20k, 25k, 30k), each cell = `volume × channel price`.
-> 5. **Price sensitivity** — a ladder of prices → cases needed (`target / price`).
-> 6. **Monthly plan** — spread the annual total across 12 months with an editable
->    seasonality weight per month; show cases, revenue and running cumulative.
+> 1. **Headline KPIs** — cases needed, gross/net revenue, contribution & margin, operating profit & margin, break-even.
+> 2. **Channel table** — net, contribution/case, margin, cases, gross $, contribution $ per channel.
+> 3. **Profit cascade / waterfall** — Gross → Trade discounts → Net → COGS → Selling → Contribution → Fixed → Operating profit.
+> 4. **Break-even** — cases & revenue, shown against the target.
+> 5. **Scenarios** — Conservative / Base / Aggressive targets, side by side (cases, net, contribution, operating profit).
+> 6. **Multi-year projection** at the growth rate (revenue, cases, contribution, profit).
+> 7. **Monthly plan** with editable seasonality weights (cases, revenue, contribution, cumulative).
+> 8. **Pure-play comparison** — cases to hit target if 100% sold through each single channel = `target / that price`.
+> 9. **Profit grid** — operating profit across price × volume combinations (colour green=profit / red=loss).
+> 10. **Two-way calculator** — cases↔revenue↔profit at a tested price.
 >
-> Clearly mark which cells are **inputs** vs **computed**, format money and
-> percentages nicely, and keep every output driven by live formulas so changing
-> an input updates everything. Gross revenue only (before discounts, returns,
-> COGS).
+> Gross revenue is before discounts/returns/taxes; contribution and operating
+> profit layer in discounts, COGS, cost-to-serve and fixed costs.
 
 ---
 
 ## Worked example — "$2.5M next year"
 
-With the example channel prices/mix above, the model returns:
+With the sample inputs above the model returns: blended **$189.90/case** →
+**≈ 13,165 cases**; net revenue **$2.32M**; contribution **$933k (40.1%)**;
+operating profit **$333k (14.3%)** after $600k fixed; **break-even 8,469 cases**.
 
-| | |
-|---|---|
-| Blended price / case | **$189.90** |
-| **Total cases to hit $2.5M** | **≈ 13,165 cases** |
-| Cases / month | ≈ 1,097 |
-| Cases / week | ≈ 253 |
+Cases to hit $2.5M if 100% sold through one channel: **20,833** (Wholesale $120)
+→ **8,333** (DTC $300). Cheaper channels need far more cases for the same revenue.
 
-**The price/channel answer to "how many cases?"** — it depends entirely on price:
-
-| If 100% sold through… | Price/case | Cases to hit $2.5M |
-|---|---:|---:|
-| Wholesale / Distributor | $120 | **20,833** |
-| Online Marketplace | $150 | 16,667 |
-| Off-Premise Retail | $180 | 13,889 |
-| On-Premise | $216 | 11,574 |
-| Direct-to-Consumer | $300 | **8,333** |
-
-> Rule of thumb: **cases needed = revenue target ÷ price per case.** Sell through
-> cheaper channels and you need far more cases for the same $2.5M; richer
-> channels (DTC) get you there on a fraction of the volume.
-
-See `revenue-forecast.xlsx` (live Excel formulas) and `revenue-forecast.html`
-(interactive, opens in any browser) in this repo for ready-made versions.
+Ready-made versions live in this repo: `revenue-forecast.html` (interactive) and
+`revenue-forecast.xlsx` (Excel formulas). The math core is `engine.js`.
