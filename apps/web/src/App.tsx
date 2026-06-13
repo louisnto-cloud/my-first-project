@@ -1,10 +1,19 @@
 import { useEffect, useState } from 'react';
-import { api, ApiError, hasToken, setToken, type Me } from './api';
+import { api, ApiError, hasToken, isDemo, setToken, type Me } from './api';
 import { makeT, type Lang } from './i18n';
 import { Player } from './Player';
 import { Landing } from './Landing';
 import { ClassManager } from './ClassManager';
 import { PracticeHub } from './Practice';
+
+const ROLE_LABEL: Record<string, { vi: string; en: string; emoji: string }> = {
+  student: { vi: 'Học viên', en: 'Student', emoji: '🧒' },
+  tutor: { vi: 'Giáo viên', en: 'Teacher', emoji: '👩‍🏫' },
+  parent: { vi: 'Phụ huynh', en: 'Parent', emoji: '👪' },
+  owner: { vi: 'Chủ trung tâm', en: 'Director', emoji: '👑' },
+  academic_director: { vi: 'Quản lý học vụ', en: 'Academic Dir.', emoji: '🎓' },
+  front_desk: { vi: 'Lễ tân', en: 'Front desk', emoji: '🖥️' },
+};
 
 // Phase 4 portal: state-routed views per role on the real API.
 
@@ -18,13 +27,34 @@ function useT(): [Lang, (l: Lang) => void, (k: string) => string] {
 }
 
 function Header({ me, lang, setLang, t, onLogout }: { me: Me; lang: Lang; setLang: (l: Lang) => void; t: (k: string) => string; onLogout: () => void }) {
+  const role = ROLE_LABEL[me.role];
   return (
-    <header className="sticky top-0 z-10 border-b border-violet-100 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3">
-        <div className="text-lg font-black text-violet-700">⭐ Anh Ngữ E’TOP <span className="text-xs font-bold text-slate-400">· {me.name}</span></div>
+    <header className="sticky top-0 z-10 border-b border-violet-100 bg-white/80 backdrop-blur-xl">
+      {isDemo() && (
+        <div className="bg-gradient-to-r from-amber-400 to-yellow-300 px-4 py-1 text-center text-[11px] font-black text-amber-900">
+          ✨ {lang === 'vi' ? 'BẢN DÙNG THỬ — dữ liệu mẫu, chạy ngay trên máy bạn' : 'DEMO — sample data, runs in your browser'}
+        </div>
+      )}
+      <div className="mx-auto flex max-w-3xl items-center justify-between gap-2 px-4 py-2.5">
+        <div className="flex items-center gap-2.5">
+          <img src="./logo.png" alt="" className="h-9 w-9 rounded-full shadow-sm" />
+          <div className="leading-tight">
+            <div className="text-sm font-black text-violet-800">Anh Ngữ E’TOP</div>
+            <div className="text-[11px] font-bold text-slate-400">
+              {role && <span className="text-violet-500">{role.emoji} {lang === 'vi' ? role.vi : role.en}</span>} · {me.name}
+            </div>
+          </div>
+        </div>
         <div className="flex items-center gap-2">
-          <button onClick={() => setLang(lang === 'vi' ? 'en' : 'vi')} className="rounded-full bg-violet-100 px-3 py-1 text-xs font-black uppercase text-violet-700">{lang}</button>
-          <button onClick={onLogout} className="text-xs font-bold text-slate-400">{t('logout')}</button>
+          <button
+            onClick={() => setLang(lang === 'vi' ? 'en' : 'vi')}
+            className="rounded-full bg-violet-100 px-3 py-1.5 text-xs font-black uppercase text-violet-700 transition hover:bg-violet-200"
+          >
+            {lang === 'vi' ? '🇻🇳' : '🇬🇧'} {lang}
+          </button>
+          <button onClick={onLogout} className="rounded-full px-3 py-1.5 text-xs font-bold text-slate-400 transition hover:bg-rose-50 hover:text-rose-500">
+            {t('logout')}
+          </button>
         </div>
       </div>
     </header>
@@ -568,7 +598,7 @@ export default function App() {
   return (
     <div className="min-h-screen pb-10">
       <Header me={me} lang={lang} setLang={setLang} t={t} onLogout={logout} />
-      <main className="mx-auto max-w-3xl space-y-4 p-4">
+      <main key={me.role} className="animate-rise mx-auto max-w-3xl space-y-4 p-4">
         {me.role === 'student' && <Student lang={lang} t={t} />}
         {me.role === 'parent' && <Parent lang={lang} t={t} />}
         {['owner', 'academic_director'].includes(me.role) && <OwnerDash />}

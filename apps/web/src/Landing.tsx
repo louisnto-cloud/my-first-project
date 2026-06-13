@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { api, ApiError, setToken } from './api';
+import { api, ApiError, isDemo, setToken } from './api';
 
 // The public face of E'TOP: logo, cartoon scene, code login, center info,
 // expandable sections — fully bilingual with a VI/EN toggle.
@@ -124,14 +124,12 @@ export function Landing({ onDone }: { onDone: () => void }) {
     setLangState(l);
   };
 
-  const go = async () => {
+  const loginWith = async (payload: { code: string } | { email: string; password: string }) => {
     setErr('');
     setBusy(true);
     try {
-      const res =
-        tab === 'staff'
-          ? await api<{ token: string }>('POST', '/auth/login', { email, password })
-          : await api<{ token: string }>('POST', '/auth/login-code', { code });
+      const path = 'code' in payload ? '/auth/login-code' : '/auth/login';
+      const res = await api<{ token: string }>('POST', path, payload);
       setToken(res.token);
       onDone();
     } catch (e) {
@@ -139,6 +137,10 @@ export function Landing({ onDone }: { onDone: () => void }) {
     } finally {
       setBusy(false);
     }
+  };
+
+  const go = async () => {
+    await loginWith(tab === 'staff' ? { email, password } : { code });
   };
 
   return (
@@ -206,6 +208,20 @@ export function Landing({ onDone }: { onDone: () => void }) {
             </div>
           )}
           {err && <p className="mt-3 text-center text-sm font-bold text-rose-500">{err}</p>}
+
+          {isDemo() && (
+            <div className="mt-4 border-t border-dashed border-violet-200 pt-3">
+              <p className="mb-2 text-center text-xs font-extrabold text-amber-600">
+                ✨ {lang === 'vi' ? 'Thử ngay — chạm để vào:' : 'Try instantly — tap to enter:'}
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                <button onClick={() => loginWith({ code: 'UP1482' })} disabled={busy} className="btn-soft text-xs">🧒 {lang === 'vi' ? 'Học viên' : 'Student'} (Up 1)</button>
+                <button onClick={() => loginWith({ code: 'GV0001' })} disabled={busy} className="btn-soft text-xs">👩‍🏫 {lang === 'vi' ? 'Giáo viên' : 'Teacher'} (Ms. Quy)</button>
+                <button onClick={() => loginWith({ email: 'phuhuynh@etop.vn', password: 'x' })} disabled={busy} className="btn-soft text-xs">👪 {lang === 'vi' ? 'Phụ huynh' : 'Parent'}</button>
+                <button onClick={() => loginWith({ email: 'zhao@etop.vn', password: 'x' })} disabled={busy} className="btn-soft text-xs">👑 {lang === 'vi' ? 'Chủ TT' : 'Director'}</button>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="w-full rounded-3xl bg-white/80 p-4 text-center backdrop-blur">

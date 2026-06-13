@@ -26,7 +26,9 @@ jobs:
       - run: npm ci
       - run: npx turbo run build test
       # The prototype is the site root; the new platform UI is published
-      # under /platform/ as a visual preview until the API is hosted.
+      # under /platform/ as a FULLY INTERACTIVE demo (VITE_DEMO=1 routes
+      # every call to an in-browser engine — no server needed).
+      - run: VITE_DEMO=1 npm run build --workspace apps/web
       - run: mkdir -p apps/web-prototype/dist/platform && cp -r apps/web/dist/* apps/web-prototype/dist/platform/
       # Publishing to the gh-pages branch auto-enables GitHub Pages,
       # which the github-pages deployment API is not allowed to do
