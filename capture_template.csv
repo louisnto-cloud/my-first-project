@@ -1,0 +1,3 @@
+asin,url,brand,product_title,category,format_size,unit_ml,pack_count,price_cad,ss_offered,ss_pct,coupon_value_cad,promo_text,flavours,caffeine_mg,sodium_mg,potassium_mg,sugar_g,calories,sweetener,claims,star_rating,num_ratings,badge,bsr
+EXAMPLE-DELETE-ME,https://www.amazon.ca/dp/XXXXXXXXXX,Brand Name,Exact title as shown,4,355 mL can,355,12,29.99,Yes,0.05,4.00,"Buy 2 save 5%","Flavour A, Flavour B",200,10,50,0,10,Sucralose,"Zero sugar; vitamins",4.6,1284,Amazon's Choice,#3 in Energy Drinks,
+EXAMPLE-ROW-2,https://www.amazon.ca/dp/YYYYYYYYYY,Another Brand,Another exact title,5,500 mL can,500,12,24.99,No,,,,"Lemon, Lime",0,20,Not listed,0,0,None,"Zero everything",4.4,532,Best Seller,#1 in Sparkling Water,
