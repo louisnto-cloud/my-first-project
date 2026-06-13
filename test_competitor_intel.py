@@ -21,7 +21,7 @@ Usage:  python3 test_competitor_intel.py [workbook.xlsx]
 import sys, glob, re
 from openpyxl import load_workbook
 
-EXPECTED_SHEETS=["README & Methodology","Executive Dashboard","Strategic Insights",
+EXPECTED_SHEETS=["Start Here","README & Methodology","Executive Dashboard","Strategic Insights",
  "Data Dictionary","M1 - Sparkling Electrolyte","M2 - Electrolyte RTD",
  "M3 - Functional Beverage","M4 - Caffeine & Energy","M5 - Sparkling Water & Soda",
  "Brand Roll-up","Category Benchmarks","Nutrition Scoreboard","Pricing & Promo Analysis",

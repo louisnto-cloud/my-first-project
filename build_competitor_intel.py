@@ -31,6 +31,10 @@ FNAME = f"Amazon_ca_Beverage_Competitor_Intel_{TODAY}.xlsx"
 # palette
 NAVY="1F3864"; BLUE="2E5496"; LTBLUE="D9E1F2"; GREY="F2F2F2"; AMBER="FFF2CC"
 GREEN="E2EFDA"; RED="F8CBAD"; WHITE="FFFFFF"; GOLD="BF9000"; TEAL="215968"
+# Apple-ish accent set for the Start Here home page (calm, high-contrast, minimal)
+INK="1D1D1F"; SUBTLE="6E6E73"; CARDBG="F5F5F7"; ACCENT="0071E3"
+HAIR=Side(style="thin",color="E5E5E7")
+CARD_BORDER=Border(left=HAIR,right=HAIR,top=HAIR,bottom=HAIR)
 thin=Side(style="thin",color="BFBFBF"); BORDER=Border(left=thin,right=thin,top=thin,bottom=thin)
 HFONT=Font(name="Calibri",bold=True,color=WHITE,size=11); HFILL=PatternFill("solid",fgColor=NAVY)
 HALIGN=Alignment(horizontal="center",vertical="center",wrap_text=True)
@@ -87,13 +91,14 @@ SHEET_FOR={C1:"M1 - Sparkling Electrolyte",C2:"M2 - Electrolyte RTD",
  C3:"M3 - Functional Beverage",C4:"M4 - Caffeine & Energy",C5:"M5 - Sparkling Water & Soda"}
 
 # canonical tab order (single source of truth: drives the TOC and the final sort)
-SHEET_ORDER=["README & Methodology","Executive Dashboard","Strategic Insights","Data Dictionary",
+SHEET_ORDER=["Start Here","README & Methodology","Executive Dashboard","Strategic Insights","Data Dictionary",
  SHEET_FOR[C1],SHEET_FOR[C2],SHEET_FOR[C3],SHEET_FOR[C4],SHEET_FOR[C5],
  "Brand Roll-up","Category Benchmarks","Nutrition Scoreboard",
  "Pricing & Promo Analysis","Subscription Strategy","Why They Win",
  "Velocity Estimate","Flavour Map","Live-Capture Protocol","QA & Integrity","Enrichment Log","Sources"]
 TAB_PURPOSE={
- "README & Methodology":"Start here — honesty model, scoring, scope, this index.",
+ "Start Here":"Plain-language home page — the simplest way in.",
+ "README & Methodology":"Honesty model, scoring, scope, and this index.",
  "Executive Dashboard":"KPIs, charts and the top key findings at a glance.",
  "Strategic Insights":"Synthesized findings, flavour whitespace, positioning map, opportunity shortlist.",
  "Data Dictionary":"Every field defined — meaning, source class, fill status.",
@@ -483,7 +488,7 @@ def build_readme():
      ("Velocity estimate (field 27)","Bands are ESTIMATES from brand prominence/category position because live review counts/BSR were not accessible. Re-derive from real #Ratings + BSR once captured. Never a unit count."),
      ("Scope rules","RTD only. Powders, drink-mix packets, tablets EXCLUDED (Liquid I.V., Nuun, LMNT, Cure powder, Cirkul). One PRIMARY category per product; overlaps noted."),
      ("Cross-tab linkage","Pricing & Promo and Subscription tabs are LIVE-LINKED to the Master tabs - fill a price once and those tabs update automatically."),
-     ("Tabs","README, Executive Dashboard, Strategic Insights, Data Dictionary, 5 Master tabs, Brand Roll-up, Category Benchmarks, Nutrition Scoreboard, Pricing & Promo, Subscription Strategy, Why They Win, Velocity Estimate, Flavour Map, Live-Capture Protocol, QA & Integrity, Enrichment Log, Sources."),
+     ("Tabs","Start Here, README, Executive Dashboard, Strategic Insights, Data Dictionary, 5 Master tabs, Brand Roll-up, Category Benchmarks, Nutrition Scoreboard, Pricing & Promo, Subscription Strategy, Why They Win, Velocity Estimate, Flavour Map, Live-Capture Protocol, QA & Integrity, Enrichment Log, Sources."),
      ("Strategic Insights tab","Synthesized 'so what' layer: top findings, a flavour-whitespace matrix (category x family), nutrition positioning by category, the sweetener-strategy mix, and a prioritized opportunity shortlist. Every figure is COMPUTED from the verified stable attributes — no live commercial data required."),
      ("Integrity statement","Nothing in the commercial columns is invented. Where a live figure could not be obtained it is blank and flagged, so the file survives a fact-check against the live listings."),
      ("Automated integrity test","'nothing fabricated' is machine-enforced, not just promised: test_competitor_intel.py asserts every commercial cell is blank, every computed column is a formula, nutrition is in range, SKU counts reconcile across tabs, and all TOC links + Enrichment Log citations resolve. It runs automatically at the end of every build and the build fails if any check fails. Run it any time with: python3 test_competitor_intel.py"),
@@ -1135,6 +1140,84 @@ def build_insights():
     ws.add_chart(chart,f"B{chart_anchor+2}")
     return ws
 
+def build_start_here():
+    """A clean, plain-language home page — the first thing anyone sees.
+    Big type, lots of white space, four guided cards that link into the file."""
+    ws=wb.create_sheet("Start Here"); ws.sheet_view.showGridLines=False; tabcolor(ws,ACCENT)
+    ws.sheet_view.showRowColHeaders=False
+    widths(ws,[2,30,30,30,30,2])
+    def span(r0,c0,r1,c1): ws.merge_cells(start_row=r0,start_column=c0,end_row=r1,end_column=c1)
+    def paint(r0,c0,r1,c1,fill=None,border=None):
+        for rr in range(r0,r1+1):
+            for cc in range(c0,c1+1):
+                cell=ws.cell(rr,cc)
+                if fill: cell.fill=PatternFill("solid",fgColor=fill)
+                if border: cell.border=border
+
+    # hero
+    span(2,2,2,5); h=ws.cell(2,2,"Beverage Competitor Intelligence")
+    h.font=Font(name="Calibri",size=30,bold=True,color=INK); h.alignment=Alignment(vertical="center")
+    ws.row_dimensions[2].height=46
+    span(3,2,3,5); sub=ws.cell(3,2,"What's selling in energy, sparkling water and functional drinks on Amazon.ca — who wins, why, and where the open gaps are.")
+    sub.font=Font(name="Calibri",size=13,color=SUBTLE); sub.alignment=Alignment(vertical="center",wrap_text=True)
+    ws.row_dimensions[3].height=30
+    # thin accent rule under the hero
+    paint(4,2,4,5,fill=ACCENT); ws.row_dimensions[4].height=3
+
+    # KPI strip
+    nbrand=len(set(p["brand"] for p in LINES))
+    ws_=[p for p in LINES if isinstance(p["sugar"],(int,float))]
+    sf=_pct(sum(1 for p in ws_ if p["sugar"]<=1),len(ws_))
+    kpis=[(f"{len(LINES)}","product lines"),(f"{nbrand}","brands"),
+          (f"{len(SKUS):,}","SKUs mapped"),(f"{sf}%","are sugar-free")]
+    kr=5
+    for i,(big,small) in enumerate(kpis):
+        c=2+i
+        paint(kr,c,kr+1,c,fill=CARDBG,border=CARD_BORDER)
+        b=ws.cell(kr,c,big); b.font=Font(size=22,bold=True,color=ACCENT); b.alignment=Alignment(horizontal="center",vertical="center")
+        s=ws.cell(kr+1,c,small); s.font=Font(size=10,color=SUBTLE); s.alignment=Alignment(horizontal="center",vertical="top")
+    ws.row_dimensions[kr].height=30; ws.row_dimensions[kr+1].height=18
+
+    # guided cards (2 x 2)
+    def card(r0,c0,c1,icon,title,desc,target):
+        r1=r0+4
+        paint(r0,c0,r1,c1,fill=CARDBG,border=CARD_BORDER)
+        span(r0,c0,r0,c1); t=ws.cell(r0,c0,f"{icon}  {title}")
+        t.font=Font(size=14,bold=True,color=ACCENT,underline="single")
+        t.alignment=Alignment(horizontal="left",vertical="center",indent=1)
+        t.hyperlink=f"#'{target}'!A1"
+        span(r0+1,c0,r1,c1); d=ws.cell(r0+1,c0,desc)
+        d.font=Font(size=11,color=INK); d.alignment=Alignment(horizontal="left",vertical="top",wrap_text=True,indent=1)
+        ws.row_dimensions[r0].height=28
+        for rb in range(r0+1,r1+1): ws.row_dimensions[rb].height=16
+    cr=8
+    card(cr,2,3,"📊","See the landscape",
+         "Big-picture dashboard: KPIs, category charts and the headline takeaways at a glance.","Executive Dashboard")
+    card(cr,4,5,"💡","Read the insights",
+         "The 'so what': top findings, flavour whitespace, a positioning map and an opportunity shortlist.","Strategic Insights")
+    cr2=cr+6
+    card(cr2,2,3,"🥤","Add live prices",
+         "Turn estimates into decision-grade data. Follow the simple capture steps, drop a file, done.","Live-Capture Protocol")
+    card(cr2,4,5,"📖","How it's built",
+         "Plain-language methodology, the honesty model, scoring, and a clickable index of all tabs.","README & Methodology")
+
+    # honesty strip (plain language)
+    hr=cr2+6
+    paint(hr-1,2,hr-1,5,fill=CARDBG); ws.row_dimensions[hr-1].height=4   # subtle divider
+    span(hr,2,hr,5); hh=ws.cell(hr,2,"What you can trust")
+    hh.font=Font(size=14,bold=True,color=INK)
+    rows=[("✓ Verified","Nutrition, sizes, flavours and sweeteners are sourced and cited (see Enrichment Log)."),
+          ("◻ Pending","Live prices, ratings and Subscribe & Save are left blank until captured — never guessed."),
+          ("⚙ Advanced","Every number is reproducible code, machine-checked by an automated integrity test, and built in CI.")]
+    rr=hr+1
+    for tag,txt in rows:
+        tg=ws.cell(rr,2,tag); tg.font=Font(size=11,bold=True,color=ACCENT); tg.alignment=Alignment(vertical="top")
+        span(rr,3,rr,5); tx=ws.cell(rr,3,txt); tx.font=Font(size=11,color=INK); tx.alignment=Alignment(vertical="top",wrap_text=True)
+        ws.row_dimensions[rr].height=20; rr+=1
+    foot=ws.cell(rr+1,2,f"Updated {TODAY}  ·  tip: every tab is one click away from the index on the “How it's built” page.")
+    foot.font=Font(size=9,italic=True,color=SUBTLE); span(rr+1,2,rr+1,5)
+    return ws
+
 def build_dashboard():
     ws=wb.create_sheet("Executive Dashboard"); ws.sheet_view.showGridLines=False; tabcolor(ws,GOLD)
     widths(ws,[3,26,16,16,16,16,16,16,16])
@@ -1241,6 +1324,7 @@ build_enrichment_log()
 build_sources()
 build_insights()
 build_dashboard()
+build_start_here()
 
 # order sheets nicely (single source of truth defined at top: SHEET_ORDER)
 wb._sheets.sort(key=lambda s: SHEET_ORDER.index(s.title) if s.title in SHEET_ORDER else 999)
