@@ -28,8 +28,15 @@ reach EBITDA. This model makes every subtraction a live, editable lever, grounde
 in realistic premium functional-beverage economics (355 ml can, zero-sugar,
 stevia; magnesium bisglycinate + Fibersol prebiotic fiber).
 
-**Web app (`organika-pnl.html`) — 7 tabs**
+**Web app (`organika-pnl.html`) — 8 tabs**
 
+0. **Overview (simple mode)** — the Apple-style front door anyone can use: a
+   plain-English verdict ("you keep 64.9% of every sale, but the business loses
+   13.1%…"), one big status number, three friendly dials (price, cost, volume)
+   that preview live, a "where every $1 goes" bar, and coaching cards — *your
+   biggest lever* and *concrete break-even routes*. Tap **Make this my plan** to
+   commit the dials; everything else stays one tap away under "Explore the full
+   model." Same engine underneath — simple on top, advanced beneath.
 1. **P&L Statement** — blended gross-sales-to-EBIT statement with Total / per-case
    / %-of-net columns, benchmark-graded KPIs, and a 16-step P&L bridge waterfall.
 2. **COGS / BOM** — editable bill of materials (ingredients, primary/secondary/

@@ -133,6 +133,36 @@
   .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
   .pillbar{display:flex;height:9px;border-radius:6px;overflow:hidden;margin-top:8px;background:var(--bg)}
   .pillbar i{display:block;height:100%}
+  /* Overview — simple mode */
+  .hero{text-align:center;padding:26px 14px 6px}
+  .hero .status{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:6px 15px;border-radius:999px;margin-bottom:20px;transition:.3s}
+  .hero h1{font-size:clamp(25px,4vw,42px);line-height:1.18;margin:0 auto;max-width:780px;font-weight:700;letter-spacing:-.02em}
+  .hero h1 .accent{background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .bignum{font-family:var(--mono);font-size:clamp(40px,7vw,70px);font-weight:800;letter-spacing:-.03em;margin:14px 0 2px;transition:color .35s}
+  .hero .bigsub{color:var(--muted);font-size:15px}
+  .herocards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0 4px}
+  @media(max-width:720px){.herocards{grid-template-columns:1fr}}
+  .hc{background:var(--surface2);border:1px solid var(--line);border-radius:16px;padding:20px 18px;text-align:center}
+  .hc .v{font-size:29px;font-weight:800;font-family:var(--mono);letter-spacing:-.01em;transition:color .3s}
+  .hc .t{color:var(--muted);font-size:12.5px;margin-top:7px;line-height:1.45}
+  .simslider{margin:18px 0}
+  .simslider .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+  .simslider .top .lab{font-size:15px;font-weight:600}
+  .simslider .top .val{font-family:var(--mono);font-size:19px;font-weight:700;color:var(--accent2)}
+  .simslider input[type=range]{width:100%;height:6px;accent-color:var(--accent);cursor:pointer}
+  .simslider .ends{display:flex;justify-content:space-between;color:var(--faint);font-size:11px;margin-top:5px}
+  .verdict{font-size:15px;line-height:1.55;text-align:center;padding:15px 16px;border-radius:14px;background:var(--bg2);border:1px solid var(--line);margin-top:10px}
+  .insight{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+  @media(max-width:720px){.insight{grid-template-columns:1fr}}
+  .insight .ic{background:linear-gradient(160deg,var(--surface),var(--bg2));border:1px solid var(--line);border-radius:16px;padding:17px 18px}
+  .insight .ic .h{font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-bottom:9px}
+  .insight .ic .b{font-size:14.5px;line-height:1.55}
+  .flowbar{display:flex;height:48px;border-radius:12px;overflow:hidden;margin:4px 0 12px;background:var(--bg)}
+  .flowbar .seg{display:flex;align-items:center;justify-content:center;color:#06121a;font-size:11px;font-weight:800;min-width:0;transition:width .4s ease}
+  .flowleg{display:flex;flex-wrap:wrap;gap:7px 16px;font-size:12.5px;color:var(--muted)}
+  .flowleg span{white-space:nowrap}
+  .flowleg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:middle}
+  .ov-actions{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
   @media print{header.app,nav.tabs,.toolbar,.no-print{display:none!important}section.tab{display:block!important}.card{break-inside:avoid;box-shadow:none}}
 </style>
 </head>
@@ -162,7 +192,8 @@
 
 <div class="wrap">
   <nav class="tabs no-print">
-    <button data-tab="pnl" class="active">P&amp;L Statement</button>
+    <button data-tab="overview" class="active">Overview</button>
+    <button data-tab="pnl">P&amp;L Statement</button>
     <button data-tab="cogs">COGS / BOM</button>
     <button data-tab="channels">Channels</button>
     <button data-tab="levers">Levers</button>
@@ -171,8 +202,57 @@
     <button data-tab="guide">Guide</button>
   </nav>
 
+  <!-- ============ OVERVIEW (simple mode) ============ -->
+  <section class="tab active" id="tab-overview">
+    <div class="card" style="padding-top:8px">
+      <div class="hero">
+        <div class="status" id="ov-status"></div>
+        <h1 id="ov-headline"></h1>
+        <div class="bignum" id="ov-big"></div>
+        <div class="bigsub" id="ov-bigsub"></div>
+      </div>
+      <div class="herocards" id="ov-cards"></div>
+    </div>
+
+    <div class="grid cols-2" style="margin-top:18px">
+      <div class="card">
+        <h3>Try it &mdash; drag to see what happens</h3>
+        <p class="sub" style="margin:-6px 0 18px">These three dials drive the whole business. Move them; nothing is saved until you tap <b>Make this my plan</b>.</p>
+        <div class="simslider">
+          <div class="top"><span class="lab">Price per can</span><span class="val" id="sl-price-val"></span></div>
+          <input type="range" id="sl-price"><div class="ends"><span id="sl-price-lo"></span><span id="sl-price-hi"></span></div>
+        </div>
+        <div class="simslider">
+          <div class="top"><span class="lab">Cost to make a can</span><span class="val" id="sl-cost-val"></span></div>
+          <input type="range" id="sl-cost"><div class="ends"><span id="sl-cost-lo"></span><span id="sl-cost-hi"></span></div>
+        </div>
+        <div class="simslider">
+          <div class="top"><span class="lab">Cans sold per year</span><span class="val" id="sl-vol-val"></span></div>
+          <input type="range" id="sl-vol"><div class="ends"><span id="sl-vol-lo"></span><span id="sl-vol-hi"></span></div>
+        </div>
+        <div class="verdict" id="ov-verdict"></div>
+        <div class="ov-actions">
+          <button class="btn primary" id="ov-commit">Make this my plan</button>
+          <button class="btn ghost" id="ov-reset-sl">Reset dials</button>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Where every $1 of sales goes</h3>
+          <div class="flowbar" id="ov-flow"></div>
+          <div class="flowleg" id="ov-flowleg"></div>
+        </div>
+        <div class="insight">
+          <div class="ic"><div class="h">&#127919; Your biggest lever</div><div class="b" id="ov-lever"></div></div>
+          <div class="ic"><div class="h">&#128640; Path to profit</div><div class="b" id="ov-path"></div></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:18px"><button class="btn" id="ov-explore">Explore the full model &rarr;</button></div>
+  </section>
+
   <!-- ============ P&L ============ -->
-  <section class="tab active" id="tab-pnl">
+  <section class="tab" id="tab-pnl">
     <div class="kpis" id="pnl-kpis"></div>
     <div class="grid cols-side">
       <div class="card no-print" id="pnl-inputs">
@@ -445,8 +525,9 @@ function compute(A){
   const cogs=cogsBuild(A);
   const upc=+A.meta.unitsPerCase||12;
   const totalUnits=(+A.volumeCases||0)*upc;
+  const mixSum=A.channels.reduce((s,c)=>s+(+c.mixPct||0),0)||1; // normalize so the stated volume is always fully allocated
   const channels=A.channels.map(c=>{
-    const units=totalUnits*(+c.mixPct||0)/100;
+    const units=totalUnits*(+c.mixPct||0)/mixSum;
     const gross=(+c.grossPrice||0)*units;
     const trade=gross*(+c.tradePct||0)/100;
     const spoil=gross*(+c.spoilPct||0)/100;
@@ -476,7 +557,7 @@ function compute(A){
   const fixed=salesTeam+ga+rnd;
   const beDenom=per(T.cm)-(+A.opex.marketingPctNet||0)/100*per(T.net);
   const beCases=beDenom>0?fixed/beDenom:NaN;
-  return {cogs,upc,totalUnits,channels,T,marketing,salesTeam,ga,rnd,da,corp,ebitda,ebit,cases,per,pN,fixed,beCases,beDenom,
+  return {cogs,upc,totalUnits,mixSum,channels,T,marketing,salesTeam,ga,rnd,da,corp,ebitda,ebit,cases,per,pN,fixed,beCases,beDenom,
     gmPct:pN(T.gp),cmPct:pN(T.cm),ebitdaPct:pN(ebitda),ebitPct:pN(ebit)};
 }
 
@@ -911,7 +992,100 @@ function renderUnit(){
     `<div class="kpi"><div class="k">$ / store / week</div><div class="v">${stores>0?money2(perStoreWk*srp):'—'}</div><div class="x">at ${money2(srp)} SRP</div></div>`;
 }
 
-function renderOutputs(){ renderPnL(); renderCOGS(); renderChannels(); renderLevers(); renderScenarios(); renderUnit(); }
+/* ===== Overview (simple mode) — Apple-style front door ===== */
+function compactN(n){ if(!isFinite(n))return '—'; const a=Math.abs(n); if(a>=1e6)return (n/1e6).toFixed(2)+'M'; if(a>=1e3)return Math.round(n/1e3)+'K'; return intf(n); }
+function baseBlended(){ const R=compute(S); return {price:R.T.units?R.T.gross/R.T.units:0, cost:R.cogs.unit, cans:R.totalUnits, upc:R.upc}; }
+let ovSynced=null;  // the dial values written at last sync; untouched dials reproduce the plan exactly
+function ovPreview(){
+  if(!ovSynced) syncOverviewSliders();
+  const sp=parseFloat(document.getElementById('sl-price').value);
+  const sc=parseFloat(document.getElementById('sl-cost').value);
+  const sv=parseFloat(document.getElementById('sl-vol').value);
+  const fp=ovSynced.price>0?sp/ovSynced.price:1;
+  const fc=ovSynced.cost>0?sc/ovSynced.cost:1;
+  const A=clone(); A.channels.forEach(c=>c.grossPrice*=fp); scaleBOM(A,fc);
+  A.volumeCases=ovSynced.upc?sv/ovSynced.upc:A.volumeCases;
+  return {A,R:compute(A),sp,sc,sv};
+}
+function syncOverviewSliders(){
+  const b=baseBlended(); const g=id=>document.getElementById(id);
+  function setR(id,val,lo,hi,step){ const e=g(id); if(!e)return; e.min=lo;e.max=hi;e.step=step;e.value=val; }
+  setR('sl-price', b.price.toFixed(2), Math.max(0.05,b.price*0.5).toFixed(2), (b.price*1.6).toFixed(2), 0.01);
+  setR('sl-cost', b.cost.toFixed(3), Math.max(0.02,b.cost*0.5).toFixed(3), (b.cost*1.6).toFixed(3), 0.005);
+  setR('sl-vol', Math.round(b.cans), Math.max(10000,Math.round(b.cans*0.3)), Math.round(b.cans*2.5), 10000);
+  ovSynced={price:+g('sl-price').value, cost:+g('sl-cost').value, vol:+g('sl-vol').value, upc:b.upc};
+  if(g('sl-price-lo')){ g('sl-price-lo').textContent=money2(+g('sl-price').min); g('sl-price-hi').textContent=money2(+g('sl-price').max);
+    g('sl-cost-lo').textContent=cents(+g('sl-cost').min); g('sl-cost-hi').textContent=cents(+g('sl-cost').max);
+    g('sl-vol-lo').textContent=compactN(+g('sl-vol').min)+' cans'; g('sl-vol-hi').textContent=compactN(+g('sl-vol').max)+' cans'; }
+}
+const LEVER_FRIENDLY={'Volume (cases)':'selling more cans','Avg selling price':'your price per can','COGS / unit':'the cost to make a can','Trade & promo rate':'trade & promo spend','Platform / selling fees':'platform & selling fees','Channel ad / CAC':'ad spend & customer acquisition','Fulfillment & freight':'fulfillment & shipping','Brand marketing':'brand marketing','G&A overhead':'overhead'};
+function ovLever(A){
+  return LEVERS.map(([label,,apply])=>{ const lo=JSON.parse(JSON.stringify(A)); apply(lo,0.85);
+    const hi=JSON.parse(JSON.stringify(A)); apply(hi,1.15);
+    return {label,span:Math.abs(compute(hi).ebitda-compute(lo).ebitda)}; }).sort((a,b)=>b.span-a.span)[0];
+}
+function solveZero(makeA,lo,hi){
+  let flo=compute(makeA(lo)).ebitda, fhi=compute(makeA(hi)).ebitda;
+  if(!((flo<=0&&fhi>=0)||(flo>=0&&fhi<=0))) return null;
+  for(let i=0;i<64;i++){ const mid=(lo+hi)/2; const fm=compute(makeA(mid)).ebitda;
+    if(Math.abs(fm)<1) return mid;
+    if((fm<0)===(flo<0)){ lo=mid; flo=fm; } else { hi=mid; } }
+  return (lo+hi)/2;
+}
+function ovVerdict(R){
+  if(R.ebitda>=0) return `<b style="color:var(--pos)">You're profitable.</b> At ${compactN(R.totalUnits)} cans a year this makes ${abbr(R.ebitda)} — about ${pct(R.ebitdaPct)} of sales.`;
+  if(isFinite(R.beCases)&&R.beCases>0){ const cur=R.cases||1; return `<b style="color:var(--gold)">Almost there.</b> You're at ${Math.round(cur/R.beCases*100)}% of break-even — roughly ${compactN((R.beCases-cur)*R.upc)} more cans a year at these prices, or trim cost / lift price.`; }
+  return `<b style="color:var(--neg)">A can loses money before overhead even starts.</b> Fix the unit economics first: lower the cost or raise the price until each can contributes.`;
+}
+function ovPath(A,R){
+  if(R.ebitda>=0) return `You're in the black. From here, growing volume and shaving COGS widen the margin fastest — see the <b>Levers</b> tab.`;
+  const upc=R.upc, routes=[];
+  const vCans=solveZero(v=>{const a=JSON.parse(JSON.stringify(A));a.volumeCases=v/upc;return a;}, 1000*upc, A.volumeCases*upc*12);
+  if(vCans) routes.push(`sell about <b>${compactN(vCans)}</b> cans/yr (today ${compactN(R.totalUnits)})`);
+  const pM=solveZero(m=>{const a=JSON.parse(JSON.stringify(A));a.channels.forEach(c=>c.grossPrice*=m);return a;}, 0.5, 3);
+  if(pM){ const newPrice=(R.T.units?R.T.gross/R.T.units:0)*pM; routes.push(`lift price to about <b>${money2(newPrice)}</b>/can`); }
+  const cM=solveZero(m=>{const a=JSON.parse(JSON.stringify(A));scaleBOM(a,m);return a;}, 0.1, 2);
+  if(cM){ const newCost=R.cogs.unit*cM; if(newCost>0.02) routes.push(`get cost to about <b>${cents(newCost)}</b>/can`); }
+  if(!routes.length) return `No single dial reaches break-even here — it'll take a combination of price, cost and volume together.`;
+  return `Any one of these reaches break-even on its own (holding the others steady): ` + routes.join('; ') + '.';
+}
+function renderOverview(){
+  if(!document.getElementById('ov-big')) return;
+  const {A,R,sp,sc,sv}=ovPreview();
+  document.getElementById('sl-price-val').textContent=money2(sp);
+  document.getElementById('sl-cost-val').textContent=cents(sc);
+  document.getElementById('sl-vol-val').textContent=compactN(sv)+' cans';
+  const ebd=R.ebitda, ep=R.ebitdaPct;
+  const big=document.getElementById('ov-big'); big.textContent=pct(ep); big.style.color=ebd>=0?'var(--pos)':'var(--neg)';
+  document.getElementById('ov-bigsub').textContent=(ebd>=0?'profit margin · ':'loss · ')+abbr(ebd)+' per year (EBITDA)';
+  const st=document.getElementById('ov-status');
+  if(ebd>=0){ st.textContent='✓ Profitable'; st.style.color='var(--pos)'; st.style.background='rgba(52,211,153,.13)'; }
+  else { st.textContent='● Pre-profit — here\'s the path'; st.style.color='var(--gold)'; st.style.background='rgba(255,194,75,.13)'; }
+  const cmCan=R.T.units?R.T.cm/R.T.units:0;
+  document.getElementById('ov-headline').innerHTML = ebd>=0
+    ? `Every can earns its keep — the business runs at a <span class="accent">${pct(ep)} profit</span>.`
+    : `You keep <span class="accent">${pct(R.gmPct)}</span> of every sale, but the business <span class="accent">loses ${pct(-ep)}</span> on the dollar — overhead and channel costs outrun what each can contributes.`;
+  const card=(v,t,good)=>{ const col=good===undefined?'':(good?'color:var(--pos)':'color:var(--neg)'); return `<div class="hc"><div class="v" style="${col}">${v}</div><div class="t">${t}</div></div>`; };
+  document.getElementById('ov-cards').innerHTML=
+    card(pct(R.gmPct),'of every sale is gross profit, after making the can')+
+    card(cents(cmCan),'each can keeps after all selling &amp; shipping costs',cmCan>=0)+
+    card(abbr(ebd),ebd>=0?'profit per year (EBITDA)':'shortfall per year (EBITDA)',ebd>=0);
+  const net=R.T.net||1;
+  const parts=[
+    {lab:'Make the can',v:R.T.cogs/net,c:'#4f8cff'},
+    {lab:'Sell & ship',v:(R.T.fees+R.T.ad+R.T.ful+R.T.slot)/net,c:'#36d6c3'},
+    {lab:'Overhead',v:(R.marketing+R.salesTeam+R.ga+R.rnd)/net,c:'#7c7bff'}
+  ];
+  parts.push(ep>=0?{lab:'Profit',v:ep,c:'#34d399'}:{lab:'Shortfall',v:-ep,c:'#ff5d6c'});
+  const tot=parts.reduce((s,p)=>s+Math.max(p.v,0),0)||1;
+  document.getElementById('ov-flow').innerHTML=parts.map(p=>{const w=Math.max(p.v,0)/tot*100;return `<div class="seg" style="width:${w}%;background:${p.c}">${w>9?Math.round(p.v*100)+'¢':''}</div>`;}).join('');
+  document.getElementById('ov-flowleg').innerHTML=parts.map(p=>`<span><i style="background:${p.c}"></i>${p.lab} ${Math.round(p.v*100)}¢</span>`).join('');
+  document.getElementById('ov-verdict').innerHTML=ovVerdict(R);
+  const lev=ovLever(A); const friendly=LEVER_FRIENDLY[lev.label]||lev.label;
+  document.getElementById('ov-lever').innerHTML=`It's <b>${friendly}</b>. A 15% move there swings the bottom line by about <b>${abbr(lev.span)}</b> a year — more than any other single change.`;
+  document.getElementById('ov-path').innerHTML=ovPath(A,R);
+}
+function renderOutputs(){ syncOverviewSliders(); renderOverview(); renderPnL(); renderCOGS(); renderChannels(); renderLevers(); renderScenarios(); renderUnit(); }
 function recalc(){ renderOutputs(); }
 
 /* =================== WIRING =================== */
@@ -934,6 +1108,11 @@ function bind(){
   document.getElementById('wi-range').addEventListener('input',renderWhatif);
   document.getElementById('u-stores').addEventListener('input',e=>{ S.unit.stores=parseFloat(e.target.value)||0; renderUnit(); save(); });
   document.getElementById('ch-add').addEventListener('click',()=>{ S.channels.push({name:'New channel',mixPct:0,srp:2.99,grossPrice:1.50,tradePct:10,spoilPct:2,feePct:5,adPct:5,varCostUnit:0.15,slottingUnit:0.05}); buildChannels(); recalc(); save(); });
+  // overview dials (preview only; commit saves into the plan)
+  ['sl-price','sl-cost','sl-vol'].forEach(id=>{ const e=document.getElementById(id); if(e) e.addEventListener('input',renderOverview); });
+  document.getElementById('ov-commit').addEventListener('click',()=>{ const {A}=ovPreview(); S.channels=A.channels; S.bom=A.bom; S.volumeCases=A.volumeCases; save(); buildBOM(); buildChannels(); applyScalars(); recalc(); toast('Plan updated from your dials'); });
+  document.getElementById('ov-reset-sl').addEventListener('click',()=>{ syncOverviewSliders(); renderOverview(); });
+  document.getElementById('ov-explore').addEventListener('click',()=>show('pnl'));
   // scenario pills (apply transform to current base, non-destructively previewed by swapping working set)
   document.querySelectorAll('#scenpill button').forEach(b=>b.addEventListener('click',()=>applyScenario(b.dataset.scen)));
   // tabs
@@ -953,7 +1132,9 @@ function applyScenario(scen){
 }
 
 function show(tab){ document.querySelectorAll('nav.tabs button').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
-  document.querySelectorAll('section.tab').forEach(s=>s.classList.toggle('active',s.id==='tab-'+tab)); window.scrollTo({top:0,behavior:'smooth'}); }
+  document.querySelectorAll('section.tab').forEach(s=>s.classList.toggle('active',s.id==='tab-'+tab));
+  if(tab==='overview'){ syncOverviewSliders(); renderOverview(); }
+  window.scrollTo({top:0,behavior:'smooth'}); }
 
 function exportCSV(){
   const R=compute(S); const rows=[['Organika MÜV Sparkling Electrolytes — P&L'],['Line','Total','Per case','% net']];
