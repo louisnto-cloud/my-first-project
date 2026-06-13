@@ -23,7 +23,7 @@ export default function OnboardingPage() {
   };
 
   return (
-    <div className="flex min-h-dvh flex-col justify-between px-6 py-10">
+    <div className="flex min-h-dvh flex-col justify-between px-6 pb-10 pt-safe-bar">
       {screen === 0 && (
         <>
           <div className="flex flex-1 flex-col items-center justify-center gap-8 text-center">

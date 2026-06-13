@@ -11,8 +11,14 @@
   --incense: #8a8578;
 }
 
+:root {
+  color-scheme: dark; /* native form controls, scrollbars, etc. render dark */
+}
+
 html {
   background: var(--lapis);
+  -webkit-text-size-adjust: 100%; /* don't let iOS reflow our type on rotate */
+  min-height: 100%;
 }
 
 body {
@@ -20,7 +26,32 @@ body {
     radial-gradient(120% 90% at 50% 0%, rgba(217, 164, 65, 0.07), transparent 60%),
     var(--lapis);
   color: var(--ivory);
+  min-height: 100dvh;
   -webkit-tap-highlight-color: transparent;
+  /* App-like: no rubber-band white gap, no long-press image/callout menus. */
+  overscroll-behavior-y: none;
+  -webkit-touch-callout: none;
+}
+
+/* Selection and the long-press callout still belong on real text inputs. */
+input,
+textarea {
+  -webkit-touch-callout: default;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Safe-area helpers for the notch and home indicator in the installed app. */
+.pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+.pb-nav {
+  padding-bottom: calc(6rem + env(safe-area-inset-bottom));
+}
+/* For full-screen headers (lesson/Mass/rosary): keep the usual 1rem gap and
+   push it below the status bar when running as an installed app. */
+.pt-safe-bar {
+  padding-top: calc(1rem + env(safe-area-inset-top));
 }
 
 /* Visible keyboard focus, always */

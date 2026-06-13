@@ -39,7 +39,7 @@ function Shell({ children }: { children: React.ReactNode }) {
 
   if (!mounted) {
     return (
-      <div className="flex min-h-dvh items-center justify-center">
+      <div className="pt-safe flex min-h-dvh items-center justify-center">
         <svg viewBox="0 0 60 80" className="h-16 w-12 opacity-80">
           <path d="M30 4c10 13 15 22 15 30a15 15 0 0 1-30 0c0-8 5-17 15-30z" fill="#D9A441" className="flame" />
           <rect x="22" y="40" width="16" height="34" rx="3" fill="#F3ECDD" opacity="0.9" />
@@ -48,10 +48,14 @@ function Shell({ children }: { children: React.ReactNode }) {
     );
   }
 
+  // Scrolling pages (Today/Road/Chapel) get the top inset + room for the nav.
+  // Immersive full-screen pages keep the true viewport height and clear the
+  // notch via their own header (.pt-safe-bar), so their 100dvh math holds.
+  const immersive = inLesson || inOnboarding;
   return (
     <div className="mx-auto flex min-h-dvh max-w-page flex-col">
-      <main className="flex-1 pb-24">{children}</main>
-      {!inLesson && !inOnboarding && <BottomNav />}
+      <main className={immersive ? 'flex-1' : 'pt-safe pb-nav flex-1'}>{children}</main>
+      {!immersive && <BottomNav />}
     </div>
   );
 }

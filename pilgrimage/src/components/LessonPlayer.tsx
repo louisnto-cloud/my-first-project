@@ -162,7 +162,7 @@ export function LessonPlayer({ world, lesson }: { world: World; lesson: Lesson }
   return (
     <div className="flex min-h-dvh flex-col">
       {/* Quiet header: progress hairline + leave door */}
-      <div className="flex items-center gap-3 px-4 pt-4">
+      <div className="flex items-center gap-3 px-4 pt-safe-bar">
         <Link href="/" aria-label={t(UI.backToToday)} className="flex h-11 w-11 items-center justify-center rounded-full text-incense">
           <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current"><path d="M15.5 4.5 8 12l7.5 7.5 1.4-1.4L10.8 12l6.1-6.1z" /></svg>
         </Link>
