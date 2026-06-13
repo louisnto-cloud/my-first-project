@@ -1,5 +1,15 @@
 # Grid Trading Bot (Alpaca)
 
+### ⭐ Easiest way to use it
+Install once, then just run the friendly menu — it walks you through everything:
+```bash
+pip install -r requirements.txt
+python start.py
+```
+Pick a number. No commands to memorise. Everything below is the detail behind it.
+
+---
+
 A safe-by-default **grid trading bot**. It buys small amounts as price dips
 through a price band you choose, and sells a little higher to capture the
 difference, over and over. It trades **fake money by default** and makes going

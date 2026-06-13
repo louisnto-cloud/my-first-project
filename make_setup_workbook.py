@@ -265,6 +265,7 @@ def sheet_commands(wb):
     subtitle(ws, 2, "Run from inside the project folder. Green rows are zero-risk (no keys, nothing sent).", 3)
     header_row(ws, 3, ["#", "Purpose", "Command"])
     cmds = [
+        ("0", "⭐ EASY BUTTON: friendly menu (does it all)", "python start.py", GREEN),
         ("1", "Install packages", "pip install -r requirements.txt", GREEN),
         ("2", "Run safety tests (expect: 45 passed)", "python -m pytest -q", GREEN),
         ("3", "Offline backtest (synthetic data)", "python backtest.py --simulate", GREEN),
@@ -582,6 +583,7 @@ def sheet_architecture(wb):
     subtitle(ws, 2, "Small, single-purpose pieces. The engine ties them together.", 2)
     header_row(ws, 3, ["File", "Job, in plain language"])
     rows = [
+        ("start.py", "⭐ The easy front door: a friendly menu that runs everything for you."),
         ("config.yaml", "Your settings. The only file you normally edit."),
         ("bot/config.py", "Loads + validates settings. Refuses to run if anything is unsafe."),
         ("bot/fees.py", "The money math: fees, breakeven, net profit after fees."),

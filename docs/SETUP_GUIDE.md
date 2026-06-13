@@ -40,6 +40,10 @@ Click inside the terminal (bottom panel), then paste this whole box and press **
 pip install -r requirements.txt
 ```
 
+> ⭐ **The easy button:** after installing, you can just run **`python start.py`**
+> and pick numbers from a friendly menu — it does Parts 3, 4, 5 and more for you.
+> The remaining parts below explain what each menu option does.
+
 - ✅ **What should happen:** lots of lines, ending with no red `ERROR`.
 - 🪤 **TRAP:** If you see `command not found: pip`, type `pip3` instead of `pip` (use `python3`/`pip3` everywhere below).
 
