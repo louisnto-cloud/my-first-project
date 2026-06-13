@@ -101,49 +101,84 @@ function Student({ lang, t }: { lang: Lang; t: (k: string) => string }) {
 
   if (playing) return <Player assignmentId={playing} onExit={() => { setPlaying(null); void load(); }} t={t} />;
 
+  const totalAssignments = classes.reduce((n, c) => n + (assignments[c.id]?.length ?? 0), 0);
+
   return (
     <div className="space-y-4">
       {ach && (
-        <div className="card flex gap-4 font-black text-violet-700">
-          <span>⭐ {ach.points} {t('points')}</span>
-          <span>🔥 {ach.streak} {t('dayStreak')}</span>
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-violet-600 to-fuchsia-500 p-5 text-white shadow-lg shadow-violet-300/40">
+          <div className="flex items-center gap-5">
+            <div className="text-center">
+              <div className="text-3xl font-black">{ach.points}</div>
+              <div className="text-[11px] font-bold text-violet-100">⭐ {t('points')}</div>
+            </div>
+            <div className="h-10 w-px bg-white/30" />
+            <div className="text-center">
+              <div className="text-3xl font-black">{ach.streak}</div>
+              <div className="text-[11px] font-bold text-violet-100">🔥 {t('dayStreak')}</div>
+            </div>
+            <div className="ml-auto text-5xl opacity-90">{ach.streak > 0 ? '🔥' : '🌱'}</div>
+          </div>
         </div>
       )}
+
       <div className="flex gap-1 rounded-2xl bg-violet-100 p-1">
-        {([['work', '📝 Bài tập / Assignments'], ['practice', '📖 Tự luyện / Practice']] as const).map(([k, label]) => (
-          <button key={k} onClick={() => setView(k)} className={`flex-1 rounded-xl px-2 py-2 text-sm font-extrabold ${view === k ? 'bg-white text-violet-700 shadow' : 'text-violet-400'}`}>
+        {([['work', `📝 ${lang === 'vi' ? 'Bài tập' : 'Assignments'}`], ['practice', `📖 ${lang === 'vi' ? 'Tự luyện' : 'Practice'}`]] as const).map(([k, label]) => (
+          <button key={k} onClick={() => setView(k)} className={`flex-1 rounded-xl px-2 py-2.5 text-sm font-extrabold transition ${view === k ? 'bg-white text-violet-700 shadow-sm' : 'text-violet-400'}`}>
             {label}
           </button>
         ))}
       </div>
-      {view === 'practice' && <PracticeHub lang={lang} />}
-      {view === 'practice' ? null : <>
-      <h2 className="font-black">{t('myClasses')}</h2>
-      {classes.map((c) => (
-        <div key={c.id} className="card space-y-2">
-          <div className="font-extrabold">🏫 Lớp {c.name}</div>
-          <div className="text-xs font-bold text-slate-400">
-            👩‍🏫 GV chủ nhiệm: {c.teacherName ?? '—'}{c.scheduleNote ? ` · 🗓 ${c.scheduleNote}` : ''}
-          </div>
-          {(assignments[c.id] ?? []).map((a) => (
-            <button key={a.id} onClick={() => setPlaying(a.id)} className="flex w-full items-center justify-between rounded-2xl bg-violet-50 p-3 font-bold hover:bg-violet-100">
-              <span>📝 {a.title}</span>
-              <span className="text-xs text-slate-400">
-                {a.myStatus === 'graded' ? `✅ ${t('graded')}` : a.myStatus === 'submitted' ? `📨 ${t('submitted')}` : a.myStatus === 'in_progress' ? `▶ ${t('continue')}` : `▶ ${t('start')}`}
-              </span>
-            </button>
+
+      {view === 'practice' ? (
+        <PracticeHub lang={lang} />
+      ) : (
+        <>
+          {classes.map((c) => (
+            <div key={c.id} className="card space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-violet-100 text-xl">🏫</div>
+                <div className="min-w-0">
+                  <div className="font-black text-violet-800">Lớp {c.name}</div>
+                  <div className="truncate text-[11px] font-bold text-slate-400">👩‍🏫 {c.teacherName ?? '—'}{c.scheduleNote ? ` · ${c.scheduleNote}` : ''}</div>
+                </div>
+              </div>
+              {(assignments[c.id] ?? []).length === 0 ? (
+                <div className="rounded-2xl bg-emerald-50 p-3 text-center text-sm font-bold text-emerald-600">
+                  {lang === 'vi' ? 'Chưa có bài tập mới 🎉' : 'No new assignments 🎉'}
+                </div>
+              ) : (
+                (assignments[c.id] ?? []).map((a) => {
+                  const done = a.myStatus === 'graded' || a.myStatus === 'submitted';
+                  return (
+                    <button key={a.id} onClick={() => setPlaying(a.id)} className={`flex w-full items-center justify-between rounded-2xl p-3.5 text-left font-bold transition active:scale-[0.99] ${done ? 'bg-slate-50' : 'bg-gradient-to-r from-violet-50 to-fuchsia-50 hover:from-violet-100'}`}>
+                      <span className="flex items-center gap-2"><span className="text-lg">{done ? '✅' : '📝'}</span>{a.title}</span>
+                      <span className={`chip ${done ? 'bg-emerald-100 text-emerald-600' : 'bg-violet-600 text-white'}`}>
+                        {a.myStatus === 'graded' ? t('graded') : a.myStatus === 'submitted' ? t('submitted') : a.myStatus === 'in_progress' ? `${t('continue')} →` : `${t('start')} →`}
+                      </span>
+                    </button>
+                  );
+                })
+              )}
+            </div>
           ))}
-        </div>
-      ))}
-      <div className="card space-y-2">
-        <div className="text-sm font-extrabold text-violet-700">🔑 {t('joinClass')}</div>
-        <div className="flex gap-2">
-          <input className="input uppercase" placeholder="BEAR42" value={code} onChange={(e) => setCode(e.target.value)} />
-          <button onClick={join} className="btn-primary">{t('join')}</button>
-        </div>
-        {joinMsg && <div className="text-sm font-bold">{joinMsg}</div>}
-      </div>
-      </>}
+
+          {totalAssignments === 0 && classes.length > 0 && (
+            <button onClick={() => setView('practice')} className="card flex w-full items-center justify-center gap-2 font-bold text-violet-600">
+              📖 {lang === 'vi' ? 'Rảnh rồi? Tự luyện thêm nhé!' : 'Free time? Practice more!'} →
+            </button>
+          )}
+
+          <details className="card !p-3">
+            <summary className="cursor-pointer text-sm font-extrabold text-slate-500">🔑 {t('joinClass')}</summary>
+            <div className="mt-3 flex gap-2">
+              <input className="input uppercase" placeholder="UP1 / BEAR42" value={code} onChange={(e) => setCode(e.target.value)} />
+              <button onClick={join} className="btn-primary">{t('join')}</button>
+            </div>
+            {joinMsg && <div className="mt-2 text-sm font-bold">{joinMsg}</div>}
+          </details>
+        </>
+      )}
     </div>
   );
 }
