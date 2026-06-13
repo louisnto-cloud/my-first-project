@@ -266,7 +266,7 @@ def sheet_commands(wb):
     header_row(ws, 3, ["#", "Purpose", "Command"])
     cmds = [
         ("1", "Install packages", "pip install -r requirements.txt", GREEN),
-        ("2", "Run safety tests (expect: 42 passed)", "python -m pytest -q", GREEN),
+        ("2", "Run safety tests (expect: 45 passed)", "python -m pytest -q", GREEN),
         ("3", "Offline backtest (synthetic data)", "python backtest.py --simulate", GREEN),
         ("4", "Dry run, 30 loops (no keys, nothing sent)", "python run_bot.py --ticks 30", GREEN),
         ("5", "Create your secrets file", "cp .env.example .env", AMBER),
@@ -593,8 +593,10 @@ def sheet_architecture(wb):
         ("bot/alerts.py", "Optional webhook notifications (Discord/Slack/phone)."),
         ("bot/logging_setup.py", "Timestamped, human-readable logs."),
         ("run_bot.py", "What you launch. Picks simulator vs Alpaca based on mode."),
-        ("backtest.py", "Replays the exact strategy over historical/synthetic/CSV data."),
-        ("tests/", "Automated proof the dangerous parts are correct (38 tests)."),
+        ("backtest.py", "Replays the strategy; also --suggest-band and --walkforward (out-of-sample)."),
+        ("compare_windows.py", "Compares strategy vs buy & hold across 30/60/90-day windows."),
+        ("screen_symbols.py", "Ranks many tickers by honest out-of-sample result; shows what's worth trading."),
+        ("tests/", "Automated proof the dangerous parts are correct (45 tests)."),
     ]
     r = 4
     for f, j in rows:
