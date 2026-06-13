@@ -59,6 +59,7 @@ class Config:
 
     # Fees + grid
     fee_percent_per_side: float
+    slippage_percent_per_side: float
     band_low: float
     band_high: float
     grid_levels: int
@@ -100,9 +101,14 @@ class Config:
         return self.fee_percent_per_side * 2
 
     @property
+    def round_trip_cost_percent(self) -> float:
+        """Total realistic cost per cycle: fees AND slippage, both sides."""
+        return (self.fee_percent_per_side + self.slippage_percent_per_side) * 2
+
+    @property
     def net_margin_percent(self) -> float:
-        """Profit target left over after the round-trip fee, as a percent."""
-        return self.profit_target_percent - self.round_trip_fee_percent
+        """Profit target left over after fees AND slippage, as a percent."""
+        return self.profit_target_percent - self.round_trip_cost_percent
 
 
 def _require(cfg: dict, key: str):
@@ -210,6 +216,13 @@ def load_config(
 
     # 6) Numbers: read, type-check, and range-check everything.
     fee_per_side = _as_float(raw, "fee_percent_per_side")
+    # Slippage is optional (defaults to a small, conservative 0.05%). It models
+    # the gap between the price you wanted and the price you got. For
+    # commission-free stocks this is the main cost, so do not set it to 0.
+    try:
+        slippage_per_side = float(raw.get("slippage_percent_per_side", 0.05))
+    except (TypeError, ValueError):
+        raise ConfigError("'slippage_percent_per_side' must be a number.") from None
     band_low = _as_float(raw, "band_low")
     band_high = _as_float(raw, "band_high")
     grid_levels = _as_int(raw, "grid_levels")
@@ -225,6 +238,8 @@ def load_config(
 
     if fee_per_side < 0:
         raise ConfigError("'fee_percent_per_side' cannot be negative.")
+    if slippage_per_side < 0:
+        raise ConfigError("'slippage_percent_per_side' cannot be negative.")
     if band_low <= 0 or band_high <= 0:
         raise ConfigError("'band_low' and 'band_high' must be positive prices.")
     if band_low >= band_high:
@@ -257,8 +272,8 @@ def load_config(
             f"your total deployment limit."
         )
 
-    # 7) FEE AWARENESS. Make sure each cycle can actually clear its own cost.
-    round_trip = fee_per_side * 2
+    # 7) COST AWARENESS. Make sure each cycle can clear fees AND slippage.
+    round_trip = (fee_per_side + slippage_per_side) * 2
     net_margin = profit_target - round_trip
     if net_margin < MIN_SAFE_NET_MARGIN_PERCENT:
         message = (
@@ -299,6 +314,7 @@ def load_config(
         api_secret_key=api_secret_key,
         api_endpoint=api_endpoint,
         fee_percent_per_side=fee_per_side,
+        slippage_percent_per_side=slippage_per_side,
         band_low=band_low,
         band_high=band_high,
         grid_levels=grid_levels,

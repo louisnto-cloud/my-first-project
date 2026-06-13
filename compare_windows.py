@@ -19,7 +19,7 @@ from __future__ import annotations
 import argparse
 
 from bot.config import load_config, ConfigError
-from backtest import run_backtest, _alpaca_prices, _synthetic_prices
+from backtest import run_backtest, _alpaca_prices, _synthetic_prices, _csv_prices
 
 
 def _row(label, rep):
@@ -38,6 +38,8 @@ def main():
                         help="look-back windows in days (real Alpaca data)")
     parser.add_argument("--simulate", action="store_true",
                         help="use synthetic prices instead of real data (offline demo)")
+    parser.add_argument("--csv", default=None,
+                        help="read prices from a CSV (column 'close') and run windows as tail slices")
     args = parser.parse_args()
 
     try:
@@ -56,8 +58,15 @@ def main():
     print(header)
     print("-" * len(header))
 
+    csv_all = _csv_prices(args.csv) if args.csv else None
+
     for d in args.days:
-        if args.simulate:
+        if args.csv:
+            # Use the last (d*24) bars as a stand-in window from your CSV.
+            window = min(len(csv_all), max(50, d * 24))
+            prices = csv_all[-window:]
+            label = f"{d}d (csv)"
+        elif args.simulate:
             # ~24 synthetic bars per day so longer windows have more data.
             prices = _synthetic_prices(cfg, n=max(50, d * 24))
             label = f"{d}d (sim)"

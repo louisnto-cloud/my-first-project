@@ -36,6 +36,11 @@ symbol: "BTC/USD"
 # writing. One full cycle (buy + sell) therefore costs about 0.50%.
 fee_percent_per_side: 0.25
 
+# Slippage per trade, as a percent: the gap between the price you wanted and the
+# price you actually got. Makes backtests honest. The cost check and backtest
+# both subtract this on BOTH sides. Do not set to 0 (markets are not perfect).
+slippage_percent_per_side: 0.05
+
 # ----------------------------------------------------------------------------
 #  GRID: the heart of the strategy.
 # ----------------------------------------------------------------------------

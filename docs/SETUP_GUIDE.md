@@ -53,7 +53,7 @@ Paste this and press Enter:
 python -m pytest -q
 ```
 
-- ✅ **What should happen:** the last line says **`38 passed`**.
+- ✅ **What should happen:** the last line says **`42 passed`**.
 - 🧠 **What it means:** the fee math and all the safety brakes were just tested and are correct.
 - 🪤 **TRAP:** `No module named pytest`? You skipped Part 2 — run it again.
 

@@ -266,7 +266,7 @@ def sheet_commands(wb):
     header_row(ws, 3, ["#", "Purpose", "Command"])
     cmds = [
         ("1", "Install packages", "pip install -r requirements.txt", GREEN),
-        ("2", "Run safety tests (expect: 38 passed)", "python -m pytest -q", GREEN),
+        ("2", "Run safety tests (expect: 42 passed)", "python -m pytest -q", GREEN),
         ("3", "Offline backtest (synthetic data)", "python backtest.py --simulate", GREEN),
         ("4", "Dry run, 30 loops (no keys, nothing sent)", "python run_bot.py --ticks 30", GREEN),
         ("5", "Create your secrets file", "cp .env.example .env", AMBER),
@@ -360,6 +360,7 @@ def sheet_config(wb):
         ("asset_class", "crypto", "crypto (24/7, no day-trade rule) or stock (phase two)."),
         ("symbol", "BTC/USD", "What you trade. Crypto e.g. BTC/USD; stocks e.g. SPY."),
         ("fee_percent_per_side", "0.25", "Alpaca's crypto fee per side. Round trip is double."),
+        ("slippage_percent_per_side", "0.05", "Price you wanted vs got. The main cost for commission-free stocks. Don't set to 0."),
         ("band_low", "90000", "Bottom of your band (buy zone). Set from the backtest."),
         ("band_high", "110000", "Top of your band (sell zone). Must exceed band_low."),
         ("grid_levels", "6", "Rungs to split the band into. More = more, smaller trades."),
@@ -391,6 +392,7 @@ def _bt_cfg(grid_levels, profit_target):
     return SimpleNamespace(
         band_low=90_000.0, band_high=110_000.0, grid_levels=grid_levels,
         profit_target_percent=profit_target, fee_percent_per_side=0.25, order_size_usd=30.0,
+        slippage_percent_per_side=0.05,  # honest: include slippage in demo numbers
     )
 
 

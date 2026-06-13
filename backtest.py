@@ -21,6 +21,7 @@ from __future__ import annotations
 import argparse
 import math
 from dataclasses import dataclass, field
+from types import SimpleNamespace
 
 from bot.config import load_config, ConfigError
 from bot.grid import build_grid
@@ -78,17 +79,26 @@ def run_backtest(prices: list[float], cfg) -> BacktestReport:
     capital_per_order = cfg.order_size_usd
     equity_curve: list = []
 
+    # Slippage: you buy a touch higher and sell a touch lower than the rung.
+    # Optional on the cfg (older/stub configs default to 0).
+    slip = getattr(cfg, "slippage_percent_per_side", 0.0) / 100.0
+    eff_buy: dict = {}  # effective (slippage-adjusted) buy price per level index
+
     for price in prices:
         # Breakout guard: if price leaves the band, stop opening new buys.
         in_band = cfg.band_low <= price <= cfg.band_high
 
         for level in levels:
             if level.status == statemod.EMPTY and in_band and price <= level.buy_price:
-                level.qty = capital_per_order / level.buy_price
+                fill = level.buy_price * (1.0 + slip)
+                level.qty = capital_per_order / fill
+                eff_buy[level.index] = fill
                 level.status = statemod.HOLDING
             elif level.status == statemod.HOLDING and price >= level.sell_price:
+                sell_fill = level.sell_price * (1.0 - slip)
                 profit = fees.net_profit(
-                    level.buy_price, level.sell_price, level.qty, cfg.fee_percent_per_side
+                    eff_buy.get(level.index, level.buy_price), sell_fill,
+                    level.qty, cfg.fee_percent_per_side,
                 )
                 realized += profit
                 trades += 1
@@ -99,7 +109,8 @@ def run_backtest(prices: list[float], cfg) -> BacktestReport:
 
         # Track equity (realized + value of inventory still held) for drawdown.
         held_value = sum(
-            l.qty * price - l.qty * l.buy_price for l in levels if l.status == statemod.HOLDING
+            l.qty * price - l.qty * eff_buy.get(l.index, l.buy_price)
+            for l in levels if l.status == statemod.HOLDING
         )
         equity = realized + held_value
         peak_equity = max(peak_equity, equity)
@@ -161,12 +172,77 @@ def _alpaca_prices(cfg, days: int) -> list[float]:
     return [bar.close for bar in bars[cfg.symbol]]
 
 
+def _percentile(sorted_vals: list[float], pct: float) -> float:
+    """Linear-interpolated percentile (no numpy needed)."""
+    if not sorted_vals:
+        raise ValueError("no values")
+    k = (len(sorted_vals) - 1) * (pct / 100.0)
+    lo = math.floor(k)
+    hi = math.ceil(k)
+    if lo == hi:
+        return sorted_vals[int(k)]
+    return sorted_vals[lo] * (hi - k) + sorted_vals[hi] * (k - lo)
+
+
+def suggest_band(prices: list[float], low_pct: float = 10.0, high_pct: float = 90.0):
+    """Suggest a band from the data: the low_pct and high_pct price percentiles.
+
+    Using percentiles (not the absolute min/max) keeps the band inside the
+    normal trading range so the breakout guard still has room to do its job.
+    """
+    s = sorted(prices)
+    return _percentile(s, low_pct), _percentile(s, high_pct)
+
+
+def _clone_cfg(cfg, **over):
+    fields = dict(
+        band_low=cfg.band_low, band_high=cfg.band_high, grid_levels=cfg.grid_levels,
+        profit_target_percent=cfg.profit_target_percent,
+        fee_percent_per_side=cfg.fee_percent_per_side,
+        order_size_usd=cfg.order_size_usd,
+        slippage_percent_per_side=getattr(cfg, "slippage_percent_per_side", 0.0),
+    )
+    fields.update(over)
+    return SimpleNamespace(**fields)
+
+
+def walk_forward(prices, cfg, split: float = 0.6, low_pct: float = 10.0, high_pct: float = 90.0):
+    """Honest out-of-sample test: fit the band on the FIRST part of the data,
+    then evaluate on the LATER part the band never saw.
+
+    Returns (band, in_sample_report, out_of_sample_report). If the out-of-sample
+    result is much worse than in-sample, the band was overfit — a red flag.
+    """
+    n = len(prices)
+    if n < 20:
+        raise ValueError("need at least 20 prices for a walk-forward test")
+    cut = int(n * split)
+    tune, test = prices[:cut], prices[cut:]
+    low, high = suggest_band(tune, low_pct, high_pct)
+    tuned = _clone_cfg(cfg, band_low=low, band_high=high)
+    return (low, high), run_backtest(tune, tuned), run_backtest(test, tuned)
+
+
+def _load_prices(cfg, args):
+    if args.csv:
+        return _csv_prices(args.csv)
+    if args.simulate:
+        return _synthetic_prices(cfg)
+    if args.days:
+        return _alpaca_prices(cfg, args.days)
+    raise SystemExit("Choose a data source: --days N, --csv FILE, or --simulate")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Backtest the grid strategy")
     parser.add_argument("--config", default="config.yaml")
     parser.add_argument("--days", type=int, default=None, help="pull N days of Alpaca bars")
     parser.add_argument("--csv", default=None, help="read prices from CSV (column 'close')")
     parser.add_argument("--simulate", action="store_true", help="use synthetic prices (offline)")
+    parser.add_argument("--suggest-band", action="store_true",
+                        help="print a band suggested from the data, then exit")
+    parser.add_argument("--walkforward", action="store_true",
+                        help="fit band on early data, test on later (out-of-sample) data")
     args = parser.parse_args()
 
     try:
@@ -174,17 +250,33 @@ def main():
     except ConfigError as exc:
         raise SystemExit(f"Configuration refused (safety net working): {exc}")
 
-    if args.csv:
-        prices = _csv_prices(args.csv)
-    elif args.simulate:
-        prices = _synthetic_prices(cfg)
-    elif args.days:
-        prices = _alpaca_prices(cfg, args.days)
-    else:
-        raise SystemExit("Choose a data source: --days N, --csv FILE, or --simulate")
+    prices = _load_prices(cfg, args)
 
-    report = run_backtest(prices, cfg)
-    print(report.render())
+    if args.suggest_band:
+        low, high = suggest_band(prices)
+        print(f"\nSuggested band for {cfg.symbol} from {len(prices)} prices:")
+        print(f"  band_low:  {low:.2f}")
+        print(f"  band_high: {high:.2f}")
+        print(f"  (price range seen: {min(prices):.2f} - {max(prices):.2f})")
+        print("Copy these into your config, then re-run a backtest.\n")
+        return
+
+    if args.walkforward:
+        (low, high), ins, out = walk_forward(prices, cfg)
+        print(f"\n===== WALK-FORWARD (out-of-sample) TEST: {cfg.symbol} =====")
+        print(f"Band fitted on first 60% of data: {low:.2f} - {high:.2f}")
+        print(f"{'':<18}{'IN-SAMPLE':>14}{'OUT-OF-SAMPLE':>16}")
+        print(f"{'Net P&L $':<18}{ins.net_pnl:>14.2f}{out.net_pnl:>16.2f}")
+        print(f"{'Trades':<18}{ins.trades:>14}{out.trades:>16}")
+        print(f"{'Strategy %':<18}{ins.strategy_return_pct:>14.2f}{out.strategy_return_pct:>16.2f}")
+        print(f"{'Buy&Hold %':<18}{ins.buy_hold_return_pct:>14.2f}{out.buy_hold_return_pct:>16.2f}")
+        verdict = ("LOOKS ROBUST" if out.net_pnl > 0 and out.strategy_return_pct > 0
+                   else "FRAGILE / LIKELY OVERFIT - do not trust")
+        print(f"Verdict: {verdict}")
+        print("If out-of-sample is much worse than in-sample, the band was overfit.\n")
+        return
+
+    print(run_backtest(prices, cfg).render())
 
 
 if __name__ == "__main__":

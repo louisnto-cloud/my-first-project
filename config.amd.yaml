@@ -25,6 +25,10 @@ symbol: "AMD"
 # Stocks are commission-free on Alpaca. Slippage/spread are the real cost.
 fee_percent_per_side: 0.0
 
+# Slippage per trade (%). For commission-free stocks this is the MAIN cost, so
+# it is set realistically here, not to zero. The backtest subtracts it both sides.
+slippage_percent_per_side: 0.05
+
 # >>> PLACEHOLDER BAND — REPLACE WITH AMD'S ACTUAL RECENT RANGE <<<
 band_low: 100.0
 band_high: 140.0
