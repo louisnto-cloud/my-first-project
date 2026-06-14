@@ -35,7 +35,7 @@ function BeadStrip({ position, total }: { position: number; total: number }) {
 }
 
 export function RosaryTrainer() {
-  const { t, lang } = useI18n();
+  const { t, lang, save } = useI18n();
   const [set, setSet] = useState<MysterySet | null>(null);
   const steps = useMemo(() => (set ? buildRosary(set) : []), [set]);
   const [i, setI] = useState(0);
@@ -103,8 +103,8 @@ export function RosaryTrainer() {
   const prayer = step.announce ? null : prayerById(step.prayerId);
   const art = mystery ? mystery.art : 'candle-single';
 
-  // What the speaker reads for the current bead: the mystery's meditation, or
-  // the prayer's lines. Manual only — the pane itself advances on tap.
+  // What the guide reads for the current bead: the mystery's meditation, or
+  // the prayer's lines. It reads as each bead opens; the pane advances on tap.
   const spoken =
     step.announce && mystery
       ? `${t(mystery.title)}. ${t(mystery.meditation)}`
@@ -131,7 +131,9 @@ export function RosaryTrainer() {
             <div className="h-full bg-gold transition-all duration-300" style={{ width: `${(Math.min(i, steps.length) / steps.length) * 100}%` }} />
           </div>
         </div>
-        {!done && spoken && <SpeakerButton id={`rosary-${i}-${lang}`} text={spoken} />}
+        {!done && spoken && (
+          <SpeakerButton id={`rosary-${i}-${lang}`} text={spoken} autoStart={save.narrate} />
+        )}
       </div>
 
       {!done ? (

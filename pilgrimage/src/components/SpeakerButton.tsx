@@ -28,7 +28,7 @@ export function SpeakerButton({
   useEffect(() => {
     if (autoStart && narrationSupported() && started.current !== id) {
       started.current = id;
-      narrate(id, text, lang);
+      narrate(id, text, lang, { cue: true });
     }
     // Stop any narration when leaving this card.
     return () => {

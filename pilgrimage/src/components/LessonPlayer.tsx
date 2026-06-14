@@ -7,10 +7,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import type { Lesson, Question, StoryCard as StoryCardT, World } from '@/content/types';
+import type { L, Lesson, Question, StoryCard as StoryCardT, World } from '@/content/types';
+import type { Lang } from '@/lib/storage';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { getSave, lightCandle, todayISO, updateSave } from '@/lib/storage';
+import { narrate, stopNarration } from '@/lib/speech';
 import { SacredArt } from '@/components/SacredArt';
 import { InteractiveArt } from '@/components/InteractiveArt';
 import { StoryCardView } from '@/components/StoryCard';
@@ -114,8 +116,24 @@ function TreasureView({ lesson, onDone }: { lesson: Lesson; onDone: () => void }
   );
 }
 
+/** What the guide reads at the treasure page, mirroring what is shown. */
+function treasureSpoken(lesson: Lesson, lang: Lang, t: (s: L) => string): string {
+  const tr = lesson.treasure;
+  if (tr.kind === 'prayer') {
+    const prayer = prayerById(tr.prayerId);
+    if (!prayer) return '';
+    return [t(prayer.name), ...(lang === 'vi' ? prayer.vi : prayer.en), t(tr.note)].join('. ');
+  }
+  if (tr.kind === 'word') {
+    const entry = glossaryById(tr.termId);
+    if (!entry) return '';
+    return [lang === 'vi' ? entry.vi : entry.term, t(entry.plain), t(tr.note)].join('. ');
+  }
+  return [t(tr.title), t(tr.note)].join('. ');
+}
+
 export function LessonPlayer({ world, lesson }: { world: World; lesson: Lesson }) {
-  const { t } = useI18n();
+  const { t, lang, save } = useI18n();
   const router = useRouter();
   const flow = useMemo(() => buildFlow(lesson), [lesson]);
 
@@ -135,6 +153,26 @@ export function LessonPlayer({ world, lesson }: { world: World; lesson: Lesson }
     updateSave({ position: { lessonId: lesson.id, step } });
     window.scrollTo(0, 0);
   }, [lesson.id, step]);
+
+  // The guide reads the door and the treasure aloud as they open (story cards
+  // and questions read themselves through their own speaker). It stays quiet on
+  // the candle, so the closing ritual is silent.
+  useEffect(() => {
+    if (!save.narrate) return;
+    let id = '';
+    let text = '';
+    if (step === 0) {
+      id = `door-${lesson.id}-${lang}`;
+      text = [t(world.church), t(lesson.title), t(lesson.door.line)].join('. ');
+    } else if (step === treasureStep) {
+      id = `treasure-${lesson.id}-${lang}`;
+      text = treasureSpoken(lesson, lang, t);
+    }
+    if (text) {
+      narrate(id, text, lang, { cue: true });
+      return () => stopNarration();
+    }
+  }, [step, lang, save.narrate, lesson, world, t, treasureStep]);
 
   const [finished, setFinished] = useState(false);
 

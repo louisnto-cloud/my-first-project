@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { I18nProvider, useI18n } from '@/lib/i18n';
 import { BottomNav } from '@/components/BottomNav';
+import { Companion } from '@/components/Companion';
 
 function Shell({ children }: { children: React.ReactNode }) {
   const { save } = useI18n();
@@ -56,6 +57,8 @@ function Shell({ children }: { children: React.ReactNode }) {
     <div className="mx-auto flex min-h-dvh max-w-page flex-col">
       <main className={immersive ? 'flex-1' : 'pt-safe pb-nav flex-1'}>{children}</main>
       {!immersive && <BottomNav />}
+      {/* The guide's presence: a glow while it reads, on every screen but setup. */}
+      {!inOnboarding && <Companion />}
     </div>
   );
 }

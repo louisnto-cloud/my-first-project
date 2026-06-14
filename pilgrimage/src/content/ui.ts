@@ -30,6 +30,20 @@ export const UI = {
   obMapLine: v('Every pilgrimage begins with a single step.', 'Mọi cuộc hành hương đều bắt đầu bằng một bước chân.'),
   obBegin: v('Step inside', 'Bước vào'),
 
+  // Onboarding — meeting the voice that walks with you.
+  obGuideTitle: v('A voice to walk with you', 'Một giọng nói đồng hành cùng bạn'),
+  obGuideBody: v(
+    'I can read every story, prayer, and step aloud as it opens — so you can simply listen and walk. You can turn this off anytime.',
+    'Tôi có thể đọc to mỗi câu chuyện, lời kinh và bước đi khi chúng mở ra — để bạn chỉ cần lắng nghe và bước đi. Bạn có thể tắt bất cứ lúc nào.',
+  ),
+  obGuideYes: v('Read to me', 'Hãy đọc cho tôi'),
+  obGuideNo: v('I’ll read myself', 'Tôi sẽ tự đọc'),
+  // Spoken the moment the voice is first turned on, so you hear it at once.
+  obGuideSample: v(
+    'Peace be with you. I will walk beside you, and read each story aloud, so you can simply listen.',
+    'Bình an cho bạn. Tôi sẽ đồng hành bên bạn, và đọc to mỗi câu chuyện, để bạn chỉ cần lắng nghe.',
+  ),
+
   // Today
   todayGreeting: v('Peace be with you', 'Bình an cho bạn'),
   greetMorning: v('Good morning', 'Chào buổi sáng'),
@@ -157,12 +171,14 @@ export const UI = {
   soundLabel: v('Sound (bell and stamp)', 'Âm thanh (chuông và con dấu)'),
   soundNote: v('Silence is the default, like a church.', 'Thinh lặng là mặc định, như trong một nhà thờ.'),
 
-  // Narration
-  narrateLabel: v('Read the stories aloud', 'Đọc các câu chuyện thành tiếng'),
-  narrateNote: v('Your phone reads each story card as it opens. Tap the speaker on any card to listen.', 'Điện thoại sẽ đọc mỗi thẻ chuyện khi nó mở ra. Chạm biểu tượng loa trên thẻ bất kỳ để nghe.'),
+  // Narration — the guide that reads aloud
+  narrateLabel: v('Read aloud as I walk', 'Đọc to khi tôi bước đi'),
+  narrateNote: v('The guide reads each story, prayer, and step aloud as it opens. Tap any speaker to replay, or to listen on your own pace.', 'Người dẫn đường đọc to mỗi câu chuyện, lời kinh và bước đi khi chúng mở ra. Chạm vào biểu tượng loa để nghe lại, hoặc nghe theo nhịp của riêng bạn.'),
   narratePlay: v('Read this aloud', 'Đọc to phần này'),
   narrateStop: v('Stop reading', 'Dừng đọc'),
   narrateNoVoice: v('Your device has no Vietnamese voice installed, so reading may use an English voice.', 'Thiết bị của bạn chưa cài giọng đọc tiếng Việt, nên phần đọc có thể dùng giọng tiếng Anh.'),
+  guideReading: v('Reading aloud', 'Đang đọc'),
+  guideTapToStop: v('Tap to stop', 'Chạm để dừng'),
 
   // Bonus roads
   bonusRoads: v('Further roads', 'Những con đường xa hơn'),

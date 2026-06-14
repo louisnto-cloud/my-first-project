@@ -50,6 +50,17 @@ export function playBell(): void {
   tone(ac, 1320 * 0.997, now, 0.9, 0.025);
 }
 
+/** A soft two-note rise, the guide's voice gently announcing itself. */
+export function playChime(): void {
+  if (!getSave().sound) return;
+  const ac = audio();
+  if (!ac) return;
+  const now = ac.currentTime;
+  // A quiet perfect fifth, the second note a breath after the first.
+  tone(ac, 587.33, now, 0.5, 0.05, 'sine'); // D5
+  tone(ac, 880, now + 0.11, 0.7, 0.045, 'sine'); // A5
+}
+
 /** The stamp thunk, for the passport ritual. */
 export function playThunk(): void {
   if (!getSave().sound) return;

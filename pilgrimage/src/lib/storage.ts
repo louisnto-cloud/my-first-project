@@ -49,7 +49,9 @@ const fresh = (): SaveDoc => ({
   journal: [],
   seen: {},
   sound: false,
-  narrate: false,
+  // The guide reads aloud by default; onboarding confirms it, and a single
+  // tap in My Chapel turns it off. An app that speaks to you should speak.
+  narrate: true,
   reliquary: '',
   ocia: {},
 });
