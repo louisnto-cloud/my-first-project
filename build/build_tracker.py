@@ -24,7 +24,7 @@ from openpyxl.chart.shapes import GraphicalProperties
 from openpyxl.chart.label import DataLabelList
 from openpyxl.worksheet.properties import PageSetupProperties
 
-OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v9.xlsx"
+OUT = "/home/user/my-first-project/Organika RTD Community Partnerships Tracker_v10.xlsx"
 
 # ---------- palette (refined, premium, mostly tonal greens + warm neutrals) ----------
 C_TITLE   = "FF22413A"   # deepest evergreen, title bands and big numbers
@@ -284,12 +284,9 @@ def hcell(ws, row, col, text):
     c = ws.cell(row,col,text); c.font = font(11, True, WHITE); c.fill = fill(C_HEADER)
     c.alignment = A_C; c.border = HEADBORD; return c
 
-BAND = "FFF6F9F7"   # whisper of green for alternate rows
+BAND = "FFF6F9F7"   # whisper of green — kept for reference, no longer applied to rows
 def band(ws, first, last, ncol):
-    for r in range(first, last+1):
-        if (r-first) % 2 == 1:
-            for c in range(1, ncol+1):
-                ws.cell(r,c).fill = fill(BAND)
+    pass  # v10: removed alternating fills for a cleaner, more premium look
 
 def printsetup(ws, title_rows="1:2"):
     ws.sheet_view.showGridLines = False
@@ -376,11 +373,11 @@ def build_type_tab(tname):
     for c,h in enumerate(HEADERS, start=1):
         hcell(ws, 2, c, h)
         ws.column_dimensions[get_column_letter(c)].width = WIDTHS[c]
-    ws.row_dimensions[2].height = 46
+    ws.row_dimensions[2].height = 52
     rows = PARTNERS.get(tname, [])
     for i in range(DATA_ROWS):
         r = FIRST + i
-        ws.row_dimensions[r].height = 24
+        ws.row_dimensions[r].height = 26
         # default styling for every cell in row
         for c in range(1, NCOL+1):
             cell = ws.cell(r,c)
@@ -440,11 +437,11 @@ ml.column_dimensions["A"].width = 20
 for m,src in enumerate(SRCCOLS, start=2):
     hcell(ml, 2, m, HEADERS[src-1])
     ml.column_dimensions[get_column_letter(m)].width = WIDTHS[src]
-ml.row_dimensions[2].height = 46
+ml.row_dimensions[2].height = 52
 mr = 3
 for t in TYPES:
     for tr in range(FIRST, LASTROW+1):
-        ml.row_dimensions[mr].height = 22
+        ml.row_dimensions[mr].height = 24
         a = ml.cell(mr,1, "=IF('{T}'!B{r}=\"\",\"\",\"{T}\")".format(T=t, r=tr))
         a.font = font(); a.border = BORD; a.alignment = A_L
         for m,src in enumerate(SRCCOLS, start=2):
@@ -476,12 +473,12 @@ subtitle(act, 2, "Log each activation here, one row each. Pick from a menu or ty
 actw={1:5,2:13,3:30,4:20,5:14,6:14,7:14,8:18,9:26,10:12,11:13,12:13,13:20,14:12,15:13,16:60}
 for c,htext in enumerate(ACT_H, start=1):
     hcell(act,2,c,htext); act.column_dimensions[get_column_letter(c)].width=actw[c]
-act.row_dimensions[2].height=46
+act.row_dimensions[2].height=52
 ACT_FIRST=3; ACT_LAST=62
 ACT_CENTER={1,2,5,6,7,8,10,11,12,13,14,15}
 for i in range(ACT_LAST-ACT_FIRST+1):
     r=ACT_FIRST+i
-    act.row_dimensions[r].height=22
+    act.row_dimensions[r].height=26
     for c in range(1,len(ACT_H)+1):
         cell=act.cell(r,c); cell.font=font(); cell.border=BORD
         cell.alignment=A_CL if c in ACT_CENTER else A_L
@@ -513,8 +510,8 @@ print("building action list...")
 al = wb.create_sheet("Action List")
 AL_H=["#","Partner","Type","Priority","Status","Next Action","Next Action Date","Days Since","Owner"]
 title_row(al,"Action List","I")
-subtitle(al,2,"Who to work next, most urgent first. Set a Next Action Date on a type tab and that partner jumps to the top. The P1 partners lead the rest.")
-alw={1:5,2:30,3:20,4:10,5:16,6:30,7:16,8:12,9:14}
+subtitle(al,2,"Most urgent first. Partners with a Next Action Date coming due lead the list, then P1, then P2.")
+alw={1:5,2:36,3:20,4:10,5:16,6:34,7:16,8:12,9:14}
 for c,htext in enumerate(AL_H,start=1):
     hcell(al,2,c,htext); al.column_dimensions[get_column_letter(c)].width=alw[c]
 al.row_dimensions[2].height=46
@@ -523,11 +520,15 @@ AL_CENTER={1,4,5,7,8,9}
 ALMAP={2:"B",3:"A",4:"E",5:"F",6:"S",7:"T",8:"R",9:"G"}   # Action List col -> Master List col
 for i in range(AL_LAST-AL_FIRST+1):
     r=AL_FIRST+i
-    al.row_dimensions[r].height=22
+    al.row_dimensions[r].height=26
     al.cell(r,11,"=IFERROR(MATCH(SMALL({M}$AL$3:$AL$500,ROW()-2),{M}$AL$3:$AL$500,0),\"\")".format(M=MLR))
     for c,col in ALMAP.items():
         cell=al.cell(r,c,"=IFERROR(INDEX({M}${col}$3:${col}$500,$K{r}),\"\")".format(M=MLR,col=col,r=r))
-        cell.font=font(); cell.border=BORD
+        if c == 2:
+            cell.font=font(13,True,C_DATA)
+        else:
+            cell.font=font()
+        cell.border=BORD
         cell.alignment=A_CL if c in AL_CENTER else A_L
     al.cell(r,1,'=IF($B{r}="","",ROW()-2)'.format(r=r))
     al.cell(r,7).number_format=FMT_DATE
@@ -552,9 +553,11 @@ print("building dashboard...")
 dash = wb.create_sheet("Dashboard")
 dash.sheet_view.showGridLines = False
 title_row(dash, "Organika RTD  ·  Community Partnerships", "N")
-subtitle(dash, 2, "A live snapshot. It updates on its own as the team works the tabs.")
-for c in range(1,15): dash.column_dimensions[get_column_letter(c)].width = 12.3
+subtitle(dash, 2, "Live numbers. Everything here updates the moment you save a change on any tab.")
+# top-right countdown chip in the title band
+dash.merge_cells("A2:K2")
 dash.merge_cells("L2:N2")
+for c in range(1,15): dash.column_dimensions[get_column_letter(c)].width = 12.3
 ds=dash.cell(2,12,'="As of  "&TEXT(TODAY(),"yyyy/mm/dd")')
 ds.font=font(11,False,C_SUB); ds.alignment=Alignment(horizontal="right",vertical="center")
 ML=MLR
@@ -579,9 +582,9 @@ def kpi(col,label,formula,numfmt=None):
             cell.border=Border(**sides)
     dash.merge_cells("{}4:{}4".format(L1,L2)); dash.merge_cells("{}5:{}6".format(L1,L2))
     a=dash.cell(4,col,label); a.font=font(10,False,C_SUB); a.alignment=Alignment(horizontal="left",vertical="center",indent=2)
-    b=dash.cell(5,col,formula); b.font=font(26,False,C_TITLE); b.alignment=Alignment(horizontal="left",vertical="center",indent=2)
+    b=dash.cell(5,col,formula); b.font=font(32,True,C_TITLE); b.alignment=Alignment(horizontal="left",vertical="center",indent=2)
     if numfmt: b.number_format=numfmt
-dash.row_dimensions[4].height=20; dash.row_dimensions[5].height=30; dash.row_dimensions[6].height=12
+dash.row_dimensions[4].height=22; dash.row_dimensions[5].height=36; dash.row_dimensions[6].height=12
 kpi(1,"Total Partners","=SUM(Q14:Q21)")
 kpi(3,"P1 Partners","=Q23")
 kpi(5,"Active Conversations",'=COUNTIF({M}$F$3:$F$500,"Outreach Sent")+COUNTIF({M}$F$3:$F$500,"In Conversation")+COUNTIF({M}$F$3:$F$500,"Proposal Sent")+COUNTIF({M}$F$3:$F$500,"Agreed")'.format(M=ML))
@@ -639,6 +642,10 @@ block(33,1,"List Health",[("Overdue Actions",'=COUNTIF({M}$T$3:$T$500,"<"&TODAY(
 block(33,5,"Budget",[("Total Budget","=Budget!B14",FMT_MONEY),("Committed","=Budget!C14",FMT_MONEY),
     ("Spent","=Budget!D14",FMT_MONEY),("Remaining","=Budget!E14",FMT_MONEY),("% Spent","=Budget!F14",FMT_PCT)])
 dash.cell(40,1,"Everything here updates on its own. Edit a partner on its type tab, log an activation on the Activations tab, and these tiles and charts refresh.").font=font(11,False,C_SUB)
+# conditional: Days to Costco tile turns amber under 30 days, rose under 7
+from openpyxl.formatting.rule import FormulaRule as _FR
+dash.conditional_formatting.add("M5:N6", _FR(formula=["MAX(0,DATE(2026,8,1)-TODAY())<30"], fill=fill(F_AMBER)))
+dash.conditional_formatting.add("M5:N6", _FR(formula=["MAX(0,DATE(2026,8,1)-TODAY())<7"],  fill=fill(F_RED)))
 dash.sheet_properties.tabColor="2E5A4E"
 
 # =====================================================================
@@ -728,11 +735,11 @@ sew = {1:5,2:30,3:14,4:24,5:18,6:16,7:30,8:14,9:10,10:20,11:14,12:32,13:28,14:40
 for c,htext in enumerate(SE_HDRS, start=1):
     hcell(se, 2, c, htext)
     se.column_dimensions[get_column_letter(c)].width = sew[c]
-se.row_dimensions[2].height = 50
+se.row_dimensions[2].height = 52
 SE_CENTER = {1,3,5,6,8,9,10,11}
 for i in range(DATA_ROWS):
     r = FIRST + i
-    se.row_dimensions[r].height = 20
+    se.row_dimensions[r].height = 26
     for c in range(1, len(SE_HDRS)+1):
         cell = se.cell(r,c)
         cell.font = font(); cell.border = BORD
@@ -851,65 +858,120 @@ gd.sheet_properties.tabColor="B7C9C1"
 
 
 # =====================================================================
-# START HERE  (the front door: simple, beautiful, anyone can use it)
+# START HERE  v10 — 2x2 card grid, live hero stats, Apple-level spacing
 # =====================================================================
 print("building start here...")
 from openpyxl.worksheet.hyperlink import Hyperlink
 home = wb.create_sheet("Start Here")
 home.sheet_view.showGridLines = False
-for c in range(1,18): home.column_dimensions[get_column_letter(c)].width = 9.6
-home.column_dimensions["A"].width = 3
-# hero band (deep evergreen) with a thin accent rule beneath
-for r in (2,3,4):
-    for col in range(2,18): home.cell(r,col).fill=fill(C_TITLE)
+
+# column grid: A=narrow margin, B-I=left half, J=gap, K-Q=right half
+home.column_dimensions["A"].width = 2
+for c in range(2, 10):  home.column_dimensions[get_column_letter(c)].width = 11.2   # B-I
+home.column_dimensions["J"].width = 2.4
+for c in range(11, 18): home.column_dimensions[get_column_letter(c)].width = 11.2   # K-Q
+
+# ---- HERO BAND rows 2-5 ----
+for r in range(2, 6):
+    for col in range(2, 18):
+        home.cell(r, col).fill = fill(C_TITLE)
+home.row_dimensions[1].height = 8    # small top margin
 home.merge_cells("B2:Q3")
-h=home.cell(2,2,"Community Partnerships"); h.font=Font(name=FONTNAME,size=28,bold=True,color=WHITE)
-h.alignment=Alignment(horizontal="left",vertical="center",indent=2)
-home.merge_cells("B4:Q4")
-sst=home.cell(4,2,"Organika RTD    ·    Find partners, book activations, win the summer 2026 Costco road show.")
-sst.font=Font(name=FONTNAME,size=12,bold=False,color="FFBFD2CB")
-sst.alignment=Alignment(horizontal="left",vertical="center",indent=2)
-for col in range(2,18): home.cell(5,col).fill=fill(ACCENT)
-home.row_dimensions[2].height=38; home.row_dimensions[3].height=16; home.row_dimensions[4].height=26
-home.row_dimensions[5].height=4; home.row_dimensions[6].height=16
-# nav cards: white cards with a coloured left accent and an arrow cue
-def card(c0, title, desc, target, clr):
-    c1=c0+2
-    for rr in range(7,11):
-        for cc in range(c0,c1+1):
-            cell=home.cell(rr,cc); cell.fill=fill(WHITE); sides={}
-            if rr==7: sides["top"]=Side(style="thin",color=CARD_BRD)
-            if rr==10: sides["bottom"]=Side(style="thin",color=CARD_BRD)
-            if cc==c1: sides["right"]=Side(style="thin",color=CARD_BRD)
-            if cc==c0: sides["left"]=Side(style="thick",color=clr)
-            cell.border=Border(**sides)
-    home.merge_cells(start_row=7,start_column=c0,end_row=8,end_column=c1)
-    home.merge_cells(start_row=9,start_column=c0,end_row=10,end_column=c1)
-    t=home.cell(7,c0,title+"    ›"); t.font=Font(name=FONTNAME,size=14,bold=True,color=C_TITLE)
-    t.alignment=Alignment(horizontal="left",vertical="center",indent=2,wrap_text=True)
-    t.hyperlink=Hyperlink(ref=t.coordinate, location="'%s'!A1"%target, display=title)
-    d=home.cell(9,c0,desc); d.font=Font(name=FONTNAME,size=10,bold=False,color=C_SUB)
-    d.alignment=Alignment(horizontal="left",vertical="top",indent=2,wrap_text=True)
-    d.hyperlink=Hyperlink(ref=d.coordinate, location="'%s'!A1"%target, display=desc)
-home.row_dimensions[7].height=22; home.row_dimensions[8].height=16; home.row_dimensions[9].height=18; home.row_dimensions[10].height=22
-card(2,"Who to contact","Your worklist, most urgent first.","Action List","FF2E5A4E")
-card(6,"Log an activation","Samples, budget and cans by flavour.","Activations","FF3E7C68")
-card(10,"See the picture","Totals, charts and budget.","Dashboard","FF6FA392")
-card(14,"Browse all partners","Every partner in one place.","Master List","FF8FB3A6")
-# how it works
-home.row_dimensions[12].height=12
-hw=home.cell(13,2,"How it works"); hw.font=Font(name=FONTNAME,size=14,bold=True,color=C_TITLE)
-hw.alignment=Alignment(horizontal="left",vertical="center",indent=2)
-for i,sline in enumerate([
- "1.    Open the Action List to see who to reach out to first.",
- "2.    Work a partner on its green tab. Keep status and next steps current.",
- "3.    When something is booked, log it on the Activations tab. Everything else updates itself.",
-]):
-    cs=home.cell(14+i,2,sline); cs.font=font(11,False,C_DATA)
-    cs.alignment=Alignment(horizontal="left",vertical="center",indent=2); home.row_dimensions[14+i].height=20
-ft=home.cell(18,2,"You only ever type into the green partner tabs and the Activations tab. The other tabs read themselves.")
-ft.font=font(11,False,C_SUB); ft.alignment=Alignment(horizontal="left",vertical="center",indent=2)
-home.sheet_properties.tabColor="22413A"
+h = home.cell(2, 2, "Community Partnerships")
+h.font = Font(name=FONTNAME, size=30, bold=True, color=WHITE)
+h.alignment = Alignment(horizontal="left", vertical="center", indent=2)
+home.row_dimensions[2].height = 44
+home.row_dimensions[3].height = 14
+
+# subtitle row with live partner count and countdown
+home.merge_cells("B4:L4")
+sst = home.cell(4, 2, "Organika RTD    ·    Find partners, book activations, win the summer 2026 Costco road show.")
+sst.font = Font(name=FONTNAME, size=11, bold=False, color="FFBFD2CB")
+sst.alignment = Alignment(horizontal="left", vertical="center", indent=2)
+
+# days-to-Costco chip in top-right of hero
+home.merge_cells("M4:Q4")
+chip = home.cell(4, 13, '=TEXT(MAX(0,DATE(2026,8,1)-TODAY()),"0")&" days to Costco"')
+chip.font = Font(name=FONTNAME, size=11, bold=True, color=WHITE)
+chip.alignment = Alignment(horizontal="right", vertical="center")
+home.row_dimensions[4].height = 28
+
+# accent rule row 5
+for col in range(2, 18): home.cell(5, col).fill = fill(ACCENT)
+home.row_dimensions[5].height = 4
+
+# spacer row 6
+home.row_dimensions[6].height = 20
+
+# ---- NAV CARDS: 2×2 grid ----
+# Card helper — c0 and c1 are start/end columns, r0 and r1 are start/end rows
+def card2(c0, c1, r0, r1, title, desc, target, clr):
+    for rr in range(r0, r1+1):
+        for cc in range(c0, c1+1):
+            cell = home.cell(rr, cc)
+            cell.fill = fill(WHITE)
+            sides = {}
+            if rr == r0:   sides["top"]    = Side(style="thin",  color=CARD_BRD)
+            if rr == r1:   sides["bottom"] = Side(style="thin",  color=CARD_BRD)
+            if cc == c0:   sides["left"]   = Side(style="thick", color=clr)
+            if cc == c1:   sides["right"]  = Side(style="thin",  color=CARD_BRD)
+            cell.border = Border(**sides)
+    # title row spans top half
+    mid = r0 + (r1 - r0) // 2
+    home.merge_cells(start_row=r0,   start_column=c0, end_row=mid,  end_column=c1)
+    home.merge_cells(start_row=mid+1,start_column=c0, end_row=r1,   end_column=c1)
+    t = home.cell(r0, c0, title + "    ›")
+    t.font = Font(name=FONTNAME, size=15, bold=True, color=C_TITLE)
+    t.alignment = Alignment(horizontal="left", vertical="center", indent=2, wrap_text=False)
+    t.hyperlink = Hyperlink(ref=t.coordinate, location="'%s'!A1" % target, display=title)
+    d = home.cell(mid+1, c0, desc)
+    d.font = Font(name=FONTNAME, size=10, bold=False, color=C_SUB)
+    d.alignment = Alignment(horizontal="left", vertical="top", indent=2, wrap_text=True)
+    d.hyperlink = Hyperlink(ref=d.coordinate, location="'%s'!A1" % target, display=desc)
+
+# row heights for the 2×2 grid (rows 7-11 = top row, rows 13-17 = bottom row)
+for r in range(7, 18):
+    home.row_dimensions[r].height = 24
+home.row_dimensions[7].height  = 14   # top padding inside card
+home.row_dimensions[9].height  = 8    # divider between title and desc
+home.row_dimensions[11].height = 14   # bottom padding
+home.row_dimensions[12].height = 10   # gap between rows
+home.row_dimensions[13].height = 14
+home.row_dimensions[15].height = 8
+home.row_dimensions[17].height = 14
+
+# Top row: cols B-I (2-9) and K-Q (11-17)
+card2(2,  9,  7, 11, "Who to contact",    "Your worklist, sorted by urgency. The partners who need attention today are at the top.", "Action List", "FF2E5A4E")
+card2(11, 17, 7, 11, "Log an activation", "Record every sampling, event booth, and sponsorship here. Budget and cans track themselves.", "Activations", "FF3E7C68")
+# Bottom row
+card2(2,  9, 13, 17, "See the picture",   "Live totals, pipeline charts, and budget at a glance. Updates the moment you log anything.", "Dashboard",   "FF6FA392")
+card2(11, 17,13, 17, "Browse all partners","All 80 partners in one scrollable view. Filter by city, type, or status.", "Master List", "FF8FB3A6")
+
+# ---- HOW IT WORKS ----
+home.row_dimensions[19].height = 16   # spacer
+hw = home.cell(20, 2, "How it works")
+hw.font = Font(name=FONTNAME, size=13, bold=True, color=C_TITLE)
+hw.alignment = Alignment(horizontal="left", vertical="center", indent=2)
+home.row_dimensions[20].height = 26
+
+steps = [
+    "1.    Open the Action List. The most urgent partner is always at the top.",
+    "2.    Open that partner on its green tab. Update Status, Next Action and Next Action Date.",
+    "3.    When something is confirmed, log it on the Activations tab. Everything else fills itself in.",
+]
+for i, sline in enumerate(steps):
+    cs = home.cell(21+i, 2, sline)
+    cs.font = font(11, False, C_DATA)
+    cs.alignment = Alignment(horizontal="left", vertical="center", indent=2)
+    home.row_dimensions[21+i].height = 22
+
+home.row_dimensions[25].height = 10
+ft = home.cell(26, 2, "You only ever type into the green partner tabs and the Activations tab. Every other tab reads itself.")
+ft.font = font(10, False, C_SUB)
+ft.alignment = Alignment(horizontal="left", vertical="center", indent=2)
+home.row_dimensions[26].height = 20
+
+home.sheet_properties.tabColor = "22413A"
 
 # =====================================================================
 # ORDER + SAVE
