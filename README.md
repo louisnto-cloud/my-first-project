@@ -48,8 +48,11 @@ stevia; magnesium bisglycinate + Fibersol prebiotic fiber).
 4. **Levers** — a **tornado** ranking every driver by its EBITDA impact, plus a
    two-way **price × COGS** heatmap. This is where you see what actually moves the
    bottom line.
-5. **Scenarios** — Base / Bull / Bear transformations compared on every key metric,
-   with an EBITDA bar chart.
+5. **Compare (Scenario Lab)** — lay unlimited full plans **side by side in one
+   window**. Each column has its own price / cost / volume / trade / marketing and
+   recomputes live; the best number in every row lights up green, with an EBITDA
+   race chart underneath. Add, duplicate, rename and remove scenarios freely
+   (seeded with Base / Bull / Bear).
 6. **Unit Economics** — per-case statement, break-even volume with a path-to-profit
    bar, and retail velocity ($/store/week).
 7. **Guide** — the waterfall, why contribution margin is the number to watch, and a

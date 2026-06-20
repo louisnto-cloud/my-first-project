@@ -163,6 +163,10 @@
   .flowleg span{white-space:nowrap}
   .flowleg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:middle}
   .ov-actions{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+  #lab-table td,#lab-table th{padding:7px 10px}
+  #lab-table .sep td{border-top:2px solid var(--line2)}
+  #lab-table tbody tr:hover{background:rgba(79,140,255,.03)}
+  #lab-table .num{transition:background .2s}
   @media print{header.app,nav.tabs,.toolbar,.no-print{display:none!important}section.tab{display:block!important}.card{break-inside:avoid;box-shadow:none}}
 </style>
 </head>
@@ -197,7 +201,7 @@
     <button data-tab="cogs">COGS / BOM</button>
     <button data-tab="channels">Channels</button>
     <button data-tab="levers">Levers</button>
-    <button data-tab="scenarios">Scenarios</button>
+    <button data-tab="scenarios">Compare</button>
     <button data-tab="unit">Unit Economics</button>
     <button data-tab="guide">Guide</button>
   </nav>
@@ -358,14 +362,19 @@
     </div>
   </section>
 
-  <!-- ============ SCENARIOS ============ -->
+  <!-- ============ SCENARIO LAB (compare side by side) ============ -->
   <section class="tab" id="tab-scenarios">
     <div class="card">
-      <h2>Scenario comparison</h2>
-      <p class="sub">Bull and Bear are transformations of your current Base assumptions. Use them to frame the range you're planning against.</p>
-      <div class="table-scroll"><table id="scen-table"></table></div>
-      <div class="chart-wrap"><div class="chart-title">EBITDA by scenario</div><div id="scen-chart"></div></div>
-      <div class="note" id="scen-note"></div>
+      <div style="display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap">
+        <div><h2>Compare scenarios, side by side</h2><p class="sub" style="margin:4px 0 0">Each column is a full plan. Edit its dials and every column recomputes live — the best number in each row lights up green.</p></div>
+        <div style="margin-left:auto;display:flex;gap:8px" class="no-print">
+          <button class="addbtn" id="lab-add">+ Add scenario</button>
+          <button class="btn ghost" id="lab-reset">Reset to Base/Bull/Bear</button>
+        </div>
+      </div>
+      <div class="table-scroll" style="margin-top:16px"><table id="lab-table" class="lab"></table></div>
+      <div class="chart-wrap"><div class="chart-title">EBITDA by scenario</div><div id="lab-chart"></div></div>
+      <div class="note">Scenarios share the channel &amp; cost <b>structure</b> you set on the other tabs, and differ on these headline dials (price, cost, volume, trade, marketing). Add as many as you want and watch them race.</div>
     </div>
   </section>
 
@@ -494,7 +503,7 @@ let S = D();
 const KEY='organika_pnl_v1';
 let SCEN='base';
 
-function load(){ try{const r=localStorage.getItem(KEY); if(r){S=Object.assign(D(),JSON.parse(r));}}catch(e){} }
+function load(){ try{const r=localStorage.getItem(KEY); if(r){S=Object.assign(D(),JSON.parse(r));}}catch(e){} if(!Array.isArray(S.lab)||!S.lab.length){ try{S.lab=makeLab();}catch(e){S.lab=null;} } }
 function save(){ try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){} }
 
 /* =================== FORMAT =================== */
@@ -931,27 +940,74 @@ const SCENARIOS={
   bull:{label:'Bull',xf:A=>{A.volumeCases*=1.4; A.channels.forEach(c=>{c.grossPrice*=1.05;c.tradePct*=0.85;c.adPct*=0.85;}); scaleBOM(A,0.9);}},
   bear:{label:'Bear',xf:A=>{A.volumeCases*=0.75; A.channels.forEach(c=>{c.grossPrice*=0.97;c.tradePct*=1.15;c.adPct*=1.2;}); scaleBOM(A,1.1);}}
 };
-function renderScenarios(){
-  const keys=['base','bull','bear'];
-  const results=keys.map(k=>{ const A=clone(); SCENARIOS[k].xf(A); return {k,label:SCENARIOS[k].label,R:compute(A)}; });
-  const metrics=[
-    ['Annual cases',r=>intf(r.R.cases)],
-    ['Net sales',r=>abbr(r.R.T.net)],
-    ['Gross margin %',r=>pct(r.R.gmPct)],
-    ['Contribution %',r=>pct(r.R.cmPct)],
-    ['Contribution $',r=>abbr(r.R.T.cm)],
-    ['EBITDA $',r=>abbr(r.R.ebitda)],
-    ['EBITDA %',r=>pct(r.R.ebitdaPct)],
-    ['Break-even cases',r=>isFinite(r.R.beCases)?intf(r.R.beCases):'—']
-  ];
-  let html='<thead><tr><th>Metric</th>'+results.map(r=>`<th>${r.label}</th>`).join('')+'</tr></thead><tbody>';
-  metrics.forEach(([label,fmt])=>{ html+=`<tr><td class="lbl">${label}</td>`+results.map(r=>{
-    let style=''; if(label==='EBITDA $'||label==='EBITDA %')style=`color:${r.R.ebitda>=0?'var(--pos)':'var(--neg)'};font-weight:700`;
-    return `<td class="num" style="${style}">${fmt(r)}</td>`; }).join('')+'</tr>'; });
-  html+='</tbody>'; document.getElementById('scen-table').innerHTML=html;
-  document.getElementById('scen-chart').innerHTML=groupBars(results.map(r=>r.label),[{label:'EBITDA',values:results.map(r=>r.R.ebitda),color:'#4f8cff'}]);
-  document.getElementById('scen-note').innerHTML='<b>Bull:</b> +40% volume, +5% price, −10% COGS, lighter trade & CAC. &nbsp; <b>Bear:</b> −25% volume, −3% price, +10% COGS, heavier trade & CAC. Edit your Base on the other tabs to reshape all three.';
+/* ===== Scenario Lab — many full plans side by side ===== */
+const LAB_INPUTS=[['price','Price / can','$',0.01],['cost','Cost / can','$',0.005],['volumeCases','Cases / year','#',1000],['trade','Trade level','x',0.05],['marketing','Marketing','%',0.5]];
+const LAB_RESULTS=[['net','Net sales'],['gm','Gross margin'],['cm','Contribution'],['be','Break-even (cases)'],['ebitda','EBITDA'],['ebitdaPct','EBITDA %']];
+function makeLab(){
+  const b=baseBlended();
+  const base={name:'Base',price:+b.price.toFixed(3),cost:+b.cost.toFixed(4),volumeCases:S.volumeCases,trade:1,marketing:S.opex.marketingPctNet};
+  return [ base,
+    {...base,name:'Bull',price:+(b.price*1.05).toFixed(3),cost:+(b.cost*0.9).toFixed(4),volumeCases:Math.round(S.volumeCases*1.4),trade:0.85},
+    {...base,name:'Bear',price:+(b.price*0.97).toFixed(3),cost:+(b.cost*1.1).toFixed(4),volumeCases:Math.round(S.volumeCases*0.75),trade:1.15} ];
 }
+function computeLab(sc){
+  const b=baseBlended(); const A=clone();
+  const fp=b.price>0?(+sc.price||0)/b.price:1; A.channels.forEach(c=>c.grossPrice*=fp);
+  const fc=b.cost>0?(+sc.cost||0)/b.cost:1; scaleBOM(A,fc);
+  A.volumeCases=+sc.volumeCases||0;
+  const ft=+sc.trade||0; A.channels.forEach(c=>c.tradePct*=ft);
+  A.opex.marketingPctNet=+sc.marketing||0;
+  return compute(A);
+}
+function buildLab(){
+  const t=document.getElementById('lab-table'); if(!t)return;
+  if(!Array.isArray(S.lab)||!S.lab.length) S.lab=makeLab();
+  const L=S.lab;
+  let head='<thead><tr><th style="min-width:120px">Scenario</th>'+L.map((sc,i)=>
+    `<th style="min-width:132px"><input type="text" class="lab-name" data-i="${i}" value="${esc(sc.name)}" style="font-weight:700;text-align:left;width:100%">`+
+    `<div class="no-print" style="margin-top:4px"><button class="delx" data-dup="${i}" title="Duplicate">&#10697;</button><button class="delx" data-del="${i}" title="Remove">&#10005;</button></div></th>`).join('')+'</tr></thead>';
+  let body='<tbody>';
+  LAB_INPUTS.forEach(([key,label,kind,step])=>{
+    body+=`<tr><td class="lbl" style="color:var(--muted)">${label}</td>`;
+    L.forEach((sc,i)=>{ const pre=kind==='$'?`<span class="pre" data-cur>${sym()}</span>`:'';
+      const suf=kind==='x'?'<span class="suf">&times;</span>':kind==='%'?'<span class="suf">%</span>':'';
+      const cls=kind==='$'?'has-pre':((kind==='x'||kind==='%')?'has-suf':'');
+      body+=`<td><div class="inp">${pre}<input class="${cls} lab-in" type="number" step="${step}" data-i="${i}" data-k="${key}" value="${sc[key]}" style="min-width:82px">${suf}</div></td>`; });
+    body+='</tr>';
+  });
+  LAB_RESULTS.forEach(([key,label],ri)=>{
+    body+=`<tr class="${ri===0?'sep':''} ${key==='ebitda'?'bigrow':''}"><td class="lbl"${key==='ebitda'?' style="font-weight:700"':''}>${label}</td>`+
+      L.map((sc,i)=>`<td class="num" id="lab-${key}-${i}"></td>`).join('')+'</tr>';
+  });
+  body+='</tbody>'; t.innerHTML=head+body;
+  t.querySelectorAll('.lab-name').forEach(inp=>inp.addEventListener('input',e=>{ S.lab[+e.target.dataset.i].name=e.target.value; refreshLab(); save(); }));
+  t.querySelectorAll('.lab-in').forEach(inp=>inp.addEventListener('input',e=>{ S.lab[+e.target.dataset.i][e.target.dataset.k]=parseFloat(e.target.value)||0; refreshLab(); save(); }));
+  t.querySelectorAll('[data-del]').forEach(b=>b.addEventListener('click',e=>{ if(S.lab.length<=1)return; S.lab.splice(+e.target.dataset.del,1); buildLab(); save(); }));
+  t.querySelectorAll('[data-dup]').forEach(b=>b.addEventListener('click',e=>{ const i=+e.target.dataset.dup; const c=JSON.parse(JSON.stringify(S.lab[i])); c.name+=' copy'; S.lab.splice(i+1,0,c); buildLab(); save(); }));
+  document.querySelectorAll('[data-cur]').forEach(x=>x.textContent=sym());
+  refreshLab();
+}
+function refreshLab(){
+  const L=S.lab; if(!L||!document.getElementById('lab-net-0'))return;
+  const Rs=L.map(sc=>computeLab(sc));
+  const get={net:R=>R.T.net,gm:R=>R.gmPct,cm:R=>R.cmPct,be:R=>R.beCases,ebitda:R=>R.ebitda,ebitdaPct:R=>R.ebitdaPct};
+  const fmt={net:abbr,gm:pct,cm:pct,be:v=>isFinite(v)?intf(v):'—',ebitda:abbr,ebitdaPct:pct};
+  const lowerBetter={be:1};
+  LAB_RESULTS.forEach(([key])=>{
+    const vals=Rs.map(R=>get[key](R));
+    let best=-1, m=lowerBetter[key]?Infinity:-Infinity;
+    vals.forEach((v,i)=>{ if(!isFinite(v))return; if(lowerBetter[key]?v<m:v>m){m=v;best=i;} });
+    Rs.forEach((R,i)=>{ const c=document.getElementById(`lab-${key}-${i}`); if(!c)return;
+      const v=get[key](R); c.textContent=fmt[key](v);
+      const big=(key==='ebitda'||key==='ebitdaPct');
+      c.style.fontWeight=big?'700':''; c.style.fontSize=key==='ebitda'?'15px':'';
+      c.style.color = big ? (v>=0?'var(--pos)':'var(--neg)') : '';
+      c.style.background = i===best ? 'rgba(52,211,153,.13)' : '';
+    });
+  });
+  document.getElementById('lab-chart').innerHTML=hbars(L.map((sc,i)=>({label:sc.name||('Scenario '+(i+1)),value:Rs[i].ebitda,color:Rs[i].ebitda>=0?'#34d399':'#ff5d6c',valLabel:abbr(Rs[i].ebitda)})),{padL:150});
+}
+function renderScenarios(){ refreshLab(); }
 
 function renderUnit(){
   const R=compute(S);
@@ -1096,7 +1152,9 @@ function bind(){
   document.getElementById('btn-save').addEventListener('click',()=>{save();toast('Saved to this browser');});
   document.getElementById('btn-print').addEventListener('click',()=>window.print());
   document.getElementById('btn-csv').addEventListener('click',exportCSV);
-  document.getElementById('btn-reset').addEventListener('click',()=>{ if(confirm('Reset all assumptions to the Organika defaults?')){ S=D(); SCEN='base'; setScenPill(); save(); buildBOM(); buildChannels(); applyScalars(); recalc(); toast('Reset'); }});
+  document.getElementById('btn-reset').addEventListener('click',()=>{ if(confirm('Reset all assumptions to the Organika defaults?')){ S=D(); SCEN='base'; setScenPill(); S.lab=makeLab(); save(); buildBOM(); buildChannels(); buildLab(); applyScalars(); recalc(); toast('Reset'); }});
+  document.getElementById('lab-add').addEventListener('click',()=>{ const b=baseBlended(); S.lab.push({name:'Scenario '+(S.lab.length+1),price:+b.price.toFixed(3),cost:+b.cost.toFixed(4),volumeCases:S.volumeCases,trade:1,marketing:S.opex.marketingPctNet}); buildLab(); save(); });
+  document.getElementById('lab-reset').addEventListener('click',()=>{ S.lab=makeLab(); buildLab(); save(); toast('Reset to Base / Bull / Bear'); });
   // scalars
   num('a-cases',v=>S.volumeCases=v); num('a-upc',v=>S.meta.unitsPerCase=v); num('a-mktg',v=>S.opex.marketingPctNet=v);
   num('a-sales',v=>S.opex.salesTeam=v); num('a-ga',v=>S.opex.ga=v); num('a-rnd',v=>S.opex.rnd=v); num('a-da',v=>S.opex.da=v);
@@ -1147,7 +1205,7 @@ function exportCSV(){
 let toastT; function toast(m){ const t=document.getElementById('toast'); t.textContent=m; t.classList.add('show'); clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('show'),2200); }
 
 /* =================== BOOT =================== */
-load(); buildBOM(); buildChannels(); applyScalars(); bind(); recalc();
+load(); buildBOM(); buildChannels(); buildLab(); applyScalars(); bind(); recalc();
 </script>
 </body>
 </html>
