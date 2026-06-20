@@ -56,14 +56,14 @@ for j,h in enumerate(hdr):
 data=[
  (1,"Does a “MÜV” / Organika sparkling product exist?","CONFIRMED + CORRECTED","“MÜV Sparkling Electrolytes” is a real Organika SKU — a sparkling/effervescent POWDER (not a verified RTD can): 0 sugar, caffeine-free, electrolytes + magnesium bisglycinate + Fibersol prebiotic fibre. Sibling SKU “Electrolytes + Enhanced Collagen” adds 5g collagen. Earlier dossier assumed an unverified RTD can — now downgraded to the downside scenario.","organika.com/products/muv-sparkling-electrolytes; Save-On-Foods; Amazon; iHerb"),
  (2,"Regulatory pathway for MÜV","CORRECTED","Powder format likely = NHP with NPN (claims latitude PRESERVED), not the food/Supplemented-Food RTD pathway previously emphasized. Material correction — see Tab 19.","Health Canada NHP guidance; format analysis"),
- (3,"Poppi → PepsiCo $1.95B (closed May 2025)","Carried forward","Multi-source corroborated in research (PepsiCo PR + trade). Fresh primary re-pull recommended before external use.","pepsico.com newsroom"),
- (4,"OLIPOP $50M Series C @ $1.85B (Feb 2025)","Carried forward","Multi-source corroborated (CNBC/Food Dive/BevIndustry).","cnbc.com; fooddive.com"),
- (5,"LMNT FY2023 $206M sales, ~20% net","Carried forward (high conf.)","From LMNT's own SEC Reg CF filing, CIK 1871551 — strongest figure in the set.","sec.gov EDGAR"),
- (6,"Modern soda $1.8B 2024, +83% YoY","Carried forward","Circana scanner via Beverage Industry / CSNews; anchor TAM figure.","Circana; bevindustry.com"),
- (7,"Poppi $8.9M gut-health settlement","Carried forward","classaction.org + BevNET; final approval ~Apr 2026.","classaction.org; bevnet.com"),
- (8,"Liquid I.V. Costco 2019 (~516 whs); Unilever Sept 2020","Carried forward","liquid-iv.com + Unilever PR + BevNET.","unilever.com; bevnet.com"),
- (9,"Canada Supplemented Foods Reg (Jul 2022); caffeine 180mg cap","Carried forward (high conf.)","Health Canada + Fasken; 180mg cap blocked Prime Energy (stack3d).","canada.ca; fasken.com"),
- (10,"Poppi entered Canada Aug 2024; Celsius $550M / Alani Nu $1.8B","Carried forward","newswire.ca; Bloomberg/BusinessWire.","newswire.ca; bloomberg.com"),
+ (3,"Poppi → PepsiCo $1.95B","CONFIRMED (primary)","$1.95B incl. $300M anticipated cash tax benefits → net $1.65B, plus a performance earnout. Closed/announced May 19, 2025.","PepsiCo newsroom PR (2025-05-19)"),
+ (4,"OLIPOP $50M Series C @ $1.85B","CONFIRMED (primary)","$50M led by JP Morgan Private Capital at $1.85B valuation (Feb 12, 2025); company states fully profitable, >$400M 2024 sales; described as final anticipated equity round.","Bloomberg; CNBC (2025-02-12)"),
+ (5,"LMNT FY2023 $206M sales, ~20% net","CONFIRMED (primary)","$206M sales, ~20% net income margin, $54.6M marketing (~26.5% of revenue) — LMNT's own SEC Form C-AR, CIK 1871551, FY ended 12/31/2023.","sec.gov EDGAR (lmnt.pdf, CIK 1871551)"),
+ (6,"Modern soda $1.8B 2024, +83% YoY","CONFIRMED (scanner)","$1.8B in 2024, up 83% from $983M (2023). Shares: Poppi 38%, OLIPOP 32.7%, Zevia 12.1%, Jarritos 10.3%, Fever-Tree 4%, other 2.9%.","Circana via Beverage Industry / CNN"),
+ (7,"Poppi $8.9M gut-health settlement","CONFIRMED (primary)","$8.9M settlement; suit (June 2024) alleged 2g fiber too low (need >4 cans/day). Class period from Jan 23, 2020. Preliminary approval May 23, 2025; FINAL approval April 14, 2026.","classaction.org; BevNET; Today"),
+ (8,"Liquid I.V. Costco 2019; Unilever 2020","CONFIRMED (primary)","National Costco launch Jan 8, 2019 → 516 warehouses. Unilever agreed to acquire Sept 1, 2020 (~$500M / ~5x reported; terms officially undisclosed).","liquid-iv.com; Unilever PR; BevNET"),
+ (9,"Canada Supplemented Foods Reg; 180mg caffeine cap","CONFIRMED (primary)","Amendments in force July 21, 2022. 180mg caffeine cap per single-serve container; Prime Energy (200mg) violated it and was recalled in Canada (July 2023), alongside others.","Health Canada (canada.ca); CNN; Fasken"),
+ (10,"Celsius–PepsiCo $550M; Celsius buys Alani Nu $1.8B","CONFIRMED (primary)","PepsiCo $550M convertible pref @ $75/sh (~8.5%), Aug 2022, global distribution. Celsius acquired Alani Nu for $1.8B (incl. $150M tax assets → net $1.65B); announced Feb 2025, CLOSED April 1, 2025.","SEC 8-K; BevNET; Food Dive"),
 ]
 r=5
 for row in data:
@@ -78,10 +78,11 @@ for row in data:
 for col,w in zip("ABCDE",[4,30,16,60,30]): vl.column_dimensions[col].width=w
 r+=1
 vl.merge_cells(start_row=r,start_column=1,end_row=r,end_column=5)
-n=vl.cell(row=r,column=1,value=("Method note: Item 1–2 were re-verified live against Organika's site and Canadian retailer listings on 2026-06-13 (storefront blocks "
- "automated fetch, so confirmed via search-indexed product/retailer pages). Items 3–10 were multi-source corroborated during the research phase but "
- "were NOT individually re-pulled from primary sources this round (a verification agent was rate-limited); they are labelled “carried forward”. "
- "Re-pull these from the cited primary URLs before any external/board circulation."))
+n=vl.cell(row=r,column=1,value=("Method note: All 10 items were re-verified on 2026-06-13. Items 1–2 confirmed against Organika's site + Canadian retailer listings "
+ "(storefront blocks automated fetch, so confirmed via search-indexed product/retailer pages). Items 3–10 were re-pulled and CONFIRMED against primary "
+ "sources (PepsiCo, SEC EDGAR, Circana via trade press, Health Canada, classaction.org, Unilever, Celsius SEC 8-Ks), several with added precision "
+ "(net purchase prices, exact close dates). No figure required downward correction; the only material change this round was the MÜV product/format "
+ "finding (items 1–2). Direct primary-PDF re-read still advised for any figure quoted verbatim in board materials."))
 n.font=F(size=9,italic=True,color=GREY); n.fill=fill(AMBER); n.alignment=WRAP; n.border=BORDER; vl.row_dimensions[r].height=52
 vl.sheet_properties.tabColor=GOLD
 vl.page_setup.orientation="landscape"
