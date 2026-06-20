@@ -91,7 +91,7 @@ header.top{display:flex;align-items:center;justify-content:space-between;gap:16p
   background:radial-gradient(70% 55% at 50% -12%,rgba(31,224,192,.12),transparent 62%)}
 .hero .heroTop{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;position:relative}
 .ring{position:relative;width:210px;height:210px;margin:auto;flex:none}
-#ringArc{filter:drop-shadow(0 0 8px rgba(31,224,192,.55))}
+#ringArc{filter:drop-shadow(0 0 9px rgba(31,224,192,.55)) drop-shadow(0 0 24px rgba(31,224,192,.22))}
 .ringCenter{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
 .ringNum{font-family:var(--disp);font-size:31px;font-weight:600;letter-spacing:-1px;
   background:linear-gradient(120deg,var(--c1),var(--c2) 55%,var(--c3));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -189,12 +189,22 @@ select{font:inherit;padding:7px 11px;border-radius:10px;border:1px solid var(--l
 .charttip .tr b{font-family:var(--disp);font-weight:600}
 .charttip .tr i{width:8px;height:8px;border-radius:2px;display:inline-block}
 
+/* editorial section kickers */
+.kicker{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--ink2);margin:0 2px 13px}
+.kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,var(--c1),var(--c2));box-shadow:0 0 11px rgba(31,224,192,.9)}
+/* gauge inner luminosity + hero divider */
+.ringGlow{position:absolute;inset:22%;border-radius:50%;background:radial-gradient(closest-side,rgba(31,224,192,.20),transparent 72%);filter:blur(8px);pointer-events:none}
+.heroRight{border-left:1px solid rgba(255,255,255,.07);padding-left:32px}
+.seg button.on{box-shadow:0 8px 22px -8px rgba(31,224,192,.7),0 0 0 1px rgba(191,255,77,.4) inset,inset 0 1px 0 rgba(255,255,255,.5)}
+:focus-visible{outline:2px solid rgba(31,224,192,.7);outline-offset:2px;border-radius:8px}
+
 @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 .hero,.gapcard,.block,.explore,.adv{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
 .gapcard{animation-delay:.06s}.block{animation-delay:.12s}.explore{animation-delay:.18s}.adv{animation-delay:.24s}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 @media(max-width:840px){
   .hero .heroTop{grid-template-columns:1fr;gap:24px}
+  .heroRight{border-left:0;padding-left:0}
   .scen{grid-template-columns:1fr}
   .exBody{grid-template-columns:1fr}
   .sliders{grid-template-columns:1fr}
@@ -216,8 +226,10 @@ select{font:inherit;padding:7px 11px;border-radius:10px;border:1px solid var(--l
 
 <!-- HERO -->
 <section class="card hero">
+  <div class="kicker">Goal progress · FY2027</div>
   <div class="heroTop">
     <div class="ring">
+      <div class="ringGlow"></div>
       <svg width="210" height="210" viewBox="0 0 210 210">
         <defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0" stop-color="#bfff4d"/><stop offset=".55" stop-color="#1fe0c0"/><stop offset="1" stop-color="#3aa0ff"/>
@@ -257,6 +269,7 @@ select{font:inherit;padding:7px 11px;border-radius:10px;border:1px solid var(--l
 
 <!-- CLOSE THE GAP -->
 <section class="card gapcard">
+  <div class="kicker">Recommended actions</div>
   <div class="gcHead"><h2 id="gapTitle">Close the gap</h2><button class="link" id="gcReset" style="display:none">Undo</button></div>
   <p class="muted" id="gapSub" style="margin:6px 0 0"></p>
   <div class="chips" id="gapChips"></div>
@@ -264,12 +277,14 @@ select{font:inherit;padding:7px 11px;border-radius:10px;border:1px solid var(--l
 
 <!-- SCENARIOS -->
 <section class="block">
-  <div class="blockHead"><h2>Scenarios</h2><span class="muted">Tap a planning case to apply it</span></div>
+  <div class="kicker">Planning cases</div>
+  <div class="blockHead"><h2>Scenarios</h2><span class="muted">Tap a case to apply it</span></div>
   <div class="scen" id="scenCards"></div>
 </section>
 
 <!-- EXPLORE -->
 <section class="card explore">
+  <div class="kicker">Breakdown</div>
   <div class="exHead">
     <h2>Explore the mix</h2>
     <div class="seg small" id="metricSeg"><button data-metric="rev" class="on">Revenue</button><button data-metric="vol">Volume</button></div>
@@ -1005,6 +1020,28 @@ function gradH(ctx,a,c0,c1){ const g=ctx.createLinearGradient(a.left,0,a.right,0
 // soft glow under the hero cumulative line
 const glowLine={id:'glow',beforeDatasetDraw(c,a){ if(a.index===0){ c.ctx.save(); c.ctx.shadowColor='rgba(31,224,192,.5)'; c.ctx.shadowBlur=18; } },
   afterDatasetDraw(c,a){ if(a.index===0) c.ctx.restore(); }};
+function roundRect(ctx,x,y,w,h,r){ r=Math.min(r,h/2,w/2); ctx.beginPath();
+  ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r);
+  ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
+// glowing dot at the live end of the cumulative line
+const heroEndpoint={id:'endpt',afterDatasetsDraw(c){ try{ const m=c.getDatasetMeta(0);
+  if(!m||!m.data||!m.data.length) return; const p=m.data[m.data.length-1], ctx=c.ctx;
+  ctx.save(); ctx.shadowColor='rgba(31,224,192,.95)'; ctx.shadowBlur=15; ctx.fillStyle='#eafff7';
+  ctx.beginPath(); ctx.arc(p.x,p.y,4.5,0,7); ctx.fill(); ctx.restore(); }catch(e){} }};
+// small "$3M GOAL" tag riding the goal line
+const goalTag={id:'goaltag',afterDraw(c){ try{ const ys=c.scales.y, xa=c.chartArea; if(!ys||!xa) return;
+  const y=ys.getPixelForValue(TARGET); if(y<xa.top-2||y>xa.bottom+2) return;
+  const ctx=c.ctx, txt='$3M GOAL'; ctx.save(); ctx.font='700 10px Manrope';
+  const w=ctx.measureText(txt).width+16, x=xa.right-w-2;
+  ctx.fillStyle='rgba(255,122,156,.16)'; ctx.strokeStyle='rgba(255,122,156,.5)'; ctx.lineWidth=1;
+  roundRect(ctx,x,y-9,w,18,9); ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#ff9bb2'; ctx.textBaseline='middle'; ctx.textAlign='left'; ctx.fillText(txt,x+8,y+.5); ctx.restore(); }catch(e){} }};
+// faint share-of-max track behind each explore bar
+const barTrack={id:'bartrack',beforeDatasetsDraw(c){ try{ const xa=c.chartArea; if(!xa) return;
+  const m=c.getDatasetMeta(0); if(!m||!m.data) return; const ctx=c.ctx;
+  ctx.save(); ctx.fillStyle='rgba(255,255,255,.045)';
+  m.data.forEach(b=>{ const h=(b.height||16); roundRect(ctx,xa.left,b.y-h/2,xa.right-xa.left,h,7); ctx.fill(); });
+  ctx.restore(); }catch(e){} }};
 
 // ---- signature goal gauge (arc sweep + glowing tip) ----
 function updateGauge(p){
@@ -1031,7 +1068,7 @@ function animateNum(el, to, fmt){
 // ---- hero cumulative chart (built once, updated live) ----
 let cumChart=null, exChart=null, exKey='';
 function buildCum(){
-  cumChart = new Chart(document.getElementById('c_cum'), {type:'line', data:{labels:[],datasets:[]}, plugins:[glowLine],
+  cumChart = new Chart(document.getElementById('c_cum'), {type:'line', data:{labels:[],datasets:[]}, plugins:[glowLine,heroEndpoint,goalTag],
     options:{responsive:true,maintainAspectRatio:false,interaction:{intersect:false,mode:'index'},
       animation:{duration:850,easing:'easeOutQuart'},
       plugins:{legend:{display:false},tooltip:{enabled:false,external:externalTooltip}},
@@ -1168,7 +1205,7 @@ function drawExplore(rows,isVol,isFloat){
     plugins:{legend:{display:false},tooltip:{enabled:false,external:externalTooltip}},
     scales:{x:{grid:{color:GRID},border:{display:false},ticks:{callback:v=>isFloat?fmtM(v):(isVol?fmtN(v):fmtM(v))}},
             y:{grid:{display:false},border:{display:false},ticks:{color:'#c2cdd9',font:{weight:'600'}}}}};
-  exChart=new Chart(ctx,{type:'bar',data:{labels:rows.map(r=>r.label),
+  exChart=new Chart(ctx,{type:'bar',plugins:[barTrack],data:{labels:rows.map(r=>r.label),
     datasets:[{data:isFloat?rows.map(r=>[r.lo,r.hi]):rows.map(r=>r.value),backgroundColor:barBg,
       borderRadius:7,barThickness:isFloat?20:'flex',maxBarThickness:34}]},options:opts});
   exChart.$fmt = isFloat ? (r=>'swing '+fmtM(r[1]-r[0])+'  ('+fmtM(r[0])+' – '+fmtM(r[1])+')')
