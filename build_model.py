@@ -5,7 +5,7 @@ Single source of truth (Assumptions) -> formula-driven scenario P&Ls
 (Low/Base/High/Stretch) -> Monthly phasing -> Dashboard -> Sensitivity ->
 Checks, with Cover / Guide / Review Log governance tabs.
 
-3 flavours (Pineapple, Passionfruit, Lime Lemon) x (Singles + 12-Pack) = 6 SKUs.
+3 flavours (Pineapple, Passionfruit, Lime Lemon) x (Singles 12-ct + 4-Pack) = 6 SKUs.
 """
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
@@ -23,7 +23,7 @@ VERSION = "v2.0"
 BUILT = "2026-06-05"
 
 FLAVOURS = ["Pineapple", "Passionfruit", "Lime Lemon"]
-FORMATS = ["Singles", "12-Pack"]
+FORMATS = ["Singles", "4-Pack"]
 SKU_COLS = ["C", "D", "E", "F", "G", "H"]          # 6 SKU columns
 TOT = "I"                                           # total column
 SKUS = [(fmt, fl) for fmt in FORMATS for fl in FLAVOURS]
@@ -33,12 +33,13 @@ SCEN = ["Low", "Base", "High", "Stretch"]
 # direct COGS = ingredients + packaging + manufacturing + freight_in
 SKU_DATA = [
     # fmt, flavour, units, cp, disc%, ingr, pack, mfg, frt, wh, apc, apt, aps, vol
-    ("Singles", "Pineapple",    24, 28.00, 0.07, 4.30, 5.30, 2.90, 0.58, 1.44, 0.75, 1.25, 0.50, 12000),
-    ("Singles", "Passionfruit", 24, 28.00, 0.07, 4.30, 5.30, 2.90, 0.58, 1.44, 0.75, 1.25, 0.50, 9000),
-    ("Singles", "Lime Lemon",   24, 26.00, 0.07, 4.10, 5.10, 2.80, 0.55, 1.40, 0.75, 1.25, 0.50, 7000),
-    ("12-Pack", "Pineapple",     8, 34.00, 0.08, 4.90, 7.40, 3.10, 0.60, 2.25, 0.75, 1.50, 0.50, 5000),
-    ("12-Pack", "Passionfruit",  8, 34.00, 0.08, 4.90, 7.40, 3.10, 0.60, 2.25, 0.75, 1.50, 0.50, 4000),
-    ("12-Pack", "Lime Lemon",    8, 32.00, 0.08, 4.70, 7.20, 3.00, 0.58, 2.20, 0.75, 1.50, 0.50, 3000),
+    # Singles = case of 12 single cans;  4-Pack = case of 6 four-packs (24 cans)
+    ("Singles", "Pineapple",    12, 15.00, 0.07, 2.16, 2.64, 1.44, 0.29, 0.72, 0.36, 0.60, 0.24, 15000),
+    ("Singles", "Passionfruit", 12, 15.00, 0.07, 2.16, 2.64, 1.44, 0.29, 0.72, 0.36, 0.60, 0.24, 11000),
+    ("Singles", "Lime Lemon",   12, 14.00, 0.07, 2.06, 2.54, 1.40, 0.28, 0.70, 0.36, 0.60, 0.24, 9000),
+    ("4-Pack",  "Pineapple",     6, 33.00, 0.08, 4.32, 7.08, 2.88, 0.58, 1.44, 0.72, 1.20, 0.48, 6000),
+    ("4-Pack",  "Passionfruit",  6, 33.00, 0.08, 4.32, 7.08, 2.88, 0.58, 1.44, 0.72, 1.20, 0.48, 5000),
+    ("4-Pack",  "Lime Lemon",    6, 31.00, 0.08, 4.12, 6.88, 2.80, 0.56, 1.40, 0.72, 1.20, 0.48, 4000),
 ]
 SKU_KEYS = ["units", "cp", "disc", "ingr", "pack", "mfg", "frt", "wh", "apc", "apt", "aps", "vol"]
 
@@ -146,7 +147,7 @@ def build_assumptions(ws):
 
     # SKU table header
     ws.merge_cells("C4:E4"); setcell(ws, "C4", "SINGLES", f_hdr, fill=fill_band, align=center)
-    ws.merge_cells("F4:H4"); setcell(ws, "F4", "12-PACK", f_hdr, fill=fill_band, align=center)
+    ws.merge_cells("F4:H4"); setcell(ws, "F4", "4-PACK", f_hdr, fill=fill_band, align=center)
     setcell(ws, "B5", "Per case (CDN $)", f_hdr, fill=fill_band, align=left, border=True)
     for i, (fmt, fl) in enumerate(SKUS):
         setcell(ws, f"{SKU_COLS[i]}5", fl, f_hdr, fill=fill_band, align=center, border=True)
@@ -303,7 +304,7 @@ def build_scenario(ws, name, A):
     setcell(ws, "B3", "CDN $.  All figures calculate from the Assumptions tab - nothing here is hand-keyed.", f_sub)
 
     ws.merge_cells(f"C{SR['grp']}:E{SR['grp']}"); setcell(ws, f"C{SR['grp']}", "SINGLES", f_hdr, fill=fill_band, align=center)
-    ws.merge_cells(f"F{SR['grp']}:H{SR['grp']}"); setcell(ws, f"F{SR['grp']}", "12-PACK", f_hdr, fill=fill_band, align=center)
+    ws.merge_cells(f"F{SR['grp']}:H{SR['grp']}"); setcell(ws, f"F{SR['grp']}", "4-PACK", f_hdr, fill=fill_band, align=center)
     ws.merge_cells(f"{TOT}{SR['grp']}:{TOT}{SR['sku']}"); setcell(ws, f"{TOT}{SR['grp']}", "TOTAL\nDAILY", f_hdr, fill=fill_band, align=center)
     setcell(ws, f"B{SR['sku']}", "CDN $", f_hdr, fill=fill_band, align=left, border=True)
     for i, (fmt, fl) in enumerate(SKUS):
@@ -715,7 +716,7 @@ def build_cover(ws):
 
     meta = [
         ("Purpose", "Model FY net sales, margin and EBITDA for Sparkling Daily across pricing & volume scenarios."),
-        ("Scope", "3 flavours (Pineapple, Passionfruit, Lime Lemon) × Singles + 12-Pack = 6 SKUs; one fiscal year."),
+        ("Scope", "3 flavours (Pineapple, Passionfruit, Lime Lemon) × Singles (12-ct) + 4-Pack = 6 SKUs; one fiscal year."),
         ("Fiscal year", FY), ("Version", VERSION), ("Built", BUILT),
         ("Currency", "CDN $"), ("Owner", "Commercial Finance"),
         ("Status", "DRAFT — figures are placeholders pending real inputs"),
@@ -779,7 +780,7 @@ def build_guide(ws):
         ("", None),
         ("GLOSSARY", f_sec),
         ("CP — 'Cost Price' / list price per case charged to the customer (your wholesale price).", f_lbl),
-        ("Case — a shipping case; Singles and 12-Pack hold different unit counts (see Units per case).", f_lbl),
+        ("Case — a shipping case; Singles (12 cans) and 4-Pack (6 four-packs) hold different unit counts.", f_lbl),
         ("Trade discount — off-invoice allowances/promo funding, expressed as % of gross revenue.", f_lbl),
         ("A&P — Advertising & Promotion (consumer + trade + sales/broker).", f_lbl),
         ("Contribution Margin — profit a SKU contributes before company fixed costs.", f_lbl),
