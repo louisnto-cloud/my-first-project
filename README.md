@@ -64,7 +64,9 @@ Multi-currency display, save/CSV/PDF, live recompute on every keystroke.
 
 `P&L` · `COGS_BOM` · `Channels` (the engine; per-channel formula columns that
 total into the P&L) · `Sensitivity` (live price×COGS EBITDA% heatmap with a
-colour scale) · `Scenarios` (Base/Bull/Bear via editable multipliers) · `Guide`.
+colour scale) · `Scenario Lab` (compare up to six full plans side by side —
+editable price/cost/volume/trade/marketing dials per column, best-in-row
+green highlighting, EBITDA chart) · `Guide`.
 Yellow cells are inputs; everything else is a formula.
 
 ### The CPG waterfall
