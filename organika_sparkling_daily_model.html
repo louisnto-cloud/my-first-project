@@ -83,16 +83,12 @@
 
   <!-- OVERVIEW -->
   <section class="view on" data-view="Overview">
+    <div class="note">Pick a scenario above. The cards show that scenario's full-year result. To change any number, open <b>Assumptions</b> — it's the only place you type.</div>
     <div class="kpis" id="kpis"></div>
     <div class="panel">
       <h2>Scenario comparison</h2>
-      <p class="h-sub">Company totals across all four scenarios — updates live as you edit Assumptions.</p>
+      <p class="h-sub">All four scenarios side by side — updates live as you edit Assumptions.</p>
       <div id="cmp"></div>
-    </div>
-    <div class="panel">
-      <h2>EBITDA by scenario</h2>
-      <p class="h-sub">Operating leverage: the same business at different price &amp; volume.</p>
-      <div id="ebitdaChart"></div>
     </div>
   </section>
 
@@ -274,19 +270,6 @@ function renderCmp(){
   el("cmp").innerHTML = h;
 }
 
-function renderEbitdaChart(){
-  const data = SCEN.map(s=>({s, v:compute(s).ebitda}));
-  const max = Math.max(...data.map(d=>Math.abs(d.v)),1);
-  el("ebitdaChart").innerHTML = data.map(d=>{
-    const w = Math.abs(d.v)/max*100;
-    const col = d.v<0? 'var(--bad)':'var(--good)';
-    return `<div style="display:flex;align-items:center;gap:12px;margin:9px 0">
-      <div style="width:64px;font-weight:600;font-size:13px">${d.s}</div>
-      <div style="flex:1"><span class="bar" style="width:${w}%;background:${col}"></span></div>
-      <div style="width:96px;text-align:right;font-variant-numeric:tabular-nums">${money(d.v)}</div></div>`;
-  }).join("");
-}
-
 function renderPnl(){
   document.querySelectorAll(".scn-name").forEach(e=>e.textContent=current);
   const r = compute(current);
@@ -441,7 +424,7 @@ function buildNav(){
     el("priceSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===priceMetric));
     renderPricing();});
 }
-function refresh(){renderKpis();renderCmp();renderEbitdaChart();renderPnl();renderPricing();renderSens();}
+function refresh(){renderKpis();renderCmp();renderPnl();renderPricing();renderSens();}
 buildNav();renderAsmp();refresh();
 </script>
 </body>

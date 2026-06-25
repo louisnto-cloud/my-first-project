@@ -474,16 +474,6 @@ def build_monthly(ws, A):
         setcell(ws, f"{mc}{r_cum}", f"={pc}{r_cum}+{mc}{r_ni}", f_calc, MON, None, rght, True)
     setcell(ws, f"O{r_cum}", f"=N{r_cum}", f_lblb, MON, fill_tot, rght, True)
 
-    # monthly trend chart: Net Sales (bar) + EBITDA (bar)
-    ch = BarChart(); ch.type = "col"; ch.title = "Monthly Net Sales & EBITDA (selected scenario)"
-    ch.y_axis.title = "CDN $"; ch.height = 8; ch.width = 22
-    cats = Reference(ws, min_col=3, max_col=14, min_row=hdr, max_row=hdr)
-    for rr, nm in [(r_net, "Net Sales"), (r_ebitda, "EBITDA")]:
-        s = Series(Reference(ws, min_col=3, max_col=14, min_row=rr, max_row=rr), title=nm)
-        ch.series.append(s)
-    ch.set_categories(cats)
-    ws.add_chart(ch, f"B{r_cum + 3}")
-
     ws.column_dimensions["A"].width = 2
     ws.column_dimensions["B"].width = 32
     for j in range(12): ws.column_dimensions[get_column_letter(3+j)].width = 10
@@ -492,7 +482,7 @@ def build_monthly(ws, A):
 
 
 # =====================================================================
-#  DASHBOARD  (+ chart)
+#  DASHBOARD  (clean comparison table)
 # =====================================================================
 def build_dashboard(ws):
     ws.sheet_view.showGridLines = False
@@ -520,34 +510,6 @@ def build_dashboard(ws):
             c = setcell(ws, f"{get_column_letter(3+j)}{row}", f"='{s}'!{TOT}{SR[rk]}", f_calc, fmt, None, rght, True)
             if s == "Base": c.fill = fill_tot
     ws._dash_rows = {rk: first + i for i, (_, rk, _) in enumerate(metrics)}
-
-    # chart: Net Sales / Gross Profit / EBITDA by scenario
-    chart = BarChart(); chart.type = "col"; chart.title = "Net Sales · Gross Profit · EBITDA by Scenario"
-    chart.y_axis.title = "CDN $"; chart.height = 8.5; chart.width = 18
-    cats = Reference(ws, min_col=3, max_col=6, min_row=hdr, max_row=hdr)
-    for rk in ["nsales", "gp", "ebitda"]:
-        row = ws._dash_rows[rk]
-        data = Reference(ws, min_col=2, max_col=6, min_row=row, max_row=row)
-        s = Series(Reference(ws, min_col=3, max_col=6, min_row=row, max_row=row), title_from_data=False)
-        s.tx = openpyxl.chart.series.SeriesLabel(v=metrics[[m[1] for m in metrics].index(rk)][0])
-        chart.series.append(s)
-    chart.set_categories(cats)
-    ws.add_chart(chart, f"B{first + len(metrics) + 2}")
-
-    # data bars across scenarios for headline $ rows
-    for rk, colr in [("nsales", "638EC6"), ("ebitda", "63BE7B"), ("ni", "8E7CC3")]:
-        row = ws._dash_rows[rk]
-        ws.conditional_formatting.add(f"C{row}:F{row}", DataBarRule(start_type="min", end_type="max", color=colr))
-
-    # margins line chart
-    mch = LineChart(); mch.title = "Margin profile by scenario"; mch.y_axis.title = "% of net sales"
-    mch.height = 8.5; mch.width = 18
-    for rk, nm in [("gppct", "GP %"), ("cmpct", "CM %"), ("ebitdapct", "EBITDA %"), ("nipct", "Net Income %")]:
-        row = ws._dash_rows[rk]
-        s = Series(Reference(ws, min_col=3, max_col=6, min_row=row, max_row=row), title=nm)
-        mch.series.append(s)
-    mch.set_categories(cats)
-    ws.add_chart(mch, f"K{first + len(metrics) + 2}")
 
     ws.column_dimensions["A"].width = 2
     ws.column_dimensions["B"].width = 24
@@ -731,7 +693,7 @@ def build_cover(ws):
         ("Guide", "How to use + glossary of terms"),
         ("Review Log", "Devil's-advocate critique and how each issue was resolved"),
         ("Assumptions", "SINGLE SOURCE OF TRUTH — edit yellow cells here"),
-        ("Dashboard", "Scenario comparison + chart"),
+        ("Dashboard", "Scenario comparison (table)"),
         ("Low / Base / High / Stretch", "Full P&L per scenario (6 SKUs + total → Net Income)"),
         ("Monthly", "Seasonalised monthly P&L for a selected scenario"),
         ("Sensitivity", "Two-way EBITDA table + break-even volume"),
@@ -906,17 +868,6 @@ def build_pricing(ws, A):
                 f_lblb, MULT, fill_tot, center, True)
     ws.column_dimensions["K"].width = 11
 
-    # chart: GP% vs CP per SKU
-    ch = LineChart(); ch.title = "Gross Profit % vs CP"; ch.y_axis.title = "GP %"; ch.x_axis.title = "CP vs base"
-    ch.height = 8.5; ch.width = 18
-    cats = Reference(ws, min_col=3, max_col=9, min_row=f1 - 1, max_row=f1 - 1)
-    for i in range(len(SKU_COLS)):
-        rr = f1 + i
-        s = Series(Reference(ws, min_col=3, max_col=9, min_row=rr, max_row=rr), title=f"{SKUS[i][1]} {SKUS[i][0]}")
-        ch.series.append(s)
-    ch.set_categories(cats)
-    ws.add_chart(ch, f"K4")
-
     ws.column_dimensions["A"].width = 2
     ws.column_dimensions["B"].width = 26
     for j in range(len(ladders)):
@@ -1054,25 +1005,15 @@ def build_home(ws, ws_dash, A):
     setcell(ws, f"E{top+3}", "Blended CP / case", f_klbl, align=left)
     setcell(ws, f"F{top+3}", f"={scn('cp')}", f_kval, MON2, None, left, False)
 
-    # EBITDA-by-scenario chart (from Dashboard)
-    er = ws_dash._dash_rows["ebitda"]
-    hdr = 4
-    ch = BarChart(); ch.type = "col"; ch.title = "EBITDA by scenario"; ch.height = 6.5; ch.width = 12
-    ch.legend = None
-    data = Reference(ws_dash, min_col=3, max_col=6, min_row=er, max_row=er)
-    cats = Reference(ws_dash, min_col=3, max_col=6, min_row=hdr, max_row=hdr)
-    ch.add_data(data, titles_from_data=False); ch.set_categories(cats)
-    ws.add_chart(ch, f"E{top+5}")
-
     # navigation / table of contents
     nav_top = top + 5
-    setcell(ws, f"B{nav_top}", "EXPLORE", f_eyebrow, align=left)
+    setcell(ws, f"B{nav_top}", "WHERE TO GO", f_eyebrow, align=left)
     nav = [
-        ("Assumptions", "The one place you type. Edit the yellow cells."),
-        ("Dashboard", "All four scenarios compared, with charts."),
-        ("Base · Low · High · Stretch", "Full P&L for each scenario."),
-        ("Monthly", "Spread a scenario across the year."),
-        ("Pricing Lab", "Find the wholesale price that makes the most money."),
+        ("1.  Assumptions", "The ONE place you type. Change a yellow cell, everything updates."),
+        ("2.  Dashboard", "All four scenarios side by side."),
+        ("Base · Low · High · Stretch", "The full profit story for each scenario."),
+        ("Monthly", "The chosen scenario spread across the 12 months."),
+        ("Pricing Lab", "See the wholesale price that makes the most money."),
         ("Targets", "Set a goal — it tells you the price or volume to get there."),
         ("Sensitivity", "How profit moves with price and volume."),
         ("Checks", "Built-in health check (should say ALL PASS)."),
