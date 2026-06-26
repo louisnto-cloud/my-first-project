@@ -94,6 +94,16 @@ export interface Feedback {
   message: string;
 }
 
+export type AttendanceStatus = 'present' | 'absent' | 'late';
+
+export interface AttendanceRecord {
+  id: string;
+  classId: string;
+  date: string; // YYYY-MM-DD (the specific session date)
+  studentId: string;
+  status: AttendanceStatus;
+}
+
 export interface DB {
   users: User[];
   classes: ClassInfo[];
@@ -104,4 +114,5 @@ export interface DB {
   vocabLists: VocabList[];
   practice: PracticeEvent[];
   feedback: Feedback[];
+  attendance: AttendanceRecord[];
 }

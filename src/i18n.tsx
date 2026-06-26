@@ -142,6 +142,16 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
   'teach.vocabHint': { en: 'One word per line: word = meaning = example sentence', vi: 'Mỗi dòng một từ: từ = nghĩa = câu ví dụ' },
   'teach.listTitle': { en: 'List title', vi: 'Tên danh sách' },
   'teach.avgScore': { en: 'Avg score', vi: 'Điểm TB' },
+
+  'att.title': { en: 'Attendance', vi: 'Điểm danh' },
+  'att.session': { en: 'Class session', vi: 'Buổi học' },
+  'att.present': { en: 'Present', vi: 'Có mặt' },
+  'att.absent': { en: 'Absent', vi: 'Vắng mặt' },
+  'att.late': { en: 'Late', vi: 'Đi trễ' },
+  'att.attended': { en: 'sessions attended', vi: 'buổi có mặt' },
+  'att.rate': { en: 'attendance rate', vi: 'tỉ lệ có mặt' },
+  'att.noSessions': { en: 'No sessions recorded yet', vi: 'Chưa có buổi học nào được ghi nhận' },
+  'att.mySessions': { en: 'My attendance', vi: 'Điểm danh của tôi' },
 };
 
 interface I18nCtx {

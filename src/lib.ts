@@ -1,4 +1,4 @@
-import type { DB, PracticeEvent, Score, User } from './types';
+import type { DB, PracticeEvent, Score, ScheduleSlot, User } from './types';
 
 export function iso(d: Date): string {
   const y = d.getFullYear();
@@ -125,6 +125,21 @@ export function leaderboard(db: DB, classId: string): { user: User; points: numb
 
 export function uid(prefix: string): string {
   return `${prefix}_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
+}
+
+/** Returns dates (newest first) of past class sessions based on the weekly schedule. */
+export function sessionDates(schedule: ScheduleSlot[], daysBack = 56): string[] {
+  const weekdays = new Set(schedule.map((s) => s.weekday));
+  const today = new Date();
+  const dates: string[] = [];
+  for (let d = 0; d <= daysBack; d++) {
+    const date = new Date(today);
+    date.setDate(today.getDate() - d);
+    if (weekdays.has(date.getDay())) {
+      dates.push(iso(date));
+    }
+  }
+  return dates;
 }
 
 export function addPractice(db: DB, studentId: string, type: PracticeEvent['type'], points: number): void {

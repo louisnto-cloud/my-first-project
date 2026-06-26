@@ -1,7 +1,8 @@
 import { useApp } from '../store';
 import { fmtDate, useI18n, WEEKDAYS } from '../i18n';
-import { BADGES, badgeStats, leaderboard, scoresOf, todayISO } from '../lib';
+import { BADGES, badgeStats, leaderboard, scoresOf, sessionDates, todayISO } from '../lib';
 import { Empty, Pill, ProgressChart, scoreColor, SkillBars } from './ui';
+import type { AttendanceStatus } from '../types';
 
 export function GradesView({ studentId }: { studentId: string }) {
   const { db } = useApp();
@@ -201,6 +202,75 @@ export function BadgesView({ studentId }: { studentId: string }) {
           );
         })}
       </div>
+    </div>
+  );
+}
+
+const ATT_COLORS: Record<AttendanceStatus, string> = {
+  present: 'bg-emerald-100 text-emerald-700',
+  absent: 'bg-rose-100 text-rose-700',
+  late: 'bg-amber-100 text-amber-700',
+};
+
+export function AttendanceView({ studentId }: { studentId: string }) {
+  const { db } = useApp();
+  const { t, lang } = useI18n();
+  const student = db.users.find((u) => u.id === studentId);
+  if (!student) return null;
+
+  const classesWithSessions = student.classIds
+    .map((classId) => {
+      const cls = db.classes.find((c) => c.id === classId);
+      if (!cls) return null;
+      const sessions = sessionDates(cls.schedule, 56);
+      const records = sessions
+        .map((date) => ({
+          date,
+          status: db.attendance.find((a) => a.classId === classId && a.date === date && a.studentId === studentId)?.status,
+        }))
+        .filter((r): r is { date: string; status: AttendanceStatus } => r.status !== undefined);
+      return { cls, records };
+    })
+    .filter(Boolean) as { cls: (typeof db.classes)[number]; records: { date: string; status: AttendanceStatus }[] }[];
+
+  if (classesWithSessions.every((c) => c.records.length === 0)) {
+    return <Empty emoji="📅" text={t('att.noSessions')} />;
+  }
+
+  return (
+    <div className="space-y-3">
+      {classesWithSessions.map(({ cls, records }) => {
+        if (records.length === 0) return null;
+        const attended = records.filter((r) => r.status !== 'absent').length;
+        const rate = Math.round((attended / records.length) * 100);
+        return (
+          <div key={cls.id} className="card">
+            <div className="mb-2 flex items-center gap-2">
+              <div className={`flex h-9 w-9 items-center justify-center rounded-xl text-xl ${cls.color}`}>{cls.emoji}</div>
+              <div>
+                <div className="text-sm font-extrabold">{cls.name}</div>
+                <div className="text-xs font-semibold text-slate-400">
+                  {attended}/{records.length} · {rate}% {t('att.rate')}
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-1">
+              {records.slice(0, 24).map((r) => {
+                const [, m, d] = r.date.split('-');
+                return (
+                  <span
+                    key={r.date}
+                    title={fmtDate(r.date, lang)}
+                    className={`rounded-full px-2 py-0.5 text-[10px] font-bold ${ATT_COLORS[r.status]}`}
+                  >
+                    {parseInt(d)}/{parseInt(m)}
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
