@@ -5,6 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { I18nProvider, useI18n } from '@/lib/i18n';
 import { BottomNav } from '@/components/BottomNav';
 import { Companion } from '@/components/Companion';
+import { startAmbient, stopAmbient } from '@/lib/ambient';
 
 function Shell({ children }: { children: React.ReactNode }) {
   const { save } = useI18n();
@@ -25,6 +26,22 @@ function Shell({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!save.onboarded && !inOnboarding) router.replace('/onboarding');
   }, [save.onboarded, inOnboarding, router]);
+
+  // Ambient chant: start on the first user gesture (browser autoplay policy),
+  // pause when the tab is hidden (saves battery), resume on return.
+  useEffect(() => {
+    if (!save.ambient) { stopAmbient(); return; }
+    const tryStart = () => startAmbient();
+    document.addEventListener('click', tryStart, { once: true, capture: true });
+    document.addEventListener('touchstart', tryStart, { once: true, capture: true });
+    const onVisible = () => { if (!document.hidden && save.ambient) startAmbient(); else stopAmbient(); };
+    document.addEventListener('visibilitychange', onVisible);
+    return () => {
+      document.removeEventListener('click', tryStart, { capture: true });
+      document.removeEventListener('touchstart', tryStart, { capture: true });
+      document.removeEventListener('visibilitychange', onVisible);
+    };
+  }, [save.ambient]);
 
   useEffect(() => {
     if ('serviceWorker' in navigator) {

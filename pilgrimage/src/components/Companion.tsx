@@ -6,13 +6,18 @@
 // there and speaking, on any screen, without a button to get in the way.
 // It is purely ambient: tap the speaker on the page itself to stop or replay.
 
+import { useEffect } from 'react';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { narrationSupported, useNarrator } from '@/lib/speech';
+import { duckAmbient } from '@/lib/ambient';
 
 export function Companion() {
   const { t, save } = useI18n();
   const { speaking } = useNarrator();
+
+  // Duck the background chant when the guide's voice is reading.
+  useEffect(() => { duckAmbient(!!speaking); }, [speaking]);
 
   if (!narrationSupported() || !save.narrate || !speaking) return null;
 

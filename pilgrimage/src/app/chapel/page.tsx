@@ -16,6 +16,7 @@ import { RCIAMilestoneTracker } from '@/components/RCIAMilestoneTracker';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { SpeakerButton } from '@/components/SpeakerButton';
 import { updateSave } from '@/lib/storage';
+import { startAmbient, stopAmbient } from '@/lib/ambient';
 
 export default function ChapelPage() {
   const { t, lang, save } = useI18n();
@@ -134,6 +135,25 @@ export default function ChapelPage() {
             <span
               className={`absolute top-1 h-5 w-5 rounded-full bg-ivory transition-all ${save.sound ? 'left-6' : 'left-1'}`}
             />
+          </button>
+        </div>
+        <div className="mt-3 flex items-center justify-between gap-3">
+          <span className="min-w-0">
+            <span className="block font-ui text-sm font-semibold text-ivory">{t(UI.ambientLabel)}</span>
+            <span className="block text-xs text-incense">{t(UI.ambientNote)}</span>
+          </span>
+          <button
+            role="switch"
+            aria-checked={save.ambient}
+            aria-label={t(UI.ambientLabel)}
+            onClick={() => {
+              const next = !save.ambient;
+              updateSave({ ambient: next });
+              if (next) startAmbient(); else stopAmbient();
+            }}
+            className={`relative h-7 w-12 shrink-0 rounded-full transition-colors ${save.ambient ? 'bg-gold' : 'bg-ivory/15'}`}
+          >
+            <span className={`absolute top-1 h-5 w-5 rounded-full bg-ivory transition-all ${save.ambient ? 'left-6' : 'left-1'}`} />
           </button>
         </div>
         <div className="mt-3 flex items-center justify-between gap-3">

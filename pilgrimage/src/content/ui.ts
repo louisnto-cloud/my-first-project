@@ -171,6 +171,10 @@ export const UI = {
   soundLabel: v('Sound (bell and stamp)', 'Âm thanh (chuông và con dấu)'),
   soundNote: v('Silence is the default, like a church.', 'Thinh lặng là mặc định, như trong một nhà thờ.'),
 
+  // Ambient chant
+  ambientLabel: v('Gregorian chant (background)', 'Thánh ca Gregorian (nhạc nền)'),
+  ambientNote: v('A soft chant plays in the background while you walk. Requires sound to also be on for the chime.', 'Thánh ca nhẹ nhàng chơi ở nền trong khi bạn bước đi.'),
+
   // Narration — the guide that reads aloud
   narrateLabel: v('Read aloud as I walk', 'Đọc to khi tôi bước đi'),
   narrateNote: v('The guide reads each story, prayer, and step aloud as it opens. Tap any speaker to replay, or to listen on your own pace.', 'Người dẫn đường đọc to mỗi câu chuyện, lời kinh và bước đi khi chúng mở ra. Chạm vào biểu tượng loa để nghe lại, hoặc nghe theo nhịp của riêng bạn.'),
