@@ -565,15 +565,6 @@ def build_sensitivity(ws, A):
             if abs(mv - 1.0) < 1e-9 and abs(mp - 1.0) < 1e-9:
                 c.fill = fill_tot
 
-    # heat-map the EBITDA grid
-    data_first = top + 2
-    data_last = top + 1 + len(price_mults)
-    grid = f"C{data_first}:{get_column_letter(2+len(vol_mults))}{data_last}"
-    ws.conditional_formatting.add(grid,
-        ColorScaleRule(start_type="num", start_value=0, start_color="F8696B",
-                       mid_type="percentile", mid_value=50, mid_color="FFEB84",
-                       end_type="max", end_color="63BE7B"))
-
     # break-even
     be = top + 2 + len(price_mults) + 2
     setcell(ws, f"B{be}", "BREAK-EVEN (at Base price)", f_h2, align=left)
@@ -849,16 +840,8 @@ def build_pricing(ws, A):
         return hr + 1, hr + len(SKU_COLS)  # data first/last rows
 
     f1, l1 = table(4, "Gross Profit %  (by SKU, by CP)", "gppct", PCT)
-    ws.conditional_formatting.add(f"C{f1}:I{l1}",
-        ColorScaleRule(start_type="num", start_value=0, start_color="F8696B",
-                       mid_type="num", mid_value=0.4, mid_color="FFEB84",
-                       end_type="num", end_value=0.6, end_color="63BE7B"))
     t2 = l1 + 3
     f2, l2 = table(t2, "Annual Contribution $  (by SKU, by CP — demand-adjusted)", "contrib", MON)
-    ws.conditional_formatting.add(f"C{f2}:I{l2}",
-        ColorScaleRule(start_type="min", start_color="F8696B",
-                       mid_type="percentile", mid_value=50, mid_color="FFEB84",
-                       end_type="max", end_color="63BE7B"))
     # "Best CP in range" insight column (price that maximises contribution within the ladder)
     hr2 = f2 - 1
     setcell(ws, f"K{hr2}", "Best CP ×", f_hdr, fill=fill_band, align=center, border=True)

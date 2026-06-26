@@ -105,13 +105,12 @@
   <section class="view" data-view="Pricing Lab">
     <div class="panel">
       <h2>Pricing Lab</h2>
-      <p class="h-sub">How wholesale price (CP) drives profit. Each column flexes every SKU's CP vs base; the best in range is highlighted green.</p>
+      <p class="h-sub">How wholesale price (CP) drives profit. Each column flexes every SKU's CP vs base; the best price in range is shown in bold.</p>
       <div class="seg" id="priceSeg">
         <button data-m="gp" class="on">Gross Profit %</button>
         <button data-m="contrib">Annual Contribution $</button>
       </div>
       <div id="pricing"></div>
-      <div class="legend"><span><span class="swatch" style="background:#e8f7ee"></span>Best CP within ±15%</span></div>
     </div>
   </section>
 
@@ -119,7 +118,7 @@
   <section class="view" data-view="Sensitivity">
     <div class="panel">
       <h2>Sensitivity — EBITDA</h2>
-      <p class="h-sub">EBITDA as price and volume flex around base. Greener = better.</p>
+      <p class="h-sub">EBITDA as price and volume flex around base. Losses shown in red.</p>
       <div id="sens" class="heat"></div>
       <p class="hint" id="beLine" style="margin-top:14px"></p>
     </div>
@@ -321,7 +320,7 @@ function renderPricing(){
     const best = Math.max(...vals);
     h+=`<tr><td>${s.flav} ${s.fmt}</td>`+vals.map(v=>{
       const txt = priceMetric==="gp"? pct(v): money(v);
-      return `<td class="cell ${v===best?'best':''}">${txt}</td>`;
+      return `<td${v===best?' style="font-weight:700"':''}>${txt}</td>`;
     }).join("")+"</tr>";
   });
   h+="</tbody></table>";
@@ -349,7 +348,7 @@ function renderSens(){
   PRM.forEach(mp=>{
     h+=`<tr><td><b>${mult(mp)}</b></td>`+VOLM.map(mv=>{
       const v=ebitdaAt(mv,mp);
-      return `<td class="cell" style="background:${heatColor(v,min,max)}">${money(v)}</td>`;
+      return `<td${v<0?' style="color:#d83a4b"':''}>${money(v)}</td>`;
     }).join("")+"</tr>";
   });
   h+="</tbody></table>";
