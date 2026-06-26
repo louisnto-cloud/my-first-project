@@ -17,11 +17,11 @@ HEAD=F(bold=True,color=WHITE,size=10); BODY=F(size=10); BODYB=F(size=10,bold=Tru
 
 # --- 1) Correct the Cover caveat (A15, merged A15:G15) ---
 cov=wb["00 Cover"]
-cov["A15"]=("RESOLVED (verified Jun 2026): “MÜV” IS a real Organika product — “MÜV Sparkling Electrolytes”, a SPARKLING/effervescent "
- "POWDER drink mix (not a verified canned RTD): zero sugar, caffeine-free, electrolytes + magnesium bisglycinate + Fibersol® prebiotic "
- "fibre. It sits in Organika's hydration family alongside “Electrolytes + Enhanced Collagen” (5g collagen). IMPORTANT: because MÜV is a "
- "POWDER, the Canadian NHP/NPN claim pathway likely applies (see ‘19 Canada Regulatory’) — the earlier RTD-can/food assumption is the "
- "downside case, not the base case. Confirm MÜV's exact label, dose, collagen content and price with the brand.")
+cov["A15"]=("VERIFIED (Jun 2026): “MÜV Sparkling Electrolytes” is a real Organika product — most likely a ready-to-drink SPARKLING CAN "
+ "(SKU 4338, ~$14.99; ingredient list begins “Carbonated water” + Fibersol prebiotic fibre, magnesium glycinate, stevia, 0 sugar, caffeine-free). "
+ "Organika's electrolyte POWDERS and “Electrolytes + Enhanced Collagen” are SEPARATE SKUs. KEY: Canada is reclassifying sport-electrolyte products "
+ "(all formats) from NHP to SUPPLEMENTED FOODS by Dec 31, 2027 — so MÜV is food-regulated; collagen beauty claims stay NHP-only (see ‘Canada Regulatory v2’). "
+ "Confirm pack size, electrolyte mg and any collagen variant with the brand.")
 cov["A15"].font=F(bold=True,color=GREENHEAD,size=10); cov["A15"].fill=fill(GREEN); cov["A15"].alignment=WRAP; cov["A15"].border=BORDER
 cov.row_dimensions[15].height=96
 
@@ -29,14 +29,14 @@ cov.row_dimensions[15].height=96
 reg=wb["19 Canada Regulatory"]
 r=reg.max_row+2
 reg.merge_cells(start_row=r,start_column=1,end_row=r,end_column=3)
-c=reg.cell(row=r,column=1,value="POWDER vs RTD — FORMAT DETERMINES THE PATHWAY (key revision)")
+c=reg.cell(row=r,column=1,value="MÜV = RTD CAN · SPORT ELECTROLYTES → SUPPLEMENTED FOODS (corrected Jun 2026 — see Canada Regulatory v2)")
 c.font=F(bold=True,color=WHITE,size=10); c.fill=fill(GREENHEAD); c.alignment=LEFT; reg.row_dimensions[r].height=18
 r+=1
 rows=[
- ("MÜV today = sparkling POWDER","Powders/effervescent mixes for reconstitution are generally licensed as Natural Health Products (NHPs) with an NPN — NOT food-format. Organika's existing electrolyte/collagen powders are almost certainly NHPs.","HARD-ish / confirm NPN"),
- ("Claims latitude (powder/NHP)","On an NHP, monograph-based structure-function claims (incl. certain collagen/joint/skin and electrolyte/hydration claims) are permissible — so Organika's collagen claims CAN largely transfer to a powder. This is a claims ADVANTAGE of staying powder.","DIRECTIONAL – per NHP monographs"),
- ("If MÜV ever becomes an RTD can","It flips to FOOD / Supplemented Food (CFIA): no NPN, restricted claims, Supplemented Food Facts table, possible SFCI box, mandatory collagen caution. Treat this as the downside scenario for a future canned line extension.","HARD"),
- ("Interface caveat","Health Canada reviews products at the food–NHP interface case-by-case; a “drink mix” marketed/consumed like a food could still be deemed food-format. Confirm classification of MÜV's exact SKU with regulatory counsel.","FLAG – verify"),
+ ("SUPERSEDED — see ‘Canada Regulatory v2’","This section's earlier “powder = NHP advantage” framing is OUT OF DATE. Health Canada is reclassifying ALL sport-electrolyte products (RTD, powder, effervescent) from NHP to SUPPLEMENTED FOODS. Format is not the regulatory decider — representation + claims are.","CORRECTED Jun 2026"),
+ ("MÜV is an RTD sparkling CAN","Verified via ingredient list (begins “Carbonated water”) + SKU 4338 / ~$14.99. It is food-coded; treat as a Supplemented Food.","HARD"),
+ ("Sport electrolytes → Supplemented Foods","Health Canada Public Notice (Apr 2026): transition from NHP to food framework; NPN holders by Dec 31, 2027; NEW products comply with FDR now. ORS (clinical) stays NHP.","HARD (primary)"),
+ ("Collagen is the real NHP trigger","Electrolyte/hydration claims = food-friendly. Collagen skin/joint/hair/beauty claims = NHP-only. Keep those on Organika's NHP collagen powder, not the MÜV can.","HARD"),
 ]
 for name,detail,conf in rows:
     reg.cell(row=r,column=1,value=name).font=BODYB; reg.cell(row=r,column=1).alignment=LEFT; reg.cell(row=r,column=1).border=BORDER
@@ -54,8 +54,8 @@ hdr=["#","Claim checked","Result","Finding / corrected value","Source"]
 for j,h in enumerate(hdr):
     c=vl.cell(row=4,column=1+j,value=h); c.font=HEAD; c.fill=fill(NAVY); c.alignment=CTR; c.border=BORDER
 data=[
- (1,"Does a “MÜV” / Organika sparkling product exist?","CONFIRMED + CORRECTED","“MÜV Sparkling Electrolytes” is a real Organika SKU — a sparkling/effervescent POWDER (not a verified RTD can): 0 sugar, caffeine-free, electrolytes + magnesium bisglycinate + Fibersol prebiotic fibre. Sibling SKU “Electrolytes + Enhanced Collagen” adds 5g collagen. Earlier dossier assumed an unverified RTD can — now downgraded to the downside scenario.","organika.com/products/muv-sparkling-electrolytes; Save-On-Foods; Amazon; iHerb"),
- (2,"Regulatory pathway for MÜV","CORRECTED","Powder format likely = NHP with NPN (claims latitude PRESERVED), not the food/Supplemented-Food RTD pathway previously emphasized. Material correction — see Tab 19.","Health Canada NHP guidance; format analysis"),
+ (1,"What is MÜV — and is it a can or a powder?","CONFIRMED + CORRECTED (2x)","“MÜV Sparkling Electrolytes” is a real Organika SKU and is a ready-to-drink SPARKLING CAN (SKU 4338, ~$14.99; ingredient list begins “Carbonated water” + Fibersol, magnesium glycinate, stevia; 0 sugar, caffeine-free). NOTE: an interim round-5 finding called it a powder — that was WRONG (it described Organika's separate electrolyte sachets / Electrolytes+Collagen powder) and is retracted.","organika.com (SKU 4338, ingredient list); retailer listings"),
+ (2,"Canada regulatory pathway for MÜV","CORRECTED (primary)","Format is NOT the decider. Health Canada is reclassifying ALL sport-electrolyte products (RTD/powder/effervescent) from NHP to SUPPLEMENTED FOODS — NPN holders by Dec 31, 2027; new products comply with FDR now. So MÜV (a can) is a Supplemented Food; collagen beauty claims remain NHP-only. ORS stays NHP. See ‘Canada Regulatory v2’.","canada.ca Public Notice (Apr 2026); Gowling; dicentra; CHFA"),
  (3,"Poppi → PepsiCo $1.95B","CONFIRMED (primary)","$1.95B incl. $300M anticipated cash tax benefits → net $1.65B, plus a performance earnout. Closed/announced May 19, 2025.","PepsiCo newsroom PR (2025-05-19)"),
  (4,"OLIPOP $50M Series C @ $1.85B","CONFIRMED (primary)","$50M led by JP Morgan Private Capital at $1.85B valuation (Feb 12, 2025); company states fully profitable, >$400M 2024 sales; described as final anticipated equity round.","Bloomberg; CNBC (2025-02-12)"),
  (5,"LMNT FY2023 $206M sales, ~20% net","CONFIRMED (primary)","$206M sales, ~20% net income margin, $54.6M marketing (~26.5% of revenue) — LMNT's own SEC Form C-AR, CIK 1871551, FY ended 12/31/2023.","sec.gov EDGAR (lmnt.pdf, CIK 1871551)"),
@@ -81,8 +81,9 @@ vl.merge_cells(start_row=r,start_column=1,end_row=r,end_column=5)
 n=vl.cell(row=r,column=1,value=("Method note: All 10 items were re-verified on 2026-06-13. Items 1–2 confirmed against Organika's site + Canadian retailer listings "
  "(storefront blocks automated fetch, so confirmed via search-indexed product/retailer pages). Items 3–10 were re-pulled and CONFIRMED against primary "
  "sources (PepsiCo, SEC EDGAR, Circana via trade press, Health Canada, classaction.org, Unilever, Celsius SEC 8-Ks), several with added precision "
- "(net purchase prices, exact close dates). No figure required downward correction; the only material change this round was the MÜV product/format "
- "finding (items 1–2). Direct primary-PDF re-read still advised for any figure quoted verbatim in board materials."))
+ "(net purchase prices, exact close dates). No competitor figure required downward correction. The material corrections were on MÜV (items 1–2): "
+ "verified as an RTD sparkling CAN (not a powder), and the Canada sport-electrolyte → Supplemented-Food reclassification (deep-research pass). "
+ "Direct primary-PDF re-read still advised for any figure quoted verbatim in board materials."))
 n.font=F(size=9,italic=True,color=GREY); n.fill=fill(AMBER); n.alignment=WRAP; n.border=BORDER; vl.row_dimensions[r].height=52
 vl.sheet_properties.tabColor=GOLD
 vl.page_setup.orientation="landscape"
