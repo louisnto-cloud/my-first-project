@@ -1,4 +1,9 @@
+# Node / web app
 node_modules/
 dist/
 *.local
 .DS_Store
+
+# Python (model builder)
+__pycache__/
+*.pyc
