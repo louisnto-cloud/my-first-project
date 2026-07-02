@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Organika Vietnamese Business Academy</title>
+<style>
+:root{--g:#2D6A4F;--gl:#52B788;--gp:#D8F3DC;--t:#C47C5A;--tp:#FCEEE6;--bg:#F7F5F0;--wh:#FFF;--tx:#1A2721;--tx2:#5C6B64;--bd:#E5E0D8;--shd:0 2px 14px rgba(0,0,0,.08);--r:14px;--rs:8px}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{height:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--tx);min-height:100vh}
+#root{max-width:440px;margin:0 auto;min-height:100vh;display:flex;flex-direction:column;background:var(--bg)}
+.app-wrap{display:flex;flex-direction:column;flex:1;min-height:100vh}
+.app-header{background:var(--g);color:var(--wh);padding:14px 16px 0;position:sticky;top:0;z-index:100;flex-shrink:0}
+.app-header h1{font-size:11px;font-weight:700;letter-spacing:1px;opacity:.7;text-transform:uppercase;margin-bottom:4px}
+.header-row{display:flex;align-items:center;justify-content:space-between;padding-bottom:12px}
+.header-title{font-size:17px;font-weight:800;color:var(--wh)}
+.hdr-badges{display:flex;gap:8px;align-items:center}
+.badge{background:rgba(255,255,255,.18);border-radius:20px;padding:4px 10px;font-size:12px;font-weight:700;color:var(--wh)}
+.bot-nav{position:sticky;bottom:0;z-index:100;display:flex;background:var(--wh);border-top:1.5px solid var(--bd);padding-bottom:env(safe-area-inset-bottom)}
+.nav-btn{flex:1;border:none;background:transparent;padding:9px 4px 7px;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;font-size:9px;font-weight:700;color:var(--tx2);letter-spacing:.3px;text-transform:uppercase;transition:color .15s}
+.nav-btn.active{color:var(--g)}
+.nav-btn .ni{font-size:18px;line-height:1}
+.content{flex:1;overflow-y:auto;padding:16px;padding-bottom:4px}
+.card{background:var(--wh);border-radius:var(--r);box-shadow:var(--shd);padding:16px;margin-bottom:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:none;border-radius:var(--rs);cursor:pointer;font-size:15px;font-weight:700;padding:13px 20px;transition:opacity .15s,transform .1s;min-height:50px;width:100%;font-family:inherit}
+.btn:active{transform:scale(.98)}
+.btn-g{background:var(--g);color:var(--wh)}
+.btn-t{background:var(--t);color:var(--wh)}
+.btn-out{background:transparent;color:var(--g);border:2px solid var(--g)}
+.btn-ghost{background:var(--gp);color:var(--g)}
+.btn-sm{padding:9px 14px;font-size:13px;min-height:38px}
+.btn-icon{width:48px;height:48px;border-radius:50%;font-size:20px;padding:0;min-height:unset;width:48px;flex-shrink:0}
+.tier-A{background:#D8F3DC;color:#1B4332}.tier-B{background:#DBE8F7;color:#1A3A5C}
+.tier-C{background:#FBE8D0;color:#7A3900}.tier-D{background:#F3D8F3;color:#4A1A5C}
+.tier-E{background:#F7D8D8;color:#5C1A1A}
+.tier-badge{display:inline-block;border-radius:6px;padding:3px 9px;font-size:11px;font-weight:800;letter-spacing:.5px}
+.tier-header{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border-radius:10px;margin-bottom:10px;border-left:4px solid var(--g);background:var(--wh);box-shadow:var(--shd)}
+.tier-header h3{font-size:14px;font-weight:800;margin-bottom:2px}
+.tier-header p{font-size:12px;color:var(--tx2);line-height:1.4}
+.lesson-card{display:flex;align-items:center;gap:12px;background:var(--wh);border-radius:12px;padding:14px 14px;margin-bottom:8px;box-shadow:var(--shd);cursor:pointer;transition:transform .15s;border-left:4px solid transparent}
+.lesson-card:active{transform:scale(.98)}
+.lesson-card.done{border-left-color:var(--gl)}
+.lesson-card.locked{opacity:.45;cursor:not-allowed}
+.lesson-ring{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;background:var(--gp);flex-shrink:0}
+.lesson-ring.done{background:var(--gl)}
+.lesson-info{flex:1;min-width:0}
+.l-num{font-size:10px;font-weight:700;color:var(--tx2);text-transform:uppercase;letter-spacing:.5px}
+.l-name{font-size:14px;font-weight:700;margin:2px 0}
+.l-meta{font-size:12px;color:var(--tx2)}
+.card-scene{perspective:1200px;width:100%;margin-bottom:16px}
+.card-wrap{position:relative;width:100%;height:250px;transition:transform .5s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d;cursor:pointer}
+.card-wrap.flipped{transform:rotateY(180deg)}
+.card-face{position:absolute;width:100%;height:100%;-webkit-backface-visibility:hidden;backface-visibility:hidden;border-radius:var(--r);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center;box-shadow:var(--shd)}
+.card-front{background:var(--g);color:var(--wh)}
+.card-back{background:var(--wh);transform:rotateY(180deg);align-items:flex-start;text-align:left;overflow:hidden}
+.card-en{font-size:24px;font-weight:800;line-height:1.3;margin-bottom:8px}
+.card-hint{font-size:13px;opacity:.7;margin-top:6px}
+.card-vi{font-size:26px;font-weight:800;color:var(--g);line-height:1.3;margin-bottom:4px}
+.card-phonetic{font-size:14px;color:var(--tx2);font-style:italic;margin-bottom:10px}
+.card-ex{font-size:13px;color:var(--tx);line-height:1.6;border-top:1px solid var(--bd);padding-top:10px;margin-top:4px;width:100%}
+.speak-btn{background:none;border:none;cursor:pointer;font-size:22px;padding:6px;border-radius:8px;line-height:1;transition:transform .15s;display:inline-flex}
+.speak-btn:active{transform:scale(.85)}
+.speed-row{display:flex;gap:8px;margin-bottom:14px;justify-content:center}
+.spd-btn{background:var(--gp);border:none;border-radius:20px;padding:7px 16px;font-size:12px;font-weight:700;color:var(--g);cursor:pointer;font-family:inherit}
+.spd-btn.on{background:var(--g);color:var(--wh)}
+.quiz-q{font-size:18px;font-weight:700;line-height:1.5;margin-bottom:20px;text-align:center}
+.quiz-opt{display:block;width:100%;background:var(--wh);border:2.5px solid var(--bd);border-radius:10px;padding:14px 16px;text-align:left;font-size:15px;cursor:pointer;margin-bottom:10px;transition:border-color .2s,background .2s;font-family:inherit;font-weight:600;line-height:1.4}
+.quiz-opt:active{background:var(--gp)}
+.quiz-opt.correct{border-color:var(--gl);background:#F0FBF4;color:#1B4332}
+.quiz-opt.wrong{border-color:#E07070;background:#FEF0F0;color:#8B0000}
+.situation-card{display:flex;gap:12px;background:var(--wh);border-radius:var(--r);padding:16px;margin-bottom:10px;box-shadow:var(--shd);cursor:pointer;align-items:flex-start;transition:transform .15s}
+.situation-card:active{transform:scale(.98)}
+.sit-num{width:44px;height:44px;background:var(--tp);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:var(--t);flex-shrink:0}
+.sit-info h4{font-size:15px;font-weight:700;margin-bottom:4px}
+.sit-info p{font-size:12px;color:var(--tx2);line-height:1.4}
+.scene-ctx{background:var(--gp);border-radius:10px;padding:12px;font-size:13px;color:#1B4332;line-height:1.6;margin-bottom:16px}
+.scene-ctx h4{font-weight:700;margin-bottom:4px;font-size:14px}
+.cultural-note{background:var(--tp);border-radius:10px;padding:12px;font-size:13px;color:#7A3900;line-height:1.6;margin-bottom:16px;border-left:3px solid var(--t)}
+.cultural-note h4{font-weight:700;margin-bottom:4px}
+.dl-line{margin-bottom:14px;border-radius:10px;padding:14px}
+.dl-line.buyer{background:#F0FBF4;border-left:3px solid var(--gl)}
+.dl-line.you{background:var(--tp);border-left:3px solid var(--t)}
+.dl-role{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px}
+.dl-vi{font-size:16px;font-weight:700;line-height:1.55;margin-bottom:3px}
+.dl-ph{font-size:12px;color:var(--tx2);font-style:italic;margin-bottom:3px}
+.dl-en{font-size:13px;color:var(--tx2);line-height:1.5}
+.dl-row{display:flex;align-items:center;gap:8px;margin-top:8px}
+.intel-card{display:flex;gap:14px;background:var(--wh);border-radius:var(--r);padding:16px;margin-bottom:10px;box-shadow:var(--shd);cursor:pointer;align-items:center;transition:transform .15s}
+.intel-card:active{transform:scale(.98)}
+.intel-icon{width:52px;height:52px;background:var(--gp);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
+.intel-card h3{font-size:15px;font-weight:700;margin-bottom:4px}
+.intel-card p{font-size:12px;color:var(--tx2);line-height:1.4}
+.intel-point{display:flex;gap:10px;padding:11px 0;border-bottom:1px solid var(--bd);font-size:14px;line-height:1.65}
+.intel-point:last-child{border-bottom:none}
+.intel-dot{color:var(--g);font-weight:800;flex-shrink:0;margin-top:1px}
+.intel-tag{display:inline-block;background:var(--tp);color:var(--t);border-radius:4px;padding:2px 6px;font-size:11px;font-weight:700;margin-right:4px;white-space:nowrap}
+.stat-row{display:flex;gap:10px;margin-bottom:12px}
+.stat-box{flex:1;background:var(--wh);border-radius:12px;padding:14px 10px;text-align:center;box-shadow:var(--shd)}
+.stat-val{font-size:30px;font-weight:900;color:var(--g)}
+.stat-lbl{font-size:10px;color:var(--tx2);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+.pbar{height:10px;background:var(--bd);border-radius:5px;overflow:hidden;margin:8px 0}
+.pbar-fill{height:100%;background:var(--gl);border-radius:5px;transition:width .4s}
+.acc-flag{background:#FEF3D0;color:#8A5F00;border:1px solid #F5D250;border-radius:4px;padding:2px 6px;font-size:10px;font-weight:700;display:inline-block}
+.s-flag{background:var(--gp);color:#1B4332;border-radius:4px;padding:2px 6px;font-size:10px;font-weight:700;display:inline-block}
+.reg-note{background:var(--tp);border-radius:8px;padding:9px 12px;font-size:12px;color:#7A3900;margin-top:8px;line-height:1.55}
+.south-note{background:var(--gp);border-radius:8px;padding:8px 11px;font-size:12px;color:#1B4332;margin-top:6px;line-height:1.5}
+.no-voice{background:#FFF8E1;border-radius:8px;padding:9px 12px;font-size:12px;color:#7A5F00;margin-bottom:12px;display:none}
+.no-voice.show{display:block}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;display:flex;align-items:flex-end;justify-content:center}
+.modal-box{background:var(--wh);border-radius:20px 20px 0 0;padding:24px;width:100%;max-width:440px;max-height:82vh;overflow-y:auto}
+.modal-box h3{font-size:18px;font-weight:800;margin-bottom:16px}
+textarea{width:100%;border:2px solid var(--bd);border-radius:var(--rs);padding:12px;font-size:13px;font-family:monospace;resize:vertical;min-height:110px;background:var(--bg);outline:none}
+textarea:focus{border-color:var(--g)}
+.sec-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--tx2);margin-bottom:12px}
+.warning{background:#FFF3D0;border:1px solid #F5C842;border-radius:8px;padding:10px 14px;font-size:13px;color:#6B4E00;margin-bottom:12px;line-height:1.5}
+.info{background:var(--gp);border-radius:8px;padding:12px;font-size:13px;line-height:1.6;color:#1B4332;margin-bottom:12px}
+.back-btn{display:flex;align-items:center;gap:6px;font-size:15px;font-weight:700;color:var(--g);background:none;border:none;cursor:pointer;padding:2px 0;margin-bottom:16px;font-family:inherit}
+.mode-row{display:flex;gap:8px;margin-bottom:16px}
+.mode-btn{flex:1;background:var(--wh);border:2px solid var(--bd);border-radius:10px;padding:12px 8px;cursor:pointer;font-size:13px;font-weight:700;color:var(--tx2);text-align:center;transition:all .2s;font-family:inherit}
+.mode-btn.on{background:var(--g);border-color:var(--g);color:var(--wh)}
+.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.qc{background:var(--wh);border-radius:var(--r);padding:14px;box-shadow:var(--shd);cursor:pointer;transition:transform .15s;border:none;text-align:left;font-family:inherit;width:100%}
+.qc:active{transform:scale(.96)}
+.qc-icon{font-size:26px;margin-bottom:6px;display:block}
+.qc-title{font-size:14px;font-weight:700;display:block;margin-bottom:2px}
+.qc-sub{font-size:12px;color:var(--tx2);display:block}
+.primer-row{padding:14px 0;border-bottom:1px solid var(--bd);display:flex;gap:12px;align-items:flex-start}
+.primer-row:last-child{border-bottom:none}
+.primer-term{font-size:22px;font-weight:800;color:var(--g);width:80px;flex-shrink:0}
+.primer-info h4{font-size:14px;font-weight:700;margin-bottom:4px}
+.primer-info p{font-size:13px;color:var(--tx2);line-height:1.55}
+.score-banner{background:var(--gp);border-radius:var(--r);padding:20px;text-align:center;margin-bottom:16px}
+.score-banner .big{font-size:48px;font-weight:900;color:var(--g)}
+.score-banner p{font-size:14px;color:var(--tx2);margin-top:4px}
+.drill-card{background:var(--g);border-radius:var(--r);padding:32px 24px;text-align:center;margin-bottom:16px;color:var(--wh)}
+.drill-vi{font-size:28px;font-weight:800;margin-bottom:8px;line-height:1.3}
+.drill-ph{font-size:14px;opacity:.75;font-style:italic}
+.mastery-bar{display:flex;height:14px;border-radius:7px;overflow:hidden;margin:10px 0}
+.m-l{background:var(--bd)}.m-f{background:var(--gl)}.m-m{background:var(--g)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.fade{animation:fadeIn .22s ease}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-thumb{background:var(--bd);border-radius:2px}
+
+/* ── LAYOUT ── */
+.screen{display:flex;flex-direction:column;min-height:100vh;background:var(--bg)}
+.main-scroll{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.main-scroll.centered{display:flex;flex-direction:column;align-items:center}
+
+/* ── APP HEADER ── */
+.app-header{background:var(--g);color:var(--wh);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;position:sticky;top:0;z-index:50}
+.header-logo{display:flex;align-items:center;gap:8px}
+.brand-name{font-size:16px;font-weight:800;letter-spacing:-.3px}
+.header-stats{display:flex;gap:8px}
+.streak-chip,.xp-chip{background:rgba(255,255,255,.2);border-radius:20px;padding:4px 10px;font-size:12px;font-weight:700}
+.screen-header{background:var(--g);color:var(--wh);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.screen-title{font-size:17px;font-weight:800}
+.screen-intro{font-size:14px;color:var(--tx2);line-height:1.6;margin-bottom:16px}
+
+/* ── BOTTOM NAV ── */
+.bottom-nav{position:sticky;bottom:0;z-index:100;display:flex;background:var(--wh);border-top:1.5px solid var(--bd);padding-bottom:env(safe-area-inset-bottom,0px)}
+.nav-btn{flex:1;border:none;background:transparent;padding:9px 4px 7px;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;font-size:9px;font-weight:700;color:var(--tx2);letter-spacing:.3px;text-transform:uppercase;transition:color .15s;font-family:inherit}
+.nav-btn.active{color:var(--g)}
+.nav-icon{font-size:18px;line-height:1}
+.nav-label{font-size:9px}
+
+/* ── HERO / HOME ── */
+.hero-card{background:var(--g);border-radius:var(--r);padding:20px;margin:16px 16px 12px;color:var(--wh)}
+.hero-title{font-size:22px;font-weight:900;margin-bottom:2px}
+.hero-sub{font-size:13px;opacity:.8;margin-bottom:14px}
+.goal-bar-wrap{width:100%}
+.goal-bar-label{display:flex;justify-content:space-between;font-size:12px;font-weight:700;margin-bottom:6px;opacity:.85}
+.goal-bar{height:8px;background:rgba(255,255,255,.25);border-radius:4px;overflow:hidden}
+.goal-fill{height:100%;background:var(--gl);border-radius:4px;transition:width .5s}
+
+/* ── STAT CARDS ── */
+.stat-row{display:flex;gap:10px;padding:0 16px 12px}
+.stat-card{flex:1;background:var(--wh);border-radius:12px;padding:14px 10px;text-align:center;box-shadow:var(--shd)}
+.stat-card.accent{background:var(--tp)}
+.stat-n{font-size:28px;font-weight:900;color:var(--g)}
+.stat-card.accent .stat-n{color:var(--t)}
+.stat-l{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--tx2);margin-top:2px}
+.section-label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--tx2);padding:0 16px;margin-bottom:8px}
+
+/* ── ACTION GRID ── */
+.action-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 16px 16px}
+.action-card{background:var(--wh);border-radius:var(--r);padding:16px 12px;box-shadow:var(--shd);cursor:pointer;border:none;display:flex;flex-direction:column;align-items:flex-start;gap:4px;transition:transform .15s;font-family:inherit;text-align:left}
+.action-card:active{transform:scale(.96)}
+.action-card.primary{background:var(--g);color:var(--wh)}
+.ac-icon{font-size:26px;line-height:1;margin-bottom:2px}
+.ac-label{font-size:14px;font-weight:800}
+.ac-sub{font-size:12px;opacity:.7}
+.action-card.primary .ac-sub{color:rgba(255,255,255,.75)}
+
+/* ── EXPLORE LIST ── */
+.explore-list{display:flex;flex-direction:column;gap:8px;padding:0 16px 16px}
+.explore-row{display:flex;align-items:center;gap:12px;background:var(--wh);border-radius:var(--r);padding:14px 16px;box-shadow:var(--shd);cursor:pointer;border:none;font-size:14px;font-weight:600;color:var(--tx);font-family:inherit;transition:transform .15s}
+.explore-row:active{transform:scale(.98)}
+.explore-row .arrow{margin-left:auto;color:var(--tx2);font-size:18px}
+
+/* ── LESSON HEADER ── */
+.lesson-header{background:var(--wh);padding:12px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--bd);flex-shrink:0}
+.lesson-progress{display:flex;align-items:center;gap:8px;flex:1;margin:0 12px}
+.lp-bar{flex:1;height:6px;background:var(--bd);border-radius:3px;overflow:hidden}
+.lp-fill{height:100%;background:var(--g);border-radius:3px;transition:width .4s}
+
+/* ── BUTTONS ── */
+.btn-back{background:none;border:none;cursor:pointer;font-size:16px;color:var(--tx2);padding:6px;border-radius:8px;font-family:inherit;font-weight:700}
+.btn-primary{display:block;width:100%;background:var(--g);color:var(--wh);border:none;border-radius:var(--rs);padding:14px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;text-align:center;transition:opacity .15s}
+.btn-primary:active{opacity:.85}
+.btn-sec{background:var(--gp);color:var(--g);border:none;border-radius:var(--rs);padding:13px 20px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit}
+.btn-danger{display:block;width:100%;background:#FDECEA;color:#C0392B;border:none;border-radius:var(--rs);padding:14px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit}
+.full-w{width:100%}
+.empty-state{text-align:center;color:var(--tx2);padding:40px 20px;font-size:14px;line-height:1.7}
+
+/* ── MODE PILLS ── */
+.mode-pills{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.mode-pills.scroll-x{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+.pill{background:var(--wh);border:2px solid var(--bd);border-radius:20px;padding:7px 14px;font-size:13px;font-weight:700;color:var(--tx2);cursor:pointer;white-space:nowrap;transition:all .15s;font-family:inherit}
+.pill.active{background:var(--g);border-color:var(--g);color:var(--wh)}
+
+/* ── FLASHCARD ── */
+.card-tier-badge{background:rgba(255,255,255,.2);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:800;letter-spacing:.5px;margin-bottom:12px}
+.card-cat{font-size:11px;opacity:.7;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.card-main-text{font-size:28px;font-weight:800;line-height:1.3;text-align:center}
+.card-back .card-main-text{font-size:22px;color:var(--g);text-align:left}
+.card-phonetic{font-size:14px;opacity:.8;font-style:italic;margin-top:6px}
+.card-example{font-size:13px;color:var(--tx);line-height:1.6;margin-top:12px;padding-top:10px;border-top:1px solid var(--bd);width:100%}
+.card-example-en{font-size:12px;color:var(--tx2);line-height:1.5;margin-top:4px}
+.card-south-note{background:var(--gp);border-radius:6px;padding:6px 10px;font-size:11px;color:#1B4332;margin-top:8px;width:100%}
+.speak-btn{background:rgba(255,255,255,.15);border:none;cursor:pointer;font-size:20px;padding:8px;border-radius:8px;line-height:1;display:inline-flex;align-items:center;justify-content:center;margin-top:8px}
+.speak-btn-back{background:var(--gp);margin-top:10px}
+.tap-hint{color:var(--tx2);font-size:13px;text-align:center;margin-top:8px}
+.grade-row{display:flex;gap:10px;padding:0 16px 20px;width:100%}
+.grade-btn{flex:1;border:none;border-radius:var(--rs);padding:13px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
+.grade-btn.wrong{background:#FDECEA;color:#C0392B}
+.grade-btn.hard{background:#FFF8E1;color:#8A5F00}
+.grade-btn.ok{background:#D8F3DC;color:#1B4332}
+
+/* ── QUIZ ── */
+.quiz-prompt-label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--tx2);margin-bottom:6px}
+.quiz-prompt{font-size:22px;font-weight:800;line-height:1.4;margin-bottom:4px;color:var(--tx)}
+.quiz-prompt-sub{font-size:13px;color:var(--tx2);margin-bottom:20px}
+.quiz-options{display:flex;flex-direction:column;gap:10px}
+.quiz-opt{width:100%;background:var(--wh);border:2.5px solid var(--bd);border-radius:10px;padding:14px 16px;text-align:left;font-size:15px;cursor:pointer;transition:border-color .2s,background .2s;font-family:inherit;font-weight:600;line-height:1.4}
+.quiz-opt.correct{border-color:var(--gl);background:#F0FBF4;color:#1B4332}
+.quiz-opt.wrong{border-color:#E07070;background:#FEF0F0;color:#8B0000}
+.quiz-opt.faded{opacity:.45}
+.quiz-feedback{background:var(--wh);border-radius:var(--r);padding:16px;margin-top:16px;box-shadow:var(--shd)}
+.correct-fb{border-top:3px solid var(--gl)}
+.wrong-fb{border-top:3px solid #E07070}
+.quiz-reveal{font-size:18px;font-weight:700;color:var(--g);margin:8px 0 4px}
+.quiz-ph{font-size:13px;color:var(--tx2);font-style:italic;margin-bottom:10px}
+.speak-inline{background:var(--gp);border:none;border-radius:var(--rs);padding:8px 14px;font-size:13px;cursor:pointer;font-family:inherit;font-weight:700;color:var(--g)}
+.speak-inline.lg{font-size:14px;padding:10px 18px}
+
+/* ── DRILL ── */
+.drill-card{background:var(--g);border-radius:var(--r);padding:32px 24px;text-align:center;color:var(--wh);box-shadow:var(--shd);width:100%;max-width:380px}
+.drill-en{font-size:14px;opacity:.8;margin-bottom:8px;font-weight:600}
+.drill-vi{font-size:28px;font-weight:800;margin-bottom:6px;line-height:1.3}
+.drill-ph{font-size:14px;opacity:.75;font-style:italic;margin-bottom:8px}
+.drill-south{font-size:12px;background:rgba(255,255,255,.15);border-radius:6px;padding:6px 10px;margin-bottom:12px;display:inline-block}
+.speak-big{background:rgba(255,255,255,.2);border:none;border-radius:var(--rs);padding:12px 24px;font-size:15px;font-weight:700;cursor:pointer;color:var(--wh);margin:10px 0;font-family:inherit}
+.drill-hint{font-size:12px;opacity:.7;margin-top:8px}
+
+/* ── SITUATIONS ── */
+.sit-card{display:flex;align-items:center;gap:12px;background:var(--wh);border-radius:var(--r);padding:16px;margin-bottom:10px;box-shadow:var(--shd);cursor:pointer;border:none;width:100%;font-family:inherit;text-align:left;transition:transform .15s}
+.sit-card:active{transform:scale(.98)}
+.sit-num{width:40px;height:40px;background:var(--tp);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:var(--t);flex-shrink:0}
+.sit-info{flex:1;display:flex;flex-direction:column;gap:2px}
+.sit-title{font-size:14px;font-weight:700;color:var(--tx)}
+.sit-titlevi{font-size:12px;color:var(--tx2)}
+.sit-context{background:var(--gp);border-radius:10px;padding:12px;font-size:13px;color:#1B4332;line-height:1.6;margin-bottom:12px}
+.sit-culture{background:var(--tp);border-radius:10px;padding:12px;font-size:13px;color:#7A3900;line-height:1.6;margin-bottom:16px;border-left:3px solid var(--t)}
+.dialogue-wrap{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
+.dlg-line{border-radius:10px;padding:14px;transition:opacity .3s}
+.dlg-line.you{background:var(--tp);border-left:3px solid var(--t)}
+.dlg-line.them{background:var(--gp);border-left:3px solid var(--gl)}
+.dlg-line.future{opacity:.3}
+.dlg-line.past{opacity:.7}
+.dlg-role{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;color:var(--tx2);margin-bottom:6px}
+.dlg-vi{font-size:15px;font-weight:700;line-height:1.55;margin-bottom:3px}
+.dlg-en{font-size:12px;color:var(--tx2);line-height:1.5;margin-top:4px}
+.dlg-ph{font-size:11px;color:var(--tx2);font-style:italic;margin-top:2px}
+.speak-micro{background:none;border:none;cursor:pointer;font-size:16px;padding:2px;line-height:1;margin-left:4px;vertical-align:middle}
+.scenario-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:8px}
+
+/* ── INTEL ── */
+.intel-card{display:flex;align-items:center;gap:14px;background:var(--wh);border-radius:var(--r);padding:16px;margin-bottom:10px;box-shadow:var(--shd);cursor:pointer;border:none;width:100%;font-family:inherit;text-align:left;transition:transform .15s}
+.intel-card:active{transform:scale(.98)}
+.intel-icon{font-size:28px;width:52px;height:52px;background:var(--gp);border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.intel-title{flex:1;font-size:15px;font-weight:700;color:var(--tx)}
+.intel-section{margin-bottom:20px}
+.intel-sh{font-size:15px;font-weight:800;color:var(--g);margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid var(--gp)}
+.intel-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.intel-list li{font-size:14px;line-height:1.65;color:var(--tx);padding-left:18px;position:relative}
+.intel-list li::before{content:'·';color:var(--g);font-weight:900;position:absolute;left:4px}
+
+/* ── REVIEW ── */
+.rv-card{background:var(--wh);border-radius:12px;padding:14px;margin-bottom:10px;box-shadow:var(--shd)}
+.rv-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px}
+.rv-en{font-size:14px;font-weight:700;color:var(--tx)}
+.rv-tier{font-size:11px;background:var(--gp);color:var(--g);border-radius:4px;padding:2px 7px;font-weight:700}
+.rv-vi{font-size:17px;font-weight:800;color:var(--g);margin-bottom:2px}
+.rv-ph{font-size:12px;color:var(--tx2);font-style:italic;margin-bottom:4px}
+.rv-stats{font-size:11px;color:var(--tx2)}
+
+/* ── PROGRESS ── */
+.prog-hero{background:var(--g);border-radius:var(--r);padding:24px;margin-bottom:16px;text-align:center;color:var(--wh)}
+.prog-xp{font-size:48px;font-weight:900;line-height:1}
+.prog-streak{font-size:16px;margin-top:4px;opacity:.85}
+.tier-prog-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.tier-label{font-size:13px;font-weight:700;width:50px}
+.tier-bar{flex:1;height:10px;background:var(--bd);border-radius:5px;overflow:hidden}
+.tier-fill{height:100%;background:var(--g);border-radius:5px;transition:width .5s}
+.tier-pct{font-size:12px;color:var(--tx2);width:40px;text-align:right}
+
+/* ── EXPORT ── */
+.export-section{background:var(--wh);border-radius:var(--r);padding:16px;box-shadow:var(--shd)}
+.export-label{font-size:15px;font-weight:800;margin-bottom:6px;color:var(--tx)}
+.export-desc{font-size:13px;color:var(--tx2);line-height:1.6;margin-bottom:12px}
+.export-box{width:100%;height:120px;border:2px solid var(--bd);border-radius:var(--rs);padding:12px;font-size:12px;font-family:monospace;resize:none;background:var(--bg);margin-bottom:10px;outline:none}
+.export-box:focus{border-color:var(--g)}
+
+/* ── PRIMER ── */
+.primer-block{background:var(--wh);border-radius:var(--r);padding:16px;margin-bottom:16px;box-shadow:var(--shd)}
+.primer-title{font-size:16px;font-weight:800;color:var(--g);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gp)}
+.primer-body p{font-size:13px;line-height:1.7;color:var(--tx);margin-bottom:10px}
+.primer-body ul{padding-left:18px;display:flex;flex-direction:column;gap:8px}
+.primer-body ul li{font-size:13px;line-height:1.65;color:var(--tx)}
+.primer-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:12px}
+.primer-table th{background:var(--gp);color:#1B4332;font-weight:700;padding:8px;text-align:left;border-bottom:2px solid var(--bd)}
+.primer-table td{padding:8px;border-bottom:1px solid var(--bd);line-height:1.5}
+.primer-table tr:last-child td{border-bottom:none}
+.tip{background:var(--tp);border-radius:8px;padding:10px 12px;font-size:12px;color:#7A3900;line-height:1.6;border-left:3px solid var(--t)}
+
+/* ── PLACEMENT ── */
+.placement-result{text-align:center;padding:20px;max-width:340px}
+.placement-score{font-size:64px;font-weight:900;color:var(--g);line-height:1}
+.placement-label{font-size:16px;color:var(--tx2);margin:6px 0}
+.placement-rec{font-size:15px;color:var(--tx);margin-bottom:16px;line-height:1.5}
+.placement-rec strong{color:var(--g)}
+.placement-result p{font-size:13px;color:var(--tx2);line-height:1.65;margin-bottom:20px}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+/* ================================================================
+   DATA MODEL
+   ================================================================ */
+const CAT={G:'Greetings and Meetings',M:'Money and Pricing',R:'Retail Floor',F:'Margin and Finance',D:'Distribution and Logistics',S:'Supplement and Health',C:'Contracts and Negotiation',N:'Numbers',CU:'Culture and Etiquette',SM:'Small Talk and Relationships'};
+/* ================================================================
+   ADD NEW TERMS HERE — append to VRAW. Auto-assigned to lessons.
+   [id, tier, catCode, en, vi, phonetic, exVi, exEn, southNote, register, accuracyFlag]
+   ================================================================ */
+const VRAW=[
+// ═══════════════════ TIER A — SURVIVAL AND RETAIL FLOOR ═══════════════════
+['a01','A','G','Hello (to older or same-age male)','Xin chào anh','sin chow anh','Xin chào anh, tôi là Michael từ Organika.','Hello, I am Michael from Organika.','Same nationwide. Anh for males older or similar age to you.','Use anh for male buyers and partners. Refer to yourself as em (humble) or tôi.',0],
+['a02','A','G','Hello (to older or same-age female)','Xin chào chị','sin chow chi','Xin chào chị Linh, rất vui được gặp chị.','Hello Ms. Linh, very pleased to meet you.','Same nationwide. Chị for women older or similar age.','Use chị for female buyers and partners. Never use bạn in business.',0],
+['a03','A','G','Good morning','Chào buổi sáng','chow boo-ee sang','Chào buổi sáng anh, cuộc họp hôm nay bắt đầu lúc mấy giờ?','Good morning, what time does today\'s meeting start?','Same nationwide. Adding anh/chị is more polite: Chào anh buổi sáng.','Pair with anh or chị for proper register: Chào anh buổi sáng.',0],
+['a04','A','G','Good afternoon','Chào buổi chiều','chow boo-ee chyew','Chào buổi chiều chị, hôm nay trời nóng quá nhỉ!','Good afternoon, it is very hot today!','Same nationwide.','Use after noon. Adding anh or chị is respectful.',0],
+['a05','A','G','Goodbye','Tạm biệt','tahm byeet','Tạm biệt anh, hẹn gặp lại vào tuần sau.','Goodbye, see you again next week.','Same nationwide. Informal South may say Thôi nhé or Đi nha.','Standard formal farewell. Fine for all business contexts.',0],
+['a06','A','G','See you again','Hẹn gặp lại','hen gap lie','Hẹn gặp lại chị vào thứ Tư nhé.','See you again on Wednesday.','Same nationwide. Southerners often add nhé at the end.','Positive and warm closing phrase. Shows intent to continue relationship.',0],
+['a07','A','G','Nice to meet you','Rất vui được gặp anh/chị','rat voy dook gap anh/chi','Rất vui được gặp anh, tôi đã nghe nói nhiều về công ty của anh.','Very pleased to meet you, I have heard a lot about your company.','Same nationwide.','Adjust anh/chị based on who you are addressing.',0],
+['a08','A','G','My name is','Tôi tên là','toy ten la','Tôi tên là Michael, tôi là Giám đốc Bán hàng tại Organika.','My name is Michael, I am Sales Manager at Organika.','Same nationwide.','Tôi is neutral first person. Em is more humble if buyer is older.',0],
+['a09','A','G','I work for Organika','Tôi làm việc cho Organika','toy lam vyeck cho Organika','Tôi làm việc cho Organika Health Canada, phụ trách thị trường Việt Nam.','I work for Organika Health Canada, responsible for the Vietnam market.','Same nationwide.','Key intro sentence. Learn this cold.',0],
+['a10','A','G','Please have a seat','Mời ngồi','moy ngoy','Mời anh ngồi, chúng ta bắt đầu cuộc họp nhé.','Please have a seat, let us start the meeting.','Same nationwide.','Hosting phrase. You may hear this from the buyer too.',0],
+['a11','A','G','What is your name','Anh/Chị tên là gì','anh/chi ten la zee','Xin hỏi anh tên là gì ạ?','May I ask, what is your name?','Same nationwide. Ạ at end adds respect.','Use xin hỏi before a question for extra politeness.',0],
+['a12','A','G','I am from Canada','Tôi đến từ Canada','toy den too Canada','Tôi đến từ Vancouver, Canada — nơi đặt trụ sở Organika.','I am from Vancouver, Canada — where Organika is headquartered.','Same nationwide.','Mentioning Vancouver specifically reinforces the clean Canadian origin story.',0],
+['a13','A','G','Shall we start','Chúng ta bắt đầu nhé','choong ta bat dow nyeh','Nếu anh/chị sẵn sàng, chúng ta bắt đầu nhé.','If you are ready, shall we start.','Same nationwide. Nhé softens to a suggestion rather than a command.','Use nhé often — it makes statements sound collaborative.',0],
+['a14','A','G','Business card','Danh thiếp','zanh thyep','Đây là danh thiếp của tôi, mong anh/chị giữ liên lạc.','Here is my business card, I hope we can stay in touch.','Same nationwide.','Offer and receive business cards with both hands. Study the card before putting it away. Never write on it.',0],
+['a15','A','G','Meeting','Cuộc họp','kwok hop','Cuộc họp hôm nay diễn ra ở đâu ạ?','Where is today\'s meeting held?','Same nationwide.','',0],
+// Numbers
+['a16','A','N','1 — one','một','mote','Tôi cần đặt một thùng mẫu thử.','I need to order one sample case.','Same nationwide. Tone: nặng (heavy, cut-off).','',0],
+['a17','A','N','2 — two','hai','high','Hai hương vị bán chạy nhất là mâm xôi và chanh xanh chanh vàng.','The two best-selling flavors are Raspberry and Lime Lemon.','Same nationwide. Level tone.','',0],
+['a18','A','N','3 — three','ba','bah','Chúng tôi có ba hương vị: mâm xôi, chanh xanh chanh vàng, và chanh dây thơm.','We have three flavors: Raspberry, Lime Lemon, and Passion Fruit Pineapple.','Same nationwide. Level tone.','',0],
+['a19','A','N','4 — four','bốn','bon','Vỉ 4 lon là đơn vị đóng gói tiêu chuẩn của chúng tôi.','The 4-pack is our standard packaging unit.','Same nationwide. Tone: hỏi (dipping).','',0],
+['a20','A','N','5 — five','năm','nam','Chiết khấu 5% cho đơn hàng từ 100 thùng.','5% discount for orders of 100 cases.','Same nationwide. Tone: huyền (falling).','',0],
+['a21','A','N','6 — six','sáu','sow','6 tháng là thời hạn hợp đồng đầu tiên.','6 months is the initial contract term.','Same nationwide. Tone: sắc (rising sharp).','',0],
+['a22','A','N','7 — seven','bảy','bay','7 ngày làm việc là thời gian giao hàng tiêu chuẩn.','7 working days is the standard delivery time.','Same nationwide. Tone: hỏi (dipping).','',0],
+['a23','A','N','8 — eight','tám','tahm','8% là biên lợi nhuận tối thiểu của chúng tôi.','8% is our minimum profit margin.','Same nationwide. Tone: sắc (rising).','',0],
+['a24','A','N','9 — nine','chín','chin','Hạn thanh toán là 9 ngày cuối tháng.','Payment deadline is the last 9 days of the month.','Same nationwide. Tone: sắc (rising).','',0],
+['a25','A','N','10 — ten','mười','moo-ee','10% thuế VAT.','10% VAT.','Same nationwide. Tone: huyền (falling).','',0],
+['a26','A','N','20 — twenty','hai mươi','high moo-ee','Hai mươi phần trăm chiết khấu cho nhà phân phối.','Twenty percent discount for distributors.','Same nationwide.','',0],
+['a27','A','N','100 — one hundred','một trăm','mote tram','Một trăm thùng là đơn hàng tối thiểu.','One hundred cases is the minimum order.','Same nationwide.','',0],
+['a28','A','N','1,000 — one thousand','một nghìn','mote nyin','Giá một lon lẻ là 25,000 đồng — hai mươi lăm nghìn đồng.','Price per single can is 25,000 dong — twenty five thousand dong.','Same: một nghìn everywhere. Southern speech may say ngàn for nghìn.','In everyday speech, southerners often say ngàn instead of nghìn.',0],
+['a29','A','N','1,000,000 — one million','một triệu','mote tryew','Doanh thu tháng đầu đạt ba triệu đồng.','First month revenue reached three million dong.','Same nationwide.','',0],
+['a30','A','N','10,000 — ten thousand','mười nghìn','moo-ee nyin','Giá buôn là 85,000 — tám mươi lăm nghìn đồng mỗi vỉ 4 lon.','Wholesale price is 85,000 — eighty five thousand dong per 4-pack.','','',0],
+// Money and Pricing
+['a31','A','M','Vietnamese currency unit','đồng','dong','Giá sản phẩm là 25,000 đồng mỗi lon.','The product price is 25,000 dong per can.','Same nationwide. VND on packaging.','When quoting prices, always state the number first then đồng.',0],
+['a32','A','M','Price','giá','ya','Giá này đã bao gồm chiết khấu thương mại chưa?','Does this price already include the trade discount?','Same nationwide.','Always clarify if a price is inclusive or exclusive of VAT.',0],
+['a33','A','M','How much does it cost','Bao nhiêu tiền','bow nyew tyen','Bao nhiêu tiền một thùng 12 vỉ?','How much per case of 12 packs?','Same nationwide. Tiền can be dropped: Bao nhiêu một thùng.','Very natural question. Tiền is optional.',0],
+['a34','A','M','Expensive','Đắt','dat','Chúng tôi hiểu giá có vẻ đắt, nhưng chất lượng Canada đảm bảo.','We understand the price seems expensive, but Canadian quality is assured.','Same nationwide. Southerners may say mắc for đắt.','Critical: South VN uses mắc (expensive) more than đắt. Know both.',0],
+['a35','A','M','Too expensive','Đắt quá','dat kwa','Đắt quá, anh có thể giảm thêm không?','Too expensive, can you reduce it more?','Southern: Mắc quá. This is a very common buyer objection.','You WILL hear this. Prepare a response.',0],
+['a36','A','M','Cheap / Affordable','Rẻ','reh','Mức giá này rất rẻ so với chất lượng sản phẩm.','This price is very reasonable compared to product quality.','Same nationwide.','',0],
+['a37','A','M','Price reduction / discount (consumer)','Giảm giá','yam ya','Chúng tôi đang có chương trình giảm giá 10% cho tháng này.','We have a 10% price reduction program this month.','Same nationwide. Giảm giá is consumer-facing reduction.','Distinguish: giảm giá (consumer discount) vs chiết khấu (trade discount).',0],
+['a38','A','M','Promotion','Khuyến mãi','kwyen my','Tháng 8 chúng tôi sẽ có chương trình khuyến mãi lớn.','In August we will have a big promotion program.','Same nationwide.','',0],
+['a39','A','M','Payment','Thanh toán','tanh twan','Điều khoản thanh toán là 30 ngày từ ngày giao hàng.','Payment terms are 30 days from delivery date.','Same nationwide.','',0],
+['a40','A','M','Invoice','Hóa đơn','hwa don','Vui lòng gửi hóa đơn VAT sau khi giao hàng.','Please send the VAT invoice after delivery.','Same nationwide.','',0],
+['a41','A','M','Receipt','Biên lai','byen lie','Tôi cần biên lai cho kế toán.','I need a receipt for accounting.','Same nationwide.','',0],
+['a42','A','M','Cash','Tiền mặt','tyen mat','Chúng tôi chấp nhận cả tiền mặt và chuyển khoản.','We accept both cash and bank transfer.','Same nationwide.','',0],
+['a43','A','M','Bank transfer','Chuyển khoản','chween khwan','Anh/Chị vui lòng chuyển khoản vào tài khoản sau.','Please transfer to the following account.','Same nationwide.','Most B2B transactions in Vietnam use bank transfer.',0],
+['a44','A','M','VAT tax','Thuế VAT','thway vat','Giá chưa bao gồm thuế VAT 10%.','Price excludes 10% VAT.','Same nationwide. Always clarify VAT in quotes.','Standard VAT in Vietnam is 10%. Always specify.',0],
+['a45','A','M','Total amount','Tổng cộng','tong kong','Tổng cộng là 10,200,000 đồng bao gồm VAT.','Total is 10,200,000 dong including VAT.','Same nationwide.','',0],
+// Retail and Basic Communication
+['a46','A','R','In stock','Còn hàng','kon hang','Sản phẩm này còn hàng không ạ?','Is this product in stock?','Same nationwide.','',0],
+['a47','A','R','Out of stock','Hết hàng','het hang','Rất tiếc hương vị này đã hết hàng, sẽ có lại trong 2 tuần.','Unfortunately this flavor is out of stock, will be available in 2 weeks.','Same nationwide. Southerners may say cháy hàng (goods on fire) for sold out.','Cháy hàng is a common Southern expression for sell-out.',0],
+['a48','A','R','Delivery','Giao hàng','yow hang','Giao hàng miễn phí cho đơn từ 200 thùng trong TPHCM.','Free delivery for orders of 200 cases in HCMC.','Same nationwide.','',0],
+['a49','A','R','To place an order','Đặt hàng','dat hang','Tôi muốn đặt hàng ngay hôm nay.','I want to place an order today.','Same nationwide.','',0],
+['a50','A','R','The order','Đơn hàng','don hang','Đơn hàng của anh/chị đã được xác nhận.','Your order has been confirmed.','Same nationwide.','Đặt hàng = to order (verb); đơn hàng = the order (noun).',0],
+['a51','A','R','Supplier','Nhà cung cấp','nya koong cap','Organika là nhà cung cấp sản phẩm chức năng hàng đầu Canada.','Organika is a leading Canadian functional product supplier.','Same nationwide.','',0],
+['a52','A','R','Customer','Khách hàng','khach hang','Khách hàng mục tiêu của chúng tôi là người tiêu dùng 20 đến 45 tuổi.','Our target customers are consumers aged 20 to 45.','Same nationwide.','',0],
+['a53','A','R','Product','Sản phẩm','san fam','Sản phẩm Organika Sparkling Electrolyte có ba hương vị.','The Organika Sparkling Electrolyte product has three flavors.','Same nationwide.','',0],
+['a54','A','R','Shelf','Kệ hàng','keh hang','Chúng tôi muốn đặt sản phẩm ở vị trí kệ tầm mắt.','We want to place products at eye-level shelf position.','Same nationwide.','Eye-level shelf placement is premium and may involve a placement fee.',0],
+['a55','A','R','Inventory / Stock','Tồn kho','ton kho','Tồn kho hiện tại là 500 thùng trong kho Việt Nam.','Current inventory is 500 cases in the Vietnam warehouse.','Same nationwide.','',0],
+['a56','A','R','Store','Cửa hàng','koo-ah hang','Sản phẩm được bán tại hơn 200 cửa hàng tại TPHCM.','The product is sold in over 200 stores in HCMC.','Same nationwide.','',0],
+['a57','A','R','Supermarket','Siêu thị','syew thi','Chúng tôi muốn đưa sản phẩm vào hệ thống siêu thị lớn.','We want to get the product into major supermarket chains.','Same nationwide.','Co.op Mart, Lotte Mart, AEON, WIN Mart are key modern trade targets.',0],
+['a58','A','R','Brand','Nhãn hàng','nyan hang','Nhãn hàng Organika đã có mặt tại 45 quốc gia.','The Organika brand is present in 45 countries.','Same nationwide.','',0],
+['a59','A','R','Display','Trưng bày','troong bay','Chúng tôi hỗ trợ vật liệu trưng bày tại điểm bán.','We provide display materials at point of sale.','Same nationwide.','',0],
+['a60','A','R','Yes (very respectful)','Dạ','ya','Dạ, tôi hiểu yêu cầu của anh/chị rồi.','Yes, I understand your requirement.','Same nationwide. Dạ shows deference. Standard in HCMC business.','Always start responses to a senior buyer with Dạ. It signals respect and is a hallmark of polished Vietnamese.',0],
+['a61','A','R','Yes (polite)','Vâng','vang','Vâng, chúng tôi có thể đáp ứng yêu cầu đó.','Yes, we can meet that requirement.','Same. Vâng is slightly less deferential than Dạ but still polite.','Use dạ with clear seniors; vâng with peers. Never just ừ in business.',0],
+['a62','A','R','No','Không','khong','Không, giá này chưa bao gồm VAT.','No, this price does not include VAT.','South informal: hông instead of không. Never use hông in business.','Không is neutral. Soften with xin lỗi, tuy nhiên before refusing.',0],
+['a63','A','R','I understand','Tôi hiểu','toy hyew','Dạ, tôi hiểu yêu cầu rồi. Để tôi kiểm tra lại.','Yes, I understand the requirement. Let me check again.','Same nationwide.','Follow up with action to show you truly understood.',0],
+['a64','A','R','Please repeat','Xin lặp lại','sin lap lie','Xin lỗi anh/chị, anh/chị có thể lặp lại không ạ?','Excuse me, could you please repeat that?','Same nationwide.','Phrase it as a question: có thể lặp lại không ạ. Shows respect.',0],
+['a65','A','R','Thank you','Cảm ơn','kahm un','Cảm ơn anh/chị rất nhiều về thời gian hôm nay.','Thank you very much for your time today.','Same nationwide. Informally: Cám ơn (no tilde on â).','Always follow with a specific statement of what you are grateful for.',0],
+// ═══════════════════ TIER B — DEAL, MARGIN, AND CPG ═══════════════════
+['b01','B','F','Profit / Margin','Lợi nhuận','loy nyuan','Biên lợi nhuận của nhà phân phối là 25%.','Distributor profit margin is 25%.','Same nationwide.','',0],
+['b02','B','F','Profit margin percentage','Biên lợi nhuận','byen loy nyuan','Chúng tôi cần biên lợi nhuận tối thiểu 20% để đủ bù chi phí vận hành.','We need a minimum profit margin of 20% to cover operating costs.','Same nationwide.','Key term for every pricing conversation.',0],
+['b03','B','F','Cost price','Giá thành','ya tanh','Giá thành sản xuất chưa tính chi phí vận chuyển và thuế.','Manufacturing cost price does not include shipping and tax.','Same nationwide.','Giá thành is cost to produce; giá vốn is cost of goods.',0],
+['b04','B','F','Selling price','Giá bán','ya ban','Giá bán lẻ đề xuất là 35,000 đồng mỗi lon.','Suggested retail price is 35,000 dong per can.','Same nationwide.','',0],
+['b05','B','F','Wholesale price','Giá buôn','ya bwon','Giá buôn cho đại lý cấp 1 là 22,000 đồng mỗi lon.','Wholesale price for Tier 1 dealers is 22,000 dong per can.','Same nationwide.','',0],
+['b06','B','F','Retail price','Giá lẻ','ya leh','Giá lẻ tại siêu thị là 35,000 đồng.','Retail price at supermarket is 35,000 dong.','Same nationwide.','',0],
+['b07','B','F','Trade discount','Chiết khấu','chyet khow','Chiết khấu thương mại cho nhà phân phối là 22%.','Trade discount for distributors is 22%.','Same nationwide.','Chiết khấu is the business term. Giảm giá is consumer-facing.',0],
+['b08','B','F','Revenue','Doanh thu','zwanh thu','Mục tiêu doanh thu năm đầu là 5 tỷ đồng.','First-year revenue target is 5 billion dong.','Same nationwide.','',0],
+['b09','B','F','Gross profit','Lợi nhuận gộp','loy nyuan gop','Lợi nhuận gộp trước khi trừ chi phí marketing và bán hàng.','Gross profit before deducting marketing and selling costs.','Same nationwide.','',0],
+['b10','B','F','Net profit','Lợi nhuận ròng','loy nyuan rong','Lợi nhuận ròng sau thuế và tất cả chi phí.','Net profit after tax and all costs.','Same nationwide.','',0],
+['b11','B','F','Budget','Ngân sách','ngan sach','Ngân sách marketing năm nay là bao nhiêu?','What is this year\'s marketing budget?','Same nationwide.','',0],
+['b12','B','F','Commission','Hoa hồng','hwa hong','Hoa hồng bán hàng là 3% doanh số.','Sales commission is 3% of sales volume.','Same nationwide.','',0],
+['b13','B','F','Percentage','Phần trăm','fun tram','Chiết khấu 20 phần trăm cho đơn hàng đầu tiên.','20 percent discount for the first order.','Same nationwide.','',0],
+['b14','B','F','Sales target','Mục tiêu doanh số','mook tyew zwanh so','Mục tiêu doanh số quý này là 1,000 thùng.','Sales target this quarter is 1,000 cases.','Same nationwide.','',0],
+['b15','B','F','Investment','Đầu tư','dow too','Đây là đầu tư dài hạn, không phải giao dịch ngắn hạn.','This is a long-term investment, not a short-term transaction.','Same nationwide.','',0],
+['b16','B','D','Distributor','Nhà phân phối','nya fun foy','Chúng tôi đang tìm nhà phân phối chiến lược tại TPHCM.','We are looking for a strategic distributor in HCMC.','Same nationwide.','Key relationship. Distributors buy and resell. Different from đại lý.',0],
+['b17','B','D','Agent / Dealer','Đại lý','dai lee','Đại lý cấp 1 nhận chiết khấu cao nhất.','Tier 1 dealers receive the highest discount.','Same nationwide.','Đại lý works on behalf of the brand, may not take inventory risk.',0],
+['b18','B','D','Buyer (trade)','Người mua','ngoo-ee moo-ah','Người mua hàng tại siêu thị yêu cầu cung cấp chứng nhận chất lượng.','The supermarket buyer requires quality certifications.','Same nationwide.','',0],
+['b19','B','D','Purchase order','Đơn đặt hàng','don dat hang','Vui lòng xác nhận đơn đặt hàng trước ngày 25 tháng này.','Please confirm the purchase order before the 25th of this month.','Same nationwide. Also: PO in common usage.','',0],
+['b20','B','D','Quantity','Số lượng','so loog','Số lượng tối thiểu cho mỗi đơn là 60 thùng.','Minimum quantity per order is 60 cases.','Same nationwide.','',0],
+['b21','B','D','Case / Carton','Thùng','thoong','Mỗi thùng có 12 vỉ 4 lon.','Each case contains 12 four-packs.','Same nationwide. Thùng means box/carton in this context.','',0],
+['b22','B','D','4-pack','Vỉ 4 lon','vee bon lon','Vỉ 4 lon Organika Sparkling Electrolyte hương vị mâm xôi.','Organika Sparkling Electrolyte 4-pack in Raspberry flavor.','Same nationwide. Vỉ = blister/tray pack.','This is the primary retail format. Learn this phrase perfectly.',0],
+['b23','B','D','Single can / unit','Lon đơn lẻ','lon don leh','Lon đơn lẻ phù hợp cho kênh tiện lợi và máy bán hàng tự động.','Single cans are suitable for convenience channels and vending machines.','Same nationwide.','',0],
+['b24','B','D','Minimum order quantity (MOQ)','Số lượng đặt hàng tối thiểu','so loog dat hang toy thyew','Số lượng đặt hàng tối thiểu là 60 thùng mỗi đơn.','Minimum order quantity is 60 cases per order.','Same nationwide. MOQ is also used as English abbreviation.','',0],
+['b25','B','D','Payment terms','Điều khoản thanh toán','dyew khwan tanh twan','Điều khoản thanh toán tiêu chuẩn là 30 ngày từ ngày giao hàng.','Standard payment terms are 30 days from delivery date.','Same nationwide.','This is one of the most negotiated items in Vietnam trade deals.',0],
+['b26','B','D','Credit','Tín dụng','tin zoom','Sau 3 tháng hợp tác tốt, chúng tôi có thể xem xét cấp tín dụng.','After 3 months of good cooperation, we can consider extending credit.','Same nationwide.','',0],
+['b27','B','D','Deposit','Đặt cọc','dat kok','Yêu cầu đặt cọc 30% khi xác nhận đơn hàng.','30% deposit required when confirming the order.','Same nationwide.','',0],
+['b28','B','D','Warehouse','Kho hàng','kho hang','Kho hàng của chúng tôi đặt tại Bình Dương.','Our warehouse is located in Binh Duong.','Same nationwide.','',0],
+['b29','B','D','Delivery time / Lead time','Thời gian giao hàng','thoy zan yow hang','Thời gian giao hàng từ 5 đến 7 ngày làm việc.','Delivery time is 5 to 7 working days.','Same nationwide.','Always give a range, never promise an exact date.',0],
+['b30','B','D','Supply chain','Chuỗi cung ứng','choo-ee koong oong','Chuỗi cung ứng từ Canada đến kho Việt Nam mất khoảng 4 đến 6 tuần.','Supply chain from Canada to Vietnam warehouse takes approximately 4 to 6 weeks.','Same nationwide.','',0],
+['b31','B','D','Modern trade','Thương mại hiện đại','thuh-ung my hyen die','Kênh thương mại hiện đại bao gồm siêu thị, đại siêu thị và cửa hàng tiện lợi.','Modern trade channel includes supermarkets, hypermarkets and convenience stores.','Same nationwide.','Key channel for premium functional beverages.',0],
+['b32','B','D','E-commerce','Thương mại điện tử','thuh-ung my dyen too','Kênh thương mại điện tử đang tăng trưởng nhanh nhất tại Việt Nam.','The e-commerce channel is growing fastest in Vietnam.','Same nationwide.','Shopee and TikTok Shop are the dominant platforms in VN.',0],
+['b33','B','C','To negotiate','Đàm phán','dam fan','Chúng ta có thể đàm phán điều khoản cụ thể hơn không?','Can we negotiate more specific terms?','Same nationwide.','',0],
+['b34','B','C','Contract','Hợp đồng','hop dong','Hợp đồng phân phối có hiệu lực trong 12 tháng.','The distribution contract is valid for 12 months.','Same nationwide.','',0],
+['b35','B','C','Terms and conditions','Điều khoản','dyew khwan','Tôi cần xem lại điều khoản hợp đồng trước khi ký.','I need to review the contract terms before signing.','Same nationwide.','',0],
+['b36','B','C','Agreement','Thỏa thuận','thwa thwan','Chúng ta đã đạt được thỏa thuận về giá và điều khoản.','We have reached an agreement on price and terms.','Same nationwide.','',0],
+['b37','B','C','Proposal','Đề xuất','deh swat','Để tôi gửi đề xuất chi tiết qua email sau buổi họp này.','Let me send a detailed proposal by email after this meeting.','Same nationwide.','',0],
+['b38','B','C','Quotation','Báo giá','bow ya','Chúng tôi sẽ gửi báo giá chính thức trong vòng 24 giờ.','We will send the official quotation within 24 hours.','Same nationwide.','',0],
+['b39','B','C','To accept','Chấp nhận','chap nyan','Chúng tôi chấp nhận điều khoản thanh toán 30 ngày.','We accept the 30-day payment terms.','Same nationwide.','',0],
+['b40','B','C','To decline / refuse','Từ chối','too choy','Rất tiếc, chúng tôi không thể chấp nhận điều khoản đó.','Unfortunately, we cannot accept those terms.','Same nationwide.','Soften with rất tiếc (unfortunately) before declining.',0],
+['b41','B','C','Flexible','Linh hoạt','ling hwat','Chúng tôi có thể linh hoạt về điều khoản thanh toán cho đơn lớn.','We can be flexible on payment terms for large orders.','Same nationwide.','',0],
+['b42','B','C','Compromise','Thỏa hiệp','thwa hyep','Cả hai bên có thể thỏa hiệp ở mức 22% chiết khấu.','Both sides can compromise at 22% discount.','Same nationwide.','',0],
+['b43','B','C','Sample','Mẫu thử','mow thoo','Tôi có thể gửi mẫu thử cho anh/chị trong tuần này.','I can send you samples this week.','Same nationwide.','Offering samples is standard and expected in Vietnamese trade.',0],
+['b44','B','C','Forecast','Dự báo','zoo bow','Dự báo doanh số năm đầu là 10,000 thùng.','First-year sales forecast is 10,000 cases.','Same nationwide.','',0],
+['b45','B','C','Exclusive','Độc quyền','dok kwyen','Chúng tôi có thể xem xét độc quyền cho khu vực TPHCM.','We can consider exclusivity for the HCMC area.','Same nationwide.','Exclusivity is highly valued by Vietnamese distributors.',0],
+['b46','B','C','Market share','Thị phần','thi fun','Mục tiêu thị phần năm đầu là 3% trong phân khúc đồ uống chức năng có ga.','First-year market share target is 3% in the sparkling functional beverage segment.','Same nationwide.','',0],
+['b47','B','D','Shipment / Batch','Lô hàng','loh hang','Lô hàng đầu tiên sẽ đến kho vào cuối tháng 8.','The first shipment will arrive at the warehouse by end of August.','Same nationwide.','',0],
+['b48','B','D','Order tracking','Theo dõi đơn hàng','thew zoy don hang','Anh/Chị có thể theo dõi đơn hàng qua hệ thống của chúng tôi.','You can track your order through our system.','Same nationwide.','',0],
+['b49','B','D','Free delivery','Miễn phí giao hàng','myen fee yow hang','Miễn phí giao hàng cho đơn từ 200 thùng trong nội thành TPHCM.','Free delivery for orders of 200 cases within HCMC city.','Same nationwide.','',0],
+['b50','B','D','Return of goods','Trả lại hàng','tra lie hang','Chính sách trả lại hàng áp dụng trong vòng 7 ngày nếu hàng bị lỗi.','Return policy applies within 7 days for defective goods.','Same nationwide.','',0],
+// ═══════════════════ TIER C — SUPPLEMENT INDUSTRY AND COMMERCIAL ═══════════════════
+['c01','C','S','Functional food supplement','Thực phẩm chức năng','thook fam chook nang','Organika Sparkling Electrolyte là thực phẩm chức năng có ga.','Organika Sparkling Electrolyte is a functional food sparkling drink.','Same nationwide. This is the official regulatory category in Vietnam.','Critical for registration and marketing. Cannot claim to treat disease.',0],
+['c02','C','S','Vitamin','Vitamin','vee-tah-min','Sản phẩm bổ sung vitamin C và B6.','The product supplements vitamin C and B6.','Same nationwide.','',0],
+['c03','C','S','Collagen','Collagen','ko-la-jen','Collagen biển từ Canada đang rất được ưa chuộng tại Việt Nam.','Marine collagen from Canada is very popular in Vietnam.','Same nationwide.','150 to 165M USD market in Vietnam in 2025.',0],
+['c04','C','S','Probiotic','Men vi sinh','men vee sinh','Sản phẩm có chứa men vi sinh hỗ trợ sức khỏe đường ruột.','The product contains probiotics that support gut health.','Same nationwide. Probiotic is also used as English borrowing.','Growing category alongside immunity and collagen.',0],
+['c05','C','S','Electrolyte','Chất điện giải','chat dyen yai','Organika Sparkling Electrolyte bổ sung chất điện giải thiết yếu.','Organika Sparkling Electrolyte replenishes essential electrolytes.','Same nationwide.','The core benefit claim of the product. Learn this cold.',0],
+['c06','C','S','Immune / Immunity','Miễn dịch','myen zik','Sản phẩm hỗ trợ tăng cường miễn dịch tự nhiên.','The product supports natural immune enhancement.','Same nationwide.','Cannot claim to treat illness. Say hỗ trợ miễn dịch (immune support).',0],
+['c07','C','S','Immune support / boost','Tăng cường miễn dịch','tang koong myen zik','Tăng cường miễn dịch là xu hướng tiêu dùng hàng đầu sau COVID.','Immune support is the top consumer trend after COVID.','Same nationwide.','',0],
+['c08','C','S','Health','Sức khỏe','sook khweh','Người tiêu dùng Việt Nam ngày càng quan tâm đến sức khỏe.','Vietnamese consumers are increasingly health-conscious.','Same nationwide.','',0],
+['c09','C','S','Ingredient','Thành phần','tanh fun','Tất cả thành phần đều tự nhiên và không có chất bảo quản nhân tạo.','All ingredients are natural with no artificial preservatives.','Same nationwide.','Consumers increasingly scrutinize ingredient lists.',0],
+['c10','C','S','Dosage','Liều lượng','lyew loog','Liều lượng khuyến nghị là một lon mỗi ngày.','Recommended dosage is one can per day.','Same nationwide.','',0],
+['c11','C','S','Expiry date','Ngày hết hạn','ngay het han','Ngày hết hạn được in rõ trên đáy lon.','The expiry date is clearly printed on the bottom of the can.','Same nationwide.','',0],
+['c12','C','S','Shelf life','Hạn sử dụng','han soo zoong','Hạn sử dụng của sản phẩm là 18 tháng kể từ ngày sản xuất.','Product shelf life is 18 months from manufacture date.','Same nationwide.','',0],
+['c13','C','S','GMP certification','Chứng nhận GMP','choong nyan GMP','Nhà máy sản xuất đạt chứng nhận GMP quốc tế.','The manufacturing facility holds international GMP certification.','Same nationwide. GMP = Good Manufacturing Practice.','Key trust credential in the Vietnamese supplement market.',0],
+['c14','C','S','Lab testing','Kiểm nghiệm','kyem ngem','Tất cả lô hàng đều có phiếu kiểm nghiệm từ phòng lab độc lập.','All batches have test reports from an independent laboratory.','Same nationwide.','QR-linked test reports are a growing consumer trust tool.',0],
+['c15','C','S','Organic','Hữu cơ','hyoo kuh','Thành phần hữu cơ được chứng nhận USDA.','Organic ingredients are USDA certified.','Same nationwide.','',0],
+['c16','C','S','Natural','Tự nhiên','too nyen','Tất cả hương vị đều từ nguồn gốc tự nhiên.','All flavors are from natural sources.','Same nationwide.','',0],
+['c17','C','S','No preservatives','Không chất bảo quản','khong chat bow kwan','Organika Sparkling Electrolyte không chứa chất bảo quản nhân tạo.','Organika Sparkling Electrolyte contains no artificial preservatives.','Same nationwide.','Strong consumer benefit message in Vietnam.',0],
+['c18','C','S','Antioxidant','Chống oxy hóa','chong oxy hwa','Sản phẩm giàu chất chống oxy hóa từ trái cây tự nhiên.','The product is rich in antioxidants from natural fruits.','Same nationwide.','',0],
+['c19','C','S','Calcium','Canxi','can-see','Mỗi lon cung cấp 15% nhu cầu canxi hàng ngày.','Each can provides 15% of daily calcium needs.','Same nationwide.','',0],
+['c20','C','S','Zinc','Kẽm','kem','Kẽm hỗ trợ hệ miễn dịch và chức năng tế bào.','Zinc supports immune system and cellular function.','Same nationwide.','',0],
+// Functional Beverage — Organika specific
+['c21','C','S','Functional beverage','Đồ uống chức năng','doh oong chook nang','Thị trường đồ uống chức năng Việt Nam đang tăng trưởng nhanh.','The Vietnam functional beverage market is growing rapidly.','Same nationwide.','The category Organika Sparkling Electrolyte competes in.',0],
+['c22','C','S','Sparkling drink','Đồ uống có ga','doh oong co ga','Người tiêu dùng trẻ thích đồ uống có ga hơn đồ uống không ga.','Younger consumers prefer sparkling drinks over still drinks.','Same nationwide.','',0],
+['c23','C','S','Sparkling electrolyte drink','Nước điện giải có ga','nook dyen yai co ga','Organika Sparkling Electrolyte là nước điện giải có ga từ Canada.','Organika Sparkling Electrolyte is a sparkling electrolyte drink from Canada.','Same nationwide.','The full product description in Vietnamese.',0],
+['c24','C','S','Hydration / Rehydrate','Bù nước','boo nook','Uống ngay sau khi tập luyện để bù nước nhanh chóng.','Drink immediately after exercise to quickly rehydrate.','Same nationwide.','',0],
+['c25','C','S','Flavor','Hương vị','hoong vee','Organika Sparkling Electrolyte có ba hương vị độc đáo.','Organika Sparkling Electrolyte has three unique flavors.','Same nationwide.','',0],
+['c26','C','S','Raspberry flavor','Hương vị mâm xôi','hoong vee mam soy','Hương vị mâm xôi là loại bán chạy nhất tại thị trường thử nghiệm.','Raspberry flavor is the best seller in the test market.','Same nationwide. Mâm xôi is the standard Vietnamese word for raspberry/bramble berries.','',0],
+['c27','C','S','Passion fruit (Southern VN)','Chanh dây','chanh zay','Hương vị chanh dây thơm là sự kết hợp trái cây nhiệt đới độc đáo.','Passion fruit pineapple flavor is a unique tropical fruit combination.','Southern term. Northern VN: chanh leo or lạc tiên. In HCMC, chanh dây is standard.','Use chanh dây in HCMC. If in the North, say chanh leo.',0],
+['c28','C','S','Pineapple (Southern VN)','Thơm','thom','Hương vị chanh dây và thơm rất phổ biến ở miền Nam.','Passion fruit and pineapple flavor is very popular in the South.','Critical Southern dialect difference. South: thơm. North: dứa. Use thơm in HCMC.','This is one of the most important Southern dialect differences for food terms.',0],
+['c29','C','S','Lime','Chanh xanh','chanh sang','Hương vị chanh xanh và chanh vàng là hương vị cổ điển được mọi người yêu thích.','Lime and lemon flavor is a classic flavor loved by everyone.','Same nationwide. Chanh xanh = green citrus/lime.','',0],
+['c30','C','S','Lemon','Chanh vàng','chanh vang','Chanh vàng và chanh xanh kết hợp tạo nên hương vị cân bằng và sảng khoái.','Yellow lemon and green lime combine to create a balanced and refreshing flavor.','Same nationwide. Chanh vàng = yellow citrus/lemon.','In Southern VN, chanh by itself usually refers to the key lime. Specify chanh xanh/vàng to be clear.',0],
+['c31','C','S','Sugar-free','Không đường','khong duh-ung','Organika Sparkling Electrolyte không đường, dùng đường tự nhiên stevia.','Organika Sparkling Electrolyte is sugar-free, using natural stevia.','Same nationwide.','',0],
+['c32','C','S','Low calorie','Ít calo','it ka-lo','Ít calo là điểm thu hút người tiêu dùng quan tâm đến cân nặng.','Low calorie is an appeal point for weight-conscious consumers.','Same nationwide.','',0],
+['c33','C','S','Energy','Năng lượng','nang loong','Sản phẩm cung cấp năng lượng bền vững trong ngày.','The product provides sustained energy throughout the day.','Same nationwide.','',0],
+// Regulatory
+['c34','C','S','Import','Nhập khẩu','nyap khow','Quy trình nhập khẩu thực phẩm chức năng tại Việt Nam mất 3 đến 6 tháng.','The functional food import process in Vietnam takes 3 to 6 months.','Same nationwide.','',0],
+['c35','C','S','Export','Xuất khẩu','swat khow','Organika xuất khẩu sản phẩm sang 45 quốc gia.','Organika exports products to 45 countries.','Same nationwide.','',0],
+['c36','C','S','Customs','Hải quan','high kwan','Hàng phải qua kiểm tra hải quan tại cửa khẩu.','Goods must go through customs inspection at the port of entry.','Same nationwide.','',0],
+['c37','C','S','Customs clearance','Thông quan','thong kwan','Thời gian thông quan thường từ 3 đến 5 ngày làm việc.','Customs clearance usually takes 3 to 5 working days.','Same nationwide.','',0],
+['c38','C','S','Product registration','Đăng ký sản phẩm','dang kee san fam','Đăng ký sản phẩm với Cục An toàn thực phẩm là bắt buộc.','Product registration with the Food Safety Authority is mandatory.','Same nationwide.','',0],
+['c39','C','S','Ministry of Health','Bộ Y tế','boh ee teh','Bộ Y tế Việt Nam quản lý việc đăng ký thực phẩm chức năng.','Vietnam Ministry of Health oversees functional food registration.','Same nationwide.','',0],
+['c40','C','S','Food Safety Authority','Cục An toàn thực phẩm','kook an twan thook fam','Cục An toàn thực phẩm phê duyệt nhãn sản phẩm nhập khẩu.','The Food Safety Authority approves labels for imported products.','Same nationwide. Under the Ministry of Health.','',0],
+['c41','C','S','Labeling','Nhãn mác','nyan mak','Nhãn mác phải có tiếng Việt và tuân thủ quy định Bộ Y tế.','Labels must be in Vietnamese and comply with Ministry of Health regulations.','Same nationwide.','Vietnamese-language label is mandatory for all retail products.',0],
+['c42','C','S','Packaging','Bao bì','bow bee','Thiết kế bao bì phải được phê duyệt trước khi đưa ra thị trường.','Packaging design must be approved before going to market.','Same nationwide.','',0],
+['c43','C','S','4-pack of cans','Vỉ 4 lon','vee bon lon','Vỉ 4 lon là định dạng lý tưởng cho kệ siêu thị và thương mại điện tử.','The 4-pack is the ideal format for supermarket shelves and e-commerce.','Same nationwide.','This is the primary Organika Sparkling Electrolyte retail format.',0],
+['c44','C','S','Batch number','Số lô','so loh','Số lô được in trên đáy lon để truy xuất nguồn gốc.','Batch number is printed on the can bottom for traceability.','Same nationwide.','',0],
+['c45','C','S','Manufacture date','Ngày sản xuất','ngay san swat','Ngày sản xuất và hạn sử dụng đều được in rõ trên bao bì.','Both manufacture date and expiry date are clearly printed on packaging.','Same nationwide.','',0],
+['c46','C','S','Storage conditions','Điều kiện bảo quản','dyew kyen bow kwan','Bảo quản ở nhiệt độ phòng, tránh ánh nắng trực tiếp.','Store at room temperature, away from direct sunlight.','Same nationwide.','',0],
+['c47','C','S','Quality standard','Tiêu chuẩn chất lượng','tyew chwan chat loog','Tiêu chuẩn chất lượng của Organika vượt yêu cầu của Health Canada.','Organika quality standards exceed Health Canada requirements.','Same nationwide.','Health Canada certification is a powerful trust signal in VN.',0],
+['c48','C','S','Traceability','Truy xuất nguồn gốc','trwee swat ngwon gok','Mã QR trên sản phẩm cho phép truy xuất nguồn gốc đến tận trang trại.','QR code on product allows traceability back to the farm level.','Same nationwide.','Consumers increasingly value QR traceability, especially post-COVID.',0],
+['c49','C','S','Trademark / Brand mark','Nhãn hiệu','nyan hyew','Nhãn hiệu Organika được bảo hộ tại Việt Nam.','The Organika trademark is protected in Vietnam.','Same nationwide.','Register your trademark early in Vietnam.',0],
+['c50','C','S','Compliance','Tuân thủ','twan thoo','Tất cả sản phẩm Organika tuân thủ quy định quốc tế và Việt Nam.','All Organika products comply with international and Vietnamese regulations.','Same nationwide.','',0],
+// ═══════════════════ TIER D — FLUENCY AND NUANCE (SEEDED) ═══════════════════
+['d01','D','CU','Please (softer spoken form)','Làm ơn','lam un','Làm ơn giải thích thêm về điều khoản này.','Please explain more about this term.','Same nationwide. More colloquial than vui lòng.','Use làm ơn in spoken requests. Vui lòng in written communications.',0],
+['d02','D','CU','Please (formal, written)','Vui lòng','voy long','Vui lòng xác nhận đơn hàng qua email.','Please confirm the order by email.','Same nationwide.','Standard polite opener for written instructions and requests.',0],
+['d03','D','CU','I would like to propose','Tôi muốn đề xuất','toy mwon deh swat','Tôi muốn đề xuất một phương án hợp tác khác.','I would like to propose a different cooperation model.','Same nationwide.','Softer than: Tôi nghĩ chúng ta nên... Shows respect for their input.',0],
+['d04','D','CU','Let me check again','Để tôi kiểm tra lại','deh toy kyem tra lie','Để tôi kiểm tra lại với bộ phận kế toán và trả lời anh/chị sau.','Let me check again with accounting and reply to you later.','Same nationwide.','Buys time gracefully without committing or refusing.',0],
+['d05','D','CU','Unfortunately','Rất tiếc','rat tyeck','Rất tiếc, điều khoản này vượt ngoài thẩm quyền của tôi.','Unfortunately, this term is beyond my authority.','Same nationwide.','Always use rất tiếc before a refusal or bad news.',0],
+['d06','D','CU','I understand your perspective','Tôi hiểu quan điểm của anh/chị','toy hyew kwan dyem kwa anh/chi','Tôi hiểu quan điểm của anh/chị, và đây là góc nhìn của chúng tôi.','I understand your perspective, and here is our viewpoint.','Same nationwide.','Use before presenting a counter-argument. Avoids confrontation.',0],
+['d07','D','CU','Allow me to explain','Cho phép tôi giải thích','cho fep toy yai thik','Cho phép tôi giải thích lý do tại sao giá này phản ánh giá trị thực.','Allow me to explain why this price reflects the true value.','Same nationwide.','Signals respect before offering your view.',0],
+['d08','D','CU','However','Tuy nhiên','twee nyen','Tuy nhiên, chúng tôi vẫn cam kết hỗ trợ anh/chị tốt nhất.','However, we remain committed to supporting you to the best.','Same nationwide.','Gentle pivot word. Far softer than nhưng (but).',0],
+['d09','D','CU','I need more time to consider','Tôi cần thêm thời gian','toy kan them thoy zan','Tôi cần thêm thời gian để thảo luận với ban lãnh đạo.','I need more time to discuss with management.','Same nationwide.','A legitimate ask that is always respected in Vietnamese business.',0],
+['d10','D','CU','We will get back to you soon','Chúng tôi sẽ phản hồi sớm','choong toy seh fan hoy som','Chúng tôi sẽ phản hồi sớm, trong vòng 2 ngày làm việc.','We will get back to you soon, within 2 working days.','Same nationwide.','Always give a specific timeframe to show professionalism.',0],
+['d11','D','SM','Hello (on the phone)','Alo','ah-lo','Alo, xin hỏi đây có phải số của chị Linh không ạ?','Hello, is this Ms. Linh\'s number?','Same nationwide. Universal phone greeting in Vietnam.','Always greet with Alo then identify yourself.',0],
+['d12','D','SM','I will send via Zalo','Tôi sẽ gửi qua Zalo','toy seh gwee kwa Zalo','Tôi sẽ gửi báo giá qua Zalo ngay nhé.','I will send the quotation via Zalo right away.','Same nationwide. Zalo is the dominant messaging app in Vietnamese business.','Zalo is more important than email for day-to-day business in Vietnam.',0],
+['d13','D','SM','Do you have Zalo','Anh/Chị có số Zalo không','anh/chi co so Zalo khong','Anh/Chị có số Zalo không để tôi gửi catalogue?','Do you have Zalo so I can send you the catalogue?','Same nationwide.','Always ask for Zalo. It is the primary business communication channel in Vietnam.',0],
+['d14','D','SM','This is my phone number','Đây là số điện thoại của tôi','day la so dyen twie kwa toy','Đây là số điện thoại và Zalo của tôi, xin lưu lại nhé.','Here is my phone number and Zalo, please save it.','Same nationwide.','Combine with Zalo request for complete contact exchange.',0],
+['d15','D','SM','I will call back later','Tôi sẽ gọi lại sau','toy seh goy lie sow','Tôi sẽ gọi lại sau khi có thông tin từ phía công ty.','I will call back after getting information from the company.','Same nationwide.','',0],
+['d16','D','SM','Let\'s keep in touch','Giữ liên lạc nhé','yoo lyen lak nyeh','Giữ liên lạc nhé, chúng ta cập nhật nhau qua Zalo.','Let\'s keep in touch, we can update each other via Zalo.','Same nationwide. Nhé softens and warms the phrase.','Standard warm close to a meeting or call.',0],
+['d17','D','SM','Thank you for your cooperation','Cảm ơn sự hợp tác','kahm un soo hop tak','Cảm ơn sự hợp tác của anh/chị, tôi rất kỳ vọng vào mối quan hệ này.','Thank you for your cooperation, I have high hopes for this relationship.','Same nationwide.','',0],
+['d18','D','SM','Building trust','Xây dựng niềm tin','say zoong nyem tin','Xây dựng niềm tin là nền tảng của mọi mối quan hệ kinh doanh bền vững.','Building trust is the foundation of every sustainable business relationship.','Same nationwide.','In Vietnam, trust precedes transactions. This is not just a phrase.',0],
+['d19','D','SM','Long-term cooperation / partnership','Hợp tác lâu dài','hop tak low zie','Chúng tôi cam kết hợp tác lâu dài và đồng hành cùng sự phát triển của anh/chị.','We are committed to long-term cooperation and growing together with you.','Same nationwide.','',0],
+['d20','D','SM','I value this partnership','Tôi trân trọng sự hợp tác này','toy tran trong soo hop tak nay','Tôi trân trọng sự hợp tác này và mong cùng anh/chị phát triển lâu dài.','I value this partnership and hope to grow with you long-term.','Same nationwide.','A genuine relationship statement. Say this and mean it.',0],
+// ═══════════════════ TIER E — EXPERT AND SECTOR SPECIFIC (SEEDED) ═══════════════════
+['e01','E','F','Key account','Tài khoản khách hàng lớn','tie khwan khach hang lon','Các siêu thị lớn là tài khoản khách hàng lớn ưu tiên của chúng tôi.','Major supermarkets are our priority key accounts.','Same nationwide. KA or Key Account also used in English.','',0],
+['e02','E','F','Slotting fee','Phí vào kệ','fee vow keh','Phí vào kệ tại các siêu thị lớn có thể từ 5 đến 20 triệu đồng mỗi SKU.','Slotting fees at major supermarkets can range from 5 to 20 million dong per SKU.','Same nationwide.','Expect to pay slotting fees in modern trade. Budget for this.',0],
+['e03','E','F','Trade spend','Chi phí buôn bán','chi fee bwon ban','Chi phí buôn bán bao gồm chiết khấu, phí kệ, và ngân sách khuyến mãi.','Trade spend includes discounts, shelf fees, and promotion budgets.','Same nationwide.','',0],
+['e04','E','F','Quarterly business review','Xem xét kinh doanh hàng quý','sem set king zwanh hang kwee','Cuộc xem xét kinh doanh hàng quý sẽ đánh giá hiệu suất so với mục tiêu.','The quarterly business review will assess performance against targets.','Same nationwide.','QBRs with key accounts are standard in modern trade.',0],
+['e05','E','S','Functional food product registration','Đăng ký thực phẩm chức năng','dang kee thook fam chook nang','Hồ sơ đăng ký thực phẩm chức năng cần nộp lên Cục An toàn thực phẩm.','Functional food registration dossiers must be submitted to the Food Safety Authority.','Same nationwide.','2025 regulations require stricter documentation and testing evidence.',0],
+['e06','E','S','Product traceability','Truy xuất nguồn gốc','trwee swat ngwon gok','Người tiêu dùng có thể quét mã QR để truy xuất nguồn gốc từng lô hàng.','Consumers can scan the QR code to trace the origin of each batch.','Same nationwide.','QR traceability is a major trust-building tool vs grey market goods.',0],
+['e07','E','S','Technical specifications','Tiêu chuẩn kỹ thuật','tyew chwan kee thwat','Tiêu chuẩn kỹ thuật sản phẩm phải phù hợp với quy định Việt Nam.','Product technical specifications must comply with Vietnam regulations.','Same nationwide.','',0],
+['e08','E','S','Labeling regulations','Quy định ghi nhãn','kwee dinh ghee nyan','Quy định ghi nhãn năm 2025 yêu cầu đăng ký thông tin dinh dưỡng chi tiết.','2025 labeling regulations require detailed nutrition information registration.','Same nationwide.','Stricter rules from 2025 onward. Get regulatory advice early.',0],
+['e09','E','F','Competitive advantage','Lợi thế cạnh tranh','loy theh kan tranh','Lợi thế cạnh tranh của Organika là xuất xứ Canada và công thức độc quyền.','Organika\'s competitive advantage is Canadian origin and proprietary formulation.','Same nationwide.','',0],
+['e10','E','F','Brand positioning','Định vị thương hiệu','ding vee thuh-ung hyew','Định vị thương hiệu Organika là cao cấp, tự nhiên, và đáng tin cậy từ Canada.','Organika brand positioning is premium, natural, and trustworthy from Canada.','Same nationwide.','Canadian origin is a strategic positioning asset vs US, Korean, Japanese brands.',0],
+];
+/* Auto-map to full objects */
+const VOCAB=VRAW.map(([id,tier,cat,en,vi,phonetic,exVi,exEn,sNote,reg,af])=>({id,tier,category:CAT[cat]||cat,en,vi,phonetic,example_vi:exVi,example_en:exEn,southern_note:sNote,register:reg,accuracyFlag:!!af,status:'learning',box:1,correct:0,wrong:0}));
+
+/* ================================================================
+   SITUATIONS MODULE — 10 Complete Dialogues
+   ================================================================ */
+const SITUATIONS=[
+{id:'s01',title:'Opening a Buyer Meeting',titleVi:'Mở Đầu Cuộc Họp',context:'First meeting with a supermarket chain buyer in HCMC. You are Michael, Senior Sales Manager at Organika Canada.',culturalNote:'Spend 10 to 15 minutes on small talk before business. Ask about health, their city, the weather. Jumping straight to business feels abrupt. Self-deprecating about your Vietnamese is charming and well-received. Say Saigon, not Ho Chi Minh City, in casual talk with Southerners.',lines:[
+{role:'Buyer (Chi Linh)',you:false,vi:'Chào anh Michael, mời anh ngồi.',en:'Hello Michael, please have a seat.',ph:'chow anh Michael, moy anh ngoy'},
+{role:'Michael (You)',you:true,vi:'Cảm ơn chị Linh. Chị có khỏe không?',en:'Thank you Ms. Linh. How are you?',ph:'kahm un chi Linh. chi co khweh khong'},
+{role:'Buyer (Chi Linh)',you:false,vi:'Cảm ơn anh, tôi khỏe. Anh đến Việt Nam lần đầu không?',en:'Thank you, I am well. Is this your first time in Vietnam?',ph:'kahm un anh, toy khweh. anh den Vyet Nam lan dow khong'},
+{role:'Michael (You)',you:true,vi:'Không phải ạ, tôi đã đến đây mấy lần rồi. Tôi rất thích Sài Gòn.',en:'No, I have been here several times before. I really love Saigon.',ph:'khong fai ah, toy da den day may lan roi. toy rat thik Sai Gon'},
+{role:'Buyer (Chi Linh)',you:false,vi:'Anh nói tiếng Việt giỏi quá!',en:'Your Vietnamese is so good!',ph:'anh noy tyeng Vyet yoy wa'},
+{role:'Michael (You)',you:true,vi:'Ồ không, tôi còn đang học nhiều lắm. Chị nói quá lời rồi!',en:'Oh no, I am still learning a lot. You are too kind!',ph:'oh khong, toy kon dang hok nyew lam. chi noy wa loy roi'},
+{role:'Buyer (Chi Linh)',you:false,vi:'Hôm nay anh muốn giới thiệu sản phẩm gì?',en:'What product would you like to introduce today?',ph:'hom nay anh mwon yoy thyew san fam yee'},
+{role:'Michael (You)',you:true,vi:'Dạ, hôm nay tôi muốn giới thiệu Organika Sparkling Electrolyte, đồ uống chức năng có ga từ Canada.',en:'Yes, today I would like to introduce Organika Sparkling Electrolyte, a functional sparkling drink from Canada.',ph:'ya, hom nay toy mwon yoy thyew Organika Sparkling Electrolyte, doh oong chook nang co ga too Canada'}
+]},
+{id:'s02',title:'Quoting a Price',titleVi:'Báo Giá Sản Phẩm',context:'The buyer asks about pricing. You need to quote clearly and handle the VAT question.',culturalNote:'Always clarify whether your price is inclusive or exclusive of VAT. Buyers will always ask. Quote a range for large orders to show flexibility. Never lead with your highest price.',lines:[
+{role:'Buyer (Anh Tuan)',you:false,vi:'Anh có thể cho tôi biết giá sản phẩm không?',en:'Can you tell me the product price?',ph:'anh co theh cho toy byet ya san fam khong'},
+{role:'Michael (You)',you:true,vi:'Dạ, giá buôn cho vỉ 4 lon là 85,000 đồng. Giá lẻ đề xuất là 120,000 đồng.',en:'Yes, wholesale price per 4-pack is 85,000 dong. Suggested retail price is 120,000 dong.',ph:'ya, ya bwon cho vee bon lon la 85 nghin dong. ya leh deh swat la 120 nghin dong'},
+{role:'Buyer (Anh Tuan)',you:false,vi:'Còn giá cho đơn hàng lớn thì sao?',en:'What about the price for large orders?',ph:'kon ya cho don hang lon thi sow'},
+{role:'Michael (You)',you:true,vi:'Đặt từ 100 thùng trở lên, chiết khấu thêm 5%. Từ 500 thùng, chiết khấu 8%.',en:'For orders of 100 cases or more, an additional 5% discount. From 500 cases, an 8% discount.',ph:'dat too 100 thoong tro len, chyet khow them 5 fun tram. too 500 thoong, chyet khow 8 fun tram'},
+{role:'Buyer (Anh Tuan)',you:false,vi:'Giá chưa bao gồm VAT phải không?',en:'The price excludes VAT, right?',ph:'ya chuh-a bow gom VAT fai khong'},
+{role:'Michael (You)',you:true,vi:'Đúng vậy, giá chưa bao gồm thuế VAT 10%.',en:'Correct, the price excludes 10% VAT.',ph:'dung vay, ya chuh-a bow gom thway VAT 10 fun tram'},
+{role:'Buyer (Anh Tuan)',you:false,vi:'Phí vận chuyển thế nào?',en:'What about shipping costs?',ph:'fee van chween theh now'},
+{role:'Michael (You)',you:true,vi:'Miễn phí giao hàng cho đơn từ 200 thùng trong khu vực TPHCM.',en:'Free delivery for orders of 200 cases or more within HCMC.',ph:'myen fee yow hang cho don too 200 thoong trong khoo vook TPHCM'}
+]},
+{id:'s03',title:'Negotiating Margin and Discount',titleVi:'Đàm Phán Chiết Khấu',context:'A distributor wants a higher margin. You are negotiating the trade discount structure.',culturalNote:'Never say a hard no directly. Vietnamese negotiation is indirect. Offer a package (discount plus marketing support) rather than just raising the discount. Show you understand their P and L concerns.',lines:[
+{role:'Michael (You)',you:true,vi:'Chúng tôi đề xuất chiết khấu 20% cho nhà phân phối.',en:'We propose a 20% trade discount for distributors.',ph:'choong toy deh swat chyet khow 20 fun tram cho nya fun foy'},
+{role:'Buyer (Chi Ha)',you:false,vi:'20% hơi thấp. Chúng tôi cần ít nhất 25% để có lợi nhuận tốt.',en:'20% is a bit low. We need at least 25% to have good margins.',ph:'20 fun tram hoy thap. choong toy kan it nhat 25 fun tram deh co loy nyuan tot'},
+{role:'Michael (You)',you:true,vi:'Tôi hiểu. Ngoài chiết khấu, chúng tôi còn hỗ trợ ngân sách marketing 3% doanh thu.',en:'I understand. Besides the discount, we also provide a marketing support budget of 3% of revenue.',ph:'toy hyew. ngoai chyet khow, choong toy kon hoh tro ngan sach marketing 3 fun tram zwanh thu'},
+{role:'Buyer (Chi Ha)',you:false,vi:'Vậy tổng là 23%. Vẫn chưa đủ để cạnh tranh với các thương hiệu Hàn Quốc.',en:'So total is 23%. Still not enough to compete with Korean brands.',ph:'vay tong la 23 fun tram. van chuh-a doo deh kan tranh voi cac thuh-ung hyew Han Kwok'},
+{role:'Michael (You)',you:true,vi:'Chúng tôi có thể nâng lên 22% chiết khấu cộng 3% marketing. Đây là điều kiện tốt nhất tôi có thể đề xuất.',en:'We can increase to 22% discount plus 3% marketing. This is the best terms I can propose.',ph:'choong toy co theh nang len 22 fun tram chyet khow kong 3 fun tram marketing'},
+{role:'Buyer (Chi Ha)',you:false,vi:'Và điều khoản thanh toán?',en:'And the payment terms?',ph:'va dyew khwan tanh twan'},
+{role:'Michael (You)',you:true,vi:'30 ngày kể từ ngày giao hàng cho đơn đầu tiên. Sau đó chúng ta có thể xem xét linh hoạt hơn.',en:'30 days from delivery date for the first order. After that we can consider more flexibility.',ph:'30 ngay keh too ngay yow hang cho don dow tyen'},
+{role:'Buyer (Chi Ha)',you:false,vi:'Được. Để tôi trình lên ban giám đốc và phản hồi anh trong tuần này.',en:'Okay. Let me present to the board and get back to you this week.',ph:'dook. deh toy trinh len ban yam dok va fan hoy anh trong twan nay'}
+]},
+{id:'s04',title:'Handling "Your Price Is Too High"',titleVi:'Xử Lý Phản Đối Giá Cao',context:'A retail buyer says your product is too expensive compared to competitors. You need to defend your value without being defensive.',culturalNote:'Never argue. Acknowledge the concern first with tôi hiểu. Then pivot to value, not price. Use data where possible. Offer to send supporting materials rather than making claims in the room.',lines:[
+{role:'Buyer (Anh Duc)',you:false,vi:'Giá của anh cao hơn đối thủ cạnh tranh đến 30%.',en:'Your price is 30% higher than competitors.',ph:'ya kwa anh cow hon doi thoo kan tranh den 30 fun tram'},
+{role:'Michael (You)',you:true,vi:'Tôi hiểu sự lo ngại của anh. Cho phép tôi giải thích giá trị đằng sau con số đó.',en:'I understand your concern. Allow me to explain the value behind that number.',ph:'toy hyew soo lo ngai kwa anh. cho fep toy yai thik ya tri dang sau kon so do'},
+{role:'Buyer (Anh Duc)',you:false,vi:'Vâng, tôi đang lắng nghe.',en:'Yes, I am listening.',ph:'vang, toy dang lang ngeh'},
+{role:'Michael (You)',you:true,vi:'Organika là thương hiệu Canada với chứng nhận GMP quốc tế, thành phần tự nhiên, không đường và không chất bảo quản.',en:'Organika is a Canadian brand with international GMP certification, natural ingredients, no sugar and no preservatives.',ph:'Organika la thuh-ung hyew Canada voi choong nyan GMP kwok teh, tanh fun too nyen, khong duh-ung va khong chat bow kwan'},
+{role:'Buyer (Anh Duc)',you:false,vi:'Nhưng khách hàng của chúng tôi nhạy cảm về giá.',en:'But our customers are price-sensitive.',ph:'nyoong khach hang kwa choong toy nyai kam veh ya'},
+{role:'Michael (You)',you:true,vi:'Đúng, nhưng phân khúc sản phẩm chức năng cao cấp tại TPHCM đang tăng trưởng 20% mỗi năm. Đây là cơ hội.',en:'True, but the premium functional product segment in HCMC is growing 20% per year. This is an opportunity.',ph:'dung, nyoong fan khook san fam chook nang cow kap tai TPHCM dang tang troong 20 fun tram moi nam'},
+{role:'Buyer (Anh Duc)',you:false,vi:'Anh có dữ liệu thị trường không?',en:'Do you have market data?',ph:'anh co zoo lyew thi truh-ung khong'},
+{role:'Michael (You)',you:true,vi:'Dạ, tôi sẽ gửi báo cáo thị trường chi tiết và kết quả thử nghiệm tại các thị trường khác cho anh sau buổi họp này.',en:'Yes, I will send you a detailed market report and test market results from other markets after this meeting.',ph:'ya, toy seh gwee bow cow thi truh-ung chi tyeet va ket kwa thoo ngem tai cac thi truh-ung khac cho anh sau bwoi hop nay'}
+]},
+{id:'s05',title:'Discussing MOQ and Pack Configuration',titleVi:'Thảo Luận Số Lượng Tối Thiểu',context:'Discussing minimum order quantity and pack formats for Organika Sparkling Electrolyte. The buyer wants to start small.',culturalNote:'Always allow a buyer to start small. The trial order builds trust and proves your product. A Vietnamese buyer who says let me try first is a serious buyer.',lines:[
+{role:'Michael (You)',you:true,vi:'Đơn hàng tối thiểu tiêu chuẩn là 60 thùng, tức 20 thùng mỗi hương vị.',en:'Standard minimum order is 60 cases, meaning 20 cases per flavor.',ph:'don hang toy thyew tyew chwan la 60 thoong, took 20 thoong moi hoong vee'},
+{role:'Buyer (Chi Mai)',you:false,vi:'Chúng tôi muốn thử nhỏ hơn trước. Có thể bắt đầu từ 30 thùng không?',en:'We want to start with a smaller trial. Can we start from 30 cases?',ph:'choong toy mwon thoo nyo hon trook. co theh bat dow too 30 thoong khong'},
+{role:'Michael (You)',you:true,vi:'Cho đơn thử, tôi có thể sắp xếp 30 thùng — 10 thùng mỗi hương vị mâm xôi, chanh xanh chanh vàng, và chanh dây thơm.',en:'For a trial order, I can arrange 30 cases — 10 cases each of Raspberry, Lime Lemon, and Passion Fruit Pineapple.',ph:'cho don thoo, toy co theh sap sep 30 thoong — 10 thoong moi hoong vee mam soy, chanh sang chanh vang, va chanh zay thom'},
+{role:'Buyer (Chi Mai)',you:false,vi:'Tốt. Cả vỉ 4 lon lẫn lon đơn lẻ chứ?',en:'Good. Both 4-packs and single cans right?',ph:'tot. ca vee bon lon lan lon don leh choo'},
+{role:'Michael (You)',you:true,vi:'Đúng. Anh/Chị muốn tỉ lệ như thế nào giữa vỉ 4 lon và lon đơn?',en:'Correct. What ratio would you like between 4-packs and single cans?',ph:'dung. anh/chi mwon tee leh nyoo theh now yuh-a vee bon lon va lon don'},
+{role:'Buyer (Chi Mai)',you:false,vi:'70% vỉ 4 lon, 30% lon đơn.',en:'70% 4-packs, 30% single cans.',ph:'70 fun tram vee bon lon, 30 fun tram lon don'},
+{role:'Michael (You)',you:true,vi:'Được. Tôi có thể giao hàng trong 5 đến 7 ngày làm việc sau khi nhận cọc.',en:'Understood. I can deliver within 5 to 7 working days after receiving the deposit.',ph:'dook. toy co theh yow hang trong 5 den 7 ngay lam vyeck sau khi nyan kok'},
+{role:'Buyer (Chi Mai)',you:false,vi:'Khi nào tôi nhận được báo giá chính thức?',en:'When will I receive the official quotation?',ph:'khi now toy nyan dook bow ya chinh thook'}
+]},
+{id:'s06',title:'Arranging Delivery and Lead Time',titleVi:'Sắp Xếp Giao Hàng',context:'The buyer has a deadline and needs to know if you can deliver on time. You must be honest and give ranges, never a hard commitment.',culturalNote:'Never promise a specific date you cannot guarantee. Give ranges and explain what factors affect timing. If something delays, inform the buyer immediately. Surprises destroy trust in Vietnam.',lines:[
+{role:'Buyer (Anh Long)',you:false,vi:'Thời gian giao hàng thông thường của các anh là bao lâu?',en:'What is your usual delivery time?',ph:'thoy zan yow hang thong thuh-ung kwa cac anh la bow low'},
+{role:'Michael (You)',you:true,vi:'Với hàng có sẵn trong kho Việt Nam, thường từ 5 đến 7 ngày làm việc.',en:'For goods already in our Vietnam warehouse, usually 5 to 7 working days.',ph:'voi hang co san trong kho Vyet Nam, thuh-ung too 5 den 7 ngay lam vyeck'},
+{role:'Buyer (Anh Long)',you:false,vi:'Chúng tôi cần hàng trước ngày 15 tháng 8.',en:'We need the goods before August 15.',ph:'choong toy kan hang trook ngay 15 thang 8'},
+{role:'Michael (You)',you:true,vi:'Nếu anh xác nhận đơn hàng và chuyển cọc trước ngày 28 tháng 7, chúng tôi có thể đảm bảo giao trước ngày 10 tháng 8.',en:'If you confirm the order and transfer the deposit before July 28, we can ensure delivery before August 10.',ph:'new anh sak nyan don hang va chween kok trook ngay 28 thang 7, choong toy co theh dam bow yow trook ngay 10 thang 8'},
+{role:'Buyer (Anh Long)',you:false,vi:'Nếu giao trễ thì sao?',en:'What if delivery is late?',ph:'new yow treh thi sow'},
+{role:'Michael (You)',you:true,vi:'Chúng tôi cam kết thông báo ngay nếu có rủi ro chậm trễ và cập nhật tình trạng đơn hàng hàng ngày.',en:'We commit to notifying you immediately if there is any delay risk and updating you on order status daily.',ph:'choong toy kam ket thong bow ngay new co roo ee ro cham treh va cap nhat tinh trang don hang hang ngay'},
+{role:'Buyer (Anh Long)',you:false,vi:'Hàng giao đến kho hay đến từng cửa hàng?',en:'Is delivery to our warehouse or to individual stores?',ph:'hang yow den kho hay den toong kua hang'},
+{role:'Michael (You)',you:true,vi:'Giao đến kho trung tâm của anh/chị. Phí vận chuyển nội thành TPHCM miễn phí cho đơn từ 60 thùng trở lên.',en:'Delivery to your central warehouse. Shipping within HCMC is free for orders of 60 cases or more.',ph:'yow den kho troong tam kwa anh/chi. fee van chween noi tanh TPHCM myen fee cho don too 60 thoong tro len'}
+]},
+{id:'s07',title:'Pitching Organika Sparkling Electrolyte',titleVi:'Giới Thiệu Sản Phẩm Organika',context:'A retail floor pitch of Organika Sparkling Electrolyte. Use the real product, real flavors, real formats. This is your core sales script.',culturalNote:'Lead with the benefit, not the brand. Vietnamese buyers want to know what it does for their customers first. Then explain why Organika is the right source for that benefit. Canadian origin is a trust anchor.',lines:[
+{role:'Michael (You)',you:true,vi:'Hôm nay tôi muốn giới thiệu Organika Sparkling Electrolyte — đồ uống chức năng có ga từ Canada.',en:'Today I would like to introduce Organika Sparkling Electrolyte, a functional sparkling drink from Canada.',ph:'hom nay toy mwon yoy thyew Organika Sparkling Electrolyte — doh oong chook nang co ga too Canada'},
+{role:'Buyer (Chi Phuong)',you:false,vi:'Sản phẩm này khác gì so với nước có ga thông thường?',en:'How is this product different from regular sparkling water?',ph:'san fam nay khac yee so voi nook co ga thong thuh-ung'},
+{role:'Michael (You)',you:true,vi:'Organika Sparkling Electrolyte bổ sung chất điện giải thiết yếu, hỗ trợ miễn dịch và bù nước hiệu quả — không đường, không chất bảo quản nhân tạo.',en:'Organika Sparkling Electrolyte replenishes essential electrolytes, supports immunity and rehydrates effectively — no sugar, no artificial preservatives.',ph:'Organika Sparkling Electrolyte boh soong chat dyen yai thyeet yew, hoh tro myen zik va boo nook hyew kwa — khong duh-ung, khong chat bow kwan nyan tow'},
+{role:'Buyer (Chi Phuong)',you:false,vi:'Có những hương vị nào?',en:'What flavors are available?',ph:'co nyoong hoong vee now'},
+{role:'Michael (You)',you:true,vi:'Có ba hương vị: mâm xôi, chanh xanh và chanh vàng, và chanh dây với thơm.',en:'Three flavors: Raspberry, Lime and Lemon, and Passion Fruit with Pineapple.',ph:'co ba hoong vee: mam soy, chanh sang va chanh vang, va chanh zay voi thom'},
+{role:'Buyer (Chi Phuong)',you:false,vi:'Có dạng đóng gói gì?',en:'What packaging formats are available?',ph:'co zang dong goy yee'},
+{role:'Michael (You)',you:true,vi:'Có vỉ 4 lon và lon đơn lẻ. Vỉ 4 lon rất phù hợp để trưng bày trên kệ siêu thị và bán rất tốt trên Shopee và TikTok Shop.',en:'4-packs and single cans. The 4-pack is ideal for supermarket shelf display and sells very well on Shopee and TikTok Shop.',ph:'co vee bon lon va lon don leh. vee bon lon rat foo hop deh troong bay tren keh syew thi'},
+{role:'Buyer (Chi Phuong)',you:false,vi:'Người tiêu dùng mục tiêu là ai?',en:'Who is the target consumer?',ph:'ngoo-ee tyew zoong mook tyew la ai'},
+{role:'Michael (You)',you:true,vi:'Người tiêu dùng năng động, quan tâm đến sức khỏe, từ 20 đến 45 tuổi — đặc biệt phụ nữ và người đi làm tại TPHCM.',en:'Active, health-conscious consumers aged 20 to 45 — especially women and working professionals in HCMC.',ph:'ngoo-ee tyew zoong nang dong, kwan tam den sook khweh, too 20 den 45 twoy — dat byet foo noo va ngoo-ee dee lam tai TPHCM'},
+{role:'Buyer (Chi Phuong)',you:false,vi:'Anh có kế hoạch hỗ trợ marketing gì không?',en:'Do you have any marketing support plans?',ph:'anh co keh hwak hoh tro marketing yee khong'},
+{role:'Michael (You)',you:true,vi:'Dạ, chúng tôi hỗ trợ 3% doanh thu cho ngân sách marketing, bao gồm POSM, sampling tại điểm bán và hỗ trợ chạy quảng cáo trên Shopee.',en:'Yes, we provide 3% of revenue as marketing budget, covering POSM materials, in-store sampling, and Shopee advertising support.',ph:'ya, choong toy hoh tro 3 fun tram zwanh thu cho ngan sach marketing, bow gom POSM, sampling tai dyem ban va hoh tro chay kwang cao tren Shopee'}
+]},
+{id:'s08',title:'Taking and Confirming an Order',titleVi:'Nhận và Xác Nhận Đơn Hàng',context:'The buyer is ready to place an order. Confirm all details precisely, then confirm payment terms.',culturalNote:'Repeat the order back verbatim to avoid misunderstandings. Misquantities are common. Always confirm in writing (Zalo or email) after the verbal confirmation.',lines:[
+{role:'Buyer (Chi Ngoc)',you:false,vi:'Tôi muốn đặt 30 thùng mâm xôi, 20 thùng chanh xanh chanh vàng, và 10 thùng chanh dây thơm.',en:'I want to order 30 cases Raspberry, 20 cases Lime Lemon, and 10 cases Passion Fruit Pineapple.',ph:'toy mwon dat 30 thoong mam soy, 20 thoong chanh sang chanh vang, va 10 thoong chanh zay thom'},
+{role:'Michael (You)',you:true,vi:'Dạ, để tôi xác nhận lại: 30 thùng mâm xôi, 20 thùng chanh xanh chanh vàng, 10 thùng chanh dây thơm. Tổng cộng 60 thùng.',en:'Yes, let me confirm: 30 cases Raspberry, 20 cases Lime Lemon, 10 cases Passion Fruit Pineapple. Total 60 cases.',ph:'ya, deh toy sak nyan lie: 30 thoong mam soy, 20 thoong chanh sang chanh vang, 10 thoong chanh zay thom. tong kong 60 thoong'},
+{role:'Buyer (Chi Ngoc)',you:false,vi:'Đúng rồi. Điều khoản thanh toán thế nào?',en:'Correct. What are the payment terms?',ph:'dung roi. dyew khwan tanh twan theh now'},
+{role:'Michael (You)',you:true,vi:'Tiêu chuẩn là đặt cọc 30% khi xác nhận đơn, và thanh toán 70% còn lại khi nhận hàng.',en:'Standard is 30% deposit when confirming the order, and 70% balance on delivery.',ph:'tyew chwan la dat kok 30 fun tram khi sak nyan don, va tanh twan 70 fun tram kon lie khi nyan hang'},
+{role:'Buyer (Chi Ngoc)',you:false,vi:'Chúng tôi muốn thanh toán 30 ngày sau khi nhận hàng.',en:'We want to pay 30 days after receiving the goods.',ph:'choong toy mwon tanh twan 30 ngay sau khi nyan hang'},
+{role:'Michael (You)',you:true,vi:'Cho đơn đầu tiên, chúng tôi áp dụng điều khoản tiêu chuẩn. Sau khi có 2 đến 3 tháng hợp tác tốt, chúng ta hoàn toàn có thể xem xét điều khoản tốt hơn.',en:'For the first order we apply standard terms. After 2 to 3 months of good cooperation, we can certainly revisit better terms.',ph:'cho don dow tyen, choong toy ap zoong dyew khwan tyew chwan. sau khi co 2 den 3 thang hop tak tot'},
+{role:'Buyer (Chi Ngoc)',you:false,vi:'Được. Khi nào tôi nhận được đơn đặt hàng chính thức?',en:'Okay. When will I receive the official purchase order?',ph:'dook. khi now toy nyan dook don dat hang chinh thook'},
+{role:'Michael (You)',you:true,vi:'Tôi sẽ gửi đơn đặt hàng và hóa đơn cọc qua email và Zalo trong vòng 2 giờ.',en:'I will send the purchase order and deposit invoice by email and Zalo within 2 hours.',ph:'toy seh gwee don dat hang va hwa don kok kwa email va Zalo trong vong 2 yo'}
+]},
+{id:'s09',title:'Closing and Confirming Next Steps',titleVi:'Chốt Lại và Bước Tiếp Theo',context:'The meeting is ending well. You want to close on a high note and set clear next steps that maintain momentum.',culturalNote:'Always close with concrete next steps and a timeline. Vague meetings lead to vague follow-through. Vietnamese business relationships need momentum. Silences after a meeting suggest disinterest.',lines:[
+{role:'Michael (You)',you:true,vi:'Tôi rất vui vì chúng ta có buổi thảo luận hiệu quả hôm nay.',en:'I am very pleased we had such a productive discussion today.',ph:'toy rat voy vi choong ta co bwoi thao lwan hyew kwa hom nay'},
+{role:'Buyer (Chi Lan)',you:false,vi:'Tôi cũng vậy. Sản phẩm có tiềm năng tốt cho thị trường TPHCM.',en:'Same here. The product has good potential for the HCMC market.',ph:'toy koong vay. san fam co tyem nang tot cho thi truh-ung TPHCM'},
+{role:'Michael (You)',you:true,vi:'Bước tiếp theo là tôi sẽ gửi đề xuất chính thức và mẫu thử trong vòng 3 ngày làm việc. Chị có muốn nhận mẫu thử không?',en:'Next step: I will send the official proposal and product samples within 3 working days. Would you like to receive samples?',ph:'book tyep thew la toy seh gwee deh swat chinh thook va mow thoo trong vong 3 ngay lam vyeck'},
+{role:'Buyer (Chi Lan)',you:false,vi:'Dạ, tôi muốn thử sản phẩm trước khi quyết định.',en:'Yes, I want to try the product before deciding.',ph:'ya, toy mwon thoo san fam trook khi kwiyet dinh'},
+{role:'Michael (You)',you:true,vi:'Tôi sẽ gửi mẫu cả ba hương vị. Chị có thể chia sẻ phản hồi sau 5 ngày dùng thử được không?',en:'I will send samples of all three flavors. Can you share feedback after 5 days of trial?',ph:'toy seh gwee mow ca ba hoong vee. chi co theh chia seh fan hoy sau 5 ngay zoong thoo dook khong'},
+{role:'Buyer (Chi Lan)',you:false,vi:'Được. Liên lạc qua Zalo nhé, tôi phản hồi nhanh hơn.',en:'Okay. Contact me via Zalo, I respond faster there.',ph:'dook. lyen lak kwa Zalo nyeh, toy fan hoy nhanh hon'},
+{role:'Michael (You)',you:true,vi:'Dạ, tôi sẽ gửi số Zalo ngay bây giờ. Cảm ơn chị rất nhiều về thời gian và sự cởi mở hôm nay.',en:'Yes, I will send my Zalo right now. Thank you very much for your time and openness today.',ph:'ya, toy seh gwee so Zalo ngay bay yoh. kahm un chi rat nyew veh thoy zan va soo koy moh hom nay'},
+{role:'Buyer (Chi Lan)',you:false,vi:'Cảm ơn anh Michael. Hẹn gặp lại anh sớm!',en:'Thank you Michael. See you again soon!',ph:'kahm un anh Michael. hen gap lie anh som'}
+]},
+{id:'s10',title:'Small Talk Over Coffee or a Meal',titleVi:'Nói Chuyện Trong Bữa Ăn',context:'You are having lunch or coffee with a business contact before or after a meeting. This is where relationships are actually built in Vietnam.',culturalNote:'Sharing a meal is how Vietnamese business relationships are cemented. Accept everything offered. Try all the food. The host pays — do not fight for the bill. Ask about family, city, their opinion on things. Pivot to business naturally, not abruptly. The person who relaxes first signals trust.',lines:[
+{role:'Michael (You)',you:true,vi:'Cảm ơn anh/chị đã mời ăn trưa. Nhà hàng này ngon quá!',en:'Thank you for inviting me to lunch. This restaurant is so delicious!',ph:'kahm un anh/chi da moy an truh-a. nya hang nay ngon kwa'},
+{role:'Buyer (Anh Minh)',you:false,vi:'Anh ăn được đồ Việt Nam không? Cay không ngại chứ?',en:'Can you eat Vietnamese food? Not afraid of spicy right?',ph:'anh an dook doh Vyet Nam khong? kay khong ngai choo'},
+{role:'Michael (You)',you:true,vi:'Tôi rất thích đồ Việt Nam, đặc biệt là phở và bún bò Huế. Cay vừa vừa là được.',en:'I love Vietnamese food, especially pho and Bun Bo Hue. Moderately spicy is fine.',ph:'toy rat thik doh Vyet Nam, dat byet la foh va bun boh Hweh. kay vuh-a vuh-a la dook'},
+{role:'Buyer (Anh Minh)',you:false,vi:'Anh thích Sài Gòn không? So với Canada thế nào?',en:'Do you like Saigon? How does it compare to Canada?',ph:'anh thik Sai Gon khong? so voi Canada theh now'},
+{role:'Michael (You)',you:true,vi:'Thích lắm! Sài Gòn năng động và đầy sức sống. Canada đẹp nhưng yên tĩnh hơn nhiều. Ở đây tôi cảm thấy nhiều cơ hội hơn.',en:'Very much! Saigon is dynamic and full of energy. Canada is beautiful but much quieter. Here I feel more opportunities.',ph:'thik lam! Sai Gon nang dong va day sook song. Canada dep nyoong yen tinh hon nyew'},
+{role:'Buyer (Anh Minh)',you:false,vi:'Gia đình anh có ở đây không?',en:'Is your family here with you?',ph:'ya dinh anh co oh day khong'},
+{role:'Michael (You)',you:true,vi:'Không, vợ và hai con tôi ở Vancouver. Nhưng họ rất muốn đến Sài Gòn thăm. Nói anh nghe, vợ tôi rất muốn ăn bánh mì Sài Gòn.',en:'No, my wife and two children are in Vancouver. But they really want to visit Saigon. My wife especially wants to eat Saigon banh mi.',ph:'khong, vop va hai kon toy oh Vancouver. nyoong hoh rat mwon den Sai Gon tham'},
+{role:'Buyer (Anh Minh)',you:false,vi:'Mời cả gia đình sang chơi nhé! Sài Gòn luôn chào đón.',en:'Invite the whole family to come visit! Saigon always welcomes.',ph:'moy ca ya dinh sang choy nyeh! Sai Gon lwan chow don'},
+{role:'Michael (You)',you:true,vi:'Cảm ơn anh! Nhân tiện, anh thấy người tiêu dùng TPHCM đang thay đổi thói quen như thế nào sau COVID?',en:'Thank you! By the way, how do you see HCMC consumers changing their habits after COVID?',ph:'kahm un anh! nyan tyen, anh thay ngoo-ee tyew zoong TPHCM dang thay doy thoy kwen nyoo theh now sau COVID'},
+{role:'Buyer (Anh Minh)',you:false,vi:'Thay đổi rất nhiều. Người ta quan tâm đến sức khỏe hơn, sẵn sàng trả nhiều hơn cho sản phẩm chất lượng. Thị trường cho anh đang mở ra đó.',en:'Changing a lot. People care more about health, willing to pay more for quality products. The market is opening up for you.',ph:'thay doy rat nyew. ngoo-ee ta kwan tam den sook khweh hon, san sang tra nyew hon cho san fam chat loog'}
+]}
+];
+
+// ── INTEL MODULE ────────────────────────────────────────────────────────────
+const INTEL=[
+{id:'i01',title:'Supplement and Functional Beverage Market',icon:'📊',
+ sections:[
+  {h:'Market Size and Growth',pts:[
+   'Vietnam supplement market USD 1.1B (2023), projected USD 2B+ by 2028 (14% CAGR)',
+   'Functional beverage segment fastest growing subcategory, 18-22% YoY in urban markets',
+   'Ho Chi Minh City and Hanoi account for 60% of total supplement and functional food spend',
+   'Post-COVID health consciousness shift: 78% of urban Vietnamese say they now actively manage health',
+   'Electrolyte and hydration drinks growing fastest due to heat, active lifestyles, and sports culture boom',
+  ]},
+  {h:'Consumer Profile',pts:[
+   'Primary buyers: women 25-45, urban, ABC income class, Instagram and Facebook active',
+   'Secondary: male 20-35, gym-going, protein and performance interested',
+   'Premium import bias strong: Canadian and Australian origin products command 20-40% price premium',
+   'Key purchase drivers: brand country of origin, packaging, taste, influencer recommendation, then price',
+   'Trial is essential: 64% of urban consumers try before committing to repeat purchase',
+  ]},
+  {h:'Regulatory Environment',pts:[
+   'All supplements and functional foods must register with Ministry of Health (Bo Y Te)',
+   'Two pathways: full registration (GPKD) takes 12-18 months; self-declaration (Cong Bo San Pham) 2-4 months',
+   'Self-declaration allowed for food and functional food; registration required for health claim products',
+   'Label must include Vietnamese language; origin certificate (C/O) required for imports',
+   'No cold chain required for shelf-stable electrolyte beverages; ambient distribution viable',
+   'Health claims regulated: avoid absolute language ("cures", "treats"); use "supports" language',
+  ]},
+  {h:'Pricing and Positioning Benchmarks',pts:[
+   'International premium electrolyte 4-pack: VND 120,000-180,000 (USD 5-7.50)',
+   'Single serve pouch or can: VND 35,000-55,000 (USD 1.50-2.25)',
+   'Local coconut water competition at VND 15,000-25,000 single; position on functional benefit not vs coconut',
+   'Lacto-fermented and immune positioning commands 15-25% above plain hydration positioning',
+   'Sampling ROI extremely high in Vietnam: estimate 1 sample = 2.3 repeat buyers at modern trade',
+  ]},
+ ]},
+{id:'i02',title:'Brand and Product Positioning',icon:'🎯',
+ sections:[
+  {h:'Organika Sparkling Electrolyte at a Glance',pts:[
+   'Product: Organika Sparkling Electrolyte, functional beverage, sparkling, electrolyte and immune support',
+   'Flavors available: Raspberry, Lime Lemon, Passion Fruit Pineapple',
+   'Formats: 4-pack and single only (no bulk or loose)',
+   'Origin: Canada — use this aggressively; Canadian health products carry strong credibility in Vietnam',
+   'Key claims: electrolytes, hydration support, immune support (vitamin C and zinc typical in category)',
+   'Target retail position: premium shelf, eye-level, near other imported supplements and functional drinks',
+  ]},
+  {h:'How to Position vs. Local Competition',pts:[
+   'vs. Pocari Sweat (Japanese): Organika is cleaner ingredient profile, Canadian, functional supplement brand not sports drink brand',
+   'vs. Coconut water: different occasion — Organika is active and performance, not casual snack hydration',
+   'vs. Vitamin Water: Organika sparkling differentiates on electrolyte concentration and immune support stack',
+   'Lead with Canadian quality story first, then taste, then health benefit — order matters for Vietnamese buyer',
+   'Passion Fruit Pineapple is strongest flavor bridge for Vietnamese palate (familiar tropical flavor profile)',
+  ]},
+  {h:'Trade Pitch Framework',pts:[
+   'Open: Introduce Organika as Canadian health brand with 25+ year market presence',
+   'Category angle: functional beverage, sparkling, electrolyte plus immune — emerging premium subcategory',
+   'Margin story: target 35-40% retail margin; distributor 20-25%; MSP supports premium shelf positioning',
+   'Velocity data: if available, reference sell-through from Canadian or Asian market equivalents',
+   'Risk reduction: offer sale-or-return on first PO or 30-day trial window with buyback on unsold',
+   'Sampling budget: propose shared cost in-store demo program — standard practice at major chains',
+  ]},
+  {h:'Flavor Sequencing for Launch',pts:[
+   'Recommend leading with Raspberry and Passion Fruit Pineapple for initial listing',
+   'Passion Fruit Pineapple anchors to familiar Vietnamese tropical taste preference',
+   'Raspberry appeals to younger female health consumer familiar with Western berry flavor profiles',
+   'Lime Lemon: list after initial velocity confirmed — slightly more niche but strong with gym segment',
+   'All three flavors in 4-pack format for launch; introduce singles once velocity established',
+  ]},
+ ]},
+{id:'i03',title:'Channels and Distribution',icon:'🏪',
+ sections:[
+  {h:'Modern Trade (MT)',pts:[
+   'Key chains: WinMart (1,200+ stores), Coopmart (800+ stores), Lotte Mart, BigC/GO!, AEON',
+   'Listing fee: VND 5-20M per SKU per chain; negotiate inclusion in launch quarter promotion',
+   'Planogram: target 2 facings minimum, eye-level preferred, supplement or imported beverage aisle',
+   'Category captain role possible at smaller regional chains with strong Canadian premium brand story',
+   'Promotion calendar: Tet (Jan-Feb), Mothers Day, National Day (Sep 2), yearend are peak investment periods',
+   'WinMart fastest growing and most open to new international brands — prioritize for initial listing',
+  ]},
+  {h:'Pharmacy Channel (Nha Thuoc)',pts:[
+   'Long Chau (1,800+ locations) and Pharmacity (1,000+ locations) dominant and actively import direct',
+   'Supplement-forward positioning works extremely well — buyers understand functional health language',
+   'SKU rationalization aggressive: must show velocity within 90 days or face delisting',
+   'Placement adjacent to vitamins and minerals or sports nutrition sets',
+   'Pharmacist recommendation carries high conversion weight — consider sample program for staff',
+   'Long Chau especially strong in suburban and semi-urban: reach beyond central HCMC districts',
+  ]},
+  {h:'General Trade (GT)',pts:[
+   'Convenience and minimart (circle K, 7-Eleven, GS25, Ministop): 4,000+ locations in HCMC alone',
+   'C-store impulse purchase: single serve critical; 4-pack secondary if space allows',
+   'GT requires distributor network: HCMC minimum 3-5 distributors to achieve full coverage',
+   'Payment terms typical: 30-45 days net; insist on bank guarantee for first 2-3 orders',
+   'GT margins thinner but volume higher: do not over-discount or you create gray market to MT',
+   'Beck and Call, Thanh Cong, and Binh Minh are established GT distributors worth approaching',
+  ]},
+  {h:'E-Commerce and Social Commerce',pts:[
+   'Shopee and Lazada dominate online supplement sales; TikTok Shop rapidly gaining 18-30 demographic',
+   'Online allows trial without listing fee risk — recommended as parallel track not replacement',
+   'TikTok live commerce (ban hang truc tiep) drives massive trial spikes: partner with micro-KOLs (10K-100K followers)',
+   'Zalo Official Account: essential for B2B communication and wholesale order management',
+   'Facebook groups (suc khoe va lam dep) remain strong for health product word of mouth',
+   'Online price must be managed carefully: do not undercut MT or you lose shelf support quickly',
+  ]},
+ ]},
+{id:'i04',title:'Business Culture and Etiquette',icon:'🤝',
+ sections:[
+  {h:'Building Relationships (Quan He)',pts:[
+   'Business in Vietnam runs on quan he (relationships) — deals follow trust, not just terms',
+   'First meeting is almost never a decision meeting; it is a mutual assessment meeting',
+   'Coffee and meals are investments: accept every invitation, arrive slightly early, bring a small gift on second meeting',
+   'Age and seniority matter: address older contacts as Anh (male) or Chi (female) + first name always',
+   'Use someone\'s full title when unsure: Giam Doc (Director), Truong Phong (Department Head)',
+   'WeChat and Zalo relationship maintenance is normal: send occasional greetings, not just business asks',
+  ]},
+  {h:'Meeting Protocol',pts:[
+   'Business cards: present and receive with both hands; glance at card before placing it respectfully on table',
+   'Do not write on or fold a business card in the meeting — it signals disrespect',
+   'Decision makers often not present at first meeting; read the room before pitching hard',
+   'Silence and nodding does NOT mean agreement; it means they are processing or being polite',
+   'Direct "no" is rare; learn to read indirect signals: "we will consider", "the timing is not right", "we need to discuss internally"',
+   'PowerPoint or printed proposal expected for formal meetings at chain level',
+  ]},
+  {h:'Negotiation Style',pts:[
+   'Opening position is expected to have room; they will counter — build 10-15% cushion into your opening offer',
+   'Price sensitivity is expressed indirectly: "expensive compared to similar products" means reduce the price',
+   'Concessions should be given slowly and always framed as a special exception for the relationship',
+   'Bundle concessions: pair a price concession with a commitment (MOQ, exclusivity window, co-op marketing contribution)',
+   'Do not show urgency; it signals weak position — Vietnamese buyers are patient and will wait you out',
+   'Written MOU or letter of intent after verbal agreement is normal and expected before formal PO',
+  ]},
+  {h:'Practical Operator Tips',pts:[
+   'Zalo is the WhatsApp of Vietnam: use it for all day-to-day B2B communication after initial meeting',
+   'Always confirm meeting the day before via Zalo — schedules shift frequently',
+   'Bring printed materials and samples every meeting; do not rely on screen-only presentations',
+   'Vietnamese New Year (Tet) gift giving: fruit baskets, imported items, or product samples are appropriate',
+   'Avoid scheduling meetings the week before and after Tet (Jan-Feb): decisions freeze',
+   'When in doubt, over-thank. Express gratitude for time, hospitality, and consideration at every interaction',
+  ]},
+ ]},
+];
+
+// ── REGISTER PRIMER ──────────────────────────────────────────────────────────
+const PRIMER=[
+{id:'p01',title:'Pronouns and Address',content:`
+<p>Vietnamese has no single word for "I" or "you" — the right word depends on <strong>your age relative to the person you are speaking to</strong>. Getting this right signals respect and cultural fluency.</p>
+<table class="primer-table">
+<tr><th>Term</th><th>Means</th><th>Use When</th></tr>
+<tr><td><strong>Anh</strong></td><td>Older brother / you (male)</td><td>Speaking to or about a male buyer, partner, or contact similar age or older than you</td></tr>
+<tr><td><strong>Chị</strong></td><td>Older sister / you (female)</td><td>Speaking to or about a female buyer, partner, or contact similar age or older</td></tr>
+<tr><td><strong>Em</strong></td><td>Younger sibling / I (deferential)</td><td>Use as "I" when speaking to someone clearly senior or older; shows respect</td></tr>
+<tr><td><strong>Tôi</strong></td><td>I (neutral)</td><td>Safe neutral "I" in business settings when age difference unclear</td></tr>
+<tr><td><strong>Mình</strong></td><td>I / we (informal)</td><td>Used in casual and friendly conversation after rapport is established</td></tr>
+<tr><td><strong>Chúng tôi</strong></td><td>We (excludes listener)</td><td>Our company, our team — standard in business presentations</td></tr>
+<tr><td><strong>Bạn</strong></td><td>Friend / you</td><td>Peers and friends your age; less formal; avoid with senior buyers until relationship is warm</td></tr>
+</table>
+<p class="tip">Rule of thumb: If unsure of age, use <strong>Anh</strong> for men and <strong>Chị</strong> for women. It is always safer to be slightly deferential in Vietnam.</p>
+`},
+{id:'p02',title:'Southern vs. Northern Dialect',content:`
+<p>You are operating in Ho Chi Minh City (South Vietnam). Southern Vietnamese has several key differences from the Northern dialect (Hanoi standard).</p>
+<table class="primer-table">
+<tr><th>Feature</th><th>Northern (Hanoi)</th><th>Southern (HCMC) 🌴</th></tr>
+<tr><td>Letter "v"</td><td>Pronounced like English "v"</td><td>Often sounds like "y" in casual speech</td></tr>
+<tr><td>Letter "d"</td><td>Pronounced "z"</td><td>Pronounced "y" (same as gi)</td></tr>
+<tr><td>Tone count</td><td>6 distinct tones</td><td>6 tones, but hỏi and ngã often merge</td></tr>
+<tr><td>Vocabulary</td><td>Standard dictionary terms</td><td>Some different words (e.g. trái vs. quả for fruit)</td></tr>
+<tr><td>Pace</td><td>Moderate</td><td>Faster, more energetic</td></tr>
+<tr><td>Formality</td><td>Slightly more formal default</td><td>More direct and relaxed in business</td></tr>
+</table>
+<p class="tip">Phonetics in this app reflect Southern pronunciation. Your HCMC partners will understand you perfectly — do not worry about accent. Clarity and respect matter more than perfection.</p>
+`},
+{id:'p03',title:'Register: Formal vs. Informal',content:`
+<p>Vietnamese business language has clear register levels. Matching register to context shows sophistication.</p>
+<table class="primer-table">
+<tr><th>Register</th><th>When to Use</th><th>Example Signal Words</th></tr>
+<tr><td><strong>Formal</strong></td><td>First meetings, senior executives, written proposals</td><td>Kính gửi, Trân trọng, Xin phép, Tôi xin</td></tr>
+<tr><td><strong>Business Neutral</strong></td><td>Regular buyer meetings, negotiation, follow-up</td><td>Tôi muốn, Chúng tôi đề xuất, Anh/Chị có thể</td></tr>
+<tr><td><strong>Warm / Friendly</strong></td><td>After rapport established, meals, Zalo messages</td><td>Mình, Bạn, thật ra, thật sự, nhé</td></tr>
+</table>
+<p>Key particles that soften and warm your speech:</p>
+<ul>
+<li><strong>nhé</strong> — adds friendliness, signals shared understanding ("okay?" / "right?")</li>
+<li><strong>ạ</strong> — adds deference and politeness (used at end of sentences to elders)</li>
+<li><strong>dạ</strong> — Southern polite "yes", used at start of response to show respect</li>
+<li><strong>vâng</strong> — Northern polite "yes" (avoid in HCMC, use dạ instead)</li>
+<li><strong>thôi</strong> — signals conclusion or resignation ("okay then", "that's enough")</li>
+</ul>
+`},
+{id:'p04',title:'Six Tones of Vietnamese',content:`
+<p>Vietnamese is a tonal language. The same syllable with different tones is a completely different word. HCMC South uses all 6 tones.</p>
+<table class="primer-table">
+<tr><th>Tone</th><th>Mark</th><th>Description</th><th>Example</th><th>Meaning</th></tr>
+<tr><td>Flat (ngang)</td><td>(none)</td><td>Mid, level, held steady</td><td>ma</td><td>ghost</td></tr>
+<tr><td>Falling (huyền)</td><td>à</td><td>Low, falling, slightly creaky</td><td>mà</td><td>but / which</td></tr>
+<tr><td>Rising (sắc)</td><td>á</td><td>High, rising sharply</td><td>má</td><td>cheek / mom (South)</td></tr>
+<tr><td>Dipping (hỏi)</td><td>ả</td><td>Mid, dips then rises</td><td>mả</td><td>tomb</td></tr>
+<tr><td>Broken (ngã)</td><td>ã</td><td>Rising with glottal break (South: often like sắc)</td><td>mã</td><td>horse / code</td></tr>
+<tr><td>Heavy (nặng)</td><td>ạ</td><td>Low, falling, cut short</td><td>mạ</td><td>rice seedling</td></tr>
+</table>
+<p class="tip">Do not let tones paralyze you. In business context, your partners will understand from context. Focus on the tones of your key vocabulary: numbers, product names, and polite particles matter most.</p>
+`},
+];
+
+// ── APP STATE ────────────────────────────────────────────────────────────────
+let S={
+  screen:'home',       // current screen
+  xp:0,               // total XP earned
+  streak:0,           // consecutive days practiced
+  lastDay:'',         // date string of last practice
+  dailyGoal:20,       // XP goal per day
+  todayXP:0,          // XP earned today
+  practiceMode:'flashcard', // flashcard | quiz | drill
+  quizDir:'en2vi',    // en2vi | vi2en
+  activeCard:null,    // current vocab id in practice
+  activeLesson:[],    // lesson queue of vocab ids
+  lessonIdx:0,        // index in activeLesson
+  quizOptions:[],     // current quiz options
+  quizAnswer:null,    // selected answer id
+  situationId:null,   // active situation id
+  situationLine:0,    // active line index
+  intelId:null,       // active intel section id
+  placementQ:0,       // placement quiz question index
+  placementPool:[],   // shuffled vocab for placement
+  tierFilter:'all',   // tier filter on practice
+  catFilter:'all',    // category filter
+  flipped:false,      // flashcard face state
+  drillIdx:0,         // drill queue index
+  drillQueue:[],      // drill vocab queue
+};
+
+// Update vocab object on VOCAB array directly
+function getV(id){return VOCAB.find(v=>v.id===id);}
+
+// ── UTILITY ──────────────────────────────────────────────────────────────────
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function rand(a){return a[Math.floor(Math.random()*a.length)];}
+function today(){return new Date().toISOString().slice(0,10);}
+
+function onCorrect(v){
+  v.correct++;
+  v.box=Math.min(v.box+1,5);
+  const xp=[0,5,8,12,18,25][v.box]||5;
+  S.xp+=xp; S.todayXP+=xp;
+  checkStreak();
+}
+function onWrong(v){
+  v.wrong++;
+  v.box=Math.max(v.box-1,1);
+}
+function checkStreak(){
+  const td=today();
+  if(S.lastDay===td) return;
+  const yesterday=new Date(); yesterday.setDate(yesterday.getDate()-1);
+  const yd=yesterday.toISOString().slice(0,10);
+  S.streak=(S.lastDay===yd)?S.streak+1:1;
+  S.lastDay=td; S.todayXP=S.xp; // approximate
+}
+
+// Days until card is due again (simple Leitner intervals)
+const BOX_DAYS=[0,0,1,3,7,14,30];
+function isDue(v){
+  if(!v.lastSeen) return true;
+  const diff=(Date.now()-v.lastSeen)/86400000;
+  return diff>=(BOX_DAYS[v.box]||0);
+}
+
+// Build lesson queue from filtered due cards
+function buildLesson(tier='all',cat='all'){
+  let pool=VOCAB.filter(v=>{
+    const tOk=tier==='all'||v.tier===tier;
+    const cOk=cat==='all'||v.category===cat;
+    return tOk&&cOk&&isDue(v);
+  });
+  if(pool.length<5) pool=VOCAB.filter(v=>{
+    const tOk=tier==='all'||v.tier===tier;
+    const cOk=cat==='all'||v.category===cat;
+    return tOk&&cOk;
+  });
+  return shuffle(pool).slice(0,20).map(v=>v.id);
+}
+
+// ── SPEECH ───────────────────────────────────────────────────────────────────
+let _voices=[];
+function loadVoices(){_voices=speechSynthesis.getVoices();}
+if(typeof speechSynthesis!=='undefined'){
+  loadVoices();
+  speechSynthesis.addEventListener('voiceschanged',loadVoices);
+}
+function getViVoice(){
+  if(!_voices.length) _voices=speechSynthesis.getVoices();
+  return _voices.find(v=>v.lang.startsWith('vi'))||_voices.find(v=>v.lang.startsWith('zh'))||null;
+}
+function speak(text,lang='vi-VN'){
+  if(!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang=lang;
+  const vv=getViVoice();
+  if(vv) u.voice=vv;
+  u.rate=0.88; u.pitch=1;
+  speechSynthesis.speak(u);
+}
+
+// ── NAV ──────────────────────────────────────────────────────────────────────
+function go(screen,extra={}){
+  S.screen=screen;
+  Object.assign(S,extra);
+  render();
+}
+function render(){
+  const app=document.getElementById('root');
+  switch(S.screen){
+    case 'home':        app.innerHTML=renderHome(); break;
+    case 'practice':    app.innerHTML=renderPractice(); break;
+    case 'flashcard':   app.innerHTML=renderFlashcard(); break;
+    case 'quiz':        app.innerHTML=renderQuiz(); break;
+    case 'drill':       app.innerHTML=renderDrill(); break;
+    case 'situations':  app.innerHTML=renderSituations(); break;
+    case 'scenario':    app.innerHTML=renderScenario(); break;
+    case 'intel':       app.innerHTML=renderIntel(); break;
+    case 'intelDetail': app.innerHTML=renderIntelDetail(); break;
+    case 'review':      app.innerHTML=renderReview(); break;
+    case 'progress':    app.innerHTML=renderProgress(); break;
+    case 'export':      app.innerHTML=renderExport(); break;
+    case 'primer':      app.innerHTML=renderPrimer(); break;
+    case 'placement':   app.innerHTML=renderPlacement(); break;
+    default:            app.innerHTML=renderHome();
+  }
+  attachNav();
+}
+
+function navItem(id,icon,label){
+  const active=S.screen===id||
+    (id==='practice'&&['practice','flashcard','quiz','drill'].includes(S.screen))||
+    (id==='situations'&&['situations','scenario'].includes(S.screen))||
+    (id==='intel'&&['intel','intelDetail'].includes(S.screen));
+  return `<button class="nav-btn${active?' active':''}" onclick="go('${id}')" aria-label="${label}">
+    <span class="nav-icon">${icon}</span><span class="nav-label">${label}</span></button>`;
+}
+function nav(){
+  return `<nav class="bottom-nav">
+    ${navItem('home','🏠','Home')}
+    ${navItem('practice','📚','Practice')}
+    ${navItem('situations','🎭','Dialogues')}
+    ${navItem('intel','📊','Intel')}
+    ${navItem('review','⭐','Review')}
+    ${navItem('progress','📈','Progress')}
+  </nav>`;
+}
+function attachNav(){
+  // event delegation already on body — no extra attach needed
+}
+
+// ── HOME ─────────────────────────────────────────────────────────────────────
+function renderHome(){
+  const pct=Math.min(100,Math.round(S.todayXP/S.dailyGoal*100));
+  const mastered=VOCAB.filter(v=>v.box>=4).length;
+  const learning=VOCAB.filter(v=>v.box<=2&&v.correct>0).length;
+  const due=VOCAB.filter(v=>isDue(v)).length;
+  return `<div class="screen">
+  <header class="app-header">
+    <div class="header-logo"><img src="/logo.png" onerror="this.style.display='none'" style="height:32px;border-radius:6px"> <span class="brand-name">Organika Academy</span></div>
+    <div class="header-stats"><span class="streak-chip">🔥 ${S.streak}d</span><span class="xp-chip">⚡ ${S.xp} XP</span></div>
+  </header>
+  <main class="main-scroll">
+    <div class="hero-card">
+      <div class="hero-title">Chào mừng trở lại!</div>
+      <div class="hero-sub">Vietnamese Business Fluency for HCMC</div>
+      <div class="goal-bar-wrap">
+        <div class="goal-bar-label"><span>Daily Goal</span><span>${S.todayXP}/${S.dailyGoal} XP</span></div>
+        <div class="goal-bar"><div class="goal-fill" style="width:${pct}%"></div></div>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-card"><div class="stat-n">${mastered}</div><div class="stat-l">Mastered</div></div>
+      <div class="stat-card"><div class="stat-n">${learning}</div><div class="stat-l">Learning</div></div>
+      <div class="stat-card accent"><div class="stat-n">${due}</div><div class="stat-l">Due Now</div></div>
+    </div>
+    <div class="section-label">Quick Start</div>
+    <div class="action-grid">
+      <button class="action-card primary" onclick="startLesson('flashcard')">
+        <span class="ac-icon">🃏</span><span class="ac-label">Flashcards</span><span class="ac-sub">Tap to flip</span>
+      </button>
+      <button class="action-card" onclick="startLesson('quiz')">
+        <span class="ac-icon">🧠</span><span class="ac-label">Quiz</span><span class="ac-sub">4-choice test</span>
+      </button>
+      <button class="action-card" onclick="startLesson('drill')">
+        <span class="ac-icon">🎤</span><span class="ac-label">Speak</span><span class="ac-sub">Pronunciation drill</span>
+      </button>
+      <button class="action-card" onclick="go('placement')">
+        <span class="ac-icon">📋</span><span class="ac-label">Placement</span><span class="ac-sub">Where do you stand?</span>
+      </button>
+    </div>
+    <div class="section-label">Explore</div>
+    <div class="explore-list">
+      <button class="explore-row" onclick="go('situations')"><span>🎭</span><span>Role-Play Dialogues</span><span class="arrow">›</span></button>
+      <button class="explore-row" onclick="go('intel')"><span>📊</span><span>Vietnam Market Intel</span><span class="arrow">›</span></button>
+      <button class="explore-row" onclick="go('primer')"><span>📖</span><span>Pronoun and Register Guide</span><span class="arrow">›</span></button>
+      <button class="explore-row" onclick="go('review')"><span>⭐</span><span>Star Review</span><span class="arrow">›</span></button>
+      <button class="explore-row" onclick="go('progress')"><span>📈</span><span>Progress and Export</span><span class="arrow">›</span></button>
+    </div>
+    <div style="height:90px"></div>
+  </main>
+  ${nav()}</div>`;
+}
+function startLesson(mode){
+  S.activeLesson=buildLesson(S.tierFilter,S.catFilter);
+  S.lessonIdx=0; S.flipped=false;
+  if(mode==='flashcard'){S.activeCard=S.activeLesson[0]; go('flashcard');}
+  else if(mode==='quiz'){buildQuiz(); go('quiz');}
+  else if(mode==='drill'){S.drillQueue=[...S.activeLesson]; S.drillIdx=0; go('drill');}
+}
+
+// ── PRACTICE SCREEN ──────────────────────────────────────────────────────────
+function renderPractice(){
+  const tiers=['all','A','B','C','D','E'];
+  const cats=['all',...new Set(VOCAB.map(v=>v.category))];
+  return `<div class="screen">
+  <header class="screen-header"><span></span><span class="screen-title">Practice</span><span></span></header>
+  <main class="main-scroll" style="padding:16px">
+    <div class="section-label">Mode</div>
+    <div class="mode-pills">
+      <button class="pill${S.practiceMode==='flashcard'?' active':''}" onclick="S.practiceMode='flashcard';render()">Flashcards</button>
+      <button class="pill${S.practiceMode==='quiz'?' active':''}" onclick="S.practiceMode='quiz';render()">Quiz</button>
+      <button class="pill${S.practiceMode==='drill'?' active':''}" onclick="S.practiceMode='drill';render()">Speak</button>
+    </div>
+    ${S.practiceMode==='quiz'?`<div class="section-label">Direction</div>
+    <div class="mode-pills">
+      <button class="pill${S.quizDir==='en2vi'?' active':''}" onclick="S.quizDir='en2vi';render()">EN › VI</button>
+      <button class="pill${S.quizDir==='vi2en'?' active':''}" onclick="S.quizDir='vi2en';render()">VI › EN</button>
+    </div>`:''}
+    <div class="section-label">Tier</div>
+    <div class="mode-pills scroll-x">
+      ${tiers.map(t=>`<button class="pill${S.tierFilter===t?' active':''}" onclick="S.tierFilter='${t}';render()">${t==='all'?'All Tiers':t}</button>`).join('')}
+    </div>
+    <div class="section-label">Category</div>
+    <div class="mode-pills scroll-x">
+      ${cats.map(c=>`<button class="pill${S.catFilter===c?' active':''}" onclick="S.catFilter='${c==="all"?"all":c.replace(/'/g,"\\'")}';render()">${c==='all'?'All':c}</button>`).join('')}
+    </div>
+    <div style="height:16px"></div>
+    <button class="btn-primary full-w" onclick="startLesson('${S.practiceMode}')">Start Session</button>
+    <div style="height:90px"></div>
+  </main>
+  ${nav()}</div>`;
+}
+
+// ── FLASHCARD ────────────────────────────────────────────────────────────────
+function renderFlashcard(){
+  if(!S.activeLesson.length){return `<div class="screen"><div class="empty-state">No cards available. Adjust filters and try again.</div><button class="btn-back" onclick="go('practice')">Back</button></div>`;}
+  const id=S.activeLesson[S.lessonIdx];
+  const v=getV(id);
+  if(!v){go('practice');return '';}
+  const prog=S.lessonIdx+1;
+  const total=S.activeLesson.length;
+  return `<div class="screen">
+  <div class="lesson-header">
+    <button class="btn-back" onclick="go('practice')">✕</button>
+    <div class="lesson-progress"><div class="lp-bar"><div class="lp-fill" style="width:${Math.round(prog/total*100)}%"></div></div><span>${prog}/${total}</span></div>
+  </div>
+  <main class="main-scroll centered">
+    <div class="card-scene" onclick="flipCard()">
+      <div class="card-wrap${S.flipped?' flipped':''}">
+        <div class="card-face card-front">
+          <div class="card-tier-badge">Tier ${v.tier}</div>
+          <div class="card-cat">${v.category}</div>
+          <div class="card-main-text">${S.flipped?v.vi:v.en}</div>
+          ${!S.flipped?'':'<div class="card-phonetic">/ '+v.phonetic+' /</div>'}
+          <button class="speak-btn" onclick="event.stopPropagation();speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')" style="${S.flipped?'':'opacity:0;pointer-events:none'}">🔊</button>
+        </div>
+        <div class="card-face card-back">
+          <div class="card-cat">${v.category}</div>
+          <div class="card-main-text">${v.en}</div>
+          <div class="card-example">${v.example_vi}</div>
+          <div class="card-example-en">${v.example_en}</div>
+          ${v.southern_note?`<div class="card-south-note">🌴 ${v.southern_note}</div>`:''}
+          <button class="speak-btn speak-btn-back" onclick="event.stopPropagation();speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button>
+        </div>
+      </div>
+    </div>
+    <p class="tap-hint">${S.flipped?'How did you do?':'Tap card to reveal'}</p>
+    ${S.flipped?`<div class="grade-row">
+      <button class="grade-btn wrong" onclick="gradeCard(false)">Again</button>
+      <button class="grade-btn hard" onclick="gradeCard(null)">Hard</button>
+      <button class="grade-btn ok" onclick="gradeCard(true)">Got it</button>
+    </div>`:''}
+  </main>
+  </div>`;
+}
+function flipCard(){S.flipped=!S.flipped;render();}
+function gradeCard(ok){
+  const v=getV(S.activeLesson[S.lessonIdx]);
+  if(!v) return;
+  v.lastSeen=Date.now();
+  if(ok===true) onCorrect(v);
+  else if(ok===false) onWrong(v);
+  S.flipped=false;
+  S.lessonIdx++;
+  if(S.lessonIdx>=S.activeLesson.length){go('home');}
+  else{S.activeCard=S.activeLesson[S.lessonIdx];render();}
+}
+
+// ── QUIZ ─────────────────────────────────────────────────────────────────────
+function buildQuiz(){
+  const id=S.activeLesson[S.lessonIdx];
+  const v=getV(id);
+  if(!v) return;
+  S.quizAnswer=null;
+  let pool=VOCAB.filter(x=>x.id!==id);
+  const distractors=shuffle(pool).slice(0,3);
+  const opts=shuffle([v,...distractors]);
+  S.quizOptions=opts.map(o=>o.id);
+}
+function renderQuiz(){
+  if(!S.activeLesson.length) return `<div class="screen"><button onclick="go('practice')">Back</button></div>`;
+  const id=S.activeLesson[S.lessonIdx];
+  const v=getV(id);
+  if(!v){go('practice');return '';}
+  const prog=S.lessonIdx+1;
+  const total=S.activeLesson.length;
+  const prompt=S.quizDir==='en2vi'?v.en:v.vi;
+  const promptLabel=S.quizDir==='en2vi'?'English':'Vietnamese';
+  return `<div class="screen">
+  <div class="lesson-header">
+    <button class="btn-back" onclick="go('practice')">✕</button>
+    <div class="lesson-progress"><div class="lp-bar"><div class="lp-fill" style="width:${Math.round(prog/total*100)}%"></div></div><span>${prog}/${total}</span></div>
+  </div>
+  <main class="main-scroll" style="padding:16px">
+    <div class="quiz-prompt-label">${promptLabel}</div>
+    <div class="quiz-prompt">${prompt}
+      ${S.quizDir==='vi2en'?`<button class="speak-inline" onclick="speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button>`:''}
+    </div>
+    <div class="quiz-prompt-sub">Select the ${S.quizDir==='en2vi'?'Vietnamese':'English'} translation</div>
+    <div class="quiz-options">
+      ${S.quizOptions.map(oid=>{
+        const ov=getV(oid);
+        if(!ov) return '';
+        const label=S.quizDir==='en2vi'?ov.vi:ov.en;
+        let cls='quiz-opt';
+        if(S.quizAnswer!==null){
+          if(oid===id) cls+=' correct';
+          else if(oid===S.quizAnswer) cls+=' wrong';
+          else cls+=' faded';
+        }
+        return `<button class="${cls}" onclick="answerQuiz('${oid}')">${label}</button>`;
+      }).join('')}
+    </div>
+    ${S.quizAnswer!==null?`<div class="quiz-feedback ${S.quizAnswer===id?'correct-fb':'wrong-fb'}">
+      ${S.quizAnswer===id?'Correct! +XP':'Incorrect'}
+      <div class="quiz-reveal">${v.vi} — ${v.en}</div>
+      ${v.phonetic?`<div class="quiz-ph">/ ${v.phonetic} /</div>`:''}
+      <button class="speak-inline lg" onclick="speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊 Listen</button>
+      <button class="btn-primary" style="margin-top:12px" onclick="nextQuiz()">Continue</button>
+    </div>`:''}
+  </main>
+  </div>`;
+}
+function answerQuiz(oid){
+  if(S.quizAnswer!==null) return;
+  S.quizAnswer=oid;
+  const id=S.activeLesson[S.lessonIdx];
+  const v=getV(id);
+  if(v){v.lastSeen=Date.now(); oid===id?onCorrect(v):onWrong(v);}
+  render();
+}
+function nextQuiz(){
+  S.lessonIdx++;
+  if(S.lessonIdx>=S.activeLesson.length){go('home');}
+  else{buildQuiz();render();}
+}
+
+// ── DRILL ────────────────────────────────────────────────────────────────────
+function renderDrill(){
+  const queue=S.drillQueue;
+  if(!queue.length) return `<div class="screen"><div class="empty-state">No terms to drill.</div><button onclick="go('practice')">Back</button></div>`;
+  const id=queue[S.drillIdx];
+  const v=getV(id);
+  if(!v){go('practice');return '';}
+  const prog=S.drillIdx+1;
+  const total=queue.length;
+  return `<div class="screen">
+  <div class="lesson-header">
+    <button class="btn-back" onclick="go('practice')">✕</button>
+    <div class="lesson-progress"><div class="lp-bar"><div class="lp-fill" style="width:${Math.round(prog/total*100)}%"></div></div><span>${prog}/${total}</span></div>
+  </div>
+  <main class="main-scroll centered" style="padding:24px 16px">
+    <div class="drill-card">
+      <div class="drill-en">${v.en}</div>
+      <div class="drill-vi">${v.vi}</div>
+      <div class="drill-ph">/ ${v.phonetic} /</div>
+      ${v.southern_note?`<div class="drill-south">🌴 ${v.southern_note}</div>`:''}
+      <button class="speak-big" onclick="speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊 Listen</button>
+      <div class="drill-hint">Repeat aloud three times, then continue</div>
+    </div>
+    <div class="grade-row" style="margin-top:24px">
+      <button class="grade-btn wrong" onclick="nextDrill(false)">Needs Work</button>
+      <button class="grade-btn ok" onclick="nextDrill(true)">Nailed It</button>
+    </div>
+  </main>
+  </div>`;
+}
+function nextDrill(ok){
+  const v=getV(S.drillQueue[S.drillIdx]);
+  if(v){v.lastSeen=Date.now(); ok?onCorrect(v):onWrong(v);}
+  S.drillIdx++;
+  if(S.drillIdx>=S.drillQueue.length) go('home');
+  else render();
+}
+
+// ── SITUATIONS ───────────────────────────────────────────────────────────────
+function renderSituations(){
+  return `<div class="screen">
+  <header class="screen-header"><span></span><span class="screen-title">Role-Play Dialogues</span><span></span></header>
+  <main class="main-scroll" style="padding:16px">
+    <p class="screen-intro">Ten complete business dialogues for HCMC sales and distribution. Read, listen, and practice each line.</p>
+    ${SITUATIONS.map(s=>`<button class="sit-card" onclick="go('scenario',{situationId:'${s.id}',situationLine:0})">
+      <span class="sit-num">${s.id.replace('s','')}</span>
+      <span class="sit-info"><span class="sit-title">${s.title}</span><span class="sit-titlevi">${s.titleVi}</span></span>
+      <span class="arrow">›</span>
+    </button>`).join('')}
+    <div style="height:90px"></div>
+  </main>
+  ${nav()}</div>`;
+}
+
+function renderScenario(){
+  const sit=SITUATIONS.find(s=>s.id===S.situationId);
+  if(!sit) return `<div class="screen"><button onclick="go('situations')">Back</button></div>`;
+  const line=sit.lines[S.situationLine]||null;
+  return `<div class="screen">
+  <div class="lesson-header">
+    <button class="btn-back" onclick="go('situations')">‹</button>
+    <span class="screen-title" style="font-size:14px">${sit.title}</span>
+    <span style="font-size:12px;color:var(--tx2)">${S.situationLine+1}/${sit.lines.length}</span>
+  </div>
+  <main class="main-scroll" style="padding:16px">
+    <div class="sit-context">${sit.context}</div>
+    <div class="sit-culture">💡 ${sit.culturalNote}</div>
+    <div class="dialogue-wrap">
+      ${sit.lines.map((l,i)=>{
+        const past=i<S.situationLine;
+        const curr=i===S.situationLine;
+        const future=i>S.situationLine;
+        return `<div class="dlg-line ${l.you?'you':'them'} ${past?'past':curr?'curr':'future'}">
+          <div class="dlg-role">${l.role}</div>
+          <div class="dlg-vi">${l.vi}<button class="speak-micro" onclick="speak('${l.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button></div>
+          ${past||curr?`<div class="dlg-en">${l.en}</div>`:``}
+          ${past||curr?`<div class="dlg-ph">/ ${l.ph} /</div>`:``}
+        </div>`;
+      }).join('')}
+    </div>
+    <div class="scenario-nav">
+      ${S.situationLine>0?`<button class="btn-sec" onclick="S.situationLine--;render()">‹ Prev</button>`:`<span></span>`}
+      ${S.situationLine<sit.lines.length-1
+        ?`<button class="btn-primary" onclick="S.situationLine++;render()">Next ›</button>`
+        :`<button class="btn-primary" onclick="go('situations')">Done ✓</button>`}
+    </div>
+    <div style="height:30px"></div>
+  </main>
+  </div>`;
+}
+
+// ── INTEL ─────────────────────────────────────────────────────────────────────
+function renderIntel(){
+  return `<div class="screen">
+  <header class="screen-header"><span></span><span class="screen-title">Market Intel</span><span></span></header>
+  <main class="main-scroll" style="padding:16px">
+    <p class="screen-intro">Operator-grade Vietnam market intelligence for supplement and functional beverage.</p>
+    ${INTEL.map(i=>`<button class="intel-card" onclick="go('intelDetail',{intelId:'${i.id}'})">
+      <span class="intel-icon">${i.icon}</span>
+      <span class="intel-title">${i.title}</span>
+      <span class="arrow">›</span>
+    </button>`).join('')}
+    <div style="height:90px"></div>
+  </main>
+  ${nav()}</div>`;
+}
+
+function renderIntelDetail(){
+  const sec=INTEL.find(i=>i.id===S.intelId);
+  if(!sec) return `<div class="screen"><button onclick="go('intel')">Back</button></div>`;
+  return `<div class="screen">
+  <div class="lesson-header">
+    <button class="btn-back" onclick="go('intel')">‹</button>
+    <span class="screen-title" style="font-size:14px">${sec.title}</span>
+    <span></span>
+  </div>
+  <main class="main-scroll" style="padding:16px">
+    ${sec.sections.map(s=>`<div class="intel-section">
+      <div class="intel-sh">${s.h}</div>
+      <ul class="intel-list">${s.pts.map(p=>`<li>${p}</li>`).join('')}</ul>
+    </div>`).join('')}
+    <div style="height:30px"></div>
+  </main>
+  </div>`;
+}
+
+// ── REVIEW ───────────────────────────────────────────────────────────────────
+function renderReview(){
+  const starred=VOCAB.filter(v=>v.starred);
+  const struggling=VOCAB.filter(v=>v.box<=2&&v.wrong>v.correct).slice(0,30);
+  return `<div class="screen">
+  <header class="screen-header"><span></span><span class="screen-title">Review</span><span></span></header>
+  <main class="main-scroll" style="padding:16px">
+    <div class="section-label">Struggling Terms (${struggling.length})</div>
+    ${struggling.length?struggling.map(v=>renderReviewCard(v)).join(''):`<div class="empty-state">No struggling terms. Keep it up!</div>`}
+    <div class="section-label" style="margin-top:20px">Starred (${starred.length})</div>
+    ${starred.length?starred.map(v=>renderReviewCard(v)).join(''):`<div class="empty-state">Tap the star on any flashcard to bookmark.</div>`}
+    <div style="height:90px"></div>
+  </main>
+  ${nav()}</div>`;
+}
+function renderReviewCard(v){
+  return `<div class="rv-card">
+    <div class="rv-top">
+      <span class="rv-en">${v.en}</span>
+      <span class="rv-tier">Tier ${v.tier}</span>
+    </div>
+    <div class="rv-vi">${v.vi}</div>
+    <div class="rv-ph">/ ${v.phonetic} /</div>
+    <div class="rv-stats">Box ${v.box} · ${v.correct}✓ ${v.wrong}✗</div>
+    <button class="speak-micro" onclick="speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button>
+  </div>`;
+}
+
+// ── PROGRESS ─────────────────────────────────────────────────────────────────
+function renderProgress(){
+  const total=VOCAB.length;
+  const byTier={A:0,B:0,C:0,D:0,E:0};
+  const mastByTier={A:0,B:0,C:0,D:0,E:0};
+  VOCAB.forEach(v=>{byTier[v.tier]=(byTier[v.tier]||0)+1;if(v.box>=4)(mastByTier[v.tier]=(mastByTier[v.tier]||0)+1);});
+  return `<div class="screen">
+  <header class="screen-header"><span></span><span class="screen-title">Progress</span><span></span></header>
+  <main class="main-scroll" style="padding:16px">
+    <div class="prog-hero">
+      <div class="prog-xp">${S.xp} XP</div>
+      <div class="prog-streak">🔥 ${S.streak} day streak</div>
+    </div>
+    <div class="section-label">Mastery by Tier</div>
+    ${'ABCDE'.split('').map(t=>{
+      const tot=byTier[t]||0;const mas=mastByTier[t]||0;
+      const pct=tot?Math.round(mas/tot*100):0;
+      return `<div class="tier-prog-row">
+        <span class="tier-label">Tier ${t}</span>
+        <div class="tier-bar"><div class="tier-fill" style="width:${pct}%"></div></div>
+        <span class="tier-pct">${mas}/${tot}</span>
+      </div>`;
+    }).join('')}
+    <div class="section-label" style="margin-top:20px">Export and Import</div>
+    <button class="btn-primary full-w" onclick="go('export')">Save / Load Progress</button>
+    <button class="btn-danger full-w" style="margin-top:10px" onclick="confirmReset()">Reset All Progress</button>
+    <div style="height:90px"></div>
+  </main>
+  ${nav()}</div>`;
+}
+function confirmReset(){
+  if(confirm('Reset all progress? This cannot be undone.')) resetAll();
+}
+function resetAll(){
+  VOCAB.forEach(v=>{v.box=1;v.correct=0;v.wrong=0;v.lastSeen=null;v.starred=false;});
+  S.xp=0;S.streak=0;S.todayXP=0;S.lastDay='';
+  go('home');
+}
+
+// ── EXPORT / IMPORT ──────────────────────────────────────────────────────────
+function renderExport(){
+  return `<div class="screen">
+  <div class="lesson-header">
+    <button class="btn-back" onclick="go('progress')">‹</button>
+    <span class="screen-title">Save and Load</span>
+    <span></span>
+  </div>
+  <main class="main-scroll" style="padding:16px">
+    <div class="export-section">
+      <div class="export-label">Save Progress</div>
+      <p class="export-desc">Copy this text and save it somewhere safe (notes app, email). Paste it back to restore your progress.</p>
+      <textarea id="export-box" class="export-box" readonly onclick="this.select()">${exportProgress()}</textarea>
+      <button class="btn-primary full-w" onclick="document.getElementById('export-box').select();document.execCommand('copy');this.textContent='Copied!'">Copy to Clipboard</button>
+    </div>
+    <div class="export-section" style="margin-top:24px">
+      <div class="export-label">Load Progress</div>
+      <p class="export-desc">Paste your saved progress text below and tap Import.</p>
+      <textarea id="import-box" class="export-box" placeholder="Paste saved progress here..."></textarea>
+      <button class="btn-primary full-w" onclick="importProgress()">Import Progress</button>
+      <div id="import-msg" style="margin-top:8px;color:var(--g);font-weight:600;text-align:center"></div>
+    </div>
+    <div style="height:30px"></div>
+  </main>
+  </div>`;
+}
+function exportProgress(){
+  const state={xp:S.xp,streak:S.streak,lastDay:S.lastDay,todayXP:S.todayXP};
+  const vocab=VOCAB.map(v=>({id:v.id,box:v.box,correct:v.correct,wrong:v.wrong,lastSeen:v.lastSeen,starred:v.starred}));
+  return JSON.stringify({v:1,state,vocab});
+}
+function importProgress(){
+  const raw=document.getElementById('import-box').value.trim();
+  const msg=document.getElementById('import-msg');
+  try{
+    const d=JSON.parse(raw);
+    if(!d.vocab||!d.state) throw new Error('Invalid format');
+    Object.assign(S,d.state);
+    d.vocab.forEach(sv=>{
+      const v=getV(sv.id);
+      if(v){v.box=sv.box||1;v.correct=sv.correct||0;v.wrong=sv.wrong||0;v.lastSeen=sv.lastSeen||null;v.starred=sv.starred||false;}
+    });
+    msg.textContent='Progress loaded successfully!';
+    msg.style.color='var(--g)';
+    setTimeout(()=>go('progress'),1200);
+  }catch(e){
+    msg.textContent='Error: invalid save data. Please try again.';
+    msg.style.color='#c0392b';
+  }
+}
+
+// ── PRIMER ───────────────────────────────────────────────────────────────────
+function renderPrimer(){
+  return `<div class="screen">
+  <div class="lesson-header">
+    <button class="btn-back" onclick="go('home')">‹</button>
+    <span class="screen-title">Pronoun and Register Guide</span>
+    <span></span>
+  </div>
+  <main class="main-scroll" style="padding:16px">
+    ${PRIMER.map(p=>`<div class="primer-block">
+      <div class="primer-title">${p.title}</div>
+      <div class="primer-body">${p.content}</div>
+    </div>`).join('')}
+    <div style="height:30px"></div>
+  </main>
+  </div>`;
+}
+
+// ── PLACEMENT QUIZ ───────────────────────────────────────────────────────────
+function renderPlacement(){
+  if(!S.placementPool.length){
+    S.placementPool=shuffle(VOCAB.filter(v=>v.tier==='A'||v.tier==='B')).slice(0,15).map(v=>v.id);
+    S.placementQ=0;S.quizAnswer=null;
+  }
+  if(S.placementQ>=S.placementPool.length){
+    const score=VOCAB.filter(v=>v.id&&S.placementPool.includes(v.id)&&v.correct>0).length;
+    const pct=Math.round(score/S.placementPool.length*100);
+    let rec=pct>=80?'Tier C and D':'pct>=50?\'Tier B and C\':\'Tier A and B\'';
+    const recText=pct>=80?'Tier C and D':pct>=50?'Tier B and C':'Tier A and B';
+    return `<div class="screen">
+    <div class="lesson-header"><button class="btn-back" onclick="S.placementPool=[];go('home')">‹</button><span class="screen-title">Placement Result</span><span></span></div>
+    <main class="main-scroll centered" style="padding:32px 16px">
+      <div class="placement-result">
+        <div class="placement-score">${pct}%</div>
+        <div class="placement-label">${score} of ${S.placementPool.length} correct</div>
+        <div class="placement-rec">Recommended start: <strong>${recText}</strong></div>
+        <p>Set your tier filter in Practice to match your level and begin building vocabulary.</p>
+        <button class="btn-primary" onclick="S.placementPool=[];go('practice')">Go to Practice</button>
+      </div>
+    </main>
+    </div>`;
+  }
+  const id=S.placementPool[S.placementQ];
+  const v=getV(id);
+  if(!v){S.placementQ++;render();return '';}
+  if(!S.quizOptions||S.quizOptions[0]!==id){
+    let pool=VOCAB.filter(x=>x.id!==id);
+    const dist=shuffle(pool).slice(0,3);
+    S.quizOptions=shuffle([v,...dist]).map(o=>o.id);
+    S.quizAnswer=null;
+  }
+  return `<div class="screen">
+  <div class="lesson-header">
+    <button class="btn-back" onclick="S.placementPool=[];go('home')">✕</button>
+    <span class="screen-title">Placement Check</span>
+    <span style="font-size:12px;color:var(--tx2)">${S.placementQ+1}/${S.placementPool.length}</span>
+  </div>
+  <main class="main-scroll" style="padding:16px">
+    <div class="quiz-prompt-label">English</div>
+    <div class="quiz-prompt">${v.en}</div>
+    <div class="quiz-prompt-sub">Select the Vietnamese translation</div>
+    <div class="quiz-options">
+      ${S.quizOptions.map(oid=>{
+        const ov=getV(oid);if(!ov)return'';
+        let cls='quiz-opt';
+        if(S.quizAnswer!==null){if(oid===id)cls+=' correct';else if(oid===S.quizAnswer)cls+=' wrong';else cls+=' faded';}
+        return `<button class="${cls}" onclick="answerPlacement('${oid}')">${ov.vi}</button>`;
+      }).join('')}
+    </div>
+    ${S.quizAnswer!==null?`<div class="quiz-feedback ${S.quizAnswer===id?'correct-fb':'wrong-fb'}">
+      ${v.vi} — ${v.en}
+      <button class="btn-primary" style="margin-top:12px" onclick="S.placementQ++;S.quizAnswer=null;S.quizOptions=[];render()">Next</button>
+    </div>`:''}
+  </main>
+  </div>`;
+}
+function answerPlacement(oid){
+  if(S.quizAnswer!==null) return;
+  S.quizAnswer=oid;
+  const id=S.placementPool[S.placementQ];
+  const v=getV(id);
+  if(v&&oid===id) onCorrect(v);
+  render();
+}
+
+// ── EVENT DELEGATION ─────────────────────────────────────────────────────────
+document.addEventListener('click',function(e){
+  // All onclick attrs handle themselves; this is a fallback catch-all
+});
+
+// ── INIT ─────────────────────────────────────────────────────────────────────
+(function init(){
+  // ensure all VOCAB has defaults
+  VOCAB.forEach(v=>{
+    if(!v.box) v.box=1;
+    if(!v.correct) v.correct=0;
+    if(!v.wrong) v.wrong=0;
+    if(!v.lastSeen) v.lastSeen=null;
+    if(!v.starred) v.starred=false;
+  });
+  // set today for streak baseline
+  if(!S.lastDay) S.lastDay=today();
+  render();
+})();
+</script>
+</body>
+</html>
