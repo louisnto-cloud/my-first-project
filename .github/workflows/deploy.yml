@@ -5,6 +5,7 @@ on:
     branches:
       - claude/english-center-app-yylgv3
       - claude/pilgrimage-catholic-app-t572l3
+      - claude/organika-vietnamese-academy-xnzu6s
       - main
   workflow_dispatch:
 
@@ -16,7 +17,28 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Organika Academy is a single static HTML file — no build. On its feature
+  # branch (and main), overlay only /organika, leaving the rest of the site
+  # untouched.
+  deploy-organika:
+    if: github.ref == 'refs/heads/claude/organika-vietnamese-academy-xnzu6s'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stage Organika Academy
+        run: |
+          mkdir -p organika-site
+          cp organika-academy.html organika-site/index.html
+      - name: Publish /organika only
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./organika-site
+          destination_dir: organika
+          keep_files: true
+
   deploy:
+    if: github.ref != 'refs/heads/claude/organika-vietnamese-academy-xnzu6s'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -51,6 +73,10 @@ jobs:
         run: |
           mkdir -p dist/pilgrimage
           cp -r pilgrimage/out/. dist/pilgrimage/
+          if [ -f organika-academy.html ]; then
+            mkdir -p dist/organika
+            cp organika-academy.html dist/organika/index.html
+          fi
       - name: Publish full site
         if: github.ref == 'refs/heads/main' || hashFiles('pilgrimage/package.json') == ''
         uses: peaceiris/actions-gh-pages@v4
