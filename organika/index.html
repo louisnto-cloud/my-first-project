@@ -341,6 +341,24 @@ textarea:focus{border-color:var(--g)}
 .primer-table tr:last-child td{border-bottom:none}
 .tip{background:var(--tp);border-radius:8px;padding:10px 12px;font-size:12px;color:#7A3900;line-height:1.6;border-left:3px solid var(--t)}
 
+/* ── NEW COMPONENTS ── */
+.star-btn{position:absolute;top:10px;right:10px;background:none;border:none;font-size:26px;color:#E8B931;cursor:pointer;padding:6px;line-height:1;z-index:2}
+.rv-star{background:none;border:none;font-size:20px;color:#E8B931;cursor:pointer;padding:2px 6px;vertical-align:middle}
+.speed-chip{background:var(--gp);border:none;border-radius:20px;padding:8px 14px;font-size:12px;font-weight:700;color:var(--g);cursor:pointer;font-family:inherit;white-space:nowrap}
+.speed-chip.on{background:var(--t);color:var(--wh)}
+.card-audio-row{display:flex;align-items:center;gap:10px;margin-top:10px;width:100%}
+.practice-toggle-row{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:center}
+.summary-card{background:var(--wh);border-radius:var(--r);padding:32px 24px;box-shadow:var(--shd);text-align:center;width:100%;max-width:360px}
+.summary-emoji{font-size:52px;margin-bottom:8px}
+.summary-msg{font-size:18px;font-weight:800;color:var(--tx);margin-bottom:4px}
+.summary-pct{font-size:56px;font-weight:900;color:var(--g);line-height:1.1;margin-bottom:16px}
+.summary-stats{display:flex;gap:10px;justify-content:center;margin-bottom:24px}
+.sum-stat{flex:1;background:var(--bg);border-radius:12px;padding:12px 8px;display:flex;flex-direction:column;gap:2px}
+.sum-n{font-size:24px;font-weight:900}
+.sum-l{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--tx2)}
+.dict-input{width:100%;border:2px solid var(--bd);border-radius:var(--rs);padding:14px 16px;font-size:16px;background:var(--wh);outline:none;margin-bottom:14px;font-family:inherit}
+.dict-input:focus{border-color:var(--g)}
+
 /* ── PLACEMENT ── */
 .placement-result{text-align:center;padding:20px;max-width:340px}
 .placement-score{font-size:64px;font-weight:900;color:var(--g);line-height:1}
@@ -907,6 +925,14 @@ let S={
   flipped:false,      // flashcard face state
   drillIdx:0,         // drill queue index
   drillQueue:[],      // drill vocab queue
+  sessionRight:0,     // correct answers this session
+  sessionWrong:0,     // wrong answers this session
+  sessionXP:0,        // XP earned this session
+  audioSlow:false,    // slow playback toggle
+  hideMyLines:false,  // dialogue practice mode
+  lineRevealed:false, // current hidden line revealed
+  placementScore:0,   // placement quiz correct count
+  searchQ:'',         // dictionary search query
 };
 
 // Update vocab object on VOCAB array directly
@@ -922,11 +948,23 @@ function onCorrect(v){
   v.box=Math.min(v.box+1,5);
   const xp=[0,5,8,12,18,25][v.box]||5;
   S.xp+=xp; S.todayXP+=xp;
+  S.sessionRight++; S.sessionXP+=xp;
+  if(navigator.vibrate) navigator.vibrate(10);
   checkStreak();
 }
 function onWrong(v){
   v.wrong++;
   v.box=Math.max(v.box-1,1);
+  S.sessionWrong++;
+  if(navigator.vibrate) navigator.vibrate([30,40,30]);
+}
+function toggleStar(id){
+  const v=getV(id);
+  if(v){v.starred=!v.starred;render();}
+}
+function toggleSpeed(){S.audioSlow=!S.audioSlow;render();}
+function speedChip(){
+  return `<button class="speed-chip${S.audioSlow?' on':''}" onclick="event.stopPropagation();toggleSpeed()">${S.audioSlow?'🐢 Slow':'▶ Normal'}</button>`;
 }
 function checkStreak(){
   const td=today();
@@ -992,7 +1030,8 @@ function stopAudio(){
 function speak(text){
   stopAudio();
   if(navigator.onLine!==false){
-    const url='https://translate.google.com/translate_tts?ie=UTF-8&tl=vi&client=tw-ob&ttsspeed=0.9&q='+encodeURIComponent(text);
+    const spd=S.audioSlow?0.3:0.95;
+    const url='https://translate.google.com/translate_tts?ie=UTF-8&tl=vi&client=tw-ob&ttsspeed='+spd+'&q='+encodeURIComponent(text);
     const a=new Audio(url);
     _audio=a;
     a.onerror=()=>speakLocal(text);
@@ -1006,7 +1045,7 @@ function speakLocal(text){
   const vv=getViVoice();
   if(!vv){showVoiceTip();return;}
   const u=new SpeechSynthesisUtterance(text);
-  u.voice=vv; u.lang=vv.lang; u.rate=0.85; u.pitch=1;
+  u.voice=vv; u.lang=vv.lang; u.rate=S.audioSlow?0.55:0.85; u.pitch=1;
   speechSynthesis.speak(u);
 }
 let _tipShown=false;
@@ -1043,6 +1082,8 @@ function render(){
     case 'export':      app.innerHTML=renderExport(); break;
     case 'primer':      app.innerHTML=renderPrimer(); break;
     case 'placement':   app.innerHTML=renderPlacement(); break;
+    case 'summary':     app.innerHTML=renderSummary(); break;
+    case 'dict':        app.innerHTML=renderDict(); break;
     default:            app.innerHTML=renderHome();
   }
   attachNav();
@@ -1112,6 +1153,7 @@ function renderHome(){
     </div>
     <div class="section-label">Explore</div>
     <div class="explore-list">
+      <button class="explore-row" onclick="go('dict')"><span>🔎</span><span>Dictionary — search all terms</span><span class="arrow">›</span></button>
       <button class="explore-row" onclick="go('situations')"><span>🎭</span><span>Role-Play Dialogues</span><span class="arrow">›</span></button>
       <button class="explore-row" onclick="go('intel')"><span>📊</span><span>Vietnam Market Intel</span><span class="arrow">›</span></button>
       <button class="explore-row" onclick="go('primer')"><span>📖</span><span>Pronoun and Register Guide</span><span class="arrow">›</span></button>
@@ -1125,6 +1167,7 @@ function renderHome(){
 function startLesson(mode){
   S.activeLesson=buildLesson(S.tierFilter,S.catFilter);
   S.lessonIdx=0; S.flipped=false;
+  S.sessionRight=0; S.sessionWrong=0; S.sessionXP=0;
   if(mode==='flashcard'){S.activeCard=S.activeLesson[0]; go('flashcard');}
   else if(mode==='quiz'){buildQuiz(); go('quiz');}
   else if(mode==='drill'){S.drillQueue=[...S.activeLesson]; S.drillIdx=0; go('drill');}
@@ -1187,12 +1230,16 @@ function renderFlashcard(){
           <button class="speak-btn" onclick="event.stopPropagation();speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')" style="${S.flipped?'':'opacity:0;pointer-events:none'}">🔊</button>
         </div>
         <div class="card-face card-back">
+          <button class="star-btn" onclick="event.stopPropagation();toggleStar('${v.id}')">${v.starred?'★':'☆'}</button>
           <div class="card-cat">${v.category}</div>
           <div class="card-main-text">${v.en}</div>
           <div class="card-example">${v.example_vi}</div>
           <div class="card-example-en">${v.example_en}</div>
           ${v.southern_note?`<div class="card-south-note">🌴 ${v.southern_note}</div>`:''}
-          <button class="speak-btn speak-btn-back" onclick="event.stopPropagation();speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button>
+          <div class="card-audio-row">
+            <button class="speak-btn speak-btn-back" onclick="event.stopPropagation();speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button>
+            ${speedChip()}
+          </div>
         </div>
       </div>
     </div>
@@ -1205,7 +1252,14 @@ function renderFlashcard(){
   </main>
   </div>`;
 }
-function flipCard(){S.flipped=!S.flipped;render();}
+function flipCard(){
+  S.flipped=!S.flipped;
+  if(S.flipped){
+    const v=getV(S.activeLesson[S.lessonIdx]);
+    if(v) speak(v.vi);
+  }
+  render();
+}
 function gradeCard(ok){
   const v=getV(S.activeLesson[S.lessonIdx]);
   if(!v) return;
@@ -1214,7 +1268,7 @@ function gradeCard(ok){
   else if(ok===false) onWrong(v);
   S.flipped=false;
   S.lessonIdx++;
-  if(S.lessonIdx>=S.activeLesson.length){go('home');}
+  if(S.lessonIdx>=S.activeLesson.length){go('summary');}
   else{S.activeCard=S.activeLesson[S.lessonIdx];render();}
 }
 
@@ -1224,8 +1278,11 @@ function buildQuiz(){
   const v=getV(id);
   if(!v) return;
   S.quizAnswer=null;
-  let pool=VOCAB.filter(x=>x.id!==id);
-  const distractors=shuffle(pool).slice(0,3);
+  // distractors from same category are far harder to guess than random ones
+  const sameCat=shuffle(VOCAB.filter(x=>x.id!==id&&x.category===v.category));
+  const sameTier=shuffle(VOCAB.filter(x=>x.id!==id&&x.category!==v.category&&x.tier===v.tier));
+  const rest=shuffle(VOCAB.filter(x=>x.id!==id&&x.category!==v.category&&x.tier!==v.tier));
+  const distractors=[...sameCat,...sameTier,...rest].slice(0,3);
   const opts=shuffle([v,...distractors]);
   S.quizOptions=opts.map(o=>o.id);
 }
@@ -1278,12 +1335,12 @@ function answerQuiz(oid){
   S.quizAnswer=oid;
   const id=S.activeLesson[S.lessonIdx];
   const v=getV(id);
-  if(v){v.lastSeen=Date.now(); oid===id?onCorrect(v):onWrong(v);}
+  if(v){v.lastSeen=Date.now(); oid===id?onCorrect(v):onWrong(v); speak(v.vi);}
   render();
 }
 function nextQuiz(){
   S.lessonIdx++;
-  if(S.lessonIdx>=S.activeLesson.length){go('home');}
+  if(S.lessonIdx>=S.activeLesson.length){go('summary');}
   else{buildQuiz();render();}
 }
 
@@ -1307,7 +1364,10 @@ function renderDrill(){
       <div class="drill-vi">${v.vi}</div>
       <div class="drill-ph">/ ${v.phonetic} /</div>
       ${v.southern_note?`<div class="drill-south">🌴 ${v.southern_note}</div>`:''}
-      <button class="speak-big" onclick="speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊 Listen</button>
+      <div class="card-audio-row" style="justify-content:center">
+        <button class="speak-big" onclick="speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊 Listen</button>
+        ${speedChip()}
+      </div>
       <div class="drill-hint">Repeat aloud three times, then continue</div>
     </div>
     <div class="grade-row" style="margin-top:24px">
@@ -1321,8 +1381,12 @@ function nextDrill(ok){
   const v=getV(S.drillQueue[S.drillIdx]);
   if(v){v.lastSeen=Date.now(); ok?onCorrect(v):onWrong(v);}
   S.drillIdx++;
-  if(S.drillIdx>=S.drillQueue.length) go('home');
-  else render();
+  if(S.drillIdx>=S.drillQueue.length) go('summary');
+  else{
+    const nv=getV(S.drillQueue[S.drillIdx]);
+    if(nv) speak(nv.vi);
+    render();
+  }
 }
 
 // ── SITUATIONS ───────────────────────────────────────────────────────────────
@@ -1354,11 +1418,22 @@ function renderScenario(){
   <main class="main-scroll" style="padding:16px">
     <div class="sit-context">${sit.context}</div>
     <div class="sit-culture">💡 ${sit.culturalNote}</div>
+    <div class="practice-toggle-row">
+      <button class="pill${S.hideMyLines?' active':''}" onclick="S.hideMyLines=!S.hideMyLines;S.lineRevealed=false;render()">🎯 Practice: hide my lines</button>
+      ${speedChip()}
+    </div>
     <div class="dialogue-wrap">
       ${sit.lines.map((l,i)=>{
         const past=i<S.situationLine;
         const curr=i===S.situationLine;
-        const future=i>S.situationLine;
+        const hidden=S.hideMyLines&&l.you&&curr&&!S.lineRevealed;
+        if(hidden){
+          return `<div class="dlg-line you curr">
+            <div class="dlg-role">${l.role}</div>
+            <div class="dlg-en" style="font-size:14px;margin-top:0">Say it in Vietnamese: <b>"${l.en}"</b></div>
+            <button class="btn-sec" style="margin-top:10px;padding:9px 16px;font-size:13px" onclick="S.lineRevealed=true;render()">Show Vietnamese</button>
+          </div>`;
+        }
         return `<div class="dlg-line ${l.you?'you':'them'} ${past?'past':curr?'curr':'future'}">
           <div class="dlg-role">${l.role}</div>
           <div class="dlg-vi">${l.vi}<button class="speak-micro" onclick="speak('${l.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button></div>
@@ -1368,14 +1443,24 @@ function renderScenario(){
       }).join('')}
     </div>
     <div class="scenario-nav">
-      ${S.situationLine>0?`<button class="btn-sec" onclick="S.situationLine--;render()">‹ Prev</button>`:`<span></span>`}
+      ${S.situationLine>0?`<button class="btn-sec" onclick="S.situationLine--;S.lineRevealed=false;render()">‹ Prev</button>`:`<span></span>`}
       ${S.situationLine<sit.lines.length-1
-        ?`<button class="btn-primary" onclick="S.situationLine++;render()">Next ›</button>`
+        ?`<button class="btn-primary" onclick="advanceLine()">Next ›</button>`
         :`<button class="btn-primary" onclick="go('situations')">Done ✓</button>`}
     </div>
     <div style="height:30px"></div>
   </main>
   </div>`;
+}
+function advanceLine(){
+  const sit=SITUATIONS.find(s=>s.id===S.situationId);
+  if(!sit) return;
+  S.situationLine++;
+  S.lineRevealed=false;
+  const l=sit.lines[S.situationLine];
+  // auto-play the new line unless it is your hidden practice line
+  if(l&&!(S.hideMyLines&&l.you)) speak(l.vi);
+  render();
 }
 
 // ── INTEL ─────────────────────────────────────────────────────────────────────
@@ -1432,12 +1517,14 @@ function renderReviewCard(v){
   return `<div class="rv-card">
     <div class="rv-top">
       <span class="rv-en">${v.en}</span>
-      <span class="rv-tier">Tier ${v.tier}</span>
+      <span>
+        <button class="rv-star" onclick="toggleStar('${v.id}')">${v.starred?'★':'☆'}</button>
+        <span class="rv-tier">Tier ${v.tier}</span>
+      </span>
     </div>
-    <div class="rv-vi">${v.vi}</div>
+    <div class="rv-vi">${v.vi} <button class="speak-micro" onclick="speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button></div>
     <div class="rv-ph">/ ${v.phonetic} /</div>
     <div class="rv-stats">Box ${v.box} · ${v.correct}✓ ${v.wrong}✗</div>
-    <button class="speak-micro" onclick="speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button>
   </div>`;
 }
 
@@ -1478,6 +1565,60 @@ function resetAll(){
   VOCAB.forEach(v=>{v.box=1;v.correct=0;v.wrong=0;v.lastSeen=null;v.starred=false;});
   S.xp=0;S.streak=0;S.todayXP=0;S.lastDay='';
   go('home');
+}
+
+// ── SESSION SUMMARY ──────────────────────────────────────────────────────────
+function renderSummary(){
+  const total=S.sessionRight+S.sessionWrong;
+  const pct=total?Math.round(S.sessionRight/total*100):0;
+  const msg=pct>=90?'Xuất sắc! Outstanding!':pct>=70?'Giỏi lắm! Great work!':pct>=50?'Tốt! Keep going!':'Cố lên! You will get there!';
+  return `<div class="screen">
+  <main class="main-scroll centered" style="padding:40px 20px;justify-content:center">
+    <div class="summary-card">
+      <div class="summary-emoji">${pct>=70?'🎉':'💪'}</div>
+      <div class="summary-msg">${msg}</div>
+      <div class="summary-pct">${pct}%</div>
+      <div class="summary-stats">
+        <div class="sum-stat"><span class="sum-n" style="color:var(--gl)">${S.sessionRight}</span><span class="sum-l">Correct</span></div>
+        <div class="sum-stat"><span class="sum-n" style="color:#E07070">${S.sessionWrong}</span><span class="sum-l">Missed</span></div>
+        <div class="sum-stat"><span class="sum-n" style="color:var(--t)">+${S.sessionXP}</span><span class="sum-l">XP</span></div>
+      </div>
+      <button class="btn-primary full-w" onclick="startLesson(S.practiceMode)" style="margin-bottom:10px">Go Again</button>
+      <button class="btn-sec full-w" onclick="go('home')">Home</button>
+    </div>
+  </main>
+  </div>`;
+}
+
+// ── DICTIONARY ───────────────────────────────────────────────────────────────
+function normStr(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d');}
+function renderDict(){
+  const q=normStr(S.searchQ.trim());
+  const hits=q?VOCAB.filter(v=>normStr(v.en).includes(q)||normStr(v.vi).includes(q)).slice(0,40):[];
+  return `<div class="screen">
+  <div class="lesson-header">
+    <button class="btn-back" onclick="go('home')">‹</button>
+    <span class="screen-title">Dictionary</span>
+    <span></span>
+  </div>
+  <main class="main-scroll" style="padding:16px">
+    <input class="dict-input" type="search" placeholder="Search English or Vietnamese…" value="${S.searchQ.replace(/"/g,'&quot;')}"
+      oninput="S.searchQ=this.value;renderDictResults()" autocomplete="off">
+    <div id="dict-results">
+      ${q?(hits.length?hits.map(v=>renderReviewCard(v)).join(''):`<div class="empty-state">No matches for "${S.searchQ}"</div>`)
+        :`<div class="empty-state">Type to search all ${VOCAB.length} terms.<br>Diacritics optional — "chao" finds "chào".</div>`}
+    </div>
+    <div style="height:30px"></div>
+  </main>
+  </div>`;
+}
+function renderDictResults(){
+  const box=document.getElementById('dict-results');
+  if(!box) return;
+  const q=normStr(S.searchQ.trim());
+  const hits=q?VOCAB.filter(v=>normStr(v.en).includes(q)||normStr(v.vi).includes(q)).slice(0,40):[];
+  box.innerHTML=q?(hits.length?hits.map(v=>renderReviewCard(v)).join(''):`<div class="empty-state">No matches</div>`)
+    :`<div class="empty-state">Type to search all ${VOCAB.length} terms.</div>`;
 }
 
 // ── EXPORT / IMPORT ──────────────────────────────────────────────────────────
@@ -1553,12 +1694,11 @@ function renderPrimer(){
 function renderPlacement(){
   if(!S.placementPool.length){
     S.placementPool=shuffle(VOCAB.filter(v=>v.tier==='A'||v.tier==='B')).slice(0,15).map(v=>v.id);
-    S.placementQ=0;S.quizAnswer=null;
+    S.placementQ=0;S.quizAnswer=null;S.placementScore=0;
   }
   if(S.placementQ>=S.placementPool.length){
-    const score=VOCAB.filter(v=>v.id&&S.placementPool.includes(v.id)&&v.correct>0).length;
+    const score=S.placementScore;
     const pct=Math.round(score/S.placementPool.length*100);
-    let rec=pct>=80?'Tier C and D':'pct>=50?\'Tier B and C\':\'Tier A and B\'';
     const recText=pct>=80?'Tier C and D':pct>=50?'Tier B and C':'Tier A and B';
     return `<div class="screen">
     <div class="lesson-header"><button class="btn-back" onclick="S.placementPool=[];go('home')">‹</button><span class="screen-title">Placement Result</span><span></span></div>
@@ -1612,7 +1752,8 @@ function answerPlacement(oid){
   S.quizAnswer=oid;
   const id=S.placementPool[S.placementQ];
   const v=getV(id);
-  if(v&&oid===id) onCorrect(v);
+  if(v&&oid===id){onCorrect(v);S.placementScore++;}
+  if(v) speak(v.vi);
   render();
 }
 
