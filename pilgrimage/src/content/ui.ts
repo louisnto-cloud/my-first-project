@@ -185,6 +185,11 @@ export const UI = {
   guideReading: v('Reading aloud', 'Đang đọc'),
   guideTapToStop: v('Tap to stop', 'Chạm để dừng'),
 
+  // App update — a newer build is ready
+  updateReady: v('The road ahead has been repaved — a newer version is ready.', 'Con đường phía trước đã được làm mới — phiên bản mới đã sẵn sàng.'),
+  updateAction: v('Refresh', 'Làm mới'),
+  updateLater: v('Not now', 'Để sau'),
+
   // Bonus roads
   bonusRoads: v('Further roads', 'Những con đường xa hơn'),
   bonusLocked: v('Opens with your first stamp', 'Mở ra cùng con dấu đầu tiên của bạn'),
