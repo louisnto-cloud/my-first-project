@@ -1162,11 +1162,17 @@ function getViVoice(){
   };
   return vi.sort((a,b)=>score(b)-score(a))[0];
 }
-// One reusable player element (iOS is far more reliable replaying a single
-// unlocked element than creating a new Audio per tap). Two TTS endpoints are
-// tried before falling back to the device voice, and total failure shows a
-// help panel instead of silence.
-let _player=null,_speakSeq=0;
+// Audio strategy, in order:
+//   1. Google's Vietnamese neural voice (translate.googleapis.com, verified
+//      working). We wait for a real 'playing' event — if sound has not
+//      actually started within 1.5s we fall back, because a request that
+//      silently stalls is indistinguishable from success otherwise.
+//   2. Device speech synthesis. On iOS the voices list is often EMPTY until
+//      after the first utterance, so if no Vietnamese voice is listed we
+//      still speak with lang='vi-VN' and let iOS route to its built-in
+//      Vietnamese voice (Linh). Refusing to speak here was the old bug.
+const APP_VERSION='v5';
+let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
     _player=new Audio();
@@ -1176,51 +1182,72 @@ function getPlayer(){
   return _player;
 }
 function stopAudio(){
-  try{speechSynthesis.cancel();}catch(e){}
+  try{if(speechSynthesis.speaking||speechSynthesis.pending)speechSynthesis.cancel();}catch(e){}
   if(_player){try{_player.pause();}catch(e){}}
 }
-function ttsUrl(i,text){
+function ttsUrl(text){
   const spd=S.audioSlow?0.3:0.95;
-  const q=encodeURIComponent(text);
-  return i===0
-    ?'https://translate.googleapis.com/translate_tts?client=gtx&ie=UTF-8&tl=vi&ttsspeed='+spd+'&q='+q
-    :'https://translate.google.com/translate_tts?client=tw-ob&ie=UTF-8&tl=vi&ttsspeed='+spd+'&q='+q;
+  return 'https://translate.googleapis.com/translate_tts?client=gtx&ie=UTF-8&tl=vi&ttsspeed='+spd+'&q='+encodeURIComponent(text);
 }
 function speak(text){
   stopAudio();
   const seq=++_speakSeq;
   if(navigator.onLine===false){speakLocal(text,seq);return;}
-  tryTts(text,0,seq);
-}
-function tryTts(text,i,seq){
-  if(seq!==_speakSeq) return;           // a newer speak() superseded this one
-  if(i>=2){speakLocal(text,seq);return;}
   const p=getPlayer();
-  p.onerror=()=>tryTts(text,i+1,seq);
-  p.onstalled=null;
-  p.src=ttsUrl(i,text);
+  let started=false;
+  const fallback=()=>{if(started||seq!==_speakSeq)return;started=true;speakLocal(text,seq,true);};
+  p.onplaying=()=>{started=true;_lastPath='Google voice';setStatus('Playing: Google Vietnamese voice');};
+  p.onerror=fallback;
+  p.src=ttsUrl(text);
   const pr=p.play();
-  if(pr&&pr.catch) pr.catch(()=>tryTts(text,i+1,seq));
+  if(pr&&pr.catch) pr.catch(fallback);
+  setTimeout(fallback,1500);
 }
-function speakLocal(text,seq){
-  if(seq!==undefined&&seq!==_speakSeq) return;
-  if(!('speechSynthesis' in window)){showAudioHelp();return;}
-  const vv=getViVoice();
-  if(!vv){showAudioHelp();return;}
+function speakLocal(text,seq,force){
+  if(seq!==undefined&&seq!==_speakSeq&&!force) return;
+  if(!('speechSynthesis' in window)){setStatus('This browser has no speech support');return;}
+  try{if(speechSynthesis.speaking||speechSynthesis.pending)speechSynthesis.cancel();}catch(e){}
   const u=new SpeechSynthesisUtterance(text);
-  u.voice=vv; u.lang=vv.lang; u.rate=S.audioSlow?0.55:0.85; u.pitch=1;
+  const vv=getViVoice();
+  if(vv){u.voice=vv;u.lang=vv.lang;_lastPath='Device voice: '+vv.name;}
+  else{u.lang='vi-VN';_lastPath='Device voice (lang vi-VN)';}
+  u.rate=S.audioSlow?0.55:0.85; u.pitch=1; u.volume=1;
+  u.onstart=()=>setStatus('Playing: '+_lastPath);
+  u.onerror=()=>setStatus('Speech failed — check silent switch and volume');
   speechSynthesis.speak(u);
+  // iOS sometimes leaves the queue paused; nudge it
+  setTimeout(()=>{try{if(speechSynthesis.paused)speechSynthesis.resume();}catch(e){}},120);
+}
+function setStatus(msg){
+  const el=document.getElementById('audio-status');
+  if(el) el.textContent=msg;
+}
+// iOS unlock: the first real tap warms up the speech engine and voice list
+let _warmed=false;
+document.addEventListener('touchend',warmUp,{once:true});
+document.addEventListener('click',warmUp,{once:true});
+function warmUp(){
+  if(_warmed) return; _warmed=true;
+  try{
+    const u=new SpeechSynthesisUtterance(' ');
+    u.volume=0; speechSynthesis.speak(u);
+  }catch(e){}
+  loadVoices();
+  setTimeout(loadVoices,500);
 }
 function showAudioHelp(){
   if(document.getElementById('audio-help')) return;
+  const nv=(typeof speechSynthesis!=='undefined')?speechSynthesis.getVoices().length:0;
+  const vi=getViVoice();
   const d=document.createElement('div');
   d.id='audio-help';
   d.style.cssText='position:fixed;left:12px;right:12px;bottom:80px;z-index:999;background:#1A2721;color:#fff;border-radius:14px;padding:16px;font-size:13px;line-height:1.65;box-shadow:0 8px 30px rgba(0,0,0,.35)';
   d.innerHTML='<b>🔇 No sound? Check these in order:</b><br>'+
-    '1. Flip the <b>ring/silent switch</b> on the side of your iPhone — silent mode mutes speech audio.<br>'+
-    '2. Turn the <b>volume</b> up with the side buttons while the app is open.<br>'+
-    '3. Turn off Bluetooth if audio may be going to another device.<br>'+
-    '4. For offline audio: Settings › Accessibility › Spoken Content › Voices › Vietnamese › download <b>Linh</b>.<br>'+
+    '1. Flip the <b>ring/silent switch</b> on the side of your iPhone — orange showing means silent mode, which mutes speech.<br>'+
+    '2. Press <b>volume up</b> while the app is open.<br>'+
+    '3. Turn off Bluetooth if sound may be going to earbuds or a car.<br>'+
+    '4. Best offline voice: Settings › Accessibility › Spoken Content › Voices › Vietnamese › <b>Linh</b>.<br>'+
+    '<div id="audio-status" style="margin-top:8px;padding:8px 10px;background:rgba(255,255,255,.1);border-radius:8px;font-size:12px">App '+APP_VERSION+' · Voices: '+nv+(vi?' · Vietnamese: '+vi.name:' · No Vietnamese voice listed')+' · Tap Test</div>'+
     '<div style="display:flex;gap:8px;justify-content:flex-end;margin-top:10px">'+
     '<button onclick="speak(\'Xin chào! Rất vui được gặp bạn.\')" style="background:#2D6A4F;border:none;color:#fff;border-radius:10px;padding:9px 16px;font-weight:700;font-family:inherit">🔊 Test sound</button>'+
     '<button onclick="document.getElementById(\'audio-help\').remove()" style="background:#52B788;border:none;color:#fff;border-radius:10px;padding:9px 16px;font-weight:700;font-family:inherit">Close</button></div>';
@@ -1290,7 +1317,7 @@ function renderHome(){
   const due=VOCAB.filter(v=>isDue(v)).length;
   return `<div class="screen">
   <header class="app-header">
-    <div class="header-logo"><img src="/logo.png" onerror="this.style.display='none'" style="height:32px;border-radius:6px"> <span class="brand-name">Organika Academy</span></div>
+    <div class="header-logo"><span class="brand-name">Organika Academy</span> <span style="font-size:10px;opacity:.55;font-weight:600">${APP_VERSION}</span></div>
     <div class="header-stats"><span class="streak-chip">🔥 ${S.streak}d</span><span class="xp-chip">⚡ ${S.xp} XP</span></div>
   </header>
   <main class="main-scroll">
