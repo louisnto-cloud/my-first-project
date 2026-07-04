@@ -1,15 +1,22 @@
 'use client';
 
-// ─── The guide's voice: the story, read aloud ────────────────────────────────
-// On-device text-to-speech via the Web Speech API. Three things make it feel
-// less like a robot and more like a warm female companion:
+// ─── The guide's voice ────────────────────────────────────────────────────────
+// Four things make on-device TTS feel human rather than robotic:
 //
-//   1. We score voices using a detailed female-voice list AND actively penalise
-//      known male voices, so Daniel never wins over Libby or Serena.
-//   2. We give online (Neural/Natural) cloud voices a large bonus — they are
-//      dramatically warmer than the local synthesised fallbacks.
-//   3. We speak sentence-by-sentence with a 200 ms breath between thoughts, so
-//      the guide has cadence rather than flat machine speed.
+//   1. Voice selection: we seek out known female voices by name and URI,
+//      and actively penalise every known male voice (−40) so Daniel, Ryan,
+//      Guy, etc. can never win. Siri Female URIs and online/Neural voices
+//      score highest; local synthesised fallbacks score lowest.
+//
+//   2. Text humanisation: abbreviations are expanded (St. → Saint), acronyms
+//      spelled out (RCIA → R. C. I. A.), ordinals written (1st → first), and
+//      em dashes converted to comma-pauses before the engine ever sees the text.
+//
+//   3. Clause breathing: long sentences are split at comma/semicolon boundaries
+//      and each clause gets a short 100 ms pause; full-stop sentences get a
+//      380 ms pause. This mimics the rhythm of a real reader.
+//
+//   4. Unhurried rate (0.87) and natural pitch (1.0 — don't fight the voice).
 
 import { useCallback, useEffect, useState } from 'react';
 import type { Lang } from '@/lib/storage';
@@ -43,48 +50,51 @@ if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
 }
 
 // ─── Voice preference ────────────────────────────────────────────────────────
-// Female voices, ordered from most preferred to least. The guide should sound
-// like a warm, calm woman — soft British accent where available.
+// Ordered from most preferred to least. The scoring function checks name + URI,
+// so "siri_female_en-GB_compact" and "Siri Female Voice" both match.
 
 const FEMALE_VOICES = [
-  // British female — the primary target
-  'serena',             // Apple Serena (en-GB, Premium) — gold standard on iOS/macOS
-  'libby',              // Microsoft Libby Online (Natural) — best on Edge/Chrome
+  // Apple Siri female — best quality on iOS/macOS if accessible
+  'siri_female',        // URI: com.apple.ttsbundle.siri_female_en-GB_compact
+  'siri female',        // display name variant: "Siri Voice 2 (English UK, Female)"
+  // Generic catch-all: any voice whose name or URI contains the word 'female'
+  // This covers Google UK English Female, Siri Female URIs, and any future voices.
+  'female',
+  // British female — primary fallback after Siri
+  'serena',             // Apple Serena (en-GB, Premium) — gold standard on macOS
+  'libby',              // Microsoft Libby Online (Natural) — excellent on Edge/Chrome
   'mia',                // Microsoft Mia Online (Natural)
-  'hazel',              // Microsoft Hazel (en-GB)
+  'hazel',              // Microsoft Hazel (en-GB desktop)
   'martha',             // Apple Martha (en-GB)
   'helena',             // Apple Helena (en-GB)
   'susan',              // Microsoft Susan Online (Natural)
-  'grace',              // en-GB Grace (various platforms)
-  'emma',               // en-GB Emma (various)
-  'kate',               // en-GB Kate (various)
-  'emily',              // en-GB Emily (various)
-  'uk english female',  // Google UK English Female (Android/Chrome)
-  // Irish/Australian — warm, gentle accents; preferred over American male
+  'grace', 'emma', 'kate', 'emily', 'claire', 'alice',
+  // Irish / Australian — warm, gentle accents; preferred over flat American
   'moira',              // Apple Moira (en-IE)
   'karen',              // Apple Karen (en-AU)
   'catherine',          // Apple Catherine (en-AU)
   // American female — solid fallbacks
-  'samantha', 'ava', 'allison', 'tessa', 'fiona',
-  'aria', 'jenny',
+  'samantha', 'ava', 'allison', 'tessa', 'fiona', 'aria', 'jenny',
   // Vietnamese female
   'hoaimy',             // Microsoft HoaiMy Online (Natural, vi-VN)
-  'linh',               // Various vi-VN Linh voices
+  'linh',
 ];
 
-// Male voices are actively penalised — the guide must not sound like a man.
-// Daniel in particular is the default en-GB voice on Apple and Microsoft; it
-// would otherwise win purely because of the British-English bonus.
+// Active penalty: these voices must never be chosen as the guide.
+// Daniel is the default en-GB voice on Apple AND Microsoft — it would otherwise
+// win by default on most devices due to the British-English accent bonus.
 const MALE_VOICES = [
-  'daniel',             // Apple/Microsoft Daniel (en-GB) — most commonly mis-selected
+  'daniel',             // Apple/Microsoft Daniel (en-GB) — the #1 offender
   'ryan',               // Microsoft Ryan Online (Natural, en-GB)
-  'james', 'george', 'rishi',
+  'james', 'george', 'rishi', 'liam', 'thomas',
+  'siri_male',          // URI: com.apple.ttsbundle.siri_male_en-GB_compact
+  'siri male',          // display name variant
   'uk english male',    // Google UK English Male
-  'oliver', 'aaron', 'nathan', 'guy',
+  'oliver', 'aaron', 'nathan', 'guy', 'fred',
   'namminh',            // Microsoft NamMinh Online (vi-VN, male)
 ];
 
-// Quality markers — lift any voice above its robotic local fallbacks.
+// Neural / quality markers — lift any voice above its local synthesised sibling.
 const QUALITY = ['natural', 'neural', 'premium', 'enhanced', 'wavenet', 'siri'];
 
 function voiceScore(v: SpeechSynthesisVoice, lang: Lang): number {
@@ -95,25 +105,26 @@ function voiceScore(v: SpeechSynthesisVoice, lang: Lang): number {
     const lc = v.lang?.toLowerCase() ?? '';
     // British English is the guide's home accent.
     if (lc.startsWith('en-gb')) s += 40;
-    // Irish and Australian are also soft, gentle accents — prefer over American.
-    else if (/^en-(ie|au|nz)/.test(lc)) s += 10;
+    // Irish and Australian are soft and warm — prefer over flat American.
+    else if (/^en-(ie|au|nz)/.test(lc)) s += 12;
   }
 
-  // Online/cloud voices are Neural quality — dramatically better than
-  // the local synthesised voices shipped with the OS.
+  // Online/cloud voices use Neural TTS and sound dramatically more human
+  // than the local synthesised voices bundled with the OS.
   if (!v.localService) s += 25;
 
-  // Female voices: larger bonus for names earlier in the list.
+  // Female voices: each name in the list carries a diminishing bonus so
+  // voices earlier in the list are preferred over voices later.
   FEMALE_VOICES.forEach((name, i) => {
     if (n.includes(name)) s += FEMALE_VOICES.length - i + 25;
   });
 
-  // Male voices: strong penalty so they never beat a weaker female voice.
+  // Male voices: hard penalty — must never beat even a mediocre female voice.
   MALE_VOICES.forEach((name) => {
     if (n.includes(name)) s -= 40;
   });
 
-  // Quality/naturalness markers.
+  // Quality markers add a bonus on top of everything else.
   QUALITY.forEach((p, i) => {
     if (n.includes(p)) s += QUALITY.length - i + 8;
   });
@@ -131,29 +142,116 @@ function pickVoice(lang: Lang): SpeechSynthesisVoice | undefined {
   return matches.slice().sort((a, b) => voiceScore(b, lang) - voiceScore(a, lang))[0];
 }
 
-/** True when a voice for this language is actually installed on this device. */
 export function hasVoiceFor(lang: Lang): boolean {
   if (!voices.length) refreshVoices();
   const tag = lang === 'vi' ? 'vi' : 'en';
   return voices.some((v) => v.lang?.toLowerCase().startsWith(tag));
 }
 
-// ─── The speaking queue ──────────────────────────────────────────────────────
+// ─── Text humanisation ───────────────────────────────────────────────────────
+// The TTS engine hears exactly what we give it. Expand abbreviations, spell
+// out acronyms, and tidy punctuation so it can speak naturally.
 
-let queue: string[] = [];
+function humanizeText(text: string): string {
+  return text
+    // ── Catholic / liturgical abbreviations ──────────────────────────────
+    .replace(/\bSt\.\s+/g, 'Saint ')
+    .replace(/\bSts\.\s+/g, 'Saints ')
+    .replace(/\bFr\.\s+/g, 'Father ')
+    .replace(/\bSr\.\s+/g, 'Sister ')
+    .replace(/\bBr\.\s+/g, 'Brother ')
+    .replace(/\bBp\.\s+/g, 'Bishop ')
+    .replace(/\bCard\.\s+/g, 'Cardinal ')
+    .replace(/\bMsgr\.\s+/g, 'Monsignor ')
+    .replace(/\bAbb\.\s+/g, 'Abbot ')
+    // ── Acronyms — dot-separated so TTS spells them out clearly ──────────
+    .replace(/\bRCIA\b/g, 'R. C. I. A.')
+    .replace(/\bOCIA\b/g, 'O. C. I. A.')
+    .replace(/\bCCC\b/g, 'C. C. C.')
+    // ── Ordinals ─────────────────────────────────────────────────────────
+    .replace(/\b1st\b/gi, 'first')
+    .replace(/\b2nd\b/gi, 'second')
+    .replace(/\b3rd\b/gi, 'third')
+    .replace(/\b4th\b/gi, 'fourth')
+    .replace(/\b5th\b/gi, 'fifth')
+    .replace(/\b6th\b/gi, 'sixth')
+    .replace(/\b7th\b/gi, 'seventh')
+    .replace(/\b8th\b/gi, 'eighth')
+    // ── Common shorthand ─────────────────────────────────────────────────
+    .replace(/\be\.g\.\s*/g, 'for example, ')
+    .replace(/\bi\.e\.\s*/g, 'that is, ')
+    .replace(/\betc\.\b/g, 'et cetera')
+    .replace(/\s&\s/g, ' and ')
+    .replace(/\bvs\.\s*/g, 'versus ')
+    // ── Punctuation → natural pauses ─────────────────────────────────────
+    // Em/en dashes become a comma — the guide pauses, then continues.
+    .replace(/\s[—–]\s/g, ', ')
+    // Ellipsis becomes a comma-pause, not a sentence break.
+    .replace(/…/g, ', ')
+    .replace(/\.{2,}\s*/g, ', ')
+    // ── Remove inline citations that read as noise ────────────────────────
+    .replace(/\s*\[\d+\]\s*/g, ' ')
+    .replace(/\s*\(\d+\)\s*/g, ' ')
+    // ── Tidy whitespace ──────────────────────────────────────────────────
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
+// ─── Chunk splitting ─────────────────────────────────────────────────────────
+// We speak the text in short, naturally-paced pieces. The pause that follows
+// each piece reflects how the punctuation would sound in a real reading:
+// a comma is a breath; a full stop is a thought completing.
+
+interface Chunk {
+  text: string;
+  pause: number; // ms to wait before the next chunk begins
+}
+
+const SENTENCE_PAUSE = 380; // after . ! ?  — a thought has completed
+const CLAUSE_PAUSE   = 110; // after ,  ;  : — a breath between ideas
+
+function intoChunks(raw: string): Chunk[] {
+  const text = humanizeText(raw);
+  const chunks: Chunk[] = [];
+
+  // First pass: split at every sentence boundary.
+  const sentences = text
+    .split(/(?<=[.!?。！？])\s+/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+
+  for (const sentence of sentences) {
+    // For longer sentences, also split at clause boundaries so the guide
+    // breathes between ideas rather than rushing through a long stretch.
+    if (sentence.length > 60) {
+      const clauses = sentence
+        .split(/(?<=[,;:])\s+/)
+        .map((c) => c.trim())
+        .filter(Boolean);
+
+      clauses.forEach((clause, i) => {
+        const isLast = i === clauses.length - 1;
+        chunks.push({ text: clause, pause: isLast ? SENTENCE_PAUSE : CLAUSE_PAUSE });
+      });
+    } else {
+      chunks.push({ text: sentence, pause: SENTENCE_PAUSE });
+    }
+  }
+
+  // Fallback: text with no sentence-ending punctuation (e.g. a title or label).
+  if (!chunks.length && text) {
+    chunks.push({ text, pause: SENTENCE_PAUSE });
+  }
+
+  return chunks;
+}
+
+// ─── Speaking engine ─────────────────────────────────────────────────────────
+
+let queue: Chunk[] = [];
 let activeId: string | null = null;
 let activeLang: Lang = 'en';
 let keepAlive: ReturnType<typeof setInterval> | null = null;
-
-/** Split a passage into gentle, speakable clauses. */
-function intoSentences(text: string): string[] {
-  return text
-    .replace(/\s+/g, ' ')
-    .trim()
-    .split(/(?<=[.!?…。！？])\s+|(?<=[:;–—])\s+/)
-    .map((s) => s.trim())
-    .filter(Boolean);
-}
 
 function clearKeepAlive() {
   if (keepAlive) {
@@ -175,8 +273,8 @@ export function stopNarration() {
 function speakNext() {
   const s = synth();
   if (!s || activeId == null) return;
-  const next = queue.shift();
-  if (next === undefined) {
+  const chunk = queue.shift();
+  if (!chunk) {
     clearKeepAlive();
     if (speakingId === activeId) {
       speakingId = null;
@@ -185,23 +283,27 @@ function speakNext() {
     }
     return;
   }
-  const u = new SpeechSynthesisUtterance(next);
+
+  const u = new SpeechSynthesisUtterance(chunk.text);
   const voice = pickVoice(activeLang);
   if (voice) u.voice = voice;
   // Hint British English so the engine uses the right pronunciation rules
-  // even if no specific voice could be selected.
-  u.lang = voice?.lang ?? (activeLang === 'vi' ? 'vi-VN' : 'en-GB');
-  u.rate = 0.90;  // unhurried — a soft guide, never in a rush
-  u.pitch = 1.0;  // let the voice's own natural register carry through
+  // even on platforms where no specific voice could be selected.
+  u.lang   = voice?.lang ?? (activeLang === 'vi' ? 'vi-VN' : 'en-GB');
+  u.rate   = 0.87;  // unhurried — a soft guide, never rushing
+  u.pitch  = 1.0;   // let the voice's natural register carry through
+  u.volume = 1.0;
+
   u.onend = () => {
     if (activeId !== null) {
-      // A 200 ms breath between sentences makes the guide sound human rather
-      // than a wall of words delivered at machine speed.
+      // Use the chunk's own pause duration — shorter for clause breaks,
+      // longer for sentence ends — so the reading has natural breathing.
       setTimeout(() => {
         if (activeId !== null) speakNext();
-      }, 200);
+      }, chunk.pause);
     }
   };
+
   u.onerror = () => {
     if (speakingId === activeId) {
       clearKeepAlive();
@@ -210,12 +312,13 @@ function speakNext() {
       emit();
     }
   };
+
   s.speak(u);
 }
 
 /**
  * Speak a passage aloud. `id` lets the UI show which card is being read.
- * When `cue` is set and sound is on, a soft chime announces the guide first.
+ * When `cue` is true and sound is on, a soft chime announces the guide first.
  */
 export function narrate(id: string, text: string, lang: Lang, opts?: { cue?: boolean }) {
   const s = synth();
@@ -223,7 +326,7 @@ export function narrate(id: string, text: string, lang: Lang, opts?: { cue?: boo
   s.cancel();
   clearKeepAlive();
 
-  queue = intoSentences(text);
+  queue = intoChunks(text);
   activeId = id;
   activeLang = lang;
   speakingId = id;
