@@ -23,6 +23,7 @@ export interface RWProgress {
   reviewHistory: Record<string, ReviewStat>; // keyed by vocabulary word
   reviewSessions: number;
   badges: string[];
+  xpKeys: string[]; // one-time XP award keys — prevents re-earning by redoing the same answers
 }
 
 export function emptyProgress(): RWProgress {
@@ -38,7 +39,20 @@ export function emptyProgress(): RWProgress {
     reviewHistory: {},
     reviewSessions: 0,
     badges: [],
+    xpKeys: [],
   };
+}
+
+/**
+ * Award XP for a set of one-time keys (e.g. `ex:<lesson>:<exercise>`).
+ * Keys already in the ledger pay nothing, so redoing the same answers
+ * can never farm XP. Returns the updated progress and the XP actually gained.
+ */
+export function awardOnce(p: RWProgress, entries: { key: string; xp: number }[]): { progress: RWProgress; gained: number } {
+  const fresh = entries.filter((e) => !p.xpKeys.includes(e.key));
+  if (fresh.length === 0) return { progress: p, gained: 0 };
+  const gained = fresh.reduce((a, e) => a + e.xp, 0);
+  return { progress: { ...p, xp: p.xp + gained, xpKeys: [...p.xpKeys, ...fresh.map((e) => e.key)] }, gained };
 }
 
 export function loadProgress(): RWProgress {

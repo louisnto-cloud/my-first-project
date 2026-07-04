@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { LIBRARY, type Story } from '../../../data/library';
 import { CURRICULUM, MONTH_COLORS } from '../../../data/curriculum';
-import { isMonthUnlocked, XP, type RWProgress } from './engine';
+import { awardOnce, isMonthUnlocked, XP, type RWProgress } from './engine';
 import { useTTS } from './useTTS';
 import { AudioSettings, Confetti, NavButton, PlayButton, StepCard, TappableText, XpChip } from './shared';
 
@@ -65,7 +65,6 @@ function StoryReader({ story, progress, apply, onBack }: {
   const [phase, setPhase] = useState<'read' | 'quiz' | 'done'>('read');
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
-  const alreadyDone = progress.completedStories.includes(story.id);
 
   const month = CURRICULUM[story.level - 1];
   const c = MONTH_COLORS[month.color];
@@ -81,13 +80,21 @@ function StoryReader({ story, progress, apply, onBack }: {
   const fullText = useMemo(() => paragraphs.join(' '), [paragraphs]);
   const score = story.quiz.reduce((acc, q) => acc + ((answers[q.id] ?? '') === q.answer ? 1 : 0), 0);
 
+  // One-time XP keys: each quiz question and the story-completion bonus pay only once ever
+  const xpEntries = [
+    ...story.quiz.filter((q) => (answers[q.id] ?? '') === q.answer).map((q) => ({ key: `story:${story.id}:${q.id}`, xp: XP.storyQuizCorrect })),
+    { key: `storydone:${story.id}`, xp: XP.storyComplete },
+  ];
+  const pendingGain = xpEntries.filter((e) => !progress.xpKeys.includes(e.key)).reduce((a, e) => a + e.xp, 0);
+
   const finish = () => {
-    const gained = score * XP.storyQuizCorrect + (alreadyDone ? 0 : XP.storyComplete);
-    apply((p) => ({
-      ...p,
-      xp: p.xp + gained,
-      completedStories: p.completedStories.includes(story.id) ? p.completedStories : [...p.completedStories, story.id],
-    }));
+    apply((p) => {
+      const { progress: p2 } = awardOnce(p, xpEntries);
+      return {
+        ...p2,
+        completedStories: p2.completedStories.includes(story.id) ? p2.completedStories : [...p2.completedStories, story.id],
+      };
+    });
     setPhase('done');
   };
 
@@ -160,7 +167,7 @@ function StoryReader({ story, progress, apply, onBack }: {
             <NavButton label="Check Answers" onClick={() => setSubmitted(true)} color={c.bg} disabled={story.quiz.some((q) => !answers[q.id])} />
           ) : (
             <div className="text-center">
-              <div className="font-black text-gray-800">{score} / {story.quiz.length} correct <XpChip amount={score * XP.storyQuizCorrect + (alreadyDone ? 0 : XP.storyComplete)} /></div>
+              <div className="font-black text-gray-800">{score} / {story.quiz.length} correct {pendingGain > 0 && <XpChip amount={pendingGain} />}</div>
               <NavButton label="Finish Story →" onClick={finish} color={c.bg} />
             </div>
           )}

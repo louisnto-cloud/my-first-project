@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { CURRICULUM, MONTH_COLORS } from '../../../data/curriculum';
 import type { Exercise, Lesson } from '../../../data/curriculum';
-import { analyzeWriting, XP, type RWProgress } from './engine';
+import { analyzeWriting, awardOnce, XP, type RWProgress } from './engine';
 import { useTTS } from './useTTS';
 import { AudioSettings, Confetti, MarkdownContent, NavButton, PlayButton, StepCard, TappableText, XpChip } from './shared';
 
@@ -23,6 +23,7 @@ export default function LessonView({ lesson, progress, apply, onBack }: {
   const [writingText, setWritingText] = useState(progress.writingResponses[lesson.id] ?? '');
   const [showFeedback, setShowFeedback] = useState(false);
   const [xpEarned, setXpEarned] = useState(0);
+  const [lastGain, setLastGain] = useState(0);
 
   const dictationWords = useMemo(() => lesson.keyWords.slice(0, 3).map((k) => k.word), [lesson]);
   const hasDictation = dictationWords.length >= 2;
@@ -43,14 +44,21 @@ export default function LessonView({ lesson, progress, apply, onBack }: {
 
   const handleSubmit = () => {
     setSubmitted(true);
-    const gained = score * XP.exerciseCorrect + (perfect ? XP.perfectBonus : 0);
-    setXpEarned((x) => x + gained);
-    apply((p) => ({
-      ...p,
-      xp: p.xp + gained,
-      exerciseAnswers: { ...p.exerciseAnswers, [lesson.id]: answers },
-      perfectLessons: perfect && !p.perfectLessons.includes(lesson.id) ? [...p.perfectLessons, lesson.id] : p.perfectLessons,
-    }));
+    const entries = lesson.exercises
+      .filter((ex) => (answers[ex.id] ?? '').trim().toLowerCase() === ex.answer.toLowerCase())
+      .map((ex) => ({ key: `ex:${lesson.id}:${ex.id}`, xp: XP.exerciseCorrect }));
+    if (perfect) entries.push({ key: `perfect:${lesson.id}`, xp: XP.perfectBonus });
+    const gained = entries.filter((e) => !progress.xpKeys.includes(e.key)).reduce((a, e) => a + e.xp, 0);
+    setLastGain(gained);
+    if (gained > 0) setXpEarned((x) => x + gained);
+    apply((p) => {
+      const { progress: p2 } = awardOnce(p, entries);
+      return {
+        ...p2,
+        exerciseAnswers: { ...p2.exerciseAnswers, [lesson.id]: answers },
+        perfectLessons: perfect && !p2.perfectLessons.includes(lesson.id) ? [...p2.perfectLessons, lesson.id] : p2.perfectLessons,
+      };
+    });
   };
 
   const handleRetry = () => {
@@ -148,12 +156,11 @@ export default function LessonView({ lesson, progress, apply, onBack }: {
       )}
 
       {step === 'dictation' && (
-        <DictationStep words={dictationWords} tts={tts} color={c} onDone={(correct) => {
-          const gained = correct * XP.dictationWord;
-          if (gained > 0) {
-            setXpEarned((x) => x + gained);
-            apply((p) => ({ ...p, xp: p.xp + gained }));
-          }
+        <DictationStep words={dictationWords} tts={tts} color={c} onDone={(correctWords) => {
+          const entries = correctWords.map((w) => ({ key: `dict:${lesson.id}:${w}`, xp: XP.dictationWord }));
+          const gained = entries.filter((e) => !progress.xpKeys.includes(e.key)).reduce((a, e) => a + e.xp, 0);
+          if (gained > 0) setXpEarned((x) => x + gained);
+          if (entries.length > 0) apply((p) => awardOnce(p, entries).progress);
           nextStep();
         }} />
       )}
@@ -177,7 +184,8 @@ export default function LessonView({ lesson, progress, apply, onBack }: {
           ) : (
             <div className={`mt-4 rounded-xl border p-4 text-center ${perfect ? 'border-green-200 bg-green-50' : 'border-amber-200 bg-amber-50'}`}>
               <div className="mb-1 text-3xl">{perfect ? '🏆' : score >= lesson.exercises.length * 0.6 ? '👍' : '📚'}</div>
-              <div className="text-lg font-black text-gray-800">{score} / {lesson.exercises.length} correct <XpChip amount={score * XP.exerciseCorrect + (perfect ? XP.perfectBonus : 0)} /></div>
+              <div className="text-lg font-black text-gray-800">{score} / {lesson.exercises.length} correct {lastGain > 0 && <XpChip amount={lastGain} />}</div>
+              {lastGain === 0 && score > 0 && <div className="text-[11px] text-gray-400">XP for these answers was already earned earlier</div>}
               <div className="text-sm text-gray-600">
                 {perfect ? 'Perfect score! Amazing work!' : score >= lesson.exercises.length * 0.6 ? 'Great job! Review the ones you missed.' : 'Good effort! Re-read the lesson and try again.'}
               </div>
@@ -252,11 +260,12 @@ function DictationStep({ words, tts, color, onDone }: {
   words: string[];
   tts: ReturnType<typeof useTTS>;
   color: { bg: string; text: string; border: string; light: string };
-  onDone: (correct: number) => void;
+  onDone: (correctWords: string[]) => void;
 }) {
   const [typed, setTyped] = useState<string[]>(words.map(() => ''));
   const [checked, setChecked] = useState(false);
-  const correct = words.filter((w, i) => typed[i].trim().toLowerCase() === w.toLowerCase()).length;
+  const correctWords = words.filter((w, i) => typed[i].trim().toLowerCase() === w.toLowerCase());
+  const correct = correctWords.length;
 
   return (
     <StepCard>
@@ -284,7 +293,7 @@ function DictationStep({ words, tts, color, onDone }: {
       ) : (
         <div className="mt-3 text-center">
           <div className="font-black text-gray-800">{correct} / {words.length} correct {correct > 0 && <XpChip amount={correct * XP.dictationWord} />}</div>
-          <NavButton label="Next: Practice Exercises →" onClick={() => onDone(correct)} color={color.bg} />
+          <NavButton label="Next: Practice Exercises →" onClick={() => onDone(correctWords)} color={color.bg} />
         </div>
       )}
     </StepCard>
