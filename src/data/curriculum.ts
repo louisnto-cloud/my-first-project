@@ -148,6 +148,45 @@ N n · O o · P p · Q q · R r · S s · T t · U u · V v · W w · X x · Y y
             { id: 'e5', kind: 'multiple-choice', prompt: 'C and K make the same sound. What is it?', options: ['/s/', '/k/', '/ch/', '/g/'], answer: '/k/' },
           ],
         },
+        {
+          id: 'm1w1l4',
+          monthIndex: 0, weekIndex: 0, lessonIndex: 3,
+          title: 'Consonant Sounds – Part 2',
+          kind: 'phonics',
+          objective: 'Learn the sounds of N, P, Q, R, S, T, V, W, X, Y, Z',
+          audioText: 'Let us finish the consonants. N says nnn, like in net. P says puh, like in pig. Q says kwuh, like in queen. R says rrr, like in run. S says sss, like in sun. T says tuh, like in top. V says vvv, like in van. W says wuh, like in win. X says ks, like at the end of box. Y says yuh, like in yes. And Z says zzz, like in zip.',
+          content: `| Letter | Sound | Example |
+|--------|-------|---------|
+| N | /n/ | **net** |
+| P | /p/ | **pig** |
+| Q | /kw/ | **queen** |
+| R | /r/ | **run** |
+| S | /s/ | **sun** |
+| T | /t/ | **top** |
+| V | /v/ | **van** |
+| W | /w/ | **win** |
+| X | /ks/ | **box** |
+| Y | /y/ | **yes** |
+| Z | /z/ | **zip** |
+
+**Tips:**
+- **Q** is almost always followed by **u**: queen, quick, quiet
+- **X** usually comes at the END of words: box, fox, six
+- **S** can sometimes sound like /z/: is, his, does`,
+          keyWords: [
+            { word: 'net', meaning: 'a material with holes, used to catch things' },
+            { word: 'queen', meaning: 'a female ruler of a country' },
+            { word: 'zip', meaning: 'to close something with a zipper; a fast movement' },
+          ],
+          exercises: [
+            { id: 'e1', kind: 'multiple-choice', prompt: 'What sound does S make in "sun"?', options: ['/z/', '/s/', '/sh/', '/t/'], answer: '/s/' },
+            { id: 'e2', kind: 'multiple-choice', prompt: 'Which letter almost always comes after Q?', options: ['a', 'e', 'u', 'o'], answer: 'u' },
+            { id: 'e3', kind: 'multiple-choice', prompt: 'Where does X usually appear in a word?', options: ['at the start', 'in the middle', 'at the end', 'X is never used'], answer: 'at the end' },
+            { id: 'e4', kind: 'fill-blank', prompt: '___an is a vehicle for carrying things. Fill in the first letter.', answer: 'V', hint: 'It makes the /v/ sound' },
+            { id: 'e5', kind: 'multiple-choice', prompt: 'Which word starts with the /w/ sound?', options: ['van', 'win', 'yes', 'zip'], answer: 'win' },
+          ],
+          writingPrompt: 'Write one word that starts with each of these letters: N, P, R, S, T, W. Say each word aloud as you write it.',
+        },
       ],
     },
     {
@@ -222,6 +261,44 @@ These are the simplest English words. Blend the sounds together:
           ],
           writingPrompt: 'Write 5 short sentences using only sight words and simple CVC words. Example: "He is at my mat."',
         },
+        {
+          id: 'm1w2l3',
+          monthIndex: 0, weekIndex: 1, lessonIndex: 2,
+          title: 'Digraphs – Two Letters, One Sound',
+          kind: 'phonics',
+          objective: 'Read words with sh, ch, th, wh, and ck',
+          audioText: 'Sometimes two letters work together to make one new sound. These are called digraphs. S and H together say shhh, like in ship. C and H together say ch, like in chip. T and H together say th, like in this or thin. W and H together say wh, like in when. And C and K together say k, like at the end of duck.',
+          content: `A **digraph** is two letters that make ONE sound together.
+
+| Digraph | Sound | Examples |
+|---------|-------|----------|
+| **sh** | /ʃ/ | **ship** · fish · shop · wish |
+| **ch** | /tʃ/ | **chip** · chat · much · lunch |
+| **th** | /θ/ or /ð/ | **thin** · this · bath · that |
+| **wh** | /w/ | **when** · what · white · why |
+| **ck** | /k/ | **duck** · back · sock · kick |
+
+**Practice blending:**
+- sh-i-p → **ship** ✓ (3 sounds, 4 letters!)
+- ch-a-t → **chat** ✓
+- th-i-n → **thin** ✓
+- d-u-ck → **duck** ✓
+
+**Remember:** count the SOUNDS, not the letters. "Ship" has 4 letters but only 3 sounds, because **sh** is one sound.`,
+          keyWords: [
+            { word: 'digraph', meaning: 'two letters that together make one sound, like sh or ch' },
+            { word: 'ship', meaning: 'a large boat that travels on the sea' },
+            { word: 'wish', meaning: 'to want something to happen' },
+          ],
+          exercises: [
+            { id: 'e1', kind: 'multiple-choice', prompt: 'What is a digraph?', options: ['two words joined together', 'two letters that make one sound', 'a long vowel', 'a silent letter'], answer: 'two letters that make one sound' },
+            { id: 'e2', kind: 'multiple-choice', prompt: 'Which digraph starts the word "ship"?', options: ['ch', 'th', 'sh', 'wh'], answer: 'sh' },
+            { id: 'e3', kind: 'multiple-choice', prompt: 'How many SOUNDS are in the word "chat"?', options: ['2', '3', '4', '5'], answer: '3' },
+            { id: 'e4', kind: 'fill-blank', prompt: 'du___ is a bird that swims. Fill in the missing digraph.', answer: 'ck', hint: 'Two letters that say /k/' },
+            { id: 'e5', kind: 'multiple-choice', prompt: 'Which word contains the "th" digraph?', options: ['ship', 'chip', 'bath', 'when'], answer: 'bath' },
+          ],
+          writingPrompt: 'Write 2 words for each digraph: sh, ch, th. Then choose your 3 favourites and use each in a short sentence.',
+        },
       ],
     },
     {
@@ -266,6 +343,49 @@ These are the simplest English words. Blend the sounds together:
             { id: 'e5', kind: 'multiple-choice', prompt: '"She is happy!" — what type of sentence is this?', options: ['Statement', 'Question', 'Exclamation', 'Command'], answer: 'Exclamation' },
           ],
           writingPrompt: 'Write 3 sentences about yourself: one statement, one question, one exclamation.',
+        },
+        {
+          id: 'm1w3l2',
+          monthIndex: 0, weekIndex: 2, lessonIndex: 1,
+          title: 'Magic E – Long Vowels',
+          kind: 'phonics',
+          objective: 'Read words where a silent final E makes the vowel say its name',
+          audioText: 'Here is a magic trick in English spelling. When a word ends in E, that E is usually silent — but it changes the vowel before it. The vowel stops making its short sound and says its own NAME instead. Cap becomes cape. Kit becomes kite. Hop becomes hope. Cub becomes cube. We call this the magic E, or the silent E.',
+          content: `**Magic E** (silent E) makes the vowel before it say its NAME.
+
+| Short vowel | + Magic E | Long vowel |
+|-------------|-----------|------------|
+| c**a**p /æ/ | → | c**a**p**e** /eɪ/ |
+| k**i**t /ɪ/ | → | k**i**t**e** /aɪ/ |
+| h**o**p /ɒ/ | → | h**o**p**e** /oʊ/ |
+| c**u**b /ʌ/ | → | c**u**b**e** /juː/ |
+| p**e**t /ɛ/ | → | P**e**t**e** /iː/ |
+
+**More magic E pairs:**
+- man → **mane** · can → **cane** · tap → **tape** · mad → **made**
+- pin → **pine** · rip → **ripe** · fin → **fine** · bit → **bite**
+- not → **note** · rod → **rode** · ton → **tone**
+- tub → **tube** · cut → **cute** · us → **use**
+
+**The rule:** the E itself is SILENT — you never say it. Its only job is to change the vowel.
+
+**How to read a magic E word:**
+1. See the E at the end? It's silent.
+2. Make the vowel say its NAME (A says "ay", I says "eye", O says "oh"...)
+3. Blend: k … i(eye) … t → **kite** ✓`,
+          keyWords: [
+            { word: 'silent', meaning: 'making no sound' },
+            { word: 'long vowel', meaning: 'a vowel that says its own name, like the A in cape' },
+            { word: 'kite', meaning: 'a toy that flies on a string in the wind' },
+          ],
+          exercises: [
+            { id: 'e1', kind: 'multiple-choice', prompt: 'What does the magic E do?', options: ['makes the word plural', 'makes the vowel say its name', 'adds an extra sound', 'makes the word past tense'], answer: 'makes the vowel say its name' },
+            { id: 'e2', kind: 'multiple-choice', prompt: 'Add a magic E to "hop". What word do you get?', options: ['hops', 'hoppe', 'hope', 'hooped'], answer: 'hope' },
+            { id: 'e3', kind: 'multiple-choice', prompt: 'Do you pronounce the E at the end of "kite"?', options: ['yes, loudly', 'yes, quietly', 'no, it is silent', 'only in questions'], answer: 'no, it is silent' },
+            { id: 'e4', kind: 'fill-blank', prompt: 'cub + magic E = ___', answer: 'cube', hint: 'A shape with 6 square sides' },
+            { id: 'e5', kind: 'multiple-choice', prompt: 'Which word has a LONG vowel sound?', options: ['cap', 'kit', 'tape', 'hop'], answer: 'tape' },
+          ],
+          writingPrompt: 'Write 5 magic E word pairs (like hop → hope). Then write one sentence that uses BOTH words of one pair. Example: "I hop with hope."',
         },
       ],
     },
