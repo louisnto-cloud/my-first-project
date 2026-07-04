@@ -320,7 +320,17 @@ export function registerLearningRoutes(app: FastifyInstance, db: DB): void {
     if (!cls || cls.orgId !== actor.orgId) return reply.code(404).send({ error: 'not_found' });
 
     if (canTeachClass(actor, cls)) {
-      return many(db, `SELECT id, title, status, due_at AS "dueAt", show_results AS "showResults" FROM assignments WHERE class_id = $1 ORDER BY created_at DESC`, [id]);
+      // Teachers see live results per assignment: how many handed in, and
+      // the running average — enough to spot a struggling class at a glance.
+      return many(
+        db,
+        `SELECT a.id, a.title, a.status, a.due_at AS "dueAt", a.show_results AS "showResults",
+                (SELECT COUNT(*)::int FROM submissions s WHERE s.assignment_id = a.id AND s.status IN ('submitted', 'graded')) AS "submittedCount",
+                (SELECT COUNT(*)::int FROM enrollments e WHERE e.class_id = a.class_id) AS "rosterCount",
+                (SELECT ROUND(AVG(s.overall))::int FROM submissions s WHERE s.assignment_id = a.id AND s.overall IS NOT NULL) AS "avgOverall"
+           FROM assignments a WHERE a.class_id = $1 ORDER BY a.created_at DESC`,
+        [id],
+      );
     }
     if (actor.role === 'student' && (await isEnrolled(db, id, actor.id))) {
       return many(

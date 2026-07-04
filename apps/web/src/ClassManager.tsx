@@ -35,7 +35,7 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
   const [open, setOpen] = useState(false);
   const [tab, setTab] = useState<'students' | 'work'>('students');
   const [roster, setRoster] = useState<RosterRow[]>([]);
-  const [assignments, setAssignments] = useState<{ id: string; title: string; status: string }[]>([]);
+  const [assignments, setAssignments] = useState<{ id: string; title: string; status: string; submittedCount?: number; rosterCount?: number; avgOverall?: number | null }[]>([]);
   const [names, setNames] = useState('');
   const [bank, setBank] = useState<Question[]>([]);
   const [picked, setPicked] = useState<Set<string>>(new Set());
@@ -187,9 +187,14 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
                 <div className="rounded-2xl bg-slate-50 p-3 text-center text-sm font-bold text-slate-400">Chưa giao bài nào</div>
               )}
               {assignments.map((a) => (
-                <div key={a.id} className="flex items-center justify-between rounded-2xl bg-violet-50 px-3 py-2.5 text-sm font-bold">
-                  <span>📝 {a.title}</span>
-                  <span className="chip bg-emerald-100 text-emerald-600">{a.status === 'published' ? 'đã giao' : a.status}</span>
+                <div key={a.id} className="flex items-center justify-between gap-2 rounded-2xl bg-violet-50 px-3 py-2.5 text-sm font-bold">
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate">📝 {a.title}</span>
+                    <span className="block text-[10px] font-bold text-slate-400">
+                      {a.submittedCount ?? 0}/{a.rosterCount ?? '—'} đã nộp{a.avgOverall != null ? ` · TB ${a.avgOverall}/100` : ''}
+                    </span>
+                  </span>
+                  <span className="chip shrink-0 bg-emerald-100 text-emerald-600">{a.status === 'published' ? 'đã giao' : a.status}</span>
                 </div>
               ))}
 

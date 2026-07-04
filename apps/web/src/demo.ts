@@ -96,7 +96,7 @@ interface DDB {
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v4';
+const KEY = 'etop-demo-db-v5';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -205,7 +205,12 @@ function seed(): DDB {
     assignments: [
       { id: 'a_demo1', classId: 'up1', title: 'Unit 1 — Ôn tập / Review', status: 'published', questionIds: ['q1', 'q3', 'q4', 'q5'], dueAt: null },
     ],
-    submissions: [],
+    submissions: [
+      // A classmate already handed in the seeded assignment, so the teacher
+      // view shows live results from the first open.
+      { id: 'sub_seed1', assignmentId: 'a_demo1', studentId: 's_UP1739', answers: { q1: 'am', q3: 'Under the table', q4: 'Good morning, teacher!', q5: ['My', 'name', 'is', 'Mai'] }, status: 'graded', overall: 100, pendingReview: false },
+      { id: 'sub_seed2', assignmentId: 'a_demo1', studentId: 's_UP1256', answers: { q1: 'is', q3: 'Under the table', q4: 'Good morning, teacher!', q5: ['My', 'name', 'is', 'Mai'] }, status: 'graded', overall: 75, pendingReview: false },
+    ],
     practice: [
       // A little history so the first student already has a streak + points.
       { studentId: 's_UP1482', kind: 'lesson', points: 14, date: today(), lessonId: 'found_l1', pct: 100 },
@@ -466,7 +471,18 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
         );
       }
       if (!canTeachClass(actor, classRef(c))) return err(403, 'forbidden');
-      return ok(db.assignments.filter((a) => a.classId === c.id).map((a) => ({ id: a.id, title: a.title, status: a.status, dueAt: a.dueAt })));
+      const rosterCount = db.users.filter((u) => u.role === 'student' && u.classIds.includes(c.id)).length;
+      return ok(
+        db.assignments.filter((a) => a.classId === c.id).map((a) => {
+          const subs = db.submissions.filter((s) => s.assignmentId === a.id && s.status !== 'in_progress');
+          const scored = subs.filter((s) => s.overall != null);
+          return {
+            id: a.id, title: a.title, status: a.status, dueAt: a.dueAt,
+            submittedCount: subs.length, rosterCount,
+            avgOverall: scored.length ? Math.round(scored.reduce((t, s) => t + (s.overall ?? 0), 0) / scored.length) : null,
+          };
+        }),
+      );
     }
     if (method === 'POST') {
       if (!canTeachClass(actor, classRef(c))) return err(403, 'forbidden');
@@ -657,13 +673,29 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     return ok({
       date: today(),
       attendance: att ? { checkInAt: att.checkInAt, checkOutAt: att.checkOutAt, releasedTo: att.releasedTo } : null,
-      sessions: [],
+      sessions: [
+        { className: 'Up 1', tutorName: 'Ms. Ha', parentNote: 'Hôm nay bé phát âm rất tốt và xung phong trả lời 3 lần. Về nhà ôn từ vựng Unit 1 giúp cô nhé!' },
+      ],
       newAssignments: db.assignments.filter((a) => a.status === 'published').slice(0, 1).map((a) => ({ title: a.title })),
-      graded: [],
+      graded: db.submissions
+        .filter((s) => s.studentId === childId && s.status === 'graded' && s.overall != null)
+        .slice(0, 2)
+        .map((s) => ({ title: db.assignments.find((a) => a.id === s.assignmentId)?.title ?? 'Bài tập', overall: s.overall })),
       practice: { points: childPts, activities: 1 },
     });
   }
-  if (rawPath === '/parents/summaries' && method === 'GET') return ok([]);
+  if (rawPath === '/parents/summaries' && method === 'GET') {
+    if (me.role !== 'parent') return err(403, 'forbidden');
+    const monday = new Date();
+    monday.setDate(monday.getDate() - ((monday.getDay() + 6) % 7));
+    return ok([
+      {
+        weekStart: monday.toISOString().slice(0, 10),
+        bodyVi: 'Tuần này bé học Unit 1: chào hỏi và giới thiệu bản thân. Bé nghe hiểu tốt, cần luyện thêm phần viết câu. Điểm bài tập: 100/100. Cô rất vui với tiến bộ của bé! 💜',
+        bodyEn: "This week we covered Unit 1: greetings and introducing yourself. Great listening comprehension; sentence writing needs a little more practice. Assignment score: 100/100. Very proud of the progress! 💜",
+      },
+    ]);
+  }
   if (rawPath === '/my/invoices' && method === 'GET') {
     if (me.role !== 'parent') return err(403, 'forbidden');
     return ok([{ id: 'inv_demo', period: today().slice(0, 7), studentName: 'Nguyễn Gia Bảo', totalVnd: 1350000, status: 'open', vietqr: 'VIETQR|ETOP|inv_demo|1350000|HOC PHI ETOP' }]);

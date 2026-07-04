@@ -67,6 +67,15 @@ describe('demo engine — full teaching loop', () => {
     expect(res.overall).toBe(100);
   });
 
+  it('teacher assignment list shows live results (submitted count + average)', async () => {
+    const ha = await loginCode('GV0004');
+    const list = (await call('GET', '/classes/up1/assignments', undefined, ha!)).json as { id: string; submittedCount: number; rosterCount: number; avgOverall: number | null }[];
+    const seeded = list.find((a) => a.id === 'a_demo1')!;
+    expect(seeded.submittedCount).toBe(2); // two classmates seeded as graded
+    expect(seeded.rosterCount).toBe(3);
+    expect(seeded.avgOverall).toBe(88); // (100 + 75) / 2 rounded
+  });
+
   it('answers are never serialized to students', async () => {
     const bao = await loginCode('UP1482');
     const a = (await call('GET', '/classes/up1/assignments', undefined, bao!)).json as { id: string }[];

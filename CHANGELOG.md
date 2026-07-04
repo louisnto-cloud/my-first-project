@@ -1,5 +1,17 @@
 # CHANGELOG.md
 
+## Improvement loop pass 2 — teachers see results
+
+- Teacher assignment cards now show live results: submitted count out of
+  the roster and the running average (API subqueries + demo parity +
+  ClassManager UI). Demo seeds two graded classmates so the story is
+  visible on first open.
+- Question bank card lists the teacher's questions (skill emoji, prompt,
+  unit chip) with expand/collapse — no longer just a count.
+- Parent demo feels real: weekly bilingual summary, after-class session
+  note from Ms. Ha, and graded scores flow into the daily digest.
+- 132 tests green.
+
 ## Account lifecycle + manual + kiosk-in-demo pass
 
 - Professional account lifecycle shipped end-to-end (API + tests + demo

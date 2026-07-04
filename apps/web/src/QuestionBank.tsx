@@ -25,9 +25,19 @@ const SKILLS: { k: Skill; label: string; emoji: string }[] = [
   { k: 'writing', label: 'Viết', emoji: '✍️' },
 ];
 
+interface BankRow {
+  id: string;
+  skill: string;
+  prompt: string;
+  unit: string | null;
+}
+
+const SKILL_EMOJI: Record<string, string> = { grammar: '🔤', reading: '📖', listening: '🎧', writing: '✍️' };
+
 export function QuestionBank({ lang }: { lang: 'vi' | 'en' }) {
   const vi = lang === 'vi';
-  const [count, setCount] = useState<number | null>(null);
+  const [bank, setBank] = useState<BankRow[]>([]);
+  const [showAll, setShowAll] = useState(false);
   const [composing, setComposing] = useState(false);
   const [msg, setMsg] = useState('');
 
@@ -43,8 +53,7 @@ export function QuestionBank({ lang }: { lang: 'vi' | 'en' }) {
   const [audioText, setAudioText] = useState('');
 
   const load = async () => {
-    const bank = await api<unknown[]>('GET', '/questions');
-    setCount(bank.length);
+    setBank(await api<BankRow[]>('GET', '/questions'));
   };
   useEffect(() => { void load(); }, []);
 
@@ -109,12 +118,29 @@ export function QuestionBank({ lang }: { lang: 'vi' | 'en' }) {
       <div className="flex items-center gap-3">
         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-amber-100 text-amber-600"><Icon name="pencil" size={22} /></span>
         <div className="min-w-0 flex-1">
-          <div className="font-extrabold text-ink">{vi ? 'Ngân hàng câu hỏi' : 'Question bank'} {count != null && <span className="font-bold text-slate-400">({count})</span>}</div>
+          <div className="font-extrabold text-ink">{vi ? 'Ngân hàng câu hỏi' : 'Question bank'} <span className="font-bold text-slate-400">({bank.length})</span></div>
           <div className="text-[11px] font-bold text-muted">{vi ? 'Tự soạn câu hỏi — không dùng tài liệu có bản quyền' : 'Author your own — no publisher content'}</div>
         </div>
       </div>
 
       {msg && <div className="animate-rise rounded-2xl bg-emerald-50 p-2.5 text-center text-sm font-bold text-emerald-700">{msg}</div>}
+
+      {!composing && bank.length > 0 && (
+        <div className="space-y-1">
+          {(showAll ? bank : bank.slice(0, 4)).map((q) => (
+            <div key={q.id} className="flex items-center gap-2 rounded-xl bg-violet-50/60 px-2.5 py-1.5 text-[12px] font-bold text-slate-600">
+              <span className="shrink-0">{SKILL_EMOJI[q.skill] ?? '•'}</span>
+              <span className="min-w-0 flex-1 truncate">{q.prompt || '—'}</span>
+              {q.unit && <span className="chip shrink-0 bg-white text-[10px] text-violet-500">{q.unit}</span>}
+            </div>
+          ))}
+          {bank.length > 4 && (
+            <button onClick={() => setShowAll(!showAll)} className="w-full text-center text-[11px] font-extrabold text-violet-500">
+              {showAll ? (vi ? 'Thu gọn ▴' : 'Show less ▴') : (vi ? `Xem tất cả ${bank.length} câu ▾` : `See all ${bank.length} ▾`)}
+            </button>
+          )}
+        </div>
+      )}
 
       {!composing ? (
         <button onClick={() => setComposing(true)} className="btn-soft w-full text-sm"><Icon name="plus" size={16} /> {vi ? 'Soạn câu hỏi mới' : 'New question'}</button>
