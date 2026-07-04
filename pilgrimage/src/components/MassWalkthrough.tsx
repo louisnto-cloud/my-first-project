@@ -12,6 +12,7 @@ import { UI } from '@/content/ui';
 import { updateSave } from '@/lib/storage';
 import { SacredArt } from '@/components/SacredArt';
 import { SpeakerButton } from '@/components/SpeakerButton';
+import { spokenParagraphs } from '@/lib/speech';
 
 function PostureBadge({ posture }: { posture: Posture }) {
   const { t } = useI18n();
@@ -91,11 +92,16 @@ export function MassWalkthrough() {
               <SpeakerButton
                 id={`mass-${moment.id}-${lang}`}
                 autoStart={save.narrate}
-                text={[
+                text={spokenParagraphs(
                   t(moment.what),
-                  ...(moment.say?.flatMap((d) => [t(d.priest), t(d.people)]) ?? []),
+                  // Spoken as a lesson in the responses: "The priest says:
+                  // …" then "You say: …" — not an unlabelled run-on.
+                  ...(moment.say?.flatMap((d) => [
+                    `${t(UI.massPriestSays)}: ${t(d.priest)}`,
+                    `${t(UI.massYouSay)}: ${t(d.people)}`,
+                  ]) ?? []),
                   t(moment.why),
-                ].join(' ')}
+                )}
                 tone="prayer"
               />
             </div>

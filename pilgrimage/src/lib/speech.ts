@@ -460,6 +460,13 @@ export function intoChunks(raw: string, lang: Lang): Chunk[] {
     if (text) chunks.push({ text, pause: SENTENCE_PAUSE, pos: 'solo', seed: 1 });
   }
 
+  // A reader lets a beat fall before a quotation — the silence frames it.
+  for (let i = 1; i < chunks.length; i++) {
+    if (chunks[i].quoted) {
+      chunks[i - 1].pause = Math.max(chunks[i - 1].pause, SENTENCE_PAUSE + 140);
+    }
+  }
+
   return mergeShortChunks(chunks);
 }
 

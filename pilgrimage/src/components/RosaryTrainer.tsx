@@ -13,6 +13,7 @@ import { UI } from '@/content/ui';
 import { updateSave } from '@/lib/storage';
 import { SacredArt } from '@/components/SacredArt';
 import { SpeakerButton } from '@/components/SpeakerButton';
+import { spokenParagraphs } from '@/lib/speech';
 
 function BeadStrip({ position, total }: { position: number; total: number }) {
   // Ten beads of the current decade (or the 3 opening beads), as a string.
@@ -107,7 +108,7 @@ export function RosaryTrainer() {
   // the prayer's lines. It reads as each bead opens; the pane advances on tap.
   const spoken =
     step.announce && mystery
-      ? `${t(mystery.title)}. ${t(mystery.meditation)}`
+      ? spokenParagraphs(t(mystery.title), t(mystery.meditation))
       : prayer
         ? (lang === 'vi' ? prayer.vi : prayer.en).join(' ')
         : '';
