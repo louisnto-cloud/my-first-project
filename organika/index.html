@@ -1162,41 +1162,69 @@ function getViVoice(){
   };
   return vi.sort((a,b)=>score(b)-score(a))[0];
 }
-let _audio=null;
+// One reusable player element (iOS is far more reliable replaying a single
+// unlocked element than creating a new Audio per tap). Two TTS endpoints are
+// tried before falling back to the device voice, and total failure shows a
+// help panel instead of silence.
+let _player=null,_speakSeq=0;
+function getPlayer(){
+  if(!_player){
+    _player=new Audio();
+    _player.setAttribute('playsinline','');
+    _player.preload='auto';
+  }
+  return _player;
+}
 function stopAudio(){
   try{speechSynthesis.cancel();}catch(e){}
-  if(_audio){_audio.pause();_audio.src='';_audio=null;}
+  if(_player){try{_player.pause();}catch(e){}}
+}
+function ttsUrl(i,text){
+  const spd=S.audioSlow?0.3:0.95;
+  const q=encodeURIComponent(text);
+  return i===0
+    ?'https://translate.googleapis.com/translate_tts?client=gtx&ie=UTF-8&tl=vi&ttsspeed='+spd+'&q='+q
+    :'https://translate.google.com/translate_tts?client=tw-ob&ie=UTF-8&tl=vi&ttsspeed='+spd+'&q='+q;
 }
 function speak(text){
   stopAudio();
-  if(navigator.onLine!==false){
-    const spd=S.audioSlow?0.3:0.95;
-    const url='https://translate.google.com/translate_tts?ie=UTF-8&tl=vi&client=tw-ob&ttsspeed='+spd+'&q='+encodeURIComponent(text);
-    const a=new Audio(url);
-    _audio=a;
-    a.onerror=()=>speakLocal(text);
-    a.play().catch(()=>speakLocal(text));
-    return;
-  }
-  speakLocal(text);
+  const seq=++_speakSeq;
+  if(navigator.onLine===false){speakLocal(text,seq);return;}
+  tryTts(text,0,seq);
 }
-function speakLocal(text){
-  if(!('speechSynthesis' in window)){showVoiceTip();return;}
+function tryTts(text,i,seq){
+  if(seq!==_speakSeq) return;           // a newer speak() superseded this one
+  if(i>=2){speakLocal(text,seq);return;}
+  const p=getPlayer();
+  p.onerror=()=>tryTts(text,i+1,seq);
+  p.onstalled=null;
+  p.src=ttsUrl(i,text);
+  const pr=p.play();
+  if(pr&&pr.catch) pr.catch(()=>tryTts(text,i+1,seq));
+}
+function speakLocal(text,seq){
+  if(seq!==undefined&&seq!==_speakSeq) return;
+  if(!('speechSynthesis' in window)){showAudioHelp();return;}
   const vv=getViVoice();
-  if(!vv){showVoiceTip();return;}
+  if(!vv){showAudioHelp();return;}
   const u=new SpeechSynthesisUtterance(text);
   u.voice=vv; u.lang=vv.lang; u.rate=S.audioSlow?0.55:0.85; u.pitch=1;
   speechSynthesis.speak(u);
 }
-let _tipShown=false;
-function showVoiceTip(){
-  if(_tipShown) return; _tipShown=true;
+function showAudioHelp(){
+  if(document.getElementById('audio-help')) return;
   const d=document.createElement('div');
-  d.style.cssText='position:fixed;left:12px;right:12px;bottom:80px;z-index:999;background:#1A2721;color:#fff;border-radius:12px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 4px 20px rgba(0,0,0,.3)';
-  d.innerHTML='<b>Offline audio needs a Vietnamese voice.</b><br>iPhone: Settings › Accessibility › Spoken Content › Voices › Vietnamese › download <b>Linh (Enhanced)</b>.<br>Android: install Google Text to Speech Vietnamese.<br>Online, audio plays automatically with a native voice.'+
-    '<div style="text-align:right;margin-top:8px"><button onclick="this.closest(\'div\').parentNode.remove()" style="background:#52B788;border:none;color:#fff;border-radius:8px;padding:8px 16px;font-weight:700">OK</button></div>';
+  d.id='audio-help';
+  d.style.cssText='position:fixed;left:12px;right:12px;bottom:80px;z-index:999;background:#1A2721;color:#fff;border-radius:14px;padding:16px;font-size:13px;line-height:1.65;box-shadow:0 8px 30px rgba(0,0,0,.35)';
+  d.innerHTML='<b>🔇 No sound? Check these in order:</b><br>'+
+    '1. Flip the <b>ring/silent switch</b> on the side of your iPhone — silent mode mutes speech audio.<br>'+
+    '2. Turn the <b>volume</b> up with the side buttons while the app is open.<br>'+
+    '3. Turn off Bluetooth if audio may be going to another device.<br>'+
+    '4. For offline audio: Settings › Accessibility › Spoken Content › Voices › Vietnamese › download <b>Linh</b>.<br>'+
+    '<div style="display:flex;gap:8px;justify-content:flex-end;margin-top:10px">'+
+    '<button onclick="speak(\'Xin chào! Rất vui được gặp bạn.\')" style="background:#2D6A4F;border:none;color:#fff;border-radius:10px;padding:9px 16px;font-weight:700;font-family:inherit">🔊 Test sound</button>'+
+    '<button onclick="document.getElementById(\'audio-help\').remove()" style="background:#52B788;border:none;color:#fff;border-radius:10px;padding:9px 16px;font-weight:700;font-family:inherit">Close</button></div>';
   document.body.appendChild(d);
-  setTimeout(()=>{if(d.parentNode)d.remove();},12000);
 }
 
 // ── NAV ──────────────────────────────────────────────────────────────────────
@@ -1303,6 +1331,7 @@ function renderHome(){
       <button class="explore-row" onclick="go('primer')"><span>📖</span><span>Pronoun and Register Guide</span><span class="arrow">›</span></button>
       <button class="explore-row" onclick="go('review')"><span>⭐</span><span>Star Review</span><span class="arrow">›</span></button>
       <button class="explore-row" onclick="go('progress')"><span>📈</span><span>Progress and Export</span><span class="arrow">›</span></button>
+      <button class="explore-row" onclick="showAudioHelp()"><span>🔊</span><span>Audio not working? Test and fix</span><span class="arrow">›</span></button>
     </div>
     <div style="height:90px"></div>
   </main>
