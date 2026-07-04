@@ -188,6 +188,22 @@ const ORDINAL_WORDS = [
   'twenty-eighth', 'twenty-ninth', 'thirtieth', 'thirty-first',
 ];
 
+// Scripture abbreviations, expanded only when a chapter/verse number follows
+// ("Jn 3:16" → "John 3:16") so ordinary words are never touched.
+const SCRIPTURE_BOOKS: Record<string, string> = {
+  Gen: 'Genesis', Ex: 'Exodus', Lev: 'Leviticus', Num: 'Numbers',
+  Deut: 'Deuteronomy', Josh: 'Joshua', Sam: 'Samuel', Kgs: 'Kings',
+  Chr: 'Chronicles', Macc: 'Maccabees', Ps: 'Psalm', Prov: 'Proverbs',
+  Eccl: 'Ecclesiastes', Wis: 'Wisdom', Sir: 'Sirach', Is: 'Isaiah',
+  Isa: 'Isaiah', Jer: 'Jeremiah', Ezek: 'Ezekiel', Dan: 'Daniel',
+  Hos: 'Hosea', Mic: 'Micah', Zech: 'Zechariah', Mal: 'Malachi',
+  Mt: 'Matthew', Mk: 'Mark', Lk: 'Luke', Jn: 'John', Rom: 'Romans',
+  Cor: 'Corinthians', Gal: 'Galatians', Eph: 'Ephesians',
+  Phil: 'Philippians', Col: 'Colossians', Thess: 'Thessalonians',
+  Tim: 'Timothy', Pet: 'Peter', Jas: 'James', Heb: 'Hebrews',
+  Rev: 'Revelation',
+};
+
 // Regnal numerals: "Benedict XVI" must read "Benedict the Sixteenth",
 // never "Benedict ex vee eye".
 const ROMAN_REGNAL: Record<string, string> = {
@@ -243,13 +259,25 @@ function humanizeText(text: string, lang: Lang): string {
     .replace(/\bCard\.\s+/g, 'Cardinal ')
     .replace(/\bMsgr\.\s+/g, 'Monsignor ')
     .replace(/\bAbb\.\s+/g, 'Abbot ')
+    // ── Catechism citations read as prose, not spelled letters ───────────
+    .replace(/\bCCC\s+(\d+)/g, 'Catechism, paragraph $1')
     // ── Acronyms — dot-separated so TTS spells them out clearly ──────────
     .replace(/\bRCIA\b/g, 'R. C. I. A.')
     .replace(/\bOCIA\b/g, 'O. C. I. A.')
     .replace(/\bCCC\b/g, 'C. C. C.')
+    // ── Scripture book abbreviations (only before a numeric reference) ───
+    .replace(/\b([123])\s?(Cor|Thess|Tim|Pet|Jn|Sam|Kgs|Chr|Macc)\.?\s+(?=\d)/g,
+      (m, n: string, book: string) => {
+        const nth = ({ '1': 'First', '2': 'Second', '3': 'Third' } as Record<string, string>)[n];
+        return `${nth} ${SCRIPTURE_BOOKS[book] ?? book} `;
+      })
+    .replace(/\b(Gen|Ex|Lev|Num|Deut|Josh|Ps|Prov|Eccl|Wis|Sir|Is|Isa|Jer|Ezek|Dan|Hos|Mic|Zech|Mal|Mt|Mk|Lk|Jn|Rom|Gal|Eph|Phil|Col|Heb|Jas|Rev)\.?\s+(?=\d)/g,
+      (m, book: string) => `${SCRIPTURE_BOOKS[book] ?? book} `)
     // ── Scripture references: "John 3:16" → "John, chapter 3, verse 16" ──
     .replace(/\b(\d+):(\d+)[-–](\d+)\b/g, 'chapter $1, verses $2 to $3')
     .replace(/\b(\d+):(\d+)\b/g, 'chapter $1, verse $2')
+    // Psalms are cited by number, never by chapter.
+    .replace(/\bPsalms?\s+chapter\b/g, 'Psalm')
     // ── Councils are spoken "Vatican Two", never "Vatican the Second" ────
     .replace(/\bVatican II\b/g, 'Vatican Two')
     .replace(/\bVatican I\b/g, 'Vatican One')
@@ -267,6 +295,7 @@ function humanizeText(text: string, lang: Lang): string {
     // ── Common shorthand ─────────────────────────────────────────────────
     .replace(/\be\.g\.\s*/g, 'for example, ')
     .replace(/\bi\.e\.\s*/g, 'that is, ')
+    .replace(/\bcf\.\s*/gi, 'compare ')
     .replace(/\betc\.\b/g, 'et cetera')
     .replace(/\s&\s/g, ' and ')
     .replace(/\bvs\.\s*/g, 'versus ')
@@ -282,6 +311,8 @@ interface Chunk {
   text: string;
   pause: number;       // ms to wait before the next chunk begins
   question?: boolean;  // rising thought — spoken with a slight lift
+  solemn?: boolean;    // "Amen." / "Alleluia." — spoken slowly, reverently
+  quoted?: boolean;    // dialogue — a reader marks a quotation with a shift
 }
 
 const SENTENCE_PAUSE  = 380; // after . ! ?  — a thought has completed
@@ -296,6 +327,7 @@ function mergeShortChunks(chunks: Chunk[]): Chunk[] {
     const prev = out[out.length - 1];
     if (
       prev &&
+      !c.solemn &&
       (c.text.length < 18 || prev.text.length < 18) &&
       prev.text.length + c.text.length < 90 &&
       prev.pause <= CLAUSE_PAUSE
@@ -327,8 +359,11 @@ function intoChunks(raw: string, lang: Lang): Chunk[] {
 
     sentences.forEach((sentence, si) => {
       const lastSentence = si === sentences.length - 1;
-      const endPause = lastSentence ? PARAGRAPH_PAUSE : SENTENCE_PAUSE;
       const question = /[?？]$/.test(sentence);
+      const solemn = /^(amen|alleluia)[.!]?$/i.test(sentence);
+      const quoted = /^["“‘']/.test(sentence);
+      // A solemn word earns a long silence after it, even mid-paragraph.
+      const endPause = lastSentence || solemn ? PARAGRAPH_PAUSE : SENTENCE_PAUSE;
 
       // For longer sentences, also split at clause boundaries so the guide
       // breathes between ideas rather than rushing through a long stretch.
@@ -344,10 +379,11 @@ function intoChunks(raw: string, lang: Lang): Chunk[] {
             text: clause,
             pause: isLast ? endPause : CLAUSE_PAUSE,
             question: isLast ? question : false,
+            quoted: i === 0 ? quoted : false,
           });
         });
       } else {
-        chunks.push({ text: sentence, pause: endPause, question });
+        chunks.push({ text: sentence, pause: endPause, question, solemn, quoted });
       }
     });
   }
@@ -425,6 +461,11 @@ function speakNext() {
     pitch = 1.04;               // a slight lift for a rising thought
     rate -= 0.01;
   }
+  if (chunk.quoted) pitch = 1.02; // a reader marks dialogue with a small shift
+  if (chunk.solemn) {
+    rate = 0.76;                // "Amen." — slow, reverent, letting it rest
+    pitch = 0.98;
+  }
   chunkIndex++;
 
   u.rate   = rate;
@@ -474,19 +515,27 @@ export function narrate(id: string, text: string, lang: Lang, opts?: { cue?: boo
   if (opts?.cue) playChime();
 
   // Chrome silently pauses synthesis after ~15 s; nudging it keeps long
-  // passages (a whole prayer, a Mass moment) flowing to the end.
-  keepAlive = setInterval(() => {
-    const sp = synth();
-    if (sp && sp.speaking) {
-      sp.pause();
-      sp.resume();
-    }
-  }, 9000);
+  // passages (a whole prayer, a Mass moment) flowing to the end. The nudge
+  // itself causes an audible stutter on Safari, so it's Chromium-only.
+  if (typeof navigator !== 'undefined' && /chrom(e|ium)|edg/i.test(navigator.userAgent)) {
+    keepAlive = setInterval(() => {
+      const sp = synth();
+      if (sp && sp.speaking) {
+        sp.pause();
+        sp.resume();
+      }
+    }, 9000);
+  }
 
   // Wait for the async voice list before the first utterance, so the very
   // first words already carry the chosen female voice — never the default.
+  // Then a short beat: Chrome can swallow an utterance queued immediately
+  // after cancel(), and the chime deserves to finish before the guide speaks.
+  const settle = opts?.cue ? 450 : 80;
   whenVoicesReady(() => {
-    if (activeId === id) speakNext();
+    setTimeout(() => {
+      if (activeId === id) speakNext();
+    }, settle);
   });
 }
 
