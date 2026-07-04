@@ -358,6 +358,11 @@ textarea:focus{border-color:var(--g)}
 .sum-l{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--tx2)}
 .dict-input{width:100%;border:2px solid var(--bd);border-radius:var(--rs);padding:14px 16px;font-size:16px;background:var(--wh);outline:none;margin-bottom:14px;font-family:inherit}
 .dict-input:focus{border-color:var(--g)}
+.price-play-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;margin:8px 0 20px}
+.price-play{width:110px;height:110px;border-radius:50%;background:var(--g);color:var(--wh);border:none;cursor:pointer;font-size:34px;font-family:inherit;box-shadow:var(--shd);transition:transform .12s;line-height:1.2}
+.price-play span{font-size:11px;font-weight:700;display:block;margin-top:2px}
+.price-play:active{transform:scale(.93)}
+.price-opt{font-variant-numeric:tabular-nums;font-size:17px;font-weight:700;text-align:center}
 
 /* ── PLACEMENT ── */
 .placement-result{text-align:center;padding:20px;max-width:340px}
@@ -933,6 +938,13 @@ let S={
   lineRevealed:false, // current hidden line revealed
   placementScore:0,   // placement quiz correct count
   searchQ:'',         // dictionary search query
+  xpDay:'',           // which day todayXP belongs to
+  typeChecked:null,   // typing quiz: null | true | false
+  priceTarget:0,      // price trainer: current price
+  priceOpts:[],       // price trainer: options
+  priceAnswer:null,   // price trainer: selected option
+  priceRight:0,       // price trainer: session correct
+  priceTotal:0,       // price trainer: session total
 };
 
 // Update vocab object on VOCAB array directly
@@ -943,25 +955,61 @@ function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random
 function rand(a){return a[Math.floor(Math.random()*a.length)];}
 function today(){return new Date().toISOString().slice(0,10);}
 
+function rolloverDay(){
+  const td=today();
+  if(S.xpDay!==td){S.xpDay=td;S.todayXP=0;}
+}
 function onCorrect(v){
   v.correct++;
   v.box=Math.min(v.box+1,5);
   const xp=[0,5,8,12,18,25][v.box]||5;
+  rolloverDay();
   S.xp+=xp; S.todayXP+=xp;
   S.sessionRight++; S.sessionXP+=xp;
   if(navigator.vibrate) navigator.vibrate(10);
   checkStreak();
+  saveState();
 }
 function onWrong(v){
   v.wrong++;
   v.box=Math.max(v.box-1,1);
   S.sessionWrong++;
   if(navigator.vibrate) navigator.vibrate([30,40,30]);
+  saveState();
 }
 function toggleStar(id){
   const v=getV(id);
-  if(v){v.starred=!v.starred;render();}
+  if(v){v.starred=!v.starred;saveState();render();}
 }
+
+// ── PERSISTENCE ──────────────────────────────────────────────────────────────
+// Auto-save to localStorage (works on the hosted site). Export/Import remains
+// as a manual backup and a way to move progress between devices.
+const SAVE_KEY='organika-academy-v1';
+function snapshot(){
+  return {v:1,
+    state:{xp:S.xp,streak:S.streak,lastDay:S.lastDay,todayXP:S.todayXP,xpDay:S.xpDay,dailyGoal:S.dailyGoal},
+    vocab:VOCAB.filter(v=>v.correct||v.wrong||v.starred||v.lastSeen)
+      .map(v=>({id:v.id,box:v.box,correct:v.correct,wrong:v.wrong,lastSeen:v.lastSeen,starred:v.starred}))};
+}
+function applySnapshot(d){
+  if(!d||!d.state) return;
+  Object.assign(S,d.state);
+  (d.vocab||[]).forEach(sv=>{
+    const v=getV(sv.id);
+    if(v){v.box=sv.box||1;v.correct=sv.correct||0;v.wrong=sv.wrong||0;v.lastSeen=sv.lastSeen||null;v.starred=!!sv.starred;}
+  });
+}
+function saveState(){
+  try{localStorage.setItem(SAVE_KEY,JSON.stringify(snapshot()));}catch(e){}
+}
+function loadState(){
+  try{
+    const raw=localStorage.getItem(SAVE_KEY);
+    if(raw) applySnapshot(JSON.parse(raw));
+  }catch(e){}
+}
+document.addEventListener('visibilitychange',()=>{if(document.hidden)saveState();});
 function toggleSpeed(){S.audioSlow=!S.audioSlow;render();}
 function speedChip(){
   return `<button class="speed-chip${S.audioSlow?' on':''}" onclick="event.stopPropagation();toggleSpeed()">${S.audioSlow?'🐢 Slow':'▶ Normal'}</button>`;
@@ -969,10 +1017,9 @@ function speedChip(){
 function checkStreak(){
   const td=today();
   if(S.lastDay===td) return;
-  const yesterday=new Date(); yesterday.setDate(yesterday.getDate()-1);
-  const yd=yesterday.toISOString().slice(0,10);
+  const yd=new Date(Date.now()-86400000).toISOString().slice(0,10);
   S.streak=(S.lastDay===yd)?S.streak+1:1;
-  S.lastDay=td; S.todayXP=S.xp; // approximate
+  S.lastDay=td;
 }
 
 // Days until card is due again (simple Leitner intervals)
@@ -1084,6 +1131,8 @@ function render(){
     case 'placement':   app.innerHTML=renderPlacement(); break;
     case 'summary':     app.innerHTML=renderSummary(); break;
     case 'dict':        app.innerHTML=renderDict(); break;
+    case 'type':        app.innerHTML=renderType(); break;
+    case 'prices':      app.innerHTML=renderPrices(); break;
     default:            app.innerHTML=renderHome();
   }
   attachNav();
@@ -1113,6 +1162,7 @@ function attachNav(){
 
 // ── HOME ─────────────────────────────────────────────────────────────────────
 function renderHome(){
+  rolloverDay();
   const pct=Math.min(100,Math.round(S.todayXP/S.dailyGoal*100));
   const mastered=VOCAB.filter(v=>v.box>=4).length;
   const learning=VOCAB.filter(v=>v.box<=2&&v.correct>0).length;
@@ -1153,6 +1203,7 @@ function renderHome(){
     </div>
     <div class="section-label">Explore</div>
     <div class="explore-list">
+      <button class="explore-row" onclick="S.priceTarget=0;S.priceRight=0;S.priceTotal=0;go('prices')"><span>💰</span><span>Price Listening Trainer</span><span class="arrow">›</span></button>
       <button class="explore-row" onclick="go('dict')"><span>🔎</span><span>Dictionary — search all terms</span><span class="arrow">›</span></button>
       <button class="explore-row" onclick="go('situations')"><span>🎭</span><span>Role-Play Dialogues</span><span class="arrow">›</span></button>
       <button class="explore-row" onclick="go('intel')"><span>📊</span><span>Vietnam Market Intel</span><span class="arrow">›</span></button>
@@ -1170,6 +1221,7 @@ function startLesson(mode){
   S.sessionRight=0; S.sessionWrong=0; S.sessionXP=0;
   if(mode==='flashcard'){S.activeCard=S.activeLesson[0]; go('flashcard');}
   else if(mode==='quiz'){buildQuiz(); go('quiz');}
+  else if(mode==='type'){S.typeChecked=null; go('type');}
   else if(mode==='drill'){S.drillQueue=[...S.activeLesson]; S.drillIdx=0; go('drill');}
 }
 
@@ -1184,6 +1236,7 @@ function renderPractice(){
     <div class="mode-pills">
       <button class="pill${S.practiceMode==='flashcard'?' active':''}" onclick="S.practiceMode='flashcard';render()">Flashcards</button>
       <button class="pill${S.practiceMode==='quiz'?' active':''}" onclick="S.practiceMode='quiz';render()">Quiz</button>
+      <button class="pill${S.practiceMode==='type'?' active':''}" onclick="S.practiceMode='type';render()">Type It</button>
       <button class="pill${S.practiceMode==='drill'?' active':''}" onclick="S.practiceMode='drill';render()">Speak</button>
     </div>
     ${S.practiceMode==='quiz'?`<div class="section-label">Direction</div>
@@ -1563,8 +1616,180 @@ function confirmReset(){
 }
 function resetAll(){
   VOCAB.forEach(v=>{v.box=1;v.correct=0;v.wrong=0;v.lastSeen=null;v.starred=false;});
-  S.xp=0;S.streak=0;S.todayXP=0;S.lastDay='';
+  S.xp=0;S.streak=0;S.todayXP=0;S.lastDay='';S.xpDay='';
+  try{localStorage.removeItem(SAVE_KEY);}catch(e){}
   go('home');
+}
+
+// ── TYPING QUIZ ──────────────────────────────────────────────────────────────
+function cleanAnswer(s){
+  return normStr(s).replace(/[.,!?;:()"']/g,'').replace(/\s+/g,' ').trim();
+}
+function renderType(){
+  if(!S.activeLesson.length) return `<div class="screen"><div class="empty-state">No terms available.</div><button class="btn-back" onclick="go('practice')">Back</button></div>`;
+  const id=S.activeLesson[S.lessonIdx];
+  const v=getV(id);
+  if(!v){go('practice');return '';}
+  const prog=S.lessonIdx+1, total=S.activeLesson.length;
+  return `<div class="screen">
+  <div class="lesson-header">
+    <button class="btn-back" onclick="go('practice')">✕</button>
+    <div class="lesson-progress"><div class="lp-bar"><div class="lp-fill" style="width:${Math.round(prog/total*100)}%"></div></div><span>${prog}/${total}</span></div>
+  </div>
+  <main class="main-scroll" style="padding:16px">
+    <div class="quiz-prompt-label">Type in Vietnamese</div>
+    <div class="quiz-prompt">${v.en}</div>
+    <div class="quiz-prompt-sub">Accent marks optional — "xin chao" counts for "xin chào"</div>
+    ${S.typeChecked===null?`
+      <input id="type-input" class="dict-input" type="text" placeholder="Type the Vietnamese…" autocomplete="off" autocapitalize="off"
+        onkeydown="if(event.key==='Enter')checkTyped()">
+      <button class="btn-primary full-w" onclick="checkTyped()">Check</button>
+      <button class="btn-sec full-w" style="margin-top:10px" onclick="revealTyped()">I don't know</button>
+    `:`
+      <div class="quiz-feedback ${S.typeChecked?'correct-fb':'wrong-fb'}">
+        ${S.typeChecked?'Correct! +XP':'Not quite.'}
+        <div class="quiz-reveal">${v.vi}</div>
+        <div class="quiz-ph">/ ${v.phonetic} /</div>
+        <button class="speak-inline lg" onclick="speak('${v.vi.replace(/'/g,"\\'")}')">🔊 Listen</button>
+        <button class="btn-primary" style="margin-top:12px" onclick="nextType()">Continue</button>
+      </div>
+    `}
+  </main>
+  </div>`;
+}
+function checkTyped(){
+  const inp=document.getElementById('type-input');
+  if(!inp||!inp.value.trim()) return;
+  const id=S.activeLesson[S.lessonIdx];
+  const v=getV(id);
+  if(!v) return;
+  // accept the answer with or without the anh/chị politeness slot filled
+  const target=cleanAnswer(v.vi.replace(/anh\/chị/gi,''));
+  const targetFull=cleanAnswer(v.vi);
+  const got=cleanAnswer(inp.value.replace(/anh\/chi/gi,''));
+  const ok=got===targetFull||got===target||got===cleanAnswer(v.vi.replace(/anh\/chị/gi,'anh'))||got===cleanAnswer(v.vi.replace(/anh\/chị/gi,'chị'));
+  S.typeChecked=ok;
+  v.lastSeen=Date.now();
+  ok?onCorrect(v):onWrong(v);
+  speak(v.vi);
+  render();
+}
+function revealTyped(){
+  const v=getV(S.activeLesson[S.lessonIdx]);
+  if(!v) return;
+  S.typeChecked=false;
+  v.lastSeen=Date.now();
+  onWrong(v);
+  speak(v.vi);
+  render();
+}
+function nextType(){
+  S.typeChecked=null;
+  S.lessonIdx++;
+  if(S.lessonIdx>=S.activeLesson.length) go('summary');
+  else render();
+}
+
+// ── PRICE LISTENING TRAINER ──────────────────────────────────────────────────
+// Converts a number to spoken Vietnamese so the TTS reads real prices.
+const VN_DIG=['không','một','hai','ba','bốn','năm','sáu','bảy','tám','chín'];
+function twoDigVi(n){
+  if(n<10) return VN_DIG[n];
+  const t=Math.floor(n/10),u=n%10;
+  let s=(t===1?'mười':VN_DIG[t]+' mươi');
+  if(u===0) return s;
+  if(u===1&&t>1) s+=' mốt';
+  else if(u===5) s+=' lăm';
+  else s+=' '+VN_DIG[u];
+  return s;
+}
+function threeDigVi(n){
+  const h=Math.floor(n/100),r=n%100;
+  if(h===0) return twoDigVi(r);
+  let s=VN_DIG[h]+' trăm';
+  if(r===0) return s;
+  if(r<10) s+=' lẻ '+VN_DIG[r];
+  else s+=' '+twoDigVi(r);
+  return s;
+}
+function numToVi(n){
+  if(n>=1e6){
+    const m=Math.floor(n/1e6),r=n%1e6;
+    let s=threeDigVi(m)+' triệu';
+    if(r){
+      const k=Math.floor(r/1000);
+      if(k) s+=' '+threeDigVi(k)+' nghìn';
+      if(r%1000) s+=' '+threeDigVi(r%1000);
+    }
+    return s;
+  }
+  if(n>=1000){
+    const k=Math.floor(n/1000),r=n%1000;
+    let s=threeDigVi(k)+' nghìn';
+    if(r) s+=' '+threeDigVi(r);
+    return s;
+  }
+  return threeDigVi(n);
+}
+const PRICE_POOL=[15000,20000,25000,35000,45000,55000,65000,85000,95000,
+  120000,125000,150000,180000,220000,250000,350000,450000,500000,750000,850000,
+  1200000,1500000,2500000,3500000,5000000,12000000,25000000];
+function fmtVnd(n){return n.toLocaleString('en-US')+' ₫';}
+function newPriceRound(){
+  const target=rand(PRICE_POOL);
+  const others=shuffle(PRICE_POOL.filter(p=>p!==target)).slice(0,3);
+  S.priceTarget=target;
+  S.priceOpts=shuffle([target,...others]);
+  S.priceAnswer=null;
+}
+function speakPrice(){speak(numToVi(S.priceTarget)+' đồng');}
+function renderPrices(){
+  if(!S.priceTarget) newPriceRound();
+  return `<div class="screen">
+  <div class="lesson-header">
+    <button class="btn-back" onclick="S.priceTarget=0;S.priceRight=0;S.priceTotal=0;go('home')">‹</button>
+    <span class="screen-title">Price Trainer</span>
+    <span style="font-size:13px;color:var(--tx2)">${S.priceRight}/${S.priceTotal}</span>
+  </div>
+  <main class="main-scroll" style="padding:16px">
+    <p class="screen-intro">Vietnamese prices fly by fast in negotiations. Tap play, pick the number you heard.</p>
+    <div class="price-play-wrap">
+      <button class="price-play" onclick="speakPrice()">🔊<br><span>Play price</span></button>
+      ${speedChip()}
+    </div>
+    <div class="quiz-options">
+      ${S.priceOpts.map(p=>{
+        let cls='quiz-opt price-opt';
+        if(S.priceAnswer!==null){
+          if(p===S.priceTarget) cls+=' correct';
+          else if(p===S.priceAnswer) cls+=' wrong';
+          else cls+=' faded';
+        }
+        return `<button class="${cls}" onclick="answerPrice(${p})">${fmtVnd(p)}</button>`;
+      }).join('')}
+    </div>
+    ${S.priceAnswer!==null?`<div class="quiz-feedback ${S.priceAnswer===S.priceTarget?'correct-fb':'wrong-fb'}">
+      ${S.priceAnswer===S.priceTarget?'Correct!':'It was '+fmtVnd(S.priceTarget)}
+      <div class="quiz-ph">"${numToVi(S.priceTarget)} đồng"</div>
+      <button class="speak-inline lg" onclick="speakPrice()">🔊 Hear again</button>
+      <button class="btn-primary" style="margin-top:12px" onclick="newPriceRound();speakPrice();render()">Next price</button>
+    </div>`:''}
+    <div style="height:30px"></div>
+  </main>
+  </div>`;
+}
+function answerPrice(p){
+  if(S.priceAnswer!==null) return;
+  S.priceAnswer=p;
+  S.priceTotal++;
+  if(p===S.priceTarget){
+    S.priceRight++;
+    rolloverDay();
+    S.xp+=8; S.todayXP+=8;
+    checkStreak(); saveState();
+    if(navigator.vibrate) navigator.vibrate(10);
+  }else if(navigator.vibrate) navigator.vibrate([30,40,30]);
+  render();
 }
 
 // ── SESSION SUMMARY ──────────────────────────────────────────────────────────
@@ -1648,9 +1873,7 @@ function renderExport(){
   </div>`;
 }
 function exportProgress(){
-  const state={xp:S.xp,streak:S.streak,lastDay:S.lastDay,todayXP:S.todayXP};
-  const vocab=VOCAB.map(v=>({id:v.id,box:v.box,correct:v.correct,wrong:v.wrong,lastSeen:v.lastSeen,starred:v.starred}));
-  return JSON.stringify({v:1,state,vocab});
+  return JSON.stringify(snapshot());
 }
 function importProgress(){
   const raw=document.getElementById('import-box').value.trim();
@@ -1658,11 +1881,8 @@ function importProgress(){
   try{
     const d=JSON.parse(raw);
     if(!d.vocab||!d.state) throw new Error('Invalid format');
-    Object.assign(S,d.state);
-    d.vocab.forEach(sv=>{
-      const v=getV(sv.id);
-      if(v){v.box=sv.box||1;v.correct=sv.correct||0;v.wrong=sv.wrong||0;v.lastSeen=sv.lastSeen||null;v.starred=sv.starred||false;}
-    });
+    applySnapshot(d);
+    saveState();
     msg.textContent='Progress loaded successfully!';
     msg.style.color='var(--g)';
     setTimeout(()=>go('progress'),1200);
@@ -1772,7 +1992,9 @@ document.addEventListener('click',function(e){
     if(!v.lastSeen) v.lastSeen=null;
     if(!v.starred) v.starred=false;
   });
-  // set today for streak baseline
+  // restore saved progress, then set today for streak baseline
+  loadState();
+  rolloverDay();
   if(!S.lastDay) S.lastDay=today();
   render();
 })();
