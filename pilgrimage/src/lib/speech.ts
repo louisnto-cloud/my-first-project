@@ -412,6 +412,26 @@ function mergeShortChunks(chunks: Chunk[]): Chunk[] {
   return out;
 }
 
+/** No chunk may run long enough to hit Chrome's ~15 s synthesis stall.
+ *  Anything over ~180 chars splits at the word boundary nearest its middle;
+ *  the first half takes a clause-breath, the second keeps the original pause. */
+function splitLongChunks(chunks: Chunk[]): Chunk[] {
+  const out: Chunk[] = [];
+  for (const c of chunks) {
+    let rest = c;
+    while (rest.text.length > 180) {
+      // Cut each piece near 160 chars, at a word boundary.
+      const before = rest.text.lastIndexOf(' ', 160);
+      const cut = before > 40 ? before : rest.text.indexOf(' ', 160);
+      if (cut <= 0) break; // one unbroken word — let the engine cope
+      out.push({ ...rest, text: rest.text.slice(0, cut), pause: CLAUSE_PAUSE, question: false });
+      rest = { ...rest, text: rest.text.slice(cut + 1), breath: false, pos: rest.pos === 'open' ? 'mid' : rest.pos };
+    }
+    out.push(rest);
+  }
+  return out;
+}
+
 export function intoChunks(raw: string, lang: Lang): Chunk[] {
   const chunks: Chunk[] = [];
   let seed = 0; // running sentence counter, across paragraphs
@@ -481,7 +501,7 @@ export function intoChunks(raw: string, lang: Lang): Chunk[] {
     }
   }
 
-  return mergeShortChunks(chunks);
+  return splitLongChunks(mergeShortChunks(chunks));
 }
 
 // ─── Speaking engine ─────────────────────────────────────────────────────────
@@ -498,21 +518,12 @@ let chunkIndex = 0; // how far through the current passage we are
 let generation = 0; // bumped on every narrate/stop — cancel() fires the old
                     // utterance's onend/onerror AFTER the new narration has
                     // begun; stale events must never touch the new state
-let keepAlive: ReturnType<typeof setInterval> | null = null;
-
-function clearKeepAlive() {
-  if (keepAlive) {
-    clearInterval(keepAlive);
-    keepAlive = null;
-  }
-}
 
 export function stopNarration() {
   const s = synth();
   generation++;
   queue = [];
   activeId = null;
-  clearKeepAlive();
   if (s) s.cancel();
   speakingId = null;
   emit();
@@ -523,7 +534,6 @@ function speakNext() {
   if (!s || activeId == null) return;
   const chunk = queue.shift();
   if (!chunk) {
-    clearKeepAlive();
     if (speakingId === activeId) {
       speakingId = null;
       activeId = null;
@@ -622,7 +632,6 @@ function speakNext() {
   u.onerror = () => {
     if (generation !== gen) return; // cancelled by a newer narration — ignore
     if (speakingId === activeId) {
-      clearKeepAlive();
       speakingId = null;
       activeId = null;
       emit();
@@ -655,7 +664,6 @@ export function narrate(
   generation++;
   const gen = generation;
   s.cancel();
-  clearKeepAlive();
 
   queue = chunks;
   chunkIndex = 0;
@@ -667,18 +675,9 @@ export function narrate(
 
   if (opts?.cue) playChime();
 
-  // Chrome silently pauses synthesis after ~15 s; nudging it keeps long
-  // passages (a whole prayer, a Mass moment) flowing to the end. The nudge
-  // itself causes an audible stutter on Safari, so it's Chromium-only.
-  if (typeof navigator !== 'undefined' && /chrom(e|ium)|edg/i.test(navigator.userAgent)) {
-    keepAlive = setInterval(() => {
-      const sp = synth();
-      if (sp && sp.speaking) {
-        sp.pause();
-        sp.resume();
-      }
-    }, 9000);
-  }
+  // No pause/resume keep-alive: Chrome's ~15 s stall only bites utterances
+  // that long, and splitLongChunks guarantees none exist. The nudge itself
+  // caused an audible mid-word hiccup — its absence is part of the softness.
 
   // Wait for the async voice list before the first utterance, so the very
   // first words already carry the chosen female voice — never the default.
