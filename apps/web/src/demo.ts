@@ -73,11 +73,12 @@ interface DDB {
   submissions: DSubmission[];
   practice: DPractice[];
   joinRequests: DJoinReq[];
+  invites: { code: string; studentId: string; used: boolean }[];
 }
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v2';
+const KEY = 'etop-demo-db-v3';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -181,6 +182,7 @@ function seed(): DDB {
       { studentId: 's_UP1482', kind: 'lesson', points: 14, date: today(), lessonId: 'found_l1', pct: 100 },
     ],
     joinRequests: [],
+    invites: [],
   };
   return db;
 }
@@ -276,12 +278,123 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     return ok({ token: `demo:${u.id}`, user: { id: u.id, name: u.name, role: u.role } });
   }
 
+  // Parent self-registration with a one-time invite code (public route).
+  if (method === 'POST' && rawPath === '/auth/register-parent') {
+    const inviteCode = String(b.inviteCode ?? '').trim().toUpperCase();
+    const name = String(b.name ?? '').trim();
+    const email = String(b.email ?? '').trim().toLowerCase();
+    if (!inviteCode || name.length < 2 || !email.includes('@') || String(b.password ?? '').length < 6) return err(400, 'invalid_input');
+    const inv = db.invites.find((x) => x.code === inviteCode);
+    if (!inv) return err(404, 'invalid_invite');
+    if (inv.used) return err(409, 'invite_used');
+    if (db.users.some((u) => u.email === email)) return err(409, 'email_taken');
+    const u: DUser = { id: uid('p'), role: 'parent', name, email, classIds: [], childIds: [inv.studentId] };
+    db.users.push(u);
+    inv.used = true;
+    save(db);
+    return ok({ token: `demo:${u.id}`, user: { id: u.id, name: u.name, role: 'parent' } });
+  }
+
   if (!me) return err(401, 'unauthenticated');
   const actor = actorOf(me);
 
   if (method === 'GET' && rawPath === '/me') {
     return ok({ id: me.id, name: me.name, role: me.role, orgId: ORG, siteId: actor.siteId, locale: 'vi' });
   }
+
+  // ---------- Admin: teachers & classes (owner / academic director) ----------
+  const isAdmin = me.role === 'owner' || me.role === 'academic_director';
+
+  if (rawPath === '/admin/teachers') {
+    if (!isAdmin) return err(403, 'forbidden');
+    if (method === 'GET') {
+      return ok(
+        db.users.filter((u) => u.role === 'tutor').map((u) => ({
+          id: u.id, name: u.name, email: u.email, loginCode: u.code,
+          classCount: db.classes.filter((c) => c.teacherId === u.id).length,
+        })),
+      );
+    }
+    if (method === 'POST') {
+      const name = String(b.name ?? '').trim();
+      if (name.length < 2) return err(400, 'invalid_input');
+      let code: string;
+      do { code = `GV${String(Math.floor(rnd() * 9000) + 1000)}`; } while (db.users.some((u) => u.code === code));
+      const u: DUser = { id: uid('t'), role: 'tutor', name, email: `${code.toLowerCase()}@gv.etop.local`, code, classIds: [], childIds: [] };
+      db.users.push(u);
+      save(db);
+      return ok({ id: u.id, name: u.name, loginCode: code });
+    }
+  }
+
+  if (rawPath === '/admin/classes' && method === 'POST') {
+    if (!isAdmin) return err(403, 'forbidden');
+    const name = String(b.name ?? '').trim();
+    if (!name) return err(400, 'invalid_input');
+    const teacherId = (b.teacherId as string) || '';
+    if (teacherId && !db.users.some((u) => u.id === teacherId && u.role === 'tutor')) return err(400, 'unknown_teacher');
+    const c: DClass = { id: uid('cls'), name, teacherId, scheduleNote: String(b.scheduleNote ?? ''), level: '' };
+    db.classes.push(c);
+    const teacher = db.users.find((u) => u.id === teacherId);
+    if (teacher) teacher.classIds.push(c.id);
+    save(db);
+    return ok({ id: c.id, name: c.name });
+  }
+
+  if (seg[0] === 'admin' && seg[1] === 'classes' && seg[2] && method === 'PATCH') {
+    if (!isAdmin) return err(403, 'forbidden');
+    const c = db.classes.find((x) => x.id === seg[2]);
+    if (!c) return err(404, 'not_found');
+    if (b.name !== undefined) c.name = String(b.name).trim();
+    if (b.scheduleNote !== undefined) c.scheduleNote = String(b.scheduleNote);
+    if (b.teacherId !== undefined) {
+      const nextId = (b.teacherId as string) || '';
+      if (nextId && !db.users.some((u) => u.id === nextId && u.role === 'tutor')) return err(400, 'unknown_teacher');
+      const prev = db.users.find((u) => u.id === c.teacherId);
+      if (prev) prev.classIds = prev.classIds.filter((x) => x !== c.id);
+      c.teacherId = nextId;
+      const next = db.users.find((u) => u.id === nextId);
+      if (next) next.classIds.push(c.id);
+    }
+    save(db);
+    return ok({ ok: true });
+  }
+
+  // ---------- Teacher authoring: create a question in the bank ----------
+  if (rawPath === '/questions' && method === 'POST') {
+    if (!(me.role === 'tutor' || isAdmin)) return err(403, 'forbidden');
+    const typeMap: Record<string, DQuestion['type']> = { mc: 'mc', fill_blank: 'fill', reorder: 'order', listen_mc: 'listen' };
+    const type = typeMap[String(b.type)];
+    const payload = (b.payload ?? {}) as Record<string, unknown>;
+    if (!type || !b.skill) return err(400, 'invalid_input');
+    const q: DQuestion = {
+      id: uid('q'),
+      type,
+      skill: b.skill as DQuestion['skill'],
+      prompt: String(b.prompt ?? ''),
+      payload,
+      unit: String(b.unit ?? ''),
+    };
+    db.questions.push(q);
+    save(db);
+    return ok({ id: q.id, copyrightNotice: 'Không tải lên tài liệu có bản quyền của nhà xuất bản.' });
+  }
+
+  // ---------- Parent invite (teacher of the student, or admin) ----------
+  if (seg[0] === 'students' && seg[2] === 'invite' && method === 'POST') {
+    const stu = db.users.find((u) => u.id === seg[1] && u.role === 'student');
+    if (!stu) return err(404, 'not_found');
+    const teaches = me.role === 'tutor' && stu.classIds.some((cid) => me.classIds.includes(cid));
+    if (!teaches && !isAdmin) return err(403, 'forbidden');
+    const alphabet = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+    let code = 'PH-';
+    for (let j = 0; j < 6; j++) code += alphabet[Math.floor(rnd() * alphabet.length)];
+    db.invites.push({ code, studentId: stu.id, used: false });
+    save(db);
+    return ok({ inviteCode: code, studentName: stu.name });
+  }
+
+  if (rawPath === '/auth/change-password' && method === 'POST') return ok({ ok: true });
 
   // ---- classes ----
   if (method === 'GET' && rawPath === '/classes') {

@@ -82,6 +82,14 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
     setTimeout(() => setCopied(''), 1200);
   };
 
+  // One-time invite code so the student's parent can self-register an
+  // account linked to their child (single-use, no open signup).
+  const invite = async (studentId: string, studentName: string) => {
+    const res = await api<{ inviteCode: string }>('POST', `/students/${studentId}/invite`);
+    copyCode(res.inviteCode);
+    flash(`🎟 Mã mời phụ huynh của ${studentName}: ${res.inviteCode} (đã chép) — phụ huynh nhập mã này ở màn hình đăng nhập, mục Phụ huynh → Đăng ký. Dùng được 1 lần.`);
+  };
+
   const togglePick = (id: string) => {
     sfx.click();
     const next = new Set(picked);
@@ -143,6 +151,7 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
                         </button>
                       )}
                       <button onClick={() => rotate(r.id)} title="Đổi mã" className="text-slate-300 hover:text-violet-600">↻</button>
+                      <button onClick={() => invite(r.id, r.name)} title="Tạo mã mời phụ huynh" className="text-slate-300 transition hover:text-violet-600">🎟</button>
                     </span>
                   </li>
                 ))}

@@ -4,6 +4,8 @@ import { makeT, type Lang } from './i18n';
 import { Player } from './Player';
 import { Landing } from './Landing';
 import { ClassManager } from './ClassManager';
+import { AdminPanel } from './AdminPanel';
+import { QuestionBank } from './QuestionBank';
 import { PracticeHub } from './Practice';
 import { Icon } from './Icon';
 import { Mascot } from './Mascot';
@@ -425,6 +427,7 @@ function Teacher({ lang, t }: { lang: Lang; t: (k: string) => string }) {
   return (
     <div className="space-y-4">
       <ClassManager />
+      <QuestionBank lang={lang} />
       <div className="card space-y-2">
         <h2 className="font-black text-violet-700">✍️ {t('gradingQueue')} ({queue.length})</h2>
         {queue.map((s) => (
@@ -669,7 +672,12 @@ export default function App() {
       <main key={me.role} className="animate-rise mx-auto max-w-3xl space-y-4 p-4">
         {me.role === 'student' && <Student lang={lang} t={t} />}
         {me.role === 'parent' && <Parent lang={lang} t={t} />}
-        {['owner', 'academic_director'].includes(me.role) && <OwnerDash />}
+        {['owner', 'academic_director'].includes(me.role) && (
+          <>
+            <OwnerDash />
+            <AdminPanel lang={lang} />
+          </>
+        )}
         {['tutor', 'academic_director', 'owner'].includes(me.role) && <Teacher lang={lang} t={t} />}
         {me.role === 'front_desk' && <Kiosk me={me} t={t} />}
       </main>

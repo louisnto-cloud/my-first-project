@@ -36,6 +36,18 @@ const STR: Record<string, { vi: string; en: string }> = {
   },
   jobsBody: { vi: 'E’TOP chào đón giáo viên & trợ giảng yêu trẻ. Gửi hồ sơ về:', en: 'We welcome teachers who love children. Send your CV to:' },
   feedbackBody: { vi: 'Mọi góp ý của phụ huynh & học viên đều được lắng nghe. Liên hệ:', en: 'We value your feedback. Reach us at:' },
+  newParent: { vi: 'Phụ huynh mới? Đăng ký bằng mã mời', en: 'New parent? Register with an invite code' },
+  backToLogin: { vi: '← Quay lại đăng nhập', en: '← Back to sign in' },
+  inviteCode: { vi: 'Mã mời (giáo viên đưa cho bạn)', en: 'Invite code (from the teacher)' },
+  yourName: { vi: 'Họ tên của bạn', en: 'Your name' },
+  newPassword: { vi: 'Mật khẩu mới (từ 6 ký tự)', en: 'New password (6+ characters)' },
+  register: { vi: 'Tạo tài khoản phụ huynh', en: 'Create parent account' },
+  registerHint: {
+    vi: 'Mã mời gắn với con của bạn — tài khoản tạo xong sẽ thấy ngay tình hình học của bé.',
+    en: 'The invite is tied to your child — your new account sees their progress right away.',
+  },
+  badInvite: { vi: 'Mã mời không đúng hoặc đã được dùng.', en: 'Invite code is wrong or already used.' },
+  emailTaken: { vi: 'Email này đã có tài khoản — hãy đăng nhập.', en: 'This email already has an account — sign in instead.' },
 };
 
 function MeshHero() {
@@ -71,6 +83,11 @@ export function Landing({ onDone }: { onDone: () => void }) {
   const [err, setErr] = useState('');
   const [busy, setBusy] = useState(false);
 
+  // Parent self-registration (invite-only — the teacher hands out a PH- code).
+  const [registering, setRegistering] = useState(false);
+  const [invite, setInvite] = useState('');
+  const [regName, setRegName] = useState('');
+
   const t = (k: string) => STR[k]?.[lang] ?? k;
   const setLang = (l: Lang) => { localStorage.setItem('etop-lang', l); setLangState(l); };
 
@@ -89,6 +106,29 @@ export function Landing({ onDone }: { onDone: () => void }) {
     }
   };
   const go = () => loginWith(tab === 'staff' ? { email, password } : { code });
+
+  const register = async () => {
+    setErr('');
+    setBusy(true);
+    try {
+      const res = await api<{ token: string }>('POST', '/auth/register-parent', {
+        inviteCode: invite.trim(),
+        name: regName.trim(),
+        email: email.trim(),
+        password,
+      });
+      setToken(res.token);
+      onDone();
+    } catch (e) {
+      if (e instanceof ApiError && (e.status === 404 || e.status === 409)) {
+        setErr(e.message === 'email_taken' ? t('emailTaken') : t('badInvite'));
+      } else {
+        setErr(t('noServer'));
+      }
+    } finally {
+      setBusy(false);
+    }
+  };
 
   const tabs = [
     { k: 'student', icon: 'cap' as IconName, label: t('tabStudent') },
@@ -128,7 +168,7 @@ export function Landing({ onDone }: { onDone: () => void }) {
 
           <div className="seg my-4">
             {tabs.map((x) => (
-              <button key={x.k} data-active={tab === x.k} onClick={() => { setTab(x.k as typeof tab); setErr(''); }}>
+              <button key={x.k} data-active={tab === x.k} onClick={() => { setTab(x.k as typeof tab); setErr(''); setRegistering(false); }}>
                 <span className="flex items-center justify-center gap-1.5"><Icon name={x.icon} size={16} /> {x.label}</span>
               </button>
             ))}
@@ -152,11 +192,34 @@ export function Landing({ onDone }: { onDone: () => void }) {
               </button>
               <p className="text-center text-xs font-medium text-muted">{tab === 'student' ? t('hintStudent') : t('hintTeacher')}</p>
             </div>
-          ) : (
+          ) : !registering ? (
             <div className="space-y-3">
               <input className="input" placeholder={t('email')} value={email} onChange={(e) => setEmail(e.target.value)} />
               <input className="input" type="password" placeholder={t('password')} value={password} onChange={(e) => setPassword(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && go()} />
               <button onClick={go} disabled={busy} className="btn-primary w-full py-3">{t('signin')}</button>
+              <button onClick={() => { setRegistering(true); setErr(''); }} className="w-full text-center text-xs font-extrabold text-violet-600 underline underline-offset-2">
+                {t('newParent')}
+              </button>
+            </div>
+          ) : (
+            <div className="animate-rise space-y-3">
+              <input
+                className="input text-center font-extrabold uppercase tracking-[0.15em]"
+                placeholder="PH-ABC123"
+                maxLength={12}
+                value={invite}
+                onChange={(e) => setInvite(e.target.value.toUpperCase())}
+              />
+              <input className="input" placeholder={t('yourName')} value={regName} onChange={(e) => setRegName(e.target.value)} />
+              <input className="input" placeholder={t('email')} value={email} onChange={(e) => setEmail(e.target.value)} />
+              <input className="input" type="password" placeholder={t('newPassword')} value={password} onChange={(e) => setPassword(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && register()} />
+              <button onClick={register} disabled={busy || invite.trim().length < 6 || regName.trim().length < 2 || !email.includes('@') || password.length < 6} className="btn-primary w-full py-3">
+                {t('register')}
+              </button>
+              <p className="text-center text-xs font-medium text-muted">{t('registerHint')}</p>
+              <button onClick={() => { setRegistering(false); setErr(''); }} className="w-full text-center text-xs font-extrabold text-slate-400">
+                {t('backToLogin')}
+              </button>
             </div>
           )}
           {err && <p className="mt-3 text-center text-sm font-bold text-rose-500">{err}</p>}

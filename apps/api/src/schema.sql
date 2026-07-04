@@ -502,6 +502,19 @@ CREATE TABLE IF NOT EXISTS refunds (
 CREATE INDEX IF NOT EXISTS idx_invoices_status ON invoices(org_id, status, due_on);
 CREATE INDEX IF NOT EXISTS idx_leads_stage ON leads(org_id, stage);
 
+-- Parent onboarding: the center issues an invite code tied to a student;
+-- the parent self-registers with it. Closed-loop signup — no stranger can
+-- create an account in a children's platform.
+CREATE TABLE IF NOT EXISTS parent_invites (
+  code TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  student_id TEXT NOT NULL REFERENCES users(id),
+  created_by TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  used_by TEXT,
+  used_at TIMESTAMPTZ
+);
+
 -- ---------- Phase 6: Outcomes & intelligence ----------
 
 -- Every mastery update is also recorded as history → growth charts.

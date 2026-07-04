@@ -84,6 +84,98 @@ describe('demo engine — full teaching loop', () => {
   });
 });
 
+describe('demo engine — account lifecycle', () => {
+  async function loginEmail(email: string) {
+    const r = await call('POST', '/auth/login', { email, password: 'x' });
+    return (r.json as { token?: string }).token ?? null;
+  }
+
+  it('owner creates a teacher; the GV code logs in; teachers cannot', async () => {
+    const zhao = await loginEmail('zhao@etop.vn');
+    const res = await call('POST', '/admin/teachers', { name: 'Ms. Hương' }, zhao!);
+    expect(res.status).toBe(200);
+    const issued = (res.json as { loginCode: string }).loginCode;
+    expect(issued).toMatch(/^GV\d{4}$/);
+    expect((await call('POST', '/auth/login-code', { code: issued })).status).toBe(200);
+
+    const ha = await loginCode('GV0004');
+    expect((await call('POST', '/admin/teachers', { name: 'X' }, ha!)).status).toBe(403);
+    expect((await call('GET', '/admin/teachers', undefined, ha!)).status).toBe(403);
+  });
+
+  it('owner creates a class assigned to a teacher, who then sees it; reassignment moves it', async () => {
+    const zhao = await loginEmail('zhao@etop.vn');
+    const teachers = (await call('GET', '/admin/teachers', undefined, zhao!)).json as { id: string; name: string }[];
+    const ha = teachers.find((t) => t.name === 'Ms. Ha')!;
+    const ly = teachers.find((t) => t.name === 'Ms. Ly')!;
+
+    const created = await call('POST', '/admin/classes', { name: 'SK9', scheduleNote: 'Ca 2-4', teacherId: ha.id }, zhao!);
+    expect(created.status).toBe(200);
+    const clsId = (created.json as { id: string }).id;
+
+    const haTok = await loginCode('GV0004');
+    let classes = (await call('GET', '/classes', undefined, haTok!)).json as { id: string }[];
+    expect(classes.map((c) => c.id)).toContain(clsId);
+
+    expect((await call('PATCH', `/admin/classes/${clsId}`, { teacherId: ly.id }, zhao!)).status).toBe(200);
+    classes = (await call('GET', '/classes', undefined, haTok!)).json as { id: string }[];
+    expect(classes.map((c) => c.id)).not.toContain(clsId);
+    const lyTok = await loginCode('GV0006');
+    const lyClasses = (await call('GET', '/classes', undefined, lyTok!)).json as { id: string }[];
+    expect(lyClasses.map((c) => c.id)).toContain(clsId);
+  });
+
+  it('a teacher authors an API-shaped question; it lands in the bank; answers stay hidden', async () => {
+    const ha = await loginCode('GV0004');
+    const res = await call('POST', '/questions', {
+      type: 'fill_blank', skill: 'grammar', unit: 'Unit 2',
+      prompt: 'He ___ football.', payload: { sentence: 'He ___ football.', choices: ['plays', 'play'], answer: 'plays' },
+    }, ha!);
+    expect(res.status).toBe(200);
+    const qid = (res.json as { id: string }).id;
+
+    const bank = (await call('GET', '/questions', undefined, ha!)).json as { id: string }[];
+    expect(bank.map((x) => x.id)).toContain(qid);
+
+    // Assign it and confirm the student's serialization has no answer.
+    const created = await call('POST', '/classes/up1/assignments', { title: 'Authored', questionIds: [qid] }, ha!);
+    const aid = (created.json as { id: string }).id;
+    await call('POST', `/assignments/${aid}/publish`, {}, ha!);
+    const bao = await loginCode('UP1482');
+    const detail = await call('GET', `/assignments/${aid}`, undefined, bao!);
+    expect(JSON.stringify(detail.json)).not.toContain('"answer"');
+
+    // Students cannot author.
+    expect((await call('POST', '/questions', { type: 'mc', skill: 'grammar', payload: {} }, bao!)).status).toBe(403);
+  });
+
+  it('invite → parent registers → sees the child; invite is single-use', async () => {
+    const ha = await loginCode('GV0004'); // teaches Up 1 (bao = UP1482 student s_up1_0? use roster)
+    const roster = ((await call('GET', '/classes/up1', undefined, ha!)).json as { roster: { id: string; name: string }[] }).roster;
+    const stu = roster[0];
+    const inv = await call('POST', `/students/${stu.id}/invite`, {}, ha!);
+    expect(inv.status).toBe(200);
+    const { inviteCode } = inv.json as { inviteCode: string };
+    expect(inviteCode).toMatch(/^PH-[A-Z2-9]{6}$/);
+
+    // A teacher who doesn't teach the student cannot invite.
+    const ly = await loginCode('GV0006');
+    expect((await call('POST', `/students/${stu.id}/invite`, {}, ly!)).status).toBe(403);
+
+    const reg = await call('POST', '/auth/register-parent', {
+      inviteCode: inviteCode.toLowerCase(), name: 'Chị Thảo', email: 'thao.parent@gmail.com', password: 'matkhau1',
+    });
+    expect(reg.status).toBe(200);
+    const tok = (reg.json as { token: string }).token;
+    const kids = (await call('GET', '/parents/children', undefined, tok)).json as { id: string }[];
+    expect(kids.map((k) => k.id)).toContain(stu.id);
+
+    // Single-use + unknown invites rejected.
+    expect((await call('POST', '/auth/register-parent', { inviteCode, name: 'Ai Đó', email: 'aido@gmail.com', password: 'whatever1' })).status).toBe(409);
+    expect((await call('POST', '/auth/register-parent', { inviteCode: 'PH-ZZZZZZ', name: 'Ai Đó', email: 'aido@gmail.com', password: 'whatever1' })).status).toBe(404);
+  });
+});
+
 describe('demo engine — practice', () => {
   it('practice events add points and a streak', async () => {
     const bao = await loginCode('UP1482');

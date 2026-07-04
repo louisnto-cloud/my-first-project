@@ -8,6 +8,7 @@ import { registerLearningRoutes } from './routes-learning.js';
 import { registerExperienceRoutes } from './routes-experience.js';
 import { registerMoneyRoutes } from './routes-money.js';
 import { registerInsightRoutes } from './routes-insights.js';
+import { registerAdminRoutes } from './routes-admin.js';
 
 declare module 'fastify' {
   interface FastifyRequest {
@@ -95,6 +96,7 @@ export async function buildServer(db: DB, opts: ServerOptions = {}): Promise<Fas
   registerExperienceRoutes(app, db);
   registerMoneyRoutes(app, db);
   registerInsightRoutes(app, db);
+  registerAdminRoutes(app, db);
 
   app.post('/auth/login', async (req, reply) => {
     const parsed = loginSchema.safeParse(req.body);
