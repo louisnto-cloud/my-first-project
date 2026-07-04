@@ -140,6 +140,9 @@ function voiceScore(v: SpeechSynthesisVoice, lang: Lang): number {
 /** Pick the best female voice for a language. Scored once, then cached. */
 function pickVoice(lang: Lang): SpeechSynthesisVoice | undefined {
   if (!voices.length) refreshVoices();
+  // The voice list loads asynchronously on Chrome — never cache a miss taken
+  // before any voices exist, or we'd be stuck on the default (male) voice.
+  if (!voices.length) return undefined;
   if (voiceCache.has(lang)) return voiceCache.get(lang);
   const tag = lang === 'vi' ? 'vi' : 'en';
   const matches = voices.filter((v) => v.lang?.toLowerCase().startsWith(tag));
@@ -148,6 +151,22 @@ function pickVoice(lang: Lang): SpeechSynthesisVoice | undefined {
     : undefined;
   voiceCache.set(lang, best);
   return best;
+}
+
+/** Run `cb` once the voice list is available (or after a short grace period —
+ *  speaking with only a lang hint still beats not speaking at all). */
+function whenVoicesReady(cb: () => void) {
+  if (!voices.length) refreshVoices();
+  if (voices.length) return cb();
+  let done = false;
+  const finish = () => {
+    if (done) return;
+    done = true;
+    refreshVoices();
+    cb();
+  };
+  window.speechSynthesis.addEventListener?.('voiceschanged', finish, { once: true });
+  setTimeout(finish, 1200);
 }
 
 export function hasVoiceFor(lang: Lang): boolean {
@@ -180,8 +199,40 @@ const ROMAN_REGNAL: Record<string, string> = {
   XXIII: 'the Twenty-third',
 };
 
-function humanizeText(text: string): string {
-  return text
+// Punctuation and noise handling shared by both languages.
+function tidyPunctuation(text: string): string {
+  return (
+    text
+      // ── Punctuation → natural pauses ───────────────────────────────────
+      // Em/en dashes become a comma — the guide pauses, then continues.
+      .replace(/\s[—–]\s/g, ', ')
+      // Ellipsis becomes a comma-pause, not a sentence break.
+      .replace(/…/g, ', ')
+      .replace(/\.{2,}\s*/g, ', ')
+      // ── Remove inline citations that read as noise ─────────────────────
+      .replace(/\s*\[\d+\]\s*/g, ' ')
+      .replace(/\s*\(\d+\)\s*/g, ' ')
+      // Short parentheticals become comma-asides — a reader lowers their
+      // voice and continues; they never say "open bracket".
+      .replace(/\s*\(([^()]{1,80})\)\s*/g, ', $1, ')
+      // ── Tidy whitespace ────────────────────────────────────────────────
+      .replace(/\s{2,}/g, ' ')
+      .trim()
+  );
+}
+
+function humanizeText(text: string, lang: Lang): string {
+  // Vietnamese gets its own scripture-reference reading; the English
+  // abbreviation and ordinal rules must never touch Vietnamese prose.
+  if (lang === 'vi') {
+    return tidyPunctuation(
+      text
+        .replace(/\b(\d+):(\d+)[-–](\d+)\b/g, 'chương $1, câu $2 đến $3')
+        .replace(/\b(\d+):(\d+)\b/g, 'chương $1, câu $2'),
+    );
+  }
+
+  return tidyPunctuation(text
     // ── Catholic / liturgical abbreviations ──────────────────────────────
     .replace(/\bSt\.\s+/g, 'Saint ')
     .replace(/\bSts\.\s+/g, 'Saints ')
@@ -219,21 +270,7 @@ function humanizeText(text: string): string {
     .replace(/\betc\.\b/g, 'et cetera')
     .replace(/\s&\s/g, ' and ')
     .replace(/\bvs\.\s*/g, 'versus ')
-    // ── Punctuation → natural pauses ─────────────────────────────────────
-    // Em/en dashes become a comma — the guide pauses, then continues.
-    .replace(/\s[—–]\s/g, ', ')
-    // Ellipsis becomes a comma-pause, not a sentence break.
-    .replace(/…/g, ', ')
-    .replace(/\.{2,}\s*/g, ', ')
-    // ── Remove inline citations that read as noise ────────────────────────
-    .replace(/\s*\[\d+\]\s*/g, ' ')
-    .replace(/\s*\(\d+\)\s*/g, ' ')
-    // Short parentheticals become comma-asides — a reader lowers their voice
-    // and continues; they never say "open bracket".
-    .replace(/\s*\(([^()]{1,80})\)\s*/g, ', $1, ')
-    // ── Tidy whitespace ──────────────────────────────────────────────────
-    .replace(/\s{2,}/g, ' ')
-    .trim();
+  );
 }
 
 // ─── Chunk splitting ─────────────────────────────────────────────────────────
@@ -273,11 +310,11 @@ function mergeShortChunks(chunks: Chunk[]): Chunk[] {
   return out;
 }
 
-function intoChunks(raw: string): Chunk[] {
+function intoChunks(raw: string, lang: Lang): Chunk[] {
   const chunks: Chunk[] = [];
 
   // Paragraphs first: a blank line is a longer, deliberate silence.
-  const paragraphs = humanizeText(raw)
+  const paragraphs = humanizeText(raw, lang)
     .split(/\n+/)
     .map((p) => p.trim())
     .filter(Boolean);
@@ -317,7 +354,7 @@ function intoChunks(raw: string): Chunk[] {
 
   // Fallback: text with no sentence-ending punctuation (e.g. a title or label).
   if (!chunks.length) {
-    const text = humanizeText(raw);
+    const text = humanizeText(raw, lang);
     if (text) chunks.push({ text, pause: SENTENCE_PAUSE });
   }
 
@@ -379,6 +416,10 @@ function speakNext() {
   let rate = 0.87;              // steady, unhurried middle
   if (isFirst) rate = 0.84;     // settle in gently
   if (isLast) rate = 0.82;      // ritardando — let the ending land
+  // Readers move a touch quicker through long, flowing clauses and give
+  // short ones room to breathe.
+  else if (chunk.text.length > 90) rate += 0.015;
+  else if (chunk.text.length < 25 && !isFirst) rate -= 0.015;
   let pitch = 1.0;              // the voice's natural register
   if (chunk.question) {
     pitch = 1.04;               // a slight lift for a rising thought
@@ -423,7 +464,7 @@ export function narrate(id: string, text: string, lang: Lang, opts?: { cue?: boo
   s.cancel();
   clearKeepAlive();
 
-  queue = intoChunks(text);
+  queue = intoChunks(text, lang);
   chunkIndex = 0;
   activeId = id;
   activeLang = lang;
@@ -442,7 +483,11 @@ export function narrate(id: string, text: string, lang: Lang, opts?: { cue?: boo
     }
   }, 9000);
 
-  speakNext();
+  // Wait for the async voice list before the first utterance, so the very
+  // first words already carry the chosen female voice — never the default.
+  whenVoicesReady(() => {
+    if (activeId === id) speakNext();
+  });
 }
 
 export function currentlySpeaking(): string | null {
