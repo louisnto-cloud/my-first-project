@@ -1,18 +1,15 @@
 'use client';
 
 // ─── The guide's voice: the story, read aloud ────────────────────────────────
-// On-device text-to-speech via the Web Speech API. Free, needs no audio files,
-// and works offline once the platform voices are present. Built so the app can
-// feel like a companion that reads each page to you — warmly, at a kind pace —
-// rather than a wall of text you must read yourself.
+// On-device text-to-speech via the Web Speech API. Three things make it feel
+// less like a robot and more like a warm female companion:
 //
-// Three things make it feel less like a robot and more like a guide:
-//   1. We rank the installed voices and pick the warmest, most natural one.
-//   2. We speak sentence by sentence, with a breath between, so it has cadence.
-//   3. We keep the engine awake (Chrome silently pauses long passages).
-//
-// The content schema keeps an optional `audio` field for future recorded
-// narration; until those exist, this synthesizes the same text on the device.
+//   1. We score voices using a detailed female-voice list AND actively penalise
+//      known male voices, so Daniel never wins over Libby or Serena.
+//   2. We give online (Neural/Natural) cloud voices a large bonus — they are
+//      dramatically warmer than the local synthesised fallbacks.
+//   3. We speak sentence-by-sentence with a 200 ms breath between thoughts, so
+//      the guide has cadence rather than flat machine speed.
 
 import { useCallback, useEffect, useState } from 'react';
 import type { Lang } from '@/lib/storage';
@@ -45,58 +42,87 @@ if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
   window.speechSynthesis.addEventListener?.('voiceschanged', refreshVoices);
 }
 
-// British female voices, ranked by warmth and naturalness.
-// Serena (Apple Premium) and Libby (Microsoft Neural) are the gold-standard
-// picks on their respective platforms; the rest are solid fallbacks.
-const BRITISH_FEMALE = [
-  'serena',             // Apple Serena (en-GB, Premium) — the warmest
-  'libby',              // Microsoft Libby Online (Natural)
+// ─── Voice preference ────────────────────────────────────────────────────────
+// Female voices, ordered from most preferred to least. The guide should sound
+// like a warm, calm woman — soft British accent where available.
+
+const FEMALE_VOICES = [
+  // British female — the primary target
+  'serena',             // Apple Serena (en-GB, Premium) — gold standard on iOS/macOS
+  'libby',              // Microsoft Libby Online (Natural) — best on Edge/Chrome
   'mia',                // Microsoft Mia Online (Natural)
+  'hazel',              // Microsoft Hazel (en-GB)
   'martha',             // Apple Martha (en-GB)
   'helena',             // Apple Helena (en-GB)
   'susan',              // Microsoft Susan Online (Natural)
-  'emily',              // Various en-GB Emily voices
-  'uk english female',  // Google UK English Female
-  'alice',              // Some platforms ship an Alice en-GB
+  'grace',              // en-GB Grace (various platforms)
+  'emma',               // en-GB Emma (various)
+  'kate',               // en-GB Kate (various)
+  'emily',              // en-GB Emily (various)
+  'uk english female',  // Google UK English Female (Android/Chrome)
+  // Irish/Australian — warm, gentle accents; preferred over American male
+  'moira',              // Apple Moira (en-IE)
+  'karen',              // Apple Karen (en-AU)
+  'catherine',          // Apple Catherine (en-AU)
+  // American female — solid fallbacks
+  'samantha', 'ava', 'allison', 'tessa', 'fiona',
+  'aria', 'jenny',
+  // Vietnamese female
+  'hoaimy',             // Microsoft HoaiMy Online (Natural, vi-VN)
+  'linh',               // Various vi-VN Linh voices
 ];
 
-// General warm/natural voice markers — a fallback when no British voice is found.
-const WARM = [
-  'natural', 'neural', 'premium', 'enhanced', 'wavenet', 'siri', 'google',
-  'samantha', 'ava', 'allison', 'karen', 'moira', 'tessa', 'fiona',
-  'aaron', 'nathan', 'oliver', 'aria', 'jenny', 'guy',
-  // Vietnamese named voices:
-  'linh', 'an', 'hoaimy', 'namminh',
+// Male voices are actively penalised — the guide must not sound like a man.
+// Daniel in particular is the default en-GB voice on Apple and Microsoft; it
+// would otherwise win purely because of the British-English bonus.
+const MALE_VOICES = [
+  'daniel',             // Apple/Microsoft Daniel (en-GB) — most commonly mis-selected
+  'ryan',               // Microsoft Ryan Online (Natural, en-GB)
+  'james', 'george', 'rishi',
+  'uk english male',    // Google UK English Male
+  'oliver', 'aaron', 'nathan', 'guy',
+  'namminh',            // Microsoft NamMinh Online (vi-VN, male)
 ];
+
+// Quality markers — lift any voice above its robotic local fallbacks.
+const QUALITY = ['natural', 'neural', 'premium', 'enhanced', 'wavenet', 'siri'];
 
 function voiceScore(v: SpeechSynthesisVoice, lang: Lang): number {
   const n = `${v.name} ${v.voiceURI}`.toLowerCase();
   let s = 0;
 
   if (lang === 'en') {
-    // Strong pull toward British English — a soft en-GB voice is the guide's
-    // natural register. Irish and Australian are gentle fallbacks.
     const lc = v.lang?.toLowerCase() ?? '';
-    if (lc.startsWith('en-gb')) s += 50;
-    else if (/^en-(ie|au|nz)/.test(lc)) s += 12;
+    // British English is the guide's home accent.
+    if (lc.startsWith('en-gb')) s += 40;
+    // Irish and Australian are also soft, gentle accents — prefer over American.
+    else if (/^en-(ie|au|nz)/.test(lc)) s += 10;
   }
 
-  // British female voices score highest within the en-GB pool.
-  BRITISH_FEMALE.forEach((name, i) => {
-    if (n.includes(name)) s += BRITISH_FEMALE.length - i + 30;
+  // Online/cloud voices are Neural quality — dramatically better than
+  // the local synthesised voices shipped with the OS.
+  if (!v.localService) s += 25;
+
+  // Female voices: larger bonus for names earlier in the list.
+  FEMALE_VOICES.forEach((name, i) => {
+    if (n.includes(name)) s += FEMALE_VOICES.length - i + 25;
   });
 
-  // General warm/natural markers lift any voice above robotic defaults.
-  WARM.forEach((p, i) => {
-    if (n.includes(p)) s += WARM.length - i + 8;
+  // Male voices: strong penalty so they never beat a weaker female voice.
+  MALE_VOICES.forEach((name) => {
+    if (n.includes(name)) s -= 40;
   });
 
-  // A platform default is usually a sensible, clear voice.
-  if (v.default) s += 3;
+  // Quality/naturalness markers.
+  QUALITY.forEach((p, i) => {
+    if (n.includes(p)) s += QUALITY.length - i + 8;
+  });
+
+  if (v.default) s += 2;
   return s;
 }
 
-/** Pick the warmest installed voice for a language. */
+/** Pick the best female voice for a language. */
 function pickVoice(lang: Lang): SpeechSynthesisVoice | undefined {
   if (!voices.length) refreshVoices();
   const tag = lang === 'vi' ? 'vi' : 'en';
@@ -113,8 +139,6 @@ export function hasVoiceFor(lang: Lang): boolean {
 }
 
 // ─── The speaking queue ──────────────────────────────────────────────────────
-// We break a passage into sentences and speak them in turn, so the guide
-// breathes between thoughts instead of racing through in one flat utterance.
 
 let queue: string[] = [];
 let activeId: string | null = null;
@@ -126,8 +150,6 @@ function intoSentences(text: string): string[] {
   return text
     .replace(/\s+/g, ' ')
     .trim()
-    // break after sentence-ending punctuation (Latin and CJK), and after
-    // the softer pauses of colons and dashes
     .split(/(?<=[.!?…。！？])\s+|(?<=[:;–—])\s+/)
     .map((s) => s.trim())
     .filter(Boolean);
@@ -155,7 +177,6 @@ function speakNext() {
   if (!s || activeId == null) return;
   const next = queue.shift();
   if (next === undefined) {
-    // The passage is finished.
     clearKeepAlive();
     if (speakingId === activeId) {
       speakingId = null;
@@ -168,12 +189,18 @@ function speakNext() {
   const voice = pickVoice(activeLang);
   if (voice) u.voice = voice;
   // Hint British English so the engine uses the right pronunciation rules
-  // even on platforms where no specific voice could be selected.
+  // even if no specific voice could be selected.
   u.lang = voice?.lang ?? (activeLang === 'vi' ? 'vi-VN' : 'en-GB');
-  u.rate = 0.90; // unhurried — a soft guide, never in a rush
-  u.pitch = 1.0; // let the chosen voice's natural register carry through
+  u.rate = 0.90;  // unhurried — a soft guide, never in a rush
+  u.pitch = 1.0;  // let the voice's own natural register carry through
   u.onend = () => {
-    if (activeId !== null) speakNext();
+    if (activeId !== null) {
+      // A 200 ms breath between sentences makes the guide sound human rather
+      // than a wall of words delivered at machine speed.
+      setTimeout(() => {
+        if (activeId !== null) speakNext();
+      }, 200);
+    }
   };
   u.onerror = () => {
     if (speakingId === activeId) {
@@ -188,8 +215,7 @@ function speakNext() {
 
 /**
  * Speak a passage aloud. `id` lets the UI show which card is being read.
- * When `cue` is set and the sound setting is on, a soft chime announces the
- * guide before it begins — like a companion clearing its throat to read.
+ * When `cue` is set and sound is on, a soft chime announces the guide first.
  */
 export function narrate(id: string, text: string, lang: Lang, opts?: { cue?: boolean }) {
   const s = synth();
@@ -205,7 +231,7 @@ export function narrate(id: string, text: string, lang: Lang, opts?: { cue?: boo
 
   if (opts?.cue) playChime();
 
-  // Chrome silently pauses synthesis after ~15s; nudging it keeps long
+  // Chrome silently pauses synthesis after ~15 s; nudging it keeps long
   // passages (a whole prayer, a Mass moment) flowing to the end.
   keepAlive = setInterval(() => {
     const sp = synth();
