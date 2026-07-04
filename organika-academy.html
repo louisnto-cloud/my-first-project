@@ -10,6 +10,9 @@
 <meta name="apple-mobile-web-app-title" content="Organika VN">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232D6A4F'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EO%3C/text%3E%3C/svg%3E">
 <title>Organika Vietnamese Business Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap&subset=vietnamese" rel="stylesheet">
 <style>
 :root{--g:#2D6A4F;--gl:#52B788;--gp:#D8F3DC;--t:#C47C5A;--tp:#FCEEE6;--bg:#F7F5F0;--wh:#FFF;--tx:#1A2721;--tx2:#5C6B64;--bd:#E5E0D8;--shd:0 2px 14px rgba(0,0,0,.08);--r:14px;--rs:8px}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -371,6 +374,96 @@ textarea:focus{border-color:var(--g)}
 .placement-rec{font-size:15px;color:var(--tx);margin-bottom:16px;line-height:1.5}
 .placement-rec strong{color:var(--g)}
 .placement-result p{font-size:13px;color:var(--tx2);line-height:1.65;margin-bottom:20px}
+
+/* ════════════════ UI POLISH LAYER ════════════════ */
+:root{--r:18px;--rs:12px;
+  --grad:linear-gradient(135deg,#1E4D38 0%,#2D6A4F 55%,#37855F 100%);
+  --gradT:linear-gradient(135deg,#B06A48 0%,#C47C5A 60%,#D89272 100%);
+  --shd:0 4px 20px rgba(29,58,45,.10);
+  --shd-lg:0 10px 34px rgba(29,58,45,.16)}
+body,button,input,textarea{font-family:'Be Vietnam Pro',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+
+/* screen transitions */
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.screen{animation:rise .28s cubic-bezier(.22,.9,.3,1)}
+
+/* headers */
+.app-header,.screen-header{background:var(--grad);padding:16px;box-shadow:0 4px 18px rgba(29,58,45,.25)}
+.brand-name{letter-spacing:-.4px;font-weight:900}
+.streak-chip,.xp-chip{background:rgba(255,255,255,.16);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18)}
+
+/* hero */
+.hero-card{background:var(--grad);position:relative;overflow:hidden;box-shadow:var(--shd-lg)}
+.hero-card::before{content:'';position:absolute;width:190px;height:190px;border-radius:50%;background:rgba(255,255,255,.07);top:-70px;right:-50px}
+.hero-card::after{content:'';position:absolute;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.05);bottom:-50px;left:-30px}
+.hero-title{letter-spacing:-.5px;font-weight:900;position:relative}
+.hero-sub,.goal-bar-wrap{position:relative}
+.goal-bar{height:10px;border-radius:5px}
+.goal-fill{background:linear-gradient(90deg,#52B788,#8FE3B0);box-shadow:0 0 10px rgba(82,183,136,.6);transition:width .7s cubic-bezier(.22,.9,.3,1)}
+
+/* stat + action cards */
+.stat-card{border:1px solid rgba(29,58,45,.05);border-radius:16px}
+.stat-n{letter-spacing:-1px}
+.action-card{border-radius:var(--r);border:1px solid rgba(29,58,45,.05);transition:transform .15s,box-shadow .15s}
+.action-card:active{transform:scale(.95);box-shadow:var(--shd-lg)}
+.action-card.primary{background:var(--grad)}
+.explore-row{border-radius:16px;border:1px solid rgba(29,58,45,.05);font-weight:700}
+
+/* buttons */
+.btn-primary{background:var(--grad);border-radius:14px;box-shadow:0 6px 18px rgba(45,106,79,.35);letter-spacing:.2px;transition:transform .12s,box-shadow .12s}
+.btn-primary:active{transform:translateY(1px) scale(.98);box-shadow:0 3px 10px rgba(45,106,79,.3)}
+.btn-sec{border-radius:14px}
+.btn-danger{border-radius:14px}
+.pill{border-radius:22px;transition:all .18s}
+.pill.active{background:var(--grad);border-color:transparent;box-shadow:0 4px 12px rgba(45,106,79,.3)}
+
+/* progress bars */
+.lp-fill,.tier-fill{background:linear-gradient(90deg,#2D6A4F,#52B788);transition:width .5s cubic-bezier(.22,.9,.3,1)}
+
+/* flashcards */
+.card-wrap{height:280px}
+.card-face{border-radius:22px;box-shadow:var(--shd-lg)}
+.card-front{background:var(--grad)}
+.card-front::before{content:'';position:absolute;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.06);top:-60px;right:-40px}
+.card-tier-badge{border:1px solid rgba(255,255,255,.25)}
+.card-main-text{letter-spacing:-.4px}
+
+/* quiz */
+.quiz-opt{border-radius:16px;border-width:2px;transition:transform .12s,border-color .2s,background .2s}
+.quiz-opt:active{transform:scale(.98)}
+.quiz-prompt{letter-spacing:-.4px;font-weight:900}
+.quiz-feedback{border-radius:18px;animation:rise .25s ease}
+.grade-btn{border-radius:14px;transition:transform .12s}
+.grade-btn:active{transform:scale(.95)}
+
+/* drill + price */
+.drill-card{background:var(--grad);border-radius:22px;box-shadow:var(--shd-lg);position:relative;overflow:hidden}
+.drill-card::before{content:'';position:absolute;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.06);top:-60px;left:-50px}
+.price-play{background:var(--grad);box-shadow:0 10px 28px rgba(45,106,79,.4),0 0 0 10px rgba(45,106,79,.08)}
+.price-play:active{box-shadow:0 4px 14px rgba(45,106,79,.35),0 0 0 16px rgba(45,106,79,.05)}
+
+/* dialogues + intel + review */
+.sit-card,.intel-card,.rv-card,.primer-block,.export-section{border-radius:var(--r);border:1px solid rgba(29,58,45,.05)}
+.sit-num{background:var(--gradT);color:#fff}
+.intel-icon{border-radius:16px}
+.dlg-line{border-radius:14px;transition:opacity .3s,transform .3s}
+.dlg-line.curr{transform:scale(1.01);box-shadow:var(--shd)}
+
+/* summary */
+.summary-card{border-radius:24px;box-shadow:var(--shd-lg);animation:rise .35s cubic-bezier(.22,.9,.3,1)}
+.summary-pct{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sum-stat{border-radius:14px}
+
+/* bottom nav */
+.bottom-nav{background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid rgba(29,58,45,.08);box-shadow:0 -4px 20px rgba(29,58,45,.06)}
+.nav-btn{position:relative;padding:10px 4px 8px}
+.nav-btn .nav-icon{transition:transform .18s}
+.nav-btn.active .nav-icon{transform:translateY(-1px) scale(1.12)}
+.nav-btn.active::after{content:'';position:absolute;top:3px;left:50%;transform:translateX(-50%);width:16px;height:3px;border-radius:2px;background:var(--g)}
+
+/* inputs */
+.dict-input,.export-box{border-radius:14px}
+.dict-input:focus{box-shadow:0 0 0 4px rgba(45,106,79,.12)}
 </style>
 </head>
 <body>
