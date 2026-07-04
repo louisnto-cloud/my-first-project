@@ -1234,7 +1234,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v9';
+const APP_VERSION='v10';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1500,6 +1500,7 @@ function renderPractice(){
     <div class="mode-pills">
       <button class="pill${S.quizDir==='en2vi'?' active':''}" onclick="S.quizDir='en2vi';render()">EN › VI</button>
       <button class="pill${S.quizDir==='vi2en'?' active':''}" onclick="S.quizDir='vi2en';render()">VI › EN</button>
+      <button class="pill${S.quizDir==='listen'?' active':''}" onclick="S.quizDir='listen';render()">🎧 Listen</button>
     </div>`:''}
     <div class="section-label">Tier</div>
     <div class="mode-pills scroll-x">
@@ -1596,6 +1597,7 @@ function buildQuiz(){
   const distractors=[...sameCat,...sameTier,...rest].slice(0,3);
   const opts=shuffle([v,...distractors]);
   S.quizOptions=opts.map(o=>o.id);
+  if(S.quizDir==='listen') setTimeout(()=>speak(v.vi),250);
 }
 function renderQuiz(){
   if(!S.activeLesson.length) return `<div class="screen"><button onclick="go('practice')">Back</button></div>`;
@@ -1604,8 +1606,9 @@ function renderQuiz(){
   if(!v){go('practice');return '';}
   const prog=S.lessonIdx+1;
   const total=S.activeLesson.length;
+  const listen=S.quizDir==='listen';
   const prompt=S.quizDir==='en2vi'?v.en:v.vi;
-  const promptLabel=S.quizDir==='en2vi'?'English':'Vietnamese';
+  const promptLabel=S.quizDir==='en2vi'?'English':listen?'Listen':'Vietnamese';
   return `<div class="screen">
   <div class="lesson-header">
     <button class="btn-back" onclick="go('practice')">✕</button>
@@ -1613,10 +1616,12 @@ function renderQuiz(){
   </div>
   <main class="main-scroll" style="padding:16px">
     <div class="quiz-prompt-label">${promptLabel}</div>
-    <div class="quiz-prompt">${prompt}
+    ${listen
+      ?`<div class="price-play-wrap" style="margin:4px 0 14px"><button class="price-play" onclick="speak('${v.vi.replace(/'/g,"\\'")}')">🔊<br><span>Play</span></button>${speedChip()}</div>`
+      :`<div class="quiz-prompt">${prompt}
       ${S.quizDir==='vi2en'?`<button class="speak-inline" onclick="speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button>`:''}
-    </div>
-    <div class="quiz-prompt-sub">Select the ${S.quizDir==='en2vi'?'Vietnamese':'English'} translation</div>
+    </div>`}
+    <div class="quiz-prompt-sub">${listen?'What did you hear? Pick the English meaning':'Select the '+(S.quizDir==='en2vi'?'Vietnamese':'English')+' translation'}</div>
     <div class="quiz-options">
       ${S.quizOptions.map(oid=>{
         const ov=getV(oid);
@@ -2232,7 +2237,8 @@ function renderPlacement(){
   const id=S.placementPool[S.placementQ];
   const v=getV(id);
   if(!v){S.placementQ++;render();return '';}
-  if(!S.quizOptions||S.quizOptions[0]!==id){
+  if(S.placementFor!==id){
+    S.placementFor=id;
     let pool=VOCAB.filter(x=>x.id!==id);
     const dist=shuffle(pool).slice(0,3);
     S.quizOptions=shuffle([v,...dist]).map(o=>o.id);
