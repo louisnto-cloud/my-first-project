@@ -258,6 +258,10 @@ function tidyPunctuation(text: string): string {
       // ── Ranges: "1962–1965" reads "1962 to 1965" ───────────────────────
       .replace(/(\d)\s?[–—]\s?(\d)/g, '$1 to $2')
       // ── Punctuation → natural pauses ───────────────────────────────────
+      // Exclamation marks make TTS engines shout. The guide never shouts —
+      // wonder is spoken softly. (The sentence still ends; only the tone
+      // changes.)
+      .replace(/!+/g, '.')
       // Em/en dashes become a comma — the guide pauses, then continues.
       .replace(/\s[—–]\s/g, ', ')
       // Ellipsis becomes a comma-pause, not a sentence break.
@@ -593,7 +597,8 @@ function speakNext() {
   let volume = 0.94;
   if (isFirst) volume = 0.9;
   if (isLast) volume = 0.86;
-  if (chunk.solemn) volume = 0.8;
+  if (prayer) volume -= 0.06; // a prayer is quieter still — spoken low
+  if (chunk.solemn) volume = 0.78;
   chunkIndex++;
 
   u.rate   = rate;
@@ -608,7 +613,7 @@ function speakNext() {
     // human variance — identical pauses every time read as a metronome.
     // A prayer holds its silences longer; the pauses are part of the prayer.
     const jitter = 0.85 + Math.random() * 0.3;
-    const hold = activeTone === 'prayer' ? 1.35 : 1;
+    const hold = activeTone === 'prayer' ? 1.45 : 1;
     setTimeout(() => {
       if (generation === gen && activeId !== null) speakNext();
     }, Math.round(chunk.pause * jitter * hold));
