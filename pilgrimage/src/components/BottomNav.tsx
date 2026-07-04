@@ -61,13 +61,13 @@ export function BottomNav() {
               key={tab.href}
               href={tab.href}
               aria-current={active ? 'page' : undefined}
-              className={`flex min-h-[58px] min-w-[88px] flex-col items-center justify-center gap-1 py-2 transition-colors ${
-                active ? 'text-gold' : 'text-incense/70'
+              className={`flex min-h-[58px] min-w-[88px] flex-col items-center justify-center gap-1 rounded-2xl py-2 transition-all duration-200 ${
+                active ? 'text-gold bg-gold/10' : 'text-incense/70'
               }`}
             >
               <svg
                 viewBox="0 0 24 24"
-                className={`h-[22px] w-[22px] fill-current transition-transform ${active ? 'scale-105' : ''}`}
+                className={`h-[22px] w-[22px] fill-current transition-transform duration-200 ${active ? 'scale-110' : ''}`}
                 aria-hidden
               >
                 {tab.icon}

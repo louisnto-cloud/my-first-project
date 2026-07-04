@@ -11,6 +11,10 @@ import type { L } from '@/content/types';
 import { haptic, playBell } from '@/lib/sound';
 import { stopNarration } from '@/lib/speech';
 
+function prefersReducedMotion(): boolean {
+  return typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+}
+
 export function CandleRitual({
   reflectionPrompt,
   onLit,
@@ -25,6 +29,7 @@ export function CandleRitual({
   const { t } = useI18n();
   const [text, setText] = useState('');
   const [lit, setLit] = useState(false);
+  const still = prefersReducedMotion();
 
   const light = () => {
     stopNarration(); // any reading of the last card ends as the candle is lit
@@ -60,12 +65,89 @@ export function CandleRitual({
       {/* The candle */}
       <div className="relative flex flex-col items-center">
         {lit && (
-          <svg viewBox="0 0 60 80" className="absolute -top-16 h-20 w-16">
-            <path d="M30 8c12 16 18 26 18 36a18 18 0 0 1-36 0c0-10 6-20 18-36z" fill="#D9A441" className="flame" />
-            <circle cx="30" cy="46" r="26" fill="#D9A441" opacity="0.15" />
+          <svg viewBox="0 0 60 80" className="absolute -top-16 h-20 w-16" aria-hidden>
+            <defs>
+              {/* living fire: feTurbulence whose frequency breathes, driving a displacement map */}
+              <filter id="cr-fire" x="-50%" y="-60%" width="200%" height="220%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.018 0.045" numOctaves="3" seed="4" result="fn">
+                  {!still && (
+                    <animate
+                      attributeName="baseFrequency"
+                      dur="5.5s"
+                      values="0.018 0.045;0.024 0.07;0.02 0.05;0.018 0.045"
+                      repeatCount="indefinite"
+                    />
+                  )}
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="fn" scale="6" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+              {/* warm light bloom */}
+              <filter id="cr-bloom" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="2" result="b" />
+                <feMerge>
+                  <feMergeNode in="b" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+              {/* garnet at base → orange mid → gold tip */}
+              <linearGradient id="cr-outer" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0%" stopColor="#7A1F2B" />
+                <stop offset="55%" stopColor="#b5572e" />
+                <stop offset="100%" stopColor="#D9A441" />
+              </linearGradient>
+              {/* orange at base → gold → ivory tip */}
+              <linearGradient id="cr-inner" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0%" stopColor="#c9772f" />
+                <stop offset="60%" stopColor="#D9A441" />
+                <stop offset="100%" stopColor="#F3ECDD" />
+              </linearGradient>
+            </defs>
+
+            {/* soft wax-glow pool at the wick */}
+            <ellipse cx="30" cy="70" rx="20" ry="6" fill="#D9A441" opacity="0.18" />
+
+            {/* the living flame: turbulence + sway + multi-layer glow */}
+            <g filter="url(#cr-fire)" className="flame-sway" style={{ transformOrigin: '30px 44px' }}>
+              {/* outer flame — dark garnet rising to gold */}
+              <path
+                d="M30 8c12 16 18 26 18 36a18 18 0 0 1-36 0c0-10 6-20 18-36z"
+                fill="url(#cr-outer)"
+              />
+              {/* inner flame — warm orange-to-ivory with bloom glow */}
+              <g filter="url(#cr-bloom)">
+                <path
+                  d="M30 18c8 11 11 18 11 26a11 11 0 0 1-22 0c0-8 3-15 11-26z"
+                  fill="url(#cr-inner)"
+                  className="flame"
+                />
+                {/* white-hot core at the wick */}
+                <path
+                  d="M30 28c4 6 6 10 6 14a6 6 0 0 1-12 0c0-4 2-8 6-14z"
+                  fill="#F3ECDD"
+                />
+              </g>
+            </g>
+
+            {/* embers lifting off and fading upward */}
+            <circle
+              cx="28" cy="40" r="1.3" fill="#D9A441" className="ember"
+              style={{ '--x': '-9px', '--d': '0s' } as React.CSSProperties}
+            />
+            <circle
+              cx="32" cy="40" r="1.1" fill="#D9A441" className="ember"
+              style={{ '--x': '8px', '--d': '1.4s' } as React.CSSProperties}
+            />
+            <circle
+              cx="30" cy="38" r="0.9" fill="#F3ECDD" className="ember"
+              style={{ '--x': '-4px', '--d': '2.9s' } as React.CSSProperties}
+            />
           </svg>
         )}
-        <div className="h-36 w-12 rounded-md bg-ivory/90 shadow-[0_0_40px_rgba(217,164,65,0.2)]" />
+        <div
+          className={`h-36 w-12 rounded-md bg-ivory/90 ${
+            lit ? 'candle-glow-pulse' : 'shadow-[0_0_40px_rgba(217,164,65,0.2)]'
+          }`}
+        />
         <div className="mt-1 h-2 w-20 rounded-full bg-ivory/20" />
       </div>
 

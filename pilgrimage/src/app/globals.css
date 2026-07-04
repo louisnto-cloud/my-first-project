@@ -96,8 +96,23 @@ textarea {
   from { opacity: 0; transform: scale(0.4); }
   to { opacity: 1; transform: scale(1); }
 }
+@keyframes candle-ambient {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
 .light-bloom {
-  animation: light-bloom 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  /* bloom once, then let the light breathe */
+  animation:
+    light-bloom 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    candle-ambient 3s ease-in-out 1.6s infinite;
+}
+
+@keyframes candle-glow-pulse {
+  0%, 100% { box-shadow: 0 0 40px rgba(217,164,65,0.22); }
+  50% { box-shadow: 0 0 70px rgba(217,164,65,0.5), 0 0 20px rgba(217,164,65,0.25); }
+}
+.candle-glow-pulse {
+  animation: candle-glow-pulse 3s ease-in-out infinite;
 }
 
 /* ─── The passport stamp: thunk + slow ink bleed ─────────────────────────── */
@@ -237,11 +252,12 @@ textarea {
 @media (prefers-reduced-motion: reduce) {
   .flame, .light-bloom, .stamp-press, .ink-bleed, .page-in, .gold-glow,
   .shard, .road-path, .soft-glow, .art-drift, .flame-sway, .ember,
-  .guide-glow, .guide-eq i {
+  .guide-glow, .guide-eq i, .candle-glow-pulse {
     animation: none !important;
   }
   .guide-glow { opacity: 0.7; }
   .light-bloom, .stamp-press, .ink-bleed { opacity: 1; }
+  .candle-glow-pulse { box-shadow: 0 0 40px rgba(217,164,65,0.3); }
   .ember { opacity: 0.6; }
   .art-parallax { transform: scale(1.06); transition: none; }
   * {
