@@ -478,6 +478,10 @@ body,button,input,textarea{font-family:'Be Vietnam Pro',-apple-system,BlinkMacSy
 .card-back .card-audio-row{margin:0 0 12px}
 .card-back .card-example{border-top:1px solid var(--bd);padding-top:10px;font-size:13px}
 .card-reg-note{background:#F0F4FB;border-radius:8px;padding:8px 11px;font-size:11.5px;color:#1A3A5C;margin-top:8px;width:100%;line-height:1.55}
+.goal-adjust{display:flex;align-items:center;gap:14px;background:var(--wh);border-radius:16px;padding:12px 16px;box-shadow:var(--shd);justify-content:center}
+.goal-btn{width:44px;height:44px;border-radius:50%;border:none;background:var(--gp);color:var(--g);font-size:24px;font-weight:800;cursor:pointer;font-family:inherit}
+.goal-btn:active{transform:scale(.92)}
+.goal-val{font-size:16px;font-weight:800;color:var(--tx);min-width:120px;text-align:center}
 </style>
 </head>
 <body>
@@ -1185,7 +1189,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v6';
+const APP_VERSION='v7';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1763,16 +1767,29 @@ function renderIntelDetail(){
 function renderReview(){
   const starred=VOCAB.filter(v=>v.starred);
   const struggling=VOCAB.filter(v=>v.box<=2&&v.wrong>v.correct).slice(0,30);
+  const due=VOCAB.filter(v=>isDue(v)&&(v.correct||v.wrong));
   return `<div class="screen">
   <header class="screen-header"><span></span><span class="screen-title">Review</span><span></span></header>
   <main class="main-scroll" style="padding:16px">
+    ${due.length?`<button class="btn-primary full-w" style="margin-bottom:14px" onclick="startCustomLesson(${JSON.stringify(due.slice(0,20).map(v=>v.id)).replace(/"/g,"&quot;")})">⏰ Review ${Math.min(due.length,20)} due now</button>`:''}
     <div class="section-label">Struggling Terms (${struggling.length})</div>
+    ${struggling.length?`<button class="btn-sec full-w" style="margin-bottom:10px" onclick="startCustomLesson(${JSON.stringify(struggling.map(v=>v.id)).replace(/"/g,"&quot;")})">🎯 Practice these ${struggling.length}</button>`:''}
     ${struggling.length?struggling.map(v=>renderReviewCard(v)).join(''):`<div class="empty-state">No struggling terms. Keep it up!</div>`}
     <div class="section-label" style="margin-top:20px">Starred (${starred.length})</div>
+    ${starred.length?`<button class="btn-sec full-w" style="margin-bottom:10px" onclick="startCustomLesson(${JSON.stringify(starred.map(v=>v.id)).replace(/"/g,"&quot;")})">⭐ Practice starred</button>`:''}
     ${starred.length?starred.map(v=>renderReviewCard(v)).join(''):`<div class="empty-state">Tap the star on any flashcard to bookmark.</div>`}
     <div style="height:90px"></div>
   </main>
   ${nav()}</div>`;
+}
+function startCustomLesson(ids){
+  if(!ids||!ids.length) return;
+  S.activeLesson=shuffle([...ids]).slice(0,20);
+  S.lessonIdx=0; S.flipped=false;
+  S.sessionRight=0; S.sessionWrong=0; S.sessionXP=0;
+  S.practiceMode='flashcard';
+  S.activeCard=S.activeLesson[0];
+  go('flashcard');
 }
 function renderReviewCard(v){
   return `<div class="rv-card">
@@ -1812,6 +1829,12 @@ function renderProgress(){
         <span class="tier-pct">${mas}/${tot}</span>
       </div>`;
     }).join('')}
+    <div class="section-label" style="margin-top:20px">Daily Goal</div>
+    <div class="goal-adjust">
+      <button class="goal-btn" onclick="S.dailyGoal=Math.max(10,S.dailyGoal-10);saveState();render()">−</button>
+      <span class="goal-val">${S.dailyGoal} XP / day</span>
+      <button class="goal-btn" onclick="S.dailyGoal=Math.min(200,S.dailyGoal+10);saveState();render()">+</button>
+    </div>
     <div class="section-label" style="margin-top:20px">Export and Import</div>
     <button class="btn-primary full-w" onclick="go('export')">Save / Load Progress</button>
     <button class="btn-danger full-w" style="margin-top:10px" onclick="confirmReset()">Reset All Progress</button>
