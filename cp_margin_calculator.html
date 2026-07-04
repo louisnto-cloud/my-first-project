@@ -6,97 +6,126 @@
 <title>Organika · Margin Workbench</title>
 <style>
   :root{
-    --ink:#1d1d1f; --soft:#6e6e73; --line:#e6e8ec; --bg:#fbfbfd; --card:#ffffff;
-    --accent:#0a84ff; --accent-soft:#eaf3ff; --good:#1e9e57; --good-bg:#e8f7ee;
-    --warn:#b45309; --warn-bg:#fef3e2; --bad:#d83a4b; --bad-bg:#fdeef0;
-    --amber:#fff7cc; --nav-bg:rgba(251,251,253,.82);
-    --shadow:0 1px 3px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.05);
+    --ink:#1d1d1f; --soft:#6e6e73; --faint:#9a9aa0; --line:#e6e8ec; --bg:#fbfbfd; --card:#ffffff;
+    --accent:#0a84ff; --accent2:#30b0c7; --accent-soft:#eaf3ff;
+    --good:#1e9e57; --good-bg:#e8f7ee; --warn:#b45309; --warn-bg:#fef3e2;
+    --bad:#d83a4b; --bad-bg:#fdeef0;
+    --amber:#fffbe6; --amber-line:#f0e6b8; --nav-bg:rgba(251,251,253,.8);
+    --shadow:0 1px 2px rgba(29,29,31,.05),0 6px 18px rgba(29,29,31,.05);
+    --shadow-lg:0 2px 6px rgba(29,29,31,.06),0 18px 48px rgba(29,29,31,.09);
+    --ring:rgba(10,132,255,.18);
     --grid:#e1e0d9; --axis:#c3c2b7;
     --ramp1:#9ec5f4; --ramp2:#6da7ec; --ramp3:#3987e5; --ramp4:#1c5cab;
     --chart-cost:#e34948;
+    --wash1:rgba(10,132,255,.055); --wash2:rgba(48,176,199,.05);
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --ink:#f2f2f4; --soft:#98989f; --line:#2b2b30; --bg:#0f0f11; --card:#1a1a1d;
-      --accent:#3d9bff; --accent-soft:#12233a; --good:#34c77b; --good-bg:#12291c;
-      --warn:#e8a33d; --warn-bg:#2d2213; --bad:#ff6b6b; --bad-bg:#331519;
-      --amber:#33301c; --nav-bg:rgba(15,15,17,.82);
-      --shadow:0 1px 3px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+      --ink:#f4f4f6; --soft:#9b9ba3; --faint:#6f6f78; --line:#2a2a2f; --bg:#0e0e10; --card:#19191d;
+      --accent:#3d9bff; --accent2:#43c3da; --accent-soft:#12233a;
+      --good:#34c77b; --good-bg:#122a1d; --warn:#e8a33d; --warn-bg:#2d2213;
+      --bad:#ff6b6b; --bad-bg:#331519;
+      --amber:#2c2918; --amber-line:#4a4426; --nav-bg:rgba(14,14,16,.8);
+      --shadow:0 1px 2px rgba(0,0,0,.5),0 6px 18px rgba(0,0,0,.35);
+      --shadow-lg:0 2px 6px rgba(0,0,0,.5),0 18px 48px rgba(0,0,0,.45);
+      --ring:rgba(61,155,255,.25);
       --grid:#2c2c2a; --axis:#383835;
       --ramp1:#86b6ef; --ramp2:#5598e7; --ramp3:#3987e5; --ramp4:#6da7ec;
       --chart-cost:#e66767;
+      --wash1:rgba(61,155,255,.07); --wash2:rgba(67,195,218,.05);
     }
   }
   :root[data-theme="light"]{
-    --ink:#1d1d1f; --soft:#6e6e73; --line:#e6e8ec; --bg:#fbfbfd; --card:#ffffff;
-    --accent:#0a84ff; --accent-soft:#eaf3ff; --good:#1e9e57; --good-bg:#e8f7ee;
-    --warn:#b45309; --warn-bg:#fef3e2; --bad:#d83a4b; --bad-bg:#fdeef0;
-    --amber:#fff7cc; --nav-bg:rgba(251,251,253,.82);
-    --shadow:0 1px 3px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.05);
+    --ink:#1d1d1f; --soft:#6e6e73; --faint:#9a9aa0; --line:#e6e8ec; --bg:#fbfbfd; --card:#ffffff;
+    --accent:#0a84ff; --accent2:#30b0c7; --accent-soft:#eaf3ff;
+    --good:#1e9e57; --good-bg:#e8f7ee; --warn:#b45309; --warn-bg:#fef3e2;
+    --bad:#d83a4b; --bad-bg:#fdeef0;
+    --amber:#fffbe6; --amber-line:#f0e6b8; --nav-bg:rgba(251,251,253,.8);
+    --shadow:0 1px 2px rgba(29,29,31,.05),0 6px 18px rgba(29,29,31,.05);
+    --shadow-lg:0 2px 6px rgba(29,29,31,.06),0 18px 48px rgba(29,29,31,.09);
+    --ring:rgba(10,132,255,.18);
     --grid:#e1e0d9; --axis:#c3c2b7;
     --ramp1:#9ec5f4; --ramp2:#6da7ec; --ramp3:#3987e5; --ramp4:#1c5cab;
     --chart-cost:#e34948;
+    --wash1:rgba(10,132,255,.055); --wash2:rgba(48,176,199,.05);
   }
   :root[data-theme="dark"]{
-    --ink:#f2f2f4; --soft:#98989f; --line:#2b2b30; --bg:#0f0f11; --card:#1a1a1d;
-    --accent:#3d9bff; --accent-soft:#12233a; --good:#34c77b; --good-bg:#12291c;
-    --warn:#e8a33d; --warn-bg:#2d2213; --bad:#ff6b6b; --bad-bg:#331519;
-    --amber:#33301c; --nav-bg:rgba(15,15,17,.82);
-    --shadow:0 1px 3px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+    --ink:#f4f4f6; --soft:#9b9ba3; --faint:#6f6f78; --line:#2a2a2f; --bg:#0e0e10; --card:#19191d;
+    --accent:#3d9bff; --accent2:#43c3da; --accent-soft:#12233a;
+    --good:#34c77b; --good-bg:#122a1d; --warn:#e8a33d; --warn-bg:#2d2213;
+    --bad:#ff6b6b; --bad-bg:#331519;
+    --amber:#2c2918; --amber-line:#4a4426; --nav-bg:rgba(14,14,16,.8);
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 6px 18px rgba(0,0,0,.35);
+    --shadow-lg:0 2px 6px rgba(0,0,0,.5),0 18px 48px rgba(0,0,0,.45);
+    --ring:rgba(61,155,255,.25);
     --grid:#2c2c2a; --axis:#383835;
     --ramp1:#86b6ef; --ramp2:#5598e7; --ramp3:#3987e5; --ramp4:#6da7ec;
     --chart-cost:#e66767;
+    --wash1:rgba(61,155,255,.07); --wash2:rgba(67,195,218,.05);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{background:var(--bg);color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     -webkit-font-smoothing:antialiased;min-height:100vh}
+  body{position:relative}
+  body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:radial-gradient(720px 420px at 12% -60px,var(--wash1),transparent 70%),
+               radial-gradient(640px 400px at 95% -40px,var(--wash2),transparent 70%)}
   button{font:inherit;color:inherit}
-  .wrap{max-width:980px;margin:0 auto;padding:0 22px 90px}
+  .wrap{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:0 22px 90px}
 
-  header{padding:44px 0 6px;display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  .eyebrow{color:var(--accent);font-weight:700;letter-spacing:.4px;font-size:13px;text-transform:uppercase}
-  h1{font-size:44px;line-height:1.05;font-weight:700;margin:6px 0 4px;letter-spacing:-.02em;text-wrap:balance}
+  header{padding:46px 0 4px;display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .eyebrow{font-weight:700;letter-spacing:1.6px;font-size:12px;text-transform:uppercase;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+  h1{font-size:46px;line-height:1.04;font-weight:700;margin:7px 0 5px;letter-spacing:-.025em;text-wrap:balance}
   .sub{color:var(--soft);font-size:17px}
-  .hdr-tools{display:flex;gap:8px;align-items:center;padding-bottom:6px}
+  .hdr-tools{display:flex;gap:8px;align-items:center;padding-bottom:8px;flex-wrap:wrap}
   .tool-btn{border:1px solid var(--line);background:var(--card);border-radius:980px;
-    padding:8px 16px;font-size:13px;font-weight:600;color:var(--soft);cursor:pointer;transition:.15s}
-  .tool-btn:hover{color:var(--ink);border-color:var(--soft)}
-  select.tool-btn{appearance:none;-webkit-appearance:none;padding-right:26px;
+    padding:8px 16px;font-size:13px;font-weight:600;color:var(--soft);cursor:pointer;transition:.18s}
+  .tool-btn:hover{color:var(--ink);border-color:var(--faint);transform:translateY(-1px)}
+  select.tool-btn{appearance:none;-webkit-appearance:none;padding-right:28px;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat:no-repeat;background-position:right 12px center}
 
-  .nav{position:sticky;top:0;z-index:20;background:var(--nav-bg);backdrop-filter:saturate(180%) blur(14px);
-    -webkit-backdrop-filter:saturate(180%) blur(14px);
-    border-bottom:1px solid var(--line);margin:16px -22px 26px;padding:10px 22px;display:flex;gap:6px;flex-wrap:wrap}
+  /* Simple/Advanced switch */
+  .modeseg{display:inline-flex;background:var(--line);border-radius:980px;padding:3px;gap:2px}
+  .modeseg button{border:0;background:transparent;border-radius:980px;padding:7px 16px;
+    font-size:13px;font-weight:700;color:var(--soft);cursor:pointer;transition:.18s}
+  .modeseg button.on{background:var(--card);color:var(--ink);box-shadow:0 1px 5px rgba(0,0,0,.14)}
+
+  .nav{position:sticky;top:0;z-index:20;background:var(--nav-bg);backdrop-filter:saturate(180%) blur(16px);
+    -webkit-backdrop-filter:saturate(180%) blur(16px);
+    border-bottom:1px solid var(--line);margin:18px -22px 28px;padding:10px 22px;display:flex;gap:6px;flex-wrap:wrap}
   .nav button{border:0;background:transparent;color:var(--soft);font-size:14px;font-weight:600;
-    padding:8px 14px;border-radius:980px;cursor:pointer;transition:.15s}
+    padding:8px 15px;border-radius:980px;cursor:pointer;transition:.18s}
   .nav button:hover{color:var(--ink)}
   .nav button.on{background:var(--ink);color:var(--bg)}
-  .nav button:focus-visible,.tool-btn:focus-visible,.pill:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .nav button.hidden{display:none}
+  .nav button:focus-visible,.tool-btn:focus-visible,.modeseg button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
   .view{display:none}
-  .view.on{display:block;animation:fade .18s ease}
-  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
-  @media (prefers-reduced-motion: reduce){.view.on{animation:none}}
+  .view.on{display:block;animation:fade .22s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion: reduce){.view.on{animation:none}.tool-btn:hover{transform:none}}
 
-  .panel{background:var(--card);border:1px solid var(--line);border-radius:20px;
-    padding:24px 26px;box-shadow:var(--shadow);margin:0 0 22px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:22px;
+    padding:26px 28px;box-shadow:var(--shadow);margin:0 0 22px}
   .panel h2{font-size:19px;font-weight:700;letter-spacing:-.01em;margin:0 0 4px}
-  .panel .h-sub{color:var(--soft);font-size:13px;margin:0 0 18px;max-width:62ch}
-  .note{background:var(--accent-soft);border:1px solid var(--line);border-radius:14px;
-    padding:12px 16px;font-size:13px;color:var(--soft);margin-bottom:18px;line-height:1.55}
-  .note b{color:var(--ink)}
+  .panel .h-sub{color:var(--soft);font-size:13px;margin:0 0 20px;max-width:64ch;line-height:1.5}
 
-  /* solver */
-  .solver{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-  @media(max-width:840px){.solver{grid-template-columns:repeat(3,1fr)}}
-  @media(max-width:560px){.solver{grid-template-columns:repeat(2,1fr)}}
+  /* solver + gauge */
+  .solver-top{display:grid;grid-template-columns:1fr 168px;gap:30px;align-items:center}
+  @media(max-width:700px){.solver-top{grid-template-columns:1fr}}
+  .solver{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .solver.five{grid-template-columns:repeat(3,1fr)}
+  @media(min-width:841px){.solver.five{grid-template-columns:repeat(5,1fr)}}
+  @media(max-width:560px){.solver,.solver.five{grid-template-columns:repeat(2,1fr)}}
   .field{display:flex;flex-direction:column;gap:7px;min-width:0}
   .field .lab{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;
-    letter-spacing:.5px;text-transform:uppercase;color:var(--soft)}
+    letter-spacing:.6px;text-transform:uppercase;color:var(--soft);white-space:nowrap}
   .chip{font-size:9px;font-weight:700;letter-spacing:.4px;padding:2px 7px;border-radius:5px;
-    border:1px solid transparent;cursor:pointer;background:transparent;color:transparent;transition:.15s}
+    border:1px solid transparent;cursor:pointer;background:transparent;color:transparent;transition:.18s}
   .field.anchorable .chip{color:var(--line);border-color:var(--line)}
   .field.anchorable .chip:hover{color:var(--soft);border-color:var(--soft)}
   .field.anchored .chip{background:var(--accent);border-color:var(--accent);color:#fff}
@@ -104,25 +133,37 @@
   .iwrap .fix{position:absolute;font-size:14px;font-weight:600;color:var(--soft);pointer-events:none}
   .iwrap .fix.pre{left:13px}
   .iwrap .fix.suf{right:13px}
-  input.num{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;
+  input.num{width:100%;border:1.5px solid var(--amber-line);border-radius:13px;padding:12px 14px;
     font:inherit;font-size:17px;font-weight:600;background:var(--amber);color:var(--ink);
-    font-variant-numeric:tabular-nums;transition:border-color .15s,background .15s;min-width:0}
-  input.num:focus{outline:none;border-color:var(--accent);background:var(--card)}
+    font-variant-numeric:tabular-nums;transition:border-color .18s,background .18s,box-shadow .18s;min-width:0}
+  input.num:hover{border-color:var(--faint)}
+  input.num:focus{outline:none;border-color:var(--accent);background:var(--card);box-shadow:0 0 0 4px var(--ring)}
   input.num.pre{padding-left:28px}
   input.num.suf{padding-right:30px}
   input.num.neg{color:var(--bad)}
   input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
   input[type=number]{-moz-appearance:textfield;appearance:textfield}
-  .solver-hint{margin-top:14px;font-size:12px;color:var(--soft)}
+  .solver-hint{margin-top:16px;font-size:12px;color:var(--soft)}
   .solver-hint b{color:var(--ink)}
   .err{margin-top:10px;font-size:13px;color:var(--bad);display:none}
   .err.on{display:block}
 
+  /* margin gauge */
+  .gauge{display:flex;flex-direction:column;align-items:center;gap:4px;justify-self:center}
+  .gauge svg{display:block}
+  .gauge .arc{transition:stroke-dashoffset .45s cubic-bezier(.3,.7,.3,1),stroke .3s}
+  @media (prefers-reduced-motion: reduce){.gauge .arc{transition:none}}
+  .gauge .gv{font-size:30px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .gauge .gl{font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;fill:var(--soft)}
+  .gauge .cap{font-size:11.5px;color:var(--soft);text-align:center;line-height:1.45;max-width:170px}
+  .gauge .cap b{color:var(--ink);font-variant-numeric:tabular-nums}
+
   /* kpis */
-  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:18px 0 0}
-  .kpi{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:15px 17px 13px}
-  .kpi .k{font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--soft);text-transform:uppercase}
-  .kpi .v{font-size:25px;font-weight:700;margin-top:5px;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:20px 0 0}
+  .kpi{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:15px 17px 13px;transition:.18s}
+  .kpi:hover{border-color:var(--faint)}
+  .kpi .k{font-size:11px;font-weight:700;letter-spacing:.6px;color:var(--soft);text-transform:uppercase}
+  .kpi .v{font-size:25px;font-weight:700;margin-top:5px;letter-spacing:-.015em;font-variant-numeric:tabular-nums}
   .kpi .v.good{color:var(--good)} .kpi .v.warn{color:var(--warn)} .kpi .v.bad{color:var(--bad)}
   .kpi .n{font-size:11px;color:var(--soft);margin-top:3px}
 
@@ -132,7 +173,7 @@
   th,td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line);
     white-space:nowrap;font-variant-numeric:tabular-nums}
   th:first-child,td:first-child{text-align:left}
-  thead th{font-size:11px;letter-spacing:.4px;text-transform:uppercase;color:var(--soft);
+  thead th{font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--soft);
     font-weight:700;border-bottom:2px solid var(--line)}
   tbody tr:last-child td{border-bottom:none}
   tr.clickable{cursor:pointer;transition:background .12s}
@@ -140,8 +181,19 @@
   tr.hit td{background:var(--good-bg);font-weight:700;color:var(--good)}
   tr.tot td{font-weight:700;border-top:2px solid var(--line)}
   .bar-cell{display:flex;align-items:center;justify-content:flex-end}
-  .mbar{height:8px;border-radius:4px 4px 4px 4px;display:inline-block}
-  td.empty{ text-align:center;color:var(--soft);padding:22px}
+  .mbar{height:8px;border-radius:4px;display:inline-block;transition:width .3s ease}
+  td.empty{text-align:center;color:var(--soft);padding:22px}
+
+  /* P&L statement */
+  .pl-inputs{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:22px}
+  table.pl td,table.pl th{padding:10px 12px}
+  table.pl td.ln{color:var(--ink)}
+  table.pl tr.minor td.ln{padding-left:26px;color:var(--soft)}
+  table.pl tr.minor td{color:var(--soft)}
+  table.pl tr.sub td{font-weight:700;border-top:1.5px solid var(--axis)}
+  table.pl tr.major td{font-weight:700;font-size:15px;border-top:2px solid var(--ink);border-bottom:none;padding-top:13px}
+  table.pl td.pct{color:var(--faint);font-size:12.5px}
+  table.pl .posv{color:var(--good)} table.pl .negv{color:var(--bad)}
 
   /* status pill */
   .pill{display:inline-flex;align-items:center;gap:6px;border-radius:980px;padding:4px 12px;
@@ -161,23 +213,27 @@
   .ltot .t{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--good)}
   .ltot .v{font-size:28px;font-weight:700;color:var(--good);font-variant-numeric:tabular-nums}
 
-  .action{border:0;background:var(--accent);color:#fff;border-radius:12px;padding:11px 20px;
-    font-size:14px;font-weight:600;cursor:pointer;transition:.15s;box-shadow:0 4px 14px rgba(10,132,255,.25)}
-  .action:hover{filter:brightness(1.08)}
+  .action{border:0;background:linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 72%,var(--accent2)));
+    color:#fff;border-radius:12px;padding:11px 20px;
+    font-size:14px;font-weight:600;cursor:pointer;transition:.18s;box-shadow:0 4px 14px var(--ring)}
+  .action:hover{filter:brightness(1.07);transform:translateY(-1px)}
   .action.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent);box-shadow:none}
   .action.subtle{background:var(--bg);color:var(--soft);border:1px solid var(--line);box-shadow:none}
   .action.subtle:hover{color:var(--ink)}
   .action:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  .btnrow{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+  .btnrow{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;align-items:center}
+  .copied{font-size:12px;color:var(--good);font-weight:600;opacity:0;transition:opacity .25s}
+  .copied.on{opacity:1}
+  @media (prefers-reduced-motion: reduce){.action:hover{transform:none}}
 
   /* ladder */
   .seg{display:inline-flex;border:1px solid var(--line);border-radius:980px;overflow:hidden;margin-bottom:16px}
   .seg button{border:0;background:var(--card);padding:7px 16px;font-weight:600;font-size:13px;
-    color:var(--soft);cursor:pointer}
+    color:var(--soft);cursor:pointer;transition:.15s}
   .seg button.on{background:var(--ink);color:var(--bg)}
   .ladder-grid{display:grid;grid-template-columns:1fr 130px 130px;gap:10px 14px;align-items:center}
-  @media(max-width:560px){.ladder-grid{grid-template-columns:1fr 100px 100px}}
-  .ladder-grid .hd{font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--soft)}
+  @media(max-width:560px){.ladder-grid{grid-template-columns:1fr 96px 96px}}
+  .ladder-grid .hd{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--soft)}
   .tier-name{font-size:14px;font-weight:600}
   .tier-sub{font-size:12px;color:var(--soft);margin-top:2px}
   .tier-out{font-size:16px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
@@ -186,26 +242,24 @@
   .lv-row .n{font-weight:600;color:var(--soft)}
   .lv-row .v{font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
   .lv-track{display:block;height:22px;border-radius:6px;background:var(--bg);border:1px solid var(--line);overflow:hidden}
-  .lv-fill{display:block;height:100%;border-radius:5px;transition:width .25s ease}
-  @media (prefers-reduced-motion: reduce){.lv-fill{transition:none}}
+  .lv-fill{display:block;height:100%;border-radius:5px;transition:width .3s ease}
+  @media (prefers-reduced-motion: reduce){.lv-fill,.mbar{transition:none}}
 
   /* chart */
-  .chart-box{margin-top:6px}
   .legend{display:flex;gap:18px;flex-wrap:wrap;margin:2px 0 12px;font-size:12px;color:var(--soft)}
   .legend .sw{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:3px}
   svg text{font-family:inherit}
   .tip{position:absolute;pointer-events:none;background:var(--card);border:1px solid var(--line);
-    border-radius:10px;box-shadow:var(--shadow);padding:9px 12px;font-size:12px;line-height:1.5;
+    border-radius:10px;box-shadow:var(--shadow-lg);padding:9px 12px;font-size:12px;line-height:1.5;
     display:none;z-index:5;font-variant-numeric:tabular-nums;min-width:150px}
-  .tip b{font-size:12px}
-  .chart-wrap{position:relative}
+  .chart-wrap{position:relative;margin-top:6px}
 
   /* products */
-  input.cellinp{width:100%;border:1px solid var(--line);background:var(--amber);border-radius:8px;
+  input.cellinp{width:100%;border:1px solid var(--amber-line);background:var(--amber);border-radius:8px;
     padding:6px 9px;font:inherit;font-size:13px;font-weight:600;text-align:right;
     color:var(--ink);font-variant-numeric:tabular-nums;min-width:70px}
-  input.cellinp.name{text-align:left;min-width:130px;font-weight:600}
-  input.cellinp:focus{outline:2px solid var(--accent);border-color:var(--accent);background:var(--card)}
+  input.cellinp.name{text-align:left;min-width:130px}
+  input.cellinp:focus{outline:none;border-color:var(--accent);background:var(--card);box-shadow:0 0 0 3px var(--ring)}
   .del{border:0;background:transparent;color:var(--soft);cursor:pointer;font-size:15px;
     padding:4px 8px;border-radius:8px;line-height:1}
   .del:hover{color:var(--bad);background:var(--bad-bg)}
@@ -220,11 +274,15 @@
 <div class="wrap">
   <header>
     <div>
-      <div class="eyebrow">Organika</div>
+      <span class="eyebrow">Organika</span>
       <h1>Margin Workbench</h1>
       <p class="sub">Cost, price &amp; margin — solve in any direction.</p>
     </div>
     <div class="hdr-tools">
+      <div class="modeseg" id="modeSeg" role="group" aria-label="Complexity">
+        <button data-mode="simple">Simple</button>
+        <button data-mode="adv" class="on">Advanced</button>
+      </div>
       <select class="tool-btn" id="curSel" aria-label="Currency">
         <option value="$">$ CAD</option><option value="US$">US$</option>
         <option value="€">€ EUR</option><option value="£">£ GBP</option><option value="₫">₫ VND</option>
@@ -236,6 +294,7 @@
 
   <nav class="nav" id="nav" aria-label="Sections">
     <button class="on" data-v="calc">Calculator</button>
+    <button data-v="pnl">P&amp;L</button>
     <button data-v="landed">Landed Cost</button>
     <button data-v="ladder">Price Ladder</button>
     <button data-v="be">Break-even</button>
@@ -247,10 +306,27 @@
     <div class="panel">
       <h2>Bidirectional solver</h2>
       <p class="h-sub">Edit any field — the others recompute instantly. The <b>held</b> pin marks which of cost / price stays fixed when you edit a percentage; click the other pin to flip it.</p>
-      <div class="solver" id="solver"></div>
+      <div class="solver-top">
+        <div class="solver" id="solver"></div>
+        <div class="gauge" id="gauge">
+          <svg width="150" height="150" viewBox="0 0 150 150" role="img" aria-label="Margin gauge">
+            <circle cx="75" cy="75" r="62" fill="none" stroke="var(--line)" stroke-width="11"/>
+            <circle class="arc" id="gArc" cx="75" cy="75" r="62" fill="none" stroke="var(--good)"
+              stroke-width="11" stroke-linecap="round" stroke-dasharray="389.6" stroke-dashoffset="389.6"
+              transform="rotate(-90 75 75)"/>
+            <text class="gv" id="gVal" x="75" y="74" text-anchor="middle" dominant-baseline="middle" fill="currentColor">—</text>
+            <text class="gl" x="75" y="98" text-anchor="middle">margin</text>
+          </svg>
+          <div class="cap" id="gCap"></div>
+        </div>
+      </div>
       <p class="err" id="solverErr"></p>
       <p class="solver-hint">Margin is profit ÷ <b>price</b> · markup is profit ÷ <b>cost</b>. A 50% markup = 33.3% margin; margin can never reach 100%.</p>
       <div class="kpis" id="calcKpis"></div>
+      <div class="btnrow">
+        <button class="action subtle" id="copyBtn">Copy summary</button>
+        <span class="copied" id="copiedMsg">Copied ✓</span>
+      </div>
     </div>
 
     <div class="panel">
@@ -260,6 +336,28 @@
         <thead><tr><th>Margin</th><th>Markup</th><th>Selling price</th><th>Profit / unit</th><th style="text-align:left;padding-left:18px">·</th></tr></thead>
         <tbody id="scenBody"></tbody>
       </table></div>
+    </div>
+  </section>
+
+  <!-- ================= P&L ================= -->
+  <section class="view" data-view="pnl">
+    <div class="panel">
+      <h2>Profit &amp; loss</h2>
+      <p class="h-sub">Unit economics flow in from the calculator. Set your monthly volume and cost lines to see the full statement — per unit, per month, and as a share of revenue.</p>
+      <div class="seg" id="plSeg">
+        <button data-d="simple">Simple</button>
+        <button data-d="detail" class="on">Detailed</button>
+      </div>
+      <div class="pl-inputs" id="plInputs"></div>
+      <div class="tscroll"><table class="pl">
+        <thead><tr><th>Line</th><th>Per unit</th><th>Per month</th><th>% of revenue</th></tr></thead>
+        <tbody id="plBody"></tbody>
+      </table></div>
+      <div class="kpis" id="plKpis"></div>
+    </div>
+    <div class="panel">
+      <h2>Reading it</h2>
+      <p class="explain" id="plExplain"></p>
     </div>
   </section>
 
@@ -303,8 +401,8 @@
   <section class="view" data-view="be">
     <div class="panel">
       <h2>Break-even</h2>
-      <p class="h-sub">Unit economics come from the calculator; add fixed costs to see how many units pay them off.</p>
-      <div class="solver" style="grid-template-columns:repeat(3,1fr)" id="beInputs"></div>
+      <p class="h-sub">Unit economics come from the calculator; add fixed costs to see how many units pay them off — and how many hit your profit target.</p>
+      <div class="solver" id="beInputs"></div>
       <div class="kpis" id="beKpis"></div>
     </div>
     <div class="panel">
@@ -314,7 +412,7 @@
         <span><span class="sw" style="background:var(--accent)"></span>Revenue</span>
         <span><span class="sw" style="background:var(--chart-cost)"></span>Total cost</span>
       </div>
-      <div class="chart-wrap chart-box" id="beChartWrap">
+      <div class="chart-wrap" id="beChartWrap">
         <svg id="beChart" width="100%" height="280" role="img" aria-label="Break-even chart: revenue and total cost versus units sold"></svg>
         <div class="tip" id="beTip"></div>
       </div>
@@ -347,23 +445,23 @@
 'use strict';
 /* ---------- state ---------- */
 const DEF = {
-  cost: 12.50, price: 20.83, anchor: 'cost', cur: '$', theme: '',
+  mode: 'adv', cost: 12.50, price: 20.83, anchor: 'cost', cur: '$', theme: '',
   landed: { base: 12.50, freight: 0.85, dutyPct: 6.5, pack: 0.40, other: 0.15 },
   ladder: { dir: 'fwd', brand: 35, dist: 28, retail: 38, shelf: 49.99 },
-  be: { fixed: 25000, extraVar: 0 },
+  be: { fixed: 25000, extraVar: 0, target: 10000 },
+  pnl: { detail: 'detail', units: 4000, opex: 24000,
+         trade: 8, freightOut: 0.60, fulfil: 0.90, mktPct: 6, overhead: 18000 },
   products: [
     { name: 'Sparkling Daily 12-pack', cost: 12.50, price: 20.83 },
     { name: 'Sparkling Daily 24-pack', cost: 23.10, price: 36.99 },
     { name: 'Starter kit', cost: 8.20, price: 11.50 },
   ],
 };
-const LS = 'orgk-margin-workbench-v1';
+const LS = 'orgk-margin-workbench-v2';
 let S;
 try { S = Object.assign(structuredClone(DEF), JSON.parse(localStorage.getItem(LS) || '{}')); }
 catch (e) { S = structuredClone(DEF); }
-S.landed = Object.assign({}, DEF.landed, S.landed);
-S.ladder = Object.assign({}, DEF.ladder, S.ladder);
-S.be = Object.assign({}, DEF.be, S.be);
+['landed','ladder','be','pnl'].forEach(k => S[k] = Object.assign({}, DEF[k], S[k]));
 if (!Array.isArray(S.products)) S.products = structuredClone(DEF.products);
 
 let saveT;
@@ -378,13 +476,17 @@ function fmt(n, dec = 2){
   if (!isFinite(n)) return '—';
   return n.toLocaleString('en-CA', { minimumFractionDigits: dec, maximumFractionDigits: dec });
 }
-const money = (n, dec = 2) => isFinite(n) ? S.cur + fmt(n, dec) : '—';
+const money = (n, dec = 2) => isFinite(n) ? (n < 0 ? '−' + S.cur + fmt(-n, dec) : S.cur + fmt(n, dec)) : '—';
 const marginOf = (c, p) => p > 0 ? (p - c) / p * 100 : NaN;
 const markupOf = (c, p) => c > 0 ? (p - c) / c * 100 : NaN;
-function marginClass(m){ return !isFinite(m) ? '' : m >= 40 ? 'good' : m >= 20 ? 'warn' : 'bad'; }
+function marginClass(m){
+  if (!isFinite(m)) return '';
+  const r = Math.round(m * 10) / 10;   // judge the displayed value
+  return r >= 40 ? 'good' : r >= 20 ? 'warn' : 'bad';
+}
 
-/* ---------- theme & currency ---------- */
-function applyTheme(){ document.documentElement.dataset.theme = S.theme; if (!S.theme) delete document.documentElement.dataset.theme; }
+/* ---------- theme / currency / mode ---------- */
+function applyTheme(){ if (S.theme) document.documentElement.dataset.theme = S.theme; else delete document.documentElement.dataset.theme; }
 $('themeBtn').addEventListener('click', () => {
   const dark = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim() !== '#fbfbfd';
   S.theme = dark ? 'light' : 'dark';
@@ -393,29 +495,53 @@ $('themeBtn').addEventListener('click', () => {
 $('curSel').value = S.cur;
 $('curSel').addEventListener('change', e => { S.cur = e.target.value; save(); renderAll(); });
 $('resetAll').addEventListener('click', () => {
-  const theme = S.theme; S = structuredClone(DEF); S.theme = theme;
-  save(); renderAll(); buildLanded(); buildLadder(); buildBE(); renderProducts();
+  const theme = S.theme, mode = S.mode;
+  S = structuredClone(DEF); S.theme = theme; S.mode = mode;
+  save(); buildSolver(); buildLanded(); buildLadder(); buildBE(); buildPnl(); renderProducts(); renderAll();
 });
 applyTheme();
 
+const SIMPLE_VIEWS = ['calc', 'pnl'];
+$('modeSeg').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  S.mode = b.dataset.mode; save(); applyMode();
+});
+function applyMode(){
+  document.querySelectorAll('#modeSeg button').forEach(b => b.classList.toggle('on', b.dataset.mode === S.mode));
+  const simple = S.mode === 'simple';
+  document.querySelectorAll('#nav button').forEach(b => {
+    b.classList.toggle('hidden', simple && !SIMPLE_VIEWS.includes(b.dataset.v));
+  });
+  const active = document.querySelector('#nav button.on');
+  if (simple && active && !SIMPLE_VIEWS.includes(active.dataset.v)) switchView('calc');
+  buildSolver(); paintSolver(); paintKpis();
+}
+
 /* ---------- nav ---------- */
+function switchView(v){
+  document.querySelectorAll('#nav button').forEach(x => x.classList.toggle('on', x.dataset.v === v));
+  document.querySelectorAll('.view').forEach(x => x.classList.toggle('on', x.dataset.view === v));
+  if (v === 'be') drawBE();
+}
 $('nav').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b) return;
-  document.querySelectorAll('#nav button').forEach(x => x.classList.toggle('on', x === b));
-  document.querySelectorAll('.view').forEach(v => v.classList.toggle('on', v.dataset.view === b.dataset.v));
-  if (b.dataset.v === 'be') drawBE();
+  switchView(b.dataset.v);
 });
 
 /* ================= CALCULATOR ================= */
-const FIELDS = [
+const FIELDS_ALL = [
   { id: 'cost',   label: 'Cost (CP)',   pre: true,  anchorable: true },
   { id: 'margin', label: 'Margin',      suf: '%' },
-  { id: 'markup', label: 'Markup',      suf: '%' },
+  { id: 'markup', label: 'Markup',      suf: '%', advOnly: true },
   { id: 'price',  label: 'Price (SP)',  pre: true,  anchorable: true },
-  { id: 'profit', label: 'Profit',      pre: true },
+  { id: 'profit', label: 'Profit',      pre: true, advOnly: true },
 ];
+function activeFields(){ return FIELDS_ALL.filter(f => S.mode === 'adv' || !f.advOnly); }
 function buildSolver(){
-  $('solver').innerHTML = FIELDS.map(f => `
+  const fields = activeFields();
+  const sol = $('solver');
+  sol.classList.toggle('five', fields.length === 5);
+  sol.innerHTML = fields.map(f => `
     <div class="field ${f.anchorable ? 'anchorable' : ''}" id="f-${f.id}">
       <span class="lab">${f.label}
         ${f.anchorable ? `<button class="chip" data-anchor="${f.id}" title="Hold ${f.id} fixed when editing percentages">HELD</button>` : ''}
@@ -427,8 +553,8 @@ function buildSolver(){
         ${f.suf ? `<span class="fix suf">${f.suf}</span>` : ''}
       </span>
     </div>`).join('');
-  FIELDS.forEach(f => $('in-' + f.id).addEventListener('input', e => onSolverEdit(f.id, e.target.value)));
-  document.querySelectorAll('[data-anchor]').forEach(b => b.addEventListener('click', () => {
+  fields.forEach(f => $('in-' + f.id).addEventListener('input', e => onSolverEdit(f.id, e.target.value)));
+  sol.querySelectorAll('[data-anchor]').forEach(b => b.addEventListener('click', () => {
     S.anchor = b.dataset.anchor; save(); paintSolver();
   }));
 }
@@ -451,10 +577,10 @@ function onSolverEdit(id, raw){
     if (S.anchor === 'price') S.cost = P - v;
     else S.price = C + v;
   }
-  save(); paintSolver(id); paintKpis(); paintScen(); buildBE(false);
+  save(); paintSolver(id); paintKpis(); paintScen(); paintBE(); paintPnl();
 }
 function setVal(id, v, dec){
-  const el = $('in-' + id);
+  const el = $('in-' + id); if (!el) return;
   if (document.activeElement === el) return;   // don't fight the typer
   el.value = isFinite(v) ? v.toFixed(dec) : '';
   el.classList.toggle('neg', isFinite(v) && v < 0);
@@ -466,9 +592,24 @@ function paintSolver(skip){
   if (skip !== 'margin') setVal('margin', marginOf(C, P), 1);
   if (skip !== 'markup') setVal('markup', markupOf(C, P), 1);
   if (skip !== 'profit') setVal('profit', P - C, 2);
-  $('f-cost').classList.toggle('anchored', S.anchor === 'cost');
-  $('f-price').classList.toggle('anchored', S.anchor === 'price');
+  const fc = $('f-cost'), fp = $('f-price');
+  if (fc) fc.classList.toggle('anchored', S.anchor === 'cost');
+  if (fp) fp.classList.toggle('anchored', S.anchor === 'price');
   document.querySelectorAll('#solver .fix.pre').forEach(el => el.textContent = S.cur);
+  paintGauge();
+}
+function paintGauge(){
+  const m = marginOf(S.cost, S.price);
+  const arc = $('gArc'), val = $('gVal'), cap = $('gCap');
+  const CIRC = 389.6;
+  const pct = isFinite(m) ? Math.max(0, Math.min(100, m)) : 0;
+  arc.style.strokeDashoffset = CIRC * (1 - pct / 100);
+  const cls = marginClass(m);
+  arc.style.stroke = cls === 'good' ? 'var(--good)' : cls === 'warn' ? 'var(--warn)' : cls === 'bad' ? 'var(--bad)' : 'var(--line)';
+  val.textContent = isFinite(m) ? fmt(m, 1) + '%' : '—';
+  cap.innerHTML = isFinite(m)
+    ? `<b>${money(S.price - S.cost)}</b> of every <b>${money(S.price)}</b> sale is profit`
+    : 'Enter a cost and price';
 }
 function paintKpis(){
   const C = S.cost, P = S.price, m = marginOf(C, P), k = markupOf(C, P), pr = P - C;
@@ -499,8 +640,119 @@ $('scenBody').addEventListener('click', e => {
   const tr = e.target.closest('tr[data-m]'); if (!tr) return;
   const m = +tr.dataset.m;
   S.price = S.cost / (1 - m / 100); S.anchor = 'cost';
-  save(); paintSolver(); paintKpis(); paintScen(); buildBE(false);
+  save(); paintSolver(); paintKpis(); paintScen(); paintBE(); paintPnl();
 });
+$('copyBtn').addEventListener('click', async () => {
+  const m = marginOf(S.cost, S.price), k = markupOf(S.cost, S.price);
+  const txt = `Cost ${money(S.cost)} → Price ${money(S.price)} · margin ${fmt(m,1)}% · markup ${fmt(k,1)}% · profit ${money(S.price - S.cost)}/unit`;
+  try { await navigator.clipboard.writeText(txt); } catch (e) {
+    const ta = document.createElement('textarea'); ta.value = txt; document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy'); ta.remove();
+  }
+  $('copiedMsg').classList.add('on');
+  setTimeout(() => $('copiedMsg').classList.remove('on'), 1600);
+});
+
+/* ================= P&L ================= */
+$('plSeg').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  S.pnl.detail = b.dataset.d; save(); buildPnl();
+});
+const PL_FIELDS_SIMPLE = [
+  { id: 'units', label: 'Units sold / month', step: 100 },
+  { id: 'opex',  label: 'Operating costs / month', pre: true, step: 500 },
+];
+const PL_FIELDS_DETAIL = [
+  { id: 'units',      label: 'Units sold / month', step: 100 },
+  { id: 'trade',      label: 'Trade & promos', suf: '%', step: 0.5, hint: 'of gross revenue' },
+  { id: 'freightOut', label: 'Freight out / unit', pre: true, step: 0.05 },
+  { id: 'fulfil',     label: 'Fulfillment / unit', pre: true, step: 0.05 },
+  { id: 'mktPct',     label: 'Marketing', suf: '%', step: 0.5, hint: 'of net revenue' },
+  { id: 'overhead',   label: 'Overhead / month', pre: true, step: 500 },
+];
+function buildPnl(){
+  const detail = S.pnl.detail === 'detail';
+  document.querySelectorAll('#plSeg button').forEach(b => b.classList.toggle('on', b.dataset.d === S.pnl.detail));
+  const fields = detail ? PL_FIELDS_DETAIL : PL_FIELDS_SIMPLE;
+  $('plInputs').innerHTML = fields.map(f => `
+    <div class="field">
+      <span class="lab">${f.label}</span>
+      <span class="iwrap">
+        ${f.pre ? `<span class="fix pre">${S.cur}</span>` : ''}
+        <input class="num ${f.pre ? 'pre' : ''} ${f.suf ? 'suf' : ''}" id="pl-${f.id}" type="number"
+          step="${f.step}" inputmode="decimal" value="${S.pnl[f.id]}" aria-label="${f.label}">
+        ${f.suf ? `<span class="fix suf">${f.suf}</span>` : ''}
+      </span>
+    </div>`).join('');
+  fields.forEach(f => $('pl-' + f.id).addEventListener('input', e => {
+    const v = num(e.target.value); S.pnl[f.id] = isFinite(v) ? v : 0; save(); paintPnl();
+  }));
+  $('plExplain').innerHTML = detail
+    ? `<b>Detailed</b> mirrors a CPG operating statement. Trade &amp; promos come off gross revenue first (retailer deals, listing fees, discounts). COGS uses the calculator's cost. Below gross profit sit the costs of getting product to customers — freight out, fulfillment, marketing — then overhead. What's left is <b>operating profit</b>. Aim for gross margin ≥ 40% and operating margin ≥ 10% in a healthy CPG line.`
+    : `<b>Simple</b> keeps it to four lines: revenue at your selling price, cost of goods at your unit cost, one lump of operating costs, and what's left. Switch to <b>Detailed</b> for the full breakdown — trade spend, freight out, fulfillment, marketing and overhead as separate lines.`;
+  paintPnl();
+}
+function pnlCalc(){
+  const U = Math.max(0, S.pnl.units), P = S.price, C = S.cost;
+  const gross = U * P;
+  const detail = S.pnl.detail === 'detail';
+  const trade = detail ? gross * S.pnl.trade / 100 : 0;
+  const nr = gross - trade;
+  const cogs = U * C;
+  const gp = nr - cogs;
+  let lines, opTotal;
+  if (detail) {
+    const fr = U * S.pnl.freightOut, fu = U * S.pnl.fulfil, mk = nr * S.pnl.mktPct / 100, oh = S.pnl.overhead;
+    opTotal = fr + fu + mk + oh;
+    lines = { fr, fu, mk, oh };
+  } else {
+    opTotal = S.pnl.opex; lines = {};
+  }
+  const op = gp - opTotal;
+  return { U, gross, trade, nr, cogs, gp, opTotal, op, ...lines };
+}
+function paintPnl(){
+  const r = pnlCalc(), detail = S.pnl.detail === 'detail';
+  const body = $('plBody'); if (!body) return;
+  const pu = v => r.U > 0 ? money(v / r.U) : '—';
+  const pc = v => r.nr > 0 ? fmt(v / r.nr * 100, 1) + '%' : '—';
+  const row = (cls, name, v, opts = {}) => `
+    <tr class="${cls}"><td class="ln">${name}</td>
+      <td>${opts.noUnit ? '' : pu(v)}</td>
+      <td class="${opts.color ? (v >= 0 ? 'posv' : 'negv') : ''}">${opts.negShow ? money(-v) : money(v, 0)}</td>
+      <td class="pct">${opts.noPct ? '' : pc(Math.abs(v))}</td></tr>`;
+  let h = '';
+  if (detail) {
+    h += row('', 'Gross revenue', r.gross);
+    h += `<tr class="minor"><td class="ln">Trade &amp; promotions</td><td>${pu(-r.trade)}</td><td>${money(-r.trade, 0)}</td><td class="pct">${pc(r.trade)}</td></tr>`;
+    h += row('sub', 'Net revenue', r.nr);
+    h += `<tr class="minor"><td class="ln">Cost of goods sold</td><td>${pu(-r.cogs)}</td><td>${money(-r.cogs, 0)}</td><td class="pct">${pc(r.cogs)}</td></tr>`;
+    h += row('sub', 'Gross profit', r.gp, { color: true });
+    h += `<tr class="minor"><td class="ln">Freight out</td><td>${pu(-r.fr)}</td><td>${money(-r.fr, 0)}</td><td class="pct">${pc(r.fr)}</td></tr>`;
+    h += `<tr class="minor"><td class="ln">Fulfillment &amp; 3PL</td><td>${pu(-r.fu)}</td><td>${money(-r.fu, 0)}</td><td class="pct">${pc(r.fu)}</td></tr>`;
+    h += `<tr class="minor"><td class="ln">Marketing</td><td>${pu(-r.mk)}</td><td>${money(-r.mk, 0)}</td><td class="pct">${pc(r.mk)}</td></tr>`;
+    h += `<tr class="minor"><td class="ln">Overhead</td><td>${pu(-r.oh)}</td><td>${money(-r.oh, 0)}</td><td class="pct">${pc(r.oh)}</td></tr>`;
+    h += row('sub', 'Total operating costs', -r.opTotal);
+  } else {
+    h += row('', 'Revenue', r.nr);
+    h += `<tr class="minor"><td class="ln">Cost of goods sold</td><td>${pu(-r.cogs)}</td><td>${money(-r.cogs, 0)}</td><td class="pct">${pc(r.cogs)}</td></tr>`;
+    h += row('sub', 'Gross profit', r.gp, { color: true });
+    h += `<tr class="minor"><td class="ln">Operating costs</td><td>${pu(-r.opTotal)}</td><td>${money(-r.opTotal, 0)}</td><td class="pct">${pc(r.opTotal)}</td></tr>`;
+  }
+  h += `<tr class="major"><td class="ln">Operating profit</td>
+    <td class="${r.op >= 0 ? 'posv' : 'negv'}">${pu(r.op)}</td>
+    <td class="${r.op >= 0 ? 'posv' : 'negv'}">${money(r.op, 0)}</td>
+    <td class="pct">${pc(r.op)}</td></tr>`;
+  body.innerHTML = h;
+  const gm = r.nr > 0 ? r.gp / r.nr * 100 : NaN;
+  const om = r.nr > 0 ? r.op / r.nr * 100 : NaN;
+  const omCls = !isFinite(om) ? '' : om >= 10 ? 'good' : om >= 0 ? 'warn' : 'bad';
+  $('plKpis').innerHTML = `
+    <div class="kpi"><div class="k">Gross margin</div><div class="v ${marginClass(gm)}">${fmt(gm,1)}%</div><div class="n">gross profit ÷ revenue</div></div>
+    <div class="kpi"><div class="k">Operating margin</div><div class="v ${omCls}">${fmt(om,1)}%</div><div class="n">operating profit ÷ revenue</div></div>
+    <div class="kpi"><div class="k">Monthly profit</div><div class="v ${r.op >= 0 ? 'good' : 'bad'}">${money(r.op, 0)}</div><div class="n">at ${fmt(r.U,0)} units</div></div>
+    <div class="kpi"><div class="k">Annualized</div><div class="v ${r.op >= 0 ? '' : 'bad'}">${money(r.op * 12, 0)}</div><div class="n">operating profit × 12</div></div>`;
+}
 
 /* ================= LANDED COST ================= */
 const LROWS = [
@@ -534,8 +786,8 @@ function buildLanded(){
 function paintLanded(){ $('landedTot').textContent = money(landedTotal()); }
 $('useLanded').addEventListener('click', () => {
   S.cost = +landedTotal().toFixed(4); S.anchor = 'cost';
-  save(); paintSolver(); paintKpis(); paintScen(); buildBE(false);
-  document.querySelector('#nav button[data-v="calc"]').click();
+  save(); paintSolver(); paintKpis(); paintScen(); paintBE(); paintPnl();
+  switchView('calc');
 });
 
 /* ================= PRICE LADDER ================= */
@@ -618,47 +870,46 @@ function paintLadder(){
 }
 
 /* ================= BREAK-EVEN ================= */
-function buildBE(rebuild = true){
-  if (rebuild) {
-    $('beInputs').innerHTML = `
-      <div class="field"><span class="lab">Fixed costs / period</span>
-        <span class="iwrap"><span class="fix pre">${S.cur}</span>
-        <input class="num pre" id="be-fixed" type="number" step="100" inputmode="decimal" value="${S.be.fixed}" aria-label="Fixed costs"></span></div>
-      <div class="field"><span class="lab">Extra variable / unit</span>
-        <span class="iwrap"><span class="fix pre">${S.cur}</span>
-        <input class="num pre" id="be-var" type="number" step="0.01" inputmode="decimal" value="${S.be.extraVar}" aria-label="Extra variable cost per unit"></span></div>
-      <div class="field"><span class="lab">Unit economics</span>
-        <span class="iwrap"><span class="tier-out" style="width:100%;text-align:left;padding:12px 2px" id="be-unit">—</span></span></div>`;
-    $('be-fixed').addEventListener('input', e => { const v = num(e.target.value); S.be.fixed = isFinite(v) ? v : 0; save(); paintBE(); });
-    $('be-var').addEventListener('input', e => { const v = num(e.target.value); S.be.extraVar = isFinite(v) ? v : 0; save(); paintBE(); });
-  }
+function buildBE(){
+  $('beInputs').innerHTML = `
+    <div class="field"><span class="lab">Fixed costs / period</span>
+      <span class="iwrap"><span class="fix pre">${S.cur}</span>
+      <input class="num pre" id="be-fixed" type="number" step="100" inputmode="decimal" value="${S.be.fixed}" aria-label="Fixed costs"></span></div>
+    <div class="field"><span class="lab">Extra variable / unit</span>
+      <span class="iwrap"><span class="fix pre">${S.cur}</span>
+      <input class="num pre" id="be-var" type="number" step="0.01" inputmode="decimal" value="${S.be.extraVar}" aria-label="Extra variable cost per unit"></span></div>
+    <div class="field"><span class="lab">Target profit / period</span>
+      <span class="iwrap"><span class="fix pre">${S.cur}</span>
+      <input class="num pre" id="be-target" type="number" step="500" inputmode="decimal" value="${S.be.target}" aria-label="Target profit"></span></div>`;
+  $('be-fixed').addEventListener('input', e => { const v = num(e.target.value); S.be.fixed = isFinite(v) ? v : 0; save(); paintBE(); });
+  $('be-var').addEventListener('input', e => { const v = num(e.target.value); S.be.extraVar = isFinite(v) ? v : 0; save(); paintBE(); });
+  $('be-target').addEventListener('input', e => { const v = num(e.target.value); S.be.target = isFinite(v) ? v : 0; save(); paintBE(); });
   paintBE();
 }
 function beCalc(){
   const P = S.price, VC = S.cost + S.be.extraVar, contrib = P - VC;
   const units = contrib > 0 ? S.be.fixed / contrib : NaN;
-  return { P, VC, contrib, units, revenue: units * P };
+  const targetUnits = contrib > 0 ? (S.be.fixed + S.be.target) / contrib : NaN;
+  return { P, VC, contrib, units, targetUnits, revenue: units * P };
 }
 function paintBE(){
-  const b = beCalc();
-  const el = $('be-unit');
-  if (el) el.textContent = `${money(b.P)} price − ${money(b.VC)} variable`;
-  const ok = b.contrib > 0;
-  $('beKpis').innerHTML = `
-    <div class="kpi"><div class="k">Contribution / unit</div><div class="v ${ok ? 'good' : 'bad'}">${money(b.contrib)}</div><div class="n">price − variable cost</div></div>
+  const b = beCalc(), ok = b.contrib > 0;
+  const el = $('beKpis'); if (!el) return;
+  el.innerHTML = `
+    <div class="kpi"><div class="k">Contribution / unit</div><div class="v ${ok ? 'good' : 'bad'}">${money(b.contrib)}</div><div class="n">${money(b.P)} price − ${money(b.VC)} variable</div></div>
     <div class="kpi"><div class="k">Break-even units</div><div class="v">${ok ? fmt(Math.ceil(b.units), 0) : '—'}</div><div class="n">per period</div></div>
     <div class="kpi"><div class="k">Break-even revenue</div><div class="v">${ok ? money(b.revenue, 0) : '—'}</div><div class="n">units × price</div></div>
-    <div class="kpi"><div class="k">Contribution margin</div><div class="v ${ok ? '' : 'bad'}">${fmt(b.contrib / b.P * 100, 1)}%</div><div class="n">of selling price</div></div>`;
+    <div class="kpi"><div class="k">Units for target</div><div class="v ${ok ? 'good' : ''}">${ok ? fmt(Math.ceil(b.targetUnits), 0) : '—'}</div><div class="n">to earn ${money(S.be.target, 0)} profit</div></div>`;
   if (document.querySelector('.view[data-view="be"]').classList.contains('on')) drawBE();
 }
-let beGeo = null;
 function drawBE(){
-  const svg = $('beChart'), b = beCalc();
+  const svg = $('beChart'); if (!svg) return;
+  const b = beCalc();
   const W = svg.clientWidth || 900, H = 280, padL = 62, padR = 20, padT = 16, padB = 34;
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
   if (!(b.contrib > 0) || !(S.be.fixed >= 0)) {
     svg.innerHTML = `<text x="${W/2}" y="${H/2}" text-anchor="middle" fill="var(--soft)" font-size="13">Contribution per unit must be positive to chart break-even.</text>`;
-    beGeo = null; return;
+    return;
   }
   const maxU = Math.max(10, Math.ceil(b.units * 2 / 100) * 100);
   const maxY = Math.max(S.be.fixed + b.VC * maxU, b.P * maxU) * 1.05;
@@ -681,10 +932,9 @@ function drawBE(){
   }
   g += `<text x="${(padL + W - padR) / 2}" y="${H - 2}" text-anchor="middle" font-size="11" fill="${cSoft}">units sold</text>`;
   g += `<line x1="${padL}" y1="${y(0)}" x2="${W - padR}" y2="${y(0)}" stroke="${cAxis}" stroke-width="1.5"/>`;
-  // profit wedge beyond break-even
   const bx = x(b.units), by = y(b.revenue);
   g += `<path d="M ${bx} ${by} L ${x(maxU)} ${y(b.P * maxU)} L ${x(maxU)} ${y(S.be.fixed + b.VC * maxU)} Z" fill="${cGood}" opacity="0.10"/>`;
-  g += `<line x1="${padL}" y1="${y(b.P * 0)}" x2="${W - padR}" y2="${y(b.P * maxU)}" stroke="${cRev}" stroke-width="2" stroke-linecap="round"/>`;
+  g += `<line x1="${padL}" y1="${y(0)}" x2="${W - padR}" y2="${y(b.P * maxU)}" stroke="${cRev}" stroke-width="2" stroke-linecap="round"/>`;
   g += `<line x1="${padL}" y1="${y(S.be.fixed)}" x2="${W - padR}" y2="${y(S.be.fixed + b.VC * maxU)}" stroke="${cCost}" stroke-width="2" stroke-linecap="round"/>`;
   g += `<circle cx="${bx}" cy="${by}" r="5.5" fill="${cGood}" stroke="${cCard}" stroke-width="2"/>`;
   g += `<line x1="${bx}" y1="${by}" x2="${bx}" y2="${y(0)}" stroke="${cGood}" stroke-width="1" stroke-dasharray="3 4"/>`;
@@ -694,7 +944,6 @@ function drawBE(){
   g += `<line id="be-cross" x1="0" y1="${padT}" x2="0" y2="${y(0)}" stroke="${cSoft}" stroke-width="1" opacity="0" pointer-events="none"/>`;
   g += `<rect x="${padL}" y="${padT}" width="${W - padL - padR}" height="${H - padT - padB}" fill="transparent" id="be-hit"/>`;
   svg.innerHTML = g;
-  beGeo = { W, padL, padR, maxU, y, x, b };
   const hit = svg.querySelector('#be-hit'), cross = svg.querySelector('#be-cross'), tip = $('beTip');
   hit.addEventListener('mousemove', ev => {
     const r = svg.getBoundingClientRect();
@@ -736,7 +985,7 @@ function renderProducts(){
       <td><input class="cellinp" data-i="${i}" data-f="cost" type="number" step="0.01" inputmode="decimal" value="${p.cost}" aria-label="Cost"></td>
       <td><input class="cellinp" data-i="${i}" data-f="price" type="number" step="0.01" inputmode="decimal" value="${p.price}" aria-label="Price"></td>
       <td>${money(pr)}</td>
-      <td class="${cls === 'bad' ? '' : ''}" style="font-weight:700;color:var(--${cls || 'ink'})">${fmt(m, 1)}%</td>
+      <td style="font-weight:700;color:var(--${cls || 'ink'})">${fmt(m, 1)}%</td>
       <td>${fmt(k, 1)}%</td>
       <td style="text-align:left">${pill}</td>
       <td><button class="del" data-del="${i}" aria-label="Remove ${p.name}">✕</button></td>
@@ -752,7 +1001,6 @@ $('prodBody').addEventListener('input', e => {
   if (el.dataset.f === 'name') p.name = el.value;
   else { const v = num(el.value); p[el.dataset.f] = isFinite(v) ? v : 0; }
   save();
-  // repaint derived cells without rebuilding inputs (keep focus)
   clearTimeout(renderProducts._t);
   renderProducts._t = setTimeout(() => { if (!document.activeElement.classList.contains('cellinp')) renderProducts(); }, 600);
 });
@@ -781,11 +1029,13 @@ $('csvBtn').addEventListener('click', () => {
 
 /* ---------- boot ---------- */
 function renderAll(){
-  paintSolver(); paintKpis(); paintScen(); paintLanded(); paintLadder(); paintBE();
-  document.querySelectorAll('#solver .fix.pre, #landedRows .fix.pre').forEach(el => el.textContent = S.cur);
+  paintSolver(); paintKpis(); paintScen(); paintLanded(); paintLadder(); paintBE(); paintPnl();
+  document.querySelectorAll('#solver .fix.pre, #landedRows .fix.pre, #beInputs .fix.pre, #plInputs .fix.pre')
+    .forEach(el => el.textContent = S.cur);
   renderProducts();
 }
-buildSolver(); buildLanded(); buildLadder(); buildBE(); renderProducts(); renderAll();
+buildSolver(); buildLanded(); buildLadder(); buildBE(); buildPnl(); renderProducts();
+applyMode(); renderAll();
 </script>
 
 </html>
