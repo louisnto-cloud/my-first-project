@@ -491,6 +491,10 @@ body,button,input,textarea{font-family:'Be Vietnam Pro',-apple-system,BlinkMacSy
 .chip:active{transform:scale(.94)}
 .chip.picked{background:var(--gp);border-color:var(--gl);color:#1B4332}
 .chip.ghost{background:var(--bg);border-color:transparent;color:transparent;box-shadow:none;pointer-events:none}
+.weak-row{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--wh);border-radius:14px;padding:12px 14px;margin-bottom:8px;box-shadow:var(--shd)}
+.weak-info{display:flex;flex-direction:column;gap:2px}
+.weak-cat{font-size:14px;font-weight:700;color:var(--tx)}
+.weak-pct{font-size:12px;color:#C0392B;font-weight:700}
 </style>
 </head>
 <body>
@@ -1287,7 +1291,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v13';
+const APP_VERSION='v14';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1969,6 +1973,20 @@ function renderProgress(){
   const byTier={A:0,B:0,C:0,D:0,E:0};
   const mastByTier={A:0,B:0,C:0,D:0,E:0};
   VOCAB.forEach(v=>{byTier[v.tier]=(byTier[v.tier]||0)+1;if(v.box>=4)(mastByTier[v.tier]=(mastByTier[v.tier]||0)+1);});
+  // weakest categories: enough attempts to matter, ranked by miss rate
+  const catStats={};
+  VOCAB.forEach(v=>{
+    const n=v.correct+v.wrong;
+    if(!n) return;
+    catStats[v.category]=catStats[v.category]||{right:0,wrong:0,ids:[]};
+    catStats[v.category].right+=v.correct;
+    catStats[v.category].wrong+=v.wrong;
+    if(v.wrong>0) catStats[v.category].ids.push(v.id);
+  });
+  const weak=Object.entries(catStats)
+    .filter(([,s])=>s.right+s.wrong>=5&&s.wrong>0)
+    .map(([c,s])=>({c,pct:Math.round(s.wrong/(s.right+s.wrong)*100),ids:s.ids}))
+    .sort((a,b)=>b.pct-a.pct).slice(0,4);
   return `<div class="screen">
   <header class="screen-header"><span></span><span class="screen-title">Progress</span><span></span></header>
   <main class="main-scroll" style="padding:16px">
@@ -1986,6 +2004,11 @@ function renderProgress(){
         <span class="tier-pct">${mas}/${tot}</span>
       </div>`;
     }).join('')}
+    ${weak.length?`<div class="section-label" style="margin-top:20px">Weak Spots</div>
+    ${weak.map(w=>`<div class="weak-row">
+      <div class="weak-info"><span class="weak-cat">${w.c}</span><span class="weak-pct">${w.pct}% missed</span></div>
+      <button class="btn-sec" style="padding:9px 14px;font-size:13px" onclick="startCustomLesson(${JSON.stringify(w.ids).replace(/"/g,'&quot;')})">Practice</button>
+    </div>`).join('')}`:''}
     <div class="section-label" style="margin-top:20px">Daily Goal</div>
     <div class="goal-adjust">
       <button class="goal-btn" onclick="S.dailyGoal=Math.max(10,S.dailyGoal-10);saveState();render()">−</button>
