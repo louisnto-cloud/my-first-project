@@ -96,6 +96,7 @@ export function MassWalkthrough() {
                   ...(moment.say?.flatMap((d) => [t(d.priest), t(d.people)]) ?? []),
                   t(moment.why),
                 ].join(' ')}
+                tone="prayer"
               />
             </div>
             <p className="font-story text-xl leading-relaxed text-ivory">{t(moment.what)}</p>

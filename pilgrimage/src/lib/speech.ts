@@ -443,9 +443,14 @@ export function intoChunks(raw: string, lang: Lang): Chunk[] {
 
 // ─── Speaking engine ─────────────────────────────────────────────────────────
 
+/** How the guide reads: a story is warm and conversational; a prayer is
+ *  slower, more even, with longer silences — reverence, not performance. */
+export type Tone = 'story' | 'prayer';
+
 let queue: Chunk[] = [];
 let activeId: string | null = null;
 let activeLang: Lang = 'en';
+let activeTone: Tone = 'story';
 let chunkIndex = 0; // how far through the current passage we are
 let generation = 0; // bumped on every narrate/stop — cancel() fires the old
                     // utterance's onend/onerror AFTER the new narration has
@@ -498,8 +503,10 @@ function speakNext() {
   // the same way: settle in, hold a steady middle, slow into the ending.
   const isFirst = chunkIndex === 0;
   const isLast = queue.length === 0;
+  const prayer = activeTone === 'prayer';
   // Vietnamese voices read naturally a touch quicker; 0.87 drags for vi.
-  const base = activeLang === 'vi' ? 0.92 : 0.87;
+  // A prayer is slower still — the words are being prayed, not delivered.
+  const base = (activeLang === 'vi' ? 0.92 : 0.87) - (prayer ? 0.05 : 0);
   let rate = base;                    // steady, unhurried middle
   if (isLast) rate = base - 0.05;     // ritardando — let the ending land
   else if (isFirst) rate = base - 0.03; // settle in gently
@@ -510,17 +517,19 @@ function speakNext() {
 
   // Each sentence sits on its own note: a deterministic melody derived from
   // the sentence counter, drifting ±0.02 around the voice's natural register.
+  // Prayers keep a narrower melody — even, litany-like, never theatrical.
+  const dyn = prayer ? 0.55 : 1;
   const seed = chunk.seed ?? 0;
   const melody = (((seed * 2654435761) >>> 0) % 1000) / 1000; // stable 0..1
-  let pitch = 0.985 + melody * 0.04;
+  let pitch = 0.985 + melody * 0.04 * dyn;
 
   // Declination: the thought begins above its note and falls to rest on it.
-  if (chunk.pos === 'open') pitch += 0.045;
-  else if (chunk.pos === 'mid') pitch += 0.015;
-  else if (chunk.pos === 'close') pitch -= 0.035;
+  if (chunk.pos === 'open') pitch += 0.045 * dyn;
+  else if (chunk.pos === 'mid') pitch += 0.015 * dyn;
+  else if (chunk.pos === 'close') pitch -= 0.035 * dyn;
 
-  if (chunk.question) pitch += 0.075; // the rise of asking
-  if (chunk.quoted) pitch += 0.02;    // dialogue sits slightly apart
+  if (chunk.question) pitch += 0.075 * dyn; // the rise of asking
+  if (chunk.quoted) pitch += 0.02;          // dialogue sits slightly apart
 
   // Micro-variance: no two chunks are ever spoken identically.
   pitch += Math.random() * 0.02 - 0.01;
@@ -545,10 +554,12 @@ function speakNext() {
     if (generation !== gen || activeId === null) return;
     // The chunk's own pause (breath vs. completed thought), with a little
     // human variance — identical pauses every time read as a metronome.
+    // A prayer holds its silences longer; the pauses are part of the prayer.
     const jitter = 0.85 + Math.random() * 0.3;
+    const hold = activeTone === 'prayer' ? 1.35 : 1;
     setTimeout(() => {
       if (generation === gen && activeId !== null) speakNext();
-    }, Math.round(chunk.pause * jitter));
+    }, Math.round(chunk.pause * jitter * hold));
   };
 
   u.onerror = () => {
@@ -568,7 +579,12 @@ function speakNext() {
  * Speak a passage aloud. `id` lets the UI show which card is being read.
  * When `cue` is true and sound is on, a soft chime announces the guide first.
  */
-export function narrate(id: string, text: string, lang: Lang, opts?: { cue?: boolean }) {
+export function narrate(
+  id: string,
+  text: string,
+  lang: Lang,
+  opts?: { cue?: boolean; tone?: Tone },
+) {
   const s = synth();
   if (!s) return;
 
@@ -588,6 +604,7 @@ export function narrate(id: string, text: string, lang: Lang, opts?: { cue?: boo
   chunkIndex = 0;
   activeId = id;
   activeLang = lang;
+  activeTone = opts?.tone ?? 'story';
   speakingId = id;
   emit();
 

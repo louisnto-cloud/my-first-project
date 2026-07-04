@@ -78,7 +78,7 @@ export default function ChapelPage() {
                           <p key={i} className="font-story text-lg leading-relaxed text-ivory">{line}</p>
                         ))}
                       </div>
-                      <SpeakerButton id={`prayer-${p.id}-${lang}`} text={(lang === 'vi' ? p.vi : p.en).join(' ')} />
+                      <SpeakerButton id={`prayer-${p.id}-${lang}`} text={(lang === 'vi' ? p.vi : p.en).join(' ')} tone="prayer" />
                     </div>
                     <p className="mt-3 font-story text-base italic text-incense">{t(p.about)}</p>
                   </div>

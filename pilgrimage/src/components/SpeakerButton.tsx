@@ -7,16 +7,18 @@
 import { useEffect, useRef } from 'react';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
-import { narrate, narrationSupported, stopNarration, useNarrator } from '@/lib/speech';
+import { narrate, narrationSupported, stopNarration, useNarrator, type Tone } from '@/lib/speech';
 
 export function SpeakerButton({
   id,
   text,
   autoStart = false,
+  tone,
 }: {
   id: string;
   text: string;
   autoStart?: boolean;
+  tone?: Tone; // 'prayer' reads slower and more evenly, with longer silences
 }) {
   const { t, lang } = useI18n();
   const { speaking } = useNarrator();
@@ -28,19 +30,19 @@ export function SpeakerButton({
   useEffect(() => {
     if (autoStart && narrationSupported() && started.current !== id) {
       started.current = id;
-      narrate(id, text, lang, { cue: true });
+      narrate(id, text, lang, { cue: true, tone });
     }
     // Stop any narration when leaving this card.
     return () => {
       if (started.current === id) stopNarration();
     };
-  }, [id, text, lang, autoStart]);
+  }, [id, text, lang, autoStart, tone]);
 
   if (!narrationSupported()) return null;
 
   return (
     <button
-      onClick={() => (isSpeaking ? stopNarration() : narrate(id, text, lang))}
+      onClick={() => (isSpeaking ? stopNarration() : narrate(id, text, lang, { tone }))}
       aria-label={t(isSpeaking ? UI.narrateStop : UI.narratePlay)}
       aria-pressed={isSpeaking}
       className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-colors ${

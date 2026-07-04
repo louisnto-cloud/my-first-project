@@ -132,7 +132,7 @@ export function RosaryTrainer() {
           </div>
         </div>
         {!done && spoken && (
-          <SpeakerButton id={`rosary-${i}-${lang}`} text={spoken} autoStart={save.narrate} />
+          <SpeakerButton id={`rosary-${i}-${lang}`} text={spoken} autoStart={save.narrate} tone="prayer" />
         )}
       </div>
 
