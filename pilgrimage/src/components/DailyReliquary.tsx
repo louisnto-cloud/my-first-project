@@ -10,6 +10,8 @@ import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { todayISO, updateSave } from '@/lib/storage';
 import { SacredArt } from '@/components/SacredArt';
+import { SpeakerButton } from '@/components/SpeakerButton';
+import { spokenParagraphs, stopNarration } from '@/lib/speech';
 
 function dayOfYear(): number {
   const now = new Date();
@@ -18,7 +20,7 @@ function dayOfYear(): number {
 }
 
 export function DailyReliquary() {
-  const { t, save } = useI18n();
+  const { t, lang, save } = useI18n();
   const [open, setOpen] = useState(false);
   const openedToday = save.reliquary === todayISO();
   const item = RELIQUARY[dayOfYear() % RELIQUARY.length];
@@ -26,6 +28,11 @@ export function DailyReliquary() {
   const openBox = () => {
     setOpen(true);
     updateSave({ reliquary: todayISO() });
+  };
+
+  const close = () => {
+    stopNarration(); // the gift's reading ends when the box closes
+    setOpen(false);
   };
 
   return (
@@ -53,7 +60,7 @@ export function DailyReliquary() {
       </button>
 
       {open && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-lapis/85 px-6 backdrop-blur-sm" onClick={() => setOpen(false)}>
+        <div className="veil-in fixed inset-0 z-50 flex items-center justify-center bg-lapis/85 px-6 backdrop-blur-sm" onClick={close}>
           <div
             className="light-bloom w-full max-w-sm rounded-3xl border border-gold/40 bg-[#141b33] p-6"
             onClick={(e) => e.stopPropagation()}
@@ -64,10 +71,18 @@ export function DailyReliquary() {
               </div>
             )}
             <p className="font-display text-xs uppercase tracking-[0.3em] text-gold">{t(UI.reliquaryTitle)}</p>
-            <h3 className="mt-2 font-display text-xl text-ivory">{t(item.title)}</h3>
+            <div className="mt-2 flex items-start gap-3">
+              <h3 className="min-w-0 flex-1 font-display text-xl text-ivory">{t(item.title)}</h3>
+              {/* the gift is read aloud, like everything else the guide gives */}
+              <SpeakerButton
+                id={`reliquary-${todayISO()}-${lang}`}
+                text={spokenParagraphs(t(item.title), t(item.text))}
+                autoStart={save.narrate}
+              />
+            </div>
             <p className="mt-2 font-story text-xl leading-relaxed text-ivory">{t(item.text)}</p>
             <button
-              onClick={() => setOpen(false)}
+              onClick={close}
               className="mt-5 min-h-[48px] w-full rounded-2xl bg-gold font-ui text-base font-bold text-lapis"
             >
               {t(UI.close)}
