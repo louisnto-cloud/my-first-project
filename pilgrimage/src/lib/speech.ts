@@ -411,14 +411,15 @@ export function intoChunks(raw: string, lang: Lang): Chunk[] {
 
   for (const paragraph of paragraphs) {
     const paragraphStart = chunks.length;
+    // A sentence may end inside quotation marks — '…for you."' still ends it.
     const sentences = paragraph
-      .split(/(?<=[.!?。！？])\s+/)
+      .split(/(?<=[.!?。！？]["”’']?)\s+/)
       .map((s) => s.trim())
       .filter(Boolean);
 
     sentences.forEach((sentence, si) => {
       const lastSentence = si === sentences.length - 1;
-      const question = /[?？]$/.test(sentence);
+      const question = /[?？]["”’']?$/.test(sentence);
       const solemn = /^(amen|alleluia)[.!]?$/i.test(sentence);
       const quoted = /^["“‘']/.test(sentence);
       // A solemn word earns a long silence after it, even mid-paragraph.
