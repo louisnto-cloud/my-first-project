@@ -235,6 +235,10 @@ const ROMAN_REGNAL: Record<string, string> = {
 function tidyPunctuation(text: string): string {
   return (
     text
+      // ── List bullets are visual; a reader never says "dash" ────────────
+      .replace(/^\s*[-•*–]\s+/gm, '')
+      // ── Ranges: "1962–1965" reads "1962 to 1965" ───────────────────────
+      .replace(/(\d)\s?[–—]\s?(\d)/g, '$1 to $2')
       // ── Punctuation → natural pauses ───────────────────────────────────
       // Em/en dashes become a comma — the guide pauses, then continues.
       .replace(/\s[—–]\s/g, ', ')
@@ -312,6 +316,10 @@ export function humanizeText(text: string, lang: Lang): string {
     .replace(/\be\.g\.\s*/g, 'for example, ')
     .replace(/\bi\.e\.\s*/g, 'that is, ')
     .replace(/\bcf\.\s*/gi, 'compare ')
+    // ── Eras: spelled letter by letter, "A. D. 33", "500 B. C." ──────────
+    .replace(/\bAD\b(?=\s*\d)/g, 'A. D.')
+    // no trailing dot — it would collide with the sentence's own full stop
+    .replace(/(?<=\d\s?)BC\b/g, 'B. C')
     .replace(/\betc\.\b/g, 'et cetera')
     .replace(/\s&\s/g, ' and ')
     .replace(/\bvs\.\s*/g, 'versus ');
