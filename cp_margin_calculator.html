@@ -96,18 +96,37 @@
 
   .nav{position:sticky;top:0;z-index:20;background:var(--nav-bg);backdrop-filter:saturate(180%) blur(16px);
     -webkit-backdrop-filter:saturate(180%) blur(16px);
-    border-bottom:1px solid var(--line);margin:18px -22px 28px;padding:10px 22px;display:flex;gap:6px;flex-wrap:wrap}
-  .nav button{border:0;background:transparent;color:var(--soft);font-size:14px;font-weight:600;
-    padding:8px 15px;border-radius:980px;cursor:pointer;transition:.18s}
-  .nav button:hover{color:var(--ink)}
-  .nav button.on{background:var(--ink);color:var(--bg)}
+    border-bottom:1px solid var(--line);margin:18px -22px 28px;padding:10px 22px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .nav button.tab{border:0;background:transparent;color:var(--soft);font-size:14px;font-weight:600;
+    padding:8px 15px;border-radius:980px;cursor:pointer;transition:.18s;
+    display:inline-flex;align-items:center;gap:7px}
+  .nav button.tab svg{width:14px;height:14px;flex:none;opacity:.75}
+  .nav button.tab:hover{color:var(--ink)}
+  .nav button.tab.on{background:var(--ink);color:var(--bg)}
   .nav button.hidden{display:none}
   .nav button:focus-visible,.tool-btn:focus-visible,.modeseg button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .ctx{margin-left:auto;border:1px solid var(--line);background:var(--card);border-radius:980px;
+    padding:7px 14px;font-size:12.5px;font-weight:600;color:var(--soft);cursor:pointer;
+    font-variant-numeric:tabular-nums;transition:.18s;white-space:nowrap}
+  .ctx b{color:var(--ink)} .ctx .m{color:var(--good);font-weight:700}
+  .ctx:hover{border-color:var(--faint)}
+  @media(max-width:680px){
+    .ctx{display:none}
+    .nav{position:fixed;top:auto;bottom:0;left:0;right:0;margin:0;border-bottom:0;border-top:1px solid var(--line);
+      justify-content:space-around;gap:0;flex-wrap:nowrap;
+      padding:7px 4px calc(7px + env(safe-area-inset-bottom))}
+    .nav button.tab{flex:1;min-width:0;flex-direction:column;gap:3px;font-size:9.5px;
+      padding:6px 2px;border-radius:12px;letter-spacing:-.01em}
+    .nav button.tab svg{width:17px;height:17px}
+    .wrap{padding-bottom:140px}
+  }
 
   .view{display:none}
-  .view.on{display:block;animation:fade .22s ease}
-  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-  @media (prefers-reduced-motion: reduce){.view.on{animation:none}.tool-btn:hover{transform:none}}
+  .view.on{display:block}
+  .view.on .panel{animation:rise .32s ease both}
+  .view.on .panel + .panel{animation-delay:.07s}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}}
+  @media (prefers-reduced-motion: reduce){.view.on .panel{animation:none}.tool-btn:hover{transform:none}}
 
   .panel{background:var(--card);border:1px solid var(--line);border-radius:22px;
     padding:26px 28px;box-shadow:var(--shadow);margin:0 0 22px}
@@ -143,10 +162,34 @@
   input.num.neg{color:var(--bad)}
   input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
   input[type=number]{-moz-appearance:textfield;appearance:textfield}
+  input.num.flash{animation:flashBg .7s ease}
+  @keyframes flashBg{0%{background:var(--accent-soft);border-color:var(--accent)}100%{background:var(--amber)}}
+  @media (prefers-reduced-motion: reduce){input.num.flash{animation:none}}
   .solver-hint{margin-top:16px;font-size:12px;color:var(--soft)}
   .solver-hint b{color:var(--ink)}
+  .dirhint{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:12px;
+    color:var(--soft);background:var(--bg);border:1px solid var(--line);border-radius:980px;padding:5px 13px}
+  .dirhint::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+  .dirhint b{color:var(--ink)}
   .err{margin-top:10px;font-size:13px;color:var(--bad);display:none}
   .err.on{display:block}
+
+  /* sliders */
+  .sliderrow{display:flex;align-items:center;gap:12px;margin-top:16px}
+  .sliderrow .end{font-size:11px;font-weight:700;color:var(--faint);font-variant-numeric:tabular-nums;flex:none}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:26px;background:transparent;cursor:grab}
+  input[type=range]:active{cursor:grabbing}
+  input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:3px;
+    background:linear-gradient(90deg,var(--accent) var(--pct,45%),var(--line) var(--pct,45%))}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;
+    background:var(--card);border:2.5px solid var(--accent);margin-top:-7px;
+    box-shadow:0 2px 8px rgba(0,0,0,.18);transition:transform .12s}
+  input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.12)}
+  input[type=range]::-moz-range-track{height:6px;border-radius:3px;background:var(--line)}
+  input[type=range]::-moz-range-progress{height:6px;border-radius:3px;background:var(--accent)}
+  input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;
+    background:var(--card);border:2.5px solid var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.18)}
+  input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
 
   /* margin gauge */
   .gauge{display:flex;flex-direction:column;align-items:center;gap:4px;justify-self:center}
@@ -180,8 +223,10 @@
   tr.clickable:hover td{background:var(--accent-soft)}
   tr.hit td{background:var(--good-bg);font-weight:700;color:var(--good)}
   tr.tot td{font-weight:700;border-top:2px solid var(--line)}
-  .bar-cell{display:flex;align-items:center;justify-content:flex-end}
-  .mbar{height:8px;border-radius:4px;display:inline-block;transition:width .3s ease}
+  .strack{display:block;width:130px;height:8px;background:var(--bg);border:1px solid var(--line);
+    border-radius:4px;overflow:hidden}
+  .sfill{display:block;height:100%;border-radius:3px;transition:width .3s ease}
+  @media (prefers-reduced-motion: reduce){.sfill{transition:none}}
   td.empty{text-align:center;color:var(--soft);padding:22px}
 
   /* P&L statement */
@@ -293,12 +338,13 @@
   </header>
 
   <nav class="nav" id="nav" aria-label="Sections">
-    <button class="on" data-v="calc">Calculator</button>
-    <button data-v="pnl">P&amp;L</button>
-    <button data-v="landed">Landed Cost</button>
-    <button data-v="ladder">Price Ladder</button>
-    <button data-v="be">Break-even</button>
-    <button data-v="prod">Products</button>
+    <button class="tab on" data-v="calc"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="12" height="12" rx="3"/><path d="M5 6.2h6M5 9.4h3.5"/></svg>Calculator</button>
+    <button class="tab" data-v="pnl"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2h5.5L13 5.5V14H4z"/><path d="M6.3 8.2h4M6.3 10.8h4"/></svg>P&amp;L</button>
+    <button class="tab" data-v="landed"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 5.2 8 2.4l5.5 2.8v5.6L8 13.6l-5.5-2.8z"/><path d="M2.5 5.2 8 8l5.5-2.8M8 8v5.6"/></svg>Landed Cost</button>
+    <button class="tab" data-v="ladder"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 13.5h4v-4h4v-4h4"/></svg>Price Ladder</button>
+    <button class="tab" data-v="be"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 13.5h12"/><path d="M3 10.5l3.5-3.5 2.5 2 4-4.5"/></svg>Break-even</button>
+    <button class="tab" data-v="prod"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 2h5.2L14 8.8 8.8 14 2 7.2z"/><circle cx="5.3" cy="5.3" r="1.1"/></svg>Products</button>
+    <button class="ctx" id="ctxChip" title="Jump to calculator"></button>
   </nav>
 
   <!-- ================= CALCULATOR ================= -->
@@ -307,10 +353,18 @@
       <h2>Bidirectional solver</h2>
       <p class="h-sub">Edit any field — the others recompute instantly. The <b>held</b> pin marks which of cost / price stays fixed when you edit a percentage; click the other pin to flip it.</p>
       <div class="solver-top">
-        <div class="solver" id="solver"></div>
+        <div>
+          <div class="solver" id="solver"></div>
+          <div class="sliderrow">
+            <span class="end">0%</span>
+            <input type="range" id="mSlider" min="0" max="90" step="0.5" aria-label="Margin slider">
+            <span class="end">90%</span>
+          </div>
+        </div>
         <div class="gauge" id="gauge">
           <svg width="150" height="150" viewBox="0 0 150 150" role="img" aria-label="Margin gauge">
             <circle cx="75" cy="75" r="62" fill="none" stroke="var(--line)" stroke-width="11"/>
+            <line x1="107.9" y1="120.3" x2="115.0" y2="130.1" stroke="var(--faint)" stroke-width="2" stroke-linecap="round"><title>40% — healthy margin</title></line>
             <circle class="arc" id="gArc" cx="75" cy="75" r="62" fill="none" stroke="var(--good)"
               stroke-width="11" stroke-linecap="round" stroke-dasharray="389.6" stroke-dashoffset="389.6"
               transform="rotate(-90 75 75)"/>
@@ -321,6 +375,8 @@
         </div>
       </div>
       <p class="err" id="solverErr"></p>
+      <br>
+      <span class="dirhint" id="dirHint"></span>
       <p class="solver-hint">Margin is profit ÷ <b>price</b> · markup is profit ÷ <b>cost</b>. A 50% markup = 33.3% margin; margin can never reach 100%.</p>
       <div class="kpis" id="calcKpis"></div>
       <div class="btnrow">
@@ -349,6 +405,11 @@
         <button data-d="detail" class="on">Detailed</button>
       </div>
       <div class="pl-inputs" id="plInputs"></div>
+      <div class="sliderrow" style="margin:2px 0 22px">
+        <span class="end">0</span>
+        <input type="range" id="uSlider" min="0" max="20000" step="100" aria-label="Units sold slider">
+        <span class="end">20k</span>
+      </div>
       <div class="tscroll"><table class="pl">
         <thead><tr><th>Line</th><th>Per unit</th><th>Per month</th><th>% of revenue</th></tr></thead>
         <tbody id="plBody"></tbody>
@@ -509,24 +570,25 @@ $('modeSeg').addEventListener('click', e => {
 function applyMode(){
   document.querySelectorAll('#modeSeg button').forEach(b => b.classList.toggle('on', b.dataset.mode === S.mode));
   const simple = S.mode === 'simple';
-  document.querySelectorAll('#nav button').forEach(b => {
+  document.querySelectorAll('#nav button.tab').forEach(b => {
     b.classList.toggle('hidden', simple && !SIMPLE_VIEWS.includes(b.dataset.v));
   });
-  const active = document.querySelector('#nav button.on');
+  const active = document.querySelector('#nav button.tab.on');
   if (simple && active && !SIMPLE_VIEWS.includes(active.dataset.v)) switchView('calc');
   buildSolver(); paintSolver(); paintKpis();
 }
 
 /* ---------- nav ---------- */
 function switchView(v){
-  document.querySelectorAll('#nav button').forEach(x => x.classList.toggle('on', x.dataset.v === v));
+  document.querySelectorAll('#nav button.tab').forEach(x => x.classList.toggle('on', x.dataset.v === v));
   document.querySelectorAll('.view').forEach(x => x.classList.toggle('on', x.dataset.view === v));
   if (v === 'be') drawBE();
 }
 $('nav').addEventListener('click', e => {
-  const b = e.target.closest('button'); if (!b) return;
+  const b = e.target.closest('button.tab'); if (!b) return;
   switchView(b.dataset.v);
 });
+$('ctxChip').addEventListener('click', () => switchView('calc'));
 
 /* ================= CALCULATOR ================= */
 const FIELDS_ALL = [
@@ -582,22 +644,44 @@ function onSolverEdit(id, raw){
 function setVal(id, v, dec){
   const el = $('in-' + id); if (!el) return;
   if (document.activeElement === el) return;   // don't fight the typer
-  el.value = isFinite(v) ? v.toFixed(dec) : '';
+  const next = isFinite(v) ? v.toFixed(dec) : '';
+  if (el.value !== next) {
+    el.value = next;
+    el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash');
+  }
   el.classList.toggle('neg', isFinite(v) && v < 0);
 }
 function paintSolver(skip){
-  const C = S.cost, P = S.price;
+  const C = S.cost, P = S.price, m = marginOf(C, P);
   if (skip !== 'cost') setVal('cost', C, 2);
   if (skip !== 'price') setVal('price', P, 2);
-  if (skip !== 'margin') setVal('margin', marginOf(C, P), 1);
+  if (skip !== 'margin') setVal('margin', m, 1);
   if (skip !== 'markup') setVal('markup', markupOf(C, P), 1);
   if (skip !== 'profit') setVal('profit', P - C, 2);
   const fc = $('f-cost'), fp = $('f-price');
   if (fc) fc.classList.toggle('anchored', S.anchor === 'cost');
   if (fp) fp.classList.toggle('anchored', S.anchor === 'price');
   document.querySelectorAll('#solver .fix.pre').forEach(el => el.textContent = S.cur);
+  const sl = $('mSlider');
+  if (sl && document.activeElement !== sl) {
+    const pct = isFinite(m) ? Math.max(0, Math.min(90, m)) : 0;
+    sl.value = pct;
+    sl.style.setProperty('--pct', (pct / 90 * 100) + '%');
+  }
+  $('dirHint').innerHTML = S.anchor === 'cost'
+    ? `Percentages, profit &amp; slider move <b>price</b> — cost is held`
+    : `Percentages, profit &amp; slider move <b>cost</b> — price is held`;
+  const mCls = marginClass(m);
+  const mColor = mCls === 'good' ? 'var(--good)' : mCls === 'warn' ? 'var(--warn)' : mCls === 'bad' ? 'var(--bad)' : 'var(--soft)';
+  $('ctxChip').innerHTML = `<b>${money(C)}</b> → <b>${money(P)}</b> · <span class="m" style="color:${mColor}">${fmt(m, 1)}%</span>`;
   paintGauge();
 }
+$('mSlider').addEventListener('input', e => {
+  const v = +e.target.value;
+  e.target.style.setProperty('--pct', (v / 90 * 100) + '%');
+  onSolverEdit('margin', v);
+  setVal('margin', marginOf(S.cost, S.price), 1);   // slider isn't the field — keep it live
+});
 function paintGauge(){
   const m = marginOf(S.cost, S.price);
   const arc = $('gArc'), val = $('gVal'), cap = $('gCap');
@@ -628,11 +712,10 @@ function paintScen(){
   body.innerHTML = tiers.map(m => {
     const sp = C / (1 - m / 100), pr = sp - C, mk = m / (100 - m) * 100;
     const hit = isFinite(cur) && Math.abs(cur - m) < 0.75;
-    const w = Math.round(m * 2.2);
     return `<tr class="clickable ${hit ? 'hit' : ''}" data-m="${m}">
       <td>${m}%</td><td>${fmt(mk,1)}%</td><td>${money(sp)}</td><td>${money(pr)}</td>
-      <td style="text-align:left;padding-left:18px"><span class="bar-cell" style="justify-content:flex-start">
-        <span class="mbar" style="width:${w}px;background:${m >= 40 ? 'var(--good)' : m >= 25 ? 'var(--accent)' : 'var(--warn)'}"></span></span></td>
+      <td style="text-align:left;padding-left:18px"><span class="strack">
+        <span class="sfill" style="width:${m / 60 * 100}%;background:${m >= 40 ? 'var(--good)' : m >= 25 ? 'var(--accent)' : 'var(--warn)'}"></span></span></td>
     </tr>`;
   }).join('');
 }
@@ -714,6 +797,12 @@ function pnlCalc(){
 function paintPnl(){
   const r = pnlCalc(), detail = S.pnl.detail === 'detail';
   const body = $('plBody'); if (!body) return;
+  const us = $('uSlider');
+  if (us && document.activeElement !== us) {
+    const u = Math.max(0, Math.min(20000, S.pnl.units));
+    us.value = u;
+    us.style.setProperty('--pct', (u / 20000 * 100) + '%');
+  }
   const pu = v => r.U > 0 ? money(v / r.U) : '—';
   const pc = v => r.nr > 0 ? fmt(v / r.nr * 100, 1) + '%' : '—';
   const row = (cls, name, v, opts = {}) => `
@@ -753,6 +842,14 @@ function paintPnl(){
     <div class="kpi"><div class="k">Monthly profit</div><div class="v ${r.op >= 0 ? 'good' : 'bad'}">${money(r.op, 0)}</div><div class="n">at ${fmt(r.U,0)} units</div></div>
     <div class="kpi"><div class="k">Annualized</div><div class="v ${r.op >= 0 ? '' : 'bad'}">${money(r.op * 12, 0)}</div><div class="n">operating profit × 12</div></div>`;
 }
+
+$('uSlider').addEventListener('input', e => {
+  const v = +e.target.value;
+  e.target.style.setProperty('--pct', (v / 20000 * 100) + '%');
+  S.pnl.units = v; save();
+  const uInp = $('pl-units'); if (uInp && document.activeElement !== uInp) uInp.value = v;
+  paintPnl();
+});
 
 /* ================= LANDED COST ================= */
 const LROWS = [
