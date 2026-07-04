@@ -542,11 +542,19 @@ function speakNext() {
 
   pitch = Math.min(1.12, Math.max(0.92, pitch));
   rate = Math.min(0.97, Math.max(0.72, rate));
+
+  // Volume shading: a reader leans in at the start, opens up through the
+  // middle, and lets the final words soften rather than stopping at
+  // full loudness. Solemn words are almost whispered.
+  let volume = 1.0;
+  if (isFirst) volume = 0.97;
+  if (isLast) volume = 0.94;
+  if (chunk.solemn) volume = 0.88;
   chunkIndex++;
 
   u.rate   = rate;
   u.pitch  = pitch;
-  u.volume = 1.0;
+  u.volume = volume;
 
   const gen = generation; // this utterance belongs to this narration only
 

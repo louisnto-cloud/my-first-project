@@ -15,6 +15,7 @@ import { RoseWindow } from '@/components/RoseWindow';
 import { RCIAMilestoneTracker } from '@/components/RCIAMilestoneTracker';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { SpeakerButton } from '@/components/SpeakerButton';
+import { narrate } from '@/lib/speech';
 import { updateSave } from '@/lib/storage';
 import { startAmbient, stopAmbient } from '@/lib/ambient';
 
@@ -173,6 +174,13 @@ export default function ChapelPage() {
             />
           </button>
         </div>
+        {/* Hear the guide's voice right away — no need to open a story */}
+        <button
+          onClick={() => narrate('voice-preview', t(UI.obGuideSample), lang, { cue: true })}
+          className="mt-3 w-full rounded-2xl border border-gold/30 px-4 py-3 text-left font-ui text-sm font-semibold text-gold"
+        >
+          {t(UI.narratePreview)}
+        </button>
         <div className="mt-4 flex flex-col gap-2">
           <button
             onClick={() => downloadFile('pilgrimage-save.json', exportJSON())}

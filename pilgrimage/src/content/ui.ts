@@ -180,6 +180,7 @@ export const UI = {
   narrateNote: v('The guide reads each story, prayer, and step aloud as it opens. Tap any speaker to replay, or to listen on your own pace.', 'Người dẫn đường đọc to mỗi câu chuyện, lời kinh và bước đi khi chúng mở ra. Chạm vào biểu tượng loa để nghe lại, hoặc nghe theo nhịp của riêng bạn.'),
   narratePlay: v('Read this aloud', 'Đọc to phần này'),
   narrateStop: v('Stop reading', 'Dừng đọc'),
+  narratePreview: v('Hear the guide', 'Nghe người dẫn đường'),
   narrateNoVoice: v('Your device has no Vietnamese voice installed, so reading may use an English voice.', 'Thiết bị của bạn chưa cài giọng đọc tiếng Việt, nên phần đọc có thể dùng giọng tiếng Anh.'),
   guideReading: v('Reading aloud', 'Đang đọc'),
   guideTapToStop: v('Tap to stop', 'Chạm để dừng'),
