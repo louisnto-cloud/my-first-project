@@ -484,6 +484,13 @@ body,button,input,textarea{font-family:'Be Vietnam Pro',-apple-system,BlinkMacSy
 .goal-val{font-size:16px;font-weight:800;color:var(--tx);min-width:120px;text-align:center}
 .smart-start{margin-top:14px;width:100%;background:rgba(255,255,255,.16);border:1.5px solid rgba(255,255,255,.35);color:#fff;border-radius:14px;padding:13px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit;position:relative;backdrop-filter:blur(4px);transition:transform .12s,background .15s}
 .smart-start:active{transform:scale(.97);background:rgba(255,255,255,.28)}
+.build-answer{min-height:64px;background:var(--wh);border:2px dashed var(--bd);border-radius:16px;padding:10px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0}
+.build-hint{color:var(--tx2);font-size:13px;padding:6px}
+.build-pool{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--wh);border:2px solid var(--bd);border-radius:12px;padding:9px 14px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;color:var(--tx);transition:transform .1s;box-shadow:0 2px 6px rgba(29,58,45,.06)}
+.chip:active{transform:scale(.94)}
+.chip.picked{background:var(--gp);border-color:var(--gl);color:#1B4332}
+.chip.ghost{background:var(--bg);border-color:transparent;color:transparent;box-shadow:none;pointer-events:none}
 </style>
 </head>
 <body>
@@ -1095,6 +1102,10 @@ let S={
   searchQ:'',         // dictionary search query
   xpDay:'',           // which day todayXP belongs to
   typeChecked:null,   // typing quiz: null | true | false
+  buildWords:[],      // sentence builder: shuffled source words
+  buildPicked:[],     // sentence builder: indices picked in order
+  buildChecked:null,  // sentence builder: null | true | false
+  buildSource:'',     // sentence builder: correct sentence
   priceTarget:0,      // price trainer: current price
   priceOpts:[],       // price trainer: options
   priceAnswer:null,   // price trainer: selected option
@@ -1234,7 +1245,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v11';
+const APP_VERSION='v12';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1387,6 +1398,7 @@ function render(){
     case 'summary':     app.innerHTML=renderSummary(); break;
     case 'dict':        app.innerHTML=renderDict(); break;
     case 'type':        app.innerHTML=renderType(); break;
+    case 'build':       app.innerHTML=renderBuild(); break;
     case 'prices':      app.innerHTML=renderPrices(); break;
     default:            app.innerHTML=renderHome();
   }
@@ -1480,6 +1492,7 @@ function startLesson(mode){
   if(mode==='flashcard'){S.activeCard=S.activeLesson[0]; go('flashcard');}
   else if(mode==='quiz'){buildQuiz(); go('quiz');}
   else if(mode==='type'){S.typeChecked=null; go('type');}
+  else if(mode==='build'){buildRound(); go('build');}
   else if(mode==='drill'){S.drillQueue=[...S.activeLesson]; S.drillIdx=0; go('drill');}
 }
 
@@ -1495,6 +1508,7 @@ function renderPractice(){
       <button class="pill${S.practiceMode==='flashcard'?' active':''}" onclick="S.practiceMode='flashcard';render()">Flashcards</button>
       <button class="pill${S.practiceMode==='quiz'?' active':''}" onclick="S.practiceMode='quiz';render()">Quiz</button>
       <button class="pill${S.practiceMode==='type'?' active':''}" onclick="S.practiceMode='type';render()">Type It</button>
+      <button class="pill${S.practiceMode==='build'?' active':''}" onclick="S.practiceMode='build';render()">Build It</button>
       <button class="pill${S.practiceMode==='drill'?' active':''}" onclick="S.practiceMode='drill';render()">Speak</button>
     </div>
     ${S.practiceMode==='quiz'?`<div class="section-label">Direction</div>
@@ -2020,6 +2034,69 @@ function nextType(){
   S.lessonIdx++;
   if(S.lessonIdx>=S.activeLesson.length) go('summary');
   else render();
+}
+
+// ── SENTENCE BUILDER ─────────────────────────────────────────────────────────
+function buildRound(){
+  const v=getV(S.activeLesson[S.lessonIdx]);
+  if(!v) return;
+  // build from the example sentence when it is a manageable length,
+  // otherwise from the term itself
+  const exWords=v.example_vi.split(/\s+/);
+  const src=(exWords.length>=3&&exWords.length<=10)?v.example_vi:v.vi;
+  S.buildSource=src;
+  S.buildWords=shuffle(src.split(/\s+/).map((w,i)=>({w,orig:i})));
+  S.buildPicked=[];
+  S.buildChecked=null;
+}
+function renderBuild(){
+  if(!S.activeLesson.length) return `<div class="screen"><div class="empty-state">No terms available.</div><button class="btn-back" onclick="go('practice')">Back</button></div>`;
+  const v=getV(S.activeLesson[S.lessonIdx]);
+  if(!v){go('practice');return '';}
+  const prog=S.lessonIdx+1,total=S.activeLesson.length;
+  const en=(S.buildSource===v.vi)?v.en:v.example_en;
+  const allPicked=S.buildPicked.length===S.buildWords.length;
+  return `<div class="screen">
+  <div class="lesson-header">
+    <button class="btn-back" onclick="go('practice')">✕</button>
+    <div class="lesson-progress"><div class="lp-bar"><div class="lp-fill" style="width:${Math.round(prog/total*100)}%"></div></div><span>${prog}/${total}</span></div>
+  </div>
+  <main class="main-scroll" style="padding:16px">
+    <div class="quiz-prompt-label">Build the Vietnamese</div>
+    <div class="quiz-prompt" style="font-size:18px">${en}</div>
+    <div class="build-answer">${S.buildPicked.length
+      ?S.buildPicked.map((bi,pos)=>`<button class="chip picked" onclick="unpickWord(${pos})">${S.buildWords[bi].w}</button>`).join('')
+      :'<span class="build-hint">Tap the words below in order</span>'}</div>
+    <div class="build-pool">${S.buildWords.map((o,i)=>S.buildPicked.includes(i)
+      ?`<span class="chip ghost">${o.w}</span>`
+      :`<button class="chip" onclick="pickWord(${i})">${o.w}</button>`).join('')}</div>
+    ${S.buildChecked===null
+      ?`<button class="btn-primary full-w" style="margin-top:18px" ${allPicked?'':'disabled style="margin-top:18px;opacity:.4"'} onclick="checkBuild()">Check</button>`
+      :`<div class="quiz-feedback ${S.buildChecked?'correct-fb':'wrong-fb'}">
+          ${S.buildChecked?'Perfect! +XP':'Not quite. Correct order:'}
+          <div class="quiz-reveal" style="font-size:16px">${S.buildSource}</div>
+          <button class="speak-inline lg" onclick="speak('${S.buildSource.replace(/'/g,"\\'")}')">🔊 Listen</button>
+          <button class="btn-primary" style="margin-top:12px" onclick="nextBuild()">Continue</button>
+        </div>`}
+  </main>
+  </div>`;
+}
+function pickWord(i){if(S.buildChecked!==null)return;S.buildPicked.push(i);render();}
+function unpickWord(pos){if(S.buildChecked!==null)return;S.buildPicked.splice(pos,1);render();}
+function checkBuild(){
+  if(S.buildPicked.length!==S.buildWords.length) return;
+  const got=S.buildPicked.map(i=>S.buildWords[i].w).join(' ');
+  const ok=got===S.buildSource.split(/\s+/).join(' ');
+  S.buildChecked=ok;
+  const v=getV(S.activeLesson[S.lessonIdx]);
+  if(v){v.lastSeen=Date.now();ok?onCorrect(v):onWrong(v);}
+  speak(S.buildSource);
+  render();
+}
+function nextBuild(){
+  S.lessonIdx++;
+  if(S.lessonIdx>=S.activeLesson.length) go('summary');
+  else{buildRound();render();}
 }
 
 // ── PRICE LISTENING TRAINER ──────────────────────────────────────────────────
