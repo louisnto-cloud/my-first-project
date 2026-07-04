@@ -8,7 +8,7 @@ import { sfx } from './sound';
 // listen_mc), so the same composer works against the live server and the
 // in-browser demo. Answers stay server-side; students never receive them.
 
-type QType = 'mc' | 'fill_blank' | 'reorder' | 'listen_mc';
+type QType = 'mc' | 'fill_blank' | 'reorder' | 'listen_mc' | 'picture';
 type Skill = 'grammar' | 'reading' | 'listening' | 'writing';
 
 const TYPES: { k: QType; vi: string; en: string }[] = [
@@ -16,6 +16,7 @@ const TYPES: { k: QType; vi: string; en: string }[] = [
   { k: 'fill_blank', vi: 'Điền từ', en: 'Fill the blank' },
   { k: 'reorder', vi: 'Sắp xếp câu', en: 'Reorder words' },
   { k: 'listen_mc', vi: 'Nghe & chọn', en: 'Listen & pick' },
+  { k: 'picture', vi: 'Viết đoạn (cô chấm)', en: 'Writing (you grade)' },
 ];
 
 const SKILLS: { k: Skill; label: string; emoji: string }[] = [
@@ -62,8 +63,9 @@ export function QuestionBank({ lang }: { lang: 'vi' | 'en' }) {
   const pickType = (t: QType) => {
     sfx.click();
     setType(t);
-    // Listening questions are listening-skill by default; teachers can override.
+    // Sensible skill defaults; teachers can override.
     if (t === 'listen_mc') setSkill('listening');
+    if (t === 'picture') setSkill('writing');
   };
 
   const reset = () => {
@@ -87,6 +89,12 @@ export function QuestionBank({ lang }: { lang: 'vi' | 'en' }) {
       const ch = choices.split(',').map((c) => c.trim()).filter(Boolean);
       if (!sentence.includes('___') || ch.length < 2 || !answer.trim()) return null;
       return { prompt: sentence.trim(), payload: { sentence: sentence.trim(), choices: ch, answer: answer.trim() } };
+    }
+    if (type === 'picture') {
+      // Open writing: no stored answer — submissions go to the grading queue.
+      if (!prompt.trim()) return null;
+      const starters = choices.split(',').map((c) => c.trim()).filter(Boolean);
+      return { prompt: prompt.trim(), payload: { starters } };
     }
     // reorder: teacher types the correct sentence; students get shuffled words.
     const words = sentence.trim().split(/\s+/).filter(Boolean);
@@ -202,6 +210,14 @@ export function QuestionBank({ lang }: { lang: 'vi' | 'en' }) {
             <>
               <input className="input text-sm" placeholder={vi ? 'Gõ câu đúng (vd: I go to school every day)' : 'Type the correct sentence'} value={sentence} onChange={(e) => setSentence(e.target.value)} />
               <p className="text-[11px] font-bold text-slate-400">{vi ? 'Học viên sẽ nhận các từ bị xáo trộn và sắp xếp lại.' : 'Students get the words shuffled and reorder them.'}</p>
+            </>
+          )}
+
+          {type === 'picture' && (
+            <>
+              <input className="input text-sm" placeholder={vi ? 'Đề bài (vd: Write 3 sentences about your family.)' : 'Writing prompt'} value={prompt} onChange={(e) => setPrompt(e.target.value)} />
+              <input className="input text-sm" placeholder={vi ? 'Gợi ý mở đầu, cách nhau dấu phẩy (vd: My family has…, I love…)' : 'Sentence starters, comma-separated (optional)'} value={choices} onChange={(e) => setChoices(e.target.value)} />
+              <p className="text-[11px] font-bold text-slate-400">{vi ? 'Bài viết của học viên sẽ vào Hàng chờ chấm — bạn chấm theo 3 tiêu chí.' : "Students' writing lands in your grading queue — you score it with the rubric."}</p>
             </>
           )}
 

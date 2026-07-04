@@ -1,5 +1,21 @@
 # CHANGELOG.md
 
+## Improvement loop pass 3 — writing & grading close the loop
+
+- FIXED a real demo bug: serialized question types used internal names
+  ('fill'/'order'/'listen') the shared Player doesn't render — listening
+  and word-order questions showed no answer controls in the live demo.
+  Demo now serializes API names (fill_blank/reorder/listen_mc), with a
+  regression test.
+- Writing questions end-to-end in the demo: teachers compose a "Viết
+  đoạn (cô chấm)" prompt with sentence starters; student submissions go
+  pendingReview (no instant score) into the teacher's grading queue;
+  rubric grading (3 criteria × 0-2) produces the final overall. Seeded a
+  waiting submission so the queue is alive on first open.
+- Grading queue shows the student's actual writing (API + demo both
+  return answerText; UI quotes it while grading).
+- 134 tests green.
+
 ## Improvement loop pass 2 — teachers see results
 
 - Teacher assignment cards now show live results: submitted count out of

@@ -30,7 +30,7 @@ interface DClass {
 interface DQuestion {
   id: string;
   skill: 'grammar' | 'reading' | 'listening' | 'writing';
-  type: 'mc' | 'fill' | 'order' | 'listen';
+  type: 'mc' | 'fill' | 'order' | 'listen' | 'write';
   prompt: string;
   payload: Record<string, unknown>;
   unit: string;
@@ -96,7 +96,7 @@ interface DDB {
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v5';
+const KEY = 'etop-demo-db-v6';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -196,6 +196,7 @@ function seed(): DDB {
     { id: 'q6', skill: 'grammar', type: 'mc', unit: 'Unit 2', prompt: 'They ___ playing football.', payload: { options: ['are', 'is', 'am'], answer: 'are' } },
     { id: 'q7', skill: 'reading', type: 'fill', unit: 'Unit 2', prompt: 'An apple a ___ keeps the doctor away.', payload: { sentence: 'An apple a ___ keeps the doctor away.', choices: ['day', 'week', 'year'], answer: 'day' } },
     { id: 'q8', skill: 'listening', type: 'listen', unit: 'Unit 2', prompt: 'Nghe và chọn câu đúng.', payload: { audioText: 'I have two brothers.', options: ['I have two brothers.', 'I have two sisters.', 'I have ten brothers.'], answer: 'I have two brothers.' } },
+    { id: 'q9', skill: 'writing', type: 'write', unit: 'Unit 1', prompt: 'Write 2–3 sentences about your family. / Viết 2–3 câu về gia đình em.', payload: { starters: ['My family has…', 'I love…'] } },
   ];
 
   const db: DDB = {
@@ -204,12 +205,16 @@ function seed(): DDB {
     questions,
     assignments: [
       { id: 'a_demo1', classId: 'up1', title: 'Unit 1 — Ôn tập / Review', status: 'published', questionIds: ['q1', 'q3', 'q4', 'q5'], dueAt: null },
+      { id: 'a_demo2', classId: 'up1', title: 'Viết đoạn — My family', status: 'published', questionIds: ['q9'], dueAt: null },
     ],
     submissions: [
       // A classmate already handed in the seeded assignment, so the teacher
       // view shows live results from the first open.
       { id: 'sub_seed1', assignmentId: 'a_demo1', studentId: 's_UP1739', answers: { q1: 'am', q3: 'Under the table', q4: 'Good morning, teacher!', q5: ['My', 'name', 'is', 'Mai'] }, status: 'graded', overall: 100, pendingReview: false },
       { id: 'sub_seed2', assignmentId: 'a_demo1', studentId: 's_UP1256', answers: { q1: 'is', q3: 'Under the table', q4: 'Good morning, teacher!', q5: ['My', 'name', 'is', 'Mai'] }, status: 'graded', overall: 75, pendingReview: false },
+      // …and a writing submission waiting in the grading queue, so teachers
+      // can try rubric grading immediately.
+      { id: 'sub_seed3', assignmentId: 'a_demo2', studentId: 's_UP1739', answers: { q9: 'My family has four people. I love my mom and my dad. My sister is cute.' }, status: 'submitted', overall: null, pendingReview: true },
     ],
     practice: [
       // A little history so the first student already has a streak + points.
@@ -254,8 +259,10 @@ function teacherName(db: DDB, id: string): string | null {
 }
 
 const norm = (s: unknown) => String(s ?? '').trim().toLowerCase();
-function grade(q: DQuestion, ans: unknown): number {
+// null = open question (writing): goes to the teacher's grading queue.
+function grade(q: DQuestion, ans: unknown): number | null {
   const p = q.payload;
+  if (q.type === 'write') return null;
   if (q.type === 'order') return norm(Array.isArray(ans) ? (ans as string[]).join(' ') : ans) === norm(p.answer) ? 1 : 0;
   return norm(ans) === norm(p.answer) ? 1 : 0;
 }
@@ -270,13 +277,17 @@ function seededShuffle<T>(arr: T[], key: string): T[] {
   }
   return a;
 }
+// Students receive API-shaped type names — the SAME names the real server
+// serializes — so the shared Player renders identically in demo and prod.
+const API_TYPE: Record<DQuestion['type'], string> = { mc: 'mc', fill: 'fill_blank', order: 'reorder', listen: 'listen_mc', write: 'picture' };
 function serializeQuestion(q: DQuestion, seedKey: string) {
-  const out: Record<string, unknown> = { id: q.id, type: q.type, skill: q.skill, prompt: q.prompt, points: 1 };
+  const out: Record<string, unknown> = { id: q.id, type: API_TYPE[q.type], skill: q.skill, prompt: q.prompt, points: 1 };
   const p = q.payload;
   if (q.type === 'mc') out.options = seededShuffle(p.options as string[], seedKey + q.id);
   else if (q.type === 'listen') { out.options = seededShuffle(p.options as string[], seedKey + q.id); out.audioText = p.audioText; out.replayLimit = 2; }
   else if (q.type === 'fill') { out.sentence = p.sentence; out.choices = seededShuffle(p.choices as string[], seedKey + q.id); }
   else if (q.type === 'order') out.words = seededShuffle(p.words as string[], seedKey + q.id + 'w');
+  else if (q.type === 'write') out.starters = (p.starters as string[]) ?? [];
   return out;
 }
 
@@ -400,7 +411,7 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
   // ---------- Teacher authoring: create a question in the bank ----------
   if (rawPath === '/questions' && method === 'POST') {
     if (!(me.role === 'tutor' || isAdmin)) return err(403, 'forbidden');
-    const typeMap: Record<string, DQuestion['type']> = { mc: 'mc', fill_blank: 'fill', reorder: 'order', listen_mc: 'listen' };
+    const typeMap: Record<string, DQuestion['type']> = { mc: 'mc', fill_blank: 'fill', reorder: 'order', listen_mc: 'listen', picture: 'write' };
     const type = typeMap[String(b.type)];
     const payload = (b.payload ?? {}) as Record<string, unknown>;
     if (!type || !b.skill) return err(400, 'invalid_input');
@@ -609,15 +620,19 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     const a = db.assignments.find((x) => x.id === s.assignmentId)!;
     let earned = 0;
     let possible = 0;
+    let pending = false;
     for (const qid of a.questionIds) {
       const qq = db.questions.find((x) => x.id === qid)!;
+      const g = grade(qq, s.answers[qid]);
+      if (g === null) { pending = true; continue; } // writing → teacher grades
       possible++;
-      earned += grade(qq, s.answers[qid]);
+      earned += g;
     }
-    s.status = 'graded';
-    s.overall = possible ? Math.round((earned / possible) * 1000) / 10 : 0;
+    s.status = pending ? 'submitted' : 'graded';
+    s.pendingReview = pending;
+    s.overall = pending ? null : possible ? Math.round((earned / possible) * 1000) / 10 : 0;
     save(db);
-    return ok({ status: 'graded', late: false, autoPoints: earned, autoPossible: possible, overall: s.overall, pendingReview: false });
+    return ok({ status: s.status, late: false, autoPoints: earned, autoPossible: possible, ...(pending ? {} : { overall: s.overall }), pendingReview: pending });
   }
   if (seg[0] === 'assignments' && seg[2] === 'status' && method === 'GET') {
     const a = db.assignments.find((x) => x.id === seg[1]);
@@ -626,7 +641,51 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     return ok(roster.map((u) => ({ studentId: u.id, name: u.name, status: db.submissions.find((s) => s.assignmentId === a.id && s.studentId === u.id)?.status ?? 'not_started' })));
   }
 
-  if (rawPath === '/grading/queue' && method === 'GET') return ok([]); // demo autogrades everything
+  // ---------- Teacher grading queue (writing questions) ----------
+  if (rawPath === '/grading/queue' && method === 'GET') {
+    if (!(me.role === 'tutor' || isAdmin)) return err(403, 'forbidden');
+    return ok(
+      db.submissions
+        .filter((s) => s.pendingReview)
+        .filter((s) => {
+          const a = db.assignments.find((x) => x.id === s.assignmentId);
+          const c = a && db.classes.find((x) => x.id === a.classId);
+          return !!c && (isAdmin || c.teacherId === me.id);
+        })
+        .map((s) => {
+          const a = db.assignments.find((x) => x.id === s.assignmentId)!;
+          const stu = db.users.find((u) => u.id === s.studentId)!;
+          const writeQ = a.questionIds.map((qid) => db.questions.find((x) => x.id === qid)!).find((qq) => qq.type === 'write');
+          return { id: s.id, studentName: stu.name, title: a.title, answerText: String(s.answers[writeQ?.id ?? ''] ?? '') };
+        }),
+    );
+  }
+
+  if (seg[0] === 'submissions' && seg[2] === 'grade' && method === 'POST') {
+    if (!(me.role === 'tutor' || isAdmin)) return err(403, 'forbidden');
+    const s = db.submissions.find((x) => x.id === seg[1]);
+    if (!s) return err(404, 'not_found');
+    const a = db.assignments.find((x) => x.id === s.assignmentId)!;
+    const c = db.classes.find((x) => x.id === a.classId)!;
+    if (!isAdmin && c.teacherId !== me.id) return err(403, 'forbidden');
+
+    // Rubric 0-2 × 3 criteria → each writing question worth 1 point.
+    const r = (b.rubric ?? {}) as Record<string, number>;
+    const rubricFrac = Math.max(0, Math.min(6, (r.accuracy ?? 0) + (r.vocabulary ?? 0) + (r.structure ?? 0))) / 6;
+    let earned = 0;
+    let possible = 0;
+    for (const qid of a.questionIds) {
+      const qq = db.questions.find((x) => x.id === qid)!;
+      possible++;
+      const g = grade(qq, s.answers[qid]);
+      earned += g === null ? rubricFrac : g;
+    }
+    s.overall = possible ? Math.round((earned / possible) * 1000) / 10 : 0;
+    s.status = 'graded';
+    s.pendingReview = false;
+    save(db);
+    return ok({ ok: true, overall: s.overall });
+  }
   if (rawPath === '/summaries/queue' && method === 'GET') return ok([]);
 
   // ---- practice & achievements ----

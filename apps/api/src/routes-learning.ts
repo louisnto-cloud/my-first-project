@@ -484,7 +484,9 @@ export function registerLearningRoutes(app: FastifyInstance, db: DB): void {
     const mine = actor.role === 'tutor' ? 'AND c.teacher_id = $2' : 'AND $2 = $2';
     return many(
       db,
-      `SELECT s.id, s.student_id AS "studentId", u.name AS "studentName", a.title, s.submitted_at AS "submittedAt"
+      `SELECT s.id, s.student_id AS "studentId", u.name AS "studentName", a.title, s.submitted_at AS "submittedAt",
+              (SELECT s.answers->>q.id FROM assignment_questions aq JOIN questions q ON q.id = aq.question_id
+                WHERE aq.assignment_id = a.id AND q.type IN ('dictation', 'picture') ORDER BY aq.position LIMIT 1) AS "answerText"
          FROM submissions s
          JOIN assignments a ON a.id = s.assignment_id
          JOIN classes c ON c.id = a.class_id

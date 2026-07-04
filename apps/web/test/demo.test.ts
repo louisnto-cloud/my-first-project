@@ -185,6 +185,45 @@ describe('demo engine — account lifecycle', () => {
   });
 });
 
+describe('demo engine — writing & the grading queue', () => {
+  it('students receive API-shaped type names so the shared Player renders everything', async () => {
+    const bao = await loginCode('UP1482');
+    const detail = (await call('GET', '/assignments/a_demo1', undefined, bao!)).json as { questions: { type: string }[] };
+    const types = detail.questions.map((x) => x.type).sort();
+    expect(types).toEqual(['listen_mc', 'mc', 'mc', 'reorder']); // not 'listen'/'order'
+  });
+
+  it('a writing submission goes to the teacher, who grades it with the rubric', async () => {
+    const ha = await loginCode('GV0004');
+    // Seeded: one classmate's writing is already waiting.
+    let queue = (await call('GET', '/grading/queue', undefined, ha!)).json as { id: string; studentName: string; answerText: string }[];
+    expect(queue.length).toBe(1);
+    expect(queue[0].answerText).toContain('My family');
+
+    // A second student submits writing → pendingReview, no instant score.
+    const bao = await loginCode('UP1482');
+    const start = (await call('POST', '/assignments/a_demo2/start', {}, bao!)).json as { submissionId: string };
+    await call('PATCH', `/submissions/${start.submissionId}/answers`, { answers: { q9: 'I love my family. We are happy.' } }, bao!);
+    const res = (await call('POST', `/submissions/${start.submissionId}/submit`, {}, bao!)).json as { pendingReview: boolean; overall?: number };
+    expect(res.pendingReview).toBe(true);
+    expect(res.overall).toBeUndefined();
+
+    queue = (await call('GET', '/grading/queue', undefined, ha!)).json as typeof queue;
+    expect(queue.length).toBe(2);
+
+    // Rubric 2+2+2 → 100 for a one-question assignment.
+    const graded = (await call('POST', `/submissions/${start.submissionId}/grade`, { rubric: { accuracy: 2, vocabulary: 2, structure: 2 }, comment: 'Tuyệt vời!' }, ha!)).json as { overall: number };
+    expect(graded.overall).toBe(100);
+    queue = (await call('GET', '/grading/queue', undefined, ha!)).json as typeof queue;
+    expect(queue.length).toBe(1);
+
+    // A teacher who doesn't run Up 1 sees none of it and cannot grade.
+    const ly = await loginCode('GV0006');
+    expect(((await call('GET', '/grading/queue', undefined, ly!)).json as unknown[]).length).toBe(0);
+    expect((await call('POST', `/submissions/${queue[0].id}/grade`, { rubric: { accuracy: 2, vocabulary: 2, structure: 2 } }, ly!)).status).toBe(403);
+  });
+});
+
 describe('demo engine — kiosk (front desk)', () => {
   async function loginEmail(email: string) {
     const r = await call('POST', '/auth/login', { email, password: 'x' });

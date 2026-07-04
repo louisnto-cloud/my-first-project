@@ -450,7 +450,7 @@ function OwnerDash() {
 
 // ---------- Teacher ----------
 function Teacher({ lang, t }: { lang: Lang; t: (k: string) => string }) {
-  const [queue, setQueue] = useState<{ id: string; studentName: string; title: string }[]>([]);
+  const [queue, setQueue] = useState<{ id: string; studentName: string; title: string; answerText?: string }[]>([]);
   const [sums, setSums] = useState<{ id: string; studentName: string; bodyEn: string; bodyVi: string }[]>([]);
   const [grading, setGrading] = useState<string | null>(null);
   const [rubric, setRubric] = useState({ accuracy: 2, vocabulary: 2, structure: 2 });
@@ -476,9 +476,16 @@ function Teacher({ lang, t }: { lang: Lang; t: (k: string) => string }) {
       <div className="card space-y-2">
         <h2 className="font-black text-violet-700">✍️ {t('gradingQueue')} ({queue.length})</h2>
         {queue.map((s) => (
-          <div key={s.id} className="flex items-center justify-between rounded-2xl bg-violet-50 p-3 font-bold">
-            <span>{s.studentName} — {s.title}</span>
-            <button onClick={() => setGrading(s.id)} className="btn-soft text-sm">{t('grade')}</button>
+          <div key={s.id} className="space-y-1.5 rounded-2xl bg-violet-50 p-3">
+            <div className="flex items-center justify-between font-bold">
+              <span>{s.studentName} — {s.title}</span>
+              <button onClick={() => setGrading(s.id)} className="btn-soft text-sm">{t('grade')}</button>
+            </div>
+            {s.answerText && grading === s.id && (
+              <blockquote className="rounded-xl border-l-4 border-violet-300 bg-white p-2.5 text-sm font-semibold italic text-slate-600">
+                “{s.answerText}”
+              </blockquote>
+            )}
           </div>
         ))}
         {grading && (
