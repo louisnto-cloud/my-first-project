@@ -8,7 +8,8 @@ import { Confetti, NavButton, StepCard, XpChip } from './shared';
 interface ReviewQ {
   word: string;
   meaning: string;
-  options: string[]; // word options
+  options: string[]; // word options (choice mode)
+  mode: 'choice' | 'type'; // words answered correctly 2+ times graduate to typed recall
 }
 
 function shuffle<T>(arr: T[]): T[] {
@@ -48,7 +49,10 @@ function buildSession(progress: RWProgress, size = 8): ReviewQ[] {
 
   return shuffle(chosen).map((item) => {
     const distractors = shuffle(pool.filter((p) => p.word !== item.word)).slice(0, 3).map((p) => p.word);
-    return { word: item.word, meaning: item.meaning, options: shuffle([item.word, ...distractors]) };
+    const stat = progress.reviewHistory[item.word];
+    // Recognition first; once a word is answered correctly twice it graduates to typed recall
+    const mode: ReviewQ['mode'] = stat && stat.correct >= 2 && stat.correct > stat.wrong ? 'type' : 'choice';
+    return { word: item.word, meaning: item.meaning, options: shuffle([item.word, ...distractors]), mode };
   });
 }
 
@@ -60,6 +64,7 @@ export default function Review({ progress, apply }: {
   const [session, setSession] = useState<ReviewQ[] | null>(null);
   const [qIndex, setQIndex] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
+  const [typed, setTyped] = useState('');
   const [correctCount, setCorrectCount] = useState(0);
   const [finished, setFinished] = useState(false);
 
@@ -69,6 +74,7 @@ export default function Review({ progress, apply }: {
     setSession(buildSession(progress));
     setQIndex(0);
     setPicked(null);
+    setTyped('');
     setCorrectCount(0);
     setFinished(false);
   };
@@ -78,7 +84,7 @@ export default function Review({ progress, apply }: {
   const choose = (opt: string) => {
     if (!q || picked) return;
     setPicked(opt);
-    const right = opt === q.word;
+    const right = opt.trim().toLowerCase() === q.word.toLowerCase();
     if (right) setCorrectCount((n) => n + 1);
     apply((p) => {
       const prev = p.reviewHistory[q.word] ?? { correct: 0, wrong: 0, last: todayISO() };
@@ -101,6 +107,7 @@ export default function Review({ progress, apply }: {
     } else {
       setQIndex((i) => i + 1);
       setPicked(null);
+      setTyped('');
     }
   };
 
@@ -146,21 +153,50 @@ export default function Review({ progress, apply }: {
           <div className="h-1.5 rounded-full bg-violet-500 transition-all" style={{ width: `${((qIndex + (picked ? 1 : 0)) / session.length) * 100}%` }} />
         </div>
         <div className="py-3 text-center">
-          <div className="text-xs font-bold uppercase tracking-wide text-violet-500">Which word means…</div>
+          <div className="text-xs font-bold uppercase tracking-wide text-violet-500">
+            {q.mode === 'type' ? '⭐ Recall — type the word that means…' : 'Which word means…'}
+          </div>
           <p className="mt-2 text-lg font-black text-gray-800">"{q.meaning}"</p>
           <button onClick={() => tts.speak(q.meaning)} className="mt-1 text-xs text-gray-400 hover:text-gray-600">🔊 hear it</button>
         </div>
-        <div className="grid grid-cols-1 gap-2">
-          {q.options.map((opt) => (
-            <button key={opt} onClick={() => choose(opt)} disabled={!!picked}
-              className={`rounded-xl border-2 px-3 py-2.5 text-sm font-bold transition-all ${
-                picked && opt === q.word ? 'border-green-400 bg-green-100 text-green-800'
-                  : picked === opt ? 'border-red-400 bg-red-100 text-red-800'
-                  : 'border-gray-200 bg-white text-gray-700 hover:border-violet-300'}`}>
-              {opt}
-            </button>
-          ))}
-        </div>
+
+        {q.mode === 'choice' ? (
+          <div className="grid grid-cols-1 gap-2">
+            {q.options.map((opt) => (
+              <button key={opt} onClick={() => choose(opt)} disabled={!!picked}
+                className={`rounded-xl border-2 px-3 py-2.5 text-sm font-bold transition-all ${
+                  picked && opt === q.word ? 'border-green-400 bg-green-100 text-green-800'
+                    : picked === opt ? 'border-red-400 bg-red-100 text-red-800'
+                    : 'border-gray-200 bg-white text-gray-700 hover:border-violet-300'}`}>
+                {opt}
+              </button>
+            ))}
+          </div>
+        ) : (
+          <div className="space-y-2">
+            <input
+              type="text"
+              value={picked ?? typed}
+              disabled={!!picked}
+              onChange={(e) => setTyped(e.target.value)}
+              onKeyDown={(e) => { if (e.key === 'Enter' && typed.trim() && !picked) choose(typed); }}
+              placeholder={`Type the word (${q.word.length} letters, starts with "${q.word[0]}")`}
+              autoCapitalize="none" autoCorrect="off" spellCheck={false}
+              className={`w-full rounded-xl border-2 px-3 py-2.5 text-sm font-bold focus:outline-none ${
+                picked
+                  ? picked.trim().toLowerCase() === q.word.toLowerCase() ? 'border-green-400 bg-green-50' : 'border-red-300 bg-red-50'
+                  : 'border-gray-200 focus:border-violet-400'}`}
+            />
+            {!picked ? (
+              <button onClick={() => typed.trim() && choose(typed)} disabled={!typed.trim()}
+                className="w-full rounded-xl bg-violet-600 py-2.5 text-sm font-black text-white disabled:opacity-40">
+                Check
+              </button>
+            ) : picked.trim().toLowerCase() !== q.word.toLowerCase() && (
+              <p className="text-center text-sm font-bold text-red-600">The word was: {q.word}</p>
+            )}
+          </div>
+        )}
         {picked && (
           <NavButton label={qIndex + 1 >= session.length ? 'Finish Session →' : 'Next Question →'} onClick={next} color="bg-violet-600" />
         )}
