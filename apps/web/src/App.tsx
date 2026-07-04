@@ -51,6 +51,9 @@ function Header({ me, lang, setLang, onLogout }: { me: Me; lang: Lang; setLang: 
           </div>
         </div>
         <div className="flex items-center gap-1.5">
+          <a href="./manual.html" aria-label={lang === 'vi' ? 'Hướng dẫn sử dụng' : 'User guide'} className="surface p-2 text-violet-500 transition hover:border-violet-300">
+            <Icon name="book" size={17} />
+          </a>
           <button
             onClick={() => setLang(lang === 'vi' ? 'en' : 'vi')}
             className="surface flex items-center gap-1 px-2.5 py-1.5 text-xs font-bold text-violet-600 transition hover:border-violet-300"
@@ -75,7 +78,7 @@ interface ClassInfo {
 }
 
 // ---------- Student ----------
-function Student({ lang, t }: { lang: Lang; t: (k: string) => string }) {
+function Student({ lang, t, name }: { lang: Lang; t: (k: string) => string; name: string }) {
   const [view, setView] = useState<'work' | 'practice'>('work');
   const [classes, setClasses] = useState<ClassInfo[]>([]);
   const [ach, setAch] = useState<{ points: number; streak: number } | null>(null);
@@ -118,7 +121,9 @@ function Student({ lang, t }: { lang: Lang; t: (k: string) => string }) {
           <div className="relative flex items-center gap-3">
             <Mascot size={72} mood="wave" className="shrink-0 animate-float drop-shadow" />
             <div className="min-w-0 flex-1">
-              <div className="text-lg font-extrabold">{lang === 'vi' ? 'Chào bạn! Học thôi nào 🎈' : "Hi! Let's learn 🎈"}</div>
+              <div className="text-lg font-extrabold">
+                {lang === 'vi' ? `Chào ${name.split(' ').slice(-1)[0]}! Học thôi nào 🎈` : `Hi ${name.split(' ').slice(-1)[0]}! Let's learn 🎈`}
+              </div>
               <div className="mt-2 flex gap-2">
                 <span className="chip bg-white/20 text-white"><Icon name="star" size={14} /> {ach.points} {t('points')}</span>
                 <span className="chip bg-white/20 text-white"><Icon name="flame" size={14} /> {ach.streak} {t('dayStreak')}</span>
@@ -299,7 +304,47 @@ function Parent({ lang, t }: { lang: Lang; t: (k: string) => string }) {
           <button onClick={send} className="btn-primary">{t('send')}</button>
         </div>
       </div>
+
+      <PasswordCard lang={lang} />
     </div>
+  );
+}
+
+// Password change for email-auth roles (parents, managers).
+function PasswordCard({ lang }: { lang: Lang }) {
+  const vi = lang === 'vi';
+  const [current, setCurrent] = useState('');
+  const [next, setNext] = useState('');
+  const [msg, setMsg] = useState('');
+
+  const change = async () => {
+    setMsg('');
+    try {
+      await api('POST', '/auth/change-password', { current, next });
+      setCurrent('');
+      setNext('');
+      setMsg(vi ? '✅ Đã đổi mật khẩu.' : '✅ Password changed.');
+    } catch (e) {
+      setMsg(
+        e instanceof ApiError && e.status === 403
+          ? vi ? '❌ Mật khẩu hiện tại không đúng.' : '❌ Current password is wrong.'
+          : vi ? '❌ Mật khẩu mới cần từ 6 ký tự.' : '❌ New password needs 6+ characters.',
+      );
+    }
+  };
+
+  return (
+    <details className="card !p-3">
+      <summary className="flex cursor-pointer items-center gap-2 text-sm font-extrabold text-muted">
+        <Icon name="lock" size={16} /> {vi ? 'Đổi mật khẩu' : 'Change password'}
+      </summary>
+      <div className="mt-3 space-y-2">
+        <input className="input text-sm" type="password" placeholder={vi ? 'Mật khẩu hiện tại' : 'Current password'} value={current} onChange={(e) => setCurrent(e.target.value)} />
+        <input className="input text-sm" type="password" placeholder={vi ? 'Mật khẩu mới (từ 6 ký tự)' : 'New password (6+ chars)'} value={next} onChange={(e) => setNext(e.target.value)} />
+        <button onClick={change} disabled={!current || next.length < 6} className="btn-primary w-full text-sm">{vi ? 'Đổi mật khẩu' : 'Change password'}</button>
+        {msg && <div className="text-center text-sm font-bold">{msg}</div>}
+      </div>
+    </details>
   );
 }
 
@@ -670,7 +715,7 @@ export default function App() {
     <div className="min-h-screen pb-10">
       <Header me={me} lang={lang} setLang={setLang} t={t} onLogout={logout} />
       <main key={me.role} className="animate-rise mx-auto max-w-3xl space-y-4 p-4">
-        {me.role === 'student' && <Student lang={lang} t={t} />}
+        {me.role === 'student' && <Student lang={lang} t={t} name={me.name} />}
         {me.role === 'parent' && <Parent lang={lang} t={t} />}
         {['owner', 'academic_director'].includes(me.role) && (
           <>

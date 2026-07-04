@@ -48,6 +48,8 @@ const STR: Record<string, { vi: string; en: string }> = {
   },
   badInvite: { vi: 'Mã mời không đúng hoặc đã được dùng.', en: 'Invite code is wrong or already used.' },
   emailTaken: { vi: 'Email này đã có tài khoản — hãy đăng nhập.', en: 'This email already has an account — sign in instead.' },
+  manual: { vi: 'Hướng dẫn sử dụng', en: 'User guide' },
+  manualBody: { vi: 'Từng bước cho học viên, phụ huynh, giáo viên, quản lý và lễ tân.', en: 'Step-by-step for students, parents, teachers, owners and front desk.' },
 };
 
 function MeshHero() {
@@ -235,8 +237,14 @@ export function Landing({ onDone }: { onDone: () => void }) {
                   { icon: 'users' as IconName, label: t('tabTeacher'), payload: { code: 'GV0001' } },
                   { icon: 'heart' as IconName, label: t('tabStaff'), payload: { email: 'phuhuynh@etop.vn', password: 'x' } },
                   { icon: 'chart' as IconName, label: lang === 'vi' ? 'Chủ TT' : 'Director', payload: { email: 'zhao@etop.vn', password: 'x' } },
-                ].map((x) => (
-                  <button key={x.label} onClick={() => loginWith(x.payload)} disabled={busy} className="surface flex items-center gap-2 px-3 py-2.5 text-sm font-bold text-violet-700 transition hover:border-violet-300 hover:bg-violet-50">
+                  { icon: 'shield' as IconName, label: lang === 'vi' ? 'Lễ tân' : 'Front desk', payload: { email: 'letan@etop.vn', password: 'x' } },
+                ].map((x, i, arr) => (
+                  <button
+                    key={x.label}
+                    onClick={() => loginWith(x.payload)}
+                    disabled={busy}
+                    className={`surface flex items-center gap-2 px-3 py-2.5 text-sm font-bold text-violet-700 transition hover:border-violet-300 hover:bg-violet-50 ${i === arr.length - 1 && arr.length % 2 === 1 ? 'col-span-2 justify-center' : ''}`}
+                  >
                     <span className="text-violet-500"><Icon name={x.icon} size={17} /></span> {x.label}
                   </button>
                 ))}
@@ -258,6 +266,14 @@ export function Landing({ onDone }: { onDone: () => void }) {
 
         {/* Expandables */}
         <div className="w-full space-y-2 pb-6 stagger">
+          <a href="./manual.html" className="surface flex w-full items-center gap-3 bg-white/70 px-4 py-3.5 text-left font-bold text-ink backdrop-blur transition hover:border-violet-300">
+            <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-violet-100 text-violet-600"><Icon name="book" size={17} /></span>
+            <span className="flex-1">
+              {t('manual')}
+              <span className="block text-[11px] font-semibold text-muted">{t('manualBody')}</span>
+            </span>
+            <Icon name="arrowRight" size={17} className="text-slate-300" />
+          </a>
           <Expandable icon="cap" title={t('about')}>
             {t('aboutBody')} <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="font-bold text-violet-600">Facebook ↗</a>
           </Expandable>

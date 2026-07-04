@@ -176,6 +176,56 @@ describe('demo engine — account lifecycle', () => {
   });
 });
 
+describe('demo engine — kiosk (front desk)', () => {
+  async function loginEmail(email: string) {
+    const r = await call('POST', '/auth/login', { email, password: 'x' });
+    return (r.json as { token?: string }).token ?? null;
+  }
+
+  it('front desk sees the roster; students cannot', async () => {
+    const fd = await loginEmail('letan@etop.vn');
+    const roster = (await call('GET', '/attendance/today?siteId=site_nh', undefined, fd!)).json as { id: string; status: string; className: string }[];
+    expect(roster.length).toBe(10);
+    expect(roster.every((r) => r.status === 'expected')).toBe(true);
+
+    const bao = await loginCode('UP1482');
+    expect((await call('GET', '/attendance/today?siteId=site_nh', undefined, bao!)).status).toBe(403);
+  });
+
+  it('offline queue sync is idempotent, and the parent sees the check-in live', async () => {
+    const fd = await loginEmail('letan@etop.vn');
+    const ev = { clientEventId: 'kio_t1', type: 'check_in', studentId: 's_UP1482', at: new Date().toISOString() };
+    await call('POST', '/kiosk/sync', { siteId: 'site_nh', events: [ev] }, fd!);
+    await call('POST', '/kiosk/sync', { siteId: 'site_nh', events: [ev] }, fd!); // replay must not duplicate
+
+    const roster = (await call('GET', '/attendance/today?siteId=site_nh', undefined, fd!)).json as { id: string; status: string }[];
+    expect(roster.find((r) => r.id === 's_UP1482')?.status).toBe('present');
+
+    const parent = await loginEmail('phuhuynh@etop.vn');
+    const digest = (await call('GET', '/parents/digest?childId=s_UP1482', undefined, parent!)).json as { attendance: { checkInAt: string | null } | null };
+    expect(digest.attendance?.checkInAt).toBeTruthy();
+  });
+
+  it('PIN dismissal works; blocked pickup hard-stops; wrong PIN rejected', async () => {
+    const fd = await loginEmail('letan@etop.vn');
+    await call('POST', '/kiosk/sync', { siteId: 'site_nh', events: [{ clientEventId: 'kio_t2', type: 'check_in', studentId: 's_UP1482', at: new Date().toISOString() }] }, fd!);
+    const pickups = (await call('GET', '/students/s_UP1482/pickups', undefined, fd!)).json as { id: string; blocked: boolean }[];
+    const mom = pickups.find((p) => !p.blocked)!;
+    const blocked = pickups.find((p) => p.blocked)!;
+
+    const denied = await call('POST', '/attendance/dismiss', { studentId: 's_UP1482', pickupPersonId: blocked.id, pin: '0000' }, fd!);
+    expect(denied.status).toBe(403);
+    expect((denied.json as { reason: string }).reason).toBe('blocked_pickup');
+
+    const badPin = await call('POST', '/attendance/dismiss', { studentId: 's_UP1482', pickupPersonId: mom.id, pin: '9999' }, fd!);
+    expect((badPin.json as { reason: string }).reason).toBe('pin_invalid');
+
+    expect((await call('POST', '/attendance/dismiss', { studentId: 's_UP1482', pickupPersonId: mom.id, pin: '1234' }, fd!)).status).toBe(200);
+    const roster = (await call('GET', '/attendance/today?siteId=site_nh', undefined, fd!)).json as { id: string; status: string }[];
+    expect(roster.find((r) => r.id === 's_UP1482')?.status).toBe('released');
+  });
+});
+
 describe('demo engine — practice', () => {
   it('practice events add points and a streak', async () => {
     const bao = await loginCode('UP1482');

@@ -1,5 +1,25 @@
 # CHANGELOG.md
 
+## Account lifecycle + manual + kiosk-in-demo pass
+
+- Professional account lifecycle shipped end-to-end (API + tests + demo
+  + UI): owner admin panel creates teachers (auto GV codes) and classes
+  and reassigns teachers; teachers author bank questions in 4 formats
+  and issue single-use PH- parent invites from the roster; parents
+  self-register with an invite and land linked to their child; password
+  change for email-auth roles.
+- Bilingual user manual (`/platform/manual.html`) covering all 5
+  channels — student, parent, teacher, owner, front desk — linked from
+  the landing page and the in-app header. VI/EN toggle, print-friendly.
+- The kiosk is now fully clickable in the browser demo: front-desk demo
+  account (letan@etop.vn), live roster with check-in/dismissal states,
+  idempotent offline-queue sync, PIN-verified pickup with the
+  blocked-person hard stop, and the parent digest reflects check-ins
+  live.
+- UX: invite codes show in a big tap-to-copy banner; student hero
+  greets the child by name; demo quick-login includes front desk.
+- 128 → 131 tests green (16 web demo + 115 API).
+
 ## Completion pass — closing every deferred portal gap
 
 - D19 closed: the 38-lesson curriculum moved to a shared

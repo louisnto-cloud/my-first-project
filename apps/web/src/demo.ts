@@ -65,6 +65,21 @@ interface DJoinReq {
   classId: string;
   studentId: string;
 }
+interface DAttend {
+  studentId: string;
+  date: string;
+  checkInAt: string | null;
+  checkOutAt: string | null;
+  releasedTo: string | null;
+}
+interface DPickup {
+  id: string;
+  studentId: string;
+  name: string;
+  relation: string;
+  pin: string;
+  blocked: boolean;
+}
 interface DDB {
   users: DUser[];
   classes: DClass[];
@@ -74,11 +89,14 @@ interface DDB {
   practice: DPractice[];
   joinRequests: DJoinReq[];
   invites: { code: string; studentId: string; used: boolean }[];
+  attendance: DAttend[];
+  pickups: DPickup[];
+  syncedEvents: string[]; // kiosk idempotency
 }
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v3';
+const KEY = 'etop-demo-db-v4';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -152,7 +170,18 @@ function seed(): DDB {
       code, classIds: [classId], childIds: [],
     })),
     { id: 'p0', role: 'parent', name: 'Phụ huynh (demo)', email: 'phuhuynh@etop.vn', classIds: [], childIds: ['s_UP1482'] },
+    { id: 'fd0', role: 'front_desk', name: 'Lễ tân (demo)', email: 'letan@etop.vn', classIds: [], childIds: [] },
   ];
+
+  // Registered pickup people (kiosk dismissal). Every student has Mom
+  // (PIN 1234); the first also has a blocked person to demo the hard stop.
+  const pickups: DPickup[] = upStudents.flatMap(([name, code]) => {
+    const sid = `s_${code}`;
+    const given = name.split(' ').slice(-1)[0];
+    const list: DPickup[] = [{ id: `pk_${code}_m`, studentId: sid, name: `Mẹ bé ${given}`, relation: 'Mẹ', pin: '1234', blocked: false }];
+    if (code === 'UP1482') list.push({ id: `pk_${code}_x`, studentId: sid, name: 'Người bị cấm đón (demo)', relation: 'Khác', pin: '0000', blocked: true });
+    return list;
+  });
 
   const classes: DClass[] = classDefs.map(([id, teacherId, name, scheduleNote]) => ({
     id, teacherId, name, scheduleNote, level: id.startsWith('up') ? 'a1_movers' : 'pre_a1_starters',
@@ -183,6 +212,9 @@ function seed(): DDB {
     ],
     joinRequests: [],
     invites: [],
+    attendance: [],
+    pickups,
+    syncedEvents: [],
   };
   return db;
 }
@@ -618,7 +650,18 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
   }
   if (rawPath === '/parents/digest' && method === 'GET') {
     if (me.role !== 'parent') return err(403, 'forbidden');
-    return ok({ date: today(), attendance: { checkInAt: new Date().toISOString() }, sessions: [], newAssignments: db.assignments.filter((a) => a.status === 'published').slice(0, 1).map((a) => ({ title: a.title })), graded: [], practice: { points: 14, activities: 1 } });
+    // Live attendance: what the front desk taps shows up here immediately.
+    const childId = (q.childId as string) || me.childIds[0];
+    const att = db.attendance.find((x) => x.studentId === childId && x.date === today()) ?? null;
+    const childPts = db.practice.filter((p) => p.studentId === childId && p.date === today()).reduce((s, p) => s + p.points, 0);
+    return ok({
+      date: today(),
+      attendance: att ? { checkInAt: att.checkInAt, checkOutAt: att.checkOutAt, releasedTo: att.releasedTo } : null,
+      sessions: [],
+      newAssignments: db.assignments.filter((a) => a.status === 'published').slice(0, 1).map((a) => ({ title: a.title })),
+      graded: [],
+      practice: { points: childPts, activities: 1 },
+    });
   }
   if (rawPath === '/parents/summaries' && method === 'GET') return ok([]);
   if (rawPath === '/my/invoices' && method === 'GET') {
@@ -640,7 +683,70 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     return ok({ stalled: [], velocity: db.users.filter((u) => u.role === 'tutor').slice(0, 4).map((u) => ({ tutorName: u.name, avgDelta: 0.12 })) });
   }
   if (seg[0] === 'escalations' && method === 'GET') return ok([]);
-  if (rawPath === '/attendance/today' && method === 'GET') return ok([]);
+
+  // ---------- Kiosk: attendance, offline sync, verified dismissal ----------
+  const staffish = ['front_desk', 'owner', 'academic_director'].includes(me.role);
+  const attendOf = (studentId: string): DAttend => {
+    let a = db.attendance.find((x) => x.studentId === studentId && x.date === today());
+    if (!a) {
+      a = { studentId, date: today(), checkInAt: null, checkOutAt: null, releasedTo: null };
+      db.attendance.push(a);
+    }
+    return a;
+  };
+  const statusOf = (studentId: string): string => {
+    const a = db.attendance.find((x) => x.studentId === studentId && x.date === today());
+    if (a?.checkOutAt) return 'released';
+    if (a?.checkInAt) return 'present';
+    return 'expected';
+  };
+
+  if (rawPath === '/attendance/today' && method === 'GET') {
+    if (!staffish) return err(403, 'forbidden');
+    return ok(
+      db.users.filter((u) => u.role === 'student').map((u) => ({
+        id: u.id,
+        name: u.name,
+        className: db.classes.find((c) => u.classIds.includes(c.id))?.name ?? '—',
+        status: statusOf(u.id),
+      })),
+    );
+  }
+
+  if (rawPath === '/kiosk/sync' && method === 'POST') {
+    if (!staffish) return err(403, 'forbidden');
+    const events = (b.events ?? []) as { clientEventId: string; type: string; studentId: string; at: string; releasedToName?: string }[];
+    for (const ev of events) {
+      if (!ev.clientEventId || db.syncedEvents.includes(ev.clientEventId)) continue; // idempotent
+      db.syncedEvents.push(ev.clientEventId);
+      const a = attendOf(ev.studentId);
+      if (ev.type === 'check_in' && !a.checkInAt) a.checkInAt = ev.at;
+      if (ev.type === 'check_out' && !a.checkOutAt) {
+        a.checkOutAt = ev.at;
+        a.releasedTo = ev.releasedToName ?? 'Người đón (ngoại tuyến)';
+      }
+    }
+    save(db);
+    return ok({ accepted: events.length });
+  }
+
+  if (seg[0] === 'students' && seg[2] === 'pickups' && method === 'GET') {
+    if (!staffish) return err(403, 'forbidden');
+    return ok(db.pickups.filter((p) => p.studentId === seg[1]).map((p) => ({ id: p.id, name: p.name, relation: p.relation, blocked: p.blocked })));
+  }
+
+  if (rawPath === '/attendance/dismiss' && method === 'POST') {
+    if (!staffish) return err(403, 'forbidden');
+    const p = db.pickups.find((x) => x.id === b.pickupPersonId && x.studentId === b.studentId);
+    if (!p) return err(404, 'not_found');
+    if (p.blocked) return { status: 403, json: { error: 'forbidden', reason: 'blocked_pickup' } };
+    if (p.pin !== String(b.pin ?? '')) return { status: 403, json: { error: 'forbidden', reason: 'pin_invalid' } };
+    const a = attendOf(String(b.studentId));
+    a.checkOutAt = String(b.at ?? new Date().toISOString());
+    a.releasedTo = p.name;
+    save(db);
+    return ok({ ok: true });
+  }
 
   // Unknown demo route → empty, so the UI degrades gracefully.
   return ok([]);

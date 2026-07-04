@@ -84,10 +84,11 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
 
   // One-time invite code so the student's parent can self-register an
   // account linked to their child (single-use, no open signup).
+  const [inviteInfo, setInviteInfo] = useState<{ studentName: string; code: string } | null>(null);
   const invite = async (studentId: string, studentName: string) => {
     const res = await api<{ inviteCode: string }>('POST', `/students/${studentId}/invite`);
     copyCode(res.inviteCode);
-    flash(`🎟 Mã mời phụ huynh của ${studentName}: ${res.inviteCode} (đã chép) — phụ huynh nhập mã này ở màn hình đăng nhập, mục Phụ huynh → Đăng ký. Dùng được 1 lần.`);
+    setInviteInfo({ studentName, code: res.inviteCode });
   };
 
   const togglePick = (id: string) => {
@@ -129,6 +130,19 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
       {open && (
         <>
           {msg && <div className="animate-rise rounded-2xl bg-emerald-50 p-2.5 text-center text-sm font-bold text-emerald-700">{msg}</div>}
+
+          {inviteInfo && (
+            <div className="animate-pop space-y-2 rounded-2xl border-2 border-violet-200 bg-violet-50 p-3 text-center">
+              <div className="text-sm font-extrabold text-violet-800">🎟 Mã mời phụ huynh — bé {inviteInfo.studentName}</div>
+              <button onClick={() => copyCode(inviteInfo.code)} className="rounded-xl bg-white px-5 py-2 text-2xl font-black tracking-[0.15em] text-violet-700 shadow-sm transition active:scale-95">
+                {copied === inviteInfo.code ? '✓ đã chép' : inviteInfo.code}
+              </button>
+              <div className="text-[11px] font-bold leading-snug text-violet-500">
+                Gửi mã này cho phụ huynh (Zalo/tin nhắn). Họ vào app → Phụ huynh → “Đăng ký bằng mã mời”. Mã dùng được 1 lần.
+              </div>
+              <button onClick={() => setInviteInfo(null)} className="text-xs font-extrabold text-slate-400">Đóng</button>
+            </div>
+          )}
 
           <div className="flex gap-1 rounded-2xl bg-violet-100 p-1">
             {([['students', `👧 Học viên (${roster.length})`], ['work', `📝 Bài tập (${assignments.length})`]] as const).map(([k, label]) => (
