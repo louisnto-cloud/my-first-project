@@ -7,6 +7,44 @@ import { AudioSettings, Confetti, MarkdownContent, NavButton, PlayButton, StepCa
 
 type LessonStep = 'intro' | 'content' | 'keywords' | 'dictation' | 'exercises' | 'writing' | 'complete';
 
+// ─── Letter Lab: interactive alphabet for the Week 1 phonics lessons ─────────
+const LETTERS: { l: string; example: string }[] = [
+  { l: 'A', example: 'apple' }, { l: 'B', example: 'ball' }, { l: 'C', example: 'cat' },
+  { l: 'D', example: 'dog' }, { l: 'E', example: 'egg' }, { l: 'F', example: 'fish' },
+  { l: 'G', example: 'goat' }, { l: 'H', example: 'hat' }, { l: 'I', example: 'igloo' },
+  { l: 'J', example: 'jump' }, { l: 'K', example: 'kite' }, { l: 'L', example: 'lion' },
+  { l: 'M', example: 'moon' }, { l: 'N', example: 'net' }, { l: 'O', example: 'octopus' },
+  { l: 'P', example: 'pig' }, { l: 'Q', example: 'queen' }, { l: 'R', example: 'run' },
+  { l: 'S', example: 'sun' }, { l: 'T', example: 'top' }, { l: 'U', example: 'umbrella' },
+  { l: 'V', example: 'van' }, { l: 'W', example: 'win' }, { l: 'X', example: 'box' },
+  { l: 'Y', example: 'yes' }, { l: 'Z', example: 'zip' },
+];
+const VOWELS = new Set(['A', 'E', 'I', 'O', 'U']);
+
+function AlphabetBoard({ speak }: { speak: (t: string) => void }) {
+  return (
+    <div className="rounded-xl border border-violet-100 bg-violet-50/50 p-3">
+      <div className="mb-2 text-xs font-black text-violet-600">🔤 Letter Lab — tap any letter to hear it</div>
+      <div className="grid grid-cols-6 gap-1.5 sm:grid-cols-7">
+        {LETTERS.map(({ l, example }) => (
+          <button
+            key={l}
+            onClick={() => speak(l === 'X' ? 'X. X is at the end of box.' : `${l}. ${l} is for ${example}.`)}
+            className={`rounded-lg border-2 py-1.5 text-center transition-all hover:border-violet-400 hover:shadow-sm ${
+              VOWELS.has(l) ? 'border-rose-200 bg-rose-50' : 'border-gray-200 bg-white'}`}
+          >
+            <div className={`text-base font-black leading-tight ${VOWELS.has(l) ? 'text-rose-600' : 'text-gray-700'}`}>
+              {l}<span className="ml-0.5 text-xs font-bold text-gray-400">{l.toLowerCase()}</span>
+            </div>
+            <div className="text-[9px] leading-tight text-gray-400">{example}</div>
+          </button>
+        ))}
+      </div>
+      <div className="mt-2 text-[10px] font-semibold text-rose-400">■ pink letters are vowels</div>
+    </div>
+  );
+}
+
 export default function LessonView({ lesson, progress, apply, onBack }: {
   lesson: Lesson;
   progress: RWProgress;
@@ -130,6 +168,7 @@ export default function LessonView({ lesson, progress, apply, onBack }: {
             <PlayButton tts={tts} text={lesson.content.replace(/[#*|_`]/g, ' ').replace(/\s+/g, ' ')} color={c.bg} label="Listen" />
           </div>
           <MarkdownContent content={lesson.content} onWord={speakWord} />
+          {lesson.monthIndex === 0 && lesson.weekIndex === 0 && <AlphabetBoard speak={(t) => tts.speak(t)} />}
           <p className="text-[11px] text-gray-400">💡 Tap any word to hear it.</p>
           <NavButton label="Next: Key Words →" onClick={nextStep} color={c.bg} />
         </StepCard>
