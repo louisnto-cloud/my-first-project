@@ -233,10 +233,13 @@ export function stopAmbient(): void {
 export function duckAmbient(ducked: boolean): void {
   if (!masterGain || !ctx || !running) return;
   const now = ctx.currentTime;
-  const target = ducked ? 0.04 : 0.2;
+  const target = ducked ? 0.035 : 0.2;
+  // Fast duck, gentle restore: the chant steps aside before the guide's
+  // first words, then swells back only after she has finished.
+  const ramp = ducked ? 0.35 : 2.5;
   masterGain.gain.cancelScheduledValues(now);
   masterGain.gain.setValueAtTime(masterGain.gain.value, now);
-  masterGain.gain.linearRampToValueAtTime(target, now + 2);
+  masterGain.gain.linearRampToValueAtTime(target, now + ramp);
 }
 
 export function ambientRunning(): boolean {

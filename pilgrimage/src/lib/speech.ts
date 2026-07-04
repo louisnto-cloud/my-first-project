@@ -188,6 +188,19 @@ const ORDINAL_WORDS = [
   'twenty-eighth', 'twenty-ninth', 'thirtieth', 'thirty-first',
 ];
 
+// Church Latin, respelled the way an English voice must see it to say it
+// right — an en-GB engine reads "Agnus Dei" as if it were English otherwise.
+const LATIN_RESPELL: [RegExp, string][] = [
+  [/\bKyrie,?\s+eleison\b/gi, 'Kirie-ay, eh-lay-ee-son'],
+  [/\bChriste,?\s+eleison\b/gi, 'Kris-tay, eh-lay-ee-son'],
+  [/\bAgnus Dei\b/gi, 'Ahn-yoos Day-ee'],
+  [/\bGloria in excelsis Deo\b/gi, 'Gloria in ex-chel-sees Day-oh'],
+  [/\bSalve Regina\b/gi, 'Sal-vay Regina'],
+  [/\bAve Maria\b/gi, 'Ah-vay Maria'],
+  [/\bPater noster\b/gi, 'Pah-tair noster'],
+  [/\bDeo gratias\b/gi, 'Day-oh grah-tsee-as'],
+];
+
 // Scripture abbreviations, expanded only when a chapter/verse number follows
 // ("Jn 3:16" → "John 3:16") so ordinary words are never touched.
 const SCRIPTURE_BOOKS: Record<string, string> = {
@@ -248,7 +261,7 @@ function humanizeText(text: string, lang: Lang): string {
     );
   }
 
-  return tidyPunctuation(text
+  let en = text
     // ── Catholic / liturgical abbreviations ──────────────────────────────
     .replace(/\bSt\.\s+/g, 'Saint ')
     .replace(/\bSts\.\s+/g, 'Saints ')
@@ -298,8 +311,10 @@ function humanizeText(text: string, lang: Lang): string {
     .replace(/\bcf\.\s*/gi, 'compare ')
     .replace(/\betc\.\b/g, 'et cetera')
     .replace(/\s&\s/g, ' and ')
-    .replace(/\bvs\.\s*/g, 'versus ')
-  );
+    .replace(/\bvs\.\s*/g, 'versus ');
+
+  for (const [latin, phonetic] of LATIN_RESPELL) en = en.replace(latin, phonetic);
+  return tidyPunctuation(en);
 }
 
 // ─── Chunk splitting ─────────────────────────────────────────────────────────
