@@ -1,22 +1,31 @@
 'use client';
 
 // ─── The guide's voice ────────────────────────────────────────────────────────
-// Four things make on-device TTS feel human rather than robotic:
+// What makes on-device TTS feel human rather than robotic here:
 //
-//   1. Voice selection: we seek out known female voices by name and URI,
-//      and actively penalise every known male voice (−40) so Daniel, Ryan,
-//      Guy, etc. can never win. Siri Female URIs and online/Neural voices
-//      score highest; local synthesised fallbacks score lowest.
+//   1. Voice selection: known female voices win by name and URI (Siri Female
+//      first), every known male voice takes a −40 penalty, online/Neural
+//      voices beat local synthesised ones, and the choice is cached — but
+//      never from a voice list that hasn't loaded yet.
 //
-//   2. Text humanisation: abbreviations are expanded (St. → Saint), acronyms
-//      spelled out (RCIA → R. C. I. A.), ordinals written (1st → first), and
-//      em dashes converted to comma-pauses before the engine ever sees the text.
+//   2. Text humanisation (language-aware): abbreviations expand (St. → Saint),
+//      scripture reads as spoken ("Jn 3:16" → "John chapter 3 verse 16";
+//      "chương 3, câu 16" in Vietnamese), regnal numerals become words
+//      (Benedict XVI → the Sixteenth), Church Latin is respelled phonetically,
+//      CCC citations read "Catechism, paragraph …", ordinals/eras/ranges are
+//      written out, and bullets, citations, and dashes become natural pauses.
 //
-//   3. Clause breathing: long sentences are split at comma/semicolon boundaries
-//      and each clause gets a short 100 ms pause; full-stop sentences get a
-//      380 ms pause. This mimics the rhythm of a real reader.
+//   3. Breathing: sentences split at clause boundaries (110 ms breath),
+//      complete at full stops (380 ms), rest at paragraphs and after "Amen."
+//      (620 ms) — with ±15% jitter so the silences never tick.
 //
-//   4. Unhurried rate (0.87) and natural pitch (1.0 — don't fight the voice).
+//   4. Prosody contour: settle in on the first chunk, hold a steady middle,
+//      slow into the last; questions lift, quotations shift, "Amen" lands
+//      slowly and low. Base rate 0.87 (en) / 0.92 (vi), natural pitch.
+//
+//   5. Engine care: chant ducks fast and restores slow around the voice, the
+//      chime finishes before the first words, Chrome's 15 s stall is nudged
+//      (Chromium only), and speaking waits for the async voice list.
 
 import { useCallback, useEffect, useState } from 'react';
 import type { Lang } from '@/lib/storage';
@@ -477,13 +486,13 @@ function speakNext() {
   const isLast = queue.length === 0;
   // Vietnamese voices read naturally a touch quicker; 0.87 drags for vi.
   const base = activeLang === 'vi' ? 0.92 : 0.87;
-  let rate = base;              // steady, unhurried middle
-  if (isFirst) rate = base - 0.03; // settle in gently
-  if (isLast) rate = base - 0.05;  // ritardando — let the ending land
+  let rate = base;                    // steady, unhurried middle
+  if (isLast) rate = base - 0.05;     // ritardando — let the ending land
+  else if (isFirst) rate = base - 0.03; // settle in gently
   // Readers move a touch quicker through long, flowing clauses and give
   // short ones room to breathe.
   else if (chunk.text.length > 90) rate += 0.015;
-  else if (chunk.text.length < 25 && !isFirst) rate -= 0.015;
+  else if (chunk.text.length < 25) rate -= 0.015;
   let pitch = 1.0;              // the voice's natural register
   if (chunk.question) {
     pitch = 1.04;               // a slight lift for a rising thought
