@@ -260,8 +260,11 @@ function tidyPunctuation(text: string): string {
       // Short parentheticals become comma-asides — a reader lowers their
       // voice and continues; they never say "open bracket".
       .replace(/\s*\(([^()]{1,80})\)\s*/g, ', $1, ')
-      // ── Tidy whitespace ────────────────────────────────────────────────
-      .replace(/\s{2,}/g, ' ')
+      // ── Tidy whitespace — but PRESERVE line breaks: they are the
+      // paragraph boundaries that give the reading its long pauses and
+      // breaths. Only runs of spaces/tabs collapse.
+      .replace(/[^\S\n]{2,}/g, ' ')
+      .replace(/[^\S\n]*\n[^\S\n]*/g, '\n')
       .trim()
   );
 }
@@ -335,6 +338,20 @@ export function humanizeText(text: string, lang: Lang): string {
 
   for (const [latin, phonetic] of LATIN_RESPELL) en = en.replace(latin, phonetic);
   return tidyPunctuation(en);
+}
+
+/**
+ * Assemble spoken text from separate pieces (a heading, a body, a note…).
+ * Each piece becomes its own paragraph — a real pause and a breath between
+ * them — and gets a full stop only if it doesn't already end in punctuation,
+ * so "Who Is God?" never becomes "Who Is God?.".
+ */
+export function spokenParagraphs(...parts: Array<string | false | null | undefined>): string {
+  return parts
+    .map((p) => (p || '').trim())
+    .filter(Boolean)
+    .map((p) => (/[.!?…:;,。！？]$/.test(p) ? p : `${p}.`))
+    .join('\n\n');
 }
 
 // ─── Chunk splitting ─────────────────────────────────────────────────────────

@@ -11,6 +11,7 @@ import { UI } from '@/content/ui';
 import { InteractiveArt } from '@/components/InteractiveArt';
 import { RichText } from '@/components/GlossaryTerm';
 import { SpeakerButton } from '@/components/SpeakerButton';
+import { spokenParagraphs } from '@/lib/speech';
 
 export function StoryCardView({ card, onDone }: { card: StoryCardT; onDone: () => void }) {
   const { t, lang, save } = useI18n();
@@ -19,13 +20,14 @@ export function StoryCardView({ card, onDone }: { card: StoryCardT; onDone: () =
 
   const branch = card.branch;
 
-  // The full spoken form of the card: the story, then the verse in plain words.
-  const spoken = [
+  // The full spoken form of the card: the story, then the verse, its plain
+  // rendering, and the bridge — each as its own breath-separated thought.
+  const spoken = spokenParagraphs(
     t(card.text),
-    card.scripture ? `${t(card.scripture.verse)}. ${t(card.scripture.plain)}` : '',
-  ]
-    .filter(Boolean)
-    .join(' ');
+    card.scripture && t(card.scripture.verse),
+    card.scripture && t(card.scripture.plain),
+    card.scripture?.bridge && t(card.scripture.bridge),
+  );
 
   return (
     <div className="page-in flex h-full flex-col" key={card.id}>

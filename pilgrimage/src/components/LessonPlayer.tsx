@@ -12,7 +12,7 @@ import type { Lang } from '@/lib/storage';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { getSave, lightCandle, todayISO, updateSave } from '@/lib/storage';
-import { narrate, stopNarration } from '@/lib/speech';
+import { narrate, spokenParagraphs, stopNarration } from '@/lib/speech';
 import { SacredArt } from '@/components/SacredArt';
 import { InteractiveArt } from '@/components/InteractiveArt';
 import { StoryCardView } from '@/components/StoryCard';
@@ -122,14 +122,20 @@ function treasureSpoken(lesson: Lesson, lang: Lang, t: (s: L) => string): string
   if (tr.kind === 'prayer') {
     const prayer = prayerById(tr.prayerId);
     if (!prayer) return '';
-    return [t(prayer.name), ...(lang === 'vi' ? prayer.vi : prayer.en), t(tr.note)].join('. ');
+    // Name, then the prayer itself (its lines flowing as one text), then the
+    // note — each with a real pause and a breath between them.
+    return spokenParagraphs(
+      t(prayer.name),
+      (lang === 'vi' ? prayer.vi : prayer.en).join(' '),
+      t(tr.note),
+    );
   }
   if (tr.kind === 'word') {
     const entry = glossaryById(tr.termId);
     if (!entry) return '';
-    return [lang === 'vi' ? entry.vi : entry.term, t(entry.plain), t(tr.note)].join('. ');
+    return spokenParagraphs(lang === 'vi' ? entry.vi : entry.term, t(entry.plain), t(tr.note));
   }
-  return [t(tr.title), t(tr.note)].join('. ');
+  return spokenParagraphs(t(tr.title), t(tr.note));
 }
 
 export function LessonPlayer({ world, lesson }: { world: World; lesson: Lesson }) {
@@ -163,7 +169,9 @@ export function LessonPlayer({ world, lesson }: { world: World; lesson: Lesson }
     let text = '';
     if (step === 0) {
       id = `door-${lesson.id}-${lang}`;
-      text = [t(world.church), t(lesson.title), t(lesson.door.line)].join('. ');
+      // Where we are, what today's step is called, then the door line —
+      // spoken as three thoughts, not one run-on sentence.
+      text = spokenParagraphs(t(world.church), t(lesson.title), t(lesson.door.line));
     } else if (step === treasureStep) {
       id = `treasure-${lesson.id}-${lang}`;
       text = treasureSpoken(lesson, lang, t);
