@@ -24,6 +24,13 @@ export interface RWProgress {
   reviewSessions: number;
   badges: string[];
   xpKeys: string[]; // one-time XP award keys — prevents re-earning by redoing the same answers
+  activityLog: Record<string, DayActivity>; // ISO date → what was done that day (powers daily goals)
+}
+
+export interface DayActivity {
+  lessons: number;
+  reviews: number;
+  stories: number;
 }
 
 export function emptyProgress(): RWProgress {
@@ -40,6 +47,24 @@ export function emptyProgress(): RWProgress {
     reviewSessions: 0,
     badges: [],
     xpKeys: [],
+    activityLog: {},
+  };
+}
+
+/** Record completed lessons/reviews/stories in today's activity log by diffing two progress states. */
+export function logActivity(prev: RWProgress, next: RWProgress): RWProgress {
+  const lessons = Math.max(0, next.completedLessons.length - prev.completedLessons.length);
+  const stories = Math.max(0, next.completedStories.length - prev.completedStories.length);
+  const reviews = Math.max(0, next.reviewSessions - prev.reviewSessions);
+  if (lessons + stories + reviews === 0) return next;
+  const day = todayISO();
+  const cur = next.activityLog[day] ?? { lessons: 0, reviews: 0, stories: 0 };
+  return {
+    ...next,
+    activityLog: {
+      ...next.activityLog,
+      [day]: { lessons: cur.lessons + lessons, reviews: cur.reviews + reviews, stories: cur.stories + stories },
+    },
   };
 }
 

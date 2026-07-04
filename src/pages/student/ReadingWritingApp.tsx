@@ -4,7 +4,7 @@ import type { Lesson, Month } from '../../data/curriculum';
 import { useApp } from '../../store';
 import { LIBRARY } from '../../data/library';
 import {
-  BADGES, isMonthUnlocked, levelFor, loadProgress, resetProgress, saveProgress, streakOf, touchToday, withBadges,
+  BADGES, isMonthUnlocked, levelFor, loadProgress, logActivity, resetProgress, saveProgress, streakOf, todayISO, touchToday, withBadges,
   type Badge, type RWProgress,
 } from './rw/engine';
 import LessonView from './rw/LessonView';
@@ -21,10 +21,10 @@ export default function ReadingWritingApp() {
   const [activeLesson, setActiveLesson] = useState<Lesson | null>(null);
   const [newBadges, setNewBadges] = useState<Badge[]>([]);
 
-  /** Single funnel for all progress mutations: streak day + badge checks happen here. */
+  /** Single funnel for all progress mutations: streak day, daily-goal log, and badge checks happen here. */
   const apply = (fn: (p: RWProgress) => RWProgress) => {
     setProgress((prev) => {
-      const { progress: next, earned } = withBadges(touchToday(fn(prev)));
+      const { progress: next, earned } = withBadges(touchToday(logActivity(prev, fn(prev))));
       saveProgress(next);
       if (earned.length) setNewBadges((b) => [...b, ...earned]);
       return next;
@@ -127,6 +127,8 @@ function LearnHome({ progress, pct, doneCount, totalLessons, onMonth, onLesson }
         </div>
       </div>
 
+      <DailyGoals progress={progress} hasLessonsLeft={!!nextLesson} />
+
       {nextLesson ? (
         <button onClick={() => onLesson(nextLesson)}
           className="flex w-full items-center gap-4 rounded-2xl border-2 border-violet-200 bg-white p-4 text-left shadow-sm transition-all hover:border-violet-400 hover:shadow-md">
@@ -172,6 +174,38 @@ function LearnHome({ progress, pct, doneCount, totalLessons, onMonth, onLesson }
           })}
         </div>
       </div>
+    </div>
+  );
+}
+
+// ─── Daily goals ──────────────────────────────────────────────────────────────
+function DailyGoals({ progress, hasLessonsLeft }: { progress: RWProgress; hasLessonsLeft: boolean }) {
+  const today = progress.activityLog[todayISO()] ?? { lessons: 0, reviews: 0, stories: 0 };
+  const goals = [
+    ...(hasLessonsLeft ? [{ emoji: '📚', label: 'Complete 1 lesson', done: today.lessons >= 1 }] : []),
+    { emoji: '🔁', label: 'Do 1 review session', done: today.reviews >= 1 },
+    { emoji: '📖', label: 'Read 1 story (bonus)', done: today.stories >= 1 },
+  ];
+  const required = goals.filter((g) => !g.label.includes('bonus'));
+  const allDone = required.every((g) => g.done);
+
+  return (
+    <div className={`rounded-2xl border-2 p-4 ${allDone ? 'border-green-200 bg-green-50' : 'border-gray-200 bg-white'}`}>
+      <div className="mb-2 flex items-center justify-between">
+        <h3 className="text-sm font-black text-gray-700">🎯 Today's Goals</h3>
+        {allDone && <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-black text-green-700">Streak safe! 🔥</span>}
+      </div>
+      <div className="space-y-1.5">
+        {goals.map((g) => (
+          <div key={g.label} className="flex items-center gap-2 text-sm">
+            <span className={`flex h-5 w-5 items-center justify-center rounded-full text-[11px] font-black ${g.done ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-400'}`}>
+              {g.done ? '✓' : ''}
+            </span>
+            <span className={`font-semibold ${g.done ? 'text-gray-400 line-through' : 'text-gray-700'}`}>{g.emoji} {g.label}</span>
+          </div>
+        ))}
+      </div>
+      {!allDone && <p className="mt-2 text-[11px] text-gray-400">Finish the first two to keep your streak growing — a little every day beats a lot once a week.</p>}
     </div>
   );
 }
