@@ -210,6 +210,21 @@
   .kpi .v.good{color:var(--good)} .kpi .v.warn{color:var(--warn)} .kpi .v.bad{color:var(--bad)}
   .kpi .n{font-size:11px;color:var(--soft);margin-top:3px}
 
+  /* pinned comparison */
+  .pinbar{margin-top:18px;border:1.5px dashed var(--line);border-radius:16px;padding:16px 18px;background:var(--bg)}
+  .pinbar .ph{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+  .pinbar .pt{font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--soft)}
+  .pinbar .pbtns{display:flex;gap:8px}
+  .pinbar .pbtn{border:1px solid var(--line);background:var(--card);border-radius:980px;padding:5px 12px;
+    font-size:12px;font-weight:600;color:var(--soft);cursor:pointer;transition:.15s}
+  .pinbar .pbtn:hover{color:var(--ink);border-color:var(--faint)}
+  .pingrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+  .pincell .pk{font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--soft)}
+  .pincell .pv{font-size:15px;font-weight:600;margin-top:4px;font-variant-numeric:tabular-nums;color:var(--soft)}
+  .pincell .pv b{color:var(--ink);font-size:17px}
+  .delta{display:inline-block;margin-left:7px;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+  .delta.up{color:var(--good)} .delta.down{color:var(--bad)} .delta.flat{color:var(--faint)}
+
   /* tables */
   .tscroll{overflow-x:auto;margin:0 -4px;padding:0 4px}
   table{width:100%;border-collapse:collapse;font-size:14px}
@@ -394,7 +409,9 @@
       <span class="dirhint" id="dirHint"></span>
       <p class="solver-hint">Margin is profit ÷ <b>price</b> · markup is profit ÷ <b>cost</b>. A 50% markup = 33.3% margin; margin can never reach 100%.</p>
       <div class="kpis" id="calcKpis" aria-live="polite"></div>
+      <div class="pinbar" id="pinBar" style="display:none"></div>
       <div class="btnrow">
+        <button class="action subtle" id="pinBtn">Pin scenario</button>
         <button class="action subtle" id="copyBtn">Copy summary</button>
         <span class="copied" id="copiedMsg">Copied ✓</span>
       </div>
@@ -524,7 +541,7 @@
 'use strict';
 /* ---------- state ---------- */
 const DEF = {
-  mode: 'adv', cost: 12.50, price: 20.83, anchor: 'cost', cur: '$', theme: '',
+  mode: 'adv', cost: 12.50, price: 20.83, anchor: 'cost', cur: '$', theme: '', pinned: null,
   landed: { base: 12.50, freight: 0.85, dutyPct: 6.5, pack: 0.40, other: 0.15 },
   ladder: { dir: 'fwd', brand: 35, dist: 28, retail: 38, shelf: 49.99 },
   be: { fixed: 25000, extraVar: 0, target: 10000 },
@@ -693,6 +710,7 @@ function paintSolver(skip){
   const mColor = mCls === 'good' ? 'var(--good)' : mCls === 'warn' ? 'var(--warn)' : mCls === 'bad' ? 'var(--bad)' : 'var(--soft)';
   $('ctxChip').innerHTML = `<b>${money(C)}</b> → <b>${money(P)}</b> · <span class="m" style="color:${mColor}">${fmt(m, 1)}%</span>`;
   paintGauge();
+  paintPinned();
 }
 $('mSlider').addEventListener('input', e => {
   const v = +e.target.value;
@@ -742,6 +760,44 @@ $('scenBody').addEventListener('click', e => {
   const m = +tr.dataset.m;
   S.price = S.cost / (1 - m / 100); S.anchor = 'cost';
   save(); paintSolver(); paintKpis(); paintScen(); paintBE(); paintPnl();
+});
+function paintPinned(){
+  const bar = $('pinBar'); if (!bar) return;
+  const pin = S.pinned;
+  if (!pin) { bar.style.display = 'none'; bar.innerHTML = ''; return; }
+  bar.style.display = 'block';
+  const dm = (cur, base, unit, invert) => {
+    const d = cur - base;
+    const cls = Math.abs(d) < 0.005 ? 'flat' : (invert ? d < 0 : d > 0) ? 'up' : 'down';
+    const sign = d > 0 ? '+' : d < 0 ? '−' : '±';
+    const mag = unit === 'pt' ? fmt(Math.abs(d), 1) + ' pt' : S.cur + fmt(Math.abs(d));
+    return `<span class="delta ${cls}">${sign}${mag}</span>`;
+  };
+  const pM = marginOf(pin.cost, pin.price), cM = marginOf(S.cost, S.price);
+  const cell = (k, base, cur, deltaHtml) => `
+    <div class="pincell"><div class="pk">${k}</div>
+      <div class="pv">${base} → <b>${cur}</b>${deltaHtml}</div></div>`;
+  bar.innerHTML = `
+    <div class="ph"><span class="pt">Pinned scenario vs now</span>
+      <span class="pbtns">
+        <button class="pbtn" id="restorePin">Restore pinned</button>
+        <button class="pbtn" id="unpin">Unpin</button>
+      </span></div>
+    <div class="pingrid">
+      ${cell('Cost', money(pin.cost), money(S.cost), dm(S.cost, pin.cost, '$', true))}
+      ${cell('Price', money(pin.price), money(S.price), dm(S.price, pin.price, '$'))}
+      ${cell('Margin', fmt(pM, 1) + '%', fmt(cM, 1) + '%', dm(cM, pM, 'pt'))}
+      ${cell('Profit / unit', money(pin.price - pin.cost), money(S.price - S.cost), dm(S.price - S.cost, pin.price - pin.cost, '$'))}
+    </div>`;
+  $('unpin').addEventListener('click', () => { S.pinned = null; save(); paintPinned(); });
+  $('restorePin').addEventListener('click', () => {
+    S.cost = pin.cost; S.price = pin.price;
+    save(); paintSolver(); paintKpis(); paintScen(); paintBE(); paintPnl(); paintPinned();
+  });
+}
+$('pinBtn').addEventListener('click', () => {
+  S.pinned = { cost: S.cost, price: S.price };
+  save(); paintPinned();
 });
 $('copyBtn').addEventListener('click', async () => {
   const m = marginOf(S.cost, S.price), k = markupOf(S.cost, S.price);
