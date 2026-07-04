@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Organika · CP Margin Calculator</title>
+<style>
+  :root {
+    --ink: #1d1d1f;
+    --soft: #6e6e73;
+    --line: #e6e8ec;
+    --bg: #fbfbfd;
+    --card: #ffffff;
+    --accent: #0a84ff;
+    --accent2: #30b0c7;
+    --good: #1e9e57;
+    --warn: #f59e0b;
+    --bad: #d83a4b;
+    --amber: #fff7cc;
+    --green-bg: #e8f7ee;
+    --shadow: 0 1px 3px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.05);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 22px 80px; }
+
+  /* Header */
+  header { padding: 46px 0 32px; }
+  .eyebrow { color: var(--accent); font-weight: 700; letter-spacing: .4px; font-size: 13px; text-transform: uppercase; }
+  h1 { font-size: 42px; line-height: 1.05; font-weight: 700; margin: 6px 0 4px; letter-spacing: -.02em; }
+  .sub { color: var(--soft); font-size: 17px; margin: 0 0 0; }
+
+  /* Mode tabs */
+  .modes { display: flex; gap: 0; background: var(--line); border-radius: 14px; padding: 4px; margin: 28px 0 0; width: fit-content; }
+  .mode-btn {
+    border: none; background: transparent; padding: 10px 22px; border-radius: 10px;
+    font-size: 14px; font-weight: 600; color: var(--soft); cursor: pointer; transition: .15s;
+    white-space: nowrap;
+  }
+  .mode-btn.on { background: var(--card); color: var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+  .mode-btn:hover:not(.on) { color: var(--ink); }
+
+  /* Description strip */
+  .mode-desc { color: var(--soft); font-size: 13px; margin: 10px 0 26px; min-height: 18px; }
+
+  /* Main calculator card */
+  .calc-card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 22px; padding: 30px; box-shadow: var(--shadow);
+    margin-bottom: 22px;
+  }
+
+  /* Input grid */
+  .inputs { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; align-items: end; }
+  @media (max-width: 620px) { .inputs { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 400px) { .inputs { grid-template-columns: 1fr; } }
+
+  .field { display: flex; flex-direction: column; gap: 7px; }
+  .field label {
+    font-size: 11px; font-weight: 700; letter-spacing: .5px;
+    text-transform: uppercase; color: var(--soft);
+  }
+  .field label .badge {
+    display: inline-block; margin-left: 6px; background: var(--accent);
+    color: #fff; font-size: 9px; padding: 2px 6px; border-radius: 4px; letter-spacing: .3px;
+  }
+  .field label .badge.output { background: var(--good); }
+
+  .input-wrap { position: relative; display: flex; align-items: center; }
+  .input-wrap .prefix, .input-wrap .suffix {
+    position: absolute; font-size: 15px; font-weight: 600; color: var(--soft);
+    user-select: none; pointer-events: none;
+  }
+  .input-wrap .prefix { left: 14px; }
+  .input-wrap .suffix { right: 14px; }
+
+  input[type="number"] {
+    width: 100%; border: 1.5px solid var(--line); border-radius: 12px;
+    padding: 13px 16px; font: inherit; font-size: 16px; font-weight: 600;
+    background: var(--amber); color: var(--ink);
+    appearance: none; -moz-appearance: textfield;
+    transition: border-color .15s, background .15s;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+  input[type="number"]:focus { outline: none; border-color: var(--accent); background: #fff; }
+  input[type="number"].has-prefix { padding-left: 30px; }
+  input[type="number"].has-suffix { padding-right: 34px; }
+  input[type="number"].result-field {
+    background: var(--green-bg); border-color: #b2dfca; color: var(--good);
+    font-size: 18px; cursor: default;
+  }
+  input[type="number"].result-field:focus { border-color: #b2dfca; background: var(--green-bg); }
+
+  /* Arrow connector */
+  .arrow-col {
+    display: flex; align-items: center; justify-content: center;
+    padding-bottom: 2px; font-size: 22px; color: var(--line);
+  }
+
+  /* Results bar */
+  .results-bar {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px; margin-top: 24px;
+  }
+  .kpi {
+    background: var(--bg); border: 1px solid var(--line);
+    border-radius: 16px; padding: 16px 18px 14px;
+  }
+  .kpi .k { font-size: 11px; font-weight: 700; letter-spacing: .5px; color: var(--soft); text-transform: uppercase; }
+  .kpi .v { font-size: 26px; font-weight: 700; margin-top: 5px; letter-spacing: -.01em; }
+  .kpi .v.good { color: var(--good); }
+  .kpi .v.warn { color: var(--warn); }
+  .kpi .v.bad { color: var(--bad); }
+  .kpi .note { font-size: 11px; color: var(--soft); margin-top: 3px; }
+
+  /* Scenarios table */
+  .panel {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 22px; padding: 26px 28px; box-shadow: var(--shadow);
+    margin-bottom: 22px;
+  }
+  .panel h2 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .panel .h-sub { color: var(--soft); font-size: 13px; margin-bottom: 18px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td {
+    padding: 9px 12px; text-align: right;
+    border-bottom: 1px solid var(--line); white-space: nowrap;
+  }
+  th:first-child, td:first-child { text-align: left; }
+  thead th {
+    font-size: 11px; letter-spacing: .4px; text-transform: uppercase;
+    color: var(--soft); font-weight: 700; border-bottom: 2px solid var(--line);
+  }
+  tr:last-child td { border-bottom: none; }
+  tr.highlight td { background: var(--green-bg); font-weight: 700; color: var(--good); }
+  .bar-cell { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+  .bar { height: 8px; border-radius: 4px; background: var(--accent); display: inline-block; }
+
+  /* Markup vs margin explainer */
+  .explainer {
+    background: #f3f7ff; border: 1px solid #d9e6ff;
+    border-radius: 14px; padding: 16px 20px; font-size: 13px; color: #33506e;
+    margin-bottom: 22px; line-height: 1.6;
+  }
+  .explainer strong { color: var(--ink); }
+  .explainer .formula { font-family: monospace; background: rgba(255,255,255,.7); padding: 2px 6px; border-radius: 4px; }
+
+  /* Divider label */
+  .divider { display: flex; align-items: center; gap: 12px; margin: 28px 0 20px; }
+  .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+  .divider span { font-size: 12px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: var(--soft); }
+
+  /* Reset btn */
+  .reset-btn {
+    border: 1px solid var(--line); background: var(--card); border-radius: 10px;
+    padding: 9px 18px; font: inherit; font-size: 13px; font-weight: 600;
+    color: var(--soft); cursor: pointer; margin-top: 20px; transition: .15s;
+  }
+  .reset-btn:hover { border-color: var(--bad); color: var(--bad); }
+
+  .foot { color: var(--soft); font-size: 12px; margin-top: 30px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Organika</div>
+    <h1>CP Margin Calculator</h1>
+    <p class="sub">Calculate selling price, cost, or margin — in any direction.</p>
+  </header>
+
+  <!-- Mode selector -->
+  <div class="modes" id="modeBar">
+    <button class="mode-btn on" data-mode="price">Cost → Selling Price</button>
+    <button class="mode-btn" data-mode="cost">Selling Price → Cost</button>
+    <button class="mode-btn" data-mode="check">Check Margin</button>
+  </div>
+  <p class="mode-desc" id="modeDesc">Enter your cost and target margin to calculate the selling price.</p>
+
+  <!-- Calculator -->
+  <div class="calc-card">
+    <div class="inputs" id="inputGrid">
+      <!-- injected by JS -->
+    </div>
+    <div class="results-bar" id="resultsBar">
+      <!-- injected by JS -->
+    </div>
+    <button class="reset-btn" id="resetBtn">Clear</button>
+  </div>
+
+  <!-- Explainer -->
+  <div class="explainer">
+    <strong>Margin vs Markup — what's the difference?</strong><br>
+    <span class="formula">Margin % = (Price − Cost) ÷ Price × 100</span> — profit as a share of <em>selling price</em>.<br>
+    <span class="formula">Markup % = (Price − Cost) ÷ Cost × 100</span> — profit as a share of <em>cost</em>.<br>
+    A 50% markup equals a 33.3% margin. A 100% margin is impossible; a 100% markup doubles the cost.
+  </div>
+
+  <!-- Scenario table -->
+  <div class="panel">
+    <h2>Margin Scenario Table</h2>
+    <p class="h-sub">Based on the cost you entered — what selling price is needed for each margin tier?</p>
+    <table id="scenTable">
+      <thead>
+        <tr>
+          <th>Margin %</th>
+          <th>Markup %</th>
+          <th>Selling Price</th>
+          <th>Gross Profit</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="scenBody"></tbody>
+    </table>
+  </div>
+
+  <div class="foot">Organika · internal tool · all figures in CAD unless otherwise noted</div>
+</div>
+
+<script>
+  const MODES = {
+    price: {
+      desc: 'Enter your cost and target margin to calculate the selling price.',
+      fields: [
+        { id: 'cost',   label: 'Cost Price (CP)', prefix: '$', type: 'input' },
+        { id: 'margin', label: 'Target Margin',   suffix: '%', type: 'input' },
+        { id: 'price',  label: 'Selling Price',   prefix: '$', type: 'output' },
+      ],
+    },
+    cost: {
+      desc: 'Enter the selling price and target margin to back-calculate the cost.',
+      fields: [
+        { id: 'price',  label: 'Selling Price (SP)', prefix: '$', type: 'input' },
+        { id: 'margin', label: 'Target Margin',      suffix: '%', type: 'input' },
+        { id: 'cost',   label: 'Cost Price (CP)',     prefix: '$', type: 'output' },
+      ],
+    },
+    check: {
+      desc: 'Enter your cost and selling price to see what margin and markup you\'re achieving.',
+      fields: [
+        { id: 'cost',  label: 'Cost Price (CP)',    prefix: '$', type: 'input' },
+        { id: 'price', label: 'Selling Price (SP)', prefix: '$', type: 'input' },
+        { id: 'margin',label: 'Margin %',           suffix: '%', type: 'output' },
+      ],
+    },
+  };
+
+  let currentMode = 'price';
+  const state = { cost: '', margin: '', price: '' };
+
+  function fmt(n, dec = 2) {
+    if (n === null || n === undefined || isNaN(n)) return '—';
+    return n.toLocaleString('en-CA', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+  }
+
+  function fmtPct(n) { return fmt(n, 1) + '%'; }
+
+  function calc() {
+    const cost   = parseFloat(state.cost);
+    const margin = parseFloat(state.margin);
+    const price  = parseFloat(state.price);
+
+    if (currentMode === 'price') {
+      if (!isNaN(cost) && !isNaN(margin) && margin < 100) {
+        return { price: cost / (1 - margin / 100), cost, margin };
+      }
+    } else if (currentMode === 'cost') {
+      if (!isNaN(price) && !isNaN(margin) && margin < 100) {
+        const c = price * (1 - margin / 100);
+        return { price, cost: c, margin };
+      }
+    } else {
+      if (!isNaN(cost) && !isNaN(price) && price > 0) {
+        return { price, cost, margin: (price - cost) / price * 100 };
+      }
+    }
+    return null;
+  }
+
+  function marginColor(m) {
+    if (m >= 40) return 'good';
+    if (m >= 20) return 'warn';
+    return 'bad';
+  }
+
+  function renderResults(res) {
+    const bar = document.getElementById('resultsBar');
+    if (!res) { bar.innerHTML = ''; return; }
+
+    const { cost, price, margin } = res;
+    const markup  = cost > 0 ? (price - cost) / cost * 100 : 0;
+    const profit  = price - cost;
+    const mColor  = marginColor(margin);
+
+    bar.innerHTML = `
+      <div class="kpi">
+        <div class="k">Gross Profit</div>
+        <div class="v ${mColor}">$${fmt(profit)}</div>
+        <div class="note">per unit</div>
+      </div>
+      <div class="kpi">
+        <div class="k">Margin %</div>
+        <div class="v ${mColor}">${fmt(margin, 1)}%</div>
+        <div class="note">profit ÷ selling price</div>
+      </div>
+      <div class="kpi">
+        <div class="k">Markup %</div>
+        <div class="v">${fmt(markup, 1)}%</div>
+        <div class="note">profit ÷ cost</div>
+      </div>
+      <div class="kpi">
+        <div class="k">Multiplier</div>
+        <div class="v">${cost > 0 ? fmt(price / cost, 3) + '×' : '—'}</div>
+        <div class="note">selling price ÷ cost</div>
+      </div>
+    `;
+  }
+
+  function renderScenTable() {
+    const costVal = parseFloat(state.cost) || (currentMode === 'cost' ? null : null);
+    const priceVal = parseFloat(state.price) || null;
+
+    const baseCost = (currentMode !== 'cost')
+      ? (parseFloat(state.cost) || null)
+      : (calc() ? calc().cost : null);
+
+    const tbody = document.getElementById('scenBody');
+    if (!baseCost || baseCost <= 0) {
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--soft);padding:20px">Enter a cost price to see scenarios.</td></tr>';
+      return;
+    }
+
+    const tiers = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60];
+    const currentMargin = calc() ? calc().margin : null;
+
+    tbody.innerHTML = tiers.map(m => {
+      const sp = baseCost / (1 - m / 100);
+      const profit = sp - baseCost;
+      const markup = (sp - baseCost) / baseCost * 100;
+      const barW = Math.round(m * 1.4);
+      const isActive = currentMargin !== null && Math.abs(currentMargin - m) < 1;
+
+      return `<tr class="${isActive ? 'highlight' : ''}">
+        <td>${m}%</td>
+        <td>${fmt(markup, 1)}%</td>
+        <td>$${fmt(sp)}</td>
+        <td>$${fmt(profit)}</td>
+        <td>
+          <div class="bar-cell">
+            <div class="bar" style="width:${barW}px; background: ${m >= 40 ? 'var(--good)' : m >= 25 ? 'var(--accent)' : 'var(--warn)'}"></div>
+          </div>
+        </td>
+      </tr>`;
+    }).join('');
+  }
+
+  function renderInputGrid() {
+    const cfg = MODES[currentMode];
+    const grid = document.getElementById('inputGrid');
+
+    grid.innerHTML = cfg.fields.map((f, i) => {
+      const isOutput = f.type === 'output';
+      const val = state[f.id];
+      const res = calc();
+      const displayVal = isOutput && res ? fmt(res[f.id], f.suffix === '%' ? 1 : 2) : (val || '');
+
+      const inputEl = `
+        <div class="input-wrap">
+          ${f.prefix ? `<span class="prefix">${f.prefix}</span>` : ''}
+          <input
+            type="number"
+            id="inp-${f.id}"
+            class="${f.prefix ? 'has-prefix ' : ''}${f.suffix ? 'has-suffix ' : ''}${isOutput ? 'result-field' : ''}"
+            value="${displayVal}"
+            placeholder="${isOutput ? 'calculated' : '0.00'}"
+            step="0.01"
+            min="0"
+            ${isOutput ? 'readonly tabindex="-1"' : ''}
+          >
+          ${f.suffix ? `<span class="suffix">${f.suffix}</span>` : ''}
+        </div>`;
+
+      const badgeHtml = isOutput
+        ? `<span class="badge output">Calculated</span>`
+        : `<span class="badge">Input</span>`;
+
+      return `
+        <div class="field">
+          <label for="inp-${f.id}">${f.label}${badgeHtml}</label>
+          ${inputEl}
+        </div>`;
+    }).join('');
+
+    // Attach listeners to input fields
+    cfg.fields.forEach(f => {
+      if (f.type === 'input') {
+        const el = document.getElementById(`inp-${f.id}`);
+        el.addEventListener('input', e => {
+          state[f.id] = e.target.value;
+          updateAll();
+        });
+      }
+    });
+  }
+
+  function updateOutputField() {
+    const cfg = MODES[currentMode];
+    const outField = cfg.fields.find(f => f.type === 'output');
+    if (!outField) return;
+
+    const el = document.getElementById(`inp-${outField.id}`);
+    if (!el) return;
+
+    const res = calc();
+    if (res) {
+      const raw = res[outField.id];
+      el.value = outField.suffix === '%' ? fmt(raw, 1) : fmt(raw, 2);
+    } else {
+      el.value = '';
+    }
+  }
+
+  function updateAll() {
+    updateOutputField();
+    renderResults(calc());
+    renderScenTable();
+  }
+
+  function setMode(mode) {
+    currentMode = mode;
+    state.cost = ''; state.margin = ''; state.price = '';
+
+    document.querySelectorAll('.mode-btn').forEach(b => b.classList.toggle('on', b.dataset.mode === mode));
+    document.getElementById('modeDesc').textContent = MODES[mode].desc;
+
+    renderInputGrid();
+    renderResults(null);
+    renderScenTable();
+  }
+
+  // Init
+  document.getElementById('modeBar').addEventListener('click', e => {
+    const btn = e.target.closest('.mode-btn');
+    if (btn) setMode(btn.dataset.mode);
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    state.cost = ''; state.margin = ''; state.price = '';
+    renderInputGrid();
+    renderResults(null);
+    renderScenTable();
+  });
+
+  setMode('price');
+</script>
+</body>
+</html>
