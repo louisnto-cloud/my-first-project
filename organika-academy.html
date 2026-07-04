@@ -495,6 +495,16 @@ body,button,input,textarea{font-family:'Be Vietnam Pro',-apple-system,BlinkMacSy
 .weak-info{display:flex;flex-direction:column;gap:2px}
 .weak-cat{font-size:14px;font-weight:700;color:var(--tx)}
 .weak-pct{font-size:12px;color:#C0392B;font-weight:700}
+.badge-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ach{background:var(--wh);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:2px;box-shadow:var(--shd);border:1px solid rgba(29,58,45,.05)}
+.ach.locked{opacity:.42;filter:grayscale(.8)}
+.ach.got{border-color:var(--gl)}
+.ach-icon{font-size:24px}
+.ach-name{font-size:13px;font-weight:800;color:var(--tx)}
+.ach-desc{font-size:11px;color:var(--tx2)}
+.welcome-card{margin:0 16px 12px;background:var(--tp);border-radius:var(--r);padding:16px;border-left:4px solid var(--t)}
+.welcome-title{font-size:16px;font-weight:800;color:#7A3900;margin-bottom:4px}
+.welcome-card p{font-size:13px;color:#7A3900;line-height:1.5}
 </style>
 </head>
 <body>
@@ -1291,7 +1301,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v14';
+const APP_VERSION='v15';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1496,6 +1506,14 @@ function renderHome(){
       </div>
       <button class="smart-start" onclick="startSmartSession()">▶ Start today's session${due?` · ${Math.min(due,20)} due`:''}</button>
     </div>
+    ${S.xp===0?`<div class="welcome-card">
+      <div class="welcome-title">👋 Chào anh Michael!</div>
+      <p>New here? Two good ways to start:</p>
+      <div style="display:flex;gap:8px;margin-top:10px">
+        <button class="btn-sec" style="flex:1;font-size:13px" onclick="go('placement')">📋 Placement check</button>
+        <button class="btn-primary" style="flex:1;font-size:13px;padding:12px" onclick="startSmartSession()">▶ Just start</button>
+      </div>
+    </div>`:''}
     <div class="stat-row">
       <div class="stat-card"><div class="stat-n">${mastered}</div><div class="stat-l">Mastered</div></div>
       <div class="stat-card"><div class="stat-n">${learning}</div><div class="stat-l">Learning</div></div>
@@ -2004,6 +2022,14 @@ function renderProgress(){
         <span class="tier-pct">${mas}/${tot}</span>
       </div>`;
     }).join('')}
+    <div class="section-label" style="margin-top:20px">Achievements</div>
+    <div class="badge-grid">
+      ${achievements().map(a=>`<div class="ach ${a.got?'got':'locked'}">
+        <span class="ach-icon">${a.icon}</span>
+        <span class="ach-name">${a.name}</span>
+        <span class="ach-desc">${a.desc}</span>
+      </div>`).join('')}
+    </div>
     ${weak.length?`<div class="section-label" style="margin-top:20px">Weak Spots</div>
     ${weak.map(w=>`<div class="weak-row">
       <div class="weak-info"><span class="weak-cat">${w.c}</span><span class="weak-pct">${w.pct}% missed</span></div>
@@ -2021,6 +2047,22 @@ function renderProgress(){
     <div style="height:90px"></div>
   </main>
   ${nav()}</div>`;
+}
+function achievements(){
+  const mastered=VOCAB.filter(v=>v.box>=4).length;
+  const totalRight=VOCAB.reduce((n,v)=>n+v.correct,0);
+  const starred=VOCAB.filter(v=>v.starred).length;
+  const sits=(S.doneSits||[]).length;
+  return [
+    {icon:'🌱',name:'First Steps',desc:'Earn 50 XP',got:S.xp>=50},
+    {icon:'🔥',name:'Week Warrior',desc:'7 day streak',got:S.streak>=7},
+    {icon:'💯',name:'Millennium',desc:'Earn 1,000 XP',got:S.xp>=1000},
+    {icon:'🎓',name:'Scholar',desc:'Master 50 terms',got:mastered>=50},
+    {icon:'🏆',name:'Expert',desc:'Master 150 terms',got:mastered>=150},
+    {icon:'🎯',name:'Sharpshooter',desc:'200 correct answers',got:totalRight>=200},
+    {icon:'🎭',name:'Deal Maker',desc:'Finish all 10 dialogues',got:sits>=10},
+    {icon:'⭐',name:'Collector',desc:'Star 10 terms',got:starred>=10},
+  ];
 }
 function confirmReset(){
   if(confirm('Reset all progress? This cannot be undone.')) resetAll();
