@@ -482,6 +482,8 @@ body,button,input,textarea{font-family:'Be Vietnam Pro',-apple-system,BlinkMacSy
 .goal-btn{width:44px;height:44px;border-radius:50%;border:none;background:var(--gp);color:var(--g);font-size:24px;font-weight:800;cursor:pointer;font-family:inherit}
 .goal-btn:active{transform:scale(.92)}
 .goal-val{font-size:16px;font-weight:800;color:var(--tx);min-width:120px;text-align:center}
+.smart-start{margin-top:14px;width:100%;background:rgba(255,255,255,.16);border:1.5px solid rgba(255,255,255,.35);color:#fff;border-radius:14px;padding:13px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit;position:relative;backdrop-filter:blur(4px);transition:transform .12s,background .15s}
+.smart-start:active{transform:scale(.97);background:rgba(255,255,255,.28)}
 </style>
 </head>
 <body>
@@ -1098,6 +1100,7 @@ let S={
   priceAnswer:null,   // price trainer: selected option
   priceRight:0,       // price trainer: session correct
   priceTotal:0,       // price trainer: session total
+  doneSits:[],        // completed dialogue ids
 };
 
 // Update vocab object on VOCAB array directly
@@ -1141,7 +1144,7 @@ function toggleStar(id){
 const SAVE_KEY='organika-academy-v1';
 function snapshot(){
   return {v:1,
-    state:{xp:S.xp,streak:S.streak,lastDay:S.lastDay,todayXP:S.todayXP,xpDay:S.xpDay,dailyGoal:S.dailyGoal},
+    state:{xp:S.xp,streak:S.streak,lastDay:S.lastDay,todayXP:S.todayXP,xpDay:S.xpDay,dailyGoal:S.dailyGoal,doneSits:S.doneSits||[]},
     vocab:VOCAB.filter(v=>v.correct||v.wrong||v.starred||v.lastSeen)
       .map(v=>({id:v.id,box:v.box,correct:v.correct,wrong:v.wrong,lastSeen:v.lastSeen,starred:v.starred}))};
 }
@@ -1231,7 +1234,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v8';
+const APP_VERSION='v9';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1432,6 +1435,7 @@ function renderHome(){
         <div class="goal-bar-label"><span>Daily Goal</span><span>${S.todayXP}/${S.dailyGoal} XP</span></div>
         <div class="goal-bar"><div class="goal-fill" style="width:${pct}%"></div></div>
       </div>
+      <button class="smart-start" onclick="startSmartSession()">▶ Start today's session${due?` · ${Math.min(due,20)} due`:''}</button>
     </div>
     <div class="stat-row">
       <div class="stat-card"><div class="stat-n">${mastered}</div><div class="stat-l">Mastered</div></div>
@@ -1702,11 +1706,13 @@ function renderSituations(){
   <header class="screen-header"><span></span><span class="screen-title">Role-Play Dialogues</span><span></span></header>
   <main class="main-scroll" style="padding:16px">
     <p class="screen-intro">Ten complete business dialogues for HCMC sales and distribution. Read, listen, and practice each line.</p>
-    ${SITUATIONS.map(s=>`<button class="sit-card" onclick="go('scenario',{situationId:'${s.id}',situationLine:0})">
-      <span class="sit-num">${s.id.replace('s','')}</span>
+    ${SITUATIONS.map(s=>{
+      const done=(S.doneSits||[]).includes(s.id);
+      return `<button class="sit-card" onclick="go('scenario',{situationId:'${s.id}',situationLine:0})">
+      <span class="sit-num"${done?' style="background:var(--gl);color:#fff"':''}>${done?'✓':s.id.replace('s','')}</span>
       <span class="sit-info"><span class="sit-title">${s.title}</span><span class="sit-titlevi">${s.titleVi}</span></span>
       <span class="arrow">›</span>
-    </button>`).join('')}
+    </button>`;}).join('')}
     <div style="height:90px"></div>
   </main>
   ${nav()}</div>`;
@@ -1753,11 +1759,21 @@ function renderScenario(){
       ${S.situationLine>0?`<button class="btn-sec" onclick="S.situationLine--;S.lineRevealed=false;render()">‹ Prev</button>`:`<span></span>`}
       ${S.situationLine<sit.lines.length-1
         ?`<button class="btn-primary" onclick="advanceLine()">Next ›</button>`
-        :`<button class="btn-primary" onclick="go('situations')">Done ✓</button>`}
+        :`<button class="btn-primary" onclick="markSitDone('${sit.id}')">Done ✓</button>`}
     </div>
     <div style="height:30px"></div>
   </main>
   </div>`;
+}
+function markSitDone(id){
+  S.doneSits=S.doneSits||[];
+  if(!S.doneSits.includes(id)){
+    S.doneSits.push(id);
+    rolloverDay();
+    S.xp+=15; S.todayXP+=15;   // completing a full dialogue earns a bonus
+    checkStreak(); saveState();
+  }
+  go('situations');
 }
 function advanceLine(){
   const sit=SITUATIONS.find(s=>s.id===S.situationId);
@@ -1823,6 +1839,13 @@ function renderReview(){
     <div style="height:90px"></div>
   </main>
   ${nav()}</div>`;
+}
+function startSmartSession(){
+  // due terms first, topped up with fresh terms from the current filters
+  const due=shuffle(VOCAB.filter(v=>isDue(v)&&(v.correct||v.wrong))).map(v=>v.id);
+  const fresh=shuffle(VOCAB.filter(v=>!v.correct&&!v.wrong)).map(v=>v.id);
+  const ids=[...due,...fresh].slice(0,20);
+  startCustomLesson(ids);
 }
 function startCustomLesson(ids){
   if(!ids||!ids.length) return;
