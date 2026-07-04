@@ -4,11 +4,13 @@
 // Wrong answers gently reveal the right one with a one-line why, then move on.
 // No hearts, no lives, no locked retries, no red error states. Only warmth.
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import type { ArtKind, L, MatchQuestion, OrderQuestion, Question, TapArtQuestion } from '@/content/types';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { SacredArt } from '@/components/SacredArt';
+import { currentlySpeaking, narrate, narrationSupported, spokenParagraphs, stopNarration } from '@/lib/speech';
+import { haptic } from '@/lib/sound';
 
 /** Deterministic shuffle (seeded by string) so server and client agree. */
 function seededShuffle<T>(items: T[], seed: string): T[] {
@@ -35,7 +37,21 @@ function ContinueButton({ onClick, label }: { onClick: () => void; label: string
 }
 
 function Why({ right, why }: { right: boolean; why: L }) {
-  const { t } = useI18n();
+  const { t, lang, save } = useI18n();
+
+  // The guide stays present through the questions: a right answer earns a
+  // soft pulse, and the why is read aloud like everything else.
+  useEffect(() => {
+    if (right) haptic(14);
+    if (save.narrate && narrationSupported()) {
+      narrate('quiz-why', spokenParagraphs(t(right ? UI.gentleRight : UI.gentleWrong), t(why)), lang);
+    }
+    return () => {
+      if (currentlySpeaking() === 'quiz-why') stopNarration();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div
       role="status"
@@ -193,11 +209,19 @@ function MatchView({ q, onDone }: { q: MatchQuestion; onDone: () => void }) {
   const meanings = useMemo(() => seededShuffle(q.pairs.map((_, i) => i), q.id + 'm'), [q]);
   const [selected, setSelected] = useState<number | null>(null);
   const [matched, setMatched] = useState<number[]>([]);
+  const [missed, setMissed] = useState<number | null>(null);
   const allDone = matched.length === q.pairs.length;
 
   const tryMatch = (meaningIdx: number) => {
     if (selected === null) return;
-    if (selected === meaningIdx) setMatched((m) => [...m, meaningIdx]);
+    if (selected === meaningIdx) {
+      setMatched((m) => [...m, meaningIdx]);
+      haptic(10);
+    } else {
+      // A gentle "not quite": the row warms garnet for a moment, nothing more.
+      setMissed(meaningIdx);
+      setTimeout(() => setMissed(null), 550);
+    }
     setSelected(null);
   };
 
@@ -234,8 +258,12 @@ function MatchView({ q, onDone }: { q: MatchQuestion; onDone: () => void }) {
             key={i}
             disabled={matched.includes(i)}
             onClick={() => tryMatch(i)}
-            className={`min-h-[48px] rounded-xl border px-4 py-2 text-left font-ui text-sm font-semibold ${
-              matched.includes(i) ? 'border-gold/60 bg-gold/15 text-ivory' : 'border-ivory/25 text-ivory'
+            className={`min-h-[48px] rounded-xl border px-4 py-2 text-left font-ui text-sm font-semibold transition-colors ${
+              matched.includes(i)
+                ? 'border-gold/60 bg-gold/15 text-ivory'
+                : missed === i
+                  ? 'border-garnet bg-garnet/20 text-ivory'
+                  : 'border-ivory/25 text-ivory'
             }`}
           >
             {t(q.pairs[i].meaning)}
