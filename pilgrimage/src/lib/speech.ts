@@ -438,6 +438,9 @@ let queue: Chunk[] = [];
 let activeId: string | null = null;
 let activeLang: Lang = 'en';
 let chunkIndex = 0; // how far through the current passage we are
+let generation = 0; // bumped on every narrate/stop — cancel() fires the old
+                    // utterance's onend/onerror AFTER the new narration has
+                    // begun; stale events must never touch the new state
 let keepAlive: ReturnType<typeof setInterval> | null = null;
 
 function clearKeepAlive() {
@@ -449,6 +452,7 @@ function clearKeepAlive() {
 
 export function stopNarration() {
   const s = synth();
+  generation++;
   queue = [];
   activeId = null;
   clearKeepAlive();
@@ -509,18 +513,20 @@ function speakNext() {
   u.pitch  = pitch;
   u.volume = 1.0;
 
+  const gen = generation; // this utterance belongs to this narration only
+
   u.onend = () => {
-    if (activeId !== null) {
-      // The chunk's own pause (breath vs. completed thought), with a little
-      // human variance — identical pauses every time read as a metronome.
-      const jitter = 0.85 + Math.random() * 0.3;
-      setTimeout(() => {
-        if (activeId !== null) speakNext();
-      }, Math.round(chunk.pause * jitter));
-    }
+    if (generation !== gen || activeId === null) return;
+    // The chunk's own pause (breath vs. completed thought), with a little
+    // human variance — identical pauses every time read as a metronome.
+    const jitter = 0.85 + Math.random() * 0.3;
+    setTimeout(() => {
+      if (generation === gen && activeId !== null) speakNext();
+    }, Math.round(chunk.pause * jitter));
   };
 
   u.onerror = () => {
+    if (generation !== gen) return; // cancelled by a newer narration — ignore
     if (speakingId === activeId) {
       clearKeepAlive();
       speakingId = null;
@@ -539,10 +545,20 @@ function speakNext() {
 export function narrate(id: string, text: string, lang: Lang, opts?: { cue?: boolean }) {
   const s = synth();
   if (!s) return;
+
+  const chunks = intoChunks(text, lang);
+  if (!chunks.length) {
+    // Nothing speakable (empty or whitespace text) — just stop what's playing.
+    stopNarration();
+    return;
+  }
+
+  generation++;
+  const gen = generation;
   s.cancel();
   clearKeepAlive();
 
-  queue = intoChunks(text, lang);
+  queue = chunks;
   chunkIndex = 0;
   activeId = id;
   activeLang = lang;
@@ -571,7 +587,7 @@ export function narrate(id: string, text: string, lang: Lang, opts?: { cue?: boo
   const settle = opts?.cue ? 450 : 80;
   whenVoicesReady(() => {
     setTimeout(() => {
-      if (activeId === id) speakNext();
+      if (generation === gen && activeId === id) speakNext();
     }, settle);
   });
 }
