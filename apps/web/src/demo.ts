@@ -680,7 +680,8 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
   if (rawPath === '/nps/summary' && method === 'GET') return ['owner', 'academic_director'].includes(me.role) ? ok({ responses: 12, nps: 67 }) : err(403, 'forbidden');
   if (rawPath === '/academic/dashboard' && method === 'GET') {
     if (!['owner', 'academic_director'].includes(me.role)) return err(403, 'forbidden');
-    return ok({ stalled: [], velocity: db.users.filter((u) => u.role === 'tutor').slice(0, 4).map((u) => ({ tutorName: u.name, avgDelta: 0.12 })) });
+    const deltas = [0.18, 0.12, 0.09, 0.15];
+    return ok({ stalled: [], velocity: db.users.filter((u) => u.role === 'tutor').slice(0, 4).map((u, i) => ({ tutorName: u.name, avgDelta: deltas[i % deltas.length] })) });
   }
   if (seg[0] === 'escalations' && method === 'GET') return ok([]);
 
