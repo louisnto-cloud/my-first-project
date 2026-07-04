@@ -752,6 +752,48 @@ const VRAW=[
 ['e28','E','M','Price floor / minimum price','Giá sàn','ya san','Nhà phân phối không được bán dưới giá sàn.','Distributors must not sell below the price floor.','Same nationwide.','Protects against gray-market undercutting between channels.',0],
 ['e29','E','D','Distributor agreement','Hợp đồng phân phối','hop dong fan foy','Hợp đồng phân phối quy định khu vực, chỉ tiêu, và hỗ trợ.','The distribution agreement defines territory, targets, and support.','Same nationwide.','Territory + sales target + support obligations = the 3 pillars.',0],
 ['e30','E','D','Sales target / quota','Chỉ tiêu doanh số','chee tyew zwanh so','Chỉ tiêu doanh số quý một là 2,000 thùng.','Q1 sales target is 2,000 cases.','Same nationwide.','Set quarterly, review monthly. Tie support budget to attainment.',0],
+// ═══ TIER B EXPANSION — customs, retail math, forecasting ═══
+['b51','B','D','Customs clearance','Thông quan','thong kwan','Hàng sẽ thông quan trong 3 đến 5 ngày làm việc.','Goods will clear customs in 3 to 5 working days.','Same nationwide.','Customs broker = đại lý hải quan. Budget clearance time into lead times.',0],
+['b52','B','D','Import duty / tariff','Thuế nhập khẩu','thway nyap khow','Thuế nhập khẩu cho thực phẩm chức năng từ Canada là bao nhiêu?','What is the import duty for functional food from Canada?','Same nationwide.','Check CPTPP preferential rates — Canada and Vietnam are both members.',0],
+['b53','B','D','Bill of lading','Vận đơn','van don','Vui lòng gửi vận đơn và hóa đơn thương mại.','Please send the bill of lading and commercial invoice.','Same nationwide.','',0],
+['b54','B','D','Container','Công-te-nơ','kong-teh-nuh','Một công-te-nơ 20 feet chứa được bao nhiêu thùng?','How many cases fit in a 20-foot container?','Everyone also says container in English.','',0],
+['b55','B','D','Warehouse','Kho hàng','kho hang','Kho hàng của chúng tôi ở Quận 7, gần cảng.','Our warehouse is in District 7, near the port.','Same nationwide.','',0],
+['b56','B','D','Lead time','Thời gian giao hàng','thoy zan yow hang','Thời gian giao hàng từ Canada là 6 tuần bằng đường biển.','Lead time from Canada is 6 weeks by sea.','Lead time often said in English.','Sea freight Vancouver to HCMC is 3-4 weeks port to port; add clearance.',0],
+['b57','B','D','Out for delivery / shipping','Đang vận chuyển','dang van chwen','Đơn hàng của anh đang vận chuyển, sẽ đến vào thứ Sáu.','Your order is in transit, arriving Friday.','Same nationwide.','',0],
+['b58','B','F','Revenue','Doanh thu','zwanh thoo','Doanh thu quý này tăng 15% so với quý trước.','This quarter revenue grew 15% versus last quarter.','Same nationwide.','',0],
+['b59','B','F','Profit','Lợi nhuận','loy nywan','Lợi nhuận phụ thuộc vào chi phí vận chuyển và thuế.','Profit depends on shipping costs and taxes.','Same nationwide.','',0],
+['b60','B','F','Cost price','Giá vốn','ya von','Giá vốn mỗi lon sau thuế và vận chuyển là 18,000 đồng.','Landed cost per can after tax and shipping is 18,000 dong.','Same nationwide.','Giá vốn = your landed cost. Never reveal it in negotiation.',0],
+['b61','B','F','Break even','Hòa vốn','hwa von','Chúng ta sẽ hòa vốn sau 6 tháng nếu bán 500 thùng mỗi tháng.','We break even after 6 months at 500 cases per month.','Same nationwide.','',0],
+['b62','B','F','Budget','Ngân sách','ngan sach','Ngân sách marketing cho quý một là 200 triệu đồng.','Q1 marketing budget is 200 million dong.','Same nationwide.','',0],
+['b63','B','F','Sales forecast','Dự báo doanh số','zoo bow zwanh so','Dự báo doanh số năm đầu là 20,000 thùng.','First year sales forecast is 20,000 cases.','Same nationwide.','Vietnamese partners will ask for your forecast. Have a number ready.',0],
+['b64','B','F','Growth','Tăng trưởng','tang troong','Thị trường đồ uống chức năng tăng trưởng 20% mỗi năm.','The functional beverage market grows 20% per year.','Same nationwide.','',0],
+['b65','B','M','Deposit / down payment','Tiền cọc','tyen kop','Chúng tôi cần tiền cọc 30% khi đặt hàng.','We need a 30% deposit on order.','Southern colloquial: tiền cọc. Also đặt cọc (verb).','30/70 or 50/50 splits are common for first orders.',0],
+['b66','B','M','Debt / amount owed','Công nợ','kong nuh','Vui lòng thanh toán công nợ trước khi đặt đơn mới.','Please settle the outstanding balance before placing a new order.','Same nationwide.','Công nợ tracking is a daily job in Vietnam GT. Stay on top of it.',0],
+['b67','B','M','Late payment','Thanh toán trễ','tanh twan treh','Thanh toán trễ quá 15 ngày sẽ tạm ngưng giao hàng.','Payment more than 15 days late pauses deliveries.','Trễ is Southern; muộn in the North.','State the consequence calmly and in writing. Very common issue.',0],
+['b68','B','C','Quotation','Báo giá','bow ya','Tôi sẽ gửi báo giá chính thức qua email hôm nay.','I will send the official quotation by email today.','Same nationwide.','Báo giá = the quote document. Giá = the price itself.',0],
+['b69','B','C','To sign a contract','Ký hợp đồng','kee hop dong','Chúng ta có thể ký hợp đồng vào tuần sau không?','Can we sign the contract next week?','Same nationwide.','',0],
+['b70','B','C','Terms and conditions','Điều khoản','dyew kwan','Điều khoản thanh toán và giao hàng cần rõ ràng.','Payment and delivery terms need to be clear.','Same nationwide.','',0],
+// ═══ TIER C EXPANSION — ingredients, claims, consumer language ═══
+['c51','C','S','Electrolyte','Chất điện giải','chat dyen yai','Chất điện giải giúp bù nước sau khi tập thể thao.','Electrolytes help rehydrate after exercise.','Same nationwide.','Core ingredient story. Learn this word cold.',0],
+['c52','C','S','Magnesium','Ma-giê','ma-zheh','Sản phẩm chứa ma-giê và kali giúp phục hồi cơ bắp.','The product contains magnesium and potassium for muscle recovery.','Vietnamese uses adapted French names for minerals.','',0],
+['c53','C','S','Potassium','Kali','ka-lee','Kali giúp cân bằng nước trong cơ thể.','Potassium helps balance body fluids.','Same nationwide.','',0],
+['c54','C','S','Vitamin C','Vitamin C','vee-ta-min seh','Vitamin C hỗ trợ hệ miễn dịch.','Vitamin C supports the immune system.','Pronounced "seh" (French style) not "see".','Say vitamin "seh" — English "see" sounds odd to Vietnamese ears.',0],
+['c55','C','S','Zinc','Kẽm','kem','Kẽm và vitamin C là bộ đôi hỗ trợ miễn dịch.','Zinc and vitamin C are the immune support pair.','Same nationwide.','',0],
+['c56','C','S','Immune system','Hệ miễn dịch','heh myen zik','Sản phẩm hỗ trợ hệ miễn dịch một cách tự nhiên.','The product supports the immune system naturally.','Same nationwide.','Immune positioning surged post-COVID and remains strong.',0],
+['c57','C','S','Hydration / rehydrate','Bù nước','boo nook','Bù nước nhanh sau khi vận động hoặc đi nắng.','Rehydrate quickly after exercise or sun exposure.','Same nationwide.','HCMC heat makes hydration an everyday need, not just sports.',0],
+['c58','C','S','No sugar / sugar free','Không đường','khong doong','Sản phẩm không đường, phù hợp người ăn kiêng.','The product is sugar free, suitable for dieters.','Same nationwide.','Sugar-free is a top-3 purchase driver for urban Vietnamese consumers.',0],
+['c59','C','S','No preservatives','Không chất bảo quản','khong chat bow kwan','Không chất bảo quản, không màu nhân tạo.','No preservatives, no artificial colors.','Same nationwide.','Clean label claims resonate strongly. Verify against actual label first.',0],
+['c60','C','S','Natural ingredients','Thành phần tự nhiên','tanh fan too nyen','Thành phần tự nhiên từ Canada, an toàn cho sức khỏe.','Natural ingredients from Canada, safe for health.','Same nationwide.','',0],
+['c61','C','S','Side effects','Tác dụng phụ','tak zoong foo','Sản phẩm không có tác dụng phụ khi dùng đúng liều.','The product has no side effects when used as directed.','Same nationwide.','Never overclaim. Say "khi dùng đúng liều" (when used correctly).',0],
+['c62','C','S','Dosage / serving','Liều dùng','lyew zoong','Liều dùng khuyến nghị là một lon mỗi ngày.','Recommended serving is one can per day.','Same nationwide.','',0],
+['c63','C','S','Expiry date','Hạn sử dụng','han soo zoong','Hạn sử dụng in dưới đáy lon, 18 tháng từ ngày sản xuất.','Expiry date is printed on the can bottom, 18 months from production.','Often shortened to HSD on labels.','Buyers check HSD remaining on arrival. Ship fresh stock only.',0],
+['c64','C','S','Batch number','Số lô','so loh','Mỗi lô hàng có số lô để truy xuất nguồn gốc.','Each shipment has a batch number for traceability.','Same nationwide.','',0],
+['c65','C','S','Certificate of analysis','Phiếu kiểm nghiệm','fyew kyem ngyem','Chúng tôi cung cấp phiếu kiểm nghiệm cho từng lô.','We provide a certificate of analysis for each batch.','Abbreviated COA in trade contexts.','Pharmacy chains ask for COA routinely. Have them translated.',0],
+['c66','C','R','Target customer','Khách hàng mục tiêu','khach hang mook tyew','Khách hàng mục tiêu là phụ nữ thành thị 25 đến 45 tuổi.','Target customers are urban women aged 25 to 45.','Same nationwide.','',0],
+['c67','C','R','Consumer trend','Xu hướng tiêu dùng','soo hoong tyew zoong','Xu hướng tiêu dùng đang chuyển sang sản phẩm tốt cho sức khỏe.','Consumer trends are shifting toward healthy products.','Same nationwide.','',0],
+['c68','C','R','Brand awareness','Nhận diện thương hiệu','nyan zyen thoong hyew','Chúng tôi sẽ đầu tư vào nhận diện thương hiệu năm đầu tiên.','We will invest in brand awareness in year one.','Same nationwide.','',0],
+['c69','C','R','Word of mouth','Truyền miệng','trwen myeng','Truyền miệng là kênh marketing mạnh nhất ở Việt Nam.','Word of mouth is the strongest marketing channel in Vietnam.','Same nationwide.','Sampling + Zalo groups + KOL reviews drive word of mouth.',0],
+['c70','C','R','Influencer / KOL','Người có sức ảnh hưởng','ngoo-ee co sook anh hoong','Chúng tôi hợp tác với KOL về sức khỏe và thể hình.','We partner with health and fitness KOLs.','Everyone says KOL (kay-oh-el) in the industry.','Micro KOLs (10K-100K followers) convert best for supplements.',0],
 ];
 /* Auto-map to full objects */
 const VOCAB=VRAW.map(([id,tier,cat,en,vi,phonetic,exVi,exEn,sNote,reg,af])=>({id,tier,category:CAT[cat]||cat,en,vi,phonetic,example_vi:exVi,example_en:exEn,southern_note:sNote,register:reg,accuracyFlag:!!af,status:'learning',box:1,correct:0,wrong:0}));
@@ -1245,7 +1287,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v12';
+const APP_VERSION='v13';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
