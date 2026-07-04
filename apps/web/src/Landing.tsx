@@ -113,7 +113,7 @@ export function Landing({ onDone }: { onDone: () => void }) {
         <div className="flex flex-col items-center text-center">
           <div className="relative">
             <div className="absolute inset-0 rounded-[28px] bg-violet-500/30 blur-2xl" />
-            <img src="./logo.png" alt="E’TOP" className="relative h-24 w-24 rounded-[26px] shadow-glow ring-1 ring-black/5" />
+            <img src="./logo@2x.png" alt="E’TOP" className="relative h-24 w-24 rounded-[26px] shadow-glow ring-1 ring-black/5" />
           </div>
           <h1 className="mt-5 font-display text-[34px] font-semibold leading-tight text-ink">Anh Ngữ E’TOP</h1>
           <p className="mt-1 text-sm font-bold uppercase tracking-[0.18em] text-violet-500">{t('tagline')}</p>
