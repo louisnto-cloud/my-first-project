@@ -308,6 +308,21 @@
   .del{border:0;background:transparent;color:var(--soft);cursor:pointer;font-size:15px;
     padding:4px 8px;border-radius:8px;line-height:1}
   .del:hover{color:var(--bad);background:var(--bad-bg)}
+  .loadbtn{border:0;background:transparent;color:var(--soft);cursor:pointer;font-size:13px;
+    padding:4px 8px;border-radius:8px;line-height:1}
+  .loadbtn:hover{color:var(--accent);background:var(--accent-soft)}
+
+  /* print: the P&L becomes the document */
+  @media print{
+    body::before{display:none}
+    .nav,.hdr-tools,.seg,.sliderrow,.pl-inputs,.btnrow,.foot{display:none !important}
+    .view{display:none !important}
+    .view[data-view="pnl"]{display:block !important}
+    .panel{box-shadow:none;border-color:#ccc;break-inside:avoid}
+    .wrap{max-width:100%;padding:0}
+    header{padding:10px 0 0}
+    h1{font-size:28px}
+  }
 
   .explain{font-size:13px;color:var(--soft);line-height:1.65;max-width:68ch}
   .explain b{color:var(--ink)}
@@ -378,7 +393,7 @@
       <br>
       <span class="dirhint" id="dirHint"></span>
       <p class="solver-hint">Margin is profit ÷ <b>price</b> · markup is profit ÷ <b>cost</b>. A 50% markup = 33.3% margin; margin can never reach 100%.</p>
-      <div class="kpis" id="calcKpis"></div>
+      <div class="kpis" id="calcKpis" aria-live="polite"></div>
       <div class="btnrow">
         <button class="action subtle" id="copyBtn">Copy summary</button>
         <span class="copied" id="copiedMsg">Copied ✓</span>
@@ -414,7 +429,10 @@
         <thead><tr><th>Line</th><th>Per unit</th><th>Per month</th><th>% of revenue</th></tr></thead>
         <tbody id="plBody"></tbody>
       </table></div>
-      <div class="kpis" id="plKpis"></div>
+      <div class="kpis" id="plKpis" aria-live="polite"></div>
+      <div class="btnrow">
+        <button class="action subtle" id="printPl">Print / save PDF</button>
+      </div>
     </div>
     <div class="panel">
       <h2>Reading it</h2>
@@ -1085,7 +1103,7 @@ function renderProducts(){
       <td style="font-weight:700;color:var(--${cls || 'ink'})">${fmt(m, 1)}%</td>
       <td>${fmt(k, 1)}%</td>
       <td style="text-align:left">${pill}</td>
-      <td><button class="del" data-del="${i}" aria-label="Remove ${p.name}">✕</button></td>
+      <td style="white-space:nowrap"><button class="loadbtn" data-load="${i}" title="Load into calculator" aria-label="Load ${p.name} into calculator">↗</button><button class="del" data-del="${i}" aria-label="Remove ${p.name}">✕</button></td>
     </tr>`;
   }).join('');
   const am = marginOf(tc, tp);
@@ -1103,9 +1121,18 @@ $('prodBody').addEventListener('input', e => {
 });
 $('prodBody').addEventListener('change', () => renderProducts());
 $('prodBody').addEventListener('click', e => {
+  const l = e.target.closest('[data-load]');
+  if (l) {
+    const p = S.products[+l.dataset.load]; if (!p) return;
+    S.cost = p.cost; S.price = p.price; S.anchor = 'cost';
+    save(); paintSolver(); paintKpis(); paintScen(); paintBE(); paintPnl();
+    switchView('calc');
+    return;
+  }
   const d = e.target.closest('[data-del]'); if (!d) return;
   S.products.splice(+d.dataset.del, 1); save(); renderProducts();
 });
+$('printPl').addEventListener('click', () => window.print());
 $('addProd').addEventListener('click', () => {
   S.products.push({ name: 'New product', cost: 0, price: 0 }); save(); renderProducts();
 });
