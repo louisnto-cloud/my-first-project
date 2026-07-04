@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { getAllLessons } from '../../../data/curriculum';
+import { LIBRARY } from '../../../data/library';
 import { todayISO, XP, type RWProgress } from './engine';
 import { useTTS } from './useTTS';
 import { Confetti, NavButton, StepCard, XpChip } from './shared';
@@ -19,14 +20,22 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-/** Vocabulary from completed lessons, weakest / least-recently-reviewed first. */
-function buildSession(progress: RWProgress, size = 8): ReviewQ[] {
-  const learned = getAllLessons()
+/** All vocabulary the learner has met: lesson key words + words from completed stories. */
+function learnedVocab(progress: RWProgress): { word: string; meaning: string }[] {
+  const fromLessons = getAllLessons()
     .filter((l) => progress.completedLessons.includes(l.id))
     .flatMap((l) => l.keyWords);
+  const fromStories = LIBRARY
+    .filter((s) => progress.completedStories.includes(s.id))
+    .flatMap((s) => s.vocab);
   const unique = new Map<string, string>();
-  for (const kw of learned) if (!unique.has(kw.word)) unique.set(kw.word, kw.meaning);
-  const pool = [...unique.entries()].map(([word, meaning]) => ({ word, meaning }));
+  for (const kw of [...fromLessons, ...fromStories]) if (!unique.has(kw.word)) unique.set(kw.word, kw.meaning);
+  return [...unique.entries()].map(([word, meaning]) => ({ word, meaning }));
+}
+
+/** Session of the weakest / least-recently-reviewed words first. */
+function buildSession(progress: RWProgress, size = 8): ReviewQ[] {
+  const pool = learnedVocab(progress);
   if (pool.length < 4) return [];
 
   const priority = (w: string) => {
@@ -54,10 +63,7 @@ export default function Review({ progress, apply }: {
   const [correctCount, setCorrectCount] = useState(0);
   const [finished, setFinished] = useState(false);
 
-  const learnedCount = useMemo(() => {
-    const words = new Set(getAllLessons().filter((l) => progress.completedLessons.includes(l.id)).flatMap((l) => l.keyWords.map((k) => k.word)));
-    return words.size;
-  }, [progress.completedLessons]);
+  const learnedCount = useMemo(() => learnedVocab(progress).length, [progress]);
 
   const start = () => {
     setSession(buildSession(progress));
@@ -105,7 +111,7 @@ export default function Review({ progress, apply }: {
         <div className="py-8 text-center">
           <div className="mb-3 text-5xl">🌱</div>
           <h3 className="text-lg font-black text-gray-800">Nothing to review yet</h3>
-          <p className="mt-2 text-sm text-gray-500">Complete a few lessons first — every key word you learn is added to your review deck automatically.</p>
+          <p className="mt-2 text-sm text-gray-500">Complete a few lessons or stories first — every word you learn is added to your review deck automatically.</p>
         </div>
       </StepCard>
     );
@@ -169,7 +175,7 @@ export default function Review({ progress, apply }: {
         <div className="text-3xl">🔁</div>
         <h2 className="text-xl font-black">Smart Review</h2>
         <p className="text-sm opacity-90">
-          Your review deck has <strong>{learnedCount} words</strong> from lessons you've completed.
+          Your review deck has <strong>{learnedCount} words</strong> from the lessons and stories you've completed.
           Words you struggle with come back more often — that's spaced repetition, the most effective way to remember.
         </p>
       </div>

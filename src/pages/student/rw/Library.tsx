@@ -181,6 +181,7 @@ function StoryReader({ story, progress, apply, onBack }: {
             <div className="mb-3 text-6xl">{story.emoji}</div>
             <h3 className="text-2xl font-black text-gray-800">Story Complete!</h3>
             <p className="mt-2 text-gray-600">You read <strong>{story.title}</strong> and scored {score}/{story.quiz.length}.</p>
+            <p className="mt-1 text-xs text-gray-400">🔁 This story's new words just joined your Review deck.</p>
             <NavButton label="Back to Library →" onClick={onBack} color={c.bg} />
           </div>
         </StepCard>
