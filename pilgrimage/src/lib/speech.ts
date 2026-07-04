@@ -29,7 +29,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import type { Lang } from '@/lib/storage';
-import { playChime } from '@/lib/sound';
+import { playBreath, playChime } from '@/lib/sound';
 
 type Listener = () => void;
 const listeners = new Set<Listener>();
@@ -350,6 +350,7 @@ interface Chunk {
   quoted?: boolean;    // dialogue — a reader marks a quotation with a shift
   pos?: 'open' | 'mid' | 'close' | 'solo'; // position within its sentence
   seed?: number;       // sentence counter — each sentence gets its own melody
+  breath?: boolean;    // opens a paragraph — a faint intake of breath first
 }
 
 const SENTENCE_PAUSE  = 380; // after . ! ?  — a thought has completed
@@ -392,6 +393,7 @@ export function intoChunks(raw: string, lang: Lang): Chunk[] {
     .filter(Boolean);
 
   for (const paragraph of paragraphs) {
+    const paragraphStart = chunks.length;
     const sentences = paragraph
       .split(/(?<=[.!?。！？])\s+/)
       .map((s) => s.trim())
@@ -430,6 +432,9 @@ export function intoChunks(raw: string, lang: Lang): Chunk[] {
         chunks.push({ text: sentence, pause: endPause, question, solemn, quoted, pos: 'solo', seed });
       }
     });
+
+    // The first words of a paragraph follow an intake of breath.
+    if (chunks.length > paragraphStart) chunks[paragraphStart].breath = true;
   }
 
   // Fallback: text with no sentence-ending punctuation (e.g. a title or label).
@@ -488,6 +493,10 @@ function speakNext() {
     }
     return;
   }
+
+  // She breathes in, and begins — the words start on the tail of the inhale,
+  // exactly as a person does. (Utterance startup latency covers the overlap.)
+  if (chunk.breath) playBreath();
 
   const u = new SpeechSynthesisUtterance(chunk.text);
   const voice = pickVoice(activeLang);
