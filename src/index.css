@@ -39,3 +39,12 @@ body {
 .animate-pop {
   animation: pop 0.3s ease-out;
 }
+
+@keyframes confetti-fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(105vh) rotate(540deg); opacity: 0.4; }
+}
+
+.animate-confetti {
+  animation: confetti-fall linear forwards;
+}
