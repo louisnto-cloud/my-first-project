@@ -40,9 +40,13 @@ export function narrationSupported(): boolean {
 }
 
 let voices: SpeechSynthesisVoice[] = [];
+const voiceCache = new Map<Lang, SpeechSynthesisVoice | undefined>();
 function refreshVoices() {
   const s = synth();
-  if (s) voices = s.getVoices();
+  if (s) {
+    voices = s.getVoices();
+    voiceCache.clear(); // new voice list → rescore on next pick
+  }
 }
 if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
   refreshVoices();
@@ -133,13 +137,17 @@ function voiceScore(v: SpeechSynthesisVoice, lang: Lang): number {
   return s;
 }
 
-/** Pick the best female voice for a language. */
+/** Pick the best female voice for a language. Scored once, then cached. */
 function pickVoice(lang: Lang): SpeechSynthesisVoice | undefined {
   if (!voices.length) refreshVoices();
+  if (voiceCache.has(lang)) return voiceCache.get(lang);
   const tag = lang === 'vi' ? 'vi' : 'en';
   const matches = voices.filter((v) => v.lang?.toLowerCase().startsWith(tag));
-  if (!matches.length) return undefined;
-  return matches.slice().sort((a, b) => voiceScore(b, lang) - voiceScore(a, lang))[0];
+  const best = matches.length
+    ? matches.slice().sort((a, b) => voiceScore(b, lang) - voiceScore(a, lang))[0]
+    : undefined;
+  voiceCache.set(lang, best);
+  return best;
 }
 
 export function hasVoiceFor(lang: Lang): boolean {
@@ -151,6 +159,26 @@ export function hasVoiceFor(lang: Lang): boolean {
 // ─── Text humanisation ───────────────────────────────────────────────────────
 // The TTS engine hears exactly what we give it. Expand abbreviations, spell
 // out acronyms, and tidy punctuation so it can speak naturally.
+
+const ORDINAL_WORDS = [
+  '', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh',
+  'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth', 'thirteenth',
+  'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth',
+  'nineteenth', 'twentieth', 'twenty-first', 'twenty-second', 'twenty-third',
+  'twenty-fourth', 'twenty-fifth', 'twenty-sixth', 'twenty-seventh',
+  'twenty-eighth', 'twenty-ninth', 'thirtieth', 'thirty-first',
+];
+
+// Regnal numerals: "Benedict XVI" must read "Benedict the Sixteenth",
+// never "Benedict ex vee eye".
+const ROMAN_REGNAL: Record<string, string> = {
+  I: 'the First', II: 'the Second', III: 'the Third', IV: 'the Fourth',
+  V: 'the Fifth', VI: 'the Sixth', VII: 'the Seventh', VIII: 'the Eighth',
+  IX: 'the Ninth', X: 'the Tenth', XI: 'the Eleventh', XII: 'the Twelfth',
+  XIII: 'the Thirteenth', XIV: 'the Fourteenth', XV: 'the Fifteenth',
+  XVI: 'the Sixteenth', XXI: 'the Twenty-first', XXII: 'the Twenty-second',
+  XXIII: 'the Twenty-third',
+};
 
 function humanizeText(text: string): string {
   return text
@@ -168,15 +196,23 @@ function humanizeText(text: string): string {
     .replace(/\bRCIA\b/g, 'R. C. I. A.')
     .replace(/\bOCIA\b/g, 'O. C. I. A.')
     .replace(/\bCCC\b/g, 'C. C. C.')
-    // ── Ordinals ─────────────────────────────────────────────────────────
-    .replace(/\b1st\b/gi, 'first')
-    .replace(/\b2nd\b/gi, 'second')
-    .replace(/\b3rd\b/gi, 'third')
-    .replace(/\b4th\b/gi, 'fourth')
-    .replace(/\b5th\b/gi, 'fifth')
-    .replace(/\b6th\b/gi, 'sixth')
-    .replace(/\b7th\b/gi, 'seventh')
-    .replace(/\b8th\b/gi, 'eighth')
+    // ── Scripture references: "John 3:16" → "John, chapter 3, verse 16" ──
+    .replace(/\b(\d+):(\d+)[-–](\d+)\b/g, 'chapter $1, verses $2 to $3')
+    .replace(/\b(\d+):(\d+)\b/g, 'chapter $1, verse $2')
+    // ── Councils are spoken "Vatican Two", never "Vatican the Second" ────
+    .replace(/\bVatican II\b/g, 'Vatican Two')
+    .replace(/\bVatican I\b/g, 'Vatican One')
+    // ── Regnal numerals after a name: "John Paul II" → "John Paul the Second"
+    // (numeral must be 2+ letters — a lone "I" after a name is the pronoun)
+    .replace(
+      /\b([A-Z][a-z]+)\s(X{0,2}(?:I[VX]|V?I{1,3}|V))\b(?=[\s,.;:!?)]|$)/g,
+      (m, name: string, numeral: string) =>
+        numeral.length > 1 && ROMAN_REGNAL[numeral] ? `${name} ${ROMAN_REGNAL[numeral]}` : m,
+    )
+    // ── Ordinals: 1st–31st → words (feast days, Sundays of Advent, …) ────
+    .replace(/\b([1-9]|[12]\d|3[01])(st|nd|rd|th)\b/gi, (m, n: string) =>
+      ORDINAL_WORDS[Number(n)] ?? m,
+    )
     // ── Common shorthand ─────────────────────────────────────────────────
     .replace(/\be\.g\.\s*/g, 'for example, ')
     .replace(/\bi\.e\.\s*/g, 'that is, ')
@@ -192,6 +228,9 @@ function humanizeText(text: string): string {
     // ── Remove inline citations that read as noise ────────────────────────
     .replace(/\s*\[\d+\]\s*/g, ' ')
     .replace(/\s*\(\d+\)\s*/g, ' ')
+    // Short parentheticals become comma-asides — a reader lowers their voice
+    // and continues; they never say "open bracket".
+    .replace(/\s*\(([^()]{1,80})\)\s*/g, ', $1, ')
     // ── Tidy whitespace ──────────────────────────────────────────────────
     .replace(/\s{2,}/g, ' ')
     .trim();
@@ -204,46 +243,85 @@ function humanizeText(text: string): string {
 
 interface Chunk {
   text: string;
-  pause: number; // ms to wait before the next chunk begins
+  pause: number;       // ms to wait before the next chunk begins
+  question?: boolean;  // rising thought — spoken with a slight lift
 }
 
-const SENTENCE_PAUSE = 380; // after . ! ?  — a thought has completed
-const CLAUSE_PAUSE   = 110; // after ,  ;  : — a breath between ideas
+const SENTENCE_PAUSE  = 380; // after . ! ?  — a thought has completed
+const CLAUSE_PAUSE    = 110; // after ,  ;  : — a breath between ideas
+const PARAGRAPH_PAUSE = 620; // a blank line — the reader looks up for a moment
+
+/** Merge stubby fragments into their neighbour so the reading never stutters
+ *  ("Yes," … "and no." should be one breath, not two). */
+function mergeShortChunks(chunks: Chunk[]): Chunk[] {
+  const out: Chunk[] = [];
+  for (const c of chunks) {
+    const prev = out[out.length - 1];
+    if (
+      prev &&
+      (c.text.length < 18 || prev.text.length < 18) &&
+      prev.text.length + c.text.length < 90 &&
+      prev.pause <= CLAUSE_PAUSE
+    ) {
+      prev.text = `${prev.text} ${c.text}`;
+      prev.pause = c.pause;
+      prev.question = c.question;
+    } else {
+      out.push({ ...c });
+    }
+  }
+  return out;
+}
 
 function intoChunks(raw: string): Chunk[] {
-  const text = humanizeText(raw);
   const chunks: Chunk[] = [];
 
-  // First pass: split at every sentence boundary.
-  const sentences = text
-    .split(/(?<=[.!?。！？])\s+/)
-    .map((s) => s.trim())
+  // Paragraphs first: a blank line is a longer, deliberate silence.
+  const paragraphs = humanizeText(raw)
+    .split(/\n+/)
+    .map((p) => p.trim())
     .filter(Boolean);
 
-  for (const sentence of sentences) {
-    // For longer sentences, also split at clause boundaries so the guide
-    // breathes between ideas rather than rushing through a long stretch.
-    if (sentence.length > 60) {
-      const clauses = sentence
-        .split(/(?<=[,;:])\s+/)
-        .map((c) => c.trim())
-        .filter(Boolean);
+  for (const paragraph of paragraphs) {
+    const sentences = paragraph
+      .split(/(?<=[.!?。！？])\s+/)
+      .map((s) => s.trim())
+      .filter(Boolean);
 
-      clauses.forEach((clause, i) => {
-        const isLast = i === clauses.length - 1;
-        chunks.push({ text: clause, pause: isLast ? SENTENCE_PAUSE : CLAUSE_PAUSE });
-      });
-    } else {
-      chunks.push({ text: sentence, pause: SENTENCE_PAUSE });
-    }
+    sentences.forEach((sentence, si) => {
+      const lastSentence = si === sentences.length - 1;
+      const endPause = lastSentence ? PARAGRAPH_PAUSE : SENTENCE_PAUSE;
+      const question = /[?？]$/.test(sentence);
+
+      // For longer sentences, also split at clause boundaries so the guide
+      // breathes between ideas rather than rushing through a long stretch.
+      if (sentence.length > 60) {
+        const clauses = sentence
+          .split(/(?<=[,;:])\s+/)
+          .map((c) => c.trim())
+          .filter(Boolean);
+
+        clauses.forEach((clause, i) => {
+          const isLast = i === clauses.length - 1;
+          chunks.push({
+            text: clause,
+            pause: isLast ? endPause : CLAUSE_PAUSE,
+            question: isLast ? question : false,
+          });
+        });
+      } else {
+        chunks.push({ text: sentence, pause: endPause, question });
+      }
+    });
   }
 
   // Fallback: text with no sentence-ending punctuation (e.g. a title or label).
-  if (!chunks.length && text) {
-    chunks.push({ text, pause: SENTENCE_PAUSE });
+  if (!chunks.length) {
+    const text = humanizeText(raw);
+    if (text) chunks.push({ text, pause: SENTENCE_PAUSE });
   }
 
-  return chunks;
+  return mergeShortChunks(chunks);
 }
 
 // ─── Speaking engine ─────────────────────────────────────────────────────────
@@ -251,6 +329,7 @@ function intoChunks(raw: string): Chunk[] {
 let queue: Chunk[] = [];
 let activeId: string | null = null;
 let activeLang: Lang = 'en';
+let chunkIndex = 0; // how far through the current passage we are
 let keepAlive: ReturnType<typeof setInterval> | null = null;
 
 function clearKeepAlive() {
@@ -289,18 +368,36 @@ function speakNext() {
   if (voice) u.voice = voice;
   // Hint British English so the engine uses the right pronunciation rules
   // even on platforms where no specific voice could be selected.
-  u.lang   = voice?.lang ?? (activeLang === 'vi' ? 'vi-VN' : 'en-GB');
-  u.rate   = 0.87;  // unhurried — a soft guide, never rushing
-  u.pitch  = 1.0;   // let the voice's natural register carry through
+  u.lang = voice?.lang ?? (activeLang === 'vi' ? 'vi-VN' : 'en-GB');
+
+  // ── Prosody contour ──────────────────────────────────────────────────────
+  // A human reader settles into a passage, keeps a steady middle, and slows
+  // as the final thought lands. Flat rate across every chunk is what makes
+  // TTS feel mechanical.
+  const isFirst = chunkIndex === 0;
+  const isLast = queue.length === 0;
+  let rate = 0.87;              // steady, unhurried middle
+  if (isFirst) rate = 0.84;     // settle in gently
+  if (isLast) rate = 0.82;      // ritardando — let the ending land
+  let pitch = 1.0;              // the voice's natural register
+  if (chunk.question) {
+    pitch = 1.04;               // a slight lift for a rising thought
+    rate -= 0.01;
+  }
+  chunkIndex++;
+
+  u.rate   = rate;
+  u.pitch  = pitch;
   u.volume = 1.0;
 
   u.onend = () => {
     if (activeId !== null) {
-      // Use the chunk's own pause duration — shorter for clause breaks,
-      // longer for sentence ends — so the reading has natural breathing.
+      // The chunk's own pause (breath vs. completed thought), with a little
+      // human variance — identical pauses every time read as a metronome.
+      const jitter = 0.85 + Math.random() * 0.3;
       setTimeout(() => {
         if (activeId !== null) speakNext();
-      }, chunk.pause);
+      }, Math.round(chunk.pause * jitter));
     }
   };
 
@@ -327,6 +424,7 @@ export function narrate(id: string, text: string, lang: Lang, opts?: { cue?: boo
   clearKeepAlive();
 
   queue = intoChunks(text);
+  chunkIndex = 0;
   activeId = id;
   activeLang = lang;
   speakingId = id;
