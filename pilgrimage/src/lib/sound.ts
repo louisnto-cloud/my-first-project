@@ -56,9 +56,10 @@ export function playChime(): void {
   const ac = audio();
   if (!ac) return;
   const now = ac.currentTime;
-  // A quiet perfect fifth, the second note a breath after the first.
-  tone(ac, 587.33, now, 0.5, 0.05, 'sine'); // D5
-  tone(ac, 880, now + 0.11, 0.7, 0.045, 'sine'); // A5
+  // A quiet perfect fifth, barely above the silence — an intake of attention,
+  // not a notification.
+  tone(ac, 587.33, now, 0.55, 0.028, 'sine'); // D5
+  tone(ac, 880, now + 0.13, 0.8, 0.022, 'sine'); // A5
 }
 
 /**
@@ -91,7 +92,7 @@ export function playBreath(): void {
 
   const gain = ac.createGain();
   gain.gain.setValueAtTime(0, now);
-  gain.gain.linearRampToValueAtTime(0.02, now + dur * 0.65); // barely there
+  gain.gain.linearRampToValueAtTime(0.014, now + dur * 0.65); // barely there
   gain.gain.linearRampToValueAtTime(0, now + dur);
 
   src.connect(bp).connect(gain).connect(ac.destination);

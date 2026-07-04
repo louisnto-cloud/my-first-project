@@ -76,9 +76,10 @@ const FEMALE_VOICES = [
   // Generic catch-all: any voice whose name or URI contains the word 'female'
   // This covers Google UK English Female, Siri Female URIs, and any future voices.
   'female',
-  // British female — primary fallback after Siri
+  // British female — primary fallback after Siri. Softest first.
+  'sonia',              // Microsoft Sonia Online (Natural, en-GB) — soft, warm
+  'libby',              // Microsoft Libby Online (Natural) — gentle, excellent
   'serena',             // Apple Serena (en-GB, Premium) — gold standard on macOS
-  'libby',              // Microsoft Libby Online (Natural) — excellent on Edge/Chrome
   'mia',                // Microsoft Mia Online (Natural)
   'hazel',              // Microsoft Hazel (en-GB desktop)
   'martha',             // Apple Martha (en-GB)
@@ -87,6 +88,8 @@ const FEMALE_VOICES = [
   'grace', 'emma', 'kate', 'emily', 'claire', 'alice',
   // Irish / Australian — warm, gentle accents; preferred over flat American
   'moira',              // Apple Moira (en-IE)
+  'natasha',            // Microsoft Natasha Online (Natural, en-AU) — soft
+  'olivia',             // Microsoft Olivia Online (Natural, en-AU)
   'karen',              // Apple Karen (en-AU)
   'catherine',          // Apple Catherine (en-AU)
   // American female — solid fallbacks
@@ -185,6 +188,12 @@ export function hasVoiceFor(lang: Lang): boolean {
   if (!voices.length) refreshVoices();
   const tag = lang === 'vi' ? 'vi' : 'en';
   return voices.some((v) => v.lang?.toLowerCase().startsWith(tag));
+}
+
+/** The display name of the voice the guide will use, for the settings card —
+ *  so it's visible whether the device gave us a Natural voice or a fallback. */
+export function guideVoiceName(lang: Lang): string | null {
+  return pickVoice(lang)?.name ?? null;
 }
 
 // ─── Text humanisation ───────────────────────────────────────────────────────
@@ -370,9 +379,9 @@ interface Chunk {
   breath?: boolean;    // opens a paragraph — a faint intake of breath first
 }
 
-const SENTENCE_PAUSE  = 380; // after . ! ?  — a thought has completed
-const CLAUSE_PAUSE    = 110; // after ,  ;  : — a breath between ideas
-const PARAGRAPH_PAUSE = 620; // a blank line — the reader looks up for a moment
+const SENTENCE_PAUSE  = 440; // after . ! ?  — a thought has completed
+const CLAUSE_PAUSE    = 150; // after ,  ;  : — a breath between ideas
+const PARAGRAPH_PAUSE = 700; // a blank line — the reader looks up for a moment
 
 /** Merge stubby fragments into their neighbour so the reading never stutters
  *  ("Yes," … "and no." should be one breath, not two). */
@@ -577,13 +586,14 @@ function speakNext() {
   pitch = Math.min(1.12, Math.max(0.92, pitch));
   rate = Math.min(0.97, Math.max(0.72, rate));
 
-  // Volume shading: a reader leans in at the start, opens up through the
-  // middle, and lets the final words soften rather than stopping at
-  // full loudness. Solemn words are almost whispered.
-  let volume = 1.0;
-  if (isFirst) volume = 0.97;
-  if (isLast) volume = 0.94;
-  if (chunk.solemn) volume = 0.88;
+  // Volume shading: the guide never speaks at full loudness — a soft voice
+  // close by, not an announcement. She leans in at the start, opens through
+  // the middle, and lets the final words fall away. Solemn words are almost
+  // whispered.
+  let volume = 0.94;
+  if (isFirst) volume = 0.9;
+  if (isLast) volume = 0.86;
+  if (chunk.solemn) volume = 0.8;
   chunkIndex++;
 
   u.rate   = rate;

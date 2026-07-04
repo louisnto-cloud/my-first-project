@@ -233,7 +233,7 @@ export function stopAmbient(): void {
 export function duckAmbient(ducked: boolean): void {
   if (!masterGain || !ctx || !running) return;
   const now = ctx.currentTime;
-  const target = ducked ? 0.035 : 0.2;
+  const target = ducked ? 0.022 : 0.2;
   // Fast duck, gentle restore: the chant steps aside before the guide's
   // first words, then swells back only after she has finished.
   const ramp = ducked ? 0.35 : 2.5;

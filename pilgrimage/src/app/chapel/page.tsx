@@ -15,12 +15,16 @@ import { RoseWindow } from '@/components/RoseWindow';
 import { RCIAMilestoneTracker } from '@/components/RCIAMilestoneTracker';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { SpeakerButton } from '@/components/SpeakerButton';
-import { narrate } from '@/lib/speech';
+import { guideVoiceName, narrate, useNarrator } from '@/lib/speech';
 import { updateSave } from '@/lib/storage';
 import { startAmbient, stopAmbient } from '@/lib/ambient';
 
 export default function ChapelPage() {
   const { t, lang, save } = useI18n();
+  // Re-render when narration state changes so the voice name stays current
+  // (the voice list loads asynchronously on some browsers).
+  useNarrator();
+  const voiceName = guideVoiceName(lang);
   const [openPrayer, setOpenPrayer] = useState<string | null>(null);
   const [importMsg, setImportMsg] = useState<string | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
@@ -177,9 +181,12 @@ export default function ChapelPage() {
         {/* Hear the guide's voice right away — no need to open a story */}
         <button
           onClick={() => narrate('voice-preview', t(UI.obGuideSample), lang, { cue: true })}
-          className="mt-3 w-full rounded-2xl border border-gold/30 px-4 py-3 text-left font-ui text-sm font-semibold text-gold"
+          className="mt-3 w-full rounded-2xl border border-gold/30 px-4 py-3 text-left"
         >
-          {t(UI.narratePreview)}
+          <span className="block font-ui text-sm font-semibold text-gold">{t(UI.narratePreview)}</span>
+          {voiceName && (
+            <span className="mt-0.5 block text-xs text-incense">{voiceName}</span>
+          )}
         </button>
         <div className="mt-4 flex flex-col gap-2">
           <button
