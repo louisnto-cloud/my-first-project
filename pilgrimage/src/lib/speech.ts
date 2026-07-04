@@ -50,7 +50,10 @@ function refreshVoices() {
 }
 if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
   refreshVoices();
-  window.speechSynthesis.addEventListener?.('voiceschanged', refreshVoices);
+  window.speechSynthesis.addEventListener?.('voiceschanged', () => {
+    refreshVoices();
+    emit(); // voices can arrive after first render — let the UI re-check
+  });
 }
 
 // ─── Voice preference ────────────────────────────────────────────────────────
@@ -250,7 +253,7 @@ function tidyPunctuation(text: string): string {
   );
 }
 
-function humanizeText(text: string, lang: Lang): string {
+export function humanizeText(text: string, lang: Lang): string {
   // Vietnamese gets its own scripture-reference reading; the English
   // abbreviation and ordinal rules must never touch Vietnamese prose.
   if (lang === 'vi') {
@@ -357,7 +360,7 @@ function mergeShortChunks(chunks: Chunk[]): Chunk[] {
   return out;
 }
 
-function intoChunks(raw: string, lang: Lang): Chunk[] {
+export function intoChunks(raw: string, lang: Lang): Chunk[] {
   const chunks: Chunk[] = [];
 
   // Paragraphs first: a blank line is a longer, deliberate silence.
@@ -464,9 +467,11 @@ function speakNext() {
   // TTS feel mechanical.
   const isFirst = chunkIndex === 0;
   const isLast = queue.length === 0;
-  let rate = 0.87;              // steady, unhurried middle
-  if (isFirst) rate = 0.84;     // settle in gently
-  if (isLast) rate = 0.82;      // ritardando — let the ending land
+  // Vietnamese voices read naturally a touch quicker; 0.87 drags for vi.
+  const base = activeLang === 'vi' ? 0.92 : 0.87;
+  let rate = base;              // steady, unhurried middle
+  if (isFirst) rate = base - 0.03; // settle in gently
+  if (isLast) rate = base - 0.05;  // ritardando — let the ending land
   // Readers move a touch quicker through long, flowing clauses and give
   // short ones room to breathe.
   else if (chunk.text.length > 90) rate += 0.015;
