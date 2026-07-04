@@ -1234,7 +1234,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v10';
+const APP_VERSION='v11';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1357,6 +1357,7 @@ function showAudioHelp(){
 // Each screen change is pushed into browser history so the phone's back
 // button / swipe-back moves within the app instead of leaving it.
 function go(screen,extra={}){
+  if(typeof stopPlayAll==='function') stopPlayAll();
   S.screen=screen;
   Object.assign(S,extra);
   try{history.pushState({s:screen},'');}catch(e){}
@@ -1737,6 +1738,7 @@ function renderScenario(){
     <div class="sit-context">${sit.context}</div>
     <div class="sit-culture">💡 ${sit.culturalNote}</div>
     <div class="practice-toggle-row">
+      <button class="pill${_playAll?' active':''}" onclick="${_playAll?'stopPlayAll()':'playAllDialogue()'}">${_playAll?'⏹ Stop':'▶ Play all'}</button>
       <button class="pill${S.hideMyLines?' active':''}" onclick="S.hideMyLines=!S.hideMyLines;S.lineRevealed=false;render()">🎯 Practice: hide my lines</button>
       ${speedChip()}
     </div>
@@ -1769,6 +1771,35 @@ function renderScenario(){
     <div style="height:30px"></div>
   </main>
   </div>`;
+}
+// Play the whole dialogue hands-free. Advancing is timer-based (estimated
+// from line length) so it works identically for network audio and the
+// device voice, with no event wiring into speak()'s fallback chain.
+let _playAll=null;
+function playAllDialogue(){
+  const sit=SITUATIONS.find(s=>s.id===S.situationId);
+  if(!sit) return;
+  S.hideMyLines=false;
+  _playAll={id:sit.id,i:S.situationLine,timer:null};
+  playAllStep();
+}
+function playAllStep(){
+  if(!_playAll) return;
+  const sit=SITUATIONS.find(s=>s.id===_playAll.id);
+  if(!sit||_playAll.i>=sit.lines.length){stopPlayAll();return;}
+  S.situationLine=_playAll.i;
+  render();
+  const line=sit.lines[_playAll.i];
+  speak(line.vi);
+  const est=1400+line.vi.length*(S.audioSlow?150:95);
+  _playAll.timer=setTimeout(()=>{if(_playAll){_playAll.i++;playAllStep();}},est);
+}
+function stopPlayAll(){
+  if(!_playAll) return;
+  clearTimeout(_playAll.timer);
+  _playAll=null;
+  stopAudio();
+  if(S.screen==='scenario') render();
 }
 function markSitDone(id){
   S.doneSits=S.doneSits||[];
