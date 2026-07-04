@@ -348,6 +348,8 @@ interface Chunk {
   question?: boolean;  // rising thought — spoken with a slight lift
   solemn?: boolean;    // "Amen." / "Alleluia." — spoken slowly, reverently
   quoted?: boolean;    // dialogue — a reader marks a quotation with a shift
+  pos?: 'open' | 'mid' | 'close' | 'solo'; // position within its sentence
+  seed?: number;       // sentence counter — each sentence gets its own melody
 }
 
 const SENTENCE_PAUSE  = 380; // after . ! ?  — a thought has completed
@@ -370,6 +372,8 @@ function mergeShortChunks(chunks: Chunk[]): Chunk[] {
       prev.text = `${prev.text} ${c.text}`;
       prev.pause = c.pause;
       prev.question = c.question;
+      // If the merge swallowed the whole sentence, it now opens AND closes it.
+      if (prev.pos === 'open' && c.pos === 'close') prev.pos = 'solo';
     } else {
       out.push({ ...c });
     }
@@ -379,6 +383,7 @@ function mergeShortChunks(chunks: Chunk[]): Chunk[] {
 
 export function intoChunks(raw: string, lang: Lang): Chunk[] {
   const chunks: Chunk[] = [];
+  let seed = 0; // running sentence counter, across paragraphs
 
   // Paragraphs first: a blank line is a longer, deliberate silence.
   const paragraphs = humanizeText(raw, lang)
@@ -399,10 +404,12 @@ export function intoChunks(raw: string, lang: Lang): Chunk[] {
       const quoted = /^["“‘']/.test(sentence);
       // A solemn word earns a long silence after it, even mid-paragraph.
       const endPause = lastSentence || solemn ? PARAGRAPH_PAUSE : SENTENCE_PAUSE;
+      seed++;
 
       // For longer sentences, also split at clause boundaries so the guide
-      // breathes between ideas rather than rushing through a long stretch.
-      if (sentence.length > 60) {
+      // breathes between ideas rather than rushing through a long stretch —
+      // and so the pitch can fall through the sentence (declination).
+      if (sentence.length > 48) {
         const clauses = sentence
           .split(/(?<=[,;:])\s+/)
           .map((c) => c.trim())
@@ -415,10 +422,12 @@ export function intoChunks(raw: string, lang: Lang): Chunk[] {
             pause: isLast ? endPause : CLAUSE_PAUSE,
             question: isLast ? question : false,
             quoted: i === 0 ? quoted : false,
+            pos: i === 0 ? 'open' : isLast ? 'close' : 'mid',
+            seed,
           });
         });
       } else {
-        chunks.push({ text: sentence, pause: endPause, question, solemn, quoted });
+        chunks.push({ text: sentence, pause: endPause, question, solemn, quoted, pos: 'solo', seed });
       }
     });
   }
@@ -426,7 +435,7 @@ export function intoChunks(raw: string, lang: Lang): Chunk[] {
   // Fallback: text with no sentence-ending punctuation (e.g. a title or label).
   if (!chunks.length) {
     const text = humanizeText(raw, lang);
-    if (text) chunks.push({ text, pause: SENTENCE_PAUSE });
+    if (text) chunks.push({ text, pause: SENTENCE_PAUSE, pos: 'solo', seed: 1 });
   }
 
   return mergeShortChunks(chunks);
@@ -483,9 +492,10 @@ function speakNext() {
   u.lang = voice?.lang ?? (activeLang === 'vi' ? 'vi-VN' : 'en-GB');
 
   // ── Prosody contour ──────────────────────────────────────────────────────
-  // A human reader settles into a passage, keeps a steady middle, and slows
-  // as the final thought lands. Flat rate across every chunk is what makes
-  // TTS feel mechanical.
+  // Monotone is what a flat pitch sounds like. A human reader speaks in
+  // melody: each sentence sits on its own note, opens above the baseline,
+  // and falls as the thought completes — pitch declination. Rate breathes
+  // the same way: settle in, hold a steady middle, slow into the ending.
   const isFirst = chunkIndex === 0;
   const isLast = queue.length === 0;
   // Vietnamese voices read naturally a touch quicker; 0.87 drags for vi.
@@ -497,16 +507,32 @@ function speakNext() {
   // short ones room to breathe.
   else if (chunk.text.length > 90) rate += 0.015;
   else if (chunk.text.length < 25) rate -= 0.015;
-  let pitch = 1.0;              // the voice's natural register
-  if (chunk.question) {
-    pitch = 1.04;               // a slight lift for a rising thought
-    rate -= 0.01;
-  }
-  if (chunk.quoted) pitch = 1.02; // a reader marks dialogue with a small shift
+
+  // Each sentence sits on its own note: a deterministic melody derived from
+  // the sentence counter, drifting ±0.02 around the voice's natural register.
+  const seed = chunk.seed ?? 0;
+  const melody = (((seed * 2654435761) >>> 0) % 1000) / 1000; // stable 0..1
+  let pitch = 0.985 + melody * 0.04;
+
+  // Declination: the thought begins above its note and falls to rest on it.
+  if (chunk.pos === 'open') pitch += 0.045;
+  else if (chunk.pos === 'mid') pitch += 0.015;
+  else if (chunk.pos === 'close') pitch -= 0.035;
+
+  if (chunk.question) pitch += 0.075; // the rise of asking
+  if (chunk.quoted) pitch += 0.02;    // dialogue sits slightly apart
+
+  // Micro-variance: no two chunks are ever spoken identically.
+  pitch += Math.random() * 0.02 - 0.01;
+  rate += Math.random() * 0.016 - 0.008;
+
   if (chunk.solemn) {
-    rate = 0.76;                // "Amen." — slow, reverent, letting it rest
-    pitch = 0.98;
+    rate = 0.76;   // "Amen." — slow, reverent, letting it rest
+    pitch = 0.96;
   }
+
+  pitch = Math.min(1.12, Math.max(0.92, pitch));
+  rate = Math.min(0.97, Math.max(0.72, rate));
   chunkIndex++;
 
   u.rate   = rate;
