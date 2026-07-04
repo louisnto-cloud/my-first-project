@@ -185,6 +185,8 @@ export const UI = {
   guideReading: v('Reading aloud', 'Đang đọc'),
   guideTapToStop: v('Tap to stop', 'Chạm để dừng'),
 
+  stepsWalked: v('steps walked', 'bước đã đi'),
+
   // App update — a newer build is ready
   updateReady: v('The road ahead has been repaved — a newer version is ready.', 'Con đường phía trước đã được làm mới — phiên bản mới đã sẵn sàng.'),
   updateAction: v('Refresh', 'Làm mới'),

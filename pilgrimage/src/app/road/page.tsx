@@ -61,6 +61,7 @@ function RoadContent() {
         <div className="mt-2 flex flex-col gap-2 pb-4">
           {BONUS_WORLDS.map((w) => {
             const unlocked = isWorldUnlocked(w, save);
+            const doneCount = w.lessons.filter((l) => save.completed[l.id]).length;
             return (
               <button
                 key={w.id}
@@ -77,7 +78,9 @@ function RoadContent() {
                     {unlocked ? t(w.theme) : t(UI.bonusLocked)}
                   </span>
                 </span>
-                <span className={unlocked ? 'text-gold' : 'text-incense/50'}>{unlocked ? '✦' : '·'}</span>
+                <span className={`text-xs ${unlocked ? 'text-gold' : 'text-incense/50'}`}>
+                  {unlocked && w.lessons.length > 0 ? `${doneCount}/${w.lessons.length}` : unlocked ? '✦' : '·'}
+                </span>
               </button>
             );
           })}
@@ -86,15 +89,37 @@ function RoadContent() {
 
       {/* World sheet */}
       {world && (
-        <div className="fixed inset-0 z-40 flex flex-col justify-end bg-lapis/60" onClick={() => setSelected(null)}>
+        <div
+          className="veil-in fixed inset-0 z-40 flex flex-col justify-end bg-lapis/60"
+          onClick={() => setSelected(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={t(world.church)}
+        >
           <div
-            className="max-h-[70dvh] overflow-y-auto rounded-t-3xl border-t border-gold/30 bg-lapis px-5 pb-28 pt-5"
+            className="sheet-up max-h-[70dvh] overflow-y-auto rounded-t-3xl border-t border-gold/30 bg-lapis px-5 pb-28 pt-5"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-ivory/20" />
             <p className="font-display text-[11px] uppercase tracking-[0.3em] text-gold">{t(world.place)}</p>
             <h2 className="mt-1 font-display text-2xl text-ivory">{t(world.church)}</h2>
             <p className="mt-1 font-story text-lg italic text-incense">{t(world.theme)}</p>
+            {isWorldUnlocked(world, save) && world.lessons.length > 0 && (() => {
+              const doneCount = world.lessons.filter((l) => save.completed[l.id]).length;
+              return (
+                <div className="mt-3">
+                  <div className="h-1 overflow-hidden rounded-full bg-ivory/10">
+                    <div
+                      className="h-full rounded-full bg-gold transition-all duration-500"
+                      style={{ width: `${(doneCount / world.lessons.length) * 100}%` }}
+                    />
+                  </div>
+                  <p className="mt-1.5 text-xs text-incense">
+                    {doneCount} / {world.lessons.length} · {t(UI.stepsWalked)}
+                  </p>
+                </div>
+              );
+            })()}
 
             {!isWorldUnlocked(world, save) ? (
               <p className="mt-6 rounded-2xl border border-ivory/10 p-4 font-story text-lg italic text-incense">
