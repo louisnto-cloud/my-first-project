@@ -45,24 +45,53 @@ if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
   window.speechSynthesis.addEventListener?.('voiceschanged', refreshVoices);
 }
 
-// Substrings that tend to mark the warmer, more natural, less synthetic voices
-// across platforms. Higher in the list = stronger preference.
+// British female voices, ranked by warmth and naturalness.
+// Serena (Apple Premium) and Libby (Microsoft Neural) are the gold-standard
+// picks on their respective platforms; the rest are solid fallbacks.
+const BRITISH_FEMALE = [
+  'serena',             // Apple Serena (en-GB, Premium) — the warmest
+  'libby',              // Microsoft Libby Online (Natural)
+  'mia',                // Microsoft Mia Online (Natural)
+  'martha',             // Apple Martha (en-GB)
+  'helena',             // Apple Helena (en-GB)
+  'susan',              // Microsoft Susan Online (Natural)
+  'emily',              // Various en-GB Emily voices
+  'uk english female',  // Google UK English Female
+  'alice',              // Some platforms ship an Alice en-GB
+];
+
+// General warm/natural voice markers — a fallback when no British voice is found.
 const WARM = [
   'natural', 'neural', 'premium', 'enhanced', 'wavenet', 'siri', 'google',
-  // Friendly named voices Apple/Microsoft ship that sound human:
-  'samantha', 'ava', 'allison', 'serena', 'karen', 'moira', 'tessa', 'fiona',
-  'daniel', 'aaron', 'nathan', 'oliver', 'libby', 'aria', 'jenny', 'guy',
+  'samantha', 'ava', 'allison', 'karen', 'moira', 'tessa', 'fiona',
+  'aaron', 'nathan', 'oliver', 'aria', 'jenny', 'guy',
   // Vietnamese named voices:
   'linh', 'an', 'hoaimy', 'namminh',
 ];
 
-function voiceScore(v: SpeechSynthesisVoice): number {
+function voiceScore(v: SpeechSynthesisVoice, lang: Lang): number {
   const n = `${v.name} ${v.voiceURI}`.toLowerCase();
   let s = 0;
+
+  if (lang === 'en') {
+    // Strong pull toward British English — a soft en-GB voice is the guide's
+    // natural register. Irish and Australian are gentle fallbacks.
+    const lc = v.lang?.toLowerCase() ?? '';
+    if (lc.startsWith('en-gb')) s += 50;
+    else if (/^en-(ie|au|nz)/.test(lc)) s += 12;
+  }
+
+  // British female voices score highest within the en-GB pool.
+  BRITISH_FEMALE.forEach((name, i) => {
+    if (n.includes(name)) s += BRITISH_FEMALE.length - i + 30;
+  });
+
+  // General warm/natural markers lift any voice above robotic defaults.
   WARM.forEach((p, i) => {
     if (n.includes(p)) s += WARM.length - i + 8;
   });
-  // A default voice the platform chose is usually a safe, clear one.
+
+  // A platform default is usually a sensible, clear voice.
   if (v.default) s += 3;
   return s;
 }
@@ -73,7 +102,7 @@ function pickVoice(lang: Lang): SpeechSynthesisVoice | undefined {
   const tag = lang === 'vi' ? 'vi' : 'en';
   const matches = voices.filter((v) => v.lang?.toLowerCase().startsWith(tag));
   if (!matches.length) return undefined;
-  return matches.slice().sort((a, b) => voiceScore(b) - voiceScore(a))[0];
+  return matches.slice().sort((a, b) => voiceScore(b, lang) - voiceScore(a, lang))[0];
 }
 
 /** True when a voice for this language is actually installed on this device. */
@@ -138,9 +167,11 @@ function speakNext() {
   const u = new SpeechSynthesisUtterance(next);
   const voice = pickVoice(activeLang);
   if (voice) u.voice = voice;
-  u.lang = voice?.lang ?? (activeLang === 'vi' ? 'vi-VN' : 'en-US');
-  u.rate = 0.95; // a touch slower: kinder to a second-language listener
-  u.pitch = 1.02; // a hair warmer than flat
+  // Hint British English so the engine uses the right pronunciation rules
+  // even on platforms where no specific voice could be selected.
+  u.lang = voice?.lang ?? (activeLang === 'vi' ? 'vi-VN' : 'en-GB');
+  u.rate = 0.90; // unhurried — a soft guide, never in a rush
+  u.pitch = 1.0; // let the chosen voice's natural register carry through
   u.onend = () => {
     if (activeId !== null) speakNext();
   };
