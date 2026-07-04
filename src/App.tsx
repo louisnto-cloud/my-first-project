@@ -4,6 +4,7 @@ import { useApp } from './store';
 import type { Role } from './types';
 import Login from './pages/Login';
 import { Dashboard, FeedbackPage, Grades, Homework, Practice, Schedule, StudentLayout } from './pages/student/StudentApp';
+import ReadingWritingApp from './pages/student/ReadingWritingApp';
 import ParentPage from './pages/parent/ParentPage';
 import { TeachHome, TeachLayout } from './pages/teach/TeachHome';
 import ClassDetail from './pages/teach/ClassDetail';
@@ -46,6 +47,7 @@ export default function App() {
           <Route path="homework" element={<Homework />} />
           <Route path="practice" element={<Practice />} />
           <Route path="feedback" element={<FeedbackPage />} />
+          <Route path="read-write" element={<ReadingWritingApp />} />
         </Route>
         <Route
           path="/parent"
