@@ -15,20 +15,46 @@ import { StepCard } from './rw/shared';
 type Tab = 'learn' | 'library' | 'review' | 'me';
 
 export default function ReadingWritingApp() {
+  const { user, mutate } = useApp();
   const [progress, setProgress] = useState<RWProgress>(loadProgress);
   const [tab, setTab] = useState<Tab>('learn');
   const [selectedMonth, setSelectedMonth] = useState<Month | null>(null);
   const [activeLesson, setActiveLesson] = useState<Lesson | null>(null);
   const [newBadges, setNewBadges] = useState<Badge[]>([]);
 
-  /** Single funnel for all progress mutations: streak day, daily-goal log, and badge checks happen here. */
+  /**
+   * Single funnel for all progress mutations: streak day, daily-goal log, and
+   * badge checks happen here. Runs outside the setState updater because it has
+   * side effects (localStorage, eTop practice log) that must not double-fire
+   * under StrictMode.
+   */
   const apply = (fn: (p: RWProgress) => RWProgress) => {
-    setProgress((prev) => {
-      const { progress: next, earned } = withBadges(touchToday(logActivity(prev, fn(prev))));
-      saveProgress(next);
-      if (earned.length) setNewBadges((b) => [...b, ...earned]);
-      return next;
-    });
+    const applied = fn(progress);
+
+    // Bridge to eTop: completed lessons/stories/reviews count as practice
+    // activity, feeding the school-wide streak, points, and class leaderboard.
+    if (user?.role === 'student') {
+      const lessons = Math.max(0, applied.completedLessons.length - progress.completedLessons.length);
+      const stories = Math.max(0, applied.completedStories.length - progress.completedStories.length);
+      const reviews = Math.max(0, applied.reviewSessions - progress.reviewSessions);
+      const points = lessons * 20 + stories * 10 + reviews * 5;
+      if (points > 0) {
+        mutate((db) => {
+          db.practice.push({
+            id: `rw-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+            studentId: user.id,
+            date: todayISO(),
+            type: lessons > 0 ? 'quiz' : 'vocab',
+            points,
+          });
+        });
+      }
+    }
+
+    const { progress: next, earned } = withBadges(touchToday(logActivity(progress, applied)));
+    saveProgress(next);
+    if (earned.length) setNewBadges((b) => [...b, ...earned]);
+    setProgress(next);
   };
 
   const totalLessons = getAllLessons().length;
