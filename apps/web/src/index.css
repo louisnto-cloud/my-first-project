@@ -80,6 +80,30 @@ h1, h2, h3 {
     @apply rounded-3xl p-6 text-xl font-extrabold shadow-soft transition-all active:scale-95;
   }
 
+  /* Chunky, pressable, kid-friendly button (Duolingo-style depth) */
+  .btn-fun {
+    @apply relative inline-flex select-none items-center justify-center gap-2 rounded-2xl px-6 py-3.5 text-base font-extrabold text-white;
+    background: linear-gradient(180deg, #8b6fe8, #6a51df);
+    box-shadow: 0 5px 0 #4a37a0, 0 8px 16px -6px rgba(74, 55, 160, 0.6);
+    transition: transform 0.06s ease, box-shadow 0.06s ease;
+  }
+  .btn-fun:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #4a37a0, 0 3px 8px -4px rgba(74, 55, 160, 0.6);
+  }
+  .btn-fun-green { background: linear-gradient(180deg, #43d6a0, #18b06b); box-shadow: 0 5px 0 #0e8f55, 0 8px 16px -6px rgba(14, 143, 85, 0.55); }
+  .btn-fun-green:active { box-shadow: 0 1px 0 #0e8f55; }
+  .btn-fun-amber { background: linear-gradient(180deg, #ffca3a, #ffb800); color: #7a4f00; box-shadow: 0 5px 0 #d99700, 0 8px 16px -6px rgba(217, 151, 0, 0.5); }
+  .btn-fun-amber:active { box-shadow: 0 1px 0 #d99700; }
+
+  /* Big friendly answer/choice tile */
+  .tile {
+    @apply block w-full rounded-2xl border-2 border-b-[5px] border-violet-100 bg-white p-4 text-left text-lg font-extrabold text-ink transition-all active:translate-y-[3px] active:border-b-2;
+  }
+  .tile-on { @apply border-violet-400 bg-violet-50 text-violet-700; }
+  .tile-right { @apply border-emerald-400 bg-emerald-50 text-emerald-700; }
+  .tile-wrong { @apply border-rose-300 bg-rose-50 text-rose-500; }
+
   /* a refined segmented control */
   .seg {
     @apply flex rounded-2xl border bg-white p-1;
@@ -121,6 +145,19 @@ h1, h2, h3 {
   50% { transform: translateY(-7px); }
 }
 .animate-float { animation: float 5s ease-in-out infinite; }
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+.animate-wiggle { animation: wiggle 2.6s ease-in-out infinite; }
+
+@keyframes bounceIn {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.08); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animate-bounce-in { animation: bounceIn 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.35) both; }
 
 @keyframes fall {
   to { transform: translateY(440px) rotate(560deg); opacity: 0; }

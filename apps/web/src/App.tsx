@@ -6,6 +6,7 @@ import { Landing } from './Landing';
 import { ClassManager } from './ClassManager';
 import { PracticeHub } from './Practice';
 import { Icon } from './Icon';
+import { Mascot } from './Mascot';
 
 const ROLE_LABEL: Record<string, { vi: string; en: string }> = {
   student: { vi: 'Học viên', en: 'Student' },
@@ -105,22 +106,22 @@ function Student({ lang, t }: { lang: Lang; t: (k: string) => string }) {
 
   const totalAssignments = classes.reduce((n, c) => n + (assignments[c.id]?.length ?? 0), 0);
 
+  const classColors = ['bg-rose-100 text-rose-500', 'bg-sky-100 text-sky-500', 'bg-emerald-100 text-emerald-500', 'bg-amber-100 text-amber-600', 'bg-fuchsia-100 text-fuchsia-500'];
+
   return (
     <div className="space-y-4">
       {ach && (
-        <div className="relative overflow-hidden rounded-3.5xl bg-gradient-to-br from-violet-600 via-violet-600 to-fuchsia-600 p-5 text-white shadow-lift">
-          <div className="absolute -right-6 -top-8 h-32 w-32 rounded-full bg-white/10 blur-xl" />
-          <div className="relative flex items-center gap-6">
-            <div>
-              <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide text-violet-100"><Icon name="star" size={13} /> {t('points')}</div>
-              <div className="text-4xl font-extrabold leading-tight">{ach.points}</div>
+        <div className="relative overflow-hidden rounded-3.5xl bg-gradient-to-br from-violet-500 via-violet-600 to-fuchsia-600 p-5 text-white shadow-lift">
+          <div className="absolute -right-8 -top-10 h-36 w-36 rounded-full bg-white/10 blur-xl" />
+          <div className="relative flex items-center gap-3">
+            <Mascot size={72} mood="wave" className="shrink-0 animate-float drop-shadow" />
+            <div className="min-w-0 flex-1">
+              <div className="text-lg font-extrabold">{lang === 'vi' ? 'Chào bạn! Học thôi nào 🎈' : "Hi! Let's learn 🎈"}</div>
+              <div className="mt-2 flex gap-2">
+                <span className="chip bg-white/20 text-white"><Icon name="star" size={14} /> {ach.points} {t('points')}</span>
+                <span className="chip bg-white/20 text-white"><Icon name="flame" size={14} /> {ach.streak} {t('dayStreak')}</span>
+              </div>
             </div>
-            <div className="h-11 w-px bg-white/25" />
-            <div>
-              <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide text-violet-100"><Icon name="flame" size={13} /> {t('dayStreak')}</div>
-              <div className="text-4xl font-extrabold leading-tight">{ach.streak}</div>
-            </div>
-            <div className="ml-auto opacity-90"><Icon name={ach.streak > 0 ? 'flame' : 'sparkles'} size={46} strokeWidth={1.6} /></div>
           </div>
         </div>
       )}
@@ -128,7 +129,7 @@ function Student({ lang, t }: { lang: Lang; t: (k: string) => string }) {
       <div className="seg">
         {([['work', 'pencil', lang === 'vi' ? 'Bài tập' : 'Assignments'], ['practice', 'book', lang === 'vi' ? 'Tự luyện' : 'Practice']] as const).map(([k, icon, label]) => (
           <button key={k} data-active={view === k} onClick={() => setView(k)}>
-            <span className="flex items-center justify-center gap-1.5"><Icon name={icon} size={16} /> {label}</span>
+            <span className="flex items-center justify-center gap-1.5"><Icon name={icon} size={17} /> {label}</span>
           </button>
         ))}
       </div>
@@ -137,27 +138,34 @@ function Student({ lang, t }: { lang: Lang; t: (k: string) => string }) {
         <PracticeHub lang={lang} />
       ) : (
         <>
-          {classes.map((c) => (
+          {classes.map((c, ci) => (
             <div key={c.id} className="card space-y-3">
               <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-violet-100 text-xl">🏫</div>
+                <div className={`flex h-12 w-12 items-center justify-center rounded-2xl ${classColors[ci % classColors.length]}`}><Icon name="cap" size={24} /></div>
                 <div className="min-w-0">
-                  <div className="font-black text-violet-800">Lớp {c.name}</div>
-                  <div className="truncate text-[11px] font-bold text-slate-400">👩‍🏫 {c.teacherName ?? '—'}{c.scheduleNote ? ` · ${c.scheduleNote}` : ''}</div>
+                  <div className="text-[17px] font-extrabold text-ink">Lớp {c.name}</div>
+                  <div className="truncate text-xs font-bold text-muted">{c.teacherName ?? '—'}{c.scheduleNote ? ` · ${c.scheduleNote}` : ''}</div>
                 </div>
               </div>
               {(assignments[c.id] ?? []).length === 0 ? (
-                <div className="rounded-2xl bg-emerald-50 p-3 text-center text-sm font-bold text-emerald-600">
-                  {lang === 'vi' ? 'Chưa có bài tập mới 🎉' : 'No new assignments 🎉'}
+                <div className="flex items-center justify-center gap-2 rounded-2xl bg-emerald-50 p-3 text-sm font-extrabold text-emerald-600">
+                  <Mascot size={30} mood="happy" /> {lang === 'vi' ? 'Chưa có bài mới — giỏi lắm!' : 'All done — great job!'}
                 </div>
               ) : (
                 (assignments[c.id] ?? []).map((a) => {
                   const done = a.myStatus === 'graded' || a.myStatus === 'submitted';
                   return (
-                    <button key={a.id} onClick={() => setPlaying(a.id)} className={`flex w-full items-center justify-between rounded-2xl p-3.5 text-left font-bold transition active:scale-[0.99] ${done ? 'bg-slate-50' : 'bg-gradient-to-r from-violet-50 to-fuchsia-50 hover:from-violet-100'}`}>
-                      <span className="flex items-center gap-2"><span className="text-lg">{done ? '✅' : '📝'}</span>{a.title}</span>
+                    <button
+                      key={a.id}
+                      onClick={() => setPlaying(a.id)}
+                      className={`flex w-full items-center gap-3 rounded-2xl border-2 border-b-4 p-3.5 text-left transition active:translate-y-[3px] active:border-b-2 ${done ? 'border-slate-100 bg-slate-50' : 'border-violet-200 bg-gradient-to-r from-violet-50 to-fuchsia-50'}`}
+                    >
+                      <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${done ? 'bg-emerald-100 text-emerald-500' : 'bg-violet-600 text-white'}`}>
+                        <Icon name={done ? 'check' : 'pencil'} size={18} />
+                      </span>
+                      <span className="flex-1 font-extrabold text-ink">{a.title}</span>
                       <span className={`chip ${done ? 'bg-emerald-100 text-emerald-600' : 'bg-violet-600 text-white'}`}>
-                        {a.myStatus === 'graded' ? t('graded') : a.myStatus === 'submitted' ? t('submitted') : a.myStatus === 'in_progress' ? `${t('continue')} →` : `${t('start')} →`}
+                        {a.myStatus === 'graded' ? t('graded') : a.myStatus === 'submitted' ? t('submitted') : a.myStatus === 'in_progress' ? t('continue') : t('start')}
                       </span>
                     </button>
                   );
@@ -167,13 +175,13 @@ function Student({ lang, t }: { lang: Lang; t: (k: string) => string }) {
           ))}
 
           {totalAssignments === 0 && classes.length > 0 && (
-            <button onClick={() => setView('practice')} className="card flex w-full items-center justify-center gap-2 font-bold text-violet-600">
-              📖 {lang === 'vi' ? 'Rảnh rồi? Tự luyện thêm nhé!' : 'Free time? Practice more!'} →
+            <button onClick={() => setView('practice')} className="btn-fun btn-fun-green w-full">
+              <Icon name="book" size={18} /> {lang === 'vi' ? 'Tự luyện thêm nào!' : 'Practice more!'}
             </button>
           )}
 
           <details className="card !p-3">
-            <summary className="cursor-pointer text-sm font-extrabold text-slate-500">🔑 {t('joinClass')}</summary>
+            <summary className="flex cursor-pointer items-center gap-2 text-sm font-extrabold text-muted"><Icon name="plus" size={16} /> {t('joinClass')}</summary>
             <div className="mt-3 flex gap-2">
               <input className="input uppercase" placeholder="UP1 / BEAR42" value={code} onChange={(e) => setCode(e.target.value)} />
               <button onClick={join} className="btn-primary">{t('join')}</button>

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { sfx, speak } from './sound';
+import { Mascot } from './Mascot';
 
 // A calm, delightful finish screen — Apple-style: one big number, gentle
 // confetti, a single clear action. Reused by assignments and lessons.
@@ -84,7 +85,7 @@ export function Celebrate({
     <div className="relative overflow-hidden">
       {good && !pending && <Confetti />}
       <div className="card animate-pop relative flex flex-col items-center gap-4 py-10 text-center">
-        <div className="text-6xl">{pending ? '📨' : good ? (pct! >= 90 ? '🏆' : '🎉') : '💪'}</div>
+        <Mascot size={96} mood={pending ? 'think' : good ? 'cheer' : 'happy'} className="animate-bounce-in" />
         <h2 className="text-xl font-black text-violet-800">{title}</h2>
         {pending ? (
           <p className="font-bold text-slate-500">Đã nộp — chờ giáo viên chấm</p>

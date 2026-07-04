@@ -51,11 +51,12 @@ function LessonPlayer({ lesson, lang, onExit }: { lesson: Lesson; lang: 'vi' | '
       key={opt}
       disabled={picked !== null}
       onClick={() => { setPicked(opt); answer(opt === answerStr); }}
-      className={`block w-full rounded-2xl border-2 p-3 text-left font-bold ${
-        picked === null ? 'border-violet-100 bg-white' : opt === answerStr ? 'border-emerald-500 bg-emerald-50' : opt === picked ? 'border-rose-400 bg-rose-50' : 'border-violet-100 opacity-50'
-      }`}
+      className={`tile ${picked === null ? '' : opt === answerStr ? 'tile-right' : opt === picked ? 'tile-wrong' : 'opacity-40'}`}
     >
-      {opt}
+      <span className="flex items-center gap-2">
+        {picked !== null && opt === answerStr && <span className="text-emerald-500">✓</span>}
+        {opt}
+      </span>
     </button>
   );
 
@@ -142,15 +143,15 @@ function LessonPlayer({ lesson, lang, onExit }: { lesson: Lesson; lang: 'vi' | '
             </div>
             <div className="flex flex-wrap gap-2">
               {remaining.map(({ w, i }) => (
-                <button key={i} onClick={() => setOrder([...order, i])} className="rounded-2xl border-2 border-violet-100 bg-white px-3 py-2 font-bold">{w}</button>
+                <button key={i} onClick={() => setOrder([...order, i])} className="rounded-2xl border-2 border-b-4 border-violet-200 bg-white px-4 py-2.5 text-base font-extrabold text-ink transition active:translate-y-[3px] active:border-b-2">{w}</button>
               ))}
             </div>
             <button
               disabled={order.length !== ex.words.length}
               onClick={() => answer(order.map((i) => ex.words[i]).join(' ') === ex.answer)}
-              className="btn-primary w-full"
+              className="btn-fun w-full disabled:opacity-40"
             >
-              Kiểm tra
+              {lang === 'vi' ? 'Kiểm tra' : 'Check'}
             </button>
           </>
         )}

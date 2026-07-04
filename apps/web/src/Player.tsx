@@ -70,7 +70,7 @@ function QuestionCard({ q, value, onChange, t }: { q: Q; value: unknown; onChang
 
       {(q.type === 'mc' || q.type === 'listen_mc') &&
         q.options!.map((opt) => (
-          <button key={opt} onClick={() => pick(opt)} className={`block w-full rounded-2xl border-2 p-3 text-left font-bold ${value === opt ? 'border-violet-500 bg-violet-50' : 'border-violet-100 bg-white'}`}>
+          <button key={opt} onClick={() => pick(opt)} className={`tile ${value === opt ? 'tile-on' : ''}`}>
             {opt}
           </button>
         ))}
@@ -79,8 +79,8 @@ function QuestionCard({ q, value, onChange, t }: { q: Q; value: unknown; onChang
         q.options!.map((opt) => {
           const on = Array.isArray(value) && (value as string[]).includes(opt);
           return (
-            <button key={opt} onClick={() => pickMulti(opt)} className={`block w-full rounded-2xl border-2 p-3 text-left font-bold ${on ? 'border-emerald-500 bg-emerald-50' : 'border-violet-100 bg-white'}`}>
-              {on ? '✅ ' : '⬜ '}{opt}
+            <button key={opt} onClick={() => pickMulti(opt)} className={`tile ${on ? 'tile-right' : ''}`}>
+              {on ? '☑ ' : '☐ '}{opt}
             </button>
           );
         })}
@@ -219,7 +219,7 @@ export function Player({ assignmentId, onExit, t }: { assignmentId: string; onEx
       {a.questions.map((q) => (
         <QuestionCard key={q.id} q={q} value={answers[q.id]} onChange={(v) => setAnswer(q.id, v)} t={t} />
       ))}
-      <button onClick={submit} disabled={!submissionId} className="btn-primary w-full py-3.5 text-lg">{t('submit')} 🚀</button>
+      <button onClick={submit} disabled={!submissionId} className="btn-fun btn-fun-green w-full disabled:opacity-40">{t('submit')} 🚀</button>
       <div className="pb-2 text-center text-[11px] font-bold text-slate-400">{saveState === 'saving' ? t('saving') : saveState === 'saved' ? `✓ ${t('saved')}` : ''}</div>
     </div>
   );
