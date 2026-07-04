@@ -116,8 +116,8 @@ function UpdateToast({ onRefresh }: { onRefresh: () => void }) {
   const [hidden, setHidden] = useState(false);
   if (hidden) return null;
   return (
-    <div className="fixed inset-x-0 bottom-24 z-50 flex justify-center px-6">
-      <div className="flex w-full max-w-page items-center gap-3 rounded-2xl border border-gold/30 bg-lapis/95 px-4 py-3 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.8)] backdrop-blur-xl">
+    <div className="fixed inset-x-0 bottom-24 z-50 flex justify-center px-6" role="status" aria-live="polite">
+      <div className="veil-in flex w-full max-w-page items-center gap-3 rounded-2xl border border-gold/30 bg-lapis/95 px-4 py-3 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.8)] backdrop-blur-xl">
         <p className="min-w-0 flex-1 text-sm text-ivory">{t(UI.updateReady)}</p>
         <button
           onClick={onRefresh}

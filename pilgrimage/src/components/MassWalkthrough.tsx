@@ -71,7 +71,13 @@ export function MassWalkthrough() {
           <p className="font-display text-[10px] uppercase tracking-[0.25em] text-gold">
             {done ? t(UI.massTitle) : t(MASS_PARTS[moment.part])}
           </p>
-          <div className="mt-1 h-0.5 overflow-hidden rounded-full bg-ivory/10">
+          <div
+            className="mt-1 h-0.5 overflow-hidden rounded-full bg-ivory/10"
+            role="progressbar"
+            aria-valuemin={0}
+            aria-valuemax={total}
+            aria-valuenow={Math.min(step, total)}
+          >
             <div className="h-full bg-gold transition-all duration-300" style={{ width: `${(Math.min(step, total) / total) * 100}%` }} />
           </div>
         </div>

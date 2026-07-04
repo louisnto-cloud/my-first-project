@@ -50,6 +50,7 @@ export function BottomNav() {
 
   return (
     <nav
+      aria-label="Main"
       className="fixed inset-x-0 bottom-0 z-40 border-t border-ivory/[0.06] bg-lapis/80 backdrop-blur-xl"
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
     >

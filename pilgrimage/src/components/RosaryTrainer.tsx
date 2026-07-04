@@ -128,7 +128,13 @@ export function RosaryTrainer() {
             {t(set.name)}
             {mystery ? ` · ${step.mystery}/5` : ''}
           </p>
-          <div className="mt-1 h-0.5 overflow-hidden rounded-full bg-ivory/10">
+          <div
+            className="mt-1 h-0.5 overflow-hidden rounded-full bg-ivory/10"
+            role="progressbar"
+            aria-valuemin={0}
+            aria-valuemax={steps.length}
+            aria-valuenow={Math.min(i, steps.length)}
+          >
             <div className="h-full bg-gold transition-all duration-300" style={{ width: `${(Math.min(i, steps.length) / steps.length) * 100}%` }} />
           </div>
         </div>
