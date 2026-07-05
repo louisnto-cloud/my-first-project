@@ -245,11 +245,12 @@
 ===================================================================== */
 
 /* ---------------- state ---------------- */
+const LETTER_ORDER = ['s','a','t','p','i','n'];
 const DEFAULT_STATE = {
   name: 'Mariana',
   stars: 0,
-  letters: { s:{met:0,traced:0,findRight:0,findWrong:0}, a:{met:0,traced:0,findRight:0,findWrong:0}, t:{met:0,traced:0,findRight:0,findWrong:0} },
-  words: { sat:0, at:0 },
+  letters: {},
+  words: {},
   firstWordAt: null,
   playMs: 0,
   lastUsed: null
@@ -257,18 +258,30 @@ const DEFAULT_STATE = {
 let S;
 try { S = Object.assign(JSON.parse(JSON.stringify(DEFAULT_STATE)), JSON.parse(localStorage.getItem('sg_state')||'{}')); }
 catch(e){ S = JSON.parse(JSON.stringify(DEFAULT_STATE)); }
-for (const l of ['s','a','t']) S.letters[l] = Object.assign({met:0,traced:0,findRight:0,findWrong:0}, S.letters[l]||{});
+for (const l of LETTER_ORDER) S.letters[l] = Object.assign({met:0,traced:0,findRight:0,findWrong:0}, S.letters[l]||{});
+if (!S.words || typeof S.words!=='object') S.words = {};
 function save(){ localStorage.setItem('sg_state', JSON.stringify(S)); }
 
 /* ---------------- letters ---------------- */
 const LETTERS = {
   s: { color:'#2bb673', bg:'#dff5e8', friend:'🐍', strokes:['M 67 31 C 62 21 37 21 33 32 C 29 44 68 48 68 63 C 68 77 39 81 32 69'] },
   a: { color:'#e2504e', bg:'#fde3e3', friend:'🍎', strokes:['M 60 46 C 54 36 34 37 31 52 C 28 68 48 78 60 66','M 61 38 C 61 50 61 62 61 66 C 61 72 64 75 69 73'] },
-  t: { color:'#e88f2a', bg:'#fdeed7', friend:'⛺', strokes:['M 46 20 C 46 34 46 52 46 60 C 46 72 55 76 64 70','M 32 38 L 62 38'] }
+  t: { color:'#e88f2a', bg:'#fdeed7', friend:'⛺', strokes:['M 46 20 C 46 34 46 52 46 60 C 46 72 55 76 64 70','M 32 38 L 62 38'] },
+  p: { color:'#8e5bd9', bg:'#ece3fb', friend:'🐷', strokes:['M 38 42 L 38 88','M 38 50 C 44 40 64 42 64 57 C 64 72 44 74 38 64'] },
+  i: { color:'#00a6a6', bg:'#d9f4f4', friend:'🐛', strokes:['M 50 44 L 50 72','M 50 30 C 47 30 47 34 50 34 C 53 34 53 30 50 30'] },
+  n: { color:'#3f6bd8', bg:'#e1e8fb', friend:'🪺', strokes:['M 38 46 L 38 74','M 38 60 C 38 46 62 44 62 60 L 62 74'] }
 };
+/* all 18 real words buildable from s a t p i n, each with a picture */
 const WORDS = {
-  sat: { seq:['s','a','t'] },
-  at:  { seq:['a','t'] }
+  sat: { seq:['s','a','t'] },            at:  { seq:['a','t'] },
+  pat: { seq:['p','a','t'], emoji:'🖐️🐶' }, tap: { seq:['t','a','p'], emoji:'👉🚰' },
+  sap: { seq:['s','a','p'], emoji:'🌳💧' }, sit: { seq:['s','i','t'], emoji:'🧒🪑' },
+  pit: { seq:['p','i','t'], emoji:'🕳️' },  tip: { seq:['t','i','p'], emoji:'☝️' },
+  sip: { seq:['s','i','p'], emoji:'🥤' },  pin: { seq:['p','i','n'], emoji:'📌' },
+  tin: { seq:['t','i','n'], emoji:'🥫' },  tan: { seq:['t','a','n'], emoji:'😎☀️' },
+  pan: { seq:['p','a','n'], emoji:'🍳' },  nap: { seq:['n','a','p'], emoji:'😴' },
+  nip: { seq:['n','i','p'], emoji:'🦀' },  an:  { seq:['a','n'], emoji:'🍎' },
+  in:  { seq:['i','n'], emoji:'🐱📦' },   it:  { seq:['i','t'], emoji:'👉🎁' }
 };
 
 /* sample stroke paths into point lists (for tracing) */
@@ -297,7 +310,8 @@ function letterSVG(l, opts={}) {
   for (const d of L.strokes)
     inner += `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
   if (opts.eyes) {
-    const eyePos = { s:[[47,26],[58,27]], a:[[40,52],[50,53]], t:[[40,30],[53,30]] }[l];
+    const eyePos = { s:[[47,26],[58,27]], a:[[40,52],[50,53]], t:[[40,30],[53,30]],
+                     p:[[48,53],[57,54]], i:[[44,52],[56,52]], n:[[46,54],[56,55]] }[l];
     for (const [x,y] of eyePos)
       inner += `<circle cx="${x}" cy="${y}" r="5.2" fill="#fff"/><circle cx="${x+1}" cy="${y+1}" r="2.5" fill="#3a2a18"/>`;
   }
@@ -370,8 +384,9 @@ const CLIPS = {
   snd_s:{ script:'“sssss” — a long soft snake hiss. Hold it 2–3 seconds. NOT the name “ess”.', phoneme:'s' },
   snd_a:{ script:'“a” as in apple — “aaaa”. Hold it 2 seconds. NOT the name “ay”.', phoneme:'a' },
   snd_t:{ script:'“t” — one tiny crisp tick, like a clock. Try not to say “tuh”. NOT the name “tee”.', phoneme:'t' },
-  wd_sat:{ script:'“sat!” — say the whole word happily.' , tts:'sat!' },
-  wd_at:{ script:'“at!” — say the whole word happily.', tts:'at!' },
+  snd_p:{ script:'“p” — one soft little lip-pop. No “puh”. NOT the name “pee”.', phoneme:'t' },
+  snd_i:{ script:'“i” as in itchy — “iiii”. Hold it 2 seconds. NOT the name “eye”.', phoneme:'a' },
+  snd_n:{ script:'“nnnn” — a long hum through the nose. Hold it 2–3 seconds. NOT the name “en”.', phoneme:'a' },
   p_hi:{ script:'“Hi {name}! Come and play with me!” (like her best friend)', tts:'Hi {name}! Come and play with me!' },
   p_this:{ script:'“This sound says…”', tts:'This sound says' },
   p_tap:{ script:'“Tap it and hear it again!”', tts:'Tap it and hear it again!' },
@@ -384,14 +399,15 @@ const CLIPS = {
   p_firstword:{ script:'“{name}!! You READ a word!! Hooray!!!” (as excited as you can)', tts:'{name}! You read a word!! Hooray!!' },
   p_more:{ script:'“Let’s play with the other sounds first!”', tts:'Lets play with the other sounds first!' }
 };
+for (const w in WORDS) CLIPS['wd_'+w] = { script:`“${w}!” — say the whole word happily.`, tts:w+'!', auto:true };
 function withName(s){ return (s||'').split('{name}').join(S.name || 'Mariana'); }
 
-/* Bundled real-voice audio (MBROLA us1 human diphone voice) — the default
-   voice for letter sounds and words. A parent recording still wins. */
-const BUNDLED = {
-  snd_s:'assets/s.mp3', snd_a:'assets/a.mp3', snd_t:'assets/t.mp3',
-  wd_sat:'assets/sat.mp3', wd_at:'assets/at.mp3'
-};
+/* Bundled real-voice audio — human-voice vowels/nasals (MBROLA us1 diphones)
+   with engineered full-bandwidth s/t/p. Default voice for every letter sound
+   and word. A parent recording still wins. */
+const BUNDLED = {};
+for (const l of LETTER_ORDER) BUNDLED['snd_'+l] = 'assets/'+l+'.mp3';
+for (const w in WORDS) BUNDLED['wd_'+w] = 'assets/'+w+'.mp3';
 for (const id in BUNDLED){ const a=new Audio(BUNDLED[id]); a.preload='auto'; }
 
 let dbp = new Promise((res,rej)=>{
@@ -542,9 +558,10 @@ function bigCelebration(mega=false){
 
 /* ---------------- progression ---------------- */
 function ready(l){ const st=S.letters[l]; return st.met>=2 || st.traced>=1; }
-function awake(l){ if (l==='s') return true; if (l==='a') return ready('s'); if (l==='t') return ready('a'); return false; }
+function awake(l){ const i=LETTER_ORDER.indexOf(l); return i===0 || ready(LETTER_ORDER[i-1]); }
 function wordAwake(){ return ready('s') && ready('a') && ready('t'); }
-function recommended(){ for (const l of ['s','a','t']) if (!ready(l)) return l; return 'word'; }
+function availableWords(){ return Object.keys(WORDS).filter(w=>WORDS[w].seq.every(ready)); }
+function recommended(){ for (const l of LETTER_ORDER) if (!ready(l)) return awake(l) ? l : 'word'; return 'word'; }
 function status(l){ const st=S.letters[l];
   const tot = st.findRight+st.findWrong;
   if (st.findRight>=4 && st.traced>=2 && (st.findRight/Math.max(1,tot))>=.75) return 'got';
@@ -569,7 +586,7 @@ const spotsEl = document.getElementById('spots');
 function buildHome(){
   spotsEl.innerHTML='';
   const reco = recommended();
-  for (const l of ['s','a','t']){
+  for (const l of LETTER_ORDER){
     const d = document.createElement('div');
     d.className='spot ' + (awake(l)?'awake':'asleep') + (reco===l && awake(l)?' reco':'');
     d.style.background = LETTERS[l].bg;
@@ -727,7 +744,11 @@ function startFind(l){
 }
 function nextFindRound(first){
   FD.wrongs=0;
-  const opts=['s','a','t'].sort(()=>Math.random()-.5);
+  let pool = LETTER_ORDER.filter(awake);
+  if (pool.length<3) pool = LETTER_ORDER.slice(0,3);
+  const others = pool.filter(l=>l!==FD.target).sort(()=>Math.random()-.5);
+  const nOpts = pool.length>=5 ? 3 : 2;
+  const opts=[FD.target, ...others.slice(0,nOpts)].sort(()=>Math.random()-.5);
   findRow.innerHTML='';
   for (const l of opts){
     const b=document.createElement('div'); b.className='bubble'; b.dataset.l=l;
@@ -766,7 +787,15 @@ const wordRow = document.getElementById('word-row');
 const wordPic = document.getElementById('word-picture');
 let WD=null;
 function startWord(){
-  const w = S.words.sat===0 ? 'sat' : (Math.random()<.6?'sat':'at');
+  const avail = availableWords();
+  if (!avail.length) { goHome(); return; }
+  let w;
+  if (!S.firstWordAt && avail.includes('sat')) w = 'sat';
+  else {
+    const unread = avail.filter(x=>!(S.words[x]>0));
+    const pickFrom = unread.length && Math.random()<.7 ? unread : avail;
+    w = pickFrom[Math.floor(Math.random()*pickFrom.length)];
+  }
   WD = { word:w, idx:0 };
   wordRow.innerHTML=''; wordPic.innerHTML='';
   const seq = WORDS[w].seq;
@@ -797,7 +826,7 @@ function onTileTap(i, t, ev){
   t.classList.add('done');
   burstAt(ev.clientX, ev.clientY, 6);
   sfx.chime();
-  const stretch = { s:1.6, a:1.1, t:undefined }[l];
+  const stretch = { s:1.6, a:1.1, i:0.9, n:1.4 }[l];
   speakSeq([soundPart(l, stretch)]);
   WD.idx++;
   if (WD.idx < seq.length){ setPointer(WD.idx); }
@@ -811,13 +840,14 @@ async function blendWord(){
   // slide tiles together
   [...wordRow.children].forEach(t=>{ t.style.margin='-1.6vmin'; });
   const parts=[];
-  for (const l of seq) parts.push(soundPart(l, {s:1.1,a:.8}[l]), {pause:120});
+  for (const l of seq) parts.push(soundPart(l, {s:1.1,a:.8,i:.7,n:.9}[l]), {pause:120});
   parts.push({pause:250},{clip:'wd_'+w});
   await speakSeq(parts);
   // picture + celebration
-  wordPic.innerHTML = WORD_PICS[w];
+  if (WORD_PICS[w]) wordPic.innerHTML = WORD_PICS[w];
+  else wordPic.innerHTML = `<div style="font-size:16vmin; text-align:center; line-height:1.1;">${WORDS[w].emoji||'⭐'}</div>`;
   const first = !S.firstWordAt;
-  S.words[w]++; if (first) S.firstWordAt = Date.now(); save();
+  S.words[w] = (S.words[w]||0)+1; if (first) S.firstWordAt = Date.now(); save();
   bigCelebration(first);
   const r = wordPic.getBoundingClientRect();
   awardStar(r.left+r.width/2, r.top);
@@ -896,7 +926,7 @@ async function openParent(){
   const pc = document.getElementById('parent-content');
   const chip = st => st==='got' ? '<span class="chip got">Knows it 🌟</span>' : st==='prac' ? '<span class="chip prac">Practicing</span>' : '<span class="chip none">Not started</span>';
   let rows='';
-  for (const l of ['s','a','t']){
+  for (const l of LETTER_ORDER){
     const st=S.letters[l];
     rows += `<div class="card row">
       <svg class="biglet" viewBox="0 0 100 100">${LETTERS[l].strokes.map(d=>`<path d="${d}" fill="none" stroke="${LETTERS[l].color}" stroke-width="13" stroke-linecap="round"/>`).join('')}</svg>
@@ -906,6 +936,7 @@ async function openParent(){
   }
   let clipRows='';
   for (const id in CLIPS){
+    if (CLIPS[id].auto) continue;
     const have = clipHave.has(id);
     const label = have ? '✓ your voice' : (BUNDLED[id] ? 'built-in human voice' : 'device voice');
     clipRows += `<div class="card row" data-clip="${id}">
@@ -919,7 +950,9 @@ async function openParent(){
   pc.innerHTML = `
     <h2>📈 Progress</h2>
     ${rows}
-    <div class="card">⭐ Stars earned: <b>${S.stars}</b> &nbsp;·&nbsp; 📖 Words read: <b>sat ×${S.words.sat}, at ×${S.words.at}</b>
+    <div class="card">⭐ Stars earned: <b>${S.stars}</b><br>📖 Words read: <b>${
+      Object.entries(S.words).filter(([,c])=>c>0).map(([w,c])=>`${w} ×${c}`).join(', ') || 'none yet'
+    }</b> &nbsp;<span style="color:#999">(of ${Object.keys(WORDS).length} in the game)</span>
       ${S.firstWordAt?`<br>🎉 First word ever read on <b>${fmtDate(S.firstWordAt)}</b>`:''}</div>
     <div class="card">⏱ Total play time: <b>${fmtMins(S.playMs)}</b><br>🕐 Last played: <b>${fmtDate(S.lastUsed)}</b></div>
 
