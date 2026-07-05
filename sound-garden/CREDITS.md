@@ -1,10 +1,15 @@
 # Sound Garden — audio credits
 
-The built-in letter-sound and word audio files in `assets/` were synthesized
-with the [MBROLA](https://github.com/numediart/MBROLA) diphone speech
-synthesizer using the `us1` American English voice database (built from
-recordings of a real human speaker). MBROLA voices are free for
-non-commercial use; this app is a personal, non-commercial family project.
+All built-in speech in `assets/` comes from **one voice**: the CMU ARCTIC
+"SLT" American English speaker (a real recorded voice from Carnegie Mellon's
+free ARCTIC corpus), synthesized at 32 kHz with the
+[Festival](https://www.cstr.ed.ac.uk/projects/festival/) HTS voice
+`festvox-us-slt-hts` (free festvox licence).
 
-All other art and sounds are original to this project (inline SVG and
+- Sentences and words are spoken naturally by the voice.
+- The held letter sounds (sss, aaa, iii, nnn) are carved out of that same
+  speaker's recorded words using Festival's phoneme timings, then extended
+  seamlessly so a child can hear them stretch.
+
+All other art and sound effects are original to this project (inline SVG and
 Web Audio synthesis).
