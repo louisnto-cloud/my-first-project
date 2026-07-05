@@ -386,6 +386,14 @@ const CLIPS = {
 };
 function withName(s){ return (s||'').split('{name}').join(S.name || 'Mariana'); }
 
+/* Bundled real-voice audio (MBROLA us1 human diphone voice) — the default
+   voice for letter sounds and words. A parent recording still wins. */
+const BUNDLED = {
+  snd_s:'assets/s.mp3', snd_a:'assets/a.mp3', snd_t:'assets/t.mp3',
+  wd_sat:'assets/sat.mp3', wd_at:'assets/at.mp3'
+};
+for (const id in BUNDLED){ const a=new Audio(BUNDLED[id]); a.preload='auto'; }
+
 let dbp = new Promise((res,rej)=>{
   const rq = indexedDB.open('sound-garden',1);
   rq.onupgradeneeded = ()=>rq.result.createObjectStore('clips');
@@ -452,6 +460,7 @@ async function speakSeq(parts){
     if (tok !== speakToken) break;
     if (part.pause){ await new Promise(r=>setTimeout(r,part.pause)); continue; }
     if (part.clip && clipHave.has(part.clip)){ await playAudioURL(clipURL.get(part.clip)); continue; }
+    if (part.clip && BUNDLED[part.clip]){ await playAudioURL(BUNDLED[part.clip]); continue; }
     if (part.clip){
       const c = CLIPS[part.clip];
       if (c.phoneme){ await synthPhoneme(c.phoneme, part.dur); continue; }
@@ -898,9 +907,10 @@ async function openParent(){
   let clipRows='';
   for (const id in CLIPS){
     const have = clipHave.has(id);
+    const label = have ? '✓ your voice' : (BUNDLED[id] ? 'built-in human voice' : 'device voice');
     clipRows += `<div class="card row" data-clip="${id}">
       <div style="flex:1; min-width:180px;"><b>${id.replace(/^(snd_|wd_|p_)/,'')}</b><br><span class="script">${withName(CLIPS[id].script)}</span></div>
-      <span class="${have?'ok':'robot'}">${have?'✓ your voice':'robot voice'}</span>
+      <span class="${have?'ok':(BUNDLED[id]?'ok':'robot')}">${label}</span>
       <button class="rec" data-id="${id}">⏺ Record</button>
       <button class="ghost play" data-id="${id}">▶ Hear it</button>
       ${have?`<button class="warn del" data-id="${id}">✕</button>`:''}
@@ -920,8 +930,8 @@ async function openParent(){
 
     <h2>🎙 The voice (important!)</h2>
     <div class="card">
-      Right now, any sound without a recording uses a <b>robot voice</b>: sentences use the iPad's built-in speech, and the letter sounds (sss, aaa, t) are computer-made so they are never said as letter names — but they sound robotic.<br><br>
-      <b>Best option (takes ~3 minutes):</b> record each line below in your own voice. Tap <b>⏺ Record</b>, say the line, tap <b>⏹ Stop</b>. Your niece will then hear you — warm and perfectly pronounced. Tips: hold "sss" and "aaa" for 2–3 seconds; make "t" one tiny tick with no "uh" after it; never say letter names.
+      The <b>letter sounds and words</b> come with built-in recordings based on a real human voice, so they are always pronounced correctly and never said as letter names. The <b>talking sentences</b> use the iPad's own speech voice.<br><br>
+      <b>Even better (takes ~3 minutes):</b> record any line below in your own voice and it replaces the built-in one. Tap <b>⏺ Record</b>, say the line, tap <b>⏹ Stop</b>. Hearing <i>you</i> is the warmest option of all. Tips: hold "sss" and "aaa" for 2–3 seconds; make "t" one tiny tick with no "uh" after it; never say letter names. Tap <b>▶ Hear it</b> on any line to compare first.
     </div>
     ${clipRows}
 
@@ -974,8 +984,9 @@ async function previewClip(id){
   ensureAudio();
   const b = await idbGet(id);
   if (b){ const u=URL.createObjectURL(b); await playAudioURL(u); URL.revokeObjectURL(u); return; }
+  if (BUNDLED[id]){ await playAudioURL(BUNDLED[id]); return; }
   const c = CLIPS[id];
-  if (c.phoneme) synthPhoneme(c.phoneme); else ttsSpeak(c.tts||'');
+  if (c.phoneme) synthPhoneme(c.phoneme); else ttsSpeak(withName(c.tts));
 }
 
 /* ---------------- time tracking ---------------- */
