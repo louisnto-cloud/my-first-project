@@ -246,6 +246,7 @@
 
 /* ---------------- state ---------------- */
 const DEFAULT_STATE = {
+  name: 'Mariana',
   stars: 0,
   letters: { s:{met:0,traced:0,findRight:0,findWrong:0}, a:{met:0,traced:0,findRight:0,findWrong:0}, t:{met:0,traced:0,findRight:0,findWrong:0} },
   words: { sat:0, at:0 },
@@ -371,18 +372,19 @@ const CLIPS = {
   snd_t:{ script:'“t” — one tiny crisp tick, like a clock. Try not to say “tuh”. NOT the name “tee”.', phoneme:'t' },
   wd_sat:{ script:'“sat!” — say the whole word happily.' , tts:'sat!' },
   wd_at:{ script:'“at!” — say the whole word happily.', tts:'at!' },
-  p_hi:{ script:'“Hi! Come and play with me!”', tts:'Hi! Come and play with me!' },
+  p_hi:{ script:'“Hi {name}! Come and play with me!” (like her best friend)', tts:'Hi {name}! Come and play with me!' },
   p_this:{ script:'“This sound says…”', tts:'This sound says' },
   p_tap:{ script:'“Tap it and hear it again!”', tts:'Tap it and hear it again!' },
-  p_pick:{ script:'“Pick a game!”', tts:'Pick a game!' },
+  p_pick:{ script:'“Pick a game, {name}!”', tts:'Pick a game, {name}!' },
   p_trace:{ script:'“Trace it with your finger!”', tts:'Trace it with your finger!' },
   p_find:{ script:'“Can you find…”', tts:'Can you find' },
-  p_yay:{ script:'“Yay!! You did it!!”', tts:'Yay! You did it!' },
-  p_again:{ script:'“Ooh, so close! Try again!” (happy voice)', tts:'Ooh! Try again!' },
+  p_yay:{ script:'“Yay!! You did it, {name}!!”', tts:'Yay! You did it, {name}!' },
+  p_again:{ script:'“That’s okay, {name}! Try again!” (very warm and gentle — she is sensitive)', tts:'Thats okay, {name}! Try again!' },
   p_word:{ script:'“Let’s make a word! Tap the sounds!”', tts:'Lets make a word! Tap the sounds!' },
-  p_firstword:{ script:'“You READ a word!! Hooray!!!” (as excited as you can)', tts:'You read a word!! Hooray!!' },
+  p_firstword:{ script:'“{name}!! You READ a word!! Hooray!!!” (as excited as you can)', tts:'{name}! You read a word!! Hooray!!' },
   p_more:{ script:'“Let’s play with the other sounds first!”', tts:'Lets play with the other sounds first!' }
 };
+function withName(s){ return (s||'').split('{name}').join(S.name || 'Mariana'); }
 
 let dbp = new Promise((res,rej)=>{
   const rq = indexedDB.open('sound-garden',1);
@@ -453,7 +455,7 @@ async function speakSeq(parts){
     if (part.clip){
       const c = CLIPS[part.clip];
       if (c.phoneme){ await synthPhoneme(c.phoneme, part.dur); continue; }
-      await ttsSpeak(c.tts || ''); continue;
+      await ttsSpeak(withName(c.tts)); continue;
     }
     if (part.phoneme){ await synthPhoneme(part.phoneme, part.dur); continue; }
     if (part.text){ await ttsSpeak(part.text); continue; }
@@ -897,7 +899,7 @@ async function openParent(){
   for (const id in CLIPS){
     const have = clipHave.has(id);
     clipRows += `<div class="card row" data-clip="${id}">
-      <div style="flex:1; min-width:180px;"><b>${id.replace(/^(snd_|wd_|p_)/,'')}</b><br><span class="script">${CLIPS[id].script}</span></div>
+      <div style="flex:1; min-width:180px;"><b>${id.replace(/^(snd_|wd_|p_)/,'')}</b><br><span class="script">${withName(CLIPS[id].script)}</span></div>
       <span class="${have?'ok':'robot'}">${have?'✓ your voice':'robot voice'}</span>
       <button class="rec" data-id="${id}">⏺ Record</button>
       <button class="ghost play" data-id="${id}">▶ Hear it</button>
@@ -910,6 +912,11 @@ async function openParent(){
     <div class="card">⭐ Stars earned: <b>${S.stars}</b> &nbsp;·&nbsp; 📖 Words read: <b>sat ×${S.words.sat}, at ×${S.words.at}</b>
       ${S.firstWordAt?`<br>🎉 First word ever read on <b>${fmtDate(S.firstWordAt)}</b>`:''}</div>
     <div class="card">⏱ Total play time: <b>${fmtMins(S.playMs)}</b><br>🕐 Last played: <b>${fmtDate(S.lastUsed)}</b></div>
+
+    <h2>💛 Her name</h2>
+    <div class="card">The guide talks to her by name, like a friend. If the robot voice says it strangely, spell it the way it <i>sounds</i> (for example “Mariahna”).<br><br>
+      <input id="kidname" value="${(S.name||'Mariana').replace(/"/g,'&quot;')}" style="font-size:16px; padding:8px 10px; border:2px solid #d8cfb8; border-radius:8px; width:200px;">
+      <button id="savename">Save</button></div>
 
     <h2>🎙 The voice (important!)</h2>
     <div class="card">
@@ -924,13 +931,17 @@ async function openParent(){
     <h2>🧹 Reset</h2>
     <div class="card"><button class="warn" id="resetbtn">Erase all progress</button> <span style="color:#888;font-size:13px;">(keeps your voice recordings)</span></div>
   `;
+  document.getElementById('savename').addEventListener('click',()=>{
+    const v=document.getElementById('kidname').value.trim();
+    if (v){ S.name=v; save(); ttsSpeak(withName('Hi {name}!')); openParent(); }
+  });
   pc.querySelectorAll('button.rec').forEach(b=>b.addEventListener('click',()=>toggleRecord(b)));
   pc.querySelectorAll('button.play').forEach(b=>b.addEventListener('click',()=>previewClip(b.dataset.id)));
   pc.querySelectorAll('button.del').forEach(b=>b.addEventListener('click',async()=>{ await idbDel(b.dataset.id); openParent(); }));
   const rb=document.getElementById('resetbtn');
   if (rb) rb.addEventListener('click',()=>{
     if (confirm('Erase all of her progress (stars, sounds practiced)? Voice recordings are kept.')){
-      S=JSON.parse(JSON.stringify(DEFAULT_STATE)); save(); updateJar(); openParent();
+      const nm=S.name; S=JSON.parse(JSON.stringify(DEFAULT_STATE)); S.name=nm; save(); updateJar(); openParent();
     }
   });
   parentEl.classList.remove('hidden');
