@@ -1301,7 +1301,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v15';
+const APP_VERSION='v16';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1315,9 +1315,16 @@ function stopAudio(){
   try{if(speechSynthesis.speaking||speechSynthesis.pending)speechSynthesis.cancel();}catch(e){}
   if(_player){try{_player.pause();}catch(e){}}
 }
+// Sanitize display text for the voice: a slash (anh/chị) or ellipsis would
+// be read out loud; spoken form should be plain words only.
+function cleanTts(t){
+  return t.replace(/\//g,' ').replace(/…/g,', ').replace(/\s+/g,' ').trim();
+}
 function ttsUrl(text){
-  const spd=S.audioSlow?0.3:0.95;
-  return 'https://translate.googleapis.com/translate_tts?client=gtx&ie=UTF-8&tl=vi&ttsspeed='+spd+'&q='+encodeURIComponent(text);
+  // Normal speed matches the Google Translate app exactly (ttsspeed 1);
+  // the slow toggle mirrors its turtle button.
+  const spd=S.audioSlow?0.3:1;
+  return 'https://translate.googleapis.com/translate_tts?client=gtx&ie=UTF-8&tl=vi&ttsspeed='+spd+'&q='+encodeURIComponent(cleanTts(text));
 }
 let _pre=null,_preText='';
 function preloadAudio(){
@@ -1360,7 +1367,7 @@ function speakLocal(text,seq,force){
   if(seq!==undefined&&seq!==_speakSeq&&!force) return;
   if(!('speechSynthesis' in window)){setStatus('This browser has no speech support');return;}
   try{if(speechSynthesis.speaking||speechSynthesis.pending)speechSynthesis.cancel();}catch(e){}
-  const u=new SpeechSynthesisUtterance(text);
+  const u=new SpeechSynthesisUtterance(cleanTts(text));
   const vv=getViVoice();
   if(vv){u.voice=vv;u.lang=vv.lang;_lastPath='Device voice: '+vv.name;}
   else{
