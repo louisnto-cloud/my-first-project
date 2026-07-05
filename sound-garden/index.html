@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Sound Garden">
+<meta name="theme-color" content="#8fd3f4">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="apple-touch-icon.png">
+<title>Sound Garden</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html, body { height:100%; overflow:hidden; position:fixed; inset:0; width:100%;
+    -webkit-user-select:none; user-select:none; -webkit-touch-callout:none;
+    font-family: -apple-system, "SF Pro Rounded", "Arial Rounded MT Bold", "Segoe UI", sans-serif; }
+  body { background: linear-gradient(#79c7f2 0%, #a8e0f9 45%, #d9f3e5 75%, #b7e6a1 100%); touch-action:none; }
+
+  .scene { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  .hidden { display:none !important; }
+
+  /* ------- decorations ------- */
+  #sun { position:absolute; top:calc(env(safe-area-inset-top) + 2vmin); right:4vmin; width:16vmin; height:16vmin; pointer-events:none; }
+  #sun .rays { animation: spinSlow 24s linear infinite; transform-origin:50% 50%; }
+  .cloud { position:absolute; font-size:8vmin; opacity:.85; pointer-events:none; animation: drift linear infinite; }
+  @keyframes spinSlow { to { transform: rotate(360deg); } }
+  @keyframes drift { from { transform: translateX(-20vmax); } to { transform: translateX(120vmax); } }
+
+  /* ------- home spots ------- */
+  #spots { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:5vmin; max-width:95vw; padding:2vmin; }
+  .spot { width:min(31vmin,220px); height:min(31vmin,220px); border-radius:50%; position:relative;
+    display:flex; align-items:center; justify-content:center; cursor:pointer;
+    box-shadow: 0 1.2vmin 0 rgba(0,0,0,.10); transition: transform .15s; }
+  .spot:active { transform: scale(.93); }
+  .spot svg.letter { width:62%; height:62%; }
+  .spot .friend { position:absolute; bottom:-1vmin; right:-1vmin; font-size:9vmin; filter: drop-shadow(0 .5vmin rgba(0,0,0,.15)); }
+  .spot.awake { animation: bob 2.6s ease-in-out infinite; }
+  .spot.asleep { filter: grayscale(.85); opacity:.55; }
+  .spot.reco::before { content:""; position:absolute; inset:-2.2vmin; border-radius:50%;
+    border:1.1vmin solid rgba(255,214,64,.9); animation: pulseRing 1.4s ease-out infinite; }
+  @keyframes bob { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-1.4vmin);} }
+  @keyframes pulseRing { 0%{ transform:scale(.92); opacity:.9;} 70%{ transform:scale(1.08); opacity:.2;} 100%{ transform:scale(1.1); opacity:0;} }
+
+  /* ------- generic big round buttons ------- */
+  .roundbtn { border-radius:50%; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 1vmin 0 rgba(0,0,0,.12); cursor:pointer; transition:transform .12s; background:#fff; }
+  .roundbtn:active { transform:scale(.9); }
+  .navbtn { position:absolute; top:calc(env(safe-area-inset-top) + 2vmin); width:12vmin; height:12vmin; min-width:56px; min-height:56px; font-size:6vmin; z-index:30; }
+  #homebtn { right:3vmin; }
+  #againbtn { right:18vmin; }
+
+  /* ------- picker ------- */
+  #picker-letter { width:34vmin; height:34vmin; }
+  #picker-row { display:flex; gap:6vmin; margin-top:4vmin; flex-wrap:wrap; justify-content:center; }
+  .pickbtn { width:min(24vmin,180px); height:min(24vmin,180px); font-size:11vmin; }
+
+  /* ------- meet ------- */
+  #meet-letter { width:min(64vmin,480px); height:min(64vmin,480px); cursor:pointer; transition: transform .18s; }
+  #meet-letter.jig { animation: wiggle .5s; }
+  #meet-letter.spinny { animation: spinOnce .6s; }
+  #meet-letter.grow { animation: growPop .5s; }
+  @keyframes wiggle { 0%,100%{transform:rotate(0)} 25%{transform:rotate(-8deg)} 75%{transform:rotate(8deg)} }
+  @keyframes spinOnce { to { transform: rotate(360deg); } }
+  @keyframes growPop { 50% { transform: scale(1.22); } }
+
+  /* ------- trace ------- */
+  #trace-wrap { width:min(74vmin,560px); height:min(74vmin,560px); position:relative; }
+  #trace-wrap svg { width:100%; height:100%; touch-action:none; }
+  #trace-hand { position:absolute; font-size:8vmin; pointer-events:none; transform:translate(-30%,-10%); transition:opacity .3s; }
+
+  /* ------- find ------- */
+  #find-row { display:flex; gap:6vmin; flex-wrap:wrap; justify-content:center; padding:2vmin; }
+  .bubble { width:min(27vmin,210px); height:min(27vmin,210px); border-radius:50%; background:rgba(255,255,255,.92);
+    display:flex; align-items:center; justify-content:center; cursor:pointer;
+    box-shadow:0 1.2vmin 0 rgba(0,0,0,.10); transition:transform .15s; }
+  .bubble:active { transform:scale(.92); }
+  .bubble svg { width:64%; height:64%; }
+  .bubble.no { animation: wiggle .5s; }
+  .bubble.hintpulse { animation: hintGlow 1.2s ease-in-out infinite; }
+  @keyframes hintGlow { 0%,100%{ box-shadow:0 1.2vmin 0 rgba(0,0,0,.10);} 50%{ box-shadow:0 0 6vmin 2vmin rgba(255,214,64,.95);} }
+
+  /* ------- word ------- */
+  #word-row { display:flex; gap:5vmin; justify-content:center; align-items:center; }
+  .tile { width:min(24vmin,190px); height:min(28vmin,220px); border-radius:4vmin; background:rgba(255,255,255,.95);
+    display:flex; align-items:center; justify-content:center; cursor:pointer;
+    box-shadow:0 1.2vmin 0 rgba(0,0,0,.12); transition: transform .5s, box-shadow .3s, margin .5s; position:relative; }
+  .tile svg { width:76%; height:76%; }
+  .tile.done { background:#fff6c8; box-shadow:0 0 5vmin 1vmin rgba(255,214,64,.8); }
+  .tile.no { animation: wiggle .5s; }
+  .tile .pointer { position:absolute; bottom:-9vmin; left:50%; transform:translateX(-50%); font-size:8vmin; animation: bounceUp 1s infinite; pointer-events:none; }
+  @keyframes bounceUp { 0%,100%{ transform:translate(-50%,0);} 50%{ transform:translate(-50%,-2.4vmin);} }
+  #word-picture { margin-top:3vmin; width:min(44vmin,340px); height:min(34vmin,260px); }
+
+  /* ------- pip the guide ------- */
+  #pip { position:fixed; left:2vmin; bottom:calc(env(safe-area-inset-bottom) + 2vmin); width:min(19vmin,150px); height:min(19vmin,150px);
+    z-index:40; cursor:pointer; transition:transform .15s; }
+  #pip:active { transform:scale(.9); }
+  #pip.talking svg { animation: talkBounce .45s ease-in-out infinite; }
+  #pip.dance svg { animation: danceMove .5s ease-in-out infinite; }
+  @keyframes talkBounce { 0%,100%{ transform:scale(1);} 50%{ transform:scale(1.07) translateY(-.6vmin);} }
+  @keyframes danceMove { 0%,100%{ transform:rotate(-8deg) translateY(0);} 50%{ transform:rotate(8deg) translateY(-2vmin);} }
+
+  /* ------- star jar ------- */
+  #jar { position:fixed; right:2vmin; bottom:calc(env(safe-area-inset-bottom) + 2vmin); width:min(15vmin,120px); height:min(19vmin,152px); z-index:40; cursor:pointer; }
+  #jar.jig { animation: wiggle .5s; }
+
+  /* ------- flying stars & confetti ------- */
+  #fx { position:fixed; inset:0; pointer-events:none; z-index:90; overflow:hidden; }
+  .flystar { position:fixed; font-size:7vmin; z-index:95; transition: all 1s cubic-bezier(.4,-0.2,.6,1.1); pointer-events:none; }
+  .conf { position:fixed; top:-8vmin; font-size:5vmin; animation: fall linear forwards; pointer-events:none; }
+  @keyframes fall { to { transform: translateY(115vh) rotate(720deg); } }
+  .burst { position:fixed; font-size:5vmin; pointer-events:none; animation: burstOut .8s ease-out forwards; }
+  @keyframes burstOut { from { transform:translate(0,0) scale(.6); opacity:1; } to { transform: translate(var(--dx), var(--dy)) scale(1.4); opacity:0; } }
+
+  /* ------- gear / parent ------- */
+  #gear { position:fixed; left:1.5vmin; top:calc(env(safe-area-inset-top) + 1.5vmin); width:44px; height:44px; z-index:50;
+    display:flex; align-items:center; justify-content:center; font-size:22px; opacity:.28; }
+  #gear .ring { position:absolute; inset:0; border-radius:50%; }
+  #parent { position:fixed; inset:0; background:#fbf8f1; z-index:100; overflow-y:auto; -webkit-overflow-scrolling:touch;
+    touch-action:pan-y; padding: calc(env(safe-area-inset-top) + 18px) 18px 40px; color:#333; font-size:16px; line-height:1.5; }
+  #parent h1 { font-size:24px; margin-bottom:4px; }
+  #parent h2 { font-size:18px; margin:22px 0 8px; border-bottom:2px solid #eadfc8; padding-bottom:4px; }
+  #parent .card { background:#fff; border-radius:12px; padding:12px 14px; margin:8px 0; box-shadow:0 1px 3px rgba(0,0,0,.08); }
+  #parent .row { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  #parent .chip { padding:3px 10px; border-radius:999px; font-size:13px; font-weight:600; }
+  .chip.none { background:#eee; color:#777; } .chip.prac { background:#ffe9b3; color:#8a6d00; } .chip.got { background:#c9f2c9; color:#1e7d1e; }
+  #parent button { font-size:15px; padding:9px 14px; border:none; border-radius:10px; background:#4a90d9; color:#fff; font-weight:600; }
+  #parent button.warn { background:#d9534f; }
+  #parent button.ghost { background:#e8e2d4; color:#444; }
+  #parent .biglet { width:44px; height:44px; flex:none; }
+  #parent .script { font-style:italic; color:#666; font-size:14px; }
+  #parent .ok { color:#1e7d1e; font-weight:700; } #parent .robot { color:#a05a00; font-weight:700; }
+  #closeparent { position:sticky; top:0; float:right; background:#333 !important; }
+</style>
+</head>
+<body>
+
+<div id="fx"></div>
+
+<!-- ===================== HOME ===================== -->
+<div id="scene-home" class="scene">
+  <svg id="sun" viewBox="0 0 100 100">
+    <g class="rays" stroke="#ffd257" stroke-width="6" stroke-linecap="round">
+      <line x1="50" y1="2" x2="50" y2="16"/><line x1="50" y1="84" x2="50" y2="98"/>
+      <line x1="2" y1="50" x2="16" y2="50"/><line x1="84" y1="50" x2="98" y2="50"/>
+      <line x1="16" y1="16" x2="26" y2="26"/><line x1="74" y1="74" x2="84" y2="84"/>
+      <line x1="16" y1="84" x2="26" y2="74"/><line x1="74" y1="26" x2="84" y2="16"/>
+    </g>
+    <circle cx="50" cy="50" r="26" fill="#ffdd66"/>
+    <circle cx="42" cy="46" r="3" fill="#7a5b00"/><circle cx="58" cy="46" r="3" fill="#7a5b00"/>
+    <path d="M 41 55 Q 50 63 59 55" stroke="#7a5b00" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </svg>
+  <div class="cloud" style="top:8%; animation-duration:70s;">☁️</div>
+  <div class="cloud" style="top:20%; animation-duration:95s; animation-delay:-40s;">☁️</div>
+  <div id="spots"></div>
+</div>
+
+<!-- ===================== ACTIVITY PICKER ===================== -->
+<div id="scene-picker" class="scene hidden">
+  <div class="roundbtn navbtn" id="homebtn-p" style="right:3vmin;">🏠</div>
+  <div id="picker-letter"></div>
+  <div id="picker-row">
+    <div class="roundbtn pickbtn" id="pick-meet" style="background:#ffe3ec;">📢</div>
+    <div class="roundbtn pickbtn" id="pick-trace" style="background:#e3f0ff;">☝️</div>
+    <div class="roundbtn pickbtn" id="pick-find" style="background:#e9ffe3;">🔍</div>
+  </div>
+</div>
+
+<!-- ===================== MEET ===================== -->
+<div id="scene-meet" class="scene hidden">
+  <div class="roundbtn navbtn" id="homebtn-m" style="right:3vmin;">🏠</div>
+  <div id="meet-letter"></div>
+</div>
+
+<!-- ===================== TRACE ===================== -->
+<div id="scene-trace" class="scene hidden">
+  <div class="roundbtn navbtn" id="homebtn-t" style="right:3vmin;">🏠</div>
+  <div class="roundbtn navbtn" id="againbtn" >🔁</div>
+  <div id="trace-wrap">
+    <svg id="trace-svg" viewBox="0 0 100 100"></svg>
+    <div id="trace-hand">👆</div>
+  </div>
+</div>
+
+<!-- ===================== FIND ===================== -->
+<div id="scene-find" class="scene hidden">
+  <div class="roundbtn navbtn" id="homebtn-f" style="right:3vmin;">🏠</div>
+  <div id="find-row"></div>
+</div>
+
+<!-- ===================== WORD ===================== -->
+<div id="scene-word" class="scene hidden">
+  <div class="roundbtn navbtn" id="homebtn-w" style="right:3vmin;">🏠</div>
+  <div id="word-row"></div>
+  <div id="word-picture"></div>
+</div>
+
+<!-- ===================== PIP THE GUIDE ===================== -->
+<div id="pip">
+  <svg viewBox="0 0 100 100">
+    <ellipse cx="30" cy="22" rx="11" ry="15" fill="#ff9f43" transform="rotate(-18 30 22)"/>
+    <ellipse cx="70" cy="22" rx="11" ry="15" fill="#ff9f43" transform="rotate(18 70 22)"/>
+    <ellipse cx="30" cy="24" rx="6" ry="9" fill="#ffd9a8" transform="rotate(-18 30 24)"/>
+    <ellipse cx="70" cy="24" rx="6" ry="9" fill="#ffd9a8" transform="rotate(18 70 24)"/>
+    <ellipse cx="50" cy="58" rx="34" ry="32" fill="#ff9f43"/>
+    <ellipse cx="50" cy="68" rx="20" ry="17" fill="#ffe8c9"/>
+    <circle cx="38" cy="50" r="7.5" fill="#fff"/><circle cx="62" cy="50" r="7.5" fill="#fff"/>
+    <circle cx="39.5" cy="51.5" r="3.6" fill="#402a12"/><circle cx="60.5" cy="51.5" r="3.6" fill="#402a12"/>
+    <ellipse cx="29" cy="61" rx="4.5" ry="3" fill="#ffb9a0"/><ellipse cx="71" cy="61" rx="4.5" ry="3" fill="#ffb9a0"/>
+    <path d="M 42 66 Q 50 74 58 66" stroke="#a3541b" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+    <ellipse cx="50" cy="61" rx="3.4" ry="2.6" fill="#a3541b"/>
+  </svg>
+</div>
+
+<!-- ===================== STAR JAR ===================== -->
+<div id="jar">
+  <svg viewBox="0 0 100 126">
+    <defs><clipPath id="jarclip"><rect x="26" y="34" width="48" height="82" rx="12"/></clipPath></defs>
+    <rect x="26" y="34" width="48" height="82" rx="12" fill="rgba(220,245,255,.55)"/>
+    <rect id="jarFill" x="26" y="116" width="48" height="0" fill="#ffd94d" clip-path="url(#jarclip)"/>
+    <g id="jarStars" clip-path="url(#jarclip)" font-size="13"></g>
+    <rect x="26" y="34" width="48" height="82" rx="12" fill="none" stroke="#7fa8c9" stroke-width="4.5"/>
+    <rect x="20" y="22" width="60" height="13" rx="6" fill="#e08a3c" stroke="#b96f2c" stroke-width="2.5"/>
+  </svg>
+</div>
+
+<!-- ===================== PARENT GEAR / SCREEN ===================== -->
+<div id="gear">⚙️<div class="ring"></div></div>
+
+<div id="parent" class="hidden">
+  <button id="closeparent">✕ Back to the game</button>
+  <h1>🌻 Parent Corner</h1>
+  <p style="color:#888; font-size:14px;">Your child never sees this screen. To reopen it later: press and hold the faint ⚙️ in the top-left corner of the game for 3 seconds.</p>
+  <div id="parent-content"></div>
+</div>
+
+<script>
+'use strict';
+/* =====================================================================
+   SOUND GARDEN — a multisensory phonics playground (s, a, t)
+   Voice + pictures only for the child. Parent screen holds all text.
+===================================================================== */
+
+/* ---------------- state ---------------- */
+const DEFAULT_STATE = {
+  stars: 0,
+  letters: { s:{met:0,traced:0,findRight:0,findWrong:0}, a:{met:0,traced:0,findRight:0,findWrong:0}, t:{met:0,traced:0,findRight:0,findWrong:0} },
+  words: { sat:0, at:0 },
+  firstWordAt: null,
+  playMs: 0,
+  lastUsed: null
+};
+let S;
+try { S = Object.assign(JSON.parse(JSON.stringify(DEFAULT_STATE)), JSON.parse(localStorage.getItem('sg_state')||'{}')); }
+catch(e){ S = JSON.parse(JSON.stringify(DEFAULT_STATE)); }
+for (const l of ['s','a','t']) S.letters[l] = Object.assign({met:0,traced:0,findRight:0,findWrong:0}, S.letters[l]||{});
+function save(){ localStorage.setItem('sg_state', JSON.stringify(S)); }
+
+/* ---------------- letters ---------------- */
+const LETTERS = {
+  s: { color:'#2bb673', bg:'#dff5e8', friend:'🐍', strokes:['M 67 31 C 62 21 37 21 33 32 C 29 44 68 48 68 63 C 68 77 39 81 32 69'] },
+  a: { color:'#e2504e', bg:'#fde3e3', friend:'🍎', strokes:['M 60 46 C 54 36 34 37 31 52 C 28 68 48 78 60 66','M 61 38 C 61 50 61 62 61 66 C 61 72 64 75 69 73'] },
+  t: { color:'#e88f2a', bg:'#fdeed7', friend:'⛺', strokes:['M 46 20 C 46 34 46 52 46 60 C 46 72 55 76 64 70','M 32 38 L 62 38'] }
+};
+const WORDS = {
+  sat: { seq:['s','a','t'] },
+  at:  { seq:['a','t'] }
+};
+
+/* sample stroke paths into point lists (for tracing) */
+const measurer = document.createElementNS('http://www.w3.org/2000/svg','svg');
+measurer.setAttribute('style','position:absolute;width:0;height:0;overflow:hidden');
+document.body.appendChild(measurer);
+for (const l in LETTERS) {
+  LETTERS[l].points = LETTERS[l].strokes.map(d => {
+    const p = document.createElementNS('http://www.w3.org/2000/svg','path');
+    p.setAttribute('d', d); measurer.appendChild(p);
+    const len = p.getTotalLength(), pts = [], step = 3;
+    for (let i=0;i<=len;i+=step){ const pt=p.getPointAtLength(i); pts.push([pt.x,pt.y]); }
+    const end=p.getPointAtLength(len); pts.push([end.x,end.y]);
+    LETTERS[l].lens = LETTERS[l].lens||[]; LETTERS[l].lens.push(len);
+    return pts;
+  });
+}
+
+/* render a letter as chunky SVG strokes */
+function letterSVG(l, opts={}) {
+  const L = LETTERS[l];
+  const w = opts.width || 13, color = opts.color || L.color;
+  const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+  svg.setAttribute('viewBox','0 0 100 100'); svg.setAttribute('class','letter');
+  let inner = '';
+  for (const d of L.strokes)
+    inner += `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+  if (opts.eyes) {
+    const eyePos = { s:[[47,26],[58,27]], a:[[40,52],[50,53]], t:[[40,30],[53,30]] }[l];
+    for (const [x,y] of eyePos)
+      inner += `<circle cx="${x}" cy="${y}" r="5.2" fill="#fff"/><circle cx="${x+1}" cy="${y+1}" r="2.5" fill="#3a2a18"/>`;
+  }
+  svg.innerHTML = inner;
+  return svg;
+}
+
+/* ---------------- audio: sfx + phoneme synth ---------------- */
+let AC=null, master=null;
+function ensureAudio(){
+  if (!AC) { AC = new (window.AudioContext||window.webkitAudioContext)(); master = AC.createGain(); master.gain.value=.6; master.connect(AC.destination); }
+  if (AC.state==='suspended') AC.resume();
+}
+function env(g,t0,a,hold,r,peak){ g.gain.setValueAtTime(0.0001,t0); g.gain.linearRampToValueAtTime(peak,t0+a);
+  g.gain.setValueAtTime(peak,t0+a+hold); g.gain.exponentialRampToValueAtTime(0.0001,t0+a+hold+r); }
+function tone(freq,dur,type='sine',peak=.25,when=0){ if(!AC)return; const t0=AC.currentTime+when;
+  const o=AC.createOscillator(),g=AC.createGain(); o.type=type; o.frequency.value=freq;
+  env(g,t0,.01,dur*.5,dur*.5,peak); o.connect(g); g.connect(master); o.start(t0); o.stop(t0+dur+.1); }
+function noiseBuf(dur){ const b=AC.createBuffer(1,AC.sampleRate*dur,AC.sampleRate),d=b.getChannelData(0);
+  for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1; return b; }
+const sfx = {
+  pop(){ tone(420,.09,'sine',.3); tone(840,.07,'sine',.15,.03); },
+  tick(){ tone(1500,.03,'square',.06); },
+  boing(){ if(!AC)return; const t0=AC.currentTime,o=AC.createOscillator(),g=AC.createGain();
+    o.type='sine'; o.frequency.setValueAtTime(180,t0); o.frequency.exponentialRampToValueAtTime(340,t0+.18);
+    env(g,t0,.01,.1,.15,.22); o.connect(g); g.connect(master); o.start(t0); o.stop(t0+.4); },
+  plink(){ tone(1046,.14,'triangle',.28); tone(1568,.18,'triangle',.2,.06); },
+  chime(){ [523,659,784].forEach((f,i)=>tone(f,.25,'triangle',.22,i*.05)); },
+  sparkle(){ [1318,1568,2093,2637].forEach((f,i)=>tone(f,.12,'sine',.14,i*.05)); },
+  cheer(){ [523,659,784,1046].forEach((f,i)=>tone(f,.3,'triangle',.25,i*.09)); [1568,2093].forEach((f,i)=>tone(f,.2,'sine',.12,.4+i*.07)); },
+  fanfare(){ [392,523,659,784,1046].forEach((f,i)=>tone(f,.4,'triangle',.26,i*.12));
+    [1046,1318,1568,2093].forEach((f,i)=>tone(f,.5,'sine',.14,.65+i*.1)); }
+};
+
+/* pure phoneme synthesis — guarantees a correct-ish SOUND, never a letter name */
+function synthPhoneme(l, dur){
+  ensureAudio(); if(!AC) return Promise.resolve();
+  const t0 = AC.currentTime;
+  if (l==='s'){ dur = dur||1.5;
+    const src=AC.createBufferSource(); src.buffer=noiseBuf(dur+0.3); src.loop=false;
+    const hp=AC.createBiquadFilter(); hp.type='highpass'; hp.frequency.value=3600;
+    const bp=AC.createBiquadFilter(); bp.type='bandpass'; bp.frequency.value=5600; bp.Q.value=0.9;
+    const g=AC.createGain(); env(g,t0,.12,dur-.35,.25,.5);
+    src.connect(hp); hp.connect(bp); bp.connect(g); g.connect(master); src.start(t0);
+    return new Promise(r=>setTimeout(r,(dur+.15)*1000));
+  }
+  if (l==='t'){
+    const src=AC.createBufferSource(); src.buffer=noiseBuf(.09);
+    const hp=AC.createBiquadFilter(); hp.type='highpass'; hp.frequency.value=2200;
+    const g=AC.createGain(); g.gain.setValueAtTime(.9,t0); g.gain.exponentialRampToValueAtTime(.0001,t0+.07);
+    src.connect(hp); hp.connect(g); g.connect(master); src.start(t0);
+    return new Promise(r=>setTimeout(r,220));
+  }
+  if (l==='a'){ dur = dur||.9;
+    const o=AC.createOscillator(); o.type='sawtooth'; o.frequency.setValueAtTime(200,t0);
+    o.frequency.linearRampToValueAtTime(185,t0+dur);
+    const mix=AC.createGain(); mix.gain.value=1;
+    [[720,5,1.1],[1650,8,.8],[2500,10,.32]].forEach(([f,q,amt])=>{
+      const bp=AC.createBiquadFilter(); bp.type='bandpass'; bp.frequency.value=f; bp.Q.value=q;
+      const g=AC.createGain(); g.gain.value=amt; o.connect(bp); bp.connect(g); g.connect(mix); });
+    const g=AC.createGain(); env(g,t0,.07,dur-.25,.18,.34);
+    mix.connect(g); g.connect(master); o.start(t0); o.stop(t0+dur+.3);
+    return new Promise(r=>setTimeout(r,(dur+.1)*1000));
+  }
+  return Promise.resolve();
+}
+
+/* ---------------- recorded clips (IndexedDB) ---------------- */
+const CLIPS = {
+  snd_s:{ script:'“sssss” — a long soft snake hiss. Hold it 2–3 seconds. NOT the name “ess”.', phoneme:'s' },
+  snd_a:{ script:'“a” as in apple — “aaaa”. Hold it 2 seconds. NOT the name “ay”.', phoneme:'a' },
+  snd_t:{ script:'“t” — one tiny crisp tick, like a clock. Try not to say “tuh”. NOT the name “tee”.', phoneme:'t' },
+  wd_sat:{ script:'“sat!” — say the whole word happily.' , tts:'sat!' },
+  wd_at:{ script:'“at!” — say the whole word happily.', tts:'at!' },
+  p_hi:{ script:'“Hi! Come and play with me!”', tts:'Hi! Come and play with me!' },
+  p_this:{ script:'“This sound says…”', tts:'This sound says' },
+  p_tap:{ script:'“Tap it and hear it again!”', tts:'Tap it and hear it again!' },
+  p_pick:{ script:'“Pick a game!”', tts:'Pick a game!' },
+  p_trace:{ script:'“Trace it with your finger!”', tts:'Trace it with your finger!' },
+  p_find:{ script:'“Can you find…”', tts:'Can you find' },
+  p_yay:{ script:'“Yay!! You did it!!”', tts:'Yay! You did it!' },
+  p_again:{ script:'“Ooh, so close! Try again!” (happy voice)', tts:'Ooh! Try again!' },
+  p_word:{ script:'“Let’s make a word! Tap the sounds!”', tts:'Lets make a word! Tap the sounds!' },
+  p_firstword:{ script:'“You READ a word!! Hooray!!!” (as excited as you can)', tts:'You read a word!! Hooray!!' },
+  p_more:{ script:'“Let’s play with the other sounds first!”', tts:'Lets play with the other sounds first!' }
+};
+
+let dbp = new Promise((res,rej)=>{
+  const rq = indexedDB.open('sound-garden',1);
+  rq.onupgradeneeded = ()=>rq.result.createObjectStore('clips');
+  rq.onsuccess = ()=>res(rq.result); rq.onerror = ()=>rej(rq.error);
+});
+async function idbPut(id,blob){ const db=await dbp; return new Promise((res,rej)=>{ const tx=db.transaction('clips','readwrite');
+  tx.objectStore('clips').put(blob,id); tx.oncomplete=res; tx.onerror=()=>rej(tx.error); }); }
+async function idbGet(id){ const db=await dbp; return new Promise((res)=>{ const rq=db.transaction('clips').objectStore('clips').get(id);
+  rq.onsuccess=()=>res(rq.result||null); rq.onerror=()=>res(null); }); }
+async function idbDel(id){ const db=await dbp; return new Promise((res)=>{ const tx=db.transaction('clips','readwrite');
+  tx.objectStore('clips').delete(id); tx.oncomplete=res; tx.onerror=res; }); }
+
+const clipURL = new Map();      // id -> object URL (loaded lazily)
+const clipHave = new Set();     // ids with recordings
+async function refreshClipCache(){
+  for (const id in CLIPS){
+    const b = await idbGet(id);
+    if (b){ clipHave.add(id); if (clipURL.has(id)) URL.revokeObjectURL(clipURL.get(id)); clipURL.set(id, URL.createObjectURL(b)); }
+    else { clipHave.delete(id); if (clipURL.has(id)){ URL.revokeObjectURL(clipURL.get(id)); clipURL.delete(id); } }
+  }
+}
+
+/* ---------------- speech ---------------- */
+let ttsVoice = null;
+function pickVoice(){
+  const vs = speechSynthesis.getVoices().filter(v=>v.lang && v.lang.startsWith('en'));
+  ttsVoice = vs.find(v=>/samantha|karen|catherine|female|zira|aria/i.test(v.name)) || vs.find(v=>v.default) || vs[0] || null;
+}
+if ('speechSynthesis' in window){ pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+
+function ttsSpeak(text){
+  return new Promise(res=>{
+    if (!('speechSynthesis' in window)) return res();
+    try{
+      const u = new SpeechSynthesisUtterance(text);
+      if (ttsVoice) u.voice = ttsVoice;
+      u.rate = .88; u.pitch = 1.15; u.volume = 1;
+      let done=false; const fin=()=>{ if(!done){done=true;res();} };
+      u.onend=fin; u.onerror=fin; setTimeout(fin, 1200 + text.length*130);
+      speechSynthesis.cancel(); speechSynthesis.speak(u);
+    }catch(e){ res(); }
+  });
+}
+function playAudioURL(url){
+  return new Promise(res=>{
+    const a = new Audio(url); currentAudio = a;
+    let done=false; const fin=()=>{ if(!done){done=true;res();} };
+    a.onended=fin; a.onerror=fin; setTimeout(fin, 12000);
+    a.play().catch(fin);
+  });
+}
+let currentAudio=null, speakToken=0;
+function stopSpeaking(){
+  speakToken++;
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  if (currentAudio){ try{currentAudio.pause();}catch(e){} currentAudio=null; }
+}
+/* parts: array of {clip:'id'} or {phoneme:'s', dur} or {text:'...'} or {pause:ms} */
+async function speakSeq(parts){
+  stopSpeaking();
+  const tok = ++speakToken;
+  pipTalk(true);
+  for (const part of parts){
+    if (tok !== speakToken) break;
+    if (part.pause){ await new Promise(r=>setTimeout(r,part.pause)); continue; }
+    if (part.clip && clipHave.has(part.clip)){ await playAudioURL(clipURL.get(part.clip)); continue; }
+    if (part.clip){
+      const c = CLIPS[part.clip];
+      if (c.phoneme){ await synthPhoneme(c.phoneme, part.dur); continue; }
+      await ttsSpeak(c.tts || ''); continue;
+    }
+    if (part.phoneme){ await synthPhoneme(part.phoneme, part.dur); continue; }
+    if (part.text){ await ttsSpeak(part.text); continue; }
+  }
+  if (tok === speakToken) pipTalk(false);
+}
+function soundPart(l, dur){ return { clip:'snd_'+l, dur }; }
+
+/* ---------------- pip (guide) ---------------- */
+const pip = document.getElementById('pip');
+let lastPrompt = [{clip:'p_hi'}];
+function pipTalk(on){ pip.classList.toggle('talking', !!on); }
+function pipSay(parts, remember=true){ if (remember) lastPrompt = parts; speakSeq(parts); }
+pip.addEventListener('pointerdown', e=>{ e.stopPropagation(); ensureAudio(); sfx.boing(); pipSay(lastPrompt, false); });
+
+/* ---------------- fx: stars, confetti ---------------- */
+const fx = document.getElementById('fx');
+const jarEl = document.getElementById('jar');
+function updateJar(){
+  const lvl = Math.min(S.stars, 40)/40;
+  const h = Math.round(80*lvl);
+  const fill = document.getElementById('jarFill');
+  fill.setAttribute('y', 116-h); fill.setAttribute('height', h);
+  const g = document.getElementById('jarStars');
+  let stars = '';
+  const n = Math.min(6, Math.floor(S.stars/3)+ (S.stars>0?1:0));
+  const pos = [[34,108],[52,102],[44,92],[60,110],[36,84],[56,80]];
+  for (let i=0;i<n;i++){ const [x,y]=pos[i]; if (y > 116-h-6) stars += `<text x="${x}" y="${y}">⭐</text>`; }
+  g.innerHTML = stars;
+}
+function awardStar(x,y){
+  const st = document.createElement('div');
+  st.className='flystar'; st.textContent='⭐';
+  st.style.left=(x-14)+'px'; st.style.top=(y-14)+'px';
+  document.body.appendChild(st);
+  const jr = jarEl.getBoundingClientRect();
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    st.style.left=(jr.left+jr.width/2-14)+'px'; st.style.top=(jr.top+jr.height/2-14)+'px';
+    st.style.transform='scale(.5)'; st.style.opacity='.9';
+  }));
+  setTimeout(()=>{ st.remove(); S.stars++; save(); updateJar(); sfx.plink();
+    jarEl.classList.remove('jig'); void jarEl.offsetWidth; jarEl.classList.add('jig'); }, 1050);
+}
+jarEl.addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.sparkle();
+  jarEl.classList.remove('jig'); void jarEl.offsetWidth; jarEl.classList.add('jig'); });
+
+const CONF = ['⭐','✨','🌟','💛','🧡','💚'];
+function confetti(n=26, dur=2200){
+  for (let i=0;i<n;i++){
+    const c=document.createElement('div'); c.className='conf';
+    c.textContent = CONF[Math.floor(Math.random()*CONF.length)];
+    c.style.left = Math.random()*100+'vw';
+    c.style.fontSize = (3.5+Math.random()*4)+'vmin';
+    c.style.animationDuration = (dur*(.7+Math.random()*.6))+'ms';
+    c.style.animationDelay = (Math.random()*350)+'ms';
+    fx.appendChild(c); setTimeout(()=>c.remove(), dur*1.6+500);
+  }
+}
+function burstAt(x,y,n=10){
+  for (let i=0;i<n;i++){
+    const b=document.createElement('div'); b.className='burst';
+    b.textContent = CONF[Math.floor(Math.random()*CONF.length)];
+    const ang = Math.random()*Math.PI*2, d = 8+Math.random()*14;
+    b.style.setProperty('--dx', Math.cos(ang)*d+'vmin');
+    b.style.setProperty('--dy', Math.sin(ang)*d+'vmin');
+    b.style.left=x+'px'; b.style.top=y+'px';
+    fx.appendChild(b); setTimeout(()=>b.remove(), 900);
+  }
+}
+function bigCelebration(mega=false){
+  if (mega){ sfx.fanfare(); confetti(60, 3200); setTimeout(()=>confetti(50,3200), 900); setTimeout(()=>sfx.cheer(), 1300);
+    pip.classList.add('dance'); setTimeout(()=>pip.classList.remove('dance'), 4200);
+  } else { sfx.cheer(); confetti(26); pip.classList.add('dance'); setTimeout(()=>pip.classList.remove('dance'), 1600); }
+}
+
+/* ---------------- progression ---------------- */
+function ready(l){ const st=S.letters[l]; return st.met>=2 || st.traced>=1; }
+function awake(l){ if (l==='s') return true; if (l==='a') return ready('s'); if (l==='t') return ready('a'); return false; }
+function wordAwake(){ return ready('s') && ready('a') && ready('t'); }
+function recommended(){ for (const l of ['s','a','t']) if (!ready(l)) return l; return 'word'; }
+function status(l){ const st=S.letters[l];
+  const tot = st.findRight+st.findWrong;
+  if (st.findRight>=4 && st.traced>=2 && (st.findRight/Math.max(1,tot))>=.75) return 'got';
+  if (st.met+st.traced+tot > 0) return 'prac';
+  return 'none';
+}
+
+/* ---------------- scenes ---------------- */
+const sceneEls = {};
+for (const s of ['home','picker','meet','trace','find','word'])
+  sceneEls[s] = document.getElementById('scene-'+s);
+let curScene='home', curLetter='s';
+function showScene(name){
+  stopSpeaking();
+  for (const s in sceneEls) sceneEls[s].classList.toggle('hidden', s!==name);
+  curScene = name;
+  if (traceHandTimer){ clearInterval(traceHandTimer); traceHandTimer=null; }
+}
+
+/* ---------- HOME ---------- */
+const spotsEl = document.getElementById('spots');
+function buildHome(){
+  spotsEl.innerHTML='';
+  const reco = recommended();
+  for (const l of ['s','a','t']){
+    const d = document.createElement('div');
+    d.className='spot ' + (awake(l)?'awake':'asleep') + (reco===l && awake(l)?' reco':'');
+    d.style.background = LETTERS[l].bg;
+    d.appendChild(letterSVG(l,{eyes:awake(l)}));
+    const f=document.createElement('div'); f.className='friend'; f.textContent=LETTERS[l].friend; d.appendChild(f);
+    d.addEventListener('pointerdown', ev=>{ ensureAudio();
+      if (!awake(l)){ sfx.boing(); pipSay([{clip:'p_more'}]); wobble(d); return; }
+      sfx.pop(); burstAt(ev.clientX, ev.clientY, 5);
+      openPicker(l);
+    });
+    spotsEl.appendChild(d);
+  }
+  // word tree
+  const w = document.createElement('div');
+  w.className='spot ' + (wordAwake()?'awake':'asleep') + (reco==='word'&&wordAwake()?' reco':'');
+  w.style.background='#e8f7d4'; w.style.fontSize='16vmin';
+  w.textContent='🌳';
+  const f=document.createElement('div'); f.className='friend'; f.textContent='✨'; w.appendChild(f);
+  w.addEventListener('pointerdown', ev=>{ ensureAudio();
+    if (!wordAwake()){ sfx.boing(); pipSay([{clip:'p_more'}]); wobble(w); return; }
+    sfx.pop(); burstAt(ev.clientX, ev.clientY, 5);
+    startWord();
+  });
+  spotsEl.appendChild(w);
+}
+function wobble(el){ el.style.animation='none'; void el.offsetWidth; el.style.animation='wiggle .5s'; setTimeout(()=>el.style.animation='',600); }
+function goHome(){ buildHome(); showScene('home'); }
+
+/* ---------- PICKER ---------- */
+const pickerLetterEl = document.getElementById('picker-letter');
+function openPicker(l){
+  curLetter=l;
+  pickerLetterEl.innerHTML=''; pickerLetterEl.appendChild(letterSVG(l,{eyes:true}));
+  showScene('picker');
+  pipSay([soundPart(l), {pause:250}, {clip:'p_pick'}]);
+}
+document.getElementById('pick-meet').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startMeet(curLetter); });
+document.getElementById('pick-trace').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startTrace(curLetter); });
+document.getElementById('pick-find').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startFind(curLetter); });
+
+/* ---------- MEET ---------- */
+const meetEl = document.getElementById('meet-letter');
+let meetTaps=0;
+function startMeet(l){
+  curLetter=l; meetTaps=0;
+  meetEl.innerHTML=''; meetEl.appendChild(letterSVG(l,{eyes:true}));
+  showScene('meet');
+  pipSay([{clip:'p_this'},{pause:150}, soundPart(l), {pause:400}, {clip:'p_tap'}]);
+}
+meetEl.addEventListener('pointerdown', ev=>{
+  ensureAudio();
+  meetTaps++;
+  S.letters[curLetter].met++; save();
+  const anims=['jig','spinny','grow'];
+  meetEl.classList.remove('jig','spinny','grow'); void meetEl.offsetWidth;
+  meetEl.classList.add(anims[Math.floor(Math.random()*anims.length)]);
+  burstAt(ev.clientX, ev.clientY, 6);
+  sfx.pop();
+  speakSeq([soundPart(curLetter)]);
+  if (meetTaps===4){ setTimeout(()=>{ bigCelebration(); awardStar(ev.clientX, ev.clientY); }, 600); }
+});
+
+/* ---------- TRACE ---------- */
+const traceSVG = document.getElementById('trace-svg');
+const traceHand = document.getElementById('trace-hand');
+let TR = null, traceHandTimer=null;
+function startTrace(l){
+  curLetter=l;
+  showScene('trace');
+  buildTrace(l);
+  pipSay([{clip:'p_trace'},{pause:200}, soundPart(l)]);
+}
+function buildTrace(l){
+  const L=LETTERS[l];
+  TR = { letter:l, stroke:0, idx:0, done:false, touching:false };
+  let svg = '';
+  for (let s=0;s<L.strokes.length;s++){
+    svg += `<path d="${L.strokes[s]}" fill="none" stroke="#e5e2da" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>`;
+    svg += `<path d="${L.strokes[s]}" fill="none" stroke="#fff" stroke-width="2.6" stroke-dasharray="0.5 6" stroke-linecap="round"/>`;
+    svg += `<path id="prog-${s}" d="${L.strokes[s]}" fill="none" stroke="${L.color}" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"
+             stroke-dasharray="${L.lens[s]} ${L.lens[s]}" stroke-dashoffset="${L.lens[s]}"/>`;
+  }
+  const [sx,sy]=L.points[0][0];
+  svg += `<circle id="startdot" cx="${sx}" cy="${sy}" r="6.5" fill="#4cd137" stroke="#fff" stroke-width="2">
+            <animate attributeName="r" values="5.5;7.5;5.5" dur="1s" repeatCount="indefinite"/></circle>`;
+  traceSVG.innerHTML = svg;
+  startHandHint();
+}
+function startHandHint(){
+  if (traceHandTimer) clearInterval(traceHandTimer);
+  const L=LETTERS[TR.letter]; let i=0;
+  const pts = L.points[TR.stroke];
+  traceHand.style.opacity='1';
+  traceHandTimer = setInterval(()=>{
+    if (!TR || TR.touching || TR.done){ return; }
+    i=(i+2)%pts.length;
+    const r = traceSVG.getBoundingClientRect();
+    traceHand.style.left = (pts[i][0]/100*r.width) + 'px';
+    traceHand.style.top = (pts[i][1]/100*r.height) + 'px';
+  }, 60);
+}
+function tracePoint(clientX, clientY){
+  if (!TR || TR.done) return;
+  const r = traceSVG.getBoundingClientRect();
+  const x=(clientX-r.left)/r.width*100, y=(clientY-r.top)/r.height*100;
+  const L=LETTERS[TR.letter];
+  const pts=L.points[TR.stroke];
+  let advanced=false;
+  while (TR.idx < pts.length){
+    const dx=pts[TR.idx][0]-x, dy=pts[TR.idx][1]-y;
+    if (dx*dx+dy*dy < 100){ TR.idx++; advanced=true; } else break;
+  }
+  if (advanced){
+    const frac = TR.idx/pts.length;
+    const prog = document.getElementById('prog-'+TR.stroke);
+    prog.setAttribute('stroke-dashoffset', L.lens[TR.stroke]*(1-frac));
+    if (TR.idx % 6 === 0){ sfx.tick(); burstAt(clientX, clientY, 1); }
+    if (TR.idx >= pts.length) strokeDone();
+  }
+}
+function strokeDone(){
+  const L=LETTERS[TR.letter];
+  document.getElementById('prog-'+TR.stroke).setAttribute('stroke-dashoffset', 0);
+  if (TR.stroke < L.strokes.length-1){
+    TR.stroke++; TR.idx=0;
+    sfx.chime();
+    const [sx,sy]=L.points[TR.stroke][0];
+    const dot=document.getElementById('startdot');
+    dot.setAttribute('cx',sx); dot.setAttribute('cy',sy);
+    startHandHint();
+  } else {
+    TR.done=true;
+    document.getElementById('startdot').remove();
+    traceHand.style.opacity='0';
+    S.letters[TR.letter].traced++; save();
+    const r = traceSVG.getBoundingClientRect();
+    bigCelebration();
+    speakSeq([soundPart(TR.letter), {pause:250}, {clip:'p_yay'}]);
+    setTimeout(()=>awardStar(r.left+r.width/2, r.top+r.height/2), 700);
+  }
+}
+traceSVG.addEventListener('pointerdown', e=>{ ensureAudio(); if(TR){TR.touching=true; traceHand.style.opacity='0';} tracePoint(e.clientX,e.clientY); });
+traceSVG.addEventListener('pointermove', e=>{ if (e.buttons||e.pressure>0||e.pointerType==='touch') tracePoint(e.clientX,e.clientY); });
+window.addEventListener('pointerup', ()=>{ if(TR) TR.touching=false; });
+document.getElementById('againbtn').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); buildTrace(curLetter); });
+
+/* ---------- FIND ---------- */
+const findRow = document.getElementById('find-row');
+let FD=null;
+function startFind(l){
+  curLetter=l;
+  FD = { target:l, round:0, wrongs:0 };
+  showScene('find');
+  nextFindRound(true);
+}
+function nextFindRound(first){
+  FD.wrongs=0;
+  const opts=['s','a','t'].sort(()=>Math.random()-.5);
+  findRow.innerHTML='';
+  for (const l of opts){
+    const b=document.createElement('div'); b.className='bubble'; b.dataset.l=l;
+    b.appendChild(letterSVG(l,{}));
+    b.addEventListener('pointerdown', ev=>{ ensureAudio(); onFindTap(l,b,ev); });
+    findRow.appendChild(b);
+  }
+  pipSay([{clip:'p_find'},{pause:120}, soundPart(FD.target)]);
+}
+function onFindTap(l, b, ev){
+  if (!FD) return;
+  if (l===FD.target){
+    S.letters[FD.target].findRight++; save();
+    burstAt(ev.clientX, ev.clientY, 10);
+    sfx.cheer();
+    speakSeq([soundPart(l), {pause:200}, {clip:'p_yay'}]);
+    awardStar(ev.clientX, ev.clientY);
+    FD.round++;
+    if (FD.round>=3){ setTimeout(()=>{ bigCelebration(); setTimeout(goHome, 2000); }, 900); }
+    else setTimeout(()=>nextFindRound(false), 1600);
+  } else {
+    S.letters[FD.target].findWrong++; save();
+    FD.wrongs++;
+    b.classList.remove('no'); void b.offsetWidth; b.classList.add('no');
+    sfx.boing();
+    speakSeq([{clip:'p_again'},{pause:150}, soundPart(FD.target)]);
+    if (FD.wrongs>=2){
+      const tgt=[...findRow.children].find(c=>c.dataset.l===FD.target);
+      if (tgt) tgt.classList.add('hintpulse');
+    }
+  }
+}
+
+/* ---------- WORD ---------- */
+const wordRow = document.getElementById('word-row');
+const wordPic = document.getElementById('word-picture');
+let WD=null;
+function startWord(){
+  const w = S.words.sat===0 ? 'sat' : (Math.random()<.6?'sat':'at');
+  WD = { word:w, idx:0 };
+  wordRow.innerHTML=''; wordPic.innerHTML='';
+  const seq = WORDS[w].seq;
+  for (let i=0;i<seq.length;i++){
+    const t=document.createElement('div'); t.className='tile'; t.dataset.i=i;
+    t.appendChild(letterSVG(seq[i],{}));
+    t.addEventListener('pointerdown', ev=>{ ensureAudio(); onTileTap(i,t,ev); });
+    wordRow.appendChild(t);
+  }
+  setPointer(0);
+  showScene('word');
+  pipSay([{clip:'p_word'}]);
+}
+function setPointer(i){
+  wordRow.querySelectorAll('.pointer').forEach(p=>p.remove());
+  const t=wordRow.children[i]; if (!t) return;
+  const p=document.createElement('div'); p.className='pointer'; p.textContent='👆'; t.appendChild(p);
+}
+function onTileTap(i, t, ev){
+  if (!WD) return;
+  const seq=WORDS[WD.word].seq;
+  if (i!==WD.idx){
+    t.classList.remove('no'); void t.offsetWidth; t.classList.add('no');
+    sfx.boing(); speakSeq([{clip:'p_again'}]);
+    return;
+  }
+  const l=seq[i];
+  t.classList.add('done');
+  burstAt(ev.clientX, ev.clientY, 6);
+  sfx.chime();
+  const stretch = { s:1.6, a:1.1, t:undefined }[l];
+  speakSeq([soundPart(l, stretch)]);
+  WD.idx++;
+  if (WD.idx < seq.length){ setPointer(WD.idx); }
+  else {
+    wordRow.querySelectorAll('.pointer').forEach(p=>p.remove());
+    setTimeout(()=>blendWord(), 1400);
+  }
+}
+async function blendWord(){
+  const w=WD.word, seq=WORDS[w].seq;
+  // slide tiles together
+  [...wordRow.children].forEach(t=>{ t.style.margin='-1.6vmin'; });
+  const parts=[];
+  for (const l of seq) parts.push(soundPart(l, {s:1.1,a:.8}[l]), {pause:120});
+  parts.push({pause:250},{clip:'wd_'+w});
+  await speakSeq(parts);
+  // picture + celebration
+  wordPic.innerHTML = WORD_PICS[w];
+  const first = !S.firstWordAt;
+  S.words[w]++; if (first) S.firstWordAt = Date.now(); save();
+  bigCelebration(first);
+  const r = wordPic.getBoundingClientRect();
+  awardStar(r.left+r.width/2, r.top);
+  setTimeout(()=>awardStar(r.left+r.width/4, r.top+20), 400);
+  setTimeout(()=>awardStar(r.left+r.width*.75, r.top+20), 800);
+  speakSeq(first ? [{pause:600},{clip:'p_firstword'},{pause:300},{clip:'wd_'+w}]
+                 : [{pause:600},{clip:'p_yay'},{pause:200},{clip:'wd_'+w}]);
+}
+const WORD_PICS = {
+  sat: `<svg viewBox="0 0 200 150">
+    <rect x="120" y="60" width="14" height="70" rx="4" fill="#a5682a"/>
+    <rect x="60" y="88" width="76" height="12" rx="5" fill="#c98940"/>
+    <rect x="64" y="98" width="10" height="34" rx="4" fill="#a5682a"/>
+    <circle cx="92" cy="46" r="18" fill="#ffd9b3"/>
+    <circle cx="86" cy="43" r="2.6" fill="#42301f"/><circle cx="98" cy="43" r="2.6" fill="#42301f"/>
+    <path d="M 85 52 Q 92 58 99 52" stroke="#42301f" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <path d="M 78 38 Q 92 22 106 38" fill="#7a4a21"/>
+    <rect x="80" y="62" width="26" height="30" rx="9" fill="#5aa9e6"/>
+    <rect x="82" y="88" width="9" height="26" rx="4" fill="#3d6fa3"/>
+    <rect x="96" y="88" width="9" height="26" rx="4" fill="#3d6fa3"/>
+    <path d="M 80 68 Q 66 74 68 88" stroke="#5aa9e6" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M 106 68 Q 118 72 118 84" stroke="#5aa9e6" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <ellipse cx="100" cy="138" rx="70" ry="7" fill="rgba(0,0,0,.08)"/>
+  </svg>`,
+  at: `<svg viewBox="0 0 200 150">
+    <path d="M 100 128 L 100 82" stroke="#4c9a2a" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="100" cy="62" r="16" fill="#ffcf40"/>
+    ${[0,60,120,180,240,300].map(a=>`<ellipse cx="${100+26*Math.cos(a*Math.PI/180)}" cy="${62+26*Math.sin(a*Math.PI/180)}" rx="11" ry="7" fill="#ff8fb1" transform="rotate(${a} ${100+26*Math.cos(a*Math.PI/180)} ${62+26*Math.sin(a*Math.PI/180)})"/>`).join('')}
+    <ellipse cx="52" cy="38" rx="14" ry="10" fill="#ffd94d" stroke="#3a2a18" stroke-width="2"/>
+    <path d="M 46 30 Q 44 18 54 22 M 58 30 Q 62 18 66 24" stroke="#9fd8ef" stroke-width="5" fill="none" stroke-linecap="round" opacity=".8"/>
+    <line x1="46" y1="33" x2="46" y2="44" stroke="#3a2a18" stroke-width="3"/>
+    <line x1="54" y1="31" x2="54" y2="46" stroke="#3a2a18" stroke-width="3"/>
+    <circle cx="66" cy="36" r="2.4" fill="#3a2a18"/>
+    <path d="M 66 44 Q 80 52 90 56" stroke="#bbb" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+    <ellipse cx="100" cy="138" rx="70" ry="7" fill="rgba(0,0,0,.08)"/>
+  </svg>`
+};
+
+/* ---------- nav buttons ---------- */
+for (const id of ['homebtn-p','homebtn-m','homebtn-t','homebtn-f','homebtn-w'])
+  document.getElementById(id).addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); goHome(); });
+
+/* ---------------- parent screen ---------------- */
+const gear = document.getElementById('gear');
+const parentEl = document.getElementById('parent');
+let holdTimer=null, holdStart=0, holdRAF=null;
+gear.addEventListener('pointerdown', e=>{
+  e.stopPropagation();
+  holdStart = performance.now();
+  const ring = gear.querySelector('.ring');
+  const tick = ()=>{ const f=Math.min(1,(performance.now()-holdStart)/3000);
+    ring.style.background = `conic-gradient(#4a90d9 ${f*360}deg, transparent 0deg)`;
+    ring.style.opacity='.5';
+    if (f<1) holdRAF=requestAnimationFrame(tick); };
+  holdRAF=requestAnimationFrame(tick);
+  holdTimer = setTimeout(()=>{ openParent(); cancelHold(); }, 3000);
+});
+function cancelHold(){ clearTimeout(holdTimer); holdTimer=null; cancelAnimationFrame(holdRAF);
+  const ring=gear.querySelector('.ring'); ring.style.background='none'; ring.style.opacity='0'; }
+gear.addEventListener('pointerup', cancelHold);
+gear.addEventListener('pointerleave', cancelHold);
+gear.addEventListener('pointercancel', cancelHold);
+
+document.getElementById('closeparent').addEventListener('click', ()=>{
+  stopRecording();
+  parentEl.classList.add('hidden'); goHome();
+});
+
+function fmtDate(ts){ if(!ts) return '—'; const d=new Date(ts);
+  return d.toLocaleDateString(undefined,{month:'short',day:'numeric'}) + ' at ' + d.toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'}); }
+function fmtMins(ms){ const m=Math.round(ms/60000); return m<1 ? 'under a minute' : m+' min'; }
+
+async function openParent(){
+  stopSpeaking();
+  await refreshClipCache();
+  const pc = document.getElementById('parent-content');
+  const chip = st => st==='got' ? '<span class="chip got">Knows it 🌟</span>' : st==='prac' ? '<span class="chip prac">Practicing</span>' : '<span class="chip none">Not started</span>';
+  let rows='';
+  for (const l of ['s','a','t']){
+    const st=S.letters[l];
+    rows += `<div class="card row">
+      <svg class="biglet" viewBox="0 0 100 100">${LETTERS[l].strokes.map(d=>`<path d="${d}" fill="none" stroke="${LETTERS[l].color}" stroke-width="13" stroke-linecap="round"/>`).join('')}</svg>
+      ${chip(status(l))}
+      <span style="color:#777; font-size:14px;">heard ×${st.met} · traced ×${st.traced} · found ${st.findRight}✓ ${st.findWrong}✗</span>
+    </div>`;
+  }
+  let clipRows='';
+  for (const id in CLIPS){
+    const have = clipHave.has(id);
+    clipRows += `<div class="card row" data-clip="${id}">
+      <div style="flex:1; min-width:180px;"><b>${id.replace(/^(snd_|wd_|p_)/,'')}</b><br><span class="script">${CLIPS[id].script}</span></div>
+      <span class="${have?'ok':'robot'}">${have?'✓ your voice':'robot voice'}</span>
+      <button class="rec" data-id="${id}">⏺ Record</button>
+      <button class="ghost play" data-id="${id}">▶ Hear it</button>
+      ${have?`<button class="warn del" data-id="${id}">✕</button>`:''}
+    </div>`;
+  }
+  pc.innerHTML = `
+    <h2>📈 Progress</h2>
+    ${rows}
+    <div class="card">⭐ Stars earned: <b>${S.stars}</b> &nbsp;·&nbsp; 📖 Words read: <b>sat ×${S.words.sat}, at ×${S.words.at}</b>
+      ${S.firstWordAt?`<br>🎉 First word ever read on <b>${fmtDate(S.firstWordAt)}</b>`:''}</div>
+    <div class="card">⏱ Total play time: <b>${fmtMins(S.playMs)}</b><br>🕐 Last played: <b>${fmtDate(S.lastUsed)}</b></div>
+
+    <h2>🎙 The voice (important!)</h2>
+    <div class="card">
+      Right now, any sound without a recording uses a <b>robot voice</b>: sentences use the iPad's built-in speech, and the letter sounds (sss, aaa, t) are computer-made so they are never said as letter names — but they sound robotic.<br><br>
+      <b>Best option (takes ~3 minutes):</b> record each line below in your own voice. Tap <b>⏺ Record</b>, say the line, tap <b>⏹ Stop</b>. Your niece will then hear you — warm and perfectly pronounced. Tips: hold "sss" and "aaa" for 2–3 seconds; make "t" one tiny tick with no "uh" after it; never say letter names.
+    </div>
+    ${clipRows}
+
+    <h2>📲 Putting it on the iPad</h2>
+    <div class="card">Open this page in <b>Safari</b> on the iPad → tap the <b>Share</b> button (square with an arrow) → <b>Add to Home Screen</b> → <b>Add</b>. It becomes an app icon called Sound Garden that opens full screen.</div>
+
+    <h2>🧹 Reset</h2>
+    <div class="card"><button class="warn" id="resetbtn">Erase all progress</button> <span style="color:#888;font-size:13px;">(keeps your voice recordings)</span></div>
+  `;
+  pc.querySelectorAll('button.rec').forEach(b=>b.addEventListener('click',()=>toggleRecord(b)));
+  pc.querySelectorAll('button.play').forEach(b=>b.addEventListener('click',()=>previewClip(b.dataset.id)));
+  pc.querySelectorAll('button.del').forEach(b=>b.addEventListener('click',async()=>{ await idbDel(b.dataset.id); openParent(); }));
+  const rb=document.getElementById('resetbtn');
+  if (rb) rb.addEventListener('click',()=>{
+    if (confirm('Erase all of her progress (stars, sounds practiced)? Voice recordings are kept.')){
+      S=JSON.parse(JSON.stringify(DEFAULT_STATE)); save(); updateJar(); openParent();
+    }
+  });
+  parentEl.classList.remove('hidden');
+}
+
+/* recording */
+let mediaRec=null, recChunks=[], recBtn=null;
+async function toggleRecord(btn){
+  if (mediaRec && mediaRec.state==='recording'){ stopRecording(); return; }
+  try{
+    const stream = await navigator.mediaDevices.getUserMedia({audio:true});
+    recChunks=[]; recBtn=btn;
+    mediaRec = new MediaRecorder(stream);
+    mediaRec.ondataavailable = e=>{ if (e.data.size) recChunks.push(e.data); };
+    mediaRec.onstop = async ()=>{
+      stream.getTracks().forEach(t=>t.stop());
+      const blob = new Blob(recChunks, {type: mediaRec.mimeType||'audio/mp4'});
+      if (blob.size>200) await idbPut(btn.dataset.id, blob);
+      mediaRec=null; recBtn=null;
+      openParent();
+    };
+    mediaRec.start();
+    btn.textContent='⏹ Stop'; btn.style.background='#d9534f';
+  }catch(e){
+    alert('I could not use the microphone. In Safari, tap "Allow" when it asks for microphone access, then try again. (Details: '+e.message+')');
+  }
+}
+function stopRecording(){ if (mediaRec && mediaRec.state==='recording') mediaRec.stop(); }
+async function previewClip(id){
+  ensureAudio();
+  const b = await idbGet(id);
+  if (b){ const u=URL.createObjectURL(b); await playAudioURL(u); URL.revokeObjectURL(u); return; }
+  const c = CLIPS[id];
+  if (c.phoneme) synthPhoneme(c.phoneme); else ttsSpeak(c.tts||'');
+}
+
+/* ---------------- time tracking ---------------- */
+setInterval(()=>{
+  if (document.visibilityState==='visible' && parentEl.classList.contains('hidden')){
+    S.playMs += 10000; S.lastUsed = Date.now(); save();
+  }
+}, 10000);
+S.lastUsed = Date.now(); save();
+
+/* ---------------- boot ---------------- */
+updateJar();
+buildHome();
+refreshClipCache();
+
+let booted=false;
+document.body.addEventListener('pointerdown', ()=>{
+  ensureAudio();
+  if (!booted){
+    booted=true;
+    if ('speechSynthesis' in window){ const u=new SpeechSynthesisUtterance(' '); u.volume=0; speechSynthesis.speak(u); }
+    setTimeout(()=>pipSay([{clip:'p_hi'}]), 400);
+  }
+}, {capture:true});
+
+document.addEventListener('gesturestart', e=>e.preventDefault());
+document.addEventListener('dblclick', e=>e.preventDefault());
+</script>
+</body>
+</html>

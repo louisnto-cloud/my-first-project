@@ -1,0 +1,13 @@
+{
+  "name": "Sound Garden",
+  "short_name": "Sound Garden",
+  "display": "standalone",
+  "orientation": "any",
+  "start_url": "./",
+  "background_color": "#8fd3f4",
+  "theme_color": "#8fd3f4",
+  "icons": [
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

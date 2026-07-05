@@ -51,6 +51,10 @@ jobs:
         run: |
           mkdir -p dist/pilgrimage
           cp -r pilgrimage/out/. dist/pilgrimage/
+          if [ -d sound-garden ]; then
+            mkdir -p dist/sound-garden
+            cp -r sound-garden/. dist/sound-garden/
+          fi
       - name: Publish full site
         if: github.ref == 'refs/heads/main' || hashFiles('pilgrimage/package.json') == ''
         uses: peaceiris/actions-gh-pages@v4
