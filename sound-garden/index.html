@@ -35,7 +35,8 @@
   #spots { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:5vmin; max-width:95vw; padding:2vmin; }
   .spot { width:min(31vmin,220px); height:min(31vmin,220px); border-radius:50%; position:relative;
     display:flex; align-items:center; justify-content:center; cursor:pointer;
-    box-shadow: 0 1.2vmin 0 rgba(0,0,0,.10); transition: transform .15s; }
+    box-shadow: 0 1.2vmin 0 rgba(0,0,0,.10), inset 0 -0.6vmin 0 rgba(0,0,0,.06), inset 0.4vmin 0.6vmin 0 rgba(255,255,255,.5);
+    transition: transform .15s; }
   .spot:active { transform: scale(.93); }
   .spot svg.letter { width:62%; height:62%; }
   .spot .friend { position:absolute; bottom:-1vmin; right:-1vmin; font-size:9vmin; filter: drop-shadow(0 .5vmin rgba(0,0,0,.15)); }
@@ -48,7 +49,8 @@
 
   /* ------- generic big round buttons ------- */
   .roundbtn { border-radius:50%; display:flex; align-items:center; justify-content:center;
-    box-shadow:0 1vmin 0 rgba(0,0,0,.12); cursor:pointer; transition:transform .12s; background:#fff; }
+    box-shadow:0 1vmin 0 rgba(0,0,0,.12), inset 0 -0.5vmin 0 rgba(0,0,0,.05), inset 0.3vmin 0.4vmin 0 rgba(255,255,255,.6);
+    cursor:pointer; transition:transform .12s; background:#fff; }
   .roundbtn:active { transform:scale(.9); }
   .navbtn { position:absolute; top:calc(env(safe-area-inset-top) + 2vmin); width:12vmin; height:12vmin; min-width:56px; min-height:56px; font-size:6vmin; z-index:30; }
   #homebtn { right:3vmin; }
@@ -56,8 +58,34 @@
 
   /* ------- picker ------- */
   #picker-letter { width:34vmin; height:34vmin; }
-  #picker-row { display:flex; gap:6vmin; margin-top:4vmin; flex-wrap:wrap; justify-content:center; }
-  .pickbtn { width:min(24vmin,180px); height:min(24vmin,180px); font-size:11vmin; }
+  #picker-row { display:flex; gap:5vmin; margin-top:4vmin; flex-wrap:wrap; justify-content:center; max-width:90vw; }
+  .pickbtn { width:min(21vmin,160px); height:min(21vmin,160px); font-size:10vmin; }
+
+  /* ------- word families ------- */
+  #family-rime { display:flex; gap:2vmin; margin-bottom:5vmin; }
+  #family-rime .rtile { width:min(20vmin,150px); height:min(24vmin,180px); border-radius:4vmin; background:rgba(255,255,255,.95);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 1.2vmin 0 rgba(0,0,0,.12), inset 0 -0.6vmin 0 rgba(0,0,0,.05), inset 0.4vmin 0.6vmin 0 rgba(255,255,255,.6); }
+  #family-rime .rtile svg { width:74%; height:74%; }
+  #family-onsets { display:flex; gap:4vmin; flex-wrap:wrap; justify-content:center; max-width:90vw; }
+  .onsetbtn { width:min(20vmin,150px); height:min(20vmin,150px); border-radius:50%; background:rgba(255,255,255,.95);
+    display:flex; align-items:center; justify-content:center; cursor:pointer; transition:transform .15s;
+    box-shadow:0 1.2vmin 0 rgba(0,0,0,.12), inset 0 -0.6vmin 0 rgba(0,0,0,.05), inset 0.4vmin 0.6vmin 0 rgba(255,255,255,.6); }
+  .onsetbtn svg { width:64%; height:64%; }
+  .onsetbtn:active { transform:scale(.9); }
+  .onsetbtn.done { background:#fff6c8; box-shadow:0 0 5vmin 1vmin rgba(255,214,64,.8); }
+  #family-picture { margin-top:4vmin; font-size:14vmin; text-align:center; min-height:16vmin; }
+
+  /* ------- pop the bubbles ------- */
+  #pop-field { position:absolute; inset:0; overflow:hidden; }
+  .popbubble { position:absolute; width:min(22vmin,165px); height:min(22vmin,165px); border-radius:50%;
+    background:rgba(255,255,255,.92); display:flex; align-items:center; justify-content:center; cursor:pointer;
+    box-shadow:0 1vmin 0 rgba(0,0,0,.10), inset 0 -0.6vmin 0 rgba(0,0,0,.05), inset 0.4vmin 0.6vmin 0 rgba(255,255,255,.6);
+    animation: floatUp linear forwards; }
+  .popbubble svg { width:62%; height:62%; pointer-events:none; }
+  .popbubble.burst { animation: bubbleBurst .35s ease-out forwards !important; }
+  @keyframes floatUp { from { transform:translateY(0) translateX(0); } to { transform:translateY(-115vh) translateX(var(--drift,0)); } }
+  @keyframes bubbleBurst { to { transform:scale(1.6); opacity:0; } }
 
   /* ------- meet ------- */
   #meet-letter { width:min(64vmin,480px); height:min(64vmin,480px); cursor:pointer; transition: transform .18s; }
@@ -76,8 +104,8 @@
   /* ------- find ------- */
   #find-row { display:flex; gap:6vmin; flex-wrap:wrap; justify-content:center; padding:2vmin; }
   .bubble { width:min(27vmin,210px); height:min(27vmin,210px); border-radius:50%; background:rgba(255,255,255,.92);
-    display:flex; align-items:center; justify-content:center; cursor:pointer;
-    box-shadow:0 1.2vmin 0 rgba(0,0,0,.10); transition:transform .15s; }
+    display:flex; align-items:center; justify-content:center; cursor:pointer; transition:transform .15s;
+    box-shadow:0 1.2vmin 0 rgba(0,0,0,.10), inset 0 -0.6vmin 0 rgba(0,0,0,.05), inset 0.4vmin 0.6vmin 0 rgba(255,255,255,.6); }
   .bubble:active { transform:scale(.92); }
   .bubble svg { width:64%; height:64%; }
   .bubble.no { animation: wiggle .5s; }
@@ -87,8 +115,9 @@
   /* ------- word ------- */
   #word-row { display:flex; gap:5vmin; justify-content:center; align-items:center; }
   .tile { width:min(24vmin,190px); height:min(28vmin,220px); border-radius:4vmin; background:rgba(255,255,255,.95);
-    display:flex; align-items:center; justify-content:center; cursor:pointer;
-    box-shadow:0 1.2vmin 0 rgba(0,0,0,.12); transition: transform .5s, box-shadow .3s, margin .5s; position:relative; }
+    display:flex; align-items:center; justify-content:center; cursor:pointer; position:relative;
+    box-shadow:0 1.2vmin 0 rgba(0,0,0,.12), inset 0 -0.6vmin 0 rgba(0,0,0,.05), inset 0.4vmin 0.6vmin 0 rgba(255,255,255,.6);
+    transition: transform .5s, box-shadow .3s, margin .5s; }
   .tile svg { width:76%; height:76%; }
   .tile.done { background:#fff6c8; box-shadow:0 0 5vmin 1vmin rgba(255,214,64,.8); }
   .tile.no { animation: wiggle .5s; }
@@ -157,6 +186,12 @@
   </svg>
   <div class="cloud" style="top:8%; animation-duration:70s;">☁️</div>
   <div class="cloud" style="top:20%; animation-duration:95s; animation-delay:-40s;">☁️</div>
+  <div id="ground-deco" style="position:absolute; left:0; right:0; bottom:0; height:14vmin; pointer-events:none; overflow:hidden;">
+    <div style="position:absolute; left:3%; bottom:-2vmin; font-size:9vmin;">🌸</div>
+    <div style="position:absolute; left:14%; bottom:-3vmin; font-size:7vmin;">🌷</div>
+    <div style="position:absolute; right:6%; bottom:-2vmin; font-size:9vmin;">🌼</div>
+    <div style="position:absolute; right:18%; bottom:-3vmin; font-size:7vmin;">🌿</div>
+  </div>
   <div id="spots"></div>
 </div>
 
@@ -168,7 +203,32 @@
     <div class="roundbtn pickbtn" id="pick-meet" style="background:#ffe3ec;">📢</div>
     <div class="roundbtn pickbtn" id="pick-trace" style="background:#e3f0ff;">☝️</div>
     <div class="roundbtn pickbtn" id="pick-find" style="background:#e9ffe3;">🔍</div>
+    <div class="roundbtn pickbtn" id="pick-pop" style="background:#e3faff;">🫧</div>
   </div>
+</div>
+
+<!-- ===================== TREE PICKER (Build a Word vs Word Families) ===================== -->
+<div id="scene-treepicker" class="scene hidden">
+  <div class="roundbtn navbtn" id="homebtn-tp" style="right:3vmin;">🏠</div>
+  <div style="font-size:16vmin;">🌳</div>
+  <div id="picker-row" style="margin-top:4vmin;">
+    <div class="roundbtn pickbtn" id="pick-build" style="background:#fff3d6;">🧩</div>
+    <div class="roundbtn pickbtn" id="pick-family" style="background:#ffe3fb;">🎡</div>
+  </div>
+</div>
+
+<!-- ===================== WORD FAMILIES ===================== -->
+<div id="scene-family" class="scene hidden">
+  <div class="roundbtn navbtn" id="homebtn-fam" style="right:3vmin;">🏠</div>
+  <div id="family-rime"></div>
+  <div id="family-onsets"></div>
+  <div id="family-picture"></div>
+</div>
+
+<!-- ===================== POP THE BUBBLES ===================== -->
+<div id="scene-pop" class="scene hidden">
+  <div class="roundbtn navbtn" id="homebtn-pop" style="right:3vmin;">🏠</div>
+  <div id="pop-field"></div>
 </div>
 
 <!-- ===================== MEET ===================== -->
@@ -395,9 +455,24 @@ function letterSVG(l, opts={}) {
     }[l] || [[42,50],[58,50]];
     for (const [x,y] of EYE_POS)
       inner += `<circle cx="${x}" cy="${y}" r="5.2" fill="#fff"/><circle cx="${x+1}" cy="${y+1}" r="2.5" fill="#3a2a18"/>`;
+    // little legs, so the letter reads as a living character standing up
+    // (not just a glyph) — the bounce animation on awake spots then reads
+    // as a tiny walk/wobble instead of a static shape jiggling
+    const legColor = darken(color, 0.32);
+    inner = `<path d="M 44 80 Q 39 89 35 94" stroke="${legColor}" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+      <ellipse cx="33" cy="95" rx="6.5" ry="3.6" fill="${legColor}"/>
+      <path d="M 56 80 Q 61 89 65 94" stroke="${legColor}" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+      <ellipse cx="67" cy="95" rx="6.5" ry="3.6" fill="${legColor}"/>` + inner;
   }
   svg.innerHTML = inner;
   return svg;
+}
+function darken(hex, amt){
+  const n = parseInt(hex.slice(1), 16);
+  const r = Math.max(0, ((n>>16)&255) * (1-amt));
+  const g = Math.max(0, ((n>>8)&255) * (1-amt));
+  const b = Math.max(0, (n&255) * (1-amt));
+  return `rgb(${r|0},${g|0},${b|0})`;
 }
 
 /* ---------------- audio: sfx + phoneme synth ---------------- */
@@ -502,7 +577,9 @@ const CLIPS = {
   p_again:{ script:'“That’s okay, {name}! Try again!” (very warm and gentle — she is sensitive)', tts:'Thats okay, {name}! Try again!' },
   p_word:{ script:'“Let’s make a word! Tap the sounds!”', tts:'Lets make a word! Tap the sounds!' },
   p_firstword:{ script:'“{name}!! You READ a word!! Hooray!!!” (as excited as you can)', tts:'{name}! You read a word!! Hooray!!' },
-  p_more:{ script:'“Let’s play with the other sounds first!”', tts:'Lets play with the other sounds first!' }
+  p_more:{ script:'“Let’s play with the other sounds first!”', tts:'Lets play with the other sounds first!' },
+  p_family:{ script:'“Watch what happens when we change the first sound!”', tts:'Watch what happens when we change the first sound!' },
+  p_pop:{ script:'“Pop the bubble that says…”', tts:'Pop the bubble that says' }
 };
 for (const w in WORDS) CLIPS['wd_'+w] = { script:`“${w}!” — say the whole word happily.`, tts:w+'!', auto:true };
 function withName(s){ return (s||'').split('{name}').join(S.name || 'Mariana'); }
@@ -680,6 +757,22 @@ function awake(l){
 }
 function availableWords(){ return Object.keys(WORDS).filter(w=>WORDS[w].seq.every(ready)); }
 function wordAwake(){ return availableWords().length>0; }
+
+/* word families ("rhyme wheels"): groups of words that share the same last
+   two sound-units (the rime) but differ in what comes before it — cat/hat/
+   mat/pat/rat/sat all share "-at". Derived automatically from WORDS so it
+   always stays in sync; no separate list to maintain. */
+const WORD_FAMILIES = {};
+for (const w in WORDS) {
+  const seq = WORDS[w].seq;
+  if (seq.length < 3) continue;
+  const rime = seq.slice(-2).join(',');
+  (WORD_FAMILIES[rime] = WORD_FAMILIES[rime] || []).push(w);
+}
+for (const r in WORD_FAMILIES) if (WORD_FAMILIES[r].length < 3) delete WORD_FAMILIES[r];
+function wordOnset(w){ return WORDS[w].seq.slice(0, -2); }
+function familyMembers(rime){ return WORD_FAMILIES[rime].filter(w => WORDS[w].seq.every(ready)); }
+function availableFamilies(){ return Object.keys(WORD_FAMILIES).filter(r => familyMembers(r).length >= 3); }
 function recommended(){
   for (const l of LETTER_ORDER) if (!ready(l)) return awake(l) ? l : 'word';
   for (const dg in DIGRAPHS) if (awake(dg) && !ready(dg)) return dg;
@@ -694,14 +787,16 @@ function status(l){ const st=S.letters[l];
 
 /* ---------------- scenes ---------------- */
 const sceneEls = {};
-for (const s of ['home','picker','meet','trace','find','word'])
+for (const s of ['home','picker','meet','trace','find','word','treepicker','family','pop'])
   sceneEls[s] = document.getElementById('scene-'+s);
 let curScene='home', curLetter='s';
+let popSpawnTimer=null;
 function showScene(name){
   stopSpeaking();
   for (const s in sceneEls) sceneEls[s].classList.toggle('hidden', s!==name);
   curScene = name;
   if (traceHandTimer){ clearInterval(traceHandTimer); traceHandTimer=null; }
+  if (name!=='pop' && popSpawnTimer){ clearInterval(popSpawnTimer); popSpawnTimer=null; }
 }
 
 /* ---------- HOME ---------- */
@@ -743,7 +838,7 @@ function buildHome(){
   w.addEventListener('pointerdown', ev=>{ ensureAudio();
     if (!wordAwake()){ sfx.boing(); pipSay([{clip:'p_more'}]); wobble(w); return; }
     sfx.pop(); burstAt(ev.clientX, ev.clientY, 5);
-    startWord();
+    if (availableFamilies().length) openTreePicker(); else startWord();
   });
   spotsEl.appendChild(w);
 }
@@ -761,6 +856,15 @@ function openPicker(l){
 document.getElementById('pick-meet').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startMeet(curLetter); });
 document.getElementById('pick-trace').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startTrace(curLetter); });
 document.getElementById('pick-find').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startFind(curLetter); });
+document.getElementById('pick-pop').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startPop(curLetter); });
+
+/* ---------- TREE PICKER (Build a Word vs Word Families) ---------- */
+function openTreePicker(){
+  showScene('treepicker');
+  pipSay([{clip:'p_word'}]);
+}
+document.getElementById('pick-build').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startWord(); });
+document.getElementById('pick-family').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startFamily(); });
 
 /* ---------- MEET ---------- */
 const meetEl = document.getElementById('meet-letter');
@@ -937,7 +1041,7 @@ function startWord(){
   const seq = WORDS[w].seq;
   for (let i=0;i<seq.length;i++){
     const t=document.createElement('div'); t.className='tile'; t.dataset.i=i;
-    t.appendChild(letterSVG(seq[i],{}));
+    t.appendChild(letterSVG(seq[i],{eyes:true}));
     t.addEventListener('pointerdown', ev=>{ ensureAudio(); onTileTap(i,t,ev); });
     wordRow.appendChild(t);
   }
@@ -1025,9 +1129,119 @@ const WORD_PICS = {
   </svg>`
 };
 
+/* ---------- WORD FAMILIES ("rhyme wheel") ---------- */
+const familyRimeEl = document.getElementById('family-rime');
+const familyOnsetsEl = document.getElementById('family-onsets');
+const familyPicEl = document.getElementById('family-picture');
+let FAM=null;
+function startFamily(){
+  const avail = availableFamilies();
+  if (!avail.length){ startWord(); return; }
+  const rime = avail[Math.floor(Math.random()*avail.length)];
+  const members = familyMembers(rime).sort(()=>Math.random()-.5).slice(0,6);
+  FAM = { rime, members, heard:new Set() };
+  familyRimeEl.innerHTML=''; familyPicEl.innerHTML='';
+  for (const l of rime.split(',')){
+    const t=document.createElement('div'); t.className='rtile'; t.appendChild(letterSVG(l,{eyes:true}));
+    familyRimeEl.appendChild(t);
+  }
+  familyOnsetsEl.innerHTML='';
+  for (const w of members){
+    const onset = wordOnset(w);
+    const b=document.createElement('div'); b.className='onsetbtn'; b.dataset.word=w;
+    const mini=document.createElement('div'); mini.style.cssText='display:flex;gap:2px;';
+    for (const l of onset){ const s=letterSVG(l,{width:15}); s.style.width='34px'; s.style.height='34px'; mini.appendChild(s); }
+    b.appendChild(mini);
+    b.addEventListener('pointerdown', ev=>{ ensureAudio(); onFamilyTap(w,b,ev); });
+    familyOnsetsEl.appendChild(b);
+  }
+  showScene('family');
+  pipSay([{clip:'p_family'}]);
+}
+async function onFamilyTap(w, b, ev){
+  if (!FAM) return;
+  b.classList.add('done');
+  burstAt(ev.clientX, ev.clientY, 8);
+  sfx.chime();
+  const onset = wordOnset(w), rimeLetters = FAM.rime.split(',');
+  const parts=[];
+  for (const l of onset.concat(rimeLetters)) parts.push(soundPart(l, STRETCH[l]), {pause:100});
+  parts.push({pause:200},{clip:'wd_'+w});
+  await speakSeq(parts);
+  familyPicEl.innerHTML = WORDS[w].emoji ? `<div>${WORDS[w].emoji}</div>` : (WORD_PICS[w]||'⭐');
+  FAM.heard.add(w);
+  sfx.cheer(); burstAt(ev.clientX, ev.clientY, 5);
+  awardStar(ev.clientX, ev.clientY);
+  if (FAM.heard.size >= Math.min(4, FAM.members.length)){
+    setTimeout(()=>{ bigCelebration(); setTimeout(goHome, 2200); }, 700);
+  }
+}
+
+/* ---------- POP THE BUBBLES (kinetic Find-the-Sound) ---------- */
+const popField = document.getElementById('pop-field');
+let POP=null;
+function startPop(l){
+  curLetter=l;
+  POP = { target:l, round:0, spawned:0 };
+  popField.innerHTML='';
+  showScene('pop');
+  pipSay([{clip:'p_pop'},{pause:120}, soundPart(l)]);
+  spawnPopRound();
+}
+function spawnPopRound(){
+  if (!POP) return;
+  let pool = LETTER_ORDER.filter(awake).concat(Object.keys(DIGRAPHS).filter(awake));
+  if (!pool.includes(POP.target)) pool.push(POP.target);
+  if (pool.length<3) pool = LETTER_ORDER.slice(0,3);
+  const others = pool.filter(l=>l!==POP.target).sort(()=>Math.random()-.5);
+  const nOpts = pool.length>=5 ? 4 : 2;
+  const batch = [POP.target, ...others.slice(0,nOpts)].sort(()=>Math.random()-.5);
+  POP.remaining = new Set(batch.map((l,i)=>i));
+  batch.forEach((l,i)=>spawnBubble(l, i));
+  popSpawnTimer = setInterval(()=>{ if (POP) spawnBubble(POP.target, Math.random()); }, 2600);
+}
+function spawnBubble(l, key){
+  if (!POP || curScene!=='pop') return;
+  const b=document.createElement('div'); b.className='popbubble'; b.dataset.l=l;
+  const leftPct = 8 + Math.random()*78;
+  const dur = 7 + Math.random()*3;
+  b.style.left = leftPct+'%'; b.style.top='100%';
+  b.style.setProperty('--drift', (Math.random()*16-8)+'vmin');
+  b.style.animationDuration = dur+'s';
+  b.appendChild(letterSVG(l,{}));
+  b.addEventListener('pointerdown', ev=>{ ensureAudio(); onPopTap(l,b,ev); });
+  b.addEventListener('animationend', ()=>{ if (b.parentNode && !b.classList.contains('burst')) b.remove(); });
+  popField.appendChild(b);
+}
+function onPopTap(l, b, ev){
+  if (!POP || b.classList.contains('burst')) return;
+  if (l===POP.target){
+    S.letters[POP.target].findRight++; save();
+    b.classList.add('burst');
+    burstAt(ev.clientX, ev.clientY, 10);
+    sfx.cheer();
+    speakSeq([soundPart(l), {pause:200}, {clip:'p_yay'}]);
+    awardStar(ev.clientX, ev.clientY);
+    setTimeout(()=>b.remove(), 400);
+    POP.round++;
+    if (POP.round>=5){
+      clearInterval(popSpawnTimer); popSpawnTimer=null;
+      setTimeout(()=>{ bigCelebration(); setTimeout(goHome, 2000); }, 700);
+    }
+  } else {
+    S.letters[POP.target].findWrong++; save();
+    b.style.transform='scale(.8)'; b.style.opacity='.6';
+    sfx.boing();
+    speakSeq([{clip:'p_again'}]);
+    setTimeout(()=>{ if(b) { b.style.transform=''; b.style.opacity=''; } }, 500);
+  }
+}
+
 /* ---------- nav buttons ---------- */
-for (const id of ['homebtn-p','homebtn-m','homebtn-t','homebtn-f','homebtn-w'])
-  document.getElementById(id).addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); goHome(); });
+for (const id of ['homebtn-p','homebtn-m','homebtn-t','homebtn-f','homebtn-w','homebtn-tp','homebtn-fam','homebtn-pop'])
+  document.getElementById(id).addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop();
+    if (popSpawnTimer){ clearInterval(popSpawnTimer); popSpawnTimer=null; } POP=null; FAM=null;
+    goHome(); });
 
 /* ---------------- parent screen ---------------- */
 const gear = document.getElementById('gear');
