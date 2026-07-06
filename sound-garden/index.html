@@ -21,6 +21,8 @@
 
   .scene { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
   .hidden { display:none !important; }
+  #scene-home { overflow-y:auto; -webkit-overflow-scrolling:touch; touch-action:pan-y;
+    justify-content:flex-start; padding-top:max(4vmin, env(safe-area-inset-top)); padding-bottom:22vmin; }
 
   /* ------- decorations ------- */
   #sun { position:absolute; top:calc(env(safe-area-inset-top) + 2vmin); right:4vmin; width:16vmin; height:16vmin; pointer-events:none; }
@@ -245,7 +247,9 @@
 ===================================================================== */
 
 /* ---------------- state ---------------- */
-const LETTER_ORDER = ['s','a','t','p','i','n'];
+const LETTER_ORDER = ['s','a','t','p','i','n','c','o','d','h','e','l','f','b','m','g','u','r','j','k','v','w','x','y','z','qu'];
+const DIGRAPHS = { sh:['s','h'], ch:['c','h'], th:['t','h'], ck:['c','k'] };
+const ALL_UNITS = LETTER_ORDER.concat(Object.keys(DIGRAPHS));
 const DEFAULT_STATE = {
   name: 'Mariana',
   stars: 0,
@@ -258,7 +262,7 @@ const DEFAULT_STATE = {
 let S;
 try { S = Object.assign(JSON.parse(JSON.stringify(DEFAULT_STATE)), JSON.parse(localStorage.getItem('sg_state')||'{}')); }
 catch(e){ S = JSON.parse(JSON.stringify(DEFAULT_STATE)); }
-for (const l of LETTER_ORDER) S.letters[l] = Object.assign({met:0,traced:0,findRight:0,findWrong:0}, S.letters[l]||{});
+for (const l of ALL_UNITS) S.letters[l] = Object.assign({met:0,traced:0,findRight:0,findWrong:0}, S.letters[l]||{});
 if (!S.words || typeof S.words!=='object') S.words = {};
 function save(){ localStorage.setItem('sg_state', JSON.stringify(S)); }
 
@@ -269,19 +273,87 @@ const LETTERS = {
   t: { color:'#e88f2a', bg:'#fdeed7', friend:'⛺', strokes:['M 46 20 C 46 34 46 52 46 60 C 46 72 55 76 64 70','M 32 38 L 62 38'] },
   p: { color:'#8e5bd9', bg:'#ece3fb', friend:'🐷', strokes:['M 38 42 L 38 88','M 38 50 C 44 40 64 42 64 57 C 64 72 44 74 38 64'] },
   i: { color:'#00a6a6', bg:'#d9f4f4', friend:'🐛', strokes:['M 50 44 L 50 72','M 50 30 C 47 30 47 34 50 34 C 53 34 53 30 50 30'] },
-  n: { color:'#3f6bd8', bg:'#e1e8fb', friend:'🪺', strokes:['M 38 46 L 38 74','M 38 60 C 38 46 62 44 62 60 L 62 74'] }
+  n: { color:'#3f6bd8', bg:'#e1e8fb', friend:'🪺', strokes:['M 38 46 L 38 74','M 38 60 C 38 46 62 44 62 60 L 62 74'] },
+  c: { color:'#d9633b', bg:'#fbe4d9', friend:'🐱', strokes:['M 66 38 C 58 28 38 30 30 45 C 24 58 30 74 46 78 C 56 80 64 74 64 68'] },
+  o: { color:'#3f9142', bg:'#e2f5e2', friend:'🐙', strokes:['M 50 35 C 38 35 30 48 30 58 C 30 70 38 80 50 80 C 62 80 70 70 70 58 C 70 48 62 35 50 35 Z'] },
+  d: { color:'#2678b0', bg:'#dcedf7', friend:'🦆', strokes:['M 62 18 L 62 78','M 60 45 C 52 34 36 36 31 49 C 26 62 32 76 46 78 C 56 79 60 72 60 64'] },
+  h: { color:'#a8562f', bg:'#f1e2d5', friend:'🏠', strokes:['M 35 18 L 35 78','M 35 52 C 40 40 60 40 62 52 L 62 78'] },
+  e: { color:'#c23b6b', bg:'#fbe0ea', friend:'🥚', strokes:['M 68 60 C 66 44 54 34 44 36 C 30 39 26 54 30 66 C 34 78 50 82 62 74','M 30 55 L 66 55'] },
+  l: { color:'#5a9bd4', bg:'#e5f1fb', friend:'🦁', strokes:['M 45 18 L 45 78'] },
+  f: { color:'#e0a72a', bg:'#fdf1d6', friend:'🐸', strokes:['M 55 18 C 45 18 40 24 40 34 L 40 78','M 30 42 L 55 42'] },
+  b: { color:'#7952b3', bg:'#ece3f7', friend:'🐻', strokes:['M 38 18 L 38 78','M 38 45 C 46 36 62 38 62 55 C 62 70 48 80 38 72'] },
+  m: { color:'#d1495b', bg:'#fbe1e4', friend:'🐵', strokes:['M 30 78 L 30 40','M 30 50 C 34 38 48 38 50 50 L 50 78','M 50 50 C 54 38 68 38 70 50 L 70 78'] },
+  g: { color:'#4caf50', bg:'#e4f5e5', friend:'🦒', strokes:['M 62 40 C 55 32 40 32 34 42 C 28 52 30 65 40 70 C 50 75 60 70 62 60 L 62 82 C 62 92 52 96 42 92'] },
+  u: { color:'#ff8c42', bg:'#ffead9', friend:'☂️', strokes:['M 32 38 L 32 58 C 32 74 40 78 49 78 C 58 78 66 74 66 58 L 66 38'] },
+  r: { color:'#c0392b', bg:'#f8ded9', friend:'🐇', strokes:['M 38 38 L 38 78','M 38 46 C 42 36 56 36 58 44'] },
+  j: { color:'#f4a300', bg:'#fdf0d4', friend:'🧃', strokes:['M 55 44 L 55 82 C 55 92 46 96 38 92','M 55 30 C 52 30 52 34 55 34 C 58 34 58 30 55 30'] },
+  k: { color:'#6c757d', bg:'#e9ebec', friend:'🔑', strokes:['M 35 18 L 35 78','M 35 55 L 60 38','M 42 50 L 62 78'] },
+  v: { color:'#8e44ad', bg:'#f0e2f5', friend:'🚐', strokes:['M 32 38 L 50 78 L 68 38'] },
+  w: { color:'#1abc9c', bg:'#daf5f0', friend:'🐋', strokes:['M 26 38 L 38 78 L 50 50 L 62 78 L 74 38'] },
+  x: { color:'#e67e22', bg:'#fbe8d7', friend:'📦', strokes:['M 32 38 L 68 78','M 68 38 L 32 78'] },
+  y: { color:'#f1c40f', bg:'#fdf6d5', friend:'🪀', strokes:['M 32 38 L 50 62 L 68 38','M 50 62 L 44 90'] },
+  z: { color:'#16a085', bg:'#d9f2ec', friend:'🦓', strokes:['M 32 40 L 66 40 L 32 76 L 66 76'] },
+  qu:{ color:'#9b59b6', bg:'#f1e3f7', friend:'👸' }  /* strokes composed below from q+u */
 };
-/* all 18 real words buildable from s a t p i n, each with a picture */
+/* private q shape, used only to compose the qu tile (q never appears alone in English) */
+const Q_STROKES = ['M 46 40 C 40 32 28 32 23 42 C 18 52 20 63 28 68 C 36 72 44 68 46 60 L 46 85 L 53 90'];
+
+/* transform an SVG path's numeric coordinates (all our strokes are plain M/L/C
+   pairs, so every number alternates x,y in document order) */
+function transformStroke(d, scale, tx, ty){
+  let i=0;
+  return d.replace(/-?\d+\.?\d*/g, m => { const v = parseFloat(m)*scale + (i++%2===0?tx:ty); return (Math.round(v*100)/100); });
+}
+function composeDigraph(strokes1, strokes2){
+  const s1 = strokes1.map(d => transformStroke(d, 0.6, -2, 22));
+  const s2 = strokes2.map(d => transformStroke(d, 0.6, 40, 22));
+  return s1.concat(s2);
+}
+LETTERS.qu.strokes = composeDigraph(Q_STROKES, LETTERS.u.strokes);
+LETTERS.qu.strokeWidth = 9;
+for (const [dg,[l1,l2]] of Object.entries(DIGRAPHS))
+  LETTERS[dg] = { color: {sh:'#34495e',ch:'#d35400',th:'#e0457b',ck:'#c0392b'}[dg],
+                  bg: {sh:'#e3e7ea',ch:'#fbe3d3',th:'#fde3ec',ck:'#fbe0dd'}[dg],
+                  friend: {sh:'🤫',ch:'🚂',th:'👅',ck:'🐥'}[dg],
+                  strokeWidth: 9,
+                  strokes: composeDigraph(LETTERS[l1].strokes, LETTERS[l2].strokes) };
+
+/* every real word the game can build, grouped by the letters it needs.
+   availableWords() below unlocks each one automatically once its letters
+   are known — there is no manual "stage" list, so words appear the moment
+   they become readable. */
 const WORDS = {
-  sat: { seq:['s','a','t'] },            at:  { seq:['a','t'] },
-  pat: { seq:['p','a','t'], emoji:'🖐️🐶' }, tap: { seq:['t','a','p'], emoji:'👉🚰' },
-  sap: { seq:['s','a','p'], emoji:'🌳💧' }, sit: { seq:['s','i','t'], emoji:'🧒🪑' },
-  pit: { seq:['p','i','t'], emoji:'🕳️' },  tip: { seq:['t','i','p'], emoji:'☝️' },
-  sip: { seq:['s','i','p'], emoji:'🥤' },  pin: { seq:['p','i','n'], emoji:'📌' },
-  tin: { seq:['t','i','n'], emoji:'🥫' },  tan: { seq:['t','a','n'], emoji:'😎☀️' },
-  pan: { seq:['p','a','n'], emoji:'🍳' },  nap: { seq:['n','a','p'], emoji:'😴' },
-  nip: { seq:['n','i','p'], emoji:'🦀' },  an:  { seq:['a','n'], emoji:'🍎' },
-  in:  { seq:['i','n'], emoji:'🐱📦' },   it:  { seq:['i','t'], emoji:'👉🎁' }
+  sat:{seq:['s','a','t']}, at:{seq:['a','t']}, pat:{seq:['p','a','t'],emoji:'🖐️🐶'}, tap:{seq:['t','a','p'],emoji:'👉🚰'},
+  sap:{seq:['s','a','p'],emoji:'🌳💧'}, sit:{seq:['s','i','t'],emoji:'🧒🪑'}, pit:{seq:['p','i','t'],emoji:'🕳️'}, tip:{seq:['t','i','p'],emoji:'☝️'},
+  sip:{seq:['s','i','p'],emoji:'🥤'}, pin:{seq:['p','i','n'],emoji:'📌'}, tin:{seq:['t','i','n'],emoji:'🥫'}, tan:{seq:['t','a','n'],emoji:'😎☀️'},
+  pan:{seq:['p','a','n'],emoji:'🍳'}, nap:{seq:['n','a','p'],emoji:'😴'}, nip:{seq:['n','i','p'],emoji:'🦀'}, an:{seq:['a','n'],emoji:'🍎'},
+  in:{seq:['i','n'],emoji:'🐱📦'}, it:{seq:['i','t'],emoji:'👉🎁'},
+  cat:{seq:['c','a','t'],emoji:'🐱'}, cap:{seq:['c','a','p'],emoji:'🧢'}, cop:{seq:['c','o','p'],emoji:'👮'}, top:{seq:['t','o','p'],emoji:'🌀'},
+  pot:{seq:['p','o','t'],emoji:'🍲'}, dot:{seq:['d','o','t'],emoji:'🔴'}, dad:{seq:['d','a','d'],emoji:'👨'}, can:{seq:['c','a','n'],emoji:'🥫'},
+  hat:{seq:['h','a','t'],emoji:'🎩'}, hop:{seq:['h','o','p'],emoji:'🐇'}, hot:{seq:['h','o','t'],emoji:'🔥'}, ham:{seq:['h','a','m'],emoji:'🍖'},
+  pet:{seq:['p','e','t'],emoji:'🐶'}, pen:{seq:['p','e','n'],emoji:'🖊️'}, ten:{seq:['t','e','n'],emoji:'🔟'}, hen:{seq:['h','e','n'],emoji:'🐔'},
+  net:{seq:['n','e','t'],emoji:'🥅'}, den:{seq:['d','e','n'],emoji:'🦁'},
+  lip:{seq:['l','i','p'],emoji:'👄'}, lap:{seq:['l','a','p'],emoji:'🧎'}, log:{seq:['l','o','g'],emoji:'🪵'},
+  fin:{seq:['f','i','n'],emoji:'🦈'}, fun:{seq:['f','u','n'],emoji:'🎉'},
+  bat:{seq:['b','a','t'],emoji:'🦇'}, bug:{seq:['b','u','g'],emoji:'🐛'}, bin:{seq:['b','i','n'],emoji:'🗑️'}, big:{seq:['b','i','g'],emoji:'🐘'}, bag:{seq:['b','a','g'],emoji:'🎒'},
+  mat:{seq:['m','a','t'],emoji:'🧘'}, map:{seq:['m','a','p'],emoji:'🗺️'}, mom:{seq:['m','o','m'],emoji:'👩'}, gum:{seq:['g','u','m'],emoji:'🍬'},
+  dig:{seq:['d','i','g'],emoji:'⛏️'}, tag:{seq:['t','a','g'],emoji:'🏷️'},
+  cup:{seq:['c','u','p'],emoji:'☕'}, cut:{seq:['c','u','t'],emoji:'✂️'}, sun:{seq:['s','u','n'],emoji:'☀️'}, pup:{seq:['p','u','p'],emoji:'🐶'},
+  run:{seq:['r','u','n'],emoji:'🏃'}, rat:{seq:['r','a','t'],emoji:'🐀'}, car:{seq:['c','a','r'],emoji:'🚗'},
+  jam:{seq:['j','a','m'],emoji:'🍇'}, job:{seq:['j','o','b'],emoji:'💼'},
+  kid:{seq:['k','i','d'],emoji:'🧒'}, kit:{seq:['k','i','t'],emoji:'🧰'},
+  van:{seq:['v','a','n'],emoji:'🚐'}, vet:{seq:['v','e','t'],emoji:'👩‍⚕️'},
+  wag:{seq:['w','a','g'],emoji:'🐕'}, win:{seq:['w','i','n'],emoji:'🏆'}, wet:{seq:['w','e','t'],emoji:'💧'},
+  box:{seq:['b','o','x'],emoji:'📦'}, fox:{seq:['f','o','x'],emoji:'🦊'}, six:{seq:['s','i','x'],emoji:'6️⃣'},
+  yes:{seq:['y','e','s'],emoji:'✅'}, yum:{seq:['y','u','m'],emoji:'😋'},
+  zap:{seq:['z','a','p'],emoji:'⚡'}, zip:{seq:['z','i','p'],emoji:'🤐'},
+  quick:{seq:['qu','i','ck'],emoji:'⚡'},
+  ship:{seq:['sh','i','p'],emoji:'🚢'}, fish:{seq:['f','i','sh'],emoji:'🐟'}, wish:{seq:['w','i','sh'],emoji:'🌠'},
+  chat:{seq:['ch','a','t'],emoji:'💬'}, chip:{seq:['ch','i','p'],emoji:'🍟'},
+  math:{seq:['m','a','th'],emoji:'➕'}, thick:{seq:['th','i','ck'],emoji:'📚'},
+  sock:{seq:['s','o','ck'],emoji:'🧦'}, duck:{seq:['d','u','ck'],emoji:'🦆'}, rock:{seq:['r','o','ck'],emoji:'🪨'}, pick:{seq:['p','i','ck'],emoji:'👆'},
+  crab:{seq:['c','r','a','b'],emoji:'🦀'}, flag:{seq:['f','l','a','g'],emoji:'🚩'}, trip:{seq:['t','r','i','p'],emoji:'✈️'}, clap:{seq:['c','l','a','p'],emoji:'👏'},
+  stop:{seq:['s','t','o','p'],emoji:'🛑'}, step:{seq:['s','t','e','p'],emoji:'👣'}, spot:{seq:['s','p','o','t'],emoji:'🐾'}, star:{seq:['s','t','a','r'],emoji:'⭐'}
 };
 
 /* sample stroke paths into point lists (for tracing) */
@@ -303,16 +375,25 @@ for (const l in LETTERS) {
 /* render a letter as chunky SVG strokes */
 function letterSVG(l, opts={}) {
   const L = LETTERS[l];
-  const w = opts.width || 13, color = opts.color || L.color;
+  const w = opts.width || L.strokeWidth || 13, color = opts.color || L.color;
   const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
   svg.setAttribute('viewBox','0 0 100 100'); svg.setAttribute('class','letter');
   let inner = '';
   for (const d of L.strokes)
     inner += `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
   if (opts.eyes) {
-    const eyePos = { s:[[47,26],[58,27]], a:[[40,52],[50,53]], t:[[40,30],[53,30]],
-                     p:[[48,53],[57,54]], i:[[44,52],[56,52]], n:[[46,54],[56,55]] }[l];
-    for (const [x,y] of eyePos)
+    const EYE_POS = { s:[[47,26],[58,27]], a:[[40,52],[50,53]], t:[[40,30],[53,30]],
+                     p:[[48,53],[57,54]], i:[[44,52],[56,52]], n:[[46,54],[56,55]],
+                     c:[[42,45],[52,42]], o:[[44,53],[56,53]], d:[[42,52],[52,50]],
+                     h:[[42,58],[54,56]], e:[[42,50],[54,50]], l:[[38,45],[52,45]],
+                     f:[[32,48],[46,48]], b:[[46,54],[56,53]], m:[[36,55],[56,55]],
+                     g:[[42,50],[52,48]], u:[[36,50],[66,50]], r:[[32,48],[46,48]],
+                     j:[[48,55],[62,55]], k:[[30,50],[44,50]], v:[[38,44],[62,44]],
+                     w:[[32,44],[68,44]], x:[[38,44],[62,44]], y:[[36,44],[64,44]],
+                     z:[[42,50],[56,50]], qu:[[36,52],[64,52]],
+                     sh:[[30,44],[62,44]], ch:[[30,44],[62,44]], th:[[30,44],[62,44]], ck:[[30,44],[62,44]]
+    }[l] || [[42,50],[58,50]];
+    for (const [x,y] of EYE_POS)
       inner += `<circle cx="${x}" cy="${y}" r="5.2" fill="#fff"/><circle cx="${x+1}" cy="${y+1}" r="2.5" fill="#3a2a18"/>`;
   }
   svg.innerHTML = inner;
@@ -387,6 +468,30 @@ const CLIPS = {
   snd_p:{ script:'“p” — one soft little lip-pop. No “puh”. NOT the name “pee”.', phoneme:'t' },
   snd_i:{ script:'“i” as in itchy — “iiii”. Hold it 2 seconds. NOT the name “eye”.', phoneme:'a' },
   snd_n:{ script:'“nnnn” — a long hum through the nose. Hold it 2–3 seconds. NOT the name “en”.', phoneme:'a' },
+  snd_c:{ script:'“c” — says the same crisp “k” sound as the letter k. NOT the name “see”.', phoneme:'t' },
+  snd_o:{ script:'“o” as in octopus — “ahh”. Hold it 2 seconds. NOT the name “oh”.', phoneme:'a' },
+  snd_d:{ script:'“d” — one soft little tongue-tap, voiced. NOT the name “dee”.', phoneme:'t' },
+  snd_h:{ script:'“hhhh” — a soft breath, like fogging a mirror. Hold it 1–2 seconds. NOT the name “aitch”.', phoneme:'s' },
+  snd_e:{ script:'“e” as in egg — “ehh”. Hold it 2 seconds. NOT the name “ee”.', phoneme:'a' },
+  snd_l:{ script:'“llll” — tongue behind your teeth, hold it 2–3 seconds. NOT the name “el”.', phoneme:'a' },
+  snd_f:{ script:'“ffff” — top teeth on your lip, hold it 2–3 seconds. NOT the name “eff”.', phoneme:'s' },
+  snd_b:{ script:'“b” — one soft little lip-pop, voiced (buzzier than p). NOT the name “bee”.', phoneme:'t' },
+  snd_m:{ script:'“mmmm” — a hum with lips closed. Hold it 2–3 seconds. NOT the name “em”.', phoneme:'a' },
+  snd_g:{ script:'“g” — one soft little back-of-throat pop, voiced. NOT the name “gee”.', phoneme:'t' },
+  snd_u:{ script:'“u” as in up — “uhh”. Hold it 2 seconds. NOT the name “you”.', phoneme:'a' },
+  snd_r:{ script:'“rrrr” — hold it 2 seconds, like a growl. NOT the name “ar”.', phoneme:'a' },
+  snd_j:{ script:'“j” — one soft little buzzy pop. NOT the name “jay”.', phoneme:'t' },
+  snd_k:{ script:'“k” — one crisp back-of-throat click. NOT the name “kay”.', phoneme:'t' },
+  snd_v:{ script:'“vvvv” — top teeth on your lip, buzzy (voiced f). Hold it 2 seconds. NOT the name “vee”.', phoneme:'s' },
+  snd_w:{ script:'“wuh” — a quick round-lipped puff, like blowing out a candle gently. NOT the name “double-you”.', phoneme:'t' },
+  snd_x:{ script:'“ks” — say k then s very fast together, like the end of “box”. NOT the name “ex”.', phoneme:'t' },
+  snd_y:{ script:'“yuh” — a quick sound, like the start of “yes”. NOT the name “why”.', phoneme:'t' },
+  snd_z:{ script:'“zzzz” — a buzzy bee sound. Hold it 2 seconds. NOT the name “zee”.', phoneme:'s' },
+  snd_qu:{ script:'“kw” — say it fast together, like the start of “quick”. NOT the name “cue”.', phoneme:'t' },
+  snd_sh:{ script:'“shhh” — like asking for quiet. Hold it 2 seconds. This is ONE new sound, not s+h.', phoneme:'s' },
+  snd_ch:{ script:'“ch” — like a sneeze, one quick puff. This is ONE new sound, not c+h.', phoneme:'t' },
+  snd_th:{ script:'“th” — tongue between your teeth, soft air. Hold it 1–2 seconds. This is ONE new sound.', phoneme:'s' },
+  snd_ck:{ script:'“ck” — says the same crisp “k” sound as k and c.', phoneme:'t' },
   p_hi:{ script:'“Hi {name}! Come and play with me!” (like her best friend)', tts:'Hi {name}! Come and play with me!' },
   p_this:{ script:'“This sound says…”', tts:'This sound says' },
   p_tap:{ script:'“Tap it and hear it again!”', tts:'Tap it and hear it again!' },
@@ -409,6 +514,7 @@ function withName(s){ return (s||'').split('{name}').join(S.name || 'Mariana'); 
    child's name is changed in Parent Corner. */
 const BUNDLED = {};
 for (const l of LETTER_ORDER) BUNDLED['snd_'+l] = 'assets/'+l+'.mp3';
+for (const dg in DIGRAPHS) BUNDLED['snd_'+dg] = 'assets/'+dg+'.mp3';
 for (const w in WORDS) BUNDLED['wd_'+w] = 'assets/'+w+'.mp3';
 for (const id of ['p_hi','p_this','p_tap','p_pick','p_trace','p_find','p_yay','p_again','p_word','p_firstword','p_more'])
   BUNDLED[id] = 'assets/'+id+'.mp3';
@@ -568,10 +674,17 @@ function bigCelebration(mega=false){
 
 /* ---------------- progression ---------------- */
 function ready(l){ const st=S.letters[l]; return st.met>=2 || st.traced>=1; }
-function awake(l){ const i=LETTER_ORDER.indexOf(l); return i===0 || ready(LETTER_ORDER[i-1]); }
-function wordAwake(){ return ready('s') && ready('a') && ready('t'); }
+function awake(l){
+  if (DIGRAPHS[l]) return DIGRAPHS[l].every(ready);
+  const i=LETTER_ORDER.indexOf(l); return i===0 || ready(LETTER_ORDER[i-1]);
+}
 function availableWords(){ return Object.keys(WORDS).filter(w=>WORDS[w].seq.every(ready)); }
-function recommended(){ for (const l of LETTER_ORDER) if (!ready(l)) return awake(l) ? l : 'word'; return 'word'; }
+function wordAwake(){ return availableWords().length>0; }
+function recommended(){
+  for (const l of LETTER_ORDER) if (!ready(l)) return awake(l) ? l : 'word';
+  for (const dg in DIGRAPHS) if (awake(dg) && !ready(dg)) return dg;
+  return 'word';
+}
 function status(l){ const st=S.letters[l];
   const tot = st.findRight+st.findWrong;
   if (st.findRight>=4 && st.traced>=2 && (st.findRight/Math.max(1,tot))>=.75) return 'got';
@@ -593,21 +706,33 @@ function showScene(name){
 
 /* ---------- HOME ---------- */
 const spotsEl = document.getElementById('spots');
+function makeLetterSpot(l, reco){
+  const d = document.createElement('div');
+  d.className='spot ' + (awake(l)?'awake':'asleep') + (reco===l && awake(l)?' reco':'');
+  d.style.background = LETTERS[l].bg;
+  d.appendChild(letterSVG(l,{eyes:awake(l)}));
+  const f=document.createElement('div'); f.className='friend'; f.textContent=LETTERS[l].friend; d.appendChild(f);
+  d.addEventListener('pointerdown', ev=>{ ensureAudio();
+    if (!awake(l)){ sfx.boing(); pipSay([{clip:'p_more'}]); wobble(d); return; }
+    sfx.pop(); burstAt(ev.clientX, ev.clientY, 5);
+    openPicker(l);
+  });
+  return d;
+}
 function buildHome(){
   spotsEl.innerHTML='';
   const reco = recommended();
-  for (const l of LETTER_ORDER){
-    const d = document.createElement('div');
-    d.className='spot ' + (awake(l)?'awake':'asleep') + (reco===l && awake(l)?' reco':'');
-    d.style.background = LETTERS[l].bg;
-    d.appendChild(letterSVG(l,{eyes:awake(l)}));
-    const f=document.createElement('div'); f.className='friend'; f.textContent=LETTERS[l].friend; d.appendChild(f);
-    d.addEventListener('pointerdown', ev=>{ ensureAudio();
-      if (!awake(l)){ sfx.boing(); pipSay([{clip:'p_more'}]); wobble(d); return; }
-      sfx.pop(); burstAt(ev.clientX, ev.clientY, 5);
-      openPicker(l);
-    });
-    spotsEl.appendChild(d);
+  // Reveal only what's unlocked, plus a single "coming up next" tile — a full
+  // 26-letter grid (mostly grey) would overwhelm a child who gets overwhelmed
+  // easily; the world should grow one gentle step at a time.
+  const nextIdx = LETTER_ORDER.findIndex(l=>!ready(l));
+  for (let i=0;i<LETTER_ORDER.length;i++){
+    if (!(ready(LETTER_ORDER[i]) || i===nextIdx)) continue;
+    spotsEl.appendChild(makeLetterSpot(LETTER_ORDER[i], reco));
+  }
+  for (const dg in DIGRAPHS){
+    if (!awake(dg)) continue;
+    spotsEl.appendChild(makeLetterSpot(dg, reco));
   }
   // word tree
   const w = document.createElement('div');
@@ -754,7 +879,8 @@ function startFind(l){
 }
 function nextFindRound(first){
   FD.wrongs=0;
-  let pool = LETTER_ORDER.filter(awake);
+  let pool = LETTER_ORDER.filter(awake).concat(Object.keys(DIGRAPHS).filter(awake));
+  if (!pool.includes(FD.target)) pool.push(FD.target);
   if (pool.length<3) pool = LETTER_ORDER.slice(0,3);
   const others = pool.filter(l=>l!==FD.target).sort(()=>Math.random()-.5);
   const nOpts = pool.length>=5 ? 3 : 2;
@@ -824,6 +950,10 @@ function setPointer(i){
   const t=wordRow.children[i]; if (!t) return;
   const p=document.createElement('div'); p.className='pointer'; p.textContent='👆'; t.appendChild(p);
 }
+/* durations for held sounds when blending in Build-a-Word; unlisted units
+   (stops, digraphs, blends-as-letters) just play at their natural length */
+const STRETCH = { s:1.6, a:1.1, i:0.9, n:1.4, o:1.0, e:1.0, u:0.9, h:0.9,
+                   l:1.2, f:1.2, m:1.3, r:1.1, v:1.1, z:1.1, sh:1.2, th:1.1 };
 function onTileTap(i, t, ev){
   if (!WD) return;
   const seq=WORDS[WD.word].seq;
@@ -836,8 +966,7 @@ function onTileTap(i, t, ev){
   t.classList.add('done');
   burstAt(ev.clientX, ev.clientY, 6);
   sfx.chime();
-  const stretch = { s:1.6, a:1.1, i:0.9, n:1.4 }[l];
-  speakSeq([soundPart(l, stretch)]);
+  speakSeq([soundPart(l, STRETCH[l])]);
   WD.idx++;
   if (WD.idx < seq.length){ setPointer(WD.idx); }
   else {
@@ -850,7 +979,7 @@ async function blendWord(){
   // slide tiles together
   [...wordRow.children].forEach(t=>{ t.style.margin='-1.6vmin'; });
   const parts=[];
-  for (const l of seq) parts.push(soundPart(l, {s:1.1,a:.8,i:.7,n:.9}[l]), {pause:120});
+  for (const l of seq) parts.push(soundPart(l, STRETCH[l]), {pause:120});
   parts.push({pause:250},{clip:'wd_'+w});
   await speakSeq(parts);
   // picture + celebration
@@ -936,7 +1065,8 @@ async function openParent(){
   const pc = document.getElementById('parent-content');
   const chip = st => st==='got' ? '<span class="chip got">Knows it 🌟</span>' : st==='prac' ? '<span class="chip prac">Practicing</span>' : '<span class="chip none">Not started</span>';
   let rows='';
-  for (const l of LETTER_ORDER){
+  for (const l of LETTER_ORDER.concat(Object.keys(DIGRAPHS))){
+    if (!awake(l)) continue;
     const st=S.letters[l];
     rows += `<div class="card row">
       <svg class="biglet" viewBox="0 0 100 100">${LETTERS[l].strokes.map(d=>`<path d="${d}" fill="none" stroke="${LETTERS[l].color}" stroke-width="13" stroke-linecap="round"/>`).join('')}</svg>
@@ -957,8 +1087,11 @@ async function openParent(){
       ${have?`<button class="warn del" data-id="${id}">✕</button>`:''}
     </div>`;
   }
+  const knownCount = LETTER_ORDER.concat(Object.keys(DIGRAPHS)).filter(ready).length;
+  const totalUnits = LETTER_ORDER.length + Object.keys(DIGRAPHS).length;
   pc.innerHTML = `
     <h2>📈 Progress</h2>
+    <div class="card">🔤 Sounds known: <b>${knownCount} of ${totalUnits}</b> (full alphabet + sh/ch/th/ck)</div>
     ${rows}
     <div class="card">⭐ Stars earned: <b>${S.stars}</b><br>📖 Words read: <b>${
       Object.entries(S.words).filter(([,c])=>c>0).map(([w,c])=>`${w} ×${c}`).join(', ') || 'none yet'
