@@ -3,10 +3,10 @@ import { Link, useParams } from 'react-router-dom';
 import { useApp } from '../../store';
 import { fmtDate, useI18n } from '../../i18n';
 import { Pill, scoreColor } from '../../components/ui';
-import { avgPct, clamp, pointsOf, studentsInClass, todayISO, uid } from '../../lib';
-import type { Assessment } from '../../types';
+import { avgPct, clamp, pointsOf, sessionDates, studentsInClass, todayISO, uid } from '../../lib';
+import type { Assessment, AttendanceStatus } from '../../types';
 
-type Tab = 'students' | 'grades' | 'homework' | 'vocab';
+type Tab = 'students' | 'grades' | 'homework' | 'vocab' | 'attendance';
 
 export default function ClassDetail() {
   const { id } = useParams();
@@ -21,6 +21,7 @@ export default function ClassDetail() {
     { id: 'grades', label: t('teach.gradebook'), emoji: '📊' },
     { id: 'homework', label: t('teach.homework'), emoji: '📚' },
     { id: 'vocab', label: t('teach.vocab'), emoji: '🃏' },
+    { id: 'attendance', label: t('att.title'), emoji: '✅' },
   ];
 
   return (
@@ -52,6 +53,7 @@ export default function ClassDetail() {
       {tab === 'grades' && <GradesTab classId={cls.id} />}
       {tab === 'homework' && <HomeworkTab classId={cls.id} />}
       {tab === 'vocab' && <VocabTab classId={cls.id} />}
+      {tab === 'attendance' && <AttendanceTab classId={cls.id} />}
     </div>
   );
 }
@@ -263,6 +265,101 @@ function HomeworkTab({ classId }: { classId: string }) {
           </div>
         );
       })}
+    </div>
+  );
+}
+
+const ATT_STATUS_KEYS: AttendanceStatus[] = ['present', 'absent', 'late'];
+const ATT_COLORS: Record<AttendanceStatus, string> = {
+  present: 'bg-emerald-100 text-emerald-700',
+  absent: 'bg-rose-100 text-rose-700',
+  late: 'bg-amber-100 text-amber-700',
+};
+const ATT_ICONS: Record<AttendanceStatus, string> = { present: '✅', absent: '❌', late: '⏰' };
+
+function AttendanceTab({ classId }: { classId: string }) {
+  const { db, mutate } = useApp();
+  const { t, lang } = useI18n();
+  const cls = db.classes.find((c) => c.id === classId)!;
+  const roster = studentsInClass(db, classId);
+  const sessions = sessionDates(cls.schedule, 56);
+
+  const [selectedDate, setSelectedDate] = useState(sessions[0] ?? '');
+  const [saved, setSaved] = useState(false);
+
+  function initDraft(date: string): Record<string, AttendanceStatus> {
+    const init: Record<string, AttendanceStatus> = {};
+    roster.forEach((s) => {
+      init[s.id] = db.attendance.find((a) => a.classId === classId && a.date === date && a.studentId === s.id)?.status ?? 'present';
+    });
+    return init;
+  }
+
+  const [draft, setDraft] = useState<Record<string, AttendanceStatus>>(() => initDraft(sessions[0] ?? ''));
+
+  const changeDate = (date: string) => {
+    setSelectedDate(date);
+    setDraft(initDraft(date));
+    setSaved(false);
+  };
+
+  const save = () => {
+    mutate((d) => {
+      roster.forEach((st) => {
+        const existing = d.attendance.find((a) => a.classId === classId && a.date === selectedDate && a.studentId === st.id);
+        if (existing) {
+          existing.status = draft[st.id];
+        } else {
+          d.attendance.push({ id: uid('att'), classId, date: selectedDate, studentId: st.id, status: draft[st.id] });
+        }
+      });
+    });
+    setSaved(true);
+    setTimeout(() => setSaved(false), 1500);
+  };
+
+  if (sessions.length === 0) return <div className="card text-sm font-semibold text-slate-400">{t('att.noSessions')}</div>;
+
+  const presentCount = Object.values(draft).filter((s) => s === 'present').length;
+
+  return (
+    <div className="space-y-3">
+      <div className="card">
+        <h3 className="mb-2 font-extrabold text-violet-700">📅 {t('att.session')}</h3>
+        <select className="input" value={selectedDate} onChange={(e) => changeDate(e.target.value)}>
+          {sessions.map((d) => (
+            <option key={d} value={d}>
+              {fmtDate(d, lang)}
+            </option>
+          ))}
+        </select>
+        <div className="mt-1 text-xs font-semibold text-slate-400">
+          {presentCount}/{roster.length} {t('att.present')}
+        </div>
+      </div>
+
+      <div className="card space-y-2.5">
+        {roster.map((st) => (
+          <div key={st.id} className="flex items-center gap-2">
+            <span className="text-lg">{st.avatar}</span>
+            <span className="w-28 truncate text-xs font-bold sm:w-40">{st.name}</span>
+            <div className="flex flex-1 justify-end gap-1">
+              {ATT_STATUS_KEYS.map((status) => (
+                <button
+                  key={status}
+                  onClick={() => setDraft({ ...draft, [st.id]: status })}
+                  className={`rounded-full px-2.5 py-1 text-xs font-bold transition ${draft[st.id] === status ? ATT_COLORS[status] : 'bg-slate-100 text-slate-400 hover:bg-slate-200'}`}
+                >
+                  {ATT_ICONS[status]}
+                </button>
+              ))}
+            </div>
+          </div>
+        ))}
+        <button onClick={save} className="btn-primary w-full text-sm">
+          {saved ? t('teach.saved') : t('common.save')}
+        </button>
+      </div>
     </div>
   );
 }

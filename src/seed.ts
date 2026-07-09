@@ -1,6 +1,6 @@
-import type { Assessment, ClassInfo, DB, Homework, Score, User, VocabList } from './types';
+import type { Assessment, AttendanceRecord, AttendanceStatus, ClassInfo, DB, Homework, Score, User, VocabList } from './types';
 import { SKILLS } from './types';
-import { clamp, daysAgo, rng } from './lib';
+import { clamp, daysAgo, rng, sessionDates } from './lib';
 
 const STUDENT_NAMES = [
   'Trần Đức Minh', 'Nguyễn Văn An', 'Trần Thị Bích', 'Lê Minh Châu', 'Phạm Quốc Đạt',
@@ -291,5 +291,23 @@ export function buildSeed(): DB {
     },
   ];
 
-  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice, feedback };
+  // Build attendance records for the past 8 weeks of sessions per class
+  const attendance: AttendanceRecord[] = [];
+  classes.forEach((cls) => {
+    const sessions = sessionDates(cls.schedule, 56);
+    const roster = students.filter((s) => s.classIds.includes(cls.id));
+    sessions.forEach((date) => {
+      roster.forEach((st) => {
+        const roll = r();
+        const status: AttendanceStatus = roll < 0.87 ? 'present' : roll < 0.95 ? 'absent' : 'late';
+        attendance.push({ id: `att_${cls.id}_${date}_${st.id}`, classId: cls.id, date, studentId: st.id, status });
+      });
+    });
+  });
+  // Give demo student (Minh) excellent attendance — at most late, never absent
+  attendance.forEach((a) => {
+    if (a.studentId === 's0' && a.status === 'absent') a.status = r() < 0.6 ? 'present' : 'late';
+  });
+
+  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice, feedback, attendance };
 }

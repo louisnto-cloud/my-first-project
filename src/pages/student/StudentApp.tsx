@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useApp } from '../../store';
 import { fmtDate, useI18n, WEEKDAYS } from '../../i18n';
 import { Empty, Header, Pill, scoreColor, TabBar } from '../../components/ui';
-import { BadgesView, GradesView, HomeworkView, LeaderboardView, ScheduleView } from '../../components/views';
+import { AttendanceView, BadgesView, GradesView, HomeworkView, LeaderboardView, ScheduleView } from '../../components/views';
 import { FlashcardSession, QuizSession } from '../../components/Flashcards';
 import { FeedbackSection } from '../../components/Feedback';
 import { pointsOf, practicedToday, scoresOf, streakOf, todayISO } from '../../lib';
@@ -183,6 +183,8 @@ export function Schedule() {
     <div className="space-y-4">
       <h1 className="text-xl font-black">📅 {t('schedule.title')}</h1>
       <ScheduleView classIds={user.classIds} />
+      <h2 className="text-lg font-black">✅ {t('att.mySessions')}</h2>
+      <AttendanceView studentId={user.id} />
     </div>
   );
 }
