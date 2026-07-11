@@ -12,6 +12,22 @@ import { updateSave } from '@/lib/storage';
 import { narrate, narrationSupported, stopNarration } from '@/lib/speech';
 import { PilgrimageMap } from '@/components/PilgrimageMap';
 
+// A small, quiet back arrow pinned top-left — every onboarding step can be
+// stepped out of; nothing about beginning should feel like a corridor.
+function BackDot({ onClick, label }: { onClick: () => void; label: string }) {
+  return (
+    <button
+      onClick={onClick}
+      aria-label={label}
+      className="absolute left-4 top-[calc(env(safe-area-inset-top)+12px)] flex h-11 w-11 items-center justify-center rounded-full text-incense"
+    >
+      <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
+        <path d="M15.5 4.5 8 12l7.5 7.5 1.4-1.4L10.8 12l6.1-6.1z" />
+      </svg>
+    </button>
+  );
+}
+
 export default function OnboardingPage() {
   const { t, lang, setLang } = useI18n();
   const router = useRouter();
@@ -33,7 +49,7 @@ export default function OnboardingPage() {
   };
 
   return (
-    <div className="flex min-h-dvh flex-col justify-between px-6 pb-10 pt-safe-bar">
+    <div className="relative flex min-h-dvh flex-col justify-between px-6 pb-10 pt-safe-bar">
       {screen === 0 && (
         <>
           <div className="flex flex-1 flex-col items-center justify-center gap-8 text-center">
@@ -69,6 +85,7 @@ export default function OnboardingPage() {
 
       {screen === 1 && (
         <>
+          <BackDot onClick={() => setScreen(0)} label={t(UI.close)} />
           <div className="flex flex-1 flex-col justify-center gap-5">
             <h1 className="font-display text-2xl text-ivory">{t(UI.obYourName)}</h1>
             <input
@@ -80,18 +97,19 @@ export default function OnboardingPage() {
             />
             <p className="font-story text-xl italic leading-relaxed text-incense">{t(UI.obWelcomeLine)}</p>
           </div>
+          {/* A name is a gift, not a toll — the road opens either way. */}
           <button
             onClick={() => setScreen(2)}
-            disabled={!name.trim()}
-            className="min-h-[60px] rounded-2xl bg-gold font-ui text-lg font-bold text-lapis disabled:opacity-40"
+            className="min-h-[60px] rounded-2xl bg-gold font-ui text-lg font-bold text-lapis"
           >
-            {t(UI.obContinue)}
+            {name.trim() ? t(UI.obContinue) : t(UI.obSkipName)}
           </button>
         </>
       )}
 
       {screen === 2 && (
         <>
+          <BackDot onClick={() => setScreen(1)} label={t(UI.close)} />
           <div className="flex flex-1 flex-col items-center justify-center gap-7 text-center">
             {/* a small mouth-of-light: the voice about to speak */}
             <svg viewBox="0 0 80 80" className="h-24 w-24" aria-hidden>
@@ -134,6 +152,7 @@ export default function OnboardingPage() {
 
       {screen === 3 && (
         <>
+          <BackDot onClick={() => setScreen(2)} label={t(UI.close)} />
           <div className="flex flex-1 flex-col justify-center gap-4">
             <p className="text-center font-story text-xl italic text-incense">{t(UI.obMapLine)}</p>
             <div className="light-bloom">

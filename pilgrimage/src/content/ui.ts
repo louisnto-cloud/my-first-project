@@ -27,6 +27,7 @@ export const UI = {
     'Đây là một con đường yên tĩnh qua những nơi thánh thiêng lớn của thế giới. Hãy đi theo nhịp của riêng bạn.',
   ),
   obContinue: v('Continue', 'Tiếp tục'),
+  obSkipName: v('Continue without a name', 'Tiếp tục mà không cần tên'),
   obMapLine: v('Every pilgrimage begins with a single step.', 'Mọi cuộc hành hương đều bắt đầu bằng một bước chân.'),
   obBegin: v('Step inside', 'Bước vào'),
 
