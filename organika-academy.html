@@ -1086,6 +1086,17 @@ const SITUATIONS=[
 {role:'Distributor (Chị Thảo)',you:false,vi:'Hợp lý. Bên em đồng ý. Cảm ơn anh luôn hỗ trợ tận tình.',en:'Reasonable. We agree. Thank you for always supporting us so attentively.',ph:'hop lee. ben em dong ee. kam un anh lwan hoh troh tan tinh'},
 {role:'Michael (You)',you:true,vi:'Cảm ơn chị. Thành công của chị cũng là thành công của Organika. Tối nay mời cả đội đi ăn mừng nhé!',en:'Thank you. Your success is Organika\'s success too. Tonight I invite the whole team to a celebration dinner!',ph:'kam un chi. tanh kong koo-a chi koong la tanh kong koo-a Organika. toy nigh moy ka doy dee an moong nyeh'}
 ]}
+,{id:'s13',title:'Tet Visit to a Key Account',titleVi:'Thăm Đối Tác Dịp Tết',context:'The week before Tet you visit your most important buyer with a gift basket. No selling today — this visit is pure relationship, and skipping it would be noticed.',culturalNote:'Bring a gift basket (imported items score well) with both hands. Wish health, prosperity, and family happiness before anything business. Do not discuss problems or negotiate. Expect lucky-money customs for staff (li xi). The goodwill from a proper Tet visit carries the whole year.',lines:[
+{role:'Michael (You)',you:true,vi:'Chào chị Linh! Em ghé chúc Tết chị và cả nhà trước khi nghỉ lễ.',en:'Hello Ms. Linh! I stopped by to wish you and your family a happy Tet before the holiday.',ph:'chow chi Lin! em geh chook Tet chi va ka nya trook khi ngee leh'},
+{role:'Buyer (Chị Linh)',you:false,vi:'Ôi, anh Michael! Quý hóa quá. Mời anh vào uống trà.',en:'Oh, Michael! How thoughtful. Come in for tea.',ph:'oy, anh Michael! kwee hwa kwa. moy anh vow oong tra'},
+{role:'Michael (You)',you:true,vi:'Em có món quà nhỏ từ Canada, chúc chị năm mới sức khỏe dồi dào, vạn sự như ý.',en:'I have a small gift from Canada — wishing you abundant health and everything as you wish in the new year.',ph:'em ko mon kwa nyoh too Canada, chook chi nam moy sook khweh zoy zow, van soo nyoo ee'},
+{role:'Buyer (Chị Linh)',you:false,vi:'Cảm ơn anh nhiều! Anh chu đáo quá. Năm nay anh ăn Tết ở Việt Nam hả?',en:'Thank you so much! You are so considerate. Are you spending Tet in Vietnam this year?',ph:'kam un anh nyew! anh choo dow kwa. nam nigh anh an Tet uh Vyet Nam ha'},
+{role:'Michael (You)',you:true,vi:'Dạ, năm nay em ở lại Sài Gòn ăn Tết. Em muốn hiểu văn hóa Tết hơn.',en:'Yes, this year I am staying in Saigon for Tet. I want to understand Tet culture better.',ph:'ya, nam nigh em uh lie Sai Gon an Tet. em mwon hyew van hwa Tet hun'},
+{role:'Buyer (Chị Linh)',you:false,vi:'Hay quá! Mùng Ba anh ghé nhà tôi ăn Tết với gia đình nhé.',en:'Wonderful! On the third day of Tet, come to my house to celebrate with my family.',ph:'high kwa! moong Ba anh geh nya toy an Tet voy za dinh nyeh'},
+{role:'Michael (You)',you:true,vi:'Em rất vinh dự! Em sẽ mang theo chút quà cho các cháu.',en:'I would be honored! I will bring small gifts for the children.',ph:'em rat vin zoo! em seh mang theo choot kwa cho kak chow'},
+{role:'Buyer (Chị Linh)',you:false,vi:'Khỏi khách sáo! Chúc Organika năm mới phát tài, hợp tác của chúng ta ngày càng bền chặt.',en:'No need for formalities! Wishing Organika prosperity in the new year, and that our cooperation grows ever stronger.',ph:'khoy khach sow! chook Organika nam moy fat tie, hop tak koo-a choong ta ngay kang ben chat'},
+{role:'Michael (You)',you:true,vi:'Dạ, chúc mừng năm mới! An khang thịnh vượng!',en:'Happy new year! Peace, health and prosperity!',ph:'ya, chook moong nam moy! an khang tinh voong'}
+]}
 ];
 
 // ── INTEL MODULE ────────────────────────────────────────────────────────────
@@ -1503,7 +1514,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v34';
+const APP_VERSION='v35';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
