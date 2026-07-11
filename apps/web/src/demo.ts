@@ -112,7 +112,7 @@ interface DDB {
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v17';
+const KEY = 'etop-demo-db-v18';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -177,6 +177,15 @@ function seed(): DDB {
     ['Ngô Tuấn Kiệt', 'UP3520', 'up3'],
     ['Lý Thảo Vy', 'UP3693', 'up3'],
   ];
+  // Ms. Quy (GV0001 — the quick-login teacher chip) gets a living class
+  // too, so her first screen isn't an empty roster.
+  const sjStudents: [name: string, code: string][] = [
+    ['Đỗ Gia Hân', 'HV0101'],
+    ['Lương Minh Trí', 'HV0102'],
+    ['Trịnh Bảo Ngọc', 'HV0103'],
+    ['Phùng Anh Khoa', 'HV0104'],
+    ['Vương Thuỳ Dương', 'HV0105'],
+  ];
 
   const users: DUser[] = [
     { id: 'u_zhao', role: 'owner', name: 'Ms. Zhao', email: 'zhao@etop.vn', classIds: [], childIds: [] },
@@ -187,6 +196,10 @@ function seed(): DDB {
     ...upStudents.map(([name, code, classId], i) => ({
       id: `s_${code}`, role: 'student' as Role, name, email: `${code.toLowerCase()}@hv.etop.local`,
       code, avatar: ['🦊', '🐼', '🦄', '🐯', '🐸', '🐰', '🐙', '🦖', '🐳', '🐝'][i], classIds: [classId], childIds: [],
+    })),
+    ...sjStudents.map(([name, code], i) => ({
+      id: `s_${code}`, role: 'student' as Role, name, email: `${code.toLowerCase()}@hv.etop.local`,
+      code, avatar: ['🐨', '🦁', '🐼', '🦄', '🐸'][i] ?? '🐨', classIds: ['sj1_246'], childIds: [],
     })),
     // Two children (different classes) so the child switcher shows.
     { id: 'p0', role: 'parent', name: 'Phụ huynh (demo)', email: 'phuhuynh@etop.vn', classIds: [], childIds: ['s_UP1482', 's_UP2614'] },
@@ -226,6 +239,7 @@ function seed(): DDB {
     assignments: [
       { id: 'a_demo1', classId: 'up1', title: 'Unit 1 — Ôn tập / Review', status: 'published', questionIds: ['q1', 'q3', 'q4', 'q5'], dueAt: new Date(Date.now() + 20 * 3_600_000).toISOString() },
       { id: 'a_demo2', classId: 'up1', title: 'Viết đoạn — My family', status: 'published', questionIds: ['q9'], dueAt: new Date(Date.now() + 3 * 86_400_000).toISOString() },
+      { id: 'a_demo3', classId: 'sj1_246', title: 'Unit 2 — Grammar check', status: 'published', questionIds: ['q6', 'q7', 'q8'], dueAt: new Date(Date.now() + 2 * 86_400_000).toISOString() },
     ],
     submissions: [
       // A classmate already handed in the seeded assignment, so the teacher
@@ -235,6 +249,9 @@ function seed(): DDB {
       // …and a writing submission waiting in the grading queue, so teachers
       // can try rubric grading immediately.
       { id: 'sub_seed3', assignmentId: 'a_demo2', studentId: 's_UP1739', answers: { q9: 'My family has four people. I love my mom and my dad. My sister is cute.' }, status: 'submitted', overall: null, pendingReview: true },
+      // Ms. Quy's SJ1 has results too.
+      { id: 'sub_seed4', assignmentId: 'a_demo3', studentId: 's_HV0101', answers: { q6: 'are', q7: 'day', q8: 'I have two brothers.' }, status: 'graded', overall: 100, pendingReview: false },
+      { id: 'sub_seed5', assignmentId: 'a_demo3', studentId: 's_HV0102', answers: { q6: 'is', q7: 'day', q8: 'I have two brothers.' }, status: 'graded', overall: 66.7, pendingReview: false },
     ],
     practice: [
       // A little history so the first student already has a streak + points,
@@ -260,6 +277,7 @@ function seed(): DDB {
     ],
     sessionNotes: [
       { studentId: 's_UP1482', date: today(), className: 'Up 1', tutorName: 'Ms. Ha', parentNote: 'Hôm nay bé phát âm rất tốt và xung phong trả lời 3 lần. Về nhà ôn từ vựng Unit 1 giúp cô nhé!' },
+      { studentId: 's_UP2614', date: today(), className: 'Up 2', tutorName: 'Mr. Tinh', parentNote: 'Linh làm bài nhóm rất tích cực. Thầy gửi thêm bài nghe để bé luyện cuối tuần nhé!' },
     ],
     summaries: [
       // Last week: already approved → the parent sees it. This week: a
@@ -273,6 +291,11 @@ function seed(): DDB {
         id: 'sum2', studentId: 's_UP1482', weekStart: new Date().toISOString().slice(0, 10), status: 'draft',
         bodyVi: 'Tuần này bé hoàn thành bài Ôn tập Unit 1 và tự luyện đều mỗi ngày. Điểm chăm chỉ tăng rõ — cô đề nghị tiếp tục ôn từ vựng 10 phút mỗi tối.',
         bodyEn: 'This week: finished the Unit 1 review and practiced daily. Effort points are climbing — keep the 10-minute vocab habit each evening.',
+      },
+      {
+        id: 'sum3', studentId: 's_UP2614', weekStart: new Date(Date.now() - 7 * 86_400_000).toISOString().slice(0, 10), status: 'approved',
+        bodyVi: 'Linh nghe hiểu nhanh và phát biểu tự tin. Tuần này cần chú ý hơn ở phần chính tả — thầy đã gửi bài luyện thêm.',
+        bodyEn: 'Linh listens well and speaks confidently. Spelling needs a little extra attention this week — extra practice assigned.',
       },
     ],
     messages: [

@@ -368,7 +368,7 @@ describe('demo engine — kiosk (front desk)', () => {
   it('front desk sees the roster; students cannot', async () => {
     const fd = await loginEmail('letan@etop.vn');
     const roster = (await call('GET', '/attendance/today?siteId=site_nh', undefined, fd!)).json as { id: string; status: string; className: string }[];
-    expect(roster.length).toBe(10);
+    expect(roster.length).toBe(15); // 10 UP + 5 SJ1
     expect(roster.every((r) => r.status === 'expected')).toBe(true);
 
     const bao = await loginCode('UP1482');
