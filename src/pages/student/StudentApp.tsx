@@ -37,6 +37,22 @@ export function Dashboard() {
   const { t, lang } = useI18n();
   if (!user) return null;
 
+  const [showTip, setShowTip] = useState(() => {
+    try {
+      return localStorage.getItem('etop-tip-dash') !== '1';
+    } catch {
+      return true;
+    }
+  });
+  const dismissTip = () => {
+    try {
+      localStorage.setItem('etop-tip-dash', '1');
+    } catch {
+      /* ignore */
+    }
+    setShowTip(false);
+  };
+
   const points = pointsOf(db, user.id);
   const streak = streakOf(db, user.id);
   const doneToday = practicedToday(db, user.id);
@@ -65,6 +81,20 @@ export function Dashboard() {
 
   return (
     <div className="space-y-4">
+      {showTip && (
+        <div className="card flex items-start gap-3 border-amber-200 bg-amber-50">
+          <span className="text-xl">💡</span>
+          <p className="flex-1 text-sm font-semibold text-amber-800">{t('dash.tip')}</p>
+          <button
+            onClick={dismissTip}
+            aria-label={t('common.dismiss')}
+            className="shrink-0 font-black text-amber-500 hover:text-amber-700"
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
       <div className="flex items-center gap-3">
         <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-violet-100 text-3xl">{user.avatar}</div>
         <div>

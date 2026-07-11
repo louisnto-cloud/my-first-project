@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 
 export type Lang = 'vi' | 'en';
 
@@ -54,6 +54,12 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
   'dash.streakSafe': { en: 'Streak safe for today. See you tomorrow!', vi: 'Hôm nay đã luyện tập rồi. Hẹn mai nhé!' },
   'dash.myBadges': { en: 'My badges', vi: 'Huy hiệu của tôi' },
   'dash.leaderboard': { en: 'Class leaderboard', vi: 'Bảng xếp hạng lớp' },
+  'dash.tip': {
+    en: 'Tip: practice a little every day to keep your 🔥 streak and level up!',
+    vi: 'Mẹo: luyện tập một chút mỗi ngày để giữ chuỗi 🔥 và lên cấp nhé!',
+  },
+  'common.gotIt': { en: 'Got it', vi: 'Đã hiểu' },
+  'common.dismiss': { en: 'Dismiss', vi: 'Đóng' },
 
   'grades.title': { en: 'My grades', vi: 'Điểm của tôi' },
   'grades.progress': { en: 'Progress over time', vi: 'Tiến bộ theo thời gian' },
@@ -202,6 +208,12 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     localStorage.setItem(LANG_KEY, l);
     setLangState(l);
   }, []);
+
+  // Keep the document language in sync so screen readers, the browser's
+  // speech synthesis and hyphenation all match the chosen interface language.
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   const t = useCallback(
     (key: string) => {
