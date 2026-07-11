@@ -572,6 +572,55 @@ run · jump · eat · sleep · read · write · laugh · think · play · walk �
           ],
           writingPrompt: 'Describe your bedroom using at least 5 adjectives. Write at least 4 sentences.',
         },
+        {
+          id: 'm2w2l2',
+          monthIndex: 1, weekIndex: 1, lessonIndex: 1,
+          title: 'Adverbs – How, When, Where',
+          kind: 'grammar',
+          objective: 'Use adverbs to describe how, when, and where actions happen',
+          audioText: 'Adjectives describe nouns — but adverbs describe verbs. They tell us HOW, WHEN, or WHERE something happens. She runs quickly. He arrived yesterday. The dog sleeps outside. Many adverbs end in L-Y: quickly, slowly, happily, loudly.',
+          content: `An **adverb** describes a verb. It answers: **How? When? Where?**
+
+**HOW adverbs (manner)** — often end in **-ly**:
+quickly · slowly · happily · loudly · quietly · carefully · badly · well
+
+**WHEN adverbs (time):**
+now · today · yesterday · soon · later · always · never · often · sometimes
+
+**WHERE adverbs (place):**
+here · there · outside · inside · everywhere · upstairs · nearby
+
+**Examples:**
+- "She sings **beautifully**." ← HOW does she sing?
+- "We will leave **soon**." ← WHEN will we leave?
+- "The children play **outside**." ← WHERE do they play?
+
+**Making adverbs from adjectives — add -ly:**
+| Adjective | Adverb |
+|-----------|--------|
+| quick | quick**ly** |
+| slow | slow**ly** |
+| happy | happ**ily** (y → i) |
+| gentle | gent**ly** (drop e) |
+
+**Watch out — irregulars:**
+- good → **well** ("She sings well", NOT "goodly")
+- fast → **fast** ("He runs fast", no change)
+- hard → **hard** ("They work hard")`,
+          keyWords: [
+            { word: 'adverb', meaning: 'a word that describes a verb — how, when, or where' },
+            { word: 'quickly', meaning: 'in a fast way' },
+            { word: 'often', meaning: 'many times; frequently' },
+          ],
+          exercises: [
+            { id: 'e1', kind: 'multiple-choice', prompt: 'Which word is an adverb?', options: ['quick', 'quickly', 'quickness', 'quicker'], answer: 'quickly' },
+            { id: 'e2', kind: 'multiple-choice', prompt: '"She sings ___." Which is correct?', options: ['beautiful', 'beautifully', 'beauty', 'more beautiful'], answer: 'beautifully' },
+            { id: 'e3', kind: 'multiple-choice', prompt: '"We play outside." What does "outside" tell us?', options: ['how', 'when', 'where', 'why'], answer: 'where' },
+            { id: 'e4', kind: 'fill-blank', prompt: 'The adverb form of "good" is ___.', answer: 'well', hint: 'It is irregular!' },
+            { id: 'e5', kind: 'multiple-choice', prompt: '"He arrived yesterday." What does "yesterday" tell us?', options: ['how', 'when', 'where', 'what'], answer: 'when' },
+          ],
+          writingPrompt: 'Write 6 sentences about your morning routine. Use at least one HOW adverb, one WHEN adverb, and one WHERE adverb. Underline each adverb.',
+        },
       ],
     },
     {
@@ -617,6 +666,55 @@ Use commas to separate items in a list:
           ],
           writingPrompt: 'Write a short conversation between two people (4–6 lines). Use quotation marks, commas, and the correct end punctuation.',
         },
+        {
+          id: 'm2w3l2',
+          monthIndex: 1, weekIndex: 2, lessonIndex: 1,
+          title: 'Capital Letters – The Rules',
+          kind: 'writing',
+          objective: 'Apply the capital letter rules: sentence starts, names, places, days, months, and "I"',
+          audioText: 'Capital letters are not random — there are clear rules for when to use them. Always capitalise the first word of a sentence. Always capitalise names of people, places, days of the week, months, and languages. And the word I — meaning yourself — is always a capital, wherever it appears.',
+          content: `**ALWAYS use a capital letter for:**
+
+**1. The first word of every sentence**
+> "**T**he dog barked."
+
+**2. The word "I"**
+> "My friend and **I** went home." (never "my friend and i")
+
+**3. Names of people (and their titles)**
+> **L**inh · **M**r **S**mith · **D**octor **T**ran · **Q**ueen **E**lizabeth
+
+**4. Places — cities, countries, streets, buildings**
+> **V**ietnam · **P**aris · **M**ain **S**treet · **E**iffel **T**ower
+
+**5. Days, months, and holidays**
+> **M**onday · **J**uly · **N**ew **Y**ear
+> ⚠️ But NOT seasons: spring, summer, autumn, winter stay lowercase!
+
+**6. Languages and nationalities**
+> **E**nglish · **V**ietnamese · **F**rench
+
+**7. Titles of books, films, and songs (the important words)**
+> *The Lion King* · *Harry Potter and the Philosopher's Stone*
+
+**Common mistakes:**
+❌ "i like english." → ✅ "**I** like **E**nglish."
+❌ "We met on monday in hanoi." → ✅ "We met on **M**onday in **H**anoi."
+❌ "I love Summer." → ✅ "I love summer." (seasons are lowercase!)`,
+          keyWords: [
+            { word: 'capitalise', meaning: 'to write a letter in its large (uppercase) form' },
+            { word: 'title', meaning: 'the name of a book, film, or song; or a word like Mr or Doctor before a name' },
+            { word: 'nationality', meaning: 'belonging to a particular country, like Vietnamese or French' },
+          ],
+          exercises: [
+            { id: 'e1', kind: 'multiple-choice', prompt: 'Which sentence is correct?', options: ['i live in vietnam.', 'I live in vietnam.', 'I live in Vietnam.', 'i live in Vietnam.'], answer: 'I live in Vietnam.' },
+            { id: 'e2', kind: 'multiple-choice', prompt: 'Which word should NOT be capitalised?', options: ['monday', 'summer', 'english', 'paris'], answer: 'summer' },
+            { id: 'e3', kind: 'multiple-choice', prompt: '"my teacher mr tran speaks french." How many words need capitals?', options: ['2', '3', '4', '5'], answer: '4' },
+            { id: 'e4', kind: 'fill-blank', prompt: 'The word "___" (meaning yourself) is always a capital letter.', answer: 'I', hint: 'One letter, means you!' },
+            { id: 'e5', kind: 'multiple-choice', prompt: 'Days and months are capitalised. Seasons are:', options: ['also capitalised', 'lowercase', 'capitalised in summer only', 'never written'], answer: 'lowercase' },
+          ],
+          writingPrompt: 'Write 5 sentences about your week: include a day, a month, a place, a person\'s name, and the word "I". Check every capital letter.',
+        },
       ],
     },
     {
@@ -660,6 +758,50 @@ Use commas to separate items in a list:
             { id: 'e5', kind: 'multiple-choice', prompt: 'The main idea is:', options: ['every single detail in the text', 'the most important point the author is making', 'always in the last paragraph', 'always a question'], answer: 'the most important point the author is making' },
           ],
           writingPrompt: 'Write a paragraph of 4–5 sentences about your favourite food. Make your first sentence the main idea.',
+        },
+        {
+          id: 'm2w4l2',
+          monthIndex: 1, weekIndex: 3, lessonIndex: 1,
+          title: 'Sequencing – First, Next, Finally',
+          kind: 'comprehension',
+          objective: 'Follow and retell the order of events in a text using sequence words',
+          audioText: 'Good readers keep track of the ORDER in which things happen. Sequence words are signposts: first, next, then, after that, and finally. When you can retell a story in the right order, you have truly understood it.',
+          content: `**Sequence words** tell you the ORDER of events:
+
+**Beginning:** first · to start · at the beginning
+**Middle:** next · then · after that · later · meanwhile
+**End:** finally · at last · in the end
+
+**Read this short text:**
+
+> **First**, Mai filled the kettle and switched it on. **While** the water heated, she put a tea bag in her favourite cup. **Next**, she poured the hot water carefully. **After** three minutes, she removed the tea bag. **Finally**, she added a little milk and carried the cup to the balcony.
+
+**Retell check — put these in order:**
+1. Fill the kettle ✓ (first)
+2. Add the tea bag to the cup
+3. Pour the hot water
+4. Remove the tea bag
+5. Add milk ✓ (finally)
+
+**Why sequencing matters:**
+- Instructions and recipes fail if steps are out of order
+- Stories only make sense in sequence
+- Retelling in order proves you understood, not just recognised, the text
+
+**Retelling formula:** "First… then… next… finally…" — use it to summarise anything you read!`,
+          keyWords: [
+            { word: 'sequence', meaning: 'the order in which things happen' },
+            { word: 'retell', meaning: 'to tell a story again in your own words' },
+            { word: 'finally', meaning: 'at the end; as the last thing' },
+          ],
+          exercises: [
+            { id: 'e1', kind: 'multiple-choice', prompt: 'In the text, what does Mai do FIRST?', options: ['adds milk', 'fills the kettle', 'removes the tea bag', 'pours the water'], answer: 'fills the kettle' },
+            { id: 'e2', kind: 'multiple-choice', prompt: 'What does Mai do right AFTER pouring the hot water?', options: ['fills the kettle', 'adds milk', 'waits three minutes then removes the tea bag', 'goes to the balcony'], answer: 'waits three minutes then removes the tea bag' },
+            { id: 'e3', kind: 'multiple-choice', prompt: 'Which word signals the END of a sequence?', options: ['first', 'next', 'then', 'finally'], answer: 'finally' },
+            { id: 'e4', kind: 'fill-blank', prompt: '"___, next, then, finally" — fill in the first sequence word.', answer: 'First', hint: 'It starts everything' },
+            { id: 'e5', kind: 'multiple-choice', prompt: 'Why is sequencing important when reading instructions?', options: ['it makes them longer', 'steps out of order can fail', 'it adds description', 'it is not important'], answer: 'steps out of order can fail' },
+          ],
+          writingPrompt: 'Write instructions for something you know how to do (making coffee, tying shoes, sending a message). Use First, Next, Then, and Finally — one step per sentence.',
         },
       ],
     },
