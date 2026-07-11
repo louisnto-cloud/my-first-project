@@ -1402,7 +1402,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v21';
+const APP_VERSION='v22';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1566,8 +1566,18 @@ function render(){
     case 'prices':      app.innerHTML=renderPrices(); break;
     default:            app.innerHTML=renderHome();
   }
-  attachNav();
   preloadAudio();
+  // typing mode: put the keyboard up immediately
+  if(S.screen==='type'&&S.typeChecked===null){
+    const inp=document.getElementById('type-input');
+    if(inp) inp.focus();
+  }
+}
+function scrollToFeedback(){
+  setTimeout(()=>{
+    const el=document.querySelector('.quiz-feedback');
+    if(el) el.scrollIntoView({behavior:'smooth',block:'center'});
+  },60);
 }
 
 function navItem(id,icon,label){
@@ -1587,9 +1597,6 @@ function nav(){
     ${navItem('review','⭐','Review')}
     ${navItem('progress','📈','Progress')}
   </nav>`;
-}
-function attachNav(){
-  // event delegation already on body — no extra attach needed
 }
 
 // ── HOME ─────────────────────────────────────────────────────────────────────
@@ -1739,10 +1746,10 @@ function renderFlashcard(){
           <div class="vi-word">${v.vi}</div>
           <div class="vi-say">🗣 Say it: <b>${v.phonetic}</b></div>
           <div class="card-audio-row">
-            <button class="hear-btn" onclick="event.stopPropagation();speak('${v.vi.replace(/'/g,"\\'")}')">🔊 Hear it</button>
+            <button class="hear-btn" aria-label="Play audio" onclick="event.stopPropagation();speak('${v.vi.replace(/'/g,"\\'")}')">🔊 Hear it</button>
             ${speedChip()}
           </div>
-          <div class="card-example">${v.example_vi} <button class="speak-micro" onclick="event.stopPropagation();speak('${v.example_vi.replace(/'/g,"\\'")}')">🔊</button></div>
+          <div class="card-example">${v.example_vi} <button class="speak-micro" aria-label="Play audio" onclick="event.stopPropagation();speak('${v.example_vi.replace(/'/g,"\\'")}')">🔊</button></div>
           <div class="card-example-en">${v.example_en}</div>
           ${v.southern_note?`<div class="card-south-note">🌴 ${v.southern_note}</div>`:''}
           ${v.register?`<div class="card-reg-note">💼 ${v.register}</div>`:''}
@@ -1949,7 +1956,7 @@ function renderScenario(){
         }
         return `<div class="dlg-line ${l.you?'you':'them'} ${past?'past':curr?'curr':'future'}">
           <div class="dlg-role">${l.role}</div>
-          <div class="dlg-vi">${l.vi}<button class="speak-micro" onclick="speak('${l.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button></div>
+          <div class="dlg-vi">${l.vi}<button class="speak-micro" aria-label="Play audio" onclick="speak('${l.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button></div>
           ${past||curr?`<div class="dlg-en">${l.en}</div>`:``}
           ${past||curr?`<div class="dlg-ph">/ ${l.ph} /</div>`:``}
         </div>`;
@@ -2094,7 +2101,7 @@ function renderReviewCard(v){
         <span class="rv-tier">Tier ${v.tier}</span>
       </span>
     </div>
-    <div class="rv-vi">${v.vi} <button class="speak-micro" onclick="speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button></div>
+    <div class="rv-vi">${v.vi} <button class="speak-micro" aria-label="Play audio" onclick="speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button></div>
     <div class="rv-ph">/ ${v.phonetic} /</div>
     <div class="rv-stats">Box ${v.box} · ${v.correct}✓ ${v.wrong}✗</div>
   </div>`;
@@ -2241,6 +2248,7 @@ function checkTyped(){
   ok?onCorrect(v):onWrong(v);
   speak(v.vi);
   render();
+  scrollToFeedback();
 }
 function revealTyped(){
   const v=getV(S.activeLesson[S.lessonIdx]);
@@ -2314,6 +2322,7 @@ function checkBuild(){
   if(v){v.lastSeen=Date.now();ok?onCorrect(v):onWrong(v);}
   speak(S.buildSource);
   render();
+  scrollToFeedback();
 }
 function nextBuild(){
   S.lessonIdx++;
@@ -2421,6 +2430,7 @@ function answerPrice(p){
     if(navigator.vibrate) navigator.vibrate(10);
   }else if(navigator.vibrate) navigator.vibrate([30,40,30]);
   render();
+  scrollToFeedback();
 }
 
 // ── SESSION SUMMARY ──────────────────────────────────────────────────────────
@@ -2610,12 +2620,8 @@ function answerPlacement(oid){
   if(v&&oid===id){onCorrect(v);S.placementScore++;}
   if(v) speak(v.vi);
   render();
+  scrollToFeedback();
 }
-
-// ── EVENT DELEGATION ─────────────────────────────────────────────────────────
-document.addEventListener('click',function(e){
-  // All onclick attrs handle themselves; this is a fallback catch-all
-});
 
 // ── INIT ─────────────────────────────────────────────────────────────────────
 (function init(){
