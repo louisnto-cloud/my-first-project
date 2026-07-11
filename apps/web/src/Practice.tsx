@@ -160,10 +160,76 @@ function LessonPlayer({ lesson, lang, onExit }: { lesson: Lesson; lang: 'vi' | '
   );
 }
 
+// ⚡ Vocab Sprint: a 5-question review quiz drawn from the words of every
+// lesson the student has already completed — light spaced repetition that
+// keeps old vocabulary warm and feeds the points/streak loop.
+interface VocabWord { term: string; meaningVi: string }
+
+function VocabSprint({ lang, pool, onExit }: { lang: 'vi' | 'en'; pool: VocabWord[]; onExit: () => void }) {
+  const vi = lang === 'vi';
+  const [round, setRound] = useState(0);
+  const [correct, setCorrect] = useState(0);
+  const [chosen, setChosen] = useState<string | null>(null);
+  const [done, setDone] = useState(false);
+  const [qs] = useState(() => {
+    const words = [...pool].sort(() => Math.random() - 0.5).slice(0, 5);
+    return words.map((w) => {
+      const distractors = pool.filter((p) => p.term !== w.term).sort(() => Math.random() - 0.5).slice(0, 3);
+      return { word: w, options: [w, ...distractors].sort(() => Math.random() - 0.5) };
+    });
+  });
+
+  const q = qs[round];
+
+  const pick = (term: string) => {
+    if (chosen) return;
+    setChosen(term);
+    const right = term === q.word.term;
+    if (right) { sfx.correct(); setCorrect(correct + 1); } else sfx.wrong();
+    setTimeout(() => {
+      setChosen(null);
+      if (round + 1 < qs.length) setRound(round + 1);
+      else {
+        const pts = Math.max(1, (correct + (right ? 1 : 0)) * 2);
+        void api('POST', '/practice/events', { kind: 'vocab', points: pts, detail: { game: 'vocab-sprint' } }).catch(() => {});
+        setDone(true);
+      }
+    }, 900);
+  };
+
+  if (done) {
+    return <Celebrate title={vi ? 'Ôn từ vựng ⚡' : 'Vocab sprint ⚡'} pct={Math.round((correct / qs.length) * 100)} onDone={onExit} doneLabel={vi ? 'Xong' : 'Done'} />;
+  }
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <button onClick={onExit} className="text-xl font-bold text-violet-500">←</button>
+        <span className="text-xs font-black text-slate-400">{round + 1}/{qs.length}</span>
+      </div>
+      <div className="card space-y-3 text-center">
+        <div className="text-xs font-bold uppercase tracking-wide text-violet-400">⚡ {vi ? 'Từ nào có nghĩa là…' : 'Which word means…'}</div>
+        <div className="text-2xl font-black text-violet-800">“{q.word.meaningVi}”</div>
+      </div>
+      <div className="space-y-2">
+        {q.options.map((o) => {
+          const state = chosen ? (o.term === q.word.term ? 'tile-right' : o.term === chosen ? 'tile-wrong' : '') : '';
+          return (
+            <button key={o.term} onClick={() => { pick(o.term); speak(o.term); }} className={`tile ${state}`}>
+              {o.term}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 export function PracticeHub({ lang }: { lang: 'vi' | 'en' }) {
   const [progress, setProgress] = useState<Progress>({});
   const [course, setCourse] = useState<Course | null>(null);
   const [lesson, setLesson] = useState<Lesson | null>(null);
+  const [sprinting, setSprinting] = useState(false);
 
   const load = async () => {
     try {
@@ -177,6 +243,15 @@ export function PracticeHub({ lang }: { lang: 'vi' | 'en' }) {
 
   if (lesson && course) {
     return <LessonPlayer lesson={lesson} lang={lang} onExit={() => { setLesson(null); void load(); }} />;
+  }
+
+  if (sprinting) {
+    // Review pool: words from completed lessons; new students get the
+    // first lessons' words so the game always works.
+    const doneLessons = COURSES.flatMap((c) => allLessons(c)).filter((l) => (progress[l.id] ?? 0) >= 50);
+    const source = doneLessons.length > 0 ? doneLessons : COURSES.flatMap((c) => allLessons(c)).slice(0, 2);
+    const pool = source.flatMap((l) => l.vocab.map((v) => ({ term: v.term, meaningVi: v.meaningVi })));
+    return <VocabSprint lang={lang} pool={pool} onExit={() => { setSprinting(false); void load(); }} />;
   }
 
   if (course) {
@@ -226,6 +301,16 @@ export function PracticeHub({ lang }: { lang: 'vi' | 'en' }) {
   return (
     <div className="space-y-3">
       <h2 className="px-1 font-black text-violet-800">📖 Tự luyện mỗi ngày</h2>
+
+      <button onClick={() => setSprinting(true)} className="card flex w-full items-center gap-3 border-amber-200 bg-gradient-to-r from-amber-50 to-yellow-50 text-left transition active:scale-[0.99]">
+        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-amber-100 text-2xl">⚡</span>
+        <span className="min-w-0 flex-1">
+          <span className="block font-black text-amber-700">{lang === 'vi' ? 'Ôn từ vựng nhanh' : 'Vocab sprint'}</span>
+          <span className="block text-[11px] font-bold text-amber-600/70">{lang === 'vi' ? '5 câu · 2 phút · ôn lại từ đã học' : '5 questions · 2 min · review your words'}</span>
+        </span>
+        <span className="chip shrink-0 bg-amber-400 text-white">+⭐</span>
+      </button>
+
       {COURSES.map((c) => {
         const lessons = allLessons(c);
         const done = lessons.filter((l) => (progress[l.id] ?? 0) >= 50).length;
