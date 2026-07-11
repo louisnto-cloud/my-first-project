@@ -1,0 +1,30 @@
+name: Deploy Sound Garden
+
+on:
+  push:
+    branches:
+      - claude/dyslexia-learning-app-sdwgtj
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Sound Garden is plain static HTML — no build step. Overlay only
+      # /sound-garden on the published site, leaving everything else intact.
+      - name: Publish /sound-garden only
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./sound-garden
+          destination_dir: sound-garden
+          keep_files: true
