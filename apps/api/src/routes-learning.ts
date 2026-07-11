@@ -383,7 +383,8 @@ export function registerLearningRoutes(app: FastifyInstance, db: DB): void {
     return many(
       db,
       `SELECT u.id AS "studentId", u.name,
-              COALESCE((SELECT s.status FROM submissions s WHERE s.assignment_id = $1 AND s.student_id = u.id ORDER BY s.attempt DESC LIMIT 1), 'not_started') AS status
+              COALESCE((SELECT s.status FROM submissions s WHERE s.assignment_id = $1 AND s.student_id = u.id ORDER BY s.attempt DESC LIMIT 1), 'not_started') AS status,
+              (SELECT s.overall FROM submissions s WHERE s.assignment_id = $1 AND s.student_id = u.id ORDER BY s.attempt DESC LIMIT 1) AS overall
          FROM enrollments e JOIN users u ON u.id = e.student_id
         WHERE e.class_id = $2 AND e.status = 'active' ORDER BY u.name`,
       [id, a.class_id],

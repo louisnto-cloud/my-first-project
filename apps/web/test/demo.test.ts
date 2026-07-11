@@ -67,6 +67,20 @@ describe('demo engine — full teaching loop', () => {
     expect(res.overall).toBe(100);
   });
 
+  it('per-student assignment status is teacher-only and includes scores', async () => {
+    const ha = await loginCode('GV0004');
+    const rows = (await call('GET', '/assignments/a_demo1/status', undefined, ha!)).json as { name: string; status: string; overall: number | null }[];
+    expect(rows.length).toBe(3);
+    expect(rows.find((r) => r.name === 'Trần Khánh Vy')).toMatchObject({ status: 'graded', overall: 100 });
+    expect(rows.find((r) => r.name === 'Nguyễn Gia Bảo')?.status).toBe('not_started');
+
+    // Not the class teacher → 403; students → 403.
+    const ly = await loginCode('GV0006');
+    expect((await call('GET', '/assignments/a_demo1/status', undefined, ly!)).status).toBe(403);
+    const bao = await loginCode('UP1482');
+    expect((await call('GET', '/assignments/a_demo1/status', undefined, bao!)).status).toBe(403);
+  });
+
   it('teacher assignment list shows live results (submitted count + average)', async () => {
     const ha = await loginCode('GV0004');
     const list = (await call('GET', '/classes/up1/assignments', undefined, ha!)).json as { id: string; submittedCount: number; rosterCount: number; avgOverall: number | null }[];

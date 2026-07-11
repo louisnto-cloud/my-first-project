@@ -654,8 +654,15 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
   if (seg[0] === 'assignments' && seg[2] === 'status' && method === 'GET') {
     const a = db.assignments.find((x) => x.id === seg[1]);
     if (!a) return err(404, 'not_found');
+    const c = db.classes.find((x) => x.id === a.classId)!;
+    if (!canTeachClass(actor, classRef(c))) return err(403, 'forbidden');
     const roster = db.users.filter((u) => u.role === 'student' && u.classIds.includes(a.classId));
-    return ok(roster.map((u) => ({ studentId: u.id, name: u.name, status: db.submissions.find((s) => s.assignmentId === a.id && s.studentId === u.id)?.status ?? 'not_started' })));
+    return ok(
+      roster.map((u) => {
+        const s = db.submissions.find((x) => x.assignmentId === a.id && x.studentId === u.id);
+        return { studentId: u.id, name: u.name, status: s?.status ?? 'not_started', overall: s?.overall ?? null };
+      }),
+    );
   }
 
   // ---------- Teacher grading queue (writing questions) ----------

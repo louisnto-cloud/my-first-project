@@ -38,7 +38,10 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
   const [assignments, setAssignments] = useState<{ id: string; title: string; status: string; submittedCount?: number; rosterCount?: number; avgOverall?: number | null }[]>([]);
   const [names, setNames] = useState('');
   const [bank, setBank] = useState<Question[]>([]);
+  const [skillFilter, setSkillFilter] = useState<string>('');
   const [picked, setPicked] = useState<Set<string>>(new Set());
+  const [statusFor, setStatusFor] = useState<string | null>(null);
+  const [statusRows, setStatusRows] = useState<{ studentId: string; name: string; status: string; overall: number | null }[]>([]);
   const [title, setTitle] = useState('');
   const [dueAt, setDueAt] = useState('');
   const [composing, setComposing] = useState(false);
@@ -89,6 +92,13 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
     const res = await api<{ inviteCode: string }>('POST', `/students/${studentId}/invite`);
     copyCode(res.inviteCode);
     setInviteInfo({ studentName, code: res.inviteCode });
+  };
+
+  // Tap an assignment → per-student status/score list.
+  const toggleStatus = async (assignmentId: string) => {
+    if (statusFor === assignmentId) { setStatusFor(null); return; }
+    setStatusRows(await api('GET', `/assignments/${assignmentId}/status`));
+    setStatusFor(assignmentId);
   };
 
   const togglePick = (id: string) => {
@@ -187,14 +197,30 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
                 <div className="rounded-2xl bg-slate-50 p-3 text-center text-sm font-bold text-slate-400">Chưa giao bài nào</div>
               )}
               {assignments.map((a) => (
-                <div key={a.id} className="flex items-center justify-between gap-2 rounded-2xl bg-violet-50 px-3 py-2.5 text-sm font-bold">
-                  <span className="min-w-0 flex-1">
-                    <span className="block truncate">📝 {a.title}</span>
-                    <span className="block text-[10px] font-bold text-slate-400">
-                      {a.submittedCount ?? 0}/{a.rosterCount ?? '—'} đã nộp{a.avgOverall != null ? ` · TB ${a.avgOverall}/100` : ''}
+                <div key={a.id} className="rounded-2xl bg-violet-50">
+                  <button onClick={() => void toggleStatus(a.id)} className="flex w-full items-center justify-between gap-2 px-3 py-2.5 text-left text-sm font-bold">
+                    <span className="min-w-0 flex-1">
+                      <span className="block truncate">📝 {a.title}</span>
+                      <span className="block text-[10px] font-bold text-slate-400">
+                        {a.submittedCount ?? 0}/{a.rosterCount ?? '—'} đã nộp{a.avgOverall != null ? ` · TB ${a.avgOverall}/100` : ''} · chạm để xem từng em
+                      </span>
                     </span>
-                  </span>
-                  <span className="chip shrink-0 bg-emerald-100 text-emerald-600">{a.status === 'published' ? 'đã giao' : a.status}</span>
+                    <span className="chip shrink-0 bg-emerald-100 text-emerald-600">{a.status === 'published' ? 'đã giao' : a.status}</span>
+                  </button>
+                  {statusFor === a.id && (
+                    <div className="animate-rise space-y-1 px-3 pb-2.5">
+                      {statusRows.map((r) => (
+                        <div key={r.studentId} className="flex items-center justify-between rounded-xl bg-white px-2.5 py-1.5 text-xs font-bold">
+                          <span className="truncate">{r.name}</span>
+                          <span className={
+                            r.status === 'graded' ? 'text-emerald-600' : r.status === 'submitted' ? 'text-sky-600' : r.status === 'in_progress' ? 'text-amber-600' : 'text-slate-300'
+                          }>
+                            {r.status === 'graded' ? `✓ ${r.overall != null ? `${Math.round(r.overall)}/100` : 'đã chấm'}` : r.status === 'submitted' ? 'chờ chấm' : r.status === 'in_progress' ? 'đang làm' : 'chưa làm'}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
 
@@ -206,8 +232,15 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
                   <div className="text-[11px] font-bold text-slate-400">Hạn nộp (không bắt buộc)</div>
                   <input className="input text-sm" type="datetime-local" value={dueAt} onChange={(e) => setDueAt(e.target.value)} />
                   <div className="text-[11px] font-bold text-slate-400">Chạm để chọn câu hỏi:</div>
+                  <div className="flex flex-wrap gap-1">
+                    {([['', 'Tất cả'], ['grammar', '🔤 Ngữ pháp'], ['reading', '📖 Đọc'], ['listening', '🎧 Nghe'], ['writing', '✍️ Viết']] as const).map(([k, label]) => (
+                      <button key={k} onClick={() => setSkillFilter(k)} className={`chip transition ${skillFilter === k ? 'bg-violet-600 text-white' : 'bg-violet-50 text-violet-500'}`}>
+                        {label}
+                      </button>
+                    ))}
+                  </div>
                   <div className="flex max-h-44 flex-wrap gap-1.5 overflow-y-auto">
-                    {bank.map((q) => (
+                    {bank.filter((q) => !skillFilter || q.skill === skillFilter).map((q) => (
                       <button
                         key={q.id}
                         onClick={() => togglePick(q.id)}
