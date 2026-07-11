@@ -80,6 +80,43 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
     return { points: totalPoints, streak, practiceDays: days.length, submissions, badges };
   });
 
+  // Class leaderboard (Bảng vàng): effort-based ranking by practice
+  // points. Visible to the class (students see classmates' first names +
+  // points only — no grades, ever) and its teacher/managers.
+  app.get('/classes/:id/leaderboard', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    const { id } = req.params as { id: string };
+    const cls = await one<ClassRef>(db, 'SELECT id, org_id AS "orgId", site_id AS "siteId", teacher_id AS "teacherId" FROM classes WHERE id = $1', [id]);
+    if (!cls || cls.orgId !== actor.orgId) return reply.code(404).send({ error: 'not_found' });
+
+    const enrolled =
+      actor.role === 'student'
+        ? !!(await one(db, 'SELECT 1 AS x FROM enrollments WHERE class_id = $1 AND student_id = $2', [id, actor.id]))
+        : false;
+    const childEnrolled =
+      actor.role === 'parent'
+        ? !!(await one(
+            db,
+            `SELECT 1 AS x FROM enrollments e JOIN guardian_students g ON g.student_id = e.student_id
+              WHERE e.class_id = $1 AND g.guardian_id = $2`,
+            [id, actor.id],
+          ))
+        : false;
+    const staff = ['owner', 'academic_director', 'site_director'].includes(actor.role) || canTeachClass(actor, cls);
+    if (!enrolled && !childEnrolled && !staff) return reply.code(403).send({ error: 'forbidden' });
+
+    return many(
+      db,
+      `SELECT u.id, u.name,
+              COALESCE((SELECT SUM(pe.points)::int FROM practice_events pe WHERE pe.student_id = u.id), 0) AS points
+         FROM users u JOIN enrollments e ON e.student_id = u.id
+        WHERE e.class_id = $1 AND u.archived = false
+        ORDER BY points DESC, u.name LIMIT 20`,
+      [id],
+    );
+  });
+
   /** Lesson ids this student has completed — powers sequential unlocking
    * of the self-study curriculum in the portal. */
   app.get('/my/practice/lessons', async (req, reply) => {

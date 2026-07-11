@@ -69,6 +69,24 @@ describe('practice and achievements', () => {
   });
 });
 
+describe('class leaderboard (Bảng vàng)', () => {
+  it('classmates, their teacher, and guardians see effort points ranked; outsiders do not', async () => {
+    const rows = (await req('GET', '/classes/c1/leaderboard', minh)).json() as { name: string; points: number }[];
+    expect(rows.length).toBeGreaterThan(1);
+    expect(rows[0].points).toBeGreaterThanOrEqual(rows[rows.length - 1].points); // sorted desc
+    expect(rows.find((r) => r.name === 'Trần Đức Minh')?.points).toBeGreaterThanOrEqual(22);
+
+    expect((await req('GET', '/classes/c1/leaderboard', lan)).statusCode).toBe(200);
+    expect((await req('GET', '/classes/c1/leaderboard', parent)).statusCode).toBe(200);
+
+    const s2 = await login('s2@etop.vn'); // enrolled in c3, not c1
+    expect((await req('GET', '/classes/c1/leaderboard', s2)).statusCode).toBe(403);
+    const david = await login('david@etop.vn'); // teaches c3, not c1
+    expect((await req('GET', '/classes/c1/leaderboard', david)).statusCode).toBe(403);
+    expect((await req('GET', '/classes/nope/leaderboard', minh)).statusCode).toBe(404);
+  });
+});
+
 describe('parent daily digest', () => {
   it('combines attendance, sessions, assignments, grades, and practice into one day view', async () => {
     // The day happens: check-in, a session log with a parent note, a published assignment.

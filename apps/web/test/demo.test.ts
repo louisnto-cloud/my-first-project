@@ -278,8 +278,21 @@ describe('demo engine — practice', () => {
   it('practice events add points and a streak', async () => {
     const bao = await loginCode('UP1482');
     await call('POST', '/practice/events', { kind: 'lesson', points: 12, detail: { lessonId: 'found_l2', pct: 90 } }, bao!);
-    const ach = (await call('GET', '/my/achievements', undefined, bao!)).json as { points: number; streak: number };
+    const ach = (await call('GET', '/my/achievements', undefined, bao!)).json as { points: number; streak: number; badges: { id: string; earned: boolean }[] };
     expect(ach.points).toBeGreaterThanOrEqual(26); // 14 seeded + 12
     expect(ach.streak).toBe(1);
+    expect(ach.badges.find((b) => b.id === 'first-steps')?.earned).toBe(true);
+    expect(ach.badges.find((b) => b.id === 'points-200')?.earned).toBe(false);
+  });
+
+  it('the class leaderboard ranks effort points; other classes cannot peek', async () => {
+    const bao = await loginCode('UP1482');
+    const rows = (await call('GET', '/classes/up1/leaderboard', undefined, bao!)).json as { name: string; points: number }[];
+    expect(rows.length).toBe(3);
+    expect(rows[0].name).toBe('Trần Khánh Vy'); // 22 seeded points
+    expect(rows[0].points).toBe(22);
+
+    const up3 = await loginCode('UP3171');
+    expect((await call('GET', '/classes/up1/leaderboard', undefined, up3!)).status).toBe(403);
   });
 });

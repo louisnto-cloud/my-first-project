@@ -96,7 +96,7 @@ interface DDB {
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v6';
+const KEY = 'etop-demo-db-v7';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -217,8 +217,12 @@ function seed(): DDB {
       { id: 'sub_seed3', assignmentId: 'a_demo2', studentId: 's_UP1739', answers: { q9: 'My family has four people. I love my mom and my dad. My sister is cute.' }, status: 'submitted', overall: null, pendingReview: true },
     ],
     practice: [
-      // A little history so the first student already has a streak + points.
+      // A little history so the first student already has a streak + points,
+      // and classmates on the board so the leaderboard has a race going.
       { studentId: 's_UP1482', kind: 'lesson', points: 14, date: today(), lessonId: 'found_l1', pct: 100 },
+      { studentId: 's_UP1739', kind: 'lesson', points: 12, date: today(), lessonId: 'found_l1', pct: 90 },
+      { studentId: 's_UP1739', kind: 'vocab', points: 10, date: today() },
+      { studentId: 's_UP1256', kind: 'lesson', points: 8, date: today(), lessonId: 'found_l1', pct: 80 },
     ],
     joinRequests: [],
     invites: [],
@@ -715,7 +719,33 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     const cur = new Date();
     if (!days.has(cur.toISOString().slice(0, 10))) cur.setDate(cur.getDate() - 1);
     while (days.has(cur.toISOString().slice(0, 10))) { streak++; cur.setDate(cur.getDate() - 1); }
-    return ok({ points, streak, practiceDays: days.size, submissions: db.submissions.filter((s) => s.studentId === sid).length, badges: [] });
+    const submissions = db.submissions.filter((s) => s.studentId === sid && s.status !== 'in_progress').length;
+    const badges = [
+      { id: 'first-steps', earned: days.size >= 1 },
+      { id: 'streak-3', earned: streak >= 3 },
+      { id: 'streak-7', earned: streak >= 7 },
+      { id: 'points-50', earned: points >= 50 },
+      { id: 'points-200', earned: points >= 200 },
+      { id: 'homework-hero', earned: submissions >= 5 },
+    ];
+    return ok({ points, streak, practiceDays: days.size, submissions, badges });
+  }
+
+  // Class leaderboard: effort points only — never grades.
+  if (seg[0] === 'classes' && seg[2] === 'leaderboard' && method === 'GET') {
+    const c = db.classes.find((x) => x.id === seg[1]);
+    if (!c) return err(404, 'not_found');
+    const enrolled = me.role === 'student' && me.classIds.includes(c.id);
+    const childEnrolled = me.role === 'parent' && db.users.some((u) => me.childIds.includes(u.id) && u.classIds.includes(c.id));
+    const staff = isAdmin || (me.role === 'tutor' && c.teacherId === me.id);
+    if (!enrolled && !childEnrolled && !staff) return err(403, 'forbidden');
+    return ok(
+      db.users
+        .filter((u) => u.role === 'student' && u.classIds.includes(c.id))
+        .map((u) => ({ id: u.id, name: u.name, points: db.practice.filter((p) => p.studentId === u.id).reduce((s, p) => s + p.points, 0) }))
+        .sort((a, b) => b.points - a.points || a.name.localeCompare(b.name))
+        .slice(0, 20),
+    );
   }
 
   // ---- parent (basic) ----

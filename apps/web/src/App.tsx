@@ -78,10 +78,44 @@ interface ClassInfo {
 }
 
 // ---------- Student ----------
+const BADGE_META: Record<string, { emoji: string; vi: string; en: string }> = {
+  'first-steps': { emoji: '🐣', vi: 'Khởi đầu', en: 'First steps' },
+  'streak-3': { emoji: '🔥', vi: '3 ngày liền', en: '3-day streak' },
+  'streak-7': { emoji: '🚀', vi: '7 ngày liền', en: '7-day streak' },
+  'points-50': { emoji: '⭐', vi: '50 điểm', en: '50 points' },
+  'points-200': { emoji: '🏆', vi: '200 điểm', en: '200 points' },
+  'homework-hero': { emoji: '📚', vi: '5 bài nộp', en: 'Homework hero' },
+};
+
+function Leaderboard({ classId, meName, lang }: { classId: string; meName: string; lang: Lang }) {
+  const [rows, setRows] = useState<{ id: string; name: string; points: number }[]>([]);
+  useEffect(() => {
+    void api<typeof rows>('GET', `/classes/${classId}/leaderboard`).then(setRows).catch(() => {});
+  }, [classId]);
+  if (rows.length < 2) return null;
+  const medals = ['🥇', '🥈', '🥉'];
+  return (
+    <div className="card space-y-1.5">
+      <h3 className="flex items-center gap-1.5 font-extrabold text-ink">🏅 {lang === 'vi' ? 'Bảng vàng của lớp' : 'Class leaderboard'}</h3>
+      <p className="text-[11px] font-bold text-muted">{lang === 'vi' ? 'Tính theo điểm chăm chỉ ⭐ — không xếp hạng điểm bài kiểm tra.' : 'Effort points only — never test scores.'}</p>
+      {rows.slice(0, 5).map((r, i) => {
+        const isMe = r.name === meName;
+        return (
+          <div key={r.id} className={`flex items-center gap-2 rounded-xl px-2.5 py-1.5 text-sm font-bold ${isMe ? 'bg-violet-100 text-violet-800' : 'bg-slate-50 text-slate-600'}`}>
+            <span className="w-6 shrink-0 text-center">{medals[i] ?? `${i + 1}.`}</span>
+            <span className="min-w-0 flex-1 truncate">{r.name}{isMe ? (lang === 'vi' ? ' (bạn)' : ' (you)') : ''}</span>
+            <span className="shrink-0 text-violet-600">⭐ {r.points}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 function Student({ lang, t, name }: { lang: Lang; t: (k: string) => string; name: string }) {
   const [view, setView] = useState<'work' | 'practice'>('work');
   const [classes, setClasses] = useState<ClassInfo[]>([]);
-  const [ach, setAch] = useState<{ points: number; streak: number } | null>(null);
+  const [ach, setAch] = useState<{ points: number; streak: number; badges?: { id: string; earned: boolean }[] } | null>(null);
   const [assignments, setAssignments] = useState<Record<string, { id: string; title: string; dueAt: string | null; myStatus: string | null }[]>>({});
   const [playing, setPlaying] = useState<string | null>(null);
   const [code, setCode] = useState('');
@@ -130,6 +164,18 @@ function Student({ lang, t, name }: { lang: Lang; t: (k: string) => string; name
               </div>
             </div>
           </div>
+          {(ach.badges ?? []).some((b) => b.earned) && (
+            <div className="relative mt-3 flex flex-wrap gap-1.5">
+              {(ach.badges ?? []).filter((b) => b.earned).map((b) => {
+                const m = BADGE_META[b.id];
+                return m ? (
+                  <span key={b.id} className="chip bg-white/20 text-white" title={lang === 'vi' ? m.vi : m.en}>
+                    {m.emoji} {lang === 'vi' ? m.vi : m.en}
+                  </span>
+                ) : null;
+              })}
+            </div>
+          )}
         </div>
       )}
 
@@ -142,7 +188,10 @@ function Student({ lang, t, name }: { lang: Lang; t: (k: string) => string; name
       </div>
 
       {view === 'practice' ? (
-        <PracticeHub lang={lang} />
+        <>
+          <PracticeHub lang={lang} />
+          {classes[0] && <Leaderboard classId={classes[0].id} meName={name} lang={lang} />}
+        </>
       ) : (
         <>
           {classes.map((c, ci) => (
