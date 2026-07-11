@@ -1295,6 +1295,7 @@ let S={
   placementScore:0,   // placement quiz correct count
   searchQ:'',         // dictionary search query
   showFilters:false,  // practice screen: filters expanded
+  sessionLen:20,      // cards per practice session
   mixedActive:false,  // mixed session in progress
   mixedModes:[],      // per-card mode assignment for mixed sessions
   xpDay:'',           // which day todayXP belongs to
@@ -1352,7 +1353,7 @@ function toggleStar(id){
 const SAVE_KEY='organika-academy-v1';
 function snapshot(){
   return {v:1,
-    state:{xp:S.xp,streak:S.streak,lastDay:S.lastDay,todayXP:S.todayXP,xpDay:S.xpDay,dailyGoal:S.dailyGoal,doneSits:S.doneSits||[]},
+    state:{xp:S.xp,streak:S.streak,lastDay:S.lastDay,todayXP:S.todayXP,xpDay:S.xpDay,dailyGoal:S.dailyGoal,doneSits:S.doneSits||[],sessionLen:S.sessionLen||20},
     vocab:VOCAB.filter(v=>v.correct||v.wrong||v.starred||v.lastSeen)
       .map(v=>({id:v.id,box:v.box,correct:v.correct,wrong:v.wrong,lastSeen:v.lastSeen,starred:v.starred}))};
 }
@@ -1406,7 +1407,7 @@ function buildLesson(tier='all',cat='all'){
     const cOk=cat==='all'||v.category===cat;
     return tOk&&cOk;
   });
-  return shuffle(pool).slice(0,20).map(v=>v.id);
+  return shuffle(pool).slice(0,S.sessionLen||20).map(v=>v.id);
 }
 
 // ── SPEECH ───────────────────────────────────────────────────────────────────
@@ -1442,7 +1443,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v27';
+const APP_VERSION='v28';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1760,6 +1761,10 @@ function renderPractice(){
       <button class="pill${S.quizDir==='vi2en'?' active':''}" onclick="S.quizDir='vi2en';render()">VI › EN</button>
       <button class="pill${S.quizDir==='listen'?' active':''}" onclick="S.quizDir='listen';render()">🎧 Listen</button>
     </div>`:''}
+    <div class="section-label" style="margin-top:14px">Session length</div>
+    <div class="mode-pills">
+      ${[10,20,30].map(n=>`<button class="pill${S.sessionLen===n?' active':''}" onclick="S.sessionLen=${n};saveState();render()">${n} cards</button>`).join('')}
+    </div>
     <div style="height:12px"></div>
     <button class="btn-primary full-w" style="font-size:17px;padding:16px" onclick="startLesson('${S.practiceMode}')">▶ Start</button>
     <button class="filters-toggle" onclick="S.showFilters=!S.showFilters;render()">
@@ -2144,12 +2149,12 @@ function startSmartSession(){
   // due terms first, topped up with fresh terms from the current filters
   const due=shuffle(VOCAB.filter(v=>isDue(v)&&(v.correct||v.wrong))).map(v=>v.id);
   const fresh=shuffle(VOCAB.filter(v=>!v.correct&&!v.wrong)).map(v=>v.id);
-  const ids=[...due,...fresh].slice(0,20);
+  const ids=[...due,...fresh].slice(0,S.sessionLen||20);
   startCustomLesson(ids);
 }
 function startCustomLesson(ids){
   if(!ids||!ids.length) return;
-  S.activeLesson=shuffle([...ids]).slice(0,20);
+  S.activeLesson=shuffle([...ids]).slice(0,S.sessionLen||20);
   S.lessonIdx=0; S.flipped=false;
   S.sessionRight=0; S.sessionWrong=0; S.sessionXP=0;
   S.practiceMode='flashcard';
