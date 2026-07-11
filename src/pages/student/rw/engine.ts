@@ -25,6 +25,7 @@ export interface RWProgress {
   badges: string[];
   xpKeys: string[]; // one-time XP award keys — prevents re-earning by redoing the same answers
   activityLog: Record<string, DayActivity>; // ISO date → what was done that day (powers daily goals)
+  placedThroughMonth?: number; // placement-test result: months 0..N are unlocked regardless of completion
 }
 
 export interface DayActivity {
@@ -216,6 +217,7 @@ export function withBadges(p: RWProgress): { progress: RWProgress; earned: Badge
 // ─── Month unlocking ─────────────────────────────────────────────────────────
 export function isMonthUnlocked(p: RWProgress, monthIndex: number): boolean {
   if (monthIndex === 0) return true;
+  if (monthIndex <= (p.placedThroughMonth ?? 0)) return true; // unlocked by placement test
   const prev = CURRICULUM[monthIndex - 1];
   return prev.weeks.flatMap((w) => w.lessons).every((l) => p.completedLessons.includes(l.id));
 }

@@ -9,6 +9,7 @@ import {
 } from './rw/engine';
 import LessonView from './rw/LessonView';
 import Library from './rw/Library';
+import Placement from './rw/Placement';
 import Review from './rw/Review';
 import { StepCard } from './rw/shared';
 
@@ -21,6 +22,7 @@ export default function ReadingWritingApp() {
   const [selectedMonth, setSelectedMonth] = useState<Month | null>(null);
   const [activeLesson, setActiveLesson] = useState<Lesson | null>(null);
   const [newBadges, setNewBadges] = useState<Badge[]>([]);
+  const [showPlacement, setShowPlacement] = useState(false);
 
   /**
    * Single funnel for all progress mutations: streak day, daily-goal log, and
@@ -111,11 +113,13 @@ export default function ReadingWritingApp() {
         ))}
       </div>
 
-      {tab === 'learn' && (selectedMonth ? (
+      {tab === 'learn' && (showPlacement ? (
+        <Placement apply={apply} onClose={() => setShowPlacement(false)} />
+      ) : selectedMonth ? (
         <MonthView month={selectedMonth} progress={progress} onBack={() => setSelectedMonth(null)} onLesson={setActiveLesson} />
       ) : (
         <LearnHome progress={progress} pct={pct} doneCount={doneCount} totalLessons={totalLessons}
-          onMonth={setSelectedMonth} onLesson={setActiveLesson} />
+          onMonth={setSelectedMonth} onLesson={setActiveLesson} onPlacement={() => setShowPlacement(true)} />
       ))}
       {tab === 'library' && <Library progress={progress} apply={apply} />}
       {tab === 'review' && <Review progress={progress} apply={apply} />}
@@ -125,13 +129,14 @@ export default function ReadingWritingApp() {
 }
 
 // ─── Learn home ───────────────────────────────────────────────────────────────
-function LearnHome({ progress, pct, doneCount, totalLessons, onMonth, onLesson }: {
+function LearnHome({ progress, pct, doneCount, totalLessons, onMonth, onLesson, onPlacement }: {
   progress: RWProgress;
   pct: number;
   doneCount: number;
   totalLessons: number;
   onMonth: (m: Month) => void;
   onLesson: (l: Lesson) => void;
+  onPlacement: () => void;
 }) {
   const allLessons = getAllLessons();
   const nextLesson = allLessons.find((l) => !progress.completedLessons.includes(l.id)) ?? null;
@@ -200,6 +205,17 @@ function LearnHome({ progress, pct, doneCount, totalLessons, onMonth, onLesson }
           })}
         </div>
       </div>
+
+      {doneCount === 0 && (
+        <button onClick={onPlacement}
+          className="flex w-full items-center justify-between rounded-2xl border-2 border-dashed border-gray-300 bg-white p-4 text-left hover:border-violet-300">
+          <div>
+            <div className="text-sm font-black text-gray-700">🧭 Not starting from zero?</div>
+            <div className="text-xs text-gray-500">Take the 12-question placement test to unlock your real starting level.</div>
+          </div>
+          <span className="text-gray-300">›</span>
+        </button>
+      )}
     </div>
   );
 }
