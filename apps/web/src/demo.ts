@@ -112,7 +112,7 @@ interface DDB {
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v16';
+const KEY = 'etop-demo-db-v17';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -188,7 +188,8 @@ function seed(): DDB {
       id: `s_${code}`, role: 'student' as Role, name, email: `${code.toLowerCase()}@hv.etop.local`,
       code, avatar: ['🦊', '🐼', '🦄', '🐯', '🐸', '🐰', '🐙', '🦖', '🐳', '🐝'][i], classIds: [classId], childIds: [],
     })),
-    { id: 'p0', role: 'parent', name: 'Phụ huynh (demo)', email: 'phuhuynh@etop.vn', classIds: [], childIds: ['s_UP1482'] },
+    // Two children (different classes) so the child switcher shows.
+    { id: 'p0', role: 'parent', name: 'Phụ huynh (demo)', email: 'phuhuynh@etop.vn', classIds: [], childIds: ['s_UP1482', 's_UP2614'] },
     { id: 'fd0', role: 'front_desk', name: 'Lễ tân (demo)', email: 'letan@etop.vn', classIds: [], childIds: [] },
   ];
 
@@ -1047,7 +1048,14 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
   // ---- owner dashboard (basic, computed) ----
   if (rawPath === '/billing/dashboard' && method === 'GET') {
     if (!['owner', 'academic_director'].includes(me.role)) return err(403, 'forbidden');
-    return ok({ revenue: [{ period: today().slice(0, 7), revenueVnd: 27000000 }], arAging: [{ bucket: 'current', outstandingVnd: 4050000, invoices: 3 }] });
+    // Six months of history so the revenue trend chart has a story.
+    const base = [21_600_000, 22_950_000, 24_300_000, 23_650_000, 25_650_000, 27_000_000];
+    const nowD = new Date();
+    const revenue = base.map((v, i) => {
+      const d = new Date(nowD.getFullYear(), nowD.getMonth() - (base.length - 1 - i), 1);
+      return { period: `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`, revenueVnd: v };
+    });
+    return ok({ revenue, arAging: [{ bucket: 'current', outstandingVnd: 4050000, invoices: 3 }] });
   }
   if (rawPath === '/nps' && method === 'POST') {
     if (me.role !== 'parent') return err(403, 'parents_only');

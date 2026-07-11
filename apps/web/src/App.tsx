@@ -78,6 +78,36 @@ interface ClassInfo {
   scheduleNote: string;
 }
 
+// Demo-only guided hints: what to tap first, per role. Dismiss persists.
+const DEMO_HINTS: Record<string, string[]> = {
+  student: ['Chạm mặt tròn 🙂 để chọn nhân vật', 'Làm bài "Unit 1 — Ôn tập" để thấy điểm ngay', 'Tab Tự luyện → ⚡ Ôn từ vựng nhanh'],
+  tutor: ['Chờ chấm bài (1) → chấm bài viết theo 3 tiêu chí', 'Mở lớp → 💬 gửi nhận xét cho phụ huynh', 'Tab 📊 Điểm xem điểm 4 kỹ năng'],
+  parent: ['Kéo xuống xem nhận xét của cô & học phí VietQR', 'Nhắn tin cho cô — cô trả lời ngay trong app', 'Đổi bé ở nút phía trên (2 con)'],
+  owner: ['Quản trị trung tâm → tạo giáo viên mới (mã GV tự cấp)', 'Duyệt "Tóm tắt chờ duyệt" để gửi phụ huynh', 'Đăng tin toàn trung tâm ở Bảng tin'],
+  front_desk: ['Chạm tên để điểm danh — phụ huynh thấy ngay', 'Chạm lần nữa để trả trẻ: chọn Mẹ, PIN 1234', 'Thử "Người bị cấm đón" để thấy chặn cứng'],
+};
+
+function DemoHints({ role }: { role: string }) {
+  const key = `etop-hints-${role}`;
+  const [hidden, setHidden] = useState(() => localStorage.getItem(key) === '1');
+  const hints = DEMO_HINTS[role === 'academic_director' ? 'owner' : role];
+  if (!isDemo() || hidden || !hints) return null;
+  return (
+    <div className="card space-y-1.5 border-amber-200 bg-amber-50/70">
+      <div className="flex items-center justify-between">
+        <span className="text-xs font-extrabold uppercase tracking-wide text-amber-600">✨ Thử ngay trong bản demo</span>
+        <button onClick={() => { localStorage.setItem(key, '1'); setHidden(true); }} className="text-xs font-extrabold text-amber-400">Ẩn ✕</button>
+      </div>
+      {hints.map((h, i) => (
+        <div key={i} className="flex items-start gap-2 text-sm font-semibold text-amber-800">
+          <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-200 text-[10px] font-black">{i + 1}</span>
+          {h}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 // ---------- Student ----------
 const BADGE_META: Record<string, { emoji: string; vi: string; en: string }> = {
   'first-steps': { emoji: '🐣', vi: 'Khởi đầu', en: 'First steps' },
@@ -593,6 +623,19 @@ function OwnerDash() {
       <div className="rounded-3xl bg-gradient-to-br from-violet-700 to-fuchsia-600 p-5 text-white shadow-lg shadow-violet-300/40">
         <div className="text-xs font-bold text-violet-100">💰 Doanh thu tháng này</div>
         <div className="mt-1 text-4xl font-black">{revenue != null ? `${revenue.toLocaleString('vi-VN')}đ` : '—'}</div>
+        {(finance?.revenue.length ?? 0) > 1 && (
+          <div className="mt-3 flex items-end gap-1.5" aria-label="Doanh thu 6 tháng">
+            {finance!.revenue.slice(-6).map((r) => {
+              const max = Math.max(...finance!.revenue.slice(-6).map((x) => Number(x.revenueVnd)));
+              return (
+                <div key={r.period} className="flex-1 text-center">
+                  <div className="mx-auto w-full rounded-t-md bg-white/30" style={{ height: `${Math.max(8, (Number(r.revenueVnd) / max) * 48)}px` }} />
+                  <div className="mt-0.5 text-[8px] font-bold text-violet-100">T{Number(r.period.slice(5))}</div>
+                </div>
+              );
+            })}
+          </div>
+        )}
         {today.length > 0 && (
           <div className="mt-3 flex gap-2 text-[11px] font-extrabold">
             <span className="chip bg-white/20 text-white">✅ {today.filter((s) => s.status === 'present').length} đang ở lớp</span>
@@ -989,6 +1032,7 @@ export default function App() {
     <div className="min-h-screen pb-10">
       <Header me={me} lang={lang} setLang={setLang} t={t} onLogout={logout} />
       <main key={me.role} className="animate-rise mx-auto max-w-3xl space-y-4 p-4">
+        <DemoHints role={me.role} />
         {me.role === 'student' && <Student lang={lang} t={t} name={me.name} avatar={me.avatar ?? null} onAvatar={() => void loadMe()} />}
         {me.role === 'parent' && <Parent lang={lang} t={t} />}
         {['owner', 'academic_director'].includes(me.role) && (

@@ -290,7 +290,7 @@ describe('demo engine — two-way messaging', () => {
     const ly = await loginCode('GV0006');
     expect((await call('GET', `/threads/${th.threadId}/messages`, undefined, ly!)).status).toBe(403);
     // A parent cannot open another child's thread.
-    expect((await call('POST', '/threads', { studentId: 's_UP2614' }, parent.token)).status).toBe(403);
+    expect((await call('POST', '/threads', { studentId: 's_UP3171' }, parent.token)).status).toBe(403);
   });
 });
 
@@ -320,7 +320,7 @@ describe('demo engine — parent attendance week', () => {
     const days = (await call('GET', '/parents/attendance-week?childId=s_UP1482', undefined, parent.token)).json as { attended: boolean }[];
     expect(days.length).toBe(7);
     expect(days.some((d) => d.attended)).toBe(true); // seeded history
-    expect((await call('GET', '/parents/attendance-week?childId=s_UP2614', undefined, parent.token)).status).toBe(403);
+    expect((await call('GET', '/parents/attendance-week?childId=s_UP3171', undefined, parent.token)).status).toBe(403);
   });
 });
 
@@ -421,7 +421,7 @@ describe('demo engine — hardening regressions', () => {
 
   it('a parent cannot read another family via digest; students cannot list the question bank', async () => {
     const parent = (await call('POST', '/auth/login', { email: 'phuhuynh@etop.vn', password: 'x' })).json as { token: string };
-    expect((await call('GET', '/parents/digest?childId=s_UP2614', undefined, parent.token)).status).toBe(403);
+    expect((await call('GET', '/parents/digest?childId=s_UP3171', undefined, parent.token)).status).toBe(403);
     const bao = await loginCode('UP1482');
     expect((await call('GET', '/questions', undefined, bao!)).status).toBe(403);
   });
