@@ -32,3 +32,8 @@ math tie-out), commit, push. Keep the app cohesive and simple — no bloat.
 
 ## Log
 - (start) Loop initiated; branch restarted from main after PR #8 merged.
+- Cycle 1 shipped: Monthly, Targets, Persistence (save/load/reset/CSV),
+  add/remove SKU, dark mode, print, editable brand/currency, unit economics
+  + retail ladder, Guide/glossary, accessibility, named snapshots.
+- Browser QA (headless Chromium): all 9 views render, zero console/page errors.
+- All original backlog items complete. App is feature-complete & cohesive.
