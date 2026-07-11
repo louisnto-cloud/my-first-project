@@ -1,6 +1,6 @@
 // Sanity checks for the seeded demo database. Run: npx tsx scripts/smoke.ts
 import { buildSeed } from '../src/seed';
-import { avgPct, earnedBadges, leaderboard, pointsOf, scoresOf, streakOf } from '../src/lib';
+import { attendanceCounts, attendanceRate, avgPct, earnedBadges, leaderboard, levelInfo, pointsOf, scoresOf, streakOf } from '../src/lib';
 
 const db = buildSeed();
 const fail: string[] = [];
@@ -49,8 +49,35 @@ for (const f of db.feedback) {
   check(f.rating >= 1 && f.rating <= 5, `bad rating: ${f.id}`);
 }
 
+// attendance: every record references a real student in that class, valid status
+const STATUSES = new Set(['present', 'late', 'absent']);
+check(db.attendance.length > 0, 'expected seeded attendance');
+for (const a of db.attendance) {
+  check(STATUSES.has(a.status), `bad attendance status: ${a.id}`);
+  const st = db.users.find((u) => u.id === a.studentId);
+  check(!!st && st.classIds.includes(a.classId), `attendance for student not in class: ${a.id}`);
+}
+// every student has an attendance rate in 0..100, and the demo student is reliable
+for (const s of students) {
+  const r = attendanceRate(db, s.id);
+  check(r == null || (r >= 0 && r <= 100), `attendance rate out of range for ${s.id}`);
+}
+check((attendanceRate(db, 's0') ?? 0) >= 85, `minh attendance should be >=85%, got ${attendanceRate(db, 's0')}`);
+check(attendanceCounts(db, 's0').total > 0, 'minh has no attendance records');
+
+// level system: monotonic and sane
+check(levelInfo(0).level === 1, 'zero points should be level 1');
+check(levelInfo(10_000).level > levelInfo(100).level, 'levels should grow with points');
+for (const p of [0, 25, 60, 200, 500, 2000]) {
+  const info = levelInfo(p);
+  check(info.pct >= 0 && info.pct <= 1, `level pct out of range at ${p}`);
+}
+
 if (fail.length) {
   console.error('SMOKE FAILED:\n' + fail.map((f) => ` - ${f}`).join('\n'));
   process.exit(1);
 }
-console.log(`SMOKE OK — ${students.length} students, ${db.scores.length} scores, ${db.homework.length} homework, ${db.vocabLists.length} vocab lists, ${db.practice.length} practice events`);
+console.log(
+  `SMOKE OK — ${students.length} students, ${db.scores.length} scores, ${db.homework.length} homework, ` +
+    `${db.vocabLists.length} vocab lists, ${db.practice.length} practice events, ${db.attendance.length} attendance records`,
+);

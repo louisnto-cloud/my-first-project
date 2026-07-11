@@ -280,6 +280,28 @@ export function buildSeed(): DB {
     minhLatest.comment = COMMENTS[0];
   }
 
+  // Attendance: replay the last 5 weeks of each class's scheduled sessions.
+  const attendance: DB['attendance'] = [];
+  const scheduleWeekdays = new Map(classes.map((c) => [c.id, new Set(c.schedule.map((s) => s.weekday))]));
+  classes.forEach((cls) => {
+    const weekdays = scheduleWeekdays.get(cls.id)!;
+    const roster = students.filter((s) => s.classIds.includes(cls.id));
+    for (let offset = 1; offset <= 35; offset++) {
+      const d = new Date();
+      d.setDate(d.getDate() - offset);
+      if (!weekdays.has(d.getDay())) continue;
+      const date = daysAgo(offset);
+      roster.forEach((st) => {
+        const roll = r();
+        // The demo student is a keener; everyone else is mostly reliable.
+        const absentP = st.id === 's0' ? 0.03 : 0.08;
+        const lateP = st.id === 's0' ? 0.04 : 0.1;
+        const status = roll < absentP ? 'absent' : roll < absentP + lateP ? 'late' : 'present';
+        attendance.push({ id: `att_${cls.id}_${st.id}_${offset}`, classId: cls.id, studentId: st.id, date, status });
+      });
+    }
+  });
+
   const feedback: DB['feedback'] = [
     {
       id: 'fb1', userId: 'p0', date: daysAgo(6), rating: 5,
@@ -291,5 +313,5 @@ export function buildSeed(): DB {
     },
   ];
 
-  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice, feedback };
+  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice, feedback, attendance };
 }

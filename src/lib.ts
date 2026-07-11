@@ -127,6 +127,102 @@ export function uid(prefix: string): string {
   return `${prefix}_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
 }
 
+// ---- Level / XP progression -------------------------------------------------
+// Points earned from practice, homework and quizzes double as XP. Each level
+// costs a little more than the last, so early wins come fast and later levels
+// feel earned. Tiers give a friendly name + emoji that grows with the learner.
+const TIERS: { emoji: string; en: string; vi: string }[] = [
+  { emoji: '🌱', en: 'Sprout', vi: 'Mầm non' },
+  { emoji: '🌿', en: 'Sapling', vi: 'Chồi biếc' },
+  { emoji: '🍀', en: 'Explorer', vi: 'Nhà thám hiểm' },
+  { emoji: '⭐', en: 'Achiever', vi: 'Người xuất sắc' },
+  { emoji: '🌟', en: 'Star', vi: 'Ngôi sao' },
+  { emoji: '🔥', en: 'Champion', vi: 'Nhà vô địch' },
+  { emoji: '💎', en: 'Master', vi: 'Bậc thầy' },
+  { emoji: '👑', en: 'Legend', vi: 'Huyền thoại' },
+];
+
+export interface LevelInfo {
+  level: number;
+  emoji: string;
+  titleEn: string;
+  titleVi: string;
+  intoLevel: number; // XP earned inside the current level
+  need: number; // XP required to clear the current level
+  pct: number; // 0..1 progress to next level
+  floor: number; // cumulative XP at the start of this level
+}
+
+export function levelCost(level: number): number {
+  return 60 + (level - 1) * 30; // L1:60, L2:90, L3:120 …
+}
+
+export function levelInfo(points: number): LevelInfo {
+  let level = 1;
+  let floor = 0;
+  let need = levelCost(level);
+  while (points >= floor + need) {
+    floor += need;
+    level += 1;
+    need = levelCost(level);
+  }
+  const tier = TIERS[Math.min(level - 1, TIERS.length - 1)];
+  const intoLevel = points - floor;
+  return { level, emoji: tier.emoji, titleEn: tier.en, titleVi: tier.vi, intoLevel, need, pct: need ? intoLevel / need : 0, floor };
+}
+
+// ---- Attendance -------------------------------------------------------------
+export function attendanceOf(db: DB, studentId: string) {
+  return db.attendance.filter((a) => a.studentId === studentId).sort((a, b) => b.date.localeCompare(a.date));
+}
+
+export interface AttendanceCounts {
+  present: number;
+  late: number;
+  absent: number;
+  total: number;
+}
+
+export function attendanceCounts(db: DB, studentId: string): AttendanceCounts {
+  const xs = db.attendance.filter((a) => a.studentId === studentId);
+  return {
+    present: xs.filter((a) => a.status === 'present').length,
+    late: xs.filter((a) => a.status === 'late').length,
+    absent: xs.filter((a) => a.status === 'absent').length,
+    total: xs.length,
+  };
+}
+
+// Rate credits a late arrival as half a present, out of all recorded sessions.
+export function attendanceRate(db: DB, studentId: string): number | null {
+  const c = attendanceCounts(db, studentId);
+  if (c.total === 0) return null;
+  return ((c.present + c.late * 0.5) / c.total) * 100;
+}
+
+export function classAttendanceRate(db: DB, classId: string): number | null {
+  const roster = studentsInClass(db, classId);
+  const rates = roster.map((s) => attendanceRate(db, s.id)).filter((x): x is number => x != null);
+  if (!rates.length) return null;
+  return rates.reduce((a, b) => a + b, 0) / rates.length;
+}
+
+// Speak English text aloud using the browser's built-in speech synthesis.
+// Fully offline and dependency-free; silently no-ops where unsupported.
+export function speak(text: string): void {
+  try {
+    const synth = window.speechSynthesis;
+    if (!synth) return;
+    synth.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US';
+    u.rate = 0.92;
+    synth.speak(u);
+  } catch {
+    /* speech not available — ignore */
+  }
+}
+
 export function addPractice(db: DB, studentId: string, type: PracticeEvent['type'], points: number): void {
   db.practice.push({ id: uid('pr'), studentId, date: todayISO(), type, points });
 }

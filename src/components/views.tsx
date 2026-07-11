@@ -1,6 +1,17 @@
 import { useApp } from '../store';
 import { fmtDate, useI18n, WEEKDAYS } from '../i18n';
-import { BADGES, badgeStats, leaderboard, scoresOf, todayISO } from '../lib';
+import {
+  attendanceCounts,
+  attendanceOf,
+  attendanceRate,
+  BADGES,
+  badgeStats,
+  leaderboard,
+  levelInfo,
+  pointsOf,
+  scoresOf,
+  todayISO,
+} from '../lib';
 import { Empty, Pill, ProgressChart, scoreColor, SkillBars } from './ui';
 
 export function GradesView({ studentId }: { studentId: string }) {
@@ -201,6 +212,92 @@ export function BadgesView({ studentId }: { studentId: string }) {
           );
         })}
       </div>
+    </div>
+  );
+}
+
+export function LevelCard({ studentId }: { studentId: string }) {
+  const { db } = useApp();
+  const { t, lang } = useI18n();
+  const points = pointsOf(db, studentId);
+  const info = levelInfo(points);
+  const title = lang === 'vi' ? info.titleVi : info.titleEn;
+  const remaining = info.need - info.intoLevel;
+  return (
+    <div className="card border-violet-200 bg-gradient-to-br from-violet-600 to-fuchsia-500 text-white">
+      <div className="flex items-center gap-3">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-3xl">{info.emoji}</div>
+        <div className="min-w-0 flex-1">
+          <div className="flex items-baseline gap-2">
+            <span className="text-lg font-black">
+              {t('level.label')} {info.level}
+            </span>
+            <span className="truncate text-sm font-bold text-violet-100">· {title}</span>
+          </div>
+          <div className="mt-1.5 h-2.5 w-full overflow-hidden rounded-full bg-white/25">
+            <div className="h-full rounded-full bg-white transition-all" style={{ width: `${Math.round(info.pct * 100)}%` }} />
+          </div>
+          <div className="mt-1 text-[11px] font-bold text-violet-100">
+            {info.level < 8 ? `${remaining} ${t('level.toNext')}` : t('level.max')} · ⭐ {points}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function AttendanceView({ studentId, compact = false }: { studentId: string; compact?: boolean }) {
+  const { db } = useApp();
+  const { t, lang } = useI18n();
+  const rate = attendanceRate(db, studentId);
+  const counts = attendanceCounts(db, studentId);
+  if (rate == null) return compact ? null : <Empty emoji="🗓️" text={t('attend.none')} />;
+
+  const tone = rate >= 90 ? 'text-emerald-600' : rate >= 75 ? 'text-amber-600' : 'text-rose-600';
+  const dot: Record<string, string> = { present: 'bg-emerald-500', late: 'bg-amber-500', absent: 'bg-rose-500' };
+
+  return (
+    <div className="card">
+      <div className="flex items-center justify-between">
+        <h3 className="font-extrabold text-violet-700">🗓️ {t('attend.title')}</h3>
+        <span className={`text-2xl font-black ${tone}`}>{Math.round(rate)}%</span>
+      </div>
+      <div className="mt-2 grid grid-cols-3 gap-2 text-center">
+        <div className="rounded-2xl bg-emerald-50 py-2">
+          <div className="text-lg font-black text-emerald-600">{counts.present}</div>
+          <div className="text-[11px] font-bold text-slate-400">{t('attend.present')}</div>
+        </div>
+        <div className="rounded-2xl bg-amber-50 py-2">
+          <div className="text-lg font-black text-amber-600">{counts.late}</div>
+          <div className="text-[11px] font-bold text-slate-400">{t('attend.late')}</div>
+        </div>
+        <div className="rounded-2xl bg-rose-50 py-2">
+          <div className="text-lg font-black text-rose-600">{counts.absent}</div>
+          <div className="text-[11px] font-bold text-slate-400">{t('attend.absent')}</div>
+        </div>
+      </div>
+      {counts.absent === 0 && counts.late === 0 && (
+        <p className="mt-2 text-center text-xs font-bold text-emerald-600">{t('attend.perfect')}</p>
+      )}
+      {!compact && (
+        <div className="mt-3">
+          <div className="mb-1.5 text-xs font-bold text-slate-400">{t('attend.recent')}</div>
+          <div className="flex flex-wrap gap-1.5">
+            {attendanceOf(db, studentId)
+              .slice(0, 12)
+              .map((a) => (
+                <span
+                  key={a.id}
+                  title={`${fmtDate(a.date, lang)} · ${t(`attend.${a.status}`)}`}
+                  className="flex items-center gap-1 rounded-full bg-slate-50 px-2 py-1 text-[11px] font-bold text-slate-500"
+                >
+                  <span className={`h-2 w-2 rounded-full ${dot[a.status]}`} />
+                  {fmtDate(a.date, lang)}
+                </span>
+              ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

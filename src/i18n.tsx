@@ -97,6 +97,27 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
   'badges.title': { en: 'Badges', vi: 'Huy hiệu' },
   'badges.locked': { en: 'Locked', vi: 'Chưa mở' },
 
+  'level.label': { en: 'Level', vi: 'Cấp độ' },
+  'level.toNext': { en: 'XP to next level', vi: 'điểm để lên cấp' },
+  'level.max': { en: 'Top tier reached! 👑', vi: 'Đã đạt cấp cao nhất! 👑' },
+
+  'attend.title': { en: 'Attendance', vi: 'Chuyên cần' },
+  'attend.rate': { en: 'Attendance rate', vi: 'Tỷ lệ chuyên cần' },
+  'attend.present': { en: 'Present', vi: 'Có mặt' },
+  'attend.late': { en: 'Late', vi: 'Đi trễ' },
+  'attend.absent': { en: 'Absent', vi: 'Vắng' },
+  'attend.sessions': { en: 'sessions', vi: 'buổi' },
+  'attend.recent': { en: 'Recent sessions', vi: 'Các buổi gần đây' },
+  'attend.none': { en: 'No attendance recorded yet.', vi: 'Chưa có dữ liệu điểm danh.' },
+  'attend.perfect': { en: 'Perfect attendance! 🌟', vi: 'Chuyên cần tuyệt đối! 🌟' },
+  'teach.attendance': { en: 'Attendance', vi: 'Điểm danh' },
+  'teach.attRate': { en: 'Attendance', vi: 'Chuyên cần' },
+  'teach.markSession': { en: 'Mark session', vi: 'Điểm danh buổi' },
+  'teach.attSaved': { en: 'Attendance saved ✓', vi: 'Đã lưu điểm danh ✓' },
+  'teach.allPresent': { en: 'All present', vi: 'Tất cả có mặt' },
+
+  'practice.listen': { en: 'Listen', vi: 'Nghe' },
+
   'parent.title': { en: 'Parent view', vi: 'Góc phụ huynh' },
   'parent.childProgress': { en: "'s progress", vi: ' — tiến bộ học tập' },
   'parent.readonly': { en: 'Read-only view. Contact the center for any questions.', vi: 'Chế độ chỉ xem. Mọi thắc mắc xin liên hệ trung tâm.' },

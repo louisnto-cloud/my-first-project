@@ -3,10 +3,10 @@ import { Link, useParams } from 'react-router-dom';
 import { useApp } from '../../store';
 import { fmtDate, useI18n } from '../../i18n';
 import { Pill, scoreColor } from '../../components/ui';
-import { avgPct, clamp, pointsOf, studentsInClass, todayISO, uid } from '../../lib';
-import type { Assessment } from '../../types';
+import { attendanceRate, avgPct, clamp, pointsOf, studentsInClass, todayISO, uid } from '../../lib';
+import type { Assessment, AttendanceStatus } from '../../types';
 
-type Tab = 'students' | 'grades' | 'homework' | 'vocab';
+type Tab = 'students' | 'grades' | 'attendance' | 'homework' | 'vocab';
 
 export default function ClassDetail() {
   const { id } = useParams();
@@ -19,6 +19,7 @@ export default function ClassDetail() {
   const tabs: { id: Tab; label: string; emoji: string }[] = [
     { id: 'students', label: t('teach.students'), emoji: '🧑‍🎓' },
     { id: 'grades', label: t('teach.gradebook'), emoji: '📊' },
+    { id: 'attendance', label: t('teach.attendance'), emoji: '🗓️' },
     { id: 'homework', label: t('teach.homework'), emoji: '📚' },
     { id: 'vocab', label: t('teach.vocab'), emoji: '🃏' },
   ];
@@ -50,6 +51,7 @@ export default function ClassDetail() {
 
       {tab === 'students' && <StudentsTab classId={cls.id} />}
       {tab === 'grades' && <GradesTab classId={cls.id} />}
+      {tab === 'attendance' && <AttendanceTab classId={cls.id} />}
       {tab === 'homework' && <HomeworkTab classId={cls.id} />}
       {tab === 'vocab' && <VocabTab classId={cls.id} />}
     </div>
@@ -78,6 +80,94 @@ function StudentsTab({ classId }: { classId: string }) {
           );
         })}
       </ul>
+    </div>
+  );
+}
+
+function AttendanceTab({ classId }: { classId: string }) {
+  const { db, mutate } = useApp();
+  const { t } = useI18n();
+  const roster = studentsInClass(db, classId);
+  const [date, setDate] = useState(todayISO());
+  const [saved, setSaved] = useState(false);
+
+  const statusFor = (studentId: string): AttendanceStatus =>
+    db.attendance.find((a) => a.classId === classId && a.studentId === studentId && a.date === date)?.status ?? 'present';
+
+  const [draft, setDraft] = useState<Record<string, AttendanceStatus>>({});
+  // Rebuild the draft whenever the chosen date changes.
+  const keyed = `${classId}:${date}`;
+  const [keyedFor, setKeyedFor] = useState('');
+  if (keyed !== keyedFor) {
+    const init: Record<string, AttendanceStatus> = {};
+    roster.forEach((s) => (init[s.id] = statusFor(s.id)));
+    setDraft(init);
+    setKeyedFor(keyed);
+  }
+
+  const set = (studentId: string, status: AttendanceStatus) => setDraft((d) => ({ ...d, [studentId]: status }));
+  const allPresent = () => {
+    const init: Record<string, AttendanceStatus> = {};
+    roster.forEach((s) => (init[s.id] = 'present'));
+    setDraft(init);
+  };
+
+  const save = () => {
+    mutate((d) => {
+      roster.forEach((st) => {
+        const status = draft[st.id] ?? 'present';
+        const found = d.attendance.find((a) => a.classId === classId && a.studentId === st.id && a.date === date);
+        if (found) found.status = status;
+        else d.attendance.push({ id: uid('att'), classId, studentId: st.id, date, status });
+      });
+    });
+    setSaved(true);
+    setTimeout(() => setSaved(false), 1500);
+  };
+
+  const options: { s: AttendanceStatus; label: string; on: string }[] = [
+    { s: 'present', label: '✅', on: 'bg-emerald-500 text-white' },
+    { s: 'late', label: '⏰', on: 'bg-amber-500 text-white' },
+    { s: 'absent', label: '❌', on: 'bg-rose-500 text-white' },
+  ];
+
+  return (
+    <div className="space-y-3">
+      <div className="card space-y-2">
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-extrabold text-violet-700">🗓️ {t('teach.markSession')}</span>
+          <input className="input ml-auto !w-40" type="date" value={date} onChange={(e) => setDate(e.target.value)} />
+        </div>
+        <button onClick={allPresent} className="btn-soft w-full text-xs">
+          ✅ {t('teach.allPresent')}
+        </button>
+        <div className="space-y-1.5">
+          {roster.map((st) => {
+            const rate = attendanceRate(db, st.id);
+            return (
+              <div key={st.id} className="flex items-center gap-2">
+                <span className="text-lg">{st.avatar}</span>
+                <span className="min-w-0 flex-1 truncate text-xs font-bold">{st.name}</span>
+                {rate != null && <span className="text-[10px] font-bold text-slate-300">{Math.round(rate)}%</span>}
+                <div className="flex overflow-hidden rounded-xl border border-violet-100">
+                  {options.map((o) => (
+                    <button
+                      key={o.s}
+                      onClick={() => set(st.id, o.s)}
+                      className={`px-2.5 py-1.5 text-sm transition ${draft[st.id] === o.s ? o.on : 'bg-white'}`}
+                    >
+                      {o.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <button onClick={save} className="btn-primary w-full text-sm">
+          {saved ? t('teach.attSaved') : t('common.save')}
+        </button>
+      </div>
     </div>
   );
 }

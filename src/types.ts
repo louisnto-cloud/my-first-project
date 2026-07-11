@@ -86,6 +86,16 @@ export interface PracticeEvent {
   points: number;
 }
 
+export type AttendanceStatus = 'present' | 'late' | 'absent';
+
+export interface Attendance {
+  id: string;
+  classId: string;
+  studentId: string;
+  date: string; // YYYY-MM-DD (a class session date)
+  status: AttendanceStatus;
+}
+
 export interface Feedback {
   id: string;
   userId: string;
@@ -104,4 +114,5 @@ export interface DB {
   vocabLists: VocabList[];
   practice: PracticeEvent[];
   feedback: Feedback[];
+  attendance: Attendance[];
 }

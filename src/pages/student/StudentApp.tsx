@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useApp } from '../../store';
 import { fmtDate, useI18n, WEEKDAYS } from '../../i18n';
 import { Empty, Header, Pill, scoreColor, TabBar } from '../../components/ui';
-import { BadgesView, GradesView, HomeworkView, LeaderboardView, ScheduleView } from '../../components/views';
+import { AttendanceView, BadgesView, GradesView, HomeworkView, LeaderboardView, LevelCard, ScheduleView } from '../../components/views';
 import { FlashcardSession, QuizSession } from '../../components/Flashcards';
 import { FeedbackSection } from '../../components/Feedback';
 import { pointsOf, practicedToday, scoresOf, streakOf, todayISO } from '../../lib';
@@ -77,6 +77,8 @@ export function Dashboard() {
         </div>
       </div>
 
+      <LevelCard studentId={user.id} />
+
       <div className={`card flex items-center justify-between gap-3 ${doneToday ? 'border-emerald-200 bg-emerald-50' : 'border-orange-200 bg-orange-50'}`}>
         <p className="text-sm font-bold text-slate-600">{doneToday ? t('dash.streakSafe') : t('dash.keepStreak')}</p>
         {!doneToday && (
@@ -134,6 +136,7 @@ export function Dashboard() {
         )}
       </div>
 
+      <AttendanceView studentId={user.id} compact />
       <BadgesView studentId={user.id} />
       {user.classIds[0] && <LeaderboardView classId={user.classIds[0]} highlightId={user.id} />}
 
@@ -171,6 +174,7 @@ export function Grades() {
     <div className="space-y-4">
       <h1 className="text-xl font-black">📊 {t('grades.title')}</h1>
       <GradesView studentId={user.id} />
+      <AttendanceView studentId={user.id} />
     </div>
   );
 }

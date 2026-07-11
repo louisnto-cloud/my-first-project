@@ -3,7 +3,7 @@ import { useApp } from '../../store';
 import { useI18n } from '../../i18n';
 import { Header } from '../../components/ui';
 import { FeedbackInbox } from '../../components/Feedback';
-import { avgPct, studentsInClass } from '../../lib';
+import { attendanceRate, avgPct, studentsInClass } from '../../lib';
 
 export function TeachLayout() {
   const { user } = useApp();
@@ -33,17 +33,20 @@ export function TeachHome() {
     .filter((x): x is number => x != null);
   const centerAvg = allPcts.length ? allPcts.reduce((a, b) => a + b, 0) / allPcts.length : 0;
   const hwRate = db.homeworkStatus.filter((h) => h.done).length / Math.max(1, db.homework.length * (students.length / db.classes.length));
+  const attRates = students.map((s) => attendanceRate(db, s.id)).filter((x): x is number => x != null);
+  const centerAtt = attRates.length ? attRates.reduce((a, b) => a + b, 0) / attRates.length : 0;
 
   return (
     <div className="space-y-4">
       <h1 className="text-xl font-black">🧑‍🏫 {t('teach.overview')}</h1>
 
       {isAdmin && (
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
           <StatCard emoji="🧑‍🎓" label={t('teach.totalStudents')} value={String(students.length)} />
           <StatCard emoji="🏫" label={t('teach.classes')} value={String(db.classes.length)} />
           <StatCard emoji="📊" label={t('teach.centerAvg')} value={`${(centerAvg / 10).toFixed(1)}/10`} />
           <StatCard emoji="📚" label={t('teach.hwRate')} value={`${Math.round(Math.min(1, hwRate) * 100)}%`} />
+          <StatCard emoji="🗓️" label={t('teach.attRate')} value={`${Math.round(centerAtt)}%`} />
         </div>
       )}
 
