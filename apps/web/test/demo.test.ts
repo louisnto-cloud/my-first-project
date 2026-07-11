@@ -258,6 +258,24 @@ describe('demo engine — announcements', () => {
   });
 });
 
+describe('demo engine — after-class notes', () => {
+  it("the teacher's note lands in the parent's daily digest; outsiders cannot log", async () => {
+    const ha = await loginCode('GV0004');
+    const res = await call('POST', '/classes/up1/session-log', {
+      date: new Date().toISOString().slice(0, 10),
+      entries: [{ studentId: 's_UP1482', parentNote: 'Bé làm bài nhóm rất tốt hôm nay!' }],
+    }, ha!);
+    expect(res.status).toBe(200);
+
+    const parent = (await call('POST', '/auth/login', { email: 'phuhuynh@etop.vn', password: 'x' })).json as { token: string };
+    const digest = (await call('GET', '/parents/digest?childId=s_UP1482', undefined, parent.token)).json as { sessions: { parentNote: string }[] };
+    expect(digest.sessions.map((s) => s.parentNote)).toContain('Bé làm bài nhóm rất tốt hôm nay!');
+
+    const ly = await loginCode('GV0006'); // does not teach Up 1
+    expect((await call('POST', '/classes/up1/session-log', { date: '2026-07-11', entries: [{ studentId: 's_UP1482', parentNote: 'x' }] }, ly!)).status).toBe(403);
+  });
+});
+
 describe('demo engine — parent feedback (NPS)', () => {
   it('a parent scores once per term; the owner sees the score move and reads comments', async () => {
     const parent = (await call('POST', '/auth/login', { email: 'phuhuynh@etop.vn', password: 'x' })).json as { token: string };

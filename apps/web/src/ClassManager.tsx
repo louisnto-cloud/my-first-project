@@ -85,6 +85,21 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
     setTimeout(() => setCopied(''), 1200);
   };
 
+  // Sub-60-second after-class note that lands straight in the parent's
+  // daily digest (session log with a single parentNote entry).
+  const [noteFor, setNoteFor] = useState<{ id: string; name: string } | null>(null);
+  const [noteText, setNoteText] = useState('');
+  const sendNote = async () => {
+    if (!noteFor || !noteText.trim()) return;
+    await api('POST', `/classes/${cls.id}/session-log`, {
+      date: new Date().toISOString().slice(0, 10),
+      entries: [{ studentId: noteFor.id, parentNote: noteText.trim() }],
+    });
+    flash(`💬 Đã gửi nhận xét về bé ${noteFor.name} — phụ huynh thấy ngay trong app.`);
+    setNoteFor(null);
+    setNoteText('');
+  };
+
   // One-time invite code so the student's parent can self-register an
   // account linked to their child (single-use, no open signup).
   const [inviteInfo, setInviteInfo] = useState<{ studentName: string; code: string } | null>(null);
@@ -176,10 +191,21 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
                       )}
                       <button onClick={() => rotate(r.id)} title="Đổi mã" className="text-slate-300 hover:text-violet-600">↻</button>
                       <button onClick={() => invite(r.id, r.name)} title="Tạo mã mời phụ huynh" className="text-slate-300 transition hover:text-violet-600">🎟</button>
+                      <button onClick={() => { setNoteFor({ id: r.id, name: r.name }); setNoteText(''); }} title="Nhận xét gửi phụ huynh" className="text-slate-300 transition hover:text-violet-600">💬</button>
                     </span>
                   </li>
                 ))}
               </ul>
+              {noteFor && (
+                <div className="animate-rise space-y-2 rounded-2xl border-2 border-violet-200 bg-violet-50 p-3">
+                  <div className="text-sm font-extrabold text-violet-800">💬 Nhận xét về bé {noteFor.name} (gửi phụ huynh)</div>
+                  <textarea className="input text-sm" rows={2} placeholder="Vd: Hôm nay bé đọc rất tốt, về nhà ôn từ vựng Unit 2 nhé!" value={noteText} onChange={(e) => setNoteText(e.target.value)} />
+                  <div className="flex gap-2">
+                    <button onClick={() => setNoteFor(null)} className="btn-soft text-sm">Hủy</button>
+                    <button onClick={sendNote} disabled={!noteText.trim()} className="btn-primary flex-1 text-sm">Gửi ngay</button>
+                  </div>
+                </div>
+              )}
               <textarea
                 className="input text-sm"
                 rows={2}

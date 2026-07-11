@@ -103,11 +103,12 @@ interface DDB {
   syncedEvents: string[]; // kiosk idempotency
   announcements: DAnnouncement[];
   nps: { userId: string; term: string; score: number; comment: string }[];
+  sessionNotes: { studentId: string; date: string; className: string; tutorName: string; parentNote: string }[];
 }
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v11';
+const KEY = 'etop-demo-db-v12';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -248,6 +249,9 @@ function seed(): DDB {
       { userId: 'seed_p1', term: 'seed', score: 10, comment: 'Cô giáo rất tận tâm, con tiến bộ rõ.' },
       { userId: 'seed_p2', term: 'seed', score: 9, comment: 'App tiện, biết ngay con đến lớp chưa.' },
       { userId: 'seed_p3', term: 'seed', score: 7, comment: 'Mong có thêm lớp cuối tuần.' },
+    ],
+    sessionNotes: [
+      { studentId: 's_UP1482', date: today(), className: 'Up 1', tutorName: 'Ms. Ha', parentNote: 'Hôm nay bé phát âm rất tốt và xung phong trả lời 3 lần. Về nhà ôn từ vựng Unit 1 giúp cô nhé!' },
     ],
   };
   return db;
@@ -537,6 +541,24 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
       save(db);
       return ok({ id: a.id, status: 'draft' });
     }
+  }
+
+  // ---- session log: after-class note straight to the parent's digest ----
+  if (seg[0] === 'classes' && seg[2] === 'session-log' && method === 'POST') {
+    const c = db.classes.find((x) => x.id === seg[1]);
+    if (!c) return err(404, 'not_found');
+    if (!canTeachClass(actor, classRef(c))) return err(403, 'forbidden');
+    const entries = (b.entries ?? []) as { studentId: string; parentNote?: string }[];
+    if (entries.length === 0) return err(400, 'invalid_input');
+    for (const e of entries) {
+      const stu = db.users.find((u) => u.id === e.studentId && u.role === 'student' && u.classIds.includes(c.id));
+      if (!stu) return err(400, 'student_not_in_class');
+      if (e.parentNote?.trim()) {
+        db.sessionNotes.push({ studentId: stu.id, date: today(), className: c.name, tutorName: me.name, parentNote: e.parentNote.trim() });
+      }
+    }
+    save(db);
+    return ok({ ok: true, logged: entries.length });
   }
 
   // ---- roster import / join requests ----
@@ -831,9 +853,9 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     return ok({
       date: today(),
       attendance: att ? { checkInAt: att.checkInAt, checkOutAt: att.checkOutAt, releasedTo: att.releasedTo } : null,
-      sessions: [
-        { className: 'Up 1', tutorName: 'Ms. Ha', parentNote: 'Hôm nay bé phát âm rất tốt và xung phong trả lời 3 lần. Về nhà ôn từ vựng Unit 1 giúp cô nhé!' },
-      ],
+      sessions: db.sessionNotes
+        .filter((s) => s.studentId === childId && s.date === today() && s.parentNote)
+        .map((s) => ({ className: s.className, tutorName: s.tutorName, parentNote: s.parentNote })),
       newAssignments: db.assignments.filter((a) => a.status === 'published').slice(0, 1).map((a) => ({ title: a.title })),
       graded: db.submissions
         .filter((s) => s.studentId === childId && s.status === 'graded' && s.overall != null)
