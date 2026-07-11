@@ -67,6 +67,10 @@
   .seg{display:inline-flex;border:1px solid var(--line);border-radius:980px;overflow:hidden;margin-bottom:14px}
   .seg button{border:0;background:#fff;padding:7px 14px;font-weight:600;font-size:13px;color:var(--soft);cursor:pointer}
   .seg button.on{background:var(--ink);color:#fff}
+  .toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:-6px 0 22px}
+  .tbtn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 14px;font-weight:600;
+    font-size:13px;cursor:pointer;color:var(--ink);transition:.15s}
+  .tbtn:hover{border-color:var(--accent);color:var(--accent)}
 </style>
 </head>
 <body>
@@ -80,6 +84,13 @@
   <div class="nav" id="nav"></div>
 
   <div class="scen" id="scenBar"></div>
+  <div class="toolbar" id="toolbar">
+    <button class="tbtn" id="btnSave">💾 Save</button>
+    <button class="tbtn" id="btnLoad">📂 Load</button>
+    <button class="tbtn" id="btnReset">↺ Reset</button>
+    <button class="tbtn" id="btnCSV">⬇︎ Export CSV</button>
+    <span class="hint" id="saveMsg"></span>
+  </div>
 
   <!-- OVERVIEW -->
   <section class="view on" data-view="Overview">
@@ -511,7 +522,41 @@ function buildNav(){
     renderPricing();});
 }
 function refresh(){renderKpis();renderCmp();renderPnl();renderMonthly();renderPricing();renderTargets();renderSens();}
+
+// ---------- persistence ----------
+const STORE_KEY = "organika_sparkling_daily_v1";
+const DEFAULTS = JSON.parse(JSON.stringify({SKUS, CO, LEVERS}));
+function applyState(st){
+  if(st.SKUS){ SKUS.length=0; st.SKUS.forEach(s=>SKUS.push(s)); }
+  if(st.CO) Object.assign(CO, st.CO);
+  if(st.LEVERS) Object.keys(st.LEVERS).forEach(k=>LEVERS[k]=st.LEVERS[k]);
+  renderAsmp(); refresh();
+}
+function flash(m){const e=el("saveMsg"); if(e){e.textContent=m; setTimeout(()=>{e.textContent="";},2500);}}
+function saveState(){ localStorage.setItem(STORE_KEY, JSON.stringify({SKUS,CO,LEVERS})); flash("Saved to this browser."); }
+function loadState(){ const raw=localStorage.getItem(STORE_KEY); if(!raw){flash("Nothing saved yet.");return;} applyState(JSON.parse(raw)); flash("Loaded your saved numbers."); }
+function resetState(){ applyState(JSON.parse(JSON.stringify(DEFAULTS))); flash("Reset to starting placeholders."); }
+function exportCSV(){
+  const rows=[["Sparkling Daily — scenario comparison (CDN $)"],[]];
+  rows.push(["Metric",...SCEN]);
+  const data=SCEN.map(compute);
+  const lines=[["Physical Cases","cases",num],["Gross Revenue","gross",money],["Trade Discounts","tdisc",money],
+    ["Net Sales","net",money],["Cost of Sales","cogs",money],["Gross Profit","gp",money],["GP %","gppct",pct],
+    ["A&P","ap",money],["Contribution","cm",money],["Total Opex","opex",money],["EBITDA","ebitda",money],
+    ["EBITDA %","ebitdapct",pct],["Net Income","ni",money],["Net Income %","nipct",pct]];
+  lines.forEach(l=>rows.push([l[0],...data.map(r=>l[2](r[l[1]]).replace(/[$,]/g,""))]));
+  rows.push([]); rows.push(["Per-SKU assumptions"]);
+  rows.push(["Flavour","Format","CP/case","Disc %","COGS Direct","COGS Indirect","A&P/case","Base volume"]);
+  SKUS.forEach(s=>rows.push([s.flav,s.fmt,s.cp,(s.disc*100).toFixed(1),s.cosd,s.cosi,s.ap,s.vol]));
+  const csv=rows.map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(",")).join("\n");
+  const a=document.createElement("a");
+  a.href="data:text/csv;charset=utf-8,"+encodeURIComponent(csv);
+  a.download="sparkling_daily_scenarios.csv"; a.click(); flash("CSV downloaded.");
+}
+["btnSave","btnLoad","btnReset","btnCSV"].forEach((id,i)=>{const e=el(id); if(e) e.onclick=[saveState,loadState,resetState,exportCSV][i];});
+
 ["tgtGP","tgtEB"].forEach(id=>{const e=el(id); if(e) e.oninput=renderTargets;});
+try{ const raw=localStorage.getItem(STORE_KEY); if(raw) applyState(JSON.parse(raw)); }catch(e){}
 buildNav();renderAsmp();refresh();
 </script>
 </body>

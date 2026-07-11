@@ -18,7 +18,7 @@ math tie-out), commit, push. Keep the app cohesive and simple — no bloat.
 ## Backlog (top = next)
 - [x] Monthly view (seasonality phasing) — parity with Excel.
 - [x] Targets / goal-seek view (price/volume to hit a GP% or EBITDA).
-- [ ] Persistence: save/load/reset to localStorage + export CSV.
+- [x] Persistence: save/load/reset to localStorage + export CSV.
 - [ ] Add / remove SKU (flexible product list).
 - [ ] Editable company name, fiscal year, scenario names.
 - [ ] Retail price ladder (retailer margin → shelf price) per SKU.
