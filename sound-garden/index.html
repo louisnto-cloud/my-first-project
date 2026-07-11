@@ -809,12 +809,13 @@ const sceneEls = {};
 for (const s of ['home','picker','meet','trace','find','word','treepicker','family','pop','hunt'])
   sceneEls[s] = document.getElementById('scene-'+s);
 let curScene='home', curLetter='s';
-let popSpawnTimer=null;
+let popSpawnTimer=null, traceNudgeTimer=null;
 function showScene(name){
   stopSpeaking();
   for (const s in sceneEls) sceneEls[s].classList.toggle('hidden', s!==name);
   curScene = name;
   if (traceHandTimer){ clearInterval(traceHandTimer); traceHandTimer=null; }
+  if (name!=='trace' && traceNudgeTimer){ clearInterval(traceNudgeTimer); traceNudgeTimer=null; }
   if (name!=='pop' && popSpawnTimer){ clearInterval(popSpawnTimer); popSpawnTimer=null; }
 }
 
@@ -936,7 +937,16 @@ function startTrace(l){
 }
 function buildTrace(l){
   const L=LETTERS[l];
-  TR = { letter:l, stroke:0, idx:0, done:false, touching:false };
+  TR = { letter:l, stroke:0, idx:0, done:false, touching:false, lastTouch:performance.now(), nudges:0 };
+  // if she stalls, warmly repeat what to do — at most twice, never nagging
+  if (traceNudgeTimer) clearInterval(traceNudgeTimer);
+  traceNudgeTimer = setInterval(()=>{
+    if (!TR || TR.done || TR.touching || curScene!=='trace') return;
+    if (TR.nudges < 2 && performance.now() - TR.lastTouch > 9000){
+      TR.nudges++; TR.lastTouch = performance.now();
+      pipSay([{clip:'p_trace'},{pause:200}, soundPart(TR.letter)], false);
+    }
+  }, 1500);
   let svg = '';
   for (let s=0;s<L.strokes.length;s++){
     svg += `<path d="${L.strokes[s]}" fill="none" stroke="#e5e2da" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>`;
@@ -972,7 +982,7 @@ function tracePoint(clientX, clientY){
   let advanced=false;
   while (TR.idx < pts.length){
     const dx=pts[TR.idx][0]-x, dy=pts[TR.idx][1]-y;
-    if (dx*dx+dy*dy < 100){ TR.idx++; advanced=true; } else break;
+    if (dx*dx+dy*dy < 144){ TR.idx++; advanced=true; } else break;   // forgiving radius for wobbly young hands
   }
   if (advanced){
     const frac = TR.idx/pts.length;
@@ -1003,8 +1013,8 @@ function strokeDone(){
     setTimeout(()=>awardStar(r.left+r.width/2, r.top+r.height/2), 700);
   }
 }
-traceSVG.addEventListener('pointerdown', e=>{ ensureAudio(); if(TR){TR.touching=true; traceHand.style.opacity='0';} tracePoint(e.clientX,e.clientY); });
-traceSVG.addEventListener('pointermove', e=>{ if (e.buttons||e.pressure>0||e.pointerType==='touch') tracePoint(e.clientX,e.clientY); });
+traceSVG.addEventListener('pointerdown', e=>{ ensureAudio(); if(TR){TR.touching=true; TR.lastTouch=performance.now(); traceHand.style.opacity='0';} tracePoint(e.clientX,e.clientY); });
+traceSVG.addEventListener('pointermove', e=>{ if(TR) TR.lastTouch=performance.now(); if (e.buttons||e.pressure>0||e.pointerType==='touch') tracePoint(e.clientX,e.clientY); });
 window.addEventListener('pointerup', ()=>{ if(TR) TR.touching=false; });
 document.getElementById('againbtn').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); buildTrace(curLetter); });
 
@@ -1403,7 +1413,20 @@ async function openParent(){
       Object.entries(S.words).filter(([,c])=>c>0).map(([w,c])=>`${w} ×${c}`).join(', ') || 'none yet'
     }</b> &nbsp;<span style="color:#999">(of ${Object.keys(WORDS).length} in the game)</span>
       ${S.firstWordAt?`<br>🎉 First word ever read on <b>${fmtDate(S.firstWordAt)}</b>`:''}</div>
-    <div class="card">⏱ Total play time: <b>${fmtMins(S.playMs)}</b><br>🕐 Last played: <b>${fmtDate(S.lastUsed)}</b></div>
+    <div class="card">⏱ Total play time: <b>${fmtMins(S.playMs)}</b><br>🕐 Last played: <b>${fmtDate(S.lastUsed)}</b><br><br>
+      <b>Last 7 days:</b><br>
+      <div style="display:flex; gap:6px; align-items:flex-end; height:64px; margin-top:6px;">${
+        Array.from({length:7}, (_,i)=>{
+          const d = new Date(Date.now() - (6-i)*86400000);
+          const key = d.toISOString().slice(0,10);
+          const mins = Math.round(((S.days||{})[key]||0)/60000);
+          const h = Math.min(52, mins*3);
+          const label = d.toLocaleDateString(undefined,{weekday:'narrow'});
+          return `<div style="text-align:center; font-size:11px; color:#888;">
+            <div style="width:26px; height:${Math.max(3,h)}px; background:${mins?'#7cc576':'#e8e2d4'}; border-radius:4px 4px 0 0; margin:0 auto;"></div>
+            ${label}<br>${mins?mins+'m':'·'}</div>`;
+        }).join('')
+      }</div></div>
 
     <h2>💛 Her name</h2>
     <div class="card">The guide talks to her by name, like a friend. If the robot voice says it strangely, spell it the way it <i>sounds</i> (for example “Mariahna”).<br><br>
@@ -1474,7 +1497,13 @@ async function previewClip(id){
 /* ---------------- time tracking ---------------- */
 setInterval(()=>{
   if (document.visibilityState==='visible' && parentEl.classList.contains('hidden')){
-    S.playMs += 10000; S.lastUsed = Date.now(); save();
+    S.playMs += 10000; S.lastUsed = Date.now();
+    // per-day tally for the parent's week-at-a-glance; keep only 14 days
+    S.days = S.days || {};
+    const key = new Date().toISOString().slice(0,10);
+    S.days[key] = (S.days[key]||0) + 10000;
+    for (const k of Object.keys(S.days)) if (Object.keys(S.days).length>14 && k < Object.keys(S.days).sort().slice(-14)[0]) delete S.days[k];
+    save();
   }
 }, 10000);
 S.lastUsed = Date.now(); save();
