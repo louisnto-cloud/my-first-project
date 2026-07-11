@@ -110,14 +110,9 @@ export function playThunk(): void {
   tone(ac, 130, now, 0.1, 0.18, 'triangle');
 }
 
-/** A subtle haptic for the two rituals (candle, stamp), where supported.
- *  Silenced when the user prefers reduced motion. */
-export function haptic(pattern: number | number[] = 12): void {
-  if (typeof window === 'undefined' || !('vibrate' in navigator)) return;
-  if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
-  try {
-    navigator.vibrate(pattern);
-  } catch {
-    // Some browsers gate vibration behind permissions; ignore failures.
-  }
+/** Retired: vibration is gone for good. Nothing in this app shakes —
+ *  not the screen, and not the phone in your hand. The candle, the stamp,
+ *  and a right answer are marked by light and sound alone. */
+export function haptic(_pattern: number | number[] = 12): void {
+  // Intentionally silent.
 }

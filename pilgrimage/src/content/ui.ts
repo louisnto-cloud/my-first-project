@@ -62,8 +62,8 @@ export const UI = {
   // Lesson player
   tapToEnter: v('Tap to enter', 'Chạm để bước vào'),
   check: v('Check', 'Kiểm tra'),
-  gentleRight: v('Yes.', 'Đúng vậy.'),
-  gentleWrong: v('Almost — here it is.', 'Gần đúng rồi — đây là câu trả lời.'),
+  gentleRight: v('Yes — beautifully done.', 'Đúng vậy — thật tuyệt.'),
+  gentleWrong: v('Almost — and now you know. Here it is.', 'Gần đúng rồi — và giờ bạn đã biết. Đây là câu trả lời.'),
   orderHint: v('Tap the cards in order, from first to last.', 'Chạm các thẻ theo thứ tự, từ đầu đến cuối.'),
   orderReset: v('Start over', 'Làm lại'),
   matchHint: v('Tap a symbol, then its meaning.', 'Chạm một biểu tượng, rồi chạm ý nghĩa của nó.'),
