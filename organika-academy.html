@@ -1117,6 +1117,39 @@ const INTEL=[
    'When in doubt, over-thank. Express gratitude for time, hospitality, and consideration at every interaction',
   ]},
  ]},
+{id:'i05',title:'Source Countries: How They Are Perceived',icon:'🌍',
+ sections:[
+  {h:'Canada 🇨🇦 (You)',pts:[
+   'Perception: clean, natural, safe, cold-climate purity — among the top 2 most trusted origins for health products',
+   'Strengths to lean on: pristine nature imagery, strict Health Canada regulation, "no fakes" reputation',
+   'Weakness: lower brand awareness than US or Australia — consumers trust "Canada" but may not know your brand',
+   'Play: put the maple leaf and "Made in Canada" front and center on shelf and in every pitch',
+  ]},
+  {h:'United States 🇺🇸',pts:[
+   'Perception: innovative, strong brands (Centrum, Nature Made), but "commercial" rather than pure',
+   'Consumers respect US science but associate it with mass market, not premium natural',
+   'Counterfeit concern: heavily faked in the gray market, which erodes trust in US labels',
+   'vs Canada: you win on perceived purity and safety; they win on brand recognition and ad budgets',
+  ]},
+  {h:'Australia 🇦🇺',pts:[
+   'Perception: the benchmark for premium natural supplements (Blackmores, Swisse dominate mindshare)',
+   'Strong "clean nature" story like Canada, plus a decade of aggressive marketing in Vietnam',
+   'Priced at the top of the market; consumers accept it',
+   'vs Canada: nearly identical positioning — differentiate on category (sparkling electrolyte) not on origin purity',
+  ]},
+  {h:'Japan 🇯🇵 and Korea 🇰🇷',pts:[
+   'Japan: highest quality perception overall; associated with precision and safety; strong in beauty-from-within',
+   'Korea: trend-driven, dominant in beauty and ginseng; K-wave marketing power with younger consumers',
+   'Both strong in drinkable formats — your sparkling format competes for the same modern consumer',
+   'Play: position Organika as Western active-lifestyle vs their beauty/tradition focus',
+  ]},
+  {h:'Europe 🇩🇪🇫🇷 and Local 🇻🇳',pts:[
+   'Germany/France: pharma-grade credibility, trusted by doctors and pharmacists; underdeveloped retail presence',
+   'Local Vietnamese brands: winning on price and distribution, losing on trust for ingestibles — urban consumers still prefer imported for anything they swallow',
+   'Thailand/Malaysia: seen as regional and affordable, not premium',
+   'Bottom line: imported beats local for supplements; within imports, Canada sits in the premium-trust tier with Australia and Japan',
+  ]},
+ ]},
 ];
 
 // ── REGISTER PRIMER ──────────────────────────────────────────────────────────
@@ -1358,7 +1391,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v18';
+const APP_VERSION='v19';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
