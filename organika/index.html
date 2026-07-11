@@ -1503,7 +1503,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v32';
+const APP_VERSION='v33';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1670,6 +1670,7 @@ function render(){
     case 'type':        app.innerHTML=renderType(); break;
     case 'build':       app.innerHTML=renderBuild(); break;
     case 'prices':      app.innerHTML=renderPrices(); break;
+    case 'tones':       app.innerHTML=renderTones(); break;
     default:            app.innerHTML=renderHome();
   }
   preloadAudio();
@@ -1758,6 +1759,7 @@ function renderHome(){
     <div class="section-label">More Tools</div>
     <div class="explore-list">
       <button class="explore-row" onclick="S.priceTarget=0;S.priceRight=0;S.priceTotal=0;go('prices')"><span>💰</span><span>Price Listening Trainer</span><span class="arrow">›</span></button>
+      <button class="explore-row" onclick="S.toneSet=null;S.toneRight=0;S.toneTotal=0;go('tones')"><span>🎵</span><span>Tone Trainer — train your ear</span><span class="arrow">›</span></button>
       <button class="explore-row" onclick="go('dict')"><span>🔎</span><span>Dictionary</span><span class="arrow">›</span></button>
       <button class="explore-row" onclick="go('primer')"><span>📖</span><span>Pronouns, Tones and Register</span><span class="arrow">›</span></button>
       <button class="explore-row" onclick="showAudioHelp()"><span>🔊</span><span>Audio help</span><span class="arrow">›</span></button>
@@ -2562,6 +2564,72 @@ function answerPrice(p){
     rolloverDay();
     S.xp+=8; S.todayXP+=8;
     checkStreak(); saveState();
+    if(navigator.vibrate) navigator.vibrate(10);
+  }else if(navigator.vibrate) navigator.vibrate([30,40,30]);
+  render();
+  scrollToFeedback();
+}
+
+// ── TONE-PAIR TRAINER ────────────────────────────────────────────────────────
+const TONE_SETS=[
+ [{w:'bán',m:'to sell'},{w:'bàn',m:'table / to discuss'},{w:'bạn',m:'friend'}],
+ [{w:'mua',m:'to buy'},{w:'mùa',m:'season'},{w:'múa',m:'to dance'}],
+ [{w:'giá',m:'price'},{w:'già',m:'old'},{w:'gia',m:'family (gia đình)'}],
+ [{w:'tiền',m:'money'},{w:'tiến',m:'to advance'},{w:'tiễn',m:'to see someone off'}],
+ [{w:'chào',m:'to greet'},{w:'cháo',m:'rice porridge'},{w:'chảo',m:'frying pan'}],
+ [{w:'năm',m:'year / five'},{w:'nắm',m:'to grasp'},{w:'nằm',m:'to lie down'}],
+ [{w:'hai',m:'two'},{w:'hài',m:'comedy'},{w:'hải',m:'sea (hải sản)'}],
+ [{w:'hàng',m:'goods'},{w:'hạng',m:'rank / class'},{w:'hăng',m:'eager'}],
+ [{w:'thương',m:'to love / trade'},{w:'thường',m:'usually'},{w:'thưởng',m:'bonus / reward'}],
+ [{w:'chi',m:'to spend'},{w:'chị',m:'older sister / Ms.'},{w:'chì',m:'lead (metal)'}],
+];
+function newToneRound(){
+  S.toneSet=rand(TONE_SETS);
+  S.toneTarget=rand(S.toneSet);
+  S.toneAnswer=null;
+}
+function speakTone(){speak(S.toneTarget.w);}
+function renderTones(){
+  if(!S.toneSet) newToneRound();
+  return `<div class="screen">
+  <div class="lesson-header">
+    <button class="btn-back" onclick="S.toneSet=null;S.toneRight=0;S.toneTotal=0;go('home')">‹</button>
+    <span class="screen-title">Tone Trainer</span>
+    <span style="font-size:13px;color:var(--tx2)">${S.toneRight||0}/${S.toneTotal||0}</span>
+  </div>
+  <main class="main-scroll" style="padding:16px">
+    <p class="screen-intro">One syllable, different tones, completely different words. Tap play, pick the word you heard.</p>
+    <div class="price-play-wrap">
+      <button class="price-play" onclick="speakTone()">🔊<br><span>Play word</span></button>
+      ${speedChip()}
+    </div>
+    <div class="quiz-options">
+      ${S.toneSet.map(o=>{
+        let cls='quiz-opt';
+        if(S.toneAnswer!==null){
+          if(o.w===S.toneTarget.w) cls+=' correct';
+          else if(o.w===S.toneAnswer) cls+=' wrong';
+          else cls+=' faded';
+        }
+        return `<button class="${cls}" onclick="answerTone('${o.w}')"><b style="font-size:19px">${o.w}</b> — ${o.m}</button>`;
+      }).join('')}
+    </div>
+    ${S.toneAnswer!==null?`<div class="quiz-feedback ${S.toneAnswer===S.toneTarget.w?'correct-fb':'wrong-fb'}">
+      ${S.toneAnswer===S.toneTarget.w?'Correct!':'It was '+S.toneTarget.w+' — '+S.toneTarget.m}
+      <button class="speak-inline lg" onclick="speakTone()">🔊 Hear again</button>
+      <button class="btn-primary" style="margin-top:12px" onclick="newToneRound();speakTone();render()">Next word</button>
+    </div>`:''}
+    <div style="height:30px"></div>
+  </main>
+  </div>`;
+}
+function answerTone(w){
+  if(S.toneAnswer!==null) return;
+  S.toneAnswer=w;
+  S.toneTotal=(S.toneTotal||0)+1;
+  if(w===S.toneTarget.w){
+    S.toneRight=(S.toneRight||0)+1;
+    rolloverDay(); S.xp+=8; S.todayXP+=8; checkStreak(); saveState();
     if(navigator.vibrate) navigator.vibrate(10);
   }else if(navigator.vibrate) navigator.vibrate([30,40,30]);
   render();
