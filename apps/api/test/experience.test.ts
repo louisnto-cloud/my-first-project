@@ -69,6 +69,17 @@ describe('practice and achievements', () => {
   });
 });
 
+describe('avatar', () => {
+  it('accepts only the kid-safe list and appears on /me and the leaderboard', async () => {
+    expect((await req('POST', '/me/avatar', minh, { avatar: '🦖' })).statusCode).toBe(200);
+    expect((await req('POST', '/me/avatar', minh, { avatar: 'x' })).statusCode).toBe(400);
+    const meRes = (await req('GET', '/me', minh)).json() as { avatar: string | null };
+    expect(meRes.avatar).toBe('🦖');
+    const rows = (await req('GET', '/classes/c1/leaderboard', minh)).json() as { name: string; avatar: string | null }[];
+    expect(rows.find((r) => r.name === 'Trần Đức Minh')?.avatar).toBe('🦖');
+  });
+});
+
 describe('announcements (Bảng tin)', () => {
   it('managers post center-wide; teachers post to their own classes only', async () => {
     expect((await req('POST', '/announcements', zhao, { title: 'Nghỉ lễ 2/9', body: 'Trung tâm nghỉ ngày 2/9.' })).statusCode).toBe(200);

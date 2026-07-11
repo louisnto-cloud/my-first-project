@@ -17,6 +17,7 @@ interface DUser {
   name: string;
   email: string;
   code?: string;
+  avatar?: string; // kid-picked emoji character
   classIds: string[]; // student: enrolled; tutor: taught
   childIds: string[]; // parent
 }
@@ -106,7 +107,7 @@ interface DDB {
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v9';
+const KEY = 'etop-demo-db-v10';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -175,9 +176,9 @@ function seed(): DDB {
       id, role: 'tutor' as Role, name, email: `${id}@etop.vn`, code,
       classIds: classDefs.filter((c) => c[1] === id).map((c) => c[0]), childIds: [],
     })),
-    ...upStudents.map(([name, code, classId]) => ({
+    ...upStudents.map(([name, code, classId], i) => ({
       id: `s_${code}`, role: 'student' as Role, name, email: `${code.toLowerCase()}@hv.etop.local`,
-      code, classIds: [classId], childIds: [],
+      code, avatar: ['🦊', '🐼', '🦄', '🐯', '🐸', '🐰', '🐙', '🦖', '🐳', '🐝'][i], classIds: [classId], childIds: [],
     })),
     { id: 'p0', role: 'parent', name: 'Phụ huynh (demo)', email: 'phuhuynh@etop.vn', classIds: [], childIds: ['s_UP1482'] },
     { id: 'fd0', role: 'front_desk', name: 'Lễ tân (demo)', email: 'letan@etop.vn', classIds: [], childIds: [] },
@@ -370,7 +371,16 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
   const actor = actorOf(me);
 
   if (method === 'GET' && rawPath === '/me') {
-    return ok({ id: me.id, name: me.name, role: me.role, orgId: ORG, siteId: actor.siteId, locale: 'vi' });
+    return ok({ id: me.id, name: me.name, role: me.role, orgId: ORG, siteId: actor.siteId, locale: 'vi', avatar: me.avatar ?? null });
+  }
+
+  if (method === 'POST' && rawPath === '/me/avatar') {
+    const AVATARS = ['🦊', '🐼', '🐯', '🦄', '🐸', '🐰', '🐙', '🦖', '🐳', '🐝', '🐨', '🦁'];
+    const avatar = String(b.avatar ?? '');
+    if (!AVATARS.includes(avatar)) return err(400, 'invalid_input');
+    me.avatar = avatar;
+    save(db);
+    return ok({ ok: true, avatar });
   }
 
   // ---------- Admin: teachers & classes (owner / academic director) ----------
@@ -801,7 +811,7 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     return ok(
       db.users
         .filter((u) => u.role === 'student' && u.classIds.includes(c.id))
-        .map((u) => ({ id: u.id, name: u.name, points: db.practice.filter((p) => p.studentId === u.id).reduce((s, p) => s + p.points, 0) }))
+        .map((u) => ({ id: u.id, name: u.name, avatar: u.avatar ?? null, points: db.practice.filter((p) => p.studentId === u.id).reduce((s, p) => s + p.points, 0) }))
         .sort((a, b) => b.points - a.points || a.name.localeCompare(b.name))
         .slice(0, 20),
     );

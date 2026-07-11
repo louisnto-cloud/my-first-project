@@ -80,6 +80,17 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
     return { points: totalPoints, streak, practiceDays: days.length, submissions, badges };
   });
 
+  // ---------- Avatar (kid-picked character) ----------
+  const AVATARS = ['🦊', '🐼', '🐯', '🦄', '🐸', '🐰', '🐙', '🦖', '🐳', '🐝', '🐨', '🦁'];
+  app.post('/me/avatar', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    const { avatar } = (req.body ?? {}) as { avatar?: string };
+    if (!avatar || !AVATARS.includes(avatar)) return reply.code(400).send({ error: 'invalid_input' });
+    await db.query('UPDATE users SET avatar = $2 WHERE id = $1', [actor.id, avatar]);
+    return { ok: true, avatar };
+  });
+
   // ---------- Announcements (Bảng tin) ----------
   // Center-wide posts come from managers; class posts from the class
   // teacher (or managers). Readers see exactly their scope.
@@ -168,7 +179,7 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
 
     return many(
       db,
-      `SELECT u.id, u.name,
+      `SELECT u.id, u.name, u.avatar,
               COALESCE((SELECT SUM(pe.points)::int FROM practice_events pe WHERE pe.student_id = u.id), 0) AS points
          FROM users u JOIN enrollments e ON e.student_id = u.id
         WHERE e.class_id = $1 AND u.archived = false

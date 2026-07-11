@@ -29,10 +29,13 @@ CREATE TABLE IF NOT EXISTS users (
   login_code TEXT UNIQUE, -- kid-friendly login code (students and teachers)
   password_hash TEXT NOT NULL,
   locale TEXT NOT NULL DEFAULT 'vi',
+  avatar TEXT, -- kid-picked emoji character
   archived BOOLEAN NOT NULL DEFAULT false,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
   UNIQUE (org_id, email)
 );
+-- Idempotent upgrade for databases created before the avatar column.
+ALTER TABLE users ADD COLUMN IF NOT EXISTS avatar TEXT;
 
 CREATE TABLE IF NOT EXISTS guardian_students (
   guardian_id TEXT NOT NULL REFERENCES users(id),

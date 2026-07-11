@@ -338,12 +338,21 @@ describe('demo engine — practice', () => {
 
   it('the class leaderboard ranks effort points; other classes cannot peek', async () => {
     const bao = await loginCode('UP1482');
-    const rows = (await call('GET', '/classes/up1/leaderboard', undefined, bao!)).json as { name: string; points: number }[];
+    const rows = (await call('GET', '/classes/up1/leaderboard', undefined, bao!)).json as { name: string; points: number; avatar: string | null }[];
     expect(rows.length).toBe(3);
     expect(rows[0].name).toBe('Trần Khánh Vy'); // 22 seeded points
     expect(rows[0].points).toBe(22);
+    expect(rows[0].avatar).toBeTruthy();
 
     const up3 = await loginCode('UP3171');
     expect((await call('GET', '/classes/up1/leaderboard', undefined, up3!)).status).toBe(403);
+  });
+
+  it('a student picks an avatar from the safe list; it shows on /me', async () => {
+    const bao = await loginCode('UP1482');
+    expect((await call('POST', '/me/avatar', { avatar: '🦖' }, bao!)).status).toBe(200);
+    expect((await call('POST', '/me/avatar', { avatar: '💀' }, bao!)).status).toBe(400); // not in the kid-safe list
+    const meRes = (await call('GET', '/me', undefined, bao!)).json as { avatar: string | null };
+    expect(meRes.avatar).toBe('🦖');
   });
 });

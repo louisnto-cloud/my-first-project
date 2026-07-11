@@ -89,7 +89,7 @@ const BADGE_META: Record<string, { emoji: string; vi: string; en: string }> = {
 };
 
 function Leaderboard({ classId, meName, lang }: { classId: string; meName: string; lang: Lang }) {
-  const [rows, setRows] = useState<{ id: string; name: string; points: number }[]>([]);
+  const [rows, setRows] = useState<{ id: string; name: string; avatar?: string | null; points: number }[]>([]);
   useEffect(() => {
     void api<typeof rows>('GET', `/classes/${classId}/leaderboard`).then(setRows).catch(() => {});
   }, [classId]);
@@ -104,6 +104,7 @@ function Leaderboard({ classId, meName, lang }: { classId: string; meName: strin
         return (
           <div key={r.id} className={`flex items-center gap-2 rounded-xl px-2.5 py-1.5 text-sm font-bold ${isMe ? 'bg-violet-100 text-violet-800' : 'bg-slate-50 text-slate-600'}`}>
             <span className="w-6 shrink-0 text-center">{medals[i] ?? `${i + 1}.`}</span>
+            <span className="shrink-0 text-base">{r.avatar ?? '🙂'}</span>
             <span className="min-w-0 flex-1 truncate">{r.name}{isMe ? (lang === 'vi' ? ' (bạn)' : ' (you)') : ''}</span>
             <span className="shrink-0 text-violet-600">⭐ {r.points}</span>
           </div>
@@ -113,7 +114,15 @@ function Leaderboard({ classId, meName, lang }: { classId: string; meName: strin
   );
 }
 
-function Student({ lang, t, name }: { lang: Lang; t: (k: string) => string; name: string }) {
+const AVATARS = ['🦊', '🐼', '🐯', '🦄', '🐸', '🐰', '🐙', '🦖', '🐳', '🐝', '🐨', '🦁'];
+
+function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: string) => string; name: string; avatar: string | null; onAvatar: () => void }) {
+  const [pickingAvatar, setPickingAvatar] = useState(false);
+  const pickAvatar = async (a: string) => {
+    await api('POST', '/me/avatar', { avatar: a });
+    setPickingAvatar(false);
+    onAvatar();
+  };
   const [view, setView] = useState<'work' | 'practice'>('work');
   const [classes, setClasses] = useState<ClassInfo[]>([]);
   const [ach, setAch] = useState<{ points: number; streak: number; badges?: { id: string; earned: boolean }[] } | null>(null);
@@ -156,8 +165,17 @@ function Student({ lang, t, name }: { lang: Lang; t: (k: string) => string; name
           <div className="relative flex items-center gap-3">
             <Mascot size={72} mood="wave" className="shrink-0 animate-float drop-shadow" />
             <div className="min-w-0 flex-1">
-              <div className="text-lg font-extrabold">
-                {lang === 'vi' ? `Chào ${name.split(' ').slice(-1)[0]}! Học thôi nào 🎈` : `Hi ${name.split(' ').slice(-1)[0]}! Let's learn 🎈`}
+              <div className="flex items-center gap-2 text-lg font-extrabold">
+                <button
+                  onClick={() => setPickingAvatar(!pickingAvatar)}
+                  aria-label={lang === 'vi' ? 'Chọn nhân vật' : 'Pick your character'}
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/25 text-xl ring-2 ring-white/40 transition active:scale-90"
+                >
+                  {avatar ?? '🙂'}
+                </button>
+                <span className="min-w-0 truncate">
+                  {lang === 'vi' ? `Chào ${name.split(' ').slice(-1)[0]}! Học thôi nào 🎈` : `Hi ${name.split(' ').slice(-1)[0]}! Let's learn 🎈`}
+                </span>
               </div>
               <div className="mt-2 flex gap-2">
                 <span className="chip bg-white/20 text-white"><Icon name="star" size={14} /> {ach.points} {t('points')}</span>
@@ -165,6 +183,18 @@ function Student({ lang, t, name }: { lang: Lang; t: (k: string) => string; name
               </div>
             </div>
           </div>
+          {pickingAvatar && (
+            <div className="animate-pop relative mt-3 rounded-2xl bg-white/15 p-2.5">
+              <div className="mb-1.5 text-center text-[11px] font-extrabold text-white/80">{lang === 'vi' ? 'Chọn nhân vật của bạn:' : 'Pick your character:'}</div>
+              <div className="grid grid-cols-6 gap-1.5">
+                {AVATARS.map((a) => (
+                  <button key={a} onClick={() => void pickAvatar(a)} className={`rounded-xl py-1.5 text-2xl transition active:scale-90 ${avatar === a ? 'bg-white/40 ring-2 ring-white' : 'bg-white/10'}`}>
+                    {a}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
           {(ach.badges ?? []).some((b) => b.earned) && (
             <div className="relative mt-3 flex flex-wrap gap-1.5">
               {(ach.badges ?? []).filter((b) => b.earned).map((b) => {
@@ -830,7 +860,7 @@ export default function App() {
     <div className="min-h-screen pb-10">
       <Header me={me} lang={lang} setLang={setLang} t={t} onLogout={logout} />
       <main key={me.role} className="animate-rise mx-auto max-w-3xl space-y-4 p-4">
-        {me.role === 'student' && <Student lang={lang} t={t} name={me.name} />}
+        {me.role === 'student' && <Student lang={lang} t={t} name={me.name} avatar={me.avatar ?? null} onAvatar={() => void loadMe()} />}
         {me.role === 'parent' && <Parent lang={lang} t={t} />}
         {['owner', 'academic_director'].includes(me.role) && (
           <>

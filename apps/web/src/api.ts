@@ -49,4 +49,5 @@ export interface Me {
   orgId: string;
   siteId: string | null;
   locale: string;
+  avatar?: string | null;
 }
