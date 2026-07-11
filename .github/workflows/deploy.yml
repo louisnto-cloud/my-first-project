@@ -5,6 +5,7 @@ on:
     branches:
       - claude/english-center-app-yylgv3
       - claude/pilgrimage-catholic-app-t572l3
+      - claude/dyslexia-learning-app-qgi2qz
       - main
   workflow_dispatch:
 
@@ -34,7 +35,7 @@ jobs:
 
       # The Pilgrimage (pilgrimage/) — served under /pilgrimage.
       - name: Build The Pilgrimage
-        if: hashFiles('pilgrimage/package.json') != ''
+        if: github.ref != 'refs/heads/claude/dyslexia-learning-app-qgi2qz' && hashFiles('pilgrimage/package.json') != ''
         working-directory: pilgrimage
         env:
           NEXT_PUBLIC_BASE_PATH: /my-first-project/pilgrimage
@@ -51,6 +52,7 @@ jobs:
         run: |
           mkdir -p dist/pilgrimage
           cp -r pilgrimage/out/. dist/pilgrimage/
+          if [ -d learn ]; then mkdir -p dist/learn && cp -r learn/. dist/learn/; fi
       - name: Publish full site
         if: github.ref == 'refs/heads/main' || hashFiles('pilgrimage/package.json') == ''
         uses: peaceiris/actions-gh-pages@v4
@@ -61,10 +63,21 @@ jobs:
       # On the pilgrimage feature branch: overlay only /pilgrimage, leaving
       # whatever is deployed at the site root untouched.
       - name: Publish /pilgrimage only (feature branch)
-        if: github.ref != 'refs/heads/main' && hashFiles('pilgrimage/package.json') != ''
+        if: github.ref != 'refs/heads/main' && github.ref != 'refs/heads/claude/dyslexia-learning-app-qgi2qz' && hashFiles('pilgrimage/package.json') != ''
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./pilgrimage/out
           destination_dir: pilgrimage
+          keep_files: true
+
+      # On the Learnverse branch: overlay only /learn (a static app, no build
+      # step), leaving the rest of the deployed site untouched.
+      - name: Publish /learn only (learnverse branch)
+        if: github.ref == 'refs/heads/claude/dyslexia-learning-app-qgi2qz'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./learn
+          destination_dir: learn
           keep_files: true

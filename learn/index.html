@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Learnverse">
+<title>Learnverse</title>
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%237c4dff'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle'%3E%E2%AD%90%3C/text%3E%3C/svg%3E">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; user-select:none; -webkit-user-select:none; touch-action:manipulation; }
+  html,body { height:100%; overflow:hidden; font-family:-apple-system, "Segoe UI", Roboto, sans-serif; }
+  body { background:linear-gradient(180deg,#7ec8ff 0%,#b3e5fc 45%,#aed581 46%,#8bc34a 100%); position:fixed; inset:0; }
+
+  .screen { position:absolute; inset:0; display:none; flex-direction:column; align-items:center; justify-content:center; overflow:hidden; }
+  .screen.active { display:flex; }
+
+  /* ---------- decorations ---------- */
+  .sun { position:absolute; top:4%; right:6%; font-size:min(14vw,90px); animation:spin 40s linear infinite; z-index:1; }
+  .cloud { position:absolute; font-size:min(10vw,70px); opacity:.9; z-index:1; animation:drift linear infinite; }
+  @keyframes spin { to { transform:rotate(360deg);} }
+  @keyframes drift { from { transform:translateX(-20vw);} to { transform:translateX(120vw);} }
+  @keyframes bob { 0%,100%{transform:translateY(0) rotate(-2deg);} 50%{transform:translateY(-12px) rotate(2deg);} }
+  @keyframes pop-in { 0%{transform:scale(0);} 70%{transform:scale(1.15);} 100%{transform:scale(1);} }
+  @keyframes wobble { 0%,100%{transform:rotate(0);} 25%{transform:rotate(-6deg);} 75%{transform:rotate(6deg);} }
+  @keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.08);} }
+  @keyframes floatstar { 0%{transform:translate(0,0) scale(1); opacity:1;} 100%{transform:translate(var(--dx),var(--dy)) scale(.3); opacity:0;} }
+  @keyframes bounce-big { 0%,100%{transform:translateY(0) scale(1);} 40%{transform:translateY(-4vh) scale(1.05,0.95);} 60%{transform:translateY(0) scale(0.97,1.05);} }
+
+  /* ---------- home world ---------- */
+  #home .title-banner { position:absolute; top:max(2vh, env(safe-area-inset-top)); left:50%; transform:translateX(-50%); font-size:min(9vw,54px); z-index:3; animation:bob 3s ease-in-out infinite; }
+  .world { display:grid; grid-template-columns:repeat(3,1fr); gap:min(3vw,24px); padding:min(4vw,30px); width:100%; max-width:900px; z-index:2; }
+  @media (orientation:portrait){ .world { grid-template-columns:repeat(2,1fr);} }
+  .island { position:relative; border:none; border-radius:28px; padding:min(3vw,20px) 6px; font-size:min(13vw,72px); background:rgba(255,255,255,.85); box-shadow:0 8px 0 rgba(0,0,0,.12); cursor:pointer; transition:transform .12s; animation:bob ease-in-out infinite; }
+  .island:nth-child(odd){ animation-duration:3.4s; } .island:nth-child(even){ animation-duration:4.1s; }
+  .island:active { transform:scale(.9); }
+  .island.dimmed { opacity:.45; filter:grayscale(.7); }
+  .island .badge { position:absolute; top:-8px; right:-4px; font-size:min(6vw,30px); }
+
+  /* ---------- shared chrome ---------- */
+  .homebtn { position:absolute; top:max(1.5vh, env(safe-area-inset-top)); left:3vw; font-size:min(9vw,52px); background:rgba(255,255,255,.9); border:none; border-radius:50%; width:min(15vw,84px); height:min(15vw,84px); box-shadow:0 5px 0 rgba(0,0,0,.15); z-index:50; cursor:pointer; }
+  .homebtn:active{ transform:scale(.88); }
+  #starjar { position:absolute; top:max(1.5vh, env(safe-area-inset-top)); right:3vw; z-index:50; background:rgba(255,255,255,.9); border-radius:24px; padding:6px 14px; font-size:min(7vw,36px); box-shadow:0 5px 0 rgba(0,0,0,.15); display:flex; align-items:center; gap:6px; }
+  #starcount-pips { display:flex; gap:2px; }
+  .pip { width:min(2.5vw,14px); height:min(2.5vw,14px); border-radius:50%; background:#ffd54f; box-shadow:0 0 4px #ffb300; }
+  #guide { position:absolute; bottom:max(2vh, env(safe-area-inset-bottom)); left:3vw; font-size:min(16vw,90px); z-index:50; cursor:pointer; border:none; background:none; animation:bob 3.2s ease-in-out infinite; filter:drop-shadow(0 4px 6px rgba(0,0,0,.25)); }
+  #guide:active { transform:scale(.88); }
+  #gear { position:absolute; bottom:max(1vh, env(safe-area-inset-bottom)); right:2vw; font-size:22px; opacity:.35; z-index:50; border:none; background:none; padding:10px; }
+
+  /* ---------- activity stage ---------- */
+  .stage { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:min(3vh,24px); padding:min(18vw,100px) 4vw 4vw; z-index:2; }
+  .bigletter { font-size:min(52vw,320px); font-weight:800; color:#fff; text-shadow:0 10px 0 rgba(0,0,0,.15); cursor:pointer; border:none; background:none; line-height:1; animation:pulse 2s ease-in-out infinite; font-family:"Comic Sans MS","Chalkboard SE",-apple-system,sans-serif; }
+  .bigemoji { font-size:min(24vw,140px); animation:pop-in .5s; }
+  .choices { display:flex; flex-wrap:wrap; justify-content:center; gap:min(4vw,28px); }
+  .choice { border:none; border-radius:26px; background:#fff; box-shadow:0 8px 0 rgba(0,0,0,.15); font-size:min(17vw,96px); font-weight:800; padding:min(3vw,18px) min(6vw,36px); cursor:pointer; color:#5e35b1; font-family:"Comic Sans MS","Chalkboard SE",-apple-system,sans-serif; transition:transform .1s; min-width:min(24vw,140px); }
+  .choice:active { transform:scale(.9); }
+  .choice.word { font-size:min(11vw,64px); }
+  .choice.small { font-size:min(9vw,52px); min-width:min(18vw,100px); }
+  .choice.correct-flash { animation:pulse .4s 3; background:#c8e6c9; }
+  .choice.nope { animation:wobble .4s; }
+  .slots { display:flex; gap:min(2.5vw,16px); }
+  .slot { width:min(20vw,110px); height:min(24vw,130px); border-radius:22px; border:5px dashed rgba(255,255,255,.85); display:flex; align-items:center; justify-content:center; font-size:min(15vw,84px); font-weight:800; color:#fff; background:rgba(0,0,0,.08); font-family:"Comic Sans MS","Chalkboard SE",-apple-system,sans-serif; }
+  .slot.filled { border-style:solid; background:#fff; color:#5e35b1; animation:pop-in .35s; }
+  #tracewrap { position:relative; }
+  #tracecanvas { border-radius:30px; background:rgba(255,255,255,.92); box-shadow:0 10px 0 rgba(0,0,0,.12); touch-action:none; }
+  .wordrow { display:flex; gap:min(3vw,18px); flex-wrap:wrap; justify-content:center; }
+  .wordcard { border:none; border-radius:22px; background:#fff; box-shadow:0 7px 0 rgba(0,0,0,.15); font-size:min(9vw,50px); font-weight:700; padding:min(2.5vw,16px) min(5vw,30px); color:#37474f; cursor:pointer; font-family:"Comic Sans MS","Chalkboard SE",-apple-system,sans-serif; }
+  .wordcard:active { transform:scale(.92); }
+  .wordcard.lit { background:#fff59d; color:#e65100; animation:pulse .5s; }
+
+  /* ---------- celebration ---------- */
+  #celebrate { position:absolute; inset:0; display:none; align-items:center; justify-content:center; flex-direction:column; z-index:90; pointer-events:none; }
+  #celebrate.active { display:flex; }
+  #celebrate .burst { font-size:min(30vw,180px); animation:pop-in .6s; }
+  .particle { position:absolute; font-size:28px; pointer-events:none; animation:floatstar 1.2s ease-out forwards; z-index:95; }
+
+  /* ---------- parent screen (the only text screen) ---------- */
+  #parent { background:#f5f5f5; z-index:200; padding:24px; overflow-y:auto; justify-content:flex-start; user-select:text; -webkit-user-select:text; }
+  #parent .panel { max-width:640px; width:100%; margin:0 auto; background:#fff; border-radius:16px; padding:24px; box-shadow:0 2px 12px rgba(0,0,0,.1); color:#263238; font-size:16px; line-height:1.5; }
+  #parent h1 { font-size:22px; margin-bottom:4px; } #parent h2 { font-size:17px; margin:18px 0 8px; color:#455a64; }
+  #parent table { width:100%; border-collapse:collapse; font-size:14px; }
+  #parent td,#parent th { padding:6px 8px; border-bottom:1px solid #eceff1; text-align:left; }
+  #parent .close { margin-top:20px; width:100%; padding:14px; font-size:17px; border:none; border-radius:12px; background:#7c4dff; color:#fff; }
+  .tag { display:inline-block; padding:2px 10px; border-radius:12px; font-size:12px; font-weight:600; }
+  .tag.mastered { background:#c8e6c9; color:#1b5e20; } .tag.learning { background:#fff9c4; color:#f57f17; } .tag.new { background:#eceff1; color:#546e7a; }
+
+  /* ---------- start overlay ---------- */
+  #start { position:absolute; inset:0; z-index:300; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg,#7c4dff,#512da8); border:none; }
+  #start .rocket { font-size:min(40vw,220px); animation:pulse 1.6s ease-in-out infinite; }
+</style>
+</head>
+<body>
+
+<!-- tap-to-start (unlocks audio on iPad) -->
+<button id="start" aria-label="start"><span class="rocket">🚀</span></button>
+
+<!-- HOME WORLD -->
+<div id="home" class="screen active">
+  <div class="sun">☀️</div>
+  <div class="cloud" style="top:12%; animation-duration:60s;">☁️</div>
+  <div class="cloud" style="top:22%; animation-duration:85s; animation-delay:-30s;">☁️</div>
+  <div class="title-banner">🌈✨🌈</div>
+  <div class="world" id="worldgrid"></div>
+</div>
+
+<!-- ACTIVITY STAGE (rebuilt per activity) -->
+<div id="activity" class="screen">
+  <div class="cloud" style="top:8%; animation-duration:70s;">☁️</div>
+  <div class="stage" id="stage"></div>
+</div>
+
+<!-- CELEBRATION OVERLAY -->
+<div id="celebrate"><div class="burst" id="bursticon">🎉</div></div>
+
+<!-- PARENT SCREEN -->
+<div id="parent" class="screen"><div class="panel" id="parentpanel"></div></div>
+
+<!-- persistent chrome -->
+<button class="homebtn" id="homebtn" style="display:none;">🏠</button>
+<div id="starjar">🫙 <span id="starnum" style="font-weight:800; color:#f57f17;">0</span> ⭐</div>
+<button id="guide">🦊</button>
+<button id="gear">⚙️</button>
+
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
