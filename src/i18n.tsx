@@ -118,6 +118,21 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
 
   'practice.listen': { en: 'Listen', vi: 'Nghe' },
 
+  'ann.title': { en: 'Announcements', vi: 'Thông báo' },
+  'ann.new': { en: 'NEW', vi: 'MỚI' },
+  'ann.markRead': { en: 'Mark all as read', vi: 'Đánh dấu đã đọc' },
+  'ann.empty': { en: 'No announcements right now.', vi: 'Hiện chưa có thông báo.' },
+  'ann.center': { en: 'Whole center', vi: 'Toàn trung tâm' },
+  'ann.seeAll': { en: 'See all', vi: 'Xem tất cả' },
+  'ann.post': { en: 'Post announcement', vi: 'Đăng thông báo' },
+  'ann.compose': { en: 'New announcement', vi: 'Thông báo mới' },
+  'ann.audience': { en: 'Audience', vi: 'Gửi tới' },
+  'ann.bodyPh': { en: 'Write your message…', vi: 'Nội dung thông báo…' },
+  'ann.posted': { en: 'Posted ✓', vi: 'Đã đăng ✓' },
+  'ann.delete': { en: 'Delete', vi: 'Xóa' },
+  'ann.pinned': { en: 'Pinned', vi: 'Ghim' },
+  'ann.mine': { en: 'Your announcements', vi: 'Thông báo của bạn' },
+
   'parent.title': { en: 'Parent view', vi: 'Góc phụ huynh' },
   'parent.childProgress': { en: "'s progress", vi: ' — tiến bộ học tập' },
   'parent.readonly': { en: 'Read-only view. Contact the center for any questions.', vi: 'Chế độ chỉ xem. Mọi thắc mắc xin liên hệ trung tâm.' },

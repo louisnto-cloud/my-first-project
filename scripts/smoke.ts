@@ -73,11 +73,20 @@ for (const p of [0, 25, 60, 200, 500, 2000]) {
   check(info.pct >= 0 && info.pct <= 1, `level pct out of range at ${p}`);
 }
 
+// announcements: valid author, class target resolves, non-empty content
+check(db.announcements.length > 0, 'expected seeded announcements');
+for (const a of db.announcements) {
+  check(db.users.some((u) => u.id === a.authorId), `announcement from unknown author: ${a.id}`);
+  check(a.classId === null || db.classes.some((c) => c.id === a.classId), `announcement bad class: ${a.id}`);
+  check(!!a.title && !!a.body, `announcement empty content: ${a.id}`);
+}
+
 if (fail.length) {
   console.error('SMOKE FAILED:\n' + fail.map((f) => ` - ${f}`).join('\n'));
   process.exit(1);
 }
 console.log(
   `SMOKE OK — ${students.length} students, ${db.scores.length} scores, ${db.homework.length} homework, ` +
-    `${db.vocabLists.length} vocab lists, ${db.practice.length} practice events, ${db.attendance.length} attendance records`,
+    `${db.vocabLists.length} vocab lists, ${db.practice.length} practice events, ${db.attendance.length} attendance records, ` +
+    `${db.announcements.length} announcements`,
 );

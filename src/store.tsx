@@ -13,6 +13,7 @@ function loadDB(): DB {
       // Migrate databases saved before newer collections existed
       db.feedback ??= [];
       db.attendance ??= [];
+      db.announcements ??= [];
       return db;
     }
   } catch {

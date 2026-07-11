@@ -4,6 +4,7 @@ import { useI18n } from '../../i18n';
 import { Header, Pill } from '../../components/ui';
 import { AttendanceView, BadgesView, GradesView, HomeworkView, LevelCard, ScheduleView } from '../../components/views';
 import { FeedbackSection } from '../../components/Feedback';
+import { AnnouncementsFeed } from '../../components/Announcements';
 import { pointsOf, streakOf } from '../../lib';
 
 export default function ParentPage() {
@@ -48,6 +49,7 @@ export default function ParentPage() {
         </div>
         <p className="text-xs font-semibold text-slate-400">🔒 {t('parent.readonly')}</p>
 
+        <AnnouncementsFeed user={user} />
         <LevelCard studentId={child.id} />
         <GradesView studentId={child.id} />
         <AttendanceView studentId={child.id} />

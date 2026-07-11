@@ -86,6 +86,16 @@ export interface PracticeEvent {
   points: number;
 }
 
+export interface Announcement {
+  id: string;
+  authorId: string;
+  classId: string | null; // null = whole center
+  title: string;
+  body: string;
+  date: string; // YYYY-MM-DD
+  pinned?: boolean;
+}
+
 export type AttendanceStatus = 'present' | 'late' | 'absent';
 
 export interface Attendance {
@@ -115,4 +125,5 @@ export interface DB {
   practice: PracticeEvent[];
   feedback: Feedback[];
   attendance: Attendance[];
+  announcements: Announcement[];
 }

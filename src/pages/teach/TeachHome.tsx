@@ -3,6 +3,7 @@ import { useApp } from '../../store';
 import { useI18n } from '../../i18n';
 import { Header } from '../../components/ui';
 import { FeedbackInbox } from '../../components/Feedback';
+import { AnnouncementComposer } from '../../components/Announcements';
 import { attendanceRate, avgPct, studentsInClass } from '../../lib';
 
 export function TeachLayout() {
@@ -76,6 +77,9 @@ export function TeachHome() {
           );
         })}
       </div>
+
+      <h2 className="text-lg font-black">📣 {t('ann.title')}</h2>
+      <AnnouncementComposer user={user} />
 
       {isAdmin && <FeedbackInbox />}
 

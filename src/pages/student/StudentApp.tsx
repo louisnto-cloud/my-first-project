@@ -6,6 +6,7 @@ import { Empty, Header, Pill, scoreColor, TabBar } from '../../components/ui';
 import { AttendanceView, BadgesView, GradesView, HomeworkView, LeaderboardView, LevelCard, ScheduleView } from '../../components/views';
 import { FlashcardSession, QuizSession } from '../../components/Flashcards';
 import { FeedbackSection } from '../../components/Feedback';
+import { AnnouncementsFeed } from '../../components/Announcements';
 import { pointsOf, practicedToday, scoresOf, streakOf, todayISO } from '../../lib';
 import type { VocabList } from '../../types';
 
@@ -117,6 +118,8 @@ export function Dashboard() {
           )}
         </Link>
       </div>
+
+      <AnnouncementsFeed user={user} />
 
       <div className="card">
         <h3 className="mb-2 font-extrabold text-violet-700">📌 {t('dash.homeworkDue')}</h3>

@@ -302,6 +302,29 @@ export function buildSeed(): DB {
     }
   });
 
+  const announcements: DB['announcements'] = [
+    {
+      id: 'ann1', authorId: 't0', classId: null, date: daysAgo(2), pinned: true,
+      title: 'Nghỉ lễ Quốc khánh 2/9 / National Day holiday',
+      body: 'Trung tâm nghỉ ngày 2/9. Các lớp học lại bình thường từ 3/9. Chúc các em nghỉ lễ vui vẻ! / The center is closed on Sep 2. Classes resume as normal on Sep 3.',
+    },
+    {
+      id: 'ann2', authorId: 't0', classId: null, date: daysAgo(9),
+      title: 'Cuộc thi Spelling Bee tháng này / Spelling Bee this month',
+      body: 'Đăng ký với giáo viên chủ nhiệm trước thứ Sáu. Có phần thưởng hấp dẫn! / Sign up with your teacher before Friday. Great prizes await!',
+    },
+    {
+      id: 'ann3', authorId: 't2', classId: 'c4', date: daysAgo(1),
+      title: 'Teens B1 — bring your workbook',
+      body: 'Please bring Unit 6 workbook next lesson; we will review the environment vocabulary before the test.',
+    },
+    {
+      id: 'ann4', authorId: 't1', classId: 'c1', date: daysAgo(4),
+      title: 'Starters A — mini show & tell 🧸',
+      body: 'Mang theo đồ chơi yêu thích để giới thiệu bằng tiếng Anh nhé! / Bring your favourite toy to introduce in English!',
+    },
+  ];
+
   const feedback: DB['feedback'] = [
     {
       id: 'fb1', userId: 'p0', date: daysAgo(6), rating: 5,
@@ -313,5 +336,5 @@ export function buildSeed(): DB {
     },
   ];
 
-  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice, feedback, attendance };
+  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice, feedback, attendance, announcements };
 }
