@@ -86,6 +86,34 @@ export interface PracticeEvent {
   points: number;
 }
 
+export interface VocabProgress {
+  id: string;
+  studentId: string;
+  wordId: string;
+  box: number; // Leitner box 0..5 (5 = mastered)
+  lastReviewed: string; // YYYY-MM-DD
+}
+
+export interface Announcement {
+  id: string;
+  authorId: string;
+  classId: string | null; // null = whole center
+  title: string;
+  body: string;
+  date: string; // YYYY-MM-DD
+  pinned?: boolean;
+}
+
+export type AttendanceStatus = 'present' | 'late' | 'absent';
+
+export interface Attendance {
+  id: string;
+  classId: string;
+  studentId: string;
+  date: string; // YYYY-MM-DD (a class session date)
+  status: AttendanceStatus;
+}
+
 export interface Feedback {
   id: string;
   userId: string;
@@ -104,4 +132,7 @@ export interface DB {
   vocabLists: VocabList[];
   practice: PracticeEvent[];
   feedback: Feedback[];
+  attendance: Attendance[];
+  announcements: Announcement[];
+  vocabProgress: VocabProgress[];
 }

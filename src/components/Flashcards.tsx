@@ -1,8 +1,27 @@
 import { useMemo, useState } from 'react';
 import { useApp } from '../store';
 import { useI18n } from '../i18n';
-import { addPractice } from '../lib';
+import { addPractice, recordReview, speak } from '../lib';
 import type { VocabList, VocabWord } from '../types';
+
+function SpeakButton({ text, tone = 'light' }: { text: string; tone?: 'light' | 'dark' }) {
+  const { t } = useI18n();
+  return (
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        speak(text);
+      }}
+      title={t('practice.listen')}
+      aria-label={t('practice.listen')}
+      className={`inline-flex h-9 w-9 items-center justify-center rounded-full text-lg transition active:scale-90 ${
+        tone === 'dark' ? 'bg-white/20 hover:bg-white/30' : 'bg-violet-100 hover:bg-violet-200'
+      }`}
+    >
+      🔊
+    </button>
+  );
+}
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -23,6 +42,8 @@ export function FlashcardSession({ list, studentId, onExit }: { list: VocabList;
   const [finished, setFinished] = useState(false);
 
   const answer = (knew: boolean) => {
+    const wordId = cards[idx].id;
+    mutate((d) => recordReview(d, studentId, wordId, knew));
     const k = known + (knew ? 1 : 0);
     if (idx + 1 >= cards.length) {
       setKnown(k);
@@ -55,22 +76,27 @@ export function FlashcardSession({ list, studentId, onExit }: { list: VocabList;
           {idx + 1} / {cards.length}
         </span>
       </div>
-      <button
-        onClick={() => setFlipped(!flipped)}
-        className={`card flex min-h-[220px] w-full flex-col items-center justify-center gap-2 text-center transition ${flipped ? 'border-violet-300 bg-violet-600 text-white' : ''}`}
-      >
-        {flipped ? (
-          <>
-            <div className="text-2xl font-black">{card.meaningVi}</div>
-            <p className="text-sm font-semibold text-violet-100">“{card.example}”</p>
-          </>
-        ) : (
-          <>
-            <div className="text-3xl font-black text-violet-700">{card.term}</div>
-            <div className="text-xs font-bold text-slate-300">{t('practice.tapToFlip')}</div>
-          </>
-        )}
-      </button>
+      <div className="relative">
+        <div className="absolute right-3 top-3 z-10">
+          <SpeakButton text={card.term} tone={flipped ? 'dark' : 'light'} />
+        </div>
+        <button
+          onClick={() => setFlipped(!flipped)}
+          className={`card flex min-h-[220px] w-full flex-col items-center justify-center gap-2 text-center transition ${flipped ? 'border-violet-300 bg-violet-600 text-white' : ''}`}
+        >
+          {flipped ? (
+            <>
+              <div className="text-2xl font-black">{card.meaningVi}</div>
+              <p className="text-sm font-semibold text-violet-100">“{card.example}”</p>
+            </>
+          ) : (
+            <>
+              <div className="text-3xl font-black text-violet-700">{card.term}</div>
+              <div className="text-xs font-bold text-slate-300">{t('practice.tapToFlip')}</div>
+            </>
+          )}
+        </button>
+      </div>
       <div className="grid grid-cols-2 gap-3">
         <button onClick={() => answer(false)} className="btn bg-amber-100 text-amber-700 hover:bg-amber-200">
           {t('practice.dontKnow')}
@@ -110,6 +136,7 @@ export function QuizSession({ list, studentId, onExit }: { list: VocabList; stud
     if (picked) return;
     setPicked(opt);
     const ok = opt === q.word.meaningVi;
+    mutate((d) => recordReview(d, studentId, q.word.id, ok));
     const c = correct + (ok ? 1 : 0);
     setCorrect(c);
     setTimeout(() => {
@@ -144,7 +171,10 @@ export function QuizSession({ list, studentId, onExit }: { list: VocabList; stud
       </div>
       <div className="card text-center">
         <div className="text-xs font-bold text-slate-400">{t('practice.whichMeaning')}</div>
-        <div className="mt-2 text-3xl font-black text-violet-700">{q.word.term}</div>
+        <div className="mt-2 flex items-center justify-center gap-2">
+          <div className="text-3xl font-black text-violet-700">{q.word.term}</div>
+          <SpeakButton text={q.word.term} />
+        </div>
       </div>
       <div className="space-y-2">
         {q.options.map((opt) => {

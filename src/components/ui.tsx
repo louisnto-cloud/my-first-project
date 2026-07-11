@@ -14,6 +14,8 @@ export function LangToggle() {
         <button
           key={l}
           onClick={() => setLang(l)}
+          aria-label={l === 'vi' ? 'Tiếng Việt' : 'English'}
+          aria-pressed={lang === l}
           className={`rounded-full px-2.5 py-1 uppercase transition ${lang === l ? 'bg-violet-600 text-white shadow' : 'text-violet-500'}`}
         >
           {l}
@@ -39,7 +41,12 @@ export function Header({ subtitle }: { subtitle?: string }) {
         <div className="flex items-center gap-2">
           <LangToggle />
           {user && (
-            <button onClick={logout} title={t('common.logout')} className="flex h-9 w-9 items-center justify-center rounded-full bg-violet-100 text-lg hover:bg-violet-200">
+            <button
+              onClick={logout}
+              title={t('common.logout')}
+              aria-label={t('common.logout')}
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-violet-100 text-lg hover:bg-violet-200"
+            >
               {user.avatar}
             </button>
           )}

@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 
 export type Lang = 'vi' | 'en';
 
@@ -54,6 +54,12 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
   'dash.streakSafe': { en: 'Streak safe for today. See you tomorrow!', vi: 'Hôm nay đã luyện tập rồi. Hẹn mai nhé!' },
   'dash.myBadges': { en: 'My badges', vi: 'Huy hiệu của tôi' },
   'dash.leaderboard': { en: 'Class leaderboard', vi: 'Bảng xếp hạng lớp' },
+  'dash.tip': {
+    en: 'Tip: practice a little every day to keep your 🔥 streak and level up!',
+    vi: 'Mẹo: luyện tập một chút mỗi ngày để giữ chuỗi 🔥 và lên cấp nhé!',
+  },
+  'common.gotIt': { en: 'Got it', vi: 'Đã hiểu' },
+  'common.dismiss': { en: 'Dismiss', vi: 'Đóng' },
 
   'grades.title': { en: 'My grades', vi: 'Điểm của tôi' },
   'grades.progress': { en: 'Progress over time', vi: 'Tiến bộ theo thời gian' },
@@ -93,9 +99,51 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
   'practice.earned': { en: 'points earned', vi: 'điểm thưởng nhận được' },
   'practice.again': { en: 'Practice again', vi: 'Luyện tập tiếp' },
   'practice.whichMeaning': { en: 'What does this word mean?', vi: 'Từ này có nghĩa là gì?' },
+  'practice.reviewDue': { en: 'Review due words', vi: 'Ôn từ cần học' },
+  'practice.due': { en: 'due', vi: 'cần ôn' },
+  'practice.reviewHint': { en: 'A smart mix of your weakest words across all lists', vi: 'Tổng hợp thông minh những từ bạn còn yếu' },
+  'practice.mastery': { en: 'Mastery', vi: 'Độ thành thạo' },
+  'practice.mastered': { en: 'mastered', vi: 'đã thuộc' },
+  'practice.allMastered': { en: 'All mastered! 🌟', vi: 'Đã thuộc hết! 🌟' },
 
   'badges.title': { en: 'Badges', vi: 'Huy hiệu' },
   'badges.locked': { en: 'Locked', vi: 'Chưa mở' },
+
+  'level.label': { en: 'Level', vi: 'Cấp độ' },
+  'level.toNext': { en: 'XP to next level', vi: 'điểm để lên cấp' },
+  'level.max': { en: 'Top tier reached! 👑', vi: 'Đã đạt cấp cao nhất! 👑' },
+
+  'attend.title': { en: 'Attendance', vi: 'Chuyên cần' },
+  'attend.rate': { en: 'Attendance rate', vi: 'Tỷ lệ chuyên cần' },
+  'attend.present': { en: 'Present', vi: 'Có mặt' },
+  'attend.late': { en: 'Late', vi: 'Đi trễ' },
+  'attend.absent': { en: 'Absent', vi: 'Vắng' },
+  'attend.sessions': { en: 'sessions', vi: 'buổi' },
+  'attend.recent': { en: 'Recent sessions', vi: 'Các buổi gần đây' },
+  'attend.none': { en: 'No attendance recorded yet.', vi: 'Chưa có dữ liệu điểm danh.' },
+  'attend.perfect': { en: 'Perfect attendance! 🌟', vi: 'Chuyên cần tuyệt đối! 🌟' },
+  'teach.attendance': { en: 'Attendance', vi: 'Điểm danh' },
+  'teach.attRate': { en: 'Attendance', vi: 'Chuyên cần' },
+  'teach.markSession': { en: 'Mark session', vi: 'Điểm danh buổi' },
+  'teach.attSaved': { en: 'Attendance saved ✓', vi: 'Đã lưu điểm danh ✓' },
+  'teach.allPresent': { en: 'All present', vi: 'Tất cả có mặt' },
+
+  'practice.listen': { en: 'Listen', vi: 'Nghe' },
+
+  'ann.title': { en: 'Announcements', vi: 'Thông báo' },
+  'ann.new': { en: 'NEW', vi: 'MỚI' },
+  'ann.markRead': { en: 'Mark all as read', vi: 'Đánh dấu đã đọc' },
+  'ann.empty': { en: 'No announcements right now.', vi: 'Hiện chưa có thông báo.' },
+  'ann.center': { en: 'Whole center', vi: 'Toàn trung tâm' },
+  'ann.seeAll': { en: 'See all', vi: 'Xem tất cả' },
+  'ann.post': { en: 'Post announcement', vi: 'Đăng thông báo' },
+  'ann.compose': { en: 'New announcement', vi: 'Thông báo mới' },
+  'ann.audience': { en: 'Audience', vi: 'Gửi tới' },
+  'ann.bodyPh': { en: 'Write your message…', vi: 'Nội dung thông báo…' },
+  'ann.posted': { en: 'Posted ✓', vi: 'Đã đăng ✓' },
+  'ann.delete': { en: 'Delete', vi: 'Xóa' },
+  'ann.pinned': { en: 'Pinned', vi: 'Ghim' },
+  'ann.mine': { en: 'Your announcements', vi: 'Thông báo của bạn' },
 
   'parent.title': { en: 'Parent view', vi: 'Góc phụ huynh' },
   'parent.childProgress': { en: "'s progress", vi: ' — tiến bộ học tập' },
@@ -160,6 +208,12 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     localStorage.setItem(LANG_KEY, l);
     setLangState(l);
   }, []);
+
+  // Keep the document language in sync so screen readers, the browser's
+  // speech synthesis and hyphenation all match the chosen interface language.
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   const t = useCallback(
     (key: string) => {

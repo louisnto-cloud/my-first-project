@@ -256,6 +256,18 @@ export function buildSeed(): DB {
     });
   });
 
+  // Vocabulary mastery: give the demo student varied Leitner boxes so the
+  // mastery meters and "review due" flow have something to show.
+  const vocabProgress: DB['vocabProgress'] = [];
+  vocabLists
+    .filter((v) => v.classId === 'c4')
+    .forEach((list) =>
+      list.words.forEach((w) => {
+        const box = clamp(Math.round(2 + r() * 3), 0, 5);
+        vocabProgress.push({ id: `vp_s0_${w.id}`, studentId: 's0', wordId: w.id, box, lastReviewed: daysAgo(Math.floor(r() * 7)) });
+      }),
+    );
+
   const practice: DB['practice'] = [];
   students.forEach((st) => {
     const sessions = Math.floor(r() * 10);
@@ -280,6 +292,51 @@ export function buildSeed(): DB {
     minhLatest.comment = COMMENTS[0];
   }
 
+  // Attendance: replay the last 5 weeks of each class's scheduled sessions.
+  const attendance: DB['attendance'] = [];
+  const scheduleWeekdays = new Map(classes.map((c) => [c.id, new Set(c.schedule.map((s) => s.weekday))]));
+  classes.forEach((cls) => {
+    const weekdays = scheduleWeekdays.get(cls.id)!;
+    const roster = students.filter((s) => s.classIds.includes(cls.id));
+    for (let offset = 1; offset <= 35; offset++) {
+      const d = new Date();
+      d.setDate(d.getDate() - offset);
+      if (!weekdays.has(d.getDay())) continue;
+      const date = daysAgo(offset);
+      roster.forEach((st) => {
+        const roll = r();
+        // The demo student is a keener; everyone else is mostly reliable.
+        const absentP = st.id === 's0' ? 0.03 : 0.08;
+        const lateP = st.id === 's0' ? 0.04 : 0.1;
+        const status = roll < absentP ? 'absent' : roll < absentP + lateP ? 'late' : 'present';
+        attendance.push({ id: `att_${cls.id}_${st.id}_${offset}`, classId: cls.id, studentId: st.id, date, status });
+      });
+    }
+  });
+
+  const announcements: DB['announcements'] = [
+    {
+      id: 'ann1', authorId: 't0', classId: null, date: daysAgo(2), pinned: true,
+      title: 'Nghỉ lễ Quốc khánh 2/9 / National Day holiday',
+      body: 'Trung tâm nghỉ ngày 2/9. Các lớp học lại bình thường từ 3/9. Chúc các em nghỉ lễ vui vẻ! / The center is closed on Sep 2. Classes resume as normal on Sep 3.',
+    },
+    {
+      id: 'ann2', authorId: 't0', classId: null, date: daysAgo(9),
+      title: 'Cuộc thi Spelling Bee tháng này / Spelling Bee this month',
+      body: 'Đăng ký với giáo viên chủ nhiệm trước thứ Sáu. Có phần thưởng hấp dẫn! / Sign up with your teacher before Friday. Great prizes await!',
+    },
+    {
+      id: 'ann3', authorId: 't2', classId: 'c4', date: daysAgo(1),
+      title: 'Teens B1 — bring your workbook',
+      body: 'Please bring Unit 6 workbook next lesson; we will review the environment vocabulary before the test.',
+    },
+    {
+      id: 'ann4', authorId: 't1', classId: 'c1', date: daysAgo(4),
+      title: 'Starters A — mini show & tell 🧸',
+      body: 'Mang theo đồ chơi yêu thích để giới thiệu bằng tiếng Anh nhé! / Bring your favourite toy to introduce in English!',
+    },
+  ];
+
   const feedback: DB['feedback'] = [
     {
       id: 'fb1', userId: 'p0', date: daysAgo(6), rating: 5,
@@ -291,5 +348,5 @@ export function buildSeed(): DB {
     },
   ];
 
-  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice, feedback };
+  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice, feedback, attendance, announcements, vocabProgress };
 }

@@ -12,6 +12,9 @@ function loadDB(): DB {
       const db = JSON.parse(raw) as DB;
       // Migrate databases saved before newer collections existed
       db.feedback ??= [];
+      db.attendance ??= [];
+      db.announcements ??= [];
+      db.vocabProgress ??= [];
       return db;
     }
   } catch {
