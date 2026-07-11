@@ -245,6 +245,18 @@ describe('grading queue and rubric', () => {
 
     // David cannot grade Lan's class: authorization fires before any state check.
     expect((await req('POST', `/submissions/${sid}/grade`, david, { rubric: { accuracy: 0, vocabulary: 0, structure: 0 } })).statusCode).toBe(403);
+
+    // The persisted overall now powers teacher stats and the student's own view.
+    const teacherList = (await req('GET', '/classes/c1/assignments', lan)).json() as { id: string; submittedCount: number; avgOverall: number | null }[];
+    const row = teacherList.find((a) => a.id === aid)!;
+    expect(row.submittedCount).toBe(1);
+    expect(row.avgOverall).toBe(93);
+
+    const myList = (await req('GET', '/classes/c1/assignments', minh)).json() as { id: string; myStatus: string; myOverall: number | null; myComment: string | null }[];
+    const mine = myList.find((a) => a.id === aid)!;
+    expect(mine.myStatus).toBe('graded');
+    expect(mine.myOverall).toBeCloseTo(93.3, 0);
+    expect(mine.myComment).toBe('Lovely sentences!');
   });
 });
 

@@ -333,10 +333,14 @@ export function registerLearningRoutes(app: FastifyInstance, db: DB): void {
       );
     }
     if (actor.role === 'student' && (await isEnrolled(db, id, actor.id))) {
+      // Students also see their own result + the teacher's comment once
+      // graded — feedback shouldn't vanish after the submit screen.
       return many(
         db,
         `SELECT a.id, a.title, a.instructions, a.due_at AS "dueAt", a.attempts_allowed AS "attemptsAllowed",
-                (SELECT s.status FROM submissions s WHERE s.assignment_id = a.id AND s.student_id = $2 ORDER BY s.attempt DESC LIMIT 1) AS "myStatus"
+                (SELECT s.status FROM submissions s WHERE s.assignment_id = a.id AND s.student_id = $2 ORDER BY s.attempt DESC LIMIT 1) AS "myStatus",
+                (SELECT s.overall FROM submissions s WHERE s.assignment_id = a.id AND s.student_id = $2 AND s.status = 'graded' ORDER BY s.attempt DESC LIMIT 1) AS "myOverall",
+                (SELECT s.rubric->>'comment' FROM submissions s WHERE s.assignment_id = a.id AND s.student_id = $2 AND s.status = 'graded' ORDER BY s.attempt DESC LIMIT 1) AS "myComment"
            FROM assignments a WHERE a.class_id = $1 AND a.status IN ('published', 'locked') ORDER BY a.due_at NULLS LAST`,
         [id, actor.id],
       );
@@ -466,8 +470,12 @@ export function registerLearningRoutes(app: FastifyInstance, db: DB): void {
 
     await db.query(
       `UPDATE submissions SET status = $2, submitted_at = $3, late = $4, auto_points = $5, auto_possible = $6,
-              manual_possible = $7, skill_scores = $8 WHERE id = $1`,
-      [id, status, now.toISOString(), late, g.autoPoints, g.autoPossible, g.manualPossible, JSON.stringify(g.skillScores)],
+              manual_possible = $7, skill_scores = $8, overall = $9 WHERE id = $1`,
+      [
+        id, status, now.toISOString(), late, g.autoPoints, g.autoPossible, g.manualPossible, JSON.stringify(g.skillScores),
+        // Persisted only when fully auto-graded; manual review sets it later.
+        g.needsReview ? null : weightedOverall(g.skillScores),
+      ],
     );
     await recordMastery(db, actor.id, g.skillScores, now);
 
@@ -536,8 +544,8 @@ export function registerLearningRoutes(app: FastifyInstance, db: DB): void {
       s.possible += q.points;
     }
     await db.query(
-      `UPDATE submissions SET status = 'graded', manual_points = $2, rubric = $3, graded_by = $4, graded_at = now(), skill_scores = $5 WHERE id = $1`,
-      [id, manualPoints, JSON.stringify({ ...r, comment: body.data.comment ?? '' }), actor.id, JSON.stringify(skillScores)],
+      `UPDATE submissions SET status = 'graded', manual_points = $2, rubric = $3, graded_by = $4, graded_at = now(), skill_scores = $5, overall = $6 WHERE id = $1`,
+      [id, manualPoints, JSON.stringify({ ...r, comment: body.data.comment ?? '' }), actor.id, JSON.stringify(skillScores), weightedOverall(skillScores)],
     );
     await recordMastery(db, sub.student_id, skillScores, new Date());
     return { ok: true, overall: weightedOverall(skillScores) };

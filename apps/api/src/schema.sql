@@ -287,11 +287,14 @@ CREATE TABLE IF NOT EXISTS submissions (
   manual_points REAL,
   manual_possible REAL,
   skill_scores JSONB,    -- {grammar: {earned, possible}, ...}
+  overall REAL,          -- weighted 0-100, persisted when fully graded
   rubric JSONB,          -- teacher taps: accuracy/vocabulary/structure + comment
   graded_by TEXT,
   graded_at TIMESTAMPTZ,
   UNIQUE (assignment_id, student_id, attempt)
 );
+-- Idempotent upgrade for databases created before the overall column.
+ALTER TABLE submissions ADD COLUMN IF NOT EXISTS overall REAL;
 
 -- Per-skill mastery (broad skills now; knowledge-graph mastery in Phase 6).
 CREATE TABLE IF NOT EXISTS mastery (

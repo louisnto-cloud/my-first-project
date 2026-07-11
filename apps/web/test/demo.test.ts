@@ -409,6 +409,45 @@ describe('demo engine — kiosk (front desk)', () => {
   });
 });
 
+describe('demo engine — hardening regressions', () => {
+  it('rotate-code is teacher-of-student/manager only (response contains the new code)', async () => {
+    const bao = await loginCode('UP1482');
+    expect((await call('POST', '/students/s_UP1739/rotate-code', {}, bao!)).status).toBe(403); // classmate cannot take over
+    const ly = await loginCode('GV0006'); // does not teach Up 1
+    expect((await call('POST', '/students/s_UP1739/rotate-code', {}, ly!)).status).toBe(403);
+    const ha = await loginCode('GV0004');
+    expect((await call('POST', '/students/s_UP1739/rotate-code', {}, ha!)).status).toBe(200);
+  });
+
+  it('a parent cannot read another family via digest; students cannot list the question bank', async () => {
+    const parent = (await call('POST', '/auth/login', { email: 'phuhuynh@etop.vn', password: 'x' })).json as { token: string };
+    expect((await call('GET', '/parents/digest?childId=s_UP2614', undefined, parent.token)).status).toBe(403);
+    const bao = await loginCode('UP1482');
+    expect((await call('GET', '/questions', undefined, bao!)).status).toBe(403);
+  });
+
+  it('replaying a finished assignment does not duplicate submissions or change stats', async () => {
+    const bao = await loginCode('UP1482');
+    const s1 = (await call('POST', '/assignments/a_demo1/start', {}, bao!)).json as { submissionId: string };
+    await call('PATCH', `/submissions/${s1.submissionId}/answers`, { answers: { q1: 'am', q3: 'Under the table', q4: 'Good morning, teacher!', q5: ['My', 'name', 'is', 'Mai'] } }, bao!);
+    const first = (await call('POST', `/submissions/${s1.submissionId}/submit`, {}, bao!)).json as { overall: number };
+    expect(first.overall).toBe(100);
+
+    // Re-open: same submission, idempotent submit, same score.
+    const s2 = (await call('POST', '/assignments/a_demo1/start', {}, bao!)).json as { submissionId: string; resumed: boolean };
+    expect(s2.submissionId).toBe(s1.submissionId);
+    await call('PATCH', `/submissions/${s2.submissionId}/answers`, { answers: { q1: 'is' } }, bao!); // ignored
+    const again = (await call('POST', `/submissions/${s2.submissionId}/submit`, {}, bao!)).json as { overall: number };
+    expect(again.overall).toBe(100);
+
+    const ha = await loginCode('GV0004');
+    const list = (await call('GET', '/classes/up1/assignments', undefined, ha!)).json as { id: string; submittedCount: number; rosterCount: number }[];
+    const row = list.find((a) => a.id === 'a_demo1')!;
+    expect(row.submittedCount).toBe(3); // 2 seeded + bao, never more than the roster
+    expect(row.submittedCount).toBeLessThanOrEqual(row.rosterCount);
+  });
+});
+
 describe('demo engine — practice', () => {
   it('practice events add points and a streak', async () => {
     const bao = await loginCode('UP1482');

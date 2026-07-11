@@ -126,7 +126,7 @@ function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: strin
   const [view, setView] = useState<'work' | 'practice'>('work');
   const [classes, setClasses] = useState<ClassInfo[]>([]);
   const [ach, setAch] = useState<{ points: number; pointsToday?: number; streak: number; badges?: { id: string; earned: boolean }[] } | null>(null);
-  const [assignments, setAssignments] = useState<Record<string, { id: string; title: string; dueAt: string | null; myStatus: string | null }[]>>({});
+  const [assignments, setAssignments] = useState<Record<string, { id: string; title: string; dueAt: string | null; myStatus: string | null; myOverall?: number | null; myComment?: string | null }[]>>({});
   const [playing, setPlaying] = useState<string | null>(null);
   const [code, setCode] = useState('');
   const [joinMsg, setJoinMsg] = useState('');
@@ -282,9 +282,12 @@ function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: strin
                       <span className="min-w-0 flex-1">
                         <span className="block truncate font-extrabold text-ink">{a.title}</span>
                         {due && <span className={`chip mt-0.5 ${due.tone}`}>{due.text}</span>}
+                        {a.myStatus === 'graded' && a.myComment && (
+                          <span className="mt-0.5 block truncate text-xs font-semibold italic text-emerald-600">💬 {a.myComment}</span>
+                        )}
                       </span>
                       <span className={`chip shrink-0 ${done ? 'bg-emerald-100 text-emerald-600' : 'bg-violet-600 text-white'}`}>
-                        {a.myStatus === 'graded' ? t('graded') : a.myStatus === 'submitted' ? t('submitted') : a.myStatus === 'in_progress' ? t('continue') : t('start')}
+                        {a.myStatus === 'graded' ? (a.myOverall != null ? `${Math.round(a.myOverall)}/100` : t('graded')) : a.myStatus === 'submitted' ? t('submitted') : a.myStatus === 'in_progress' ? t('continue') : t('start')}
                       </span>
                     </button>
                   );
@@ -800,7 +803,10 @@ function Kiosk({ me, t }: { me: Me; t: (k: string) => string }) {
     if (q.length === 0) return;
     try {
       await api('POST', '/kiosk/sync', { siteId, events: q });
-      setQueue([]);
+      // Remove only what was sent — taps made while the sync was in
+      // flight must survive for the next flush.
+      const sent = new Set(q.map((e) => e.clientEventId));
+      setQueue(getQueue().filter((e) => !sent.has(e.clientEventId)));
       setOnline(true);
       void load();
     } catch {

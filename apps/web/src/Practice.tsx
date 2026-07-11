@@ -147,8 +147,8 @@ function LessonPlayer({ lesson, lang, onExit }: { lesson: Lesson; lang: 'vi' | '
               ))}
             </div>
             <button
-              disabled={order.length !== ex.words.length}
-              onClick={() => answer(order.map((i) => ex.words[i]).join(' ') === ex.answer)}
+              disabled={order.length !== ex.words.length || picked !== null}
+              onClick={() => { setPicked('checked'); answer(order.map((i) => ex.words[i]).join(' ') === ex.answer); }}
               className="btn-fun w-full disabled:opacity-40"
             >
               {lang === 'vi' ? 'Kiểm tra' : 'Check'}

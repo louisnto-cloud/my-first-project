@@ -52,6 +52,8 @@ interface DSubmission {
   status: 'in_progress' | 'submitted' | 'graded';
   overall: number | null;
   pendingReview: boolean;
+  comment?: string; // teacher's rubric comment
+  rubricFrac?: number; // 0-1 rubric fraction for the writing question(s)
 }
 interface DPractice {
   studentId: string;
@@ -110,7 +112,7 @@ interface DDB {
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v15';
+const KEY = 'etop-demo-db-v16';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -130,7 +132,10 @@ const rnd = () => {
   return rngState / 4294967296;
 };
 const uid = (p: string) => `${p}_${Math.floor(rnd() * 1e9).toString(36)}_${Date.now().toString(36)}`;
-const today = () => new Date().toISOString().slice(0, 10);
+// LOCAL calendar date (not UTC): kiosk taps and attendance dots must land
+// on the day the user experiences — Vietnam is UTC+7.
+const localDate = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const today = () => localDate(new Date());
 
 function seed(): DDB {
   const teachers: [id: string, name: string, code: string][] = [
@@ -275,13 +280,14 @@ function seed(): DDB {
   };
   // A week of attendance history for the demo child (Up 1 meets Mon-Wed):
   // present on class days except one absence, so the week view is honest.
+  // Local dates throughout, so the dots label the right weekday.
   for (let back = 6; back >= 1; back--) {
     const d = new Date(Date.now() - back * 86_400_000);
     const dow = d.getDay();
     if ([1, 2, 3].includes(dow) && back !== 2) {
       const at = new Date(d);
       at.setHours(17, 28, 0, 0);
-      db.attendance.push({ studentId: 's_UP1482', date: d.toISOString().slice(0, 10), checkInAt: at.toISOString(), checkOutAt: null, releasedTo: null });
+      db.attendance.push({ studentId: 's_UP1482', date: localDate(d), checkInAt: at.toISOString(), checkOutAt: null, releasedTo: null });
     }
   }
   return db;
@@ -542,10 +548,15 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
       if (me.role === 'student') {
         if (!me.classIds.includes(c.id)) return err(403, 'forbidden');
         return ok(
-          db.assignments.filter((a) => a.classId === c.id && a.status === 'published').map((a) => ({
-            id: a.id, title: a.title, dueAt: a.dueAt,
-            myStatus: db.submissions.find((s) => s.assignmentId === a.id && s.studentId === me.id)?.status ?? null,
-          })),
+          db.assignments.filter((a) => a.classId === c.id && a.status === 'published').map((a) => {
+            const sub = db.submissions.find((s) => s.assignmentId === a.id && s.studentId === me.id);
+            return {
+              id: a.id, title: a.title, dueAt: a.dueAt,
+              myStatus: sub?.status ?? null,
+              myOverall: sub?.status === 'graded' ? sub.overall : null,
+              myComment: sub?.status === 'graded' ? sub.comment ?? null : null,
+            };
+          }),
         );
       }
       if (!canTeachClass(actor, classRef(c))) return err(403, 'forbidden');
@@ -582,15 +593,17 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     return ok(
       students.map((stu) => {
         const agg: Partial<Record<SkillKey, SkillScore>> = {};
+        const seenAssignments = new Set<string>();
         for (const s of db.submissions.filter((x) => x.studentId === stu.id && x.status === 'graded')) {
           const a = db.assignments.find((x) => x.id === s.assignmentId);
-          if (!a || a.classId !== c.id) continue;
+          if (!a || a.classId !== c.id || seenAssignments.has(a.id)) continue; // one attempt per assignment
+          seenAssignments.add(a.id);
           for (const qid of a.questionIds) {
             const qq = db.questions.find((x) => x.id === qid)!;
             const g = grade(qq, s.answers[qid]);
             const t = (agg[qq.skill] ??= { earned: 0, possible: 0 });
             t.possible += 1;
-            t.earned += g === null ? (s.overall ?? 0) / 100 : g; // write: rubric-scaled
+            t.earned += g === null ? s.rubricFrac ?? 0 : g; // write: the rubric fraction, not the whole-paper overall
           }
         }
         return { studentId: stu.id, name: stu.name, overall: weightedOverall(agg), skills: agg };
@@ -669,6 +682,10 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
   if (seg[0] === 'students' && seg[2] === 'rotate-code' && method === 'POST') {
     const stu = db.users.find((u) => u.id === seg[1] && u.role === 'student');
     if (!stu) return err(404, 'not_found');
+    // Only the child's teacher or a manager may rotate — the response
+    // contains the new login code (account takeover otherwise).
+    const teaches = me.role === 'tutor' && stu.classIds.some((cid) => me.classIds.includes(cid));
+    if (!teaches && !isAdmin) return err(403, 'forbidden');
     let code: string;
     do { code = `HV${String(Math.floor(rnd() * 9000) + 1000)}`; } while (db.users.some((u) => u.code === code));
     stu.code = code;
@@ -677,6 +694,7 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
   }
 
   if (rawPath === '/questions' && method === 'GET') {
+    if (!(me.role === 'tutor' || isAdmin)) return err(403, 'forbidden'); // bank is teacher material
     return ok(db.questions.map((qq) => ({ id: qq.id, type: qq.type, skill: qq.skill, prompt: qq.prompt, unit: qq.unit })));
   }
 
@@ -709,17 +727,20 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
   if (seg[0] === 'assignments' && seg[2] === 'start' && method === 'POST') {
     const a = db.assignments.find((x) => x.id === seg[1]);
     if (!a || me.role !== 'student' || a.status !== 'published' || !me.classIds.includes(a.classId)) return err(403, 'forbidden');
-    let s = db.submissions.find((x) => x.assignmentId === a.id && x.studentId === me.id && x.status === 'in_progress');
+    // One submission per (assignment, student): reopening a finished paper
+    // resumes it instead of minting duplicates that inflate class stats.
+    let s = db.submissions.find((x) => x.assignmentId === a.id && x.studentId === me.id);
     if (!s) {
       s = { id: uid('sub'), assignmentId: a.id, studentId: me.id, answers: {}, status: 'in_progress', overall: null, pendingReview: false };
       db.submissions.push(s);
       save(db);
     }
-    return ok({ submissionId: s.id, resumed: false });
+    return ok({ submissionId: s.id, resumed: s.status !== 'in_progress' });
   }
   if (seg[0] === 'submissions' && seg[2] === 'answers' && method === 'PATCH') {
     const s = db.submissions.find((x) => x.id === seg[1] && x.studentId === me.id);
     if (!s) return err(404, 'not_found');
+    if (s.status !== 'in_progress') return ok({ ok: true }); // finished paper: edits are ignored
     s.answers = { ...s.answers, ...((b.answers as object) ?? {}) };
     save(db);
     return ok({ ok: true });
@@ -727,6 +748,10 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
   if (seg[0] === 'submissions' && seg[2] === 'submit' && method === 'POST') {
     const s = db.submissions.find((x) => x.id === seg[1] && x.studentId === me.id);
     if (!s) return err(404, 'not_found');
+    // Idempotent: resubmitting a finished paper just returns the result.
+    if (s.status !== 'in_progress') {
+      return ok({ status: s.status, late: false, ...(s.pendingReview ? {} : { overall: s.overall }), pendingReview: s.pendingReview });
+    }
     const a = db.assignments.find((x) => x.id === s.assignmentId)!;
     let earned = 0;
     let possible = 0;
@@ -800,6 +825,8 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     s.overall = possible ? Math.round((earned / possible) * 1000) / 10 : 0;
     s.status = 'graded';
     s.pendingReview = false;
+    s.comment = String(b.comment ?? '').trim();
+    s.rubricFrac = rubricFrac;
     save(db);
     return ok({ ok: true, overall: s.overall });
   }
@@ -925,6 +952,7 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     if (me.role !== 'parent') return err(403, 'forbidden');
     // Live attendance: what the front desk taps shows up here immediately.
     const childId = (q.childId as string) || me.childIds[0];
+    if (!me.childIds.includes(childId)) return err(403, 'forbidden');
     const att = db.attendance.find((x) => x.studentId === childId && x.date === today()) ?? null;
     const childPts = db.practice.filter((p) => p.studentId === childId && p.date === today()).reduce((s, p) => s + p.points, 0);
     return ok({
@@ -947,7 +975,7 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     if (!me.childIds.includes(childId)) return err(403, 'forbidden');
     return ok(
       Array.from({ length: 7 }, (_, i) => {
-        const d = new Date(Date.now() - (6 - i) * 86_400_000).toISOString().slice(0, 10);
+        const d = localDate(new Date(Date.now() - (6 - i) * 86_400_000));
         return { date: d, attended: db.attendance.some((a) => a.studentId === childId && a.date === d && a.checkInAt) };
       }),
     );
