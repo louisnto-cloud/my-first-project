@@ -224,6 +224,26 @@ describe('demo engine — writing & the grading queue', () => {
   });
 });
 
+describe('demo engine — announcements', () => {
+  it('scoping: center posts reach everyone, class posts stay in class; teachers cannot go center-wide', async () => {
+    const bao = await loginCode('UP1482'); // Up 1
+    const mine = (await call('GET', '/announcements', undefined, bao!)).json as { title: string }[];
+    expect(mine.map((a) => a.title)).toContain('📣 Nghỉ lễ Quốc khánh 2/9');
+    expect(mine.map((a) => a.title)).toContain('Tuần này học Unit 2 🎈');
+
+    const long = await loginCode('UP3171'); // Up 3
+    const theirs = (await call('GET', '/announcements', undefined, long!)).json as { title: string }[];
+    expect(theirs.map((a) => a.title)).toContain('📣 Nghỉ lễ Quốc khánh 2/9');
+    expect(theirs.map((a) => a.title)).not.toContain('Tuần này học Unit 2 🎈');
+
+    const ha = await loginCode('GV0004');
+    expect((await call('POST', '/announcements', { title: 'Toàn trung tâm?' }, ha!)).status).toBe(403);
+    expect((await call('POST', '/announcements', { title: 'Nhắc lớp Up 1', body: 'Mai kiểm tra từ vựng.', classId: 'up1' }, ha!)).status).toBe(200);
+    const after = (await call('GET', '/announcements', undefined, bao!)).json as { title: string }[];
+    expect(after.map((a) => a.title)).toContain('Nhắc lớp Up 1');
+  });
+});
+
 describe('demo engine — kiosk (front desk)', () => {
   async function loginEmail(email: string) {
     const r = await call('POST', '/auth/login', { email, password: 'x' });

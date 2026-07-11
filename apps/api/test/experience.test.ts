@@ -69,6 +69,30 @@ describe('practice and achievements', () => {
   });
 });
 
+describe('announcements (Bảng tin)', () => {
+  it('managers post center-wide; teachers post to their own classes only', async () => {
+    expect((await req('POST', '/announcements', zhao, { title: 'Nghỉ lễ 2/9', body: 'Trung tâm nghỉ ngày 2/9.' })).statusCode).toBe(200);
+    expect((await req('POST', '/announcements', lan, { title: 'Tin toàn trung tâm?', body: 'x' })).statusCode).toBe(403);
+    expect((await req('POST', '/announcements', lan, { title: 'Lớp c1 học bù', body: 'Thứ 7 tuần này.', classId: 'c1' })).statusCode).toBe(200);
+    expect((await req('POST', '/announcements', lan, { title: 'Lớp của David', body: 'x', classId: 'c3' })).statusCode).toBe(403);
+    expect((await req('POST', '/announcements', lan, { title: 'Đâu?', body: 'x', classId: 'nope' })).statusCode).toBe(404);
+  });
+
+  it('readers see exactly their scope', async () => {
+    const mine = (await req('GET', '/announcements', minh)).json() as { title: string; classId: string | null }[];
+    expect(mine.map((a) => a.title)).toContain('Nghỉ lễ 2/9'); // center-wide
+    expect(mine.map((a) => a.title)).toContain('Lớp c1 học bù'); // own class
+
+    const s2 = await login('s2@etop.vn'); // in c3, not c1
+    const theirs = (await req('GET', '/announcements', s2)).json() as { title: string }[];
+    expect(theirs.map((a) => a.title)).toContain('Nghỉ lễ 2/9');
+    expect(theirs.map((a) => a.title)).not.toContain('Lớp c1 học bù');
+
+    const forParent = (await req('GET', '/announcements', parent)).json() as { title: string }[];
+    expect(forParent.map((a) => a.title)).toContain('Lớp c1 học bù'); // child s0 is in c1
+  });
+});
+
 describe('class leaderboard (Bảng vàng)', () => {
   it('classmates, their teacher, and guardians see effort points ranked; outsiders do not', async () => {
     const rows = (await req('GET', '/classes/c1/leaderboard', minh)).json() as { name: string; points: number }[];

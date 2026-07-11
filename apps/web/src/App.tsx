@@ -6,6 +6,7 @@ import { Landing } from './Landing';
 import { ClassManager } from './ClassManager';
 import { AdminPanel } from './AdminPanel';
 import { QuestionBank } from './QuestionBank';
+import { Announcements } from './Announcements';
 import { PracticeHub } from './Practice';
 import { Icon } from './Icon';
 import { Mascot } from './Mascot';
@@ -194,6 +195,7 @@ function Student({ lang, t, name }: { lang: Lang; t: (k: string) => string; name
         </>
       ) : (
         <>
+          <Announcements lang={lang} />
           {classes.map((c, ci) => (
             <div key={c.id} className="card space-y-3">
               <div className="flex items-center gap-3">
@@ -319,6 +321,8 @@ function Parent({ lang, t }: { lang: Lang; t: (k: string) => string }) {
           {practice && <div className="ml-auto text-center"><div className="text-2xl font-black">+{practice.points}</div><div className="text-[10px] font-bold text-violet-100">⭐ hôm nay</div></div>}
         </div>
       </div>
+
+      <Announcements lang={lang} />
 
       {(sessions.length > 0 || newA.length > 0 || graded.length > 0) && (
         <div className="card space-y-2">
@@ -520,6 +524,7 @@ function Teacher({ lang, t }: { lang: Lang; t: (k: string) => string }) {
 
   return (
     <div className="space-y-4">
+      <Announcements lang={lang} canPost />
       <ClassManager />
       <QuestionBank lang={lang} />
       <div className="card space-y-2">

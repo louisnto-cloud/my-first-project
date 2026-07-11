@@ -583,6 +583,18 @@ CREATE TABLE IF NOT EXISTS account_credits (
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
+-- Announcements (Bảng tin): center-wide (class_id NULL) or per-class.
+CREATE TABLE IF NOT EXISTS announcements (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  class_id TEXT REFERENCES classes(id), -- NULL = whole center
+  author_id TEXT NOT NULL REFERENCES users(id),
+  title TEXT NOT NULL,
+  body TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS idx_announcements_org_time ON announcements(org_id, created_at);
+
 CREATE INDEX IF NOT EXISTS idx_mastery_history ON mastery_history(student_id, recorded_at);
 
 CREATE INDEX IF NOT EXISTS idx_users_org ON users(org_id);

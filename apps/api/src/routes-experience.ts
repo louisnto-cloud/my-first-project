@@ -80,6 +80,66 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
     return { points: totalPoints, streak, practiceDays: days.length, submissions, badges };
   });
 
+  // ---------- Announcements (Bảng tin) ----------
+  // Center-wide posts come from managers; class posts from the class
+  // teacher (or managers). Readers see exactly their scope.
+  app.post('/announcements', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    const body = z.object({ title: z.string().min(2).max(200), body: z.string().max(4000).default(''), classId: z.string().optional() }).safeParse(req.body);
+    if (!body.success) return reply.code(400).send({ error: 'invalid_input' });
+
+    const isManager = ['owner', 'academic_director', 'site_director'].includes(actor.role);
+    if (body.data.classId) {
+      const cls = await one<ClassRef>(db, 'SELECT id, org_id AS "orgId", site_id AS "siteId", teacher_id AS "teacherId" FROM classes WHERE id = $1', [body.data.classId]);
+      if (!cls || cls.orgId !== actor.orgId) return reply.code(404).send({ error: 'not_found' });
+      if (!isManager && !canTeachClass(actor, cls)) return reply.code(403).send({ error: 'forbidden' });
+    } else if (!isManager) {
+      return reply.code(403).send({ error: 'forbidden' }); // center-wide is managers-only
+    }
+
+    const id = rid('ann');
+    await db.query('INSERT INTO announcements (id, org_id, class_id, author_id, title, body) VALUES ($1, $2, $3, $4, $5, $6)', [
+      id, actor.orgId, body.data.classId ?? null, actor.id, body.data.title.trim(), body.data.body.trim(),
+    ]);
+    return { id };
+  });
+
+  app.get('/announcements', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    const SELECT = `SELECT a.id, a.class_id AS "classId", c.name AS "className", u.name AS "authorName",
+                           a.title, a.body, a.created_at AS "createdAt"
+                      FROM announcements a LEFT JOIN classes c ON c.id = a.class_id
+                      JOIN users u ON u.id = a.author_id`;
+    switch (actor.role) {
+      case 'student':
+        return many(
+          db,
+          `${SELECT} WHERE a.org_id = $1 AND (a.class_id IS NULL OR a.class_id IN
+             (SELECT class_id FROM enrollments WHERE student_id = $2)) ORDER BY a.created_at DESC LIMIT 20`,
+          [actor.orgId, actor.id],
+        );
+      case 'parent':
+        return many(
+          db,
+          `${SELECT} WHERE a.org_id = $1 AND (a.class_id IS NULL OR a.class_id IN
+             (SELECT e.class_id FROM enrollments e JOIN guardian_students g ON g.student_id = e.student_id
+               WHERE g.guardian_id = $2)) ORDER BY a.created_at DESC LIMIT 20`,
+          [actor.orgId, actor.id],
+        );
+      case 'tutor':
+        return many(
+          db,
+          `${SELECT} WHERE a.org_id = $1 AND (a.class_id IS NULL OR a.class_id IN
+             (SELECT id FROM classes WHERE teacher_id = $2)) ORDER BY a.created_at DESC LIMIT 20`,
+          [actor.orgId, actor.id],
+        );
+      default:
+        return many(db, `${SELECT} WHERE a.org_id = $1 ORDER BY a.created_at DESC LIMIT 20`, [actor.orgId]);
+    }
+  });
+
   // Class leaderboard (Bảng vàng): effort-based ranking by practice
   // points. Visible to the class (students see classmates' first names +
   // points only — no grades, ever) and its teacher/managers.

@@ -80,6 +80,14 @@ interface DPickup {
   pin: string;
   blocked: boolean;
 }
+interface DAnnouncement {
+  id: string;
+  classId: string | null; // null = whole center
+  authorName: string;
+  title: string;
+  body: string;
+  createdAt: string;
+}
 interface DDB {
   users: DUser[];
   classes: DClass[];
@@ -92,11 +100,12 @@ interface DDB {
   attendance: DAttend[];
   pickups: DPickup[];
   syncedEvents: string[]; // kiosk idempotency
+  announcements: DAnnouncement[];
 }
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v7';
+const KEY = 'etop-demo-db-v8';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -229,6 +238,10 @@ function seed(): DDB {
     attendance: [],
     pickups,
     syncedEvents: [],
+    announcements: [
+      { id: 'ann1', classId: null, authorName: 'Ms. Zhao', title: '📣 Nghỉ lễ Quốc khánh 2/9', body: 'Trung tâm nghỉ ngày 2/9. Các lớp học bù sẽ được thông báo với từng lớp. Chúc cả nhà kỳ nghỉ vui!', createdAt: new Date().toISOString() },
+      { id: 'ann2', classId: 'up1', authorName: 'Ms. Ha', title: 'Tuần này học Unit 2 🎈', body: 'Cả lớp nhớ mang vở bài tập nhé. Bạn nào chưa nộp bài "Viết đoạn — My family" thì hoàn thành trước thứ 6.', createdAt: new Date().toISOString() },
+    ],
   };
   return db;
 }
@@ -729,6 +742,39 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
       { id: 'homework-hero', earned: submissions >= 5 },
     ];
     return ok({ points, streak, practiceDays: days.size, submissions, badges });
+  }
+
+  // ---------- Announcements (Bảng tin) ----------
+  if (rawPath === '/announcements' && method === 'POST') {
+    const title = String(b.title ?? '').trim();
+    if (title.length < 2) return err(400, 'invalid_input');
+    const classId = (b.classId as string) || null;
+    if (classId) {
+      const c = db.classes.find((x) => x.id === classId);
+      if (!c) return err(404, 'not_found');
+      if (!isAdmin && !(me.role === 'tutor' && c.teacherId === me.id)) return err(403, 'forbidden');
+    } else if (!isAdmin) {
+      return err(403, 'forbidden'); // center-wide is managers-only
+    }
+    db.announcements.unshift({ id: uid('ann'), classId, authorName: me.name, title, body: String(b.body ?? '').trim(), createdAt: new Date().toISOString() });
+    save(db);
+    return ok({ id: db.announcements[0].id });
+  }
+
+  if (rawPath === '/announcements' && method === 'GET') {
+    let scope: (a: DAnnouncement) => boolean;
+    if (me.role === 'student') scope = (a) => a.classId === null || me.classIds.includes(a.classId);
+    else if (me.role === 'parent') {
+      const kidClasses = new Set(db.users.filter((u) => me.childIds.includes(u.id)).flatMap((u) => u.classIds));
+      scope = (a) => a.classId === null || kidClasses.has(a.classId);
+    } else if (me.role === 'tutor') scope = (a) => a.classId === null || me.classIds.includes(a.classId);
+    else scope = () => true;
+    return ok(
+      db.announcements.filter(scope).slice(0, 20).map((a) => ({
+        id: a.id, classId: a.classId, className: a.classId ? db.classes.find((c) => c.id === a.classId)?.name ?? null : null,
+        authorName: a.authorName, title: a.title, body: a.body, createdAt: a.createdAt,
+      })),
+    );
   }
 
   // Class leaderboard: effort points only — never grades.
