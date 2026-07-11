@@ -960,9 +960,9 @@ const SITUATIONS=[
 {role:'Buyer (Anh Minh)',you:false,vi:'Anh ăn được đồ Việt Nam không? Cay không ngại chứ?',en:'Can you eat Vietnamese food? Not afraid of spicy right?',ph:'anh an dook doh Vyet Nam khong? kay khong ngai choo'},
 {role:'Michael (You)',you:true,vi:'Tôi rất thích đồ Việt Nam, đặc biệt là phở và bún bò Huế. Cay vừa vừa là được.',en:'I love Vietnamese food, especially pho and Bun Bo Hue. Moderately spicy is fine.',ph:'toy rat thik doh Vyet Nam, dat byet la foh va bun boh Hweh. kay vuh-a vuh-a la dook'},
 {role:'Buyer (Anh Minh)',you:false,vi:'Anh thích Sài Gòn không? So với Canada thế nào?',en:'Do you like Saigon? How does it compare to Canada?',ph:'anh thik Sai Gon khong? so voi Canada theh now'},
-{role:'Michael (You)',you:true,vi:'Thích lắm! Sài Gòn năng động và đầy sức sống. Canada đẹp nhưng yên tĩnh hơn nhiều. Ở đây tôi cảm thấy nhiều cơ hội hơn.',en:'Very much! Saigon is dynamic and full of energy. Canada is beautiful but much quieter. Here I feel more opportunities.',ph:'thik lam! Sai Gon nang dong va day sook song. Canada dep nyoong yen tinh hon nyew'},
+{role:'Michael (You)',you:true,vi:'Thích lắm! Sài Gòn năng động và đầy sức sống. Canada đẹp nhưng yên tĩnh hơn nhiều. Ở đây tôi cảm thấy nhiều cơ hội hơn.',en:'Very much! Saigon is dynamic and full of energy. Canada is beautiful but much quieter. Here I feel more opportunities.',ph:'thik lam! Sai Gon nang dong va dai sook song. Canada dep nyoong yen tinh hun nyew. uh dai toy kam thay nyew kuh hoy hun'},
 {role:'Buyer (Anh Minh)',you:false,vi:'Gia đình anh có ở đây không?',en:'Is your family here with you?',ph:'ya dinh anh co oh day khong'},
-{role:'Michael (You)',you:true,vi:'Không, vợ và hai con tôi ở Vancouver. Nhưng họ rất muốn đến Sài Gòn thăm. Nói anh nghe, vợ tôi rất muốn ăn bánh mì Sài Gòn.',en:'No, my wife and two children are in Vancouver. But they really want to visit Saigon. My wife especially wants to eat Saigon banh mi.',ph:'khong, vop va hai kon toy oh Vancouver. nyoong hoh rat mwon den Sai Gon tham'},
+{role:'Michael (You)',you:true,vi:'Không, vợ và hai con tôi ở Vancouver. Nhưng họ rất muốn đến Sài Gòn thăm. Nói anh nghe, vợ tôi rất muốn ăn bánh mì Sài Gòn.',en:'No, my wife and two children are in Vancouver. But they really want to visit Saigon. My wife especially wants to eat Saigon banh mi.',ph:'khong, vuh va high kon toy uh Vancouver. nyoong hoh rat mwon den Sai Gon tham. noy anh nge, vuh toy rat mwon an banh mee Sai Gon'},
 {role:'Buyer (Anh Minh)',you:false,vi:'Mời cả gia đình sang chơi nhé! Sài Gòn luôn chào đón.',en:'Invite the whole family to come visit! Saigon always welcomes.',ph:'moy ca ya dinh sang choy nyeh! Sai Gon lwan chow don'},
 {role:'Michael (You)',you:true,vi:'Cảm ơn anh! Nhân tiện, anh thấy người tiêu dùng TPHCM đang thay đổi thói quen như thế nào sau COVID?',en:'Thank you! By the way, how do you see HCMC consumers changing their habits after COVID?',ph:'kahm un anh! nyan tyen, anh thay ngoo-ee tyew zoong TPHCM dang thay doy thoy kwen nyoo theh now sau COVID'},
 {role:'Buyer (Anh Minh)',you:false,vi:'Thay đổi rất nhiều. Người ta quan tâm đến sức khỏe hơn, sẵn sàng trả nhiều hơn cho sản phẩm chất lượng. Thị trường cho anh đang mở ra đó.',en:'Changing a lot. People care more about health, willing to pay more for quality products. The market is opening up for you.',ph:'thay doy rat nyew. ngoo-ee ta kwan tam den sook khweh hon, san sang tra nyew hon cho san fam chat loog'}
@@ -1404,7 +1404,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v24';
+const APP_VERSION='v25';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -2527,7 +2527,7 @@ function renderExport(){
       <div class="export-label">Save Progress</div>
       <p class="export-desc">Copy this text and save it somewhere safe (notes app, email). Paste it back to restore your progress.</p>
       <textarea id="export-box" class="export-box" readonly onclick="this.select()">${exportProgress()}</textarea>
-      <button class="btn-primary full-w" onclick="document.getElementById('export-box').select();document.execCommand('copy');this.textContent='Copied!'">Copy to Clipboard</button>
+      <button class="btn-primary full-w" onclick="copyExport(this)">Copy to Clipboard</button>
     </div>
     <div class="export-section" style="margin-top:24px">
       <div class="export-label">Load Progress</div>
@@ -2542,6 +2542,13 @@ function renderExport(){
 }
 function exportProgress(){
   return JSON.stringify(snapshot());
+}
+function copyExport(btn){
+  const box=document.getElementById('export-box');
+  const done=()=>{btn.textContent='✓ Copied!';setTimeout(()=>{btn.textContent='Copy to Clipboard';},2000);};
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(box.value).then(done).catch(()=>{box.select();document.execCommand('copy');done();});
+  }else{box.select();document.execCommand('copy');done();}
 }
 function importProgress(){
   const raw=document.getElementById('import-box').value.trim();
