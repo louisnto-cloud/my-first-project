@@ -338,7 +338,8 @@ textarea:focus{border-color:var(--g)}
 .primer-body p{font-size:13px;line-height:1.7;color:var(--tx);margin-bottom:10px}
 .primer-body ul{padding-left:18px;display:flex;flex-direction:column;gap:8px}
 .primer-body ul li{font-size:13px;line-height:1.65;color:var(--tx)}
-.primer-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:12px}
+.primer-body{overflow-x:auto}
+.primer-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:12px;min-width:280px}
 .primer-table th{background:var(--gp);color:#1B4332;font-weight:700;padding:8px;text-align:left;border-bottom:2px solid var(--bd)}
 .primer-table td{padding:8px;border-bottom:1px solid var(--bd);line-height:1.5}
 .primer-table tr:last-child td{border-bottom:none}
@@ -1404,7 +1405,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v25';
+const APP_VERSION='v26';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1533,11 +1534,16 @@ function showAudioHelp(){
 // ── NAV ──────────────────────────────────────────────────────────────────────
 // Each screen change is pushed into browser history so the phone's back
 // button / swipe-back moves within the app instead of leaving it.
+const LESSON_SCREENS=['flashcard','quiz','type','build','drill','summary'];
 function go(screen,extra={}){
   if(typeof stopPlayAll==='function') stopPlayAll();
+  const inLesson=LESSON_SCREENS.includes(S.screen)&&LESSON_SCREENS.includes(screen);
   S.screen=screen;
   Object.assign(S,extra);
-  try{history.pushState({s:screen},'');}catch(e){}
+  try{
+    if(inLesson) history.replaceState({s:screen},'');
+    else history.pushState({s:screen},'');
+  }catch(e){}
   render();
 }
 window.addEventListener('popstate',e=>{
@@ -2588,7 +2594,7 @@ function renderPrimer(){
 // ── PLACEMENT QUIZ ───────────────────────────────────────────────────────────
 function renderPlacement(){
   if(!S.placementPool.length){
-    S.placementPool=shuffle(VOCAB.filter(v=>v.tier==='A'||v.tier==='B')).slice(0,15).map(v=>v.id);
+    S.placementPool=shuffle([...shuffle(VOCAB.filter(v=>v.tier==='A')).slice(0,6),...shuffle(VOCAB.filter(v=>v.tier==='B')).slice(0,5),...shuffle(VOCAB.filter(v=>v.tier==='C')).slice(0,4)]).map(v=>v.id);
     S.placementQ=0;S.quizAnswer=null;S.placementScore=0;
   }
   if(S.placementQ>=S.placementPool.length){
