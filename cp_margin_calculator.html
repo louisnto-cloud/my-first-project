@@ -456,6 +456,17 @@
         <tbody id="plBody"></tbody>
       </table></div>
       <div class="kpis" id="plKpis" aria-live="polite"></div>
+      <div class="pinbar" id="goalBar" style="margin-top:20px">
+        <div class="ph"><span class="pt">Goal seek — price for a target operating margin</span></div>
+        <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+          <span class="iwrap" style="width:120px;flex:none">
+            <input class="num suf" id="goalPct" type="number" step="1" inputmode="decimal" aria-label="Target operating margin">
+            <span class="fix suf">%</span>
+          </span>
+          <span id="goalOut" style="font-size:14px;font-variant-numeric:tabular-nums"></span>
+          <button class="pbtn" id="goalApply" style="border:1px solid var(--accent);color:var(--accent);background:var(--card);border-radius:980px;padding:6px 14px;font-size:12.5px;font-weight:600;cursor:pointer">Apply price</button>
+        </div>
+      </div>
       <div class="btnrow">
         <button class="action subtle" id="printPl">Print / save PDF</button>
       </div>
@@ -567,7 +578,7 @@ const DEF = {
   landed: { base: 12.50, freight: 0.85, dutyPct: 6.5, pack: 0.40, other: 0.15 },
   ladder: { dir: 'fwd', brand: 35, dist: 28, retail: 38, shelf: 49.99 },
   be: { fixed: 25000, extraVar: 0, target: 10000 },
-  pnl: { detail: 'detail', units: 4000, opex: 24000,
+  pnl: { detail: 'detail', units: 4000, opex: 24000, goal: 15,
          trade: 8, freightOut: 0.60, fulfil: 0.90, mktPct: 6, overhead: 18000 },
   products: [
     { name: 'Sparkling Daily 12-pack', cost: 12.50, price: 20.83 },
@@ -937,7 +948,18 @@ function paintPnl(){
     <div class="kpi"><div class="k">Operating margin</div><div class="v ${omCls}">${fmt(om,1)}%</div><div class="n">operating profit ÷ revenue</div></div>
     <div class="kpi"><div class="k">Monthly profit</div><div class="v ${r.op >= 0 ? 'good' : 'bad'}">${money(r.op, 0)}</div><div class="n">at ${fmt(r.U,0)} units</div></div>
     <div class="kpi"><div class="k">Annualized</div><div class="v ${r.op >= 0 ? '' : 'bad'}">${money(r.op * 12, 0)}</div><div class="n">operating profit × 12</div></div>`;
+  paintGoal();
 }
+$('goalPct').addEventListener('input', e => {
+  const v = num(e.target.value); if (isFinite(v)) S.pnl.goal = v;
+  save(); paintGoal();
+});
+$('goalApply').addEventListener('click', () => {
+  const p = paintGoal._price;
+  if (!isFinite(p)) return;
+  S.price = +p.toFixed(4); S.anchor = 'cost';
+  save(); paintSolver(); paintKpis(); paintScen(); paintBE(); paintPnl();
+});
 
 $('uSlider').addEventListener('input', e => {
   const v = +e.target.value;
@@ -946,6 +968,40 @@ $('uSlider').addEventListener('input', e => {
   const uInp = $('pl-units'); if (uInp && document.activeElement !== uInp) uInp.value = v;
   paintPnl();
 });
+
+/* goal seek: price for a target operating margin at current volume/costs */
+function goalSeekPrice(){
+  const g = S.pnl.goal / 100, U = Math.max(0, S.pnl.units), C = S.cost;
+  if (!(U > 0)) return null;
+  if (S.pnl.detail === 'detail') {
+    const t = S.pnl.trade / 100, m = S.pnl.mktPct / 100;
+    const V = C + S.pnl.freightOut + S.pnl.fulfil;          // per-unit costs outside marketing
+    const denom = U * (1 - t) * ((1 - m) - g);
+    if (denom <= 0) return null;                             // target beyond structural ceiling
+    return (U * V + S.pnl.overhead) / denom;
+  }
+  const denom = U * (1 - g);
+  if (denom <= 0) return null;
+  return (U * C + S.pnl.opex) / denom;
+}
+function paintGoal(){
+  const out = $('goalOut'); if (!out) return;
+  const inp = $('goalPct');
+  if (document.activeElement !== inp) inp.value = S.pnl.goal;
+  const p = goalSeekPrice();
+  if (p === null || !isFinite(p) || p <= 0) {
+    out.innerHTML = `<span style="color:var(--bad)">Not reachable with this cost structure — lower the target or costs.</span>`;
+    $('goalApply').style.display = 'none';
+    return;
+  }
+  $('goalApply').style.display = '';
+  const diff = p - S.price;
+  const dir = Math.abs(diff) < 0.005 ? 'is your current price'
+    : diff > 0 ? `<span style="color:var(--warn)">+${money(diff)} above current</span>`
+    : `<span style="color:var(--good)">${money(diff)} below current</span>`;
+  out.innerHTML = `needs a price of <b style="font-size:16px">${money(p)}</b> · ${dir} · unit margin ${fmt(marginOf(S.cost, p), 1)}%`;
+  paintGoal._price = p;
+}
 
 /* ================= LANDED COST ================= */
 const LROWS = [
