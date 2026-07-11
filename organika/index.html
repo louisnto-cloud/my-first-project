@@ -1124,6 +1124,17 @@ const SITUATIONS=[
 {role:'Buyer (Chị Linh)',you:false,vi:'Khỏi khách sáo! Chúc Organika năm mới phát tài, hợp tác của chúng ta ngày càng bền chặt.',en:'No need for formalities! Wishing Organika prosperity in the new year, and that our cooperation grows ever stronger.',ph:'khoy khach sow! chook Organika nam moy fat tie, hop tak koo-a choong ta ngay kang ben chat'},
 {role:'Michael (You)',you:true,vi:'Dạ, chúc mừng năm mới! An khang thịnh vượng!',en:'Happy new year! Peace, health and prosperity!',ph:'ya, chook moong nam moy! an khang tinh voong'}
 ]}
+,{id:'s14',title:'Trade Show Booth Pitch',titleVi:'Giới Thiệu Tại Hội Chợ',context:'You are working the Organika booth at a food and beverage expo in HCMC. A visitor with a retailer badge slows down. You have sixty seconds to earn a business card.',culturalNote:'Trade show Vietnamese is fast and informal. Offer a chilled sample immediately — tasting beats talking. Ask what channel they are in before pitching. Get the Zalo or card early; follow up within 48 hours or the lead is dead.',lines:[
+{role:'Michael (You)',you:true,vi:'Chào anh! Mời anh dùng thử nước điện giải có ga từ Canada — lạnh lắm, đã lắm!',en:'Hello! Try our sparkling electrolyte water from Canada — ice cold, super refreshing!',ph:'chow anh! moy anh zoong thoo nook dyen zai co ga too Canada — lanh lam, da lam'},
+{role:'Visitor (Anh Tú)',you:false,vi:'Ừ, thử xem. Vị gì đây?',en:'Sure, let me try. What flavor is this?',ph:'uh, thoo sem. vee zee day'},
+{role:'Michael (You)',you:true,vi:'Đây là vị chanh dây thơm — bán chạy nhất của tụi em. Còn có mâm xôi và chanh nữa.',en:'This is passion fruit pineapple — our best seller. There is also raspberry and lime lemon.',ph:'day la vee chanh zay thom — ban chai nyat koo-a too-ee em. kon co mam soy va chanh noo-a'},
+{role:'Visitor (Anh Tú)',you:false,vi:'Ngon đó! Uống nhẹ, không ngọt gắt. Bên em phân phối chưa?',en:'Tasty! Light, not cloyingly sweet. Do you have distribution yet?',ph:'ngon do! oong nyeh, khong ngot gat. ben em fan foy choo-a'},
+{role:'Michael (You)',you:true,vi:'Dạ có ở WinMart và Long Châu rồi. Anh đang làm kênh nào ạ?',en:'Yes, we are in WinMart and Long Chau already. Which channel are you in?',ph:'ya co uh WinMart va Long Chow roy. anh dang lam kenh now a'},
+{role:'Visitor (Anh Tú)',you:false,vi:'Tôi có chuỗi 30 cửa hàng tiện lợi ở Bình Dương và Đồng Nai.',en:'I have a chain of 30 convenience stores in Binh Duong and Dong Nai.',ph:'toy co chwoy ba moo-ee koo-a hang tyen loy uh Bin Zoong va Dong Nai'},
+{role:'Michael (You)',you:true,vi:'Hay quá! Lon đơn của tụi em rất hợp kênh tiện lợi. Anh cho em xin Zalo, em gửi bảng giá và mẫu thử tuần này luôn.',en:'Excellent! Our single cans fit convenience stores perfectly. May I get your Zalo? I will send the price list and samples this week.',ph:'high kwa! lon don koo-a too-ee em rat hop kenh tyen loy. anh cho em sin Zalo, em gwee bang za va mow thoo twan nay lwan'},
+{role:'Visitor (Anh Tú)',you:false,vi:'Được, đây số tôi. Gửi sớm nhé, tháng sau tôi chốt danh mục hàng mới.',en:'Okay, here is my number. Send it soon — I finalize the new product list next month.',ph:'dook, day so toy. gwee som nyeh, tang sow toy chot zanh mook hang moy'},
+{role:'Michael (You)',you:true,vi:'Dạ, em gửi trong 48 tiếng. Cảm ơn anh Tú, chúc anh tham quan hội chợ vui vẻ!',en:'I will send it within 48 hours. Thank you Tu, enjoy the rest of the expo!',ph:'ya, em gwee trong bon moo-ee tam tyeng. kam un anh Too, chook anh tham kwan hoy chuh voo-ee veh'}
+]}
 ];
 
 // ── INTEL MODULE ────────────────────────────────────────────────────────────
@@ -1541,7 +1552,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v36';
+const APP_VERSION='v37';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
