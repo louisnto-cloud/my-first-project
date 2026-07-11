@@ -204,7 +204,15 @@
     <div class="roundbtn pickbtn" id="pick-trace" style="background:#e3f0ff;">☝️</div>
     <div class="roundbtn pickbtn" id="pick-find" style="background:#e9ffe3;">🔍</div>
     <div class="roundbtn pickbtn" id="pick-pop" style="background:#e3faff;">🫧</div>
+    <div class="roundbtn pickbtn" id="pick-hunt" style="background:#fff0e0;">👂</div>
   </div>
+</div>
+
+<!-- ===================== SOUND HUNT (initial-sound listening) ===================== -->
+<div id="scene-hunt" class="scene hidden">
+  <div class="roundbtn navbtn" id="homebtn-hunt" style="right:3vmin;">🏠</div>
+  <div id="hunt-letter" style="width:26vmin;height:26vmin;"></div>
+  <div id="hunt-row" style="display:flex; gap:8vmin; margin-top:3vmin;"></div>
 </div>
 
 <!-- ===================== TREE PICKER (Build a Word vs Word Families) ===================== -->
@@ -579,7 +587,9 @@ const CLIPS = {
   p_firstword:{ script:'“{name}!! You READ a word!! Hooray!!!” (as excited as you can)', tts:'{name}! You read a word!! Hooray!!' },
   p_more:{ script:'“Let’s play with the other sounds first!”', tts:'Lets play with the other sounds first!' },
   p_family:{ script:'“Watch what happens when we change the first sound!”', tts:'Watch what happens when we change the first sound!' },
-  p_pop:{ script:'“Pop the bubble that says…”', tts:'Pop the bubble that says' }
+  p_pop:{ script:'“Pop the bubble that says…”', tts:'Pop the bubble that says' },
+  p_listen:{ script:'“Listen carefully!”', tts:'Listen carefully!' },
+  p_same:{ script:'“Which one sounds the same?”', tts:'Which one sounds the same?' }
 };
 for (const w in WORDS) CLIPS['wd_'+w] = { script:`“${w}!” — say the whole word happily.`, tts:w+'!', auto:true };
 function withName(s){ return (s||'').split('{name}').join(S.name || 'Mariana'); }
@@ -593,7 +603,7 @@ const BUNDLED = {};
 for (const l of LETTER_ORDER) BUNDLED['snd_'+l] = 'assets/'+l+'.mp3';
 for (const dg in DIGRAPHS) BUNDLED['snd_'+dg] = 'assets/'+dg+'.mp3';
 for (const w in WORDS) BUNDLED['wd_'+w] = 'assets/'+w+'.mp3';
-for (const id of ['p_hi','p_this','p_tap','p_pick','p_trace','p_find','p_yay','p_again','p_word','p_firstword','p_more','p_family','p_pop'])
+for (const id of ['p_hi','p_this','p_tap','p_pick','p_trace','p_find','p_yay','p_again','p_word','p_firstword','p_more','p_family','p_pop','p_listen','p_same'])
   BUNDLED[id] = 'assets/'+id+'.mp3';
 const NAME_BAKED = new Set(['p_hi','p_pick','p_yay','p_again','p_firstword']);
 function bundledURL(id){
@@ -787,7 +797,7 @@ function status(l){ const st=S.letters[l];
 
 /* ---------------- scenes ---------------- */
 const sceneEls = {};
-for (const s of ['home','picker','meet','trace','find','word','treepicker','family','pop'])
+for (const s of ['home','picker','meet','trace','find','word','treepicker','family','pop','hunt'])
   sceneEls[s] = document.getElementById('scene-'+s);
 let curScene='home', curLetter='s';
 let popSpawnTimer=null;
@@ -847,9 +857,13 @@ function goHome(){ buildHome(); showScene('home'); }
 
 /* ---------- PICKER ---------- */
 const pickerLetterEl = document.getElementById('picker-letter');
+function huntWords(l){ return Object.keys(WORDS).filter(w=>WORDS[w].seq[0]===l && WORDS[w].emoji); }
+function huntDistractors(l){ return Object.keys(WORDS).filter(w=>WORDS[w].seq[0]!==l && WORDS[w].emoji); }
 function openPicker(l){
   curLetter=l;
   pickerLetterEl.innerHTML=''; pickerLetterEl.appendChild(letterSVG(l,{eyes:true}));
+  // the listening game needs at least one picture-word starting with this sound
+  document.getElementById('pick-hunt').style.display = huntWords(l).length ? '' : 'none';
   showScene('picker');
   pipSay([soundPart(l), {pause:250}, {clip:'p_pick'}]);
 }
@@ -857,6 +871,7 @@ document.getElementById('pick-meet').addEventListener('pointerdown', ()=>{ ensur
 document.getElementById('pick-trace').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startTrace(curLetter); });
 document.getElementById('pick-find').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startFind(curLetter); });
 document.getElementById('pick-pop').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startPop(curLetter); });
+document.getElementById('pick-hunt').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startHunt(curLetter); });
 
 /* ---------- TREE PICKER (Build a Word vs Word Families) ---------- */
 function openTreePicker(){
@@ -1237,10 +1252,66 @@ function onPopTap(l, b, ev){
   }
 }
 
+/* ---------- SOUND HUNT (which picture starts with this sound?) ---------- */
+const huntLetterEl = document.getElementById('hunt-letter');
+const huntRow = document.getElementById('hunt-row');
+let HUNT=null;
+function startHunt(l){
+  curLetter=l;
+  HUNT = { target:l, round:0, wrongs:0 };
+  showScene('hunt');
+  huntLetterEl.innerHTML=''; huntLetterEl.appendChild(letterSVG(l,{eyes:true}));
+  nextHuntRound();
+}
+function nextHuntRound(){
+  if (!HUNT) return;
+  HUNT.wrongs=0;
+  const rights = huntWords(HUNT.target);
+  const wrongs = huntDistractors(HUNT.target);
+  if (!rights.length || !wrongs.length){ goHome(); return; }
+  HUNT.rightWord = rights[Math.floor(Math.random()*rights.length)];
+  const wrongWord = wrongs[Math.floor(Math.random()*wrongs.length)];
+  const pair = [ {w:HUNT.rightWord, ok:true}, {w:wrongWord, ok:false} ].sort(()=>Math.random()-.5);
+  huntRow.innerHTML='';
+  for (const {w, ok} of pair){
+    const b=document.createElement('div'); b.className='bubble';
+    b.innerHTML = `<div style="font-size:13vmin; line-height:1;">${WORDS[w].emoji}</div>`;
+    b.addEventListener('pointerdown', ev=>{ ensureAudio(); onHuntTap(w, ok, b, ev); });
+    huntRow.appendChild(b);
+  }
+  pipSay([{clip:'p_listen'},{pause:250},{clip:'p_find'},{pause:120}, soundPart(HUNT.target)]);
+}
+async function onHuntTap(w, ok, b, ev){
+  if (!HUNT) return;
+  if (ok){
+    S.letters[HUNT.target].findRight++; save();
+    burstAt(ev.clientX, ev.clientY, 10);
+    sfx.cheer();
+    speakSeq([{clip:'wd_'+w}, {pause:150}, soundPart(HUNT.target), {pause:200}, {clip:'p_yay'}]);
+    awardStar(ev.clientX, ev.clientY);
+    HUNT.round++;
+    if (HUNT.round>=3){ setTimeout(()=>{ bigCelebration(); setTimeout(goHome, 2000); }, 900); }
+    else setTimeout(()=>nextHuntRound(), 2600);
+  } else {
+    S.letters[HUNT.target].findWrong++; save();
+    HUNT.wrongs++;
+    b.classList.remove('no'); void b.offsetWidth; b.classList.add('no');
+    sfx.boing();
+    // say the word she tapped so the "wrong" tap still teaches something,
+    // then repeat the target sound
+    speakSeq([{clip:'wd_'+w}, {pause:200}, {clip:'p_again'},{pause:150}, soundPart(HUNT.target)]);
+    if (HUNT.wrongs>=2){
+      const bubbles=[...huntRow.children];
+      const idx = [...huntRow.children].findIndex(c=>!c.classList.contains('no'));
+      if (idx>=0) bubbles[idx].classList.add('hintpulse');
+    }
+  }
+}
+
 /* ---------- nav buttons ---------- */
-for (const id of ['homebtn-p','homebtn-m','homebtn-t','homebtn-f','homebtn-w','homebtn-tp','homebtn-fam','homebtn-pop'])
+for (const id of ['homebtn-p','homebtn-m','homebtn-t','homebtn-f','homebtn-w','homebtn-tp','homebtn-fam','homebtn-pop','homebtn-hunt'])
   document.getElementById(id).addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop();
-    if (popSpawnTimer){ clearInterval(popSpawnTimer); popSpawnTimer=null; } POP=null; FAM=null;
+    if (popSpawnTimer){ clearInterval(popSpawnTimer); popSpawnTimer=null; } POP=null; FAM=null; HUNT=null;
     goHome(); });
 
 /* ---------------- parent screen ---------------- */
