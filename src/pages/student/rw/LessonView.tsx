@@ -77,6 +77,7 @@ export default function LessonView({ lesson, progress, apply, onBack }: {
   const [step, setStep] = useState<LessonStep>('intro');
   const stepIndex = steps.indexOf(step);
   const nextStep = () => { const n = steps[stepIndex + 1]; if (n) setStep(n); };
+  const prevStep = () => { const p = steps[stepIndex - 1]; if (p) { tts.stop(); setStep(p); } };
 
   const score = lesson.exercises.reduce((acc, ex) => acc + ((answers[ex.id] ?? '').trim().toLowerCase() === ex.answer.toLowerCase() ? 1 : 0), 0);
   const perfect = score === lesson.exercises.length;
@@ -140,7 +141,12 @@ export default function LessonView({ lesson, progress, apply, onBack }: {
       <div className="h-2 w-full overflow-hidden rounded-full bg-gray-100">
         <div className={`h-2 rounded-full ${c.bg} transition-all duration-500`} style={{ width: `${((stepIndex + 1) / steps.length) * 100}%` }} />
       </div>
-      <div className="text-center text-xs text-gray-400">Step {stepIndex + 1} of {steps.length}</div>
+      <div className="flex items-center justify-center gap-3 text-xs text-gray-400">
+        {stepIndex > 0 && step !== 'complete' && (
+          <button onClick={prevStep} className="font-bold text-violet-500 hover:text-violet-700">← back</button>
+        )}
+        <span>Step {stepIndex + 1} of {steps.length}</span>
+      </div>
 
       {step === 'intro' && (
         <StepCard>
