@@ -116,6 +116,15 @@
       <p class="h-sub">All four scenarios side by side — updates live as you edit Assumptions.</p>
       <div id="cmp"></div>
     </div>
+    <div class="panel">
+      <h2>Saved snapshots</h2>
+      <p class="h-sub">Save the whole model under a name to compare what-ifs later (stored in this browser).</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
+        <input class="cell" type="text" id="snapName" placeholder="e.g. Aggressive pricing" style="width:200px;text-align:left">
+        <button class="tbtn" id="btnSnap">+ Save snapshot</button>
+      </div>
+      <div id="snaps"></div>
+    </div>
   </section>
 
   <!-- P&L -->
@@ -667,6 +676,22 @@ function exportCSV(){
   a.download="sparkling_daily_scenarios.csv"; a.click(); flash("CSV downloaded.");
 }
 ["btnSave","btnLoad","btnReset","btnCSV"].forEach((id,i)=>{const e=el(id); if(e) e.onclick=[saveState,loadState,resetState,exportCSV][i];});
+// ---------- named snapshots ----------
+const SNAP_KEY="organika_snapshots_v1";
+function getSnaps(){try{return JSON.parse(localStorage.getItem(SNAP_KEY)||"{}");}catch(e){return {};}}
+function putSnaps(o){localStorage.setItem(SNAP_KEY, JSON.stringify(o));}
+function saveSnap(){const n=(el("snapName").value||"").trim(); if(!n){flash("Name your snapshot first.");return;}
+  const all=getSnaps(); all[n]={SKUS,CO,LEVERS,CFG}; putSnaps(all); el("snapName").value=""; renderSnaps(); flash("Snapshot saved.");}
+function loadSnap(n){const s=getSnaps()[n]; if(s){applyState(JSON.parse(JSON.stringify(s))); flash("Loaded “"+n+"”.");}}
+function delSnap(n){const all=getSnaps(); delete all[n]; putSnaps(all); renderSnaps(); flash("Deleted “"+n+"”.");}
+function renderSnaps(){const e=el("snaps"); if(!e) return; const all=getSnaps(); const names=Object.keys(all);
+  if(!names.length){e.innerHTML='<span class="hint">No snapshots yet.</span>';return;}
+  e.innerHTML="<table><tbody>"+names.map(n=>
+    `<tr><td style="text-align:left;font-weight:600">${n.replace(/</g,"&lt;")}</td>`+
+    `<td style="text-align:right"><button class="tbtn" onclick="loadSnap('${n.replace(/'/g,"\\'")}')">Load</button> `+
+    `<button class="tbtn" style="padding:4px 9px" onclick="delSnap('${n.replace(/'/g,"\\'")}')">×</button></td></tr>`).join("")+"</tbody></table>";
+}
+if(el("btnSnap")) el("btnSnap").onclick=saveSnap;
 const THEME_KEY="organika_theme";
 function applyTheme(t){document.body.classList.toggle("dark",t==="dark");const b=el("btnTheme"); if(b) b.textContent=t==="dark"?"☀︎ Light":"🌙 Dark";}
 function toggleTheme(){const t=document.body.classList.contains("dark")?"light":"dark";applyTheme(t);try{localStorage.setItem(THEME_KEY,t);}catch(e){}}
@@ -677,7 +702,7 @@ try{applyTheme(localStorage.getItem(THEME_KEY)||"light");}catch(e){}
 ["tgtGP","tgtEB"].forEach(id=>{const e=el(id); if(e) e.oninput=renderTargets;});
 {const e=el("retMargin"); if(e) e.oninput=renderUecon;}
 try{ const raw=localStorage.getItem(STORE_KEY); if(raw) applyState(JSON.parse(raw)); }catch(e){}
-renderHeader();renderGlossary();buildNav();renderAsmp();refresh();
+renderHeader();renderGlossary();renderSnaps();buildNav();renderAsmp();refresh();
 </script>
 </body>
 </html>

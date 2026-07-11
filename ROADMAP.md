@@ -25,7 +25,7 @@ math tie-out), commit, push. Keep the app cohesive and simple — no bloat.
 - [x] Unit economics detail (per-unit breakdown) + retail ladder.
 - [x] Dark mode toggle.
 - [x] Print / PDF-friendly layout + "Print" button.
-- [ ] Named what-if snapshots (compare saved states).
+- [x] Named what-if snapshots (save/load/delete).
 - [x] In-app Guide + plain-English glossary.
 - [x] Accessibility pass (aria labels, focus-visible states).
 - [x] Configurable currency symbol.
