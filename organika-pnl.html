@@ -416,6 +416,10 @@
       <div class="card no-print">
         <h3>Phasing &amp; cash</h3>
         <div class="field">
+          <label>Horizon</label>
+          <div class="scenpill" id="pl-horizon"><button data-h="1" class="active">1 year</button><button data-h="3">3 years</button></div>
+        </div>
+        <div class="field">
           <label>Seasonality swing <span class="q" title="How much monthly volume peaks in summer vs winter. 0% = flat all year; 20% = a realistic beverage summer peak.">?</span></label>
           <div class="inp"><input class="has-suf" type="number" id="pl-season" step="5" min="0" max="80"><span class="suf">%</span></div>
         </div>
@@ -424,6 +428,10 @@
         <div class="field"><label>Receivable days (DSO) <span class="q" title="How long customers take to pay you. Retail/distributor terms are often 45–90 days.">?</span></label><div class="inp"><input type="number" id="pl-dso" step="5" min="0"></div></div>
         <div class="field"><label>Inventory days (DIO) <span class="q" title="How long finished stock sits before it sells.">?</span></label><div class="inp"><input type="number" id="pl-dio" step="5" min="0"></div></div>
         <div class="field"><label>Payable days (DPO) <span class="q" title="How long you take to pay suppliers &mdash; a source of cash.">?</span></label><div class="inp"><input type="number" id="pl-dpo" step="5" min="0"></div></div>
+        <h3 style="margin-top:20px">Multi-year growth <span class="q" title="Only applies to the 3-year horizon.">?</span></h3>
+        <div class="field"><label>Volume growth / yr <span class="q" title="Year-over-year case growth.">?</span></label><div class="inp"><input class="has-suf" type="number" id="pl-growth" step="5"><span class="suf">%</span></div></div>
+        <div class="field"><label>COGS improvement / yr <span class="q" title="Cost per can falls as you scale into bigger production runs.">?</span></label><div class="inp"><input class="has-suf" type="number" id="pl-cogsimp" step="1"><span class="suf">%</span></div></div>
+        <div class="field"><label>Overhead step-up / yr <span class="q" title="Fixed opex (team, G&amp;A, R&amp;D) grows as you scale.">?</span></label><div class="inp"><input class="has-suf" type="number" id="pl-opexstep" step="1"><span class="suf">%</span></div></div>
         <div class="note">EBITDA says whether the business <b>works</b>; cash says whether you <b>survive the year</b>. Growth ties up cash in inventory and receivables before the profit lands — this shows the low point and any raise you'd need.</div>
       </div>
       <div>
@@ -524,7 +532,7 @@ function D(){return {
   ],
   opex:{ marketingPctNet:8, salesTeam:600000, ga:850000, rnd:180000, da:150000 },
   unit:{ stores:1500 },
-  plan:{ seasonAmp:20, startCash:400000, dso:45, dio:60, dpo:30 }
+  plan:{ seasonAmp:20, startCash:400000, dso:45, dio:60, dpo:30, horizon:1, growthPct:35, cogsImpPct:6, opexStepPct:8 }
 };}
 let S = D();
 const KEY='organika_pnl_v1';
@@ -702,6 +710,8 @@ function applyScalars(){
   setVal('u-stores',S.unit.stores);
   setVal('pl-season',S.plan.seasonAmp); setVal('pl-cash',S.plan.startCash);
   setVal('pl-dso',S.plan.dso); setVal('pl-dio',S.plan.dio); setVal('pl-dpo',S.plan.dpo);
+  setVal('pl-growth',S.plan.growthPct); setVal('pl-cogsimp',S.plan.cogsImpPct); setVal('pl-opexstep',S.plan.opexStepPct);
+  document.querySelectorAll('#pl-horizon button').forEach(b=>b.classList.toggle('active',(+b.dataset.h)===(+S.plan.horizon||1)));
   document.querySelectorAll('[data-cur]').forEach(e=>e.textContent=sym());
 }
 
@@ -1172,25 +1182,36 @@ function renderOverview(){
 }
 /* ===== Plan & Cash — 12-month phasing + working-capital cash runway ===== */
 function computePlan(){
-  const R=compute(S);
+  const R0=compute(S);
   const amp=(+S.plan.seasonAmp||0)/100;
   const MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   const w=[]; let sw=0;
   for(let m=1;m<=12;m++){ const x=Math.max(0.05,1+amp*Math.sin(2*Math.PI*(m-4)/12)); w.push(x); sw+=x; }
-  const fixedMo=(R.salesTeam+R.ga+R.rnd)/12;
+  const horizon=Math.max(1,+S.plan.horizon||1);
+  const growth=(+S.plan.growthPct||0)/100, cogsImp=(+S.plan.cogsImpPct||0)/100, opexStep=(+S.plan.opexStepPct||0)/100;
   const dso=+S.plan.dso||0, dio=+S.plan.dio||0, dpo=+S.plan.dpo||0;
   let prevNWC=0, cash=+S.plan.startCash||0, trough=Infinity, troughM=0, runway=0;
-  const months=[];
-  for(let i=0;i<12;i++){ const f=w[i]/sw;
-    const net=R.T.net*f, cogs=R.T.cogs*f, cm=R.T.cm*f, mktg=R.marketing*f;
-    const ebitda=cm-mktg-fixedMo;
-    const nwc=net*dso/30.4 + cogs*dio/30.4 - cogs*dpo/30.4;
-    const opCash=ebitda-(nwc-prevNWC); prevNWC=nwc; cash+=opCash;
-    if(cash<trough){trough=cash;troughM=i;}
-    if(cash<0 && !runway) runway=i+1;
-    months.push({name:MN[i],cases:R.cases*f,net,cogs,cm,ebitda,cash});
+  const months=[], years=[];
+  for(let y=0;y<horizon;y++){
+    let Ry;
+    if(y===0){ Ry=R0; }
+    else { const A=clone(); A.volumeCases=(+S.volumeCases||0)*Math.pow(1+growth,y);
+      scaleBOM(A,Math.pow(1-cogsImp,y));
+      A.opex.salesTeam*=Math.pow(1+opexStep,y); A.opex.ga*=Math.pow(1+opexStep,y); A.opex.rnd*=Math.pow(1+opexStep,y);
+      Ry=compute(A); }
+    const fixedMoY=(Ry.salesTeam+Ry.ga+Ry.rnd)/12;
+    let yEb=0,yNet=0,yCases=0;
+    for(let m=0;m<12;m++){ const f=w[m]/sw;
+      const net=Ry.T.net*f, cogs=Ry.T.cogs*f, cm=Ry.T.cm*f, mktg=Ry.marketing*f, ebitda=cm-mktg-fixedMoY;
+      const nwc=net*dso/30.4 + cogs*dio/30.4 - cogs*dpo/30.4;
+      const opCash=ebitda-(nwc-prevNWC); prevNWC=nwc; cash+=opCash;
+      const idx=y*12+m; if(cash<trough){trough=cash;troughM=idx;} if(cash<0 && !runway) runway=idx+1;
+      yEb+=ebitda; yNet+=net; yCases+=Ry.cases*f;
+      months.push({name:MN[m], y, label:(horizon>1?('Y'+(y+1)+' '):'')+MN[m], cases:Ry.cases*f, net, ebitda, cash});
+    }
+    years.push({yr:y+1, cases:yCases, net:yNet, ebitda:yEb, ebitdaPct:yNet?yEb/yNet:0, endCash:cash});
   }
-  return {R,months,trough,troughM,runway,financing:Math.max(0,-trough),endCash:cash};
+  return {R:R0, horizon, months, years, trough, troughM, runway, financing:Math.max(0,-trough), endCash:cash};
 }
 function barsMonthly(vals,labels){
   const w=900,h=200,padT=18,padB=32,padX=10;
@@ -1217,20 +1238,32 @@ function lineMonthly(vals,labels,markLo){
 }
 function renderPlan(){
   if(!document.getElementById('plan-kpis')) return;
-  const P=computePlan(), peak=P.months.reduce((a,b)=>b.cases>a.cases?b:a);
+  const P=computePlan(), multi=P.horizon>1;
+  const lastY=P.years[P.years.length-1], cumEb=P.years.reduce((a,y)=>a+y.ebitda,0);
+  const peak=P.months.reduce((a,b)=>b.cases>a.cases?b:a);
   document.getElementById('plan-kpis').innerHTML=
-    `<div class="kpi hl"><div class="k">Annual EBITDA</div><div class="v" style="color:${P.R.ebitda>=0?'var(--pos)':'var(--neg)'}">${abbr(P.R.ebitda)}</div><div class="x">${pct(P.R.ebitdaPct)}</div></div>`+
-    `<div class="kpi"><div class="k">Cash low point</div><div class="v" style="color:${P.trough<0?'var(--neg)':'var(--pos)'}">${abbr(P.trough)}</div><div class="x">in ${P.months[P.troughM].name}</div></div>`+
+    `<div class="kpi hl"><div class="k">${multi?('EBITDA · Year '+P.horizon):'Annual EBITDA'}</div><div class="v" style="color:${lastY.ebitda>=0?'var(--pos)':'var(--neg)'}">${abbr(lastY.ebitda)}</div><div class="x">${pct(lastY.ebitdaPct)}</div></div>`+
+    `<div class="kpi"><div class="k">Cash low point</div><div class="v" style="color:${P.trough<0?'var(--neg)':'var(--pos)'}">${abbr(P.trough)}</div><div class="x">${P.months[P.troughM].label}</div></div>`+
     `<div class="kpi"><div class="k">Financing need</div><div class="v" style="color:${P.financing>0?'var(--gold)':'var(--pos)'}">${P.financing>0?abbr(P.financing):'—'}</div><div class="x">${P.financing>0?'to stay above $0':'self-funding'}</div></div>`+
-    `<div class="kpi"><div class="k">Runway</div><div class="v" style="color:${P.runway?'var(--neg)':'var(--pos)'}">${P.runway?('month '+P.runway):'12 mo+'}</div><div class="x">${P.runway?'cash turns negative':'stays positive'}</div></div>`+
-    `<div class="kpi"><div class="k">Ending cash</div><div class="v" style="color:${P.endCash>=0?'var(--text)':'var(--neg)'}">${abbr(P.endCash)}</div><div class="x">after 12 months</div></div>`+
-    `<div class="kpi"><div class="k">Peak month</div><div class="v">${peak.name}</div><div class="x">${intf(peak.cases)} cases</div></div>`;
-  const labels=P.months.map(m=>m.name);
+    `<div class="kpi"><div class="k">Runway</div><div class="v" style="color:${P.runway?'var(--neg)':'var(--pos)'}">${P.runway?('month '+P.runway):(P.horizon*12)+' mo+'}</div><div class="x">${P.runway?'cash turns negative':'stays positive'}</div></div>`+
+    `<div class="kpi"><div class="k">Ending cash</div><div class="v" style="color:${P.endCash>=0?'var(--text)':'var(--neg)'}">${abbr(P.endCash)}</div><div class="x">after ${P.horizon*12} months</div></div>`+
+    (multi
+      ? `<div class="kpi"><div class="k">${P.horizon}-yr cumulative EBITDA</div><div class="v" style="color:${cumEb>=0?'var(--pos)':'var(--neg)'}">${abbr(cumEb)}</div><div class="x">across the plan</div></div>`
+      : `<div class="kpi"><div class="k">Peak month</div><div class="v">${peak.name}</div><div class="x">${intf(peak.cases)} cases</div></div>`);
+  const labels=P.months.map((m,i)=> multi ? (i%12===0?('Y'+(m.y+1)):'') : m.name );
   document.getElementById('plan-eb').innerHTML=barsMonthly(P.months.map(m=>m.ebitda),labels);
   document.getElementById('plan-cash').innerHTML=lineMonthly(P.months.map(m=>m.cash),labels,P.troughM);
-  let h='<thead><tr><th>Month</th><th>Cases</th><th>Net sales</th><th>EBITDA</th><th>Cash</th></tr></thead><tbody>';
-  P.months.forEach(m=>{ h+=`<tr><td>${m.name}</td><td class="num">${intf(m.cases)}</td><td class="num">${abbr(m.net)}</td><td class="num" style="color:${m.ebitda>=0?'var(--pos)':'var(--neg)'}">${abbr(m.ebitda)}</td><td class="num" style="color:${m.cash>=0?'':'var(--neg)'}">${abbr(m.cash)}</td></tr>`; });
-  h+='</tbody>'; document.getElementById('plan-table').innerHTML=h;
+  let h='';
+  if(multi){
+    h+='<thead><tr><th>Year</th><th>Cases</th><th>Net sales</th><th>EBITDA</th><th>EBITDA %</th><th>Ending cash</th></tr></thead><tbody>';
+    P.years.forEach(y=>{ h+=`<tr><td>Year ${y.yr}</td><td class="num">${intf(y.cases)}</td><td class="num">${abbr(y.net)}</td><td class="num" style="color:${y.ebitda>=0?'var(--pos)':'var(--neg)'}">${abbr(y.ebitda)}</td><td class="num">${pct(y.ebitdaPct)}</td><td class="num" style="color:${y.endCash>=0?'':'var(--neg)'}">${abbr(y.endCash)}</td></tr>`; });
+    h+='</tbody>';
+  } else {
+    h+='<thead><tr><th>Month</th><th>Cases</th><th>Net sales</th><th>EBITDA</th><th>Cash</th></tr></thead><tbody>';
+    P.months.forEach(m=>{ h+=`<tr><td>${m.name}</td><td class="num">${intf(m.cases)}</td><td class="num">${abbr(m.net)}</td><td class="num" style="color:${m.ebitda>=0?'var(--pos)':'var(--neg)'}">${abbr(m.ebitda)}</td><td class="num" style="color:${m.cash>=0?'':'var(--neg)'}">${abbr(m.cash)}</td></tr>`; });
+    h+='</tbody>';
+  }
+  document.getElementById('plan-table').innerHTML=h;
 }
 
 function renderOutputs(){ syncOverviewSliders(); renderOverview(); renderPnL(); renderCOGS(); renderChannels(); renderLevers(); renderScenarios(); renderUnit(); renderPlan(); }
@@ -1259,6 +1292,8 @@ function bind(){
   document.getElementById('u-stores').addEventListener('input',e=>{ S.unit.stores=parseFloat(e.target.value)||0; renderUnit(); save(); });
   num('pl-season',v=>S.plan.seasonAmp=v,renderPlan); num('pl-cash',v=>S.plan.startCash=v,renderPlan);
   num('pl-dso',v=>S.plan.dso=v,renderPlan); num('pl-dio',v=>S.plan.dio=v,renderPlan); num('pl-dpo',v=>S.plan.dpo=v,renderPlan);
+  num('pl-growth',v=>S.plan.growthPct=v,renderPlan); num('pl-cogsimp',v=>S.plan.cogsImpPct=v,renderPlan); num('pl-opexstep',v=>S.plan.opexStepPct=v,renderPlan);
+  document.querySelectorAll('#pl-horizon button').forEach(b=>b.addEventListener('click',()=>{ S.plan.horizon=+b.dataset.h; document.querySelectorAll('#pl-horizon button').forEach(x=>x.classList.toggle('active',x===b)); renderPlan(); save(); }));
   document.getElementById('ch-add').addEventListener('click',()=>{ S.channels.push({name:'New channel',mixPct:0,srp:2.99,grossPrice:1.50,tradePct:10,spoilPct:2,feePct:5,adPct:5,varCostUnit:0.15,slottingUnit:0.05}); buildChannels(); recalc(); save(); });
   // overview dials (preview only; commit saves into the plan)
   ['sl-price','sl-cost','sl-vol'].forEach(id=>{ const e=document.getElementById(id); if(e) e.addEventListener('input',renderOverview); });

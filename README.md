@@ -55,11 +55,13 @@ stevia; magnesium bisglycinate + Fibersol prebiotic fiber).
    (seeded with Base / Bull / Bear).
 6. **Unit Economics** — per-case statement, break-even volume with a path-to-profit
    bar, and retail velocity ($/store/week).
-7. **Plan & Cash** — phases the annual plan across 12 months with a summer
-   seasonality curve, then runs a working-capital **cash-runway** model (DSO / DIO /
-   DPO): monthly EBITDA bars, a cash-balance line with the low point marked, and
-   KPIs for the cash trough, financing need, runway month and ending cash. EBITDA
-   says whether the business works; this says whether it survives the year.
+7. **Plan & Cash** — phases the plan across **1 or 3 years** with a summer
+   seasonality curve and a multi-year ramp (volume growth, COGS improvement as you
+   scale, overhead step-up), then runs a working-capital **cash-runway** model
+   (DSO / DIO / DPO): monthly EBITDA bars, a cash-balance line with the low point
+   marked, a per-year summary, and KPIs for the cash trough, financing need, runway
+   month, ending cash and 3-year cumulative EBITDA. EBITDA says whether the business
+   works; this says whether it survives — and how much cash the path to profit needs.
 8. **Guide** — the waterfall, why contribution margin is the number to watch, and a
    CPG glossary.
 
