@@ -348,6 +348,19 @@
     h1{font-size:28px}
   }
 
+  /* collapsible explainer panels */
+  .panel.exp{padding:6px 28px}
+  .panel.exp details{padding:14px 0}
+  .panel.exp summary{font-size:15px;font-weight:700;cursor:pointer;list-style:none;
+    display:flex;align-items:center;gap:9px;color:var(--soft);transition:color .15s}
+  .panel.exp summary:hover{color:var(--ink)}
+  .panel.exp summary::-webkit-details-marker{display:none}
+  .panel.exp summary::before{content:'';width:7px;height:7px;border-right:1.5px solid currentColor;
+    border-bottom:1.5px solid currentColor;transform:rotate(-45deg);transition:transform .18s;flex:none;margin-left:2px}
+  .panel.exp details[open] summary::before{transform:rotate(45deg)}
+  .panel.exp details[open] summary{color:var(--ink)}
+  .panel.exp .explain{margin-top:12px;padding-left:18px}
+
   .explain{font-size:13px;color:var(--soft);line-height:1.65;max-width:68ch}
   .explain b{color:var(--ink)}
   .explain code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;
@@ -471,10 +484,9 @@
         <button class="action subtle" id="printPl">Print / save PDF</button>
       </div>
     </div>
-    <div class="panel">
-      <h2>Reading it</h2>
+    <div class="panel exp"><details><summary>Reading this statement</summary>
       <p class="explain" id="plExplain"></p>
-    </div>
+    </details></div>
   </section>
 
   <!-- ================= LANDED COST ================= -->
@@ -489,10 +501,9 @@
         <button class="action" id="useLanded">Use as cost in Calculator</button>
       </div>
     </div>
-    <div class="panel">
-      <h2>Why it matters</h2>
+    <div class="panel exp"><details><summary>Why landed cost matters</summary>
       <p class="explain">A margin computed on invoice cost alone overstates reality. Freight, duty, packaging and inbound handling typically add <b>8–25%</b> to a CPG unit cost. Duty is applied on the invoice value; everything else is entered per unit. The total here is the <b>CP</b> the rest of this workbench should run on.</p>
-    </div>
+    </details></div>
   </section>
 
   <!-- ================= PRICE LADDER ================= -->
@@ -509,10 +520,9 @@
       <div class="ladder-viz" id="ladderViz"></div>
       <p class="err" id="ladderErr"></p>
     </div>
-    <div class="panel">
-      <h2>Reading the ladder</h2>
+    <div class="panel exp"><details><summary>Reading the ladder</summary>
       <p class="explain">Forward: <code>tier price = buy price ÷ (1 − tier margin)</code>, compounding at each step — three 30% tiers turn a $1.00 cost into a $2.92 shelf price. Reverse strips each tier off a target shelf price to reveal the <b>maximum cost you can afford</b>; if your actual cost is higher, the status pill goes red and shows the gap.</p>
-    </div>
+    </details></div>
   </section>
 
   <!-- ================= BREAK-EVEN ================= -->
@@ -1352,6 +1362,13 @@ $('csvBtn').addEventListener('click', () => {
   a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(lines.join('\n'));
   a.download = 'organika-margins.csv';
   document.body.appendChild(a); a.click(); a.remove();
+});
+
+/* click-to-replace: focusing any numeric field selects its content */
+document.addEventListener('focusin', e => {
+  if (e.target.matches && e.target.matches('input.num, input.cellinp:not(.name)')) {
+    requestAnimationFrame(() => { try { e.target.select(); } catch (err) {} });
+  }
 });
 
 /* ---------- boot ---------- */
