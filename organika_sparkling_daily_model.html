@@ -79,6 +79,8 @@
     header{padding:0 0 8px}
   }
   .note{background:#f3f7ff;border:1px solid #d9e6ff;border-radius:14px;padding:12px 16px;color:#274;font-size:13px;color:#33506e;margin-bottom:18px}
+  .warn{background:#fff3f3;border:1px solid #f2c4c4;color:#a1272f;border-radius:12px;padding:10px 14px;font-size:13px;margin-bottom:12px}
+  body.dark .warn{background:#3a2226;border-color:#5e2b31;color:#f2b8bd}
   .seg{display:inline-flex;border:1px solid var(--line);border-radius:980px;overflow:hidden;margin-bottom:14px}
   .seg button{border:0;background:#fff;padding:7px 14px;font-weight:600;font-size:13px;color:var(--soft);cursor:pointer}
   .seg button.on{background:var(--ink);color:#fff}
@@ -229,6 +231,7 @@
     </div>
     <div class="panel">
       <h2>SKU assumptions <span class="hint">(per case)</span></h2>
+      <div id="skuWarn"></div>
       <div id="asmpSku"></div>
     </div>
     <div class="grid2">
@@ -531,13 +534,15 @@ function renderSens(){
   PRM.forEach(mp=>{
     h+=`<tr><td><b>${mult(mp)}</b></td>`+VOLM.map(mv=>{
       const v=ebitdaAt(mv,mp);
-      return `<td${v<0?' style="color:#d83a4b"':''}>${money(v)}</td>`;
+      const isBase=Math.abs(mv-1)<1e-9&&Math.abs(mp-1)<1e-9;
+      const st=(v<0?'color:#d83a4b;':'')+(isBase?'font-weight:700;outline:2px solid var(--accent);outline-offset:-2px':'');
+      return `<td style="${st}" title="${isBase?'Today (base price & volume)':''}">${money(v)}</td>`;
     }).join("")+"</tr>";
   });
   h+="</tbody></table>";
   el("sens").innerHTML=h;
   const be=breakeven();
-  el("beLine").textContent=`Break-even (at base price): ${mult(be.mv)} volume — about ${num(be.cases)} cases.`;
+  el("beLine").textContent=`Break-even (at base price): ${mult(be.mv)} volume — about ${num(be.cases)} cases. The outlined cell is today's price & volume.`;
 }
 
 // ---------- assumptions editor ----------
@@ -661,7 +666,14 @@ function buildNav(){
     if(ui.view && VIEWS.includes(ui.view)) showView(ui.view);
   }catch(e){}
 }
-function refresh(){renderKpis();renderCmp();renderPnl();renderMonthly();renderPricing();renderUecon();renderTargets();renderSens();}
+function renderSkuWarn(){
+  const e=el("skuWarn"); if(!e) return;
+  const bad=SKUS.filter(s=>s.cp*(1-s.disc) <= (s.cosd+s.cosi));
+  e.innerHTML = bad.length
+    ? `<div class="warn">⚠ ${bad.length} SKU${bad.length>1?'s':''} priced at or below cost: ${bad.map(s=>`${s.flav} ${s.fmt}`).join(', ')}. Check CP vs COGS.</div>`
+    : "";
+}
+function refresh(){renderKpis();renderCmp();renderPnl();renderMonthly();renderPricing();renderUecon();renderTargets();renderSens();renderSkuWarn();}
 
 // ---------- persistence ----------
 const STORE_KEY = "organika_sparkling_daily_v1";
