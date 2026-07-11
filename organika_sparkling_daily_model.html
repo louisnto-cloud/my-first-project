@@ -216,6 +216,7 @@
         <li>Use <b>Pricing Lab</b> to see the best wholesale price, and <b>Targets</b> to work backwards from a goal.</li>
         <li>Click <b>Save</b> to keep your numbers in this browser; <b>Export CSV</b> to take them elsewhere.</li>
       </ol>
+      <p class="hint">Shortcuts: press <b>1–4</b> to switch scenarios, <b>←/→</b> to move between views. Your edits save automatically.</p>
     </div>
     <div class="panel">
       <h2>Plain-English glossary</h2>
@@ -761,6 +762,17 @@ try{applyTheme(localStorage.getItem(THEME_KEY)||"light");}catch(e){}
 try{ const raw=localStorage.getItem(STORE_KEY); if(raw) applyState(JSON.parse(raw)); }catch(e){}
 renderHeader();renderGlossary();renderSnaps();buildNav();renderAsmp();refresh();
 ready = true;  // enable auto-save now that initial load is done
+
+// keyboard shortcuts: 1-4 scenarios, arrows switch views
+document.addEventListener("keydown", e=>{
+  const tag=(e.target.tagName||"").toLowerCase();
+  if(tag==="input"||tag==="textarea"||tag==="select") return;
+  if(e.key>="1" && e.key<="4"){ setScenario(SCEN[+e.key-1]); }
+  else if(e.key==="ArrowRight" || e.key==="ArrowLeft"){
+    const i=VIEWS.indexOf(currentView);
+    showView(VIEWS[(i+(e.key==="ArrowRight"?1:-1)+VIEWS.length)%VIEWS.length]);
+  }
+});
 </script>
 </body>
 </html>
