@@ -643,6 +643,56 @@ function OwnerDash() {
   );
 }
 
+// Teacher inbox: one thread per student, replies land in the parent's app.
+function TeacherInbox({ lang }: { lang: Lang }) {
+  const vi = lang === 'vi';
+  const [threads, setThreads] = useState<{ threadId: string; studentName: string; lastBody: string; lastFrom: string }[]>([]);
+  const [openThread, setOpenThread] = useState<string | null>(null);
+  const [msgs, setMsgs] = useState<{ senderName: string; body: string }[]>([]);
+  const [draft, setDraft] = useState('');
+
+  const load = async () => setThreads(await api<typeof threads>('GET', '/threads').catch(() => []));
+  useEffect(() => { void load(); }, []);
+
+  const openIt = async (id: string) => {
+    setOpenThread(id);
+    setMsgs(await api('GET', `/threads/${id}/messages`));
+  };
+  const reply = async () => {
+    if (!openThread || !draft.trim()) return;
+    await api('POST', `/threads/${openThread}/messages`, { body: draft.trim() });
+    setDraft('');
+    setMsgs(await api('GET', `/threads/${openThread}/messages`));
+    void load();
+  };
+
+  if (threads.length === 0) return null;
+  return (
+    <div className="card space-y-2">
+      <h2 className="font-black text-violet-700">💬 {vi ? 'Tin nhắn phụ huynh' : 'Parent messages'} ({threads.length})</h2>
+      {threads.map((th) => (
+        <div key={th.threadId} className="rounded-2xl bg-violet-50">
+          <button onClick={() => (openThread === th.threadId ? setOpenThread(null) : void openIt(th.threadId))} className="w-full p-3 text-left">
+            <div className="text-sm font-extrabold text-ink">{vi ? 'Bé' : ''} {th.studentName}</div>
+            <div className="truncate text-xs font-semibold text-slate-500">{th.lastFrom}: {th.lastBody}</div>
+          </button>
+          {openThread === th.threadId && (
+            <div className="animate-rise space-y-2 px-3 pb-3">
+              {msgs.map((m, i) => (
+                <div key={i} className="rounded-xl bg-white p-2 text-sm"><b>{m.senderName}:</b> {m.body}</div>
+              ))}
+              <div className="flex gap-2">
+                <input className="input text-sm" placeholder={vi ? 'Trả lời phụ huynh…' : 'Reply…'} value={draft} onChange={(e) => setDraft(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && reply()} />
+                <button onClick={reply} disabled={!draft.trim()} className="btn-primary text-sm">{vi ? 'Gửi' : 'Send'}</button>
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 // ---------- Teacher ----------
 function Teacher({ lang, t }: { lang: Lang; t: (k: string) => string }) {
   const [queue, setQueue] = useState<{ id: string; studentName: string; title: string; answerText?: string }[]>([]);
@@ -667,6 +717,7 @@ function Teacher({ lang, t }: { lang: Lang; t: (k: string) => string }) {
   return (
     <div className="space-y-4">
       <Announcements lang={lang} canPost />
+      <TeacherInbox lang={lang} />
       <ClassManager />
       <QuestionBank lang={lang} />
       <div className="card space-y-2">

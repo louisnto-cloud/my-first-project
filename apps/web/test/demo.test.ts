@@ -271,6 +271,29 @@ describe('demo engine — announcements', () => {
   });
 });
 
+describe('demo engine — two-way messaging', () => {
+  it('parent writes, the class teacher sees it in the inbox and replies; others are locked out', async () => {
+    const parent = (await call('POST', '/auth/login', { email: 'phuhuynh@etop.vn', password: 'x' })).json as { token: string };
+    const th = (await call('POST', '/threads', { studentId: 's_UP1482' }, parent.token)).json as { threadId: string };
+    await call('POST', `/threads/${th.threadId}/messages`, { body: 'Bé hơi sốt, mai xin nghỉ ạ.' }, parent.token);
+
+    const ha = await loginCode('GV0004');
+    const inbox = (await call('GET', '/threads', undefined, ha!)).json as { threadId: string; studentName: string; lastBody: string }[];
+    expect(inbox.length).toBe(1);
+    expect(inbox[0].lastBody).toContain('xin nghỉ');
+    await call('POST', `/threads/${inbox[0].threadId}/messages`, { body: 'Dạ vâng, chúc bé mau khỏe!' }, ha!);
+
+    const msgs = (await call('GET', `/threads/${th.threadId}/messages`, undefined, parent.token)).json as { senderName: string; body: string }[];
+    expect(msgs.map((m) => m.body)).toContain('Dạ vâng, chúc bé mau khỏe!');
+
+    // A teacher who doesn't teach the child cannot read the thread.
+    const ly = await loginCode('GV0006');
+    expect((await call('GET', `/threads/${th.threadId}/messages`, undefined, ly!)).status).toBe(403);
+    // A parent cannot open another child's thread.
+    expect((await call('POST', '/threads', { studentId: 's_UP2614' }, parent.token)).status).toBe(403);
+  });
+});
+
 describe('demo engine — weekly summary approval loop', () => {
   it('teacher approves a draft; the parent then sees it; other teachers see nothing', async () => {
     const parent = (await call('POST', '/auth/login', { email: 'phuhuynh@etop.vn', password: 'x' })).json as { token: string };

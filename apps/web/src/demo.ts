@@ -105,11 +105,12 @@ interface DDB {
   nps: { userId: string; term: string; score: number; comment: string }[];
   sessionNotes: { studentId: string; date: string; className: string; tutorName: string; parentNote: string }[];
   summaries: { id: string; studentId: string; weekStart: string; bodyVi: string; bodyEn: string; status: 'draft' | 'approved' }[];
+  messages: { studentId: string; senderId: string; senderName: string; body: string; at: string }[];
 }
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v14';
+const KEY = 'etop-demo-db-v15';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -267,6 +268,9 @@ function seed(): DDB {
         bodyVi: 'Tuần này bé hoàn thành bài Ôn tập Unit 1 và tự luyện đều mỗi ngày. Điểm chăm chỉ tăng rõ — cô đề nghị tiếp tục ôn từ vựng 10 phút mỗi tối.',
         bodyEn: 'This week: finished the Unit 1 review and practiced daily. Effort points are climbing — keep the 10-minute vocab habit each evening.',
       },
+    ],
+    messages: [
+      { studentId: 's_UP1482', senderId: 'p0', senderName: 'Phụ huynh (demo)', body: 'Chào cô, tuần sau bé xin nghỉ thứ 3 vì về quê ạ. Có bài nào cần làm bù không cô?', at: new Date(Date.now() - 3_600_000).toISOString() },
     ],
   };
   // A week of attendance history for the demo child (Up 1 meets Mon-Wed):
@@ -964,9 +968,53 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     if (me.role !== 'parent') return err(403, 'forbidden');
     return ok([{ id: 'inv_demo', period: today().slice(0, 7), studentName: 'Nguyễn Gia Bảo', totalVnd: 1350000, status: 'open', vietqr: 'VIETQR|ETOP|inv_demo|1350000|HOC PHI ETOP' }]);
   }
-  if (rawPath === '/threads' && method === 'POST') return ok({ threadId: 'th_demo', existing: true });
-  if (rawPath === '/threads' && method === 'GET') return ok([]);
-  if (seg[0] === 'threads' && seg[2] === 'messages') return method === 'POST' ? ok({ ok: true }) : ok([]);
+  // ---- two-way messaging, threaded per student ----
+  const canUseThread = (studentId: string): boolean => {
+    const stu = db.users.find((u) => u.id === studentId && u.role === 'student');
+    if (!stu) return false;
+    if (isAdmin) return true;
+    if (me.role === 'parent') return me.childIds.includes(studentId);
+    if (me.role === 'tutor') return stu.classIds.some((cid) => me.classIds.includes(cid));
+    return false;
+  };
+  if (rawPath === '/threads' && method === 'POST') {
+    const studentId = String(b.studentId ?? '');
+    if (!canUseThread(studentId)) return err(403, 'forbidden');
+    return ok({ threadId: `th_${studentId}`, existing: true });
+  }
+  if (rawPath === '/threads' && method === 'GET') {
+    // Teacher inbox: one thread per student with messages.
+    if (!(me.role === 'tutor' || isAdmin)) return err(403, 'forbidden');
+    const byStudent = new Map<string, { body: string; at: string; senderName: string }>();
+    for (const m of db.messages) {
+      if (!canUseThread(m.studentId)) continue;
+      const cur = byStudent.get(m.studentId);
+      if (!cur || m.at > cur.at) byStudent.set(m.studentId, { body: m.body, at: m.at, senderName: m.senderName });
+    }
+    return ok(
+      [...byStudent.entries()]
+        .sort((a, b2) => b2[1].at.localeCompare(a[1].at))
+        .map(([studentId, last]) => ({
+          threadId: `th_${studentId}`,
+          studentName: db.users.find((u) => u.id === studentId)?.name ?? '—',
+          lastBody: last.body,
+          lastFrom: last.senderName,
+          lastAt: last.at,
+        })),
+    );
+  }
+  if (seg[0] === 'threads' && seg[2] === 'messages') {
+    const studentId = seg[1].replace(/^th_/, '');
+    if (!canUseThread(studentId)) return err(403, 'forbidden');
+    if (method === 'POST') {
+      const body2 = String(b.body ?? '').trim();
+      if (!body2) return err(400, 'invalid_input');
+      db.messages.push({ studentId, senderId: me.id, senderName: me.name, body: body2, at: new Date().toISOString() });
+      save(db);
+      return ok({ ok: true });
+    }
+    return ok(db.messages.filter((m) => m.studentId === studentId).map((m) => ({ senderName: m.senderName, body: m.body, at: m.at })));
+  }
 
   // ---- owner dashboard (basic, computed) ----
   if (rawPath === '/billing/dashboard' && method === 'GET') {
