@@ -23,8 +23,8 @@ math tie-out), commit, push. Keep the app cohesive and simple — no bloat.
 - [ ] Editable company name, fiscal year, scenario names.
 - [ ] Retail price ladder (retailer margin → shelf price) per SKU.
 - [ ] Unit economics detail (per-can / per-unit breakdown).
-- [ ] Dark mode toggle.
-- [ ] Print / PDF-friendly layout + "Print" button.
+- [x] Dark mode toggle.
+- [x] Print / PDF-friendly layout + "Print" button.
 - [ ] Named what-if snapshots (compare saved states).
 - [ ] Inline help tooltips + glossary panel.
 - [ ] Accessibility pass (aria labels, focus states, contrast).

@@ -63,6 +63,18 @@
   .foot{color:var(--soft);font-size:12px;margin-top:30px;text-align:center}
   .view{display:none}
   .view.on{display:block}
+  body.dark{--ink:#f5f5f7;--soft:#a1a1a6;--line:#38383c;--bg:#1c1c1e;--card:#2c2c2e;--amber:#4a431f;
+    --shadow:0 1px 3px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);}
+  body.dark .nav{background:rgba(28,28,30,.82)}
+  body.dark .pill,body.dark .tbtn,body.dark .seg button{background:#2c2c2e}
+  body.dark input.cell{color:#ffe08a}
+  body.dark .note{background:#20303f;border-color:#2b465e;color:#cfe0f2}
+  @media print{
+    .nav,.toolbar,.scen,.foot{display:none !important}
+    .view{display:block !important}
+    .panel{break-inside:avoid;box-shadow:none;border-color:#ccc}
+    header{padding:0 0 8px}
+  }
   .note{background:#f3f7ff;border:1px solid #d9e6ff;border-radius:14px;padding:12px 16px;color:#274;font-size:13px;color:#33506e;margin-bottom:18px}
   .seg{display:inline-flex;border:1px solid var(--line);border-radius:980px;overflow:hidden;margin-bottom:14px}
   .seg button{border:0;background:#fff;padding:7px 14px;font-weight:600;font-size:13px;color:var(--soft);cursor:pointer}
@@ -89,6 +101,8 @@
     <button class="tbtn" id="btnLoad">📂 Load</button>
     <button class="tbtn" id="btnReset">↺ Reset</button>
     <button class="tbtn" id="btnCSV">⬇︎ Export CSV</button>
+    <button class="tbtn" id="btnTheme">🌙 Dark</button>
+    <button class="tbtn" id="btnPrint">🖨 Print</button>
     <span class="hint" id="saveMsg"></span>
   </div>
 
@@ -564,6 +578,12 @@ function exportCSV(){
   a.download="sparkling_daily_scenarios.csv"; a.click(); flash("CSV downloaded.");
 }
 ["btnSave","btnLoad","btnReset","btnCSV"].forEach((id,i)=>{const e=el(id); if(e) e.onclick=[saveState,loadState,resetState,exportCSV][i];});
+const THEME_KEY="organika_theme";
+function applyTheme(t){document.body.classList.toggle("dark",t==="dark");const b=el("btnTheme"); if(b) b.textContent=t==="dark"?"☀︎ Light":"🌙 Dark";}
+function toggleTheme(){const t=document.body.classList.contains("dark")?"light":"dark";applyTheme(t);try{localStorage.setItem(THEME_KEY,t);}catch(e){}}
+if(el("btnTheme")) el("btnTheme").onclick=toggleTheme;
+if(el("btnPrint")) el("btnPrint").onclick=()=>window.print();
+try{applyTheme(localStorage.getItem(THEME_KEY)||"light");}catch(e){}
 
 ["tgtGP","tgtEB"].forEach(id=>{const e=el(id); if(e) e.oninput=renderTargets;});
 try{ const raw=localStorage.getItem(STORE_KEY); if(raw) applyState(JSON.parse(raw)); }catch(e){}
