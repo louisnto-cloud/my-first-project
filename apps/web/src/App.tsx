@@ -358,8 +358,53 @@ function Parent({ lang, t }: { lang: Lang; t: (k: string) => string }) {
         </div>
       </div>
 
+      <FeedbackCard lang={lang} />
       <PasswordCard lang={lang} />
     </div>
+  );
+}
+
+// Parent → center feedback (feeds the owner's NPS tile).
+function FeedbackCard({ lang }: { lang: Lang }) {
+  const vi = lang === 'vi';
+  const term = new Date().toISOString().slice(0, 7); // one response per month
+  const [score, setScore] = useState<number | null>(null);
+  const [comment, setComment] = useState('');
+  const [state, setState] = useState<'idle' | 'sent' | 'dup'>('idle');
+
+  const send = async () => {
+    if (score == null) return;
+    try {
+      await api('POST', '/nps', { term, score, comment: comment.trim() });
+      setState('sent');
+    } catch (e) {
+      setState(e instanceof ApiError && e.status === 409 ? 'dup' : 'idle');
+    }
+  };
+
+  if (state === 'sent') {
+    return <div className="card text-center font-extrabold text-emerald-600">💜 {vi ? 'Cảm ơn góp ý của bạn!' : 'Thank you for your feedback!'}</div>;
+  }
+
+  return (
+    <details className="card !p-3">
+      <summary className="flex cursor-pointer items-center gap-2 text-sm font-extrabold text-muted">
+        <Icon name="heart" size={16} /> {vi ? 'Góp ý cho trung tâm' : 'Feedback for the center'}
+      </summary>
+      <div className="mt-3 space-y-2">
+        <div className="text-xs font-bold text-muted">{vi ? 'Bạn có giới thiệu E’TOP cho bạn bè không? (0–10)' : 'Would you recommend E’TOP? (0–10)'}</div>
+        <div className="flex flex-wrap gap-1">
+          {Array.from({ length: 11 }, (_, i) => (
+            <button key={i} onClick={() => setScore(i)} className={`h-9 w-9 rounded-xl border-2 text-sm font-black transition ${score === i ? 'border-violet-500 bg-violet-600 text-white' : 'border-violet-100 bg-white text-slate-500'}`}>
+              {i}
+            </button>
+          ))}
+        </div>
+        <textarea className="input text-sm" rows={2} placeholder={vi ? 'Điều gì có thể tốt hơn? (không bắt buộc)' : 'What could be better? (optional)'} value={comment} onChange={(e) => setComment(e.target.value)} />
+        <button onClick={send} disabled={score == null} className="btn-primary w-full text-sm">{vi ? 'Gửi góp ý' : 'Send'}</button>
+        {state === 'dup' && <div className="text-center text-sm font-bold text-amber-600">{vi ? 'Tháng này bạn đã góp ý rồi — cảm ơn bạn! 💜' : 'Already sent this month — thank you! 💜'}</div>}
+      </div>
+    </details>
   );
 }
 
@@ -436,7 +481,7 @@ function ParentInvoices() {
 // ---------- Owner / Academic Director dashboard ----------
 function OwnerDash() {
   const [finance, setFinance] = useState<{ revenue: { period: string; revenueVnd: string | number }[]; arAging: { bucket: string; outstandingVnd: string | number; invoices: number }[] } | null>(null);
-  const [nps, setNps] = useState<{ responses: number; nps: number | null } | null>(null);
+  const [nps, setNps] = useState<{ responses: number; nps: number | null; comments?: string[] } | null>(null);
   const [academic, setAcademic] = useState<{ stalled: { id: string; name: string }[]; velocity: { tutorName: string; avgDelta: string | number }[] } | null>(null);
   const [escalations, setEscalations] = useState<{ studentName: string }[]>([]);
 
@@ -479,6 +524,15 @@ function OwnerDash() {
           </div>
         ))}
       </div>
+
+      {(nps?.comments ?? []).length > 0 && (
+        <div className="card space-y-2">
+          <h3 className="text-sm font-extrabold text-violet-800">💬 Phụ huynh nói gì</h3>
+          {(nps?.comments ?? []).slice(0, 4).map((c, i) => (
+            <blockquote key={i} className="rounded-xl border-l-4 border-violet-200 bg-violet-50/60 p-2.5 text-sm font-semibold italic text-slate-600">“{c}”</blockquote>
+          ))}
+        </div>
+      )}
 
       {academic && academic.velocity.length > 0 && (
         <div className="card space-y-2">

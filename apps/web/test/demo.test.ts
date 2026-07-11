@@ -258,6 +258,23 @@ describe('demo engine — announcements', () => {
   });
 });
 
+describe('demo engine — parent feedback (NPS)', () => {
+  it('a parent scores once per term; the owner sees the score move and reads comments', async () => {
+    const parent = (await call('POST', '/auth/login', { email: 'phuhuynh@etop.vn', password: 'x' })).json as { token: string };
+    expect((await call('POST', '/nps', { term: '2026-07', score: 10, comment: 'Rất hài lòng!' }, parent.token)).status).toBe(200);
+    expect((await call('POST', '/nps', { term: '2026-07', score: 3 }, parent.token)).status).toBe(409); // once per term
+
+    const zhao = (await call('POST', '/auth/login', { email: 'zhao@etop.vn', password: 'x' })).json as { token: string };
+    const sum = (await call('GET', '/nps/summary', undefined, zhao.token)).json as { responses: number; nps: number; comments: string[] };
+    expect(sum.responses).toBe(4); // 3 seeded + 1
+    expect(sum.comments).toContain('Rất hài lòng!');
+
+    // Students cannot post NPS.
+    const bao = await loginCode('UP1482');
+    expect((await call('POST', '/nps', { term: '2026-07', score: 10 }, bao!)).status).toBe(403);
+  });
+});
+
 describe('demo engine — kiosk (front desk)', () => {
   async function loginEmail(email: string) {
     const r = await call('POST', '/auth/login', { email, password: 'x' });

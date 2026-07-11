@@ -101,11 +101,12 @@ interface DDB {
   pickups: DPickup[];
   syncedEvents: string[]; // kiosk idempotency
   announcements: DAnnouncement[];
+  nps: { userId: string; term: string; score: number; comment: string }[];
 }
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v8';
+const KEY = 'etop-demo-db-v9';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -241,6 +242,11 @@ function seed(): DDB {
     announcements: [
       { id: 'ann1', classId: null, authorName: 'Ms. Zhao', title: '📣 Nghỉ lễ Quốc khánh 2/9', body: 'Trung tâm nghỉ ngày 2/9. Các lớp học bù sẽ được thông báo với từng lớp. Chúc cả nhà kỳ nghỉ vui!', createdAt: new Date().toISOString() },
       { id: 'ann2', classId: 'up1', authorName: 'Ms. Ha', title: 'Tuần này học Unit 2 🎈', body: 'Cả lớp nhớ mang vở bài tập nhé. Bạn nào chưa nộp bài "Viết đoạn — My family" thì hoàn thành trước thứ 6.', createdAt: new Date().toISOString() },
+    ],
+    nps: [
+      { userId: 'seed_p1', term: 'seed', score: 10, comment: 'Cô giáo rất tận tâm, con tiến bộ rõ.' },
+      { userId: 'seed_p2', term: 'seed', score: 9, comment: 'App tiện, biết ngay con đến lớp chưa.' },
+      { userId: 'seed_p3', term: 'seed', score: 7, comment: 'Mong có thêm lớp cuối tuần.' },
     ],
   };
   return db;
@@ -851,7 +857,23 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     if (!['owner', 'academic_director'].includes(me.role)) return err(403, 'forbidden');
     return ok({ revenue: [{ period: today().slice(0, 7), revenueVnd: 27000000 }], arAging: [{ bucket: 'current', outstandingVnd: 4050000, invoices: 3 }] });
   }
-  if (rawPath === '/nps/summary' && method === 'GET') return ['owner', 'academic_director'].includes(me.role) ? ok({ responses: 12, nps: 67 }) : err(403, 'forbidden');
+  if (rawPath === '/nps' && method === 'POST') {
+    if (me.role !== 'parent') return err(403, 'parents_only');
+    const score = Number(b.score);
+    const term = String(b.term ?? '').trim();
+    if (!(score >= 0 && score <= 10) || term.length < 3) return err(400, 'invalid_input');
+    if (db.nps.some((r) => r.userId === me.id && r.term === term)) return err(409, 'already_responded');
+    db.nps.push({ userId: me.id, term, score, comment: String(b.comment ?? '').trim() });
+    save(db);
+    return ok({ ok: true });
+  }
+  if (rawPath === '/nps/summary' && method === 'GET') {
+    if (!['owner', 'academic_director'].includes(me.role)) return err(403, 'forbidden');
+    const n = db.nps.length;
+    const promoters = db.nps.filter((r) => r.score >= 9).length;
+    const detractors = db.nps.filter((r) => r.score <= 6).length;
+    return ok({ responses: n, nps: n ? Math.round(((promoters - detractors) / n) * 100) : null, comments: db.nps.filter((r) => r.comment).map((r) => r.comment).slice(0, 20) });
+  }
   if (rawPath === '/academic/dashboard' && method === 'GET') {
     if (!['owner', 'academic_director'].includes(me.role)) return err(403, 'forbidden');
     const deltas = [0.18, 0.12, 0.09, 0.15];
