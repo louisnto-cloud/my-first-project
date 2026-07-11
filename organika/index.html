@@ -495,6 +495,16 @@ body,button,input,textarea{font-family:'Be Vietnam Pro',-apple-system,BlinkMacSy
 .weak-info{display:flex;flex-direction:column;gap:2px}
 .weak-cat{font-size:14px;font-weight:700;color:var(--tx)}
 .weak-pct{font-size:12px;color:#C0392B;font-weight:700}
+.mode-list{display:flex;flex-direction:column;gap:8px}
+.mode-row-btn{display:flex;align-items:center;gap:12px;background:var(--wh);border:2px solid var(--bd);border-radius:16px;padding:12px 14px;cursor:pointer;font-family:inherit;text-align:left;transition:border-color .15s,transform .12s;width:100%}
+.mode-row-btn:active{transform:scale(.98)}
+.mode-row-btn.active{border-color:var(--g);background:var(--gp)}
+.mr-icon{font-size:24px;width:36px;text-align:center}
+.mr-txt{flex:1;display:flex;flex-direction:column;gap:1px}
+.mr-name{font-size:15px;font-weight:800;color:var(--tx)}
+.mr-desc{font-size:12px;color:var(--tx2)}
+.mr-check{font-size:18px;font-weight:900;color:var(--g)}
+.filters-toggle{display:block;width:100%;background:none;border:none;color:var(--tx2);font-size:13px;font-weight:700;padding:14px 4px 10px;cursor:pointer;font-family:inherit;text-align:center}
 .badge-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .ach{background:var(--wh);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:2px;box-shadow:var(--shd);border:1px solid rgba(29,58,45,.05)}
 .ach.locked{opacity:.42;filter:grayscale(.8)}
@@ -1117,6 +1127,39 @@ const INTEL=[
    'When in doubt, over-thank. Express gratitude for time, hospitality, and consideration at every interaction',
   ]},
  ]},
+{id:'i05',title:'Source Countries: How They Are Perceived',icon:'🌍',
+ sections:[
+  {h:'Canada 🇨🇦 (You)',pts:[
+   'Perception: clean, natural, safe, cold-climate purity — among the top 2 most trusted origins for health products',
+   'Strengths to lean on: pristine nature imagery, strict Health Canada regulation, "no fakes" reputation',
+   'Weakness: lower brand awareness than US or Australia — consumers trust "Canada" but may not know your brand',
+   'Play: put the maple leaf and "Made in Canada" front and center on shelf and in every pitch',
+  ]},
+  {h:'United States 🇺🇸',pts:[
+   'Perception: innovative, strong brands (Centrum, Nature Made), but "commercial" rather than pure',
+   'Consumers respect US science but associate it with mass market, not premium natural',
+   'Counterfeit concern: heavily faked in the gray market, which erodes trust in US labels',
+   'vs Canada: you win on perceived purity and safety; they win on brand recognition and ad budgets',
+  ]},
+  {h:'Australia 🇦🇺',pts:[
+   'Perception: the benchmark for premium natural supplements (Blackmores, Swisse dominate mindshare)',
+   'Strong "clean nature" story like Canada, plus a decade of aggressive marketing in Vietnam',
+   'Priced at the top of the market; consumers accept it',
+   'vs Canada: nearly identical positioning — differentiate on category (sparkling electrolyte) not on origin purity',
+  ]},
+  {h:'Japan 🇯🇵 and Korea 🇰🇷',pts:[
+   'Japan: highest quality perception overall; associated with precision and safety; strong in beauty-from-within',
+   'Korea: trend-driven, dominant in beauty and ginseng; K-wave marketing power with younger consumers',
+   'Both strong in drinkable formats — your sparkling format competes for the same modern consumer',
+   'Play: position Organika as Western active-lifestyle vs their beauty/tradition focus',
+  ]},
+  {h:'Europe 🇩🇪🇫🇷 and Local 🇻🇳',pts:[
+   'Germany/France: pharma-grade credibility, trusted by doctors and pharmacists; underdeveloped retail presence',
+   'Local Vietnamese brands: winning on price and distribution, losing on trust for ingestibles — urban consumers still prefer imported for anything they swallow',
+   'Thailand/Malaysia: seen as regional and affordable, not premium',
+   'Bottom line: imported beats local for supplements; within imports, Canada sits in the premium-trust tier with Australia and Japan',
+  ]},
+ ]},
 ];
 
 // ── REGISTER PRIMER ──────────────────────────────────────────────────────────
@@ -1213,6 +1256,7 @@ let S={
   lineRevealed:false, // current hidden line revealed
   placementScore:0,   // placement quiz correct count
   searchQ:'',         // dictionary search query
+  showFilters:false,  // practice screen: filters expanded
   xpDay:'',           // which day todayXP belongs to
   typeChecked:null,   // typing quiz: null | true | false
   buildWords:[],      // sentence builder: shuffled source words
@@ -1358,7 +1402,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v18';
+const APP_VERSION='v21';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1581,7 +1625,7 @@ function renderHome(){
     <div class="stat-row">
       <div class="stat-card"><div class="stat-n">${mastered}</div><div class="stat-l">Mastered</div></div>
       <div class="stat-card"><div class="stat-n">${learning}</div><div class="stat-l">Learning</div></div>
-      <div class="stat-card accent"><div class="stat-n">${due}</div><div class="stat-l">Due Now</div></div>
+      <div class="stat-card accent" onclick="startSmartSession()" style="cursor:pointer"><div class="stat-n">${due}</div><div class="stat-l">Due — tap to review</div></div>
     </div>
     <div class="section-label">Quick Start</div>
     <div class="action-grid">
@@ -1598,16 +1642,12 @@ function renderHome(){
         <span class="ac-icon">📋</span><span class="ac-label">Placement</span><span class="ac-sub">Where do you stand?</span>
       </button>
     </div>
-    <div class="section-label">Explore</div>
+    <div class="section-label">More Tools</div>
     <div class="explore-list">
       <button class="explore-row" onclick="S.priceTarget=0;S.priceRight=0;S.priceTotal=0;go('prices')"><span>💰</span><span>Price Listening Trainer</span><span class="arrow">›</span></button>
-      <button class="explore-row" onclick="go('dict')"><span>🔎</span><span>Dictionary — search all terms</span><span class="arrow">›</span></button>
-      <button class="explore-row" onclick="go('situations')"><span>🎭</span><span>Role-Play Dialogues</span><span class="arrow">›</span></button>
-      <button class="explore-row" onclick="go('intel')"><span>📊</span><span>Vietnam Market Intel</span><span class="arrow">›</span></button>
-      <button class="explore-row" onclick="go('primer')"><span>📖</span><span>Pronoun and Register Guide</span><span class="arrow">›</span></button>
-      <button class="explore-row" onclick="go('review')"><span>⭐</span><span>Star Review</span><span class="arrow">›</span></button>
-      <button class="explore-row" onclick="go('progress')"><span>📈</span><span>Progress and Export</span><span class="arrow">›</span></button>
-      <button class="explore-row" onclick="showAudioHelp()"><span>🔊</span><span>Audio not working? Test and fix</span><span class="arrow">›</span></button>
+      <button class="explore-row" onclick="go('dict')"><span>🔎</span><span>Dictionary</span><span class="arrow">›</span></button>
+      <button class="explore-row" onclick="go('primer')"><span>📖</span><span>Pronouns, Tones and Register</span><span class="arrow">›</span></button>
+      <button class="explore-row" onclick="showAudioHelp()"><span>🔊</span><span>Audio help</span><span class="arrow">›</span></button>
     </div>
     <div style="height:90px"></div>
   </main>
@@ -1628,23 +1668,36 @@ function startLesson(mode){
 function renderPractice(){
   const tiers=['all','A','B','C','D','E'];
   const cats=['all',...new Set(VOCAB.map(v=>v.category))];
+  const MODES=[
+    {k:'flashcard',icon:'🃏',n:'Flashcards',d:'See it, flip it, hear it'},
+    {k:'quiz',icon:'🧠',n:'Quiz',d:'Pick the right answer'},
+    {k:'type',icon:'⌨️',n:'Type It',d:'Write the Vietnamese'},
+    {k:'build',icon:'🧩',n:'Build It',d:'Arrange the words'},
+    {k:'drill',icon:'🎤',n:'Speak',d:'Listen and repeat'},
+  ];
+  const filtersOn=S.tierFilter!=='all'||S.catFilter!=='all';
   return `<div class="screen">
   <header class="screen-header"><span></span><span class="screen-title">Practice</span><span></span></header>
   <main class="main-scroll" style="padding:16px">
-    <div class="section-label">Mode</div>
-    <div class="mode-pills">
-      <button class="pill${S.practiceMode==='flashcard'?' active':''}" onclick="S.practiceMode='flashcard';render()">Flashcards</button>
-      <button class="pill${S.practiceMode==='quiz'?' active':''}" onclick="S.practiceMode='quiz';render()">Quiz</button>
-      <button class="pill${S.practiceMode==='type'?' active':''}" onclick="S.practiceMode='type';render()">Type It</button>
-      <button class="pill${S.practiceMode==='build'?' active':''}" onclick="S.practiceMode='build';render()">Build It</button>
-      <button class="pill${S.practiceMode==='drill'?' active':''}" onclick="S.practiceMode='drill';render()">Speak</button>
+    <div class="mode-list">
+      ${MODES.map(m=>`<button class="mode-row-btn${S.practiceMode===m.k?' active':''}" onclick="S.practiceMode='${m.k}';render()">
+        <span class="mr-icon">${m.icon}</span>
+        <span class="mr-txt"><span class="mr-name">${m.n}</span><span class="mr-desc">${m.d}</span></span>
+        ${S.practiceMode===m.k?'<span class="mr-check">✓</span>':''}
+      </button>`).join('')}
     </div>
-    ${S.practiceMode==='quiz'?`<div class="section-label">Direction</div>
+    ${S.practiceMode==='quiz'?`<div class="section-label" style="margin-top:14px">Quiz style</div>
     <div class="mode-pills">
       <button class="pill${S.quizDir==='en2vi'?' active':''}" onclick="S.quizDir='en2vi';render()">EN › VI</button>
       <button class="pill${S.quizDir==='vi2en'?' active':''}" onclick="S.quizDir='vi2en';render()">VI › EN</button>
       <button class="pill${S.quizDir==='listen'?' active':''}" onclick="S.quizDir='listen';render()">🎧 Listen</button>
     </div>`:''}
+    <div style="height:12px"></div>
+    <button class="btn-primary full-w" style="font-size:17px;padding:16px" onclick="startLesson('${S.practiceMode}')">▶ Start</button>
+    <button class="filters-toggle" onclick="S.showFilters=!S.showFilters;render()">
+      ⚙️ ${filtersOn?'Filters on: '+(S.tierFilter==='all'?'':'Tier '+S.tierFilter+' ')+(S.catFilter==='all'?'':S.catFilter):'Choose topics (optional)'} ${S.showFilters?'▴':'▾'}
+    </button>
+    ${S.showFilters?`
     <div class="section-label">Tier</div>
     <div class="mode-pills scroll-x">
       ${tiers.map(t=>`<button class="pill${S.tierFilter===t?' active':''}" onclick="S.tierFilter='${t}';render()">${t==='all'?'All Tiers':t}</button>`).join('')}
@@ -1652,9 +1705,7 @@ function renderPractice(){
     <div class="section-label">Category</div>
     <div class="mode-pills scroll-x">
       ${cats.map(c=>`<button class="pill${S.catFilter===c?' active':''}" onclick="S.catFilter='${c==="all"?"all":c.replace(/'/g,"\\'")}';render()">${c==='all'?'All':c}</button>`).join('')}
-    </div>
-    <div style="height:16px"></div>
-    <button class="btn-primary full-w" onclick="startLesson('${S.practiceMode}')">Start Session</button>
+    </div>`:''}
     <div style="height:90px"></div>
   </main>
   ${nav()}</div>`;
@@ -2421,8 +2472,11 @@ function renderDictResults(){
   const box=document.getElementById('dict-results');
   if(!box) return;
   const q=normStr(S.searchQ.trim());
-  const hits=q?VOCAB.filter(v=>normStr(v.en).includes(q)||normStr(v.vi).includes(q)).slice(0,40):[];
-  box.innerHTML=q?(hits.length?hits.map(v=>renderReviewCard(v)).join(''):`<div class="empty-state">No matches</div>`)
+  const all=q?VOCAB.filter(v=>normStr(v.en).includes(q)||normStr(v.vi).includes(q)):[];
+  const hits=all.slice(0,40);
+  box.innerHTML=q?(hits.length
+      ?`<div class="section-label">${all.length} match${all.length===1?'':'es'}${all.length>40?' — showing first 40':''}</div>`+hits.map(v=>renderReviewCard(v)).join('')
+      :`<div class="empty-state">No matches</div>`)
     :`<div class="empty-state">Type to search all ${VOCAB.length} terms.</div>`;
 }
 
