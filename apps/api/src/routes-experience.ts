@@ -80,6 +80,27 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
     return { points: totalPoints, streak, practiceDays: days.length, submissions, badges };
   });
 
+  // Last-7-days attendance for one child ("con đi học đều không?").
+  app.get('/parents/attendance-week', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    const { childId } = req.query as { childId?: string };
+    if (actor.role !== 'parent' || !childId || !(await isGuardianOf(db, actor.id, childId))) {
+      return reply.code(403).send({ error: 'forbidden' });
+    }
+    const rows = await many<{ date: string | Date; check_in_at: string | null }>(
+      db,
+      `SELECT date, check_in_at FROM attendance_records
+        WHERE student_id = $1 AND date >= $2 ORDER BY date`,
+      [childId, dateOf(new Date(Date.now() - 6 * 86_400_000))],
+    );
+    const byDay = new Map(rows.map((r) => [dateOf(new Date(r.date)), !!r.check_in_at]));
+    return Array.from({ length: 7 }, (_, i) => {
+      const d = dateOf(new Date(Date.now() - (6 - i) * 86_400_000));
+      return { date: d, attended: byDay.get(d) ?? false };
+    });
+  });
+
   // ---------- Avatar (kid-picked character) ----------
   const AVATARS = ['🦊', '🐼', '🐯', '🦄', '🐸', '🐰', '🐙', '🦖', '🐳', '🐝', '🐨', '🦁'];
   app.post('/me/avatar', async (req, reply) => {

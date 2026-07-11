@@ -108,7 +108,7 @@ interface DDB {
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v12';
+const KEY = 'etop-demo-db-v13';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -254,6 +254,17 @@ function seed(): DDB {
       { studentId: 's_UP1482', date: today(), className: 'Up 1', tutorName: 'Ms. Ha', parentNote: 'Hôm nay bé phát âm rất tốt và xung phong trả lời 3 lần. Về nhà ôn từ vựng Unit 1 giúp cô nhé!' },
     ],
   };
+  // A week of attendance history for the demo child (Up 1 meets Mon-Wed):
+  // present on class days except one absence, so the week view is honest.
+  for (let back = 6; back >= 1; back--) {
+    const d = new Date(Date.now() - back * 86_400_000);
+    const dow = d.getDay();
+    if ([1, 2, 3].includes(dow) && back !== 2) {
+      const at = new Date(d);
+      at.setHours(17, 28, 0, 0);
+      db.attendance.push({ studentId: 's_UP1482', date: d.toISOString().slice(0, 10), checkInAt: at.toISOString(), checkOutAt: null, releasedTo: null });
+    }
+  }
   return db;
 }
 
@@ -864,6 +875,18 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
       practice: { points: childPts, activities: 1 },
     });
   }
+  if (rawPath === '/parents/attendance-week' && method === 'GET') {
+    if (me.role !== 'parent') return err(403, 'forbidden');
+    const childId = (q.childId as string) || me.childIds[0];
+    if (!me.childIds.includes(childId)) return err(403, 'forbidden');
+    return ok(
+      Array.from({ length: 7 }, (_, i) => {
+        const d = new Date(Date.now() - (6 - i) * 86_400_000).toISOString().slice(0, 10);
+        return { date: d, attended: db.attendance.some((a) => a.studentId === childId && a.date === d && a.checkInAt) };
+      }),
+    );
+  }
+
   if (rawPath === '/parents/summaries' && method === 'GET') {
     if (me.role !== 'parent') return err(403, 'forbidden');
     const monday = new Date();

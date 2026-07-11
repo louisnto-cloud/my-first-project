@@ -258,6 +258,16 @@ describe('demo engine — announcements', () => {
   });
 });
 
+describe('demo engine — parent attendance week', () => {
+  it('shows the seeded class-day pattern for the own child only', async () => {
+    const parent = (await call('POST', '/auth/login', { email: 'phuhuynh@etop.vn', password: 'x' })).json as { token: string };
+    const days = (await call('GET', '/parents/attendance-week?childId=s_UP1482', undefined, parent.token)).json as { attended: boolean }[];
+    expect(days.length).toBe(7);
+    expect(days.some((d) => d.attended)).toBe(true); // seeded history
+    expect((await call('GET', '/parents/attendance-week?childId=s_UP2614', undefined, parent.token)).status).toBe(403);
+  });
+});
+
 describe('demo engine — after-class notes', () => {
   it("the teacher's note lands in the parent's daily digest; outsiders cannot log", async () => {
     const ha = await loginCode('GV0004');

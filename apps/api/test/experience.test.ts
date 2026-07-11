@@ -69,6 +69,18 @@ describe('practice and achievements', () => {
   });
 });
 
+describe('parent attendance week', () => {
+  it('returns 7 day slots for own child only', async () => {
+    const res = await req('GET', '/parents/attendance-week?childId=s0', parent);
+    expect(res.statusCode).toBe(200);
+    const days = res.json() as { date: string; attended: boolean }[];
+    expect(days.length).toBe(7);
+    expect(days[6].date).toBe(today);
+    expect((await req('GET', '/parents/attendance-week?childId=s1', parent)).statusCode).toBe(403);
+    expect((await req('GET', '/parents/attendance-week?childId=s0', minh)).statusCode).toBe(403);
+  });
+});
+
 describe('avatar', () => {
   it('accepts only the kid-safe list and appears on /me and the leaderboard', async () => {
     expect((await req('POST', '/me/avatar', minh, { avatar: '🦖' })).statusCode).toBe(200);

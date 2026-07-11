@@ -307,6 +307,7 @@ function Parent({ lang, t }: { lang: Lang; t: (k: string) => string }) {
   const [children, setChildren] = useState<{ id: string; name: string }[]>([]);
   const [childId, setChildId] = useState<string>('');
   const [digest, setDigest] = useState<Record<string, unknown> | null>(null);
+  const [week, setWeek] = useState<{ date: string; attended: boolean }[]>([]);
   const [summaries, setSummaries] = useState<{ weekStart: string; bodyEn: string; bodyVi: string }[]>([]);
   const [thread, setThread] = useState<string | null>(null);
   const [msgs, setMsgs] = useState<{ senderName: string; body: string }[]>([]);
@@ -324,6 +325,7 @@ function Parent({ lang, t }: { lang: Lang; t: (k: string) => string }) {
     if (!childId) return;
     void (async () => {
       setDigest(await api('GET', `/parents/digest?childId=${childId}`));
+      setWeek(await api<typeof week>('GET', `/parents/attendance-week?childId=${childId}`).catch(() => []));
       setSummaries(await api('GET', `/parents/summaries?childId=${childId}`));
       const th = await api<{ threadId: string }>('POST', '/threads', { studentId: childId });
       setThread(th.threadId);
@@ -370,6 +372,22 @@ function Parent({ lang, t }: { lang: Lang; t: (k: string) => string }) {
           </div>
           {practice && <div className="ml-auto text-center"><div className="text-2xl font-black">+{practice.points}</div><div className="text-[10px] font-bold text-violet-100">⭐ hôm nay</div></div>}
         </div>
+        {week.length > 0 && (
+          <div className="mt-3 flex items-center justify-between rounded-2xl bg-white/15 px-3 py-2">
+            <span className="text-[10px] font-extrabold uppercase tracking-wide text-violet-100">{lang === 'vi' ? '7 ngày qua' : 'Last 7 days'}</span>
+            <span className="flex gap-1.5">
+              {week.map((d) => (
+                <span
+                  key={d.date}
+                  title={d.date}
+                  className={`flex h-6 w-6 items-center justify-center rounded-full text-[10px] font-black ${d.attended ? 'bg-emerald-300 text-emerald-900' : 'bg-white/20 text-white/50'}`}
+                >
+                  {['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'][new Date(`${d.date}T12:00:00`).getDay()]}
+                </span>
+              ))}
+            </span>
+          </div>
+        )}
       </div>
 
       <Announcements lang={lang} />
