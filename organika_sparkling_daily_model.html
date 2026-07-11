@@ -88,9 +88,9 @@
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow">Organika</div>
-    <h1>Sparkling Daily</h1>
-    <p class="sub">One-Year Operating Model · FY2026 · all $ CDN</p>
+    <div class="eyebrow" id="hCompany">Organika</div>
+    <h1 id="hProduct">Sparkling Daily</h1>
+    <p class="sub" id="hSub">One-Year Operating Model · FY2026 · all $ CDN</p>
   </header>
 
   <div class="nav" id="nav"></div>
@@ -180,6 +180,10 @@
   <section class="view" data-view="Assumptions">
     <div class="note">This is the only place you type. Edit any yellow cell — every number everywhere updates instantly.</div>
     <div class="panel">
+      <h2>Brand &amp; year</h2>
+      <div id="asmpCfg"></div>
+    </div>
+    <div class="panel">
       <h2>SKU assumptions <span class="hint">(per case)</span></h2>
       <div id="asmpSku"></div>
     </div>
@@ -221,6 +225,7 @@ const LEVERS = {
   Stretch:{v:1.60, p:1.05, d:-0.01},
 };
 const SCEN = ["Low","Base","High","Stretch"];
+const CFG = {company:"Organika", product:"Sparkling Daily", fy:"FY2026"};
 const SEASON = [0.06,0.06,0.07,0.08,0.10,0.11,0.12,0.11,0.09,0.08,0.06,0.06];
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 let current = "Base";
@@ -476,7 +481,19 @@ function inp(val, onin, step="0.01"){
 function tinp(val, onin){
   return `<input class="cell" type="text" style="width:112px;text-align:left" value="${String(val).replace(/"/g,'&quot;')}" oninput="${onin}">`;
 }
+function renderHeader(){
+  const a=el("hCompany"), b=el("hProduct"), c=el("hSub");
+  if(a) a.textContent=CFG.company;
+  if(b) b.textContent=CFG.product;
+  if(c) c.textContent=`One-Year Operating Model · ${CFG.fy} · all $ CDN`;
+  document.title = `${CFG.company} · ${CFG.product} — One-Year Model`;
+}
+function setCfg(k,v){CFG[k]=v;renderHeader();}
 function renderAsmp(){
+  // brand & year
+  const cfgRows=[["Company","company"],["Product line","product"],["Fiscal year","fy"]];
+  el("asmpCfg").innerHTML="<table><tbody>"+cfgRows.map(r=>
+    `<tr><td>${r[0]}</td><td style="text-align:right">${tinp(CFG[r[1]],`setCfg('${r[1]}',this.value)`)}</td></tr>`).join("")+"</tbody></table>";
   // SKU table
   let h="<table><thead><tr><th>Flavour</th><th>Format</th><th>CP / case</th><th>Disc %</th><th>COGS Direct</th><th>COGS Indir.</th><th>A&P</th><th>Volume</th><th></th></tr></thead><tbody>";
   SKUS.forEach((s,i)=>{
@@ -549,15 +566,16 @@ function refresh(){renderKpis();renderCmp();renderPnl();renderMonthly();renderPr
 
 // ---------- persistence ----------
 const STORE_KEY = "organika_sparkling_daily_v1";
-const DEFAULTS = JSON.parse(JSON.stringify({SKUS, CO, LEVERS}));
+const DEFAULTS = JSON.parse(JSON.stringify({SKUS, CO, LEVERS, CFG}));
 function applyState(st){
   if(st.SKUS){ SKUS.length=0; st.SKUS.forEach(s=>SKUS.push(s)); }
   if(st.CO) Object.assign(CO, st.CO);
   if(st.LEVERS) Object.keys(st.LEVERS).forEach(k=>LEVERS[k]=st.LEVERS[k]);
-  renderAsmp(); refresh();
+  if(st.CFG) Object.assign(CFG, st.CFG);
+  renderHeader(); renderAsmp(); refresh();
 }
 function flash(m){const e=el("saveMsg"); if(e){e.textContent=m; setTimeout(()=>{e.textContent="";},2500);}}
-function saveState(){ localStorage.setItem(STORE_KEY, JSON.stringify({SKUS,CO,LEVERS})); flash("Saved to this browser."); }
+function saveState(){ localStorage.setItem(STORE_KEY, JSON.stringify({SKUS,CO,LEVERS,CFG})); flash("Saved to this browser."); }
 function loadState(){ const raw=localStorage.getItem(STORE_KEY); if(!raw){flash("Nothing saved yet.");return;} applyState(JSON.parse(raw)); flash("Loaded your saved numbers."); }
 function resetState(){ applyState(JSON.parse(JSON.stringify(DEFAULTS))); flash("Reset to starting placeholders."); }
 function exportCSV(){
@@ -587,7 +605,7 @@ try{applyTheme(localStorage.getItem(THEME_KEY)||"light");}catch(e){}
 
 ["tgtGP","tgtEB"].forEach(id=>{const e=el(id); if(e) e.oninput=renderTargets;});
 try{ const raw=localStorage.getItem(STORE_KEY); if(raw) applyState(JSON.parse(raw)); }catch(e){}
-buildNav();renderAsmp();refresh();
+renderHeader();buildNav();renderAsmp();refresh();
 </script>
 </body>
 </html>

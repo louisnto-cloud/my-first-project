@@ -20,7 +20,7 @@ math tie-out), commit, push. Keep the app cohesive and simple — no bloat.
 - [x] Targets / goal-seek view (price/volume to hit a GP% or EBITDA).
 - [x] Persistence: save/load/reset to localStorage + export CSV.
 - [x] Add / remove SKU (flexible product list).
-- [ ] Editable company name, fiscal year, scenario names.
+- [x] Editable company / product / fiscal year (scenario-name editing deferred).
 - [ ] Retail price ladder (retailer margin → shelf price) per SKU.
 - [ ] Unit economics detail (per-can / per-unit breakdown).
 - [x] Dark mode toggle.
