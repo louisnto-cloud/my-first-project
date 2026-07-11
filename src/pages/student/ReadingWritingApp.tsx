@@ -143,31 +143,15 @@ function LearnHome({ progress, pct, doneCount, totalLessons, onMonth, onLesson, 
 
   return (
     <div className="space-y-5">
-      <div className="rounded-2xl bg-gradient-to-br from-violet-600 to-indigo-600 p-6 text-white shadow-lg">
-        <div className="mb-1 text-3xl">📚</div>
-        <h1 className="text-2xl font-black">Read &amp; Write — Zero to Expert</h1>
-        <p className="mt-1 text-sm text-violet-200">6-Month Programme · {totalLessons} Lessons · {LIBRARY.length} Stories · Audio Everywhere</p>
-        <div className="mt-4">
-          <div className="mb-1 flex justify-between text-xs font-semibold text-violet-200">
-            <span>{doneCount} of {totalLessons} lessons complete</span>
-            <span>{pct}%</span>
-          </div>
-          <div className="h-3 w-full overflow-hidden rounded-full bg-white/20">
-            <div className="h-3 rounded-full bg-white transition-all duration-700" style={{ width: `${pct}%` }} />
-          </div>
-        </div>
-      </div>
-
-      <DailyGoals progress={progress} hasLessonsLeft={!!nextLesson} />
-
+      {/* The single most important action comes first */}
       {nextLesson ? (
         <button onClick={() => onLesson(nextLesson)}
-          className="flex w-full items-center gap-4 rounded-2xl border-2 border-violet-200 bg-white p-4 text-left shadow-sm transition-all hover:border-violet-400 hover:shadow-md">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-100 text-2xl">▶️</div>
-          <div>
-            <div className="text-xs font-bold uppercase tracking-wide text-violet-500">Continue Learning</div>
-            <div className="font-bold text-gray-800">{nextLesson.title}</div>
-            <div className="text-xs text-gray-500">Month {nextLesson.monthIndex + 1} · Week {nextLesson.weekIndex + 1}</div>
+          className="flex w-full items-center gap-4 rounded-2xl border-2 border-violet-300 bg-gradient-to-r from-violet-600 to-indigo-600 p-4 text-left shadow-lg transition-all hover:shadow-xl">
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white/20 text-3xl">▶️</div>
+          <div className="min-w-0">
+            <div className="text-xs font-bold uppercase tracking-wide text-violet-200">{doneCount === 0 ? 'Start Learning' : 'Continue Learning'}</div>
+            <div className="truncate font-black text-white">{nextLesson.title}</div>
+            <div className="text-xs text-violet-200">Month {nextLesson.monthIndex + 1} · Week {nextLesson.weekIndex + 1} · ~10 min</div>
           </div>
         </button>
       ) : (
@@ -177,6 +161,18 @@ function LearnHome({ progress, pct, doneCount, totalLessons, onMonth, onLesson, 
           <div className="text-xs text-amber-600">Your certificate is waiting in the ⭐ Me tab.</div>
         </div>
       )}
+
+      <DailyGoals progress={progress} hasLessonsLeft={!!nextLesson} />
+
+      <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
+        <div className="mb-1 flex justify-between text-xs font-semibold text-gray-500">
+          <span>📚 {doneCount} of {totalLessons} lessons · {LIBRARY.length} stories · audio everywhere</span>
+          <span className="font-black text-violet-600">{pct}%</span>
+        </div>
+        <div className="h-2.5 w-full overflow-hidden rounded-full bg-gray-100">
+          <div className="h-2.5 rounded-full bg-gradient-to-r from-violet-500 to-indigo-500 transition-all duration-700" style={{ width: `${pct}%` }} />
+        </div>
+      </div>
 
       <div>
         <h2 className="mb-3 text-lg font-black text-gray-700">Your 6-Month Programme</h2>

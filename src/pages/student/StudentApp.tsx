@@ -77,6 +77,17 @@ export function Dashboard() {
         </div>
       </div>
 
+      <Link to="/app/read-write" className="card flex items-center justify-between gap-3 border-indigo-200 bg-gradient-to-r from-indigo-50 to-violet-50 hover:border-indigo-400">
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">📚</span>
+          <div>
+            <div className="text-sm font-extrabold text-indigo-700">Read &amp; Write — Zero to Expert</div>
+            <div className="text-xs font-semibold text-slate-400">6-Month Programme · Audio Lessons · Interactive Exercises</div>
+          </div>
+        </div>
+        <span className="text-indigo-400">→</span>
+      </Link>
+
       <div className={`card flex items-center justify-between gap-3 ${doneToday ? 'border-emerald-200 bg-emerald-50' : 'border-orange-200 bg-orange-50'}`}>
         <p className="text-sm font-bold text-slate-600">{doneToday ? t('dash.streakSafe') : t('dash.keepStreak')}</p>
         {!doneToday && (
@@ -136,17 +147,6 @@ export function Dashboard() {
 
       <BadgesView studentId={user.id} />
       {user.classIds[0] && <LeaderboardView classId={user.classIds[0]} highlightId={user.id} />}
-
-      <Link to="/app/read-write" className="card flex items-center justify-between gap-3 border-indigo-200 bg-gradient-to-r from-indigo-50 to-violet-50 hover:border-indigo-400">
-        <div className="flex items-center gap-3">
-          <span className="text-2xl">📚</span>
-          <div>
-            <div className="text-sm font-extrabold text-indigo-700">Read &amp; Write — Zero to Expert</div>
-            <div className="text-xs font-semibold text-slate-400">6-Month Programme · Audio Lessons · Interactive Exercises</div>
-          </div>
-        </div>
-        <span className="text-indigo-400">→</span>
-      </Link>
 
       <Link to="/app/feedback" className="card flex items-center justify-between gap-3 hover:border-violet-300">
         <div className="flex items-center gap-3">
