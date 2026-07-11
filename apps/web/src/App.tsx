@@ -240,8 +240,25 @@ function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: strin
                   <Mascot size={30} mood="happy" /> {lang === 'vi' ? 'Chưa có bài mới — giỏi lắm!' : 'All done — great job!'}
                 </div>
               ) : (
-                (assignments[c.id] ?? []).map((a) => {
+                [...(assignments[c.id] ?? [])]
+                  // Unfinished first, then by nearest deadline.
+                  .sort((a, b) => {
+                    const da = a.myStatus === 'graded' || a.myStatus === 'submitted' ? 1 : 0;
+                    const db2 = b.myStatus === 'graded' || b.myStatus === 'submitted' ? 1 : 0;
+                    if (da !== db2) return da - db2;
+                    return (a.dueAt ? new Date(a.dueAt).getTime() : Infinity) - (b.dueAt ? new Date(b.dueAt).getTime() : Infinity);
+                  })
+                  .map((a) => {
                   const done = a.myStatus === 'graded' || a.myStatus === 'submitted';
+                  const hoursLeft = a.dueAt ? (new Date(a.dueAt).getTime() - Date.now()) / 3_600_000 : null;
+                  const due =
+                    !done && hoursLeft != null
+                      ? hoursLeft < 0
+                        ? { text: lang === 'vi' ? '⏰ Quá hạn!' : '⏰ Overdue!', tone: 'bg-rose-100 text-rose-600' }
+                        : hoursLeft < 26
+                          ? { text: lang === 'vi' ? '⏰ Hạn hôm nay/mai' : '⏰ Due soon', tone: 'bg-amber-100 text-amber-700' }
+                          : { text: `📅 ${new Date(a.dueAt!).toLocaleDateString('vi-VN', { weekday: 'short', day: 'numeric', month: 'numeric' })}`, tone: 'bg-slate-100 text-slate-500' }
+                      : null;
                   return (
                     <button
                       key={a.id}
@@ -251,8 +268,11 @@ function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: strin
                       <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${done ? 'bg-emerald-100 text-emerald-500' : 'bg-violet-600 text-white'}`}>
                         <Icon name={done ? 'check' : 'pencil'} size={18} />
                       </span>
-                      <span className="flex-1 font-extrabold text-ink">{a.title}</span>
-                      <span className={`chip ${done ? 'bg-emerald-100 text-emerald-600' : 'bg-violet-600 text-white'}`}>
+                      <span className="min-w-0 flex-1">
+                        <span className="block truncate font-extrabold text-ink">{a.title}</span>
+                        {due && <span className={`chip mt-0.5 ${due.tone}`}>{due.text}</span>}
+                      </span>
+                      <span className={`chip shrink-0 ${done ? 'bg-emerald-100 text-emerald-600' : 'bg-violet-600 text-white'}`}>
                         {a.myStatus === 'graded' ? t('graded') : a.myStatus === 'submitted' ? t('submitted') : a.myStatus === 'in_progress' ? t('continue') : t('start')}
                       </span>
                     </button>

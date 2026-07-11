@@ -107,7 +107,7 @@ interface DDB {
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v10';
+const KEY = 'etop-demo-db-v11';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -215,8 +215,8 @@ function seed(): DDB {
     classes,
     questions,
     assignments: [
-      { id: 'a_demo1', classId: 'up1', title: 'Unit 1 — Ôn tập / Review', status: 'published', questionIds: ['q1', 'q3', 'q4', 'q5'], dueAt: null },
-      { id: 'a_demo2', classId: 'up1', title: 'Viết đoạn — My family', status: 'published', questionIds: ['q9'], dueAt: null },
+      { id: 'a_demo1', classId: 'up1', title: 'Unit 1 — Ôn tập / Review', status: 'published', questionIds: ['q1', 'q3', 'q4', 'q5'], dueAt: new Date(Date.now() + 20 * 3_600_000).toISOString() },
+      { id: 'a_demo2', classId: 'up1', title: 'Viết đoạn — My family', status: 'published', questionIds: ['q9'], dueAt: new Date(Date.now() + 3 * 86_400_000).toISOString() },
     ],
     submissions: [
       // A classmate already handed in the seeded assignment, so the teacher
