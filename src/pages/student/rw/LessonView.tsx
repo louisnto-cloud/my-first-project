@@ -3,7 +3,7 @@ import { CURRICULUM, MONTH_COLORS } from '../../../data/curriculum';
 import type { Exercise, Lesson } from '../../../data/curriculum';
 import { analyzeWriting, awardOnce, XP, type RWProgress } from './engine';
 import { useTTS } from './useTTS';
-import { AudioSettings, Confetti, MarkdownContent, NavButton, PlayButton, StepCard, TappableText, XpChip } from './shared';
+import { AudioNotice, AudioSettings, Confetti, MarkdownContent, NavButton, PlayButton, StepCard, TappableText, XpChip } from './shared';
 
 type LessonStep = 'intro' | 'content' | 'keywords' | 'dictation' | 'exercises' | 'writing' | 'complete';
 
@@ -142,6 +142,7 @@ export default function LessonView({ lesson, progress, apply, onBack }: {
 
       {step === 'intro' && (
         <StepCard>
+          <AudioNotice tts={tts} />
           <div className="text-center">
             <div className="mb-3 text-5xl">🎯</div>
             <h3 className="text-xl font-black text-gray-800">Lesson Goal</h3>

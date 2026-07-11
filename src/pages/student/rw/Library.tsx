@@ -3,7 +3,7 @@ import { LIBRARY, type Story } from '../../../data/library';
 import { CURRICULUM, MONTH_COLORS } from '../../../data/curriculum';
 import { awardOnce, isMonthUnlocked, XP, type RWProgress } from './engine';
 import { useTTS } from './useTTS';
-import { AudioSettings, Confetti, NavButton, PlayButton, StepCard, TappableText, XpChip } from './shared';
+import { AudioNotice, AudioSettings, Confetti, NavButton, PlayButton, StepCard, TappableText, XpChip } from './shared';
 
 export default function Library({ progress, apply }: {
   progress: RWProgress;
@@ -111,6 +111,7 @@ function StoryReader({ story, progress, apply, onBack }: {
 
       {phase === 'read' && (
         <StepCard>
+          <AudioNotice tts={tts} />
           <div className="flex items-center justify-between">
             <span className="text-sm font-bold text-gray-700">🎧 Read along — words light up</span>
             <PlayButton tts={tts} text={fullText} color={c.bg} highlight label="Read to me" />

@@ -22,6 +22,19 @@ export function XpChip({ amount }: { amount: number }) {
 }
 
 // ─── Audio controls ───────────────────────────────────────────────────────────
+/** Shown when the browser can't produce speech, so silent audio buttons don't look broken. */
+export function AudioNotice({ tts }: { tts: TTS }) {
+  if (tts.supported && !tts.failed) return null;
+  return (
+    <div className="flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs font-semibold text-amber-800">
+      <span className="text-base">🔇</span>
+      <span>
+        Audio isn't available in this browser{tts.failed ? ' (no speech voices installed)' : ''}.
+        Everything still works for reading — for the spoken lessons, try Chrome, Edge, or Safari on a phone or computer.
+      </span>
+    </div>
+  );
+}
 export function PlayButton({ tts, text, color, highlight, label }: { tts: TTS; text: string; color: string; highlight?: boolean; label?: string }) {
   return (
     <button

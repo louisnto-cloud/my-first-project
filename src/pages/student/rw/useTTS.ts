@@ -7,7 +7,9 @@ import { loadTTSSettings, saveTTSSettings, type TTSSettings } from './engine';
  * enabling karaoke-style read-along in the reader views.
  */
 export function useTTS() {
+  const supported = typeof window !== 'undefined' && 'speechSynthesis' in window;
   const [speaking, setSpeaking] = useState(false);
+  const [failed, setFailed] = useState(false); // a speak attempt errored (e.g. no voices installed)
   const [wordIndex, setWordIndex] = useState(-1);
   const [settings, setSettingsState] = useState<TTSSettings>(loadTTSSettings);
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
@@ -53,9 +55,14 @@ export function useTTS() {
     const voice = voices.find((v) => v.voiceURI === settings.voiceURI);
     if (voice) u.voice = voice;
 
-    u.onstart = () => { setSpeaking(true); if (opts?.highlight) setWordIndex(0); };
+    u.onstart = () => { setSpeaking(true); setFailed(false); if (opts?.highlight) setWordIndex(0); };
     u.onend = () => { setSpeaking(false); setWordIndex(-1); };
-    u.onerror = () => { setSpeaking(false); setWordIndex(-1); };
+    u.onerror = (e) => {
+      setSpeaking(false);
+      setWordIndex(-1);
+      // 'interrupted'/'canceled' are normal (we cancel before each speak) — anything else means audio genuinely failed
+      if (e.error !== 'interrupted' && e.error !== 'canceled') setFailed(true);
+    };
     if (opts?.highlight) {
       u.onboundary = (e) => {
         if (e.name && e.name !== 'word') return;
@@ -70,7 +77,7 @@ export function useTTS() {
 
   useEffect(() => () => { window.speechSynthesis?.cancel(); }, []);
 
-  return { speak, stop, speaking, wordIndex, settings, setSettings, voices };
+  return { speak, stop, speaking, wordIndex, settings, setSettings, voices, supported, failed };
 }
 
 export type TTS = ReturnType<typeof useTTS>;
