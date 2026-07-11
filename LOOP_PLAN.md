@@ -57,4 +57,10 @@ friendly, colorful, satisfying micro feedback, large clear typography.
 - [ ] Data integrity, guard against corrupt localStorage, migration safety.
 
 ## Log
-(iteration entries appended below)
+- Iteration 1. Global ErrorBoundary wrapping the provider tree, friendly bilingual
+  recovery card with Reload and Restore demo data. A thrown render no longer blanks
+  the app. Verified in a headless browser by forcing a render error.
+- Iteration 2. Store resilience. loadDB now validates that every DB collection is an
+  array and reseeds on corrupt or partial localStorage. All writes go through a
+  guarded persist that tolerates full or blocked storage. Verified in browser with
+  corrupt and partial databases, both recover to the login page.
