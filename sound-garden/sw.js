@@ -2,7 +2,7 @@
    Every file (including all voice audio) is downloaded once on first
    visit and then served from the device, so the app works with no wifi.
    Bump CACHE_NAME whenever any file changes so devices refetch. */
-const CACHE_NAME = 'sound-garden-v2';
+const CACHE_NAME = 'sound-garden-v3';
 const CORE = ['./', './index.html', './manifest.json', './apple-touch-icon.png', './icon-512.png'];
 const AUDIO = [
   'assets/a.mp3',
