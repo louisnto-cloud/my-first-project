@@ -37,3 +37,6 @@ math tie-out), commit, push. Keep the app cohesive and simple — no bloat.
   + retail ladder, Guide/glossary, accessibility, named snapshots.
 - Browser QA (headless Chromium): all 9 views render, zero console/page errors.
 - All original backlog items complete. App is feature-complete & cohesive.
+- Cycle 2: Excel parity — added Unit Economics & Retail Price tab (per-unit
+  breakdown + shelf price at retailer margin); cover index updated. Ties to
+  the HTML (shelf $1.9231/unit @35%); Checks ALL PASS.

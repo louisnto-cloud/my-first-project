@@ -97,7 +97,7 @@ PCT = "0.0%"; PCT2 = "0.00%"; MULT = "0.00\\x"
 TAB = {"Home": "0A84FF", "Cover": "808A99", "Guide": "808A99", "Review Log": "808A99",
        "Assumptions": "E8A33D", "Dashboard": "2E7D32",
        "Low": "5B6FA6", "Base": "2E4374", "High": "5B6FA6", "Stretch": "5B6FA6",
-       "Monthly": "00838F", "Pricing Lab": "6A1B9A", "Targets": "6A1B9A",
+       "Monthly": "00838F", "Pricing Lab": "6A1B9A", "Unit Economics": "6A1B9A", "Targets": "6A1B9A",
        "Sensitivity": "EF6C00", "Checks": "B00020"}
 
 
@@ -687,6 +687,9 @@ def build_cover(ws):
         ("Dashboard", "Scenario comparison (table)"),
         ("Low / Base / High / Stretch", "Full P&L per scenario (6 SKUs + total → Net Income)"),
         ("Monthly", "Seasonalised monthly P&L for a selected scenario"),
+        ("Pricing Lab", "Best wholesale price (CP) per SKU"),
+        ("Unit Economics", "Per-unit costs + suggested retail shelf price"),
+        ("Targets", "Goal-seek: price/volume to hit a GP% or EBITDA"),
         ("Sensitivity", "Two-way EBITDA table + break-even volume"),
         ("Checks", "Automated validation (should read ALL PASS)"),
     ]
@@ -1012,6 +1015,59 @@ def build_home(ws, ws_dash, A):
 
 
 # =====================================================================
+#  UNIT ECONOMICS  (per-unit breakdown + retail price ladder)
+# =====================================================================
+def build_unit_economics(ws, A):
+    ws.sheet_view.showGridLines = False
+    setcell(ws, "B1", f"{LINE} - Unit Economics & Retail Price ({FY})", f_title)
+    setcell(ws, "B2", "Per-unit view of each SKU, plus the suggested shelf price at your retailer's margin.", f_sub)
+
+    setcell(ws, "B4", "Retailer margin", f_lblb, align=left)
+    setcell(ws, "C4", 0.35, f_in, PCT, fill_in, rght, True)
+    setcell(ws, "D4", "shelf price = wholesale unit price / (1 - margin)", f_sub, align=left)
+    MARGIN = "$C$4"
+
+    # SKU header
+    setcell(ws, "B6", "Per unit (CDN $)", f_hdr, fill=fill_band, align=left, border=True)
+    for i, (fmt, fl) in enumerate(SKUS):
+        setcell(ws, f"{SKU_COLS[i]}6", fl, f_hdr, fill=fill_band, align=center, border=True)
+
+    rows = [
+        ("Units per case", CASES, lambda c: f"='Assumptions'!{c}{A['units']}"),
+        ("Wholesale (CP) / unit", MON2, lambda c: f"=IFERROR('Assumptions'!{c}{A['cp']}/'Assumptions'!{c}{A['units']},0)"),
+        ("Net / unit (after disc)", MON2, lambda c: f"=IFERROR('Assumptions'!{c}{A['cp']}*(1-'Assumptions'!{c}{A['disc']})/'Assumptions'!{c}{A['units']},0)"),
+        ("COGS / unit", MON2, lambda c: f"=IFERROR('Assumptions'!{c}{A['cos']}/'Assumptions'!{c}{A['units']},0)"),
+    ]
+    r = 7
+    row_at = {}
+    for label, fmt, f in rows:
+        setcell(ws, f"B{r}", "   " + label, f_lbl, align=left)
+        for c in SKU_COLS:
+            setcell(ws, f"{c}{r}", f(c), f_calc, fmt, fill_tot, rght, True)
+        row_at[label] = r
+        r += 1
+    rn, rc = row_at["Net / unit (after disc)"], row_at["COGS / unit"]
+    setcell(ws, f"B{r}", "   Gross profit / unit", f_lblb, align=left)
+    for c in SKU_COLS:
+        setcell(ws, f"{c}{r}", f"={c}{rn}-{c}{rc}", f_lblb, MON2, fill_tot, rght, True)
+    r_gp = r; r += 1
+    setcell(ws, f"B{r}", "   GP %", f_lbl, align=left)
+    for c in SKU_COLS:
+        setcell(ws, f"{c}{r}", f"=IFERROR({c}{r_gp}/{c}{rn},0)", f_calc, PCT, fill_tot, rght, True)
+    r += 1
+    r_w = row_at["Wholesale (CP) / unit"]
+    setcell(ws, f"B{r}", "   Suggested shelf / unit", f_lblb, align=left)
+    for c in SKU_COLS:
+        setcell(ws, f"{c}{r}", f"=IFERROR({c}{r_w}/(1-{MARGIN}),0)", f_lblb, MON2, fill_tot, rght, True)
+
+    ws.column_dimensions["A"].width = 2
+    ws.column_dimensions["B"].width = 26
+    for c in SKU_COLS:
+        ws.column_dimensions[c].width = 13
+    ws.freeze_panes = "C7"
+
+
+# =====================================================================
 #  ASSEMBLE
 # =====================================================================
 ws_home = wb.active; ws_home.title = "Home"
@@ -1020,6 +1076,7 @@ ws_dash = wb.create_sheet("Dashboard")
 scen_ws = {s: wb.create_sheet(s) for s in SCEN}
 ws_month = wb.create_sheet("Monthly")
 ws_price = wb.create_sheet("Pricing Lab")
+ws_uecon = wb.create_sheet("Unit Economics")
 ws_target = wb.create_sheet("Targets")
 ws_sens = wb.create_sheet("Sensitivity")
 ws_checks = wb.create_sheet("Checks")
@@ -1033,6 +1090,7 @@ for s in SCEN:
 build_monthly(ws_month, A)
 build_sensitivity(ws_sens, A)          # before dashboard/cover/home (they reference C23)
 build_pricing(ws_price, A)
+build_unit_economics(ws_uecon, A)
 build_targets(ws_target, A)
 build_dashboard(ws_dash)
 build_checks(ws_checks, A)
@@ -1043,7 +1101,7 @@ build_home(ws_home, ws_dash, A)
 
 # ---- simple-first tab order (Apple-style) ----
 order = ["Home", "Assumptions", "Dashboard", "Base", "Low", "High", "Stretch",
-         "Monthly", "Pricing Lab", "Targets", "Sensitivity", "Checks",
+         "Monthly", "Pricing Lab", "Unit Economics", "Targets", "Sensitivity", "Checks",
          "Guide", "Review Log", "Cover"]
 wb._sheets.sort(key=lambda s: order.index(s.title) if s.title in order else 99)
 
