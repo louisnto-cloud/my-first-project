@@ -10,6 +10,7 @@ import { Announcements } from './Announcements';
 import { PracticeHub } from './Practice';
 import { Icon } from './Icon';
 import { Mascot } from './Mascot';
+import { setSoundOn, sfx, soundOn } from './sound';
 
 const ROLE_LABEL: Record<string, { vi: string; en: string }> = {
   student: { vi: 'Học viên', en: 'Student' },
@@ -33,6 +34,13 @@ function useT(): [Lang, (l: Lang) => void, (k: string) => string] {
 
 function Header({ me, lang, setLang, onLogout }: { me: Me; lang: Lang; setLang: (l: Lang) => void; t: (k: string) => string; onLogout: () => void }) {
   const role = ROLE_LABEL[me.role];
+  const [sound, setSound] = useState(soundOn());
+  const toggleSound = () => {
+    const next = !sound;
+    setSoundOn(next);
+    setSound(next);
+    if (next) sfx.click();
+  };
   return (
     <header className="sticky top-0 z-20 border-b border-[var(--line)] bg-cloud/70 backdrop-blur-xl">
       {isDemo() && (
@@ -52,6 +60,14 @@ function Header({ me, lang, setLang, onLogout }: { me: Me; lang: Lang; setLang: 
           </div>
         </div>
         <div className="flex items-center gap-1.5">
+          <button
+            onClick={toggleSound}
+            aria-pressed={!sound}
+            aria-label={lang === 'vi' ? (sound ? 'Tắt âm thanh' : 'Bật âm thanh') : sound ? 'Mute sounds' : 'Unmute sounds'}
+            className={`surface p-2 transition ${sound ? 'text-violet-500 hover:border-violet-300' : 'text-slate-300 line-through'}`}
+          >
+            <Icon name="volume" size={17} />
+          </button>
           <a href="./manual.html" aria-label={lang === 'vi' ? 'Hướng dẫn sử dụng' : 'User guide'} className="surface p-2 text-violet-500 transition hover:border-violet-300">
             <Icon name="book" size={17} />
           </a>
