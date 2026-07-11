@@ -517,6 +517,33 @@ body,button,input,textarea{font-family:'Be Vietnam Pro',-apple-system,BlinkMacSy
 .welcome-card{margin:0 16px 12px;background:var(--tp);border-radius:var(--r);padding:16px;border-left:4px solid var(--t)}
 .welcome-title{font-size:16px;font-weight:800;color:#7A3900;margin-bottom:4px}
 .welcome-card p{font-size:13px;color:#7A3900;line-height:1.5}
+/* ════════════════ DARK MODE ════════════════ */
+@media (prefers-color-scheme: dark){
+  :root{--bg:#121917;--wh:#1C2622;--tx:#E8EFEA;--tx2:#95A69D;--bd:#2C3A34;
+    --gp:#1F3529;--tp:#3A2A21;
+    --shd:0 4px 20px rgba(0,0,0,.35);--shd-lg:0 10px 34px rgba(0,0,0,.5)}
+  .card-south-note,.sit-context{color:#A9DFC1}
+  .sit-culture,.vi-say,.tip,.reg-note{color:#EFC2A6}
+  .welcome-title,.welcome-card p{color:#EFC2A6}
+  .card-reg-note{background:#1D2A3A;color:#AECBEB}
+  .quiz-opt.correct{background:#132A1D;color:#A9DFC1}
+  .quiz-opt.wrong{background:#331A1C;color:#F0AAAA}
+  .grade-btn.wrong{background:#331A1C;color:#F0AAAA}
+  .grade-btn.hard{background:#332C13;color:#E8C878}
+  .grade-btn.ok{background:#132A1D;color:#A9DFC1}
+  .bottom-nav{background:rgba(20,28,25,.94);border-top-color:rgba(255,255,255,.06)}
+  .stat-card.accent .stat-n{color:#EFA57D}
+  .primer-table th{color:#A9DFC1}
+  .chip.picked{color:#A9DFC1}
+  .south-note,.scene-ctx,.info{color:#A9DFC1}
+  .cultural-note{color:#EFC2A6}
+  .warning{background:#332C13;border-color:#5C4E1E;color:#E8C878}
+  .acc-flag{background:#332C13;border-color:#5C4E1E;color:#E8C878}
+  .dict-input,.export-box{color:var(--tx)}
+  .weak-pct{color:#F0AAAA}
+  .btn-danger{background:#331A1C;color:#F0AAAA}
+  .mode-row-btn.active{background:var(--gp)}
+}
 </style>
 </head>
 <body>
@@ -1514,7 +1541,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v35';
+const APP_VERSION='v36';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
