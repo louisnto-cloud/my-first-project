@@ -22,7 +22,8 @@ function Shell({ children }: { children: React.ReactNode }) {
   // can be completed one-handed without distraction.
   const inLesson =
     pathname.startsWith('/lesson') || pathname.startsWith('/mass') ||
-    pathname.startsWith('/rosary') || pathname.startsWith('/stations');
+    pathname.startsWith('/rosary') || pathname.startsWith('/stations') ||
+    pathname.startsWith('/mercy');
   const inOnboarding = pathname.startsWith('/onboarding');
 
   useEffect(() => {

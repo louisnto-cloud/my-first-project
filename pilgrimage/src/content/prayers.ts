@@ -206,4 +206,67 @@ PRAYERS.push({
   },
 });
 
+// ── The Divine Mercy chaplet's own prayers ───────────────────────────────────
+
+PRAYERS.push(
+  {
+    id: 'eternal-father',
+    name: { en: 'Eternal Father', vi: 'Kinh Lạy Cha Hằng Hữu', viStatus: 'verified' },
+    en: [
+      'Eternal Father, I offer you the Body and Blood,',
+      'Soul and Divinity of your dearly beloved Son,',
+      'our Lord Jesus Christ,',
+      'in atonement for our sins and those of the whole world.',
+    ],
+    vi: [
+      'Lạy Cha Hằng Hữu, con xin dâng lên Cha Mình và Máu,',
+      'linh hồn và thần tính của Con rất yêu dấu Cha',
+      'là Đức Giêsu Kitô, Chúa chúng con,',
+      'để đền vì tội lỗi chúng con và toàn thế giới.',
+    ],
+    viStatus: 'unverified',
+    about: {
+      en: 'Prayed on the large beads of the Divine Mercy chaplet, once before each decade.',
+      vi: 'Đọc trên các hạt lớn của Chuỗi Lòng Chúa Thương Xót, một lần trước mỗi chục kinh.',
+      viStatus: 'unverified',
+    },
+  },
+  {
+    id: 'sorrowful-passion',
+    name: { en: 'For the Sake of His Sorrowful Passion', vi: 'Vì Cuộc Khổ Nạn Đau Thương', viStatus: 'verified' },
+    en: [
+      'For the sake of His sorrowful Passion,',
+      'have mercy on us and on the whole world.',
+    ],
+    vi: [
+      'Vì cuộc khổ nạn đau thương của Chúa Giêsu Kitô,',
+      'xin Cha thương xót chúng con và toàn thế giới.',
+    ],
+    viStatus: 'unverified',
+    about: {
+      en: 'The small-bead prayer of the Divine Mercy chaplet, repeated ten times in each decade — mercy asked, over and over, like waves.',
+      vi: 'Lời kinh hạt nhỏ của Chuỗi Lòng Chúa Thương Xót, lặp lại mười lần mỗi chục — xin thương xót, lặp đi lặp lại, như những đợt sóng.',
+      viStatus: 'unverified',
+    },
+  },
+  {
+    id: 'holy-god',
+    name: { en: 'Holy God, Holy Mighty One', vi: 'Kinh Lạy Đấng Chí Thánh', viStatus: 'verified' },
+    en: [
+      'Holy God, Holy Mighty One, Holy Immortal One,',
+      'have mercy on us and on the whole world.',
+    ],
+    vi: [
+      'Lạy Đấng Chí Thánh, là Thiên Chúa Toàn Năng Hằng Hữu,',
+      'xin thương xót chúng con và toàn thế giới.',
+    ],
+    viStatus: 'unverified',
+    about: {
+      en: 'The ancient Trisagion, prayed three times to close the Divine Mercy chaplet.',
+      vi: 'Kinh Trisagion cổ kính, đọc ba lần để kết thúc Chuỗi Lòng Chúa Thương Xót.',
+      viStatus: 'unverified',
+    },
+  },
+);
+
 export const prayerById = (id: string) => PRAYERS.find((p) => p.id === id);

@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { PRAYERS } from '@/content/prayers';
+import { MERCY_NAME } from '@/content/mercy';
 import { lessonById } from '@/content/worlds';
 import { exportJSON, importJSON } from '@/lib/storage';
 import { collectUnverified, downloadFile } from '@/lib/review';
@@ -55,6 +56,10 @@ export default function ChapelPage() {
           <Link href="/stations" className="rounded-2xl border border-gold/30 px-4 py-3.5">
             <span className="block font-display text-base text-ivory">{t(UI.stationsTitle)}</span>
             <span className="mt-0.5 block text-xs text-incense">{t(UI.stationsSubtitle)}</span>
+          </Link>
+          <Link href="/mercy" className="rounded-2xl border border-gold/30 px-4 py-3.5">
+            <span className="block font-display text-base text-ivory">{t(MERCY_NAME)}</span>
+            <span className="mt-0.5 block text-xs text-incense">{t(UI.mercySubtitle)}</span>
           </Link>
         </div>
       </section>

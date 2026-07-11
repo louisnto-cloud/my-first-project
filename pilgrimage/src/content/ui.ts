@@ -164,6 +164,10 @@ export const UI = {
   stationWord: v('Station', 'Chặng thứ'),
   stationsDone: v('You have walked the Way of the Cross. Go home in the hope of the third day.', 'Bạn đã đi trọn Đàng Thánh Giá. Hãy trở về trong niềm hy vọng của ngày thứ ba.'),
   tapToContinue: v('Tap to continue', 'Chạm để tiếp tục'),
+
+  // The Divine Mercy Chaplet
+  mercySubtitle: v('Seven minutes of mercy, on ordinary rosary beads — the three o’clock prayer.', 'Bảy phút của lòng thương xót, trên tràng hạt Mân Côi — lời kinh lúc ba giờ chiều.'),
+  mercyDone: v('Jesus, I trust in you. The chaplet is complete.', 'Lạy Chúa Giêsu, con tín thác vào Chúa. Chuỗi kinh đã hoàn tất.'),
   rosaryAnnounce: v('The next mystery', 'Mầu nhiệm tiếp theo'),
   rosaryTapNext: v('Tap for the next bead', 'Chạm để sang hạt tiếp theo'),
   rosaryDone: v('A whole rosary, prayed. The beads in your hands know their purpose now.', 'Trọn một chuỗi Mân Côi đã được nguyện. Những hạt chuỗi trong tay bạn giờ đã biết sứ mạng của mình.'),
