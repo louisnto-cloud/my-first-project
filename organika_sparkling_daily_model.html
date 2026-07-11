@@ -189,6 +189,24 @@
     </div>
   </section>
 
+  <!-- GUIDE -->
+  <section class="view" data-view="Guide">
+    <div class="panel">
+      <h2>How to use this</h2>
+      <ol style="line-height:1.9;color:var(--ink);padding-left:20px">
+        <li>Pick a <b>scenario</b> at the top (Low, Base, High, Stretch). Every view reflects it.</li>
+        <li>Go to <b>Assumptions</b> — the only place you type. Change any yellow cell.</li>
+        <li>Read the results: <b>Overview</b> for headlines, <b>P&amp;L</b> for the full picture, <b>Monthly</b> for phasing.</li>
+        <li>Use <b>Pricing Lab</b> to see the best wholesale price, and <b>Targets</b> to work backwards from a goal.</li>
+        <li>Click <b>Save</b> to keep your numbers in this browser; <b>Export CSV</b> to take them elsewhere.</li>
+      </ol>
+    </div>
+    <div class="panel">
+      <h2>Plain-English glossary</h2>
+      <div id="glossary"></div>
+    </div>
+  </section>
+
   <!-- ASSUMPTIONS -->
   <section class="view" data-view="Assumptions">
     <div class="note">This is the only place you type. Edit any yellow cell — every number everywhere updates instantly.</div>
@@ -513,6 +531,25 @@ function inp(val, onin, step="0.01"){
 function tinp(val, onin){
   return `<input class="cell" type="text" style="width:112px;text-align:left" value="${String(val).replace(/"/g,'&quot;')}" oninput="${onin}">`;
 }
+const GLOSSARY = [
+  ["CP (wholesale price)", "The price per case you charge your customer (retailer/distributor). The model's main lever."],
+  ["Case", "A shipping case. Singles and 4-Pack hold different unit counts — set 'Units/case' in Assumptions."],
+  ["Trade discount", "Off-invoice allowances and promo funding, shown as a % of gross revenue."],
+  ["Net Sales", "Gross revenue minus trade discounts — the real top line."],
+  ["COGS", "Cost of goods sold: ingredients, packaging, co-pack and freight (direct) plus warehousing (indirect)."],
+  ["Gross Profit", "Net Sales minus COGS. GP % = Gross Profit ÷ Net Sales."],
+  ["A&P", "Advertising & Promotion spend (consumer + trade + sales/broker)."],
+  ["Contribution", "Gross Profit minus A&P — what a SKU contributes before company overheads."],
+  ["EBITDA", "Earnings before interest, tax, depreciation & amortisation — operating profit."],
+  ["Net Income", "The bottom line after depreciation, interest and tax."],
+  ["Break-even", "The volume where EBITDA is exactly zero at today's prices."],
+  ["Price elasticity", "How much volume reacts to price. 0 = no reaction; more negative = more reaction (advanced)."],
+];
+function renderGlossary(){
+  const e=el("glossary"); if(!e) return;
+  e.innerHTML="<table><tbody>"+GLOSSARY.map(g=>
+    `<tr><td style="font-weight:700;white-space:normal;width:190px">${g[0]}</td><td style="text-align:left;white-space:normal">${g[1]}</td></tr>`).join("")+"</tbody></table>";
+}
 function renderHeader(){
   const a=el("hCompany"), b=el("hProduct"), c=el("hSub");
   if(a) a.textContent=CFG.company;
@@ -578,7 +615,7 @@ function setCo(k,v){CO[k]=parseFloat(v)||0;refresh();}
 function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();}
 
 // ---------- nav / scenario bar ----------
-const VIEWS=["Overview","P&L","Monthly","Pricing Lab","Unit Economics","Targets","Sensitivity","Assumptions"];
+const VIEWS=["Overview","P&L","Monthly","Pricing Lab","Unit Economics","Targets","Sensitivity","Assumptions","Guide"];
 function buildNav(){
   el("nav").innerHTML=VIEWS.map((v,i)=>`<button class="${i===0?'on':''}" data-v="${v}">${v}</button>`).join("");
   el("nav").querySelectorAll("button").forEach(b=>b.onclick=()=>{
@@ -639,7 +676,7 @@ try{applyTheme(localStorage.getItem(THEME_KEY)||"light");}catch(e){}
 ["tgtGP","tgtEB"].forEach(id=>{const e=el(id); if(e) e.oninput=renderTargets;});
 {const e=el("retMargin"); if(e) e.oninput=renderUecon;}
 try{ const raw=localStorage.getItem(STORE_KEY); if(raw) applyState(JSON.parse(raw)); }catch(e){}
-renderHeader();buildNav();renderAsmp();refresh();
+renderHeader();renderGlossary();buildNav();renderAsmp();refresh();
 </script>
 </body>
 </html>

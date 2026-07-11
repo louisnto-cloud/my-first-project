@@ -26,7 +26,7 @@ math tie-out), commit, push. Keep the app cohesive and simple — no bloat.
 - [x] Dark mode toggle.
 - [x] Print / PDF-friendly layout + "Print" button.
 - [ ] Named what-if snapshots (compare saved states).
-- [ ] Inline help tooltips + glossary panel.
+- [x] In-app Guide + plain-English glossary.
 - [ ] Accessibility pass (aria labels, focus states, contrast).
 - [ ] Number/locale formatting options (currency symbol).
 
