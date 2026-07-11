@@ -1,42 +1,36 @@
 # MÜV App — Autonomous Improvement Loop
 
-**Started:** 2026-07-11T06:56:41Z · **Deadline:** 2026-07-11T11:56:41Z (5 hours)
+**Re-scoped:** 2026-07-11T07:31Z · **Deadline:** 2026-07-11T11:31:00Z (4 hours)
+**Mix:** ~80% improvement / 20% expansion. **North star:** keep it a clean, easy-to-use
+application — anyone should understand it at a glance. Improvements (usability, clarity,
+polish, robustness, a11y, performance) take priority; expansion is the occasional [EXPAND] item.
 **Branch:** claude/clever-ride-xgh441 · **PR:** #14
 
 ## Per-iteration procedure (follow every wake-up)
-1. `date -u` → if now ≥ deadline OR all items done, `ScheduleWakeup(stop:true)` and post a short wrap-up. Else continue.
-2. Pick the next unchecked `[ ]` item (top of the backlog).
-3. Implement it in the `build/` generators (never hand-edit the built files).
-4. Rebuild: `python3 build/build_excel.py` and/or `build/build_html.py`.
-5. Verify: engine parity (node) + UI (jsdom) for HTML changes; `pycel` for Excel changes. The app must stay green.
-6. Clean npm artifacts, `git add -A`, commit (clear message), push (with retry).
-7. Check the item `[x]`, add a one-line entry to the LOG, then `ScheduleWakeup` ~18 min for the next iteration.
+1. `date -u` → if now ≥ deadline OR all items done, `ScheduleWakeup(stop:true)` + short wrap-up. Else continue.
+2. FIRST reschedule the next wakeup (resilience), THEN take the next unchecked `[ ]` item.
+3. Implement in `build/` generators only (never hand-edit built files). Rebuild.
+4. Verify green: `node build/ui_test.js` (HTML) + engine parity; `pycel` verify.py/verify2.py (Excel).
+5. Clean npm artifacts, commit, push (retry). Tick `[x]`, append a one-line Log entry.
+Keep every change additive, reversible, and shipped working. Preserve the dark-glass / citrus-aqua look.
+If an item fails twice, skip it (note why) and move on.
 
-Keep the app ALWAYS WORKING and verified. Additive, low-risk features first; engine-changing
-items require full three-way re-verification (Python ↔ Excel ↔ JS to the cent).
-
-## Backlog (priority order)
-- [x] D1 · Canada tile-grid map of revenue by province (interactive, hover tooltip)
-- [ ] D2 · Share/restore control state via URL hash + "Copy link" button
-- [ ] D3 · "Download CSV" (weekly + by-dimension) via data URI
-- [ ] D4 · Distribution-build view: active distribution % and active doors by week
-- [ ] D5 · Margin view: revenue vs COGS vs margin by channel/SKU
-- [ ] D6 · Scenario overlay: Bear/Base/Bull cumulative lines on one chart
-- [ ] E1 · Excel Cover/Briefing tab (exec summary + waterfall to $3M)
-- [ ] E2 · Excel Monthly P&L table (revenue, COGS, margin, margin%) + chart
-- [ ] D7 · Cans / consumer-units as a 3rd explore metric
-- [ ] D8 · Print stylesheet (@media print) for a clean one-pager
-- [ ] E3 · Excel 2nd sensitivity grid (velocity × online growth)
-- [ ] D9 · Accessibility pass (aria roles/labels, focus management)
-- [ ] D10 · Always-on "cheapest lever to goal" callout in the hero
-- [ ] E4 · Excel distribution-build table (doors ramp by week)
-- [ ] Q1 · pytest suite for muv_config + Makefile; wire the node engine test
-- [ ] Q2 · GitHub Actions CI workflow to run the tests on push
-- [ ] M1 · Trade spend & NET revenue (deduction % by channel) — engine + both UIs, re-verify
-- [ ] M2 · Year-2 projection toggle (growth %)
-- [ ] D11 · Header polish: sticky, "as of" stamp, subtle logo shimmer
-- [ ] Q3 · CHANGELOG.md + README feature expansion
-- [ ] M3 · Monte-Carlo confidence band on the cumulative goal (JS)
+## Backlog (priority order — improvement-first)
+- [ ] I1 · [IMPROVE] Onboarding & plain language: dismissible "how to read this" helper + jargon tooltips (basis / velocity / ramp / seasonality / sell-through) so anyone gets it instantly
+- [ ] I2 · [IMPROVE] Mobile / responsive pass: hero, tiles, map, charts, controls clean on phone widths; bigger tap targets
+- [ ] I3 · [IMPROVE] Map polish: colour-scale legend, tidier layout (+ territory labels), hover/focus a11y
+- [ ] I4 · [IMPROVE] Chart clarity: consistent axis/tick formatting, de-clutter gridlines, clear legends, uniform tooltips
+- [ ] I5 · [IMPROVE] Robustness & performance: guard extremes (0 / negative / huge), smooth re-render, no layout shift
+- [ ] I6 · [EXPAND] Share your view: encode control state in the URL hash + "Copy link" button (no storage APIs)
+- [ ] I7 · [IMPROVE] Accessibility: aria roles/labels, focus-visible everywhere, reduced-motion audit, contrast check
+- [ ] I8 · [IMPROVE] Microcopy & hierarchy: tighten every label/heading; goal + next action always obvious; spell-check
+- [ ] I9 · [IMPROVE] Hero & gauge refinement: spacing, type scale, status sentence, tile readability; make $3M unmistakable
+- [ ] I10 · [EXPAND] Download data (CSV): weekly + by-dimension via data URI
+- [ ] I11 · [IMPROVE] Empty / extreme states: graceful visuals + friendly copy when a category is 0 or the goal is smashed
+- [ ] I12 · [IMPROVE] Excel readability: number formats, widths, headers, freeze panes, print setup, cover note
+- [ ] I13 · [EXPAND] Distribution-build view: active-distribution % and active doors by week (simple, easy read)
+- [ ] I14 · [IMPROVE] Quality net: pytest for muv_config + Makefile wiring the node engine/UI tests
+- [ ] I15 · [IMPROVE] Final QA sweep: dashboard == Excel to the cent, CSS/cross-browser sanity, README refresh
 
 ## Log
 - 06:56Z · #1 D1 — Canada tile map (10 provinces, colour=revenue, hover tooltip) + durable build/ui_test.js (16 checks). Green.
