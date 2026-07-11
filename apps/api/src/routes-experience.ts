@@ -54,11 +54,11 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
     }
 
     const points = await one<{ sum: string | null }>(db, 'SELECT SUM(points)::text AS sum FROM practice_events WHERE student_id = $1', [studentId]);
-    const days = await many<{ occurred_on: string | Date }>(db, 'SELECT DISTINCT occurred_on FROM practice_events WHERE student_id = $1 ORDER BY occurred_on DESC', [studentId]);
+    const days = await many<{ occurred_on: string }>(db, 'SELECT DISTINCT occurred_on::text AS occurred_on FROM practice_events WHERE student_id = $1 ORDER BY occurred_on DESC', [studentId]);
     const submitted = await one<{ n: string }>(db, `SELECT COUNT(*)::text AS n FROM submissions WHERE student_id = $1 AND status IN ('submitted', 'graded')`, [studentId]);
 
     // Streak: consecutive days ending today or yesterday.
-    const daySet = new Set(days.map((d) => dateOf(new Date(d.occurred_on))));
+    const daySet = new Set(days.map((d) => d.occurred_on)); // already DATE-as-text
     let streak = 0;
     const cursor = new Date();
     if (!daySet.has(dateOf(cursor))) cursor.setDate(cursor.getDate() - 1);
@@ -90,13 +90,15 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
     if (actor.role !== 'parent' || !childId || !(await isGuardianOf(db, actor.id, childId))) {
       return reply.code(403).send({ error: 'forbidden' });
     }
-    const rows = await many<{ date: string | Date; check_in_at: string | null }>(
+    // date::text keeps the DATE literal — a JS Date round-trip shifts it a
+    // day backward on servers running east-of-UTC timezones (Vietnam).
+    const rows = await many<{ date: string; check_in_at: string | null }>(
       db,
-      `SELECT date, check_in_at FROM attendance_records
+      `SELECT date::text AS date, check_in_at FROM attendance_records
         WHERE student_id = $1 AND date >= $2 ORDER BY date`,
       [childId, dateOf(new Date(Date.now() - 6 * 86_400_000))],
     );
-    const byDay = new Map(rows.map((r) => [dateOf(new Date(r.date)), !!r.check_in_at]));
+    const byDay = new Map(rows.map((r) => [r.date, !!r.check_in_at]));
     return Array.from({ length: 7 }, (_, i) => {
       const d = dateOf(new Date(Date.now() - (6 - i) * 86_400_000));
       return { date: d, attended: byDay.get(d) ?? false };
@@ -123,13 +125,15 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
     const body = z.object({ title: z.string().min(2).max(200), body: z.string().max(4000).default(''), classId: z.string().optional() }).safeParse(req.body);
     if (!body.success) return reply.code(400).send({ error: 'invalid_input' });
 
-    const isManager = ['owner', 'academic_director', 'site_director'].includes(actor.role);
+    const isOrgManager = ['owner', 'academic_director'].includes(actor.role);
     if (body.data.classId) {
       const cls = await one<ClassRef>(db, 'SELECT id, org_id AS "orgId", site_id AS "siteId", teacher_id AS "teacherId" FROM classes WHERE id = $1', [body.data.classId]);
       if (!cls || cls.orgId !== actor.orgId) return reply.code(404).send({ error: 'not_found' });
-      if (!isManager && !canTeachClass(actor, cls)) return reply.code(403).send({ error: 'forbidden' });
-    } else if (!isManager) {
-      return reply.code(403).send({ error: 'forbidden' }); // center-wide is managers-only
+      // Site directors stay inside their own site, like everywhere else.
+      const siteOk = actor.role === 'site_director' && cls.siteId === actor.siteId;
+      if (!isOrgManager && !siteOk && !canTeachClass(actor, cls)) return reply.code(403).send({ error: 'forbidden' });
+    } else if (!isOrgManager) {
+      return reply.code(403).send({ error: 'forbidden' }); // center-wide is org-managers-only
     }
 
     const id = rid('ann');
@@ -197,7 +201,10 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
             [id, actor.id],
           ))
         : false;
-    const staff = ['owner', 'academic_director', 'site_director'].includes(actor.role) || canTeachClass(actor, cls);
+    const staff =
+      ['owner', 'academic_director'].includes(actor.role) ||
+      (actor.role === 'site_director' && cls.siteId === actor.siteId) || // own site only
+      canTeachClass(actor, cls);
     if (!enrolled && !childEnrolled && !staff) return reply.code(403).send({ error: 'forbidden' });
 
     return many(
@@ -447,9 +454,14 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
     if (!actor) return;
     if (actor.role === 'parent' || actor.role === 'tutor') {
       const col = actor.role === 'parent' ? 'guardian_id' : 'teacher_id';
+      // threadId + last-message preview: the shape the inbox UI renders.
       return many(
         db,
-        `SELECT t.id, t.student_id AS "studentId", su.name AS "studentName", gu.name AS "guardianName", tu.name AS "teacherName"
+        `SELECT t.id, t.id AS "threadId", t.student_id AS "studentId", su.name AS "studentName",
+                gu.name AS "guardianName", tu.name AS "teacherName",
+                (SELECT m.body FROM messages m WHERE m.thread_id = t.id ORDER BY m.created_at DESC LIMIT 1) AS "lastBody",
+                (SELECT mu.name FROM messages m JOIN users mu ON mu.id = m.sender_id WHERE m.thread_id = t.id ORDER BY m.created_at DESC LIMIT 1) AS "lastFrom",
+                (SELECT m.created_at FROM messages m WHERE m.thread_id = t.id ORDER BY m.created_at DESC LIMIT 1) AS "lastAt"
            FROM threads t JOIN users su ON su.id = t.student_id JOIN users gu ON gu.id = t.guardian_id JOIN users tu ON tu.id = t.teacher_id
           WHERE t.org_id = $1 AND t.${col} = $2 ORDER BY t.created_at DESC`,
         [actor.orgId, actor.id],

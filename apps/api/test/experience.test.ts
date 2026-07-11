@@ -101,6 +101,13 @@ describe('announcements (Bảng tin)', () => {
     expect((await req('POST', '/announcements', lan, { title: 'Đâu?', body: 'x', classId: 'nope' })).statusCode).toBe(404);
   });
 
+  it('a site director posts only inside their own site — and never center-wide', async () => {
+    const giang = await login('giang@etop.vn'); // site_tt director
+    expect((await req('POST', '/announcements', giang, { title: 'Lịch cơ sở TT', body: 'x', classId: 'c5' })).statusCode).toBe(200); // own site
+    expect((await req('POST', '/announcements', giang, { title: 'Lấn sân', body: 'x', classId: 'c1' })).statusCode).toBe(403); // other site
+    expect((await req('POST', '/announcements', giang, { title: 'Toàn trung tâm?', body: 'x' })).statusCode).toBe(403); // org-managers only
+  });
+
   it('readers see exactly their scope', async () => {
     const mine = (await req('GET', '/announcements', minh)).json() as { title: string; classId: string | null }[];
     expect(mine.map((a) => a.title)).toContain('Nghỉ lễ 2/9'); // center-wide
@@ -130,6 +137,9 @@ describe('class leaderboard (Bảng vàng)', () => {
     expect((await req('GET', '/classes/c1/leaderboard', s2)).statusCode).toBe(403);
     const david = await login('david@etop.vn'); // teaches c3, not c1
     expect((await req('GET', '/classes/c1/leaderboard', david)).statusCode).toBe(403);
+    const giang = await login('giang@etop.vn'); // site_tt director
+    expect((await req('GET', '/classes/c5/leaderboard', giang)).statusCode).toBe(200); // own site
+    expect((await req('GET', '/classes/c1/leaderboard', giang)).statusCode).toBe(403); // other site
     expect((await req('GET', '/classes/nope/leaderboard', minh)).statusCode).toBe(404);
   });
 });
@@ -216,6 +226,13 @@ describe('two-way messaging with director oversight', () => {
     const msgs = (await req('GET', `/threads/${threadId}/messages`, parent)).json() as { senderName: string; body: string }[];
     expect(msgs).toHaveLength(2);
     expect(msgs[1].senderName).toBe('Ms. Lan');
+
+    // The teacher's inbox shape: threadId + a last-message preview.
+    const inbox = (await req('GET', '/threads', lan)).json() as { threadId: string; studentName: string; lastBody: string; lastFrom: string }[];
+    const th = inbox.find((x) => x.threadId === threadId)!;
+    expect(th.studentName).toBe('Trần Đức Minh');
+    expect(th.lastFrom).toBe('Ms. Lan');
+    expect(th.lastBody).toContain('tiến bộ tốt');
   });
 
   it('the owner has read-only oversight; outsiders get nothing', async () => {

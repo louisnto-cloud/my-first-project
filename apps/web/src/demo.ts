@@ -902,8 +902,9 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     const days = new Set(evs.map((p) => p.date));
     let streak = 0;
     const cur = new Date();
-    if (!days.has(cur.toISOString().slice(0, 10))) cur.setDate(cur.getDate() - 1);
-    while (days.has(cur.toISOString().slice(0, 10))) { streak++; cur.setDate(cur.getDate() - 1); }
+    // localDate throughout — events are stored with local dates too.
+    if (!days.has(localDate(cur))) cur.setDate(cur.getDate() - 1);
+    while (days.has(localDate(cur))) { streak++; cur.setDate(cur.getDate() - 1); }
     const submissions = db.submissions.filter((s) => s.studentId === sid && s.status !== 'in_progress').length;
     const badges = [
       { id: 'first-steps', earned: days.size >= 1 },
@@ -985,7 +986,10 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
       sessions: db.sessionNotes
         .filter((s) => s.studentId === childId && s.date === today() && s.parentNote)
         .map((s) => ({ className: s.className, tutorName: s.tutorName, parentNote: s.parentNote })),
-      newAssignments: db.assignments.filter((a) => a.status === 'published').slice(0, 1).map((a) => ({ title: a.title })),
+      newAssignments: db.assignments
+        .filter((a) => a.status === 'published' && (db.users.find((u) => u.id === childId)?.classIds ?? []).includes(a.classId))
+        .slice(0, 2)
+        .map((a) => ({ title: a.title })),
       graded: db.submissions
         .filter((s) => s.studentId === childId && s.status === 'graded' && s.overall != null)
         .slice(0, 2)

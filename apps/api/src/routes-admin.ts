@@ -171,13 +171,18 @@ export function registerAdminRoutes(app: FastifyInstance, db: DB): void {
     if (dup) return reply.code(409).send({ error: 'email_taken' });
 
     const id = rid('p');
+    // Atomic claim BEFORE creating anything: two concurrent redemptions of
+    // the same code must not both become guardians — the invite is the
+    // only gate into a child's data.
+    const claimed = await db.query('UPDATE parent_invites SET used_by = $2, used_at = now() WHERE code = $1 AND used_by IS NULL', [invite.code, id]);
+    if (claimed.affectedRows === 0) return reply.code(409).send({ error: 'invite_used' });
+
     await db.query(
       `INSERT INTO users (id, org_id, role, name, email, phone, password_hash) VALUES ($1, $2, 'parent', $3, $4, $5, $6)`,
       [id, invite.org_id, body.data.name.trim(), email, body.data.phone ?? null, hashPassword(body.data.password)],
     );
     const order = await one<{ n: string }>(db, 'SELECT COUNT(*)::text AS n FROM guardian_students WHERE student_id = $1', [invite.student_id]);
     await db.query('INSERT INTO guardian_students (guardian_id, student_id, contact_order) VALUES ($1, $2, $3)', [id, invite.student_id, Number(order?.n ?? 0) + 1]);
-    await db.query('UPDATE parent_invites SET used_by = $2, used_at = now() WHERE code = $1', [invite.code, id]);
     await audit(db, { orgId: invite.org_id, actorId: id, action: 'auth.parent_registered', entity: 'student', entityId: invite.student_id });
     await notify(db, { orgId: invite.org_id, channel: 'push', toUserId: id, body: 'Chào mừng đến với E’TOP! 💜', at: new Date() });
 

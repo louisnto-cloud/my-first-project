@@ -36,6 +36,7 @@ export async function seedDemo(db: DB): Promise<void> {
     ['u_david', 'site_nh', 'tutor', 'Mr. David', 'david@etop.vn'],
     ['u_trang', 'site_tt', 'tutor', 'Ms. Trang', 'trang@etop.vn'],
     ['u_desk', 'site_nh', 'front_desk', 'Front Desk NH', 'desk@etop.vn'],
+    ['u_giang', 'site_tt', 'site_director', 'Ms. Giang', 'giang@etop.vn'],
     ['u_bill', null, 'billing_admin', 'Ms. Kế Toán', 'bill@etop.vn'],
   ];
   const teacherCodes: Record<string, string> = { u_lan: 'GV0001', u_david: 'GV0002', u_trang: 'GV0003' };

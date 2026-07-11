@@ -87,7 +87,9 @@ export function QuestionBank({ lang }: { lang: 'vi' | 'en' }) {
     }
     if (type === 'fill_blank') {
       const ch = choices.split(',').map((c) => c.trim()).filter(Boolean);
-      if (!sentence.includes('___') || ch.length < 2 || !answer.trim()) return null;
+      // The answer must still be one of the choices — editing the choices
+      // after tapping an answer must not leave an unanswerable question.
+      if (!sentence.includes('___') || ch.length < 2 || !ch.includes(answer.trim())) return null;
       return { prompt: sentence.trim(), payload: { sentence: sentence.trim(), choices: ch, answer: answer.trim() } };
     }
     if (type === 'picture') {
