@@ -28,7 +28,7 @@ reach EBITDA. This model makes every subtraction a live, editable lever, grounde
 in realistic premium functional-beverage economics (355 ml can, zero-sugar,
 stevia; magnesium bisglycinate + Fibersol prebiotic fiber).
 
-**Web app (`organika-pnl.html`) — 8 tabs**
+**Web app (`organika-pnl.html`) — 9 tabs**
 
 0. **Overview (simple mode)** — the Apple-style front door anyone can use: a
    plain-English verdict ("you keep 64.9% of every sale, but the business loses
@@ -55,7 +55,12 @@ stevia; magnesium bisglycinate + Fibersol prebiotic fiber).
    (seeded with Base / Bull / Bear).
 6. **Unit Economics** — per-case statement, break-even volume with a path-to-profit
    bar, and retail velocity ($/store/week).
-7. **Guide** — the waterfall, why contribution margin is the number to watch, and a
+7. **Plan & Cash** — phases the annual plan across 12 months with a summer
+   seasonality curve, then runs a working-capital **cash-runway** model (DSO / DIO /
+   DPO): monthly EBITDA bars, a cash-balance line with the low point marked, and
+   KPIs for the cash trough, financing need, runway month and ending cash. EBITDA
+   says whether the business works; this says whether it survives the year.
+8. **Guide** — the waterfall, why contribution margin is the number to watch, and a
    CPG glossary.
 
 Multi-currency display, save/CSV/PDF, live recompute on every keystroke.

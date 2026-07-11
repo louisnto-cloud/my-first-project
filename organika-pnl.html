@@ -203,6 +203,7 @@
     <button data-tab="levers">Levers</button>
     <button data-tab="scenarios">Compare</button>
     <button data-tab="unit">Unit Economics</button>
+    <button data-tab="plan">Plan &amp; Cash</button>
     <button data-tab="guide">Guide</button>
   </nav>
 
@@ -408,6 +409,31 @@
   </section>
 
   <!-- ============ GUIDE ============ -->
+  <!-- ============ PLAN & CASH ============ -->
+  <section class="tab" id="tab-plan">
+    <div class="kpis" id="plan-kpis"></div>
+    <div class="grid cols-side">
+      <div class="card no-print">
+        <h3>Phasing &amp; cash</h3>
+        <div class="field">
+          <label>Seasonality swing <span class="q" title="How much monthly volume peaks in summer vs winter. 0% = flat all year; 20% = a realistic beverage summer peak.">?</span></label>
+          <div class="inp"><input class="has-suf" type="number" id="pl-season" step="5" min="0" max="80"><span class="suf">%</span></div>
+        </div>
+        <div class="field"><label>Starting cash</label><div class="inp"><span class="pre" data-cur>$</span><input class="has-pre" type="number" id="pl-cash" step="10000"></div></div>
+        <h3 style="margin-top:20px">Working capital (days)</h3>
+        <div class="field"><label>Receivable days (DSO) <span class="q" title="How long customers take to pay you. Retail/distributor terms are often 45–90 days.">?</span></label><div class="inp"><input type="number" id="pl-dso" step="5" min="0"></div></div>
+        <div class="field"><label>Inventory days (DIO) <span class="q" title="How long finished stock sits before it sells.">?</span></label><div class="inp"><input type="number" id="pl-dio" step="5" min="0"></div></div>
+        <div class="field"><label>Payable days (DPO) <span class="q" title="How long you take to pay suppliers &mdash; a source of cash.">?</span></label><div class="inp"><input type="number" id="pl-dpo" step="5" min="0"></div></div>
+        <div class="note">EBITDA says whether the business <b>works</b>; cash says whether you <b>survive the year</b>. Growth ties up cash in inventory and receivables before the profit lands — this shows the low point and any raise you'd need.</div>
+      </div>
+      <div>
+        <div class="chart-wrap"><div class="chart-title">Monthly EBITDA</div><div id="plan-eb"></div></div>
+        <div class="chart-wrap" style="margin-top:14px"><div class="chart-title">Cash balance through the year</div><div id="plan-cash"></div></div>
+        <div class="table-scroll" style="margin-top:14px"><table id="plan-table"></table></div>
+      </div>
+    </div>
+  </section>
+
   <section class="tab guide" id="tab-guide">
     <div class="card">
       <h2>How this model works</h2>
@@ -497,7 +523,8 @@ function D(){return {
     {name:'Club / Mass',    mixPct:18, srp:2.79, grossPrice:1.40, tradePct:8,  spoilPct:1, feePct:3,  adPct:1,  varCostUnit:0.09, slottingUnit:0.10}
   ],
   opex:{ marketingPctNet:8, salesTeam:600000, ga:850000, rnd:180000, da:150000 },
-  unit:{ stores:1500 }
+  unit:{ stores:1500 },
+  plan:{ seasonAmp:20, startCash:400000, dso:45, dio:60, dpo:30 }
 };}
 let S = D();
 const KEY='organika_pnl_v1';
@@ -673,6 +700,8 @@ function applyScalars(){
   setVal('cogs-test-price',1.55); setVal('cogs-test-load',22);
   setVal('lev-swing',15); setVal('wi-range',20); setVal('wi-metric','ebitdaPct');
   setVal('u-stores',S.unit.stores);
+  setVal('pl-season',S.plan.seasonAmp); setVal('pl-cash',S.plan.startCash);
+  setVal('pl-dso',S.plan.dso); setVal('pl-dio',S.plan.dio); setVal('pl-dpo',S.plan.dpo);
   document.querySelectorAll('[data-cur]').forEach(e=>e.textContent=sym());
 }
 
@@ -1141,7 +1170,70 @@ function renderOverview(){
   document.getElementById('ov-lever').innerHTML=`It's <b>${friendly}</b>. A 15% move there swings the bottom line by about <b>${abbr(lev.span)}</b> a year — more than any other single change.`;
   document.getElementById('ov-path').innerHTML=ovPath(A,R);
 }
-function renderOutputs(){ syncOverviewSliders(); renderOverview(); renderPnL(); renderCOGS(); renderChannels(); renderLevers(); renderScenarios(); renderUnit(); }
+/* ===== Plan & Cash — 12-month phasing + working-capital cash runway ===== */
+function computePlan(){
+  const R=compute(S);
+  const amp=(+S.plan.seasonAmp||0)/100;
+  const MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const w=[]; let sw=0;
+  for(let m=1;m<=12;m++){ const x=Math.max(0.05,1+amp*Math.sin(2*Math.PI*(m-4)/12)); w.push(x); sw+=x; }
+  const fixedMo=(R.salesTeam+R.ga+R.rnd)/12;
+  const dso=+S.plan.dso||0, dio=+S.plan.dio||0, dpo=+S.plan.dpo||0;
+  let prevNWC=0, cash=+S.plan.startCash||0, trough=Infinity, troughM=0, runway=0;
+  const months=[];
+  for(let i=0;i<12;i++){ const f=w[i]/sw;
+    const net=R.T.net*f, cogs=R.T.cogs*f, cm=R.T.cm*f, mktg=R.marketing*f;
+    const ebitda=cm-mktg-fixedMo;
+    const nwc=net*dso/30.4 + cogs*dio/30.4 - cogs*dpo/30.4;
+    const opCash=ebitda-(nwc-prevNWC); prevNWC=nwc; cash+=opCash;
+    if(cash<trough){trough=cash;troughM=i;}
+    if(cash<0 && !runway) runway=i+1;
+    months.push({name:MN[i],cases:R.cases*f,net,cogs,cm,ebitda,cash});
+  }
+  return {R,months,trough,troughM,runway,financing:Math.max(0,-trough),endCash:cash};
+}
+function barsMonthly(vals,labels){
+  const w=900,h=200,padT=18,padB=32,padX=10;
+  const vmax=Math.max(0,...vals), vmin=Math.min(0,...vals), span=(vmax-vmin)||1, plotH=h-padT-padB, Y=v=>padT+(vmax-v)/span*plotH;
+  const bw=(w-padX*2)/vals.length; let s=`<line x1="${padX}" y1="${Y(0)}" x2="${w-padX}" y2="${Y(0)}" stroke="#33415f"/>`;
+  vals.forEach((v,i)=>{ const x=padX+i*bw+bw*0.2, bwi=bw*0.6, top=Y(Math.max(v,0)), hh=Math.max(Y(Math.min(v,0))-Y(Math.max(v,0)),1), col=v>=0?'#34d399':'#ff5d6c';
+    s+=`<rect x="${x}" y="${top}" width="${bwi}" height="${hh}" rx="3" fill="${col}"/>`;
+    s+=`<text x="${x+bwi/2}" y="${h-padB+15}" text-anchor="middle" font-size="10" fill="#94a3be">${labels[i]}</text>`; });
+  return svg(w,h,s);
+}
+function lineMonthly(vals,labels,markLo){
+  const w=900,h=210,padL=54,padR=14,padT=18,padB=32;
+  const vmax=Math.max(...vals,0), vmin=Math.min(...vals,0), span=(vmax-vmin)||1;
+  const X=i=>padL+(vals.length>1?i/(vals.length-1):0)*(w-padL-padR), Y=v=>padT+(vmax-v)/span*(h-padT-padB);
+  let s='';
+  for(let g=0;g<=3;g++){ const val=vmin+(vmax-vmin)*g/3, y=Y(val); s+=`<line x1="${padL}" y1="${y}" x2="${w-padR}" y2="${y}" stroke="#1b2435"/><text x="${padL-8}" y="${y+4}" text-anchor="end" font-size="10" fill="#65748f">${abbr(val)}</text>`; }
+  if(vmin<0){ const zy=Y(0); s+=`<line x1="${padL}" y1="${zy}" x2="${w-padR}" y2="${zy}" stroke="#ff5d6c" stroke-dasharray="4 3" opacity=".55"/>`; }
+  const path=vals.map((v,i)=>(i?'L':'M')+X(i)+' '+Y(v)).join(' ');
+  s+=`<path d="${path} L ${X(vals.length-1)} ${Y(Math.min(0,vmin))} L ${X(0)} ${Y(Math.min(0,vmin))} Z" fill="rgba(79,140,255,.10)"/>`;
+  s+=`<path d="${path}" stroke="#4f8cff" stroke-width="2.5" fill="none"/>`;
+  vals.forEach((v,i)=>{ s+=`<circle cx="${X(i)}" cy="${Y(v)}" r="3" fill="${v<0?'#ff5d6c':'#4f8cff'}"/><text x="${X(i)}" y="${h-padB+15}" text-anchor="middle" font-size="10" fill="#94a3be">${labels[i]}</text>`; });
+  if(markLo!=null){ const i=markLo; const lx=Math.min(Math.max(X(i),padL+30),w-padR-30); s+=`<text x="${lx}" y="${Y(vals[i])-9}" text-anchor="middle" font-size="10" font-weight="700" fill="${vals[i]<0?'#ff5d6c':'#4f8cff'}">low ${abbr(vals[i])}</text>`; }
+  return svg(w,h,s);
+}
+function renderPlan(){
+  if(!document.getElementById('plan-kpis')) return;
+  const P=computePlan(), peak=P.months.reduce((a,b)=>b.cases>a.cases?b:a);
+  document.getElementById('plan-kpis').innerHTML=
+    `<div class="kpi hl"><div class="k">Annual EBITDA</div><div class="v" style="color:${P.R.ebitda>=0?'var(--pos)':'var(--neg)'}">${abbr(P.R.ebitda)}</div><div class="x">${pct(P.R.ebitdaPct)}</div></div>`+
+    `<div class="kpi"><div class="k">Cash low point</div><div class="v" style="color:${P.trough<0?'var(--neg)':'var(--pos)'}">${abbr(P.trough)}</div><div class="x">in ${P.months[P.troughM].name}</div></div>`+
+    `<div class="kpi"><div class="k">Financing need</div><div class="v" style="color:${P.financing>0?'var(--gold)':'var(--pos)'}">${P.financing>0?abbr(P.financing):'—'}</div><div class="x">${P.financing>0?'to stay above $0':'self-funding'}</div></div>`+
+    `<div class="kpi"><div class="k">Runway</div><div class="v" style="color:${P.runway?'var(--neg)':'var(--pos)'}">${P.runway?('month '+P.runway):'12 mo+'}</div><div class="x">${P.runway?'cash turns negative':'stays positive'}</div></div>`+
+    `<div class="kpi"><div class="k">Ending cash</div><div class="v" style="color:${P.endCash>=0?'var(--text)':'var(--neg)'}">${abbr(P.endCash)}</div><div class="x">after 12 months</div></div>`+
+    `<div class="kpi"><div class="k">Peak month</div><div class="v">${peak.name}</div><div class="x">${intf(peak.cases)} cases</div></div>`;
+  const labels=P.months.map(m=>m.name);
+  document.getElementById('plan-eb').innerHTML=barsMonthly(P.months.map(m=>m.ebitda),labels);
+  document.getElementById('plan-cash').innerHTML=lineMonthly(P.months.map(m=>m.cash),labels,P.troughM);
+  let h='<thead><tr><th>Month</th><th>Cases</th><th>Net sales</th><th>EBITDA</th><th>Cash</th></tr></thead><tbody>';
+  P.months.forEach(m=>{ h+=`<tr><td>${m.name}</td><td class="num">${intf(m.cases)}</td><td class="num">${abbr(m.net)}</td><td class="num" style="color:${m.ebitda>=0?'var(--pos)':'var(--neg)'}">${abbr(m.ebitda)}</td><td class="num" style="color:${m.cash>=0?'':'var(--neg)'}">${abbr(m.cash)}</td></tr>`; });
+  h+='</tbody>'; document.getElementById('plan-table').innerHTML=h;
+}
+
+function renderOutputs(){ syncOverviewSliders(); renderOverview(); renderPnL(); renderCOGS(); renderChannels(); renderLevers(); renderScenarios(); renderUnit(); renderPlan(); }
 function recalc(){ renderOutputs(); }
 
 /* =================== WIRING =================== */
@@ -1165,6 +1257,8 @@ function bind(){
   document.getElementById('wi-metric').addEventListener('change',renderWhatif);
   document.getElementById('wi-range').addEventListener('input',renderWhatif);
   document.getElementById('u-stores').addEventListener('input',e=>{ S.unit.stores=parseFloat(e.target.value)||0; renderUnit(); save(); });
+  num('pl-season',v=>S.plan.seasonAmp=v,renderPlan); num('pl-cash',v=>S.plan.startCash=v,renderPlan);
+  num('pl-dso',v=>S.plan.dso=v,renderPlan); num('pl-dio',v=>S.plan.dio=v,renderPlan); num('pl-dpo',v=>S.plan.dpo=v,renderPlan);
   document.getElementById('ch-add').addEventListener('click',()=>{ S.channels.push({name:'New channel',mixPct:0,srp:2.99,grossPrice:1.50,tradePct:10,spoilPct:2,feePct:5,adPct:5,varCostUnit:0.15,slottingUnit:0.05}); buildChannels(); recalc(); save(); });
   // overview dials (preview only; commit saves into the plan)
   ['sl-price','sl-cost','sl-vol'].forEach(id=>{ const e=document.getElementById(id); if(e) e.addEventListener('input',renderOverview); });
