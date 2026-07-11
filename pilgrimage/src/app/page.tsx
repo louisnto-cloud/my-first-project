@@ -15,6 +15,7 @@ import { LanguageToggle } from '@/components/LanguageToggle';
 import { DailyReliquary } from '@/components/DailyReliquary';
 import { InstallPrompt } from '@/components/InstallPrompt';
 import { currentSeason } from '@/lib/liturgical';
+import { feastOf } from '@/content/feasts';
 
 export default function TodayPage() {
   const { t, save } = useI18n();
@@ -22,6 +23,7 @@ export default function TodayPage() {
   const walkedToday = save.candles.includes(todayISO());
   const season = currentSeason();
   const seasonDot = { garnet: 'bg-garnet', gold: 'bg-gold', incense: 'bg-incense' }[season.tone];
+  const feast = feastOf();
 
   const hour = new Date().getHours();
   const greeting = hour < 12 ? UI.greetMorning : hour < 18 ? UI.greetAfternoon : UI.greetEvening;
@@ -37,6 +39,14 @@ export default function TodayPage() {
         </span>
         <LanguageToggle />
       </div>
+
+      {/* today's feast, when the small calendar has one — a quiet gold line */}
+      {feast && (
+        <p className="mt-2 text-sm text-gold/90">
+          <span className="font-semibold">{t(feast.name)}</span>
+          <span className="text-incense"> — {t(feast.note)}</span>
+        </p>
+      )}
 
       {/* the greeting, given room to breathe */}
       <header className="pt-8">
