@@ -764,7 +764,7 @@ function Teacher({ lang, t }: { lang: Lang; t: (k: string) => string }) {
     <div className="space-y-4">
       <Announcements lang={lang} canPost />
       <TeacherInbox lang={lang} />
-      <ClassManager />
+      <ClassManager lang={lang} />
       <QuestionBank lang={lang} />
       <div className="card space-y-2">
         <h2 className="font-black text-violet-700">✍️ {t('gradingQueue')} ({queue.length})</h2>

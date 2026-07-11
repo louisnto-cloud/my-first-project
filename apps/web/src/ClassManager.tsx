@@ -31,7 +31,7 @@ interface Question {
   unit: string | null;
 }
 
-function ClassCard({ cls, siblings }: { cls: ClassInfo; siblings: ClassInfo[] }) {
+function ClassCard({ cls, siblings, vi }: { cls: ClassInfo; siblings: ClassInfo[]; vi: boolean }) {
   const [open, setOpen] = useState(false);
   const [tab, setTab] = useState<'students' | 'work' | 'grades'>('students');
   const [gradebook, setGradebook] = useState<{ studentId: string; name: string; overall: number | null; skills: Partial<Record<string, { earned: number; possible: number }>> }[]>([]);
@@ -151,7 +151,7 @@ function ClassCard({ cls, siblings }: { cls: ClassInfo; siblings: ClassInfo[] })
       <button onClick={() => setOpen(!open)} className="flex w-full items-center gap-3 text-left">
         <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-violet-100 text-xl">🏫</div>
         <div className="min-w-0 flex-1">
-          <div className="font-black text-violet-800">Lớp {cls.name}</div>
+          <div className="font-black text-violet-800">{vi ? 'Lớp' : 'Class'} {cls.name}</div>
           <div className="truncate text-[11px] font-bold text-slate-400">🗓 {cls.scheduleNote || '—'}</div>
         </div>
         <div className="flex shrink-0 items-center gap-2 text-[11px] font-bold text-slate-400">
@@ -178,7 +178,7 @@ function ClassCard({ cls, siblings }: { cls: ClassInfo; siblings: ClassInfo[] })
           )}
 
           <div className="flex gap-1 rounded-2xl bg-violet-100 p-1">
-            {([['students', `👧 Học viên (${roster.length})`], ['work', `📝 Bài tập (${assignments.length})`], ['grades', '📊 Điểm']] as const).map(([k, label]) => (
+            {([['students', `👧 ${vi ? 'Học viên' : 'Students'} (${roster.length})`], ['work', `📝 ${vi ? 'Bài tập' : 'Work'} (${assignments.length})`], ['grades', vi ? '📊 Điểm' : '📊 Grades']] as const).map(([k, label]) => (
               <button
                 key={k}
                 onClick={() => {
@@ -357,7 +357,8 @@ function ClassCard({ cls, siblings }: { cls: ClassInfo; siblings: ClassInfo[] })
   );
 }
 
-export function ClassManager() {
+export function ClassManager({ lang = 'vi' }: { lang?: 'vi' | 'en' }) {
+  const vi = lang === 'vi';
   const [classes, setClasses] = useState<ClassInfo[] | null>(null);
   useEffect(() => {
     void api<ClassInfo[]>('GET', '/classes').then(setClasses);
@@ -368,16 +369,16 @@ export function ClassManager() {
     return (
       <div className="card space-y-1 text-center">
         <div className="text-2xl">🏫</div>
-        <div className="font-extrabold text-ink">Chưa có lớp nào được phân công</div>
-        <div className="text-sm font-semibold text-muted">Chủ trung tâm phân lớp cho bạn trong mục Quản trị trung tâm — lớp sẽ hiện ở đây ngay khi được gán.</div>
+        <div className="font-extrabold text-ink">{vi ? 'Chưa có lớp nào được phân công' : 'No classes assigned yet'}</div>
+        <div className="text-sm font-semibold text-muted">{vi ? 'Chủ trung tâm phân lớp cho bạn trong mục Quản trị trung tâm — lớp sẽ hiện ở đây ngay khi được gán.' : 'The center owner assigns classes in the admin panel — they appear here the moment one is assigned.'}</div>
       </div>
     );
   }
   return (
     <div className="space-y-3">
-      <h2 className="px-1 font-black text-violet-800">🏫 Lớp của tôi <span className="text-slate-400">({classes.length})</span></h2>
+      <h2 className="px-1 font-black text-violet-800">🏫 {vi ? 'Lớp của tôi' : 'My classes'} <span className="text-slate-400">({classes.length})</span></h2>
       {classes.map((c) => (
-        <ClassCard key={c.id} cls={c} siblings={classes.filter((x) => x.id !== c.id)} />
+        <ClassCard key={c.id} cls={c} siblings={classes.filter((x) => x.id !== c.id)} vi={vi} />
       ))}
     </div>
   );
