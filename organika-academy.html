@@ -1854,6 +1854,7 @@ function answerQuiz(oid){
   const v=getV(id);
   if(v){v.lastSeen=Date.now(); oid===id?onCorrect(v):onWrong(v); speak(v.vi);}
   render();
+  scrollToFeedback();
 }
 function nextQuiz(){
   S.lessonIdx++;
