@@ -48,6 +48,8 @@
   table{width:100%;border-collapse:collapse;font-size:14px}
   tbody tr:hover{background:rgba(10,132,255,.05)}
   td:first-child[title]{text-decoration:underline dotted var(--soft);text-underline-offset:3px;cursor:help}
+  td.hl{background:#eef5ff}
+  body.dark td.hl{background:#16324e}
   body.dark tbody tr:hover{background:rgba(255,255,255,.04)}
   th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
   th:first-child,td:first-child{text-align:left}
@@ -373,8 +375,8 @@ function renderCmp(){
   rows.forEach(row=>{
     h += `<tr class="${row[2]?'tot':''}"><td${tip(row[0])}>${row[0]}</td>`+
       data.map((r,i)=>{const val=row[1](r);const neg=/^-/.test(val);
-        const st=(SCEN[i]==current?'background:#eef5ff;':'')+(neg?'color:#d83a4b':'');
-        return `<td style="${st}">${val}</td>`;}).join("")+"</tr>";
+        const cls=SCEN[i]==current?' class="hl"':'';
+        return `<td${cls}${neg?' style="color:#d83a4b"':''}>${val}</td>`;}).join("")+"</tr>";
   });
   h += "</tbody></table>";
   el("cmp").innerHTML = h;
@@ -404,7 +406,7 @@ function renderPnl(){
   rows.forEach(row=>{
     h+=`<tr class="${row[3]?'major':''}"><td${tip(row[0])}>${row[0]}</td>`+
        L.map(l=>{const v=row[1](l);return `<td${red(v)}>${v}</td>`;}).join("")+
-       (()=>{const v=row[2](r);return `<td style="background:#eef5ff;font-weight:700;${/^-/.test(v)?'color:#d83a4b':''}">${v}</td>`;})()+"</tr>";
+       (()=>{const v=row[2](r);return `<td class="hl" style="font-weight:700;${/^-/.test(v)?'color:#d83a4b':''}">${v}</td>`;})()+"</tr>";
   });
   // company block (total only)
   const comp = [
@@ -416,7 +418,7 @@ function renderPnl(){
   comp.forEach(c=>{
     h+=`<tr class="${c[2]?'major':''} muted"><td${tip(c[0])}>${c[0]}</td>`+
        SKUS.map(()=>`<td></td>`).join("")+
-       `<td style="background:#eef5ff;font-weight:700;color:var(--ink)">${c[1]}</td></tr>`;
+       `<td class="hl" style="font-weight:700">${c[1]}</td></tr>`;
   });
   h+="</tbody></table>";
   el("pnl").innerHTML=h;
@@ -450,7 +452,7 @@ function renderMonthly(){
     const fy = M.reduce((a,x)=>a+x[row[1]],0);
     h+=`<tr class="${row[3]?'major':''}"><td>${row[0]}</td>`+
        M.map(x=>`<td${row[2]===money&&x[row[1]]<0?' style="color:#d83a4b"':''}>${row[2](x[row[1]])}</td>`).join("")+
-       `<td style="background:#eef5ff;font-weight:700">${row[2](fy)}</td></tr>`;
+       `<td class="hl" style="font-weight:700">${row[2](fy)}</td></tr>`;
   });
   h+="</tbody></table>";
   el("monthly").innerHTML=h;

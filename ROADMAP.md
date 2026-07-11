@@ -42,6 +42,7 @@ math tie-out), commit, push. Keep the app cohesive and simple — no bloat.
   the HTML (shelf $1.9231/unit @35%); Checks ALL PASS.
 
 ## 4h loop — 80% improve / 20% expand (app + easy interface)
+- [fix] Dark mode: current-scenario/total highlight was unreadable (light bg + light text); now theme-aware.
 - [improve] Keyboard shortcuts: 1-4 switch scenarios, arrow keys move between views.
 - [improve] Robustness: guarded divide-by-zero (Pricing); zero/blank inputs never produce NaN across any view (browser-tested).
 - [improve] P&L margin lines (GP%, CM%) + hover tooltips explaining every P&L/comparison term.
