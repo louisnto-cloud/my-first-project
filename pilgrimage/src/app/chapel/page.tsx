@@ -28,6 +28,7 @@ export default function ChapelPage() {
   const voiceName = guideVoiceName(lang);
   const [openPrayer, setOpenPrayer] = useState<string | null>(null);
   const [importMsg, setImportMsg] = useState<string | null>(null);
+  const [dataOpen, setDataOpen] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const keptPrayers = PRAYERS.filter((p) => (save.seen[p.id] ?? 0) > 0);
@@ -44,22 +45,22 @@ export default function ChapelPage() {
       {/* Practices: the two crown jewels */}
       <section className="rounded-3xl border border-ivory/10 bg-[#141b33] p-5">
         <h2 className="font-display text-lg text-gold">{t(UI.chapelPractices)}</h2>
-        <div className="mt-3 flex flex-col gap-2">
-          <Link href="/mass" className="rounded-2xl border border-gold/30 px-4 py-3.5">
-            <span className="block font-display text-base text-ivory">{t(UI.massTitle)}</span>
-            <span className="mt-0.5 block text-xs text-incense">{t(UI.massSubtitle)}</span>
+        <div className="mt-3 grid grid-cols-2 gap-2">
+          <Link href="/mass" className="rounded-2xl border border-gold/30 px-3.5 py-3">
+            <span className="block font-display text-[15px] leading-snug text-ivory">{t(UI.massTitle)}</span>
+            <span className="mt-1 block text-[11px] leading-snug text-incense">{t(UI.massSubtitle)}</span>
           </Link>
-          <Link href="/rosary" className="rounded-2xl border border-gold/30 px-4 py-3.5">
-            <span className="block font-display text-base text-ivory">{t(UI.rosaryTitle)}</span>
-            <span className="mt-0.5 block text-xs text-incense">{t(UI.rosarySubtitle)}</span>
+          <Link href="/rosary" className="rounded-2xl border border-gold/30 px-3.5 py-3">
+            <span className="block font-display text-[15px] leading-snug text-ivory">{t(UI.rosaryTitle)}</span>
+            <span className="mt-1 block text-[11px] leading-snug text-incense">{t(UI.rosarySubtitle)}</span>
           </Link>
-          <Link href="/stations" className="rounded-2xl border border-gold/30 px-4 py-3.5">
-            <span className="block font-display text-base text-ivory">{t(UI.stationsTitle)}</span>
-            <span className="mt-0.5 block text-xs text-incense">{t(UI.stationsSubtitle)}</span>
+          <Link href="/stations" className="rounded-2xl border border-gold/30 px-3.5 py-3">
+            <span className="block font-display text-[15px] leading-snug text-ivory">{t(UI.stationsTitle)}</span>
+            <span className="mt-1 block text-[11px] leading-snug text-incense">{t(UI.stationsSubtitle)}</span>
           </Link>
-          <Link href="/mercy" className="rounded-2xl border border-gold/30 px-4 py-3.5">
-            <span className="block font-display text-base text-ivory">{t(MERCY_NAME)}</span>
-            <span className="mt-0.5 block text-xs text-incense">{t(UI.mercySubtitle)}</span>
+          <Link href="/mercy" className="rounded-2xl border border-gold/30 px-3.5 py-3">
+            <span className="block font-display text-[15px] leading-snug text-ivory">{t(MERCY_NAME)}</span>
+            <span className="mt-1 block text-[11px] leading-snug text-incense">{t(UI.mercySubtitle)}</span>
           </Link>
         </div>
       </section>
@@ -197,7 +198,15 @@ export default function ChapelPage() {
             <span className="mt-0.5 block text-xs text-incense">{voiceName}</span>
           )}
         </button>
-        <div className="mt-4 flex flex-col gap-2">
+        <button
+          onClick={() => setDataOpen((o) => !o)}
+          className="mt-4 flex w-full items-center justify-between text-left font-ui text-sm font-semibold text-incense"
+        >
+          {t(UI.dataTools)}
+          <span className="text-gold">{dataOpen ? '–' : '+'}</span>
+        </button>
+        {dataOpen && (
+        <div className="mt-3 flex flex-col gap-2">
           <button
             onClick={() => downloadFile('pilgrimage-save.json', exportJSON())}
             className="min-h-[48px] rounded-xl border border-ivory/20 px-4 text-left font-ui text-sm font-semibold text-ivory"
@@ -233,6 +242,7 @@ export default function ChapelPage() {
             {t(UI.viReviewExport)}
           </button>
         </div>
+        )}
       </section>
 
       <p className="pb-4 text-center font-story text-base italic leading-relaxed text-incense">

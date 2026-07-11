@@ -28,6 +28,7 @@ export const UI = {
   ),
   obContinue: v('Continue', 'Tiếp tục'),
   obSkipName: v('Continue without a name', 'Tiếp tục mà không cần tên'),
+  dataTools: v('Backup & data', 'Sao lưu & dữ liệu'),
   obMapLine: v('Every pilgrimage begins with a single step.', 'Mọi cuộc hành hương đều bắt đầu bằng một bước chân.'),
   obBegin: v('Step inside', 'Bước vào'),
 
