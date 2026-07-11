@@ -7,7 +7,7 @@
 // Data is seeded with the real E'TOP tenant and persisted to localStorage,
 // so teacher edits and student work survive a refresh.
 
-import { canTeachClass, canViewClass, type Actor, type ClassRef } from '@etop/domain';
+import { canTeachClass, canViewClass, weightedOverall, type Actor, type ClassRef, type SkillKey, type SkillScore } from '@etop/domain';
 
 type Role = 'student' | 'tutor' | 'owner' | 'parent' | 'front_desk' | 'academic_director';
 
@@ -552,6 +552,31 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
       save(db);
       return ok({ id: a.id, status: 'draft' });
     }
+  }
+
+  // ---- gradebook: real ETOP skill weighting (30/30/20/20) from domain ----
+  if (seg[0] === 'classes' && seg[2] === 'gradebook' && method === 'GET') {
+    const c = db.classes.find((x) => x.id === seg[1]);
+    if (!c) return err(404, 'not_found');
+    if (!canTeachClass(actor, classRef(c))) return err(403, 'forbidden');
+    const students = db.users.filter((u) => u.role === 'student' && u.classIds.includes(c.id));
+    return ok(
+      students.map((stu) => {
+        const agg: Partial<Record<SkillKey, SkillScore>> = {};
+        for (const s of db.submissions.filter((x) => x.studentId === stu.id && x.status === 'graded')) {
+          const a = db.assignments.find((x) => x.id === s.assignmentId);
+          if (!a || a.classId !== c.id) continue;
+          for (const qid of a.questionIds) {
+            const qq = db.questions.find((x) => x.id === qid)!;
+            const g = grade(qq, s.answers[qid]);
+            const t = (agg[qq.skill] ??= { earned: 0, possible: 0 });
+            t.possible += 1;
+            t.earned += g === null ? (s.overall ?? 0) / 100 : g; // write: rubric-scaled
+          }
+        }
+        return { studentId: stu.id, name: stu.name, overall: weightedOverall(agg), skills: agg };
+      }),
+    );
   }
 
   // ---- session log: after-class note straight to the parent's digest ----

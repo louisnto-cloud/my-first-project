@@ -81,6 +81,19 @@ describe('demo engine — full teaching loop', () => {
     expect((await call('GET', '/assignments/a_demo1/status', undefined, bao!)).status).toBe(403);
   });
 
+  it('the gradebook aggregates graded work with real ETOP skill weights', async () => {
+    const ha = await loginCode('GV0004');
+    const rows = (await call('GET', '/classes/up1/gradebook', undefined, ha!)).json as { name: string; overall: number | null; skills: Record<string, { earned: number; possible: number }> }[];
+    const vy = rows.find((r) => r.name === 'Trần Khánh Vy')!; // seeded 100/100 quiz
+    expect(vy.overall).toBeGreaterThan(90);
+    expect(vy.skills.grammar?.possible).toBeGreaterThan(0);
+    const bao = rows.find((r) => r.name === 'Nguyễn Gia Bảo')!;
+    expect(bao.overall).toBeNull(); // nothing graded yet
+
+    const ly = await loginCode('GV0006');
+    expect((await call('GET', '/classes/up1/gradebook', undefined, ly!)).status).toBe(403);
+  });
+
   it('teacher assignment list shows live results (submitted count + average)', async () => {
     const ha = await loginCode('GV0004');
     const list = (await call('GET', '/classes/up1/assignments', undefined, ha!)).json as { id: string; submittedCount: number; rosterCount: number; avgOverall: number | null }[];

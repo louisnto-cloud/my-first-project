@@ -33,7 +33,8 @@ interface Question {
 
 function ClassCard({ cls }: { cls: ClassInfo }) {
   const [open, setOpen] = useState(false);
-  const [tab, setTab] = useState<'students' | 'work'>('students');
+  const [tab, setTab] = useState<'students' | 'work' | 'grades'>('students');
+  const [gradebook, setGradebook] = useState<{ studentId: string; name: string; overall: number | null; skills: Partial<Record<string, { earned: number; possible: number }>> }[]>([]);
   const [roster, setRoster] = useState<RosterRow[]>([]);
   const [assignments, setAssignments] = useState<{ id: string; title: string; status: string; submittedCount?: number; rosterCount?: number; avgOverall?: number | null }[]>([]);
   const [names, setNames] = useState('');
@@ -170,8 +171,15 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
           )}
 
           <div className="flex gap-1 rounded-2xl bg-violet-100 p-1">
-            {([['students', `👧 Học viên (${roster.length})`], ['work', `📝 Bài tập (${assignments.length})`]] as const).map(([k, label]) => (
-              <button key={k} onClick={() => setTab(k)} className={`flex-1 rounded-xl px-2 py-2 text-xs font-extrabold transition ${tab === k ? 'bg-white text-violet-700 shadow-sm' : 'text-violet-400'}`}>
+            {([['students', `👧 Học viên (${roster.length})`], ['work', `📝 Bài tập (${assignments.length})`], ['grades', '📊 Điểm']] as const).map(([k, label]) => (
+              <button
+                key={k}
+                onClick={() => {
+                  setTab(k);
+                  if (k === 'grades') void api<typeof gradebook>('GET', `/classes/${cls.id}/gradebook`).then(setGradebook).catch(() => setGradebook([]));
+                }}
+                className={`flex-1 rounded-xl px-2 py-2 text-xs font-extrabold transition ${tab === k ? 'bg-white text-violet-700 shadow-sm' : 'text-violet-400'}`}
+              >
                 {label}
               </button>
             ))}
@@ -214,6 +222,37 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
                 onChange={(e) => setNames(e.target.value)}
               />
               <button onClick={addStudents} disabled={!names.trim()} className="btn-soft w-full text-sm">＋ Thêm vào lớp (tự cấp mã số)</button>
+            </div>
+          )}
+
+          {tab === 'grades' && (
+            <div className="space-y-2">
+              <p className="text-[11px] font-bold text-slate-400">Điểm tổng theo trọng số E’TOP (NP 30 · Nghe 30 · Đọc 20 · Viết 20) từ các bài đã chấm.</p>
+              {gradebook.length === 0 && <div className="rounded-2xl bg-slate-50 p-3 text-center text-sm font-bold text-slate-400">Chưa có bài nào được chấm</div>}
+              {gradebook.map((g) => (
+                <div key={g.studentId} className="rounded-2xl bg-violet-50 p-3">
+                  <div className="flex items-center justify-between text-sm font-bold">
+                    <span>{g.name}</span>
+                    <span className={g.overall == null ? 'text-slate-300' : g.overall >= 80 ? 'text-emerald-600' : g.overall >= 50 ? 'text-amber-600' : 'text-rose-500'}>
+                      {g.overall == null ? '—' : `${Math.round(g.overall)}/100`}
+                    </span>
+                  </div>
+                  {g.overall != null && (
+                    <div className="mt-1.5 grid grid-cols-4 gap-1.5">
+                      {([['grammar', '🔤'], ['listening', '🎧'], ['reading', '📖'], ['writing', '✍️']] as const).map(([k, emoji]) => {
+                        const s = g.skills[k];
+                        const pct = s && s.possible > 0 ? Math.round((s.earned / s.possible) * 100) : null;
+                        return (
+                          <div key={k} className="rounded-lg bg-white px-1.5 py-1 text-center">
+                            <div className="text-[10px]">{emoji}</div>
+                            <div className={`text-[11px] font-black ${pct == null ? 'text-slate-300' : pct >= 80 ? 'text-emerald-600' : pct >= 50 ? 'text-amber-600' : 'text-rose-500'}`}>{pct == null ? '—' : `${pct}%`}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           )}
 
