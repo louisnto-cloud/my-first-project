@@ -173,7 +173,7 @@ function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: strin
                 >
                   {avatar ?? '🙂'}
                 </button>
-                <span className="min-w-0 truncate">
+                <span className="min-w-0 leading-snug">
                   {lang === 'vi' ? `Chào ${name.split(' ').slice(-1)[0]}! Học thôi nào 🎈` : `Hi ${name.split(' ').slice(-1)[0]}! Let's learn 🎈`}
                 </span>
               </div>
