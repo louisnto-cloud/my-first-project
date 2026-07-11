@@ -27,8 +27,8 @@ math tie-out), commit, push. Keep the app cohesive and simple — no bloat.
 - [x] Print / PDF-friendly layout + "Print" button.
 - [ ] Named what-if snapshots (compare saved states).
 - [x] In-app Guide + plain-English glossary.
-- [ ] Accessibility pass (aria labels, focus states, contrast).
-- [ ] Number/locale formatting options (currency symbol).
+- [x] Accessibility pass (aria labels, focus-visible states).
+- [x] Configurable currency symbol.
 
 ## Log
 - (start) Loop initiated; branch restarted from main after PR #8 merged.
