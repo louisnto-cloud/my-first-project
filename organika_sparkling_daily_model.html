@@ -68,13 +68,69 @@
   .seg button{border:0;background:#fff;padding:7px 14px;font-weight:600;font-size:13px;color:var(--soft);cursor:pointer}
   .seg button.on{background:var(--ink);color:#fff}
 </style>
+<style>
+  /* --- iteration 1: theme tokens, dark mode, responsive, a11y --- */
+  :root{
+    --field:#fff7cc; --field-ink:#1d1d1f; --hl:var(--hl); --best-bg:#e8f7ee;
+    --note-bg:#f3f7ff; --note-line:#d9e6ff; --note-ink:#33506e;
+    --chip-bg:#1d1d1f; --chip-fg:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#f2f2f7; --soft:#9b9ba1; --line:#2c2c2e; --bg:#000000; --card:#1c1c1e;
+      --accent:#0a84ff; --accent2:#5ac8e6; --good:#30d158; --bad:#ff5a5f; --amber:#2e2a16;
+      --field:#2e2a16; --field-ink:#f7e9a8; --hl:#10233d; --best-bg:#0f2c1c;
+      --note-bg:#0f1b2e; --note-line:#20365a; --note-ink:#a9c6ee;
+      --chip-bg:#f2f2f7; --chip-fg:#000000;
+      --shadow:0 1px 3px rgba(0,0,0,.5),0 10px 28px rgba(0,0,0,.45);
+    }
+  }
+  .nav{background:color-mix(in srgb,var(--bg) 82%,transparent)}
+  .nav button.on,.seg button.on{background:var(--chip-bg);color:var(--chip-fg)}
+  .seg button{background:var(--card);color:var(--soft)}
+  .pill{background:var(--card)}
+  input.cell{background:var(--field);color:var(--field-ink)}
+  .best{background:var(--best-bg) !important;color:var(--good)}
+  .note{background:var(--note-bg);border-color:var(--note-line);color:var(--note-ink)}
+  /* header actions */
+  .head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .actions{display:flex;gap:8px;flex-wrap:wrap}
+  .actions button{border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;
+    font-size:13px;font-weight:600;border-radius:980px;padding:7px 14px;cursor:pointer;transition:.15s}
+  .actions button:hover{border-color:var(--accent);color:var(--accent)}
+  /* heat legend */
+  .heat-legend{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:12px;color:var(--soft)}
+  .heat-legend .ramp{height:10px;width:120px;border-radius:6px;
+    background:linear-gradient(90deg,#f86a6b,#ffeb84,#63be7b)}
+  /* horizontal scroll for wide tables on small screens */
+  #cmp,#pnl,#pricing,#sens,#asmpSku,#asmpCo,#asmpLev{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  h1{font-size:clamp(30px,7vw,46px)}
+  @media(max-width:600px){
+    header{padding:30px 0 6px}.sub{font-size:16px}
+    .wrap{padding:0 16px 60px}.nav{margin:0 -16px 22px;padding:10px 16px}
+    .kpi .v{font-size:22px}
+  }
+  button:focus-visible,input.cell:focus-visible,.nav button:focus-visible,.pill:focus-visible{
+    outline:2px solid var(--accent);outline-offset:2px}
+  @media (prefers-reduced-motion: reduce){*{transition:none !important;animation:none !important}}
+  @media print{.nav,.actions,.scen,.note{display:none}.view{display:block !important}.panel{break-inside:avoid}}
+</style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow">Organika</div>
-    <h1>Sparkling Daily</h1>
-    <p class="sub">One-Year Operating Model · FY2026 · all $ CDN</p>
+    <div class="head-row">
+      <div>
+        <div class="eyebrow">Organika</div>
+        <h1>Sparkling Daily</h1>
+        <p class="sub">One-Year Operating Model · FY2026 · all $ CDN</p>
+      </div>
+      <div class="actions">
+        <button id="btnExport" title="Download the scenario comparison as CSV">↓ CSV</button>
+        <button id="btnPrint" title="Print or save as PDF">⎙ Print</button>
+        <button id="btnReset" title="Reset all assumptions to defaults">↺ Reset</button>
+      </div>
+    </div>
   </header>
 
   <div class="nav" id="nav"></div>
@@ -145,7 +201,7 @@
   </section>
 
   <div class="foot">
-    v3.0 · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
+    v3.1 · dark-mode aware · your edits are saved in this browser · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
     Mirrors the Excel workbook (Home · Assumptions · Dashboard · scenarios · Monthly · Pricing Lab · Targets · Sensitivity · Checks).
   </div>
 </div>
@@ -171,6 +227,38 @@ const LEVERS = {
 const SCEN = ["Low","Base","High","Stretch"];
 let current = "Base";
 let priceMetric = "gp";
+
+// ---------------- persistence (survives reload) ----------------
+const LS = "organika.model.v3";
+const DEFAULTS = JSON.parse(JSON.stringify({SKUS, CO, LEVERS}));
+function persist(){ try{ localStorage.setItem(LS, JSON.stringify({SKUS, CO, LEVERS})); }catch(e){} }
+function restore(){
+  try{
+    const s = JSON.parse(localStorage.getItem(LS)); if(!s) return;
+    (s.SKUS||[]).forEach((o,i)=>{ if(SKUS[i]) Object.assign(SKUS[i], o); });
+    Object.assign(CO, s.CO||{});
+    Object.keys(s.LEVERS||{}).forEach(k=>{ if(LEVERS[k]) Object.assign(LEVERS[k], s.LEVERS[k]); });
+  }catch(e){}
+}
+function resetAll(){
+  const d = JSON.parse(JSON.stringify(DEFAULTS));
+  d.SKUS.forEach((o,i)=>Object.assign(SKUS[i], o));
+  Object.assign(CO, d.CO);
+  Object.keys(d.LEVERS).forEach(k=>Object.assign(LEVERS[k], d.LEVERS[k]));
+  persist(); renderAsmp(); refresh();
+}
+function exportCsv(){
+  const data = SCEN.map(compute);
+  const defs = [["Physical Cases",r=>Math.round(r.cases)],["Net Sales",r=>Math.round(r.net)],
+    ["Gross Profit",r=>Math.round(r.gp)],["GP %",r=>(r.gppct*100).toFixed(1)],
+    ["Contribution",r=>Math.round(r.cm)],["EBITDA",r=>Math.round(r.ebitda)],
+    ["EBITDA %",r=>(r.ebitdapct*100).toFixed(1)],["Net Income",r=>Math.round(r.ni)]];
+  const rows = [["Metric",...SCEN], ...defs.map(d=>[d[0], ...data.map(d[1])])];
+  const csv = rows.map(r=>r.join(",")).join("\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv],{type:"text/csv"}));
+  a.download = "organika_scenarios.csv"; a.click();
+}
 
 // ---------------- formatting helpers ----------------
 const money = v => (v<0?"-":"")+"$"+Math.abs(v).toLocaleString(undefined,{maximumFractionDigits:0});
@@ -263,7 +351,7 @@ function renderCmp(){
   let h = "<table><thead><tr><th>Metric</th>"+SCEN.map(s=>`<th>${s}</th>`).join("")+"</tr></thead><tbody>";
   rows.forEach(row=>{
     h += `<tr class="${row[2]?'tot':''}"><td>${row[0]}</td>`+
-      data.map((r,i)=>`<td style="${SCEN[i]==current?'background:#eef5ff':''}">${row[1](r)}</td>`).join("")+"</tr>";
+      data.map((r,i)=>`<td style="${SCEN[i]==current?'background:var(--hl)':''}">${row[1](r)}</td>`).join("")+"</tr>";
   });
   h += "</tbody></table>";
   el("cmp").innerHTML = h;
@@ -290,7 +378,7 @@ function renderPnl(){
   rows.forEach(row=>{
     h+=`<tr class="${row[3]?'major':''}"><td>${row[0]}</td>`+
        L.map(l=>`<td>${row[1](l)}</td>`).join("")+
-       `<td style="background:#eef5ff;font-weight:700">${row[2](r)}</td></tr>`;
+       `<td style="background:var(--hl);font-weight:700">${row[2](r)}</td></tr>`;
   });
   // company block (total only)
   const comp = [
@@ -302,7 +390,7 @@ function renderPnl(){
   comp.forEach(c=>{
     h+=`<tr class="${c[2]?'major':''} muted"><td>${c[0]}</td>`+
        SKUS.map(()=>`<td></td>`).join("")+
-       `<td style="background:#eef5ff;font-weight:700;color:var(--ink)">${c[1]}</td></tr>`;
+       `<td style="background:var(--hl);font-weight:700;color:var(--ink)">${c[1]}</td></tr>`;
   });
   h+="</tbody></table>";
   el("pnl").innerHTML=h;
@@ -348,11 +436,14 @@ function renderSens(){
   PRM.forEach(mp=>{
     h+=`<tr><td><b>${mult(mp)}</b></td>`+VOLM.map(mv=>{
       const v=ebitdaAt(mv,mp);
-      return `<td${v<0?' style="color:#d83a4b"':''}>${money(v)}</td>`;
+      const bg=heatColor(v,min,max);
+      return `<td class="cell" style="background:${bg}" title="Volume ${mult(mv)} · Price ${mult(mp)} → EBITDA ${money(v)}">${money(v)}</td>`;
     }).join("")+"</tr>";
   });
   h+="</tbody></table>";
   el("sens").innerHTML=h;
+  el("sens").insertAdjacentHTML("beforeend",
+    `<div class="heat-legend"><span>Loss</span><span class="ramp"></span><span>Best EBITDA</span></div>`);
   const be=breakeven();
   el("beLine").textContent=`Break-even (at base price): ${mult(be.mv)} volume — about ${num(be.cases)} cases.`;
 }
@@ -401,17 +492,19 @@ function renderAsmp(){
   lv+="</tbody></table>";
   el("asmpLev").innerHTML=lv;
 }
-function setS(i,k,v){SKUS[i][k]=parseFloat(v)||0;refresh();}
-function setCo(k,v){CO[k]=parseFloat(v)||0;refresh();}
-function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();}
+function setS(i,k,v){SKUS[i][k]=parseFloat(v)||0;refresh();persist();}
+function setCo(k,v){CO[k]=parseFloat(v)||0;refresh();persist();}
+function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();persist();}
 
 // ---------- nav / scenario bar ----------
 const VIEWS=["Overview","P&L","Pricing Lab","Sensitivity","Assumptions"];
 function buildNav(){
-  el("nav").innerHTML=VIEWS.map((v,i)=>`<button class="${i===0?'on':''}" data-v="${v}">${v}</button>`).join("");
+  el("nav").setAttribute("role","tablist");
+  document.querySelectorAll(".view").forEach(v=>v.setAttribute("role","tabpanel"));
+  el("nav").innerHTML=VIEWS.map((v,i)=>`<button role="tab" aria-selected="${i===0}" class="${i===0?'on':''}" data-v="${v}">${v}</button>`).join("");
   el("nav").querySelectorAll("button").forEach(b=>b.onclick=()=>{
-    el("nav").querySelectorAll("button").forEach(x=>x.classList.remove("on"));
-    b.classList.add("on");
+    el("nav").querySelectorAll("button").forEach(x=>{x.classList.remove("on");x.setAttribute("aria-selected","false");});
+    b.classList.add("on");b.setAttribute("aria-selected","true");
     document.querySelectorAll(".view").forEach(s=>s.classList.toggle("on", s.dataset.view===b.dataset.v));
   });
   el("scenBar").innerHTML=`<span class="lab">SCENARIO</span>`+
@@ -424,6 +517,13 @@ function buildNav(){
     renderPricing();});
 }
 function refresh(){renderKpis();renderCmp();renderPnl();renderPricing();renderSens();}
+
+// wire header actions
+el("btnReset").onclick=()=>{ if(confirm("Reset all assumptions to the default figures?")) resetAll(); };
+el("btnExport").onclick=exportCsv;
+el("btnPrint").onclick=()=>window.print();
+
+restore();            // load saved edits, if any
 buildNav();renderAsmp();refresh();
 </script>
 </body>
