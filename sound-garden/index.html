@@ -1404,6 +1404,10 @@ document.body.addEventListener('pointerdown', ()=>{
 
 document.addEventListener('gesturestart', e=>e.preventDefault());
 document.addEventListener('dblclick', e=>e.preventDefault());
+
+/* offline: cache the entire app (voice included) on first visit */
+if ('serviceWorker' in navigator)
+  window.addEventListener('load', ()=>{ navigator.serviceWorker.register('./sw.js').catch(()=>{}); });
 </script>
 </body>
 </html>
