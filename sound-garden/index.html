@@ -593,7 +593,7 @@ const BUNDLED = {};
 for (const l of LETTER_ORDER) BUNDLED['snd_'+l] = 'assets/'+l+'.mp3';
 for (const dg in DIGRAPHS) BUNDLED['snd_'+dg] = 'assets/'+dg+'.mp3';
 for (const w in WORDS) BUNDLED['wd_'+w] = 'assets/'+w+'.mp3';
-for (const id of ['p_hi','p_this','p_tap','p_pick','p_trace','p_find','p_yay','p_again','p_word','p_firstword','p_more'])
+for (const id of ['p_hi','p_this','p_tap','p_pick','p_trace','p_find','p_yay','p_again','p_word','p_firstword','p_more','p_family','p_pop'])
   BUNDLED[id] = 'assets/'+id+'.mp3';
 const NAME_BAKED = new Set(['p_hi','p_pick','p_yay','p_again','p_firstword']);
 function bundledURL(id){
