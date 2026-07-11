@@ -1257,6 +1257,8 @@ let S={
   placementScore:0,   // placement quiz correct count
   searchQ:'',         // dictionary search query
   showFilters:false,  // practice screen: filters expanded
+  mixedActive:false,  // mixed session in progress
+  mixedModes:[],      // per-card mode assignment for mixed sessions
   xpDay:'',           // which day todayXP belongs to
   typeChecked:null,   // typing quiz: null | true | false
   buildWords:[],      // sentence builder: shuffled source words
@@ -1402,7 +1404,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v23';
+const APP_VERSION='v24';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1664,11 +1666,26 @@ function startLesson(mode){
   S.activeLesson=buildLesson(S.tierFilter,S.catFilter);
   S.lessonIdx=0; S.flipped=false;
   S.sessionRight=0; S.sessionWrong=0; S.sessionXP=0;
-  if(mode==='flashcard'){S.activeCard=S.activeLesson[0]; go('flashcard');}
+  S.mixedActive=(mode==='mixed');
+  if(mode==='mixed'){
+    const pool=['flashcard','quiz','type','build'];
+    S.mixedModes=S.activeLesson.map(()=>rand(pool));
+    mixedGo();
+  }
+  else if(mode==='flashcard'){S.activeCard=S.activeLesson[0]; go('flashcard');}
   else if(mode==='quiz'){buildQuiz(); go('quiz');}
   else if(mode==='type'){S.typeChecked=null; go('type');}
   else if(mode==='build'){buildRound(); go('build');}
   else if(mode==='drill'){S.drillQueue=[...S.activeLesson]; S.drillIdx=0; go('drill');}
+}
+// mixed sessions: each card renders in its pre-assigned mode
+function mixedGo(){
+  const m=S.mixedModes[S.lessonIdx]||'flashcard';
+  if(m==='quiz'){buildQuiz();}
+  else if(m==='type'){S.typeChecked=null;}
+  else if(m==='build'){buildRound();}
+  else {S.flipped=false;}
+  go(m);
 }
 
 // ── PRACTICE SCREEN ──────────────────────────────────────────────────────────
@@ -1676,6 +1693,7 @@ function renderPractice(){
   const tiers=['all','A','B','C','D','E'];
   const cats=['all',...new Set(VOCAB.map(v=>v.category))];
   const MODES=[
+    {k:'mixed',icon:'🔀',n:'Mixed',d:'A bit of everything — recommended'},
     {k:'flashcard',icon:'🃏',n:'Flashcards',d:'See it, flip it, hear it'},
     {k:'quiz',icon:'🧠',n:'Quiz',d:'Pick the right answer'},
     {k:'type',icon:'⌨️',n:'Type It',d:'Write the Vietnamese'},
@@ -1782,6 +1800,7 @@ function gradeCard(ok){
   S.flipped=false;
   S.lessonIdx++;
   if(S.lessonIdx>=S.activeLesson.length){go('summary');}
+  else if(S.mixedActive){mixedGo();}
   else{S.activeCard=S.activeLesson[S.lessonIdx];render();}
 }
 
@@ -1859,6 +1878,7 @@ function answerQuiz(oid){
 function nextQuiz(){
   S.lessonIdx++;
   if(S.lessonIdx>=S.activeLesson.length){go('summary');}
+  else if(S.mixedActive){mixedGo();}
   else{buildQuiz();render();}
 }
 
@@ -2090,6 +2110,7 @@ function startCustomLesson(ids){
   S.lessonIdx=0; S.flipped=false;
   S.sessionRight=0; S.sessionWrong=0; S.sessionXP=0;
   S.practiceMode='flashcard';
+  S.mixedActive=false;
   S.activeCard=S.activeLesson[0];
   go('flashcard');
 }
@@ -2264,6 +2285,7 @@ function nextType(){
   S.typeChecked=null;
   S.lessonIdx++;
   if(S.lessonIdx>=S.activeLesson.length) go('summary');
+  else if(S.mixedActive) mixedGo();
   else render();
 }
 
@@ -2328,6 +2350,7 @@ function checkBuild(){
 function nextBuild(){
   S.lessonIdx++;
   if(S.lessonIdx>=S.activeLesson.length) go('summary');
+  else if(S.mixedActive) mixedGo();
   else{buildRound();render();}
 }
 
