@@ -5,20 +5,52 @@ import { buildSeed } from './seed';
 const DB_KEY = 'etop-db-v1';
 const SESSION_KEY = 'etop-session-v1';
 
+// Every collection on the DB must be an array. A malformed or partial record
+// (valid JSON but missing collections) would otherwise crash views downstream.
+const DB_COLLECTIONS: (keyof DB)[] = [
+  'users',
+  'classes',
+  'assessments',
+  'scores',
+  'homework',
+  'homeworkStatus',
+  'vocabLists',
+  'practice',
+  'feedback',
+];
+
+function isValidDB(value: unknown): value is DB {
+  if (!value || typeof value !== 'object') return false;
+  const db = value as Record<string, unknown>;
+  return DB_COLLECTIONS.every((key) => Array.isArray(db[key]));
+}
+
+function persist(db: DB): void {
+  try {
+    localStorage.setItem(DB_KEY, JSON.stringify(db));
+  } catch (err) {
+    // Storage can be full or blocked (private mode). Keep the app usable in
+    // memory rather than crashing on write.
+    console.warn('Could not persist the local database', err);
+  }
+}
+
 function loadDB(): DB {
   try {
     const raw = localStorage.getItem(DB_KEY);
     if (raw) {
-      const db = JSON.parse(raw) as DB;
+      const parsed = JSON.parse(raw) as Partial<DB>;
       // Migrate databases saved before newer collections existed
-      db.feedback ??= [];
-      return db;
+      parsed.feedback ??= [];
+      if (isValidDB(parsed)) return parsed;
+      // Corrupt or partial record: fall through to a clean reseed.
+      console.warn('Stored database was invalid, restoring demo data');
     }
   } catch {
     // fall through to a fresh seed
   }
   const db = buildSeed();
-  localStorage.setItem(DB_KEY, JSON.stringify(db));
+  persist(db);
   return db;
 }
 
@@ -41,14 +73,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setDb((prev) => {
       const next = structuredClone(prev);
       fn(next);
-      localStorage.setItem(DB_KEY, JSON.stringify(next));
+      persist(next);
       return next;
     });
   }, []);
 
   const resetDemo = useCallback(() => {
     const fresh = buildSeed();
-    localStorage.setItem(DB_KEY, JSON.stringify(fresh));
+    persist(fresh);
     setDb(fresh);
   }, []);
 

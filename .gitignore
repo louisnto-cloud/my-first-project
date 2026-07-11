@@ -7,3 +7,7 @@ dist/
 # Python (model builder)
 __pycache__/
 *.pyc
+
+# Loop-local visual check tooling
+scripts/shots/
+scripts/shot.mjs

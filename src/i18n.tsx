@@ -42,6 +42,15 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
   'common.average': { en: 'Average', vi: 'Trung bình' },
   'common.resetDemo': { en: 'Reset demo data', vi: 'Khôi phục dữ liệu mẫu' },
 
+  'error.title': { en: 'Something went wrong', vi: 'Đã có lỗi xảy ra' },
+  'error.body': {
+    en: 'The app hit an unexpected problem. Your data is safe. Try reloading, and if it keeps happening you can restore the demo data.',
+    vi: 'Ứng dụng gặp sự cố ngoài dự kiến. Dữ liệu của bạn vẫn an toàn. Hãy thử tải lại, nếu vẫn lỗi bạn có thể khôi phục dữ liệu mẫu.',
+  },
+  'error.reload': { en: 'Reload', vi: 'Tải lại' },
+  'error.reset': { en: 'Restore demo data', vi: 'Khôi phục dữ liệu mẫu' },
+  'error.details': { en: 'Technical details', vi: 'Chi tiết kỹ thuật' },
+
   'dash.hello': { en: 'Hello', vi: 'Chào' },
   'dash.nextClass': { en: 'Next class', vi: 'Buổi học tiếp theo' },
   'dash.noClass': { en: 'No upcoming class this week', vi: 'Tuần này không còn buổi học nào' },
@@ -152,6 +161,13 @@ interface I18nCtx {
 
 const Ctx = createContext<I18nCtx | null>(null);
 const LANG_KEY = 'etop-lang';
+
+/** Look up a string without the React context, for use outside the provider tree. */
+export function STRINGS_LANG(key: string, lang: Lang): string {
+  const entry = STRINGS[key];
+  if (!entry) return key;
+  return entry[lang] ?? entry.en;
+}
 
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>(() => (localStorage.getItem(LANG_KEY) === 'en' ? 'en' : 'vi'));
