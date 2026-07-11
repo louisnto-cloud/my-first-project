@@ -125,7 +125,7 @@ function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: strin
   };
   const [view, setView] = useState<'work' | 'practice'>('work');
   const [classes, setClasses] = useState<ClassInfo[]>([]);
-  const [ach, setAch] = useState<{ points: number; streak: number; badges?: { id: string; earned: boolean }[] } | null>(null);
+  const [ach, setAch] = useState<{ points: number; pointsToday?: number; streak: number; badges?: { id: string; earned: boolean }[] } | null>(null);
   const [assignments, setAssignments] = useState<Record<string, { id: string; title: string; dueAt: string | null; myStatus: string | null }[]>>({});
   const [playing, setPlaying] = useState<string | null>(null);
   const [code, setCode] = useState('');
@@ -183,6 +183,17 @@ function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: strin
               </div>
             </div>
           </div>
+          {ach.pointsToday != null && (
+            <div className="relative mt-3 rounded-2xl bg-white/15 px-3 py-2">
+              <div className="flex items-center justify-between text-[10px] font-extrabold uppercase tracking-wide text-violet-100">
+                <span>🎯 {lang === 'vi' ? 'Mục tiêu hôm nay' : "Today's goal"}</span>
+                <span>{Math.min(ach.pointsToday, 20)}/20 ⭐{ach.pointsToday >= 20 ? ' 🎉' : ''}</span>
+              </div>
+              <div className="mt-1 h-2 overflow-hidden rounded-full bg-white/20">
+                <div className="h-full rounded-full bg-gradient-to-r from-amber-300 to-yellow-300 transition-all duration-500" style={{ width: `${Math.min(100, (ach.pointsToday / 20) * 100)}%` }} />
+              </div>
+            </div>
+          )}
           {pickingAvatar && (
             <div className="animate-pop relative mt-3 rounded-2xl bg-white/15 p-2.5">
               <div className="mb-1.5 text-center text-[11px] font-extrabold text-white/80">{lang === 'vi' ? 'Chọn nhân vật của bạn:' : 'Pick your character:'}</div>

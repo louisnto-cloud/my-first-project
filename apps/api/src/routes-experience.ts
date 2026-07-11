@@ -68,6 +68,8 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
     }
 
     const totalPoints = Number(points?.sum ?? 0);
+    const todayRow = await one<{ sum: string | null }>(db, 'SELECT SUM(points)::text AS sum FROM practice_events WHERE student_id = $1 AND occurred_on = $2', [studentId, dateOf(new Date())]);
+    const pointsToday = Number(todayRow?.sum ?? 0);
     const submissions = Number(submitted?.n ?? 0);
     const badges = [
       { id: 'first-steps', earned: days.length >= 1 },
@@ -77,7 +79,7 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
       { id: 'points-200', earned: totalPoints >= 200 },
       { id: 'homework-hero', earned: submissions >= 5 },
     ];
-    return { points: totalPoints, streak, practiceDays: days.length, submissions, badges };
+    return { points: totalPoints, pointsToday, streak, practiceDays: days.length, submissions, badges };
   });
 
   // Last-7-days attendance for one child ("con đi học đều không?").

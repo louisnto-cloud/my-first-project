@@ -31,7 +31,7 @@ interface Question {
   unit: string | null;
 }
 
-function ClassCard({ cls }: { cls: ClassInfo }) {
+function ClassCard({ cls, siblings }: { cls: ClassInfo; siblings: ClassInfo[] }) {
   const [open, setOpen] = useState(false);
   const [tab, setTab] = useState<'students' | 'work' | 'grades'>('students');
   const [gradebook, setGradebook] = useState<{ studentId: string; name: string; overall: number | null; skills: Partial<Record<string, { earned: number; possible: number }>> }[]>([]);
@@ -45,6 +45,7 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
   const [statusRows, setStatusRows] = useState<{ studentId: string; name: string; status: string; overall: number | null }[]>([]);
   const [title, setTitle] = useState('');
   const [dueAt, setDueAt] = useState('');
+  const [alsoClasses, setAlsoClasses] = useState<Set<string>>(new Set());
   const [composing, setComposing] = useState(false);
   const [msg, setMsg] = useState('');
   const [copied, setCopied] = useState('');
@@ -126,16 +127,22 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
 
   const assign = async () => {
     if (!title.trim() || picked.size === 0) return;
-    const created = await api<{ id: string }>('POST', `/classes/${cls.id}/assignments`, {
-      title: title.trim(),
-      questionIds: [...picked],
-      ...(dueAt ? { dueAt: new Date(dueAt).toISOString() } : {}),
-    });
-    await api('POST', `/assignments/${created.id}/publish`);
+    // One tap can assign the same work to every parallel section the
+    // teacher runs (Ms. Quy's two SJ1 groups, etc.).
+    const targets = [cls.id, ...alsoClasses];
+    for (const classId of targets) {
+      const created = await api<{ id: string }>('POST', `/classes/${classId}/assignments`, {
+        title: title.trim(),
+        questionIds: [...picked],
+        ...(dueAt ? { dueAt: new Date(dueAt).toISOString() } : {}),
+      });
+      await api('POST', `/assignments/${created.id}/publish`);
+    }
     setTitle('');
     setPicked(new Set());
+    setAlsoClasses(new Set());
     setComposing(false);
-    flash(`📨 Đã giao "${title.trim()}" — học viên & phụ huynh đã được báo.`);
+    flash(`📨 Đã giao "${title.trim()}" cho ${targets.length} lớp — học viên & phụ huynh đã được báo.`);
     void load();
   };
 
@@ -315,10 +322,29 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
                       </button>
                     ))}
                   </div>
+                  {siblings.length > 0 && (
+                    <>
+                      <div className="text-[11px] font-bold text-slate-400">Giao thêm cho lớp khác của bạn:</div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {siblings.map((s) => {
+                          const on = alsoClasses.has(s.id);
+                          return (
+                            <button
+                              key={s.id}
+                              onClick={() => { const next = new Set(alsoClasses); on ? next.delete(s.id) : next.add(s.id); setAlsoClasses(next); }}
+                              className={`chip transition ${on ? 'bg-violet-600 text-white' : 'bg-violet-50 text-violet-500'}`}
+                            >
+                              {on ? '✓ ' : '＋'}{s.name} <span className="opacity-60">{s.scheduleNote.split('·')[0]?.trim()}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </>
+                  )}
                   <div className="flex gap-2">
-                    <button onClick={() => { setComposing(false); setPicked(new Set()); setTitle(''); }} className="btn-soft text-sm">Hủy</button>
+                    <button onClick={() => { setComposing(false); setPicked(new Set()); setTitle(''); setAlsoClasses(new Set()); }} className="btn-soft text-sm">Hủy</button>
                     <button onClick={assign} disabled={!title.trim() || picked.size === 0} className="btn-primary flex-1 text-sm">
-                      📨 Giao ({picked.size})
+                      📨 Giao ({picked.size}){alsoClasses.size > 0 ? ` · ${alsoClasses.size + 1} lớp` : ''}
                     </button>
                   </div>
                 </div>
@@ -332,16 +358,26 @@ function ClassCard({ cls }: { cls: ClassInfo }) {
 }
 
 export function ClassManager() {
-  const [classes, setClasses] = useState<ClassInfo[]>([]);
+  const [classes, setClasses] = useState<ClassInfo[] | null>(null);
   useEffect(() => {
     void api<ClassInfo[]>('GET', '/classes').then(setClasses);
   }, []);
-  if (classes.length === 0) return null;
+  if (classes === null) return null;
+  if (classes.length === 0) {
+    // Brand-new teacher account (just created in Quản trị trung tâm).
+    return (
+      <div className="card space-y-1 text-center">
+        <div className="text-2xl">🏫</div>
+        <div className="font-extrabold text-ink">Chưa có lớp nào được phân công</div>
+        <div className="text-sm font-semibold text-muted">Chủ trung tâm phân lớp cho bạn trong mục Quản trị trung tâm — lớp sẽ hiện ở đây ngay khi được gán.</div>
+      </div>
+    );
+  }
   return (
     <div className="space-y-3">
       <h2 className="px-1 font-black text-violet-800">🏫 Lớp của tôi <span className="text-slate-400">({classes.length})</span></h2>
       {classes.map((c) => (
-        <ClassCard key={c.id} cls={c} />
+        <ClassCard key={c.id} cls={c} siblings={classes.filter((x) => x.id !== c.id)} />
       ))}
     </div>
   );

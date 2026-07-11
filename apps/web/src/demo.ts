@@ -822,7 +822,8 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
       { id: 'points-200', earned: points >= 200 },
       { id: 'homework-hero', earned: submissions >= 5 },
     ];
-    return ok({ points, streak, practiceDays: days.size, submissions, badges });
+    const pointsToday = evs.filter((p) => p.date === today()).reduce((s, p) => s + p.points, 0);
+    return ok({ points, pointsToday, streak, practiceDays: days.size, submissions, badges });
   }
 
   // ---------- Announcements (Bảng tin) ----------
