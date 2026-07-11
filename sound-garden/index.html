@@ -203,8 +203,6 @@
     <div class="roundbtn pickbtn" id="pick-meet" style="background:#ffe3ec;">📢</div>
     <div class="roundbtn pickbtn" id="pick-trace" style="background:#e3f0ff;">☝️</div>
     <div class="roundbtn pickbtn" id="pick-find" style="background:#e9ffe3;">🔍</div>
-    <div class="roundbtn pickbtn" id="pick-pop" style="background:#e3faff;">🫧</div>
-    <div class="roundbtn pickbtn" id="pick-hunt" style="background:#fff0e0;">👂</div>
   </div>
 </div>
 
@@ -612,7 +610,9 @@ function bundledURL(id){
   if (NAME_BAKED.has(id) && (S.name||'Mariana') !== 'Mariana') return null;
   return BUNDLED[id];
 }
-for (const id in BUNDLED){ const a=new Audio(BUNDLED[id]); a.preload='auto'; }
+/* No boot-time Audio() preloading: the service worker precaches every file,
+   so on-demand playback is already instant, and creating 140 media elements
+   at launch costs real memory and network churn on older iPads. */
 
 let dbp = new Promise((res,rej)=>{
   const rq = indexedDB.open('sound-garden',1);
@@ -880,16 +880,19 @@ function openPicker(l){
   curLetter=l;
   if (!S.coached){ S.coached=true; save(); }
   pickerLetterEl.innerHTML=''; pickerLetterEl.appendChild(letterSVG(l,{eyes:true}));
-  // the listening game needs at least one picture-word starting with this sound
-  document.getElementById('pick-hunt').style.display = huntWords(l).length ? '' : 'none';
   showScene('picker');
   pipSay([soundPart(l), {pause:250}, {clip:'p_pick'}]);
 }
 document.getElementById('pick-meet').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startMeet(curLetter); });
 document.getElementById('pick-trace').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startTrace(curLetter); });
-document.getElementById('pick-find').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startFind(curLetter); });
-document.getElementById('pick-pop').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startPop(curLetter); });
-document.getElementById('pick-hunt').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop(); startHunt(curLetter); });
+/* one search button, three games behind it: classic Find, Pop the Bubbles,
+   or Sound Hunt, chosen at random. Fewer choices on screen for an easily
+   overwhelmed child, and the surprise keeps the button fresh. */
+document.getElementById('pick-find').addEventListener('pointerdown', ()=>{ ensureAudio(); sfx.pop();
+  const games = [startFind, startPop];
+  if (huntWords(curLetter).length) games.push(startHunt);
+  games[Math.floor(Math.random()*games.length)](curLetter);
+});
 
 /* ---------- TREE PICKER (Build a Word vs Word Families) ---------- */
 function openTreePicker(){
