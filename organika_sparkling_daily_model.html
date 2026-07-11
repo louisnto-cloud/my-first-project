@@ -102,6 +102,9 @@
   .heat-legend{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:12px;color:var(--soft)}
   .heat-legend .ramp{height:10px;width:120px;border-radius:6px;
     background:linear-gradient(90deg,#f86a6b,#ffeb84,#63be7b)}
+  /* charts */
+  .chart{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:2px 0 8px;padding-bottom:2px}
+  .chart svg{display:block}
   /* horizontal scroll for wide tables on small screens */
   #cmp,#pnl,#pricing,#sens,#asmpSku,#asmpCo,#asmpLev{overflow-x:auto;-webkit-overflow-scrolling:touch}
   h1{font-size:clamp(30px,7vw,46px)}
@@ -142,6 +145,11 @@
     <div class="note">Pick a scenario above. The cards show that scenario's full-year result. To change any number, open <b>Assumptions</b> — it's the only place you type.</div>
     <div class="kpis" id="kpis"></div>
     <div class="panel">
+      <h2>EBITDA by scenario</h2>
+      <p class="h-sub">Your selected scenario is highlighted. Updates live as you edit Assumptions.</p>
+      <div class="chart" id="scenChart"></div>
+    </div>
+    <div class="panel">
       <h2>Scenario comparison</h2>
       <p class="h-sub">All four scenarios side by side — updates live as you edit Assumptions.</p>
       <div id="cmp"></div>
@@ -153,6 +161,7 @@
     <div class="panel">
       <h2>Profit &amp; Loss — <span class="scn-name"></span></h2>
       <p class="h-sub">6 SKUs across the columns, company total on the right, all the way to net income.</p>
+      <div class="chart" id="pnlChart"></div>
       <div id="pnl"></div>
     </div>
   </section>
@@ -201,7 +210,7 @@
   </section>
 
   <div class="foot">
-    v3.1 · dark-mode aware · your edits are saved in this browser · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
+    v3.2 · charts · dark-mode aware · your edits are saved in this browser · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
     Mirrors the Excel workbook (Home · Assumptions · Dashboard · scenarios · Monthly · Pricing Lab · Targets · Sensitivity · Checks).
   </div>
 </div>
@@ -448,6 +457,65 @@ function renderSens(){
   el("beLine").textContent=`Break-even (at base price): ${mult(be.mv)} volume — about ${num(be.cases)} cases.`;
 }
 
+// ---------- charts (SVG, theme-aware, dark-mode via CSS vars) ----------
+const sMoney = v=>{const a=Math.abs(v),s=v<0?"-":"";
+  if(a>=1e6)return s+"$"+(a/1e6).toFixed(a>=1e7?1:2)+"M";
+  if(a>=1e3)return s+"$"+Math.round(a/1e3)+"k"; return s+"$"+Math.round(a);};
+function pnlBars(r){return [
+  {label:"Net Sales", val:r.net, kind:"total", type:"sub"},
+  {label:"COGS", val:-r.cogs, kind:"sub"},
+  {label:"Gross Profit", val:r.gp, kind:"total", type:"sub"},
+  {label:"A&P", val:-r.ap, kind:"sub"},
+  {label:"Contribution", val:r.cm, kind:"total", type:"sub"},
+  {label:"Opex", val:-r.opex, kind:"sub"},
+  {label:"EBITDA", val:r.ebitda, kind:"total", type:"sub"},
+  {label:"D&A", val:-r.da, kind:"sub"},
+  {label:"Interest", val:-r.interest, kind:"sub"},
+  {label:"Tax", val:-r.tax, kind:"sub"},
+  {label:"Net Income", val:r.ni, kind:"total", type:"result"},
+];}
+function waterfallSVG(bars){
+  const W=760,H=300,padX=16,padB=56,padT=28;
+  let run=0,it=[],lo=0,hi=0;
+  bars.forEach(b=>{ let seg;
+    if(b.kind==="total"){seg={label:b.label,lo:Math.min(0,b.val),hi:Math.max(0,b.val),val:b.val,type:b.type};run=b.val;}
+    else{const a=run,c=run+b.val;seg={label:b.label,lo:Math.min(a,c),hi:Math.max(a,c),val:b.val,type:"cost"};run=c;}
+    it.push(seg);lo=Math.min(lo,seg.lo);hi=Math.max(hi,seg.hi); });
+  const span=(hi-lo)||1, y=v=>padT+(hi-v)/span*(H-padT-padB);
+  const gap=(W-2*padX)/it.length, bw=Math.min(46,gap*0.62), xL=i=>padX+gap*i+(gap-bw)/2, xR=i=>xL(i)+bw;
+  const endLvl=s=> s.val<0? s.lo : s.hi;
+  const fill=s=> s.type==="cost" ? "var(--bad)" : s.type==="result" ? (s.val>=0?"var(--good)":"var(--bad)") : "var(--accent)";
+  let g=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:620px" role="img" aria-label="Profit and loss waterfall from net sales to net income">`;
+  g+=`<line x1="${padX}" y1="${y(0).toFixed(1)}" x2="${W-padX}" y2="${y(0).toFixed(1)}" stroke="var(--line)"/>`;
+  for(let i=0;i<it.length-1;i++){const yl=y(endLvl(it[i])).toFixed(1);
+    g+=`<line x1="${xR(i).toFixed(1)}" y1="${yl}" x2="${xL(i+1).toFixed(1)}" y2="${yl}" stroke="var(--soft)" stroke-opacity=".4" stroke-dasharray="3 3"/>`;}
+  it.forEach((s,i)=>{ const x=xL(i),yt=y(s.hi),h=Math.max(2,y(s.lo)-y(s.hi));
+    const op= s.type==="cost" ? ' fill-opacity=".42"' : "";
+    g+=`<rect x="${x.toFixed(1)}" y="${yt.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="4" fill="${fill(s)}"${op}><title>${s.label}: ${money(s.val)}</title></rect>`;
+    g+=`<text x="${(x+bw/2).toFixed(1)}" y="${(yt-6).toFixed(1)}" text-anchor="middle" font-size="10" font-weight="700" fill="var(--ink)">${sMoney(s.val)}</text>`;
+    g+=`<text x="${(x+bw/2).toFixed(1)}" y="${H-padB+14}" text-anchor="end" font-size="9.5" fill="var(--soft)" transform="rotate(-32 ${(x+bw/2).toFixed(1)} ${H-padB+14})">${s.label}</text>`; });
+  return g+"</svg>";
+}
+function scenarioBarsSVG(){
+  const data=SCEN.map(s=>({name:s,val:compute(s).ebitda}));
+  const W=560,H=230,padX=20,padB=40,padT=28;
+  let lo=0,hi=0;data.forEach(d=>{lo=Math.min(lo,d.val);hi=Math.max(hi,d.val);});
+  const span=(hi-lo)||1, y=v=>padT+(hi-v)/span*(H-padT-padB);
+  const gap=(W-2*padX)/data.length, bw=Math.min(88,gap*0.5), xC=i=>padX+gap*i+gap/2;
+  let g=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:420px" role="img" aria-label="EBITDA by scenario">`;
+  g+=`<line x1="${padX}" y1="${y(0).toFixed(1)}" x2="${W-padX}" y2="${y(0).toFixed(1)}" stroke="var(--line)"/>`;
+  data.forEach((d,i)=>{ const x=xC(i)-bw/2,yt=y(Math.max(0,d.val)),yb=y(Math.min(0,d.val)),h=Math.max(2,yb-yt);
+    const cur=d.name===current, col= d.val<0?"var(--bad)":"var(--accent)";
+    g+=`<rect x="${x.toFixed(1)}" y="${yt.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="4" fill="${col}" fill-opacity="${cur?1:.4}"><title>${d.name}: EBITDA ${money(d.val)}</title></rect>`;
+    g+=`<text x="${xC(i).toFixed(1)}" y="${(yt-7).toFixed(1)}" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">${sMoney(d.val)}</text>`;
+    g+=`<text x="${xC(i).toFixed(1)}" y="${H-padB+18}" text-anchor="middle" font-size="11" font-weight="${cur?700:500}" fill="${cur?'var(--ink)':'var(--soft)'}">${d.name}</text>`; });
+  return g+"</svg>";
+}
+function renderCharts(){
+  const pc=el("pnlChart"); if(pc) pc.innerHTML=waterfallSVG(pnlBars(compute(current)));
+  const sc=el("scenChart"); if(sc) sc.innerHTML=scenarioBarsSVG();
+}
+
 // ---------- assumptions editor ----------
 function inp(val, onin, step="0.01"){
   return `<input class="cell" type="number" step="${step}" value="${val}" oninput="${onin}">`;
@@ -516,7 +584,7 @@ function buildNav(){
     el("priceSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===priceMetric));
     renderPricing();});
 }
-function refresh(){renderKpis();renderCmp();renderPnl();renderPricing();renderSens();}
+function refresh(){renderKpis();renderCmp();renderPnl();renderPricing();renderSens();renderCharts();}
 
 // wire header actions
 el("btnReset").onclick=()=>{ if(confirm("Reset all assumptions to the default figures?")) resetAll(); };

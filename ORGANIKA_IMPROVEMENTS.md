@@ -4,6 +4,9 @@
 `build_model.py` generates only the Excel and is not the app).
 **Mandate:** ~80% improvement / ~20% expansion. Keep it **one app, easy interface.**
 **Loop window:** started 2026-07-11T07:34Z → deadline **2026-07-11T11:34Z**.
+**Branch:** `claude/organika-sparkling-loop` → PR **#34** (base `main`). The originally
+designated `claude/sharp-bardeen-tl7s8t` was contested/force-pushed, so the user
+approved moving the loop here. Push here each cycle.
 **Each cycle:** make changes → verify (extract `<script>` → `node --check`; jsdom render
 test in `/tmp/org-test.js`) → commit → push → update this file.
 
@@ -21,14 +24,16 @@ cd /tmp && npm install jsdom >/dev/null 2>&1   # then run /tmp/org-test.js with 
   reduced-motion. **Fixed dead `heatColor()`** — Sensitivity is now a real heatmap
   with per-cell tooltips + legend. 18 headless checks pass.
 
+- **Iter 2 (expand+improve):** SVG charts — P&L **waterfall** (Net Sales→…→Net
+  Income, colour-coded costs/subtotals/result) and **EBITDA-by-scenario** bars
+  (current highlighted). Theme-aware via CSS-var fills, hover tooltips, mobile
+  horizontal-scroll, mark specs (rounded ends, connectors, recessive axes). The
+  existing tables serve as the accessible data fallback. 11 headless checks pass.
+
 ## Backlog (priority order)
 ### Improvement (80%)
-1. **Charts** (biggest beauty win) — use the dataviz skill palette (validate it):
-   - P&L **waterfall** (Net → COGS → GP → A&P → Contribution → Opex → EBITDA → NI)
-   - Scenario **comparison bar chart** (EBITDA / Net Income across Low/Base/High/Stretch)
-   - Per-SKU **contribution bars** on P&L
-   - Legend + hover tooltips + a data-table fallback (accessibility)
-2. KPI polish — inline % bars / sparkline feel; per-unit metrics; delta vs Base.
+1. **KPI polish** — inline % context, per-unit metrics, delta-vs-Base badges;
+   optional per-SKU contribution bars on P&L.
 3. Input validation + friendlier assumptions UX (grouping, units, help "?").
 4. Micro-interactions / entrance; number formatting polish; dark-mode contrast pass.
 5. Print layout: print all views, not just the current tab.
