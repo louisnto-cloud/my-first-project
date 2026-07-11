@@ -104,11 +104,12 @@ interface DDB {
   announcements: DAnnouncement[];
   nps: { userId: string; term: string; score: number; comment: string }[];
   sessionNotes: { studentId: string; date: string; className: string; tutorName: string; parentNote: string }[];
+  summaries: { id: string; studentId: string; weekStart: string; bodyVi: string; bodyEn: string; status: 'draft' | 'approved' }[];
 }
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v13';
+const KEY = 'etop-demo-db-v14';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -252,6 +253,20 @@ function seed(): DDB {
     ],
     sessionNotes: [
       { studentId: 's_UP1482', date: today(), className: 'Up 1', tutorName: 'Ms. Ha', parentNote: 'Hôm nay bé phát âm rất tốt và xung phong trả lời 3 lần. Về nhà ôn từ vựng Unit 1 giúp cô nhé!' },
+    ],
+    summaries: [
+      // Last week: already approved → the parent sees it. This week: a
+      // draft waiting in Ms. Ha's approval queue, so the loop is live.
+      {
+        id: 'sum1', studentId: 's_UP1482', weekStart: new Date(Date.now() - 7 * 86_400_000).toISOString().slice(0, 10), status: 'approved',
+        bodyVi: 'Tuần trước bé học Unit 1: chào hỏi và giới thiệu bản thân. Nghe hiểu tốt, cần luyện thêm viết câu. Cô rất vui với tiến bộ của bé! 💜',
+        bodyEn: 'Last week we covered Unit 1: greetings and introductions. Strong listening; sentence writing needs practice. Great progress! 💜',
+      },
+      {
+        id: 'sum2', studentId: 's_UP1482', weekStart: new Date().toISOString().slice(0, 10), status: 'draft',
+        bodyVi: 'Tuần này bé hoàn thành bài Ôn tập Unit 1 và tự luyện đều mỗi ngày. Điểm chăm chỉ tăng rõ — cô đề nghị tiếp tục ôn từ vựng 10 phút mỗi tối.',
+        bodyEn: 'This week: finished the Unit 1 review and practiced daily. Effort points are climbing — keep the 10-minute vocab habit each evening.',
+      },
     ],
   };
   // A week of attendance history for the demo child (Up 1 meets Mon-Wed):
@@ -784,7 +799,28 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     save(db);
     return ok({ ok: true, overall: s.overall });
   }
-  if (rawPath === '/summaries/queue' && method === 'GET') return ok([]);
+  if (rawPath === '/summaries/queue' && method === 'GET') {
+    if (!(me.role === 'tutor' || isAdmin)) return err(403, 'forbidden');
+    return ok(
+      db.summaries
+        .filter((s) => s.status === 'draft')
+        .filter((s) => {
+          const stu = db.users.find((u) => u.id === s.studentId);
+          return !!stu && (isAdmin || stu.classIds.some((cid) => me.classIds.includes(cid)));
+        })
+        .map((s) => ({ id: s.id, studentName: db.users.find((u) => u.id === s.studentId)?.name ?? '—', bodyVi: s.bodyVi, bodyEn: s.bodyEn })),
+    );
+  }
+  if (seg[0] === 'summaries' && seg[2] === 'approve' && method === 'POST') {
+    if (!(me.role === 'tutor' || isAdmin)) return err(403, 'forbidden');
+    const s = db.summaries.find((x) => x.id === seg[1]);
+    if (!s) return err(404, 'not_found');
+    const stu = db.users.find((u) => u.id === s.studentId)!;
+    if (!isAdmin && !stu.classIds.some((cid) => me.classIds.includes(cid))) return err(403, 'forbidden');
+    s.status = 'approved';
+    save(db);
+    return ok({ ok: true });
+  }
 
   // ---- practice & achievements ----
   if (rawPath === '/practice/events' && method === 'POST') {
@@ -915,15 +951,14 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
 
   if (rawPath === '/parents/summaries' && method === 'GET') {
     if (me.role !== 'parent') return err(403, 'forbidden');
-    const monday = new Date();
-    monday.setDate(monday.getDate() - ((monday.getDay() + 6) % 7));
-    return ok([
-      {
-        weekStart: monday.toISOString().slice(0, 10),
-        bodyVi: 'Tuần này bé học Unit 1: chào hỏi và giới thiệu bản thân. Bé nghe hiểu tốt, cần luyện thêm phần viết câu. Điểm bài tập: 100/100. Cô rất vui với tiến bộ của bé! 💜',
-        bodyEn: "This week we covered Unit 1: greetings and introducing yourself. Great listening comprehension; sentence writing needs a little more practice. Assignment score: 100/100. Very proud of the progress! 💜",
-      },
-    ]);
+    const childId = (q.childId as string) || me.childIds[0];
+    if (!me.childIds.includes(childId)) return err(403, 'forbidden');
+    return ok(
+      db.summaries
+        .filter((s) => s.studentId === childId && s.status === 'approved')
+        .sort((a, b) => b.weekStart.localeCompare(a.weekStart))
+        .map((s) => ({ weekStart: s.weekStart, bodyVi: s.bodyVi, bodyEn: s.bodyEn })),
+    );
   }
   if (rawPath === '/my/invoices' && method === 'GET') {
     if (me.role !== 'parent') return err(403, 'forbidden');

@@ -271,6 +271,26 @@ describe('demo engine — announcements', () => {
   });
 });
 
+describe('demo engine — weekly summary approval loop', () => {
+  it('teacher approves a draft; the parent then sees it; other teachers see nothing', async () => {
+    const parent = (await call('POST', '/auth/login', { email: 'phuhuynh@etop.vn', password: 'x' })).json as { token: string };
+    let sums = (await call('GET', '/parents/summaries?childId=s_UP1482', undefined, parent.token)).json as { bodyVi: string }[];
+    expect(sums.length).toBe(1); // only last week's approved one
+
+    const ha = await loginCode('GV0004');
+    const queue = (await call('GET', '/summaries/queue', undefined, ha!)).json as { id: string; studentName: string }[];
+    expect(queue.length).toBe(1);
+    expect(queue[0].studentName).toBe('Nguyễn Gia Bảo');
+    expect((await call('POST', `/summaries/${queue[0].id}/approve`, {}, ha!)).status).toBe(200);
+
+    sums = (await call('GET', '/parents/summaries?childId=s_UP1482', undefined, parent.token)).json as { bodyVi: string }[];
+    expect(sums.length).toBe(2);
+
+    const ly = await loginCode('GV0006');
+    expect(((await call('GET', '/summaries/queue', undefined, ly!)).json as unknown[]).length).toBe(0);
+  });
+});
+
 describe('demo engine — parent attendance week', () => {
   it('shows the seeded class-day pattern for the own child only', async () => {
     const parent = (await call('POST', '/auth/login', { email: 'phuhuynh@etop.vn', password: 'x' })).json as { token: string };

@@ -563,8 +563,10 @@ function OwnerDash() {
   const [nps, setNps] = useState<{ responses: number; nps: number | null; comments?: string[] } | null>(null);
   const [academic, setAcademic] = useState<{ stalled: { id: string; name: string }[]; velocity: { tutorName: string; avgDelta: string | number }[] } | null>(null);
   const [escalations, setEscalations] = useState<{ studentName: string }[]>([]);
+  const [today, setToday] = useState<{ status: string }[]>([]);
 
   useEffect(() => {
+    void api<{ status: string }[]>('GET', '/attendance/today?siteId=site_nh').then(setToday).catch(() => {});
     void api<NonNullable<typeof finance>>('GET', '/billing/dashboard').then(setFinance).catch(() => {});
     void api<NonNullable<typeof nps>>('GET', '/nps/summary').then(setNps).catch(() => {});
     void api<NonNullable<typeof academic>>('GET', '/academic/dashboard').then(setAcademic).catch(() => {});
@@ -588,6 +590,13 @@ function OwnerDash() {
       <div className="rounded-3xl bg-gradient-to-br from-violet-700 to-fuchsia-600 p-5 text-white shadow-lg shadow-violet-300/40">
         <div className="text-xs font-bold text-violet-100">💰 Doanh thu tháng này</div>
         <div className="mt-1 text-4xl font-black">{revenue != null ? `${revenue.toLocaleString('vi-VN')}đ` : '—'}</div>
+        {today.length > 0 && (
+          <div className="mt-3 flex gap-2 text-[11px] font-extrabold">
+            <span className="chip bg-white/20 text-white">✅ {today.filter((s) => s.status === 'present').length} đang ở lớp</span>
+            <span className="chip bg-white/20 text-white">🏠 {today.filter((s) => s.status === 'released').length} đã về</span>
+            <span className="chip bg-white/20 text-white">⏳ {today.filter((s) => s.status === 'expected').length} chưa đến</span>
+          </div>
+        )}
       </div>
 
       <div className="grid grid-cols-3 gap-3">
