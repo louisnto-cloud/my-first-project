@@ -93,6 +93,12 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
   'practice.earned': { en: 'points earned', vi: 'điểm thưởng nhận được' },
   'practice.again': { en: 'Practice again', vi: 'Luyện tập tiếp' },
   'practice.whichMeaning': { en: 'What does this word mean?', vi: 'Từ này có nghĩa là gì?' },
+  'practice.reviewDue': { en: 'Review due words', vi: 'Ôn từ cần học' },
+  'practice.due': { en: 'due', vi: 'cần ôn' },
+  'practice.reviewHint': { en: 'A smart mix of your weakest words across all lists', vi: 'Tổng hợp thông minh những từ bạn còn yếu' },
+  'practice.mastery': { en: 'Mastery', vi: 'Độ thành thạo' },
+  'practice.mastered': { en: 'mastered', vi: 'đã thuộc' },
+  'practice.allMastered': { en: 'All mastered! 🌟', vi: 'Đã thuộc hết! 🌟' },
 
   'badges.title': { en: 'Badges', vi: 'Huy hiệu' },
   'badges.locked': { en: 'Locked', vi: 'Chưa mở' },

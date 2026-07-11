@@ -86,6 +86,14 @@ export interface PracticeEvent {
   points: number;
 }
 
+export interface VocabProgress {
+  id: string;
+  studentId: string;
+  wordId: string;
+  box: number; // Leitner box 0..5 (5 = mastered)
+  lastReviewed: string; // YYYY-MM-DD
+}
+
 export interface Announcement {
   id: string;
   authorId: string;
@@ -126,4 +134,5 @@ export interface DB {
   feedback: Feedback[];
   attendance: Attendance[];
   announcements: Announcement[];
+  vocabProgress: VocabProgress[];
 }

@@ -24,6 +24,7 @@ See [`APP_PROMPT.md`](./APP_PROMPT.md) for the full product spec.
 - **Attendance** — teachers mark present / late / absent per session; students & parents see attendance rate and history; admins see a center-wide rate.
 - **Audio pronunciation** — 🔊 buttons in flashcards & quizzes speak the English word via the browser's built-in speech synthesis (fully offline).
 - **Announcements** — teachers/admins post notices (center-wide or to a class); students & parents see a feed with per-device unread badges.
+- **Vocabulary mastery** — a Leitner spaced-repetition system tracks every word in boxes 0–5; per-list mastery meters and a smart "review due" session that mixes each learner's weakest words.
 
 ## Run it
 

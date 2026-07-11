@@ -14,6 +14,7 @@ function loadDB(): DB {
       db.feedback ??= [];
       db.attendance ??= [];
       db.announcements ??= [];
+      db.vocabProgress ??= [];
       return db;
     }
   } catch {

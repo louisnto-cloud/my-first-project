@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useApp } from '../store';
 import { useI18n } from '../i18n';
-import { addPractice, speak } from '../lib';
+import { addPractice, recordReview, speak } from '../lib';
 import type { VocabList, VocabWord } from '../types';
 
 function SpeakButton({ text, tone = 'light' }: { text: string; tone?: 'light' | 'dark' }) {
@@ -42,6 +42,8 @@ export function FlashcardSession({ list, studentId, onExit }: { list: VocabList;
   const [finished, setFinished] = useState(false);
 
   const answer = (knew: boolean) => {
+    const wordId = cards[idx].id;
+    mutate((d) => recordReview(d, studentId, wordId, knew));
     const k = known + (knew ? 1 : 0);
     if (idx + 1 >= cards.length) {
       setKnown(k);
@@ -134,6 +136,7 @@ export function QuizSession({ list, studentId, onExit }: { list: VocabList; stud
     if (picked) return;
     setPicked(opt);
     const ok = opt === q.word.meaningVi;
+    mutate((d) => recordReview(d, studentId, q.word.id, ok));
     const c = correct + (ok ? 1 : 0);
     setCorrect(c);
     setTimeout(() => {

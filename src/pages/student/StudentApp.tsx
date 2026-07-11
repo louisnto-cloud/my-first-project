@@ -7,7 +7,7 @@ import { AttendanceView, BadgesView, GradesView, HomeworkView, LeaderboardView, 
 import { FlashcardSession, QuizSession } from '../../components/Flashcards';
 import { FeedbackSection } from '../../components/Feedback';
 import { AnnouncementsFeed } from '../../components/Announcements';
-import { pointsOf, practicedToday, scoresOf, streakOf, todayISO } from '../../lib';
+import { dueCount, dueWords, listMastery, masteredCount, pointsOf, practicedToday, scoresOf, streakOf, todayISO } from '../../lib';
 import type { VocabList } from '../../types';
 
 export function StudentLayout() {
@@ -215,31 +215,73 @@ export function Practice() {
   if (!user) return null;
 
   const lists = db.vocabLists.filter((v) => user.classIds.includes(v.classId));
+  const due = dueCount(db, user.id, user.classIds);
 
   if (mode.kind === 'flash') return <FlashcardSession list={mode.list} studentId={user.id} onExit={() => setMode({ kind: 'pick' })} />;
   if (mode.kind === 'quiz') return <QuizSession list={mode.list} studentId={user.id} onExit={() => setMode({ kind: 'pick' })} />;
+
+  const startReview = () => {
+    const words = dueWords(db, user.id, user.classIds, 12);
+    if (!words.length) return;
+    setMode({ kind: 'flash', list: { id: 'review', classId: '', title: t('practice.reviewDue'), words } });
+  };
 
   return (
     <div className="space-y-4">
       <h1 className="text-xl font-black">🎮 {t('practice.title')}</h1>
       <p className="-mt-2 text-sm font-semibold text-slate-400">{t('practice.subtitle')}</p>
+
+      {due > 0 && (
+        <button
+          onClick={startReview}
+          className="card flex w-full items-center gap-3 border-violet-200 bg-gradient-to-r from-violet-600 to-fuchsia-500 text-left text-white hover:opacity-95"
+        >
+          <span className="text-3xl">🎯</span>
+          <div className="flex-1">
+            <div className="font-black">
+              {t('practice.reviewDue')} · {due} {t('practice.due')}
+            </div>
+            <div className="text-xs font-semibold text-violet-100">{t('practice.reviewHint')}</div>
+          </div>
+          <span className="text-2xl">→</span>
+        </button>
+      )}
+
       {lists.length === 0 && <Empty emoji="📖" text={t('grades.empty')} />}
-      {lists.map((list) => (
-        <div key={list.id} className="card">
-          <div className="font-extrabold">{list.title}</div>
-          <div className="text-xs font-semibold text-slate-400">
-            {list.words.length} {t('practice.words')}
+      {lists.map((list) => {
+        const mastery = listMastery(db, user.id, list);
+        const done = masteredCount(db, user.id, list);
+        return (
+          <div key={list.id} className="card">
+            <div className="flex items-center justify-between">
+              <div className="font-extrabold">{list.title}</div>
+              <div className="text-xs font-bold text-slate-400">
+                {done}/{list.words.length} {t('practice.mastered')}
+              </div>
+            </div>
+            <div className="mt-2 flex items-center gap-2">
+              <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-violet-100">
+                <div
+                  className={`h-full rounded-full ${mastery >= 1 ? 'bg-emerald-500' : 'bg-violet-500'}`}
+                  style={{ width: `${Math.round(mastery * 100)}%` }}
+                />
+              </div>
+              <span className="w-10 text-right text-xs font-black text-violet-600">{Math.round(mastery * 100)}%</span>
+            </div>
+            <div className="mt-1 text-[11px] font-semibold text-slate-400">
+              {list.words.length} {t('practice.words')} · {t('practice.mastery')}
+            </div>
+            <div className="mt-3 grid grid-cols-2 gap-2">
+              <button onClick={() => setMode({ kind: 'flash', list })} className="btn-soft text-sm">
+                🃏 {t('practice.flashcards')}
+              </button>
+              <button onClick={() => setMode({ kind: 'quiz', list })} className="btn-primary text-sm">
+                ❓ {t('practice.quiz')}
+              </button>
+            </div>
           </div>
-          <div className="mt-3 grid grid-cols-2 gap-2">
-            <button onClick={() => setMode({ kind: 'flash', list })} className="btn-soft text-sm">
-              🃏 {t('practice.flashcards')}
-            </button>
-            <button onClick={() => setMode({ kind: 'quiz', list })} className="btn-primary text-sm">
-              ❓ {t('practice.quiz')}
-            </button>
-          </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }

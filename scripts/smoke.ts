@@ -1,6 +1,6 @@
 // Sanity checks for the seeded demo database. Run: npx tsx scripts/smoke.ts
 import { buildSeed } from '../src/seed';
-import { attendanceCounts, attendanceRate, avgPct, earnedBadges, leaderboard, levelInfo, pointsOf, scoresOf, streakOf } from '../src/lib';
+import { attendanceCounts, attendanceRate, avgPct, boxOf, dueCount, earnedBadges, leaderboard, levelInfo, listMastery, pointsOf, recordReview, scoresOf, SRS_MAX, streakOf } from '../src/lib';
 
 const db = buildSeed();
 const fail: string[] = [];
@@ -81,6 +81,26 @@ for (const a of db.announcements) {
   check(!!a.title && !!a.body, `announcement empty content: ${a.id}`);
 }
 
+// vocabulary mastery: seeded progress is in range and mastery meters compute
+check(db.vocabProgress.length > 0, 'expected seeded vocab progress');
+for (const p of db.vocabProgress) {
+  check(p.box >= 0 && p.box <= SRS_MAX, `box out of range: ${p.id}`);
+  check(db.vocabLists.some((v) => v.words.some((w) => w.id === p.wordId)), `progress for unknown word: ${p.id}`);
+}
+const c4List = db.vocabLists.find((v) => v.classId === 'c4')!;
+check(listMastery(db, 's0', c4List) > 0, 'minh should have some mastery on c4 list');
+check(dueCount(db, 's0', ['c4']) >= 0, 'due count should be computable');
+// recordReview bumps a fresh word up one box, a miss knocks it down
+{
+  const probe = structuredClone(db);
+  const w = c4List.words[0].id;
+  const before = boxOf(probe, 'sX', w);
+  recordReview(probe, 'sX', w, true);
+  check(boxOf(probe, 'sX', w) === before + 1, 'recordReview should raise box on success');
+  recordReview(probe, 'sX', w, false);
+  check(boxOf(probe, 'sX', w) === before, 'recordReview should lower box on miss');
+}
+
 if (fail.length) {
   console.error('SMOKE FAILED:\n' + fail.map((f) => ` - ${f}`).join('\n'));
   process.exit(1);
@@ -88,5 +108,5 @@ if (fail.length) {
 console.log(
   `SMOKE OK — ${students.length} students, ${db.scores.length} scores, ${db.homework.length} homework, ` +
     `${db.vocabLists.length} vocab lists, ${db.practice.length} practice events, ${db.attendance.length} attendance records, ` +
-    `${db.announcements.length} announcements`,
+    `${db.announcements.length} announcements, ${db.vocabProgress.length} vocab-progress rows`,
 );

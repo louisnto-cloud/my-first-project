@@ -1,4 +1,4 @@
-import type { DB, PracticeEvent, Score, User } from './types';
+import type { DB, PracticeEvent, Score, User, VocabList, VocabWord } from './types';
 
 export function iso(d: Date): string {
   const y = d.getFullYear();
@@ -225,4 +225,54 @@ export function speak(text: string): void {
 
 export function addPractice(db: DB, studentId: string, type: PracticeEvent['type'], points: number): void {
   db.practice.push({ id: uid('pr'), studentId, date: todayISO(), type, points });
+}
+
+// ---- Vocabulary mastery (Leitner spaced repetition) -------------------------
+// Each word sits in a box 0..5. A correct recall bumps it up a box; a miss
+// knocks it down one. A word is "mastered" at box 5 and "due" below that.
+export const SRS_MAX = 5;
+
+export function boxOf(db: DB, studentId: string, wordId: string): number {
+  return db.vocabProgress.find((p) => p.studentId === studentId && p.wordId === wordId)?.box ?? 0;
+}
+
+export function recordReview(db: DB, studentId: string, wordId: string, knew: boolean): void {
+  const existing = db.vocabProgress.find((p) => p.studentId === studentId && p.wordId === wordId);
+  const prev = existing?.box ?? 0;
+  const box = knew ? Math.min(SRS_MAX, prev + 1) : Math.max(0, prev - 1);
+  if (existing) {
+    existing.box = box;
+    existing.lastReviewed = todayISO();
+  } else {
+    db.vocabProgress.push({ id: uid('vp'), studentId, wordId, box, lastReviewed: todayISO() });
+  }
+}
+
+// Mastery of a list = average box across its words, normalised to 0..1.
+export function listMastery(db: DB, studentId: string, list: VocabList): number {
+  if (!list.words.length) return 0;
+  const total = list.words.reduce((s, w) => s + boxOf(db, studentId, w.id), 0);
+  return total / (list.words.length * SRS_MAX);
+}
+
+export function masteredCount(db: DB, studentId: string, list: VocabList): number {
+  return list.words.filter((w) => boxOf(db, studentId, w.id) >= SRS_MAX).length;
+}
+
+// Words still worth reviewing across a student's classes, weakest first.
+export function dueWords(db: DB, studentId: string, classIds: string[], limit = 12): VocabWord[] {
+  const words = db.vocabLists.filter((v) => classIds.includes(v.classId)).flatMap((l) => l.words);
+  return words
+    .map((w) => ({ w, box: boxOf(db, studentId, w.id) }))
+    .filter((x) => x.box < SRS_MAX)
+    .sort((a, b) => a.box - b.box)
+    .slice(0, limit)
+    .map((x) => x.w);
+}
+
+export function dueCount(db: DB, studentId: string, classIds: string[]): number {
+  return db.vocabLists
+    .filter((v) => classIds.includes(v.classId))
+    .flatMap((l) => l.words)
+    .filter((w) => boxOf(db, studentId, w.id) < SRS_MAX).length;
 }

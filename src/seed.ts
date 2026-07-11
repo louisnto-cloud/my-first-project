@@ -256,6 +256,18 @@ export function buildSeed(): DB {
     });
   });
 
+  // Vocabulary mastery: give the demo student varied Leitner boxes so the
+  // mastery meters and "review due" flow have something to show.
+  const vocabProgress: DB['vocabProgress'] = [];
+  vocabLists
+    .filter((v) => v.classId === 'c4')
+    .forEach((list) =>
+      list.words.forEach((w) => {
+        const box = clamp(Math.round(2 + r() * 3), 0, 5);
+        vocabProgress.push({ id: `vp_s0_${w.id}`, studentId: 's0', wordId: w.id, box, lastReviewed: daysAgo(Math.floor(r() * 7)) });
+      }),
+    );
+
   const practice: DB['practice'] = [];
   students.forEach((st) => {
     const sessions = Math.floor(r() * 10);
@@ -336,5 +348,5 @@ export function buildSeed(): DB {
     },
   ];
 
-  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice, feedback, attendance, announcements };
+  return { users, classes, assessments, scores, homework, homeworkStatus, vocabLists, practice, feedback, attendance, announcements, vocabProgress };
 }
