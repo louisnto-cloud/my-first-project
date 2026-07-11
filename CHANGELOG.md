@@ -1,5 +1,29 @@
 # CHANGELOG.md
 
+## Five-hour growth loop (passes 4-18)
+
+- Students: badges strip + avatar characters (server-validated safe
+  list), class leaderboard by effort points (never grades), ⚡ Vocab
+  Sprint review game, 🎯 daily-goal bar (pointsToday in both engines),
+  due-date urgency chips with unfinished-first sorting.
+- Teachers: 📊 gradebook tab (real @etop/domain 30/30/20/20 weighting),
+  per-student assignment status with scores, skill filters in the
+  question picker, one-tap assign to parallel sections, 💬 after-class
+  notes to parents, 💬 two-way message inbox, weekly-summary approval
+  queue live in the demo, friendly empty state for new teachers.
+- Parents: Bảng tin announcements, 7-day attendance strip, live NPS
+  feedback (once/month) with verbatim comments on the owner dashboard,
+  real weekly summaries (approved-only), two-way messaging.
+- Owner: center-wide announcements, live today panel (ở lớp / đã về /
+  chưa đến), "Phụ huynh nói gì" comment feed.
+- Front desk: kiosk quick-filter for large rosters.
+- Landing: "Cách hoạt động" 3-step explainer + testimonials.
+- Fixed: demo question serialization used internal type names the
+  Player can't render (listening/reorder had no controls); demo status
+  route missing teacher check.
+- Infra: dedicated deploy concurrency group — sibling apps no longer
+  cancel E'TOP deploys. Manual refreshed twice. 149 tests green.
+
 ## Improvement loop pass 3 — writing & grading close the loop
 
 - FIXED a real demo bug: serialized question types used internal names

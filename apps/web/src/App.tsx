@@ -779,6 +779,7 @@ function Kiosk({ me, t }: { me: Me; t: (k: string) => string }) {
   const [escalations, setEscalations] = useState<{ studentName: string }[]>([]);
   const [online, setOnline] = useState(navigator.onLine);
   const [queueLen, setQueueLen] = useState(0);
+  const [filter, setFilter] = useState('');
 
   const qKey = 'etop-kiosk-queue';
   const getQueue = (): QueuedEvent[] => JSON.parse(localStorage.getItem(qKey) ?? '[]');
@@ -885,8 +886,21 @@ function Kiosk({ me, t }: { me: Me; t: (k: string) => string }) {
           🚨 {t('escalations')}: {escalations.map((e) => e.studentName).join(', ')}
         </div>
       )}
+      {roster.length > 8 && (
+        <input
+          className="input"
+          placeholder="🔍 Tìm nhanh theo tên hoặc lớp…"
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+        />
+      )}
       <div className="grid grid-cols-2 gap-3">
-        {roster.map((s) => (
+        {roster
+          .filter((s) => {
+            const f = filter.trim().toLowerCase();
+            return !f || s.name.toLowerCase().includes(f) || s.className.toLowerCase().includes(f);
+          })
+          .map((s) => (
           <button
             key={s.id}
             onClick={() => tap(s)}
