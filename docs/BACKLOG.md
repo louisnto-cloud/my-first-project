@@ -5,7 +5,7 @@ implement, validate (`./build_all.sh`), commit, log in CHANGELOG.md. Quality ove
 and refine before adding net-new bulk.
 
 ## Loop control
-- Deadline: **2026-07-11T11:17:49Z** (user revised: stop in 4h, re-anchored 07:17:49Z)
+- Deadline: **2026-07-11T11:47:49Z** (user revised: stop at 4:30 local == prior 4:00 + 30m)
 - Cadence: one iteration per wake (~20–30 min apart)
 - Stop when: deadline reached OR backlog exhausted OR user interrupts
 
