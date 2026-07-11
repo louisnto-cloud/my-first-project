@@ -12,7 +12,7 @@ export function TeachLayout() {
   return (
     <div className="min-h-screen pb-10">
       <Header subtitle={`${role} · ${user?.name ?? ''}`} />
-      <main className="mx-auto max-w-3xl p-4">
+      <main id="main" className="mx-auto max-w-3xl p-4" tabIndex={-1}>
         <Outlet />
       </main>
     </div>

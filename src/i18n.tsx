@@ -29,6 +29,8 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
 
   'common.logout': { en: 'Log out', vi: 'Đăng xuất' },
   'common.points': { en: 'points', vi: 'điểm thưởng' },
+  'a11y.skipToContent': { en: 'Skip to content', vi: 'Bỏ qua tới nội dung' },
+  'a11y.primaryNav': { en: 'Primary navigation', vi: 'Điều hướng chính' },
   'common.dayStreak': { en: 'day streak', vi: 'ngày liên tiếp' },
   'common.save': { en: 'Save', vi: 'Lưu' },
   'common.cancel': { en: 'Cancel', vi: 'Hủy' },

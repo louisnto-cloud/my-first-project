@@ -15,7 +15,7 @@ export function StudentLayout() {
   return (
     <div className="min-h-screen pb-24">
       <Header subtitle={user?.name} />
-      <main className="mx-auto max-w-3xl p-4">
+      <main id="main" className="mx-auto max-w-3xl p-4" tabIndex={-1}>
         <Outlet />
       </main>
       <TabBar

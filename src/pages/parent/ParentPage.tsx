@@ -18,7 +18,7 @@ export default function ParentPage() {
   return (
     <div className="min-h-screen pb-10">
       <Header subtitle={`${t('parent.title')} · ${user.name}`} />
-      <main className="mx-auto max-w-3xl space-y-4 p-4">
+      <main id="main" className="mx-auto max-w-3xl space-y-4 p-4" tabIndex={-1}>
         {children.length > 1 && (
           <div className="flex gap-2">
             {children.map((c) => (
