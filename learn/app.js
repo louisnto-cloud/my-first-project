@@ -610,6 +610,11 @@ function openParent() {
   document.getElementById('closeparent').addEventListener('click', goHome);
 }
 
+/* ---------------- offline support ---------------- */
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  try { navigator.serviceWorker.register('sw.js'); } catch {}
+}
+
 /* ---------------- boot ---------------- */
 document.getElementById('start').addEventListener('click', async function once() {
   this.remove();
