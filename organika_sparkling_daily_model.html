@@ -392,8 +392,10 @@ function renderPnl(){
     ["Net Sales", l=>money(l.net), ()=>money(tot("net")), 1],
     ["Cost of Sales", l=>money(l.cogs), ()=>money(tot("cogs"))],
     ["Gross Profit", l=>money(l.gp), ()=>money(tot("gp")), 1],
+    ["GP %", l=>pct(l.net?l.gp/l.net:0), ()=>pct(tot("net")?tot("gp")/tot("net"):0)],
     ["A&P", l=>money(l.ap), ()=>money(tot("ap"))],
     ["Contribution", l=>money(l.cm), ()=>money(tot("cm")), 1],
+    ["CM %", l=>pct(l.net?l.cm/l.net:0), ()=>pct(tot("net")?tot("cm")/tot("net"):0)],
   ];
   let h="<table><thead><tr><th>CDN $</th>"+cols.map(c=>`<th>${c}</th>`).join("")+"<th>Total</th></tr></thead><tbody>";
   const red=v=>/^-/.test(v)?' style="color:#d83a4b"':'';
