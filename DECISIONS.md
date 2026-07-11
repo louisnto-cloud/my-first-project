@@ -107,6 +107,26 @@ Correct any assumption and dependent plans adjust.
 - **D27 (Phase 7):** Auth rate limit defaults 50 attempts / 5 min per
   IP, in-memory (single node). Moves to a shared store if the API ever
   scales horizontally.
+- **D28 (Growth loop):** Closed-loop accounts. No open signup anywhere:
+  owner creates teachers (GV codes), teachers import students (HV/UP
+  codes), parents self-register only with a single-use PH- invite bound
+  to their child. Chosen over email signup because the platform touches
+  children's data.
+- **D29 (Growth loop):** Leaderboards rank effort points (practice) only
+  — never grades — and avatars come from a fixed kid-safe emoji list
+  validated server-side. Both choices are child-safety-first.
+- **D30 (Growth loop):** submissions.overall is persisted at grade time
+  (with an idempotent ALTER for live databases) instead of recomputing
+  the weighted score in every read query. Found via an untested SQL path
+  that referenced a non-existent column; the regression test now covers
+  teacher stats and the student's own result view.
+- **D31 (Growth loop):** The demo engine uses LOCAL calendar dates (not
+  UTC) for attendance and streaks — Vietnam is UTC+7, and evening
+  check-ins were landing on the previous day's dot.
+- **D32 (Growth loop):** Deploys use a dedicated concurrency group
+  (etop-pages-<branch>) because sibling apps sharing this repository's
+  Pages site kept cancelling E'TOP runs in the shared 'pages' group.
+  keep_files stays on so all apps coexist on gh-pages.
 
 ## Assumptions (pending owner answers to the context questions)
 

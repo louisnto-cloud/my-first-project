@@ -54,3 +54,24 @@ owner zhao@etop.vn / etop123.
   the event is in safety_events; never release the child.
 - Wrong grade/payment entered → corrections are new entries; the audit
   log keeps the full history (append-only by design).
+
+## Browser-level verification (demo build)
+
+```
+VITE_DEMO=1 npm run build --workspace apps/web
+cd apps/web/dist && python3 -m http.server 4173 &
+node tools/smoke-demo.mjs   # screenshots all 5 roles, fails on page errors
+node tools/e2e-demo.mjs     # student completes the seeded quiz in the real
+                            # UI; the teacher's view must update to 3/3
+```
+
+## Live-deploy verification (GitHub Pages)
+
+After pushing, the deploy workflow (own concurrency group) publishes in
+~2-3 minutes. Verify byte-for-byte without leaving the terminal:
+
+```
+git fetch origin gh-pages
+git show origin/gh-pages:platform/index.html | grep -o 'assets/index-[^"]*\.js'
+# must equal apps/web/dist/index.html's bundle name
+```
