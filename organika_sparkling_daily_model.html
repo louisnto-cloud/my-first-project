@@ -501,15 +501,18 @@ function renderTargets(){
   const gpT = (parseFloat(el("tgtGP").value)||0)/100;
   const ebT = parseFloat(el("tgtEB").value)||0;
   const denom = (K1-Kcos-Kap)-LOG*K1;
-  const priceForGP = Kcos/(K1*(1-gpT));
+  const ok = x => isFinite(x) && x>0;
+  const fm = x => ok(x)? mult(x) : "—";
+  const fc = x => ok(x)? "≈ "+num(x*cases)+" cases" : "not reachable with these costs";
+  const priceForGP = (gpT<1) ? Kcos/(K1*(1-gpT)) : NaN;
   const volForEB = (ebT+FX)/denom;
   const priceForEB = (ebT+FX+Kcos+Kap)/(K1*(1-LOG));
   const beVol = FX/denom;
   const rows = [
-    ["Price × to hit target GP %", mult(priceForGP), `implies CP ${((priceForGP-1)*100).toFixed(1)}% vs base`],
-    ["Volume × to hit target EBITDA", mult(volForEB), `≈ ${num(volForEB*cases)} cases`],
-    ["Price × to hit target EBITDA", mult(priceForEB), "at base volume (ignores demand response)"],
-    ["Break-even volume ×", mult(beVol), `≈ ${num(beVol*cases)} cases at base price`],
+    ["Price × to hit target GP %", fm(priceForGP), ok(priceForGP)?`implies CP ${((priceForGP-1)*100).toFixed(1)}% vs base`:"target GP % must be below 100%"],
+    ["Volume × to hit target EBITDA", fm(volForEB), fc(volForEB)],
+    ["Price × to hit target EBITDA", fm(priceForEB), "at base volume (ignores demand response)"],
+    ["Break-even volume ×", fm(beVol), ok(beVol)?`≈ ${num(beVol*cases)} cases at base price`:"already profitable at any volume"],
   ];
   el("targets").innerHTML = "<table><thead><tr><th>Answer</th><th>Result</th><th>Notes</th></tr></thead><tbody>"+
     rows.map(r=>`<tr class="major"><td>${r[0]}</td><td style="font-weight:700">${r[1]}</td><td class="hint" style="text-align:left">${r[2]}</td></tr>`).join("")+
