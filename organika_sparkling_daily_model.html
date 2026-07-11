@@ -47,6 +47,7 @@
   .panel>div{overflow-x:auto;-webkit-overflow-scrolling:touch}
   table{width:100%;border-collapse:collapse;font-size:14px}
   tbody tr:hover{background:rgba(10,132,255,.05)}
+  td:first-child[title]{text-decoration:underline dotted var(--soft);text-underline-offset:3px;cursor:help}
   body.dark tbody tr:hover{background:rgba(255,255,255,.04)}
   th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
   th:first-child,td:first-child{text-align:left}
@@ -369,7 +370,7 @@ function renderCmp(){
   const data = SCEN.map(compute);
   let h = "<table><thead><tr><th>Metric</th>"+SCEN.map(s=>`<th>${s}</th>`).join("")+"</tr></thead><tbody>";
   rows.forEach(row=>{
-    h += `<tr class="${row[2]?'tot':''}"><td>${row[0]}</td>`+
+    h += `<tr class="${row[2]?'tot':''}"><td${tip(row[0])}>${row[0]}</td>`+
       data.map((r,i)=>{const val=row[1](r);const neg=/^-/.test(val);
         const st=(SCEN[i]==current?'background:#eef5ff;':'')+(neg?'color:#d83a4b':'');
         return `<td style="${st}">${val}</td>`;}).join("")+"</tr>";
@@ -400,7 +401,7 @@ function renderPnl(){
   let h="<table><thead><tr><th>CDN $</th>"+cols.map(c=>`<th>${c}</th>`).join("")+"<th>Total</th></tr></thead><tbody>";
   const red=v=>/^-/.test(v)?' style="color:#d83a4b"':'';
   rows.forEach(row=>{
-    h+=`<tr class="${row[3]?'major':''}"><td>${row[0]}</td>`+
+    h+=`<tr class="${row[3]?'major':''}"><td${tip(row[0])}>${row[0]}</td>`+
        L.map(l=>{const v=row[1](l);return `<td${red(v)}>${v}</td>`;}).join("")+
        (()=>{const v=row[2](r);return `<td style="background:#eef5ff;font-weight:700;${/^-/.test(v)?'color:#d83a4b':''}">${v}</td>`;})()+"</tr>";
   });
@@ -412,7 +413,7 @@ function renderPnl(){
     ["Net Income", money(r.ni), 1],
   ];
   comp.forEach(c=>{
-    h+=`<tr class="${c[2]?'major':''} muted"><td>${c[0]}</td>`+
+    h+=`<tr class="${c[2]?'major':''} muted"><td${tip(c[0])}>${c[0]}</td>`+
        SKUS.map(()=>`<td></td>`).join("")+
        `<td style="background:#eef5ff;font-weight:700;color:var(--ink)">${c[1]}</td></tr>`;
   });
@@ -573,6 +574,24 @@ function renderGlossary(){
   e.innerHTML="<table><tbody>"+GLOSSARY.map(g=>
     `<tr><td style="font-weight:700;white-space:normal;width:190px">${g[0]}</td><td style="text-align:left;white-space:normal">${g[1]}</td></tr>`).join("")+"</tbody></table>";
 }
+const TIP = {
+  "Physical Cases":"Number of shipping cases sold.",
+  "CP / case":"Your wholesale list price per case.",
+  "Gross Revenue":"Cases × CP (list price).",
+  "Trade Discounts":"Promo money/allowances given to customers (a % of gross).",
+  "Net Sales":"Gross revenue minus trade discounts — the real top line.",
+  "Cost of Sales":"COGS: making, packing and shipping the product in.",
+  "Gross Profit":"Net Sales minus Cost of Sales.",
+  "GP %":"Gross Profit ÷ Net Sales.",
+  "A&P":"Advertising & Promotion spend.",
+  "Contribution":"Gross Profit minus A&P — before company overheads.",
+  "CM %":"Contribution ÷ Net Sales.",
+  "Total Operating Expenses":"Company overheads: salaries, G&A, marketing, slotting, logistics.",
+  "EBITDA":"Operating profit before interest, tax, depreciation & amortisation.",
+  "EBITDA %":"EBITDA ÷ Net Sales.",
+  "Net Income":"The bottom line after depreciation, interest and tax.",
+};
+function tip(l){return TIP[l]?` title="${TIP[l]}"`:"";}
 function renderHeader(){
   const a=el("hCompany"), b=el("hProduct"), c=el("hSub");
   if(a) a.textContent=CFG.company;

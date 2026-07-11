@@ -42,6 +42,7 @@ math tie-out), commit, push. Keep the app cohesive and simple — no bloat.
   the HTML (shelf $1.9231/unit @35%); Checks ALL PASS.
 
 ## 4h loop — 80% improve / 20% expand (app + easy interface)
+- [improve] P&L margin lines (GP%, CM%) + hover tooltips explaining every P&L/comparison term.
 - [improve] Auto-save: edits persist across reloads automatically (no lost work); Reset clears saved state.
 - [improve] Sensitivity grid highlights the "today" cell; Assumptions warns if a SKU is priced below cost.
 - [improve] Losses now show in red across KPI cards, comparison and P&L for instant scanning.
