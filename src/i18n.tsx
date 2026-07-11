@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 
 export type Lang = 'vi' | 'en';
 
@@ -160,6 +160,12 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     localStorage.setItem(LANG_KEY, l);
     setLangState(l);
   }, []);
+
+  // Keep the document language in sync so screen readers and browsers use the
+  // correct pronunciation/hyphenation for the selected UI language.
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   const t = useCallback(
     (key: string) => {

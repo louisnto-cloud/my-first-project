@@ -8,12 +8,16 @@ import { SKILLS } from '../types';
 
 export function LangToggle() {
   const { lang, setLang } = useI18n();
+  const names: Record<'vi' | 'en', string> = { vi: 'Tiếng Việt', en: 'English' };
   return (
-    <div className="flex rounded-full bg-violet-100 p-0.5 text-xs font-extrabold">
+    <div role="group" aria-label="Language / Ngôn ngữ" className="flex rounded-full bg-violet-100 p-0.5 text-xs font-extrabold">
       {(['vi', 'en'] as const).map((l) => (
         <button
           key={l}
+          type="button"
           onClick={() => setLang(l)}
+          aria-pressed={lang === l}
+          aria-label={names[l]}
           className={`rounded-full px-2.5 py-1 uppercase transition ${lang === l ? 'bg-violet-600 text-white shadow' : 'text-violet-500'}`}
         >
           {l}
@@ -39,8 +43,14 @@ export function Header({ subtitle }: { subtitle?: string }) {
         <div className="flex items-center gap-2">
           <LangToggle />
           {user && (
-            <button onClick={logout} title={t('common.logout')} className="flex h-9 w-9 items-center justify-center rounded-full bg-violet-100 text-lg hover:bg-violet-200">
-              {user.avatar}
+            <button
+              type="button"
+              onClick={logout}
+              title={t('common.logout')}
+              aria-label={t('common.logout')}
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-violet-100 text-lg hover:bg-violet-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+            >
+              <span aria-hidden="true">{user.avatar}</span>
             </button>
           )}
         </div>
@@ -57,21 +67,23 @@ export interface TabItem {
 }
 
 export function TabBar({ items }: { items: TabItem[] }) {
+  const { t } = useI18n();
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-20 border-t border-violet-100 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur">
+    <nav aria-label={t('nav.home')} className="fixed inset-x-0 bottom-0 z-20 border-t border-violet-100 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur">
       <div className="mx-auto flex max-w-3xl">
         {items.map((it) => (
           <NavLink
             key={it.to}
             to={it.to}
             end={it.end}
+            aria-label={it.label}
             className={({ isActive }) =>
-              `flex flex-1 flex-col items-center gap-0.5 py-2 text-[11px] font-bold ${isActive ? 'text-violet-700' : 'text-slate-400'}`
+              `flex flex-1 flex-col items-center gap-0.5 py-2 text-[11px] font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-violet-500 ${isActive ? 'text-violet-700' : 'text-slate-400'}`
             }
           >
             {({ isActive }) => (
               <>
-                <span className={`text-xl ${isActive ? 'animate-pop' : ''}`}>{it.emoji}</span>
+                <span aria-hidden="true" className={`text-xl ${isActive ? 'animate-pop' : ''}`}>{it.emoji}</span>
                 {it.label}
               </>
             )}
@@ -89,7 +101,7 @@ export function Pill({ children, className = '' }: { children: ReactNode; classN
 export function Empty({ emoji, text }: { emoji: string; text: string }) {
   return (
     <div className="card flex flex-col items-center gap-2 py-8 text-center text-sm font-semibold text-slate-400">
-      <span className="text-4xl">{emoji}</span>
+      <span aria-hidden="true" className="text-4xl">{emoji}</span>
       {text}
     </div>
   );
@@ -111,8 +123,9 @@ export function ProgressChart({ points }: { points: { label: string; pct: number
   const y = (pct: number) => H - padY - (pct / 100) * (H - padY * 2);
   const coords = points.map((p, i) => ({ x: padX + i * step, y: y(p.pct), p }));
   const line = coords.map((c) => `${c.x},${c.y}`).join(' ');
+  const summary = points.map((p) => `${p.label}: ${(p.pct / 10).toFixed(1)}/10`).join(', ');
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full">
+    <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label={`Progress over time — ${summary}`}>
       {[25, 50, 75, 100].map((g) => (
         <line key={g} x1={padX} x2={W - padX} y1={y(g)} y2={y(g)} stroke="#ede9fe" strokeWidth="1" />
       ))}
@@ -145,7 +158,14 @@ export function SkillBars({ skills }: { skills: Partial<Record<Skill, number>> }
         return (
           <div key={sk} className="flex items-center gap-2">
             <div className="w-16 text-xs font-bold text-slate-500">{t(`skills.${sk}`)}</div>
-            <div className="h-3 flex-1 overflow-hidden rounded-full bg-violet-100">
+            <div
+              role="progressbar"
+              aria-label={t(`skills.${sk}`)}
+              aria-valuenow={v}
+              aria-valuemin={0}
+              aria-valuemax={10}
+              className="h-3 flex-1 overflow-hidden rounded-full bg-violet-100"
+            >
               <div className={`h-full rounded-full ${colors[sk]}`} style={{ width: `${(v / 10) * 100}%` }} />
             </div>
             <div className="w-8 text-right text-xs font-extrabold text-slate-600">{v}</div>
