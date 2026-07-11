@@ -1402,7 +1402,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v20';
+const APP_VERSION='v21';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1625,7 +1625,7 @@ function renderHome(){
     <div class="stat-row">
       <div class="stat-card"><div class="stat-n">${mastered}</div><div class="stat-l">Mastered</div></div>
       <div class="stat-card"><div class="stat-n">${learning}</div><div class="stat-l">Learning</div></div>
-      <div class="stat-card accent"><div class="stat-n">${due}</div><div class="stat-l">Due Now</div></div>
+      <div class="stat-card accent" onclick="startSmartSession()" style="cursor:pointer"><div class="stat-n">${due}</div><div class="stat-l">Due — tap to review</div></div>
     </div>
     <div class="section-label">Quick Start</div>
     <div class="action-grid">
@@ -1642,16 +1642,12 @@ function renderHome(){
         <span class="ac-icon">📋</span><span class="ac-label">Placement</span><span class="ac-sub">Where do you stand?</span>
       </button>
     </div>
-    <div class="section-label">Explore</div>
+    <div class="section-label">More Tools</div>
     <div class="explore-list">
       <button class="explore-row" onclick="S.priceTarget=0;S.priceRight=0;S.priceTotal=0;go('prices')"><span>💰</span><span>Price Listening Trainer</span><span class="arrow">›</span></button>
-      <button class="explore-row" onclick="go('dict')"><span>🔎</span><span>Dictionary — search all terms</span><span class="arrow">›</span></button>
-      <button class="explore-row" onclick="go('situations')"><span>🎭</span><span>Role-Play Dialogues</span><span class="arrow">›</span></button>
-      <button class="explore-row" onclick="go('intel')"><span>📊</span><span>Vietnam Market Intel</span><span class="arrow">›</span></button>
-      <button class="explore-row" onclick="go('primer')"><span>📖</span><span>Pronoun and Register Guide</span><span class="arrow">›</span></button>
-      <button class="explore-row" onclick="go('review')"><span>⭐</span><span>Star Review</span><span class="arrow">›</span></button>
-      <button class="explore-row" onclick="go('progress')"><span>📈</span><span>Progress and Export</span><span class="arrow">›</span></button>
-      <button class="explore-row" onclick="showAudioHelp()"><span>🔊</span><span>Audio not working? Test and fix</span><span class="arrow">›</span></button>
+      <button class="explore-row" onclick="go('dict')"><span>🔎</span><span>Dictionary</span><span class="arrow">›</span></button>
+      <button class="explore-row" onclick="go('primer')"><span>📖</span><span>Pronouns, Tones and Register</span><span class="arrow">›</span></button>
+      <button class="explore-row" onclick="showAudioHelp()"><span>🔊</span><span>Audio help</span><span class="arrow">›</span></button>
     </div>
     <div style="height:90px"></div>
   </main>
@@ -2476,8 +2472,11 @@ function renderDictResults(){
   const box=document.getElementById('dict-results');
   if(!box) return;
   const q=normStr(S.searchQ.trim());
-  const hits=q?VOCAB.filter(v=>normStr(v.en).includes(q)||normStr(v.vi).includes(q)).slice(0,40):[];
-  box.innerHTML=q?(hits.length?hits.map(v=>renderReviewCard(v)).join(''):`<div class="empty-state">No matches</div>`)
+  const all=q?VOCAB.filter(v=>normStr(v.en).includes(q)||normStr(v.vi).includes(q)):[];
+  const hits=all.slice(0,40);
+  box.innerHTML=q?(hits.length
+      ?`<div class="section-label">${all.length} match${all.length===1?'':'es'}${all.length>40?' — showing first 40':''}</div>`+hits.map(v=>renderReviewCard(v)).join('')
+      :`<div class="empty-state">No matches</div>`)
     :`<div class="empty-state">Type to search all ${VOCAB.length} terms.</div>`;
 }
 
