@@ -3,6 +3,7 @@ import { getAllLessons } from '../../../data/curriculum';
 import { LIBRARY } from '../../../data/library';
 import { todayISO, XP, type RWProgress } from './engine';
 import { useTTS } from './useTTS';
+import Flashcards from './Flashcards';
 import { Confetti, NavButton, StepCard, XpChip } from './shared';
 
 interface ReviewQ {
@@ -67,8 +68,13 @@ export default function Review({ progress, apply }: {
   const [typed, setTyped] = useState('');
   const [correctCount, setCorrectCount] = useState(0);
   const [finished, setFinished] = useState(false);
+  const [showFlash, setShowFlash] = useState(false);
 
   const learnedCount = useMemo(() => learnedVocab(progress).length, [progress]);
+
+  if (showFlash) {
+    return <Flashcards deck={learnedVocab(progress)} progress={progress} apply={apply} tts={tts} onClose={() => setShowFlash(false)} />;
+  }
 
   const start = () => {
     setSession(buildSession(progress));
@@ -119,6 +125,8 @@ export default function Review({ progress, apply }: {
           <div className="mb-3 text-5xl">🌱</div>
           <h3 className="text-lg font-black text-gray-800">Nothing to review yet</h3>
           <p className="mt-2 text-sm text-gray-500">Complete a few lessons or stories first — every word you learn is added to your review deck automatically.</p>
+          <p className="mt-2 text-sm text-gray-500">Meanwhile, warm up with the starter flashcards:</p>
+          <NavButton label="🃏 Flashcards — Sight Words →" onClick={() => setShowFlash(true)} color="bg-emerald-600" />
         </div>
       </StepCard>
     );
@@ -221,6 +229,7 @@ export default function Review({ progress, apply }: {
           <span className="text-xs text-gray-400">{progress.reviewSessions} sessions done</span>
         </div>
         <NavButton label="Start Review Session (8 questions) →" onClick={start} color="bg-violet-600" />
+        <NavButton label="🃏 Flashcards — flip through your words" onClick={() => setShowFlash(true)} color="bg-emerald-600" />
       </StepCard>
     </div>
   );
