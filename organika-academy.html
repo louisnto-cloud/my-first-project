@@ -1317,7 +1317,7 @@ const PRIMER=[
 <tr><td>Broken (ngã)</td><td>ã</td><td>Rising with glottal break (South: often like sắc)</td><td>mã</td><td>horse / code</td></tr>
 <tr><td>Heavy (nặng)</td><td>ạ</td><td>Low, falling, cut short</td><td>mạ</td><td>rice seedling</td></tr>
 </table>
-<p class="tip">Do not let tones paralyze you. In business context, your partners will understand from context. Focus on the tones of your key vocabulary: numbers, product names, and polite particles matter most.</p>
+<p class="tip">Do not let tones paralyze you. In business context, your partners will understand from context. Focus on the tones of your key vocabulary: numbers, product names, and polite particles matter most.</p>\n<button class="btn-primary full-w" style="margin-top:10px" onclick="S.toneSet=null;S.toneRight=0;S.toneTotal=0;go('tones')">🎵 Practice hearing tones</button>
 `},
 ];
 
@@ -1503,7 +1503,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v33';
+const APP_VERSION='v34';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -2582,6 +2582,12 @@ const TONE_SETS=[
  [{w:'hàng',m:'goods'},{w:'hạng',m:'rank / class'},{w:'hăng',m:'eager'}],
  [{w:'thương',m:'to love / trade'},{w:'thường',m:'usually'},{w:'thưởng',m:'bonus / reward'}],
  [{w:'chi',m:'to spend'},{w:'chị',m:'older sister / Ms.'},{w:'chì',m:'lead (metal)'}],
+ [{w:'ngon',m:'delicious'},{w:'ngón',m:'finger'},{w:'ngọn',m:'peak / tip'}],
+ [{w:'kho',m:'warehouse / to braise'},{w:'khó',m:'difficult'},{w:'khô',m:'dry'}],
+ [{w:'trà',m:'tea'},{w:'trả',m:'to pay / return'},{w:'tra',m:'to look up'}],
+ [{w:'mới',m:'new'},{w:'mời',m:'to invite'},{w:'mỗi',m:'each'}],
+ [{w:'đông',m:'crowded / east'},{w:'đồng',m:'dong (currency)'},{w:'động',m:'to move / cave'}],
+ [{w:'sáng',m:'morning / bright'},{w:'sang',m:'to cross / classy'},{w:'sàng',m:'to sift'}],
 ];
 function newToneRound(){
   S.toneSet=rand(TONE_SETS);
@@ -2598,7 +2604,7 @@ function renderTones(){
     <span style="font-size:13px;color:var(--tx2)">${S.toneRight||0}/${S.toneTotal||0}</span>
   </div>
   <main class="main-scroll" style="padding:16px">
-    <p class="screen-intro">One syllable, different tones, completely different words. Tap play, pick the word you heard.</p>
+    <p class="screen-intro">One syllable, different tones, completely different words. Tap play, pick the word you heard. <a href="#" onclick="event.preventDefault();go('primer')" style="color:var(--g);font-weight:700">Tone guide ›</a></p>
     <div class="price-play-wrap">
       <button class="price-play" onclick="speakTone()">🔊<br><span>Play word</span></button>
       ${speedChip()}
