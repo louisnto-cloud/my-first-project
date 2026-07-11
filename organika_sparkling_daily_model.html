@@ -461,7 +461,7 @@ function renderPricing(){
   SKUS.forEach(s=>{
     const vals = LADDER.map(m=>{
       const netpc = s.cp*m*(1-s.disc);
-      if(priceMetric==="gp") return 1 - (s.cosd+s.cosi)/netpc;
+      if(priceMetric==="gp") return netpc? 1 - (s.cosd+s.cosi)/netpc : 0;
       return s.vol*Math.pow(m,CO.elast)*(netpc - (s.cosd+s.cosi) - s.ap);
     });
     const best = Math.max(...vals);
