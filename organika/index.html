@@ -1503,7 +1503,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v31';
+const APP_VERSION='v32';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1711,7 +1711,7 @@ function renderHome(){
   const pct=Math.min(100,Math.round(S.todayXP/S.dailyGoal*100));
   const mastered=VOCAB.filter(v=>v.box>=4).length;
   const learning=VOCAB.filter(v=>v.box<=2&&v.correct>0).length;
-  const due=VOCAB.filter(v=>isDue(v)).length;
+  const due=VOCAB.filter(v=>isDue(v)&&(v.correct||v.wrong)).length;
   return `<div class="screen">
   <header class="app-header">
     <div class="header-logo"><span class="brand-name">Organika Academy</span> <span style="font-size:10px;opacity:.55;font-weight:600">${APP_VERSION}</span></div>
@@ -2435,7 +2435,7 @@ function renderBuild(){
       ?`<span class="chip ghost">${o.w}</span>`
       :`<button class="chip" onclick="pickWord(${i})">${o.w}</button>`).join('')}</div>
     ${S.buildChecked===null
-      ?`<button class="btn-primary full-w" style="margin-top:18px" ${allPicked?'':'disabled style="margin-top:18px;opacity:.4"'} onclick="checkBuild()">Check</button>`
+      ?`<button class="btn-primary full-w" style="margin-top:18px${allPicked?'':';opacity:.4'}" ${allPicked?'':'disabled'} onclick="checkBuild()">Check</button>`
       :`<div class="quiz-feedback ${S.buildChecked?'correct-fb':'wrong-fb'}">
           ${S.buildChecked?'Perfect! +XP':'Not quite. Correct order:'}
           <div class="quiz-reveal" style="font-size:16px">${S.buildSource}</div>
@@ -2636,7 +2636,7 @@ function renderExport(){
   <main class="main-scroll" style="padding:16px">
     <div class="export-section">
       <div class="export-label">Save Progress</div>
-      <p class="export-desc">Copy this text and save it somewhere safe (notes app, email). Paste it back to restore your progress.</p>
+      <p class="export-desc">Your progress already saves automatically on this device. Use this backup to move progress to another phone or protect against clearing browser data: copy the text and keep it in your notes.</p>
       <textarea id="export-box" class="export-box" readonly onclick="this.select()">${exportProgress()}</textarea>
       <button class="btn-primary full-w" onclick="copyExport(this)">Copy to Clipboard</button>
     </div>
