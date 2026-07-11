@@ -157,6 +157,13 @@ export const UI = {
   massPostureNote: v('Postures vary a little from country to country. When unsure, simply follow your neighbors.', 'Tư thế có thể khác đôi chút giữa các nước. Khi không chắc, bạn cứ làm theo những người bên cạnh.'),
   rosaryTitle: v('The Rosary', 'Kinh Mân Côi'),
   rosarySubtitle: v('Bead by bead, with all four sets of mysteries.', 'Từng hạt một, với cả bốn mầu nhiệm Mân Côi.'),
+
+  // The Stations of the Cross
+  stationsTitle: v('The Stations of the Cross', 'Đàng Thánh Giá'),
+  stationsSubtitle: v('Fourteen stations, walked slowly — prayed on Fridays and in Lent.', 'Mười bốn chặng, bước đi chậm rãi — cầu nguyện các ngày thứ Sáu và trong Mùa Chay.'),
+  stationWord: v('Station', 'Chặng thứ'),
+  stationsDone: v('You have walked the Way of the Cross. Go home in the hope of the third day.', 'Bạn đã đi trọn Đàng Thánh Giá. Hãy trở về trong niềm hy vọng của ngày thứ ba.'),
+  tapToContinue: v('Tap to continue', 'Chạm để tiếp tục'),
   rosaryAnnounce: v('The next mystery', 'Mầu nhiệm tiếp theo'),
   rosaryTapNext: v('Tap for the next bead', 'Chạm để sang hạt tiếp theo'),
   rosaryDone: v('A whole rosary, prayed. The beads in your hands know their purpose now.', 'Trọn một chuỗi Mân Côi đã được nguyện. Những hạt chuỗi trong tay bạn giờ đã biết sứ mạng của mình.'),

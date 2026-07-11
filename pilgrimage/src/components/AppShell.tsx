@@ -21,7 +21,8 @@ function Shell({ children }: { children: React.ReactNode }) {
   // Immersive experiences own the full screen; navigation hides there so each
   // can be completed one-handed without distraction.
   const inLesson =
-    pathname.startsWith('/lesson') || pathname.startsWith('/mass') || pathname.startsWith('/rosary');
+    pathname.startsWith('/lesson') || pathname.startsWith('/mass') ||
+    pathname.startsWith('/rosary') || pathname.startsWith('/stations');
   const inOnboarding = pathname.startsWith('/onboarding');
 
   useEffect(() => {

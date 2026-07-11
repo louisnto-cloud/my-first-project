@@ -52,6 +52,10 @@ export default function ChapelPage() {
             <span className="block font-display text-base text-ivory">{t(UI.rosaryTitle)}</span>
             <span className="mt-0.5 block text-xs text-incense">{t(UI.rosarySubtitle)}</span>
           </Link>
+          <Link href="/stations" className="rounded-2xl border border-gold/30 px-4 py-3.5">
+            <span className="block font-display text-base text-ivory">{t(UI.stationsTitle)}</span>
+            <span className="mt-0.5 block text-xs text-incense">{t(UI.stationsSubtitle)}</span>
+          </Link>
         </div>
       </section>
 
