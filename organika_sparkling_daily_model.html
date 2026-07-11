@@ -459,19 +459,25 @@ function renderSens(){
 function inp(val, onin, step="0.01"){
   return `<input class="cell" type="number" step="${step}" value="${val}" oninput="${onin}">`;
 }
+function tinp(val, onin){
+  return `<input class="cell" type="text" style="width:112px;text-align:left" value="${String(val).replace(/"/g,'&quot;')}" oninput="${onin}">`;
+}
 function renderAsmp(){
   // SKU table
-  let h="<table><thead><tr><th>SKU</th><th>CP / case</th><th>Disc %</th><th>COGS Direct</th><th>COGS Indir.</th><th>A&P</th><th>Volume</th></tr></thead><tbody>";
+  let h="<table><thead><tr><th>Flavour</th><th>Format</th><th>CP / case</th><th>Disc %</th><th>COGS Direct</th><th>COGS Indir.</th><th>A&P</th><th>Volume</th><th></th></tr></thead><tbody>";
   SKUS.forEach((s,i)=>{
-    h+=`<tr><td>${s.flav} <span class="hint">${s.fmt}</span></td>`+
+    h+=`<tr><td>${tinp(s.flav,`setSt(${i},'flav',this.value)`)}</td>`+
+      `<td>${tinp(s.fmt,`setSt(${i},'fmt',this.value)`)}</td>`+
       `<td>${inp(s.cp,`setS(${i},'cp',this.value)`)}</td>`+
       `<td>${inp((s.disc*100).toFixed(1),`setS(${i},'disc',this.value/100)`,"0.1")}</td>`+
       `<td>${inp(s.cosd,`setS(${i},'cosd',this.value)`)}</td>`+
       `<td>${inp(s.cosi,`setS(${i},'cosi',this.value)`)}</td>`+
       `<td>${inp(s.ap,`setS(${i},'ap',this.value)`)}</td>`+
-      `<td>${inp(s.vol,`setS(${i},'vol',this.value)`,"100")}</td></tr>`;
+      `<td>${inp(s.vol,`setS(${i},'vol',this.value)`,"100")}</td>`+
+      `<td><button class="tbtn" style="padding:4px 9px" onclick="delSku(${i})" title="Remove SKU">×</button></td></tr>`;
   });
   h+="</tbody></table>";
+  h+=`<div style="margin-top:12px"><button class="tbtn" onclick="addSku()">+ Add SKU</button></div>`;
   el("asmpSku").innerHTML=h;
   // company
   const corows=[["Salaries & wages","salaries","1000"],["G&A / overhead","ga","1000"],
@@ -500,6 +506,10 @@ function renderAsmp(){
   el("asmpLev").innerHTML=lv;
 }
 function setS(i,k,v){SKUS[i][k]=parseFloat(v)||0;refresh();}
+function setSt(i,k,v){SKUS[i][k]=v;refresh();}
+function addSku(){const last=SKUS[SKUS.length-1]||{fmt:"Singles",flav:"New",cp:15,disc:0.07,cosd:6.5,cosi:0.7,ap:1.2,vol:5000};
+  SKUS.push(Object.assign({},last,{flav:"New flavour"}));renderAsmp();refresh();}
+function delSku(i){if(SKUS.length<=1){flash("Keep at least one SKU.");return;}SKUS.splice(i,1);renderAsmp();refresh();}
 function setCo(k,v){CO[k]=parseFloat(v)||0;refresh();}
 function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();}
 
