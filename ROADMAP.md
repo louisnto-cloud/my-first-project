@@ -40,3 +40,8 @@ math tie-out), commit, push. Keep the app cohesive and simple — no bloat.
 - Cycle 2: Excel parity — added Unit Economics & Retail Price tab (per-unit
   breakdown + shelf price at retailer margin); cover index updated. Ties to
   the HTML (shelf $1.9231/unit @35%); Checks ALL PASS.
+
+## 4h loop — 80% improve / 20% expand (app + easy interface)
+- [improve] Responsive: every table scrolls horizontally on small screens; row hover.
+- [improve] App remembers your last view + scenario across reloads.
+- [improve] Reset now asks for confirmation (prevents accidental data loss).

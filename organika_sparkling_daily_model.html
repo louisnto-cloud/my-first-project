@@ -44,7 +44,10 @@
   .panel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow);margin:0 0 22px}
   .panel h2{font-size:20px;margin:0 0 4px;letter-spacing:-.01em}
   .panel .h-sub{color:var(--soft);font-size:13px;margin:0 0 16px}
+  .panel>div{overflow-x:auto;-webkit-overflow-scrolling:touch}
   table{width:100%;border-collapse:collapse;font-size:14px}
+  tbody tr:hover{background:rgba(10,132,255,.05)}
+  body.dark tbody tr:hover{background:rgba(255,255,255,.04)}
   th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
   th:first-child,td:first-child{text-align:left}
   thead th{font-size:11px;letter-spacing:.4px;text-transform:uppercase;color:var(--soft);font-weight:700;border-bottom:2px solid var(--line)}
@@ -626,21 +629,34 @@ function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();}
 
 // ---------- nav / scenario bar ----------
 const VIEWS=["Overview","P&L","Monthly","Pricing Lab","Unit Economics","Targets","Sensitivity","Assumptions","Guide"];
+const UI_KEY="organika_ui_v1";
+let currentView="Overview";
+function saveUI(){try{localStorage.setItem(UI_KEY,JSON.stringify({view:currentView,scenario:current}));}catch(e){}}
+function showView(v){
+  currentView=v;
+  el("nav").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.v===v));
+  document.querySelectorAll(".view").forEach(s=>s.classList.toggle("on", s.dataset.view===v));
+  saveUI();
+}
+function setScenario(s){
+  current=s;
+  el("scenBar").querySelectorAll(".pill").forEach(x=>x.classList.toggle("on",x.dataset.s===current));
+  saveUI(); refresh();
+}
 function buildNav(){
-  el("nav").innerHTML=VIEWS.map((v,i)=>`<button class="${i===0?'on':''}" data-v="${v}">${v}</button>`).join("");
-  el("nav").querySelectorAll("button").forEach(b=>b.onclick=()=>{
-    el("nav").querySelectorAll("button").forEach(x=>x.classList.remove("on"));
-    b.classList.add("on");
-    document.querySelectorAll(".view").forEach(s=>s.classList.toggle("on", s.dataset.view===b.dataset.v));
-  });
+  el("nav").innerHTML=VIEWS.map((v,i)=>`<button class="${i===0?'on':''}" data-v="${v}" role="tab">${v}</button>`).join("");
+  el("nav").querySelectorAll("button").forEach(b=>b.onclick=()=>showView(b.dataset.v));
   el("scenBar").innerHTML=`<span class="lab">SCENARIO</span>`+
     SCEN.map(s=>`<button class="pill ${s===current?'on':''}" data-s="${s}">${s}</button>`).join("");
-  el("scenBar").querySelectorAll(".pill").forEach(b=>b.onclick=()=>{current=b.dataset.s;
-    el("scenBar").querySelectorAll(".pill").forEach(x=>x.classList.toggle("on",x.dataset.s===current));
-    refresh();});
+  el("scenBar").querySelectorAll(".pill").forEach(b=>b.onclick=()=>setScenario(b.dataset.s));
   el("priceSeg").querySelectorAll("button").forEach(b=>b.onclick=()=>{priceMetric=b.dataset.m;
     el("priceSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===priceMetric));
     renderPricing();});
+  // restore last view + scenario
+  try{const ui=JSON.parse(localStorage.getItem(UI_KEY)||"{}");
+    if(ui.scenario && SCEN.includes(ui.scenario)) setScenario(ui.scenario);
+    if(ui.view && VIEWS.includes(ui.view)) showView(ui.view);
+  }catch(e){}
 }
 function refresh(){renderKpis();renderCmp();renderPnl();renderMonthly();renderPricing();renderUecon();renderTargets();renderSens();}
 
@@ -657,7 +673,7 @@ function applyState(st){
 function flash(m){const e=el("saveMsg"); if(e){e.textContent=m; setTimeout(()=>{e.textContent="";},2500);}}
 function saveState(){ localStorage.setItem(STORE_KEY, JSON.stringify({SKUS,CO,LEVERS,CFG})); flash("Saved to this browser."); }
 function loadState(){ const raw=localStorage.getItem(STORE_KEY); if(!raw){flash("Nothing saved yet.");return;} applyState(JSON.parse(raw)); flash("Loaded your saved numbers."); }
-function resetState(){ applyState(JSON.parse(JSON.stringify(DEFAULTS))); flash("Reset to starting placeholders."); }
+function resetState(){ if(!confirm("Reset all numbers to the starting placeholders? This clears your current edits. (Saved snapshots are kept.)")) return; applyState(JSON.parse(JSON.stringify(DEFAULTS))); flash("Reset to starting placeholders."); }
 function exportCSV(){
   const rows=[["Sparkling Daily — scenario comparison (CDN $)"],[]];
   rows.push(["Metric",...SCEN]);
