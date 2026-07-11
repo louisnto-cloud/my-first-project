@@ -50,7 +50,19 @@ const STR: Record<string, { vi: string; en: string }> = {
   emailTaken: { vi: 'Email này đã có tài khoản — hãy đăng nhập.', en: 'This email already has an account — sign in instead.' },
   manual: { vi: 'Hướng dẫn sử dụng', en: 'User guide' },
   manualBody: { vi: 'Từng bước cho học viên, phụ huynh, giáo viên, quản lý và lễ tân.', en: 'Step-by-step for students, parents, teachers, owners and front desk.' },
+  how: { vi: 'App hoạt động thế nào?', en: 'How it works' },
+  how1t: { vi: 'Nhận mã từ trung tâm', en: 'Get your code' },
+  how1b: { vi: 'Học viên nhận mã số từ cô giáo — không cần email hay mật khẩu.', en: 'Students get a code from their teacher — no email or password.' },
+  how2t: { vi: 'Học & làm bài trong app', en: 'Learn & practice' },
+  how2b: { vi: 'Bài tập cô giao, 38 bài tự luyện, điểm thưởng và huy hiệu mỗi ngày.', en: 'Assigned work, 38 self-study lessons, points and badges every day.' },
+  how3t: { vi: 'Phụ huynh yên tâm theo dõi', en: 'Parents stay close' },
+  how3b: { vi: 'Biết con đã đến lớp, điểm số, nhận xét của cô — ngay trên điện thoại.', en: 'Check-ins, scores and teacher notes — right on your phone.' },
 };
+
+const QUOTES: { vi: string; en: string; who: string }[] = [
+  { vi: 'Cô giáo rất tận tâm, con tiến bộ rõ sau một khoá.', en: 'Dedicated teachers — clear progress after one term.', who: 'Phụ huynh lớp Starters' },
+  { vi: 'Biết ngay con đã đến lớp chưa, đi làm mà yên tâm hẳn.', en: 'I see the check-in instantly. Total peace of mind.', who: 'Phụ huynh lớp Up 1' },
+];
 
 function MeshHero() {
   return (
@@ -261,6 +273,28 @@ export function Landing({ onDone }: { onDone: () => void }) {
           </div>
           <div className="mt-1.5 flex items-center justify-center gap-1.5 text-xs font-medium text-muted">
             <Icon name="pin" size={14} /> 166 Nguyễn Hội, P. Phú Trinh, TP. Phan Thiết
+          </div>
+        </div>
+
+        {/* How it works */}
+        <div className="w-full space-y-2">
+          <h3 className="px-1 text-center text-sm font-extrabold uppercase tracking-[0.14em] text-violet-400">{t('how')}</h3>
+          {([['1', 'cap', 'how1t', 'how1b'], ['2', 'pencil', 'how2t', 'how2b'], ['3', 'heart', 'how3t', 'how3b']] as const).map(([n, icon, tt, bb]) => (
+            <div key={n} className="surface flex items-start gap-3 bg-white/70 px-4 py-3 backdrop-blur">
+              <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-violet-600 text-white"><Icon name={icon as IconName} size={16} /></span>
+              <span>
+                <span className="block text-sm font-extrabold text-ink">{n}. {t(tt)}</span>
+                <span className="block text-xs font-semibold text-muted">{t(bb)}</span>
+              </span>
+            </div>
+          ))}
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+            {QUOTES.map((qx) => (
+              <blockquote key={qx.who} className="surface bg-white/70 px-4 py-3 backdrop-blur">
+                <span className="block text-sm font-semibold italic text-slate-600">“{lang === 'vi' ? qx.vi : qx.en}”</span>
+                <span className="mt-1 block text-[10px] font-extrabold text-violet-500">— {qx.who}</span>
+              </blockquote>
+            ))}
           </div>
         </div>
 
