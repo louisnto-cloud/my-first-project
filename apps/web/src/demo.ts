@@ -35,6 +35,9 @@ interface DQuestion {
   prompt: string;
   payload: Record<string, unknown>;
   unit: string;
+  ownerId?: string;
+  shared?: boolean;
+  sharedApproved?: boolean;
 }
 interface DAssignment {
   id: string;
@@ -112,7 +115,7 @@ interface DDB {
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v18';
+const KEY = 'etop-demo-db-v19';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -231,6 +234,9 @@ function seed(): DDB {
     { id: 'q8', skill: 'listening', type: 'listen', unit: 'Unit 2', prompt: 'Nghe và chọn câu đúng.', payload: { audioText: 'I have two brothers.', options: ['I have two brothers.', 'I have two sisters.', 'I have ten brothers.'], answer: 'I have two brothers.' } },
     { id: 'q9', skill: 'writing', type: 'write', unit: 'Unit 1', prompt: 'Write 2–3 sentences about your family. / Viết 2–3 câu về gia đình em.', payload: { starters: ['My family has…', 'I love…'] } },
   ];
+
+  // Seed questions are shared-and-approved center material.
+  for (const qq of questions) { qq.ownerId = ['q6','q7','q8'].includes(qq.id) ? 't_quy' : 't_ha'; qq.shared = true; qq.sharedApproved = true; }
 
   const db: DDB = {
     users,
@@ -519,6 +525,9 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
       prompt: String(b.prompt ?? ''),
       payload,
       unit: String(b.unit ?? ''),
+      ownerId: me.id,
+      shared: false,
+      sharedApproved: false,
     };
     db.questions.push(q);
     save(db);
@@ -719,7 +728,38 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
 
   if (rawPath === '/questions' && method === 'GET') {
     if (!(me.role === 'tutor' || isAdmin)) return err(403, 'forbidden'); // bank is teacher material
-    return ok(db.questions.map((qq) => ({ id: qq.id, type: qq.type, skill: qq.skill, prompt: qq.prompt, unit: qq.unit })));
+    return ok(
+      db.questions
+        .filter((qq) => isAdmin || qq.ownerId === me.id || (qq.shared && qq.sharedApproved))
+        .map((qq) => ({ id: qq.id, type: qq.type, skill: qq.skill, prompt: qq.prompt, unit: qq.unit, ownerId: qq.ownerId ?? null, shared: !!qq.shared, sharedApproved: !!qq.sharedApproved })),
+    );
+  }
+
+  // ---- shared bank: offer / approve ----
+  if (seg[0] === 'questions' && seg[2] === 'share' && method === 'POST') {
+    const qq = db.questions.find((x) => x.id === seg[1]);
+    if (!qq) return err(404, 'not_found');
+    if (qq.ownerId !== me.id && !isAdmin) return err(403, 'forbidden');
+    qq.shared = true;
+    qq.sharedApproved = isAdmin; // managers' shares go live immediately
+    save(db);
+    return ok({ ok: true, pendingApproval: !isAdmin });
+  }
+  if (rawPath === '/questions/pending-shares' && method === 'GET') {
+    if (!isAdmin) return err(403, 'forbidden');
+    return ok(
+      db.questions
+        .filter((qq) => qq.shared && !qq.sharedApproved)
+        .map((qq) => ({ id: qq.id, type: qq.type, skill: qq.skill, unit: qq.unit, prompt: qq.prompt, ownerName: db.users.find((u) => u.id === qq.ownerId)?.name ?? '—' })),
+    );
+  }
+  if (seg[0] === 'questions' && seg[2] === 'approve-share' && method === 'POST') {
+    if (!isAdmin) return err(403, 'forbidden');
+    const qq = db.questions.find((x) => x.id === seg[1]);
+    if (!qq) return err(404, 'not_found');
+    qq.sharedApproved = true;
+    save(db);
+    return ok({ ok: true });
   }
 
   // ---- assignment lifecycle ----

@@ -260,6 +260,33 @@ describe('grading queue and rubric', () => {
   });
 });
 
+describe('shared question bank', () => {
+  it('a teacher offers a question; others see it only after manager approval', async () => {
+    const created = await req('POST', '/questions', lan, {
+      type: 'mc', skill: 'grammar', prompt: 'Shared MC?', payload: { options: ['a', 'b'], answer: 'a' }, copyrightAck: true,
+    });
+    const qid = created.json().id as string;
+
+    // David can't see Lan's private question, and can't share it either.
+    const before = (await req('GET', '/questions', david)).json() as { id: string }[];
+    expect(before.map((q) => q.id)).not.toContain(qid);
+    expect((await req('POST', `/questions/${qid}/share`, david)).statusCode).toBe(403);
+
+    // Lan offers it; still hidden until approval.
+    expect((await req('POST', `/questions/${qid}/share`, lan)).json()).toMatchObject({ pendingApproval: true });
+    const during = (await req('GET', '/questions', david)).json() as { id: string }[];
+    expect(during.map((q) => q.id)).not.toContain(qid);
+
+    // Manager sees it pending and approves; now David can use it.
+    const pending = (await req('GET', '/questions/pending-shares', zhao)).json() as { id: string }[];
+    expect(pending.map((q) => q.id)).toContain(qid);
+    expect((await req('GET', '/questions/pending-shares', lan)).statusCode).toBe(403);
+    expect((await req('POST', `/questions/${qid}/approve-share`, zhao)).statusCode).toBe(200);
+    const after = (await req('GET', '/questions', david)).json() as { id: string }[];
+    expect(after.map((q) => q.id)).toContain(qid);
+  });
+});
+
 describe('gradebook, session logging, ILPs', () => {
   it('gradebook aggregates weighted overall and per-skill scores', async () => {
     const rows = (await req('GET', '/classes/c1/gradebook', lan)).json() as { studentId: string; overall: number | null; skills: Record<string, unknown> }[];

@@ -44,9 +44,13 @@ export function AdminPanel({ lang }: { lang: 'vi' | 'en' }) {
   const [cSchedule, setCSchedule] = useState('');
   const [cTeacher, setCTeacher] = useState('');
 
+  // Shared-question approvals
+  const [pendingShares, setPendingShares] = useState<{ id: string; prompt: string; skill: string; ownerName: string }[]>([]);
+
   const load = async () => {
     setTeachers(await api('GET', '/admin/teachers'));
     setClasses(await api('GET', '/classes'));
+    setPendingShares(await api<typeof pendingShares>('GET', '/questions/pending-shares').catch(() => []));
   };
   useEffect(() => {
     if (open) void load();
@@ -148,6 +152,27 @@ export function AdminPanel({ lang }: { lang: 'vi' | 'en' }) {
               </button>
             </div>
           </div>
+
+          {/* ---- Shared-question approvals ---- */}
+          {pendingShares.length > 0 && (
+            <div className="space-y-2">
+              <h3 className="flex items-center gap-1.5 text-sm font-extrabold text-violet-800">🤝 {vi ? 'Câu hỏi chờ duyệt chia sẻ' : 'Shares awaiting approval'} <span className="font-bold text-amber-500">({pendingShares.length})</span></h3>
+              {pendingShares.map((p) => (
+                <div key={p.id} className="flex items-center gap-2 rounded-2xl bg-amber-50 px-3 py-2 text-sm font-bold">
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate">{p.prompt || '—'}</span>
+                    <span className="block text-[10px] font-semibold text-slate-400">{p.ownerName} · {p.skill}</span>
+                  </span>
+                  <button
+                    onClick={async () => { await api('POST', `/questions/${p.id}/approve-share`); flash(vi ? '✅ Đã duyệt — mọi giáo viên dùng được câu này.' : '✅ Approved for all teachers.'); void load(); }}
+                    className="btn-primary shrink-0 !py-1.5 text-xs"
+                  >
+                    ✓ {vi ? 'Duyệt' : 'Approve'}
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
 
           {/* ---- Classes ---- */}
           <div className="space-y-2">

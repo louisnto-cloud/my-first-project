@@ -31,6 +31,8 @@ interface BankRow {
   skill: string;
   prompt: string;
   unit: string | null;
+  shared?: boolean;
+  sharedApproved?: boolean;
 }
 
 const SKILL_EMOJI: Record<string, string> = { grammar: '🔤', reading: '📖', listening: '🎧', writing: '✍️' };
@@ -52,6 +54,7 @@ export function QuestionBank({ lang }: { lang: 'vi' | 'en' }) {
   const [choices, setChoices] = useState('');
   const [answer, setAnswer] = useState('');
   const [audioText, setAudioText] = useState('');
+  const [shareIt, setShareIt] = useState(false);
 
   const load = async () => {
     setBank(await api<BankRow[]>('GET', '/questions'));
@@ -108,7 +111,7 @@ export function QuestionBank({ lang }: { lang: 'vi' | 'en' }) {
 
   const saveQuestion = async () => {
     if (!built) return;
-    await api('POST', '/questions', {
+    const created = await api<{ id: string }>('POST', '/questions', {
       type,
       skill,
       ...(unit.trim() ? { unit: unit.trim() } : {}),
@@ -116,10 +119,16 @@ export function QuestionBank({ lang }: { lang: 'vi' | 'en' }) {
       payload: built.payload,
       copyrightAck: true,
     });
+    if (shareIt) await api('POST', `/questions/${created.id}/share`).catch(() => {});
     sfx.correct();
     reset();
+    setShareIt(false);
     setComposing(false);
-    flash(vi ? '✅ Đã lưu vào ngân hàng — chọn được ngay khi giao bài.' : '✅ Saved — available when assigning work.');
+    flash(
+      shareIt
+        ? vi ? '✅ Đã lưu — chờ quản lý duyệt để chia sẻ cho giáo viên khác.' : '✅ Saved — pending manager approval to share.'
+        : vi ? '✅ Đã lưu vào ngân hàng — chọn được ngay khi giao bài.' : '✅ Saved — available when assigning work.',
+    );
     void load();
   };
 
@@ -141,6 +150,11 @@ export function QuestionBank({ lang }: { lang: 'vi' | 'en' }) {
             <div key={q.id} className="flex items-center gap-2 rounded-xl bg-violet-50/60 px-2.5 py-1.5 text-[12px] font-bold text-slate-600">
               <span className="shrink-0">{SKILL_EMOJI[q.skill] ?? '•'}</span>
               <span className="min-w-0 flex-1 truncate">{q.prompt || '—'}</span>
+              {q.shared && (
+                <span className={`chip shrink-0 text-[10px] ${q.sharedApproved ? 'bg-emerald-100 text-emerald-600' : 'bg-amber-100 text-amber-600'}`} title={q.sharedApproved ? (vi ? 'Dùng chung toàn trung tâm' : 'Shared center-wide') : vi ? 'Chờ quản lý duyệt' : 'Pending approval'}>
+                  {q.sharedApproved ? '🤝' : '⏳'}
+                </span>
+              )}
               {q.unit && <span className="chip shrink-0 bg-white text-[10px] text-violet-500">{q.unit}</span>}
             </div>
           ))}
@@ -240,6 +254,10 @@ export function QuestionBank({ lang }: { lang: 'vi' | 'en' }) {
             </>
           )}
 
+          <label className="flex cursor-pointer items-center gap-2 text-xs font-bold text-slate-500">
+            <input type="checkbox" checked={shareIt} onChange={(e) => setShareIt(e.target.checked)} className="h-4 w-4 accent-violet-600" />
+            🤝 {vi ? 'Chia sẻ cho giáo viên khác (quản lý duyệt trước)' : 'Share with other teachers (manager approves first)'}
+          </label>
           <div className="flex gap-2">
             <button onClick={() => { setComposing(false); reset(); }} className="btn-soft text-sm">{vi ? 'Hủy' : 'Cancel'}</button>
             <button onClick={saveQuestion} disabled={!built} className="btn-primary flex-1 text-sm">

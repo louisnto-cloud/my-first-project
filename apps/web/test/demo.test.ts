@@ -409,6 +409,32 @@ describe('demo engine — kiosk (front desk)', () => {
   });
 });
 
+describe('demo engine — shared question bank', () => {
+  it('teacher offers → hidden until owner approves → visible to all teachers', async () => {
+    const ha = await loginCode('GV0004');
+    const created = (await call('POST', '/questions', { type: 'mc', skill: 'grammar', prompt: 'Bài chia sẻ?', payload: { options: ['a', 'b'], answer: 'a' } }, ha!)).json as { id: string };
+
+    const quy = await loginCode('GV0001');
+    let quyBank = (await call('GET', '/questions', undefined, quy!)).json as { id: string }[];
+    expect(quyBank.map((x) => x.id)).not.toContain(created.id); // private
+
+    expect(((await call('POST', `/questions/${created.id}/share`, {}, ha!)).json as { pendingApproval: boolean }).pendingApproval).toBe(true);
+    quyBank = (await call('GET', '/questions', undefined, quy!)).json as { id: string }[];
+    expect(quyBank.map((x) => x.id)).not.toContain(created.id); // still pending
+
+    const zhao = (await call('POST', '/auth/login', { email: 'zhao@etop.vn', password: 'x' })).json as { token: string };
+    const pending = (await call('GET', '/questions/pending-shares', undefined, zhao.token)).json as { id: string }[];
+    expect(pending.map((x) => x.id)).toContain(created.id);
+    expect((await call('POST', `/questions/${created.id}/approve-share`, {}, zhao.token)).status).toBe(200);
+
+    quyBank = (await call('GET', '/questions', undefined, quy!)).json as { id: string }[];
+    expect(quyBank.map((x) => x.id)).toContain(created.id); // now center-wide
+
+    // Non-owner teachers cannot share someone else's question.
+    expect((await call('POST', `/questions/${created.id}/share`, {}, quy!)).status).toBe(403);
+  });
+});
+
 describe('demo engine — hardening regressions', () => {
   it('rotate-code is teacher-of-student/manager only (response contains the new code)', async () => {
     const bao = await loginCode('UP1482');

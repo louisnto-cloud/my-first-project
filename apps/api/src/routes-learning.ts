@@ -241,6 +241,44 @@ export function registerLearningRoutes(app: FastifyInstance, db: DB): void {
     );
   });
 
+  // ---------- Shared question bank (teacher offers → manager approves) ----------
+  app.post('/questions/:id/share', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    const { id } = req.params as { id: string };
+    const q = await one<{ owner_id: string; org_id: string }>(db, 'SELECT owner_id, org_id FROM questions WHERE id = $1', [id]);
+    if (!q || q.org_id !== actor.orgId) return reply.code(404).send({ error: 'not_found' });
+    const isManager = ['owner', 'academic_director'].includes(actor.role);
+    if (q.owner_id !== actor.id && !isManager) return reply.code(403).send({ error: 'forbidden' });
+    // Managers' shares are live immediately; teachers' wait for approval.
+    await db.query('UPDATE questions SET shared = true, shared_approved = $2 WHERE id = $1', [id, isManager]);
+    return { ok: true, pendingApproval: !isManager };
+  });
+
+  app.get('/questions/pending-shares', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    if (!['owner', 'academic_director'].includes(actor.role)) return reply.code(403).send({ error: 'forbidden' });
+    return many(
+      db,
+      `SELECT q.id, q.type, q.skill, q.unit, q.prompt, u.name AS "ownerName"
+         FROM questions q JOIN users u ON u.id = q.owner_id
+        WHERE q.org_id = $1 AND q.shared = true AND q.shared_approved = false ORDER BY q.created_at DESC`,
+      [actor.orgId],
+    );
+  });
+
+  app.post('/questions/:id/approve-share', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    if (!['owner', 'academic_director'].includes(actor.role)) return reply.code(403).send({ error: 'forbidden' });
+    const { id } = req.params as { id: string };
+    const q = await one<{ org_id: string }>(db, 'SELECT org_id FROM questions WHERE id = $1', [id]);
+    if (!q || q.org_id !== actor.orgId) return reply.code(404).send({ error: 'not_found' });
+    await db.query('UPDATE questions SET shared_approved = true WHERE id = $1', [id]);
+    return { ok: true };
+  });
+
   // ---------- Assignments ----------
   app.post('/classes/:id/assignments', async (req, reply) => {
     const { id } = req.params as { id: string };
