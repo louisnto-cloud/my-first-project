@@ -334,6 +334,16 @@ select{font:inherit;padding:7px 11px;border-radius:10px;border:1px solid var(--l
 .seg button.on{box-shadow:0 8px 22px -8px rgba(31,224,192,.7),0 0 0 1px rgba(191,255,77,.4) inset,inset 0 1px 0 rgba(255,255,255,.5)}
 :focus-visible{outline:2px solid rgba(31,224,192,.7);outline-offset:2px;border-radius:8px}
 
+/* Canada tile map */
+.mapWrap{display:flex;justify-content:center;margin-top:10px;overflow-x:auto}
+.tilemap{display:grid;grid-template-columns:repeat(7,54px);grid-auto-rows:54px;gap:8px}
+.ptile{border-radius:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
+  border:1px solid rgba(255,255,255,.15);cursor:default;transition:transform .2s cubic-bezier(.2,.7,.2,1),box-shadow .2s;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22)}
+.ptile:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 12px 26px -10px rgba(0,0,0,.85),0 0 0 1px rgba(191,255,77,.5)}
+.ptile .pc{font-family:var(--disp);font-weight:600;font-size:14px;line-height:1}
+.ptile .pv{font-size:9px;font-weight:700;opacity:.85}
+
 @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 .hero,.gapcard,.block,.explore,.adv{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
 .gapcard{animation-delay:.06s}.block{animation-delay:.12s}.explore{animation-delay:.18s}.adv{animation-delay:.24s}
@@ -482,7 +492,29 @@ function render(){
   document.getElementById('k_avg_sub').textContent = 'over '+R.nWeeks+' weeks';
   animateNum(document.getElementById('k_margin'), R.marginPct*100, v=>v.toFixed(1)+'%');
   document.getElementById('k_margin_sub').textContent = fmt$(R.margin)+' margin';
-  renderCum(R); renderGap(R); renderScenarios(); renderExplore(R); syncControls();
+  renderCum(R); renderGap(R); renderScenarios(); renderExplore(R); renderMap(R); syncControls();
+}
+
+// ---- Canada tile map (schematic grid; colour = revenue) ----
+const MAPGRID={BC:[0,1],AB:[1,1],SK:[2,1],MB:[3,1],ON:[4,1],QC:[5,1],PE:[6,1],NL:[6,0],NB:[5,2],NS:[6,2]};
+const _lerp=(a,b,t)=>a+(b-a)*t;
+function mapColor(t){ const s=[[26,74,84],[31,224,192],[191,255,77]]; const i=t<.5?0:1, k=t<.5?t/.5:(t-.5)/.5;
+  return 'rgb('+Math.round(_lerp(s[i][0],s[i+1][0],k))+','+Math.round(_lerp(s[i][1],s[i+1][1],k))+','+Math.round(_lerp(s[i][2],s[i+1][2],k))+')'; }
+function showTileTip(e,html){ const tip=ensureTip(); tip.innerHTML=html; tip.style.left=e.clientX+'px'; tip.style.top=(e.clientY-12)+'px'; tip.style.opacity='1'; }
+function renderMap(R){
+  const host=document.getElementById('tilemap'); if(!host) return; host.innerHTML='';
+  const vals=R.byProvince, keys=Object.keys(vals).filter(k=>MAPGRID[k]);
+  const arr=keys.map(k=>vals[k]), max=Math.max(...arr), min=Math.min(...arr), tot=arr.reduce((a,b)=>a+b,0);
+  const noteEl=document.getElementById('mapNote'); if(noteEl) noteEl.textContent=state.gross_basis+' basis · hover a province';
+  keys.forEach(code=>{
+    const g=MAPGRID[code], v=vals[code], t=max>min?(v-min)/(max-min):1, dark=t>0.45, ink=dark?'#06140f':'#dfeef2';
+    const el=document.createElement('div'); el.className='ptile';
+    el.style.gridColumn=(g[0]+1); el.style.gridRow=(g[1]+1); el.style.background=mapColor(t);
+    el.innerHTML='<span class="pc" style="color:'+ink+'">'+code+'</span><span class="pv" style="color:'+ink+'">'+fmtM(v)+'</span>';
+    el.addEventListener('mousemove',e=>showTileTip(e,'<div class="tt">'+code+'</div><div class="tr"><b>'+fmt$(v)+'</b> · '+pctS(v/tot)+' of gross</div>'));
+    el.addEventListener('mouseleave',()=>{ ensureTip().style.opacity='0'; });
+    host.appendChild(el);
+  });
 }
 
 // ---- close the gap ----
@@ -742,6 +774,13 @@ __CHARTJS__
     <div class="exChart"><canvas id="c_explore"></canvas></div>
     <div class="exList" id="exList"></div>
   </div>
+</section>
+
+<!-- ACROSS CANADA -->
+<section class="card">
+  <div class="kicker">Across Canada</div>
+  <div class="blockHead" style="margin:0 0 4px"><h2>Revenue by province</h2><span class="muted" id="mapNote"></span></div>
+  <div class="mapWrap"><div class="tilemap" id="tilemap"></div></div>
 </section>
 
 <!-- ADVANCED -->
