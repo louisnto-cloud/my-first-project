@@ -101,6 +101,15 @@
     </div>
   </section>
 
+  <!-- MONTHLY -->
+  <section class="view" data-view="Monthly">
+    <div class="panel">
+      <h2>Monthly — <span class="scn-name"></span></h2>
+      <p class="h-sub">The selected scenario spread across the year. Sales follow the seasonality curve; fixed costs are split evenly.</p>
+      <div style="overflow-x:auto" id="monthly"></div>
+    </div>
+  </section>
+
   <!-- PRICING -->
   <section class="view" data-view="Pricing Lab">
     <div class="panel">
@@ -111,6 +120,24 @@
         <button data-m="contrib">Annual Contribution $</button>
       </div>
       <div id="pricing"></div>
+    </div>
+  </section>
+
+  <!-- TARGETS -->
+  <section class="view" data-view="Targets">
+    <div class="panel">
+      <h2>Targets — work backwards from a goal</h2>
+      <p class="h-sub">Set a goal and the model solves the price or volume needed to hit it. Exact, no guessing.</p>
+      <div class="grid2">
+        <div>
+          <table><tbody>
+            <tr><td>Target Gross Profit %</td><td style="text-align:right"><input class="cell" type="number" step="0.5" id="tgtGP" value="45"> %</td></tr>
+            <tr><td>Target EBITDA ($)</td><td style="text-align:right"><input class="cell" type="number" step="5000" id="tgtEB" value="150000"></td></tr>
+          </tbody></table>
+        </div>
+        <div></div>
+      </div>
+      <div id="targets" style="margin-top:16px"></div>
     </div>
   </section>
 
@@ -169,6 +196,8 @@ const LEVERS = {
   Stretch:{v:1.60, p:1.05, d:-0.01},
 };
 const SCEN = ["Low","Base","High","Stretch"];
+const SEASON = [0.06,0.06,0.07,0.08,0.10,0.11,0.12,0.11,0.09,0.08,0.06,0.06];
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 let current = "Base";
 let priceMetric = "gp";
 
@@ -308,6 +337,40 @@ function renderPnl(){
   el("pnl").innerHTML=h;
 }
 
+function renderMonthly(){
+  document.querySelectorAll(".scn-name").forEach(e=>e.textContent=current);
+  const r = compute(current);
+  const fixed = (CO.salaries+CO.ga+CO.mktg+CO.slotting)/12;
+  const M = MONTHS.map((m,i)=>{
+    const f = SEASON[i];
+    const net = r.net*f, cm = r.cm*f;
+    const logistics = net*CO.log_pct;
+    const ebitda = cm - logistics - fixed;
+    const ebit = ebitda - CO.da/12;
+    const ebt = ebit - CO.interest/12;
+    const tax = Math.max(0, ebt*CO.tax);
+    const ni = ebt - tax;
+    return {m, cases:r.cases*f, net, gp:r.gp*f, cm, ebitda, ni};
+  });
+  const rows = [
+    ["Physical Cases", "cases", num, 0],
+    ["Net Sales", "net", money, 1],
+    ["Gross Profit", "gp", money, 0],
+    ["Contribution", "cm", money, 0],
+    ["EBITDA", "ebitda", money, 1],
+    ["Net Income", "ni", money, 1],
+  ];
+  let h="<table><thead><tr><th>CDN $</th>"+MONTHS.map(m=>`<th>${m}</th>`).join("")+"<th>FY</th></tr></thead><tbody>";
+  rows.forEach(row=>{
+    const fy = M.reduce((a,x)=>a+x[row[1]],0);
+    h+=`<tr class="${row[3]?'major':''}"><td>${row[0]}</td>`+
+       M.map(x=>`<td${row[2]===money&&x[row[1]]<0?' style="color:#d83a4b"':''}>${row[2](x[row[1]])}</td>`).join("")+
+       `<td style="background:#eef5ff;font-weight:700">${row[2](fy)}</td></tr>`;
+  });
+  h+="</tbody></table>";
+  el("monthly").innerHTML=h;
+}
+
 const LADDER=[0.85,0.90,0.95,1.00,1.05,1.10,1.15];
 function renderPricing(){
   let h="<table><thead><tr><th>SKU \\ CP vs base</th>"+LADDER.map(m=>`<th>${mult(m)}</th>`).join("")+"</tr></thead><tbody>";
@@ -325,6 +388,30 @@ function renderPricing(){
   });
   h+="</tbody></table>";
   el("pricing").innerHTML=h;
+}
+
+function renderTargets(){
+  const K1 = SKUS.reduce((a,s)=>a+s.vol*s.cp*(1-s.disc),0);
+  const Kcos = SKUS.reduce((a,s)=>a+s.vol*(s.cosd+s.cosi),0);
+  const Kap = SKUS.reduce((a,s)=>a+s.vol*s.ap,0);
+  const FX = CO.salaries+CO.ga+CO.mktg+CO.slotting;
+  const LOG = CO.log_pct, cases = SKUS.reduce((a,s)=>a+s.vol,0);
+  const gpT = (parseFloat(el("tgtGP").value)||0)/100;
+  const ebT = parseFloat(el("tgtEB").value)||0;
+  const denom = (K1-Kcos-Kap)-LOG*K1;
+  const priceForGP = Kcos/(K1*(1-gpT));
+  const volForEB = (ebT+FX)/denom;
+  const priceForEB = (ebT+FX+Kcos+Kap)/(K1*(1-LOG));
+  const beVol = FX/denom;
+  const rows = [
+    ["Price × to hit target GP %", mult(priceForGP), `implies CP ${((priceForGP-1)*100).toFixed(1)}% vs base`],
+    ["Volume × to hit target EBITDA", mult(volForEB), `≈ ${num(volForEB*cases)} cases`],
+    ["Price × to hit target EBITDA", mult(priceForEB), "at base volume (ignores demand response)"],
+    ["Break-even volume ×", mult(beVol), `≈ ${num(beVol*cases)} cases at base price`],
+  ];
+  el("targets").innerHTML = "<table><thead><tr><th>Answer</th><th>Result</th><th>Notes</th></tr></thead><tbody>"+
+    rows.map(r=>`<tr class="major"><td>${r[0]}</td><td style="font-weight:700">${r[1]}</td><td class="hint" style="text-align:left">${r[2]}</td></tr>`).join("")+
+    "</tbody></table>";
 }
 
 const VOLM=[0.70,0.90,1.00,1.10,1.30,1.50,1.70];
@@ -406,7 +493,7 @@ function setCo(k,v){CO[k]=parseFloat(v)||0;refresh();}
 function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();}
 
 // ---------- nav / scenario bar ----------
-const VIEWS=["Overview","P&L","Pricing Lab","Sensitivity","Assumptions"];
+const VIEWS=["Overview","P&L","Monthly","Pricing Lab","Targets","Sensitivity","Assumptions"];
 function buildNav(){
   el("nav").innerHTML=VIEWS.map((v,i)=>`<button class="${i===0?'on':''}" data-v="${v}">${v}</button>`).join("");
   el("nav").querySelectorAll("button").forEach(b=>b.onclick=()=>{
@@ -423,7 +510,8 @@ function buildNav(){
     el("priceSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===priceMetric));
     renderPricing();});
 }
-function refresh(){renderKpis();renderCmp();renderPnl();renderPricing();renderSens();}
+function refresh(){renderKpis();renderCmp();renderPnl();renderMonthly();renderPricing();renderTargets();renderSens();}
+["tgtGP","tgtEB"].forEach(id=>{const e=el(id); if(e) e.oninput=renderTargets;});
 buildNav();renderAsmp();refresh();
 </script>
 </body>
