@@ -367,7 +367,9 @@ function renderCmp(){
   let h = "<table><thead><tr><th>Metric</th>"+SCEN.map(s=>`<th>${s}</th>`).join("")+"</tr></thead><tbody>";
   rows.forEach(row=>{
     h += `<tr class="${row[2]?'tot':''}"><td>${row[0]}</td>`+
-      data.map((r,i)=>`<td style="${SCEN[i]==current?'background:#eef5ff':''}">${row[1](r)}</td>`).join("")+"</tr>";
+      data.map((r,i)=>{const val=row[1](r);const neg=/^-/.test(val);
+        const st=(SCEN[i]==current?'background:#eef5ff;':'')+(neg?'color:#d83a4b':'');
+        return `<td style="${st}">${val}</td>`;}).join("")+"</tr>";
   });
   h += "</tbody></table>";
   el("cmp").innerHTML = h;
@@ -391,10 +393,11 @@ function renderPnl(){
     ["Contribution", l=>money(l.cm), ()=>money(tot("cm")), 1],
   ];
   let h="<table><thead><tr><th>CDN $</th>"+cols.map(c=>`<th>${c}</th>`).join("")+"<th>Total</th></tr></thead><tbody>";
+  const red=v=>/^-/.test(v)?' style="color:#d83a4b"':'';
   rows.forEach(row=>{
     h+=`<tr class="${row[3]?'major':''}"><td>${row[0]}</td>`+
-       L.map(l=>`<td>${row[1](l)}</td>`).join("")+
-       `<td style="background:#eef5ff;font-weight:700">${row[2](r)}</td></tr>`;
+       L.map(l=>{const v=row[1](l);return `<td${red(v)}>${v}</td>`;}).join("")+
+       (()=>{const v=row[2](r);return `<td style="background:#eef5ff;font-weight:700;${/^-/.test(v)?'color:#d83a4b':''}">${v}</td>`;})()+"</tr>";
   });
   // company block (total only)
   const comp = [
