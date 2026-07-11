@@ -607,7 +607,8 @@ function ParentInvoices() {
 }
 
 // ---------- Owner / Academic Director dashboard ----------
-function OwnerDash() {
+function OwnerDash({ lang }: { lang: Lang }) {
+  const vi = lang === 'vi';
   const [finance, setFinance] = useState<{ revenue: { period: string; revenueVnd: string | number }[]; arAging: { bucket: string; outstandingVnd: string | number; invoices: number }[] } | null>(null);
   const [nps, setNps] = useState<{ responses: number; nps: number | null; comments?: string[] } | null>(null);
   const [academic, setAcademic] = useState<{ stalled: { id: string; name: string }[]; velocity: { tutorName: string; avgDelta: string | number }[] } | null>(null);
@@ -632,12 +633,12 @@ function OwnerDash() {
     <div className="space-y-4">
       {escalations.length > 0 && (
         <div className="card animate-pop border-rose-300 bg-rose-50 text-center font-black text-rose-700">
-          🚨 Cảnh báo vắng mặt: {escalations.map((e) => e.studentName).join(', ')}
+          🚨 {vi ? 'Cảnh báo vắng mặt' : 'Absence alert'}: {escalations.map((e) => e.studentName).join(', ')}
         </div>
       )}
 
       <div className="rounded-3xl bg-gradient-to-br from-violet-700 to-fuchsia-600 p-5 text-white shadow-lg shadow-violet-300/40">
-        <div className="text-xs font-bold text-violet-100">💰 Doanh thu tháng này</div>
+        <div className="text-xs font-bold text-violet-100">💰 {vi ? 'Doanh thu tháng này' : 'Revenue this month'}</div>
         <div className="mt-1 text-4xl font-black">{revenue != null ? `${revenue.toLocaleString('vi-VN')}đ` : '—'}</div>
         {(finance?.revenue.length ?? 0) > 1 && (
           <div className="mt-3 flex items-end gap-1.5" aria-label="Doanh thu 6 tháng">
@@ -654,18 +655,18 @@ function OwnerDash() {
         )}
         {today.length > 0 && (
           <div className="mt-3 flex gap-2 text-[11px] font-extrabold">
-            <span className="chip bg-white/20 text-white">✅ {today.filter((s) => s.status === 'present').length} đang ở lớp</span>
-            <span className="chip bg-white/20 text-white">🏠 {today.filter((s) => s.status === 'released').length} đã về</span>
-            <span className="chip bg-white/20 text-white">⏳ {today.filter((s) => s.status === 'expected').length} chưa đến</span>
+            <span className="chip bg-white/20 text-white">✅ {today.filter((s) => s.status === 'present').length} {vi ? 'đang ở lớp' : 'in class'}</span>
+            <span className="chip bg-white/20 text-white">🏠 {today.filter((s) => s.status === 'released').length} {vi ? 'đã về' : 'released'}</span>
+            <span className="chip bg-white/20 text-white">⏳ {today.filter((s) => s.status === 'expected').length} {vi ? 'chưa đến' : 'expected'}</span>
           </div>
         )}
       </div>
 
       <div className="grid grid-cols-3 gap-3">
         {[
-          { emoji: '🧾', value: unpaid ?? '—', label: 'Hóa đơn chưa thu' },
-          { emoji: '💜', value: nps?.nps ?? '—', label: `NPS · ${nps?.responses ?? 0} ý kiến` },
-          { emoji: '🐢', value: academic?.stalled.length ?? '—', label: 'HS cần hỗ trợ' },
+          { emoji: '🧾', value: unpaid ?? '—', label: vi ? 'Hóa đơn chưa thu' : 'Unpaid invoices' },
+          { emoji: '💜', value: nps?.nps ?? '—', label: `NPS · ${nps?.responses ?? 0} ${vi ? 'ý kiến' : 'responses'}` },
+          { emoji: '🐢', value: academic?.stalled.length ?? '—', label: vi ? 'HS cần hỗ trợ' : 'Need support' },
         ].map((s) => (
           <div key={s.label} className="card text-center">
             <div className="text-xl">{s.emoji}</div>
@@ -677,7 +678,7 @@ function OwnerDash() {
 
       {(nps?.comments ?? []).length > 0 && (
         <div className="card space-y-2">
-          <h3 className="text-sm font-extrabold text-violet-800">💬 Phụ huynh nói gì</h3>
+          <h3 className="text-sm font-extrabold text-violet-800">💬 {vi ? 'Phụ huynh nói gì' : 'What parents say'}</h3>
           {(nps?.comments ?? []).slice(0, 4).map((c, i) => (
             <blockquote key={i} className="rounded-xl border-l-4 border-violet-200 bg-violet-50/60 p-2.5 text-sm font-semibold italic text-slate-600">“{c}”</blockquote>
           ))}
@@ -686,7 +687,7 @@ function OwnerDash() {
 
       {academic && academic.velocity.length > 0 && (
         <div className="card space-y-2">
-          <h3 className="text-sm font-extrabold text-violet-800">📈 Tiến bộ học viên theo giáo viên <span className="font-bold text-slate-400">· 8 tuần</span></h3>
+          <h3 className="text-sm font-extrabold text-violet-800">📈 {vi ? 'Tiến bộ học viên theo giáo viên' : 'Student progress by teacher'} <span className="font-bold text-slate-400">· {vi ? '8 tuần' : '8 weeks'}</span></h3>
           {academic.velocity.map((v) => {
             const d = Number(v.avgDelta);
             return (
@@ -835,7 +836,8 @@ interface QueuedEvent {
   releasedToName?: string;
 }
 
-function Kiosk({ me, t }: { me: Me; t: (k: string) => string }) {
+function Kiosk({ me, t, lang }: { me: Me; t: (k: string) => string; lang: Lang }) {
+  const vi = lang === 'vi';
   const siteId = me.siteId ?? 'site_nh';
   const [roster, setRoster] = useState<{ id: string; name: string; className: string; status: string }[]>([]);
   const [escalations, setEscalations] = useState<{ studentName: string }[]>([]);
@@ -954,7 +956,7 @@ function Kiosk({ me, t }: { me: Me; t: (k: string) => string }) {
       {roster.length > 8 && (
         <input
           className="input"
-          placeholder="🔍 Tìm nhanh theo tên hoặc lớp…"
+          placeholder={vi ? '🔍 Tìm nhanh theo tên hoặc lớp…' : '🔍 Filter by name or class…'}
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         />
@@ -980,7 +982,7 @@ function Kiosk({ me, t }: { me: Me; t: (k: string) => string }) {
       {dismissing && (
         <div className="fixed inset-0 z-20 flex items-end justify-center bg-black/40 p-4 sm:items-center">
           <div className="w-full max-w-md space-y-3 rounded-3xl bg-white p-5">
-            <h3 className="text-lg font-black">🏠 Trả học sinh: {dismissing.name}</h3>
+            <h3 className="text-lg font-black">🏠 {vi ? 'Trả học sinh' : 'Dismiss'}: {dismissing.name}</h3>
             {dismissErr && <div className={`rounded-2xl p-3 text-sm font-black ${dismissErr.startsWith('⛔') ? 'bg-rose-100 text-rose-700' : 'bg-amber-50 text-amber-700'}`}>{dismissErr}</div>}
             <div className="space-y-2">
               {pickups.map((p) => (
@@ -996,7 +998,7 @@ function Kiosk({ me, t }: { me: Me; t: (k: string) => string }) {
               {chosen && (
                 <input
                   className="input text-center text-2xl font-black tracking-widest"
-                  placeholder="Mã PIN"
+                  placeholder={vi ? 'Mã PIN' : 'PIN'}
                   inputMode="numeric"
                   maxLength={6}
                   value={pin}
@@ -1005,15 +1007,15 @@ function Kiosk({ me, t }: { me: Me; t: (k: string) => string }) {
               )}
               <input
                 className="input"
-                placeholder="Người khác — ghi tên (đã kiểm tra giấy tờ)"
+                placeholder={vi ? 'Người khác — ghi tên (đã kiểm tra giấy tờ)' : 'Other person — name (ID checked)'}
                 value={otherName}
                 onChange={(e) => { setOtherName(e.target.value); setChosen(null); }}
               />
             </div>
             <div className="flex gap-2">
-              <button onClick={() => setDismissing(null)} className="btn-soft flex-1">Hủy</button>
+              <button onClick={() => setDismissing(null)} className="btn-soft flex-1">{vi ? 'Hủy' : 'Cancel'}</button>
               <button onClick={confirmDismiss} disabled={!(chosen && pin.length >= 4) && !otherName.trim()} className="btn-primary flex-1">
-                ✅ Xác nhận trả
+                ✅ {vi ? 'Xác nhận trả' : 'Confirm dismissal'}
               </button>
             </div>
           </div>
@@ -1053,12 +1055,12 @@ export default function App() {
         {me.role === 'parent' && <Parent lang={lang} t={t} />}
         {['owner', 'academic_director'].includes(me.role) && (
           <>
-            <OwnerDash />
+            <OwnerDash lang={lang} />
             <AdminPanel lang={lang} />
           </>
         )}
         {['tutor', 'academic_director', 'owner'].includes(me.role) && <Teacher lang={lang} t={t} />}
-        {me.role === 'front_desk' && <Kiosk me={me} t={t} />}
+        {me.role === 'front_desk' && <Kiosk me={me} t={t} lang={lang} />}
       </main>
     </div>
   );

@@ -200,13 +200,13 @@ function ClassCard({ cls, siblings, vi }: { cls: ClassInfo; siblings: ClassInfo[
                     <span>{r.name}</span>
                     <span className="flex items-center gap-2">
                       {r.loginCode && (
-                        <button onClick={() => copyCode(r.loginCode)} className="rounded-lg bg-violet-100 px-2.5 py-1 font-black text-violet-700 transition active:scale-95" title="Chạm để chép mã">
+                        <button onClick={() => copyCode(r.loginCode)} className="rounded-lg bg-violet-100 px-2.5 py-1 font-black text-violet-700 transition active:scale-95" title="Chạm để chép mã" aria-label={`Chép mã đăng nhập của ${r.name}`}>
                           {copied === r.loginCode ? '✓ đã chép' : r.loginCode}
                         </button>
                       )}
-                      <button onClick={() => rotate(r.id)} title="Đổi mã" className="text-slate-300 hover:text-violet-600">↻</button>
-                      <button onClick={() => invite(r.id, r.name)} title="Tạo mã mời phụ huynh" className="text-slate-300 transition hover:text-violet-600">🎟</button>
-                      <button onClick={() => { setNoteFor({ id: r.id, name: r.name }); setNoteText(''); }} title="Nhận xét gửi phụ huynh" className="text-slate-300 transition hover:text-violet-600">💬</button>
+                      <button onClick={() => rotate(r.id)} title="Đổi mã" aria-label={`Đổi mã đăng nhập của ${r.name}`} className="text-slate-300 hover:text-violet-600">↻</button>
+                      <button onClick={() => invite(r.id, r.name)} title="Tạo mã mời phụ huynh" aria-label={`Tạo mã mời phụ huynh cho ${r.name}`} className="text-slate-300 transition hover:text-violet-600">🎟</button>
+                      <button onClick={() => { setNoteFor({ id: r.id, name: r.name }); setNoteText(''); }} title="Nhận xét gửi phụ huynh" aria-label={`Gửi nhận xét về ${r.name} cho phụ huynh`} className="text-slate-300 transition hover:text-violet-600">💬</button>
                     </span>
                   </li>
                 ))}
