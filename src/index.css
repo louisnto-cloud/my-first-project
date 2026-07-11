@@ -48,3 +48,16 @@ body {
 .animate-confetti {
   animation: confetti-fall linear forwards;
 }
+
+/* Read & Write large-text mode (A/A+ toggle) — enlarges reading content only */
+.rw-lg p,
+.rw-lg .text-sm,
+.rw-lg .text-\[15px\] {
+  font-size: 1.1rem !important;
+  line-height: 1.75 !important;
+}
+
+.rw-lg td,
+.rw-lg th {
+  font-size: 1rem !important;
+}

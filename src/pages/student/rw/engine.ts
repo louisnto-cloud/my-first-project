@@ -228,6 +228,18 @@ export interface TTSSettings {
   voiceURI: string | null;
 }
 
+// ─── Text size preference (readability for beginner readers) ────────────────
+const TEXTSIZE_KEY = 'rw-textsize-v1';
+export type TextSize = 'normal' | 'large';
+
+export function loadTextSize(): TextSize {
+  return localStorage.getItem(TEXTSIZE_KEY) === 'large' ? 'large' : 'normal';
+}
+
+export function saveTextSize(s: TextSize) {
+  localStorage.setItem(TEXTSIZE_KEY, s);
+}
+
 export function loadTTSSettings(): TTSSettings {
   try {
     const raw = localStorage.getItem(TTS_KEY);

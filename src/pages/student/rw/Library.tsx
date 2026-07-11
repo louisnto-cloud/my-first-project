@@ -3,7 +3,7 @@ import { LIBRARY, type Story } from '../../../data/library';
 import { CURRICULUM, MONTH_COLORS } from '../../../data/curriculum';
 import { awardOnce, isMonthUnlocked, XP, type RWProgress } from './engine';
 import { useTTS } from './useTTS';
-import { AudioNotice, AudioSettings, Confetti, NavButton, PlayButton, StepCard, TappableText, XpChip } from './shared';
+import { AudioNotice, AudioSettings, Confetti, NavButton, PlayButton, StepCard, TappableText, TextSizeToggle, useTextSize, XpChip } from './shared';
 
 export default function Library({ progress, apply }: {
   progress: RWProgress;
@@ -65,6 +65,7 @@ function StoryReader({ story, progress, apply, onBack }: {
   const [phase, setPhase] = useState<'read' | 'quiz' | 'done'>('read');
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [textSize, toggleTextSize] = useTextSize();
 
   const month = CURRICULUM[story.level - 1];
   const c = MONTH_COLORS[month.color];
@@ -99,13 +100,14 @@ function StoryReader({ story, progress, apply, onBack }: {
   };
 
   return (
-    <div className="space-y-4">
+    <div className={`space-y-4 ${textSize === 'large' ? 'rw-lg' : ''}`}>
       <div className="flex items-center gap-3">
         <button onClick={() => { tts.stop(); onBack(); }} className="text-sm font-semibold text-gray-500 hover:text-gray-800">←</button>
         <div className="flex-1">
           <div className={`text-xs font-bold uppercase tracking-wide ${c.text}`}>{story.emoji} Level {story.level} story</div>
           <h2 className="font-black leading-tight text-gray-800">{story.title}</h2>
         </div>
+        <TextSizeToggle size={textSize} onToggle={toggleTextSize} />
         <AudioSettings tts={tts} />
       </div>
 

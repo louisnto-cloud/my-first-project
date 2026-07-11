@@ -1,5 +1,29 @@
 import { useMemo, useState, type ReactNode } from 'react';
+import { loadTextSize, saveTextSize, type TextSize } from './engine';
 import type { TTS } from './useTTS';
+
+/** A / A+ toggle — larger reading text for beginner readers, persisted per device. */
+export function useTextSize(): [TextSize, () => void] {
+  const [size, setSize] = useState<TextSize>(loadTextSize);
+  const toggle = () => {
+    const next: TextSize = size === 'large' ? 'normal' : 'large';
+    saveTextSize(next);
+    setSize(next);
+  };
+  return [size, toggle];
+}
+
+export function TextSizeToggle({ size, onToggle }: { size: TextSize; onToggle: () => void }) {
+  return (
+    <button
+      onClick={onToggle}
+      title="Text size"
+      className={`flex h-7 items-center gap-0.5 rounded-full px-2 text-xs font-black ${size === 'large' ? 'bg-violet-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+    >
+      A<span className="text-[15px] leading-none">A</span>
+    </button>
+  );
+}
 
 export function StepCard({ children }: { children: ReactNode }) {
   return <div className="space-y-3 rounded-2xl border border-gray-100 bg-white p-5 shadow-sm">{children}</div>;

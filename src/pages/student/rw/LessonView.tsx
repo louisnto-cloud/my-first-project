@@ -3,7 +3,7 @@ import { CURRICULUM, MONTH_COLORS } from '../../../data/curriculum';
 import type { Exercise, Lesson } from '../../../data/curriculum';
 import { analyzeWriting, awardOnce, XP, type RWProgress } from './engine';
 import { useTTS } from './useTTS';
-import { AudioNotice, AudioSettings, Confetti, MarkdownContent, NavButton, PlayButton, StepCard, TappableText, XpChip } from './shared';
+import { AudioNotice, AudioSettings, Confetti, MarkdownContent, NavButton, PlayButton, StepCard, TappableText, TextSizeToggle, useTextSize, XpChip } from './shared';
 
 type LessonStep = 'intro' | 'content' | 'keywords' | 'dictation' | 'exercises' | 'writing' | 'complete';
 
@@ -62,6 +62,7 @@ export default function LessonView({ lesson, progress, apply, onBack }: {
   const [showFeedback, setShowFeedback] = useState(false);
   const [xpEarned, setXpEarned] = useState(0);
   const [lastGain, setLastGain] = useState(0);
+  const [textSize, toggleTextSize] = useTextSize();
 
   const dictationWords = useMemo(() => lesson.keyWords.slice(0, 3).map((k) => k.word), [lesson]);
   const hasDictation = dictationWords.length >= 2;
@@ -124,13 +125,14 @@ export default function LessonView({ lesson, progress, apply, onBack }: {
   const speakWord = (w: string) => w && tts.speak(w);
 
   return (
-    <div className="mx-auto max-w-2xl space-y-4 px-4 py-4">
+    <div className={`mx-auto max-w-2xl space-y-4 px-4 py-4 ${textSize === 'large' ? 'rw-lg' : ''}`}>
       <div className="flex items-center gap-3">
         <button onClick={() => { tts.stop(); onBack(); }} className="text-sm font-semibold text-gray-500 hover:text-gray-800">←</button>
         <div className="flex-1">
           <div className={`text-xs font-bold uppercase tracking-wide ${c.text}`}>{month.emoji} Month {lesson.monthIndex + 1}</div>
           <h2 className="font-black leading-tight text-gray-800">{lesson.title}</h2>
         </div>
+        <TextSizeToggle size={textSize} onToggle={toggleTextSize} />
         <AudioSettings tts={tts} />
         {isDone && <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs font-bold text-green-600">Done ✓</span>}
       </div>
