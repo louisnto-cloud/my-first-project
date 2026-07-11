@@ -224,7 +224,7 @@
 
   <!-- ASSUMPTIONS -->
   <section class="view" data-view="Assumptions">
-    <div class="note">This is the only place you type. Edit any yellow cell — every number everywhere updates instantly.</div>
+    <div class="note">This is the only place you type. Edit any yellow cell — every number everywhere updates instantly, and your changes save automatically in this browser.</div>
     <div class="panel">
       <h2>Brand &amp; year</h2>
       <div id="asmpCfg"></div>
@@ -578,7 +578,7 @@ function renderHeader(){
   if(c) c.textContent=`One-Year Operating Model · ${CFG.fy} · amounts in ${CFG.cur}`;
   document.title = `${CFG.company} · ${CFG.product} — One-Year Model`;
 }
-function setCfg(k,v){CFG[k]=v;renderHeader();if(k==="cur")refresh();}
+function setCfg(k,v){CFG[k]=v;renderHeader();autosave();if(k==="cur")refresh();}
 function renderAsmp(){
   // brand & year
   const cfgRows=[["Company","company"],["Product line","product"],["Fiscal year","fy"],["Currency symbol","cur"]];
@@ -673,10 +673,12 @@ function renderSkuWarn(){
     ? `<div class="warn">⚠ ${bad.length} SKU${bad.length>1?'s':''} priced at or below cost: ${bad.map(s=>`${s.flav} ${s.fmt}`).join(', ')}. Check CP vs COGS.</div>`
     : "";
 }
-function refresh(){renderKpis();renderCmp();renderPnl();renderMonthly();renderPricing();renderUecon();renderTargets();renderSens();renderSkuWarn();}
+function refresh(){renderKpis();renderCmp();renderPnl();renderMonthly();renderPricing();renderUecon();renderTargets();renderSens();renderSkuWarn();autosave();}
 
 // ---------- persistence ----------
 const STORE_KEY = "organika_sparkling_daily_v1";
+let ready = false;
+function autosave(){ if(!ready) return; try{ localStorage.setItem(STORE_KEY, JSON.stringify({SKUS,CO,LEVERS,CFG})); }catch(e){} }
 const DEFAULTS = JSON.parse(JSON.stringify({SKUS, CO, LEVERS, CFG}));
 function applyState(st){
   if(st.SKUS){ SKUS.length=0; st.SKUS.forEach(s=>SKUS.push(s)); }
@@ -686,9 +688,9 @@ function applyState(st){
   renderHeader(); renderAsmp(); refresh();
 }
 function flash(m){const e=el("saveMsg"); if(e){e.textContent=m; setTimeout(()=>{e.textContent="";},2500);}}
-function saveState(){ localStorage.setItem(STORE_KEY, JSON.stringify({SKUS,CO,LEVERS,CFG})); flash("Saved to this browser."); }
+function saveState(){ localStorage.setItem(STORE_KEY, JSON.stringify({SKUS,CO,LEVERS,CFG})); flash("Saved ✓"); }
 function loadState(){ const raw=localStorage.getItem(STORE_KEY); if(!raw){flash("Nothing saved yet.");return;} applyState(JSON.parse(raw)); flash("Loaded your saved numbers."); }
-function resetState(){ if(!confirm("Reset all numbers to the starting placeholders? This clears your current edits. (Saved snapshots are kept.)")) return; applyState(JSON.parse(JSON.stringify(DEFAULTS))); flash("Reset to starting placeholders."); }
+function resetState(){ if(!confirm("Reset all numbers to the starting placeholders? This clears your current edits. (Saved snapshots are kept.)")) return; try{localStorage.removeItem(STORE_KEY);}catch(e){} applyState(JSON.parse(JSON.stringify(DEFAULTS))); flash("Reset to starting placeholders."); }
 function exportCSV(){
   const rows=[["Sparkling Daily — scenario comparison (CDN $)"],[]];
   rows.push(["Metric",...SCEN]);
@@ -734,6 +736,7 @@ try{applyTheme(localStorage.getItem(THEME_KEY)||"light");}catch(e){}
 {const e=el("retMargin"); if(e) e.oninput=renderUecon;}
 try{ const raw=localStorage.getItem(STORE_KEY); if(raw) applyState(JSON.parse(raw)); }catch(e){}
 renderHeader();renderGlossary();renderSnaps();buildNav();renderAsmp();refresh();
+ready = true;  // enable auto-save now that initial load is done
 </script>
 </body>
 </html>
