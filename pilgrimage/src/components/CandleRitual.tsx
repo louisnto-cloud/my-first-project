@@ -161,7 +161,7 @@ export function CandleRitual({
               onChange={(e) => setText(e.target.value)}
               rows={2}
               className="mt-3 w-full rounded-2xl border border-ivory/15 bg-lapis/60 p-3 font-story text-lg text-ivory placeholder-incense focus:border-gold/50 focus:outline-none"
-              placeholder="…"
+              placeholder={t(UI.reflectionPlaceholder)}
             />
           </div>
           <button

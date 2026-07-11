@@ -219,6 +219,12 @@ export function LessonPlayer({ world, lesson }: { world: World; lesson: Lesson }
             style={{ width: `${Math.round((step / candleStep) * 100)}%` }}
           />
         </div>
+        {/* how far along the step is — a quiet count, not a scoreboard */}
+        {step > 0 && (
+          <span className="font-ui text-[11px] font-semibold tabular-nums text-incense">
+            {Math.min(step, candleStep)}/{candleStep}
+          </span>
+        )}
       </div>
 
       <div className="min-h-0 flex-1">

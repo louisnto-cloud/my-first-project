@@ -74,6 +74,7 @@ export const UI = {
   prayerKept: v('Kept in My Chapel', 'Được giữ trong Nhà nguyện'),
   reflectionPrompt: v('What stayed with you today?', 'Điều gì còn đọng lại trong bạn hôm nay?'),
   reflectionNote: v('Only for you. Never graded, never shared.', 'Chỉ dành cho bạn. Không chấm điểm, không chia sẻ.'),
+  reflectionPlaceholder: v('A word or a line, if you like — or simply light the candle.', 'Một từ hay một dòng, nếu bạn muốn — hoặc chỉ cần thắp nến.'),
   skipForNow: v('Skip for now', 'Để sau'),
   lightTheCandle: v('Light the candle', 'Thắp nến'),
   candleLit: v('The candle is lit.', 'Ngọn nến đã được thắp.'),
