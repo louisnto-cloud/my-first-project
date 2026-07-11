@@ -21,8 +21,8 @@ math tie-out), commit, push. Keep the app cohesive and simple — no bloat.
 - [x] Persistence: save/load/reset to localStorage + export CSV.
 - [x] Add / remove SKU (flexible product list).
 - [x] Editable company / product / fiscal year (scenario-name editing deferred).
-- [ ] Retail price ladder (retailer margin → shelf price) per SKU.
-- [ ] Unit economics detail (per-can / per-unit breakdown).
+- [x] Retail price ladder (retailer margin → shelf price) per SKU.
+- [x] Unit economics detail (per-unit breakdown) + retail ladder.
 - [x] Dark mode toggle.
 - [x] Print / PDF-friendly layout + "Print" button.
 - [ ] Named what-if snapshots (compare saved states).

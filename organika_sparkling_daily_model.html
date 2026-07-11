@@ -148,6 +148,19 @@
     </div>
   </section>
 
+  <!-- UNIT ECONOMICS -->
+  <section class="view" data-view="Unit Economics">
+    <div class="panel">
+      <h2>Unit economics &amp; retail price</h2>
+      <p class="h-sub">Per-unit view of each SKU, plus the suggested shelf price at your retailer's margin.</p>
+      <div style="margin-bottom:14px">Retailer margin
+        <input class="cell" type="number" step="1" id="retMargin" value="35" style="width:70px"> %
+        <span class="hint">shelf price = wholesale unit price ÷ (1 − margin)</span>
+      </div>
+      <div style="overflow-x:auto" id="uecon"></div>
+    </div>
+  </section>
+
   <!-- TARGETS -->
   <section class="view" data-view="Targets">
     <div class="panel">
@@ -209,13 +222,14 @@
 <script>
 // ---------------- model data (mirrors the Excel exactly) ----------------
 const SKUS = [
-  {fmt:"Singles", flav:"Pineapple",    cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:15000},
-  {fmt:"Singles", flav:"Passionfruit", cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:11000},
-  {fmt:"Singles", flav:"Lime Lemon",   cp:14.00, disc:0.07, cosd:6.28, cosi:0.70, ap:1.20, vol:9000},
-  {fmt:"4-Pack",  flav:"Pineapple",    cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:6000},
-  {fmt:"4-Pack",  flav:"Passionfruit", cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:5000},
-  {fmt:"4-Pack",  flav:"Lime Lemon",   cp:31.00, disc:0.08, cosd:14.36, cosi:1.40, ap:2.40, vol:4000},
+  {fmt:"Singles", flav:"Pineapple",    units:12, cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:15000},
+  {fmt:"Singles", flav:"Passionfruit", units:12, cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:11000},
+  {fmt:"Singles", flav:"Lime Lemon",   units:12, cp:14.00, disc:0.07, cosd:6.28, cosi:0.70, ap:1.20, vol:9000},
+  {fmt:"4-Pack",  flav:"Pineapple",    units:6,  cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:6000},
+  {fmt:"4-Pack",  flav:"Passionfruit", units:6,  cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:5000},
+  {fmt:"4-Pack",  flav:"Lime Lemon",   units:6,  cp:31.00, disc:0.08, cosd:14.36, cosi:1.40, ap:2.40, vol:4000},
 ];
+const RETAIL = {margin:0.35};  // retailer margin used for suggested shelf price
 const CO = {salaries:180000, ga:60000, mktg:40000, slotting:20000, log_pct:0.04,
             da:25000, interest:10000, tax:0.27, elast:0.0};
 const LEVERS = {
@@ -420,6 +434,24 @@ function renderPricing(){
   el("pricing").innerHTML=h;
 }
 
+function renderUecon(){
+  const m = (parseFloat(el("retMargin")?.value)||0)/100;
+  let h="<table><thead><tr><th>SKU</th><th>Units/case</th><th>Wholesale $/unit</th><th>COGS $/unit</th><th>Gross profit $/unit</th><th>GP %</th><th>Suggested shelf $/unit</th></tr></thead><tbody>";
+  SKUS.forEach(s=>{
+    const u=s.units||1;
+    const wUnit=s.cp/u;                       // wholesale (CP) per unit
+    const cUnit=(s.cosd+s.cosi)/u;            // cost per unit
+    const gpUnit=wUnit*(1-s.disc)-cUnit;      // net of trade discount
+    const gpPct=wUnit*(1-s.disc)? gpUnit/(wUnit*(1-s.disc)):0;
+    const shelf=m<1? wUnit/(1-m):0;           // retailer sells at this to make margin m
+    h+=`<tr><td>${s.flav} <span class="hint">${s.fmt}</span></td>`+
+       `<td>${num(u)}</td><td>${money2(wUnit)}</td><td>${money2(cUnit)}</td>`+
+       `<td>${money2(gpUnit)}</td><td>${pct(gpPct)}</td><td><b>${money2(shelf)}</b></td></tr>`;
+  });
+  h+="</tbody></table>";
+  el("uecon").innerHTML=h;
+}
+
 function renderTargets(){
   const K1 = SKUS.reduce((a,s)=>a+s.vol*s.cp*(1-s.disc),0);
   const Kcos = SKUS.reduce((a,s)=>a+s.vol*(s.cosd+s.cosi),0);
@@ -495,10 +527,11 @@ function renderAsmp(){
   el("asmpCfg").innerHTML="<table><tbody>"+cfgRows.map(r=>
     `<tr><td>${r[0]}</td><td style="text-align:right">${tinp(CFG[r[1]],`setCfg('${r[1]}',this.value)`)}</td></tr>`).join("")+"</tbody></table>";
   // SKU table
-  let h="<table><thead><tr><th>Flavour</th><th>Format</th><th>CP / case</th><th>Disc %</th><th>COGS Direct</th><th>COGS Indir.</th><th>A&P</th><th>Volume</th><th></th></tr></thead><tbody>";
+  let h="<table><thead><tr><th>Flavour</th><th>Format</th><th>Units/case</th><th>CP / case</th><th>Disc %</th><th>COGS Direct</th><th>COGS Indir.</th><th>A&P</th><th>Volume</th><th></th></tr></thead><tbody>";
   SKUS.forEach((s,i)=>{
     h+=`<tr><td>${tinp(s.flav,`setSt(${i},'flav',this.value)`)}</td>`+
       `<td>${tinp(s.fmt,`setSt(${i},'fmt',this.value)`)}</td>`+
+      `<td>${inp(s.units||1,`setS(${i},'units',this.value)`,"1")}</td>`+
       `<td>${inp(s.cp,`setS(${i},'cp',this.value)`)}</td>`+
       `<td>${inp((s.disc*100).toFixed(1),`setS(${i},'disc',this.value/100)`,"0.1")}</td>`+
       `<td>${inp(s.cosd,`setS(${i},'cosd',this.value)`)}</td>`+
@@ -545,7 +578,7 @@ function setCo(k,v){CO[k]=parseFloat(v)||0;refresh();}
 function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();}
 
 // ---------- nav / scenario bar ----------
-const VIEWS=["Overview","P&L","Monthly","Pricing Lab","Targets","Sensitivity","Assumptions"];
+const VIEWS=["Overview","P&L","Monthly","Pricing Lab","Unit Economics","Targets","Sensitivity","Assumptions"];
 function buildNav(){
   el("nav").innerHTML=VIEWS.map((v,i)=>`<button class="${i===0?'on':''}" data-v="${v}">${v}</button>`).join("");
   el("nav").querySelectorAll("button").forEach(b=>b.onclick=()=>{
@@ -562,7 +595,7 @@ function buildNav(){
     el("priceSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===priceMetric));
     renderPricing();});
 }
-function refresh(){renderKpis();renderCmp();renderPnl();renderMonthly();renderPricing();renderTargets();renderSens();}
+function refresh(){renderKpis();renderCmp();renderPnl();renderMonthly();renderPricing();renderUecon();renderTargets();renderSens();}
 
 // ---------- persistence ----------
 const STORE_KEY = "organika_sparkling_daily_v1";
@@ -604,6 +637,7 @@ if(el("btnPrint")) el("btnPrint").onclick=()=>window.print();
 try{applyTheme(localStorage.getItem(THEME_KEY)||"light");}catch(e){}
 
 ["tgtGP","tgtEB"].forEach(id=>{const e=el(id); if(e) e.oninput=renderTargets;});
+{const e=el("retMargin"); if(e) e.oninput=renderUecon;}
 try{ const raw=localStorage.getItem(STORE_KEY); if(raw) applyState(JSON.parse(raw)); }catch(e){}
 renderHeader();buildNav();renderAsmp();refresh();
 </script>
