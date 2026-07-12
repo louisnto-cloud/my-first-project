@@ -5,6 +5,7 @@ on:
     branches:
       - claude/english-center-app-yylgv3
       - claude/pilgrimage-catholic-app-t572l3
+      - claude/nimble-trainer-app-auzsuy
       - main
   workflow_dispatch:
 
@@ -34,7 +35,7 @@ jobs:
 
       # The Pilgrimage (pilgrimage/) — served under /pilgrimage.
       - name: Build The Pilgrimage
-        if: hashFiles('pilgrimage/package.json') != ''
+        if: hashFiles('pilgrimage/package.json') != '' && github.ref != 'refs/heads/claude/nimble-trainer-app-auzsuy'
         working-directory: pilgrimage
         env:
           NEXT_PUBLIC_BASE_PATH: /my-first-project/pilgrimage
@@ -51,6 +52,11 @@ jobs:
         run: |
           mkdir -p dist/pilgrimage
           cp -r pilgrimage/out/. dist/pilgrimage/
+      - name: Include Nimble web build (main)
+        if: github.ref == 'refs/heads/main' && hashFiles('nimble/web/index.html') != ''
+        run: |
+          mkdir -p dist/nimble
+          cp -r nimble/web/. dist/nimble/
       - name: Publish full site
         if: github.ref == 'refs/heads/main' || hashFiles('pilgrimage/package.json') == ''
         uses: peaceiris/actions-gh-pages@v4
@@ -58,10 +64,21 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
 
+      # On the nimble feature branch: overlay only /nimble (static, no build),
+      # leaving the rest of the site untouched.
+      - name: Publish /nimble only (feature branch)
+        if: github.ref == 'refs/heads/claude/nimble-trainer-app-auzsuy'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./nimble/web
+          destination_dir: nimble
+          keep_files: true
+
       # On the pilgrimage feature branch: overlay only /pilgrimage, leaving
       # whatever is deployed at the site root untouched.
       - name: Publish /pilgrimage only (feature branch)
-        if: github.ref != 'refs/heads/main' && hashFiles('pilgrimage/package.json') != ''
+        if: github.ref != 'refs/heads/main' && github.ref != 'refs/heads/claude/nimble-trainer-app-auzsuy' && hashFiles('pilgrimage/package.json') != ''
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

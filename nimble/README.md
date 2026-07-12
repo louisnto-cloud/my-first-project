@@ -2,6 +2,12 @@
 
 A small local web app that drills you on thinking fast under conversational pressure. Claude generates a scenario that ends with someone putting you on the spot; you get 10–30 seconds to type your reply; Claude judges it 1–10 with feedback.
 
+## Easiest way: the hosted version
+
+Open **https://louisnto-cloud.github.io/my-first-project/nimble/** — nothing to install. Paste your Anthropic API key on the first screen (it's stored only in your browser's local storage and sent only to Anthropic), pick a time limit, and start drilling. Your drill history lives in that browser.
+
+## Run it locally instead
+
 ## Setup
 
 ```sh
@@ -30,6 +36,7 @@ nimble/
   server.js        Express server + API routes
   lib/claude.js    Claude API calls (scenario generator + judge prompts)
   lib/store.js     JSON-file persistence, domain rotation, difficulty, stats
-  public/          Frontend (vanilla HTML/CSS/JS, dark theme)
+  public/          Frontend for the local server (vanilla HTML/CSS/JS, dark theme)
+  web/             Browser-only build for GitHub Pages (localStorage + direct API calls)
   data/store.json  Local state (gitignored)
 ```
