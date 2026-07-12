@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  /* soft warm-white ground */
+  background-color: #fbf7f0;
+  @apply text-slate-800 font-sans antialiased;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.6); opacity: 0; }
+  80% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pop {
+  animation: pop 0.3s ease-out;
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(105vh) rotate(540deg); opacity: 0.4; }
+}
+
+.animate-confetti {
+  animation: confetti-fall linear forwards;
+}
+
+/* Đọc & Viết large-text mode (A/A+ toggle) — enlarges reading content only */
+.dv-lg p,
+.dv-lg .text-sm,
+.dv-lg .text-\[15px\] {
+  font-size: 1.1rem !important;
+  line-height: 1.75 !important;
+}
+
+.dv-lg td,
+.dv-lg th {
+  font-size: 1rem !important;
+}
