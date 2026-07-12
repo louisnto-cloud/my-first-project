@@ -142,8 +142,8 @@ export async function buildServer(db: DB, opts: ServerOptions = {}): Promise<Fas
   app.get('/me', async (req, reply) => {
     const actor = await requireActor(req, reply);
     if (!actor) return;
-    const extra = await one<{ avatar: string | null }>(db, 'SELECT avatar FROM users WHERE id = $1', [actor.id]);
-    return { id: actor.id, name: actor.name, role: actor.role, orgId: actor.orgId, siteId: actor.siteId, locale: actor.locale, avatar: extra?.avatar ?? null };
+    const extra = await one<{ avatar: string | null; email: string | null }>(db, 'SELECT avatar, email FROM users WHERE id = $1', [actor.id]);
+    return { id: actor.id, name: actor.name, role: actor.role, orgId: actor.orgId, siteId: actor.siteId, locale: actor.locale, avatar: extra?.avatar ?? null, email: extra?.email ?? null };
   });
 
   app.get('/classes', async (req, reply) => {

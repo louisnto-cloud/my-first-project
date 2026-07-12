@@ -441,7 +441,7 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
   const actor = actorOf(me);
 
   if (method === 'GET' && rawPath === '/me') {
-    return ok({ id: me.id, name: me.name, role: me.role, orgId: ORG, siteId: actor.siteId, locale: 'vi', avatar: me.avatar ?? null });
+    return ok({ id: me.id, name: me.name, role: me.role, orgId: ORG, siteId: actor.siteId, locale: 'vi', avatar: me.avatar ?? null, email: me.email });
   }
 
   if (method === 'POST' && rawPath === '/me/avatar') {
@@ -549,6 +549,35 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
   }
 
   if (rawPath === '/auth/change-password' && method === 'POST') return ok({ ok: true });
+
+  // ---- self-service email change (email-auth roles) ----
+  if (rawPath === '/me/email' && method === 'POST') {
+    if (me.role === 'student' || me.role === 'tutor') return err(403, 'code_login_roles');
+    const email = String(b.email ?? '').trim().toLowerCase();
+    if (!email.includes('@')) return err(400, 'invalid_input');
+    if (db.users.some((u) => u.email === email && u.id !== me.id)) return err(409, 'email_taken');
+    me.email = email;
+    save(db);
+    return ok({ ok: true, email });
+  }
+
+  // ---- staff accounts (front desk) ----
+  if (rawPath === '/admin/staff') {
+    if (!isAdmin) return err(403, 'forbidden');
+    if (method === 'GET') {
+      return ok(db.users.filter((u) => u.role === 'front_desk').map((u) => ({ id: u.id, name: u.name, email: u.email, siteId: 'site_nh' })));
+    }
+    if (method === 'POST') {
+      const name = String(b.name ?? '').trim();
+      const email = String(b.email ?? '').trim().toLowerCase();
+      if (name.length < 2 || !email.includes('@')) return err(400, 'invalid_input');
+      if (db.users.some((u) => u.email === email)) return err(409, 'email_taken');
+      const u: DUser = { id: uid('fd'), role: 'front_desk', name, email, classIds: [], childIds: [] };
+      db.users.push(u);
+      save(db);
+      return ok({ id: u.id, name, email, tempPassword: `Etop@${1000 + Math.floor(rnd() * 9000)}` });
+    }
+  }
 
   // ---- classes ----
   if (method === 'GET' && rawPath === '/classes') {

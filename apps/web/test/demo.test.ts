@@ -409,6 +409,29 @@ describe('demo engine — kiosk (front desk)', () => {
   });
 });
 
+describe('demo engine — center-area accounts', () => {
+  it('owner creates a front-desk account; the staffer sets a private email; students cannot', async () => {
+    const zhao = (await call('POST', '/auth/login', { email: 'zhao@etop.vn', password: 'x' })).json as { token: string };
+    const created = await call('POST', '/admin/staff', { name: 'Chị Thu', email: 'thu.letan@etop.vn' }, zhao.token);
+    expect(created.status).toBe(200);
+    expect((created.json as { tempPassword: string }).tempPassword).toMatch(/^Etop@\d{4}$/);
+    expect((await call('POST', '/admin/staff', { name: 'Trùng', email: 'thu.letan@etop.vn' }, zhao.token)).status).toBe(409);
+
+    const ha = await loginCode('GV0004');
+    expect((await call('POST', '/admin/staff', { name: 'X', email: 'x@x.vn' }, ha!)).status).toBe(403);
+
+    const thu = (await call('POST', '/auth/login', { email: 'thu.letan@etop.vn', password: 'x' })).json as { token: string; user: { role: string } };
+    expect(thu.user.role).toBe('front_desk');
+    expect((await call('POST', '/me/email', { email: 'zhao@etop.vn', password: 'x' }, thu.token)).status).toBe(409); // taken
+    expect((await call('POST', '/me/email', { email: 'thu.rieng@gmail.com', password: 'x' }, thu.token)).status).toBe(200);
+    expect(((await call('GET', '/me', undefined, thu.token)).json as { email: string }).email).toBe('thu.rieng@gmail.com');
+    expect((await call('POST', '/auth/login', { email: 'thu.rieng@gmail.com', password: 'x' })).status).toBe(200);
+
+    const bao = await loginCode('UP1482');
+    expect((await call('POST', '/me/email', { email: 'hs@gmail.com', password: 'x' }, bao!)).status).toBe(403);
+  });
+});
+
 describe('demo engine — shared question bank', () => {
   it('teacher offers → hidden until owner approves → visible to all teachers', async () => {
     const ha = await loginCode('GV0004');

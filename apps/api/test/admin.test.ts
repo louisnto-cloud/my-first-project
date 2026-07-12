@@ -123,6 +123,51 @@ describe('parent invite → self-registration', () => {
   });
 });
 
+describe('front-desk accounts & the center-area credentials', () => {
+  let tempPassword: string;
+  let fdToken: string;
+
+  it('the owner creates a front-desk account with a one-time temp password; teachers cannot', async () => {
+    const res = await req('POST', '/admin/staff', zhao, { name: 'Chị Thu', email: 'thu.letan@etop.vn' });
+    expect(res.statusCode).toBe(200);
+    tempPassword = res.json().tempPassword as string;
+    expect(tempPassword).toMatch(/^Etop@\d{4}$/);
+
+    expect((await req('POST', '/admin/staff', lan, { name: 'X', email: 'x@x.vn' })).statusCode).toBe(403);
+    expect((await req('GET', '/admin/staff', lan)).statusCode).toBe(403);
+    const list = (await req('GET', '/admin/staff', zhao)).json() as { email: string }[];
+    expect(list.map((s) => s.email)).toContain('thu.letan@etop.vn');
+    expect((await req('POST', '/admin/staff', zhao, { name: 'Trùng', email: 'thu.letan@etop.vn' })).statusCode).toBe(409);
+  });
+
+  it('the staffer signs in with the temp password and sets her own private email', async () => {
+    const loginRes = await app.inject({ method: 'POST', url: '/auth/login', payload: { email: 'thu.letan@etop.vn', password: tempPassword } });
+    expect(loginRes.statusCode).toBe(200);
+    expect(loginRes.json().user.role).toBe('front_desk');
+    fdToken = loginRes.json().token as string;
+
+    expect((await req('POST', '/me/email', fdToken, { email: 'rieng@gmail.com', password: 'sai-roi' })).statusCode).toBe(403);
+    expect((await req('POST', '/me/email', fdToken, { email: 'zhao@etop.vn', password: tempPassword })).statusCode).toBe(409);
+
+    expect((await req('POST', '/me/email', fdToken, { email: 'Thu.Rieng@Gmail.com', password: tempPassword })).statusCode).toBe(200);
+    expect((await app.inject({ method: 'POST', url: '/auth/login', payload: { email: 'thu.rieng@gmail.com', password: tempPassword } })).statusCode).toBe(200);
+    expect((await app.inject({ method: 'POST', url: '/auth/login', payload: { email: 'thu.letan@etop.vn', password: tempPassword } })).statusCode).toBe(401);
+    expect(((await req('GET', '/me', fdToken)).json() as { email: string }).email).toBe('thu.rieng@gmail.com');
+  });
+
+  it('then her own password — private credentials complete', async () => {
+    expect((await req('POST', '/auth/change-password', fdToken, { current: tempPassword, next: 'mat-khau-cua-thu' })).statusCode).toBe(200);
+    expect((await app.inject({ method: 'POST', url: '/auth/login', payload: { email: 'thu.rieng@gmail.com', password: tempPassword } })).statusCode).toBe(401);
+    expect((await app.inject({ method: 'POST', url: '/auth/login', payload: { email: 'thu.rieng@gmail.com', password: 'mat-khau-cua-thu' } })).statusCode).toBe(200);
+  });
+
+  it('code-login roles cannot switch to email credentials', async () => {
+    const codeLogin = await app.inject({ method: 'POST', url: '/auth/login-code', payload: { code: 'HV0001' } });
+    const stuToken = codeLogin.json().token as string;
+    expect((await req('POST', '/me/email', stuToken, { email: 'hs@gmail.com', password: 'x' })).statusCode).toBe(403);
+  });
+});
+
 describe('password change', () => {
   it('requires the current password, then the old one stops working', async () => {
     const token = await login('phuhuynh@etop.vn');

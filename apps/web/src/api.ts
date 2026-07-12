@@ -50,4 +50,5 @@ export interface Me {
   siteId: string | null;
   locale: string;
   avatar?: string | null;
+  email?: string | null;
 }

@@ -73,6 +73,44 @@ export function registerAdminRoutes(app: FastifyInstance, db: DB): void {
     );
   });
 
+  // ---------- Staff accounts (front desk) ----------
+  // The owner creates front-desk accounts with a one-time temporary
+  // password; the staffer signs in at the "Khu vực trung tâm" area and
+  // immediately sets their own email/password (/me/email, /auth/change-password).
+  app.post('/admin/staff', async (req, reply) => {
+    const actor = await requireAdmin(req, reply);
+    if (!actor) return;
+    const body = z.object({ name: z.string().min(2).max(120), email: z.string().email().max(254), siteId: z.string().optional() }).safeParse(req.body);
+    if (!body.success) return reply.code(400).send({ error: 'invalid_input' });
+
+    const email = body.data.email.toLowerCase();
+    const dup = await one(db, 'SELECT 1 AS x FROM users WHERE org_id = $1 AND email = $2', [actor.orgId, email]);
+    if (dup) return reply.code(409).send({ error: 'email_taken' });
+
+    // Readable one-time password, shown to the owner exactly once.
+    let temp = 'Etop@';
+    for (let i = 0; i < 4; i++) temp += String(randomInt(10));
+    const id = rid('fd');
+    await db.query(
+      `INSERT INTO users (id, org_id, site_id, role, name, email, password_hash)
+       VALUES ($1, $2, $3, 'front_desk', $4, $5, $6)`,
+      [id, actor.orgId, body.data.siteId ?? actor.siteId ?? 'site_nh', body.data.name.trim(), email, hashPassword(temp)],
+    );
+    await audit(db, { orgId: actor.orgId, actorId: actor.id, action: 'admin.staff_created', entity: 'user', entityId: id });
+    return { id, name: body.data.name.trim(), email, tempPassword: temp };
+  });
+
+  app.get('/admin/staff', async (req, reply) => {
+    const actor = await requireAdmin(req, reply);
+    if (!actor) return;
+    return many(
+      db,
+      `SELECT id, name, email, site_id AS "siteId" FROM users
+        WHERE org_id = $1 AND role = 'front_desk' AND archived = false ORDER BY name`,
+      [actor.orgId],
+    );
+  });
+
   // ---------- Classes ----------
   app.post('/admin/classes', async (req, reply) => {
     const actor = await requireAdmin(req, reply);
@@ -188,6 +226,29 @@ export function registerAdminRoutes(app: FastifyInstance, db: DB): void {
 
     const token = await issueToken(db, id);
     return { token, user: { id, name: body.data.name.trim(), role: 'parent' } };
+  });
+
+  // ---------- Email change (email-auth roles) ----------
+  // Owners and front desk set up their own private email; requires the
+  // current password so a left-open session can't be hijacked quietly.
+  app.post('/me/email', async (req, reply) => {
+    const actor = req.actor;
+    if (!actor) return reply.code(401).send({ error: 'unauthenticated' });
+    if (actor.role === 'student' || actor.role === 'tutor') return reply.code(403).send({ error: 'code_login_roles' });
+    const body = z.object({ password: z.string().min(1), email: z.string().email().max(254) }).safeParse(req.body);
+    if (!body.success) return reply.code(400).send({ error: 'invalid_input' });
+
+    const row = await one<{ password_hash: string }>(db, 'SELECT password_hash FROM users WHERE id = $1', [actor.id]);
+    if (!row || !verifyPassword(body.data.password, row.password_hash)) {
+      await audit(db, { orgId: actor.orgId, actorId: actor.id, action: 'auth.email_change_failed' });
+      return reply.code(403).send({ error: 'wrong_password' });
+    }
+    const email = body.data.email.toLowerCase();
+    const dup = await one(db, 'SELECT 1 AS x FROM users WHERE org_id = $1 AND email = $2 AND id <> $3', [actor.orgId, email, actor.id]);
+    if (dup) return reply.code(409).send({ error: 'email_taken' });
+    await db.query('UPDATE users SET email = $2 WHERE id = $1', [actor.id, email]);
+    await audit(db, { orgId: actor.orgId, actorId: actor.id, action: 'auth.email_changed' });
+    return { ok: true, email };
   });
 
   // ---------- Password change (email-auth roles) ----------

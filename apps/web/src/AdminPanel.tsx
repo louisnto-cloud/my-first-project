@@ -47,10 +47,30 @@ export function AdminPanel({ lang }: { lang: 'vi' | 'en' }) {
   // Shared-question approvals
   const [pendingShares, setPendingShares] = useState<{ id: string; prompt: string; skill: string; ownerName: string }[]>([]);
 
+  // Front-desk accounts (sign in via 🔐 Khu vực trung tâm)
+  const [staff, setStaff] = useState<{ id: string; name: string; email: string }[]>([]);
+  const [fdName, setFdName] = useState('');
+  const [fdEmail, setFdEmail] = useState('');
+  const [fdIssued, setFdIssued] = useState<{ name: string; email: string; tempPassword: string } | null>(null);
+
+  const addStaff = async () => {
+    if (fdName.trim().length < 2 || !fdEmail.includes('@')) return;
+    try {
+      const res = await api<{ name: string; email: string; tempPassword: string }>('POST', '/admin/staff', { name: fdName.trim(), email: fdEmail.trim() });
+      setFdIssued(res);
+      setFdName('');
+      setFdEmail('');
+      void load();
+    } catch (e) {
+      flash(e instanceof ApiError && e.message === 'email_taken' ? (vi ? '❌ Email này đã được dùng.' : '❌ Email already in use.') : '❌ Lỗi — thử lại.');
+    }
+  };
+
   const load = async () => {
     setTeachers(await api('GET', '/admin/teachers'));
     setClasses(await api('GET', '/classes'));
     setPendingShares(await api<typeof pendingShares>('GET', '/questions/pending-shares').catch(() => []));
+    setStaff(await api<typeof staff>('GET', '/admin/staff').catch(() => []));
   };
   useEffect(() => {
     if (open) void load();
@@ -149,6 +169,47 @@ export function AdminPanel({ lang }: { lang: 'vi' | 'en' }) {
               <input className="input text-sm" placeholder={vi ? 'Email (không bắt buộc)' : 'Email (optional)'} value={tEmail} onChange={(e) => setTEmail(e.target.value)} />
               <button onClick={addTeacher} disabled={tName.trim().length < 2} className="btn-primary w-full text-sm">
                 <Icon name="plus" size={16} /> {vi ? 'Tạo tài khoản giáo viên (tự cấp mã GV)' : 'Create teacher (auto GV code)'}
+              </button>
+            </div>
+          </div>
+
+          {/* ---- Front-desk accounts ---- */}
+          <div className="space-y-2">
+            <h3 className="flex items-center gap-1.5 text-sm font-extrabold text-violet-800">🛎 {vi ? 'Tài khoản lễ tân' : 'Front-desk accounts'} <span className="font-bold text-slate-400">({staff.length})</span></h3>
+            {staff.length > 0 && (
+              <ul className="divide-y divide-violet-50">
+                {staff.map((s) => (
+                  <li key={s.id} className="flex items-center justify-between gap-2 py-2 text-sm font-bold">
+                    <span className="min-w-0 flex-1">
+                      <span className="block truncate">{s.name}</span>
+                      <span className="block truncate text-[10px] font-semibold text-slate-400">{s.email}</span>
+                    </span>
+                    <span className="chip shrink-0 bg-violet-50 text-violet-500">🔐 {vi ? 'Khu vực trung tâm' : 'Center area'}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {fdIssued && (
+              <div className="animate-pop rounded-2xl border-2 border-emerald-200 bg-emerald-50 p-3 text-center">
+                <div className="text-sm font-extrabold text-emerald-700">{vi ? `Đã tạo tài khoản lễ tân cho ${fdIssued.name}!` : `Front-desk account created for ${fdIssued.name}!`}</div>
+                <div className="mt-1 text-xs font-bold text-emerald-600">{fdIssued.email}</div>
+                <button onClick={() => copy(fdIssued.tempPassword)} className="mt-1 rounded-xl bg-white px-4 py-2 text-xl font-black tracking-[0.12em] text-emerald-700 shadow-soft transition active:scale-95">
+                  {copied === fdIssued.tempPassword ? (vi ? '✓ đã chép' : '✓ copied') : fdIssued.tempPassword}
+                </button>
+                <div className="mt-1 text-[11px] font-bold leading-snug text-emerald-600">
+                  {vi
+                    ? 'Mật khẩu tạm — chỉ hiện MỘT lần. Lễ tân đăng nhập ở mục 🔐 Khu vực trung tâm rồi tự đổi email & mật khẩu riêng.'
+                    : 'Temporary password — shown ONCE. They sign in via the 🔐 Center area, then set their own email & password.'}
+                </div>
+              </div>
+            )}
+
+            <div className="space-y-2 rounded-2xl border-2 border-dashed border-violet-200 p-3">
+              <input className="input text-sm" placeholder={vi ? 'Tên lễ tân (vd: Chị Thu)' : 'Front-desk name'} value={fdName} onChange={(e) => setFdName(e.target.value)} />
+              <input className="input text-sm" placeholder={vi ? 'Email đăng nhập' : 'Login email'} value={fdEmail} onChange={(e) => setFdEmail(e.target.value)} />
+              <button onClick={addStaff} disabled={fdName.trim().length < 2 || !fdEmail.includes('@')} className="btn-primary w-full text-sm">
+                <Icon name="plus" size={16} /> {vi ? 'Tạo tài khoản lễ tân (cấp mật khẩu tạm)' : 'Create front-desk account (temp password)'}
               </button>
             </div>
           </div>

@@ -536,6 +536,45 @@ function FeedbackCard({ lang }: { lang: Lang }) {
   );
 }
 
+// Self-service login email change (owner, managers, front desk, parents).
+// Requires the current password; the header identity updates on success.
+function EmailCard({ lang, currentEmail, onChanged }: { lang: Lang; currentEmail?: string | null; onChanged?: () => void }) {
+  const vi = lang === 'vi';
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [msg, setMsg] = useState('');
+
+  const change = async () => {
+    setMsg('');
+    try {
+      await api('POST', '/me/email', { email: email.trim(), password });
+      setMsg(vi ? `✅ Đã đổi email đăng nhập thành ${email.trim()}.` : `✅ Login email is now ${email.trim()}.`);
+      setEmail('');
+      setPassword('');
+      onChanged?.();
+    } catch (e) {
+      if (e instanceof ApiError && e.status === 409) setMsg(vi ? '❌ Email này đã có tài khoản khác dùng.' : '❌ That email is already in use.');
+      else if (e instanceof ApiError && e.status === 403) setMsg(vi ? '❌ Mật khẩu không đúng.' : '❌ Wrong password.');
+      else setMsg(vi ? '❌ Email chưa hợp lệ.' : '❌ Invalid email.');
+    }
+  };
+
+  return (
+    <details className="card !p-3">
+      <summary className="flex cursor-pointer items-center gap-2 text-sm font-extrabold text-muted">
+        <Icon name="message" size={16} /> {vi ? 'Đổi email đăng nhập' : 'Change login email'}
+        {currentEmail && <span className="ml-auto max-w-[45%] truncate text-[11px] font-semibold text-slate-300">{currentEmail}</span>}
+      </summary>
+      <div className="mt-3 space-y-2">
+        <input className="input text-sm" placeholder={vi ? 'Email mới của bạn' : 'New email'} value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input className="input text-sm" type="password" placeholder={vi ? 'Mật khẩu hiện tại (để xác nhận)' : 'Current password (to confirm)'} value={password} onChange={(e) => setPassword(e.target.value)} />
+        <button onClick={change} disabled={!email.includes('@') || !password} className="btn-primary w-full text-sm">{vi ? 'Đổi email' : 'Change email'}</button>
+        {msg && <div className="text-center text-sm font-bold">{msg}</div>}
+      </div>
+    </details>
+  );
+}
+
 // Password change for email-auth roles (parents, managers).
 function PasswordCard({ lang }: { lang: Lang }) {
   const vi = lang === 'vi';
@@ -1061,6 +1100,13 @@ export default function App() {
         )}
         {['tutor', 'academic_director', 'owner'].includes(me.role) && <Teacher lang={lang} t={t} />}
         {me.role === 'front_desk' && <Kiosk me={me} t={t} lang={lang} />}
+        {/* Center staff manage their own private credentials right here. */}
+        {['owner', 'academic_director', 'site_director', 'front_desk'].includes(me.role) && (
+          <>
+            <EmailCard lang={lang} currentEmail={me.email} onChanged={() => void loadMe()} />
+            <PasswordCard lang={lang} />
+          </>
+        )}
       </main>
     </div>
   );
