@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nimble</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <span class="brand">Nimble</span>
+  <span class="header-meta" id="headerMeta"></span>
+  <nav>
+    <button class="link-btn" id="navStats" hidden>Stats</button>
+    <button class="link-btn" id="navSettings" hidden>Time limit</button>
+    <button class="link-btn" id="navKey" hidden>API key</button>
+  </nav>
+</header>
+
+<main>
+  <!-- Paste API key (first run) -->
+  <section id="view-key" hidden>
+    <h1>One thing before we start</h1>
+    <p class="muted">Nimble uses Claude to write scenarios and score your replies, so it needs your Anthropic API key.</p>
+    <ol class="steps">
+      <li>Go to <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com &rsaquo; API keys</a></li>
+      <li>Click <strong>Create key</strong>, then <strong>Copy</strong></li>
+      <li>Paste it below — it's saved only in this browser</li>
+    </ol>
+    <input type="password" id="keyInput" placeholder="sk-ant-..." autocomplete="off" spellcheck="false">
+    <button class="primary" id="keySaveBtn">Save key</button>
+  </section>
+
+  <!-- Pick time limit (first run / settings) -->
+  <section id="view-setup" hidden>
+    <h1>How long do you get?</h1>
+    <p class="muted">Pick your response window. It's remembered for every drill.</p>
+    <div class="choices" id="timeChoices">
+      <button data-limit="10">10s</button>
+      <button data-limit="15">15s</button>
+      <button data-limit="20">20s</button>
+      <button data-limit="30">30s</button>
+    </div>
+  </section>
+
+  <!-- Ready -->
+  <section id="view-ready" hidden>
+    <h1>Ready?</h1>
+    <p class="muted" id="readyMeta"></p>
+    <button class="primary big" id="startBtn">Start drill</button>
+  </section>
+
+  <!-- Loading scenario -->
+  <section id="view-loading" hidden>
+    <div class="spinner"></div>
+    <p class="muted">Setting the scene…</p>
+  </section>
+
+  <!-- Drill -->
+  <section id="view-drill" hidden>
+    <div class="timer" id="timer">30</div>
+    <p class="scenario" id="scenarioText"></p>
+    <textarea id="responseBox" placeholder="Say it. The clock is running." autocomplete="off" spellcheck="false"></textarea>
+    <button class="primary" id="submitBtn">Submit</button>
+  </section>
+
+  <!-- Judging -->
+  <section id="view-judging" hidden>
+    <div class="spinner"></div>
+    <p class="muted">Judging…</p>
+  </section>
+
+  <!-- Result -->
+  <section id="view-result" hidden>
+    <div class="score-wrap">
+      <div class="score" id="scoreValue">–</div>
+      <div class="score-denom">/ 10</div>
+    </div>
+    <p class="timed-out-note" id="timedOutNote" hidden>Time ran out — auto-submitted.</p>
+    <p class="feedback" id="feedbackText"></p>
+    <button class="primary big" id="nextBtn">Next drill</button>
+  </section>
+
+  <!-- Stats -->
+  <section id="view-stats" hidden>
+    <h1>Progress</h1>
+    <div class="stat-tiles">
+      <div class="tile"><div class="tile-value" id="statTotal">0</div><div class="tile-label">drills</div></div>
+      <div class="tile"><div class="tile-value" id="statAvg">–</div><div class="tile-label">avg score</div></div>
+      <div class="tile"><div class="tile-value" id="statLevel">1</div><div class="tile-label">level</div></div>
+    </div>
+    <div class="domain-avgs" id="domainAvgs"></div>
+    <h2>Score over time</h2>
+    <div class="chart-wrap" id="chartWrap">
+      <svg id="chart" width="100%" height="220" role="img" aria-label="Line chart of drill scores over time"></svg>
+      <div class="tooltip" id="chartTooltip" hidden></div>
+    </div>
+    <details class="table-view">
+      <summary>View as table</summary>
+      <table id="drillTable">
+        <thead><tr><th>#</th><th>Domain</th><th>Score</th><th>When</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </details>
+    <button class="primary" id="backBtn">Back</button>
+  </section>
+
+  <p class="error" id="errorBar" hidden></p>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
