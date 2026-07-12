@@ -143,6 +143,7 @@ export function AudioSettings({ tts }: { tts: TTS }) {
               <p><strong>iPhone / Mac:</strong> Settings → Accessibility → Spoken Content → Voices → Vietnamese → download <strong>Linh (Enhanced)</strong>.</p>
               <p><strong>Android:</strong> Settings → System → Text-to-speech → install/update Google Speech Services with Vietnamese.</p>
               <p>Then reopen this app — the best voice is picked automatically.</p>
+              <p className="border-t border-gray-100 pt-1"><strong>English parts</strong> of a lesson are read separately by your device's best native English voice, so explanations don't get a Vietnamese accent.</p>
             </div>
           )}
         </div>

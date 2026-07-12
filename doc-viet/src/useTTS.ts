@@ -3,11 +3,14 @@ import { loadTTSSettings, saveTTSSettings, type TTSSettings } from './engine';
 import { chunkForSpeech } from './prosody';
 
 /**
- * Vietnamese text-to-speech tuned for naturalness.
+ * Bilingual text-to-speech tuned for naturalness.
  *
- * - Text is spoken sentence-by-sentence (see prosody.ts): each sentence gets
- *   its own intonation curve and a short breath after it, instead of one flat
- *   run-on utterance. This also dodges Chrome's ~15s utterance kill.
+ * - Text is split into language-tagged sentence chunks (see prosody.ts):
+ *   English explanations are spoken by the device's best ENGLISH voice as a
+ *   native speaker, Vietnamese words by the best VIETNAMESE voice — switching
+ *   mid-sentence where the text does.
+ * - Each sentence gets its own intonation curve and a short breath after it,
+ *   instead of one flat run-on utterance (also dodges Chrome's ~15s kill).
  * - Installed Vietnamese voices are RANKED: Southern-marked voices first
  *   (miền Nam / Sài Gòn / "South" in the name), then neural/natural voices,
  *   then the rest. The top-ranked voice is the default until the user picks.
@@ -16,7 +19,7 @@ import { chunkForSpeech } from './prosody';
  * - `noViVoice` is true once voices have loaded and none is Vietnamese.
  */
 
-/** Higher = better. Southern voices wins, then neural quality, then offline capability. */
+/** Higher = better. Southern wins, then neural quality, then offline capability. */
 export function rankVoice(name: string, localService: boolean): number {
   const n = name.toLowerCase();
   let score = 0;
@@ -35,7 +38,8 @@ export function useTTS() {
   const [failed, setFailed] = useState(false); // a speak attempt errored (e.g. no voices installed)
   const [wordIndex, setWordIndex] = useState(-1);
   const [settings, setSettingsState] = useState<TTSSettings>(loadTTSSettings);
-  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]); // Vietnamese voices, best first
+  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);   // Vietnamese voices, best first
+  const [enVoices, setEnVoices] = useState<SpeechSynthesisVoice[]>([]); // English voices, best first
   const [noViVoice, setNoViVoice] = useState(false);
   // Each speak() gets a token; stale chunk callbacks from a cancelled run bail out.
   const tokenRef = useRef(0);
@@ -44,10 +48,12 @@ export function useTTS() {
     if (!window.speechSynthesis) return;
     const load = () => {
       const all = window.speechSynthesis.getVoices();
-      const vi = all
-        .filter((v) => v.lang.toLowerCase().startsWith('vi'))
-        .sort((a, b) => rankVoice(b.name, b.localService) - rankVoice(a.name, a.localService));
+      const byQuality = (a: SpeechSynthesisVoice, b: SpeechSynthesisVoice) =>
+        rankVoice(b.name, b.localService) - rankVoice(a.name, a.localService);
+      const vi = all.filter((v) => v.lang.toLowerCase().startsWith('vi')).sort(byQuality);
+      const en = all.filter((v) => v.lang.toLowerCase().startsWith('en')).sort(byQuality);
       setVoices(vi);
+      setEnVoices(en);
       if (all.length > 0) setNoViVoice(vi.length === 0);
     };
     load();
@@ -67,8 +73,8 @@ export function useTTS() {
     setWordIndex(-1);
   }, []);
 
-  /** Core: speak pre-chunked text with a specific voice. */
-  const speakChunked = useCallback((text: string, opts: { highlight?: boolean; voice?: SpeechSynthesisVoice | null; rate?: number }) => {
+  /** Core: speak language-tagged chunks, giving each the right voice. */
+  const speakChunked = useCallback((text: string, opts: { highlight?: boolean; viVoice?: SpeechSynthesisVoice | null }) => {
     if (!window.speechSynthesis) return;
     tokenRef.current += 1;
     const token = tokenRef.current;
@@ -90,10 +96,20 @@ export function useTTS() {
       while ((m = re.exec(chunk.text))) offsets.push(m.index);
 
       const u = new SpeechSynthesisUtterance(chunk.text);
-      u.rate = opts.rate ?? settings.rate;
       u.pitch = 1;
-      u.lang = 'vi-VN';
-      if (opts.voice) u.voice = opts.voice;
+      if (chunk.lang === 'vi') {
+        u.lang = 'vi-VN';
+        u.rate = settings.rate;
+        const viVoice = opts.viVoice ?? null;
+        if (viVoice) u.voice = viVoice;
+      } else {
+        // English is the learner's native language — never slow it to drill
+        // speed, and hand it to a native English voice.
+        u.lang = 'en-US';
+        u.rate = Math.max(settings.rate, 0.95);
+        const enVoice = enVoices[0] ?? null;
+        if (enVoice) u.voice = enVoice;
+      }
 
       u.onstart = () => {
         if (token !== tokenRef.current) return;
@@ -132,25 +148,25 @@ export function useTTS() {
     };
 
     speakFrom(0);
-  }, [settings]);
+  }, [settings, enVoices]);
 
-  const currentVoice = useCallback((): SpeechSynthesisVoice | null => {
+  const currentViVoice = useCallback((): SpeechSynthesisVoice | null => {
     return voices.find((v) => v.voiceURI === settings.voiceURI) ?? voices[0] ?? null;
   }, [voices, settings.voiceURI]);
 
   const speak = useCallback((text: string, opts?: { highlight?: boolean }) => {
-    speakChunked(text, { highlight: opts?.highlight, voice: currentVoice() });
-  }, [speakChunked, currentVoice]);
+    speakChunked(text, { highlight: opts?.highlight, viVoice: currentViVoice() });
+  }, [speakChunked, currentViVoice]);
 
-  /** Preview a specific voice (used by the voice picker) without changing settings. */
+  /** Preview a specific Vietnamese voice (used by the voice picker) without changing settings. */
   const preview = useCallback((voiceURI: string) => {
     const voice = voices.find((v) => v.voiceURI === voiceURI) ?? null;
-    speakChunked(PREVIEW_TEXT, { voice });
+    speakChunked(PREVIEW_TEXT, { viVoice: voice });
   }, [voices, speakChunked]);
 
   useEffect(() => () => { window.speechSynthesis?.cancel(); }, []);
 
-  return { speak, stop, preview, speaking, wordIndex, settings, setSettings, voices, supported, failed, noViVoice };
+  return { speak, stop, preview, speaking, wordIndex, settings, setSettings, voices, enVoices, supported, failed, noViVoice };
 }
 
 export type TTS = ReturnType<typeof useTTS>;
