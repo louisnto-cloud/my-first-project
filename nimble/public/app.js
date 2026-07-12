@@ -1,7 +1,7 @@
 // Nimble frontend — plain JS state machine over the views in index.html.
 (() => {
   const $ = (id) => document.getElementById(id);
-  const views = ['setup', 'ready', 'loading', 'drill', 'judging', 'result', 'stats'];
+  const views = ['key', 'setup', 'ready', 'loading', 'drill', 'judging', 'result', 'stats'];
 
   const DOMAIN_LABELS = {
     business: 'Business & sales negotiation',
@@ -9,7 +9,7 @@
     personal: 'High-stakes personal confrontation',
   };
 
-  let app = { timeLimit: null, totalDrills: 0, difficulty: 1, stats: null };
+  let app = { hasApiKey: false, timeLimit: null, totalDrills: 0, difficulty: 1, stats: null };
   let drill = null; // { domain, scenario, difficulty, timeLimit }
   let timerHandle = null;
   let deadline = 0;
@@ -17,8 +17,11 @@
 
   function show(view) {
     for (const v of views) $('view-' + v).hidden = v !== view;
-    $('navStats').hidden = view === 'drill' || view === 'stats' || !app.timeLimit;
-    $('navSettings').hidden = view === 'drill' || view === 'setup' || !app.timeLimit;
+    const inDrill = view === 'drill';
+    const configured = app.hasApiKey && app.timeLimit;
+    $('navStats').hidden = inDrill || view === 'stats' || !configured;
+    $('navSettings').hidden = inDrill || view === 'setup' || !configured;
+    $('navKey').hidden = inDrill || view === 'key' || !configured;
     updateHeader(view);
   }
 
@@ -56,7 +59,8 @@
       showError('Cannot reach the Nimble server: ' + e.message);
       return;
     }
-    if (!app.timeLimit) show('setup');
+    if (!app.hasApiKey) show('key');
+    else if (!app.timeLimit) show('setup');
     else showReady();
   }
 
@@ -64,6 +68,31 @@
     $('readyMeta').textContent =
       `${app.timeLimit}s per response · level ${app.difficulty} · ${app.totalDrills} drill${app.totalDrills === 1 ? '' : 's'} done`;
     show('ready');
+  }
+
+  // ---------- API key ----------
+  $('keySaveBtn').addEventListener('click', saveKey);
+  $('keyInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') saveKey(); });
+  $('navKey').addEventListener('click', () => { $('keyInput').value = ''; show('key'); });
+
+  async function saveKey() {
+    const apiKey = $('keyInput').value.trim();
+    if (!apiKey) { showError('Paste your API key first'); return; }
+    const btn = $('keySaveBtn');
+    btn.disabled = true;
+    btn.textContent = 'Checking…';
+    try {
+      await api('/api/apikey', { apiKey });
+      app.hasApiKey = true;
+      $('keyInput').value = '';
+      if (!app.timeLimit) show('setup');
+      else showReady();
+    } catch (err) {
+      showError(err.message);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Save key';
+    }
   }
 
   // ---------- setup ----------

@@ -8,6 +8,7 @@ const STORE_PATH = path.join(DATA_DIR, 'store.json');
 const DOMAINS = ['business', 'legal', 'personal'];
 
 const DEFAULT_STATE = {
+  apiKey: null,                  // saved from the in-app setup screen (data/ is gitignored)
   settings: { timeLimit: null }, // seconds; null until the user picks one
   rotation: [],                  // remaining domains in the current shuffled block
   lastDomain: null,

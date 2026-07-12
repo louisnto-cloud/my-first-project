@@ -1,8 +1,43 @@
 // Claude API calls: scenario generation and response judging.
 const Anthropic = require('@anthropic-ai/sdk');
 
-const client = new Anthropic(); // reads ANTHROPIC_API_KEY from the environment
 const MODEL = 'claude-sonnet-4-6';
+
+// The key can come from the environment (.env) or be pasted into the app's
+// first-run screen and saved locally; setApiKey swaps it in at runtime.
+let apiKey = process.env.ANTHROPIC_API_KEY || null;
+let client = null;
+
+function setApiKey(key) {
+  apiKey = key || null;
+  client = null;
+}
+
+function hasApiKey() {
+  return Boolean(apiKey);
+}
+
+function getClient() {
+  if (!client) client = new Anthropic({ apiKey });
+  return client;
+}
+
+// Cheap validity check: count_tokens is free and fails fast on a bad key.
+// Only a 401 means the key is wrong; other errors (network, overload) don't
+// prove anything, so callers treat them as "couldn't verify", not "invalid".
+async function verifyApiKey(key) {
+  const probe = new Anthropic({ apiKey: key });
+  try {
+    await probe.messages.countTokens({
+      model: MODEL,
+      messages: [{ role: 'user', content: 'ping' }],
+    });
+    return { valid: true };
+  } catch (err) {
+    if (err?.status === 401) return { valid: false };
+    return { valid: true, unverified: true };
+  }
+}
 
 const DOMAIN_LABELS = {
   business: 'business & sales negotiation',
@@ -30,7 +65,7 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
 {"score": <integer 1-10>, "feedback": "<2-4 sentences: what worked, what failed, and the single strongest alternative move they could have made>"}`;
 
 async function generateScenario({ domain, difficulty }) {
-  const msg = await client.messages.create({
+  const msg = await getClient().messages.create({
     model: MODEL,
     max_tokens: 500,
     output_config: { effort: 'low' },
@@ -48,7 +83,7 @@ async function generateScenario({ domain, difficulty }) {
 }
 
 async function judgeResponse({ scenario, response, domain, timedOut, timeLimit }) {
-  const msg = await client.messages.create({
+  const msg = await getClient().messages.create({
     model: MODEL,
     max_tokens: 400,
     output_config: { effort: 'low' },
@@ -80,4 +115,4 @@ function parseJudgeJson(text) {
   return { score, feedback: String(obj.feedback ?? '').trim() };
 }
 
-module.exports = { generateScenario, judgeResponse };
+module.exports = { generateScenario, judgeResponse, setApiKey, hasApiKey, verifyApiKey };

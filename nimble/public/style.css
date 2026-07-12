@@ -75,6 +75,19 @@ button.primary:hover { filter: brightness(1.08); }
 button.big { padding: 14px 34px; font-size: 1.1rem; }
 button:disabled { opacity: 0.5; cursor: default; }
 
+.steps { text-align: left; color: var(--ink-2); line-height: 1.7; padding-left: 22px; }
+.steps a { color: var(--accent); }
+input[type="password"], input[type="text"] {
+  width: 100%;
+  font: inherit;
+  color: var(--ink);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+}
+input:focus { outline: none; border-color: var(--accent); }
+
 .choices { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 .choices button { min-width: 76px; padding: 14px 0; font-size: 1.05rem; }
 .choices button.selected { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }

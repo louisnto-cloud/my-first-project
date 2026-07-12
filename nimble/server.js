@@ -12,15 +12,46 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const VALID_TIME_LIMITS = [10, 15, 20, 30];
 
+// If there's no key in the environment, fall back to one saved from the app.
+if (!process.env.ANTHROPIC_API_KEY) {
+  const saved = store.load().apiKey;
+  if (saved) claude.setApiKey(saved);
+}
+
 // Current app state: settings, counts, difficulty, stats.
 app.get('/api/state', (req, res) => {
   const state = store.load();
   res.json({
+    hasApiKey: claude.hasApiKey(),
     timeLimit: state.settings.timeLimit,
     totalDrills: state.drills.length,
     difficulty: store.difficultyFor(state.drills.length),
     stats: store.stats(state),
   });
+});
+
+// Save the API key pasted into the app's setup screen. Stored locally in
+// data/store.json (gitignored) — it never leaves this machine except to
+// call the Claude API.
+app.post('/api/apikey', async (req, res) => {
+  const apiKey = String(req.body?.apiKey || '').trim();
+  if (!apiKey) {
+    return res.status(400).json({ error: 'Paste your API key first' });
+  }
+  try {
+    const check = await claude.verifyApiKey(apiKey);
+    if (!check.valid) {
+      return res.status(401).json({ error: "That key didn't work — double-check you copied the whole thing" });
+    }
+    const state = store.load();
+    state.apiKey = apiKey;
+    store.save(state);
+    claude.setApiKey(apiKey);
+    res.json({ ok: true, unverified: Boolean(check.unverified) });
+  } catch (err) {
+    console.error('apikey save failed:', err);
+    res.status(500).json({ error: 'Could not save the key: ' + (err?.message || 'unknown error') });
+  }
 });
 
 app.post('/api/settings', (req, res) => {
@@ -38,6 +69,9 @@ app.post('/api/settings', (req, res) => {
 app.post('/api/drill/start', async (req, res) => {
   try {
     const state = store.load();
+    if (!claude.hasApiKey()) {
+      return res.status(400).json({ error: 'Add your API key first' });
+    }
     if (!state.settings.timeLimit) {
       return res.status(400).json({ error: 'Pick a time limit first' });
     }
@@ -100,17 +134,16 @@ app.get('/api/stats', (req, res) => {
 
 function apiErrorMessage(err) {
   if (err?.status === 401 || /authentication method/i.test(err?.message || '')) {
-    return 'Invalid or missing ANTHROPIC_API_KEY — copy .env.example to .env and add your key';
+    return 'Your API key was rejected — open "API key" in the top right and paste it again';
   }
   if (err?.status === 429) return 'Rate limited by the Claude API — wait a moment and try again';
   if (err?.status >= 500) return 'Claude API is temporarily unavailable — try again';
   return err?.message || 'Claude API call failed';
 }
 
-if (!process.env.ANTHROPIC_API_KEY) {
-  console.warn('WARNING: ANTHROPIC_API_KEY is not set. Copy .env.example to .env and add your key.');
-}
-
 app.listen(PORT, () => {
   console.log(`Nimble running at http://localhost:${PORT}`);
+  if (!claude.hasApiKey()) {
+    console.log('No API key yet — the app will ask for it in the browser.');
+  }
 });

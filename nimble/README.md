@@ -7,9 +7,12 @@ A small local web app that drills you on thinking fast under conversational pres
 ```sh
 cd nimble
 npm install
-cp .env.example .env   # then add your ANTHROPIC_API_KEY
-npm start              # http://localhost:3000
+npm start   # then open http://localhost:3000
 ```
+
+The first time you open the app it asks for your Anthropic API key (from [console.anthropic.com](https://console.anthropic.com/settings/keys)) and saves it on your computer in `data/store.json` (gitignored). No file editing needed.
+
+Alternatively, power users can put `ANTHROPIC_API_KEY` in a `.env` file (see `.env.example`) — the environment variable takes precedence if both exist.
 
 ## How it works
 

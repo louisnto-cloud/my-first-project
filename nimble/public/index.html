@@ -13,10 +13,24 @@
   <nav>
     <button class="link-btn" id="navStats" hidden>Stats</button>
     <button class="link-btn" id="navSettings" hidden>Time limit</button>
+    <button class="link-btn" id="navKey" hidden>API key</button>
   </nav>
 </header>
 
 <main>
+  <!-- Paste API key (first run) -->
+  <section id="view-key" hidden>
+    <h1>One thing before we start</h1>
+    <p class="muted">Nimble uses Claude to write scenarios and score your replies, so it needs your Anthropic API key.</p>
+    <ol class="steps">
+      <li>Go to <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com &rsaquo; API keys</a></li>
+      <li>Click <strong>Create key</strong>, then <strong>Copy</strong></li>
+      <li>Paste it below — it's saved only on this computer</li>
+    </ol>
+    <input type="password" id="keyInput" placeholder="sk-ant-..." autocomplete="off" spellcheck="false">
+    <button class="primary" id="keySaveBtn">Save key</button>
+  </section>
+
   <!-- Pick time limit (first run / settings) -->
   <section id="view-setup" hidden>
     <h1>How long do you get?</h1>
