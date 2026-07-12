@@ -74,15 +74,22 @@ export function PlayButton({ tts, text, color, highlight, label }: { tts: TTS; t
   );
 }
 
+const SOUTHERN_NAME = /south|mi[eề]n nam|nam b[oộ]|s[aà]i g[oò]n|saigon|hcm|ho chi minh/i;
+const NATURAL_NAME = /natural|neural|premium|enhanced|online/i;
+
 export function AudioSettings({ tts }: { tts: TTS }) {
   const [open, setOpen] = useState(false);
+  const [showVoiceHelp, setShowVoiceHelp] = useState(false);
+  const chosenURI = tts.settings.voiceURI ?? tts.voices[0]?.voiceURI ?? null;
+  const hasSouthern = tts.voices.some((v) => SOUTHERN_NAME.test(v.name));
+
   return (
     <div className="relative">
       <button onClick={() => setOpen((o) => !o)} className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 text-sm hover:bg-gray-200" title="Audio settings">
         ⚙️
       </button>
       {open && (
-        <div className="absolute right-0 top-9 z-30 w-56 rounded-xl border border-gray-200 bg-white p-3 shadow-lg space-y-2">
+        <div className="absolute right-0 top-9 z-30 w-72 rounded-xl border border-gray-200 bg-white p-3 shadow-lg space-y-2">
           <div className="text-xs font-black text-gray-700">🔊 Audio speed</div>
           <div className="flex gap-1">
             {[{ v: 0.7, l: '🐢 Slow' }, { v: 0.9, l: 'Normal' }, { v: 1.1, l: '🐇 Fast' }].map((o) => (
@@ -95,20 +102,48 @@ export function AudioSettings({ tts }: { tts: TTS }) {
               </button>
             ))}
           </div>
-          {tts.voices.length > 1 && (
+
+          {tts.voices.length > 0 && (
             <>
-              <div className="text-xs font-black text-gray-700">🗣️ Vietnamese voice</div>
-              <select
-                value={tts.settings.voiceURI ?? ''}
-                onChange={(e) => tts.setSettings({ ...tts.settings, voiceURI: e.target.value || null })}
-                className="w-full rounded-lg border border-gray-200 px-2 py-1.5 text-xs"
-              >
-                <option value="">Default</option>
-                {tts.voices.map((v) => (
-                  <option key={v.voiceURI} value={v.voiceURI}>{v.name}</option>
-                ))}
-              </select>
+              <div className="text-xs font-black text-gray-700">🗣️ Vietnamese voice — tap ▶ to hear a sample</div>
+              <div className="max-h-44 space-y-1 overflow-y-auto">
+                {tts.voices.map((v, i) => {
+                  const selected = v.voiceURI === chosenURI;
+                  const southern = SOUTHERN_NAME.test(v.name);
+                  const natural = NATURAL_NAME.test(v.name);
+                  return (
+                    <div key={v.voiceURI} className={`flex items-center gap-1.5 rounded-lg border px-2 py-1 ${selected ? 'border-red-300 bg-red-50' : 'border-gray-100'}`}>
+                      <button onClick={() => tts.setSettings({ ...tts.settings, voiceURI: v.voiceURI })} className="flex-1 truncate text-left text-[11px] font-bold text-gray-700">
+                        {selected ? '● ' : '○ '}{v.name.replace(/Microsoft |Google /,'')}
+                        {southern && <span className="ml-1 rounded bg-emerald-100 px-1 text-[9px] font-black text-emerald-700">SOUTH</span>}
+                        {!southern && natural && <span className="ml-1 rounded bg-amber-100 px-1 text-[9px] font-black text-amber-700">NATURAL</span>}
+                        {i === 0 && <span className="ml-1 text-[9px] font-black text-gray-400">★ best</span>}
+                      </button>
+                      <button onClick={() => (tts.speaking ? tts.stop() : tts.preview(v.voiceURI))} className="shrink-0 rounded-full bg-gray-100 px-1.5 py-0.5 text-[10px] font-bold text-gray-600 hover:bg-gray-200">
+                        {tts.speaking ? '⏹' : '▶'}
+                      </button>
+                    </div>
+                  );
+                })}
+              </div>
+              {!hasSouthern && (
+                <p className="text-[10px] leading-snug text-gray-400">
+                  All built-in Vietnamese voices use standard (Northern) pronunciation — no browser ships a Southern voice yet. If you install one on your device, it appears here with a <span className="font-black text-emerald-600">SOUTH</span> tag and is preferred automatically.
+                </p>
+              )}
             </>
+          )}
+
+          <button onClick={() => setShowVoiceHelp((s) => !s)} className="w-full rounded-lg bg-gray-50 px-2 py-1 text-left text-[10px] font-bold text-gray-500 hover:bg-gray-100">
+            {showVoiceHelp ? '▾' : '▸'} Get a more natural voice
+          </button>
+          {showVoiceHelp && (
+            <div className="space-y-1 text-[10px] leading-snug text-gray-500">
+              <p><strong>Windows (Edge):</strong> Edge includes online "Natural" Vietnamese voices (HoaiMy, NamMinh) — they'll appear above automatically.</p>
+              <p><strong>iPhone / Mac:</strong> Settings → Accessibility → Spoken Content → Voices → Vietnamese → download <strong>Linh (Enhanced)</strong>.</p>
+              <p><strong>Android:</strong> Settings → System → Text-to-speech → install/update Google Speech Services with Vietnamese.</p>
+              <p>Then reopen this app — the best voice is picked automatically.</p>
+            </div>
           )}
         </div>
       )}
