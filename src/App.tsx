@@ -20,6 +20,15 @@ function homeFor(role: Role): string {
 function Root() {
   return (
     <div className="min-h-screen bg-violet-50 pb-8">
+      <header className="border-b-4 border-violet-600 bg-white">
+        <div className="mx-auto flex max-w-2xl items-center gap-3 px-4 py-3">
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-600 text-xl">📖</span>
+          <div>
+            <div className="text-lg font-black leading-tight text-violet-800">Read &amp; Write</div>
+            <div className="text-[11px] font-bold uppercase tracking-widest text-fuchsia-600">Zero to Expert</div>
+          </div>
+        </div>
+      </header>
       <ReadingWritingApp />
     </div>
   );

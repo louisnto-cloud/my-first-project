@@ -1453,7 +1453,7 @@ const month6: Month = {
   index: 5,
   title: 'Expert Level',
   subtitle: 'Academic Reading, Creative Mastery & Professional Writing',
-  color: 'violet',
+  color: 'indigo',
   emoji: '🎓',
   level: 'Advanced',
   weeks: [
@@ -1719,6 +1719,7 @@ export function getLessonById(id: string): Lesson | undefined {
 
 export const MONTH_COLORS: Record<string, { bg: string; text: string; border: string; light: string }> = {
   rose:   { bg: 'bg-rose-500',   text: 'text-rose-600',   border: 'border-rose-300',   light: 'bg-rose-50' },
+  indigo: { bg: 'bg-indigo-600', text: 'text-indigo-600', border: 'border-indigo-300', light: 'bg-indigo-50' },
   orange: { bg: 'bg-orange-500', text: 'text-orange-600', border: 'border-orange-300', light: 'bg-orange-50' },
   amber:  { bg: 'bg-amber-500',  text: 'text-amber-600',  border: 'border-amber-300',  light: 'bg-amber-50' },
   green:  { bg: 'bg-green-500',  text: 'text-green-600',  border: 'border-green-300',  light: 'bg-green-50' },
