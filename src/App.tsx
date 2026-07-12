@@ -15,7 +15,17 @@ function homeFor(role: Role): string {
   return '/teach';
 }
 
+// The Read & Write programme is the app: it opens directly, no account needed.
+// The school app remains reachable via /login for anyone who uses it.
 function Root() {
+  return (
+    <div className="min-h-screen bg-violet-50 pb-8">
+      <ReadingWritingApp />
+    </div>
+  );
+}
+
+function SchoolRoot() {
   const { user } = useApp();
   return <Navigate to={user ? homeFor(user.role) : '/login'} replace />;
 }
@@ -33,6 +43,7 @@ export default function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Root />} />
+        <Route path="/school" element={<SchoolRoot />} />
         <Route
           path="/app"
           element={

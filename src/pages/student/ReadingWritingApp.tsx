@@ -298,8 +298,12 @@ function MonthView({ month, progress, onBack, onLesson }: {
 }
 
 // ─── Me tab: level, streak calendar, badges, certificate ─────────────────────
+const NAME_KEY = 'rw-name-v1';
+
 function MeTab({ progress, onReset }: { progress: RWProgress; onReset: () => void }) {
   const { user } = useApp();
+  const [ownName, setOwnName] = useState(() => localStorage.getItem(NAME_KEY) ?? '');
+  const displayName = user?.name ?? (ownName.trim() || 'Learner');
   const { level, next, pctToNext } = levelFor(progress.xp);
   const streak = streakOf(progress);
   const totalLessons = getAllLessons().length;
@@ -337,6 +341,20 @@ function MeTab({ progress, onReset }: { progress: RWProgress; onReset: () => voi
           </div>
         )}
       </div>
+
+      {/* Your name (used on the certificate) */}
+      {!user && (
+        <StepCard>
+          <label className="text-sm font-black text-gray-700">✏️ Your name</label>
+          <input
+            type="text"
+            value={ownName}
+            onChange={(e) => { setOwnName(e.target.value); localStorage.setItem(NAME_KEY, e.target.value); }}
+            placeholder="Shown on your graduation certificate"
+            className="w-full rounded-xl border-2 border-gray-200 px-3 py-2 text-sm focus:border-violet-400 focus:outline-none"
+          />
+        </StepCard>
+      )}
 
       {/* Streak calendar */}
       <StepCard>
@@ -379,7 +397,7 @@ function MeTab({ progress, onReset }: { progress: RWProgress; onReset: () => voi
           <div className="text-4xl">🎓</div>
           <div className="mt-1 text-xs font-black uppercase tracking-[0.3em] text-amber-600">Certificate of Completion</div>
           <div className="mt-3 text-sm text-gray-500">This certifies that</div>
-          <div className="mt-1 text-2xl font-black text-gray-800">{user?.name ?? 'Learner'}</div>
+          <div className="mt-1 text-2xl font-black text-gray-800">{displayName}</div>
           <div className="mt-2 text-sm text-gray-500">
             has completed the full 6-month
             <br /><strong className="text-gray-700">Read &amp; Write: Zero to Expert</strong> programme
