@@ -145,6 +145,15 @@
   $('responseBox').addEventListener('keydown', (e) => {
     if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') submit(false);
   });
+  // Enter anywhere on the ready/result screens starts the next drill,
+  // so you can chain drills without touching the mouse.
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' || e.target.matches('input, textarea, button')) return;
+    if (!$('view-ready').hidden || !$('view-result').hidden) {
+      e.preventDefault();
+      startDrill();
+    }
+  });
 
   async function startDrill() {
     show('loading');
