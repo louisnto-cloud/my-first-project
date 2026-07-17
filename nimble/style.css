@@ -262,11 +262,34 @@ textarea:focus { outline: none; border-color: var(--accent); }
 }
 .tooltip .tt-sub { color: var(--ink-2); }
 
-.table-view { width: 100%; text-align: left; color: var(--ink-2); font-size: 0.88rem; }
-.table-view summary { cursor: pointer; padding: 6px 0; }
-.table-view table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-.table-view th, .table-view td { padding: 6px 8px; border-bottom: 1px solid var(--border); text-align: left; }
-.table-view th { color: var(--ink-3); font-weight: 600; }
+/* History browser */
+.history-list { width: 100%; display: flex; flex-direction: column; gap: 8px; }
+.history-empty { color: var(--ink-3); font-size: 0.9rem; }
+.history-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: left;
+}
+.history-item summary {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  list-style: none;
+}
+.history-item summary::-webkit-details-marker { display: none; }
+.history-item summary::after {
+  content: '▾'; color: var(--ink-3); margin-left: auto;
+  transition: transform 0.15s ease;
+}
+.history-item[open] summary::after { transform: rotate(180deg); }
+.hist-domain { font-size: 0.88rem; color: var(--ink); }
+.hist-when { color: var(--ink-3); font-size: 0.78rem; }
+.hist-flag { color: var(--danger); font-size: 0.72rem; border: 1px solid color-mix(in srgb, var(--danger) 40%, transparent); border-radius: 999px; padding: 1px 8px; }
+.hist-body { padding: 2px 14px 14px; border-top: 1px solid var(--border); }
+.hist-label { color: var(--ink-3); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 12px 0 4px; }
+.hist-body p, .hist-body blockquote { color: var(--ink-2); line-height: 1.5; font-size: 0.92rem; margin: 0; }
+.hist-body blockquote { font-style: italic; border-left: 3px solid var(--border); padding-left: 12px; }
 
 .spinner {
   width: 34px; height: 34px;
