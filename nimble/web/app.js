@@ -285,6 +285,9 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     saveState();
     drill = { domain, scenario, difficulty };
     $('scenarioText').textContent = scenario;
+    $('domainChip').textContent = DOMAIN_LABELS[domain];
+    $('levelDots').innerHTML =
+      '●'.repeat(difficulty) + `<span class="off">${'●'.repeat(5 - difficulty)}</span>`;
     $('responseBox').value = '';
     submitting = false;
     $('submitBtn').disabled = false;
@@ -293,8 +296,12 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     startTimer(state.timeLimit);
   }
 
+  const RING_CIRCUMFERENCE = 282.74; // 2πr for r=45
+  let timerTotalMs = 0;
+
   function startTimer(seconds) {
-    deadline = Date.now() + seconds * 1000;
+    timerTotalMs = seconds * 1000;
+    deadline = Date.now() + timerTotalMs;
     renderTimer();
     clearInterval(timerHandle);
     timerHandle = setInterval(() => {
@@ -305,9 +312,13 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   function renderTimer() {
     const remaining = Math.max(0, deadline - Date.now());
     const secs = Math.ceil(remaining / 1000);
+    const low = secs <= 3;
     const el = $('timer');
     el.textContent = secs;
-    el.classList.toggle('low', secs <= 3);
+    el.classList.toggle('low', low);
+    el.parentElement.classList.toggle('low', low);
+    const frac = timerTotalMs ? remaining / timerTotalMs : 0;
+    $('ringFg').style.strokeDashoffset = RING_CIRCUMFERENCE * (1 - frac);
     return remaining;
   }
 
@@ -338,7 +349,13 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
         timestamp: new Date().toISOString(),
       });
       saveState();
-      $('scoreValue').textContent = score;
+      const scoreEl = $('scoreValue');
+      scoreEl.textContent = score;
+      scoreEl.className = 'score ' +
+        (score <= 3 ? 'band-low' : score <= 6 ? 'band-mid' : 'band-high');
+      const replyEl = $('yourReply');
+      replyEl.textContent = response.trim() ? `“${response.trim()}”` : 'You said nothing.';
+      replyEl.classList.toggle('empty', !response.trim());
       $('feedbackText').textContent = feedback;
       $('timedOutNote').hidden = !timedOut;
       show('result');

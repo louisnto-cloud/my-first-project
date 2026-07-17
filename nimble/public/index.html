@@ -58,10 +58,21 @@
 
   <!-- Drill -->
   <section id="view-drill" hidden>
-    <div class="timer" id="timer">30</div>
+    <div class="timer-ring">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <circle class="ring-bg" cx="50" cy="50" r="45"></circle>
+        <circle class="ring-fg" id="ringFg" cx="50" cy="50" r="45"></circle>
+      </svg>
+      <div class="timer" id="timer">30</div>
+    </div>
+    <div class="drill-meta">
+      <span class="chip" id="domainChip"></span>
+      <span class="level-dots" id="levelDots" title="Difficulty"></span>
+    </div>
     <p class="scenario" id="scenarioText"></p>
     <textarea id="responseBox" placeholder="Say it. The clock is running." autocomplete="off" spellcheck="false"></textarea>
     <button class="primary" id="submitBtn">Submit</button>
+    <p class="hint">Ctrl/⌘ + Enter also submits</p>
   </section>
 
   <!-- Judging -->
@@ -77,6 +88,7 @@
       <div class="score-denom">/ 10</div>
     </div>
     <p class="timed-out-note" id="timedOutNote" hidden>Time ran out — auto-submitted.</p>
+    <blockquote class="your-reply" id="yourReply"></blockquote>
     <p class="feedback" id="feedbackText"></p>
     <button class="primary big" id="nextBtn">Next drill</button>
   </section>
