@@ -132,6 +132,11 @@ app.get('/api/stats', (req, res) => {
   res.json(store.stats(store.load()));
 });
 
+// Full drill log (newest last) for the history browser.
+app.get('/api/drills', (req, res) => {
+  res.json({ drills: store.load().drills });
+});
+
 function apiErrorMessage(err) {
   if (err?.status === 401 || /authentication method/i.test(err?.message || '')) {
     return 'Your API key was rejected — open "API key" in the top right and paste it again';

@@ -236,8 +236,10 @@
   $('backBtn').addEventListener('click', showReady);
 
   async function openStats() {
+    let drills;
     try {
       app.stats = await api('/api/stats');
+      drills = (await api('/api/drills')).drills;
     } catch (err) {
       showError(err.message);
       return;
@@ -257,14 +259,37 @@
     }).join('');
 
     renderChart(s.history);
-    renderTable(s.history);
+    renderHistory(drills);
     show('stats');
   }
 
-  function renderTable(history) {
-    $('drillTable').querySelector('tbody').innerHTML = history.map((h, i) =>
-      `<tr><td>${i + 1}</td><td>${DOMAIN_LABELS[h.domain] || h.domain}</td><td>${h.score}</td><td>${new Date(h.timestamp).toLocaleString()}</td></tr>`
-    ).join('');
+  const escapeHtml = (s) => String(s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+  // Collapsible per-drill cards, newest first: scenario, your reply, feedback.
+  function renderHistory(drills) {
+    const el = $('historyList');
+    if (!drills.length) {
+      el.innerHTML = '<p class="history-empty">No drills yet — your past scenarios and feedback will appear here.</p>';
+      return;
+    }
+    el.innerHTML = drills.slice(-50).reverse().map((d) => `
+      <details class="history-item">
+        <summary>
+          <span class="form-dot ${bandFor(d.score)}">${d.score}</span>
+          <span class="hist-domain">${DOMAIN_LABELS[d.domain] || d.domain}</span>
+          <span class="hist-when">${new Date(d.timestamp).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</span>
+          ${d.timedOut ? '<span class="hist-flag">timed out</span>' : ''}
+        </summary>
+        <div class="hist-body">
+          <p class="hist-label">Scenario</p>
+          <p>${escapeHtml(d.scenario)}</p>
+          <p class="hist-label">Your reply</p>
+          <blockquote>${d.response.trim() ? escapeHtml(d.response) : '(nothing typed)'}</blockquote>
+          <p class="hist-label">Feedback</p>
+          <p>${escapeHtml(d.feedback)}</p>
+        </div>
+      </details>`).join('');
   }
 
   // Single-series SVG line chart: score (1-10, fixed scale) per drill,
