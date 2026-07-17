@@ -274,12 +274,15 @@ const Quest = {
     });
   },
 
-  // Boss / Fast-Track: sample across all skills of the region
+  // Boss / Fast-Track: sample across all skills of the region.
+  // Tracing skills are excluded — they auto-pass (effort, not assessment)
+  // and would inflate mastery-gate scores.
   forRegion(region, count) {
-    const skills = region.skills;
+    const skills = region.skills.filter(s => !s.gen.startsWith('trace'));
+    const pool = skills.length ? skills : region.skills;
     const qs = [];
     for (let i = 0; i < count; i++) {
-      const s = skills[i % skills.length];
+      const s = pool[i % pool.length];
       qs.push(Quest.make(s.gen, s.params));
     }
     return U.shuffle(qs);

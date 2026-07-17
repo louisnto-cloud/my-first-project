@@ -323,8 +323,11 @@ const Level = {
           answered = true;
           opts.onWrong(q, replayQuestion);
         } else {
-          // tap format: let her keep trying, but offer the explanation as audio
+          // tap format: let her keep trying — explain gently in audio AND on screen
           Audio2.say(q.explain || 'Try another one!');
+          if (q.explain && !card.querySelector('.hint-bubble')) {
+            card.appendChild(U.el('div', 'hint-bubble', U.esc(q.explain)));
+          }
         }
       }
     });

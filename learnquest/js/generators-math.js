@@ -895,7 +895,8 @@ const MG = {
     const a = U.ri(-9, 9), b = U.ri(-9, 9);
     const add = Math.random() < 0.5;
     const ans = add ? a + b : a - b;
-    const expr = add ? `${a} + (${b})` : `${a} − (${b})`;
+    const bs = b < 0 ? `(${b})` : String(b); // parenthesize negatives only
+    const expr = add ? `${a} + ${bs}` : `${a} − ${bs}`;
     return {
       format: 'numpad',
       prompt: `${expr} = ?`,
