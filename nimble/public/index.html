@@ -47,6 +47,7 @@
   <section id="view-ready" hidden>
     <h1>Ready?</h1>
     <p class="muted" id="readyMeta"></p>
+    <div class="recent-form" id="recentForm"></div>
     <button class="primary big" id="startBtn">Start drill</button>
   </section>
 
@@ -99,11 +100,16 @@
     <div class="stat-tiles">
       <div class="tile"><div class="tile-value" id="statTotal">0</div><div class="tile-label">drills</div></div>
       <div class="tile"><div class="tile-value" id="statAvg">–</div><div class="tile-label">avg score</div></div>
+      <div class="tile"><div class="tile-value" id="statBest">–</div><div class="tile-label">best</div></div>
       <div class="tile"><div class="tile-value" id="statLevel">1</div><div class="tile-label">level</div></div>
     </div>
     <div class="domain-avgs" id="domainAvgs"></div>
     <h2>Score over time</h2>
     <div class="chart-wrap" id="chartWrap">
+      <div class="chart-legend" id="chartLegend" hidden>
+        <span><span class="legend-swatch"></span>score</span>
+        <span><span class="legend-swatch avg"></span>5-drill average</span>
+      </div>
       <svg id="chart" width="100%" height="220" role="img" aria-label="Line chart of drill scores over time"></svg>
       <div class="tooltip" id="chartTooltip" hidden></div>
     </div>

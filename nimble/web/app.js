@@ -210,7 +210,29 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     const n = state.drills.length;
     $('readyMeta').textContent =
       `${state.timeLimit}s per response · level ${difficultyFor(n)} · ${n} drill${n === 1 ? '' : 's'} done`;
+    renderRecentForm(state.drills);
     show('ready');
+  }
+
+  const bandFor = (score) => (score <= 3 ? 'band-low' : score <= 6 ? 'band-mid' : 'band-high');
+
+  // Last five scores as colored dots, plus a trend arrow vs the five before.
+  function renderRecentForm(history) {
+    const el = $('recentForm');
+    if (!history || !history.length) { el.innerHTML = ''; return; }
+    const last5 = history.slice(-5);
+    const dots = last5.map(h =>
+      `<span class="form-dot ${bandFor(h.score)}" title="${h.score}/10">${h.score}</span>`
+    ).join('');
+    let delta = '';
+    const prev5 = history.slice(-10, -5);
+    if (prev5.length) {
+      const avg = (a) => a.reduce((s, x) => s + x.score, 0) / a.length;
+      const d = avg(last5) - avg(prev5);
+      const arrow = d >= 0.05 ? '▲' : d <= -0.05 ? '▼' : '—';
+      delta = `<span class="form-delta">${arrow} ${Math.abs(d).toFixed(1)} vs previous 5</span>`;
+    }
+    el.innerHTML = `<span class="form-label">Recent</span>${dots}${delta}`;
   }
 
   // ---------- API key ----------
@@ -376,6 +398,7 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     const s = computeStats();
     $('statTotal').textContent = s.totalDrills;
     $('statAvg').textContent = s.overallAverage == null ? '–' : s.overallAverage.toFixed(1);
+    $('statBest').textContent = s.history.length ? Math.max(...s.history.map(h => h.score)) : '–';
     $('statLevel').textContent = difficultyFor(s.totalDrills);
 
     $('domainAvgs').innerHTML = Object.entries(DOMAIN_LABELS).map(([key, label]) => {
@@ -439,6 +462,19 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
         points: pts.map(p => `${p.px},${p.py}`).join(' '),
         fill: 'none', stroke: '#6690f2', 'stroke-width': 2,
         'stroke-linejoin': 'round', 'stroke-linecap': 'round',
+      }));
+    }
+    // 5-drill rolling average once there's enough history to smooth
+    $('chartLegend').hidden = n < 5;
+    if (n >= 5) {
+      const roll = history.map((_, i) => {
+        const win = history.slice(Math.max(0, i - 4), i + 1);
+        return win.reduce((s, h) => s + h.score, 0) / win.length;
+      });
+      svg.append(el('polyline', {
+        points: roll.map((v, i) => `${x(i)},${y(v)}`).join(' '),
+        fill: 'none', stroke: '#9aa1ac', 'stroke-width': 2,
+        'stroke-dasharray': '5 5', 'stroke-linejoin': 'round',
       }));
     }
     for (const p of pts) {
