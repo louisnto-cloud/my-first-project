@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { CURRICULUM, MONTH_COLORS } from '../../../data/curriculum';
 import type { Exercise, Lesson } from '../../../data/curriculum';
 import { analyzeWriting, awardOnce, XP, type RWProgress } from './engine';
@@ -6,6 +6,21 @@ import { useTTS } from './useTTS';
 import { AudioNotice, AudioSettings, Confetti, MarkdownContent, NavButton, PlayButton, StepCard, TappableText, TextSizeToggle, useTextSize, XpChip } from './shared';
 
 type LessonStep = 'intro' | 'content' | 'keywords' | 'dictation' | 'exercises' | 'writing' | 'complete';
+
+// Remember the learner's place so an interruption (phone call, closed tab)
+// doesn't restart the lesson from step 1.
+const POS_KEY = 'rw-lesson-pos-v1';
+
+function loadSavedStep(lessonId: string, validSteps: LessonStep[]): LessonStep {
+  try {
+    const raw = localStorage.getItem(POS_KEY);
+    if (raw) {
+      const saved = JSON.parse(raw) as { lessonId: string; step: LessonStep };
+      if (saved.lessonId === lessonId && validSteps.includes(saved.step) && saved.step !== 'complete') return saved.step;
+    }
+  } catch { /* corrupted — start at intro */ }
+  return 'intro';
+}
 
 // ─── Letter Lab: interactive alphabet for the Week 1 phonics lessons ─────────
 const LETTERS: { l: string; example: string }[] = [
@@ -74,7 +89,13 @@ export default function LessonView({ lesson, progress, apply, onBack }: {
     ...(lesson.writingPrompt ? (['writing'] as LessonStep[]) : []),
     'complete',
   ];
-  const [step, setStep] = useState<LessonStep>('intro');
+  const [step, setStep] = useState<LessonStep>(() => loadSavedStep(lesson.id, steps));
+
+  useEffect(() => {
+    if (step === 'complete') localStorage.removeItem(POS_KEY);
+    else localStorage.setItem(POS_KEY, JSON.stringify({ lessonId: lesson.id, step }));
+  }, [step, lesson.id]);
+
   const stepIndex = steps.indexOf(step);
   const nextStep = () => { const n = steps[stepIndex + 1]; if (n) setStep(n); };
   const prevStep = () => { const p = steps[stepIndex - 1]; if (p) { tts.stop(); setStep(p); } };
