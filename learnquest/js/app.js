@@ -5,6 +5,11 @@ window.addEventListener('DOMContentLoaded', () => {
   Store.load();
   Audio2.init();
 
+  // Offline support when served over HTTP(S); file:// already works offline
+  if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  }
+
   if (!Store.state.name) {
     // First run: pick a buddy name — spoken, tap to choose
     const app = document.getElementById('app');

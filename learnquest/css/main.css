@@ -490,8 +490,9 @@ button:active { transform: scale(.96); }
 .explain-buddy.big { animation: float 2.6s ease-in-out infinite; }
 
 .flash-overlay {
+  /* Blocks input for its short lifetime so taps can't race the next question */
   position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
-  z-index: 60; pointer-events: none;
+  z-index: 60;
 }
 .flash-card {
   background: var(--paper); border-radius: 28px; box-shadow: 0 16px 44px rgba(0,0,0,.3);

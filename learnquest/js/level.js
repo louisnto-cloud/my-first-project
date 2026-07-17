@@ -105,18 +105,21 @@ const Level = {
     screen.appendChild(row);
     app.appendChild(screen);
 
-    // Reveal the answer visually after a beat — a worked example, not a lecture
+    // Reveal the answer visually after a beat — a worked example, not a lecture.
+    // Sort/match/trace demos have no single "answer" to reveal; the explanation carries them.
     const answerText = sample.format === 'numpad' || sample.format === 'typed' ? String(sample.answer)
-      : sample.format === 'tap' ? (sample.choices.find(c => c.correct).label || '✓')
+      : sample.format === 'tap' ? (sample.choices.find(c => c.correct).label || null)
       : sample.format === 'sequence' ? sample.sequence.join(' ')
       : sample.format === 'blank' ? sample.answer
-      : '✓';
+      : null;
     setTimeout(() => {
       const da = document.getElementById('demo-answer');
-      if (da) { da.innerHTML = `<span class="demo-reveal">${U.esc(answerText)}</span>`; }
+      if (da && answerText) { da.innerHTML = `<span class="demo-reveal">${U.esc(answerText)}</span>`; }
     }, 1600);
 
-    const narration = `${level.name}! Watch first. ${sample.say || sample.prompt} ... The answer is ${answerText}. ${sample.explain || ''} Now you try!`;
+    const narration = `${level.name}! Watch first. ${sample.say || sample.prompt} ... ` +
+      (answerText ? `The answer is ${answerText}. ` : '') +
+      `${sample.explain || ''} Now you try!`;
     const speak = () => Audio2.say(narration);
     speak();
     replay.addEventListener('click', speak);

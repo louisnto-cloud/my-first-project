@@ -7,9 +7,23 @@ const Activities = {
 
   render(container, q, onAnswer) {
     container.innerHTML = '';
+    Activities.unbindKeys();
     const fn = Activities['_' + q.format];
     if (!fn) { container.textContent = 'Unknown activity'; return; }
     fn(container, q, onAnswer);
+  },
+
+  _keyHandler: null,
+  bindKeys(fn) {
+    Activities.unbindKeys();
+    Activities._keyHandler = fn;
+    document.addEventListener('keydown', fn);
+  },
+  unbindKeys() {
+    if (Activities._keyHandler) {
+      document.removeEventListener('keydown', Activities._keyHandler);
+      Activities._keyHandler = null;
+    }
   },
 
   speakQuestion(q) {
@@ -72,12 +86,23 @@ const Activities = {
     });
     wrap.appendChild(pad);
     const go = U.el('button', 'check-btn', 'Check ✓');
-    go.addEventListener('click', () => {
-      if (val === '' || val === '-' ) return;
+    const submit = () => {
+      if (val === '' || val === '-') return;
       const num = parseFloat(val);
       const ok = Math.abs(num - q.answer) <= (q.tolerance || 0.001);
       if (!ok) { val = ''; refresh(); }
       onAnswer(ok);
+    };
+    go.addEventListener('click', submit);
+    // Physical keyboard support on laptops
+    Activities.bindKeys(e => {
+      if (e.key >= '0' && e.key <= '9') { if (val.replace('-', '').length < 6) { val += e.key; refresh(); Audio2.tap(); } }
+      else if (e.key === 'Backspace') { val = val.slice(0, -1); refresh(); }
+      else if (e.key === '.' && q.decimal) { if (!val.includes('.')) { val += val === '' ? '0.' : '.'; refresh(); } }
+      else if (e.key === '-' && q.allowNegative) { val = val.startsWith('-') ? val.slice(1) : '-' + val; refresh(); }
+      else if (e.key === 'Enter') submit();
+      else return;
+      e.preventDefault();
     });
     wrap.appendChild(go);
     box.appendChild(wrap);
