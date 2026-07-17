@@ -23,6 +23,8 @@ export default function ReadingWritingApp() {
   const [activeLesson, setActiveLesson] = useState<Lesson | null>(null);
   const [newBadges, setNewBadges] = useState<Badge[]>([]);
   const [showPlacement, setShowPlacement] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(() => !localStorage.getItem('rw-welcome-v1'));
+  const dismissWelcome = () => { localStorage.setItem('rw-welcome-v1', '1'); setShowWelcome(false); };
 
   /**
    * Single funnel for all progress mutations: streak day, daily-goal log, and
@@ -112,6 +114,21 @@ export default function ReadingWritingApp() {
           </button>
         ))}
       </div>
+
+      {showWelcome && tab === 'learn' && !showPlacement && (
+        <div className="rounded-2xl border-2 border-violet-200 bg-white p-4 shadow-sm">
+          <h2 className="font-black text-gray-800">👋 Welcome! Here's how it works:</h2>
+          <div className="mt-2 space-y-1.5 text-sm text-gray-600">
+            <p>📚 <strong>Learn</strong> — one short lesson a day takes you from the alphabet to expert writing in 6 months.</p>
+            <p>📖 <strong>Library</strong> — stories at your level, read aloud to you word by word.</p>
+            <p>🔁 <strong>Review</strong> — quick games that make the words you learned stick.</p>
+            <p>⭐ <strong>Me</strong> — your streak, level, badges, and (one day!) your certificate.</p>
+          </div>
+          <button onClick={dismissWelcome} className="mt-3 w-full rounded-xl bg-violet-600 py-2.5 text-sm font-black text-white hover:opacity-90">
+            Got it — let's start! →
+          </button>
+        </div>
+      )}
 
       {tab === 'learn' && (showPlacement ? (
         <Placement apply={apply} onClose={() => setShowPlacement(false)} />
