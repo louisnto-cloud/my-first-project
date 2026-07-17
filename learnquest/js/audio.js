@@ -29,8 +29,10 @@ const Audio2 = {
   },
 
   say(text, opts) {
-    if (Audio2.muted || !('speechSynthesis' in window) || !text) return;
     opts = opts || {};
+    // opts.force lets audio-only questions speak even when muted — they are
+    // unanswerable otherwise. Mute still silences all other narration and SFX.
+    if ((Audio2.muted && !opts.force) || !('speechSynthesis' in window) || !text) return;
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
     if (Audio2.voice) u.voice = Audio2.voice;

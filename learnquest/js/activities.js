@@ -27,7 +27,7 @@ const Activities = {
   },
 
   speakQuestion(q) {
-    if (q.say) Audio2.say(q.say);
+    if (q.say) Audio2.say(q.say, { force: !!q.audioOnly });
   },
 
   /* --- Tap to select ----------------------------------------------------- */

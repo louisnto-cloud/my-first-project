@@ -51,10 +51,10 @@ const Parent = {
     chart.appendChild(bars);
     wrap.appendChild(chart);
 
-    const streak = Store.state.streak;
+    const cur = Store.currentStreak(), best = Store.state.streak.best;
     wrap.appendChild(U.el('div', 'parent-card',
-      `<h3>🔥 Streak</h3><div class="parent-row"><span>Current</span><b>${streak.count} day${streak.count === 1 ? '' : 's'}</b></div>
-       <div class="parent-row"><span>Best</span><b>${streak.best} day${streak.best === 1 ? '' : 's'}</b></div>`));
+      `<h3>🔥 Streak</h3><div class="parent-row"><span>Current</span><b>${cur} day${cur === 1 ? '' : 's'}</b></div>
+       <div class="parent-row"><span>Best</span><b>${best} day${best === 1 ? '' : 's'}</b></div>`));
 
     screen.appendChild(wrap);
     app.appendChild(screen);

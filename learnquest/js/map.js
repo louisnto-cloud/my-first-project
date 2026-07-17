@@ -20,7 +20,7 @@ const WorldMap = {
 
     // HUD
     const hud = U.el('div', 'home-hud');
-    const streak = Store.state.streak.count;
+    const streak = Store.currentStreak();
     hud.innerHTML = `
       <span class="hud-chip big">⭐ ${Store.state.totalStars}</span>
       <span class="hud-chip big">🪙 ${Store.state.coins}</span>

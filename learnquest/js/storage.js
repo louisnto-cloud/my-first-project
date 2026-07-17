@@ -39,6 +39,13 @@ const Store = {
     try { localStorage.setItem(Store.KEY, JSON.stringify(Store.state)); } catch (e) { /* storage full/blocked */ }
   },
 
+  // Streak as it stands right now: 0 if the chain lapsed (no play yesterday or today)
+  currentStreak() {
+    const s = Store.state.streak;
+    if (s.last === U.todayKey() || s.last === U.dayKeyOffset(-1)) return s.count;
+    return 0;
+  },
+
   touchStreak() {
     const s = Store.state.streak;
     const today = U.todayKey();

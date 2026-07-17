@@ -10,6 +10,9 @@ window.addEventListener('DOMContentLoaded', () => {
     navigator.serviceWorker.register('sw.js').catch(() => {});
   }
 
+  // Don't keep narrating into a hidden tab / sleeping iPad
+  document.addEventListener('visibilitychange', () => { if (document.hidden) Audio2.stop(); });
+
   if (!Store.state.name) {
     // First run: pick a buddy name — spoken, tap to choose
     const app = document.getElementById('app');

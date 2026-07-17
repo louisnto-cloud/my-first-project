@@ -339,6 +339,7 @@ const Level = {
   },
 
   topBar(title, onBack) {
+    Activities.unbindKeys(); // drop any keyboard handler from a previous question
     const bar = U.el('div', 'top-bar');
     const back = U.el('button', 'back-btn', '←');
     back.setAttribute('aria-label', 'Go back');

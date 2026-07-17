@@ -70,12 +70,22 @@ const Celebrate = {
       <h2>${U.esc(level.name)} complete!</h2>
       <div class="explain-buddy big">${Avatar.svg(120)}</div>
       <div class="coin-burst">🪙 +${coins}</div>`;
-    const btn = U.el('button', 'primary-btn', 'Onward! →');
-    btn.addEventListener('click', () => {
+    const row = U.el('div', 'demo-actions');
+    const mapBtn = U.el('button', 'ghost-btn', '🗺️ Map');
+    mapBtn.addEventListener('click', () => { o.remove(); WorldMap.showRegion(level.region.id); });
+    row.appendChild(mapBtn);
+    // Keep the momentum: jump straight into the next node when one is waiting
+    const idx = level.region.levels.indexOf(level);
+    const next = level.region.levels[idx + 1];
+    const nextBtn = U.el('button', 'primary-btn', next ? 'Next level →' : '👑 To the boss!');
+    nextBtn.addEventListener('click', () => {
       o.remove();
-      WorldMap.showRegion(level.region.id);
+      if (!next) { WorldMap.showRegion(level.region.id); return; }
+      if (next.type === 'review') Level.playReview(next);
+      else Level.playSkill(next);
     });
-    card.appendChild(btn);
+    row.appendChild(nextBtn);
+    card.appendChild(row);
     o.appendChild(card);
     document.body.appendChild(o);
     setTimeout(() => Audio2.coin(), 700);

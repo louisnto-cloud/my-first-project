@@ -204,8 +204,8 @@ const Trophies = {
     }));
     screen.appendChild(shelf);
     if (!any) screen.appendChild(U.el('div', 'shop-note', 'Beat a Boss Challenge to win your first trophy!'));
-    const streak = Store.state.streak;
-    screen.appendChild(U.el('div', 'streak-banner', `🔥 Streak: ${streak.count} day${streak.count === 1 ? '' : 's'} · Best: ${streak.best}`));
+    const cur = Store.currentStreak();
+    screen.appendChild(U.el('div', 'streak-banner', `🔥 Streak: ${cur} day${cur === 1 ? '' : 's'} · Best: ${Store.state.streak.best}`));
     app.appendChild(screen);
   }
 };
