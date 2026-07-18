@@ -32,10 +32,18 @@ implement, validate (`./build_all.sh`), commit, log in CHANGELOG.md.
 - [x] I10 — [IMPROVE/INTERFACE] README.md: how to open, navigate and use the workbook + rebuild it.
 - [x] I11 — [EXPAND 20%] Break-even chart + one-way sensitivity on price & COGS.
 - [x] I12 — [IMPROVE] Glossary / data-dictionary polish + inline definitions.
-- [ ] I13 — [EXPAND 20%] Risk register likelihood×impact heatmap visual.
+- [x] I13 — [EXPAND 20%] Risk register likelihood×impact heatmap visual.
 - [ ] I14 — [IMPROVE] Final QA + polish + changelog closing summary.
 
 ## Guardrails
 - MÜV = RTD sparkling CAN (SKU 4338, ~$14.99), food-regulated. NEVER reintroduce "powder" framing.
 - Canada: sport-electrolytes → Supplemented Foods by 2027-12-31. Collagen beauty claims = NHP-only.
 - Every added figure confidence-tagged; flag estimates. Prefer refinement over bulk.
+
+## Refill (added 2026-07-18 ~08:59Z)
+- [x] I15 — [IMPROVE] Assumptions Audit tab: every Financial Model input + value(s) + source/confidence.
+- [ ] I16 — [IMPROVE] Data Confidence Scoreboard: count ✅/◐/⚠ tags across tabs; summarize on one tab.
+- [ ] I17 — [IMPROVE] Number-format consistency pass ($, %, thousands) across financial/model tabs.
+- [ ] I18 — [IMPROVE] Contrast/accessibility check: ensure font vs fill contrast on band/callout cells.
+- [ ] I19 — [IMPROVE] Per-tab one-line "what this tab shows" subtitle where missing.
+- [ ] I20 — [IMPROVE] Cover sheet refresh: reflect 37 tabs, Start Here, Exec Brief, interactive model.

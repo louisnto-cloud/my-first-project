@@ -39,3 +39,11 @@ Reverse-chronological. Each entry = one committed iteration.
 - [I11] Scenario Comparison: added a break-even-units-by-scenario bar chart.
 - [I12] Glossary: appended a 'Regulatory & format terms' section (RTD, NHP, NPN, Supplemented Food,
   SFFt, SFCI, ORS, food–NHP interface, Fibersol, Bill 96).
+
+## Iteration 7 — 2026-07-18 ~09:01Z (batch I13/I15 + backlog refill)
+- [I13] Risk Register: added a likelihood×impact heatmap (3×3, red/amber/green) with risk numbers.
+- [I15] Added Assumptions Audit tab: every Financial Model input across all 3 scenarios with a
+  source/confidence tag; explicit "illustrative, not a forecast" note.
+- Refilled backlog with I16–I20 (confidence scoreboard, number-format pass, contrast check, per-tab
+  subtitles, cover refresh).
+- Workbook: 37 → 38 tabs.
