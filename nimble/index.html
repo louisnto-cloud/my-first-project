@@ -17,6 +17,7 @@
     <button class="link-btn" id="navStats" hidden>Stats</button>
     <button class="link-btn" id="navSettings" hidden>Time limit</button>
     <button class="link-btn" id="navKey" hidden>API key</button>
+    <button class="link-btn" id="navHelp" aria-label="Keyboard shortcuts" title="Keyboard shortcuts (?)">?</button>
   </nav>
 </header>
 
@@ -171,6 +172,21 @@
 
   <p class="error" id="errorBar" hidden></p>
 </main>
+
+<!-- Keyboard shortcuts help -->
+<div class="modal-overlay" id="helpModal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+    <h2 id="helpTitle">Keyboard shortcuts</h2>
+    <dl class="shortcuts">
+      <div><dt>Enter</dt><dd>Start / next drill (ready and result screens)</dd></div>
+      <div><dt>Ctrl / ⌘ + Enter</dt><dd>Submit your reply</dd></div>
+      <div><dt>Any key</dt><dd>Skip the 3-2-1 warmup</dd></div>
+      <div><dt>?</dt><dd>Open this help</dd></div>
+      <div><dt>Esc</dt><dd>Close this help</dd></div>
+    </dl>
+    <button class="primary" id="helpClose">Got it</button>
+  </div>
+</div>
 
 <script src="app.js"></script>
 </body>

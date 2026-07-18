@@ -445,12 +445,38 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   // Enter anywhere on the ready/result screens starts the next drill,
   // so you can chain drills without touching the mouse.
   document.addEventListener('keydown', (e) => {
+    if (!$('helpModal').hidden) return; // don't start drills while the help modal is open
     if (e.key !== 'Enter' || e.target.matches('input, textarea, button')) return;
     if (!$('view-ready').hidden || !$('view-result').hidden) {
       e.preventDefault();
       startDrill();
     }
   });
+
+  // ---------- keyboard-shortcuts help ----------
+  let lastFocusBeforeHelp = null;
+  function openHelp() {
+    if (!$('helpModal').hidden) return;
+    lastFocusBeforeHelp = document.activeElement;
+    $('helpModal').hidden = false;
+    $('helpClose').focus();
+  }
+  function closeHelp() {
+    if ($('helpModal').hidden) return;
+    $('helpModal').hidden = true;
+    if (lastFocusBeforeHelp && lastFocusBeforeHelp.focus) lastFocusBeforeHelp.focus();
+  }
+  $('navHelp').addEventListener('click', openHelp);
+  $('helpClose').addEventListener('click', closeHelp);
+  $('helpModal').addEventListener('click', (e) => { if (e.target === $('helpModal')) closeHelp(); });
+  document.addEventListener('keydown', (e) => {
+    if (!$('helpModal').hidden) {
+      if (e.key === 'Escape') { e.preventDefault(); closeHelp(); }
+      else if (e.key === 'Tab') { e.preventDefault(); $('helpClose').focus(); } // trap focus on the one control
+      return;
+    }
+    if (e.key === '?' && $('view-warmup').hidden && !e.target.matches('input, textarea')) { e.preventDefault(); openHelp(); }
+  }, true);
 
   async function startDrill() {
     $('loadingText').textContent = LOADING_LINES[Math.floor(Math.random() * LOADING_LINES.length)];
