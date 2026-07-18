@@ -57,9 +57,22 @@ keyboard nav. Now on **v3.13**.
   KPI definitions (19); **Model checks** panel — 7 live integrity checks that tie
   monthly↔annual and ΣSKU↔company, 7/7 across all scenarios (20). Now **v3.20**.
 
+- **Iter 21–27:** actionable insight (biggest lever + best SKU) (21); 3-year
+  **Outlook** tab with operating leverage (22); clean **print** of active tab (23);
+  **Copy summary** for the weekly email (24); screen-reader tables for tornado &
+  break-even (25); break-even label placement (26); **view-state persists** —
+  scenario + growth saved and shared (27).
+- **Visual QA (Chromium via /opt/pw-browsers):** rendered and eyeballed every tab
+  in light + dark. All correct and clean — Apple-like. Screenshots sent to user.
+  Now **v3.25**, 8 tabs, 7 charts, 7 integrity checks passing.
+
 ## Backlog (priority order)
+### Bigger, needs user nod
+- Deploy to GitHub Pages (my branch isn't in deploy.yml triggers; touching it
+  risks the E'TOP/pilgrimage deploys — offer, don't do unilaterally).
+- Sync build_model.py (Excel) to add tornado / outlook / checks sheets.
 ### Improvement (80%)
-1. Print/board one-pager; contrast QA in dark mode; more chart hover polish.
+1. Contrast micro-QA; copy tweaks; more chart hover polish; perf debounce.
 3. Input validation + friendlier assumptions UX (grouping, units, help "?").
 4. Micro-interactions / entrance; number formatting polish; dark-mode contrast pass.
 5. Print layout: print all views, not just the current tab.

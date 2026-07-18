@@ -350,7 +350,7 @@ let outlookGrowth = 0.20;   // annual volume growth for the 3-year outlook
 // ---------------- persistence (survives reload) ----------------
 const LS = "organika.model.v3";
 const DEFAULTS = JSON.parse(JSON.stringify({SKUS, CO, LEVERS, SEASON}));
-function persist(){ try{ localStorage.setItem(LS, JSON.stringify({SKUS, CO, LEVERS, SEASON})); }catch(e){} }
+function persist(){ try{ localStorage.setItem(LS, JSON.stringify({SKUS, CO, LEVERS, SEASON, current, outlookGrowth})); }catch(e){} }
 function restore(){
   try{
     const s = JSON.parse(localStorage.getItem(LS)); if(!s) return;
@@ -358,6 +358,8 @@ function restore(){
     Object.assign(CO, s.CO||{});
     Object.keys(s.LEVERS||{}).forEach(k=>{ if(LEVERS[k]) Object.assign(LEVERS[k], s.LEVERS[k]); });
     if(Array.isArray(s.SEASON)) s.SEASON.forEach((v,i)=>{ if(i<SEASON.length) SEASON[i]=v; });
+    if(s.current && SCEN.includes(s.current)) current = s.current;
+    if(typeof s.outlookGrowth==="number") outlookGrowth = s.outlookGrowth;
   }catch(e){}
 }
 function resetAll(){
@@ -409,7 +411,7 @@ function exportCsv(){
 // ---------- shareable link (encodes the whole model in the URL, no backend) ----------
 function shareState(){
   return location.origin + location.pathname +
-    "#m=" + btoa(unescape(encodeURIComponent(JSON.stringify({SKUS, CO, LEVERS, SEASON, current}))));
+    "#m=" + btoa(unescape(encodeURIComponent(JSON.stringify({SKUS, CO, LEVERS, SEASON, current, outlookGrowth}))));
 }
 function applyHash(){
   try{
@@ -420,6 +422,7 @@ function applyHash(){
     Object.keys(s.LEVERS||{}).forEach(k=>{ if(LEVERS[k]) Object.assign(LEVERS[k], s.LEVERS[k]); });
     if(Array.isArray(s.SEASON)) s.SEASON.forEach((v,i)=>{ if(i<SEASON.length) SEASON[i]=v; });
     if(s.current && SCEN.includes(s.current)) current = s.current;
+    if(typeof s.outlookGrowth==="number") outlookGrowth = s.outlookGrowth;
     return true;
   }catch(e){ return false; }
 }
@@ -1056,7 +1059,7 @@ function buildNav(){
     SCEN.map(s=>`<button class="pill ${s===current?'on':''}" data-s="${s}">${s}</button>`).join("");
   el("scenBar").querySelectorAll(".pill").forEach(b=>b.onclick=()=>{current=b.dataset.s;
     el("scenBar").querySelectorAll(".pill").forEach(x=>x.classList.toggle("on",x.dataset.s===current));
-    refresh();});
+    refresh();persist();});
   el("priceSeg").querySelectorAll("button").forEach(b=>b.onclick=()=>{priceMetric=b.dataset.m;
     el("priceSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===priceMetric));
     renderPricing();});
@@ -1072,10 +1075,11 @@ el("btnExport").onclick=exportCsv;
 el("btnPrint").onclick=()=>window.print();
 el("btnShare").onclick=doShare;
 el("btnSummary").onclick=doSummary;
-el("growthInp").oninput=e=>{ outlookGrowth=(parseFloat(e.target.value)||0)/100; renderOutlook(); };
+el("growthInp").oninput=e=>{ outlookGrowth=(parseFloat(e.target.value)||0)/100; renderOutlook(); persist(); };
 
 restore();            // load saved edits, if any
 applyHash();          // a shared #m= link overrides local edits
+el("growthInp").value = Math.round(outlookGrowth*100);   // reflect restored/shared growth
 buildNav();renderAsmp();refresh();
 </script>
 </body>
