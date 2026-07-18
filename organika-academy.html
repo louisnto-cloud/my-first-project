@@ -320,6 +320,10 @@ textarea:focus{border-color:var(--g)}
 .prog-hero{background:var(--g);border-radius:var(--r);padding:24px;margin-bottom:16px;text-align:center;color:var(--wh)}
 .prog-xp{font-size:48px;font-weight:900;line-height:1}
 .prog-streak{font-size:16px;margin-top:4px;opacity:.85}
+.week-strip{display:flex;justify-content:center;gap:12px;margin-top:14px}
+.wday{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:13px;opacity:.55}
+.wday i{font-style:normal;font-size:10px;font-weight:700}
+.wday.hit{opacity:1;color:#8FE3B0}
 .tier-prog-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .tier-label{font-size:13px;font-weight:700;width:50px}
 .tier-bar{flex:1;height:10px;background:var(--bd);border-radius:5px;overflow:hidden}
@@ -1433,11 +1437,19 @@ function rolloverDay(){
   const td=today();
   if(S.xpDay!==td){S.xpDay=td;S.todayXP=0;}
 }
+function markDay(){
+  S.days=S.days||[];
+  const td=today();
+  if(!S.days.includes(td)){
+    S.days.push(td);
+    if(S.days.length>60) S.days=S.days.slice(-60);
+  }
+}
 function onCorrect(v){
   v.correct++;
   v.box=Math.min(v.box+1,5);
   const xp=[0,5,8,12,18,25][v.box]||5;
-  rolloverDay();
+  rolloverDay(); markDay();
   S.xp+=xp; S.todayXP+=xp;
   S.sessionRight++; S.sessionXP+=xp;
   if(navigator.vibrate) navigator.vibrate(10);
@@ -1475,7 +1487,7 @@ function toggleStar(id){
 const SAVE_KEY='organika-academy-v1';
 function snapshot(){
   return {v:1,
-    state:{xp:S.xp,streak:S.streak,lastDay:S.lastDay,todayXP:S.todayXP,xpDay:S.xpDay,dailyGoal:S.dailyGoal,doneSits:S.doneSits||[],sessionLen:S.sessionLen||20},
+    state:{xp:S.xp,streak:S.streak,lastDay:S.lastDay,todayXP:S.todayXP,xpDay:S.xpDay,dailyGoal:S.dailyGoal,doneSits:S.doneSits||[],sessionLen:S.sessionLen||20,days:S.days||[]},
     vocab:VOCAB.filter(v=>v.correct||v.wrong||v.starred||v.lastSeen)
       .map(v=>({id:v.id,box:v.box,correct:v.correct,wrong:v.wrong,lastSeen:v.lastSeen,starred:v.starred}))};
 }
@@ -1565,7 +1577,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v39';
+const APP_VERSION='v40';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -2330,6 +2342,13 @@ function renderProgress(){
     <div class="prog-hero">
       <div class="prog-xp">${S.xp} XP</div>
       <div class="prog-streak">🔥 ${S.streak} day streak</div>
+      <div class="week-strip">${Array.from({length:7},(_,k)=>{
+        const d=new Date(Date.now()-(6-k)*86400000);
+        const key=d.toISOString().slice(0,10);
+        const hit=(S.days||[]).includes(key);
+        const lbl=['S','M','T','W','T','F','S'][d.getDay()];
+        return `<span class="wday${hit?' hit':''}"><i>${lbl}</i>${hit?'●':'○'}</span>`;
+      }).join('')}</div>
     </div>
     <div class="section-label">Mastery by Tier</div>
     ${'ABCDE'.split('').map(t=>{
