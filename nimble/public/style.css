@@ -203,6 +203,16 @@ textarea:focus { outline: none; border-color: var(--accent); }
   width: 100%;
 }
 
+.domain-intro {
+  color: var(--ink-2);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  max-width: 480px;
+}
+.domain-intro strong { color: var(--ink); font-weight: 600; }
+
+.result-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; justify-content: center; }
+
 /* Recent form (ready screen) */
 .recent-form { display: flex; align-items: center; gap: 8px; min-height: 28px; }
 .form-label { color: var(--ink-3); font-size: 0.78rem; margin-right: 2px; }

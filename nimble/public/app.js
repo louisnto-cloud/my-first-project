@@ -68,6 +68,7 @@
     $('readyMeta').textContent =
       `${app.timeLimit}s per response · level ${app.difficulty} · ${app.totalDrills} drill${app.totalDrills === 1 ? '' : 's'} done`;
     renderRecentForm(app.stats ? app.stats.history : []);
+    $('domainIntro').hidden = app.totalDrills > 0;
     show('ready');
   }
 
@@ -139,8 +140,37 @@
   });
 
   // ---------- drill flow ----------
+  const LOADING_LINES = [
+    'Setting the scene…',
+    'Someone is about to put you on the spot…',
+    'Raising the stakes…',
+    'Finding the pressure point…',
+    'The room is going quiet…',
+  ];
+
   $('startBtn').addEventListener('click', startDrill);
   $('nextBtn').addEventListener('click', startDrill);
+  $('retryBtn').addEventListener('click', retryDrill);
+
+  // Re-run the same scenario with a fresh clock — for drilling a moment
+  // until you find the answer you wish you'd given.
+  function retryDrill() {
+    if (!drill) return;
+    beginDrillView();
+  }
+
+  function beginDrillView() {
+    $('scenarioText').textContent = drill.scenario;
+    $('domainChip').textContent = DOMAIN_LABELS[drill.domain];
+    $('levelDots').innerHTML =
+      '●'.repeat(drill.difficulty) + `<span class="off">${'●'.repeat(5 - drill.difficulty)}</span>`;
+    $('responseBox').value = '';
+    submitting = false;
+    $('submitBtn').disabled = false;
+    show('drill');
+    $('responseBox').focus();
+    startTimer(drill.timeLimit || app.timeLimit);
+  }
   $('submitBtn').addEventListener('click', () => submit(false));
   $('responseBox').addEventListener('keydown', (e) => {
     if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') submit(false);
@@ -156,6 +186,7 @@
   });
 
   async function startDrill() {
+    $('loadingText').textContent = LOADING_LINES[Math.floor(Math.random() * LOADING_LINES.length)];
     show('loading');
     try {
       drill = await api('/api/drill/start', {});
@@ -164,16 +195,7 @@
       showReady();
       return;
     }
-    $('scenarioText').textContent = drill.scenario;
-    $('domainChip').textContent = DOMAIN_LABELS[drill.domain];
-    $('levelDots').innerHTML =
-      '●'.repeat(drill.difficulty) + `<span class="off">${'●'.repeat(5 - drill.difficulty)}</span>`;
-    $('responseBox').value = '';
-    submitting = false;
-    $('submitBtn').disabled = false;
-    show('drill');
-    $('responseBox').focus();
-    startTimer(drill.timeLimit);
+    beginDrillView();
   }
 
   const RING_CIRCUMFERENCE = 282.74; // 2πr for r=45
