@@ -52,9 +52,94 @@ const Parent = {
     wrap.appendChild(chart);
 
     const cur = Store.currentStreak(), best = Store.state.streak.best;
+    const totalStars = Store.state.totalStars;
     wrap.appendChild(U.el('div', 'parent-card',
-      `<h3>🔥 Streak</h3><div class="parent-row"><span>Current</span><b>${cur} day${cur === 1 ? '' : 's'}</b></div>
-       <div class="parent-row"><span>Best</span><b>${best} day${best === 1 ? '' : 's'}</b></div>`));
+      `<h3>🔥 Streak &amp; stars</h3>
+       <div class="parent-row"><span>Current streak</span><b>${cur} day${cur === 1 ? '' : 's'}</b></div>
+       <div class="parent-row"><span>Best streak</span><b>${best} day${best === 1 ? '' : 's'}</b></div>
+       <div class="parent-row"><span>Total stars earned</span><b>⭐ ${totalStars}</b></div>
+       <div class="parent-row"><span>Coins</span><b>🪙 ${Store.state.coins}</b></div>`));
+
+    // ---- Settings ----
+    const set = U.el('div', 'parent-card');
+    set.innerHTML = '<h3>⚙️ Settings</h3>';
+
+    // Narration speed
+    const speedRow = U.el('div', 'setting-row');
+    speedRow.innerHTML = '<span>Narration speed</span>';
+    const speedBtns = U.el('div', 'seg-btns');
+    [['Slow', 0.72], ['Normal', 0.92], ['Lively', 1.12]].forEach(([label, rate]) => {
+      const active = Math.abs((Store.state.settings.narrationRate || 0.92) - rate) < 0.01;
+      const b = U.el('button', 'seg-btn' + (active ? ' on' : ''), label);
+      b.addEventListener('click', () => {
+        Store.state.settings.narrationRate = rate;
+        Store.save();
+        Audio2.say('This is how fast I will talk.');
+        Parent.show();
+      });
+      speedBtns.appendChild(b);
+    });
+    speedRow.appendChild(speedBtns);
+    set.appendChild(speedRow);
+
+    // Reduce motion
+    const motionRow = U.el('div', 'setting-row');
+    motionRow.innerHTML = '<span>Calmer animations</span>';
+    const motionToggle = U.el('button', 'toggle' + (Store.state.settings.reduceMotion ? ' on' : ''),
+      Store.state.settings.reduceMotion ? 'On' : 'Off');
+    motionToggle.addEventListener('click', () => {
+      Store.state.settings.reduceMotion = !Store.state.settings.reduceMotion;
+      Store.save();
+      if (window.applyMotionPref) window.applyMotionPref();
+      Parent.show();
+    });
+    motionRow.appendChild(motionToggle);
+    set.appendChild(motionRow);
+
+    // Sound
+    const soundRow = U.el('div', 'setting-row');
+    soundRow.innerHTML = '<span>Sound &amp; voice</span>';
+    const soundToggle = U.el('button', 'toggle' + (!Audio2.muted ? ' on' : ''), Audio2.muted ? 'Off' : 'On');
+    soundToggle.addEventListener('click', () => {
+      Audio2.muted = !Audio2.muted;
+      Store.state.settings.muted = Audio2.muted;
+      Store.save();
+      Parent.show();
+    });
+    soundRow.appendChild(soundToggle);
+    set.appendChild(soundRow);
+
+    wrap.appendChild(set);
+
+    // ---- Manage ----
+    const manage = U.el('div', 'parent-card');
+    manage.innerHTML = '<h3>🛠️ Manage</h3>';
+
+    const replayBtn = U.el('button', 'manage-btn', '🔁 Replay the welcome intro');
+    replayBtn.addEventListener('click', () => {
+      Store.state.name = '';
+      Store.save();
+      location.reload();
+    });
+    manage.appendChild(replayBtn);
+
+    const resetBtn = U.el('button', 'manage-btn danger', '🗑️ Reset all progress');
+    let armed = false;
+    resetBtn.addEventListener('click', () => {
+      if (!armed) {
+        armed = true;
+        resetBtn.textContent = '⚠️ Tap again to erase everything';
+        resetBtn.classList.add('armed');
+        setTimeout(() => { armed = false; resetBtn.textContent = '🗑️ Reset all progress'; resetBtn.classList.remove('armed'); }, 4000);
+        return;
+      }
+      Store.reset();
+      location.reload();
+    });
+    manage.appendChild(resetBtn);
+    manage.appendChild(U.el('div', 'parent-note-sm', 'Resetting clears all levels, stars, coins, and the avatar. This cannot be undone.'));
+
+    wrap.appendChild(manage);
 
     screen.appendChild(wrap);
     app.appendChild(screen);

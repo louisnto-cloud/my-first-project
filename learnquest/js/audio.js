@@ -36,9 +36,11 @@ const Audio2 = {
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
     if (Audio2.voice) u.voice = Audio2.voice;
-    u.rate = opts.rate || 0.92;
+    const savedRate = (typeof Store !== 'undefined' && Store.state && Store.state.settings.narrationRate) || 0.92;
+    u.rate = opts.rate || savedRate;
     u.pitch = opts.pitch || 1.05;
-    speechSynthesis.speak(u);
+    // Guard against engines that throw on rapid cancel/speak cycles
+    try { speechSynthesis.speak(u); } catch (e) { /* ignore */ }
   },
 
   stop() { if ('speechSynthesis' in window) speechSynthesis.cancel(); },

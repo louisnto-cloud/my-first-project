@@ -19,7 +19,8 @@ const Store = {
       gamesOwned: [],
       streak: { count: 0, last: null, best: 0 },
       activity: {},       // 'YYYY-MM-DD' -> levels completed that day
-      settings: { muted: false },
+      settings: { muted: false, narrationRate: 0.92, reduceMotion: false },
+      dailyGoal: 3,       // levels per day the streak flame celebrates
       name: ''
     };
   },

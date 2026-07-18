@@ -42,6 +42,11 @@ const U = {
   esc(s) {
     return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   },
+  // True when the child (or parent setting) prefers less animation
+  reduceMotion() {
+    if (typeof Store !== 'undefined' && Store.state && Store.state.settings.reduceMotion) return true;
+    return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  },
   gcd(a, b) { return b ? U.gcd(b, a % b) : a; },
   round(n, d) { const f = Math.pow(10, d); return Math.round(n * f) / f; },
   todayKey() {

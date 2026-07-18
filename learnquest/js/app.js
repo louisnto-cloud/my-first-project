@@ -13,6 +13,11 @@ window.addEventListener('DOMContentLoaded', () => {
   // Don't keep narrating into a hidden tab / sleeping iPad
   document.addEventListener('visibilitychange', () => { if (document.hidden) Audio2.stop(); });
 
+  // Honour reduced-motion preference (OS setting or parent toggle)
+  const applyMotion = () => document.body.classList.toggle('reduce-motion', U.reduceMotion());
+  applyMotion();
+  window.applyMotionPref = applyMotion;
+
   if (!Store.state.name) {
     // First run: pick a buddy name — spoken, tap to choose
     const app = document.getElementById('app');

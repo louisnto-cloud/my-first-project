@@ -8,6 +8,7 @@ const WorldMap = {
   // Ambient drifting scenery so each region feels like a place, not a menu
   sceneLayer(scene) {
     const layer = U.el('div', 'scene-layer');
+    if (U.reduceMotion()) return layer;
     (scene || []).forEach((emo, i) => {
       for (let k = 0; k < 2; k++) {
         const s = U.el('span', 'scene-item', emo);

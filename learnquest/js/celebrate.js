@@ -4,6 +4,7 @@
 const Celebrate = {
 
   confetti(count) {
+    if (U.reduceMotion()) return;
     const layer = U.el('div', 'confetti-layer');
     const colors = ['#ff7a59', '#ffd34d', '#4ecdc4', '#9b8cff', '#f26d9c', '#5fb0f2'];
     for (let i = 0; i < (count || 36); i++) {
