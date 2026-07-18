@@ -153,7 +153,13 @@
   .actions button{transition:border-color .15s,color .15s,transform .15s}
   .actions button:hover{transform:translateY(-1px)}
   @media (prefers-reduced-motion: reduce){*{transition:none !important;animation:none !important}}
-  @media print{.nav,.actions,.scen,.note{display:none}.view{display:block !important}.panel{break-inside:avoid}}
+  @media print{
+    .nav,.actions,.scen,.note{display:none}
+    .view{display:none} .view.on{display:block}       /* print just the active tab */
+    .panel{break-inside:avoid;box-shadow:none;border:1px solid #ccc}
+    .chart{overflow:visible}
+    body{-webkit-print-color-adjust:exact;print-color-adjust:exact}  /* keep chart/heat colours */
+  }
 </style>
 </head>
 <body>
