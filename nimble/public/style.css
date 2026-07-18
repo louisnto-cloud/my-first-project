@@ -112,6 +112,24 @@ input:focus { outline: none; border-color: var(--accent); }
 .choices button { min-width: 76px; padding: 14px 0; font-size: 1.05rem; }
 .choices button.selected { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
 
+/* Warmup */
+.warmup-count {
+  font-size: 5rem;
+  font-weight: 750;
+  line-height: 1;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  animation: warmupPulse 0.7s ease;
+}
+@keyframes warmupPulse {
+  0% { opacity: 0.2; transform: scale(0.7); }
+  40% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .warmup-count { animation: none; }
+}
+
 /* Drill */
 .timer-ring { position: relative; width: 108px; height: 108px; }
 .timer-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }

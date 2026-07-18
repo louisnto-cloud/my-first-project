@@ -1,7 +1,7 @@
 // Nimble frontend — plain JS state machine over the views in index.html.
 (() => {
   const $ = (id) => document.getElementById(id);
-  const views = ['key', 'setup', 'ready', 'loading', 'drill', 'judging', 'result', 'stats'];
+  const views = ['key', 'setup', 'ready', 'loading', 'warmup', 'drill', 'judging', 'result', 'stats'];
 
   const DOMAIN_LABELS = {
     business: 'Business & sales negotiation',
@@ -209,7 +209,35 @@
   function retryDrill() {
     if (!drill) return;
     isRetry = true;
-    beginDrillView();
+    runWarmup(beginDrillView);
+  }
+
+  const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let warmupTimer = null;
+
+  // A skippable 3-2-1 pre-roll so the scenario and clock don't hit cold.
+  // Skipped entirely under reduced-motion; click or any key jumps straight in.
+  function runWarmup(done) {
+    if (reducedMotion()) { done(); return; }
+    let n = 3;
+    const countEl = $('warmupCount');
+    countEl.textContent = n;
+    announce('Get ready');
+    show('warmup');
+    const cleanup = () => {
+      clearInterval(warmupTimer); warmupTimer = null;
+      document.removeEventListener('keydown', onKey, true);
+      $('view-warmup').removeEventListener('click', skip);
+    };
+    const skip = () => { cleanup(); done(); };
+    const onKey = (e) => { e.preventDefault(); e.stopImmediatePropagation(); skip(); };
+    document.addEventListener('keydown', onKey, true);
+    $('view-warmup').addEventListener('click', skip);
+    warmupTimer = setInterval(() => {
+      n -= 1;
+      if (n <= 0) skip();
+      else { countEl.textContent = n; countEl.style.animation = 'none'; void countEl.offsetWidth; countEl.style.animation = ''; }
+    }, 700);
   }
 
   function beginDrillView() {
@@ -255,7 +283,7 @@
       return;
     }
     isRetry = false;
-    beginDrillView();
+    runWarmup(beginDrillView);
   }
 
   const RING_CIRCUMFERENCE = 282.74; // 2πr for r=45
