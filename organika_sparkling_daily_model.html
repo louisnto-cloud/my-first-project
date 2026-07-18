@@ -4,6 +4,10 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Organika · Sparkling Daily — One-Year Model</title>
+<meta name="description" content="Organika Sparkling Daily — interactive one-year operating model: four scenarios, full P&amp;L, pricing lab, EBITDA sensitivity, monthly phasing and goal-seek targets."/>
+<meta name="color-scheme" content="light dark"/>
+<meta name="theme-color" content="#0a84ff"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230a84ff'/%3E%3Ccircle cx='11' cy='11' r='4.2' fill='%23ffffff' opacity='.7'/%3E%3C/svg%3E"/>
 <style>
   :root{
     --ink:#1d1d1f; --soft:#6e6e73; --line:#e6e8ec; --bg:#fbfbfd; --card:#ffffff;
@@ -68,23 +72,129 @@
   .seg button{border:0;background:#fff;padding:7px 14px;font-weight:600;font-size:13px;color:var(--soft);cursor:pointer}
   .seg button.on{background:var(--ink);color:#fff}
 </style>
+<style>
+  /* --- iteration 1: theme tokens, dark mode, responsive, a11y --- */
+  :root{
+    --field:#fff7cc; --field-ink:#1d1d1f; --hl:var(--hl); --best-bg:#e8f7ee;
+    --note-bg:#f3f7ff; --note-line:#d9e6ff; --note-ink:#33506e;
+    --chip-bg:#1d1d1f; --chip-fg:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#f2f2f7; --soft:#9b9ba1; --line:#2c2c2e; --bg:#000000; --card:#1c1c1e;
+      --accent:#0a84ff; --accent2:#5ac8e6; --good:#30d158; --bad:#ff5a5f; --amber:#2e2a16;
+      --field:#2e2a16; --field-ink:#f7e9a8; --hl:#10233d; --best-bg:#0f2c1c;
+      --note-bg:#0f1b2e; --note-line:#20365a; --note-ink:#a9c6ee;
+      --chip-bg:#f2f2f7; --chip-fg:#000000;
+      --shadow:0 1px 3px rgba(0,0,0,.5),0 10px 28px rgba(0,0,0,.45);
+    }
+  }
+  .nav{background:color-mix(in srgb,var(--bg) 82%,transparent)}
+  .nav button.on,.seg button.on{background:var(--chip-bg);color:var(--chip-fg)}
+  .seg button{background:var(--card);color:var(--soft)}
+  .pill{background:var(--card)}
+  input.cell{background:var(--field);color:var(--field-ink)}
+  .best{background:var(--best-bg) !important;color:var(--good)}
+  .note{background:var(--note-bg);border-color:var(--note-line);color:var(--note-ink)}
+  /* header actions */
+  .head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .actions{display:flex;gap:8px;flex-wrap:wrap}
+  .actions button{border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;
+    font-size:13px;font-weight:600;border-radius:980px;padding:7px 14px;cursor:pointer;transition:.15s}
+  .actions button:hover{border-color:var(--accent);color:var(--accent)}
+  /* heat legend */
+  .heat-legend{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:12px;color:var(--soft)}
+  .heat-legend .ramp{height:10px;width:120px;border-radius:6px;
+    background:linear-gradient(90deg,#f86a6b,#ffeb84,#63be7b)}
+  /* charts */
+  .chart{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:2px 0 8px;padding-bottom:2px}
+  .chart svg{display:block}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  /* help chip */
+  .help{display:inline-block;width:15px;height:15px;line-height:15px;text-align:center;border-radius:50%;
+    background:var(--line);color:var(--soft);font-size:10px;font-weight:700;cursor:help;margin-left:5px;vertical-align:middle}
+  /* executive insight callout */
+  .insight{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid var(--line);
+    border-left:4px solid var(--accent);border-radius:14px;padding:14px 18px;margin:0 0 18px;
+    font-size:15px;line-height:1.55;box-shadow:var(--shadow)}
+  /* toast */
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(12px);
+    background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:980px;font-size:13px;font-weight:600;
+    opacity:0;pointer-events:none;transition:.25s;z-index:100;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+  .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+  /* seasonality editor */
+  .seasrow{display:flex;flex-wrap:wrap;gap:8px 12px;margin:4px 0 18px}
+  .seasrow label{font-size:11px;color:var(--soft);font-weight:700;display:flex;flex-direction:column;gap:3px}
+  .seasrow input.seas{width:60px}
+  /* KPI delta line */
+  .kpi .sub{margin-top:9px;font-size:12px;font-weight:600;line-height:1.4}
+  .kpi .sub .d.up{color:var(--good)} .kpi .sub .d.down{color:var(--bad)}
+  .kpi .ctx{color:var(--soft);font-weight:500}
+  .kpi .k[title]{cursor:help}
+  /* horizontal scroll for wide tables on small screens */
+  #cmp,#pnl,#pricing,#sens,#asmpSku,#asmpCo,#asmpLev{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  h1{font-size:clamp(30px,7vw,46px)}
+  @media(max-width:600px){
+    header{padding:30px 0 6px}.sub{font-size:16px}
+    .wrap{padding:0 16px 60px}.nav{margin:0 -16px 22px;padding:10px 16px}
+    .kpi .v{font-size:22px}
+  }
+  button:focus-visible,input.cell:focus-visible,.nav button:focus-visible,.pill:focus-visible{
+    outline:2px solid var(--accent);outline-offset:2px}
+  /* motion & interaction polish */
+  @keyframes kpiIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @keyframes viewIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  .kpi{animation:kpiIn .34s cubic-bezier(.2,.7,.2,1) both;transition:transform .18s ease,box-shadow .18s ease}
+  .kpi:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.10)}
+  .view.on{animation:viewIn .26s ease}
+  .pill{transition:transform .15s ease,background .15s,box-shadow .15s,border-color .15s}
+  .pill:hover{transform:translateY(-1px)}
+  .nav button{transition:background .15s,color .15s}
+  .actions button{transition:border-color .15s,color .15s,transform .15s}
+  .actions button:hover{transform:translateY(-1px)}
+  @media (prefers-reduced-motion: reduce){*{transition:none !important;animation:none !important}}
+  @media print{
+    .nav,.actions,.scen,.note{display:none}
+    .view{display:none} .view.on{display:block}       /* print just the active tab */
+    .panel{break-inside:avoid;box-shadow:none;border:1px solid #ccc}
+    .chart{overflow:visible}
+    body{-webkit-print-color-adjust:exact;print-color-adjust:exact}  /* keep chart/heat colours */
+  }
+</style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow">Organika</div>
-    <h1>Sparkling Daily</h1>
-    <p class="sub">One-Year Operating Model · FY2026 · all $ CDN</p>
+    <div class="head-row">
+      <div>
+        <div class="eyebrow">Organika</div>
+        <h1>Sparkling Daily</h1>
+        <p class="sub">One-Year Operating Model · FY2026 · all $ CDN</p>
+      </div>
+      <div class="actions">
+        <button id="btnSummary" title="Copy a plain-text executive summary to paste into an email">📋 Summary</button>
+        <button id="btnShare" title="Copy a link that reproduces this exact model">🔗 Share</button>
+        <button id="btnExport" title="Download the scenario comparison as CSV">↓ CSV</button>
+        <button id="btnPrint" title="Print or save as PDF">⎙ Print</button>
+        <button id="btnReset" title="Reset all assumptions to defaults">↺ Reset</button>
+      </div>
+    </div>
   </header>
 
   <div class="nav" id="nav"></div>
 
-  <div class="scen" id="scenBar"></div>
+  <div class="scen" id="scenBar" role="group" aria-label="Scenario"></div>
 
   <!-- OVERVIEW -->
   <section class="view on" data-view="Overview">
     <div class="note">Pick a scenario above. The cards show that scenario's full-year result. To change any number, open <b>Assumptions</b> — it's the only place you type.</div>
+    <div class="insight" id="insight" aria-live="polite"></div>
     <div class="kpis" id="kpis"></div>
+    <div class="panel">
+      <h2>EBITDA by scenario</h2>
+      <p class="h-sub">Your selected scenario is highlighted. Updates live as you edit Assumptions.</p>
+      <div class="chart" id="scenChart"></div>
+    </div>
     <div class="panel">
       <h2>Scenario comparison</h2>
       <p class="h-sub">All four scenarios side by side — updates live as you edit Assumptions.</p>
@@ -97,7 +207,14 @@
     <div class="panel">
       <h2>Profit &amp; Loss — <span class="scn-name"></span></h2>
       <p class="h-sub">6 SKUs across the columns, company total on the right, all the way to net income.</p>
+      <div class="chart" id="pnlChart"></div>
       <div id="pnl"></div>
+    </div>
+    <div class="panel">
+      <h2>Contribution by SKU — <span class="scn-name"></span></h2>
+      <p class="h-sub">Annual contribution margin per SKU. Colour = flavour; lighter bars are 4-Packs.</p>
+      <div class="chart" id="skuChart"></div>
+      <div class="legend" id="skuLegend"></div>
     </div>
   </section>
 
@@ -122,6 +239,53 @@
       <div id="sens" class="heat"></div>
       <p class="hint" id="beLine" style="margin-top:14px"></p>
     </div>
+    <div class="panel">
+      <h2>Break-even curve</h2>
+      <p class="h-sub">EBITDA as annual volume flexes at base price; the four scenarios are plotted as points. Below the red line you lose money.</p>
+      <div class="chart" id="beChart"></div>
+    </div>
+    <div class="panel">
+      <h2>What moves EBITDA most</h2>
+      <p class="h-sub">EBITDA swing if each driver moves ±10% (at Base, all else equal). The longest bar is your biggest lever.</p>
+      <div class="chart" id="tornado"></div>
+      <div class="legend"><span><span class="swatch" style="background:var(--good)"></span>+10% (favourable)</span><span><span class="swatch" style="background:var(--bad)"></span>−10% (adverse)</span></div>
+    </div>
+  </section>
+
+  <!-- MONTHLY -->
+  <section class="view" data-view="Monthly">
+    <div class="panel">
+      <h2>Monthly phasing — <span class="scn-name"></span></h2>
+      <p class="h-sub">Annual result spread across the year by seasonality. Fixed costs land evenly, so low-volume months can run at an EBITDA loss — the bars show exactly when.</p>
+      <div id="monSeason"></div>
+      <div class="chart" id="monChart"></div>
+      <div id="monTable"></div>
+    </div>
+  </section>
+
+  <!-- TARGETS -->
+  <section class="view" data-view="Targets">
+    <div class="panel">
+      <h2>Targets — what volume hits your goal?</h2>
+      <p class="h-sub">Holding price at the <span class="scn-name"></span> scenario, the model solves the volume needed to reach a target. Switch metric and type a goal.</p>
+      <div class="seg" id="tgtSeg">
+        <button data-m="ebitda" class="on">EBITDA</button>
+        <button data-m="ni">Net Income</button>
+      </div>
+      <div style="margin:6px 0 2px"><label class="hint">Target (CDN $) &nbsp;<input class="cell" id="tgtVal" type="number" step="10000" style="width:140px" oninput="renderTargets()"></label></div>
+      <div id="tgtOut"></div>
+    </div>
+  </section>
+
+  <!-- OUTLOOK -->
+  <section class="view" data-view="Outlook">
+    <div class="panel">
+      <h2>3-year outlook — <span class="scn-name"></span></h2>
+      <p class="h-sub">The selected scenario grown by annual volume, with per-case economics and fixed costs held flat — so EBITDA margin expands with scale (operating leverage). A simple trajectory, not a channel forecast.</p>
+      <label class="hint">Annual volume growth &nbsp;<input class="cell" id="growthInp" type="number" step="5" min="0" value="20" style="width:70px"> %</label>
+      <div class="chart" id="outlookChart" style="margin-top:10px"></div>
+      <div id="outlookTable"></div>
+    </div>
   </section>
 
   <!-- ASSUMPTIONS -->
@@ -129,11 +293,13 @@
     <div class="note">This is the only place you type. Edit any yellow cell — every number everywhere updates instantly.</div>
     <div class="panel">
       <h2>SKU assumptions <span class="hint">(per case)</span></h2>
+      <p class="h-sub">Per-case economics for all six SKUs. Hover the <b>?</b> on any column for what it means.</p>
       <div id="asmpSku"></div>
     </div>
     <div class="grid2">
       <div class="panel">
         <h2>Company (annual)</h2>
+        <p class="h-sub">Fixed overheads and below-the-line items applied across the whole line.</p>
         <div id="asmpCo"></div>
       </div>
       <div class="panel">
@@ -142,10 +308,15 @@
         <p class="hint" style="margin-top:10px">Volume ×, Price ×, and trade-discount Δ vs base. Elasticity (above) makes volume respond to price — set it to e.g. −1.3 to switch on.</p>
       </div>
     </div>
+    <div class="panel">
+      <h2>Model checks</h2>
+      <p class="h-sub">Live integrity checks — everything should read ✓ pass. Run them before the model goes to finance.</p>
+      <div id="checks"></div>
+    </div>
   </section>
 
   <div class="foot">
-    v3.0 · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
+    v3.25 · 8 tabs · waterfall + scenario + SKU + tornado + break-even + outlook charts · KPI &amp; scenario deltas · monthly phasing · 3-year outlook · goal-seek targets · pricing heat · integrity checks · shareable links · full CSV · keyboard nav · a11y · dark-mode aware · your edits are saved in this browser · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
     Mirrors the Excel workbook (Home · Assumptions · Dashboard · scenarios · Monthly · Pricing Lab · Targets · Sensitivity · Checks).
   </div>
 </div>
@@ -169,15 +340,130 @@ const LEVERS = {
   Stretch:{v:1.60, p:1.05, d:-0.01},
 };
 const SCEN = ["Low","Base","High","Stretch"];
+// Seasonality: relative monthly weights (sparkling beverage — summer peak, Dec bump)
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const SEASON = [0.60,0.60,0.80,0.90,1.15,1.35,1.45,1.35,1.05,0.85,0.75,1.05];
 let current = "Base";
 let priceMetric = "gp";
+let outlookGrowth = 0.20;   // annual volume growth for the 3-year outlook
+
+// ---------------- persistence (survives reload) ----------------
+const LS = "organika.model.v3";
+const DEFAULTS = JSON.parse(JSON.stringify({SKUS, CO, LEVERS, SEASON}));
+function persist(){ try{ localStorage.setItem(LS, JSON.stringify({SKUS, CO, LEVERS, SEASON, current, outlookGrowth})); }catch(e){} }
+function restore(){
+  try{
+    const s = JSON.parse(localStorage.getItem(LS)); if(!s) return;
+    (s.SKUS||[]).forEach((o,i)=>{ if(SKUS[i]) Object.assign(SKUS[i], o); });
+    Object.assign(CO, s.CO||{});
+    Object.keys(s.LEVERS||{}).forEach(k=>{ if(LEVERS[k]) Object.assign(LEVERS[k], s.LEVERS[k]); });
+    if(Array.isArray(s.SEASON)) s.SEASON.forEach((v,i)=>{ if(i<SEASON.length) SEASON[i]=v; });
+    if(s.current && SCEN.includes(s.current)) current = s.current;
+    if(typeof s.outlookGrowth==="number") outlookGrowth = s.outlookGrowth;
+  }catch(e){}
+}
+function resetAll(){
+  const d = JSON.parse(JSON.stringify(DEFAULTS));
+  d.SKUS.forEach((o,i)=>Object.assign(SKUS[i], o));
+  Object.assign(CO, d.CO);
+  Object.keys(d.LEVERS).forEach(k=>Object.assign(LEVERS[k], d.LEVERS[k]));
+  d.SEASON.forEach((v,i)=>SEASON[i]=v);
+  persist(); renderAsmp(); refresh();
+}
+function exportCsv(){
+  const q = v => { const s=String(v==null?"":v); return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s; };
+  const rows = [];
+  rows.push(["Organika Sparkling Daily — one-year model"]);
+  rows.push(["Selected scenario", current]);
+  rows.push([]);
+  // 1) scenario summary
+  const data = SCEN.map(compute);
+  rows.push(["SCENARIO SUMMARY"]);
+  rows.push(["Metric", ...SCEN]);
+  [["Physical Cases",r=>Math.round(r.cases)],["Net Sales",r=>Math.round(r.net)],
+   ["Gross Profit",r=>Math.round(r.gp)],["GP %",r=>(r.gppct*100).toFixed(1)],
+   ["Contribution",r=>Math.round(r.cm)],["EBITDA",r=>Math.round(r.ebitda)],
+   ["EBITDA %",r=>(r.ebitdapct*100).toFixed(1)],["Net Income",r=>Math.round(r.ni)]]
+    .forEach(d=>rows.push([d[0], ...data.map(d[1])]));
+  rows.push([]);
+  // 2) P&L by SKU for the selected scenario
+  const r = compute(current), L = r.lines;
+  rows.push(["P&L BY SKU — "+current]);
+  rows.push(["CDN $", ...SKUS.map(s=>s.flav+" "+s.fmt), "Total"]);
+  [["Cases",l=>Math.round(l.cases),Math.round(r.cases)],["Gross Revenue",l=>Math.round(l.gross),Math.round(r.gross)],
+   ["Trade Discounts",l=>Math.round(l.tdisc),Math.round(r.tdisc)],["Net Sales",l=>Math.round(l.net),Math.round(r.net)],
+   ["Cost of Sales",l=>Math.round(l.cogs),Math.round(r.cogs)],["Gross Profit",l=>Math.round(l.gp),Math.round(r.gp)],
+   ["A&P",l=>Math.round(l.ap),Math.round(r.ap)],["Contribution",l=>Math.round(l.cm),Math.round(r.cm)]]
+    .forEach(d=>rows.push([d[0], ...L.map(d[1]), d[2]]));
+  rows.push(["EBITDA","","","","","","","",Math.round(r.ebitda)]);
+  rows.push(["Net Income","","","","","","","",Math.round(r.ni)]);
+  rows.push([]);
+  // 3) monthly phasing
+  rows.push(["MONTHLY PHASING — "+current]);
+  rows.push(["Month","Cases","Net Sales","Contribution","EBITDA","Cumulative EBITDA"]);
+  monthlyData().forEach(m=>rows.push([m.m,Math.round(m.cases),Math.round(m.net),Math.round(m.contrib),Math.round(m.ebitda),Math.round(m.cumE)]));
+  const csv = rows.map(rw=>rw.map(q).join(",")).join("\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv],{type:"text/csv"}));
+  a.download = "organika_sparkling_daily_model.csv"; a.click();
+  toast("CSV exported");
+}
+// ---------- shareable link (encodes the whole model in the URL, no backend) ----------
+function shareState(){
+  return location.origin + location.pathname +
+    "#m=" + btoa(unescape(encodeURIComponent(JSON.stringify({SKUS, CO, LEVERS, SEASON, current, outlookGrowth}))));
+}
+function applyHash(){
+  try{
+    const m = (location.hash.match(/[#&]m=([^&]+)/)||[])[1]; if(!m) return false;
+    const s = JSON.parse(decodeURIComponent(escape(atob(m))));
+    (s.SKUS||[]).forEach((o,i)=>{ if(SKUS[i]) Object.assign(SKUS[i], o); });
+    Object.assign(CO, s.CO||{});
+    Object.keys(s.LEVERS||{}).forEach(k=>{ if(LEVERS[k]) Object.assign(LEVERS[k], s.LEVERS[k]); });
+    if(Array.isArray(s.SEASON)) s.SEASON.forEach((v,i)=>{ if(i<SEASON.length) SEASON[i]=v; });
+    if(s.current && SCEN.includes(s.current)) current = s.current;
+    if(typeof s.outlookGrowth==="number") outlookGrowth = s.outlookGrowth;
+    return true;
+  }catch(e){ return false; }
+}
+function toast(msg){
+  let t = el("toast");
+  if(!t){ t=document.createElement("div"); t.id="toast"; t.className="toast"; t.setAttribute("role","status"); t.setAttribute("aria-live","polite"); document.body.appendChild(t); }
+  t.textContent = msg; t.classList.add("on");
+  clearTimeout(t._h); t._h = setTimeout(()=>t.classList.remove("on"), 1900);
+}
+function summaryText(){
+  const r = compute(current), be = breakeven(), lever = sensitivityDrivers().ds[0];
+  return [
+    `Organika Sparkling Daily — ${current} case (FY2026)`,
+    `Net sales: ${money(r.net)} on ${num(r.cases)} cases`,
+    `Gross profit: ${money(r.gp)} (${pct(r.gppct)})`,
+    `EBITDA: ${money(r.ebitda)} (${pct(r.ebitdapct)})`,
+    `Net income: ${money(r.ni)}`,
+    `Break-even: ~${num(be.cases)} cases (${mult(be.mv)} of base volume)`,
+    `Biggest EBITDA lever: ${lever.name} (±${money(lever.swing/2)} per 10%)`
+  ].join("\n");
+}
+function doSummary(){
+  const txt = summaryText();
+  if(navigator.clipboard && navigator.clipboard.writeText)
+    navigator.clipboard.writeText(txt).then(()=>toast("Summary copied — paste into your email")).catch(()=>window.prompt("Copy this summary:", txt));
+  else window.prompt("Copy this summary:", txt);
+}
+function doShare(){
+  const url = shareState();
+  try{ history.replaceState(null, "", "#m="+url.split("#m=")[1]); }catch(e){}
+  if(navigator.clipboard && navigator.clipboard.writeText)
+    navigator.clipboard.writeText(url).then(()=>toast("Shareable link copied to clipboard")).catch(()=>window.prompt("Copy this link:", url));
+  else window.prompt("Copy this link:", url);
+}
 
 // ---------------- formatting helpers ----------------
-const money = v => (v<0?"-":"")+"$"+Math.abs(v).toLocaleString(undefined,{maximumFractionDigits:0});
-const money2 = v => (v<0?"-":"")+"$"+Math.abs(v).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
-const pct = v => (v*100).toFixed(1)+"%";
-const num = v => Math.round(v).toLocaleString();
-const mult = v => v.toFixed(2)+"×";
+const money = v => !isFinite(v) ? "—" : (v<0?"-":"")+"$"+Math.abs(v).toLocaleString(undefined,{maximumFractionDigits:0});
+const money2 = v => !isFinite(v) ? "—" : (v<0?"-":"")+"$"+Math.abs(v).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+const pct = v => !isFinite(v) ? "—" : (v*100).toFixed(1)+"%";
+const num = v => !isFinite(v) ? "—" : Math.round(v).toLocaleString();
+const mult = v => !isFinite(v) ? "—" : v.toFixed(2)+"×";
 
 // ---------------- core engine ----------------
 function skuLine(s, lev){
@@ -193,8 +479,8 @@ function skuLine(s, lev){
   const cm = gp - ap;
   return {cases, cp, disc, gross, tdisc, net, cogsd:cases*s.cosd, cogsi:cases*s.cosi, cogs, gp, ap, cm};
 }
-function compute(name){
-  const lev = LEVERS[name];
+function compute(name){ return computeLever(LEVERS[name]); }
+function computeLever(lev){
   const lines = SKUS.map(s=>skuLine(s,lev));
   const sum = k => lines.reduce((a,l)=>a+l[k],0);
   const net = sum("net"), gp = sum("gp"), cm = sum("cm");
@@ -234,36 +520,124 @@ function breakeven(){
 // ---------------- rendering ----------------
 function el(id){return document.getElementById(id);}
 
-function renderKpis(){
-  const r = compute(current);
-  const cards = [
-    ["Net Sales", money(r.net)],
-    ["Gross Profit %", pct(r.gppct)],
-    ["EBITDA", money(r.ebitda), r.ebitda<0],
-    ["EBITDA %", pct(r.ebitdapct)],
-    ["Net Income", money(r.ni), r.ni<0],
-    ["Physical Cases", num(r.cases)],
+// ---------- 3-year outlook (volume growth, fixed costs held flat = operating leverage) ----------
+function outlookData(g){
+  const bl=LEVERS[current], yrs=[];
+  for(let y=1;y<=3;y++){
+    const r=computeLever({v: bl.v*Math.pow(1+g,y-1), p: bl.p, d: bl.d});
+    yrs.push({year:y, cases:r.cases, net:r.net, ebitda:r.ebitda, ebitdapct:r.ebitdapct, ni:r.ni});
+  }
+  return yrs;
+}
+function outlookChartSVG(yrs){
+  const W=560,H=220,padX=20,padB=40,padT=30;
+  const max=Math.max(...yrs.map(y=>y.net),1);
+  const gap=(W-2*padX)/yrs.length, bw=Math.min(96,gap*0.5), xC=i=>padX+gap*i+gap/2, Y=v=>padT+(1-v/max)*(H-padT-padB);
+  let g=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:420px" role="img" aria-label="Three-year net sales outlook">`;
+  g+=`<line x1="${padX}" y1="${(H-padB).toFixed(1)}" x2="${W-padX}" y2="${(H-padB).toFixed(1)}" stroke="var(--line)"/>`;
+  yrs.forEach((yr,i)=>{ const x=xC(i)-bw/2, yt=Y(yr.net), h=Math.max(1,(H-padB)-yt);
+    g+=`<rect x="${x.toFixed(1)}" y="${yt.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="4" fill="var(--accent)"><title>Year ${yr.year}: net ${money(yr.net)}, EBITDA ${money(yr.ebitda)} (${pct(yr.ebitdapct)})</title></rect>`;
+    g+=`<text x="${xC(i).toFixed(1)}" y="${(yt-18).toFixed(1)}" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">${sMoney(yr.net)}</text>`;
+    g+=`<text x="${xC(i).toFixed(1)}" y="${(yt-5).toFixed(1)}" text-anchor="middle" font-size="10" fill="var(--good)">${pct(yr.ebitdapct)} EBITDA</text>`;
+    g+=`<text x="${xC(i).toFixed(1)}" y="${(H-padB+18).toFixed(1)}" text-anchor="middle" font-size="11" fill="var(--soft)">Year ${yr.year}</text>`; });
+  return g+"</svg>";
+}
+function renderOutlook(){
+  if(!el("outlookTable")) return;
+  const yrs=outlookData(outlookGrowth);
+  el("outlookChart").innerHTML=outlookChartSVG(yrs);
+  let h=`<table aria-label="Three-year outlook"><thead><tr><th>Year</th><th>Cases</th><th>Net Sales</th><th>EBITDA</th><th>EBITDA %</th><th>Net Income</th></tr></thead><tbody>`;
+  yrs.forEach(yr=>{ h+=`<tr><td>Year ${yr.year}</td><td>${num(yr.cases)}</td><td>${money(yr.net)}</td>`+
+    `<td${yr.ebitda<0?' style="color:var(--bad)"':''}>${money(yr.ebitda)}</td><td>${pct(yr.ebitdapct)}</td>`+
+    `<td${yr.ni<0?' style="color:var(--bad)"':''}>${money(yr.ni)}</td></tr>`; });
+  el("outlookTable").innerHTML=h+`</tbody></table>`;
+}
+function renderChecks(){
+  if(!el("checks")) return;
+  const r=compute(current), m=monthlyData(), be=breakeven();
+  const sumMonthlyE=m.reduce((a,x)=>a+x.ebitda,0);
+  const sumSkuNet=r.lines.reduce((a,l)=>a+l.net,0);
+  const sumSkuCm=r.lines.reduce((a,l)=>a+l.cm,0);
+  const near=(a,b)=>Math.abs(a-b)<1;
+  const checks=[
+    ["Monthly EBITDA ties to annual", near(sumMonthlyE,r.ebitda), `${money(sumMonthlyE)} vs ${money(r.ebitda)}`],
+    ["Σ SKU net sales = company net", near(sumSkuNet,r.net), `${money(sumSkuNet)} vs ${money(r.net)}`],
+    ["Σ SKU contribution = company", near(sumSkuCm,r.cm), `${money(sumSkuCm)} vs ${money(r.cm)}`],
+    ["Tax is non-negative", r.tax>=-0.01, money(r.tax)],
+    ["All SKU volumes ≥ 0", SKUS.every(s=>s.vol>=0), ""],
+    ["All SKU prices ≥ 0", SKUS.every(s=>s.cp>=0), ""],
+    ["Break-even is finite", isFinite(be.mv), isFinite(be.mv)?mult(be.mv)+" volume":"unreachable"],
   ];
+  const passed=checks.filter(c=>c[1]).length;
+  let h=`<p class="hint" style="margin:0 0 10px">${passed} of ${checks.length} checks passing.</p>`+
+    `<table aria-label="Model integrity checks"><thead><tr><th>Check</th><th>Status</th><th>Detail</th></tr></thead><tbody>`;
+  checks.forEach(c=>{ h+=`<tr><td>${c[0]}</td><td style="color:${c[1]?'var(--good)':'var(--bad)'};font-weight:700">${c[1]?'✓ pass':'✗ fail'}</td><td class="hint">${c[2]}</td></tr>`; });
+  el("checks").innerHTML=h+`</tbody></table>`;
+}
+function renderInsight(){
+  if(!el("insight")) return;
+  const r = compute(current), be = breakeven(), prof = r.ni>=0;
+  const lever = sensitivityDrivers().ds[0];
+  const marg = SKUS.map((s,i)=>({name:`${s.flav} ${s.fmt}`, m: r.lines[i].net ? r.lines[i].cm/r.lines[i].net : 0}));
+  marg.sort((a,b)=>b.m-a.m);
+  el("insight").innerHTML =
+    `<b>${current} case:</b> Sparkling Daily does <b>${money(r.net)}</b> net sales on <b>${num(r.cases)}</b> cases — `+
+    `a <b>${pct(r.ebitdapct)}</b> EBITDA margin (${money(r.ebitda)}) and `+
+    `<b style="color:${prof?'var(--good)':'var(--bad)'}">${money(r.ni)} net ${prof?'income':'loss'}</b>. `+
+    `Break-even sits near <b>${num(be.cases)}</b> cases (${mult(be.mv)} of base volume).`+
+    `<br><span style="color:var(--soft)">Biggest EBITDA lever: <b style="color:var(--ink)">${lever.name}</b> (±${money(lever.swing/2)} per 10%). `+
+    `Strongest margin: <b style="color:var(--ink)">${marg[0].name}</b> at ${pct(marg[0].m)} contribution.</span>`;
+}
+function renderKpis(){
+  const r = compute(current), b = compute("Base"), isBase = current==="Base";
+  const D = (delta, kind)=>{
+    if(isBase) return `<span class="ctx">base case</span>`;
+    const cls = delta>=0?"up":"down", tri = delta>=0?"▲":"▼", sign = delta>=0?"+":"−", a = Math.abs(delta);
+    const s = kind==="pp" ? sign+(a*100).toFixed(1)+" pp" : kind==="num" ? sign+num(a) : sign+sMoney(a);
+    return `<span class="d ${cls}">${tri} ${s} vs Base</span>`;
+  };
+  const cards = [
+    ["Net Sales", money(r.net), r.net-b.net, "money", false, `${num(r.cases)} cs · ${money2(r.net/(r.cases||1))}/cs`],
+    ["Gross Profit %", pct(r.gppct), r.gppct-b.gppct, "pp", false, `${money(r.gp)} GP`],
+    ["EBITDA", money(r.ebitda), r.ebitda-b.ebitda, "money", r.ebitda<0],
+    ["EBITDA %", pct(r.ebitdapct), r.ebitdapct-b.ebitdapct, "pp", false],
+    ["Net Income", money(r.ni), r.ni-b.ni, "money", r.ni<0],
+    ["Physical Cases", num(r.cases), r.cases-b.cases, "num", false, `${money2(r.cppc)}/cs avg CP`],
+  ];
+  const DEF = {
+    "Net Sales":"Gross revenue minus trade discounts.",
+    "Gross Profit %":"Gross profit as a percent of net sales.",
+    "EBITDA":"Operating profit before interest, tax, depreciation and amortisation.",
+    "EBITDA %":"EBITDA as a percent of net sales.",
+    "Net Income":"Bottom-line profit after D&A, interest and tax.",
+    "Physical Cases":"Total cases sold across all six SKUs."
+  };
   el("kpis").innerHTML = cards.map(c=>
-    `<div class="kpi"><div class="k">${c[0]}</div><div class="v ${c[2]?'neg':''}">${c[1]}</div></div>`).join("");
+    `<div class="kpi"><div class="k" title="${DEF[c[0]]||''}">${c[0]}</div><div class="v ${c[4]?'neg':''}">${c[1]}</div>`+
+    `<div class="sub">${D(c[2],c[3])}${c[5]?` · <span class="ctx">${c[5]}</span>`:""}</div></div>`).join("");
 }
 
 function renderCmp(){
   const rows = [
-    ["Physical Cases", r=>num(r.cases)],
-    ["Net Sales", r=>money(r.net), 1],
-    ["Gross Profit", r=>money(r.gp), 1],
-    ["GP %", r=>pct(r.gppct)],
-    ["Contribution", r=>money(r.cm)],
-    ["EBITDA", r=>money(r.ebitda), 1],
-    ["EBITDA %", r=>pct(r.ebitdapct)],
-    ["Net Income", r=>money(r.ni), 1],
+    ["Physical Cases", r=>num(r.cases), r=>r.cases, "num", 0],
+    ["Net Sales", r=>money(r.net), r=>r.net, "money", 1],
+    ["Gross Profit", r=>money(r.gp), r=>r.gp, "money", 1],
+    ["GP %", r=>pct(r.gppct), r=>r.gppct, "pp", 0],
+    ["Contribution", r=>money(r.cm), r=>r.cm, "money", 0],
+    ["EBITDA", r=>money(r.ebitda), r=>r.ebitda, "money", 1],
+    ["EBITDA %", r=>pct(r.ebitdapct), r=>r.ebitdapct, "pp", 0],
+    ["Net Income", r=>money(r.ni), r=>r.ni, "money", 1],
   ];
-  const data = SCEN.map(compute);
-  let h = "<table><thead><tr><th>Metric</th>"+SCEN.map(s=>`<th>${s}</th>`).join("")+"</tr></thead><tbody>";
+  const data = SCEN.map(compute), baseR = compute("Base"), curR = compute(current);
+  const dstr = (dv,kind)=> (dv>=0?"+":"−") + (kind==="pp" ? Math.abs(dv*100).toFixed(1)+" pp" : kind==="num" ? num(Math.abs(dv)) : money(Math.abs(dv)));
+  let h = "<table aria-label=\"Scenario comparison\"><thead><tr><th>Metric</th>"+SCEN.map(s=>`<th>${s}</th>`).join("")+`<th>Δ ${current} vs Base</th></tr></thead><tbody>`;
   rows.forEach(row=>{
-    h += `<tr class="${row[2]?'tot':''}"><td>${row[0]}</td>`+
-      data.map((r,i)=>`<td style="${SCEN[i]==current?'background:#eef5ff':''}">${row[1](r)}</td>`).join("")+"</tr>";
+    const dv = row[2](curR) - row[2](baseR);
+    const dcell = current==="Base"
+      ? `<td class="hint">—</td>`
+      : `<td style="font-weight:600;color:${dv>=0?'var(--good)':'var(--bad)'}">${dstr(dv,row[3])}</td>`;
+    h += `<tr class="${row[4]?'tot':''}"><td>${row[0]}</td>`+
+      data.map((r,i)=>`<td style="${SCEN[i]==current?'background:var(--hl)':''}">${row[1](r)}</td>`).join("")+dcell+"</tr>";
   });
   h += "</tbody></table>";
   el("cmp").innerHTML = h;
@@ -286,11 +660,11 @@ function renderPnl(){
     ["A&P", l=>money(l.ap), ()=>money(tot("ap"))],
     ["Contribution", l=>money(l.cm), ()=>money(tot("cm")), 1],
   ];
-  let h="<table><thead><tr><th>CDN $</th>"+cols.map(c=>`<th>${c}</th>`).join("")+"<th>Total</th></tr></thead><tbody>";
+  let h="<table aria-label=\"Profit and loss by SKU\"><thead><tr><th>CDN $</th>"+cols.map(c=>`<th>${c}</th>`).join("")+"<th>Total</th></tr></thead><tbody>";
   rows.forEach(row=>{
     h+=`<tr class="${row[3]?'major':''}"><td>${row[0]}</td>`+
        L.map(l=>`<td>${row[1](l)}</td>`).join("")+
-       `<td style="background:#eef5ff;font-weight:700">${row[2](r)}</td></tr>`;
+       `<td style="background:var(--hl);font-weight:700">${row[2](r)}</td></tr>`;
   });
   // company block (total only)
   const comp = [
@@ -302,7 +676,7 @@ function renderPnl(){
   comp.forEach(c=>{
     h+=`<tr class="${c[2]?'major':''} muted"><td>${c[0]}</td>`+
        SKUS.map(()=>`<td></td>`).join("")+
-       `<td style="background:#eef5ff;font-weight:700;color:var(--ink)">${c[1]}</td></tr>`;
+       `<td style="background:var(--hl);font-weight:700;color:var(--ink)">${c[1]}</td></tr>`;
   });
   h+="</tbody></table>";
   el("pnl").innerHTML=h;
@@ -310,21 +684,27 @@ function renderPnl(){
 
 const LADDER=[0.85,0.90,0.95,1.00,1.05,1.10,1.15];
 function renderPricing(){
-  let h="<table><thead><tr><th>SKU \\ CP vs base</th>"+LADDER.map(m=>`<th>${mult(m)}</th>`).join("")+"</tr></thead><tbody>";
+  let h="<table aria-label=\"Pricing lab — profit by CP\"><thead><tr><th>SKU \\ CP vs base</th>"+LADDER.map(m=>`<th>${mult(m)}</th>`).join("")+"</tr></thead><tbody>";
   SKUS.forEach(s=>{
     const vals = LADDER.map(m=>{
       const netpc = s.cp*m*(1-s.disc);
       if(priceMetric==="gp") return 1 - (s.cosd+s.cosi)/netpc;
       return s.vol*Math.pow(m,CO.elast)*(netpc - (s.cosd+s.cosi) - s.ap);
     });
-    const best = Math.max(...vals);
-    h+=`<tr><td>${s.flav} ${s.fmt}</td>`+vals.map(v=>{
+    const fin = vals.filter(isFinite);
+    const best = fin.length?Math.max(...fin):0, lo = fin.length?Math.min(...fin):0, span = (best-lo)||1;
+    h+=`<tr><td>${s.flav} <span class="hint">${s.fmt}</span></td>`+vals.map((v,j)=>{
+      const t = isFinite(v)?(v-lo)/span:0, isBest = isFinite(v)&&v===best;
       const txt = priceMetric==="gp"? pct(v): money(v);
-      return `<td${v===best?' style="font-weight:700"':''}>${txt}</td>`;
+      const bg = isBest ? "" : `background:rgba(10,132,255,${(0.05+t*0.40).toFixed(2)})`;
+      const title = `CP ${mult(LADDER[j])} → ${priceMetric==="gp"?"GP "+pct(v):"annual contribution "+money(v)}`;
+      return `<td class="${isBest?'best':''}" style="${bg}" title="${title}">${txt}${isBest?' ★':''}</td>`;
     }).join("")+"</tr>";
   });
   h+="</tbody></table>";
   el("pricing").innerHTML=h;
+  el("pricing").insertAdjacentHTML("beforeend",
+    `<p class="hint" style="margin-top:10px">Each row is shaded by value; <b>★</b> marks the best CP in range for the selected metric. Hover any cell for detail.</p>`);
 }
 
 const VOLM=[0.70,0.90,1.00,1.10,1.30,1.50,1.70];
@@ -340,30 +720,279 @@ function heatColor(v,min,max){
   const r=Math.round(255+(99-255)*t), g=Math.round(235+(190-235)*t), b=Math.round(132+(123-132)*t);
   return `rgb(${r},${g},${b})`;
 }
+// one-way sensitivity (tornado) — EBITDA at Base with each driver shocked +/-10%
+function ebitdaShock(m){
+  const price=m.price||1, vol=m.vol||1, cogs=m.cogs||1, ap=m.ap||1, opex=m.opex||1, disc=m.disc||1;
+  let net=0, cm=0;
+  SKUS.forEach(s=>{
+    const cases=s.vol*vol, cp=s.cp*price, d=Math.min(0.95, s.disc*disc), npc=cp*(1-d);
+    net += cases*npc;
+    cm  += cases*(npc - (s.cosd+s.cosi)*cogs - s.ap*ap);
+  });
+  const fixed=(CO.salaries+CO.ga+CO.mktg+CO.slotting)*opex, logistics=net*CO.log_pct;
+  return cm - fixed - logistics;
+}
+function sensitivityDrivers(){
+  const base=ebitdaShock({});
+  const defs=[["Case price","price"],["Sales volume","vol"],["COGS","cogs"],["A&P","ap"],["Overhead","opex"],["Trade discount","disc"]];
+  const ds=defs.map(([name,k])=>{
+    const lo={}, hi={}; lo[k]=0.9; hi[k]=1.1;
+    const a=ebitdaShock(lo), b=ebitdaShock(hi);
+    return {name, low:Math.min(a,b), high:Math.max(a,b), swing:Math.abs(b-a)};
+  });
+  ds.sort((x,y)=>y.swing-x.swing);
+  return {base, ds};
+}
+function tornadoSVG(base, drivers){
+  const n=drivers.length, W=620, rh=32, H=n*rh+22, padL=118, padR=86;
+  let mn=base, mx=base; drivers.forEach(d=>{mn=Math.min(mn,d.low);mx=Math.max(mx,d.high);});
+  const pad=(mx-mn)*0.05||1, span=(mx-mn+2*pad)||1, x=v=>padL+(v-mn+pad)/span*(W-padL-padR), xb=x(base);
+  let g=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:480px" role="img" aria-label="EBITDA sensitivity tornado">`;
+  g+=`<line x1="${xb.toFixed(1)}" y1="2" x2="${xb.toFixed(1)}" y2="${H-16}" stroke="var(--ink)" stroke-width="1.3"/>`;
+  g+=`<text x="${xb.toFixed(1)}" y="${H-3}" text-anchor="middle" font-size="9.5" fill="var(--soft)">base ${sMoney(base)}</text>`;
+  drivers.forEach((d,i)=>{ const y=6+i*rh;
+    g+=`<rect x="${x(d.low).toFixed(1)}" y="${y}" width="${Math.max(0,xb-x(d.low)).toFixed(1)}" height="18" rx="2" fill="var(--bad)" fill-opacity=".55"><title>${d.name} −10%: ${money(d.low)}</title></rect>`;
+    g+=`<rect x="${xb.toFixed(1)}" y="${y}" width="${Math.max(0,x(d.high)-xb).toFixed(1)}" height="18" rx="2" fill="var(--good)" fill-opacity=".65"><title>${d.name} +10%: ${money(d.high)}</title></rect>`;
+    g+=`<text x="2" y="${y+13}" font-size="11.5" fill="var(--ink)">${d.name}</text>`;
+    g+=`<text x="${W-padR+6}" y="${y+13}" font-size="9.5" fill="var(--soft)">±${sMoney(d.swing/2)}</text>`; });
+  return g+"</svg>";
+}
+function renderTornado(){
+  if(!el("tornado")) return;
+  const {base,ds}=sensitivityDrivers();
+  el("tornado").innerHTML=tornadoSVG(base,ds)+
+    `<table class="sr-only"><caption>EBITDA sensitivity to ±10% moves</caption><thead><tr><th>Driver</th><th>−10%</th><th>+10%</th><th>Swing</th></tr></thead><tbody>`+
+    ds.map(dd=>`<tr><td>${dd.name}</td><td>${money(dd.low)}</td><td>${money(dd.high)}</td><td>${money(dd.swing)}</td></tr>`).join("")+`</tbody></table>`;
+}
+function breakevenChartSVG(){
+  const be=breakeven();
+  const scen=SCEN.map(s=>({name:s, mv:LEVERS[s].v, e:computeLever(LEVERS[s]).ebitda}));
+  const mvMax=Math.max(2, ...scen.map(s=>s.mv*1.15), be.mv*1.25);
+  const N=48, line=[];
+  for(let i=0;i<=N;i++){ const mv=mvMax*i/N; line.push([mv, ebitdaAt(mv,1)]); }
+  const W=620,H=250,padX=16,padB=32,padT=22;
+  const ys=[...line.map(p=>p[1]), ...scen.map(s=>s.e), 0];
+  const lo=Math.min(...ys), hi=Math.max(...ys), span=(hi-lo)||1;
+  const X=mv=>padX+(mv/mvMax)*(W-padX-14), Y=v=>padT+(hi-v)/span*(H-padT-padB);
+  let g=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:480px" role="img" aria-label="EBITDA versus volume with break-even">`;
+  g+=`<line x1="${padX}" y1="${Y(0).toFixed(1)}" x2="${W-14}" y2="${Y(0).toFixed(1)}" stroke="var(--line)"/>`;
+  g+=`<path d="${line.map((p,i)=>`${i?'L':'M'}${X(p[0]).toFixed(1)} ${Y(p[1]).toFixed(1)}`).join(' ')}" fill="none" stroke="var(--accent)" stroke-width="2.5"/>`;
+  const bx=X(be.mv);
+  g+=`<line x1="${bx.toFixed(1)}" y1="${padT}" x2="${bx.toFixed(1)}" y2="${H-padB}" stroke="var(--bad)" stroke-dasharray="4 3"/>`;
+  g+=`<circle cx="${bx.toFixed(1)}" cy="${Y(0).toFixed(1)}" r="4" fill="var(--bad)"/>`;
+  g+=`<text x="${bx.toFixed(1)}" y="${(padT-6).toFixed(1)}" text-anchor="middle" font-size="10" fill="var(--bad)">break-even ${mult(be.mv)}</text>`;
+  scen.forEach(s=>{ const cx=X(s.mv), cy=Y(s.e), cur=s.name===current;
+    const ly = s.e>=0 ? cy-10 : cy+18;   // label above when profitable, below when at a loss — clears the line
+    g+=`<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${cur?5:4}" fill="var(--accent2)" stroke="var(--card)" stroke-width="1.5"><title>${s.name}: ${mult(s.mv)} volume → EBITDA ${money(s.e)}</title></circle>`;
+    g+=`<text x="${cx.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="middle" font-size="9.5" font-weight="${cur?700:500}" fill="var(--soft)">${s.name}</text>`; });
+  [0,1,mvMax].forEach(mv=>{ g+=`<text x="${X(mv).toFixed(1)}" y="${H-padB+16}" text-anchor="middle" font-size="9.5" fill="var(--soft)">${mult(mv)}</text>`; });
+  return g+"</svg>";
+}
+function renderBeChart(){
+  if(!el("beChart")) return;
+  const be=breakeven();
+  el("beChart").innerHTML=breakevenChartSVG()+
+    `<table class="sr-only"><caption>Break-even and scenario EBITDA vs volume</caption><thead><tr><th>Point</th><th>Volume</th><th>EBITDA</th></tr></thead><tbody>`+
+    `<tr><td>Break-even</td><td>${mult(be.mv)}</td><td>${money(0)}</td></tr>`+
+    SCEN.map(s=>`<tr><td>${s}</td><td>${mult(LEVERS[s].v)}</td><td>${money(computeLever(LEVERS[s]).ebitda)}</td></tr>`).join("")+`</tbody></table>`;
+}
 function renderSens(){
   const cells=[];
   PRM.forEach(mp=>VOLM.forEach(mv=>cells.push(ebitdaAt(mv,mp))));
   const min=Math.min(...cells), max=Math.max(...cells);
-  let h="<table><thead><tr><th>Price × \\ Volume ×</th>"+VOLM.map(m=>`<th>${mult(m)}</th>`).join("")+"</tr></thead><tbody>";
+  let h="<table aria-label=\"EBITDA sensitivity — price by volume\"><thead><tr><th>Price × \\ Volume ×</th>"+VOLM.map(m=>`<th>${mult(m)}</th>`).join("")+"</tr></thead><tbody>";
   PRM.forEach(mp=>{
     h+=`<tr><td><b>${mult(mp)}</b></td>`+VOLM.map(mv=>{
       const v=ebitdaAt(mv,mp);
-      return `<td${v<0?' style="color:#d83a4b"':''}>${money(v)}</td>`;
+      const bg=heatColor(v,min,max);
+      return `<td class="cell" style="background:${bg}" title="Volume ${mult(mv)} · Price ${mult(mp)} → EBITDA ${money(v)}">${money(v)}</td>`;
     }).join("")+"</tr>";
   });
   h+="</tbody></table>";
   el("sens").innerHTML=h;
+  el("sens").insertAdjacentHTML("beforeend",
+    `<div class="heat-legend"><span>Loss</span><span class="ramp"></span><span>Best EBITDA</span></div>`);
   const be=breakeven();
   el("beLine").textContent=`Break-even (at base price): ${mult(be.mv)} volume — about ${num(be.cases)} cases.`;
+  renderBeChart();
+  renderTornado();
+}
+
+// ---------- charts (SVG, theme-aware, dark-mode via CSS vars) ----------
+const sMoney = v=>{const a=Math.abs(v),s=v<0?"-":"";
+  if(a>=1e6)return s+"$"+(a/1e6).toFixed(a>=1e7?1:2)+"M";
+  if(a>=1e3)return s+"$"+Math.round(a/1e3)+"k"; return s+"$"+Math.round(a);};
+function pnlBars(r){return [
+  {label:"Net Sales", val:r.net, kind:"total", type:"sub"},
+  {label:"COGS", val:-r.cogs, kind:"sub"},
+  {label:"Gross Profit", val:r.gp, kind:"total", type:"sub"},
+  {label:"A&P", val:-r.ap, kind:"sub"},
+  {label:"Contribution", val:r.cm, kind:"total", type:"sub"},
+  {label:"Opex", val:-r.opex, kind:"sub"},
+  {label:"EBITDA", val:r.ebitda, kind:"total", type:"sub"},
+  {label:"D&A", val:-r.da, kind:"sub"},
+  {label:"Interest", val:-r.interest, kind:"sub"},
+  {label:"Tax", val:-r.tax, kind:"sub"},
+  {label:"Net Income", val:r.ni, kind:"total", type:"result"},
+];}
+function waterfallSVG(bars){
+  const W=760,H=300,padX=16,padB=56,padT=28;
+  let run=0,it=[],lo=0,hi=0;
+  bars.forEach(b=>{ let seg;
+    if(b.kind==="total"){seg={label:b.label,lo:Math.min(0,b.val),hi:Math.max(0,b.val),val:b.val,type:b.type};run=b.val;}
+    else{const a=run,c=run+b.val;seg={label:b.label,lo:Math.min(a,c),hi:Math.max(a,c),val:b.val,type:"cost"};run=c;}
+    it.push(seg);lo=Math.min(lo,seg.lo);hi=Math.max(hi,seg.hi); });
+  const span=(hi-lo)||1, y=v=>padT+(hi-v)/span*(H-padT-padB);
+  const gap=(W-2*padX)/it.length, bw=Math.min(46,gap*0.62), xL=i=>padX+gap*i+(gap-bw)/2, xR=i=>xL(i)+bw;
+  const endLvl=s=> s.val<0? s.lo : s.hi;
+  const fill=s=> s.type==="cost" ? "var(--bad)" : s.type==="result" ? (s.val>=0?"var(--good)":"var(--bad)") : "var(--accent)";
+  let g=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:620px" role="img" aria-label="Profit and loss waterfall from net sales to net income">`;
+  g+=`<line x1="${padX}" y1="${y(0).toFixed(1)}" x2="${W-padX}" y2="${y(0).toFixed(1)}" stroke="var(--line)"/>`;
+  for(let i=0;i<it.length-1;i++){const yl=y(endLvl(it[i])).toFixed(1);
+    g+=`<line x1="${xR(i).toFixed(1)}" y1="${yl}" x2="${xL(i+1).toFixed(1)}" y2="${yl}" stroke="var(--soft)" stroke-opacity=".4" stroke-dasharray="3 3"/>`;}
+  it.forEach((s,i)=>{ const x=xL(i),yt=y(s.hi),h=Math.max(2,y(s.lo)-y(s.hi));
+    const op= s.type==="cost" ? ' fill-opacity=".42"' : "";
+    g+=`<rect x="${x.toFixed(1)}" y="${yt.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="4" fill="${fill(s)}"${op}><title>${s.label}: ${money(s.val)}</title></rect>`;
+    g+=`<text x="${(x+bw/2).toFixed(1)}" y="${(yt-6).toFixed(1)}" text-anchor="middle" font-size="10" font-weight="700" fill="var(--ink)">${sMoney(s.val)}</text>`;
+    g+=`<text x="${(x+bw/2).toFixed(1)}" y="${H-padB+14}" text-anchor="end" font-size="9.5" fill="var(--soft)" transform="rotate(-32 ${(x+bw/2).toFixed(1)} ${H-padB+14})">${s.label}</text>`; });
+  return g+"</svg>";
+}
+function scenarioBarsSVG(){
+  const data=SCEN.map(s=>({name:s,val:compute(s).ebitda}));
+  const W=560,H=230,padX=20,padB=40,padT=28;
+  let lo=0,hi=0;data.forEach(d=>{lo=Math.min(lo,d.val);hi=Math.max(hi,d.val);});
+  const span=(hi-lo)||1, y=v=>padT+(hi-v)/span*(H-padT-padB);
+  const gap=(W-2*padX)/data.length, bw=Math.min(88,gap*0.5), xC=i=>padX+gap*i+gap/2;
+  let g=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:420px" role="img" aria-label="EBITDA by scenario">`;
+  g+=`<line x1="${padX}" y1="${y(0).toFixed(1)}" x2="${W-padX}" y2="${y(0).toFixed(1)}" stroke="var(--line)"/>`;
+  data.forEach((d,i)=>{ const x=xC(i)-bw/2,yt=y(Math.max(0,d.val)),yb=y(Math.min(0,d.val)),h=Math.max(2,yb-yt);
+    const cur=d.name===current, col= d.val<0?"var(--bad)":"var(--accent)";
+    g+=`<rect x="${x.toFixed(1)}" y="${yt.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="4" fill="${col}" fill-opacity="${cur?1:.4}"><title>${d.name}: EBITDA ${money(d.val)}</title></rect>`;
+    g+=`<text x="${xC(i).toFixed(1)}" y="${(yt-7).toFixed(1)}" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">${sMoney(d.val)}</text>`;
+    g+=`<text x="${xC(i).toFixed(1)}" y="${H-padB+18}" text-anchor="middle" font-size="11" font-weight="${cur?700:500}" fill="${cur?'var(--ink)':'var(--soft)'}">${d.name}</text>`; });
+  return g+"</svg>";
+}
+const FLAV_COLOR = {"Pineapple":"#E1A100","Passionfruit":"#C2185B","Lime Lemon":"#2E9E4F"};
+const skuColor = s => FLAV_COLOR[s.flav] || "#0a84ff";
+function skuChartSVG(){
+  const L = compute(current).lines;
+  const data = SKUS.map((s,i)=>({name:`${s.flav} ${s.fmt}`, v:L[i].cm, color:skuColor(s), light:s.fmt==="4-Pack"}));
+  const max = Math.max(...data.map(d=>d.v),1);
+  const W=600, rowH=30, H=data.length*rowH+6, padL=150, padR=64;
+  let g=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:460px" role="img" aria-label="Contribution by SKU">`;
+  data.forEach((d,i)=>{ const y=i*rowH+5, bw=Math.max(1,(d.v/max)*(W-padL-padR)), bh=18;
+    g+=`<text x="0" y="${y+13}" font-size="12" fill="var(--ink)">${d.name}</text>`;
+    g+=`<rect x="${padL}" y="${y}" width="${bw.toFixed(1)}" height="${bh}" rx="4" fill="${d.color}" fill-opacity="${d.light?0.5:1}"><title>${d.name}: contribution ${money(d.v)}</title></rect>`;
+    g+=`<text x="${(padL+bw+6).toFixed(1)}" y="${y+13}" font-size="11" font-weight="600" fill="var(--soft)">${sMoney(d.v)}</text>`; });
+  return g+"</svg>";
+}
+function renderSkuChart(){
+  if(!el("skuChart")) return;
+  el("skuChart").innerHTML = skuChartSVG();
+  el("skuLegend").innerHTML = Object.keys(FLAV_COLOR).map(fl=>
+    `<span><span class="swatch" style="background:${FLAV_COLOR[fl]}"></span>${fl}</span>`).join("")+
+    `<span><span class="swatch" style="background:var(--soft);opacity:.5"></span>lighter = 4-Pack</span>`;
+}
+function renderCharts(){
+  const pc=el("pnlChart"); if(pc) pc.innerHTML=waterfallSVG(pnlBars(compute(current)));
+  const sc=el("scenChart"); if(sc) sc.innerHTML=scenarioBarsSVG();
+  renderSkuChart();
+}
+
+// ---------- monthly phasing ----------
+function monthlyData(){
+  const r = compute(current);
+  const sw = SEASON.reduce((a,x)=>a+x,0)||1;
+  const fixed = r.salaries + r.ga + r.mktg + r.slotting;
+  let cumE=0;
+  return MONTHS.map((m,i)=>{
+    const f = SEASON[i]/sw;
+    const cases=r.cases*f, net=r.net*f, contrib=r.cm*f;
+    const ebitda = contrib - fixed/12 - r.logistics*f;   // fixed spreads evenly, logistics with volume
+    cumE += ebitda;
+    return {m,i,f,cases,net,contrib,ebitda,cumE};
+  });
+}
+function monthlyChartSVG(rows){
+  const W=760,H=230,padX=16,padB=32,padT=26;
+  let lo=0,hi=0; rows.forEach(r=>{lo=Math.min(lo,r.ebitda);hi=Math.max(hi,r.ebitda);});
+  const span=(hi-lo)||1, y=v=>padT+(hi-v)/span*(H-padT-padB);
+  const gap=(W-2*padX)/rows.length, bw=Math.min(42,gap*0.62), xC=i=>padX+gap*i+gap/2;
+  let g=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:600px" role="img" aria-label="EBITDA by month">`;
+  g+=`<line x1="${padX}" y1="${y(0).toFixed(1)}" x2="${W-padX}" y2="${y(0).toFixed(1)}" stroke="var(--line)"/>`;
+  rows.forEach((r,i)=>{ const x=xC(i)-bw/2, yt=y(Math.max(0,r.ebitda)), yb=y(Math.min(0,r.ebitda)), h=Math.max(2,yb-yt);
+    g+=`<rect x="${x.toFixed(1)}" y="${yt.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="3" fill="${r.ebitda<0?'var(--bad)':'var(--good)'}"><title>${MONTHS[i]}: EBITDA ${money(r.ebitda)}</title></rect>`;
+    g+=`<text x="${xC(i).toFixed(1)}" y="${H-padB+15}" text-anchor="middle" font-size="9.5" fill="var(--soft)">${MONTHS[i]}</text>`; });
+  return g+"</svg>";
+}
+function renderMonthly(){
+  if(!el("monTable")) return;
+  const rows = monthlyData();
+  el("monSeason").innerHTML = `<div class="seasrow">`+MONTHS.map((m,i)=>
+    `<label>${m}<input class="cell seas" type="number" step="0.05" value="${SEASON[i]}" oninput="setSeason(${i},this.value)"></label>`).join("")+`</div>`;
+  el("monChart").innerHTML = monthlyChartSVG(rows);
+  const tot = k=>rows.reduce((a,r)=>a+r[k],0);
+  let h=`<table aria-label="Monthly phasing"><thead><tr><th>Month</th><th>Cases</th><th>Net Sales</th><th>Contribution</th><th>EBITDA</th><th>Cumulative</th></tr></thead><tbody>`;
+  rows.forEach(r=>{ h+=`<tr><td>${r.m}</td><td>${num(r.cases)}</td><td>${money(r.net)}</td><td>${money(r.contrib)}</td>`+
+    `<td${r.ebitda<0?' style="color:var(--bad)"':''}>${money(r.ebitda)}</td><td>${money(r.cumE)}</td></tr>`; });
+  h+=`<tr class="tot"><td>Year</td><td>${num(tot("cases"))}</td><td>${money(tot("net"))}</td><td>${money(tot("contrib"))}</td><td>${money(tot("ebitda"))}</td><td>${money(rows[rows.length-1].cumE)}</td></tr></tbody></table>`;
+  el("monTable").innerHTML = h;
+}
+function setSeason(i,v){ SEASON[i]=parseFloat(v)||0; persist(); renderMonthly(); }
+
+// ---------- targets / goal-seek ----------
+let tgtMetric = "ebitda";
+function solveVolume(metric, target){
+  const bl = LEVERS[current];
+  const f = mv => computeLever({v:mv, p:bl.p, d:bl.d})[metric];   // monotonic increasing in mv
+  const CAP = 10;
+  if(f(CAP) < target) return {mv:null, hi:f(CAP)};
+  let lo=0, hi=CAP;
+  if(f(lo) >= target) lo = 0;
+  for(let k=0;k<60;k++){ const mid=(lo+hi)/2; if(f(mid) < target) lo=mid; else hi=mid; }
+  const mv=(lo+hi)/2;
+  return {mv, res: computeLever({v:mv, p:bl.p, d:bl.d})};
+}
+function renderTargets(){
+  if(!el("tgtOut")) return;
+  if(!el("tgtVal").value) el("tgtVal").value = Math.round(compute(current).ebitda*1.5);
+  const target = parseFloat(el("tgtVal").value)||0;
+  const bl = LEVERS[current], cur = compute(current);
+  const label = tgtMetric==="ebitda" ? "EBITDA" : "Net Income";
+  const sol = solveVolume(tgtMetric, target);
+  if(sol.mv===null){
+    el("tgtOut").innerHTML = `<div class="note" style="display:block;margin-top:6px">Even at <b>10× volume</b> (holding price at ${current}), ${label} tops out near <b>${money(sol.hi)}</b>. The ${money(target)} goal needs price, cost or mix changes too — try the <b>Pricing Lab</b> or lower COGS on <b>Assumptions</b>.</div>`;
+    return;
+  }
+  const r = sol.res, dv = bl.v ? (sol.mv/bl.v - 1) : 0, dcases = r.cases - cur.cases;
+  const cards = [
+    ["Required volume", mult(sol.mv), `${dv>=0?'+':''}${(dv*100).toFixed(0)}% vs ${current}`],
+    ["Physical cases", num(r.cases), `${num(Math.abs(dcases))} ${dcases>=0?'more':'fewer'}`],
+    ["Net Sales", money(r.net), null, false],
+    [label+" target", money(target), null, target<0],
+    ["EBITDA %", pct(r.ebitdapct), null, false],
+    ["Net Income", money(r.ni), null, r.ni<0],
+  ];
+  el("tgtOut").innerHTML = `<div class="kpis" style="margin-top:8px">`+cards.map(c=>
+    `<div class="kpi"><div class="k">${c[0]}</div><div class="v ${c[3]?'neg':''}">${c[1]}</div>`+
+    `${c[2]?`<div class="sub"><span class="ctx">${c[2]}</span></div>`:""}</div>`).join("")+`</div>`;
 }
 
 // ---------- assumptions editor ----------
-function inp(val, onin, step="0.01"){
-  return `<input class="cell" type="number" step="${step}" value="${val}" oninput="${onin}">`;
+function inp(val, onin, step="0.01", min="0"){
+  return `<input class="cell" type="number" step="${step}"${min!==""?` min="${min}"`:""} value="${val}" oninput="${onin}">`;
 }
 function renderAsmp(){
   // SKU table
-  let h="<table><thead><tr><th>SKU</th><th>CP / case</th><th>Disc %</th><th>COGS Direct</th><th>COGS Indir.</th><th>A&P</th><th>Volume</th></tr></thead><tbody>";
+  const H=(t,tip)=>`<th>${t}<span class="help" title="${tip}">?</span></th>`;
+  let h="<table><thead><tr><th>SKU</th>"+
+    H("CP / case","Case price — your wholesale price per case, before trade discount.")+
+    H("Disc %","Trade discount / allowance as a % of gross.")+
+    H("COGS Direct","Direct cost per case — liquid, can, co-pack.")+
+    H("COGS Indir.","Indirect cost per case — freight-in, warehousing, shrink.")+
+    H("A&P","Advertising &amp; promotion spend allocated per case.")+
+    H("Volume","Annual cases sold for this SKU at base.")+
+    "</tr></thead><tbody>";
   SKUS.forEach((s,i)=>{
     h+=`<tr><td>${s.flav} <span class="hint">${s.fmt}</span></td>`+
       `<td>${inp(s.cp,`setS(${i},'cp',this.value)`)}</td>`+
@@ -385,7 +1014,8 @@ function renderAsmp(){
     const isPct = row[1]==="log_pct"||row[1]==="tax";
     const val = isPct? (CO[row[1]]*100).toFixed(row[1]==='log_pct'?1:0): CO[row[1]];
     const setter = isPct? `setCo('${row[1]}',this.value/100)`:`setCo('${row[1]}',this.value)`;
-    c+=`<tr><td>${row[0]}</td><td style="text-align:right">${inp(val,setter,row[2])}${isPct?' %':''}</td></tr>`;
+    const minv = row[1]==="elast" ? "" : "0";   // elasticity may be negative
+    c+=`<tr><td>${row[0]}</td><td style="text-align:right">${inp(val,setter,row[2],minv)}${isPct?' %':''}</td></tr>`;
   });
   c+="</tbody></table>";
   el("asmpCo").innerHTML=c;
@@ -396,34 +1026,60 @@ function renderAsmp(){
     lv+=`<tr><td>${s}</td>`+
       `<td>${inp(L.v,`setLev('${s}','v',this.value)`)}</td>`+
       `<td>${inp(L.p,`setLev('${s}','p',this.value)`)}</td>`+
-      `<td>${inp((L.d*100).toFixed(1),`setLev('${s}','d',this.value/100)`,"0.1")}</td></tr>`;
+      `<td>${inp((L.d*100).toFixed(1),`setLev('${s}','d',this.value/100)`,"0.1","")}</td></tr>`;
   });
   lv+="</tbody></table>";
   el("asmpLev").innerHTML=lv;
 }
-function setS(i,k,v){SKUS[i][k]=parseFloat(v)||0;refresh();}
-function setCo(k,v){CO[k]=parseFloat(v)||0;refresh();}
-function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();}
+function setS(i,k,v){SKUS[i][k]=parseFloat(v)||0;refresh();persist();}
+function setCo(k,v){CO[k]=parseFloat(v)||0;refresh();persist();}
+function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();persist();}
 
 // ---------- nav / scenario bar ----------
-const VIEWS=["Overview","P&L","Pricing Lab","Sensitivity","Assumptions"];
+const VIEWS=["Overview","P&L","Pricing Lab","Sensitivity","Monthly","Targets","Outlook","Assumptions"];
 function buildNav(){
-  el("nav").innerHTML=VIEWS.map((v,i)=>`<button class="${i===0?'on':''}" data-v="${v}">${v}</button>`).join("");
-  el("nav").querySelectorAll("button").forEach(b=>b.onclick=()=>{
-    el("nav").querySelectorAll("button").forEach(x=>x.classList.remove("on"));
-    b.classList.add("on");
+  el("nav").setAttribute("role","tablist");
+  document.querySelectorAll(".view").forEach(v=>v.setAttribute("role","tabpanel"));
+  el("nav").innerHTML=VIEWS.map((v,i)=>`<button role="tab" aria-selected="${i===0}" tabindex="${i===0?0:-1}" class="${i===0?'on':''}" data-v="${v}">${v}</button>`).join("");
+  const btns=[...el("nav").querySelectorAll("button")];
+  btns.forEach(b=>b.onclick=()=>{
+    btns.forEach(x=>{x.classList.remove("on");x.setAttribute("aria-selected","false");x.tabIndex=-1;});
+    b.classList.add("on");b.setAttribute("aria-selected","true");b.tabIndex=0;
     document.querySelectorAll(".view").forEach(s=>s.classList.toggle("on", s.dataset.view===b.dataset.v));
+  });
+  el("nav").addEventListener("keydown",e=>{
+    const cur=btns.findIndex(b=>b.getAttribute("aria-selected")==="true");
+    let ni=null;
+    if(e.key==="ArrowRight"||e.key==="ArrowDown") ni=(cur+1)%btns.length;
+    else if(e.key==="ArrowLeft"||e.key==="ArrowUp") ni=(cur-1+btns.length)%btns.length;
+    else if(e.key==="Home") ni=0; else if(e.key==="End") ni=btns.length-1;
+    if(ni!==null){ e.preventDefault(); btns[ni].click(); btns[ni].focus(); }
   });
   el("scenBar").innerHTML=`<span class="lab">SCENARIO</span>`+
     SCEN.map(s=>`<button class="pill ${s===current?'on':''}" data-s="${s}">${s}</button>`).join("");
   el("scenBar").querySelectorAll(".pill").forEach(b=>b.onclick=()=>{current=b.dataset.s;
     el("scenBar").querySelectorAll(".pill").forEach(x=>x.classList.toggle("on",x.dataset.s===current));
-    refresh();});
+    refresh();persist();});
   el("priceSeg").querySelectorAll("button").forEach(b=>b.onclick=()=>{priceMetric=b.dataset.m;
     el("priceSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===priceMetric));
     renderPricing();});
+  if(el("tgtSeg")) el("tgtSeg").querySelectorAll("button").forEach(b=>b.onclick=()=>{tgtMetric=b.dataset.m;
+    el("tgtSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===tgtMetric));
+    renderTargets();});
 }
-function refresh(){renderKpis();renderCmp();renderPnl();renderPricing();renderSens();}
+function refresh(){renderInsight();renderKpis();renderCmp();renderPnl();renderPricing();renderSens();renderCharts();renderMonthly();renderTargets();renderOutlook();renderChecks();}
+
+// wire header actions
+el("btnReset").onclick=()=>{ if(confirm("Reset all assumptions to the default figures?")) resetAll(); };
+el("btnExport").onclick=exportCsv;
+el("btnPrint").onclick=()=>window.print();
+el("btnShare").onclick=doShare;
+el("btnSummary").onclick=doSummary;
+el("growthInp").oninput=e=>{ outlookGrowth=(parseFloat(e.target.value)||0)/100; renderOutlook(); persist(); };
+
+restore();            // load saved edits, if any
+applyHash();          // a shared #m= link overrides local edits
+el("growthInp").value = Math.round(outlookGrowth*100);   // reflect restored/shared growth
 buildNav();renderAsmp();refresh();
 </script>
 </body>
