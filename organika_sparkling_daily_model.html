@@ -335,12 +335,12 @@ const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov
 let current = "Base";
 let priceMetric = "gp";
 
-// ---------------- formatting helpers ----------------
-const money = v => (v<0?"-":"")+CFG.cur+Math.abs(v).toLocaleString(undefined,{maximumFractionDigits:0});
-const money2 = v => (v<0?"-":"")+CFG.cur+Math.abs(v).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
-const pct = v => (v*100).toFixed(1)+"%";
-const num = v => Math.round(v).toLocaleString();
-const mult = v => v.toFixed(2)+"×";
+// ---------------- formatting helpers (non-finite safe) ----------------
+const money = v => !isFinite(v)?"—":(v<0?"-":"")+CFG.cur+Math.abs(v).toLocaleString(undefined,{maximumFractionDigits:0});
+const money2 = v => !isFinite(v)?"—":(v<0?"-":"")+CFG.cur+Math.abs(v).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+const pct = v => !isFinite(v)?"—":(v*100).toFixed(1)+"%";
+const num = v => !isFinite(v)?"—":Math.round(v).toLocaleString();
+const mult = v => !isFinite(v)?"—":v.toFixed(2)+"×";
 
 // ---------------- core engine ----------------
 function skuLine(s, lev){
