@@ -52,6 +52,8 @@ const CONTENT = {
     1: ['the','and','a','to','in','is','you','it','he','was','for','on','are','as','with','his','they','I','at','be'],
     2: ['this','have','from','or','one','had','by','word','but','not','what','all','were','we','when','your','can','said','there','use'],
     3: ['each','which','she','do','how','their','if','will','up','other','about','out','many','then','them','these','so','some','her','would'],
+    4: ['make','like','him','into','time','has','look','two','more','write','go','see','number','no','way','could','people','my','than','first'],
+    5: ['water','been','call','who','oil','now','find','long','down','day','did','get','come','made','may','part','over','new','sound','take'],
   },
 
   // ---- Picture match: hear a word, pick the right picture (K-1) ----
@@ -66,12 +68,12 @@ const CONTENT = {
 
   // ---- Grades 2-7: spelling lists, easiest to hardest ----
   spelling: {
-    2: ['jump','play','stop','fast','hand','ship','fish','ring','duck','frog','swim','clap'],
-    3: ['plant','smile','black','train','sleep','bring','shout','cloud','story','happy','light','water'],
-    4: ['because','friend','school','people','animal','family','picture','together','morning','different'],
-    5: ['beautiful','important','question','sentence','remember','probably','surprise','favorite','vacation','decision'],
-    6: ['necessary','environment','experience','government','temperature','immediately','curious','ancient','courage','achieve'],
-    7: ['restaurant', 'definitely','embarrass','conscience','rhythm','privilege','occasionally','recommend','separate','tomorrow'],
+    2: ['jump','play','stop','fast','hand','ship','fish','ring','duck','frog','swim','clap','wish','lunch','sock','tent','wind','milk'],
+    3: ['plant','smile','black','train','sleep','bring','shout','cloud','story','happy','light','water','night','round','small','paint','sweet','grass'],
+    4: ['because','friend','school','people','animal','family','picture','together','morning','different','enough','thought','carry','early','heard','world'],
+    5: ['beautiful','important','question','sentence','remember','probably','surprise','favorite','vacation','decision','knowledge','language','strength','measure','breathe','weight'],
+    6: ['necessary','environment','experience','government','temperature','immediately','curious','ancient','courage','achieve','argument','athletic','calendar','definite','disappear','fascinate'],
+    7: ['restaurant','definitely','embarrass','conscience','rhythm','privilege','occasionally','recommend','separate','tomorrow','acquaintance','bureaucracy','conscientious','maintenance','pronunciation','questionnaire'],
   },
 
   // ---- Grades 3-7: vocabulary — hear the meaning, pick the word ----
@@ -83,6 +85,10 @@ const CONTENT = {
       { word:'furious',   def:'very, very angry',                        wrong:['happy','hungry'] },
       { word:'brave',     def:'not afraid, even when something is scary',wrong:['scared','tired'] },
       { word:'silent',    def:'making no sound at all',                  wrong:['loud','fast'] },
+      { word:'soggy',     def:'all wet and squishy',                     wrong:['dry','crispy'] },
+      { word:'grumpy',    def:'in a bad mood',                           wrong:['cheerful','calm'] },
+      { word:'speedy',    def:'super fast',                              wrong:['slow','still'] },
+      { word:'sparkle',   def:'to shine with little flashes of light',   wrong:['hide','melt'] },
     ],
     4: [
       { word:'curious',   def:'wanting to learn about everything',       wrong:['bored','angry'] },
@@ -91,6 +97,10 @@ const CONTENT = {
       { word:'ancient',   def:'very, very old — from long, long ago',    wrong:['new','shiny'] },
       { word:'rapid',     def:'very fast',                               wrong:['slow','quiet'] },
       { word:'generous',  def:'happy to share and give to others',       wrong:['selfish','sleepy'] },
+      { word:'gleaming',  def:'shining bright, like polished gold',      wrong:['rusty','dusty'] },
+      { word:'timid',     def:'shy and a little bit scared',             wrong:['bold','loud'] },
+      { word:'clever',    def:'quick at figuring things out',            wrong:['confused','slow'] },
+      { word:'drowsy',    def:'sleepy and about to nod off',             wrong:['awake','jumpy'] },
     ],
     5: [
       { word:'reluctant', def:'not really wanting to do something',      wrong:['eager','joyful'] },
@@ -99,6 +109,10 @@ const CONTENT = {
       { word:'predict',   def:'to guess what will happen next',          wrong:['remember','erase'] },
       { word:'anxious',   def:'feeling worried or nervous',              wrong:['calm','proud'] },
       { word:'persuade',  def:'to talk someone into doing something',    wrong:['forbid','follow'] },
+      { word:'hilarious', def:'so funny you cannot stop laughing',       wrong:['boring','sad'] },
+      { word:'demolish',  def:'to knock something down completely',      wrong:['build','repair'] },
+      { word:'genuine',   def:'real — not fake at all',                  wrong:['phony','copied'] },
+      { word:'summit',    def:'the very top of a mountain',              wrong:['bottom','valley'] },
     ],
     6: [
       { word:'meticulous',def:'extremely careful about every tiny detail', wrong:['sloppy','careless'] },
@@ -107,6 +121,10 @@ const CONTENT = {
       { word:'versatile', def:'good at many different things',             wrong:['limited','stubborn'] },
       { word:'hostile',   def:'unfriendly and ready to fight',             wrong:['friendly','gentle'] },
       { word:'innovative',def:'full of brand new ideas',                   wrong:['ordinary','outdated'] },
+      { word:'abundant',  def:'more than enough — plenty',                 wrong:['scarce','missing'] },
+      { word:'treacherous',def:'full of hidden danger',                    wrong:['safe','cozy'] },
+      { word:'flourish',  def:'to grow strong and healthy',                wrong:['wither','shrink'] },
+      { word:'colossal',  def:'unbelievably gigantic',                     wrong:['minuscule','average'] },
     ],
     7: [
       { word:'ambiguous', def:'unclear — it could mean more than one thing', wrong:['obvious','definite'] },
@@ -115,6 +133,12 @@ const CONTENT = {
       { word:'diminish',  def:'to get smaller or weaker',                    wrong:['grow','expand'] },
       { word:'eloquent',  def:'amazingly good with words',                   wrong:['clumsy','silent'] },
       { word:'resilient', def:'able to bounce back after hard times',        wrong:['fragile','defeated'] },
+      { word:'meticulous',def:'paying attention to every single detail',     wrong:['careless','hasty'] },
+      { word:'reluctant', def:'hesitant — not really wanting to',            wrong:['eager','thrilled'] },
+      { word:'skeptic',   def:'a person who doubts what they are told',      wrong:['believer','follower'] },
+      { word:'tenacious', def:'holding on and never giving up',              wrong:['quitting','feeble'] },
+      { word:'vivid',     def:'so bright and clear it feels real',           wrong:['dull','faded'] },
+      { word:'novice',    def:'someone brand new at something',              wrong:['expert','veteran'] },
     ],
   },
 
@@ -159,6 +183,26 @@ const CONTENT = {
       level:4, text:['Ava','practiced','piano','every','morning.','At','first','her','fingers','stumbled,','but','by','summer','she','could','play','her','favorite','song','perfectly.'],
       q:'How did Ava get so good at piano?', answer:'🔁', answerWord:'she practiced every day',
       options:[ {e:'🍀', label:'she got lucky'}, {e:'🔁', label:'she practiced every day'}, {e:'🎁', label:'someone gave her a gift'} ],
+    },
+    {
+      level:5, text:['Deep','in','the','rainforest,','a','tiny','tree','frog','clung','to','a','dripping','leaf.','Its','bright','red','eyes','were','not','just','for','show','—','when','a','hungry','snake','slid','close,','the','frog','flashed','them','open,','startling','the','snake','just','long','enough','to','leap','to','safety.'],
+      q:'How did the frog escape the snake?', answer:'👀', answerWord:'it startled the snake with its bright eyes',
+      options:[ {e:'👀', label:'startled it with its eyes'}, {e:'🏊', label:'swam away'}, {e:'🫥', label:'turned invisible'} ],
+    },
+    {
+      level:5, text:['Maya','wanted','to','win','the','science','fair,','but','her','volcano','model','kept','collapsing.','Instead','of','quitting,','she','studied','why','it','fell,','changed','the','base,','and','rebuilt','it','stronger.','At','the','fair,','the','judges','gave','her','a','ribbon','—','not','for','the','volcano,','but','for','not','giving','up.'],
+      q:'Why did the judges give Maya a ribbon?', answer:'💪', answerWord:'because she never gave up',
+      options:[ {e:'🌋', label:'her volcano was the biggest'}, {e:'💪', label:'she never gave up'}, {e:'🎨', label:'it was the prettiest'} ],
+    },
+    {
+      level:6, text:['The','lighthouse','keeper','had','one','job:','keep','the','lamp','burning.','One','stormy','night','the','power','failed,','and','a','ship','was','heading','for','the','rocks.','With','minutes','to','spare,','she','hauled','the','old','oil','lantern','up','two','hundred','stairs','and','lit','it','by','hand.','The','ship','turned','away','just','in','time.'],
+      q:'How did the keeper save the ship?', answer:'🏮', answerWord:'she lit the old oil lantern by hand',
+      options:[ {e:'📞', label:'she called the captain'}, {e:'🏮', label:'she lit the old lantern'}, {e:'🚤', label:'she sailed out to warn them'} ],
+    },
+    {
+      level:7, text:['Historians','once','believed','the','ancient','library','burned','in','a','single','fire.','But','new','evidence','tells','a','quieter,','sadder','story:','over','many','years,','funding','dried','up,','scholars','drifted','away,','and','the','scrolls','were','slowly','scattered','and','lost.','The','library','did','not','die','in','flames','—','it','faded','from','neglect.'],
+      q:'What really destroyed the library?', answer:'🕰️', answerWord:'slow neglect over many years',
+      options:[ {e:'🔥', label:'one huge fire'}, {e:'🕰️', label:'slow neglect over years'}, {e:'🌊', label:'a flood'} ],
     },
   ],
 };
