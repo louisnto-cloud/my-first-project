@@ -265,6 +265,44 @@
   // ---------- stats ----------
   $('navStats').addEventListener('click', openStats);
   $('backBtn').addEventListener('click', showReady);
+  $('exportBtn').addEventListener('click', exportCsv);
+  $('resetBtn').addEventListener('click', resetHistory);
+
+  function toCsv(drills) {
+    const esc = (v) => '"' + String(v ?? '').replace(/"/g, '""') + '"';
+    const header = ['timestamp', 'domain', 'difficulty', 'time_limit_s', 'timed_out', 'score', 'response', 'scenario', 'feedback'];
+    const rows = drills.map(d =>
+      [d.timestamp, d.domain, d.difficulty, d.timeLimit, d.timedOut, d.score, d.response, d.scenario, d.feedback].map(esc).join(','));
+    return header.join(',') + '\n' + rows.join('\n');
+  }
+
+  async function exportCsv() {
+    try {
+      const { drills } = await api('/api/drills');
+      if (!drills.length) { showError('Nothing to export yet'); return; }
+      const blob = new Blob([toCsv(drills)], { type: 'text/csv' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'nimble-drills.csv';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    } catch (err) {
+      showError(err.message);
+    }
+  }
+
+  async function resetHistory() {
+    if (!confirm('Delete all drill history? Your API key and time limit are kept. This cannot be undone.')) return;
+    try {
+      await api('/api/reset', {});
+      app.totalDrills = 0;
+      app.difficulty = 1;
+      app.stats = null;
+      openStats();
+    } catch (err) {
+      showError(err.message);
+    }
+  }
 
   async function openStats() {
     let drills;

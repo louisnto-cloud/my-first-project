@@ -424,6 +424,35 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   // ---------- stats ----------
   $('navStats').addEventListener('click', openStats);
   $('backBtn').addEventListener('click', showReady);
+  $('exportBtn').addEventListener('click', exportCsv);
+  $('resetBtn').addEventListener('click', resetHistory);
+
+  function toCsv(drills) {
+    const esc = (v) => '"' + String(v ?? '').replace(/"/g, '""') + '"';
+    const header = ['timestamp', 'domain', 'difficulty', 'time_limit_s', 'timed_out', 'score', 'response', 'scenario', 'feedback'];
+    const rows = drills.map(d =>
+      [d.timestamp, d.domain, d.difficulty, d.timeLimit, d.timedOut, d.score, d.response, d.scenario, d.feedback].map(esc).join(','));
+    return header.join(',') + '\n' + rows.join('\n');
+  }
+
+  function exportCsv() {
+    if (!state.drills.length) { showError('Nothing to export yet'); return; }
+    const blob = new Blob([toCsv(state.drills)], { type: 'text/csv' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'nimble-drills.csv';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  function resetHistory() {
+    if (!confirm('Delete all drill history? Your API key and time limit are kept. This cannot be undone.')) return;
+    state.drills = [];
+    state.rotation = [];
+    state.lastDomain = null;
+    saveState();
+    openStats();
+  }
 
   function openStats() {
     const s = computeStats();

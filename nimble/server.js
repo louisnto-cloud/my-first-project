@@ -137,6 +137,16 @@ app.get('/api/drills', (req, res) => {
   res.json({ drills: store.load().drills });
 });
 
+// Wipe the drill log (keeps API key and time limit).
+app.post('/api/reset', (req, res) => {
+  const state = store.load();
+  state.drills = [];
+  state.rotation = [];
+  state.lastDomain = null;
+  store.save(state);
+  res.json({ ok: true });
+});
+
 function apiErrorMessage(err) {
   if (err?.status === 401 || /authentication method/i.test(err?.message || '')) {
     return 'Your API key was rejected — open "API key" in the top right and paste it again';
