@@ -9,7 +9,7 @@
     personal: 'High-stakes personal confrontation',
   };
 
-  let app = { hasApiKey: false, timeLimit: null, focus: null, totalDrills: 0, difficulty: 1, stats: null };
+  let app = { hasApiKey: false, timeLimit: null, focus: null, dailyGoal: 5, totalDrills: 0, difficulty: 1, stats: null };
   const DOMAIN_SHORT = { business: 'Business', legal: 'Legal', personal: 'Personal' };
   let drill = null; // { domain, scenario, difficulty, timeLimit }
   let timerHandle = null;
@@ -73,9 +73,32 @@
       showError('Cannot reach the Nimble server: ' + e.message);
       return;
     }
+    $('goalValue').textContent = app.dailyGoal;
     if (!app.hasApiKey) show('key');
     else if (!app.timeLimit) show('setup');
     else showReady();
+  }
+
+  // Drills done on the local calendar day, and progress toward the daily goal.
+  // Rendered on both the ready and stats screens.
+  function renderDailyProgress(history) {
+    const goal = app.dailyGoal;
+    const today = new Date().toDateString();
+    const done = history.filter(h => new Date(h.timestamp).toDateString() === today).length;
+    const met = goal > 0 && done >= goal;
+    const pct = goal > 0 ? Math.min(100, (done / goal) * 100) : 0;
+    const label = met
+      ? `<span class="met">🎯 Daily goal reached — ${done} today</span>`
+      : `Today: ${done} / ${goal} drills`;
+    for (const key of ['Ready', 'Stats']) {
+      const wrap = $('dp' + key + 'Wrap');
+      if (!wrap) continue;
+      wrap.hidden = !goal;
+      $('dp' + key + 'Label').innerHTML = label;
+      const fill = $('dp' + key + 'Fill');
+      fill.style.width = pct + '%';
+      fill.classList.toggle('met', met);
+    }
   }
 
   function showReady() {
@@ -87,6 +110,7 @@
     }
     const history = app.stats ? app.stats.history : [];
     renderRecentForm(history);
+    renderDailyProgress(history);
     const streak = winStreak(history);
     const streakLine = $('streakLine');
     streakLine.hidden = streak < 2;
@@ -174,6 +198,21 @@
     }
     show('setup');
   });
+
+  // ---------- daily goal ----------
+  async function changeGoal(delta) {
+    const next = Math.min(20, Math.max(1, app.dailyGoal + delta));
+    if (next === app.dailyGoal) return;
+    try {
+      await api('/api/goal', { dailyGoal: next });
+      app.dailyGoal = next;
+      $('goalValue').textContent = next;
+    } catch (err) {
+      showError(err.message);
+    }
+  }
+  $('goalMinus').addEventListener('click', () => changeGoal(-1));
+  $('goalPlus').addEventListener('click', () => changeGoal(1));
 
   // ---------- focus (which domain to drill) ----------
   $('focusPicker').addEventListener('click', async (e) => {
@@ -451,6 +490,7 @@
     $('statBest').textContent = s.history.length ? Math.max(...s.history.map(h => h.score)) : '–';
     $('statLevel').textContent = difficultyFor(s.totalDrills);
 
+    renderDailyProgress(s.history);
     renderDomainRows(s);
 
     renderChart(s.history);

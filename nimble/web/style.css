@@ -108,6 +108,23 @@ input[type="password"], input[type="text"] {
 }
 input:focus { outline: none; border-color: var(--accent); }
 
+.goal-setting { display: flex; align-items: center; gap: 10px; color: var(--ink-2); font-size: 0.9rem; }
+.goal-label { font-weight: 600; color: var(--ink); }
+.goal-unit { color: var(--ink-3); font-size: 0.82rem; }
+.stepper { display: flex; align-items: center; gap: 4px; }
+.stepper button {
+  width: 30px; height: 30px; padding: 0; border-radius: 8px;
+  font-size: 1.1rem; line-height: 1; display: inline-flex; align-items: center; justify-content: center;
+}
+.stepper #goalValue { min-width: 24px; text-align: center; font-variant-numeric: tabular-nums; font-weight: 700; color: var(--ink); }
+
+.daily-progress { width: 100%; max-width: 360px; display: flex; flex-direction: column; gap: 6px; }
+.daily-label { font-size: 0.85rem; color: var(--ink-2); }
+.daily-label .met { color: #63b57c; font-weight: 600; }
+.daily-bar { height: 8px; background: var(--surface-2); border-radius: 4px; overflow: hidden; }
+.daily-bar-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.4s ease; }
+.daily-bar-fill.met { background: #63b57c; }
+
 .choices { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 .choices button { min-width: 76px; padding: 14px 0; font-size: 1.05rem; }
 .choices button.selected { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }

@@ -38,8 +38,19 @@ app.get('/api/state', (req, res) => {
     hasApiKey: claude.hasApiKey(),
     timeLimit: state.settings.timeLimit,
     focus: state.settings.focus || null,
+    dailyGoal: state.settings.dailyGoal ?? 5,
     ...progressPayload(state),
   });
+});
+
+// Set the daily drill goal (1-20).
+app.post('/api/goal', (req, res) => {
+  const goal = Math.round(Number(req.body?.dailyGoal));
+  if (!Number.isFinite(goal) || goal < 1 || goal > 20) {
+    return res.status(400).json({ error: 'dailyGoal must be an integer 1-20' });
+  }
+  store.update((s) => { s.settings.dailyGoal = goal; });
+  res.json({ ok: true, dailyGoal: goal });
 });
 
 // Set the drill focus: null (shuffled rotation) or a single domain.
