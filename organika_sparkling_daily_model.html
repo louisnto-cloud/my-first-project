@@ -109,6 +109,7 @@
   /* charts */
   .chart{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:2px 0 8px;padding-bottom:2px}
   .chart svg{display:block}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   /* help chip */
   .help{display:inline-block;width:15px;height:15px;line-height:15px;text-align:center;border-radius:50%;
     background:var(--line);color:var(--soft);font-size:10px;font-weight:700;cursor:help;margin-left:5px;vertical-align:middle}
@@ -174,12 +175,12 @@
 
   <div class="nav" id="nav"></div>
 
-  <div class="scen" id="scenBar"></div>
+  <div class="scen" id="scenBar" role="group" aria-label="Scenario"></div>
 
   <!-- OVERVIEW -->
   <section class="view on" data-view="Overview">
     <div class="note">Pick a scenario above. The cards show that scenario's full-year result. To change any number, open <b>Assumptions</b> — it's the only place you type.</div>
-    <div class="insight" id="insight"></div>
+    <div class="insight" id="insight" aria-live="polite"></div>
     <div class="kpis" id="kpis"></div>
     <div class="panel">
       <h2>EBITDA by scenario</h2>
@@ -373,7 +374,7 @@ function applyHash(){
 }
 function toast(msg){
   let t = el("toast");
-  if(!t){ t=document.createElement("div"); t.id="toast"; t.className="toast"; document.body.appendChild(t); }
+  if(!t){ t=document.createElement("div"); t.id="toast"; t.className="toast"; t.setAttribute("role","status"); t.setAttribute("aria-live","polite"); document.body.appendChild(t); }
   t.textContent = msg; t.classList.add("on");
   clearTimeout(t._h); t._h = setTimeout(()=>t.classList.remove("on"), 1900);
 }
@@ -489,7 +490,7 @@ function renderCmp(){
     ["Net Income", r=>money(r.ni), 1],
   ];
   const data = SCEN.map(compute);
-  let h = "<table><thead><tr><th>Metric</th>"+SCEN.map(s=>`<th>${s}</th>`).join("")+"</tr></thead><tbody>";
+  let h = "<table aria-label=\"Scenario comparison\"><thead><tr><th>Metric</th>"+SCEN.map(s=>`<th>${s}</th>`).join("")+"</tr></thead><tbody>";
   rows.forEach(row=>{
     h += `<tr class="${row[2]?'tot':''}"><td>${row[0]}</td>`+
       data.map((r,i)=>`<td style="${SCEN[i]==current?'background:var(--hl)':''}">${row[1](r)}</td>`).join("")+"</tr>";
@@ -515,7 +516,7 @@ function renderPnl(){
     ["A&P", l=>money(l.ap), ()=>money(tot("ap"))],
     ["Contribution", l=>money(l.cm), ()=>money(tot("cm")), 1],
   ];
-  let h="<table><thead><tr><th>CDN $</th>"+cols.map(c=>`<th>${c}</th>`).join("")+"<th>Total</th></tr></thead><tbody>";
+  let h="<table aria-label=\"Profit and loss by SKU\"><thead><tr><th>CDN $</th>"+cols.map(c=>`<th>${c}</th>`).join("")+"<th>Total</th></tr></thead><tbody>";
   rows.forEach(row=>{
     h+=`<tr class="${row[3]?'major':''}"><td>${row[0]}</td>`+
        L.map(l=>`<td>${row[1](l)}</td>`).join("")+
@@ -539,7 +540,7 @@ function renderPnl(){
 
 const LADDER=[0.85,0.90,0.95,1.00,1.05,1.10,1.15];
 function renderPricing(){
-  let h="<table><thead><tr><th>SKU \\ CP vs base</th>"+LADDER.map(m=>`<th>${mult(m)}</th>`).join("")+"</tr></thead><tbody>";
+  let h="<table aria-label=\"Pricing lab — profit by CP\"><thead><tr><th>SKU \\ CP vs base</th>"+LADDER.map(m=>`<th>${mult(m)}</th>`).join("")+"</tr></thead><tbody>";
   SKUS.forEach(s=>{
     const vals = LADDER.map(m=>{
       const netpc = s.cp*m*(1-s.disc);
@@ -644,7 +645,7 @@ function renderSens(){
   const cells=[];
   PRM.forEach(mp=>VOLM.forEach(mv=>cells.push(ebitdaAt(mv,mp))));
   const min=Math.min(...cells), max=Math.max(...cells);
-  let h="<table><thead><tr><th>Price × \\ Volume ×</th>"+VOLM.map(m=>`<th>${mult(m)}</th>`).join("")+"</tr></thead><tbody>";
+  let h="<table aria-label=\"EBITDA sensitivity — price by volume\"><thead><tr><th>Price × \\ Volume ×</th>"+VOLM.map(m=>`<th>${mult(m)}</th>`).join("")+"</tr></thead><tbody>";
   PRM.forEach(mp=>{
     h+=`<tr><td><b>${mult(mp)}</b></td>`+VOLM.map(mv=>{
       const v=ebitdaAt(mv,mp);
@@ -776,7 +777,7 @@ function renderMonthly(){
     `<label>${m}<input class="cell seas" type="number" step="0.05" value="${SEASON[i]}" oninput="setSeason(${i},this.value)"></label>`).join("")+`</div>`;
   el("monChart").innerHTML = monthlyChartSVG(rows);
   const tot = k=>rows.reduce((a,r)=>a+r[k],0);
-  let h=`<table><thead><tr><th>Month</th><th>Cases</th><th>Net Sales</th><th>Contribution</th><th>EBITDA</th><th>Cumulative</th></tr></thead><tbody>`;
+  let h=`<table aria-label="Monthly phasing"><thead><tr><th>Month</th><th>Cases</th><th>Net Sales</th><th>Contribution</th><th>EBITDA</th><th>Cumulative</th></tr></thead><tbody>`;
   rows.forEach(r=>{ h+=`<tr><td>${r.m}</td><td>${num(r.cases)}</td><td>${money(r.net)}</td><td>${money(r.contrib)}</td>`+
     `<td${r.ebitda<0?' style="color:var(--bad)"':''}>${money(r.ebitda)}</td><td>${money(r.cumE)}</td></tr>`; });
   h+=`<tr class="tot"><td>Year</td><td>${num(tot("cases"))}</td><td>${money(tot("net"))}</td><td>${money(tot("contrib"))}</td><td>${money(tot("ebitda"))}</td><td>${money(rows[rows.length-1].cumE)}</td></tr></tbody></table>`;
