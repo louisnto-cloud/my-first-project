@@ -41,9 +41,19 @@ cd /tmp && npm install jsdom >/dev/null 2>&1   # then run /tmp/org-test.js with 
   (Arrow/Home/End, roving tabindex, aria). **Iter 7 (expand):** shareable links —
   whole model encodes into the URL hash, "Share" copies it, loads reproduce exactly.
 
+- **Iter 8–13:** Pricing Lab heat + ★ best-price marker (8); executive insight
+  headline + favicon/meta (9); Assumptions UX — help chips, descriptions, min
+  clamping keeping valid negatives (10); Contribution-by-SKU flavour chart (11);
+  **EBITDA tornado** — biggest-lever ranking, base reconciles (12); **break-even
+  curve** with scenarios plotted (13). All verified headless.
+
+Current app: 7 tabs (Overview, P&L, Pricing Lab, Sensitivity, Monthly, Targets,
+Assumptions); 6 chart types; dark mode; persistence; shareable links; CSV/print;
+keyboard nav. Now on **v3.13**.
+
 ## Backlog (priority order)
 ### Improvement (80%)
-1. Per-SKU contribution bars on P&L; assumptions UX (grouping, validation, help).
+1. Scenario compare/delta view; number-format polish; contrast QA; per-unit toggles.
 3. Input validation + friendlier assumptions UX (grouping, units, help "?").
 4. Micro-interactions / entrance; number formatting polish; dark-mode contrast pass.
 5. Print layout: print all views, not just the current tab.
