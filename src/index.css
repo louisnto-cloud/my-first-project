@@ -4,14 +4,21 @@
 
 html {
   -webkit-tap-highlight-color: transparent;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 body {
   @apply bg-violet-50 text-slate-800 font-sans antialiased;
+  @apply dark:bg-slate-900 dark:text-slate-100;
 }
 
 .card {
   @apply bg-white rounded-3xl shadow-sm border border-violet-100 p-4;
+  @apply dark:bg-slate-800 dark:border-slate-700;
 }
 
 .btn {
@@ -20,14 +27,17 @@ body {
 
 .btn-primary {
   @apply btn bg-violet-600 text-white shadow-md shadow-violet-200 hover:bg-violet-700;
+  @apply dark:shadow-none dark:bg-violet-500 dark:hover:bg-violet-400;
 }
 
 .btn-soft {
   @apply btn bg-violet-100 text-violet-700 hover:bg-violet-200;
+  @apply dark:bg-slate-700 dark:text-violet-200 dark:hover:bg-slate-600;
 }
 
 .input {
   @apply w-full rounded-2xl border border-violet-200 bg-white px-4 py-2.5 outline-none focus:ring-2 focus:ring-violet-400;
+  @apply dark:bg-slate-800 dark:border-slate-600 dark:text-slate-100;
 }
 
 @keyframes pop {

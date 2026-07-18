@@ -12,7 +12,7 @@ export function TeachLayout() {
   return (
     <div className="min-h-screen pb-10">
       <Header subtitle={`${role} · ${user?.name ?? ''}`} />
-      <main className="mx-auto max-w-3xl p-4">
+      <main id="main" className="mx-auto max-w-3xl p-4" tabIndex={-1}>
         <Outlet />
       </main>
     </div>
@@ -59,14 +59,14 @@ export function TeachHome() {
               <div className={`flex h-12 w-12 items-center justify-center rounded-2xl text-2xl ${cls.color}`}>{cls.emoji}</div>
               <div className="min-w-0 flex-1">
                 <div className="truncate font-extrabold">{cls.name}</div>
-                <div className="text-xs font-semibold text-slate-400">
+                <div className="text-xs font-semibold text-slate-400 dark:text-slate-500">
                   {cls.level} · {teacher?.name} · {roster.length} {t('common.students')}
                 </div>
               </div>
               {avg != null && (
                 <div className="text-right">
-                  <div className="text-lg font-black text-violet-600">{avg.toFixed(1)}</div>
-                  <div className="text-[10px] font-bold text-slate-400">{t('teach.avgScore')}</div>
+                  <div className="text-lg font-black text-violet-600 dark:text-violet-300">{avg.toFixed(1)}</div>
+                  <div className="text-[10px] font-bold text-slate-400 dark:text-slate-500">{t('teach.avgScore')}</div>
                 </div>
               )}
             </Link>
@@ -76,7 +76,7 @@ export function TeachHome() {
 
       {isAdmin && <FeedbackInbox />}
 
-      <button onClick={resetDemo} className="text-xs font-bold text-slate-300 underline hover:text-slate-400">
+      <button onClick={resetDemo} className="text-xs font-bold text-slate-300 dark:text-slate-600 underline hover:text-slate-400 dark:text-slate-500">
         {t('common.resetDemo')}
       </button>
     </div>
@@ -87,8 +87,8 @@ function StatCard({ emoji, label, value }: { emoji: string; label: string; value
   return (
     <div className="card text-center">
       <div className="text-2xl">{emoji}</div>
-      <div className="text-xl font-black text-violet-700">{value}</div>
-      <div className="text-[11px] font-bold text-slate-400">{label}</div>
+      <div className="text-xl font-black text-violet-700 dark:text-violet-300">{value}</div>
+      <div className="text-[11px] font-bold text-slate-400 dark:text-slate-500">{label}</div>
     </div>
   );
 }

@@ -66,8 +66,26 @@ export default function App() {
           <Route index element={<TeachHome />} />
           <Route path="class/:id" element={<ClassDetail />} />
         </Route>
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </HashRouter>
+  );
+}
+
+function NotFound() {
+  const { user } = useApp();
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-violet-50 p-6 text-center dark:bg-slate-900">
+      <div aria-hidden="true" className="text-6xl">🧭</div>
+      <div>
+        <h1 className="text-2xl font-black text-violet-700 dark:text-violet-300">Not found</h1>
+        <p className="mt-1 text-sm font-semibold text-slate-500 dark:text-slate-400">
+          That page doesn't exist — let's get you back home.
+        </p>
+      </div>
+      <a href={`#${user ? homeFor(user.role) : '/login'}`} className="btn-primary">
+        Take me home
+      </a>
+    </div>
   );
 }
