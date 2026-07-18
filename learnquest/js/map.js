@@ -28,6 +28,25 @@ const WorldMap = {
     else WorldMap.showHome();
   },
 
+  // The next level to play: first unlocked, not-yet-done level, preferring
+  // the world the child last visited. Returns a level object or null.
+  nextLevel() {
+    const wid = Store.state.lastWorld;
+    const worlds = wid && CURRICULUM.find(w => w.id === wid)
+      ? [CURRICULUM.find(w => w.id === wid)].concat(CURRICULUM.filter(w => w.id !== wid))
+      : CURRICULUM;
+    for (const world of worlds) {
+      for (const region of world.regions) {
+        if (!Store.isRegionUnlocked(world, region)) break;
+        for (let i = 0; i < region.levels.length; i++) {
+          const lv = region.levels[i];
+          if (Store.isLevelUnlocked(world, region, i) && !Store.state.completed[lv.id]) return lv;
+        }
+      }
+    }
+    return null;
+  },
+
   /* ---- Home: two continents + companion + shop/trophies/parent ---- */
 
   showHome() {
@@ -68,6 +87,22 @@ const WorldMap = {
       Audio2.pop();
     });
     screen.appendChild(buddyRow);
+
+    // Continue where you left off — one tap back into learning
+    const nxt = WorldMap.nextLevel();
+    if (nxt) {
+      const cont = U.el('button', 'continue-btn');
+      cont.innerHTML = `<span class="cont-play">▶</span>
+        <span class="cont-text"><span class="cont-kicker">Keep learning</span>
+        <span class="cont-name">${nxt.icon} ${U.esc(nxt.name)}</span></span>`;
+      cont.addEventListener('click', () => {
+        Audio2.whoosh();
+        Store.state.lastWorld = nxt.world.id; Store.save();
+        if (nxt.type === 'review') Level.playReview(nxt);
+        else Level.playSkill(nxt);
+      });
+      screen.appendChild(cont);
+    }
 
     // Daily goal ring
     const goal = Store.state.dailyGoal || 3;
@@ -152,6 +187,7 @@ const WorldMap = {
 
   showWorld(worldId) {
     WorldMap.lastRegion = null;
+    Store.state.lastWorld = worldId; Store.save();
     const world = CURRICULUM.find(w => w.id === worldId);
     const app = document.getElementById('app');
     app.innerHTML = '';

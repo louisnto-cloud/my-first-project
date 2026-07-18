@@ -23,6 +23,7 @@ const Store = {
       dailyGoal: 3,       // levels per day the goal ring celebrates
       lastGoalDay: null,  // day key the daily goal was last celebrated
       stickersSeen: null, // null = seed silently on first sync
+      lastWorld: null,    // world the child last visited, for Continue
       name: ''
     };
   },
