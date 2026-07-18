@@ -135,6 +135,33 @@ export async function dismiss(
   }
   if (!releasedTo) return { applied: false, reason: 'released_to_required' };
 
+  if (!p.pickupPersonId) {
+    // Name-only release (the offline ID-check fallback). Two hardenings:
+    // the typed name must not match a BLOCKED person on this child's
+    // list, and site leadership is notified of every name-only release
+    // so the fallback can't become the quiet default.
+    const blockedMatch = await one<{ name: string }>(
+      db,
+      `SELECT name FROM pickup_people WHERE org_id = $1 AND student_id = $2 AND blocked = true AND LOWER($3) LIKE '%' || LOWER(name) || '%'`,
+      [p.orgId, p.studentId, releasedTo],
+    );
+    if (blockedMatch) {
+      await safetyEvent(db, {
+        orgId: p.orgId, siteId: p.siteId, type: 'dismissal.blocked_pickup_attempt',
+        studentId: p.studentId, actorId: p.by, detail: { name: blockedMatch.name, via: 'name_only' }, at: p.at,
+      });
+      return { applied: false, reason: 'blocked_pickup', alert: 'blocked_pickup' };
+    }
+    const leads = await many<{ id: string }>(
+      db,
+      `SELECT id FROM users WHERE org_id = $1 AND role = 'site_director' AND site_id = $2`,
+      [p.orgId, p.siteId],
+    );
+    for (const l of leads) {
+      await notify(db, { orgId: p.orgId, channel: 'push', toUserId: l.id, body: `Name-only release (ID checked): "${releasedTo}" — review in today's log.`, at: p.at });
+    }
+  }
+
   await db.query(
     `UPDATE attendance_records SET check_out_at = $2, check_out_by = $3, check_out_event_id = $4,
             released_to_name = $5, released_to_pickup_id = $6 WHERE id = $1`,

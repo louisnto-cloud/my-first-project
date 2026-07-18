@@ -71,6 +71,11 @@ export function registerInsightRoutes(app: FastifyInstance, db: DB): void {
   app.post('/students/:id/school-grades', async (req, reply) => {
     const actor = await requireAuth(req, reply);
     if (!actor) return;
+    // Recording grades is staff work — students/guardians read via the
+    // correlation endpoint but must never write their own numbers.
+    if (!['owner', 'academic_director', 'site_director', 'tutor', 'staff'].includes(actor.role)) {
+      return reply.code(403).send({ error: 'forbidden' });
+    }
     const { id } = req.params as { id: string };
     if (!(await studentGate(db, actor, id))) return reply.code(403).send({ error: 'forbidden' });
     const body = z.object({ term: z.string().min(3).max(20), subject: z.string().min(2).max(40).default('english'), grade: z.number().min(0).max(10) }).safeParse(req.body);

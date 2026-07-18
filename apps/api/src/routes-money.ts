@@ -53,6 +53,9 @@ export function registerMoneyRoutes(app: FastifyInstance, db: DB): void {
     const plan = await one(db, 'SELECT 1 AS x FROM billing_plans WHERE id = $1 AND org_id = $2', [body.data.planId, actor.orgId]);
     if (!student || !plan) return reply.code(404).send({ error: 'not_found' });
     const spId = rid('sp');
+    // One active plan per student: assigning a new plan ends the old one
+    // (billing only ever invoices one plan per student per period).
+    await db.query(`UPDATE student_plans SET status = 'ended', ended_on = $2 WHERE student_id = $1 AND status = 'active'`, [id, body.data.startedOn]);
     await db.query(
       'INSERT INTO student_plans (id, org_id, student_id, plan_id, started_on, sibling_discount_pct, scholarship_pct) VALUES ($1, $2, $3, $4, $5, $6, $7)',
       [spId, actor.orgId, id, body.data.planId, body.data.startedOn, body.data.siblingDiscountPct, body.data.scholarshipPct],
@@ -147,6 +150,13 @@ export function registerMoneyRoutes(app: FastifyInstance, db: DB): void {
     if (!body.success) return reply.code(400).send({ error: 'invalid_input' });
     const inv = await one<{ org_id: string }>(db, 'SELECT org_id FROM invoices WHERE id = $1', [id]);
     if (!inv || inv.org_id !== actor.orgId) return reply.code(404).send({ error: 'not_found' });
+    // A refund can never exceed what was actually collected, counting
+    // every refund that is still alive (requested/approved/processed).
+    const paid = await one<{ sum: string }>(db, 'SELECT COALESCE(SUM(amount_vnd), 0)::text AS sum FROM payments WHERE invoice_id = $1', [id]);
+    const refunded = await one<{ sum: string }>(db, `SELECT COALESCE(SUM(amount_vnd), 0)::text AS sum FROM refunds WHERE invoice_id = $1 AND status IN ('requested', 'approved', 'processed')`, [id]);
+    if (body.data.amountVnd > Number(paid?.sum ?? 0) - Number(refunded?.sum ?? 0)) {
+      return reply.code(422).send({ error: 'exceeds_refundable', refundableVnd: Number(paid?.sum ?? 0) - Number(refunded?.sum ?? 0) });
+    }
     const rfId = rid('rf');
     await db.query('INSERT INTO refunds (id, org_id, invoice_id, amount_vnd, reason, requested_by) VALUES ($1, $2, $3, $4, $5, $6)', [
       rfId, actor.orgId, id, body.data.amountVnd, body.data.reason, actor.id,
@@ -237,9 +247,14 @@ export function registerMoneyRoutes(app: FastifyInstance, db: DB): void {
     // Referral conversion: enrolling a referred lead credits the referrer.
     if (stage === 'enrolled' && lead.stage !== 'enrolled' && lead.referral_code) {
       const referrer = await one<{ parent_id: string }>(db, 'SELECT parent_id FROM referral_codes WHERE code = $1 AND org_id = $2', [lead.referral_code, actor.orgId]);
-      if (referrer) {
+      // One credit per lead, ever — stage flapping (enrolled → lost →
+      // enrolled) must not mint another. The lead id rides in the reason.
+      const already = referrer
+        ? await one(db, 'SELECT 1 AS x FROM account_credits WHERE org_id = $1 AND reason LIKE $2', [actor.orgId, `%[lead:${id}]%`])
+        : null;
+      if (referrer && !already) {
         await db.query('INSERT INTO account_credits (id, org_id, parent_id, amount_vnd, reason) VALUES ($1, $2, $3, $4, $5)', [
-          rid('cr'), actor.orgId, referrer.parent_id, 200000, `Referral: ${lead.child_name ?? lead.parent_name}`,
+          rid('cr'), actor.orgId, referrer.parent_id, 200000, `Referral: ${lead.child_name ?? lead.parent_name} [lead:${id}]`,
         ]);
         await notify(db, { orgId: actor.orgId, channel: 'push', toUserId: referrer.parent_id, body: 'Cảm ơn bạn đã giới thiệu! 200.000đ đã được cộng vào tài khoản. 💜', at: new Date() });
       }

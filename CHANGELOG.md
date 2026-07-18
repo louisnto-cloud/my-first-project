@@ -1,5 +1,30 @@
 # CHANGELOG.md
 
+## Improvement loop — review round 3 (money, safety, insights, center area)
+
+Two parallel adversarial reviews; 13 confirmed bugs fixed:
+
+- Safety: /attendance/dismiss and /kiosk/sync now org-gate every student
+  (cross-tenant check-out was possible); name-only releases refuse names
+  matching a BLOCKED pickup and notify the site director every time.
+- Money: refunds bounded by paid-minus-refunded (422 over); partially
+  used account credits keep their remainder; referral credit granted at
+  most once per lead; assigning a plan replaces the previous active one
+  (second plans were silently never billed); billing dates read as text
+  so UTC+7 servers don't overcharge proration by a day.
+- Insights: recording school grades is staff-only (students/guardians
+  could overwrite their own numbers).
+- Auth: /auth/login verifies the password against every org's account
+  holding that email (a same-email account in another org could lock a
+  user out); parent-invite claim rolls back if registration fails.
+- Admin: staff/teacher creation validates siteId against the org (no
+  seed-site fallback).
+- Landing: Enter key honors the button guards; 400 errors show "check
+  your input", not "preview only".
+- Demo: runtime-created staff accounts genuinely enforce their one-time
+  temp password (and rotate it on password change). 160 tests green.
+
+
 ## Five-hour growth loop (passes 4-18)
 
 - Students: badges strip + avatar characters (server-validated safe

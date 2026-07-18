@@ -275,7 +275,7 @@ export function Landing({ onDone }: { onDone: () => void }) {
       setToken(res.token);
       onDone();
     } catch (e) {
-      setErr(e instanceof ApiError && e.status === 401 ? t('wrongCode') : t('noServer'));
+      setErr(e instanceof ApiError && [400, 401, 403].includes(e.status) ? t('wrongCode') : t('noServer'));
     } finally {
       setBusy(false);
     }
@@ -352,7 +352,7 @@ export function Landing({ onDone }: { onDone: () => void }) {
           {tab === 'center' ? (
             <div className="animate-rise space-y-3">
               <input className="input" placeholder={t('email')} value={email} onChange={(e) => setEmail(e.target.value)} />
-              <input className="input" type="password" placeholder={t('password')} value={password} onChange={(e) => setPassword(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && go()} />
+              <input className="input" type="password" placeholder={t('password')} value={password} onChange={(e) => setPassword(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && email.includes('@') && !!password && !busy && go()} />
               <button onClick={go} disabled={busy || !email.includes('@') || !password} className="btn-primary w-full py-3">
                 <Icon name="shield" size={17} /> {t('signin')}
               </button>
@@ -370,7 +370,7 @@ export function Landing({ onDone }: { onDone: () => void }) {
                   value={code}
                   maxLength={10}
                   onChange={(e) => setCode(e.target.value.toUpperCase())}
-                  onKeyDown={(e) => e.key === 'Enter' && go()}
+                  onKeyDown={(e) => e.key === 'Enter' && code.length >= 4 && !busy && go()}
                 />
                 <Icon name="cap" size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-violet-400" />
               </div>
@@ -382,7 +382,7 @@ export function Landing({ onDone }: { onDone: () => void }) {
           ) : !registering ? (
             <div className="space-y-3">
               <input className="input" placeholder={t('email')} value={email} onChange={(e) => setEmail(e.target.value)} />
-              <input className="input" type="password" placeholder={t('password')} value={password} onChange={(e) => setPassword(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && go()} />
+              <input className="input" type="password" placeholder={t('password')} value={password} onChange={(e) => setPassword(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && email.includes('@') && !!password && !busy && go()} />
               <button onClick={go} disabled={busy} className="btn-primary w-full py-3">{t('signin')}</button>
               <button onClick={() => { setRegistering(true); setErr(''); }} className="w-full text-center text-xs font-extrabold text-violet-600 underline underline-offset-2">
                 {t('newParent')}
@@ -399,7 +399,7 @@ export function Landing({ onDone }: { onDone: () => void }) {
               />
               <input className="input" placeholder={t('yourName')} value={regName} onChange={(e) => setRegName(e.target.value)} />
               <input className="input" placeholder={t('email')} value={email} onChange={(e) => setEmail(e.target.value)} />
-              <input className="input" type="password" placeholder={t('newPassword')} value={password} onChange={(e) => setPassword(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && register()} />
+              <input className="input" type="password" placeholder={t('newPassword')} value={password} onChange={(e) => setPassword(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && !busy && invite.trim().length >= 6 && regName.trim().length >= 2 && email.includes('@') && password.length >= 6 && register()} />
               <button onClick={register} disabled={busy || invite.trim().length < 6 || regName.trim().length < 2 || !email.includes('@') || password.length < 6} className="btn-primary w-full py-3">
                 {t('register')}
               </button>

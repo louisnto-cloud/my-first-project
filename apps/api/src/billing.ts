@@ -91,7 +91,7 @@ export async function runBilling(db: DB, p: { orgId: string; period: string; due
     sibling_discount_pct: number; scholarship_pct: number; plan_name: string;
   }>(
     db,
-    `SELECT sp.id, sp.student_id, bp.price_vnd, sp.started_on, sp.sibling_discount_pct, sp.scholarship_pct, bp.name AS plan_name
+    `SELECT sp.id, sp.student_id, bp.price_vnd, sp.started_on::text AS started_on, sp.sibling_discount_pct, sp.scholarship_pct, bp.name AS plan_name
        FROM student_plans sp JOIN billing_plans bp ON bp.id = sp.plan_id
       WHERE sp.org_id = $1 AND sp.status = 'active'
         AND sp.started_on <= ($2 || '-' || lpad($3::text, 2, '0'))::date
@@ -104,7 +104,9 @@ export async function runBilling(db: DB, p: { orgId: string; period: string; due
     const exists = await one(db, 'SELECT 1 AS x FROM invoices WHERE student_id = $1 AND period = $2', [plan.student_id, p.period]);
     if (exists) continue;
 
-    const startedOn = new Date(plan.started_on).toISOString().slice(0, 10);
+    // started_on::text below — a Date round-trip shifts the day west of
+    // the wire value on east-of-UTC servers and overcharges proration.
+    const startedOn = String(plan.started_on);
     const charge = planCharge({
       priceVnd: Number(plan.price_vnd), period: p.period, startedOn,
       siblingPct: plan.sibling_discount_pct, scholarshipPct: plan.scholarship_pct,
@@ -112,13 +114,13 @@ export async function runBilling(db: DB, p: { orgId: string; period: string; due
 
     const fees = await many<{ id: string; amount_vnd: number; date: string | Date; minutes_late: number }>(
       db,
-      'SELECT id, amount_vnd, date, minutes_late FROM late_fees WHERE student_id = $1 AND invoice_id IS NULL',
+      'SELECT id, amount_vnd, date::text AS date, minutes_late FROM late_fees WHERE student_id = $1 AND invoice_id IS NULL',
       [plan.student_id],
     );
     const lines = [...charge.lines.map((l) => ({ ...l, label: `${plan.plan_name} — ${l.label}` }))];
     let feeTotal = 0;
     for (const f of fees) {
-      lines.push({ label: `Late pickup ${new Date(f.date).toISOString().slice(0, 10)} (${f.minutes_late} min)`, amountVnd: Number(f.amount_vnd) });
+      lines.push({ label: `Late pickup ${f.date} (${f.minutes_late} min)`, amountVnd: Number(f.amount_vnd) });
       feeTotal += Number(f.amount_vnd);
     }
 
@@ -133,12 +135,15 @@ export async function runBilling(db: DB, p: { orgId: string; period: string; due
     );
     let creditApplied = 0;
     const appliedCreditIds: string[] = [];
+    const creditRemainders: { reason: string; amountVnd: number }[] = [];
     for (const c of credits) {
       if (preCredit - creditApplied <= 0) break;
       const usable = Math.min(Number(c.amount_vnd), preCredit - creditApplied);
       creditApplied += usable;
       appliedCreditIds.push(c.id);
       lines.push({ label: `Credit — ${c.reason}`, amountVnd: -usable });
+      // A partially-used credit keeps its remainder as a fresh credit row.
+      if (usable < Number(c.amount_vnd)) creditRemainders.push({ reason: c.reason, amountVnd: Number(c.amount_vnd) - usable });
     }
 
     const id = rid('inv');
@@ -149,6 +154,12 @@ export async function runBilling(db: DB, p: { orgId: string; period: string; due
     );
     for (const f of fees) await db.query('UPDATE late_fees SET invoice_id = $2 WHERE id = $1', [f.id, id]);
     for (const cid of appliedCreditIds) await db.query('UPDATE account_credits SET invoice_id = $2 WHERE id = $1', [cid, id]);
+    for (const rem of creditRemainders) {
+      const holder = credits.find((c) => c.reason === rem.reason);
+      await db.query('INSERT INTO account_credits (id, org_id, parent_id, amount_vnd, reason) SELECT $1, org_id, parent_id, $2, $3 FROM account_credits WHERE id = $4', [
+        rid('cr'), rem.amountVnd, `${rem.reason} (remainder)`, holder ? holder.id : appliedCreditIds[appliedCreditIds.length - 1],
+      ]);
+    }
 
     const guardians = await many<{ guardian_id: string }>(db, 'SELECT guardian_id FROM guardian_students WHERE student_id = $1', [plan.student_id]);
     for (const g of guardians) {

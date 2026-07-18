@@ -103,13 +103,18 @@ export async function buildServer(db: DB, opts: ServerOptions = {}): Promise<Fas
     if (!parsed.success) return reply.code(400).send({ error: 'invalid_input' });
     const { email, password } = parsed.data;
 
-    const user = await one<UserRow & { role: string; name: string }>(
+    // Email uniqueness is per-org, so the same address can exist in more
+    // than one org. Verify the password against every match instead of
+    // rows[0] — otherwise a same-email account in another org can lock
+    // this user out of login entirely.
+    const candidates = await many<UserRow & { role: string; name: string }>(
       db,
       'SELECT id, org_id, role, name, password_hash, archived FROM users WHERE email = $1 AND archived = false',
       [email.toLowerCase()],
     );
-    if (!user || !verifyPassword(password, user.password_hash)) {
-      await audit(db, { orgId: user?.org_id, action: 'auth.login_failed', detail: { email } });
+    const user = candidates.find((c) => verifyPassword(password, c.password_hash));
+    if (!user) {
+      await audit(db, { orgId: candidates[0]?.org_id, action: 'auth.login_failed', detail: { email } });
       return reply.code(401).send({ error: 'invalid_credentials' });
     }
     const token = await issueToken(db, user.id);

@@ -18,6 +18,7 @@ interface DUser {
   email: string;
   code?: string;
   avatar?: string; // kid-picked emoji character
+  tempPassword?: string; // runtime-created staff: enforced by demo login
   classIds: string[]; // student: enrolled; tutor: taught
   childIds: string[]; // parent
 }
@@ -417,6 +418,9 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     const email = String(b.email ?? '').trim().toLowerCase();
     const u = db.users.find((x) => x.email === email);
     if (!u) return err(401, 'invalid_credentials');
+    // Seeded demo accounts accept any password; accounts created inside
+    // the demo enforce their issued temp password so the flow is honest.
+    if (u.tempPassword && String(b.password ?? '') !== u.tempPassword) return err(401, 'invalid_credentials');
     return ok({ token: `demo:${u.id}`, user: { id: u.id, name: u.name, role: u.role } });
   }
 
@@ -548,7 +552,16 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     return ok({ inviteCode: code, studentName: stu.name });
   }
 
-  if (rawPath === '/auth/change-password' && method === 'POST') return ok({ ok: true });
+  if (rawPath === '/auth/change-password' && method === 'POST') {
+    // Runtime-created staff actually rotate their enforced password.
+    if (me.tempPassword) {
+      if (String(b.current ?? '') !== me.tempPassword) return err(403, 'wrong_password');
+      if (String(b.next ?? '').length < 6) return err(400, 'invalid_input');
+      me.tempPassword = String(b.next);
+      save(db);
+    }
+    return ok({ ok: true });
+  }
 
   // ---- self-service email change (email-auth roles) ----
   if (rawPath === '/me/email' && method === 'POST') {
@@ -572,10 +585,11 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
       const email = String(b.email ?? '').trim().toLowerCase();
       if (name.length < 2 || !email.includes('@')) return err(400, 'invalid_input');
       if (db.users.some((u) => u.email === email)) return err(409, 'email_taken');
-      const u: DUser = { id: uid('fd'), role: 'front_desk', name, email, classIds: [], childIds: [] };
+      const temp = `Etop@${1000 + Math.floor(rnd() * 9000)}`;
+      const u: DUser = { id: uid('fd'), role: 'front_desk', name, email, classIds: [], childIds: [], tempPassword: temp };
       db.users.push(u);
       save(db);
-      return ok({ id: u.id, name, email, tempPassword: `Etop@${1000 + Math.floor(rnd() * 9000)}` });
+      return ok({ id: u.id, name, email, tempPassword: temp });
     }
   }
 

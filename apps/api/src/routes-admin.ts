@@ -51,6 +51,10 @@ export function registerAdminRoutes(app: FastifyInstance, db: DB): void {
     const dup = await one(db, 'SELECT 1 AS x FROM users WHERE org_id = $1 AND email = $2', [actor.orgId, email]);
     if (dup) return reply.code(409).send({ error: 'email_taken' });
 
+    if (body.data.siteId) {
+      const site = await one(db, 'SELECT 1 AS x FROM sites WHERE id = $1 AND org_id = $2', [body.data.siteId, actor.orgId]);
+      if (!site) return reply.code(400).send({ error: 'unknown_site' });
+    }
     const id = rid('t');
     await db.query(
       `INSERT INTO users (id, org_id, site_id, role, name, email, login_code, password_hash)
@@ -87,6 +91,16 @@ export function registerAdminRoutes(app: FastifyInstance, db: DB): void {
     const dup = await one(db, 'SELECT 1 AS x FROM users WHERE org_id = $1 AND email = $2', [actor.orgId, email]);
     if (dup) return reply.code(409).send({ error: 'email_taken' });
 
+    // The site must belong to this org; no cross-tenant linkage, no
+    // seed-org fallback.
+    let siteId = body.data.siteId ?? actor.siteId ?? null;
+    if (siteId) {
+      const site = await one(db, 'SELECT 1 AS x FROM sites WHERE id = $1 AND org_id = $2', [siteId, actor.orgId]);
+      if (!site) return reply.code(400).send({ error: 'unknown_site' });
+    } else {
+      const first = await one<{ id: string }>(db, 'SELECT id FROM sites WHERE org_id = $1 ORDER BY id LIMIT 1', [actor.orgId]);
+      siteId = first?.id ?? null;
+    }
     // Readable one-time password, shown to the owner exactly once.
     let temp = 'Etop@';
     for (let i = 0; i < 4; i++) temp += String(randomInt(10));
@@ -94,7 +108,7 @@ export function registerAdminRoutes(app: FastifyInstance, db: DB): void {
     await db.query(
       `INSERT INTO users (id, org_id, site_id, role, name, email, password_hash)
        VALUES ($1, $2, $3, 'front_desk', $4, $5, $6)`,
-      [id, actor.orgId, body.data.siteId ?? actor.siteId ?? 'site_nh', body.data.name.trim(), email, hashPassword(temp)],
+      [id, actor.orgId, siteId, body.data.name.trim(), email, hashPassword(temp)],
     );
     await audit(db, { orgId: actor.orgId, actorId: actor.id, action: 'admin.staff_created', entity: 'user', entityId: id });
     return { id, name: body.data.name.trim(), email, tempPassword: temp };
@@ -215,12 +229,19 @@ export function registerAdminRoutes(app: FastifyInstance, db: DB): void {
     const claimed = await db.query('UPDATE parent_invites SET used_by = $2, used_at = now() WHERE code = $1 AND used_by IS NULL', [invite.code, id]);
     if (claimed.affectedRows === 0) return reply.code(409).send({ error: 'invite_used' });
 
-    await db.query(
-      `INSERT INTO users (id, org_id, role, name, email, phone, password_hash) VALUES ($1, $2, 'parent', $3, $4, $5, $6)`,
-      [id, invite.org_id, body.data.name.trim(), email, body.data.phone ?? null, hashPassword(body.data.password)],
-    );
-    const order = await one<{ n: string }>(db, 'SELECT COUNT(*)::text AS n FROM guardian_students WHERE student_id = $1', [invite.student_id]);
-    await db.query('INSERT INTO guardian_students (guardian_id, student_id, contact_order) VALUES ($1, $2, $3)', [id, invite.student_id, Number(order?.n ?? 0) + 1]);
+    try {
+      await db.query(
+        `INSERT INTO users (id, org_id, role, name, email, phone, password_hash) VALUES ($1, $2, 'parent', $3, $4, $5, $6)`,
+        [id, invite.org_id, body.data.name.trim(), email, body.data.phone ?? null, hashPassword(body.data.password)],
+      );
+      const order = await one<{ n: string }>(db, 'SELECT COUNT(*)::text AS n FROM guardian_students WHERE student_id = $1', [invite.student_id]);
+      await db.query('INSERT INTO guardian_students (guardian_id, student_id, contact_order) VALUES ($1, $2, $3)', [id, invite.student_id, Number(order?.n ?? 0) + 1]);
+    } catch (e) {
+      // Give the invite back — a failed registration must not burn the
+      // family's only way in (e.g. an email-uniqueness race).
+      await db.query('UPDATE parent_invites SET used_by = NULL, used_at = NULL WHERE code = $1 AND used_by = $2', [invite.code, id]);
+      throw e;
+    }
     await audit(db, { orgId: invite.org_id, actorId: id, action: 'auth.parent_registered', entity: 'student', entityId: invite.student_id });
     await notify(db, { orgId: invite.org_id, channel: 'push', toUserId: id, body: 'Chào mừng đến với E’TOP! 💜', at: new Date() });
 

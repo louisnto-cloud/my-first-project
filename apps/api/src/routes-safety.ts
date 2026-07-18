@@ -75,6 +75,10 @@ export function registerSafetyRoutes(app: FastifyInstance, db: DB): void {
     if (!parsed.success) return reply.code(400).send({ error: 'invalid_input' });
     const actor = await requireStaff(req, reply, parsed.data.siteId);
     if (!actor) return;
+    // Same org gate as check-in: attendance_records are unique per
+    // (student, date) globally, so a foreign id must 404, never write.
+    const student = await one(db, "SELECT 1 AS x FROM users WHERE id = $1 AND org_id = $2 AND role = 'student'", [parsed.data.studentId, actor.orgId]);
+    if (!student) return reply.code(404).send({ error: 'not_found' });
     const result = await dismiss(db, {
       orgId: actor.orgId, siteId: parsed.data.siteId, studentId: parsed.data.studentId, by: actor.id,
       at: nowOf(parsed.data.at), clientEventId: parsed.data.clientEventId,
@@ -96,6 +100,12 @@ export function registerSafetyRoutes(app: FastifyInstance, db: DB): void {
     const sorted = [...parsed.data.events].sort((a, b) => a.at.localeCompare(b.at));
     const results = [];
     for (const ev of sorted) {
+      // Org gate per event — a queued batch must not touch foreign students.
+      const student = await one(db, "SELECT 1 AS x FROM users WHERE id = $1 AND org_id = $2 AND role = 'student'", [ev.studentId, actor.orgId]);
+      if (!student) {
+        results.push({ clientEventId: ev.clientEventId, applied: false, reason: 'unknown_student' });
+        continue;
+      }
       const base = { orgId: actor.orgId, siteId: parsed.data.siteId, studentId: ev.studentId, by: actor.id, at: new Date(ev.at), clientEventId: ev.clientEventId };
       const r =
         ev.type === 'check_in'
