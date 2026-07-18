@@ -9,3 +9,10 @@ Reverse-chronological. Each entry = one committed iteration.
   side-by-side with computed per-can economics, 3-yr net revenue, EBITDA and break-even — so the
   reader sees the full envelope, not just the active scenario.
 - Workbook: 34 → 35 tabs.
+
+## Iteration 2–3 — 2026-07-18 (continuous loop start)
+- [I2] Added **🏠 Start Here** navigator front-door: grouped clickable cards (See the answer /
+  Explore the numbers / Know the competition / Canada launch / Trust the data). Set as the tab the
+  workbook opens on — the easy interface for the whole dossier.
+- [I3] Added a **🏠 Home** link (top-right) to every tab; kept the ↩ Contents link. Full two-way nav.
+- Workbook: 35 → 36 tabs. Validator green.

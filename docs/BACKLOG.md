@@ -10,16 +10,16 @@ implement, validate (`./build_all.sh`), commit, log in CHANGELOG.md.
   (simple navigation, a clear front-door, usable controls) over adding depth. Keep it simple.
 
 ## Loop control
-- Deadline: **2026-07-11T11:47:49Z** (4:30 local; within the requested 4-hour window)
-- Cadence: one iteration per wake (~20 min apart)
-- Stop when: deadline reached OR backlog exhausted OR user interrupts
+- Deadline: **2026-07-18T11:38:12Z** (3h continuous; user's 6:30 PM local)
+- Cadence: CONTINUOUS — multiple items per wake, tight (~120s) spacing; tokens uncapped by user
+- Stop when: deadline reached OR user interrupts (backlog auto-refills before exhaustion)
 
 ## Queue (improvement-weighted, interface-first)
 - [x] I1 — Loop infra + Scenario Comparison tab
-- [ ] I2 — [IMPROVE/INTERFACE] "🏠 Start Here" home/navigator tab = the front door: big clickable
+- [x] I2 — [IMPROVE/INTERFACE] "🏠 Start Here" home/navigator tab = the front door: big clickable
         links to Dashboard, Financial Model, Recommendation, Peer Set, Regulatory, Risk; make it the
         active tab on open. The easy interface for the whole workbook.
-- [ ] I3 — [IMPROVE] Navigation polish: ↩ Home + ↩ Contents link on every tab; tab-color legend.
+- [x] I3 — [IMPROVE] Navigation polish: ↩ Home + ↩ Contents link on every tab; tab-color legend.
 - [ ] I4 — [IMPROVE] Formatting QA sweep: consistent fonts/widths/wrap/row-heights; freeze panes on
         all data tabs; fix any text overflow or clipped cells.
 - [ ] I5 — [IMPROVE/INTERFACE] Financial Model usability: clearly mark input vs formula cells, add
