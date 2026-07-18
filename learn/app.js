@@ -60,7 +60,28 @@ function speak(text, opts = {}) {
   });
 }
 let lastPrompt = '';
-function say(text, opts) { lastPrompt = text; return speak(text, opts); }
+function say(text, opts) { lastPrompt = text; resetIdle(); return speak(text, opts); }
+
+/* Gentle idle re-engagement: if a child drifts mid-activity, the fox warmly
+   re-speaks the prompt and wiggles — never a scold, just a friendly nudge. */
+let idleTimer = null, idleNudges = 0;
+function resetIdle() {
+  clearTimeout(idleTimer);
+  if (!screens.activity.classList.contains('active')) return;
+  idleTimer = setTimeout(() => {
+    if (!screens.activity.classList.contains('active')) return;
+    if (document.getElementById('celebrate').classList.contains('active')) { resetIdle(); return; }
+    if (idleNudges >= 3 || !lastPrompt) return;
+    idleNudges++;
+    sfx.pop();
+    const fox = document.getElementById('guide');
+    fox.style.animation = 'none'; void fox.offsetWidth;
+    fox.style.animation = 'wobble .5s 2, bob 3.2s ease-in-out infinite';
+    speak('Your turn! ' + lastPrompt);
+    resetIdle();
+  }, 18000);
+}
+document.addEventListener('pointerdown', () => { idleNudges = 0; resetIdle(); }, true);
 
 /* ---------------- sound effects (synthesized, no files) ---------------- */
 let AC = null;
@@ -171,7 +192,7 @@ function show(name) {
   screens[name].classList.add('active');
   document.getElementById('homebtn').style.display = name === 'home' ? 'none' : 'block';
 }
-function goHome() { speechSynthesis.cancel(); show('home'); buildHome(); sfx.swoosh(); }
+function goHome() { speechSynthesis.cancel(); clearTimeout(idleTimer); show('home'); buildHome(); sfx.swoosh(); }
 document.getElementById('homebtn').addEventListener('click', goHome);
 document.getElementById('guide').addEventListener('click', () => { sfx.pop(); if (lastPrompt) speak(lastPrompt); });
 
@@ -235,6 +256,7 @@ const ROUNDS = 4; // each activity is ~4 quick rounds then a big finish
 
 function startActivity(id) {
   show('activity');
+  idleNudges = 0;
   clearStage();
   const isl = ISLANDS.find(i => i.id === id);
   screens.activity.style.background = (isl && isl.theme) || '';

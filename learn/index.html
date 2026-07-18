@@ -98,6 +98,12 @@
   /* ---------- start overlay ---------- */
   #start { position:absolute; inset:0; z-index:300; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg,#7c4dff,#512da8); border:none; }
   #start .rocket { font-size:min(40vw,220px); animation:pulse 1.6s ease-in-out infinite; }
+
+  /* respect a child/parent who needs calmer motion */
+  @media (prefers-reduced-motion: reduce) {
+    .island, .bigletter, .sun, .cloud, #guide, .title-banner, #start .rocket { animation:none !important; }
+    .particle, .confetti { animation-duration:.4s !important; }
+  }
 </style>
 </head>
 <body>
