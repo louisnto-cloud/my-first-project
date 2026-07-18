@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="srStatus" class="sr-only" role="status" aria-live="polite"></div>
 <header>
   <span class="brand">Nimble</span>
   <span class="header-meta" id="headerMeta"></span>
@@ -67,9 +68,16 @@
     <p class="muted" id="loadingText">Setting the scene…</p>
   </section>
 
+  <!-- 3-2-1 warmup before the clock starts -->
+  <section id="view-warmup" hidden>
+    <p class="muted">Get ready…</p>
+    <div class="warmup-count" id="warmupCount">3</div>
+    <p class="hint">click or press any key to skip</p>
+  </section>
+
   <!-- Drill -->
   <section id="view-drill" hidden>
-    <div class="timer-ring">
+    <div class="timer-ring" role="timer" aria-hidden="true">
       <svg viewBox="0 0 100 100" aria-hidden="true">
         <circle class="ring-bg" cx="50" cy="50" r="45"></circle>
         <circle class="ring-fg" id="ringFg" cx="50" cy="50" r="45"></circle>
@@ -81,6 +89,7 @@
       <span class="level-dots" id="levelDots" title="Difficulty"></span>
     </div>
     <p class="scenario" id="scenarioText"></p>
+    <label class="sr-only" for="responseBox">Your reply</label>
     <textarea id="responseBox" placeholder="Say it. The clock is running." autocomplete="off" spellcheck="false"></textarea>
     <button class="primary" id="submitBtn">Submit</button>
     <p class="hint">Ctrl/⌘ + Enter also submits</p>

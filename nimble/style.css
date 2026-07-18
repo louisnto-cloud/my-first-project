@@ -15,6 +15,18 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* Visually hidden but available to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
 body {
   background: var(--bg);
   color: var(--ink);
@@ -99,6 +111,24 @@ input:focus { outline: none; border-color: var(--accent); }
 .choices { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 .choices button { min-width: 76px; padding: 14px 0; font-size: 1.05rem; }
 .choices button.selected { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
+
+/* Warmup */
+.warmup-count {
+  font-size: 5rem;
+  font-weight: 750;
+  line-height: 1;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  animation: warmupPulse 0.7s ease;
+}
+@keyframes warmupPulse {
+  0% { opacity: 0.2; transform: scale(0.7); }
+  40% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .warmup-count { animation: none; }
+}
 
 /* Drill */
 .timer-ring { position: relative; width: 108px; height: 108px; }
