@@ -188,6 +188,7 @@ const CURRICULUM = [
           { id: 'nonfic', name: 'Fact Finder', icon: '🔬', gen: 'nonfiction', params: {} },
           { id: 'essay', name: 'Essay Engineer', icon: '🏗️', gen: 'essay-structure', params: {} },
           { id: 'complex', name: 'Sentence Combiner', icon: '🔗', gen: 'complex-sentence', params: {} },
+          { id: 'commas', name: 'Comma Craft', icon: '✏️', gen: 'commas', params: {} },
           { id: 'homo', name: 'Tricky Twins', icon: '👥', gen: 'homophones', params: {} }
         ]
       },
@@ -198,6 +199,8 @@ const CURRICULUM = [
           { id: 'pov', name: 'Point of View', icon: '👁️', gen: 'point-of-view', params: {} },
           { id: 'argue', name: 'Evidence Court', icon: '⚖️', gen: 'argument-evidence', params: {} },
           { id: 'tone', name: 'Tone & Mood', icon: '🎭', gen: 'tone-mood', params: {} },
+          { id: 'clauses', name: 'Clause Detective', icon: '🧩', gen: 'clauses', params: {} },
+          { id: 'runons', name: 'Run-on Repair', icon: '🔧', gen: 'run-ons', params: {} },
           { id: 'revise', name: 'Revision Studio', icon: '🛠️', gen: 'revision', params: {} }
         ]
       }

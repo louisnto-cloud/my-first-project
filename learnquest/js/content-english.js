@@ -564,5 +564,33 @@ const EN = {
     }
   ],
 
+  commaUsage: [
+    { correct: 'We packed apples, cheese, and crackers.', wrong: ['We packed apples cheese and crackers.', 'We packed, apples cheese and crackers.'], why: 'Commas separate items in a list.' },
+    { correct: 'After the long storm, the streets were flooded.', wrong: ['After the long storm the streets were flooded.', 'After, the long storm the streets were flooded.'], why: 'A comma follows an introductory phrase.' },
+    { correct: 'My cousin, who lives in Halifax, is visiting.', wrong: ['My cousin who lives in Halifax is visiting.', 'My cousin who lives, in Halifax is visiting.'], why: 'Commas set off extra information in the middle.' },
+    { correct: 'Yes, I would love to come.', wrong: ['Yes I would love to come.', 'Yes I would, love to come.'], why: 'A comma follows an opening word like "yes".' },
+    { correct: 'She grabbed her coat, and she ran out the door.', wrong: ['She grabbed her coat and, she ran out the door.', 'She grabbed her coat and she ran, out the door.'], why: 'A comma goes before "and" when it joins two full sentences.' },
+    { correct: 'The hungry, tired hikers stopped to rest.', wrong: ['The hungry tired hikers stopped to rest.', 'The hungry tired, hikers stopped to rest.'], why: 'A comma separates two describing words.' }
+  ],
+
+  runOns: [
+    { runon: 'I was tired I went to bed.', fixed: 'I was tired, so I went to bed.', wrong: ['I was tired I, went to bed.', 'I was, tired I went to bed.'] },
+    { runon: 'The rain stopped the sun came out.', fixed: 'The rain stopped, and the sun came out.', wrong: ['The rain stopped the, sun came out.', 'The rain, stopped the sun came out.'] },
+    { runon: 'She loves science she wants to be a vet.', fixed: 'She loves science, so she wants to be a vet.', wrong: ['She loves science she wants, to be a vet.', 'She loves, science she wants to be a vet.'] },
+    { runon: 'We can walk we can take the bus.', fixed: 'We can walk, or we can take the bus.', wrong: ['We can walk we can, take the bus.', 'We can walk, we can take the bus.'] },
+    { runon: 'The dog was small it barked loudly.', fixed: 'The dog was small, but it barked loudly.', wrong: ['The dog was small it barked, loudly.', 'The dog was, small it barked loudly.'] }
+  ],
+
+  clauses: [
+    { s: 'the thunder rolled across the valley', type: 'complete' },
+    { s: 'because the power went out', type: 'incomplete' },
+    { s: 'she planted three rows of beans', type: 'complete' },
+    { s: 'when the bell finally rang', type: 'incomplete' },
+    { s: 'the whole team cheered', type: 'complete' },
+    { s: 'although it was raining hard', type: 'incomplete' },
+    { s: 'the kite soared above the trees', type: 'complete' },
+    { s: 'after we finished dinner', type: 'incomplete' }
+  ],
+
   avatarNames: ['Pip', 'Nova', 'Ember', 'Juniper', 'Koda', 'Luna', 'Sage', 'Wren']
 };

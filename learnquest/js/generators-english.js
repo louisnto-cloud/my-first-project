@@ -514,6 +514,47 @@ const EG = {
     };
   },
 
+  'commas': () => {
+    const c = U.pick(EN.commaUsage);
+    return {
+      format: 'tap',
+      prompt: 'Which sentence uses commas correctly?',
+      say: 'Which sentence has the commas in the right places?',
+      choices: U.shuffle([{ label: c.correct, correct: true }].concat(c.wrong.map(w => ({ label: w, correct: false })))),
+      explain: c.why
+    };
+  },
+
+  'clauses': () => {
+    const items = [];
+    ['complete', 'incomplete'].forEach(t => {
+      U.pickN(EN.clauses.filter(c => c.type === t), 2).forEach(c => items.push({ label: c.s, bin: t }));
+    });
+    return {
+      format: 'sort',
+      prompt: 'Complete thought, or not-yet-complete?',
+      say: 'Sort each group of words. A complete thought can stand alone as a sentence. A not-yet-complete one leaves you hanging.',
+      bins: [
+        { id: 'complete', label: 'Complete sentence', emoji: '✅' },
+        { id: 'incomplete', label: 'Needs more', emoji: '⏳' }
+      ],
+      items: U.shuffle(items),
+      explain: 'A complete sentence has a subject and makes sense alone. Words like "because", "when", and "although" often start a piece that needs more.'
+    };
+  },
+
+  'run-ons': () => {
+    const r = U.pick(EN.runOns);
+    return {
+      format: 'tap',
+      prompt: 'Fix the run-on sentence',
+      passage: { title: 'Run-on', emoji: '🏃', text: r.runon },
+      say: `This is a run-on — two sentences crashed together: ${r.runon} ... Which version fixes it?`,
+      choices: U.shuffle([{ label: r.fixed, correct: true }].concat(r.wrong.map(w => ({ label: w, correct: false })))),
+      explain: 'Join the two ideas with a comma and a joining word (and, but, so, or), or split them into two sentences.'
+    };
+  },
+
   'homophones': () => {
     const h = U.pick(EN.homophones);
     return {
