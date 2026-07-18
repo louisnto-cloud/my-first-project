@@ -51,6 +51,7 @@
     <p class="muted" id="readyMeta"></p>
     <p class="domain-intro" id="domainIntro" hidden>Three arenas, shuffled so you can't settle in: <strong>business&nbsp;negotiation</strong>, <strong>legal&nbsp;argument</strong>, and <strong>personal&nbsp;confrontation</strong>. A scenario lands, the clock starts, you answer out loud in writing. Difficulty climbs as you rack up drills.</p>
     <div class="recent-form" id="recentForm"></div>
+    <p class="streak-line" id="streakLine" hidden></p>
     <button class="primary big" id="startBtn">Start drill</button>
   </section>
 
@@ -88,10 +89,12 @@
 
   <!-- Result -->
   <section id="view-result" hidden>
+    <div class="best-ribbon" id="bestRibbon" hidden>🏆 New personal best</div>
     <div class="score-wrap">
       <div class="score" id="scoreValue">–</div>
       <div class="score-denom">/ 10</div>
     </div>
+    <p class="streak-note" id="streakNote" hidden></p>
     <p class="timed-out-note" id="timedOutNote" hidden>Time ran out — auto-submitted.</p>
     <blockquote class="your-reply" id="yourReply"></blockquote>
     <p class="feedback" id="feedbackText"></p>

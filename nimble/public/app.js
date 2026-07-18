@@ -71,12 +71,27 @@
   function showReady() {
     $('readyMeta').textContent =
       `${app.timeLimit}s per response · level ${app.difficulty} · ${app.totalDrills} drill${app.totalDrills === 1 ? '' : 's'} done`;
-    renderRecentForm(app.stats ? app.stats.history : []);
+    const history = app.stats ? app.stats.history : [];
+    renderRecentForm(history);
+    const streak = winStreak(history);
+    const streakLine = $('streakLine');
+    streakLine.hidden = streak < 2;
+    streakLine.textContent = `🔥 ${streak} strong replies in a row — keep it going`;
     $('domainIntro').hidden = app.totalDrills > 0;
     show('ready');
   }
 
   const bandFor = (score) => (score <= 3 ? 'band-low' : score <= 6 ? 'band-mid' : 'band-high');
+
+  // Consecutive drills from the most recent backwards that scored 7+.
+  function winStreak(history) {
+    let n = 0;
+    for (let i = history.length - 1; i >= 0; i--) {
+      if (history[i].score >= 7) n++;
+      else break;
+    }
+    return n;
+  }
 
   // Last five scores as colored dots, plus a trend arrow vs the five before.
   function renderRecentForm(history) {
@@ -250,6 +265,8 @@
     if (!pendingSubmit) {
       pendingSubmit = { response: $('responseBox').value, timedOut, retry: isRetry };
     }
+    const prevBest = app.stats && app.stats.history.length
+      ? Math.max(...app.stats.history.map(h => h.score)) : 0;
     showJudging();
     try {
       const result = await api('/api/drill/submit', {
@@ -274,6 +291,11 @@
       replyEl.classList.toggle('empty', !reply);
       $('feedbackText').textContent = result.feedback;
       $('timedOutNote').hidden = !wasTimedOut;
+      $('bestRibbon').hidden = !(result.score > prevBest && result.totalDrills > 1);
+      const streak = winStreak(result.stats.history);
+      const streakNote = $('streakNote');
+      streakNote.hidden = streak < 3;
+      streakNote.textContent = `🔥 ${streak} in a row`;
       show('result');
     } catch (err) {
       // Keep pendingSubmit frozen; offer a re-score without re-opening editing.

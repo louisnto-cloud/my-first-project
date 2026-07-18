@@ -221,11 +221,25 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     $('readyMeta').textContent =
       `${state.timeLimit}s per response · level ${difficultyFor(n)} · ${n} drill${n === 1 ? '' : 's'} done`;
     renderRecentForm(state.drills);
+    const streak = winStreak(state.drills);
+    const streakLine = $('streakLine');
+    streakLine.hidden = streak < 2;
+    streakLine.textContent = `🔥 ${streak} strong replies in a row — keep it going`;
     $('domainIntro').hidden = n > 0;
     show('ready');
   }
 
   const bandFor = (score) => (score <= 3 ? 'band-low' : score <= 6 ? 'band-mid' : 'band-high');
+
+  // Consecutive drills from the most recent backwards that scored 7+.
+  function winStreak(history) {
+    let n = 0;
+    for (let i = history.length - 1; i >= 0; i--) {
+      if (history[i].score >= 7) n++;
+      else break;
+    }
+    return n;
+  }
 
   // Last five scores as colored dots, plus a trend arrow vs the five before.
   function renderRecentForm(history) {
@@ -407,6 +421,7 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     if (!pendingSubmit) {
       pendingSubmit = { response: $('responseBox').value, timedOut, retry: isRetry };
     }
+    const prevBest = state.drills.length ? Math.max(...state.drills.map(d => d.score)) : 0;
     showJudging();
     try {
       const { score, feedback } = await judgeResponse({
@@ -440,6 +455,11 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
       replyEl.classList.toggle('empty', !reply);
       $('feedbackText').textContent = feedback;
       $('timedOutNote').hidden = !wasTimedOut;
+      $('bestRibbon').hidden = !(score > prevBest && state.drills.length > 1);
+      const streak = winStreak(state.drills);
+      const streakNote = $('streakNote');
+      streakNote.hidden = streak < 3;
+      streakNote.textContent = `🔥 ${streak} in a row`;
       show('result');
     } catch (err) {
       showError(err.message);
