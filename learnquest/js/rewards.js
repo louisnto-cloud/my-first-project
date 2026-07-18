@@ -121,9 +121,18 @@ const Shop = {
       const card = U.el('div', 'shop-item' + (equipped ? ' equipped' : ''));
       card.innerHTML = `<div class="shop-icon">${item.icon}</div><div class="shop-name">${U.esc(item.name)}</div>`;
       const btn = U.el('button', 'shop-btn' + (owned ? ' owned' : ''),
-        equipped ? '✓ Wearing' : owned ? 'Wear it' : `🪙 ${item.cost}`);
+        equipped ? (item.kind && item.kind !== 'color' ? 'Take off' : '✓ Wearing') : owned ? 'Wear it' : `🪙 ${item.cost}`);
       btn.addEventListener('click', () => {
-        if (equipped) return;
+        if (equipped) {
+          // Colors always stay on (one is always worn); accessories can come off
+          if (item.kind && item.kind !== 'color') {
+            Store.state.avatar.equipped[item.kind] = null;
+            Store.save();
+            Audio2.pop();
+            Shop.show(tab);
+          }
+          return;
+        }
         if (owned) { onEquip(); Audio2.pop(); Shop.show(tab); return; }
         if (Store.spend(item.cost)) {
           Audio2.coin();

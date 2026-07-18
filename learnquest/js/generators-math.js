@@ -33,6 +33,8 @@ const SOLIDS = [
   { name: 'pyramid', e: '🔺', faces: 5, net: 'a square and four triangles' }
 ];
 
+const KIDS = ['Maya', 'Theo', 'Priya', 'Sam', 'Zoe', 'Kai', 'Lena', 'Milo', 'Ava', 'Dev'];
+
 const MG = {
 
   /* ---------- KINDERGARTEN ---------- */
@@ -190,6 +192,19 @@ const MG = {
     const a = U.ri(1, max - 1), b = U.ri(1, max - a);
     const o = U.pick(OBJ);
     const showObjects = max <= 20;
+    // Sometimes a word problem — BC curriculum stresses contextual math
+    if (Math.random() < 0.4) {
+      const [k1, k2] = U.pickN(KIDS, 2);
+      const story = `${k1} has ${a} ${a === 1 ? o.s : o.n}. ${k2} gives ${k1} ${b} more. How many ${o.n} does ${k1} have now?`;
+      return {
+        format: 'numpad',
+        prompt: story,
+        say: story,
+        visual: showObjects ? `<div class="hint-emoji">${o.e}</div>` : '',
+        answer: a + b,
+        explain: `${a} plus ${b} more makes ${a + b}.`
+      };
+    }
     return {
       format: 'numpad',
       prompt: `${a} + ${b} = ?`,
@@ -204,6 +219,18 @@ const MG = {
     const max = p.max || 10;
     const a = U.ri(2, max), b = U.ri(1, a - 1);
     const o = U.pick(OBJ);
+    if (Math.random() < 0.4) {
+      const k1 = U.pick(KIDS);
+      const story = `${k1} has ${a} ${o.n}. ${k1} gives away ${b}. How many ${o.n} are left?`;
+      return {
+        format: 'numpad',
+        prompt: story,
+        say: story,
+        visual: max <= 20 ? `<div class="hint-emoji">${o.e}</div>` : '',
+        answer: a - b,
+        explain: `${a} take away ${b} leaves ${a - b}.`
+      };
+    }
     return {
       format: 'numpad',
       prompt: `${a} − ${b} = ?`,
@@ -490,6 +517,17 @@ const MG = {
 
   'mult-facts': (p) => {
     const a = U.ri(2, p.max || 10), b = U.ri(2, p.max || 10);
+    if (Math.random() < 0.35) {
+      const o = U.pick(OBJ);
+      const story = `A shop sells ${o.n} in bags of ${b}. ${U.pick(KIDS)} buys ${a} bags. How many ${o.n} is that?`;
+      return {
+        format: 'numpad',
+        prompt: story,
+        say: story,
+        answer: a * b,
+        explain: `${a} bags of ${b}: ${a} × ${b} = ${a * b}.`
+      };
+    }
     return {
       format: 'numpad',
       prompt: `${a} × ${b} = ?`,
@@ -501,6 +539,17 @@ const MG = {
 
   'div-facts': (p) => {
     const b = U.ri(2, p.max || 10), q = U.ri(2, p.max || 10);
+    if (Math.random() < 0.35) {
+      const o = U.pick(OBJ);
+      const story = `${b * q} ${o.n} are packed equally into ${b} boxes. How many ${o.n} go in each box?`;
+      return {
+        format: 'numpad',
+        prompt: story,
+        say: story,
+        answer: q,
+        explain: `${b * q} shared into ${b} boxes: ${b * q} ÷ ${b} = ${q} each.`
+      };
+    }
     return {
       format: 'numpad',
       prompt: `${b * q} ÷ ${b} = ?`,

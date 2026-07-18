@@ -70,7 +70,8 @@ const Store = {
     const st = Store.state;
     const prev = st.stars[levelId] || 0;
     const gained = Math.max(0, stars - prev);
-    const coinsEarned = gained * 10 + (prev === 0 ? 5 : 0);
+    // Replays with no new stars still earn a little — practice always pays
+    const coinsEarned = gained * 10 + (prev === 0 ? 5 : 0) + (gained === 0 && prev > 0 ? 3 : 0);
     st.stars[levelId] = Math.max(prev, stars);
     st.completed[levelId] = true;
     st.totalStars += gained;
