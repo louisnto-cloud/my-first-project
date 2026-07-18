@@ -48,6 +48,7 @@ COMPANY = {
     "salaries": 180000, "ga": 60000, "mktg": 40000, "slotting": 20000,
     "log_pct": 0.04, "da": 25000, "interest": 10000, "tax": 0.27,
     "elast": 0.0,   # price elasticity of demand (advanced; 0 = off, e.g. -1.3 = elastic)
+    "g_vol": 0.25, "g_price": 0.03, "g_cost": 0.02,  # 3-year annual growth: volume, price, cost inflation
 }
 # ---- scenario levers: volume x, price x, trade-disc delta (decimal) -------
 LEVERS = {
@@ -97,7 +98,7 @@ PCT = "0.0%"; PCT2 = "0.00%"; MULT = "0.00\\x"
 TAB = {"Home": "0A84FF", "Cover": "808A99", "Guide": "808A99", "Review Log": "808A99",
        "Assumptions": "E8A33D", "Dashboard": "2E7D32",
        "Low": "5B6FA6", "Base": "2E4374", "High": "5B6FA6", "Stretch": "5B6FA6",
-       "Monthly": "00838F", "Pricing Lab": "6A1B9A", "Unit Economics": "6A1B9A", "Targets": "6A1B9A",
+       "Monthly": "00838F", "3-Year": "00695C", "Pricing Lab": "6A1B9A", "Unit Economics": "6A1B9A", "Targets": "6A1B9A",
        "Sensitivity": "EF6C00", "Checks": "B00020"}
 
 
@@ -231,6 +232,9 @@ def build_assumptions(ws):
         ("Outbound logistics (% of net sales)", "log_pct", PCT), ("Depreciation & amortisation", "da", MON),
         ("Interest expense", "interest", MON), ("Tax rate", "tax", PCT),
         ("Price elasticity (advanced; 0 = off)", "elast", "0.0"),
+        ("3-yr volume growth / yr", "g_vol", PCT),
+        ("3-yr price growth / yr", "g_price", PCT),
+        ("3-yr cost inflation / yr", "g_cost", PCT),
     ]
     for label, key, fmt in comp_rows:
         A["co_" + key] = r
@@ -1068,6 +1072,76 @@ def build_unit_economics(ws, A):
 
 
 # =====================================================================
+#  3-YEAR PROJECTION
+# =====================================================================
+def build_threeyear(ws, A):
+    ws.sheet_view.showGridLines = False
+    setcell(ws, "B1", f"{LINE} - 3-Year Projection", f_title)
+    setcell(ws, "B2", "Grows the base year by the growth rates on Assumptions. Year 1 = base year, unlevered.", f_sub)
+    volr = f"'Assumptions'!C{A['vol']}:H{A['vol']}"
+    cpr = f"'Assumptions'!C{A['cp']}:H{A['cp']}"
+    dr = f"'Assumptions'!C{A['disc']}:H{A['disc']}"
+    cosr = f"'Assumptions'!C{A['cos']}:H{A['cos']}"
+    apr = f"'Assumptions'!C{A['ap']}:H{A['ap']}"
+    setcell(ws, "B4", "Kgr  base net (Σ vol·cp·(1-d))", f_lbl, align=left)
+    setcell(ws, "C4", f"=SUMPRODUCT({volr},{cpr},(1-{dr}))", f_calc, MON, fill_tot, rght, True)
+    setcell(ws, "B5", "Kcos  base COGS (Σ vol·COS/case)", f_lbl, align=left)
+    setcell(ws, "C5", f"=SUMPRODUCT({volr},{cosr})", f_calc, MON, fill_tot, rght, True)
+    setcell(ws, "B6", "Kap  base A&P (Σ vol·A&P/case)", f_lbl, align=left)
+    setcell(ws, "C6", f"=SUMPRODUCT({volr},{apr})", f_calc, MON, fill_tot, rght, True)
+    setcell(ws, "B7", "Fixed opex", f_lbl, align=left)
+    setcell(ws, "C7", f"='Assumptions'!C{A['co_salaries']}+'Assumptions'!C{A['co_ga']}+'Assumptions'!C{A['co_mktg']}+'Assumptions'!C{A['co_slotting']}", f_calc, MON, fill_tot, rght, True)
+    setcell(ws, "B8", "Logistics % of net", f_lbl, align=left)
+    setcell(ws, "C8", f"='Assumptions'!C{A['co_log_pct']}", f_calc, PCT, fill_tot, rght, True)
+    setcell(ws, "B9", "Base total cases", f_lbl, align=left)
+    setcell(ws, "C9", f"=SUM({volr})", f_calc, CASES, fill_tot, rght, True)
+    DA = f"'Assumptions'!$C${A['co_da']}"; INT = f"'Assumptions'!$C${A['co_interest']}"; TAX = f"'Assumptions'!$C${A['co_tax']}"
+    GV = f"'Assumptions'!$C${A['co_g_vol']}"; GP = f"'Assumptions'!$C${A['co_g_price']}"; GC = f"'Assumptions'!$C${A['co_g_cost']}"
+    FV = lambda e: f"(1+{GV})^{e}"; FP = lambda e: f"(1+{GP})^{e}"; FC = lambda e: f"(1+{GC})^{e}"
+
+    hdr = 12
+    setcell(ws, f"B{hdr}", "3-Year (CDN $)", f_hdr, fill=fill_band, align=left, border=True)
+    for j, yr in enumerate(["Year 1", "Year 2", "Year 3", "CAGR"]):
+        setcell(ws, f"{get_column_letter(3+j)}{hdr}", yr, f_hdr, fill=fill_band, align=center, border=True)
+    cols = ["C", "D", "E"]; exps = [0, 1, 2]
+    R3 = {}; r = [hdr + 1]
+
+    def row(label, gen, fmt=MON, bold=False, pct=False, cagr=True):
+        rr = r[0]; R3[label] = rr
+        setcell(ws, f"B{rr}", "   " + label, f_lblb if bold else f_lbl, align=left)
+        for c, e in zip(cols, exps):
+            setcell(ws, f"{c}{rr}", gen(c, e), f_lblb if bold else f_calc, fmt, None, rght, True)
+        if cagr and not pct:
+            setcell(ws, f"F{rr}", f'=IFERROR((E{rr}/C{rr})^(1/2)-1,"")', f_calc, PCT, fill_tot, rght, True)
+        r[0] += 1
+
+    row("Physical Cases", lambda c, e: f"={FV(e)}*$C$9", CASES, bold=True)
+    row("Net Sales", lambda c, e: f"={FV(e)}*{FP(e)}*$C$4", MON, bold=True)
+    row("Cost of Sales", lambda c, e: f"={FV(e)}*{FC(e)}*$C$5")
+    row("Gross Profit", lambda c, e: f"={c}{R3['Net Sales']}-{c}{R3['Cost of Sales']}", MON, bold=True)
+    row("GP %", lambda c, e: f"=IFERROR({c}{R3['Gross Profit']}/{c}{R3['Net Sales']},0)", PCT, pct=True, cagr=False)
+    row("A&P", lambda c, e: f"={FV(e)}*$C$6")
+    row("Contribution", lambda c, e: f"={c}{R3['Gross Profit']}-{c}{R3['A&P']}", MON, bold=True)
+    row("Logistics", lambda c, e: f"=$C$8*{c}{R3['Net Sales']}")
+    row("Fixed opex", lambda c, e: f"=$C$7")
+    row("EBITDA", lambda c, e: f"={c}{R3['Contribution']}-{c}{R3['Logistics']}-{c}{R3['Fixed opex']}", MON, bold=True)
+    row("EBITDA %", lambda c, e: f"=IFERROR({c}{R3['EBITDA']}/{c}{R3['Net Sales']},0)", PCT, pct=True, cagr=False)
+    row("D&A", lambda c, e: f"={DA}")
+    row("EBIT", lambda c, e: f"={c}{R3['EBITDA']}-{c}{R3['D&A']}", MON, bold=True)
+    row("Interest", lambda c, e: f"={INT}")
+    row("Pre-tax Profit", lambda c, e: f"={c}{R3['EBIT']}-{c}{R3['Interest']}", MON, bold=True)
+    row("Tax", lambda c, e: f"=MAX(0,{c}{R3['Pre-tax Profit']}*{TAX})")
+    row("Net Income", lambda c, e: f"={c}{R3['Pre-tax Profit']}-{c}{R3['Tax']}", MON, bold=True)
+
+    setcell(ws, f"B{r[0]+1}", "Year 1 = base year. Years 2-3 compound the growth rates. CAGR = annual growth across the 3 years.", f_sub)
+    ws.column_dimensions["A"].width = 2
+    ws.column_dimensions["B"].width = 30
+    for c in ["C", "D", "E", "F"]:
+        ws.column_dimensions[c].width = 15
+    ws.freeze_panes = "C13"
+
+
+# =====================================================================
 #  ASSEMBLE
 # =====================================================================
 ws_home = wb.active; ws_home.title = "Home"
@@ -1075,6 +1149,7 @@ ws_asmp = wb.create_sheet("Assumptions")
 ws_dash = wb.create_sheet("Dashboard")
 scen_ws = {s: wb.create_sheet(s) for s in SCEN}
 ws_month = wb.create_sheet("Monthly")
+ws_3yr = wb.create_sheet("3-Year")
 ws_price = wb.create_sheet("Pricing Lab")
 ws_uecon = wb.create_sheet("Unit Economics")
 ws_target = wb.create_sheet("Targets")
@@ -1088,6 +1163,7 @@ A = build_assumptions(ws_asmp)
 for s in SCEN:
     build_scenario(scen_ws[s], s, A)
 build_monthly(ws_month, A)
+build_threeyear(ws_3yr, A)
 build_sensitivity(ws_sens, A)          # before dashboard/cover/home (they reference C23)
 build_pricing(ws_price, A)
 build_unit_economics(ws_uecon, A)
@@ -1101,7 +1177,7 @@ build_home(ws_home, ws_dash, A)
 
 # ---- simple-first tab order (Apple-style) ----
 order = ["Home", "Assumptions", "Dashboard", "Base", "Low", "High", "Stretch",
-         "Monthly", "Pricing Lab", "Unit Economics", "Targets", "Sensitivity", "Checks",
+         "Monthly", "3-Year", "Pricing Lab", "Unit Economics", "Targets", "Sensitivity", "Checks",
          "Guide", "Review Log", "Cover"]
 wb._sheets.sort(key=lambda s: order.index(s.title) if s.title in order else 99)
 
