@@ -61,3 +61,8 @@ math tie-out), commit, push. Keep the app cohesive and simple — no bloat.
 - [x] Snapshot compare: current vs saved snapshot with deltas (no live-model corruption)
 - [x] CSV import: paste SKU rows (round-trips with Export CSV)
 - [x] 3-Year projection: growth rates -> Year 1-3 P&L + CAGR
+- [x] Cost-risk sensitivity (EBITDA vs COGS × volume)
+- [x] Monthly cumulative net income + break-even month
+- [x] Duplicate scenario; accessibility (ARIA + focus); system dark-mode default
+- [x] Copy Summary as text (email/Slack)
+- [x] 3-Year projection in BOTH app and Excel (verified matching)
