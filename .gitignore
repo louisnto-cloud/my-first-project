@@ -7,3 +7,6 @@ dist/
 # Python (model builder)
 __pycache__/
 *.pyc
+
+# loop state
+.loopstate/
