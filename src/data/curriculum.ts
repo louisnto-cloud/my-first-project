@@ -861,6 +861,50 @@ First · Next · Then · Also · In addition · For example · Finally · In con
           ],
           writingPrompt: 'Write a full paragraph (5–6 sentences) about your favourite season. Include a topic sentence, 3 body sentences with details, and a concluding sentence.',
         },
+        {
+          id: 'm3w1l2',
+          monthIndex: 2, weekIndex: 0, lessonIndex: 1,
+          title: 'Linking Words – Connecting Ideas',
+          kind: 'grammar',
+          objective: 'Join ideas smoothly with because, so, but, however, and for example',
+          audioText: 'Good writing flows because ideas are connected. Linking words are the glue. Because gives a reason. So gives a result. But and however show contrast. For example introduces evidence. Learn these five and your writing will immediately sound more mature.',
+          content: `**Linking words** connect ideas so writing flows.
+
+**1. because — gives a REASON**
+> "I stayed home **because** it was raining."
+
+**2. so — gives a RESULT**
+> "It was raining, **so** I stayed home."
+> ⚠️ *because* introduces the cause; *so* introduces the effect — the same fact, linked two ways!
+
+**3. but — shows CONTRAST (inside a sentence)**
+> "I like tea, **but** my brother likes coffee."
+
+**4. However, — shows CONTRAST (starting a new sentence)**
+> "The film was long. **However,** nobody was bored."
+> (Always follow "However" with a comma.)
+
+**5. For example, — introduces EVIDENCE**
+> "Dogs can learn many tricks. **For example,** my dog can open doors."
+
+**Upgrade your writing:**
+❌ "I like summer. It is warm. We swim."
+✅ "I like summer **because** it is warm, **so** we can swim every day."`,
+          keyWords: [
+            { word: 'linking word', meaning: 'a word that connects ideas, like because, so, or but' },
+            { word: 'reason', meaning: 'why something happens' },
+            { word: 'result', meaning: 'what happens because of something else' },
+            { word: 'contrast', meaning: 'a clear difference between two things' },
+          ],
+          exercises: [
+            { id: 'e1', kind: 'multiple-choice', prompt: '"I wore a coat ___ it was cold." Which word fits?', options: ['so', 'but', 'because', 'however'], answer: 'because' },
+            { id: 'e2', kind: 'multiple-choice', prompt: '"It was cold, ___ I wore a coat." Which word fits?', options: ['so', 'because', 'but', 'for example'], answer: 'so' },
+            { id: 'e3', kind: 'multiple-choice', prompt: 'Which word shows contrast?', options: ['because', 'so', 'but', 'for example'], answer: 'but' },
+            { id: 'e4', kind: 'fill-blank', prompt: '"___, nobody was bored." (a contrast word that starts a sentence, followed by a comma)', answer: 'However', hint: 'Starts with H' },
+            { id: 'e5', kind: 'multiple-choice', prompt: '"Cities are noisy. ___ , traffic never stops." Which fits best to give evidence?', options: ['Because', 'But', 'So', 'For example'], answer: 'For example' },
+          ],
+          writingPrompt: 'Write 5 sentences about your favourite hobby — one using because, one using so, one using but, one starting with However, and one with For example.',
+        },
       ],
     },
     {
@@ -1003,6 +1047,62 @@ Authors don't always state things directly. You must **use clues** + **your know
             { id: 'e5', kind: 'multiple-choice', prompt: 'What two things do you combine to make an inference?', options: ['spelling and grammar', 'text clues and your own knowledge', 'big words and small words', 'facts and opinions'], answer: 'text clues and your own knowledge' },
           ],
           writingPrompt: 'Write a short paragraph (4–5 sentences) that IMPLIES a character is nervous without ever using the word "nervous". Use actions and descriptions as clues.',
+        },
+        {
+          id: 'm3w4l2',
+          monthIndex: 2, weekIndex: 3, lessonIndex: 1,
+          title: 'Writing a Friendly Letter',
+          kind: 'writing',
+          objective: 'Write a friendly letter with the correct five parts',
+          audioText: 'A friendly letter is one of the most useful things you will ever write — to a friend, a relative, or a pen pal. Every friendly letter has five parts: the date, the greeting, the body, the closing, and your signature. Let us learn each one.',
+          content: `**The 5 parts of a friendly letter:**
+
+**1. Date** (top right)
+> 14 July 2026
+
+**2. Greeting** — who it's for, ends with a comma
+> Dear Mai, · Dear Grandpa, · Hi Alex,
+
+**3. Body** — your message (1–3 paragraphs)
+- Start with a friendly opening: "How are you? I hope you are well."
+- Share your news or answer their questions
+- Ask them something — letters are conversations!
+
+**4. Closing** — a warm sign-off, ends with a comma
+> Your friend, · Love, · Best wishes, · See you soon,
+
+**5. Signature** — your name
+
+---
+
+**A complete example:**
+
+> 14 July 2026
+>
+> Dear Ben,
+>
+> How are you? I hope your summer is going well. Last week my family visited the coast. We swam every morning, and I finally learned to dive! The water was freezing, but after a minute it felt wonderful.
+>
+> Have you finished the book you told me about? Write back and tell me everything.
+>
+> Your friend,
+> Sam
+
+**Tip:** friendly letters use informal language — contractions and casual phrases are perfectly fine here.`,
+          keyWords: [
+            { word: 'greeting', meaning: 'the opening of a letter, like "Dear Mai,"' },
+            { word: 'closing', meaning: 'the sign-off before your name, like "Your friend,"' },
+            { word: 'signature', meaning: 'your name written at the end of a letter' },
+            { word: 'pen pal', meaning: 'a friend you write letters to, often far away' },
+          ],
+          exercises: [
+            { id: 'e1', kind: 'multiple-choice', prompt: 'How many parts does a friendly letter have?', options: ['3', '4', '5', '6'], answer: '5' },
+            { id: 'e2', kind: 'multiple-choice', prompt: 'Which is a correct greeting?', options: ['Dear Mai,', 'dear mai', 'DEAR MAI!', 'Mai dear,'], answer: 'Dear Mai,' },
+            { id: 'e3', kind: 'multiple-choice', prompt: 'What punctuation follows the greeting AND the closing?', options: ['a full stop', 'a comma', 'a question mark', 'nothing'], answer: 'a comma' },
+            { id: 'e4', kind: 'fill-blank', prompt: 'The part where you write your name at the end is the ___.', answer: 'signature', hint: 'You "sign" the letter' },
+            { id: 'e5', kind: 'multiple-choice', prompt: 'Friendly letters should use:', options: ['very formal language', 'informal, warm language', 'no questions', 'only short words'], answer: 'informal, warm language' },
+          ],
+          writingPrompt: 'Write a complete friendly letter (all 5 parts) to a friend or family member about something you did this week. At least 6 sentences in the body, and ask them at least one question.',
         },
       ],
     },
