@@ -208,6 +208,20 @@
     </div>
   </section>
 
+  <!-- TARGETS -->
+  <section class="view" data-view="Targets">
+    <div class="panel">
+      <h2>Targets — what volume hits your goal?</h2>
+      <p class="h-sub">Holding price at the <span class="scn-name"></span> scenario, the model solves the volume needed to reach a target. Switch metric and type a goal.</p>
+      <div class="seg" id="tgtSeg">
+        <button data-m="ebitda" class="on">EBITDA</button>
+        <button data-m="ni">Net Income</button>
+      </div>
+      <div style="margin:6px 0 2px"><label class="hint">Target (CDN $) &nbsp;<input class="cell" id="tgtVal" type="number" step="10000" style="width:140px" oninput="renderTargets()"></label></div>
+      <div id="tgtOut"></div>
+    </div>
+  </section>
+
   <!-- ASSUMPTIONS -->
   <section class="view" data-view="Assumptions">
     <div class="note">This is the only place you type. Edit any yellow cell — every number everywhere updates instantly.</div>
@@ -314,8 +328,8 @@ function skuLine(s, lev){
   const cm = gp - ap;
   return {cases, cp, disc, gross, tdisc, net, cogsd:cases*s.cosd, cogsi:cases*s.cosi, cogs, gp, ap, cm};
 }
-function compute(name){
-  const lev = LEVERS[name];
+function compute(name){ return computeLever(LEVERS[name]); }
+function computeLever(lev){
   const lines = SKUS.map(s=>skuLine(s,lev));
   const sum = k => lines.reduce((a,l)=>a+l[k],0);
   const net = sum("net"), gp = sum("gp"), cm = sum("cm");
@@ -588,6 +602,44 @@ function renderMonthly(){
 }
 function setSeason(i,v){ SEASON[i]=parseFloat(v)||0; persist(); renderMonthly(); }
 
+// ---------- targets / goal-seek ----------
+let tgtMetric = "ebitda";
+function solveVolume(metric, target){
+  const bl = LEVERS[current];
+  const f = mv => computeLever({v:mv, p:bl.p, d:bl.d})[metric];   // monotonic increasing in mv
+  const CAP = 10;
+  if(f(CAP) < target) return {mv:null, hi:f(CAP)};
+  let lo=0, hi=CAP;
+  if(f(lo) >= target) lo = 0;
+  for(let k=0;k<60;k++){ const mid=(lo+hi)/2; if(f(mid) < target) lo=mid; else hi=mid; }
+  const mv=(lo+hi)/2;
+  return {mv, res: computeLever({v:mv, p:bl.p, d:bl.d})};
+}
+function renderTargets(){
+  if(!el("tgtOut")) return;
+  if(!el("tgtVal").value) el("tgtVal").value = Math.round(compute(current).ebitda*1.5);
+  const target = parseFloat(el("tgtVal").value)||0;
+  const bl = LEVERS[current], cur = compute(current);
+  const label = tgtMetric==="ebitda" ? "EBITDA" : "Net Income";
+  const sol = solveVolume(tgtMetric, target);
+  if(sol.mv===null){
+    el("tgtOut").innerHTML = `<div class="note" style="display:block;margin-top:6px">Even at <b>10× volume</b> (holding price at ${current}), ${label} tops out near <b>${money(sol.hi)}</b>. The ${money(target)} goal needs price, cost or mix changes too — try the <b>Pricing Lab</b> or lower COGS on <b>Assumptions</b>.</div>`;
+    return;
+  }
+  const r = sol.res, dv = bl.v ? (sol.mv/bl.v - 1) : 0, dcases = r.cases - cur.cases;
+  const cards = [
+    ["Required volume", mult(sol.mv), `${dv>=0?'+':''}${(dv*100).toFixed(0)}% vs ${current}`],
+    ["Physical cases", num(r.cases), `${num(Math.abs(dcases))} ${dcases>=0?'more':'fewer'}`],
+    ["Net Sales", money(r.net), null, false],
+    [label+" target", money(target), null, target<0],
+    ["EBITDA %", pct(r.ebitdapct), null, false],
+    ["Net Income", money(r.ni), null, r.ni<0],
+  ];
+  el("tgtOut").innerHTML = `<div class="kpis" style="margin-top:8px">`+cards.map(c=>
+    `<div class="kpi"><div class="k">${c[0]}</div><div class="v ${c[3]?'neg':''}">${c[1]}</div>`+
+    `${c[2]?`<div class="sub"><span class="ctx">${c[2]}</span></div>`:""}</div>`).join("")+`</div>`;
+}
+
 // ---------- assumptions editor ----------
 function inp(val, onin, step="0.01"){
   return `<input class="cell" type="number" step="${step}" value="${val}" oninput="${onin}">`;
@@ -637,7 +689,7 @@ function setCo(k,v){CO[k]=parseFloat(v)||0;refresh();persist();}
 function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();persist();}
 
 // ---------- nav / scenario bar ----------
-const VIEWS=["Overview","P&L","Pricing Lab","Sensitivity","Monthly","Assumptions"];
+const VIEWS=["Overview","P&L","Pricing Lab","Sensitivity","Monthly","Targets","Assumptions"];
 function buildNav(){
   el("nav").setAttribute("role","tablist");
   document.querySelectorAll(".view").forEach(v=>v.setAttribute("role","tabpanel"));
@@ -655,8 +707,11 @@ function buildNav(){
   el("priceSeg").querySelectorAll("button").forEach(b=>b.onclick=()=>{priceMetric=b.dataset.m;
     el("priceSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===priceMetric));
     renderPricing();});
+  if(el("tgtSeg")) el("tgtSeg").querySelectorAll("button").forEach(b=>b.onclick=()=>{tgtMetric=b.dataset.m;
+    el("tgtSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===tgtMetric));
+    renderTargets();});
 }
-function refresh(){renderKpis();renderCmp();renderPnl();renderPricing();renderSens();renderCharts();renderMonthly();}
+function refresh(){renderKpis();renderCmp();renderPnl();renderPricing();renderSens();renderCharts();renderMonthly();renderTargets();}
 
 // wire header actions
 el("btnReset").onclick=()=>{ if(confirm("Reset all assumptions to the default figures?")) resetAll(); };
