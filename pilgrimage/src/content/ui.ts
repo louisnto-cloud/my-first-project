@@ -200,6 +200,7 @@ export const UI = {
   guideTapToStop: v('Tap to stop', 'Chạm để dừng'),
 
   stepsWalked: v('steps walked', 'bước đã đi'),
+  beginHere: v('Begin here', 'Bắt đầu ở đây'),
 
   // App update — a newer build is ready
   updateReady: v('The road ahead has been repaved — a newer version is ready.', 'Con đường phía trước đã được làm mới — phiên bản mới đã sẵn sàng.'),

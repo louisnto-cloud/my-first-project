@@ -101,6 +101,15 @@ function RoadContent() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-ivory/20" />
+            <button
+              onClick={() => setSelected(null)}
+              aria-label={t(UI.close)}
+              className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-ivory/5 text-incense"
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
+                <path d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19l1.4-1.4L13.4 12 19 6.4 17.6 5 12 10.6 6.4 5Z" />
+              </svg>
+            </button>
             <p className="font-display text-[11px] uppercase tracking-[0.3em] text-gold">{t(world.place)}</p>
             <h2 className="mt-1 font-display text-2xl text-ivory">{t(world.church)}</h2>
             <p className="mt-1 font-story text-lg italic text-incense">{t(world.theme)}</p>
@@ -154,6 +163,9 @@ function RoadContent() {
                           {t(lesson.title)}
                           {lesson.vigil && (
                             <span className="ml-2 text-[10px] uppercase tracking-widest text-gold/80">{t(UI.vigilWord)}</span>
+                          )}
+                          {isNext && (
+                            <span className="ml-2 rounded-full bg-gold/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest text-gold">{t(UI.beginHere)}</span>
                           )}
                         </span>
                         {done ? <span className="text-gold">✓</span> : <span className="text-incense">{lesson.minutes}′</span>}
