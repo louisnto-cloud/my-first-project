@@ -231,6 +231,11 @@
       <p class="hint" id="beLine" style="margin-top:14px"></p>
     </div>
     <div class="panel">
+      <h2>Break-even curve</h2>
+      <p class="h-sub">EBITDA as annual volume flexes at base price; the four scenarios are plotted as points. Below the red line you lose money.</p>
+      <div class="chart" id="beChart"></div>
+    </div>
+    <div class="panel">
       <h2>What moves EBITDA most</h2>
       <p class="h-sub">EBITDA swing if each driver moves ±10% (at Base, all else equal). The longest bar is your biggest lever.</p>
       <div class="chart" id="tornado"></div>
@@ -611,6 +616,30 @@ function renderTornado(){
   const {base,ds}=sensitivityDrivers();
   el("tornado").innerHTML=tornadoSVG(base,ds);
 }
+function breakevenChartSVG(){
+  const be=breakeven();
+  const scen=SCEN.map(s=>({name:s, mv:LEVERS[s].v, e:computeLever(LEVERS[s]).ebitda}));
+  const mvMax=Math.max(2, ...scen.map(s=>s.mv*1.15), be.mv*1.25);
+  const N=48, line=[];
+  for(let i=0;i<=N;i++){ const mv=mvMax*i/N; line.push([mv, ebitdaAt(mv,1)]); }
+  const W=620,H=250,padX=16,padB=32,padT=22;
+  const ys=[...line.map(p=>p[1]), ...scen.map(s=>s.e), 0];
+  const lo=Math.min(...ys), hi=Math.max(...ys), span=(hi-lo)||1;
+  const X=mv=>padX+(mv/mvMax)*(W-padX-14), Y=v=>padT+(hi-v)/span*(H-padT-padB);
+  let g=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:480px" role="img" aria-label="EBITDA versus volume with break-even">`;
+  g+=`<line x1="${padX}" y1="${Y(0).toFixed(1)}" x2="${W-14}" y2="${Y(0).toFixed(1)}" stroke="var(--line)"/>`;
+  g+=`<path d="${line.map((p,i)=>`${i?'L':'M'}${X(p[0]).toFixed(1)} ${Y(p[1]).toFixed(1)}`).join(' ')}" fill="none" stroke="var(--accent)" stroke-width="2.5"/>`;
+  const bx=X(be.mv);
+  g+=`<line x1="${bx.toFixed(1)}" y1="${padT}" x2="${bx.toFixed(1)}" y2="${H-padB}" stroke="var(--bad)" stroke-dasharray="4 3"/>`;
+  g+=`<circle cx="${bx.toFixed(1)}" cy="${Y(0).toFixed(1)}" r="4" fill="var(--bad)"/>`;
+  g+=`<text x="${bx.toFixed(1)}" y="${(padT-6).toFixed(1)}" text-anchor="middle" font-size="10" fill="var(--bad)">break-even ${mult(be.mv)}</text>`;
+  scen.forEach(s=>{ const cx=X(s.mv), cy=Y(s.e), cur=s.name===current;
+    g+=`<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${cur?5:4}" fill="var(--accent2)" stroke="var(--card)" stroke-width="1.5"><title>${s.name}: ${mult(s.mv)} volume → EBITDA ${money(s.e)}</title></circle>`;
+    g+=`<text x="${cx.toFixed(1)}" y="${(cy-9).toFixed(1)}" text-anchor="middle" font-size="9.5" font-weight="${cur?700:500}" fill="var(--soft)">${s.name}</text>`; });
+  [0,1,mvMax].forEach(mv=>{ g+=`<text x="${X(mv).toFixed(1)}" y="${H-padB+16}" text-anchor="middle" font-size="9.5" fill="var(--soft)">${mult(mv)}</text>`; });
+  return g+"</svg>";
+}
+function renderBeChart(){ if(el("beChart")) el("beChart").innerHTML=breakevenChartSVG(); }
 function renderSens(){
   const cells=[];
   PRM.forEach(mp=>VOLM.forEach(mv=>cells.push(ebitdaAt(mv,mp))));
@@ -629,6 +658,7 @@ function renderSens(){
     `<div class="heat-legend"><span>Loss</span><span class="ramp"></span><span>Best EBITDA</span></div>`);
   const be=breakeven();
   el("beLine").textContent=`Break-even (at base price): ${mult(be.mv)} volume — about ${num(be.cases)} cases.`;
+  renderBeChart();
   renderTornado();
 }
 
