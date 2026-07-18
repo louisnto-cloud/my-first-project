@@ -260,6 +260,16 @@ describe('grading queue and rubric', () => {
   });
 });
 
+describe('send praise (Gửi lời khen)', () => {
+  it('a teacher of the student can praise; others refused; student + guardians notified', async () => {
+    expect((await req('POST', '/students/s0/praise', lan, { message: 'Tốt lắm!' })).statusCode).toBe(200);
+    const pushes = await many(db, `SELECT to_user_id FROM notifications_outbox WHERE body LIKE '🌟%'`);
+    expect(pushes.some((r) => (r as { to_user_id: string }).to_user_id === 's0')).toBe(true);
+    // David does not teach s0's class.
+    expect((await req('POST', '/students/s0/praise', david, {})).statusCode).toBe(403);
+  });
+});
+
 describe('teacher roll-call (Điểm danh)', () => {
   it('a teacher marks their class present; non-teachers refused', async () => {
     const date = '2098-05-10';

@@ -805,6 +805,18 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     save(db);
     return ok({ ok: true });
   }
+  if (seg[0] === 'students' && seg[2] === 'praise' && method === 'POST') {
+    const stu = db.users.find((u) => u.id === seg[1] && u.role === 'student');
+    if (!stu) return err(404, 'not_found');
+    const teaches = me.role === 'tutor' && stu.classIds.some((cid) => me.classIds.includes(cid));
+    if (!teaches && !isAdmin) return err(403, 'forbidden');
+    const text = String(b.message ?? '').trim() || 'Con học rất tốt hôm nay!';
+    pushNote(db, stu.id, `🌟 ${me.name}: ${text}`);
+    for (const u of db.users) if (u.role === 'parent' && u.childIds.includes(stu.id)) pushNote(db, u.id, `🌟 ${me.name} khen bé ${stu.name}: ${text}`);
+    save(db);
+    return ok({ ok: true });
+  }
+
   if (seg[0] === 'students' && seg[2] === 'rotate-code' && method === 'POST') {
     const stu = db.users.find((u) => u.id === seg[1] && u.role === 'student');
     if (!stu) return err(404, 'not_found');

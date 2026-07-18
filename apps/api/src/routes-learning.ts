@@ -208,6 +208,32 @@ export function registerLearningRoutes(app: FastifyInstance, db: DB): void {
     return { loginCode: code };
   });
 
+  // ---------- Send praise (Gửi lời khen) ----------
+  // A teacher-of-the-student (or manager) sends instant encouragement to
+  // the student and their guardians via the notification inbox.
+  app.post('/students/:id/praise', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    const { id } = req.params as { id: string };
+    const body = z.object({ message: z.string().max(200).default('') }).safeParse(req.body);
+    if (!body.success) return reply.code(400).send({ error: 'invalid_input' });
+    const student = await one<{ org_id: string; name: string }>(db, `SELECT org_id, name FROM users WHERE id = $1 AND role = 'student' AND archived = false`, [id]);
+    if (!student || student.org_id !== actor.orgId) return reply.code(404).send({ error: 'not_found' });
+    const allowed =
+      ['owner', 'academic_director', 'site_director'].includes(actor.role) ||
+      (actor.role === 'tutor' && !!(await one(db, 'SELECT 1 AS x FROM enrollments e JOIN classes c ON c.id = e.class_id WHERE e.student_id = $1 AND c.teacher_id = $2', [id, actor.id])));
+    if (!allowed) return reply.code(403).send({ error: 'forbidden' });
+
+    const text = body.data.message.trim() || 'Con học rất tốt hôm nay!';
+    await notify(db, { orgId: actor.orgId, channel: 'push', toUserId: id, body: `🌟 ${actor.name}: ${text}`, at: new Date() });
+    const guardians = await many<{ guardian_id: string }>(db, 'SELECT guardian_id FROM guardian_students WHERE student_id = $1', [id]);
+    for (const g of guardians) {
+      await notify(db, { orgId: actor.orgId, channel: 'push', toUserId: g.guardian_id, body: `🌟 ${actor.name} khen bé ${student.name}: ${text}`, at: new Date() });
+    }
+    await audit(db, { orgId: actor.orgId, actorId: actor.id, action: 'student.praised', entity: 'student', entityId: id });
+    return { ok: true };
+  });
+
   // ---------- Question bank ----------
   app.post('/questions', async (req, reply) => {
     const actor = await requireAuth(req, reply);

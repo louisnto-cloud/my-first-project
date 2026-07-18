@@ -409,6 +409,22 @@ describe('demo engine — kiosk (front desk)', () => {
   });
 });
 
+describe('demo engine — send praise (Gửi lời khen)', () => {
+  it('a teacher praises a student; student + parents get a notification; non-teacher refused', async () => {
+    const ha = await loginCode('GV0004');
+    expect((await call('POST', '/students/s_UP1482/praise', {}, ha!)).status).toBe(200);
+    const bao = await loginCode('UP1482');
+    const notes = (await call('GET', '/my/notifications', undefined, bao!)).json as { body: string }[];
+    expect(notes.some((n) => n.body.startsWith('🌟'))).toBe(true);
+    const parent = (await call('POST', '/auth/login', { email: 'phuhuynh@etop.vn', password: 'x' })).json as { token: string };
+    const pnotes = (await call('GET', '/my/notifications', undefined, parent.token)).json as { body: string }[];
+    expect(pnotes.some((n) => n.body.includes('khen bé'))).toBe(true);
+
+    const ly = await loginCode('GV0006');
+    expect((await call('POST', '/students/s_UP1482/praise', {}, ly!)).status).toBe(403);
+  });
+});
+
 describe('demo engine — teacher roll-call (Điểm danh)', () => {
   it('a teacher marks present; the parent attendance strip reflects it; non-teacher refused', async () => {
     const ha = await loginCode('GV0004'); // teaches Up 1

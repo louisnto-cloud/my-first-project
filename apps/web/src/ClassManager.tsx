@@ -111,6 +111,12 @@ function ClassCard({ cls, siblings, vi }: { cls: ClassInfo; siblings: ClassInfo[
     setNoteText('');
   };
 
+  // 🌟 One-tap praise → instant encouragement to the student + parents.
+  const praise = async (studentId: string, studentName: string) => {
+    await api('POST', `/students/${studentId}/praise`, {});
+    flash(`🌟 Đã gửi lời khen tới bé ${studentName} và phụ huynh!`);
+  };
+
   // One-time invite code so the student's parent can self-register an
   // account linked to their child (single-use, no open signup).
   const [inviteInfo, setInviteInfo] = useState<{ studentName: string; code: string } | null>(null);
@@ -235,6 +241,7 @@ function ClassCard({ cls, siblings, vi }: { cls: ClassInfo; siblings: ClassInfo[
                       <button onClick={() => rotate(r.id)} title="Đổi mã" aria-label={`Đổi mã đăng nhập của ${r.name}`} className="text-slate-300 hover:text-violet-600">↻</button>
                       <button onClick={() => invite(r.id, r.name)} title="Tạo mã mời phụ huynh" aria-label={`Tạo mã mời phụ huynh cho ${r.name}`} className="text-slate-300 transition hover:text-violet-600">🎟</button>
                       <button onClick={() => { setNoteFor({ id: r.id, name: r.name }); setNoteText(''); }} title="Nhận xét gửi phụ huynh" aria-label={`Gửi nhận xét về ${r.name} cho phụ huynh`} className="text-slate-300 transition hover:text-violet-600">💬</button>
+                      <button onClick={() => praise(r.id, r.name)} title="Gửi lời khen" aria-label={`Gửi lời khen tới ${r.name}`} className="text-slate-300 transition hover:text-amber-500">🌟</button>
                     </span>
                   </li>
                 ))}
