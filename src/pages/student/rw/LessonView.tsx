@@ -347,6 +347,7 @@ function DictationStep({ words, tts, color, onDone }: {
           return (
             <div key={w} className={`flex items-center gap-2 rounded-xl border-2 p-3 ${checked ? (isRight ? 'border-green-300 bg-green-50' : 'border-red-200 bg-red-50') : 'border-gray-200'}`}>
               <button onClick={() => tts.speak(w)} className={`shrink-0 rounded-full px-3 py-1.5 text-sm font-bold text-white ${color.bg}`}>🔊 Word {i + 1}</button>
+              <button onClick={() => tts.speak(w, { rate: 0.55 })} className="shrink-0 rounded-full bg-gray-100 px-2 py-1.5 text-sm hover:bg-gray-200" title="Hear it slowly">🐢</button>
               <input type="text" value={typed[i]} disabled={checked}
                 onChange={(e) => setTyped((prev) => prev.map((t, j) => (j === i ? e.target.value : t)))}
                 placeholder="Type what you hear..." autoCapitalize="none" autoCorrect="off" spellCheck={false}

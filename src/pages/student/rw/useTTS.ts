@@ -37,7 +37,7 @@ export function useTTS() {
     setWordIndex(-1);
   }, []);
 
-  const speak = useCallback((text: string, opts?: { highlight?: boolean }) => {
+  const speak = useCallback((text: string, opts?: { highlight?: boolean; rate?: number }) => {
     if (!window.speechSynthesis) return;
     window.speechSynthesis.cancel();
 
@@ -49,7 +49,7 @@ export function useTTS() {
     offsetsRef.current = offsets;
 
     const u = new SpeechSynthesisUtterance(text);
-    u.rate = settings.rate;
+    u.rate = opts?.rate ?? settings.rate;
     u.pitch = 1.05;
     u.lang = 'en-US';
     const voice = voices.find((v) => v.voiceURI === settings.voiceURI);
