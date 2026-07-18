@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { CURRICULUM, MONTH_COLORS } from '../../../data/curriculum';
 import type { Exercise, Lesson } from '../../../data/curriculum';
 import { analyzeWriting, awardOnce, XP, type RWProgress } from './engine';
@@ -60,11 +60,12 @@ function AlphabetBoard({ speak }: { speak: (t: string) => void }) {
   );
 }
 
-export default function LessonView({ lesson, progress, apply, onBack }: {
+export default function LessonView({ lesson, progress, apply, onBack, onNextLesson }: {
   lesson: Lesson;
   progress: RWProgress;
   apply: (fn: (p: RWProgress) => RWProgress) => void;
   onBack: () => void;
+  onNextLesson?: (() => void) | null;
 }) {
   const tts = useTTS();
   const month = CURRICULUM[lesson.monthIndex];
@@ -78,6 +79,16 @@ export default function LessonView({ lesson, progress, apply, onBack }: {
   const [xpEarned, setXpEarned] = useState(0);
   const [lastGain, setLastGain] = useState(0);
   const [textSize, toggleTextSize] = useTextSize();
+
+  // Autosave the writing draft on exit so leaving mid-lesson never loses text
+  const writingRef = useRef('');
+  writingRef.current = writingText;
+  useEffect(() => () => {
+    const draft = writingRef.current;
+    if (!draft.trim()) return;
+    apply((p) => (p.writingResponses[lesson.id] === draft ? p : { ...p, writingResponses: { ...p.writingResponses, [lesson.id]: draft } }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const dictationWords = useMemo(() => lesson.keyWords.slice(0, 3).map((k) => k.word), [lesson]);
   const hasDictation = dictationWords.length >= 2;
@@ -133,15 +144,17 @@ export default function LessonView({ lesson, progress, apply, onBack }: {
     });
   };
 
-  const handleComplete = () => {
+  const saveCompletion = () => {
     apply((p) => ({
       ...p,
       xp: p.xp + (isDone ? 0 : XP.lessonComplete),
       completedLessons: p.completedLessons.includes(lesson.id) ? p.completedLessons : [...p.completedLessons, lesson.id],
       writingResponses: writingText.trim() ? { ...p.writingResponses, [lesson.id]: writingText } : p.writingResponses,
     }));
-    onBack();
   };
+
+  const handleComplete = () => { saveCompletion(); onBack(); };
+  const handleCompleteAndNext = () => { saveCompletion(); onNextLesson?.(); };
 
   const writingChecks = analyzeWriting(writingText);
   const speakWord = (w: string) => w && tts.speak(w);
@@ -317,7 +330,12 @@ export default function LessonView({ lesson, progress, apply, onBack }: {
               <p>📖 Try a story from the Library at your level</p>
             </div>
           </div>
-          <button onClick={handleComplete} className={`w-full rounded-xl py-3 font-black text-white ${c.bg}`}>Save & Continue →</button>
+          {onNextLesson && (
+            <button onClick={handleCompleteAndNext} className={`w-full rounded-xl py-3 font-black text-white ${c.bg}`}>Save & Next Lesson →</button>
+          )}
+          <button onClick={handleComplete} className={`w-full rounded-xl py-3 font-black ${onNextLesson ? 'border-2 border-gray-200 bg-white text-gray-600' : `text-white ${c.bg}`}`}>
+            {onNextLesson ? 'Back to Menu' : 'Save & Continue →'}
+          </button>
         </StepCard>
       )}
     </div>
@@ -414,6 +432,8 @@ function ExerciseItem({ exercise, index, answer, submitted, onAnswer, speak, col
 
       {(exercise.kind === 'fill-blank' || exercise.kind === 'arrange-words' || exercise.kind === 'write-sentence') && (
         <input type="text" value={answer} onChange={(e) => !submitted && onAnswer(e.target.value)} disabled={submitted}
+          enterKeyHint="next"
+          onKeyDown={(e) => { if (e.key === 'Enter') (e.target as HTMLInputElement).blur(); }}
           placeholder={exercise.hint ?? 'Your answer...'}
           className={`mt-1 w-full rounded-lg border-2 px-3 py-2 text-sm focus:outline-none ${
             submitted ? (isCorrect ? 'border-green-400 bg-green-50' : 'border-red-300 bg-red-50') : 'border-gray-200 focus:border-violet-400'}`} />

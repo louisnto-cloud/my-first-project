@@ -68,9 +68,14 @@ export default function ReadingWritingApp() {
   const streak = streakOf(progress);
 
   if (activeLesson) {
+    // The next lesson in sequence that isn't done yet (excluding the one being viewed)
+    const all = getAllLessons();
+    const after = all.slice(all.findIndex((l) => l.id === activeLesson.id) + 1);
+    const nextLesson = [...after, ...all].find((l) => l.id !== activeLesson.id && !progress.completedLessons.includes(l.id)) ?? null;
     return (
-      <LessonView lesson={activeLesson} progress={progress} apply={apply}
-        onBack={() => setActiveLesson(null)} />
+      <LessonView key={activeLesson.id} lesson={activeLesson} progress={progress} apply={apply}
+        onBack={() => setActiveLesson(null)}
+        onNextLesson={nextLesson ? () => setActiveLesson(nextLesson) : null} />
     );
   }
 

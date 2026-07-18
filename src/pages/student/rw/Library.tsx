@@ -120,9 +120,14 @@ function StoryReader({ story, progress, apply, onBack }: {
           </div>
           <div className="space-y-3">
             {paragraphs.map((p, i) => (
-              <p key={i} className="text-[15px] leading-relaxed text-gray-800">
-                <TappableText text={p.replace(/\s+/g, ' ')} onWord={(w) => w && tts.speak(w)} activeIndex={tts.wordIndex} baseIndex={paraBase[i]} />
-              </p>
+              <div key={i} className="group flex items-start gap-2">
+                <button onClick={() => tts.speak(p.replace(/\s+/g, ' '))}
+                  className="mt-0.5 shrink-0 rounded-full bg-gray-100 px-1.5 py-0.5 text-[10px] text-gray-400 hover:bg-violet-100 hover:text-violet-600"
+                  title="Hear this paragraph">▶</button>
+                <p className="text-[15px] leading-relaxed text-gray-800">
+                  <TappableText text={p.replace(/\s+/g, ' ')} onWord={(w) => w && tts.speak(w)} activeIndex={tts.wordIndex} baseIndex={paraBase[i]} />
+                </p>
+              </div>
             ))}
           </div>
           <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">

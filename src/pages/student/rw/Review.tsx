@@ -91,6 +91,7 @@ export default function Review({ progress, apply }: {
     if (!q || picked) return;
     setPicked(opt);
     const right = opt.trim().toLowerCase() === q.word.toLowerCase();
+    tts.speak(q.word); // reinforce the sound–spelling link right after answering
     if (right) setCorrectCount((n) => n + 1);
     apply((p) => {
       const prev = p.reviewHistory[q.word] ?? { correct: 0, wrong: 0, last: todayISO() };
