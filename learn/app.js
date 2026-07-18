@@ -798,24 +798,85 @@ function skillRows(prefix, label, nameFn) {
   }).join('');
   return `<h2>${label}</h2><table><tr><th>Item</th><th>Score</th><th>Status</th></tr>${body}</table>`;
 }
+const SKILL_GROUPS = [
+  { p:'L-',   name:'Letter Land',      icon:'🔤' },
+  { p:'T-',   name:'Tracing Trail',    icon:'✏️' },
+  { p:'F-',   name:'Finding Forest',   icon:'🔎' },
+  { p:'R-',   name:'Rhyme Time',       icon:'🎵' },
+  { p:'W-',   name:'Word Builder',     icon:'🧱' },
+  { p:'P-',   name:'Picture Pond',     icon:'🖼️' },
+  { p:'S-',   name:'Speedy Words',     icon:'⚡' },
+  { p:'ST-',  name:'Story Sea',        icon:'📖' },
+  { p:'SEN-', name:'Sentence Builder', icon:'🧩' },
+  { p:'SP-',  name:'Spelling Bee',     icon:'🐝' },
+  { p:'V-',   name:'Word Volcano',     icon:'🌋' },
+  { p:'G-',   name:'Grammar Grove',    icon:'📚' },
+];
+function weekChart() {
+  const now = new Date(), days = [];
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(now); d.setDate(now.getDate() - i);
+    const key = d.toISOString().slice(0, 10);
+    days.push({ label: ['Su','Mo','Tu','We','Th','Fr','Sa'][d.getDay()], ms: (P.days && P.days[key]) || 0 });
+  }
+  const max = Math.max(1, ...days.map(d => d.ms));
+  const bars = days.map(d => {
+    const h = Math.round(d.ms / max * 72), mins = Math.round(d.ms / 60000);
+    return `<div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex:1">
+      <div style="font-size:11px;color:#90a4ae;height:14px">${mins || ''}</div>
+      <div style="width:66%;height:${h}px;min-height:3px;background:#7c4dff;border-radius:5px 5px 0 0"></div>
+      <div style="font-size:12px;color:#546e7a">${d.label}</div></div>`;
+  }).join('');
+  return `<h2>This week's play time (minutes)</h2>
+    <div style="display:flex;align-items:flex-end;gap:6px;height:110px;padding:6px 0">${bars}</div>`;
+}
 function openParent() {
   show('parent');
-  const total = Object.values(P.skills).reduce((a, s) => a + s.a, 0);
+  const totalA = Object.values(P.skills).reduce((a, s) => a + s.a, 0);
+  const totalC = Object.values(P.skills).reduce((a, s) => a + s.c, 0);
+  const acc = totalA ? Math.round(totalC / totalA * 100) : 0;
+  const daysPlayed = Object.keys(P.days || {}).length;
+  let focus = null;
+  const summary = SKILL_GROUPS.map(g => {
+    const es = Object.entries(P.skills).filter(([k]) => k.startsWith(g.p));
+    if (!es.length) return null;
+    const a = es.reduce((x, [, s]) => x + s.a, 0), c = es.reduce((x, [, s]) => x + s.c, 0);
+    const mstr = es.filter(([k]) => mastery(k) === 'mastered').length;
+    const acc2 = a ? c / a : 0;
+    if (a >= 3 && mstr < es.length && (!focus || acc2 < focus.acc)) focus = { ...g, acc: acc2 };
+    return `<tr><td>${g.icon} ${g.name}</td><td>${mstr}/${es.length} mastered</td><td>${Math.round(acc2 * 100)}%</td></tr>`;
+  }).filter(Boolean).join('');
+  const focusMsg = focus
+    ? `She is working hardest on <b>${focus.name}</b> right now. Tap the ${focus.icon} island together for a few rounds to help it click.`
+    : (totalA ? `She is doing well everywhere. Let her roam wherever she likes.` : `Nothing practiced yet. Start together in 🔤 Letter Land.`);
   document.getElementById('parentpanel').innerHTML = `
     <h1>Parent Dashboard</h1>
-    <p>Stars collected: <b>${P.stars}</b> &nbsp;·&nbsp; Total answers: <b>${total}</b><br>
-       Total play time: <b>${fmtDur(P.timeMs)}</b><br>
-       Last used: <b>${P.lastUsed ? new Date(P.lastUsed).toLocaleString() : 'now'}</b></p>
-    <p style="font-size:13px;color:#78909c">“Mastered” means she got it right at least 4 times with 80%+ accuracy. “Learning” means she has tried it but is still practicing. To reopen this screen later: press and hold the little gear in the bottom-right corner for 3 seconds.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin:10px 0">
+      <div style="flex:1;min-width:110px;background:#ede7f6;border-radius:12px;padding:12px;text-align:center"><div style="font-size:26px;font-weight:800;color:#5e35b1">${P.stars}</div><div style="font-size:12px;color:#7e57c2">stars</div></div>
+      <div style="flex:1;min-width:110px;background:#e8f5e9;border-radius:12px;padding:12px;text-align:center"><div style="font-size:26px;font-weight:800;color:#2e7d32">${acc}%</div><div style="font-size:12px;color:#43a047">correct</div></div>
+      <div style="flex:1;min-width:110px;background:#fff3e0;border-radius:12px;padding:12px;text-align:center"><div style="font-size:26px;font-weight:800;color:#ef6c00">${(P.trophies || []).length}</div><div style="font-size:12px;color:#fb8c00">trophies</div></div>
+      <div style="flex:1;min-width:110px;background:#e1f5fe;border-radius:12px;padding:12px;text-align:center"><div style="font-size:26px;font-weight:800;color:#0277bd">${daysPlayed}</div><div style="font-size:12px;color:#039be5">days played</div></div>
+    </div>
+    <p style="margin:4px 0">Total play time: <b>${fmtDur(P.timeMs)}</b> &nbsp;·&nbsp; ${totalA} answers &nbsp;·&nbsp; last used <b>${P.lastUsed ? new Date(P.lastUsed).toLocaleString() : 'now'}</b></p>
+    <div style="background:#f3e5f5;border-radius:12px;padding:14px;margin:12px 0;font-size:15px">💡 <b>What to do next:</b> ${focusMsg}</div>
+    ${weekChart()}
+    <h2>Progress by activity</h2>
+    <table><tr><th>Activity</th><th>Mastered</th><th>Accuracy</th></tr>${summary || '<tr><td colspan="3" style="color:#90a4ae">No activities played yet.</td></tr>'}</table>
+    <p style="font-size:13px;color:#78909c;margin-top:14px">“Mastered” = right at least 4 times with 80%+ accuracy. “Learning” = tried but still practicing. Reopen this screen anytime by pressing and holding the little gear in the bottom-right corner for 3 seconds.</p>
+    <details style="margin-top:10px"><summary style="cursor:pointer;color:#5e35b1;font-weight:600">Show every item in detail</summary>
     ${skillRows('L-', 'Letters met')}
     ${skillRows('T-', 'Letters traced')}
     ${skillRows('F-', 'Letters found')}
+    ${skillRows('R-', 'Rhymes')}
     ${skillRows('W-', 'Words built')}
     ${skillRows('P-', 'Picture words')}
     ${skillRows('S-', 'Sight words')}
     ${skillRows('ST-', 'Stories understood')}
+    ${skillRows('SEN-', 'Sentences built')}
     ${skillRows('SP-', 'Spelling words')}
     ${skillRows('V-', 'Vocabulary')}
+    ${skillRows('G-', 'Grammar')}
+    </details>
     <button class="close" id="closeparent">Back to the app</button>`;
   document.getElementById('closeparent').addEventListener('click', goHome);
 }

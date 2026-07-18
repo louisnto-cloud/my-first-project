@@ -211,6 +211,10 @@ const CONTENT = {
       { word:'tenacious', def:'holding on and never giving up',              wrong:['quitting','feeble'] },
       { word:'vivid',     def:'so bright and clear it feels real',           wrong:['dull','faded'] },
       { word:'novice',    def:'someone brand new at something',              wrong:['expert','veteran'] },
+      { word:'inevitable',def:'certain to happen — cannot be stopped',       wrong:['avoidable','unlikely'] },
+      { word:'scrutinize',def:'to examine something very closely',           wrong:['ignore','glance'] },
+      { word:'perplexed', def:'completely confused and puzzled',             wrong:['certain','clear'] },
+      { word:'audacious', def:'boldly daring, almost reckless',              wrong:['timid','cautious'] },
     ],
   },
 
@@ -275,6 +279,16 @@ const CONTENT = {
       level:7, text:['Historians','once','believed','the','ancient','library','burned','in','a','single','fire.','But','new','evidence','tells','a','quieter,','sadder','story:','over','many','years,','funding','dried','up,','scholars','drifted','away,','and','the','scrolls','were','slowly','scattered','and','lost.','The','library','did','not','die','in','flames','—','it','faded','from','neglect.'],
       q:'What really destroyed the library?', answer:'🕰️', answerWord:'slow neglect over many years',
       options:[ {e:'🔥', label:'one huge fire'}, {e:'🕰️', label:'slow neglect over years'}, {e:'🌊', label:'a flood'} ],
+    },
+    {
+      level:6, text:['Every','autumn,','the','monarch','butterflies','fly','thousands','of','miles','south','to','the','very','same','forest.','The','strange','part','is','that','no','single','butterfly','makes','the','trip','twice','—','it','takes','several','generations.','The','ones','that','arrive','have','never','been','there,','yet','somehow','they','know','the','way.'],
+      q:'Why is the butterflies’ journey so surprising?', answer:'🧭', answerWord:'they find the way without ever having been there',
+      options:[ {e:'🧭', label:'they find a place they have never seen'}, {e:'🏎️', label:'they fly faster than cars'}, {e:'🌙', label:'they only travel at night'} ],
+    },
+    {
+      level:7, text:['The','young','inventor','was','sure','her','machine','had','failed.','It','never','did','the','one','thing','she','built','it','for.','But','a','curious','side','effect','—','a','faint','hum','that','calmed','crying','babies','—','turned','out','to','matter','far','more','than','her','original','plan.','Sometimes','the','accident','is','the','discovery.'],
+      q:'What is the main lesson of this story?', answer:'💡', answerWord:'an accident can be more valuable than the plan',
+      options:[ {e:'💡', label:'a mistake can become the real discovery'}, {e:'🔧', label:'machines always break'}, {e:'😴', label:'babies like quiet rooms'} ],
     },
   ],
 };
