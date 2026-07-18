@@ -237,6 +237,14 @@
       <h2>SKU assumptions <span class="hint">(per case)</span></h2>
       <div id="skuWarn"></div>
       <div id="asmpSku"></div>
+      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <span class="hint">Bulk change all SKUs:</span>
+        <input class="cell" id="bulkPct" type="number" step="1" value="5" style="width:70px"> %
+        <button class="tbtn" onclick="bulkApply('cp')">Price</button>
+        <button class="tbtn" onclick="bulkApply('vol')">Volume</button>
+        <button class="tbtn" onclick="bulkApply('cost')">Costs</button>
+        <span class="hint" id="bulkMsg"></span>
+      </div>
     </div>
     <div class="grid2">
       <div class="panel">
@@ -653,6 +661,16 @@ function renderAsmp(){
   });
   lv+="</tbody></table>";
   el("asmpLev").innerHTML=lv;
+}
+function bulkApply(kind){
+  const pct=parseFloat(el("bulkPct").value)||0; const f=1+pct/100;
+  SKUS.forEach(s=>{
+    if(kind==="cp") s.cp=+(s.cp*f).toFixed(2);
+    else if(kind==="vol") s.vol=Math.round(s.vol*f);
+    else if(kind==="cost"){ s.cosd=+(s.cosd*f).toFixed(2); s.cosi=+(s.cosi*f).toFixed(2); }
+  });
+  renderAsmp(); refresh();
+  const m=el("bulkMsg"); if(m){m.textContent=`Applied ${pct>=0?'+':''}${pct}% to ${kind==='cp'?'price':kind==='vol'?'volume':'costs'}.`; setTimeout(()=>m.textContent="",2600);}
 }
 function setS(i,k,v){SKUS[i][k]=parseFloat(v)||0;refresh();}
 function setSt(i,k,v){SKUS[i][k]=v;refresh();}
