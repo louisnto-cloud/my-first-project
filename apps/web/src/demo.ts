@@ -1194,6 +1194,29 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     );
   }
 
+  // ---- report card (Học bạ) ----
+  if (seg[0] === 'students' && seg[2] === 'report' && method === 'GET') {
+    const stu = db.users.find((u) => u.id === seg[1] && u.role === 'student');
+    if (!stu) return err(404, 'not_found');
+    const isGuardian = me.role === 'parent' && me.childIds.includes(stu.id);
+    const teaches = me.role === 'tutor' && stu.classIds.some((cid) => me.classIds.includes(cid));
+    if (!isGuardian && !teaches && !isAdmin) return err(403, 'forbidden');
+    const classes = db.classes.filter((c) => stu.classIds.includes(c.id)).map((c) => ({ name: c.name, teacherName: teacherName(db, c.teacherId) }));
+    const graded = db.submissions
+      .filter((s) => s.studentId === stu.id && s.status === 'graded')
+      .map((s) => ({ title: db.assignments.find((a) => a.id === s.assignmentId)?.title ?? 'Bài tập', overall: s.overall == null ? null : Math.round(s.overall) }));
+    const scored = graded.filter((g) => g.overall != null);
+    const average = scored.length ? Math.round(scored.reduce((t, g) => t + (g.overall ?? 0), 0) / scored.length) : null;
+    const present = db.attendance.filter((a) => a.studentId === stu.id && a.checkInAt).length;
+    const comments = db.sessionNotes.filter((n) => n.studentId === stu.id && n.parentNote).slice(0, 5).map((n) => ({ note: n.parentNote, at: n.date }));
+    const practicePoints = db.practice.filter((pp) => pp.studentId === stu.id).reduce((t, pp) => t + pp.points, 0);
+    return ok({
+      studentName: stu.name, avatar: stu.avatar ?? null, classes, average,
+      assignments: graded, attendance: { present, total: Math.max(present, present + 1) },
+      practicePoints, comments,
+    });
+  }
+
   if (rawPath === '/parents/summaries' && method === 'GET') {
     if (me.role !== 'parent') return err(403, 'forbidden');
     const childId = (q.childId as string) || me.childIds[0];

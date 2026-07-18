@@ -409,6 +409,18 @@ describe('demo engine — kiosk (front desk)', () => {
   });
 });
 
+describe('demo engine — report card (Học bạ)', () => {
+  it('a guardian reads a consolidated report; a non-guardian is refused', async () => {
+    const parent = (await call('POST', '/auth/login', { email: 'phuhuynh@etop.vn', password: 'x' })).json as { token: string };
+    const r = (await call('GET', '/students/s_UP1482/report', undefined, parent.token)).json as { studentName: string; classes: unknown[]; assignments: unknown[]; attendance: { present: number } };
+    expect(r.studentName).toBe('Nguyễn Gia Bảo');
+    expect(r.classes.length).toBeGreaterThan(0);
+
+    const ly = await loginCode('GV0006'); // does not teach Up 1
+    expect((await call('GET', '/students/s_UP1482/report', undefined, ly!)).status).toBe(403);
+  });
+});
+
 describe('demo engine — planned absences (Báo nghỉ)', () => {
   it('a guardian reports an absence; the class teacher sees it & is notified; outsiders refused', async () => {
     const parent = (await call('POST', '/auth/login', { email: 'phuhuynh@etop.vn', password: 'x' })).json as { token: string };

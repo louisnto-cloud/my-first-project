@@ -65,6 +65,19 @@ describe('outcome math (pure)', () => {
   });
 });
 
+describe('report card (Học bạ)', () => {
+  it('a guardian reads a consolidated report; a non-guardian parent is refused', async () => {
+    const r = (await req('GET', '/students/s0/report', parent)).json() as { studentName: string; classes: unknown[]; attendance: { present: number; total: number }; assignments: unknown[] };
+    expect(r.studentName).toBe('Trần Đức Minh');
+    expect(Array.isArray(r.classes)).toBe(true);
+    expect(Array.isArray(r.assignments)).toBe(true);
+
+    const otherParent = await login('phuhuynh2@etop.vn'); // guardian of s0 too in seed? use a truly unrelated child
+    // s1 is not this parent's child.
+    expect((await req('GET', '/students/s1/report', parent)).statusCode).toBe(403);
+  });
+});
+
 describe('growth and decayed mastery', () => {
   it('serves history plus decay-adjusted current mastery with labels', async () => {
     await db.query(`INSERT INTO mastery (student_id, skill, score, updated_at) VALUES ('s0', 'grammar', 0.9, $1)`, [

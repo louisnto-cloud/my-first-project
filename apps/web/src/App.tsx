@@ -498,6 +498,64 @@ function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: strin
 }
 
 // ---------- Parent ----------
+// Học bạ — a printable consolidated report card for one child.
+interface Report {
+  studentName: string; avatar: string | null;
+  classes: { name: string; teacherName: string | null }[];
+  average: number | null;
+  assignments: { title: string; overall: number | null }[];
+  attendance: { present: number; total: number };
+  practicePoints: number;
+  comments: { note: string; at: string }[];
+}
+function ReportCard({ childId, lang, onExit }: { childId: string; lang: Lang; onExit: () => void }) {
+  const vi = lang === 'vi';
+  const [r, setR] = useState<Report | null>(null);
+  useEffect(() => { void api<Report>('GET', `/students/${childId}/report`).then(setR).catch(() => setR(null)); }, [childId]);
+  if (!r) return <div className="card animate-pulse text-center text-slate-300">…</div>;
+  const today = new Date().toLocaleDateString(vi ? 'vi-VN' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  return (
+    <div className="space-y-3">
+      <button onClick={onExit} className="text-xl font-bold text-violet-500">←</button>
+      <div className="overflow-hidden rounded-3xl border-2 border-violet-200 bg-white shadow-lift">
+        <div className="bg-gradient-to-br from-violet-600 to-fuchsia-500 p-5 text-center text-white">
+          <div className="text-4xl">{r.avatar ?? '🧒'}</div>
+          <div className="mt-1 text-[11px] font-black uppercase tracking-[0.18em] text-violet-100">{vi ? 'Học bạ · E’TOP' : 'Report card · E’TOP'}</div>
+          <div className="font-display text-2xl font-semibold">{r.studentName}</div>
+          <div className="text-xs font-bold text-violet-100">{r.classes.map((c) => `${c.name}${c.teacherName ? ` · ${c.teacherName}` : ''}`).join(' · ') || '—'}</div>
+        </div>
+        <div className="grid grid-cols-3 divide-x divide-violet-50 border-b border-violet-50 text-center">
+          <div className="p-3"><div className="text-2xl font-black text-violet-700">{r.average == null ? '—' : `${r.average}`}</div><div className="text-[10px] font-bold text-slate-400">{vi ? 'Điểm TB' : 'Average'}</div></div>
+          <div className="p-3"><div className="text-2xl font-black text-emerald-600">{r.attendance.present}</div><div className="text-[10px] font-bold text-slate-400">{vi ? 'Buổi đến lớp' : 'Days present'}</div></div>
+          <div className="p-3"><div className="text-2xl font-black text-amber-500">{r.practicePoints}</div><div className="text-[10px] font-bold text-slate-400">⭐ {vi ? 'Điểm chăm' : 'Effort'}</div></div>
+        </div>
+        <div className="space-y-2 p-4">
+          <div className="text-xs font-extrabold uppercase tracking-wide text-violet-400">{vi ? 'Bài đã chấm' : 'Graded work'}</div>
+          {r.assignments.length === 0 && <div className="text-sm font-bold text-slate-300">—</div>}
+          {r.assignments.slice(0, 12).map((a, i) => (
+            <div key={i} className="flex items-center justify-between text-sm font-bold">
+              <span className="min-w-0 flex-1 truncate text-slate-600">{a.title}</span>
+              <span className={a.overall == null ? 'text-slate-300' : a.overall >= 80 ? 'text-emerald-600' : a.overall >= 50 ? 'text-amber-600' : 'text-rose-500'}>{a.overall == null ? '—' : `${a.overall}/100`}</span>
+            </div>
+          ))}
+          {r.comments.length > 0 && (
+            <>
+              <div className="mt-3 text-xs font-extrabold uppercase tracking-wide text-violet-400">{vi ? 'Nhận xét của cô' : 'Teacher notes'}</div>
+              {r.comments.map((c, i) => (
+                <div key={i} className="rounded-xl bg-violet-50/60 p-2 text-sm font-semibold italic text-slate-600">“{c.note}” <span className="text-[10px] not-italic text-slate-400">· {c.at}</span></div>
+              ))}
+            </>
+          )}
+          <div className="mt-3 flex items-center justify-between border-t border-violet-50 pt-2 text-[11px] font-bold text-slate-400">
+            <span>{today}</span><span>Anh Ngữ E’TOP</span>
+          </div>
+        </div>
+      </div>
+      <button onClick={() => window.print()} className="btn-fun btn-fun-green w-full">🖨 {vi ? 'In / Lưu học bạ' : 'Print / Save report'}</button>
+    </div>
+  );
+}
+
 // Báo nghỉ — a guardian tells the class their child will be away.
 function AbsenceCard({ childId, childName, lang }: { childId: string; childName: string; lang: Lang }) {
   const vi = lang === 'vi';
@@ -552,6 +610,7 @@ function Parent({ lang, t }: { lang: Lang; t: (k: string) => string }) {
   const [thread, setThread] = useState<string | null>(null);
   const [msgs, setMsgs] = useState<{ senderName: string; body: string }[]>([]);
   const [draft, setDraft] = useState('');
+  const [viewingReport, setViewingReport] = useState(false);
 
   useEffect(() => {
     void (async () => {
@@ -593,6 +652,8 @@ function Parent({ lang, t }: { lang: Lang; t: (k: string) => string }) {
       ? { emoji: '✅', text: `${t('checkedIn')} · ${new Date(att.checkInAt).toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })}`, tone: 'bg-emerald-100 text-emerald-700' }
       : { emoji: '⏳', text: t('notArrived'), tone: 'bg-amber-100 text-amber-700' };
 
+  if (viewingReport && childId) return <ReportCard childId={childId} lang={lang} onExit={() => setViewingReport(false)} />;
+
   return (
     <div className="space-y-4">
       {children.length > 1 && (
@@ -629,6 +690,17 @@ function Parent({ lang, t }: { lang: Lang; t: (k: string) => string }) {
           </div>
         )}
       </div>
+
+      {childId && (
+        <button onClick={() => setViewingReport(true)} className="card flex w-full items-center gap-3 text-left transition active:scale-[0.99] hover:border-violet-300">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-violet-100 text-xl">📋</span>
+          <span className="flex-1">
+            <span className="block font-black text-violet-700">{lang === 'vi' ? 'Xem học bạ của con' : "View report card"}</span>
+            <span className="block text-[11px] font-bold text-muted">{lang === 'vi' ? 'Điểm, chuyên cần, nhận xét — in được' : 'Grades, attendance, notes — printable'}</span>
+          </span>
+          <Icon name="arrowRight" size={17} className="text-slate-300" />
+        </button>
+      )}
 
       {childId && <AbsenceCard childId={childId} childName={childName} lang={lang} />}
 

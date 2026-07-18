@@ -40,6 +40,55 @@ async function studentGate(db: DB, actor: ActorRow, studentId: string): Promise<
 }
 
 export function registerInsightRoutes(app: FastifyInstance, db: DB): void {
+  // ---------- Report card (Học bạ) — a consolidated child summary ----------
+  // Guardian/teacher/manager scoped. Everything a printable term card needs.
+  app.get('/students/:id/report', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    const { id } = req.params as { id: string };
+    if (!(await studentGate(db, actor, id))) return reply.code(403).send({ error: 'forbidden' });
+
+    const student = await one<{ name: string; avatar: string | null }>(db, 'SELECT name, avatar FROM users WHERE id = $1', [id]);
+    const classes = await many<{ name: string; teacherName: string | null }>(
+      db,
+      `SELECT c.name, t.name AS "teacherName" FROM enrollments e JOIN classes c ON c.id = e.class_id
+         LEFT JOIN users t ON t.id = c.teacher_id WHERE e.student_id = $1 ORDER BY c.name`,
+      [id],
+    );
+    const graded = await many<{ title: string; overall: number | null }>(
+      db,
+      `SELECT a.title, s.overall FROM submissions s JOIN assignments a ON a.id = s.assignment_id
+        WHERE s.student_id = $1 AND s.status = 'graded' ORDER BY s.submitted_at DESC LIMIT 30`,
+      [id],
+    );
+    const scored = graded.filter((g) => g.overall != null);
+    const average = scored.length ? Math.round(scored.reduce((t, g) => t + (g.overall ?? 0), 0) / scored.length) : null;
+    // Attendance over the last 30 days.
+    const att = await one<{ present: string; total: string }>(
+      db,
+      `SELECT COUNT(*) FILTER (WHERE check_in_at IS NOT NULL)::text AS present, COUNT(*)::text AS total
+         FROM attendance_records WHERE student_id = $1 AND date >= CURRENT_DATE - 30`,
+      [id],
+    );
+    const comments = await many<{ note: string; at: string }>(
+      db,
+      `SELECT parent_note AS note, date::text AS at FROM session_logs
+        WHERE student_id = $1 AND parent_note <> '' ORDER BY date DESC LIMIT 5`,
+      [id],
+    );
+    const points = await one<{ sum: string | null }>(db, 'SELECT SUM(points)::text AS sum FROM practice_events WHERE student_id = $1', [id]);
+    return {
+      studentName: student?.name ?? '',
+      avatar: student?.avatar ?? null,
+      classes,
+      average,
+      assignments: graded.map((g) => ({ title: g.title, overall: g.overall == null ? null : Math.round(g.overall) })),
+      attendance: { present: Number(att?.present ?? 0), total: Number(att?.total ?? 0) },
+      practicePoints: Number(points?.sum ?? 0),
+      comments,
+    };
+  });
+
   // ---------- Growth & decayed mastery ----------
   app.get('/students/:id/growth', async (req, reply) => {
     const actor = await requireAuth(req, reply);
