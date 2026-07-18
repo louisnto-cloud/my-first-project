@@ -130,6 +130,7 @@
   .kpi .sub{margin-top:9px;font-size:12px;font-weight:600;line-height:1.4}
   .kpi .sub .d.up{color:var(--good)} .kpi .sub .d.down{color:var(--bad)}
   .kpi .ctx{color:var(--soft);font-weight:500}
+  .kpi .k[title]{cursor:help}
   /* horizontal scroll for wide tables on small screens */
   #cmp,#pnl,#pricing,#sens,#asmpSku,#asmpCo,#asmpLev{overflow-x:auto;-webkit-overflow-scrolling:touch}
   h1{font-size:clamp(30px,7vw,46px)}
@@ -499,8 +500,16 @@ function renderKpis(){
     ["Net Income", money(r.ni), r.ni-b.ni, "money", r.ni<0],
     ["Physical Cases", num(r.cases), r.cases-b.cases, "num", false, `${money2(r.cppc)}/cs avg CP`],
   ];
+  const DEF = {
+    "Net Sales":"Gross revenue minus trade discounts.",
+    "Gross Profit %":"Gross profit as a percent of net sales.",
+    "EBITDA":"Operating profit before interest, tax, depreciation and amortisation.",
+    "EBITDA %":"EBITDA as a percent of net sales.",
+    "Net Income":"Bottom-line profit after D&A, interest and tax.",
+    "Physical Cases":"Total cases sold across all six SKUs."
+  };
   el("kpis").innerHTML = cards.map(c=>
-    `<div class="kpi"><div class="k">${c[0]}</div><div class="v ${c[4]?'neg':''}">${c[1]}</div>`+
+    `<div class="kpi"><div class="k" title="${DEF[c[0]]||''}">${c[0]}</div><div class="v ${c[4]?'neg':''}">${c[1]}</div>`+
     `<div class="sub">${D(c[2],c[3])}${c[5]?` · <span class="ctx">${c[5]}</span>`:""}</div></div>`).join("");
 }
 
