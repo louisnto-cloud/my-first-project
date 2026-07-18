@@ -344,16 +344,42 @@ function resetAll(){
   persist(); renderAsmp(); refresh();
 }
 function exportCsv(){
+  const q = v => { const s=String(v==null?"":v); return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s; };
+  const rows = [];
+  rows.push(["Organika Sparkling Daily — one-year model"]);
+  rows.push(["Selected scenario", current]);
+  rows.push([]);
+  // 1) scenario summary
   const data = SCEN.map(compute);
-  const defs = [["Physical Cases",r=>Math.round(r.cases)],["Net Sales",r=>Math.round(r.net)],
-    ["Gross Profit",r=>Math.round(r.gp)],["GP %",r=>(r.gppct*100).toFixed(1)],
-    ["Contribution",r=>Math.round(r.cm)],["EBITDA",r=>Math.round(r.ebitda)],
-    ["EBITDA %",r=>(r.ebitdapct*100).toFixed(1)],["Net Income",r=>Math.round(r.ni)]];
-  const rows = [["Metric",...SCEN], ...defs.map(d=>[d[0], ...data.map(d[1])])];
-  const csv = rows.map(r=>r.join(",")).join("\n");
+  rows.push(["SCENARIO SUMMARY"]);
+  rows.push(["Metric", ...SCEN]);
+  [["Physical Cases",r=>Math.round(r.cases)],["Net Sales",r=>Math.round(r.net)],
+   ["Gross Profit",r=>Math.round(r.gp)],["GP %",r=>(r.gppct*100).toFixed(1)],
+   ["Contribution",r=>Math.round(r.cm)],["EBITDA",r=>Math.round(r.ebitda)],
+   ["EBITDA %",r=>(r.ebitdapct*100).toFixed(1)],["Net Income",r=>Math.round(r.ni)]]
+    .forEach(d=>rows.push([d[0], ...data.map(d[1])]));
+  rows.push([]);
+  // 2) P&L by SKU for the selected scenario
+  const r = compute(current), L = r.lines;
+  rows.push(["P&L BY SKU — "+current]);
+  rows.push(["CDN $", ...SKUS.map(s=>s.flav+" "+s.fmt), "Total"]);
+  [["Cases",l=>Math.round(l.cases),Math.round(r.cases)],["Gross Revenue",l=>Math.round(l.gross),Math.round(r.gross)],
+   ["Trade Discounts",l=>Math.round(l.tdisc),Math.round(r.tdisc)],["Net Sales",l=>Math.round(l.net),Math.round(r.net)],
+   ["Cost of Sales",l=>Math.round(l.cogs),Math.round(r.cogs)],["Gross Profit",l=>Math.round(l.gp),Math.round(r.gp)],
+   ["A&P",l=>Math.round(l.ap),Math.round(r.ap)],["Contribution",l=>Math.round(l.cm),Math.round(r.cm)]]
+    .forEach(d=>rows.push([d[0], ...L.map(d[1]), d[2]]));
+  rows.push(["EBITDA","","","","","","","",Math.round(r.ebitda)]);
+  rows.push(["Net Income","","","","","","","",Math.round(r.ni)]);
+  rows.push([]);
+  // 3) monthly phasing
+  rows.push(["MONTHLY PHASING — "+current]);
+  rows.push(["Month","Cases","Net Sales","Contribution","EBITDA","Cumulative EBITDA"]);
+  monthlyData().forEach(m=>rows.push([m.m,Math.round(m.cases),Math.round(m.net),Math.round(m.contrib),Math.round(m.ebitda),Math.round(m.cumE)]));
+  const csv = rows.map(rw=>rw.map(q).join(",")).join("\n");
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([csv],{type:"text/csv"}));
-  a.download = "organika_scenarios.csv"; a.click();
+  a.download = "organika_sparkling_daily_model.csv"; a.click();
+  toast("CSV exported");
 }
 // ---------- shareable link (encodes the whole model in the URL, no backend) ----------
 function shareState(){
