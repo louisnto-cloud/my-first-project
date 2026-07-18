@@ -7,16 +7,29 @@
 const SAVE_KEY = 'learnverse_v1';
 let P = load();
 function load() {
-  try { return Object.assign({ stars:0, skills:{}, timeMs:0, lastUsed:0, sessions:0 }, JSON.parse(localStorage.getItem(SAVE_KEY) || '{}')); }
-  catch { return { stars:0, skills:{}, timeMs:0, lastUsed:0, sessions:0 }; }
+  try { return Object.assign({ stars:0, skills:{}, timeMs:0, lastUsed:0, sessions:0, trophies:[], days:{} }, JSON.parse(localStorage.getItem(SAVE_KEY) || '{}')); }
+  catch { return { stars:0, skills:{}, timeMs:0, lastUsed:0, sessions:0, trophies:[], days:{} }; }
 }
 function save() { P.lastUsed = Date.now(); localStorage.setItem(SAVE_KEY, JSON.stringify(P)); }
 function skill(id) { return P.skills[id] || (P.skills[id] = { a:0, c:0, last:0 }); }
-function mark(id, correct) { const s = skill(id); s.a++; if (correct) s.c++; s.last = Date.now(); save(); }
+let streak = 0;
+function mark(id, correct) {
+  const s = skill(id); s.a++; s.last = Date.now();
+  if (correct) {
+    s.c++; streak++;
+    if (streak % 3 === 0) { giveStar(1); burst(innerWidth / 2, innerHeight / 3, ['🔥', '⭐', '💫'], 14); }
+  } else streak = 0;
+  save();
+}
 function mastery(id) { const s = P.skills[id]; if (!s || s.a < 3) return 'new'; return (s.c / s.a >= 0.8 && s.c >= 4) ? 'mastered' : 'learning'; }
 
 let sessionStart = Date.now();
-setInterval(() => { P.timeMs += 15000; save(); }, 15000);
+setInterval(() => {
+  P.timeMs += 15000;
+  const today = new Date().toISOString().slice(0, 10);
+  P.days[today] = (P.days[today] || 0) + 15000;
+  save();
+}, 15000);
 
 /* ---------------- speech ---------------- */
 let VOICE = null;
@@ -37,14 +50,38 @@ function speak(text, opts = {}) {
       if (VOICE) u.voice = VOICE;
       u.rate = opts.rate || 0.92;
       u.pitch = opts.pitch || 1.15;
-      u.onend = res; u.onerror = res;
+      const fox = document.getElementById('guide');
+      fox.classList.add('talking');
+      const done = () => { fox.classList.remove('talking'); res(); };
+      u.onend = done; u.onerror = done;
       speechSynthesis.speak(u);
-      setTimeout(res, Math.max(2500, text.length * 130)); // safety net
+      setTimeout(done, Math.max(2500, text.length * 130)); // safety net
     } catch { res(); }
   });
 }
 let lastPrompt = '';
-function say(text, opts) { lastPrompt = text; return speak(text, opts); }
+function say(text, opts) { lastPrompt = text; resetIdle(); return speak(text, opts); }
+
+/* Gentle idle re-engagement: if a child drifts mid-activity, the fox warmly
+   re-speaks the prompt and wiggles — never a scold, just a friendly nudge. */
+let idleTimer = null, idleNudges = 0;
+function resetIdle() {
+  clearTimeout(idleTimer);
+  if (!screens.activity.classList.contains('active')) return;
+  idleTimer = setTimeout(() => {
+    if (!screens.activity.classList.contains('active')) return;
+    if (document.getElementById('celebrate').classList.contains('active')) { resetIdle(); return; }
+    if (idleNudges >= 3 || !lastPrompt) return;
+    idleNudges++;
+    sfx.pop();
+    const fox = document.getElementById('guide');
+    fox.style.animation = 'none'; void fox.offsetWidth;
+    fox.style.animation = 'wobble .5s 2, bob 3.2s ease-in-out infinite';
+    speak('Your turn! ' + lastPrompt);
+    resetIdle();
+  }, 18000);
+}
+document.addEventListener('pointerdown', () => { idleNudges = 0; resetIdle(); }, true);
 
 /* ---------------- sound effects (synthesized, no files) ---------------- */
 let AC = null;
@@ -84,8 +121,16 @@ function burst(x, y, chars = ['✨', '⭐', '🌟'], n = 10) {
 }
 function burstAt(el, chars, n) { const r = el.getBoundingClientRect(); burst(r.left + r.width / 2, r.top + r.height / 2, chars, n); }
 
+const TROPHIES = ['🏆', '🦄', '🐉', '🚀', '🌈', '🎪', '🧸', '🪐', '🎠', '🦖', '👑', '🧜‍♀️', '🦋', '🎸', '🛸'];
+let pendingTrophy = null;
 function giveStar(n = 1) {
-  P.stars += n; save(); updateJar();
+  const before = Math.floor(P.stars / 25);
+  P.stars += n;
+  if (Math.floor(P.stars / 25) > before && P.trophies.length < TROPHIES.length) {
+    pendingTrophy = TROPHIES[P.trophies.length];
+    P.trophies.push(pendingTrophy);
+  }
+  save(); updateJar();
   sfx.star();
   const jar = document.getElementById('starjar');
   jar.style.animation = 'none'; void jar.offsetWidth; jar.style.animation = 'pulse .4s 2';
@@ -93,9 +138,25 @@ function giveStar(n = 1) {
 }
 function updateJar() { document.getElementById('starnum').textContent = P.stars; }
 
+function confettiRain(n = 36) {
+  for (let i = 0; i < n; i++) {
+    const el = document.createElement('div');
+    el.className = 'confetti';
+    el.textContent = ['🎊', '🎉', '⭐', '✨', '💛', '💜'][Math.floor(Math.random() * 6)];
+    el.style.left = Math.random() * 100 + 'vw';
+    el.style.animationDuration = (1.4 + Math.random() * 1.4) + 's';
+    el.style.animationDelay = (Math.random() * 0.7) + 's';
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 3600);
+  }
+}
+
 const CHEERS = ['Yay! You did it!', 'Amazing!', 'Wow, great job!', 'You are so smart!', 'Fantastic!', 'Super duper!', 'High five!', 'You got it!'];
 const NUDGES = ['Almost! Try again!', 'Ooh, so close! One more try!', 'Hmm, not that one — you can do it!', 'Good try! Pick another one!'];
-function cheer() { return CHEERS[Math.floor(Math.random() * CHEERS.length)]; }
+function cheer() {
+  if (streak > 0 && streak % 3 === 0) return streak + ' in a row! You are on fire!';
+  return CHEERS[Math.floor(Math.random() * CHEERS.length)];
+}
 function nudgeLine() { return NUDGES[Math.floor(Math.random() * NUDGES.length)]; }
 
 async function celebrate(icon = '🎉', line = null, big = false) {
@@ -104,8 +165,23 @@ async function celebrate(icon = '🎉', line = null, big = false) {
   c.classList.add('active');
   big ? sfx.bigwin() : sfx.yay();
   burst(innerWidth / 2, innerHeight / 2, ['🎉', '⭐', '✨', '🌟', '💫'], big ? 26 : 14);
+  if (big) confettiRain();
   await say(line || cheer());
   await new Promise(r => setTimeout(r, big ? 700 : 300));
+  c.classList.remove('active');
+}
+
+async function trophyCelebration() {
+  const t = pendingTrophy; pendingTrophy = null;
+  const c = document.getElementById('celebrate');
+  document.getElementById('bursticon').textContent = '🎁';
+  c.classList.add('active');
+  sfx.bigwin();
+  await say('Wow! Your jar is overflowing with stars! You won a treasure!');
+  document.getElementById('bursticon').textContent = t;
+  confettiRain(50); sfx.bigwin();
+  burst(innerWidth / 2, innerHeight / 2, ['⭐', '🎉', '✨'], 30);
+  await say('It goes on your treasure shelf! Keep playing to win them all!');
   c.classList.remove('active');
 }
 
@@ -116,21 +192,24 @@ function show(name) {
   screens[name].classList.add('active');
   document.getElementById('homebtn').style.display = name === 'home' ? 'none' : 'block';
 }
-function goHome() { speechSynthesis.cancel(); show('home'); buildHome(); sfx.swoosh(); }
+function goHome() { speechSynthesis.cancel(); clearTimeout(idleTimer); show('home'); buildHome(); sfx.swoosh(); }
 document.getElementById('homebtn').addEventListener('click', goHome);
 document.getElementById('guide').addEventListener('click', () => { sfx.pop(); if (lastPrompt) speak(lastPrompt); });
 
 /* ---------------- home world ---------------- */
 const ISLANDS = [
-  { id:'meet',   icon:'🔤', name:'Letter Land',    intro:'Letter Land! Let’s meet the letters!', unlockStars:0 },
-  { id:'trace',  icon:'✏️', name:'Tracing Trail',  intro:'Tracing Trail! Draw with your finger!', unlockStars:0 },
-  { id:'find',   icon:'🔎', name:'Finding Forest', intro:'Finding Forest! Can you find it?', unlockStars:0 },
-  { id:'build',  icon:'🧱', name:'Word Builder',   intro:'Word Builder! Let’s make words!', unlockStars:3 },
-  { id:'picture',icon:'🖼️', name:'Picture Pond',   intro:'Picture Pond! Match the picture!', unlockStars:3 },
-  { id:'sight',  icon:'⚡', name:'Speedy Words',   intro:'Speedy Words! Super fast words!', unlockStars:6 },
-  { id:'story',  icon:'📖', name:'Story Sea',      intro:'Story Sea! Time for a story!', unlockStars:8 },
-  { id:'spell',  icon:'🐝', name:'Spelling Bee',   intro:'Spelling Bee! Buzz buzz! Spell it out!', unlockStars:12 },
-  { id:'vocab',  icon:'🌋', name:'Word Volcano',   intro:'Word Volcano! Big kid words!', unlockStars:16 },
+  { id:'meet',    icon:'🔤', name:'Letter Land',      intro:'Letter Land! Let’s meet the letters!', unlockStars:0,  theme:'linear-gradient(180deg,#7ec8ff,#b3e5fc 55%,#aed581)' },
+  { id:'trace',   icon:'✏️', name:'Tracing Trail',    intro:'Tracing Trail! Draw with your finger!', unlockStars:0,  theme:'linear-gradient(180deg,#ffd54f,#ffe082 55%,#ffcc80)' },
+  { id:'find',    icon:'🔎', name:'Finding Forest',   intro:'Finding Forest! Can you find it?', unlockStars:0,  theme:'linear-gradient(180deg,#81c784,#a5d6a7 55%,#66bb6a)' },
+  { id:'rhyme',   icon:'🎵', name:'Rhyme Time',       intro:'Rhyme Time! Words that sound the same!', unlockStars:2,  theme:'linear-gradient(180deg,#f48fb1,#f8bbd0 55%,#ce93d8)' },
+  { id:'build',   icon:'🧱', name:'Word Builder',     intro:'Word Builder! Let’s make words!', unlockStars:3,  theme:'linear-gradient(180deg,#ff8a65,#ffab91 55%,#ffcc80)' },
+  { id:'picture', icon:'🖼️', name:'Picture Pond',     intro:'Picture Pond! Match the picture!', unlockStars:3,  theme:'linear-gradient(180deg,#4dd0e1,#80deea 55%,#4fc3f7)' },
+  { id:'sight',   icon:'⚡', name:'Speedy Words',     intro:'Speedy Words! Super fast words!', unlockStars:6,  theme:'linear-gradient(180deg,#9575cd,#b39ddb 55%,#7986cb)' },
+  { id:'story',   icon:'📖', name:'Story Sea',        intro:'Story Sea! Time for a story!', unlockStars:8,  theme:'linear-gradient(180deg,#4fc3f7,#81d4fa 55%,#0288d1)' },
+  { id:'sentence',icon:'🧩', name:'Sentence Builder', intro:'Sentence Builder! Make a whole sentence!', unlockStars:10, theme:'linear-gradient(180deg,#aed581,#c5e1a5 55%,#9ccc65)' },
+  { id:'spell',   icon:'🐝', name:'Spelling Bee',     intro:'Spelling Bee! Buzz buzz! Spell it out!', unlockStars:12, theme:'linear-gradient(180deg,#fff176,#fff59d 55%,#ffd54f)' },
+  { id:'vocab',   icon:'🌋', name:'Word Volcano',     intro:'Word Volcano! Big kid words!', unlockStars:16, theme:'linear-gradient(180deg,#ef9a9a,#ffab91 55%,#e57373)' },
+  { id:'grammar', icon:'📚', name:'Grammar Grove',    intro:'Grammar Grove! Word detective time!', unlockStars:20, theme:'linear-gradient(180deg,#80cbc4,#b2dfdb 55%,#4db6ac)' },
 ];
 function buildHome() {
   const grid = document.getElementById('worldgrid');
@@ -149,6 +228,7 @@ function buildHome() {
     });
     grid.appendChild(b);
   }
+  document.getElementById('trophyshelf').textContent = (P.trophies || []).join('');
   updateJar();
 }
 
@@ -176,12 +256,16 @@ const ROUNDS = 4; // each activity is ~4 quick rounds then a big finish
 
 function startActivity(id) {
   show('activity');
+  idleNudges = 0;
   clearStage();
-  ({ meet: actMeet, trace: actTrace, find: actFind, build: actBuild, picture: actPicture, sight: actSight, story: actStory, spell: actSpell, vocab: actVocab })[id]();
+  const isl = ISLANDS.find(i => i.id === id);
+  screens.activity.style.background = (isl && isl.theme) || '';
+  ({ meet: actMeet, trace: actTrace, find: actFind, rhyme: actRhyme, build: actBuild, picture: actPicture, sight: actSight, story: actStory, sentence: actSentence, spell: actSpell, vocab: actVocab, grammar: actGrammar })[id]();
 }
 async function finishActivity(icon) {
   await celebrate(icon || '🏆', 'You finished! Amazing work! Here is a big star!', true);
   giveStar(2);
+  if (pendingTrophy) await trophyCelebration();
   goHome();
 }
 
@@ -300,6 +384,39 @@ async function actFind() {
     }
     stage.appendChild(row);
     await say(`Can you find the letter ${target.ch.toUpperCase()}?`);
+  }
+  next();
+}
+
+/* ================= ACTIVITY: Rhyme Time ================= */
+async function actRhyme() {
+  let round = 0;
+  async function next() {
+    if (round >= ROUNDS) return finishActivity('🎵');
+    round++;
+    clearStage();
+    const R = CONTENT.rhymes[Math.floor(Math.random() * CONTENT.rhymes.length)];
+    const pic = el('div', 'bigemoji', R.emoji);
+    const row = el('div', 'choices');
+    const opts = shuffle([R.match, ...R.wrong]);
+    for (const o of opts) {
+      const b = el('button', 'choice', `<span class="rhymepair">${o.e}</span>`);
+      b.addEventListener('click', async () => {
+        if (o.w === R.match.w) {
+          mark('R-' + R.w, true); giveStar();
+          b.classList.add('correct-flash'); burstAt(b, ['🎵', '⭐'], 9); sfx.yay();
+          await say(`${R.w}... ${o.w}! They rhyme! ${cheer()}`);
+          next();
+        } else {
+          mark('R-' + R.w, false);
+          b.classList.remove('nope'); void b.offsetWidth; b.classList.add('nope'); sfx.nudge();
+          await say(`${R.w}... ${o.w}. Hmm, those don’t rhyme! Try another one!`);
+        }
+      });
+      row.appendChild(b);
+    }
+    stage.append(pic, row);
+    await say(`This is a ${R.w}. Which one rhymes with ${R.w}?`);
   }
   next();
 }
@@ -468,6 +585,99 @@ async function actStory() {
     stage.appendChild(qrow);
     await say(st.q + ' Tap the picture!');
   }
+}
+
+/* ================= ACTIVITY: Sentence Builder ================= */
+function nextSentence() {
+  for (const s of CONTENT.sentences) {
+    if (mastery('SEN-' + s.words.join(' ')) !== 'mastered') return s;
+  }
+  return CONTENT.sentences[Math.floor(Math.random() * CONTENT.sentences.length)];
+}
+async function actSentence() {
+  let round = 0;
+  async function next() {
+    if (round >= 2) return finishActivity('🧩');
+    round++;
+    clearStage();
+    const S = nextSentence();
+    const sentence = S.words.join(' ');
+    const built = el('div', 'sentencerow');
+    const tiles = el('div', 'wordrow');
+    let pos = 0;
+    for (const w of shuffle([...S.words])) {
+      const b = el('button', 'wordcard', w);
+      b.addEventListener('click', async () => {
+        if (b.disabled) return;
+        if (w === S.words[pos]) {
+          b.disabled = true; b.style.visibility = 'hidden';
+          const placed = el('div', 'wordcard lit', w);
+          built.appendChild(placed);
+          burstAt(placed, ['✨'], 4); sfx.pop();
+          pos++;
+          if (pos === S.words.length) {
+            mark('SEN-' + sentence, true); giveStar();
+            await say(sentence + '! You built a whole sentence!');
+            await celebrate('🧩');
+            next();
+          } else {
+            speak(w);
+          }
+        } else {
+          mark('SEN-' + sentence, false);
+          b.classList.remove('nope'); void b.offsetWidth; b.classList.add('nope'); sfx.nudge();
+          await say(`Listen again... ${sentence}. Which word comes next?`);
+        }
+      });
+      tiles.appendChild(b);
+    }
+    stage.append(built, tiles);
+    await say(`Listen! ${sentence}. Now build it! Tap the words in order. First word... ${S.words[0]}!`);
+  }
+  next();
+}
+
+/* ================= ACTIVITY: Grammar Grove ================= */
+function grammarLevel() {
+  const lvls = Object.keys(CONTENT.grammar).map(Number).sort((a, b) => a - b);
+  for (const lv of lvls) {
+    const qs = CONTENT.grammar[lv];
+    const learned = qs.filter(q => mastery('G-' + q.q) === 'mastered').length;
+    if (learned < qs.length * 0.6) return lv;
+  }
+  return lvls[lvls.length - 1];
+}
+async function actGrammar() {
+  let round = 0;
+  const lv = grammarLevel();
+  async function next() {
+    if (round >= 3) return finishActivity('📚');
+    round++;
+    clearStage();
+    const Q = CONTENT.grammar[lv][Math.floor(Math.random() * CONTENT.grammar[lv].length)];
+    const row = el('div', 'choices');
+    row.style.flexDirection = 'column';
+    for (const w of shuffle([...Q.opts])) {
+      const b = el('button', 'choice word', w);
+      b.addEventListener('click', async () => {
+        if (w === Q.a) {
+          mark('G-' + Q.q, true); giveStar();
+          b.classList.add('correct-flash'); burstAt(b, ['📚', '⭐'], 8); sfx.yay();
+          await say(`Yes! ${Q.a}! You are a word detective! ${cheer()}`);
+          next();
+        } else {
+          mark('G-' + Q.q, false);
+          b.classList.remove('nope'); void b.offsetWidth; b.classList.add('nope'); sfx.nudge();
+          await say(nudgeLine());
+          say(Q.q);
+        }
+      });
+      row.appendChild(b);
+    }
+    stage.appendChild(row);
+    await say(Q.q + ' Tap it!');
+  }
+  next();
 }
 
 /* ================= ACTIVITY 8: Spelling Bee ================= */

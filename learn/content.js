@@ -45,7 +45,79 @@ const CONTENT = {
     { w:'fox', emoji:'🦊' }, { w:'hen', emoji:'🐔' }, { w:'net', emoji:'🥅' },
     { w:'pen', emoji:'🖊️' }, { w:'six', emoji:'6️⃣' }, { w:'van', emoji:'🚐' },
     { w:'web', emoji:'🕸️' }, { w:'ten', emoji:'🔟' }, { w:'jet', emoji:'✈️' },
+    { w:'ship', emoji:'🚢' }, { w:'fish', emoji:'🐟' }, { w:'moon', emoji:'🌙' },
+    { w:'star', emoji:'⭐' }, { w:'frog', emoji:'🐸' }, { w:'crab', emoji:'🦀' },
+    { w:'drum', emoji:'🥁' }, { w:'flag', emoji:'🚩' }, { w:'swim', emoji:'🏊' },
+    { w:'ring', emoji:'💍' }, { w:'king', emoji:'🤴' }, { w:'bath', emoji:'🛁' },
   ],
+
+  // ---- K-2: rhyming — hear a word, find the one that rhymes ----
+  rhymes: [
+    { w:'cat', emoji:'🐱', match:{w:'hat', e:'🎩'}, wrong:[{w:'sun', e:'☀️'},{w:'fish', e:'🐟'}] },
+    { w:'dog', emoji:'🐶', match:{w:'frog', e:'🐸'}, wrong:[{w:'car', e:'🚗'},{w:'bee', e:'🐝'}] },
+    { w:'star', emoji:'⭐', match:{w:'car', e:'🚗'}, wrong:[{w:'cup', e:'☕'},{w:'pig', e:'🐷'}] },
+    { w:'bee', emoji:'🐝', match:{w:'tree', e:'🌳'}, wrong:[{w:'hat', e:'🎩'},{w:'dog', e:'🐶'}] },
+    { w:'cake', emoji:'🎂', match:{w:'snake', e:'🐍'}, wrong:[{w:'ball', e:'⚽'},{w:'moon', e:'🌙'}] },
+    { w:'goat', emoji:'🐐', match:{w:'boat', e:'⛵'}, wrong:[{w:'sock', e:'🧦'},{w:'bed', e:'🛏️'}] },
+    { w:'mouse', emoji:'🐭', match:{w:'house', e:'🏠'}, wrong:[{w:'fish', e:'🐟'},{w:'sun', e:'☀️'}] },
+    { w:'bear', emoji:'🐻', match:{w:'chair', e:'🪑'}, wrong:[{w:'cake', e:'🎂'},{w:'bus', e:'🚌'}] },
+    { w:'moon', emoji:'🌙', match:{w:'spoon', e:'🥄'}, wrong:[{w:'tree', e:'🌳'},{w:'crab', e:'🦀'}] },
+    { w:'fox', emoji:'🦊', match:{w:'box', e:'📦'}, wrong:[{w:'star', e:'⭐'},{w:'pen', e:'🖊️'}] },
+    { w:'whale', emoji:'🐳', match:{w:'snail', e:'🐌'}, wrong:[{w:'drum', e:'🥁'},{w:'egg', e:'🥚'}] },
+    { w:'ring', emoji:'💍', match:{w:'king', e:'🤴'}, wrong:[{w:'boat', e:'⛵'},{w:'hat', e:'🎩'}] },
+  ],
+
+  // ---- Grades 2-5: build a sentence word by word ----
+  sentences: [
+    { level:2, words:['The','dog','can','run'] },
+    { level:2, words:['I','see','a','big','cat'] },
+    { level:2, words:['The','sun','is','hot'] },
+    { level:3, words:['My','frog','jumps','very','high'] },
+    { level:3, words:['She','reads','books','every','night'] },
+    { level:3, words:['The','little','bird','sings','a','song'] },
+    { level:4, words:['We','planted','flowers','in','the','garden'] },
+    { level:4, words:['The','hungry','bear','looked','for','honey'] },
+    { level:4, words:['My','best','friend','lives','next','door'] },
+    { level:5, words:['The','curious','fox','explored','the','dark','forest'] },
+    { level:5, words:['A','gentle','rain','fell','on','the','quiet','town'] },
+    { level:5, words:['The','brave','knight','crossed','the','old','bridge'] },
+  ],
+
+  // ---- Grades 4-7: grammar, synonyms, antonyms, word parts ----
+  grammar: {
+    4: [
+      { q:'Which word is a noun — a person, place, or thing?', opts:['apple','jump','happy'], a:'apple' },
+      { q:'Which word is a verb — an action word?', opts:['swim','chair','blue'], a:'swim' },
+      { q:'Which word is an adjective — a describing word?', opts:['fluffy','run','table'], a:'fluffy' },
+      { q:'Which word is a noun — a person, place, or thing?', opts:['school','sing','loud'], a:'school' },
+      { q:'Which word is a verb — an action word?', opts:['dance','pencil','green'], a:'dance' },
+      { q:'Which word is an adjective — a describing word?', opts:['sparkly','book','shout'], a:'sparkly' },
+    ],
+    5: [
+      { q:'Which word means the same as happy?', opts:['glad','angry','tiny'], a:'glad' },
+      { q:'Which word means the same as big?', opts:['huge','fast','cold'], a:'huge' },
+      { q:'Which word means the same as scared?', opts:['afraid','brave','sleepy'], a:'afraid' },
+      { q:'Which word means the same as smart?', opts:['clever','messy','loud'], a:'clever' },
+      { q:'Which word means the same as quick?', opts:['rapid','heavy','soft'], a:'rapid' },
+      { q:'Which word means the same as quiet?', opts:['silent','bright','wet'], a:'silent' },
+    ],
+    6: [
+      { q:'Which word is the opposite of ancient?', opts:['modern','old','broken'], a:'modern' },
+      { q:'Which word is the opposite of expand?', opts:['shrink','grow','stretch'], a:'shrink' },
+      { q:'Which word is the opposite of generous?', opts:['selfish','kind','giving'], a:'selfish' },
+      { q:'Which word is the opposite of visible?', opts:['hidden','clear','shiny'], a:'hidden' },
+      { q:'Which word is the opposite of victory?', opts:['defeat','winning','trophy'], a:'defeat' },
+      { q:'Which word is the opposite of rough?', opts:['smooth','bumpy','hard'], a:'smooth' },
+    ],
+    7: [
+      { q:'The prefix "un" means not. Which word means not able?', opts:['unable','united','under'], a:'unable' },
+      { q:'The prefix "re" means again. Which word means to build again?', opts:['rebuild','remove','really'], a:'rebuild' },
+      { q:'The prefix "pre" means before. Which word means to see before it happens?', opts:['predict','present','pretend'], a:'predict' },
+      { q:'The suffix "less" means without. Which word means without fear?', opts:['fearless','fearful','feared'], a:'fearless' },
+      { q:'The suffix "ful" means full of. Which word means full of joy?', opts:['joyful','joyless','enjoy'], a:'joyful' },
+      { q:'The prefix "mis" means wrongly. Which word means to spell wrongly?', opts:['misspell','missile','mister'], a:'misspell' },
+    ],
+  },
 
   // ---- Grades 1-2: sight words (most common words, learned by sight) ----
   sightWords: {
