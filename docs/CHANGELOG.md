@@ -33,3 +33,9 @@ Reverse-chronological. Each entry = one committed iteration.
 - [I7] Strengthened validate_workbook.py with consistency assertions: Start Here + Exec Brief present,
   and a Home link on every content tab (fails the build otherwise).
 - Workbook: 36 → 37 tabs.
+
+## Iteration 6 — 2026-07-18 ~08:57Z (batch I10/I11/I12)
+- [I10] Added README.md: how to open/navigate/use/rebuild the workbook + pipeline structure + guardrails.
+- [I11] Scenario Comparison: added a break-even-units-by-scenario bar chart.
+- [I12] Glossary: appended a 'Regulatory & format terms' section (RTD, NHP, NPN, Supplemented Food,
+  SFFt, SFCI, ORS, food–NHP interface, Fibersol, Bill 96).

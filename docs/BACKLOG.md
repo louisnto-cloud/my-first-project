@@ -29,9 +29,9 @@ implement, validate (`./build_all.sh`), commit, log in CHANGELOG.md.
 - [x] I7 — [IMPROVE] Consistency QA: reconcile older tabs to MÜV-as-can; run stale-guard; fix wording.
 - [x] I8 — [EXPAND 20%] Peer-set positioning chart (sodium vs price scatter).
 - [x] I9 — [IMPROVE] Executive one-page brief tab (consolidate thesis + reco + numbers).
-- [ ] I10 — [IMPROVE/INTERFACE] README.md: how to open, navigate and use the workbook + rebuild it.
-- [ ] I11 — [EXPAND 20%] Break-even chart + one-way sensitivity on price & COGS.
-- [ ] I12 — [IMPROVE] Glossary / data-dictionary polish + inline definitions.
+- [x] I10 — [IMPROVE/INTERFACE] README.md: how to open, navigate and use the workbook + rebuild it.
+- [x] I11 — [EXPAND 20%] Break-even chart + one-way sensitivity on price & COGS.
+- [x] I12 — [IMPROVE] Glossary / data-dictionary polish + inline definitions.
 - [ ] I13 — [EXPAND 20%] Risk register likelihood×impact heatmap visual.
 - [ ] I14 — [IMPROVE] Final QA + polish + changelog closing summary.
 
