@@ -118,6 +118,9 @@ input:focus { outline: none; border-color: var(--accent); }
 }
 .stepper #goalValue { min-width: 24px; text-align: center; font-variant-numeric: tabular-nums; font-weight: 700; color: var(--ink); }
 
+.toggle-row { display: flex; align-items: center; gap: 8px; color: var(--ink-2); font-size: 0.9rem; cursor: pointer; }
+.toggle-row input { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
+
 .daily-progress { width: 100%; max-width: 360px; display: flex; flex-direction: column; gap: 6px; }
 .daily-label { font-size: 0.85rem; color: var(--ink-2); }
 .daily-label .met { color: #63b57c; font-weight: 600; }

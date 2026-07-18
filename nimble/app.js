@@ -476,15 +476,56 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     runWarmup(beginDrillView);
   }
 
+  // ---------- optional final-seconds sound cue (per-device, localStorage) ----------
+  const SOUND_KEY = 'nimble-sound';
+  const soundEnabled = () => localStorage.getItem(SOUND_KEY) === '1';
+  let audioCtx = null;
+  function ensureAudio() {
+    if (!audioCtx) {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return null;
+      try { audioCtx = new AC(); } catch { return null; }
+    }
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    return audioCtx;
+  }
+  function beep(freq) {
+    const ctx = ensureAudio();
+    if (!ctx) return;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'sine';
+    osc.frequency.value = freq;
+    const t = ctx.currentTime;
+    gain.gain.setValueAtTime(0.0001, t);
+    gain.gain.exponentialRampToValueAtTime(0.2, t + 0.01);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.15);
+    osc.connect(gain).connect(ctx.destination);
+    osc.start(t);
+    osc.stop(t + 0.16);
+  }
+  (() => {
+    const t = $('soundToggle');
+    t.checked = soundEnabled();
+    t.addEventListener('change', () => {
+      localStorage.setItem(SOUND_KEY, t.checked ? '1' : '0');
+      if (t.checked) { ensureAudio(); beep(660); } // prime + preview on the enabling gesture
+    });
+  })();
+
   const RING_CIRCUMFERENCE = 282.74; // 2πr for r=45
   const ANNOUNCE_AT = new Set([10, 5, 3]); // seconds-remaining milestones to speak
+  const BEEP_AT = new Set([3, 2, 1]);      // seconds-remaining milestones to beep
   let timerTotalMs = 0;
   let lastAnnouncedSec = null;
+  let lastBeepSec = null;
 
   function startTimer(seconds) {
     timerTotalMs = seconds * 1000;
     deadline = Date.now() + timerTotalMs;
     lastAnnouncedSec = seconds; // suppress the milestone equal to the start, so the scenario announcement isn't clobbered
+    lastBeepSec = seconds;
+    if (soundEnabled()) ensureAudio(); // resume the context on the (gesture-initiated) drill start
     renderTimer();
     clearInterval(timerHandle);
     timerHandle = setInterval(() => {
@@ -506,6 +547,11 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     if (secs !== lastAnnouncedSec && ANNOUNCE_AT.has(secs)) {
       announce(`${secs} seconds left`);
       lastAnnouncedSec = secs;
+    }
+    // Beep the final-seconds cue once per second (higher pitch on the last).
+    if (soundEnabled() && secs !== lastBeepSec && BEEP_AT.has(secs)) {
+      beep(secs === 1 ? 880 : 660);
+      lastBeepSec = secs;
     }
     return remaining;
   }
