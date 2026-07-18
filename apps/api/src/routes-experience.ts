@@ -240,10 +240,17 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
     if (!actor) return;
     return many(
       db,
-      `SELECT id, channel, body, created_at AS "createdAt" FROM notifications_outbox
+      `SELECT id, channel, body, created_at AS "createdAt", read_at AS "readAt" FROM notifications_outbox
         WHERE org_id = $1 AND to_user_id = $2 ORDER BY created_at DESC LIMIT 50`,
       [actor.orgId, actor.id],
     );
+  });
+
+  app.post('/my/notifications/read', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    await db.query('UPDATE notifications_outbox SET read_at = now() WHERE org_id = $1 AND to_user_id = $2 AND read_at IS NULL', [actor.orgId, actor.id]);
+    return { ok: true };
   });
 
   // ---------- Parent: children, live status, daily digest ----------

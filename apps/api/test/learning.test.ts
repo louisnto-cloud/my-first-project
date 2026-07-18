@@ -260,6 +260,33 @@ describe('grading queue and rubric', () => {
   });
 });
 
+describe('review of graded work', () => {
+  it('a student reviews after grading; correct answers only appear once graded; classmates are refused', async () => {
+    const create = await req('POST', '/classes/c1/assignments', lan, { title: 'Review Task', questionIds: ['q_mc1', 'q_fb1'] });
+    const aid = create.json().id as string;
+    await req('POST', `/assignments/${aid}/publish`, lan);
+
+    const sid = (await req('POST', `/assignments/${aid}/start`, minh)).json().submissionId as string;
+    // Before submit: review must not reveal answers.
+    expect((await req('GET', `/submissions/${sid}/review`, minh)).statusCode).toBe(409);
+    await req('PATCH', `/submissions/${sid}/answers`, minh, { answers: { q_mc1: 'am', q_fb1: 'WRONG' } });
+    await req('POST', `/submissions/${sid}/submit`, minh);
+
+    const review = (await req('GET', `/submissions/${sid}/review`, minh)).json() as { questions: { id: string; correct: boolean | null; correctAnswer: unknown }[] };
+    const mc = review.questions.find((q) => q.id === 'q_mc1')!;
+    expect(mc.correct).toBe(true);
+    const fill = review.questions.find((q) => q.id === 'q_fb1')!;
+    expect(fill.correct).toBe(false);
+    expect(fill.correctAnswer).toBeTruthy();
+
+    // A different student cannot read this submission's review.
+    const s1tok = await login('s1@etop.vn');
+    expect((await req('GET', `/submissions/${sid}/review`, s1tok)).statusCode).toBe(403);
+    // The class teacher can.
+    expect((await req('GET', `/submissions/${sid}/review`, lan)).statusCode).toBe(200);
+  });
+});
+
 describe('shared question bank', () => {
   it('a teacher offers a question; others see it only after manager approval', async () => {
     const created = await req('POST', '/questions', lan, {

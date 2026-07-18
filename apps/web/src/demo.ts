@@ -112,11 +112,12 @@ interface DDB {
   sessionNotes: { studentId: string; date: string; className: string; tutorName: string; parentNote: string }[];
   summaries: { id: string; studentId: string; weekStart: string; bodyVi: string; bodyEn: string; status: 'draft' | 'approved' }[];
   messages: { studentId: string; senderId: string; senderName: string; body: string; at: string }[];
+  notifications: { id: string; userId: string; body: string; at: string; readAt: string | null }[];
 }
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v19';
+const KEY = 'etop-demo-db-v20';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -308,6 +309,10 @@ function seed(): DDB {
     messages: [
       { studentId: 's_UP1482', senderId: 'p0', senderName: 'Phụ huynh (demo)', body: 'Chào cô, tuần sau bé xin nghỉ thứ 3 vì về quê ạ. Có bài nào cần làm bù không cô?', at: new Date(Date.now() - 3_600_000).toISOString() },
     ],
+    notifications: [
+      { id: 'nt1', userId: 'p0', body: '💬 Ms. Ha gửi nhận xét mới về bé Bảo.', at: new Date(Date.now() - 2_700_000).toISOString(), readAt: null },
+      { id: 'nt2', userId: 's_UP1482', body: '📌 Bài tập mới: Unit 1 — Ôn tập / Review (hạn ngày mai).', at: new Date(Date.now() - 5_400_000).toISOString(), readAt: null },
+    ],
   };
   // A week of attendance history for the demo child (Up 1 meets Mon-Wed):
   // present on class days except one absence, so the week view is honest.
@@ -354,6 +359,13 @@ function teacherName(db: DDB, id: string): string | null {
 }
 
 const norm = (s: unknown) => String(s ?? '').trim().toLowerCase();
+function pushNote(db: DDB, userId: string, body: string): void {
+  db.notifications.unshift({ id: uid('nt'), userId, body, at: new Date().toISOString(), readAt: null });
+}
+function notifyStudentAndGuardians(db: DDB, studentId: string, body: string): void {
+  pushNote(db, studentId, body);
+  for (const u of db.users) if (u.role === 'parent' && u.childIds.includes(studentId)) pushNote(db, u.id, body);
+}
 // null = open question (writing): goes to the teacher's grading queue.
 function grade(q: DQuestion, ans: unknown): number | null {
   const p = q.payload;
@@ -563,6 +575,16 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     return ok({ ok: true });
   }
 
+  // ---- in-app notification inbox ----
+  if (rawPath === '/my/notifications' && method === 'GET') {
+    return ok(db.notifications.filter((n) => n.userId === me.id).slice(0, 50).map((n) => ({ id: n.id, channel: 'push', body: n.body, createdAt: n.at, readAt: n.readAt })));
+  }
+  if (rawPath === '/my/notifications/read' && method === 'POST') {
+    for (const n of db.notifications) if (n.userId === me.id && !n.readAt) n.readAt = new Date().toISOString();
+    save(db);
+    return ok({ ok: true });
+  }
+
   // ---- self-service email change (email-auth roles) ----
   if (rawPath === '/me/email' && method === 'POST') {
     if (me.role === 'student' || me.role === 'tutor') return err(403, 'code_login_roles');
@@ -699,6 +721,7 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
       if (!stu) return err(400, 'student_not_in_class');
       if (e.parentNote?.trim()) {
         db.sessionNotes.push({ studentId: stu.id, date: today(), className: c.name, tutorName: me.name, parentNote: e.parentNote.trim() });
+        for (const u of db.users) if (u.role === 'parent' && u.childIds.includes(stu.id)) pushNote(db, u.id, `💬 ${me.name} gửi nhận xét mới về bé ${stu.name}.`);
       }
     }
     save(db);
@@ -828,6 +851,9 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     const c = db.classes.find((x) => x.id === a.classId)!;
     if (!canTeachClass(actor, classRef(c))) return err(403, 'forbidden');
     a.status = 'published';
+    for (const stu of db.users.filter((u) => u.role === 'student' && u.classIds.includes(a.classId))) {
+      notifyStudentAndGuardians(db, stu.id, `📌 Bài tập mới: ${a.title}`);
+    }
     save(db);
     return ok({ ok: true });
   }
@@ -876,6 +902,36 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     save(db);
     return ok({ status: s.status, late: false, autoPoints: earned, autoPossible: possible, ...(pending ? {} : { overall: s.overall }), pendingReview: pending });
   }
+  // ---------- Review of graded work (Xem lại bài) ----------
+  if (seg[0] === 'submissions' && seg[2] === 'review' && method === 'GET') {
+    const s = db.submissions.find((x) => x.id === seg[1]);
+    if (!s) return err(404, 'not_found');
+    const a = db.assignments.find((x) => x.id === s.assignmentId)!;
+    const c = db.classes.find((x) => x.id === a.classId)!;
+    const isOwner = me.role === 'student' && s.studentId === me.id;
+    const isGuardian = me.role === 'parent' && me.childIds.includes(s.studentId);
+    const teaches = me.role === 'tutor' && c.teacherId === me.id;
+    if (!isOwner && !isGuardian && !teaches && !isAdmin) return err(403, 'forbidden');
+    if (s.status !== 'graded') return err(409, 'not_graded_yet');
+    return ok({
+      title: a.title,
+      comment: s.comment ?? null,
+      questions: a.questionIds.map((qid) => {
+        const q = db.questions.find((x) => x.id === qid)!;
+        const g = grade(q, s.answers[qid]);
+        const p = q.payload;
+        const correctAnswer = q.type === 'write' ? null : q.type === 'order' ? p.answer : p.answer;
+        return {
+          id: q.id, type: API_TYPE[q.type], skill: q.skill, prompt: q.prompt, points: 1,
+          yourAnswer: s.answers[qid] ?? null,
+          correct: g === null ? null : g >= 1,
+          earned: g,
+          correctAnswer: correctAnswer ?? null,
+        };
+      }),
+    });
+  }
+
   if (seg[0] === 'assignments' && seg[2] === 'status' && method === 'GET') {
     const a = db.assignments.find((x) => x.id === seg[1]);
     if (!a) return err(404, 'not_found');
@@ -934,6 +990,7 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     s.pendingReview = false;
     s.comment = String(b.comment ?? '').trim();
     s.rubricFrac = rubricFrac;
+    { const a2 = db.assignments.find((x) => x.id === s.assignmentId)!; notifyStudentAndGuardians(db, s.studentId, `✅ Bài "${a2.title}" đã chấm: ${Math.round(s.overall ?? 0)}/100`); }
     save(db);
     return ok({ ok: true, overall: s.overall });
   }

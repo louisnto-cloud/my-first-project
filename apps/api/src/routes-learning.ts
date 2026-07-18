@@ -9,7 +9,8 @@ import { hashPassword, type ActorRow } from './auth.js';
 import { audit } from './audit.js';
 import { notify } from './notify.js';
 import {
-  allocateLoginCode, assignmentQuestions, gradeSubmission, isEnrolled, recordMastery, rid, rotateJoinCode, seededShuffle, serializeForStudent,
+  allocateLoginCode, assignmentQuestions, autograde, gradeSubmission, isEnrolled, recordMastery, rid, rotateJoinCode, seededShuffle, serializeForStudent,
+  type QuestionRow,
 } from './learning.js';
 
 async function getClass(db: DB, id: string): Promise<(ClassRef & { name: string }) | null> {
@@ -431,6 +432,61 @@ export function registerLearningRoutes(app: FastifyInstance, db: DB): void {
         WHERE e.class_id = $2 AND e.status = 'active' ORDER BY u.name`,
       [id, a.class_id],
     );
+  });
+
+  // ---------- Review of graded work (Xem lại bài) ----------
+  // After grading, the student (and their guardians) can revisit each
+  // question: their answer, whether it was right, and the correct answer.
+  // Correct answers are released ONLY for graded submissions — never for
+  // work still in progress, so they can't leak into a live attempt.
+  app.get('/submissions/:id/review', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    const { id } = req.params as { id: string };
+    const sub = await one<{ id: string; org_id: string; student_id: string; assignment_id: string; status: string; answers: Record<string, unknown>; rubric: Record<string, unknown> | null }>(
+      db,
+      'SELECT id, org_id, student_id, assignment_id, status, answers, rubric FROM submissions WHERE id = $1',
+      [id],
+    );
+    if (!sub || sub.org_id !== actor.orgId) return reply.code(404).send({ error: 'not_found' });
+
+    const isOwner = actor.role === 'student' && sub.student_id === actor.id;
+    const isGuardian =
+      actor.role === 'parent' && !!(await one(db, 'SELECT 1 AS x FROM guardian_students WHERE guardian_id = $1 AND student_id = $2', [actor.id, sub.student_id]));
+    const a = await one<{ class_id: string; title: string }>(db, 'SELECT class_id, title FROM assignments WHERE id = $1', [sub.assignment_id]);
+    const cls = a ? await getClass(db, a.class_id) : null;
+    const teaches = !!cls && canTeachClass(actor, cls);
+    if (!isOwner && !isGuardian && !teaches) return reply.code(403).send({ error: 'forbidden' });
+    if (sub.status !== 'graded') return reply.code(409).send({ error: 'not_graded_yet' });
+
+    const qs = await assignmentQuestions(db, sub.assignment_id);
+    const correctAnswerOf = (q: QuestionRow): unknown => {
+      switch (q.type) {
+        case 'mc': case 'listen_mc': case 'fill_blank': case 'reorder': case 'dictation':
+          return q.payload.answer ?? null;
+        case 'mc_multi':
+          return q.payload.answers ?? null;
+        case 'fill_gaps':
+          return q.payload.gaps ?? null;
+        default:
+          return null; // open writing: the rubric speaks instead
+      }
+    };
+    const rubric = (sub.rubric ?? null) as { comment?: string } | null;
+    return {
+      title: a?.title ?? '',
+      comment: rubric?.comment ?? null,
+      questions: qs.map((q) => {
+        const earned = autograde(q, sub.answers[q.id]);
+        return {
+          id: q.id, type: q.type, skill: q.skill, prompt: q.prompt, points: q.points,
+          yourAnswer: sub.answers[q.id] ?? null,
+          correct: earned === null ? null : earned >= q.points, // null = hand-graded
+          earned,
+          correctAnswer: correctAnswerOf(q),
+        };
+      }),
+    };
   });
 
   // ---------- Submissions ----------

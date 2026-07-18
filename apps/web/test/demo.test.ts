@@ -409,6 +409,50 @@ describe('demo engine — kiosk (front desk)', () => {
   });
 });
 
+describe('demo engine — review & notifications', () => {
+  it('a student reviews graded work: right/wrong per question, correct answers only after grading', async () => {
+    const ha = await loginCode('GV0004');
+    const created = await call('POST', '/classes/up1/assignments', { title: 'Review Quiz', questionIds: ['q1', 'q2'] }, ha!);
+    const aid = (created.json as { id: string }).id;
+    await call('POST', `/assignments/${aid}/publish`, {}, ha!);
+
+    const bao = await loginCode('UP1482');
+    const start = (await call('POST', `/assignments/${aid}/start`, {}, bao!)).json as { submissionId: string };
+    // q1 right (am), q2 wrong (are, correct is)
+    await call('PATCH', `/submissions/${start.submissionId}/answers`, { answers: { q1: 'am', q2: 'are' } }, bao!);
+    // Before submit → review is 409.
+    expect((await call('GET', `/submissions/${start.submissionId}/review`, undefined, bao!)).status).toBe(409);
+    await call('POST', `/submissions/${start.submissionId}/submit`, {}, bao!);
+
+    const review = (await call('GET', `/submissions/${start.submissionId}/review`, undefined, bao!)).json as { questions: { id: string; correct: boolean | null; correctAnswer: unknown }[] };
+    const q1 = review.questions.find((q) => q.id === 'q1')!;
+    const q2 = review.questions.find((q) => q.id === 'q2')!;
+    expect(q1.correct).toBe(true);
+    expect(q2.correct).toBe(false);
+    expect(q2.correctAnswer).toBe('is');
+
+    // A classmate cannot read this submission's review.
+    const long = await loginCode('UP3171');
+    expect((await call('GET', `/submissions/${start.submissionId}/review`, undefined, long!)).status).toBe(403);
+  });
+
+  it('publishing an assignment notifies the class; the inbox marks read', async () => {
+    const ha = await loginCode('GV0004');
+    const created = await call('POST', '/classes/up1/assignments', { title: 'Notify Quiz', questionIds: ['q1'] }, ha!);
+    const aid = (created.json as { id: string }).id;
+    await call('POST', `/assignments/${aid}/publish`, {}, ha!);
+
+    const bao = await loginCode('UP1482');
+    const notes = (await call('GET', '/my/notifications', undefined, bao!)).json as { body: string; readAt: string | null }[];
+    expect(notes.some((n) => n.body.includes('Notify Quiz'))).toBe(true);
+    expect(notes.some((n) => !n.readAt)).toBe(true);
+
+    await call('POST', '/my/notifications/read', {}, bao!);
+    const after = (await call('GET', '/my/notifications', undefined, bao!)).json as { readAt: string | null }[];
+    expect(after.every((n) => n.readAt)).toBe(true);
+  });
+});
+
 describe('demo engine — center-area accounts', () => {
   it('owner creates a front-desk account; the staffer sets a private email; students cannot', async () => {
     const zhao = (await call('POST', '/auth/login', { email: 'zhao@etop.vn', password: 'x' })).json as { token: string };

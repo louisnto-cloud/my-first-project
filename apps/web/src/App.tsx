@@ -32,6 +32,58 @@ function useT(): [Lang, (l: Lang) => void, (k: string) => string] {
   return [lang, set, makeT(lang)];
 }
 
+// 🔔 In-app notification bell: unread count + a dropdown that marks read.
+interface Note { id: string; body: string; createdAt: string; readAt: string | null }
+function NotificationBell({ lang }: { lang: Lang }) {
+  const vi = lang === 'vi';
+  const [items, setItems] = useState<Note[]>([]);
+  const [open, setOpen] = useState(false);
+  const load = async () => setItems(await api<Note[]>('GET', '/my/notifications').catch(() => []));
+  useEffect(() => {
+    void load();
+    const iv = setInterval(() => void load(), 30_000);
+    return () => clearInterval(iv);
+  }, []);
+  const unread = items.filter((n) => !n.readAt).length;
+  const toggle = async () => {
+    const next = !open;
+    setOpen(next);
+    if (next && unread > 0) {
+      await api('POST', '/my/notifications/read').catch(() => {});
+      setItems((xs) => xs.map((n) => ({ ...n, readAt: n.readAt ?? new Date().toISOString() })));
+    }
+  };
+  return (
+    <div className="relative">
+      <button onClick={toggle} aria-label={vi ? 'Thông báo' : 'Notifications'} className="surface relative p-2 text-violet-500 transition hover:border-violet-300">
+        <Icon name="bell" size={17} />
+        {unread > 0 && (
+          <span className="absolute -right-1 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-rose-500 px-1 text-[10px] font-black text-white">{unread > 9 ? '9+' : unread}</span>
+        )}
+      </button>
+      {open && (
+        <div className="animate-rise absolute right-0 top-11 z-30 max-h-80 w-72 overflow-y-auto rounded-2xl border border-[var(--line)] bg-white p-2 shadow-lift">
+          <div className="px-2 py-1 text-xs font-extrabold uppercase tracking-wide text-slate-400">🔔 {vi ? 'Thông báo' : 'Notifications'}</div>
+          {items.length === 0 && <div className="p-3 text-center text-sm font-bold text-slate-300">{vi ? 'Chưa có thông báo' : 'Nothing yet'}</div>}
+          {items.map((n) => (
+            <div key={n.id} className="rounded-xl px-2 py-2 text-sm font-semibold text-slate-600">
+              {n.body}
+              <span className="mt-0.5 block text-[10px] font-bold text-slate-300">{timeAgoShort(n.createdAt, vi)}</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+function timeAgoShort(iso: string, vi: boolean): string {
+  const mins = Math.max(0, Math.round((Date.now() - new Date(iso).getTime()) / 60_000));
+  if (mins < 60) return vi ? `${mins || 1} phút trước` : `${mins || 1}m ago`;
+  const h = Math.round(mins / 60);
+  if (h < 24) return vi ? `${h} giờ trước` : `${h}h ago`;
+  return vi ? `${Math.round(h / 24)} ngày trước` : `${Math.round(h / 24)}d ago`;
+}
+
 function Header({ me, lang, setLang, onLogout }: { me: Me; lang: Lang; setLang: (l: Lang) => void; t: (k: string) => string; onLogout: () => void }) {
   const role = ROLE_LABEL[me.role];
   const [sound, setSound] = useState(soundOn());
@@ -60,6 +112,7 @@ function Header({ me, lang, setLang, onLogout }: { me: Me; lang: Lang; setLang: 
           </div>
         </div>
         <div className="flex items-center gap-1.5">
+          <NotificationBell lang={lang} />
           <button
             onClick={toggleSound}
             aria-pressed={!sound}
@@ -162,6 +215,83 @@ function Leaderboard({ classId, meName, lang }: { classId: string; meName: strin
 
 const AVATARS = ['🦊', '🐼', '🐯', '🦄', '🐸', '🐰', '🐙', '🦖', '🐳', '🐝', '🐨', '🦁'];
 
+// Xem lại bài — after grading, revisit every question with your answer,
+// whether it was right, and the correct answer. Correct answers are
+// released by the server only for graded work.
+interface ReviewQ {
+  id: string;
+  type: string;
+  skill: string;
+  prompt: string;
+  yourAnswer: unknown;
+  correct: boolean | null;
+  correctAnswer: unknown;
+}
+function fmtAns(v: unknown): string {
+  if (v == null || v === '') return '—';
+  if (Array.isArray(v)) return v.join(' ');
+  return String(v);
+}
+function ReviewScreen({ assignmentId, lang, onExit }: { assignmentId: string; lang: Lang; onExit: () => void }) {
+  const vi = lang === 'vi';
+  const [data, setData] = useState<{ title: string; comment: string | null; questions: ReviewQ[] } | null>(null);
+  const [err, setErr] = useState(false);
+  useEffect(() => {
+    void (async () => {
+      try {
+        const start = await api<{ submissionId: string }>('POST', `/assignments/${assignmentId}/start`);
+        setData(await api('GET', `/submissions/${start.submissionId}/review`));
+      } catch {
+        setErr(true);
+      }
+    })();
+  }, [assignmentId]);
+
+  if (err) return <div className="card text-center font-bold text-slate-400">{vi ? 'Chưa xem lại được — thử lại sau nhé.' : 'Review unavailable — try again later.'}<button onClick={onExit} className="btn-soft mt-3">←</button></div>;
+  if (!data) return <div className="card animate-pulse text-center text-slate-300">…</div>;
+
+  const rights = data.questions.filter((q) => q.correct === true).length;
+  const auto = data.questions.filter((q) => q.correct !== null).length;
+  return (
+    <div className="space-y-4">
+      <div className="sticky top-14 z-10 -mx-4 flex items-center justify-between bg-violet-50/80 px-4 py-2 backdrop-blur">
+        <button onClick={onExit} className="text-xl font-bold text-violet-500">←</button>
+        <h2 className="truncate px-2 text-sm font-black text-violet-800">{vi ? 'Xem lại' : 'Review'}: {data.title}</h2>
+        <span className="chip bg-violet-600 text-white">{rights}/{auto} ✓</span>
+      </div>
+      {data.comment && (
+        <div className="card border-l-4 border-violet-300 bg-violet-50/60 text-sm font-semibold italic text-slate-600">💬 {data.comment}</div>
+      )}
+      {data.questions.map((q, i) => {
+        const tone = q.correct === null ? 'border-sky-200 bg-sky-50/50' : q.correct ? 'border-emerald-200 bg-emerald-50/50' : 'border-rose-200 bg-rose-50/50';
+        const badge = q.correct === null ? '✍️' : q.correct ? '✅' : '❌';
+        return (
+          <div key={q.id} className={`card space-y-1.5 border-l-4 ${tone}`}>
+            <div className="flex items-start justify-between gap-2">
+              <span className="text-sm font-extrabold text-ink">{i + 1}. {q.prompt || `(${q.type})`}</span>
+              <span className="shrink-0 text-lg">{badge}</span>
+            </div>
+            <div className="text-sm">
+              <span className="font-bold text-slate-500">{vi ? 'Bạn trả lời:' : 'Your answer:'}</span>{' '}
+              <span className={q.correct === false ? 'font-bold text-rose-600 line-through' : 'font-bold text-slate-700'}>{fmtAns(q.yourAnswer)}</span>
+            </div>
+            {q.correct === false && q.correctAnswer != null && (
+              <div className="text-sm">
+                <span className="font-bold text-slate-500">{vi ? 'Đáp án đúng:' : 'Correct:'}</span>{' '}
+                <span className="font-black text-emerald-600">{fmtAns(q.correctAnswer)}</span>
+              </div>
+            )}
+            {q.correct === null && (
+              <div className="text-xs font-semibold text-sky-600">{vi ? 'Câu viết — cô giáo chấm tay, xem nhận xét ở trên.' : 'Writing — hand-graded; see the note above.'}</div>
+            )}
+          </div>
+        );
+      })}
+      <button onClick={onExit} className="btn-fun btn-fun-green w-full">{vi ? 'Xong' : 'Done'}</button>
+    </div>
+  );
+}
+
 function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: string) => string; name: string; avatar: string | null; onAvatar: () => void }) {
   const [pickingAvatar, setPickingAvatar] = useState(false);
   const pickAvatar = async (a: string) => {
@@ -174,6 +304,7 @@ function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: strin
   const [ach, setAch] = useState<{ points: number; pointsToday?: number; streak: number; badges?: { id: string; earned: boolean }[] } | null>(null);
   const [assignments, setAssignments] = useState<Record<string, { id: string; title: string; dueAt: string | null; myStatus: string | null; myOverall?: number | null; myComment?: string | null }[]>>({});
   const [playing, setPlaying] = useState<string | null>(null);
+  const [reviewing, setReviewing] = useState<string | null>(null);
   const [code, setCode] = useState('');
   const [joinMsg, setJoinMsg] = useState('');
 
@@ -198,6 +329,7 @@ function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: strin
   };
 
   if (playing) return <Player assignmentId={playing} onExit={() => { setPlaying(null); void load(); }} t={t} />;
+  if (reviewing) return <ReviewScreen assignmentId={reviewing} lang={lang} onExit={() => { setReviewing(null); void load(); }} />;
 
   const totalAssignments = classes.reduce((n, c) => n + (assignments[c.id]?.length ?? 0), 0);
 
@@ -319,7 +451,7 @@ function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: strin
                   return (
                     <button
                       key={a.id}
-                      onClick={() => setPlaying(a.id)}
+                      onClick={() => (a.myStatus === 'graded' ? setReviewing(a.id) : setPlaying(a.id))}
                       className={`flex w-full items-center gap-3 rounded-2xl border-2 border-b-4 p-3.5 text-left transition active:translate-y-[3px] active:border-b-2 ${done ? 'border-slate-100 bg-slate-50' : 'border-violet-200 bg-gradient-to-r from-violet-50 to-fuchsia-50'}`}
                     >
                       <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${done ? 'bg-emerald-100 text-emerald-500' : 'bg-violet-600 text-white'}`}>
@@ -330,6 +462,9 @@ function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: strin
                         {due && <span className={`chip mt-0.5 ${due.tone}`}>{due.text}</span>}
                         {a.myStatus === 'graded' && a.myComment && (
                           <span className="mt-0.5 block truncate text-xs font-semibold italic text-emerald-600">💬 {a.myComment}</span>
+                        )}
+                        {a.myStatus === 'graded' && (
+                          <span className="mt-0.5 block text-[11px] font-extrabold text-violet-500">{lang === 'vi' ? 'Chạm để xem lại bài →' : 'Tap to review →'}</span>
                         )}
                       </span>
                       <span className={`chip shrink-0 ${done ? 'bg-emerald-100 text-emerald-600' : 'bg-violet-600 text-white'}`}>

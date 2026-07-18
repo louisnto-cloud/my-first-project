@@ -163,8 +163,11 @@ CREATE TABLE IF NOT EXISTS notifications_outbox (
   body TEXT NOT NULL,
   status TEXT NOT NULL DEFAULT 'queued', -- queued | sent | failed
   created_at TIMESTAMPTZ NOT NULL,
-  sent_at TIMESTAMPTZ
+  sent_at TIMESTAMPTZ,
+  read_at TIMESTAMPTZ -- in-app inbox read receipt
 );
+-- Idempotent upgrade for databases created before the read receipt.
+ALTER TABLE notifications_outbox ADD COLUMN IF NOT EXISTS read_at TIMESTAMPTZ;
 
 CREATE TABLE IF NOT EXISTS emergency_modes (
   id TEXT PRIMARY KEY,
