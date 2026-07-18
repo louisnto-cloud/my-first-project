@@ -95,3 +95,8 @@ Reverse-chronological. Each entry = one committed iteration.
 - [I31] Extended Landscape: amber-tagged all FLAG/unverified/could-not-confirm brand cells for
   scanability, with a legend note.
 - [I32] Confirmed all gold interactive tabs are discoverable via Contents + Start Here.
+
+## Iteration 15 — 2026-07-18 ~09:37Z (hardening: one high-value add)
+- Added "FAQ & Objections" tab: 8 anticipated leadership objections with crisp one-line answers and
+  the proof tab for each — a ready shield for the board readout.
+- Workbook: 41 → 42 tabs.
