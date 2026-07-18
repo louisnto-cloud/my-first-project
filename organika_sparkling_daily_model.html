@@ -109,6 +109,9 @@
   /* charts */
   .chart{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:2px 0 8px;padding-bottom:2px}
   .chart svg{display:block}
+  /* help chip */
+  .help{display:inline-block;width:15px;height:15px;line-height:15px;text-align:center;border-radius:50%;
+    background:var(--line);color:var(--soft);font-size:10px;font-weight:700;cursor:help;margin-left:5px;vertical-align:middle}
   /* executive insight callout */
   .insight{background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid var(--line);
     border-left:4px solid var(--accent);border-radius:14px;padding:14px 18px;margin:0 0 18px;
@@ -253,11 +256,13 @@
     <div class="note">This is the only place you type. Edit any yellow cell — every number everywhere updates instantly.</div>
     <div class="panel">
       <h2>SKU assumptions <span class="hint">(per case)</span></h2>
+      <p class="h-sub">Per-case economics for all six SKUs. Hover the <b>?</b> on any column for what it means.</p>
       <div id="asmpSku"></div>
     </div>
     <div class="grid2">
       <div class="panel">
         <h2>Company (annual)</h2>
+        <p class="h-sub">Fixed overheads and below-the-line items applied across the whole line.</p>
         <div id="asmpCo"></div>
       </div>
       <div class="panel">
@@ -711,12 +716,20 @@ function renderTargets(){
 }
 
 // ---------- assumptions editor ----------
-function inp(val, onin, step="0.01"){
-  return `<input class="cell" type="number" step="${step}" value="${val}" oninput="${onin}">`;
+function inp(val, onin, step="0.01", min="0"){
+  return `<input class="cell" type="number" step="${step}"${min!==""?` min="${min}"`:""} value="${val}" oninput="${onin}">`;
 }
 function renderAsmp(){
   // SKU table
-  let h="<table><thead><tr><th>SKU</th><th>CP / case</th><th>Disc %</th><th>COGS Direct</th><th>COGS Indir.</th><th>A&P</th><th>Volume</th></tr></thead><tbody>";
+  const H=(t,tip)=>`<th>${t}<span class="help" title="${tip}">?</span></th>`;
+  let h="<table><thead><tr><th>SKU</th>"+
+    H("CP / case","Case price — your wholesale price per case, before trade discount.")+
+    H("Disc %","Trade discount / allowance as a % of gross.")+
+    H("COGS Direct","Direct cost per case — liquid, can, co-pack.")+
+    H("COGS Indir.","Indirect cost per case — freight-in, warehousing, shrink.")+
+    H("A&P","Advertising &amp; promotion spend allocated per case.")+
+    H("Volume","Annual cases sold for this SKU at base.")+
+    "</tr></thead><tbody>";
   SKUS.forEach((s,i)=>{
     h+=`<tr><td>${s.flav} <span class="hint">${s.fmt}</span></td>`+
       `<td>${inp(s.cp,`setS(${i},'cp',this.value)`)}</td>`+
@@ -738,7 +751,8 @@ function renderAsmp(){
     const isPct = row[1]==="log_pct"||row[1]==="tax";
     const val = isPct? (CO[row[1]]*100).toFixed(row[1]==='log_pct'?1:0): CO[row[1]];
     const setter = isPct? `setCo('${row[1]}',this.value/100)`:`setCo('${row[1]}',this.value)`;
-    c+=`<tr><td>${row[0]}</td><td style="text-align:right">${inp(val,setter,row[2])}${isPct?' %':''}</td></tr>`;
+    const minv = row[1]==="elast" ? "" : "0";   // elasticity may be negative
+    c+=`<tr><td>${row[0]}</td><td style="text-align:right">${inp(val,setter,row[2],minv)}${isPct?' %':''}</td></tr>`;
   });
   c+="</tbody></table>";
   el("asmpCo").innerHTML=c;
@@ -749,7 +763,7 @@ function renderAsmp(){
     lv+=`<tr><td>${s}</td>`+
       `<td>${inp(L.v,`setLev('${s}','v',this.value)`)}</td>`+
       `<td>${inp(L.p,`setLev('${s}','p',this.value)`)}</td>`+
-      `<td>${inp((L.d*100).toFixed(1),`setLev('${s}','d',this.value/100)`,"0.1")}</td></tr>`;
+      `<td>${inp((L.d*100).toFixed(1),`setLev('${s}','d',this.value/100)`,"0.1","")}</td></tr>`;
   });
   lv+="</tbody></table>";
   el("asmpLev").innerHTML=lv;
