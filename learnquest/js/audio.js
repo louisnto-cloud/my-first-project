@@ -5,18 +5,47 @@ const Audio2 = {
   ctx: null,
   muted: false,
   voice: null,
+  _primed: false,
+
+  pickVoice() {
+    if (!('speechSynthesis' in window)) return;
+    const vs = speechSynthesis.getVoices();
+    if (!vs.length) return;
+    // Prefer a friendly natural English voice
+    Audio2.voice =
+      vs.find(v => /en/i.test(v.lang) && /female|samantha|karen|zira|jenny|aria|natural/i.test(v.name)) ||
+      vs.find(v => /^en/i.test(v.lang)) || vs[0];
+  },
 
   init() {
-    const pickVoice = () => {
-      const vs = speechSynthesis.getVoices();
-      if (!vs.length) return;
-      // Prefer a friendly natural English voice
-      Audio2.voice =
-        vs.find(v => /en/i.test(v.lang) && /female|samantha|karen|zira|jenny|aria|natural/i.test(v.name)) ||
-        vs.find(v => /^en/i.test(v.lang)) || vs[0];
+    Audio2.pickVoice();
+    if (typeof speechSynthesis !== 'undefined') {
+      speechSynthesis.onvoiceschanged = Audio2.pickVoice;
+      // Some engines populate voices lazily — retry a few times
+      let tries = 0;
+      const iv = setInterval(() => {
+        if (Audio2.voice || ++tries > 10) clearInterval(iv);
+        else Audio2.pickVoice();
+      }, 300);
+    }
+    Audio2.armUnlock();
+  },
+
+  // Browsers block audio until a user gesture. On the first interaction,
+  // resume the AudioContext and prime SpeechSynthesis so the very first
+  // sound and narration actually play.
+  armUnlock() {
+    const evs = ['pointerdown', 'touchstart', 'keydown', 'click'];
+    const unlock = () => {
+      try { Audio2.ac(); } catch (e) { /* ignore */ }
+      if ('speechSynthesis' in window && !Audio2._primed) {
+        Audio2._primed = true;
+        try { const u = new SpeechSynthesisUtterance(' '); u.volume = 0; speechSynthesis.speak(u); } catch (e) { /* ignore */ }
+      }
+      if (!Audio2.voice) Audio2.pickVoice();
+      evs.forEach(ev => document.removeEventListener(ev, unlock));
     };
-    pickVoice();
-    if (typeof speechSynthesis !== 'undefined') speechSynthesis.onvoiceschanged = pickVoice;
+    evs.forEach(ev => document.addEventListener(ev, unlock, { passive: true }));
   },
 
   ac() {
@@ -33,6 +62,7 @@ const Audio2 = {
     // opts.force lets audio-only questions speak even when muted — they are
     // unanswerable otherwise. Mute still silences all other narration and SFX.
     if ((Audio2.muted && !opts.force) || !('speechSynthesis' in window) || !text) return;
+    if (!Audio2.voice) Audio2.pickVoice();  // last-chance retry if voices loaded late
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
     if (Audio2.voice) u.voice = Audio2.voice;
