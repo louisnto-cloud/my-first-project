@@ -284,7 +284,7 @@ const LEVERS = {
   High:   {v:1.30, p:1.00, d:0.00},
   Stretch:{v:1.60, p:1.05, d:-0.01},
 };
-const SCEN = ["Low","Base","High","Stretch"];
+let SCEN = ["Low","Base","High","Stretch"];
 const CFG = {company:"Organika", product:"Sparkling Daily", fy:"FY2026", cur:"$"};
 const SEASON = [0.06,0.06,0.07,0.08,0.10,0.11,0.12,0.11,0.09,0.08,0.06,0.06];
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -651,15 +651,17 @@ function renderAsmp(){
   c+="</tbody></table>";
   el("asmpCo").innerHTML=c;
   // levers
-  let lv="<table><thead><tr><th>Scenario</th><th>Volume ×</th><th>Price ×</th><th>Disc Δ %</th></tr></thead><tbody>";
-  SCEN.forEach(s=>{
+  let lv="<table><thead><tr><th>Scenario</th><th>Volume ×</th><th>Price ×</th><th>Disc Δ %</th><th></th></tr></thead><tbody>";
+  SCEN.forEach((s,si)=>{
     const L=LEVERS[s];
-    lv+=`<tr><td>${s}</td>`+
+    lv+=`<tr><td>${tinp(s,`renameScen(${si},this.value)`)}</td>`+
       `<td>${inp(L.v,`setLev('${s}','v',this.value)`)}</td>`+
       `<td>${inp(L.p,`setLev('${s}','p',this.value)`)}</td>`+
-      `<td>${inp((L.d*100).toFixed(1),`setLev('${s}','d',this.value/100)`,"0.1")}</td></tr>`;
+      `<td>${inp((L.d*100).toFixed(1),`setLev('${s}','d',this.value/100)`,"0.1")}</td>`+
+      `<td><button class="tbtn" style="padding:4px 9px" onclick="delScen(${si})" title="Remove scenario">×</button></td></tr>`;
   });
   lv+="</tbody></table>";
+  lv+=`<div style="margin-top:10px"><button class="tbtn" onclick="addScen()">+ Add scenario</button></div>`;
   el("asmpLev").innerHTML=lv;
 }
 function bulkApply(kind){
@@ -679,6 +681,25 @@ function addSku(){const last=SKUS[SKUS.length-1]||{fmt:"Singles",flav:"New",cp:1
 function delSku(i){if(SKUS.length<=1){flash("Keep at least one SKU.");return;}SKUS.splice(i,1);renderAsmp();refresh();}
 function setCo(k,v){CO[k]=parseFloat(v)||0;refresh();}
 function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();}
+function renameScen(i,name){
+  name=(name||"").trim(); const old=SCEN[i];
+  if(!name || name===old) return;
+  if(SCEN.includes(name)){ flash("That scenario name is taken."); return; }
+  LEVERS[name]=LEVERS[old]; delete LEVERS[old]; SCEN[i]=name;
+  if(current===old) current=name;
+  buildScenPills(); renderAsmp(); refresh(); saveUI();
+}
+function addScen(){
+  let n=1, name; do{ name="Scenario "+(SCEN.length+n); n++; }while(SCEN.includes(name));
+  LEVERS[name]={v:1,p:1,d:0}; SCEN.push(name);
+  buildScenPills(); renderAsmp(); refresh();
+}
+function delScen(i){
+  if(SCEN.length<=1){ flash("Keep at least one scenario."); return; }
+  const name=SCEN[i]; delete LEVERS[name]; SCEN.splice(i,1);
+  if(current===name) current=SCEN[Math.max(0,i-1)];
+  buildScenPills(); renderAsmp(); refresh();
+}
 
 // ---------- nav / scenario bar ----------
 const VIEWS=["Overview","P&L","Monthly","Pricing Lab","Unit Economics","Targets","Sensitivity","Assumptions","Guide"];
@@ -696,12 +717,16 @@ function setScenario(s){
   el("scenBar").querySelectorAll(".pill").forEach(x=>x.classList.toggle("on",x.dataset.s===current));
   saveUI(); refresh();
 }
-function buildNav(){
-  el("nav").innerHTML=VIEWS.map((v,i)=>`<button class="${i===0?'on':''}" data-v="${v}" role="tab">${v}</button>`).join("");
-  el("nav").querySelectorAll("button").forEach(b=>b.onclick=()=>showView(b.dataset.v));
+function buildScenPills(){
+  if(!SCEN.includes(current)) current=SCEN[0];
   el("scenBar").innerHTML=`<span class="lab">SCENARIO</span>`+
     SCEN.map(s=>`<button class="pill ${s===current?'on':''}" data-s="${s}">${s}</button>`).join("");
   el("scenBar").querySelectorAll(".pill").forEach(b=>b.onclick=()=>setScenario(b.dataset.s));
+}
+function buildNav(){
+  el("nav").innerHTML=VIEWS.map((v,i)=>`<button class="${i===0?'on':''}" data-v="${v}" role="tab">${v}</button>`).join("");
+  el("nav").querySelectorAll("button").forEach(b=>b.onclick=()=>showView(b.dataset.v));
+  buildScenPills();
   el("priceSeg").querySelectorAll("button").forEach(b=>b.onclick=()=>{priceMetric=b.dataset.m;
     el("priceSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===priceMetric));
     renderPricing();});
@@ -723,17 +748,21 @@ function refresh(){renderKpis();renderCmp();renderPnl();renderMonthly();renderPr
 // ---------- persistence ----------
 const STORE_KEY = "organika_sparkling_daily_v1";
 let ready = false;
-function autosave(){ if(!ready) return; try{ localStorage.setItem(STORE_KEY, JSON.stringify({SKUS,CO,LEVERS,CFG})); }catch(e){} }
-const DEFAULTS = JSON.parse(JSON.stringify({SKUS, CO, LEVERS, CFG}));
+function snapshotState(){ return {SKUS,CO,LEVERS,CFG,SCEN}; }
+function autosave(){ if(!ready) return; try{ localStorage.setItem(STORE_KEY, JSON.stringify(snapshotState())); }catch(e){} }
+const DEFAULTS = JSON.parse(JSON.stringify(snapshotState()));
 function applyState(st){
   if(st.SKUS){ SKUS.length=0; st.SKUS.forEach(s=>SKUS.push(s)); }
   if(st.CO) Object.assign(CO, st.CO);
-  if(st.LEVERS) Object.keys(st.LEVERS).forEach(k=>LEVERS[k]=st.LEVERS[k]);
+  if(st.SCEN && Array.isArray(st.SCEN) && st.SCEN.length){ SCEN = st.SCEN.slice(); }
+  if(st.LEVERS){ Object.keys(LEVERS).forEach(k=>delete LEVERS[k]); Object.keys(st.LEVERS).forEach(k=>LEVERS[k]=st.LEVERS[k]); }
   if(st.CFG) Object.assign(CFG, st.CFG);
-  renderHeader(); renderAsmp(); refresh();
+  SCEN.forEach(s=>{ if(!LEVERS[s]) LEVERS[s]={v:1,p:1,d:0}; });
+  if(!SCEN.includes(current)) current=SCEN[0];
+  renderHeader(); if(typeof buildScenPills==='function') buildScenPills(); renderAsmp(); refresh();
 }
 function flash(m){const e=el("saveMsg"); if(e){e.textContent=m; setTimeout(()=>{e.textContent="";},2500);}}
-function saveState(){ localStorage.setItem(STORE_KEY, JSON.stringify({SKUS,CO,LEVERS,CFG})); flash("Saved ✓"); }
+function saveState(){ localStorage.setItem(STORE_KEY, JSON.stringify(snapshotState())); flash("Saved ✓"); }
 function loadState(){ const raw=localStorage.getItem(STORE_KEY); if(!raw){flash("Nothing saved yet.");return;} applyState(JSON.parse(raw)); flash("Loaded your saved numbers."); }
 function resetState(){ if(!confirm("Reset all numbers to the starting placeholders? This clears your current edits. (Saved snapshots are kept.)")) return; try{localStorage.removeItem(STORE_KEY);}catch(e){} applyState(JSON.parse(JSON.stringify(DEFAULTS))); flash("Reset to starting placeholders."); }
 function exportCSV(){
@@ -759,7 +788,7 @@ const SNAP_KEY="organika_snapshots_v1";
 function getSnaps(){try{return JSON.parse(localStorage.getItem(SNAP_KEY)||"{}");}catch(e){return {};}}
 function putSnaps(o){localStorage.setItem(SNAP_KEY, JSON.stringify(o));}
 function saveSnap(){const n=(el("snapName").value||"").trim(); if(!n){flash("Name your snapshot first.");return;}
-  const all=getSnaps(); all[n]={SKUS,CO,LEVERS,CFG}; putSnaps(all); el("snapName").value=""; renderSnaps(); flash("Snapshot saved.");}
+  const all=getSnaps(); all[n]=JSON.parse(JSON.stringify(snapshotState())); putSnaps(all); el("snapName").value=""; renderSnaps(); flash("Snapshot saved.");}
 function loadSnap(n){const s=getSnaps()[n]; if(s){applyState(JSON.parse(JSON.stringify(s))); flash("Loaded “"+n+"”.");}}
 function delSnap(n){const all=getSnaps(); delete all[n]; putSnaps(all); renderSnaps(); flash("Deleted “"+n+"”.");}
 function renderSnaps(){const e=el("snaps"); if(!e) return; const all=getSnaps(); const names=Object.keys(all);
@@ -787,7 +816,7 @@ ready = true;  // enable auto-save now that initial load is done
 document.addEventListener("keydown", e=>{
   const tag=(e.target.tagName||"").toLowerCase();
   if(tag==="input"||tag==="textarea"||tag==="select") return;
-  if(e.key>="1" && e.key<="4"){ setScenario(SCEN[+e.key-1]); }
+  if(e.key>="1" && e.key<="9" && SCEN[+e.key-1]){ setScenario(SCEN[+e.key-1]); }
   else if(e.key==="ArrowRight" || e.key==="ArrowLeft"){
     const i=VIEWS.indexOf(currentView);
     showView(VIEWS[(i+(e.key==="ArrowRight"?1:-1)+VIEWS.length)%VIEWS.length]);
