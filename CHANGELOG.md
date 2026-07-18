@@ -1,5 +1,26 @@
 # CHANGELOG.md
 
+## 10x continuous loop — student feedback, parent tools, teacher ops (9 passes)
+
+- Xem lại bài: students revisit every graded question with their answer,
+  right/wrong, and the correct answer (server releases answers only for
+  graded work). GET /submissions/:id/review.
+- 🔔 In-app notification bell (unread badge + mark-read); demo pushes on
+  publish/grade/after-class-note. notifications_outbox.read_at.
+- 🏆 Course-completion certificates + 📋 parent report card (Học bạ) —
+  both printable.
+- 📅 Absence reporting (Báo nghỉ): parent → teacher notification +
+  'Học viên sắp nghỉ' list. site-scoped for directors.
+- 📋 Teacher roll-call: a dedicated roll_call_present column kept fully
+  separate from the life-safety check-in (never satisfies the
+  missing-child sweep or resolves escalations), editable, and surfaced
+  to the parent attendance strip + report card.
+- ⬇ CSV export (roster, gradebook, whole-class parent invites) with
+  spreadsheet formula-injection guards client- AND server-side.
+- 🔥 Streak-keeper nudge on the student home.
+- Adversarial review of the batch found + fixed a child-safety
+  conflation and 3 other issues. 169 tests green.
+
 ## Improvement loop — review round 3 (money, safety, insights, center area)
 
 Two parallel adversarial reviews; 13 confirmed bugs fixed:
