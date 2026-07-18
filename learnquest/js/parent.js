@@ -82,6 +82,19 @@ const Parent = {
     speedRow.appendChild(speedBtns);
     set.appendChild(speedRow);
 
+    // Daily goal
+    const goalRow = U.el('div', 'setting-row');
+    goalRow.innerHTML = '<span>Daily goal (levels)</span>';
+    const goalBtns = U.el('div', 'seg-btns');
+    [1, 3, 5].forEach(g => {
+      const active = (Store.state.dailyGoal || 3) === g;
+      const b = U.el('button', 'seg-btn' + (active ? ' on' : ''), String(g));
+      b.addEventListener('click', () => { Store.state.dailyGoal = g; Store.save(); Parent.show(); });
+      goalBtns.appendChild(b);
+    });
+    goalRow.appendChild(goalBtns);
+    set.appendChild(goalRow);
+
     // Reduce motion
     const motionRow = U.el('div', 'setting-row');
     motionRow.innerHTML = '<span>Calmer animations</span>';

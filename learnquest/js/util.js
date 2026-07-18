@@ -188,6 +188,21 @@ const U = {
     });
     return `<svg viewBox="0 0 120 120" class="spinner-svg" aria-hidden="true">${paths}<polygon points="60,2 54,16 66,16" fill="#3d3554"/></svg>`;
   },
+  goalRingSVG(done, goal) {
+    const pct = Math.max(0, Math.min(1, goal ? done / goal : 0));
+    const r = 32, c = 2 * Math.PI * r;
+    const off = c * (1 - pct);
+    const complete = done >= goal;
+    return `<svg viewBox="0 0 80 80" class="goal-ring" aria-hidden="true">
+      <circle cx="40" cy="40" r="${r}" fill="none" stroke="rgba(255,250,242,.18)" stroke-width="8"/>
+      <circle cx="40" cy="40" r="${r}" fill="none" stroke="${complete ? '#ffd34d' : '#4ecdc4'}" stroke-width="8"
+        stroke-linecap="round" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}"
+        transform="rotate(-90 40 40)"/>
+      <text x="40" y="37" text-anchor="middle" font-size="19">${complete ? '⭐' : '🎯'}</text>
+      <text x="40" y="55" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">${done}/${goal}</text>
+    </svg>`;
+  },
+
   numberLineSVG(min, max, mark) {
     const W = 280, O = 16;
     const step = (W - 2 * O) / (max - min);

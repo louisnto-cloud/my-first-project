@@ -20,7 +20,8 @@ const Store = {
       streak: { count: 0, last: null, best: 0 },
       activity: {},       // 'YYYY-MM-DD' -> levels completed that day
       settings: { muted: false, narrationRate: 0.92, reduceMotion: false },
-      dailyGoal: 3,       // levels per day the streak flame celebrates
+      dailyGoal: 3,       // levels per day the goal ring celebrates
+      lastGoalDay: null,  // day key the daily goal was last celebrated
       stickersSeen: null, // null = seed silently on first sync
       name: ''
     };
@@ -163,6 +164,10 @@ const Store = {
 
   bossUnlocked(region) {
     return region.levels.every(lv => Store.state.completed[lv.id]);
+  },
+
+  levelsToday() {
+    return Store.state.activity[U.todayKey()] || 0;
   },
 
   last7Days() {

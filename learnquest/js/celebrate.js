@@ -49,6 +49,17 @@ const Celebrate = {
     Audio2.say(text || 'No problem! Let\'s try a fresh one.');
   },
 
+  // Daily goal hit — a warm toast plus a small coin bonus
+  goalReached(goal) {
+    Audio2.fanfare();
+    Celebrate.confetti(40);
+    const t = U.el('div', 'sticker-toast goal-toast pop-in');
+    t.innerHTML = `<div class="st-face">🎯</div><div><div class="st-kicker">Daily goal!</div><div class="st-name">${goal} levels today · 🪙 +15</div></div>`;
+    document.body.appendChild(t);
+    Audio2.say(`Amazing! You reached your daily goal of ${goal} levels! Here are 15 bonus coins!`);
+    setTimeout(() => { t.classList.add('leaving'); setTimeout(() => t.remove(), 400); }, 2400);
+  },
+
   // Slide-in toast for a freshly earned sticker (queued if several)
   stickerToast(stickers) {
     if (!stickers || !stickers.length) return;

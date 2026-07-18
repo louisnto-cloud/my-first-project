@@ -69,6 +69,14 @@ const WorldMap = {
     });
     screen.appendChild(buddyRow);
 
+    // Daily goal ring
+    const goal = Store.state.dailyGoal || 3;
+    const doneToday = Store.levelsToday();
+    const goalRow = U.el('div', 'goal-row');
+    goalRow.innerHTML = `<div class="goal-ring-wrap">${U.goalRingSVG(doneToday, goal)}</div>
+      <div class="goal-text">${doneToday >= goal ? "Today's goal complete! 🎉" : `Today's goal · ${doneToday} of ${goal} levels`}</div>`;
+    screen.appendChild(goalRow);
+
     // Continents
     const worlds = U.el('div', 'world-cards');
     CURRICULUM.forEach(world => {
@@ -127,9 +135,17 @@ const WorldMap = {
 
     app.appendChild(screen);
 
+    // Daily goal reached today, not yet celebrated → reward once per day
+    if (doneToday >= goal && Store.state.lastGoalDay !== U.todayKey()) {
+      Store.state.lastGoalDay = U.todayKey();
+      Store.state.coins += 15;
+      Store.save();
+      setTimeout(() => Celebrate.goalReached(goal), 400);
+    }
+
     // Celebrate any stickers earned since the last time we were home
     const fresh = Stickers.sync();
-    if (fresh.length) setTimeout(() => Celebrate.stickerToast(fresh), 500);
+    if (fresh.length) setTimeout(() => Celebrate.stickerToast(fresh), fresh && doneToday >= goal ? 2200 : 500);
   },
 
   /* ---- Continent view: 8 regions as islands ---- */
