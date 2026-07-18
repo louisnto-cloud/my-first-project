@@ -159,7 +159,10 @@
   <section class="view" data-view="Summary">
     <div class="note">A one-page summary of the <b class="scn-name"></b> scenario. Press <b>Print</b> (or ⌘/Ctrl-P) and "Save as PDF" to share it.</div>
     <div class="panel">
-      <h2 id="sumTitle">Summary</h2>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+        <h2 id="sumTitle">Summary</h2>
+        <button class="tbtn" onclick="copySummary()">📋 Copy as text</button>
+      </div>
       <div id="summary"></div>
     </div>
   </section>
@@ -495,6 +498,31 @@ function render3yr(){
   h+="</tbody></table>";
   h+=`<p class="hint" style="margin-top:10px">Year 1 = base scenario today. Years 2-3 compound your volume, price and cost rates. CAGR is the annual growth rate across the 3 years.</p>`;
   e.innerHTML=h;
+}
+function copySummary(){
+  const r=compute(current);
+  const lines=[
+    `${CFG.product} — ${current} scenario · ${CFG.fy} (${CFG.company})`,
+    ``,
+    `Net Sales: ${money(r.net)}`,
+    `Gross Profit: ${money(r.gp)} (${pct(r.gppct)})`,
+    `Contribution: ${money(r.cm)}`,
+    `EBITDA: ${money(r.ebitda)} (${pct(r.ebitdapct)})`,
+    `Net Income: ${money(r.ni)}`,
+    `Physical Cases: ${num(r.cases)}`,
+    ``,
+    `Scenarios:`,
+    ...SCEN.map(s=>{const d=compute(s);return `  ${s}: net ${money(d.net)}, EBITDA ${money(d.ebitda)}, net income ${money(d.ni)}`;}),
+    ``,
+    `${SKUS.length} SKUs · blended CP ${money2(r.cppc)}/case · figures are internal.`
+  ];
+  const text=lines.join("\n");
+  const ta=document.createElement("textarea"); ta.value=text; ta.style.position="fixed"; ta.style.opacity="0";
+  document.body.appendChild(ta); ta.select();
+  let ok=false; try{ ok=document.execCommand("copy"); }catch(e){}
+  document.body.removeChild(ta);
+  if(!ok && navigator.clipboard){ navigator.clipboard.writeText(text).catch(()=>{}); }
+  flash("Summary copied to clipboard.");
 }
 function renderSummary(){
   const e=el("summary"); if(!e) return;
