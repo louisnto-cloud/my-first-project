@@ -29,6 +29,7 @@ export default function ChapelPage() {
   const [openPrayer, setOpenPrayer] = useState<string | null>(null);
   const [importMsg, setImportMsg] = useState<string | null>(null);
   const [dataOpen, setDataOpen] = useState(false);
+  const [confirmDelete, setConfirmDelete] = useState<number | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const keptPrayers = PRAYERS.filter((p) => (save.seen[p.id] ?? 0) > 0);
@@ -112,14 +113,46 @@ export default function ChapelPage() {
           <p className="mt-3 font-story text-lg italic text-incense">{t(UI.chapelNoJournal)}</p>
         ) : (
           <div className="mt-3 flex flex-col gap-3">
-            {[...save.journal].reverse().map((entry, i) => {
+            {save.journal.map((entry, origIdx) => ({ entry, origIdx })).reverse().map(({ entry, origIdx }) => {
               const lesson = lessonById(entry.lessonId);
+              const confirming = confirmDelete === origIdx;
               return (
-                <div key={i} className="rounded-2xl bg-lapis/60 p-4">
-                  <p className="text-[11px] text-incense">
-                    {new Date(entry.date).toLocaleDateString(lang === 'vi' ? 'vi-VN' : 'en-GB')}
-                    {lesson ? ` · ${t(lesson.lesson.title)}` : ''}
-                  </p>
+                <div key={origIdx} className="rounded-2xl bg-lapis/60 p-4">
+                  <div className="flex items-start justify-between gap-3">
+                    <p className="text-[11px] text-incense">
+                      {new Date(entry.date).toLocaleDateString(lang === 'vi' ? 'vi-VN' : 'en-GB')}
+                      {lesson ? ` · ${t(lesson.lesson.title)}` : ''}
+                    </p>
+                    {confirming ? (
+                      <span className="flex shrink-0 items-center gap-2">
+                        <button
+                          onClick={() => {
+                            updateSave((d) => ({ journal: d.journal.filter((_, k) => k !== origIdx) }));
+                            setConfirmDelete(null);
+                          }}
+                          className="rounded-full bg-garnet/30 px-2.5 py-0.5 text-[11px] font-bold text-ivory"
+                        >
+                          {t(UI.journalRemove)}
+                        </button>
+                        <button
+                          onClick={() => setConfirmDelete(null)}
+                          className="text-[11px] font-semibold text-incense"
+                        >
+                          {t(UI.journalKeep)}
+                        </button>
+                      </span>
+                    ) : (
+                      <button
+                        onClick={() => setConfirmDelete(origIdx)}
+                        aria-label={t(UI.journalRemove)}
+                        className="shrink-0 p-1 text-incense/70"
+                      >
+                        <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
+                          <path d="M9 3h6l1 2h4v2H4V5h4l1-2ZM6 8h12l-1 12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L6 8Z" />
+                        </svg>
+                      </button>
+                    )}
+                  </div>
                   <p className="mt-1 font-story text-lg leading-relaxed text-ivory">{entry.text}</p>
                 </div>
               );

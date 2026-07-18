@@ -115,6 +115,8 @@ export const UI = {
   chapelNoPrayers: v('Prayers you learn on the road will rest here.', 'Những lời kinh bạn học trên đường sẽ được giữ ở đây.'),
   chapelJournal: v('Your journal', 'Nhật ký của bạn'),
   chapelNoJournal: v('Your private reflections will gather here.', 'Những suy tư riêng của bạn sẽ được lưu lại ở đây.'),
+  journalRemove: v('Remove', 'Xóa'),
+  journalKeep: v('Keep', 'Giữ lại'),
   chapelSettings: v('Settings', 'Cài đặt'),
   language: v('Language', 'Ngôn ngữ'),
   exportSave: v('Export my pilgrimage (JSON)', 'Xuất hành trình của tôi (JSON)'),
