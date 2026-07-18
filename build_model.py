@@ -612,6 +612,21 @@ def build_checks(ws, A):
         ("Dashboard Net Sales ties to Base tab", f"='Dashboard'!D{4+4}-'Base'!{TOT}{SR['nsales']}",
          f"=IF(ABS('Dashboard'!D{4+4}-'Base'!{TOT}{SR['nsales']})<1,\"PASS\",\"FAIL\")", MON),
     ]
+    # cross-tab tie-outs (engine-safe: direct scenario refs, no INDIRECT)
+    _idp = "+".join(
+        f"ABS('{s}'!{TOT}{SR['nsales']}-('{s}'!{TOT}{SR['grev']}-'{s}'!{TOT}{SR['tdisc']}))"
+        f"+ABS('{s}'!{TOT}{SR['cm']}-('{s}'!{TOT}{SR['gp']}-'{s}'!{TOT}{SR['ap']}))"
+        f"+ABS('{s}'!{TOT}{SR['ebitda']}-('{s}'!{TOT}{SR['cm']}-'{s}'!{TOT}{SR['topex']}))"
+        for s in SCEN)
+    _dashp = "+".join(
+        f"ABS('Dashboard'!{get_column_letter(3+SCEN.index(s))}15-'{s}'!{TOT}{SR['ebitda']})"
+        for s in SCEN)
+    checks += [
+        ("Scenario P&L identities hold (Net, CM, EBITDA — all scenarios)",
+         f"={_idp}", f'=IF({_idp}<0.01,"PASS","FAIL")', MON),
+        ("Dashboard EBITDA ties to all 4 scenario tabs",
+         f"={_dashp}", f'=IF({_dashp}<1,"PASS","FAIL")', MON),
+    ]
     for i, (name, res, status, fmt) in enumerate(checks):
         rr = hdr + 1 + i
         setcell(ws, f"B{rr}", name, f_lbl, align=left, border=True)

@@ -16,7 +16,7 @@ simplicity (Home/Cover stay clean), verify before every commit.
 
 ## Backlog (highest value first)
 - [x] Harden `verify_model.py` with a formulas-engine recompute (catch #DIV/0!, #REF! at calc time) + key tie-outs
-- [ ] Cross-tab tie-out checks on the Checks tab (Dashboard = Scenarios = Monthly totals)
+- [x] Cross-tab tie-out checks on the Checks tab (Dashboard = Scenarios = Monthly totals)
 - [ ] HTML dashboard → live interactive app: sliders for volume × / price × / trade Δ that recompute revenue & EBITDA in JS
 - [ ] HTML: Apple-grade visual polish — typography, spacing, light/dark, clean charts
 - [ ] New tab: Break-even & payback (units / weeks to cover fixed + launch spend)
@@ -37,3 +37,4 @@ simplicity (Home/Cover stay clean), verify before every commit.
 ## Done
 - Cycle 0: stood up the loop — roadmap + `verify_model.py` safety gate, isolated branch.
 - Cycle 1: hardened `verify_model.py` — formulas-engine recompute flags errors on real sheets only (INDIRECT scenario-selector phantoms ignored). Confirmed model is calc-clean.
+- Cycle 2: added two cross-tab tie-out checks — scenario P&L identities (Net/CM/EBITDA, all 4 scenarios) and Dashboard↔scenario EBITDA; both residual 0.
