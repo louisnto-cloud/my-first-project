@@ -262,14 +262,22 @@ const Quest = {
     const upTo = level.reviewUpTo || region.levels.length;
     region.levels.slice(0, upTo).forEach(lv => { if (lv.type === 'skill') pool.push(lv); });
     world.regions.slice(0, region.index).forEach(r =>
-      r.skills.forEach(s => pool.push({ gen: s.gen, params: s.params })));
+      r.levels.forEach(lv => { if (lv.type === 'skill') pool.push(lv); }));
     return pool;
   },
 
   forReview(level, count) {
     const pool = Quest.reviewPool(level);
+    // Spaced review favours the weakest skills: a 1-star skill is drawn
+    // three times as often as a mastered 3-star one.
+    const stars = (typeof Store !== 'undefined' && Store.state && Store.state.stars) || {};
+    const weighted = [];
+    pool.forEach(src => {
+      const w = Math.max(1, 4 - (stars[src.id] || 0));
+      for (let i = 0; i < w; i++) weighted.push(src);
+    });
     return Array.from({ length: count }, () => {
-      const src = U.pick(pool);
+      const src = U.pick(weighted.length ? weighted : pool);
       return Quest.make(src.gen, src.params);
     });
   },

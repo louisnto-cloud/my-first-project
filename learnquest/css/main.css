@@ -36,6 +36,10 @@ body {
 
 button { font-family: inherit; border: none; cursor: pointer; background: none; color: inherit; }
 button:active { transform: scale(.96); }
+button:focus-visible, input:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
 
 #app { min-height: 100vh; display: flex; flex-direction: column; }
 
