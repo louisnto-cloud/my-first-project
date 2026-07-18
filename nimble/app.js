@@ -47,10 +47,12 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   const DEFAULT_STATE = {
     apiKey: null,
     timeLimit: null,
+    focus: null,      // null = shuffled rotation, else a single domain
     rotation: [],
     lastDomain: null,
     drills: [],
   };
+  const DOMAIN_SHORT = { business: 'Business', legal: 'Legal', personal: 'Personal' };
 
   function loadState() {
     try {
@@ -218,14 +220,32 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
 
   function showReady() {
     const n = state.drills.length;
+    const focusLabel = state.focus ? `${DOMAIN_SHORT[state.focus]} only` : 'all three arenas';
     $('readyMeta').textContent =
-      `${state.timeLimit}s per response · level ${difficultyFor(n)} · ${n} drill${n === 1 ? '' : 's'} done`;
+      `${state.timeLimit}s · ${focusLabel} · level ${difficultyFor(n)} · ${n} drill${n === 1 ? '' : 's'} done`;
+    for (const b of $('focusPicker').querySelectorAll('button')) {
+      b.classList.toggle('selected', (b.dataset.focus || null) === state.focus);
+    }
     renderRecentForm(state.drills);
+    const streak = winStreak(state.drills);
+    const streakLine = $('streakLine');
+    streakLine.hidden = streak < 2;
+    streakLine.textContent = `🔥 ${streak} strong replies in a row — keep it going`;
     $('domainIntro').hidden = n > 0;
     show('ready');
   }
 
   const bandFor = (score) => (score <= 3 ? 'band-low' : score <= 6 ? 'band-mid' : 'band-high');
+
+  // Consecutive drills from the most recent backwards that scored 7+.
+  function winStreak(history) {
+    let n = 0;
+    for (let i = history.length - 1; i >= 0; i--) {
+      if (history[i].score >= 7) n++;
+      else break;
+    }
+    return n;
+  }
 
   // Last five scores as colored dots, plus a trend arrow vs the five before.
   function renderRecentForm(history) {
@@ -295,6 +315,17 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     show('setup');
   });
 
+  // ---------- focus (which domain to drill) ----------
+  $('focusPicker').addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-focus]');
+    if (!btn) return;
+    const focus = btn.dataset.focus || null;
+    if (focus === state.focus) return;
+    state.focus = focus;
+    saveState();
+    showReady();
+  });
+
   // ---------- drill flow ----------
   const LOADING_LINES = [
     'Setting the scene…',
@@ -350,20 +381,22 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   async function startDrill() {
     $('loadingText').textContent = LOADING_LINES[Math.floor(Math.random() * LOADING_LINES.length)];
     show('loading');
-    // Pick the domain but only persist the rotation once the scenario exists,
-    // so a failed generation retries the same domain.
-    const domain = nextDomain();
+    // Focus mode pins a single domain; otherwise advance the shuffled rotation.
+    // Only persist the rotation advance once the scenario exists, so a failed
+    // generation retries the same domain.
+    const usingFocus = DOMAINS.includes(state.focus);
+    const domain = usingFocus ? state.focus : nextDomain();
     const difficulty = difficultyFor(state.drills.length);
     let scenario;
     try {
       scenario = await generateScenario(domain, difficulty);
     } catch (err) {
-      state = loadState(); // roll back the in-memory rotation advance
+      if (!usingFocus) state = loadState(); // roll back the in-memory rotation advance
       showError(err.message);
       showReady();
       return;
     }
-    saveState();
+    if (!usingFocus) saveState();
     drill = { domain, scenario, difficulty };
     isRetry = false;
     beginDrillView();
@@ -407,6 +440,7 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     if (!pendingSubmit) {
       pendingSubmit = { response: $('responseBox').value, timedOut, retry: isRetry };
     }
+    const prevBest = state.drills.length ? Math.max(...state.drills.map(d => d.score)) : 0;
     showJudging();
     try {
       const { score, feedback } = await judgeResponse({
@@ -440,6 +474,11 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
       replyEl.classList.toggle('empty', !reply);
       $('feedbackText').textContent = feedback;
       $('timedOutNote').hidden = !wasTimedOut;
+      $('bestRibbon').hidden = !(score > prevBest && state.drills.length > 1);
+      const streak = winStreak(state.drills);
+      const streakNote = $('streakNote');
+      streakNote.hidden = streak < 3;
+      streakNote.textContent = `🔥 ${streak} in a row`;
       show('result');
     } catch (err) {
       showError(err.message);
