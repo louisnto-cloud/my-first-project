@@ -214,7 +214,7 @@ type Mode =
 
 export function Practice() {
   const { db, user } = useApp();
-  const { t, lang } = useI18n();
+  const { t } = useI18n();
   const [mode, setMode] = useState<Mode>({ kind: 'pick' });
   if (!user) return null;
 
@@ -239,7 +239,7 @@ export function Practice() {
             <li key={w.id} className="card">
               <div className="flex items-baseline justify-between gap-3">
                 <div className="text-base font-black text-violet-700 dark:text-violet-300">{w.term}</div>
-                <div className="text-sm font-semibold text-slate-600 dark:text-slate-300 dark:text-slate-600">{lang === 'vi' ? w.meaningVi : w.meaningVi}</div>
+                <div className="text-sm font-semibold text-slate-600 dark:text-slate-300">{w.meaningVi}</div>
               </div>
               {w.example && <p className="mt-1 text-xs italic text-slate-500">"{w.example}"</p>}
             </li>

@@ -165,15 +165,20 @@ export function HomeworkView({ studentId, canToggle }: { studentId: string; canT
   const toggle = (hwId: string) => {
     mutate((d) => {
       const existing = d.homeworkStatus.find((s) => s.homeworkId === hwId && s.studentId === studentId);
+      const wasDone = existing?.done ?? false;
       if (existing) {
         existing.done = !existing.done;
         existing.doneAt = existing.done ? todayISO() : undefined;
       } else {
         d.homeworkStatus.push({ homeworkId: hwId, studentId, done: true, doneAt: todayISO() });
       }
+      // Award points exactly once per (hw, student), the first time it goes from
+      // not-done -> done. Re-toggling off then on again does not farm more points.
       const nowDone = d.homeworkStatus.find((s) => s.homeworkId === hwId && s.studentId === studentId)?.done;
-      if (nowDone) {
-        d.practice.push({ id: `hw_${hwId}_${studentId}_${Date.now()}`, studentId, date: todayISO(), type: 'homework', points: 5 });
+      const hwEventId = `hw_${hwId}_${studentId}`;
+      const alreadyAwarded = d.practice.some((p) => p.id === hwEventId);
+      if (!wasDone && nowDone && !alreadyAwarded) {
+        d.practice.push({ id: hwEventId, studentId, date: todayISO(), type: 'homework', points: 5 });
       }
     });
   };

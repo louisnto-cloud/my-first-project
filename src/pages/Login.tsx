@@ -49,6 +49,8 @@ export default function Login() {
               id="login-email"
               className="input"
               type="email"
+              required
+              autoFocus
               placeholder={t('login.email')}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -61,6 +63,7 @@ export default function Login() {
               id="login-password"
               className="input"
               type="password"
+              required
               placeholder={t('login.password')}
               value={password}
               onChange={(e) => setPassword(e.target.value)}

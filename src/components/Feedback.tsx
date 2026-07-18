@@ -6,21 +6,30 @@ import { todayISO, uid } from '../lib';
 
 function Stars({ value, onChange }: { value: number; onChange?: (v: number) => void }) {
   return (
-    <div className="flex gap-1">
+    <div
+      className="flex gap-1"
+      role={onChange ? 'radiogroup' : 'img'}
+      aria-label={onChange ? `Rating, ${value} of 5 stars` : `${value} out of 5 stars`}
+    >
       {[1, 2, 3, 4, 5].map((n) => (
         <button
           key={n}
           type="button"
+          role={onChange ? 'radio' : undefined}
+          aria-checked={onChange ? n === value : undefined}
+          aria-label={onChange ? `${n} ${n === 1 ? 'star' : 'stars'}` : undefined}
           disabled={!onChange}
           onClick={() => onChange?.(n)}
-          className={`text-2xl transition ${onChange ? 'active:scale-110' : 'cursor-default'} ${n <= value ? '' : 'opacity-25 grayscale'}`}
+          className={`text-2xl transition ${onChange ? 'active:scale-110' : 'cursor-default'} ${n <= value ? '' : 'opacity-25 grayscale'} ${onChange ? 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-violet-500 focus-visible:rounded' : ''}`}
         >
-          ⭐
+          <span aria-hidden="true">⭐</span>
         </button>
       ))}
     </div>
   );
 }
+
+const FEEDBACK_MAX = 500;
 
 export function FeedbackSection({ userId }: { userId: string }) {
   const { db, mutate } = useApp();
@@ -50,15 +59,26 @@ export function FeedbackSection({ userId }: { userId: string }) {
           <div className="mb-1 text-xs font-bold text-slate-500 dark:text-slate-400">{t('feedback.rating')}</div>
           <Stars value={rating} onChange={setRating} />
         </div>
-        <textarea
-          className="input"
-          rows={3}
-          placeholder={t('feedback.placeholder')}
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        />
+        <div>
+          <textarea
+            className="input"
+            rows={3}
+            maxLength={FEEDBACK_MAX}
+            placeholder={t('feedback.placeholder')}
+            value={message}
+            onChange={(e) => setMessage(e.target.value.slice(0, FEEDBACK_MAX))}
+            aria-label={t('feedback.placeholder')}
+          />
+          <div className="mt-1 text-right text-[10px] font-bold text-slate-400 dark:text-slate-500">
+            {message.length}/{FEEDBACK_MAX}
+          </div>
+        </div>
         {sent ? (
-          <div className="animate-pop rounded-2xl bg-emerald-100 p-3 text-center text-sm font-extrabold text-emerald-700 dark:text-emerald-300">
+          <div
+            role="status"
+            aria-live="polite"
+            className="animate-pop rounded-2xl bg-emerald-100 p-3 text-center text-sm font-extrabold text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300"
+          >
             {t('feedback.thanks')}
           </div>
         ) : (

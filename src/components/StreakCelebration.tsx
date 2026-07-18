@@ -55,6 +55,18 @@ export function StreakCelebration() {
     setMilestone(m);
   }, [db, user]);
 
+  useEffect(() => {
+    if (!milestone) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        setMilestone(null);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [milestone]);
+
   if (!milestone) return null;
   return (
     <div
