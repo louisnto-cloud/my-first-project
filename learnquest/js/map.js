@@ -200,7 +200,28 @@ const WorldMap = {
     screen.appendChild(WorldMap.sceneLayer(region.scene));
     screen.appendChild(Level.topBar(region.emoji + ' ' + region.name, () => WorldMap.showWorld(world.id)));
 
+    // Region banner: emoji, grade, progress bar, stars collected here
+    const prog = Store.regionProgress(region);
+    const regionStars = region.levels.reduce((a, lv) => a + (Store.state.stars[lv.id] || 0), 0);
+    const maxStars = region.levels.length * 3;
+    const pct = prog.total ? Math.round(prog.done / prog.total * 100) : 0;
+    const banner = U.el('div', 'region-banner');
+    banner.innerHTML = `
+      <div class="rb-emoji">${region.emoji}</div>
+      <div class="rb-info">
+        <div class="rb-name">${U.esc(region.name)}</div>
+        <div class="rb-grade">Grade ${region.grade} · ${world.id === 'math' ? 'Math' : 'Words'}${Store.isRegionComplete(region) ? ' · 🏆 mastered' : ''}</div>
+        <div class="rb-bar"><span style="width:${pct}%"></span></div>
+        <div class="rb-stats">${prog.done}/${prog.total} levels · ⭐ ${regionStars}/${maxStars}</div>
+      </div>`;
+    screen.appendChild(banner);
+
     const path = U.el('div', 'level-path');
+    // Lit-path progress fill: the trail glows up to how far you've come
+    const litFrac = prog.total ? prog.done / prog.total : 0;
+    const fill = U.el('div', 'path-fill');
+    fill.style.height = Math.round(litFrac * 100) + '%';
+    path.appendChild(fill);
 
     // Fast Track gate at region entrance (bonus challenge, until region complete)
     if (!Store.isRegionComplete(region)) {

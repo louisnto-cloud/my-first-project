@@ -202,6 +202,20 @@ button:focus-visible, input:focus-visible {
 
 /* ---------- Region view: level path ---------- */
 
+.region-banner {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--paper); border-radius: 24px; box-shadow: var(--shadow);
+  padding: 16px 20px; margin: 4px auto 0; width: 100%; max-width: 560px;
+  border-left: 10px solid var(--tint, var(--teal));
+}
+.rb-emoji { font-size: 48px; flex: none; }
+.rb-info { flex: 1; min-width: 0; }
+.rb-name { font-size: 21px; font-weight: 900; color: var(--ink); }
+.rb-grade { font-size: 13.5px; font-weight: 700; color: var(--ink-soft); margin: 2px 0 8px; }
+.rb-bar { height: 12px; background: #ece5d6; border-radius: 6px; overflow: hidden; }
+.rb-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--tint, var(--teal)), #ffd34d); border-radius: 6px; transition: width .5s ease; }
+.rb-stats { font-size: 13px; font-weight: 800; color: var(--ink-soft); margin-top: 6px; }
+
 .region-screen .level-path {
   display: flex; flex-direction: column; align-items: center; gap: 22px;
   padding: 26px 0 60px; position: relative;
@@ -211,6 +225,12 @@ button:focus-visible, input:focus-visible {
   transform: translateX(-50%);
   background: repeating-linear-gradient(to bottom, rgba(255,250,242,.3) 0 12px, transparent 12px 26px);
   border-radius: 3px;
+}
+.path-fill {
+  position: absolute; left: 50%; top: 0; width: 6px; transform: translateX(-50%);
+  background: linear-gradient(to bottom, var(--tint, var(--teal)), #ffd34d);
+  border-radius: 3px; box-shadow: 0 0 12px var(--tint, var(--teal));
+  transition: height .6s ease; z-index: 0;
 }
 .level-node {
   width: 148px; min-height: 128px; z-index: 1;
