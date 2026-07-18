@@ -91,6 +91,8 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
   'practice.words': { en: 'words', vi: 'từ' },
   'practice.preview': { en: 'Preview', vi: 'Xem trước' },
   'practice.doneToday': { en: 'Practiced today', vi: 'Đã luyện hôm nay' },
+  'practice.keyHint': { en: '⌨️ Space to flip · ← don\'t know · → I know · Esc to exit', vi: '⌨️ Cách để lật · ← chưa biết · → biết · Esc để thoát' },
+  'practice.keyHintQuiz': { en: '⌨️ Press 1–4 to choose · Esc to exit', vi: '⌨️ Nhấn 1–4 để chọn · Esc để thoát' },
   'practice.tapToFlip': { en: 'Tap the card to flip', vi: 'Chạm vào thẻ để lật' },
   'practice.know': { en: 'I knew it ✅', vi: 'Mình nhớ ✅' },
   'practice.dontKnow': { en: 'Still learning 🔁', vi: 'Chưa nhớ 🔁' },
