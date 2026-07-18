@@ -142,8 +142,10 @@
     <h1>Progress</h1>
     <div class="stat-tiles">
       <div class="tile"><div class="tile-value" id="statTotal">0</div><div class="tile-label">drills</div></div>
+      <div class="tile"><div class="tile-value" id="statWeek">0</div><div class="tile-label">this week</div></div>
       <div class="tile"><div class="tile-value" id="statAvg">–</div><div class="tile-label">avg score</div></div>
       <div class="tile"><div class="tile-value" id="statBest">–</div><div class="tile-label">best</div></div>
+      <div class="tile"><div class="tile-value" id="statTopStreak">0</div><div class="tile-label">top streak</div></div>
       <div class="tile"><div class="tile-value" id="statLevel">1</div><div class="tile-label">level</div></div>
     </div>
     <div class="daily-progress" id="dpStatsWrap" hidden>
@@ -152,6 +154,10 @@
     </div>
     <div class="domain-avgs" id="domainAvgs"></div>
     <p class="focus-callout" id="focusCallout" hidden></p>
+    <div class="level-avgs" id="levelAvgs" hidden>
+      <h2>Average by difficulty</h2>
+      <div class="level-rows" id="levelRows"></div>
+    </div>
     <h2>Score over time</h2>
     <div class="chart-wrap" id="chartWrap">
       <div class="chart-legend" id="chartLegend" hidden>
