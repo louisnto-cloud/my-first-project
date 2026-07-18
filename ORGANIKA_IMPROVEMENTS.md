@@ -30,10 +30,14 @@ cd /tmp && npm install jsdom >/dev/null 2>&1   # then run /tmp/org-test.js with 
   horizontal-scroll, mark specs (rounded ends, connectors, recessive axes). The
   existing tables serve as the accessible data fallback. 11 headless checks pass.
 
+- **Iter 3 (improve):** KPI cards show delta-vs-Base (coloured ▲/▼ in $/pp/cases)
+  + per-case context. **Iter 4 (expand):** new **Monthly** tab — editable
+  seasonality curve, EBITDA-by-month chart (fixed costs land evenly → shows the
+  underwater months), reconciling table. Monthly EBITDA ties to annual exactly.
+
 ## Backlog (priority order)
 ### Improvement (80%)
-1. **KPI polish** — inline % context, per-unit metrics, delta-vs-Base badges;
-   optional per-SKU contribution bars on P&L.
+1. Per-SKU contribution bars on P&L; assumptions UX (grouping, validation, help).
 3. Input validation + friendlier assumptions UX (grouping, units, help "?").
 4. Micro-interactions / entrance; number formatting polish; dark-mode contrast pass.
 5. Print layout: print all views, not just the current tab.

@@ -105,6 +105,10 @@
   /* charts */
   .chart{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:2px 0 8px;padding-bottom:2px}
   .chart svg{display:block}
+  /* seasonality editor */
+  .seasrow{display:flex;flex-wrap:wrap;gap:8px 12px;margin:4px 0 18px}
+  .seasrow label{font-size:11px;color:var(--soft);font-weight:700;display:flex;flex-direction:column;gap:3px}
+  .seasrow input.seas{width:60px}
   /* KPI delta line */
   .kpi .sub{margin-top:9px;font-size:12px;font-weight:600;line-height:1.4}
   .kpi .sub .d.up{color:var(--good)} .kpi .sub .d.down{color:var(--bad)}
@@ -193,6 +197,17 @@
     </div>
   </section>
 
+  <!-- MONTHLY -->
+  <section class="view" data-view="Monthly">
+    <div class="panel">
+      <h2>Monthly phasing — <span class="scn-name"></span></h2>
+      <p class="h-sub">Annual result spread across the year by seasonality. Fixed costs land evenly, so low-volume months can run at an EBITDA loss — the bars show exactly when.</p>
+      <div id="monSeason"></div>
+      <div class="chart" id="monChart"></div>
+      <div id="monTable"></div>
+    </div>
+  </section>
+
   <!-- ASSUMPTIONS -->
   <section class="view" data-view="Assumptions">
     <div class="note">This is the only place you type. Edit any yellow cell — every number everywhere updates instantly.</div>
@@ -214,7 +229,7 @@
   </section>
 
   <div class="foot">
-    v3.2 · charts · dark-mode aware · your edits are saved in this browser · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
+    v3.4 · charts · KPI deltas · monthly phasing · dark-mode aware · your edits are saved in this browser · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
     Mirrors the Excel workbook (Home · Assumptions · Dashboard · scenarios · Monthly · Pricing Lab · Targets · Sensitivity · Checks).
   </div>
 </div>
@@ -238,19 +253,23 @@ const LEVERS = {
   Stretch:{v:1.60, p:1.05, d:-0.01},
 };
 const SCEN = ["Low","Base","High","Stretch"];
+// Seasonality: relative monthly weights (sparkling beverage — summer peak, Dec bump)
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const SEASON = [0.60,0.60,0.80,0.90,1.15,1.35,1.45,1.35,1.05,0.85,0.75,1.05];
 let current = "Base";
 let priceMetric = "gp";
 
 // ---------------- persistence (survives reload) ----------------
 const LS = "organika.model.v3";
-const DEFAULTS = JSON.parse(JSON.stringify({SKUS, CO, LEVERS}));
-function persist(){ try{ localStorage.setItem(LS, JSON.stringify({SKUS, CO, LEVERS})); }catch(e){} }
+const DEFAULTS = JSON.parse(JSON.stringify({SKUS, CO, LEVERS, SEASON}));
+function persist(){ try{ localStorage.setItem(LS, JSON.stringify({SKUS, CO, LEVERS, SEASON})); }catch(e){} }
 function restore(){
   try{
     const s = JSON.parse(localStorage.getItem(LS)); if(!s) return;
     (s.SKUS||[]).forEach((o,i)=>{ if(SKUS[i]) Object.assign(SKUS[i], o); });
     Object.assign(CO, s.CO||{});
     Object.keys(s.LEVERS||{}).forEach(k=>{ if(LEVERS[k]) Object.assign(LEVERS[k], s.LEVERS[k]); });
+    if(Array.isArray(s.SEASON)) s.SEASON.forEach((v,i)=>{ if(i<SEASON.length) SEASON[i]=v; });
   }catch(e){}
 }
 function resetAll(){
@@ -258,6 +277,7 @@ function resetAll(){
   d.SKUS.forEach((o,i)=>Object.assign(SKUS[i], o));
   Object.assign(CO, d.CO);
   Object.keys(d.LEVERS).forEach(k=>Object.assign(LEVERS[k], d.LEVERS[k]));
+  d.SEASON.forEach((v,i)=>SEASON[i]=v);
   persist(); renderAsmp(); refresh();
 }
 function exportCsv(){
@@ -527,6 +547,47 @@ function renderCharts(){
   const sc=el("scenChart"); if(sc) sc.innerHTML=scenarioBarsSVG();
 }
 
+// ---------- monthly phasing ----------
+function monthlyData(){
+  const r = compute(current);
+  const sw = SEASON.reduce((a,x)=>a+x,0)||1;
+  const fixed = r.salaries + r.ga + r.mktg + r.slotting;
+  let cumE=0;
+  return MONTHS.map((m,i)=>{
+    const f = SEASON[i]/sw;
+    const cases=r.cases*f, net=r.net*f, contrib=r.cm*f;
+    const ebitda = contrib - fixed/12 - r.logistics*f;   // fixed spreads evenly, logistics with volume
+    cumE += ebitda;
+    return {m,i,f,cases,net,contrib,ebitda,cumE};
+  });
+}
+function monthlyChartSVG(rows){
+  const W=760,H=230,padX=16,padB=32,padT=26;
+  let lo=0,hi=0; rows.forEach(r=>{lo=Math.min(lo,r.ebitda);hi=Math.max(hi,r.ebitda);});
+  const span=(hi-lo)||1, y=v=>padT+(hi-v)/span*(H-padT-padB);
+  const gap=(W-2*padX)/rows.length, bw=Math.min(42,gap*0.62), xC=i=>padX+gap*i+gap/2;
+  let g=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:600px" role="img" aria-label="EBITDA by month">`;
+  g+=`<line x1="${padX}" y1="${y(0).toFixed(1)}" x2="${W-padX}" y2="${y(0).toFixed(1)}" stroke="var(--line)"/>`;
+  rows.forEach((r,i)=>{ const x=xC(i)-bw/2, yt=y(Math.max(0,r.ebitda)), yb=y(Math.min(0,r.ebitda)), h=Math.max(2,yb-yt);
+    g+=`<rect x="${x.toFixed(1)}" y="${yt.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="3" fill="${r.ebitda<0?'var(--bad)':'var(--good)'}"><title>${MONTHS[i]}: EBITDA ${money(r.ebitda)}</title></rect>`;
+    g+=`<text x="${xC(i).toFixed(1)}" y="${H-padB+15}" text-anchor="middle" font-size="9.5" fill="var(--soft)">${MONTHS[i]}</text>`; });
+  return g+"</svg>";
+}
+function renderMonthly(){
+  if(!el("monTable")) return;
+  const rows = monthlyData();
+  el("monSeason").innerHTML = `<div class="seasrow">`+MONTHS.map((m,i)=>
+    `<label>${m}<input class="cell seas" type="number" step="0.05" value="${SEASON[i]}" oninput="setSeason(${i},this.value)"></label>`).join("")+`</div>`;
+  el("monChart").innerHTML = monthlyChartSVG(rows);
+  const tot = k=>rows.reduce((a,r)=>a+r[k],0);
+  let h=`<table><thead><tr><th>Month</th><th>Cases</th><th>Net Sales</th><th>Contribution</th><th>EBITDA</th><th>Cumulative</th></tr></thead><tbody>`;
+  rows.forEach(r=>{ h+=`<tr><td>${r.m}</td><td>${num(r.cases)}</td><td>${money(r.net)}</td><td>${money(r.contrib)}</td>`+
+    `<td${r.ebitda<0?' style="color:var(--bad)"':''}>${money(r.ebitda)}</td><td>${money(r.cumE)}</td></tr>`; });
+  h+=`<tr class="tot"><td>Year</td><td>${num(tot("cases"))}</td><td>${money(tot("net"))}</td><td>${money(tot("contrib"))}</td><td>${money(tot("ebitda"))}</td><td>${money(rows[rows.length-1].cumE)}</td></tr></tbody></table>`;
+  el("monTable").innerHTML = h;
+}
+function setSeason(i,v){ SEASON[i]=parseFloat(v)||0; persist(); renderMonthly(); }
+
 // ---------- assumptions editor ----------
 function inp(val, onin, step="0.01"){
   return `<input class="cell" type="number" step="${step}" value="${val}" oninput="${onin}">`;
@@ -576,7 +637,7 @@ function setCo(k,v){CO[k]=parseFloat(v)||0;refresh();persist();}
 function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();persist();}
 
 // ---------- nav / scenario bar ----------
-const VIEWS=["Overview","P&L","Pricing Lab","Sensitivity","Assumptions"];
+const VIEWS=["Overview","P&L","Pricing Lab","Sensitivity","Monthly","Assumptions"];
 function buildNav(){
   el("nav").setAttribute("role","tablist");
   document.querySelectorAll(".view").forEach(v=>v.setAttribute("role","tabpanel"));
@@ -595,7 +656,7 @@ function buildNav(){
     el("priceSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===priceMetric));
     renderPricing();});
 }
-function refresh(){renderKpis();renderCmp();renderPnl();renderPricing();renderSens();renderCharts();}
+function refresh(){renderKpis();renderCmp();renderPnl();renderPricing();renderSens();renderCharts();renderMonthly();}
 
 // wire header actions
 el("btnReset").onclick=()=>{ if(confirm("Reset all assumptions to the default figures?")) resetAll(); };
