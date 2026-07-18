@@ -44,6 +44,7 @@ const CURRICULUM = [
           { id: 'sub100', name: 'Subtracting to 100', icon: '🪂', gen: 'sub-within', params: { max: 100 } },
           { id: 'skip', name: 'Skip Counting', icon: '🦘', gen: 'skip-count', params: { steps: [2, 5, 10] } },
           { id: 'evenodd', name: 'Even & Odd', icon: '👯', gen: 'even-odd', params: { max: 30 } },
+          { id: 'money', name: 'Coin Counting', icon: '🪙', gen: 'money-count', params: { maxCoins: 5 } },
           { id: 'graphs', name: 'Graph Reading', icon: '📊', gen: 'read-bargraph', params: {} }
         ]
       },
@@ -56,6 +57,8 @@ const CURRICULUM = [
           { id: 'div5', name: 'Fair Sharing', icon: '🍕', gen: 'div-sharing', params: { max: 5 } },
           { id: 'frac', name: 'Fraction Pieces', icon: '🍰', gen: 'fraction-identify', params: { dens: [2, 3, 4] } },
           { id: 'time', name: 'Clock Reading', icon: '🕒', gen: 'time-read', params: { precision: 1 } },
+          { id: 'elapsed', name: 'Time Passing', icon: '⏳', gen: 'elapsed-time', params: {} },
+          { id: 'money3', name: 'Making Change', icon: '💰', gen: 'money-change', params: {} },
           { id: 'perim', name: 'Perimeter Patrol', icon: '🚧', gen: 'perimeter', params: { max: 9 } }
         ]
       },

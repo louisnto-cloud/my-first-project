@@ -35,6 +35,19 @@ const SOLIDS = [
 
 const KIDS = ['Maya', 'Theo', 'Priya', 'Sam', 'Zoe', 'Kai', 'Lena', 'Milo', 'Ava', 'Dev'];
 
+// Canadian coins (BC financial-literacy strand)
+const COINS = [
+  { v: 5, label: '5¢', color: '#b9b9c7' },
+  { v: 10, label: '10¢', color: '#cfcfd9' },
+  { v: 25, label: '25¢', color: '#c2c2d0' },
+  { v: 100, label: '$1', color: '#e6c064' },
+  { v: 200, label: '$2', color: '#d9b25a' }
+];
+function coinsHTML(coins) {
+  return '<div class="coins-row">' + coins.map(c =>
+    `<span class="coin" style="--cc:${c.color}">${c.label}</span>`).join('') + '</div>';
+}
+
 const MG = {
 
   /* ---------- KINDERGARTEN ---------- */
@@ -417,6 +430,65 @@ const MG = {
         { label: `${a} < ${b}`, correct: a < b }
       ]),
       explain: `${Math.max(a, b)} is the bigger number. The open mouth of the sign always eats the bigger number.`
+    };
+  },
+
+  'money-count': (p) => {
+    const dollars = !!p.dollars;
+    const pool = dollars ? COINS : COINS.filter(c => c.v <= 25);
+    let coins, total, guard = 0;
+    do {
+      const n = U.ri(2, p.maxCoins || 5);
+      coins = Array.from({ length: n }, () => U.pick(pool));
+      total = coins.reduce((s, c) => s + c.v, 0);
+    } while (!dollars && total > 100 && guard++ < 30);
+    const answer = dollars ? U.round(total / 100, 2) : total;
+    return {
+      format: 'numpad',
+      decimal: dollars,
+      prompt: dollars ? 'How much money is here? (in dollars)' : 'How many cents altogether?',
+      say: dollars ? 'Add up the money. How many dollars?' : 'Add up the coins. How many cents?',
+      visual: coinsHTML(coins),
+      answer,
+      tolerance: dollars ? 0.005 : 0.001,
+      explain: `Add each coin: ${coins.map(c => c.label).join(' + ')} = ${dollars ? '$' + answer.toFixed(2) : total + '¢'}.`
+    };
+  },
+
+  'money-change': () => {
+    const price = U.ri(1, 19) * 5;                 // 5¢ .. 95¢, tidy amounts
+    const paid = price <= 95 ? 100 : 200;
+    const change = paid - price;
+    const o = U.pick(OBJ);
+    const story = `${U.pick(KIDS)} buys a ${o.s} for ${price}¢ and pays with ${paid === 100 ? 'a $1 coin (100¢)' : 'a $2 coin (200¢)'}. How much change should come back, in cents?`;
+    return {
+      format: 'numpad',
+      prompt: story,
+      say: story,
+      visual: `<div class="hint-emoji">${o.e}</div>`,
+      answer: change,
+      explain: `Take the price from what was paid: ${paid}¢ − ${price}¢ = ${change}¢.`
+    };
+  },
+
+  'elapsed-time': () => {
+    let startH, startM, dur, endMinTotal, guard = 0;
+    do {
+      startH = U.ri(1, 9);
+      startM = U.pick([0, 15, 30, 45]);
+      dur = U.pick([15, 30, 45, 60, 90, 120]);
+      endMinTotal = startH * 60 + startM + dur;
+    } while (endMinTotal > 12 * 60 && guard++ < 30);
+    const endH = Math.floor(endMinTotal / 60), endM = endMinTotal % 60;
+    const fmt = (h, m) => `${h}:${String(m).padStart(2, '0')}`;
+    const activity = U.pick(['soccer practice', 'the movie', 'the party', 'reading time', 'the bus ride', 'swimming']);
+    return {
+      format: 'numpad',
+      prompt: `${activity[0].toUpperCase() + activity.slice(1)} starts at ${fmt(startH, startM)} and ends at ${fmt(endH, endM)}. How many minutes long is it?`,
+      say: `${activity} starts at ${startH} ${startM === 0 ? "o'clock" : startM} and ends at ${endH} ${endM === 0 ? "o'clock" : endM}. How many minutes is that?`,
+      visual: U.clockSVG(startH, startM),
+      answer: dur,
+      explain: `From ${fmt(startH, startM)} to ${fmt(endH, endM)} is ${dur} minutes${dur >= 60 ? ` (${dur / 60} hour${dur > 60 ? 's' : ''})` : ''}.`
     };
   },
 

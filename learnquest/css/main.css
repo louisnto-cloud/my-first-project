@@ -350,6 +350,15 @@ button:focus-visible, input:focus-visible {
 .dec-grid { display: grid; grid-template-columns: repeat(10, 16px); gap: 2px; }
 .dec-cell { width: 16px; height: 16px; background: #f3eee6; border-radius: 3px; }
 .dec-cell.filled { background: var(--amber); }
+.coins-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; max-width: 400px; }
+.coin {
+  width: 58px; height: 58px; border-radius: 50%;
+  background: radial-gradient(circle at 38% 32%, #fff8, var(--cc) 62%, #0002);
+  border: 2px solid rgba(0,0,0,.18);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 900; font-size: 15px; color: #3d3554;
+  box-shadow: 0 3px 6px rgba(0,0,0,.18); animation: pop-in .3s ease both;
+}
 .data-table { border-collapse: collapse; font-size: 18px; }
 .data-table caption { font-weight: 900; padding-bottom: 6px; }
 .data-table td { border: 2px solid #eee4d4; padding: 8px 18px; }
