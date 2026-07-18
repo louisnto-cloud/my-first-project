@@ -1449,7 +1449,20 @@ function onWrong(v){
   v.box=Math.max(v.box-1,1);
   S.sessionWrong++;
   if(navigator.vibrate) navigator.vibrate([30,40,30]);
+  requeueMiss(v);
   saveState();
+}
+// a missed card returns once at the end of the same session
+function requeueMiss(v){
+  if(!v) return;
+  if(!['flashcard','quiz','type','build'].includes(S.screen)) return;
+  S.requeued=S.requeued||[];
+  if(S.requeued.includes(v.id)) return;
+  if(!S.activeLesson.includes(v.id)) return;
+  S.requeued.push(v.id);
+  S.activeLesson.push(v.id);
+  if(S.mixedActive&&S.mixedModes) S.mixedModes.push(rand(['flashcard','quiz','type','build']));
+  if(S.requeued.length===1) toast("You'll see that one again before the session ends.");
 }
 function toggleStar(id){
   const v=getV(id);
@@ -1552,7 +1565,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v37';
+const APP_VERSION='v38';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1820,7 +1833,7 @@ function renderHome(){
 function startLesson(mode){
   S.activeLesson=buildLesson(S.tierFilter,S.catFilter);
   S.lessonIdx=0; S.flipped=false;
-  S.sessionRight=0; S.sessionWrong=0; S.sessionXP=0;
+  S.sessionRight=0; S.sessionWrong=0; S.sessionXP=0; S.requeued=[];
   S.mixedActive=(mode==='mixed');
   if(mode==='mixed'){
     const pool=['flashcard','quiz','type','build'];
@@ -2270,7 +2283,7 @@ function startCustomLesson(ids){
   if(!ids||!ids.length) return;
   S.activeLesson=shuffle([...ids]).slice(0,S.sessionLen||20);
   S.lessonIdx=0; S.flipped=false;
-  S.sessionRight=0; S.sessionWrong=0; S.sessionXP=0;
+  S.sessionRight=0; S.sessionWrong=0; S.sessionXP=0; S.requeued=[];
   S.practiceMode='flashcard';
   S.mixedActive=false;
   S.activeCard=S.activeLesson[0];
