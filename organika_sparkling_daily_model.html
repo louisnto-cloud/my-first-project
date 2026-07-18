@@ -767,7 +767,8 @@ function renderAsmp(){
       `<td>${inp(L.v,`setLev('${s}','v',this.value)`)}</td>`+
       `<td>${inp(L.p,`setLev('${s}','p',this.value)`)}</td>`+
       `<td>${inp((L.d*100).toFixed(1),`setLev('${s}','d',this.value/100)`,"0.1")}</td>`+
-      `<td><button class="tbtn" style="padding:4px 9px" onclick="delScen(${si})" title="Remove scenario">×</button></td></tr>`;
+      `<td style="white-space:nowrap"><button class="tbtn" style="padding:4px 9px" onclick="dupScen(${si})" title="Duplicate scenario">⎘</button> `+
+      `<button class="tbtn" style="padding:4px 9px" onclick="delScen(${si})" title="Remove scenario">×</button></td></tr>`;
   });
   lv+="</tbody></table>";
   lv+=`<div style="margin-top:10px"><button class="tbtn" onclick="addScen()">+ Add scenario</button></div>`;
@@ -819,6 +820,11 @@ function renameScen(i,name){
 function addScen(){
   let n=1, name; do{ name="Scenario "+(SCEN.length+n); n++; }while(SCEN.includes(name));
   LEVERS[name]={v:1,p:1,d:0}; SCEN.push(name);
+  buildScenPills(); renderAsmp(); refresh();
+}
+function dupScen(i){
+  const src=SCEN[i]; let n=1, name; do{ name=src+" copy"+(n>1?" "+n:""); n++; }while(SCEN.includes(name));
+  LEVERS[name]=Object.assign({},LEVERS[src]); SCEN.splice(i+1,0,name);
   buildScenPills(); renderAsmp(); refresh();
 }
 function delScen(i){
@@ -964,7 +970,8 @@ function applyTheme(t){document.body.classList.toggle("dark",t==="dark");const b
 function toggleTheme(){const t=document.body.classList.contains("dark")?"light":"dark";applyTheme(t);try{localStorage.setItem(THEME_KEY,t);}catch(e){}}
 if(el("btnTheme")) el("btnTheme").onclick=toggleTheme;
 if(el("btnPrint")) el("btnPrint").onclick=()=>window.print();
-try{applyTheme(localStorage.getItem(THEME_KEY)||"light");}catch(e){}
+try{const sysDark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;
+  applyTheme(localStorage.getItem(THEME_KEY) || (sysDark?"dark":"light"));}catch(e){}
 
 ["tgtGP","tgtEB"].forEach(id=>{const e=el(id); if(e) e.oninput=renderTargets;});
 {const e=el("retMargin"); if(e) e.oninput=renderUecon;}
