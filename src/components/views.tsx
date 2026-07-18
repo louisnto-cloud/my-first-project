@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useApp } from '../store';
 import { fmtDate, useI18n, WEEKDAYS } from '../i18n';
 import { BADGES, badgeStats, leaderboard, scoresOf, todayISO } from '../lib';
@@ -43,26 +44,67 @@ export function GradesView({ studentId }: { studentId: string }) {
       <div className="card">
         <h3 className="mb-2 font-extrabold text-violet-700">🗂️ {t('grades.history')}</h3>
         <ul className="divide-y divide-violet-50">
-          {[...xs].reverse().map((x) => {
-            const pct = (x.score.score / x.assessment.maxScore) * 100;
-            return (
-              <li key={x.score.id} className="flex items-center justify-between py-2.5">
-                <div>
-                  <div className="text-sm font-bold">{x.assessment.title}</div>
-                  <div className="text-xs font-semibold text-slate-400">
-                    {fmtDate(x.assessment.date, lang)} · {t(`teach.kind.${x.assessment.kind}`)}
-                  </div>
-                </div>
-                <div className={`text-lg font-black ${scoreColor(pct)}`}>
-                  {x.score.score}
-                  <span className="text-xs font-bold text-slate-300">/{x.assessment.maxScore}</span>
-                </div>
-              </li>
-            );
-          })}
+          {[...xs].reverse().map((x) => (
+            <GradeHistoryRow key={x.score.id} row={x} />
+          ))}
         </ul>
       </div>
     </div>
+  );
+}
+
+function GradeHistoryRow({ row }: { row: ReturnType<typeof scoresOf>[number] }) {
+  const { t, lang } = useI18n();
+  const [open, setOpen] = useState(false);
+  const pct = (row.score.score / row.assessment.maxScore) * 100;
+  const hasDetail = !!row.score.skills || !!row.score.comment;
+  return (
+    <li>
+      <button
+        onClick={() => hasDetail && setOpen((o) => !o)}
+        disabled={!hasDetail}
+        aria-expanded={hasDetail ? open : undefined}
+        className={`flex w-full items-center justify-between py-2.5 text-left ${hasDetail ? 'cursor-pointer' : 'cursor-default'}`}
+      >
+        <div>
+          <div className="text-sm font-bold">{row.assessment.title}</div>
+          <div className="text-xs font-semibold text-slate-400">
+            {fmtDate(row.assessment.date, lang)} · {t(`teach.kind.${row.assessment.kind}`)}
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className={`text-lg font-black ${scoreColor(pct)}`}>
+            {row.score.score}
+            <span className="text-xs font-bold text-slate-300">/{row.assessment.maxScore}</span>
+          </div>
+          {hasDetail && (
+            <span aria-hidden="true" className={`text-xs text-slate-300 transition ${open ? 'rotate-180' : ''}`}>
+              ▼
+            </span>
+          )}
+        </div>
+      </button>
+      {open && hasDetail && (
+        <div className="space-y-3 pb-3 pl-1 pr-1">
+          {row.score.skills && (
+            <div>
+              <div className="mb-1.5 text-[11px] font-black uppercase tracking-wide text-slate-400">
+                {t('grades.skills')}
+              </div>
+              <SkillBars skills={row.score.skills} />
+            </div>
+          )}
+          {row.score.comment && (
+            <div className="rounded-xl border border-amber-100 bg-amber-50 p-2.5">
+              <div className="mb-0.5 text-[11px] font-black uppercase tracking-wide text-amber-700">
+                💬 {t('grades.teacherComment')}
+              </div>
+              <p className="text-sm font-semibold text-slate-700">"{row.score.comment}"</p>
+            </div>
+          )}
+        </div>
+      )}
+    </li>
   );
 }
 

@@ -106,6 +106,36 @@ export function Pill({ children, className = '' }: { children: ReactNode; classN
   return <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold ${className}`}>{children}</span>;
 }
 
+export function WeekRing({ days, labels }: { days: boolean[]; labels: string[] }) {
+  const done = days.filter(Boolean).length;
+  return (
+    <div>
+      <div className="flex items-center justify-between">
+        <div className="flex gap-1.5" role="list">
+          {days.map((d, i) => (
+            <div
+              key={i}
+              role="listitem"
+              aria-label={`${labels[i]} ${d ? 'practiced' : 'not yet'}`}
+              className={`flex h-8 w-8 items-center justify-center rounded-full text-[10px] font-black transition ${
+                d ? 'bg-emerald-500 text-white shadow-sm' : 'bg-slate-100 text-slate-400'
+              }`}
+            >
+              {d ? '✓' : labels[i]}
+            </div>
+          ))}
+        </div>
+        <div className="text-right">
+          <div className="text-xl font-black text-violet-700">
+            {done}<span className="text-sm text-slate-300">/7</span>
+          </div>
+          <div className="text-[10px] font-bold uppercase tracking-wide text-slate-400">this week</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function Empty({ emoji, text }: { emoji: string; text: string }) {
   return (
     <div className="card flex flex-col items-center gap-2 py-8 text-center text-sm font-semibold text-slate-400" role="status">

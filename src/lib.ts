@@ -47,6 +47,27 @@ export function practicedToday(db: DB, studentId: string): boolean {
   return db.practice.some((p) => p.studentId === studentId && p.date === todayISO());
 }
 
+// Days practiced in the current Monday-start week. Returns array of 7 booleans (Mon..Sun).
+export function weekPractice(db: DB, studentId: string): boolean[] {
+  const now = new Date();
+  const dow = now.getDay(); // 0 = Sun
+  const daysFromMonday = dow === 0 ? 6 : dow - 1;
+  const monday = new Date(now);
+  monday.setDate(now.getDate() - daysFromMonday);
+  const dates = new Set(db.practice.filter((p) => p.studentId === studentId).map((p) => p.date));
+  return Array.from({ length: 7 }, (_, i) => {
+    const d = new Date(monday);
+    d.setDate(monday.getDate() + i);
+    return dates.has(iso(d));
+  });
+}
+
+export function practicedListToday(db: DB, studentId: string): boolean {
+  return db.practice.some(
+    (p) => p.studentId === studentId && p.date === todayISO() && (p.type === 'vocab' || p.type === 'quiz'),
+  );
+}
+
 export function scoresOf(db: DB, studentId: string): { score: Score; assessment: NonNullable<DB['assessments'][number]> }[] {
   return db.scores
     .filter((s) => s.studentId === studentId)

@@ -2,11 +2,11 @@ import { Link, Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import { useApp } from '../../store';
 import { fmtDate, useI18n, WEEKDAYS } from '../../i18n';
-import { Empty, Header, Pill, scoreColor, TabBar } from '../../components/ui';
+import { Empty, Header, Pill, scoreColor, TabBar, WeekRing } from '../../components/ui';
 import { BadgesView, GradesView, HomeworkView, LeaderboardView, ScheduleView } from '../../components/views';
 import { FlashcardSession, QuizSession } from '../../components/Flashcards';
 import { FeedbackSection } from '../../components/Feedback';
-import { pointsOf, practicedToday, scoresOf, streakOf, todayISO } from '../../lib';
+import { pointsOf, practicedListToday, practicedToday, scoresOf, streakOf, todayISO, weekPractice } from '../../lib';
 import type { VocabList } from '../../types';
 
 export function StudentLayout() {
@@ -77,13 +77,18 @@ export function Dashboard() {
         </div>
       </div>
 
-      <div className={`card flex items-center justify-between gap-3 ${doneToday ? 'border-emerald-200 bg-emerald-50' : 'border-orange-200 bg-orange-50'}`}>
-        <p className="text-sm font-bold text-slate-600">{doneToday ? t('dash.streakSafe') : t('dash.keepStreak')}</p>
-        {!doneToday && (
-          <Link to="/app/practice" className="btn-primary shrink-0 text-sm">
-            {t('dash.practiceNow')} 🎮
-          </Link>
-        )}
+      <div className={`card ${doneToday ? 'border-emerald-200 bg-emerald-50' : 'border-orange-200 bg-orange-50'}`}>
+        <div className="flex items-center justify-between gap-3">
+          <p className="text-sm font-bold text-slate-600">{doneToday ? t('dash.streakSafe') : t('dash.keepStreak')}</p>
+          {!doneToday && (
+            <Link to="/app/practice" className="btn-primary shrink-0 text-sm">
+              {t('dash.practiceNow')} 🎮
+            </Link>
+          )}
+        </div>
+        <div className="mt-3 border-t border-white/60 pt-3">
+          <WeekRing days={weekPractice(db, user.id)} labels={t('dash.weekLabels').split(',')} />
+        </div>
       </div>
 
       <div className="grid grid-cols-2 gap-3">
@@ -199,18 +204,56 @@ export function Homework() {
   );
 }
 
-type Mode = { kind: 'pick' } | { kind: 'flash'; list: VocabList } | { kind: 'quiz'; list: VocabList };
+type Mode =
+  | { kind: 'pick' }
+  | { kind: 'preview'; list: VocabList }
+  | { kind: 'flash'; list: VocabList }
+  | { kind: 'quiz'; list: VocabList };
 
 export function Practice() {
   const { db, user } = useApp();
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [mode, setMode] = useState<Mode>({ kind: 'pick' });
   if (!user) return null;
 
   const lists = db.vocabLists.filter((v) => user.classIds.includes(v.classId));
+  const anyToday = practicedListToday(db, user.id);
 
   if (mode.kind === 'flash') return <FlashcardSession list={mode.list} studentId={user.id} onExit={() => setMode({ kind: 'pick' })} />;
   if (mode.kind === 'quiz') return <QuizSession list={mode.list} studentId={user.id} onExit={() => setMode({ kind: 'pick' })} />;
+  if (mode.kind === 'preview') {
+    const list = mode.list;
+    return (
+      <div className="space-y-3">
+        <button onClick={() => setMode({ kind: 'pick' })} className="text-sm font-bold text-violet-600">
+          ← {t('common.back')}
+        </button>
+        <h1 className="text-xl font-black">📖 {list.title}</h1>
+        <p className="-mt-2 text-sm font-semibold text-slate-400">
+          {list.words.length} {t('practice.words')}
+        </p>
+        <ul className="space-y-2">
+          {list.words.map((w) => (
+            <li key={w.id} className="card">
+              <div className="flex items-baseline justify-between gap-3">
+                <div className="text-base font-black text-violet-700">{w.term}</div>
+                <div className="text-sm font-semibold text-slate-600">{lang === 'vi' ? w.meaningVi : w.meaningVi}</div>
+              </div>
+              {w.example && <p className="mt-1 text-xs italic text-slate-500">"{w.example}"</p>}
+            </li>
+          ))}
+        </ul>
+        <div className="grid grid-cols-2 gap-2 pt-2">
+          <button onClick={() => setMode({ kind: 'flash', list })} className="btn-soft text-sm">
+            🃏 {t('practice.flashcards')}
+          </button>
+          <button onClick={() => setMode({ kind: 'quiz', list })} className="btn-primary text-sm">
+            ❓ {t('practice.quiz')}
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-4">
@@ -219,11 +262,19 @@ export function Practice() {
       {lists.length === 0 && <Empty emoji="📖" text={t('grades.empty')} />}
       {lists.map((list) => (
         <div key={list.id} className="card">
-          <div className="font-extrabold">{list.title}</div>
-          <div className="text-xs font-semibold text-slate-400">
-            {list.words.length} {t('practice.words')}
+          <div className="flex items-start justify-between gap-2">
+            <div>
+              <div className="font-extrabold">{list.title}</div>
+              <div className="text-xs font-semibold text-slate-400">
+                {list.words.length} {t('practice.words')}
+              </div>
+            </div>
+            {anyToday && <Pill className="bg-emerald-100 text-emerald-700">✓ {t('practice.doneToday')}</Pill>}
           </div>
-          <div className="mt-3 grid grid-cols-2 gap-2">
+          <div className="mt-3 grid grid-cols-3 gap-2">
+            <button onClick={() => setMode({ kind: 'preview', list })} className="btn-soft text-sm">
+              📖 {t('practice.preview')}
+            </button>
             <button onClick={() => setMode({ kind: 'flash', list })} className="btn-soft text-sm">
               🃏 {t('practice.flashcards')}
             </button>

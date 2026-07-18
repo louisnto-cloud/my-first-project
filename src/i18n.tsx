@@ -54,6 +54,7 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
   'dash.practiceNow': { en: 'Practice now', vi: 'Luyện tập ngay' },
   'dash.keepStreak': { en: 'Practice today to keep your streak!', vi: 'Luyện tập hôm nay để giữ chuỗi nhé!' },
   'dash.streakSafe': { en: 'Streak safe for today. See you tomorrow!', vi: 'Hôm nay đã luyện tập rồi. Hẹn mai nhé!' },
+  'dash.weekLabels': { en: 'M,T,W,T,F,S,S', vi: 'H,B,T,N,S,B,C' },
   'dash.myBadges': { en: 'My badges', vi: 'Huy hiệu của tôi' },
   'dash.leaderboard': { en: 'Class leaderboard', vi: 'Bảng xếp hạng lớp' },
 
@@ -86,6 +87,8 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
   'practice.flashcards': { en: 'Flashcards', vi: 'Thẻ từ vựng' },
   'practice.quiz': { en: 'Quiz', vi: 'Trắc nghiệm' },
   'practice.words': { en: 'words', vi: 'từ' },
+  'practice.preview': { en: 'Preview', vi: 'Xem trước' },
+  'practice.doneToday': { en: 'Practiced today', vi: 'Đã luyện hôm nay' },
   'practice.tapToFlip': { en: 'Tap the card to flip', vi: 'Chạm vào thẻ để lật' },
   'practice.know': { en: 'I knew it ✅', vi: 'Mình nhớ ✅' },
   'practice.dontKnow': { en: 'Still learning 🔁', vi: 'Chưa nhớ 🔁' },
