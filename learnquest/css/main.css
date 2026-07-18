@@ -356,6 +356,7 @@ button:focus-visible, input:focus-visible {
 .chart-svg { width: min(320px, 80vw); }
 .numline-svg { width: min(340px, 85vw); }
 .rect-svg { width: 180px; }
+.thermo-svg { width: 130px; height: 210px; }
 .shape-svg { width: 92px; height: 92px; }
 .dec-grid { display: grid; grid-template-columns: repeat(10, 16px); gap: 2px; }
 .dec-cell { width: 16px; height: 16px; background: #f3eee6; border-radius: 3px; }

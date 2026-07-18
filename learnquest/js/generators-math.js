@@ -782,6 +782,52 @@ const MG = {
     };
   },
 
+  'fraction-of-set': () => {
+    const o1 = U.pick(OBJ); let o2 = U.pick(OBJ); while (o2 === o1) o2 = U.pick(OBJ);
+    if (Math.random() < 0.5) {
+      // What fraction of the group are o1?
+      const total = U.ri(4, 8), k = U.ri(1, total - 1);
+      const items = U.shuffle(Array.from({ length: total }, (_, i) => (i < k ? o1 : o2)));
+      const ans = `${k}/${total}`;
+      const wrongs = [`${total - k}/${total}`, `${k}/${total + 1}`, `${Math.min(k + 1, total)}/${total}`]
+        .filter((v, i, a) => v !== ans && a.indexOf(v) === i).slice(0, 3);
+      return {
+        format: 'tap',
+        prompt: `What fraction of the group are ${o1.n}?`,
+        say: `What fraction of the whole group are ${o1.n}?`,
+        visual: `<div class="emoji-group">${items.map(o => `<span class="eg-item">${o.e}</span>`).join('')}</div>`,
+        choices: U.choicesFrom(ans, wrongs),
+        explain: `${k} of the ${total} are ${o1.n}, so ${k} out of ${total} — that is ${ans}.`
+      };
+    }
+    // Find a unit fraction of a quantity
+    const d = U.pick([2, 3, 4, 5]);
+    const per = U.ri(2, 6), N = d * per;
+    const word = { 2: 'half', 3: 'third', 4: 'quarter', 5: 'fifth' }[d];
+    return {
+      format: 'numpad',
+      prompt: `What is 1/${d} of ${N}?`,
+      say: `What is one ${word} of ${N}?`,
+      visual: U.emojiGroup(o1.e, N),
+      answer: per,
+      explain: `Split ${N} into ${d} equal groups. Each group has ${per}, so 1/${d} of ${N} is ${per}.`
+    };
+  },
+
+  'temperature': () => {
+    const temp = U.pick([-15, -10, -5, 0, 5, 10, 15, 20, 25, 30]);
+    const wrongs = U.shuffle([temp + 5, temp - 5, temp + 10, -temp || 5])
+      .filter((v, i, a) => v !== temp && a.indexOf(v) === i && v >= -20 && v <= 40).slice(0, 3).map(v => v + '°');
+    return {
+      format: 'tap',
+      prompt: 'What temperature does it show?',
+      say: 'Read the thermometer. What temperature does it show, in degrees?',
+      visual: U.thermometerSVG(temp, -20, 40),
+      choices: U.choicesFrom(temp + '°', wrongs),
+      explain: `The red line reaches ${temp} degrees${temp < 0 ? ', which is below zero' : ''}.`
+    };
+  },
+
   'decimal-compare': (p) => {
     const places = p.places || 3;
     const a = U.round(Math.random() * 9 + 0.1, places);

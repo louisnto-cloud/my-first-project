@@ -81,6 +81,7 @@ const CURRICULUM = [
         skills: [
           { id: 'bigops', name: 'Big Number Ops', icon: '🏋️', gen: 'multi-digit-ops', params: { kinds: ['add', 'sub', 'mult'] } },
           { id: 'equiv', name: 'Twin Fractions', icon: '👯', gen: 'equiv-fractions', params: {} },
+          { id: 'fracset', name: 'Fraction of a Set', icon: '🍇', gen: 'fraction-of-set', params: {} },
           { id: 'dec1000', name: 'Decimal Duel', icon: '⚔️', gen: 'decimal-compare', params: { places: 3 } },
           { id: 'eq1', name: 'Solve for x', icon: '🗝️', gen: 'one-step-equation', params: { max: 12 } },
           { id: 'solids', name: '3D Objects & Nets', icon: '📦', gen: 'solids-id', params: {} },
@@ -93,6 +94,7 @@ const CURRICULUM = [
           { id: 'pct', name: 'Percent Power', icon: '💯', gen: 'percent-basic', params: {} },
           { id: 'int', name: 'Below Zero', icon: '🧊', gen: 'integers-intro', params: {} },
           { id: 'intline', name: 'Integer Line', icon: '📏', gen: 'numline-integer', params: {} },
+          { id: 'temp', name: 'Temperature', icon: '🌡️', gen: 'temperature', params: {} },
           { id: 'oops', name: 'Order of Operations', icon: '🚦', gen: 'order-ops', params: {} },
           { id: 'ratio', name: 'Ratio Recipes', icon: '🧪', gen: 'ratios', params: {} },
           { id: 'angle', name: 'Angle Hunter', icon: '📐', gen: 'angles', params: {} },

@@ -188,6 +188,22 @@ const U = {
     });
     return `<svg viewBox="0 0 120 120" class="spinner-svg" aria-hidden="true">${paths}<polygon points="60,2 54,16 66,16" fill="#3d3554"/></svg>`;
   },
+  thermometerSVG(temp, min, max) {
+    const top = 18, bot = 166, cx = 34, w = 16;
+    const level = bot - (temp - min) / (max - min) * (bot - top);
+    let marks = '';
+    for (let v = min; v <= max; v += 10) {
+      const y = bot - (v - min) / (max - min) * (bot - top);
+      marks += `<line x1="${cx + w / 2}" y1="${y}" x2="${cx + w / 2 + 6}" y2="${y}" stroke="#8a8298" stroke-width="1.5"/>`;
+      marks += `<text x="${cx + w / 2 + 10}" y="${y + 4}" font-size="11" font-weight="700" fill="#5b5570">${v}°</text>`;
+    }
+    return `<svg viewBox="0 0 110 200" class="thermo-svg" aria-hidden="true">
+      <rect x="${cx - w / 2}" y="${top}" width="${w}" height="${bot - top + 6}" rx="${w / 2}" fill="#f3eee6" stroke="#c9c2b4" stroke-width="2"/>
+      <rect x="${cx - w / 2 + 4}" y="${level}" width="${w - 8}" height="${bot - level + 6}" rx="${(w - 8) / 2}" fill="#ff6b52"/>
+      <circle cx="${cx}" cy="${bot + 16}" r="17" fill="#ff6b52" stroke="#e0503a" stroke-width="2"/>
+      ${marks}</svg>`;
+  },
+
   goalRingSVG(done, goal) {
     const pct = Math.max(0, Math.min(1, goal ? done / goal : 0));
     const r = 32, c = 2 * Math.PI * r;
