@@ -47,3 +47,10 @@ Reverse-chronological. Each entry = one committed iteration.
 - Refilled backlog with I16–I20 (confidence scoreboard, number-format pass, contrast check, per-tab
   subtitles, cover refresh).
 - Workbook: 37 → 38 tabs.
+
+## Iteration 8 — 2026-07-18 ~09:06Z (batch I16/I20)
+- [I16] Added Data Confidence Scoreboard: auto-tallies ✅/◐/⚠ tags across every tab, with a chart —
+  shows at a glance how much rests on hard evidence vs estimates.
+- [I20] Cover refresh: updated date, decision line (MÜV = sparkling electrolyte RTD can), and status
+  (points to Start Here + Executive Brief + interactive tabs).
+- Workbook: 38 → 39 tabs.
