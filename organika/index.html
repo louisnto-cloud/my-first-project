@@ -486,6 +486,23 @@ body,button,input,textarea{font-family:'Be Vietnam Pro',-apple-system,BlinkMacSy
 .tsyl i{font-style:normal;font-size:11px;font-weight:800;color:var(--t)}
 .tone-strip.small .tsyl{padding:3px 8px;font-size:12.5px}
 .tsyl:active{transform:scale(.93)}
+/* color the arrow by tone so the pitch shape is memorable */
+.tsyl.t-flat i{color:#7C8A82}.tsyl.t-rise i{color:#2E9E5B}.tsyl.t-fall i{color:#C77C3A}
+.tsyl.t-dip i{color:#2B7FC4}.tsyl.t-break i{color:#9B59B6}.tsyl.t-stop i{color:#C0392B}
+.tsyl.tkey{background:transparent;color:var(--tx2);font-size:11px;font-weight:700;justify-content:center}
+.sheet-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;display:flex;align-items:flex-end;justify-content:center;animation:fadeIn .2s ease}
+.sheet{background:var(--wh);border-radius:20px 20px 0 0;padding:20px 16px calc(20px + env(safe-area-inset-bottom));width:100%;max-width:440px;max-height:85vh;overflow-y:auto;animation:sheetUp .28s cubic-bezier(.22,.9,.3,1)}
+@keyframes sheetUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.sheet-title{font-size:19px;font-weight:900;color:var(--tx);margin-bottom:4px}
+.sheet-sub{font-size:13px;color:var(--tx2);line-height:1.5;margin-bottom:14px}
+.tone-row{display:flex;align-items:center;gap:12px;width:100%;background:var(--bg);border:none;border-radius:14px;padding:12px 14px;margin-bottom:8px;cursor:pointer;font-family:inherit;text-align:left}
+.tone-row:active{transform:scale(.98)}
+.tr-arrow{font-size:22px;font-weight:900;width:42px;text-align:center}
+.tone-row.t-flat .tr-arrow{color:#7C8A82}.tone-row.t-rise .tr-arrow{color:#2E9E5B}.tone-row.t-fall .tr-arrow{color:#C77C3A}
+.tone-row.t-dip .tr-arrow{color:#2B7FC4}.tone-row.t-break .tr-arrow{color:#9B59B6}.tone-row.t-stop .tr-arrow{color:#C0392B}
+.tr-body{flex:1;display:flex;flex-direction:column;gap:1px}
+.tr-body b{font-size:14px;color:var(--tx)}.tr-body span{font-size:12px;color:var(--tx2)}
+.tr-ex{font-size:16px;font-weight:800;color:var(--g)}
 .hear-btn{background:var(--grad);color:#fff;border:none;border-radius:12px;padding:11px 18px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;box-shadow:0 4px 14px rgba(45,106,79,.3)}
 .hear-btn:active{transform:scale(.96)}
 .card-back .card-audio-row{margin:0 0 12px}
@@ -1577,19 +1594,44 @@ function buildLesson(tier='all',cat='all'){
 // diacritics, never hand-written, so they are always correct.
 function toneOf(word){
   const n=word.normalize('NFD');
-  if(n.includes('\u0301')) return {a:'\u2197',n:'rising'};
-  if(n.includes('\u0300')) return {a:'\u2198',n:'falling'};
-  if(n.includes('\u0309')) return {a:'\u2193\u2197',n:'dip-rise'};
-  if(n.includes('\u0303')) return {a:'~\u2197',n:'break-rise'};
-  if(n.includes('\u0323')) return {a:'\u2193.',n:'low-stop'};
-  return {a:'\u2192',n:'flat'};
+  if(n.includes('\u0301')) return {a:'\u2197',n:'rising',k:'t-rise'};
+  if(n.includes('\u0300')) return {a:'\u2198',n:'falling',k:'t-fall'};
+  if(n.includes('\u0309')) return {a:'\u2193\u2197',n:'dip then rise',k:'t-dip'};
+  if(n.includes('\u0303')) return {a:'~\u2197',n:'break then rise',k:'t-break'};
+  if(n.includes('\u0323')) return {a:'\u2193.',n:'low, cut short',k:'t-stop'};
+  return {a:'\u2192',n:'flat and level',k:'t-flat'};
 }
 function toneStrip(vi,small){
   const words=vi.split(/\s+/).map(w=>w.replace(/[.,!?;:"()]/g,'')).filter(w=>/[a-zA-Z\u00C0-\u1EF9\u0111\u0110]/.test(w));
   if(!words.length) return '';
-  return '<div class="tone-strip'+(small?' small':'')+'">'+words.map(w=>
-    `<button class="tsyl" onclick="event.stopPropagation();speak('${w.replace(/'/g,"\\'")}')"><i>${toneOf(w).a}</i>${w}</button>`
-  ).join('')+'</div>';
+  return '<div class="tone-strip'+(small?' small':'')+'">'+words.map(w=>{
+    const t=toneOf(w);
+    return `<button class="tsyl ${t.k}" title="${t.n}" onclick="event.stopPropagation();speak('${w.replace(/'/g,"\\'")}')"><i>${t.a}</i>${w}</button>`;
+  }).join('')+'<button class="tsyl tkey" onclick="event.stopPropagation();toneLegend()">? tones</button></div>';
+}
+// Bottom-sheet legend: the six Vietnamese tones, each with a live example word.
+const TONE_KEY=[
+  {a:'\u2192',k:'t-flat',n:'Flat (ngang)',d:'Stay level, like holding a note',ex:'ba',en:'three'},
+  {a:'\u2198',k:'t-fall',n:'Falling (huy\u1EC1n)',d:'Start mid, slide down',ex:'b\u00E0',en:'but / lady'},
+  {a:'\u2197',k:'t-rise',n:'Rising (s\u1EAFc)',d:'Push up sharply',ex:'b\u00E1',en:'to cling'},
+  {a:'\u2193\u2197',k:'t-dip',n:'Dip-rise (h\u1ECFi)',d:'Dip down then come back up',ex:'b\u1EA3',en:'poison'},
+  {a:'~\u2197',k:'t-break',n:'Break-rise (ng\u00E3)',d:'Rise with a catch in the middle',ex:'b\u00E3',en:'residue'},
+  {a:'\u2193.',k:'t-stop',n:'Low-stop (n\u1EB7ng)',d:'Drop low and cut it off hard',ex:'b\u1EA1',en:'random'},
+];
+function toneLegend(){
+  if(document.getElementById('tone-legend')) return;
+  const d=document.createElement('div');
+  d.id='tone-legend';
+  d.className='sheet-overlay';
+  d.onclick=e=>{if(e.target===d)d.remove();};
+  d.innerHTML='<div class="sheet"><div class="sheet-title">The 6 tones</div>'+
+    '<p class="sheet-sub">The arrow over each word tells your voice what to do. Tap a row to hear it.</p>'+
+    TONE_KEY.map(t=>`<button class="tone-row ${t.k}" onclick="speak('${t.ex}')">
+      <span class="tr-arrow">${t.a}</span>
+      <span class="tr-body"><b>${t.n}</b><span>${t.d}</span></span>
+      <span class="tr-ex">${t.ex} \uD83D\uDD0A</span></button>`).join('')+
+    '<button class="btn-primary full-w" style="margin-top:12px" onclick="document.getElementById(\'tone-legend\').remove()">Got it</button></div>';
+  document.body.appendChild(d);
 }
 
 // ── SPEECH ───────────────────────────────────────────────────────────────────
@@ -1625,7 +1667,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v44';
+const APP_VERSION='v45';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
