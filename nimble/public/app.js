@@ -319,17 +319,43 @@
     $('statBest').textContent = s.history.length ? Math.max(...s.history.map(h => h.score)) : '–';
     $('statLevel').textContent = Math.min(5, Math.floor(s.totalDrills / 5) + 1);
 
-    $('domainAvgs').innerHTML = Object.entries(DOMAIN_LABELS).map(([key, label]) => {
-      const avg = s.perDomainAverage[key];
-      const val = avg == null
-        ? '<span class="val empty">no drills yet</span>'
-        : `<span class="val">${avg.toFixed(1)}</span>`;
-      return `<div class="domain-row"><span>${label}</span>${val}</div>`;
-    }).join('');
+    renderDomainRows(s);
 
     renderChart(s.history);
     renderHistory(drills);
     show('stats');
+  }
+
+  // Per-domain rows with a magnitude bar and drill count, plus a
+  // strongest/weakest callout once at least two domains have real data.
+  function renderDomainRows(s) {
+    $('domainAvgs').innerHTML = Object.entries(DOMAIN_LABELS).map(([key, label]) => {
+      const avg = s.perDomainAverage[key];
+      const cnt = s.history.filter(h => h.domain === key).length;
+      const pct = avg == null ? 0 : ((avg - 1) / 9) * 100;
+      const val = avg == null
+        ? '<span class="val empty">no drills yet</span>'
+        : `<span class="val">${avg.toFixed(1)}</span>`;
+      return `<div class="domain-row">
+        <div class="domain-row-top"><span>${label}<span class="domain-count">${cnt} drill${cnt === 1 ? '' : 's'}</span></span>${val}</div>
+        <div class="domain-bar"><div class="domain-bar-fill" style="width:${pct}%"></div></div>
+      </div>`;
+    }).join('');
+
+    const seasoned = Object.entries(s.perDomainAverage)
+      .filter(([k, v]) => v != null && s.history.filter(h => h.domain === k).length >= 3)
+      .sort((a, b) => a[1] - b[1]);
+    const callout = $('focusCallout');
+    if (seasoned.length >= 2 && seasoned[seasoned.length - 1][1] - seasoned[0][1] >= 0.8) {
+      const [weakK, weakV] = seasoned[0];
+      const [strongK, strongV] = seasoned[seasoned.length - 1];
+      callout.innerHTML =
+        `Strongest arena: <strong>${DOMAIN_LABELS[strongK]}</strong> (${strongV.toFixed(1)}). ` +
+        `Focus next: <strong>${DOMAIN_LABELS[weakK]}</strong> (${weakV.toFixed(1)}) — that's where the easy points are.`;
+      callout.hidden = false;
+    } else {
+      callout.hidden = true;
+    }
   }
 
   const escapeHtml = (s) => String(s)
