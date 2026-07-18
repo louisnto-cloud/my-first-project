@@ -49,6 +49,24 @@ const Celebrate = {
     Audio2.say(text || 'No problem! Let\'s try a fresh one.');
   },
 
+  // Slide-in toast for a freshly earned sticker (queued if several)
+  stickerToast(stickers) {
+    if (!stickers || !stickers.length) return;
+    let i = 0;
+    const showOne = () => {
+      if (i >= stickers.length) return;
+      const st = stickers[i++];
+      Audio2.star();
+      Celebrate.confetti(20);
+      const t = U.el('div', 'sticker-toast pop-in');
+      t.innerHTML = `<div class="st-face">${st.e}</div><div><div class="st-kicker">New sticker!</div><div class="st-name">${U.esc(st.name)}</div></div>`;
+      document.body.appendChild(t);
+      Audio2.say(`You earned a sticker! ${st.name}!`);
+      setTimeout(() => { t.classList.add('leaving'); setTimeout(() => { t.remove(); showOne(); }, 400); }, 2200);
+    };
+    showOne();
+  },
+
   tryAgain(title, text, retry) {
     const o = U.el('div', 'overlay');
     const card = U.el('div', 'modal-card pop-in');

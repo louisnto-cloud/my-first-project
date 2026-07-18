@@ -589,6 +589,44 @@ button:focus-visible, input:focus-visible {
   color: #fff; font-weight: 900; font-size: 19px; border-radius: 20px; padding: 16px;
 }
 
+/* ---------- Sticker book ---------- */
+
+.nav-badge {
+  position: absolute; top: -4px; right: -4px;
+  min-width: 24px; height: 24px; padding: 0 6px; border-radius: 12px;
+  background: var(--coral); color: #fff; font-size: 12px; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,.3);
+}
+.nav-btn { position: relative; }
+.sticker-count { text-align: center; color: #fff; font-weight: 800; font-size: 17px; padding: 4px 0 14px; }
+.sticker-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+.sticker {
+  background: rgba(255,250,242,.10); border-radius: 20px; padding: 16px 10px; text-align: center;
+  color: rgba(255,250,242,.6); border: 2px dashed rgba(255,250,242,.2);
+}
+.sticker.got {
+  background: var(--paper); color: var(--ink); border: none; box-shadow: var(--shadow);
+  animation: pop-in .4s ease both;
+}
+.sticker-face { font-size: 44px; filter: grayscale(1) opacity(.5); }
+.sticker.got .sticker-face { filter: none; }
+.sticker.got .sticker-face { animation: float 3.6s ease-in-out infinite; }
+.sticker-name { font-weight: 900; font-size: 14.5px; margin-top: 6px; }
+.sticker-hint { font-size: 12px; font-weight: 600; margin-top: 3px; opacity: .8; line-height: 1.35; }
+
+.sticker-toast {
+  position: fixed; left: 50%; bottom: 30px; transform: translateX(-50%);
+  z-index: 80; background: var(--paper); border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.35); padding: 14px 22px 14px 16px;
+  display: flex; align-items: center; gap: 14px; border-left: 8px solid var(--gold);
+  transition: transform .4s cubic-bezier(.2,1.4,.4,1), opacity .4s;
+}
+.sticker-toast.leaving { transform: translateX(-50%) translateY(120px); opacity: 0; }
+.st-face { font-size: 40px; }
+.st-kicker { font-size: 12px; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase; color: var(--amber); }
+.st-name { font-size: 19px; font-weight: 900; color: var(--ink); }
+
 /* ---------- Certificate ---------- */
 
 .cert-shelf-btn {

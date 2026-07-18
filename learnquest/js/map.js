@@ -103,6 +103,10 @@ const WorldMap = {
     };
     nav.appendChild(mk('🛍️', 'Shop', () => Shop.show()));
     nav.appendChild(mk('🏆', 'Trophies', () => Trophies.show()));
+    const stickerBtn = mk('✨', 'Sticker Book', () => Stickers.show());
+    const stCount = Stickers.count();
+    if (stCount) stickerBtn.appendChild(U.el('span', 'nav-badge', String(stCount)));
+    nav.appendChild(stickerBtn);
     nav.appendChild(mk('🎮', 'Games', () => Shop.show('games')));
     screen.appendChild(nav);
 
@@ -122,6 +126,10 @@ const WorldMap = {
     screen.appendChild(parentBtn);
 
     app.appendChild(screen);
+
+    // Celebrate any stickers earned since the last time we were home
+    const fresh = Stickers.sync();
+    if (fresh.length) setTimeout(() => Celebrate.stickerToast(fresh), 500);
   },
 
   /* ---- Continent view: 8 regions as islands ---- */

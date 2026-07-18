@@ -21,6 +21,7 @@ const Store = {
       activity: {},       // 'YYYY-MM-DD' -> levels completed that day
       settings: { muted: false, narrationRate: 0.92, reduceMotion: false },
       dailyGoal: 3,       // levels per day the streak flame celebrates
+      stickersSeen: null, // null = seed silently on first sync
       name: ''
     };
   },

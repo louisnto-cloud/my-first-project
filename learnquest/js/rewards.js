@@ -290,6 +290,82 @@ const Certificate = {
   }
 };
 
+/* ---- Sticker book: a passive collection earned through milestones ---- */
+
+const STICKERS = (() => {
+  const done = s => Object.keys(s.completed).length;
+  const threeStar = s => Object.values(s.stars).filter(x => x === 3).length;
+  const trophies = s => Object.keys(s.bossPassed).length;
+  const allLevels = () => CURRICULUM.reduce((a, w) => a + w.regions.reduce((b, r) => b + r.levels.length, 0), 0);
+  const worldDone = (s, id) => CURRICULUM.find(w => w.id === id).regions.every(r => s.bossPassed[r.id]);
+  const accessories = s => (s.avatar.owned || []).filter(id => id !== 'base').length;
+  return [
+    { id: 'first', e: '🌱', name: 'First Steps', hint: 'Finish your first level', got: s => done(s) >= 1 },
+    { id: 'l10', e: '🔟', name: 'Ten Down', hint: 'Finish 10 levels', got: s => done(s) >= 10 },
+    { id: 'l25', e: '🎓', name: 'Quarter Master', hint: 'Finish 25 levels', got: s => done(s) >= 25 },
+    { id: 'l50', e: '🏅', name: 'Fifty Club', hint: 'Finish 50 levels', got: s => done(s) >= 50 },
+    { id: 'lall', e: '🌟', name: 'Completionist', hint: 'Finish every single level', got: s => done(s) >= allLevels() },
+    { id: 'star10', e: '⭐', name: 'Perfect Ten', hint: 'Get 3 stars on 10 levels', got: s => threeStar(s) >= 10 },
+    { id: 'star25', e: '✨', name: 'Star Collector', hint: 'Get 3 stars on 25 levels', got: s => threeStar(s) >= 25 },
+    { id: 'boss1', e: '🏆', name: 'First Crown', hint: 'Beat a Boss Challenge', got: s => trophies(s) >= 1 },
+    { id: 'boss4', e: '👑', name: 'Four Crowns', hint: 'Beat 4 Boss Challenges', got: s => trophies(s) >= 4 },
+    { id: 'boss8', e: '💎', name: 'Eight Crowns', hint: 'Beat 8 Boss Challenges', got: s => trophies(s) >= 8 },
+    { id: 'mathmaster', e: '🌋', name: 'Math Master', hint: 'Master all of Math World', got: s => worldDone(s, 'math') },
+    { id: 'wordmaster', e: '🌸', name: 'Word Master', hint: 'Master all of Word World', got: s => worldDone(s, 'english') },
+    { id: 'grand', e: '🗺️', name: 'Grand Explorer', hint: 'Master both worlds', got: s => worldDone(s, 'math') && worldDone(s, 'english') },
+    { id: 'lightning', e: '⚡', name: 'Lightning Fast', hint: 'Win a Lightning Trial', got: s => Object.keys(s.fastTracked || {}).length >= 1 },
+    { id: 'streak3', e: '🔥', name: 'On a Roll', hint: 'Reach a 3 day streak', got: s => s.streak.best >= 3 },
+    { id: 'streak7', e: '📅', name: 'Week Warrior', hint: 'Reach a 7 day streak', got: s => s.streak.best >= 7 },
+    { id: 'streak14', e: '🌈', name: 'Two Weeks!', hint: 'Reach a 14 day streak', got: s => s.streak.best >= 14 },
+    { id: 'stars50', e: '🌠', name: 'Star Shower', hint: 'Earn 50 stars in all', got: s => s.totalStars >= 50 },
+    { id: 'stars150', e: '☄️', name: 'Supernova', hint: 'Earn 150 stars in all', got: s => s.totalStars >= 150 },
+    { id: 'dressup', e: '🎩', name: 'Dapper', hint: 'Wear an outfit item', got: s => accessories(s) >= 1 },
+    { id: 'shopaholic', e: '🛍️', name: 'Big Spender', hint: 'Own 5 shop items', got: s => (s.avatar.owned || []).length >= 5 },
+    { id: 'artist', e: '🎨', name: 'Free Spirit', hint: 'Unlock a mini game', got: s => (s.gamesOwned || []).length >= 1 },
+    { id: 'decorator', e: '🏡', name: 'Homemaker', hint: 'Buy a decoration', got: s => (s.decorOwned || []).length >= 1 },
+    { id: 'both1', e: '⚖️', name: 'Well Rounded', hint: 'Beat a boss in each world', got: s => CURRICULUM.every(w => w.regions.some(r => s.bossPassed[r.id])) }
+  ];
+})();
+
+const Stickers = {
+  earnedIds() {
+    return STICKERS.filter(st => { try { return st.got(Store.state); } catch (e) { return false; } }).map(st => st.id);
+  },
+
+  // Returns newly-earned stickers since last sync; seeds silently the first time.
+  sync() {
+    const earned = Stickers.earnedIds();
+    if (Store.state.stickersSeen == null) { Store.state.stickersSeen = earned; Store.save(); return []; }
+    const seen = new Set(Store.state.stickersSeen);
+    const fresh = earned.filter(id => !seen.has(id));
+    if (fresh.length) { Store.state.stickersSeen = earned; Store.save(); }
+    return fresh.map(id => STICKERS.find(s => s.id === id));
+  },
+
+  count() { return Stickers.earnedIds().length; },
+
+  show() {
+    const app = document.getElementById('app');
+    app.innerHTML = '';
+    const screen = U.el('div', 'screen sticker-screen');
+    screen.appendChild(Level.topBar('✨ Sticker Book', () => WorldMap.showHome()));
+    const earned = new Set(Stickers.earnedIds());
+    screen.appendChild(U.el('div', 'sticker-count', `${earned.size} / ${STICKERS.length} collected`));
+    const grid = U.el('div', 'sticker-grid');
+    STICKERS.forEach(st => {
+      const got = earned.has(st.id);
+      const cell = U.el('div', 'sticker' + (got ? ' got' : ''));
+      cell.innerHTML = `<div class="sticker-face">${got ? st.e : '❓'}</div>
+        <div class="sticker-name">${got ? U.esc(st.name) : '???'}</div>
+        <div class="sticker-hint">${U.esc(st.hint)}</div>`;
+      if (got) cell.addEventListener('click', () => { Audio2.pop(); Audio2.say(st.name + '. ' + st.hint + '.'); });
+      grid.appendChild(cell);
+    });
+    screen.appendChild(grid);
+    app.appendChild(screen);
+  }
+};
+
 /* ---- Mini games: pure play, no learning content ---- */
 
 const MiniGames = {
