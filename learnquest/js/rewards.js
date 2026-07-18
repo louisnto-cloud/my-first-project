@@ -213,9 +213,80 @@ const Trophies = {
     }));
     screen.appendChild(shelf);
     if (!any) screen.appendChild(U.el('div', 'shop-note', 'Beat a Boss Challenge to win your first trophy!'));
+
+    // Certificate buttons for any fully-mastered world
+    CURRICULUM.forEach(world => {
+      if (Certificate.worldComplete(world)) {
+        const btn = U.el('button', 'cert-shelf-btn', `📜 ${world.emoji} ${world.name} — view your certificate!`);
+        btn.addEventListener('click', () => { Audio2.fanfare(); Certificate.show(world); });
+        screen.appendChild(btn);
+      }
+    });
+
     const cur = Store.currentStreak();
     screen.appendChild(U.el('div', 'streak-banner', `🔥 Streak: ${cur} day${cur === 1 ? '' : 's'} · Best: ${Store.state.streak.best}`));
     app.appendChild(screen);
+  }
+};
+
+/* ---- Certificate of Mastery (a full world completed) ---- */
+
+const Certificate = {
+  worldComplete(world) {
+    return world.regions.every(r => Store.state.bossPassed[r.id]);
+  },
+
+  worldStars(world) {
+    return world.regions.reduce((s, r) =>
+      s + r.levels.reduce((a, lv) => a + (Store.state.stars[lv.id] || 0), 0), 0);
+  },
+
+  show(world, onBack) {
+    const app = document.getElementById('app');
+    app.innerHTML = '';
+    const screen = U.el('div', 'screen cert-screen');
+    screen.appendChild(Level.topBar('Certificate', () => (onBack ? onBack() : Trophies.show())));
+
+    const stars = Certificate.worldStars(world);
+    const levels = world.regions.reduce((s, r) => s + r.levels.length, 0);
+    let dateStr = '';
+    try {
+      dateStr = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+    } catch (e) { dateStr = ''; }
+    const subject = world.id === 'math' ? 'Mathematics' : 'English Language Arts';
+
+    const cert = U.el('div', 'certificate');
+    cert.innerHTML = `
+      <div class="cert-corner tl">✦</div><div class="cert-corner tr">✦</div>
+      <div class="cert-corner bl">✦</div><div class="cert-corner br">✦</div>
+      <div class="cert-seal">${world.emoji}</div>
+      <div class="cert-kicker">Certificate of Mastery</div>
+      <div class="cert-avatar">${Avatar.svg(96)}</div>
+      <div class="cert-name">${U.esc(Avatar.name())}</div>
+      <div class="cert-body">has journeyed through all eight grades and mastered</div>
+      <div class="cert-world">${world.emoji} ${U.esc(world.name)}</div>
+      <div class="cert-subject">Kindergarten to Grade 7 · ${subject}</div>
+      <div class="cert-stats">
+        <span>🏆 8 / 8 regions</span>
+        <span>⭐ ${stars} stars</span>
+        <span>🎯 ${levels} levels</span>
+      </div>
+      ${dateStr ? `<div class="cert-date">${dateStr}</div>` : ''}
+    `;
+    screen.appendChild(cert);
+
+    const row = U.el('div', 'demo-actions');
+    const printBtn = U.el('button', 'ghost-btn', '🖨️ Print it');
+    printBtn.addEventListener('click', () => { try { window.print(); } catch (e) {} });
+    const doneBtn = U.el('button', 'primary-btn', 'Yay! →');
+    doneBtn.addEventListener('click', () => (onBack ? onBack() : WorldMap.showHome()));
+    row.appendChild(printBtn);
+    row.appendChild(doneBtn);
+    screen.appendChild(row);
+    app.appendChild(screen);
+
+    Celebrate.confetti(80);
+    Audio2.say(`Congratulations ${Avatar.name()}! You have mastered all of ${world.name}, from Kindergarten all the way to Grade 7! You are amazing!`);
   }
 };
 

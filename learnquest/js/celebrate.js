@@ -108,12 +108,20 @@ const Celebrate = {
       <div class="explain-buddy big">${Avatar.svg(120)}</div>
       <div class="explain-text">A new trophy shines on your shelf.</div>
       <div class="coin-burst">🪙 +${coins || 50}</div>`;
-    const btn = U.el('button', 'primary-btn', 'To the map! →');
-    btn.addEventListener('click', () => { o.remove(); WorldMap.showWorld(region.worldId); });
+    const world = CURRICULUM.find(w => w.id === region.worldId);
+    const worldDone = world && Certificate.worldComplete(world);
+    const btn = U.el('button', 'primary-btn', worldDone ? '📜 See your certificate!' : 'To the map! →');
+    btn.addEventListener('click', () => {
+      o.remove();
+      if (worldDone) Certificate.show(world, () => WorldMap.showWorld(region.worldId));
+      else WorldMap.showWorld(region.worldId);
+    });
     card.appendChild(btn);
     o.appendChild(card);
     document.body.appendChild(o);
-    Audio2.say(`You did it! ${region.name} is conquered! A shiny new trophy is yours. The next land is now open!`);
+    Audio2.say(worldDone
+      ? `Incredible! You conquered ${region.name} and finished all of ${world.name}! Come see your certificate!`
+      : `You did it! ${region.name} is conquered! A shiny new trophy is yours. The next land is now open!`);
   },
 
   fastTrack(region, acc) {
