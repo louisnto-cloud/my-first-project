@@ -26,7 +26,10 @@ const EN = {
     { w: 'map', e: '🗺️' }, { w: 'pen', e: '🖊️' }, { w: 'bat', e: '🦇' }, { w: 'fox', e: '🦊' },
     { w: 'web', e: '🕸️' }, { w: 'jam', e: '🍓' }, { w: 'log', e: '🪵' }, { w: 'bus', e: '🚌' },
     { w: 'net', e: '🥅' }, { w: 'pot', e: '🍲' }, { w: 'rat', e: '🐀' }, { w: 'van', e: '🚐' },
-    { w: 'six', e: '6️⃣' }, { w: 'box', e: '📦' }, { w: 'leg', e: '🦵' }, { w: 'nut', e: '🥜' }
+    { w: 'six', e: '6️⃣' }, { w: 'box', e: '📦' }, { w: 'leg', e: '🦵' }, { w: 'nut', e: '🥜' },
+    { w: 'hen', e: '🐔' }, { w: 'tub', e: '🛁' }, { w: 'jet', e: '🛩️' }, { w: 'mop', e: '🧹' },
+    { w: 'pin', e: '📌' }, { w: 'gum', e: '🍬' }, { w: 'cub', e: '🐻' }, { w: 'fan', e: '🪭' },
+    { w: 'ram', e: '🐏' }, { w: 'bib', e: '🍼' }, { w: 'ant', e: '🐜' }, { w: 'cap', e: '🧢' }
   ],
 
   rhymes: [
@@ -39,7 +42,13 @@ const EN = {
     ['light', 'night', 'kite', 'bright'],
     ['bear', 'chair', 'hair', 'pear'],
     ['tree', 'bee', 'sea', 'key'],
-    ['moon', 'spoon', 'balloon', 'noon']
+    ['moon', 'spoon', 'balloon', 'noon'],
+    ['bell', 'shell', 'well', 'tell'],
+    ['bug', 'rug', 'mug', 'hug'],
+    ['hop', 'top', 'mop', 'pop'],
+    ['pig', 'wig', 'dig', 'big'],
+    ['ten', 'hen', 'pen', 'den'],
+    ['nose', 'rose', 'hose', 'toes']
   ],
   nonRhymes: ['fish', 'lamp', 'desk', 'milk', 'sock', 'hand', 'book', 'wolf', 'gold', 'drum'],
 
@@ -68,7 +77,11 @@ const EN = {
     { s: 'The sun is up in the sky.', e: '☀️', q: 'Where is the sun?', a: 'in the sky', wrong: ['in the sea', 'in a box'] },
     { s: 'My hat is on my head.', e: '🎩', q: 'Where is the hat?', a: 'on my head', wrong: ['on the bed', 'in the bag'] },
     { s: 'The pig is in the mud.', e: '🐷', q: 'Where is the pig?', a: 'in the mud', wrong: ['in the tree', 'on the roof'] },
-    { s: 'She can hop like a frog.', e: '🐸', q: 'How does she hop?', a: 'like a frog', wrong: ['like a fish', 'like a snake'] }
+    { s: 'She can hop like a frog.', e: '🐸', q: 'How does she hop?', a: 'like a frog', wrong: ['like a fish', 'like a snake'] },
+    { s: 'The duck swims in the pond.', e: '🦆', q: 'Where does the duck swim?', a: 'in the pond', wrong: ['in the cup', 'on the bed'] },
+    { s: 'I have ten green socks.', e: '🧦', q: 'How many socks?', a: 'ten', wrong: ['two', 'six'] },
+    { s: 'The cake is on the plate.', e: '🍰', q: 'Where is the cake?', a: 'on the plate', wrong: ['in the box', 'under the bed'] },
+    { s: 'My dog naps in the sun.', e: '🐶', q: 'What does the dog do?', a: 'naps in the sun', wrong: ['digs a hole', 'eats a bone'] }
   ],
 
   passages2: [
@@ -516,7 +529,11 @@ const EN = {
     { text: 'The red bird built a nest on the tall lamp post. Every morning it sang to the bakery below.', q: 'Where did the bird build its nest?', choices: [{ e: '🏮', label: 'on a lamp post', correct: true }, { e: '🌳', label: 'in a tree', correct: false }, { e: '🏠', label: 'on a house', correct: false }] },
     { text: 'Milo found a green umbrella in the park. He used it as a boat for his toy ducks.', q: 'What did Milo find?', choices: [{ e: '☂️', label: 'an umbrella', correct: true }, { e: '⚽', label: 'a ball', correct: false }, { e: '🥾', label: 'a boot', correct: false }] },
     { text: 'Grandma\'s soup had seven carrots, two potatoes, and one very surprising banana.', q: 'What was surprising in the soup?', choices: [{ e: '🍌', label: 'a banana', correct: true }, { e: '🥕', label: 'a carrot', correct: false }, { e: '🥔', label: 'a potato', correct: false }] },
-    { text: 'The turtle raced the snail. It was the slowest race ever. They both won a golden leaf.', q: 'What prize did they win?', choices: [{ e: '🍂', label: 'a golden leaf', correct: true }, { e: '🏆', label: 'a big trophy', correct: false }, { e: '🍰', label: 'a cake', correct: false }] }
+    { text: 'The turtle raced the snail. It was the slowest race ever. They both won a golden leaf.', q: 'What prize did they win?', choices: [{ e: '🍂', label: 'a golden leaf', correct: true }, { e: '🏆', label: 'a big trophy', correct: false }, { e: '🍰', label: 'a cake', correct: false }] },
+    { text: 'A tiny mouse found a big yellow cheese. It was too heavy to carry, so the mouse invited all its friends.', q: 'What did the mouse find?', choices: [{ e: '🧀', label: 'a cheese', correct: true }, { e: '🍎', label: 'an apple', correct: false }, { e: '🎈', label: 'a balloon', correct: false }] },
+    { text: 'Every night the little owl counts the stars. Last night it counted all the way to one hundred before falling asleep.', q: 'What does the owl count?', choices: [{ e: '⭐', label: 'the stars', correct: true }, { e: '🐟', label: 'the fish', correct: false }, { e: '🌼', label: 'the flowers', correct: false }] },
+    { text: 'Ravi painted a blue elephant with pink spots and gave it a purple hat. His teacher smiled at the funny picture.', q: 'What colour was the elephant?', choices: [{ e: '🔵', label: 'blue', correct: true }, { e: '🟢', label: 'green', correct: false }, { e: '🟡', label: 'yellow', correct: false }] },
+    { text: 'The wind blew Mia\'s balloon up into a tall tree. A kind giraffe reached up and nudged it back down to her.', q: 'Who helped Mia?', choices: [{ e: '🦒', label: 'a giraffe', correct: true }, { e: '🐰', label: 'a rabbit', correct: false }, { e: '🐸', label: 'a frog', correct: false }] }
   ],
 
   inference5: [
