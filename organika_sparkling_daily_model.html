@@ -505,11 +505,16 @@ function renderChecks(){
 function renderInsight(){
   if(!el("insight")) return;
   const r = compute(current), be = breakeven(), prof = r.ni>=0;
+  const lever = sensitivityDrivers().ds[0];
+  const marg = SKUS.map((s,i)=>({name:`${s.flav} ${s.fmt}`, m: r.lines[i].net ? r.lines[i].cm/r.lines[i].net : 0}));
+  marg.sort((a,b)=>b.m-a.m);
   el("insight").innerHTML =
     `<b>${current} case:</b> Sparkling Daily does <b>${money(r.net)}</b> net sales on <b>${num(r.cases)}</b> cases — `+
     `a <b>${pct(r.ebitdapct)}</b> EBITDA margin (${money(r.ebitda)}) and `+
     `<b style="color:${prof?'var(--good)':'var(--bad)'}">${money(r.ni)} net ${prof?'income':'loss'}</b>. `+
-    `Break-even sits near <b>${num(be.cases)}</b> cases (${mult(be.mv)} of base volume).`;
+    `Break-even sits near <b>${num(be.cases)}</b> cases (${mult(be.mv)} of base volume).`+
+    `<br><span style="color:var(--soft)">Biggest EBITDA lever: <b style="color:var(--ink)">${lever.name}</b> (±${money(lever.swing/2)} per 10%). `+
+    `Strongest margin: <b style="color:var(--ink)">${marg[0].name}</b> at ${pct(marg[0].m)} contribution.</span>`;
 }
 function renderKpis(){
   const r = compute(current), b = compute("Base"), isBase = current==="Base";
