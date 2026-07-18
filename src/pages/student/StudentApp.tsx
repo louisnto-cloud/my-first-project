@@ -6,6 +6,7 @@ import { Empty, Header, Pill, scoreColor, TabBar, WeekRing } from '../../compone
 import { BadgesView, GradesView, HomeworkView, LeaderboardView, ScheduleView } from '../../components/views';
 import { FlashcardSession, QuizSession } from '../../components/Flashcards';
 import { FeedbackSection } from '../../components/Feedback';
+import { StreakCelebration } from '../../components/StreakCelebration';
 import { pointsOf, practicedListToday, practicedToday, scoresOf, streakOf, todayISO, weekPractice } from '../../lib';
 import type { VocabList } from '../../types';
 
@@ -18,6 +19,7 @@ export function StudentLayout() {
       <main id="main" className="mx-auto max-w-3xl p-4" tabIndex={-1}>
         <Outlet />
       </main>
+      <StreakCelebration />
       <TabBar
         items={[
           { to: '/app', emoji: '🏠', label: t('nav.home'), end: true },
