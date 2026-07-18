@@ -587,7 +587,7 @@ body,button,input,textarea{font-family:'Be Vietnam Pro',-apple-system,BlinkMacSy
 /* ================================================================
    DATA MODEL
    ================================================================ */
-const CAT={G:'Greetings and Meetings',M:'Money and Pricing',R:'Retail Floor',F:'Margin and Finance',D:'Distribution and Logistics',S:'Supplement and Health',C:'Contracts and Negotiation',N:'Numbers',CU:'Culture and Etiquette',SM:'Small Talk and Relationships'};
+const CAT={G:'Greetings and Meetings',M:'Money and Pricing',R:'Retail Floor',F:'Margin and Finance',D:'Distribution and Logistics',S:'Supplement and Health',C:'Contracts and Negotiation',N:'Numbers',CU:'Culture and Etiquette',SM:'Small Talk and Relationships',T:'Team and Hiring',TR:'Travel and Getting Around',E:'E-commerce and Digital'};
 /* ================================================================
    ADD NEW TERMS HERE — append to VRAW. Auto-assigned to lessons.
    [id, tier, catCode, en, vi, phonetic, exVi, exEn, southNote, register, accuracyFlag]
@@ -1014,6 +1014,44 @@ const VRAW=[
 ['d69','D','SM','How is business?','Dạo này làm ăn sao rồi?','yow neye lahm an sow roy','Dạo này làm ăn sao rồi anh?','How is business these days?','Southern colloquial.','The natural opener between business acquaintances.',0],
 ['d70','D','SM','Good luck / wish you success','Chúc anh/chị thành công','chook an/chee than kohng','Chúc chị thành công với cửa hàng mới!','Wishing you success with the new store!','Same nationwide.','',0],
 ['d71','D','SM','See you at the next meeting','Hẹn gặp anh/chị buổi họp sau','hen gap an/chee boo-oy hawp soh','Hẹn gặp anh buổi họp sau vào thứ Ba nhé.','See you at the next meeting on Tuesday.','Same nationwide.','',0],
+['t01','B','T','Team / staff','Nhân sự','nyun suh','Chúng tôi cần tuyển thêm nhân sự cho đội bán hàng.','We need to hire more staff for the sales team.','Nhân sự also means HR department.','Nhân sự = both staff and the HR function; đội = a working team.',0],
+['t02','B','T','To hire / recruit','Tuyển dụng','twyen yoong','Công ty đang tuyển dụng quản lý vùng.','The company is recruiting a regional manager.','Same nationwide.','Tuyển for short; tuyển dụng is the formal HR term.',0],
+['t03','B','T','Manager','Quản lý','kwahn lee','Anh ấy là quản lý khu vực miền Nam.','He is the manager for the southern region.','Same nationwide.','Quản lý = manager; giám đốc = director; trưởng phòng = dept head.',0],
+['t04','B','T','Director','Giám đốc','yahm dohk','Tôi muốn gặp giám đốc kinh doanh.','I would like to meet the sales director.','Same nationwide.','Address a director by title + name to show respect.',0],
+['t05','B','T','Department head','Trưởng phòng','truhng fawng','Trưởng phòng thu mua sẽ quyết định.','The purchasing department head will decide.','Same nationwide.','Know who the trưởng phòng is — they often hold the real yes.',0],
+['t06','B','T','Colleague','Đồng nghiệp','dohng ngyep','Đây là đồng nghiệp của tôi, chị Hoa.','This is my colleague, Ms. Hoa.','Same nationwide.','',0],
+['t07','B','T','Salary','Lương','luhng','Mức lương cạnh tranh giúp giữ nhân viên giỏi.','A competitive salary retains good staff.','Same nationwide.','',0],
+['t08','B','T','Commission / bonus','Hoa hồng','hwah hohng','Nhân viên bán hàng nhận hoa hồng theo doanh số.','Sales staff earn commission on sales.','Hoa hồng = commission; thưởng = bonus.','Distributor reps chase hoa hồng — build it into your sell-in.',0],
+['t09','B','T','Training','Đào tạo','dow tow','Chúng tôi tổ chức đào tạo sản phẩm cho đội bán.','We run product training for the sales team.','Same nationwide.','',0],
+['t10','B','T','Responsible for','Phụ trách','foo trik','Tôi phụ trách thị trường miền Nam.','I am responsible for the southern market.','Same nationwide.','Key self-intro phrase: tôi phụ trách... states your remit.',0],
+['t11','C','T','To report to','Báo cáo cho','bow kow chaw','Tôi báo cáo trực tiếp cho tổng giám đốc.','I report directly to the CEO.','Same nationwide.','',0],
+['t12','C','T','Performance / KPI','Chỉ số hiệu quả','chee soh hyew kwah','Chỉ số hiệu quả quý này vượt kế hoạch.','This quarter KPIs beat the plan.','Everyone says KPI in English too.','',0],
+['tr01','A','TR','Airport','Sân bay','sun beye','Tôi sẽ đến sân bay Tân Sơn Nhất lúc 3 giờ.','I will arrive at Tan Son Nhat airport at 3.','Same nationwide.','TSN is HCMC airport; SGN is its code.',0],
+['tr02','A','TR','Taxi / ride','Xe','seh','Tôi đi xe Grab đến văn phòng anh.','I will take a Grab to your office.','Xe = vehicle; Grab is the dominant ride app.','Say Grab, not taxi — Grab and Xanh SM (EV) rule HCMC.',0],
+['tr03','A','TR','Hotel','Khách sạn','khik sahn','Tôi ở khách sạn gần trung tâm quận 1.','I am staying at a hotel near District 1 center.','Same nationwide.','',0],
+['tr04','A','TR','Address','Địa chỉ','dee-uh chee','Anh cho tôi xin địa chỉ văn phòng nhé.','Please give me the office address.','Same nationwide.','Ask for địa chỉ to drop into Grab; districts (quận) matter.',0],
+['tr05','A','TR','District','Quận','kwun','Văn phòng chúng tôi ở quận 7.','Our office is in District 7.','Southern uses quận for urban districts.','HCMC business hubs: Q1 (center), Q7 (expat/modern), Thu Duc.',0],
+['tr06','A','TR','How far / how long','Bao xa / bao lâu','bow sah / bow loh','Từ đây đến kho bao xa?','How far from here to the warehouse?','Same nationwide.','',0],
+['tr07','A','TR','Turn left / right','Rẽ trái / rẽ phải','reh treye / reh feye','Rẽ phải ở ngã tư tới.','Turn right at the next intersection.','Southern also quẹo trái/phải.','In the South you will hear quẹo more than rẽ.',0],
+['tr08','A','TR','Go straight','Đi thẳng','dee thang','Đi thẳng khoảng 200 mét là tới.','Go straight about 200 meters and you are there.','Same nationwide.','',0],
+['tr09','A','TR','Stop here','Dừng ở đây','yuhng uh day','Dừng ở đây là được, cảm ơn tài xế.','Stop here is fine, thank you driver.','Southern also ngừng.','Tell a Grab driver dừng ở đây to stop.',0],
+['tr10','A','TR','Traffic','Giao thông','yow thohng','Giao thông giờ cao điểm rất đông.','Rush hour traffic is very heavy.','Same nationwide.','Plan meetings around 7-9am and 5-7pm gridlock.',0],
+['tr11','B','TR','Business trip','Chuyến công tác','chwyen kohng tahk','Tôi có chuyến công tác ra Hà Nội tuần sau.','I have a business trip to Hanoi next week.','Same nationwide.','',0],
+['tr12','B','TR','To book (a room/ticket)','Đặt','dat','Tôi đã đặt phòng khách sạn rồi.','I already booked the hotel room.','Same as order: đặt phòng, đặt vé.','Đặt covers booking rooms, tickets, and tables.',0],
+['e51','C','E','Website / online store','Trang web','trahng web','Sản phẩm có bán trên trang web chính hãng.','The product is sold on the official website.','Web said in English.','',0],
+['e52','C','E','Add to cart','Thêm vào giỏ hàng','thaym vow yaw hahng','Khách thêm vào giỏ hàng nhưng chưa thanh toán.','Customers add to cart but do not check out.','Same nationwide.','Cart abandonment (bỏ giỏ) is a real online metric here.',0],
+['e53','C','E','Checkout / place order online','Đặt hàng online','dat hahng online','Đặt hàng online được giao trong 2 giờ ở nội thành.','Online orders deliver within 2 hours inner city.','Online said in English.','2-hour delivery is a real expectation in HCMC.',0],
+['e54','C','E','Free shipping','Miễn phí vận chuyển','myen fee vun chwyen','Đơn trên 300 nghìn được miễn phí vận chuyển.','Orders over 300k get free shipping.','Freeship said in English casually.','Freeship thresholds drive basket size on Shopee/Lazada.',0],
+['e55','C','E','Flash sale','Giảm giá chớp nhoáng','yahm yah chuhp nywahng','Giảm giá chớp nhoáng lúc 12 giờ trưa mỗi ngày.','Flash sale at noon every day.','Everyone says flash sale in English.','12h/12.12 flash-sale windows spike volume massively.',0],
+['e56','C','E','Product rating','Đánh giá sản phẩm','dan yah sahn fum','Đánh giá sản phẩm 5 sao giúp tăng doanh số.','Five-star product ratings lift sales.','Same nationwide.','Protect your star rating — it is the online shelf.',0],
+['e57','C','E','Livestream sale','Bán hàng phát trực tiếp','bahn hahng faht truhk tyep','Bán hàng phát trực tiếp trên TikTok tối nay.','Livestream selling on TikTok tonight.','Most say livestream in English.','TikTok live is now a primary FMCG channel in Vietnam.',0],
+['e58','C','E','Influencer collaboration','Hợp tác với KOL','huhp tahk vuh-ee KOL','Chúng tôi hợp tác với KOL sức khỏe để quảng bá.','We collaborate with health KOLs to promote.','KOL/KOC said in English.','KOC (reviewers) are cheaper and convert well for trial.',0],
+['e59','C','E','Digital marketing','Tiếp thị số','tyep thee soh','Ngân sách tiếp thị số tăng gấp đôi năm nay.','The digital marketing budget doubled this year.','Also marketing online.','',0],
+['e60','C','E','Conversion rate','Tỷ lệ chuyển đổi','tee lay chwyen doy','Tỷ lệ chuyển đổi của trang tăng lên 4%.','The page conversion rate rose to 4%.','Conversion said in English too.','',0],
+['e61','C','E','Out of stock (online)','Tạm hết hàng','tahm hayt hahng','Sản phẩm tạm hết hàng, sẽ có lại thứ Hai.','Temporarily out of stock, back Monday.','Same nationwide.','Set restock dates — online buyers move on fast.',0],
+['e62','C','E','Customer service','Chăm sóc khách hàng','cham sawk khik hahng','Đội chăm sóc khách hàng trả lời trong 5 phút.','Customer service replies within 5 minutes.','Abbreviated CSKH.','Fast Zalo/CSKH response is a competitive edge online.',0],
+['sm71','A','SM','Please wait a moment','Chờ một chút','chuh moht choot','Chờ một chút, tôi kiểm tra ngay.','One moment, let me check right away.','Southern also đợi chút.','',0],
+['sm72','A','SM','Never mind / it is fine','Thôi được rồi','thoy duhk roy','Thôi được rồi, để lần sau cũng được.','Never mind, next time is fine.','Southern casual.','A graceful way to drop a small point without friction.',0],
 ];
 /* Auto-map to full objects */
 const VOCAB=VRAW.map(([id,tier,cat,en,vi,phonetic,exVi,exEn,sNote,reg,af])=>({id,tier,category:CAT[cat]||cat,en,vi,phonetic,example_vi:exVi,example_en:exEn,southern_note:sNote,register:reg,accuracyFlag:!!af,status:'learning',box:1,correct:0,wrong:0}));
@@ -1675,7 +1713,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v48';
+const APP_VERSION='v49';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
