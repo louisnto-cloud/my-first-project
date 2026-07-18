@@ -666,9 +666,26 @@ function renderSens(){
     }).join("")+"</tr>";
   });
   h+="</tbody></table>";
+  // second table: EBITDA vs COGS change × volume (price held at base)
+  const Kcos=SKUS.reduce((a,s)=>a+s.vol*(s.cosd+s.cosi),0);
+  const Kap=SKUS.reduce((a,s)=>a+s.vol*s.ap,0);
+  const {K1,FX,LOG}=kvals();
+  const ebitdaCost=(mv,mc)=> mv*(K1 - mc*Kcos - Kap) - FX - LOG*mv*K1;
+  const COSTM=[0.90,0.95,1.00,1.05,1.10,1.20];
+  h+=`<h2 style="margin-top:22px">EBITDA — cost risk</h2><p class="h-sub">EBITDA if COGS moves (price held at base). Losses in red.</p>`;
+  h+="<table><thead><tr><th>COGS × \\ Volume ×</th>"+VOLM.map(m=>`<th>${mult(m)}</th>`).join("")+"</tr></thead><tbody>";
+  COSTM.forEach(mc=>{
+    h+=`<tr><td><b>${mult(mc)}</b></td>`+VOLM.map(mv=>{
+      const v=ebitdaCost(mv,mc);
+      const isBase=Math.abs(mv-1)<1e-9&&Math.abs(mc-1)<1e-9;
+      const st=(v<0?'color:#d83a4b;':'')+(isBase?'font-weight:700;outline:2px solid var(--accent);outline-offset:-2px':'');
+      return `<td style="${st}">${money(v)}</td>`;
+    }).join("")+"</tr>";
+  });
+  h+="</tbody></table>";
   el("sens").innerHTML=h;
   const be=breakeven();
-  el("beLine").textContent=`Break-even (at base price): ${mult(be.mv)} volume — about ${num(be.cases)} cases. The outlined cell is today's price & volume.`;
+  el("beLine").textContent=`Break-even (at base price): ${mult(be.mv)} volume — about ${num(be.cases)} cases. The outlined cell in each grid is today.`;
 }
 
 // ---------- assumptions editor ----------
