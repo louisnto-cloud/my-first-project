@@ -51,6 +51,16 @@ for ws in wb.worksheets:
                 if not any(cue.lower() in v.lower() for cue in CORRECTION_CUES):
                     warns.append(f"possible stale 'MÜV powder' claim in {ws.title}!{c.coordinate}: {v[:70]}")
 
+# 5b. Consistency (I7): front-door + brief present; Home link on every content tab
+for r in ["🏠 Start Here","Executive Brief 1-page"]:
+    check(r in names, f"missing navigation/brief tab: {r}")
+missing_home=[]
+for ws in wb.worksheets:
+    if ws.title=="🏠 Start Here": continue
+    has_home=any((isinstance(c.value,str) and "Home" in c.value and c.hyperlink) for row in ws.iter_rows(min_row=1,max_row=2) for c in row)
+    if not has_home: missing_home.append(ws.title)
+check(not missing_home, f"tabs missing a Home link: {missing_home[:6]}")
+
 # 6. Go/NoGo verdict formula present
 g=wb["Go-NoGo Decision"]
 has_verdict=any(isinstance(c.value,str) and "GO" in str(c.value) and c.value.startswith("=IF") for row in g.iter_rows() for c in row)

@@ -24,3 +24,12 @@ Reverse-chronological. Each entry = one committed iteration.
 - [I6] Sources: first source in each cell is now a clickable link (22 links on the 24 Sources tab).
 - [I8] MÜV Peer Set: added a sodium-vs-price positioning scatter (LMNT/Liquid I.V./Nuun/Organika
   sachets); MÜV plots once on-can sodium is confirmed.
+
+## Iteration 5 — 2026-07-18 ~08:52Z (batch I4/I7/I9)
+- [I4] Print polish: print_area set to used range on every sheet; header freeze-panes on the big
+  table tabs (Landscape, Peer Set, Outcomes, SWOT, Risk, Sources).
+- [I9] Added **Executive Brief 1-page** (portrait, fit-to-1-page): verdict, what MÜV is, category,
+  price/sodium ladder, 5 moves, top risks, regulatory — placed right after Start Here.
+- [I7] Strengthened validate_workbook.py with consistency assertions: Start Here + Exec Brief present,
+  and a Home link on every content tab (fails the build otherwise).
+- Workbook: 36 → 37 tabs.
