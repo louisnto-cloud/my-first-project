@@ -105,6 +105,11 @@
   /* charts */
   .chart{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:2px 0 8px;padding-bottom:2px}
   .chart svg{display:block}
+  /* toast */
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(12px);
+    background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:980px;font-size:13px;font-weight:600;
+    opacity:0;pointer-events:none;transition:.25s;z-index:100;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+  .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
   /* seasonality editor */
   .seasrow{display:flex;flex-wrap:wrap;gap:8px 12px;margin:4px 0 18px}
   .seasrow label{font-size:11px;color:var(--soft);font-weight:700;display:flex;flex-direction:column;gap:3px}
@@ -148,6 +153,7 @@
         <p class="sub">One-Year Operating Model · FY2026 · all $ CDN</p>
       </div>
       <div class="actions">
+        <button id="btnShare" title="Copy a link that reproduces this exact model">🔗 Share</button>
         <button id="btnExport" title="Download the scenario comparison as CSV">↓ CSV</button>
         <button id="btnPrint" title="Print or save as PDF">⎙ Print</button>
         <button id="btnReset" title="Reset all assumptions to defaults">↺ Reset</button>
@@ -254,7 +260,7 @@
   </section>
 
   <div class="foot">
-    v3.4 · charts · KPI deltas · monthly phasing · dark-mode aware · your edits are saved in this browser · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
+    v3.7 · charts · KPI deltas · monthly · targets · shareable links · keyboard nav · dark-mode aware · your edits are saved in this browser · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
     Mirrors the Excel workbook (Home · Assumptions · Dashboard · scenarios · Monthly · Pricing Lab · Targets · Sensitivity · Checks).
   </div>
 </div>
@@ -316,6 +322,36 @@ function exportCsv(){
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([csv],{type:"text/csv"}));
   a.download = "organika_scenarios.csv"; a.click();
+}
+// ---------- shareable link (encodes the whole model in the URL, no backend) ----------
+function shareState(){
+  return location.origin + location.pathname +
+    "#m=" + btoa(unescape(encodeURIComponent(JSON.stringify({SKUS, CO, LEVERS, SEASON, current}))));
+}
+function applyHash(){
+  try{
+    const m = (location.hash.match(/[#&]m=([^&]+)/)||[])[1]; if(!m) return false;
+    const s = JSON.parse(decodeURIComponent(escape(atob(m))));
+    (s.SKUS||[]).forEach((o,i)=>{ if(SKUS[i]) Object.assign(SKUS[i], o); });
+    Object.assign(CO, s.CO||{});
+    Object.keys(s.LEVERS||{}).forEach(k=>{ if(LEVERS[k]) Object.assign(LEVERS[k], s.LEVERS[k]); });
+    if(Array.isArray(s.SEASON)) s.SEASON.forEach((v,i)=>{ if(i<SEASON.length) SEASON[i]=v; });
+    if(s.current && SCEN.includes(s.current)) current = s.current;
+    return true;
+  }catch(e){ return false; }
+}
+function toast(msg){
+  let t = el("toast");
+  if(!t){ t=document.createElement("div"); t.id="toast"; t.className="toast"; document.body.appendChild(t); }
+  t.textContent = msg; t.classList.add("on");
+  clearTimeout(t._h); t._h = setTimeout(()=>t.classList.remove("on"), 1900);
+}
+function doShare(){
+  const url = shareState();
+  try{ history.replaceState(null, "", "#m="+url.split("#m=")[1]); }catch(e){}
+  if(navigator.clipboard && navigator.clipboard.writeText)
+    navigator.clipboard.writeText(url).then(()=>toast("Shareable link copied to clipboard")).catch(()=>window.prompt("Copy this link:", url));
+  else window.prompt("Copy this link:", url);
 }
 
 // ---------------- formatting helpers ----------------
@@ -737,8 +773,10 @@ function refresh(){renderKpis();renderCmp();renderPnl();renderPricing();renderSe
 el("btnReset").onclick=()=>{ if(confirm("Reset all assumptions to the default figures?")) resetAll(); };
 el("btnExport").onclick=exportCsv;
 el("btnPrint").onclick=()=>window.print();
+el("btnShare").onclick=doShare;
 
 restore();            // load saved edits, if any
+applyHash();          // a shared #m= link overrides local edits
 buildNav();renderAsmp();refresh();
 </script>
 </body>

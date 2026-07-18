@@ -35,6 +35,12 @@ cd /tmp && npm install jsdom >/dev/null 2>&1   # then run /tmp/org-test.js with 
   seasonality curve, EBITDA-by-month chart (fixed costs land evenly → shows the
   underwater months), reconciling table. Monthly EBITDA ties to annual exactly.
 
+- **Iter 5 (expand):** Targets/goal-seek tab — bisection-solves the volume to hit
+  a target EBITDA/Net Income (refactor compute→computeLever). **Iter 6 (improve):**
+  motion polish (KPI entrance, hover lift, view transitions) + full keyboard tab nav
+  (Arrow/Home/End, roving tabindex, aria). **Iter 7 (expand):** shareable links —
+  whole model encodes into the URL hash, "Share" copies it, loads reproduce exactly.
+
 ## Backlog (priority order)
 ### Improvement (80%)
 1. Per-SKU contribution bars on P&L; assumptions UX (grouping, validation, help).
