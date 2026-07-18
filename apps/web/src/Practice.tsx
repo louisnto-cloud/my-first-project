@@ -8,6 +8,38 @@ import { Celebrate } from './Celebrate';
 // Foundations path and three audience courses. Completing a lesson posts a
 // practice event — points, streaks, and badges are computed server-side.
 
+// 🏆 Course-completion certificate — a proud, printable/screenshot-able
+// award when a learner finishes every lesson in a course.
+function Certificate({ course, name, lang, onExit }: { course: Course; name: string; lang: 'vi' | 'en'; onExit: () => void }) {
+  const vi = lang === 'vi';
+  const today = new Date().toLocaleDateString(vi ? 'vi-VN' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  return (
+    <div className="space-y-3">
+      <button onClick={onExit} className="text-xl font-bold text-violet-500">←</button>
+      <div className="relative overflow-hidden rounded-3xl border-4 border-amber-300 bg-gradient-to-br from-amber-50 via-white to-violet-50 p-6 text-center shadow-lift">
+        <div className="pointer-events-none absolute -right-6 -top-6 text-7xl opacity-10">🏆</div>
+        <div className="pointer-events-none absolute -bottom-6 -left-6 text-7xl opacity-10">⭐</div>
+        <div className="text-4xl">🏆</div>
+        <div className="mt-1 text-[11px] font-black uppercase tracking-[0.2em] text-amber-600">{vi ? 'Chứng nhận hoàn thành' : 'Certificate of completion'}</div>
+        <div className="mt-3 text-xs font-bold text-slate-400">{vi ? 'Trao tặng' : 'Awarded to'}</div>
+        <div className="font-display text-3xl font-semibold text-ink">{name || (vi ? 'Học viên E’TOP' : 'E’TOP learner')}</div>
+        <div className="mx-auto my-3 h-px w-24 bg-amber-300" />
+        <div className="text-sm font-bold text-slate-500">{vi ? 'đã hoàn thành khoá' : 'for completing'}</div>
+        <div className="text-lg font-black text-violet-700">{course.emoji} {vi ? course.titleVi : course.titleEn}</div>
+        <div className="mt-3 text-2xl">⭐⭐⭐</div>
+        <div className="mt-4 flex items-center justify-between text-[11px] font-bold text-slate-400">
+          <span>{today}</span>
+          <span>Anh Ngữ E’TOP</span>
+        </div>
+      </div>
+      <button onClick={() => window.print()} className="btn-fun btn-fun-green w-full">
+        🖨 {vi ? 'In / Lưu chứng chỉ' : 'Print / Save certificate'}
+      </button>
+      <p className="text-center text-xs font-semibold text-muted">{vi ? 'Chụp màn hình để khoe ông bà nhé! 💛' : 'Screenshot it to share! 💛'}</p>
+    </div>
+  );
+}
+
 type Progress = Record<string, number>; // lessonId -> bestPct
 
 function LessonPlayer({ lesson, lang, onExit }: { lesson: Lesson; lang: 'vi' | 'en'; onExit: (completed: boolean) => void }) {
@@ -225,11 +257,12 @@ function VocabSprint({ lang, pool, onExit }: { lang: 'vi' | 'en'; pool: VocabWor
   );
 }
 
-export function PracticeHub({ lang }: { lang: 'vi' | 'en' }) {
+export function PracticeHub({ lang, studentName = '' }: { lang: 'vi' | 'en'; studentName?: string }) {
   const [progress, setProgress] = useState<Progress>({});
   const [course, setCourse] = useState<Course | null>(null);
   const [lesson, setLesson] = useState<Lesson | null>(null);
   const [sprinting, setSprinting] = useState(false);
+  const [certFor, setCertFor] = useState<Course | null>(null);
 
   const load = async () => {
     try {
@@ -243,6 +276,10 @@ export function PracticeHub({ lang }: { lang: 'vi' | 'en' }) {
 
   if (lesson && course) {
     return <LessonPlayer lesson={lesson} lang={lang} onExit={() => { setLesson(null); void load(); }} />;
+  }
+
+  if (certFor) {
+    return <Certificate course={certFor} name={studentName} lang={lang} onExit={() => setCertFor(null)} />;
   }
 
   if (sprinting) {
@@ -315,20 +352,28 @@ export function PracticeHub({ lang }: { lang: 'vi' | 'en' }) {
         const lessons = allLessons(c);
         const done = lessons.filter((l) => (progress[l.id] ?? 0) >= 50).length;
         const pct = Math.round((done / lessons.length) * 100);
+        const complete = done === lessons.length;
         return (
-          <button key={c.id} onClick={() => setCourse(c)} className="card flex w-full items-center gap-3 text-left transition active:scale-[0.99] hover:border-violet-300">
-            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-violet-50 text-2xl">{c.emoji}</span>
-            <span className="min-w-0 flex-1">
-              <span className="block truncate font-black text-slate-700">{lang === 'vi' ? c.titleVi : c.titleEn}</span>
-              <span className="mt-1.5 block h-2 overflow-hidden rounded-full bg-violet-100">
-                <span className="block h-full rounded-full bg-gradient-to-r from-emerald-400 to-teal-400 transition-all" style={{ width: `${pct}%` }} />
+          <div key={c.id} className={`card space-y-2 ${complete ? 'border-amber-200 bg-amber-50/40' : ''}`}>
+            <button onClick={() => setCourse(c)} className="flex w-full items-center gap-3 text-left transition active:scale-[0.99]">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-violet-50 text-2xl">{c.emoji}</span>
+              <span className="min-w-0 flex-1">
+                <span className="block truncate font-black text-slate-700">{lang === 'vi' ? c.titleVi : c.titleEn}</span>
+                <span className="mt-1.5 block h-2 overflow-hidden rounded-full bg-violet-100">
+                  <span className="block h-full rounded-full bg-gradient-to-r from-emerald-400 to-teal-400 transition-all" style={{ width: `${pct}%` }} />
+                </span>
               </span>
-            </span>
-            <span className="shrink-0 text-right">
-              <span className="block text-sm font-black text-violet-700">{pct}%</span>
-              <span className="block text-[10px] font-bold text-slate-400">{done}/{lessons.length}</span>
-            </span>
-          </button>
+              <span className="shrink-0 text-right">
+                <span className="block text-sm font-black text-violet-700">{complete ? '🏆' : `${pct}%`}</span>
+                <span className="block text-[10px] font-bold text-slate-400">{done}/{lessons.length}</span>
+              </span>
+            </button>
+            {complete && (
+              <button onClick={() => setCertFor(c)} className="btn-fun btn-fun-amber w-full !py-2 text-sm">
+                🏆 {lang === 'vi' ? 'Nhận chứng chỉ hoàn thành!' : 'Get your certificate!'}
+              </button>
+            )}
+          </div>
         );
       })}
     </div>

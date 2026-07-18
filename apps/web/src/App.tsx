@@ -409,7 +409,7 @@ function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: strin
 
       {view === 'practice' ? (
         <>
-          <PracticeHub lang={lang} />
+          <PracticeHub lang={lang} studentName={name} />
           {classes[0] && <Leaderboard classId={classes[0].id} meName={name} lang={lang} />}
         </>
       ) : (
