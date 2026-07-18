@@ -121,8 +121,13 @@
     <div class="kpis" id="kpis"></div>
     <div class="panel">
       <h2>Scenario comparison</h2>
-      <p class="h-sub">All four scenarios side by side — updates live as you edit Assumptions.</p>
+      <p class="h-sub">All scenarios side by side — updates live as you edit Assumptions.</p>
       <div id="cmp"></div>
+    </div>
+    <div class="panel">
+      <h2>Where the profit comes from</h2>
+      <p class="h-sub">Your SKUs ranked by contribution for the <span class="scn-name"></span> scenario.</p>
+      <div id="mix"></div>
     </div>
     <div class="panel">
       <h2>Saved snapshots</h2>
@@ -432,6 +437,22 @@ function renderPnl(){
   el("pnl").innerHTML=h;
 }
 
+function renderMix(){
+  const e=el("mix"); if(!e) return;
+  const r=compute(current);
+  const rows=SKUS.map((s,i)=>({name:`${s.flav} ${s.fmt}`, cases:r.lines[i].cases, net:r.lines[i].net, cm:r.lines[i].cm}));
+  const totCm=rows.reduce((a,x)=>a+x.cm,0);
+  rows.sort((a,b)=>b.cm-a.cm);
+  let h="<table><thead><tr><th>SKU</th><th>Cases</th><th>Net Sales</th><th>Contribution</th><th>% of total</th></tr></thead><tbody>";
+  rows.forEach(x=>{
+    const share=totCm? x.cm/totCm:0;
+    h+=`<tr><td>${x.name}</td><td>${num(x.cases)}</td><td>${money(x.net)}</td>`+
+       `<td${x.cm<0?' style="color:#d83a4b"':''}>${money(x.cm)}</td><td>${pct(share)}</td></tr>`;
+  });
+  h+=`<tr class="tot"><td>Total</td><td>${num(rows.reduce((a,x)=>a+x.cases,0))}</td><td>${money(rows.reduce((a,x)=>a+x.net,0))}</td><td class="hl">${money(totCm)}</td><td>100.0%</td></tr>`;
+  h+="</tbody></table>";
+  e.innerHTML=h;
+}
 function renderMonthly(){
   document.querySelectorAll(".scn-name").forEach(e=>e.textContent=current);
   const r = compute(current);
@@ -743,7 +764,7 @@ function renderSkuWarn(){
     ? `<div class="warn">⚠ ${bad.length} SKU${bad.length>1?'s':''} priced at or below cost: ${bad.map(s=>`${s.flav} ${s.fmt}`).join(', ')}. Check CP vs COGS.</div>`
     : "";
 }
-function refresh(){renderKpis();renderCmp();renderPnl();renderMonthly();renderPricing();renderUecon();renderTargets();renderSens();renderSkuWarn();autosave();}
+function refresh(){renderKpis();renderCmp();renderMix();renderPnl();renderMonthly();renderPricing();renderUecon();renderTargets();renderSens();renderSkuWarn();autosave();}
 
 // ---------- persistence ----------
 const STORE_KEY = "organika_sparkling_daily_v1";
