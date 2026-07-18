@@ -47,7 +47,7 @@ Likelihood (L) and impact (I): H / M / L. Owner is who at Organika drives the mi
 | 8 | Launch price leaves no promo headroom for Tet/11.11/livestream | M | M | Price backward from everyday-promo with 25–35% headroom before quoting the distributor | Ch6.3, Ch8.4 |
 | 9 | Distributor launches a competing private label | M | M | Category non-compete clause; monitor the partner's own-brand activity | Ch8.2 |
 | 10 | CPTPP duty not zero (wrong/absent C/O) inflates landed cost ~15% | L | M | Confirm HS 2106.90.99 line in Decree 115/2022; lock the certificate-of-origin process with the freight forwarder | Ch5.6 |
-| 11 | Single-distributor concentration risk | M | M | Accept in a small market, but keep IP and the ecommerce Mall stores under Organika control as leverage | Ch8.2 |
+| 11 | Single-distributor concentration risk | M | M | Accept in a small market, but keep IP and the ecommerce Mall stores under Organika control as negotiating strength | Ch8.2 |
 | 12 | Canada's low origin-awareness slows pull-through | M | M | Lead with Health Canada credential + category benefit, not flag-waving; pharmacist education | Ch7.6, Ch4 W4 |
 | 13 | Kids/collagen categories carry elevated regulatory and trust heat | M | M | Lead with magnesium/greens; treat collagen as the credential flag, kids as later-phase | Ch3.3, Ch7.8 |
 
