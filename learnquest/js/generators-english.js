@@ -243,6 +243,21 @@ const EG = {
 
   /* ---------- GRADE 3 ---------- */
 
+  'spell-tiles': (p) => {
+    const bank = p && p.set === 3 ? EN.spellTiles3 : EN.spellTiles2;
+    const wobj = U.pick(bank);
+    const pool = 'abcdefghijklmnopqrstuvwxyz'.split('').filter(c => !wobj.w.includes(c));
+    return {
+      format: 'sequence',
+      prompt: `Spell it: ${wobj.e}`,
+      say: `Spell the word ${wobj.w}. Sound it out: ${wobj.w.split('').join('... ')}.`,
+      visual: `<div class="hint-emoji">${wobj.e}</div>`,
+      sequence: wobj.w.split(''),
+      distract: U.pickN(pool, 3),
+      explain: `${wobj.w} is spelled ${wobj.w.split('').join(', ')}.`
+    };
+  },
+
   'syllables': () => {
     const w = U.pick(EN.syllableWords);
     return {

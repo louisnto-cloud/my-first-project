@@ -149,6 +149,7 @@ const CURRICULUM = [
           { id: 'read2', name: 'Story Reading', icon: '📚', gen: 'passage-comp', params: { grade: 2 } },
           { id: 'buildsent', name: 'Sentence Builder', icon: '🔧', gen: 'build-sentence', params: {} },
           { id: 'endmark', name: 'End Marks', icon: '❓', gen: 'end-punctuation', params: {} },
+          { id: 'spelltiles2', name: 'Spelling Tiles', icon: '🔡', gen: 'spell-tiles', params: { set: 2 } },
           { id: 'spell2', name: 'Word Typing', icon: '⌨️', gen: 'typed-word', params: { set: 2 } }
         ]
       },
@@ -159,6 +160,7 @@ const CURRICULUM = [
           { id: 'vocab', name: 'Word Power', icon: '💪', gen: 'vocab', params: {} },
           { id: 'read3', name: 'Deep Reading', icon: '🤿', gen: 'passage-comp', params: { grade: 3 } },
           { id: 'order', name: 'Story Steps', icon: '🪜', gen: 'story-order', params: {} },
+          { id: 'spelltiles3', name: 'Spelling Tiles', icon: '🔡', gen: 'spell-tiles', params: { set: 3 } },
           { id: 'pos', name: 'Word Sorter', icon: '🗂️', gen: 'parts-of-speech', params: {} }
         ]
       },

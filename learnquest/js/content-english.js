@@ -564,6 +564,19 @@ const EN = {
     }
   ],
 
+  spellTiles2: [
+    { w: 'ship', e: '🚢' }, { w: 'frog', e: '🐸' }, { w: 'clock', e: '🕐' }, { w: 'crab', e: '🦀' },
+    { w: 'plant', e: '🪴' }, { w: 'sled', e: '🛷' }, { w: 'brush', e: '🖌️' }, { w: 'star', e: '⭐' },
+    { w: 'nest', e: '🪺' }, { w: 'snack', e: '🍿' }, { w: 'drum', e: '🥁' }, { w: 'flag', e: '🚩' },
+    { w: 'grape', e: '🍇' }, { w: 'train', e: '🚆' }, { w: 'sheep', e: '🐑' }, { w: 'whale', e: '🐋' }
+  ],
+  spellTiles3: [
+    { w: 'garden', e: '🌻' }, { w: 'dragon', e: '🐉' }, { w: 'planet', e: '🪐' }, { w: 'basket', e: '🧺' },
+    { w: 'rabbit', e: '🐰' }, { w: 'pumpkin', e: '🎃' }, { w: 'rocket', e: '🚀' }, { w: 'pencil', e: '✏️' },
+    { w: 'turtle', e: '🐢' }, { w: 'castle', e: '🏰' }, { w: 'forest', e: '🌲' }, { w: 'guitar', e: '🎸' },
+    { w: 'monkey', e: '🐒' }, { w: 'sunset', e: '🌅' }, { w: 'window', e: '🪟' }, { w: 'anchor', e: '⚓' }
+  ],
+
   commaUsage: [
     { correct: 'We packed apples, cheese, and crackers.', wrong: ['We packed apples cheese and crackers.', 'We packed, apples cheese and crackers.'], why: 'Commas separate items in a list.' },
     { correct: 'After the long storm, the streets were flooded.', wrong: ['After the long storm the streets were flooded.', 'After, the long storm the streets were flooded.'], why: 'A comma follows an introductory phrase.' },
