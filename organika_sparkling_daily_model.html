@@ -506,14 +506,19 @@ function renderPricing(){
       if(priceMetric==="gp") return 1 - (s.cosd+s.cosi)/netpc;
       return s.vol*Math.pow(m,CO.elast)*(netpc - (s.cosd+s.cosi) - s.ap);
     });
-    const best = Math.max(...vals);
-    h+=`<tr><td>${s.flav} ${s.fmt}</td>`+vals.map(v=>{
+    const best = Math.max(...vals), lo = Math.min(...vals), span = (best-lo)||1;
+    h+=`<tr><td>${s.flav} <span class="hint">${s.fmt}</span></td>`+vals.map((v,j)=>{
+      const t = (v-lo)/span, isBest = v===best;
       const txt = priceMetric==="gp"? pct(v): money(v);
-      return `<td${v===best?' style="font-weight:700"':''}>${txt}</td>`;
+      const bg = isBest ? "" : `background:rgba(10,132,255,${(0.05+t*0.40).toFixed(2)})`;
+      const title = `CP ${mult(LADDER[j])} → ${priceMetric==="gp"?"GP "+pct(v):"annual contribution "+money(v)}`;
+      return `<td class="${isBest?'best':''}" style="${bg}" title="${title}">${txt}${isBest?' ★':''}</td>`;
     }).join("")+"</tr>";
   });
   h+="</tbody></table>";
   el("pricing").innerHTML=h;
+  el("pricing").insertAdjacentHTML("beforeend",
+    `<p class="hint" style="margin-top:10px">Each row is shaded by value; <b>★</b> marks the best CP in range for the selected metric. Hover any cell for detail.</p>`);
 }
 
 const VOLM=[0.70,0.90,1.00,1.10,1.30,1.50,1.70];
