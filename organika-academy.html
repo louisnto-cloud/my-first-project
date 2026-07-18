@@ -474,6 +474,13 @@ body,button,input,textarea{font-family:'Be Vietnam Pro',-apple-system,BlinkMacSy
 /* flashcard redesign */
 .card-wrap{height:340px}
 .card-hint2{font-size:13px;opacity:.75;margin-top:14px;background:rgba(255,255,255,.12);border-radius:20px;padding:7px 14px}
+.lf-toggle{position:absolute;top:12px;right:12px;background:rgba(255,255,255,.18);border:none;color:#fff;border-radius:20px;padding:5px 11px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit}
+.lf-play{width:96px;height:96px;border-radius:50%;background:rgba(255,255,255,.2);border:none;color:#fff;font-size:40px;cursor:pointer;margin-bottom:14px;box-shadow:0 0 0 8px rgba(255,255,255,.08)}
+.lf-play:active{transform:scale(.93)}
+.card-front .tone-strip{justify-content:center}
+.card-front .tsyl{background:rgba(255,255,255,.16);color:#fff}
+.card-front .tsyl i{color:#fff}
+.card-front .tsyl.tkey{color:rgba(255,255,255,.7)}
 .card-back{justify-content:flex-start;overflow-y:auto;padding:20px 18px;-webkit-overflow-scrolling:touch}
 .vi-label{font-size:12px;font-weight:700;color:var(--tx2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px;padding-right:36px}
 .vi-word{font-size:30px;font-weight:900;color:var(--g);line-height:1.25;letter-spacing:-.4px;margin-bottom:8px;padding-right:36px}
@@ -1453,6 +1460,7 @@ let S={
   placementScore:0,   // placement quiz correct count
   searchQ:'',         // dictionary search query
   showFilters:false,  // practice screen: filters expanded
+  listenFirst:false,  // flashcard listen-first mode
   sessionLen:20,      // cards per practice session
   mixedActive:false,  // mixed session in progress
   mixedModes:[],      // per-card mode assignment for mixed sessions
@@ -1532,7 +1540,7 @@ function toggleStar(id){
 const SAVE_KEY='organika-academy-v1';
 function snapshot(){
   return {v:1,
-    state:{xp:S.xp,streak:S.streak,lastDay:S.lastDay,todayXP:S.todayXP,xpDay:S.xpDay,dailyGoal:S.dailyGoal,doneSits:S.doneSits||[],sessionLen:S.sessionLen||20,days:S.days||[]},
+    state:{xp:S.xp,streak:S.streak,lastDay:S.lastDay,todayXP:S.todayXP,xpDay:S.xpDay,dailyGoal:S.dailyGoal,doneSits:S.doneSits||[],sessionLen:S.sessionLen||20,days:S.days||[],listenFirst:S.listenFirst},
     vocab:VOCAB.filter(v=>v.correct||v.wrong||v.starred||v.lastSeen)
       .map(v=>({id:v.id,box:v.box,correct:v.correct,wrong:v.wrong,lastSeen:v.lastSeen,starred:v.starred}))};
 }
@@ -1667,7 +1675,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v47';
+const APP_VERSION='v48';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1849,6 +1857,11 @@ function render(){
   if(S.screen==='type'&&S.typeChecked===null){
     const inp=document.getElementById('type-input');
     if(inp) inp.focus();
+  }
+  // listen-first flashcard: auto-play the word when a new card appears
+  if(S.screen==='flashcard'&&S.listenFirst&&!S.flipped){
+    const v=getV(S.activeLesson[S.lessonIdx]);
+    if(v&&S._lastSpoken!==v.id){S._lastSpoken=v.id;speak(v.vi);}
   }
 }
 function scrollToFeedback(){
@@ -2035,9 +2048,16 @@ function renderFlashcard(){
       <div class="card-wrap${S.flipped?' flipped':''}">
         <div class="card-face card-front">
           <div class="card-tier-badge">Tier ${v.tier}</div>
-          <div class="card-cat">${v.category}</div>
-          <div class="card-main-text">${v.en}</div>
-          <div class="card-hint2">👆 Tap to see the Vietnamese</div>
+          <button class="lf-toggle" onclick="event.stopPropagation();S.listenFirst=!S.listenFirst;saveState();render()">${S.listenFirst?'👂 Listen-first':'🔤 Word-first'}</button>
+          ${S.listenFirst?`
+            <button class="lf-play" onclick="event.stopPropagation();speak('${v.vi.replace(/'/g,"\\'")}')">🔊</button>
+            ${toneStrip(v.vi)}
+            <div class="card-hint2">What does it mean? Tap to reveal</div>
+          `:`
+            <div class="card-cat">${v.category}</div>
+            <div class="card-main-text">${v.en}</div>
+            <div class="card-hint2">👆 Tap to see the Vietnamese</div>
+          `}
         </div>
         <div class="card-face card-back">
           <button class="star-btn" onclick="event.stopPropagation();toggleStar('${v.id}')">${v.starred?'★':'☆'}</button>
