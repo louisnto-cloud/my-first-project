@@ -123,6 +123,17 @@
   }
   button:focus-visible,input.cell:focus-visible,.nav button:focus-visible,.pill:focus-visible{
     outline:2px solid var(--accent);outline-offset:2px}
+  /* motion & interaction polish */
+  @keyframes kpiIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @keyframes viewIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  .kpi{animation:kpiIn .34s cubic-bezier(.2,.7,.2,1) both;transition:transform .18s ease,box-shadow .18s ease}
+  .kpi:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.10)}
+  .view.on{animation:viewIn .26s ease}
+  .pill{transition:transform .15s ease,background .15s,box-shadow .15s,border-color .15s}
+  .pill:hover{transform:translateY(-1px)}
+  .nav button{transition:background .15s,color .15s}
+  .actions button{transition:border-color .15s,color .15s,transform .15s}
+  .actions button:hover{transform:translateY(-1px)}
   @media (prefers-reduced-motion: reduce){*{transition:none !important;animation:none !important}}
   @media print{.nav,.actions,.scen,.note{display:none}.view{display:block !important}.panel{break-inside:avoid}}
 </style>
@@ -693,11 +704,20 @@ const VIEWS=["Overview","P&L","Pricing Lab","Sensitivity","Monthly","Targets","A
 function buildNav(){
   el("nav").setAttribute("role","tablist");
   document.querySelectorAll(".view").forEach(v=>v.setAttribute("role","tabpanel"));
-  el("nav").innerHTML=VIEWS.map((v,i)=>`<button role="tab" aria-selected="${i===0}" class="${i===0?'on':''}" data-v="${v}">${v}</button>`).join("");
-  el("nav").querySelectorAll("button").forEach(b=>b.onclick=()=>{
-    el("nav").querySelectorAll("button").forEach(x=>{x.classList.remove("on");x.setAttribute("aria-selected","false");});
-    b.classList.add("on");b.setAttribute("aria-selected","true");
+  el("nav").innerHTML=VIEWS.map((v,i)=>`<button role="tab" aria-selected="${i===0}" tabindex="${i===0?0:-1}" class="${i===0?'on':''}" data-v="${v}">${v}</button>`).join("");
+  const btns=[...el("nav").querySelectorAll("button")];
+  btns.forEach(b=>b.onclick=()=>{
+    btns.forEach(x=>{x.classList.remove("on");x.setAttribute("aria-selected","false");x.tabIndex=-1;});
+    b.classList.add("on");b.setAttribute("aria-selected","true");b.tabIndex=0;
     document.querySelectorAll(".view").forEach(s=>s.classList.toggle("on", s.dataset.view===b.dataset.v));
+  });
+  el("nav").addEventListener("keydown",e=>{
+    const cur=btns.findIndex(b=>b.getAttribute("aria-selected")==="true");
+    let ni=null;
+    if(e.key==="ArrowRight"||e.key==="ArrowDown") ni=(cur+1)%btns.length;
+    else if(e.key==="ArrowLeft"||e.key==="ArrowUp") ni=(cur-1+btns.length)%btns.length;
+    else if(e.key==="Home") ni=0; else if(e.key==="End") ni=btns.length-1;
+    if(ni!==null){ e.preventDefault(); btns[ni].click(); btns[ni].focus(); }
   });
   el("scenBar").innerHTML=`<span class="lab">SCENARIO</span>`+
     SCEN.map(s=>`<button class="pill ${s===current?'on':''}" data-s="${s}">${s}</button>`).join("");
