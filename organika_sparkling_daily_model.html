@@ -270,6 +270,17 @@
     </div>
   </section>
 
+  <!-- OUTLOOK -->
+  <section class="view" data-view="Outlook">
+    <div class="panel">
+      <h2>3-year outlook — <span class="scn-name"></span></h2>
+      <p class="h-sub">The selected scenario grown by annual volume, with per-case economics and fixed costs held flat — so EBITDA margin expands with scale (operating leverage). A simple trajectory, not a channel forecast.</p>
+      <label class="hint">Annual volume growth &nbsp;<input class="cell" id="growthInp" type="number" step="5" min="0" value="20" style="width:70px"> %</label>
+      <div class="chart" id="outlookChart" style="margin-top:10px"></div>
+      <div id="outlookTable"></div>
+    </div>
+  </section>
+
   <!-- ASSUMPTIONS -->
   <section class="view" data-view="Assumptions">
     <div class="note">This is the only place you type. Edit any yellow cell — every number everywhere updates instantly.</div>
@@ -298,7 +309,7 @@
   </section>
 
   <div class="foot">
-    v3.20 · waterfall + scenario + SKU + tornado + break-even charts · KPI deltas · scenario Δ · monthly phasing · goal-seek targets · pricing heat · integrity checks · shareable links · full CSV · keyboard nav · a11y · dark-mode aware · your edits are saved in this browser · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
+    v3.22 · 8 tabs · waterfall + scenario + SKU + tornado + break-even + outlook charts · KPI &amp; scenario deltas · monthly phasing · 3-year outlook · goal-seek targets · pricing heat · integrity checks · shareable links · full CSV · keyboard nav · a11y · dark-mode aware · your edits are saved in this browser · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
     Mirrors the Excel workbook (Home · Assumptions · Dashboard · scenarios · Monthly · Pricing Lab · Targets · Sensitivity · Checks).
   </div>
 </div>
@@ -327,6 +338,7 @@ const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov
 const SEASON = [0.60,0.60,0.80,0.90,1.15,1.35,1.45,1.35,1.05,0.85,0.75,1.05];
 let current = "Base";
 let priceMetric = "gp";
+let outlookGrowth = 0.20;   // annual volume growth for the 3-year outlook
 
 // ---------------- persistence (survives reload) ----------------
 const LS = "organika.model.v3";
@@ -480,6 +492,38 @@ function breakeven(){
 // ---------------- rendering ----------------
 function el(id){return document.getElementById(id);}
 
+// ---------- 3-year outlook (volume growth, fixed costs held flat = operating leverage) ----------
+function outlookData(g){
+  const bl=LEVERS[current], yrs=[];
+  for(let y=1;y<=3;y++){
+    const r=computeLever({v: bl.v*Math.pow(1+g,y-1), p: bl.p, d: bl.d});
+    yrs.push({year:y, cases:r.cases, net:r.net, ebitda:r.ebitda, ebitdapct:r.ebitdapct, ni:r.ni});
+  }
+  return yrs;
+}
+function outlookChartSVG(yrs){
+  const W=560,H=220,padX=20,padB=40,padT=30;
+  const max=Math.max(...yrs.map(y=>y.net),1);
+  const gap=(W-2*padX)/yrs.length, bw=Math.min(96,gap*0.5), xC=i=>padX+gap*i+gap/2, Y=v=>padT+(1-v/max)*(H-padT-padB);
+  let g=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:420px" role="img" aria-label="Three-year net sales outlook">`;
+  g+=`<line x1="${padX}" y1="${(H-padB).toFixed(1)}" x2="${W-padX}" y2="${(H-padB).toFixed(1)}" stroke="var(--line)"/>`;
+  yrs.forEach((yr,i)=>{ const x=xC(i)-bw/2, yt=Y(yr.net), h=Math.max(1,(H-padB)-yt);
+    g+=`<rect x="${x.toFixed(1)}" y="${yt.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="4" fill="var(--accent)"><title>Year ${yr.year}: net ${money(yr.net)}, EBITDA ${money(yr.ebitda)} (${pct(yr.ebitdapct)})</title></rect>`;
+    g+=`<text x="${xC(i).toFixed(1)}" y="${(yt-18).toFixed(1)}" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">${sMoney(yr.net)}</text>`;
+    g+=`<text x="${xC(i).toFixed(1)}" y="${(yt-5).toFixed(1)}" text-anchor="middle" font-size="10" fill="var(--good)">${pct(yr.ebitdapct)} EBITDA</text>`;
+    g+=`<text x="${xC(i).toFixed(1)}" y="${(H-padB+18).toFixed(1)}" text-anchor="middle" font-size="11" fill="var(--soft)">Year ${yr.year}</text>`; });
+  return g+"</svg>";
+}
+function renderOutlook(){
+  if(!el("outlookTable")) return;
+  const yrs=outlookData(outlookGrowth);
+  el("outlookChart").innerHTML=outlookChartSVG(yrs);
+  let h=`<table aria-label="Three-year outlook"><thead><tr><th>Year</th><th>Cases</th><th>Net Sales</th><th>EBITDA</th><th>EBITDA %</th><th>Net Income</th></tr></thead><tbody>`;
+  yrs.forEach(yr=>{ h+=`<tr><td>Year ${yr.year}</td><td>${num(yr.cases)}</td><td>${money(yr.net)}</td>`+
+    `<td${yr.ebitda<0?' style="color:var(--bad)"':''}>${money(yr.ebitda)}</td><td>${pct(yr.ebitdapct)}</td>`+
+    `<td${yr.ni<0?' style="color:var(--bad)"':''}>${money(yr.ni)}</td></tr>`; });
+  el("outlookTable").innerHTML=h+`</tbody></table>`;
+}
 function renderChecks(){
   if(!el("checks")) return;
   const r=compute(current), m=monthlyData(), be=breakeven();
@@ -954,7 +998,7 @@ function setCo(k,v){CO[k]=parseFloat(v)||0;refresh();persist();}
 function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();persist();}
 
 // ---------- nav / scenario bar ----------
-const VIEWS=["Overview","P&L","Pricing Lab","Sensitivity","Monthly","Targets","Assumptions"];
+const VIEWS=["Overview","P&L","Pricing Lab","Sensitivity","Monthly","Targets","Outlook","Assumptions"];
 function buildNav(){
   el("nav").setAttribute("role","tablist");
   document.querySelectorAll(".view").forEach(v=>v.setAttribute("role","tabpanel"));
@@ -985,13 +1029,14 @@ function buildNav(){
     el("tgtSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===tgtMetric));
     renderTargets();});
 }
-function refresh(){renderInsight();renderKpis();renderCmp();renderPnl();renderPricing();renderSens();renderCharts();renderMonthly();renderTargets();renderChecks();}
+function refresh(){renderInsight();renderKpis();renderCmp();renderPnl();renderPricing();renderSens();renderCharts();renderMonthly();renderTargets();renderOutlook();renderChecks();}
 
 // wire header actions
 el("btnReset").onclick=()=>{ if(confirm("Reset all assumptions to the default figures?")) resetAll(); };
 el("btnExport").onclick=exportCsv;
 el("btnPrint").onclick=()=>window.print();
 el("btnShare").onclick=doShare;
+el("growthInp").oninput=e=>{ outlookGrowth=(parseFloat(e.target.value)||0)/100; renderOutlook(); };
 
 restore();            // load saved edits, if any
 applyHash();          // a shared #m= link overrides local edits
