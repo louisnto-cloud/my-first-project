@@ -5,6 +5,7 @@ on:
     branches:
       - claude/english-center-app-yylgv3
       - claude/pilgrimage-catholic-app-t572l3
+      - claude/vietnamese-autism-learning-app-ndhztn
       - main
   workflow_dispatch:
 
@@ -32,9 +33,10 @@ jobs:
           npm ci
           npm run build
 
-      # The Pilgrimage (pilgrimage/) — served under /pilgrimage.
+      # The Pilgrimage (pilgrimage/) — served under /pilgrimage. Built only on
+      # main and on its own feature branch (not on unrelated feature branches).
       - name: Build The Pilgrimage
-        if: hashFiles('pilgrimage/package.json') != ''
+        if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/claude/pilgrimage-catholic-app-t572l3') && hashFiles('pilgrimage/package.json') != ''
         working-directory: pilgrimage
         env:
           NEXT_PUBLIC_BASE_PATH: /my-first-project/pilgrimage
@@ -43,14 +45,16 @@ jobs:
           npm run build
 
       # On main: publish the whole site (E'TOP at the root, Pilgrimage under
-      # /pilgrimage). Publishing to the gh-pages branch auto-enables GitHub
-      # Pages, which the github-pages deployment API is not allowed to do
-      # with the default workflow token.
+      # /pilgrimage, Khu Vườn Nhỏ under /vuon). Publishing to the gh-pages
+      # branch auto-enables GitHub Pages, which the github-pages deployment API
+      # is not allowed to do with the default workflow token.
       - name: Assemble full site (main)
-        if: github.ref == 'refs/heads/main' && hashFiles('pilgrimage/package.json') != ''
+        if: github.ref == 'refs/heads/main'
         run: |
-          mkdir -p dist/pilgrimage
-          cp -r pilgrimage/out/. dist/pilgrimage/
+          mkdir -p dist/pilgrimage dist/vuon
+          if [ -d pilgrimage/out ]; then cp -r pilgrimage/out/. dist/pilgrimage/; fi
+          # Khu Vườn Nhỏ is a static app — copy it as-is (no build step).
+          cp -r vuon/index.html vuon/css vuon/js dist/vuon/
       - name: Publish full site
         if: github.ref == 'refs/heads/main' || hashFiles('pilgrimage/package.json') == ''
         uses: peaceiris/actions-gh-pages@v4
@@ -61,10 +65,26 @@ jobs:
       # On the pilgrimage feature branch: overlay only /pilgrimage, leaving
       # whatever is deployed at the site root untouched.
       - name: Publish /pilgrimage only (feature branch)
-        if: github.ref != 'refs/heads/main' && hashFiles('pilgrimage/package.json') != ''
+        if: github.ref == 'refs/heads/claude/pilgrimage-catholic-app-t572l3' && hashFiles('pilgrimage/package.json') != ''
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./pilgrimage/out
           destination_dir: pilgrimage
+          keep_files: true
+
+      # On the Khu Vườn Nhỏ feature branch: assemble the static app and overlay
+      # only /vuon, leaving the site root and /pilgrimage untouched.
+      - name: Assemble /vuon (feature branch)
+        if: github.ref == 'refs/heads/claude/vietnamese-autism-learning-app-ndhztn'
+        run: |
+          mkdir -p vuon_dist
+          cp -r vuon/index.html vuon/css vuon/js vuon_dist/
+      - name: Publish /vuon only (feature branch)
+        if: github.ref == 'refs/heads/claude/vietnamese-autism-learning-app-ndhztn'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./vuon_dist
+          destination_dir: vuon
           keep_files: true
