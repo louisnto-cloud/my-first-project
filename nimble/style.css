@@ -203,6 +203,16 @@ textarea:focus { outline: none; border-color: var(--accent); }
   width: 100%;
 }
 
+.domain-intro {
+  color: var(--ink-2);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  max-width: 480px;
+}
+.domain-intro strong { color: var(--ink); font-weight: 600; }
+
+.result-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; justify-content: center; }
+
 /* Recent form (ready screen) */
 .recent-form { display: flex; align-items: center; gap: 8px; min-height: 28px; }
 .form-label { color: var(--ink-3); font-size: 0.78rem; margin-right: 2px; }
@@ -232,12 +242,24 @@ textarea:focus { outline: none; border-color: var(--accent); }
 
 .domain-avgs { display: flex; flex-direction: column; gap: 8px; width: 100%; }
 .domain-row {
-  display: flex; justify-content: space-between; align-items: center;
+  display: flex; flex-direction: column; gap: 8px;
   background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 10px 14px; font-size: 0.92rem;
+  border-radius: var(--radius); padding: 12px 14px; font-size: 0.92rem;
+  text-align: left;
 }
+.domain-row-top { display: flex; justify-content: space-between; align-items: baseline; }
+.domain-count { color: var(--ink-3); font-size: 0.75rem; margin-left: 8px; }
 .domain-row .val { font-variant-numeric: tabular-nums; font-weight: 600; }
 .domain-row .val.empty { color: var(--ink-3); font-weight: 400; }
+.domain-bar { height: 6px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
+.domain-bar-fill { height: 100%; background: var(--accent); border-radius: 3px; transition: width 0.4s ease; }
+.focus-callout {
+  color: var(--ink-2); font-size: 0.9rem; line-height: 1.5;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 10px 14px; width: 100%;
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+}
+.focus-callout strong { color: var(--ink); }
 
 .chart-wrap { position: relative; width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px; }
 .chart-legend { display: flex; gap: 16px; justify-content: flex-end; color: var(--ink-2); font-size: 0.76rem; padding: 2px 8px 6px; }
@@ -290,6 +312,10 @@ textarea:focus { outline: none; border-color: var(--accent); }
 .hist-label { color: var(--ink-3); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 12px 0 4px; }
 .hist-body p, .hist-body blockquote { color: var(--ink-2); line-height: 1.5; font-size: 0.92rem; margin: 0; }
 .hist-body blockquote { font-style: italic; border-left: 3px solid var(--border); padding-left: 12px; }
+
+.data-actions { display: flex; gap: 20px; }
+.link-btn.danger { color: var(--danger); opacity: 0.85; }
+.link-btn.danger:hover { opacity: 1; color: var(--danger); }
 
 .spinner {
   width: 34px; height: 34px;

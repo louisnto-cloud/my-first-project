@@ -49,6 +49,7 @@
   <section id="view-ready" hidden>
     <h1>Ready?</h1>
     <p class="muted" id="readyMeta"></p>
+    <p class="domain-intro" id="domainIntro" hidden>Three arenas, shuffled so you can't settle in: <strong>business&nbsp;negotiation</strong>, <strong>legal&nbsp;argument</strong>, and <strong>personal&nbsp;confrontation</strong>. A scenario lands, the clock starts, you answer out loud in writing. Difficulty climbs as you rack up drills.</p>
     <div class="recent-form" id="recentForm"></div>
     <button class="primary big" id="startBtn">Start drill</button>
   </section>
@@ -56,7 +57,7 @@
   <!-- Loading scenario -->
   <section id="view-loading" hidden>
     <div class="spinner"></div>
-    <p class="muted">Setting the scene…</p>
+    <p class="muted" id="loadingText">Setting the scene…</p>
   </section>
 
   <!-- Drill -->
@@ -93,7 +94,10 @@
     <p class="timed-out-note" id="timedOutNote" hidden>Time ran out — auto-submitted.</p>
     <blockquote class="your-reply" id="yourReply"></blockquote>
     <p class="feedback" id="feedbackText"></p>
-    <button class="primary big" id="nextBtn">Next drill</button>
+    <div class="result-actions">
+      <button id="retryBtn">Retry this scenario</button>
+      <button class="primary big" id="nextBtn">Next drill</button>
+    </div>
   </section>
 
   <!-- Stats -->
@@ -106,6 +110,7 @@
       <div class="tile"><div class="tile-value" id="statLevel">1</div><div class="tile-label">level</div></div>
     </div>
     <div class="domain-avgs" id="domainAvgs"></div>
+    <p class="focus-callout" id="focusCallout" hidden></p>
     <h2>Score over time</h2>
     <div class="chart-wrap" id="chartWrap">
       <div class="chart-legend" id="chartLegend" hidden>
@@ -117,6 +122,10 @@
     </div>
     <h2>History</h2>
     <div class="history-list" id="historyList"></div>
+    <div class="data-actions">
+      <button class="link-btn" id="exportBtn">Export CSV</button>
+      <button class="link-btn danger" id="resetBtn">Reset history</button>
+    </div>
     <button class="primary" id="backBtn">Back</button>
   </section>
 

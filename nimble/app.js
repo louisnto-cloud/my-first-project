@@ -211,6 +211,7 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     $('readyMeta').textContent =
       `${state.timeLimit}s per response · level ${difficultyFor(n)} · ${n} drill${n === 1 ? '' : 's'} done`;
     renderRecentForm(state.drills);
+    $('domainIntro').hidden = n > 0;
     show('ready');
   }
 
@@ -282,8 +283,37 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   });
 
   // ---------- drill flow ----------
+  const LOADING_LINES = [
+    'Setting the scene…',
+    'Someone is about to put you on the spot…',
+    'Raising the stakes…',
+    'Finding the pressure point…',
+    'The room is going quiet…',
+  ];
+
   $('startBtn').addEventListener('click', startDrill);
   $('nextBtn').addEventListener('click', startDrill);
+  $('retryBtn').addEventListener('click', retryDrill);
+
+  // Re-run the same scenario with a fresh clock — for drilling a moment
+  // until you find the answer you wish you'd given.
+  function retryDrill() {
+    if (!drill) return;
+    beginDrillView();
+  }
+
+  function beginDrillView() {
+    $('scenarioText').textContent = drill.scenario;
+    $('domainChip').textContent = DOMAIN_LABELS[drill.domain];
+    $('levelDots').innerHTML =
+      '●'.repeat(drill.difficulty) + `<span class="off">${'●'.repeat(5 - drill.difficulty)}</span>`;
+    $('responseBox').value = '';
+    submitting = false;
+    $('submitBtn').disabled = false;
+    show('drill');
+    $('responseBox').focus();
+    startTimer(state.timeLimit);
+  }
   $('submitBtn').addEventListener('click', () => submit(false));
   $('responseBox').addEventListener('keydown', (e) => {
     if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') submit(false);
@@ -299,6 +329,7 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   });
 
   async function startDrill() {
+    $('loadingText').textContent = LOADING_LINES[Math.floor(Math.random() * LOADING_LINES.length)];
     show('loading');
     // Pick the domain but only persist the rotation once the scenario exists,
     // so a failed generation retries the same domain.
@@ -315,16 +346,7 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     }
     saveState();
     drill = { domain, scenario, difficulty };
-    $('scenarioText').textContent = scenario;
-    $('domainChip').textContent = DOMAIN_LABELS[domain];
-    $('levelDots').innerHTML =
-      '●'.repeat(difficulty) + `<span class="off">${'●'.repeat(5 - difficulty)}</span>`;
-    $('responseBox').value = '';
-    submitting = false;
-    $('submitBtn').disabled = false;
-    show('drill');
-    $('responseBox').focus();
-    startTimer(state.timeLimit);
+    beginDrillView();
   }
 
   const RING_CIRCUMFERENCE = 282.74; // 2πr for r=45
@@ -402,6 +424,35 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   // ---------- stats ----------
   $('navStats').addEventListener('click', openStats);
   $('backBtn').addEventListener('click', showReady);
+  $('exportBtn').addEventListener('click', exportCsv);
+  $('resetBtn').addEventListener('click', resetHistory);
+
+  function toCsv(drills) {
+    const esc = (v) => '"' + String(v ?? '').replace(/"/g, '""') + '"';
+    const header = ['timestamp', 'domain', 'difficulty', 'time_limit_s', 'timed_out', 'score', 'response', 'scenario', 'feedback'];
+    const rows = drills.map(d =>
+      [d.timestamp, d.domain, d.difficulty, d.timeLimit, d.timedOut, d.score, d.response, d.scenario, d.feedback].map(esc).join(','));
+    return header.join(',') + '\n' + rows.join('\n');
+  }
+
+  function exportCsv() {
+    if (!state.drills.length) { showError('Nothing to export yet'); return; }
+    const blob = new Blob([toCsv(state.drills)], { type: 'text/csv' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'nimble-drills.csv';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  function resetHistory() {
+    if (!confirm('Delete all drill history? Your API key and time limit are kept. This cannot be undone.')) return;
+    state.drills = [];
+    state.rotation = [];
+    state.lastDomain = null;
+    saveState();
+    openStats();
+  }
 
   function openStats() {
     const s = computeStats();
@@ -410,17 +461,43 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     $('statBest').textContent = s.history.length ? Math.max(...s.history.map(h => h.score)) : '–';
     $('statLevel').textContent = difficultyFor(s.totalDrills);
 
-    $('domainAvgs').innerHTML = Object.entries(DOMAIN_LABELS).map(([key, label]) => {
-      const avg = s.perDomainAverage[key];
-      const val = avg == null
-        ? '<span class="val empty">no drills yet</span>'
-        : `<span class="val">${avg.toFixed(1)}</span>`;
-      return `<div class="domain-row"><span>${label}</span>${val}</div>`;
-    }).join('');
+    renderDomainRows(s);
 
     renderChart(s.history);
     renderHistory(state.drills);
     show('stats');
+  }
+
+  // Per-domain rows with a magnitude bar and drill count, plus a
+  // strongest/weakest callout once at least two domains have real data.
+  function renderDomainRows(s) {
+    $('domainAvgs').innerHTML = Object.entries(DOMAIN_LABELS).map(([key, label]) => {
+      const avg = s.perDomainAverage[key];
+      const cnt = s.history.filter(h => h.domain === key).length;
+      const pct = avg == null ? 0 : ((avg - 1) / 9) * 100;
+      const val = avg == null
+        ? '<span class="val empty">no drills yet</span>'
+        : `<span class="val">${avg.toFixed(1)}</span>`;
+      return `<div class="domain-row">
+        <div class="domain-row-top"><span>${label}<span class="domain-count">${cnt} drill${cnt === 1 ? '' : 's'}</span></span>${val}</div>
+        <div class="domain-bar"><div class="domain-bar-fill" style="width:${pct}%"></div></div>
+      </div>`;
+    }).join('');
+
+    const seasoned = Object.entries(s.perDomainAverage)
+      .filter(([k, v]) => v != null && s.history.filter(h => h.domain === k).length >= 3)
+      .sort((a, b) => a[1] - b[1]);
+    const callout = $('focusCallout');
+    if (seasoned.length >= 2 && seasoned[seasoned.length - 1][1] - seasoned[0][1] >= 0.8) {
+      const [weakK, weakV] = seasoned[0];
+      const [strongK, strongV] = seasoned[seasoned.length - 1];
+      callout.innerHTML =
+        `Strongest arena: <strong>${DOMAIN_LABELS[strongK]}</strong> (${strongV.toFixed(1)}). ` +
+        `Focus next: <strong>${DOMAIN_LABELS[weakK]}</strong> (${weakV.toFixed(1)}) — that's where the easy points are.`;
+      callout.hidden = false;
+    } else {
+      callout.hidden = true;
+    }
   }
 
   const escapeHtml = (s) => String(s)
