@@ -314,6 +314,15 @@ textarea:focus { outline: none; border-color: var(--accent); }
 .tile-value { font-size: 1.7rem; font-weight: 700; font-variant-numeric: tabular-nums; }
 .tile-label { color: var(--ink-3); font-size: 0.78rem; margin-top: 2px; }
 
+.level-avgs { width: 100%; }
+.level-rows { display: flex; flex-direction: column; gap: 6px; }
+.level-row { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; }
+.level-row .lvl { flex: 0 0 60px; color: var(--ink-2); }
+.level-row .lvl-bar { flex: 1; height: 6px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
+.level-row .lvl-bar-fill { height: 100%; background: var(--accent); border-radius: 3px; transition: width 0.4s ease; }
+.level-row .lvl-val { flex: 0 0 48px; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; color: var(--ink); }
+.level-row .lvl-val.empty { color: var(--ink-3); font-weight: 400; }
+
 .domain-avgs { display: flex; flex-direction: column; gap: 8px; width: 100%; }
 .domain-row {
   display: flex; flex-direction: column; gap: 8px;

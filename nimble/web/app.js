@@ -704,11 +704,41 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     $('statLevel').textContent = difficultyFor(s.totalDrills);
 
     renderDailyProgress();
+    renderRichStats(state.drills);
     renderDomainRows(s);
 
     renderChart(s.history);
     renderHistory(state.drills);
     show('stats');
+  }
+
+  // Richer stats computed from the full drill objects (which carry difficulty):
+  // drills this week, the longest-ever run of 7+ scores, and average by level.
+  function renderRichStats(drills) {
+    const weekStart = new Date();
+    weekStart.setHours(0, 0, 0, 0);
+    weekStart.setDate(weekStart.getDate() - 6); // today + the 6 prior days
+    $('statWeek').textContent = drills.filter(d => new Date(d.timestamp) >= weekStart).length;
+
+    let best = 0, cur = 0;
+    for (const d of drills) {
+      if (d.score >= 7) { cur += 1; if (cur > best) best = cur; } else cur = 0;
+    }
+    $('statTopStreak').textContent = best;
+
+    const levels = [1, 2, 3, 4, 5].map(L => {
+      const at = drills.filter(d => (d.difficulty || 1) === L);
+      return { L, n: at.length, avg: at.length ? at.reduce((s, d) => s + d.score, 0) / at.length : null };
+    }).filter(x => x.n > 0);
+    const wrap = $('levelAvgs');
+    if (levels.length < 2) { wrap.hidden = true; return; }
+    wrap.hidden = false;
+    $('levelRows').innerHTML = levels.map(x => {
+      const pct = ((x.avg - 1) / 9) * 100;
+      return `<div class="level-row"><span class="lvl">Level ${x.L}</span>` +
+        `<div class="lvl-bar"><div class="lvl-bar-fill" style="width:${pct}%"></div></div>` +
+        `<span class="lvl-val">${x.avg.toFixed(1)}</span></div>`;
+    }).join('');
   }
 
   // Per-domain rows with a magnitude bar and drill count, plus a
