@@ -479,6 +479,13 @@ body,button,input,textarea{font-family:'Be Vietnam Pro',-apple-system,BlinkMacSy
 .vi-word{font-size:30px;font-weight:900;color:var(--g);line-height:1.25;letter-spacing:-.4px;margin-bottom:8px;padding-right:36px}
 .vi-say{background:var(--tp);border-radius:12px;padding:9px 13px;font-size:14px;color:#7A3900;line-height:1.5;width:100%;margin-bottom:10px}
 .vi-say b{font-size:15px}
+.say-warn{display:block;font-size:11px;opacity:.85;margin-top:4px;font-weight:600}
+.tone-strip{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 10px;width:100%}
+.tone-strip.small{margin:6px 0 4px}
+.tsyl{display:flex;flex-direction:column;align-items:center;background:var(--gp);border:none;border-radius:10px;padding:5px 10px;cursor:pointer;font-family:inherit;font-size:14px;font-weight:700;color:var(--g);line-height:1.2}
+.tsyl i{font-style:normal;font-size:11px;font-weight:800;color:var(--t)}
+.tone-strip.small .tsyl{padding:3px 8px;font-size:12.5px}
+.tsyl:active{transform:scale(.93)}
 .hear-btn{background:var(--grad);color:#fff;border:none;border-radius:12px;padding:11px 18px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;box-shadow:0 4px 14px rgba(45,106,79,.3)}
 .hear-btn:active{transform:scale(.96)}
 .card-back .card-audio-row{margin:0 0 12px}
@@ -1544,6 +1551,26 @@ function buildLesson(tier='all',cat='all'){
   return shuffle(pool).slice(0,S.sessionLen||20).map(v=>v.id);
 }
 
+// ── TONE ENGINE ──────────────────────────────────────────────────────────────
+// Vietnamese spelling encodes the tone. These arrows are DERIVED from the
+// diacritics, never hand-written, so they are always correct.
+function toneOf(word){
+  const n=word.normalize('NFD');
+  if(n.includes('\u0301')) return {a:'\u2197',n:'rising'};
+  if(n.includes('\u0300')) return {a:'\u2198',n:'falling'};
+  if(n.includes('\u0309')) return {a:'\u2193\u2197',n:'dip-rise'};
+  if(n.includes('\u0303')) return {a:'~\u2197',n:'break-rise'};
+  if(n.includes('\u0323')) return {a:'\u2193.',n:'low-stop'};
+  return {a:'\u2192',n:'flat'};
+}
+function toneStrip(vi,small){
+  const words=vi.split(/\s+/).map(w=>w.replace(/[.,!?;:"()]/g,'')).filter(w=>/[a-zA-Z\u00C0-\u1EF9\u0111\u0110]/.test(w));
+  if(!words.length) return '';
+  return '<div class="tone-strip'+(small?' small':'')+'">'+words.map(w=>
+    `<button class="tsyl" onclick="event.stopPropagation();speak('${w.replace(/'/g,"\\'")}')"><i>${toneOf(w).a}</i>${w}</button>`
+  ).join('')+'</div>';
+}
+
 // ── SPEECH ───────────────────────────────────────────────────────────────────
 // Primary engine: Google Translate's Vietnamese neural voice (needs internet,
 // sounds native). Fallback: a device voice, but ONLY if it is genuinely
@@ -1577,7 +1604,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v40';
+const APP_VERSION='v41';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1946,7 +1973,8 @@ function renderFlashcard(){
           <button class="star-btn" onclick="event.stopPropagation();toggleStar('${v.id}')">${v.starred?'★':'☆'}</button>
           <div class="vi-label">${v.en}</div>
           <div class="vi-word">${v.vi}</div>
-          <div class="vi-say">🗣 Say it: <b>${v.phonetic}</b></div>
+          ${toneStrip(v.vi)}
+          <div class="vi-say">🗣 Rough sounds: <b>${v.phonetic}</b><br><span class="say-warn">Arrows show the pitch of each word — tap a word above to hear it. Copy the audio, not the letters.</span></div>
           <div class="card-audio-row">
             <button class="hear-btn" aria-label="Play audio" onclick="event.stopPropagation();speak('${v.vi.replace(/'/g,"\\'")}')">🔊 Hear it</button>
             ${speedChip()}
@@ -2084,6 +2112,7 @@ function renderDrill(){
     <div class="drill-card">
       <div class="drill-en">${v.en}</div>
       <div class="drill-vi">${v.vi}</div>
+      ${toneStrip(v.vi,true)}
       <div class="drill-ph">/ ${v.phonetic} /</div>
       ${v.southern_note?`<div class="drill-south">🌴 ${v.southern_note}</div>`:''}
       <div class="card-audio-row" style="justify-content:center">
@@ -2165,6 +2194,7 @@ function renderScenario(){
         return `<div class="dlg-line ${l.you?'you':'them'} ${past?'past':curr?'curr':'future'}">
           <div class="dlg-role">${l.role}</div>
           <div class="dlg-vi">${l.vi}<button class="speak-micro" aria-label="Play audio" onclick="speak('${l.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button></div>
+          ${curr?toneStrip(l.vi,true):``}
           ${past||curr?`<div class="dlg-en">${l.en}</div>`:``}
           ${past||curr?`<div class="dlg-ph">/ ${l.ph} /</div>`:``}
         </div>`;
