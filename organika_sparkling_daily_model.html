@@ -105,6 +105,10 @@
   /* charts */
   .chart{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:2px 0 8px;padding-bottom:2px}
   .chart svg{display:block}
+  /* KPI delta line */
+  .kpi .sub{margin-top:9px;font-size:12px;font-weight:600;line-height:1.4}
+  .kpi .sub .d.up{color:var(--good)} .kpi .sub .d.down{color:var(--bad)}
+  .kpi .ctx{color:var(--soft);font-weight:500}
   /* horizontal scroll for wide tables on small screens */
   #cmp,#pnl,#pricing,#sens,#asmpSku,#asmpCo,#asmpLev{overflow-x:auto;-webkit-overflow-scrolling:touch}
   h1{font-size:clamp(30px,7vw,46px)}
@@ -332,17 +336,24 @@ function breakeven(){
 function el(id){return document.getElementById(id);}
 
 function renderKpis(){
-  const r = compute(current);
+  const r = compute(current), b = compute("Base"), isBase = current==="Base";
+  const D = (delta, kind)=>{
+    if(isBase) return `<span class="ctx">base case</span>`;
+    const cls = delta>=0?"up":"down", tri = delta>=0?"▲":"▼", sign = delta>=0?"+":"−", a = Math.abs(delta);
+    const s = kind==="pp" ? sign+(a*100).toFixed(1)+" pp" : kind==="num" ? sign+num(a) : sign+sMoney(a);
+    return `<span class="d ${cls}">${tri} ${s} vs Base</span>`;
+  };
   const cards = [
-    ["Net Sales", money(r.net)],
-    ["Gross Profit %", pct(r.gppct)],
-    ["EBITDA", money(r.ebitda), r.ebitda<0],
-    ["EBITDA %", pct(r.ebitdapct)],
-    ["Net Income", money(r.ni), r.ni<0],
-    ["Physical Cases", num(r.cases)],
+    ["Net Sales", money(r.net), r.net-b.net, "money", false, `${num(r.cases)} cs · ${money2(r.net/(r.cases||1))}/cs`],
+    ["Gross Profit %", pct(r.gppct), r.gppct-b.gppct, "pp", false, `${money(r.gp)} GP`],
+    ["EBITDA", money(r.ebitda), r.ebitda-b.ebitda, "money", r.ebitda<0],
+    ["EBITDA %", pct(r.ebitdapct), r.ebitdapct-b.ebitdapct, "pp", false],
+    ["Net Income", money(r.ni), r.ni-b.ni, "money", r.ni<0],
+    ["Physical Cases", num(r.cases), r.cases-b.cases, "num", false, `${money2(r.cppc)}/cs avg CP`],
   ];
   el("kpis").innerHTML = cards.map(c=>
-    `<div class="kpi"><div class="k">${c[0]}</div><div class="v ${c[2]?'neg':''}">${c[1]}</div></div>`).join("");
+    `<div class="kpi"><div class="k">${c[0]}</div><div class="v ${c[4]?'neg':''}">${c[1]}</div>`+
+    `<div class="sub">${D(c[2],c[3])}${c[5]?` · <span class="ctx">${c[5]}</span>`:""}</div></div>`).join("");
 }
 
 function renderCmp(){
