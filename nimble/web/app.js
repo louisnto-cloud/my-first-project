@@ -199,6 +199,10 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   }
 
   // ---------- view plumbing ----------
+  // Move keyboard focus to each view's primary control so screen-reader and
+  // keyboard users land in the right place on every transition.
+  const FOCUS_TARGET = { key: 'keyInput', ready: 'startBtn', drill: 'responseBox', result: 'nextBtn' };
+
   function show(view) {
     for (const v of views) $('view-' + v).hidden = v !== view;
     const inDrill = view === 'drill';
@@ -208,7 +212,12 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     $('navKey').hidden = inDrill || view === 'key' || !configured;
     $('headerMeta').textContent =
       inDrill && drill ? `${DOMAIN_LABELS[drill.domain]} · level ${drill.difficulty}` : '';
+    const target = FOCUS_TARGET[view];
+    if (target) $(target).focus();
   }
+
+  // Politely announce a status change to assistive tech.
+  function announce(msg) { $('srStatus').textContent = msg; }
 
   function showError(msg) {
     const bar = $('errorBar');
@@ -351,8 +360,10 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   function beginDrillView() {
     $('scenarioText').textContent = drill.scenario;
     $('domainChip').textContent = DOMAIN_LABELS[drill.domain];
-    $('levelDots').innerHTML =
-      '●'.repeat(drill.difficulty) + `<span class="off">${'●'.repeat(5 - drill.difficulty)}</span>`;
+    const dots = $('levelDots');
+    dots.innerHTML = '●'.repeat(drill.difficulty) + `<span class="off">${'●'.repeat(5 - drill.difficulty)}</span>`;
+    dots.setAttribute('aria-label', `Difficulty ${drill.difficulty} of 5`);
+    announce(`${DOMAIN_LABELS[drill.domain]}. ${drill.scenario} You have ${state.timeLimit} seconds.`);
     $('responseBox').value = '';
     submitting = false;
     $('submitBtn').disabled = false;
@@ -403,11 +414,14 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   }
 
   const RING_CIRCUMFERENCE = 282.74; // 2πr for r=45
+  const ANNOUNCE_AT = new Set([10, 5, 3]); // seconds-remaining milestones to speak
   let timerTotalMs = 0;
+  let lastAnnouncedSec = null;
 
   function startTimer(seconds) {
     timerTotalMs = seconds * 1000;
     deadline = Date.now() + timerTotalMs;
+    lastAnnouncedSec = seconds; // suppress the milestone equal to the start, so the scenario announcement isn't clobbered
     renderTimer();
     clearInterval(timerHandle);
     timerHandle = setInterval(() => {
@@ -425,6 +439,11 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     el.parentElement.classList.toggle('low', low);
     const frac = timerTotalMs ? remaining / timerTotalMs : 0;
     $('ringFg').style.strokeDashoffset = RING_CIRCUMFERENCE * (1 - frac);
+    // Announce key milestones once each, without spamming every tick.
+    if (secs !== lastAnnouncedSec && ANNOUNCE_AT.has(secs)) {
+      announce(`${secs} seconds left`);
+      lastAnnouncedSec = secs;
+    }
     return remaining;
   }
 
@@ -474,11 +493,13 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
       replyEl.classList.toggle('empty', !reply);
       $('feedbackText').textContent = feedback;
       $('timedOutNote').hidden = !wasTimedOut;
-      $('bestRibbon').hidden = !(score > prevBest && state.drills.length > 1);
+      const isBest = score > prevBest && state.drills.length > 1;
+      $('bestRibbon').hidden = !isBest;
       const streak = winStreak(state.drills);
       const streakNote = $('streakNote');
       streakNote.hidden = streak < 3;
       streakNote.textContent = `🔥 ${streak} in a row`;
+      announce(`Scored ${score} out of 10.${isBest ? ' New personal best.' : ''} ${feedback}`);
       show('result');
     } catch (err) {
       showError(err.message);
@@ -491,6 +512,7 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     $('judgingSpinner').hidden = false;
     $('judgingText').textContent = 'Judging…';
     $('rejudgeBtn').hidden = true;
+    announce('Judging your reply');
     show('judging');
   }
 

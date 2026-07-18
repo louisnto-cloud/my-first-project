@@ -20,6 +20,10 @@
 
   const difficultyFor = (n) => Math.min(5, Math.floor(n / 5) + 1);
 
+  // Move keyboard focus to each view's primary control so screen-reader and
+  // keyboard users land in the right place on every transition.
+  const FOCUS_TARGET = { key: 'keyInput', ready: 'startBtn', drill: 'responseBox', result: 'nextBtn' };
+
   function show(view) {
     for (const v of views) $('view-' + v).hidden = v !== view;
     const inDrill = view === 'drill';
@@ -28,7 +32,12 @@
     $('navSettings').hidden = inDrill || view === 'setup' || !configured;
     $('navKey').hidden = inDrill || view === 'key' || !configured;
     updateHeader(view);
+    const target = FOCUS_TARGET[view];
+    if (target) $(target).focus();
   }
+
+  // Politely announce a status change to assistive tech.
+  function announce(msg) { $('srStatus').textContent = msg; }
 
   function updateHeader(view) {
     $('headerMeta').textContent =
@@ -206,8 +215,10 @@
   function beginDrillView() {
     $('scenarioText').textContent = drill.scenario;
     $('domainChip').textContent = DOMAIN_LABELS[drill.domain];
-    $('levelDots').innerHTML =
-      '●'.repeat(drill.difficulty) + `<span class="off">${'●'.repeat(5 - drill.difficulty)}</span>`;
+    const dots = $('levelDots');
+    dots.innerHTML = '●'.repeat(drill.difficulty) + `<span class="off">${'●'.repeat(5 - drill.difficulty)}</span>`;
+    dots.setAttribute('aria-label', `Difficulty ${drill.difficulty} of 5`);
+    announce(`${DOMAIN_LABELS[drill.domain]}. ${drill.scenario} You have ${drill.timeLimit || app.timeLimit} seconds.`);
     $('responseBox').value = '';
     submitting = false;
     $('submitBtn').disabled = false;
@@ -248,11 +259,14 @@
   }
 
   const RING_CIRCUMFERENCE = 282.74; // 2πr for r=45
+  const ANNOUNCE_AT = new Set([10, 5, 3]); // seconds-remaining milestones to speak
   let timerTotalMs = 0;
+  let lastAnnouncedSec = null;
 
   function startTimer(seconds) {
     timerTotalMs = seconds * 1000;
     deadline = Date.now() + timerTotalMs;
+    lastAnnouncedSec = seconds; // suppress the milestone equal to the start, so the scenario announcement isn't clobbered
     renderTimer();
     clearInterval(timerHandle);
     timerHandle = setInterval(() => {
@@ -270,6 +284,11 @@
     el.parentElement.classList.toggle('low', low);
     const frac = timerTotalMs ? remaining / timerTotalMs : 0;
     $('ringFg').style.strokeDashoffset = RING_CIRCUMFERENCE * (1 - frac);
+    // Announce key milestones once each, without spamming every tick.
+    if (secs !== lastAnnouncedSec && ANNOUNCE_AT.has(secs)) {
+      announce(`${secs} seconds left`);
+      lastAnnouncedSec = secs;
+    }
     return remaining;
   }
 
@@ -311,11 +330,13 @@
       replyEl.classList.toggle('empty', !reply);
       $('feedbackText').textContent = result.feedback;
       $('timedOutNote').hidden = !wasTimedOut;
-      $('bestRibbon').hidden = !(result.score > prevBest && result.totalDrills > 1);
+      const isBest = result.score > prevBest && result.totalDrills > 1;
+      $('bestRibbon').hidden = !isBest;
       const streak = winStreak(result.stats.history);
       const streakNote = $('streakNote');
       streakNote.hidden = streak < 3;
       streakNote.textContent = `🔥 ${streak} in a row`;
+      announce(`Scored ${result.score} out of 10.${isBest ? ' New personal best.' : ''} ${result.feedback}`);
       show('result');
     } catch (err) {
       // Keep pendingSubmit frozen; offer a re-score without re-opening editing.
@@ -329,6 +350,7 @@
     $('judgingSpinner').hidden = false;
     $('judgingText').textContent = 'Judging…';
     $('rejudgeBtn').hidden = true;
+    announce('Judging your reply');
     show('judging');
   }
 
