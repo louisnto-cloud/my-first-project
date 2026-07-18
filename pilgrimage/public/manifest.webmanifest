@@ -9,6 +9,12 @@
   "background_color": "#1C2647",
   "theme_color": "#1C2647",
   "categories": ["education", "lifestyle"],
+  "shortcuts": [
+    { "name": "Today", "short_name": "Today", "url": "./", "description": "Today's step" },
+    { "name": "The Rosary", "short_name": "Rosary", "url": "./rosary", "description": "Pray the rosary, bead by bead" },
+    { "name": "The Mass", "short_name": "Mass", "url": "./mass", "description": "Walk through the Mass" },
+    { "name": "My Chapel", "short_name": "Chapel", "url": "./chapel", "description": "Candles, prayers, and practices" }
+  ],
   "icons": [
     { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
