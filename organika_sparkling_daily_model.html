@@ -137,6 +137,11 @@
         <button class="tbtn" id="btnSnap">+ Save snapshot</button>
       </div>
       <div id="snaps"></div>
+      <div id="snapCompareWrap" style="margin-top:14px;display:none">
+        <span class="hint">Compare current model with:</span>
+        <select id="snapCompare" class="cell" style="text-align:left;width:auto"></select>
+        <div id="snapDiff" style="margin-top:10px"></div>
+      </div>
     </div>
   </section>
 
@@ -846,11 +851,41 @@ function saveSnap(){const n=(el("snapName").value||"").trim(); if(!n){flash("Nam
 function loadSnap(n){const s=getSnaps()[n]; if(s){applyState(JSON.parse(JSON.stringify(s))); flash("Loaded “"+n+"”.");}}
 function delSnap(n){const all=getSnaps(); delete all[n]; putSnaps(all); renderSnaps(); flash("Deleted “"+n+"”.");}
 function renderSnaps(){const e=el("snaps"); if(!e) return; const all=getSnaps(); const names=Object.keys(all);
-  if(!names.length){e.innerHTML='<span class="hint">No snapshots yet.</span>';return;}
+  const wrap=el("snapCompareWrap"), sel=el("snapCompare");
+  if(!names.length){e.innerHTML='<span class="hint">No snapshots yet.</span>'; if(wrap) wrap.style.display="none"; return;}
   e.innerHTML="<table><tbody>"+names.map(n=>
     `<tr><td style="text-align:left;font-weight:600">${n.replace(/</g,"&lt;")}</td>`+
     `<td style="text-align:right"><button class="tbtn" onclick="loadSnap('${n.replace(/'/g,"\\'")}')">Load</button> `+
     `<button class="tbtn" style="padding:4px 9px" onclick="delSnap('${n.replace(/'/g,"\\'")}')">×</button></td></tr>`).join("")+"</tbody></table>";
+  if(wrap && sel){ wrap.style.display=""; sel.innerHTML=names.map(n=>`<option>${n.replace(/</g,"&lt;")}</option>`).join("");
+    sel.onchange=()=>renderDiff(sel.value); renderDiff(sel.value); }
+}
+// compute metrics for an arbitrary saved state without disturbing the live model
+function metricsFor(state, scen){
+  const bakS=SKUS.slice(), bakCO=JSON.parse(JSON.stringify(CO)), bakL=JSON.parse(JSON.stringify(LEVERS)), bakSC=SCEN.slice();
+  try{
+    SKUS.length=0; (state.SKUS||bakS).forEach(s=>SKUS.push(JSON.parse(JSON.stringify(s))));
+    if(state.CO) Object.assign(CO, state.CO);
+    if(state.SCEN) SCEN=state.SCEN.slice();
+    if(state.LEVERS){ Object.keys(LEVERS).forEach(k=>delete LEVERS[k]); Object.assign(LEVERS, JSON.parse(JSON.stringify(state.LEVERS))); }
+    return compute(scen);
+  } finally {
+    SKUS.length=0; bakS.forEach(s=>SKUS.push(s));
+    Object.keys(CO).forEach(k=>delete CO[k]); Object.assign(CO,bakCO);
+    Object.keys(LEVERS).forEach(k=>delete LEVERS[k]); Object.assign(LEVERS,bakL);
+    SCEN=bakSC;
+  }
+}
+function renderDiff(name){
+  const e=el("snapDiff"); if(!e) return; const snap=getSnaps()[name]; if(!snap){e.innerHTML="";return;}
+  const cur=compute(current), oth=metricsFor(snap,current);
+  const rows=[["Net Sales","net",money],["Gross Profit %","gppct",pct],["EBITDA","ebitda",money],["Net Income","ni",money],["Cases","cases",num]];
+  let h=`<table><thead><tr><th>${current} scenario</th><th>Current</th><th>${name.replace(/</g,"&lt;")}</th><th>Δ</th></tr></thead><tbody>`;
+  rows.forEach(r=>{const a=cur[r[1]],b=oth[r[1]],d=a-b; const sign=d>=0?'+':'−'; const abs=Math.abs(d);
+    const dtxt = r[2]===pct ? sign+(abs*100).toFixed(1)+' pts' : sign+r[2](abs);
+    h+=`<tr><td${tip(r[0])}>${r[0]}</td><td>${r[2](a)}</td><td>${r[2](b)}</td><td${d<0?' style="color:#d83a4b"':''}>${dtxt}</td></tr>`;});
+  h+="</tbody></table>";
+  e.innerHTML=h;
 }
 if(el("btnSnap")) el("btnSnap").onclick=saveSnap;
 const THEME_KEY="organika_theme";
