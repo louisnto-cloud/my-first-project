@@ -91,7 +91,13 @@ function ChoiceLike({
       <p className="font-story text-2xl leading-snug text-ivory">{t(prompt)}</p>
       {before && (
         <p className="rounded-2xl border border-gold/25 bg-lapis/70 p-4 font-story text-xl italic text-gold">
-          {t(before)} <span className="text-incense">______</span> {after ? t(after) : ''}
+          {t(before)}{' '}
+          {picked === null ? (
+            <span className="text-incense">______</span>
+          ) : (
+            <span className="rounded bg-gold/20 px-1.5 not-italic text-ivory">{t(options[answer].text)}</span>
+          )}{' '}
+          {after ? t(after) : ''}
         </p>
       )}
       <div className="flex flex-col gap-2.5">

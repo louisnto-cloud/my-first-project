@@ -51,7 +51,7 @@ export const UI = {
   greetMorning: v('Good morning', 'Chào buổi sáng'),
   greetAfternoon: v('Good afternoon', 'Chào buổi chiều'),
   greetEvening: v('Good evening', 'Chào buổi tối'),
-  streakLine: v('day streak', 'ngày liên tiếp'),
+  streakLine: v('days walking', 'ngày liên tiếp'),
   todaysStep: v('Today’s step', 'Bước chân hôm nay'),
   begin: v('Begin', 'Bắt đầu'),
   continueWord: v('Continue', 'Tiếp tục'),
