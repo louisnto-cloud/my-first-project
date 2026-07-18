@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101216">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<title>Nimble</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="srStatus" class="sr-only" role="status" aria-live="polite"></div>
+<header>
+  <span class="brand">Nimble</span>
+  <span class="header-meta" id="headerMeta"></span>
+  <nav>
+    <button class="link-btn" id="navStats" hidden>Stats</button>
+    <button class="link-btn" id="navSettings" hidden>Time limit</button>
+    <button class="link-btn" id="navKey" hidden>API key</button>
+    <button class="link-btn" id="navHelp" aria-label="Keyboard shortcuts" title="Keyboard shortcuts (?)">?</button>
+  </nav>
+</header>
+
+<main>
+  <!-- Paste API key (first run) -->
+  <section id="view-key" hidden>
+    <h1>One thing before we start</h1>
+    <p class="muted">Nimble uses Claude to write scenarios and score your replies, so it needs your Anthropic API key.</p>
+    <ol class="steps">
+      <li>Go to <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com &rsaquo; API keys</a></li>
+      <li>Click <strong>Create key</strong>, then <strong>Copy</strong></li>
+      <li>Paste it below — it's saved only on this computer</li>
+    </ol>
+    <input type="password" id="keyInput" placeholder="sk-ant-..." autocomplete="off" spellcheck="false">
+    <button class="primary" id="keySaveBtn">Save key</button>
+  </section>
+
+  <!-- Pick time limit (first run / settings) -->
+  <section id="view-setup" hidden>
+    <h1>How long do you get?</h1>
+    <p class="muted">Pick your response window. It's remembered for every drill.</p>
+    <div class="choices" id="timeChoices">
+      <button data-limit="10">10s</button>
+      <button data-limit="15">15s</button>
+      <button data-limit="20">20s</button>
+      <button data-limit="30">30s</button>
+    </div>
+    <div class="goal-setting">
+      <span class="goal-label">Daily goal</span>
+      <div class="stepper">
+        <button id="goalMinus" aria-label="Decrease daily goal">−</button>
+        <span id="goalValue" aria-live="polite">5</span>
+        <button id="goalPlus" aria-label="Increase daily goal">+</button>
+      </div>
+      <span class="goal-unit">drills / day</span>
+    </div>
+    <label class="toggle-row">
+      <input type="checkbox" id="soundToggle">
+      <span>🔊 Beep in the final 3 seconds</span>
+    </label>
+  </section>
+
+  <!-- Ready -->
+  <section id="view-ready" hidden>
+    <h1>Ready?</h1>
+    <p class="muted" id="readyMeta"></p>
+    <p class="domain-intro" id="domainIntro" hidden>Three arenas, shuffled so you can't settle in: <strong>business&nbsp;negotiation</strong>, <strong>legal&nbsp;argument</strong>, and <strong>personal&nbsp;confrontation</strong>. A scenario lands, the clock starts, you answer out loud in writing. Difficulty climbs as you rack up drills.</p>
+    <div class="daily-progress" id="dpReadyWrap" hidden>
+      <div class="daily-label" id="dpReadyLabel"></div>
+      <div class="daily-bar"><div class="daily-bar-fill" id="dpReadyFill"></div></div>
+    </div>
+    <div class="recent-form" id="recentForm"></div>
+    <p class="streak-line" id="streakLine" hidden></p>
+    <div class="focus-picker" id="focusPicker" role="group" aria-label="What to drill">
+      <button class="focus-chip selected" data-focus="">🔀 Rotate all</button>
+      <button class="focus-chip" data-focus="business">Business</button>
+      <button class="focus-chip" data-focus="legal">Legal</button>
+      <button class="focus-chip" data-focus="personal">Personal</button>
+    </div>
+    <button class="primary big" id="startBtn">Start drill</button>
+  </section>
+
+  <!-- Loading scenario -->
+  <section id="view-loading" hidden>
+    <div class="spinner"></div>
+    <p class="muted" id="loadingText">Setting the scene…</p>
+  </section>
+
+  <!-- 3-2-1 warmup before the clock starts -->
+  <section id="view-warmup" hidden>
+    <p class="muted">Get ready…</p>
+    <div class="warmup-count" id="warmupCount">3</div>
+    <p class="hint">click or press any key to skip</p>
+  </section>
+
+  <!-- Drill -->
+  <section id="view-drill" hidden>
+    <div class="timer-ring" role="timer" aria-hidden="true">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <circle class="ring-bg" cx="50" cy="50" r="45"></circle>
+        <circle class="ring-fg" id="ringFg" cx="50" cy="50" r="45"></circle>
+      </svg>
+      <div class="timer" id="timer">30</div>
+    </div>
+    <div class="drill-meta">
+      <span class="chip" id="domainChip"></span>
+      <span class="level-dots" id="levelDots" title="Difficulty"></span>
+    </div>
+    <p class="scenario" id="scenarioText"></p>
+    <label class="sr-only" for="responseBox">Your reply</label>
+    <textarea id="responseBox" placeholder="Say it. The clock is running." autocomplete="off" spellcheck="false"></textarea>
+    <button class="primary" id="submitBtn">Submit</button>
+    <p class="hint">Ctrl/⌘ + Enter also submits</p>
+  </section>
+
+  <!-- Judging -->
+  <section id="view-judging" hidden>
+    <div class="spinner" id="judgingSpinner"></div>
+    <p class="muted" id="judgingText">Judging…</p>
+    <button class="primary" id="rejudgeBtn" hidden>Retry scoring</button>
+  </section>
+
+  <!-- Result -->
+  <section id="view-result" hidden>
+    <div class="best-ribbon" id="bestRibbon" hidden>🏆 New personal best</div>
+    <div class="score-wrap">
+      <div class="score" id="scoreValue">–</div>
+      <div class="score-denom">/ 10</div>
+    </div>
+    <p class="streak-note" id="streakNote" hidden></p>
+    <p class="timed-out-note" id="timedOutNote" hidden>Time ran out — auto-submitted.</p>
+    <blockquote class="your-reply" id="yourReply"></blockquote>
+    <p class="feedback" id="feedbackText"></p>
+    <div class="result-actions">
+      <button id="retryBtn">Retry this scenario</button>
+      <button class="primary big" id="nextBtn">Next drill</button>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section id="view-stats" hidden>
+    <h1>Progress</h1>
+    <div class="stat-tiles">
+      <div class="tile"><div class="tile-value" id="statTotal">0</div><div class="tile-label">drills</div></div>
+      <div class="tile"><div class="tile-value" id="statWeek">0</div><div class="tile-label">this week</div></div>
+      <div class="tile"><div class="tile-value" id="statAvg">–</div><div class="tile-label">avg score</div></div>
+      <div class="tile"><div class="tile-value" id="statBest">–</div><div class="tile-label">best</div></div>
+      <div class="tile"><div class="tile-value" id="statTopStreak">0</div><div class="tile-label">top streak</div></div>
+      <div class="tile"><div class="tile-value" id="statLevel">1</div><div class="tile-label">level</div></div>
+    </div>
+    <div class="daily-progress" id="dpStatsWrap" hidden>
+      <div class="daily-label" id="dpStatsLabel"></div>
+      <div class="daily-bar"><div class="daily-bar-fill" id="dpStatsFill"></div></div>
+    </div>
+    <div class="domain-avgs" id="domainAvgs"></div>
+    <p class="focus-callout" id="focusCallout" hidden></p>
+    <div class="level-avgs" id="levelAvgs" hidden>
+      <h2>Average by difficulty</h2>
+      <div class="level-rows" id="levelRows"></div>
+    </div>
+    <h2>Score over time</h2>
+    <div class="chart-wrap" id="chartWrap">
+      <div class="chart-legend" id="chartLegend" hidden>
+        <span><span class="legend-swatch"></span>score</span>
+        <span><span class="legend-swatch avg"></span>5-drill average</span>
+      </div>
+      <svg id="chart" width="100%" height="220" role="img" aria-label="Line chart of drill scores over time"></svg>
+      <div class="tooltip" id="chartTooltip" hidden></div>
+    </div>
+    <h2>History</h2>
+    <div class="history-list" id="historyList"></div>
+    <div class="data-actions">
+      <button class="link-btn" id="exportBtn">Export CSV</button>
+      <button class="link-btn danger" id="resetBtn">Reset history</button>
+    </div>
+    <button class="primary" id="backBtn">Back</button>
+  </section>
+
+  <p class="error" id="errorBar" hidden></p>
+</main>
+
+<!-- Keyboard shortcuts help -->
+<div class="modal-overlay" id="helpModal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+    <h2 id="helpTitle">Keyboard shortcuts</h2>
+    <dl class="shortcuts">
+      <div><dt>Enter</dt><dd>Start / next drill (ready and result screens)</dd></div>
+      <div><dt>Ctrl / ⌘ + Enter</dt><dd>Submit your reply</dd></div>
+      <div><dt>Any key</dt><dd>Skip the 3-2-1 warmup</dd></div>
+      <div><dt>?</dt><dd>Open this help</dd></div>
+      <div><dt>Esc</dt><dd>Close this help</dd></div>
+    </dl>
+    <button class="primary" id="helpClose">Got it</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
