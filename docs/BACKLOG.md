@@ -63,6 +63,6 @@ implement, validate (`./build_all.sh`), commit, log in CHANGELOG.md.
 ## Refill 4 (added 2026-07-18 ~09:29Z)
 - [x] I29 — [IMPROVE] Sources-by-tier count on the Sources tab.
 - [x] SH  — [IMPROVE] Start Here headline stat strip.
-- [ ] I30 — [IMPROVE] Verify every hyperlink target resolves to an existing sheet (validator check).
-- [ ] I31 — [IMPROVE] Extended Landscape: visibly tag FLAG/unverified brands (amber) for scanability.
-- [ ] I32 — [IMPROVE] Ensure every gold interactive tab is named in the Contents nav legend.
+- [x] I30 — [IMPROVE] Verify every hyperlink target resolves to an existing sheet (validator check).
+- [x] I31 — [IMPROVE] Extended Landscape: visibly tag FLAG/unverified brands (amber) for scanability.
+- [x] I32 — [IMPROVE] Ensure every gold interactive tab is named in the Contents nav legend.

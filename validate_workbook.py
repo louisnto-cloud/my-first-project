@@ -83,6 +83,20 @@ for ws in wb.worksheets:
             except Exception: pass
 if low_contrast: warns.append(f"low-contrast text cells (<2.0): {low_contrast[:8]}")
 
+# 5d. Hyperlink resolution (I30): every internal '#Sheet!A1' link must target an existing sheet
+import re as _re
+nameset=set(names)
+broken=[]
+for ws in wb.worksheets:
+    for row in ws.iter_rows():
+        for c in row:
+            h=c.hyperlink.target if (c.hyperlink and getattr(c.hyperlink,"target",None)) else None
+            if not h or not h.startswith("#"): continue
+            m=_re.match(r"#'?(.*?)'?!", h)
+            if m and m.group(1) not in nameset:
+                broken.append(f"{ws.title}!{c.coordinate}->{m.group(1)}")
+check(not broken, f"broken internal hyperlinks: {broken[:6]}")
+
 # 6. Go/NoGo verdict formula present
 g=wb["Go-NoGo Decision"]
 has_verdict=any(isinstance(c.value,str) and "GO" in str(c.value) and c.value.startswith("=IF") for row in g.iter_rows() for c in row)

@@ -88,3 +88,10 @@ Reverse-chronological. Each entry = one committed iteration.
 - Start Here: added a headline stat strip (category size, white space, MÜV framing, verdict).
 - [I29] Sources tab: added a "source mix" tier count (leans primary/regulatory).
 - [I28] KPI Dashboard: added a peer price-per-serving benchmark bar (where to anchor MÜV).
+
+## Iteration 14 — 2026-07-18 ~09:32Z (QA batch I30/I31)
+- [I30] validate_workbook.py now checks every internal '#Sheet!A1' hyperlink resolves to a real
+  sheet — the build fails on any broken nav link. Current: 0 broken.
+- [I31] Extended Landscape: amber-tagged all FLAG/unverified/could-not-confirm brand cells for
+  scanability, with a legend note.
+- [I32] Confirmed all gold interactive tabs are discoverable via Contents + Start Here.
