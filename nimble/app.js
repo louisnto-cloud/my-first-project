@@ -48,6 +48,7 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     apiKey: null,
     timeLimit: null,
     focus: null,      // null = shuffled rotation, else a single domain
+    dailyGoal: 5,     // drills/day target
     rotation: [],
     lastDomain: null,
     drills: [],
@@ -236,6 +237,7 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
       b.classList.toggle('selected', (b.dataset.focus || null) === state.focus);
     }
     renderRecentForm(state.drills);
+    renderDailyProgress();
     const streak = winStreak(state.drills);
     const streakLine = $('streakLine');
     streakLine.hidden = streak < 2;
@@ -245,6 +247,28 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   }
 
   const bandFor = (score) => (score <= 3 ? 'band-low' : score <= 6 ? 'band-mid' : 'band-high');
+
+  // Drills done on the local calendar day, and progress toward the daily goal.
+  // Rendered on both the ready and stats screens.
+  function renderDailyProgress() {
+    const goal = state.dailyGoal;
+    const today = new Date().toDateString();
+    const done = state.drills.filter(d => new Date(d.timestamp).toDateString() === today).length;
+    const met = goal > 0 && done >= goal;
+    const pct = goal > 0 ? Math.min(100, (done / goal) * 100) : 0;
+    const label = met
+      ? `<span class="met">🎯 Daily goal reached — ${done} today</span>`
+      : `Today: ${done} / ${goal} drills`;
+    for (const key of ['Ready', 'Stats']) {
+      const wrap = $('dp' + key + 'Wrap');
+      if (!wrap) continue;
+      wrap.hidden = !goal;
+      $('dp' + key + 'Label').innerHTML = label;
+      const fill = $('dp' + key + 'Fill');
+      fill.style.width = pct + '%';
+      fill.classList.toggle('met', met);
+    }
+  }
 
   // Consecutive drills from the most recent backwards that scored 7+.
   function winStreak(history) {
@@ -323,6 +347,17 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     }
     show('setup');
   });
+
+  // ---------- daily goal ----------
+  function changeGoal(delta) {
+    const next = Math.min(20, Math.max(1, state.dailyGoal + delta));
+    if (next === state.dailyGoal) return;
+    state.dailyGoal = next;
+    saveState();
+    $('goalValue').textContent = next;
+  }
+  $('goalMinus').addEventListener('click', () => changeGoal(-1));
+  $('goalPlus').addEventListener('click', () => changeGoal(1));
 
   // ---------- focus (which domain to drill) ----------
   $('focusPicker').addEventListener('click', (e) => {
@@ -596,6 +631,7 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     $('statBest').textContent = s.history.length ? Math.max(...s.history.map(h => h.score)) : '–';
     $('statLevel').textContent = difficultyFor(s.totalDrills);
 
+    renderDailyProgress();
     renderDomainRows(s);
 
     renderChart(s.history);
@@ -758,6 +794,7 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   }
 
   // ---------- boot ----------
+  $('goalValue').textContent = state.dailyGoal;
   if (!state.apiKey) show('key');
   else if (!state.timeLimit) show('setup');
   else showReady();

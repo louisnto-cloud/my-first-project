@@ -44,6 +44,15 @@
       <button data-limit="20">20s</button>
       <button data-limit="30">30s</button>
     </div>
+    <div class="goal-setting">
+      <span class="goal-label">Daily goal</span>
+      <div class="stepper">
+        <button id="goalMinus" aria-label="Decrease daily goal">−</button>
+        <span id="goalValue" aria-live="polite">5</span>
+        <button id="goalPlus" aria-label="Increase daily goal">+</button>
+      </div>
+      <span class="goal-unit">drills / day</span>
+    </div>
   </section>
 
   <!-- Ready -->
@@ -51,6 +60,10 @@
     <h1>Ready?</h1>
     <p class="muted" id="readyMeta"></p>
     <p class="domain-intro" id="domainIntro" hidden>Three arenas, shuffled so you can't settle in: <strong>business&nbsp;negotiation</strong>, <strong>legal&nbsp;argument</strong>, and <strong>personal&nbsp;confrontation</strong>. A scenario lands, the clock starts, you answer out loud in writing. Difficulty climbs as you rack up drills.</p>
+    <div class="daily-progress" id="dpReadyWrap" hidden>
+      <div class="daily-label" id="dpReadyLabel"></div>
+      <div class="daily-bar"><div class="daily-bar-fill" id="dpReadyFill"></div></div>
+    </div>
     <div class="recent-form" id="recentForm"></div>
     <p class="streak-line" id="streakLine" hidden></p>
     <div class="focus-picker" id="focusPicker" role="group" aria-label="What to drill">
@@ -127,6 +140,10 @@
       <div class="tile"><div class="tile-value" id="statAvg">–</div><div class="tile-label">avg score</div></div>
       <div class="tile"><div class="tile-value" id="statBest">–</div><div class="tile-label">best</div></div>
       <div class="tile"><div class="tile-value" id="statLevel">1</div><div class="tile-label">level</div></div>
+    </div>
+    <div class="daily-progress" id="dpStatsWrap" hidden>
+      <div class="daily-label" id="dpStatsLabel"></div>
+      <div class="daily-bar"><div class="daily-bar-fill" id="dpStatsFill"></div></div>
     </div>
     <div class="domain-avgs" id="domainAvgs"></div>
     <p class="focus-callout" id="focusCallout" hidden></p>
