@@ -4,16 +4,19 @@ import App from './App';
 import { AppProvider } from './store';
 import { I18nProvider } from './i18n';
 import { primeTheme } from './theme';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import './index.css';
 
 primeTheme();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <I18nProvider>
-      <AppProvider>
-        <App />
-      </AppProvider>
-    </I18nProvider>
+    <ErrorBoundary>
+      <I18nProvider>
+        <AppProvider>
+          <App />
+        </AppProvider>
+      </I18nProvider>
+    </ErrorBoundary>
   </React.StrictMode>,
 );
