@@ -11,7 +11,10 @@ const Avatar = {
     gold:   { body: '#ffc247', dark: '#e0a223' },
     mint:   { body: '#7ed9a2', dark: '#54b57d' },
     rose:   { body: '#f28ab5', dark: '#d3618f' },
-    sky:    { body: '#6fbdf5', dark: '#4795d1' }
+    sky:    { body: '#6fbdf5', dark: '#4795d1' },
+    aqua:   { body: '#3fd0d8', dark: '#25a7ad' },
+    berry:  { body: '#c86bd8', dark: '#a049b0' },
+    galaxy: { body: '#7a6bd8', dark: '#3a2f7a' }
   },
 
   items: [
@@ -32,8 +35,29 @@ const Avatar = {
     { id: 'g-round', name: 'Scholar Specs', kind: 'face', value: 'specs', cost: 45, icon: '👓' },
     { id: 'g-blush', name: 'Sparkle Cheeks', kind: 'face', value: 'sparkle', cost: 25, icon: '✨' },
     { id: 'p-cape', name: 'Hero Cape', kind: 'back', value: 'cape', cost: 90, icon: '🦸' },
-    { id: 'p-wings', name: 'Glide Wings', kind: 'back', value: 'wings', cost: 100, icon: '🪽' }
+    { id: 'p-wings', name: 'Glide Wings', kind: 'back', value: 'wings', cost: 100, icon: '🪽' },
+    { id: 'c-aqua', name: 'Aqua Splash', kind: 'color', value: 'aqua', cost: 30, icon: '💧' },
+    { id: 'c-berry', name: 'Berry Pop', kind: 'color', value: 'berry', cost: 35, icon: '🫐' },
+    { id: 'h-grad', name: 'Grad Cap', kind: 'hat', value: '🎓', cost: 55, icon: '🎓' },
+    { id: 'h-ranger', name: 'Ranger Hat', kind: 'hat', value: '🤠', cost: 50, icon: '🤠' },
+    { id: 'h-bow', name: 'Sweet Bow', kind: 'hat', value: '🎀', cost: 40, icon: '🎀' },
+    { id: 'h-party', name: 'Party Hat', kind: 'hat', value: '🥳', cost: 45, icon: '🥳' },
+    { id: 'f-stars', name: 'Star Eyes', kind: 'face', value: 'stars', cost: 55, icon: '🤩' },
+    { id: 'f-monocle', name: 'Monocle', kind: 'face', value: 'monocle', cost: 45, icon: '🧐' },
+    { id: 'b-jetpack', name: 'Jetpack', kind: 'back', value: 'jetpack', cost: 85, icon: '🚀' },
+    // Rare — unlocked by mastery, then free to wear
+    { id: 'c-galaxy', name: 'Galaxy Skin', kind: 'color', value: 'galaxy', cost: 0, icon: '🌌', req: { trophies: 4 }, rare: true },
+    { id: 'h-champion', name: 'Champion Topper', kind: 'hat', value: '🏆', cost: 0, icon: '🏆', req: { trophies: 8 }, rare: true },
+    { id: 'b-starwings', name: 'Star Wings', kind: 'back', value: 'starwings', cost: 0, icon: '🌟', req: { both: true }, rare: true }
   ],
+
+  reqMet(item) {
+    if (!item.req) return true;
+    const t = Object.keys(Store.state.bossPassed).length;
+    if (item.req.trophies && t < item.req.trophies) return false;
+    if (item.req.both && !CURRICULUM.every(w => w.regions.every(r => Store.state.bossPassed[r.id]))) return false;
+    return true;
+  },
 
   decor: [
     { id: 'd-tent', name: 'Camp Tent', icon: '⛺', cost: 45 },
@@ -66,12 +90,17 @@ const Avatar = {
     const face = eq.face;
     let backLayer = '';
     if (eq.back === 'cape') backLayer = `<path d="M 25 62 Q 50 100 75 62 L 70 48 Q 50 60 30 48 Z" fill="#f26d9c"/>`;
-    if (eq.back === 'wings') backLayer = `<text x="8" y="58" font-size="26">🪽</text><text x="66" y="58" font-size="26" transform="scale(-1,1) translate(-158,0)">🪽</text>`;
+    else if (eq.back === 'wings') backLayer = `<text x="8" y="58" font-size="26">🪽</text><text x="66" y="58" font-size="26" transform="scale(-1,1) translate(-158,0)">🪽</text>`;
+    else if (eq.back === 'jetpack') backLayer = `<text x="50" y="88" text-anchor="middle" font-size="26">🚀</text>`;
+    else if (eq.back === 'starwings') backLayer = `<text x="6" y="58" font-size="24">🌟</text><text x="72" y="58" font-size="24">🌟</text>`;
     let faceLayer = '';
     if (face === 'shades') faceLayer = `<rect x="26" y="38" width="20" height="11" rx="5" fill="#3d3554"/><rect x="54" y="38" width="20" height="11" rx="5" fill="#3d3554"/><line x1="46" y1="43" x2="54" y2="43" stroke="#3d3554" stroke-width="3"/>`;
     else if (face === 'specs') faceLayer = `<circle cx="36" cy="43" r="9" fill="none" stroke="#3d3554" stroke-width="2.5"/><circle cx="64" cy="43" r="9" fill="none" stroke="#3d3554" stroke-width="2.5"/><line x1="45" y1="43" x2="55" y2="43" stroke="#3d3554" stroke-width="2.5"/>`;
     else if (face === 'sparkle') faceLayer = `<text x="14" y="58" font-size="12">✨</text><text x="74" y="58" font-size="12">✨</text>`;
-    const eyes = face === 'shades' ? '' : `<circle cx="36" cy="43" r="4.5" fill="#3d3554"/><circle cx="64" cy="43" r="4.5" fill="#3d3554"/>
+    else if (face === 'monocle') faceLayer = `<circle cx="64" cy="43" r="10" fill="none" stroke="#3d3554" stroke-width="2.5"/><line x1="64" y1="53" x2="60" y2="66" stroke="#3d3554" stroke-width="1.5"/>`;
+    const eyes = face === 'shades' ? ''
+      : face === 'stars' ? `<text x="28" y="49" font-size="16">⭐</text><text x="56" y="49" font-size="16">⭐</text>`
+      : `<circle cx="36" cy="43" r="4.5" fill="#3d3554"/><circle cx="64" cy="43" r="4.5" fill="#3d3554"/>
       <circle cx="37.5" cy="41.5" r="1.6" fill="#fff"/><circle cx="65.5" cy="41.5" r="1.6" fill="#fff"/>`;
     const hat = eq.hat ? `<text x="50" y="22" text-anchor="middle" font-size="26">${eq.hat}</text>` : '';
     return `<svg viewBox="0 0 100 100" width="${size}" height="${size}" class="avatar-svg" aria-hidden="true">
@@ -151,12 +180,24 @@ const Shop = {
 
     if (tab === 'style') {
       Avatar.items.forEach(item => {
-        const owned = st.avatar.owned.includes(item.id);
+        // Rare items stay locked until their mastery requirement is met
+        if (item.req && !Avatar.reqMet(item)) {
+          const need = item.req.trophies ? `Beat ${item.req.trophies} bosses` : 'Master both worlds';
+          const lc = U.el('div', 'shop-item locked-item');
+          lc.innerHTML = `<div class="shop-icon">🔒</div><div class="shop-name">${U.esc(item.name)}</div><div class="shop-desc">${need}</div>`;
+          grid.appendChild(lc);
+          return;
+        }
+        // Rare unlocked items (cost 0) are free to wear
+        const freeUnlock = item.cost === 0;
+        const owned = st.avatar.owned.includes(item.id) || freeUnlock;
         const equipped = st.avatar.equipped[item.kind] === item.value ||
           (item.kind === 'color' && Avatar.equipped().color === item.value);
-        grid.appendChild(renderItem(item, owned, equipped,
+        const card = renderItem(item, owned, equipped,
           () => { st.avatar.owned.push(item.id); st.avatar.equipped[item.kind] = item.value; Store.save(); },
-          () => { st.avatar.equipped[item.kind] = (st.avatar.equipped[item.kind] === item.value && item.kind !== 'color') ? null : item.value; Store.save(); }));
+          () => { st.avatar.equipped[item.kind] = (st.avatar.equipped[item.kind] === item.value && item.kind !== 'color') ? null : item.value; Store.save(); });
+        if (item.rare) card.classList.add('rare-item');
+        grid.appendChild(card);
       });
     } else if (tab === 'decor') {
       Avatar.decor.forEach(item => {

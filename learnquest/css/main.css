@@ -635,6 +635,13 @@ button:focus-visible, input:focus-visible {
   display: flex; flex-direction: column; gap: 8px; align-items: center; box-shadow: var(--shadow);
 }
 .shop-item.equipped { outline: 4px solid var(--gold); }
+.shop-item.locked-item { opacity: .6; filter: grayscale(.5); }
+.shop-item.rare-item {
+  background: linear-gradient(160deg, #fff, #fff2d0);
+  box-shadow: 0 6px 20px rgba(255, 179, 64, .4);
+  outline: 2px solid var(--gold);
+}
+.shop-item.rare-item .shop-name::after { content: ' ✦'; color: var(--amber); }
 .shop-icon { font-size: 40px; }
 .shop-name { font-weight: 900; font-size: 15px; }
 .shop-desc { font-size: 12.5px; color: var(--ink-soft); font-weight: 600; }
