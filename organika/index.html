@@ -1667,7 +1667,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v46';
+const APP_VERSION='v47';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -2141,6 +2141,7 @@ function renderQuiz(){
     ${S.quizAnswer!==null?`<div class="quiz-feedback ${S.quizAnswer===id?'correct-fb':'wrong-fb'}">
       ${S.quizAnswer===id?'Correct! +XP':'Incorrect'}
       <div class="quiz-reveal">${v.vi} — ${v.en}</div>
+      ${toneStrip(v.vi,true)}
       ${v.phonetic?`<div class="quiz-ph">/ ${v.phonetic} /</div>`:''}
       <button class="speak-inline lg" onclick="speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊 Listen</button>
       <button class="btn-primary" style="margin-top:12px" onclick="nextQuiz()">Continue</button>
@@ -2542,6 +2543,7 @@ function renderType(){
       <div class="quiz-feedback ${S.typeChecked?'correct-fb':'wrong-fb'}">
         ${S.typeChecked?'Correct! +XP':'Not quite.'}
         <div class="quiz-reveal">${v.vi}</div>
+        ${toneStrip(v.vi,true)}
         <div class="quiz-ph">/ ${v.phonetic} /</div>
         <button class="speak-inline lg" onclick="speak('${v.vi.replace(/'/g,"\\'")}')">🔊 Listen</button>
         <button class="btn-primary" style="margin-top:12px" onclick="nextType()">Continue</button>
@@ -2624,6 +2626,7 @@ function renderBuild(){
       :`<div class="quiz-feedback ${S.buildChecked?'correct-fb':'wrong-fb'}">
           ${S.buildChecked?'Perfect! +XP':'Not quite. Correct order:'}
           <div class="quiz-reveal" style="font-size:16px">${S.buildSource}</div>
+          ${toneStrip(S.buildSource,true)}
           <button class="speak-inline lg" onclick="speak('${S.buildSource.replace(/'/g,"\\'")}')">🔊 Listen</button>
           <button class="btn-primary" style="margin-top:12px" onclick="nextBuild()">Continue</button>
         </div>`}
