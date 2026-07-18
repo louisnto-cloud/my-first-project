@@ -336,6 +336,7 @@ textarea:focus{border-color:var(--g)}
 .export-section{background:var(--wh);border-radius:var(--r);padding:16px;box-shadow:var(--shd)}
 .export-label{font-size:15px;font-weight:800;margin-bottom:6px;color:var(--tx)}
 .export-desc{font-size:13px;color:var(--tx2);line-height:1.6;margin-bottom:12px}
+.voice-steps{margin:0 0 14px 18px;padding:0;font-size:13px;color:var(--tx);line-height:1.8}
 .export-box{width:100%;height:120px;border:2px solid var(--bd);border-radius:var(--rs);padding:12px;font-size:12px;font-family:monospace;resize:none;background:var(--bg);margin-bottom:10px;outline:none}
 .export-box:focus{border-color:var(--g)}
 
@@ -1526,6 +1527,8 @@ let S={
   showFilters:false,  // practice screen: filters expanded
   listenFirst:false,  // flashcard listen-first mode
   dictCat:'',         // dictionary category browse
+  fptKey:'',          // FPT.AI key for Southern voice (device-local)
+  fptVoice:'lannhi',  // Southern voice id
   sessionLen:20,      // cards per practice session
   mixedActive:false,  // mixed session in progress
   mixedModes:[],      // per-card mode assignment for mixed sessions
@@ -1625,6 +1628,14 @@ function loadState(){
     const raw=localStorage.getItem(SAVE_KEY);
     if(raw) applySnapshot(JSON.parse(raw));
   }catch(e){}
+  // voice credentials live in their own key, never in exported progress
+  try{
+    const v=JSON.parse(localStorage.getItem('organika-fpt')||'{}');
+    if(v.key){S.fptKey=v.key;S.fptVoice=v.voice||'lannhi';}
+  }catch(e){}
+}
+function saveFPT(){
+  try{localStorage.setItem('organika-fpt',JSON.stringify({key:S.fptKey,voice:S.fptVoice}));}catch(e){}
 }
 document.addEventListener('visibilitychange',()=>{if(document.hidden)saveState();});
 function toggleSpeed(){S.audioSlow=!S.audioSlow;render();}
@@ -1740,7 +1751,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v52';
+const APP_VERSION='v53';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1783,6 +1794,11 @@ function speak(text){
   stopAudio();
   const seq=++_speakSeq;
   if(navigator.onLine===false){speakLocal(text,seq,true);return;}
+  // Southern voice via FPT.AI when a key is set; falls back to Google on any failure
+  if(S.fptKey){ speakFPT(text,seq); return; }
+  speakGoogle(text,seq);
+}
+function speakGoogle(text,seq){
   const p=getPlayer();
   let mode='trying'; // 'google' once network audio really plays, 'local' once fallback starts
   const useLocal=()=>{
@@ -1793,13 +1809,36 @@ function speak(text){
   p.onplaying=()=>{
     if(seq!==_speakSeq){p.pause();return;}
     if(mode==='local'){p.pause();return;} // device voice already talking — no overlap
-    mode='google';_lastPath='Google voice';setStatus('Playing: Google Vietnamese voice');
+    mode='google';_lastPath='Google voice (Northern)';setStatus('Playing: Google Vietnamese voice (Northern)');
   };
   p.onerror=useLocal;
   p.src=ttsUrl(text);
   const pr=p.play();
   if(pr&&pr.catch) pr.catch(useLocal);
   setTimeout(useLocal,2500);
+}
+// FPT.AI returns an async URL; the mp3 becomes available a moment later, so retry the load.
+function speakFPT(text,seq){
+  const voice=S.fptVoice||'lannhi';
+  fetch('https://api.fpt.ai/hmi/tts/v5',{
+    method:'POST',
+    headers:{'api-key':S.fptKey,'voice':voice,'speed':S.audioSlow?'-2':'0','Content-Type':'text/plain'},
+    body:cleanTts(text)
+  }).then(r=>r.json()).then(d=>{
+    if(seq!==_speakSeq) return;
+    if(!d||!d.async||d.error){ speakGoogle(text,seq); return; }
+    playFPTUrl(d.async,seq,8,text);
+  }).catch(()=>{ if(seq===_speakSeq) speakGoogle(text,seq); });
+}
+function playFPTUrl(url,seq,tries,text){
+  if(seq!==_speakSeq) return;
+  const p=getPlayer();
+  const retry=()=>{ if(seq===_speakSeq){ if(tries>0) setTimeout(()=>playFPTUrl(url,seq,tries-1,text),400); else speakGoogle(text,seq); } };
+  p.onplaying=()=>{ if(seq!==_speakSeq){p.pause();return;} _lastPath='Southern voice ('+(S.fptVoice||'lannhi')+')'; setStatus('Playing: Southern voice ✓'); };
+  p.onerror=retry;
+  p.src=url;
+  const pr=p.play();
+  if(pr&&pr.catch) pr.catch(retry);
 }
 let _accentWarned=false;
 function speakLocal(text,seq,force){
@@ -1914,6 +1953,7 @@ function render(){
     case 'type':        app.innerHTML=renderType(); break;
     case 'build':       app.innerHTML=renderBuild(); break;
     case 'prices':      app.innerHTML=renderPrices(); break;
+    case 'voice':       app.innerHTML=renderVoice(); break;
     case 'tones':       app.innerHTML=renderTones(); break;
     default:            app.innerHTML=renderHome();
   }
@@ -2011,6 +2051,7 @@ function renderHome(){
       <button class="explore-row" onclick="S.toneSet=null;S.toneRight=0;S.toneTotal=0;go('tones')"><span>🎵</span><span>Tone Trainer — train your ear</span><span class="arrow">›</span></button>
       <button class="explore-row" onclick="go('dict')"><span>🔎</span><span>Dictionary</span><span class="arrow">›</span></button>
       <button class="explore-row" onclick="go('primer')"><span>📖</span><span>Pronouns, Tones and Register</span><span class="arrow">›</span></button>
+      <button class="explore-row" onclick="go('voice')"><span>🎙️</span><span>Southern voice ${S.fptKey?'✓':'(set up)'}</span><span class="arrow">›</span></button>
       <button class="explore-row" onclick="showAudioHelp()"><span>🔊</span><span>Audio help</span><span class="arrow">›</span></button>
     </div>
     <div style="height:90px"></div>
@@ -2802,6 +2843,39 @@ function newPriceRound(){
   S.priceAnswer=null;
 }
 function speakPrice(){speak(numToVi(S.priceTarget)+' đồng');}
+const FPT_VOICES=[
+  {id:'lannhi',n:'Lan Nhi — Southern female 🌴'},
+  {id:'linhsan',n:'Linh San — Southern female 🌴'},
+  {id:'minhquang',n:'Minh Quang — Southern male 🌴'},
+];
+function renderVoice(){
+  return `<div class="screen">
+  <div class="lesson-header"><button class="btn-back" onclick="go('home')">‹</button><span class="screen-title">Southern Voice</span><span></span></div>
+  <main class="main-scroll" style="padding:16px">
+    <div class="export-section">
+      <div class="export-label">🌴 Real Southern (HCMC) accent</div>
+      <p class="export-desc">Free Google audio is a <b>Northern</b> accent — that is the only free Vietnamese voice. To hear a genuine <b>Southern</b> voice, paste a free FPT.AI key below. It is stored only on this device and never leaves it except to fetch your audio.</p>
+      <ol class="voice-steps">
+        <li>Go to <b>fpt.ai</b> → sign up (free) → AI Services → <b>Text to Speech</b></li>
+        <li>Copy your <b>API key</b></li>
+        <li>Paste it here and pick a voice</li>
+      </ol>
+      <input class="dict-input" type="text" placeholder="Paste FPT.AI API key" value="${(S.fptKey||'').replace(/"/g,'&quot;')}" oninput="S.fptKey=this.value.trim()" autocomplete="off" autocapitalize="off" spellcheck="false">
+      <div class="section-label">Voice</div>
+      <div class="mode-pills" style="flex-wrap:wrap">
+        ${FPT_VOICES.map(v=>`<button class="pill${S.fptVoice===v.id?' active':''}" onclick="S.fptVoice='${v.id}';render()">${v.n}</button>`).join('')}
+      </div>
+      <div style="display:flex;gap:8px;margin-top:12px">
+        <button class="btn-primary" style="flex:1" onclick="saveFPT();speak('Xin chào anh, rất vui được gặp anh.');toast('Saved. If you hear a Southern voice, you are set!')">Save & test 🔊</button>
+        ${S.fptKey?`<button class="btn-sec" onclick="S.fptKey='';saveFPT();toast('Southern voice off — back to Google.');render()">Turn off</button>`:''}
+      </div>
+      <div id="audio-status" style="margin-top:10px;padding:8px 10px;background:var(--bg);border-radius:8px;font-size:12px;color:var(--tx2)">${S.fptKey?'Southern voice is ON — tap Save & test.':'Not set — using Google Northern voice.'}</div>
+      <p class="export-desc" style="margin-top:12px">If the test stays silent or sounds Northern, your browser may be blocking the request; tell me and I will route it another way. Either way the app keeps working with the Google voice.</p>
+    </div>
+    <div style="height:40px"></div>
+  </main>
+  </div>`;
+}
 function renderPrices(){
   if(!S.priceTarget) newPriceRound();
   return `<div class="screen">
