@@ -58,4 +58,11 @@ implement, validate (`./build_all.sh`), commit, log in CHANGELOG.md.
 - [x] I25 — [IMPROVE] "How to use" one-line hint on each gold interactive tab (where missing).
 - [x] I26 — [IMPROVE] Method & limitations expansion on Tab 03 (what would strengthen the dossier).
 - [x] I27 — [IMPROVE] Comparison Matrix: add a MÜV row so the subject appears in the core matrix too.
-- [ ] I28 — [EXPAND 20%] KPI Dashboard: add a target-vs-benchmark mini bar.
+- [x] I28 — [EXPAND 20%] KPI Dashboard: add a target-vs-benchmark mini bar.
+
+## Refill 4 (added 2026-07-18 ~09:29Z)
+- [x] I29 — [IMPROVE] Sources-by-tier count on the Sources tab.
+- [x] SH  — [IMPROVE] Start Here headline stat strip.
+- [ ] I30 — [IMPROVE] Verify every hyperlink target resolves to an existing sheet (validator check).
+- [ ] I31 — [IMPROVE] Extended Landscape: visibly tag FLAG/unverified brands (amber) for scanability.
+- [ ] I32 — [IMPROVE] Ensure every gold interactive tab is named in the Contents nav legend.

@@ -83,3 +83,8 @@ Reverse-chronological. Each entry = one committed iteration.
 - [I26] Methodology: added a prioritized "what would strengthen this further" list (confirm MÜV specs,
   licensed CA scanner data, regulatory opinion, real cost inputs, distributor interviews).
 - [I25] Go-No-Go: added a one-line "how to use" hint (edit weights/scores → verdict recomputes).
+
+## Iteration 13 — 2026-07-18 ~09:29Z
+- Start Here: added a headline stat strip (category size, white space, MÜV framing, verdict).
+- [I29] Sources tab: added a "source mix" tier count (leans primary/regulatory).
+- [I28] KPI Dashboard: added a peer price-per-serving benchmark bar (where to anchor MÜV).
