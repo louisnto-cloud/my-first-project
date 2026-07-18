@@ -52,3 +52,12 @@ math tie-out), commit, push. Keep the app cohesive and simple — no bloat.
 - [improve] Responsive: every table scrolls horizontally on small screens; row hover.
 - [improve] App remembers your last view + scenario across reloads.
 - [improve] Reset now asks for confirmation (prevents accidental data loss).
+
+## 3h build session — expansions (verified, zero console errors)
+- [x] Bulk actions: apply % to all SKUs' price / volume / costs
+- [x] Custom scenarios: add / rename / remove (not just Low/Base/High/Stretch)
+- [x] Portfolio mix: SKUs ranked by contribution (Overview)
+- [x] Summary: shareable one-page P&L (print/PDF)
+- [x] Snapshot compare: current vs saved snapshot with deltas (no live-model corruption)
+- [x] CSV import: paste SKU rows (round-trips with Export CSV)
+- [x] 3-Year projection: growth rates -> Year 1-3 P&L + CAGR
