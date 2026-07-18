@@ -260,6 +260,25 @@ describe('grading queue and rubric', () => {
   });
 });
 
+describe('teacher roll-call (Điểm danh)', () => {
+  it('a teacher marks their class present; non-teachers refused', async () => {
+    const date = '2098-05-10';
+    const roster = (await req('GET', `/classes/c1/attendance?date=${date}`, lan)).json() as { studentId: string; present: boolean }[];
+    expect(roster.length).toBeGreaterThan(0);
+    expect(roster.every((r) => r.present === false)).toBe(true);
+
+    const save = await req('POST', '/classes/c1/attendance', lan, { date, present: ['s0'] });
+    expect(save.statusCode).toBe(200);
+    expect(save.json().present).toBe(1);
+
+    const after = (await req('GET', `/classes/c1/attendance?date=${date}`, lan)).json() as { studentId: string; present: boolean }[];
+    expect(after.find((r) => r.studentId === 's0')?.present).toBe(true);
+
+    // David does not teach c1.
+    expect((await req('POST', '/classes/c1/attendance', david, { date, present: [] })).statusCode).toBe(403);
+  });
+});
+
 describe('review of graded work', () => {
   it('a student reviews after grading; correct answers only appear once graded; classmates are refused', async () => {
     const create = await req('POST', '/classes/c1/assignments', lan, { title: 'Review Task', questionIds: ['q_mc1', 'q_fb1'] });

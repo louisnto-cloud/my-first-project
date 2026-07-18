@@ -684,6 +684,31 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     }
   }
 
+  // ---- teacher roll-call (Điểm danh) ----
+  if (seg[0] === 'classes' && seg[2] === 'attendance') {
+    const c = db.classes.find((x) => x.id === seg[1]);
+    if (!c) return err(404, 'not_found');
+    if (!canTeachClass(actor, classRef(c))) return err(403, 'forbidden');
+    const roster = db.users.filter((u) => u.role === 'student' && u.classIds.includes(c.id));
+    if (method === 'GET') {
+      const date = (q.date as string) || today();
+      return ok(roster.map((u) => ({ studentId: u.id, name: u.name, present: db.attendance.some((a) => a.studentId === u.id && a.date === date && a.checkInAt) })));
+    }
+    if (method === 'POST') {
+      const date = String(b.date ?? today());
+      const present = new Set(((b.present as string[]) ?? []).filter((s) => roster.some((r) => r.id === s)));
+      for (const u of roster) {
+        let rec = db.attendance.find((a) => a.studentId === u.id && a.date === date);
+        if (present.has(u.id)) {
+          if (!rec) { rec = { studentId: u.id, date, checkInAt: new Date(`${date}T08:00:00`).toISOString(), checkOutAt: null, releasedTo: null }; db.attendance.push(rec); }
+          else if (!rec.checkInAt) rec.checkInAt = new Date(`${date}T08:00:00`).toISOString();
+        }
+      }
+      save(db);
+      return ok({ ok: true, present: present.size });
+    }
+  }
+
   // ---- gradebook: real ETOP skill weighting (30/30/20/20) from domain ----
   if (seg[0] === 'classes' && seg[2] === 'gradebook' && method === 'GET') {
     const c = db.classes.find((x) => x.id === seg[1]);

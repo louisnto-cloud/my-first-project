@@ -34,8 +34,16 @@ interface Question {
 
 function ClassCard({ cls, siblings, vi }: { cls: ClassInfo; siblings: ClassInfo[]; vi: boolean }) {
   const [open, setOpen] = useState(false);
-  const [tab, setTab] = useState<'students' | 'work' | 'grades'>('students');
+  const [tab, setTab] = useState<'students' | 'work' | 'grades' | 'roll'>('students');
   const [gradebook, setGradebook] = useState<{ studentId: string; name: string; overall: number | null; skills: Partial<Record<string, { earned: number; possible: number }>> }[]>([]);
+  const [rollDate, setRollDate] = useState(() => new Date().toISOString().slice(0, 10));
+  const [roll, setRoll] = useState<{ studentId: string; name: string; present: boolean }[]>([]);
+  const loadRoll = async (date: string) => setRoll(await api<typeof roll>('GET', `/classes/${cls.id}/attendance?date=${date}`).catch(() => []));
+  const toggleRoll = (sid: string) => setRoll((xs) => xs.map((r) => (r.studentId === sid ? { ...r, present: !r.present } : r)));
+  const saveRoll = async () => {
+    await api('POST', `/classes/${cls.id}/attendance`, { date: rollDate, present: roll.filter((r) => r.present).map((r) => r.studentId) });
+    flash(`✅ Đã điểm danh ${roll.filter((r) => r.present).length}/${roll.length} — phụ huynh thấy trong app.`);
+  };
   const [roster, setRoster] = useState<RosterRow[]>([]);
   const [assignments, setAssignments] = useState<{ id: string; title: string; status: string; submittedCount?: number; rosterCount?: number; avgOverall?: number | null }[]>([]);
   const [names, setNames] = useState('');
@@ -179,14 +187,15 @@ function ClassCard({ cls, siblings, vi }: { cls: ClassInfo; siblings: ClassInfo[
           )}
 
           <div className="flex gap-1 rounded-2xl bg-violet-100 p-1">
-            {([['students', `👧 ${vi ? 'Học viên' : 'Students'} (${roster.length})`], ['work', `📝 ${vi ? 'Bài tập' : 'Work'} (${assignments.length})`], ['grades', vi ? '📊 Điểm' : '📊 Grades']] as const).map(([k, label]) => (
+            {([['students', `👧 ${vi ? 'Học viên' : 'Students'}`], ['roll', '📋 Điểm danh'], ['work', `📝 ${vi ? 'Bài tập' : 'Work'}`], ['grades', vi ? '📊 Điểm' : '📊 Grades']] as const).map(([k, label]) => (
               <button
                 key={k}
                 onClick={() => {
                   setTab(k);
                   if (k === 'grades') void api<typeof gradebook>('GET', `/classes/${cls.id}/gradebook`).then(setGradebook).catch(() => setGradebook([]));
+                  if (k === 'roll') void loadRoll(rollDate);
                 }}
-                className={`flex-1 rounded-xl px-2 py-2 text-xs font-extrabold transition ${tab === k ? 'bg-white text-violet-700 shadow-sm' : 'text-violet-400'}`}
+                className={`flex-1 rounded-xl px-1.5 py-2 text-[11px] font-extrabold transition ${tab === k ? 'bg-white text-violet-700 shadow-sm' : 'text-violet-400'}`}
               >
                 {label}
               </button>
@@ -236,6 +245,33 @@ function ClassCard({ cls, siblings, vi }: { cls: ClassInfo; siblings: ClassInfo[
                   className="w-full text-center text-xs font-extrabold text-violet-500"
                 >
                   ⬇ Xuất danh sách CSV
+                </button>
+              )}
+            </div>
+          )}
+
+          {tab === 'roll' && (
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="text-[11px] font-bold text-slate-400">Ngày:</span>
+                <input className="input !py-1.5 text-sm" type="date" value={rollDate} onChange={(e) => { setRollDate(e.target.value); void loadRoll(e.target.value); }} />
+              </div>
+              {roll.length === 0 && <div className="rounded-2xl bg-slate-50 p-3 text-center text-sm font-bold text-slate-400">Lớp chưa có học viên</div>}
+              <div className="grid grid-cols-2 gap-1.5">
+                {roll.map((r) => (
+                  <button
+                    key={r.studentId}
+                    onClick={() => toggleRoll(r.studentId)}
+                    className={`flex items-center justify-between gap-1 rounded-xl border-2 px-2.5 py-2 text-left text-sm font-bold transition active:scale-95 ${r.present ? 'border-emerald-300 bg-emerald-50 text-emerald-700' : 'border-slate-200 bg-white text-slate-400'}`}
+                  >
+                    <span className="min-w-0 truncate">{r.name}</span>
+                    <span className="shrink-0">{r.present ? '✅' : '⚪'}</span>
+                  </button>
+                ))}
+              </div>
+              {roll.length > 0 && (
+                <button onClick={saveRoll} className="btn-primary w-full text-sm">
+                  💾 Lưu điểm danh ({roll.filter((r) => r.present).length}/{roll.length} có mặt)
                 </button>
               )}
             </div>

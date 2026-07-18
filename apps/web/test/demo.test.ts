@@ -409,6 +409,26 @@ describe('demo engine — kiosk (front desk)', () => {
   });
 });
 
+describe('demo engine — teacher roll-call (Điểm danh)', () => {
+  it('a teacher marks present; the parent attendance strip reflects it; non-teacher refused', async () => {
+    const ha = await loginCode('GV0004'); // teaches Up 1
+    const date = new Date().toISOString().slice(0, 10);
+    const roster = (await call('GET', `/classes/up1/attendance?date=${date}`, undefined, ha!)).json as { studentId: string; present: boolean }[];
+    expect(roster.length).toBe(3);
+    const bao = roster.find((r) => r.studentId === 's_UP1482')!;
+    const save = await call('POST', '/classes/up1/attendance', { date, present: [bao.studentId] }, ha!);
+    expect(save.status).toBe(200);
+
+    // Re-fetch: bao is now present.
+    const after = (await call('GET', `/classes/up1/attendance?date=${date}`, undefined, ha!)).json as { studentId: string; present: boolean }[];
+    expect(after.find((r) => r.studentId === 's_UP1482')?.present).toBe(true);
+
+    // A teacher who doesn't run Up 1 cannot roll-call it.
+    const ly = await loginCode('GV0006');
+    expect((await call('POST', '/classes/up1/attendance', { date, present: [] }, ly!)).status).toBe(403);
+  });
+});
+
 describe('demo engine — report card (Học bạ)', () => {
   it('a guardian reads a consolidated report; a non-guardian is refused', async () => {
     const parent = (await call('POST', '/auth/login', { email: 'phuhuynh@etop.vn', password: 'x' })).json as { token: string };

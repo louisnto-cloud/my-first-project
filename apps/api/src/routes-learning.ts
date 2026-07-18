@@ -12,6 +12,7 @@ import {
   allocateLoginCode, assignmentQuestions, autograde, gradeSubmission, isEnrolled, recordMastery, rid, rotateJoinCode, seededShuffle, serializeForStudent,
   type QuestionRow,
 } from './learning.js';
+import { checkIn } from './safety.js';
 
 async function getClass(db: DB, id: string): Promise<(ClassRef & { name: string }) | null> {
   return one(db, 'SELECT id, org_id AS "orgId", site_id AS "siteId", teacher_id AS "teacherId", name FROM classes WHERE id = $1', [id]);
@@ -646,6 +647,45 @@ export function registerLearningRoutes(app: FastifyInstance, db: DB): void {
   });
 
   // ---------- Gradebook ----------
+  // ---------- Teacher roll-call (Điểm danh) ----------
+  // A teacher marks their own class present/absent for a date. "Present"
+  // reuses the proven, org-scoped checkIn so the parent's attendance
+  // strip and report card reflect it. Absences don't touch dismissal.
+  app.get('/classes/:id/attendance', async (req, reply) => {
+    const { id } = req.params as { id: string };
+    const ctx = await requireTeach(req, reply, db, id);
+    if (!ctx) return;
+    const date = (req.query as { date?: string }).date ?? new Date().toISOString().slice(0, 10);
+    return many(
+      db,
+      `SELECT u.id AS "studentId", u.name,
+              COALESCE((SELECT ar.check_in_at IS NOT NULL FROM attendance_records ar WHERE ar.student_id = u.id AND ar.date = $2), false) AS "present"
+         FROM enrollments e JOIN users u ON u.id = e.student_id
+        WHERE e.class_id = $1 AND u.archived = false ORDER BY u.name`,
+      [id, date],
+    );
+  });
+
+  app.post('/classes/:id/attendance', async (req, reply) => {
+    const { id } = req.params as { id: string };
+    const ctx = await requireTeach(req, reply, db, id);
+    if (!ctx) return;
+    const body = z.object({ date: z.string().date(), present: z.array(z.string()).max(100).default([]) }).safeParse(req.body);
+    if (!body.success) return reply.code(400).send({ error: 'invalid_input' });
+    const roster = await many<{ id: string }>(db, `SELECT student_id AS id FROM enrollments WHERE class_id = $1 AND status = 'active'`, [id]);
+    const rosterIds = new Set(roster.map((r) => r.id));
+    const presentSet = new Set(body.data.present.filter((s) => rosterIds.has(s)));
+    const at = new Date(`${body.data.date}T12:00:00Z`); // noon UTC so dateOf() lands on the same day
+    let marked = 0;
+    for (const sid of presentSet) {
+      // Idempotent per (student, date, roll-call) — one stable event id.
+      const r = await checkIn(db, { orgId: ctx.actor.orgId, siteId: ctx.cls.siteId, studentId: sid, by: ctx.actor.id, at, clientEventId: `roll_${id}_${sid}_${body.data.date}` });
+      if (r.applied) marked++;
+    }
+    await audit(db, { orgId: ctx.actor.orgId, actorId: ctx.actor.id, action: 'attendance.rollcall', entity: 'class', entityId: id, detail: { date: body.data.date, present: presentSet.size } });
+    return { ok: true, present: presentSet.size, newlyMarked: marked };
+  });
+
   app.get('/classes/:id/gradebook', async (req, reply) => {
     const { id } = req.params as { id: string };
     const ctx = await requireTeach(req, reply, db, id);
