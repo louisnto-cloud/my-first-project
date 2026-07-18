@@ -60,3 +60,12 @@ Reverse-chronological. Each entry = one committed iteration.
   flags any solid-fill cell whose text drops below 2.0 contrast. Current build: 0 low-contrast cells.
 - [I19] Added a "How to navigate" legend to the Contents tab (click-to-jump, Start Here, Home links,
   gold=interactive, confidence tags) — the interface now self-explains.
+
+## Iteration 10 — 2026-07-18 ~09:15Z (batch I21/I22/I17)
+- [I21] Added "How to Present" tab: one talking point per key tab for a leadership readout (lead with
+  the decision, back it up tab-by-tab, end on the ask).
+- [I22] Added "Next Steps & Gates" tab: 7 immediate actions/decision gates with owner/timing/status,
+  sequenced to the Launch Plan.
+- [I17] Number-format pass: formatted the hidden chart-data helpers on Scenario Comparison (no more
+  'General'-format numerics).
+- Workbook: 39 → 41 tabs.

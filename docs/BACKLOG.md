@@ -43,7 +43,13 @@ implement, validate (`./build_all.sh`), commit, log in CHANGELOG.md.
 ## Refill (added 2026-07-18 ~08:59Z)
 - [x] I15 — [IMPROVE] Assumptions Audit tab: every Financial Model input + value(s) + source/confidence.
 - [x] I16 — [IMPROVE] Data Confidence Scoreboard: count ✅/◐/⚠ tags across tabs; summarize on one tab.
-- [ ] I17 — [IMPROVE] Number-format consistency pass ($, %, thousands) across financial/model tabs.
+- [x] I17 — [IMPROVE] Number-format consistency pass ($, %, thousands) across financial/model tabs.
 - [x] I18 — [IMPROVE] Contrast/accessibility check: ensure font vs fill contrast on band/callout cells.
 - [x] I19 — [IMPROVE] Per-tab one-line "what this tab shows" subtitle where missing.
 - [x] I20 — [IMPROVE] Cover sheet refresh: reflect 37 tabs, Start Here, Exec Brief, interactive model.
+
+## Refill 2 (added 2026-07-18 ~09:13Z)
+- [x] I21 — [IMPROVE] "How to Present" tab: one-line talking point per key tab for a leadership readout.
+- [x] I22 — [IMPROVE] "Next Steps & Gates" tab: the immediate actions/decision gates with a status col.
+- [ ] I23 — [IMPROVE] Per-scenario one-line takeaway on Scenario Comparison.
+- [ ] I24 — [IMPROVE] Glossary cross-link note pointing to Canada Regulatory v2 for term detail.
