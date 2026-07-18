@@ -167,6 +167,24 @@ const EN = {
         { q: 'How did Jae feel at the start?', a: 'nervous', wrong: ['bored', 'angry'] },
         { q: 'What did Coach Ali tell him?', a: 'The next play is the only one that matters', wrong: ['Try a different sport', 'Watch the other players'] }
       ]
+    },
+    {
+      title: 'The Rooftop Garden', emoji: '🌱',
+      text: 'The apartment building had a flat grey roof that nobody used. Then Mrs. Okonkwo carried up one tomato plant in a bucket. By June, six neighbours had added planters of beans, mint, and marigolds. Kids raced up after school to water rows with names taped to them. The roof stayed grey, but nobody called it empty anymore. In August the whole building shared a salad that had grown four floors above the street.',
+      qs: [
+        { q: 'What is the main idea of this passage?', a: 'One small action grew into a shared garden', wrong: ['Roofs should always be grey', 'Tomatoes need buckets to grow'] },
+        { q: 'Who started the garden?', a: 'Mrs. Okonkwo', wrong: ['the building manager', 'the kids'] },
+        { q: 'Which detail shows the garden brought people together?', a: 'The whole building shared a salad', wrong: ['The roof was flat', 'The plant was in a bucket'] }
+      ]
+    },
+    {
+      title: 'Lighthouse Keepers', emoji: '🗼',
+      text: 'Before machines took over, lighthouse keepers lived beside their lights all year. Every evening they climbed hundreds of stairs to light the great lamp, and every few hours all night they wound the clockwork that kept it turning. Storms were the busiest times: the worse the weather, the more the ships below needed the beam. Keepers kept logbooks of every passing vessel, every repair, and every rescue. It was lonely work, but a single lit lamp could save a hundred lives in one night.',
+      qs: [
+        { q: 'What is the main idea?', a: 'Lighthouse keeping was hard, important work', wrong: ['Storms happen mostly at night', 'Logbooks are fun to read'] },
+        { q: 'Why were storms the busiest times?', a: 'Ships needed the light most in bad weather', wrong: ['The stairs were slippery', 'More visitors came'] },
+        { q: 'What did keepers write in logbooks?', a: 'Ships, repairs, and rescues', wrong: ['Recipes and songs', 'Letters to family'] }
+      ]
     }
   ],
 
@@ -197,6 +215,24 @@ const EN = {
         { q: 'Which is one of the writer\'s reasons?', a: 'Sharing tools teaches responsibility', wrong: ['Tools are expensive to buy for the school', 'Woodworking is a required class'] },
         { q: 'How does the writer answer people who say tools are dangerous?', a: 'By comparing them to lending helmets', wrong: ['By promising adult supervision', 'By ignoring them'] }
       ]
+    },
+    {
+      title: 'The Substitute', emoji: '🧑‍🏫',
+      text: 'The class had planned to swap seats and use fake names, the classic substitute-teacher trick. But Mr. Duval walked in, wrote nothing on the board, and instead asked, "Who can teach me something I don\'t know?" By lunch he had learned three karate stances, the rules of cricket, and how to say hello in Tagalog — and somehow, without anyone noticing, the whole math lesson had happened too.',
+      qs: [
+        { q: 'What can you infer about Mr. Duval?', a: 'He is clever at winning students over', wrong: ['He forgot to plan a lesson', 'He dislikes teaching math'] },
+        { q: 'Why did the seat-swap trick never happen?', a: 'The students got interested in his question', wrong: ['The principal stopped it', 'The bell rang early'] },
+        { q: 'What does "somehow the math lesson had happened" suggest?', a: 'He taught it without them realizing', wrong: ['Math was cancelled', 'The students taught it wrong'] }
+      ]
+    },
+    {
+      title: 'Two Reports on the Game', emoji: '🥅',
+      text: 'TEXT ONE: Rovers 3, Wanderers 2. Kim scored twice; the winner came in the final minute on a penalty kick. Attendance was 412. TEXT TWO: With the rain driving sideways and one minute left, Kim placed the ball on the penalty spot, wiped her gloves on her shorts, and silenced four hundred umbrellas with a single strike into the top corner.',
+      qs: [
+        { q: 'How are the two texts different?', a: 'One reports facts, one tells it like a story', wrong: ['They describe different games', 'Both are interviews'] },
+        { q: 'Which detail appears in BOTH texts?', a: 'Kim and the final-minute penalty', wrong: ['The rain and the gloves', 'The umbrellas'] },
+        { q: 'Why might a writer choose the second style?', a: 'To make readers feel the moment', wrong: ['To list statistics quickly', 'To hide the final score'] }
+      ]
     }
   ],
 
@@ -218,6 +254,15 @@ const EN = {
         { q: 'Why did the willows grow back?', a: 'Elk stopped grazing at the riverbanks', wrong: ['Beavers planted them', 'Scientists watered them'] },
         { q: 'Which came directly from the beaver dams?', a: 'Ponds for otters, ducks, and fish', wrong: ['More wolves', 'Crumbling riverbanks'] }
       ]
+    },
+    {
+      title: 'The Paper Crane Contest', emoji: '🪶',
+      text: 'The rules said the winning crane would be the most beautiful, so Amir spent three weeks folding one from gold foil, each crease sharp as a blade. Sana entered a crumpled white crane folded on the bus that morning — but she had taught the whole grade to fold cranes at lunch all month, and behind her entry stood two hundred lopsided birds made by kids who had never folded anything before. The judges gave Sana the prize. Amir stared at the wall of crooked cranes for a long time, then asked her to teach him too.',
+      qs: [
+        { q: 'What is the theme of this story?', a: 'Sharing a craft matters more than perfecting it', wrong: ['Gold foil is hard to fold', 'Contests always have unfair judges'] },
+        { q: 'Why did the judges choose Sana?', a: 'Her crane represented two hundred new folders', wrong: ['Her crane was the most beautiful', 'Amir broke the rules'] },
+        { q: 'What does Amir\'s final request show?', a: 'He understood what made her entry win', wrong: ['He wanted to win her prize', 'He gave up on origami'] }
+      ]
     }
   ],
 
@@ -238,6 +283,15 @@ const EN = {
         { q: 'What is the author\'s central claim?', a: 'The kind of homework matters more than the amount', wrong: ['Homework should be banned everywhere', 'Students need more worksheets'] },
         { q: 'What evidence do ban supporters use?', a: 'Studies showing little gain before high school', wrong: ['Interviews with grandparents', 'Teacher salaries'] },
         { q: 'What is the author\'s tone?', a: 'reasoned and balanced', wrong: ['furious', 'mocking'] }
+      ]
+    },
+    {
+      title: 'The Last Ferry', emoji: '⛴️',
+      text: 'The government report called the ferry "economically unviable": forty-one passengers a day, an aging hull, a route a bridge had made optional. What the report did not measure was Mrs. Achebe, who had sold tea on the top deck for thirty years and knew every commuter\'s order by heart; or the island students who did their homework together at the long back table every afternoon; or the way the whole harbour still paused, just slightly, when the horn sounded at six. Numbers can tell you what a thing costs. They are much worse at telling you what it is worth.',
+      qs: [
+        { q: 'What is the author\'s central point?', a: 'Some value cannot be captured by numbers', wrong: ['Bridges are better than ferries', 'Reports are always wrong'] },
+        { q: 'Why does the author describe Mrs. Achebe and the students?', a: 'As evidence of the ferry\'s unmeasured worth', wrong: ['To show the ferry is crowded', 'To argue tea sales fund the route'] },
+        { q: 'What is the tone of the final two sentences?', a: 'quietly pointed', wrong: ['cheerful', 'panicked'] }
       ]
     }
   ],
@@ -325,7 +379,9 @@ const EN = {
     { correct: '"Let\'s build a fort," said Emma.', wrong: ['Let\'s build a fort, said Emma.', '"Let\'s build a fort said Emma."'] },
     { correct: 'Sam shouted, "The bus is here!"', wrong: ['Sam shouted, the bus is here!', 'Sam shouted "The bus is here!'] },
     { correct: '"Where is my helmet?" asked Theo.', wrong: ['"Where is my helmet? asked Theo."', 'Where is my helmet? "asked Theo."'] },
-    { correct: '"This soup is too hot," warned Dad.', wrong: ['"This soup is too hot warned Dad."', 'This soup is too hot, "warned Dad".'] }
+    { correct: '"This soup is too hot," warned Dad.', wrong: ['"This soup is too hot warned Dad."', 'This soup is too hot, "warned Dad".'] },
+    { correct: '"Race you to the corner!" yelled Priya.', wrong: ['"Race you to the corner yelled Priya!"', 'Race you to the corner! "yelled Priya."'] },
+    { correct: 'Grandpa whispered, "The fish can hear you."', wrong: ['Grandpa whispered, the fish can hear you.', 'Grandpa "whispered, The fish can hear you."'] }
   ],
 
   figurative: [
@@ -345,7 +401,9 @@ const EN = {
     { s: 'She dont like spinach.', fix: 'She doesn\'t like spinach.', spot: 'dont', why: '"Doesn\'t" needs an apostrophe and matches "she".' },
     { s: 'We seen a moose yesterday.', fix: 'We saw a moose yesterday.', spot: 'seen', why: 'The past tense of "see" is "saw".' },
     { s: 'Their going to the beach.', fix: 'They\'re going to the beach.', spot: 'Their', why: '"They\'re" means "they are".' },
-    { s: 'The childs lost there mittens.', fix: 'The children lost their mittens.', spot: 'childs / there', why: '"Children" is the plural, and "their" shows belonging.' }
+    { s: 'The childs lost there mittens.', fix: 'The children lost their mittens.', spot: 'childs / there', why: '"Children" is the plural, and "their" shows belonging.' },
+    { s: 'Him and I builded a fort.', fix: 'He and I built a fort.', spot: 'Him / builded', why: 'Use "He" as a subject, and the past tense of "build" is "built".' },
+    { s: 'Theres to many rules at this pool.', fix: 'There are too many rules at this pool.', spot: 'Theres / to', why: '"There are" fits the plural "rules", and "too" means more than enough.' }
   ],
 
   homophones: [
@@ -366,7 +424,10 @@ const EN = {
     { s: 'Confetti rained down as the whole town cheered and the band played louder and louder.', a: 'joyful', wrong: ['gloomy', 'tense'] },
     { s: 'The old dog watched the empty road every afternoon, ears lifting at every distant car.', a: 'wistful and sad', wrong: ['funny', 'furious'] },
     { s: 'One sock. Every single dryer load, exactly one sock vanished. Devon suspected the cat was building something.', a: 'humorous', wrong: ['terrifying', 'sorrowful'] },
-    { s: 'The mountain had taken three climbers this season, and the wind was rising again.', a: 'ominous', wrong: ['playful', 'cozy'] }
+    { s: 'The mountain had taken three climbers this season, and the wind was rising again.', a: 'ominous', wrong: ['playful', 'cozy'] },
+    { s: 'The kettle whistled, the cat claimed the warmest blanket, and snow drew slow curtains across the window.', a: 'cozy and calm', wrong: ['terrifying', 'furious'] },
+    { s: 'Ninety-nine steps down, one candle left, and the map ended at a door no one had drawn.', a: 'mysterious', wrong: ['cheerful', 'bored'] },
+    { s: 'She read the acceptance letter four times, then once more out loud, then screamed into a pillow with joy.', a: 'excited', wrong: ['gloomy', 'ominous'] }
   ],
 
   pointOfView: [
@@ -374,7 +435,10 @@ const EN = {
     { s: 'Kira tightened her helmet and stared down the ramp. Her heart pounded.', a: 'third person', wrong: ['first person', 'second person'] },
     { s: 'You tighten your helmet and stare down the ramp. Your move.', a: 'second person', wrong: ['first person', 'third person'] },
     { s: 'We packed our tents before sunrise and none of us said a word.', a: 'first person', wrong: ['third person', 'second person'] },
-    { s: 'The twins argued all morning, though neither could remember why.', a: 'third person', wrong: ['first person', 'second person'] }
+    { s: 'The twins argued all morning, though neither could remember why.', a: 'third person', wrong: ['first person', 'second person'] },
+    { s: 'My brother says I snore, but I have never once heard it.', a: 'first person', wrong: ['third person', 'second person'] },
+    { s: 'Nadia counted her savings twice, and both times it was not enough.', a: 'third person', wrong: ['first person', 'second person'] },
+    { s: 'You open the old book, and the smell of dust and secrets rises to meet you.', a: 'second person', wrong: ['first person', 'third person'] }
   ],
 
   argumentEvidence: [
@@ -382,21 +446,28 @@ const EN = {
     { claim: 'Kids should learn to code.', good: 'Coding jobs are growing three times faster than other jobs.', bad: 'Computers have keyboards and screens.' },
     { claim: 'The city needs more bike lanes.', good: 'Streets with bike lanes have 40% fewer accidents.', bad: 'Bikes come in many colours.' },
     { claim: 'Recess should be longer.', good: 'Studies show students focus better after outdoor play.', bad: 'Some students like the slide.' },
-    { claim: 'Our town should build a library branch.', good: 'The nearest library is an hour away by bus.', bad: 'Libraries contain books on shelves.' }
+    { claim: 'Our town should build a library branch.', good: 'The nearest library is an hour away by bus.', bad: 'Libraries contain books on shelves.' },
+    { claim: 'School should start later in the morning.', good: 'Teens who start school later average 45 more minutes of sleep and better grades.', bad: 'Mornings come before afternoons.' },
+    { claim: 'Our cafeteria should compost food waste.', good: 'The cafeteria throws away 40 kilograms of food scraps every day.', bad: 'Compost is brown and dirt is also brown.' }
   ],
 
   themeStories: [
     { s: 'The tortoise plodded on while the hare napped under a tree. The tortoise crossed the finish line first.', a: 'Slow and steady wins the race', wrong: ['Naps are important', 'Tortoises are faster than hares'] },
     { s: 'The tiny mouse freed the mighty lion by chewing through the hunter\'s net.', a: 'Even the small can help the strong', wrong: ['Lions should avoid nets', 'Mice have sharp teeth'] },
     { s: 'The boy cried wolf as a joke twice. When the real wolf came, no one believed him.', a: 'Liars are not believed even when truthful', wrong: ['Wolves are dangerous', 'Shepherds need helpers'] },
-    { s: 'Each stick snapped easily alone, but the bundle of sticks could not be broken.', a: 'There is strength in working together', wrong: ['Sticks are weak', 'Bundles are heavy'] }
+    { s: 'Each stick snapped easily alone, but the bundle of sticks could not be broken.', a: 'There is strength in working together', wrong: ['Sticks are weak', 'Bundles are heavy'] },
+    { s: 'The crow dropped pebbles into the tall jug, one by one, until the water rose high enough to drink.', a: 'Patience and cleverness solve hard problems', wrong: ['Crows prefer pebbles to food', 'Jugs should be kept full'] },
+    { s: 'The ant stored food all summer while the grasshopper played. When winter came, only one of them was ready.', a: 'Prepare today for what tomorrow brings', wrong: ['Summer is better than winter', 'Grasshoppers cannot store food'] }
   ],
 
   authorsPurpose: [
     { s: 'Mix two cups of flour with one egg. Stir until smooth. Cook on a hot pan for two minutes per side.', a: 'to instruct', wrong: ['to entertain', 'to persuade'] },
     { s: 'Vote for Lin for class president — she listens, she works hard, and she gets things done!', a: 'to persuade', wrong: ['to instruct', 'to inform'] },
     { s: 'The three-toed sloth moves so slowly that algae grows in its fur, turning it slightly green.', a: 'to inform', wrong: ['to persuade', 'to entertain'] },
-    { s: 'The dragon sneezed, and the knight\'s marshmallow was toasted perfectly. "Again!" laughed the knight.', a: 'to entertain', wrong: ['to inform', 'to instruct'] }
+    { s: 'The dragon sneezed, and the knight\'s marshmallow was toasted perfectly. "Again!" laughed the knight.', a: 'to entertain', wrong: ['to inform', 'to instruct'] },
+    { s: 'Hold the racket loosely, step toward the net, and swing low to high in one smooth motion.', a: 'to instruct', wrong: ['to entertain', 'to persuade'] },
+    { s: 'A single reusable bottle keeps hundreds of plastic ones out of the landfill — bring yours tomorrow.', a: 'to persuade', wrong: ['to instruct', 'to inform'] },
+    { s: 'The narwhal\'s tusk is actually a tooth that can grow three metres long and sense changes in the water.', a: 'to inform', wrong: ['to persuade', 'to entertain'] }
   ],
 
   complexSentences: [
@@ -427,6 +498,16 @@ const EN = {
       draft: 'Lunch was bad. The line was long. I was mad.',
       best: 'After twenty minutes in the snaking cafeteria line, my reward was a sandwich frozen solid in the middle.',
       wrong: ['Lunch was really bad and the line was really long.', 'Bad lunch. Long line. Mad me.']
+    },
+    {
+      draft: 'The hike was hard. We got tired. The view was good.',
+      best: 'Our legs burned on the last switchback, but the whole silver lake opening below us made every step worth it.',
+      wrong: ['The hike was very hard and we got very tired.', 'Hard hike. Tired us. Good view though.']
+    },
+    {
+      draft: 'My grandma is nice. She cooks food. I like visiting.',
+      best: 'My grandma hums while her dumplings steam up the kitchen windows, and I never want to leave.',
+      wrong: ['My grandma is really nice and cooks really good food.', 'Nice grandma. Food cooked. Visits liked.']
     }
   ],
 
@@ -443,7 +524,10 @@ const EN = {
     { s: 'The crowd went silent. Aiden stared at the last puzzle piece — it did not fit anywhere.', q: 'What can you infer?', a: 'Something is wrong with the puzzle', wrong: ['Aiden finished the puzzle', 'The crowd went home'] },
     { s: 'Crumbs led from the kitchen to Theo\'s door, and chocolate smudged the doorknob.', q: 'What can you infer?', a: 'Theo took a snack to his room', wrong: ['Theo cleaned the kitchen', 'Someone baked bread'] },
     { s: 'The vet smiled and said, "You can put away the cone of shame tonight."', q: 'What can you infer?', a: 'The pet has healed', wrong: ['The pet is getting sicker', 'The vet is closing'] },
-    { s: 'Every seat was packed, and people stood in the aisles holding signs with her name.', q: 'What can you infer?', a: 'She is popular and supported', wrong: ['The room was empty', 'People forgot her name'] }
+    { s: 'Every seat was packed, and people stood in the aisles holding signs with her name.', q: 'What can you infer?', a: 'She is popular and supported', wrong: ['The room was empty', 'People forgot her name'] },
+    { s: 'Dad kept checking his watch, then the driveway, then his watch again, and dinner sat untouched.', q: 'What can you infer?', a: 'He is worried someone is late', wrong: ['He is not hungry today', 'His watch is broken'] },
+    { s: 'The librarian pointed at the tower of returned books, sighed, and reached for a third cup of coffee.', q: 'What can you infer?', a: 'She has a long, tiring day of work ahead', wrong: ['She dislikes reading', 'The library is closing forever'] },
+    { s: 'Zoe hid the muddy soccer cleats behind the door and walked to her room in her socks, very slowly and very quietly.', q: 'What can you infer?', a: 'She does not want anyone to see the mess', wrong: ['Her feet are cold', 'She lost the soccer game'] }
   ],
 
   persuadeVsInform: [
