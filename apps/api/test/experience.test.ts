@@ -69,6 +69,25 @@ describe('practice and achievements', () => {
   });
 });
 
+describe('planned absences (Báo nghỉ)', () => {
+  it('a guardian reports an absence; the homeroom teacher sees it and is notified', async () => {
+    const res = await req('POST', '/students/s0/absence', parent, { date: '2099-03-20', reason: 'khám bệnh' });
+    expect(res.statusCode).toBe(200);
+
+    const mine = (await req('GET', '/students/s0/absences', parent)).json() as { date: string; reason: string }[];
+    expect(mine.some((a) => a.date === '2099-03-20')).toBe(true);
+
+    // lan teaches c1 where s0 is enrolled → sees it on the board.
+    const board = (await req('GET', '/my/class-absences', lan)).json() as { studentId: string; date: string }[];
+    expect(board.some((a) => a.studentId === 's0' && a.date === '2099-03-20')).toBe(true);
+    const pushes = await many(db, `SELECT 1 FROM notifications_outbox WHERE to_user_id = 'u_lan' AND body LIKE '%báo nghỉ%'`);
+    expect(pushes.length).toBeGreaterThan(0);
+
+    // A non-guardian and an unrelated teacher are refused / see nothing.
+    expect((await req('POST', '/students/s1/absence', parent, { date: '2099-03-20' })).statusCode).toBe(403);
+  });
+});
+
 describe('parent attendance week', () => {
   it('returns 7 day slots for own child only', async () => {
     const res = await req('GET', '/parents/attendance-week?childId=s0', parent);

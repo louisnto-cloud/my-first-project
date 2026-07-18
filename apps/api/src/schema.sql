@@ -593,6 +593,20 @@ CREATE TABLE IF NOT EXISTS account_credits (
 );
 
 -- Announcements (Bảng tin): center-wide (class_id NULL) or per-class.
+-- Planned absences: a guardian (or staff) tells the class ahead of time
+-- that a student will be away on a date. Feeds the teacher's "sắp nghỉ".
+CREATE TABLE IF NOT EXISTS planned_absences (
+  id TEXT PRIMARY KEY,
+  org_id TEXT NOT NULL REFERENCES orgs(id),
+  student_id TEXT NOT NULL REFERENCES users(id),
+  date DATE NOT NULL,
+  reason TEXT NOT NULL DEFAULT '',
+  created_by TEXT NOT NULL REFERENCES users(id),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  UNIQUE (student_id, date)
+);
+CREATE INDEX IF NOT EXISTS idx_absences_student ON planned_absences(student_id, date);
+
 CREATE TABLE IF NOT EXISTS announcements (
   id TEXT PRIMARY KEY,
   org_id TEXT NOT NULL REFERENCES orgs(id),

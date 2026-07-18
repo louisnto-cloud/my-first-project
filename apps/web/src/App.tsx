@@ -498,6 +498,51 @@ function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: strin
 }
 
 // ---------- Parent ----------
+// Báo nghỉ — a guardian tells the class their child will be away.
+function AbsenceCard({ childId, childName, lang }: { childId: string; childName: string; lang: Lang }) {
+  const vi = lang === 'vi';
+  const [list, setList] = useState<{ id: string; date: string; reason: string }[]>([]);
+  const [open, setOpen] = useState(false);
+  const [date, setDate] = useState('');
+  const [reason, setReason] = useState('');
+  const [msg, setMsg] = useState('');
+  const load = async () => setList(await api<typeof list>('GET', `/students/${childId}/absences`).catch(() => []));
+  useEffect(() => { void load(); /* eslint-disable-next-line */ }, [childId]);
+  const submit = async () => {
+    if (!date) return;
+    await api('POST', `/students/${childId}/absence`, { date, reason: reason.trim() });
+    setMsg(vi ? '✅ Đã báo nghỉ — cô giáo đã nhận được.' : '✅ Sent — the teacher has been notified.');
+    setTimeout(() => setMsg(''), 4000);
+    setDate(''); setReason(''); setOpen(false);
+    void load();
+  };
+  const todayStr = new Date().toISOString().slice(0, 10);
+  return (
+    <div className="card space-y-2">
+      <button onClick={() => setOpen(!open)} className="flex w-full items-center gap-2 text-left">
+        <span className="text-lg">📅</span>
+        <span className="flex-1 font-black text-violet-700">{vi ? 'Báo nghỉ cho con' : 'Report an absence'}</span>
+        {list.length > 0 && <span className="chip bg-amber-100 text-amber-600">{list.length}</span>}
+        <Icon name="chevron" size={16} className={`text-slate-300 transition ${open ? 'rotate-180' : ''}`} />
+      </button>
+      {msg && <div className="rounded-2xl bg-emerald-50 p-2 text-center text-sm font-bold text-emerald-700">{msg}</div>}
+      {list.map((a) => (
+        <div key={a.id} className="flex items-center gap-2 rounded-xl bg-amber-50 px-3 py-1.5 text-sm font-bold text-amber-700">
+          📅 {a.date}{a.reason ? ` — ${a.reason}` : ''}
+        </div>
+      ))}
+      {open && (
+        <div className="animate-rise space-y-2 rounded-2xl border-2 border-dashed border-violet-200 p-3">
+          <div className="text-xs font-bold text-slate-400">{vi ? `Ngày bé ${childName.split(' ').slice(-1)[0]} nghỉ:` : 'Absence date:'}</div>
+          <input className="input text-sm" type="date" min={todayStr} value={date} onChange={(e) => setDate(e.target.value)} />
+          <input className="input text-sm" placeholder={vi ? 'Lý do (không bắt buộc)' : 'Reason (optional)'} value={reason} onChange={(e) => setReason(e.target.value)} />
+          <button onClick={submit} disabled={!date} className="btn-primary w-full text-sm">{vi ? 'Gửi báo nghỉ' : 'Send'}</button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function Parent({ lang, t }: { lang: Lang; t: (k: string) => string }) {
   const [children, setChildren] = useState<{ id: string; name: string }[]>([]);
   const [childId, setChildId] = useState<string>('');
@@ -584,6 +629,8 @@ function Parent({ lang, t }: { lang: Lang; t: (k: string) => string }) {
           </div>
         )}
       </div>
+
+      {childId && <AbsenceCard childId={childId} childName={childName} lang={lang} />}
 
       <Announcements lang={lang} />
 
@@ -934,6 +981,7 @@ function TeacherInbox({ lang }: { lang: Lang }) {
 function Teacher({ lang, t }: { lang: Lang; t: (k: string) => string }) {
   const [queue, setQueue] = useState<{ id: string; studentName: string; title: string; answerText?: string }[]>([]);
   const [sums, setSums] = useState<{ id: string; studentName: string; bodyEn: string; bodyVi: string }[]>([]);
+  const [absences, setAbsences] = useState<{ id: string; studentName: string; className: string; date: string; reason: string }[]>([]);
   const [grading, setGrading] = useState<string | null>(null);
   const [rubric, setRubric] = useState({ accuracy: 2, vocabulary: 2, structure: 2 });
   const [comment, setComment] = useState('');
@@ -941,6 +989,7 @@ function Teacher({ lang, t }: { lang: Lang; t: (k: string) => string }) {
   const load = async () => {
     setQueue(await api('GET', '/grading/queue'));
     setSums(await api('GET', '/summaries/queue'));
+    setAbsences(await api<typeof absences>('GET', '/my/class-absences').catch(() => []));
   };
   useEffect(() => { void load(); }, []);
 
@@ -954,6 +1003,17 @@ function Teacher({ lang, t }: { lang: Lang; t: (k: string) => string }) {
   return (
     <div className="space-y-4">
       <Announcements lang={lang} canPost />
+      {absences.length > 0 && (
+        <div className="card space-y-1.5">
+          <h2 className="font-black text-violet-700">📅 {lang === 'vi' ? 'Học viên sắp nghỉ' : 'Upcoming absences'} ({absences.length})</h2>
+          {absences.map((a) => (
+            <div key={a.id + a.className} className="flex items-center gap-2 rounded-xl bg-amber-50 px-3 py-1.5 text-sm font-bold text-amber-700">
+              <span className="min-w-0 flex-1 truncate">{a.studentName} <span className="font-semibold text-amber-500">({a.className})</span>{a.reason ? ` — ${a.reason}` : ''}</span>
+              <span className="chip shrink-0 bg-amber-200 text-amber-800">{a.date}</span>
+            </div>
+          ))}
+        </div>
+      )}
       <TeacherInbox lang={lang} />
       <ClassManager lang={lang} />
       <QuestionBank lang={lang} />

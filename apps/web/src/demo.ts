@@ -113,11 +113,12 @@ interface DDB {
   summaries: { id: string; studentId: string; weekStart: string; bodyVi: string; bodyEn: string; status: 'draft' | 'approved' }[];
   messages: { studentId: string; senderId: string; senderName: string; body: string; at: string }[];
   notifications: { id: string; userId: string; body: string; at: string; readAt: string | null }[];
+  absences: { id: string; studentId: string; date: string; reason: string }[];
 }
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v20';
+const KEY = 'etop-demo-db-v21';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -313,6 +314,7 @@ function seed(): DDB {
       { id: 'nt1', userId: 'p0', body: '💬 Ms. Ha gửi nhận xét mới về bé Bảo.', at: new Date(Date.now() - 2_700_000).toISOString(), readAt: null },
       { id: 'nt2', userId: 's_UP1482', body: '📌 Bài tập mới: Unit 1 — Ôn tập / Review (hạn ngày mai).', at: new Date(Date.now() - 5_400_000).toISOString(), readAt: null },
     ],
+    absences: [],
   };
   // A week of attendance history for the demo child (Up 1 meets Mon-Wed):
   // present on class days except one absence, so the week view is honest.
@@ -1137,6 +1139,49 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
       practice: { points: childPts, activities: 1 },
     });
   }
+  // ---- planned absences (Báo nghỉ) ----
+  if (seg[0] === 'students' && seg[2] === 'absence' && method === 'POST') {
+    const stu = db.users.find((u) => u.id === seg[1] && u.role === 'student');
+    if (!stu) return err(404, 'not_found');
+    const isGuardian = me.role === 'parent' && me.childIds.includes(stu.id);
+    if (!isGuardian && !isAdmin) return err(403, 'forbidden');
+    const date = String(b.date ?? '');
+    if (!date) return err(400, 'invalid_input');
+    const reason = String(b.reason ?? '');
+    const existing = db.absences.find((a) => a.studentId === stu.id && a.date === date);
+    if (existing) existing.reason = reason;
+    else db.absences.push({ id: uid('abs'), studentId: stu.id, date, reason });
+    for (const c of db.classes.filter((c) => stu.classIds.includes(c.id) && c.teacherId)) {
+      pushNote(db, c.teacherId, `📅 ${stu.name} báo nghỉ ngày ${date}${reason ? ` — ${reason}` : ''}`);
+    }
+    save(db);
+    return ok({ ok: true });
+  }
+  if (seg[0] === 'students' && seg[2] === 'absences' && method === 'GET') {
+    const stu = db.users.find((u) => u.id === seg[1] && u.role === 'student');
+    if (!stu) return err(404, 'not_found');
+    const isGuardian = me.role === 'parent' && me.childIds.includes(stu.id);
+    const teaches = me.role === 'tutor' && stu.classIds.some((cid) => me.classIds.includes(cid));
+    if (!isGuardian && !teaches && !isAdmin) return err(403, 'forbidden');
+    const todayStr = today();
+    return ok(db.absences.filter((a) => a.studentId === stu.id && a.date >= todayStr).sort((x, y) => x.date.localeCompare(y.date)).map((a) => ({ id: a.id, date: a.date, reason: a.reason })));
+  }
+  if (rawPath === '/my/class-absences' && method === 'GET') {
+    if (!(me.role === 'tutor' || isAdmin)) return err(403, 'forbidden');
+    const todayStr = today();
+    const rows = db.absences
+      .filter((a) => a.date >= todayStr)
+      .flatMap((a) => {
+        const stu = db.users.find((u) => u.id === a.studentId);
+        if (!stu) return [];
+        return db.classes
+          .filter((c) => stu.classIds.includes(c.id) && (isAdmin || c.teacherId === me.id))
+          .map((c) => ({ id: a.id, studentId: stu.id, studentName: stu.name, className: c.name, date: a.date, reason: a.reason }));
+      })
+      .sort((x, y) => x.date.localeCompare(y.date));
+    return ok(rows);
+  }
+
   if (rawPath === '/parents/attendance-week' && method === 'GET') {
     if (me.role !== 'parent') return err(403, 'forbidden');
     const childId = (q.childId as string) || me.childIds[0];

@@ -409,6 +409,29 @@ describe('demo engine — kiosk (front desk)', () => {
   });
 });
 
+describe('demo engine — planned absences (Báo nghỉ)', () => {
+  it('a guardian reports an absence; the class teacher sees it & is notified; outsiders refused', async () => {
+    const parent = (await call('POST', '/auth/login', { email: 'phuhuynh@etop.vn', password: 'x' })).json as { token: string };
+    const res = await call('POST', '/students/s_UP1482/absence', { date: '2099-01-15', reason: 'về quê' }, parent.token);
+    expect(res.status).toBe(200);
+
+    // Guardian sees it in the child's upcoming list.
+    const mine = (await call('GET', '/students/s_UP1482/absences', undefined, parent.token)).json as { date: string; reason: string }[];
+    expect(mine.some((a) => a.date === '2099-01-15' && a.reason === 'về quê')).toBe(true);
+
+    // The homeroom teacher (Ms. Ha, Up 1) sees it and got a notification.
+    const ha = await loginCode('GV0004');
+    const board = (await call('GET', '/my/class-absences', undefined, ha!)).json as { studentName: string; date: string }[];
+    expect(board.some((a) => a.studentName === 'Nguyễn Gia Bảo' && a.date === '2099-01-15')).toBe(true);
+    const notes = (await call('GET', '/my/notifications', undefined, ha!)).json as { body: string }[];
+    expect(notes.some((n) => n.body.includes('báo nghỉ'))).toBe(true);
+
+    // A non-guardian parent cannot report for this child; a non-teaching teacher can't see it.
+    const ly = await loginCode('GV0006');
+    expect((await call('GET', '/students/s_UP1482/absences', undefined, ly!)).status).toBe(403);
+  });
+});
+
 describe('demo engine — review & notifications', () => {
   it('a student reviews graded work: right/wrong per question, correct answers only after grading', async () => {
     const ha = await loginCode('GV0004');

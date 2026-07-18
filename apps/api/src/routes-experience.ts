@@ -83,6 +83,71 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
   });
 
   // Last-7-days attendance for one child ("con đi học đều không?").
+  // ---------- Planned absences (Báo nghỉ) ----------
+  // A guardian (or manager) tells the class a student will be away.
+  app.post('/students/:id/absence', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    const { id } = req.params as { id: string };
+    const body = z.object({ date: z.string().date(), reason: z.string().max(300).default('') }).safeParse(req.body);
+    if (!body.success) return reply.code(400).send({ error: 'invalid_input' });
+    const stu = await one<{ org_id: string; name: string }>(db, `SELECT org_id, name FROM users WHERE id = $1 AND role = 'student' AND archived = false`, [id]);
+    if (!stu || stu.org_id !== actor.orgId) return reply.code(404).send({ error: 'not_found' });
+    const allowed = ['owner', 'academic_director', 'site_director'].includes(actor.role) || (actor.role === 'parent' && (await isGuardianOf(db, actor.id, id)));
+    if (!allowed) return reply.code(403).send({ error: 'forbidden' });
+
+    const absId = rid('abs');
+    await db.query(
+      `INSERT INTO planned_absences (id, org_id, student_id, date, reason, created_by) VALUES ($1, $2, $3, $4, $5, $6)
+       ON CONFLICT (student_id, date) DO UPDATE SET reason = $5, created_by = $6, created_at = now()`,
+      [absId, actor.orgId, id, body.data.date, body.data.reason, actor.id],
+    );
+    // Notify the homeroom teacher(s) of every class the student is in.
+    const teachers = await many<{ teacher_id: string }>(
+      db,
+      `SELECT DISTINCT c.teacher_id FROM enrollments e JOIN classes c ON c.id = e.class_id WHERE e.student_id = $1 AND c.teacher_id IS NOT NULL`,
+      [id],
+    );
+    for (const t of teachers) {
+      await notify(db, { orgId: actor.orgId, channel: 'push', toUserId: t.teacher_id, body: `📅 ${stu.name} báo nghỉ ngày ${body.data.date}${body.data.reason ? ` — ${body.data.reason}` : ''}`, at: new Date() });
+    }
+    return { id: absId, ok: true };
+  });
+
+  // A guardian sees their own child's upcoming absences (to cancel/confirm).
+  app.get('/students/:id/absences', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    const { id } = req.params as { id: string };
+    const stu = await one<{ org_id: string }>(db, `SELECT org_id FROM users WHERE id = $1 AND role = 'student'`, [id]);
+    if (!stu || stu.org_id !== actor.orgId) return reply.code(404).send({ error: 'not_found' });
+    const allowed =
+      ['owner', 'academic_director', 'site_director'].includes(actor.role) ||
+      (actor.role === 'parent' && (await isGuardianOf(db, actor.id, id))) ||
+      (actor.role === 'tutor' && !!(await one(db, 'SELECT 1 AS x FROM enrollments e JOIN classes c ON c.id = e.class_id WHERE e.student_id = $1 AND c.teacher_id = $2', [id, actor.id])));
+    if (!allowed) return reply.code(403).send({ error: 'forbidden' });
+    return many(db, `SELECT id, date::text AS date, reason FROM planned_absences WHERE student_id = $1 AND date >= CURRENT_DATE ORDER BY date`, [id]);
+  });
+
+  // Teacher: upcoming absences across every class they teach.
+  app.get('/my/class-absences', async (req, reply) => {
+    const actor = await requireAuth(req, reply);
+    if (!actor) return;
+    if (!['tutor', 'owner', 'academic_director'].includes(actor.role)) return reply.code(403).send({ error: 'forbidden' });
+    const mine = actor.role === 'tutor' ? 'AND c.teacher_id = $2' : 'AND $2 = $2';
+    return many(
+      db,
+      `SELECT DISTINCT pa.id, pa.student_id AS "studentId", u.name AS "studentName", c.name AS "className",
+              pa.date::text AS date, pa.reason
+         FROM planned_absences pa
+         JOIN enrollments e ON e.student_id = pa.student_id
+         JOIN classes c ON c.id = e.class_id
+         JOIN users u ON u.id = pa.student_id
+        WHERE pa.org_id = $1 AND pa.date >= CURRENT_DATE ${mine} ORDER BY date`,
+      [actor.orgId, actor.role === 'tutor' ? actor.id : 'x'],
+    );
+  });
+
   app.get('/parents/attendance-week', async (req, reply) => {
     const actor = await requireAuth(req, reply);
     if (!actor) return;
