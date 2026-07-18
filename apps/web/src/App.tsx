@@ -372,6 +372,11 @@ function Student({ lang, t, name, avatar, onAvatar }: { lang: Lang; t: (k: strin
               </div>
             </div>
           )}
+          {ach.pointsToday === 0 && ach.streak > 0 && (
+            <button onClick={() => setView('practice')} className="animate-pop relative mt-3 block w-full rounded-2xl bg-amber-300/90 px-3 py-2 text-center text-xs font-black text-amber-900">
+              🔥 {lang === 'vi' ? `Giữ chuỗi ${ach.streak} ngày — học 1 bài hôm nay nhé!` : `Keep your ${ach.streak}-day streak — do one lesson today!`}
+            </button>
+          )}
           {pickingAvatar && (
             <div className="animate-pop relative mt-3 rounded-2xl bg-white/15 p-2.5">
               <div className="mb-1.5 text-center text-[11px] font-extrabold text-white/80">{lang === 'vi' ? 'Chọn nhân vật của bạn:' : 'Pick your character:'}</div>
