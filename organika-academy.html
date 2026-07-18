@@ -328,6 +328,8 @@ textarea:focus{border-color:var(--g)}
 .tier-label{font-size:13px;font-weight:700;width:50px}
 .tier-bar{flex:1;height:10px;background:var(--bd);border-radius:5px;overflow:hidden}
 .tier-fill{height:100%;background:var(--g);border-radius:5px;transition:width .5s}
+.tier-fill.t-flat{background:#7C8A82}.tier-fill.t-rise{background:#2E9E5B}.tier-fill.t-fall{background:#C77C3A}
+.tier-fill.t-dip{background:#2B7FC4}.tier-fill.t-break{background:#9B59B6}.tier-fill.t-stop{background:#C0392B}
 .tier-pct{font-size:12px;color:var(--tx2);width:40px;text-align:right}
 
 /* ── EXPORT ── */
@@ -1598,7 +1600,7 @@ function toggleStar(id){
 const SAVE_KEY='organika-academy-v1';
 function snapshot(){
   return {v:1,
-    state:{xp:S.xp,streak:S.streak,lastDay:S.lastDay,todayXP:S.todayXP,xpDay:S.xpDay,dailyGoal:S.dailyGoal,doneSits:S.doneSits||[],sessionLen:S.sessionLen||20,days:S.days||[],listenFirst:S.listenFirst},
+    state:{xp:S.xp,streak:S.streak,lastDay:S.lastDay,todayXP:S.todayXP,xpDay:S.xpDay,dailyGoal:S.dailyGoal,doneSits:S.doneSits||[],sessionLen:S.sessionLen||20,days:S.days||[],listenFirst:S.listenFirst,toneStats:S.toneStats||{}},
     vocab:VOCAB.filter(v=>v.correct||v.wrong||v.starred||v.lastSeen)
       .map(v=>({id:v.id,box:v.box,correct:v.correct,wrong:v.wrong,lastSeen:v.lastSeen,starred:v.starred}))};
 }
@@ -1733,7 +1735,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v50';
+const APP_VERSION='v51';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -2541,6 +2543,17 @@ function renderProgress(){
         <span class="tier-pct">${mas}/${tot}</span>
       </div>`;
     }).join('')}
+    ${(()=>{
+      const ts=S.toneStats||{}; const keys=Object.keys(ts).filter(k=>ts[k].r+ts[k].w>=3);
+      if(!keys.length) return '<div class="section-label" style="margin-top:20px">Tone Ear</div><div class="empty-state" style="padding:16px">Play the 🎵 Tone Trainer to see which tones you confuse.</div>';
+      const NAMES={'t-flat':'Flat →','t-fall':'Falling ↘','t-rise':'Rising ↗','t-dip':'Dip-rise ↓↗','t-break':'Break ~↗','t-stop':'Low-stop ↓.'};
+      const rows=keys.map(k=>{const s=ts[k],n=s.r+s.w,p=Math.round(s.r/n*100);return {k,p,n,label:NAMES[k]||k};}).sort((a,b)=>a.p-b.p);
+      return '<div class="section-label" style="margin-top:20px">Tone Ear</div>'+rows.map(r=>`<div class="tier-prog-row">
+        <span class="tier-label" style="width:80px;font-size:12px">${r.label}</span>
+        <div class="tier-bar"><div class="tier-fill ${r.k}" style="width:${r.p}%"></div></div>
+        <span class="tier-pct">${r.p}%</span>
+      </div>`).join('')+(rows[0].p<70?`<div class="weak-row" style="margin-top:8px"><div class="weak-info"><span class="weak-cat">Weakest: ${rows[0].label}</span><span class="weak-pct">${rows[0].p}% heard right</span></div><button class="btn-sec" style="padding:9px 14px;font-size:13px" onclick="S.toneSet=null;go('tones')">Train</button></div>`:'');
+    })()}
     <div class="section-label" style="margin-top:20px">Achievements</div>
     <div class="badge-grid">
       ${achievements().map(a=>`<div class="ach ${a.got?'got':'locked'}">
@@ -2897,11 +2910,19 @@ function answerTone(w){
   if(S.toneAnswer!==null) return;
   S.toneAnswer=w;
   S.toneTotal=(S.toneTotal||0)+1;
+  // record accuracy for the target word's tone
+  const tk=toneOf(S.toneTarget.w).k;
+  S.toneStats=S.toneStats||{};
+  S.toneStats[tk]=S.toneStats[tk]||{r:0,w:0};
   if(w===S.toneTarget.w){
     S.toneRight=(S.toneRight||0)+1;
+    S.toneStats[tk].r++;
     rolloverDay(); S.xp+=8; S.todayXP+=8; checkStreak(); saveState();
     if(navigator.vibrate) navigator.vibrate(10);
-  }else if(navigator.vibrate) navigator.vibrate([30,40,30]);
+  }else{
+    S.toneStats[tk].w++; saveState();
+    if(navigator.vibrate) navigator.vibrate([30,40,30]);
+  }
   render();
   scrollToFeedback();
 }
