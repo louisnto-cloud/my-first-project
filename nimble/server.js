@@ -37,8 +37,19 @@ app.get('/api/state', (req, res) => {
   res.json({
     hasApiKey: claude.hasApiKey(),
     timeLimit: state.settings.timeLimit,
+    focus: state.settings.focus || null,
     ...progressPayload(state),
   });
+});
+
+// Set the drill focus: null (shuffled rotation) or a single domain.
+app.post('/api/focus', (req, res) => {
+  const { focus } = req.body || {};
+  if (focus !== null && !store.DOMAINS.includes(focus)) {
+    return res.status(400).json({ error: 'focus must be null or a valid domain' });
+  }
+  store.update((s) => { s.settings.focus = focus; });
+  res.json({ ok: true, focus });
 });
 
 // Save the API key pasted into the app's setup screen. Stored locally in
@@ -84,15 +95,21 @@ app.post('/api/drill/start', async (req, res) => {
     if (!state.settings.timeLimit) {
       return res.status(400).json({ error: 'Pick a time limit first' });
     }
-    const domain = store.nextDomain(state);          // mutates state.rotation / lastDomain
+    // Focus mode pins a single domain and leaves the rotation untouched;
+    // otherwise advance the shuffled rotation.
+    const focus = state.settings.focus;
+    const usingFocus = store.DOMAINS.includes(focus);
+    const domain = usingFocus ? focus : store.nextDomain(state);
     const difficulty = store.difficultyFor(state.drills.length);
     const scenario = await claude.generateScenario({ domain, difficulty });
     // Persist the rotation advance onto the freshest state so a settings change
     // or a drill logged during the (slow) generation call isn't clobbered.
-    store.update((fresh) => {
-      fresh.rotation = state.rotation;
-      fresh.lastDomain = state.lastDomain;
-    });
+    if (!usingFocus) {
+      store.update((fresh) => {
+        fresh.rotation = state.rotation;
+        fresh.lastDomain = state.lastDomain;
+      });
+    }
     res.json({ domain, scenario, difficulty, timeLimit: state.settings.timeLimit });
   } catch (err) {
     console.error('drill/start failed:', err);

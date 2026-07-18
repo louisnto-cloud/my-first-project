@@ -9,7 +9,7 @@ const DOMAINS = ['business', 'legal', 'personal'];
 
 const DEFAULT_STATE = {
   apiKey: null,                  // saved from the in-app setup screen (data/ is gitignored)
-  settings: { timeLimit: null }, // seconds; null until the user picks one
+  settings: { timeLimit: null, focus: null }, // focus: null = shuffled rotation, else a single domain
   rotation: [],                  // remaining domains in the current shuffled block
   lastDomain: null,
   drills: [],                    // { id, domain, scenario, response, score, feedback, timedOut, timeLimit, difficulty, timestamp }

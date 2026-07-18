@@ -9,7 +9,8 @@
     personal: 'High-stakes personal confrontation',
   };
 
-  let app = { hasApiKey: false, timeLimit: null, totalDrills: 0, difficulty: 1, stats: null };
+  let app = { hasApiKey: false, timeLimit: null, focus: null, totalDrills: 0, difficulty: 1, stats: null };
+  const DOMAIN_SHORT = { business: 'Business', legal: 'Legal', personal: 'Personal' };
   let drill = null; // { domain, scenario, difficulty, timeLimit }
   let timerHandle = null;
   let deadline = 0;
@@ -69,8 +70,12 @@
   }
 
   function showReady() {
+    const focusLabel = app.focus ? `${DOMAIN_SHORT[app.focus]} only` : 'all three arenas';
     $('readyMeta').textContent =
-      `${app.timeLimit}s per response · level ${app.difficulty} · ${app.totalDrills} drill${app.totalDrills === 1 ? '' : 's'} done`;
+      `${app.timeLimit}s · ${focusLabel} · level ${app.difficulty} · ${app.totalDrills} drill${app.totalDrills === 1 ? '' : 's'} done`;
+    for (const b of $('focusPicker').querySelectorAll('button')) {
+      b.classList.toggle('selected', (b.dataset.focus || null) === app.focus);
+    }
     const history = app.stats ? app.stats.history : [];
     renderRecentForm(history);
     const streak = winStreak(history);
@@ -159,6 +164,21 @@
       b.classList.toggle('selected', Number(b.dataset.limit) === app.timeLimit);
     }
     show('setup');
+  });
+
+  // ---------- focus (which domain to drill) ----------
+  $('focusPicker').addEventListener('click', async (e) => {
+    const btn = e.target.closest('button[data-focus]');
+    if (!btn) return;
+    const focus = btn.dataset.focus || null;
+    if (focus === app.focus) return;
+    try {
+      await api('/api/focus', { focus });
+      app.focus = focus;
+      showReady();
+    } catch (err) {
+      showError(err.message);
+    }
   });
 
   // ---------- drill flow ----------
