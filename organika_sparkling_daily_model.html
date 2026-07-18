@@ -779,8 +779,9 @@ function breakevenChartSVG(){
   g+=`<circle cx="${bx.toFixed(1)}" cy="${Y(0).toFixed(1)}" r="4" fill="var(--bad)"/>`;
   g+=`<text x="${bx.toFixed(1)}" y="${(padT-6).toFixed(1)}" text-anchor="middle" font-size="10" fill="var(--bad)">break-even ${mult(be.mv)}</text>`;
   scen.forEach(s=>{ const cx=X(s.mv), cy=Y(s.e), cur=s.name===current;
+    const ly = s.e>=0 ? cy-10 : cy+18;   // label above when profitable, below when at a loss — clears the line
     g+=`<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${cur?5:4}" fill="var(--accent2)" stroke="var(--card)" stroke-width="1.5"><title>${s.name}: ${mult(s.mv)} volume → EBITDA ${money(s.e)}</title></circle>`;
-    g+=`<text x="${cx.toFixed(1)}" y="${(cy-9).toFixed(1)}" text-anchor="middle" font-size="9.5" font-weight="${cur?700:500}" fill="var(--soft)">${s.name}</text>`; });
+    g+=`<text x="${cx.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="middle" font-size="9.5" font-weight="${cur?700:500}" fill="var(--soft)">${s.name}</text>`; });
   [0,1,mvMax].forEach(mv=>{ g+=`<text x="${X(mv).toFixed(1)}" y="${H-padB+16}" text-anchor="middle" font-size="9.5" fill="var(--soft)">${mult(mv)}</text>`; });
   return g+"</svg>";
 }
