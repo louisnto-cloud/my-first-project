@@ -119,6 +119,38 @@ export function resetProgress(): RWProgress {
   return fresh;
 }
 
+// ─── Backup & restore ────────────────────────────────────────────────────────
+// A portable code lets a learner move progress between devices/browsers, or
+// keep a safety copy before clearing site data. It is just the progress JSON,
+// base64-encoded with a short prefix so we can recognise (and version) it.
+const BACKUP_PREFIX = 'RW1:';
+
+function toBase64(s: string): string {
+  // Handle Unicode (writing responses may contain any characters)
+  return btoa(unescape(encodeURIComponent(s)));
+}
+function fromBase64(s: string): string {
+  return decodeURIComponent(escape(atob(s)));
+}
+
+export function exportProgress(p: RWProgress): string {
+  return BACKUP_PREFIX + toBase64(JSON.stringify(p));
+}
+
+export function importProgress(code: string): RWProgress | null {
+  try {
+    const trimmed = code.trim();
+    if (!trimmed.startsWith(BACKUP_PREFIX)) return null;
+    const parsed = JSON.parse(fromBase64(trimmed.slice(BACKUP_PREFIX.length))) as RWProgress;
+    if (!Array.isArray(parsed.completedLessons)) return null; // sanity check
+    const merged = { ...emptyProgress(), ...parsed };
+    saveProgress(merged);
+    return merged;
+  } catch {
+    return null;
+  }
+}
+
 export function todayISO(): string {
   return new Date().toISOString().slice(0, 10);
 }

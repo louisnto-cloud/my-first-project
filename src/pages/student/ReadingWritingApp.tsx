@@ -4,7 +4,7 @@ import type { Lesson, Month } from '../../data/curriculum';
 import { useApp } from '../../store';
 import { LIBRARY } from '../../data/library';
 import {
-  BADGES, isMonthUnlocked, levelFor, loadProgress, logActivity, resetProgress, saveProgress, streakOf, todayISO, touchToday, withBadges,
+  BADGES, exportProgress, importProgress, isMonthUnlocked, levelFor, loadProgress, logActivity, resetProgress, saveProgress, streakOf, todayISO, touchToday, withBadges,
   type Badge, type RWProgress,
 } from './rw/engine';
 import LessonView from './rw/LessonView';
@@ -145,7 +145,7 @@ export default function ReadingWritingApp() {
       ))}
       {tab === 'library' && <Library progress={progress} apply={apply} />}
       {tab === 'review' && <Review progress={progress} apply={apply} />}
-      {tab === 'me' && <MeTab progress={progress} onReset={() => setProgress(resetProgress())} />}
+      {tab === 'me' && <MeTab progress={progress} onReset={() => setProgress(resetProgress())} onImport={setProgress} />}
     </div>
   );
 }
@@ -322,7 +322,7 @@ function MonthView({ month, progress, onBack, onLesson }: {
 // ─── Me tab: level, streak calendar, badges, certificate ─────────────────────
 const NAME_KEY = 'rw-name-v1';
 
-function MeTab({ progress, onReset }: { progress: RWProgress; onReset: () => void }) {
+function MeTab({ progress, onReset, onImport }: { progress: RWProgress; onReset: () => void; onImport: (p: RWProgress) => void }) {
   const { user } = useApp();
   const [ownName, setOwnName] = useState(() => localStorage.getItem(NAME_KEY) ?? '');
   const displayName = user?.name ?? (ownName.trim() || 'Learner');
@@ -432,6 +432,9 @@ function MeTab({ progress, onReset }: { progress: RWProgress; onReset: () => voi
         </div>
       )}
 
+      {/* Backup & restore */}
+      <BackupCard progress={progress} onImport={onImport} />
+
       {/* Reset */}
       <StepCard>
         {!confirmReset ? (
@@ -447,5 +450,70 @@ function MeTab({ progress, onReset }: { progress: RWProgress; onReset: () => voi
         )}
       </StepCard>
     </div>
+  );
+}
+
+// ─── Backup & restore card ────────────────────────────────────────────────────
+function BackupCard({ progress, onImport }: { progress: RWProgress; onImport: (p: RWProgress) => void }) {
+  const [open, setOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const [importText, setImportText] = useState('');
+  const [status, setStatus] = useState<'idle' | 'ok' | 'error'>('idle');
+  const code = useMemo(() => exportProgress(progress), [progress]);
+
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const restore = () => {
+    const restored = importProgress(importText);
+    if (restored) { onImport(restored); setStatus('ok'); setImportText(''); }
+    else setStatus('error');
+  };
+
+  return (
+    <StepCard>
+      {!open ? (
+        <button onClick={() => setOpen(true)} className="w-full text-xs font-bold text-gray-400 hover:text-violet-600">
+          💾 Back up or move my progress…
+        </button>
+      ) : (
+        <div className="space-y-3">
+          <h3 className="font-black text-gray-800">💾 Backup &amp; Restore</h3>
+
+          <div>
+            <div className="mb-1 text-xs font-bold text-gray-500">Your backup code (copy and keep it safe):</div>
+            <textarea readOnly value={code} rows={2}
+              className="w-full resize-none rounded-lg border border-gray-200 bg-gray-50 p-2 text-[10px] font-mono text-gray-500"
+              onFocus={(e) => e.currentTarget.select()} />
+            <button onClick={copy} className="mt-1 w-full rounded-lg bg-violet-600 py-2 text-xs font-black text-white hover:opacity-90">
+              {copied ? '✓ Copied!' : '📋 Copy backup code'}
+            </button>
+          </div>
+
+          <div className="border-t border-gray-100 pt-3">
+            <div className="mb-1 text-xs font-bold text-gray-500">Restore on a new device — paste a backup code:</div>
+            <textarea value={importText} onChange={(e) => { setImportText(e.target.value); setStatus('idle'); }} rows={2}
+              placeholder="Paste your RW1:… code here"
+              className="w-full resize-none rounded-lg border-2 border-gray-200 p-2 text-[10px] font-mono focus:border-violet-400 focus:outline-none" />
+            <button onClick={restore} disabled={!importText.trim()}
+              className="mt-1 w-full rounded-lg border-2 border-violet-300 bg-white py-2 text-xs font-black text-violet-700 hover:bg-violet-50 disabled:opacity-40">
+              ♻️ Restore progress
+            </button>
+            {status === 'ok' && <p className="mt-1 text-center text-xs font-bold text-green-600">✓ Progress restored!</p>}
+            {status === 'error' && <p className="mt-1 text-center text-xs font-bold text-red-600">That code wasn't valid. Check you copied all of it.</p>}
+            <p className="mt-1 text-center text-[10px] text-gray-400">Restoring replaces the progress on this device.</p>
+          </div>
+
+          <button onClick={() => setOpen(false)} className="w-full text-xs font-bold text-gray-400 hover:text-gray-600">Close</button>
+        </div>
+      )}
+    </StepCard>
   );
 }
