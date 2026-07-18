@@ -8,7 +8,7 @@ const CURRICULUM = [
     id: 'math', name: 'Math World', emoji: '🌋', tint: '#ff7a59',
     regions: [
       {
-        id: 'm-k', grade: 'K', name: 'Counting Cove', emoji: '🏝️', tint: '#4ecdc4', audio: 'full',
+        id: 'm-k', grade: 'K', name: 'Counting Cove', emoji: '🏝️', tint: '#4ecdc4', audio: 'full', scene: ['🐚', '🌊', '⛱️', '🦀'],
         skills: [
           { id: 'count10', name: 'Counting to 10', icon: '🐚', gen: 'count-objects', params: { min: 1, max: 10 } },
           { id: 'count-type', name: 'Count & Press', icon: '🔢', gen: 'count-tap', params: { min: 1, max: 10 } },
@@ -21,7 +21,7 @@ const CURRICULUM = [
         ]
       },
       {
-        id: 'm-1', grade: '1', name: 'Number Harbor', emoji: '⛵', tint: '#5fb0f2', audio: 'full',
+        id: 'm-1', grade: '1', name: 'Number Harbor', emoji: '⛵', tint: '#5fb0f2', audio: 'full', scene: ['⛵', '🐟', '🕊️', '🌊'],
         skills: [
           { id: 'read20', name: 'Numbers to 20', icon: '🎯', gen: 'read-number', params: { min: 10, max: 20 } },
           { id: 'count20', name: 'Counting to 20', icon: '🐟', gen: 'count-tap', params: { min: 10, max: 20 } },
@@ -36,7 +36,7 @@ const CURRICULUM = [
         ]
       },
       {
-        id: 'm-2', grade: '2', name: 'Hundred Hills', emoji: '⛰️', tint: '#9b8cff', audio: 'full',
+        id: 'm-2', grade: '2', name: 'Hundred Hills', emoji: '⛰️', tint: '#9b8cff', audio: 'full', scene: ['⛰️', '🦅', '🌲', '☁️'],
         skills: [
           { id: 'pv100', name: 'Tens & Ones', icon: '🏗️', gen: 'place-value', params: { max: 99 } },
           { id: 'cmp100', name: 'Greater or Less', icon: '🐊', gen: 'compare-numbers', params: { max: 100 } },
@@ -48,7 +48,7 @@ const CURRICULUM = [
         ]
       },
       {
-        id: 'm-3', grade: '3', name: 'Times Grove', emoji: '🌲', tint: '#57b884', audio: 'partial',
+        id: 'm-3', grade: '3', name: 'Times Grove', emoji: '🌲', tint: '#57b884', audio: 'partial', scene: ['🌲', '🍄', '🦉', '🍃'],
         skills: [
           { id: 'pv1000', name: 'Numbers to 1000', icon: '🏰', gen: 'place-value', params: { max: 999 } },
           { id: 'expand', name: 'Number Builder', icon: '🧱', gen: 'expanded-form', params: { min: 100, max: 999 } },
@@ -60,7 +60,7 @@ const CURRICULUM = [
         ]
       },
       {
-        id: 'm-4', grade: '4', name: 'Decimal Desert', emoji: '🏜️', tint: '#e8a13c', audio: 'partial',
+        id: 'm-4', grade: '4', name: 'Decimal Desert', emoji: '🏜️', tint: '#e8a13c', audio: 'partial', scene: ['🌵', '🐪', '☀️', '🦎'],
         skills: [
           { id: 'pv10000', name: 'Numbers to 10 000', icon: '🐪', gen: 'place-value', params: { max: 9999 } },
           { id: 'round', name: 'Rounding Dunes', icon: '🌀', gen: 'round-number', params: { to: [10, 100] } },
@@ -73,7 +73,7 @@ const CURRICULUM = [
         ]
       },
       {
-        id: 'm-5', grade: '5', name: 'Fraction Falls', emoji: '🌊', tint: '#4ecdc4', audio: 'light',
+        id: 'm-5', grade: '5', name: 'Fraction Falls', emoji: '🌊', tint: '#4ecdc4', audio: 'light', scene: ['💦', '🌈', '🐠', '🪨'],
         skills: [
           { id: 'bigops', name: 'Big Number Ops', icon: '🏋️', gen: 'multi-digit-ops', params: { kinds: ['add', 'sub', 'mult'] } },
           { id: 'equiv', name: 'Twin Fractions', icon: '👯', gen: 'equiv-fractions', params: {} },
@@ -84,7 +84,7 @@ const CURRICULUM = [
         ]
       },
       {
-        id: 'm-6', grade: '6', name: 'Ratio Reef', emoji: '🪸', tint: '#f26d9c', audio: 'light',
+        id: 'm-6', grade: '6', name: 'Ratio Reef', emoji: '🪸', tint: '#f26d9c', audio: 'light', scene: ['🪸', '🐙', '🐡', '🫧'],
         skills: [
           { id: 'pct', name: 'Percent Power', icon: '💯', gen: 'percent-basic', params: {} },
           { id: 'int', name: 'Below Zero', icon: '🧊', gen: 'integers-intro', params: {} },
@@ -95,7 +95,7 @@ const CURRICULUM = [
         ]
       },
       {
-        id: 'm-7', grade: '7', name: 'Integer Peaks', emoji: '🏔️', tint: '#8d7bd8', audio: 'none',
+        id: 'm-7', grade: '7', name: 'Integer Peaks', emoji: '🏔️', tint: '#8d7bd8', audio: 'none', scene: ['🏔️', '❄️', '🦅', '✨'],
         skills: [
           { id: 'iops', name: 'Integer Ops', icon: '❄️', gen: 'integer-ops', params: {} },
           { id: 'dops', name: 'Decimal Ops', icon: '🎯', gen: 'decimal-ops', params: {} },
@@ -112,7 +112,7 @@ const CURRICULUM = [
     id: 'english', name: 'Word World', emoji: '🌸', tint: '#9b8cff',
     regions: [
       {
-        id: 'e-k', grade: 'K', name: 'Letter Lagoon', emoji: '🐠', tint: '#5fb0f2', audio: 'full',
+        id: 'e-k', grade: 'K', name: 'Letter Lagoon', emoji: '🐠', tint: '#5fb0f2', audio: 'full', scene: ['🐠', '🫧', '🌺', '🐚'],
         skills: [
           { id: 'lmatch', name: 'Letter Partners', icon: '🔤', gen: 'letter-match', params: {} },
           { id: 'lfind', name: 'Letter Hunt', icon: '🔎', gen: 'letter-find', params: {} },
@@ -123,7 +123,7 @@ const CURRICULUM = [
         ]
       },
       {
-        id: 'e-1', grade: '1', name: 'Word Meadow', emoji: '🌼', tint: '#57b884', audio: 'full',
+        id: 'e-1', grade: '1', name: 'Word Meadow', emoji: '🌼', tint: '#57b884', audio: 'full', scene: ['🌼', '🦋', '🐝', '🌿'],
         skills: [
           { id: 'cvc', name: 'Sound It Out', icon: '🐱', gen: 'cvc-read', params: {} },
           { id: 'build', name: 'Word Builder', icon: '🧱', gen: 'cvc-build', params: {} },
@@ -135,7 +135,7 @@ const CURRICULUM = [
         ]
       },
       {
-        id: 'e-2', grade: '2', name: 'Story Springs', emoji: '⛲', tint: '#4ecdc4', audio: 'full',
+        id: 'e-2', grade: '2', name: 'Story Springs', emoji: '⛲', tint: '#4ecdc4', audio: 'full', scene: ['⛲', '🕊️', '🌷', '💧'],
         skills: [
           { id: 'digraph', name: 'Sound Teams', icon: '🚢', gen: 'digraph-id', params: {} },
           { id: 'sight2', name: 'Star Words 2', icon: '🌟', gen: 'sight-word', params: { set: 2 } },
@@ -146,7 +146,7 @@ const CURRICULUM = [
         ]
       },
       {
-        id: 'e-3', grade: '3', name: 'Paragraph Peaks', emoji: '🗻', tint: '#e8a13c', audio: 'partial',
+        id: 'e-3', grade: '3', name: 'Paragraph Peaks', emoji: '🗻', tint: '#e8a13c', audio: 'partial', scene: ['🗻', '🌤️', '🎈', '🌲'],
         skills: [
           { id: 'syll', name: 'Syllable Safari', icon: '👏', gen: 'syllables', params: {} },
           { id: 'vocab', name: 'Word Power', icon: '💪', gen: 'vocab', params: {} },
@@ -156,7 +156,7 @@ const CURRICULUM = [
         ]
       },
       {
-        id: 'e-4', grade: '4', name: 'Tale Trails', emoji: '🛤️', tint: '#f26d9c', audio: 'partial',
+        id: 'e-4', grade: '4', name: 'Tale Trails', emoji: '🛤️', tint: '#f26d9c', audio: 'partial', scene: ['🏮', '🍂', '🦊', '🌙'],
         skills: [
           { id: 'mainidea', name: 'Main Idea', icon: '💡', gen: 'main-idea', params: {} },
           { id: 'details', name: 'Detail Detective', icon: '🕵️', gen: 'passage-detail', params: {} },
@@ -166,7 +166,7 @@ const CURRICULUM = [
         ]
       },
       {
-        id: 'e-5', grade: '5', name: 'Inference Isles', emoji: '🏝️', tint: '#8d7bd8', audio: 'light',
+        id: 'e-5', grade: '5', name: 'Inference Isles', emoji: '🏝️', tint: '#8d7bd8', audio: 'light', scene: ['🏝️', '🔍', '🌴', '⛵'],
         skills: [
           { id: 'infer', name: 'Clue Reader', icon: '🔍', gen: 'inference', params: {} },
           { id: 'compare5', name: 'Text vs Text', icon: '🆚', gen: 'compare-texts', params: {} },
@@ -176,7 +176,7 @@ const CURRICULUM = [
         ]
       },
       {
-        id: 'e-6', grade: '6', name: 'Essay Expanse', emoji: '🌾', tint: '#57b884', audio: 'none',
+        id: 'e-6', grade: '6', name: 'Essay Expanse', emoji: '🌾', tint: '#57b884', audio: 'none', scene: ['🌾', '🌻', '🪁', '🌤️'],
         skills: [
           { id: 'theme', name: 'Theme Seeker', icon: '🧭', gen: 'theme', params: {} },
           { id: 'purpose', name: 'Author\'s Purpose', icon: '🎯', gen: 'authors-purpose', params: {} },
@@ -187,7 +187,7 @@ const CURRICULUM = [
         ]
       },
       {
-        id: 'e-7', grade: '7', name: 'Analysis Atlas', emoji: '🗺️', tint: '#ff7a59', audio: 'none',
+        id: 'e-7', grade: '7', name: 'Analysis Atlas', emoji: '🗺️', tint: '#ff7a59', audio: 'none', scene: ['🗺️', '🧭', '📜', '⭐'],
         skills: [
           { id: 'lit', name: 'Story Analyst', icon: '🎓', gen: 'literary-analysis', params: {} },
           { id: 'pov', name: 'Point of View', icon: '👁️', gen: 'point-of-view', params: {} },

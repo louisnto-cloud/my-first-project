@@ -194,7 +194,7 @@ const Level = {
   /* Quiz runner (prove / review / boss / fast-track) -------------------------- */
 
   runQuiz(cfg) {
-    let idx = 0, correct = 0;
+    let idx = 0, correct = 0, combo = 0;
     const total = cfg.questions.length;
 
     const intro = () => {
@@ -233,11 +233,12 @@ const Level = {
         hints: false,
         backTo: () => WorldMap.back(),
         onCorrect: () => {
-          correct++; idx++;
-          Celebrate.smallWin(() => ask());
+          correct++; idx++; combo++;
+          if (combo >= 3) Audio2.combo(combo);
+          Celebrate.smallWin(() => ask(), combo);
         },
         onWrong: (q) => {
-          idx++;
+          idx++; combo = 0;
           // Teach, never punish — then move on
           Celebrate.gentleExplain(q.explain, () => ask());
         }

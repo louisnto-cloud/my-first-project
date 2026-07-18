@@ -64,6 +64,11 @@ const Audio2 = {
   correct() {
     [523, 659, 784].forEach((f, i) => Audio2.tone(f, 0.16, 'triangle', 0.16, i * 0.09));
   },
+  // Rising pitch with the combo count — the streak audibly climbs
+  combo(n) {
+    const lift = Math.pow(1.06, Math.min(n, 8));
+    [523, 659, 784, 1046].forEach((f, i) => Audio2.tone(f * lift, 0.14, 'triangle', 0.16, i * 0.07));
+  },
   wrong() { Audio2.tone(280, 0.22, 'sine', 0.10); Audio2.tone(220, 0.3, 'sine', 0.08, 0.12); },
   coin()  { Audio2.tone(880, 0.08, 'square', 0.07); Audio2.tone(1320, 0.18, 'square', 0.07, 0.08); },
   star()  { [660, 880, 1100, 1320].forEach((f, i) => Audio2.tone(f, 0.12, 'triangle', 0.12, i * 0.07)); },

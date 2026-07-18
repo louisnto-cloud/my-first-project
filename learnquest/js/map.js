@@ -5,6 +5,23 @@
 const WorldMap = {
   lastRegion: null,
 
+  // Ambient drifting scenery so each region feels like a place, not a menu
+  sceneLayer(scene) {
+    const layer = U.el('div', 'scene-layer');
+    (scene || []).forEach((emo, i) => {
+      for (let k = 0; k < 2; k++) {
+        const s = U.el('span', 'scene-item', emo);
+        s.style.left = U.ri(2, 92) + '%';
+        s.style.top = U.ri(4, 88) + '%';
+        s.style.fontSize = U.ri(22, 44) + 'px';
+        s.style.animationDuration = U.ri(6, 12) + 's';
+        s.style.animationDelay = (i * 0.9 + k * 2.1) + 's';
+        layer.appendChild(s);
+      }
+    });
+    return layer;
+  },
+
   back() {
     if (WorldMap.lastRegion) WorldMap.showRegion(WorldMap.lastRegion);
     else WorldMap.showHome();
@@ -114,6 +131,7 @@ const WorldMap = {
     const app = document.getElementById('app');
     app.innerHTML = '';
     const screen = U.el('div', 'screen world-screen ' + worldId);
+    screen.appendChild(WorldMap.sceneLayer(world.regions.slice(0, 4).map(r => r.emoji)));
     screen.appendChild(Level.topBar(world.emoji + ' ' + world.name, () => WorldMap.showHome()));
 
     const trail = U.el('div', 'region-trail');
@@ -154,6 +172,7 @@ const WorldMap = {
     app.innerHTML = '';
     const screen = U.el('div', 'screen region-screen');
     screen.style.setProperty('--tint', region.tint);
+    screen.appendChild(WorldMap.sceneLayer(region.scene));
     screen.appendChild(Level.topBar(region.emoji + ' ' + region.name, () => WorldMap.showWorld(world.id)));
 
     const path = U.el('div', 'level-path');

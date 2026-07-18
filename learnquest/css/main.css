@@ -147,6 +147,20 @@ button:focus-visible, input:focus-visible {
 .name-btn:hover { transform: scale(1.05); }
 .name-speak { font-size: 18px; opacity: .7; }
 
+/* ---------- Ambient scenery ---------- */
+
+.scene-layer { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+.scene-item {
+  position: absolute; opacity: .16;
+  filter: saturate(.9);
+  animation: scene-drift ease-in-out infinite alternate;
+}
+@keyframes scene-drift {
+  from { transform: translateY(0) rotate(-4deg); }
+  to { transform: translateY(-26px) rotate(5deg); }
+}
+.region-screen > *:not(.scene-layer), .world-screen > *:not(.scene-layer) { position: relative; z-index: 1; }
+
 /* ---------- Continent view ---------- */
 
 .world-screen .region-trail {
@@ -503,6 +517,14 @@ button:focus-visible, input:focus-visible {
   padding: 22px 34px; display: flex; align-items: center; gap: 14px;
 }
 .flash-word { font-size: 32px; font-weight: 900; color: var(--coral); }
+.flash-card.combo {
+  background: linear-gradient(135deg, #fff6dc, #ffe9a8);
+  box-shadow: 0 16px 44px rgba(255, 211, 77, .5);
+}
+.flash-card.combo .flash-word {
+  background: linear-gradient(90deg, #e5603f, #e0a223);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
 
 .win-stars { display: flex; gap: 10px; font-size: 58px; }
 .win-star { color: #e4dccb; animation: star-pop .5s cubic-bezier(.2, 1.8, .4, 1) both; }

@@ -20,12 +20,15 @@ const Celebrate = {
     setTimeout(() => layer.remove(), 2600);
   },
 
-  // Quick "correct!" flash between questions
-  smallWin(next) {
-    Celebrate.confetti(14);
+  // Quick "correct!" flash between questions; combo >= 3 turns up the heat
+  smallWin(next, combo) {
+    Celebrate.confetti(combo >= 3 ? 14 + combo * 4 : 14);
     const buddy = Avatar.svg(88);
+    const word = combo >= 3
+      ? `Combo ×${combo}!`
+      : U.pick(['Yes!', 'Got it!', 'Nice!', 'Brilliant!', 'Boom!', 'Sparkly!']);
     const o = U.el('div', 'flash-overlay');
-    o.innerHTML = `<div class="flash-card pop-in">${buddy}<div class="flash-word">${U.pick(['Yes!', 'Got it!', 'Nice!', 'Brilliant!', 'Boom!', 'Sparkly!'])}</div></div>`;
+    o.innerHTML = `<div class="flash-card pop-in${combo >= 3 ? ' combo' : ''}">${buddy}<div class="flash-word">${word}</div></div>`;
     document.body.appendChild(o);
     setTimeout(() => { o.remove(); next(); }, 850);
   },

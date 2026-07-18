@@ -25,11 +25,25 @@ const Store = {
   },
 
   load() {
+    const d = Store.defaults();
     try {
       const raw = localStorage.getItem(Store.KEY);
-      Store.state = raw ? Object.assign(Store.defaults(), JSON.parse(raw)) : Store.defaults();
+      const saved = raw ? JSON.parse(raw) : null;
+      if (saved && typeof saved === 'object') {
+        // Deep-merge one level so old saves keep working when new nested
+        // fields are added to the schema in future versions.
+        Object.keys(saved).forEach(k => {
+          if (d[k] && typeof d[k] === 'object' && !Array.isArray(d[k]) &&
+              saved[k] && typeof saved[k] === 'object' && !Array.isArray(saved[k])) {
+            d[k] = Object.assign({}, d[k], saved[k]);
+          } else if (saved[k] !== undefined) {
+            d[k] = saved[k];
+          }
+        });
+      }
+      Store.state = d;
     } catch (e) {
-      Store.state = Store.defaults();
+      Store.state = d;
     }
     Audio2.muted = !!Store.state.settings.muted;
     return Store.state;
