@@ -274,6 +274,11 @@ describe('teacher roll-call (Điểm danh)', () => {
     const after = (await req('GET', `/classes/c1/attendance?date=${date}`, lan)).json() as { studentId: string; present: boolean }[];
     expect(after.find((r) => r.studentId === 's0')?.present).toBe(true);
 
+    // Un-ticking clears roll-call presence (fully editable).
+    await req('POST', '/classes/c1/attendance', lan, { date, present: [] });
+    const cleared = (await req('GET', `/classes/c1/attendance?date=${date}`, lan)).json() as { studentId: string; present: boolean }[];
+    expect(cleared.find((r) => r.studentId === 's0')?.present).toBe(false);
+
     // David does not teach c1.
     expect((await req('POST', '/classes/c1/attendance', david, { date, present: [] })).statusCode).toBe(403);
   });

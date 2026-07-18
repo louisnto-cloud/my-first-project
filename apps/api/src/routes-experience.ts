@@ -91,9 +91,12 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
     const { id } = req.params as { id: string };
     const body = z.object({ date: z.string().date(), reason: z.string().max(300).default('') }).safeParse(req.body);
     if (!body.success) return reply.code(400).send({ error: 'invalid_input' });
-    const stu = await one<{ org_id: string; name: string }>(db, `SELECT org_id, name FROM users WHERE id = $1 AND role = 'student' AND archived = false`, [id]);
+    const stu = await one<{ org_id: string; site_id: string | null; name: string }>(db, `SELECT org_id, site_id, name FROM users WHERE id = $1 AND role = 'student' AND archived = false`, [id]);
     if (!stu || stu.org_id !== actor.orgId) return reply.code(404).send({ error: 'not_found' });
-    const allowed = ['owner', 'academic_director', 'site_director'].includes(actor.role) || (actor.role === 'parent' && (await isGuardianOf(db, actor.id, id)));
+    // Site directors stay inside their own site, like everywhere else.
+    const isOrgManager = ['owner', 'academic_director'].includes(actor.role);
+    const isSiteManager = actor.role === 'site_director' && stu.site_id === actor.siteId;
+    const allowed = isOrgManager || isSiteManager || (actor.role === 'parent' && (await isGuardianOf(db, actor.id, id)));
     if (!allowed) return reply.code(403).send({ error: 'forbidden' });
 
     const absId = rid('abs');
@@ -119,10 +122,11 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
     const actor = await requireAuth(req, reply);
     if (!actor) return;
     const { id } = req.params as { id: string };
-    const stu = await one<{ org_id: string }>(db, `SELECT org_id FROM users WHERE id = $1 AND role = 'student'`, [id]);
+    const stu = await one<{ org_id: string; site_id: string | null }>(db, `SELECT org_id, site_id FROM users WHERE id = $1 AND role = 'student'`, [id]);
     if (!stu || stu.org_id !== actor.orgId) return reply.code(404).send({ error: 'not_found' });
     const allowed =
-      ['owner', 'academic_director', 'site_director'].includes(actor.role) ||
+      ['owner', 'academic_director'].includes(actor.role) ||
+      (actor.role === 'site_director' && stu.site_id === actor.siteId) ||
       (actor.role === 'parent' && (await isGuardianOf(db, actor.id, id))) ||
       (actor.role === 'tutor' && !!(await one(db, 'SELECT 1 AS x FROM enrollments e JOIN classes c ON c.id = e.class_id WHERE e.student_id = $1 AND c.teacher_id = $2', [id, actor.id])));
     if (!allowed) return reply.code(403).send({ error: 'forbidden' });
@@ -159,7 +163,7 @@ export function registerExperienceRoutes(app: FastifyInstance, db: DB): void {
     // day backward on servers running east-of-UTC timezones (Vietnam).
     const rows = await many<{ date: string; check_in_at: string | null }>(
       db,
-      `SELECT date::text AS date, check_in_at FROM attendance_records
+      `SELECT date::text AS date, (check_in_at IS NOT NULL OR roll_call_present) AS check_in_at FROM attendance_records
         WHERE student_id = $1 AND date >= $2 ORDER BY date`,
       [childId, dateOf(new Date(Date.now() - 6 * 86_400_000))],
     );

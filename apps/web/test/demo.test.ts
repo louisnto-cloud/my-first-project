@@ -423,6 +423,11 @@ describe('demo engine — teacher roll-call (Điểm danh)', () => {
     const after = (await call('GET', `/classes/up1/attendance?date=${date}`, undefined, ha!)).json as { studentId: string; present: boolean }[];
     expect(after.find((r) => r.studentId === 's_UP1482')?.present).toBe(true);
 
+    // Un-ticking clears it (editable, unlike a life-safety check-in).
+    await call('POST', '/classes/up1/attendance', { date, present: [] }, ha!);
+    const cleared = (await call('GET', `/classes/up1/attendance?date=${date}`, undefined, ha!)).json as { studentId: string; present: boolean }[];
+    expect(cleared.find((r) => r.studentId === 's_UP1482')?.present).toBe(false);
+
     // A teacher who doesn't run Up 1 cannot roll-call it.
     const ly = await loginCode('GV0006');
     expect((await call('POST', '/classes/up1/attendance', { date, present: [] }, ly!)).status).toBe(403);

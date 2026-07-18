@@ -78,6 +78,7 @@ interface DAttend {
   checkInAt: string | null;
   checkOutAt: string | null;
   releasedTo: string | null;
+  rollPresent?: boolean; // teacher roll-call (lesson attendance), separate from checkIn
 }
 interface DPickup {
   id: string;
@@ -118,7 +119,7 @@ interface DDB {
 
 const ORG = 'org_etop';
 const SITE = 'site_nh';
-const KEY = 'etop-demo-db-v21';
+const KEY = 'etop-demo-db-v22';
 
 // localStorage shim so this module is testable in Node.
 const mem = new Map<string, string>();
@@ -692,17 +693,16 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     const roster = db.users.filter((u) => u.role === 'student' && u.classIds.includes(c.id));
     if (method === 'GET') {
       const date = (q.date as string) || today();
-      return ok(roster.map((u) => ({ studentId: u.id, name: u.name, present: db.attendance.some((a) => a.studentId === u.id && a.date === date && a.checkInAt) })));
+      return ok(roster.map((u) => { const a = db.attendance.find((x) => x.studentId === u.id && x.date === date); return { studentId: u.id, name: u.name, present: !!(a && (a.rollPresent || a.checkInAt)) }; }));
     }
     if (method === 'POST') {
       const date = String(b.date ?? today());
       const present = new Set(((b.present as string[]) ?? []).filter((s) => roster.some((r) => r.id === s)));
+      // roll_call_present only — never touches checkIn/dismissal; fully editable.
       for (const u of roster) {
         let rec = db.attendance.find((a) => a.studentId === u.id && a.date === date);
-        if (present.has(u.id)) {
-          if (!rec) { rec = { studentId: u.id, date, checkInAt: new Date(`${date}T08:00:00`).toISOString(), checkOutAt: null, releasedTo: null }; db.attendance.push(rec); }
-          else if (!rec.checkInAt) rec.checkInAt = new Date(`${date}T08:00:00`).toISOString();
-        }
+        if (!rec) { rec = { studentId: u.id, date, checkInAt: null, checkOutAt: null, releasedTo: null }; db.attendance.push(rec); }
+        rec.rollPresent = present.has(u.id);
       }
       save(db);
       return ok({ ok: true, present: present.size });
@@ -1214,7 +1214,7 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
     return ok(
       Array.from({ length: 7 }, (_, i) => {
         const d = localDate(new Date(Date.now() - (6 - i) * 86_400_000));
-        return { date: d, attended: db.attendance.some((a) => a.studentId === childId && a.date === d && a.checkInAt) };
+        return { date: d, attended: db.attendance.some((a) => a.studentId === childId && a.date === d && (a.checkInAt || a.rollPresent)) };
       }),
     );
   }
@@ -1232,7 +1232,7 @@ export async function demoDispatch(method: string, path: string, body: unknown, 
       .map((s) => ({ title: db.assignments.find((a) => a.id === s.assignmentId)?.title ?? 'Bài tập', overall: s.overall == null ? null : Math.round(s.overall) }));
     const scored = graded.filter((g) => g.overall != null);
     const average = scored.length ? Math.round(scored.reduce((t, g) => t + (g.overall ?? 0), 0) / scored.length) : null;
-    const present = db.attendance.filter((a) => a.studentId === stu.id && a.checkInAt).length;
+    const present = db.attendance.filter((a) => a.studentId === stu.id && (a.checkInAt || a.rollPresent)).length;
     const comments = db.sessionNotes.filter((n) => n.studentId === stu.id && n.parentNote).slice(0, 5).map((n) => ({ note: n.parentNote, at: n.date }));
     const practicePoints = db.practice.filter((pp) => pp.studentId === stu.id).reduce((t, pp) => t + pp.points, 0);
     return ok({

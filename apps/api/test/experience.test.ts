@@ -85,6 +85,11 @@ describe('planned absences (Báo nghỉ)', () => {
 
     // A non-guardian and an unrelated teacher are refused / see nothing.
     expect((await req('POST', '/students/s1/absence', parent, { date: '2099-03-20' })).statusCode).toBe(403);
+
+    // A site director cannot report/read absences for a student at another site.
+    const giang = await login('giang@etop.vn'); // site_tt director; s0 is at site_nh
+    expect((await req('POST', '/students/s0/absence', giang, { date: '2099-03-21' })).statusCode).toBe(403);
+    expect((await req('GET', '/students/s0/absences', giang)).statusCode).toBe(403);
   });
 });
 

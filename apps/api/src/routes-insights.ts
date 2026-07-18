@@ -289,7 +289,14 @@ export function registerInsightRoutes(app: FastifyInstance, db: DB): void {
   });
 
   // ---------- Compliance exports (CSV) ----------
-  const csvEscape = (v: unknown) => `"${String(v ?? '').replaceAll('"', '""')}"`;
+  // Quote every cell and neutralize spreadsheet formula injection: a value
+  // starting with = + - @ (or tab/CR) can execute in Excel/Sheets even
+  // inside quotes, so a guard apostrophe is prefixed first.
+  const csvEscape = (v: unknown) => {
+    let s = String(v ?? '');
+    if (/^[=+\-@\t\r]/.test(s)) s = `'${s}`;
+    return `"${s.replaceAll('"', '""')}"`;
+  };
 
   app.get('/export/audit.csv', async (req, reply) => {
     const actor = await requireRoles(req, reply, ['owner', 'auditor']);

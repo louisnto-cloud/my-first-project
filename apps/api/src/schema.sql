@@ -113,8 +113,13 @@ CREATE TABLE IF NOT EXISTS attendance_records (
   check_out_event_id TEXT UNIQUE,
   released_to_name TEXT,
   released_to_pickup_id TEXT,
+  -- Teacher roll-call (lesson attendance) is a LOW-assurance signal kept
+  -- separate from the life-safety check_in_at: it never satisfies the
+  -- missing-child sweep nor resolves escalations. Surfaced to parents.
+  roll_call_present BOOLEAN,
   UNIQUE (student_id, date)
 );
+ALTER TABLE attendance_records ADD COLUMN IF NOT EXISTS roll_call_present BOOLEAN;
 
 -- Verified pickup people. No accounts; photo + PIN verified at the door.
 CREATE TABLE IF NOT EXISTS pickup_people (
