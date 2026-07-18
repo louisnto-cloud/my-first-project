@@ -2,7 +2,11 @@
 // Vietnamese diacritics correctly, and triggers a download — no server.
 export function downloadCsv(filename: string, headers: string[], rows: (string | number | null)[][]): void {
   const esc = (v: string | number | null) => {
-    const s = v == null ? '' : String(v);
+    let s = v == null ? '' : String(v);
+    // Neutralize spreadsheet formula injection: a cell starting with
+    // = + - @ (or a lone tab/CR) can execute in Excel/Sheets. Prefix a
+    // zero-width guard apostrophe so it always renders as text.
+    if (typeof v === 'string' && /^[=+\-@\t\r]/.test(s)) s = `'${s}`;
     return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
   };
   const body = [headers, ...rows].map((r) => r.map(esc).join(',')).join('\n');

@@ -120,6 +120,24 @@ function ClassCard({ cls, siblings, vi }: { cls: ClassInfo; siblings: ClassInfo[
     setInviteInfo({ studentName, code: res.inviteCode });
   };
 
+  // Generate one parent-invite per student and download them all as CSV —
+  // hand a slip to each family at the start of a course.
+  const [bulkBusy, setBulkBusy] = useState(false);
+  const inviteAll = async () => {
+    setBulkBusy(true);
+    try {
+      const rows: [string, string][] = [];
+      for (const r of roster) {
+        const res = await api<{ inviteCode: string }>('POST', `/students/${r.id}/invite`);
+        rows.push([r.name, res.inviteCode]);
+      }
+      downloadCsv(`Lop_${cls.name}_ma_moi_phu_huynh`, ['Học viên', 'Mã mời phụ huynh (PH-)'], rows);
+      flash(`🎟 Đã tạo ${rows.length} mã mời — tải file CSV để phát cho phụ huynh.`);
+    } finally {
+      setBulkBusy(false);
+    }
+  };
+
   // Tap an assignment → per-student status/score list.
   const toggleStatus = async (assignmentId: string) => {
     if (statusFor === assignmentId) { setStatusFor(null); return; }
@@ -240,12 +258,17 @@ function ClassCard({ cls, siblings, vi }: { cls: ClassInfo; siblings: ClassInfo[
               />
               <button onClick={addStudents} disabled={!names.trim()} className="btn-soft w-full text-sm">＋ Thêm vào lớp (tự cấp mã số)</button>
               {roster.length > 0 && (
-                <button
-                  onClick={() => downloadCsv(`Lop_${cls.name}_hocvien`, ['Họ tên', 'Mã đăng nhập'], roster.map((r) => [r.name, r.loginCode ?? '']))}
-                  className="w-full text-center text-xs font-extrabold text-violet-500"
-                >
-                  ⬇ Xuất danh sách CSV
-                </button>
+                <div className="flex flex-col gap-1">
+                  <button
+                    onClick={() => downloadCsv(`Lop_${cls.name}_hocvien`, ['Họ tên', 'Mã đăng nhập'], roster.map((r) => [r.name, r.loginCode ?? '']))}
+                    className="w-full text-center text-xs font-extrabold text-violet-500"
+                  >
+                    ⬇ Xuất danh sách CSV
+                  </button>
+                  <button onClick={inviteAll} disabled={bulkBusy} className="w-full text-center text-xs font-extrabold text-violet-500 disabled:opacity-50">
+                    {bulkBusy ? '⏳ Đang tạo mã mời…' : '🎟 Tạo mã mời phụ huynh cả lớp (CSV)'}
+                  </button>
+                </div>
               )}
             </div>
           )}
