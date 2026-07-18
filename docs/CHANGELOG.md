@@ -54,3 +54,9 @@ Reverse-chronological. Each entry = one committed iteration.
 - [I20] Cover refresh: updated date, decision line (MÜV = sparkling electrolyte RTD can), and status
   (points to Start Here + Executive Brief + interactive tabs).
 - Workbook: 38 → 39 tabs.
+
+## Iteration 9 — 2026-07-18 ~09:11Z (batch I18/I19)
+- [I18] Added a contrast/accessibility checker to validate_workbook.py (WCAG-style luminance ratio);
+  flags any solid-fill cell whose text drops below 2.0 contrast. Current build: 0 low-contrast cells.
+- [I19] Added a "How to navigate" legend to the Contents tab (click-to-jump, Start Here, Home links,
+  gold=interactive, confidence tags) — the interface now self-explains.

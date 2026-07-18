@@ -44,6 +44,6 @@ implement, validate (`./build_all.sh`), commit, log in CHANGELOG.md.
 - [x] I15 — [IMPROVE] Assumptions Audit tab: every Financial Model input + value(s) + source/confidence.
 - [x] I16 — [IMPROVE] Data Confidence Scoreboard: count ✅/◐/⚠ tags across tabs; summarize on one tab.
 - [ ] I17 — [IMPROVE] Number-format consistency pass ($, %, thousands) across financial/model tabs.
-- [ ] I18 — [IMPROVE] Contrast/accessibility check: ensure font vs fill contrast on band/callout cells.
-- [ ] I19 — [IMPROVE] Per-tab one-line "what this tab shows" subtitle where missing.
+- [x] I18 — [IMPROVE] Contrast/accessibility check: ensure font vs fill contrast on band/callout cells.
+- [x] I19 — [IMPROVE] Per-tab one-line "what this tab shows" subtitle where missing.
 - [x] I20 — [IMPROVE] Cover sheet refresh: reflect 37 tabs, Start Here, Exec Brief, interactive model.

@@ -61,6 +61,28 @@ for ws in wb.worksheets:
     if not has_home: missing_home.append(ws.title)
 check(not missing_home, f"tabs missing a Home link: {missing_home[:6]}")
 
+# 5c. Contrast/accessibility (I18): flag solid-fill cells whose text is low-contrast on the fill
+def _lum(hex6):
+    r,g,b=(int(hex6[i:i+2],16)/255 for i in (0,2,4))
+    f=lambda c:(c/12.92 if c<=0.03928 else ((c+0.055)/1.055)**2.4)
+    return 0.2126*f(r)+0.7152*f(g)+0.0722*f(b)
+def _ratio(a,b):
+    la,lb=_lum(a),_lum(b); hi,lo=max(la,lb),min(la,lb); return (hi+0.05)/(lo+0.05)
+low_contrast=[]
+for ws in wb.worksheets:
+    for row in ws.iter_rows():
+        for c in row:
+            if not isinstance(c.value,str) or not c.value.strip(): continue
+            fillc=getattr(getattr(c.fill,"fgColor",None),"rgb",None)
+            if not (isinstance(fillc,str) and len(fillc)==8 and c.fill.patternType=="solid"): continue
+            if fillc[-6:].upper() in ("FFFFFF","000000"): continue  # skip pure/no-fill sentinels
+            fontc=getattr(getattr(c.font,"color",None),"rgb",None)
+            fhex = fontc[-6:] if (isinstance(fontc,str) and len(fontc)==8) else "000000"  # default black
+            try:
+                if _ratio(fhex, fillc[-6:]) < 2.0: low_contrast.append(f"{ws.title}!{c.coordinate}")
+            except Exception: pass
+if low_contrast: warns.append(f"low-contrast text cells (<2.0): {low_contrast[:8]}")
+
 # 6. Go/NoGo verdict formula present
 g=wb["Go-NoGo Decision"]
 has_verdict=any(isinstance(c.value,str) and "GO" in str(c.value) and c.value.startswith("=IF") for row in g.iter_rows() for c in row)
