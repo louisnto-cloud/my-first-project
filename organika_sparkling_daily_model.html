@@ -172,6 +172,7 @@
         <p class="sub">One-Year Operating Model · FY2026 · all $ CDN</p>
       </div>
       <div class="actions">
+        <button id="btnSummary" title="Copy a plain-text executive summary to paste into an email">📋 Summary</button>
         <button id="btnShare" title="Copy a link that reproduces this exact model">🔗 Share</button>
         <button id="btnExport" title="Download the scenario comparison as CSV">↓ CSV</button>
         <button id="btnPrint" title="Print or save as PDF">⎙ Print</button>
@@ -427,6 +428,24 @@ function toast(msg){
   if(!t){ t=document.createElement("div"); t.id="toast"; t.className="toast"; t.setAttribute("role","status"); t.setAttribute("aria-live","polite"); document.body.appendChild(t); }
   t.textContent = msg; t.classList.add("on");
   clearTimeout(t._h); t._h = setTimeout(()=>t.classList.remove("on"), 1900);
+}
+function summaryText(){
+  const r = compute(current), be = breakeven(), lever = sensitivityDrivers().ds[0];
+  return [
+    `Organika Sparkling Daily — ${current} case (FY2026)`,
+    `Net sales: ${money(r.net)} on ${num(r.cases)} cases`,
+    `Gross profit: ${money(r.gp)} (${pct(r.gppct)})`,
+    `EBITDA: ${money(r.ebitda)} (${pct(r.ebitdapct)})`,
+    `Net income: ${money(r.ni)}`,
+    `Break-even: ~${num(be.cases)} cases (${mult(be.mv)} of base volume)`,
+    `Biggest EBITDA lever: ${lever.name} (±${money(lever.swing/2)} per 10%)`
+  ].join("\n");
+}
+function doSummary(){
+  const txt = summaryText();
+  if(navigator.clipboard && navigator.clipboard.writeText)
+    navigator.clipboard.writeText(txt).then(()=>toast("Summary copied — paste into your email")).catch(()=>window.prompt("Copy this summary:", txt));
+  else window.prompt("Copy this summary:", txt);
 }
 function doShare(){
   const url = shareState();
@@ -1042,6 +1061,7 @@ el("btnReset").onclick=()=>{ if(confirm("Reset all assumptions to the default fi
 el("btnExport").onclick=exportCsv;
 el("btnPrint").onclick=()=>window.print();
 el("btnShare").onclick=doShare;
+el("btnSummary").onclick=doSummary;
 el("growthInp").oninput=e=>{ outlookGrowth=(parseFloat(e.target.value)||0)/100; renderOutlook(); };
 
 restore();            // load saved edits, if any
