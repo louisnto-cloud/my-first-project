@@ -549,6 +549,8 @@ function renderMonthly(){
     const ni = ebt - tax;
     return {m, cases:r.cases*f, net, gp:r.gp*f, cm, ebitda, ni};
   });
+  // cumulative net income
+  let run=0; M.forEach(x=>{run+=x.ni; x.cum=run;});
   const rows = [
     ["Physical Cases", "cases", num, 0],
     ["Net Sales", "net", money, 1],
@@ -556,15 +558,18 @@ function renderMonthly(){
     ["Contribution", "cm", money, 0],
     ["EBITDA", "ebitda", money, 1],
     ["Net Income", "ni", money, 1],
+    ["Cumulative Net Income", "cum", money, 1],
   ];
   let h="<table><thead><tr><th>CDN $</th>"+MONTHS.map(m=>`<th>${m}</th>`).join("")+"<th>FY</th></tr></thead><tbody>";
   rows.forEach(row=>{
-    const fy = M.reduce((a,x)=>a+x[row[1]],0);
-    h+=`<tr class="${row[3]?'major':''}"><td>${row[0]}</td>`+
+    const fy = row[1]==="cum" ? M[11].cum : M.reduce((a,x)=>a+x[row[1]],0);
+    h+=`<tr class="${row[3]?'major':''}"><td${tip(row[0])}>${row[0]}</td>`+
        M.map(x=>`<td${row[2]===money&&x[row[1]]<0?' style="color:#d83a4b"':''}>${row[2](x[row[1]])}</td>`).join("")+
        `<td class="hl" style="font-weight:700">${row[2](fy)}</td></tr>`;
   });
   h+="</tbody></table>";
+  const be=M.find(x=>x.cum>=0);
+  h+=`<p class="hint" style="margin-top:10px">${be?`Cumulative net income turns positive in <b>${be.m}</b>.`:`Cumulative net income stays negative all year — this scenario doesn't pay back within 12 months.`}</p>`;
   el("monthly").innerHTML=h;
 }
 
