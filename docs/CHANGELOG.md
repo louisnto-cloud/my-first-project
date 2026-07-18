@@ -16,3 +16,11 @@ Reverse-chronological. Each entry = one committed iteration.
   workbook opens on — the easy interface for the whole dossier.
 - [I3] Added a **🏠 Home** link (top-right) to every tab; kept the ↩ Contents link. Full two-way nav.
 - Workbook: 35 → 36 tabs. Validator green.
+
+## Iteration 4 — 2026-07-18 ~08:47Z (batch I5/I6/I8)
+- [I5] Financial Model usability: input/formula LEGEND, cell comments on the scenario selector +
+  price/COGS inputs, and sheet protection that LOCKS formula cells while keeping the yellow inputs
+  (and the scenario dropdown) fully editable. Prevents accidental model breakage.
+- [I6] Sources: first source in each cell is now a clickable link (22 links on the 24 Sources tab).
+- [I8] MÜV Peer Set: added a sodium-vs-price positioning scatter (LMNT/Liquid I.V./Nuun/Organika
+  sachets); MÜV plots once on-can sodium is confirmed.

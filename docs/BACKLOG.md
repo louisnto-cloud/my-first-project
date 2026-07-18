@@ -22,12 +22,12 @@ implement, validate (`./build_all.sh`), commit, log in CHANGELOG.md.
 - [x] I3 — [IMPROVE] Navigation polish: ↩ Home + ↩ Contents link on every tab; tab-color legend.
 - [ ] I4 — [IMPROVE] Formatting QA sweep: consistent fonts/widths/wrap/row-heights; freeze panes on
         all data tabs; fix any text overflow or clipped cells.
-- [ ] I5 — [IMPROVE/INTERFACE] Financial Model usability: clearly mark input vs formula cells, add
+- [x] I5 — [IMPROVE/INTERFACE] Financial Model usability: clearly mark input vs formula cells, add
         cell comments/instructions, lock formula cells (sheet protection, inputs unlocked), make the
         scenario dropdown prominent.
-- [ ] I6 — [IMPROVE] Hyperlink all source URLs on the Sources tab (clickable).
+- [x] I6 — [IMPROVE] Hyperlink all source URLs on the Sources tab (clickable).
 - [ ] I7 — [IMPROVE] Consistency QA: reconcile older tabs to MÜV-as-can; run stale-guard; fix wording.
-- [ ] I8 — [EXPAND 20%] Peer-set positioning chart (sodium vs price scatter).
+- [x] I8 — [EXPAND 20%] Peer-set positioning chart (sodium vs price scatter).
 - [ ] I9 — [IMPROVE] Executive one-page brief tab (consolidate thesis + reco + numbers).
 - [ ] I10 — [IMPROVE/INTERFACE] README.md: how to open, navigate and use the workbook + rebuild it.
 - [ ] I11 — [EXPAND 20%] Break-even chart + one-way sensitivity on price & COGS.
