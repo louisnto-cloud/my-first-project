@@ -506,20 +506,25 @@ function renderKpis(){
 
 function renderCmp(){
   const rows = [
-    ["Physical Cases", r=>num(r.cases)],
-    ["Net Sales", r=>money(r.net), 1],
-    ["Gross Profit", r=>money(r.gp), 1],
-    ["GP %", r=>pct(r.gppct)],
-    ["Contribution", r=>money(r.cm)],
-    ["EBITDA", r=>money(r.ebitda), 1],
-    ["EBITDA %", r=>pct(r.ebitdapct)],
-    ["Net Income", r=>money(r.ni), 1],
+    ["Physical Cases", r=>num(r.cases), r=>r.cases, "num", 0],
+    ["Net Sales", r=>money(r.net), r=>r.net, "money", 1],
+    ["Gross Profit", r=>money(r.gp), r=>r.gp, "money", 1],
+    ["GP %", r=>pct(r.gppct), r=>r.gppct, "pp", 0],
+    ["Contribution", r=>money(r.cm), r=>r.cm, "money", 0],
+    ["EBITDA", r=>money(r.ebitda), r=>r.ebitda, "money", 1],
+    ["EBITDA %", r=>pct(r.ebitdapct), r=>r.ebitdapct, "pp", 0],
+    ["Net Income", r=>money(r.ni), r=>r.ni, "money", 1],
   ];
-  const data = SCEN.map(compute);
-  let h = "<table aria-label=\"Scenario comparison\"><thead><tr><th>Metric</th>"+SCEN.map(s=>`<th>${s}</th>`).join("")+"</tr></thead><tbody>";
+  const data = SCEN.map(compute), baseR = compute("Base"), curR = compute(current);
+  const dstr = (dv,kind)=> (dv>=0?"+":"−") + (kind==="pp" ? Math.abs(dv*100).toFixed(1)+" pp" : kind==="num" ? num(Math.abs(dv)) : money(Math.abs(dv)));
+  let h = "<table aria-label=\"Scenario comparison\"><thead><tr><th>Metric</th>"+SCEN.map(s=>`<th>${s}</th>`).join("")+`<th>Δ ${current} vs Base</th></tr></thead><tbody>`;
   rows.forEach(row=>{
-    h += `<tr class="${row[2]?'tot':''}"><td>${row[0]}</td>`+
-      data.map((r,i)=>`<td style="${SCEN[i]==current?'background:var(--hl)':''}">${row[1](r)}</td>`).join("")+"</tr>";
+    const dv = row[2](curR) - row[2](baseR);
+    const dcell = current==="Base"
+      ? `<td class="hint">—</td>`
+      : `<td style="font-weight:600;color:${dv>=0?'var(--good)':'var(--bad)'}">${dstr(dv,row[3])}</td>`;
+    h += `<tr class="${row[4]?'tot':''}"><td>${row[0]}</td>`+
+      data.map((r,i)=>`<td style="${SCEN[i]==current?'background:var(--hl)':''}">${row[1](r)}</td>`).join("")+dcell+"</tr>";
   });
   h += "</tbody></table>";
   el("cmp").innerHTML = h;
