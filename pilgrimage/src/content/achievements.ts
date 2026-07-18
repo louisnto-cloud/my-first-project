@@ -112,6 +112,18 @@ export const ACHIEVEMENTS: Achievement[] = [
     earned: (s) => (s.seen['rosary'] ?? 0) >= 1,
   },
   {
+    id: 'way-of-the-cross',
+    title: u('The Way of the Cross', 'Đàng Thánh Giá'),
+    how: u('Walk all fourteen stations.', 'Đi trọn mười bốn chặng.'),
+    earned: (s) => (s.seen.stations ?? 0) >= 1,
+  },
+  {
+    id: 'hour-of-mercy',
+    title: u('The Hour of Mercy', 'Giờ Thương Xót'),
+    how: u('Pray the whole Divine Mercy chaplet.', 'Nguyện trọn Chuỗi Lòng Chúa Thương Xót.'),
+    earned: (s) => (s.seen.mercy ?? 0) >= 1,
+  },
+  {
     id: 'camino-stamp',
     title: u('Compostela', 'Compostela'),
     how: u('Earn the fifth stamp — the whole main road, walked.', 'Nhận con dấu thứ năm — trọn con đường chính đã đi qua.'),
