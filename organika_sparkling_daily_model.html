@@ -265,6 +265,12 @@
         <span class="hint" id="bulkMsg"></span>
       </div>
     </div>
+    <div class="panel">
+      <h2>Import SKUs <span class="hint">(paste from Excel/CSV)</span></h2>
+      <p class="h-sub">Columns: Flavour, Format, Units/case, CP/case, Disc %, COGS Direct, COGS Indirect, A&amp;P/case, Volume. One SKU per line (comma or tab separated). A header row is fine. This matches Export CSV, so you can round-trip.</p>
+      <textarea id="importBox" style="width:100%;min-height:90px;border:1px solid var(--line);border-radius:10px;padding:10px;font:inherit;font-size:13px;background:var(--amber)" placeholder="Pineapple, Singles, 12, 15.00, 7, 6.53, 0.72, 1.20, 15000"></textarea>
+      <div style="margin-top:10px"><button class="tbtn" onclick="parseImport()">Load SKUs from paste</button> <span class="hint" id="importMsg"></span></div>
+    </div>
     <div class="grid2">
       <div class="panel">
         <h2>Company (annual)</h2>
@@ -723,6 +729,24 @@ function renderAsmp(){
   lv+=`<div style="margin-top:10px"><button class="tbtn" onclick="addScen()">+ Add scenario</button></div>`;
   el("asmpLev").innerHTML=lv;
 }
+function parseImport(){
+  const txt=(el("importBox").value||"").trim();
+  const msg=el("importMsg"); const say=m=>{if(msg){msg.textContent=m;setTimeout(()=>msg.textContent="",3500);}};
+  if(!txt){ say("Paste some rows first."); return; }
+  const out=[];
+  txt.split(/\r?\n/).forEach(line=>{
+    if(!line.trim()) return;
+    const c=line.split(/\t|,/).map(x=>x.trim().replace(/^"|"$/g,""));
+    if(c.length<9) return;
+    if(isNaN(parseFloat(c[3]))) return;           // header row (CP not numeric)
+    let disc=parseFloat(c[4])||0; if(disc>1) disc/=100;   // accept 7 or 0.07
+    out.push({flav:c[0]||"SKU", fmt:c[1]||"", units:parseFloat(c[2])||1, cp:parseFloat(c[3])||0,
+      disc, cosd:parseFloat(c[5])||0, cosi:parseFloat(c[6])||0, ap:parseFloat(c[7])||0, vol:parseFloat(c[8])||0});
+  });
+  if(!out.length){ say("Couldn't read any SKU rows — check the columns."); return; }
+  SKUS.length=0; out.forEach(s=>SKUS.push(s)); el("importBox").value="";
+  renderAsmp(); refresh(); say("Loaded "+out.length+" SKUs.");
+}
 function bulkApply(kind){
   const pct=parseFloat(el("bulkPct").value)||0; const f=1+pct/100;
   SKUS.forEach(s=>{
@@ -834,8 +858,8 @@ function exportCSV(){
     ["EBITDA %","ebitdapct",pct],["Net Income","ni",money],["Net Income %","nipct",pct]];
   lines.forEach(l=>rows.push([l[0],...data.map(r=>l[2](r[l[1]]).replace(/[$,]/g,""))]));
   rows.push([]); rows.push(["Per-SKU assumptions"]);
-  rows.push(["Flavour","Format","CP/case","Disc %","COGS Direct","COGS Indirect","A&P/case","Base volume"]);
-  SKUS.forEach(s=>rows.push([s.flav,s.fmt,s.cp,(s.disc*100).toFixed(1),s.cosd,s.cosi,s.ap,s.vol]));
+  rows.push(["Flavour","Format","Units/case","CP/case","Disc %","COGS Direct","COGS Indirect","A&P/case","Base volume"]);
+  SKUS.forEach(s=>rows.push([s.flav,s.fmt,s.units||1,s.cp,(s.disc*100).toFixed(1),s.cosd,s.cosi,s.ap,s.vol]));
   const csv=rows.map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(",")).join("\n");
   const a=document.createElement("a");
   a.href="data:text/csv;charset=utf-8,"+encodeURIComponent(csv);
