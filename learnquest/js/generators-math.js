@@ -293,6 +293,27 @@ const MG = {
     };
   },
 
+  'numline-whole': (p) => {
+    const min = p.min || 0, max = p.max || 20;
+    const answer = U.ri(min + 1, max - 1);
+    return {
+      format: 'numberline', min, max, step: 1, answer,
+      prompt: `Slide the arrow to ${answer}`,
+      say: `Slide the arrow along the number line to the number ${answer}.`,
+      explain: `Start at ${min} and count on: ${answer} is ${answer - min} steps to the right.`
+    };
+  },
+
+  'numline-integer': () => {
+    const answer = U.pick([-9, -8, -7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    return {
+      format: 'numberline', min: -10, max: 10, step: 1, answer,
+      prompt: `Slide the arrow to ${answer}`,
+      say: `Slide the arrow to ${answer < 0 ? 'negative ' + (-answer) : answer}.`,
+      explain: `${answer} is ${Math.abs(answer)} step${Math.abs(answer) === 1 ? '' : 's'} to the ${answer < 0 ? 'left' : 'right'} of zero.`
+    };
+  },
+
   'measure-compare': () => {
     const pairs = [
       { a: { e: '🦒', n: 'giraffe' }, b: { e: '🐰', n: 'rabbit' }, prop: 'taller', ans: 'a' },

@@ -25,6 +25,7 @@ const CURRICULUM = [
         skills: [
           { id: 'read20', name: 'Numbers to 20', icon: '🎯', gen: 'read-number', params: { min: 10, max: 20 } },
           { id: 'count20', name: 'Counting to 20', icon: '🐟', gen: 'count-tap', params: { min: 10, max: 20 } },
+          { id: 'numline', name: 'Number Line', icon: '📏', gen: 'numline-whole', params: { min: 0, max: 20 } },
           { id: 'add10', name: 'Adding to 10', icon: '➕', gen: 'add-within', params: { max: 10 } },
           { id: 'add20', name: 'Adding to 20', icon: '🚀', gen: 'add-within', params: { max: 20 } },
           { id: 'sub10', name: 'Taking Away', icon: '➖', gen: 'sub-within', params: { max: 10 } },
@@ -91,6 +92,7 @@ const CURRICULUM = [
         skills: [
           { id: 'pct', name: 'Percent Power', icon: '💯', gen: 'percent-basic', params: {} },
           { id: 'int', name: 'Below Zero', icon: '🧊', gen: 'integers-intro', params: {} },
+          { id: 'intline', name: 'Integer Line', icon: '📏', gen: 'numline-integer', params: {} },
           { id: 'oops', name: 'Order of Operations', icon: '🚦', gen: 'order-ops', params: {} },
           { id: 'ratio', name: 'Ratio Recipes', icon: '🧪', gen: 'ratios', params: {} },
           { id: 'angle', name: 'Angle Hunter', icon: '📐', gen: 'angles', params: {} },

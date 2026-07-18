@@ -1,6 +1,6 @@
 /* LearnQuest — activity engine: renders every question format and reports results.
    Activities.render(container, q, onAnswer) — onAnswer(correct:boolean) fires once per attempt.
-   Formats: tap, numpad, sort, sequence, match, blank, trace, typed */
+   Formats: tap, numpad, sort, sequence, match, blank, trace, typed, numberline */
 'use strict';
 
 const Activities = {
@@ -326,6 +326,79 @@ const Activities = {
     });
     wrap.appendChild(sentence);
     wrap.appendChild(bank);
+    wrap.appendChild(go);
+    box.appendChild(wrap);
+  },
+
+  /* --- Number line: drag the marker to the target value ------------------------------ */
+  _numberline(box, q, onAnswer) {
+    const min = q.min, max = q.max, step = q.step || 1;
+    const span = max - min;
+    const wrap = U.el('div', 'nl-wrap');
+
+    const valLabel = U.el('div', 'nl-value', '?');
+    wrap.appendChild(valLabel);
+
+    const track = U.el('div', 'nl-track');
+    const fill = U.el('div', 'nl-fill');
+    track.appendChild(fill);
+    // ticks + labels (label every tick for small ranges, else every 5)
+    const labelEvery = span <= 12 ? step : 5;
+    for (let v = min; v <= max + 1e-9; v += step) {
+      const t = U.el('div', 'nl-tick');
+      t.style.left = ((v - min) / span * 100) + '%';
+      if (Math.round((v - min) / step) % Math.round(labelEvery / step) === 0) {
+        t.classList.add('major');
+        t.appendChild(U.el('span', 'nl-lab', String(v)));
+      }
+      track.appendChild(t);
+    }
+    const marker = U.el('div', 'nl-marker', '<span class="nl-arrow">▲</span>');
+    track.appendChild(marker);
+    wrap.appendChild(track);
+
+    let val = null, done = false;
+    const place = (v) => {
+      val = Math.max(min, Math.min(max, Math.round(v / step) * step));
+      const pct = (val - min) / span * 100;
+      marker.style.left = pct + '%';
+      fill.style.width = pct + '%';
+      marker.classList.add('placed');
+      valLabel.textContent = val;
+    };
+    const fromX = (clientX) => {
+      const r = track.getBoundingClientRect();
+      const pct = Math.max(0, Math.min(1, (clientX - r.left) / r.width));
+      place(min + pct * span);
+    };
+
+    let dragging = false;
+    const down = e => { if (done) return; dragging = true; fromX((e.touches ? e.touches[0] : e).clientX); e.preventDefault(); };
+    const move = e => { if (dragging) { fromX((e.touches ? e.touches[0] : e).clientX); e.preventDefault(); } };
+    const up = () => { dragging = false; };
+    track.addEventListener('pointerdown', down);
+    track.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+    track.addEventListener('touchstart', down, { passive: false });
+    track.addEventListener('touchmove', move, { passive: false });
+
+    // Keyboard: arrows nudge the marker
+    Activities.bindKeys(e => {
+      if (done) return;
+      if (e.key === 'ArrowRight') { place((val == null ? min : val) + step); e.preventDefault(); }
+      else if (e.key === 'ArrowLeft') { place((val == null ? min : val) - step); e.preventDefault(); }
+      else if (e.key === 'Enter') submit();
+    });
+
+    const go = U.el('button', 'check-btn', 'Place it! ✓');
+    const submit = () => {
+      if (val == null) { Audio2.say('Slide the arrow first!'); return; }
+      const ok = Math.abs(val - q.answer) < 1e-9;
+      onAnswer(ok);
+      if (!ok) { val = null; valLabel.textContent = '?'; marker.classList.remove('placed'); marker.style.left = '0%'; fill.style.width = '0%'; }
+      else { done = true; }
+    };
+    go.addEventListener('click', submit);
     wrap.appendChild(go);
     box.appendChild(wrap);
   },

@@ -107,7 +107,7 @@ const Level = {
 
     // Reveal the answer visually after a beat — a worked example, not a lecture.
     // Sort/match/trace demos have no single "answer" to reveal; the explanation carries them.
-    const answerText = sample.format === 'numpad' || sample.format === 'typed' ? String(sample.answer)
+    const answerText = sample.format === 'numpad' || sample.format === 'typed' || sample.format === 'numberline' ? String(sample.answer)
       : sample.format === 'tap' ? (sample.choices.find(c => c.correct).label || null)
       : sample.format === 'sequence' ? sample.sequence.join(' ')
       : sample.format === 'blank' ? sample.answer
