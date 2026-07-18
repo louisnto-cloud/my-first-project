@@ -7,7 +7,7 @@
 **How to read this document**
 - Every figure carries a source, year, and confidence rating: **HIGH** (multiple independent recent sources agree), **MEDIUM** (one credible source, or sources close but not identical), **LOW** (single dated source, industry estimate, or inference).
 - Items that could not be verified are marked **UNVERIFIED** with the reason. Nothing unverified is presented as fact.
-- FX used throughout: **26,250 VND/USD** (Vietcombank/interbank, 14–16 July 2026 — HIGH). CAD conversions in Chapter 6 use an assumed USD/CAD of 1.375 (≈19,100 VND/CAD) — **UNVERIFIED: no CAD/VND quote was retrievable this session; re-check before using in a price list.**
+- FX used throughout: **26,250 VND/USD** (Vietcombank/interbank, 14–16 July 2026 — HIGH). CAD conversions in Chapter 6 use **18,690 VND/CAD** (quotes 18,638–18,687, 14–16 July 2026 — exchange-rates.org, Wise/Yahoo quotes — MEDIUM-HIGH).
 - Vietnamese terms are defined on first use and collected in the Chapter 10 glossary.
 
 **Corrections to the pre-verified brief (newer/stronger sources contradict four anchors)**
@@ -91,7 +91,7 @@ Who touches an imported supplement, in order:
 - Physical hubs exist: the Nguyễn Sơn street cluster (Long Biên, Hanoi) is known as the capital of hand-carried Korean/Japanese/European cosmetics and functional foods (VTV, 2023 — HIGH).
 - Legal status: selling hand-carried goods without import papers is punishable as dealing in smuggled goods, fines to VND 100M (individuals)/200M (organizations) under Decree 98/2020 (statute — MEDIUM, not re-verified this session).
 - **Share: no analyst or government body publishes a grey-market percentage — no reliable data exists.** Proxy: as of Q1 2025, only **22.6% of supplement ecommerce revenue on Shopee and 32.2% on TikTok Shop came from official stores** — i.e., >70% of online purchases were from unverified sellers (Metric via Dân Trí, May 2025 — HIGH). That unverified 70% mixes genuine grey goods and fakes.
-- Why it persists: 15% MFN duty + VAT + registration cost gap (duty figure LOW — see Ch5), plus the origin-trust premium on "airport-bought" goods.
+- Why it persists: 15% MFN duty + VAT + registration cost gap (see Ch5.6), plus the origin-trust premium on "airport-bought" goods.
 
 **3. Counterfeits**
 - 2025 was the watershed: ~100 tons seized in the April 2025 MegaPhaco/MediUSA/MediPhar case alone; 88 products confirmed fake; market value >VND 539B; actives at <30% of declared content; Chinese raw materials labeled as US/EU imports (CAND, Tuổi Trẻ, VOV, 2025 — HIGH). Full case files in Chapter 4.
@@ -384,7 +384,7 @@ Format per card: origin/owner · positioning/tier · heroes · channels · entry
 **17. Nature Made** — USA (Pharmavite/Otsuka). No exclusive distributor identified; structured grey/official-import mix via Chiaki, Hebemart etc. (MEDIUM). "USP-verified drugstore staple" for xách tay buyers; no local brand-building.
 
 **18. Canadian brands — the white space, and Organika's own position**
-- **Organika**: exclusive importer-distributor **Kat Vietnam Trading JSC** operating organikacanada.vn ("exclusive importer & distributor of Organika Canada"); ~10 SKUs listed at provincial pharmacy e-tailers (trungtamthuoc.com) — MEDIUM-HIGH that the arrangement exists. **No Shopee Mall flagship found (gap/opportunity)**; no Organika Enhanced Collagen listing surfaced in any price search this session (LOW-confidence inference: minimal current retail presence). A separate site, organikavietnam.com, sells "Organika Grow Plus" — **possibly unauthorized or a licensed line; needs legal review (LOW)**.
+- **Organika**: exclusive importer-distributor **Kat Vietnam Trading JSC** operating organikacanada.vn ("exclusive importer & distributor of Organika Canada"); ~10 SKUs listed at provincial pharmacy e-tailers (trungtamthuoc.com) — MEDIUM-HIGH that the arrangement exists. **No Shopee Mall flagship found (gap/opportunity).** Retail presence beyond pharmacies does exist: Chiaki.vn runs an Organika brand page ("chính hãng, up to 30% off, FreeShip") and XaXi lists Enhanced Collagen 500g; glucosamin.com.vn independently names Kat Vietnam Trading as exclusive distributor (live pages 2025–26 — MEDIUM). Hand-carry sellers (hangxachtayus.vn 1kg Enhanced Collagen; giaonhan247 buying service) already ship Organika from Canada — **the own-grey-market problem (Ch4 F9) applies to Organika before any official relaunch** (MEDIUM). A separate site, organikavietnam.com, sells "Organika Grow Plus" — **possibly unauthorized or a licensed line; needs legal review (LOW)**.
 - **Webber Naturals** (WN Pharmaceuticals, BC): exclusive distributor **Maple Care** (maplecare.vn) with anti-counterfeit QR labels (MEDIUM). Heroes: melatonin, glucosamine, D3. Quiet but structured "Canada = clean" play.
 - **Jamieson**: no verified official distributor — presence is xách tay (LOW). **CanPrev**: no official distributor; imported by fitness e-tail; its magnesium bis-glycinate is the reference product in gym circles (MEDIUM). **Sisu**: no Vietnam presence found.
 - Consumer recognition: Jamieson, Webber Naturals, Natural Factors are "already familiar" to Vietnamese consumers (PharmaDi — MEDIUM); Canada trades on Health Canada rigor and ranked #1 on the 2022 Global Food Security Index quality & safety sub-index (89.5/100) (Thương Hiệu Công Luận — MEDIUM). **Canada appears in no consumer origin-preference ranking — "trusted category, low top-of-mind awareness" is an inference, not a surveyed fact.**
@@ -560,15 +560,15 @@ Format per card: origin/owner · positioning/tier · heroes · channels · entry
 
 - Decree 43/2017 as amended by Decree 111/2021: imported goods keep original labels plus a mandatory Vietnamese supplementary label (nhãn phụ): product name, importer name/address, origin, quantity, ingredients, production/expiry dates, warnings, usage (MEDIUM — statute, not re-verified this session).
 - TPBVSK-specific: label must state the class "Thực phẩm bảo vệ sức khỏe" and carry the attention statement "Chú ý: Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh" plus applicable "not for use by" warnings (rooted in Circular 43/2014 and Decree 15/2018 — MEDIUM substance, LOW exact wording; align with Decree 342/2025 text).
-- Nutrition labeling Circular 29/2023: whether TPBVSK fall in scope or are exempt **could not be verified — UNVERIFIED; check the circular's scope article before printing labels.**
+- Nutrition labeling Circular 29/2023 (effective 15 Feb 2024): **TPBVSK are exempt** — health protection foods are listed among the products the circular does not apply to (with single-ingredient foods, mineral water, additives, enzymes); products labeled under old rules before 1 Jan 2026 may circulate to expiry (thuvienphapluat.vn; Eurofins VN; LuatVietnam EN, 2024–26 — HIGH).
 
 ## 5.6 Duty and VAT for Canadian goods
 
 | Item | Rate | Source | Confidence |
 |---|---|---|---|
 | HS classification | Finished supplements: 2106.90 (AHTN 2106.90.71–.79 "food/health supplements"); bulk vitamins 2936 | FreightAmigo; hptoancau 2025–26 | MEDIUM |
-| MFN duty on 2106.90 | Commonly ~15% | industry citations only | **LOW — UNVERIFIED this session; verify against the current MFN tariff decree** |
-| CPTPP rate for Canada | Vietnam's CPTPP schedule staged most processed-food lines to 0% within 4–8 years of entry into force (14 Jan 2019) → **should be 0% or near 0% in 2026**, subject to the current-year CPTPP tariff decree + rules of origin/C/O form | CPTPP schedule structure | **LOW-MEDIUM — UNVERIFIED; confirm at vietnamtradeportal.gov.vn before quoting landed cost** |
+| MFN duty on 2106.90 | **15%** for functional-food preparations under 2106.90.99 (medical-nutrition line 2106.90.96: 7%); ordinary/non-MFN rate 22.5% | Vietnamese customs brokers: Luật Minh Khuê, zship.vn, ASC Trans, Ratraco, 2025–26 | MEDIUM-HIGH (multiple broker sources agree; tariff-decree line not read directly) |
+| CPTPP rate for Canada | FTA preferential rates with a valid C/O reach **0%** on functional foods (broker guides); Vietnam's CPTPP schedule staged most processed-food lines to 0% within 4–8 years of entry into force (14 Jan 2019) → **Canada-origin should be 0% in 2026 with a CPTPP C/O** | broker guides 2025–26; CPTPP schedule structure | MEDIUM — the 2026 CPTPP tariff-decree line itself still unread; confirm at vietnamtradeportal.gov.vn before quoting landed cost |
 | VAT | **8%** (reduced from 10%) from 1 Jul 2025 through **31 Dec 2026** (Resolution 204/2025/QH15 + Decree 174/2025); supplements not on the exclusion list; assume reversion to 10% in 2027 unless extended | DFDL; The Investor; Bloomberg Tax 2025 | HIGH for the window; MEDIUM for supplement eligibility |
 
 ## 5.7 Import inspection
@@ -597,58 +597,58 @@ Format per card: origin/owner · positioning/tier · heroes · channels · entry
 | Pair | Rate | Date | Source | Confidence |
 |---|---|---|---|---|
 | USD/VND | ~26,250 mid-market (Vietcombank 26,050–26,460) | 14–16 Jul 2026 | vietnam.vn daily FX; TradingEconomics | HIGH |
-| CAD/VND | ≈19,100 **assumed** (USD/VND ÷ assumed USD/CAD 1.375) | — | — | **UNVERIFIED — no CAD quote retrievable this session; re-derive before quoting prices** |
+| CAD/VND | **≈18,690** (quotes 18,638–18,687) | 14–16 Jul 2026 | exchange-rates.org; Wise/Yahoo via search | MEDIUM-HIGH |
 
 ## 6.2 Retail prices, real listings (2025–26; prices move with promos — treat as anchors, not quotes)
 
 | Product | Channel | Price VND | ≈USD | ≈CAD* | Source, year | Confidence |
 |---|---|---|---|---|---|---|
-| DHC Vitamin C 30-day | Japanese-goods retail (Hachi Hachi, DHC VN) | 95,000 | 3.6 | 5.0 | hachihachi/dhcvietnam 2025 | MEDIUM-HIGH |
-| DHC Vitamin C 90-day (180 caps) | same | 250,000 | 9.5 | 13.1 | same | MEDIUM-HIGH |
-| DHC Collagen 30-day (180 tabs) | Hasaki list / promo | 290,000 / ~208,550 member | 11.0 / 7.9 | 15.2 / 10.9 | hasaki.vn 2025 | MEDIUM |
-| Orihiro Aojiru greens 30 sachets | Shop Nhật Chaly; market range | 350,000 (range 350–470k) | 13.3–17.9 | 18.3–24.6 | shopnhatchaly; healthmart.vn 2025 | MEDIUM |
-| Shiseido The Collagen drink 10×50ml | JP-import specialists | 690,000 promo / 763,000 list (range 650–850k) | 26.3–32.4 | 36.1–44.5 | beautygarden; hasaki 2025 | MEDIUM |
-| Adiva collagen liquid 14×30ml | Official / discount pharmacy | 649,000 / 525,000 | 24.7 / 20.0 | 34.0 / 27.5 | adiva.com.vn 2025 | HIGH official list |
-| 82X Sakura Placenta Premium 500ml | Importer retail (LyChee exclusive) | 3,100,000 | 118 | 162 | hachihachi/82xbeauty 2025 | MEDIUM (premium SKU) |
-| Lemona collagen 60 sachets | K-goods e-tail | ~370,000 | 14.1 | 19.4 | boshop 2024–25 | MEDIUM |
-| Enterogermina 4B 2×10 amps | Long Chau | 298,000 | 11.4 | 15.6 | nhathuoclongchau 2025 | HIGH |
-| BioGaia Protectis drops 5ml | National uniform price (importer-set) | **460,000 from 1 Feb 2025** (was ~415,000) | 17.5 | 24.1 | biogaia.vn 2025 | HIGH |
-| LiveSpo Colon 20 amps | List / discount pharmacy | 290,000 / 166,000 | 11.0 / 6.3 | 15.2 / 8.7 | nhathuocngocanh; Long Chau 2025 | MEDIUM — note the 43% list-street gap |
-| Optibac For Women 30 caps | Pharmacy e-tail / grey mix | 400,000–550,000 | 15.2–21.0 | 20.9–28.8 | pharmart; chiaki 2025 | MEDIUM |
-| Doppelherz Magnesium 400 + B 30 tabs | German-goods importers | from 220,000 | 8.4 | 11.5 | sbig.vn Apr 2025 | MEDIUM |
-| Blackmores Super Magnesium+ 200 tabs | Grey (Wowmart) | 538,000 | 20.5 | 28.2 | wowmart.vn 2025 | MEDIUM |
-| Blackmores Bio Magnesium 100 tabs | Long Chau/Pharmacity/Watsons (official) | ~500,000 cited | 19.0 | 26.2 | tocamart roundup 2025 | MEDIUM |
+| DHC Vitamin C 30-day | Japanese-goods retail (Hachi Hachi, DHC VN) | 95,000 | 3.6 | 5.1 | hachihachi/dhcvietnam 2025 | MEDIUM-HIGH |
+| DHC Vitamin C 90-day (180 caps) | same | 250,000 | 9.5 | 13.4 | same | MEDIUM-HIGH |
+| DHC Collagen 30-day (180 tabs) | Hasaki list / promo | 290,000 / ~208,550 member | 11.0 / 7.9 | 15.5 / 11.2 | hasaki.vn 2025 | MEDIUM |
+| Orihiro Aojiru greens 30 sachets | Shop Nhật Chaly; market range | 350,000 (range 350–470k) | 13.3–17.9 | 18.7–25.1 | shopnhatchaly; healthmart.vn 2025 | MEDIUM |
+| Shiseido The Collagen drink 10×50ml | JP-import specialists | 690,000 promo / 763,000 list (range 650–850k) | 26.3–32.4 | 36.9–45.5 | beautygarden; hasaki 2025 | MEDIUM |
+| Adiva collagen liquid 14×30ml | Official / discount pharmacy | 649,000 / 525,000 | 24.7 / 20.0 | 34.7 / 28.1 | adiva.com.vn 2025 | HIGH official list |
+| 82X Sakura Placenta Premium 500ml | Importer retail (LyChee exclusive) | 3,100,000 | 118 | 166 | hachihachi/82xbeauty 2025 | MEDIUM (premium SKU) |
+| Lemona collagen 60 sachets | K-goods e-tail | ~370,000 | 14.1 | 19.8 | boshop 2024–25 | MEDIUM |
+| Enterogermina 4B 2×10 amps | Long Chau | 298,000 | 11.4 | 15.9 | nhathuoclongchau 2025 | HIGH |
+| BioGaia Protectis drops 5ml | National uniform price (importer-set) | **460,000 from 1 Feb 2025** (was ~415,000) | 17.5 | 24.6 | biogaia.vn 2025 | HIGH |
+| LiveSpo Colon 20 amps | List / discount pharmacy | 290,000 / 166,000 | 11.0 / 6.3 | 15.5 / 8.9 | nhathuocngocanh; Long Chau 2025 | MEDIUM — note the 43% list-street gap |
+| Optibac For Women 30 caps | Pharmacy e-tail / grey mix | 400,000–550,000 | 15.2–21.0 | 21.4–29.4 | pharmart; chiaki 2025 | MEDIUM |
+| Doppelherz Magnesium 400 + B 30 tabs | German-goods importers | from 220,000 | 8.4 | 11.8 | sbig.vn Apr 2025 | MEDIUM |
+| Blackmores Super Magnesium+ 200 tabs | Grey (Wowmart) | 538,000 | 20.5 | 28.8 | wowmart.vn 2025 | MEDIUM |
+| Blackmores Bio Magnesium 100 tabs | Long Chau/Pharmacity/Watsons (official) | ~500,000 cited | 19.0 | 26.8 | tocamart roundup 2025 | MEDIUM |
 | Vital Proteins Collagen Peptides 567g | Pharmacity | listed; price not captured | — | — | pharmacity.vn 2026 | availability MEDIUM; **price gap** |
 | Metamucil / psyllium fibre | Grey/hand-carry + cross-border only; no official distribution found | prices not captured | — | — | fado.vn; tramcathy 2026 | channel MEDIUM; **price gap** |
 
-*CAD column uses the UNVERIFIED 19,100 VND/CAD assumption.
+*CAD column uses 18,690 VND/CAD (mid-July 2026 — see 6.1).
 - Cross-cutting observations (derived from the table — MEDIUM): official list vs street gaps of 20–45% are normal (Adiva −19%, LiveSpo −43%, DHC collagen −28%) — promo depth is structural, price accordingly. Premium imported collagen clusters at **VND 650–850k (~USD 25–32)** per ~2-week course. Mass daily-dose ceiling ≈ VND 10–15k/day; premium beauty tolerates VND 40–60k/day.
 - TikTok Shop and Lazada price rows: not separately captured this session (**gap**); TikTok pricing on identical SKUs typically tracks Shopee with deeper live-session vouchers (inference — LOW).
 
 ## 6.3 Worked example: premium marine collagen powder, FOB to shelf
 
-Model assumptions are labeled; sourced inputs cited. Product: 250g premium marine collagen tin, FOB Vancouver **CAD 12.00 = USD 8.73 = VND 229,000** (CAD conversion on the UNVERIFIED FX assumption).
+Model assumptions are labeled; sourced inputs cited. Product: 250g premium marine collagen tin, FOB Vancouver **CAD 12.00 = USD 8.54 = VND 224,300** (at 18,690 VND/CAD, 26,250 VND/USD — 6.1).
 
 | Step | Basis | Value (VND/unit) | Cumulative multiple vs FOB | Notes |
 |---|---|---|---|---|
-| FOB | — | 229,000 | 1.00× | Your factory price |
-| Sea freight + insurance | ~USD 0.45/unit (model: 20k units/40' container, ~USD 9k door — assumption, LOW) | +11,800 → 240,800 | 1.05× | Air freight would add ~4–6× this line (LOW) |
-| Import duty | **CPTPP 0% scenario** (UNVERIFIED — see 5.6) | +0 → 240,800 | 1.05× | **MFN 15% scenario: +36,100 → 276,900 (1.21×)** |
+| FOB | — | 224,300 | 1.00× | Your factory price |
+| Sea freight + insurance | ~USD 0.45/unit (model: 20k units/40' container, ~USD 9k door — assumption, LOW) | +11,800 → 236,100 | 1.05× | Air freight would add ~4–6× this line (LOW) |
+| Import duty | **CPTPP 0% scenario** (with valid C/O — see 5.6) | +0 → 236,100 | 1.05× | **MFN 15% scenario: +35,400 → 271,500 (1.21×)** |
 | Import VAT 8% | On CIF+duty; recoverable input tax for the importer | cash-flow only | — | Not a margin cost if importer is VAT-registered |
-| Registration & compliance amortization | VND 1.5M gov fee + USD 1–3k consultant per SKU + consularization, over say 20k units/yr | +3,000 → 243,800 | 1.06× | Trivial at scale; painful at pilot volumes |
-| Distributor/importer margin | 45% markup on landed (mid of the sourced 35–60% range — Asia Pro 2026, LOW-MEDIUM) | ×1.45 → 353,500 | 1.54× | Covers reps, trade marketing, credit risk, registration holding |
-| Retail margin | 30% of retail price (mid of 15–30%+ evidence; chain ask assumed 30–40% — LOW) | ÷(1−0.30) → 505,000 | 2.21× | Chains also ask listing/promo funding on top |
-| Output VAT 8% | On retail | ×1.08 → **545,400 shelf** | **2.38×** | ≈ USD 20.8 / CAD 28.6 |
+| Registration & compliance amortization | VND 1.5M gov fee + USD 1–3k consultant per SKU + consularization, over say 20k units/yr | +3,000 → 239,100 | 1.07× | Trivial at scale; painful at pilot volumes |
+| Distributor/importer margin | 45% markup on landed (mid of the sourced 35–60% range — Asia Pro 2026, LOW-MEDIUM) | ×1.45 → 346,700 | 1.55× | Covers reps, trade marketing, credit risk, registration holding |
+| Retail margin | 30% of retail price (mid of 15–30%+ evidence; chain ask assumed 30–40% — LOW) | ÷(1−0.30) → 495,300 | 2.21× | Chains also ask listing/promo funding on top |
+| Output VAT 8% | On retail | ×1.08 → **534,900 shelf** | **2.38×** | ≈ USD 20.4 / CAD 28.6 |
 
-- Sanity check: VND 545k sits inside the verified premium-collagen band (650–850k for liquid courses; powder can price slightly below) — the structure is feasible. Under the MFN 15% scenario shelf becomes ~VND 627k (2.74×).
-- **Where the math actually dies — ecommerce promo stack (per unit sold on Shopee at the 545k price):**
+- Sanity check: VND 535k sits inside the verified premium-collagen band (650–850k for liquid courses; powder can price slightly below) — the structure is feasible. Under the MFN 15% scenario shelf becomes ~VND 614k (2.74×).
+- **Where the math actually dies — ecommerce promo stack (per unit sold on Shopee at the 535k price):**
 
 | Deduction | Rate | VND | Source/confidence |
 |---|---|---|---|
-| Shopee all-in take (fixed + payment + infra) | ~21–22% | −118,000 | Derived from 2025–26 fee components (MEDIUM) |
-| Affiliate/KOC commission (launch phase) | 15–30% targeted plans | −82,000 to −164,000 | OneZ/Ecomobi 2025–26 (MEDIUM); supplement-specific norm unpublished |
-| Campaign vouchers/co-funding (11.11-type) | 5–10% typical brand share | −27,000 to −55,000 | Platform campaign mechanics (LOW — norms unpublished) |
-| **Seller nets** | | **~208,000–318,000** | vs distributor transfer price 353,500 — **negative to thin** |
+| Shopee all-in take (fixed + payment + infra) | ~21–22% | −116,000 | Derived from 2025–26 fee components (MEDIUM) |
+| Affiliate/KOC commission (launch phase) | 15–30% targeted plans | −80,000 to −160,000 | OneZ/Ecomobi 2025–26 (MEDIUM); supplement-specific norm unpublished |
+| Campaign vouchers/co-funding (11.11-type) | 5–10% typical brand share | −27,000 to −53,000 | Platform campaign mechanics (LOW — norms unpublished) |
+| **Seller nets** | | **~206,000–312,000** | vs distributor transfer price 346,700 — **negative to thin** |
 
 - Reading: at a 2.38× build, ecommerce launch economics are loss-making during KOC-driven pushes unless (a) the distributor margin funds it as A&P, (b) the online pack is differentiated (smaller size, higher per-gram price), or (c) you plan list price with 25–35% promo headroom from day one. This is why brands launch at a higher list and live at everyday-promo prices — the 20–45% list-street gaps in 6.2 are that headroom made visible.
 - Chain-pharmacy economics by contrast: no platform take, but expect listing fees, promo funding asks, 30/60/90-day payment terms (L/Cs of 60–120 days are common in initial trade — trade.gov CCG — HIGH), and margin asks at the top of the range.
@@ -987,17 +987,16 @@ Blackmores (Mesa; chính hãng playbook) · Doppelherz (Mastertran; pharmacist p
 
 # QUALITY LOG
 
-**Loop cycles run:** 3 (draft → gap-hunt & fact-audit → fluff/consistency strip). The gap-hunt's normal remedy — further web research — was unavailable in the second half of the session: the research environment's shared search budget (200 calls) was exhausted and its egress proxy blocked direct page fetches (including an adversarial-verification workflow whose 23 fetch attempts all failed). Gaps that could not be researched are therefore marked UNVERIFIED/no-reliable-data in place rather than filled.
+**Loop cycles run:** 4 (draft → gap-hunt & fact-audit → fluff/consistency strip → second gap-hunt when search capacity returned). The gap-hunt's normal remedy — further web research — was unavailable in the second half of the session: the research environment's shared search budget (200 calls) was exhausted and its egress proxy blocked direct page fetches (including an adversarial-verification workflow whose 23 fetch attempts all failed). Gaps that could not be researched are therefore marked UNVERIFIED/no-reliable-data in place rather than filled.
 
 **Material corrections made against the brief's anchors (documented in the header):** Decree 46/2026 never reinstated (suspended until ~Mar 2027; Decree 15/2018 operative); Food Safety Law vote expected Oct 2026, not July; "900+ fake brands" not corroborated (88 confirmed fake products); Swisse owned by H&H Group; border crisis = 1,300+ stranded vehicles; "80% ecommerce health growth" unverifiable (replaced with sourced +46.9% / −22% figures); Kera box count per court reporting (129,617) with the variant (135,325) noted.
 
-**Gaps found and filled during the loop:** Long Chau store count updated to Mar 2026 (2,517); Pharmacity ownership chain corrected (TR Capital/LeapFrog; Creador is Long Chau's investor); Shopee/TikTok fee schedules updated to the 2026 changes; Organika's own existing distributor (Kat Vietnam Trading) surfaced and integrated; Tet promo law (Decree 81) connected to the pricing-headroom argument; MLM Decree 137/2026 added.
+**Gaps found and filled during the loop:** Cycle 4 (search capacity restored) verified four previously-UNVERIFIED items: CAD/VND at ~18,690 (14–16 Jul 2026; the worked example and all CAD columns were recomputed — headline multiple unchanged at 2.38×); MFN duty 15% on 2106.90.99 with 7% medical-nutrition line and 22.5% ordinary rate (multiple Vietnamese customs brokers); Circular 29/2023 nutrition-labeling exemption for TPBVSK; and Organika's live retail/grey presence (Chiaki brand page, XaXi, hand-carry sellers) with Kat Vietnam's exclusive-distributor role corroborated by a second source. Earlier cycles: Long Chau store count updated to Mar 2026 (2,517); Pharmacity ownership chain corrected (TR Capital/LeapFrog; Creador is Long Chau's investor); Shopee/TikTok fee schedules updated to the 2026 changes; Organika's own existing distributor (Kat Vietnam Trading) surfaced and integrated; Tet promo law (Decree 81) connected to the pricing-headroom argument; MLM Decree 137/2026 added.
 
 **Still UNVERIFIED / no reliable data (the weak spots, in one place):**
 - Chain trade terms: Long Chau/Pharmacity listing fees, category margins, payment days, review calendars (unpublished — interview items).
 - Supplement % of revenue at any chain; grey-market and counterfeit % shares; category % splits beyond vitamins 31.3%; 2020–24 year-by-year series; Korea/Japan/US/Canada supplement import values.
-- Current-year CPTPP duty line for HS 2106.90 (assumed ~0%) and MFN rate (~15%); Circular 29/2023 scope for TPBVSK; Decree 46's 12-month transition clause detail; Decree 115/2018-successor penalty amounts.
-- CAD/VND FX (assumed 19,100 via USD/CAD 1.375).
+- The 2026 CPTPP tariff-decree line for HS 2106.90 itself (MFN 15% and FTA-C/O-to-0% are now broker-sourced; the Canada schedule line is still unread); Decree 46's 12-month transition clause detail; Decree 115/2018-successor penalty amounts.
 - Monthly spend by income tier; HCMC/Hanoi/tier-2 usage splits; ranked influence weights (pharmacist vs KOL vs family); origin price-premium quantification; GWP/bundle effectiveness data; supplement-specific KOC commission norms; TikTok/Lazada per-SKU price rows.
 - Distributor-level norms: A&P %, MOQ, registration cost-sharing, exclusivity terms; named registration-hostage case; named premium-pricing failure; named foreign-brand exit; distributor private-label named case.
 - Zuellig/DKSH/Mega Lifesciences supplement roles; VinaVitamin/Megavita existence at scale; Guardian/Watsons store counts; Amway VN current revenue; Trung Son FY2025 financials and 460-store progress; Sắc Ngọc Khang ownership; organikavietnam.com ("Grow Plus") authorization status — flag for legal review.
