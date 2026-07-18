@@ -757,7 +757,9 @@ function tornadoSVG(base, drivers){
 function renderTornado(){
   if(!el("tornado")) return;
   const {base,ds}=sensitivityDrivers();
-  el("tornado").innerHTML=tornadoSVG(base,ds);
+  el("tornado").innerHTML=tornadoSVG(base,ds)+
+    `<table class="sr-only"><caption>EBITDA sensitivity to ±10% moves</caption><thead><tr><th>Driver</th><th>−10%</th><th>+10%</th><th>Swing</th></tr></thead><tbody>`+
+    ds.map(dd=>`<tr><td>${dd.name}</td><td>${money(dd.low)}</td><td>${money(dd.high)}</td><td>${money(dd.swing)}</td></tr>`).join("")+`</tbody></table>`;
 }
 function breakevenChartSVG(){
   const be=breakeven();
@@ -782,7 +784,14 @@ function breakevenChartSVG(){
   [0,1,mvMax].forEach(mv=>{ g+=`<text x="${X(mv).toFixed(1)}" y="${H-padB+16}" text-anchor="middle" font-size="9.5" fill="var(--soft)">${mult(mv)}</text>`; });
   return g+"</svg>";
 }
-function renderBeChart(){ if(el("beChart")) el("beChart").innerHTML=breakevenChartSVG(); }
+function renderBeChart(){
+  if(!el("beChart")) return;
+  const be=breakeven();
+  el("beChart").innerHTML=breakevenChartSVG()+
+    `<table class="sr-only"><caption>Break-even and scenario EBITDA vs volume</caption><thead><tr><th>Point</th><th>Volume</th><th>EBITDA</th></tr></thead><tbody>`+
+    `<tr><td>Break-even</td><td>${mult(be.mv)}</td><td>${money(0)}</td></tr>`+
+    SCEN.map(s=>`<tr><td>${s}</td><td>${mult(LEVERS[s].v)}</td><td>${money(computeLever(LEVERS[s]).ebitda)}</td></tr>`).join("")+`</tbody></table>`;
+}
 function renderSens(){
   const cells=[];
   PRM.forEach(mp=>VOLM.forEach(mv=>cells.push(ebitdaAt(mv,mp))));
