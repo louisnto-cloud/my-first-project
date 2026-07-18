@@ -51,9 +51,15 @@ Current app: 7 tabs (Overview, P&L, Pricing Lab, Sensitivity, Monthly, Targets,
 Assumptions); 6 chart types; dark mode; persistence; shareable links; CSV/print;
 keyboard nav. Now on **v3.13**.
 
+- **Iter 14–20:** a11y (table labels, live regions) (14); full-workbook CSV (15);
+  numeric robustness — em-dash for non-finite, hostile-input stress passed (16);
+  scenario **Δ vs Base** column (17); user/handoff **README** (18); plain-English
+  KPI definitions (19); **Model checks** panel — 7 live integrity checks that tie
+  monthly↔annual and ΣSKU↔company, 7/7 across all scenarios (20). Now **v3.20**.
+
 ## Backlog (priority order)
 ### Improvement (80%)
-1. Scenario compare/delta view; number-format polish; contrast QA; per-unit toggles.
+1. Print/board one-pager; contrast QA in dark mode; more chart hover polish.
 3. Input validation + friendlier assumptions UX (grouping, units, help "?").
 4. Micro-interactions / entrance; number formatting polish; dark-mode contrast pass.
 5. Print layout: print all views, not just the current tab.

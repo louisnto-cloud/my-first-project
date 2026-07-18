@@ -290,10 +290,15 @@
         <p class="hint" style="margin-top:10px">Volume ×, Price ×, and trade-discount Δ vs base. Elasticity (above) makes volume respond to price — set it to e.g. −1.3 to switch on.</p>
       </div>
     </div>
+    <div class="panel">
+      <h2>Model checks</h2>
+      <p class="h-sub">Live integrity checks — everything should read ✓ pass. Run them before the model goes to finance.</p>
+      <div id="checks"></div>
+    </div>
   </section>
 
   <div class="foot">
-    v3.13 · waterfall + scenario + SKU + tornado + break-even charts · KPI deltas · monthly phasing · goal-seek targets · pricing heat · shareable links · keyboard nav · dark-mode aware · your edits are saved in this browser · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
+    v3.20 · waterfall + scenario + SKU + tornado + break-even charts · KPI deltas · scenario Δ · monthly phasing · goal-seek targets · pricing heat · integrity checks · shareable links · full CSV · keyboard nav · a11y · dark-mode aware · your edits are saved in this browser · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
     Mirrors the Excel workbook (Home · Assumptions · Dashboard · scenarios · Monthly · Pricing Lab · Targets · Sensitivity · Checks).
   </div>
 </div>
@@ -475,6 +480,28 @@ function breakeven(){
 // ---------------- rendering ----------------
 function el(id){return document.getElementById(id);}
 
+function renderChecks(){
+  if(!el("checks")) return;
+  const r=compute(current), m=monthlyData(), be=breakeven();
+  const sumMonthlyE=m.reduce((a,x)=>a+x.ebitda,0);
+  const sumSkuNet=r.lines.reduce((a,l)=>a+l.net,0);
+  const sumSkuCm=r.lines.reduce((a,l)=>a+l.cm,0);
+  const near=(a,b)=>Math.abs(a-b)<1;
+  const checks=[
+    ["Monthly EBITDA ties to annual", near(sumMonthlyE,r.ebitda), `${money(sumMonthlyE)} vs ${money(r.ebitda)}`],
+    ["Σ SKU net sales = company net", near(sumSkuNet,r.net), `${money(sumSkuNet)} vs ${money(r.net)}`],
+    ["Σ SKU contribution = company", near(sumSkuCm,r.cm), `${money(sumSkuCm)} vs ${money(r.cm)}`],
+    ["Tax is non-negative", r.tax>=-0.01, money(r.tax)],
+    ["All SKU volumes ≥ 0", SKUS.every(s=>s.vol>=0), ""],
+    ["All SKU prices ≥ 0", SKUS.every(s=>s.cp>=0), ""],
+    ["Break-even is finite", isFinite(be.mv), isFinite(be.mv)?mult(be.mv)+" volume":"unreachable"],
+  ];
+  const passed=checks.filter(c=>c[1]).length;
+  let h=`<p class="hint" style="margin:0 0 10px">${passed} of ${checks.length} checks passing.</p>`+
+    `<table aria-label="Model integrity checks"><thead><tr><th>Check</th><th>Status</th><th>Detail</th></tr></thead><tbody>`;
+  checks.forEach(c=>{ h+=`<tr><td>${c[0]}</td><td style="color:${c[1]?'var(--good)':'var(--bad)'};font-weight:700">${c[1]?'✓ pass':'✗ fail'}</td><td class="hint">${c[2]}</td></tr>`; });
+  el("checks").innerHTML=h+`</tbody></table>`;
+}
 function renderInsight(){
   if(!el("insight")) return;
   const r = compute(current), be = breakeven(), prof = r.ni>=0;
@@ -953,7 +980,7 @@ function buildNav(){
     el("tgtSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===tgtMetric));
     renderTargets();});
 }
-function refresh(){renderInsight();renderKpis();renderCmp();renderPnl();renderPricing();renderSens();renderCharts();renderMonthly();renderTargets();}
+function refresh(){renderInsight();renderKpis();renderCmp();renderPnl();renderPricing();renderSens();renderCharts();renderMonthly();renderTargets();renderChecks();}
 
 // wire header actions
 el("btnReset").onclick=()=>{ if(confirm("Reset all assumptions to the default figures?")) resetAll(); };
