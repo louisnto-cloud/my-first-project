@@ -49,8 +49,8 @@ export function FlashcardSession({ list, studentId, onExit }: { list: VocabList;
   const card = cards[idx];
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between text-xs font-bold text-slate-400">
-        <button onClick={onExit} className="text-violet-500">← {t('common.back')}</button>
+      <div className="flex items-center justify-between text-xs font-bold text-slate-400 dark:text-slate-500">
+        <button onClick={onExit} className="text-violet-500 dark:text-violet-300">← {t('common.back')}</button>
         <span>
           {idx + 1} / {cards.length}
         </span>
@@ -66,13 +66,13 @@ export function FlashcardSession({ list, studentId, onExit }: { list: VocabList;
           </>
         ) : (
           <>
-            <div className="text-3xl font-black text-violet-700">{card.term}</div>
-            <div className="text-xs font-bold text-slate-300">{t('practice.tapToFlip')}</div>
+            <div className="text-3xl font-black text-violet-700 dark:text-violet-300">{card.term}</div>
+            <div className="text-xs font-bold text-slate-300 dark:text-slate-600">{t('practice.tapToFlip')}</div>
           </>
         )}
       </button>
       <div className="grid grid-cols-2 gap-3">
-        <button onClick={() => answer(false)} className="btn bg-amber-100 text-amber-700 hover:bg-amber-200">
+        <button onClick={() => answer(false)} className="btn bg-amber-100 text-amber-700 dark:text-amber-300 hover:bg-amber-200">
           {t('practice.dontKnow')}
         </button>
         <button onClick={() => answer(true)} className="btn bg-emerald-500 text-white hover:bg-emerald-600">
@@ -136,23 +136,23 @@ export function QuizSession({ list, studentId, onExit }: { list: VocabList; stud
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between text-xs font-bold text-slate-400">
-        <button onClick={onExit} className="text-violet-500">← {t('common.back')}</button>
+      <div className="flex items-center justify-between text-xs font-bold text-slate-400 dark:text-slate-500">
+        <button onClick={onExit} className="text-violet-500 dark:text-violet-300">← {t('common.back')}</button>
         <span>
           {idx + 1} / {questions.length}
         </span>
       </div>
       <div className="card text-center">
-        <div className="text-xs font-bold text-slate-400">{t('practice.whichMeaning')}</div>
-        <div className="mt-2 text-3xl font-black text-violet-700">{q.word.term}</div>
+        <div className="text-xs font-bold text-slate-400 dark:text-slate-500">{t('practice.whichMeaning')}</div>
+        <div className="mt-2 text-3xl font-black text-violet-700 dark:text-violet-300">{q.word.term}</div>
       </div>
       <div className="space-y-2">
         {q.options.map((opt) => {
-          let cls = 'bg-white border-violet-100 hover:border-violet-300';
+          let cls = 'bg-white dark:bg-slate-800 border-violet-100 dark:border-slate-700 hover:border-violet-300';
           if (picked) {
             if (opt === q.word.meaningVi) cls = 'bg-emerald-500 border-emerald-500 text-white';
             else if (opt === picked) cls = 'bg-rose-400 border-rose-400 text-white';
-            else cls = 'bg-white border-violet-100 opacity-50';
+            else cls = 'bg-white dark:bg-slate-800 border-violet-100 dark:border-slate-700 opacity-50';
           }
           return (
             <button key={opt} onClick={() => pick(opt)} className={`w-full rounded-2xl border-2 p-3 text-left text-sm font-bold transition ${cls}`}>
@@ -170,9 +170,9 @@ function Result({ emoji, line, points, onExit }: { emoji: string; line: string; 
   return (
     <div className="card animate-pop flex flex-col items-center gap-3 py-10 text-center">
       <div className="text-6xl">{emoji}</div>
-      <div className="text-xl font-black text-violet-700">{t('practice.complete')}</div>
-      <div className="text-sm font-bold text-slate-500">{line}</div>
-      <div className="rounded-full bg-amber-100 px-4 py-1.5 text-sm font-black text-amber-700">
+      <div className="text-xl font-black text-violet-700 dark:text-violet-300">{t('practice.complete')}</div>
+      <div className="text-sm font-bold text-slate-500 dark:text-slate-400">{line}</div>
+      <div className="rounded-full bg-amber-100 px-4 py-1.5 text-sm font-black text-amber-700 dark:text-amber-300">
         +{points} ⭐ {t('practice.earned')}
       </div>
       <button onClick={onExit} className="btn-primary mt-2">

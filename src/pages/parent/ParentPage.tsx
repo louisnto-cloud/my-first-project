@@ -25,7 +25,7 @@ export default function ParentPage() {
               <button
                 key={c.id}
                 onClick={() => setChildId(c.id)}
-                className={`btn text-sm ${c.id === child.id ? 'bg-violet-600 text-white' : 'bg-white text-slate-500'}`}
+                className={`btn text-sm ${c.id === child.id ? 'bg-violet-600 text-white' : 'bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400'}`}
               >
                 {c.avatar} {c.name}
               </button>
@@ -33,7 +33,7 @@ export default function ParentPage() {
           </div>
         )}
 
-        <div className="card flex items-center gap-3 border-violet-200 bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white">
+        <div className="card flex items-center gap-3 border-violet-200 dark:border-slate-700 bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white">
           <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-white/20 text-3xl">{child.avatar}</div>
           <div>
             <div className="text-lg font-black">
@@ -46,7 +46,7 @@ export default function ParentPage() {
             </div>
           </div>
         </div>
-        <p className="text-xs font-semibold text-slate-400">🔒 {t('parent.readonly')}</p>
+        <p className="text-xs font-semibold text-slate-400 dark:text-slate-500">🔒 {t('parent.readonly')}</p>
 
         <GradesView studentId={child.id} />
         <ScheduleView classIds={child.classIds} />

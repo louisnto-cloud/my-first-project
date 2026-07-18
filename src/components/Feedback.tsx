@@ -43,11 +43,11 @@ export function FeedbackSection({ userId }: { userId: string }) {
     <div className="space-y-4">
       <div className="card space-y-3">
         <div>
-          <h3 className="font-extrabold text-violet-700">💬 {t('feedback.title')}</h3>
-          <p className="text-xs font-semibold text-slate-400">{t('feedback.subtitle')}</p>
+          <h3 className="font-extrabold text-violet-700 dark:text-violet-300">💬 {t('feedback.title')}</h3>
+          <p className="text-xs font-semibold text-slate-400 dark:text-slate-500">{t('feedback.subtitle')}</p>
         </div>
         <div>
-          <div className="mb-1 text-xs font-bold text-slate-500">{t('feedback.rating')}</div>
+          <div className="mb-1 text-xs font-bold text-slate-500 dark:text-slate-400">{t('feedback.rating')}</div>
           <Stars value={rating} onChange={setRating} />
         </div>
         <textarea
@@ -58,7 +58,7 @@ export function FeedbackSection({ userId }: { userId: string }) {
           onChange={(e) => setMessage(e.target.value)}
         />
         {sent ? (
-          <div className="animate-pop rounded-2xl bg-emerald-100 p-3 text-center text-sm font-extrabold text-emerald-700">
+          <div className="animate-pop rounded-2xl bg-emerald-100 p-3 text-center text-sm font-extrabold text-emerald-700 dark:text-emerald-300">
             {t('feedback.thanks')}
           </div>
         ) : (
@@ -70,15 +70,15 @@ export function FeedbackSection({ userId }: { userId: string }) {
 
       {mine.length > 0 && (
         <div className="card">
-          <h3 className="mb-2 font-extrabold text-violet-700">🗂️ {t('feedback.mine')}</h3>
+          <h3 className="mb-2 font-extrabold text-violet-700 dark:text-violet-300">🗂️ {t('feedback.mine')}</h3>
           <ul className="divide-y divide-violet-50">
             {mine.map((f) => (
               <li key={f.id} className="py-2.5">
                 <div className="flex items-center justify-between">
                   <Stars value={f.rating} />
-                  <span className="text-xs font-bold text-slate-400">{fmtDate(f.date, lang)}</span>
+                  <span className="text-xs font-bold text-slate-400 dark:text-slate-500">{fmtDate(f.date, lang)}</span>
                 </div>
-                <p className="mt-1 text-sm text-slate-600">{f.message}</p>
+                <p className="mt-1 text-sm text-slate-600 dark:text-slate-300 dark:text-slate-600">{f.message}</p>
               </li>
             ))}
           </ul>
@@ -95,7 +95,7 @@ export function FeedbackInbox() {
 
   return (
     <div className="card">
-      <h3 className="mb-2 font-extrabold text-violet-700">📨 {t('feedback.inbox')}</h3>
+      <h3 className="mb-2 font-extrabold text-violet-700 dark:text-violet-300">📨 {t('feedback.inbox')}</h3>
       {items.length === 0 ? (
         <Empty emoji="💬" text={t('feedback.empty')} />
       ) : (
@@ -109,13 +109,13 @@ export function FeedbackInbox() {
                   <span className="text-xl">{sender?.avatar ?? '👤'}</span>
                   <div className="min-w-0 flex-1">
                     <div className="truncate text-sm font-bold">{sender?.name ?? '—'}</div>
-                    <div className="text-[11px] font-semibold text-slate-400">
+                    <div className="text-[11px] font-semibold text-slate-400 dark:text-slate-500">
                       {role} · {fmtDate(f.date, lang)}
                     </div>
                   </div>
                   <Stars value={f.rating} />
                 </div>
-                <p className="mt-1.5 text-sm text-slate-600">{f.message}</p>
+                <p className="mt-1.5 text-sm text-slate-600 dark:text-slate-300 dark:text-slate-600">{f.message}</p>
               </li>
             );
           })}

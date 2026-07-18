@@ -20,30 +20,30 @@ export function GradesView({ studentId }: { studentId: string }) {
   return (
     <div className="space-y-4">
       <div className="card">
-        <h3 className="mb-1 font-extrabold text-violet-700">📈 {t('grades.progress')}</h3>
+        <h3 className="mb-1 font-extrabold text-violet-700 dark:text-violet-300">📈 {t('grades.progress')}</h3>
         <ProgressChart points={chartPoints} />
       </div>
 
       {latestTest?.score.skills && (
         <div className="card">
-          <h3 className="mb-3 font-extrabold text-violet-700">💪 {t('grades.skills')}</h3>
+          <h3 className="mb-3 font-extrabold text-violet-700 dark:text-violet-300">💪 {t('grades.skills')}</h3>
           <SkillBars skills={latestTest.score.skills} />
         </div>
       )}
 
       {latestComment?.score.comment && (
-        <div className="card border-amber-200 bg-amber-50">
-          <h3 className="mb-1 font-extrabold text-amber-700">💬 {t('grades.teacherComment')}</h3>
-          <p className="text-sm font-semibold text-slate-700">“{latestComment.score.comment}”</p>
-          <p className="mt-1 text-xs font-bold text-amber-600">
+        <div className="card border-amber-200 bg-amber-50 dark:border-amber-500/40 dark:bg-amber-500/10">
+          <h3 className="mb-1 font-extrabold text-amber-700 dark:text-amber-300">💬 {t('grades.teacherComment')}</h3>
+          <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">“{latestComment.score.comment}”</p>
+          <p className="mt-1 text-xs font-bold text-amber-600 dark:text-amber-400">
             {latestComment.assessment.title} · {fmtDate(latestComment.assessment.date, lang)}
           </p>
         </div>
       )}
 
       <div className="card">
-        <h3 className="mb-2 font-extrabold text-violet-700">🗂️ {t('grades.history')}</h3>
-        <ul className="divide-y divide-violet-50">
+        <h3 className="mb-2 font-extrabold text-violet-700 dark:text-violet-300">🗂️ {t('grades.history')}</h3>
+        <ul className="divide-y divide-violet-50 dark:divide-slate-700">
           {[...xs].reverse().map((x) => (
             <GradeHistoryRow key={x.score.id} row={x} />
           ))}
@@ -68,17 +68,17 @@ function GradeHistoryRow({ row }: { row: ReturnType<typeof scoresOf>[number] }) 
       >
         <div>
           <div className="text-sm font-bold">{row.assessment.title}</div>
-          <div className="text-xs font-semibold text-slate-400">
+          <div className="text-xs font-semibold text-slate-400 dark:text-slate-500">
             {fmtDate(row.assessment.date, lang)} · {t(`teach.kind.${row.assessment.kind}`)}
           </div>
         </div>
         <div className="flex items-center gap-2">
           <div className={`text-lg font-black ${scoreColor(pct)}`}>
             {row.score.score}
-            <span className="text-xs font-bold text-slate-300">/{row.assessment.maxScore}</span>
+            <span className="text-xs font-bold text-slate-300 dark:text-slate-600">/{row.assessment.maxScore}</span>
           </div>
           {hasDetail && (
-            <span aria-hidden="true" className={`text-xs text-slate-300 transition ${open ? 'rotate-180' : ''}`}>
+            <span aria-hidden="true" className={`text-xs text-slate-300 dark:text-slate-600 transition ${open ? 'rotate-180' : ''}`}>
               ▼
             </span>
           )}
@@ -88,18 +88,18 @@ function GradeHistoryRow({ row }: { row: ReturnType<typeof scoresOf>[number] }) 
         <div className="space-y-3 pb-3 pl-1 pr-1">
           {row.score.skills && (
             <div>
-              <div className="mb-1.5 text-[11px] font-black uppercase tracking-wide text-slate-400">
+              <div className="mb-1.5 text-[11px] font-black uppercase tracking-wide text-slate-400 dark:text-slate-500">
                 {t('grades.skills')}
               </div>
               <SkillBars skills={row.score.skills} />
             </div>
           )}
           {row.score.comment && (
-            <div className="rounded-xl border border-amber-100 bg-amber-50 p-2.5">
-              <div className="mb-0.5 text-[11px] font-black uppercase tracking-wide text-amber-700">
+            <div className="rounded-xl border border-amber-100 bg-amber-50 dark:border-amber-500/30 dark:bg-amber-500/10 p-2.5">
+              <div className="mb-0.5 text-[11px] font-black uppercase tracking-wide text-amber-700 dark:text-amber-300">
                 💬 {t('grades.teacherComment')}
               </div>
-              <p className="text-sm font-semibold text-slate-700">"{row.score.comment}"</p>
+              <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">"{row.score.comment}"</p>
             </div>
           )}
         </div>
@@ -121,23 +121,23 @@ export function ScheduleView({ classIds }: { classIds: string[] }) {
 
   return (
     <div className="card">
-      <h3 className="mb-2 font-extrabold text-violet-700">📅 {t('schedule.thisWeek')}</h3>
+      <h3 className="mb-2 font-extrabold text-violet-700 dark:text-violet-300">📅 {t('schedule.thisWeek')}</h3>
       <ul className="space-y-2">
         {slots.map(({ cls, slot }, i) => {
           const teacher = db.users.find((u) => u.id === cls.teacherId);
           const isToday = slot.weekday === today;
           return (
-            <li key={i} className={`flex items-center gap-3 rounded-2xl p-3 ${isToday ? 'bg-violet-600 text-white' : 'bg-violet-50'}`}>
+            <li key={i} className={`flex items-center gap-3 rounded-2xl p-3 ${isToday ? 'bg-violet-600 text-white dark:bg-violet-500' : 'bg-violet-50 dark:bg-slate-700/60'}`}>
               <div className={`flex h-11 w-11 items-center justify-center rounded-2xl text-xl ${cls.color}`}>{cls.emoji}</div>
               <div className="min-w-0 flex-1">
                 <div className="truncate text-sm font-extrabold">{cls.name}</div>
-                <div className={`text-xs font-semibold ${isToday ? 'text-violet-100' : 'text-slate-400'}`}>
+                <div className={`text-xs font-semibold ${isToday ? 'text-violet-100' : 'text-slate-400 dark:text-slate-500'}`}>
                   {teacher?.name} · {t('common.room')} {slot.room}
                 </div>
               </div>
               <div className="text-right">
                 <div className="text-xs font-black">{WEEKDAYS[lang][slot.weekday]}</div>
-                <div className={`text-xs font-bold ${isToday ? 'text-violet-100' : 'text-slate-400'}`}>
+                <div className={`text-xs font-bold ${isToday ? 'text-violet-100' : 'text-slate-400 dark:text-slate-500'}`}>
                   {slot.start}–{slot.end}
                 </div>
                 {isToday && <Pill className="mt-0.5 bg-white/20 text-white">{t('common.today')}</Pill>}
@@ -191,21 +191,21 @@ export function HomeworkView({ studentId, canToggle }: { studentId: string; canT
             <div className="flex items-start justify-between gap-2">
               <div>
                 <div className="text-sm font-extrabold">{hw.title}</div>
-                <div className="mt-0.5 text-xs font-semibold text-slate-400">
+                <div className="mt-0.5 text-xs font-semibold text-slate-400 dark:text-slate-500">
                   {cls?.emoji} {cls?.name}
                 </div>
               </div>
               {done ? (
-                <Pill className="bg-emerald-100 text-emerald-700">✅ {t('hw.done')}</Pill>
+                <Pill className="bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">✅ {t('hw.done')}</Pill>
               ) : overdue ? (
-                <Pill className="bg-rose-100 text-rose-700">⏰ {t('hw.overdue')}</Pill>
+                <Pill className="bg-rose-100 dark:bg-rose-500/20 text-rose-700 dark:text-rose-300">⏰ {t('hw.overdue')}</Pill>
               ) : (
-                <Pill className="bg-amber-100 text-amber-700">📌 {t('hw.todo')}</Pill>
+                <Pill className="bg-amber-100 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300">📌 {t('hw.todo')}</Pill>
               )}
             </div>
-            <p className="mt-2 text-sm text-slate-600">{hw.description}</p>
+            <p className="mt-2 text-sm text-slate-600 dark:text-slate-300 dark:text-slate-600">{hw.description}</p>
             <div className="mt-3 flex items-center justify-between">
-              <span className="text-xs font-bold text-slate-400">
+              <span className="text-xs font-bold text-slate-400 dark:text-slate-500">
                 {t('hw.due')}: {fmtDate(hw.dueDate, lang)}
               </span>
               {canToggle && !done && (
@@ -227,16 +227,16 @@ export function BadgesView({ studentId }: { studentId: string }) {
   const stats = badgeStats(db, studentId);
   return (
     <div className="card">
-      <h3 className="mb-3 font-extrabold text-violet-700">🏅 {t('badges.title')}</h3>
+      <h3 className="mb-3 font-extrabold text-violet-700 dark:text-violet-300">🏅 {t('badges.title')}</h3>
       <div className="grid grid-cols-4 gap-3">
         {BADGES.map((b) => {
           const earned = b.earned(stats);
           return (
             <div key={b.id} className="flex flex-col items-center text-center" title={lang === 'vi' ? b.descVi : b.descEn}>
-              <div className={`flex h-14 w-14 items-center justify-center rounded-2xl text-2xl ${earned ? 'bg-amber-100' : 'bg-slate-100 grayscale opacity-40'}`}>
+              <div className={`flex h-14 w-14 items-center justify-center rounded-2xl text-2xl ${earned ? 'bg-amber-100' : 'bg-slate-100 dark:bg-slate-700 grayscale opacity-40'}`}>
                 {b.emoji}
               </div>
-              <div className="mt-1 text-[10px] font-bold leading-tight text-slate-500">
+              <div className="mt-1 text-[10px] font-bold leading-tight text-slate-500 dark:text-slate-400">
                 {earned ? (lang === 'vi' ? b.nameVi : b.nameEn) : t('badges.locked')}
               </div>
             </div>
@@ -254,12 +254,12 @@ export function LeaderboardView({ classId, highlightId }: { classId: string; hig
   const medals = ['🥇', '🥈', '🥉'];
   return (
     <div className="card">
-      <h3 className="mb-2 font-extrabold text-violet-700">🏆 {t('dash.leaderboard')}</h3>
+      <h3 className="mb-2 font-extrabold text-violet-700 dark:text-violet-300">🏆 {t('dash.leaderboard')}</h3>
       <ul className="space-y-1">
         {rows.map((row, i) => (
           <li
             key={row.user.id}
-            className={`flex items-center gap-2 rounded-xl px-2 py-1.5 ${row.user.id === highlightId ? 'bg-violet-100' : ''}`}
+            className={`flex items-center gap-2 rounded-xl px-2 py-1.5 ${row.user.id === highlightId ? 'bg-violet-100 dark:bg-slate-700' : ''}`}
           >
             <span className="w-6 text-center text-sm">{medals[i] ?? `${i + 1}.`}</span>
             <span className="text-lg">{row.user.avatar}</span>

@@ -65,21 +65,21 @@ export function Dashboard() {
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-3">
-        <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-violet-100 text-3xl">{user.avatar}</div>
+        <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-violet-100 dark:bg-slate-700 dark:hover:bg-slate-600 text-3xl">{user.avatar}</div>
         <div>
           <h1 className="text-xl font-black">
             {t('dash.hello')}, {user.name.split(' ').pop()}! 👋
           </h1>
           <div className="flex gap-2">
-            <Pill className="bg-amber-100 text-amber-700">⭐ {points} {t('common.points')}</Pill>
-            <Pill className="bg-orange-100 text-orange-600">🔥 {streak} {t('common.dayStreak')}</Pill>
+            <Pill className="bg-amber-100 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300">⭐ {points} {t('common.points')}</Pill>
+            <Pill className="bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-300">🔥 {streak} {t('common.dayStreak')}</Pill>
           </div>
         </div>
       </div>
 
-      <div className={`card ${doneToday ? 'border-emerald-200 bg-emerald-50' : 'border-orange-200 bg-orange-50'}`}>
+      <div className={`card ${doneToday ? 'border-emerald-200 bg-emerald-50 dark:border-emerald-500/40 dark:bg-emerald-500/10' : 'border-orange-200 bg-orange-50 dark:border-orange-500/40 dark:bg-orange-500/10'}`}>
         <div className="flex items-center justify-between gap-3">
-          <p className="text-sm font-bold text-slate-600">{doneToday ? t('dash.streakSafe') : t('dash.keepStreak')}</p>
+          <p className="text-sm font-bold text-slate-600 dark:text-slate-300 dark:text-slate-600">{doneToday ? t('dash.streakSafe') : t('dash.keepStreak')}</p>
           {!doneToday && (
             <Link to="/app/practice" className="btn-primary shrink-0 text-sm">
               {t('dash.practiceNow')} 🎮
@@ -93,45 +93,45 @@ export function Dashboard() {
 
       <div className="grid grid-cols-2 gap-3">
         <Link to="/app/schedule" className="card hover:border-violet-300">
-          <div className="text-xs font-bold text-slate-400">⏰ {t('dash.nextClass')}</div>
+          <div className="text-xs font-bold text-slate-400 dark:text-slate-500">⏰ {t('dash.nextClass')}</div>
           {nextSlot ? (
             <>
               <div className="mt-1 truncate font-extrabold">{nextSlot.cls.emoji} {nextSlot.cls.name}</div>
-              <div className="text-xs font-semibold text-slate-400">
+              <div className="text-xs font-semibold text-slate-400 dark:text-slate-500">
                 {WEEKDAYS[lang][nextSlot.slot.weekday]} {nextSlot.slot.start} · {t('common.room')} {nextSlot.slot.room}
               </div>
             </>
           ) : (
-            <div className="mt-1 text-sm font-semibold text-slate-400">{t('dash.noClass')}</div>
+            <div className="mt-1 text-sm font-semibold text-slate-400 dark:text-slate-500">{t('dash.noClass')}</div>
           )}
         </Link>
         <Link to="/app/grades" className="card hover:border-violet-300">
-          <div className="text-xs font-bold text-slate-400">✨ {t('dash.latestScore')}</div>
+          <div className="text-xs font-bold text-slate-400 dark:text-slate-500">✨ {t('dash.latestScore')}</div>
           {latest ? (
             <>
               <div className={`mt-1 text-2xl font-black ${scoreColor((latest.score.score / latest.assessment.maxScore) * 100)}`}>
                 {latest.score.score}
-                <span className="text-sm text-slate-300">/{latest.assessment.maxScore}</span>
+                <span className="text-sm text-slate-300 dark:text-slate-600">/{latest.assessment.maxScore}</span>
               </div>
-              <div className="truncate text-xs font-semibold text-slate-400">{latest.assessment.title}</div>
+              <div className="truncate text-xs font-semibold text-slate-400 dark:text-slate-500">{latest.assessment.title}</div>
             </>
           ) : (
-            <div className="mt-1 text-sm font-semibold text-slate-400">{t('dash.noScores')}</div>
+            <div className="mt-1 text-sm font-semibold text-slate-400 dark:text-slate-500">{t('dash.noScores')}</div>
           )}
         </Link>
       </div>
 
       <div className="card">
-        <h3 className="mb-2 font-extrabold text-violet-700">📌 {t('dash.homeworkDue')}</h3>
+        <h3 className="mb-2 font-extrabold text-violet-700 dark:text-violet-300">📌 {t('dash.homeworkDue')}</h3>
         {dueSoon.length === 0 ? (
-          <p className="text-sm font-semibold text-emerald-600">{t('dash.allDone')}</p>
+          <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-300">{t('dash.allDone')}</p>
         ) : (
           <ul className="space-y-1.5">
             {dueSoon.slice(0, 3).map((hw) => (
               <li key={hw.id}>
-                <Link to="/app/homework" className="flex items-center justify-between rounded-xl bg-violet-50 px-3 py-2 text-sm font-bold hover:bg-violet-100">
+                <Link to="/app/homework" className="flex items-center justify-between rounded-xl bg-violet-50 dark:bg-slate-700/60 px-3 py-2 text-sm font-bold hover:bg-violet-100">
                   <span className="truncate">{hw.title}</span>
-                  <span className="shrink-0 text-xs text-slate-400">{t('hw.due')} {fmtDate(hw.dueDate, lang)}</span>
+                  <span className="shrink-0 text-xs text-slate-400 dark:text-slate-500">{t('hw.due')} {fmtDate(hw.dueDate, lang)}</span>
                 </Link>
               </li>
             ))}
@@ -147,10 +147,10 @@ export function Dashboard() {
           <span className="text-2xl">💬</span>
           <div>
             <div className="text-sm font-extrabold">{t('feedback.cta')}</div>
-            <div className="text-xs font-semibold text-slate-400">{t('feedback.subtitle')}</div>
+            <div className="text-xs font-semibold text-slate-400 dark:text-slate-500">{t('feedback.subtitle')}</div>
           </div>
         </div>
-        <span className="text-violet-400">→</span>
+        <span className="text-violet-400 dark:text-violet-500">→</span>
       </Link>
     </div>
   );
@@ -225,19 +225,19 @@ export function Practice() {
     const list = mode.list;
     return (
       <div className="space-y-3">
-        <button onClick={() => setMode({ kind: 'pick' })} className="text-sm font-bold text-violet-600">
+        <button onClick={() => setMode({ kind: 'pick' })} className="text-sm font-bold text-violet-600 dark:text-violet-300">
           ← {t('common.back')}
         </button>
         <h1 className="text-xl font-black">📖 {list.title}</h1>
-        <p className="-mt-2 text-sm font-semibold text-slate-400">
+        <p className="-mt-2 text-sm font-semibold text-slate-400 dark:text-slate-500">
           {list.words.length} {t('practice.words')}
         </p>
         <ul className="space-y-2">
           {list.words.map((w) => (
             <li key={w.id} className="card">
               <div className="flex items-baseline justify-between gap-3">
-                <div className="text-base font-black text-violet-700">{w.term}</div>
-                <div className="text-sm font-semibold text-slate-600">{lang === 'vi' ? w.meaningVi : w.meaningVi}</div>
+                <div className="text-base font-black text-violet-700 dark:text-violet-300">{w.term}</div>
+                <div className="text-sm font-semibold text-slate-600 dark:text-slate-300 dark:text-slate-600">{lang === 'vi' ? w.meaningVi : w.meaningVi}</div>
               </div>
               {w.example && <p className="mt-1 text-xs italic text-slate-500">"{w.example}"</p>}
             </li>
@@ -258,14 +258,14 @@ export function Practice() {
   return (
     <div className="space-y-4">
       <h1 className="text-xl font-black">🎮 {t('practice.title')}</h1>
-      <p className="-mt-2 text-sm font-semibold text-slate-400">{t('practice.subtitle')}</p>
+      <p className="-mt-2 text-sm font-semibold text-slate-400 dark:text-slate-500">{t('practice.subtitle')}</p>
       {lists.length === 0 && <Empty emoji="📖" text={t('grades.empty')} />}
       {lists.map((list) => (
         <div key={list.id} className="card">
           <div className="flex items-start justify-between gap-2">
             <div>
               <div className="font-extrabold">{list.title}</div>
-              <div className="text-xs font-semibold text-slate-400">
+              <div className="text-xs font-semibold text-slate-400 dark:text-slate-500">
                 {list.words.length} {t('practice.words')}
               </div>
             </div>

@@ -25,23 +25,23 @@ export default function ClassDetail() {
 
   return (
     <div className="space-y-4">
-      <Link to="/teach" className="text-sm font-bold text-violet-500">
+      <Link to="/teach" className="text-sm font-bold text-violet-500 dark:text-violet-300">
         ← {t('common.back')}
       </Link>
       <div className="flex items-center gap-3">
         <div className={`flex h-12 w-12 items-center justify-center rounded-2xl text-2xl ${cls.color}`}>{cls.emoji}</div>
         <div>
           <h1 className="text-xl font-black">{cls.name}</h1>
-          <div className="text-xs font-semibold text-slate-400">{cls.level}</div>
+          <div className="text-xs font-semibold text-slate-400 dark:text-slate-500">{cls.level}</div>
         </div>
       </div>
 
-      <div className="flex gap-1 overflow-x-auto rounded-2xl bg-violet-100 p-1">
+      <div className="flex gap-1 overflow-x-auto rounded-2xl bg-violet-100 dark:bg-slate-700 p-1">
         {tabs.map((tb) => (
           <button
             key={tb.id}
             onClick={() => setTab(tb.id)}
-            className={`flex-1 whitespace-nowrap rounded-xl px-3 py-2 text-xs font-extrabold transition ${tab === tb.id ? 'bg-white text-violet-700 shadow' : 'text-violet-400'}`}
+            className={`flex-1 whitespace-nowrap rounded-xl px-3 py-2 text-xs font-extrabold transition ${tab === tb.id ? 'bg-white dark:bg-slate-800 text-violet-700 dark:text-violet-300 shadow' : 'text-violet-400 dark:text-violet-500'}`}
           >
             {tb.emoji} {tb.label}
           </button>
@@ -70,9 +70,9 @@ function StudentsTab({ classId }: { classId: string }) {
               <span className="text-xl">{s.avatar}</span>
               <div className="min-w-0 flex-1">
                 <div className="truncate text-sm font-bold">{s.name}</div>
-                <div className="text-xs font-semibold text-slate-400">{s.email}</div>
+                <div className="text-xs font-semibold text-slate-400 dark:text-slate-500">{s.email}</div>
               </div>
-              <Pill className="bg-amber-100 text-amber-700">⭐ {pointsOf(db, s.id)}</Pill>
+              <Pill className="bg-amber-100 text-amber-700 dark:text-amber-300">⭐ {pointsOf(db, s.id)}</Pill>
               {avg != null && <span className={`w-10 text-right font-black ${scoreColor(avg)}`}>{(avg / 10).toFixed(1)}</span>}
             </li>
           );
@@ -106,7 +106,7 @@ function GradesTab({ classId }: { classId: string }) {
     <div className="space-y-3">
       {showNew ? (
         <div className="card space-y-2">
-          <h3 className="font-extrabold text-violet-700">{t('teach.newAssessment')}</h3>
+          <h3 className="font-extrabold text-violet-700 dark:text-violet-300">{t('teach.newAssessment')}</h3>
           <input className="input" placeholder={t('teach.assessmentTitle')} value={title} onChange={(e) => setTitle(e.target.value)} />
           <div className="flex gap-2">
             <select className="input" value={kind} onChange={(e) => setKind(e.target.value as 'test' | 'quiz')}>
@@ -131,11 +131,11 @@ function GradesTab({ classId }: { classId: string }) {
           <button onClick={() => setOpenId(openId === a.id ? null : a.id)} className="flex w-full items-center justify-between text-left">
             <div>
               <div className="font-extrabold">{a.title}</div>
-              <div className="text-xs font-semibold text-slate-400">
+              <div className="text-xs font-semibold text-slate-400 dark:text-slate-500">
                 {t(`teach.kind.${a.kind}`)} · {fmtDate(a.date, lang)}
               </div>
             </div>
-            <span className="text-violet-400">{openId === a.id ? '▲' : '▼'}</span>
+            <span className="text-violet-400 dark:text-violet-500">{openId === a.id ? '▲' : '▼'}</span>
           </button>
           {openId === a.id && <ScoreEditor assessment={a} />}
         </div>
@@ -237,7 +237,7 @@ function HomeworkTab({ classId }: { classId: string }) {
   return (
     <div className="space-y-3">
       <div className="card space-y-2">
-        <h3 className="font-extrabold text-violet-700">＋ {t('teach.newHomework')}</h3>
+        <h3 className="font-extrabold text-violet-700 dark:text-violet-300">＋ {t('teach.newHomework')}</h3>
         <input className="input" placeholder={t('teach.hwTitle')} value={title} onChange={(e) => setTitle(e.target.value)} />
         <textarea className="input" rows={2} placeholder={t('teach.hwDesc')} value={desc} onChange={(e) => setDesc(e.target.value)} />
         <div className="flex gap-2">
@@ -252,12 +252,12 @@ function HomeworkTab({ classId }: { classId: string }) {
           <div key={hw.id} className="card">
             <div className="flex items-center justify-between gap-2">
               <div className="font-extrabold">{hw.title}</div>
-              <Pill className={done === roster.length ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'}>
+              <Pill className={done === roster.length ? 'bg-emerald-100 text-emerald-700 dark:text-emerald-300' : 'bg-amber-100 text-amber-700 dark:text-amber-300'}>
                 {done}/{roster.length} {t('teach.doneBy')}
               </Pill>
             </div>
-            <p className="mt-1 text-sm text-slate-600">{hw.description}</p>
-            <div className="mt-2 text-xs font-bold text-slate-400">
+            <p className="mt-1 text-sm text-slate-600 dark:text-slate-300 dark:text-slate-600">{hw.description}</p>
+            <div className="mt-2 text-xs font-bold text-slate-400 dark:text-slate-500">
               {t('hw.due')}: {fmtDate(hw.dueDate, lang)}
             </div>
           </div>
@@ -290,7 +290,7 @@ function VocabTab({ classId }: { classId: string }) {
   return (
     <div className="space-y-3">
       <div className="card space-y-2">
-        <h3 className="font-extrabold text-violet-700">＋ {t('teach.newVocabList')}</h3>
+        <h3 className="font-extrabold text-violet-700 dark:text-violet-300">＋ {t('teach.newVocabList')}</h3>
         <input className="input" placeholder={t('teach.listTitle')} value={title} onChange={(e) => setTitle(e.target.value)} />
         <textarea
           className="input font-mono text-xs"
@@ -307,8 +307,8 @@ function VocabTab({ classId }: { classId: string }) {
           <div className="font-extrabold">{list.title}</div>
           <div className="mt-2 flex flex-wrap gap-1.5">
             {list.words.map((w) => (
-              <Pill key={w.id} className="bg-violet-50 text-violet-700" >
-                {w.term} <span className="font-semibold text-slate-400">· {w.meaningVi}</span>
+              <Pill key={w.id} className="bg-violet-50 dark:bg-slate-700/60 text-violet-700 dark:text-violet-300" >
+                {w.term} <span className="font-semibold text-slate-400 dark:text-slate-500">· {w.meaningVi}</span>
               </Pill>
             ))}
           </div>
