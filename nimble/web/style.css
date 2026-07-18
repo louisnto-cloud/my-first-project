@@ -417,6 +417,35 @@ textarea:focus { outline: none; border-color: var(--accent); }
   .hint { display: none; }
 }
 
+/* Keyboard-shortcuts modal */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px; z-index: 10;
+  animation: fadeUp 0.2s ease;
+}
+.modal-overlay[hidden] { display: none; }
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  max-width: 420px; width: 100%;
+  display: flex; flex-direction: column; gap: 16px;
+  text-align: left;
+}
+.modal h2 { font-size: 1.15rem; color: var(--ink); }
+.shortcuts { display: flex; flex-direction: column; gap: 10px; }
+.shortcuts > div { display: flex; gap: 14px; align-items: baseline; }
+.shortcuts dt {
+  flex: 0 0 130px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.82rem; color: var(--accent);
+}
+.shortcuts dd { color: var(--ink-2); font-size: 0.9rem; line-height: 1.4; }
+.modal .primary { align-self: flex-end; }
+
 .error {
   margin-top: 24px;
   color: var(--danger);
