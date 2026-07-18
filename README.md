@@ -51,3 +51,36 @@ localStorage. The **Reset demo data** link on the teacher overview restores it.
   and `en` dictionaries; the toggle persists per device.
 - **Mobile app path:** it's a responsive SPA, ready to be wrapped with
   Capacitor or extended into a PWA (manifest + service worker) later.
+
+---
+
+# 🌿 Organika Vietnamese Business Academy
+
+A single-file language learning app (`organika-academy.html`) for Vietnamese
+business fluency, aimed at supplement/CPG sales work in Ho Chi Minh City.
+
+**Live:** https://louisnto-cloud.github.io/my-first-project/organika/
+(open on a phone and use Share → Add to Home Screen to install it like an app)
+
+## What's inside
+
+- 310+ vocabulary terms in five tiers (survival → expert trade negotiation),
+  each with pronunciation guide, bilingual example, Southern-dialect note,
+  and usage tip
+- Practice modes: Mixed, flashcards, quiz (EN→VI / VI→EN / listen),
+  type-the-answer, sentence builder, pronunciation drill, and a VND price
+  listening trainer
+- 12 role-play buyer dialogues with cultural notes, hide-my-lines practice,
+  and hands-free Play All
+- Leitner spaced repetition, streaks, daily goal, achievements, weak-spot
+  analytics
+- Vietnam Market Intel briefings and a pronoun/tone/register primer
+- Audio: Google's Vietnamese neural voice with device-voice fallback and a
+  slow toggle; progress auto-saves locally with JSON export/import
+
+## Tech notes
+
+- One HTML file, no build step; deployed by the `deploy-organika` job in
+  `.github/workflows/deploy.yml` to `/organika` on GitHub Pages
+- Vocabulary lives in the `VRAW` array (marked `ADD NEW TERMS HERE`);
+  a version badge in the header (`APP_VERSION`) identifies deploys
