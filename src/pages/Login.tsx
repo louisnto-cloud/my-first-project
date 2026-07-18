@@ -21,7 +21,7 @@ export default function Login() {
   const [error, setError] = useState(false);
 
   const doLogin = (em: string, pw: string) => {
-    if (login(em, pw)) nav('/');
+    if (login(em, pw)) nav('/school');
     else setError(true);
   };
 

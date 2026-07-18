@@ -39,3 +39,25 @@ body {
 .animate-pop {
   animation: pop 0.3s ease-out;
 }
+
+@keyframes confetti-fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(105vh) rotate(540deg); opacity: 0.4; }
+}
+
+.animate-confetti {
+  animation: confetti-fall linear forwards;
+}
+
+/* Read & Write large-text mode (A/A+ toggle) — enlarges reading content only */
+.rw-lg p,
+.rw-lg .text-sm,
+.rw-lg .text-\[15px\] {
+  font-size: 1.1rem !important;
+  line-height: 1.75 !important;
+}
+
+.rw-lg td,
+.rw-lg th {
+  font-size: 1rem !important;
+}

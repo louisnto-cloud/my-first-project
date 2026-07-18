@@ -1,0 +1,249 @@
+import { useMemo, useState, type ReactNode } from 'react';
+import { loadTextSize, saveTextSize, type TextSize } from './engine';
+import type { TTS } from './useTTS';
+
+/** A / A+ toggle — larger reading text for beginner readers, persisted per device. */
+export function useTextSize(): [TextSize, () => void] {
+  const [size, setSize] = useState<TextSize>(loadTextSize);
+  const toggle = () => {
+    const next: TextSize = size === 'large' ? 'normal' : 'large';
+    saveTextSize(next);
+    setSize(next);
+  };
+  return [size, toggle];
+}
+
+export function TextSizeToggle({ size, onToggle }: { size: TextSize; onToggle: () => void }) {
+  return (
+    <button
+      onClick={onToggle}
+      title="Text size"
+      className={`flex h-7 items-center gap-0.5 rounded-full px-2 text-xs font-black ${size === 'large' ? 'bg-violet-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+    >
+      A<span className="text-[15px] leading-none">A</span>
+    </button>
+  );
+}
+
+export function StepCard({ children }: { children: ReactNode }) {
+  return <div className="space-y-3 rounded-2xl border border-gray-100 bg-white p-5 shadow-sm">{children}</div>;
+}
+
+export function NavButton({ label, onClick, color, disabled }: { label: string; onClick: () => void; color: string; disabled?: boolean }) {
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`mt-2 w-full rounded-xl py-3 font-black text-white transition-all hover:opacity-90 disabled:opacity-40 ${color}`}
+    >
+      {label}
+    </button>
+  );
+}
+
+export function XpChip({ amount }: { amount: number }) {
+  return <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-1 text-xs font-black text-amber-700 animate-pop">+{amount} XP ⭐</span>;
+}
+
+// ─── Audio controls ───────────────────────────────────────────────────────────
+/** Shown when the browser can't produce speech, so silent audio buttons don't look broken. */
+export function AudioNotice({ tts }: { tts: TTS }) {
+  if (tts.supported && !tts.failed) return null;
+  return (
+    <div className="flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs font-semibold text-amber-800">
+      <span className="text-base">🔇</span>
+      <span>
+        Audio isn't available in this browser{tts.failed ? ' (no speech voices installed)' : ''}.
+        Everything still works for reading — for the spoken lessons, try Chrome, Edge, or Safari on a phone or computer.
+      </span>
+    </div>
+  );
+}
+export function PlayButton({ tts, text, color, highlight, label }: { tts: TTS; text: string; color: string; highlight?: boolean; label?: string }) {
+  return (
+    <button
+      onClick={() => (tts.speaking ? tts.stop() : tts.speak(text, { highlight }))}
+      className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold transition-all ${tts.speaking ? 'bg-red-100 text-red-600' : `${color} text-white`}`}
+    >
+      {tts.speaking ? '⏹ Stop' : `▶ ${label ?? 'Play'}`}
+    </button>
+  );
+}
+
+export function AudioSettings({ tts }: { tts: TTS }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="relative">
+      <button onClick={() => setOpen((o) => !o)} className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 text-sm hover:bg-gray-200" title="Audio settings">
+        ⚙️
+      </button>
+      {open && (
+        <div className="absolute right-0 top-9 z-30 w-56 rounded-xl border border-gray-200 bg-white p-3 shadow-lg space-y-2">
+          <div className="text-xs font-black text-gray-700">🔊 Audio speed</div>
+          <div className="flex gap-1">
+            {[{ v: 0.7, l: '🐢 Slow' }, { v: 0.9, l: 'Normal' }, { v: 1.1, l: '🐇 Fast' }].map((o) => (
+              <button
+                key={o.v}
+                onClick={() => tts.setSettings({ ...tts.settings, rate: o.v })}
+                className={`flex-1 rounded-lg px-1 py-1.5 text-[11px] font-bold ${tts.settings.rate === o.v ? 'bg-violet-600 text-white' : 'bg-gray-100 text-gray-600'}`}
+              >
+                {o.l}
+              </button>
+            ))}
+          </div>
+          {tts.voices.length > 1 && (
+            <>
+              <div className="text-xs font-black text-gray-700">🗣️ Voice</div>
+              <select
+                value={tts.settings.voiceURI ?? ''}
+                onChange={(e) => tts.setSettings({ ...tts.settings, voiceURI: e.target.value || null })}
+                className="w-full rounded-lg border border-gray-200 px-2 py-1.5 text-xs"
+              >
+                <option value="">Default</option>
+                {tts.voices.map((v) => (
+                  <option key={v.voiceURI} value={v.voiceURI}>{v.name}</option>
+                ))}
+              </select>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Tap-to-hear word rendering ──────────────────────────────────────────────
+/** Render text as tappable words; `activeIndex` highlights the word being spoken. */
+export function TappableText({ text, onWord, activeIndex, baseIndex = 0, className = '' }: {
+  text: string;
+  onWord?: (w: string) => void;
+  activeIndex?: number;
+  baseIndex?: number;
+  className?: string;
+}) {
+  const parts = text.split(/(\s+)/);
+  let wordIdx = baseIndex - 1;
+  return (
+    <span className={className}>
+      {parts.map((part, i) => {
+        if (/^\s+$/.test(part) || part === '') return <span key={i}>{part}</span>;
+        wordIdx += 1;
+        const idx = wordIdx;
+        const active = activeIndex === idx;
+        return (
+          <span
+            key={i}
+            onClick={onWord ? () => onWord(part.replace(/[^a-zA-Z'-]/g, '')) : undefined}
+            className={`${onWord ? 'cursor-pointer hover:bg-violet-100 rounded' : ''} ${active ? 'bg-amber-200 rounded' : ''} transition-colors`}
+          >
+            {part}
+          </span>
+        );
+      })}
+    </span>
+  );
+}
+
+// ─── Markdown rendering (headings, lists, quotes, REAL tables, inline styles) ─
+function renderInline(text: string, onWord?: (w: string) => void): ReactNode[] {
+  const tokens = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`)/g).filter((t) => t !== '');
+  return tokens.map((tok, i) => {
+    if (tok.startsWith('**') && tok.endsWith('**')) return <strong key={i}><TappableText text={tok.slice(2, -2)} onWord={onWord} /></strong>;
+    if (tok.startsWith('*') && tok.endsWith('*')) return <em key={i}><TappableText text={tok.slice(1, -1)} onWord={onWord} /></em>;
+    if (tok.startsWith('`') && tok.endsWith('`')) return <code key={i} className="rounded bg-gray-100 px-1 font-mono text-xs">{tok.slice(1, -1)}</code>;
+    return <TappableText key={i} text={tok} onWord={onWord} />;
+  });
+}
+
+export function MarkdownContent({ content, onWord }: { content: string; onWord?: (w: string) => void }) {
+  const blocks = useMemo(() => {
+    const lines = content.split('\n');
+    const out: ReactNode[] = [];
+    let i = 0;
+    while (i < lines.length) {
+      const line = lines[i];
+
+      // Table block
+      if (line.trimStart().startsWith('|')) {
+        const rows: string[][] = [];
+        while (i < lines.length && lines[i].trimStart().startsWith('|')) {
+          const cells = lines[i].trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map((c) => c.trim());
+          if (!cells.every((c) => /^:?-{2,}:?$/.test(c))) rows.push(cells); // skip separator row
+          i += 1;
+        }
+        const [head, ...body] = rows;
+        out.push(
+          <div key={`t${i}`} className="overflow-x-auto rounded-xl border border-gray-200">
+            <table className="w-full text-sm">
+              {head && (
+                <thead>
+                  <tr className="bg-gray-50">
+                    {head.map((c, j) => <th key={j} className="px-3 py-2 text-left text-xs font-black text-gray-600">{renderInline(c, onWord)}</th>)}
+                  </tr>
+                </thead>
+              )}
+              <tbody>
+                {body.map((r, ri) => (
+                  <tr key={ri} className="border-t border-gray-100">
+                    {r.map((c, j) => <td key={j} className="px-3 py-1.5 text-gray-700">{renderInline(c, onWord)}</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>,
+        );
+        continue;
+      }
+
+      if (line.startsWith('# ')) out.push(<h2 key={i} className="mt-2 text-lg font-black text-gray-800">{renderInline(line.slice(2), onWord)}</h2>);
+      else if (line.startsWith('## ')) out.push(<h3 key={i} className="mt-2 text-base font-black text-gray-700">{renderInline(line.slice(3), onWord)}</h3>);
+      else if (line.startsWith('### ')) out.push(<h4 key={i} className="mt-1 text-sm font-bold text-gray-600">{renderInline(line.slice(4), onWord)}</h4>);
+      else if (/^(- |✓ |✅ |❌ |👁️ |👂 |👃 |👅 |✋ |🧠 |❤️ |🎓 )/.test(line)) {
+        const idx = line.indexOf(' ');
+        out.push(
+          <div key={i} className="flex gap-2 text-sm">
+            <span className="shrink-0">{line.slice(0, idx)}</span>
+            <span className="text-gray-700">{renderInline(line.slice(idx + 1), onWord)}</span>
+          </div>,
+        );
+      } else if (line.startsWith('> ')) out.push(<blockquote key={i} className="border-l-4 border-violet-200 pl-3 text-sm italic text-gray-600">{renderInline(line.slice(2), onWord)}</blockquote>);
+      else if (line.startsWith('---')) out.push(<hr key={i} className="border-gray-200" />);
+      else if (!line.trim()) out.push(<div key={i} className="h-1" />);
+      else out.push(<p key={i} className="text-sm leading-relaxed text-gray-700">{renderInline(line, onWord)}</p>);
+      i += 1;
+    }
+    return out;
+  }, [content, onWord]);
+
+  return <div className="max-w-none space-y-2">{blocks}</div>;
+}
+
+// ─── Confetti ────────────────────────────────────────────────────────────────
+const CONFETTI_EMOJI = ['🎉', '⭐', '✨', '🎊', '💫', '🌟'];
+
+export function Confetti() {
+  const pieces = useMemo(
+    () =>
+      Array.from({ length: 24 }, (_, i) => ({
+        emoji: CONFETTI_EMOJI[i % CONFETTI_EMOJI.length],
+        left: Math.random() * 100,
+        delay: Math.random() * 0.8,
+        duration: 1.6 + Math.random() * 1.4,
+        size: 14 + Math.random() * 14,
+      })),
+    [],
+  );
+  return (
+    <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden">
+      {pieces.map((p, i) => (
+        <span
+          key={i}
+          className="absolute animate-confetti"
+          style={{ left: `${p.left}%`, top: '-5%', fontSize: p.size, animationDelay: `${p.delay}s`, animationDuration: `${p.duration}s` }}
+        >
+          {p.emoji}
+        </span>
+      ))}
+    </div>
+  );
+}
