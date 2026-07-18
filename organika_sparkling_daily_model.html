@@ -77,9 +77,9 @@
   body.dark .note{background:#20303f;border-color:#2b465e;color:#cfe0f2}
   @media print{
     .nav,.toolbar,.scen,.foot{display:none !important}
-    .view{display:block !important}
     .panel{break-inside:avoid;box-shadow:none;border-color:#ccc}
     header{padding:0 0 8px}
+    body{background:#fff}
   }
   .note{background:#f3f7ff;border:1px solid #d9e6ff;border-radius:14px;padding:12px 16px;color:#274;font-size:13px;color:#33506e;margin-bottom:18px}
   .warn{background:#fff3f3;border:1px solid #f2c4c4;color:#a1272f;border-radius:12px;padding:10px 14px;font-size:13px;margin-bottom:12px}
@@ -146,6 +146,15 @@
       <h2>Profit &amp; Loss — <span class="scn-name"></span></h2>
       <p class="h-sub">6 SKUs across the columns, company total on the right, all the way to net income.</p>
       <div id="pnl"></div>
+    </div>
+  </section>
+
+  <!-- SUMMARY (print-friendly one-pager) -->
+  <section class="view" data-view="Summary">
+    <div class="note">A one-page summary of the <b class="scn-name"></b> scenario. Press <b>Print</b> (or ⌘/Ctrl-P) and "Save as PDF" to share it.</div>
+    <div class="panel">
+      <h2 id="sumTitle">Summary</h2>
+      <div id="summary"></div>
     </div>
   </section>
 
@@ -437,6 +446,30 @@ function renderPnl(){
   el("pnl").innerHTML=h;
 }
 
+function renderSummary(){
+  const e=el("summary"); if(!e) return;
+  const r=compute(current);
+  const t=el("sumTitle"); if(t) t.textContent=`${CFG.product} — ${current} scenario · ${CFG.fy}`;
+  const kpi=[["Net Sales",money(r.net)],["Gross Profit %",pct(r.gppct)],["EBITDA",money(r.ebitda)],["Net Income",money(r.ni)],["Cases",num(r.cases)]];
+  let h=`<div class="kpis" style="margin-bottom:16px">`+kpi.map(k=>
+    `<div class="kpi"><div class="k">${k[0]}</div><div class="v ${/^-/.test(k[1])?'neg':''}">${k[1]}</div></div>`).join("")+`</div>`;
+  // condensed P&L
+  const pl=[["Gross Revenue",r.gross],["Trade Discounts",-r.tdisc],["Net Sales",r.net,1],["Cost of Sales",-r.cogs],
+    ["Gross Profit",r.gp,1],["A&P",-r.ap],["Contribution",r.cm,1],["Operating Expenses",-r.opex],["EBITDA",r.ebitda,1],
+    ["Depreciation",-r.da],["Interest",-r.interest],["Tax",-r.tax],["Net Income",r.ni,1]];
+  h+=`<table><thead><tr><th>P&L (CDN $)</th><th>${current}</th><th>% of net</th></tr></thead><tbody>`;
+  pl.forEach(row=>{const v=row[1];h+=`<tr class="${row[2]?'major':''}"><td${tip(row[0])}>${row[0]}</td>`+
+    `<td${v<0?' style="color:#d83a4b"':''}>${money(v)}</td><td>${r.net?pct(v/r.net):'—'}</td></tr>`;});
+  h+=`</tbody></table>`;
+  // scenario comparison mini
+  h+=`<table style="margin-top:16px"><thead><tr><th>Scenario</th><th>Cases</th><th>Net Sales</th><th>EBITDA</th><th>Net Income</th></tr></thead><tbody>`;
+  SCEN.forEach(s=>{const d=compute(s);h+=`<tr class="${s===current?'':''}"><td${s===current?' style="font-weight:700"':''}>${s}</td>`+
+    `<td>${num(d.cases)}</td><td>${money(d.net)}</td><td${d.ebitda<0?' style="color:#d83a4b"':''}>${money(d.ebitda)}</td>`+
+    `<td${d.ni<0?' style="color:#d83a4b"':''}>${money(d.ni)}</td></tr>`;});
+  h+=`</tbody></table>`;
+  h+=`<p class="hint" style="margin-top:12px">${SKUS.length} SKUs · blended CP ${money2(r.cppc)}/case · figures ${CFG.company} internal.</p>`;
+  e.innerHTML=h;
+}
 function renderMix(){
   const e=el("mix"); if(!e) return;
   const r=compute(current);
@@ -723,7 +756,7 @@ function delScen(i){
 }
 
 // ---------- nav / scenario bar ----------
-const VIEWS=["Overview","P&L","Monthly","Pricing Lab","Unit Economics","Targets","Sensitivity","Assumptions","Guide"];
+const VIEWS=["Overview","Summary","P&L","Monthly","Pricing Lab","Unit Economics","Targets","Sensitivity","Assumptions","Guide"];
 const UI_KEY="organika_ui_v1";
 let currentView="Overview";
 function saveUI(){try{localStorage.setItem(UI_KEY,JSON.stringify({view:currentView,scenario:current}));}catch(e){}}
@@ -764,7 +797,7 @@ function renderSkuWarn(){
     ? `<div class="warn">⚠ ${bad.length} SKU${bad.length>1?'s':''} priced at or below cost: ${bad.map(s=>`${s.flav} ${s.fmt}`).join(', ')}. Check CP vs COGS.</div>`
     : "";
 }
-function refresh(){renderKpis();renderCmp();renderMix();renderPnl();renderMonthly();renderPricing();renderUecon();renderTargets();renderSens();renderSkuWarn();autosave();}
+function refresh(){renderKpis();renderCmp();renderMix();renderSummary();renderPnl();renderMonthly();renderPricing();renderUecon();renderTargets();renderSens();renderSkuWarn();autosave();}
 
 // ---------- persistence ----------
 const STORE_KEY = "organika_sparkling_daily_v1";
