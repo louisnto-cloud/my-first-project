@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { api } from './api';
 import { sfx } from './sound';
+import { downloadCsv } from './csv';
 
 const SKILL_EMOJI: Record<string, string> = { grammar: '🔤', reading: '📖', listening: '🎧', writing: '✍️' };
 
@@ -229,6 +230,14 @@ function ClassCard({ cls, siblings, vi }: { cls: ClassInfo; siblings: ClassInfo[
                 onChange={(e) => setNames(e.target.value)}
               />
               <button onClick={addStudents} disabled={!names.trim()} className="btn-soft w-full text-sm">＋ Thêm vào lớp (tự cấp mã số)</button>
+              {roster.length > 0 && (
+                <button
+                  onClick={() => downloadCsv(`Lop_${cls.name}_hocvien`, ['Họ tên', 'Mã đăng nhập'], roster.map((r) => [r.name, r.loginCode ?? '']))}
+                  className="w-full text-center text-xs font-extrabold text-violet-500"
+                >
+                  ⬇ Xuất danh sách CSV
+                </button>
+              )}
             </div>
           )}
 
@@ -236,6 +245,21 @@ function ClassCard({ cls, siblings, vi }: { cls: ClassInfo; siblings: ClassInfo[
             <div className="space-y-2">
               <p className="text-[11px] font-bold text-slate-400">Điểm tổng theo trọng số E’TOP (NP 30 · Nghe 30 · Đọc 20 · Viết 20) từ các bài đã chấm.</p>
               {gradebook.length === 0 && <div className="rounded-2xl bg-slate-50 p-3 text-center text-sm font-bold text-slate-400">Chưa có bài nào được chấm</div>}
+              {gradebook.some((g) => g.overall != null) && (
+                <button
+                  onClick={() => {
+                    const pctOf = (s?: { earned: number; possible: number }) => (s && s.possible > 0 ? Math.round((s.earned / s.possible) * 100) : '');
+                    downloadCsv(
+                      `Lop_${cls.name}_diem`,
+                      ['Họ tên', 'Điểm tổng', 'Ngữ pháp %', 'Nghe %', 'Đọc %', 'Viết %'],
+                      gradebook.map((g) => [g.name, g.overall == null ? '' : Math.round(g.overall), pctOf(g.skills.grammar), pctOf(g.skills.listening), pctOf(g.skills.reading), pctOf(g.skills.writing)]),
+                    );
+                  }}
+                  className="w-full text-center text-xs font-extrabold text-violet-500"
+                >
+                  ⬇ Xuất bảng điểm CSV
+                </button>
+              )}
               {gradebook.map((g) => (
                 <div key={g.studentId} className="rounded-2xl bg-violet-50 p-3">
                   <div className="flex items-center justify-between text-sm font-bold">
