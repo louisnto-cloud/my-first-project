@@ -69,3 +69,10 @@ Reverse-chronological. Each entry = one committed iteration.
 - [I17] Number-format pass: formatted the hidden chart-data helpers on Scenario Comparison (no more
   'General'-format numerics).
 - Workbook: 39 → 41 tabs.
+
+## Iteration 11 — 2026-07-18 ~09:19Z (batch I23/I24 + dashboard thesis)
+- [I23] Scenario Comparison: added a one-line takeaway per scenario (Conservative floor / Base anchor
+  / Aggressive ceiling).
+- [I24] Glossary: cross-link note to Canada Regulatory v2 for full Supplemented-Foods detail.
+- Dashboard: added a one-line THESIS banner at the top.
+- Refilled backlog (I25–I28).
