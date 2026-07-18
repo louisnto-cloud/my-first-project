@@ -163,6 +163,20 @@
     </div>
   </section>
 
+  <!-- 3-YEAR -->
+  <section class="view" data-view="3-Year">
+    <div class="panel">
+      <h2>3-Year projection</h2>
+      <p class="h-sub">Grows the current base year by your annual rates. Year 1 = today's numbers (base scenario, no levers).</p>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;margin-bottom:14px">
+        <label class="hint">Volume growth / yr <input class="cell" id="pjVg" type="number" step="1" value="25" style="width:70px"> %</label>
+        <label class="hint">Price growth / yr <input class="cell" id="pjPg" type="number" step="0.5" value="3" style="width:70px"> %</label>
+        <label class="hint">Cost inflation / yr <input class="cell" id="pjCi" type="number" step="0.5" value="2" style="width:70px"> %</label>
+      </div>
+      <div id="proj"></div>
+    </div>
+  </section>
+
   <!-- MONTHLY -->
   <section class="view" data-view="Monthly">
     <div class="panel">
@@ -457,6 +471,29 @@ function renderPnl(){
   el("pnl").innerHTML=h;
 }
 
+function render3yr(){
+  const e=el("proj"); if(!e) return;
+  const vg=(parseFloat(el("pjVg")?.value)||0)/100, pg=(parseFloat(el("pjPg")?.value)||0)/100, ci=(parseFloat(el("pjCi")?.value)||0)/100;
+  const yr=y=>{const fV=Math.pow(1+vg,y),fP=Math.pow(1+pg,y),fC=Math.pow(1+ci,y);
+    const st={SKUS:SKUS.map(s=>Object.assign({},s,{cp:s.cp*fP,cosd:s.cosd*fC,cosi:s.cosi*fC,vol:s.vol*fV})),
+      CO:CO, LEVERS:Object.assign({},LEVERS,{_proj:{v:1,p:1,d:0}}), SCEN:SCEN.concat(["_proj"])};
+    return metricsFor(st,"_proj");};
+  const Y=[yr(0),yr(1),yr(2)];
+  const cagr=k=>{const a=Y[0][k],b=Y[2][k]; return (a>0&&b>0)? Math.pow(b/a,1/2)-1 : null;};
+  const rows=[["Physical Cases","cases",num,0],["Net Sales","net",money,1],["Gross Profit","gp",money,0],
+    ["GP %","gppct",pct,0],["Contribution","cm",money,0],["EBITDA","ebitda",money,1],["EBITDA %","ebitdapct",pct,0],
+    ["Net Income","ni",money,1]];
+  let h="<table><thead><tr><th>CDN $</th><th>Year 1</th><th>Year 2</th><th>Year 3</th><th>CAGR</th></tr></thead><tbody>";
+  rows.forEach(r=>{
+    const cg=(r[2]===money)?cagr(r[1]):null;
+    h+=`<tr class="${r[3]?'major':''}"><td${tip(r[0])}>${r[0]}</td>`+
+       Y.map(y=>{const v=y[r[1]];return `<td${(typeof v==='number'&&v<0)?' style="color:#d83a4b"':''}>${r[2](v)}</td>`;}).join("")+
+       `<td>${cg==null?'—':(cg>=0?'+':'')+(cg*100).toFixed(0)+'%'}</td></tr>`;
+  });
+  h+="</tbody></table>";
+  h+=`<p class="hint" style="margin-top:10px">Year 1 = base scenario today. Years 2-3 compound your volume, price and cost rates. CAGR is the annual growth rate across the 3 years.</p>`;
+  e.innerHTML=h;
+}
 function renderSummary(){
   const e=el("summary"); if(!e) return;
   const r=compute(current);
@@ -785,7 +822,7 @@ function delScen(i){
 }
 
 // ---------- nav / scenario bar ----------
-const VIEWS=["Overview","Summary","P&L","Monthly","Pricing Lab","Unit Economics","Targets","Sensitivity","Assumptions","Guide"];
+const VIEWS=["Overview","Summary","P&L","Monthly","3-Year","Pricing Lab","Unit Economics","Targets","Sensitivity","Assumptions","Guide"];
 const UI_KEY="organika_ui_v1";
 let currentView="Overview";
 function saveUI(){try{localStorage.setItem(UI_KEY,JSON.stringify({view:currentView,scenario:current}));}catch(e){}}
@@ -826,7 +863,8 @@ function renderSkuWarn(){
     ? `<div class="warn">⚠ ${bad.length} SKU${bad.length>1?'s':''} priced at or below cost: ${bad.map(s=>`${s.flav} ${s.fmt}`).join(', ')}. Check CP vs COGS.</div>`
     : "";
 }
-function refresh(){renderKpis();renderCmp();renderMix();renderSummary();renderPnl();renderMonthly();renderPricing();renderUecon();renderTargets();renderSens();renderSkuWarn();autosave();}
+function refresh(){renderKpis();renderCmp();renderMix();renderSummary();renderPnl();renderMonthly();render3yr();renderPricing();renderUecon();renderTargets();renderSens();renderSkuWarn();autosave();}
+["pjVg","pjPg","pjCi"].forEach(id=>{const e=el(id); if(e) e.oninput=render3yr;});
 
 // ---------- persistence ----------
 const STORE_KEY = "organika_sparkling_daily_v1";
