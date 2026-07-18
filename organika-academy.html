@@ -368,6 +368,10 @@ textarea:focus{border-color:var(--g)}
 .sum-n{font-size:24px;font-weight:900}
 .sum-l{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--tx2)}
 .dict-input{width:100%;border:2px solid var(--bd);border-radius:var(--rs);padding:14px 16px;font-size:16px;background:var(--wh);outline:none;margin-bottom:14px;font-family:inherit}
+.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cat-chip{display:flex;align-items:center;justify-content:space-between;gap:6px;background:var(--wh);border:1px solid rgba(29,58,45,.06);border-radius:14px;padding:14px;font-size:13px;font-weight:700;color:var(--tx);cursor:pointer;font-family:inherit;box-shadow:var(--shd);text-align:left;line-height:1.25}
+.cat-chip span{background:var(--gp);color:var(--g);border-radius:10px;padding:2px 8px;font-size:12px;flex-shrink:0}
+.cat-chip:active{transform:scale(.97)}
 .dict-input:focus{border-color:var(--g)}
 .price-play-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;margin:8px 0 20px}
 .price-play{width:110px;height:110px;border-radius:50%;background:var(--g);color:var(--wh);border:none;cursor:pointer;font-size:34px;font-family:inherit;box-shadow:var(--shd);transition:transform .12s;line-height:1.2}
@@ -1521,6 +1525,7 @@ let S={
   searchQ:'',         // dictionary search query
   showFilters:false,  // practice screen: filters expanded
   listenFirst:false,  // flashcard listen-first mode
+  dictCat:'',         // dictionary category browse
   sessionLen:20,      // cards per practice session
   mixedActive:false,  // mixed session in progress
   mixedModes:[],      // per-card mode assignment for mixed sessions
@@ -1735,7 +1740,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v51';
+const APP_VERSION='v52';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -2954,20 +2959,31 @@ function renderSummary(){
 function normStr(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d');}
 function renderDict(){
   const q=normStr(S.searchQ.trim());
-  const hits=q?VOCAB.filter(v=>normStr(v.en).includes(q)||normStr(v.vi).includes(q)).slice(0,40):[];
+  const cats=[...new Set(VOCAB.map(v=>v.category))];
+  let body;
+  if(q){
+    const hits=VOCAB.filter(v=>normStr(v.en).includes(q)||normStr(v.vi).includes(q)).slice(0,40);
+    body=hits.length?hits.map(v=>renderReviewCard(v)).join(''):`<div class="empty-state">No matches for "${S.searchQ}"</div>`;
+  }else if(S.dictCat){
+    const list=VOCAB.filter(v=>v.category===S.dictCat);
+    body=`<button class="btn-primary full-w" style="margin-bottom:12px" onclick="startCustomLesson(${JSON.stringify(list.map(v=>v.id)).replace(/"/g,'&quot;')})">▶ Practice these ${list.length}</button>`
+      +list.map(v=>renderReviewCard(v)).join('');
+  }else{
+    body=`<div class="section-label">Browse by topic</div><div class="cat-grid">`
+      +cats.map(c=>{const n=VOCAB.filter(v=>v.category===c).length;
+        return `<button class="cat-chip" onclick="S.dictCat='${c.replace(/'/g,"\\'")}';render()">${c}<span>${n}</span></button>`;}).join('')
+      +`</div>`;
+  }
   return `<div class="screen">
   <div class="lesson-header">
-    <button class="btn-back" onclick="go('home')">‹</button>
-    <span class="screen-title">Dictionary</span>
+    <button class="btn-back" onclick="${S.dictCat?"S.dictCat='';render()":"go('home')"}">‹</button>
+    <span class="screen-title">${S.dictCat||'Dictionary'}</span>
     <span></span>
   </div>
   <main class="main-scroll" style="padding:16px">
-    <input class="dict-input" type="search" placeholder="Search English or Vietnamese…" value="${S.searchQ.replace(/"/g,'&quot;')}"
-      oninput="S.searchQ=this.value;renderDictResults()" autocomplete="off">
-    <div id="dict-results">
-      ${q?(hits.length?hits.map(v=>renderReviewCard(v)).join(''):`<div class="empty-state">No matches for "${S.searchQ}"</div>`)
-        :`<div class="empty-state">Type to search all ${VOCAB.length} terms.<br>Diacritics optional — "chao" finds "chào".</div>`}
-    </div>
+    <input class="dict-input" type="search" placeholder="Search all ${VOCAB.length} terms…" value="${S.searchQ.replace(/"/g,'&quot;')}"
+      oninput="S.searchQ=this.value;S.dictCat='';renderDictResults()" autocomplete="off">
+    <div id="dict-results">${body}</div>
     <div style="height:30px"></div>
   </main>
   </div>`;
