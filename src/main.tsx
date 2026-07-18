@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { AppProvider } from './store';
 import { I18nProvider } from './i18n';
+import { primeTheme } from './theme';
 import './index.css';
+
+primeTheme();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

@@ -2,21 +2,43 @@ import { NavLink } from 'react-router-dom';
 import type { ReactNode } from 'react';
 import { useApp } from '../store';
 import { useI18n } from '../i18n';
+import { useTheme } from '../theme';
 import { Logo } from './Logo';
 import type { Skill } from '../types';
 import { SKILLS } from '../types';
 
+export function ThemeToggle() {
+  const { theme, toggle } = useTheme();
+  const { t } = useI18n();
+  const isDark = theme === 'dark';
+  return (
+    <button
+      onClick={toggle}
+      aria-label={isDark ? t('a11y.themeToLight') : t('a11y.themeToDark')}
+      aria-pressed={isDark}
+      title={isDark ? t('a11y.themeToLight') : t('a11y.themeToDark')}
+      className="flex h-9 w-9 items-center justify-center rounded-full bg-violet-100 text-lg hover:bg-violet-200 dark:bg-slate-700 dark:hover:bg-slate-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-violet-500"
+    >
+      <span aria-hidden="true">{isDark ? '🌞' : '🌙'}</span>
+    </button>
+  );
+}
+
 export function LangToggle() {
   const { lang, setLang } = useI18n();
   return (
-    <div className="flex rounded-full bg-violet-100 p-0.5 text-xs font-extrabold" role="group" aria-label="Language">
+    <div className="flex rounded-full bg-violet-100 p-0.5 text-xs font-extrabold dark:bg-slate-700" role="group" aria-label="Language">
       {(['vi', 'en'] as const).map((l) => (
         <button
           key={l}
           onClick={() => setLang(l)}
           aria-pressed={lang === l}
           aria-label={l === 'vi' ? 'Tiếng Việt' : 'English'}
-          className={`rounded-full px-2.5 py-1 uppercase transition ${lang === l ? 'bg-violet-600 text-white shadow' : 'text-violet-500'}`}
+          className={`rounded-full px-2.5 py-1 uppercase transition ${
+            lang === l
+              ? 'bg-violet-600 text-white shadow dark:bg-violet-500'
+              : 'text-violet-500 dark:text-violet-300'
+          }`}
         >
           {l}
         </button>
@@ -29,7 +51,7 @@ export function Header({ subtitle }: { subtitle?: string }) {
   const { user, logout } = useApp();
   const { t } = useI18n();
   return (
-    <header className="sticky top-0 z-20 border-b border-violet-100 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-20 border-b border-violet-100 bg-white/90 backdrop-blur dark:border-slate-700 dark:bg-slate-900/90">
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:rounded-lg focus:bg-violet-600 focus:px-3 focus:py-2 focus:text-sm focus:font-bold focus:text-white"
@@ -40,18 +62,19 @@ export function Header({ subtitle }: { subtitle?: string }) {
         <div className="flex items-center gap-2">
           <Logo size={36} />
           <div>
-            <div className="text-lg font-black leading-tight text-violet-700">{t('app.name')}</div>
-            {subtitle && <div className="text-xs font-semibold text-violet-400">{subtitle}</div>}
+            <div className="text-lg font-black leading-tight text-violet-700 dark:text-violet-300">{t('app.name')}</div>
+            {subtitle && <div className="text-xs font-semibold text-violet-400 dark:text-violet-300/70">{subtitle}</div>}
           </div>
         </div>
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <LangToggle />
           {user && (
             <button
               onClick={logout}
               title={t('common.logout')}
               aria-label={t('common.logout')}
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-violet-100 text-lg hover:bg-violet-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-violet-500"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-violet-100 text-lg hover:bg-violet-200 dark:bg-slate-700 dark:hover:bg-slate-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-violet-500"
             >
               <span aria-hidden="true">{user.avatar}</span>
             </button>
@@ -74,7 +97,7 @@ export function TabBar({ items }: { items: TabItem[] }) {
   return (
     <nav
       aria-label={t('a11y.primaryNav')}
-      className="fixed inset-x-0 bottom-0 z-20 border-t border-violet-100 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur"
+      className="fixed inset-x-0 bottom-0 z-20 border-t border-violet-100 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur dark:border-slate-700 dark:bg-slate-900/95"
     >
       <div className="mx-auto flex max-w-3xl">
         {items.map((it) => (
@@ -84,7 +107,9 @@ export function TabBar({ items }: { items: TabItem[] }) {
             end={it.end}
             aria-label={it.label}
             className={({ isActive }) =>
-              `flex flex-1 flex-col items-center gap-0.5 py-2 text-[11px] font-bold focus-visible:outline focus-visible:-outline-offset-2 focus-visible:outline-2 focus-visible:outline-violet-500 ${isActive ? 'text-violet-700' : 'text-slate-400'}`
+              `flex flex-1 flex-col items-center gap-0.5 py-2 text-[11px] font-bold focus-visible:outline focus-visible:-outline-offset-2 focus-visible:outline-2 focus-visible:outline-violet-500 ${
+                isActive ? 'text-violet-700 dark:text-violet-300' : 'text-slate-400 dark:text-slate-500'
+              }`
             }
           >
             {({ isActive }) => (
@@ -118,7 +143,9 @@ export function WeekRing({ days, labels }: { days: boolean[]; labels: string[] }
               role="listitem"
               aria-label={`${labels[i]} ${d ? 'practiced' : 'not yet'}`}
               className={`flex h-8 w-8 items-center justify-center rounded-full text-[10px] font-black transition ${
-                d ? 'bg-emerald-500 text-white shadow-sm' : 'bg-slate-100 text-slate-400'
+                d
+                  ? 'bg-emerald-500 text-white shadow-sm dark:bg-emerald-400'
+                  : 'bg-slate-100 text-slate-400 dark:bg-slate-700 dark:text-slate-400'
               }`}
             >
               {d ? '✓' : labels[i]}
@@ -126,10 +153,10 @@ export function WeekRing({ days, labels }: { days: boolean[]; labels: string[] }
           ))}
         </div>
         <div className="text-right">
-          <div className="text-xl font-black text-violet-700">
-            {done}<span className="text-sm text-slate-300">/7</span>
+          <div className="text-xl font-black text-violet-700 dark:text-violet-300">
+            {done}<span className="text-sm text-slate-300 dark:text-slate-500">/7</span>
           </div>
-          <div className="text-[10px] font-bold uppercase tracking-wide text-slate-400">this week</div>
+          <div className="text-[10px] font-bold uppercase tracking-wide text-slate-400 dark:text-slate-500">this week</div>
         </div>
       </div>
     </div>
@@ -138,7 +165,7 @@ export function WeekRing({ days, labels }: { days: boolean[]; labels: string[] }
 
 export function Empty({ emoji, text }: { emoji: string; text: string }) {
   return (
-    <div className="card flex flex-col items-center gap-2 py-8 text-center text-sm font-semibold text-slate-400" role="status">
+    <div className="card flex flex-col items-center gap-2 py-8 text-center text-sm font-semibold text-slate-400 dark:text-slate-500" role="status">
       <span aria-hidden="true" className="text-4xl">{emoji}</span>
       {text}
     </div>

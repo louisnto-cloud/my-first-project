@@ -31,6 +31,8 @@ const STRINGS: Record<string, { en: string; vi: string }> = {
   'common.points': { en: 'points', vi: 'điểm thưởng' },
   'a11y.skipToContent': { en: 'Skip to content', vi: 'Bỏ qua tới nội dung' },
   'a11y.primaryNav': { en: 'Primary navigation', vi: 'Điều hướng chính' },
+  'a11y.themeToDark': { en: 'Switch to dark mode', vi: 'Chuyển sang chế độ tối' },
+  'a11y.themeToLight': { en: 'Switch to light mode', vi: 'Chuyển sang chế độ sáng' },
   'common.dayStreak': { en: 'day streak', vi: 'ngày liên tiếp' },
   'common.save': { en: 'Save', vi: 'Lưu' },
   'common.cancel': { en: 'Cancel', vi: 'Hủy' },
