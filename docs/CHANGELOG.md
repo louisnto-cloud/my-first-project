@@ -76,3 +76,10 @@ Reverse-chronological. Each entry = one committed iteration.
 - [I24] Glossary: cross-link note to Canada Regulatory v2 for full Supplemented-Foods detail.
 - Dashboard: added a one-line THESIS banner at the top.
 - Refilled backlog (I25–I28).
+
+## Iteration 12 — 2026-07-18 ~09:24Z (batch I25/I26/I27)
+- [I27] Comparison Matrix: added MÜV as a highlighted SUBJECT row (benchmark), with a pointer to the
+  Peer Set tab for direct rivals.
+- [I26] Methodology: added a prioritized "what would strengthen this further" list (confirm MÜV specs,
+  licensed CA scanner data, regulatory opinion, real cost inputs, distributor interviews).
+- [I25] Go-No-Go: added a one-line "how to use" hint (edit weights/scores → verdict recomputes).

@@ -55,7 +55,7 @@ implement, validate (`./build_all.sh`), commit, log in CHANGELOG.md.
 - [x] I24 — [IMPROVE] Glossary cross-link note pointing to Canada Regulatory v2 for term detail.
 
 ## Refill 3 (added 2026-07-18 ~09:19Z)
-- [ ] I25 — [IMPROVE] "How to use" one-line hint on each gold interactive tab (where missing).
-- [ ] I26 — [IMPROVE] Method & limitations expansion on Tab 03 (what would strengthen the dossier).
-- [ ] I27 — [IMPROVE] Comparison Matrix: add a MÜV row so the subject appears in the core matrix too.
+- [x] I25 — [IMPROVE] "How to use" one-line hint on each gold interactive tab (where missing).
+- [x] I26 — [IMPROVE] Method & limitations expansion on Tab 03 (what would strengthen the dossier).
+- [x] I27 — [IMPROVE] Comparison Matrix: add a MÜV row so the subject appears in the core matrix too.
 - [ ] I28 — [EXPAND 20%] KPI Dashboard: add a target-vs-benchmark mini bar.
