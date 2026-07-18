@@ -1379,6 +1379,27 @@ const PRIMER=[
 </table>
 <p class="tip">Do not let tones paralyze you. In business context, your partners will understand from context. Focus on the tones of your key vocabulary: numbers, product names, and polite particles matter most.</p>\n<button class="btn-primary full-w" style="margin-top:10px" onclick="S.toneSet=null;S.toneRight=0;S.toneTotal=0;go('tones')">🎵 Practice hearing tones</button>
 `},
+{id:'p05',title:'How to Read the Sound Guides',content:`
+<p>Every pronunciation guide in this app follows <strong>one fixed system</strong> (Southern pronunciation). Learn this key once and every guide reads correctly. The guides show sounds only — the arrows above words show the tone, and the audio is always the real reference.</p>
+<table class="primer-table">
+<tr><th>Letters</th><th>Sound</th><th>Example</th></tr>
+<tr><td>d, gi</td><td>y (Southern!)</td><td>giá → yah</td></tr>
+<tr><td>đ</td><td>d</td><td>đồng → dohng</td></tr>
+<tr><td>ph</td><td>f</td><td>phí → fee</td></tr>
+<tr><td>nh</td><td>ny</td><td>nhà → nyah</td></tr>
+<tr><td>kh</td><td>breathy k</td><td>không → khohng</td></tr>
+<tr><td>th</td><td>t with a puff of air</td><td>thơm → thuhm</td></tr>
+<tr><td>x, s</td><td>s</td><td>xin → seen</td></tr>
+<tr><td>ê</td><td>ay</td><td>tết → tayt</td></tr>
+<tr><td>ơ, â</td><td>uh</td><td>cơm → kuhm</td></tr>
+<tr><td>ô</td><td>oh</td><td>số → soh</td></tr>
+<tr><td>o</td><td>aw</td><td>to → taw</td></tr>
+<tr><td>i, y</td><td>ee</td><td>chị → chee</td></tr>
+<tr><td>ai, ay</td><td>eye</td><td>hai → high</td></tr>
+<tr><td>anh</td><td>short an</td><td>anh → an</td></tr>
+</table>
+<p class="tip">Golden rule: the letters get you close, the arrows give you the tone, and the 🔊 audio is the truth. Always imitate the voice, not the spelling.</p>
+`},
 ];
 
 // ── APP STATE ────────────────────────────────────────────────────────────────
@@ -1604,7 +1625,7 @@ function getViVoice(){
 //      after the first utterance, so if no Vietnamese voice is listed we
 //      still speak with lang='vi-VN' and let iOS route to its built-in
 //      Vietnamese voice (Linh). Refusing to speak here was the old bug.
-const APP_VERSION='v42';
+const APP_VERSION='v43';
 let _player=null,_speakSeq=0,_lastPath='none';
 function getPlayer(){
   if(!_player){
@@ -1686,6 +1707,13 @@ function speakLocal(text,seq,force){
   speechSynthesis.speak(u);
   // iOS sometimes leaves the queue paused; nudge it
   setTimeout(()=>{try{if(speechSynthesis.paused)speechSynthesis.resume();}catch(e){}},120);
+}
+let _echo=null;
+function echoWord(t){
+  stopAudio(); clearTimeout(_echo);
+  let n=0;
+  const step=()=>{ if(n>=3){_echo=null;return;} n++; speak(t); _echo=setTimeout(step, S.audioSlow?3200:2300); };
+  step();
 }
 function toast(msg){
   const t=document.createElement('div');
@@ -2117,6 +2145,7 @@ function renderDrill(){
       ${v.southern_note?`<div class="drill-south">🌴 ${v.southern_note}</div>`:''}
       <div class="card-audio-row" style="justify-content:center">
         <button class="speak-big" onclick="speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊 Listen</button>
+        <button class="speak-big" onclick="echoWord('${v.vi.replace(/'/g,"\\'")}')">🔁 Echo ×3</button>
         ${speedChip()}
       </div>
       <div class="drill-hint">Repeat aloud three times, then continue</div>
@@ -2341,6 +2370,7 @@ function renderReviewCard(v){
       </span>
     </div>
     <div class="rv-vi">${v.vi} <button class="speak-micro" aria-label="Play audio" onclick="speak('${v.vi.replace(/'/g,"\\'")}','vi-VN')">🔊</button></div>
+    ${toneStrip(v.vi,true)}
     <div class="rv-ph">/ ${v.phonetic} /</div>
     <div class="rv-stats">Box ${v.box} · ${v.correct}✓ ${v.wrong}✗</div>
   </div>`;
