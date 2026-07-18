@@ -27,9 +27,13 @@ export interface SaveDoc {
   /** Spaced-repetition seed: itemId -> times seen. */
   seen: Record<string, number>;
   sound: boolean;
+  /** Gregorian chant plays softly in the background while you walk. */
+  ambient: boolean;
+  /** Read story cards aloud (on-device text-to-speech). */
+  narrate: boolean;
   /** ISO date the Daily Reliquary was last opened. */
   reliquary: string;
-  /** OCIA milestone dates: milestoneId -> yyyy-mm-dd. */
+  /** RCIA milestone dates: milestoneId -> yyyy-mm-dd. (Field kept as `ocia` for save compatibility.) */
   ocia: Record<string, string>;
 }
 
@@ -47,6 +51,10 @@ const fresh = (): SaveDoc => ({
   journal: [],
   seen: {},
   sound: false,
+  ambient: false,
+  // The guide reads aloud by default; onboarding confirms it, and a single
+  // tap in My Chapel turns it off. An app that speaks to you should speak.
+  narrate: true,
   reliquary: '',
   ocia: {},
 });

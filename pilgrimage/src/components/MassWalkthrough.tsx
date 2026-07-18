@@ -11,6 +11,8 @@ import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { updateSave } from '@/lib/storage';
 import { SacredArt } from '@/components/SacredArt';
+import { SpeakerButton } from '@/components/SpeakerButton';
+import { spokenParagraphs } from '@/lib/speech';
 
 function PostureBadge({ posture }: { posture: Posture }) {
   const { t } = useI18n();
@@ -43,7 +45,7 @@ function PostureBadge({ posture }: { posture: Posture }) {
 }
 
 export function MassWalkthrough() {
-  const { t } = useI18n();
+  const { t, lang, save } = useI18n();
   const [step, setStep] = useState(0);
   const total = MASS.length;
   const done = step >= total;
@@ -61,7 +63,7 @@ export function MassWalkthrough() {
   return (
     <div className="flex min-h-dvh flex-col">
       {/* header: back, part name, progress */}
-      <div className="flex items-center gap-3 px-4 pt-4">
+      <div className="flex items-center gap-3 px-4 pt-safe-bar">
         <Link href="/chapel" aria-label={t(UI.close)} className="flex h-11 w-11 items-center justify-center rounded-full text-incense">
           <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current"><path d="M15.5 4.5 8 12l7.5 7.5 1.4-1.4L10.8 12l6.1-6.1z" /></svg>
         </Link>
@@ -69,7 +71,13 @@ export function MassWalkthrough() {
           <p className="font-display text-[10px] uppercase tracking-[0.25em] text-gold">
             {done ? t(UI.massTitle) : t(MASS_PARTS[moment.part])}
           </p>
-          <div className="mt-1 h-0.5 overflow-hidden rounded-full bg-ivory/10">
+          <div
+            className="mt-1 h-0.5 overflow-hidden rounded-full bg-ivory/10"
+            role="progressbar"
+            aria-valuemin={0}
+            aria-valuemax={total}
+            aria-valuenow={Math.min(step, total)}
+          >
             <div className="h-full bg-gold transition-all duration-300" style={{ width: `${(Math.min(step, total) / total) * 100}%` }} />
           </div>
         </div>
@@ -85,7 +93,24 @@ export function MassWalkthrough() {
           </div>
 
           <div className="flex flex-col gap-3 px-6 py-4">
-            <h2 className="font-display text-2xl text-ivory">{t(moment.title)}</h2>
+            <div className="flex items-start gap-3">
+              <h2 className="flex-1 font-display text-2xl text-ivory">{t(moment.title)}</h2>
+              <SpeakerButton
+                id={`mass-${moment.id}-${lang}`}
+                autoStart={save.narrate}
+                text={spokenParagraphs(
+                  t(moment.what),
+                  // Spoken as a lesson in the responses: "The priest says:
+                  // …" then "You say: …" — not an unlabelled run-on.
+                  ...(moment.say?.flatMap((d) => [
+                    `${t(UI.massPriestSays)}: ${t(d.priest)}`,
+                    `${t(UI.massYouSay)}: ${t(d.people)}`,
+                  ]) ?? []),
+                  t(moment.why),
+                )}
+                tone="prayer"
+              />
+            </div>
             <p className="font-story text-xl leading-relaxed text-ivory">{t(moment.what)}</p>
 
             {moment.say?.map((d, i) => (

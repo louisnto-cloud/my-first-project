@@ -7,11 +7,14 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import type { Lesson, Question, StoryCard as StoryCardT, World } from '@/content/types';
+import type { L, Lesson, Question, StoryCard as StoryCardT, World } from '@/content/types';
+import type { Lang } from '@/lib/storage';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { getSave, lightCandle, todayISO, updateSave } from '@/lib/storage';
+import { narrate, spokenParagraphs, stopNarration } from '@/lib/speech';
 import { SacredArt } from '@/components/SacredArt';
+import { InteractiveArt } from '@/components/InteractiveArt';
 import { StoryCardView } from '@/components/StoryCard';
 import { QuizEngine } from '@/components/QuizEngine';
 import { CandleRitual } from '@/components/CandleRitual';
@@ -113,8 +116,30 @@ function TreasureView({ lesson, onDone }: { lesson: Lesson; onDone: () => void }
   );
 }
 
+/** What the guide reads at the treasure page, mirroring what is shown. */
+function treasureSpoken(lesson: Lesson, lang: Lang, t: (s: L) => string): string {
+  const tr = lesson.treasure;
+  if (tr.kind === 'prayer') {
+    const prayer = prayerById(tr.prayerId);
+    if (!prayer) return '';
+    // Name, then the prayer itself (its lines flowing as one text), then the
+    // note — each with a real pause and a breath between them.
+    return spokenParagraphs(
+      t(prayer.name),
+      (lang === 'vi' ? prayer.vi : prayer.en).join(' '),
+      t(tr.note),
+    );
+  }
+  if (tr.kind === 'word') {
+    const entry = glossaryById(tr.termId);
+    if (!entry) return '';
+    return spokenParagraphs(lang === 'vi' ? entry.vi : entry.term, t(entry.plain), t(tr.note));
+  }
+  return spokenParagraphs(t(tr.title), t(tr.note));
+}
+
 export function LessonPlayer({ world, lesson }: { world: World; lesson: Lesson }) {
-  const { t } = useI18n();
+  const { t, lang, save } = useI18n();
   const router = useRouter();
   const flow = useMemo(() => buildFlow(lesson), [lesson]);
 
@@ -134,6 +159,28 @@ export function LessonPlayer({ world, lesson }: { world: World; lesson: Lesson }
     updateSave({ position: { lessonId: lesson.id, step } });
     window.scrollTo(0, 0);
   }, [lesson.id, step]);
+
+  // The guide reads the door and the treasure aloud as they open (story cards
+  // and questions read themselves through their own speaker). It stays quiet on
+  // the candle, so the closing ritual is silent.
+  useEffect(() => {
+    if (!save.narrate) return;
+    let id = '';
+    let text = '';
+    if (step === 0) {
+      id = `door-${lesson.id}-${lang}`;
+      // Where we are, what today's step is called, then the door line —
+      // spoken as three thoughts, not one run-on sentence.
+      text = spokenParagraphs(t(world.church), t(lesson.title), t(lesson.door.line));
+    } else if (step === treasureStep) {
+      id = `treasure-${lesson.id}-${lang}`;
+      text = treasureSpoken(lesson, lang, t);
+    }
+    if (text) {
+      narrate(id, text, lang, { cue: true });
+      return () => stopNarration();
+    }
+  }, [step, lang, save.narrate, lesson, world, t, treasureStep]);
 
   const [finished, setFinished] = useState(false);
 
@@ -162,7 +209,7 @@ export function LessonPlayer({ world, lesson }: { world: World; lesson: Lesson }
   return (
     <div className="flex min-h-dvh flex-col">
       {/* Quiet header: progress hairline + leave door */}
-      <div className="flex items-center gap-3 px-4 pt-4">
+      <div className="flex items-center gap-3 px-4 pt-safe-bar">
         <Link href="/" aria-label={t(UI.backToToday)} className="flex h-11 w-11 items-center justify-center rounded-full text-incense">
           <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current"><path d="M15.5 4.5 8 12l7.5 7.5 1.4-1.4L10.8 12l6.1-6.1z" /></svg>
         </Link>
@@ -172,6 +219,12 @@ export function LessonPlayer({ world, lesson }: { world: World; lesson: Lesson }
             style={{ width: `${Math.round((step / candleStep) * 100)}%` }}
           />
         </div>
+        {/* how far along the step is — a quiet count, not a scoreboard */}
+        {step > 0 && (
+          <span className="font-ui text-[11px] font-semibold tabular-nums text-incense">
+            {Math.min(step, candleStep)}/{candleStep}
+          </span>
+        )}
       </div>
 
       <div className="min-h-0 flex-1">
@@ -179,8 +232,8 @@ export function LessonPlayer({ world, lesson }: { world: World; lesson: Lesson }
           <button onClick={() => setStep(1)} className="block h-full w-full text-left">
             <div className="relative flex h-[calc(100dvh-60px)] flex-col">
               <div className="relative min-h-0 flex-1 overflow-hidden">
-                <SacredArt kind={lesson.door.art} rounded={false} />
-                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-lapis via-lapis/70 to-transparent" />
+                <InteractiveArt kind={lesson.door.art} />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-lapis via-lapis/70 to-transparent" />
               </div>
               <div className="relative z-10 -mt-28 px-6 pb-12">
                 <p className="font-display text-xs uppercase tracking-[0.3em] text-gold">{t(world.church)}</p>
@@ -198,7 +251,10 @@ export function LessonPlayer({ world, lesson }: { world: World; lesson: Lesson }
           const item = flow[step - 1];
           if (item.type === 'card') {
             return (
-              <div className="h-[calc(100dvh-60px)]">
+              // Key by card id so each card gets a fresh component instance —
+              // otherwise branch choices and the "original wording" toggle
+              // would leak from one card to the next.
+              <div className="h-[calc(100dvh-60px)]" key={item.card.id}>
                 <StoryCardView card={item.card} onDone={() => setStep(step + 1)} />
               </div>
             );

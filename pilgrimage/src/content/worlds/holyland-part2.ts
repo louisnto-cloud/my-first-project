@@ -1,15 +1,15 @@
 import type { L, Lesson } from '../types';
 
-// ─── World 2 · Bruges · lessons 8–14 ────────────────────────────────────────
-// The Jesus arc, part two: bread and storms, then the Holy Week arc told
-// with great care, the relic of the Holy Blood, and the Vigil.
+// ─── World 2 · The Holy Land · lessons, part two ────────────────────────────
+// The Jesus arc, part two: bread and storms, the lake, then the Holy Week arc
+// told with great care, the empty tomb today, relics, and the Vigil.
 
 const u = (en: string, vi: string): L => ({ en, vi, viStatus: 'unverified' });
 
-export const BRUGES_LESSONS_2: Lesson[] = [
+export const HOLYLAND_LESSONS_2: Lesson[] = [
   // ── 8: Bread on the Hill, Feet on the Sea ──────────────────────────────
   {
-    id: 'bruges-8',
+    id: 'hl-8',
     title: u('Bread on the Hill, Feet on the Sea', 'Bánh trên đồi, bước chân trên biển'),
     minutes: 5,
     door: {
@@ -122,9 +122,76 @@ export const BRUGES_LESSONS_2: Lesson[] = [
     },
   },
 
+  // ── The Lake ─────────────────────────────────────────────────────────────
+  {
+    id: 'hl-lake',
+    title: u('The Lake', 'Biển Hồ'),
+    minutes: 4,
+    door: {
+      art: 'storm-sea',
+      line: u(
+        'The Sea of Galilee: thirteen miles of water where half the Gospel happened.',
+        'Biển Hồ Galilê: hai mươi cây số mặt nước nơi một nửa Tin Mừng đã diễn ra.',
+      ),
+    },
+    cards: [
+      {
+        id: 'c1',
+        art: 'storm-sea',
+        text: u(
+          'It is still there, and still working: fishermen still cast nets at dawn on the Sea of Galilee. On these shores Jesus called Peter and Andrew mid-haul: “Follow me, and I will make you fishers of men.”',
+          'Hồ ấy vẫn còn đó, và vẫn đang lao động: những ngư phủ vẫn quăng lưới lúc rạng đông trên Biển Hồ Galilê. Trên những bờ hồ này, Chúa Giêsu đã gọi Phêrô và Anrê giữa mẻ lưới: “Hãy theo Thầy, Thầy sẽ làm cho các con thành những kẻ lưới người.”',
+        ),
+      },
+      {
+        id: 'c2',
+        art: 'loaves-fishes',
+        text: u(
+          'Around this one lake: the hillside of the Beatitudes, the grass where five thousand ate, the waves he walked on, the shore where the risen Jesus cooked breakfast and asked Peter three times, “Do you love me?”',
+          'Quanh một hồ nước này: sườn đồi của các Mối Phúc, bãi cỏ nơi năm ngàn người được ăn no, những con sóng Ngài đã bước lên, và bờ hồ nơi Chúa Phục Sinh nướng bữa sáng và hỏi Phêrô ba lần: “Con có yêu mến Thầy không?”',
+        ),
+      },
+      {
+        id: 'c3',
+        art: 'lake-evening',
+        text: u(
+          'Pilgrims say the lake is the place where the Gospel feels nearest — because water does not change. The waves a pilgrim sees today are the waves they saw. Some places hold their stories the way the night sky holds its stars.',
+          'Khách hành hương nói Biển Hồ là nơi Tin Mừng gần gũi nhất — vì nước không thay đổi. Những con sóng người hành hương thấy hôm nay chính là những con sóng họ đã thấy. Có những nơi giữ câu chuyện của mình như bầu trời đêm giữ những vì sao.',
+        ),
+      },
+    ],
+    questions: [
+      {
+        id: 'q1',
+        kind: 'choice',
+        afterCard: 1,
+        prompt: u('What did the risen Jesus ask Peter on this shore?', 'Trên bờ hồ này, Chúa Phục Sinh hỏi Phêrô điều gì?'),
+        options: [
+          { text: u('“Do you love me?” — three times', '“Con có yêu mến Thầy không?” — ba lần') },
+          { text: u('“Where were you on Friday?”', '“Hôm thứ Sáu con ở đâu?”') },
+        ],
+        answer: 0,
+        why: u(
+          'One question for each denial. Mercy does not interrogate the past; it asks about love, today.',
+          'Một câu hỏi cho mỗi lần chối. Lòng thương xót không tra khảo quá khứ; nó chỉ hỏi về tình yêu, hôm nay.',
+        ),
+      },
+    ],
+    treasure: {
+      kind: 'art',
+      art: 'storm-sea',
+      title: u('The Sea of Galilee', 'Biển Hồ Galilê'),
+      note: u(
+        'Two hundred meters below sea level, ringed by hills — which is why storms drop onto it so suddenly, exactly as the Gospels describe. The geography keeps vouching for the story.',
+        'Thấp hơn mực nước biển hai trăm mét, bốn bề là đồi núi — vì thế những cơn bão ập xuống hồ rất đột ngột, đúng như các sách Tin Mừng mô tả. Chính địa hình vẫn đang làm chứng cho câu chuyện.',
+      ),
+    },
+    reflection: u('Which lakeside story would you want to stand inside?', 'Bạn muốn được đứng trong câu chuyện nào bên hồ?'),
+  },
+
   // ── 9: The King on a Donkey ────────────────────────────────────────────
   {
-    id: 'bruges-9',
+    id: 'hl-9',
     title: u('The King on a Donkey', 'Vị Vua trên lưng lừa'),
     minutes: 4,
     door: {
@@ -217,7 +284,7 @@ export const BRUGES_LESSONS_2: Lesson[] = [
 
   // ── 10: The Last Supper ────────────────────────────────────────────────
   {
-    id: 'bruges-10',
+    id: 'hl-10',
     title: u('The Last Supper', 'Bữa Tiệc Ly'),
     minutes: 5,
     door: {
@@ -338,7 +405,7 @@ export const BRUGES_LESSONS_2: Lesson[] = [
 
   // ── 11: The Garden and the Cross ───────────────────────────────────────
   {
-    id: 'bruges-11',
+    id: 'hl-11',
     title: u('The Garden and the Cross', 'Khu vườn và Thánh giá'),
     minutes: 6,
     door: {
@@ -453,8 +520,8 @@ export const BRUGES_LESSONS_2: Lesson[] = [
       kind: 'practice',
       title: u('For the hard days', 'Cho những ngày khó khăn'),
       note: u(
-        'A prayer of five words, for turbulence of any kind: “Father, into your hands.” It is the last thing Jesus said. It fits in one breath, at 38,000 feet or anywhere.',
-        'Một lời nguyện năm chữ, cho mọi loại giông bão: “Lạy Cha, trong tay Cha.” Đó là lời sau cùng của Chúa Giêsu. Vừa vặn trong một hơi thở, ở độ cao 11.000 mét hay bất cứ đâu.',
+        'A prayer of five words, for turbulence of any kind: “Father, into your hands.” It is the last thing Jesus said. It fits in one breath, anywhere.',
+        'Một lời nguyện năm chữ, cho mọi loại giông bão: “Lạy Cha, trong tay Cha.” Đó là lời sau cùng của Chúa Giêsu. Vừa vặn trong một hơi thở, ở bất cứ đâu.',
       ),
     },
     reflection: u('Stay with one image from this day. Which one?', 'Hãy ở lại với một hình ảnh của ngày này. Hình ảnh nào?'),
@@ -466,7 +533,7 @@ export const BRUGES_LESSONS_2: Lesson[] = [
 
   // ── 12: The Silence and the Morning ────────────────────────────────────
   {
-    id: 'bruges-12',
+    id: 'hl-12',
     title: u('The Silence and the Morning', 'Sự thinh lặng và buổi sáng'),
     minutes: 5,
     door: {
@@ -566,8 +633,8 @@ export const BRUGES_LESSONS_2: Lesson[] = [
       kind: 'prayer',
       prayerId: 'glory-be',
       note: u(
-        'The Church’s shortest shout of joy, born from this morning. Pray it when something good and undeserved happens — a safe landing, a sunrise from the jump seat.',
-        'Tiếng reo vui ngắn nhất của Giáo hội, sinh ra từ buổi sáng này. Hãy đọc kinh ấy khi một điều tốt lành bất ngờ xảy đến — một chuyến hạ cánh an toàn, một bình minh nhìn từ ghế tiếp viên.',
+        'The Church’s shortest shout of joy, born from this morning. Pray it when something good and undeserved happens — a safe arrival, an unexpected sunrise.',
+        'Tiếng reo vui ngắn nhất của Giáo hội, sinh ra từ buổi sáng này. Hãy đọc kinh ấy khi một điều tốt lành bất ngờ xảy đến — một chuyến đi bình an, một bình minh không hẹn trước.',
       ),
     },
     reflection: u('What would change, if death does not get the last word?', 'Điều gì sẽ thay đổi, nếu sự chết không có tiếng nói cuối cùng?'),
@@ -577,16 +644,95 @@ export const BRUGES_LESSONS_2: Lesson[] = [
     },
   },
 
+  // ── The Empty Tomb, Today ────────────────────────────────────────────────
+  {
+    id: 'hl-tomb',
+    title: u('The Empty Tomb, Today', 'Ngôi mộ trống, hôm nay'),
+    minutes: 4,
+    door: {
+      art: 'jerusalem-city',
+      line: u(
+        'In the middle of Jerusalem’s old city stands a church built around a tomb — because of what is not in it.',
+        'Giữa lòng phố cổ Giêrusalem là một ngôi nhà thờ xây quanh một ngôi mộ — vì điều không còn ở trong đó.',
+      ),
+    },
+    cards: [
+      {
+        id: 'c1',
+        art: 'jerusalem-city',
+        text: u(
+          'The Church of the Holy Sepulchre covers both Golgotha and the tomb — the hill of the cross and the garden grave, a hundred meters apart, under one roof since the year 335.',
+          'Nhà thờ Mộ Thánh bao trùm cả Gôngôtha lẫn ngôi mộ — ngọn đồi thập giá và phần mộ trong vườn, cách nhau trăm mét, dưới cùng một mái từ năm 335.',
+        ),
+      },
+      {
+        id: 'c2',
+        art: 'tomb-morning',
+        text: u(
+          'Pilgrims queue for hours to stoop into a small stone room and touch a shelf of rock where, for one Sabbath, the body of Jesus lay. The room is famous for being empty.',
+          'Khách hành hương xếp hàng nhiều giờ để cúi mình bước vào một gian đá nhỏ và chạm vào phiến đá nơi thân xác Chúa Giêsu đã nằm, trong một ngày Sabát duy nhất. Căn phòng ấy nổi tiếng vì nó trống không.',
+        ),
+      },
+      {
+        id: 'c3',
+        art: 'candle-single',
+        text: u(
+          'Every Easter, the church fills for the ancient vigil; candles pass flame to flame out the doors and into the streets — the same gesture as every baptism night, at the place where the morning began.',
+          'Mỗi lễ Phục Sinh, nhà thờ chật kín cho đêm canh thức cổ xưa; những ngọn nến chuyền lửa cho nhau ra tận cửa và tràn xuống các con phố — cùng một cử chỉ như mọi đêm Rửa tội, tại chính nơi buổi sáng ấy đã bắt đầu.',
+        ),
+      },
+      {
+        id: 'c4',
+        art: 'cathedral-door',
+        text: u(
+          'Few pilgrims ever stand in Jerusalem in person. It does not matter as much as it sounds: every altar in the world is connected to that empty shelf of stone. Whoever kneels at one has already arrived.',
+          'Ít người hành hương có dịp đặt chân đến Giêrusalem. Nhưng điều đó không quan trọng như ta tưởng: mọi bàn thờ trên thế giới đều nối liền với phiến đá trống ấy. Ai quỳ trước một bàn thờ là đã đến nơi rồi.',
+        ),
+      },
+    ],
+    questions: [
+      {
+        id: 'q1',
+        kind: 'choice',
+        afterCard: 1,
+        prompt: u('Why is the small stone room the most visited place in Christianity?', 'Vì sao gian đá nhỏ ấy là nơi được viếng thăm nhiều nhất của Kitô giáo?'),
+        options: [
+          { text: u('Because of what is not in it', 'Vì điều không còn ở trong đó') },
+          { text: u('Because of its architecture', 'Vì kiến trúc của nó') },
+        ],
+        answer: 0,
+        why: u(
+          'Every other shrine on earth holds something. This one holds an absence — and the absence is the good news.',
+          'Mọi đền thánh khác trên đời đều lưu giữ một điều gì đó. Nơi này lưu giữ một sự trống vắng — và chính sự trống vắng ấy là Tin Mừng.',
+        ),
+      },
+    ],
+    treasure: {
+      kind: 'art',
+      art: 'tomb-morning',
+      title: u('The morning that never ends', 'Buổi sáng không bao giờ tàn'),
+      note: u(
+        'Pilgrimages to the Holy Land all end here, where the story began its forever. Wherever you live, you carry the map now.',
+        'Mọi cuộc hành hương Đất Thánh đều kết thúc tại đây, nơi câu chuyện bắt đầu sự vĩnh cửu của nó. Dù bạn sống ở đâu, giờ đây bạn đã mang theo tấm bản đồ.',
+      ),
+    },
+    reflection: u('The tomb is empty. What would change if you believed it?', 'Ngôi mộ trống không. Điều gì sẽ thay đổi nếu bạn tin điều ấy?'),
+    deeper: {
+      ccc: [640],
+      note: u('On the empty tomb as the first sign.', 'Về ngôi mộ trống là dấu chỉ đầu tiên.'),
+    },
+  },
+
   // ── 13: The Blood of Bruges ────────────────────────────────────────────
   {
-    id: 'bruges-13',
+    id: 'hl-13',
     title: u('The Blood of Bruges', 'Máu Thánh Bruges'),
     minutes: 4,
     door: {
       art: 'basilica-bruges',
       line: u(
-        'Now you can return to the little basilica — and understand what you touched there.',
-        'Giờ bạn có thể trở lại vương cung thánh đường nhỏ ấy — và hiểu điều mình đã chạm đến ở đó.',
+        'Far from Jerusalem, in Belgium, a small basilica keeps a relic of this very story.',
+        'Xa Giêrusalem, ở nước Bỉ, một vương cung thánh đường nhỏ gìn giữ một thánh tích của chính câu chuyện này.',
       ),
     },
     cards: [
@@ -594,16 +740,16 @@ export const BRUGES_LESSONS_2: Lesson[] = [
         id: 'c1',
         art: 'basilica-bruges',
         text: u(
-          'On a quiet square in Bruges stands the Basilica of the Holy Blood. You walked in by accident, between canals and chocolate shops. Upstairs, in a side chapel, a priest held out a crystal vial.',
-          'Trên một quảng trường yên tĩnh ở Bruges là Vương cung thánh đường Máu Thánh. Bạn đã tình cờ bước vào, giữa những con kênh và những tiệm sô-cô-la. Trên lầu, trong một nhà nguyện nhỏ, một linh mục nâng một ống pha lê.',
+          'On a quiet square in Bruges, Belgium, stands the Basilica of the Holy Blood. Travelers wander in between the canals and the chocolate shops — and upstairs, in a side chapel, a priest holds out a crystal vial.',
+          'Trên một quảng trường yên tĩnh ở Bruges, nước Bỉ, là Vương cung thánh đường Máu Thánh. Du khách tình cờ ghé vào giữa những con kênh và những tiệm sô-cô-la — và trên lầu, trong một nhà nguyện nhỏ, một linh mục nâng một ống pha lê.',
         ),
       },
       {
         id: 'c2',
         art: 'relic-blood',
         text: u(
-          'Inside is a cloth said to hold the blood of Jesus, brought from Jerusalem after the Crusades, honored here for more than eight hundred years. It is a {{relic}} — and now you know whose blood, and what it bought.',
-          'Bên trong là tấm vải được tin là thấm Máu Chúa Giêsu, đưa về từ Giêrusalem sau các cuộc Thập tự chinh, được tôn kính tại đây hơn tám trăm năm. Đó là một {{relic}} — và giờ bạn đã biết là máu của ai, và máu ấy đã đổi lấy điều gì.',
+          'Inside is a cloth said to hold the blood of Jesus, brought from Jerusalem after the Crusades, honored there for more than eight hundred years. It is a {{relic}} — and now you know whose blood, and what it bought.',
+          'Bên trong là tấm vải được tin là thấm Máu Chúa Giêsu, đưa về từ Giêrusalem sau các cuộc Thập tự chinh, được tôn kính tại đó hơn tám trăm năm. Đó là một {{relic}} — và giờ bạn đã biết là máu của ai, và máu ấy đã đổi lấy điều gì.',
         ),
         terms: ['relic'],
       },
@@ -611,16 +757,16 @@ export const BRUGES_LESSONS_2: Lesson[] = [
         id: 'c3',
         art: 'relic-blood',
         text: u(
-          'Why do Catholics keep relics? For the same reason you keep a late grandparent’s ring, or your mother keeps your childhood photos. Love holds onto what belonged to the beloved. It is your family-altar instinct again, written in gold and crystal.',
-          'Vì sao người Công giáo gìn giữ thánh tích? Cũng vì lý do bạn giữ chiếc nhẫn của ông bà đã khuất, hay mẹ bạn giữ những tấm ảnh thuở nhỏ của bạn. Tình yêu luôn giữ lại những gì thuộc về người mình yêu. Lại là tấm lòng của bàn thờ gia đình — viết bằng vàng và pha lê.',
+          'Why do Catholics keep relics? For the same reason families keep a late grandparent’s ring, or a box of childhood photographs. Love holds onto what belonged to the beloved. It is the family-altar instinct again, written in gold and crystal.',
+          'Vì sao người Công giáo gìn giữ thánh tích? Cũng vì lý do các gia đình giữ chiếc nhẫn của ông bà đã khuất, hay chiếc hộp đựng những tấm ảnh thuở nhỏ. Tình yêu luôn giữ lại những gì thuộc về người mình yêu. Lại là tấm lòng của bàn thờ gia đình — viết bằng vàng và pha lê.',
         ),
       },
       {
         id: 'c4',
         art: 'relic-blood',
         text: u(
-          'You queued, you touched the glass, you felt something you had no words for. The Church would say: that day, grace got there before the explanations. The explanations have now caught up.',
-          'Bạn đã xếp hàng, chạm vào mặt kính, và cảm nhận một điều không gọi được thành tên. Giáo hội sẽ nói: hôm ấy, Ơn Chúa đã đến trước những lời giải thích. Giờ thì những lời giải thích đã theo kịp.',
+          'Pilgrims queue, touch the glass, and often feel something they have no words for. The Church would say: grace gets there before the explanations. If that has ever happened to you, in any holy place — now the explanations have caught up.',
+          'Khách hành hương xếp hàng, chạm vào mặt kính, và thường cảm nhận một điều không gọi được thành tên. Giáo hội sẽ nói: Ơn Chúa luôn đến trước những lời giải thích. Nếu điều ấy từng xảy đến với bạn, ở bất cứ nơi thánh nào — thì giờ đây những lời giải thích đã theo kịp.',
         ),
       },
     ],
@@ -659,11 +805,11 @@ export const BRUGES_LESSONS_2: Lesson[] = [
       kind: 'word',
       termId: 'relic',
       note: u(
-        'Next time you are in Bruges, you can climb those stairs knowing the whole story — from a garden, through a cross, to a crystal vial that a flight attendant once touched by accident.',
-        'Lần tới ở Bruges, bạn có thể bước lên những bậc thang ấy với trọn câu chuyện trong lòng — từ một khu vườn, qua một thập giá, đến ống pha lê mà một nữ tiếp viên hàng không từng tình cờ chạm vào.',
+        'If your road ever passes through Bruges, you can climb those stairs knowing the whole story — from a garden, through a cross, to a crystal vial on a quiet square.',
+        'Nếu con đường của bạn có ngày đi qua Bruges, bạn có thể bước lên những bậc thang ấy với trọn câu chuyện trong lòng — từ một khu vườn, qua một thập giá, đến ống pha lê trên một quảng trường yên tĩnh.',
       ),
     },
-    reflection: u('What did you feel that day in Bruges, honestly?', 'Hôm ấy ở Bruges, thật lòng bạn đã cảm thấy gì?'),
+    reflection: u('Have you ever touched something that felt holy? What was it?', 'Bạn từng chạm vào điều gì mang cảm giác thánh thiêng chưa? Đó là gì?'),
     deeper: {
       ccc: [1674],
       note: u('On the veneration of relics in Catholic life.', 'Về việc tôn kính thánh tích trong đời sống Công giáo.'),
@@ -672,7 +818,7 @@ export const BRUGES_LESSONS_2: Lesson[] = [
 
   // ── Vigil: He Goes Before You ──────────────────────────────────────────
   {
-    id: 'bruges-vigil',
+    id: 'hl-vigil',
     vigil: true,
     title: u('Vigil: He Goes Before You', 'Canh thức: Ngài đi trước bạn'),
     minutes: 6,

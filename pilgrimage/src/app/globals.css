@@ -11,8 +11,14 @@
   --incense: #8a8578;
 }
 
+:root {
+  color-scheme: dark; /* native form controls, scrollbars, etc. render dark */
+}
+
 html {
   background: var(--lapis);
+  -webkit-text-size-adjust: 100%; /* don't let iOS reflow our type on rotate */
+  min-height: 100%;
 }
 
 body {
@@ -20,7 +26,44 @@ body {
     radial-gradient(120% 90% at 50% 0%, rgba(217, 164, 65, 0.07), transparent 60%),
     var(--lapis);
   color: var(--ivory);
+  min-height: 100dvh;
   -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* App-like: no rubber-band white gap, no long-press image/callout menus. */
+  overscroll-behavior-y: none;
+  -webkit-touch-callout: none;
+}
+
+/* Display type carries the calm: stone-carved letters want a little air. */
+.font-display {
+  letter-spacing: 0.01em;
+}
+/* Story type is for reading: generous, never cramped. */
+.font-story {
+  letter-spacing: 0.003em;
+}
+
+/* Selection and the long-press callout still belong on real text inputs. */
+input,
+textarea {
+  -webkit-touch-callout: default;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Safe-area helpers for the notch and home indicator in the installed app. */
+.pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+.pb-nav {
+  padding-bottom: calc(6rem + env(safe-area-inset-bottom));
+}
+/* For full-screen headers (lesson/Mass/rosary): keep the usual 1rem gap and
+   push it below the status bar when running as an installed app. */
+.pt-safe-bar {
+  padding-top: calc(1rem + env(safe-area-inset-top));
 }
 
 /* Visible keyboard focus, always */
@@ -53,19 +96,32 @@ body {
   from { opacity: 0; transform: scale(0.4); }
   to { opacity: 1; transform: scale(1); }
 }
+@keyframes candle-ambient {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
 .light-bloom {
-  animation: light-bloom 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  /* bloom once, then let the light breathe */
+  animation:
+    light-bloom 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    candle-ambient 3s ease-in-out 1.6s infinite;
 }
 
-/* ─── The passport stamp: thunk + slow ink bleed ─────────────────────────── */
+@keyframes candle-glow-pulse {
+  0%, 100% { box-shadow: 0 0 40px rgba(217,164,65,0.22); }
+  50% { box-shadow: 0 0 70px rgba(217,164,65,0.5), 0 0 20px rgba(217,164,65,0.25); }
+}
+.candle-glow-pulse {
+  animation: candle-glow-pulse 3s ease-in-out infinite;
+}
+
+/* ─── The passport stamp: settles calmly — never wobbles or overshoots ───── */
 @keyframes stamp-press {
-  0% { opacity: 0; transform: scale(2.1) rotate(-14deg); filter: blur(2px); }
-  55% { opacity: 1; transform: scale(0.96) rotate(-8deg); filter: blur(0); }
-  70% { transform: scale(1.03) rotate(-8deg); }
+  0% { opacity: 0; transform: scale(1.15) rotate(-8deg); }
   100% { opacity: 1; transform: scale(1) rotate(-8deg); }
 }
 .stamp-press {
-  animation: stamp-press 900ms cubic-bezier(0.34, 1.3, 0.64, 1) forwards;
+  animation: stamp-press 550ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 @keyframes ink-bleed {
   from { opacity: 0.55; filter: blur(0.4px); }
@@ -77,11 +133,11 @@ body {
 
 /* ─── Story cards: heavy paper ───────────────────────────────────────────── */
 @keyframes page-in {
-  from { opacity: 0; transform: translateX(26px) rotate(0.4deg); }
-  to { opacity: 1; transform: translateX(0) rotate(0); }
+  from { opacity: 0; transform: translateX(12px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 .page-in {
-  animation: page-in 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: page-in 300ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /* Correct answers glow gold briefly */
@@ -104,6 +160,94 @@ body {
   animation: shard-fall var(--dur, 3.2s) linear var(--delay, 0s) both;
 }
 
+/* Sacred art: a slow, living drift (Ken Burns), and touch parallax */
+@keyframes art-drift {
+  0% { transform: scale(1.06) translate3d(0, 0, 0); }
+  100% { transform: scale(1.12) translate3d(0, -2.2%, 0); }
+}
+.art-drift {
+  animation: art-drift 22s ease-in-out infinite alternate;
+}
+.art-parallax {
+  /* the layer the pointer/tilt nudges; over-scaled so edges never show.
+     The nudge is small and slow — depth, never shake. */
+  transform: scale(1.12) translate3d(calc(var(--px, 0) * 5px), calc(var(--py, 0) * 5px), 0);
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* Fire: a gentle sway layered on top of the turbulence displacement, so the
+   whole flame leans and breathes, not just ripples at the edges. */
+@keyframes flame-sway {
+  0%, 100% { transform: rotate(-1.6deg) scaleY(0.99); }
+  30% { transform: rotate(1.4deg) scaleY(1.04); }
+  60% { transform: rotate(-0.6deg) scaleY(1.01); }
+}
+.flame-sway {
+  animation: flame-sway 3.8s ease-in-out infinite;
+}
+
+/* Embers lifting off the fire and fading into the dark. */
+@keyframes ember-rise {
+  0% { transform: translate3d(0, 0, 0); opacity: 0; }
+  15% { opacity: 0.9; }
+  100% { transform: translate3d(var(--x, 8px), -150px, 0); opacity: 0; }
+}
+.ember {
+  animation: ember-rise 4.5s ease-out infinite;
+  animation-delay: var(--d, 0s);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* The guide's voice: a band of light that breathes while it reads, and a tiny
+   three-bar equalizer beside the label. */
+@keyframes guide-glow {
+  0%, 100% { opacity: 0.35; transform: scaleY(0.7); }
+  50% { opacity: 0.95; transform: scaleY(1); }
+}
+.guide-glow {
+  transform-origin: top;
+  animation: guide-glow 2.6s ease-in-out infinite;
+  box-shadow: 0 0 18px 2px rgba(217, 164, 65, 0.5);
+}
+.guide-eq {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 10px;
+}
+.guide-eq i {
+  width: 2px;
+  height: 100%;
+  background: currentColor;
+  border-radius: 1px;
+  transform-origin: bottom;
+  animation: guide-eq 0.9s ease-in-out infinite;
+}
+.guide-eq i:nth-child(2) { animation-delay: 0.15s; }
+.guide-eq i:nth-child(3) { animation-delay: 0.3s; }
+@keyframes guide-eq {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+/* Bottom sheets: rise like a held breath, never pop */
+@keyframes sheet-up {
+  from { transform: translateY(48px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.sheet-up {
+  animation: sheet-up 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes veil-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.veil-in {
+  animation: veil-in 240ms ease-out both;
+}
+
 /* Map: the road glows softly */
 @keyframes road-dash {
   to { stroke-dashoffset: -24; }
@@ -122,10 +266,15 @@ body {
 /* ─── Reduced motion: respect it everywhere ──────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .flame, .light-bloom, .stamp-press, .ink-bleed, .page-in, .gold-glow,
-  .shard, .road-path, .soft-glow {
+  .shard, .road-path, .soft-glow, .art-drift, .flame-sway, .ember,
+  .guide-glow, .guide-eq i, .candle-glow-pulse, .sheet-up, .veil-in {
     animation: none !important;
   }
+  .guide-glow { opacity: 0.7; }
   .light-bloom, .stamp-press, .ink-bleed { opacity: 1; }
+  .candle-glow-pulse { box-shadow: 0 0 40px rgba(217,164,65,0.3); }
+  .ember { opacity: 0.6; }
+  .art-parallax { transform: scale(1.06); transition: none; }
   * {
     transition-duration: 0.01ms !important;
   }

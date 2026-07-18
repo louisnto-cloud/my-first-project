@@ -277,6 +277,36 @@ export const ARTWORKS: Artwork[] = [
     title: { en: 'The Pietà', vi: 'Tượng Đức Mẹ Sầu Bi', viStatus: 'verified' },
     credit: 'Original scene, after Michelangelo’s Pietà (1499).',
   },
+  {
+    id: 'sinai-bush',
+    title: { en: 'The burning bush', vi: 'Bụi gai bốc cháy', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'sinai-mountain',
+    title: { en: 'Mount Sinai', vi: 'Núi Sinai', viStatus: 'verified' },
+    credit: 'Original scene. Future photo: Wikimedia Commons, St. Catherine’s Monastery, Sinai.',
+  },
+  {
+    id: 'jerusalem-city',
+    title: { en: 'Jerusalem', vi: 'Giêrusalem', viStatus: 'verified' },
+    credit: 'Original scene. Future photo: Wikimedia Commons, the Old City of Jerusalem.',
+  },
+  {
+    id: 'lourdes-grotto',
+    title: { en: 'The grotto of Lourdes', vi: 'Hang đá Lộ Đức', viStatus: 'verified' },
+    credit: 'Original scene. Future photo: Wikimedia Commons, the Grotto of Massabielle, Lourdes.',
+  },
+  {
+    id: 'camino-way',
+    title: { en: 'The Way', vi: 'Con đường Camino', viStatus: 'verified' },
+    credit: 'Original scene.',
+  },
+  {
+    id: 'santiago',
+    title: { en: 'Santiago de Compostela', vi: 'Santiago de Compostela', viStatus: 'verified' },
+    credit: 'Original scene. Future photo: Wikimedia Commons, Cathedral of Santiago de Compostela.',
+  },
   { id: 'symbol-water', title: { en: 'Water', vi: 'Nước', viStatus: 'verified' }, credit: 'Original symbol.' },
   { id: 'symbol-light', title: { en: 'Light', vi: 'Ánh sáng', viStatus: 'verified' }, credit: 'Original symbol.' },
   { id: 'symbol-bread', title: { en: 'Bread', vi: 'Bánh', viStatus: 'verified' }, credit: 'Original symbol.' },

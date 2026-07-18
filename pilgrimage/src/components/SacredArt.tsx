@@ -31,6 +31,45 @@ function Halo({ cx, cy, r }: { cx: number; cy: number; r: number }) {
   );
 }
 
+// A single tongue of flame: base at (cx,cy), rising to height h, width w,
+// leaning by `lean` degrees. Used to build the burning bush from many layered
+// tongues so it reads as living fire rather than a flat blob.
+function Tongue({
+  cx,
+  cy,
+  h,
+  w,
+  lean = 0,
+  fill,
+  opacity = 1,
+  flicker = false,
+}: {
+  cx: number;
+  cy: number;
+  h: number;
+  w: number;
+  lean?: number;
+  fill: string;
+  opacity?: number;
+  flicker?: boolean;
+}) {
+  // A teardrop with a curved, slightly hooked tip — the silhouette of flame.
+  const d = `M0 0
+    C ${-w * 0.55} ${-h * 0.28}, ${-w * 0.5} ${-h * 0.62}, ${-w * 0.12} ${-h * 0.86}
+    C ${-w * 0.05} ${-h * 0.93}, ${w * 0.06} ${-h * 0.98}, 0 ${-h}
+    C ${w * 0.04} ${-h * 0.97}, ${w * 0.5} ${-h * 0.66}, ${w * 0.55} ${-h * 0.3}
+    C ${w * 0.5} ${-h * 0.1}, ${w * 0.3} 0, 0 0 Z`;
+  return (
+    <path
+      d={d}
+      fill={fill}
+      opacity={opacity}
+      transform={`translate(${cx} ${cy}) rotate(${lean})`}
+      className={flicker ? 'flame' : undefined}
+    />
+  );
+}
+
 function Scene({ kind }: { kind: ArtKind }) {
   switch (kind) {
     case 'cathedral-hanoi':
@@ -277,7 +316,14 @@ function Scene({ kind }: { kind: ArtKind }) {
           <circle cx="200" cy="140" r="90" fill={GOLD} opacity="0.08" />
           <circle cx="200" cy="140" r="52" fill={GOLD} opacity="0.12" />
           <rect x="184" y="152" width="32" height="100" rx="5" fill={IVORY} opacity="0.92" />
-          <path d="M200 96c12 15 18 25 18 35a18 18 0 0 1-36 0c0-10 6-20 18-35z" fill={GOLD} className="flame" />
+          {/* a real, living candle flame */}
+          <g filter="url(#sa-fire)" className="flame-sway" style={{ transformOrigin: '200px 150px' }}>
+            <path d="M200 92c14 18 20 30 20 41a20 20 0 0 1-40 0c0-11 6-23 20-41z" fill="url(#sa-flame-outer)" />
+            <g filter="url(#sa-bloom)">
+              <path d="M200 104c9 12 13 21 13 28a13 13 0 0 1-26 0c0-7 4-16 13-28z" fill="url(#sa-flame-inner)" className="flame" />
+              <path d="M200 116c5 7 8 12 8 17a8 8 0 0 1-16 0c0-5 3-10 8-17z" fill={IVORY} />
+            </g>
+          </g>
           <ellipse cx="200" cy="256" rx="70" ry="8" fill={GOLD} opacity="0.12" />
         </>
       );
@@ -833,14 +879,16 @@ function Scene({ kind }: { kind: ArtKind }) {
             <path d="M150 50q50 18 100 0" fill="none" />
             <path d="M140 70q60 22 120 0" fill="none" />
           </g>
-          {/* gathered in a half circle, a small flame above each */}
+          {/* gathered in a half circle, a small tongue of fire above each */}
           {[70, 124, 178, 232, 286, 340].map((x, i) => (
             <g key={x}>
-              <path
-                d={`M${x} ${150 - (i % 2) * 10}c5 7 8 11 8 15a8 8 0 0 1-16 0c0-4 3-8 8-15z`}
-                fill={GOLD}
-                className="flame"
-              />
+              <g filter="url(#sa-fire)" style={{ transformOrigin: `${x}px ${150 - (i % 2) * 10}px` }}>
+                <path
+                  d={`M${x} ${146 - (i % 2) * 10}c6 9 9 14 9 19a9 9 0 0 1-18 0c0-5 3-10 9-19z`}
+                  fill="url(#sa-flame-inner)"
+                  className="flame"
+                />
+              </g>
               <circle cx={x} cy={186 - (i % 2) * 10} r="12" fill={i === 2 ? GARNET : i % 2 ? '#22305c' : '#1a2240'} />
               <path d={`M${x - 16} 250v-${36 - (i % 2) * 10}c0-12 7-20 16-20s16 8 16 20v${36 - (i % 2) * 10}z`} fill={i === 2 ? GARNET : i % 2 ? '#22305c' : '#1a2240'} />
             </g>
@@ -1192,9 +1240,6 @@ function Scene({ kind }: { kind: ArtKind }) {
           {/* the cross above, the third strand of the cord */}
           <path d="M200 52v34M188 64h24" stroke={GOLD} strokeWidth="5" strokeLinecap="round" />
           <path d="M200 92v22" stroke={GOLD} strokeWidth="2" strokeDasharray="2 6" opacity="0.7" />
-          <text x="200" y="262" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontStyle="italic" fontSize="17" fill={IVORY} opacity="0.6">
-            10 · 2026
-          </text>
         </>
       );
 
@@ -1387,6 +1432,283 @@ function Scene({ kind }: { kind: ArtKind }) {
         </>
       );
 
+    case 'sinai-bush':
+      return (
+        <>
+          <defs>
+            <radialGradient id="bushSky" cx="50%" cy="62%" r="75%">
+              <stop offset="0%" stopColor="#2a2440" />
+              <stop offset="45%" stopColor="#161a33" />
+              <stop offset="100%" stopColor="#0a0e1e" />
+            </radialGradient>
+            <radialGradient id="bushGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor={GOLD} stopOpacity="0.55" />
+              <stop offset="35%" stopColor={GOLD} stopOpacity="0.22" />
+              <stop offset="100%" stopColor={GOLD} stopOpacity="0" />
+            </radialGradient>
+            <linearGradient id="bushOuter" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0%" stopColor={GARNET} />
+              <stop offset="55%" stopColor="#b5572e" />
+              <stop offset="100%" stopColor={GOLD} />
+            </linearGradient>
+            <linearGradient id="bushInner" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0%" stopColor="#c9772f" />
+              <stop offset="60%" stopColor={GOLD} />
+              <stop offset="100%" stopColor={IVORY} />
+            </linearGradient>
+            <linearGradient id="bushGround" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#2a2336" />
+              <stop offset="100%" stopColor="#0c1020" />
+            </linearGradient>
+          </defs>
+
+          {/* night sky and stars */}
+          <rect width="400" height="300" fill="url(#bushSky)" />
+          <Stars seed={61} n={26} />
+          <circle cx="64" cy="50" r="13" fill={IVORY} opacity="0.55" />
+          <circle cx="60" cy="47" r="11" fill="url(#bushSky)" />
+
+          {/* Mount Sinai, low on the horizon, lit faintly by the fire */}
+          <path d="M0 232L96 150l46 42 40-30 70 60 60-26 88 56v62H0z" fill="#10142a" />
+          <path d="M96 150l46 42 12-9-40-50z" fill="#161b34" opacity="0.8" />
+
+          {/* warm ground, and the great glow of holy fire */}
+          <rect x="0" y="226" width="400" height="74" fill="url(#bushGround)" />
+          <ellipse cx="200" cy="232" rx="150" ry="26" fill={GOLD} opacity="0.16" />
+          <rect x="40" y="20" width="320" height="280" fill="url(#bushGlow)" />
+
+          {/* the branches — visible through the flames, and not consumed */}
+          <g stroke="#241d14" strokeWidth="5" strokeLinecap="round" fill="none" opacity="0.9">
+            <path d="M200 236V150" />
+            <path d="M200 210c-22-6-34-22-40-44M200 198c20-6 33-20 40-40M200 178c-14-6-22-16-26-30M200 170c14-6 22-16 26-28" />
+          </g>
+          {/* small leaves that stay green-grey: the bush survives the fire */}
+          {[
+            [166, 168],
+            [236, 162],
+            [176, 196],
+            [228, 192],
+            [200, 150],
+          ].map(([x, y], i) => (
+            <path
+              key={i}
+              d={`M${x} ${y} q -9 -7 0 -16 q 9 9 0 16 Z`}
+              fill={INCENSE}
+              opacity={0.7}
+            />
+          ))}
+
+          {/* the fire itself, layered: deep tongues, gold body, ivory heart.
+              The whole mass writhes via the living-fire filter, with a gentle
+              sway on top — so it dances rather than merely flickers. */}
+          <g filter="url(#sa-fire)" className="flame-sway" style={{ transformOrigin: '200px 250px' }}>
+            {/* outer garnet→gold tongues form the bush silhouette */}
+            <Tongue cx={150} cy={244} h={120} w={66} lean={-22} fill="url(#sa-flame-outer)" opacity={0.95} />
+            <Tongue cx={250} cy={244} h={122} w={66} lean={22} fill="url(#sa-flame-outer)" opacity={0.95} />
+            <Tongue cx={176} cy={250} h={150} w={70} lean={-9} fill="url(#sa-flame-outer)" />
+            <Tongue cx={226} cy={250} h={152} w={70} lean={9} fill="url(#sa-flame-outer)" />
+            <Tongue cx={200} cy={252} h={172} w={74} lean={0} fill="url(#sa-flame-outer)" />
+            {/* mid gold body */}
+            <Tongue cx={184} cy={246} h={120} w={48} lean={-10} fill={GOLD} opacity={0.95} flicker />
+            <Tongue cx={216} cy={246} h={122} w={48} lean={10} fill={GOLD} opacity={0.95} flicker />
+            <Tongue cx={200} cy={248} h={146} w={50} lean={0} fill={GOLD} flicker />
+            {/* a few side tongues licking outward */}
+            <Tongue cx={128} cy={238} h={70} w={34} lean={-46} fill="url(#sa-flame-outer)" opacity={0.85} flicker />
+            <Tongue cx={272} cy={238} h={72} w={34} lean={46} fill="url(#sa-flame-outer)" opacity={0.85} flicker />
+            {/* ivory heart of the fire, blooming with light */}
+            <g filter="url(#sa-bloom)">
+              <Tongue cx={200} cy={240} h={104} w={26} lean={0} fill="url(#sa-flame-inner)" flicker />
+              <Tongue cx={191} cy={236} h={74} w={16} lean={-8} fill={IVORY} opacity={0.85} flicker />
+              <Tongue cx={209} cy={236} h={76} w={16} lean={8} fill={IVORY} opacity={0.85} flicker />
+            </g>
+          </g>
+
+          {/* embers, drifting up off the fire into the dark */}
+          {[
+            [168, 200],
+            [238, 210],
+            [200, 190],
+            [150, 215],
+            [256, 205],
+            [214, 198],
+            [186, 208],
+          ].map(([x, y], i) => (
+            <circle
+              key={i}
+              cx={x}
+              cy={y}
+              r={1.4 + (i % 3) * 0.7}
+              fill={i % 2 ? GOLD : IVORY}
+              className="ember"
+              style={{ ['--d' as string]: `${i * 0.9}s`, ['--x' as string]: `${(i % 2 ? 1 : -1) * (6 + i)}px` }}
+            />
+          ))}
+        </>
+      );
+
+    case 'sinai-mountain':
+      return (
+        <>
+          <rect width="400" height="300" fill="#0c1122" />
+          <Stars seed={67} n={26} />
+          {/* the mountain of God */}
+          <path d="M-20 300L150 80l60 70 40-40 170 190z" fill="#141b33" />
+          <path d="M150 80l60 70 40-40" fill="none" stroke={INCENSE} strokeWidth="1.5" opacity="0.4" />
+          {/* glory resting on the summit */}
+          <circle cx="150" cy="74" r="26" fill={GOLD} opacity="0.18" />
+          <circle cx="150" cy="74" r="10" fill={GOLD} opacity="0.6" />
+          {/* the monastery at its foot, one lit window */}
+          <g fill="#1a2240">
+            <rect x="284" y="226" width="64" height="54" />
+            <path d="M284 226l32-20 32 20z" />
+          </g>
+          <path d="M316 196v10M312 200h8" stroke={GOLD} strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M306 248a5 7 0 0 1 10 0v14h-10z" fill={GOLD} opacity="0.9" />
+          {/* the pilgrim path up */}
+          <path d="M60 290C100 240 120 180 148 96" stroke={GOLD} strokeWidth="2" strokeDasharray="1 9" fill="none" opacity="0.5" />
+        </>
+      );
+
+    case 'jerusalem-city':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          <Stars seed={71} n={16} />
+          <circle cx="320" cy="56" r="18" fill={IVORY} opacity="0.85" />
+          <circle cx="313" cy="51" r="15" fill={LAPIS} />
+          {/* the old city on its hill: walls, domes, towers */}
+          <ellipse cx="200" cy="320" rx="270" ry="110" fill="#141b33" />
+          <g fill="#1a2240">
+            <rect x="40" y="190" width="320" height="44" />
+            <rect x="40" y="180" width="14" height="54" />
+            <rect x="346" y="180" width="14" height="54" />
+            <rect x="190" y="170" width="20" height="64" />
+          </g>
+          {/* crenellations */}
+          {[60, 84, 108, 132, 156, 224, 248, 272, 296, 320].map((x) => (
+            <rect key={x} x={x} y="184" width="10" height="6" fill="#1a2240" />
+          ))}
+          {/* domes within */}
+          <path d="M96 190a26 26 0 0 1 52 0z" fill="#22305c" stroke={GOLD} strokeWidth="1.5" />
+          <path d="M122 158v8" stroke={GOLD} strokeWidth="2" strokeLinecap="round" />
+          <path d="M252 190a32 30 0 0 1 64 0z" fill="#22305c" stroke={GOLD} strokeWidth="1.5" />
+          <path d="M284 150v12M279 155h10" stroke={GOLD} strokeWidth="2" strokeLinecap="round" />
+          {/* the gate, open */}
+          <path d="M188 234v-30a12 16 0 0 1 24 0v30z" fill={GOLD} opacity="0.85" />
+          {/* olive trees outside the walls */}
+          {[70, 330].map((x) => (
+            <g key={x}>
+              <path d={`M${x} 262v-16`} stroke="#1a2240" strokeWidth="4" strokeLinecap="round" />
+              <circle cx={x} cy={238} r="12" fill="#1a2240" />
+            </g>
+          ))}
+        </>
+      );
+
+    case 'lourdes-grotto':
+      return (
+        <>
+          <rect width="400" height="300" fill="#0c1122" />
+          {/* the rock face and the grotto */}
+          <path d="M0 0h400v300H320c10-90-20-150-90-150S130 210 140 300H0z" fill="#141b33" />
+          <path d="M140 300c-10-90 20-150 90-150s100 60 90 150z" fill="#080d1a" />
+          {/* Our Lady in the niche above */}
+          <ellipse cx="318" cy="92" rx="30" ry="38" fill="#1a2240" />
+          <g>
+            <circle cx="318" cy="74" r="9" fill={IVORY} />
+            <path d="M304 124v-32c0-12 6-20 14-20s14 8 14 20v32z" fill={IVORY} opacity="0.92" />
+            <Halo cx={318} cy={74} r={13} />
+          </g>
+          {/* candles at the grotto mouth */}
+          {[170, 196, 222, 248, 274].map((x, i) => (
+            <g key={x}>
+              <rect x={x - 3} y={262 - (i % 2) * 8} width="6" height={28 + (i % 2) * 8} rx="2" fill={IVORY} opacity="0.9" />
+              <path
+                d={`M${x} ${248 - (i % 2) * 8}c4 5 6 9 6 12a6 6 0 0 1-12 0c0-3 2-7 6-12z`}
+                fill={GOLD}
+                className="flame"
+              />
+            </g>
+          ))}
+          <circle cx="222" cy="252" r="60" fill={GOLD} opacity="0.1" />
+          {/* the spring, running out of the rock */}
+          <path d="M150 300q40-14 70-8t60 8" stroke="#22305c" strokeWidth="8" fill="none" opacity="0.9" />
+          <path d="M160 296q34-10 60-6" stroke={IVORY} strokeWidth="1.5" fill="none" opacity="0.4" />
+        </>
+      );
+
+    case 'camino-way':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          {/* dawn over rolling country */}
+          <circle cx="200" cy="160" r="56" fill={GOLD} opacity="0.65" />
+          <circle cx="200" cy="160" r="90" fill={GOLD} opacity="0.12" />
+          <path d="M0 210q100-44 200-30t200 18v102H0z" fill="#141b33" />
+          <path d="M0 250q120-26 400-10v60H0z" fill="#10162b" />
+          {/* the path, walking into the light */}
+          <path d="M190 300q6-60 10-110" stroke={IVORY} strokeWidth="14" strokeLinecap="round" opacity="0.25" />
+          <path d="M196 300q4-56 8-106" stroke={GOLD} strokeWidth="2" strokeDasharray="2 10" fill="none" opacity="0.7" />
+          {/* the waymark: a scallop shell */}
+          <g transform="translate(90, 232)">
+            <rect x="-8" y="0" width="16" height="48" fill="#1a2240" />
+            <circle cx="0" cy="-12" r="20" fill="#1a2240" />
+            <g stroke={GOLD} strokeWidth="2.5" strokeLinecap="round">
+              {Array.from({ length: 5 }, (_, i) => {
+                const a = -Math.PI / 2 + (i - 2) * 0.4;
+                return <line key={i} x1="0" y1="-4" x2={Math.cos(a) * 14} y2={-12 + Math.sin(a) * 10} />;
+              })}
+            </g>
+          </g>
+          {/* a pilgrim, mid-stride */}
+          <g fill="#1a2240">
+            <circle cx="206" cy="206" r="9" />
+            <path d="M196 258v-30c0-10 5-16 10-16s10 6 10 16v30z" />
+            <path d="M214 226l12 30M198 228l-8 28" stroke="#1a2240" strokeWidth="5" strokeLinecap="round" />
+          </g>
+          <path d="M218 200v54" stroke={INCENSE} strokeWidth="3" strokeLinecap="round" opacity="0.8" />
+        </>
+      );
+
+    case 'santiago':
+      return (
+        <>
+          <rect width="400" height="300" fill={LAPIS} />
+          <Stars seed={73} n={14} />
+          {/* the baroque west front: two ornate towers */}
+          <g fill="#141b33">
+            <rect x="116" y="90" width="52" height="180" />
+            <rect x="232" y="90" width="52" height="180" />
+            <rect x="168" y="140" width="64" height="130" />
+            <path d="M116 90l26-34 26 34zM232 90l26-34 26 34z" />
+          </g>
+          <path d="M142 44v14M136 49h12M258 44v14M252 49h12" stroke={GOLD} strokeWidth="2" strokeLinecap="round" />
+          <g fill={GOLD} opacity="0.9">
+            <path d="M132 124a8 11 0 0 1 16 0v22h-16z" />
+            <path d="M248 124a8 11 0 0 1 16 0v22h-16z" />
+            <path d="M132 180a8 11 0 0 1 16 0v22h-16z" />
+            <path d="M248 180a8 11 0 0 1 16 0v22h-16z" />
+            <path d="M186 210a14 18 0 0 1 28 0v50h-28z" />
+          </g>
+          {/* the scallop above the door */}
+          <g transform="translate(200, 184)" stroke={GOLD} strokeWidth="2" strokeLinecap="round">
+            {Array.from({ length: 5 }, (_, i) => {
+              const a = -Math.PI / 2 + (i - 2) * 0.45;
+              return <line key={i} x1="0" y1="8" x2={Math.cos(a) * 16} y2={Math.sin(a) * 12} />;
+            })}
+          </g>
+          {/* the square, with small pilgrims arriving */}
+          <rect x="0" y="268" width="400" height="32" fill="#10162b" />
+          {[80, 320].map((x) => (
+            <g key={x} fill="#1a2240">
+              <circle cx={x} cy={252} r="7" />
+              <path d={`M${x - 9} 280v-18c0-7 4-12 9-12s9 5 9 12v18z`} />
+            </g>
+          ))}
+          <ellipse cx="200" cy="272" rx="140" ry="7" fill={GOLD} opacity="0.1" />
+        </>
+      );
+
     case 'symbol-water':
       return (
         <>
@@ -1452,16 +1774,92 @@ function Scene({ kind }: { kind: ArtKind }) {
   }
 }
 
+// A shared treatment that lifts every scene out of "flat vector" territory:
+// painterly edge displacement, a warm bloom, film grain, and a gallery
+// vignette — light and texture, the difference between clip-art and craft.
+function Treatment({ still }: { still: boolean }) {
+  return (
+    <defs>
+      {/* gentle organic warp so edges aren't mechanically perfect */}
+      <filter id="sa-paint" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="7" result="n" />
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      {/* living fire: turbulence whose frequency breathes, driving a
+          displacement map so flame edges undulate and lick like real fire */}
+      <filter id="sa-fire" x="-40%" y="-50%" width="180%" height="200%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.018 0.045" numOctaves="3" seed="4" result="fn">
+          {!still && (
+            <animate
+              attributeName="baseFrequency"
+              dur="5.5s"
+              values="0.018 0.045; 0.024 0.07; 0.02 0.05; 0.018 0.045"
+              repeatCount="indefinite"
+            />
+          )}
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="fn" scale="16" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      {/* fine film grain, rendered as its own tile and blended soft */}
+      <filter id="sa-grain">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="t" />
+        <feColorMatrix in="t" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.5 0" />
+      </filter>
+      {/* warm light bloom for flames, halos, gilding */}
+      <filter id="sa-bloom" x="-40%" y="-40%" width="180%" height="180%">
+        <feGaussianBlur stdDeviation="5" result="b" />
+        <feMerge>
+          <feMergeNode in="b" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+      {/* a soft inner darkening at the edges, like a lit painting */}
+      <radialGradient id="sa-vignette" cx="50%" cy="44%" r="78%">
+        <stop offset="0%" stopColor="#000000" stopOpacity="0" />
+        <stop offset="72%" stopColor="#000000" stopOpacity="0" />
+        <stop offset="100%" stopColor="#05070f" stopOpacity="0.5" />
+      </radialGradient>
+      {/* a hair of warm light pooled at the top, where grace enters */}
+      <radialGradient id="sa-light" cx="50%" cy="8%" r="60%">
+        <stop offset="0%" stopColor={IVORY} stopOpacity="0.08" />
+        <stop offset="100%" stopColor={IVORY} stopOpacity="0" />
+      </radialGradient>
+      {/* shared flame gradients, used by every fire in the app */}
+      <linearGradient id="sa-flame-outer" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stopColor={GARNET} />
+        <stop offset="55%" stopColor="#b5572e" />
+        <stop offset="100%" stopColor={GOLD} />
+      </linearGradient>
+      <linearGradient id="sa-flame-inner" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stopColor="#c9772f" />
+        <stop offset="60%" stopColor={GOLD} />
+        <stop offset="100%" stopColor={IVORY} />
+      </linearGradient>
+    </defs>
+  );
+}
+
+function prefersReducedMotion(): boolean {
+  return (
+    typeof window !== 'undefined' &&
+    !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+  );
+}
+
 export function SacredArt({
   kind,
   className = '',
   rounded = true,
+  drift = false,
 }: {
   kind: ArtKind;
   className?: string;
   rounded?: boolean;
+  /** Slow Ken-Burns drift — for large hero/story art, not small icons. */
+  drift?: boolean;
 }) {
   const art = artworkById(kind);
+  const still = prefersReducedMotion();
   return (
     <svg
       viewBox="0 0 400 300"
@@ -1470,7 +1868,24 @@ export function SacredArt({
       aria-label={art?.title.en}
       className={`block h-full w-full ${rounded ? 'rounded-2xl' : ''} ${className}`}
     >
-      <Scene kind={kind} />
+      <Treatment still={still} />
+      <g className={drift ? 'art-drift' : undefined} style={{ transformOrigin: 'center' }}>
+        <g filter="url(#sa-paint)">
+          <Scene kind={kind} />
+        </g>
+        {/* warm pooled light, then a gallery vignette */}
+        <rect width="400" height="300" fill="url(#sa-light)" pointerEvents="none" />
+        <rect width="400" height="300" fill="url(#sa-vignette)" pointerEvents="none" />
+        {/* film grain, blended soft so it reads as canvas, not noise */}
+        <rect
+          width="400"
+          height="300"
+          filter="url(#sa-grain)"
+          opacity="0.14"
+          style={{ mixBlendMode: 'soft-light' }}
+          pointerEvents="none"
+        />
+      </g>
     </svg>
   );
 }

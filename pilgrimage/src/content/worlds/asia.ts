@@ -1,12 +1,118 @@
 import type { L, Lesson } from '../types';
 
 // ─── Bonus world · "Saints of Asia" ─────────────────────────────────────────
-// Unlocked after the Hà Nội stamp: people from her own homeland among the
-// saints. Lanterns on dark water.
+// Unlocked after the first stamp: the faith's story in the East, and the
+// saints it gave the whole Church. Lanterns on dark water.
 
 const u = (en: string, vi: string): L => ({ en, vi, viStatus: 'unverified' });
 
 export const ASIA_LESSONS: Lesson[] = [
+  // ── The Faith Comes to Việt Nam ──────────────────────────────────────────
+  {
+    id: 'asia-vn',
+    title: u('The Faith Comes to Việt Nam', 'Đức tin đến Việt Nam'),
+    minutes: 5,
+    door: {
+      art: 'lake-evening',
+      line: u(
+        'Four hundred years ago, small boats reached the coast of Việt Nam carrying a story.',
+        'Bốn trăm năm trước, những con thuyền nhỏ cập bờ biển Việt Nam, mang theo một câu chuyện.',
+      ),
+    },
+    cards: [
+      {
+        id: 'c1',
+        art: 'lake-evening',
+        text: u(
+          'In the 1600s, missionaries came to Việt Nam with the {{gospel}}. Among them was Alexandre de Rhodes — the priest whose work helped shape chữ Quốc ngữ, the alphabet Việt Nam writes with to this day.',
+          'Vào thế kỷ 17, các nhà truyền giáo đến Việt Nam mang theo {{gospel}}. Trong số đó có cha Alexandre de Rhodes — vị linh mục mà công trình của ngài góp phần hình thành chữ Quốc ngữ, bộ chữ Việt Nam dùng cho đến hôm nay.',
+        ),
+        terms: ['gospel'],
+      },
+      {
+        id: 'c2',
+        art: 'lake-evening',
+        text: u(
+          'The faith took root. Villages of fishermen and farmers heard that God is a Father, that the dead are not lost, that every person is loved — and they believed.',
+          'Đức tin bén rễ. Những làng chài, làng ruộng nghe rằng Thiên Chúa là Cha, rằng người đã khuất không hề mất đi, rằng mỗi con người đều được yêu thương — và họ đã tin.',
+        ),
+      },
+      {
+        id: 'c3',
+        art: 'martyrs-palm',
+        text: u(
+          'Then came the hard years. For long stretches of the 1700s and 1800s, being Catholic in Việt Nam could cost a life. Many were asked to step on a cross to deny their faith. Many would not.',
+          'Rồi đến những năm tháng khắc nghiệt. Trong nhiều giai đoạn của thế kỷ 18 và 19, là người Công giáo ở Việt Nam có thể phải trả giá bằng mạng sống. Nhiều người bị buộc bước qua thập giá để chối đạo. Nhiều người đã không làm.',
+        ),
+      },
+      {
+        id: 'c4',
+        art: 'martyrs-palm',
+        text: u(
+          'One of them was Anrê Dũng Lạc — a poor boy from the north who became a priest, was arrested for it, and gave his life in Hà Nội in 1839.',
+          'Một trong số đó là cha Anrê Dũng Lạc — cậu bé nghèo miền Bắc trở thành linh mục, bị bắt vì điều ấy, và đã hiến mạng sống tại Hà Nội năm 1839.',
+        ),
+      },
+      {
+        id: 'c5',
+        art: 'cathedral-hanoi',
+        text: u(
+          'Today millions of Vietnamese Catholics fill churches from Hà Nội to Sài Gòn. St. Joseph’s Cathedral in Hà Nội was built in 1886 and has never stopped singing.',
+          'Ngày nay hàng triệu người Công giáo Việt Nam quy tụ trong các nhà thờ từ Hà Nội đến Sài Gòn. Nhà thờ Lớn Hà Nội được xây năm 1886 và chưa bao giờ ngừng vang tiếng hát.',
+        ),
+      },
+    ],
+    questions: [
+      {
+        id: 'q1',
+        kind: 'choice',
+        afterCard: 0,
+        prompt: u('What did Alexandre de Rhodes help shape, besides the early Church in Việt Nam?', 'Ngoài Giáo hội sơ khai tại Việt Nam, cha Alexandre de Rhodes còn góp phần hình thành điều gì?'),
+        options: [
+          { text: u('Chữ Quốc ngữ — the Vietnamese alphabet', 'Chữ Quốc ngữ — bộ chữ tiếng Việt') },
+          { text: u('The railway system', 'Hệ thống đường sắt') },
+          { text: u('The old citadel of Hà Nội', 'Hoàng thành Thăng Long') },
+        ],
+        answer: 0,
+        why: u(
+          'Every Vietnamese word written today touches this history.',
+          'Mỗi chữ tiếng Việt được viết hôm nay đều chạm vào dòng lịch sử này.',
+        ),
+      },
+      {
+        id: 'q2',
+        kind: 'predict',
+        prompt: u(
+          'Soldiers placed a cross on the ground and told the Christians: step on it and go free. What did Anrê Dũng Lạc do?',
+          'Quan quân đặt thập giá xuống đất và bảo các tín hữu: bước qua thì được tha. Cha Anrê Dũng Lạc đã làm gì?',
+        ),
+        options: [
+          { text: u('He would not step on it, whatever it cost', 'Ngài không bước qua, dù phải trả giá nào') },
+          { text: u('He stepped on it and apologized later', 'Ngài bước qua rồi xin lỗi sau') },
+        ],
+        answer: 0,
+        why: u(
+          'He knew what the cross meant: the one who had given everything for him. He would not trade that love for safety.',
+          'Ngài biết thập giá nghĩa là gì: Đấng đã trao tất cả vì ngài. Ngài không đổi tình yêu ấy lấy sự an toàn.',
+        ),
+      },
+    ],
+    treasure: {
+      kind: 'art',
+      art: 'martyrs-palm',
+      title: u('The palm of the martyrs', 'Cành lá của các thánh tử đạo'),
+      note: u(
+        'In sacred art, a palm branch marks a martyr — a sign of victory, not defeat. The feast of the Vietnamese Martyrs, November 24, is on the calendar of the whole Church.',
+        'Trong nghệ thuật thánh, cành lá vạn tuế là dấu chỉ của một vị tử đạo — dấu của chiến thắng, không phải thất bại. Lễ Các Thánh tử đạo Việt Nam, ngày 24 tháng 11, có mặt trên lịch của toàn thể Giáo hội.',
+      ),
+    },
+    reflection: u('What does it mean that saints come from every homeland?', 'Việc mọi quê hương đều có thể sinh ra các vị thánh nói với bạn điều gì?'),
+    deeper: {
+      ccc: [2473],
+      note: u('On martyrdom as the supreme witness to the truth.', 'Về tử đạo là chứng tá cao cả nhất cho sự thật.'),
+    },
+  },
+
   // ── 1: The Hundred and Seventeen ───────────────────────────────────────
   {
     id: 'asia-1',
@@ -15,8 +121,8 @@ export const ASIA_LESSONS: Lesson[] = [
     door: {
       art: 'asia-lanterns',
       line: u(
-        'A bonus road, lit by lanterns: the saints who speak your language.',
-        'Một con đường thêm, thắp sáng bằng đèn lồng: các vị thánh nói tiếng của bạn.',
+        'A bonus road, lit by lanterns: the saints of the East.',
+        'Một con đường thêm, thắp sáng bằng đèn lồng: các vị thánh của phương Đông.',
       ),
     },
     cards: [
@@ -137,8 +243,8 @@ export const ASIA_LESSONS: Lesson[] = [
       kind: 'practice',
       title: u('One Hail Mary for Việt Nam', 'Một Kinh Kính Mừng cho Việt Nam'),
       note: u(
-        'Tonight, pray one Hail Mary for your homeland and your family — the prayer of La Vang, prayed by a daughter of Việt Nam. Đức Mẹ La Vang, cầu cho chúng con.',
-        'Tối nay, hãy đọc một Kinh Kính Mừng cho quê hương và gia đình bạn — lời kinh của La Vang, được một người con gái Việt Nam dâng lên. Đức Mẹ La Vang, cầu cho chúng con.',
+        'Tonight, pray one Hail Mary for Việt Nam and for your own homeland — the prayer of La Vang. Đức Mẹ La Vang, cầu cho chúng con.',
+        'Tối nay, hãy đọc một Kinh Kính Mừng cho Việt Nam và cho quê hương của chính bạn — lời kinh của La Vang. Đức Mẹ La Vang, cầu cho chúng con.',
       ),
     },
     reflection: u('Where would you want her to find you?', 'Bạn muốn Mẹ tìm thấy bạn ở nơi nào?'),

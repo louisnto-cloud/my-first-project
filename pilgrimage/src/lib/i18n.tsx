@@ -4,7 +4,7 @@
 // The toggle is instant, offline, and free. No live translation APIs: sacred
 // vocabulary is controlled by the locked terminology table in content/.
 
-import React, { createContext, useCallback, useContext, useSyncExternalStore } from 'react';
+import React, { createContext, useCallback, useContext, useEffect, useSyncExternalStore } from 'react';
 import type { L } from '@/content/types';
 import { getSave, subscribe, updateSave, type Lang, type SaveDoc } from '@/lib/storage';
 
@@ -21,6 +21,12 @@ const I18nContext = createContext<I18nValue | null>(null);
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const save = useSyncExternalStore(subscribe, getSave, getSave);
   const lang = save.lang;
+
+  // Keep the document's language honest for screen readers, hyphenation,
+  // and the browser's own text-to-speech when the user switches languages.
+  useEffect(() => {
+    document.documentElement.lang = lang === 'vi' ? 'vi' : 'en';
+  }, [lang]);
 
   const setLang = useCallback((l: Lang) => {
     updateSave({ lang: l });

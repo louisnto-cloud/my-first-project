@@ -1,18 +1,18 @@
 import type { L } from './types';
 
-// ─── OCIA milestones ─────────────────────────────────────────────────────────
-// Her real path, with dates entered as Father Matthew gives them. The app
-// counts down with encouragement, never pressure.
+// ─── RCIA milestones ─────────────────────────────────────────────────────────
+// The real path into the Church, with dates entered as the parish gives them.
+// The app counts down with encouragement, never pressure.
 
 const u = (en: string, vi: string): L => ({ en, vi, viStatus: 'unverified' });
 
-export interface OCIAMilestone {
+export interface RCIAMilestone {
   id: string;
   name: L;
   about: L;
 }
 
-export const OCIA_MILESTONES: OCIAMilestone[] = [
+export const RCIA_MILESTONES: RCIAMilestone[] = [
   {
     id: 'acceptance',
     name: u('Rite of Acceptance', 'Nghi thức Tiếp nhận'),
@@ -51,10 +51,5 @@ export const OCIA_MILESTONES: OCIAMilestone[] = [
       'The night of fire and water. The font, the white garment, the candle — and the reserved page of your passport.',
       'Đêm của lửa và nước. Giếng nước, tấm áo trắng, cây nến — và trang hộ chiếu được dành riêng cho bạn.',
     ),
-  },
-  {
-    id: 'wedding',
-    name: u('Your wedding', 'Lễ cưới của bạn'),
-    about: u('October 2026. Two rings, one free yes.', 'Tháng Mười 2026. Hai chiếc nhẫn, một tiếng xin vâng tự do.'),
   },
 ];

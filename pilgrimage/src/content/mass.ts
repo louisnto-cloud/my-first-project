@@ -180,8 +180,8 @@ export const MASS: MassMoment[] = [
     art: 'teacher-hill',
     title: u('The Homily', 'Bài giảng'),
     what: u(
-      'Sit and rest. The priest — your Father Matthew — opens the readings like the stranger on the Emmaus road, connecting them to ordinary life.',
-      'Hãy ngồi và lắng nghe. Linh mục — như cha Matthew của bạn — mở nghĩa các bài đọc, như người khách lạ trên đường Emmau, nối Lời Chúa với đời thường.',
+      'Sit and rest. The priest opens the readings like the stranger on the Emmaus road, connecting them to ordinary life.',
+      'Hãy ngồi và lắng nghe. Linh mục mở nghĩa các bài đọc, như người khách lạ trên đường Emmau, nối Lời Chúa với đời thường.',
     ),
     why: u(
       'No response needed here. Just listen for the one line meant for you.',
@@ -297,8 +297,8 @@ export const MASS: MassMoment[] = [
     art: 'visitation',
     title: u('The Sign of Peace', 'Chúc bình an'),
     what: u(
-      'Everyone turns to their neighbors with a handshake or a bow: “Peace be with you.” In Việt Nam, a small bow is most common.',
-      'Mọi người quay sang chào nhau bằng cái bắt tay hoặc cúi đầu: “Bình an của Chúa ở cùng anh chị em.” Ở Việt Nam, cúi chào nhẹ là phổ biến nhất.',
+      'Everyone turns to their neighbors with a handshake or a bow: “Peace be with you.” Customs differ — in many countries a handshake, across much of Asia a small bow.',
+      'Mọi người quay sang chào nhau bằng cái bắt tay hoặc cúi đầu: “Bình an của Chúa ở cùng anh chị em.” Mỗi nơi một thói quen — nhiều nước bắt tay, phần lớn Á châu cúi chào nhẹ.',
     ),
     say: [
       {
@@ -318,8 +318,8 @@ export const MASS: MassMoment[] = [
     art: 'monstrance',
     title: u('Communion', 'Rước lễ'),
     what: u(
-      'People process forward to receive the Eucharist. Until your baptism, you stay in your seat or join the line with arms crossed over your chest for a blessing — both are completely normal and welcome.',
-      'Mọi người tiến lên rước Thánh Thể. Cho đến ngày được Rửa tội, bạn có thể ngồi tại chỗ, hoặc lên theo hàng và khoanh tay trước ngực để nhận phép lành — cả hai đều hoàn toàn bình thường và được chào đón.',
+      'People process forward to receive the Eucharist. If you are not yet receiving — for instance before baptism — stay in your seat, or join the line with arms crossed over your chest for a blessing. Both are completely normal and welcome.',
+      'Mọi người tiến lên rước Thánh Thể. Nếu bạn chưa rước lễ — chẳng hạn trước khi được Rửa tội — bạn có thể ngồi tại chỗ, hoặc lên theo hàng và khoanh tay trước ngực để nhận phép lành. Cả hai đều hoàn toàn bình thường và được chào đón.',
     ),
     say: [
       {
@@ -331,8 +331,8 @@ export const MASS: MassMoment[] = [
       },
     ],
     why: u(
-      'Your empty hands are not a failure — they are an appetite. The day you first receive will mean more because you waited.',
-      'Đôi tay chưa được nhận của bạn không phải là thiếu sót — mà là một niềm khao khát. Ngày đầu tiên bạn được rước lễ sẽ càng ý nghĩa vì bạn đã chờ đợi.',
+      'Empty hands are not a failure — they are an appetite. A first Communion means more for having been waited for.',
+      'Đôi tay chưa được nhận không phải là thiếu sót — mà là một niềm khao khát. Lần Rước lễ đầu tiên càng ý nghĩa vì đã được chờ đợi.',
     ),
   },
   {
@@ -352,8 +352,8 @@ export const MASS: MassMoment[] = [
       },
     ],
     why: u(
-      'The Mass does not really end. It is carried out through the doors — on every flight you work.',
-      'Thánh lễ không thật sự kết thúc. Nó được mang qua những cánh cửa — lên cả những chuyến bay bạn phục vụ.',
+      'The Mass does not really end. It is carried out through the doors — into every street, kitchen, and workplace.',
+      'Thánh lễ không thật sự kết thúc. Nó được mang qua những cánh cửa — vào từng con phố, gian bếp và nơi làm việc.',
     ),
   },
 ];

@@ -61,6 +61,7 @@ function RoadContent() {
         <div className="mt-2 flex flex-col gap-2 pb-4">
           {BONUS_WORLDS.map((w) => {
             const unlocked = isWorldUnlocked(w, save);
+            const doneCount = w.lessons.filter((l) => save.completed[l.id]).length;
             return (
               <button
                 key={w.id}
@@ -74,18 +75,12 @@ function RoadContent() {
                     {t(w.name)}
                   </span>
                   <span className="block text-xs text-incense">
-                    {unlocked
-                      ? t(w.theme)
-                      : w.id === 'asia'
-                        ? t(UI.bonusLocked)
-                        : w.id === 'holyland'
-                          ? t(UI.bonusLockedBruges)
-                          : w.id === 'vatican'
-                            ? t(UI.bonusLockedParis)
-                            : t(UI.bonusPreparing)}
+                    {unlocked ? t(w.theme) : t(UI.bonusLocked)}
                   </span>
                 </span>
-                <span className={unlocked ? 'text-gold' : 'text-incense/50'}>{unlocked ? '✦' : '·'}</span>
+                <span className={`text-xs ${unlocked ? 'text-gold' : 'text-incense/50'}`}>
+                  {unlocked && w.lessons.length > 0 ? `${doneCount}/${w.lessons.length}` : unlocked ? '✦' : '·'}
+                </span>
               </button>
             );
           })}
@@ -94,15 +89,46 @@ function RoadContent() {
 
       {/* World sheet */}
       {world && (
-        <div className="fixed inset-0 z-40 flex flex-col justify-end bg-lapis/60" onClick={() => setSelected(null)}>
+        <div
+          className="veil-in fixed inset-0 z-40 flex flex-col justify-end bg-lapis/60"
+          onClick={() => setSelected(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={t(world.church)}
+        >
           <div
-            className="max-h-[70dvh] overflow-y-auto rounded-t-3xl border-t border-gold/30 bg-lapis px-5 pb-28 pt-5"
+            className="sheet-up max-h-[70dvh] overflow-y-auto rounded-t-3xl border-t border-gold/30 bg-lapis px-5 pb-28 pt-5"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-ivory/20" />
+            <button
+              onClick={() => setSelected(null)}
+              aria-label={t(UI.close)}
+              className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-ivory/5 text-incense"
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
+                <path d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19l1.4-1.4L13.4 12 19 6.4 17.6 5 12 10.6 6.4 5Z" />
+              </svg>
+            </button>
             <p className="font-display text-[11px] uppercase tracking-[0.3em] text-gold">{t(world.place)}</p>
             <h2 className="mt-1 font-display text-2xl text-ivory">{t(world.church)}</h2>
             <p className="mt-1 font-story text-lg italic text-incense">{t(world.theme)}</p>
+            {isWorldUnlocked(world, save) && world.lessons.length > 0 && (() => {
+              const doneCount = world.lessons.filter((l) => save.completed[l.id]).length;
+              return (
+                <div className="mt-3">
+                  <div className="h-1 overflow-hidden rounded-full bg-ivory/10">
+                    <div
+                      className="h-full rounded-full bg-gold transition-all duration-500"
+                      style={{ width: `${(doneCount / world.lessons.length) * 100}%` }}
+                    />
+                  </div>
+                  <p className="mt-1.5 text-xs text-incense">
+                    {doneCount} / {world.lessons.length} · {t(UI.stepsWalked)}
+                  </p>
+                </div>
+              );
+            })()}
 
             {!isWorldUnlocked(world, save) ? (
               <p className="mt-6 rounded-2xl border border-ivory/10 p-4 font-story text-lg italic text-incense">
@@ -137,6 +163,9 @@ function RoadContent() {
                           {t(lesson.title)}
                           {lesson.vigil && (
                             <span className="ml-2 text-[10px] uppercase tracking-widest text-gold/80">{t(UI.vigilWord)}</span>
+                          )}
+                          {isNext && (
+                            <span className="ml-2 rounded-full bg-gold/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest text-gold">{t(UI.beginHere)}</span>
                           )}
                         </span>
                         {done ? <span className="text-gold">✓</span> : <span className="text-incense">{lesson.minutes}′</span>}

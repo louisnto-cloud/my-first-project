@@ -2,33 +2,47 @@
 
 // One story card: full-bleed art with a soft gradient scrim, 1–3 short
 // sentences in the story face, optional scripture in the three-layer pattern,
-// optional light branching with no wrong answers.
+// optional light branching with no wrong answers. A speaker reads it aloud.
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { StoryCard as StoryCardT } from '@/content/types';
 import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
-import { SacredArt } from '@/components/SacredArt';
+import { InteractiveArt } from '@/components/InteractiveArt';
 import { RichText } from '@/components/GlossaryTerm';
+import { SpeakerButton } from '@/components/SpeakerButton';
+import { spokenParagraphs } from '@/lib/speech';
 
 export function StoryCardView({ card, onDone }: { card: StoryCardT; onDone: () => void }) {
-  const { t } = useI18n();
+  const { t, lang, save } = useI18n();
   const [chosen, setChosen] = useState<number | null>(null);
   const [showOriginal, setShowOriginal] = useState(false);
 
   const branch = card.branch;
 
+  // The full spoken form of the card: the story, then the verse, its plain
+  // rendering, and the bridge — each as its own breath-separated thought.
+  const spoken = spokenParagraphs(
+    t(card.text),
+    card.scripture && t(card.scripture.verse),
+    card.scripture && t(card.scripture.plain),
+    card.scripture?.bridge && t(card.scripture.bridge),
+  );
+
   return (
     <div className="page-in flex h-full flex-col" key={card.id}>
       <div className="relative min-h-0 flex-1 overflow-hidden">
-        <SacredArt kind={card.art} rounded={false} />
-        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-lapis via-lapis/70 to-transparent" />
+        <InteractiveArt kind={card.art} />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-lapis via-lapis/70 to-transparent" />
       </div>
 
       <div className="-mt-16 relative z-10 flex flex-col gap-4 px-6 pb-6">
-        <p className="font-story text-[1.45rem] leading-relaxed text-ivory">
-          <RichText text={t(card.text)} />
-        </p>
+        <div className="flex items-start gap-3">
+          <p className="flex-1 font-story text-[1.45rem] leading-relaxed text-ivory">
+            <RichText text={t(card.text)} />
+          </p>
+          <SpeakerButton id={`card-${card.id}-${lang}`} text={spoken} autoStart={save.narrate} />
+        </div>
 
         {card.scripture && (
           <div className="rounded-2xl border border-gold/25 bg-lapis/80 p-4">

@@ -2,8 +2,8 @@
 
 // ─── The Illuminated Atlas ───────────────────────────────────────────────────
 // An antique hand-inked travel map: a dotted candlelight-gold route over lapis
-// night, each church a tiny illuminated miniature. Her pilgrim figure walks
-// the line from Hanoi toward the baptismal font.
+// night, each holy place a tiny illuminated miniature. The pilgrim figure
+// walks the line from the desert toward Compostela.
 
 import type { WorldId } from '@/content/types';
 import { MAIN_WORLDS } from '@/content/worlds';
@@ -16,13 +16,13 @@ const IVORY = '#F3ECDD';
 const INCENSE = '#8A8578';
 const GARNET = '#7A1F2B';
 
-// Route stops, bottom (home) to top (her parish).
+// Route stops, bottom (the desert) to top (Compostela).
 const STOPS: { id: WorldId; x: number; y: number }[] = [
-  { id: 'hanoi', x: 200, y: 560 },
-  { id: 'bruges', x: 92, y: 440 },
-  { id: 'paris', x: 286, y: 330 },
-  { id: 'brussels', x: 110, y: 216 },
-  { id: 'parish', x: 220, y: 96 },
+  { id: 'sinai', x: 200, y: 560 },
+  { id: 'holyland', x: 92, y: 440 },
+  { id: 'rome', x: 286, y: 330 },
+  { id: 'lourdes', x: 110, y: 216 },
+  { id: 'camino', x: 220, y: 96 },
 ];
 
 function Church({ id, lit }: { id: WorldId; lit: boolean }) {
@@ -30,61 +30,63 @@ function Church({ id, lit }: { id: WorldId; lit: boolean }) {
   const line = lit ? GOLD : INCENSE;
   const win = lit ? GOLD : '#3a456f';
   switch (id) {
-    case 'hanoi':
-      // twin square towers
+    case 'sinai':
+      // the mountain, with the bush alight at its foot
       return (
         <g>
-          <rect x="-26" y="-30" width="14" height="40" fill={wall} stroke={line} strokeWidth="1.5" />
-          <rect x="12" y="-30" width="14" height="40" fill={wall} stroke={line} strokeWidth="1.5" />
-          <rect x="-12" y="-16" width="24" height="26" fill={wall} stroke={line} strokeWidth="1.5" />
-          <path d="M0 -26v8M-3 -23h6" stroke={line} strokeWidth="1.5" strokeLinecap="round" />
-          <path d="M-21 -18a3 4 0 0 1 6 0v6h-6zM15 -18a3 4 0 0 1 6 0v6h-6z" fill={win} />
+          <path d="M-30 10L-4 -32l10 10 8-12 18 34z" fill={wall} stroke={line} strokeWidth="1.5" />
+          <circle cx="-4" cy="-34" r="3" fill={win} />
+          <path d="M-18 6c2.5 3 4 5 4 7a4 4 0 0 1-8 0c0-2 1.5-4 4-7z" fill={lit ? GOLD : INCENSE} />
         </g>
       );
-    case 'bruges':
-      // small basilica with a garnet relic mark
+    case 'holyland':
+      // the aedicule of the Holy Sepulchre: small dome, open door
       return (
         <g>
-          <rect x="-20" y="-18" width="40" height="28" fill={wall} stroke={line} strokeWidth="1.5" />
-          <path d="M-20 -18L0 -34l20 16z" fill={wall} stroke={line} strokeWidth="1.5" />
-          <circle cx="0" cy="-6" r="5" fill="none" stroke={lit ? GARNET : INCENSE} strokeWidth="2" />
-          <circle cx="0" cy="-6" r="1.6" fill={lit ? GARNET : INCENSE} />
+          <rect x="-20" y="-14" width="40" height="24" fill={wall} stroke={line} strokeWidth="1.5" />
+          <path d="M-14 -14a14 14 0 0 1 28 0z" fill={wall} stroke={line} strokeWidth="1.5" />
+          <path d="M0 -34v8M-3 -31h6" stroke={line} strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M-4 10v-10a4 5 0 0 1 8 0v10z" fill={win} />
         </g>
       );
-    case 'paris':
-      // façade with rose window
+    case 'rome':
+      // the great dome and colonnade
       return (
         <g>
-          <rect x="-22" y="-32" width="12" height="42" fill={wall} stroke={line} strokeWidth="1.5" />
-          <rect x="10" y="-32" width="12" height="42" fill={wall} stroke={line} strokeWidth="1.5" />
-          <rect x="-10" y="-24" width="20" height="34" fill={wall} stroke={line} strokeWidth="1.5" />
-          <circle cx="0" cy="-12" r="6" fill="none" stroke={win} strokeWidth="1.6" />
-          {Array.from({ length: 6 }, (_, i) => {
-            const a = (i * Math.PI) / 3;
-            return <line key={i} x1="0" y1="-12" x2={Math.cos(a) * 6} y2={-12 + Math.sin(a) * 6} stroke={win} strokeWidth="1" />;
-          })}
+          <path d="M-16 -10a16 16 0 0 1 32 0z" fill={wall} stroke={line} strokeWidth="1.5" />
+          <rect x="-20" y="-10" width="40" height="20" fill={wall} stroke={line} strokeWidth="1.5" />
+          <path d="M0 -32v8M-3 -29h6" stroke={line} strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M-32 14q32 -12 64 0" fill="none" stroke={line} strokeWidth="1.5" opacity="0.8" />
+          <path d="M-4 2a4 5 0 0 1 8 0v8h-8z" fill={win} />
         </g>
       );
-    case 'brussels':
+    case 'lourdes':
+      // the grotto arch with the spire of the basilica above
       return (
         <g>
-          <rect x="-24" y="-26" width="13" height="36" fill={wall} stroke={line} strokeWidth="1.5" />
-          <rect x="11" y="-26" width="13" height="36" fill={wall} stroke={line} strokeWidth="1.5" />
-          <path d="M-24 -26l6.5 -8 6.5 8zM11 -26l6.5 -8 6.5 8z" fill={wall} stroke={line} strokeWidth="1.5" />
-          <rect x="-11" y="-14" width="22" height="24" fill={wall} stroke={line} strokeWidth="1.5" />
-          <path d="M-3 -6a3 5 0 0 1 6 0v8h-6z" fill={win} />
+          <path d="M0 -38v10M-3 -34h6" stroke={line} strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M-5 -28L0 -38l5 10z" fill={wall} stroke={line} strokeWidth="1.5" />
+          <rect x="-6" y="-28" width="12" height="20" fill={wall} stroke={line} strokeWidth="1.5" />
+          <rect x="-22" y="-8" width="44" height="18" fill={wall} stroke={line} strokeWidth="1.5" />
+          <path d="M-12 10v-8a12 10 0 0 1 24 0v8z" fill="#10162b" stroke={line} strokeWidth="1.5" />
+          <circle cx="0" cy="2" r="2.2" fill={win} className={lit ? 'soft-glow' : ''} />
         </g>
       );
-    case 'parish':
-      // a small chapel, waiting to be revealed
+    case 'camino':
+      // the baroque towers of Santiago, with the scallop between them
       return (
         <g>
-          <rect x="-16" y="-14" width="32" height="24" fill={wall} stroke={line} strokeWidth="1.5" />
-          <path d="M-16 -14L0 -28l16 14z" fill={wall} stroke={line} strokeWidth="1.5" />
-          <path d="M0 -36v8M-3 -33h6" stroke={line} strokeWidth="1.5" strokeLinecap="round" />
-          <path d="M-3 0a3 4 0 0 1 6 0v10h-6z" fill={win} />
+          <rect x="-22" y="-26" width="13" height="36" fill={wall} stroke={line} strokeWidth="1.5" />
+          <rect x="9" y="-26" width="13" height="36" fill={wall} stroke={line} strokeWidth="1.5" />
+          <path d="M-22 -26l6.5 -10 6.5 10zM9 -26l6.5 -10 6.5 10z" fill={wall} stroke={line} strokeWidth="1.5" />
+          <rect x="-9" y="-14" width="18" height="24" fill={wall} stroke={line} strokeWidth="1.5" />
+          <g stroke={win} strokeWidth="1.4" strokeLinecap="round">
+            <path d="M0 -4v-6M-4 -4l-3 -5M4 -4l3 -5M-2 -4l-1.5 -6M2 -4l1.5 -6" />
+          </g>
         </g>
       );
+    default:
+      return null;
   }
 }
 

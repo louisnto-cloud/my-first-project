@@ -1,28 +1,28 @@
 import type { L, Lesson } from '../types';
 
-// ─── World 4 · Brussels · "The Sacraments" ──────────────────────────────────
-// The Cathedral of St. Michael and St. Gudula. Theme: visible signs of
-// invisible grace — with baptism front and center, because it is her horizon.
+// ─── World 4 · Lourdes · "The Sacraments" ──────────────────────────────────
+// The grotto, the spring, and the wall of candles. Theme: visible signs of
+// invisible grace — with baptism front and center.
 
 const u = (en: string, vi: string): L => ({ en, vi, viStatus: 'unverified' });
 
-export const BRUSSELS_LESSONS: Lesson[] = [
+export const LOURDES_LESSONS: Lesson[] = [
   // ── 1: Visible Signs ───────────────────────────────────────────────────
   {
-    id: 'brussels-1',
+    id: 'lourdes-1',
     title: u('Visible Signs', 'Những dấu chỉ hữu hình'),
     minutes: 4,
     door: {
-      art: 'brussels-cathedral',
+      art: 'lourdes-grotto',
       line: u(
-        'Brussels. A cathedral of white stone, and a question: how does God touch a life?',
-        'Brussels. Một nhà thờ chính tòa bằng đá trắng, và một câu hỏi: Thiên Chúa chạm vào một đời người bằng cách nào?',
+        'Lourdes. A grotto in the rock, a spring, a wall of candles — and a question: how does God touch a life?',
+        'Lộ Đức. Một hang đá, một dòng suối, một bức tường nến — và một câu hỏi: Thiên Chúa chạm vào một đời người bằng cách nào?',
       ),
     },
     cards: [
       {
         id: 'c1',
-        art: 'brussels-cathedral',
+        art: 'lourdes-grotto',
         text: u(
           'God could have stayed invisible. Instead, he keeps reaching us through things we can touch: water, oil, bread, a hand on a head, two rings.',
           'Thiên Chúa có thể đã ở lại trong vô hình. Nhưng Ngài luôn chạm đến chúng ta qua những điều có thể chạm vào: nước, dầu, bánh, một bàn tay đặt trên đầu, hai chiếc nhẫn.',
@@ -49,8 +49,8 @@ export const BRUSSELS_LESSONS: Lesson[] = [
         id: 'c4',
         art: 'font-water',
         text: u(
-          'In the next days you will meet each one. Two of them are already printed on your calendar: the font before your wedding, and the rings at it.',
-          'Những ngày tới bạn sẽ gặp từng Bí tích một. Hai trong số đó đã in sẵn trên tờ lịch của bạn: giếng Rửa tội trước lễ cưới, và đôi nhẫn trong lễ cưới.',
+          'In the next days you will meet each one — and for anyone on the RCIA road, the first of them, the font, is already on the horizon.',
+          'Những ngày tới bạn sẽ gặp từng Bí tích một — và với ai đang trên hành trình RCIA, Bí tích đầu tiên, giếng Rửa tội, đã ở ngay phía chân trời.',
         ),
       },
     ],
@@ -99,14 +99,14 @@ export const BRUSSELS_LESSONS: Lesson[] = [
 
   // ── 2: The Water That Waits ────────────────────────────────────────────
   {
-    id: 'brussels-2',
+    id: 'lourdes-2',
     title: u('The Water That Waits', 'Dòng nước đang đợi'),
     minutes: 5,
     door: {
       art: 'font-water',
       line: u(
-        'Baptism, part one. This is your sacrament — the one on your horizon.',
-        'Rửa tội, phần một. Đây là Bí tích của bạn — Bí tích đang ở phía chân trời của bạn.',
+        'Baptism, part one. For anyone walking toward the font, this is the sacrament on the horizon.',
+        'Rửa tội, phần một. Với ai đang tiến về giếng nước, đây là Bí tích nơi chân trời.',
       ),
     },
     cards: [
@@ -206,7 +206,7 @@ export const BRUSSELS_LESSONS: Lesson[] = [
 
   // ── 3: The Garment and the Flame ───────────────────────────────────────
   {
-    id: 'brussels-3',
+    id: 'lourdes-3',
     title: u('The Garment and the Flame', 'Tấm áo và ngọn lửa'),
     minutes: 4,
     door: {
@@ -286,8 +286,8 @@ export const BRUSSELS_LESSONS: Lesson[] = [
       kind: 'word',
       termId: 'godparent',
       note: u(
-        'Something to begin praying about now: who will stand at the font with you? Talk to Father Matthew about it — choosing well is part of the preparation.',
-        'Một điều để bắt đầu cầu nguyện ngay từ bây giờ: ai sẽ đứng bên giếng rửa tội cùng bạn? Hãy trao đổi với cha Matthew — chọn người đỡ đầu tốt cũng là một phần của sự chuẩn bị.',
+        'Something to begin praying about now: who will stand at the font with you? Talk to your priest about it — choosing well is part of the preparation.',
+        'Một điều để bắt đầu cầu nguyện ngay từ bây giờ: ai sẽ đứng bên giếng rửa tội cùng bạn? Hãy trao đổi với cha xứ — chọn người đỡ đầu tốt cũng là một phần của sự chuẩn bị.',
       ),
     },
     reflection: u('Who in your life keeps a real flame lit?', 'Ai trong đời bạn đang giữ một ngọn lửa cháy thật?'),
@@ -299,14 +299,14 @@ export const BRUSSELS_LESSONS: Lesson[] = [
 
   // ── 4: Sealed with Fire ────────────────────────────────────────────────
   {
-    id: 'brussels-4',
+    id: 'lourdes-4',
     title: u('Sealed with Fire', 'Được ghi ấn bằng lửa'),
     minutes: 4,
     door: {
       art: 'pentecost-fire',
       line: u(
-        'Confirmation and First Communion — likely your own Easter Vigil, all in one night.',
-        'Thêm sức và Rước lễ lần đầu — rất có thể trong chính Đêm Vọng Phục Sinh của bạn, tất cả trong một đêm.',
+        'Confirmation and First Communion — for adults entering the Church, often one single Easter night.',
+        'Thêm sức và Rước lễ lần đầu — với người trưởng thành gia nhập Giáo hội, thường trong một Đêm Vọng Phục Sinh duy nhất.',
       ),
     },
     cards: [
@@ -330,8 +330,8 @@ export const BRUSSELS_LESSONS: Lesson[] = [
         id: 'c3',
         art: 'monstrance',
         text: u(
-          'Then, that same night, the table: your First Communion. After months of coming forward with crossed arms, you will open your hands. The waiting will have been part of the gift.',
-          'Rồi cũng trong đêm ấy, bàn tiệc: lần Rước lễ đầu tiên của bạn. Sau bao tháng tiến lên với đôi tay khoanh trước ngực, bạn sẽ mở rộng đôi bàn tay. Chính sự chờ đợi cũng là một phần của món quà.',
+          'Then, that same night, the table: First Communion. After months of coming forward with crossed arms, the catechumen opens her hands. The waiting was part of the gift.',
+          'Rồi cũng trong đêm ấy, bàn tiệc: Rước lễ lần đầu. Sau bao tháng tiến lên với đôi tay khoanh trước ngực, người dự tòng mở rộng đôi bàn tay. Chính sự chờ đợi cũng là một phần của món quà.',
         ),
       },
       {
@@ -392,7 +392,7 @@ export const BRUSSELS_LESSONS: Lesson[] = [
 
   // ── 5: The Room of Mercy ───────────────────────────────────────────────
   {
-    id: 'brussels-5',
+    id: 'lourdes-5',
     title: u('The Room of Mercy', 'Căn phòng của lòng thương xót'),
     minutes: 6,
     door: {
@@ -439,8 +439,8 @@ export const BRUSSELS_LESSONS: Lesson[] = [
         id: 'c5',
         art: 'sky-flight',
         text: u(
-          'People walk out of that room lighter than any landing you have ever felt. Note for your own path: your baptism will wash everything before it — your first confession comes later, as a gift for the road after.',
-          'Người ta bước ra khỏi căn phòng ấy nhẹ nhõm hơn bất cứ cú hạ cánh nào bạn từng cảm nhận. Một ghi chú cho hành trình của bạn: Bí tích Rửa tội sẽ rửa sạch mọi sự trước đó — lần xưng tội đầu tiên của bạn đến sau này, như một món quà cho quãng đường tiếp theo.',
+          'People walk out of that room lighter than they walked in. A note for catechumens: baptism washes everything before it — a first confession comes later, as a gift for the road after.',
+          'Người ta bước ra khỏi căn phòng ấy nhẹ nhõm hơn lúc bước vào. Một ghi chú cho các dự tòng: Bí tích Rửa tội rửa sạch mọi sự trước đó — lần xưng tội đầu tiên đến sau này, như một món quà cho quãng đường tiếp theo.',
         ),
       },
     ],
@@ -494,7 +494,7 @@ export const BRUSSELS_LESSONS: Lesson[] = [
 
   // ── 6: Oil for the Sick, Hands for the Altar ───────────────────────────
   {
-    id: 'brussels-6',
+    id: 'lourdes-6',
     title: u('Oil for the Sick, Hands for the Altar', 'Dầu cho người bệnh, đôi tay cho bàn thờ'),
     minutes: 4,
     door: {
@@ -525,8 +525,8 @@ export const BRUSSELS_LESSONS: Lesson[] = [
         id: 'c3',
         art: 'keys-shepherd',
         text: u(
-          'Holy Orders: how a man becomes a deacon, priest, or bishop. The bishop lays hands on his head in silence — the same gesture passed from the apostles, hand to head, for twenty centuries. That chain of hands is how Father Matthew can do what he does.',
-          'Truyền chức thánh: cách một người trở thành phó tế, linh mục hay giám mục. Giám mục đặt tay trên đầu người ấy trong thinh lặng — cùng một cử chỉ được truyền từ các Tông đồ, từ tay đến đầu, suốt hai mươi thế kỷ. Chuỗi bàn tay ấy là lý do cha Matthew có thể làm những việc ngài làm.',
+          'Holy Orders: how a man becomes a deacon, priest, or bishop. The bishop lays hands on his head in silence — the same gesture passed from the apostles, hand to head, for twenty centuries. That chain of hands is how every parish priest can do what he does.',
+          'Truyền chức thánh: cách một người trở thành phó tế, linh mục hay giám mục. Giám mục đặt tay trên đầu người ấy trong thinh lặng — cùng một cử chỉ được truyền từ các Tông đồ, từ tay đến đầu, suốt hai mươi thế kỷ. Chuỗi bàn tay ấy là lý do mỗi cha xứ có thể làm những việc các ngài làm.',
         ),
       },
     ],
@@ -579,14 +579,14 @@ export const BRUSSELS_LESSONS: Lesson[] = [
 
   // ── 7: The Sacrament You Will Live In ──────────────────────────────────
   {
-    id: 'brussels-7',
+    id: 'lourdes-7',
     title: u('The Sacrament You Will Live In', 'Bí tích bạn sẽ sống trong đó'),
     minutes: 5,
     door: {
       art: 'wedding-rings',
       line: u(
-        'Matrimony. The one with your name on it, this October.',
-        'Hôn phối. Bí tích mang tên bạn, tháng Mười này.',
+        'Matrimony. If marriage is part of your story, this door is yours.',
+        'Hôn phối. Nếu hôn nhân là một phần câu chuyện đời bạn, cánh cửa này dành cho bạn.',
       ),
     },
     cards: [
@@ -594,8 +594,8 @@ export const BRUSSELS_LESSONS: Lesson[] = [
         id: 'c1',
         art: 'cana-jars',
         text: u(
-          'Jesus’ first miracle was at a wedding — you walked through it in Bruges. That was not an accident of scheduling. Marriage is where most people will live out most of their faith.',
-          'Phép lạ đầu tiên của Chúa Giêsu là tại một tiệc cưới — bạn đã đi qua câu chuyện ấy ở Bruges. Đó không phải sự tình cờ. Hôn nhân là nơi phần lớn con người sống phần lớn đức tin của mình.',
+          'Jesus’ first miracle was at a wedding — you walked through it on this road, at Cana. That was not an accident of scheduling. Marriage is where most people will live out most of their faith.',
+          'Phép lạ đầu tiên của Chúa Giêsu là tại một tiệc cưới — bạn đã đi qua câu chuyện ấy trên con đường này, ở Cana. Đó không phải sự tình cờ. Hôn nhân là nơi phần lớn con người sống phần lớn đức tin của mình.',
         ),
       },
       {
@@ -618,8 +618,8 @@ export const BRUSSELS_LESSONS: Lesson[] = [
         id: 'c4',
         art: 'wedding-rings',
         text: u(
-          'And a quiet promise from this app, the one it has kept from the first card: no one — not the Church, not Father Matthew, not your fiancé — needs your baptism for the wedding to be beautiful. Your yes at the font, like Mary’s, is only worth anything because it is free.',
-          'Và một lời hứa lặng lẽ từ ứng dụng này, lời hứa nó đã giữ từ tấm thẻ đầu tiên: không ai — không phải Giáo hội, không phải cha Matthew, không phải vị hôn phu của bạn — cần bạn chịu Rửa tội thì lễ cưới mới đẹp. Tiếng xin vâng của bạn nơi giếng nước, như tiếng xin vâng của Mẹ Maria, chỉ có giá trị vì nó tự do.',
+          'And a quiet promise from this app, the one it has kept from the first card: no one — not the Church, not your priest, not anyone who loves you — needs your baptism for your life to be beautiful. A yes at the font, like Mary’s, is only worth anything because it is free.',
+          'Và một lời hứa lặng lẽ từ ứng dụng này, lời hứa nó đã giữ từ tấm thẻ đầu tiên: không ai — không phải Giáo hội, không phải cha xứ, không phải bất cứ ai thương bạn — cần bạn chịu Rửa tội thì cuộc đời bạn mới đẹp. Một tiếng xin vâng nơi giếng nước, như tiếng xin vâng của Mẹ Maria, chỉ có giá trị vì nó tự do.',
         ),
       },
     ],
@@ -656,10 +656,10 @@ export const BRUSSELS_LESSONS: Lesson[] = [
     ],
     treasure: {
       kind: 'practice',
-      title: u('For the two of you', 'Cho hai bạn'),
+      title: u('Tell someone', 'Hãy kể cho một người'),
       note: u(
-        'Sometime before October, sit with your fiancé and tell him one thing this road has changed in you. He bought you the rosary; he has been on this pilgrimage longer than you know.',
-        'Trước tháng Mười, hãy ngồi bên vị hôn phu và kể anh ấy nghe một điều con đường này đã thay đổi trong bạn. Anh ấy đã tặng bạn chuỗi Mân Côi; anh ấy đồng hành trên cuộc hành hương này lâu hơn bạn biết.',
+        'Sometime this week, tell someone you love one thing this road has changed in you. Pilgrimages are not meant to be carried alone.',
+        'Trong tuần này, hãy kể cho một người bạn thương nghe một điều con đường này đã thay đổi trong bạn. Những cuộc hành hương không sinh ra để mang một mình.',
       ),
     },
     reflection: u('What do you hope your marriage protects, no matter what?', 'Bạn mong hôn nhân của mình gìn giữ điều gì, dù có chuyện gì xảy ra?'),
@@ -671,24 +671,24 @@ export const BRUSSELS_LESSONS: Lesson[] = [
 
   // ── Vigil: The Night of Water and Fire ─────────────────────────────────
   {
-    id: 'brussels-vigil',
+    id: 'lourdes-vigil',
     vigil: true,
     title: u('Vigil: The Night of Water and Fire', 'Canh thức: Đêm của nước và lửa'),
     minutes: 6,
     door: {
-      art: 'brussels-cathedral',
+      art: 'white-garment',
       line: u(
-        'No questions tonight. A rehearsal, in candlelight, of the night that is coming for you.',
-        'Tối nay không có câu hỏi. Một buổi tập dượt, dưới ánh nến, cho đêm trọng đại đang đến với bạn.',
+        'No questions tonight. A rehearsal, in candlelight, of the greatest night of the year.',
+        'Tối nay không có câu hỏi. Một buổi tập dượt, dưới ánh nến, cho đêm trọng đại nhất trong năm.',
       ),
     },
     cards: [
       {
         id: 'c1',
-        art: 'brussels-cathedral',
+        art: 'lourdes-grotto',
         text: u(
-          'Imagine it now, since soon you will not need to imagine. A church in total darkness, packed full, on the night before Easter. Outside the doors, a fire is kindled.',
-          'Hãy hình dung ngay bây giờ, vì chẳng bao lâu nữa bạn sẽ không cần hình dung. Một nhà thờ tối hoàn toàn, chật kín người, trong đêm trước lễ Phục Sinh. Ngoài cửa, một đống lửa được nhóm lên.',
+          'Imagine it now — and if you are a catechumen, soon you will not need to imagine. A church in total darkness, packed full, on the night before Easter. Outside the doors, a fire is kindled.',
+          'Hãy hình dung ngay bây giờ — và nếu bạn là dự tòng, chẳng bao lâu nữa bạn sẽ không cần hình dung. Một nhà thờ tối hoàn toàn, chật kín người, trong đêm trước lễ Phục Sinh. Ngoài cửa, một đống lửa được nhóm lên.',
         ),
       },
       {
@@ -719,16 +719,16 @@ export const BRUSSELS_LESSONS: Lesson[] = [
         id: 'c5',
         art: 'pentecost-fire',
         text: u(
-          'Water, then oil, then — at last — the open hands at the table. The church will sing. Somewhere in the pews, people you love will be crying the good kind of tears, the kind you once saw and never forgot.',
-          'Nước, rồi dầu thánh, rồi — cuối cùng — đôi tay mở rộng nơi bàn tiệc. Cả nhà thờ sẽ hát vang. Đâu đó trên những hàng ghế, những người bạn thương sẽ khóc những giọt nước mắt hạnh phúc — thứ nước mắt bạn từng thấy một lần và không bao giờ quên.',
+          'Water, then oil, then — at last — the open hands at the table. The church will sing. Somewhere in the pews, people will be crying the good kind of tears — the kind that, once seen, is never forgotten.',
+          'Nước, rồi dầu thánh, rồi — cuối cùng — đôi tay mở rộng nơi bàn tiệc. Cả nhà thờ sẽ hát vang. Đâu đó trên những hàng ghế, sẽ có người khóc những giọt nước mắt hạnh phúc — thứ nước mắt mà ai từng thấy một lần sẽ không bao giờ quên.',
         ),
       },
       {
         id: 'c6',
-        art: 'brussels-cathedral',
+        art: 'lourdes-grotto',
         text: u(
-          'The fourth stamp is ready. One world remains — and it is not far away at all. It is your own parish, and the road of ordinary days.',
-          'Con dấu thứ tư đã sẵn sàng. Còn lại một chặng đường — và nó không hề xa xôi. Đó chính là giáo xứ của bạn, và con đường của những ngày thường.',
+          'The fourth stamp is ready. One road remains — the longest and the plainest: the Camino, and the walk of ordinary days.',
+          'Con dấu thứ tư đã sẵn sàng. Còn lại một chặng đường — dài nhất và bình dị nhất: đường Camino, và bước chân của những ngày thường.',
         ),
       },
     ],
@@ -738,11 +738,11 @@ export const BRUSSELS_LESSONS: Lesson[] = [
       art: 'white-garment',
       title: u('The garment, waiting', 'Tấm áo đang đợi'),
       note: u(
-        'Somewhere, the white garment you will wear already exists — folded on a shelf, or not yet sewn. Either way, it is waiting, the way the whole night is.',
-        'Ở đâu đó, tấm áo trắng bạn sẽ mặc đã hiện hữu — đang gấp trên một ngăn kệ, hoặc chưa được may. Dù thế nào, nó vẫn đang đợi, như cả đêm thánh ấy đang đợi.',
+        'Somewhere, white garments for next Easter already exist — folded on shelves, or not yet sewn. Either way, they are waiting, the way the whole night is.',
+        'Ở đâu đó, những tấm áo trắng cho mùa Phục Sinh tới đã hiện hữu — đang gấp trên ngăn kệ, hoặc chưa được may. Dù thế nào, chúng vẫn đang đợi, như cả đêm thánh ấy đang đợi.',
       ),
     },
-    reflection: u('Picture yourself at the font. What do you feel?', 'Hãy hình dung mình bên giếng Rửa tội. Bạn cảm thấy gì?'),
+    reflection: u('Picture yourself at the font, one Easter night. What do you feel?', 'Hãy hình dung mình bên giếng Rửa tội. Bạn cảm thấy gì?'),
     deeper: {
       ccc: [1217, 1254],
       note: u('On the Easter Vigil and baptismal grace.', 'Về Đêm Vọng Phục Sinh và ân sủng Rửa tội.'),

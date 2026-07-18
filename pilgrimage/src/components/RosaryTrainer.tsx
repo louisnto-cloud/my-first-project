@@ -12,6 +12,8 @@ import { useI18n } from '@/lib/i18n';
 import { UI } from '@/content/ui';
 import { updateSave } from '@/lib/storage';
 import { SacredArt } from '@/components/SacredArt';
+import { SpeakerButton } from '@/components/SpeakerButton';
+import { spokenParagraphs } from '@/lib/speech';
 
 function BeadStrip({ position, total }: { position: number; total: number }) {
   // Ten beads of the current decade (or the 3 opening beads), as a string.
@@ -34,7 +36,7 @@ function BeadStrip({ position, total }: { position: number; total: number }) {
 }
 
 export function RosaryTrainer() {
-  const { t, lang } = useI18n();
+  const { t, lang, save } = useI18n();
   const [set, setSet] = useState<MysterySet | null>(null);
   const steps = useMemo(() => (set ? buildRosary(set) : []), [set]);
   const [i, setI] = useState(0);
@@ -59,7 +61,7 @@ export function RosaryTrainer() {
   if (!set) {
     const today = todaysSet();
     return (
-      <div className="flex min-h-dvh flex-col px-5 pt-4">
+      <div className="flex min-h-dvh flex-col px-5 pt-safe-bar">
         <div className="flex items-center gap-3">
           <Link href="/chapel" aria-label={t(UI.close)} className="flex h-11 w-11 items-center justify-center rounded-full text-incense">
             <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current"><path d="M15.5 4.5 8 12l7.5 7.5 1.4-1.4L10.8 12l6.1-6.1z" /></svg>
@@ -102,9 +104,18 @@ export function RosaryTrainer() {
   const prayer = step.announce ? null : prayerById(step.prayerId);
   const art = mystery ? mystery.art : 'candle-single';
 
+  // What the guide reads for the current bead: the mystery's meditation, or
+  // the prayer's lines. It reads as each bead opens; the pane advances on tap.
+  const spoken =
+    step.announce && mystery
+      ? spokenParagraphs(t(mystery.title), t(mystery.meditation))
+      : prayer
+        ? (lang === 'vi' ? prayer.vi : prayer.en).join(' ')
+        : '';
+
   return (
     <div className="flex min-h-dvh flex-col">
-      <div className="flex items-center gap-3 px-4 pt-4">
+      <div className="flex items-center gap-3 px-4 pt-safe-bar">
         <button
           onClick={() => { setSet(null); setI(0); }}
           aria-label={t(UI.close)}
@@ -117,10 +128,19 @@ export function RosaryTrainer() {
             {t(set.name)}
             {mystery ? ` · ${step.mystery}/5` : ''}
           </p>
-          <div className="mt-1 h-0.5 overflow-hidden rounded-full bg-ivory/10">
+          <div
+            className="mt-1 h-0.5 overflow-hidden rounded-full bg-ivory/10"
+            role="progressbar"
+            aria-valuemin={0}
+            aria-valuemax={steps.length}
+            aria-valuenow={Math.min(i, steps.length)}
+          >
             <div className="h-full bg-gold transition-all duration-300" style={{ width: `${(Math.min(i, steps.length) / steps.length) * 100}%` }} />
           </div>
         </div>
+        {!done && spoken && (
+          <SpeakerButton id={`rosary-${i}-${lang}`} text={spoken} autoStart={save.narrate} tone="prayer" />
+        )}
       </div>
 
       {!done ? (
