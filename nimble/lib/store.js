@@ -31,6 +31,17 @@ function save(state) {
   fs.renameSync(tmp, STORE_PATH);
 }
 
+// Atomic read-modify-write: reload the freshest state, apply the mutator, and
+// save. Routes that await a slow Claude call must persist through this rather
+// than saving a snapshot loaded before the await — otherwise a concurrent
+// write (a settings change, another tab's drill) is silently clobbered.
+function update(mutator) {
+  const state = load();
+  mutator(state);
+  save(state);
+  return state;
+}
+
 function shuffle(arr) {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -77,4 +88,4 @@ function stats(state) {
   };
 }
 
-module.exports = { load, save, nextDomain, difficultyFor, stats, DOMAINS };
+module.exports = { load, save, update, nextDomain, difficultyFor, stats, DOMAINS };

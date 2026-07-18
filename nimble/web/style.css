@@ -308,6 +308,7 @@ textarea:focus { outline: none; border-color: var(--accent); }
 .hist-domain { font-size: 0.88rem; color: var(--ink); }
 .hist-when { color: var(--ink-3); font-size: 0.78rem; }
 .hist-flag { color: var(--danger); font-size: 0.72rem; border: 1px solid color-mix(in srgb, var(--danger) 40%, transparent); border-radius: 999px; padding: 1px 8px; }
+.hist-flag.retry { color: var(--ink-3); border-color: var(--border); }
 .hist-body { padding: 2px 14px 14px; border-top: 1px solid var(--border); }
 .hist-label { color: var(--ink-3); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 12px 0 4px; }
 .hist-body p, .hist-body blockquote { color: var(--ink-2); line-height: 1.5; font-size: 0.92rem; margin: 0; }

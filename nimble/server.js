@@ -12,6 +12,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const VALID_TIME_LIMITS = [10, 15, 20, 30];
 
+// The {totalDrills, difficulty, stats} bundle returned to the client after any
+// change to the drill log — one builder so /api/state and /api/drill/submit
+// can never drift.
+function progressPayload(state) {
+  return {
+    totalDrills: state.drills.length,
+    difficulty: store.difficultyFor(state.drills.length),
+    stats: store.stats(state),
+  };
+}
+
+const clampDifficulty = (v) => Math.min(5, Math.max(1, Math.round(Number(v)) || 1));
+
 // If there's no key in the environment, fall back to one saved from the app.
 if (!process.env.ANTHROPIC_API_KEY) {
   const saved = store.load().apiKey;
@@ -24,9 +37,7 @@ app.get('/api/state', (req, res) => {
   res.json({
     hasApiKey: claude.hasApiKey(),
     timeLimit: state.settings.timeLimit,
-    totalDrills: state.drills.length,
-    difficulty: store.difficultyFor(state.drills.length),
-    stats: store.stats(state),
+    ...progressPayload(state),
   });
 });
 
@@ -43,9 +54,7 @@ app.post('/api/apikey', async (req, res) => {
     if (!check.valid) {
       return res.status(401).json({ error: "That key didn't work — double-check you copied the whole thing" });
     }
-    const state = store.load();
-    state.apiKey = apiKey;
-    store.save(state);
+    store.update((s) => { s.apiKey = apiKey; });
     claude.setApiKey(apiKey);
     res.json({ ok: true, unverified: Boolean(check.unverified) });
   } catch (err) {
@@ -75,10 +84,15 @@ app.post('/api/drill/start', async (req, res) => {
     if (!state.settings.timeLimit) {
       return res.status(400).json({ error: 'Pick a time limit first' });
     }
-    const domain = store.nextDomain(state);
+    const domain = store.nextDomain(state);          // mutates state.rotation / lastDomain
     const difficulty = store.difficultyFor(state.drills.length);
     const scenario = await claude.generateScenario({ domain, difficulty });
-    store.save(state); // persist the rotation advance only once the scenario exists
+    // Persist the rotation advance onto the freshest state so a settings change
+    // or a drill logged during the (slow) generation call isn't clobbered.
+    store.update((fresh) => {
+      fresh.rotation = state.rotation;
+      fresh.lastDomain = state.lastDomain;
+    });
     res.json({ domain, scenario, difficulty, timeLimit: state.settings.timeLimit });
   } catch (err) {
     console.error('drill/start failed:', err);
@@ -89,12 +103,14 @@ app.post('/api/drill/start', async (req, res) => {
 // Submit (or auto-submit on timeout): judge the reply and log the drill.
 app.post('/api/drill/submit', async (req, res) => {
   try {
-    const { domain, scenario, response, timedOut, difficulty } = req.body || {};
+    const { domain, scenario, response, timedOut, difficulty, retry } = req.body || {};
     if (!store.DOMAINS.includes(domain) || typeof scenario !== 'string' || !scenario) {
       return res.status(400).json({ error: 'Missing or invalid drill payload' });
     }
-    const state = store.load();
-    const timeLimit = state.settings.timeLimit;
+    if (!claude.hasApiKey()) {
+      return res.status(400).json({ error: 'Add your API key first' });
+    }
+    const timeLimit = store.load().settings.timeLimit;
     const { score, feedback } = await claude.judgeResponse({
       scenario,
       response: String(response ?? ''),
@@ -102,26 +118,23 @@ app.post('/api/drill/submit', async (req, res) => {
       timedOut: Boolean(timedOut),
       timeLimit,
     });
-    state.drills.push({
-      id: Date.now().toString(36) + Math.random().toString(36).slice(2, 8),
-      domain,
-      scenario,
-      response: String(response ?? ''),
-      score,
-      feedback,
-      timedOut: Boolean(timedOut),
-      timeLimit,
-      difficulty: Number(difficulty) || store.difficultyFor(state.drills.length),
-      timestamp: new Date().toISOString(),
+    // Reload fresh and append — never save a snapshot loaded before the await.
+    const state = store.update((fresh) => {
+      fresh.drills.push({
+        id: Date.now().toString(36) + Math.random().toString(36).slice(2, 8),
+        domain,
+        scenario,
+        response: String(response ?? ''),
+        score,
+        feedback,
+        timedOut: Boolean(timedOut),
+        retry: Boolean(retry),
+        timeLimit,
+        difficulty: clampDifficulty(difficulty),
+        timestamp: new Date().toISOString(),
+      });
     });
-    store.save(state);
-    res.json({
-      score,
-      feedback,
-      totalDrills: state.drills.length,
-      difficulty: store.difficultyFor(state.drills.length),
-      stats: store.stats(state),
-    });
+    res.json({ score, feedback, ...progressPayload(state) });
   } catch (err) {
     console.error('drill/submit failed:', err);
     res.status(502).json({ error: apiErrorMessage(err) });
@@ -139,11 +152,11 @@ app.get('/api/drills', (req, res) => {
 
 // Wipe the drill log (keeps API key and time limit).
 app.post('/api/reset', (req, res) => {
-  const state = store.load();
-  state.drills = [];
-  state.rotation = [];
-  state.lastDomain = null;
-  store.save(state);
+  store.update((s) => {
+    s.drills = [];
+    s.rotation = [];
+    s.lastDomain = null;
+  });
   res.json({ ok: true });
 });
 

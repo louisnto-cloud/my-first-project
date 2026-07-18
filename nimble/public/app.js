@@ -14,6 +14,10 @@
   let timerHandle = null;
   let deadline = 0;
   let submitting = false;
+  let pendingSubmit = null; // { response, timedOut, retry } frozen at submit time
+  let isRetry = false;      // the current drill is a replay of the same scenario
+
+  const difficultyFor = (n) => Math.min(5, Math.floor(n / 5) + 1);
 
   function show(view) {
     for (const v of views) $('view-' + v).hidden = v !== view;
@@ -105,9 +109,12 @@
     btn.disabled = true;
     btn.textContent = 'Checking…';
     try {
-      await api('/api/apikey', { apiKey });
+      const res = await api('/api/apikey', { apiKey });
       app.hasApiKey = true;
       $('keyInput').value = '';
+      if (res.unverified) {
+        showError("Saved, but couldn't reach Anthropic to verify it — if drills fail, re-check the key.");
+      }
       if (!app.timeLimit) show('setup');
       else showReady();
     } catch (err) {
@@ -153,9 +160,11 @@
   $('retryBtn').addEventListener('click', retryDrill);
 
   // Re-run the same scenario with a fresh clock — for drilling a moment
-  // until you find the answer you wish you'd given.
+  // until you find the answer you wish you'd given. Replays are flagged so
+  // stats can tell a genuine first attempt from a re-run.
   function retryDrill() {
     if (!drill) return;
+    isRetry = true;
     beginDrillView();
   }
 
@@ -172,6 +181,10 @@
     startTimer(drill.timeLimit || app.timeLimit);
   }
   $('submitBtn').addEventListener('click', () => submit(false));
+  // Re-score a frozen reply after a judge failure (uses the frozen timedOut).
+  $('rejudgeBtn').addEventListener('click', () => {
+    if (pendingSubmit) submit(pendingSubmit.timedOut);
+  });
   $('responseBox').addEventListener('keydown', (e) => {
     if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') submit(false);
   });
@@ -195,6 +208,7 @@
       showReady();
       return;
     }
+    isRetry = false;
     beginDrillView();
   }
 
@@ -224,42 +238,62 @@
     return remaining;
   }
 
+  // Submit for scoring. The reply and its timed-out status are frozen into
+  // pendingSubmit the first time, so a failed judge call can be retried without
+  // re-opening the editor (which would let the user rewrite off the clock and
+  // relabel a timed-out answer as untimed).
   async function submit(timedOut) {
     if (submitting) return;
     submitting = true;
     clearInterval(timerHandle);
     $('submitBtn').disabled = true;
-    const response = $('responseBox').value;
-    show('judging');
+    if (!pendingSubmit) {
+      pendingSubmit = { response: $('responseBox').value, timedOut, retry: isRetry };
+    }
+    showJudging();
     try {
       const result = await api('/api/drill/submit', {
         domain: drill.domain,
         scenario: drill.scenario,
         difficulty: drill.difficulty,
-        response,
-        timedOut,
+        response: pendingSubmit.response,
+        timedOut: pendingSubmit.timedOut,
+        retry: pendingSubmit.retry,
       });
       app.totalDrills = result.totalDrills;
       app.difficulty = result.difficulty;
       app.stats = result.stats;
+      const reply = pendingSubmit.response.trim();
+      const wasTimedOut = pendingSubmit.timedOut;
+      pendingSubmit = null;
       const scoreEl = $('scoreValue');
       scoreEl.textContent = result.score;
-      scoreEl.className = 'score ' +
-        (result.score <= 3 ? 'band-low' : result.score <= 6 ? 'band-mid' : 'band-high');
+      scoreEl.className = 'score ' + bandFor(result.score);
       const replyEl = $('yourReply');
-      replyEl.textContent = response.trim() ? `“${response.trim()}”` : 'You said nothing.';
-      replyEl.classList.toggle('empty', !response.trim());
+      replyEl.textContent = reply ? `“${reply}”` : 'You said nothing.';
+      replyEl.classList.toggle('empty', !reply);
       $('feedbackText').textContent = result.feedback;
-      $('timedOutNote').hidden = !timedOut;
+      $('timedOutNote').hidden = !wasTimedOut;
       show('result');
     } catch (err) {
+      // Keep pendingSubmit frozen; offer a re-score without re-opening editing.
       showError(err.message);
-      // Let them retry the submission rather than losing the drill.
       submitting = false;
-      $('submitBtn').disabled = false;
-      show('drill');
-      $('timer').textContent = '0';
+      showJudgingError();
     }
+  }
+
+  function showJudging() {
+    $('judgingSpinner').hidden = false;
+    $('judgingText').textContent = 'Judging…';
+    $('rejudgeBtn').hidden = true;
+    show('judging');
+  }
+
+  function showJudgingError() {
+    $('judgingSpinner').hidden = true;
+    $('judgingText').textContent = "Couldn't reach the judge. Your reply is saved — try scoring it again.";
+    $('rejudgeBtn').hidden = false;
   }
 
   // ---------- stats ----------
@@ -269,7 +303,13 @@
   $('resetBtn').addEventListener('click', resetHistory);
 
   function toCsv(drills) {
-    const esc = (v) => '"' + String(v ?? '').replace(/"/g, '""') + '"';
+    // Quote every field, and neutralize spreadsheet formula injection by
+    // prefixing a leading =, +, -, or @ with an apostrophe.
+    const esc = (v) => {
+      let s = String(v ?? '');
+      if (/^[=+\-@\t\r]/.test(s)) s = "'" + s;
+      return '"' + s.replace(/"/g, '""') + '"';
+    };
     const header = ['timestamp', 'domain', 'difficulty', 'time_limit_s', 'timed_out', 'score', 'response', 'scenario', 'feedback'];
     const rows = drills.map(d =>
       [d.timestamp, d.domain, d.difficulty, d.timeLimit, d.timedOut, d.score, d.response, d.scenario, d.feedback].map(esc).join(','));
@@ -317,7 +357,7 @@
     $('statTotal').textContent = s.totalDrills;
     $('statAvg').textContent = s.overallAverage == null ? '–' : s.overallAverage.toFixed(1);
     $('statBest').textContent = s.history.length ? Math.max(...s.history.map(h => h.score)) : '–';
-    $('statLevel').textContent = Math.min(5, Math.floor(s.totalDrills / 5) + 1);
+    $('statLevel').textContent = difficultyFor(s.totalDrills);
 
     renderDomainRows(s);
 
@@ -375,6 +415,7 @@
           <span class="hist-domain">${DOMAIN_LABELS[d.domain] || d.domain}</span>
           <span class="hist-when">${new Date(d.timestamp).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</span>
           ${d.timedOut ? '<span class="hist-flag">timed out</span>' : ''}
+          ${d.retry ? '<span class="hist-flag retry">retry</span>' : ''}
         </summary>
         <div class="hist-body">
           <p class="hist-label">Scenario</p>
@@ -455,7 +496,9 @@
     const hoverDot = el('circle', { r: 5.5, fill: '#6690f2', stroke: '#16181d', 'stroke-width': 2, visibility: 'hidden' });
     svg.append(crosshair, hoverDot);
 
-    svg.addEventListener('mousemove', (e) => {
+    // Assign (not addEventListener) so re-rendering the chart replaces the
+    // handlers instead of stacking a new pair on the persistent <svg> each visit.
+    svg.onmousemove = (e) => {
       const rect = svg.getBoundingClientRect();
       const mx = (e.clientX - rect.left) * (W / rect.width);
       let nearest = pts[0];
@@ -472,12 +515,12 @@
       tooltip.style.left = (nearest.px / W * 100) + '%';
       tooltip.style.top = (nearest.py / H * 100) + '%';
       tooltip.hidden = false;
-    });
-    svg.addEventListener('mouseleave', () => {
+    };
+    svg.onmouseleave = () => {
       crosshair.setAttribute('visibility', 'hidden');
       hoverDot.setAttribute('visibility', 'hidden');
       tooltip.hidden = true;
-    });
+    };
   }
 
   boot();

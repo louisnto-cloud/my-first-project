@@ -59,8 +59,16 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
       return { ...DEFAULT_STATE };
     }
   }
+  // Returns false if the write failed (private mode, quota, disabled storage)
+  // so callers can warn instead of throwing an unhandled rejection.
   function saveState() {
-    localStorage.setItem(STORE_KEY, JSON.stringify(state));
+    try {
+      localStorage.setItem(STORE_KEY, JSON.stringify(state));
+      return true;
+    } catch {
+      showError("Couldn't save to this browser — history won't persist (private mode or storage full?).");
+      return false;
+    }
   }
 
   let state = loadState();
@@ -68,6 +76,8 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   let timerHandle = null;
   let deadline = 0;
   let submitting = false;
+  let pendingSubmit = null; // { response, timedOut, retry } frozen at submit time
+  let isRetry = false;      // the current drill is a replay of the same scenario
 
   // ---------- rotation / difficulty / stats (same rules as the server) ----------
   function shuffle(arr) {
@@ -256,6 +266,9 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
       state.apiKey = apiKey;
       saveState();
       $('keyInput').value = '';
+      if (check.unverified) {
+        showError("Saved, but couldn't reach Anthropic to verify it — if drills fail, re-check the key.");
+      }
       if (!state.timeLimit) show('setup');
       else showReady();
     } finally {
@@ -296,9 +309,11 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   $('retryBtn').addEventListener('click', retryDrill);
 
   // Re-run the same scenario with a fresh clock — for drilling a moment
-  // until you find the answer you wish you'd given.
+  // until you find the answer you wish you'd given. Replays are flagged so
+  // stats can tell a genuine first attempt from a re-run.
   function retryDrill() {
     if (!drill) return;
+    isRetry = true;
     beginDrillView();
   }
 
@@ -315,6 +330,10 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     startTimer(state.timeLimit);
   }
   $('submitBtn').addEventListener('click', () => submit(false));
+  // Re-score a frozen reply after a judge failure (uses the frozen timedOut).
+  $('rejudgeBtn').addEventListener('click', () => {
+    if (pendingSubmit) submit(pendingSubmit.timedOut);
+  });
   $('responseBox').addEventListener('keydown', (e) => {
     if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') submit(false);
   });
@@ -346,6 +365,7 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     }
     saveState();
     drill = { domain, scenario, difficulty };
+    isRetry = false;
     beginDrillView();
   }
 
@@ -375,50 +395,70 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     return remaining;
   }
 
+  // Submit for scoring. The reply and its timed-out status are frozen into
+  // pendingSubmit the first time, so a failed judge call can be retried without
+  // re-opening the editor (which would let the user rewrite off the clock and
+  // relabel a timed-out answer as untimed).
   async function submit(timedOut) {
     if (submitting) return;
     submitting = true;
     clearInterval(timerHandle);
     $('submitBtn').disabled = true;
-    const response = $('responseBox').value;
-    show('judging');
+    if (!pendingSubmit) {
+      pendingSubmit = { response: $('responseBox').value, timedOut, retry: isRetry };
+    }
+    showJudging();
     try {
       const { score, feedback } = await judgeResponse({
         scenario: drill.scenario,
-        response,
+        response: pendingSubmit.response,
         domain: drill.domain,
-        timedOut,
+        timedOut: pendingSubmit.timedOut,
       });
       state.drills.push({
         id: Date.now().toString(36) + Math.random().toString(36).slice(2, 8),
         domain: drill.domain,
         scenario: drill.scenario,
-        response,
+        response: pendingSubmit.response,
         score,
         feedback,
-        timedOut,
+        timedOut: pendingSubmit.timedOut,
+        retry: pendingSubmit.retry,
         timeLimit: state.timeLimit,
         difficulty: drill.difficulty,
         timestamp: new Date().toISOString(),
       });
       saveState();
+      const reply = pendingSubmit.response.trim();
+      const wasTimedOut = pendingSubmit.timedOut;
+      pendingSubmit = null;
       const scoreEl = $('scoreValue');
       scoreEl.textContent = score;
-      scoreEl.className = 'score ' +
-        (score <= 3 ? 'band-low' : score <= 6 ? 'band-mid' : 'band-high');
+      scoreEl.className = 'score ' + bandFor(score);
       const replyEl = $('yourReply');
-      replyEl.textContent = response.trim() ? `“${response.trim()}”` : 'You said nothing.';
-      replyEl.classList.toggle('empty', !response.trim());
+      replyEl.textContent = reply ? `“${reply}”` : 'You said nothing.';
+      replyEl.classList.toggle('empty', !reply);
       $('feedbackText').textContent = feedback;
-      $('timedOutNote').hidden = !timedOut;
+      $('timedOutNote').hidden = !wasTimedOut;
       show('result');
     } catch (err) {
       showError(err.message);
       submitting = false;
-      $('submitBtn').disabled = false;
-      show('drill');
-      $('timer').textContent = '0';
+      showJudgingError();
     }
+  }
+
+  function showJudging() {
+    $('judgingSpinner').hidden = false;
+    $('judgingText').textContent = 'Judging…';
+    $('rejudgeBtn').hidden = true;
+    show('judging');
+  }
+
+  function showJudgingError() {
+    $('judgingSpinner').hidden = true;
+    $('judgingText').textContent = "Couldn't reach the judge. Your reply is saved — try scoring it again.";
+    $('rejudgeBtn').hidden = false;
   }
 
   // ---------- stats ----------
@@ -428,7 +468,13 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
   $('resetBtn').addEventListener('click', resetHistory);
 
   function toCsv(drills) {
-    const esc = (v) => '"' + String(v ?? '').replace(/"/g, '""') + '"';
+    // Quote every field, and neutralize spreadsheet formula injection by
+    // prefixing a leading =, +, -, or @ with an apostrophe.
+    const esc = (v) => {
+      let s = String(v ?? '');
+      if (/^[=+\-@\t\r]/.test(s)) s = "'" + s;
+      return '"' + s.replace(/"/g, '""') + '"';
+    };
     const header = ['timestamp', 'domain', 'difficulty', 'time_limit_s', 'timed_out', 'score', 'response', 'scenario', 'feedback'];
     const rows = drills.map(d =>
       [d.timestamp, d.domain, d.difficulty, d.timeLimit, d.timedOut, d.score, d.response, d.scenario, d.feedback].map(esc).join(','));
@@ -517,6 +563,7 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
           <span class="hist-domain">${DOMAIN_LABELS[d.domain] || d.domain}</span>
           <span class="hist-when">${new Date(d.timestamp).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</span>
           ${d.timedOut ? '<span class="hist-flag">timed out</span>' : ''}
+          ${d.retry ? '<span class="hist-flag retry">retry</span>' : ''}
         </summary>
         <div class="hist-body">
           <p class="hist-label">Scenario</p>
@@ -594,7 +641,9 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
     const hoverDot = el('circle', { r: 5.5, fill: '#6690f2', stroke: '#16181d', 'stroke-width': 2, visibility: 'hidden' });
     svg.append(crosshair, hoverDot);
 
-    svg.addEventListener('mousemove', (e) => {
+    // Assign (not addEventListener) so re-rendering the chart replaces the
+    // handlers instead of stacking a new pair on the persistent <svg> each visit.
+    svg.onmousemove = (e) => {
       const rect = svg.getBoundingClientRect();
       const mx = (e.clientX - rect.left) * (W / rect.width);
       let nearest = pts[0];
@@ -611,12 +660,12 @@ Respond with ONLY a JSON object, no markdown fences, no other text:
       tooltip.style.left = (nearest.px / W * 100) + '%';
       tooltip.style.top = (nearest.py / H * 100) + '%';
       tooltip.hidden = false;
-    });
-    svg.addEventListener('mouseleave', () => {
+    };
+    svg.onmouseleave = () => {
       crosshair.setAttribute('visibility', 'hidden');
       hoverDot.setAttribute('visibility', 'hidden');
       tooltip.hidden = true;
-    });
+    };
   }
 
   // ---------- boot ----------
