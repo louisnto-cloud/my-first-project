@@ -1,0 +1,534 @@
+/* LearnQuest — avatar companion, coin shop, trophies, and free-play mini games */
+'use strict';
+
+/* ---- Avatar: a round explorer-spirit named by the player ---- */
+
+const Avatar = {
+  colors: {
+    teal:   { body: '#4ecdc4', dark: '#2fa89f' },
+    coral:  { body: '#ff8a70', dark: '#e06349' },
+    violet: { body: '#9b8cff', dark: '#7a67e0' },
+    gold:   { body: '#ffc247', dark: '#e0a223' },
+    mint:   { body: '#7ed9a2', dark: '#54b57d' },
+    rose:   { body: '#f28ab5', dark: '#d3618f' },
+    sky:    { body: '#6fbdf5', dark: '#4795d1' },
+    aqua:   { body: '#3fd0d8', dark: '#25a7ad' },
+    berry:  { body: '#c86bd8', dark: '#a049b0' },
+    galaxy: { body: '#7a6bd8', dark: '#3a2f7a' }
+  },
+
+  items: [
+    { id: 'base', name: 'Explorer', kind: 'color', value: 'teal', cost: 0, icon: '🟢' },
+    { id: 'c-coral', name: 'Coral Glow', kind: 'color', value: 'coral', cost: 30, icon: '🟠' },
+    { id: 'c-violet', name: 'Violet Dream', kind: 'color', value: 'violet', cost: 30, icon: '🟣' },
+    { id: 'c-gold', name: 'Golden Hour', kind: 'color', value: 'gold', cost: 40, icon: '🟡' },
+    { id: 'c-mint', name: 'Mint Breeze', kind: 'color', value: 'mint', cost: 30, icon: '🍃' },
+    { id: 'c-rose', name: 'Rose Quartz', kind: 'color', value: 'rose', cost: 40, icon: '🌷' },
+    { id: 'c-sky', name: 'Sky Rider', kind: 'color', value: 'sky', cost: 30, icon: '☁️' },
+    { id: 'h-crown', name: 'Star Crown', kind: 'hat', value: '👑', cost: 80, icon: '👑' },
+    { id: 'h-cap', name: 'Adventure Cap', kind: 'hat', value: '🧢', cost: 40, icon: '🧢' },
+    { id: 'h-top', name: 'Fancy Top Hat', kind: 'hat', value: '🎩', cost: 60, icon: '🎩' },
+    { id: 'h-flower', name: 'Bloom Clip', kind: 'hat', value: '🌸', cost: 35, icon: '🌸' },
+    { id: 'h-wizard', name: 'Wizard Hat', kind: 'hat', value: '🪄', cost: 70, icon: '🪄' },
+    { id: 'h-head', name: 'Beat Phones', kind: 'hat', value: '🎧', cost: 55, icon: '🎧' },
+    { id: 'g-star', name: 'Star Shades', kind: 'face', value: 'shades', cost: 50, icon: '🕶️' },
+    { id: 'g-round', name: 'Scholar Specs', kind: 'face', value: 'specs', cost: 45, icon: '👓' },
+    { id: 'g-blush', name: 'Sparkle Cheeks', kind: 'face', value: 'sparkle', cost: 25, icon: '✨' },
+    { id: 'p-cape', name: 'Hero Cape', kind: 'back', value: 'cape', cost: 90, icon: '🦸' },
+    { id: 'p-wings', name: 'Glide Wings', kind: 'back', value: 'wings', cost: 100, icon: '🪽' },
+    { id: 'c-aqua', name: 'Aqua Splash', kind: 'color', value: 'aqua', cost: 30, icon: '💧' },
+    { id: 'c-berry', name: 'Berry Pop', kind: 'color', value: 'berry', cost: 35, icon: '🫐' },
+    { id: 'h-grad', name: 'Grad Cap', kind: 'hat', value: '🎓', cost: 55, icon: '🎓' },
+    { id: 'h-ranger', name: 'Ranger Hat', kind: 'hat', value: '🤠', cost: 50, icon: '🤠' },
+    { id: 'h-bow', name: 'Sweet Bow', kind: 'hat', value: '🎀', cost: 40, icon: '🎀' },
+    { id: 'h-party', name: 'Party Hat', kind: 'hat', value: '🥳', cost: 45, icon: '🥳' },
+    { id: 'f-stars', name: 'Star Eyes', kind: 'face', value: 'stars', cost: 55, icon: '🤩' },
+    { id: 'f-monocle', name: 'Monocle', kind: 'face', value: 'monocle', cost: 45, icon: '🧐' },
+    { id: 'b-jetpack', name: 'Jetpack', kind: 'back', value: 'jetpack', cost: 85, icon: '🚀' },
+    // Rare — unlocked by mastery, then free to wear
+    { id: 'c-galaxy', name: 'Galaxy Skin', kind: 'color', value: 'galaxy', cost: 0, icon: '🌌', req: { trophies: 4 }, rare: true },
+    { id: 'h-champion', name: 'Champion Topper', kind: 'hat', value: '🏆', cost: 0, icon: '🏆', req: { trophies: 8 }, rare: true },
+    { id: 'b-starwings', name: 'Star Wings', kind: 'back', value: 'starwings', cost: 0, icon: '🌟', req: { both: true }, rare: true }
+  ],
+
+  reqMet(item) {
+    if (!item.req) return true;
+    const t = Object.keys(Store.state.bossPassed).length;
+    if (item.req.trophies && t < item.req.trophies) return false;
+    if (item.req.both && !CURRICULUM.every(w => w.regions.every(r => Store.state.bossPassed[r.id]))) return false;
+    return true;
+  },
+
+  decor: [
+    { id: 'd-tent', name: 'Camp Tent', icon: '⛺', cost: 45 },
+    { id: 'd-balloon', name: 'Sky Balloon', icon: '🎈', cost: 35 },
+    { id: 'd-lighthouse', name: 'Lighthouse', icon: '🗼', cost: 60 },
+    { id: 'd-garden', name: 'Wild Garden', icon: '🌻', cost: 40 },
+    { id: 'd-fountain', name: 'Fountain', icon: '⛲', cost: 55 },
+    { id: 'd-rainbow', name: 'Rainbow Arch', icon: '🌈', cost: 75 }
+  ],
+
+  games: [
+    { id: 'g-draw', name: 'Doodle Den', icon: '🎨', cost: 60, desc: 'A free-draw art studio' },
+    { id: 'g-music', name: 'Melody Maker', icon: '🎹', cost: 60, desc: 'Compose your own tunes' },
+    { id: 'g-dress', name: 'Style Studio', icon: '🪞', cost: 40, desc: 'Dress up your buddy' }
+  ],
+
+  equipped() {
+    const eq = Store.state.avatar.equipped;
+    return {
+      color: Avatar.colors[eq.color] ? eq.color : 'teal',
+      hat: eq.hat || null,
+      face: eq.face || null,
+      back: eq.back || null
+    };
+  },
+
+  svg(size) {
+    const eq = Avatar.equipped();
+    const c = Avatar.colors[eq.color];
+    const face = eq.face;
+    let backLayer = '';
+    if (eq.back === 'cape') backLayer = `<path d="M 25 62 Q 50 100 75 62 L 70 48 Q 50 60 30 48 Z" fill="#f26d9c"/>`;
+    else if (eq.back === 'wings') backLayer = `<text x="8" y="58" font-size="26">🪽</text><text x="66" y="58" font-size="26" transform="scale(-1,1) translate(-158,0)">🪽</text>`;
+    else if (eq.back === 'jetpack') backLayer = `<text x="50" y="88" text-anchor="middle" font-size="26">🚀</text>`;
+    else if (eq.back === 'starwings') backLayer = `<text x="6" y="58" font-size="24">🌟</text><text x="72" y="58" font-size="24">🌟</text>`;
+    let faceLayer = '';
+    if (face === 'shades') faceLayer = `<rect x="26" y="38" width="20" height="11" rx="5" fill="#3d3554"/><rect x="54" y="38" width="20" height="11" rx="5" fill="#3d3554"/><line x1="46" y1="43" x2="54" y2="43" stroke="#3d3554" stroke-width="3"/>`;
+    else if (face === 'specs') faceLayer = `<circle cx="36" cy="43" r="9" fill="none" stroke="#3d3554" stroke-width="2.5"/><circle cx="64" cy="43" r="9" fill="none" stroke="#3d3554" stroke-width="2.5"/><line x1="45" y1="43" x2="55" y2="43" stroke="#3d3554" stroke-width="2.5"/>`;
+    else if (face === 'sparkle') faceLayer = `<text x="14" y="58" font-size="12">✨</text><text x="74" y="58" font-size="12">✨</text>`;
+    else if (face === 'monocle') faceLayer = `<circle cx="64" cy="43" r="10" fill="none" stroke="#3d3554" stroke-width="2.5"/><line x1="64" y1="53" x2="60" y2="66" stroke="#3d3554" stroke-width="1.5"/>`;
+    const eyes = face === 'shades' ? ''
+      : face === 'stars' ? `<text x="28" y="49" font-size="16">⭐</text><text x="56" y="49" font-size="16">⭐</text>`
+      : `<circle cx="36" cy="43" r="4.5" fill="#3d3554"/><circle cx="64" cy="43" r="4.5" fill="#3d3554"/>
+      <circle cx="37.5" cy="41.5" r="1.6" fill="#fff"/><circle cx="65.5" cy="41.5" r="1.6" fill="#fff"/>`;
+    const hat = eq.hat ? `<text x="50" y="22" text-anchor="middle" font-size="26">${eq.hat}</text>` : '';
+    return `<svg viewBox="0 0 100 100" width="${size}" height="${size}" class="avatar-svg" aria-hidden="true">
+      ${backLayer}
+      <ellipse cx="50" cy="90" rx="26" ry="6" fill="rgba(0,0,0,.10)"/>
+      <path d="M 50 12 C 76 12 88 34 86 56 C 84 78 70 88 50 88 C 30 88 16 78 14 56 C 12 34 24 12 50 12 Z" fill="${c.body}"/>
+      <path d="M 50 12 C 76 12 88 34 86 56 L 86 56 C 78 40 66 32 50 32 C 34 32 22 40 14 56 C 12 34 24 12 50 12 Z" fill="${c.dark}" opacity=".35"/>
+      ${eyes}
+      <path d="M 40 58 Q 50 66 60 58" fill="none" stroke="#3d3554" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="28" cy="52" r="4" fill="rgba(255,255,255,.35)"/>
+      <circle cx="72" cy="52" r="4" fill="rgba(255,255,255,.35)"/>
+      ${faceLayer}${hat}
+    </svg>`;
+  },
+
+  name() {
+    return Store.state.name || 'Buddy';
+  }
+};
+
+/* ---- Shop / Studio screen ---- */
+
+const Shop = {
+  show(tab) {
+    tab = tab || 'style';
+    const app = document.getElementById('app');
+    app.innerHTML = '';
+    const screen = U.el('div', 'screen shop-screen');
+    screen.appendChild(Level.topBar('🛍️ Star Shop', () => WorldMap.showHome()));
+
+    const hero = U.el('div', 'shop-hero');
+    hero.innerHTML = `${Avatar.svg(130)}<div class="shop-hero-name">${U.esc(Avatar.name())}</div>`;
+    screen.appendChild(hero);
+
+    const tabs = U.el('div', 'shop-tabs');
+    [['style', '🎨'], ['decor', '🏡'], ['games', '🎮']].forEach(([id, icon]) => {
+      const b = U.el('button', 'shop-tab' + (tab === id ? ' active' : ''), icon);
+      b.addEventListener('click', () => Shop.show(id));
+      tabs.appendChild(b);
+    });
+    screen.appendChild(tabs);
+
+    const grid = U.el('div', 'shop-grid');
+    const st = Store.state;
+
+    const renderItem = (item, owned, equipped, onBuy, onEquip) => {
+      const card = U.el('div', 'shop-item' + (equipped ? ' equipped' : ''));
+      card.innerHTML = `<div class="shop-icon">${item.icon}</div><div class="shop-name">${U.esc(item.name)}</div>`;
+      const btn = U.el('button', 'shop-btn' + (owned ? ' owned' : ''),
+        equipped ? (item.kind && item.kind !== 'color' ? 'Take off' : '✓ Wearing') : owned ? 'Wear it' : `🪙 ${item.cost}`);
+      btn.addEventListener('click', () => {
+        if (equipped) {
+          // Colors always stay on (one is always worn); accessories can come off
+          if (item.kind && item.kind !== 'color') {
+            Store.state.avatar.equipped[item.kind] = null;
+            Store.save();
+            Audio2.pop();
+            Shop.show(tab);
+          }
+          return;
+        }
+        if (owned) { onEquip(); Audio2.pop(); Shop.show(tab); return; }
+        if (Store.spend(item.cost)) {
+          Audio2.coin();
+          Celebrate.confetti(20);
+          onBuy();
+          Shop.show(tab);
+        } else {
+          Audio2.say('Not enough coins yet! Play more levels to earn coins.');
+          btn.classList.add('shake');
+          setTimeout(() => btn.classList.remove('shake'), 500);
+        }
+      });
+      card.appendChild(btn);
+      return card;
+    };
+
+    if (tab === 'style') {
+      Avatar.items.forEach(item => {
+        // Rare items stay locked until their mastery requirement is met
+        if (item.req && !Avatar.reqMet(item)) {
+          const need = item.req.trophies ? `Beat ${item.req.trophies} bosses` : 'Master both worlds';
+          const lc = U.el('div', 'shop-item locked-item');
+          lc.innerHTML = `<div class="shop-icon">🔒</div><div class="shop-name">${U.esc(item.name)}</div><div class="shop-desc">${need}</div>`;
+          grid.appendChild(lc);
+          return;
+        }
+        // Rare unlocked items (cost 0) are free to wear
+        const freeUnlock = item.cost === 0;
+        const owned = st.avatar.owned.includes(item.id) || freeUnlock;
+        const equipped = st.avatar.equipped[item.kind] === item.value ||
+          (item.kind === 'color' && Avatar.equipped().color === item.value);
+        const card = renderItem(item, owned, equipped,
+          () => { st.avatar.owned.push(item.id); st.avatar.equipped[item.kind] = item.value; Store.save(); },
+          () => { st.avatar.equipped[item.kind] = (st.avatar.equipped[item.kind] === item.value && item.kind !== 'color') ? null : item.value; Store.save(); });
+        if (item.rare) card.classList.add('rare-item');
+        grid.appendChild(card);
+      });
+    } else if (tab === 'decor') {
+      Avatar.decor.forEach(item => {
+        const owned = st.decorOwned.includes(item.id);
+        grid.appendChild(renderItem(item, owned, owned,
+          () => { st.decorOwned.push(item.id); Store.save(); },
+          () => {}));
+      });
+      grid.appendChild(U.el('div', 'shop-note', 'Decorations appear on your home map!'));
+    } else {
+      Avatar.games.forEach(item => {
+        const owned = st.gamesOwned.includes(item.id);
+        const card = U.el('div', 'shop-item');
+        card.innerHTML = `<div class="shop-icon">${item.icon}</div><div class="shop-name">${U.esc(item.name)}</div><div class="shop-desc">${U.esc(item.desc)}</div>`;
+        const btn = U.el('button', 'shop-btn' + (owned ? ' owned' : ''), owned ? '▶ Play!' : `🪙 ${item.cost}`);
+        btn.addEventListener('click', () => {
+          if (owned) { MiniGames.play(item.id); return; }
+          if (Store.spend(item.cost)) {
+            Audio2.coin(); Celebrate.confetti(20);
+            st.gamesOwned.push(item.id); Store.save();
+            Shop.show(tab);
+          } else {
+            Audio2.say('Not enough coins yet! Play more levels to earn coins.');
+          }
+        });
+        card.appendChild(btn);
+        grid.appendChild(card);
+      });
+    }
+
+    screen.appendChild(grid);
+    app.appendChild(screen);
+  }
+};
+
+/* ---- Trophy shelf ---- */
+
+const Trophies = {
+  show() {
+    const app = document.getElementById('app');
+    app.innerHTML = '';
+    const screen = U.el('div', 'screen trophy-screen');
+    screen.appendChild(Level.topBar('🏆 Trophy Shelf', () => WorldMap.showHome()));
+    const shelf = U.el('div', 'trophy-shelf');
+    let any = false;
+    CURRICULUM.forEach(world => world.regions.forEach(region => {
+      const won = Store.state.bossPassed[region.id];
+      const t = U.el('div', 'trophy' + (won ? ' won' : ''));
+      t.innerHTML = `<div class="trophy-cup">${won ? '🏆' : '🔒'}</div>
+        <div class="trophy-name">${region.emoji} ${U.esc(region.name)}</div>
+        <div class="trophy-grade">${world.id === 'math' ? 'Math' : 'Words'} · Grade ${region.grade}</div>`;
+      if (won) any = true;
+      shelf.appendChild(t);
+    }));
+    screen.appendChild(shelf);
+    if (!any) screen.appendChild(U.el('div', 'shop-note', 'Beat a Boss Challenge to win your first trophy!'));
+
+    // Certificate buttons for any fully-mastered world
+    CURRICULUM.forEach(world => {
+      if (Certificate.worldComplete(world)) {
+        const btn = U.el('button', 'cert-shelf-btn', `📜 ${world.emoji} ${world.name} — view your certificate!`);
+        btn.addEventListener('click', () => { Audio2.fanfare(); Certificate.show(world); });
+        screen.appendChild(btn);
+      }
+    });
+
+    const cur = Store.currentStreak();
+    screen.appendChild(U.el('div', 'streak-banner', `🔥 Streak: ${cur} day${cur === 1 ? '' : 's'} · Best: ${Store.state.streak.best}`));
+    app.appendChild(screen);
+  }
+};
+
+/* ---- Certificate of Mastery (a full world completed) ---- */
+
+const Certificate = {
+  worldComplete(world) {
+    return world.regions.every(r => Store.state.bossPassed[r.id]);
+  },
+
+  worldStars(world) {
+    return world.regions.reduce((s, r) =>
+      s + r.levels.reduce((a, lv) => a + (Store.state.stars[lv.id] || 0), 0), 0);
+  },
+
+  show(world, onBack) {
+    const app = document.getElementById('app');
+    app.innerHTML = '';
+    const screen = U.el('div', 'screen cert-screen');
+    screen.appendChild(Level.topBar('Certificate', () => (onBack ? onBack() : Trophies.show())));
+
+    const stars = Certificate.worldStars(world);
+    const levels = world.regions.reduce((s, r) => s + r.levels.length, 0);
+    let dateStr = '';
+    try {
+      dateStr = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+    } catch (e) { dateStr = ''; }
+    const subject = world.id === 'math' ? 'Mathematics' : 'English Language Arts';
+
+    const cert = U.el('div', 'certificate');
+    cert.innerHTML = `
+      <div class="cert-corner tl">✦</div><div class="cert-corner tr">✦</div>
+      <div class="cert-corner bl">✦</div><div class="cert-corner br">✦</div>
+      <div class="cert-seal">${world.emoji}</div>
+      <div class="cert-kicker">Certificate of Mastery</div>
+      <div class="cert-avatar">${Avatar.svg(96)}</div>
+      <div class="cert-name">${U.esc(Avatar.name())}</div>
+      <div class="cert-body">has journeyed through all eight grades and mastered</div>
+      <div class="cert-world">${world.emoji} ${U.esc(world.name)}</div>
+      <div class="cert-subject">Kindergarten to Grade 7 · ${subject}</div>
+      <div class="cert-stats">
+        <span>🏆 8 / 8 regions</span>
+        <span>⭐ ${stars} stars</span>
+        <span>🎯 ${levels} levels</span>
+      </div>
+      ${dateStr ? `<div class="cert-date">${dateStr}</div>` : ''}
+    `;
+    screen.appendChild(cert);
+
+    const row = U.el('div', 'demo-actions');
+    const printBtn = U.el('button', 'ghost-btn', '🖨️ Print it');
+    printBtn.addEventListener('click', () => { try { window.print(); } catch (e) {} });
+    const doneBtn = U.el('button', 'primary-btn', 'Yay! →');
+    doneBtn.addEventListener('click', () => (onBack ? onBack() : WorldMap.showHome()));
+    row.appendChild(printBtn);
+    row.appendChild(doneBtn);
+    screen.appendChild(row);
+    app.appendChild(screen);
+
+    Celebrate.confetti(80);
+    Audio2.say(`Congratulations ${Avatar.name()}! You have mastered all of ${world.name}, from Kindergarten all the way to Grade 7! You are amazing!`);
+  }
+};
+
+/* ---- Sticker book: a passive collection earned through milestones ---- */
+
+const STICKERS = (() => {
+  const done = s => Object.keys(s.completed).length;
+  const threeStar = s => Object.values(s.stars).filter(x => x === 3).length;
+  const trophies = s => Object.keys(s.bossPassed).length;
+  const allLevels = () => CURRICULUM.reduce((a, w) => a + w.regions.reduce((b, r) => b + r.levels.length, 0), 0);
+  const worldDone = (s, id) => CURRICULUM.find(w => w.id === id).regions.every(r => s.bossPassed[r.id]);
+  const accessories = s => (s.avatar.owned || []).filter(id => id !== 'base').length;
+  return [
+    { id: 'first', e: '🌱', name: 'First Steps', hint: 'Finish your first level', got: s => done(s) >= 1 },
+    { id: 'l10', e: '🔟', name: 'Ten Down', hint: 'Finish 10 levels', got: s => done(s) >= 10 },
+    { id: 'l25', e: '🎓', name: 'Quarter Master', hint: 'Finish 25 levels', got: s => done(s) >= 25 },
+    { id: 'l50', e: '🏅', name: 'Fifty Club', hint: 'Finish 50 levels', got: s => done(s) >= 50 },
+    { id: 'lall', e: '🌟', name: 'Completionist', hint: 'Finish every single level', got: s => done(s) >= allLevels() },
+    { id: 'star10', e: '⭐', name: 'Perfect Ten', hint: 'Get 3 stars on 10 levels', got: s => threeStar(s) >= 10 },
+    { id: 'star25', e: '✨', name: 'Star Collector', hint: 'Get 3 stars on 25 levels', got: s => threeStar(s) >= 25 },
+    { id: 'boss1', e: '🏆', name: 'First Crown', hint: 'Beat a Boss Challenge', got: s => trophies(s) >= 1 },
+    { id: 'boss4', e: '👑', name: 'Four Crowns', hint: 'Beat 4 Boss Challenges', got: s => trophies(s) >= 4 },
+    { id: 'boss8', e: '💎', name: 'Eight Crowns', hint: 'Beat 8 Boss Challenges', got: s => trophies(s) >= 8 },
+    { id: 'mathmaster', e: '🌋', name: 'Math Master', hint: 'Master all of Math World', got: s => worldDone(s, 'math') },
+    { id: 'wordmaster', e: '🌸', name: 'Word Master', hint: 'Master all of Word World', got: s => worldDone(s, 'english') },
+    { id: 'grand', e: '🗺️', name: 'Grand Explorer', hint: 'Master both worlds', got: s => worldDone(s, 'math') && worldDone(s, 'english') },
+    { id: 'lightning', e: '⚡', name: 'Lightning Fast', hint: 'Win a Lightning Trial', got: s => Object.keys(s.fastTracked || {}).length >= 1 },
+    { id: 'streak3', e: '🔥', name: 'On a Roll', hint: 'Reach a 3 day streak', got: s => s.streak.best >= 3 },
+    { id: 'streak7', e: '📅', name: 'Week Warrior', hint: 'Reach a 7 day streak', got: s => s.streak.best >= 7 },
+    { id: 'streak14', e: '🌈', name: 'Two Weeks!', hint: 'Reach a 14 day streak', got: s => s.streak.best >= 14 },
+    { id: 'stars50', e: '🌠', name: 'Star Shower', hint: 'Earn 50 stars in all', got: s => s.totalStars >= 50 },
+    { id: 'stars150', e: '☄️', name: 'Supernova', hint: 'Earn 150 stars in all', got: s => s.totalStars >= 150 },
+    { id: 'dressup', e: '🎩', name: 'Dapper', hint: 'Wear an outfit item', got: s => accessories(s) >= 1 },
+    { id: 'shopaholic', e: '🛍️', name: 'Big Spender', hint: 'Own 5 shop items', got: s => (s.avatar.owned || []).length >= 5 },
+    { id: 'artist', e: '🎨', name: 'Free Spirit', hint: 'Unlock a mini game', got: s => (s.gamesOwned || []).length >= 1 },
+    { id: 'decorator', e: '🏡', name: 'Homemaker', hint: 'Buy a decoration', got: s => (s.decorOwned || []).length >= 1 },
+    { id: 'both1', e: '⚖️', name: 'Well Rounded', hint: 'Beat a boss in each world', got: s => CURRICULUM.every(w => w.regions.some(r => s.bossPassed[r.id])) }
+  ];
+})();
+
+const Stickers = {
+  earnedIds() {
+    return STICKERS.filter(st => { try { return st.got(Store.state); } catch (e) { return false; } }).map(st => st.id);
+  },
+
+  // Returns newly-earned stickers since last sync; seeds silently the first time.
+  sync() {
+    const earned = Stickers.earnedIds();
+    if (Store.state.stickersSeen == null) { Store.state.stickersSeen = earned; Store.save(); return []; }
+    const seen = new Set(Store.state.stickersSeen);
+    const fresh = earned.filter(id => !seen.has(id));
+    if (fresh.length) { Store.state.stickersSeen = earned; Store.save(); }
+    return fresh.map(id => STICKERS.find(s => s.id === id));
+  },
+
+  count() { return Stickers.earnedIds().length; },
+
+  show() {
+    const app = document.getElementById('app');
+    app.innerHTML = '';
+    const screen = U.el('div', 'screen sticker-screen');
+    screen.appendChild(Level.topBar('✨ Sticker Book', () => WorldMap.showHome()));
+    const earned = new Set(Stickers.earnedIds());
+    screen.appendChild(U.el('div', 'sticker-count', `${earned.size} / ${STICKERS.length} collected`));
+    const grid = U.el('div', 'sticker-grid');
+    STICKERS.forEach(st => {
+      const got = earned.has(st.id);
+      const cell = U.el('div', 'sticker' + (got ? ' got' : ''));
+      cell.innerHTML = `<div class="sticker-face">${got ? st.e : '❓'}</div>
+        <div class="sticker-name">${got ? U.esc(st.name) : '???'}</div>
+        <div class="sticker-hint">${U.esc(st.hint)}</div>`;
+      if (got) cell.addEventListener('click', () => { Audio2.pop(); Audio2.say(st.name + '. ' + st.hint + '.'); });
+      grid.appendChild(cell);
+    });
+    screen.appendChild(grid);
+    app.appendChild(screen);
+  }
+};
+
+/* ---- Mini games: pure play, no learning content ---- */
+
+const MiniGames = {
+  play(id) {
+    if (id === 'g-draw') MiniGames.drawing();
+    else if (id === 'g-music') MiniGames.music();
+    else if (id === 'g-dress') Shop.show('style');
+  },
+
+  drawing() {
+    const app = document.getElementById('app');
+    app.innerHTML = '';
+    const screen = U.el('div', 'screen game-screen');
+    screen.appendChild(Level.topBar('🎨 Doodle Den', () => Shop.show('games')));
+    const stage = U.el('div', 'draw-stage');
+    const canvas = document.createElement('canvas');
+    canvas.className = 'draw-canvas';
+    stage.appendChild(canvas);
+    screen.appendChild(stage);
+
+    const palette = ['#3d3554', '#ff7a59', '#ffd34d', '#4ecdc4', '#9b8cff', '#f26d9c', '#5fb0f2', '#57b884', '#ffffff'];
+    let color = palette[1], size = 8;
+    const tools = U.el('div', 'draw-tools');
+    palette.forEach(p => {
+      const b = U.el('button', 'draw-swatch');
+      b.style.background = p;
+      b.addEventListener('click', () => { color = p; Audio2.tap(); });
+      tools.appendChild(b);
+    });
+    [['S', 4], ['M', 10], ['L', 24]].forEach(([l, s]) => {
+      const b = U.el('button', 'draw-size', l);
+      b.addEventListener('click', () => { size = s; Audio2.tap(); });
+      tools.appendChild(b);
+    });
+    const clear = U.el('button', 'ghost-btn', '↺');
+    tools.appendChild(clear);
+    screen.appendChild(tools);
+    app.appendChild(screen);
+
+    const ctx = canvas.getContext('2d');
+    setTimeout(() => {
+      const r = stage.getBoundingClientRect();
+      canvas.width = r.width * devicePixelRatio;
+      canvas.height = r.height * devicePixelRatio;
+      ctx.scale(devicePixelRatio, devicePixelRatio);
+      ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+      ctx.fillStyle = '#fffaf2';
+      ctx.fillRect(0, 0, r.width, r.height);
+    }, 60);
+    clear.addEventListener('click', () => {
+      const r = stage.getBoundingClientRect();
+      ctx.fillStyle = '#fffaf2';
+      ctx.fillRect(0, 0, r.width, r.height);
+    });
+
+    let drawing = false, last = null;
+    const pos = e => {
+      const r = canvas.getBoundingClientRect();
+      const p = e.touches ? e.touches[0] : e;
+      return { x: p.clientX - r.left, y: p.clientY - r.top };
+    };
+    const start = e => { drawing = true; last = pos(e); e.preventDefault(); };
+    const move = e => {
+      if (!drawing) return;
+      const p = pos(e);
+      ctx.strokeStyle = color; ctx.lineWidth = size;
+      ctx.beginPath(); ctx.moveTo(last.x, last.y); ctx.lineTo(p.x, p.y); ctx.stroke();
+      last = p; e.preventDefault();
+    };
+    canvas.addEventListener('pointerdown', start);
+    canvas.addEventListener('pointermove', move);
+    canvas.addEventListener('pointerup', () => drawing = false);
+    canvas.addEventListener('touchstart', start, { passive: false });
+    canvas.addEventListener('touchmove', move, { passive: false });
+    canvas.addEventListener('touchend', () => drawing = false);
+  },
+
+  music() {
+    const app = document.getElementById('app');
+    app.innerHTML = '';
+    const screen = U.el('div', 'screen game-screen');
+    screen.appendChild(Level.topBar('🎹 Melody Maker', () => Shop.show('games')));
+
+    const colors = ['#ff7a59', '#ffb14a', '#ffd34d', '#57b884', '#4ecdc4', '#5fb0f2', '#9b8cff', '#f26d9c'];
+    let recording = [], recordStart = null;
+
+    const pads = U.el('div', 'music-pads');
+    colors.forEach((c, i) => {
+      const b = U.el('button', 'music-pad');
+      b.style.background = c;
+      b.addEventListener('pointerdown', () => {
+        Audio2.note(i);
+        b.classList.add('hit');
+        setTimeout(() => b.classList.remove('hit'), 250);
+        if (recordStart !== null) recording.push({ i, t: Date.now() - recordStart });
+      });
+      pads.appendChild(b);
+    });
+    screen.appendChild(pads);
+
+    const row = U.el('div', 'demo-actions');
+    const rec = U.el('button', 'ghost-btn', '⏺ Record');
+    const play = U.el('button', 'primary-btn', '▶ Play it back');
+    rec.addEventListener('click', () => {
+      if (recordStart === null) {
+        recording = []; recordStart = Date.now();
+        rec.textContent = '⏹ Stop'; rec.classList.add('recording');
+      } else {
+        recordStart = null;
+        rec.textContent = '⏺ Record'; rec.classList.remove('recording');
+      }
+    });
+    play.addEventListener('click', () => {
+      recording.forEach(n => setTimeout(() => {
+        Audio2.note(n.i);
+        const pad = pads.children[n.i];
+        pad.classList.add('hit');
+        setTimeout(() => pad.classList.remove('hit'), 200);
+      }, n.t));
+    });
+    row.appendChild(rec); row.appendChild(play);
+    screen.appendChild(row);
+    app.appendChild(screen);
+  }
+};

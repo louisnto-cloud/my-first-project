@@ -1,0 +1,17 @@
+{
+  "name": "LearnQuest — Math & Word Worlds",
+  "short_name": "LearnQuest",
+  "description": "A K-7 math and English learning world",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#2b2542",
+  "theme_color": "#2b2542",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232b2542'/><text x='50' y='68' font-size='52' text-anchor='middle'>🗺️</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
