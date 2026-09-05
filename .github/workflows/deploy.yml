@@ -51,10 +51,12 @@ jobs:
       - name: Assemble full site (main)
         if: github.ref == 'refs/heads/main'
         run: |
-          mkdir -p dist/pilgrimage dist/vuon
+          mkdir -p dist/pilgrimage dist/vuon dist/docviet
           if [ -d pilgrimage/out ]; then cp -r pilgrimage/out/. dist/pilgrimage/; fi
           # Khu Vườn Nhỏ is a static app — copy it as-is (no build step).
           cp -r vuon/index.html vuon/css vuon/js dist/vuon/
+          # Đọc & Viết is a single self-contained static page — copy it as-is.
+          cp docviet/index.html dist/docviet/
       - name: Publish full site
         if: github.ref == 'refs/heads/main' || hashFiles('pilgrimage/package.json') == ''
         uses: peaceiris/actions-gh-pages@v4
@@ -87,4 +89,21 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./vuon_dist
           destination_dir: vuon
+          keep_files: true
+
+      # On the Vietnamese learning feature branch: overlay only /docviet
+      # (Đọc & Viết — a single self-contained static page), leaving the site
+      # root, /pilgrimage and /vuon untouched.
+      - name: Assemble /docviet (feature branch)
+        if: github.ref == 'refs/heads/claude/vietnamese-autism-learning-app-ndhztn'
+        run: |
+          mkdir -p docviet_dist
+          cp docviet/index.html docviet_dist/
+      - name: Publish /docviet only (feature branch)
+        if: github.ref == 'refs/heads/claude/vietnamese-autism-learning-app-ndhztn'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docviet_dist
+          destination_dir: docviet
           keep_files: true
