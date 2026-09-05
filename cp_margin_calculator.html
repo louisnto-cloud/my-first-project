@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Organika · Margin Workbench</title>
+<style>
+  :root{
+    --ink:#1d1d1f; --soft:#6e6e73; --faint:#9a9aa0; --line:#e6e8ec; --bg:#fbfbfd; --card:#ffffff;
+    --accent:#0a84ff; --accent2:#30b0c7; --accent-soft:#eaf3ff;
+    --good:#1e9e57; --good-bg:#e8f7ee; --warn:#b45309; --warn-bg:#fef3e2;
+    --bad:#d83a4b; --bad-bg:#fdeef0;
+    --amber:#fffbe6; --amber-line:#f0e6b8; --nav-bg:rgba(251,251,253,.8);
+    --shadow:0 1px 2px rgba(29,29,31,.05),0 6px 18px rgba(29,29,31,.05);
+    --shadow-lg:0 2px 6px rgba(29,29,31,.06),0 18px 48px rgba(29,29,31,.09);
+    --ring:rgba(10,132,255,.18);
+    --grid:#e1e0d9; --axis:#c3c2b7;
+    --ramp1:#9ec5f4; --ramp2:#6da7ec; --ramp3:#3987e5; --ramp4:#1c5cab;
+    --chart-cost:#e34948;
+    --wash1:rgba(10,132,255,.055); --wash2:rgba(48,176,199,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#f4f4f6; --soft:#9b9ba3; --faint:#6f6f78; --line:#2a2a2f; --bg:#0e0e10; --card:#19191d;
+      --accent:#3d9bff; --accent2:#43c3da; --accent-soft:#12233a;
+      --good:#34c77b; --good-bg:#122a1d; --warn:#e8a33d; --warn-bg:#2d2213;
+      --bad:#ff6b6b; --bad-bg:#331519;
+      --amber:#2c2918; --amber-line:#4a4426; --nav-bg:rgba(14,14,16,.8);
+      --shadow:0 1px 2px rgba(0,0,0,.5),0 6px 18px rgba(0,0,0,.35);
+      --shadow-lg:0 2px 6px rgba(0,0,0,.5),0 18px 48px rgba(0,0,0,.45);
+      --ring:rgba(61,155,255,.25);
+      --grid:#2c2c2a; --axis:#383835;
+      --ramp1:#86b6ef; --ramp2:#5598e7; --ramp3:#3987e5; --ramp4:#6da7ec;
+      --chart-cost:#e66767;
+      --wash1:rgba(61,155,255,.07); --wash2:rgba(67,195,218,.05);
+    }
+  }
+  :root[data-theme="light"]{
+    --ink:#1d1d1f; --soft:#6e6e73; --faint:#9a9aa0; --line:#e6e8ec; --bg:#fbfbfd; --card:#ffffff;
+    --accent:#0a84ff; --accent2:#30b0c7; --accent-soft:#eaf3ff;
+    --good:#1e9e57; --good-bg:#e8f7ee; --warn:#b45309; --warn-bg:#fef3e2;
+    --bad:#d83a4b; --bad-bg:#fdeef0;
+    --amber:#fffbe6; --amber-line:#f0e6b8; --nav-bg:rgba(251,251,253,.8);
+    --shadow:0 1px 2px rgba(29,29,31,.05),0 6px 18px rgba(29,29,31,.05);
+    --shadow-lg:0 2px 6px rgba(29,29,31,.06),0 18px 48px rgba(29,29,31,.09);
+    --ring:rgba(10,132,255,.18);
+    --grid:#e1e0d9; --axis:#c3c2b7;
+    --ramp1:#9ec5f4; --ramp2:#6da7ec; --ramp3:#3987e5; --ramp4:#1c5cab;
+    --chart-cost:#e34948;
+    --wash1:rgba(10,132,255,.055); --wash2:rgba(48,176,199,.05);
+  }
+  :root[data-theme="dark"]{
+    --ink:#f4f4f6; --soft:#9b9ba3; --faint:#6f6f78; --line:#2a2a2f; --bg:#0e0e10; --card:#19191d;
+    --accent:#3d9bff; --accent2:#43c3da; --accent-soft:#12233a;
+    --good:#34c77b; --good-bg:#122a1d; --warn:#e8a33d; --warn-bg:#2d2213;
+    --bad:#ff6b6b; --bad-bg:#331519;
+    --amber:#2c2918; --amber-line:#4a4426; --nav-bg:rgba(14,14,16,.8);
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 6px 18px rgba(0,0,0,.35);
+    --shadow-lg:0 2px 6px rgba(0,0,0,.5),0 18px 48px rgba(0,0,0,.45);
+    --ring:rgba(61,155,255,.25);
+    --grid:#2c2c2a; --axis:#383835;
+    --ramp1:#86b6ef; --ramp2:#5598e7; --ramp3:#3987e5; --ramp4:#6da7ec;
+    --chart-cost:#e66767;
+    --wash1:rgba(61,155,255,.07); --wash2:rgba(67,195,218,.05);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;min-height:100vh}
+  body{position:relative}
+  body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:radial-gradient(720px 420px at 12% -60px,var(--wash1),transparent 70%),
+               radial-gradient(640px 400px at 95% -40px,var(--wash2),transparent 70%)}
+  button{font:inherit;color:inherit}
+  .wrap{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:0 22px 90px}
+
+  header{padding:46px 0 4px;display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .eyebrow{font-weight:700;letter-spacing:1.6px;font-size:12px;text-transform:uppercase;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+  h1{font-size:46px;line-height:1.04;font-weight:700;margin:7px 0 5px;letter-spacing:-.025em;text-wrap:balance}
+  .sub{color:var(--soft);font-size:17px}
+  .hdr-tools{display:flex;gap:8px;align-items:center;padding-bottom:8px;flex-wrap:wrap}
+  .tool-btn{border:1px solid var(--line);background:var(--card);border-radius:980px;
+    padding:8px 16px;font-size:13px;font-weight:600;color:var(--soft);cursor:pointer;transition:.18s}
+  .tool-btn:hover{color:var(--ink);border-color:var(--faint);transform:translateY(-1px)}
+  select.tool-btn{appearance:none;-webkit-appearance:none;padding-right:28px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 12px center}
+
+  /* Simple/Advanced switch */
+  .modeseg{display:inline-flex;background:var(--line);border-radius:980px;padding:3px;gap:2px}
+  .modeseg button{border:0;background:transparent;border-radius:980px;padding:7px 16px;
+    font-size:13px;font-weight:700;color:var(--soft);cursor:pointer;transition:.18s}
+  .modeseg button.on{background:var(--card);color:var(--ink);box-shadow:0 1px 5px rgba(0,0,0,.14)}
+
+  .nav{position:sticky;top:0;z-index:20;background:var(--nav-bg);backdrop-filter:saturate(180%) blur(16px);
+    -webkit-backdrop-filter:saturate(180%) blur(16px);
+    border-bottom:1px solid var(--line);margin:18px -22px 28px;padding:10px 22px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .nav button.tab{border:0;background:transparent;color:var(--soft);font-size:14px;font-weight:600;
+    padding:8px 15px;border-radius:980px;cursor:pointer;transition:.18s;
+    display:inline-flex;align-items:center;gap:7px}
+  .nav button.tab svg{width:14px;height:14px;flex:none;opacity:.75}
+  .nav button.tab:hover{color:var(--ink)}
+  .nav button.tab.on{background:var(--ink);color:var(--bg)}
+  .nav button.hidden{display:none}
+  .nav button:focus-visible,.tool-btn:focus-visible,.modeseg button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .ctx{margin-left:auto;border:1px solid var(--line);background:var(--card);border-radius:980px;
+    padding:7px 14px;font-size:12.5px;font-weight:600;color:var(--soft);cursor:pointer;
+    font-variant-numeric:tabular-nums;transition:.18s;white-space:nowrap}
+  .ctx b{color:var(--ink)} .ctx .m{color:var(--good);font-weight:700}
+  .ctx:hover{border-color:var(--faint)}
+  @media(max-width:680px){
+    .ctx{display:none}
+    .nav{position:fixed;top:auto;bottom:0;left:0;right:0;margin:0;border-bottom:0;border-top:1px solid var(--line);
+      justify-content:space-around;gap:0;flex-wrap:nowrap;
+      padding:7px 4px calc(7px + env(safe-area-inset-bottom))}
+    .nav button.tab{flex:1;min-width:0;flex-direction:column;gap:3px;font-size:9.5px;
+      padding:6px 2px;border-radius:12px;letter-spacing:-.01em}
+    .nav button.tab svg{width:17px;height:17px}
+    .wrap{padding-bottom:140px}
+  }
+
+  .view{display:none}
+  .view.on{display:block}
+  .view.on .panel{animation:rise .32s ease both}
+  .view.on .panel + .panel{animation-delay:.07s}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}}
+  @media (prefers-reduced-motion: reduce){.view.on .panel{animation:none}.tool-btn:hover{transform:none}}
+
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:22px;
+    padding:26px 28px;box-shadow:var(--shadow);margin:0 0 22px}
+  .panel h2{font-size:19px;font-weight:700;letter-spacing:-.01em;margin:0 0 4px}
+  .panel .h-sub{color:var(--soft);font-size:13px;margin:0 0 20px;max-width:64ch;line-height:1.5}
+
+  /* solver + gauge */
+  .solver-top{display:grid;grid-template-columns:1fr 168px;gap:30px;align-items:center}
+  @media(max-width:700px){.solver-top{grid-template-columns:1fr}}
+  .solver{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .solver.five{grid-template-columns:repeat(3,1fr)}
+  @media(min-width:841px){.solver.five{grid-template-columns:repeat(5,1fr)}}
+  @media(max-width:560px){.solver,.solver.five{grid-template-columns:repeat(2,1fr)}}
+  .field{display:flex;flex-direction:column;gap:7px;min-width:0}
+  .field .lab{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;
+    letter-spacing:.6px;text-transform:uppercase;color:var(--soft);white-space:nowrap}
+  .chip{font-size:9px;font-weight:700;letter-spacing:.4px;padding:2px 7px;border-radius:5px;
+    border:1px solid transparent;cursor:pointer;background:transparent;color:transparent;transition:.18s}
+  .field.anchorable .chip{color:var(--line);border-color:var(--line)}
+  .field.anchorable .chip:hover{color:var(--soft);border-color:var(--soft)}
+  .field.anchored .chip{background:var(--accent);border-color:var(--accent);color:#fff}
+  .iwrap{position:relative;display:flex;align-items:center}
+  .iwrap .fix{position:absolute;font-size:14px;font-weight:600;color:var(--soft);pointer-events:none}
+  .iwrap .fix.pre{left:13px}
+  .iwrap .fix.suf{right:13px}
+  input.num{width:100%;border:1.5px solid var(--amber-line);border-radius:13px;padding:12px 14px;
+    font:inherit;font-size:17px;font-weight:600;background:var(--amber);color:var(--ink);
+    font-variant-numeric:tabular-nums;transition:border-color .18s,background .18s,box-shadow .18s;min-width:0}
+  input.num:hover{border-color:var(--faint)}
+  input.num:focus{outline:none;border-color:var(--accent);background:var(--card);box-shadow:0 0 0 4px var(--ring)}
+  input.num.pre{padding-left:28px}
+  input.num.suf{padding-right:30px}
+  input.num.neg{color:var(--bad)}
+  input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
+  input[type=number]{-moz-appearance:textfield;appearance:textfield}
+  input.num.flash{animation:flashBg .7s ease}
+  @keyframes flashBg{0%{background:var(--accent-soft);border-color:var(--accent)}100%{background:var(--amber)}}
+  @media (prefers-reduced-motion: reduce){input.num.flash{animation:none}}
+  .solver-hint{margin-top:16px;font-size:12px;color:var(--soft)}
+  .solver-hint b{color:var(--ink)}
+  .dirhint{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:12px;
+    color:var(--soft);background:var(--bg);border:1px solid var(--line);border-radius:980px;padding:5px 13px}
+  .dirhint::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+  .dirhint b{color:var(--ink)}
+  .err{margin-top:10px;font-size:13px;color:var(--bad);display:none}
+  .err.on{display:block}
+
+  /* sliders */
+  .sliderrow{display:flex;align-items:center;gap:12px;margin-top:16px}
+  .sliderrow .end{font-size:11px;font-weight:700;color:var(--faint);font-variant-numeric:tabular-nums;flex:none}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:26px;background:transparent;cursor:grab}
+  input[type=range]:active{cursor:grabbing}
+  input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:3px;
+    background:linear-gradient(90deg,var(--accent) var(--pct,45%),var(--line) var(--pct,45%))}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;
+    background:var(--card);border:2.5px solid var(--accent);margin-top:-7px;
+    box-shadow:0 2px 8px rgba(0,0,0,.18);transition:transform .12s}
+  input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.12)}
+  input[type=range]::-moz-range-track{height:6px;border-radius:3px;background:var(--line)}
+  input[type=range]::-moz-range-progress{height:6px;border-radius:3px;background:var(--accent)}
+  input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;
+    background:var(--card);border:2.5px solid var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.18)}
+  input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+
+  /* margin gauge */
+  .gauge{display:flex;flex-direction:column;align-items:center;gap:4px;justify-self:center}
+  .gauge svg{display:block}
+  .gauge .arc{transition:stroke-dashoffset .45s cubic-bezier(.3,.7,.3,1),stroke .3s}
+  @media (prefers-reduced-motion: reduce){.gauge .arc{transition:none}}
+  .gauge .gv{font-size:30px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .gauge .gl{font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;fill:var(--soft)}
+  .gauge .cap{font-size:11.5px;color:var(--soft);text-align:center;line-height:1.45;max-width:170px}
+  .gauge .cap b{color:var(--ink);font-variant-numeric:tabular-nums}
+
+  /* kpis */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:20px 0 0}
+  .kpi{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:15px 17px 13px;transition:.18s}
+  .kpi:hover{border-color:var(--faint)}
+  .kpi .k{font-size:11px;font-weight:700;letter-spacing:.6px;color:var(--soft);text-transform:uppercase}
+  .kpi .v{font-size:25px;font-weight:700;margin-top:5px;letter-spacing:-.015em;font-variant-numeric:tabular-nums}
+  .kpi .v.good{color:var(--good)} .kpi .v.warn{color:var(--warn)} .kpi .v.bad{color:var(--bad)}
+  .kpi .n{font-size:11px;color:var(--soft);margin-top:3px}
+
+  /* pinned comparison */
+  .pinbar{margin-top:18px;border:1.5px dashed var(--line);border-radius:16px;padding:16px 18px;background:var(--bg)}
+  .pinbar .ph{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+  .pinbar .pt{font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--soft)}
+  .pinbar .pbtns{display:flex;gap:8px}
+  .pinbar .pbtn{border:1px solid var(--line);background:var(--card);border-radius:980px;padding:5px 12px;
+    font-size:12px;font-weight:600;color:var(--soft);cursor:pointer;transition:.15s}
+  .pinbar .pbtn:hover{color:var(--ink);border-color:var(--faint)}
+  .pingrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+  .pincell .pk{font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--soft)}
+  .pincell .pv{font-size:15px;font-weight:600;margin-top:4px;font-variant-numeric:tabular-nums;color:var(--soft)}
+  .pincell .pv b{color:var(--ink);font-size:17px}
+  .delta{display:inline-block;margin-left:7px;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+  .delta.up{color:var(--good)} .delta.down{color:var(--bad)} .delta.flat{color:var(--faint)}
+
+  /* tables */
+  .tscroll{overflow-x:auto;margin:0 -4px;padding:0 4px}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line);
+    white-space:nowrap;font-variant-numeric:tabular-nums}
+  th:first-child,td:first-child{text-align:left}
+  thead th{font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--soft);
+    font-weight:700;border-bottom:2px solid var(--line)}
+  tbody tr:last-child td{border-bottom:none}
+  tr.clickable{cursor:pointer;transition:background .12s}
+  tr.clickable:hover td{background:var(--accent-soft)}
+  tr.hit td{background:var(--good-bg);font-weight:700;color:var(--good)}
+  tr.tot td{font-weight:700;border-top:2px solid var(--line)}
+  .strack{display:block;width:130px;height:8px;background:var(--bg);border:1px solid var(--line);
+    border-radius:4px;overflow:hidden}
+  .sfill{display:block;height:100%;border-radius:3px;transition:width .3s ease}
+  @media (prefers-reduced-motion: reduce){.sfill{transition:none}}
+  td.empty{text-align:center;color:var(--soft);padding:22px}
+
+  /* P&L statement */
+  .pl-inputs{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:22px}
+  table.pl td,table.pl th{padding:10px 12px}
+  table.pl td.ln{color:var(--ink)}
+  table.pl tr.minor td.ln{padding-left:26px;color:var(--soft)}
+  table.pl tr.minor td{color:var(--soft)}
+  table.pl tr.sub td{font-weight:700;border-top:1.5px solid var(--axis)}
+  table.pl tr.major td{font-weight:700;font-size:15px;border-top:2px solid var(--ink);border-bottom:none;padding-top:13px}
+  table.pl td.pct{color:var(--faint);font-size:12.5px}
+  table.pl .posv{color:var(--good)} table.pl .negv{color:var(--bad)}
+
+  /* status pill */
+  .pill{display:inline-flex;align-items:center;gap:6px;border-radius:980px;padding:4px 12px;
+    font-size:12px;font-weight:700;border:1px solid transparent}
+  .pill.good{background:var(--good-bg);color:var(--good)}
+  .pill.warn{background:var(--warn-bg);color:var(--warn)}
+  .pill.bad{background:var(--bad-bg);color:var(--bad)}
+
+  /* landed cost rows */
+  .lrow{display:grid;grid-template-columns:1fr 150px;gap:12px;align-items:center;
+    padding:10px 0;border-bottom:1px solid var(--line)}
+  .lrow:last-of-type{border-bottom:none}
+  .lrow .t{font-size:14px;font-weight:600}
+  .lrow .d{font-size:12px;color:var(--soft);margin-top:2px}
+  .ltot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;
+    padding:16px 18px;background:var(--good-bg);border-radius:14px}
+  .ltot .t{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--good)}
+  .ltot .v{font-size:28px;font-weight:700;color:var(--good);font-variant-numeric:tabular-nums}
+
+  .action{border:0;background:linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 72%,var(--accent2)));
+    color:#fff;border-radius:12px;padding:11px 20px;
+    font-size:14px;font-weight:600;cursor:pointer;transition:.18s;box-shadow:0 4px 14px var(--ring)}
+  .action:hover{filter:brightness(1.07);transform:translateY(-1px)}
+  .action.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent);box-shadow:none}
+  .action.subtle{background:var(--bg);color:var(--soft);border:1px solid var(--line);box-shadow:none}
+  .action.subtle:hover{color:var(--ink)}
+  .action:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .btnrow{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;align-items:center}
+  .copied{font-size:12px;color:var(--good);font-weight:600;opacity:0;transition:opacity .25s}
+  .copied.on{opacity:1}
+  @media (prefers-reduced-motion: reduce){.action:hover{transform:none}}
+
+  /* preset chips */
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px;align-items:center}
+  .chips .cl{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--faint);margin-right:2px}
+  .chipbtn{border:1px solid var(--line);background:var(--card);border-radius:980px;padding:6px 14px;
+    font-size:12.5px;font-weight:600;color:var(--soft);cursor:pointer;transition:.15s}
+  .chipbtn:hover{color:var(--ink);border-color:var(--faint)}
+  .chipbtn.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .chipbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  /* ladder */
+  .seg{display:inline-flex;border:1px solid var(--line);border-radius:980px;overflow:hidden;margin-bottom:16px}
+  .seg button{border:0;background:var(--card);padding:7px 16px;font-weight:600;font-size:13px;
+    color:var(--soft);cursor:pointer;transition:.15s}
+  .seg button.on{background:var(--ink);color:var(--bg)}
+  .ladder-grid{display:grid;grid-template-columns:1fr 130px 130px;gap:10px 14px;align-items:center}
+  @media(max-width:560px){.ladder-grid{grid-template-columns:1fr 96px 96px}}
+  .ladder-grid .hd{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--soft)}
+  .tier-name{font-size:14px;font-weight:600}
+  .tier-sub{font-size:12px;color:var(--soft);margin-top:2px}
+  .tier-out{font-size:16px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+  .ladder-viz{margin-top:22px;display:flex;flex-direction:column;gap:10px}
+  .lv-row{display:grid;grid-template-columns:110px 1fr 90px;gap:12px;align-items:center;font-size:13px}
+  .lv-row .n{font-weight:600;color:var(--soft)}
+  .lv-row .v{font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+  .lv-track{display:block;height:22px;border-radius:6px;background:var(--bg);border:1px solid var(--line);overflow:hidden}
+  .lv-fill{display:block;height:100%;border-radius:5px;transition:width .3s ease}
+  @media (prefers-reduced-motion: reduce){.lv-fill,.mbar{transition:none}}
+
+  /* chart */
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin:2px 0 12px;font-size:12px;color:var(--soft)}
+  .legend .sw{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:3px}
+  svg text{font-family:inherit}
+  .tip{position:absolute;pointer-events:none;background:var(--card);border:1px solid var(--line);
+    border-radius:10px;box-shadow:var(--shadow-lg);padding:9px 12px;font-size:12px;line-height:1.5;
+    display:none;z-index:5;font-variant-numeric:tabular-nums;min-width:150px}
+  .chart-wrap{position:relative;margin-top:6px}
+
+  /* products */
+  input.cellinp{width:100%;border:1px solid var(--amber-line);background:var(--amber);border-radius:8px;
+    padding:6px 9px;font:inherit;font-size:13px;font-weight:600;text-align:right;
+    color:var(--ink);font-variant-numeric:tabular-nums;min-width:70px}
+  input.cellinp.name{text-align:left;min-width:130px}
+  input.cellinp:focus{outline:none;border-color:var(--accent);background:var(--card);box-shadow:0 0 0 3px var(--ring)}
+  .del{border:0;background:transparent;color:var(--soft);cursor:pointer;font-size:15px;
+    padding:4px 8px;border-radius:8px;line-height:1}
+  .del:hover{color:var(--bad);background:var(--bad-bg)}
+  .loadbtn{border:0;background:transparent;color:var(--soft);cursor:pointer;font-size:13px;
+    padding:4px 8px;border-radius:8px;line-height:1}
+  .loadbtn:hover{color:var(--accent);background:var(--accent-soft)}
+
+  /* print: the P&L becomes the document */
+  @media print{
+    body::before{display:none}
+    .nav,.hdr-tools,.seg,.sliderrow,.pl-inputs,.btnrow,.foot{display:none !important}
+    .view{display:none !important}
+    .view[data-view="pnl"]{display:block !important}
+    .panel{box-shadow:none;border-color:#ccc;break-inside:avoid}
+    .wrap{max-width:100%;padding:0}
+    header{padding:10px 0 0}
+    h1{font-size:28px}
+  }
+
+  /* collapsible explainer panels */
+  .panel.exp{padding:6px 28px}
+  .panel.exp details{padding:14px 0}
+  .panel.exp summary{font-size:15px;font-weight:700;cursor:pointer;list-style:none;
+    display:flex;align-items:center;gap:9px;color:var(--soft);transition:color .15s}
+  .panel.exp summary:hover{color:var(--ink)}
+  .panel.exp summary::-webkit-details-marker{display:none}
+  .panel.exp summary::before{content:'';width:7px;height:7px;border-right:1.5px solid currentColor;
+    border-bottom:1.5px solid currentColor;transform:rotate(-45deg);transition:transform .18s;flex:none;margin-left:2px}
+  .panel.exp details[open] summary::before{transform:rotate(45deg)}
+  .panel.exp details[open] summary{color:var(--ink)}
+  .panel.exp .explain{margin-top:12px;padding-left:18px}
+
+  .explain{font-size:13px;color:var(--soft);line-height:1.65;max-width:68ch}
+
+  @media (pointer:coarse){
+    .chipbtn{padding:9px 16px}
+    .pinbar .pbtn{padding:8px 15px}
+    .action.subtle,.action.ghost{padding:11px 18px}
+  }
+
+  .explain b{color:var(--ink)}
+  .explain code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;
+    background:var(--bg);border:1px solid var(--line);padding:1px 6px;border-radius:5px}
+  .foot{color:var(--soft);font-size:12px;margin-top:34px;text-align:center}
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <span class="eyebrow">Organika</span>
+      <h1>Margin Workbench</h1>
+      <p class="sub">Cost, price &amp; margin — solve in any direction.</p>
+    </div>
+    <div class="hdr-tools">
+      <div class="modeseg" id="modeSeg" role="group" aria-label="Complexity">
+        <button data-mode="simple">Simple</button>
+        <button data-mode="adv" class="on">Advanced</button>
+      </div>
+      <select class="tool-btn" id="curSel" aria-label="Currency">
+        <option value="$">$ CAD</option><option value="US$">US$</option>
+        <option value="€">€ EUR</option><option value="£">£ GBP</option><option value="₫">₫ VND</option>
+      </select>
+      <button class="tool-btn" id="themeBtn">Theme</button>
+      <button class="tool-btn" id="resetAll">Reset</button>
+    </div>
+  </header>
+
+  <nav class="nav" id="nav" aria-label="Sections">
+    <button class="tab on" data-v="calc"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="12" height="12" rx="3"/><path d="M5 6.2h6M5 9.4h3.5"/></svg>Calculator</button>
+    <button class="tab" data-v="pnl"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2h5.5L13 5.5V14H4z"/><path d="M6.3 8.2h4M6.3 10.8h4"/></svg>P&amp;L</button>
+    <button class="tab" data-v="landed"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 5.2 8 2.4l5.5 2.8v5.6L8 13.6l-5.5-2.8z"/><path d="M2.5 5.2 8 8l5.5-2.8M8 8v5.6"/></svg>Landed Cost</button>
+    <button class="tab" data-v="ladder"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 13.5h4v-4h4v-4h4"/></svg>Price Ladder</button>
+    <button class="tab" data-v="be"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 13.5h12"/><path d="M3 10.5l3.5-3.5 2.5 2 4-4.5"/></svg>Break even</button>
+    <button class="tab" data-v="prod"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 2h5.2L14 8.8 8.8 14 2 7.2z"/><circle cx="5.3" cy="5.3" r="1.1"/></svg>Products</button>
+    <button class="ctx" id="ctxChip" title="Jump to calculator"></button>
+  </nav>
+
+  <!-- ================= CALCULATOR ================= -->
+  <section class="view on" data-view="calc">
+    <div class="panel">
+      <h2>Bidirectional solver</h2>
+      <p class="h-sub">Edit any field — the others recompute instantly. The <b>held</b> pin marks which of cost / price stays fixed when you edit a percentage; click the other pin to flip it.</p>
+      <div class="solver-top">
+        <div>
+          <div class="solver" id="solver"></div>
+          <div class="sliderrow">
+            <span class="end">0%</span>
+            <input type="range" id="mSlider" min="0" max="90" step="0.5" aria-label="Margin slider">
+            <span class="end">90%</span>
+          </div>
+        </div>
+        <div class="gauge" id="gauge">
+          <svg width="150" height="150" viewBox="0 0 150 150" role="img" aria-label="Margin gauge">
+            <circle cx="75" cy="75" r="62" fill="none" stroke="var(--line)" stroke-width="11"/>
+            <line x1="107.9" y1="120.3" x2="115.0" y2="130.1" stroke="var(--faint)" stroke-width="2" stroke-linecap="round"><title>40% — healthy margin</title></line>
+            <circle class="arc" id="gArc" cx="75" cy="75" r="62" fill="none" stroke="var(--good)"
+              stroke-width="11" stroke-linecap="round" stroke-dasharray="389.6" stroke-dashoffset="389.6"
+              transform="rotate(-90 75 75)"/>
+            <text class="gv" id="gVal" x="75" y="74" text-anchor="middle" dominant-baseline="middle" fill="currentColor">—</text>
+            <text class="gl" x="75" y="98" text-anchor="middle">margin</text>
+          </svg>
+          <div class="cap" id="gCap"></div>
+        </div>
+      </div>
+      <p class="err" id="solverErr"></p>
+      <br>
+      <span class="dirhint" id="dirHint"></span>
+      <p class="solver-hint">Margin is profit ÷ <b>price</b> · markup is profit ÷ <b>cost</b>. A 50% markup = 33.3% margin; margin can never reach 100%.</p>
+      <div class="kpis" id="calcKpis" aria-live="polite"></div>
+      <div class="pinbar" id="pinBar" style="display:none"></div>
+      <div class="btnrow">
+        <button class="action subtle" id="pinBtn">Pin scenario</button>
+        <button class="action subtle" id="copyBtn">Copy summary</button>
+        <span class="copied" id="copiedMsg">Copied ✓</span>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Margin scenarios</h2>
+      <p class="h-sub">Selling price required at each margin tier for your current cost — click a row to apply it.</p>
+      <div class="tscroll"><table>
+        <thead><tr><th>Margin</th><th>Markup</th><th>Selling price</th><th>Profit / unit</th><th style="text-align:left;padding-left:18px">·</th></tr></thead>
+        <tbody id="scenBody"></tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- ================= P&L ================= -->
+  <section class="view" data-view="pnl">
+    <div class="panel">
+      <h2>Profit &amp; loss</h2>
+      <p class="h-sub">Unit economics flow in from the calculator. Set your monthly volume and cost lines to see the full statement — per unit, per month, and as a share of revenue.</p>
+      <div class="seg" id="plSeg">
+        <button data-d="simple">Simple</button>
+        <button data-d="detail" class="on">Detailed</button>
+      </div>
+      <div class="pl-inputs" id="plInputs"></div>
+      <div class="sliderrow" style="margin:2px 0 22px">
+        <span class="end">0</span>
+        <input type="range" id="uSlider" min="0" max="20000" step="100" aria-label="Units sold slider">
+        <span class="end">20k</span>
+      </div>
+      <div class="tscroll"><table class="pl">
+        <thead><tr><th>Line</th><th>Per unit</th><th>Per month</th><th>% of revenue</th></tr></thead>
+        <tbody id="plBody"></tbody>
+      </table></div>
+      <div class="kpis" id="plKpis" aria-live="polite"></div>
+      <div class="pinbar" id="goalBar" style="margin-top:20px">
+        <div class="ph"><span class="pt">Goal seek — price for a target operating margin</span></div>
+        <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+          <span class="iwrap" style="width:120px;flex:none">
+            <input class="num suf" id="goalPct" type="number" step="1" inputmode="decimal" aria-label="Target operating margin">
+            <span class="fix suf">%</span>
+          </span>
+          <span id="goalOut" style="font-size:14px;font-variant-numeric:tabular-nums"></span>
+          <button class="pbtn" id="goalApply" style="border:1px solid var(--accent);color:var(--accent);background:var(--card);border-radius:980px;padding:6px 14px;font-size:12.5px;font-weight:600;cursor:pointer">Apply price</button>
+        </div>
+      </div>
+      <div class="btnrow">
+        <button class="action subtle" id="printPl">Print / save PDF</button>
+      </div>
+    </div>
+    <div class="panel exp"><details><summary>Reading this statement</summary>
+      <p class="explain" id="plExplain"></p>
+    </details></div>
+  </section>
+
+  <!-- ================= LANDED COST ================= -->
+  <section class="view" data-view="landed">
+    <div class="panel">
+      <h2>Landed cost builder</h2>
+      <p class="h-sub">Your true cost price is more than the invoice. Build it up per unit, then push it into the calculator.</p>
+      <div class="chips" id="dutyChips"><span class="cl">Duty quick-set</span></div>
+      <div id="landedRows"></div>
+      <div class="ltot"><span class="t">Landed cost / unit</span><span class="v" id="landedTot">—</span></div>
+      <div class="btnrow">
+        <button class="action" id="useLanded">Use as cost in Calculator</button>
+      </div>
+    </div>
+    <div class="panel exp"><details><summary>Why landed cost matters</summary>
+      <p class="explain">A margin computed on invoice cost alone overstates reality. Freight, duty, packaging and inbound handling typically add <b>8–25%</b> to a CPG unit cost. Duty is applied on the invoice value; everything else is entered per unit. The total here is the <b>CP</b> the rest of this workbench should run on.</p>
+    </details></div>
+  </section>
+
+  <!-- ================= PRICE LADDER ================= -->
+  <section class="view" data-view="ladder">
+    <div class="panel">
+      <h2>Channel price ladder</h2>
+      <p class="h-sub">Every tier takes its margin on its own selling price. Run it forward from your cost — or backward from a target shelf price.</p>
+      <div class="seg" id="ladderSeg">
+        <button class="on" data-dir="fwd">Cost → Shelf</button>
+        <button data-dir="rev">Shelf → Cost</button>
+      </div>
+      <div class="chips" id="ladderPresets"><span class="cl">Channel</span></div>
+      <div class="ladder-grid" id="ladderGrid"></div>
+      <div class="ladder-viz" id="ladderViz"></div>
+      <p class="err" id="ladderErr"></p>
+    </div>
+    <div class="panel exp"><details><summary>Reading the ladder</summary>
+      <p class="explain">Forward: <code>tier price = buy price ÷ (1 − tier margin)</code>, compounding at each step — three 30% tiers turn a $1.00 cost into a $2.92 shelf price. Reverse strips each tier off a target shelf price to reveal the <b>maximum cost you can afford</b>; if your actual cost is higher, the status pill goes red and shows the gap.</p>
+    </details></div>
+  </section>
+
+  <!-- ================= BREAK-EVEN ================= -->
+  <section class="view" data-view="be">
+    <div class="panel">
+      <h2>Break even</h2>
+      <p class="h-sub">Unit economics come from the calculator; add fixed costs to see how many units pay them off — and how many hit your profit target.</p>
+      <div class="solver" id="beInputs"></div>
+      <div class="kpis" id="beKpis"></div>
+    </div>
+    <div class="panel">
+      <h2>Profit vs. volume</h2>
+      <p class="h-sub">Where the revenue line crosses total cost is break even. Hover for exact figures.</p>
+      <div class="legend">
+        <span><span class="sw" style="background:var(--accent)"></span>Revenue</span>
+        <span><span class="sw" style="background:var(--chart-cost)"></span>Total cost</span>
+      </div>
+      <div class="chart-wrap" id="beChartWrap">
+        <svg id="beChart" width="100%" height="280" role="img" aria-label="Break-even chart: revenue and total cost versus units sold"></svg>
+        <div class="tip" id="beTip"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRODUCTS ================= -->
+  <section class="view" data-view="prod">
+    <div class="panel">
+      <h2>Product line</h2>
+      <p class="h-sub">Track cost and price across your range. Margins compute live; export the lot as CSV.</p>
+      <div class="tscroll"><table>
+        <thead><tr>
+          <th>Product</th><th>Cost</th><th>Price</th><th>Profit</th><th>Margin</th><th>Markup</th><th>Status</th><th></th>
+        </tr></thead>
+        <tbody id="prodBody"></tbody>
+      </table></div>
+      <div class="btnrow">
+        <button class="action ghost" id="addProd">+ Add product</button>
+        <button class="action subtle" id="fromCalc">Add from Calculator</button>
+        <button class="action subtle" id="pasteBtn">Paste from spreadsheet</button>
+        <button class="action subtle" id="csvBtn">Copy CSV</button>
+      </div>
+      <div id="pastePanel" style="display:none;margin-top:16px">
+        <textarea id="pasteBox" rows="5" placeholder="Paste rows here — one product per line:&#10;Sparkling Lime 12-pack	12.50	20.83&#10;Works with columns separated by tabs (Excel/Sheets), commas, or semicolons, in the order: name, cost, price."
+          style="width:100%;border:1.5px solid var(--amber-line);background:var(--amber);color:var(--ink);
+          border-radius:12px;padding:12px 14px;font:inherit;font-size:13px;resize:vertical"></textarea>
+        <div class="btnrow" style="margin-top:10px">
+          <button class="action" id="pasteGo">Import rows</button>
+          <button class="action subtle" id="pasteCancel">Cancel</button>
+          <span class="copied" id="pasteMsg"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="foot">Organika · Margin Workbench · figures are per-unit in the selected currency · saved locally in your browser</div>
+</div>
+
+<script>
+'use strict';
+/* ---------- state ---------- */
+const DEF = {
+  mode: 'adv', cost: 12.50, price: 20.83, anchor: 'cost', cur: '$', theme: '', pinned: null,
+  landed: { base: 12.50, freight: 0.85, dutyPct: 6.5, pack: 0.40, other: 0.15 },
+  ladder: { dir: 'fwd', brand: 35, dist: 28, retail: 38, shelf: 49.99 },
+  be: { fixed: 25000, extraVar: 0, target: 10000 },
+  pnl: { detail: 'detail', units: 4000, opex: 24000, goal: 15,
+         trade: 8, freightOut: 0.60, fulfil: 0.90, mktPct: 6, overhead: 18000 },
+  products: [
+    { name: 'Raspberry 4 pack', cost: 12.50, price: 20.83 },
+    { name: 'Lime Lemon 4 pack', cost: 12.50, price: 20.83 },
+    { name: 'Passion Fruit Pineapple single', cost: 3.40, price: 5.99 },
+  ],
+};
+const LS = 'orgk-margin-workbench-v2';
+let S;
+try { S = Object.assign(structuredClone(DEF), JSON.parse(localStorage.getItem(LS) || '{}')); }
+catch (e) { S = structuredClone(DEF); }
+['landed','ladder','be','pnl'].forEach(k => S[k] = Object.assign({}, DEF[k], S[k]));
+if (!Array.isArray(S.products)) S.products = structuredClone(DEF.products);
+
+let saveT;
+function save(){ clearTimeout(saveT); saveT = setTimeout(() => {
+  try { localStorage.setItem(LS, JSON.stringify(S)); } catch (e) {}
+}, 250); }
+
+/* ---------- helpers ---------- */
+const $ = id => document.getElementById(id);
+const num = v => { const n = parseFloat(v); return isFinite(n) ? n : NaN; };
+function fmt(n, dec = 2){
+  if (!isFinite(n)) return '—';
+  return n.toLocaleString('en-CA', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+}
+const money = (n, dec = 2) => isFinite(n) ? (n < 0 ? '−' + S.cur + fmt(-n, dec) : S.cur + fmt(n, dec)) : '—';
+const marginOf = (c, p) => p > 0 ? (p - c) / p * 100 : NaN;
+const markupOf = (c, p) => c > 0 ? (p - c) / c * 100 : NaN;
+function marginClass(m){
+  if (!isFinite(m)) return '';
+  const r = Math.round(m * 10) / 10;   // judge the displayed value
+  return r >= 40 ? 'good' : r >= 20 ? 'warn' : 'bad';
+}
+
+/* ---------- theme / currency / mode ---------- */
+function applyTheme(){ if (S.theme) document.documentElement.dataset.theme = S.theme; else delete document.documentElement.dataset.theme; }
+$('themeBtn').addEventListener('click', () => {
+  const dark = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim() !== '#fbfbfd';
+  S.theme = dark ? 'light' : 'dark';
+  applyTheme(); save(); drawBE();
+});
+$('curSel').value = S.cur;
+$('curSel').addEventListener('change', e => { S.cur = e.target.value; save(); renderAll(); });
+$('resetAll').addEventListener('click', () => {
+  const theme = S.theme, mode = S.mode;
+  S = structuredClone(DEF); S.theme = theme; S.mode = mode;
+  save(); buildSolver(); buildLanded(); buildLadder(); buildBE(); buildPnl(); renderProducts(); renderAll();
+});
+applyTheme();
+
+const SIMPLE_VIEWS = ['calc', 'pnl'];
+$('modeSeg').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  S.mode = b.dataset.mode; save(); applyMode();
+});
+function applyMode(){
+  document.querySelectorAll('#modeSeg button').forEach(b => b.classList.toggle('on', b.dataset.mode === S.mode));
+  const simple = S.mode === 'simple';
+  document.querySelectorAll('#nav button.tab').forEach(b => {
+    b.classList.toggle('hidden', simple && !SIMPLE_VIEWS.includes(b.dataset.v));
+  });
+  const active = document.querySelector('#nav button.tab.on');
+  if (simple && active && !SIMPLE_VIEWS.includes(active.dataset.v)) switchView('calc');
+  buildSolver(); paintSolver(); paintKpis();
+}
+
+/* ---------- nav ---------- */
+function switchView(v){
+  document.querySelectorAll('#nav button.tab').forEach(x => x.classList.toggle('on', x.dataset.v === v));
+  document.querySelectorAll('.view').forEach(x => x.classList.toggle('on', x.dataset.view === v));
+  if (v === 'be') drawBE();
+}
+$('nav').addEventListener('click', e => {
+  const b = e.target.closest('button.tab'); if (!b) return;
+  switchView(b.dataset.v);
+});
+$('ctxChip').addEventListener('click', () => switchView('calc'));
+
+/* ================= CALCULATOR ================= */
+const FIELDS_ALL = [
+  { id: 'cost',   label: 'Cost (CP)',   pre: true,  anchorable: true },
+  { id: 'margin', label: 'Margin',      suf: '%' },
+  { id: 'markup', label: 'Markup',      suf: '%', advOnly: true },
+  { id: 'price',  label: 'Price (SP)',  pre: true,  anchorable: true },
+  { id: 'profit', label: 'Profit',      pre: true, advOnly: true },
+];
+function activeFields(){ return FIELDS_ALL.filter(f => S.mode === 'adv' || !f.advOnly); }
+function buildSolver(){
+  const fields = activeFields();
+  const sol = $('solver');
+  sol.classList.toggle('five', fields.length === 5);
+  sol.innerHTML = fields.map(f => `
+    <div class="field ${f.anchorable ? 'anchorable' : ''}" id="f-${f.id}">
+      <span class="lab">${f.label}
+        ${f.anchorable ? `<button class="chip" data-anchor="${f.id}" title="Hold ${f.id} fixed when editing percentages">HELD</button>` : ''}
+      </span>
+      <span class="iwrap">
+        ${f.pre ? `<span class="fix pre">${S.cur}</span>` : ''}
+        <input class="num ${f.pre ? 'pre' : ''} ${f.suf ? 'suf' : ''}" id="in-${f.id}"
+          type="number" step="0.01" inputmode="decimal" aria-label="${f.label}">
+        ${f.suf ? `<span class="fix suf">${f.suf}</span>` : ''}
+      </span>
+    </div>`).join('');
+  fields.forEach(f => $('in-' + f.id).addEventListener('input', e => onSolverEdit(f.id, e.target.value)));
+  sol.querySelectorAll('[data-anchor]').forEach(b => b.addEventListener('click', () => {
+    S.anchor = b.dataset.anchor; save(); paintSolver();
+  }));
+}
+function onSolverEdit(id, raw){
+  const v = num(raw);
+  const err = $('solverErr'); err.classList.remove('on');
+  if (!isFinite(v)) return;
+  const C = S.cost, P = S.price;
+  if (id === 'cost') { S.cost = v; S.anchor = 'cost'; }
+  else if (id === 'price') { S.price = v; S.anchor = 'price'; }
+  else if (id === 'margin') {
+    if (v >= 100) { err.textContent = 'Margin must be below 100% — profit can never exceed the selling price.'; err.classList.add('on'); return; }
+    if (S.anchor === 'price') S.cost = P * (1 - v / 100);
+    else S.price = C / (1 - v / 100);
+  } else if (id === 'markup') {
+    if (v <= -100) { err.textContent = 'Markup below −100% would mean a negative price.'; err.classList.add('on'); return; }
+    if (S.anchor === 'price') S.cost = P / (1 + v / 100);
+    else S.price = C * (1 + v / 100);
+  } else if (id === 'profit') {
+    if (S.anchor === 'price') S.cost = P - v;
+    else S.price = C + v;
+  }
+  save(); paintSolver(id); paintKpis(); paintScen(); paintBE(); paintPnl();
+}
+function setVal(id, v, dec){
+  const el = $('in-' + id); if (!el) return;
+  if (document.activeElement === el) return;   // don't fight the typer
+  const next = isFinite(v) ? v.toFixed(dec) : '';
+  if (el.value !== next) {
+    el.value = next;
+    el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash');
+  }
+  el.classList.toggle('neg', isFinite(v) && v < 0);
+}
+function paintSolver(skip){
+  const C = S.cost, P = S.price, m = marginOf(C, P);
+  if (skip !== 'cost') setVal('cost', C, 2);
+  if (skip !== 'price') setVal('price', P, 2);
+  if (skip !== 'margin') setVal('margin', m, 1);
+  if (skip !== 'markup') setVal('markup', markupOf(C, P), 1);
+  if (skip !== 'profit') setVal('profit', P - C, 2);
+  const fc = $('f-cost'), fp = $('f-price');
+  if (fc) fc.classList.toggle('anchored', S.anchor === 'cost');
+  if (fp) fp.classList.toggle('anchored', S.anchor === 'price');
+  document.querySelectorAll('#solver .fix.pre').forEach(el => el.textContent = S.cur);
+  const sl = $('mSlider');
+  if (sl && document.activeElement !== sl) {
+    const pct = isFinite(m) ? Math.max(0, Math.min(90, m)) : 0;
+    sl.value = pct;
+    sl.style.setProperty('--pct', (pct / 90 * 100) + '%');
+  }
+  $('dirHint').innerHTML = S.anchor === 'cost'
+    ? `Percentages, profit &amp; slider move <b>price</b> — cost is held`
+    : `Percentages, profit &amp; slider move <b>cost</b> — price is held`;
+  const mCls = marginClass(m);
+  const mColor = mCls === 'good' ? 'var(--good)' : mCls === 'warn' ? 'var(--warn)' : mCls === 'bad' ? 'var(--bad)' : 'var(--soft)';
+  $('ctxChip').innerHTML = `<b>${money(C)}</b> → <b>${money(P)}</b> · <span class="m" style="color:${mColor}">${fmt(m, 1)}%</span>`;
+  paintGauge();
+  paintPinned();
+}
+$('mSlider').addEventListener('input', e => {
+  const v = +e.target.value;
+  e.target.style.setProperty('--pct', (v / 90 * 100) + '%');
+  onSolverEdit('margin', v);
+  setVal('margin', marginOf(S.cost, S.price), 1);   // slider isn't the field — keep it live
+});
+function paintGauge(){
+  const m = marginOf(S.cost, S.price);
+  const arc = $('gArc'), val = $('gVal'), cap = $('gCap');
+  const CIRC = 389.6;
+  const pct = isFinite(m) ? Math.max(0, Math.min(100, m)) : 0;
+  arc.style.strokeDashoffset = CIRC * (1 - pct / 100);
+  const cls = marginClass(m);
+  arc.style.stroke = cls === 'good' ? 'var(--good)' : cls === 'warn' ? 'var(--warn)' : cls === 'bad' ? 'var(--bad)' : 'var(--line)';
+  val.textContent = isFinite(m) ? fmt(m, 1) + '%' : '—';
+  cap.innerHTML = isFinite(m)
+    ? `<b>${money(S.price - S.cost)}</b> of every <b>${money(S.price)}</b> sale is profit`
+    : 'Enter a cost and price';
+}
+function paintKpis(){
+  const C = S.cost, P = S.price, m = marginOf(C, P), k = markupOf(C, P), pr = P - C;
+  const cls = marginClass(m);
+  $('calcKpis').innerHTML = `
+    <div class="kpi"><div class="k">Gross profit</div><div class="v ${cls}">${money(pr)}</div><div class="n">per unit</div></div>
+    <div class="kpi"><div class="k">Margin</div><div class="v ${cls}">${fmt(m,1)}%</div><div class="n">profit ÷ price</div></div>
+    <div class="kpi"><div class="k">Markup</div><div class="v">${fmt(k,1)}%</div><div class="n">profit ÷ cost</div></div>
+    <div class="kpi"><div class="k">Multiplier</div><div class="v">${C > 0 ? fmt(P / C, 2) + '×' : '—'}</div><div class="n">price ÷ cost</div></div>`;
+}
+function paintScen(){
+  const C = S.cost, body = $('scenBody');
+  if (!(C > 0)) { body.innerHTML = '<tr><td colspan="5" class="empty">Enter a cost to see scenarios.</td></tr>'; return; }
+  const cur = marginOf(C, S.price);
+  const tiers = [15, 20, 25, 30, 35, 40, 45, 50, 55, 60];
+  body.innerHTML = tiers.map(m => {
+    const sp = C / (1 - m / 100), pr = sp - C, mk = m / (100 - m) * 100;
+    const hit = isFinite(cur) && Math.abs(cur - m) < 0.75;
+    return `<tr class="clickable ${hit ? 'hit' : ''}" data-m="${m}">
+      <td>${m}%</td><td>${fmt(mk,1)}%</td><td>${money(sp)}</td><td>${money(pr)}</td>
+      <td style="text-align:left;padding-left:18px"><span class="strack">
+        <span class="sfill" style="width:${m / 60 * 100}%;background:${m >= 40 ? 'var(--good)' : m >= 25 ? 'var(--accent)' : 'var(--warn)'}"></span></span></td>
+    </tr>`;
+  }).join('');
+}
+$('scenBody').addEventListener('click', e => {
+  const tr = e.target.closest('tr[data-m]'); if (!tr) return;
+  const m = +tr.dataset.m;
+  S.price = S.cost / (1 - m / 100); S.anchor = 'cost';
+  save(); paintSolver(); paintKpis(); paintScen(); paintBE(); paintPnl();
+});
+function paintPinned(){
+  const bar = $('pinBar'); if (!bar) return;
+  const pin = S.pinned;
+  if (!pin) { bar.style.display = 'none'; bar.innerHTML = ''; return; }
+  bar.style.display = 'block';
+  const dm = (cur, base, unit, invert) => {
+    const d = cur - base;
+    const cls = Math.abs(d) < 0.005 ? 'flat' : (invert ? d < 0 : d > 0) ? 'up' : 'down';
+    const sign = d > 0 ? '+' : d < 0 ? '−' : '±';
+    const mag = unit === 'pt' ? fmt(Math.abs(d), 1) + ' pt' : S.cur + fmt(Math.abs(d));
+    return `<span class="delta ${cls}">${sign}${mag}</span>`;
+  };
+  const pM = marginOf(pin.cost, pin.price), cM = marginOf(S.cost, S.price);
+  const cell = (k, base, cur, deltaHtml) => `
+    <div class="pincell"><div class="pk">${k}</div>
+      <div class="pv">${base} → <b>${cur}</b>${deltaHtml}</div></div>`;
+  bar.innerHTML = `
+    <div class="ph"><span class="pt">Pinned scenario vs now</span>
+      <span class="pbtns">
+        <button class="pbtn" id="restorePin">Restore pinned</button>
+        <button class="pbtn" id="unpin">Unpin</button>
+      </span></div>
+    <div class="pingrid">
+      ${cell('Cost', money(pin.cost), money(S.cost), dm(S.cost, pin.cost, '$', true))}
+      ${cell('Price', money(pin.price), money(S.price), dm(S.price, pin.price, '$'))}
+      ${cell('Margin', fmt(pM, 1) + '%', fmt(cM, 1) + '%', dm(cM, pM, 'pt'))}
+      ${cell('Profit / unit', money(pin.price - pin.cost), money(S.price - S.cost), dm(S.price - S.cost, pin.price - pin.cost, '$'))}
+    </div>`;
+  $('unpin').addEventListener('click', () => { S.pinned = null; save(); paintPinned(); });
+  $('restorePin').addEventListener('click', () => {
+    S.cost = pin.cost; S.price = pin.price;
+    save(); paintSolver(); paintKpis(); paintScen(); paintBE(); paintPnl(); paintPinned();
+  });
+}
+$('pinBtn').addEventListener('click', () => {
+  S.pinned = { cost: S.cost, price: S.price };
+  save(); paintPinned();
+});
+$('copyBtn').addEventListener('click', async () => {
+  const m = marginOf(S.cost, S.price), k = markupOf(S.cost, S.price);
+  const txt = `Cost ${money(S.cost)} → Price ${money(S.price)} · margin ${fmt(m,1)}% · markup ${fmt(k,1)}% · profit ${money(S.price - S.cost)}/unit`;
+  try { await navigator.clipboard.writeText(txt); } catch (e) {
+    const ta = document.createElement('textarea'); ta.value = txt; document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy'); ta.remove();
+  }
+  $('copiedMsg').classList.add('on');
+  setTimeout(() => $('copiedMsg').classList.remove('on'), 1600);
+});
+
+/* ================= P&L ================= */
+$('plSeg').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  S.pnl.detail = b.dataset.d; save(); buildPnl();
+});
+const PL_FIELDS_SIMPLE = [
+  { id: 'units', label: 'Units sold / month', step: 100 },
+  { id: 'opex',  label: 'Operating costs / month', pre: true, step: 500 },
+];
+const PL_FIELDS_DETAIL = [
+  { id: 'units',      label: 'Units sold / month', step: 100 },
+  { id: 'trade',      label: 'Trade & promos', suf: '%', step: 0.5, hint: 'of gross revenue' },
+  { id: 'freightOut', label: 'Freight out / unit', pre: true, step: 0.05 },
+  { id: 'fulfil',     label: 'Fulfillment / unit', pre: true, step: 0.05 },
+  { id: 'mktPct',     label: 'Marketing', suf: '%', step: 0.5, hint: 'of net revenue' },
+  { id: 'overhead',   label: 'Overhead / month', pre: true, step: 500 },
+];
+function buildPnl(){
+  const detail = S.pnl.detail === 'detail';
+  document.querySelectorAll('#plSeg button').forEach(b => b.classList.toggle('on', b.dataset.d === S.pnl.detail));
+  const fields = detail ? PL_FIELDS_DETAIL : PL_FIELDS_SIMPLE;
+  $('plInputs').innerHTML = fields.map(f => `
+    <div class="field">
+      <span class="lab">${f.label}</span>
+      <span class="iwrap">
+        ${f.pre ? `<span class="fix pre">${S.cur}</span>` : ''}
+        <input class="num ${f.pre ? 'pre' : ''} ${f.suf ? 'suf' : ''}" id="pl-${f.id}" type="number"
+          step="${f.step}" inputmode="decimal" value="${S.pnl[f.id]}" aria-label="${f.label}">
+        ${f.suf ? `<span class="fix suf">${f.suf}</span>` : ''}
+      </span>
+    </div>`).join('');
+  fields.forEach(f => $('pl-' + f.id).addEventListener('input', e => {
+    const v = num(e.target.value); S.pnl[f.id] = isFinite(v) ? v : 0; save(); paintPnl();
+  }));
+  $('plExplain').innerHTML = detail
+    ? `<b>Detailed</b> mirrors a CPG operating statement. Trade &amp; promos come off gross revenue first (retailer deals, listing fees, discounts). COGS uses the calculator's cost. Below gross profit sit the costs of getting product to customers — freight out, fulfillment, marketing — then overhead. What's left is <b>operating profit</b>. Aim for gross margin ≥ 40% and operating margin ≥ 10% in a healthy CPG line.`
+    : `<b>Simple</b> keeps it to four lines: revenue at your selling price, cost of goods at your unit cost, one lump of operating costs, and what's left. Switch to <b>Detailed</b> for the full breakdown — trade spend, freight out, fulfillment, marketing and overhead as separate lines.`;
+  paintPnl();
+}
+function pnlCalc(){
+  const U = Math.max(0, S.pnl.units), P = S.price, C = S.cost;
+  const gross = U * P;
+  const detail = S.pnl.detail === 'detail';
+  const trade = detail ? gross * S.pnl.trade / 100 : 0;
+  const nr = gross - trade;
+  const cogs = U * C;
+  const gp = nr - cogs;
+  let lines, opTotal;
+  if (detail) {
+    const fr = U * S.pnl.freightOut, fu = U * S.pnl.fulfil, mk = nr * S.pnl.mktPct / 100, oh = S.pnl.overhead;
+    opTotal = fr + fu + mk + oh;
+    lines = { fr, fu, mk, oh };
+  } else {
+    opTotal = S.pnl.opex; lines = {};
+  }
+  const op = gp - opTotal;
+  return { U, gross, trade, nr, cogs, gp, opTotal, op, ...lines };
+}
+function paintPnl(){
+  const r = pnlCalc(), detail = S.pnl.detail === 'detail';
+  const body = $('plBody'); if (!body) return;
+  const us = $('uSlider');
+  if (us && document.activeElement !== us) {
+    const u = Math.max(0, Math.min(20000, S.pnl.units));
+    us.value = u;
+    us.style.setProperty('--pct', (u / 20000 * 100) + '%');
+  }
+  const pu = v => r.U > 0 ? money(v / r.U) : '—';
+  const pc = v => r.nr > 0 ? fmt(v / r.nr * 100, 1) + '%' : '—';
+  const row = (cls, name, v, opts = {}) => `
+    <tr class="${cls}"><td class="ln">${name}</td>
+      <td>${opts.noUnit ? '' : pu(v)}</td>
+      <td class="${opts.color ? (v >= 0 ? 'posv' : 'negv') : ''}">${opts.negShow ? money(-v) : money(v, 0)}</td>
+      <td class="pct">${opts.noPct ? '' : pc(Math.abs(v))}</td></tr>`;
+  let h = '';
+  if (detail) {
+    h += row('', 'Gross revenue', r.gross);
+    h += `<tr class="minor"><td class="ln">Trade &amp; promotions</td><td>${pu(-r.trade)}</td><td>${money(-r.trade, 0)}</td><td class="pct">${pc(r.trade)}</td></tr>`;
+    h += row('sub', 'Net revenue', r.nr);
+    h += `<tr class="minor"><td class="ln">Cost of goods sold</td><td>${pu(-r.cogs)}</td><td>${money(-r.cogs, 0)}</td><td class="pct">${pc(r.cogs)}</td></tr>`;
+    h += row('sub', 'Gross profit', r.gp, { color: true });
+    h += `<tr class="minor"><td class="ln">Freight out</td><td>${pu(-r.fr)}</td><td>${money(-r.fr, 0)}</td><td class="pct">${pc(r.fr)}</td></tr>`;
+    h += `<tr class="minor"><td class="ln">Fulfillment &amp; 3PL</td><td>${pu(-r.fu)}</td><td>${money(-r.fu, 0)}</td><td class="pct">${pc(r.fu)}</td></tr>`;
+    h += `<tr class="minor"><td class="ln">Marketing</td><td>${pu(-r.mk)}</td><td>${money(-r.mk, 0)}</td><td class="pct">${pc(r.mk)}</td></tr>`;
+    h += `<tr class="minor"><td class="ln">Overhead</td><td>${pu(-r.oh)}</td><td>${money(-r.oh, 0)}</td><td class="pct">${pc(r.oh)}</td></tr>`;
+    h += row('sub', 'Total operating costs', -r.opTotal);
+  } else {
+    h += row('', 'Revenue', r.nr);
+    h += `<tr class="minor"><td class="ln">Cost of goods sold</td><td>${pu(-r.cogs)}</td><td>${money(-r.cogs, 0)}</td><td class="pct">${pc(r.cogs)}</td></tr>`;
+    h += row('sub', 'Gross profit', r.gp, { color: true });
+    h += `<tr class="minor"><td class="ln">Operating costs</td><td>${pu(-r.opTotal)}</td><td>${money(-r.opTotal, 0)}</td><td class="pct">${pc(r.opTotal)}</td></tr>`;
+  }
+  h += `<tr class="major"><td class="ln">Operating profit</td>
+    <td class="${r.op >= 0 ? 'posv' : 'negv'}">${pu(r.op)}</td>
+    <td class="${r.op >= 0 ? 'posv' : 'negv'}">${money(r.op, 0)}</td>
+    <td class="pct">${pc(r.op)}</td></tr>`;
+  body.innerHTML = h;
+  const gm = r.nr > 0 ? r.gp / r.nr * 100 : NaN;
+  const om = r.nr > 0 ? r.op / r.nr * 100 : NaN;
+  const omCls = !isFinite(om) ? '' : om >= 10 ? 'good' : om >= 0 ? 'warn' : 'bad';
+  $('plKpis').innerHTML = `
+    <div class="kpi"><div class="k">Gross margin</div><div class="v ${marginClass(gm)}">${fmt(gm,1)}%</div><div class="n">gross profit ÷ revenue</div></div>
+    <div class="kpi"><div class="k">Operating margin</div><div class="v ${omCls}">${fmt(om,1)}%</div><div class="n">operating profit ÷ revenue</div></div>
+    <div class="kpi"><div class="k">Monthly profit</div><div class="v ${r.op >= 0 ? 'good' : 'bad'}">${money(r.op, 0)}</div><div class="n">at ${fmt(r.U,0)} units</div></div>
+    <div class="kpi"><div class="k">Annualized</div><div class="v ${r.op >= 0 ? '' : 'bad'}">${money(r.op * 12, 0)}</div><div class="n">operating profit × 12</div></div>`;
+  paintGoal();
+}
+$('goalPct').addEventListener('input', e => {
+  const v = num(e.target.value); if (isFinite(v)) S.pnl.goal = v;
+  save(); paintGoal();
+});
+$('goalApply').addEventListener('click', () => {
+  const p = paintGoal._price;
+  if (!isFinite(p)) return;
+  S.price = +p.toFixed(4); S.anchor = 'cost';
+  save(); paintSolver(); paintKpis(); paintScen(); paintBE(); paintPnl();
+});
+
+$('uSlider').addEventListener('input', e => {
+  const v = +e.target.value;
+  e.target.style.setProperty('--pct', (v / 20000 * 100) + '%');
+  S.pnl.units = v; save();
+  const uInp = $('pl-units'); if (uInp && document.activeElement !== uInp) uInp.value = v;
+  paintPnl();
+});
+
+/* goal seek: price for a target operating margin at current volume/costs */
+function goalSeekPrice(){
+  const g = S.pnl.goal / 100, U = Math.max(0, S.pnl.units), C = S.cost;
+  if (!(U > 0)) return null;
+  if (S.pnl.detail === 'detail') {
+    const t = S.pnl.trade / 100, m = S.pnl.mktPct / 100;
+    const V = C + S.pnl.freightOut + S.pnl.fulfil;          // per-unit costs outside marketing
+    const denom = U * (1 - t) * ((1 - m) - g);
+    if (denom <= 0) return null;                             // target beyond structural ceiling
+    return (U * V + S.pnl.overhead) / denom;
+  }
+  const denom = U * (1 - g);
+  if (denom <= 0) return null;
+  return (U * C + S.pnl.opex) / denom;
+}
+function paintGoal(){
+  const out = $('goalOut'); if (!out) return;
+  const inp = $('goalPct');
+  if (document.activeElement !== inp) inp.value = S.pnl.goal;
+  const p = goalSeekPrice();
+  if (p === null || !isFinite(p) || p <= 0) {
+    out.innerHTML = `<span style="color:var(--bad)">Not reachable with this cost structure — lower the target or costs.</span>`;
+    $('goalApply').style.display = 'none';
+    return;
+  }
+  $('goalApply').style.display = '';
+  const diff = p - S.price;
+  const dir = Math.abs(diff) < 0.005 ? 'is your current price'
+    : diff > 0 ? `<span style="color:var(--warn)">+${money(diff)} above current</span>`
+    : `<span style="color:var(--good)">${money(diff)} below current</span>`;
+  out.innerHTML = `needs a price of <b style="font-size:16px">${money(p)}</b> · ${dir} · unit margin ${fmt(marginOf(S.cost, p), 1)}%`;
+  paintGoal._price = p;
+}
+
+/* ================= LANDED COST ================= */
+const LROWS = [
+  { id: 'base',    t: 'Invoice unit cost',   d: 'what the supplier charges per unit', pre: true },
+  { id: 'freight', t: 'Freight & inbound',   d: 'ocean/truck + handling, per unit',   pre: true },
+  { id: 'dutyPct', t: 'Duty & tariffs',      d: 'percent of invoice cost',            suf: '%' },
+  { id: 'pack',    t: 'Packaging',           d: 'cartons, labels, shrink, per unit',  pre: true },
+  { id: 'other',   t: 'Other landed costs',  d: 'insurance, QA, inbound storage, per unit',pre: true },
+];
+function landedTotal(){
+  const L = S.landed;
+  return L.base + L.freight + L.base * (L.dutyPct / 100) + L.pack + L.other;
+}
+function buildLanded(){
+  $('landedRows').innerHTML = LROWS.map(r => `
+    <div class="lrow">
+      <div><div class="t">${r.t}</div><div class="d">${r.d}</div></div>
+      <span class="iwrap">
+        ${r.pre ? `<span class="fix pre">${S.cur}</span>` : ''}
+        <input class="num ${r.pre ? 'pre' : ''} ${r.suf ? 'suf' : ''}" id="l-${r.id}" type="number"
+          step="0.01" inputmode="decimal" value="${S.landed[r.id]}" aria-label="${r.t}">
+        ${r.suf ? `<span class="fix suf">%</span>` : ''}
+      </span>
+    </div>`).join('');
+  LROWS.forEach(r => $('l-' + r.id).addEventListener('input', e => {
+    const v = num(e.target.value); S.landed[r.id] = isFinite(v) ? v : 0;
+    save(); paintDutyChips(); paintLanded();
+  }));
+  paintDutyChips();
+  paintLanded();
+}
+const DUTY_PRESETS = [0, 5, 6.5, 10, 25];
+function paintDutyChips(){
+  const host = $('dutyChips');
+  host.querySelectorAll('.chipbtn').forEach(b => b.remove());
+  DUTY_PRESETS.forEach(p => {
+    const b = document.createElement('button');
+    b.className = 'chipbtn' + (S.landed.dutyPct === p ? ' on' : '');
+    b.textContent = p + '%';
+    b.addEventListener('click', () => {
+      S.landed.dutyPct = p;
+      const inp = $('l-dutyPct'); if (inp) inp.value = p;
+      save(); paintDutyChips(); paintLanded();
+    });
+    host.appendChild(b);
+  });
+}
+function paintLanded(){ $('landedTot').textContent = money(landedTotal()); }
+$('useLanded').addEventListener('click', () => {
+  S.cost = +landedTotal().toFixed(4); S.anchor = 'cost';
+  save(); paintSolver(); paintKpis(); paintScen(); paintBE(); paintPnl();
+  switchView('calc');
+});
+
+/* ================= PRICE LADDER ================= */
+const CHANNEL_PRESETS = [
+  { n: 'Natural retail',        brand: 35, dist: 28, retail: 38 },
+  { n: 'Conventional grocery',  brand: 30, dist: 25, retail: 35 },
+  { n: 'Club / warehouse',      brand: 22, dist: 0,  retail: 14 },
+  { n: 'DTC / own site',        brand: 60, dist: 0,  retail: 0  },
+];
+function paintLadderPresets(){
+  const L = S.ladder, host = $('ladderPresets');
+  host.querySelectorAll('.chipbtn').forEach(b => b.remove());
+  CHANNEL_PRESETS.forEach((p, i) => {
+    const b = document.createElement('button');
+    b.className = 'chipbtn' + (L.brand === p.brand && L.dist === p.dist && L.retail === p.retail ? ' on' : '');
+    b.textContent = p.n;
+    b.title = `${p.brand}% / ${p.dist}% / ${p.retail}%`;
+    b.addEventListener('click', () => {
+      L.brand = p.brand; L.dist = p.dist; L.retail = p.retail;
+      save(); buildLadder();
+    });
+    host.appendChild(b);
+  });
+}
+const TIERS = [
+  { id: 'brand',  n: 'Your margin',        s: 'cost → your wholesale price' },
+  { id: 'dist',   n: 'Distributor margin', s: 'wholesale → distributor price' },
+  { id: 'retail', n: 'Retailer margin',    s: 'distributor → shelf price' },
+];
+$('ladderSeg').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  S.ladder.dir = b.dataset.dir; save(); buildLadder();
+});
+function buildLadder(){
+  const L = S.ladder, fwd = L.dir === 'fwd';
+  document.querySelectorAll('#ladderSeg button').forEach(b => b.classList.toggle('on', b.dataset.dir === L.dir));
+  let html = `<div class="hd">Tier</div><div class="hd" style="text-align:right">Margin</div><div class="hd" style="text-align:right">${fwd ? 'Sells at' : 'Buys at'}</div>`;
+  html += `
+    <div><div class="tier-name">${fwd ? 'Your landed cost' : 'Target shelf price'}</div>
+      <div class="tier-sub">${fwd ? 'starting point — edit in Calculator or Landed Cost' : 'what the shopper pays'}</div></div>
+    <div></div>
+    <span class="iwrap">${fwd
+      ? `<span class="tier-out" style="width:100%">${money(S.cost)}</span>`
+      : `<span class="fix pre">${S.cur}</span><input class="num pre" id="ld-shelf" type="number" step="0.01" inputmode="decimal" value="${L.shelf}" aria-label="Target shelf price">`}
+    </span>`;
+  TIERS.forEach(t => {
+    html += `
+      <div><div class="tier-name">${t.n}</div><div class="tier-sub">${t.s}</div></div>
+      <span class="iwrap"><input class="num suf" id="ld-${t.id}" type="number" step="0.5" inputmode="decimal"
+        value="${L[t.id]}" aria-label="${t.n} percent"><span class="fix suf">%</span></span>
+      <div class="tier-out" id="ldo-${t.id}">—</div>`;
+  });
+  $('ladderGrid').innerHTML = html;
+  TIERS.forEach(t => $('ld-' + t.id).addEventListener('input', e => {
+    const v = num(e.target.value); if (isFinite(v)) L[t.id] = v; save(); paintLadderPresets(); paintLadder();
+  }));
+  const sh = $('ld-shelf');
+  if (sh) sh.addEventListener('input', e => { const v = num(e.target.value); if (isFinite(v)) L.shelf = v; save(); paintLadder(); });
+  paintLadderPresets();
+  paintLadder();
+}
+function ladderCalc(){
+  const L = S.ladder, f = m => 1 - m / 100;
+  if (![L.brand, L.dist, L.retail].every(m => m < 100)) return null;
+  if (L.dir === 'fwd') {
+    const w = S.cost / f(L.brand), d = w / f(L.dist), sh = d / f(L.retail);
+    return { cost: S.cost, w, d, shelf: sh };
+  }
+  const d = L.shelf * f(L.retail), w = d * f(L.dist), c = w * f(L.brand);
+  return { cost: c, w, d, shelf: L.shelf };
+}
+function paintLadder(){
+  const r = ladderCalc(), err = $('ladderErr'), L = S.ladder;
+  err.classList.remove('on');
+  if (!r) { err.textContent = 'Each tier margin must be below 100%.'; err.classList.add('on'); return; }
+  const fwd = L.dir === 'fwd';
+  if (fwd) { // each tier sells at
+    $('ldo-brand').textContent = money(r.w); $('ldo-dist').textContent = money(r.d); $('ldo-retail').textContent = money(r.shelf);
+  } else {   // each tier buys at
+    $('ldo-brand').textContent = money(r.cost); $('ldo-dist').textContent = money(r.w); $('ldo-retail').textContent = money(r.d);
+  }
+  const max = Math.max(r.shelf, r.cost, 0.01);
+  const rows = [
+    { n: 'Cost',        v: r.cost,  c: 'var(--ramp1)' },
+    { n: 'Wholesale',   v: r.w,     c: 'var(--ramp2)' },
+    { n: 'Distributor', v: r.d,     c: 'var(--ramp3)' },
+    { n: 'Shelf',       v: r.shelf, c: 'var(--ramp4)' },
+  ];
+  let viz = rows.map(x => `
+    <div class="lv-row"><span class="n">${x.n}</span>
+      <span class="lv-track"><span class="lv-fill" style="width:${Math.max(2, x.v / max * 100)}%;background:${x.c}"></span></span>
+      <span class="v">${money(x.v)}</span></div>`).join('');
+  if (!fwd) {
+    const ok = S.cost <= r.cost + 1e-9, gap = r.cost - S.cost;
+    viz += `<div style="margin-top:8px"><span class="pill ${ok ? 'good' : 'bad'}">${ok
+      ? '✓ Your cost ' + money(S.cost) + ' fits — headroom ' + money(gap)
+      : '✕ Your cost ' + money(S.cost) + ' is ' + money(-gap) + ' over the max'}</span></div>`;
+  } else {
+    viz += `<div style="margin-top:8px"><span class="pill ${r.shelf > 0 ? 'good' : 'bad'}">Shopper pays ${money(r.shelf)} — ${fmt(r.shelf / (S.cost || 1), 2)}× your cost</span></div>`;
+  }
+  $('ladderViz').innerHTML = viz;
+}
+
+/* ================= BREAK-EVEN ================= */
+function buildBE(){
+  $('beInputs').innerHTML = `
+    <div class="field"><span class="lab">Fixed costs / period</span>
+      <span class="iwrap"><span class="fix pre">${S.cur}</span>
+      <input class="num pre" id="be-fixed" type="number" step="100" inputmode="decimal" value="${S.be.fixed}" aria-label="Fixed costs"></span></div>
+    <div class="field"><span class="lab">Extra variable / unit</span>
+      <span class="iwrap"><span class="fix pre">${S.cur}</span>
+      <input class="num pre" id="be-var" type="number" step="0.01" inputmode="decimal" value="${S.be.extraVar}" aria-label="Extra variable cost per unit"></span></div>
+    <div class="field"><span class="lab">Target profit / period</span>
+      <span class="iwrap"><span class="fix pre">${S.cur}</span>
+      <input class="num pre" id="be-target" type="number" step="500" inputmode="decimal" value="${S.be.target}" aria-label="Target profit"></span></div>`;
+  $('be-fixed').addEventListener('input', e => { const v = num(e.target.value); S.be.fixed = isFinite(v) ? v : 0; save(); paintBE(); });
+  $('be-var').addEventListener('input', e => { const v = num(e.target.value); S.be.extraVar = isFinite(v) ? v : 0; save(); paintBE(); });
+  $('be-target').addEventListener('input', e => { const v = num(e.target.value); S.be.target = isFinite(v) ? v : 0; save(); paintBE(); });
+  paintBE();
+}
+function beCalc(){
+  const P = S.price, VC = S.cost + S.be.extraVar, contrib = P - VC;
+  const units = contrib > 0 ? S.be.fixed / contrib : NaN;
+  const targetUnits = contrib > 0 ? (S.be.fixed + S.be.target) / contrib : NaN;
+  return { P, VC, contrib, units, targetUnits, revenue: units * P };
+}
+function paintBE(){
+  const b = beCalc(), ok = b.contrib > 0;
+  const el = $('beKpis'); if (!el) return;
+  el.innerHTML = `
+    <div class="kpi"><div class="k">Contribution / unit</div><div class="v ${ok ? 'good' : 'bad'}">${money(b.contrib)}</div><div class="n">${money(b.P)} price − ${money(b.VC)} variable</div></div>
+    <div class="kpi"><div class="k">Break even units</div><div class="v">${ok ? fmt(Math.ceil(b.units), 0) : '—'}</div><div class="n">per period</div></div>
+    <div class="kpi"><div class="k">Break even revenue</div><div class="v">${ok ? money(b.revenue, 0) : '—'}</div><div class="n">units × price</div></div>
+    <div class="kpi"><div class="k">Units for target</div><div class="v ${ok ? 'good' : ''}">${ok ? fmt(Math.ceil(b.targetUnits), 0) : '—'}</div><div class="n">to earn ${money(S.be.target, 0)} profit</div></div>`;
+  if (document.querySelector('.view[data-view="be"]').classList.contains('on')) drawBE();
+}
+function drawBE(){
+  const svg = $('beChart'); if (!svg) return;
+  const b = beCalc();
+  const W = svg.clientWidth || 900, H = 280, padL = 62, padR = 20, padT = 16, padB = 34;
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  if (!(b.contrib > 0) || !(S.be.fixed >= 0)) {
+    svg.innerHTML = `<text x="${W/2}" y="${H/2}" text-anchor="middle" fill="var(--soft)" font-size="13">Contribution per unit must be positive to chart break even.</text>`;
+    return;
+  }
+  const maxU = Math.max(10, Math.ceil(b.units * 2 / 100) * 100);
+  const maxY = Math.max(S.be.fixed + b.VC * maxU, b.P * maxU) * 1.05;
+  const x = u => padL + u / maxU * (W - padL - padR);
+  const y = v => H - padB - v / maxY * (H - padT - padB);
+  const css = getComputedStyle(document.documentElement);
+  const cRev = css.getPropertyValue('--accent').trim(), cCost = css.getPropertyValue('--chart-cost').trim();
+  const cGrid = css.getPropertyValue('--grid').trim(), cAxis = css.getPropertyValue('--axis').trim(), cSoft = css.getPropertyValue('--soft').trim();
+  const cCard = css.getPropertyValue('--card').trim(), cGood = css.getPropertyValue('--good').trim();
+  let g = '';
+  const yt = 4;
+  for (let i = 0; i <= yt; i++){
+    const v = maxY / yt * i, yy = y(v);
+    g += `<line x1="${padL}" y1="${yy}" x2="${W - padR}" y2="${yy}" stroke="${cGrid}" stroke-width="1"/>`;
+    g += `<text x="${padL - 8}" y="${yy + 4}" text-anchor="end" font-size="11" fill="${cSoft}">${S.cur}${v >= 1000 ? (v/1000).toFixed(0) + 'k' : v.toFixed(0)}</text>`;
+  }
+  for (let i = 0; i <= 4; i++){
+    const u = maxU / 4 * i;
+    g += `<text x="${x(u)}" y="${H - padB + 18}" text-anchor="middle" font-size="11" fill="${cSoft}">${fmt(u, 0)}</text>`;
+  }
+  g += `<text x="${(padL + W - padR) / 2}" y="${H - 2}" text-anchor="middle" font-size="11" fill="${cSoft}">units sold</text>`;
+  g += `<line x1="${padL}" y1="${y(0)}" x2="${W - padR}" y2="${y(0)}" stroke="${cAxis}" stroke-width="1.5"/>`;
+  const bx = x(b.units), by = y(b.revenue);
+  g += `<path d="M ${bx} ${by} L ${x(maxU)} ${y(b.P * maxU)} L ${x(maxU)} ${y(S.be.fixed + b.VC * maxU)} Z" fill="${cGood}" opacity="0.10"/>`;
+  g += `<line x1="${padL}" y1="${y(0)}" x2="${W - padR}" y2="${y(b.P * maxU)}" stroke="${cRev}" stroke-width="2" stroke-linecap="round"/>`;
+  g += `<line x1="${padL}" y1="${y(S.be.fixed)}" x2="${W - padR}" y2="${y(S.be.fixed + b.VC * maxU)}" stroke="${cCost}" stroke-width="2" stroke-linecap="round"/>`;
+  g += `<circle cx="${bx}" cy="${by}" r="5.5" fill="${cGood}" stroke="${cCard}" stroke-width="2"/>`;
+  g += `<line x1="${bx}" y1="${by}" x2="${bx}" y2="${y(0)}" stroke="${cGood}" stroke-width="1" stroke-dasharray="3 4"/>`;
+  const lblAnchor = bx > W - 170 ? 'end' : 'start';
+  const lblDx = bx > W - 170 ? -10 : 10;
+  g += `<text x="${bx + lblDx}" y="${Math.max(by - 10, 14)}" font-size="12" font-weight="700" fill="${cGood}" text-anchor="${lblAnchor}">break even · ${fmt(Math.ceil(b.units), 0)} units</text>`;
+  g += `<line id="be-cross" x1="0" y1="${padT}" x2="0" y2="${y(0)}" stroke="${cSoft}" stroke-width="1" opacity="0" pointer-events="none"/>`;
+  g += `<rect x="${padL}" y="${padT}" width="${W - padL - padR}" height="${H - padT - padB}" fill="transparent" id="be-hit"/>`;
+  svg.innerHTML = g;
+  const hit = svg.querySelector('#be-hit'), cross = svg.querySelector('#be-cross'), tip = $('beTip');
+  hit.addEventListener('mousemove', ev => {
+    const r = svg.getBoundingClientRect();
+    const px = (ev.clientX - r.left) * (W / r.width);
+    const u = Math.max(0, Math.min(maxU, (px - padL) / (W - padL - padR) * maxU));
+    const rev = b.P * u, tc = S.be.fixed + b.VC * u, pf = rev - tc;
+    cross.setAttribute('x1', x(u)); cross.setAttribute('x2', x(u)); cross.setAttribute('opacity', '0.5');
+    tip.style.display = 'block';
+    const wrapR = $('beChartWrap').getBoundingClientRect();
+    let tx = ev.clientX - wrapR.left + 14;
+    if (tx > wrapR.width - 175) tx = ev.clientX - wrapR.left - 175;
+    tip.style.left = tx + 'px';
+    tip.style.top = Math.max(0, ev.clientY - wrapR.top - 60) + 'px';
+    tip.innerHTML = `<b>${fmt(u, 0)} units</b><br>Revenue ${money(rev, 0)}<br>Total cost ${money(tc, 0)}<br>` +
+      `<span style="color:${pf >= 0 ? 'var(--good)' : 'var(--bad)'}">Profit ${money(pf, 0)}</span>`;
+  });
+  hit.addEventListener('mouseleave', () => { cross.setAttribute('opacity', '0'); tip.style.display = 'none'; });
+}
+window.addEventListener('resize', () => {
+  if (document.querySelector('.view[data-view="be"]').classList.contains('on')) drawBE();
+});
+
+/* ================= PRODUCTS ================= */
+function renderProducts(){
+  const body = $('prodBody');
+  if (!S.products.length) {
+    body.innerHTML = '<tr><td colspan="8" class="empty">No products yet — add one below.</td></tr>';
+    return;
+  }
+  let tc = 0, tp = 0;
+  body.innerHTML = S.products.map((p, i) => {
+    const m = marginOf(p.cost, p.price), k = markupOf(p.cost, p.price), pr = p.price - p.cost;
+    tc += p.cost || 0; tp += p.price || 0;
+    const cls = marginClass(m);
+    const pill = !isFinite(m) ? '' :
+      `<span class="pill ${cls === 'good' ? 'good' : cls === 'warn' ? 'warn' : 'bad'}">${cls === 'good' ? 'Healthy' : cls === 'warn' ? 'Thin' : 'At risk'}</span>`;
+    return `<tr>
+      <td><input class="cellinp name" data-i="${i}" data-f="name" value="${(p.name || '').replace(/"/g, '&quot;')}" aria-label="Product name"></td>
+      <td><input class="cellinp" data-i="${i}" data-f="cost" type="number" step="0.01" inputmode="decimal" value="${p.cost}" aria-label="Cost"></td>
+      <td><input class="cellinp" data-i="${i}" data-f="price" type="number" step="0.01" inputmode="decimal" value="${p.price}" aria-label="Price"></td>
+      <td>${money(pr)}</td>
+      <td style="font-weight:700;color:var(--${cls || 'ink'})">${fmt(m, 1)}%</td>
+      <td>${fmt(k, 1)}%</td>
+      <td style="text-align:left">${pill}</td>
+      <td style="white-space:nowrap"><button class="loadbtn" data-load="${i}" title="Load into calculator" aria-label="Load ${p.name} into calculator">↗</button><button class="del" data-del="${i}" aria-label="Remove ${p.name}">✕</button></td>
+    </tr>`;
+  }).join('');
+  const am = marginOf(tc, tp);
+  body.innerHTML += `<tr class="tot"><td>Blended (${S.products.length})</td><td>${money(tc)}</td><td>${money(tp)}</td>
+    <td>${money(tp - tc)}</td><td>${fmt(am, 1)}%</td><td>${fmt(markupOf(tc, tp), 1)}%</td><td></td><td></td></tr>`;
+}
+$('prodBody').addEventListener('input', e => {
+  const el = e.target.closest('.cellinp'); if (!el) return;
+  const p = S.products[+el.dataset.i]; if (!p) return;
+  if (el.dataset.f === 'name') p.name = el.value;
+  else { const v = num(el.value); p[el.dataset.f] = isFinite(v) ? v : 0; }
+  save();
+  clearTimeout(renderProducts._t);
+  renderProducts._t = setTimeout(() => { if (!document.activeElement.classList.contains('cellinp')) renderProducts(); }, 600);
+});
+$('prodBody').addEventListener('change', () => renderProducts());
+$('prodBody').addEventListener('click', e => {
+  const l = e.target.closest('[data-load]');
+  if (l) {
+    const p = S.products[+l.dataset.load]; if (!p) return;
+    S.cost = p.cost; S.price = p.price; S.anchor = 'cost';
+    save(); paintSolver(); paintKpis(); paintScen(); paintBE(); paintPnl();
+    switchView('calc');
+    return;
+  }
+  const d = e.target.closest('[data-del]'); if (!d) return;
+  S.products.splice(+d.dataset.del, 1); save(); renderProducts();
+});
+$('printPl').addEventListener('click', () => window.print());
+$('addProd').addEventListener('click', () => {
+  S.products.push({ name: 'New product', cost: 0, price: 0 }); save(); renderProducts();
+});
+$('fromCalc').addEventListener('click', () => {
+  S.products.push({ name: 'From calculator', cost: +S.cost.toFixed(2), price: +S.price.toFixed(2) });
+  save(); renderProducts();
+});
+$('pasteBtn').addEventListener('click', () => {
+  const p = $('pastePanel');
+  p.style.display = p.style.display === 'none' ? 'block' : 'none';
+  if (p.style.display === 'block') $('pasteBox').focus();
+});
+$('pasteCancel').addEventListener('click', () => { $('pastePanel').style.display = 'none'; $('pasteBox').value = ''; });
+$('pasteGo').addEventListener('click', () => {
+  const text = $('pasteBox').value.trim();
+  if (!text) return;
+  let added = 0, skipped = 0;
+  text.split(/\r?\n/).forEach(line => {
+    if (!line.trim()) return;
+    const parts = line.split(/\t|;|,(?=(?:[^"]*"[^"]*")*[^"]*$)/).map(s => s.trim().replace(/^"|"$/g, '').trim());
+    if (parts.length < 3) { skipped++; return; }
+    const name = parts[0];
+    const cost = parseFloat(parts[1].replace(/[^0-9.\-]/g, ''));
+    const price = parseFloat(parts[2].replace(/[^0-9.\-]/g, ''));
+    if (!name || !isFinite(cost) || !isFinite(price)) { skipped++; return; }  // skips header rows too
+    S.products.push({ name, cost, price });
+    added++;
+  });
+  save(); renderProducts();
+  const msg = $('pasteMsg');
+  msg.textContent = added
+    ? `Imported ${added} product${added === 1 ? '' : 's'}${skipped ? ` · skipped ${skipped} line${skipped === 1 ? '' : 's'}` : ''} ✓`
+    : `Nothing imported — need 3 columns per line (name, cost, price)`;
+  msg.classList.add('on');
+  setTimeout(() => msg.classList.remove('on'), 4000);
+  if (added) { $('pasteBox').value = ''; $('pastePanel').style.display = 'none'; }
+});
+$('csvBtn').addEventListener('click', () => {
+  const esc = s => '"' + String(s).replace(/"/g, '""') + '"';
+  const lines = [['Product', 'Cost', 'Price', 'Profit', 'Margin %', 'Markup %'].join(',')];
+  S.products.forEach(p => lines.push([esc(p.name), p.cost, p.price,
+    (p.price - p.cost).toFixed(2), fmt(marginOf(p.cost, p.price), 1), fmt(markupOf(p.cost, p.price), 1)].join(',')));
+  navigator.clipboard.writeText(lines.join('\n')).then(() => {
+    const b = $('csvBtn'), t = b.textContent;
+    b.textContent = 'Copied \u2713';
+    setTimeout(() => { b.textContent = t; }, 1800);
+  }).catch(() => {});
+});
+
+/* click-to-replace: focusing any numeric field selects its content */
+document.addEventListener('focusin', e => {
+  if (e.target.matches && e.target.matches('input.num, input.cellinp:not(.name)')) {
+    requestAnimationFrame(() => { try { e.target.select(); } catch (err) {} });
+  }
+});
+document.addEventListener('focusout', e => {
+  const el = e.target;
+  if (!el.matches || !el.matches('input.num, input.cellinp:not(.name)')) return;
+  const v = parseFloat(el.value);
+  if (!isFinite(v)) return;
+  const money = el.classList.contains('cellinp') ||
+    !!(el.closest('.iwrap') && el.closest('.iwrap').querySelector('.fix.pre'));
+  el.value = money ? v.toFixed(2) : +v.toFixed(2);
+});
+
+/* ---------- boot ---------- */
+function renderAll(){
+  paintSolver(); paintKpis(); paintScen(); paintLanded(); paintLadder(); paintBE(); paintPnl();
+  document.querySelectorAll('#solver .fix.pre, #landedRows .fix.pre, #beInputs .fix.pre, #plInputs .fix.pre')
+    .forEach(el => el.textContent = S.cur);
+  renderProducts();
+}
+buildSolver(); buildLanded(); buildLadder(); buildBE(); buildPnl(); renderProducts();
+applyMode(); renderAll();
+</script>
+
+</html>
