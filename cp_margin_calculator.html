@@ -362,6 +362,13 @@
   .panel.exp .explain{margin-top:12px;padding-left:18px}
 
   .explain{font-size:13px;color:var(--soft);line-height:1.65;max-width:68ch}
+
+  @media (pointer:coarse){
+    .chipbtn{padding:9px 16px}
+    .pinbar .pbtn{padding:8px 15px}
+    .action.subtle,.action.ghost{padding:11px 18px}
+  }
+
   .explain b{color:var(--ink)}
   .explain code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;
     background:var(--bg);border:1px solid var(--line);padding:1px 6px;border-radius:5px}
@@ -394,7 +401,7 @@
     <button class="tab" data-v="pnl"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2h5.5L13 5.5V14H4z"/><path d="M6.3 8.2h4M6.3 10.8h4"/></svg>P&amp;L</button>
     <button class="tab" data-v="landed"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 5.2 8 2.4l5.5 2.8v5.6L8 13.6l-5.5-2.8z"/><path d="M2.5 5.2 8 8l5.5-2.8M8 8v5.6"/></svg>Landed Cost</button>
     <button class="tab" data-v="ladder"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 13.5h4v-4h4v-4h4"/></svg>Price Ladder</button>
-    <button class="tab" data-v="be"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 13.5h12"/><path d="M3 10.5l3.5-3.5 2.5 2 4-4.5"/></svg>Break-even</button>
+    <button class="tab" data-v="be"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 13.5h12"/><path d="M3 10.5l3.5-3.5 2.5 2 4-4.5"/></svg>Break even</button>
     <button class="tab" data-v="prod"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 2h5.2L14 8.8 8.8 14 2 7.2z"/><circle cx="5.3" cy="5.3" r="1.1"/></svg>Products</button>
     <button class="ctx" id="ctxChip" title="Jump to calculator"></button>
   </nav>
@@ -528,14 +535,14 @@
   <!-- ================= BREAK-EVEN ================= -->
   <section class="view" data-view="be">
     <div class="panel">
-      <h2>Break-even</h2>
+      <h2>Break even</h2>
       <p class="h-sub">Unit economics come from the calculator; add fixed costs to see how many units pay them off — and how many hit your profit target.</p>
       <div class="solver" id="beInputs"></div>
       <div class="kpis" id="beKpis"></div>
     </div>
     <div class="panel">
       <h2>Profit vs. volume</h2>
-      <p class="h-sub">Where the revenue line crosses total cost is break-even. Hover for exact figures.</p>
+      <p class="h-sub">Where the revenue line crosses total cost is break even. Hover for exact figures.</p>
       <div class="legend">
         <span><span class="sw" style="background:var(--accent)"></span>Revenue</span>
         <span><span class="sw" style="background:var(--chart-cost)"></span>Total cost</span>
@@ -562,7 +569,7 @@
         <button class="action ghost" id="addProd">+ Add product</button>
         <button class="action subtle" id="fromCalc">Add from Calculator</button>
         <button class="action subtle" id="pasteBtn">Paste from spreadsheet</button>
-        <button class="action subtle" id="csvBtn">Export CSV</button>
+        <button class="action subtle" id="csvBtn">Copy CSV</button>
       </div>
       <div id="pastePanel" style="display:none;margin-top:16px">
         <textarea id="pasteBox" rows="5" placeholder="Paste rows here — one product per line:&#10;Sparkling Lime 12-pack	12.50	20.83&#10;Works with columns separated by tabs (Excel/Sheets), commas, or semicolons, in the order: name, cost, price."
@@ -591,9 +598,9 @@ const DEF = {
   pnl: { detail: 'detail', units: 4000, opex: 24000, goal: 15,
          trade: 8, freightOut: 0.60, fulfil: 0.90, mktPct: 6, overhead: 18000 },
   products: [
-    { name: 'Sparkling Daily 12-pack', cost: 12.50, price: 20.83 },
-    { name: 'Sparkling Daily 24-pack', cost: 23.10, price: 36.99 },
-    { name: 'Starter kit', cost: 8.20, price: 11.50 },
+    { name: 'Raspberry 4 pack', cost: 12.50, price: 20.83 },
+    { name: 'Lime Lemon 4 pack', cost: 12.50, price: 20.83 },
+    { name: 'Passion Fruit Pineapple single', cost: 3.40, price: 5.99 },
   ],
 };
 const LS = 'orgk-margin-workbench-v2';
@@ -1019,7 +1026,7 @@ const LROWS = [
   { id: 'freight', t: 'Freight & inbound',   d: 'ocean/truck + handling, per unit',   pre: true },
   { id: 'dutyPct', t: 'Duty & tariffs',      d: 'percent of invoice cost',            suf: '%' },
   { id: 'pack',    t: 'Packaging',           d: 'cartons, labels, shrink, per unit',  pre: true },
-  { id: 'other',   t: 'Other landed costs',  d: 'insurance, QA, storage-in, per unit',pre: true },
+  { id: 'other',   t: 'Other landed costs',  d: 'insurance, QA, inbound storage, per unit',pre: true },
 ];
 function landedTotal(){
   const L = S.landed;
@@ -1195,8 +1202,8 @@ function paintBE(){
   const el = $('beKpis'); if (!el) return;
   el.innerHTML = `
     <div class="kpi"><div class="k">Contribution / unit</div><div class="v ${ok ? 'good' : 'bad'}">${money(b.contrib)}</div><div class="n">${money(b.P)} price − ${money(b.VC)} variable</div></div>
-    <div class="kpi"><div class="k">Break-even units</div><div class="v">${ok ? fmt(Math.ceil(b.units), 0) : '—'}</div><div class="n">per period</div></div>
-    <div class="kpi"><div class="k">Break-even revenue</div><div class="v">${ok ? money(b.revenue, 0) : '—'}</div><div class="n">units × price</div></div>
+    <div class="kpi"><div class="k">Break even units</div><div class="v">${ok ? fmt(Math.ceil(b.units), 0) : '—'}</div><div class="n">per period</div></div>
+    <div class="kpi"><div class="k">Break even revenue</div><div class="v">${ok ? money(b.revenue, 0) : '—'}</div><div class="n">units × price</div></div>
     <div class="kpi"><div class="k">Units for target</div><div class="v ${ok ? 'good' : ''}">${ok ? fmt(Math.ceil(b.targetUnits), 0) : '—'}</div><div class="n">to earn ${money(S.be.target, 0)} profit</div></div>`;
   if (document.querySelector('.view[data-view="be"]').classList.contains('on')) drawBE();
 }
@@ -1206,7 +1213,7 @@ function drawBE(){
   const W = svg.clientWidth || 900, H = 280, padL = 62, padR = 20, padT = 16, padB = 34;
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
   if (!(b.contrib > 0) || !(S.be.fixed >= 0)) {
-    svg.innerHTML = `<text x="${W/2}" y="${H/2}" text-anchor="middle" fill="var(--soft)" font-size="13">Contribution per unit must be positive to chart break-even.</text>`;
+    svg.innerHTML = `<text x="${W/2}" y="${H/2}" text-anchor="middle" fill="var(--soft)" font-size="13">Contribution per unit must be positive to chart break even.</text>`;
     return;
   }
   const maxU = Math.max(10, Math.ceil(b.units * 2 / 100) * 100);
@@ -1238,7 +1245,7 @@ function drawBE(){
   g += `<line x1="${bx}" y1="${by}" x2="${bx}" y2="${y(0)}" stroke="${cGood}" stroke-width="1" stroke-dasharray="3 4"/>`;
   const lblAnchor = bx > W - 170 ? 'end' : 'start';
   const lblDx = bx > W - 170 ? -10 : 10;
-  g += `<text x="${bx + lblDx}" y="${Math.max(by - 10, 14)}" font-size="12" font-weight="700" fill="${cGood}" text-anchor="${lblAnchor}">break-even · ${fmt(Math.ceil(b.units), 0)} units</text>`;
+  g += `<text x="${bx + lblDx}" y="${Math.max(by - 10, 14)}" font-size="12" font-weight="700" fill="${cGood}" text-anchor="${lblAnchor}">break even · ${fmt(Math.ceil(b.units), 0)} units</text>`;
   g += `<line id="be-cross" x1="0" y1="${padT}" x2="0" y2="${y(0)}" stroke="${cSoft}" stroke-width="1" opacity="0" pointer-events="none"/>`;
   g += `<rect x="${padL}" y="${padT}" width="${W - padL - padR}" height="${H - padT - padB}" fill="transparent" id="be-hit"/>`;
   svg.innerHTML = g;
@@ -1358,10 +1365,11 @@ $('csvBtn').addEventListener('click', () => {
   const lines = [['Product', 'Cost', 'Price', 'Profit', 'Margin %', 'Markup %'].join(',')];
   S.products.forEach(p => lines.push([esc(p.name), p.cost, p.price,
     (p.price - p.cost).toFixed(2), fmt(marginOf(p.cost, p.price), 1), fmt(markupOf(p.cost, p.price), 1)].join(',')));
-  const a = document.createElement('a');
-  a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(lines.join('\n'));
-  a.download = 'organika-margins.csv';
-  document.body.appendChild(a); a.click(); a.remove();
+  navigator.clipboard.writeText(lines.join('\n')).then(() => {
+    const b = $('csvBtn'), t = b.textContent;
+    b.textContent = 'Copied \u2713';
+    setTimeout(() => { b.textContent = t; }, 1800);
+  }).catch(() => {});
 });
 
 /* click-to-replace: focusing any numeric field selects its content */
@@ -1369,6 +1377,15 @@ document.addEventListener('focusin', e => {
   if (e.target.matches && e.target.matches('input.num, input.cellinp:not(.name)')) {
     requestAnimationFrame(() => { try { e.target.select(); } catch (err) {} });
   }
+});
+document.addEventListener('focusout', e => {
+  const el = e.target;
+  if (!el.matches || !el.matches('input.num, input.cellinp:not(.name)')) return;
+  const v = parseFloat(el.value);
+  if (!isFinite(v)) return;
+  const money = el.classList.contains('cellinp') ||
+    !!(el.closest('.iwrap') && el.closest('.iwrap').querySelector('.fix.pre'));
+  el.value = money ? v.toFixed(2) : +v.toFixed(2);
 });
 
 /* ---------- boot ---------- */
