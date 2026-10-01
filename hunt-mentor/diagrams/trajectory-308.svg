@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="400" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">.308, 150 gr, 100 yd zero</text>
+  <text x="200" y="46" font-size="14" fill="#23261f" text-anchor="middle">APPROXIMATE. Drop exaggerated to show shape</text>
+
+  <!-- line of sight -->
+  <line x1="40" y1="150" x2="380" y2="150" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="44" y="138" font-size="14" fill="#2f3a2b">Line of sight (crosshair)</text>
+  <!-- rifle -->
+  <rect x="14" y="156" width="36" height="10" fill="#6b4f35" stroke="#23261f" stroke-width="1.5"/>
+  <rect x="18" y="143" width="26" height="8" fill="#23261f" stroke="#23261f" stroke-width="1"/>
+  <!-- bullet path -->
+  <path d="M50,161 C90,148 120,147 157,150 C200,153 240,168 263,180 C300,200 340,232 370,261" fill="none" stroke="#e8590c" stroke-width="4"/>
+  <text x="300" y="196" font-size="14" fill="#e8590c" font-weight="bold">Bullet path</text>
+
+  <!-- zero point -->
+  <circle cx="157" cy="150" r="7" fill="#e8590c" stroke="#23261f" stroke-width="2"/>
+  <text x="157" y="118" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Zero</text>
+  <text x="157" y="100" font-size="14" fill="#23261f" text-anchor="middle">91 m (100 yd)</text>
+
+  <!-- 200 yd -->
+  <line x1="263" y1="150" x2="263" y2="180" stroke="#23261f" stroke-width="2"/>
+  <circle cx="263" cy="180" r="5" fill="#23261f" stroke="#23261f" stroke-width="1"/>
+  <text x="200" y="232" font-size="14" fill="#23261f">183 m (200 yd):</text>
+  <text x="200" y="250" font-size="14" fill="#23261f" font-weight="bold">about 10 cm low</text>
+  <line x1="240" y1="218" x2="260" y2="186" stroke="#23261f" stroke-width="1.5"/>
+
+  <!-- 300 yd -->
+  <line x1="370" y1="150" x2="370" y2="261" stroke="#23261f" stroke-width="2"/>
+  <circle cx="370" cy="261" r="5" fill="#23261f" stroke="#23261f" stroke-width="1"/>
+  <text x="385" y="290" font-size="14" fill="#23261f" text-anchor="end">274 m (300 yd):</text>
+  <text x="385" y="308" font-size="14" fill="#23261f" font-weight="bold" text-anchor="end">about 37 cm low</text>
+
+  <!-- footnote -->
+  <rect x="10" y="326" width="380" height="66" fill="#8a9a6b" fill-opacity="0.25" stroke="#8a9a6b" stroke-width="1"/>
+  <text x="20" y="346" font-size="14" fill="#23261f">Source: Federal Power Shok 150 gr, 2,820 fps,</text>
+  <text x="20" y="364" font-size="14" fill="#23261f">factory test barrel. Your 20 in barrel is slower:</text>
+  <text x="20" y="382" font-size="14" fill="#23261f">expect more drop. Confirm on paper.</text>
+</svg>
