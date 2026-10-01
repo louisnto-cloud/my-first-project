@@ -104,8 +104,6 @@ checked: 2026-10-01
 - District 2 note: in MU 2-4 the Canada goose season "does not apply to the area 100 metres on either side of any dyke in the Municipality of Delta" (99%, synopsis page 28). Mission is in MU 2-8, so this does not touch your base (90%).
 - BC synopsis, page 12: "The daily bag limit for Canada and Cackling geese in aggregate is 10." and "The daily bag limit for White-fronted Goose is 5." are printed the same way (99%).
 
-```regs migratory
-```
 
 ## The rules that catch goose hunters
 

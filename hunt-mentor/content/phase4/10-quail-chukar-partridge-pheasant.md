@@ -93,8 +93,6 @@ checked: 2026-10-01
 - Region 1 for comparison: "CALIFORNIA QUAIL" 5 (15), 1 October to 30 November, page 20 (99%).
 - Mission is inside MU 2-8 (90%, Map B10). Pheasant there also needs the Fraser Valley Special Area licence and $1,000,000 liability insurance (99%).
 
-```regs quail
-```
 
 ## Rifles banned for these four birds
 

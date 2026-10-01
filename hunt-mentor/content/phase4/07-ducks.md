@@ -173,8 +173,6 @@ checked: 2026-10-01
 - Coots and snipe: 10 (30), same dates as ducks in each district (99%).
 - Source: Migratory Birds Regulations, 2022, Schedule 3, Part 10, Table 1, items 2, 3 and 8. Consolidated to 21 September 2026 (99%). Check for in season notices before each hunt (Tip).
 
-```regs migratory
-```
 
 ## Methods: what the federal law says
 
