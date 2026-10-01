@@ -73,6 +73,9 @@ checked: 2026-10-01
 - Mission Bylaw 5433-2014, section 4: "No person shall discharge a Firearm anywhere within the District except as permitted under this Bylaw." Section 5: no discharge in Area A, which is most of the city including all of the town and the Hatzic side (99%).
 - Section 7: no discharge "on or across any Highway", "within 150 metres of any school building, school yard, public park, playground or church" or "within 150 metres of any workshop, place of business, dwelling house, farm building, Highway or place where people are assembled" (99%). Firearm includes air guns (99%).
 - Section 11: shotgun with shot only in Area B, shotgun with shot or slug in Area C, rifle or shotgun in Area D, "while hunting" in an open season with a valid licence (99%). Section 6: no target practice except on a legal range (99%). Minimum fine $500 (99%).
+
+## Other no shooting rules around Mission
+
 - Abbotsford Discharge of Firearms Regulation Bylaw No. 114-95: discharge inside the city limited to farmers protecting stock, slaughter and licensed ranges (70%, search preview, VERIFY the hunting wording).
 - Closed Areas Regulation Schedule 5 item 49, Huntingdon and Sumas Mountain: all of "Electoral Area H of the Fraser Valley Regional District" is a No Shooting Area (98%).
 - Schedule 9 item 1: shot only within 150 m of "Highway 7 from the easterly boundary of Mission to its junction with Highway 1" and of Highway 1 east of Chilliwack (98%).

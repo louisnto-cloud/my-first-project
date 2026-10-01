@@ -209,7 +209,7 @@ checked: 2026-10-01
 
 ## Closed water near your bases
 
-- **Kamloops, Map C7:** a No Shooting or Hunting Area and a No Shooting Area along the South Thompson from the Overlander and CN bridges east to Pritchard Bridge, covering parts of MUs 3-19, 3-20, 3-26 and 3-27 (95%, read from the map).
+- **Kamloops, Map C7:** "Kamloops - No Shooting or Hunting Area and No Shooting Area (MUs 3-19, 3-26)" along the South Thompson from the Overlander and CN bridges east to Pritchard Bridge (99% caption, 95% extent read from the map).
 - The map covers the South Thompson. The North Thompson at Heffley Creek is north of the mapped area (90%, map). City of Kamloops bylaws are not in the synopsis; Heffley Creek is outside the city limits: VERIFY.
 - **Lac du Bois** grasslands and Crown land inside the City of Kamloops: no firearms or bows (99%).
 - **Mission:** the whole district of Mission is in the Fraser Valley Special Licence Hunting Area. Add the Fraser Valley Special Area licence, $10, and carry $1,000,000 liability insurance (99%).

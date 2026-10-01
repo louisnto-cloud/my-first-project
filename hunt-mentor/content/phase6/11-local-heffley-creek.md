@@ -128,6 +128,9 @@ checked: 2026-10-01
 - Blind Bay, Map C8: "Blind Bay - No Shooting Area (MU 3-26)." The bay east of Sorrento from Reedman Point (99%).
 - Salmon Arm, Map C10: "Salmon Arm - No Shooting or Hunting Area (MU 3-26)." The bay southeast of a line from the wharf to the white marker (99%).
 - Sicamous, Map C9: "Sicamous - No Shooting or Hunting Area (MU 3-26)." Mara Lake and Shuswap Lake east of the Murdock Point to Semaphore Point line (99%).
+
+## Chase, Wells Gray and the highways
+
 - Chase, Closed Areas Regulation Schedule 3 item 31: Roderick Haig Brown Recreation Area "south of the Squilax Anglemont Road and downstream of the Adams River bridge" is No Shooting or Hunting (98%).
 - Wells Gray, page 33: "Hunting and the discharge of firearms are prohibited in MU 3-45 (Wells Gray Park)." (99%)
 - Hwy 5 Coquihalla, page 10: no single projectile within 400 m "between Hope and the junction of Hwys 1 and 5 at Kamloops" (99%). Shot only there.
