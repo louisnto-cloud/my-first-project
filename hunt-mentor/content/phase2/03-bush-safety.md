@@ -9,6 +9,9 @@ checked: 2026-10-01
 > [!why]
 > Most bad days in the bush start small: a wrong turn, wet socks, dark at 6 pm. A plan and a few tools turn them back into small problems.
 
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 ## STOP when lost
 
 - AdventureSmart teaches STOP: Stop, Think, Observe, Plan (75%).
