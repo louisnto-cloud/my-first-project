@@ -46,7 +46,7 @@ checked: 2026-10-01
 | Kelowna east of the lake | 8-10. West side 8-11 |
 | Vernon | 8-22 |
 
-- Read from the page 66 map and the map captions J1 to J18 (85 to 90%). The map is approximate; confirm on the official MU map (99%).
+- Read from the page 66 map and the map captions J1 to J18 (80 to 90%, Kelowna is the least certain). The map is approximate; confirm on the official MU map (99%).
 - Every quail MU on this list is open 1 October to 30 November (99%).
 
 ## Where quail live
@@ -130,7 +130,7 @@ checked: 2026-10-01
 - Member communities include the Osoyoos Indian Band, Penticton Indian Band (snpink'tn), Westbank First Nation, Okanagan Indian Band near Vernon, Upper and Lower Similkameen and Upper Nicola (99%, Okanagan Indian Band page).
 - Reserve land is private: ask the band office before you hunt on or cross it, page 9 (99%). Map J10 marks I.R. 1 north of Kaleden (95%).
 - Respect: no shooting near orchards, homes or workers on reserve land either. Give way to Indigenous harvesters. Pack out shells and birds' remains (Tip).
-- Ranges if you want to pattern first: Vernon Fish and Game Club, 202 Bardolph Lake Road, members (99%). Penticton Shooting Sports, members (80%). Others: VERIFY.
+- Ranges if you want to pattern first: Vernon Fish and Game Club, "202 Bardolph Lake", members (99%). Penticton Shooting Sports, members (80%). Others: VERIFY.
 
 ## Trip timing and a 2 day plan
 

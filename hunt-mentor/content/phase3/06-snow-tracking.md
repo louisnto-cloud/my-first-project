@@ -99,7 +99,7 @@ checked: 2026-10-01
 
 ## Sources
 
-- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded PDF text: page 11 item 22 (shooting from a vehicle), page 12 item 37 (hours) and the Retrieval rule, Region 3 page 33 (motor vehicles above 1,700 m, snowmobile closures). Checked 2026-10-01 (95%).
+- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded synopsis text: page 11 item 22 (shooting from a vehicle), page 12 item 37 (hours) and the Retrieval rule, Region 3 page 33 (motor vehicles above 1,700 m, snowmobile closures). Checked 2026-10-01 (95%).
 - Search previews (direct reading blocked in this environment), checked 2026-10-01:
   - [Alaska Department of Fish and Game, winter tracking](https://www.adfg.alaska.gov/index.cfm?adfg=wildlifenews.view_article&articles_id=636) (70%): aging, sintering, cold Interior tracks.
   - [Nature Mentor, how to tell if tracks are fresh](https://nature-mentor.com/how-to-tell-if-animal-tracks-are-fresh/) and [The Fair Chase, how to track deer in the snow](https://www.thefairchase.com/fieldnotes/how-to-track-deer-in-the-snow) (65%).

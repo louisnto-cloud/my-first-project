@@ -155,10 +155,10 @@ checked: 2026-10-01
 
 ## Sources
 
-- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded PDF text: page 11 items 29 and 35, page 12 item 44, Region 3 page 33. Checked 2026-10-01 (95%).
+- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded synopsis text: page 11 items 29 and 35, page 12 item 44, Region 3 page 33. Checked 2026-10-01 (95%).
 - Search previews (direct reading blocked in this environment), checked 2026-10-01, capped at 60% to 70%:
   - [Outdoor Life, what does deer poop look like](https://www.outdoorlife.com/conservation/what-does-deer-poop-look-like/) and [Field and Stream, animal scat guide](https://fieldandstream.com/stories/hunting/hunters-guide-to-animal-poop): deer, elk, moose, bear and cougar scat sizes.
-  - [Iowa DNR, canid identification](https://www.iowadnr.gov/media/8734/download?inline=) and [Oregon wolves, biology](https://dfw.state.or.us/Wolves/biology.html): wolf and coyote scat.
+  - [Iowa DNR (Department of Natural Resources), canid identification](https://www.iowadnr.gov/media/8734/download?inline=) and [Oregon wolves, biology](https://dfw.state.or.us/Wolves/biology.html): wolf and coyote scat.
   - [Wilderness Awareness School, rabbit tracks and sign](https://wildernessawareness.org/articles/rabbit-tracks-and-sign/): hare pellets and cut twigs.
   - [Project Upland, game bird sign](https://projectupland.com/culture/understanding-tracks-and-other-game-bird-signs/) and [Northern Woodlands, snow roosts](https://northernwoodlands.org/articles/article/tracking-tips-ruffed-grouse1): grouse droppings and roosts. [Winterberry Wildlife, grouse dust bath](https://winterberrywildlife.ouroneacrefarm.com/2019/09/25/ruffed-grouse-dust-bathing-almost/): dusting bowl size.
   - [Georgia Outdoor News, reading buck rubs](https://gon.com/hunting/reading-buck-rubs) and [Deer and Deer Hunting, rub lines](https://www.deeranddeerhunting.com/deer-hunt/deer-hunting-tips/signpost-science-unravel-bucks-rub-line): rub height and tree size.
@@ -167,7 +167,7 @@ checked: 2026-10-01
   - [Mayne Island Conservancy, overbrowsing](https://mayneconservancy.ca/identifying-signs-of-deer-overbrowsing/) and [Action Hub, wildlife signs](https://www.actionhub.com/outdoors/reading-the-woods-6-wildlife-signs-youre-probably-missing-on-the-trail/): browse lines.
   - [Washington Department of Fish and Wildlife, cougar brochure](https://wdfw.wa.gov/sites/default/files/2019-03/Cougar%20Brochure.pdf) and [livestock investigation guide](https://wdfw.wa.gov/sites/default/files/publications/01581/wdfw01581.pdf): kill sites and caches.
   - [Grand View Outdoors, fences](https://www.grandviewoutdoors.com/big-game-hunting/whitetail-deer/creating-deer-funnels-by-altering-fences) and [Deer Hunter Forum, fences](https://deerhunterforum.com/threads/rutting-bucks-cattle-fences.5748/): hair on fences (hunter lore).
-  - [Elk Hunting Tips, elk sign](https://www.elk-hunting-tips.net/elk-sign.html) and [NA Deer Hunter, deer tracks](https://nadeerhunter.com/deer-tracks/): bed sizes.
+  - [Elk Hunting Tips, elk sign](https://www.elk-hunting-tips.net/elk-sign.html) and [North American Deer Hunter, deer tracks](https://nadeerhunter.com/deer-tracks/): bed sizes.
   - [Counter Assault, tracking black bear](https://counterassault.com/blogs/articles/tracking-black-bear): bear scat aging.
 - Research notes: `research/2026-10-01-deer.md` (pellets, browse, rubs, scrapes, cougar).
 

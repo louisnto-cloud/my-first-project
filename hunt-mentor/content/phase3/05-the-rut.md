@@ -59,8 +59,8 @@ checked: 2026-10-01
 - It is unlawful to possess any part of a Cervidae (caribou, deer, elk, moose) killed outside BC, other than the edible meat of the four quarters, loins, neck and ribs, or the hide, antlers and skull plate cleaned of all tissue (95%). Synopsis page 12, item 50.
 - The synopsis names urine based scents as a material that can carry CWD prions into new areas (95%). Synopsis page 81, Chronic Wasting Disease.
 - Bottled deer urine on store shelves is almost always from farms outside BC, so using it for hunting is an offence under item 51 (85%, interpretation). A synthetic lure is not a cervid derivative (80%, interpretation).
-- CWD was confirmed in BC in January 2024 in the Kootenay. Deer, elk and moose harvested in the CWD Management Zone (MUs 4-1 to 4-8 and 4-20 to 4-25) have mandatory testing and transport limits (95%). Synopsis page 81 and Region 4 pages.
-- Region 3 is outside the zone, but any deer, elk or moose head can be submitted for testing, including at Kamloops (85%). See [BC rules](#/s/bc-rules).
+- CWD was confirmed in BC in January 2024 in the Kootenay. Deer, elk and moose harvested in the CWD Management Zone (MUs 4-1 to 4-8 and 4-20 to 4-25) have mandatory testing and transport limits (95%). Synopsis page 15 (transport restrictions), page 81, and the Region 4 pages.
+- Region 3 is outside the zone, but the Region 3 pages ask hunters to submit deer, elk and moose heads for CWD testing and list a Kamloops drop off (95%). Region 3 synopsis page 32. See [BC rules](#/s/bc-rules).
 
 > [!lean]
 > No urine lures at all. The upside is small and the rule is clear. Your scent control is the wind, not a bottle.
@@ -115,7 +115,7 @@ checked: 2026-10-01
 
 ## Sources
 
-- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded PDF text: page 12 items 37, 38, 41, 50, 51 and 54; page 81 Chronic Wasting Disease; Region 3 page 34 moose seasons. Checked 2026-10-01 (95%).
+- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded synopsis text: page 12 items 37, 38, 41, 50, 51 and 54; page 15 CWD transport restrictions; page 81 Chronic Wasting Disease; Region 3 page 32 CWD testing and page 34 moose seasons. Checked 2026-10-01 (95%).
 - Search previews (direct reading blocked in this environment), checked 2026-10-01:
   - [Outdoor Life, rattling research by Hellickson](https://www.outdoorlife.com/hunting/how-to-rattle-deer-hunting/) and [National Deer Association, rattling tips](https://deerassociation.com/10-tips-rattling-bucks/) (70%).
   - [HuntingBC forum, moose rut timing](https://www.huntingbc.ca/forum/archive/index.php/t-23985.html) and [Arcadia Outfitting, moose seasons in BC](https://arcadiaoutfitting.tawk.help/article/best-seasons-and-locations-for-moose-hunting-in-bc) (hunter reports, 60% to 70%).

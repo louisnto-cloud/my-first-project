@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="320" fill="#fffaf0"/>
-  <text x="200" y="24" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Lead on a crossing duck at 30 m (33 yd)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 392" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="392" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Lead: duck crossing at 30 m (33 yd)</text>
   <text x="200" y="42" font-size="14" fill="#23261f" text-anchor="middle">Duck flying right to left at 40 to 60 km/h</text>
 
   <!-- shot cloud, where the pellets arrive -->
@@ -12,7 +12,7 @@
     <circle cx="140" cy="94" r="3"/><circle cx="104" cy="100" r="3"/><circle cx="152" cy="98" r="3"/>
   </g>
   <circle cx="130" cy="118" r="34" fill="none" stroke="#8a9a6b" stroke-width="1.5" stroke-dasharray="4 4"/>
-  <text x="130" y="76" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Shot lands here</text>
+  <text x="130" y="74" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Shot lands here</text>
 
   <!-- duck -->
   <g transform="translate(300,118)">
@@ -23,26 +23,28 @@
     <path d="M-4 4 L8 24 L20 6 Z" fill="#2f3a2b"/>
     <path d="M26 -4 L40 -8 L38 4 Z" fill="#23261f"/>
   </g>
-  <text x="300" y="160" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Duck now</text>
-
-  <!-- lead dimension -->
-  <line x1="130" y1="178" x2="250" y2="178" stroke="#e8590c" stroke-width="3"/>
-  <line x1="130" y1="170" x2="130" y2="186" stroke="#e8590c" stroke-width="3"/>
-  <line x1="250" y1="170" x2="250" y2="186" stroke="#e8590c" stroke-width="3"/>
-  <text x="190" y="202" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Lead: about 1 to 2 m (4 to 6 ft)</text>
+  <text x="300" y="164" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Duck now</text>
 
   <!-- flight arrow -->
   <line x1="352" y1="118" x2="372" y2="118" stroke="#8a9a6b" stroke-width="2"/>
   <path d="M350 112 L340 118 L350 124 Z" fill="#8a9a6b"/>
 
+  <!-- lead dimension -->
+  <line x1="130" y1="182" x2="250" y2="182" stroke="#e8590c" stroke-width="3"/>
+  <line x1="130" y1="174" x2="130" y2="190" stroke="#e8590c" stroke-width="3"/>
+  <line x1="250" y1="174" x2="250" y2="190" stroke="#e8590c" stroke-width="3"/>
+  <text x="190" y="208" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Lead: about 1 to 2 m (4 to 6 ft)</text>
+
+  <text x="200" y="234" font-size="14" fill="#2f3a2b" text-anchor="middle">Swing from behind, through the head, fire ahead.</text>
+  <text x="200" y="252" font-size="14" fill="#2f3a2b" text-anchor="middle">Keep the gun moving after the shot.</text>
+
   <!-- gun and swing -->
-  <g transform="translate(200,300)">
+  <g transform="translate(200,352)">
     <line x1="0" y1="0" x2="-52" y2="-84" stroke="#6b4f35" stroke-width="7" stroke-linecap="round"/>
     <line x1="0" y1="0" x2="46" y2="-86" stroke="#6b4f35" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 5"/>
     <path d="M40 -92 A96 96 0 0 0 -44 -94" fill="none" stroke="#2f3a2b" stroke-width="2.5" stroke-dasharray="6 4"/>
     <path d="M-50 -88 L-40 -100 L-34 -86 Z" fill="#2f3a2b"/>
   </g>
-  <text x="200" y="236" font-size="14" fill="#2f3a2b" text-anchor="middle">Swing from behind, through the head, fire ahead.</text>
-  <text x="200" y="254" font-size="14" fill="#2f3a2b" text-anchor="middle">Keep the gun moving after the shot.</text>
-  <text x="200" y="314" font-size="12" fill="#6b4f35" text-anchor="middle">Shot takes about 0.1 s to reach 30 m. Hunt Mentor estimate, not a measurement.</text>
+  <text x="200" y="370" font-size="12" fill="#6b4f35" text-anchor="middle">Shot takes about 0.1 s to reach 30 m.</text>
+  <text x="200" y="385" font-size="12" fill="#6b4f35" text-anchor="middle">Hunt Mentor estimate, not a measurement.</text>
 </svg>

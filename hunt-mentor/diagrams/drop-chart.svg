@@ -3,7 +3,7 @@
 <text x="200" y="24" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">.308, 150 gr: 100 m zero vs 200 m zero</text>
 <text x="200" y="42" font-size="14" fill="#23261f" text-anchor="middle">Numbers in cm. Height scale exaggerated.</text>
 <line x1="48" y1="170" x2="380" y2="170" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="8 5"/>
-<text x="48" y="140" font-size="13" fill="#2f3a2b">Line of sight (crosshair)</text>
+<text x="54" y="188" font-size="13" fill="#2f3a2b">Line of sight</text>
 <rect x="12" y="176" width="34" height="9" fill="#6b4f35" stroke="#23261f" stroke-width="1.5"/>
 <line x1="159" y1="149" x2="159" y2="300" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 4"/>
 <text x="159" y="316" font-size="14" fill="#23261f" text-anchor="middle">100 m</text>
@@ -22,7 +22,7 @@
 <circle cx="214" cy="180" r="4.5" fill="#23261f"/><text x="214" y="200" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">-4</text>
 <circle cx="269" cy="202" r="4.5" fill="#23261f"/><text x="269" y="222" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">-12</text>
 <circle cx="325" cy="239" r="4.5" fill="#23261f"/><text x="325" y="259" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">-27</text>
-<circle cx="380" cy="293" r="4.5" fill="#23261f"/><text x="380" y="313" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">-47</text>
+<circle cx="380" cy="293" r="4.5" fill="#23261f"/><text x="370" y="298" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">-47</text>
 <circle cx="159" cy="154" r="4.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="159" y="144" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">+6</text>
 <circle cx="214" cy="156" r="4.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="214" y="146" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">+6</text>
 <circle cx="269" cy="170" r="4.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="269" y="160" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">0</text>
@@ -30,6 +30,6 @@
 <circle cx="380" cy="244" r="4.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="380" y="234" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">-29</text>
 <line x1="30" y1="352" x2="70" y2="352" stroke="#23261f" stroke-width="4"/><text x="78" y="357" font-size="14" fill="#23261f">100 m zero</text>
 <line x1="200" y1="352" x2="240" y2="352" stroke="#e8590c" stroke-width="4" stroke-dasharray="9 5"/><text x="248" y="357" font-size="14" fill="#23261f">200 m zero</text>
-<text x="200" y="380" font-size="13" fill="#6b4f35" text-anchor="middle">Federal Power Shok 150 gr, factory barrel. Your 20 inch barrel:</text>
-<text x="200" y="395" font-size="13" fill="#6b4f35" text-anchor="middle">a little more drop. Confirm on paper at 200 m.</text>
+<text x="200" y="380" font-size="13" fill="#6b4f35" text-anchor="middle">Federal Power Shok 150 gr, factory test barrel.</text>
+<text x="200" y="395" font-size="13" fill="#6b4f35" text-anchor="middle">Your 20 inch barrel: a little more drop. Check at 200 m.</text>
 </svg>

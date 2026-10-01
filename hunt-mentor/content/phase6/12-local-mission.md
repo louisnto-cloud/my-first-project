@@ -30,7 +30,7 @@ checked: 2026-10-01
 
 - Season, page 28: "DUCKS 2-2 to 2-19 Oct 10, 2026 - Jan 24, 2027" with bag "8 (24)" (99%). Coots and snipe the same dates, 10 (30) (99%).
 - Canada and cackling geese, page 28: "Oct 10, 2026 - Nov 22, 2026" and "Dec 19, 2026 - Jan 10, 2027", 10 (30) (99%).
-- Pitt Addington Marsh WMA (Wildlife Management Area), MU 2-8, south end of Pitt Lake: a BC management plan says waterfowl hunting is permitted in some areas on certain days, with details posted on site (80%, search preview of the official plan). Motor vehicles closed "effective year round", page 27 (99%). It sits in Pitt Meadows and Maple Ridge, so the special licence applies (95%).
+- Pitt Addington Marsh WMA (Wildlife Management Area), MU 2-8, south end of Pitt Lake: a BC management plan says waterfowl hunting is permitted in some areas on certain days, with details posted on site (80%, search preview of the official plan). Motor vehicles closed "effective year round", page 27 (99%). Its south end sits in Pitt Meadows and Maple Ridge, so the special licence applies there (85%).
 - Fraser River at Mission, bylaw Area B: a shotgun with shot only while hunting, between the CPR (Canadian Pacific Railway) tracks and the river west of Nelson Street, plus Matsqui Island (99%, bylaw and map). Matsqui Island is I.R. 3, reserve land. Permission from the band first (95%).
 - Hatzic Lake and Harrison Bay are Firearms Using Shot Only areas, Closed Areas Regulation Schedule 9 item 9 (98%). Parts of Hatzic Slough, Hatzic Prairie and Deroche are No Shooting areas, Schedule 5 item 63 (98%). Read the legal text before you set up there.
 - Lhá:lt Harrison Chehalis WMA near Harrison Mills, 1,033 ha of river delta: hunting status not stated on the BC page. VERIFY with conservationlands@gov.bc.ca (99% for the contact).
@@ -79,7 +79,7 @@ checked: 2026-10-01
 - Abbotsford Discharge of Firearms Regulation Bylaw No. 114-95: discharge inside the city limited to farmers protecting stock, slaughter and licensed ranges (70%, search preview, VERIFY the hunting wording).
 - Closed Areas Regulation Schedule 5 item 49, Huntingdon and Sumas Mountain: all of "Electoral Area H of the Fraser Valley Regional District" is a No Shooting Area (98%).
 - Schedule 9 item 1: shot only within 150 m of "Highway 7 from the easterly boundary of Mission to its junction with Highway 1" and of Highway 1 east of Chilliwack (98%).
-- Schedule 11, Nicomen: rifles prohibited in the Nicomen Island and Harrison Bay lowland between the CPR line and the Kent and Chilliwack boundaries (98%).
+- Schedule 11, Nicomen: rifles prohibited in the Nicomen Island lowland south of the CPR line, east to the District of Kent boundary and along the Chilliwack boundary (90%, long legal text read in part).
 - FVRD (Fraser Valley Regional District) map: "With the exception of persons engaged in lawful hunting or trapping, the discharge of firearms is prohibited within 400m of the indicated roads." (99%)
 - Page 9: "Hunting and the discharge of firearms is prohibited within 100 m of all Regional District Parks in Regions 1 and 2." (99%)
 - The 100 m rule and the 15 m road allowance from the BC rules session still apply on top (99%).
@@ -92,7 +92,7 @@ checked: 2026-10-01
 | Range, Abbotsford | Abbotsford Fish and Game Club, 4161 Lakemount Road. "a private member club with no access to the public" | 99%, club site |
 | Range, Chilliwack | Chilliwack Fish and Game Protective Association | VERIFY, site did not load |
 | Butcher | Opening Day Game Cutting, Abbotsford, and Mission Meat Shop, cut and wrap for hunters | 70%, search previews of their sites, VERIFY |
-| Fish and Wildlife office | 200 to 10428 153 Street, Surrey, 604 586 4400 | 99%, page 26 |
+| Fish and Wildlife office | Unit 200, 10428 153 Street, Surrey, 604 586 4400 | 99%, page 26 |
 | Conservation Officer | Field offices in Mission, Chilliwack, Squamish, Sechelt, Powell River. By appointment via 1 877 952 7277 | 99%, page 26 |
 | RAPP line | 1 877 952 7277, 24 hours | 99%, page 26 |
 | Hospital, Mission | Mission Memorial Hospital, 7324 Hurd Street, V2V 3H5, 604 826 6261. 24 hour emergency stabilization | 99%, Fraser Health |

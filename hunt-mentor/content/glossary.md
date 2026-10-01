@@ -108,3 +108,23 @@
 - **CFIA**: Canadian Food Inspection Agency. Sets rules for food and animal products entering Canada.
 - **CITES**: Convention on International Trade in Endangered Species. Permit needed to export some animal parts across borders.
 - **Skull plate**: The piece of skull the antlers grow from, kept with the antlers when the rest of the head is left behind.
+- **Spike fork bull**: A bull moose with no more than 2 tines on one antler, brow palm tines included. Not a calf. The legal class in Region 3 and 8 general seasons (98%).
+- **Tripalm bull**: A bull moose with at least one antler whose brow palm carries 3 or more tines (98%).
+- **10 point bull**: A bull moose with at least 10 tines on one antler, brow palm tines included (98%).
+- **Brow palm**: The lower, forward palm of a moose antler, split from the main palm by the deepest bay (98%).
+- **Calf**: A moose, elk or caribou under 12 months of age (98%).
+- **6 point bull**: A bull elk with at least 6 tines on one antler. The brow tine counts (98%).
+- **Mandatory Hunter Report**: The report every moose, elk or caribou species licence holder must file by 31 March, hunt or no hunt (98%).
+- **Bugle**: The rising whistle scream of a bull elk in the rut.
+- **Wallow**: A muddy pit a rutting bull moose or elk paws out and urinates in.
+- **Bell**: The flap of skin under a moose's throat. Both sexes have one.
+- **Boar**: An adult male bear.
+- **Sow**: An adult female bear.
+- **Cub**: A bear in its first year. Protected, along with any bear in its company (98%).
+- **Yearling**: A bear in its second year. Bears under 2 years are protected (98%).
+- **Hyperphagia**: The fall feeding frenzy when a bear eats huge amounts before denning.
+- **Shoulder hump**: The muscle mass over a grizzly's shoulders. Black bears have none.
+- **Dished face**: The scooped profile between a grizzly's eyes and nose. A black bear's profile is straight.
+- **Colour phase**: A coat colour variation within one species. Black bears can be black, brown, cinnamon or blond.
+- **Grizzly bear**: The large brown bear with a shoulder hump and dished face. No open season in BC (98%).
+- **Trichinosis**: A parasitic worm disease from undercooked meat, bear meat above all. Cook bear to 71 C (160 F) (80%).

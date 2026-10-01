@@ -107,7 +107,7 @@ checked: 2026-10-01
 
 - Rows read from page 34 (99%). Note the MU list skips 3-45 and 3-46 (95%).
 - Page 34: "Daily aggregate bag limit for ducks is 8: max of 4 Pintails, 4 Canvasbacks, 2 Goldeneyes (Barrow's and Common in aggregate) and 2 Harlequins" (99%).
-- Migratory bird hours, page 12: not "from 1/2 hour after sunset to 1/2 hour before sunrise" (99%).
+- Hours, page 12: unlawful to hunt migratory game birds "from 1/2 hour after sunset to 1/2 hour before sunrise" (99%).
 - [[Non toxic shot]] only for migratory birds, page 13 (99%). Shotgun plug: no more than 2 in the magazine, page 12 (99%).
 - Page 11: unlawful "To hunt migratory birds from a power boat, unless the boat is beached, resting at anchor or fastened within or tied immediately alongside a fixed hunting blind." (99%)
 
@@ -119,7 +119,7 @@ checked: 2026-10-01
 - Synopsis page 33: "The discharge of firearms and bows is prohibited on that portion of Lac du Bois Grasslands Protected Area or Crown lands that are within the City of Kamloops municipal boundary." (99%)
 - McQueen Lake, Map C12: "McQueen Lake - No Shooting Area (MU 3-28)." The regulation text: "All land and waters within 1 km of the mean high water mark of McQueen, Griffin and Isobel Lakes." (99%)
 - Sun Peaks, Map C11: "No Shooting or Hunting Area 400 m from existing ski lift, run, facility or development of the Sun Peaks Resort (MU 3-27)." The grey polygon runs from Mt. Tod to Mt. Morrisey over the Burfield, Sunburst, Sundance and Morrisey lifts (99%).
-- Tranquille, Map C17: "Tranquille Wildlife Management Area - No Shooting or Hunting Area (Lac du Bois Grasslands Provincial Park in MU 3-29)." It is the marsh at the head of Kamloops Lake, Lot 341 (99%).
+- Tranquille, Map C17: "Tranquille Wildlife Management Area - No Shooting or Hunting Area (Lac du Bois Grasslands Provincial Park in MU 3-29)." A WMA is a Wildlife Management Area. This one is the marsh at the head of Kamloops Lake, Lot 341 (99%).
 
 ## More closures within reach
 
@@ -170,7 +170,7 @@ checked: 2026-10-01
 - Vehicle closures: [Region 3 motor vehicle prohibition maps](https://www.gov.bc.ca/thompsonaccess) list Lac du Bois Dewdrop, Skull Mountain, Elephant Hills, Greenstone Mountain Burn and more by MU (99%).
 - Fire bans and area restrictions: [BC Wildfire Service](https://www2.gov.bc.ca/gov/content/safety/wildfire-status) (99%).
 - [[ORV]] (Off Road Vehicle) law: register the ATV with ICBC (Insurance Corporation of British Columbia), show the plate, wear a helmet (99%). On an FSR: driver's licence and $200,000 third party liability insurance, page 9 (99%).
-- Page 9: resource road users should expect "Large industrial vehicles" and one lane roads. Call your kilometres on the radio channel posted at the start of the road. Tip.
+- The BC resource road safety page lists "Large industrial vehicles" and narrow, one lane roads among the common hazards (99%). Call your kilometres on the radio channel posted at the start of the road. Tip.
 
 ## Duck waters with legal public access
 
@@ -209,7 +209,7 @@ checked: 2026-10-01
 | Hospital north | Dr. Helmcken Memorial Hospital, Clearwater. 24 hour emergency | 99%, Interior Health page |
 | Fish and Wildlife office | 1259 Dalhousie Drive, Kamloops, 250 371 6200 | 99%, synopsis page 32 |
 | Conservation Officer | Field offices in Kamloops, Clearwater, Salmon Arm, Merritt, Lillooet. By appointment via 1 877 952 7277 | 99%, synopsis page 32 |
-| RAPP line | 1 877 952 7277, 24 hours | 99%, synopsis page 32 |
+| RAPP (Report All Poachers and Polluters) line | 1 877 952 7277, 24 hours | 99%, synopsis page 32 |
 | Range | Kamloops Target Sports Association, west of Kamloops on the Trans Canada near the scales. Members | 70%, search preview of its site, VERIFY |
 | Store | The Horse Barn, 517 Mt. Paul Way, Kamloops. Firearms, ammunition, hunting gear | 70%, search preview of its site, VERIFY |
 | Butcher | VERIFY. Rainer Custom Cutting near Kamloops says "Currently not taking game" | 99% for that note |
@@ -221,7 +221,7 @@ checked: 2026-10-01
 ## First Nations and respect
 
 - Heffley Creek, Kamloops and the North Thompson are Secwépemc territory (95%, BC Assembly of First Nations regional page).
-- Tk'emlúps te Secwépemc, formerly the Kamloops Indian Band, offices at 200 to 330 Chief Alex Thomas Way, Kamloops. Member of the Shuswap Nation Tribal Council (99%, BCAFN profile).
+- Tk'emlúps te Secwépemc, formerly the Kamloops Indian Band, offices at unit 200, 330 Chief Alex Thomas Way, Kamloops. Member of the Shuswap Nation Tribal Council (99%, BCAFN profile).
 - Simpcw First Nation, main village at Chu Chua, office at 7555 Dunn Lake Road, Barriere. "Traditionally, the Simpcw people were known for their hunting abilities" (99%, BCAFN profile). Their site calls them "People of the Rivers" (99%).
 - Whispering Pines/Clinton Indian Band, Pellt'iq't, office at 615 Whispering Pines Drive, Kamloops (99%, BCAFN).
 - Adams Lake Indian Band at Chase, Shuswap Nation Tribal Council (99%, BCAFN).

@@ -122,13 +122,13 @@ checked: 2026-10-01
 - Willms 1976, [deer diet near Kamloops](https://cdnsciencepub.com/doi/pdf/10.4141/cjas76-065), checked 2026-10-01 (85%).
 - BC Ministry of Environment species accounts, blocked from direct reading, search previews checked 2026-10-01 (80% to 85%): [mule deer account](https://a100.gov.bc.ca/pub/acat/documents/r1535/whr_4162_modhh_1096575397030_68741ea2adba46dcb522d7a9f909273a.pdf) (thermal cover, winter range), [black tailed deer account](https://a100.gov.bc.ca/pub/acat/documents/r1556/whr_4131_modhe_1116617048292_69badd9cb57545358600c532f65fd1d9.pdf) (coastal diet by season).
 - Monteith and others 2011, [what triggers migration](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/ES10-00096.1), checked 2026-10-01 (85%).
-- [Snow depth and moose movement, GPS collared study](https://www.researchgate.net/publication/368332788_The_effect_of_snow_depth_on_movement_rates_of_GPS-collared_moose) (search preview), checked 2026-10-01 (70%).
-- Montana State University Extension, [mule deer management](https://animalrangeextension.montana.edu/wildlife/private_land_wildlife_mgmt/muledeer-mgmt.html) and Colorado NRCS, [mule deer fact sheet](https://efotg.sc.egov.usda.gov/references/public/co/muledeer.pdf) (search preview), checked 2026-10-01 (65%): water distances.
+- [Snow depth and moose movement, GPS (Global Positioning System) collared study](https://www.researchgate.net/publication/368332788_The_effect_of_snow_depth_on_movement_rates_of_GPS-collared_moose) (search preview), checked 2026-10-01 (70%).
+- Montana State University Extension, [mule deer management](https://animalrangeextension.montana.edu/wildlife/private_land_wildlife_mgmt/muledeer-mgmt.html) and Colorado NRCS (Natural Resources Conservation Service), [mule deer fact sheet](https://efotg.sc.egov.usda.gov/references/public/co/muledeer.pdf) (search preview), checked 2026-10-01 (65%): water distances.
 - MeatEater, [thermal cover in conifers](https://www.themeateater.com/wired-to-hunt/whitetail-management/understanding-thermal-cover-in-conifers) (search preview), checked 2026-10-01 (65%).
 - WildSafeBC, [deer](https://wildsafebc.com/species/deer/) (search preview), checked 2026-10-01 (80%): black tailed deer rut.
-- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: page 12 items 43 and 53, Region 3 page 33. Checked 2026-10-01 (95%).
+- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded synopsis text: page 12 items 43 and 53, Region 3 page 33. Checked 2026-10-01 (95%).
 - Research notes: `research/2026-10-01-deer.md` (diet, winter range, snow depth, browse list).
-- Plant ID lines are standard field guide features (75% to 85%). Berry timing and Fraser Valley farm notes are local knowledge, capped at 60% to 70%.
+- Plant identification lines are standard field guide features (75% to 85%). Berry timing and Fraser Valley farm notes are local knowledge, capped at 60% to 70%.
 
 ```quiz
 [

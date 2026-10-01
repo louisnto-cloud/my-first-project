@@ -129,7 +129,7 @@ checked: 2026-10-01
   - [Cottage Life, predator tracks](https://cottagelife.com/outdoors/how-to-identify-common-predator-tracks-around-your-cottage/) (search preview): wolf, coyote, cougar.
   - [Bear Tracker, cougar tracks](https://www.bear-tracker.com/cougartracks.html) and [Mountain Lion Foundation, sign](https://mountainlion.org/2010/01/01/sign-evidence-of-a-lions-presence/) (search preview): cougar track shape.
   - [Wild Adirondacks, snowshoe hare](https://wildadirondacks.org/adirondack-mammals-snowshoe-hare-lepus-americanus.html) and [Wilderness Awareness School, rabbit tracks and sign](https://wildernessawareness.org/articles/rabbit-tracks-and-sign/) (search preview): hare tracks and runways.
-  - [PEI Untamed, ruffed grouse tracks](https://www.pei-untamed.com/post/ruffed-grouse-tracks-1) (search preview): grouse track size.
+  - [PEI (Prince Edward Island) Untamed, ruffed grouse tracks](https://www.pei-untamed.com/post/ruffed-grouse-tracks-1) (search preview): grouse track size.
   - [Crow's Path, gaits](https://crowspath.org/natural-history/wildlife/gaits/) and [Nature Mentor, deer tracks](https://nature-mentor.com/deer-tracks/) (search preview): walk, trot and gallop patterns.
   - [Nature Mentor, how to tell if tracks are fresh](https://nature-mentor.com/how-to-tell-if-animal-tracks-are-fresh/) and [Alaska Department of Fish and Game, winter tracking](https://www.adfg.alaska.gov/index.cfm?adfg=wildlifenews.view_article&articles_id=636) (search preview): aging tracks.
 - BC Wildlife Federation, [Southern Interior Mule Deer Project](https://bcwf.bc.ca/initiatives/mule-deer-project/), checked 2026-10-01 (85%): cougar as the top cause of mule deer death.

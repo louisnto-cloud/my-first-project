@@ -89,7 +89,7 @@ Water sign: tracks at a pond, seep or creek crossing
 
 ## Sources
 
-- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded PDF text: page 11 items 27, 29 and 35, page 12 item 53; Region 3 page 33. Checked 2026-10-01 (95%).
+- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded synopsis text: page 11 items 27, 29 and 35, page 12 item 53; Region 3 page 33. Checked 2026-10-01 (95%).
 - BC Trespass Act, [consolidated text on BC Laws](https://www.bclaws.gov.bc.ca/civix/document/id/consol21/consol21/00_96462_01), checked 2026-10-01 (85%, enclosed land).
 - Skills are drawn from the four sessions above and their sources. The scoring is the mentor's own design, labelled Tip.
 
@@ -97,7 +97,7 @@ Water sign: tracks at a pond, seep or creek crossing
 [
   {"q": "Best time of day for the sign walk?", "options": ["Dawn, when deer are out", "Mid morning, when deer are bedded and you are not hunting", "After dark"], "answer": 1, "why": "Mid morning you can read sign without bumping deer off their feed or spooking them at the edge."},
   {"q": "You find a big bed in timber at 11 am. What is the right move?", "options": ["Sit in it to see the view", "Measure, photograph from the edge, and leave quietly", "Walk deeper to find more beds"], "answer": 1, "why": "Bedding areas are sacred. Record from the edge and leave before you evict the deer."},
-  {"q": "A photo of a track with nothing for scale is worth", "options": ["Full marks", "A guess", "Double points"], "answer": 1, "why": "Without a ruler or a known object you cannot measure it later, and size is half of track ID."},
+  {"q": "A photo of a track with nothing for scale is worth", "options": ["Full marks", "A guess", "Double points"], "answer": 1, "why": "Without a ruler or a known object you cannot measure it later, and size is half of track identification."},
   {"q": "Lac du Bois grassland inside Kamloops city limits:", "options": ["Good for a sign walk, no firearm discharge", "Closed to walking", "Open to shooting after 1 October"], "answer": 0, "why": "The Region 3 synopsis bans discharge of firearms and bows on that part of Lac du Bois and Crown land inside the city boundary. Walking and scouting are fine."},
   {"q": "You carry the rifle on the drill. What must be true?", "options": ["Nothing, it is just a walk", "Licences on you, season open in that MU, legal hours, firearm unloaded in the truck", "Only that it is unloaded"], "answer": 1, "why": "With a firearm in the field you are hunting under the Wildlife Act. All the hunting rules apply."}
 ]
