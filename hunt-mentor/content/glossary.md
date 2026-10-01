@@ -1,0 +1,26 @@
+# Glossary
+
+- **ACTS**: Firearm safety rule set. Assume every firearm is loaded. Control the muzzle direction at all times. Trigger finger off the trigger and out of the trigger guard. See that the firearm is unloaded: prove it safe. VERIFY wording against the CFSC (Canadian Firearms Safety Course).
+- **Antlerless**: A deer with no antlers. Usually a doe or a fawn. Some seasons only allow antlerless.
+- **ATV**: All terrain vehicle. A quad.
+- **Backstop**: What is behind your target that will stop the bullet. Earth is good. Sky is never a backstop.
+- **Bag limit**: Most animals of a kind you may take in one day (birds) or one year (big game).
+- **Bore sight**: Lining up the scope with the barrel before shooting, to get on paper fast.
+- **CORE**: Conservation and Outdoor Recreation Education. BC hunter education course.
+- **Crown land**: Public land owned by the province. Hunting is often allowed unless closed.
+- **CWD**: Chronic Wasting Disease. A fatal brain disease in deer, elk and moose.
+- **ECCC**: Environment and Climate Change Canada. Sets migratory bird rules.
+- **FSR**: Forest Service Road. Gravel resource road on Crown land.
+- **FWID**: Fish and Wildlife ID. Your 9 digit BC hunter number. Replaced the old hunter number card.
+- **Glassing**: Scanning country slowly with binoculars to find animals.
+- **LEH**: Limited Entry Hunting. A draw for special hunts.
+- **MGBHP**: Migratory Game Bird Hunting Permit. Federal permit to hunt ducks and geese. Includes the habitat stamp.
+- **MU**: Management Unit. A numbered hunting area, like 3 17. Rules differ by MU.
+- **PAL**: Possession and Acquisition Licence. Federal licence to own and buy firearms.
+- **Patterning**: Shooting a shotgun at paper to see how the shot spreads.
+- **PFD**: Personal flotation device. A life jacket.
+- **Picatinny rail**: A standard mounting strip with slots, used to attach scope rings.
+- **Species licence**: The BC "tag" for a big game animal. Paper, notched when you kill the animal.
+- **Synopsis**: The BC Hunting and Trapping Regulations Synopsis. Plain language summary of the law.
+- **WILD**: Wildlife Information and Licensing Data. BC online system to buy licences.
+- **Zero**: The distance where your bullet hits exactly where the crosshair points.
