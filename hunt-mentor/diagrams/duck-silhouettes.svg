@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" role="img" aria-label="Four simple duck flight silhouettes: mallard large with broad wings, teal small and fast in tight flocks, wigeon with white wing patch, goldeneye diver with wings set far back and white sides.">
+  <rect x="0" y="0" width="400" height="440" fill="#fffaf0"/>
+  <line x1="200" y1="10" x2="200" y2="430" stroke="#8a9a6b" stroke-width="2" fill="none"/>
+  <line x1="10" y1="220" x2="390" y2="220" stroke="#8a9a6b" stroke-width="2" fill="none"/>
+  <!-- Mallard: big body, broad wings -->
+  <g>
+    <path d="M30 95 L100 70 L170 95 L100 88 Z" fill="#23261f"/>
+    <ellipse cx="100" cy="100" rx="14" ry="38" fill="#23261f"/>
+    <circle cx="100" cy="56" r="10" fill="#2f3a2b"/>
+    <rect x="66" y="84" width="16" height="6" fill="#4a5fa8"/>
+    <rect x="118" y="84" width="16" height="6" fill="#4a5fa8"/>
+    <text x="100" y="168" font-family="sans-serif" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Mallard</text>
+    <text x="100" y="188" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Big. Slow wingbeats.</text>
+    <text x="100" y="205" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Loose groups.</text>
+  </g>
+  <!-- Teal: small, flock of three -->
+  <g fill="#23261f">
+    <path d="M240 80 L268 68 L296 80 L268 77 Z"/>
+    <ellipse cx="268" cy="84" rx="7" ry="17"/>
+    <circle cx="268" cy="64" r="5"/>
+    <path d="M300 110 L328 98 L356 110 L328 107 Z"/>
+    <ellipse cx="328" cy="114" rx="7" ry="17"/>
+    <circle cx="328" cy="94" r="5"/>
+    <path d="M250 130 L278 118 L306 130 L278 127 Z"/>
+    <ellipse cx="278" cy="134" rx="7" ry="17"/>
+    <circle cx="278" cy="114" r="5"/>
+  </g>
+  <text x="300" y="168" font-family="sans-serif" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Green winged teal</text>
+  <text x="300" y="188" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Small. Very fast.</text>
+  <text x="300" y="205" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Tight flock twists.</text>
+  <!-- Wigeon: white shoulder patch, pointed tail -->
+  <g>
+    <path d="M40 305 L100 282 L160 305 L100 298 Z" fill="#23261f"/>
+    <ellipse cx="100" cy="308" rx="12" ry="32" fill="#23261f"/>
+    <polygon points="94,338 106,338 100,352" fill="#23261f"/>
+    <circle cx="100" cy="270" r="8" fill="#23261f"/>
+    <rect x="96" y="264" width="8" height="5" fill="#fffaf0"/>
+    <polygon points="72,293 90,288 90,296 72,300" fill="#fffaf0"/>
+    <polygon points="128,293 110,288 110,296 128,300" fill="#fffaf0"/>
+    <text x="100" y="378" font-family="sans-serif" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Wigeon</text>
+    <text x="100" y="398" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">White wing patch.</text>
+    <text x="100" y="415" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Whistle call.</text>
+  </g>
+  <!-- Goldeneye / diver: wings set back, short neck, white sides -->
+  <g>
+    <ellipse cx="300" cy="300" rx="14" ry="34" fill="#23261f"/>
+    <path d="M244 318 L300 300 L356 318 L300 312 Z" fill="#23261f"/>
+    <polygon points="262,312 282,307 282,314 262,318" fill="#fffaf0"/>
+    <polygon points="338,312 318,307 318,314 338,318" fill="#fffaf0"/>
+    <circle cx="300" cy="262" r="10" fill="#2f3a2b"/>
+    <circle cx="305" cy="266" r="3" fill="#fffaf0"/>
+    <text x="300" y="378" font-family="sans-serif" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Goldeneye (diver)</text>
+    <text x="300" y="398" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Wings set far back.</text>
+    <text x="300" y="415" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Wings whistle.</text>
+  </g>
+</svg>

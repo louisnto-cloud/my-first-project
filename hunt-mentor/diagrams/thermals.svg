@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" font-family="sans-serif">
+  <defs>
+    <marker id="th-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#e8590c"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="400" height="520" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Morning: sun warms slope, air rises</text>
+  <circle cx="350" cy="62" r="16" fill="#e8590c" fill-opacity="0.6" stroke="#e8590c" stroke-width="2"/>
+  <path d="M10,240 L120,200 L260,90 L300,80 L390,150 L390,240 Z" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/>
+  <path d="M90,190 L150,160" fill="none" stroke="#e8590c" stroke-width="3" marker-end="url(#th-arrow)"/>
+  <path d="M160,148 L215,108" fill="none" stroke="#e8590c" stroke-width="3" marker-end="url(#th-arrow)"/>
+  <path d="M225,96 L262,68" fill="none" stroke="#e8590c" stroke-width="3" marker-end="url(#th-arrow)"/>
+  <circle cx="275" cy="76" r="9" fill="#6b4f35" stroke="#23261f" stroke-width="2"/>
+  <text x="275" y="60" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">You</text>
+  <ellipse cx="80" cy="212" rx="14" ry="8" fill="#6b4f35" stroke="#23261f" stroke-width="2"/>
+  <text x="62" y="186" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Deer</text>
+  <text x="200" y="230" font-size="15" fill="#23261f" text-anchor="middle">Be ABOVE. Scent goes up, away.</text>
+  <line x1="20" y1="262" x2="380" y2="262" stroke="#8a9a6b" stroke-width="2"/>
+  <text x="200" y="292" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Evening: slope cools, air sinks</text>
+  <circle cx="350" cy="322" r="14" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/>
+  <path d="M10,500 L120,460 L260,350 L300,340 L390,410 L390,500 Z" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/>
+  <path d="M245,352 L195,390" fill="none" stroke="#e8590c" stroke-width="3" marker-end="url(#th-arrow)"/>
+  <path d="M185,400 L135,437" fill="none" stroke="#e8590c" stroke-width="3" marker-end="url(#th-arrow)"/>
+  <path d="M120,450 L70,470" fill="none" stroke="#e8590c" stroke-width="3" marker-end="url(#th-arrow)"/>
+  <ellipse cx="270" cy="338" rx="14" ry="8" fill="#6b4f35" stroke="#23261f" stroke-width="2"/>
+  <text x="270" y="320" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Deer</text>
+  <circle cx="60" cy="470" r="9" fill="#6b4f35" stroke="#23261f" stroke-width="2"/>
+  <text x="48" y="448" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">You</text>
+  <text x="250" y="485" font-size="15" fill="#23261f" text-anchor="middle">Be BELOW. Scent sinks, away.</text>
+</svg>

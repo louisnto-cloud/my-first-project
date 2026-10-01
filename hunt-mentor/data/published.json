@@ -1,0 +1,4 @@
+{
+  "note": "Review gate. Only session ids listed here are built into the app. Add an id after its fact check and style check pass.",
+  "sessions": ["countdown", "licences"]
+}

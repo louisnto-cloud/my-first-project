@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" role="img" aria-label="J hook decoy spread: wind blows from left to right, the main bunch of decoys sits upwind beside the blind, a tail line trails downwind, ducks fly in against the wind and land in the open pocket in front of the blind.">
+  <rect x="0" y="0" width="400" height="440" fill="#fffaf0"/>
+  <rect x="10" y="60" width="380" height="290" rx="18" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+  <text x="200" y="85" font-family="sans-serif" font-size="14" fill="#2f3a2b" text-anchor="middle">Open water</text>
+  <g>
+    <line x1="30" y1="32" x2="150" y2="32" stroke="#e8590c" stroke-width="6" fill="none"/>
+    <polygon points="150,20 174,32 150,44" fill="#e8590c"/>
+    <text x="190" y="38" font-family="sans-serif" font-size="18" font-weight="bold" fill="#e8590c">WIND</text>
+  </g>
+  <g fill="#6b4f35">
+    <ellipse cx="70" cy="280" rx="11" ry="6"/>
+    <ellipse cx="62" cy="255" rx="11" ry="6"/>
+    <ellipse cx="78" cy="232" rx="11" ry="6"/>
+    <ellipse cx="96" cy="210" rx="11" ry="6"/>
+    <ellipse cx="50" cy="228" rx="11" ry="6"/>
+    <ellipse cx="72" cy="196" rx="11" ry="6"/>
+    <ellipse cx="102" cy="180" rx="11" ry="6"/>
+    <ellipse cx="130" cy="166" rx="11" ry="6"/>
+    <ellipse cx="160" cy="156" rx="11" ry="6"/>
+    <ellipse cx="192" cy="150" rx="11" ry="6"/>
+    <ellipse cx="224" cy="146" rx="11" ry="6"/>
+    <ellipse cx="256" cy="142" rx="11" ry="6"/>
+    <ellipse cx="288" cy="138" rx="11" ry="6"/>
+    <ellipse cx="320" cy="134" rx="11" ry="6"/>
+  </g>
+  <text x="26" y="312" font-family="sans-serif" font-size="14" fill="#23261f">Main bunch</text>
+  <text x="26" y="328" font-family="sans-serif" font-size="14" fill="#23261f">(the hook)</text>
+  <text x="250" y="118" font-family="sans-serif" font-size="14" fill="#23261f">Tail line</text>
+  <ellipse cx="190" cy="240" rx="62" ry="40" fill="#fffaf0" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6"/>
+  <text x="190" y="236" font-family="sans-serif" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Landing zone</text>
+  <text x="190" y="254" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">20 to 25 m out</text>
+  <g>
+    <path d="M370 210 Q 320 200 262 228" stroke="#2f3a2b" stroke-width="4" fill="none"/>
+    <polygon points="262,228 280,214 282,234" fill="#2f3a2b"/>
+    <text x="296" y="262" font-family="sans-serif" font-size="14" fill="#2f3a2b">Ducks come in</text>
+    <text x="296" y="279" font-family="sans-serif" font-size="14" fill="#2f3a2b">against the wind</text>
+  </g>
+  <rect x="10" y="350" width="380" height="80" fill="#c9b79c"/>
+  <text x="300" y="420" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Shore</text>
+  <rect x="150" y="352" width="80" height="30" rx="6" fill="#2f3a2b"/>
+  <text x="190" y="372" font-family="sans-serif" font-size="14" fill="#fffaf0" text-anchor="middle">You (blind)</text>
+  <text x="20" y="404" font-family="sans-serif" font-size="14" fill="#23261f">Wind at your side or back.</text>
+  <text x="20" y="422" font-family="sans-serif" font-size="14" fill="#23261f">Never in your face.</text>
+</svg>

@@ -118,7 +118,7 @@ function fenced(kind, arg, body, ctx) {
   }
   if (kind === 'diagram') {
     const file = path.join(ROOT, 'diagrams', `${arg}.svg`);
-    if (!fs.existsSync(file)) throw new Error(`Missing diagram ${arg}.svg (${ctx.id})`);
+    if (!fs.existsSync(file)) { ctx.missing.push(`${arg}.svg`); return '<p class="verify">Diagram missing</p>'; }
     return `<figure class="diagram">${fs.readFileSync(file, 'utf8')}</figure>`;
   }
   if (kind === 'regs') {
@@ -149,7 +149,7 @@ function loadSessions() {
   walk(dir);
   const sessions = files.map((f) => {
     const { meta, body } = frontMatter(fs.readFileSync(f, 'utf8'));
-    const ctx = { id: meta.id, quiz: [], checklists: [] };
+    const ctx = { id: meta.id, quiz: [], checklists: [], missing: [] };
     const parts = body.split(/^## /m);
     const steps = [];
     const intro = parts.shift().trim();
@@ -159,10 +159,17 @@ function loadSessions() {
       steps.push({ title: p.slice(0, nl).trim(), html: blocks(p.slice(nl + 1), ctx) });
     }
     const text = body.replace(/```[\s\S]*?```/g, '').replace(/[#>*`|[\]]/g, ' ').replace(/\s+/g, ' ').toLowerCase();
-    return { ...meta, phase: +meta.phase, num: +meta.num, minutes: +meta.minutes, steps, quiz: ctx.quiz, checklists: ctx.checklists, text };
+    return { ...meta, phase: +meta.phase, num: +meta.num, minutes: +meta.minutes, steps, quiz: ctx.quiz, checklists: ctx.checklists, missing: ctx.missing, text };
   });
   sessions.sort((a, b) => a.phase - b.phase || a.num - b.num);
-  return sessions;
+  // Review gate: drafts stay in content/ but only reviewed ids ship.
+  const published = new Set(readJSON('data/published.json').sessions);
+  const drafts = sessions.filter((s) => !published.has(s.id)).map((s) => s.id);
+  if (drafts.length) console.log(`Drafts not published: ${drafts.join(', ')}`);
+  const out = process.argv.includes('--drafts') ? sessions : sessions.filter((s) => published.has(s.id));
+  for (const s of out) if (s.missing.length) throw new Error(`Missing diagram(s) in ${s.id}: ${s.missing.join(', ')}`);
+  out.forEach((s) => delete s.missing);
+  return out;
 }
 
 function loadGlossary() {
