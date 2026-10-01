@@ -284,8 +284,10 @@
         ${[['', 'Auto'], ['light', 'Light'], ['dark', 'Dark'], ['sun', 'Sunlight']].map(([v, l]) => `<button data-v="${v}" class="${th === v ? 'on' : ''}">${l}</button>`).join('')}</div></div>
       <div class="card"><h2>First hunt date</h2><input type="date" id="fh" value="${esc(firstHunt())}"></div>
       <div class="card list">
+        <a class="item" href="#/cards"><span class="grow">Flashcards</span></a>
         <a class="item" href="#/glossary"><span class="grow">Glossary</span></a>
         <a class="item" href="#/journal"><span class="grow">Hunt journal</span></a>
+        <a class="item" href="#/print"><span class="grow">Print pocket cards</span></a>
         <a class="item" href="#/review"><span class="grow">Review missed questions</span></a>
         <a class="item" href="#/sources"><span class="grow">Regulation data and sources</span></a>
         <a class="item" href="#/install"><span class="grow">Install on iPhone or Android</span></a>
@@ -371,6 +373,63 @@
     };
   }
 
+  // ---------- flashcards (Leitner boxes: 0 new, 1 learning, 2 known) ----------
+  function allCards() {
+    const cards = [];
+    for (const [t, d] of Object.entries(HM.glossary)) cards.push({ id: 'g:' + t, deck: 'Terms', front: t, back: d });
+    for (const r of HM.regs.items) if (r.value) cards.push({ id: 'r:' + r.key, deck: 'Rules', front: r.label, back: `${esc(r.value)} <span class="cert ${r.certainty >= 95 ? 'c-hi' : r.certainty >= 80 ? 'c-mid' : 'c-lo'}">${r.certainty}%</span>` });
+    for (const c of (HM.flashcards || [])) cards.push({ id: 'f:' + c.id, deck: c.deck, front: c.front, back: c.back, diagram: c.diagram });
+    for (const s of sessions) s.quiz.forEach((q, n) => cards.push({ id: 'q:' + s.id + '#' + n, deck: 'Quiz', front: q.q, back: `<strong>${esc(q.options[q.answer])}</strong><br>${esc(q.why)}` }));
+    return cards;
+  }
+  function cards(deckArg) {
+    setTitle('Flashcards'); tab('more');
+    S.cards = S.cards || {};
+    const all = allCards();
+    const decks = [...new Set(all.map((c) => c.deck))];
+    const deck = deckArg ? decodeURIComponent(deckArg) : null;
+    if (!deck) {
+      view.innerHTML = `<p class="muted">Tap a deck. Cards you miss come back sooner.</p><div class="card list">${decks.map((d) => {
+        const n = all.filter((c) => c.deck === d); const k = n.filter((c) => S.cards[c.id] === 2).length;
+        return `<a class="item" href="#/cards/${encodeURIComponent(d)}"><span class="grow">${esc(d)}</span><span class="pill">${k}/${n.length} known</span></a>`; }).join('')}</div>
+        <div class="btn-row"><button class="btn" id="reset-cards">Reset all decks</button></div>`;
+      $('#reset-cards').onclick = () => { S.cards = {}; save(); cards(); };
+      return;
+    }
+    const pool = all.filter((c) => c.deck === deck);
+    // due order: box 0 first, then box 1, then box 2 (only when nothing else)
+    const order = [0, 1, 2].flatMap((b) => pool.filter((c) => (S.cards[c.id] || 0) === b));
+    const due = order.filter((c) => (S.cards[c.id] || 0) < 2);
+    const card = (due.length ? due : order)[0];
+    if (!card) { view.innerHTML = '<div class="card"><h2>Empty deck</h2></div>'; return; }
+    const known = pool.filter((c) => S.cards[c.id] === 2).length;
+    setTitle(deck);
+    view.innerHTML = `<div class="muted">${known} of ${pool.length} known${due.length ? '' : '. All known, reviewing.'}</div>
+      <div class="card fc" id="fc"><div class="fc-front"><h2>${card.front}</h2>${card.diagram ? `<figure class="diagram">${card.diagram}</figure>` : ''}<p class="muted">Tap to flip</p></div>
+      <div class="fc-back" hidden><p>${card.back}</p></div></div>
+      <div class="btn-row" id="fc-btns" hidden><button class="btn" id="fc-no">Missed it</button><button class="btn primary" id="fc-yes">Knew it</button></div>
+      <div class="btn-row"><a class="btn" href="#/cards">Decks</a></div>`;
+    const fc = $('#fc');
+    fc.onclick = () => { fc.querySelector('.fc-back').hidden = false; $('#fc-btns').hidden = false; };
+    $('#fc-yes').onclick = () => { S.cards[card.id] = Math.min(2, (S.cards[card.id] || 0) + 1); save(); cards(deckArg); window.scrollTo(0, 0); };
+    $('#fc-no').onclick = () => { S.cards[card.id] = 0; save(); cards(deckArg); window.scrollTo(0, 0); };
+  }
+
+  // ---------- print pocket cards ----------
+  function printCards() {
+    setTitle('Pocket cards'); tab('more');
+    const F = HM.field; const H = HM.regs.hours;
+    const today = new Date();
+    const light = HM.bases.map((b) => { const r = sunEvent(today, b.lat, b.lon, true), s = sunEvent(today, b.lat, b.lon, false); return `<tr><td>${esc(b.name)}</td><td>${hhmm(r)} / ${hhmm(s)}</td><td>${hhmm(addMin(r, -H.bigGame.beforeSunriseMin))} to ${hhmm(addMin(s, H.bigGame.afterSunsetMin))}</td><td>${hhmm(addMin(r, -H.migratory.beforeSunriseMin))} to ${hhmm(addMin(s, H.migratory.afterSunsetMin))}</td></tr>`; }).join('');
+    view.innerHTML = `<p class="muted no-print">Use your browser's Share or Print to make a PDF. Fold and keep in a zip bag. Study aid only.</p>
+      <div class="print-grid">
+      <div class="card"><h2>Legal to shoot? All must be YES</h2><ol>${F.legalFlow.map((s) => `<li>${esc(s.q)}</li>`).join('')}</ol><p><strong>Any NO = no shot.</strong></p></div>
+      <div class="card"><h2>Legal light today (${today.toLocaleDateString('en-CA', { timeZone: TZ })})</h2><div class="tbl"><table><thead><tr><th>Base</th><th>Rise / set</th><th>Big game</th><th>Ducks</th></tr></thead><tbody>${light}</tbody></table></div><p class="muted">Verify with official tables.</p></div>
+      ${F.cards.map((c) => `<div class="card step">${c.html}</div>`).join('')}
+      ${F.checklists.map((l) => `<div class="card"><h2>${esc(l.title)}</h2><ul>${l.items.map((t) => `<li>&#9744; ${t}</li>`).join('')}</ul></div>`).join('')}
+      </div>`;
+  }
+
   function notFound() { view.innerHTML = '<div class="card"><h2>Not found</h2><a href="#/">Home</a></div>'; }
 
   // ---------- router ----------
@@ -390,6 +449,8 @@
     else if (a === 'review') review();
     else if (a === 'sources') sources();
     else if (a === 'install') install();
+    else if (a === 'cards') cards(b);
+    else if (a === 'print') printCards();
     else if (a === 'journal') journal(b === 'new' ? -1 : b != null ? +b : undefined);
     else notFound();
   }

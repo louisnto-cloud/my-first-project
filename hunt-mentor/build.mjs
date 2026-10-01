@@ -213,6 +213,10 @@ function build() {
     regs: readJSON('data/regs.json'),
     bases: readJSON('data/bases.json'),
     field: readJSON('data/field.json'),
+    flashcards: readJSON('data/flashcards.json').map((c) => {
+      const f = c.diagram && path.join(ROOT, 'diagrams', `${c.diagram}.svg`);
+      return { ...c, diagram: f && fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : undefined };
+    }),
   };
   const problems = lint(sessions);
   if (problems.length) {
