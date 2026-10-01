@@ -15,6 +15,7 @@ checked: 2026-10-01
 - Second focal plane, simple duplex crosshair, capped turrets (Tip).
 - Your Arctic has a tall rear drum sight. The scope must **clear it** (75%).
 - Expect **high rings**, and dry fit before you pay (60%).
+- Prices are in CAD (Canadian dollars).
 - Budget: entry about $270 to $690, mid about $765 to $1,300, premium about $1,700 to $3,300 (65%). Price checked 2026-10-01.
 
 ## Magnification and objective

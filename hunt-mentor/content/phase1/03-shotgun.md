@@ -15,7 +15,7 @@ checked: 2026-10-01
 - That gun covers ducks with steel and upland birds (70%).
 - A **gas semi auto** is the softest shooting choice with heavy steel loads (70%).
 - Budget: entry about $420 to $900, mid about $850 to $1,870, premium about $1,950 to $2,900 (65%). Price checked 2026-10-01.
-- Prices below are from search previews of retailer pages. Verify at checkout.
+- Prices are in CAD (Canadian dollars), from search previews of retailer pages. Verify at checkout.
 
 ## Action types
 
@@ -43,7 +43,7 @@ checked: 2026-10-01
 
 ## Chokes and steel shot
 
-- A choke is a short tube at the muzzle. It squeezes the shot to control spread (85%).
+- A [[Choke]] is a short tube at the muzzle. It squeezes the shot to control spread (85%).
 - Tighter choke means a smaller, denser pattern at range (85%).
 - Steel is hard. It does not squeeze like lead. Tight chokes can damage the choke or barrel (75%).
 - Rule of thumb: **nothing tighter than Modified with steel** unless the choke says steel safe (75%).
@@ -84,12 +84,12 @@ checked: 2026-10-01
 
 > [!law]
 > For migratory birds (ducks, geese), the shotgun may hold **no more than 3 shells** in magazine and chamber combined (85%).
-> The plug must be one piece and removable only by taking the gun apart (85%).
+> The [[Magazine plug]] must be one piece and removable only by taking the gun apart (85%).
 > A detachable magazine may hold no more than 2 (85%).
 
 - Most new semi autos and pumps ship with the plug installed. Check before every duck hunt (Tip).
 - For quail and grouse: whether BC law also needs the plug, VERIFY. Simplest: leave it in all season (Tip).
-- Non toxic shot (steel, bismuth, tungsten, tin) is required for migratory game birds (85%).
+- [[Non toxic shot]] (steel, bismuth, tungsten, tin) is required for migratory game birds (85%).
 
 ## Buying used: checklist
 

@@ -13,7 +13,7 @@ checked: 2026-10-01
 
 - **.308 for deer:** a 150 to 165 gr (grain) hunting bullet does the job (65%).
 - **One load rule:** pick one .308 load, zero with it, hunt with it (Tip).
-- **Ducks:** non toxic shot only. Steel #2 or #3 is the all round choice (70%).
+- **Ducks:** [[Non toxic shot]] only. Steel #2 or #3 is the all round choice (70%).
 - **Quail and grouse:** #6 to #7.5 shot, 1 to 1 1/8 oz (65%).
 - **.22 LR (long rifle):** legal for grouse, head shots only. Quail need a shotgun (70%).
 - Buy 3 to 4 boxes of the **same lot** of .308 if you can (Tip).
@@ -45,7 +45,7 @@ checked: 2026-10-01
 ## Waterfowl shot sizes
 
 - Non toxic shot is required for migratory game birds: steel, bismuth, tungsten, tin (85%).
-- Steel #2: all round duck load (70%).
+- [[Steel shot]] #2: all round duck load (70%).
 - Steel #3: medium ducks and close decoying birds (70%).
 - Steel #4: teal and very close shots (70%).
 - Steel BB: geese (70%).
@@ -54,9 +54,9 @@ checked: 2026-10-01
 ## Bismuth and tungsten
 
 - **Bismuth:** softer than steel, closer to lead. Kinder to older guns and fixed chokes (65%).
-- **Tungsten** and TSS (tungsten super shot): very dense, hit hard at range (65%). CAD price: VERIFY.
+- **Tungsten** and TSS (tungsten super shot): very dense, hit hard at range (65%). Price in CAD (Canadian dollars): VERIFY.
 - Both cost several times more than steel (65%).
-- Your new 3 inch gun with IC or M chokes shoots steel well. Start with steel (Tip).
+- Your new 3 inch gun with IC (Improved Cylinder) or M (Modified) chokes shoots steel well. Start with steel (Tip).
 
 ## Upland loads
 

@@ -14,8 +14,8 @@ checked: 2026-10-01
 - AdventureSmart's Three Ts: **Trip planning, Training, Taking the essentials** (75%).
 - Carry the **10 essentials** every time, even for a 2 hour hunt (75%).
 - Add hunting extras: tourniquet, knife, game bags, rope (Tip).
-- Leave a trip plan with someone who will call for help if you are late (75%).
-- A satellite messenger works where your phone has no signal (70%).
+- Leave a [[Trip plan]] with someone who will call for help if you are late (75%).
+- A [[Satellite messenger]] works where your phone has no signal (70%).
 - Plan the meat: cooler, ice, and a way to keep it dry (Tip).
 
 ## The 10 essentials (AdventureSmart)
@@ -33,11 +33,11 @@ checked: 2026-10-01
 
 ## First aid and the tourniquet
 
-- A firearm or knife accident can bleed out fast. Carry a **tourniquet** in the same pocket every hunt (Tip).
+- A firearm or knife accident can bleed out fast. Carry a **[[Tourniquet]]** in the same pocket every hunt (Tip).
 - Use one for life threatening bleeding from an arm or leg that pressure does not stop (65%).
 - Place it 5 to 8 cm (2 to 3 in) above the wound, not on a joint (65%).
 - Tighten until the bleeding stops. Note the time. Leave it on until help arrives (65%).
-- CAT (Combat Application Tourniquet) Gen 7: $52 to $59.99. Price checked 2026-10-01 (60%).
+- CAT (Combat Application Tourniquet) Gen 7: $52 to $59.99 CAD (Canadian dollars). Price checked 2026-10-01 (60%).
 - Counterfeits exist. A CAT under about $32 is probably fake. Buy from a known medical seller (60%).
 - Take a first aid course with tourniquet practice. Owning one is not knowing how (Tip).
 
@@ -94,7 +94,7 @@ Trip plan left with someone
 - Shovel, tow strap, booster cables or jump pack (Tip).
 - Spare dry clothes and boots in a dry bag (Tip).
 - Full fuel tank before leaving pavement (Tip).
-- [[ATV]] (all terrain vehicle): helmet, tool kit, tow rope. ATV rules on Crown land and roads: VERIFY (BC Off Road Vehicle Act).
+- [[ATV]] (all terrain vehicle): helmet, tool kit, tow rope. ATV rules on Crown land and roads: VERIFY ([[ORV]] Act, Off Road Vehicle Act).
 - Firearm transport rules (unloaded, locked or hidden in the car): VERIFY with the RCMP (Royal Canadian Mounted Police) storage and transport rules.
 
 ## Cooler and ice plan for meat

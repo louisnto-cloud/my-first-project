@@ -103,7 +103,7 @@ checked: 2026-10-01
 
 ## Shopping list: shells and boots
 
-Price checked 2026-10-01. Search preview prices, verify at checkout. Sizes: jacket M, boots 9 regular.
+Price checked 2026-10-01. Prices in CAD (Canadian dollars) from search previews, verify at checkout. Sizes: jacket M, boots 9 regular.
 
 | Item | Entry | Mid | Premium |
 |---|---|---|---|
@@ -123,7 +123,7 @@ Price checked 2026-10-01. Search preview prices, verify at checkout. Sizes: wade
 | Gloves | VERIFY | VERIFY | VERIFY |
 | Wader belt | Often included with waders (Tip) | | |
 
-- Base layer prices found only in USD. CAD: VERIFY in store.
+- Base layer prices found only in US dollars. Canadian price: VERIFY in store.
 
 > [!lean]
 > Spend on **boots, waders and a waterproof shell**. Go cheap on base and mid layers to start.
