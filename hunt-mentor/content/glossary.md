@@ -88,3 +88,23 @@
 - **ORV**: Off Road Vehicle. An ATV, dirt bike or side by side under BC law.
 - **Cultivated land**: Farmed land, orchards included. You need permission to hunt it.
 - **Grazing lease**: Crown land leased for livestock. You need the lease holder's OK while livestock are on it.
+- **Non resident Canadian**: A Canadian hunting in a province or territory where they do not live. Each place defines it a little differently.
+- **Outfitter**: A licensed business that guides paying hunters. Required for most non resident big game hunts in Yukon, Alberta and Alaska.
+- **Hunter host**: An Alberta resident with a Hunter Host Licence who accompanies up to 2 non resident hunters a year, unpaid (85%).
+- **WIN**: Wildlife Identification Number. Alberta's lifetime hunter number.
+- **Wildlife Certificate**: Alberta's base licence, bought before any hunting licence.
+- **HAL**: Hunting, Angling and Trapping Licence system. Saskatchewan's online licence account.
+- **GHA**: Game Hunting Area. Manitoba's numbered hunting zones.
+- **WMU**: Wildlife Management Unit. Alberta's numbered hunting zones.
+- **GMU**: Game Management Unit. Alaska's numbered hunting zones.
+- **Nonresident alien**: Alaska's term for a hunter who is not a US citizen and does not live in the US. Needs a guide for every big game animal (85%).
+- **Locking tag**: Alaska's paid big game tag that locks onto the animal after the kill.
+- **Sealing**: An agency placing a seal on a bear hide or skull, or sheep horns, before export.
+- **CBSA**: Canada Border Services Agency. Canadian customs at the border.
+- **CBP**: Customs and Border Protection. US customs at the border.
+- **ATF**: Bureau of Alcohol, Tobacco, Firearms and Explosives. US agency that approves Form 6NIA.
+- **ATF Form 6NIA**: US permit a non US hunter must have approved before bringing a firearm and ammunition into the US (85%).
+- **BSF407**: CBSA card listing serial numbered goods you take out of Canada, so you can prove they were not bought abroad.
+- **CFIA**: Canadian Food Inspection Agency. Sets rules for food and animal products entering Canada.
+- **CITES**: Convention on International Trade in Endangered Species. Permit needed to export some animal parts across borders.
+- **Skull plate**: The piece of skull the antlers grow from, kept with the antlers when the rest of the head is left behind.
