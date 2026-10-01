@@ -11,7 +11,7 @@ checked: 2026-10-01
 
 - BC has three forest grouse you will meet near Heffley Creek: ruffed, spruce (the Franklin's form) and dusky, the old "blue grouse" (85%).
 - Sharp tailed grouse and ptarmigan are legal only in listed [[MU]]s (Management Units) and places (99%).
-- Residents need only the BC hunting licence. No [[Species licence]] and no federal permit (95%).
+- Residents need only the BC hunting licence. The fee table on page 8 says "No Species licence required" for upland game birds (99%). No federal permit (99%).
 - Hunting hours are 1 hour before sunrise to 1 hour after sunset, the big game hours, not the duck hours (99%).
 
 ## Tell the three forest grouse apart
@@ -175,7 +175,7 @@ Species tally in the Journal
 
 ## Sources
 
-- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: page 3 (game bird definition), 10 (road allowance), 11 (items 22, 27), 12 (hours item 37, possession limit, bag notation, FMJ ban, handgun), 13 (legal methods table and notes 2 and 3, shot ban notice), 15 (wing). Checked 2026-10-01 (99%).
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: page 3 (game bird definition), 8 (species licence fee table), 10 (road allowance), 11 (items 22, 27), 12 (hours item 37, possession limit, bag notation, FMJ ban, handgun), 13 (legal methods table and notes 2 and 3, shot ban notice), 15 (wing). Checked 2026-10-01 (99%).
 - [Region 3 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), pages 33 (access, Wells Gray), 34 (grouse, sharp tailed, ptarmigan rows and footnote), 35 (Maps C11, C18), read directly and checked against a rendered page image. Checked 2026-10-01 (99%).
 - [Region 2 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-2-lower-mainland.pdf), pages 27 and 28, read directly. Checked 2026-10-01 (99%).
 - [Region 8 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-8-okanagan.pdf), pages 67 and 68, read directly. Checked 2026-10-01 (99%).

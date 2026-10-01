@@ -10,7 +10,7 @@ checked: 2026-10-01
 > These four live where people live: orchards, vineyards, farm edges and dry hillsides. The hunting is easy to find and hard to do safely. Permission and a safe shot are the whole game.
 
 - California quail, chukar, grey (Hungarian) partridge and ring necked pheasant are all upland game birds in BC (99%).
-- Residents need only the BC hunting licence (95%). No federal permit, no species licence (95%).
+- Residents need only the BC hunting licence. The fee table on page 8 says "No Species licence required" for upland game birds (99%). No federal permit (99%).
 - Shotgun only for these four. Rifles and air guns are different; see the legal screen (95%).
 - This goes deeper than [Your first quail trip](#/s/first-quail-trip): all four birds, every region you hunt, and the exact rows from the [[Synopsis]].
 
@@ -188,7 +188,7 @@ One feathered wing stays on each bird
 
 ## Sources
 
-- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: page 3 (game bird), 9 (cultivated land, bylaws, Indian Reserves, sanctuaries), 10 (100 m, road allowance, 400 m highways), 12 (hours, plug, retrieval, bag notation, possession), 13 (legal methods table, notes 2 and 3, shot ban), 15 (wing), 21 (Region 1 quail rows). Checked 2026-10-01 (99%).
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: page 3 (game bird), 8 (species licence fee table), 9 (cultivated land, bylaws, Indian Reserves, sanctuaries), 10 (100 m, road allowance, 400 m highways), 12 (hours, plug, retrieval, bag notation, possession), 13 (legal methods table, notes 2 and 3, shot ban), 15 (wing), 21 (Region 1 quail rows). Checked 2026-10-01 (99%).
 - [Region 3 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), page 34, read directly and checked against a rendered page image. Checked 2026-10-01 (99%).
 - [Region 8 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-8-okanagan.pdf), pages 67 to 70, read directly, plus the Closed Areas Regulation B.C. Reg. 76/84 schedules for the Okanagan map areas. Checked 2026-10-01 (99%).
 - [Region 2 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-2-lower-mainland.pdf), pages 27, 28 and 31, read directly and checked against a rendered page image. Checked 2026-10-01 (99%).
