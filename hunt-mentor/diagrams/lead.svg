@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 392" font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="392" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 410" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="410" fill="#fffaf0"/>
   <text x="200" y="24" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Lead: duck crossing at 30 m (33 yd)</text>
   <text x="200" y="42" font-size="14" fill="#23261f" text-anchor="middle">Duck flying right to left at 40 to 60 km/h</text>
 
@@ -39,12 +39,12 @@
   <text x="200" y="252" font-size="14" fill="#2f3a2b" text-anchor="middle">Keep the gun moving after the shot.</text>
 
   <!-- gun and swing -->
-  <g transform="translate(200,352)">
+  <g transform="translate(200,366)">
     <line x1="0" y1="0" x2="-52" y2="-84" stroke="#6b4f35" stroke-width="7" stroke-linecap="round"/>
     <line x1="0" y1="0" x2="46" y2="-86" stroke="#6b4f35" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 5"/>
     <path d="M40 -92 A96 96 0 0 0 -44 -94" fill="none" stroke="#2f3a2b" stroke-width="2.5" stroke-dasharray="6 4"/>
     <path d="M-50 -88 L-40 -100 L-34 -86 Z" fill="#2f3a2b"/>
   </g>
-  <text x="200" y="370" font-size="12" fill="#6b4f35" text-anchor="middle">Shot takes about 0.1 s to reach 30 m.</text>
-  <text x="200" y="385" font-size="12" fill="#6b4f35" text-anchor="middle">Hunt Mentor estimate, not a measurement.</text>
+  <text x="200" y="388" font-size="12" fill="#6b4f35" text-anchor="middle">Shot takes about 0.1 s to reach 30 m.</text>
+  <text x="200" y="403" font-size="12" fill="#6b4f35" text-anchor="middle">Hunt Mentor estimate, not a measurement.</text>
 </svg>

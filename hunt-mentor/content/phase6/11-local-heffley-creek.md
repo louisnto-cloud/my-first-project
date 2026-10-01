@@ -114,7 +114,7 @@ checked: 2026-10-01
 ## No Shooting and No Hunting areas near you
 
 - Kamloops, Map C7, page 35: "Kamloops - No Shooting or Hunting Area and No Shooting Area (MUs 3-19, 3-20, 3-26, 3-27, and 3-28)." (99%)
-  - The map shows a band along the South Thompson from the Overlander Bridge east along East Shuswap Road. No Hunting or Shooting from the city to about the Lafarge Bridge and the I.R. 1 boundary, then No Shooting only east to the Pritchard Bridge (95%, image).
+  - The map shows a band along the South Thompson from the Overlander Bridge east along East Shuswap Road. No Hunting or Shooting from the city to about the Lafarge Bridge and the I.R. 1 (Indian Reserve 1) boundary, then No Shooting only east to the Pritchard Bridge (95%, image).
 - City of Kamloops bylaw No. 24-49: "No person shall discharge a Firearm or other Weapon within City boundaries." Exemptions are for peace officers, farmers protecting crops or stock, the airport, school archery and permit holders. No hunting exemption (99%, read in the bylaw).
 - Synopsis page 33: "The discharge of firearms and bows is prohibited on that portion of Lac du Bois Grasslands Protected Area or Crown lands that are within the City of Kamloops municipal boundary." (99%)
 - McQueen Lake, Map C12: "McQueen Lake - No Shooting Area (MU 3-28)." The regulation text: "All land and waters within 1 km of the mean high water mark of McQueen, Griffin and Isobel Lakes." (99%)
@@ -220,7 +220,7 @@ checked: 2026-10-01
 
 ## First Nations and respect
 
-- Heffley Creek, Kamloops and the North Thompson are Secwépemc territory (95%, BC Assembly of First Nations regional page).
+- Heffley Creek, Kamloops and the North Thompson are Secwépemc territory (95%, BCAFN, the BC Assembly of First Nations, regional page).
 - Tk'emlúps te Secwépemc, formerly the Kamloops Indian Band, offices at unit 200, 330 Chief Alex Thomas Way, Kamloops. Member of the Shuswap Nation Tribal Council (99%, BCAFN profile).
 - Simpcw First Nation, main village at Chu Chua, office at 7555 Dunn Lake Road, Barriere. "Traditionally, the Simpcw people were known for their hunting abilities" (99%, BCAFN profile). Their site calls them "People of the Rivers" (99%).
 - Whispering Pines/Clinton Indian Band, Pellt'iq't, office at 615 Whispering Pines Drive, Kamloops (99%, BCAFN).

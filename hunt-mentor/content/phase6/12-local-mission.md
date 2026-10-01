@@ -21,7 +21,7 @@ checked: 2026-10-01
 
 - Map B10, page 29: "All persons hunting within MU 2-4 and those portions of MU 2-8 within the corporate limits of the corporation of the district of Maple Ridge, the corporation of the district of Pitt Meadows, the district of Mission, the corporation of the district of Coquitlam are required to purchase a Fraser Valley Special Area Hunting Licence in addition to other Provincial licences and for hunting migratory game birds, the Migratory Bird Licence. $1,000,000.00 Public Liability and Property Damage insurance is required." (99%)
 - Plain English: any hunt inside Mission city limits, or anywhere in Abbotsford, Langley, Surrey and Delta (MU 2-4), needs this licence plus a million dollar liability policy (95%).
-- Cost: Fraser Valley special hunting area licence $8 plus $2 surcharge, GST extra (99%, BC hunting licences page).
+- Cost: Fraser Valley special hunting area licence $8 plus $2 surcharge, GST (Goods and Services Tax) extra (99%, BC hunting licences page).
 - Page 27: "These special licences are available through Service BC, FrontCounter BC, participating vendors and online at www.gov.bc.ca/hunting." (99%)
 - A BC Wildlife Federation membership is one common way hunters carry liability insurance. Confirm the policy wording covers hunting: VERIFY.
 - Outside the city limits in 2-8 (Stave Lake hills, Sylvester Road country, Chehalis) the normal licences are enough (95%).
@@ -31,7 +31,7 @@ checked: 2026-10-01
 - Season, page 28: "DUCKS 2-2 to 2-19 Oct 10, 2026 - Jan 24, 2027" with bag "8 (24)" (99%). Coots and snipe the same dates, 10 (30) (99%).
 - Canada and cackling geese, page 28: "Oct 10, 2026 - Nov 22, 2026" and "Dec 19, 2026 - Jan 10, 2027", 10 (30) (99%).
 - Pitt Addington Marsh WMA (Wildlife Management Area), MU 2-8, south end of Pitt Lake: a BC management plan says waterfowl hunting is permitted in some areas on certain days, with details posted on site (80%, search preview of the official plan). Motor vehicles closed "effective year round", page 27 (99%). Its south end sits in Pitt Meadows and Maple Ridge, so the special licence applies there (85%).
-- Fraser River at Mission, bylaw Area B: a shotgun with shot only while hunting, between the CPR (Canadian Pacific Railway) tracks and the river west of Nelson Street, plus Matsqui Island (99%, bylaw and map). Matsqui Island is I.R. 3, reserve land. Permission from the band first (95%).
+- Fraser River at Mission, bylaw Area B: a shotgun with shot only while hunting, between the CPR (Canadian Pacific Railway) tracks and the river west of Nelson Street, plus Matsqui Island (99%, bylaw and map). Matsqui Island is I.R. 3 (Indian Reserve 3), reserve land. Permission from the band first (95%).
 - Hatzic Lake and Harrison Bay are Firearms Using Shot Only areas, Closed Areas Regulation Schedule 9 item 9 (98%). Parts of Hatzic Slough, Hatzic Prairie and Deroche are No Shooting areas, Schedule 5 item 63 (98%). Read the legal text before you set up there.
 - Lhá:lt Harrison Chehalis WMA near Harrison Mills, 1,033 ha of river delta: hunting status not stated on the BC page. VERIFY with conservationlands@gov.bc.ca (99% for the contact).
 - Bert Brink WMA, MU 2-4 at the Fraser and Vedder Canal: motor vehicles closed year round, page 27 (99%). Hunting status: VERIFY.
@@ -62,7 +62,7 @@ checked: 2026-10-01
 - Grouse, page 28: "For Sooty/Dusky, Spruce, and Ruffed grouse, the daily aggregate bag limit is 10; the aggregate possession limit is 30." (99%)
 - Where, with legal access:
   - Mission bylaw Area D, rifle or shotgun while hunting: west of Stave Lake between Kearsley Road and Rockwell Road, and the east side of Stave Lake north of Cannell Lake (99%, bylaw map). Area C around Hoover Lake: shotgun only, shot or slug (99%).
-  - North of the Mission boundary on the Florence Lake, Lost Creek, Terepocki, Murdo and Mount Kettley FSRs: no shooting within 400 m of the road "Unless lawfully hunting or trapping", page 27 (99%). So hunting is allowed, plinking is not (95%).
+  - North of the Mission boundary on the Florence Lake, Lost Creek, Terepocki, Murdo and Mount Kettley FSRs (Forest Service Roads): no shooting within 400 m of the road "Unless lawfully hunting or trapping", page 27 (99%). So hunting is allowed, plinking is not (95%).
   - Chehalis, Map B33: "Chehalis Fleetwood No Shooting Area. Discharge of firearms for the purpose of hunting permitted (MU 2-19)." Along the Chehalis Fleetwood FSR, Chehalis FSR and Morris Valley Road (99%).
   - Davis Lake Park, 19 km north of Mission on Sylvester Road: no hunting listed on the BC Parks page. Walk in only. Treat as closed (85%).
   - Golden Ears and Rolley Lake parks: no hunting listed (85%). Treat as closed.
@@ -94,7 +94,7 @@ checked: 2026-10-01
 | Butcher | Opening Day Game Cutting, Abbotsford, and Mission Meat Shop, cut and wrap for hunters | 70%, search previews of their sites, VERIFY |
 | Fish and Wildlife office | Unit 200, 10428 153 Street, Surrey, 604 586 4400 | 99%, page 26 |
 | Conservation Officer | Field offices in Mission, Chilliwack, Squamish, Sechelt, Powell River. By appointment via 1 877 952 7277 | 99%, page 26 |
-| RAPP line | 1 877 952 7277, 24 hours | 99%, page 26 |
+| RAPP (Report All Poachers and Polluters) line | 1 877 952 7277, 24 hours | 99%, page 26 |
 | Hospital, Mission | Mission Memorial Hospital, 7324 Hurd Street, V2V 3H5, 604 826 6261. 24 hour emergency stabilization | 99%, Fraser Health |
 | Hospital, trauma | Abbotsford Regional Hospital, 32900 Marshall Road, V2S 0C2, 604 851 4700. 24 hours | 99%, Fraser Health |
 | Hospital, east | Chilliwack General Hospital, 45600 Menholm Road, 604 795 4141. 24 hours | 99%, Fraser Health |
