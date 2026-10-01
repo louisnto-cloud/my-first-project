@@ -80,6 +80,7 @@ checked: 2026-10-01
 5. **Escape:**
   - Mule deer **stot**: bounces on all 4 feet, good for steep broken ground (85%).
   - White tail **flags** and gallops to cover (85%).
+
 - Mule deer often stop and look back from about 150 to 300 m (65%, hunter lore).
 
 > [!tip]
