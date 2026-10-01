@@ -1,6 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 470" font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="470" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 492" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="492" fill="#fffaf0"/>
   <text x="200" y="26" font-size="19" font-weight="bold" fill="#23261f" text-anchor="middle">Field dressing: gutted method</text>
+  <g transform="translate(0,24)">
   <!-- deer lying on its back is hard to read; simple standing side outline, head left -->
   <g stroke="#23261f" stroke-width="2.5" stroke-linejoin="round">
     <!-- legs -->
@@ -46,4 +47,5 @@
     <text x="16" y="424" fill="#23261f">7  Roll guts out. Prop cavity open to cool.</text>
   </g>
   <text x="16" y="456" font-size="14" fill="#6b4f35">Orange dashes: cut lines. Do not cut the gut.</text>
+</g>
 </svg>

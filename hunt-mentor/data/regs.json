@@ -145,17 +145,6 @@
       "checked": "2026-10-01"
     },
     {
-      "group": "migratory",
-      "key": "ducksR3",
-      "label": "Duck and goose seasons near Kamloops",
-      "value": "",
-      "note": "VERIFY from ECCC BC summary 2026 to 2027.",
-      "certainty": 0,
-      "source": "ECCC BC summary",
-      "url": "https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html",
-      "checked": "2026-10-01"
-    },
-    {
       "group": "safety",
       "key": "dwelling",
       "label": "Shooting near buildings",
@@ -245,6 +234,58 @@
       "certainty": 85,
       "source": "BC RAPP page (search preview)",
       "url": "https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/natural-resource-law-enforcement/conservation-officer-service/cos-rapp",
+      "checked": "2026-10-01"
+    },
+    {
+      "group": "migratory",
+      "key": "ducksR3",
+      "label": "Duck season near Kamloops",
+      "value": "",
+      "note": "Search previews gave 3 different date ranges. VERIFY in the ECCC BC summary for your district.",
+      "certainty": 0,
+      "source": "ECCC BC summary",
+      "url": "https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html",
+      "checked": "2026-10-01"
+    },
+    {
+      "group": "migratory",
+      "key": "duckbag",
+      "label": "Duck daily bag (BC)",
+      "value": "8 ducks a day; at most 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins. Possession 24.",
+      "note": "VERIFY for your district.",
+      "certainty": 70,
+      "source": "ECCC BC summary (search preview)",
+      "url": "https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html",
+      "checked": "2026-10-01"
+    },
+    {
+      "group": "migratory",
+      "key": "plug",
+      "label": "Shotgun for ducks",
+      "value": "10 gauge or smaller, max 3 shells (chamber + magazine) with a plug that needs disassembly to remove. Non toxic shot only.",
+      "certainty": 85,
+      "source": "Migratory Birds Regulations, 2022 (search preview)",
+      "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",
+      "checked": "2026-10-01"
+    },
+    {
+      "group": "migratory",
+      "key": "boat",
+      "label": "Ducks from a boat",
+      "value": "No hunting migratory birds from a boat moving under motor or sail. Beached, anchored or tied to a fixed blind is OK. A motorboat may be used to retrieve birds.",
+      "certainty": 80,
+      "source": "Migratory Birds Regulations, 2022 s.41; BC synopsis (search preview)",
+      "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",
+      "checked": "2026-10-01"
+    },
+    {
+      "group": "quail",
+      "key": "chukar",
+      "label": "Chukar (Regions 3 and 8)",
+      "value": "",
+      "note": "Preview suggests 1 Oct to 30 Nov, bag 5. VERIFY both regions.",
+      "certainty": 60,
+      "source": "Synopsis (search preview)",
       "checked": "2026-10-01"
     }
   ]

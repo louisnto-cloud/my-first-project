@@ -74,3 +74,17 @@
 - **Field dressing**: Removing the guts soon after the kill.
 - **Gutless method**: Taking the meat off without opening the body cavity.
 - **Conservation officer**: BC wildlife law enforcement officer.
+- **Puddle duck**: A duck that feeds by tipping up in shallow water and jumps straight up to fly. Mallard, teal, wigeon.
+- **Diver**: A duck that dives for food and runs along the water to take off. Goldeneye, bufflehead.
+- **Jump shooting**: Sneaking up on ducks on small water and shooting as they flush.
+- **Pass shooting**: Shooting ducks as they fly over between roost and feeding areas.
+- **Decoy spread**: The pattern you set decoys in.
+- **J hook**: A decoy spread shaped like a J, with an open landing pocket in front of the hunter.
+- **Landing zone**: The open water in a decoy spread where you want ducks to land.
+- **Steel shot**: Non toxic shotgun pellets made of steel. Legal for ducks.
+- **Choke**: The narrowing at the end of a shotgun barrel that controls the spread of shot. Must be rated for steel to shoot steel.
+- **Power boat**: Under BC rules, a boat with a motor ready to use.
+- **Covey**: A fall or winter flock of quail.
+- **ORV**: Off Road Vehicle. An ATV, dirt bike or side by side under BC law.
+- **Cultivated land**: Farmed land, orchards included. You need permission to hunt it.
+- **Grazing lease**: Crown land leased for livestock. You need the lease holder's OK while livestock are on it.
