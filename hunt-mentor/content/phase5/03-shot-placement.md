@@ -77,7 +77,7 @@ checked: 2026-10-01
 - Quartering away: aim for the far shoulder. Do not hit the paunch (85%).
 - Head and neck shots: avoid. More wounded, unrecovered elk (85%).
 - Both lungs hit: bulls usually go down within 100 m. One lung: they can go hundreds of metres (65%).
-- Use a bonded or partition bullet of 165 gr or more for elk. The ammo session has the loads (70%).
+- Bullet for elk: the ammo session lists 178 to 180 gr bonded, partition or copper loads (65%).
 
 ## Black bear
 
@@ -124,8 +124,8 @@ checked: 2026-10-01
 
 | Zone | What you see | Blood sign | How far | Wait |
 |---|---|---|---|---|
-| Heart | Bolts, often a jump or kick | Bright red, lots | Deer: rarely over 50 m | 30 min (85%) |
-| Both lungs | Runs hard, then wobbles | Bright red, bubbly or frothy | Deer: under 100 m. Elk: under 100 m | 30 min (85%) |
+| Heart | Bolts, often a jump or kick | Bright red, lots | Deer: rarely over 50 m (85%) | 30 min (85%) |
+| Both lungs | Runs hard, then wobbles | Bright red, bubbly or frothy | Deer: under 100 m (85%). Elk: usually under 100 m (65%) | 30 min (85%) |
 | Liver | Hunches, walks or trots | Dark red, no bubbles | Beds within a few hundred metres | 4 to 6 hours (85%) |
 | Paunch (gut) | Hunches up, walks off slowly | Thin, greenish brown, stomach matter | Beds nearby if not pushed | 6 to 8 hours or overnight (85%) |
 | Muscle or leg | Keeps running at normal pace | Thin, inconsistent | Far | 30 to 60 min, then track hard (85%) |

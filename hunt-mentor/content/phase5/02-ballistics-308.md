@@ -57,7 +57,7 @@ checked: 2026-10-01
 | 300 m (328 yd) | 29 cm low | 27 cm low |
 
 - Direct from Federal, 200 yd zero: 150 gr is 2.0 in high at 100 yd and 8.8 in low at 300 yd. 165 gr is 2.0 in high and 8.6 in low (85%).
-- The bullet never leaves a 15 cm (6 in) band around the crosshair out to about 240 m (75%).
+- The bullet never leaves a 15 cm (6 in) band around the crosshair out to about 230 m (75%).
 - Cost: on a close shot at a small animal you are 6 cm high. Aim low on the chest inside 150 m (Tip).
 
 ```diagram drop-chart
@@ -80,7 +80,7 @@ Full crosswind, blowing straight across the shot, in cm.
 - 10 km/h: you feel it on your face, leaves rustle. 20 km/h: small branches move, dust lifts (65%).
 - Wind at 45 degrees: use about 70% of the table (85%).
 - Wind from the front or behind: ignore at these ranges (Tip).
-- Drift grows faster than drop. Doubling the distance from 150 m to 300 m makes the drift 4 times bigger (75%).
+- Doubling the distance from 150 m to 300 m makes the drift 4 times bigger (75%).
 
 > [!lean]
 > No shot past 200 m in a real wind this season. Inside 150 m, hold centre and forget the wind.

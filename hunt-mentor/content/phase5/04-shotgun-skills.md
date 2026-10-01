@@ -45,7 +45,7 @@ checked: 2026-10-01
 
 - Shot takes time to get there. A steel pellet leaves at about 1,400 fps (feet per second) and has lost about half its speed by 40 yd (60%).
 - Hunt Mentor estimate: about 0.1 second to reach 30 m (65%).
-- A mallard cruises at about 50 to 60 km/h and migrating flocks have been timed near 90 km/h (70%).
+- A mallard cruises at about 40 to 60 km/h. Cornell says migrating flocks have been estimated at 55 mph, about 90 km/h (70%).
 - At 50 km/h a duck moves about 1.4 m in 0.1 second. So the lead at 30 m is roughly 1 to 2 m (4 to 6 ft) depending on speed (65%).
 - Published tables that ignore pellet slow down give 0.7 m at 40 km/h and 1.2 m at 64 km/h at 30 yd. Real leads are longer (60%).
 - At 40 yd and beyond, hold more lead than feels right. Nearly all misses there are behind (70%).
@@ -80,7 +80,7 @@ checked: 2026-10-01
 - **Skeet:** targets cross a stake 21 yd out. Stations 3, 4 and 5 are ducks skirting the decoys. Low 1 and High 7 are incoming divers (70%).
 - **Trap:** 35 to 40 yd going away shots. It punishes head lifting mercilessly, which is why it is good for you (70%).
 - **Sporting clays:** overhead passing shots, long crossers, birds dropping in. Shoot only the stations that look like your hunting (70%).
-- Use open chokes and light 7.5 or 8 shot target loads on clays (70%).
+- Skeet: open chokes. Trap: Modified. Light 7.5 or 8 shot target loads for both (70%).
 - The 7 of 10 test: if you cannot break a target 7 times out of 10, that shot is too far for you in the marsh (70%).
 - Kamloops Shotgun Sports runs trap, skeet and sporting clays. Hours and fees: VERIFY before you drive (65%).
 

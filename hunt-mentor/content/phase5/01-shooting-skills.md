@@ -74,7 +74,7 @@ checked: 2026-10-01
 
 - Ten minutes, three evenings a week, is plenty (Tip).
 - Target: a 2 cm dot at 5 m. From sitting it should sit still through the click within two weeks (Tip).
-- Dry fire from the sticks too. A week of evenings on sticks made a 200 yd shot easy for one writer's first time hunter (70%).
+- Dry fire from the sticks too. One writer's wife dry fired from sticks for a week of evenings, then made a clean 200 yd shot from them on her hunt (70%).
 
 ## Four week plan
 
