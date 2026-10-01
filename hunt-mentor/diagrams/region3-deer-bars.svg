@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" font-family="sans-serif">
+<rect x="0" y="0" width="400" height="420" fill="#fffaf0"/>
+<text x="200" y="24" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 3 mule deer: resident harvest</text>
+<text x="200" y="44" font-size="13" fill="#23261f" text-anchor="middle">Average per year, 2020 to 2024, official survey estimates</text>
+<text x="12" y="84" font-size="15" font-weight="bold" fill="#23261f">MU 3-30</text>
+<rect x="80" y="70" width="230" height="20" fill="#6b4f35"/>
+<text x="314" y="85" font-size="14" fill="#23261f">502 deer, 24% of hunters</text>
+<text x="80" y="104" font-size="12" fill="#2f3a2b">Cache Creek, Clinton</text>
+<text x="12" y="126" font-size="15" font-weight="bold" fill="#23261f">MU 3-27</text>
+<rect x="80" y="112" width="150" height="20" fill="#6b4f35"/>
+<text x="234" y="127" font-size="14" fill="#23261f">327 deer, 30% of hunters</text>
+<text x="80" y="146" font-size="12" fill="#2f3a2b">Heffley Creek, Sun Peaks</text>
+<text x="12" y="168" font-size="15" font-weight="bold" fill="#23261f">MU 3-19</text>
+<rect x="80" y="154" width="150" height="20" fill="#6b4f35"/>
+<text x="234" y="169" font-size="14" fill="#23261f">327 deer, 21% of hunters</text>
+<text x="80" y="188" font-size="12" fill="#2f3a2b">Logan Lake, Knutsford</text>
+<text x="12" y="210" font-size="15" font-weight="bold" fill="#23261f">MU 3-29</text>
+<rect x="80" y="196" width="137" height="20" fill="#6b4f35"/>
+<text x="221" y="211" font-size="14" fill="#23261f">299 deer, 31% of hunters</text>
+<text x="80" y="230" font-size="12" fill="#2f3a2b">Dewdrop, north of Kamloops Lake</text>
+<text x="12" y="252" font-size="15" font-weight="bold" fill="#23261f">MU 3-26</text>
+<rect x="80" y="238" width="118" height="20" fill="#6b4f35"/>
+<text x="202" y="253" font-size="14" fill="#23261f">258 deer, 21% of hunters</text>
+<text x="80" y="272" font-size="12" fill="#2f3a2b">Chase, Salmon Arm</text>
+<text x="12" y="294" font-size="15" font-weight="bold" fill="#23261f">MU 3-31</text>
+<rect x="80" y="280" width="114" height="20" fill="#6b4f35"/>
+<text x="198" y="295" font-size="14" fill="#23261f">248 deer, 27% of hunters</text>
+<text x="80" y="314" font-size="12" fill="#2f3a2b">Clinton Creek side</text>
+<text x="12" y="336" font-size="15" font-weight="bold" fill="#23261f">MU 3-20</text>
+<rect x="80" y="322" width="110" height="20" fill="#6b4f35"/>
+<text x="194" y="337" font-size="14" fill="#23261f">240 deer, 22% of hunters</text>
+<text x="80" y="356" font-size="12" fill="#2f3a2b">Kamloops south</text>
+<text x="12" y="378" font-size="15" font-weight="bold" fill="#23261f">MU 3-18</text>
+<rect x="80" y="364" width="104" height="20" fill="#6b4f35"/>
+<text x="188" y="379" font-size="14" fill="#23261f">226 deer, 25% of hunters</text>
+<text x="80" y="398" font-size="12" fill="#2f3a2b">Savona, Ashcroft</text>
+<text x="12" y="412" font-size="12" fill="#6b4f35">Source: BC Big Game Harvest Statistics 1976 to 2024 (BC Data Catalogue). Area labels approximate.</text>
+</svg>
