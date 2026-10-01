@@ -102,7 +102,7 @@ checked: 2026-10-01
 
 - District 3 Canada geese are **closed 21 to 30 September** between the two fall periods (99%). Your October hunt is inside the open period (99%).
 - District 2 note: in MU 2-4 the Canada goose season "does not apply to the area 100 metres on either side of any dyke in the Municipality of Delta" (99%, synopsis page 28). Mission is in MU 2-8, so this does not touch your base (90%).
-- BC synopsis, page 12: "The daily bag limit for Canada and Cackling geese in aggregate is 10." and "The daily bag limit for White-fronted Goose is 5." are printed the same way (99%).
+- BC synopsis, page 12, prints the same limits: Canada and cackling geese in aggregate 10 a day, white fronted geese 5 a day, snow and Ross's geese 5 a day except MUs 2-4 and 2-5 (99%).
 
 
 ## The rules that catch goose hunters
@@ -157,7 +157,7 @@ Wing or head stays on every goose until home
 ## Sources
 
 - [Migratory Birds Regulations, 2022, SOR/2022-105, full text](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html), read directly, consolidated to 21 September 2026. Schedule 3, Part 10, Table 1, items 2, 3 and 8; sections 28, 36 to 46, 52. Checked 2026-10-01 (99%).
-- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: pages 7 (fees), 10, 11, 12, 15. Checked 2026-10-01 (99%).
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: pages 8 (fees), 10, 11, 12, 15. Checked 2026-10-01 (99%).
 - [Region 2 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-2-lower-mainland.pdf), page 28 (goose rows and Delta dyke note) and page 31 (Map B10), read directly, checked 2026-10-01 (99%).
 - [Region 3 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), page 34, and [Region 8 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-8-okanagan.pdf), page 68, goose rows, read directly, checked 2026-10-01 (99%).
 - [Hinterland Who's Who, Canada goose](https://www.hww.ca/en/wildlife/birds/canada-goose.html), read directly: races, feeding, daily routine, families. Checked 2026-10-01 (80%).

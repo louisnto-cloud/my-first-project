@@ -21,7 +21,7 @@ checked: 2026-10-01
 - **Young** by October look like small, duller females (Tip, 65%).
 - Lives in coveys most of the year, often 20 to 60 birds in fall (Tip, 65%). Runs first, then bursts into fast low flight on whirring wings (80%).
 - Feeds on seeds, leaves, berries and waste grain, mostly from the ground, with a sentinel on a post (80%).
-- Look alike: no other quail is legal here. "No open season on mountain quail." Region 1, page 20 (99%). Mountain quail has a straight plume and broad white bars on red sides (80%).
+- Look alike: no other quail is legal here. "No open season on mountain quail." Region 1, page 21 (99%). Mountain quail has a straight plume and broad white bars on red sides (80%).
 
 ## Chukar
 
@@ -90,7 +90,7 @@ checked: 2026-10-01
 | Region 2, page 28 | Quail, chukar, partridge: no rows (97%) | none | no open season (95%) | none |
 
 - The Region 8 row says only "QUAIL". Whether it means California quail alone: VERIFY. Treat it as California quail only; mountain quail is closed in Region 1 and should never be shot (Tip).
-- Region 1 for comparison: "CALIFORNIA QUAIL" 5 (15), 1 October to 30 November, page 20 (99%).
+- Region 1 for comparison: "CALIFORNIA QUAIL" 5 (15), 1 October to 30 November, page 21 (99%).
 - Mission is inside MU 2-8 (90%, Map B10). Pheasant there also needs the Fraser Valley Special Area licence and $1,000,000 liability insurance (99%).
 
 
@@ -188,7 +188,7 @@ One feathered wing stays on each bird
 
 ## Sources
 
-- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: page 3 (game bird), 9 (cultivated land, bylaws, Indian Reserves, sanctuaries), 10 (100 m, road allowance, 400 m highways), 12 (hours, plug, retrieval, bag notation, possession), 13 (legal methods table, notes 2 and 3, shot ban), 15 (wing), 20 (Region 1 quail rows). Checked 2026-10-01 (99%).
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: page 3 (game bird), 9 (cultivated land, bylaws, Indian Reserves, sanctuaries), 10 (100 m, road allowance, 400 m highways), 12 (hours, plug, retrieval, bag notation, possession), 13 (legal methods table, notes 2 and 3, shot ban), 15 (wing), 21 (Region 1 quail rows). Checked 2026-10-01 (99%).
 - [Region 3 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), page 34, read directly and checked against a rendered page image. Checked 2026-10-01 (99%).
 - [Region 8 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-8-okanagan.pdf), pages 67 to 70, read directly, plus the Closed Areas Regulation B.C. Reg. 76/84 schedules for the Okanagan map areas. Checked 2026-10-01 (99%).
 - [Region 2 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-2-lower-mainland.pdf), pages 27, 28 and 31, read directly and checked against a rendered page image. Checked 2026-10-01 (99%).

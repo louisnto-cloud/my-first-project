@@ -186,6 +186,9 @@ checked: 2026-10-01
 "A person must not hunt a migratory game bird (a) while having in their possession in the hunting area shot other than non-toxic shot; or (b) using shot other than non-toxic shot." (99%)
 
 - Lead in your pocket on a duck hunt is an offence (99%). Steel, bismuth and tungsten loads are the shop names (85%).
+
+## Methods: boats, retrieval, bait, calls
+
 - **Boats.** Section 41: no hunting "from or using a moving boat that is equipped with a motor or a sail" (99%). Retrieving a bird you already killed or wounded is allowed from a moving boat (99%).
 - BC synopsis, page 11, item 23: unlawful "To hunt migratory birds from a power boat, unless the boat is beached, resting at anchor or fastened within or tied immediately alongside a fixed hunting blind." (99%)
 - BC definition, page 4: a boat with the outboard "tilted or otherwise disengaged so as not to be ready for immediate use" is not a [[Power boat]] (99%). Kayak and paddled boat: not a power boat (99%).
