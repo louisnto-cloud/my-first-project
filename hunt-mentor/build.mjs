@@ -243,6 +243,13 @@ function build() {
     .replace(/<link rel="manifest"[^>]*>/, '')
     .replace(/<link rel="apple-touch-icon"[^>]*>/, ''));
 
+  // Artifact preview variant: no document skeleton (the host wraps it)
+  const single = fs.readFileSync(path.join(OUT, 'hunt-mentor-offline.html'), 'utf8');
+  const head = single.match(/<head>([\s\S]*?)<\/head>/)[1];
+  const body = single.match(/<body>([\s\S]*?)<\/body>/)[1];
+  fs.writeFileSync(path.join(OUT, 'preview.html'),
+    head.match(/<title>.*?<\/title>/)[0] + '\n' + head.match(/<style>[\s\S]*?<\/style>/)[0] + '\n' + body);
+
   console.log(`Built ${sessions.length} sessions, ${Object.keys(data.glossary).length} glossary terms -> ${OUT} (${version})`);
 }
 
