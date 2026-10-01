@@ -27,7 +27,7 @@ checked: 2026-10-01
 
 - **Snow goose:** white with black wing tips, pink bill with a dark "grin patch", pink feet (85%). 2.95 to 3.4 kg (80%). A blue phase is dark with a white head (85%). Young are dusky grey (80%).
 - **Ross's goose:** a miniature snow goose with a short bill and no grin patch (85%). Counted with snow geese (99%).
-- **White fronted goose:** brown grey with a white patch at the base of a pink orange bill, orange legs, black bars on the belly, so "specklebelly" (85%). 2.8 kg (80%). High laughing "kow kow kow" in V flocks (80%).
+- **White fronted goose:** brown grey with a white patch at the base of a pink orange bill, orange legs, black bars on the belly, so "specklebelly" (75%). 2.8 kg (80%). High laughing "kow kow kow" in V flocks (80%).
 - **Brant:** small, black head and neck with a thin white necklace, no white cheek, dark belly (85%). A sea goose of the coast (85%).
 - Brant: no open season in Districts 3 and 8 (99%). In District 2 only MU 2-4, 1 to 10 March, 3 a day (99%). Not your bird this year.
 - Swans are white and far bigger than any goose. Trumpeter and tundra swans are protected, no open season (90%).
@@ -36,7 +36,7 @@ checked: 2026-10-01
 
 - Canada geese nest across the southern two thirds of BC, mostly below 500 m, and numbers have more than doubled since 1970 (85%).
 - Most of the resident population lives around the towns and valleys of southern BC (85%). The Thompson rivers and the Fraser Valley both carry geese all year (75%).
-- Snow geese stage from September through November and arrive on wintering areas October to December (75%). In BC the big flocks are on the Fraser delta, MUs 2-4 and 2-5, where the limit is higher (99%).
+- Snow geese stage from September through November and arrive on wintering areas October to December (75%). In BC the big flocks are on the Fraser delta (75%), and in MUs 2-4 and 2-5 the limit is higher (99%).
 - White fronted geese pass through on the Pacific and Central flyways (80%). Expect only passing flocks in the Interior (Tip, 60%).
 - Cackling geese leave the Arctic in late August or September and reach wintering areas in October or November (75%).
 - Mid to late October near Kamloops and the Okanagan: resident Canada geese plus migrant flocks on the move (Tip, 65%).

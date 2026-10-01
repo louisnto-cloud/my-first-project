@@ -17,7 +17,7 @@ checked: 2026-10-01
 - Cook bear meat to 71 C (160 F). Freezing does not kill the parasite (75%).
 - Colour tells you nothing. Shape tells you everything (Tip).
 
-## Bear ID screen: black bear or grizzly?
+## Bear ID (identification) screen: black bear or grizzly?
 
 ```diagram bear-id
 ```
@@ -239,7 +239,7 @@ Write the RAPP number in my phone
 - BearWise, [All about black bears](https://bearwise.org/all-about-black-bears/), search preview, checked 2026-10-01 (70%)
 - CDC, [Trichinellosis associated with bear meat, New York and Tennessee, 2003](https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5327a2.htm), MMWR (Morbidity and Mortality Weekly Report), search preview, checked 2026-10-01 (80%)
 - CMAJ, [Trichinellosis from consumption of wild game meat](https://www.cmaj.ca/content/176/4/449), 2007, search preview, checked 2026-10-01 (75%)
-- CBC, [why no one knows how many black bears there are in BC](https://www.cbc.ca/news/canada/british-columbia/black-bear-numbers-in-b-c-1.7539540), search preview, checked 2026-10-01 (60%)
+- CBC (Canadian Broadcasting Corporation), [why no one knows how many black bears there are in BC](https://www.cbc.ca/news/canada/british-columbia/black-bear-numbers-in-b-c-1.7539540), search preview, checked 2026-10-01 (60%)
 - Hunting sources on spring bear habits and colour phases, search previews, checked 2026-10-01 (65 to 70%); outdoor track guides for track sizes (65%)
 
 ```quiz

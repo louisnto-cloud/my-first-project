@@ -56,7 +56,7 @@ checked: 2026-10-01
 
 | Duck | Drake | Hen, wing and flight |
 |---|---|---|
-| **Common goldeneye**, 1 kg (80%) | Black head with green gloss, round white spot by the bill, white sides (85%) | Brown head, grey body, yellow tipped bill some months (80%). Big white wing patches, wings whistle (85%). **Limit 2** with Barrow's (99%) |
+| **Common goldeneye**, 1 kg (80%) | Black head with green gloss, round white spot by the bill, white sides (85%) | Brown head, grey body (85%). Big white wing patches, wings whistle (85%). **Limit 2** with Barrow's (99%) |
 | **Barrow's goldeneye**, 1.25 kg (80%) | Purple gloss head, white crescent not a spot, less white on the wing (85%) | Same as common hen, hard to tell apart (85%). More common than the common goldeneye in the Interior (85%). **Shares the limit of 2** (99%) |
 | **Bufflehead**, 0.45 kg (80%) | Tiny, black and white, big white wedge behind the eye (85%) | Grey brown, small white cheek spot (85%). Very fast wingbeat, low flight, small groups of 5 or 6 (80%) |
 | **Ring necked duck**, 0.7 to 0.9 kg (75%) | Black back and breast, white flanks, white ring on the bill, peaked head (85%) | Drab brown, white eye ring, pale band on the bill (80%). Dark wings with a grey patch, not white (85%) |
@@ -69,7 +69,7 @@ checked: 2026-10-01
 
 ## Mergansers and look alikes
 
-- **Common merganser**, 1.1 kg: long thin orange bill with teeth. Drake white with a green head, hen grey with a rusty crested head and a clean white chin (85%). Flies low in follow the leader lines (80%). Legal inside the 8, but it eats fish and tastes like it (Tip).
+- **Common merganser**, 1.1 kg: long thin orange bill with teeth. Drake white with a green head, hen grey with a rusty crested head and a clean white chin (85%). Flies low in follow the leader lines (80%). Counts inside the 8 like any duck (95%), but it eats fish and tastes like it (Tip).
 - **Hooded merganser**, 0.7 kg: drake has a white fan crest in a black head, hen a brown crest. Choppy fast wingbeats, more white on the wing than a wood duck (85%).
 - **Harlequin duck**: slate blue with white stripes. Inland it likes fast rocky rivers; winters on the coast (80%). **Limit 2** (99%).
 - **American coot**: slate grey, white chicken bill, not a duck. Its own row, 10 a day, same federal permit and non toxic shot (99%).

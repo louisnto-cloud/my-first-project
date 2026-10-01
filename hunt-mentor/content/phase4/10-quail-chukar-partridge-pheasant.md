@@ -103,7 +103,7 @@ checked: 2026-10-01
 - Handguns are unlawful for hunting (99%). Shotguns for upland birds: any gauge, no gauge limit is printed for this row (90%).
 - Lead shot is legal for upland birds: the shot ban "does not apply to upland game birds (grouse, ptarmigan, quail, partridge, pheasants, and turkey)" (99%).
 - Exception in Region 2: no lead shot "when discharging a firearm on any dyke or on the water side" of any dyke in Delta, or on foreshore dykes facing Mud Bay in Surrey (99%). Not near Mission, but know it.
-- Plug rule: a pump or auto shotgun must hold no more than 2 in the magazine, 3 in total, for all hunting in BC (99%).
+- Plug rule: a pump or auto shotgun must have a plug so the magazine holds no more than 2, so 3 in total with the chamber, for all hunting in BC (95%).
 - Loads (Tip): quail and partridge, lead 7.5 or 6, or steel 6; chukar and pheasant, lead 5 or 6, or steel 3 or 4. Improved cylinder for quail, modified for pheasant. Pattern it first.
 
 ## Tactics without a dog

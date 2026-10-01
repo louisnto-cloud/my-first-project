@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" font-family="sans-serif">
+  <defs>
+    <marker id="cp-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#23261f"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="400" height="600" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Taking a bearing</text>
+  <text x="200" y="52" font-size="14" fill="#2f3a2b" text-anchor="middle">Direction of travel arrow</text>
+  <rect x="70" y="60" width="260" height="292" rx="14" fill="#f3eee0" stroke="#23261f" stroke-width="2"/>
+  <path d="M 200,62 L 188,82 L 212,82 Z" fill="#e8590c"/>
+  <line x1="200" y1="82" x2="200" y2="104" stroke="#e8590c" stroke-width="4"/>
+  <line x1="200" y1="104" x2="200" y2="122" stroke="#23261f" stroke-width="3"/>
+  <text x="212" y="100" font-size="14" font-weight="bold" fill="#23261f">Index line: read 60 here</text>
+  <circle cx="200" cy="200" r="88" fill="#e8e2cf" stroke="#23261f" stroke-width="2"/>
+  <circle cx="200" cy="200" r="72" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.5"/>
+  <g transform="rotate(-60 200 200)">
+    <g stroke="#23261f" stroke-width="2">
+      <line x1="200" y1="116" x2="200" y2="128"/>
+      <line x1="272.7" y1="158" x2="262.4" y2="164"/>
+      <line x1="272.7" y1="242" x2="262.4" y2="236"/>
+      <line x1="200" y1="284" x2="200" y2="272"/>
+      <line x1="127.3" y1="242" x2="137.6" y2="236"/>
+      <line x1="127.3" y1="158" x2="137.6" y2="164"/>
+    </g>
+    <g font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">
+      <text x="200" y="146">N 0</text>
+      <text x="252" y="174">60</text>
+      <text x="252" y="236">120</text>
+      <text x="200" y="266">S 180</text>
+      <text x="148" y="236">240</text>
+      <text x="148" y="174">300</text>
+    </g>
+    <line x1="182" y1="150" x2="182" y2="250" stroke="#8a9a6b" stroke-width="1.5"/>
+    <line x1="218" y1="150" x2="218" y2="250" stroke="#8a9a6b" stroke-width="1.5"/>
+    <path d="M 200,138 L 188,160 L 195,160 L 195,236 L 205,236 L 205,160 L 212,160 Z" fill="#fffaf0" stroke="#e8590c" stroke-width="2.5"/>
+    <path d="M 200,150 L 193,200 L 207,200 Z" fill="#e8590c" stroke="#23261f" stroke-width="1"/>
+    <path d="M 200,250 L 193,200 L 207,200 Z" fill="#ffffff" stroke="#23261f" stroke-width="1"/>
+    <circle cx="200" cy="200" r="4" fill="#23261f"/>
+  </g>
+  <text x="340" y="206" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Bezel: turn it</text>
+  <text x="200" y="306" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Red in the shed</text>
+  <text x="200" y="326" font-size="14" fill="#23261f" text-anchor="middle">Orienting arrow is the shed</text>
+  <text x="200" y="344" font-size="14" fill="#23261f" text-anchor="middle">Red end of the needle points to magnetic north</text>
+  <g font-size="15" fill="#23261f">
+    <text x="30" y="374">1. Point the travel arrow at the target.</text>
+    <text x="30" y="394">2. Turn the bezel until red is in the shed.</text>
+    <text x="30" y="414">3. Read the bearing at the index line: 60.</text>
+  </g>
+  <line x1="20" y1="430" x2="380" y2="430" stroke="#8a9a6b" stroke-width="2"/>
+  <text x="200" y="454" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Declination near Kamloops</text>
+  <line x1="120" y1="580" x2="120" y2="486" stroke="#23261f" stroke-width="3" marker-end="url(#cp-arrow)"/>
+  <line x1="120" y1="580" x2="145" y2="488" stroke="#e8590c" stroke-width="3" marker-end="url(#cp-arrow)"/>
+  <path d="M 120,520 A 60,60 0 0 1 135.5,522" fill="none" stroke="#6b4f35" stroke-width="2"/>
+  <circle cx="120" cy="580" r="4" fill="#23261f"/>
+  <text x="112" y="476" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">True north</text>
+  <text x="150" y="476" font-size="14" font-weight="bold" fill="#e8590c">Magnetic north</text>
+  <text x="148" y="534" font-size="14" fill="#6b4f35">15 degrees east</text>
+  <g font-size="14" fill="#23261f" text-anchor="middle">
+    <text x="292" y="506">Map bearing to compass:</text>
+    <text x="292" y="526" font-weight="bold">subtract 15</text>
+    <text x="292" y="556">Compass bearing to map:</text>
+    <text x="292" y="576" font-weight="bold">add 15</text>
+  </g>
+</svg>

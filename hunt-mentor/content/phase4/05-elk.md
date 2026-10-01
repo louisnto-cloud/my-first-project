@@ -10,7 +10,7 @@ checked: 2026-10-01
 > Elk are scarce around Heffley Creek and common in the Okanagan. Learn the 6 point rule and the bugle now, so the first bull you meet does not fool you.
 
 - Region 3 (Thompson) has **no general open season** for elk in the 2026 to 2028 synopsis (98%).
-- Region 8 (Okanagan) has a **6 point bull** rifle season, 10 September to 20 October, plus a bow only season 1 to 9 September (98%).
+- Region 8 (Okanagan) has a **6 point bull** rifle season in all its MUs (Management Units), 10 September to 20 October, plus a bow only season 1 to 9 September (98%).
 - Thompson elk: about 300 to 500 and increasing. Okanagan: about 2,500 to 3,500 (2022 estimates, search preview) (80%).
 - **6 point bull:** at least 6 tines on one antler. The brow tine counts (98%).
 - New for 2026: a Mandatory Hunter Report replaces compulsory inspection and reporting for elk (95%).
