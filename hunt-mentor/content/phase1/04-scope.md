@@ -95,7 +95,7 @@ Price checked 2026-10-01. Search preview prices, verify at checkout.
 | Swarovski Z5 3.5 to 18x44 | 1 in | $1,879 to $2,139 | (65%) |
 | Zeiss Conquest V6 2 to 12x50 | 30 mm | about $3,300, one source | (60%) |
 
-- Tube sizes for the premium tier: VERIFY on the box before buying rings.
+- Confirm the tube size on the box before you buy rings (Tip).
 - Premium glass is brighter in the last minutes of legal light. It does not shoot straighter (Tip).
 
 ## Rings
