@@ -59,10 +59,10 @@ checked: 2026-10-01
 
 ## Your brother
 
-- He can come along and watch **without a licence**, as long as he carries no firearm or weapon (80%).
-- He can help pack meat out. You must stay with the meat, or fill in a transport record (80%).
-- He should not call, chase or drive game toward you. That can count as hunting (65%, my reading of the law).
-- To hunt himself he needs CORE (Conservation and Outdoor Recreation Education), a PAL (Possession and Acquisition Licence) for firearms, and a hunting licence. That takes weeks. Not this October.
+- He has CORE (Conservation and Outdoor Recreation Education), a PAL (Possession and Acquisition Licence) and an FWID. He can hunt too.
+- He needs his **own** BC hunting licence, his **own** deer species licences and his **own** federal bird permit (85%).
+- Each hunter fills **their own** tags. You cannot notch your tag for his deer (80%, VERIFY party hunting rules).
+- Anyone without a licence can still come along to watch and help pack out, if they carry no firearm (80%).
 
 ## Buy it this week
 
@@ -99,6 +99,6 @@ Photo ID and PAL card in wallet
   {"q": "Do you need to carry a hunter number card?", "options": ["Yes, always", "No. Carry photo ID and know your FWID number", "Only for deer"], "answer": 1, "why": "BC replaced the card with the FWID. Carry photo ID and be able to give the number."},
   {"q": "You hunt deer in 10 days. How do you get the species licence?", "options": ["Order online, it prints at home", "Buy in person", "You do not need one"], "answer": 1, "why": "Species licences cannot be printed at home and online orders are mailed, about 14 days."},
   {"q": "What do you need to shoot a mallard?", "options": ["BC hunting licence only", "BC hunting licence and the federal Migratory Game Bird Hunting Permit", "A duck species licence"], "answer": 1, "why": "Ducks are federal. You need the BC hunting licence plus the federal permit."},
-  {"q": "Can your unlicensed brother carry your rifle on the walk in?", "options": ["Yes if it is unloaded", "No. Having a firearm while out after game can count as hunting", "Yes on Crown land"], "answer": 1, "why": "Under the Wildlife Act, searching for wildlife while in possession of a firearm is hunting. He would need a licence."}
+  {"q": "Can an unlicensed friend carry your rifle on the walk in?", "options": ["Yes if it is unloaded", "No. Having a firearm while out after game can count as hunting", "Yes on Crown land"], "answer": 1, "why": "Under the Wildlife Act, searching for wildlife while in possession of a firearm is hunting. They would need a licence."}
 ]
 ```
