@@ -133,8 +133,17 @@ label.f { display: block; font-weight: 700; margin: 12px 0 4px; font-size: 15px;
 .seg button { flex: 1; min-height: 48px; border: 0; background: var(--card); color: var(--ink); font-size: 16px; }
 .seg button.on { background: var(--accent); color: #fff; font-weight: 800; }
 
+/* flashcards */
+.fc { min-height: 220px; cursor: pointer; }
+.fc h2 { font-size: 24px; }
+.fc-back { border-top: 2px dashed var(--line); margin-top: 10px; padding-top: 10px; font-size: 19px; }
+.print-grid .card { page-break-inside: avoid; }
+
 @media print {
-  .top, .tabs, .banner, .btn-row, .dots { display: none !important; }
+  .top, .tabs, .banner, .btn-row, .dots, .no-print { display: none !important; }
+  .print-grid { columns: 2; column-gap: 12px; }
+  .print-grid .card { font-size: 9pt; padding: 8px; margin: 0 0 8px; break-inside: avoid; }
+  .print-grid h2 { font-size: 11pt; }
   body { padding: 0; background: #fff; color: #000; font-size: 11pt; }
   .card { break-inside: avoid; border: 1px solid #000; }
 }
