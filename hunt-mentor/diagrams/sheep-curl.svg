@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 640" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="640" fill="#fffaf0"/>
+  <!-- Panel 1: full curl bighorn -->
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Full curl bighorn ram</text>
+  <text x="200" y="42" font-size="14" fill="#6b4f35" text-anchor="middle">Line: centre of nostril to lowest back edge of horn base</text>
+  <g transform="translate(18,48)">
+    <path d="M22,82 L40,98 L70,112 L120,112 L135,90 L138,60 L125,46 L100,42 Z" fill="#f3ead8" stroke="#23261f" stroke-width="2"/>
+    <circle cx="96" cy="60" r="5" fill="#23261f"/>
+    <circle cx="32" cy="84" r="3" fill="#23261f"/>
+    <path d="M118,44 C165,40 175,105 140,128 C112,146 80,138 68,112 C60,95 66,70 80,58" fill="none" stroke="#6b4f35" stroke-width="9" stroke-linecap="round"/>
+    <line x1="5" y1="92" x2="165" y2="46" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+    <text x="32" y="78" font-size="12" fill="#e8590c" text-anchor="middle">+</text>
+    <text x="130" y="60" font-size="12" fill="#e8590c" text-anchor="middle">+</text>
+    <text x="85" y="150" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">LEGAL</text>
+    <text x="85" y="166" font-size="13" fill="#23261f" text-anchor="middle">tip rises above the line</text>
+  </g>
+  <g transform="translate(218,48)">
+    <path d="M22,82 L40,98 L70,112 L120,112 L135,90 L138,60 L125,46 L100,42 Z" fill="#f3ead8" stroke="#23261f" stroke-width="2"/>
+    <circle cx="96" cy="60" r="5" fill="#23261f"/>
+    <circle cx="32" cy="84" r="3" fill="#23261f"/>
+    <path d="M118,44 C165,40 175,105 140,128 C118,142 96,138 84,122" fill="none" stroke="#6b4f35" stroke-width="9" stroke-linecap="round"/>
+    <line x1="5" y1="92" x2="165" y2="46" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+    <text x="85" y="150" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">NOT LEGAL</text>
+    <text x="85" y="166" font-size="13" fill="#23261f" text-anchor="middle">tip stays below the line</text>
+  </g>
+  <line x1="20" y1="222" x2="380" y2="222" stroke="#8a9a6b" stroke-width="2" stroke-dasharray="6 6" fill="none"/>
+  <!-- Panel 2: 3/4 curl bighorn -->
+  <text x="200" y="246" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3/4 curl bighorn ram</text>
+  <text x="200" y="264" font-size="14" fill="#6b4f35" text-anchor="middle">Line: through back of the eye, at right angles to line 1</text>
+  <g transform="translate(18,270)">
+    <path d="M22,82 L40,98 L70,112 L120,112 L135,90 L138,60 L125,46 L100,42 Z" fill="#f3ead8" stroke="#23261f" stroke-width="2"/>
+    <circle cx="96" cy="60" r="5" fill="#23261f"/>
+    <circle cx="32" cy="84" r="3" fill="#23261f"/>
+    <path d="M118,44 C165,40 175,105 140,128 C118,142 96,138 84,122" fill="none" stroke="#6b4f35" stroke-width="9" stroke-linecap="round"/>
+    <line x1="87" y1="11" x2="126" y2="148" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+    <text x="85" y="150" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">LEGAL</text>
+    <text x="85" y="166" font-size="13" fill="#23261f" text-anchor="middle">tip is forward of the line</text>
+  </g>
+  <g transform="translate(218,270)">
+    <path d="M22,82 L40,98 L70,112 L120,112 L135,90 L138,60 L125,46 L100,42 Z" fill="#f3ead8" stroke="#23261f" stroke-width="2"/>
+    <circle cx="96" cy="60" r="5" fill="#23261f"/>
+    <circle cx="32" cy="84" r="3" fill="#23261f"/>
+    <path d="M118,44 C165,40 178,100 150,126 C143,132 136,135 128,134" fill="none" stroke="#6b4f35" stroke-width="9" stroke-linecap="round"/>
+    <line x1="87" y1="11" x2="126" y2="148" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+    <text x="85" y="150" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">NOT LEGAL</text>
+    <text x="85" y="166" font-size="13" fill="#23261f" text-anchor="middle">tip still behind the line</text>
+  </g>
+  <line x1="20" y1="444" x2="380" y2="444" stroke="#8a9a6b" stroke-width="2" stroke-dasharray="6 6" fill="none"/>
+  <!-- Panel 3: full curl thinhorn / mature bighorn -->
+  <text x="200" y="468" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Full curl thinhorn, mature bighorn</text>
+  <text x="200" y="486" font-size="14" fill="#6b4f35" text-anchor="middle">Line: along the bridge of the nose, extended</text>
+  <g transform="translate(18,492)">
+    <path d="M22,82 L40,98 L70,112 L120,112 L135,90 L138,60 L125,46 L100,42 Z" fill="#f3ead8" stroke="#23261f" stroke-width="2"/>
+    <circle cx="96" cy="60" r="5" fill="#23261f"/>
+    <circle cx="32" cy="84" r="3" fill="#23261f"/>
+    <path d="M118,44 C165,40 175,105 140,128 C112,146 80,138 68,112 C58,92 62,60 78,40" fill="none" stroke="#6b4f35" stroke-width="8" stroke-linecap="round"/>
+    <line x1="5" y1="91" x2="165" y2="9" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+    <text x="85" y="150" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">LEGAL</text>
+    <text x="85" y="166" font-size="13" fill="#23261f" text-anchor="middle">tip rises above the nose line</text>
+  </g>
+  <g transform="translate(218,492)">
+    <path d="M22,82 L40,98 L70,112 L120,112 L135,90 L138,60 L125,46 L100,42 Z" fill="#f3ead8" stroke="#23261f" stroke-width="2"/>
+    <circle cx="96" cy="60" r="5" fill="#23261f"/>
+    <circle cx="32" cy="84" r="3" fill="#23261f"/>
+    <path d="M118,44 C165,40 175,105 140,128 C112,146 80,138 68,112 C60,95 66,74 82,62" fill="none" stroke="#6b4f35" stroke-width="8" stroke-linecap="round"/>
+    <line x1="5" y1="91" x2="165" y2="9" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+    <text x="85" y="150" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">NOT LEGAL</text>
+    <text x="85" y="166" font-size="13" fill="#23261f" text-anchor="middle">tip below the nose line</text>
+  </g>
+</svg>
