@@ -108,5 +108,13 @@ hunt-mentor/
 - Dog: none. Retrieval plan must work without a dog.
 - Priority: deer, ducks, quail. Owner open to ducks and quail first. ASK final pick.
 
+## 7b. Owner answers (logged 2026-10-01, later)
+- Brother's own house is ON the 20 acres. 100 m buffer applies around it (75%, VERIFY rule text).
+- Neighbours' houses about 100 to 200 m away. Usable shooting area on the property is small.
+- Brother has CORE, PAL and FWID. Both will hunt. Plans are for 2 licensed hunters.
+- Rifle confirmed iron sights only for now. Budget raised to about $10,000.
+- Boat: 10 ft, both have PFDs. Kayak possible.
+- Network: government sites blocked in this environment; owner asked to set Full access.
+
 ## 8. Open questions
 - See chat. Answers get logged here.
