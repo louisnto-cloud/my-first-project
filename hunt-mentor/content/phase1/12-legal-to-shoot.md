@@ -69,7 +69,7 @@ I rangefinded the house and the road from my stand
 - [Hunting Regulation, B.C. Reg. 190/84](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_01) (search preview), checked 2026-10-01: hours.
 - [ECCC (Environment and Climate Change Canada) BC migratory bird summary](https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html) (search preview), checked 2026-10-01: duck hours.
 - Steps 4, 8 and 9 are safety and ethics habits (Tip), not quoted law.
-- Full rule detail and certainty: Session 2.5, BC rules you must know.
+- Full rule detail and certainty: Phase 2 Session 5, BC rules you must know.
 
 ```quiz
 [

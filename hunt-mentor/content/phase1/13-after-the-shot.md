@@ -30,7 +30,7 @@ checked: 2026-10-01
 - Bright pink, bubbly blood often means a lung hit. Dark blood or gut matter: back out and wait hours. Tip.
 - Mark each blood spot with tape or a phone pin. Tip.
 - Lost the trail? Go back to the last blood. Search in slow circles. Get your brother to help. Tip.
-- Trail goes into posted private land, a park or a No Shooting Area: stop. Ask the owner or call a conservation officer (70%). See Session 2.5.
+- Trail goes into posted private land, a park or a No Shooting Area: stop. Ask the owner or call a conservation officer (70%). See Phase 2 Session 5.
 - You must make a real effort to recover wounded game (70%). VERIFY the exact rule.
 
 ## 3. Approach and notch

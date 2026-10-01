@@ -26,7 +26,7 @@ checked: 2026-10-01
 
 - The BC hunting licence is electronic only. Be able to give your FWID number (85%).
 - Carry your [[PAL]] (Possession and Acquisition Licence) any time you have a firearm. Tip: habit, not a hunting rule.
-- Full detail: Session 2, Licences and tags.
+- Full detail: Phase 1 Session 2, Licences and tags.
 
 ## Legal hunting hours
 
@@ -150,7 +150,7 @@ checked: 2026-10-01
 
 ## Deer: tag and evidence
 
-- Notch the species licence right after the kill, before you move the animal (85%). See Session 13.
+- Notch the species licence right after the kill, before you move the animal (85%). See Phase 1 Session 13.
 - Evidence of sex stays **naturally attached** until the meat is home, at a cutter, in cold storage, or inspected (75%, secondary).
 - Buck: the part of the head with antlers, **or** testicles or penis plus the tail or a patch of hide (75%, secondary).
 - Doe: the part of the head where antlers would be, **or** udder or teats plus the tail or a patch of hide (75%, secondary).
@@ -180,13 +180,13 @@ checked: 2026-10-01
 - Unloaded while in a vehicle (85%).
 - Non restricted rifle or shotgun: no case or trigger lock needed while you travel (85%).
 - Leaving it in the vehicle: lock it in the trunk or a locked compartment. No trunk: out of sight in the **locked** vehicle (85%).
-- No special permit to carry a non restricted firearm. Your PAL is enough (85%).
+- No special permit to carry a non restricted firearm. Your PAL (Possession and Acquisition Licence) is enough (85%).
 - Ammunition can travel with it, just not in it (80%).
 
 ## Giving away meat, and helpers
 
 - Anyone carrying your game without you needs a **Record of Receipt** (85%).
-- Record of Receipt shows: date and place, your name and address, who receives it, your FWID, the species licence number, species and sex (85%).
+- Record of Receipt shows: date and place, your name and address, who receives it, your FWID (Fish and Wildlife ID), the species licence number, species and sex (85%).
 - Your brother hunts too. He needs his **own** hunting licence, species licences and federal bird permit (85%).
 - Each hunter notches only his own licence, for the animal he killed. Shooting a deer for the other person's tag: VERIFY. Treat as not allowed.
 - Ducks: each hunter has his own daily limit. Do not pool birds. Tip.

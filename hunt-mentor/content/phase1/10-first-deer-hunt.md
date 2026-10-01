@@ -113,7 +113,7 @@ checked: 2026-10-01
 
 ## A hunt day
 
-- **Night before:** check legal light, wind, MU, closures. Pack and charge everything.
+- **Night before:** check legal light, wind, MU (Management Unit) rules, closures. Pack and charge everything.
 - **Sunrise minus 90 min:** leave the house. Rifles unloaded and cased in the vehicle.
 - **Sunrise minus 60 min (legal light):** sit at the first glassing spot. Load only when sitting and ready.
 - **First 3 hours:** glass. Do not walk much.
