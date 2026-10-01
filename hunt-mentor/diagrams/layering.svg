@@ -29,5 +29,5 @@
   <text x="206" y="370" font-size="14" fill="#23261f">Blocks wind and rain.</text>
   <text x="206" y="388" font-size="14" fill="#23261f">Waterproof for Mission.</text>
   <line x1="182" y1="360" x2="200" y2="360" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="4 3"/>
-  <text x="200" y="432" font-size="14" fill="#23261f" text-anchor="middle">No cotton in any layer.</text>
+  <text x="296" y="432" font-size="14" fill="#23261f" text-anchor="middle">No cotton in any layer.</text>
 </svg>
