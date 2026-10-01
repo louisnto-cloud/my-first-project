@@ -16,7 +16,7 @@ checked: 2026-10-01
 - Aim for both lungs, not the heart. The lungs are the biggest vital target and give the most room for error (85%).
 - Quartering to, head on and rear end shots: beginners wait (Tip). Rear end shots: nobody takes them (85%).
 - Head and neck shots: small targets, small margin, lost animals. Not for you (85%).
-- Bears: the heart sits low in the chest and the long hair fools your eye. Pick a spot, never shoot at the whole animal (85%).
+- Bears: the heart sits low, the lungs reach well back, and the hair fools your eye. Halfway up, tight behind the shoulder (85%).
 - After the hit, read the reaction and the blood. It tells you how long to wait (85%).
 
 ## Where the vitals are
@@ -84,15 +84,17 @@ checked: 2026-10-01
 ```diagram vitals-bear
 ```
 
-- A bear is built differently. The chest is compressed, the shoulder is farther forward, the hair is long and the fat is thick (85%).
-- **Lower than you think:** the heart sits low in the chest. The hair adds 8 to 10 cm of false depth below the real body line. Aim for the centre of the lungs or slightly lower, never high (85%).
-- **Farther forward than you think:** the long hair and compact body make hunters shoot too far back, into the paunch. Pick a spot up the near front leg, one third to one half up the chest (85%).
+- A bear is built differently. The chest is compressed front to back, the shoulder sits farther forward, the hair is long and the fat is thick (85%).
+- Fat makes up 2.5 to 5 cm of the body and the hair adds another 8 to 10 cm. The bear looks bigger than it is (70%).
+- **Low:** the heart sits low in the chest, behind the shoulder. **Back:** the lungs reach past the middle of the body (70%).
+- Aim spot: up the near front leg, one third to one half up the chest. Centre of the lungs or slightly lower (85%).
+- Hunter education warns: the long hair and compact body make hunters shoot too far back, into the paunch (85%).
+- Experienced bear hunters warn the opposite: copying a deer heart shot puts the bullet too low or too far forward, in the armpit or shoulder, and those bears are lost (70%).
+- Everyone agrees: halfway up the body, tight behind the shoulder once the near leg steps forward, through both lungs (85%).
 - The vital zone is about a 20 cm (8 in) circle behind the front shoulder (85%).
-- Wait for the near front leg to step forward. Then hold tight behind the shoulder, halfway up (85%).
 - Shoulder shots: not recommended. Heavy bone, and a hit ahead of the shoulder misses the vitals (85%).
 - Head shots: not recommended. The skull is dense and sloped, bullets glance off (85%).
 - Hair and fat hide the wound. Bears leave thin blood trails, so mark exactly where it stood and where it went (85%).
-- Sources differ on the exact spot. All agree: halfway up the body, tight behind the shoulder, both lungs (Tip).
 
 ## When NOT to shoot
 
@@ -103,15 +105,15 @@ checked: 2026-10-01
 - **Beyond your tested range.** Your range test number is the law for you (Tip).
 - **Behind brush.** A twig can deflect a bullet. Wait for a clear lane (Tip).
 - **Another animal behind it.** The bullet exits. The second animal is your bullet too (Tip).
-- **Lying down or sitting.** The vitals are hidden or twisted (75%).
-- Whistle or grunt softly. A walking deer or moose often stops and turns broadside (70%).
+- **Lying down or sitting.** The vitals are hidden or twisted. Outdoor Canada's bear rule, and it holds for deer (70%).
+- Whistle or grunt softly. A walking moose often stops and turns to the sound. Deer often do the same (Tip).
 
 > [!warn]
 > Not sure of the angle, the range or the backstop? That is a no. The animal walks, you hunt tomorrow.
 
 ## Neck and head shots
 
-- A neck shot can drop an animal instantly. It can also miss the spine by 3 cm and send it off with a broken jaw or a flesh wound (85%).
+- A well placed neck shot can drop an animal instantly (85%). Miss the spine by a few centimetres and the animal leaves with a flesh wound or a broken jaw (Tip).
 - The brain is small and moving. The spine is a pencil sized target under thick muscle and hide (85%).
 - The only big artery in the neck is the carotid, about the thickness of a pencil (85%).
 - Bear skulls are dense and sloped. Bullets glance off (85%).
@@ -176,7 +178,7 @@ Breath half out, squeeze, follow through
   {"q": "A deer stands broadside. Where is the spot?", "options": ["Middle of the body", "Straight up the back of the front leg, one third up the chest", "The neck"], "answer": 1, "why": "That line and height puts the bullet through both lungs and the top of the heart. Hunter education teaches it for deer, elk, moose and bear."},
   {"q": "Deer quartering away. Where do you aim?", "options": ["Behind the near shoulder, same as broadside", "Farther back, so the bullet exits the far shoulder", "The near shoulder"], "answer": 1, "why": "Picture the far front leg and aim on the near side at the spot that sends the bullet there. Aiming at the near crease can clip one lung."},
   {"q": "What is wrong with the Texas heart shot?", "options": ["Nothing, it drops them", "No vitals in reach, guts and hams in the way, ruins meat", "It is only illegal in Texas"], "answer": 1, "why": "A shot at a walking away animal goes through paunch and hindquarters first. Hunter Ed says never take it."},
-  {"q": "On a black bear, the common mistakes are?", "options": ["Aiming too high and too far back", "Aiming too low and too far forward", "There are no common mistakes"], "answer": 0, "why": "The heart sits low and the long hair adds false depth, so hunters hold high. The compact furry body makes them hold too far back, into the paunch. Halfway up, tight behind the shoulder."},
+  {"q": "Black bear broadside, near leg forward. Where is the spot?", "options": ["Halfway up the body, tight behind the shoulder, through both lungs", "High on the shoulder to break it down", "The head"], "answer": 0, "why": "The heart sits low and the lungs reach well back. Shoulder and head shots are not recommended: heavy bone, sloped skull, lost bears."},
   {"q": "Dark red blood, no bubbles, the deer hunched and trotted off. What now?", "options": ["Follow right away", "Mark the spot, back out, wait 4 to 6 hours", "Give up"], "answer": 1, "why": "That is a liver hit. The deer will bed and die if not pushed. Pushed early, it can go a long way."}
 ]
 ```

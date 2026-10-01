@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="560" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#23261f" text-anchor="middle">Gutless method: deer on its side</text>
+
+  <!-- ground line -->
+  <path d="M20 232 H380" fill="none" stroke="#8a9a6b" stroke-width="2" stroke-dasharray="4 6"/>
+
+  <g stroke="#23261f" stroke-width="2.5" stroke-linejoin="round">
+    <!-- legs lying down, pointing to viewer's lower left -->
+    <path d="M118 190 L96 226 L112 232 L140 198 Z" fill="#8a9a6b"/>
+    <path d="M140 196 L124 230 L140 234 L160 204 Z" fill="#8a9a6b"/>
+    <path d="M262 190 L240 226 L256 232 L284 198 Z" fill="#8a9a6b"/>
+    <path d="M284 196 L268 230 L284 234 L304 204 Z" fill="#8a9a6b"/>
+    <!-- body -->
+    <ellipse cx="210" cy="150" rx="112" ry="48" fill="#8a9a6b"/>
+    <!-- hide peeled back over the spine (top half skinned) -->
+    <path d="M100 128 C 140 70, 280 70, 320 128 L 320 112 C 280 50, 140 50, 100 112 Z" fill="#6b4f35"/>
+    <!-- exposed meat on top half -->
+    <path d="M100 128 C 140 92, 280 92, 320 128 L 318 150 C 280 112, 140 112, 102 150 Z" fill="#c9735a"/>
+    <!-- neck and head -->
+    <path d="M110 136 L70 96 L92 84 L132 122 Z" fill="#8a9a6b"/>
+    <ellipse cx="66" cy="88" rx="28" ry="15" fill="#8a9a6b"/>
+    <path d="M80 76 L94 56 L90 80 Z" fill="#8a9a6b"/>
+    <path d="M76 74 L80 46 M80 58 L70 50 M80 52 L90 40" fill="none" stroke="#6b4f35" stroke-width="4" stroke-linecap="round"/>
+    <!-- tail -->
+    <path d="M320 138 L338 132 L334 148 Z" fill="#fffaf0"/>
+  </g>
+
+  <!-- cut lines -->
+  <path d="M110 150 C 160 120, 260 120, 312 150" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5"/>
+  <line x1="254" y1="120" x2="254" y2="188" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 5"/>
+
+  <!-- numbered markers -->
+  <g font-size="16" font-weight="bold" text-anchor="middle">
+    <circle cx="210" cy="60" r="14" fill="#2f3a2b"/><text x="210" y="66" fill="#fffaf0">1</text>
+    <circle cx="136" cy="176" r="14" fill="#2f3a2b"/><text x="136" y="182" fill="#fffaf0">2</text>
+    <circle cx="284" cy="176" r="14" fill="#2f3a2b"/><text x="284" y="182" fill="#fffaf0">3</text>
+    <circle cx="210" cy="124" r="14" fill="#2f3a2b"/><text x="210" y="130" fill="#fffaf0">4</text>
+    <circle cx="254" cy="202" r="14" fill="#2f3a2b"/><text x="254" y="208" fill="#fffaf0">5</text>
+    <circle cx="200" cy="170" r="14" fill="#2f3a2b"/><text x="200" y="176" fill="#fffaf0">6</text>
+    <circle cx="96" cy="118" r="14" fill="#2f3a2b"/><text x="96" y="124" fill="#fffaf0">7</text>
+    <circle cx="356" cy="196" r="14" fill="#2f3a2b"/><text x="356" y="202" fill="#fffaf0">8</text>
+  </g>
+
+  <!-- legend -->
+  <g font-size="15" fill="#23261f">
+    <text x="16" y="270">1  Skin the top half back past the spine. Hide is your clean mat.</text>
+    <text x="16" y="296">2  Front quarter: lift the leg, cut the armpit, no bone cut.</text>
+    <text x="16" y="322">3  Hind quarter: inside the thigh to the hip joint, cut it free.</text>
+    <text x="16" y="348">4  Backstrap: knife along the spine, then out over the ribs.</text>
+    <text x="16" y="374">5  Tenderloin: inside, behind the last rib. Do not cut the gut.</text>
+    <text x="16" y="400">6  Rib and flank meat. These are legal edible portions in BC.</text>
+    <text x="16" y="426">7  Neck meat. Skin to behind the ears, fillet it off.</text>
+    <text x="16" y="452">8  Roll onto the clean hide. Repeat 2 to 6 on the other side.</text>
+  </g>
+  <text x="16" y="488" font-size="14" fill="#6b4f35">Orange dashes: cut lines. Brown: hide peeled back. Pink: exposed meat.</text>
+  <text x="16" y="508" font-size="14" fill="#6b4f35">Keep the unskinned tail and testicle attached to one quarter.</text>
+  <text x="16" y="528" font-size="14" fill="#6b4f35">Every piece goes straight into a clean game bag.</text>
+</svg>
