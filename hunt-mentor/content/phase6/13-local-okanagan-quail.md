@@ -16,6 +16,7 @@ checked: 2026-10-01
 - Two hunters, shotguns, no dog, no permission yet. Base: a motel or a friend, your choice.
 - Quotes below are verbatim except hyphens, which this app's style removes.
 - Residents need only the BC hunting licence for quail, chukar and partridge. No species licence (85%).
+- Seasons are set by [[MU]] (Management Unit). Region 8 quail MUs are 8-1 to 8-15 and 8-21 to 8-26 (99%).
 
 ## Season and limits, quoted
 
@@ -110,7 +111,7 @@ checked: 2026-10-01
   - Myra Bellevue Park near Kelowna: hunting permitted, "hunters are urged to be cautious" on the Crawford trails (99%).
   - Kalamalka Lake Park: hunting only inside the areas on the BC Parks hunting map (99%).
 - Vaseux Lake Park: no hunting listed, and the federal sanctuary is next to it. Treat as closed (90%).
-- South Okanagan Wildlife Management Area, Vaseux to Osoyoos: hunting status not stated on the BC page. VERIFY with the regional office, 250 490 8200 (99% for the number).
+- South Okanagan Wildlife Management Area (WMA), Vaseux to Osoyoos: hunting status not stated on the BC page. VERIFY with the regional office, 250 490 8200 (99% for the number).
 - Honest note: the grassland parks are dry upland. Quail prefer valley bottom brush, so the oxbows near Osoyoos and private edges give better odds (Tip).
 - Grazing lease land needs the lease holder's OK while cattle are on it, page 9 (99%).
 
@@ -120,7 +121,7 @@ checked: 2026-10-01
 |---|---|---|
 | Fish and Wildlife office | 102 Industrial Place, Penticton, 250 490 8200 | 99%, page 66 |
 | Conservation Officer | Field offices in Penticton, Kelowna, Vernon, Grand Forks. By appointment via 1 877 952 7277 | 99%, page 66 |
-| RAPP line | 1 877 952 7277, 24 hours | 99%, page 66 |
+| RAPP (Report All Poachers and Polluters) line | 1 877 952 7277, 24 hours | 99%, page 66 |
 | Hospital, Kelowna | Kelowna General Hospital, 2268 Pandosy Street, V1Y 1T2. 24 hour emergency and trauma | 99% |
 | Hospital, Penticton | Penticton Regional Hospital, 550 Carmi Avenue, V2A 3G6. 24 hour emergency | 99% |
 | Hospital, Oliver | South Okanagan General Hospital, 911 McKinney Road, V0H 1T3. 24 hour emergency | 99% |
@@ -128,7 +129,7 @@ checked: 2026-10-01
 
 - The Okanagan is Syilx Okanagan Nation territory (99%). The Okanagan Nation Alliance "works collectively with our member communities to advance, defend and preserve Syilx Okanagan sovereignty" (99%).
 - Member communities include the Osoyoos Indian Band, Penticton Indian Band (snpink'tn), Westbank First Nation, Okanagan Indian Band near Vernon, Upper and Lower Similkameen and Upper Nicola (99%, Okanagan Indian Band page).
-- Reserve land is private: ask the band office before you hunt on or cross it, page 9 (99%). Map J10 marks I.R. 1 north of Kaleden (95%).
+- Reserve land is private: ask the band office before you hunt on or cross it, page 9 (99%). Map J10 marks I.R. 1 (Indian Reserve 1) north of Kaleden (95%).
 - Respect: no shooting near orchards, homes or workers on reserve land either. Give way to Indigenous harvesters. Pack out shells and birds' remains (Tip).
 - Ranges if you want to pattern first: Vernon Fish and Game Club, "202 Bardolph Lake", members (99%). Penticton Shooting Sports, members (80%). Others: VERIFY.
 
