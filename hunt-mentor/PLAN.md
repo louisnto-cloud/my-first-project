@@ -116,5 +116,11 @@ hunt-mentor/
 - Boat: 10 ft, both have PFDs. Kayak possible.
 - Network: government sites blocked in this environment; owner asked to set Full access.
 
+## 7c. Owner update (2026-10-01, later)
+- Owner has ALL licences and permits now. Brother too (assumption: he bought his own; owner said "I have all the licenses").
+- Owner: do not focus on the brother's land or Sun Peaks. Plan for the WHOLE region (Region 3) and all of BC. Base at Heffley Creek is just where they sleep.
+- Official synopsis PDFs now downloaded (network opened 2026-10-01). Rules read directly can be 95%+.
+- canada.ca still blocked. Federal duck seasons come from the Migratory Birds Regulations on laws-lois.justice.gc.ca instead.
+
 ## 8. Open questions
 - See chat. Answers get logged here.
