@@ -27,7 +27,7 @@ checked: 2026-10-01
 | Shoulder hump | None. The rump is the high point (80%) | A big hump of muscle over the shoulders, the highest point (80%) |
 | Face profile | Straight from forehead to nose (80%) | Dished, scooped in between eyes and nose (80%) |
 | Ears | Taller, more pointed (80%) | Short, round, small for the head (80%) |
-| Front claws | Short, curved, about 2.5 to 5 cm, dark (80%) | Long, straighter, about 5 to 10 cm, often pale (80%) |
+| Front claws | Short, curved, about 2.5 to 5 cm (80%) | Long, straighter, about 5 to 10 cm (80%) |
 | Rump | Higher than the shoulders (80%) | Lower than the hump (80%) |
 | Colour | Black, brown, cinnamon or blond (75%) | Blond to dark brown, often with grizzled pale tips (75%) |
 | Size | Adult males about 135 kg, females about 70 kg (75%) | Bigger on average, but a young grizzly is black bear sized (Tip) |
@@ -245,7 +245,7 @@ Write the RAPP number in my phone
 ```quiz
 [
   {"q": "A big brown bear feeds on a slope. What do you check before anything else?", "options": ["Its colour", "Shoulder hump, face profile and ears", "How fat it is"], "answer": 1, "why": "Colour is not reliable. Interior black bears are often brown. A hump, a dished face and small round ears mean grizzly, and there is no open season on grizzlies in BC."},
-  {"q": "What is the Region 3 fall black bear season in MUs 3 12 to 3 20 and 3 26 to 3 44?", "options": ["1 September to 30 November", "10 September to 10 December", "1 October to 31 October"], "answer": 0, "why": "Synopsis page 34: Sept 1 to Nov 30, bag limit 2. MU 3 46 opens later, on 20 September."},
+  {"q": "What is the Region 3 fall black bear season in MUs 3-12 to 3-20 and 3-26 to 3-44?", "options": ["1 September to 30 November", "10 September to 10 December", "1 October to 31 October"], "answer": 0, "why": "Synopsis page 34: Sept 1 to Nov 30, bag limit 2. MU 3-46 opens later, on 20 September."},
   {"q": "A bear is feeding with a smaller bear nearby. Can you shoot the big one?", "options": ["Yes, if it is the bigger one", "No. A bear under 2 and any bear in its company are closed", "Yes, in the fall only"], "answer": 1, "why": "Synopsis page 10, item 14. The smaller bear is likely a cub or yearling, and the sow with it is protected too."},
   {"q": "Which is legal when hunting black bear in BC?", "options": ["Placing a bait pile", "Using a .22 rimfire rifle", "Using a 20 gauge shotgun with No. 1 buck"], "answer": 2, "why": "Baiting bears is unlawful. Rimfire is not allowed for black bear. A shotgun of 20 gauge or larger with No. 1 buck or larger is on the methods table, page 13."},
   {"q": "How do you make bear meat safe from trichinosis?", "options": ["Freeze it for 3 weeks", "Cook it to an internal 71 C (160 F) and check with a thermometer", "Smoke it"], "answer": 1, "why": "The bear species of Trichinella survives freezing. Only heat kills it. Use a thermometer, because colour does not show doneness."}
