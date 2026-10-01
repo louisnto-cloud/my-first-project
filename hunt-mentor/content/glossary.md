@@ -1,6 +1,6 @@
 # Glossary
 
-- **ACTS**: Firearm safety rule set. Assume every firearm is loaded. Control the muzzle direction at all times. Trigger finger off the trigger and out of the trigger guard. See that the firearm is unloaded: prove it safe. VERIFY wording against the CFSC (Canadian Firearms Safety Course).
+- **ACTS**: Firearm safety rules. Assume every firearm is loaded. Control the muzzle direction at all times. Trigger finger off the trigger and out of the trigger guard. See that the firearm is unloaded: PROVE it safe (85%).
 - **Antlerless**: A deer with no antlers. Usually a doe or a fawn. Some seasons only allow antlerless.
 - **ATV**: All terrain vehicle. A quad.
 - **Backstop**: What is behind your target that will stop the bullet. Earth is good. Sky is never a backstop.
@@ -24,3 +24,53 @@
 - **Synopsis**: The BC Hunting and Trapping Regulations Synopsis. Plain language summary of the law.
 - **WILD**: Wildlife Information and Licensing Data. BC online system to buy licences.
 - **Zero**: The distance where your bullet hits exactly where the crosshair points.
+- **4 point buck**: A buck with 4 or more points on one antler, not counting the brow tine. Each point at least 2.5 cm long and longer than wide (80%, VERIFY in the synopsis).
+- **Bachelor group**: A small summer group of bucks (2 to 4) that breaks up in fall.
+- **Brow tine**: The short point near the base of the antler, just above the eye.
+- **Browse**: Twigs, buds and leaves of shrubs and trees that deer eat. Also the sign left when they eat them.
+- **Button buck**: A male fawn with small bumps instead of antlers. Counts as antlerless.
+- **Flag**: A white tail's raised, waving white tail when it runs from danger.
+- **Forb**: A small leafy flowering plant that is not a grass.
+- **Metatarsal gland**: A scent patch on the outside of a deer's hind leg. Long on mule deer, small on white tails.
+- **Pre rut**: The weeks before the rut. Bucks spar, rub trees and start checking does.
+- **Rattling**: Clacking antlers together to sound like fighting bucks.
+- **Riparian**: The green strip of land along a river or creek.
+- **Rub**: Bark scraped off a sapling by a buck's antlers.
+- **Rut**: The breeding season. Mule deer mid November to mid December. White tails peak in November.
+- **Scrape**: A pawed bare patch of dirt under a low branch, made by a buck around the rut.
+- **Spot and stalk**: Find the animal with binoculars from far away, then sneak within range.
+- **Stand hunting**: Sitting in one spot, such as a tree stand or ground blind, on a trail and waiting.
+- **Still hunting**: Walking very slowly through cover, stopping often to look and listen.
+- **Stot**: The mule deer bounce. All 4 feet hit the ground and push off together.
+- **Thermals**: Air sliding up a slope as it warms (morning) and down as it cools (evening). They carry your scent.
+- **Tine**: A branch of an antler. Also called a point.
+- **Winter range**: The lower, sunnier slopes where deer spend the winter.
+- **PROVE**: Firearm safety steps. Point the firearm in the safest available direction. Remove all cartridges. Observe the chamber. Verify the feeding path. Examine the bore (85%).
+- **Zone of fire**: The slice of ground in front of a hunter where they may shoot, about 45 degrees. Never swing past it.
+- **Cold shock**: The gasp and fast breathing in the first minute in cold water.
+- **1 10 1 principle**: A name for cold water stages: about 1 minute of cold shock, 10 minutes of useful movement, 1 hour to unconsciousness. A guide, not exact timing.
+- **HELP**: Heat Escape Lessening Posture. Knees up and arms crossed in the water to slow heat loss.
+- **PCOC**: Pleasure Craft Operator Card. Proof of competency to run a boat fitted with a motor.
+- **FVPA**: Firearm Violence Prevention Act. BC law in force 1 October 2026 on loaded firearms and shooting from vehicles and boats.
+- **STOP**: Stop, Think, Observe, Plan. What to do when lost, disoriented or hurt.
+- **Trip plan**: A written plan of who, where, route and return time, left with someone at home.
+- **Satellite messenger**: A device that sends SOS and texts by satellite where there is no cell signal.
+- **RAPP**: Report All Poachers and Polluters. BC line to report wildlife and environmental violations: 1 877 952 7277 (85%).
+- **Tourniquet**: A band tightened above a wound on an arm or leg to stop life threatening bleeding.
+- **SOFTT**: Special Operations Forces Tactical Tourniquet. A commercial windlass tourniquet.
+- **Stalking**: Closing the distance on an animal you have already seen.
+- **Record of Receipt**: A written note that must go with game carried by someone other than the hunter who killed it.
+- **Evidence of sex**: The body part that must stay naturally attached to show if the animal was male or female.
+- **Edible portions**: Meat you must not waste. Big game: neck, ribs, all 4 quarters and the loins. Game birds: both breasts (85%).
+- **Loaded**: In BC, live ammunition in the chamber or in a magazine attached to the firearm (85%).
+- **Road allowance**: The strip along a road where hunting and shooting are banned (85%). See the BC rules session.
+- **No Shooting Area**: A mapped area where firing a firearm is banned.
+- **Motor Vehicle Closed Area**: An area where some or all motor vehicles are banned.
+- **Ecological reserve**: Protected land. No hunting and no firing a firearm or bow (85%).
+- **Enclosed land**: Under the Trespass Act, land with a lawful fence, a natural boundary, or trespass signs at each normal access point.
+- **Non toxic shot**: Shot that is not lead, such as steel, bismuth or tungsten. Required for ducks and geese.
+- **Magazine plug**: A filler that limits a shotgun to 3 shells in total. Must not come out unless the gun is taken apart.
+- **Compulsory reporting**: A required report of a kill within 30 days, for listed species and areas.
+- **Field dressing**: Removing the guts soon after the kill.
+- **Gutless method**: Taking the meat off without opening the body cavity.
+- **Conservation officer**: BC wildlife law enforcement officer.

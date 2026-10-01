@@ -1,4 +1,19 @@
 {
   "note": "Review gate. Only session ids listed here are built into the app. Add an id after its fact check and style check pass.",
-  "sessions": ["countdown", "licences"]
+  "sessions": [
+    "countdown",
+    "licences",
+    "mule-deer",
+    "white-tailed-deer",
+    "deer-mind",
+    "firearm-safety",
+    "water-safety",
+    "bush-safety",
+    "wind-thermals",
+    "glassing",
+    "still-hunting",
+    "bc-rules",
+    "legal-to-shoot",
+    "after-the-shot"
+  ]
 }

@@ -49,3 +49,23 @@ Certainty scale: see CLAUDE.md.
 |---|---|---|---|
 | Silvercore blog, BC regs 2026 | https://www.silvercore.ca/blog/new-bc-hunting-regulations | 2026-09-30 | Cross check only |
 | BC Outdoors Magazine, reg changes | https://www.bcoutdoorsmagazine.com/what-bc-hunters-anglers-should-know-about-upcoming-regulatory-changes/ | 2026-09-30 | Cross check only |
+
+## Added 2026-10-01 (all via search preview, capped 85%)
+
+| Source | Link | Used in |
+|---|---|---|
+| BC Firearm Violence Prevention Act page | https://www2.gov.bc.ca/gov/content/justice/criminal-justice/policing-in-bc/fvpa | Firearm safety, water safety, regs.json |
+| BC news release: FVPA in force 1 Oct 2026 | https://news.gov.bc.ca/releases/2026PSSG0037-000460 | regs.json |
+| BC Trespass Act | https://www.bclaws.gov.bc.ca/civix/document/id/consol21/consol21/00_96462_01 | BC rules |
+| RCMP storing and transporting firearms | https://rcmp.ca/en/firearms/firearms-safety-training-transport-and-storage/storing-transporting-and-displaying-firearms | BC rules, firearm safety |
+| Storage, Display, Transportation regs SOR/98-209 | https://laws-lois.justice.gc.ca/eng/regulations/SOR-98-209/ | BC rules |
+| Migratory Birds Regulations, 2022 | https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html | BC rules, water safety, gear |
+| BC RAPP page | https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/natural-resource-law-enforcement/conservation-officer-service/cos-rapp | Emergency card, BC rules |
+| BC CWD page | https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/wildlife/wildlife-conservation/wildlife-health/chronic-wasting-disease/cwd-bc | BC rules |
+| BC compulsory reporting | https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/compulsory-reporting | After the shot |
+| BC Parks hunting guide | https://bcparks.ca/plan-your-trip/visit-responsibly/fishing-hunting-guide/ | BC rules |
+| WDFW food safety (not BC law) | https://wdfw.wa.gov/hunting/requirements/food-safety | After the shot |
+| BC Firearms Academy, evidence of sex (secondary) | https://bcfirearmsacademy.ca/possession-transportation-big-game/ | BC rules |
+| Apple Support, Emergency SOS via satellite | (see bush safety session) | Bush safety |
+| Deer research sources | see research/2026-10-01-deer.md | Deer sessions |
+| Gear research sources | see research/2026-10-01-gear.md | Gear sessions |
