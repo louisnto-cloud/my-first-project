@@ -11,9 +11,9 @@ checked: 2026-10-01
 
 - White tails favour valley bottoms, river edges and farm fields (85%).
 - Near Heffley Creek: North Thompson hayfields and cottonwood bottoms (75%).
-- Late October is the start of the white tail rut build up: rubs and scrapes appear (60 to 70%).
+- Late October is the start of the white tail rut build up: rubs and scrapes appear (60%).
 - They are a **separate species licence** from mule deer (80%).
-- Best methods for a beginner: sit on a stand, or still hunt slowly (65%, hunter consensus).
+- Best methods for a beginner: sit on a stand, or still hunt slowly (hunter consensus) (65%).
 
 ## Identify: buck, doe, fawn
 
@@ -66,8 +66,8 @@ checked: 2026-10-01
 - **Rut** (breeding season): white tail peak is November. Most does conceive about 13 to 17 November (80%).
 - **Rubs:** a buck scrapes bark off a sapling with his antlers. Bare, shredded wood at knee to waist height (60%).
 - White tails make many more rubs than mule deer (60%).
-- **Scrape:** a pawed bare patch of dirt, often under a low branch the buck chews and rubs his face on (60 to 70%).
-- Scrapes show up late October to November (60 to 70%).
+- **Scrape:** a pawed bare patch of dirt, often under a low branch the buck chews and rubs his face on (60%).
+- Scrapes show up late October to November (60%).
 - A **rub line** is several rubs in a row. It often marks a travel route (Tip).
 
 > [!tip]
@@ -117,7 +117,7 @@ checked: 2026-10-01
 
 ## Shot placement (brief)
 
-- Heart and lungs: tight behind the front leg, one third up the body (75%, standard hunter education advice).
+- Heart and lungs: tight behind the front leg, one third up the body (standard hunter education advice) (75%).
 - Wait for broadside or slightly quartering away (Tip).
 - White tails often run 50 to 100 m after a good hit. Mark where it stood and where it entered cover (Tip).
 - Full lesson: the shot placement session (coming in a later phase).
@@ -128,7 +128,7 @@ checked: 2026-10-01
 > Study aid only. The official regulations are the law.
 
 - **Your [[MU]] (Management Unit):** VERIFY on the official map.
-- **[[Antlerless]] white tails:** 10 to 31 October in MUs 3-12 to 3-20, 3-26 to 3-44 and 3-46 (70%, search preview, VERIFY).
+- **[[Antlerless]] white tails:** 10 to 31 October in MUs 3-12 to 3-20, 3-26 to 3-44 and 3-46 (search preview, VERIFY) (70%).
 - **White tailed buck season in your MU:** VERIFY.
 - **[[Bag limit]]:** search preview says 3 deer combined in Region 3, at most 2 white tails. VERIFY (60%).
 - **Buildings:** no hunting or shooting within 100 m of an occupied dwelling, farm or ranch building, church, school, playground or regional park (75%).

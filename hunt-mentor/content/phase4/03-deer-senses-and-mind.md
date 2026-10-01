@@ -32,7 +32,7 @@ checked: 2026-10-01
 - Deer have 2 colour cones, peaking near 455 nm (blue) and 537 nm (green). No red cone (85%).
 - So blaze orange looks dull, close to grey or brown, to a deer (75%).
 - Deer pick up more ultraviolet (UV) light than we do (75%).
-- Some laundry detergents add UV brighteners that may glow to a deer (65%, Tip). Use unscented, no brightener soap.
+- Some laundry detergents add UV brighteners that may glow to a deer (Tip) (65%). Use unscented, no brightener soap.
 - Motion and outline give you away, not colour (85%).
 - Lights: a moving headlamp or phone screen in the dark is pure motion. Red light, pointed at the ground (Tip).
 
@@ -74,14 +74,14 @@ checked: 2026-10-01
 ## When a deer is alarmed
 
 1. **Alert:** head up, ears forward, stare. Freeze until it looks away (Tip).
-2. **Head bob:** drops the head as if to feed, then snaps it up to catch you moving (70%, hunter lore).
+2. **Head bob:** drops the head as if to feed, then snaps it up to catch you moving (hunter lore) (70%).
 3. **Foot stamp:** stamps a front hoof. Warns other deer and tries to make you move (70%).
 4. **Snort or blow:** a loud whoosh of air. All deer nearby are now on alert (70%).
 5. **Escape:**
   - Mule deer **stot**: bounces on all 4 feet, good for steep broken ground (85%).
   - White tail **flags** and gallops to cover (85%).
 
-- Mule deer often stop and look back from about 150 to 300 m (65%, hunter lore).
+- Mule deer often stop and look back from about 150 to 300 m (hunter lore) (65%).
 
 > [!tip]
 > If a deer stares at you, do not move a finger. Count to 100. Most deer go back to feeding if nothing else happens.
@@ -111,7 +111,7 @@ checked: 2026-10-01
 |---|---|
 | Deer can't see blaze orange | Blaze orange looks dull to deer. Motion still gives you away (75%) |
 | Deer have 297 million scent receptors | Unmeasured folklore. Nose is still their best sense (45%) |
-| Bucks always bed on the top third of a slope | Often true, not a rule (60%, lore) |
+| Bucks always bed on the top third of a slope | Often true, not a rule (lore) (60%) |
 | The rut makes mule deer migrate | Snow and cold trigger migration (85%) |
 | Deer urine lures are a must | Out of province deer products are banned in BC (80%). Wind beats lures (Tip) |
 | Grunt calls work all season | Rattling and calling work best near the rut, early November (70%) |

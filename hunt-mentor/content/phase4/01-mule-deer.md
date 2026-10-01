@@ -50,11 +50,11 @@ checked: 2026-10-01
 
 - **Night (about 21:00 to 04:00):** feeds on and off in open grass and brush, rests between bouts (75%).
 - **Before first light (04:00 to 07:00):** a strong activity peak. Feeding, moving (85%).
-- **Legal light starts:** 1 hour before sunrise (80%). Late October sunrise near Kamloops is about 07:30 (75%, calculated). Use the Legal light screen in Field Mode.
+- **Legal light starts:** 1 hour before sunrise (80%). Mid to late October sunrise near Kamloops is about 07:30 to 07:50 (calculated) (75%). Use the Legal light screen in Field Mode.
 - **Sunrise to about 09:00:** last feeding, then drifts uphill toward cover (85%).
 - **Midday (10:00 to 15:00):** bedded. Chews cud. Gets up briefly to stretch, nibble, and re bed (80%).
 - **Late afternoon (16:00 to 18:00):** rises, browses near the bed, then moves toward open feeding slopes (80%).
-- **Sunset (about 18:00) to 21:00:** second peak. Out in the open (85%).
+- **Sunset (about 17:40 to 18:00) to 21:00:** second peak. Out in the open (85%).
 - Peaks from a telemetry study: about 04:00 to 09:00 and 17:00 to 21:00 (85%).
 
 > [!field]
@@ -115,7 +115,7 @@ checked: 2026-10-01
 
 - **Nose:** strongest sense. Wind at your back toward the deer ends the hunt (85%).
 - **Ears:** hear about 115 Hz (hertz) to 54 kHz (kilohertz), best at 4 to 8 kHz (85%). That is the range of zippers, Velcro, nylon swish and metal clicks.
-- **Eyes:** see blues well, no red cone, so blaze orange looks dull to them (75 to 85%). They catch **motion and outline** fast (85%).
+- **Eyes:** see blues well, no red cone, so blaze orange looks dull to them (75%). They catch **motion and outline** fast (85%).
 - **Scares them:** human scent, a skyline outline, sudden moves, metal clicks, voices, a slammed truck door (Tip).
 - **Calms them:** slow natural walking rhythm, other relaxed deer, steady breeze (Tip).
 - **Attracts them:** fresh green feed, does in heat (in the rut), other deer (80%).
@@ -138,7 +138,7 @@ checked: 2026-10-01
 - Day beds give **hiding cover** and **shelter** (80%).
 - Warm days: north facing timber, benches, draws, shade (80%).
 - Cold days: sunny south and west slopes, out of the wind (80%).
-- Lore: bucks bed in the top third of a slope, looking down, with wind from behind (60%, hunter lore).
+- Lore: bucks bed in the top third of a slope, looking down, with wind from behind (hunter lore) (60%).
 - A bed is an oval of flattened grass or scraped earth, about 1 m long, often with pellets and hair nearby (70%).
 - Deer bed where they can see danger below and smell danger above (Tip).
 
@@ -159,7 +159,7 @@ checked: 2026-10-01
 
 ### Option A: spot and stalk
 - Glass from a high point at first light, find a buck, then sneak in with the wind in your face.
-- Pros: the classic mule deer method; you see lots of country (60%, hunter consensus).
+- Pros: the classic mule deer method; you see lots of country (hunter consensus) (60%).
 - Cons: hard on a beginner; long stalks; easy to bump the deer.
 
 ### Option B: sit and glass a feeding slope
@@ -188,7 +188,7 @@ checked: 2026-10-01
 
 ## Shot placement (brief)
 
-- Aim for the heart and lungs: just behind the front leg, one third up the body (75%, standard hunter education advice).
+- Aim for the heart and lungs: just behind the front leg, one third up the body (standard hunter education advice) (75%).
 - Wait for the deer to stand **broadside** or slightly quartering away (Tip).
 - No shot at a running deer, a head, a neck, or a deer on the skyline (Tip).
 - Full lesson with diagram: the shot placement session (coming in a later phase).
@@ -202,7 +202,7 @@ checked: 2026-10-01
 > Study aid only. The official regulations are the law.
 
 - **Your [[MU]] (Management Unit) at Heffley Creek and Sun Peaks:** VERIFY on the official map.
-- **4 point buck:** a buck with at least 4 tines on one antler, **not counting the brow tine** (the short point near the base). Each tine at least 2.5 cm and longer than it is wide (80%, search preview).
+- **4 point buck:** a buck with at least 4 tines on one antler, **not counting the brow tine** (the short point near the base). Each tine at least 2.5 cm and longer than it is wide (search preview) (80%).
 - **Region 3 mule deer seasons** (search preview, many MUs, VERIFY yours) (65%):
   - 10 to 30 September: 4 point bucks or better.
   - **1 to 31 October: any buck.**
@@ -234,7 +234,7 @@ checked: 2026-10-01
 > - Shooting at a buck you didn't count, in a 4 point season.
 
 - Also: skylining yourself on a ridge, rushing a stalk, and taking a long shot you never practised.
-- Also: chasing a deer that stotted over the hill. Wait. Glass. It may stop and look back (65%, hunter lore).
+- Also: chasing a deer that stotted over the hill. Wait. Glass. It may stop and look back (hunter lore) (65%).
 
 ## Grandpa's rules
 
