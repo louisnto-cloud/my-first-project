@@ -90,5 +90,23 @@ hunt-mentor/
 | Public hosting | Anyone with the link can see it | No personal data in the content. Journal stays on phone. |
 | iPhone storage can clear offline data if unused for weeks | Lost progress | Add "export backup" button (JSON file). |
 
-## 7. Open decisions (need owner)
-- See the question batch in chat. Answers get logged here.
+## 7. Owner answers (logged 2026-10-01)
+- Phone: iPhone. Install via Safari "Add to Home Screen".
+- Hosting: GitHub Pages, this repo, path `/my-first-project/hunt-mentor/`.
+- Rifle: owner says "Tikka Arctic", barrel about 18 in, "the Canada version".
+  - Likely Tikka T3x Arctic (Canadian Rangers model): 20 in barrel, iron sights,
+    removable Picatinny rail (90%, manufacturer page via search). Owner to confirm.
+- Budget: about $3,000 total for shotgun, scope, clothing and gear.
+- Partner: brother. Has not hunted before. Licence status: ASK.
+- Distance: open to ATV and walking 5 to 10 km. Wants best odds on deer.
+  - Session 10 shows 3 scenarios: brother's land, ATV on FSRs, walk in.
+- Pack out: brother helps.
+- Water: brother's boat. Kayak possible. Canoe per brief.
+- Quail: no Okanagan permission yet. Brother owns about 20 acres (about 8 ha)
+  at Heffley Creek. Legality and safety of shooting there: VERIFY (bylaws,
+  no shooting areas, distance to homes, backstop).
+- Dog: none. Retrieval plan must work without a dog.
+- Priority: deer, ducks, quail. Owner open to ducks and quail first. ASK final pick.
+
+## 8. Open questions
+- See chat. Answers get logged here.
