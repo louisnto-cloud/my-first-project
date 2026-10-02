@@ -1,5 +1,5 @@
 // Hunt Mentor service worker: cache everything on install, serve offline first.
-const CACHE = 'hm-1fbgj-2026-10-02';
+const CACHE = 'hm-1hqkx-2026-10-02';
 const FILES = ['./', 'index.html', 'style.css', 'app.js', 'content.js', 'manifest.webmanifest', 'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png', 'hunt-mentor-offline.html'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
