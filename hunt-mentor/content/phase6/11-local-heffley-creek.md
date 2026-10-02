@@ -128,7 +128,7 @@ checked: 2026-10-02
   - In iMapBC, check who owns the bank where you stand or beach the boat. Crown land or written permission only (Tip).
   - Draw a 100 m circle round every house and barn on both banks (99% rule).
   - Stay outside the city boundary and the Map C7 band (99%).
-  - Page 11: no hunting migratory birds "from a power boat, unless the boat is beached, resting at anchor or fastened within or tied immediately alongside a fixed hunting blind." (99%) Your 10 ft boat is a taxi, not a blind, unless it is beached or anchored.
+  - Page 11 item 23, updated by law on 1 October 2026: no hunting migratory birds from a moving boat that has a motor or sail. Beached, anchored or tied to a fixed blind is fine (99%). Your 10 ft boat is a taxi, not a blind, unless it is beached or anchored. While the motor pushes the boat, every gun aboard is unloaded (95%, B.C. Reg. 66/2026).
   - [[Non toxic shot]] only, and a plug that limits the gun to 3 shells, pages 12 and 13 (99%).
 - Ask the North Thompson Fish and Game Club in Barriere or the Kamloops and District Fish and Game Association which sloughs hold ducks. Both are on the BC Wildlife Federation club list (95%).
 

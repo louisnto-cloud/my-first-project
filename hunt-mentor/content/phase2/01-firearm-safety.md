@@ -94,7 +94,7 @@ The CFSC (Canadian Firearms Safety Course) teaches these as the "Vital Four ACTS
 
 ## Two armed hunters: you and your brother
 
-- Both of you hold [[CORE]] and a [[PAL]]. Each carries your own licences and tags (owner confirmed).
+- Both of you hold [[CORE]] (Conservation and Outdoor Recreation Education) and a [[PAL]] (Possession and Acquisition Licence). Each carries your own licences and tags (owner confirmed).
 - Before every walk, agree three things: who covers left, who covers right, and the stop signal.
 - Only one of you shoots at a deer unless you agreed a backup plan first (Tip).
 - Neither one steps in front of the other's muzzle. Ever.

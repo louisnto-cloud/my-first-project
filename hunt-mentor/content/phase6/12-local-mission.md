@@ -45,8 +45,8 @@ checked: 2026-10-01
 - A 10 ft boat belongs in sloughs, side channels and bays, not the main Fraser current in a fall rain (Tip).
 - Cold water: [[PFD]] (personal flotation device) on, not stowed. See Phase 2 water safety (Tip).
 - Logs and debris run after every rain. Daylight only on the river (Tip).
-- Unlawful, page 11: "To shoot wildlife from a motor vehicle or a boat propelled by a motor" and to hunt migratory birds "from a power boat, unless the boat is beached, resting at anchor or fastened within or tied immediately alongside a fixed hunting blind." (99%)
-- Page 12: you may retrieve a bird with a power boat "provided no person in the power boat is in possession of a [[Loaded|loaded]] firearm." (99%)
+- Unlawful, page 11: "To shoot wildlife from a motor vehicle or a boat propelled by a motor" (99%). For ducks and geese the rule since 1 October 2026 reads like the federal one: no hunting from a moving boat that has a motor or sail. Beached, anchored or tied to a fixed blind is fine (99%, B.C. Reg. 66/2026).
+- You may use the motor to go and pick up a bird that is already down (99%, Migratory Birds Regulations s.41). Every firearm aboard is unloaded while the motor pushes the boat (95%, Firearm Violence Prevention Act and B.C. Reg. 66/2026). The old page 12 power boat line is older than this change (95%).
 
 ## Deer, bear and grouse near Mission
 
