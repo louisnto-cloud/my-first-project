@@ -13,7 +13,7 @@ checked: 2026-10-01
 > Study aid only. The official regulations are the law. Territory maps are not legal boundaries, and only the nations themselves speak for their land. Where a nation's own site could not be read, this session says so.
 
 - BC's synopsis recognises that First Nations "may have or establish Aboriginal or treaty rights protected by section 35(2) of the Constitution Act, 1982, including rights to harvest wildlife for food, social and ceremonial purposes in their traditional territories" (99%, page 6).
-- "The B.C. government encourages mutual courtesy and respect between Indigenous and non-Indigenous hunters." (99%, page 6)
+- The BC government asks for mutual courtesy and respect between Indigenous hunters and all other hunters (99%, synopsis page 6, paraphrased).
 - Three bases, three homelands: Secwépemc around Kamloops, Stó:lō around Mission, Syilx in the Okanagan (95%).
 - Region 3 also holds Nlaka'pamux, St'át'imc and Syilx territory, so the nation changes as you drive (95%).
 
@@ -40,7 +40,7 @@ checked: 2026-10-01
 
 ## The Okanagan: Syilx
 
-- The Okanagan Nation Alliance (ONA): "The Syilx people of the Okanagan Nation are a trans-boundary tribe separated at the 49th parallel by the border between Canada and the United States." (99%)
+- The Okanagan Nation Alliance (ONA) says the Syilx people of the Okanagan Nation are one people split at the 49th parallel by the border between Canada and the United States (99%, paraphrased from the ONA site).
 - Member communities: Okanagan Indian Band, Osoyoos Indian Band, Penticton Indian Band, Upper Nicola Band, Upper and Lower Similkameen Indian Bands, Westbank First Nation, and the Colville Confederated Tribes in Washington (99%).
 - "We, as the Syilx Okanagan people, still affirm that the land is ours, as no treaty has been negotiated." (99%)
 - Quail country: the Osoyoos Indian Band "is located in the Southern part of the Okanagan Valley, between the towns of Oliver and Osoyoos and covers 13,045 hectares" (99%). Those lands are private. Session 3.

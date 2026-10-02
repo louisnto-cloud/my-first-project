@@ -24,7 +24,7 @@
 - **Synopsis**: The BC Hunting and Trapping Regulations Synopsis. Plain language summary of the law.
 - **WILD**: Wildlife Information and Licensing Data. BC online system to buy licences.
 - **Zero**: The distance where your bullet hits exactly where the crosshair points.
-- **4 point buck**: A buck with 4 or more points on one antler, not counting the brow tine. Each point at least 2.5 cm long and longer than wide (80%, VERIFY in the synopsis).
+- **4 point buck**: A mule deer buck with at least 4 tines (points) on one antler, not counting the brow tine (99%). A tine must be at least 2.5 cm (1 in) long and longer than it is wide (99%). Synopsis page 4, read 2026-10-02.
 - **Bachelor group**: A small summer group of bucks (2 to 4) that breaks up in fall.
 - **Brow tine**: The short point near the base of the antler, just above the eye.
 - **Browse**: Twigs, buds and leaves of shrubs and trees that deer eat. Also the sign left when they eat them.
@@ -61,12 +61,12 @@
 - **Stalking**: Closing the distance on an animal you have already seen.
 - **Record of Receipt**: A written note that must go with game carried by someone other than the hunter who killed it.
 - **Evidence of sex**: The body part that must stay naturally attached to show if the animal was male or female.
-- **Edible portions**: Meat you must not waste. Big game: neck, ribs, all 4 quarters and the loins. Game birds: both breasts (85%).
-- **Loaded**: In BC, live ammunition in the chamber or in a magazine attached to the firearm (85%).
-- **Road allowance**: The strip along a road where hunting and shooting are banned (85%). See the BC rules session.
+- **Edible portions**: Meat you must not waste. Big game (not wolf, lynx, bobcat or wolverine): the neck, ribs, all 4 quarters and the loins. Game birds: both breasts (99%, synopsis page 3, read 2026-10-02).
+- **Loaded**: In BC, a firearm with live ammunition in the breech (chamber) or in the magazine. A clip with live rounds counts as the magazine once it is attached to the firearm (99%, synopsis page 3, read 2026-10-02).
+- **Road allowance**: The strip along every numbered highway and every 2 lane or wider public road maintained by the Ministry of Transportation and Infrastructure, the federal government or another province. No hunting or shooting in it, and no shooting across it (99%). It runs 15 m either side of the middle of a road under 3 lanes, 15 m from the paved edge of a wider highway, or to the edge of private or cultivated land, whichever comes first (99%). Synopsis page 10, read 2026-10-02. See the BC rules session.
 - **No Shooting Area**: A mapped area where firing a firearm is banned.
 - **Motor Vehicle Closed Area**: An area where some or all motor vehicles are banned.
-- **Ecological reserve**: Protected land. No hunting and no firing a firearm or bow (85%).
+- **Ecological reserve**: Protected land. Hunting, trapping and angling are banned, and so is firing a firearm or bow (99%, synopsis page 9, read 2026-10-02). List and maps: bcparks.ca.
 - **Enclosed land**: Under the Trespass Act, land with a lawful fence, a natural boundary, or trespass signs at each normal access point.
 - **Non toxic shot**: Shot that is not lead, such as steel, bismuth or tungsten. Required for ducks and geese.
 - **Magazine plug**: A filler that limits a shotgun to 3 shells in total. Must not come out unless the gun is taken apart.
@@ -83,7 +83,7 @@
 - **Landing zone**: The open water in a decoy spread where you want ducks to land.
 - **Steel shot**: Non toxic shotgun pellets made of steel. Legal for ducks.
 - **Choke**: The narrowing at the end of a shotgun barrel that controls the spread of shot. Must be rated for steel to shoot steel.
-- **Power boat**: Under BC rules, a boat with a motor ready to use.
+- **Power boat**: An old BC definition (synopsis page 4): a boat with a motor ready to use, with a tilted motor not counting. Repealed 1 October 2026 by B.C. Reg. 66/2026 (99%). The duck rule now reads like the federal one: no hunting from a moving boat that has a motor or sail, and a boat still gliding from its motor counts as moving (99%). Read 2026-10-02.
 - **Covey**: A fall or winter flock of quail.
 - **ORV**: Off Road Vehicle. An ATV, dirt bike or side by side under BC law.
 - **Cultivated land**: Farmed land, orchards included. You need permission to hunt it.

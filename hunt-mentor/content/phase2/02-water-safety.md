@@ -45,7 +45,7 @@ checked: 2026-10-02
 
 - BC [[FVPA]] (Firearm Violence Prevention Act), in force 1 October 2026, section 4: you must not transport, carry or store a **loaded** firearm in or on a vehicle or boat (95%).
 - Section 5 of the same Act: no shooting "in, on or from a vehicle or boat" (95%).
-- Hunting exemption, in force the same day: a loaded gun, and shooting, are allowed in a boat with no motor, or in a motor boat while the motor is not propelling it, when you are hunting or retrieving wildlife (95%).
+- Hunting exemption, in force the same day: a loaded gun, and shooting, are allowed in a boat with no motor, or in a motor boat while the motor is not propelling it, when you are hunting or retrieving wildlife (95%). For ducks and geese, the federal moving boat rule below also applies (99%).
 - So while the motor pushes the boat, every gun aboard is unloaded (95%).
 - BC synopsis, page 11, item 22: no shooting wildlife from a boat **propelled by a motor** (99%).
 - Federal, ducks and geese: no hunting from a **moving** boat with a motor or sail. Drifting on momentum from the motor still counts as moving (99%).

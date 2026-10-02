@@ -234,22 +234,22 @@
       "group": "safety",
       "key": "fvpa",
       "label": "BC Firearm Violence Prevention Act",
-      "value": "In force 1 October 2026. Offences include transporting loaded firearms in a vehicle and shooting from vehicles and boats. Hunting exemptions come by regulation.",
-      "note": "Exact hunting exemptions: VERIFY.",
-      "certainty": 85,
-      "source": "BC news release (search preview)",
-      "url": "https://news.gov.bc.ca/releases/2026PSSG0037-000460",
-      "checked": "2026-10-01"
+      "value": "In force 1 October 2026 (Order in Council 156/2026). Section 4: no loaded firearm in or on a boat. Section 5: no shooting in, on or from a boat. The Act also covers vehicles (news release, 85%). Hunting exemptions exist for boats only: a boat with no motor, or a motor that is not pushing the boat, while hunting or retrieving game.",
+      "note": "Exemptions: Designation and Exemption Regulation s.18 and s.19, added by B.C. Reg. 66/2026. The Act text on BC Laws still showed [Not in force] on 2026-10-02 because that page lags. Vehicle rules: synopsis page 11 item 27 and the federal transport rules.",
+      "certainty": 95,
+      "source": "OIC 156/2026 and B.C. Reg. 66/2026 on BC Laws, read directly",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_90anif66_2026",
+      "checked": "2026-10-02"
     },
     {
       "group": "safety",
       "key": "rapp",
       "label": "Report poaching (RAPP)",
-      "value": "1 877 952 7277, 24/7, can stay anonymous",
-      "certainty": 85,
-      "source": "BC RAPP page (search preview)",
+      "value": "1 877 952 7277 toll free, or report online at rapp.bc.ca",
+      "certainty": 99,
+      "source": "BC synopsis page 2 (read directly); BC RAPP page",
       "url": "https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/natural-resource-law-enforcement/conservation-officer-service/cos-rapp",
-      "checked": "2026-10-01"
+      "checked": "2026-10-02"
     },
     {
       "group": "migratory",
@@ -287,9 +287,9 @@
       "group": "migratory",
       "key": "boat",
       "label": "Ducks from a boat",
-      "value": "No hunting migratory birds from a boat moving under motor or sail. Beached, anchored or tied to a fixed blind is OK. A motorboat may be used to retrieve birds.",
-      "certainty": 99,
-      "source": "Migratory Birds Regulations, 2022, s.41; BC Synopsis page 11 item 23",
+      "value": "Ducks and geese: no hunting from a moving boat that has a motor or sail. A boat still gliding from its motor counts as moving. Beached, anchored or tied off is OK. You may use a motorboat to pick up a bird already down, but in BC you may not shoot while the motor pushes the boat.", "note": "Since 1 October 2026 BC repealed its power boat definition and now uses the federal moving boat wording (B.C. Reg. 66/2026). Synopsis page 11 item 23 and the page 4 definition are older than this change.",
+      "certainty": 95,
+      "source": "Migratory Birds Regulations, 2022, s.41; Hunting Regulation s.17(1)(n) as amended by B.C. Reg. 66/2026; Wildlife Act s.27(1) and Designation and Exemption Regulation s.5.1",
       "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",
       "checked": "2026-10-02"
     },

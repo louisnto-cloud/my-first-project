@@ -38,7 +38,7 @@ checked: 2026-10-02
 
 - Come from behind the back, rifle ready. Touch the eye with a stick. No blink means dead. Tip.
 - **Notch (cancel) the species licence immediately after the kill and before you handle the animal** (99%).
-- Cancel it the way the instructions printed on that licence say (99%). The synopsis does not list the steps (99%).
+- Cancel it the way the instructions printed on that licence say (99%). The synopsis does not list the steps (95%).
 - A cancelled licence records the date, the region number and, where it applies, the antler configuration (95%).
 - Read the instructions on your own licence before the hunt. Tip.
 - Keep the notched licence with you. Carry all licences for the year (99%).

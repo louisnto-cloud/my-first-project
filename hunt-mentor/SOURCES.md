@@ -69,3 +69,25 @@ Certainty scale: see CLAUDE.md.
 | Apple Support, Emergency SOS via satellite | (see bush safety session) | Bush safety |
 | Deer research sources | see research/2026-10-01-deer.md | Deer sessions |
 | Gear research sources | see research/2026-10-01-gear.md | Gear sessions |
+
+## Added 2026-10-02 (official texts, read directly)
+
+| Source | Link | Used in |
+|---|---|---|
+| Order in Council 156/2026 (FVPA in force 1 October 2026) | https://www.bclaws.gov.bc.ca/civix/document/id/oic/oic_cur/0156_2026 | regs.json, water safety, BC rules |
+| B.C. Reg. 66/2026: Hunting Regulation changes (power boat definition repealed, s.17(1)(n) moving boat) | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84anif66_2026 | regs.json, glossary, water safety, ducks |
+| B.C. Reg. 66/2026: Designation and Exemption Regulation s.5.1, s.18, s.19 (boat exemptions) | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_90anif66_2026 | regs.json, water safety, BC rules |
+| Firearm Violence Prevention Act, SBC 2021 c. 7, and its table of legislative changes | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/21007 | water safety, BC rules |
+| Hunting Regulation, B.C. Reg. 190/84 (s.15 evidence of sex, s.17 methods) | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_01 | After the shot, BC rules |
+| Hunting Licensing Regulation, B.C. Reg. 8/99 (s.5 to s.7) | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/8_99 | Licences |
+| Wildlife Act (s.26, s.27, s.39) | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96488_01 | BC rules, gear |
+| Trespass Act, RSBC 2018 c. 3 (s.2, s.4) | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/18003 | BC rules |
+| Closed Areas Regulation, B.C. Reg. 76/84, Schedules 10 to 13 | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_12 | First quail trip, Region 8 |
+| Small Vessel Regulations, SOR/2010-91 (s.7, s.10, s.204, s.209) | https://laws-lois.justice.gc.ca/eng/regulations/SOR-2010-91/FullText.html | Water safety |
+| Competency of Operators of Pleasure Craft Regulations, SOR/99-53 | https://laws-lois.justice.gc.ca/eng/regulations/SOR-99-53/FullText.html | Water safety |
+| Storage, Display, Transportation regs, SOR/98-209 (s.1, s.10, s.15) | https://laws-lois.justice.gc.ca/eng/regulations/SOR-98-209/FullText.html | BC rules, water safety, firearm safety |
+| BC hunting FAQ | https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/frequently-asked-questions | Licences, BC rules, after the shot |
+| BC species licences page | https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/species-licences | Licences, after the shot |
+| BC Fish and Wildlife ID page | https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/wild-system/fish-wildlife-id | Licences |
+| BC regulation corrections page (last updated 19 August 2026) | https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/regulations-synopsis | Countdown, BC rules |
+| Wikimedia Commons (photos, each credited on the Photo credits page) | https://commons.wikimedia.org | Species sessions, flashcards |

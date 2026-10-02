@@ -64,7 +64,7 @@ checked: 2026-10-02
 - Orchards have ladders, irrigation, workers and pickers. Ask where people are today (Tip).
 - Shot falls back to earth. Never shoot toward a road, house or orchard crew, even far away (Tip).
 - Region 8 maps, pages 69 and 70: No Shooting Areas at Kaleden and Okanagan Falls (Map J10), Naramata (Map J11) and Upper Carmi Road near Penticton (Map J8). No Shooting or Hunting Area at Swan Lake, Vernon (Map J17) (99%).
-- No hunting in the Vaseux Lake Migratory Bird Sanctuary or any National Wildlife Area (99%).
+- No hunting in the Vaseux Migratory Bird Sanctuary or any National Wildlife Area (99%).
 - Town and regional district bylaws are not in the synopsis (99%). VERIFY the local bylaw for each town or district you hunt in.
 
 ## Asking permission
@@ -83,7 +83,7 @@ checked: 2026-10-02
 - Crown land is public land owned by the province. Hunting is often allowed unless closed (Tip).
 - How to find it: an offline map app with a land ownership layer, or iMapBC. Check before you drive (Tip).
 - Grazing lease land needs the lease holder's OK while livestock are on it (99%). Leased land also falls under the Trespass Act, livestock or not (99%).
-- First Nations reserve land is not Crown land. The synopsis calls reserves private land: permission "must be obtained from the local Indian business office" to hunt on or across them (99%).
+- First Nations reserve land is not open Crown land. The synopsis calls reserves private land: permission "must be obtained from the local Indian business office" to hunt on or across them (99%).
 - Ecological reserves: no hunting and no shooting (99%). BC Parks: many are closed, so check the park's page before you hunt (99%). No Shooting Areas: Region 8 maps, pages 69 and 70 (99%).
 - Specific Okanagan Crown spots that hold quail: VERIFY with the local rod and gun club or a BC Wildlife Federation member.
 
