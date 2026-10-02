@@ -16,7 +16,7 @@ checked: 2026-10-01
 - Kamloops in late October: cold mornings, possible snow. Assumption: below freezing at dawn. VERIFY the forecast.
 - Mission and the Fraser Valley: rain is the enemy. A real waterproof shell matters most (Tip).
 - Boots and socks matter more than any jacket (Tip).
-- Blaze orange is not required by BC law per secondary sources. Wear it anyway in deer season (Tip).
+- The 2026 to 2028 BC [[Synopsis]] contains no hunter orange requirement (90%). Wear blaze orange anyway in deer season: a strong safety tip (Tip).
 - Your sizes: boots 9 regular, waders medium, jacket medium, gloves medium.
 
 ## The four layers
@@ -86,7 +86,7 @@ checked: 2026-10-01
 - Toque in cold. Brimmed cap in rain keeps water off your glasses (Tip).
 
 > [!law]
-> **BC:** secondary sources say BC law does not require blaze orange (65%). Sources conflict. VERIFY in the Synopsis.
+> **BC:** the 2026 to 2028 Synopsis contains no hunter orange requirement (90%). Not required, but still a strong safety tip (Tip).
 > **Ontario:** hunters must wear at least 400 sq in (2,580 sq cm) of solid hunter orange plus orange headwear in gun seasons for deer, moose and elk (70%).
 > **Alberta:** one secondary source says no colour requirement (60%). VERIFY.
 
@@ -142,6 +142,7 @@ Price checked 2026-10-01. Search preview prices, verify at checkout. Sizes: wade
 
 ## Sources
 
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly. All 84 pages searched for "orange" and "blaze", covers checked by image: no hunter orange requirement. Checked 2026-10-02 (90%)
 - [BC Firearms Academy: gear for a first BC hunt](https://bcfirearmsacademy.ca/what-gear-do-i-need-for-my-first-hunt-in-bc-bc-firearms-academy/), blaze orange not required, checked 2026-10-01 (65%)
 - [Outdoor Canada: why wear blaze orange](https://www.outdoorcanada.ca/opinion-why-we-should-all-wear-blaze-orange-when-hunting-big-game/), checked 2026-10-01 (65%, opinion)
 - [Ontario hunting regulations summary, general regulations](https://www.ontario.ca/document/ontario-hunting-regulations-summary/general-regulations), hunter orange, checked 2026-10-01 (70%, search preview)
@@ -157,6 +158,6 @@ Price checked 2026-10-01. Search preview prices, verify at checkout. Sizes: wade
   {"q": "Which layer do you put on when you stop to sit?", "options": ["Base", "Insulation (puffy)", "Nothing, just sit"], "answer": 1, "why": "Carry the puffy on the walk in so you do not sweat. Put it on when you stop."},
   {"q": "Why avoid cotton?", "options": ["It is loud", "It holds water and chills you", "It is illegal"], "answer": 1, "why": "Wet cotton loses warmth. Wool and synthetics stay warmer when damp."},
   {"q": "What does a wader belt do?", "options": ["Holds your shells", "Slows water rushing into the waders if you fall", "Nothing useful"], "answer": 1, "why": "Cinched at the waist, it slows water filling the legs and helps you get out."},
-  {"q": "Is blaze orange required for deer in BC?", "options": ["Yes, 400 sq in", "Secondary sources say no, but wear it anyway. Verify in the Synopsis", "Only for ducks"], "answer": 1, "why": "Ontario requires it; BC appears not to. It is still a smart safety choice."}
+  {"q": "Is blaze orange required for deer in BC?", "options": ["Yes, 400 sq in", "No. The Synopsis has no orange rule, but wear it anyway", "Only for ducks"], "answer": 1, "why": "The 2026 to 2028 BC Synopsis contains no hunter orange requirement. Ontario requires it. Orange is still a strong safety choice."}
 ]
 ```

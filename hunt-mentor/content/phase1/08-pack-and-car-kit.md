@@ -95,7 +95,9 @@ Trip plan left with someone
 - Spare dry clothes and boots in a dry bag (Tip).
 - Full fuel tank before leaving pavement (Tip).
 - [[ATV]] (all terrain vehicle): helmet, tool kit, tow rope. ATV rules on Crown land and roads: VERIFY ([[ORV]] Act, Off Road Vehicle Act).
-- Firearm transport rules (unloaded, locked or hidden in the car): VERIFY with the RCMP (Royal Canadian Mounted Police) storage and transport rules.
+- Firearm transport: every gun **unloaded**, nothing in the chamber or in an attached magazine (99%). Assumption: your guns are non restricted.
+- Vehicle left unattended (no adult or firearms licence holder with it): gun in the locked trunk. No trunk: out of sight, vehicle locked (99%).
+- BC: no loaded gun in or on any motor vehicle, and an ATV counts (95%).
 
 ## Cooler and ice plan for meat
 
@@ -144,6 +146,9 @@ ATV: helmet, tools, tow rope, fuel
 - [Bushlife: CAT tourniquet and counterfeits in Canada](https://bushlife.ca/cat-tourniquet/), checked 2026-10-01 (60%)
 - [CBC: winter tires required on most BC highways from 1 October](https://www.cbc.ca/news/canada/british-columbia/winter-tires-required-most-highways-october-1-1.7338165), checked 2026-10-01 (70%)
 - [Idaho Fish and Game: warm weather and game meat](https://idfg.idaho.gov/press/warm-weather-means-hunters-should-take-precautions-game-meat), checked 2026-10-01 (65%)
+- [Storage, Display, Transportation and Handling of Firearms by Individuals Regulations, SOR/98-209](https://laws-lois.justice.gc.ca/eng/regulations/SOR-98-209/FullText.html), read directly, current to 2026-09-21: s. 1 (unloaded, unattended), s. 10 (transport of non restricted firearms). Checked 2026-10-02 (99%)
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly. Printed p. 4 (motor vehicle includes an ATV), p. 11 (It's Unlawful 27, loaded firearm in or on a vehicle). Checked 2026-10-02 (99%)
+- [Firearm Violence Prevention Act, SBC 2021 c. 7](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/21007), s. 4(1): no loaded firearm in or on a vehicle or boat. Read in the Bill 4, 2021 third reading text. The BC Laws Table of Legislative Changes lists ss. 1 to 4 in force 1 October 2026. Checked 2026-10-02 (90%)
 - Prices: search previews of Canadian retailer pages (Best Buy, MEC, Sail, Deakin, The Trip Shed, Bass Pro Canada, Mountain Man Outdoors, Jim Bow's Archery, 911supply), price checked 2026-10-01 (60 to 65%)
 
 ```quiz

@@ -83,13 +83,13 @@ checked: 2026-10-01
 ## The 3 shell plug
 
 > [!law]
-> For migratory birds (ducks, geese), the shotgun may hold **no more than 3 shells** in magazine and chamber combined (85%).
-> The [[Magazine plug]] must be one piece and removable only by taking the gun apart (85%).
-> A detachable magazine may hold no more than 2 (85%).
+> For migratory birds (ducks, geese), the shotgun may hold **no more than 3 shells** in magazine and chamber combined (99%).
+> The [[Magazine plug]] must be one piece and removable only by taking the gun apart (99%).
+> A detachable magazine may hold no more than 2 (99%).
 
 - Most new semi autos and pumps ship with the plug installed. Check before every duck hunt (Tip).
-- For quail and grouse: whether BC law also needs the plug, VERIFY. Simplest: leave it in all season (Tip).
-- [[Non toxic shot]] (steel, bismuth, tungsten, tin) is required for migratory game birds (85%).
+- Quail and grouse too: in BC a pump, semi auto or other repeating shotgun needs a plug so the magazine holds no more than 2 shells (99%). Leave it in all season (Tip).
+- [[Non toxic shot]] (steel, bismuth, tungsten, tin) is required for ducks, geese, coots and snipe (99%). Pigeons and doves are the exception (99%).
 
 ## Buying used: checklist
 
@@ -101,7 +101,7 @@ Choke wrench and a set of tubes come with it
 Work the action 10 times: smooth, no grinding
 Gas gun: check piston and O ring are clean and present
 Inertia gun: ask about the recoil spring
-Plug is present for duck season
+Plug is present (needed for all bird hunting)
 Stock and recoil pad not cracked
 Serial number present and readable
 Show your PAL (Possession and Acquisition Licence). Seller checks it with the RCMP (Royal Canadian Mounted Police)
@@ -156,7 +156,7 @@ Price checked 2026-10-01. Search preview prices, verify at checkout.
 
 > [!mistake]
 > - Shooting steel through a Full choke that is not marked steel safe.
-> - Pulling the plug for quail and forgetting to put it back for ducks.
+> - Pulling the plug for quail. BC law needs it for all bird hunting (99%).
 > - Trying the gun on in a T shirt, then hunting in a thick jacket.
 
 > [!field]
@@ -164,7 +164,9 @@ Price checked 2026-10-01. Search preview prices, verify at checkout.
 
 ## Sources
 
-- [Migratory Birds Regulations, 2022 (SOR/2022-105)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/page-3.html), plug and non toxic shot, checked 2026-10-01 (85%, search preview)
+- [Migratory Birds Regulations, 2022 (SOR/2022-105), full text](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html), read directly, current to 2026-09-21: s. 37 (3 shells, one piece plug, detachable magazine), s. 38 (non toxic shot, pigeon and dove exceptions). Checked 2026-10-02 (99%)
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly. Printed p. 12 (shotgun plug), p. 13 (note 4, shot ban notice). Checked 2026-10-02 (99%)
+- [Wildlife Act, RSBC 1996 c. 488](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96488_01), s. 26(1)(h) (plug rule for pump, repeating and auto loading shotguns), read directly, current to 22 September 2026. Checked 2026-10-02 (99%)
 - Benelli, Beretta, Browning, Remington steel and choke guidance via [shotgunworld.com](https://www.shotgunworld.com/threads/which-choke-for-steel-shot.7870/) and [rem870.com](https://www.rem870.com/2012/05/06/shotgun-chokes-explained-cylinder-improved-cylinder-modified-full/), checked 2026-10-01 (75%, secondary)
 - Choke constriction: [shotgunweb.com constriction chart](https://shotgunweb.com/chokes/constriction-chart) and [TheMeatEater choke guide](https://www.themeateater.com/hunt/firearm-hunting/everything-you-need-to-know-about-shotgun-choke-tubes), checked 2026-10-01 (70%)
 - Pattern percentages: [NRA Family, how to pattern a shotgun](https://www.nrafamily.org/content/how-to-pattern-a-shotgun/), checked 2026-10-01 (70%, search preview)
