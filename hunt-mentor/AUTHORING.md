@@ -65,3 +65,17 @@ Why it matters, key points, diagram where it helps, Grandpa's rule, common mista
 ## Accuracy
 - Rules (seasons, limits, fees, legal methods): official sources only. The gov.bc.ca and canada.ca sites are blocked from this environment; you may cite search result previews of official pages, but cap certainty at 85% and say "(search preview)" in Sources. Never invent dates, limits, fees, MU numbers, place names or phone numbers. Write VERIFY instead.
 - Biology and skills: cite real sources. Label hunter lore and opinion as Tip or Grandpa's rule.
+
+## Photos (added 2026-10-02)
+- Real photos are allowed ONLY if public domain, CC0, CC BY or CC BY-SA (any version). Never CC BY-NC, CC BY-ND, "all rights reserved", or unknown licence. Government of Canada and BC government photos are Crown copyright: do not use.
+- Source of choice: Wikimedia Commons API (`https://commons.wikimedia.org/w/api.php`, prop=imageinfo, iiprop=url|extmetadata, iiurlwidth=900). Read `LicenseShortName`, `Artist`, `LicenseUrl`, `descriptionurl` from extmetadata. Send a User-Agent header.
+- Files: `photos/<id>.jpg` (max 900 px wide, JPEG quality about 75, aim under 120 KB) and `photos/sm/<id>.jpg` (480 px wide, quality about 62, used inside the single file backup). Make both with Pillow.
+- Manifest: one JSON array per topic in `data/photos/<topic>.json`. Entry keys: `id` (lowercase, letters, digits, hyphens), `species`, `caption` (plain English, what to look at), `author` (plain text, no HTML), `licence` (e.g. "CC BY 2.0", "Public domain", "CC0"), `licenceUrl`, `source` (the Commons file page URL), optional `card: true` with `cardBack` (and `cardFront`, `cardDeck`) to make a flashcard.
+- Use in a session: a fenced block on its own lines:
+````
+```photo mule-deer-buck
+```
+````
+  Optional caption override after the id on the same line. The build adds the credit line automatically.
+- Look at every photo with the Read tool before using it: right species, right sex or age for the caption, clear and in focus, animal fills the frame, no captions burned into the image, no obvious captive setting unless the caption says so.
+- Photos are illustrations. ID clues in the text stay the source of truth.

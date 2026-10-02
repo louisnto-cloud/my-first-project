@@ -288,6 +288,7 @@
         <a class="item" href="#/glossary"><span class="grow">Glossary</span></a>
         <a class="item" href="#/journal"><span class="grow">Hunt journal</span></a>
         <a class="item" href="#/print"><span class="grow">Print pocket cards</span></a>
+        <a class="item" href="#/credits"><span class="grow">Photo credits</span></a>
         <a class="item" href="#/review"><span class="grow">Review missed questions</span></a>
         <a class="item" href="#/sources"><span class="grow">Regulation data and sources</span></a>
         <a class="item" href="#/install"><span class="grow">Install on iPhone or Android</span></a>
@@ -378,7 +379,7 @@
     const cards = [];
     for (const [t, d] of Object.entries(HM.glossary)) cards.push({ id: 'g:' + t, deck: 'Terms', front: t, back: d });
     for (const r of HM.regs.items) if (r.value) cards.push({ id: 'r:' + r.key, deck: 'Rules', front: r.label, back: `${esc(r.value)} <span class="cert ${r.certainty >= 95 ? 'c-hi' : r.certainty >= 80 ? 'c-mid' : 'c-lo'}">${r.certainty}%</span>` });
-    for (const c of (HM.flashcards || [])) cards.push({ id: 'f:' + c.id, deck: c.deck, front: c.front, back: c.back, diagram: c.diagram });
+    for (const c of (HM.flashcards || [])) cards.push({ id: 'f:' + c.id, deck: c.deck, front: c.front, back: c.back, diagram: c.diagram, photo: c.photo });
     for (const s of sessions) s.quiz.forEach((q, n) => cards.push({ id: 'q:' + s.id + '#' + n, deck: 'Quiz', front: q.q, back: `<strong>${esc(q.options[q.answer])}</strong><br>${esc(q.why)}` }));
     return cards;
   }
@@ -405,7 +406,7 @@
     const known = pool.filter((c) => S.cards[c.id] === 2).length;
     setTitle(deck);
     view.innerHTML = `<div class="muted">${known} of ${pool.length} known${due.length ? '' : '. All known, reviewing.'}</div>
-      <div class="card fc" id="fc"><div class="fc-front"><h2>${card.front}</h2>${card.diagram ? `<figure class="diagram">${card.diagram}</figure>` : ''}<p class="muted">Tap to flip</p></div>
+      <div class="card fc" id="fc"><div class="fc-front"><h2>${card.front}</h2>${card.diagram ? `<figure class="diagram">${card.diagram}</figure>` : ''}${card.photo || ''}<p class="muted">Tap to flip</p></div>
       <div class="fc-back" hidden><p>${card.back}</p></div></div>
       <div class="btn-row" id="fc-btns" hidden><button class="btn" id="fc-no">Missed it</button><button class="btn primary" id="fc-yes">Knew it</button></div>
       <div class="btn-row"><a class="btn" href="#/cards">Decks</a></div>`;
@@ -430,6 +431,13 @@
       </div>`;
   }
 
+  function credits() {
+    setTitle('Photo credits'); tab('more');
+    const P = HM.photos || [];
+    view.innerHTML = `<p class="muted">Every photo is public domain or Creative Commons, used with credit. Tap source to see the original and its licence.</p>
+      <div class="card">${P.length ? P.map((p) => `<p><strong>${esc(p.species || p.id)}</strong>: ${esc(p.caption || '')}<br><span class="muted">Photo: ${esc(p.author || 'unknown')}, ${esc(p.licence || '')}${p.source ? `, <a href="${esc(p.source)}" target="_blank" rel="noopener">source</a>` : ''}</span></p>`).join('') : '<p>No photos yet.</p>'}</div>`;
+  }
+
   function notFound() { view.innerHTML = '<div class="card"><h2>Not found</h2><a href="#/">Home</a></div>'; }
 
   // ---------- router ----------
@@ -451,6 +459,7 @@
     else if (a === 'install') install();
     else if (a === 'cards') cards(b);
     else if (a === 'print') printCards();
+    else if (a === 'credits') credits();
     else if (a === 'journal') journal(b === 'new' ? -1 : b != null ? +b : undefined);
     else notFound();
   }

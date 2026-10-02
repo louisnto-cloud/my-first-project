@@ -4,24 +4,26 @@ phase: 1
 num: 11
 title: Your first quail trip
 minutes: 12
-checked: 2026-10-01
+checked: 2026-10-02
 ---
 > [!why]
 > Quail are fast, fun and live close to farms and homes. Most of the skill is getting permission and keeping every shot safe.
 
 - Trip: the Okanagan, Region 8. Two hunters with shotguns.
 - Assumption: no landowner permission yet. No dog.
-- Residents need only the BC hunting licence for quail. No species licence (80%).
+- Residents need only the BC hunting licence for quail. No species licence (99%).
 
 ## Season and limits
 
-- Region 8 California quail: 1 October to 30 November (70%).
-- Daily bag 10. Possession 30 (70%).
-- Open in MUs (Management Units) 8-1 to 8-15 and 8-21 to 8-26 (70%).
-- Read from a search preview of the Region 8 synopsis. Confirm in the full table before you go: VERIFY.
-- Legal hours: 1 hour before sunrise to 1 hour after sunset (80%).
-- Federal lead shot ban covers ducks and geese, not quail (75%). Any BC rule on lead for quail: VERIFY. Steel works fine (Tip).
-- Each hunter has their own bag. No filling your partner's limit (Tip, VERIFY the exact wording).
+> [!warn]
+> Study aid only. The official regulations are the law.
+
+- Region 8 quail, synopsis page 68: 1 October to 30 November (99%). The row says only "QUAIL"; California quail is the one you will see (Tip).
+- Daily bag 10. Possession 30 (99%).
+- Open in MUs (Management Units) 8-1 to 8-15 and 8-21 to 8-26 (99%).
+- Legal hours: 1 hour before sunrise to 1 hour after sunset (99%).
+- Lead shot is legal for quail. The shot ban covers ducks, geese, coots and snipe, not upland birds (99%). BC lists one non toxic shot only area, the Delta and Surrey dykes, far from the Okanagan (99%). Steel works fine (Tip).
+- Each hunter has a personal bag limit (99%). Birds you shoot count in your own bag, so you cannot fill your partner's limit (90%).
 
 ## California quail: habitat and habits
 
@@ -56,12 +58,14 @@ checked: 2026-10-01
 
 ## Near orchards and buildings
 
-- **No shooting within 100 m (109 yd) of an occupied house, farm or ranch building** (75%).
-- That includes barns with animals, packing sheds and worker housing (75%).
-- Cultivated land, orchards included, needs the owner's or occupant's permission (75%).
+- **No hunting or shooting within 100 m (109 yd) of a dwelling house, or a farm or ranch building occupied by people or domestic animals** (99%).
+- So it covers houses and worker housing, barns with animals, and packing sheds while people are in them (90%).
+- Cultivated land needs the permission of the owner, lessee or occupant (99%). Orchards count as cultivated land (95%).
 - Orchards have ladders, irrigation, workers and pickers. Ask where people are today (Tip).
 - Shot falls back to earth. Never shoot toward a road, house or orchard crew, even far away (Tip).
-- Local no shooting areas and regional district bylaws are common in the Okanagan: VERIFY on the Region 8 synopsis maps and the local bylaw.
+- Region 8 maps, pages 69 and 70: No Shooting Areas at Kaleden and Okanagan Falls (Map J10), Naramata (Map J11) and Upper Carmi Road near Penticton (Map J8). No Shooting or Hunting Area at Swan Lake, Vernon (Map J17) (99%).
+- No hunting in the Vaseux Lake Migratory Bird Sanctuary or any National Wildlife Area (99%).
+- Town and regional district bylaws are not in the synopsis (99%). VERIFY the local bylaw for each town or district you hunt in.
 
 ## Asking permission
 
@@ -78,9 +82,9 @@ checked: 2026-10-01
 
 - Crown land is public land owned by the province. Hunting is often allowed unless closed (Tip).
 - How to find it: an offline map app with a land ownership layer, or iMapBC. Check before you drive (Tip).
-- Grazing lease land needs the lease holder's OK while livestock are on it (75%).
-- First Nations reserve land is not Crown land. Hunting there needs the Nation's permission: VERIFY.
-- Parks, ecological reserves and no shooting areas: check each one in the synopsis. VERIFY.
+- Grazing lease land needs the lease holder's OK while livestock are on it (99%). Leased land also falls under the Trespass Act, livestock or not (99%).
+- First Nations reserve land is not Crown land. The synopsis calls reserves private land: permission "must be obtained from the local Indian business office" to hunt on or across them (99%).
+- Ecological reserves: no hunting and no shooting (99%). BC Parks: many are closed, so check the park's page before you hunt (99%). No Shooting Areas: Region 8 maps, pages 69 and 70 (99%).
 - Specific Okanagan Crown spots that hold quail: VERIFY with the local rod and gun club or a BC Wildlife Federation member.
 
 ## Chukar note
@@ -88,11 +92,12 @@ checked: 2026-10-01
 - Chukar live on dry, steep, rocky slopes and talus. In the Thompson, mostly 250 to 500 m elevation (75%).
 - Best numbers are on low slopes of the Thompson valley from Kamloops to Lytton (75%).
 - They run uphill and flush downhill. Hard work for 2 hunters (Tip).
-- Region 8 and Region 3 chukar: a search preview said 1 October to 30 November, bag 5 (60%). VERIFY both regions in the synopsis.
+- Chukar in Region 3 (page 34) and Region 8 (page 68): 1 October to 30 November. Daily bag 5, possession 15 (99%).
+- Region 3 chukar MUs are 3-12 to 3-20 and 3-26 to 3-44, so Heffley Creek is open for chukar (99%).
 
 ## Quail at Heffley Creek?
 
-- Region 3 California quail season: VERIFY. A search did not find one (50%). Do not hunt quail there until confirmed.
+- The Region 3 season table on page 34 has no quail row (99%). So there is no quail season in Region 3 (95%). Do not hunt quail there.
 - Heffley Creek is outside the main BC quail range (60%).
 - See quail at the property? Note it in your journal. Do not shoot.
 
@@ -119,21 +124,21 @@ Cooler with ice for the drive home
 
 ## Sources
 
-- [Region 8 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-8-okanagan.pdf), checked 2026-10-01, search preview, quail season 70% (from `data/regs.json`), chukar 60%.
-- [BC Hunting Regulation, 100 m rule](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_01), checked 2026-10-01, search preview, 75%.
-- [BC species licences](https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/species-licences), checked 2026-10-01, search preview, 80%.
-- [BC Hunting and Trapping Regulations Synopsis](https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/regulations-synopsis), checked 2026-10-01, search preview, cultivated land and grazing lease 75%.
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: pages 6 (personal bag limit), 8 (no species licence for upland birds), 9 (cultivated land, grazing lease, Trespass Act, Indian Reserves, BC Parks, ecological reserves, bylaws, bird sanctuaries), 10 (100 m rule), 12 (item 37 hours, bag notation), 13 (shot ban). Checked 2026-10-02 (99%).
+- [Region 8 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-8-okanagan.pdf), read directly: pages 67 (Vaseux notice), 68 (quail and chukar rows), 69 and 70 (Maps J8, J10, J11, J17). Checked 2026-10-02 (99%).
+- [Region 3 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), page 34 (chukar row, no quail row), read directly from the page image. Checked 2026-10-02 (95 to 99%).
+- [Closed Areas Regulation, B.C. Reg. 76/84, Schedules 10 to 13 (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_12), Schedule 13 non toxic shot only areas, read directly, current to 29 September 2026. Same regulation, Schedules 3 and 5: Swan Lake near Vernon and Upper Carmi Road near Penticton, read directly. Checked 2026-10-02 (99%).
 - [Cornell All About Birds: California quail](https://www.allaboutbirds.org/guide/California_Quail/lifehistory), checked 2026-10-01, search preview, 75%.
 - [BC Breeding Bird Atlas: California quail](https://www.birdatlas.bc.ca/accounts/speciesaccount.jsp?lang=en&sp=CAQU), checked 2026-10-01, search preview, 75%.
 - [Wildlife Afield: chukar in the Thompson](https://www.wildlifebc.org/pdfs/WA%2014_2ChukarWeb.pdf), checked 2026-10-01, search preview, 75%.
 - [Peace Region Forage Association: trespass to private land](https://peaceforage.bc.ca/wp-content/uploads/2021/07/Trespass-to-Private-Land.pdf), checked 2026-10-01, search preview, 60%.
-- Note: official pages read through search previews only. Capped at 85%.
+- Note: every rule line now comes from the official texts above. Habitat, tactics and permission tips keep their own badges.
 
 ```quiz
 [
   {"q": "What do you need to hunt quail as a BC resident?", "options": ["A quail species licence", "The BC hunting licence only", "The federal bird permit"], "answer": 1, "why": "Residents need no species licence for quail. The BC hunting licence covers it."},
   {"q": "A quail flushes low between you and your partner. What do you do?", "options": ["Quick shot before it gets away", "No shot. Gun up, safety on", "Shoot once it passes your partner"], "answer": 1, "why": "Never swing through your partner, and never shoot low birds. Let it go."},
   {"q": "The orchard is not fenced or posted. Can you hunt it?", "options": ["Yes, it is open", "No. Cultivated land needs the owner's or occupant's permission", "Only before 8 am"], "answer": 1, "why": "BC requires consent to hunt cultivated land, posted or not."},
-  {"q": "Can you hunt quail on your brother's land at Heffley Creek this October?", "options": ["Yes, same as the Okanagan", "Not until a Region 3 quail season is confirmed in the synopsis", "Yes, private land has no seasons"], "answer": 1, "why": "Seasons are set by region and MU. No confirmed Region 3 quail season means no hunt."}
+  {"q": "Can you hunt quail on your brother's land at Heffley Creek this October?", "options": ["Yes, same as the Okanagan", "No. Region 3 has no quail season", "Yes, private land has no seasons"], "answer": 1, "why": "The Region 3 table on page 34 has no quail row. No open season means no quail hunting, private land included."}
 ]
 ```

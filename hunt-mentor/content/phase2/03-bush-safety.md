@@ -4,7 +4,7 @@ phase: 2
 num: 3
 title: Bush safety
 minutes: 15
-checked: 2026-10-01
+checked: 2026-10-02
 ---
 > [!why]
 > Most bad days in the bush start small: a wrong turn, wet socks, dark at 6 pm. A plan and a few tools turn them back into small problems.
@@ -78,7 +78,7 @@ Phone and satellite device charged
 - Predatory attack (stalks you, or at night): spray, stand big, fight back. Do not play dead (75%, Parks Canada).
 - Cougar: never run, look big, back away slowly, keep eye contact. If attacked, always fight back (75%, WildSafeBC).
 - A gut pile draws bears. Move the meat away from it fast and watch your back.
-- Report a dangerous bear or cougar: RAPP (Report All Poachers and Polluters) 1 877 952 7277 (75%).
+- Report a dangerous bear or cougar: RAPP (Report All Poachers and Polluters) 1 877 952 7277, open 24/7, for wildlife and human conflicts where public safety is at risk (synopsis page 2) (95%).
 
 ## First aid kit with a tourniquet
 
@@ -117,8 +117,8 @@ Phone and satellite device charged
 - [Best Sun Peaks: Bears in Sun Peaks](https://www.bestsunpeaks.com/bears-in-sun-peaks.html), checked 2026-10-01 (search preview, visitor site)
 - [BC Report a wildfire](https://www2.gov.bc.ca/gov/content/safety/wildfire-status/contact-channels/report-a-wildfire), checked 2026-10-01 (search preview)
 - [Kamloops Fire Centre open fire update, CFJC Today](https://cfjctoday.com/2026/09/29/category-2-and-3-open-fires-permitted-within-the-cariboo-fire-centre/), checked 2026-10-01 (search preview, news)
-- [City of Mission: Bears and wildlife (RAPP number)](https://www.mission.ca/community-environment/environment-sustainability/bears-wildlife), checked 2026-10-01 (search preview, secondary)
-- Note: all pages read through search previews. Capped at 85%.
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: page 2 (RAPP number and what to report). Checked 2026-10-02 (99%)
+- Note: all other pages read through search previews. Capped at 85%.
 
 ```quiz
 [

@@ -4,7 +4,7 @@ phase: 2
 num: 1
 title: Firearm safety refresher
 minutes: 12
-checked: 2026-10-01
+checked: 2026-10-02
 ---
 > [!why]
 > You both passed the course. Now there are two loaded guns, two new hunters, cold hands and excitement. That is when habits matter.
@@ -53,7 +53,9 @@ The CFSC (Canadian Firearms Safety Course) teaches these as the "Vital Four ACTS
 - Lose sight of each other? Muzzles up or down, no shooting, call out.
 
 > [!tip]
-> Bright orange on hat and vest helps you see each other in timber. My lean: wear it. Whether BC requires it: not covered here.
+> Bright orange on hat and vest helps you see each other in timber. My lean: wear it.
+>
+> BC law does not require it. The synopsis, the Wildlife Act and the Hunting Regulation have no blaze orange rule (95%).
 
 ## In a blind and in a boat or canoe
 
@@ -77,15 +79,18 @@ The CFSC (Canadian Firearms Safety Course) teaches these as the "Vital Four ACTS
 
 ## At the car
 
-- Load only where you may lawfully shoot. Federal rules allow loading only in such a place (80%).
-- In BC, you must not transport, carry or store a loaded firearm in or on a vehicle or boat (80%).
-- "Unloaded" means no cartridge in the chamber, and none in a magazine attached to or inserted in the firearm (80%).
-- So: magazine out, chamber empty, before the firearm goes in the car or on the [[ATV]] (80%).
-- Leaving the car? Non restricted firearms go locked in the trunk or a lockable compartment. No trunk: out of sight, car locked (80%).
+- Load only where you may lawfully shoot. Federal rules allow loading, or handling a loaded firearm, only in a place where it may lawfully be discharged (federal transport regulations, section 15) (99%).
+- In BC, you must not transport, carry or store a loaded firearm in or on a vehicle or boat (Firearm Violence Prevention Act, section 4(1)) (99%). The synopsis says the same for vehicles (page 11 item 27) (99%).
+  - Boats only: from 1 October 2026, a BC hunting exemption allows a loaded firearm in a boat with no motor, or while the motor is not moving the boat, when hunting or retrieving wildlife (Designation and Exemption Regulation, section 18) (95%). See the water safety session.
+- "Unloaded" means no cartridge in the chamber, and none in a magazine attached to or inserted in the firearm (federal transport regulations, section 1) (99%).
+- So: magazine out, chamber empty, before the firearm goes in the car or on the [[ATV]] (All Terrain Vehicle). Both count as vehicles (Firearm Violence Prevention Act, section 1) (95%).
+- Leaving the car? Non restricted firearms go locked in the trunk or a lockable compartment. No trunk: out of sight, car locked (federal transport regulations, section 10(2)) (99%).
 - Unload facing away from the car, partner and road. Load the same way, at the start of the walk.
 
 > [!warn]
-> BC's Firearm Violence Prevention Act (FVPA) came into force 1 October 2026, with hunting exemptions made by regulation (75%). Exact exemption wording: VERIFY before you hunt.
+> BC's Firearm Violence Prevention Act (FVPA) came into force 1 October 2026, including the vehicle and boat rules in sections 4 and 5(1) (Order in Council 156/2026) (99%).
+>
+> Its hunting exemptions cover boats only (Designation and Exemption Regulation, sections 18 and 19) (95%). No exemption for cars, trucks or ATVs was found (90%).
 
 ## Two armed hunters: you and your brother
 
@@ -97,7 +102,7 @@ The CFSC (Canadian Firearms Safety Course) teaches these as the "Vital Four ACTS
 - First hunt for him? Swap roles at midday so each practises spotter and shooter (Tip).
 
 ### General case: a non hunting companion
-- A person who only watches carries no firearm (80%, see Licences session).
+- A person who only watches carries no firearm. Searching for or following wildlife while carrying a firearm counts as hunting (page 3, definition of hunt) (95%). See the Licences session.
 - They walk behind or beside you, never ahead, and freeze on your signal.
 
 > [!rule]
@@ -116,12 +121,16 @@ The CFSC (Canadian Firearms Safety Course) teaches these as the "Vital Four ACTS
 - [Canadian Firearms Safety Course handbook, RCMP (Royal Canadian Mounted Police), Government of Canada publications](https://publications.gc.ca/collections/collection_2015/grc-rcmp/PS99-2-2-1-2014-eng.pdf), checked 2026-10-01 (search preview)
 - [ACTS and PROVE, Canadian Firearms Training](https://www.firearmstraining.ca/actsprove.htm), checked 2026-10-01 (search preview)
 - [RCMP: Storing, transporting and displaying firearms](https://rcmp.ca/en/firearms/firearms-safety-training-transport-and-storage/storing-transporting-and-displaying-firearms), checked 2026-10-01 (search preview)
-- [Storage, Display, Transportation and Handling of Firearms by Individuals Regulations, SOR/98-209](https://laws-lois.justice.gc.ca/eng/regulations/sor-98-209/page-1.html), checked 2026-10-01 (search preview)
-- [BC Firearm Violence Prevention Act page](https://www2.gov.bc.ca/gov/content/justice/criminal-justice/policing-in-bc/fvpa), section 4, checked 2026-10-01 (search preview)
-- [BC news release on FVPA in force 1 October 2026](https://news.gov.bc.ca/releases/2026PSSG0037-000460), checked 2026-10-01 (search preview)
+- [Storage, Display, Transportation and Handling of Firearms by Individuals Regulations, SOR/98-209](https://laws-lois.justice.gc.ca/eng/regulations/SOR-98-209/FullText.html) (the federal transport regulations), read directly: section 1 (unloaded), section 10 (transport), section 15 (loading). Current to 2026-09-21. Checked 2026-10-02 (99%)
+- [Firearm Violence Prevention Act, SBC 2021 c. 7, text as passed](https://www.bclaws.gov.bc.ca/civix/document/id/bills/billsprevious/1st42nd:gov04-3), read directly: section 1 (loaded, vehicle), section 4. The [table of legislative changes](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/e4tlc21007) shows no amendments to sections 1 to 4. Checked 2026-10-02 (99%)
+- [Order in Council 156/2026](https://www.bclaws.gov.bc.ca/civix/document/id/oic/oic_cur/0156_2026), FVPA in force 1 October 2026 apart from listed sections, read directly. Checked 2026-10-02 (99%)
+- [Designation and Exemption Regulation, amendments by B.C. Reg. 66/2026](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_90anif66_2026), sections 18 and 19 (boat exemptions, effective 1 October 2026), read directly. Checked 2026-10-02 (95%)
+- [FVPA General Regulation, Order in Council 157/2026](https://www.bclaws.gov.bc.ca/civix/document/id/oic/oic_cur/0157_2026), read directly: no hunting exemption for vehicles. Checked 2026-10-02 (90%)
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: page 3 (definition of hunt), page 11 item 27 (loaded firearm in or on a vehicle). Whole synopsis searched: no blaze orange rule. Checked 2026-10-02 (99%)
+- [Wildlife Act](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96488_01) and [Hunting Regulation, B.C. Reg. 190/84](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_01), BC Laws copies current to 22 September 2026, searched: no blaze orange rule. Checked 2026-10-02 (95%)
 - [Hunter Ed: Determining your safe zone of fire](https://www.hunter-ed.com/national/studyGuide/Determining-Your-Safe-Zone-of-Fire/201099_93020/), checked 2026-10-01 (search preview, United States course material)
 - [Hunter Ed: Crossing obstacles alone](https://www.hunter-ed.com/national/studyGuide/Crossing-Obstacles-Alone/201099_93010/), checked 2026-10-01 (search preview)
-- Note: all pages read through search previews. Capped at 85% until the full pages are opened.
+- Note: the course handbook, RCMP and hunter education pages were read through search previews, capped at 85%. The law and regulation pages above were read directly.
 
 ```quiz
 [

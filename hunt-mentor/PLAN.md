@@ -122,5 +122,10 @@ hunt-mentor/
 - Official synopsis PDFs now downloaded (network opened 2026-10-01). Rules read directly can be 95%+.
 - canada.ca still blocked. Federal duck seasons come from the Migratory Birds Regulations on laws-lois.justice.gc.ca instead.
 
+## 7d. Owner update (2026-10-02)
+- Owner wants real animal photos for ID and less text per screen (more screens are fine).
+- Decision: photos from Wikimedia Commons and other public domain or Creative Commons sources, with credits. Overrides the "no copied images" line in the brief for photos only.
+- Build now auto splits long screens (about 6 points or 120 words per screen) and lightens certainty badges.
+
 ## 8. Open questions
 - See chat. Answers get logged here.

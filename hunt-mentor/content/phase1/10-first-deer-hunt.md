@@ -4,13 +4,14 @@ phase: 1
 num: 10
 title: Your first deer hunt
 minutes: 15
-checked: 2026-10-01
+checked: 2026-10-02
 ---
 > [!why]
 > Late October near Heffley Creek is a real chance at a deer. A safe, simple plan you can repeat beats a long shot at a far ridge.
 
 - Two hunters: you and your brother. He has CORE (Conservation and Outdoor Recreation Education), a PAL (Possession and Acquisition Licence) and an FWID (Fish and Wildlife ID).
-- He needs his own BC hunting licence and deer [[Species licence|species licences]] before he hunts (80%).
+- Your brother is licensed too. Each of you needs your own BC hunting licence plus your own [[Species licence|species licence]] for each deer species you hunt (99%).
+- While hunting, carry every species licence you bought this licence year, used and unused (99%).
 - Assumption: your Tikka .308 is zeroed (Session 5). His rifle: VERIFY what he will carry.
 
 ## Mule deer or white tail?
@@ -24,18 +25,49 @@ checked: 2026-10-01
 
 - These field marks are reliable on clear looks (85%).
 - Mule deer often stop and look back at 150 to 300 m. Hunter lore (65%).
-- They are **separate licences and separate rules**. Know which one you are looking at before the safety comes off (80%).
+- They are **separate licences and separate rules**. Know which one you are looking at before the safety comes off (99%).
 
-## Rules you must check first
-
-- Your MU (Management Unit) for the property and the Crown land behind it: VERIFY on the official map.
-- Mule deer season dates and antler rules (for example a 4 point rule) in your MU: VERIFY.
-- White tail season and any antlerless days in your MU: VERIFY.
-- Region 3 deer bag limit: VERIFY. A search preview said 3 deer combined, 1 of them mule deer (60%).
-- Legal hours: 1 hour before sunrise to 1 hour after sunset (80%).
+## Region 3 deer seasons
 
 > [!warn]
-> No MU, no season dates, no hunt. Read the Region 3 synopsis table for your exact MU before opening day.
+> Study aid only. The official regulations are the law.
+
+- Your [[MU]] (Management Unit): Heffley Creek on the highway (east) bank of the North Thompson is MU 3-27 (85%). The west bank is MU 3-28 (90%). Sun Peaks is MU 3-27 (95%).
+- MU lines on the synopsis map are approximate. Check your exact spot at gov.bc.ca/WildlifeManagementUnits (99%).
+- MUs 3-12 to 3-20 and 3-26 to 3-44, most of Region 3, share the general seasons below. That includes 3-27 and 3-28 (99%).
+
+| Region 3, page 34 | Mule deer | White tailed deer |
+|---|---|---|
+| 10 to 30 Sept | 4 point bucks only (99%) | Bucks (99%) |
+| 1 to 31 Oct | **Any buck** (99%) | Bucks (99%). Antlerless also open 10 to 31 Oct (99%) |
+| 1 Nov to 10 Dec | 4 point bucks only (99%) | Bucks (99%) |
+| 11 to 20 Dec | No general season (95%) | Bow only, either sex (99%) |
+
+- A [[4 point buck]] has at least 4 points on one antler, not counting the brow tine. Each point is at least 2.5 cm long and longer than it is wide (99%).
+- Antlerless mule deer: [[LEH]] (Limited Entry Hunting) draw only (99%).
+- MU 3-46 opens 20 Sept, not 10 Sept, for both deer (99%). MUs 3-15, 3-16, 3-32 and 3-33 add 4 point mule deer bucks 1 to 9 Sept (99%).
+- 1 to 9 Sept, most MUs: buck seasons for youth under 18 and for bow only (99%).
+- Mule deer antlers from a 4 point season must travel with the species licence (99%).
+
+## Bag limits and hours
+
+- Region 3, page 33: 3 deer in total. Mule deer 1. White tailed deer 2, either sex (99%).
+- Province wide, page 14: only 1 mule deer buck a licence year from Regions 3, 4, 5, 6, 7A, 7B and 8 combined (99%). A buck at Heffley Creek uses up your Okanagan mule deer buck too (95%).
+- Legal hours: 1 hour before sunrise to 1 hour after sunset (99%).
+
+> [!warn]
+> No MU, no season dates, no hunt. Confirm your exact MU on the official map, and check gov.bc.ca/hunting for in season changes before opening day (99%).
+
+## Closed areas near your bases
+
+- **Sun Peaks, Map C11, page 35:** No Shooting or Hunting Area "400 m from existing ski lift, run, facility or development of the Sun Peaks Resort (MU 3-27)." (99%)
+- On that map the closed area runs from Mt. Tod south to Mt. Morrisey, around the ski runs (95%).
+- **Kamloops, Map C7, page 35:** no hunting or shooting along the South Thompson from the Overlander and CN Railway bridges east to Lafarge Bridge, then no shooting east to Pritchard Bridge (95%).
+- **McQueen Lake, Map C12:** No Shooting Area in MU 3-28 (99%).
+- No shooting firearms or bows on the part of Lac du Bois Grasslands, or Crown land, inside the City of Kamloops boundary (99%).
+- **Wells Gray Park, MU 3-45:** no hunting and no shooting (99%).
+- City and regional district bylaws are not in the synopsis (99%). Near town: VERIFY with the city or regional district.
+- BC Parks: many are closed to hunting. Check the park's page before you hunt (99%).
 
 ## Where deer are in late October
 
@@ -70,7 +102,7 @@ checked: 2026-10-01
 ## Scenario A: the property plus Crown behind it
 
 - Your brother's house is on the 20 acres. Neighbours are 100 to 200 m away.
-- **No shooting within 100 m (109 yd) of an occupied house, farm or ranch building** (75%). That includes his house.
+- **No hunting or shooting within 100 m (109 yd) of a dwelling house, or a farm or ranch building occupied by people or domestic animals** (99%). The owner exemption covers slaughtering livestock only, so that includes his house (95%).
 - So the usable area on the 20 acres may be small or zero. The Crown land behind is the real option.
 - Map it first: draw a 100 m circle around every house and barn. Mark safe shooting lanes and earth [[Backstop|backstops]] (Tip).
 - Mark the property line and the Crown edge. Walk it in daylight with a GPS (Global Positioning System) app (Tip).
@@ -82,16 +114,22 @@ checked: 2026-10-01
 ## Scenario B: ATV on Forest Service Roads
 
 - [[FSR]] (Forest Service Road) networks reach benches and cutblocks fast. Use them to get to glassing spots, then walk.
-- **No loaded firearm in or on a motor vehicle, and that includes an [[ATV]] (All Terrain Vehicle)** (80%).
-- Loaded means a round in the chamber **or** in an attached magazine (80%).
-- **No shooting from a motor vehicle**, ATV included (80%).
-- No hunting or shooting on or across numbered highways and 2 lane public roads kept by the province, out to 15 m from the road centre (75%).
-- FSRs are not usually treated as those highways. Still never shoot along or across any road (60%, VERIFY).
-- ATV on Crown land: needs registration and a plate. Helmet required (75%). Insurance on FSRs: VERIFY.
-- Motor vehicle closures in Region 3: VERIFY on the synopsis maps.
 - Pros: covers ground, easy meat haul, beats walking in the dark.
 - Cons: road hunters push deer back from roads. Noise. Easy to break rules by accident.
 - Odds: good for finding deer, fair for a shot. Opinion.
+- Read the next screen, the vehicle and road rules, before you ride.
+
+## ATV, vehicle and road rules
+
+- **No loaded firearm in or on a motor vehicle, and that includes an [[ATV]] (All Terrain Vehicle)** (99%). Since 1 October 2026 the BC [[FVPA]] (Firearm Violence Prevention Act) says the same for any vehicle or boat (95%).
+- Loaded means a round in the chamber **or** in an attached magazine (99%).
+- **No shooting from a motor vehicle**, ATV included (99%).
+- No hunting or shooting within the road allowance of numbered highways and 2 lane or wider public roads kept by the Ministry of Transportation and Infrastructure, and no shooting across them (99%). On a 2 lane road the strip runs 15 m each side of the centre (99%).
+- FSRs are not named in that rule (99%). Whether a given FSR counts: VERIFY. Never shoot along or across any road (Tip).
+- ATV: registered with the plate or sticker showing, and a helmet on a ride astride machine (99%). On an FSR the driver also needs a valid driver's licence and at least $200,000 third party liability insurance (99%).
+- Region 3: no motor vehicles except snowmobiles above 1,700 m, except on existing roads and trails (99%).
+- MUs 3-28, 3-29, 3-30 and part of 3-17 (Map C3): no ATV use for hunting, or for hauling hunters, gear or game, 1 Sept to 10 Dec (99%). The west bank at Heffley Creek is 3-28 (90%). MU 3-27 has no such closure listed (95%).
+- Skull Mountain area in MU 3-28: vehicles only on the open roads on Map C13, 1 Sept to 10 Dec (99%). Closure maps: gov.bc.ca/thompsonaccess (99%).
 
 ## Scenario C: walk in 5 to 10 km
 
@@ -103,7 +141,7 @@ checked: 2026-10-01
 - Bone in quarters for a mature buck: about 41 to 48 kg (90 to 105 lb) total. Hunter reports (60%).
 - Two of you, about 20 to 25 kg each per trip: 1 trip boned out, 2 trips bone in (Tip).
 - Loaded and off trail you may do 2 km an hour. 8 km out is about 4 hours per trip (Tip).
-- **You must bring out the edible meat: neck, ribs, 4 quarters and loins** (75%).
+- **You must bring out the edible meat: neck, ribs, 4 quarters and loins** (99%). It goes to your home, a meat cutter or a cold storage plant (99%).
 - Pros: best chance at a calm, unpressured deer. Great skill builder.
 - Cons: a late shot means packing in the dark. Meat must cool fast.
 - Odds: good chance to see deer, hard first kill. Opinion.
@@ -147,15 +185,15 @@ Rifle unloaded on ATV and in vehicle
 
 ## Sources
 
-- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/regulations-synopsis), checked 2026-10-01, search preview, loaded firearm, vehicles, roads, edible portions 75 to 80%.
-- [Region 3 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), checked 2026-10-01, search preview, bag limit 60%.
-- [BC Hunting Regulation, 100 m rule](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_01), checked 2026-10-01, search preview, 75%.
-- [BC off road vehicle registration](https://www2.gov.bc.ca/gov/content/industry/crown-land-water/crown-land/crown-land-uses/off-road-vehicles/registration), checked 2026-10-01, search preview, 75%.
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: pages 3 and 4 (loaded firearm, motor vehicle, ATV, edible portions, 4 point buck), 5 (carry species licences), 7 and 8 (deer licences), 9 (ATV registration, helmet, FSR insurance, BC Parks, bylaws), 10 (100 m rule, road allowance), 11 (items 22 and 27), 12 (items 37 and 44), 14 (deer bag limits). Checked 2026-10-02 (99%).
+- [Region 3 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), read directly: pages 32 (MU map), 33 (bag limits, access closures, Lac du Bois, Wells Gray), 34 (deer rows), 35 (Maps C7, C11, C12, C13). Checked 2026-10-02 (95 to 99%).
+- [Firearm Violence Prevention Act, Bill 4, 2021, third reading text (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/bills/billsprevious/1st42nd:gov04-3), section 4, read directly. In force 1 October 2026 per the [table of legislative changes](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/e4tlc21007). Checked 2026-10-02 (95%).
 - [Wyoming Game and Fish: how much meat from a deer](https://wgfd.wyo.gov/how-much-meat-can-i-get-deer), checked 2026-10-01, search preview, 75%.
 - [Rokslide: weight of bone in mule deer quarters](https://rokslide.com/forums/threads/weight-of-a-bone-in-mule-deer-hind-quarter.107100/), checked 2026-10-01, hunter reports, 60%.
 - [BC Wildlife Federation mule deer project](https://bcwf.bc.ca/initiatives/mule-deer-project/), checked 2026-10-01, migration, 85%.
 - Research notes: `research/2026-10-01-deer.md` (ID, habitat, daily pattern, senses).
-- Note: official pages read through search previews only. Capped at 85%.
+- MU for Heffley Creek and Sun Peaks: synopsis page 32 map and the official 2026 Region 3 map under the Management Unit Regulation, B.C. Reg. 64/96. Heffley Creek itself is not labelled (85 to 95%).
+- Note: every rule line now comes from the official texts above. ID, habitat, tactics and meat math keep their own badges.
 
 ```quiz
 [

@@ -70,7 +70,8 @@
 ## Tech rules
 - Static site. No backend, no accounts, no trackers, no paid services.
 - One Markdown file per session in `content/`. Front matter holds metadata.
-- Diagrams: hand drawn SVG only. No copied images. Big clear labels.
+- Diagrams: hand drawn SVG only. Big clear labels.
+- Photos (owner decision 2026-10-02): public domain or Creative Commons only, credit shown under each photo and on the Photo credits page. See AUTHORING.md. No other copied images.
 - No runtime frameworks. Tiny vanilla JavaScript. Build step may use Node.
 - Must work offline after first load. Also ship a single HTML file backup.
 - User data (progress, checklists, journal) stays in the phone's local storage only.

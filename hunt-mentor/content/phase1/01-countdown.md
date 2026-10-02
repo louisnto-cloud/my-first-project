@@ -4,7 +4,7 @@ phase: 1
 num: 1
 title: Countdown to your first hunt
 minutes: 10
-checked: 2026-10-01
+checked: 2026-10-02
 ---
 > [!why]
 > About 2 weeks to go. Gear and practice take longer than you think. This is the order that works.
@@ -52,7 +52,7 @@ Practice the legal to shoot flowchart in Field Mode
 ## Hunt week
 
 ```checklist cd-w3
-Check in season regulation changes and closures
+Check in season regulation changes at [gov.bc.ca/huntingregulations](https://www.gov.bc.ca/huntingregulations), and closures
 Check fire restrictions and road closures
 Check legal light times in Field Mode
 Leave a trip plan with someone
@@ -81,7 +81,8 @@ Go slow. Watch more than you walk.
 
 ## Sources
 
-- Licence facts: see Session 2 sources.
+- Licence facts: see Session 2 sources (official synopsis pages 5 to 8, read directly 2026-10-02).
+- In season changes: the synopsis says to check [gov.bc.ca/huntingregulations](https://www.gov.bc.ca/huntingregulations) before your hunt, page 7 (99%). Checked 2026-10-02.
 - Everything else in this session is a plan and tips (opinion), not rules.
 
 ```quiz

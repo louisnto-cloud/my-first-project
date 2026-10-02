@@ -4,7 +4,7 @@ phase: 2
 num: 11
 title: Glassing
 minutes: 10
-checked: 2026-10-01
+checked: 2026-10-02
 ---
 > [!why]
 > In open Interior country you find more deer with your eyes than with your boots. [[Glassing]] lets you see them before they see you.
@@ -50,7 +50,9 @@ checked: 2026-10-01
 ## Best times and places
 
 - Deer are most active at dawn and dusk (70%).
-- Glass first light and the last hour before legal shooting light ends (Tip). Legal shooting hours: see the synopsis. VERIFY times for each date.
+- Glass first light and the last hour before legal shooting light ends (Tip).
+- Legal hunting hours for deer: 1 hour before sunrise to 1 hour after sunset (synopsis page 12 item 37) (99%).
+- You work out sunrise and sunset yourself, for each date and place (synopsis page 12) (99%).
 - Midday: glass shade, timber edges and benches where deer bed (Tip).
 - Glass from above, with the sun behind you, so deer are lit and you are not (Tip).
 - Near Sun Peaks: cut blocks, burns, open grass slopes and timber edges (Tip, check on your map).
@@ -74,6 +76,7 @@ checked: 2026-10-01
 - [Wide Open Spaces: How to glass for mule deer](https://www.wideopenspaces.com/heres-glass-mule-deer-increase-odds-filling-tag/), checked 2026-10-01 (search preview)
 - [Sitka: What colours can deer see (crepuscular activity)](https://www.sitkagear.com/experience/what-colors-can-deer-see), checked 2026-10-01 (search preview)
 - Hunt Mentor deer research notes, research/2026-10-01-deer.md (60%, hunter consensus)
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: page 12 item 37 (hunting hours, sunrise and sunset). Checked 2026-10-02 (99%)
 - Note: glassing is a skill, not a rule. Most points are hunter experience, labelled Tip.
 
 ```quiz

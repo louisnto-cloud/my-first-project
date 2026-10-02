@@ -4,7 +4,7 @@ phase: 2
 num: 2
 title: Water safety for hunters
 minutes: 10
-checked: 2026-10-01
+checked: 2026-10-02
 ---
 > [!why]
 > October water in the Interior is cold. A small boat or kayak tips fast. The cold, not swimming skill, is what kills.
@@ -27,14 +27,14 @@ checked: 2026-10-01
 ## PFD worn, not stowed
 
 - A [[PFD]] (personal flotation device) only works if you are wearing it when you go in.
-- Canadian law requires an approved PFD or lifejacket of the right size **on board** for each person (75%).
-- Wearing it is not required by law for adults on a private trip (75%). My lean: wear it, zipped, every minute on the water.
+- Canadian law requires an approved PFD or lifejacket of the right size **on board** for each person (99%).
+- The law requires carrying it, not wearing it (95%). One exception: an inflatable PFD must be worn in an open boat (99%). My lean: wear it, zipped, every minute on the water.
 - About 87% of boaters who drowned were not wearing one, per the Lifesaving Society (75%).
 - Pick one that fits over your hunting jacket. Try it on with all layers before the trip.
 
 ## The boat and the kayak
 
-- Any boat fitted with a motor, even a small electric, needs the operator to carry a PCOC (Pleasure Craft Operator Card) (75%).
+- Any boat fitted with a motor needs the operator to have proof of competency on board, usually a PCOC (Pleasure Craft Operator Card) (99%). The rule sets no minimum motor size, so a small electric counts (95%).
 - 10 ft boat: check the capacity plate. Count you, your brother, gear, guns and a deer (VERIFY plate numbers on your own boat).
 - Load low and in the middle. Heavy items on the floor, centred side to side.
 - Kayak: one person, guns cased and strapped, dry bag clipped in. Hard to shoot from and easy to tip.
@@ -43,12 +43,14 @@ checked: 2026-10-01
 
 ## Guns in the boat
 
-- BC: you must not transport, carry or store a **loaded** firearm in or on a vehicle or boat (80%).
-- BC: no shooting from a boat **propelled by a motor**. A motor tilted up or disengaged so it is not ready for use does not count as propelling (75%).
-- Federal, ducks and geese: no hunting from a **moving** boat with a motor or sail. Drifting on momentum from the motor still counts as moving (80%).
-- BC synopsis, ducks and geese: power boat only if beached, anchored, or tied alongside a fixed blind (75%).
-- The FVPA (Firearm Violence Prevention Act) came into force 1 October 2026. Hunting exemptions are set by regulation (75%). Exact wording: VERIFY.
-- Safe habit: gun unloaded and in a case while moving. Load only once you are stopped and set (Tip). A case is not required by federal law for a non restricted firearm (70%).
+- BC [[FVPA]] (Firearm Violence Prevention Act), in force 1 October 2026, section 4: you must not transport, carry or store a **loaded** firearm in or on a vehicle or boat (95%).
+- Section 5 of the same Act: no shooting "in, on or from a vehicle or boat" (95%).
+- Hunting exemption, in force the same day: a loaded gun, and shooting, are allowed in a boat with no motor, or in a motor boat while the motor is not propelling it, when you are hunting or retrieving wildlife (95%).
+- So while the motor pushes the boat, every gun aboard is unloaded (95%).
+- BC synopsis, page 11, item 22: no shooting wildlife from a boat **propelled by a motor** (99%).
+- Federal, ducks and geese: no hunting from a **moving** boat with a motor or sail. Drifting on momentum from the motor still counts as moving (99%).
+- BC synopsis, page 11, item 23, ducks and geese: power boat only if beached, anchored, or tied alongside a fixed blind (99%). On 1 October 2026 BC changed this rule to the federal moving boat wording and dropped its tilted motor exception (95%).
+- Safe habit: gun unloaded and in a case while moving. Load only once you are stopped and set (Tip). Federal transport rules require a non restricted firearm to be unloaded, not cased (95%).
 
 > [!lean]
 > Use the boat as a ride to a shore blind or a point. Shoot from land. It removes most of the legal and tipping risk.
@@ -97,19 +99,21 @@ Dry bag: spare warm layer, lighter, phone
 - [Gordon Giesbrecht, Wikipedia](https://en.wikipedia.org/wiki/Gordon_Giesbrecht), checked 2026-10-01 (search preview)
 - [Cold Water Safety: the 1 10 1 critique](https://www.coldwatersafety.org/1-10-1-myth), checked 2026-10-01 (search preview)
 - [Heat escape lessening position, Wikipedia](https://en.wikipedia.org/wiki/Heat_escape_lessening_position), checked 2026-10-01 (search preview)
-- [BC Firearm Violence Prevention Act page](https://www2.gov.bc.ca/gov/content/justice/criminal-justice/policing-in-bc/fvpa), section 4 and 5, checked 2026-10-01 (search preview)
-- [BC Hunting Regulation, B.C. Reg. 190/84](https://www.bclaws.gov.bc.ca/civix/document/id/loo62/loo62/190_84), power boat definition, checked 2026-10-01 (search preview)
-- [Migratory Birds Regulations, 2022, section 41](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/section-41.html), checked 2026-10-01 (search preview)
-- [BC Hunting and Trapping Regulations Synopsis 2026](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), migratory birds section, checked 2026-10-01 (search preview, page VERIFY)
-- [Pleasure Craft Operator Card, Wikipedia](https://en.wikipedia.org/wiki/Pleasure_Craft_Operator_Card), checked 2026-10-01 (search preview, secondary)
-- [PaddleBC: the law of lifejackets](https://paddlebc.ca/law-of-lifejackets-in-canada-and-finding-the-right-one-for-you/), checked 2026-10-01 (search preview, secondary)
-- Note: Transport Canada pages not opened. Capped at 85% and lower for secondary sources.
+- [Firearm Violence Prevention Act, Bill 4, 2021, third reading text (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/bills/billsprevious/1st42nd:gov04-3), sections 4 and 5, read directly. In force 1 October 2026 per the [table of legislative changes](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/e4tlc21007). Checked 2026-10-02 (95%)
+- [B.C. Reg. 66/2026, Designation and Exemption Regulation amendments, effective 1 October 2026 (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_90anif66_2026), new sections 5.1, 18 and 19 (boat exemptions), read directly. Checked 2026-10-02 (95%)
+- [B.C. Reg. 66/2026, Hunting Regulation amendments, effective 1 October 2026 (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84anif66_2026), power boat definition repealed, new moving boat rule, read directly. Not yet in the consolidated regulation. Checked 2026-10-02 (95%)
+- [Migratory Birds Regulations, 2022 (Justice Laws)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html), section 41, read directly, current to 21 September 2026. Checked 2026-10-02 (99%)
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), page 11, items 22 and 23, read directly. Checked 2026-10-02 (99%)
+- [Competency of Operators of Pleasure Craft Regulations (Justice Laws)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-99-53/FullText.html), sections 2 and 3, read directly, current to 21 September 2026. Checked 2026-10-02 (99%)
+- [Small Vessel Regulations (Justice Laws)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2010-91/FullText.html), sections 7, 10, 204 and 209, read directly, current to 21 September 2026. Checked 2026-10-02 (99%)
+- [Storage, Display, Transportation and Handling of Firearms by Individuals Regulations (Justice Laws)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-98-209/FullText.html), section 10, read directly, current to 21 September 2026. Checked 2026-10-02 (95%)
+- Note: boat and firearm rules now read directly in the federal and BC texts above. Cold water and capsize lines keep their own badges.
 
 ```quiz
 [
   {"q": "What does the first 1 in the 1 10 1 principle warn about?", "options": ["1 hour until hypothermia", "About 1 minute of cold shock: control your breathing", "1 metre to the boat"], "answer": 1, "why": "Phase one is cold shock. Gasping and fast breathing last about a minute. Calm your breathing before you act."},
   {"q": "Where should your PFD be while the boat is moving?", "options": ["Under the seat, easy to reach", "On you, zipped", "In the dry bag"], "answer": 1, "why": "In cold water you will not manage to put one on. Only a worn PFD helps."},
-  {"q": "Can you carry a loaded shotgun while motoring to the blind?", "options": ["Yes if the safety is on", "No. BC bans loaded firearms in or on a boat, and you may not hunt ducks from a moving motor boat", "Yes on a lake"], "answer": 1, "why": "BC law bans transporting a loaded firearm in a boat. Federal rules ban hunting migratory birds from a moving boat with a motor."},
+  {"q": "Can you carry a loaded shotgun while motoring to the blind?", "options": ["Yes if the safety is on", "No. BC bans a loaded firearm in a boat while the motor pushes it, and you may not hunt ducks from a moving motor boat", "Yes on a lake"], "answer": 1, "why": "BC's Firearm Violence Prevention Act bans a loaded firearm in a boat. The hunting exemption applies only while the motor is not propelling the boat. Federal rules ban hunting migratory birds from a moving boat with a motor."},
   {"q": "You capsize 200 m from shore in October. Best first move after the gasp?", "options": ["Swim for shore", "Stay with the boat and climb onto the hull", "Take off your boots and PFD"], "answer": 1, "why": "Stay with the boat and get as much of your body out of the water as you can. Swimming in cold water drains you fast."}
 ]
 ```

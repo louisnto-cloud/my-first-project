@@ -121,11 +121,83 @@ function fenced(kind, arg, body, ctx) {
     if (!fs.existsSync(file)) { ctx.missing.push(`${arg}.svg`); return '<p class="verify">Diagram missing</p>'; }
     return `<figure class="diagram">${fs.readFileSync(file, 'utf8')}</figure>`;
   }
+  if (kind === 'photo') {
+    // ```photo id [caption override]```  -> figure from data/photos/*.json manifest
+    const [id, ...rest] = arg.split(/\s+/);
+    const ph = PHOTOS[id];
+    if (!ph || !fs.existsSync(path.join(ROOT, 'photos', `${id}.jpg`))) { ctx.missingPhotos.push(id); return `<p class="verify">Photo missing: ${esc(id)}</p>`; }
+    return photoFigure(ph, rest.join(' ') || body.trim() || ph.caption);
+  }
   if (kind === 'regs') {
     // ```regs key  -> rendered from data/regs.json at runtime
     return `<div class="regs" data-regs="${arg}"></div>`;
   }
   return `<pre><code>${esc(body)}</code></pre>`;
+}
+
+// ---------- photos (public domain / Creative Commons, credited) ----------
+function loadPhotos() {
+  const dir = path.join(ROOT, 'data', 'photos');
+  const out = {};
+  if (!fs.existsSync(dir)) return out;
+  for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.json')).sort()) {
+    for (const ph of JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'))) {
+      if (out[ph.id]) console.warn(`Duplicate photo id ${ph.id} in ${f}`);
+      out[ph.id] = ph;
+    }
+  }
+  return out;
+}
+const PHOTOS = loadPhotos();
+function photoFigure(ph, caption) {
+  const credit = `Photo: ${esc(ph.author || 'unknown')}, ${esc(ph.licence || 'licence VERIFY')}` +
+    (ph.source ? `, <a href="${esc(ph.source)}" target="_blank" rel="noopener">source</a>` : '');
+  return `<figure class="photo"><img src="__PHOTO__${ph.id}__" alt="${esc(caption)}" loading="lazy"><figcaption>${inline(caption)} <span class="credit">${credit}</span></figcaption></figure>`;
+}
+
+// ---------- auto split long screens (phone first: about 6 points a screen) ----------
+const MAX_UNITS = 6, MAX_WORDS = 120;
+function screenUnits(md) {
+  const lines = md.replace(/\r/g, '').split('\n');
+  const units = []; let i = 0;
+  const words = (t) => t.replace(/[#>*`|\[\]()]/g, ' ').split(/\s+/).filter(Boolean).length;
+  const push = (ls, w, heading) => units.push({ md: ls.join('\n'), words: w, heading: !!heading });
+  while (i < lines.length) {
+    const l = lines[i];
+    if (/^\s*$/.test(l)) { i++; continue; }
+    const fence = l.match(/^```(\w+)?/);
+    if (fence) {
+      const ls = [lines[i++]]; while (i < lines.length && !lines[i].startsWith('```')) ls.push(lines[i++]); if (i < lines.length) ls.push(lines[i++]);
+      const k = fence[1] || '';
+      const w = k === 'quiz' ? 0 : k === 'diagram' ? 50 : k === 'photo' ? 40 : k === 'checklist' ? ls.length * 8 : k === 'regs' ? 60 : 40;
+      push(ls, w); continue;
+    }
+    if (/^#{3,4}\s/.test(l)) { push([lines[i++]], 2, true); continue; }
+    if (l.startsWith('>')) { const ls = []; while (i < lines.length && lines[i].startsWith('>')) ls.push(lines[i++]); push(ls, words(ls.join(' '))); continue; }
+    if (l.startsWith('|')) { const ls = []; while (i < lines.length && lines[i].startsWith('|')) ls.push(lines[i++]); push(ls, words(ls.join(' ')) + 30); continue; }
+    if (/^([-*]|\d+\.)\s/.test(l)) {
+      const ls = [lines[i++]]; while (i < lines.length && /^\s+\S/.test(lines[i])) ls.push(lines[i++]);
+      push(ls, words(ls.join(' '))); continue;
+    }
+    const ls = []; while (i < lines.length && lines[i].trim() && !/^(#{3,4}\s|>|\||```|([-*]|\d+\.)\s)/.test(lines[i])) ls.push(lines[i++]);
+    if (!ls.length) ls.push(lines[i++]);
+    push(ls, words(ls.join(' ')));
+  }
+  // a heading belongs with the unit that follows it
+  for (let k = units.length - 2; k >= 0; k--) if (units[k].heading && !units[k + 1].heading) { units[k + 1] = { md: units[k].md + '\n' + units[k + 1].md, words: units[k].words + units[k + 1].words }; units.splice(k, 1); }
+  return units;
+}
+function splitScreen(title, md) {
+  const units = screenUnits(md);
+  const chunks = [];
+  let cur = null;
+  for (const u of units) {
+    if (!cur || cur.n >= MAX_UNITS || (cur.words + u.words > MAX_WORDS && cur.n > 0)) { cur = { md: [], n: 0, words: 0 }; chunks.push(cur); }
+    cur.md.push(u.md); cur.n++; cur.words += u.words;
+  }
+  if (chunks.length > 1) { const last = chunks[chunks.length - 1]; if (last.words < 35 && last.n <= 2) { const prev = chunks[chunks.length - 2]; prev.md.push(...last.md); prev.n += last.n; prev.words += last.words; chunks.pop(); } }
+  if (chunks.length <= 1) return [{ title, md }];
+  return chunks.map((c, k) => ({ title: `${title} (${k + 1} of ${chunks.length})`, md: c.md.join('\n\n') }));
 }
 
 function frontMatter(src) {
@@ -149,16 +221,18 @@ function loadSessions() {
   walk(dir);
   const sessions = files.map((f) => {
     const { meta, body } = frontMatter(fs.readFileSync(f, 'utf8'));
-    const ctx = { id: meta.id, quiz: [], checklists: [], missing: [] };
+    const ctx = { id: meta.id, quiz: [], checklists: [], missing: [], missingPhotos: [] };
     const parts = body.split(/^## /m);
     const steps = [];
     const intro = parts.shift().trim();
-    if (intro) steps.push({ title: meta.title, html: blocks(intro, ctx) });
+    const addScreen = (title, md) => { for (const sc of splitScreen(title, md)) steps.push({ title: sc.title, html: blocks(sc.md, ctx) }); };
+    if (intro) addScreen(meta.title, intro);
     for (const p of parts) {
       const nl = p.indexOf('\n');
-      steps.push({ title: p.slice(0, nl).trim(), html: blocks(p.slice(nl + 1), ctx) });
+      addScreen(p.slice(0, nl).trim(), p.slice(nl + 1));
     }
     const text = body.replace(/```[\s\S]*?```/g, '').replace(/[#>*`|[\]]/g, ' ').replace(/\s+/g, ' ').toLowerCase();
+    if (ctx.missingPhotos.length) console.warn(`Photos missing in ${meta.id}: ${ctx.missingPhotos.join(', ')}`);
     return { ...meta, phase: +meta.phase, num: +meta.num, minutes: +meta.minutes, steps, quiz: ctx.quiz, checklists: ctx.checklists, missing: ctx.missing, text };
   });
   sessions.sort((a, b) => a.phase - b.phase || a.num - b.num);
@@ -213,10 +287,16 @@ function build() {
     regs: readJSON('data/regs.json'),
     bases: readJSON('data/bases.json'),
     field: readJSON('data/field.json'),
-    flashcards: readJSON('data/flashcards.json').map((c) => {
-      const f = c.diagram && path.join(ROOT, 'diagrams', `${c.diagram}.svg`);
-      return { ...c, diagram: f && fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : undefined };
-    }),
+    flashcards: [
+      ...readJSON('data/flashcards.json').map((c) => {
+        const f = c.diagram && path.join(ROOT, 'diagrams', `${c.diagram}.svg`);
+        return { ...c, diagram: f && fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : undefined };
+      }),
+      ...Object.values(PHOTOS).filter((ph) => ph.card && fs.existsSync(path.join(ROOT, 'photos', `${ph.id}.jpg`))).map((ph) => ({
+        id: 'photo-' + ph.id, deck: ph.cardDeck || 'Photo ID', front: ph.cardFront || 'What is this?', photo: photoFigure(ph, ''), back: ph.cardBack || ph.caption,
+      })),
+    ],
+    photos: Object.values(PHOTOS).filter((ph) => fs.existsSync(path.join(ROOT, 'photos', `${ph.id}.jpg`))).map(({ id, species, caption, author, licence, source }) => ({ id, species, caption, author, licence, source })),
   };
   const problems = lint(sessions);
   if (problems.length) {
@@ -228,7 +308,14 @@ function build() {
   fs.mkdirSync(OUT, { recursive: true });
   const css = read('app/style.css');
   const js = read('app/app.js');
-  const json = JSON.stringify(data);
+  const photoIds = Object.keys(PHOTOS).filter((id) => fs.existsSync(path.join(ROOT, 'photos', `${id}.jpg`)));
+  const jsonPwa = JSON.stringify(data).replace(/__PHOTO__([\w-]+)__/g, 'photos/$1.jpg');
+  const jsonSingle = JSON.stringify(data).replace(/__PHOTO__([\w-]+)__/g, (_, id) => {
+    const sm = path.join(ROOT, 'photos', 'sm', `${id}.jpg`);
+    const f = fs.existsSync(sm) ? sm : path.join(ROOT, 'photos', `${id}.jpg`);
+    return 'data:image/jpeg;base64,' + fs.readFileSync(f).toString('base64');
+  });
+  const json = jsonPwa;
   const version = 'hm-' + Buffer.from(json + css + js).length.toString(36) + '-' + data.built;
   let html = read('app/index.html');
 
@@ -241,14 +328,16 @@ function build() {
   fs.writeFileSync(path.join(OUT, 'style.css'), css);
   fs.writeFileSync(path.join(OUT, 'app.js'), js);
   fs.writeFileSync(path.join(OUT, 'content.js'), `window.HM=${json};`);
-  fs.writeFileSync(path.join(OUT, 'sw.js'), read('app/sw.js').replace('__VERSION__', version));
+  fs.writeFileSync(path.join(OUT, 'sw.js'), read('app/sw.js').replace('__VERSION__', version).replace('__PHOTOS__', JSON.stringify(photoIds.map((id) => `photos/${id}.jpg`))));
+  fs.mkdirSync(path.join(OUT, 'photos'), { recursive: true });
+  for (const id of photoIds) fs.copyFileSync(path.join(ROOT, 'photos', `${id}.jpg`), path.join(OUT, 'photos', `${id}.jpg`));
   fs.copyFileSync(path.join(ROOT, 'app/manifest.webmanifest'), path.join(OUT, 'manifest.webmanifest'));
   fs.cpSync(path.join(ROOT, 'app/icons'), path.join(OUT, 'icons'), { recursive: true });
 
   // Single file offline backup
   fs.writeFileSync(path.join(OUT, 'hunt-mentor-offline.html'), html
     .replace('<!--CSS-->', `<style>${css}</style>`)
-    .replace('<!--DATA-->', `<script>window.HM=${json.replace(/<\//g, '<\\/')};</script>`)
+    .replace('<!--DATA-->', `<script>window.HM=${jsonSingle.replace(/<\//g, '<\\/')};</script>`)
     .replace('<!--JS-->', `<script>${js.replace(/<\//g, '<\\/')}</script>`)
     .replace('<!--SW-->', '')
     .replace(/<link rel="manifest"[^>]*>/, '')
@@ -261,7 +350,7 @@ function build() {
   fs.writeFileSync(path.join(OUT, 'preview.html'),
     head.match(/<title>.*?<\/title>/)[0] + '\n' + head.match(/<style>[\s\S]*?<\/style>/)[0] + '\n' + body);
 
-  console.log(`Built ${sessions.length} sessions, ${Object.keys(data.glossary).length} glossary terms -> ${OUT} (${version})`);
+  console.log(`Built ${sessions.length} sessions, ${sessions.reduce((n, s) => n + s.steps.length, 0)} screens, ${photoIds.length} photos, ${Object.keys(data.glossary).length} glossary terms -> ${OUT} (${version})`);
 }
 
 build();

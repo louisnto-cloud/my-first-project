@@ -4,7 +4,7 @@ phase: 4
 num: 3
 title: How a deer thinks
 minutes: 12
-checked: 2026-10-01
+checked: 2026-10-02
 ---
 > [!why]
 > A deer's whole life is staying alive. If you think like a scared prey animal, you will stop spooking them.
@@ -52,7 +52,7 @@ checked: 2026-10-01
 - The often quoted "297 million scent receptors" figure is folklore, not a measured fact (45%).
 - Your scent comes from breath, skin, clothes, boots and your truck (Tip).
 - Cover scents and scent control help a little. The wind helps a lot (Tip).
-- Deer and elk urine lures from outside BC are banned for hunting because of [[CWD]] (Chronic Wasting Disease) (80%).
+- Deer and elk urine lures from outside BC are banned for hunting (page 12 item 51) (95%). The synopsis warns that urine based scents can spread [[CWD]] (Chronic Wasting Disease) (inside back cover) (99%).
 
 ## Wind and thermals
 
@@ -113,7 +113,7 @@ checked: 2026-10-01
 | Deer have 297 million scent receptors | Unmeasured folklore. Nose is still their best sense (45%) |
 | Bucks always bed on the top third of a slope | Often true, not a rule (lore) (60%) |
 | The rut makes mule deer migrate | Snow and cold trigger migration (85%) |
-| Deer urine lures are a must | Out of province deer products are banned in BC (80%). Wind beats lures (Tip) |
+| Deer urine lures are a must | Deer products from outside BC are banned for hunting (page 12 item 51) (99%). Wind beats lures (Tip) |
 | Grunt calls work all season | Rattling and calling work best near the rut, early November (70%) |
 
 ## Mistakes and rules
@@ -145,7 +145,7 @@ Red light headlamp
 - Monteith and others 2011, [what triggers migration](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/ES10-00096.1), checked 2026-10-01 (85%)
 - BC Wildlife Federation, [Southern Interior Mule Deer Project](https://bcwf.bc.ca/initiatives/mule-deer-project/), checked 2026-10-01 (85%)
 - Lingle 2003, deer group behaviour and predators, via research notes, checked 2026-10-01 (85%)
-- BC [chronic wasting disease page](https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/wildlife/wildlife-conservation/wildlife-health/chronic-wasting-disease/cwd-bc), search preview, checked 2026-10-01 (80%)
+- BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: page 12 item 51 (deer, elk, moose and caribou parts or derivatives from outside BC), Wildlife Health inside back cover (CWD and urine based scents), checked 2026-10-02 (99%)
 - Research notes: `research/2026-10-01-deer.md`.
 
 ```quiz

@@ -4,7 +4,7 @@ phase: 4
 num: 1
 title: Mule deer
 minutes: 20
-checked: 2026-10-01
+checked: 2026-10-02
 ---
 > [!why]
 > The mule deer is the deer of the hills around Heffley Creek. Learn its day and you will know where to sit at first light.
@@ -15,6 +15,9 @@ checked: 2026-10-01
 - The deep dive on senses and alarm is in [How a deer thinks](#/s/deer-mind).
 
 ## Identify: buck, doe, fawn
+
+```photo mule-deer-buck
+```
 
 - **Ears:** very big, like a mule. That is the name (85%).
 - **Antlers (buck):** forks that fork again, like a "Y" on a "Y" (85%).
@@ -278,8 +281,8 @@ Read my MU page in the Region 3 synopsis
 - Stewart and others 2002, [deer activity timing](https://academic.oup.com/jmammal/article/84/3/1076/905056), checked 2026-10-01 (85%)
 - D'Angelo and others 2007, [deer hearing](https://wildlife.onlinelibrary.wiley.com/doi/abs/10.2193/2006-326), checked 2026-10-01 (85%)
 - BC [ungulate winter range dataset](https://catalogue.data.gov.bc.ca/dataset/ungulate-winter-range-approved), checked 2026-10-01 (85%)
-- BC [Region 3 synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), search preview, checked 2026-10-01 (capped 85%)
-- BC [chronic wasting disease page](https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/wildlife/wildlife-conservation/wildlife-health/chronic-wasting-disease/cwd-bc) and [AgCanada news on attractant ban](https://www.agcanada.com/daily/b-c-to-block-hunting-attractants-from-out-of-province), search preview, checked 2026-10-01 (80%)
+- BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: definitions pages 3 and 4, page 11 item 1, page 12 items 37, 50 and 51, deer bag limits page 14, transport, antlers and evidence of sex page 15, Wildlife Health inside back cover, checked 2026-10-02 (99%)
+- BC [Region 3 Thompson synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), read directly: MU map page 32, bag limits page 33, season table page 34, Map C11 page 35, checked 2026-10-02 (99%)
 - New Mexico Wildlife, [The math in the meat](https://magazine.wildlife.state.nm.us/the-math-in-the-meat/) and [Backcountry Chronicles](https://www.backcountrychronicles.com/mule-deer-pack-out-weight/), reporting University of Wyoming carcass studies, checked 2026-10-01 (70%)
 - Region 3 [mule deer hunter survey 2017](http://lwdrodgun.com/wp-content/uploads/2017/12/Region-3-Mule-Deer-Hunter-Survey-Final-Report-December-2017.pdf), checked 2026-10-01 (70%)
 - Research notes: `research/2026-10-01-deer.md`.

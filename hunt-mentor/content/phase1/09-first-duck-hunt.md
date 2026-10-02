@@ -4,33 +4,38 @@ phase: 1
 num: 9
 title: Your first duck hunt
 minutes: 15
-checked: 2026-10-01
+checked: 2026-10-02
 ---
 > [!why]
 > Ducks are the fastest way to get real shooting, real ID practice and real meat this October. A simple plan beats a fancy spread.
 
 - Two hunters: you and your brother. He has CORE (Conservation and Outdoor Recreation Education), a PAL (Possession and Acquisition Licence) and an FWID (Fish and Wildlife ID).
-- He still needs his own BC hunting licence and federal [[MGBHP]] (Migratory Game Bird Hunting Permit) before he carries a shotgun (80%).
+- Your brother is licensed too. For ducks, each of you also needs your own federal [[MGBHP]] (Migratory Game Bird Hunting Permit) with the habitat conservation stamp on it, carried on you while you hunt (99%).
 - Assumption: no dog, a 12 gauge with steel shot, a 10 ft boat and maybe a kayak.
 
 ## Season, hours, limits
 
-- Seasons are set by [[ECCC]] (Environment and Climate Change Canada), not the BC synopsis tables. Kamloops area duck dates for 2026 to 2027: VERIFY.
-- ECCC dates are listed by MU (Management Unit). Find the MU for each pond on the map. Your exact MU and dates: VERIFY.
-- Daily bag: 8 ducks. Inside that, max 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins (75%).
-- Possession: 24 ducks (70%).
-- Legal hours: half an hour before sunrise to half an hour after sunset (85%).
-- Deer and quail hours are different (1 hour each side). Do not mix them up (80%).
+> [!warn]
+> Study aid only. The official regulations are the law.
+
+- Duck seasons and limits are federal law: the Migratory Birds Regulations, 2022 (99%). The Region 3 [[Synopsis]] table reprints the same numbers on page 34 (99%).
+- Federal dates go by district: "District No. 3 means Provincial Management Units 3-12 to 3-20 and 3-26 to 3-44." (99%)
+- Heffley Creek is [[MU]] (Management Unit) 3-27 on the highway (east) bank (85%) and MU 3-28 on the west bank (90%). Both are inside District No. 3 (99%).
+- **District No. 3, all ducks: 8 September to 23 December** (99%).
+- Daily bag: 8 ducks. Inside that, max 4 pintails, 4 canvasbacks, 2 goldeneyes (Barrow's and common combined), 2 harlequins (99%).
+- Possession: 24 ducks. Inside that, max 12 pintails, 12 canvasbacks, 6 goldeneyes, 6 harlequins (99%).
+- Legal hours: half an hour before sunrise to half an hour after sunset (99%).
+- Deer and quail hours are different (1 hour each side). Do not mix them up (99%).
 
 > [!warn]
-> Season dates near Kamloops are blank on purpose. Read the ECCC BC summary for 2026 to 2027 before your first hunt.
+> Rules can change during the season. Check gov.bc.ca/huntingregulations before each hunt (99%).
 
 ## Ducks you will see near Kamloops
 
 - **Mallard.** Big. Drake has a green head. Blue wing patch with white edges. Slow, steady wingbeats (80%).
 - **Green winged teal.** Small and very fast. Tight flocks twist as one unit. Often early migrants (80%).
 - **American wigeon.** Drake has a white crown stripe. Big white shoulder patch shows in flight. Whistled call (80%).
-- **Goldeneye (diver).** Black and white. Wings whistle in flight. Bag limit only 2 (80%).
+- **Goldeneye (diver).** Black and white. Wings whistle in flight (80%). Daily limit only 2, Barrow's and common combined (99%).
 - **Bufflehead.** Small black and white diver. Mostly arrives later, into winter (65%).
 - Mallards and Canada geese are common on the Thompson River all year (70%).
 - Which species and how many in mid October near Heffley Creek: Tip, varies by year.
@@ -83,7 +88,8 @@ checked: 2026-10-01
 
 ## Boat and kayak safety
 
-- **Wear the PFD (Personal Flotation Device), zipped, every minute on the water.** Carrying one is the legal minimum. Wearing it saves you (85%).
+- **Wear the PFD (Personal Flotation Device), zipped, every minute on the water.** Wearing it saves you (85%).
+- The legal minimum is to carry one: an approved PFD or lifejacket that fits, for each person on board (99%). An inflatable PFD must be worn in an open boat (99%).
 - Cold water: 1 minute to control your breathing, about 10 minutes of useful movement, up to 1 hour before you pass out from cold (75%).
 - **Never stand to shoot** from a 10 ft boat or a kayak. Sit, or shoot from shore (Tip).
 - Load the gun only once the boat is stopped and you are in position. Unload before moving (Tip).
@@ -91,42 +97,62 @@ checked: 2026-10-01
 - Waders in a boat can fill if you go in. Wear a belt on them (Tip).
 - Leave a trip plan. Shore return time.
 
-## Boat rules
+## Boat rules for hunting
 
-- No hunting migratory birds from a boat moving under motor or sail power (80%).
-- Retrieving a downed bird from a moving boat is allowed (75%).
-- BC: shooting from a power boat is allowed only beached, anchored, or tied to a fixed blind. A motor tilted up and not ready to use does not count as power (75%).
-- Do not use a boat to chase or herd ducks (75%).
-- Motor on the boat? The driver needs a PCOC (Pleasure Craft Operator Card) (75%). Motor size and boat registration: VERIFY.
-- Required kit for a small boat: a PFD for each person, a 15 m (50 ft) buoyant heaving line, a reboarding device if needed (70%). Full list: VERIFY.
+- Federal law, section 41: no hunting migratory birds "from or using a moving boat that is equipped with a motor or a sail" (99%).
+- A boat still drifting on the push from its motor or sail counts as moving (99%).
+- Fetching a bird you already shot is allowed from a moving boat (99%). BC synopsis, page 12: fetch with a power boat only if nobody in it has a loaded gun (99%).
+- BC synopsis, page 11, item 23: no hunting migratory birds from a power boat "unless the boat is beached, resting at anchor or fastened within or tied immediately alongside a fixed hunting blind" (99%).
+- New on 1 October 2026: BC changed its own rule to the federal wording and dropped the power boat definition with its tilted motor exception (95%). The printed synopsis still shows item 23 (99%).
+- Simple habit that obeys both: beached, anchored or tied to a fixed blind, motor off, then shoot (Tip).
+- Do not use a power boat to herd or harass ducks (99%).
+
+## Boat paperwork and kit
+
+- Motor on the boat? The driver needs proof of competency on board, usually the [[PCOC]] (Pleasure Craft Operator Card) (99%). The rule sets no minimum motor size, so a small electric counts (95%).
+- Pleasure craft licence: needed once the motor power adds up to 7.5 kW (about 10 hp) or more. Keep a copy on board (99%).
+- Kit the law requires on a boat with a motor, up to 6 m long:
+  - PFD or lifejacket that fits, one per person (99%)
+  - Buoyant heaving line, at least 15 m (50 ft) (99%)
+  - Reboarding device such as a ladder, unless the climb back in is 0.5 m or less (99%)
+  - Watertight flashlight, or 3 flares (99%)
+  - Paddle or oars, or an anchor with at least 15 m of line (99%)
+  - Bailer or hand bilge pump (99%)
+  - Pealess whistle or a horn (99%)
+  - Navigation lights if you are out before sunrise or after sunset, as duck hunters are (99%)
+  - Magnetic compass, unless you stay within sight of seamarks (99%)
+- Fire extinguisher: only with an inboard engine, a fixed fuel tank, or a fuel burning stove, heater or fridge on board (99%).
+- Kayak or a boat with no motor: PFD for each person, heaving line, reboarding device if needed, bailer, whistle, lights in the dark, same compass rule (99%). A sealed hull, sit on top kayak with every PFD worn needs only a whistle or horn, plus a watertight flashlight in the dark (99%).
 
 ## Fetching birds without a dog
 
-- **The law:** you must have a way to retrieve birds with you before you shoot. A bird you kill must be retrieved as soon as you can. A wounded bird must be killed and retrieved (80%).
+- **The law:** you must have a way to retrieve birds with you before you hunt. A bird you kill must be retrieved as soon as you can. A wounded bird must be killed and retrieved (99%).
 - Plan the shot around the fetch: only shoot birds that will fall where you can reach them (Tip).
 - Tools: chest waders, the boat or kayak, a long handled landing net (Tip).
 - Wounded duck on the water: shoot again right away, on the water, while it is close (Tip).
 - Mark the fall: pick a tree or rock behind it. Go straight there (Tip).
 - Fast river current: do not wade. Let it go to shore downstream only if safe (Tip).
-- Keep one fully feathered wing or the head on each bird until home (80%).
+- Keep one fully feathered wing or the fully feathered head on each bird until it is preserved, for example breasted out at home and frozen (99%).
 
 ## Steel shot
 
-- **Lead shot is banned for duck hunting in Canada.** Do not even carry it while duck hunting (85%).
-- Legal types include steel, bismuth and tungsten (85%).
-- Shotgun: 10 gauge or smaller, max 3 shells in the gun. Magazine must be plugged (80%).
-- No rifles for ducks (80%).
+- **Lead shot is banned for duck hunting in Canada.** Do not even carry it in the hunting area (99%).
+- Legal types include steel, bismuth, tin and several tungsten blends (99%).
+- Shotgun: 10 gauge or smaller, holding no more than 3 shells in the magazine and chamber combined. A pump or semi auto that holds more must be cut, altered or plugged with a one piece filler that comes out only when the gun is taken apart (99%).
+- No rifles and no slugs for ducks (99%).
 - Starter load: 12 gauge, steel, size 2 or 3 (Tip). Pattern it first (Session 5).
 - Steel needs a choke rated for steel. Check the gun manual (Tip).
 
 ## Find water you can legally hunt
 
-- Do not hunt city water. There is a Kamloops no shooting and hunting area that includes river water near the city. Boundaries: VERIFY on map C7 in the Region 3 synopsis (70%).
-- Is the North Thompson at Heffley Creek inside that area? VERIFY before you shoot there.
-- There is a provincial park on the North Thompson at Heffley Creek (70%). Hunting allowed there? VERIFY. Skip it until confirmed.
+- Do not hunt city water (Tip).
+- **Kamloops, Map C7 (Region 3 synopsis, page 35):** "No Shooting or Hunting Area and No Shooting Area" (99%). On the map, no hunting or shooting along the South Thompson from the Overlander and CN Railway bridges east to Lafarge Bridge, then no shooting east to Pritchard Bridge (95%).
+- Map C7 shades no part of the North Thompson above the CN Railway Bridge, so the river at Heffley Creek is outside it (90%).
+- No shooting firearms or bows on the part of Lac du Bois Grasslands, or Crown land, inside the City of Kamloops boundary (99%). City bylaws are not in the synopsis (99%). Is your pond inside city limits? VERIFY with the City of Kamloops.
+- There is a provincial park on the North Thompson at Heffley Creek (70%). Hunting allowed there? VERIFY on its BC Parks page. The synopsis says you must check before hunting in any BC Park (99%). Skip it until confirmed.
 - Private ponds: written permission from the owner (Tip).
 - Crown land ponds: check the map for private land, parks and no shooting areas (Tip).
-- 100 m (109 yd) from any occupied house or farm building, including your brother's (75%).
+- No hunting or shooting within 100 m (109 yd) of a dwelling house, or a farm or ranch building occupied by people or domestic animals (99%). That includes your brother's house (95%).
 
 ## First hunt plan, step by step
 
@@ -140,7 +166,7 @@ checked: 2026-10-01
 8. Done by 10:00 or at your bag. Pick up every decoy and every empty shell.
 
 ```checklist s9-duckday
-Season open today in my MU (checked ECCC summary)
+Season open today: District No. 3 runs 8 Sept to 23 Dec
 Both hunters: BC licence and federal permit on phone
 Steel shot only in my pockets
 Magazine plug in
@@ -163,16 +189,16 @@ Way to fetch birds ready (waders, boat, net)
 
 ## Sources
 
-- [ECCC BC migratory bird hunting summary](https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html), checked 2026-10-01, search preview, bag limits 75%.
-- [ECCC hunting FAQ](https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/frequently-asked-questions.html), checked 2026-10-01, search preview, lead shot and boats 80 to 85%.
-- [Migratory Birds Regulations, 2022 (Justice Laws)](https://laws.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html), checked 2026-10-01, search preview, retrieval, boats, wing attached 75 to 80%.
-- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/regulations-synopsis), checked 2026-10-01, search preview, power boat rules 75%.
-- [Region 3 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), checked 2026-10-01, search preview, Kamloops no shooting area 70%.
-- [Small Vessel Regulations (Justice Laws)](https://laws-lois.justice.gc.ca/eng/regulations/sor-2010-91/page-4.html), checked 2026-10-01, search preview, 70%.
+- [Migratory Birds Regulations, 2022 (Justice Laws)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html), read directly, current to 21 September 2026: sections 28(3) hours, 31 and 34 permit and stamp, 37 shotgun, 38 non toxic shot, 41 boats, 42 retrieval, 52 wing or head, and Schedule 3, Part 10, Table 1, item 3 (District No. 3). Checked 2026-10-02 (99%).
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: pages 4 (power boat), 7 (federal permit, in season changes), 9 (BC Parks, bylaws), 10 (100 m rule), 11 (items 23 and 24), 12 (items 36 and 37, retrieval, bag and possession limits), 13 (shot types, firearms table). Checked 2026-10-02 (99%).
+- [Region 3 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), read directly: pages 32 (MU map), 33 (Lac du Bois notice), 34 (duck row), 35 (Map C7). Checked 2026-10-02 (95 to 99%).
+- [B.C. Reg. 66/2026, Hunting Regulation amendments effective 1 October 2026 (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84anif66_2026), read directly. Not yet in the consolidated regulation. Checked 2026-10-02 (95%).
+- [Competency of Operators of Pleasure Craft Regulations (Justice Laws)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-99-53/FullText.html), sections 2 and 3, read directly, current to 21 September 2026. Checked 2026-10-02 (99%).
+- [Small Vessel Regulations (Justice Laws)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2010-91/FullText.html), sections 7, 10, 100, 101, 204 to 211, 213, 215 and 220, read directly, current to 21 September 2026. Checked 2026-10-02 (99%).
 - [Lifesaving Society cold water](https://www.lifesavingsociety.com/water-safety/cold-water-and-ice.aspx), checked 2026-10-01, search preview, 75%.
 - [Ducks Unlimited Canada waterfowl ID guide](https://www.ducks.ca/assets/2021/10/waterfowl-ID-guide-2020-EN-reader-spreads.pdf), checked 2026-10-01, search preview, 80%.
 - [MeatEater decoy spread primer](https://www.themeateater.com/hunt/waterfowl/a-primer-on-decoys-and-decoy-spreads-for-puddle-ducks), checked 2026-10-01, tactics, 65%.
-- Note: official pages read through search previews only. Capped at 85%.
+- Note: every rule line now comes from the official texts above. Cold water, ID and tactics lines keep their own badges.
 
 ```quiz
 [
