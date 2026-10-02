@@ -40,7 +40,7 @@ checked: 2026-10-01
 | Ears | Very big | Medium |
 | Leg gland | Long, 10 to 15 cm (85%) | Small (85%) |
 
-- Both deer live near Heffley Creek. They are **separate tags** (80%).
+- Both deer live near Heffley Creek. They need **separate** [[Species licence|species licences]] (page 14) (99%).
 - Hybrids exist but are uncommon (70%). When in doubt, do not shoot (Tip).
 
 ## A day in the life: late October
@@ -50,7 +50,7 @@ checked: 2026-10-01
 
 - **Night (about 21:00 to 04:00):** feeds on and off in open grass and brush, rests between bouts (75%).
 - **Before first light (04:00 to 07:00):** a strong activity peak. Feeding, moving (85%).
-- **Legal light starts:** 1 hour before sunrise (80%). Mid to late October sunrise near Kamloops is about 07:30 to 07:50 (calculated) (75%). Use the Legal light screen in Field Mode.
+- **Legal light starts:** 1 hour before sunrise (page 12 item 37) (99%). Mid to late October sunrise near Kamloops is about 07:30 to 07:50 (calculated) (75%). Use the Legal light screen in Field Mode.
 - **Sunrise to about 09:00:** last feeding, then drifts uphill toward cover (85%).
 - **Midday (10:00 to 15:00):** bedded. Chews cud. Gets up briefly to stretch, nibble, and re bed (80%).
 - **Late afternoon (16:00 to 18:00):** rises, browses near the bed, then moves toward open feeding slopes (80%).
@@ -201,16 +201,22 @@ checked: 2026-10-01
 > [!warn]
 > Study aid only. The official regulations are the law.
 
-- **Your [[MU]] (Management Unit) at Heffley Creek and Sun Peaks:** VERIFY on the official map.
-- **4 point buck:** a buck with at least 4 tines on one antler, **not counting the brow tine** (the short point near the base). Each tine at least 2.5 cm and longer than it is wide (search preview) (80%).
-- **Region 3 mule deer seasons** (search preview, many MUs, VERIFY yours) (65%):
+- **Your [[MU]] (Management Unit):**
+  - Sun Peaks Resort: MU 3-27 (page 35, Map C11) (99%).
+  - Heffley Creek, east bank of the North Thompson: MU 3-27, read from the map (page 32) (85%).
+  - West bank of the North Thompson: MU 3-28 (page 32) (90%).
+  - Map lines are approximate. Check your spot on the [official MU maps](https://www.gov.bc.ca/WildlifeManagementUnits) (page 32) (99%).
+- **4 point buck:** a buck with at least 4 tines on one antler, **not counting the brow tine** (the first point, forward or up, in the lower third of the antler). Each tine at least 2.5 cm long and longer than it is wide (pages 3 and 4) (99%).
+- **Mule deer general seasons, MU 3-27 and 3-28** (page 34) (99%):
   - 10 to 30 September: 4 point bucks or better.
   - **1 to 31 October: any buck.**
   - 1 November to 10 December: 4 point bucks or better.
-- [[Antlerless]] mule deer: [[LEH]] (Limited Entry Hunting) draw only (75%).
-- [[Bag limit]]: search preview says 3 deer combined, at most 1 mule deer. VERIFY (60%).
-- Hunting hours: 1 hour before sunrise to 1 hour after sunset (80%).
-- Scents: BC bans deer, elk, moose and caribou parts or products from outside BC for hunting, because of [[CWD]] (Chronic Wasting Disease) (80%). Skip deer urine lures.
+- **Buck from a 4 point season:** the antlers must go with the species licence (page 34) (99%). On the way home, keep them attached to part of the upper skull, together with the licence, ready for an officer (page 15) (99%).
+- [[Antlerless]] mule deer: [[LEH]] (Limited Entry Hunting) draw only (page 33) (99%).
+- [[Bag limit]] in Region 3: 3 deer in total, only 1 of them a mule deer (page 33) (99%). That 1 mule deer buck counts for Regions 3 to 8 combined (page 14) (99%).
+- Hunting hours: 1 hour before sunrise to 1 hour after sunset (page 12 item 37) (99%).
+- Scents: using any part or product of a deer, elk, moose or caribou from outside BC for hunting is unlawful (page 12 item 51) (99%). The synopsis warns that urine based scents can spread [[CWD]] (Chronic Wasting Disease) (inside back cover) (99%). Skip deer urine lures.
+- Deer, elk, moose or caribou killed outside BC: you may possess only the edible meat of the four quarters, loins, neck and ribs, or a hide, antlers and skull plate cleaned of all tissue before it came into BC (page 12 item 50) (99%).
 
 ```regs deerR3
 ```
@@ -224,7 +230,9 @@ checked: 2026-10-01
 - Boneless meat is about 48% of field dressed weight, or about 34% of live weight (70%).
 - Average field dressed buck in a Wyoming study: about 52 kg (114 lb), giving about 25 kg (55 lb) of boneless meat (70%).
 - Cool it fast. Open the body, prop it open, get it in shade (Tip).
-- Notch your species licence right away (75%). Exact tag and transport steps: VERIFY in the synopsis.
+- Cancel (notch) your species licence immediately after the kill, before you handle the deer. Follow the steps printed on the licence (page 11 item 1) (99%).
+- Carry that species licence with the meat whenever you possess or transport it (page 15) (99%).
+- Leave [[Evidence of sex]] naturally attached: the unskinned tail, plus a testicle or part of the penis for a buck (page 15) (99%).
 
 ## Beginner mistakes
 
@@ -280,7 +288,7 @@ Read my MU page in the Region 3 synopsis
 [
   {"q": "A deer bounces away with all 4 feet hitting the ground together. What is it?", "options": ["White tail", "Mule deer", "Elk"], "answer": 1, "why": "That bounce is called stotting. It is a mule deer trademark. White tails gallop with the tail up like a flag."},
   {"q": "When should you be on your glassing spot in late October?", "options": ["At 09:00 after the frost lifts", "About 45 minutes before legal light", "At noon when deer are bedded"], "answer": 1, "why": "The morning peak is about 04:00 to 09:00. Arrive early, in the dark, and be still when light comes."},
-  {"q": "In a 4 point season, which buck is legal?", "options": ["3 tines plus a brow tine on one side", "4 tines on one antler, not counting the brow tine", "Any buck with 4 points total on both antlers"], "answer": 1, "why": "The brow tine does not count. You need 4 or more tines on one antler, each at least 2.5 cm. VERIFY your MU rules in the synopsis."},
+  {"q": "In a 4 point season, which buck is legal?", "options": ["3 tines plus a brow tine on one side", "4 tines on one antler, not counting the brow tine", "Any buck with 4 points total on both antlers"], "answer": 1, "why": "The brow tine does not count. You need 4 or more tines on one antler, each at least 2.5 cm long and longer than it is wide (synopsis pages 3 and 4). In MU 3-27 and 3-28 the 4 point rule applies 10 to 30 September and 1 November to 10 December (page 34)."},
   {"q": "What mostly triggers mule deer to move down to winter range?", "options": ["The rut", "Snow and cold", "Hunting pressure on opening day"], "answer": 1, "why": "Studies show snow and cold drive the move. The rut comes later, mid November."},
   {"q": "What do mule deer near Kamloops mostly eat in fall?", "options": ["Mostly grass", "Shrubs and forbs, little grass", "Only Douglas fir"], "answer": 1, "why": "A Kamloops stomach study found grass under 10% until spring. Fall diet is forbs and shrub browse."}
 ]
