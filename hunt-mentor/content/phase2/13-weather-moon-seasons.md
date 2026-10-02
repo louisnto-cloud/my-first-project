@@ -19,7 +19,7 @@ checked: 2026-10-02
 
 - Snow and cold, not the rut, trigger mule deer migration to [[Winter range]] (85%, Monteith 2011, via Hunt Mentor research notes).
 - In the BC Wildlife Federation mule deer study, most collared deer migrated and returned to winter range in October to November (85%, SIMDeer, search preview).
-- Deer avoid snow deeper than about 50 cm (80%, UBC thesis via research notes).
+- Deer avoid snow deeper than about 50 cm (80%, University of British Columbia thesis via research notes).
 - Fresh snow shows you tracks: you learn what moved last night, and how fresh (Tip). See Snow tracking.
 - First real cold snap of the fall: glass lower slopes and south faces (Tip).
 - Deer reduce movement during an actual storm (80%, Penn State Deer Forest Study).
@@ -90,7 +90,7 @@ Phone and power bank charged, offline maps downloaded
 
 - [Penn State Deer Forest Study: Spidey sense](https://www.deer.psu.edu/spidey-sense/), read directly, checked 2026-10-02: 30 storms, collared does, quote (80%).
 - [Penn State Deer Forest Study: Cold, wet winds of change](https://www.deer.psu.edu/cold-wet-winds-of-change/), read directly, checked 2026-10-02: preliminary only, bucks and rain (65%).
-- [MeatEater: New research confirms the moon does not affect deer movement](https://www.themeateater.com/wired-to-hunt/whitetail-hunting/new-research-confirms-the-moon-doesnt-affect-deer-movement), read directly, checked 2026-10-02: MSU Deer Lab, Neary, Resop, Demarais, Strickland, 48 bucks (75%).
+- [MeatEater: New research confirms the moon does not affect deer movement](https://www.themeateater.com/wired-to-hunt/whitetail-hunting/new-research-confirms-the-moon-doesnt-affect-deer-movement), read directly, checked 2026-10-02: Mississippi State University (MSU) Deer Lab, Neary, Resop, Demarais, Strickland, 48 bucks (75%).
 - [OSTI: Measuring fine scale white tailed deer movements using GPS collars](https://www.osti.gov/etdeweb/biblio/21387589), checked 2026-10-02 (search preview, 65%).
 - [Goethlich thesis, Auburn University: abiotic factors and deer activity in South Carolina](https://etd.auburn.edu/bitstream/handle/10415/7077/Goethlich_Thesis.pdf?sequence=2), checked 2026-10-02 (search preview, 65%).
 - [Mossy Oak: Barometric pressure and whitetail movement](https://www.mossyoak.com/our-obsession/blogs/deer/barometric-pressures-influence-on-whitetail-movement-4), checked 2026-10-02 (search preview): MSU Oklahoma study, temperature (65%).

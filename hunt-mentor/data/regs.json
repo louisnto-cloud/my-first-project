@@ -1,7 +1,7 @@
 {
   "edition": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028 (in force 1 July 2026 to 30 June 2028)",
-  "lastChecked": "2026-10-01",
-  "note": "Values marked from search extracts were read in search previews of official pages, not the full page. They are capped at 85% until the full source is read. Blank values are VERIFY.",
+  "lastChecked": "2026-10-02",
+  "note": "Rows marked \"read directly\" come from the official 2026 to 2028 synopsis PDF or the federal regulation text. Rows still marked search preview are capped at 85%. Blank values are VERIFY.",
   "links": [
     {
       "name": "BC Hunting and Trapping Regulations Synopsis",
@@ -32,14 +32,14 @@
     "bigGame": {
       "beforeSunriseMin": 60,
       "afterSunsetMin": 60,
-      "certainty": 80,
-      "text": "No hunting from 1 hour after sunset to 1 hour before sunrise. Applies to big game and upland birds (all wildlife except migratory game birds)."
+      "certainty": 99,
+      "text": "No hunting game (except migratory birds) from 1 hour after sunset to 1 hour before sunrise. Synopsis page 12, item 37."
     },
     "migratory": {
       "beforeSunriseMin": 30,
       "afterSunsetMin": 30,
-      "certainty": 85,
-      "text": "Ducks and geese: half an hour before sunrise to half an hour after sunset (south of 60 degrees north)."
+      "certainty": 99,
+      "text": "Ducks and geese: half an hour before sunrise to half an hour after sunset (south of 60 degrees north). Migratory Birds Regulations, 2022, s.28."
     }
   },
   "items": [
@@ -67,12 +67,13 @@
       "group": "licence",
       "key": "huntlic",
       "label": "Resident hunting licence",
-      "value": "$25 + $7 surcharge. Electronic only. Bought in WILD online or at Service BC / FrontCounter BC.",
-      "note": "GST: VERIFY at checkout.",
-      "certainty": 80,
-      "source": "BC hunting licences page (search extract)",
-      "url": "https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/hunting-licences",
-      "checked": "2026-10-01"
+      "value": "$32 (includes surcharge, not GST). Expires 31 March each year.",
+      "note": "",
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf",
+      "checked": "2026-10-02",
+      "page": "page 8"
     },
     {
       "group": "licence",
@@ -88,21 +89,23 @@
       "group": "licence",
       "key": "muledeer",
       "label": "Mule deer species licence",
-      "value": "$12 + $3 surcharge",
-      "certainty": 80,
-      "source": "BC species licences page (search extract)",
-      "url": "https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/species-licences",
-      "checked": "2026-10-01"
+      "value": "$15 deer species licence (mule deer)",
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf",
+      "checked": "2026-10-02",
+      "page": "page 8"
     },
     {
       "group": "licence",
       "key": "wtdeer",
       "label": "White tailed deer species licence",
-      "value": "$12 + $3 surcharge",
-      "certainty": 80,
-      "source": "BC species licences page (search extract)",
-      "url": "https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/species-licences",
-      "checked": "2026-10-01"
+      "value": "$15 deer species licence (white tailed deer)",
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf",
+      "checked": "2026-10-02",
+      "page": "page 8"
     },
     {
       "group": "licence",
@@ -118,21 +121,24 @@
       "group": "licence",
       "key": "wait",
       "label": "Waiting period after buying",
-      "value": "",
-      "note": "A 2 day waiting period exists for some species. Does it cover deer? VERIFY.",
-      "certainty": 50,
-      "source": "BC species licences page",
-      "checked": "2026-10-01"
+      "value": "No wait for deer, moose, elk or black bear. A 2 day wait applies only to bobcat, caribou, cougar, lynx, mountain goat, mountain sheep and wolverine.",
+      "note": "",
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+      "checked": "2026-10-02",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf",
+      "page": "page 8"
     },
     {
       "group": "licence",
       "key": "upland",
       "label": "Quail and grouse licence (residents)",
-      "value": "No species licence. BC hunting licence only.",
-      "certainty": 80,
-      "source": "BC species licences page (search extract)",
-      "url": "https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/species-licences",
-      "checked": "2026-10-01"
+      "value": "No species licence for residents. BC hunting licence only.",
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf",
+      "checked": "2026-10-02",
+      "page": "page 8"
     },
     {
       "group": "migratory",
@@ -149,10 +155,11 @@
       "key": "dwelling",
       "label": "Shooting near buildings",
       "value": "No hunting or shooting within 100 m of a church, school, playground, regional park, or a dwelling house or farm or ranch building occupied by people or domestic animals. The owner exemption covers slaughtering livestock only, not hunting.",
-      "certainty": 85,
-      "source": "BC synopsis 2026 to 2028 and B.C. Reg. 190/84 (search preview)",
-      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_01",
-      "checked": "2026-10-01"
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf",
+      "checked": "2026-10-02",
+      "page": "page 10"
     },
     {
       "group": "safety",
@@ -168,52 +175,60 @@
       "group": "deerR3",
       "key": "r3bag",
       "label": "Region 3 deer bag limit",
-      "value": "",
-      "note": "Search extract says 3 combined (1 mule deer, 2 white tailed). VERIFY in Region 3 synopsis.",
-      "certainty": 60,
-      "source": "Region 3 synopsis (search extract)",
+      "value": "Deer: 3 total. Mule deer 1. White tailed deer 2, either sex. Antlerless mule deer: LEH only. Your 1 mule deer buck counts across Regions 3 to 8 combined.",
+      "note": "",
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
       "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
-      "checked": "2026-10-01"
+      "checked": "2026-10-02",
+      "page": "pages 14 and 33"
     },
     {
       "group": "deerR3",
       "key": "r3mu",
       "label": "MU (Management Unit) for Heffley Creek and Sun Peaks",
-      "value": "",
-      "note": "VERIFY on official MU map.",
-      "certainty": 0,
-      "source": "Region 3 synopsis map",
-      "checked": "2026-10-01"
+      "value": "Sun Peaks, Heffley Lake and Paul Lake: MU 3-27. Heffley Creek, highway side of the North Thompson: MU 3-27 (85%). West bank: MU 3-28.",
+      "note": "Check your exact spot: gov.bc.ca/WildlifeManagementUnits",
+      "certainty": 95,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly), Region 3 map",
+      "checked": "2026-10-02",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
+      "page": "page 32"
     },
     {
       "group": "deerR3",
       "key": "r3mule",
       "label": "Region 3 mule deer season (your MU)",
-      "value": "",
-      "note": "VERIFY dates and antler rules.",
-      "certainty": 0,
-      "source": "Region 3 synopsis",
-      "checked": "2026-10-01"
+      "value": "MU 3-27 and 3-28: 4 point bucks 10 to 30 Sept. ANY buck 1 to 31 Oct. 4 point bucks 1 Nov to 10 Dec. Antlerless: LEH only.",
+      "note": "",
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+      "checked": "2026-10-02",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
+      "page": "page 34"
     },
     {
       "group": "quail",
       "key": "r8quail",
       "label": "Region 8 California quail",
-      "value": "1 Oct to 30 Nov. Daily bag 10, possession 30. MUs 8-1 to 8-15 and 8-21 to 8-26.",
-      "certainty": 70,
-      "source": "Region 8 synopsis (search extract)",
+      "value": "California quail, Region 8 MUs 8-1 to 8-15 and 8-21 to 8-26: 1 Oct to 30 Nov. Daily 10, possession 30.",
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
       "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-8-okanagan.pdf",
-      "checked": "2026-10-01"
+      "checked": "2026-10-02",
+      "page": "page 68"
     },
     {
       "group": "quail",
       "key": "r3quail",
       "label": "Region 3 California quail",
-      "value": "",
-      "note": "Is there a season near Heffley Creek? VERIFY.",
-      "certainty": 0,
-      "source": "Region 3 synopsis",
-      "checked": "2026-10-01"
+      "value": "No quail season in Region 3 (no row in the season table).",
+      "note": "",
+      "certainty": 95,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+      "checked": "2026-10-02",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
+      "page": "page 34"
     },
     {
       "group": "safety",
@@ -240,53 +255,110 @@
       "group": "migratory",
       "key": "ducksR3",
       "label": "Duck season near Kamloops",
-      "value": "",
-      "note": "Search previews gave 3 different date ranges. VERIFY in the ECCC BC summary for your district.",
-      "certainty": 0,
-      "source": "ECCC BC summary",
-      "url": "https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html",
-      "checked": "2026-10-01"
+      "value": "District No. 3 (Kamloops area, MUs 3-12 to 3-20, 3-26 to 3-44): ducks 8 Sept to 23 Dec.",
+      "note": "",
+      "certainty": 99,
+      "source": "Migratory Birds Regulations, 2022, Schedule 3 Part 10 Table 1 item 3",
+      "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",
+      "checked": "2026-10-02"
     },
     {
       "group": "migratory",
       "key": "duckbag",
       "label": "Duck daily bag (BC)",
-      "value": "8 ducks a day; at most 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins. Possession 24.",
-      "note": "VERIFY for your district.",
-      "certainty": 70,
-      "source": "ECCC BC summary (search preview)",
-      "url": "https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html",
-      "checked": "2026-10-01"
+      "value": "8 ducks a day (possession 24). Inside the 8: pintail 4, canvasback 4, goldeneye 2, harlequin 2.",
+      "note": "",
+      "certainty": 99,
+      "source": "Migratory Birds Regulations, 2022; BC Synopsis page 12",
+      "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",
+      "checked": "2026-10-02"
     },
     {
       "group": "migratory",
       "key": "plug",
       "label": "Shotgun for ducks",
       "value": "10 gauge or smaller, max 3 shells (chamber + magazine) with a plug that needs disassembly to remove. Non toxic shot only.",
-      "certainty": 85,
-      "source": "Migratory Birds Regulations, 2022 (search preview)",
+      "certainty": 99,
+      "source": "Migratory Birds Regulations, 2022, s.37 and s.38",
       "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",
-      "checked": "2026-10-01"
+      "checked": "2026-10-02"
     },
     {
       "group": "migratory",
       "key": "boat",
       "label": "Ducks from a boat",
       "value": "No hunting migratory birds from a boat moving under motor or sail. Beached, anchored or tied to a fixed blind is OK. A motorboat may be used to retrieve birds.",
-      "certainty": 80,
-      "source": "Migratory Birds Regulations, 2022 s.41; BC synopsis (search preview)",
+      "certainty": 99,
+      "source": "Migratory Birds Regulations, 2022, s.41; BC Synopsis page 11 item 23",
       "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",
-      "checked": "2026-10-01"
+      "checked": "2026-10-02"
     },
     {
       "group": "quail",
       "key": "chukar",
       "label": "Chukar (Regions 3 and 8)",
-      "value": "",
-      "note": "Preview suggests 1 Oct to 30 Nov, bag 5. VERIFY both regions.",
-      "certainty": 60,
-      "source": "Synopsis (search preview)",
-      "checked": "2026-10-01"
+      "value": "Regions 3 and 8: 1 Oct to 30 Nov. Daily 5, possession 15.",
+      "note": "",
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+      "checked": "2026-10-02",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
+      "page": "Region 3 page 34, Region 8 page 68"
+    },
+    {
+      "group": "deerR3",
+      "key": "r3wt",
+      "label": "Region 3 white tailed deer (MU 3-27, 3-28)",
+      "value": "Bucks 10 Sept to 10 Dec. Antlerless (does) 10 to 31 Oct, no draw. Bow only, either sex 11 to 20 Dec.",
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
+      "page": "page 34",
+      "checked": "2026-10-02"
+    },
+    {
+      "group": "deerR3",
+      "key": "r3bear",
+      "label": "Region 3 black bear",
+      "value": "1 Sept to 30 Nov and 1 Apr to 30 June. Bag 2. Never a bear under 2 years or any bear with it.",
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
+      "page": "page 34",
+      "checked": "2026-10-02"
+    },
+    {
+      "group": "deerR3",
+      "key": "r3moose",
+      "label": "Moose near Heffley Creek (MU 3-27, 3-28)",
+      "value": "Spike fork bulls only, 1 to 15 Nov. Bag 1. Mandatory Hunter Report by 31 March.",
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
+      "page": "page 34",
+      "checked": "2026-10-02"
+    },
+    {
+      "group": "deerR3",
+      "key": "r3elk",
+      "label": "Elk in Region 3",
+      "value": "No general open season. LEH draw only.",
+      "certainty": 95,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
+      "page": "page 34",
+      "checked": "2026-10-02"
+    },
+    {
+      "group": "quail",
+      "key": "r3grouse",
+      "label": "Region 3 grouse (dusky, ruffed, spruce)",
+      "value": "10 Sept to 30 Nov. 5 of each a day, 10 total (possession 3 times). .22 rimfire is legal for grouse.",
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
+      "page": "page 34 and page 13",
+      "checked": "2026-10-02"
     }
   ]
 }

@@ -128,3 +128,25 @@
 - **Colour phase**: A coat colour variation within one species. Black bears can be black, brown, cinnamon or blond.
 - **Grizzly bear**: The large brown bear with a shoulder hump and dished face. No open season in BC (98%).
 - **Trichinosis**: A parasitic worm disease from undercooked meat, bear meat above all. Cook bear to 71 C (160 F) (80%).
+- **Speculum**: The coloured patch on the back edge of a duck's wing. The steadiest ID mark.
+- **Eclipse plumage**: The drab, hen like feathers a drake wears after breeding. Some keep it into fall.
+- **Restricted species**: Ducks with their own smaller daily limit inside the 8: pintail 4, canvasback 4, goldeneye 2, harlequin 2 (99%).
+- **Aggregate bag limit**: One limit shared by several species counted together.
+- **Possession limit**: The most you may hold at any time, home included, until birds are preserved. For migratory birds, 3 times the daily limit (99%).
+- **District**: A federal migratory bird hunting area made of listed MUs. District No. 3 covers Kamloops (99%).
+- **Cackling goose**: A small Arctic goose that looks like a mini Canada goose. Counted with Canada geese (99%).
+- **Franklin's grouse**: The southern BC form of the spruce grouse.
+- **Blue grouse**: Old name for the dusky grouse (Interior) and sooty grouse (coast).
+- **Rimfire**: A cartridge fired by striking its rim, like the .22 LR. Among birds, legal only for grouse, ptarmigan and turkey (99%).
+- **Centrefire**: A cartridge with a central primer, like the .308.
+- **Huns**: Hunter name for grey (Hungarian) partridge.
+- **Initiation Hunting Licence**: A once in a lifetime $19 licence for a BC resident 18 or older who never held a BC hunting licence. Must be supervised at all times (99%).
+- **Youth Hunting Licence**: A $7 licence for ages 10 to under 18, with close supervision (99%).
+- **Supervising hunter**: An adult who meets the synopsis rules and stays with a youth or initiation hunter.
+- **Bench**: A flat step on a slope where deer often bed or feed.
+- **Aspect**: The compass direction a slope faces.
+- **Glassing point**: A spot with a wide view used to scan a bench or slope with binoculars.
+- **Edge**: The line where two kinds of cover meet, such as timber and open ground.
+- **Cold front**: The leading edge of colder air, often with wind and a pressure change.
+- **Hunting pressure**: How many hunters use an area. Pushes deer into cover and into night movement.
+- **Furbearer**: An animal trapped for fur, such as beaver, marten or mink.

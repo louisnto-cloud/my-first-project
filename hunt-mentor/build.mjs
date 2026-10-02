@@ -195,7 +195,7 @@ function lint(sessions) {
     const rel = path.relative(ROOT, f);
     fs.readFileSync(f, 'utf8').split('\n').forEach((l, n) => {
       if (/^---$/.test(l) || /^\|[-| :]+\|$/.test(l) || l.startsWith('```')) return;
-      const prose = l.replace(/\]\([^)]*\)/g, ']').replace(/https?:\/\/\S+/g, '').replace(/`[^`]*`/g, '').replace(/\{[^}]*\}/g, '');
+      const prose = l.replace(/\]\([^)]*\)/g, ']').replace(/https?:\/\/\S+/g, '').replace(/`[^`]*`/g, '').replace(/\{[^}]*\}/g, '').replace(/"[^"]*"/g, '');
       if (/—/.test(prose)) problems.push(`${rel}:${n + 1} em dash`);
       if (/[A-Za-z]-[A-Za-z]/.test(prose) && !/^\s*"/.test(l) && !/^(id|phase|num|minutes|title|checked):/.test(l)) problems.push(`${rel}:${n + 1} hyphen: ${prose.match(/\S*[A-Za-z]-[A-Za-z]\S*/)[0]}`);
     });
