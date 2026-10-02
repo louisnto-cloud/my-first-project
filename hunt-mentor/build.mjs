@@ -128,6 +128,17 @@ function fenced(kind, arg, body, ctx) {
     if (!ph || !fs.existsSync(path.join(ROOT, 'photos', `${id}.jpg`))) { ctx.missingPhotos.push(id); return `<p class="verify">Photo missing: ${esc(id)}</p>`; }
     return photoFigure(ph, rest.join(' ') || body.trim() || ph.caption);
   }
+  if (kind === 'gallery') {
+    // ```gallery id id ...``` and/or one "id | caption" per line -> grid of credited photos
+    const specs = [...arg.split(/\s+/).filter(Boolean).map((id) => ({ id })),
+      ...body.split('\n').map((l) => l.trim()).filter(Boolean).map((l) => { const [id, ...c] = l.split('|'); return { id: id.trim(), caption: c.join('|').trim() }; })];
+    const figs = specs.map(({ id, caption }) => {
+      const ph = PHOTOS[id];
+      if (!ph || !fs.existsSync(path.join(ROOT, 'photos', `${id}.jpg`))) { ctx.missingPhotos.push(id); return `<p class="verify">Photo missing: ${esc(id)}</p>`; }
+      return photoFigure(ph, caption || ph.caption);
+    });
+    return `<div class="gallery">${figs.join('')}</div>`;
+  }
   if (kind === 'regs') {
     // ```regs key  -> rendered from data/regs.json at runtime
     return `<div class="regs" data-regs="${arg}"></div>`;
@@ -169,7 +180,7 @@ function screenUnits(md) {
     if (fence) {
       const ls = [lines[i++]]; while (i < lines.length && !lines[i].startsWith('```')) ls.push(lines[i++]); if (i < lines.length) ls.push(lines[i++]);
       const k = fence[1] || '';
-      const w = k === 'quiz' ? 0 : k === 'diagram' ? 50 : k === 'photo' ? 40 : k === 'checklist' ? ls.length * 8 : k === 'regs' ? 60 : 40;
+      const w = k === 'quiz' ? 0 : k === 'diagram' ? 50 : k === 'photo' ? 40 : k === 'gallery' ? 90 : k === 'checklist' ? ls.length * 8 : k === 'regs' ? 60 : 40;
       push(ls, w); continue;
     }
     if (/^#{3,4}\s/.test(l)) { push([lines[i++]], 2, true); continue; }

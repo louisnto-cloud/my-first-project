@@ -18,12 +18,27 @@ checked: 2026-10-01
 
 ## Four sheep, two species
 
+```photo bighorn-ram-full-curl
+```
+
 - **Bighorn:** brown or grey coat, white rump patch, massive brown horns that curl close to the face, often blunt (broomed) at the tips (85%).
 - **Rocky Mountain bighorn:** the East Kootenay and the Rockies south of the Peace River (85%). Rams about 100 cm at the shoulder, 90 to 135 kg (85%).
 - **California bighorn:** slightly smaller and darker, horns flare out more. Dry canyons and grass slopes of the Okanagan, Thompson, Fraser and Chilcotin (85%).
+
+```photo stones-sheep-ram
+```
+
 - **Thinhorn:** slimmer, sharper horns that flare wide. Rams up to 110 kg, horns up to 122 cm (85%).
 - **Stone's sheep:** dark grey to almost black. Northern BC from the Stikine east through the Cassiar, Omineca and Muskwa ranges (85%). Over 90% of the world's Stone's sheep live in BC (85%).
+
+```photo dalls-sheep-ram
+```
+
 - **Dall's sheep:** pure white, golden yellow horns. Only the far northwest corner, Tatshenshini and Atlin country (85%).
+
+```photo bighorn-ewe
+```
+
 - **Ewes:** short, slightly curved horns, about 25 to 30 cm. Yearling rams look like ewes (85%).
 - Horns grow for life. Each winter leaves a ring (**annulus**). Count rings for age, but "false" rings can fool you (85%).
 
@@ -52,6 +67,9 @@ checked: 2026-10-01
 
 - The synopsis adds: do not use horn rings to age a ram in the field, because false rings may be present (98%).
 - The skull test at inspection uses the back edge of the eye socket, so a ram that looks borderline alive can fail on the table (95%).
+
+```photo stones-sheep-young-ram
+```
 
 > [!tip]
 > A ram that is "just legal" in your spotting scope is not legal. Wait for one that is legal from every angle, with daylight to spare.

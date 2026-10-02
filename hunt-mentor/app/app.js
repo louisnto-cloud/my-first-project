@@ -20,7 +20,7 @@
   const sessions = HM.sessions;
   const byId = Object.fromEntries(sessions.map((s) => [s.id, s]));
   const phases = [...new Set(sessions.map((s) => s.phase))];
-  const phaseNames = { 1: 'Fast Start', 2: 'Foundations', 3: 'Reading the Land', 4: 'Species', 5: 'The Shot and After', 6: 'Mastery' };
+  const phaseNames = { 1: 'Fast Start', 2: 'Foundations', 3: 'Reading the Land', 4: 'Species', 5: 'The Shot and After', 6: 'Mastery', 7: 'Rule Book' };
   const setTitle = (t) => { $('#top-title').textContent = t; };
   const tab = (name) => document.querySelectorAll('.tabs a').forEach((a) => a.classList.toggle('on', a.dataset.tab === name));
   const firstHunt = () => S.settings.firstHunt || HM.field.defaults.firstHunt;

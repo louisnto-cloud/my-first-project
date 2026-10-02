@@ -1,0 +1,60 @@
+# Hunt Mentor: watch the official BC hunting regulations for changes.
+# Weekly: download the synopsis PDF and the corrections page, compare with the stored copy,
+# and open an issue with the differences when anything changed.
+name: Hunt Mentor regs watch
+on:
+  schedule:
+    - cron: '23 15 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pdftotext
+        run: sudo apt-get update -q && sudo apt-get install -y -q poppler-utils
+      - name: Download the official sources
+        run: |
+          set -e
+          mkdir -p /tmp/w
+          UA="HuntMentorRegsWatch/1.0 (personal study app)"
+          curl -sSL -A "$UA" -o /tmp/w/synopsis.pdf "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf"
+          curl -sSL -A "$UA" -o /tmp/w/corrections.html "https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/regulations-synopsis"
+          pdftotext -layout /tmp/w/synopsis.pdf /tmp/w/synopsis.txt
+          sed -e 's/<script[^>]*>.*<\/script>//g' -e 's/<[^>]*>/ /g' /tmp/w/corrections.html | tr -s ' \n' > /tmp/w/corrections.txt
+      - name: Compare with the stored copy
+        id: cmp
+        run: |
+          set -e
+          mkdir -p hunt-mentor/regs-src
+          changed=0
+          for f in synopsis.txt corrections.txt; do
+            if [ ! -f hunt-mentor/regs-src/$f ] || ! diff -q <(tr -s ' \n' < hunt-mentor/regs-src/$f) <(tr -s ' \n' < /tmp/w/$f) > /dev/null; then
+              changed=1
+              diff <(tr -s ' \n' < hunt-mentor/regs-src/$f 2>/dev/null || true) <(tr -s ' \n' < /tmp/w/$f) | head -400 > /tmp/w/$f.diff || true
+            fi
+          done
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+          date -u +%Y-%m-%d > /tmp/w/checked
+      - name: Record the check and open an issue when something changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          cp /tmp/w/synopsis.txt /tmp/w/corrections.txt hunt-mentor/regs-src/
+          sha=$(sha256sum /tmp/w/synopsis.pdf | cut -c1-64)
+          printf '{"lastChecked":"%s","synopsisSha256":"%s","changed":%s}\n' "$(cat /tmp/w/checked)" "$sha" "${{ steps.cmp.outputs.changed }}" > hunt-mentor/regs-src/watch.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hunt-mentor/regs-src
+          git commit -q -m "Regs watch: checked $(cat /tmp/w/checked), changed=${{ steps.cmp.outputs.changed }}" || true
+          git push || true
+          if [ "${{ steps.cmp.outputs.changed }}" = "1" ]; then
+            { echo "The official BC hunting regulations changed since the last check."; echo;
+              for f in synopsis.txt corrections.txt; do if [ -f /tmp/w/$f.diff ]; then echo "## $f"; echo '```'; cat /tmp/w/$f.diff; echo '```'; fi; done;
+              echo; echo "Next step: open Hunt Mentor in Claude Code and ask it to update the app to the new edition."; } > /tmp/w/body.md
+            gh issue create --title "Hunting regulations changed: update Hunt Mentor ($(cat /tmp/w/checked))" --body-file /tmp/w/body.md --label "regs" || gh issue create --title "Hunting regulations changed: update Hunt Mentor ($(cat /tmp/w/checked))" --body-file /tmp/w/body.md
+          fi

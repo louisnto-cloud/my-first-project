@@ -21,9 +21,16 @@ checked: 2026-10-01
 ```diagram goat-sex
 ```
 
+```photo mountain-goat-billy
+```
+
 - Both sexes are white with black, dagger like horns up to 30 cm long, never shed (85%).
 - **Billies:** 70 to 120 kg on average. Horns thicker at the base, curving evenly along the whole length (85%).
 - **Nannies:** 55 to 75 kg. Horns more slender at the base and a bit more curved toward the tip (85%).
+
+```photo mountain-goat-nanny-kid
+```
+
 - **Behaviour is the best clue:** lone adults and groups of 2 or 3 with no kids or yearlings are usually billies (85%).
 - A group with kids (under 1 year) or yearlings is almost certainly nannies, except in the mating season, about mid October to late November (85%).
 - A **kid** in law is a goat with horns under 10 cm (98%).

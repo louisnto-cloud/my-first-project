@@ -79,3 +79,22 @@ Why it matters, key points, diagram where it helps, Grandpa's rule, common mista
   Optional caption override after the id on the same line. The build adds the credit line automatically.
 - Look at every photo with the Read tool before using it: right species, right sex or age for the caption, clear and in focus, animal fills the frame, no captions burned into the image, no obvious captive setting unless the caption says so.
 - Photos are illustrations. ID clues in the text stay the source of truth.
+
+- Gallery (several photos on one screen, 2 per row). Put ids on the first line, or one `id | caption` per line:
+````
+```gallery
+mule-deer-buck | Buck, side view. Note the forked antlers.
+mule-deer-doe | Doe, front view. Big ears, black tipped tail.
+```
+````
+  A gallery counts as most of a screen. Put 2 to 6 photos in one, then start a new `## ` screen.
+- Habitat and sign photos count too: the plants deer browse, the slough a mallard lands on, a track in mud, a rub, a bed. Caption what to look at, in plain words.
+
+## Rule Book sessions (phase 7, added 2026-10-02)
+- Purpose: the app carries the rules themselves. Never write "check the synopsis", "see the regulations" or "refer to the book" in place of content. Give the rule, then the source.
+- Source: the official synopsis, 2 October 2026 edition (printed page = PDF page minus 2). Cite like "(99%, page 11, 2 October 2026 edition)". Rules from other official texts: cite the section.
+- Exact official wording goes in a `> [!law]` callout, in quotation marks, verbatim. Follow it with one plain English line.
+- Season tables: Markdown tables with columns Species | MUs | Class | Season | Notes, one table per species. Bag limits in a separate table. Check every cell against the page image (make one with `pdftoppm -r 110 -f N -l N file.pdf out`) and the page text. A cell you cannot read: write VERIFY, never guess.
+- Maps: name the map (Map C7) and give its boundary in the synopsis words. Never invent a boundary.
+- Screen 1 of every rule book session starts with `> [!warn] Study aid only. The official regulations are the law.` and the edition date.
+- Certainty: 99% for a direct read, 85 to 95% for your reading of a rule (say "my reading").
