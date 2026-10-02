@@ -55,7 +55,7 @@ checked: 2026-10-02
 - **ATV (all terrain vehicle):** same rule. In the synopsis an ATV is a motor vehicle. Unload before you get on (99%).
 - Engine off is not enough: the rule covers a loaded firearm in or on the vehicle, running or not (95%). Get off the [[ATV]], step away, then load. Tip.
 - Federal rules also say load, or handle a loaded firearm, only where you may lawfully shoot (99%).
-- **No shooting wildlife from a motor vehicle or a boat propelled by a motor** (99%).
+- **No hunting wildlife from a motor vehicle** (99%, page 11 item 22). **No hunting game from a boat unless it is not being propelled by a motor** (99%, item 23, 2 October 2026 edition).
 - The 10 ft boat with motor: no shooting wildlife while the motor drives it (99%). Since 1 October 2026, shooting while the motor is not driving it is exempt, when hunting or retrieving game (99%).
 - Never shoot a deer while it swims, unless it is already wounded (99%). Tip: no deer from the boat.
 - Kayak: no motor, so the motorboat rule does not apply (95%). Ducks: see the duck screen.

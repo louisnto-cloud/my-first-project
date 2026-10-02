@@ -62,7 +62,7 @@
 - **Record of Receipt**: A written note that must go with game carried by someone other than the hunter who killed it.
 - **Evidence of sex**: The body part that must stay naturally attached to show if the animal was male or female.
 - **Edible portions**: Meat you must not waste. Big game (not wolf, lynx, bobcat or wolverine): the neck, ribs, all 4 quarters and the loins. Game birds: both breasts (99%, synopsis page 3, read 2026-10-02).
-- **Loaded**: In BC, a firearm with live ammunition in the breech (chamber) or in the magazine. A clip with live rounds counts as the magazine once it is attached to the firearm (99%, synopsis page 3, read 2026-10-02).
+- **Loaded**: In BC, a firearm with ammunition in the breech or firing chamber, in a fixed magazine inside it, in a magazine on a hinged floor plate, or in a detachable magazine that is inside or attached to it. It counts as loaded even if it cannot fire for the moment (99%, synopsis page 3, 2 October 2026 edition).
 - **Road allowance**: The strip along every numbered highway and every 2 lane or wider public road maintained by the Ministry of Transportation and Infrastructure, the federal government or another province. No hunting or shooting in it, and no shooting across it (99%). It runs 15 m either side of the middle of a road under 3 lanes, 15 m from the paved edge of a wider highway, or to the edge of private or cultivated land, whichever comes first (99%). Synopsis page 10, read 2026-10-02. See the BC rules session.
 - **No Shooting Area**: A mapped area where firing a firearm is banned.
 - **Motor Vehicle Closed Area**: An area where some or all motor vehicles are banned.
@@ -83,7 +83,7 @@
 - **Landing zone**: The open water in a decoy spread where you want ducks to land.
 - **Steel shot**: Non toxic shotgun pellets made of steel. Legal for ducks.
 - **Choke**: The narrowing at the end of a shotgun barrel that controls the spread of shot. Must be rated for steel to shoot steel.
-- **Power boat**: An old BC definition (synopsis page 4): a boat with a motor ready to use, with a tilted motor not counting. Repealed 1 October 2026 by B.C. Reg. 66/2026 (99%). The duck rule now reads like the federal one: no hunting from a moving boat that has a motor or sail, and a boat still gliding from its motor counts as moving (99%). Read 2026-10-02.
+- **Power boat**: An old BC definition (July 2026 synopsis, page 4): a boat with a motor ready to use, with a tilted motor not counting. Repealed 1 October 2026 by B.C. Reg. 66/2026 and gone from the 2 October 2026 synopsis edition (99%). The duck rule now reads like the federal one: no hunting from a moving boat that has a motor or sail, and a boat still gliding from its motor counts as moving (99%). Read 2026-10-02.
 - **Covey**: A fall or winter flock of quail.
 - **ORV**: Off Road Vehicle. An ATV, dirt bike or side by side under BC law.
 - **Cultivated land**: Farmed land, orchards included. You need permission to hunt it.

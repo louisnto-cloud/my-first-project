@@ -63,12 +63,12 @@ checked: 2026-10-01
 ## Firearms on the quad
 
 > [!law]
-> Synopsis page 11, number 27, exact words (98%): "To discharge, carry or have in possession a firearm containing live ammunition in its breech or in its magazine attached to the firearm, in or on a railway car, motor vehicle, sleigh, aircraft, bicycle or other conveyance."
+> Synopsis page 11, item 28 (2 October 2026 edition), exact words (99%): "To discharge, carry or have in possession a firearm containing live ammunition in its breech or in its magazine attached to the firearm, in or on a railway car, motor vehicle, sleigh, aircraft, bicycle or other conveyance."
 
 - An ATV is a motor vehicle under the synopsis definition (98%). Page 4.
 - [[Loaded]] in BC includes a loaded magazine clipped to the rifle (98%). Page 3. So: magazine out, chamber empty, before you touch the quad.
-- Number 22, page 11 (98%): "To shoot wildlife from a motor vehicle or a boat propelled by a motor." Never from the seat, never from the rack.
-- Number 24, page 11 (98%): no using a motor vehicle to herd or harass wildlife.
+- Item 22, page 11 (99%): "To hunt wildlife from a motor vehicle." Never from the seat, never from the rack.
+- Item 25, page 11 (99%): no using a motor vehicle, power boat or aircraft to herd or harass wildlife.
 - Get off, step away from the quad, then load. Engine off is not enough (85%). My reading of "in or on".
 - Tip: a padded rifle boot on the rack keeps dust out and the muzzle fixed. Bolt in your pocket on rough trails.
 
@@ -153,7 +153,7 @@ Is my ATV registered with ICBC? Plate on? If not, book the broker this week
 
 ```quiz
 [
-  {"q": "Rifle in the rack on the quad. Chamber empty, loaded magazine clipped in. Legal in BC?", "options": ["Yes, the chamber is empty", "No. A loaded magazine attached to the firearm makes it loaded, and a quad is a conveyance", "Yes if the engine is off"], "answer": 1, "why": "The synopsis defines loaded as live ammunition in the breech or the magazine. Number 27 bans a loaded firearm in or on a motor vehicle or other conveyance."},
+  {"q": "Rifle in the rack on the quad. Chamber empty, loaded magazine clipped in. Legal in BC?", "options": ["Yes, the chamber is empty", "No. A loaded magazine attached to the firearm makes it loaded, and a quad is a conveyance", "Yes if the engine is off"], "answer": 1, "why": "The synopsis (page 3, 2 October 2026 edition) defines loaded to include a detachable magazine attached to the firearm. Item 28 bans a loaded firearm in or on a motor vehicle or other conveyance."},
   {"q": "You ride an FSR to the trailhead. What must you have?", "options": ["Nothing, it is Crown land", "Registration copy, plate, helmet, driver's licence and $200,000 liability insurance", "Only a helmet"], "answer": 1, "why": "The ORV Act requires registration, plate and helmet on Crown land. On a Forest Service Road the synopsis adds a driver's licence and $200,000 third party liability insurance."},
   {"q": "Region 3, above 1,700 m, the trail fades into open meadow. What now?", "options": ["Ride across, it is open country", "Stop. Above 1,700 m vehicles may only use existing roads and trails", "Ride if nobody is around"], "answer": 1, "why": "Region 3 bans all motor vehicles except snowmobiles above 1,700 m except on existing roads and trails."},
   {"q": "How often do you pay the ICBC ORV registration fee?", "options": ["Every year", "Once, $48, as long as you own the quad", "Every time you cross a highway"], "answer": 1, "why": "ICBC says the combined plate and registration fee is a one time fee of $48, valid as long as the same person owns the vehicle."},

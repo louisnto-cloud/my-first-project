@@ -112,7 +112,7 @@ checked: 2026-10-01
 > "No person shall kill, cripple or wound game without making all reasonable effort to locate, dispatch, retrieve and include it in their bag limit" (95%).
 
 - The effort is the law. Walking away after 10 minutes is not reasonable effort (95%).
-- You may use a motorboat to retrieve a dead or injured animal (95%). Since 1 October 2026, every firearm aboard must be unloaded while the motor pushes the boat (95%). That is the Firearm Violence Prevention Act (FVPA) and its hunting exemption in B.C. Reg. 66/2026. The old synopsis page 12 line about power boats is older than this change (95%).
+- You may retrieve a dead or injured animal with a boat if nobody aboard has a loaded firearm, or if the boat is not being propelled by a motor (99%, synopsis page 12, 2 October 2026 edition). Since 1 October 2026 the Firearm Violence Prevention Act (FVPA) also bans a loaded firearm in a boat while the motor pushes it (95%).
 - Killed the wrong animal, or one by accident? Cancel the licence, write on it in ink that you intend to self report, and call RAPP (95%).
 - Unlawful: to kill or wound wildlife by accident "and fail to promptly report the killing to an Officer" (95%).
 

@@ -101,9 +101,9 @@ checked: 2026-10-02
 
 - Federal law, section 41: no hunting migratory birds "from or using a moving boat that is equipped with a motor or a sail" (99%).
 - A boat still drifting on the push from its motor or sail counts as moving (99%).
-- Fetching a bird you already shot is allowed from a moving boat (99%). BC synopsis, page 12: fetch with a power boat only if nobody in it has a loaded gun (99%).
-- BC synopsis, page 11, item 23: no hunting migratory birds from a power boat "unless the boat is beached, resting at anchor or fastened within or tied immediately alongside a fixed hunting blind" (99%).
-- New on 1 October 2026: BC changed its own rule to the federal wording and dropped the power boat definition with its tilted motor exception (95%). The printed synopsis still shows item 23 (99%).
+- Fetching a bird you already shot: BC synopsis page 12 (2 October 2026 edition) says you may retrieve a dead or injured bird with a boat if nobody aboard has a loaded firearm, or if the boat is not being propelled by a motor or sail (99%). Safest: everyone unloads before the motor starts, which the Firearm Violence Prevention Act requires anyway (95%).
+- BC synopsis, page 11, item 24 (2 October 2026 edition): unlawful "To hunt migratory birds from or by using a moving boat that is equipped with a motor or sail" (99%). Beached, anchored or tied off is not moving (95%).
+- This is new on 1 October 2026: BC dropped its old power boat rule and its tilted motor exception, and now matches the federal wording (99%, B.C. Reg. 66/2026). A boat still gliding from its motor counts as moving (99%).
 - Simple habit that obeys both: beached, anchored or tied to a fixed blind, motor off, then shoot (Tip).
 - Do not use a power boat to herd or harass ducks (99%).
 

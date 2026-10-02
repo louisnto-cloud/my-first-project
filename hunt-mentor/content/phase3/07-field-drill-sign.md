@@ -74,7 +74,7 @@ Water sign: tracks at a pond, seep or creek crossing
 - Hunting on cultivated land, or on Crown land under a grazing lease with livestock on it, needs the consent of the owner, lessee or occupant (95%). Synopsis page 12, item 53.
 - It is unlawful to intentionally bait or feed ungulates within 200 m of a dwelling, school yard or playground in Region 3 (95%). Region 3 synopsis page 33.
 - Discharge of firearms and bows is prohibited on the part of Lac du Bois Grasslands Protected Area and Crown land inside the City of Kamloops boundary (95%). Region 3 synopsis page 33.
-- A wireless camera for hunting is unlawful from 1 August to 10 December outside Region 1 (95%). Synopsis page 11, item 29. A drone on a hunting expedition is unlawful (95%). Item 35.
+- A wireless camera for hunting is unlawful from 1 August to 10 December outside Region 1 (99%). Synopsis page 11, item 30 (2 October 2026 edition). A drone on a hunting expedition is unlawful (99%). Item 36.
 
 > [!rule]
 > Look at the ground until the ground looks back. Then look up, because the deer already has.

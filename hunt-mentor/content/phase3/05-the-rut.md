@@ -98,7 +98,7 @@ checked: 2026-10-01
 
 - Electronic or recorded calls: unlawful except for wolf, coyote, cougar, lynx, bobcat and Schedule C birds (95%). Synopsis page 12, item 41.
 - Cervid parts and derivatives from outside BC: unlawful to use for hunting (item 51), and possession is limited (item 50) (95%). Synopsis page 12.
-- Hunting hours for game other than migratory birds: unlawful from one hour after sunset to one hour before sunrise (95%). Synopsis page 12, item 37. Rutting bucks move at night; you cannot.
+- Hunting hours for game other than migratory birds: unlawful from one hour after sunset to one hour before sunrise (99%). Synopsis page 11, item 38 (2 October 2026 edition). Rutting bucks move at night; you cannot.
 - Antler restricted seasons (spike fork moose, 6 point elk, 4 point deer): do not alter or tamper with antlers until the carcass reaches home, a meat cutter, cold storage, or compulsory inspection (95%). Synopsis page 12, item 54.
 - Hunting with a light or illuminating device is unlawful (95%). Synopsis page 12, item 38.
 

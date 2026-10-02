@@ -138,8 +138,8 @@ checked: 2026-10-01
 > Study aid only. The official regulations are the law.
 
 - Region 3: it is unlawful to intentionally bait or feed ungulates within 200 m of a dwelling, school yard or playground (95%). Synopsis, Region 3 pages, page 33.
-- Province wide: it is unlawful to use a wireless camera for the purposes of hunting from 1 August to 10 December, except in Region 1 (95%). Synopsis page 11, item 29. A normal trail camera with a memory card is not a wireless camera (85%, interpretation).
-- It is unlawful to operate or possess a drone on a hunting or trapping expedition (95%). Synopsis page 11, item 35.
+- Province wide: it is unlawful to use a wireless camera for the purposes of hunting from 1 August to 10 December, except in Region 1 (99%). Synopsis page 11, item 30 (2 October 2026 edition). A normal trail camera with a memory card is not a wireless camera (85%, interpretation).
+- It is unlawful to operate or possess a drone on a hunting or trapping expedition (99%). Synopsis page 11, item 36 (2 October 2026 edition).
 - Whatever the sign leads you to, the edible portions rule still applies to what you kill (95%). Synopsis page 12, item 44. See [After the shot](#/s/after-the-shot).
 
 > [!rule]

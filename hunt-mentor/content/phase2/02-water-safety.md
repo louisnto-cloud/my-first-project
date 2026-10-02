@@ -47,9 +47,9 @@ checked: 2026-10-02
 - Section 5 of the same Act: no shooting "in, on or from a vehicle or boat" (95%).
 - Hunting exemption, in force the same day: a loaded gun, and shooting, are allowed in a boat with no motor, or in a motor boat while the motor is not propelling it, when you are hunting or retrieving wildlife (95%). For ducks and geese, the federal moving boat rule below also applies (99%).
 - So while the motor pushes the boat, every gun aboard is unloaded (95%).
-- BC synopsis, page 11, item 22: no shooting wildlife from a boat **propelled by a motor** (99%).
+- BC synopsis, page 11, item 23 (2 October 2026 edition), deer and other game: no hunting from a boat unless it is **not being propelled by a motor**, or is held still in current, tide or wind by the motor (99%). Item 22: no hunting wildlife from a motor vehicle (99%).
 - Federal, ducks and geese: no hunting from a **moving** boat with a motor or sail. Drifting on momentum from the motor still counts as moving (99%).
-- BC synopsis, page 11, item 23, ducks and geese: power boat only if beached, anchored, or tied alongside a fixed blind (99%). On 1 October 2026 BC changed this rule to the federal moving boat wording and dropped its tilted motor exception (95%).
+- BC synopsis, page 11, item 24 (2 October 2026 edition), ducks and geese: no hunting "from or by using a moving boat that is equipped with a motor or sail" (99%). Same as the federal rule. This replaced the old power boat rule on 1 October 2026 (99%, B.C. Reg. 66/2026).
 - Safe habit: gun unloaded and in a case while moving. Load only once you are stopped and set (Tip). Federal transport rules require a non restricted firearm to be unloaded, not cased (95%).
 
 > [!lean]

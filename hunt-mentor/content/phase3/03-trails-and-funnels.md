@@ -73,8 +73,8 @@ checked: 2026-10-01
 > Study aid only. The official regulations are the law.
 
 - You may not hunt on cultivated land, or on Crown land under a grazing lease while livestock are on it, without the consent of the owner, lessee or occupant (95%). Synopsis page 12, item 53.
-- It is unlawful to use a wireless camera for the purposes of hunting from 1 August to 10 December, except in Region 1 (95%). Synopsis page 11, item 29.
-- It is unlawful to operate or possess a drone on a hunting or trapping expedition (95%). Synopsis page 11, item 35.
+- It is unlawful to use a wireless camera for the purposes of hunting from 1 August to 10 December, except in Region 1 (99%). Synopsis page 11, item 30 (2 October 2026 edition).
+- It is unlawful to operate or possess a drone on a hunting or trapping expedition (99%). Synopsis page 11, item 36 (2 October 2026 edition).
 - Region 3: all motor vehicles except snowmobiles are prohibited above 1,700 m elevation except on existing roads and trails (95%). Region 3 synopsis page 33. Many good saddles are above that line; walk in.
 - Ask yourself where the deer will fall. A trail on the far side of a creek can mean a wet pack out (Tip).
 

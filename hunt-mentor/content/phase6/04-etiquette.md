@@ -74,7 +74,7 @@ checked: 2026-10-01
 - Hikers, bikers and mushroom pickers own the bush as much as you do. Say good morning first. Tip.
 - Gut piles: keep them away from trails, campsites and recreation sites, or tell park staff where the kill is (95%, BC Parks guide, page 9 of the synopsis).
 - Firearm in the open at a trailhead: cased or slung, muzzle down, action open. Tip.
-- A loaded firearm in or on a vehicle is an offence, and so is shooting from one (99%, page 11, items 22 and 27). Non hunters report exactly this.
+- A loaded firearm in or on a vehicle is an offence, and so is shooting from one (99%, page 11, items 22 and 28, 2 October 2026 edition). Non hunters report exactly this.
 - Never argue hunting at a trailhead. Be polite, be brief, be gone. Tip.
 - The RAPP (Report All Poachers and Polluters) line, 1 877 952 7277, works for us too. Report the ones who make us all look bad (99%, page 9).
 

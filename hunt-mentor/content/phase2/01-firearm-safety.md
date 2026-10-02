@@ -80,7 +80,7 @@ The CFSC (Canadian Firearms Safety Course) teaches these as the "Vital Four ACTS
 ## At the car
 
 - Load only where you may lawfully shoot. Federal rules allow loading, or handling a loaded firearm, only in a place where it may lawfully be discharged (federal transport regulations, section 15) (99%).
-- In BC, you must not transport, carry or store a loaded firearm in or on a vehicle or boat (Firearm Violence Prevention Act, section 4(1)) (99%). The synopsis says the same for vehicles (page 11 item 27) (99%).
+- In BC, you must not transport, carry or store a loaded firearm in or on a vehicle or boat (Firearm Violence Prevention Act, section 4(1)) (99%). The synopsis says the same for vehicles (page 11, item 28, 2 October 2026 edition) (99%).
   - Boats only: from 1 October 2026, a BC hunting exemption allows a loaded firearm in a boat with no motor, or while the motor is not moving the boat, when hunting or retrieving wildlife (Designation and Exemption Regulation, section 18) (95%). See the water safety session.
 - "Unloaded" means no cartridge in the chamber, and none in a magazine attached to or inserted in the firearm (federal transport regulations, section 1) (99%).
 - So: magazine out, chamber empty, before the firearm goes in the car or on the [[ATV]] (All Terrain Vehicle). Both count as vehicles (Firearm Violence Prevention Act, section 1) (95%).

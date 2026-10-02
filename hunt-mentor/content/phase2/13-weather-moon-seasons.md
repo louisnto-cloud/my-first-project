@@ -47,7 +47,7 @@ checked: 2026-10-02
 - Mississippi State University Deer Lab, 48 collared bucks, September to February: moon effects were about 4 m (4 yd) an hour, inside the GPS error. "The moon has no effect on buck movement." (75%, read through a MeatEater article)
 - An older GPS collar study of white tailed deer found moon phase had no effect on day or night movement (65%, search preview).
 - The same Mississippi data showed buck travel nearly doubled in the rut (75%). Rut beats moon.
-- Legal hunting hours do not change with the moon: game, except migratory birds, not from 1 hour after sunset to 1 hour before sunrise (99%, synopsis page 12, item 37).
+- Legal hunting hours do not change with the moon: game, except migratory birds, not from 1 hour after sunset to 1 hour before sunrise (99%, synopsis page 11, item 38 (2 October 2026 edition)).
 - Honest rating: moon phase, weak to no evidence (Tip).
 
 ## Rut and hunting pressure

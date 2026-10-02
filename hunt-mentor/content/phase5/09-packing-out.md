@@ -30,9 +30,9 @@ checked: 2026-10-01
 ## ATV: the Wildlife Act rules
 
 - An ATV is a "motor vehicle" under the hunting rules (95%, p. 4 definition).
-- Unlawful: a firearm "containing live ammunition in its breech or in its magazine attached to the firearm, in or on a railway car, motor vehicle, sleigh, aircraft, bicycle or other conveyance" (95%, p. 11, number 27).
+- Unlawful: a firearm "containing live ammunition in its breech or in its magazine attached to the firearm, in or on a railway car, motor vehicle, sleigh, aircraft, bicycle or other conveyance" (99%, page 11, item 28 (2 October 2026 edition)).
 - So: magazine out, chamber empty, before you touch the ATV. Clip with rounds in the rifle counts as loaded (95%, p. 3).
-- Unlawful to shoot wildlife "from a motor vehicle" (95%, p. 11, number 22).
+- Unlawful "To hunt wildlife from a motor vehicle" (99%, page 11, item 22 (2 October 2026 edition)).
 - Motor Vehicle for Hunting Closed Area: using a motor vehicle "to hunt, transport wildlife, transport equipment and supplies which are intended for or in support of hunting, or transport hunters to and from the location of wildlife is prohibited" (95%, p. 10).
 - "Unless specifically exempted, all motor vehicle prohibitions include private land" (95%, p. 10).
 - Region 3 ATV for Hunting Closed Areas: "from Sept 1 - Dec 10 in MUs 3-28, 3-29, 3-30, and that portion of MU 3-17 shown on Map C3" (95%, p. 33).

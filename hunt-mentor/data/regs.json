@@ -33,7 +33,7 @@
       "beforeSunriseMin": 60,
       "afterSunsetMin": 60,
       "certainty": 99,
-      "text": "No hunting game (except migratory birds) from 1 hour after sunset to 1 hour before sunrise. Synopsis page 12, item 37."
+      "text": "No hunting game (except migratory birds) from 1 hour after sunset to 1 hour before sunrise. Synopsis page 11, item 38 (2 October 2026 edition)."
     },
     "migratory": {
       "beforeSunriseMin": 30,
@@ -235,7 +235,7 @@
       "key": "fvpa",
       "label": "BC Firearm Violence Prevention Act",
       "value": "In force 1 October 2026 (Order in Council 156/2026). Section 4: no loaded firearm in or on a boat. Section 5: no shooting in, on or from a boat. The Act also covers vehicles (news release, 85%). Hunting exemptions exist for boats only: a boat with no motor, or a motor that is not pushing the boat, while hunting or retrieving game.",
-      "note": "Exemptions: Designation and Exemption Regulation s.18 and s.19, added by B.C. Reg. 66/2026. The Act text on BC Laws still showed [Not in force] on 2026-10-02 because that page lags. Vehicle rules: synopsis page 11 item 27 and the federal transport rules.",
+      "note": "Exemptions: Designation and Exemption Regulation s.18 and s.19, added by B.C. Reg. 66/2026. The Act text on BC Laws still showed [Not in force] on 2026-10-02 because that page lags. Vehicle rules: synopsis page 11 items 22 and 28 (2 October 2026 edition) and the federal transport rules.",
       "certainty": 95,
       "source": "OIC 156/2026 and B.C. Reg. 66/2026 on BC Laws, read directly",
       "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_90anif66_2026",
@@ -287,7 +287,7 @@
       "group": "migratory",
       "key": "boat",
       "label": "Ducks from a boat",
-      "value": "Ducks and geese: no hunting from a moving boat that has a motor or sail. A boat still gliding from its motor counts as moving. Beached, anchored or tied off is OK. You may use a motorboat to pick up a bird already down, but in BC you may not shoot while the motor pushes the boat.", "note": "Since 1 October 2026 BC repealed its power boat definition and now uses the federal moving boat wording (B.C. Reg. 66/2026). Synopsis page 11 item 23 and the page 4 definition are older than this change.",
+      "value": "Ducks and geese: no hunting from a moving boat that has a motor or sail. A boat still gliding from its motor counts as moving. Beached, anchored or tied off is OK. You may use a motorboat to pick up a bird already down, but in BC you may not shoot while the motor pushes the boat.", "note": "Since 1 October 2026 BC repealed its power boat definition and now uses the federal moving boat wording (B.C. Reg. 66/2026). The synopsis edition dated 2 October 2026 carries the new wording: page 11 items 23 and 24, and the page 12 retrieval lines.",
       "certainty": 95,
       "source": "Migratory Birds Regulations, 2022, s.41; Hunting Regulation s.17(1)(n) as amended by B.C. Reg. 66/2026; Wildlife Act s.27(1) and Designation and Exemption Regulation s.5.1",
       "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",

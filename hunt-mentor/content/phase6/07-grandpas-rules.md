@@ -22,7 +22,7 @@ checked: 2026-10-01
 > - **1.** Every firearm is loaded until you have proved it yourself. [[ACTS]] and [[PROVE]].
 > - **2.** The muzzle points at dirt or sky. Never at anything you are not willing to destroy.
 > - **3.** Finger outside the guard until the sights are on hair.
-> - **4.** Unload before the truck, the ATV, the boat and the fence. Also law: no loaded firearm in or on a vehicle or boat (99%, page 11, item 27).
+> - **4.** Unload before the truck, the ATV, the boat and the fence. Also law: no loaded firearm in or on a vehicle or boat (99%, page 11, item 28, 2 October 2026 edition).
 > - **5.** Know your [[Backstop]]. A deer on the skyline is a bullet going somewhere you cannot see.
 > - **6.** 100 m from any house, barn, school or church. 15 m off the road before you load. Also law (99%, page 10).
 > - **7.** Wear something bright on the walk in and out. Deer do not care. People do.
