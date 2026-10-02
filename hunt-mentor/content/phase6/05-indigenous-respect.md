@@ -23,7 +23,7 @@ checked: 2026-10-01
 - Thompson Rivers University: its Kamloops campus is "on the traditional lands of the Tk'emlúps te Secwépemc" within "Secwepemcúl̓ecw, the traditional and unceded territory of the Secwépemc" (95%).
 - The same statement says the region "also extends into the territories of the St'át'imc, Nlaka'pamux, Nuxalk, Tŝilhqot'in, Dakelh, and Syilx peoples" (95%).
 - Kamloops Reserve 1 sits northeast of where the North and South Thompson meet, beside the city (95%, City of Kamloops).
-- native-land.ca lists the territory as Secwepemcúl'ecw (Secwépemc) and links the Shuswap Nation Tribal Council, Simpcw and others (90%). The site warns its maps "are not official sources" (99%).
+- `native-land.ca` lists the territory as Secwepemcúl'ecw (Secwépemc) and links the Shuswap Nation Tribal Council, Simpcw and others (90%). The site warns its maps "are not official sources" (99%).
 - The Shuswap Nation Tribal Council was formed in 1980 by the Secwépemc Chiefs to advance Aboriginal rights and the land title question (99%, shuswapnation.org).
 - Tk'emlúps te Secwépemc's own site, tkemlups.ca, sits behind a bot check and could not be read here. Its own description of its land: VERIFY on the site.
 - Heffley Creek is about 25 km north of Kamloops. No source read here names a different nation for it than for Kamloops (85%, inference).
@@ -32,7 +32,7 @@ checked: 2026-10-01
 
 - The City of Mission: "This place is situated on the unceded, ancestral, and shared territory of the Stó:lō people, who have occupied these lands since time immemorial. The City of Mission is located on Leq'á:mel, Semá:th, Kwantlen, Sq'éwlets, Máthxwi, and Katzie traditional territories." (95%, City of Mission, Indigenous Relations page)
 - Stó:lō means People of the River. The Stó:lō Nation site opens "We are Stó:lō, People of the River" and its administrative area runs from Yale to Langley (99%).
-- The Stó:lō homeland is S'ólh Téméxw, "our land" or "our world" (90%, Canadian Geographic article by a Kwantlen writer; native-land.ca lists the territory as S'ólh Téméxw (Stó:lō)).
+- The Stó:lō homeland is S'ólh Téméxw, "our land" or "our world" (90%, Canadian Geographic article by a Kwantlen writer; `native-land.ca` lists the territory as S'ólh Téméxw (Stó:lō)).
 - Leq'á:mel First Nation, at Deroche, is 22 km east of Mission, has about 800 members and is a signatory to the Stó:lō Nation (99%, leqamel.ca).
 - Leq'á:mel describes its traditional territory, S'ólh Téméxw, as stretching "from above Yale to what is now Langley" and says its name means "the level place where people meet" (99%).
 - Kwantlen First Nation is based at Fort Langley on McMillan Island (65%, Wikipedia; the nation's own site was under construction on 2026-10-01). The City of Mission counts Kwantlen among the territories Mission sits on (95%).
@@ -46,7 +46,7 @@ checked: 2026-10-01
 - Quail country: the Osoyoos Indian Band "is located in the Southern part of the Okanagan Valley, between the towns of Oliver and Osoyoos and covers 13,045 hectares" (99%). Those lands are private. Session 3.
 - Upper Nicola Band is 35 km east of Merritt, in Region 3, with reserves around Nicola Lake and Douglas Lake (99%).
 - The ONA runs a community Syilx Hunting Camp each October (99%, ONA events page). Hunting is part of the living culture here, not history.
-- native-land.ca lists the territory as Syilx (Okanagan) and links the ONA and each band (90%).
+- `native-land.ca` lists the territory as Syilx (Okanagan) and links the ONA and each band (90%).
 
 ## Indigenous hunting rights in brief
 
@@ -155,7 +155,7 @@ Section 35 and food, social and ceremonial harvest understood
 - [Leq'á:mel First Nation](https://leqamel.ca/), [About](https://leqamel.ca/about/) and [Lands](https://leqamel.ca/departments/lands/), read 2026-10-01. 99%.
 - [Kwantlen First Nation](https://www.kwantlenfn.ca/): site under construction 2026-10-01. [Kwantlen First Nation, Wikipedia](https://en.wikipedia.org/wiki/Kwantlen_First_Nation), 65%. [S'ólh Téméxw, Canadian Geographic](https://canadiangeographic.ca/articles/solh-temexw-what-our-land-is-called/), read 2026-10-01, 70%.
 - [Okanagan Nation Alliance](https://www.syilx.org/), [About ONA](https://syilx.org/about/), [Member Communities](https://syilx.org/about/member-communities/), [History](https://syilx.org/about/history/), read 2026-10-01. 99%.
-- native-land.ca listings: [Secwepemcúl'ecw](https://native-land.ca/maps/territories/secwepemc-secwepemculecw/), [S'ólh Téméxw (Stó:lō)](https://native-land.ca/maps/territories/stolo-treaty-association/), [Syilx (Okanagan)](https://native-land.ca/maps/territories/okanagan/), [Kwantlen](https://native-land.ca/maps/territories/kwantlen/), read 2026-10-01. The site states its maps are not official sources. 90%.
+- `native-land.ca` listings: [Secwepemcúl'ecw](https://`native-land.ca`/maps/territories/secwepemc-secwepemculecw/), [S'ólh Téméxw (Stó:lō)](https://`native-land.ca`/maps/territories/stolo-treaty-association/), [Syilx (Okanagan)](https://`native-land.ca`/maps/territories/okanagan/), [Kwantlen](https://`native-land.ca`/maps/territories/kwantlen/), read 2026-10-01. The site states its maps are not official sources. 90%.
 - [A Guide to the Pronunciation of Indigenous Communities and Organizations in BC, 2018 PDF](https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/indigenous-people/aboriginal-peoples-documents/a_guide_to_pronunciation_of_bc_first_nations_-_oct_29_2018.pdf), read 2026-10-01. 95%.
 
 ```quiz
