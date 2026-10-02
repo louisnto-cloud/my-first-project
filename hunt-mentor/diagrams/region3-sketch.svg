@@ -5,7 +5,7 @@
 
   <!-- Kamloops Lake -->
   <path d="M12 262 Q 40 248 95 256 Q 125 262 150 268 Q 125 282 95 280 Q 40 284 12 270 Z" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/>
-  <text x="60" y="300" font-family="sans-serif" font-size="14" fill="#23261f">Kamloops Lake</text>
+  <text x="16" y="300" font-family="sans-serif" font-size="14" fill="#23261f">Kamloops Lake</text>
 
   <!-- North Thompson River -->
   <path d="M185 50 Q 175 100 180 150 Q 172 200 158 268" fill="none" stroke="#2f3a2b" stroke-width="6"/>
@@ -13,7 +13,7 @@
   <path d="M158 268 Q 220 256 280 258 Q 340 262 392 240" fill="none" stroke="#2f3a2b" stroke-width="6"/>
   <!-- Kamloops no shooting and no hunting band -->
   <path d="M170 258 Q 220 246 280 248 Q 340 252 385 232" fill="none" stroke="#e8590c" stroke-width="12" stroke-opacity="0.45"/>
-  <text x="262" y="236" font-family="sans-serif" font-size="14" fill="#e8590c">No shooting band (Map C7)</text>
+  <text x="392" y="304" font-family="sans-serif" font-size="13" fill="#e8590c" text-anchor="end">No shooting band (Map C7)</text>
 
   <!-- Highway 5 dashed -->
   <path d="M200 48 Q 192 110 196 160 Q 188 215 172 262" fill="none" stroke="#6b4f35" stroke-width="2" stroke-dasharray="7 5"/>
@@ -36,7 +36,7 @@
 
   <!-- MU labels -->
   <g font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b">
-    <text x="110" y="70">3-38 (approx)</text>
+    <text x="50" y="80">3-38 (approx)</text>
     <text x="95" y="130">3-28</text>
     <text x="235" y="170">3-27</text>
     <text x="20" y="240">3-29</text>
@@ -48,7 +48,7 @@
   <text x="200" y="390" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">South Thompson River: 3-27 north, 3-20 south</text>
   <text x="200" y="408" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Kamloops Lake: 3-29 north shore, 3-19 south shore</text>
   <text x="200" y="440" font-family="sans-serif" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Schematic, not a legal map. Check the official MU map.</text>
-  <text x="340" y="268" font-family="sans-serif" font-size="14" fill="#23261f">to Chase</text>
-  <text x="200" y="258" font-family="sans-serif" font-size="13" fill="#23261f">South Thompson</text>
-  <text x="120" y="205" font-family="sans-serif" font-size="13" fill="#23261f" transform="rotate(-80 120 205)">North Thompson</text>
+  <text x="392" y="282" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="end">to Chase</text>
+  <text x="226" y="282" font-family="sans-serif" font-size="13" fill="#23261f">South Thompson</text>
+  <text x="150" y="245" font-family="sans-serif" font-size="13" fill="#23261f" transform="rotate(-80 150 245)">North Thompson</text>
 </svg>

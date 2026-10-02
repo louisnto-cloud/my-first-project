@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 770" font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="770" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 786" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="786" fill="#fffaf0"/>
   <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tracks: shape and front track length</text>
   <g stroke="#8a9a6b" stroke-width="1" stroke-dasharray="4 4" fill="none">
     <line x1="135" y1="40" x2="135" y2="740"/>
@@ -14,36 +14,38 @@
     <path d="M-3 -30 C-15 -25 -23 -3 -21 14 C-20 25 -13 31 -5 31 C-2 31 -1 22 -1 10 Z"/>
     <path d="M3 -30 C15 -25 23 -3 21 14 C20 25 13 31 5 31 C2 31 1 22 1 10 Z"/>
   </g>
-  <text x="70" y="168" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Mule deer</text>
-  <text x="70" y="186" font-size="14" fill="#23261f" text-anchor="middle">6 to 10 cm</text>
-  <text x="70" y="204" font-size="14" fill="#2f3a2b" text-anchor="middle">heart, pointed</text>
+  <text x="70" y="160" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">Mule deer</text>
+  <text x="70" y="175" font-size="13" fill="#23261f" text-anchor="middle">6 to 10 cm</text>
+  <text x="70" y="190" font-size="13" fill="#2f3a2b" text-anchor="middle">heart, pointed</text>
 
   <g transform="translate(200 100) scale(0.85 0.95)" fill="#6b4f35" stroke="#23261f" stroke-width="2">
     <path d="M-3 -30 C-15 -25 -23 -3 -21 14 C-20 25 -13 31 -5 31 C-2 31 -1 22 -1 10 Z"/>
     <path d="M3 -30 C15 -25 23 -3 21 14 C20 25 13 31 5 31 C2 31 1 22 1 10 Z"/>
   </g>
-  <text x="200" y="168" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">White tailed deer</text>
-  <text x="200" y="186" font-size="14" fill="#23261f" text-anchor="middle">4 to 10 cm</text>
-  <text x="200" y="204" font-size="14" fill="#2f3a2b" text-anchor="middle">same, often narrower</text>
+  <text x="200" y="160" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">White tailed deer</text>
+  <text x="200" y="175" font-size="13" fill="#23261f" text-anchor="middle">4 to 10 cm</text>
+  <text x="200" y="190" font-size="13" fill="#2f3a2b" text-anchor="middle">same, often</text>
+  <text x="200" y="205" font-size="13" fill="#2f3a2b" text-anchor="middle">narrower</text>
 
   <g transform="translate(330 100) scale(1.2)" fill="#6b4f35" stroke="#23261f" stroke-width="1.8">
     <path d="M-5 -26 C-16 -24 -25 -6 -24 10 C-23 24 -15 31 -6 31 C-2 31 -1 24 -1 12 C-1 0 -2 -24 -5 -26 Z"/>
     <path d="M5 -26 C16 -24 25 -6 24 10 C23 24 15 31 6 31 C2 31 1 24 1 12 C1 0 2 -24 5 -26 Z"/>
   </g>
-  <text x="330" y="168" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Elk</text>
-  <text x="330" y="186" font-size="14" fill="#23261f" text-anchor="middle">10 to 13 cm</text>
-  <text x="330" y="204" font-size="14" fill="#2f3a2b" text-anchor="middle">rounder, blunt tips</text>
+  <text x="330" y="160" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">Elk</text>
+  <text x="330" y="175" font-size="13" fill="#23261f" text-anchor="middle">10 to 13 cm</text>
+  <text x="330" y="190" font-size="13" fill="#2f3a2b" text-anchor="middle">rounder,</text>
+  <text x="330" y="205" font-size="13" fill="#2f3a2b" text-anchor="middle">blunt tips</text>
 
   <!-- Row 2: moose, black bear, grizzly -->
-  <g transform="translate(70 272) scale(1.35 1.5)" fill="#6b4f35" stroke="#23261f" stroke-width="1.5">
+  <g transform="translate(70 266) scale(1.35 1.4)" fill="#6b4f35" stroke="#23261f" stroke-width="1.5">
     <path d="M-2 -32 C-14 -26 -22 -3 -20 14 C-19 25 -13 31 -5 31 C-2 31 -1 22 -1 10 Z"/>
     <path d="M2 -32 C14 -26 22 -3 20 14 C19 25 13 31 5 31 C2 31 1 22 1 10 Z"/>
   </g>
-  <ellipse cx="52" cy="326" rx="6" ry="4" fill="#8a9a6b" stroke="#23261f" stroke-width="1.5"/>
-  <ellipse cx="88" cy="326" rx="6" ry="4" fill="#8a9a6b" stroke="#23261f" stroke-width="1.5"/>
-  <text x="70" y="343" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Moose</text>
-  <text x="70" y="361" font-size="14" fill="#23261f" text-anchor="middle">11 to 18 cm</text>
-  <text x="70" y="379" font-size="14" fill="#2f3a2b" text-anchor="middle">long, dewclaws</text>
+  <ellipse cx="52" cy="317" rx="6" ry="4" fill="#8a9a6b" stroke="#23261f" stroke-width="1.5"/>
+  <ellipse cx="88" cy="317" rx="6" ry="4" fill="#8a9a6b" stroke="#23261f" stroke-width="1.5"/>
+  <text x="70" y="337" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">Moose</text>
+  <text x="70" y="352" font-size="13" fill="#23261f" text-anchor="middle">11 to 18 cm</text>
+  <text x="70" y="367" font-size="13" fill="#2f3a2b" text-anchor="middle">long, dewclaws</text>
 
   <g transform="translate(200 280)" stroke="#23261f" stroke-width="1.8">
     <path d="M-24 6 C-26 -6 -14 -12 0 -12 C14 -12 26 -6 24 6 C22 18 12 24 0 24 C-12 24 -22 18 -24 6 Z" fill="#6b4f35"/>
@@ -61,9 +63,10 @@
     </g>
     <line x1="-30" y1="-11" x2="30" y2="-11" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
   </g>
-  <text x="200" y="343" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Black bear</text>
-  <text x="200" y="361" font-size="14" fill="#23261f" text-anchor="middle">10 to 16 cm</text>
-  <text x="200" y="379" font-size="14" fill="#2f3a2b" text-anchor="middle">outer toe below line</text>
+  <text x="200" y="337" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">Black bear</text>
+  <text x="200" y="352" font-size="13" fill="#23261f" text-anchor="middle">10 to 16 cm</text>
+  <text x="200" y="367" font-size="13" fill="#2f3a2b" text-anchor="middle">outer toe</text>
+  <text x="200" y="382" font-size="13" fill="#2f3a2b" text-anchor="middle">below line</text>
 
   <g transform="translate(330 282) scale(1.2)" stroke="#23261f" stroke-width="1.5">
     <path d="M-24 6 C-26 -6 -14 -12 0 -12 C14 -12 26 -6 24 6 C22 18 12 24 0 24 C-12 24 -22 18 -24 6 Z" fill="#6b4f35"/>
@@ -81,9 +84,10 @@
     </g>
     <line x1="-30" y1="-11" x2="30" y2="-11" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
   </g>
-  <text x="330" y="343" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Grizzly</text>
-  <text x="330" y="361" font-size="14" fill="#23261f" text-anchor="middle">about 18 cm</text>
-  <text x="330" y="379" font-size="14" fill="#2f3a2b" text-anchor="middle">long claws, toes in a row</text>
+  <text x="330" y="337" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">Grizzly</text>
+  <text x="330" y="352" font-size="13" fill="#23261f" text-anchor="middle">about 18 cm</text>
+  <text x="330" y="367" font-size="13" fill="#2f3a2b" text-anchor="middle">long claws,</text>
+  <text x="330" y="382" font-size="13" fill="#2f3a2b" text-anchor="middle">toes in a row</text>
 
   <!-- Row 3: cougar, wolf, coyote -->
   <g transform="translate(70 455) scale(1.15)" stroke="#23261f" stroke-width="1.6">
@@ -93,9 +97,10 @@
     <ellipse cx="7" cy="-26" rx="6" ry="7" fill="#6b4f35"/>
     <ellipse cx="17" cy="-18" rx="6" ry="7" fill="#6b4f35"/>
   </g>
-  <text x="70" y="518" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Cougar</text>
-  <text x="70" y="536" font-size="14" fill="#23261f" text-anchor="middle">7.5 to 10 cm wide</text>
-  <text x="70" y="554" font-size="14" fill="#2f3a2b" text-anchor="middle">no claws, 3 lobe heel</text>
+  <text x="70" y="512" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">Cougar</text>
+  <text x="70" y="527" font-size="13" fill="#23261f" text-anchor="middle">7.5 to 10 cm wide</text>
+  <text x="70" y="542" font-size="13" fill="#2f3a2b" text-anchor="middle">no claws,</text>
+  <text x="70" y="557" font-size="13" fill="#2f3a2b" text-anchor="middle">3 lobe heel</text>
 
   <g transform="translate(200 455) scale(1.1)" stroke="#23261f" stroke-width="1.6">
     <path d="M-11 2 C-12 -5 -6 -8 0 -8 C6 -8 12 -5 11 2 C10 10 6 16 0 16 C-6 16 -10 10 -11 2 Z" fill="#6b4f35"/>
@@ -110,9 +115,9 @@
       <line x1="16" y1="-17" x2="17" y2="-22"/>
     </g>
   </g>
-  <text x="200" y="518" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Wolf</text>
-  <text x="200" y="536" font-size="14" fill="#23261f" text-anchor="middle">9 to 13 cm</text>
-  <text x="200" y="554" font-size="14" fill="#2f3a2b" text-anchor="middle">oval, claws show</text>
+  <text x="200" y="512" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">Wolf</text>
+  <text x="200" y="527" font-size="13" fill="#23261f" text-anchor="middle">9 to 13 cm</text>
+  <text x="200" y="542" font-size="13" fill="#2f3a2b" text-anchor="middle">oval, claws show</text>
 
   <g transform="translate(330 455) scale(0.72)" stroke="#23261f" stroke-width="2">
     <path d="M-11 2 C-12 -5 -6 -8 0 -8 C6 -8 12 -5 11 2 C10 10 6 16 0 16 C-6 16 -10 10 -11 2 Z" fill="#6b4f35"/>
@@ -127,9 +132,9 @@
       <line x1="16" y1="-17" x2="17" y2="-22"/>
     </g>
   </g>
-  <text x="330" y="518" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Coyote</text>
-  <text x="330" y="536" font-size="14" fill="#23261f" text-anchor="middle">6 to 7 cm</text>
-  <text x="330" y="554" font-size="14" fill="#2f3a2b" text-anchor="middle">half a wolf</text>
+  <text x="330" y="512" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">Coyote</text>
+  <text x="330" y="527" font-size="13" fill="#23261f" text-anchor="middle">6 to 7 cm</text>
+  <text x="330" y="542" font-size="13" fill="#2f3a2b" text-anchor="middle">half a wolf</text>
 
   <!-- Row 4: snowshoe hare, grouse, note -->
   <g transform="translate(70 625)" stroke="#23261f" stroke-width="1.6">
@@ -138,9 +143,10 @@
     <circle cx="-3" cy="22" r="5.5" fill="#8a9a6b"/>
     <circle cx="5" cy="34" r="5.5" fill="#8a9a6b"/>
   </g>
-  <text x="70" y="693" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Snowshoe hare</text>
-  <text x="70" y="711" font-size="14" fill="#23261f" text-anchor="middle">hind to 12 cm</text>
-  <text x="70" y="729" font-size="14" fill="#2f3a2b" text-anchor="middle">big hind ahead of front</text>
+  <text x="70" y="687" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">Snowshoe hare</text>
+  <text x="70" y="702" font-size="13" fill="#23261f" text-anchor="middle">hind to 12 cm</text>
+  <text x="70" y="717" font-size="13" fill="#2f3a2b" text-anchor="middle">big hind ahead</text>
+  <text x="70" y="732" font-size="13" fill="#2f3a2b" text-anchor="middle">of front</text>
 
   <g transform="translate(200 627)" stroke="#6b4f35" stroke-width="5" stroke-linecap="round" fill="none">
     <line x1="0" y1="8" x2="-17" y2="-13"/>
@@ -154,18 +160,20 @@
     <circle cx="217" cy="614" r="3.5"/>
     <circle cx="200" cy="647" r="3"/>
   </g>
-  <text x="200" y="693" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Grouse</text>
-  <text x="200" y="711" font-size="14" fill="#23261f" text-anchor="middle">5 to 7 cm</text>
-  <text x="200" y="729" font-size="14" fill="#2f3a2b" text-anchor="middle">3 toes forward, 1 back</text>
+  <text x="200" y="687" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">Grouse</text>
+  <text x="200" y="702" font-size="13" fill="#23261f" text-anchor="middle">5 to 7 cm</text>
+  <text x="200" y="717" font-size="13" fill="#2f3a2b" text-anchor="middle">3 toes forward,</text>
+  <text x="200" y="732" font-size="13" fill="#2f3a2b" text-anchor="middle">1 back</text>
 
   <text x="330" y="606" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Travel direction</text>
   <g stroke="#e8590c" stroke-width="4" fill="#e8590c">
     <line x1="330" y1="668" x2="330" y2="624"/>
     <path d="M330 612 L320 630 L340 630 Z"/>
   </g>
-  <text x="330" y="693" font-size="14" fill="#23261f" text-anchor="middle">Hoof points the way.</text>
-  <text x="330" y="711" font-size="14" fill="#23261f" text-anchor="middle">Toes and claws lead</text>
-  <text x="330" y="729" font-size="14" fill="#23261f" text-anchor="middle">on paws.</text>
+  <text x="330" y="687" font-size="13" fill="#23261f" text-anchor="middle">Hoof points the way.</text>
+  <text x="330" y="702" font-size="13" fill="#23261f" text-anchor="middle">Toes and claws lead</text>
+  <text x="330" y="717" font-size="13" fill="#23261f" text-anchor="middle">on paws.</text>
 
-  <text x="200" y="760" font-size="14" fill="#2f3a2b" text-anchor="middle">Typical adult front tracks. Not to scale between cells. Measure, never guess.</text>
+  <text x="200" y="758" font-size="14" fill="#2f3a2b" text-anchor="middle">Typical adult front tracks. Not to scale between cells.</text>
+  <text x="200" y="776" font-size="14" fill="#2f3a2b" text-anchor="middle">Measure, never guess.</text>
 </svg>

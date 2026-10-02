@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" font-family="sans-serif">
-<rect x="0" y="0" width="400" height="420" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 438" font-family="sans-serif">
+<rect x="0" y="0" width="400" height="438" fill="#fffaf0"/>
 <text x="200" y="24" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 3 mule deer: resident harvest</text>
 <text x="200" y="44" font-size="13" fill="#23261f" text-anchor="middle">Average per year, 2020 to 2024, official survey estimates</text>
 <text x="12" y="84" font-size="15" font-weight="bold" fill="#23261f">MU 3-30</text>
 <rect x="80" y="70" width="230" height="20" fill="#6b4f35"/>
-<text x="314" y="85" font-size="14" fill="#23261f">502 deer, 24% of hunters</text>
+<text x="304" y="85" font-size="14" fill="#fffaf0" text-anchor="end">502 deer, 24% of hunters</text>
 <text x="80" y="104" font-size="12" fill="#2f3a2b">Cache Creek, Clinton</text>
 <text x="12" y="126" font-size="15" font-weight="bold" fill="#23261f">MU 3-27</text>
 <rect x="80" y="112" width="150" height="20" fill="#6b4f35"/>
@@ -34,5 +34,6 @@
 <rect x="80" y="364" width="104" height="20" fill="#6b4f35"/>
 <text x="188" y="379" font-size="14" fill="#23261f">226 deer, 25% of hunters</text>
 <text x="80" y="398" font-size="12" fill="#2f3a2b">Savona, Ashcroft</text>
-<text x="12" y="412" font-size="12" fill="#6b4f35">Source: BC Big Game Harvest Statistics 1976 to 2024 (BC Data Catalogue). Area labels approximate.</text>
+<text x="12" y="416" font-size="12" fill="#6b4f35">Source: BC Big Game Harvest Statistics 1976 to 2024</text>
+<text x="12" y="431" font-size="12" fill="#6b4f35">(BC Data Catalogue). Area labels approximate.</text>
 </svg>

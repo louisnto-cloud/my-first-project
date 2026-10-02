@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 540" font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="540" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 556" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="556" fill="#fffaf0"/>
   <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Gaits: the pattern on the ground</text>
   <g stroke="#e8590c" stroke-width="3" fill="#e8590c">
     <line x1="290" y1="50" x2="360" y2="50"/>
@@ -110,5 +110,6 @@
   </g>
   <text x="12" y="491" font-size="14" fill="#2f3a2b">Groups of 4 in a line, hind beyond front, long gaps. Running.</text>
 
-  <text x="200" y="528" font-size="14" fill="#2f3a2b" text-anchor="middle">Dark = hind foot, light = front foot. Measure stride same foot to same foot.</text>
+  <text x="200" y="524" font-size="14" fill="#2f3a2b" text-anchor="middle">Dark = hind foot, light = front foot.</text>
+  <text x="200" y="542" font-size="14" fill="#2f3a2b" text-anchor="middle">Measure stride same foot to same foot.</text>
 </svg>

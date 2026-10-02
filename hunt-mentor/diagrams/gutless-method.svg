@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="560" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 666" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="666" fill="#fffaf0"/>
   <text x="200" y="26" font-size="19" font-weight="bold" fill="#23261f" text-anchor="middle">Gutless method: deer on its side</text>
 
   <!-- ground line -->
@@ -44,16 +44,17 @@
 
   <!-- legend -->
   <g font-size="15" fill="#23261f">
-    <text x="16" y="270">1  Skin the top half back past the spine. Hide is your clean mat.</text>
-    <text x="16" y="296">2  Front quarter: lift the leg, cut the armpit, no bone cut.</text>
-    <text x="16" y="322">3  Hind quarter: inside the thigh to the hip joint, cut it free.</text>
-    <text x="16" y="348">4  Backstrap: knife along the spine, then out over the ribs.</text>
-    <text x="16" y="374">5  Tenderloin: inside, behind the last rib. Do not cut the gut.</text>
-    <text x="16" y="400">6  Rib and flank meat. These are legal edible portions in BC.</text>
-    <text x="16" y="426">7  Neck meat. Skin to behind the ears, fillet it off.</text>
-    <text x="16" y="452">8  Roll onto the clean hide. Repeat 2 to 6 on the other side.</text>
+    <text x="16" y="266">1<tspan x="34">Skin the top half back past the spine.</tspan><tspan x="34" dy="18">Hide is your clean mat.</tspan></text>
+    <text x="16" y="308">2<tspan x="34">Front quarter: lift the leg, cut the armpit,</tspan><tspan x="34" dy="18">no bone cut.</tspan></text>
+    <text x="16" y="350">3<tspan x="34">Hind quarter: inside the thigh to the hip joint,</tspan><tspan x="34" dy="18">cut it free.</tspan></text>
+    <text x="16" y="392">4<tspan x="34">Backstrap: knife along the spine,</tspan><tspan x="34" dy="18">then out over the ribs.</tspan></text>
+    <text x="16" y="434">5<tspan x="34">Tenderloin: inside, behind the last rib.</tspan><tspan x="34" dy="18">Do not cut the gut.</tspan></text>
+    <text x="16" y="476">6<tspan x="34">Rib and flank meat.</tspan><tspan x="34" dy="18">These are legal edible portions in BC.</tspan></text>
+    <text x="16" y="518">7<tspan x="34">Neck meat. Skin to behind the ears, fillet it off.</tspan></text>
+    <text x="16" y="542">8<tspan x="34">Roll onto the clean hide.</tspan><tspan x="34" dy="18">Repeat 2 to 6 on the other side.</tspan></text>
   </g>
-  <text x="16" y="488" font-size="14" fill="#6b4f35">Orange dashes: cut lines. Brown: hide peeled back. Pink: exposed meat.</text>
-  <text x="16" y="508" font-size="14" fill="#6b4f35">Keep the unskinned tail and testicle attached to one quarter.</text>
-  <text x="16" y="528" font-size="14" fill="#6b4f35">Every piece goes straight into a clean game bag.</text>
+  <text x="16" y="590" font-size="14" fill="#6b4f35">Orange dashes: cut lines. Brown: hide peeled back.</text>
+  <text x="16" y="610" font-size="14" fill="#6b4f35">Pink: exposed meat.</text>
+  <text x="16" y="630" font-size="14" fill="#6b4f35">Keep the unskinned tail and testicle attached to one quarter.</text>
+  <text x="16" y="650" font-size="14" fill="#6b4f35">Every piece goes straight into a clean game bag.</text>
 </svg>

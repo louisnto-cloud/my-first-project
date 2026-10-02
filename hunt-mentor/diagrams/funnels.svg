@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="450" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 470" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="470" fill="#fffaf0"/>
   <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bird's eye view: where the deer must walk</text>
 
   <!-- bedding timber band, north slope -->
@@ -25,13 +25,13 @@
   <ellipse cx="295" cy="150" rx="88" ry="42" fill="#8a9a6b" fill-opacity="0.45" stroke="#6b4f35" stroke-width="1.5"/>
   <ellipse cx="295" cy="150" rx="55" ry="24" fill="#8a9a6b" fill-opacity="0.45" stroke="#6b4f35" stroke-width="1"/>
   <ellipse cx="295" cy="150" rx="22" ry="9" fill="#6b4f35" fill-opacity="0.5" stroke="#6b4f35" stroke-width="1"/>
-  <text x="105" y="123" font-size="14" fill="#23261f" text-anchor="middle">High point</text>
-  <text x="295" y="123" font-size="14" fill="#23261f" text-anchor="middle">High point</text>
+  <text x="62" y="210" font-size="14" fill="#23261f" text-anchor="middle">High point</text>
+  <text x="338" y="210" font-size="14" fill="#23261f" text-anchor="middle">High point</text>
   <text x="200" y="200" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Saddle</text>
 
   <!-- bench: flat shelf below the ridge -->
   <path d="M40 232 C120 222 280 222 360 232 L360 250 C280 240 120 240 40 250 Z" fill="#fffaf0" stroke="#6b4f35" stroke-width="1.5" stroke-dasharray="6 4"/>
-  <text x="68" y="245" font-size="14" font-weight="bold" fill="#23261f">Bench</text>
+  <text x="134" y="244" font-size="14" font-weight="bold" fill="#23261f">Bench</text>
 
   <!-- creek -->
   <path d="M10 300 C60 290 90 320 130 305 C170 290 190 300 200 300 C230 300 250 312 290 300 C330 288 360 305 390 298" stroke="#2f3a2b" stroke-width="7" fill="none" stroke-linecap="round"/>
@@ -72,18 +72,19 @@
     <path d="M198 294 L186 290 L190 280 Z"/>
     <path d="M202 294 L210 280 L214 290 Z"/>
   </g>
-  <text x="246" y="276" font-size="14" fill="#e8590c">deer lines</text>
+  <text x="50" y="280" font-size="14" fill="#e8590c">deer lines</text>
 
   <!-- the hunter -->
-  <path d="M300 262 L305 274 L318 275 L308 283 L311 296 L300 289 L289 296 L292 283 L282 275 L295 274 Z" fill="#e8590c" stroke="#23261f" stroke-width="1"/>
-  <text x="332" y="283" font-size="14" font-weight="bold" fill="#23261f">You</text>
-  <text x="332" y="299" font-size="14" fill="#23261f">100 to 150 m</text>
-  <text x="332" y="315" font-size="14" fill="#23261f">downwind</text>
+  <path d="M285 262 L290 274 L303 275 L293 283 L296 296 L285 289 L274 296 L277 283 L267 275 L280 274 Z" fill="#e8590c" stroke="#23261f" stroke-width="1"/>
+  <text x="285" y="257" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">You</text>
+  <text x="309" y="270" font-size="14" fill="#23261f">100 to 150 m</text>
+  <text x="309" y="285" font-size="14" fill="#23261f">downwind</text>
   <g stroke="#23261f" stroke-width="2" stroke-dasharray="5 4" fill="none">
-    <line x1="222" y1="268" x2="276" y2="268"/>
+    <line x1="222" y1="268" x2="256" y2="268"/>
   </g>
-  <path d="M284 268 L274 263 L274 273 Z" fill="#23261f" stroke="none"/>
-  <text x="248" y="262" font-size="14" fill="#23261f" text-anchor="middle">wind</text>
+  <path d="M264 268 L254 263 L254 273 Z" fill="#23261f" stroke="none"/>
+  <text x="240" y="287" font-size="14" fill="#23261f" text-anchor="middle">wind</text>
 
-  <text x="200" y="442" font-size="14" fill="#2f3a2b" text-anchor="middle">Bed above, feed below. Every line meets at the crossing. Sit beside it, not on it.</text>
+  <text x="200" y="442" font-size="14" fill="#2f3a2b" text-anchor="middle">Bed above, feed below. Every line meets at the crossing.</text>
+  <text x="200" y="460" font-size="14" fill="#2f3a2b" text-anchor="middle">Sit beside it, not on it.</text>
 </svg>

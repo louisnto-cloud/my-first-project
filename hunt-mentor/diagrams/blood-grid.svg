@@ -58,8 +58,8 @@
   <!-- downhill / water -->
   <path d="M355 150 L385 210" fill="none" stroke="#6b4f35" stroke-width="3"/>
   <path d="M378 196 L387 214 L370 208 Z" fill="#6b4f35"/>
-  <text x="300" y="232" font-size="14" fill="#6b4f35">Downhill and water:</text>
-  <text x="300" y="250" font-size="14" fill="#6b4f35">check these first</text>
+  <text x="392" y="234" font-size="14" fill="#6b4f35" text-anchor="end">Downhill and water:</text>
+  <text x="392" y="252" font-size="14" fill="#6b4f35" text-anchor="end">check these first</text>
 
   <!-- legend -->
   <text x="20" y="416" font-size="14" fill="#23261f">Walk beside the blood line, never on it.</text>

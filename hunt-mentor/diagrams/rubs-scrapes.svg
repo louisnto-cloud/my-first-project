@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 390" font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="390" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 412" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="412" fill="#fffaf0"/>
   <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Rub on a sapling and a scrape</text>
 
   <!-- ground -->
@@ -22,7 +22,8 @@
     <text x="38" y="253">60</text>
     <text x="38" y="217">90</text>
     <text x="38" y="181">120</text>
-    <text x="38" y="145">150 cm</text>
+    <text x="38" y="145">150</text>
+    <text x="48" y="128" text-anchor="middle">cm</text>
   </g>
 
   <!-- sapling -->
@@ -70,9 +71,9 @@
     <circle cx="258" cy="168" r="7"/>
   </g>
   <line x1="262" y1="176" x2="262" y2="200" stroke="#e8590c" stroke-width="2" fill="none"/>
-  <text x="262" y="216" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Licking branch</text>
-  <text x="262" y="234" font-size="14" fill="#23261f" text-anchor="middle">chewed tip, about</text>
-  <text x="262" y="252" font-size="14" fill="#23261f" text-anchor="middle">1.2 to 1.5 m up</text>
+  <text x="300" y="216" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Licking branch</text>
+  <text x="300" y="234" font-size="14" fill="#23261f" text-anchor="middle">chewed tip, about</text>
+  <text x="300" y="252" font-size="14" fill="#23261f" text-anchor="middle">1.2 to 1.5 m up</text>
 
   <!-- scrape -->
   <ellipse cx="268" cy="311" rx="56" ry="11" fill="#6b4f35" stroke="#23261f" stroke-width="1.5"/>
@@ -81,8 +82,9 @@
     <ellipse cx="344" cy="314" rx="6" ry="3.5"/>
     <ellipse cx="330" cy="316" rx="5" ry="3"/>
   </g>
-  <text x="268" y="362" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Scrape</text>
-  <text x="268" y="380" font-size="14" fill="#23261f" text-anchor="middle">pawed bare dirt about 1 m long, debris kicked back</text>
-  <text x="110" y="362" font-size="14" fill="#2f3a2b" text-anchor="middle">White tails scrape.</text>
-  <text x="110" y="380" font-size="14" fill="#2f3a2b" text-anchor="middle">Mule deer rarely do.</text>
+  <text x="182" y="362" font-size="14" font-weight="bold" fill="#e8590c">Scrape</text>
+  <text x="182" y="380" font-size="14" fill="#23261f">pawed bare dirt about 1 m long,</text>
+  <text x="182" y="398" font-size="14" fill="#23261f">debris kicked back</text>
+  <text x="12" y="362" font-size="14" fill="#2f3a2b">White tails scrape.</text>
+  <text x="12" y="380" font-size="14" fill="#2f3a2b">Mule deer rarely do.</text>
 </svg>
