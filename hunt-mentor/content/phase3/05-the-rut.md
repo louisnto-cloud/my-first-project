@@ -100,7 +100,7 @@ checked: 2026-10-01
 - Cervid parts and derivatives from outside BC: unlawful to use for hunting (item 51), and possession is limited (item 50) (95%). Synopsis page 12.
 - Hunting hours for game other than migratory birds: unlawful from one hour after sunset to one hour before sunrise (99%). Synopsis page 11, item 38 (2 October 2026 edition). Rutting bucks move at night; you cannot.
 - Antler restricted seasons (spike fork moose, 6 point elk, 4 point deer): do not alter or tamper with antlers until the carcass reaches home, a meat cutter, cold storage, or compulsory inspection (95%). Synopsis page 12, item 54.
-- Hunting with a light or illuminating device is unlawful (95%). Synopsis page 12, item 38.
+- Hunting with a light or illuminating device is unlawful (95%). Synopsis page 11, the second item 38 (2 October 2026 edition).
 
 > [!rule]
 > In the rut, hunt the does. The buck will find them before you find him.
@@ -115,7 +115,7 @@ checked: 2026-10-01
 
 ## Sources
 
-- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded synopsis text: page 12 items 37, 38, 41, 50, 51 and 54; page 15 CWD transport restrictions; page 81 Chronic Wasting Disease; Region 3 page 32 CWD testing and page 34 moose seasons. Checked 2026-10-01 (95%).
+- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded synopsis text: page 11 items 38 (hours) and 38 (lights), page 12 items 41, 50, 51 and 54; page 15 CWD transport restrictions; page 81 Chronic Wasting Disease; Region 3 page 32 CWD testing and page 34 moose seasons. Checked 2026-10-01 (95%).
 - Search previews (direct reading blocked in this environment), checked 2026-10-01:
   - [Outdoor Life, rattling research by Hellickson](https://www.outdoorlife.com/hunting/how-to-rattle-deer-hunting/) and [National Deer Association, rattling tips](https://deerassociation.com/10-tips-rattling-bucks/) (70%).
   - [HuntingBC forum, moose rut timing](https://www.huntingbc.ca/forum/archive/index.php/t-23985.html) and [Arcadia Outfitting, moose seasons in BC](https://arcadiaoutfitting.tawk.help/article/best-seasons-and-locations-for-moose-hunting-in-bc) (hunter reports, 60% to 70%).

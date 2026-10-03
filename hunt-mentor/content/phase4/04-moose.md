@@ -137,7 +137,7 @@ Synopsis definitions, pages 3 and 4 (98%):
 
 - Broadside: follow the back edge of the front leg up, one third of the way up the chest. Both lungs, heart just below (standard hunter education advice) (75%).
 - A moose often does not drop. It walks or trots a short way. Stay on it and be ready for a second shot (Tip).
-- No shots at a moose in the water. It is unlawful to hunt big game while it is swimming (page 10) (98%). And you cannot get it out.
+- No shots at a moose in the water. It is unlawful to hunt big game while it is swimming (page 11, item 26) (99%). And you cannot get it out.
 - Full lesson with diagram: the shot placement session (coming in a later phase).
 
 > [!warn]
@@ -169,7 +169,7 @@ Synopsis definitions, pages 3 and 4 (98%):
 
 ## Legal specifics: after the shot
 
-- Cancel the species licence "immediately after the kill and before handling" the animal (page 10) (98%).
+- Cancel the species licence "immediately after the kill and before handling" the animal (page 11) (98%).
 - **Antlers:** while returning from the hunt, keep them naturally attached to a portion of the upper skull, with the species licence, available for inspection (page 15) (98%). Do not alter or tamper with them (page 11) (98%).
 - **[[Evidence of sex]]:** the tail or another hide piece of at least 6 cm², naturally attached, AND a testicle or part of the penis (page 15) (98%).
 - **[[Edible portions]]:** neck, ribs, four quarters and loins must go to your home, a meat cutter or cold storage (pages 3 and 11) (98%).
@@ -241,6 +241,6 @@ Put the Mandatory Hunter Report deadline, 31 March, in my phone
   {"q": "How many tines may a spike fork bull have on one antler?", "options": ["No more than 2", "At least 3 on the brow palm", "10 or more"], "answer": 0, "why": "Synopsis page 3: no more than two tines on one antler, brow palm tines included. Three on the brow palm is a tripalm; ten is a 10 point."},
   {"q": "You bought a moose licence but never went hunting. What must you do?", "options": ["Nothing", "Submit a Mandatory Hunter Report by 31 March", "Return the licence for a refund"], "answer": 1, "why": "Every moose licence buyer reports by 31 March, hunt or no hunt. Skip it and you cannot buy next year's licence until it is filed."},
   {"q": "What must travel with your moose species licence after the kill?", "options": ["The hide", "The antlers, naturally attached to part of the upper skull", "The heart"], "answer": 1, "why": "Antlers must accompany the species licence and stay attached to part of the skull, available for inspection, until home, the meat cutter or cold storage."},
-  {"q": "A bull stands chest deep in a lake. Can you shoot?", "options": ["Yes, if it is broadside", "No. Hunting big game while it is swimming is unlawful", "Only with a bow"], "answer": 1, "why": "Synopsis page 10, item 25. It is also the surest way to lose 150 kg of meat on a lake bottom."}
+  {"q": "A bull stands chest deep in a lake. Can you shoot?", "options": ["Yes, if it is broadside", "No. Hunting big game while it is swimming is unlawful", "Only with a bow"], "answer": 1, "why": "Synopsis page 11, item 26. It is also the surest way to lose 150 kg of meat on a lake bottom."}
 ]
 ```

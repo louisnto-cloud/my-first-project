@@ -359,7 +359,7 @@ checked: 2026-10-02
 > "MOTOR VEHICLE - means a device in, on or by which a person or thing is being or may be transported or drawn, and which is designed to be self-propelled, and includes an ATV or snowmobile but does not include a device designed to be moved by human, animal or wind power; a device designed to be used exclusively on stationary rails or stationary tracks; or a boat propelled by motorized power."
 
 - Plain English: trucks, cars, quads, snowmobiles and dirt bikes are all motor vehicles under the Wildlife Act. A canoe, a bicycle, a horse, a sailboat, a train and a motorboat are not, for these rules (99%).
-- Note: the synopsis has no definition of "off road vehicle" in this edition (99%). The Off Road Vehicle Act is a separate law. Page 11 says it applies to ORVs (Off Road Vehicles) on Crown land and prescribed private land, and that ORVs include ATVs, motorcycles, snowmobiles, side by sides and on highway vehicles under 4,536 kg (99%, page 11, 2 October 2026 edition). See the glossary entry [[ORV]].
+- Note: the synopsis has no definition of "off road vehicle" in this edition (99%). The Off Road Vehicle Act is a separate law. Page 9 says it applies to ORVs (Off Road Vehicles) on Crown land and prescribed private land, and that ORVs include ATVs, motorcycles, snowmobiles, side by sides and on highway vehicles under 4,536 kg (99%, page 9, 2 October 2026 edition). See the glossary entry [[ORV]].
 
 - **Mountain goat kid** (99%, page 4, 2 October 2026 edition)
 
@@ -561,7 +561,7 @@ checked: 2026-10-02
 
 ## Sources
 
-- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the PDF text and checked against rendered page images: pages 3, 4 and 5 (every definition and the caribou, elk, calf moose, moose, mountain sheep, mule deer and tine pictures), page 11 (item 23, 24 and 25 boat wording, Off Road Vehicle Act note), page 12 (muzzle loader note). Checked 2026-10-02 (99%).
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the PDF text and checked against rendered page images: pages 3, 4 and 5 (every definition and the caribou, elk, calf moose, moose, mountain sheep, mule deer and tine pictures), page 11 (items 23, 24 and 25, boat wording), page 9 (Off Road Vehicle Act note), page 12 (muzzle loader note). Checked 2026-10-02 (99%).
 - The superseded July 2026 edition of the same synopsis, page 4: the old power boat definition, read for comparison only. Checked 2026-10-02 (99%).
 - Lines marked "my reading" are this app's interpretation of the definition, 85 to 95%.
 

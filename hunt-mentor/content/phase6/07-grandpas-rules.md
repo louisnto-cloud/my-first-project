@@ -106,7 +106,7 @@ Wrote those three on a card in the rifle case
 
 ## Sources
 
-- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly 2026-10-01, for every "also law" note: RAPP page 9, 100 m rule and road allowance page 10, unlawful acts items 1, 7, 27 page 11, retrieval and edible portions page 12, deer bag limits page 14, evidence of sex and Record of Receipt page 15, Region 3 notice page 33 and seasons page 34, ethics page 77. 95 to 99%.
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly 2026-10-01, for every "also law" note: RAPP page 9, 100 m rule and road allowance page 10, unlawful acts items 1, 7, 28 page 11, retrieval and edible portions page 12, deer bag limits page 14, evidence of sex and Record of Receipt page 15, Region 3 notice page 33 and seasons page 34, ethics page 77. 95 to 99%.
 - Rules 1 to 50 are opinion: hunter lore, Phase 1 to Phase 4 of this app, and the CORE (Conservation and Outdoor Recreation Education) safety habits.
 
 ```quiz

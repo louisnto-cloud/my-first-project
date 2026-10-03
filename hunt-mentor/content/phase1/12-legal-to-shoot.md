@@ -34,7 +34,7 @@ checked: 2026-10-02
 ## Steps 4 to 6: target, road, buildings
 
 4. **100% sure what it is?** Species, sex, antler points. For ducks: species before you shoot. Not sure means no. Tip.
-5. **Off the road, out of the vehicle?** No shooting wildlife from a motor vehicle or motorboat (99%). No shooting across, or hunting on, the road allowance of a numbered highway or a 2 lane public road the province maintains (99%). No loaded firearm in or on a vehicle or [[ATV]] (all terrain vehicle) (99%).
+5. **Off the road, out of the vehicle?** No hunting from a motor vehicle, and no hunting from a boat while its motor is pushing it (99%, page 11 items 22 and 23). No shooting across, or hunting on, the road allowance of a numbered highway or a 2 lane public road the province maintains (99%). No loaded firearm in or on a vehicle or [[ATV]] (all terrain vehicle) (99%).
 6. **Over 100 m (109 yd) from any occupied house, farm or ranch building?** (99%). This includes your brother's house on the property (95%, my reading).
 
 ## Steps 7 to 9: land, backstop, shot
@@ -65,7 +65,7 @@ I rangefinded the house and the road from my stand
 
 ## Sources
 
-- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly. Page 4 (an ATV is a motor vehicle), pages 5 and 8 (photo ID, FWID number, carry all species licences), page 7 (federal permit), page 9 (parks, ecological reserves), page 10 (road allowance, 100 m, No Shooting Areas), page 11 items 22 and 27 (no shooting from a vehicle or motorboat, no loaded firearm in or on a vehicle), page 12 items 36 and 37 (hours). Checked 2026-10-02 (99%)
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly. Page 4 (an ATV is a motor vehicle), pages 5 and 8 (photo ID, FWID number, carry all species licences), page 7 (federal permit), page 9 (parks, ecological reserves), page 10 (road allowance, 100 m, No Shooting Areas), page 11 items 22, 23, 28, 37 and 38 (no hunting from a vehicle or a motor driven boat, no loaded firearm in or on a vehicle, hours). Checked 2026-10-02 (99%)
 - [Hunting Regulation, B.C. Reg. 190/84](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_01), read directly, current to 22 September 2026: s. 14 (hours). Checked 2026-10-02 (99%)
 - [Migratory Birds Regulations, 2022 (SOR/2022-105)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html), read directly, current to 2026-09-21: s. 28(3)(b) (duck hours south of 60 degrees north; no other BC hours in Schedule 3). Checked 2026-10-02 (99%)
 - Steps 4, 8 and 9 are safety and ethics habits (Tip), not quoted law.

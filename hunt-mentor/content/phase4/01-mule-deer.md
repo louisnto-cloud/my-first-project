@@ -53,7 +53,7 @@ checked: 2026-10-02
 
 - **Night (about 21:00 to 04:00):** feeds on and off in open grass and brush, rests between bouts (75%).
 - **Before first light (04:00 to 07:00):** a strong activity peak. Feeding, moving (85%).
-- **Legal light starts:** 1 hour before sunrise (page 12 item 37) (99%). Mid to late October sunrise near Kamloops is about 07:30 to 07:50 (calculated) (75%). Use the Legal light screen in Field Mode.
+- **Legal light starts:** 1 hour before sunrise (page 11, item 38) (99%). Mid to late October sunrise near Kamloops is about 07:30 to 07:50 (calculated) (75%). Use the Legal light screen in Field Mode.
 - **Sunrise to about 09:00:** last feeding, then drifts uphill toward cover (85%).
 - **Midday (10:00 to 15:00):** bedded. Chews cud. Gets up briefly to stretch, nibble, and re bed (80%).
 - **Late afternoon (16:00 to 18:00):** rises, browses near the bed, then moves toward open feeding slopes (80%).
@@ -217,7 +217,7 @@ checked: 2026-10-02
 - **Buck from a 4 point season:** the antlers must go with the species licence (page 34) (99%). On the way home, keep them attached to part of the upper skull, together with the licence, ready for an officer (page 15) (99%).
 - [[Antlerless]] mule deer: [[LEH]] (Limited Entry Hunting) draw only (page 33) (99%).
 - [[Bag limit]] in Region 3: 3 deer in total, only 1 of them a mule deer (page 33) (99%). That 1 mule deer buck counts for Regions 3 to 8 combined (page 14) (99%).
-- Hunting hours: 1 hour before sunrise to 1 hour after sunset (page 12 item 37) (99%).
+- Hunting hours: 1 hour before sunrise to 1 hour after sunset (page 11, item 38) (99%).
 - Scents: using any part or product of a deer, elk, moose or caribou from outside BC for hunting is unlawful (page 12 item 51) (99%). The synopsis warns that urine based scents can spread [[CWD]] (Chronic Wasting Disease) (inside back cover) (99%). Skip deer urine lures.
 - Deer, elk, moose or caribou killed outside BC: you may possess only the edible meat of the four quarters, loins, neck and ribs, or a hide, antlers and skull plate cleaned of all tissue before it came into BC (page 12 item 50) (99%).
 
@@ -281,7 +281,7 @@ Read my MU page in the Region 3 synopsis
 - Stewart and others 2002, [deer activity timing](https://academic.oup.com/jmammal/article/84/3/1076/905056), checked 2026-10-01 (85%)
 - D'Angelo and others 2007, [deer hearing](https://wildlife.onlinelibrary.wiley.com/doi/abs/10.2193/2006-326), checked 2026-10-01 (85%)
 - BC [ungulate winter range dataset](https://catalogue.data.gov.bc.ca/dataset/ungulate-winter-range-approved), checked 2026-10-01 (85%)
-- BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: definitions pages 3 and 4, page 11 item 1, page 12 items 37, 50 and 51, deer bag limits page 14, transport, antlers and evidence of sex page 15, Wildlife Health inside back cover, checked 2026-10-02 (99%)
+- BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: definitions pages 3 and 4, page 11 item 1, page 11 item 38, page 12 items 50 and 51, deer bag limits page 14, transport, antlers and evidence of sex page 15, Wildlife Health inside back cover, checked 2026-10-02 (99%)
 - BC [Region 3 Thompson synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), read directly: MU map page 32, bag limits page 33, season table page 34, Map C11 page 35, checked 2026-10-02 (99%)
 - New Mexico Wildlife, [The math in the meat](https://magazine.wildlife.state.nm.us/the-math-in-the-meat/) and [Backcountry Chronicles](https://www.backcountrychronicles.com/mule-deer-pack-out-weight/), reporting University of Wyoming carcass studies, checked 2026-10-01 (70%)
 - Region 3 [mule deer hunter survey 2017](http://lwdrodgun.com/wp-content/uploads/2017/12/Region-3-Mule-Deer-Hunter-Survey-Final-Report-December-2017.pdf), checked 2026-10-01 (70%)

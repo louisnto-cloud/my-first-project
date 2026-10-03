@@ -86,7 +86,7 @@ async function run(q, submit) {
     const r = await layers.findMU(code).catch(() => null);
     if (my !== seq) return;
     groups.push({ title: 'MU (Management Unit)', items: [r && r.bbox
-      ? { name: `MU ${code}`, sub: r.region || 'Management Unit', bbox: r.bbox, lng: (r.bbox[0] + r.bbox[2]) / 2, lat: (r.bbox[1] + r.bbox[3]) / 2 }
+      ? { name: `MU ${code}`, sub: r.region || 'Management Unit', bbox: r.bbox, lng: (r.bbox[0] + r.bbox[2]) / 2, lat: (r.bbox[1] + r.bbox[3]) / 2, onPick: () => layers.setOn(r.layerId, true) }
       : { name: `MU ${code}`, sub: r && r.state === 'missing' ? 'The Management Unit layer is being built' : 'Not found in the Management Unit layer', off: true }] });
   }
   if (q.length >= 2 && !c) {

@@ -432,12 +432,13 @@ function wireCopy(body) {
     (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => toast('Copied'), () => toast(t, 5000));
   });
 }
-export function linksHtml(lat, lng, name) {
-  const q = `${lat.toFixed(6)},${lng.toFixed(6)}`;
+/** Open in Google Maps, Directions (to dest, for example the parking point) and Open in Apple Maps. */
+export function linksHtml(lat, lng, name, dest) {
+  const q = `${lat.toFixed(6)},${lng.toFixed(6)}`, d = dest ? `${dest[0].toFixed(6)},${dest[1].toFixed(6)}` : q;
   return `<div class="hmm-actions">
-    <a class="hmm-act" href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">${ICONS.google}<span>Google Maps</span></a>
-    <a class="hmm-act" href="https://www.google.com/maps/dir/?api=1&destination=${q}" target="_blank" rel="noopener">${ICONS.directions}<span>Directions</span></a>
-    <a class="hmm-act" href="https://maps.apple.com/?ll=${q}&q=${encodeURIComponent(name || 'Hunt Map pin')}" target="_blank" rel="noopener">${ICONS.apple}<span>Apple Maps</span></a></div>`;
+    <a class="hmm-act" href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">${ICONS.google}<span>Open in Google Maps</span></a>
+    <a class="hmm-act" href="https://www.google.com/maps/dir/?api=1&destination=${d}" target="_blank" rel="noopener">${ICONS.directions}<span>Directions</span></a>
+    <a class="hmm-act" href="https://maps.apple.com/?ll=${q}&q=${encodeURIComponent(name || 'Hunt Map pin')}" target="_blank" rel="noopener">${ICONS.apple}<span>Open in Apple Maps</span></a></div>`;
 }
 async function openCentre() {
   const c = map.getCenter();

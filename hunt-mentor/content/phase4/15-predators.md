@@ -44,6 +44,9 @@ checked: 2026-10-01
 - **Bobcat:** smaller, spotted tan coat, black bars on the front legs, short ear tufts, tail black on top only with a white underside (70%).
 - A big dog at 200 m looks like a wolf. A hunter shot a neighbour's dog is a story that ends in court (Tip).
 
+```photo cougar-kitten
+```
+
 > [!law]
 > A cougar kitten is any cougar with spots or under one year old. You may not hunt a kitten or any cougar in its company (98%). You may not hunt a lynx or bobcat that is with another lynx or bobcat (98%).
 

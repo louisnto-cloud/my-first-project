@@ -40,7 +40,7 @@ checked: 2026-10-02
 - Antlers must stay with the deer licence, and the antlers of any November mule deer must travel with the licence, pages 15 and 34 (99%).
 - Ducks: at most 4 pintails, 4 canvasbacks, 2 goldeneyes and 2 harlequins inside the 8, page 34 (99%).
 - Not open in October near you: moose (November), elk (no general season), quail (no row), cougar, lynx and bobcat (15 November) (95%).
-- Hours, page 12: big game and grouse from 1 hour before sunrise to 1 hour after sunset. Ducks and geese from half an hour before sunrise to half an hour after sunset (99%).
+- Hours, page 11, items 37 and 38: big game and grouse from 1 hour before sunrise to 1 hour after sunset. Ducks and geese from half an hour before sunrise to half an hour after sunset (99%).
 - Buy moose and bear [[Species licence|species licences]] in person if you want the option. Deer licences have no waiting period, page 8 (99%).
 
 ## Your MUs and drive times

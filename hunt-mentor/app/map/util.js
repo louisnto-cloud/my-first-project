@@ -214,3 +214,17 @@ export function parseMonths(v) {
   }
   return [...out].filter((m) => m >= 1 && m <= 12).sort((a, b) => a - b);
 }
+/** "November to April", "October and November", or "May, July, September". */
+export function monthsText(m) {
+  if (!m || !m.length) return '';
+  if (m.length === 12) return 'All year';
+  const set = new Set(m);
+  // find a start month whose previous month is not in the set, then walk forward
+  const runs = [];
+  for (const s of m) {
+    if (set.has(((s + 10) % 12) + 1)) continue;
+    let e = s; while (set.has((e % 12) + 1) && ((e % 12) + 1) !== s) e = (e % 12) + 1;
+    runs.push([s, e]);
+  }
+  return runs.map(([s, e]) => (s === e ? MONTH_NAMES[s - 1] : `${MONTH_NAMES[s - 1]} to ${MONTH_NAMES[e - 1]}`)).join(', ');
+}

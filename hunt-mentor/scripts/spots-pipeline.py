@@ -1703,6 +1703,557 @@ def style_issues(text, allowed_names=()):
 
 
 # ======================================================================================
+# Candidate generation (grid species, ducks, grouse routes, camps) and selection
+# ======================================================================================
+def zone_mask(ctx, zones):
+    codes = [ctx.zone_codes[z] for z in zones if z in ctx.zone_codes]
+    return np.isin(ctx.R['bec'], codes) if codes else np.zeros(ctx.R['bec'].shape, bool)
+
+
+def clip01(a):
+    return np.clip(a, 0.0, 1.0)
+
+
+def grid_scores(ctx, sp):
+    """Score arrays for grid based species. Returns (S int, TB float in [0,1), extra mask)."""
+    R, D = ctx.R, ctx.D
+    w = W.get(sp, {})
+    if sp == 'deer':
+        S = (w['uwr'] * (D['uwr_deer'] <= 500) + w['cut'] * (D['cut_young'] <= 1000) + w['burn'] * (D['burn'] <= 1000)
+             + w['bec_low'] * zone_mask(ctx, DEER_ZONES_LOW) + w['bec_ms'] * zone_mask(ctx, DEER_ZONES_MID)
+             + w['aspect'] * ((R['slope'] >= 5) & (R['aspect'] >= 135) & (R['aspect'] <= 315))
+             + w['fields'] * (D['fields'] <= 2000))
+        TB = (0.3 * (1 - clip01(D['uwr_deer'] / 2000)) + 0.3 * (1 - clip01(D['cut_young'] / 1000))
+              + 0.2 * (1 - clip01(D['burn'] / 1000)) + 0.19 * clip01(1 - np.abs(R['slope'] - 15) / 15))
+        extra = ~zone_mask(ctx, {'IMA', 'CMA', 'BAFA'}) & ~R['singleproj']
+    elif sp == 'moose':
+        wet = (R['wet_count2k'] >= 3) | (D['wetland_big'] <= 500)
+        cb = (D['cut_young'] <= 1000) | (D['burn'] <= 1000)
+        S = w['wetland'] * wet + w['cut_or_burn'] * cb + w['uwr'] * (D['uwr_moose'] <= 500)
+        TB = (0.4 * (1 - clip01(D['wetland'] / 1000)) + 0.3 * (1 - clip01(np.minimum(D['cut_young'], D['burn']) / 1000))
+              + 0.29 * clip01(R['wet_count2k'] / 12))
+        extra = ~zone_mask(ctx, {'BG', 'PP', 'CWH', 'CDF', 'MH', 'IMA', 'CMA', 'BAFA'}) & ~R['singleproj']
+    elif sp == 'quail':
+        S = (w['zone'] * zone_mask(ctx, QUAIL_ZONES) + w['farm'] * (D['fields'] <= 1000) + w['creek'] * (D['stream'] <= 1000)
+             + w['draw'] * ((R['relief'] < -10) & (R['slope'] >= 5) & (R['slope'] <= 35)))
+        TB = 0.5 * (1 - clip01(D['fields'] / 1000)) + 0.49 * (1 - clip01(D['stream'] / 1000))
+        extra = R['elev'] < QUAIL_MAX_ELEV
+    else:
+        raise ValueError(sp)
+    return S.astype(np.int16), TB.astype(np.float32), extra
+
+
+def nms_select(xs, ys, order, radius, cap=None):
+    """Greedy pick in order, keeping points at least radius apart. Returns kept indexes (into xs)."""
+    cell = radius
+    buckets = {}
+    kept = []
+    r2 = radius * radius
+    for i in order:
+        x, y = xs[i], ys[i]
+        bx, by = int(x // cell), int(y // cell)
+        ok = True
+        for dx in (-1, 0, 1):
+            for dy in (-1, 0, 1):
+                for j in buckets.get((bx + dx, by + dy), ()):
+                    if (xs[j] - x) ** 2 + (ys[j] - y) ** 2 < r2:
+                        ok = False
+                        break
+                if not ok:
+                    break
+            if not ok:
+                break
+        if ok:
+            kept.append(i)
+            buckets.setdefault((bx, by), []).append(i)
+            if cap and len(kept) >= cap:
+                break
+    return kept
+
+
+def grid_candidates(ctx, sp, stats):
+    from scipy import ndimage
+    G = ctx.grid
+    S, TB, extra = grid_scores(ctx, sp)
+    base = ctx.eligible & extra & (S >= 2)
+    val = np.where(base, S + TB, -1.0)
+    mx = ndimage.maximum_filter(val, size=5)
+    cand = base & (val >= mx - 1e-6)
+    rows, cols = np.nonzero(cand)
+    out = []
+    st = stats.setdefault(sp, {})
+    for code, cat in CAT_CODES.items():
+        m = ctx.cat[rows, cols] == code
+        r, c = rows[m], cols[m]
+        if len(r) == 0:
+            continue
+        s = S[r, c]
+        tb = TB[r, c]
+        order = np.lexsort((-tb, -s))
+        xs, ys = G.cx[c], G.cy[r]
+        kept = nms_select(xs, ys, order, max(SPACING_M, SELECT_RADIUS[cat]))
+        strong = [i for i in kept if s[i] >= MIN_SCORE[sp]]
+        weak = len(kept) - len(strong)
+        capped = max(0, len(strong) - CAPS[sp])
+        strong = strong[:CAPS[sp]]
+        st[cat] = {'candidates': len(kept), 'droppedWeak': weak, 'droppedCap': capped, 'kept': len(strong)}
+        for i in strong:
+            out.append({'sp': sp, 'cat': cat, 'x': float(xs[i]), 'y': float(ys[i]), 'score': int(s[i]), 'tb': float(tb[i]),
+                        'r': int(r[i]), 'c': int(c[i])})
+    return out
+
+
+def duck_candidates(ctx, stats):
+    """Lakes and wetlands scored per SPOTS.md. Target is a Crown shore point near the parking."""
+    G, R, D = ctx.grid, ctx.R, ctx.D
+    net = ctx.net
+    lg, lp, _ = ctx.ca['lakes']
+    wg, wp, _ = ctx.ca['wetlands']
+    geoms = np.concatenate([lg, wg])
+    props = [dict(x, kind='lake') for x in lp] + [dict(x, kind='wetland') for x in wp]
+    rep = shapely.point_on_surface(geoms)
+    rx, ry = shapely.get_x(rep), shapely.get_y(rep)
+    rr, cc = G.rc(rx, ry)
+    inbox = G.inbox[rr, cc]
+    ha = np.array([x['ha'] for x in props])
+    park_tree = ctx.tree('parkable', net.geoms[net.parkable])
+    river_tree = ctx.tree('rivers', ctx.ca['rivers'][0])
+    excl = R['park'][rr, cc] | R['city'][rr, cc] | R['notarget'][rr, cc] | R['reserve'][rr, cc]
+    elev = R['elev'][rr, cc]
+    sel = np.nonzero(inbox & ~excl & (ha >= 0.5) & (ha <= 3000))[0]
+    out = []
+    w = W['duck']
+    st = stats.setdefault('duck', {})
+    weak = 0
+    for i in sel:
+        g = geoms[i]
+        j, d = park_tree.query_nearest(g, return_distance=True, max_distance=8000)
+        if len(j) == 0:
+            continue
+        d = float(d[0])
+        edge = net.geoms[net.parkable][j[0]]
+        s = 0
+        comp = []
+        if 1 <= ha[i] <= 200 and d <= 500:
+            s += w['size_road']
+            comp.append('size_road')
+        if R['wet_count2k'][rr[i], cc[i]] >= 3:
+            s += w['complex']
+            comp.append('complex')
+        near_river = len(river_tree.query(g, predicate='dwithin', distance=150)) > 0
+        if near_river:
+            s += w['backwater']
+            comp.append('backwater')
+        if elev[i] < DUCK_MAX_ELEV:
+            s += w['low']
+            comp.append('low')
+        if s < 2:
+            continue
+        if s < MIN_SCORE['duck']:
+            weak += 1
+            continue
+        # shore point on Crown land nearest the road
+        ring = shapely.boundary(g)
+        L = ring.length
+        k = max(8, min(400, int(L // 40)))
+        pts = shapely.line_interpolate_point(ring, np.linspace(0, L, k, endpoint=False))
+        pr, pc = G.rc(shapely.get_x(pts), shapely.get_y(pts))
+        okp = ~R['private'][pr, pc] & ~R['park'][pr, pc] & ~R['reserve'][pr, pc] & ~R['city'][pr, pc] & ~R['notarget'][pr, pc]
+        if not okp.any():
+            continue
+        okpts = pts[okp]
+        dd = shapely.distance(okpts, edge)
+        t = okpts[int(np.argmin(dd))]
+        dpark = float(dd.min())
+        cat = 'drive' if dpark <= 300 else ('walk' if dpark <= 5000 else 'backcountry')
+        tb = 0.5 * (1 - min(dpark, 2000) / 2000) + 0.49 * (1 - min(abs(math.log10(max(ha[i], 0.5) / 20)), 2) / 2)
+        out.append({'sp': 'duck', 'cat': cat, 'x': t.x, 'y': t.y, 'score': s, 'tb': tb, 'water': i, 'waterProps': props[i],
+                    'waterGeom': g, 'comp': comp, 'nearRiver': near_river})
+    # selection per category
+    res = []
+    for cat in ('drive', 'walk', 'backcountry'):
+        cs = [c for c in out if c['cat'] == cat]
+        order = sorted(range(len(cs)), key=lambda i: (-cs[i]['score'], -cs[i]['tb']))
+        xs = [c['x'] for c in cs]
+        ys = [c['y'] for c in cs]
+        kept = nms_select(xs, ys, order, max(SPACING_M, 1000))
+        capped = max(0, len(kept) - CAPS['duck'])
+        kept = kept[:CAPS['duck']]
+        st[cat] = {'candidates': len(cs), 'kept': len(kept), 'droppedCap': capped}
+        res += [cs[i] for i in kept]
+    st['droppedWeak'] = weak
+    return res
+
+
+def grouse_candidates(ctx, stats):
+    """Forest road stretches 3 to 10 km through grouse zones with cutblock and riparian edges (roadside routes)."""
+    from shapely import ops
+    G, R, D = ctx.grid, ctx.R, ctx.D
+    net = ctx.net
+    zones = set(GROUSE_ZONES) | GROUSE_ZONES_EXTRA.get(ctx.area, set())
+    zmask = zone_mask(ctx, zones)
+    cg, cp, _ = ctx.ca['cutblocks']
+    cut_idx = [i for i, x in enumerate(cp) if x['age'] <= 30]
+    cut_tree = STRtree(cg[cut_idx]) if cut_idx else None
+    wat = np.concatenate([ctx.ca['wetlands'][0], ctx.ca['lakes'][0], ctx.ca['streams'][0]])
+    wat_tree = STRtree(wat) if len(wat) else None
+    groups = {}
+    for e in range(len(net.geoms)):
+        p = net.props[e]
+        if p['paved'] or p['cls'] in ('highway', 'freeway', 'arterial', 'collector', 'ramp', 'local', 'lane', 'alleyway', 'service'):
+            if not (p['cls'] == 'local' and not p['paved']):
+                continue
+        if net.closed[e] or net.mode[e] == 2:
+            cat = 'walk'
+        elif net.parkable[e]:
+            cat = 'drive'
+        elif net.atv_ok[e] and net.mode[e] == 1:
+            cat = 'atv'
+        else:
+            continue
+        groups.setdefault((cat, p.get('name') or ''), []).append(e)
+    pieces = []
+    for (cat, name), es in groups.items():
+        merged = shapely.line_merge(shapely.union_all(net.geoms[es]))
+        for line in shapely.get_parts(merged):
+            L = line.length
+            if L < 3000:
+                continue
+            n = max(1, int(round(L / 5000)))
+            step = L / n
+            if step > 10000:
+                n = int(math.ceil(L / 10000))
+                step = L / n
+            for k in range(n):
+                seg = ops.substring(line, k * step, (k + 1) * step)
+                if seg.length >= 3000:
+                    pieces.append((cat, name, seg))
+    st = stats.setdefault('grouse', {})
+    w = W['grouse']
+    out, weak = [], 0
+    for cat, name, seg in pieces:
+        L = seg.length
+        pts = shapely.line_interpolate_point(seg, np.linspace(0, L, max(5, int(L // 100))))
+        pr, pc = G.rc(shapely.get_x(pts), shapely.get_y(pts))
+        if (~G.inbox[pr, pc]).mean() > 0.5:
+            continue
+        bad = R['private'][pr, pc] | R['park'][pr, pc] | R['reserve'][pr, pc] | R['city'][pr, pc] | R['notarget'][pr, pc]
+        if bad.mean() > 0.2:
+            continue
+        s = 0
+        comp = []
+        zf = zmask[pr, pc].mean()
+        if zf >= 0.6:
+            s += w['zone']
+            comp.append('zone')
+        buf = seg.buffer(100)
+        ncut = len(cut_tree.query(buf, predicate='intersects')) if cut_tree is not None else 0
+        if ncut >= 2:
+            s += w['cut_edge']
+            comp.append('cut_edge')
+        nwat = len(wat_tree.query(buf, predicate='intersects')) if wat_tree is not None else 0
+        if nwat >= 2:
+            s += w['riparian']
+            comp.append('riparian')
+        if s < 1:
+            continue
+        if s < MIN_SCORE['grouse']:
+            weak += 1
+            continue
+        tb = min(0.99, 0.05 * ncut / (L / 1000) + 0.05 * nwat / (L / 1000))
+        # start at the end nearest a parkable road
+        a = shapely.get_point(seg, 0)
+        b = shapely.get_point(seg, -1)
+        pt = ctx.tree('parkable', net.geoms[net.parkable])
+        ja, da = pt.query_nearest(a, return_distance=True)
+        jb, db = pt.query_nearest(b, return_distance=True)
+        if len(db) and len(da) and db[0] < da[0]:
+            seg = shapely.reverse(seg)
+            a = b
+        out.append({'sp': 'grouse', 'cat': cat, 'x': a.x, 'y': a.y, 'score': s, 'tb': tb, 'route': seg, 'roadName': name,
+                    'comp': comp, 'zoneFrac': float(zf), 'ncut': ncut, 'nwat': nwat})
+    res = []
+    for cat in ('drive', 'atv', 'walk'):
+        cs = [c for c in out if c['cat'] == cat]
+        order = sorted(range(len(cs)), key=lambda i: (-cs[i]['score'], -cs[i]['tb']))
+        kept = nms_select([c['x'] for c in cs], [c['y'] for c in cs], order, max(SPACING_M, 1500))
+        capped = max(0, len(kept) - CAPS['grouse'])
+        kept = kept[:CAPS['grouse']]
+        st[cat] = {'candidates': len(cs), 'kept': len(kept), 'droppedCap': capped}
+        res += [cs[i] for i in kept]
+    st['droppedWeak'] = weak
+    return res
+
+
+def camp_candidates(ctx, hunt_spots, stats):
+    """Official rec sites with campsites, plus Crown land camp candidates (flat, near water, by a road)."""
+    G, R, D = ctx.grid, ctx.R, ctx.D
+    st = stats.setdefault('camp', {})
+    out = []
+    rg, rp, _ = ctx.ca['rec_sites']
+    for g, p in zip(rg, rp):
+        r, c = G.rc(g.x, g.y)
+        if not G.inbox[r, c]:
+            continue
+        camping = p['campsites'] > 0 or 'camping' in (p['activities'] or '').lower()
+        if not camping:
+            continue
+        out.append({'sp': 'camp', 'cat': 'camp', 'x': g.x, 'y': g.y, 'score': SCORE_MAX['camp'], 'tb': 0.99, 'official': p,
+                    'kind': 'rec site'})
+    st['official'] = len(out)
+    # Crown candidates
+    hx = np.array([s['x'] for s in hunt_spots]) if hunt_spots else np.zeros(0)
+    hy = np.array([s['y'] for s in hunt_spots]) if hunt_spots else np.zeros(0)
+    pts = G.burn_points(shapely.points(hx, hy)) if len(hx) else np.zeros((G.ny, G.nx), bool)
+    near = G.count_within(pts, 5000)
+    w = W['camp']
+    flat = R['slope'] < 5
+    water = D['water'] <= 200
+    named = np.zeros_like(flat)
+    S = (w['flat'] * flat + w['water'] * water + w['quiet'] * ((D['paved'] >= 1000) & (D['fields'] >= 500))
+         + w['spots_near'] * (near >= 5))
+    ok = ctx.eligible & (D['car_park'] <= 150) & ~R['closed'] & flat & (D['water'] >= 30) & (D['rec'] >= 1500) & ~R['wetland']
+    rows, cols = np.nonzero(ok & (S >= MIN_SCORE['camp']))
+    weak = int((ok & (S < MIN_SCORE['camp']) & (S >= 3)).sum())
+    s = S[rows, cols]
+    tb = (1 - clip01(D['water'][rows, cols] / 200)) * 0.5 + clip01(near[rows, cols] / 20) * 0.49
+    order = np.lexsort((-tb, -s))
+    xs, ys = G.cx[cols], G.cy[rows]
+    off = [(o['x'], o['y']) for o in out]
+    ox = np.array([o[0] for o in off] + list(xs))
+    oy = np.array([o[1] for o in off] + list(ys))
+    order2 = list(range(len(off))) + [len(off) + i for i in order]
+    kept = nms_select(ox, oy, order2, 3000)
+    crown = [k - len(off) for k in kept if k >= len(off)]
+    capped = max(0, len(crown) - CAPS['camp'])
+    crown = crown[:CAPS['camp']]
+    for i in crown:
+        out.append({'sp': 'camp', 'cat': 'camp', 'x': float(xs[i]), 'y': float(ys[i]), 'score': int(s[i]), 'tb': float(tb[i]),
+                    'kind': 'crown', 'r': int(rows[i]), 'c': int(cols[i])})
+    st.update({'crownKept': len(crown), 'droppedWeak': weak, 'droppedCap': capped})
+    return out
+
+
+# ======================================================================================
+# Refinement: vector checks, access, evidence, legal flags, plan text
+# ======================================================================================
+class Refiner:
+    def __init__(self, ctx, dates):
+        self.ctx = ctx
+        self.dates = dates
+        net = ctx.net
+        self.pk_idx = np.nonzero(net.parkable)[0]
+        self.pk_tree = ctx.tree('parkable', net.geoms[net.parkable])
+        self.all_tree = ctx.tree('alledges', net.geoms)
+        atvz = ctx.atv_zone_edges()
+        self.az_idx = np.nonzero(atvz)[0]
+        self.az_tree = STRtree(net.geoms[atvz]) if len(self.az_idx) else None
+        srcs = np.unique(np.concatenate([net.u[net.parkable], net.v[net.parkable]]))
+        self.walk = net.multi(np.ones(len(net.geoms), bool), srcs, limit=20000)
+        base = AREAS[ctx.area]['base']
+        bx, by = lonlat_to_xy(base['lon'], base['lat'])
+        self.base_xy = (float(bx), float(by))
+        car_set = set(np.unique(np.concatenate([net.u[net.car], net.v[net.car]])).tolist())
+        d, j = net.node_tree.query([self.base_xy[0], self.base_xy[1]], k=50)
+        bn = [int(jj) for jj in np.atleast_1d(j) if int(jj) in car_set]
+        self.base_node = bn[0] if bn else int(np.atleast_1d(j)[0])
+        self.drive = net.multi(net.car, [self.base_node], limit=400000)
+        ca = ctx.ca
+        cg, cp, _ = ca['cutblocks']
+        self.cut_young = [i for i, x in enumerate(cp) if CUT_AGE[0] <= x['age'] <= CUT_AGE[1]]
+        self.cut_tree = STRtree(cg[self.cut_young]) if self.cut_young else None
+        fg, fp, _ = ca['burns']
+        self.burn_idx = [i for i, x in enumerate(fp) if BURN_YEARS[0] <= x['year'] <= BURN_YEARS[1]]
+        self.burn_tree = STRtree(fg[self.burn_idx]) if self.burn_idx else None
+        ug, up, _ = ca['uwr']
+        self.uwr_tree = STRtree(ug) if len(ug) else None
+        wg, wp, _ = ca['wetlands']
+        self.wet_tree = STRtree(wg) if len(wg) else None
+        self.bec_tree = STRtree(ca['bec'][0])
+        self.mu_tree = STRtree(ctx.mu[0])
+        self.priv_tree = STRtree(ctx.private) if len(ctx.private) else None
+        self.park_tree = STRtree(ctx.parks[0]) if len(ctx.parks[0]) else None
+        self.res_tree = STRtree(ctx.reserves[0]) if len(ctx.reserves[0]) else None
+        self.city_tree = STRtree(ctx.cities[0]) if len(ctx.cities[0]) else None
+        mg, mp = ctx.mvpr
+        self.mv_idx = [i for i, x in enumerate(mp) if x['kind'] != 'snowmobile']
+        self.mv_tree = STRtree(mg[self.mv_idx]) if self.mv_idx else None
+        self.wma_tree = STRtree(ctx.wma[0]) if len(ctx.wma[0]) else None
+        sg, spp, _ = ca['streams']
+        self.stream_tree = STRtree(sg) if len(sg) else None
+        lg, lp, _ = ca['lakes']
+        self.lake_tree = STRtree(lg) if len(lg) else None
+        # road allowance roads: numbered highways and 2 lane or wider paved public roads
+        dg, dp, _ = ca['dra']
+        ra = [i for i, x in enumerate(dp) if x['hwy'] or (x['surf'] == 'paved' and (x['lanes'] or 0) >= 2
+                                                       and x['cls'] in ('highway', 'freeway', 'arterial', 'collector', 'local'))]
+        self.ra_idx = ra
+        self.ra_tree = STRtree(dg[ra]) if ra else None
+        # naming anchors
+        anchors, alabels = [], []
+        rg, rp, _ = ca['rec_sites']
+        for g, p in zip(rg, rp):
+            if p['name']:
+                nm = title_case_name(p['name'])
+                anchors.append(g)
+                alabels.append(nm if re.search(r'rec(reation)? site', nm, re.I) else nm + ' rec site')
+        for g, p in zip(lg, lp):
+            if p['name']:
+                anchors.append(g)
+                alabels.append(p['name'])
+        ng, npp, _ = ca['names']
+        keep_types = ('Mountain', 'Peak', 'Hill', 'Ridge', 'Locality', 'Community', 'Settlement', 'Plateau', 'Meadow', 'Flat',
+                      'Lake', 'Valley', 'Canyon', 'Butte', 'Bluff', 'Range', 'Pass', 'Point', 'Knoll', 'Bench', 'Basin', 'Mount')
+        for g, p in zip(ng, npp):
+            t = p.get('type') or ''
+            if p.get('name') and any(k.lower() in t.lower() for k in keep_types):
+                anchors.append(g)
+                alabels.append(p['name'])
+        self.anchors = np.array(anchors, dtype=object)
+        self.alabels = alabels
+        self.anchor_tree = STRtree(self.anchors) if anchors else None
+        self.rec_g, self.rec_p = rg, rp
+
+    # ------------------------------------------------------------ small helpers
+    def nearest(self, tree, geoms_idx, pt, maxd):
+        if tree is None:
+            return None, None
+        j, d = tree.query_nearest(pt, max_distance=maxd, return_distance=True)
+        if len(j) == 0:
+            return None, None
+        k = int(j[0])
+        return (geoms_idx[k] if geoms_idx is not None else k), float(d[0])
+
+    def point_ok(self, x, y):
+        G, R = self.ctx.grid, self.ctx.R
+        r, c = G.rc(x, y)
+        return bool(self.ctx.eligible[r, c])
+
+    def name_for(self, x, y, prefer=None):
+        if prefer:
+            return prefer
+        if self.anchor_tree is None:
+            return 'Unnamed spot'
+        pt = shapely.points(x, y)
+        idx = self.anchor_tree.query(pt.buffer(10000))
+        if len(idx) == 0:
+            j, d = self.anchor_tree.query_nearest(pt, return_distance=True)
+            idx = j
+        best = None
+        for k in idx:
+            g = self.anchors[k]
+            d = shapely.distance(g, pt)
+            # rec sites and lakes read better: small preference
+            w = d * (0.8 if self.alabels[k].endswith('rec site') else 1.0)
+            if best is None or w < best[0]:
+                best = (w, k, d)
+        _, k, d = best
+        g = self.anchors[k]
+        if d < 120:
+            return f'At {self.alabels[k]}'
+        np_ = shapely.ops.nearest_points(g, pt)[0] if shapely.get_type_id(g) != 0 else g
+        az, dd = bearing_dist(np_.x, np_.y, x, y)
+        return f'{fmt_dist(dd)} {compass8(az)} of {self.alabels[k]}'
+
+    # ------------------------------------------------------------ access
+    def access(self, s):
+        """Fill parking, route, category for a candidate. Returns False if no access."""
+        ctx, net = self.ctx, self.ctx.net
+        tgt = shapely.points(s['x'], s['y'])
+        j, d = self.pk_tree.query_nearest(tgt, return_distance=True, max_distance=40000)
+        if len(j) == 0:
+            return False
+        e = self.pk_idx[int(j[0])]
+        edge = net.geoms[e]
+        ppt = shapely.line_interpolate_point(edge, shapely.line_locate_point(edge, tgt))
+        dpark = float(d[0])
+        s['parkEdge'] = int(e)
+        s['ride'] = None
+        if s['sp'] == 'grouse':
+            start = shapely.get_point(s['route'], 0)
+            j2, d2 = self.pk_tree.query_nearest(start, return_distance=True, max_distance=40000)
+            e2 = self.pk_idx[int(j2[0])]
+            edge2 = net.geoms[e2]
+            ppt = shapely.line_interpolate_point(edge2, shapely.line_locate_point(edge2, start))
+            s['parkEdge'] = int(e2)
+            s['park'] = (ppt.x, ppt.y)
+            walk_in = float(d2[0])
+            s['approach'] = shapely.linestrings([[ppt.x, ppt.y], [start.x, start.y]]) if walk_in > 20 else None
+            s['walkLine'] = s['route']
+            s['walkM'] = s['route'].length + walk_in
+            if s['cat'] == 'atv':
+                s['ride'] = s['route']
+                s['walkLine'] = None
+                s['walkM'] = walk_in
+            return True
+        if s['sp'] == 'camp':
+            s['park'] = (s['x'], s['y']) if s.get('kind') == 'rec site' else (ppt.x, ppt.y)
+            s['walkLine'] = None if s.get('kind') == 'rec site' else shapely.linestrings([[ppt.x, ppt.y], [s['x'], s['y']]])
+            s['walkM'] = 0.0 if s.get('kind') == 'rec site' else dpark
+            return True
+        if dpark <= 300:
+            s['cat'] = 'drive'
+            s['park'] = (ppt.x, ppt.y)
+            s['walkLine'] = shapely.linestrings([[ppt.x, ppt.y], [s['x'], s['y']]])
+            s['walkM'] = dpark
+            return True
+        if s['cat'] == 'atv' and self.az_tree is not None:
+            j3, d3 = self.az_tree.query_nearest(tgt, return_distance=True, max_distance=400)
+            if len(j3):
+                e3 = self.az_idx[int(j3[0])]
+                dr, pr, sr = ctx.ride
+                u, v = net.u[e3], net.v[e3]
+                n0 = u if dr[u] <= dr[v] else v
+                if np.isfinite(dr[n0]):
+                    nodes = net.path_nodes(pr, n0)
+                    stage = nodes[0]
+                    ride = net.path_line(nodes)
+                    eg = net.geoms[e3]
+                    loc_t = shapely.line_locate_point(eg, tgt)
+                    loc_n = shapely.line_locate_point(eg, shapely.points(net.nx[n0], net.ny[n0]))
+                    from shapely import ops
+                    part = ops.substring(eg, min(loc_t, loc_n), max(loc_t, loc_n))
+                    parts = [x for x in (ride, part) if x is not None and not x.is_empty and x.length > 0]
+                    ride_line = shapely.line_merge(shapely.union_all(parts)) if parts else None
+                    near_pt = shapely.line_interpolate_point(eg, loc_t)
+                    ride_m = float(dr[n0]) + part.length
+                    if ride_line is not None and 300 <= ride_m <= 10500:
+                        s['park'] = (float(net.nx[stage]), float(net.ny[stage]))
+                        s['ride'] = ride_line
+                        s['rideM'] = ride_m
+                        s['rideNames'] = net.names_along(net.path_edges(nodes), min_len=200)
+                        s['walkLine'] = shapely.linestrings([[near_pt.x, near_pt.y], [s['x'], s['y']]])
+                        s['walkM'] = float(d3[0])
+                        s['cat'] = 'atv'
+                        return True
+        # walk or backcountry: straight line versus the walk network (closed roads, trails)
+        s['cat'] = 'walk' if dpark <= 5000 else 'backcountry'
+        s['park'] = (ppt.x, ppt.y)
+        s['walkLine'] = shapely.linestrings([[ppt.x, ppt.y], [s['x'], s['y']]])
+        s['walkM'] = dpark
+        s['walkVia'] = None
+        j4, d4 = self.all_tree.query_nearest(tgt, return_distance=True, max_distance=250)
+        if len(j4):
+            e4 = int(j4[0])
+            dw, pw, sw = self.walk
+            u, v = net.u[e4], net.v[e4]
+            n0 = u if dw[u] + math.hypot(net.nx[u] - s['x'], net.ny[u] - s['y']) <= dw[v] + math.hypot(net.nx[v] - s['x'], net.ny[v] - s['y']) else v
+            if np.isfinite(dw[n0]):
+                tot = float(dw[n0]) + math.hypot(net.nx[n0] - s['x'], net.ny[n0] - s['y'])
+                nodes = net.path_nodes(pw, n0)
+                if tot <= 1.6 * dpark and len(nodes) > 1:
+                    pl = net.path_line(nodes)
+                    if pl is not None:
+                        tail = shapely.linestrings([[net.nx[n0], net.ny[n0]], [s['x'], s['y']]])
+                        s['park'] = (float(net.nx[nodes[0]]), float(net.ny[nodes[0]]))
+                        s['walkLine'] = shapely.line_merge(shapely.union_all([pl, tail]))
+                        s['walkM'] = tot
+                        s['walkVia'] = net.names_along(net.path_edges(nodes), min_len=200)
+                        s['cat'] = 'walk' if tot <= 6500 else 'backcountry'
+        return True
+
+
+# ======================================================================================
 # (processing steps are defined below)
 # ======================================================================================
 

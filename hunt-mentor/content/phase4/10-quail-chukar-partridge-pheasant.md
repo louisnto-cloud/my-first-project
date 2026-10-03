@@ -11,7 +11,7 @@ checked: 2026-10-01
 
 - California quail, chukar, grey (Hungarian) partridge and ring necked pheasant are all upland game birds in BC (99%).
 - Residents need only the BC hunting licence. The fee table on page 8 says "No Species licence required" for upland game birds (99%). No federal permit (99%).
-- Shotgun only for these four. Rifles and air guns are different; see the legal screen (95%).
+- Legal for these four: a shotgun, an air rifle, or bows B, C and D. No rimfire (.22) and no centrefire rifle (99%, page 13 table and notes 2 and 3).
 - This goes deeper than [Your first quail trip](#/s/first-quail-trip): all four birds, every region you hunt, and the exact rows from the [[Synopsis]].
 
 ## California quail

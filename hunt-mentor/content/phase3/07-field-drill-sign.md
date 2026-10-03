@@ -89,7 +89,7 @@ Water sign: tracks at a pond, seep or creek crossing
 
 ## Sources
 
-- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded synopsis text: page 11 items 27, 29 and 35, page 12 item 53; Region 3 page 33. Checked 2026-10-01 (95%).
+- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded synopsis text: page 11 items 28, 30 and 36, page 12 item 53; Region 3 page 33. Checked 2026-10-01 (95%).
 - BC Trespass Act, [consolidated text on BC Laws](https://www.bclaws.gov.bc.ca/civix/document/id/consol21/consol21/00_96462_01), checked 2026-10-01 (85%, enclosed land).
 - Skills are drawn from the four sessions above and their sources. The scoring is the mentor's own design, labelled Tip.
 

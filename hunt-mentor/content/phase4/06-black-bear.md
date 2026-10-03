@@ -57,7 +57,7 @@ checked: 2026-10-01
 - **Small or young bears** (page 80): "all legs", look over the shoulder often, pointed head, ears look big and close together, long thin neck, ears to nose lines form a skinny triangle (98%).
 - **Large adult males** (page 80): stocky legs, massive body with a belly near the ground, slow deliberate movement, big round head "like a basketball", ears look small, thick neck, ears to nose lines form an equal sided triangle (98%).
 - Cubs stay with the sow about 1.5 years and leave in their second summer (search preview) (75%). So in April to June a sow may have yearling cubs the size of a big dog.
-- Law: no hunting "a black bear less than 2 years old or any bear in its company" (page 10) (98%). A yearling is under 2. Its mother is "in its company".
+- Law: no hunting "a black bear less than 2 years old or any bear in its company" (page 11) (98%). A yearling is under 2. Its mother is "in its company".
 - Watch a lone bear for several minutes. Cubs lag behind, climb trees, or sit in the brush (Tip).
 
 > [!tip]
@@ -170,16 +170,16 @@ checked: 2026-10-01
 
 ## Legal specifics: bear rules
 
-- "It's unlawful: 14. To hunt a black bear less than 2 years old or any bear in its company" (page 10) (98%).
-- "15. To hunt the white or blue (Glacier) colour phases of the black bear" (page 10) (98%).
-- "21. To hunt bears by placing bait or by using a dead animal or using part of it as bait" (page 10) (98%). Methods table note 6 repeats it (page 13) (98%).
-- "20. To intentionally feed or attempt to feed dangerous wildlife (cougar, coyote, wolf, and bear)", except lawful baiting of cougar, coyote and wolf only (page 10) (98%).
+- "It's unlawful: 14. To hunt a black bear less than 2 years old or any bear in its company" (page 11) (98%).
+- "15. To hunt the white or blue (Glacier) colour phases of the black bear" (page 11) (98%).
+- "21. To hunt bears by placing bait or by using a dead animal or using part of it as bait" (page 11) (98%). Methods table note 6 repeats it (page 13) (98%).
+- "20. To intentionally feed or attempt to feed dangerous wildlife (cougar, coyote, wolf, and bear)", except lawful baiting of cougar, coyote and wolf only (page 11) (98%).
 - **[[Edible portions]]:** the duty to take the neck, ribs, four quarters and loins applies to black bear. The furbearer exception reads "other than a black bear" (pages 3 and 11) (98%).
 - **Gall bladder:** unlawful to possess or traffic in bear galls or bile, or male bear genitalia separated from the carcass. Hunters may leave the gall at the kill site, or dispose of the gut pile including the gall within 48 hours (page 11) (98%).
 - **Paws:** unlawful to traffic in bear paws separated from the carcass or hide. Possession under a licence for personal use is allowed (page 11) (98%).
 - **Compulsory inspection:** required for black bear only in MUs 6-12 and 6-13 (page 17) (98%). Not in Regions 2, 3 or 8 (95%).
 - **[[Evidence of sex]]:** the page 15 list covers caribou, elk, moose, deer, bison, goat, sheep and cougar. Black bear is not on it outside compulsory inspection areas (90%).
-- Cancel the species licence immediately after the kill, before handling (page 10) (98%).
+- Cancel the species licence immediately after the kill, before handling (page 11) (98%).
 - Ear tagged or collared bear: contact the nearest Fish and Wildlife office immediately (page 80) (98%).
 
 ## Meat care, trichinosis and yield
@@ -246,7 +246,7 @@ Write the RAPP number in my phone
 [
   {"q": "A big brown bear feeds on a slope. What do you check before anything else?", "options": ["Its colour", "Shoulder hump, face profile and ears", "How fat it is"], "answer": 1, "why": "Colour is not reliable. Interior black bears are often brown. A hump, a dished face and small round ears mean grizzly, and there is no open season on grizzlies in BC."},
   {"q": "What is the Region 3 fall black bear season in MUs 3-12 to 3-20 and 3-26 to 3-44?", "options": ["1 September to 30 November", "10 September to 10 December", "1 October to 31 October"], "answer": 0, "why": "Synopsis page 34: Sept 1 to Nov 30, bag limit 2. MU 3-46 opens later, on 20 September."},
-  {"q": "A bear is feeding with a smaller bear nearby. Can you shoot the big one?", "options": ["Yes, if it is the bigger one", "No. A bear under 2 and any bear in its company are closed", "Yes, in the fall only"], "answer": 1, "why": "Synopsis page 10, item 14. The smaller bear is likely a cub or yearling, and the sow with it is protected too."},
+  {"q": "A bear is feeding with a smaller bear nearby. Can you shoot the big one?", "options": ["Yes, if it is the bigger one", "No. A bear under 2 and any bear in its company are closed", "Yes, in the fall only"], "answer": 1, "why": "Synopsis page 11, item 14. The smaller bear is likely a cub or yearling, and the sow with it is protected too."},
   {"q": "Which is legal when hunting black bear in BC?", "options": ["Placing a bait pile", "Using a .22 rimfire rifle", "Using a 20 gauge shotgun with No. 1 buck"], "answer": 2, "why": "Baiting bears is unlawful. Rimfire is not allowed for black bear. A shotgun of 20 gauge or larger with No. 1 buck or larger is on the methods table, page 13."},
   {"q": "How do you make bear meat safe from trichinosis?", "options": ["Freeze it for 3 weeks", "Cook it to an internal 71 C (160 F) and check with a thermometer", "Smoke it"], "answer": 1, "why": "The bear species of Trichinella survives freezing. Only heat kills it. Use a thermometer, because colour does not show doneness."}
 ]

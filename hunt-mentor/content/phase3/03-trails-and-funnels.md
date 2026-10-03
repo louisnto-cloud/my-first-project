@@ -91,7 +91,7 @@ checked: 2026-10-01
 
 ## Sources
 
-- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded synopsis text: page 11 items 29 and 35, page 12 item 53; Region 3 page 33 (motor vehicles above 1,700 m). Checked 2026-10-01 (95%).
+- BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded synopsis text: page 11 items 30 and 36, page 12 item 53; Region 3 page 33 (motor vehicles above 1,700 m). Checked 2026-10-01 (95%).
 - Search previews (direct reading blocked in this environment), checked 2026-10-01, hunter craft capped at 60% to 65%:
   - [Bowhunters United, how terrain funnels deer movements](https://bowhuntersunited.com/2020/10/01/how-terrain-funnels-deer-movements/)
   - [HuntStand, 8 ways to find killer deer hunting funnels](https://www.huntstand.com/fieldnotes/8-ways-to-find-killer-deer-hunting-funnels/)

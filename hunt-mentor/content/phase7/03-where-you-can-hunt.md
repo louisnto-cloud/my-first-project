@@ -229,7 +229,7 @@ checked: 2026-10-03
 > "For information on the Canadian Firearm Licence contact Canadian Firearm Centre at 1-800-731-4000 or visit the website at www.rcmp-grc.gc.ca/cfp-pcaf/."
 
 - Your hunting licence is not a firearms licence (99%, page 10, 2 October 2026 edition). The federal licence is the [[PAL]] (Possession and Acquisition Licence) (95%, my reading).
-- Canadian Firearms Centre: 1 800 731 4000 (99%).
+- Canadian Firearm Centre, as the synopsis names it: 1 800 731 4000 (99%).
 
 > [!law] No Shooting or Hunting Areas, page 10
 > "It is unlawful to hunt or discharge a firearm within 100 m of a church, school building, school yard, playground, regional district park, dwelling house, or farm or ranch building that is occupied by persons or domestic animals. An owner or occupier of land, or an employee of an owner or occupier are exempted near a dwelling house or farm or ranch building that is occupied by persons or domestic animals, for the purposes of slaughtering livestock."

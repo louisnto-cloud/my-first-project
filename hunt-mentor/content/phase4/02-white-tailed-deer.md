@@ -49,7 +49,7 @@ checked: 2026-10-02
 - Slips back into cover at or before first light (75%).
 - Under hunting pressure, white tails move more at night (70%).
 - Late October: bucks start moving in daylight as the rut nears (70%).
-- Legal light starts 1 hour before sunrise and ends 1 hour after sunset (page 12 item 37) (99%).
+- Legal light starts 1 hour before sunrise and ends 1 hour after sunset (page 11, item 38) (99%).
 
 > [!field]
 > Find the trail between the bedding brush and the field. Look for the most trampled path with the freshest tracks. Sit downwind of it.
@@ -192,7 +192,7 @@ Read antlerless dates for my MU in the synopsis
 - Staudenmaier and others 2021, [mule deer and white tail habitat](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3813), checked 2026-10-01 (85%)
 - Stewart and others 2002, [deer activity timing](https://academic.oup.com/jmammal/article/84/3/1076/905056), checked 2026-10-01 (85%)
 - Penn State Extension, white tail breeding dates, via research notes, checked 2026-10-01 (80%)
-- BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: antlerless definition page 3, trespass and bylaws page 9, 100 m rule page 10, page 11 item 1, page 12 items 37, 51 and 53, deer licences and bag limits page 14, transport and evidence of sex page 15, Wildlife Health inside back cover, checked 2026-10-02 (99%)
+- BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: antlerless definition page 3, trespass and bylaws page 9, 100 m rule page 10, page 11 item 1, page 11 item 38, page 12 items 51 and 53, deer licences and bag limits page 14, transport and evidence of sex page 15, Wildlife Health inside back cover, checked 2026-10-02 (99%)
 - BC [Region 3 Thompson synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), read directly: MU map page 32, bag limits and Kamloops notice page 33, season table page 34, Map C11 page 35, checked 2026-10-02 (99%)
 - Research notes: `research/2026-10-01-deer.md`.
 

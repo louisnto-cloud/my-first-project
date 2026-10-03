@@ -96,7 +96,7 @@ Phone and power bank charged, offline maps downloaded
 - [Mossy Oak: Barometric pressure and whitetail movement](https://www.mossyoak.com/our-obsession/blogs/deer/barometric-pressures-influence-on-whitetail-movement-4), checked 2026-10-02 (search preview): MSU Oklahoma study, temperature (65%).
 - [Field and Stream: Do whitetail bucks really go nocturnal?](https://fieldandstream.com/stories/hunting/deer-hunting/whitetail-hunting/nocturnal-whitetail-bucks-science) and [Deer and Deer Hunting: deer responses to hunting](https://www.deeranddeerhunting.com/content/articles/when-the-hunting-pressure-is-on-deer-behavioral-responses-to-hunting-vs-sharpshooting), checked 2026-10-02 (search preview, 65 to 70%).
 - Hunt Mentor deer research notes, research/2026-10-01-deer.md: Monteith 2011, SIMDeer, snow depth, rut timing (80 to 85%).
-- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly, checked 2026-10-02: page 7 (in season changes), page 12 (items 36 and 37, hunting hours). 99%.
+- [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly, checked 2026-10-02: page 7 (in season changes), page 11 (items 37 and 38, hunting hours). 99%.
 
 ```quiz
 [
