@@ -1,0 +1,35 @@
+[
+  {
+    "id": "caribou-bull",
+    "species": "Caribou",
+    "caption": "Caribou bull in summer velvet. Tall rack with a shovel over the face, white neck mane, brown coat. Cows grow antlers too.",
+    "author": "Denali National Park and Preserve",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Profile_of_a_Bull_Caribou_(7956336958).jpg",
+    "card": true,
+    "cardBack": "Caribou bull: big rack with a shovel over the face, white neck mane. Cows carry antlers too, so antlers alone never mean bull.",
+    "cardDeck": "Photo ID: mountain game and predators"
+  },
+  {
+    "id": "wood-bison",
+    "species": "Wood bison",
+    "caption": "Wood bison in Wood Buffalo National Park. Tall hump, dark coat, massive forequarters, bearded head.",
+    "author": "Ansgar Walk",
+    "licence": "CC BY-SA 2.5",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Wood-Buffalo-NP_Waldbison_2_98-07-02.jpg",
+    "card": true,
+    "cardBack": "Bison: massive forequarters, a hump, a bearded head and short black horns. Wood bison: taller hump and darker than plains bison.",
+    "cardDeck": "Photo ID: mountain game and predators"
+  },
+  {
+    "id": "plains-bison-bulls",
+    "species": "Plains bison",
+    "caption": "Plains bison bulls in Yellowstone in snow. Next to a wood bison the hump is lower and the front end hair is longer and shaggier.",
+    "author": "Yellowstone National Park from Yellowstone NP, USA",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Bull_bison_(7545304828).jpg"
+  }
+]

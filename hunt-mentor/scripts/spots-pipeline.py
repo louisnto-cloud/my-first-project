@@ -1154,6 +1154,555 @@ class Grid:
 
 
 # ======================================================================================
+# Road and trail network (Digital Road Atlas + forest tenure roads + rec trails)
+# ======================================================================================
+CAR_SURF = {'paved', 'loose'}
+ATV_SURF = {'rough', 'overgrown', 'seasonal', 'unknown', '', None}
+WALK_SURF = {'decommissioned'}
+SKIP_CLASS = {'ferry', 'water', 'runway', 'proposed', 'driveway', 'strata', 'restricted', 'yield'}
+TRAIL_CLASS = {'trail', 'skid'}
+WALK_CLASS = {'pedestrian'}
+MOTOR_WORDS = ('atv', 'all terrain', 'motorbike', 'motorcycle', 'off road', '4x4', '4 wheel', 'four wheel', 'snowmobile')
+
+
+def road_label(p):
+    """Road name from the road atlas (or forest tenure). Highways as 'Hwy 5 (Yellowhead Hwy)'."""
+    n = p.get('name')
+    h = p.get('hwy')
+    if h:
+        h = str(h).split(',')[0].strip()
+        if n and not n.lower().startswith('hwy'):
+            return f'Hwy {h} ({n})'
+        return f'Hwy {h}'
+    return n
+
+
+class Network:
+    def __init__(self, ctx):
+        from scipy.spatial import cKDTree
+        t0 = time.time()
+        g, p, _ = ctx.ca['dra']
+        segs, props = [], []
+        for gi, pi in zip(g, p):
+            cls = (pi.get('cls') or '').lower()
+            if cls in SKIP_CLASS:
+                continue
+            surf = (pi.get('surf') or '').lower()
+            if cls in WALK_CLASS or surf in WALK_SURF:
+                mode = 2
+            elif cls in TRAIL_CLASS or surf in ATV_SURF:
+                mode = 1
+            elif surf in CAR_SURF:
+                mode = 0
+            else:
+                mode = 1
+            for part in shapely.get_parts(gi):
+                if part.length < 1:
+                    continue
+                segs.append(part)
+                props.append({'mode': mode, 'name': pi.get('name'), 'hwy': pi.get('hwy'), 'paved': surf == 'paved',
+                              'cls': cls, 'surf': surf, 'lanes': pi.get('lanes') or 0, 'src': 'dra'})
+        dra_n = len(segs)
+        dra_geoms = np.array(segs, dtype=object)
+        dra_tree = STRtree(dra_geoms)
+        # forest tenure road names for unnamed atlas segments; forest roads missing from the atlas become ATV edges
+        fg, fp, _ = ctx.ca['ften']
+        fidx = [i for i, x in enumerate(fp) if not x['retired'] and (not x['life'] or x['life'] == 'ACTIVE')]
+        fg = fg[fidx]
+        fp = [fp[i] for i in fidx]
+        if len(fg):
+            ftree = STRtree(fg)
+            mids = shapely.line_interpolate_point(dra_geoms, 0.5, normalized=True)
+            pairs = ftree.query(mids, predicate='dwithin', distance=25)
+            for a, b in zip(*pairs):
+                if not props[a]['name'] and fp[b]['name']:
+                    nm = fp[b]['name']
+                    if (fp[b]['type'] or '').startswith('Forest Service Road') and 'FSR' not in nm and 'Forest Service' not in nm:
+                        nm = nm + ' FSR'
+                    props[a]['name'] = nm
+                    props[a]['ften'] = fp[b]['file']
+            # coverage of each forest road by the atlas (sample every 100 m)
+            parts, pidx = shapely.get_parts(fg, return_index=True)
+            plen = shapely.length(parts)
+            samp, sidx = [], []
+            for j, (part, L) in enumerate(zip(parts, plen)):
+                if L < 50:
+                    continue
+                k = max(2, int(L // 100) + 1)
+                samp.append(shapely.line_interpolate_point(part, np.linspace(0, L, k)))
+                sidx.append(np.full(k, j))
+            if samp:
+                samp = np.concatenate(samp)
+                sidx = np.concatenate(sidx)
+                hit = np.zeros(len(samp), bool)
+                q = dra_tree.query(samp, predicate='dwithin', distance=25)
+                hit[q[0]] = True
+                cov = np.bincount(sidx, weights=hit, minlength=len(parts)) / np.maximum(np.bincount(sidx, minlength=len(parts)), 1)
+                for j in np.unique(sidx):
+                    if cov[j] >= 0.5:
+                        continue
+                    x = fp[pidx[j]]
+                    nm = x['name']
+                    if nm and (x['type'] or '').startswith('Forest Service Road') and 'FSR' not in nm:
+                        nm = nm + ' FSR'
+                    segs.append(parts[j])
+                    props.append({'mode': 1, 'name': nm, 'hwy': None, 'paved': False, 'cls': 'forest tenure road',
+                                  'surf': 'unknown', 'lanes': 0, 'src': 'ften'})
+        # rec trails: walk edges, ATV edges when motorized use is listed
+        tg, tp, _ = ctx.ca['rec_trails']
+        for gi, pi in zip(tg, tp):
+            if pi['retired']:
+                continue
+            motor = any(w in (pi['activities'] or '').lower() for w in MOTOR_WORDS)
+            for part in shapely.get_parts(gi):
+                if part.length < 20:
+                    continue
+                segs.append(part)
+                props.append({'mode': 1 if motor else 2, 'name': (pi['name'] + ' trail') if pi['name'] and 'trail' not in pi['name'].lower() else pi['name'],
+                              'hwy': None, 'paved': False, 'cls': 'rec trail', 'surf': '', 'lanes': 0, 'src': 'trail',
+                              'activities': pi['activities']})
+        self.geoms = np.array(segs, dtype=object)
+        self.props = props
+        n = len(segs)
+        self.mode = np.array([x['mode'] for x in props], np.int8)
+        self.paved = np.array([x['paved'] for x in props], bool)
+        self.length = shapely.length(self.geoms)
+        # nodes from end points; non atlas lines snap to atlas nodes within 40 m
+        a = shapely.get_point(self.geoms, 0)
+        b = shapely.get_point(self.geoms, -1)
+        ax, ay, bx, by = shapely.get_x(a), shapely.get_y(a), shapely.get_x(b), shapely.get_y(b)
+        keys = np.concatenate([np.round(ax * 2).astype(np.int64) * 10 ** 8 + np.round(ay * 2).astype(np.int64),
+                               np.round(bx * 2).astype(np.int64) * 10 ** 8 + np.round(by * 2).astype(np.int64)])
+        _, inv = np.unique(keys, return_inverse=True)
+        u = inv[:n].copy()
+        v = inv[n:].copy()
+        nx_ = np.zeros(inv.max() + 1)
+        ny_ = np.zeros(inv.max() + 1)
+        nx_[inv] = np.concatenate([ax, bx])
+        ny_[inv] = np.concatenate([ay, by])
+        dra_nodes = np.unique(np.concatenate([u[:dra_n], v[:dra_n]]))
+        tree = cKDTree(np.column_stack([nx_[dra_nodes], ny_[dra_nodes]])) if len(dra_nodes) else None
+        if tree is not None and n > dra_n:
+            for arr, xx, yy in ((u, ax, ay), (v, bx, by)):
+                q = np.arange(dra_n, n)
+                d, j = tree.query(np.column_stack([xx[q], yy[q]]), distance_upper_bound=40)
+                ok = np.isfinite(d)
+                arr[q[ok]] = dra_nodes[j[ok]]
+        self.u, self.v = u, v
+        self.nx, self.ny = nx_, ny_
+        self.N = len(nx_)
+        # closures and exclusions per edge (by midpoint)
+        mids = shapely.line_interpolate_point(self.geoms, 0.5, normalized=True)
+        self.mids = mids
+        self.closed = ctx.inside(ctx.closed_mv_polys, mids)          # motor vehicle (or for hunting) closed
+        self.atv_closed = ctx.inside(ctx.atv_closed_polys, mids)    # ATV for hunting closed (fall dates)
+        no_park = ctx.inside(ctx.no_park_polys, mids)
+        self.car = (self.mode == 0) & ~self.closed
+        self.atv_ok = (self.mode <= 1) & ~self.closed & ~self.atv_closed
+        self.parkable = self.car & ~no_park
+        self.edge_key = {}
+        order = np.argsort(self.length)
+        for i in order[::-1]:
+            self.edge_key[(min(u[i], v[i]), max(u[i], v[i]))] = i
+        self.node_tree = cKDTree(np.column_stack([nx_, ny_]))
+        log(f'  network {ctx.area}: {n} edges ({dra_n} road atlas), {self.N} nodes, car {int(self.car.sum())}, '
+            f'parkable {int(self.parkable.sum())}, atv only {int(((self.mode == 1) & self.atv_ok).sum())}, '
+            f'closed {int(self.closed.sum())} in {time.time() - t0:.0f}s')
+
+    def matrix(self, mask):
+        from scipy.sparse import coo_matrix
+        u, v, w = self.u[mask], self.v[mask], self.length[mask]
+        a = np.minimum(u, v)
+        b = np.maximum(u, v)
+        o = np.lexsort((w, b, a))
+        a, b, w = a[o], b[o], w[o]
+        first = np.ones(len(a), bool)
+        first[1:] = (a[1:] != a[:-1]) | (b[1:] != b[:-1])
+        a, b, w = a[first], b[first], np.maximum(w[first], 0.01)
+        keep = a != b
+        a, b, w = a[keep], b[keep], w[keep]
+        return coo_matrix((np.r_[w, w], (np.r_[a, b], np.r_[b, a])), shape=(self.N, self.N)).tocsr()
+
+    def multi(self, mask, sources, limit=np.inf):
+        from scipy.sparse.csgraph import dijkstra
+        M = self.matrix(mask)
+        sources = np.unique(np.asarray(sources, dtype=np.int64))
+        if len(sources) == 0:
+            return np.full(self.N, np.inf), np.full(self.N, -9999), np.full(self.N, -1)
+        d, pred, src = dijkstra(M, directed=False, indices=sources, min_only=True, return_predecessors=True, limit=limit)
+        return d, pred, src
+
+    def path_nodes(self, pred, node):
+        out = [node]
+        seen = 0
+        while pred[out[-1]] >= 0 and seen < 100000:
+            out.append(pred[out[-1]])
+            seen += 1
+        return out[::-1]
+
+    def path_edges(self, nodes):
+        es = []
+        for a, b in zip(nodes[:-1], nodes[1:]):
+            e = self.edge_key.get((min(a, b), max(a, b)))
+            if e is not None:
+                es.append(e)
+        return es
+
+    def path_line(self, nodes):
+        es = self.path_edges(nodes)
+        if not es:
+            return None
+        return shapely.line_merge(shapely.union_all(self.geoms[es]))
+
+    def names_along(self, edges, min_len=300):
+        """Ordered road names along a path, consecutive repeats removed, short pieces skipped."""
+        out = []
+        acc = {}
+        for e in edges:
+            nm = road_label(self.props[e])
+            if not nm:
+                continue
+            acc[nm] = acc.get(nm, 0) + self.length[e]
+            if out and out[-1] == nm:
+                continue
+            out.append(nm)
+        res = []
+        for nm in out:
+            if acc.get(nm, 0) >= min_len and nm not in res:
+                res.append(nm)
+        return res
+
+
+# ======================================================================================
+# Area context: all inputs for one area in Albers, rasters at 100 m, network
+# ======================================================================================
+CAT_CODES = {1: 'drive', 2: 'atv', 3: 'walk', 4: 'backcountry'}
+
+
+class AreaContext:
+    def __init__(self, cache, area):
+        t0 = time.time()
+        self.cache = cache
+        self.area = area
+        self.box = AREAS[area]['box']
+        self.ca = clean_area(cache, area)
+        bc = clean_bc(cache)
+        self.grid = Grid(area)
+        G = self.grid
+        big = self.grid.poly.buffer(15000)
+
+        def sub(k):
+            g, p, m = bc[k]
+            gg, pp = subset_box(g, p, big)
+            return gg, pp
+        self.mu = sub('mu')
+        self.parks = sub('parks')
+        self.reserves = sub('reserves')
+        self.cities = sub('municipalities')
+        self.mvpr = sub('mvpr_areas')
+        self.mvpr_routes = sub('mvpr_routes')
+        self.wma = sub('wma')
+        self.leh = sub('leh')
+        mg, mp = self.mvpr
+        self.closed_mv_idx = [i for i, x in enumerate(mp) if x['kind'] in ('mv_closed', 'mv_hunting')]
+        self.atv_closed_idx = [i for i, x in enumerate(mp) if x['kind'] == 'atv']
+        self.closed_mv_polys = mg[self.closed_mv_idx]
+        self.atv_closed_polys = mg[self.atv_closed_idx]
+        self.no_shoot_idx = [i for i, x in enumerate(mp) if re.search(r'no (shooting|hunting)', ' '.join(str(v) for v in x.values()), re.I)]
+        self.private = self.ca['private'][0]
+        self.dem = DEM(cache, area)
+        # special no hunting and single projectile zones along listed highways (synopsis, highway rules)
+        self.no_hunt_zones, self.single_proj_zones = self._highway_zones()
+        self.vaseux = self._named_lake_buffer('Vaseux Lake', 2000) if area == 'C' else None
+        nt = [self.no_hunt_zones] if self.no_hunt_zones is not None else []
+        if self.vaseux is not None:
+            nt.append(self.vaseux)
+        nt += list(mg[self.no_shoot_idx])
+        self.notarget_extra = shapely.union_all(nt) if nt else None
+        self.no_park_polys = np.concatenate([self.parks[0], self.reserves[0], self.cities[0], self.closed_mv_polys])
+        self.net = Network(self)
+        self._trees = {}
+        self.build_rasters()
+        log(f'  context {area} ready in {time.time() - t0:.0f}s')
+
+    # ---------------------------------------------------------------- helpers
+    def tree(self, key, geoms):
+        if key not in self._trees:
+            self._trees[key] = STRtree(np.asarray(geoms, dtype=object))
+        return self._trees[key]
+
+    def inside(self, polys, pts):
+        polys = np.asarray(polys, dtype=object)
+        out = np.zeros(len(pts), bool)
+        if len(polys) == 0 or len(pts) == 0:
+            return out
+        t = STRtree(polys)
+        q = t.query(np.asarray(pts, dtype=object), predicate='intersects')
+        out[np.unique(q[0])] = True
+        return out
+
+    def _highway_zones(self):
+        g, p, _ = self.ca['dra']
+        nh, sp = [], []
+        for gi, pi in zip(g, p):
+            h = str(pi.get('hwy') or '')
+            nums = [x.strip() for x in re.split(r'[,;/ ]+', h) if x.strip()]
+            if not nums:
+                continue
+            c = shapely.centroid(gi)
+            lon, lat = xy_to_lonlat(c.x, c.y)
+            lon, lat = float(lon), float(lat)
+            # Hwy 3 between Hope and Manning Park: no hunting within 400 m of the road allowance
+            if '3' in nums and self.area == 'B' and lon > -121.45:
+                nh.append(gi)
+            # Hwy 5 (Coquihalla) between Hope and the Hwy 1 and 5 junction at Kamloops: single projectile ban 400 m
+            if '5' in nums and '1' not in nums and lat < 50.66:
+                sp.append(gi)
+        nhz = shapely.union_all(shapely.buffer(np.array(nh, dtype=object), 415)) if nh else None
+        spz = shapely.union_all(shapely.buffer(np.array(sp, dtype=object), 415)) if sp else None
+        return nhz, spz
+
+    def _named_lake_buffer(self, name, dist):
+        g, p, _ = self.ca['lakes']
+        idx = [i for i, x in enumerate(p) if (x['name'] or '') == name]
+        if not idx:
+            return None
+        return shapely.union_all(shapely.buffer(g[idx], dist))
+
+    # ---------------------------------------------------------------- rasters
+    def build_rasters(self):
+        t0 = time.time()
+        G = self.grid
+        ca = self.ca
+        R = {}
+        R['private'] = G.burn_polys(self.private) > 0
+        R['park'] = G.burn_polys(self.parks[0]) > 0
+        R['reserve'] = G.burn_polys(self.reserves[0]) > 0
+        R['city'] = G.burn_polys(self.cities[0]) > 0
+        R['closed'] = G.burn_polys(self.closed_mv_polys) > 0
+        R['atvclosed'] = G.burn_polys(self.atv_closed_polys) > 0
+        R['lake'] = G.burn_polys(ca['lakes'][0]) > 0
+        R['river'] = G.burn_polys(ca['rivers'][0]) > 0
+        wg, wp, _ = ca['wetlands']
+        R['wetland'] = G.burn_polys(wg) > 0
+        R['notarget'] = (G.burn_polys([self.notarget_extra]) > 0) if self.notarget_extra is not None else np.zeros((G.ny, G.nx), bool)
+        R['singleproj'] = (G.burn_polys([self.single_proj_zones]) > 0) if self.single_proj_zones is not None else np.zeros((G.ny, G.nx), bool)
+        bg, bp, _ = ca['bec']
+        zones = sorted({x['zone'] for x in bp if x['zone']})
+        self.zone_codes = {z: i + 1 for i, z in enumerate(zones)}
+        self.zone_names = {i + 1: z for i, z in enumerate(zones)}
+        R['bec'] = G.burn_polys(bg, values=[self.zone_codes.get(x['zone'], 0) for x in bp])
+        ug, up, _ = ca['uwr']
+        for sp in ('mule_deer', 'wt_deer', 'moose', 'elk', 'sheep'):
+            idx = [i for i, x in enumerate(up) if sp in (x['sp1'], x['sp2'])]
+            R['uwr_' + sp] = (G.burn_polys(ug[idx]) > 0) if idx else np.zeros((G.ny, G.nx), bool)
+        cg, cp, _ = ca['cutblocks']
+        young = [i for i, x in enumerate(cp) if CUT_AGE[0] <= x['age'] <= CUT_AGE[1]]
+        R['cut_young'] = G.burn_polys(cg[young]) > 0
+        fg, fp, _ = ca['burns']
+        rec = [i for i, x in enumerate(fp) if BURN_YEARS[0] <= x['year'] <= BURN_YEARS[1]]
+        R['burn'] = G.burn_polys(fg[rec]) > 0
+        net = self.net
+        R['car_park'] = G.burn_lines(net.geoms[net.parkable]) > 0
+        R['paved'] = G.burn_lines(net.geoms[net.parkable & net.paved]) > 0
+        R['atvzone'] = G.burn_lines(net.geoms[self.atv_zone_edges()]) > 0
+        sg, sp_, _ = ca['streams']
+        R['stream'] = G.burn_lines(sg) > 0
+        rg, rp, _ = ca['rec_sites']
+        R['rec'] = G.burn_points(rg)
+        # elevation, slope, aspect, relief at cell centres
+        lon, lat = G.lon.ravel(), G.lat.ravel()
+        for k in ('elev', 'slope', 'relief'):
+            R[k] = self.dem.sample(k, lon, lat).reshape(G.lon.shape).astype(np.float32)
+        R['aspect'] = self.dem.sample('aspect', lon, lat, order=0).reshape(G.lon.shape).astype(np.float32)
+        # distances (m)
+        D = {}
+        for k in ('car_park', 'paved', 'atvzone', 'cut_young', 'burn', 'wetland', 'stream', 'rec', 'city', 'lake', 'river'):
+            D[k] = G.dist(R[k])
+        D['water'] = np.minimum(np.minimum(D['wetland'], D['stream']), np.minimum(D['lake'], D['river']))
+        D['uwr_deer'] = G.dist(R['uwr_mule_deer'] | R['uwr_wt_deer'])
+        for sp in ('mule_deer', 'wt_deer', 'moose', 'elk', 'sheep'):
+            D['uwr_' + sp] = G.dist(R['uwr_' + sp])
+        fields = R['private'] & ~R['city']
+        D['fields'] = G.dist(fields)
+        # wetland count within 2 km (centroids, square window: estimate)
+        wc = G.burn_points(shapely.point_on_surface(wg)) if len(wg) else np.zeros((G.ny, G.nx), bool)
+        R['wet_count2k'] = G.count_within(wc, 2000)
+        big = [i for i, x in enumerate(wp) if x['ha'] >= 5]
+        D['wetland_big'] = G.dist(G.burn_polys(wg[big]) > 0) if big else np.full((G.ny, G.nx), 1e9, np.float32)
+        # city (under 30 minutes, estimate): within 25 km of a municipality named City of ...
+        ci = [i for i, x in enumerate(self.cities[1]) if 'City of' in (x['name'] or '')]
+        D['bigcity'] = G.dist(G.burn_polys(self.cities[0][ci]) > 0) if ci else np.full((G.ny, G.nx), 1e9, np.float32)
+        self.R, self.D = R, D
+        # eligibility and access category
+        self.eligible = (G.inbox & ~R['private'] & ~R['park'] & ~R['reserve'] & ~R['city'] & ~R['lake'] & ~R['river']
+                         & ~R['notarget'])
+        cat = np.full((G.ny, G.nx), 3, np.int8)
+        cat[D['car_park'] > 5000] = 4
+        cat[(D['atvzone'] <= 300)] = 2
+        cat[D['car_park'] <= 300] = 1
+        self.cat = cat
+        log(f'  rasters {self.area}: {G.nx}x{G.ny} cells, eligible {self.eligible.mean() * 100:.0f}% in {time.time() - t0:.0f}s')
+
+    def atv_zone_edges(self):
+        """ATV only roads and trails, open, 0 to 10 km ride from a truck parking point and 1 km or more from pavement."""
+        net = self.net
+        if not hasattr(self, '_atvz'):
+            srcs = np.unique(np.concatenate([net.u[net.parkable], net.v[net.parkable]]))
+            only = (net.mode == 1) & net.atv_ok
+            dr, pr, sr = net.multi(only, srcs, limit=12000)
+            psrc = np.unique(np.concatenate([net.u[net.parkable & net.paved], net.v[net.parkable & net.paved]]))
+            dp, _, _ = net.multi(net.car | net.atv_ok, psrc, limit=60000)
+            far = np.maximum(dr[net.u], dr[net.v])
+            near_pave = np.minimum(dp[net.u], dp[net.v])
+            self._atvz = only & np.isfinite(far) & (far <= 10000) & np.isfinite(near_pave) & (near_pave >= 1000)
+            self.ride = (dr, pr, sr)
+            self.pave_dist = dp
+        return self._atvz
+
+
+# ======================================================================================
+# Spot helpers: text, names, seasons, flags
+# ======================================================================================
+BANNER = 'Study aid only. The official regulations are the law.'
+SYNOPSIS = 'BC Hunting and Trapping Regulations Synopsis 2026 to 2028'
+SPECIES_LABEL = {'deer': 'deer', 'moose': 'moose', 'elk': 'elk', 'bear': 'black bear', 'grouse': 'grouse',
+                 'duck': 'ducks', 'quail': 'California quail', 'sheep': 'bighorn sheep'}
+MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+
+
+def mu_range(a, b):
+    r, x = a.split('-')
+    _, y = b.split('-')
+    return [f'{r}-{i}' for i in range(int(x), int(y) + 1)]
+
+
+# Season rows from data/regs.json: key, region, MUs covered (None = whole region or BC), months (from the row text)
+SEASON_ROWS = {
+    'deer': [('r3mule', '3', ['3-27', '3-28'], [9, 10, 11, 12], ['3-27 and 3-28', '1 to 31 Oct']),
+             ('r3wt', '3', ['3-27', '3-28'], [9, 10, 11, 12], ['10 Sept to 10 Dec']),
+             ('r3bag', '3', None, None, ['Mule deer 1'])],
+    'moose': [('r3moose', '3', ['3-27', '3-28'], [11], ['1 to 15 Nov'])],
+    'elk': [('r3elk', '3', None, [], ['LEH draw only'])],
+    'bear': [('r3bear', '3', None, [4, 5, 6, 9, 10, 11], ['1 Sept to 30 Nov'])],
+    'grouse': [('r3grouse', '3', None, [9, 10, 11], ['10 Sept to 30 Nov'])],
+    'duck': [('ducksR3', '3', mu_range('3-12', '3-20') + mu_range('3-26', '3-44'), [9, 10, 11, 12], ['8 Sept to 23 Dec']),
+             ('duckbag', None, None, None, ['8 ducks a day']), ('plug', None, None, None, ['3 shells'])],
+    'quail': [('r8quail', '8', mu_range('8-1', '8-15') + mu_range('8-21', '8-26'), [10, 11], ['1 Oct to 30 Nov']),
+              ('r3quail', '3', None, [], ['No quail season in Region 3'])],
+    'sheep': [],
+}
+REGS = {}
+REGS_WARN = []
+
+
+def load_regs():
+    if REGS:
+        return REGS
+    d = json.load(open(ROOT / 'data' / 'regs.json'))
+    for it in d.get('items', []):
+        REGS[it['key']] = it
+    REGS['_meta'] = {'edition': d.get('edition'), 'lastChecked': d.get('lastChecked')}
+    for sp, rows in SEASON_ROWS.items():
+        for key, reg, mus, months, must in rows:
+            it = REGS.get(key)
+            if not it:
+                REGS_WARN.append(f'regs.json has no row {key} ({sp})')
+                continue
+            for s in must:
+                if s.lower() not in (it.get('value') or '').lower():
+                    REGS_WARN.append(f'regs.json row {key} no longer says "{s}": months for {sp} need a check (VERIFY)')
+    return REGS
+
+
+def season_rows(species, region, mu):
+    """Rows that apply to this species, region and MU. Returns (keys, months, note)."""
+    load_regs()
+    keys, months, note = [], set(), None
+    rows = SEASON_ROWS.get(species, [])
+    region_rows = [r for r in rows if r[1] in (None, region)]
+    for key, reg, mus, mo, _ in region_rows:
+        if key not in REGS:
+            continue
+        if mus is not None and mu not in mus:
+            continue
+        keys.append(key)
+        if mo:
+            months.update(mo)
+    has_season = any(r[1] == region and r[3] is not None for r in rows if r[0] in keys)
+    if not has_season:
+        if any(r[1] == region and r[2] is not None for r in rows):
+            note = f'No season row for MU {mu} in data/regs.json yet. VERIFY in the synopsis season table for Region {region}.'
+        else:
+            note = f'No {SPECIES_LABEL.get(species, species)} season row for Region {region} in data/regs.json yet. VERIFY in the synopsis.'
+    return keys, sorted(months), note
+
+
+def fmt_dist(m):
+    if m < 950:
+        return f'{int(round(m / 10.0) * 10)} m'
+    if m < 9950:
+        return f'{m / 1000:.1f} km'
+    return f'{m / 1000:.0f} km'
+
+
+def fmt_int(v):
+    return f'{int(round(v)):,}'
+
+
+def compass8(az):
+    return ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'][int(((az % 360) + 22.5) // 45) % 8]
+
+
+def bearing_dist(x0, y0, x1, y1):
+    lon, lat = xy_to_lonlat([x0, x1], [y0, y1])
+    az, _, d = GEOD.inv(lon[0], lat[0], lon[1], lat[1])
+    return az % 360, d
+
+
+def aspect_word(a, slope):
+    if slope < 5:
+        return 'flat'
+    return compass8(a) + ' facing'
+
+
+def ll(x, y):
+    lon, lat = xy_to_lonlat(x, y)
+    return round(float(lon), 5), round(float(lat), 5)
+
+
+def links(lat, lon, plat, plon, name):
+    return {'gmaps': f'https://www.google.com/maps/search/?api=1&query={lat},{lon}',
+            'gdir': f'https://www.google.com/maps/dir/?api=1&destination={plat},{plon}',
+            'apple': f'https://maps.apple.com/?ll={plat},{plon}&q={urllib.parse.quote(name)}'}
+
+
+def month_span(months):
+    if not months:
+        return ''
+    ms = sorted(months)
+    return ', '.join(MONTHS[m - 1] for m in ms)
+
+
+# ---------------------------------------------------------------- style guard for generated text
+_HY_OK = re.compile(r'https?://\S+|\b\d+-\d+[A-Z]?\b|\b[A-Z]-[A-Z]{4}\b')
+
+
+def style_issues(text, allowed_names=()):
+    """Hyphens and em dashes in generated prose (codes, URLs and official names are allowed)."""
+    t = _HY_OK.sub('', text)
+    for n in allowed_names:
+        if n:
+            t = t.replace(n, '')
+    out = []
+    if '—' in t or '–' in t:
+        out.append('dash')
+    if re.search(r'\w-\w', t):
+        out.append('hyphen')
+    return out
+
+
+# ======================================================================================
 # (processing steps are defined below)
 # ======================================================================================
 

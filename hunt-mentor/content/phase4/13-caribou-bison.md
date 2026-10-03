@@ -17,6 +17,9 @@ checked: 2026-10-01
 
 ## Caribou: identify
 
+```photo caribou-bull
+```
+
 - A medium sized deer family animal with a white neck mane, big concave hooves and a rich brown or grey coat (85%).
 - **Both sexes grow antlers.** Only in caribou do females carry antlers (85%). A small antlered animal may be a cow.
 - Bulls: a big rack of amber antlers, a shovel over the face, shed in November or December (85%).
@@ -53,8 +56,15 @@ checked: 2026-10-01
 
 ## Bison: identify and status
 
+```photo wood-bison
+```
+
 - Massive forequarters, a hump, a bearded head and short black horns; bulls weigh about 550 to 900 kg, cows 320 to 545 kg (85%).
 - **Wood bison:** slightly larger and darker than plains bison, with a taller hump and shorter hair on the front end (85%). Listed Threatened under the federal Species at Risk Act (85%).
+
+```photo plains-bison-bulls
+```
+
 - **Plains bison:** about 50 escaped near Halfway River in 1971 and grew into the Pink Mountain herd of over 1,000 (85%).
 - Wood bison herds in BC: Nordquist (Liard River), Nahanni and Etthithun; Etthithun was estimated near 400 in 2020 to 2021 (80%).
 - Highway collisions along the Alaska Highway kill bison every year (85%).
