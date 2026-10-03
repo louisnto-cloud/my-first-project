@@ -39,6 +39,18 @@ checked: 2026-10-01
 - Drakes moult into a drab **eclipse plumage** after breeding. Some teal and shovelers still look like hens into winter (80%).
 - Hunter rule: name the bird by size, shape, wing patch and flight. Head colour is the last clue, not the first (Tip).
 
+## Photos: mallard and pintail
+
+```gallery
+mallard-drake | Mallard drake. Green head, white neck ring, chestnut chest.
+mallard-hen | Mallard hen. Orange and black bill, blue purple wing patch.
+mallard-drake-flight | Mallard drake in flight. Blue purple patch with white edges.
+pintail-drake | Pintail drake. White neck stripe, long needle tail.
+pintail-drake-flight | Pintail drake in flight. Slim cross shape, long tail.
+```
+
+- Mallard hens and drakes share the same wing patch. Look for it on every brown duck (Tip).
+
 ## Puddle ducks: who is who
 
 | Duck | Drake | Hen, wing and flight |

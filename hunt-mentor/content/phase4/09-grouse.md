@@ -25,6 +25,18 @@ checked: 2026-10-01
 - Sooty grouse is the coast version of the blue grouse. Region 2 lists it as "SOOTY (Blue)" (99%); the Interior lists dusky (99%).
 - Young of the year by October look like hens of their species, slightly smaller (Tip, 65%).
 
+## Photos: the forest grouse
+
+```gallery
+ruffed-grouse-hen | Ruffed grouse. Fan tail with one dark band near the tip, small crest.
+dusky-grouse-male | Dusky grouse male in display. Slate grey, long dark tail.
+dusky-grouse-hen | Dusky grouse hen. Mottled brown, long dark tail.
+spruce-grouse-hen | Spruce grouse hen. Heavy black and white barring.
+```
+
+- Size order: dusky is biggest, then ruffed, then spruce (Tip).
+- Tail is the fastest clue: ruffed has the dark band near the tip, dusky has a pale grey tip band (Tip).
+
 ## Sharp tailed grouse and ptarmigan
 
 - **Sharp tailed grouse**, 800 g to 1.3 kg: pale, spotted below not barred, short pointed tail with white outer feathers in flight (80%). Grassland with aspen and shrub groves (80%).
@@ -33,6 +45,15 @@ checked: 2026-10-01
 - **White tailed ptarmigan**, 350 to 500 g: the smallest grouse, lives above timberline, white tail, white in winter (80%). The common ptarmigan of southern BC, breeding at 1,830 to 2,650 m in the Interior (85%).
 - **Willow ptarmigan**, 450 to 750 g, and **rock ptarmigan**: black tails, northern and high mountain birds (80%). Willow ptarmigan is mostly in the northern half of BC (85%).
 - Ptarmigan near Sun Peaks means a steep climb above the trees in October. Snow comes early up there (Tip).
+
+## Photos: sharp tailed grouse
+
+```gallery
+sharp-tailed-grouse | Sharp tailed grouse. Pale, spotted below, short pointed tail.
+sharp-tailed-grouse-snow | Sharp tailed grouse in snow near Fort St. John, BC.
+```
+
+- Spotted, not barred, and a short pointed tail. Open grass and aspen edges (Tip).
 
 ## Where in BC, and near your bases
 
