@@ -1162,15 +1162,19 @@ WALK_SURF = {'decommissioned'}
 SKIP_CLASS = {'ferry', 'water', 'runway', 'proposed', 'driveway', 'strata', 'restricted', 'yield'}
 TRAIL_CLASS = {'trail', 'skid'}
 WALK_CLASS = {'pedestrian'}
-MOTOR_WORDS = ('atv', 'all terrain', 'motorbike', 'motorcycle', 'off road', '4x4', '4 wheel', 'four wheel', 'snowmobile')
+MOTOR_WORDS = ('atv', 'all terrain', 'motorbike', 'motorcycle', 'motorized', 'trail bike', 'off road', '4x4', '4 wheel', 'four wheel')
+
+
+def hwy_numbers(h):
+    return [x for x in re.split(r'[+,;/ ]+', str(h or '')) if x]
 
 
 def road_label(p):
     """Road name from the road atlas (or forest tenure). Highways as 'Hwy 5 (Yellowhead Hwy)'."""
     n = p.get('name')
-    h = p.get('hwy')
-    if h:
-        h = str(h).split(',')[0].strip()
+    nums = hwy_numbers(p.get('hwy'))
+    if nums:
+        h = ' and '.join(nums)
         if n and not n.lower().startswith('hwy'):
             return f'Hwy {h} ({n})'
         return f'Hwy {h}'
@@ -1185,9 +1189,9 @@ class Network:
         segs, props = [], []
         for gi, pi in zip(g, p):
             cls = (pi.get('cls') or '').lower()
-            if cls in SKIP_CLASS:
-                continue
             surf = (pi.get('surf') or '').lower()
+            if cls in SKIP_CLASS or surf == 'boat':
+                continue
             if cls in WALK_CLASS or surf in WALK_SURF:
                 mode = 2
             elif cls in TRAIL_CLASS or surf in ATV_SURF:
@@ -1445,8 +1449,7 @@ class AreaContext:
         g, p, _ = self.ca['dra']
         nh, sp = [], []
         for gi, pi in zip(g, p):
-            h = str(pi.get('hwy') or '')
-            nums = [x.strip() for x in re.split(r'[,;/ ]+', h) if x.strip()]
+            nums = hwy_numbers(pi.get('hwy'))
             if not nums:
                 continue
             c = shapely.centroid(gi)
@@ -2103,12 +2106,23 @@ class Refiner:
                 alabels.append(p['name'])
         ng, npp, _ = ca['names']
         keep_types = ('Mountain', 'Peak', 'Hill', 'Ridge', 'Locality', 'Community', 'Settlement', 'Plateau', 'Meadow', 'Flat',
-                      'Lake', 'Valley', 'Canyon', 'Butte', 'Bluff', 'Range', 'Pass', 'Point', 'Knoll', 'Bench', 'Basin', 'Mount')
+                      'Valley', 'Canyon', 'Butte', 'Bluff', 'Range', 'Pass', 'Knoll', 'Bench', 'Basin', 'Mount', 'Village')
+        skip_types = ('Railway', 'Reserve', 'Park', 'Protected', 'Municipality', 'Lake', 'Creek', 'River')
         for g, p in zip(ng, npp):
             t = p.get('type') or ''
-            if p.get('name') and any(k.lower() in t.lower() for k in keep_types):
+            if p.get('name') and any(k.lower() in t.lower() for k in keep_types) and not any(k.lower() in t.lower() for k in skip_types):
                 anchors.append(g)
                 alabels.append(p['name'])
+        n_pts = len(anchors)
+        # named creeks and rivers (lines) as a last choice
+        seen = {}
+        for g, p in zip(sg, spp):
+            if p['name']:
+                seen.setdefault(p['name'], []).append(g)
+        for nm, gs in seen.items():
+            anchors.append(shapely.union_all(gs))
+            alabels.append(nm)
+        self.anchor_weight = np.array([1.0] * n_pts + [1.6] * (len(anchors) - n_pts))
         self.anchors = np.array(anchors, dtype=object)
         self.alabels = alabels
         self.anchor_tree = STRtree(self.anchors) if anchors else None
@@ -2144,7 +2158,7 @@ class Refiner:
             g = self.anchors[k]
             d = shapely.distance(g, pt)
             # rec sites and lakes read better: small preference
-            w = d * (0.8 if self.alabels[k].endswith('rec site') else 1.0)
+            w = d * (0.8 if self.alabels[k].endswith('rec site') else 1.0) * self.anchor_weight[k]
             if best is None or w < best[0]:
                 best = (w, k, d)
         _, k, d = best
@@ -2251,6 +2265,512 @@ class Refiner:
                         s['walkVia'] = net.names_along(net.path_edges(nodes), min_len=200)
                         s['cat'] = 'walk' if tot <= 6500 else 'backcountry'
         return True
+
+
+# ---------------------------------------------------------------- evidence per species (vector, exact)
+def _feat_dir(x, y, geom):
+    """'inside' or '250 m NE' from the point to the nearest part of geom."""
+    pt = shapely.points(x, y)
+    d = shapely.distance(geom, pt)
+    if d < 15:
+        return 'right here', 0.0
+    p = shapely.ops.nearest_points(geom, pt)[0]
+    az, dd = bearing_dist(x, y, p.x, p.y)
+    return f'{fmt_dist(dd)} {compass8(az)}', dd
+
+
+def _zone_at(rf, x, y):
+    pt = shapely.points(x, y)
+    k = rf.bec_tree.query(pt, predicate='intersects')
+    if len(k) == 0:
+        return None, None
+    p = rf.ctx.ca['bec'][1][int(k[0])]
+    return p['zone'], p['label']
+
+
+def _uwr_near(rf, x, y, species_set, maxd):
+    if rf.uwr_tree is None:
+        return None
+    pt = shapely.points(x, y)
+    ug, up, _ = rf.ctx.ca['uwr']
+    best = None
+    for k in rf.uwr_tree.query(pt.buffer(maxd)):
+        p = up[k]
+        if not ({p['sp1'], p['sp2']} & species_set):
+            continue
+        d = shapely.distance(ug[k], pt)
+        if d <= maxd and (best is None or d < best[0]):
+            best = (d, k)
+    if best is None:
+        return None
+    d, k = best
+    p = up[k]
+    where, _ = _feat_dir(x, y, ug[k])
+    sp = [UWR_SPECIES[c][1] for c in UWR_SPECIES if UWR_SPECIES[c][0] in ({p['sp1'], p['sp2']} & species_set)]
+    return {'d': d, 'where': where, 'uwr': p['uwr'], 'unit': p['unit'], 'species': ' and '.join(sp)}
+
+
+def _cut_near(rf, x, y, maxd):
+    if rf.cut_tree is None:
+        return None
+    pt = shapely.points(x, y)
+    j, d = rf.cut_tree.query_nearest(pt, max_distance=maxd, return_distance=True)
+    if len(j) == 0:
+        return None
+    i = rf.cut_young[int(j[0])]
+    g = rf.ctx.ca['cutblocks'][0][i]
+    p = rf.ctx.ca['cutblocks'][1][i]
+    where, dd = _feat_dir(x, y, g)
+    return {'d': float(d[0]), 'where': where, 'year': p['year'], 'age': p['age'], 'geom': g}
+
+
+def _burn_near(rf, x, y, maxd):
+    if rf.burn_tree is None:
+        return None
+    pt = shapely.points(x, y)
+    j, d = rf.burn_tree.query_nearest(pt, max_distance=maxd, return_distance=True)
+    if len(j) == 0:
+        return None
+    i = rf.burn_idx[int(j[0])]
+    g = rf.ctx.ca['burns'][0][i]
+    p = rf.ctx.ca['burns'][1][i]
+    where, dd = _feat_dir(x, y, g)
+    return {'d': float(d[0]), 'where': where, 'year': p['year'], 'fire': p['fire'], 'ha': p['ha'], 'geom': g}
+
+
+def _fields_near(rf, x, y, maxd):
+    if rf.priv_tree is None:
+        return None
+    pt = shapely.points(x, y)
+    j, d = rf.priv_tree.query_nearest(pt, max_distance=maxd, return_distance=True)
+    if len(j) == 0:
+        return None
+    g = rf.ctx.private[int(j[0])]
+    where, dd = _feat_dir(x, y, g)
+    # fields: private land outside city limits (estimate)
+    r, c = rf.ctx.grid.rc(*xy_of(shapely.ops.nearest_points(g, pt)[0]))
+    if rf.ctx.R['city'][r, c]:
+        return None
+    return {'d': float(d[0]), 'where': where}
+
+
+def xy_of(p):
+    return p.x, p.y
+
+
+def evidence(rf, s):
+    """Exact evidence list and score for a spot. Returns (items, score)."""
+    x, y = s['x'], s['y']
+    sp = s['sp']
+    ctx = rf.ctx
+    items = []
+    if sp == 'deer':
+        w = W['deer']
+        u = _uwr_near(rf, x, y, {'mule_deer', 'wt_deer'}, 500)
+        if u:
+            items.append({'t': f"{u['species']} winter range {u['uwr']} unit {u['unit']} (official), {u['where']}. Counts from October.", 'pts': w['uwr']})
+        c = _cut_near(rf, x, y, 1000)
+        if c:
+            items.append({'t': f"Cutblock harvested {c['year']} ({c['age']} years old), {c['where']}.", 'pts': w['cut']})
+        b = _burn_near(rf, x, y, 1000)
+        if b:
+            items.append({'t': f"Burn from {b['year']} (fire {b['fire']}, {fmt_int(b['ha'])} ha), {b['where']}.", 'pts': w['burn']})
+        z, lab = _zone_at(rf, x, y)
+        if z in DEER_ZONES_LOW:
+            items.append({'t': f'Habitat zone {BEC_NAMES.get(z, z)} ({lab}): low winter and fall range.', 'pts': w['bec_low']})
+        elif z in DEER_ZONES_MID:
+            items.append({'t': f'Habitat zone {BEC_NAMES.get(z, z)} ({lab}).', 'pts': w['bec_ms']})
+        sl = float(rf.ctx.dem.sample_xy('slope', x, y)[0])
+        a = float(rf.ctx.dem.sample_xy('aspect', x, y, order=0)[0])
+        if sl >= 5 and 135 <= a <= 315:
+            items.append({'t': f'{compass8(a)} facing slope, {sl:.0f} degrees: sun melts snow first.', 'pts': w['aspect']})
+        f = _fields_near(rf, x, y, 2000)
+        if f:
+            items.append({'t': f"Private fields {f['where']}: deer feed on field edges (fields are private).", 'pts': w['fields']})
+    elif sp == 'moose':
+        w = W['moose']
+        pt = shapely.points(x, y)
+        wg, wp, _ = ctx.ca['wetlands']
+        near = rf.wet_tree.query(pt.buffer(2000), predicate='intersects') if rf.wet_tree is not None else []
+        n = len(near)
+        nb = None
+        if n:
+            dd = shapely.distance(wg[near], pt)
+            k = int(near[int(np.argmin(dd))])
+            nb = (float(dd.min()), k)
+        bigk = [k for k in near if wp[k]['ha'] >= 5 and shapely.distance(wg[k], pt) <= 500]
+        if n >= 3 or bigk:
+            where, _ = _feat_dir(x, y, wg[nb[1]])
+            nm = wp[nb[1]]['name']
+            items.append({'t': f"{n} wetlands within 2 km; nearest {(nm + ', ') if nm else ''}{wp[nb[1]]['ha']:.1f} ha, {where}.", 'pts': w['wetland']})
+        c = _cut_near(rf, x, y, 1000)
+        b = _burn_near(rf, x, y, 1000)
+        if c and (not b or c['d'] <= b['d']):
+            items.append({'t': f"Cutblock harvested {c['year']} ({c['age']} years old), {c['where']}: browse.", 'pts': w['cut_or_burn']})
+        elif b:
+            items.append({'t': f"Burn from {b['year']} (fire {b['fire']}), {b['where']}: browse.", 'pts': w['cut_or_burn']})
+        u = _uwr_near(rf, x, y, {'moose'}, 500)
+        if u:
+            items.append({'t': f"Moose winter range {u['uwr']} unit {u['unit']} (official), {u['where']}. Counts from November.", 'pts': w['uwr']})
+    elif sp == 'quail':
+        w = W['quail']
+        z, lab = _zone_at(rf, x, y)
+        el = float(rf.ctx.dem.sample_xy('elev', x, y)[0])
+        if el >= QUAIL_MAX_ELEV:
+            return items, 0
+        items.append({'t': f'Elevation {fmt_int(el)} m: under {QUAIL_MAX_ELEV} m, quail country.', 'pts': 0})
+        if z in QUAIL_ZONES:
+            items.append({'t': f'Habitat zone {BEC_NAMES.get(z, z)} ({lab}).', 'pts': w['zone']})
+        f = _fields_near(rf, x, y, 1000)
+        if f:
+            items.append({'t': f"Farm fields (private) {f['where']}: quail feed on field edges (Tip).", 'pts': w['farm']})
+        if rf.stream_tree is not None:
+            j, d = rf.stream_tree.query_nearest(shapely.points(x, y), max_distance=1000, return_distance=True)
+            if len(j):
+                g = ctx.ca['streams'][0][int(j[0])]
+                where, _ = _feat_dir(x, y, g)
+                items.append({'t': f"{ctx.ca['streams'][1][int(j[0])]['name']} {where}: water and cover.", 'pts': w['creek']})
+        sl = float(rf.ctx.dem.sample_xy('slope', x, y)[0])
+        rel = float(rf.ctx.dem.sample_xy('relief', x, y)[0])
+        if rel < -10 and 5 <= sl <= 35:
+            items.append({'t': f'Draw or gully (ground {abs(rel):.0f} m below its surroundings, estimate): brushy cover.', 'pts': w['draw']})
+    elif sp == 'duck':
+        w = W['duck']
+        wpp = s['waterProps']
+        nm = wpp['name'] or ('Unnamed lake' if wpp['kind'] == 'lake' else 'Unnamed wetland')
+        g = s['waterGeom']
+        net = ctx.net
+        dpark = float(shapely.distance(g, net.geoms[s['parkEdge']])) if s.get('parkEdge') is not None else 1e9
+        if 1 <= wpp['ha'] <= 200 and dpark <= 500:
+            items.append({'t': f"{nm}, {wpp['ha']:.1f} ha, {fmt_dist(dpark)} from the road.", 'pts': w['size_road']})
+        else:
+            items.append({'t': f"{nm}, {wpp['ha']:.1f} ha.", 'pts': 0})
+        r, c = ctx.grid.rc(x, y)
+        n = int(round(ctx.R['wet_count2k'][r, c]))
+        if n >= 3:
+            items.append({'t': f'About {n} wetlands within 2 km (estimate): ducks move between them.', 'pts': w['complex']})
+        if s.get('nearRiver'):
+            rg, rp, _ = ctx.ca['rivers']
+            j, d = STRtree(rg).query_nearest(g, return_distance=True) if len(rg) else ([], [])
+            rn = rp[int(j[0])]['name'] if len(j) else None
+            items.append({'t': f"Beside {rn or 'a river'}: backwater or oxbow (estimate).", 'pts': w['backwater']})
+        el = float(ctx.dem.sample_xy('elev', x, y)[0])
+        if el < DUCK_MAX_ELEV:
+            items.append({'t': f'Elevation {fmt_int(el)} m: under {DUCK_MAX_ELEV} m, open water later in fall.', 'pts': w['low']})
+    elif sp == 'grouse':
+        w = W['grouse']
+        L = s['route'].length
+        nm = s.get('roadName') or 'unnamed road'
+        items.append({'t': f'Road: {nm}, {L / 1000:.1f} km stretch.', 'pts': 0})
+        zones = sorted(set(GROUSE_ZONES) | GROUSE_ZONES_EXTRA.get(ctx.area, set()))
+        if 'zone' in s['comp']:
+            items.append({'t': f"{s['zoneFrac'] * 100:.0f}% of the stretch in grouse forest zones ({', '.join(zones)}).", 'pts': w['zone']})
+        if 'cut_edge' in s['comp']:
+            items.append({'t': f"{s['ncut']} cutblocks touch the road (30 years old or less): edges and clover.", 'pts': w['cut_edge']})
+        if 'riparian' in s['comp']:
+            items.append({'t': f"{s['nwat']} wetlands, lakes or creeks along the road: riparian edges.", 'pts': w['riparian']})
+    elif sp == 'camp':
+        w = W['camp']
+        if s.get('kind') == 'rec site':
+            o = s['official']
+            items.append({'t': f"{title_case_name(o['name'])} rec site (official): {o['campsites']} campsites.", 'pts': 0})
+            if o.get('closure'):
+                items.append({'t': f"Closure note (official): {o['closure'][:160]}", 'pts': 0})
+        sl = float(ctx.dem.sample_xy('slope', x, y)[0])
+        if sl < 5:
+            items.append({'t': f'Flat ground ({sl:.0f} degrees).', 'pts': w['flat']})
+        wn = _water_near(rf, x, y, 200)
+        if wn:
+            items.append({'t': f"Water: {wn['name'] or 'unnamed ' + wn['kind']} {wn['where']}.", 'pts': w['water']})
+            if wn['name']:
+                items.append({'t': 'Named water: easy to find on any map.', 'pts': w['named_water']})
+        r, c = ctx.grid.rc(x, y)
+        if ctx.D['paved'][r, c] >= 1000 and ctx.D['fields'][r, c] >= 500:
+            items.append({'t': '1 km or more from pavement and from private land: quieter (estimate).', 'pts': w['quiet']})
+        if s.get('nearSpots', 0) >= 5:
+            items.append({'t': f"{s['nearSpots']} hunting spots within 5 km.", 'pts': w['spots_near']})
+    score = int(sum(i['pts'] for i in items))
+    return items, score
+
+
+def _water_near(rf, x, y, maxd):
+    pt = shapely.points(x, y)
+    best = None
+    ca = rf.ctx.ca
+    for key, kind, tree in (('lakes', 'lake', rf.lake_tree), ('wetlands', 'wetland', rf.wet_tree), ('streams', 'creek', rf.stream_tree)):
+        if tree is None:
+            continue
+        j, d = tree.query_nearest(pt, max_distance=maxd, return_distance=True)
+        if len(j) and (best is None or d[0] < best[0]):
+            best = (float(d[0]), key, kind, int(j[0]))
+    if best is None:
+        return None
+    d, key, kind, k = best
+    g = ca[key][0][k]
+    where, _ = _feat_dir(x, y, g)
+    return {'d': d, 'name': ca[key][1][k].get('name'), 'kind': kind, 'where': where}
+
+
+# ---------------------------------------------------------------- legal flags (facts with source and certainty)
+def legal_flags(rf, s):
+    ctx = rf.ctx
+    x, y = s['x'], s['y']
+    pt = shapely.points(x, y)
+    parts = [g for g in (s.get('walkLine'), s.get('ride'), s.get('approach')) if g is not None and not g.is_empty]
+    route = shapely.union_all(parts + [pt])
+    dates = rf.dates
+    flags = []
+    mu = region = region_name = None
+    k = rf.mu_tree.query(pt, predicate='intersects')
+    if len(k):
+        mg, mp = ctx.mu
+        i = int(k[0])
+        p = mp[i]
+        mu, region, region_name = p['MU'], p['region'], p['regionName']
+        near = shapely.distance(shapely.boundary(mg[i]), pt) < 300
+        flags.append({'t': f"MU (Management Unit) {mu}, Region {region} {region_name}." + (' Near the MU line: check the MU map.' if near else ''),
+                      'src': 'WAA_WILDLIFE_MGMT_UNITS_SVW', 'date': dates['mu'], 'cert': 80 if near else 95})
+    s['mu'], s['region'], s['regionName'] = mu, region, region_name
+    s['inClosure'] = False
+    if rf.mv_tree is not None:
+        mg, mp = ctx.mvpr
+        for j in rf.mv_tree.query(route, predicate='intersects'):
+            i = rf.mv_idx[int(j)]
+            p = mp[i]
+            inside = bool(shapely.intersects(mg[i], pt))
+            if inside and p['kind'] in ('mv_closed', 'mv_hunting'):
+                s['inClosure'] = True
+            what = {'mv_closed': 'Motor Vehicle Closed Area', 'mv_hunting': 'Motor Vehicle for Hunting Closed Area',
+                    'atv': 'ATV (all terrain vehicle) for Hunting Closed Area'}[p['kind']]
+            t = f"{'Spot is inside' if inside else 'Route enters'} a {what}: {p['name']}."
+            if p['dates']:
+                t += f" {p['dates'].rstrip('.')}."
+            if p['exemption']:
+                t += f" Exemption: {p['exemption'].rstrip('.')}."
+            if p['map']:
+                t += f" Synopsis map {p['map']}."
+            flags.append({'t': t, 'src': 'WAA_MVPR_AREAS_SP', 'date': dates['closures'], 'cert': 90})
+    if rf.park_tree is not None:
+        for j in rf.park_tree.query(route, predicate='intersects'):
+            p = ctx.parks[1][int(j)]
+            if p['designation'] == 'Ecological reserve':
+                rule = 'No hunting and no firing a firearm or bow in an ecological reserve (synopsis page 9, 99%).'
+            else:
+                rule = 'Hunting only where that park allows it, in open season. Check its bcparks.ca page (synopsis page 9, 99%).'
+            flags.append({'t': f"Route crosses {p['designation'].lower()}: {p['name']}. {rule}", 'src': 'TA_PARK_ECORES_PA_SVW',
+                          'date': dates['parks'], 'cert': 95})
+    if rf.res_tree is not None:
+        for j in rf.res_tree.query(route, predicate='intersects'):
+            p = ctx.reserves[1][int(j)]
+            flags.append({'t': f"Route crosses reserve land: {p['name']}. Get permission from the band office to hunt on or across it (synopsis page 9, 99%).",
+                          'src': 'CLAB_INDIAN_RESERVES', 'date': dates['reserves'], 'cert': 95})
+    if rf.city_tree is not None:
+        for j in rf.city_tree.query(route.buffer(50), predicate='intersects'):
+            p = ctx.cities[1][int(j)]
+            t = f"Route touches city limits: {p['name']}. Local firearm bylaw applies."
+            if 'Kamloops' in (p['name'] or ''):
+                t += ' City of Kamloops Bylaw No. 24-49: no firearm discharge in the city (99%).'
+            flags.append({'t': t, 'src': 'ABMS_MUNICIPALITIES_SP', 'date': dates['cities'], 'cert': 95})
+    if rf.priv_tree is not None:
+        line_parts = [g for g in parts if g is not None]
+        crosses = False
+        if line_parts:
+            rl = shapely.union_all(line_parts)
+            crosses = len(rf.priv_tree.query(rl, predicate='intersects')) > 0
+        if crosses:
+            flags.append({'t': f"Route crosses private land (ParcelMap BC, updated {dates['private']}): get permission first or go around.",
+                          'src': 'PMBC_PARCEL_FABRIC_POLY_SVW', 'date': dates['private'], 'cert': 90})
+        j, d = rf.priv_tree.query_nearest(pt, max_distance=500, return_distance=True)
+        if len(j):
+            where, _ = _feat_dir(x, y, ctx.private[int(j[0])])
+            flags.append({'t': f'Private land {where}: no shooting within 100 m (109 yd) of an occupied house or farm building (synopsis page 10, 99%).',
+                          'src': 'PMBC_PARCEL_FABRIC_POLY_SVW', 'date': dates['private'], 'cert': 95})
+    if region == '3':
+        mx = s.get('routeMaxElev') or s.get('elev') or 0
+        if max(mx, s.get('elev') or 0) > R3_ATV_LIMIT_M:
+            flags.append({'t': 'Above 1,700 m: in Region 3 no motor vehicles except snowmobiles, except on existing roads and trails '
+                               '(synopsis page 33, 99%). Elevation from terrain tiles (estimate).',
+                          'src': 'Synopsis Region 3; AWS terrain tiles', 'date': dates['dem'], 'cert': 90})
+    if rf.ra_tree is not None:
+        j, d = rf.ra_tree.query_nearest(pt, max_distance=400, return_distance=True)
+        if len(j):
+            dp = ctx.ca['dra'][1][rf.ra_idx[int(j[0])]]
+            nm = road_label(dp) or 'A paved public road'
+            where, _ = _feat_dir(x, y, ctx.ca['dra'][0][rf.ra_idx[int(j[0])]])
+            flags.append({'t': f'{nm} {where}: no hunting or shooting on or across the road allowance of a numbered highway or 2 lane public road, '
+                               '15 m (16 yd) each side of the centre line (synopsis page 10, 99%).',
+                          'src': 'DRA_DGTL_ROAD_ATLAS_MPAR_SP', 'date': dates['roads'], 'cert': 90})
+    if ctx.single_proj_zones is not None and (shapely.intersects(ctx.single_proj_zones, pt)):
+        flags.append({'t': 'Inside the 400 m single projectile ban beside Hwy 5 (Coquihalla): shotgun with shot only, no rifle, slug or .22 '
+                           '(synopsis, 99%). Zone drawn from the road atlas (estimate).',
+                      'src': 'Synopsis highway rules; DRA_DGTL_ROAD_ATLAS_MPAR_SP', 'date': dates['roads'], 'cert': 85})
+        s['singleProj'] = True
+    if ctx.no_hunt_zones is not None and shapely.intersects(ctx.no_hunt_zones, route):
+        flags.append({'t': 'Route crosses the 400 m no hunting strip beside Hwy 3 between Hope and Manning Park: no hunting there (synopsis, 99%).',
+                      'src': 'Synopsis highway rules; DRA_DGTL_ROAD_ATLAS_MPAR_SP', 'date': dates['roads'], 'cert': 85})
+    if rf.wma_tree is not None:
+        for j in rf.wma_tree.query(pt, predicate='intersects'):
+            p = ctx.wma[1][int(j)]
+            flags.append({'t': f"Inside {p['name']} Wildlife Management Area: rules differ by area. Call the regional office before you hunt (synopsis page 9, 99%).",
+                          'src': 'TA_WILDLIFE_MGMT_AREAS_SVW', 'date': dates['wma'], 'cert': 95})
+    if ctx.vaseux is not None and shapely.distance(ctx.vaseux, pt) < 1500:
+        flags.append({'t': 'Near Vaseux Lake: hunting is prohibited in the Vaseux Migratory Bird Sanctuary and the National Wildlife Areas '
+                           '(synopsis page 67, 99%). Their edges are not in this data. VERIFY on the ground.',
+                      'src': 'Synopsis Region 8', 'date': dates['roads'], 'cert': 99})
+    return flags
+
+
+# ---------------------------------------------------------------- pressure (estimate)
+def pressure(rf, s):
+    ctx = rf.ctx
+    r, c = ctx.grid.rc(s['x'], s['y'])
+    D = ctx.D
+    wm = s.get('walkM') or 0
+    if s['sp'] == 'grouse':
+        wm = 0 if s['cat'] != 'walk' else wm
+    if s['cat'] == 'backcountry' or wm > 5000:
+        return 'remote', 'More than 5 km from a drivable road (estimate).'
+    if wm >= 2000 or (s.get('inClosure') and wm >= 1000):
+        why = f"{fmt_dist(wm)} on foot from the nearest parking" + (' inside a motor vehicle closure' if s.get('inClosure') else '')
+        return 'quieter', why + ' (estimate).'
+    reasons = []
+    if D['rec'][r, c] <= 1000:
+        reasons.append('within 1 km of a rec site')
+    if D['paved'][r, c] <= 1000:
+        reasons.append('within 1 km of a paved road')
+    if D['city'][r, c] <= 1000:
+        reasons.append('within 1 km of a town')
+    if D['bigcity'][r, c] <= 25000:
+        reasons.append('under 30 minutes from a city')
+    if reasons:
+        return 'busier', 'Busier: ' + ', '.join(reasons) + ' (estimate).'
+    return 'average', 'No town, pavement or rec site within 1 km and not behind a closure (estimate).'
+
+
+# ---------------------------------------------------------------- plan text (short lines, under 160 words)
+def words(t):
+    return len(re.findall(r"[A-Za-z0-9][A-Za-z0-9'.,:%/()]*", t))
+
+
+SURF_WORD = {'paved': 'paved', 'loose': 'gravel', 'rough': 'rough road', 'overgrown': 'overgrown road', 'seasonal': 'seasonal road',
+             'unknown': 'road', '': 'road', None: 'road'}
+USE = {
+    'deer': 'Use: your .308 Winchester with a 150 to 165 grain expanding bullet (Tip).',
+    'bear': 'Use: your .308 Winchester with a 150 to 180 grain expanding bullet (Tip).',
+    'moose': 'Use: .308 Winchester, 165 to 180 grain premium bullet, shots inside about 200 m (219 yd) (Tip).',
+    'elk': 'Use: .308 Winchester, 165 to 180 grain premium bullet, shots inside about 200 m (219 yd) (Tip).',
+    'duck': 'Use: 12 gauge, steel 2 to 4 (non toxic shot only), modified or improved cylinder rated for steel, plugged to 3 shells (regs).',
+    'grouse': 'Use: .22 rimfire for a sitting grouse inside 25 m (27 yd), or a shotgun with lead 6 or 7.5 (Tip).',
+    'quail': 'Use: shotgun only (a .22 is not legal for quail), improved cylinder, lead 7.5 or 6, or steel 6 (Tip).',
+    'sheep': 'Use: VERIFY. Sheep hunting needs special rules or a draw. Not in data/regs.json yet.',
+}
+
+
+def first_sentence(t, max_words=24):
+    if not t:
+        return ''
+    t = re.sub(r'\s+', ' ', t).strip()
+    m = re.match(r'(.+?[.!?])(\s|$)', t)
+    s = m.group(1) if m else t
+    w = s.split(' ')
+    if len(w) > max_words:
+        s = ' '.join(w[:max_words]) + ' ...'
+    return s
+
+
+def make_plan(rf, s):
+    ctx = rf.ctx
+    base = AREAS[ctx.area]['base']
+    plon, plat = s['parkLL']
+    sp = s['sp']
+    lines = []
+    bx, by = rf.base_xy
+    _, crow = bearing_dist(bx, by, s['park'][0], s['park'][1])
+    t = f"Drive: from {base['name']}, about {max(1, round(crow * 1.3 / 1000))} km (straight line times 1.3, estimate)."
+    if s.get('driveVia'):
+        t += ' Via ' + ', '.join(s['driveVia'][:4]) + '.'
+    opt_rec = f" Official directions to {s['recName']}: {first_sentence(s['recDirections'])}" if s.get('recDirections') else ''
+    lines.append([t, opt_rec])
+    lines.append([f"Park: {plat}, {plon}, {s['parkWhat']}. Map links below.", ''])
+    cat = s['cat']
+    if sp == 'grouse':
+        km = s['route'].length / 1000
+        how = 'Walk' if cat == 'walk' else ('Ride' if cat == 'atv' else 'Walk or drive slowly')
+        t = f"{how}: the {s.get('roadName') or 'unnamed road'} stretch, {km:.1f} km one way. About {round(km / 3 * 60)} min one way at 3 km/h."
+        if s.get('approach') is not None:
+            t = f"Walk {fmt_dist(s['approach'].length)} to the start. " + t
+        lines.append([t, ''])
+    elif sp == 'camp':
+        if s.get('walkM', 0) > 30:
+            lines.append([f"Walk: {fmt_dist(s['walkM'])} from the road to the flat ground.", ''])
+    elif cat == 'atv':
+        names = ', '.join(s.get('rideNames') or []) or 'unnamed roads and trails'
+        veh = 'ATV (all terrain vehicle)' + (' or 4x4 on rough road, estimate' if s.get('rideRough') else '')
+        t = (f"Ride: {s['rideM'] / 1000:.1f} km on {names} by {veh}. Then walk {fmt_dist(s['walkM'])} {s['walkDir']}"
+             f", climb about {fmt_int(s['climb'])} m.")
+        lines.append([t, ''])
+    elif s['walkM'] < 25:
+        lines.append(['Walk: none. The spot is at the road.', ''])
+    else:
+        via = s.get('walkVia')
+        how = ('on ' + ', '.join(via[:2])) if via else 'cross country, no trail mapped'
+        t = (f"Walk: {fmt_dist(s['walkM'])} {s['walkDir']}, {how}. Climb about {fmt_int(s['climb'])} m, "
+             f"about {max(5, round(s['walkM'] / 3000 * 60 + s['climb'] / 10))} min at 3 km/h.")
+        lines.append([t, ''])
+    if s.get('campLine'):
+        lines.append([s['campLine'], ''])
+    # hunt
+    months = s.get('months') or []
+    when = (month_span(months) + ' (season rows)') if months else 'season: VERIFY'
+    if sp == 'deer':
+        feat = s.get('watch') or 'the open slopes and forest edges'
+        t = f"Hunt: deer, {when}. Watch {feat} at first and last light. Sit above it with the wind in your face and glass (Tip)."
+    elif sp == 'moose':
+        t = f"Hunt: moose, {when}. Glass the wetland and cutblock edges at dawn and dusk. Move slowly, stop often (Tip)."
+    elif sp == 'duck':
+        t = f"Hunt: ducks, {when}. Set up on the shore with the wind at your back: ducks land into the wind (Tip). Shoot only birds you can retrieve."
+    elif sp == 'grouse':
+        t = f"Hunt: grouse, {when}. Walk slowly in the first and last 2 hours of light. Watch where cutblocks and creeks meet the road (Tip)."
+    elif sp == 'quail':
+        t = f"Hunt: California quail, {when}. Walk the brushy draws and field edges in the morning. Listen for coveys calling (Tip)."
+    else:
+        t = f"Hunt: {s.get('nearSpots', 0)} hunting spots within 5 km of this camp (my pick)."
+    also = [SPECIES_LABEL[x] for x in s['species'] if x != sp]
+    opt_also = (' Also: ' + ', '.join(also) + ' (see evidence).') if also else ''
+    lines.append([t, opt_also])
+    if sp != 'camp':
+        use = USE.get(sp, '')
+        if s.get('singleProj'):
+            use = 'Use: shotgun with shot only here (single projectile ban). No rifle, slug or .22.'
+        lines.append([use, ''])
+    # legal
+    lt = f"Legal: MU (Management Unit) {s.get('mu') or 'VERIFY'}, Region {s.get('region') or 'VERIFY'}."
+    nflags = len(s['flags'])
+    season_txt = ''
+    if s.get('seasons'):
+        it = REGS.get(s['seasons'][0], {})
+        season_txt = f" Season: {it.get('value', '')} ({it.get('certainty', '')}%)."
+    elif s.get('seasonNote'):
+        season_txt = ' ' + s['seasonNote']
+    lines.append([lt, season_txt + f' {nflags} legal flags below. {BANNER}'])
+    dd = rf.dates
+    lines.append([f"Verify: Candidate, scout it first. Check posted signs. Private land can be unsigned. "
+                  f"Data dates: roads {dd['roads']}, private land {dd['private']}, closures {dd['closures']}.", ''])
+    # fit under 160 words: drop optional parts in this order
+    order = [0, 4, 6]   # rec directions, also, season text
+
+    def total():
+        return sum(words(a + b) for a, b in lines)
+    for i in order:
+        if total() <= 160:
+            break
+        for j, (a, b) in enumerate(lines):
+            if b and ((i == 0 and a.startswith('Drive')) or (i == 4 and a.startswith('Hunt')) or (i == 6 and a.startswith('Legal'))):
+                if a.startswith('Legal'):
+                    lines[j][1] = f' Season rows below. {BANNER}'
+                else:
+                    lines[j][1] = ''
+    return [(a + b).strip() for a, b in lines]
 
 
 # ======================================================================================

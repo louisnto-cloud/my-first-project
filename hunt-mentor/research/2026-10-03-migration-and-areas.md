@@ -138,7 +138,7 @@ Method
 - Sooty grouse (coast, area B): Birdweb (Seattle Audubon), https://www.birdweb.org/birdweb/bird/sooty_grouse : late summer and early autumn move to dense conifers "at higher elevations"; leave breeding grounds by October, back by early April (65%). Alaska source says winter range slightly lower: direction varies (55%).
 - Spruce grouse: resident, short moves.
   - BC Atlas (Chutter 2015): conifer specialist, needles of pine or spruce; known to 2,500 m; recorded 293 to 1,738 m (85%).
-  - Herzog and Keppie 1980, The Condor 82: 366 to 372, Alberta: moves of up to about 9.5 to 11 km between summer and winter ranges, mostly females (search preview, 60%).
+  - Herzog and Keppie 1980, The Condor 82: 366 to 372: "movements of up to 9.5 km (5.9 mi) between discrete summer and winter range"; Keppie later recorded one move of 25 km (cited in the Vermont Spruce Grouse Recovery Plan, https://www.vtfishandwildlife.com/sites/fishandwildlife/files/documents/Learn%20More/Library/REPORTS%20AND%20DOCUMENTS/NONGAME%20AND%20NATURAL%20HERITAGE/RECOVERY%20PLANS/Vermont%20Spruce%20Grouse%20Recovery%20Plan.pdf, 70%). Original paper not opened.
 
 ### California quail and chukar (resident)
 - California quail:

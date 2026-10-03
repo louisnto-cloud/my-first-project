@@ -33,10 +33,10 @@ checked: 2026-10-01
 
 - **Coyote:** 9 to 23 kg, bushy black tipped tail usually carried down when running, slim pointed muzzle, tall ears, small feet (85%).
 
+- **Lynx:** long ear tufts, huge furry paws, long legs, grey coat with few markings, short tail with a fully black tip (70%).
+
 ```photo canada-lynx
 ```
-
-- **Lynx:** long ear tufts, huge furry paws, long legs, grey coat with few markings, short tail with a fully black tip (70%).
 
 ```photo bobcat
 ```
