@@ -104,6 +104,9 @@ function blocks(md, ctx) {
   return html;
 }
 
+// drafts build (--drafts) shows placeholders for missing photos; the published build leaves them out
+const DRAFTS = process.argv.includes('--drafts');
+
 function fenced(kind, arg, body, ctx) {
   if (kind === 'quiz') {
     const qs = JSON.parse(body);
@@ -125,7 +128,7 @@ function fenced(kind, arg, body, ctx) {
     // ```photo id [caption override]```  -> figure from data/photos/*.json manifest
     const [id, ...rest] = arg.split(/\s+/);
     const ph = PHOTOS[id];
-    if (!ph || !fs.existsSync(path.join(ROOT, 'photos', `${id}.jpg`))) { ctx.missingPhotos.push(id); return `<p class="verify">Photo missing: ${esc(id)}</p>`; }
+    if (!ph || !fs.existsSync(path.join(ROOT, 'photos', `${id}.jpg`))) { ctx.missingPhotos.push(id); return DRAFTS ? `<p class="verify">Photo missing: ${esc(id)}</p>` : ''; }
     return photoFigure(ph, rest.join(' ') || body.trim() || ph.caption);
   }
   if (kind === 'gallery') {
@@ -134,10 +137,10 @@ function fenced(kind, arg, body, ctx) {
       ...body.split('\n').map((l) => l.trim()).filter(Boolean).map((l) => { const [id, ...c] = l.split('|'); return { id: id.trim(), caption: c.join('|').trim() }; })];
     const figs = specs.map(({ id, caption }) => {
       const ph = PHOTOS[id];
-      if (!ph || !fs.existsSync(path.join(ROOT, 'photos', `${id}.jpg`))) { ctx.missingPhotos.push(id); return `<p class="verify">Photo missing: ${esc(id)}</p>`; }
+      if (!ph || !fs.existsSync(path.join(ROOT, 'photos', `${id}.jpg`))) { ctx.missingPhotos.push(id); return DRAFTS ? `<p class="verify">Photo missing: ${esc(id)}</p>` : ''; }
       return photoFigure(ph, caption || ph.caption);
-    });
-    return `<div class="gallery">${figs.join('')}</div>`;
+    }).filter(Boolean);
+    return figs.length ? `<div class="gallery">${figs.join('')}</div>` : '';
   }
   if (kind === 'regs') {
     // ```regs key  -> rendered from data/regs.json at runtime

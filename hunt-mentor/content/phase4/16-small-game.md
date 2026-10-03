@@ -30,8 +30,14 @@ checked: 2026-10-01
 
 ## Snowshoe hare: identify and biology
 
+```photo snowshoe-hare-summer
+```
+
 - A hare, not a rabbit: born furred with eyes open; adults 1.2 to 1.6 kg (85%).
 - Grey brown in summer, white in winter, with huge furred hind feet; moults in August to September and March to April (85%).
+
+```photo snowshoe-hare-winter
+```
 - On the wet southwest coast of BC, hares stay brown all year (85%).
 - Home range about 6 to 10 ha, laced with packed trails called runways that show up after the first snow (85%).
 - Numbers rise and crash on a cycle of about 10 years (85%).

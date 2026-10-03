@@ -18,11 +18,34 @@ checked: 2026-10-01
 
 ## Identify: the sea ducks
 
+```photo surf-scoter
+```
+
 - **Surf scoter:** male black with white patches on the forehead and nape, an orange and white swollen bill; the "skunk head". Female sooty brown with two pale face patches (75%). Common on the Pacific coast in winter (75%).
+
+```photo white-winged-scoter
+```
+
 - **White winged scoter:** the biggest scoter; a white wing patch that shows in flight but hides when swimming; male has a small white teardrop at the eye (75%).
+
+```photo black-scoter
+```
+
 - **Black scoter:** male all black with an orange knob on the bill; female dark with a pale face and front of neck (75%).
+
+```photo long-tailed-duck
+```
+
 - **Long tailed duck:** male has a long pointed tail and a bold black and white pattern that changes between summer and winter; females pale with a square head and a stubby bill; solid dark wings in flight; very vocal flocks (75%).
+
+```photo harlequin-duck
+```
+
 - **Harlequin:** small, under about 600 g; male slate blue with white stripes and chestnut sides; female dark brown with white face spots and a short bill (85%). Found in small flocks close to rocky shore, bobbing its head (85%).
+
+```photo common-eider
+```
+
 - **Eiders:** heavy northern ducks of the Arctic and Atlantic; the BC federal table has no eider line (95%). Treat any eider as a once in a lifetime sighting, not a target (Tip).
 
 ```diagram duck-silhouettes

@@ -18,10 +18,29 @@ checked: 2026-10-01
 
 ## Identify: five animals, two pairs of look alikes
 
+```photo cougar
+```
+
 - **Cougar:** light brown cat, compact head, long heavy tail about a third of the body with a black tip (85%). Tracks show no claws (85%). Kittens are spotted (85%).
+
+```photo grey-wolf
+```
+
 - **Wolf:** 30 to 50 kg in BC, females about 20% smaller; tail carried out behind when running; big feet, broad muzzle (85%).
+
+```photo coyote
+```
+
 - **Coyote:** 9 to 23 kg, bushy black tipped tail usually carried down when running, slim pointed muzzle, tall ears, small feet (85%).
+
+```photo canada-lynx
+```
+
 - **Lynx:** long ear tufts, huge furry paws, long legs, grey coat with few markings, short tail with a fully black tip (70%).
+
+```photo bobcat
+```
+
 - **Bobcat:** smaller, spotted tan coat, black bars on the front legs, short ear tufts, tail black on top only with a white underside (70%).
 - A big dog at 200 m looks like a wolf. A hunter shot a neighbour's dog is a story that ends in court (Tip).
 
@@ -41,6 +60,10 @@ checked: 2026-10-01
 - "BOBCAT | 3-12 to 3-20, 3-26 to 3-44 | Nov 15 - Feb 15 | 1" (98%)
 - "LYNX | 3-12 to 3-20, 3-26 to 3-44 | Nov 15 - Feb 15 | 1" (98%)
 - NBL means no bag limit (98%). Heffley Creek's MU: VERIFY on the Region 3 map, then read your row.
+
+```photo wolverine
+```
+
 - Wolverine: no Region 3 row (98%). Seasons exist only in Regions 6, 7A and 7B, bag 1, Compulsory Report required (98%).
 
 ## Licences, weapons and methods
