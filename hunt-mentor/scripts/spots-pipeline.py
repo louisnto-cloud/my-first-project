@@ -139,10 +139,10 @@ W = {
     'camp': {'flat': 2, 'water': 2, 'named_water': 1, 'quiet': 1, 'spots_near': 1},
 }
 SCORE_MAX = {'deer': 11, 'moose': 7, 'duck': 8, 'grouse': 3, 'quail': 6, 'camp': 7}
-MIN_SCORE = {'deer': 6, 'moose': 4, 'duck': 4, 'grouse': 2, 'quail': 4, 'camp': 5}
+MIN_SCORE = {'deer': 7, 'moose': 4, 'duck': 4, 'grouse': 2, 'quail': 4, 'camp': 5}
 SPACING_M = 800            # no two spots of the same species and category closer than this
 SELECT_RADIUS = {'drive': 1500, 'atv': 1500, 'walk': 2000, 'backcountry': 3000, 'camp': 3000}
-CAPS = {'deer': 450, 'moose': 250, 'duck': 350, 'grouse': 300, 'quail': 300, 'camp': 120}   # per area and category, safety cap
+CAPS = {'deer': 220, 'moose': 100, 'duck': 180, 'grouse': 120, 'quail': 300, 'camp': 60}   # per area and category: best first
 CUT_AGE = (5, 20)          # cutblock age that feeds deer, moose, bear, grouse
 BURN_YEARS = (2015, 2023)  # recent burns for scoring
 DEER_ZONES_LOW = {'BG', 'PP', 'IDF'}
@@ -173,7 +173,7 @@ PM_FORCE = {'cutblocks', 'forest_roads'}   # always PMTiles (too big as GeoJSON 
 
 
 def months_key(months):
-    return ',' + ','.join(str(m) for m in months) + ','
+    return (',' + ','.join(str(m) for m in months) + ',') if months else ''
 
 
 def log(*a):
@@ -476,7 +476,9 @@ def simplify_m(geoms, tol):
 def clean_str(v):
     if v is None:
         return None
-    v = str(v).strip()
+    v = re.sub(r'<[^>]+>', ' ', str(v))
+    v = re.sub(r'&nbsp;|&amp;', lambda m: ' ' if m.group(0) == '&nbsp;' else '&', v)
+    v = re.sub(r'\s+', ' ', v).strip()
     return v or None
 
 
@@ -491,13 +493,8 @@ def title_case_name(s):
     if not s:
         return s
     if s.isupper():
-        out = []
-        for w in s.split(' '):
-            if re.fullmatch(r'[IVX]+|FSR|BC|[A-Z]?\d+[A-Z]?|N|S|E|W|NE|NW|SE|SW', w):
-                out.append(w)
-            else:
-                out.append(w.capitalize())
-        return ' '.join(out)
+        keep = re.compile(r'[IVX]+|FSR|BC|TFL|N|S|E|W|NE|NW|SE|SW')
+        return re.sub(r"[A-Za-z']+", lambda m: m.group(0) if keep.fullmatch(m.group(0)) else m.group(0).capitalize(), s)
     return s
 
 
@@ -1565,8 +1562,10 @@ class AreaContext:
             psrc = np.unique(np.concatenate([net.u[net.parkable & net.paved], net.v[net.parkable & net.paved]]))
             dp, _, _ = net.multi(net.car | net.atv_ok, psrc, limit=60000)
             far = np.maximum(dr[net.u], dr[net.v])
+            near = np.minimum(dr[net.u], dr[net.v])
             near_pave = np.minimum(dp[net.u], dp[net.v])
-            self._atvz = only & np.isfinite(far) & (far <= 10000) & np.isfinite(near_pave) & (near_pave >= 1000)
+            self._atvz = (only & np.isfinite(far) & (far <= 10000) & (near >= 800) & np.isfinite(near_pave)
+                          & (near_pave >= 1000))
             self.ride = (dr, pr, sr)
             self.pave_dist = dp
         return self._atvz
@@ -2173,7 +2172,7 @@ class Refiner:
         _, k, d = best
         g = self.anchors[k]
         if d < 120:
-            return f'At {self.alabels[k]}'
+            return f'By {self.alabels[k]}'
         np_ = shapely.ops.nearest_points(g, pt)[0] if shapely.get_type_id(g) != 0 else g
         az, dd = bearing_dist(np_.x, np_.y, x, y)
         return f'{fmt_dist(dd)} {compass8(az)} of {self.alabels[k]}'
@@ -2240,7 +2239,8 @@ class Refiner:
                     ride_line = shapely.line_merge(shapely.union_all(parts)) if parts else None
                     near_pt = shapely.line_interpolate_point(eg, loc_t)
                     ride_m = float(dr[n0]) + part.length
-                    if ride_line is not None and 300 <= ride_m <= 10500:
+                    if ride_line is not None and 1000 <= ride_m <= 10500 and not self.crosses_private(
+                            shapely.linestrings([[near_pt.x, near_pt.y], [s['x'], s['y']]])):
                         s['park'] = (float(net.nx[stage]), float(net.ny[stage]))
                         s['ride'] = ride_line
                         s['rideM'] = ride_m
@@ -2470,7 +2470,8 @@ def evidence(rf, s):
         w = W['grouse']
         L = s['route'].length
         nm = s.get('roadName') or 'unnamed road'
-        items.append({'t': f'Road: {nm}, {L / 1000:.1f} km stretch.', 'pts': 0})
+        kind_ = 'Trail' if 'trail' in nm.lower() else 'Road'
+        items.append({'t': f'{kind_}: {nm}, {L / 1000:.1f} km stretch.', 'pts': 0})
         zones = sorted(set(GROUSE_ZONES) | GROUSE_ZONES_EXTRA.get(ctx.area, set()))
         if 'zone' in s['comp']:
             items.append({'t': f"{s['zoneFrac'] * 100:.0f}% of the stretch in grouse forest zones ({', '.join(zones)}).", 'pts': w['zone']})
@@ -2661,8 +2662,8 @@ def words(t):
     return len(re.findall(r"[A-Za-z0-9][A-Za-z0-9'.,:%/()]*", t))
 
 
-SURF_WORD = {'paved': 'paved', 'loose': 'gravel', 'rough': 'rough road', 'overgrown': 'overgrown road', 'seasonal': 'seasonal road',
-             'unknown': 'road', '': 'road', None: 'road'}
+SURF_WORD = {'paved': 'paved road', 'loose': 'gravel road', 'rough': 'rough road', 'overgrown': 'overgrown road',
+             'seasonal': 'seasonal road', 'unknown': 'road', '': 'road', None: 'road'}
 USE = {
     'deer': 'Use: your .308 Winchester with a 150 to 165 grain expanding bullet (Tip).',
     'bear': 'Use: your .308 Winchester with a 150 to 180 grain expanding bullet (Tip).',
@@ -2761,7 +2762,7 @@ def make_plan(rf, s):
         season_txt = f" Season: {it.get('value', '')} ({it.get('certainty', '')}%)."
     elif s.get('seasonNote'):
         season_txt = ' ' + s['seasonNote']
-    lines.append([lt, season_txt + f' {nflags} legal flags below. {BANNER}'])
+    lines.append([lt, season_txt + f" {nflags} legal flag{'s' if nflags != 1 else ''} below. {BANNER}"])
     dd = rf.dates
     lines.append([f"Verify: Candidate, scout it first. Check posted signs. Private land can be unsigned. "
                   f"Data dates: roads {dd['roads']}, private land {dd['private']}, closures {dd['closures']}.", ''])
@@ -2863,9 +2864,10 @@ def finalize(rf, s, stats):
     # secondary species tags (vector checks)
     tags = [sp] if sp != 'camp' else []
     if sp in ('deer', 'moose', 'grouse'):
-        c = _cut_near(rf, x, y, 500)
+        c = _cut_near(rf, x, y, 300)
         b = _burn_near(rf, x, y, 500)
-        if c or b:
+        sunny = sl >= 5 and 135 <= asp <= 315
+        if b or (c and sunny):
             tags.append('bear')
             items.append({'t': 'Black bear: young cutblocks and burns grow berries in late summer and fall (Tip).', 'pts': 0, 'tag': 'bear'})
     if sp in ('deer', 'moose'):
@@ -2912,7 +2914,9 @@ def finalize(rf, s, stats):
         wp_ = s['waterProps']
         prefer = wp_['name'] if wp_['name'] else None
         if not prefer:
-            s['name'] = ('Unnamed lake, ' if wp_['kind'] == 'lake' else 'Unnamed wetland, ') + rf.name_for(x, y)
+            nm_ = rf.name_for(x, y)
+            nm_ = nm_[0].lower() + nm_[1:] if nm_.startswith('By ') else nm_
+            s['name'] = ('Unnamed lake ' if wp_['kind'] == 'lake' else 'Unnamed wetland ') + nm_
         else:
             s['name'] = prefer
     elif official:
@@ -3052,9 +3056,9 @@ def spot_feature(s, sid):
         'walkMin': int(round((s.get('walkM') or 0) / 3000 * 60 + (s.get('climb') or 0) / 10)),
         'driveVia': s.get('driveVia') or [],
         'evidence': [{k: v for k, v in e.items()} for e in s['evidence']],
-        'flags': s['flags'], 'banner': BANNER,
+        'flags': s['flags'],
         'seasons': s['seasons'], 'seasonNote': s.get('seasonNote'), 'months': s['months'], 'monthsKey': months_key(s['months']),
-        'plan': s['plan'], 'candidate': 'Candidate, scout it first.',
+        'plan': s['plan'],
         'gmaps': lk['gmaps'], 'gdir': lk['gdir'], 'apple': lk['apple'],
     }
     if s.get('recDirections'):
