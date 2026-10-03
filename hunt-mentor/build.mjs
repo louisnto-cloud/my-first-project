@@ -278,8 +278,12 @@ function lint(sessions) {
   walk(path.join(ROOT, 'content'));
   for (const f of files) {
     const rel = path.relative(ROOT, f);
+    let fence = null; // kind of the fenced block we are inside, if any
     fs.readFileSync(f, 'utf8').split('\n').forEach((l, n) => {
-      if (/^---$/.test(l) || /^\|[-| :]+\|$/.test(l) || l.startsWith('```')) return;
+      if (l.startsWith('```')) { fence = fence === null ? (l.slice(3).trim().split(/\s+/)[0] || 'code') : null; return; }
+      if (fence && fence !== 'checklist' && fence !== 'gallery') return;
+      if (fence === 'gallery') l = l.replace(/^\s*[\w-]+\s*\|?/, '');
+      if (/^---$/.test(l) || /^\|[-| :]+\|$/.test(l)) return;
       const prose = l.replace(/\]\([^)]*\)/g, ']').replace(/https?:\/\/\S+/g, '').replace(/`[^`]*`/g, '').replace(/\{[^}]*\}/g, '').replace(/"[^"]*"/g, '');
       if (/—/.test(prose)) problems.push(`${rel}:${n + 1} em dash`);
       if (/[A-Za-z]-[A-Za-z]/.test(prose) && !/^\s*"/.test(l) && !/^(id|phase|num|minutes|title|checked):/.test(l)) problems.push(`${rel}:${n + 1} hyphen: ${prose.match(/\S*[A-Za-z]-[A-Za-z]\S*/)[0]}`);
