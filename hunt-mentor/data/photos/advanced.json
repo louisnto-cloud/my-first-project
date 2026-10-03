@@ -90,6 +90,30 @@
     "cardDeck": "Photo ID: mountain game and predators"
   },
   {
+    "id": "bobcat",
+    "species": "Bobcat",
+    "caption": "Bobcat, California. Spotted tan coat, black bars on the front legs, short ear tufts, short tail black on top and white underneath.",
+    "author": "Joyce Cory on Flickr as docentjoyce",
+    "licence": "CC BY 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bobcat_photo.jpg",
+    "card": true,
+    "cardBack": "Bobcat: spotted tan coat, black bars on the front legs, short ear tufts, tail black on top only with a white underside. A lynx has huge furry paws and a fully black tail tip.",
+    "cardDeck": "Photo ID: mountain game and predators"
+  },
+  {
+    "id": "wolverine",
+    "species": "Wolverine",
+    "caption": "Wolverine. Heavy, low slung, dark brown body with a pale band along the side, bushy tail, big claws. No season in Region 3: seasons only in Regions 6, 7A and 7B, bag limit 1, with a Compulsory Report.",
+    "author": "USFWS Mountain-Prairie",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Wolverine_(5249640494).jpg",
+    "card": true,
+    "cardBack": "Wolverine: heavy, low slung, dark brown body, pale band along the side, bushy tail. No Region 3 season; seasons only in Regions 6, 7A and 7B, bag limit 1, Compulsory Report.",
+    "cardDeck": "Photo ID: mountain game and predators"
+  },
+  {
     "id": "snowshoe-hare-summer",
     "species": "Snowshoe hare",
     "caption": "Snowshoe hare in its brown coat, Banff. Grey brown body, dark ear tips, big dark eye.",
