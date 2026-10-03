@@ -78,7 +78,7 @@ checked: 2026-10-01
 - Greenstone Mountain Burn is a Motor Vehicle for Hunting Closed Area (98%). Burns draw hunters, then get closed to vehicles.
 - Region 3: no motor vehicles above 1,700 m except on existing roads and trails (98%). Plan the walk, not the ride, up high.
 - October: mule deer start down from summer range when snow and cold arrive. Most are back on [[Winter range]] by late October to November (85%). Interior deer can stay high into December (80%). The two sources conflict. Plan both elevations.
-- Winter range is south and west facing, old Douglas fir (85%). Snow deeper than about 50 cm pushes deer off a slope (80%).
+- Winter range is south and west facing, old Douglas fir (85%). Deer struggle in snow over about 30 cm, and snow deeper than about 50 cm pushes them off a slope (75%).
 - Sun hits south faces first, melts frost first and grows the last green feed (Tip). North faces hold shade and bedding (Tip).
 - Elevation on the map: contour numbers. Elevation on the phone: GPS altitude, often 10 to 20 m off (75%).
 

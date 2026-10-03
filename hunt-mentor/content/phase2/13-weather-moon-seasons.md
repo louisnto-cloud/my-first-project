@@ -19,7 +19,7 @@ checked: 2026-10-02
 
 - Snow and cold, not the rut, trigger mule deer migration to [[Winter range]] (85%, Monteith 2011, via Hunt Mentor research notes).
 - In the BC Wildlife Federation mule deer study, most collared deer migrated and returned to winter range in October to November (85%, SIMDeer, search preview).
-- Deer avoid snow deeper than about 50 cm (80%, University of British Columbia thesis via research notes).
+- Deer have trouble in snow deeper than about 30 cm (85%, BC government deer account) and leave slopes where it passes about 50 cm (80%, University of British Columbia thesis).
 - Fresh snow shows you tracks: you learn what moved last night, and how fresh (Tip). See Snow tracking.
 - First real cold snap of the fall: glass lower slopes and south faces (Tip).
 - Deer reduce movement during an actual storm (80%, Penn State Deer Forest Study).

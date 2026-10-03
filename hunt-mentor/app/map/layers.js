@@ -52,7 +52,8 @@ export function loadManifest() {
 function newState(l) {
   const st = { l, files: [], loaded: new Map(), loading: new Map(), failed: new Set(), added: false, mapIds: [], base: {}, legal: l.legal != null ? !!l.legal : LEGAL_GROUPS.includes(l.group), spot: spots.isSpotLayer(l) };
   st.files = filesFor(l);
-  st.unsupported = st.files.some((f) => /\.pmtiles(\?|$)/i.test(f.url));
+  st.pm = st.files.some((f) => /\.pmtiles(\?|$)/i.test(f.url)); // vector tiles, drawn by MapLibre tile by tile
+  if (st.pm) st.spot = false;
   st.layerMonths = parseMonths(l.months);
   return st;
 }
@@ -92,35 +93,71 @@ function setVis(st, on) {
 const monthOk = (st) => !prefs.month || !st.layerMonths.length || st.layerMonths.includes(prefs.month);
 
 function ensureAdded(st) {
-  if (st.added || st.unsupported || !map.isStyleLoaded()) return;
-  const l = st.l, src = `hm-src-${l.id}`;
+  if (st.added || st.adding || st.unsupported || !map.isStyleLoaded()) return;
+  const l = st.l;
   try {
+    if (st.pm) {
+      st.adding = true;
+      loadPmtiles().then(async (pm) => {
+        for (const [i, f] of st.files.entries()) {
+          const src = `hm-src-${l.id}-${i}`, url = new URL(f.url, location.href).href;
+          let sl = l.sourceLayer;
+          if (!sl) { try { const meta = await new pm.PMTiles(url).getMetadata(); sl = meta && meta.vector_layers && meta.vector_layers[0] && meta.vector_layers[0].id; } catch (err) { sl = null; } }
+          if (!map.getSource(src)) map.addSource(src, { type: 'vector', url: `pmtiles://${url}`, attribution: l.attribution || 'BC Data Catalogue (Open Government Licence BC)' });
+          st.mapIds.push(...addLayerSet(st, src, `-${i}`, sl || l.id));
+        }
+        finishAdd(st); pmMonthFilter(st); setVis(st, !!lp(l.id).on && monthOk(st)); refreshRows();
+      }).catch((err) => { st.error = String(err && err.message || err); console.warn('Hunt Map layer', l.id, err); refreshRows(); })
+        .finally(() => { st.adding = false; });
+      return;
+    }
+    const src = `hm-src-${l.id}`;
     if (st.spot) st.mapIds = spots.addLayers(H, l, src);
     else {
-      const type = ['fill', 'line', 'circle', 'symbol'].includes(l.type) ? l.type : 'line';
-      const id = `hm-l-${l.id}`, minzoom = l.minzoom || 0;
       map.addSource(src, { type: 'geojson', data: EMPTY, tolerance: 0.45, attribution: l.attribution || 'BC Data Catalogue (Open Government Licence BC)' });
-      const paint = Object.assign({}, DEF_PAINT[type], l.paint || {});
-      const layout = Object.assign({}, type === 'line' ? { 'line-join': 'round', 'line-cap': 'round' } : {}, l.layout || {});
-      if (type === 'symbol' && !layout['text-field'] && !layout['icon-image']) Object.assign(layout, { 'text-field': ['to-string', ['get', l.labelField || 'name']], 'text-font': ['Noto Sans Bold'], 'text-size': 12 });
-      const before = type === 'fill' ? H.anchors.fills : type === 'line' ? H.anchors.lines : H.anchors.symbols;
-      map.addLayer({ id, type, source: src, minzoom, layout, paint }, before);
-      st.mapIds = [id];
-      if (type === 'fill') {
-        map.addLayer({ id: `${id}-line`, type: 'line', source: src, minzoom, layout: { 'line-join': 'round' }, paint: { 'line-color': firstColor(paint['fill-outline-color']) || firstColor(paint['fill-color']) || '#e4472b', 'line-width': ['interpolate', ['linear'], ['zoom'], 6, 0.7, 12, 1.5, 16, 2.4], 'line-opacity': 0.9 } }, H.anchors.lines);
-        st.mapIds.push(`${id}-line`);
-      }
-      if (l.labelField && type !== 'symbol') {
-        map.addLayer({ id: `${id}-label`, type: 'symbol', source: src, minzoom: Math.max(minzoom, 7), layout: {
-          'text-field': ['to-string', ['get', l.labelField]], 'text-font': ['Noto Sans Bold'], 'text-size': ['interpolate', ['linear'], ['zoom'], 7, 11, 14, 14],
-          'symbol-placement': type === 'line' ? 'line' : 'point', 'text-max-width': 8, 'text-padding': 10, 'symbol-spacing': 500,
-        }, paint: { 'text-color': darken(firstColor(paint[`${type}-color`]) || '#333333'), 'text-halo-color': 'rgba(255,255,255,0.92)', 'text-halo-width': 1.8 } }, H.anchors.symbols);
-        st.mapIds.push(`${id}-label`);
-      }
+      st.mapIds = addLayerSet(st, src, '', null);
     }
-    for (const id of st.mapIds) { const t = map.getLayer(id).type; for (const p of OPACITY[t] || []) { const v = map.getPaintProperty(id, p); st.base[`${id}|${p}`] = v == null ? 1 : v; } }
-    st.added = true; applyOpacity(st);
+    finishAdd(st);
   } catch (err) { st.error = String(err && err.message || err); console.warn('Hunt Map layer', l.id, err); }
+}
+function addLayerSet(st, src, sfx, sourceLayer) {
+  const l = st.l, ids = [];
+  const type = ['fill', 'line', 'circle', 'symbol'].includes(l.type) ? l.type : 'line';
+  const id = `hm-l-${l.id}${sfx}`, minzoom = l.minzoom || 0, sl = sourceLayer ? { 'source-layer': sourceLayer } : {};
+  const paint = Object.assign({}, DEF_PAINT[type], l.paint || {});
+  const layout = Object.assign({}, type === 'line' ? { 'line-join': 'round', 'line-cap': 'round' } : {}, l.layout || {});
+  if (type === 'symbol' && !layout['text-field'] && !layout['icon-image']) Object.assign(layout, { 'text-field': ['to-string', ['get', l.labelField || 'name']], 'text-font': ['Noto Sans Bold'], 'text-size': 12 });
+  const before = type === 'fill' ? H.anchors.fills : type === 'line' ? H.anchors.lines : H.anchors.symbols;
+  if (l.filter) sl.filter = l.filter;
+  map.addLayer({ id, type, source: src, ...sl, minzoom, layout, paint }, before); ids.push(id);
+  if (type === 'fill') {
+    map.addLayer({ id: `${id}-line`, type: 'line', source: src, ...sl, minzoom, layout: { 'line-join': 'round' }, paint: { 'line-color': firstColor(paint['fill-outline-color']) || firstColor(paint['fill-color']) || '#e4472b', 'line-width': ['interpolate', ['linear'], ['zoom'], 6, 0.7, 12, 1.5, 16, 2.4], 'line-opacity': 0.9 } }, H.anchors.lines);
+    ids.push(`${id}-line`);
+  }
+  if (l.labelField && type !== 'symbol') {
+    map.addLayer({ id: `${id}-label`, type: 'symbol', source: src, ...sl, minzoom: Math.max(minzoom, 7), layout: {
+      'text-field': ['to-string', ['get', l.labelField]], 'text-font': ['Noto Sans Bold'], 'text-size': ['interpolate', ['linear'], ['zoom'], 7, 11, 14, 14],
+      'symbol-placement': type === 'line' ? 'line' : 'point', 'text-max-width': 8, 'text-padding': 10, 'symbol-spacing': 500,
+    }, paint: { 'text-color': darken(firstColor(paint[`${type}-color`]) || '#333333'), 'text-halo-color': 'rgba(255,255,255,0.92)', 'text-halo-width': 1.8 } }, H.anchors.symbols);
+    ids.push(`${id}-label`);
+  }
+  return ids;
+}
+function finishAdd(st) {
+  for (const id of st.mapIds) { const t = map.getLayer(id).type; for (const p of OPACITY[t] || []) { const v = map.getPaintProperty(id, p); st.base[`${id}|${p}`] = v == null ? 1 : v; } }
+  st.added = true; applyOpacity(st);
+}
+let pmReady = null;
+function loadPmtiles() {
+  if (pmReady) return pmReady;
+  pmReady = new Promise((res, rej) => {
+    if (window.pmtiles) { res(window.pmtiles); return; }
+    const sc = document.createElement('script'); sc.src = new URL('../vendor/pmtiles.js', import.meta.url).href;
+    sc.onload = () => (window.pmtiles ? res(window.pmtiles) : rej(new Error('pmtiles missing'))); sc.onerror = () => rej(new Error('pmtiles did not load'));
+    document.head.appendChild(sc);
+  }).then((pm) => { const proto = new pm.Protocol({ metadata: true }); H.maplibregl.addProtocol('pmtiles', proto.tile); return pm; });
+  pmReady.catch(() => { pmReady = null; });
+  return pmReady;
 }
 function applyOpacity(st) {
   const k = lp(st.l.id).opacity ?? 1;
@@ -139,7 +176,7 @@ function darken(c) {
 // ---------- loading near the view ----------
 function viewBox(pad = 0.5) { const b = map.getBounds(); return padBbox([b.getWest(), b.getSouth(), b.getEast(), b.getNorth()], pad); }
 function loadNear(st) {
-  if (!st.added || !lp(st.l.id).on) return;
+  if (!st.added || !lp(st.l.id).on || st.pm) return;
   if (map.getZoom() < (st.l.minzoom || 0) - 1) return;
   const v = viewBox();
   for (const f of st.files) if (!st.loaded.has(f.url) && !st.failed.has(f.url) && (!f.box || bboxIntersects(v, f.box))) loadFile(st, f);
@@ -171,7 +208,14 @@ function prep(st, ft) {
   if (m.length) { p._m = m; st.hasMonths = true; }
   if (st.spot) spots.prep(p);
 }
+// PMTiles cannot hold arrays: the pipeline writes monthsKey like ",11,12,1,2,3,4," for seasonal features.
+function pmMonthFilter(st) {
+  const m = prefs.month ? ['any', ['!', ['has', 'monthsKey']], ['in', `,${prefs.month},`, ['to-string', ['get', 'monthsKey']]]] : null;
+  const f = st.l.filter && m ? ['all', st.l.filter, m] : (st.l.filter || m);
+  for (const id of st.mapIds) if (map.getLayer(id)) map.setFilter(id, f);
+}
 function refresh(st) {
+  if (st.pm) { pmMonthFilter(st); return; }
   const src = map.getSource(`hm-src-${st.l.id}`); if (!src) return;
   let feats = [].concat(...st.loaded.values());
   if (prefs.month) feats = feats.filter((f) => !f.properties._m || f.properties._m.includes(prefs.month));
@@ -182,7 +226,7 @@ function refresh(st) {
 /** GeoJSON for a manifest layer. opts.all loads every area, opts.near ([lng, lat]) the areas holding that point, else areas near the view. */
 export async function getLayerData(id, opts = {}) {
   await loadManifest();
-  const st = L.get(id); if (!st || st.unsupported) return null;
+  const st = L.get(id); if (!st || st.unsupported || st.pm) return null;
   let files = st.files;
   if (opts.near) files = files.filter((f) => !f.box || (opts.near[0] >= f.box[0] && opts.near[0] <= f.box[2] && opts.near[1] >= f.box[1] && opts.near[1] <= f.box[3]));
   else if (!opts.all) { const v = viewBox(0.2); files = files.filter((f) => !f.box || bboxIntersects(v, f.box)); }
@@ -190,6 +234,7 @@ export async function getLayerData(id, opts = {}) {
   return { type: 'FeatureCollection', features: [].concat(...files.map((f) => st.loaded.get(f.url) || [])) };
 }
 export const layerList = () => [...L.values()].map((s) => s.l);
+export const stateOf = (id) => L.get(id);
 
 // ---------- month and species ----------
 export function setMonth(m) {
@@ -222,8 +267,11 @@ export function handleClick(e) {
   if (!ids.length) return false;
   const seen = new Set(), items = [];
   for (const h of map.queryRenderedFeatures(box, { layers: ids })) {
-    const k = h.properties._hid; if (k == null || seen.has(k)) continue;
-    seen.add(k); const r = raw.get(k); if (r) items.push(r);
+    let r = null, k = h.properties._hid;
+    if (k != null) r = raw.get(k);
+    else { const st = [...L.values()].find((x) => x.mapIds.includes(h.layer.id)); k = `${h.layer.id.replace(/-(line|label)$/, '')}|${JSON.stringify(h.properties)}`; if (st) r = { st, f: { properties: h.properties } }; }
+    if (!r || seen.has(k)) continue;
+    seen.add(k); items.push(r);
     if (items.length >= 6) break;
   }
   if (!items.length) return false;
@@ -278,6 +326,7 @@ function swatch(st) {
 function statusText(st) {
   const l = st.l, on = lp(l.id).on;
   if (st.unsupported) return 'Needs a newer Hunt Map to show';
+  if (st.pm && on && !st.added) return 'Loading';
   if (st.error) return 'Could not draw this layer';
   if (!on) return '';
   if (st.loading.size) return 'Loading';
@@ -401,17 +450,17 @@ function muCode(p, l) {
   for (const k of [...MU_KEYS, l.labelField]) { if (!k || p[k] == null) continue; const m = String(p[k]).match(/(\d{1,2})\s*-\s*0*(\d{1,2})/); if (m) return `${+m[1]}-${+m[2]}`; }
   return null;
 }
-const muRegion = (p) => p.REGION_RESPONSIBLE_NAME || p.REGION_NAME || p.region || p.REGION || '';
+const muRegion = (p) => p.REGION_RESPONSIBLE_NAME || p.REGION_NAME || (p.regionName ? `Region ${p.region ? `${p.region} ` : ''}${p.regionName}` : (p.region ? `Region ${p.region}` : ''));
 export async function muAt(pt) {
   await loadManifest();
-  const st = muLayer(); if (!st || st.unsupported) return { state: 'missing' };
+  const st = muLayer(); if (!st || st.unsupported || st.pm) return { state: 'missing' };
   const fc = await getLayerData(st.l.id, { near: pt });
   for (const f of (fc && fc.features) || []) if (pointInGeom(pt, f.geometry)) return { state: 'ok', id: muCode(f.properties, st.l) || '', region: muRegion(f.properties), source: `${st.l.source || 'BC Data Catalogue'}, data date ${st.l.dataDate || (M && M.updated) || 'not listed'}.` };
   return { state: 'outside' };
 }
 export async function findMU(code) {
   await loadManifest();
-  const st = muLayer(); if (!st || st.unsupported) return { state: 'missing' };
+  const st = muLayer(); if (!st || st.unsupported || st.pm) return { state: 'missing' };
   const fc = await getLayerData(st.l.id, { all: true });
   const hits = ((fc && fc.features) || []).filter((f) => muCode(f.properties, st.l) === code);
   if (!hits.length) return { state: 'none' };
@@ -427,7 +476,7 @@ export async function searchLocal(q) {
   const ql = q.toLowerCase(), out = [];
   for (const st of L.values()) {
     const kind = st.spot ? 'spot' : isRec(st) ? 'rec' : null;
-    if (!kind || st.unsupported) continue;
+    if (!kind || st.unsupported || st.pm) continue;
     const fc = await getLayerData(st.l.id, { all: true }).catch(() => null);
     for (const f of (fc && fc.features) || []) {
       const p = f.properties, name = kind === 'spot' ? p._name : (p[st.l.labelField] || p.PROJECT_NAME || p.name);

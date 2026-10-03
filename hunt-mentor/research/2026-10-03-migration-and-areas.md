@@ -185,14 +185,14 @@ Legend for access: Crown = public Crown land; Park = BC Parks area that allows h
 | Bonaparte Plateau | provincial moose research study area since 2012 | mixed Crown and range land (VERIFY by parcel) | Government (research, not a hunting tip) | 85% |
 | Tunkwa Provincial Park (Tunkwa Lake, MU 3-18) | moose, mule deer, white tailed deer, Canada goose, mallard, snipe (BC Parks); "Good mule deer and blue grouse hunting" for the Savona to Tunkwa country (blog) | Park, hunting permitted; vehicles and ATVs only on designated trails | Government plus blog | 90% park, 55% blog |
 | Dunn Peak Provincial Park (east of the North Thompson) | mule deer, mountain goat, black bear (BC Parks) | Park, hunting permitted | Government | 90% |
-| Wells Gray Park (MU 3-45) | (big moose country by reputation) | Closed: "Hunting and the discharge of firearms are prohibited in MU 3-45" (page 33) | Government | 99% |
-| Jamieson Creek (MU 3-28 at the mouth) | Kamloops deer winter range study area (Willms 1976); mule deer (forum) | Crown and private mix (VERIFY); the BC Parks Bonaparte page routes access up Jamieson Creek | Peer reviewed plus forum | 80% study, 50% forum |
+| Wells Gray Park (MU 3-45) | (closed) | Closed: "Hunting and the discharge of firearms are prohibited in MU 3-45" (page 33) | Government | 99% |
+| Jamieson Creek (MU 3-28 at the mouth) | Kamloops deer winter range study area (Willms 1976); mule deer (forum) | land status VERIFY; the BC Parks Bonaparte page routes access up Jamieson Creek | Peer reviewed plus forum | 80% study, 50% forum |
 | Rec sites listing Hunting as an activity, near Heffley Creek: Community Lake Southwest and Sullivan Lake (Knouff) (site location "Heffley", MU 3-27); McGillivray Lake West and Morrisey Lake West ("Sun Peaks"); Pass Lake (Kamloops, MU 3-29); Fishtrap Creek, Dunsapie Lake, Windy Lake, Gorman Lake, Scott Lake, Allan Lake, Windfall Lake, Mayson Lake ("Barriere"; Gorman and Dunsapie MU 3-28, Mayson MU 3-30); Dairy Lake West and Duffy Lake (Kamloops, southwest) | hunting listed among the top 3 activities | Rec site; no shooting within 100 m of camp structures (Forest Recreation Regulation section 11) | Government data layer | 90% listing |
-| Barriere Lakes (North Barrière Lake MU 3-38) and the Chu Chua road ridges | "Moose, Mule Deer and Black bear"; ridges "after the snow starts falling" | Crown mostly (VERIFY); "respect any and all private lands" | Blog (ihuntbc, 2011) | 55% |
-| Deadman River, Red Lake, Criss Creek (MU 3-29) | "mule deer hunting, some moose" | Crown and ranch land mix (VERIFY) | Blog 2011 | 55% |
-| Westsyde to Little Fort, west side of the North Thompson | "Fair moose and deer" | Crown logging roads (VERIFY) | Blog 2011 | 55% |
-| Little Fort to Clearwater | "heavily hunted but success ratios are good" | Crown logging roads (VERIFY) | Blog 2011 | 55% |
-| Paul Lake, Pinantan, Heffley (MU 3-27) | mule deer areas | Crown and private mix (VERIFY) | Forum, search preview | 50% |
+| Barriere Lakes (North Barrière Lake MU 3-38) and the Chu Chua road ridges | "Moose, Mule Deer and Black bear"; ridges "after the snow starts falling" | land status VERIFY; the blog says "respect any and all private lands" | Blog (ihuntbc, 2011) | 55% |
+| Deadman River, Red Lake, Criss Creek (MU 3-29) | "mule deer hunting, some moose" | land status VERIFY | Blog 2011 | 55% |
+| Westsyde to Little Fort, west side of the North Thompson | "Fair moose and deer" | land status VERIFY | Blog 2011 | 55% |
+| Little Fort to Clearwater | "heavily hunted but success ratios are good" | land status VERIFY | Blog 2011 | 55% |
+| Paul Lake, Pinantan, Heffley (MU 3-27) | mule deer areas | land status VERIFY | Forum, search preview | 50% |
 | Savona, Tunkwa Lake, Barriere, Bonaparte Lake | "good producers" of mule deer | mixed | Forum, search preview | 50% |
 - Note: the blog labels Tunkwa as MU 3-19; the official layer puts Tunkwa Lake in MU 3-18. Trust the layer (90%).
 - Region 3 hunter counts by MU live in the app already (phase6/03, 70% self reported).
@@ -208,19 +208,19 @@ Legend for access: Crown = public Crown land; Park = BC Parks area that allows h
 | Nicomen Slough (MU 2-8) | "continental significance to waterfowl", over 100 wintering trumpeter swans (Nature Trust of BC, search preview; site blocks bots) | land status VERIFY; no source found that names it for hunting | Conservation group, search preview | 55% |
 | Pinecone Burke Provincial Park (Widgeon Slough, MU 2-8) | black tailed deer, mountain goats, black bears; "Widgeon Slough provides unique waterfowl habitat" (BC Parks) | Park, hunting permitted in open season | Government | 90% |
 | Skagit Valley Provincial Park (south of Hope) | "Mule/Blacktail Deer and Black Bears are commonly seen along the road and around the campgrounds" (BC Parks) | Park, hunting permitted in open season | Government | 90% |
-| Chilliwack River valley | black tailed deer, some blue grouse up high; no shooting near the Chilliwack River road (forum) | Crown and private mix; road corridor restrictions (VERIFY in synopsis) | Forum, search preview | 50% |
-| Harrison Lake west side (Harrison West FSR) | "Harrison west produces deer"; walk cut blocks off the main road (forum) | Crown forest roads (VERIFY) | Forum, search preview | 50% |
-| Stave Lake (MU 2-8) | occasional blue grouse while hiking (forum); Roosevelt elk released in the Stave watershed (news) | Crown and BC Hydro land mix (VERIFY); Mission bylaw areas apply | Forum and news | 50% |
+| Chilliwack River valley | black tailed deer, some blue grouse up high; no shooting near the Chilliwack River road (forum) | land status and road corridor shooting limits VERIFY | Forum, search preview | 50% |
+| Harrison Lake west side (Harrison West Forest Service Road) | "Harrison west produces deer"; walk cut blocks off the main road (forum) | land status VERIFY | Forum, search preview | 50% |
+| Stave Lake (MU 2-8) | occasional blue grouse while hiking (forum); Roosevelt elk released in the Stave watershed (news) | land status VERIFY; Mission bylaw areas apply | Forum and news | 50% |
 | Herrling Island near Hope (MU 2-3) | resident white tailed deer, but "no open season for white-tailed deer in this area" (page 27) | Closed for white tails | Government | 99% |
 | Scuzzy Creek rec site (Boston Bar) | hunting listed | Rec site, "Closed until further notice due to damage" | Government data layer | 90% |
 - Magazine note: "Much of the local waterfowl hunting takes place on private land" (BC Outdoors 2013, 65%).
-- Rec site layer: only 1 of 39 sites in area B lists hunting in its top 3 activities (90%).
+- Rec site layer: only 1 of 39 sites in area B lists hunting in its first 3 activities (90%). The layer stores only 3 activities plus a "more" flag, so other sites may allow hunting without listing it.
 
 ### Area C: South Okanagan and Similkameen
 | Place | Known for | Access | Source type | Cert |
 |---|---|---|---|---|
-| South Okanagan Grasslands Protected Area (Kilpoola MU 8-2, Mount Kobau MU 8-1, Chopaka) | "bighorn sheep range and class 1 mule deer winter range" (BC Parks) | Park, hunting permitted; vehicles closed except named roads (app, phase6/13) | Government | 95% |
-| White Lake Grasslands Protected Area (MU 8-1) | "mule deer winter range and Class 1 California Bighorn Sheep winter range and lambing areas" (BC Parks) | Park, hunting permitted; access through private land in places | Government | 95% |
+| South Okanagan Grasslands Protected Area (Kilpoola MU 8-2, Mount Kobau MU 8-1, Chopaka) | "bighorn sheep range and class 1 mule deer winter range" (BC Parks) | Park, hunting permitted; Kilpoola closed to vehicles except Kruger Mountain Road, Mount Kobau summit road open, Chopaka sites closed to vehicles (BC Parks) | Government | 95% |
+| White Lake Grasslands Protected Area (MU 8-1) | "mule deer winter range and Class 1 California Bighorn Sheep winter range and lambing areas" (BC Parks) | Park, hunting permitted; "Hunting is not allowed in Seacrest Toboggan Hill and the Boyscout Camp area"; no motorized access; "Access to much of the protected area is through private land" (BC Parks) | Government | 95% |
 | Vaseux Protected Area (east of Vaseux Lake) | California bighorn winter range (BC Parks) | Park, hunting permitted in open season; next to the closed sanctuary | Government | 90% |
 | Vaseux Lake (MU 8-1) | wintering waterfowl, trumpeter and tundra swans (IBA); coots in fall (OBWB) | Closed: "Hunting is prohibited within the Vaseux Migratory Bird Sanctuary and National Wildlife Areas" (page 67) | Government | 99% |
 | Osoyoos Oxbows (Okanagan River oxbows, Oliver to Osoyoos Lake, MU 8-1) | waterfowl habitat (OBWB); California quail filmed on the Oxbows trail (Castanet news, search preview) | Map J1: no shooting or hunting 1 March to 30 September; vehicles only on established roads (page 69) | Government plus news | 90% rule, 55% quail |
@@ -280,5 +280,5 @@ Legend for access: Crown = public Crown land; Park = BC Parks area that allows h
 - content/phase4/11-mountain-sheep.md:99 lambs "early May to mid June": BC account says last week of April to early June. Minor.
 
 ## 8. Weak spots and VERIFY list
-- Weakest: ducks month by month in the Thompson and Okanagan (no local counts), black tailed deer timing in the Fraser Valley (Vancouver Island data), elk near our bases (few animals, 2000 data), sooty grouse direction, spruce grouse moves (search preview), mule deer elevations (BEC ranges, not collar data).
+- Weakest: ducks month by month in the Thompson and Okanagan (no local counts), black tailed deer timing in the Fraser Valley (Vancouver Island data), elk near our bases (few animals, 2000 data), sooty grouse direction (sources disagree), spruce grouse moves (one Alberta study via a recovery plan), mule deer elevations (BEC ranges, not collar data), black bear den dates (nearest study is in Washington).
 - VERIFY: hunting status in Bert Brink, Harrison Chehalis, South Okanagan and McTaggart Cowan WMAs; current Fraser Valley Special Area brochure (the read copy is 2023/2024); Chilliwack River road corridor restriction wording; SOSCP Crown share figure; spring departure month for coastal black tails.

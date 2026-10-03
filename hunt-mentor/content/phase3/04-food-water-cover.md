@@ -34,7 +34,7 @@ checked: 2026-10-01
 ## Region 3: December and the snow
 
 - Snow and cold, not the rut, push deer down to [[Winter range]]: south and west facing slopes with old Douglas fir, often below about 760 m north of Kamloops (85%).
-- Deer avoid snow deeper than about 50 cm (80%). Moose move freely to about 40 cm and are restricted by 40 to 70 cm (70%). Elk sit between (65%).
+- Deer have trouble in snow deeper than about 30 cm and leave slopes where it passes about 50 cm (75%). Moose move freely to about 40 cm and are restricted by 40 to 70 cm (70%). Elk sit between (65%).
 - Winter diet: Douglas fir, shrubs, and whatever bunchgrass is blown clear on windy ridges (80%).
 - Winter range shows browse lines and hedged shrubs, trails between beds and feed, and pellets everywhere (65%).
 - Many Region 3 mule deer general seasons end 10 December (65%, VERIFY your [[MU]] (Management Unit) in the [[Synopsis]]). Late season means hunting winter range in snow (Tip).

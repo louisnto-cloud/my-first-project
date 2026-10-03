@@ -32,7 +32,7 @@ checked: 2026-10-01
 ```
 
 - **Behaviour is the best clue:** lone adults and groups of 2 or 3 with no kids or yearlings are usually billies (85%).
-- A group with kids (under 1 year) or yearlings is almost certainly nannies, except in the mating season, about mid October to late November (85%).
+- A group with kids (under 1 year) or yearlings is almost certainly nannies, except in the mating season, about early November to early December (85%, BC mountain goat management plan 2010).
 - A **kid** in law is a goat with horns under 10 cm (98%).
 - Billies shed their winter coat by early July, nannies later; in fall both are white and shaggy (85%).
 - Pee posture: billies stretch forward, nannies squat (hunter lore) (60%).
@@ -66,7 +66,7 @@ checked: 2026-10-01
 - Summer and early fall: at and above timberline, lush alpine swales and boulder meadows next to steep cliffs (85%).
 - Winter ranges: steep sites that shed snow, with a warm south to west exposure (85%).
 - Food: grasses, sedges and low plants in summer; woody browse in winter (85%).
-- Rut: about mid October to late November. Kids born late May or early June, about 3 kg (85%).
+- Rut: early November to early December, peak about 15 to 20 November (85%, BC mountain goat management plan 2010). Kids born late May or early June, about 3 kg (85%).
 - Nursery bands average 4 or 5, up to 15 to 20 after kidding; billies alone or in groups of 2 to 4 (85%).
 - Daily: feeds morning and evening, beds on ledges with a view in the heat of the day (Tip).
 

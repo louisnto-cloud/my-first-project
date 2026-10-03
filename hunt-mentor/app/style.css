@@ -162,3 +162,8 @@ label.f { display: block; font-weight: 700; margin: 12px 0 4px; font-size: 15px;
 .gallery figure.photo img { aspect-ratio: 4 / 3; object-fit: cover; }
 .gallery figcaption { font-size: 13px; line-height: 1.3; }
 .gallery .credit { font-size: 11px; }
+
+/* Hunt Map open: the map draws its own full screen chrome (map/map.css) */
+body.map-open { overflow: hidden; padding-bottom: 0; }
+body.map-open > .top, body.map-open > .banner, body.map-open > main, body.map-open > .tabs { display: none; }
+.tabs a span svg { vertical-align: middle; }

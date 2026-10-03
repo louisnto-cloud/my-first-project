@@ -104,12 +104,12 @@ checked: 2026-10-02
 ## Migration: the big October question
 
 - About 74% of tracked mule deer in a southern Interior study migrated (85%).
-- Average trip about 47 to 55 km one way, up to about 100 km (85%).
+- Collared deer in the Southern Interior Mule Deer Project moved an average of about 47 to 55 km between summer and winter range, the longest about 100 km (85%, BC Wildlife Federation project pages).
 - They use the **same route every year** (85%).
 - What starts the move down: **snow and cold**, not the rut (85%).
 - Timing: back on winter range October to November; in one year nearly all were back by mid October (85%).
 - Another BC account: interior deer often stay high until December (80%).
-- Deer avoid snow deeper than about 50 cm (80%).
+- Deer have trouble in snow deeper than about 30 cm and leave slopes where it passes about 50 cm (75%).
 
 > [!lean]
 > Early snow up high in October? Hunt the mid slopes below the snow line. No snow yet? Glass the high benches and openings near Heffley Lake and Paul Lake first.

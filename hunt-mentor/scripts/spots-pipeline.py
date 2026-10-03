@@ -167,6 +167,11 @@ SPECIES_WINTER_MONTHS = {'mule_deer': [11, 12, 1, 2, 3, 4], 'wt_deer': [11, 12, 
                          'caribou': [11, 12, 1, 2, 3, 4], 'bt_deer': [11, 12, 1, 2, 3, 4], 'thinhorn': [11, 12, 1, 2, 3, 4]}
 
 
+MIG_KEY = {'mule_deer': 'muledeer', 'wt_deer': 'whitetail', 'moose': 'moose', 'elk': 'elk', 'sheep': 'bighorn', 'goat': 'goat',
+           'bt_deer': 'blacktail'}
+PM_FORCE = {'cutblocks', 'forest_roads'}   # always PMTiles (too big as GeoJSON in area A)
+
+
 def months_key(months):
     return ',' + ','.join(str(m) for m in months) + ','
 
@@ -365,6 +370,7 @@ import pickle  # noqa: E402
 
 import numpy as np  # noqa: E402
 import shapely  # noqa: E402
+import shapely.ops  # noqa: E402
 from shapely import STRtree  # noqa: E402
 from pyproj import Geod, Transformer  # noqa: E402
 
@@ -563,7 +569,7 @@ def to_merc(g_wgs):
     return shapely.transform(g_wgs, _tf(MERC))
 
 
-def write_pmtiles(path, geoms_wgs, props, layer_name, minzoom=8, maxzoom=14):
+def write_pmtiles(path, geoms_wgs, props, layer_name, minzoom=8, maxzoom=12):
     import mapbox_vector_tile
     from pmtiles.tile import Compression, TileType, zxy_to_tileid
     from pmtiles.writer import Writer
@@ -631,6 +637,7 @@ def write_pmtiles(path, geoms_wgs, props, layer_name, minzoom=8, maxzoom=14):
 # Layer cleaning
 # ======================================================================================
 MAX_GEOJSON = 6 * 1024 * 1024
+PM_MAXZOOM = 12   # PMTiles max zoom (MapLibre overzooms beyond)
 OUT_LAYERS = ROOT / 'data' / 'layers'
 OUT_SPOTS = ROOT / 'data' / 'spots'
 LAYER_LOG = {}   # id -> info for manifest (file, size, count, dataDate, ...)
@@ -855,12 +862,13 @@ def emit(info, lid, scope, base_path, geoms_albers, props, tol, data_date, newes
     pm = Path(str(base_path) + '.pmtiles')
     size, n = (0, 0)
     fmt = 'geojson'
+    force_pm = force_pm or lid in PM_FORCE
     if not force_pm:
         size, n = write_geojson(gj, gw, props)
     if force_pm or size > MAX_GEOJSON:
         if gj.exists():
             gj.unlink()
-        size, ntiles = write_pmtiles(pm, gw, props, lid, minzoom=minzoom_pm, maxzoom=14)
+        size, ntiles = write_pmtiles(pm, gw, props, lid, minzoom=minzoom_pm, maxzoom=PM_MAXZOOM)
         n = len(props)
         fmt = 'pmtiles'
         path = pm
@@ -910,8 +918,8 @@ def step_layers(cache, areas):
             return fetch_meta(cache, k, a).get('date', TODAY)
         # private land
         g, _, m = ca['private']
-        emit(info, 'private_land', a, adir / 'private_land', g, [{} for _ in g], 10, adate('private'), m.get('newestRecord'),
-             minzoom_pm=9)
+        emit(info, 'private_land', a, adir / 'private_land', g, [{'owner': 'Private'} for _ in g], 10, adate('private'),
+             m.get('newestRecord'), minzoom_pm=9)
         info['private_land'][a]['parcels'] = m.get('parcels')
         # winter ranges by species
         g, p, m = ca['uwr']
@@ -925,7 +933,7 @@ def step_layers(cache, areas):
                     if f.exists():
                         f.unlink()
                 continue
-            months = SPECIES_WINTER_MONTHS.get(sp, [11, 12, 1, 2, 3, 4])
+            months = winter_months(MIG_KEY.get(sp), SPECIES_WINTER_MONTHS.get(sp, [11, 12, 1, 2, 3, 4]))
             pp = [dict(p[i], months=months, monthsKey=months_key(months)) for i in idx]
             emit(info, lid, a, adir / lid, g[idx], pp, 15, adate('uwr'), newest(pp, 'approved'))
         # young cutblocks (25 years or less)
@@ -943,11 +951,11 @@ def step_layers(cache, areas):
         emit(info, 'burns', a, adir / 'burns', g[idx], [p[i] for i in idx], 15, adate('burns'))
         # wetlands
         g, p, m = ca['wetlands']
-        emit(info, 'wetlands', a, adir / 'wetlands', g, [{'name': x['name'], 'ha': x['ha']} for x in p], 10, adate('wetlands'))
+        emit(info, 'wetlands', a, adir / 'wetlands', g, [{'name': x['name'], 'ha': x['ha']} for x in p], 15, adate('wetlands'))
         # habitat zones (BEC)
         g, p, m = ca['bec']
         emit(info, 'habitat_zones', a, adir / 'habitat_zones', g,
-             [{'zone': x['zone'], 'label': x['label'], 'zoneName': BEC_NAMES.get(x['zone'], x['zoneName'])} for x in p], 20, adate('bec'))
+             [{'zone': x['zone'], 'label': x['label'], 'zoneName': BEC_NAMES.get(x['zone'], x['zoneName'])} for x in p], 40, adate('bec'))
         # forest roads (FTEN), merged per road section
         g, p, m = ca['ften']
         groups = {}
@@ -2127,6 +2135,7 @@ class Refiner:
         self.alabels = alabels
         self.anchor_tree = STRtree(self.anchors) if anchors else None
         self.rec_g, self.rec_p = rg, rp
+        self.rec_tree = STRtree(rg) if len(rg) else None
 
     # ------------------------------------------------------------ small helpers
     def nearest(self, tree, geoms_idx, pt, maxd):
@@ -2771,6 +2780,639 @@ def make_plan(rf, s):
                 else:
                     lines[j][1] = ''
     return [(a + b).strip() for a, b in lines]
+
+
+# ---------------------------------------------------------------- one spot, start to finish
+def _snap_to_edge(rf, s, geom, maxd=300):
+    pt = shapely.points(s['x'], s['y'])
+    if geom is None or shapely.distance(geom, pt) > maxd:
+        return
+    b = shapely.boundary(geom) if shapely.get_type_id(geom) in (3, 6) else geom
+    p = shapely.ops.nearest_points(b, pt)[0]
+    if rf.point_ok(p.x, p.y):
+        s['x'], s['y'] = p.x, p.y
+
+
+def backcountry_camp(rf, s):
+    """Flat Crown ground near water within 1.5 km of a backcountry spot (estimate)."""
+    ctx = rf.ctx
+    G, R, D = ctx.grid, ctx.R, ctx.D
+    r0, c0 = G.rc(s['x'], s['y'])
+    k = 15
+    rs = slice(max(0, r0 - k), min(G.ny, r0 + k + 1))
+    cs = slice(max(0, c0 - k), min(G.nx, c0 + k + 1))
+    ok = ctx.eligible[rs, cs] & (R['slope'][rs, cs] < 8) & (D['water'][rs, cs] <= 300) & (D['water'][rs, cs] >= 30) & ~R['wetland'][rs, cs]
+    if not ok.any():
+        return None, 'Camp: no flat ground near water in the data within 1.5 km. Plan a dry camp and carry water (Tip).'
+    rr, cc = np.nonzero(ok)
+    rr = rr + rs.start
+    cc = cc + cs.start
+    d2 = (G.cx[cc] - s['x']) ** 2 + (G.cy[rr] - s['y']) ** 2
+    i = int(np.argmin(d2))
+    x, y = float(G.cx[cc[i]]), float(G.cy[rr[i]])
+    wn = _water_near(rf, x, y, 400)
+    el = float(ctx.dem.sample_xy('elev', x, y)[0])
+    az, dd = bearing_dist(s['x'], s['y'], x, y)
+    water = (f"{wn['name'] or 'unnamed ' + wn['kind']} {wn['where']}") if wn else 'VERIFY water'
+    lon, lat = ll(x, y)
+    line = (f"Camp: flat ground {fmt_dist(dd)} {compass8(az)} of the spot at {fmt_int(el)} m ({lat}, {lon}). "
+            f"Water: {water} (estimate).")
+    return {'x': x, 'y': y, 'elev': el, 'water': water}, line
+
+
+def finalize(rf, s, stats):
+    ctx = rf.ctx
+    sp = s['sp']
+    st = stats.setdefault(sp, {})
+    if sp == 'deer':
+        c = _cut_near(rf, s['x'], s['y'], 300)
+        b = _burn_near(rf, s['x'], s['y'], 300)
+        g = c['geom'] if c and (not b or c['d'] <= b['d']) else (b['geom'] if b else None)
+        _snap_to_edge(rf, s, g)
+    elif sp == 'moose' and rf.wet_tree is not None:
+        j, d = rf.wet_tree.query_nearest(shapely.points(s['x'], s['y']), max_distance=300, return_distance=True)
+        if len(j):
+            _snap_to_edge(rf, s, ctx.ca['wetlands'][0][int(j[0])])
+    if not rf.access(s):
+        st['droppedNoAccess'] = st.get('droppedNoAccess', 0) + 1
+        return None
+    items, score = evidence(rf, s)
+    official = sp == 'camp' and s.get('kind') == 'rec site'
+    if not official and score < MIN_SCORE[sp]:
+        st['droppedExact'] = st.get('droppedExact', 0) + 1
+        return None
+    s['evidence'] = items
+    s['score'] = score
+    x, y = s['x'], s['y']
+    s['elev'] = float(ctx.dem.sample_xy('elev', x, y)[0])
+    sl = float(ctx.dem.sample_xy('slope', x, y)[0])
+    asp = float(ctx.dem.sample_xy('aspect', x, y, order=0)[0])
+    s['slope'], s['aspectWord'] = sl, aspect_word(asp, sl)
+    climb, mx = 0.0, s['elev']
+    for key in ('walkLine', 'ride', 'approach'):
+        g = s.get(key)
+        if g is not None and not g.is_empty and g.length > 30:
+            up, emax, _ = ctx.dem.profile(g if g.geom_type == 'LineString' else shapely.line_merge(g))
+            if key != 'ride':
+                climb += up
+            if emax is not None:
+                mx = max(mx, emax)
+    s['climb'], s['routeMaxElev'] = climb, mx
+    az, _ = bearing_dist(s['park'][0], s['park'][1], x, y)
+    s['walkDir'] = compass8(az)
+    # secondary species tags (vector checks)
+    tags = [sp] if sp != 'camp' else []
+    if sp in ('deer', 'moose', 'grouse'):
+        c = _cut_near(rf, x, y, 500)
+        b = _burn_near(rf, x, y, 500)
+        if c or b:
+            tags.append('bear')
+            items.append({'t': 'Black bear: young cutblocks and burns grow berries in late summer and fall (Tip).', 'pts': 0, 'tag': 'bear'})
+    if sp in ('deer', 'moose'):
+        u = _uwr_near(rf, x, y, {'elk'}, 1000)
+        if u:
+            tags.append('elk')
+            items.append({'t': f"Elk winter range {u['uwr']} (official), {u['where']}.", 'pts': 0, 'tag': 'elk'})
+        u = _uwr_near(rf, x, y, {'sheep'}, 1000)
+        if u:
+            tags.append('sheep')
+            items.append({'t': f"Bighorn sheep winter range {u['uwr']} (official), {u['where']}.", 'pts': 0, 'tag': 'sheep'})
+    if sp == 'deer':
+        u = _uwr_near(rf, x, y, {'moose'}, 500)
+        if u:
+            tags.append('moose')
+            items.append({'t': f"Moose winter range {u['uwr']} (official), {u['where']}.", 'pts': 0, 'tag': 'moose'})
+    if sp == 'moose':
+        u = _uwr_near(rf, x, y, {'mule_deer', 'wt_deer'}, 500)
+        if u:
+            tags.append('deer')
+            items.append({'t': f"{u['species']} winter range {u['uwr']} (official), {u['where']}.", 'pts': 0, 'tag': 'deer'})
+    if s.get('singleProj') or (ctx.single_proj_zones is not None and shapely.intersects(ctx.single_proj_zones, shapely.points(x, y))):
+        tags = [t for t in tags if t in ('duck', 'grouse', 'quail')]
+        if not tags and sp != 'camp':
+            st['droppedSingleProjectile'] = st.get('droppedSingleProjectile', 0) + 1
+            return None
+    s['species'] = tags
+    s['flags'] = legal_flags(rf, s)
+    # seasons
+    keys, notes, months = [], {}, []
+    for t in tags:
+        k, mo, note = season_rows(t, s.get('region'), s.get('mu'))
+        keys += [kk for kk in k if kk not in keys]
+        if t == sp:
+            months = mo
+            if note:
+                s['seasonNote'] = note
+        if note:
+            notes[t] = note
+    s['seasons'], s['seasonNotes'], s['months'] = keys, notes, months
+    s['pressure'], s['pressureWhy'] = pressure(rf, s)
+    # names, parking description, drive route
+    if sp == 'duck':
+        wp_ = s['waterProps']
+        prefer = wp_['name'] if wp_['name'] else None
+        if not prefer:
+            s['name'] = ('Unnamed lake, ' if wp_['kind'] == 'lake' else 'Unnamed wetland, ') + rf.name_for(x, y)
+        else:
+            s['name'] = prefer
+    elif official:
+        s['name'] = title_case_name(s['official']['name']) + ' rec site'
+    else:
+        s['name'] = rf.name_for(x, y)
+    net = ctx.net
+    pe = s.get('parkEdge')
+    j, d = rf.pk_tree.query_nearest(shapely.points(*s['park']), return_distance=True)
+    pe = rf.pk_idx[int(j[0])]
+    pp = net.props[pe]
+    rl = road_label(pp)
+    surf = SURF_WORD.get(pp.get('surf'), 'road')
+    if official:
+        s['parkWhat'] = 'the rec site'
+    elif s['cat'] == 'atv':
+        s['parkWhat'] = f"where the truck road ends ({rl or 'unnamed ' + surf}); unload the ATV (all terrain vehicle)"
+    else:
+        s['parkWhat'] = f"pull off on {rl} ({surf})" if rl else f"pull off on an unnamed {surf}"
+    s['rideRough'] = bool(s.get('ride') is not None)
+    dd, pr, _ = rf.drive
+    u, v = net.u[pe], net.v[pe]
+    n0 = u if dd[u] <= dd[v] else v
+    s['driveVia'] = net.names_along(net.path_edges(net.path_nodes(pr, n0)), min_len=1000) if np.isfinite(dd[n0]) else []
+    # official rec site directions near the parking
+    if official and s['official'].get('directions'):
+        s['recName'], s['recDirections'] = s['name'], s['official']['directions']
+    elif rf.rec_tree is not None:
+        jj, d2 = rf.rec_tree.query_nearest(shapely.points(*s['park']), max_distance=1500, return_distance=True)
+        if len(jj) and rf.rec_p[int(jj[0])].get('directions'):
+            s['recName'] = title_case_name(rf.rec_p[int(jj[0])]['name']) + ' rec site'
+            s['recDirections'] = rf.rec_p[int(jj[0])]['directions']
+    # watch feature for the deer plan
+    if sp == 'deer':
+        for it in items:
+            if it['t'].startswith('Cutblock'):
+                m = re.match(r'Cutblock harvested (\d+) .*?, (.+)\.$', it['t'])
+                s['watch'] = f"the edge of the {m.group(1)} cutblock ({m.group(2)})" if m else None
+                break
+            if it['t'].startswith('Burn'):
+                m = re.match(r'Burn from (\d+) .*?\), (.+)\.$', it['t'])
+                s['watch'] = f"the edge of the {m.group(1)} burn ({m.group(2)})" if m else None
+                break
+    if s['cat'] == 'backcountry':
+        camp, line = backcountry_camp(rf, s)
+        s['bcCamp'] = camp
+        s['campLine'] = line
+    elif official:
+        o = s['official']
+        s['campLine'] = f"Camp: {o['campsites']} campsites (official). " + (f"Closure note: {first_sentence(o['closure'], 14)}" if o.get('closure') else '')
+    elif sp == 'camp':
+        s['campLine'] = 'Camp: Crown land candidate, flat and near water (estimate). Check fire bans and posted signs.'
+    plon, plat = ll(*s['park'])
+    s['parkLL'] = (plon, plat)
+    return s
+
+
+def enforce_spacing(spots):
+    """No two spots of the same species and category closer than SPACING_M. Higher score wins; extra tags are removed."""
+    order = sorted(range(len(spots)), key=lambda i: (-(spots[i]['score'] / max(1, SCORE_MAX[spots[i]['sp']])), -spots[i].get('tb', 0)))
+    buckets = {}
+    keep = []
+    removed = 0
+    for i in order:
+        s = spots[i]
+        cat = s['cat']
+        tags = s['species'] if s['species'] else ['camp']
+        ok_tags = []
+        for t in tags:
+            b = buckets.setdefault((t, cat), {})
+            bx, by = int(s['x'] // SPACING_M), int(s['y'] // SPACING_M)
+            clash = False
+            for dx in (-1, 0, 1):
+                for dy in (-1, 0, 1):
+                    for (x2, y2) in b.get((bx + dx, by + dy), ()):
+                        if (x2 - s['x']) ** 2 + (y2 - s['y']) ** 2 < SPACING_M ** 2:
+                            clash = True
+            if not clash:
+                ok_tags.append(t)
+        primary = s['sp'] if s['sp'] != 'camp' else 'camp'
+        if primary not in ok_tags:
+            removed += 1
+            continue
+        for t in ok_tags:
+            buckets[(t, cat)].setdefault((int(s['x'] // SPACING_M), int(s['y'] // SPACING_M)), []).append((s['x'], s['y']))
+        if s['sp'] != 'camp':
+            dropped = [t for t in s['species'] if t not in ok_tags]
+            s['species'] = [t for t in s['species'] if t in ok_tags]
+            if dropped:
+                s['evidence'] = [e for e in s['evidence'] if e.get('tag') not in dropped]
+        keep.append(s)
+    return keep, removed
+
+
+def post_spot(rf, s):
+    """Season rows (for the final tags) and plan text."""
+    keys, notes, months = [], {}, []
+    s.pop('seasonNote', None)
+    for t in s['species']:
+        k, mo, note = season_rows(t, s.get('region'), s.get('mu'))
+        keys += [kk for kk in k if kk not in keys]
+        if t == s['sp']:
+            months = mo
+            if note:
+                s['seasonNote'] = note
+        if note:
+            notes[t] = note
+    s['seasons'], s['seasonNotes'], s['months'] = keys, notes, months
+    s['plan'] = make_plan(rf, s)
+
+
+def area_dates(cache, a, ca):
+    def fd(layer, scope):
+        return fetch_meta(cache, layer, scope).get('date', TODAY)
+    dem_meta = Path(cache) / 'work' / a / 'dem.json'
+    return {'roads': fd('dra_roads', a), 'private': ca['private'][2].get('newestRecord') or fd('private', a),
+            'privateFetched': fd('private', a), 'closures': fd('mvpr_areas', 'BC'), 'mu': fd('mu', 'BC'), 'parks': fd('parks', 'BC'),
+            'reserves': fd('reserves', 'BC'), 'cities': fd('municipalities', 'BC'), 'wma': fd('wma', 'BC'),
+            'cutblocks': fd('openings', a), 'burns': fd('burns', a), 'winterRange': fd('uwr', a),
+            'dem': time.strftime('%Y-%m-%d', time.localtime(dem_meta.stat().st_mtime)) if dem_meta.exists() else TODAY}
+
+
+def spot_feature(s, sid):
+    lon, lat = ll(s['x'], s['y'])
+    plon, plat = s['parkLL']
+    lk = links(lat, lon, plat, plon, s['name'])
+    sp = s['sp']
+    props = {
+        'id': sid, 'area': s['area'], 'name': s['name'], 'category': s['cat'], 'species': s['species'] or [], 'primary': sp,
+        'score': s['score'], 'scoreMax': SCORE_MAX[sp], 'scoreLabel': f"Score {s['score']} of {SCORE_MAX[sp]} (my pick)",
+        'pressure': s['pressure'], 'pressureWhy': s['pressureWhy'],
+        'mu': s.get('mu'), 'region': s.get('region'), 'regionName': s.get('regionName'),
+        'elev': int(round(s['elev'])), 'slope': int(round(s['slope'])), 'aspect': s['aspectWord'],
+        'park': [plon, plat], 'parkWhat': s['parkWhat'],
+        'walkKm': round((s.get('walkM') or 0) / 1000, 2), 'rideKm': round((s.get('rideM') or 0) / 1000, 2) if s['cat'] == 'atv' else 0,
+        'climbM': int(round(s.get('climb') or 0)),
+        'walkMin': int(round((s.get('walkM') or 0) / 3000 * 60 + (s.get('climb') or 0) / 10)),
+        'driveVia': s.get('driveVia') or [],
+        'evidence': [{k: v for k, v in e.items()} for e in s['evidence']],
+        'flags': s['flags'], 'banner': BANNER,
+        'seasons': s['seasons'], 'seasonNote': s.get('seasonNote'), 'months': s['months'], 'monthsKey': months_key(s['months']),
+        'plan': s['plan'], 'candidate': 'Candidate, scout it first.',
+        'gmaps': lk['gmaps'], 'gdir': lk['gdir'], 'apple': lk['apple'],
+    }
+    if s.get('recDirections'):
+        props['recName'] = s['recName']
+        props['recDirections'] = s['recDirections']
+    if s.get('bcCamp'):
+        props['camp'] = list(ll(s['bcCamp']['x'], s['bcCamp']['y']))
+    return {'type': 'Feature', 'properties': props, 'geometry': {'type': 'Point', 'coordinates': [lon, lat]}}
+
+
+def line_feature(g, props):
+    gw = to_wgs(np.array([g], dtype=object))[0]
+    gw = shapely.set_precision(gw, 1e-5)
+    return {'type': 'Feature', 'properties': props, 'geometry': json.loads(_round_json(shapely.to_geojson(gw)))}
+
+
+def write_fc(path, feats):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    txt = '{"type":"FeatureCollection","features":[\n' + ',\n'.join(
+        json.dumps(f, ensure_ascii=False, separators=(',', ':')) for f in feats) + '\n]}\n'
+    path.write_text(txt, encoding='utf-8')
+    return len(txt.encode('utf-8'))
+
+
+def step_spots(cache, areas):
+    load_regs()
+    for w_ in REGS_WARN:
+        log('  WARN', w_)
+    for a in areas:
+        t0 = time.time()
+        log(f'spots: area {a}')
+        ctx = AreaContext(cache, a)
+        dates = area_dates(cache, a, ctx.ca)
+        rf = Refiner(ctx, dates)
+        stats = {}
+        cands = []
+        for sp in ('deer', 'moose') + (('quail',) if a == 'C' else ()):
+            c = grid_candidates(ctx, sp, stats)
+            log(f'  {sp}: {len(c)} grid candidates')
+            cands += c
+        c = duck_candidates(ctx, stats)
+        log(f'  duck: {len(c)} candidates')
+        cands += c
+        c = grouse_candidates(ctx, stats)
+        log(f'  grouse: {len(c)} candidates')
+        cands += c
+        spots = []
+        t1 = time.time()
+        for c in cands:
+            c['area'] = a
+            s = finalize(rf, c, stats)
+            if s:
+                spots.append(s)
+        log(f'  refined {len(spots)} of {len(cands)} hunting candidates in {time.time() - t1:.0f}s')
+        camps = camp_candidates(ctx, spots, stats)
+        if spots:
+            from scipy.spatial import cKDTree
+            kd = cKDTree(np.column_stack([[s['x'] for s in spots], [s['y'] for s in spots]]))
+        for c in camps:
+            c['area'] = a
+            c['nearSpots'] = len(kd.query_ball_point([c['x'], c['y']], 5000)) if spots else 0
+            s = finalize(rf, c, stats)
+            if s:
+                spots.append(s)
+        spots, removed = enforce_spacing(spots)
+        stats['spacingRemoved'] = removed
+        for s in spots:
+            post_spot(rf, s)
+        # ids, ranks
+        spots.sort(key=lambda s: (s['sp'], s['cat'], -s['score'], -s.get('tb', 0)))
+        counters = {}
+        feats, routes, campf = [], [], []
+        for s in spots:
+            k = (s['sp'], s['cat'])
+            counters[k] = counters.get(k, 0) + 1
+            sid = f"{a}-{s['sp']}-{s['cat']}-{counters[k]:04d}"
+            s['id'] = sid
+            f = spot_feature(s, sid)
+            f['properties']['rank'] = counters[k]
+            feats.append(f)
+            for key, kind in (('approach', 'walk'), ('ride', 'ride'), ('walkLine', 'roadside' if s['sp'] == 'grouse' else 'walk')):
+                g = s.get(key)
+                if g is None or g.is_empty or g.length < 10:
+                    continue
+                if s['sp'] == 'grouse' and key == 'walkLine' and s['cat'] == 'atv':
+                    kind = 'ride'
+                if s['cat'] == 'backcountry' and kind == 'walk':
+                    kind = 'backcountry'
+                up, emax, _ = ctx.dem.profile(g if g.geom_type == 'LineString' else shapely.line_merge(g))
+                rflags = [x['t'] for x in s['flags'] if x['t'].startswith('Route')]
+                routes.append(line_feature(g, {'spotId': sid, 'kind': kind, 'km': round(g.length / 1000, 2), 'climbM': int(round(up)),
+                                               'name': s['name'], 'flags': rflags}))
+            if s['sp'] == 'camp':
+                o = s.get('official') or {}
+                campf.append({'type': 'Feature', 'properties': {
+                    'id': sid, 'kind': 'Rec site' if s.get('kind') == 'rec site' else 'Crown land candidate', 'name': s['name'],
+                    'campsites': o.get('campsites'), 'water': next((e['t'] for e in s['evidence'] if e['t'].startswith('Water')), None),
+                    'nearSpots': s.get('nearSpots', 0), 'closure': o.get('closure'), 'spotIds': [],
+                    'note': 'Official rec site' if o else 'Candidate, scout it first (estimate)'},
+                    'geometry': {'type': 'Point', 'coordinates': list(ll(s['x'], s['y']))}})
+            if s.get('bcCamp'):
+                bc_ = s['bcCamp']
+                campf.append({'type': 'Feature', 'properties': {
+                    'id': sid + '-camp', 'kind': 'Backcountry camp', 'name': 'Camp for ' + s['name'], 'campsites': None,
+                    'water': bc_['water'], 'elev': int(round(bc_['elev'])), 'spotIds': [sid],
+                    'note': 'Flat ground near water from the data (estimate). Scout it first.'},
+                    'geometry': {'type': 'Point', 'coordinates': list(ll(bc_['x'], bc_['y']))}})
+        # link camps to nearby spots (5 km)
+        cmap = [c for c in campf if c['properties']['kind'] != 'Backcountry camp']
+        if cmap and feats:
+            from scipy.spatial import cKDTree
+            sx = np.array([[s['x'], s['y']] for s in spots if s['sp'] != 'camp'])
+            sids = [s['id'] for s in spots if s['sp'] != 'camp']
+            if len(sx):
+                kd = cKDTree(sx)
+                for c in cmap:
+                    lon, lat = c['geometry']['coordinates']
+                    cx, cy = lonlat_to_xy(lon, lat)
+                    idx = kd.query_ball_point([float(cx), float(cy)], 5000)
+                    c['properties']['spotIds'] = [sids[i] for i in sorted(idx)][:40]
+        out = OUT_SPOTS / a
+        sizes = {'spots.geojson': write_fc(out / 'spots.geojson', feats), 'routes.geojson': write_fc(out / 'routes.geojson', routes),
+                 'camps.geojson': write_fc(out / 'camps.geojson', campf)}
+        # style check of generated text
+        bad = 0
+        for f in feats:
+            p = f['properties']
+            allowed = [p['name']] + (p['driveVia'] or []) + [x for x in re.findall(r'(?:on|of|Via) ([^,.]+)', ' '.join(p['plan']))]
+            for line in p['plan']:
+                if style_issues(line, allowed):
+                    bad += 1
+        counts = {}
+        for s in spots:
+            counts.setdefault('byCategory', {}).setdefault(s['cat'], 0)
+            counts['byCategory'][s['cat']] += 1
+            counts.setdefault('byPrimary', {}).setdefault(s['sp'], 0)
+            counts['byPrimary'][s['sp']] += 1
+            for t in s['species']:
+                counts.setdefault('bySpeciesTag', {}).setdefault(t, 0)
+                counts['bySpeciesTag'][t] += 1
+            counts.setdefault('byPressure', {}).setdefault(s['pressure'], 0)
+            counts['byPressure'][s['pressure']] += 1
+            k = f"{s['sp']}:{s['cat']}"
+            counts.setdefault('byPrimaryCategory', {}).setdefault(k, 0)
+            counts['byPrimaryCategory'][k] += 1
+        load_regs()
+        meta = {
+            'area': a, 'name': AREAS[a]['name'], 'box': AREAS[a]['box'], 'base': AREAS[a]['base'], 'generated': TODAY,
+            'total': len(feats), 'counts': counts, 'routes': len(routes), 'camps': len(campf), 'bytes': sizes,
+            'layerDates': dates, 'stats': stats, 'styleLinesFlagged': bad,
+            'scoring': {'weights': W, 'max': SCORE_MAX, 'min': MIN_SCORE, 'spacingM': SPACING_M, 'selectRadiusM': SELECT_RADIUS,
+                        'capsPerCategory': CAPS, 'cutAgeYears': CUT_AGE, 'burnYears': BURN_YEARS,
+                        'grouseZones': sorted(set(GROUSE_ZONES) | GROUSE_ZONES_EXTRA.get(a, set()))},
+            'seasonRows': {k: {kk: REGS[k].get(kk) for kk in ('label', 'value', 'certainty', 'source', 'url', 'page', 'checked')}
+                           for k in sorted({k for s in spots for k in s['seasons']}) if k in REGS},
+            'regsEdition': REGS.get('_meta'), 'regsWarnings': REGS_WARN,
+            'notes': [
+                'Candidate spots from official open data. Nobody publishes where hunters go; nothing here says animals are present.',
+                'Scores are opinion (my pick). Busier, average, quieter and remote are estimates from access.',
+                'Targets are never on private land, parks, protected areas, ecological reserves, reserves, city limits or lakes.',
+                'Parking points are never inside parks, reserves, city limits or Motor Vehicle Closed Areas.',
+                'Drive: within 300 m of a paved or gravel road. ATV: rough roads and trails 1 to 10 km from a truck parking point '
+                'and 1 km or more from pavement, outside closures. Walk: 0.3 to 5 km. Backcountry: more than 5 km.',
+                'Big game targets inside the Hwy 5 (Coquihalla) single projectile zone are left out.',
+                'Assumption: road surface from the Digital Road Atlas decides truck (paved, gravel) versus ATV (rough, overgrown, trails).',
+            ] + (['Assumption: grouse zones include CWH (Coastal Western Hemlock) in area B (my pick).'] if a == 'B' else [])
+              + (['Vaseux Lake: quail and duck targets within 2 km are left out (sanctuary and National Wildlife Area edges not mapped).'] if a == 'C' else []),
+        }
+        json.dump(meta, open(out / 'meta.json', 'w'), indent=1, ensure_ascii=False)
+        log(f'spots {a}: {len(feats)} spots, {len(routes)} routes, {len(campf)} camps, '
+            f'{sizes["spots.geojson"] / 1e6:.2f} MB, style flags {bad}, in {time.time() - t0:.0f}s')
+        log('  ' + json.dumps(counts))
+
+
+# ======================================================================================
+# Step: migration and seasons layers (general pattern, from data/migration.json)
+# ======================================================================================
+MIG_SPECIES = [('muledeer', 'mule_deer', 'Mule deer'), ('whitetail', 'wt_deer', 'White tailed deer'), ('moose', 'moose', 'Moose'),
+               ('elk', 'elk', 'Elk'), ('bighorn', 'sheep', 'Bighorn sheep')]
+# Conservative defaults used only when data/migration.json is missing (marked VERIFY in about)
+MIG_DEFAULT = {
+    'muledeer': [([11, 12, 1, 2, 3, 4], ['BG', 'PP', 'IDF'], [300, 1200]), ([5, 10], ['IDF', 'MS'], [500, 1800]),
+                 ([6, 7, 8, 9], ['MS', 'ESSF'], [1000, 2200])],
+    'whitetail': [(list(range(1, 13)), ['PP', 'IDF', 'ICH'], [300, 1000])],
+    'moose': [([12, 1, 2, 3, 4], ['IDF', 'ICH', 'MS', 'SBS'], [400, 1500]), ([5, 11], ['IDF', 'MS', 'SBS', 'ICH'], [500, 1700]),
+              ([6, 7, 8, 9, 10], ['MS', 'SBS', 'ESSF', 'ICH'], [800, 1900])],
+    'elk': [([11, 12, 1, 2, 3, 4], ['BG', 'PP', 'IDF', 'CWH'], [0, 1300]), ([5, 10], ['IDF', 'MS', 'ESSF', 'CWH'], [300, 2000]),
+            ([6, 7, 8, 9], ['MS', 'ESSF', 'IMA'], [1000, 2300])],
+    'bighorn': [([11, 12, 1, 2, 3, 4], ['BG', 'PP', 'IDF'], [300, 1800]), ([5, 10], ['BG', 'PP', 'IDF', 'ESSF'], [300, 2300]),
+                ([6, 7, 8, 9], ['IDF', 'ESSF', 'IMA'], [300, 2500])],
+}
+_MJ = {}
+
+
+def load_migration():
+    if 'd' not in _MJ:
+        p = ROOT / 'data' / 'migration.json'
+        _MJ['d'] = json.load(open(p)) if p.exists() else None
+    return _MJ['d']
+
+
+def species_bands(key):
+    """[(band, months, zones, [elev min, max], where, cert, verify)] from migration.json or defaults."""
+    mj = load_migration()
+    if not mj or key not in mj.get('species', {}):
+        out = []
+        dflt = MIG_DEFAULT.get(key, [])
+        names = ['winter', 'transition', 'summer'] if len(dflt) == 3 else ['all year']
+        for (mo, z, e), b in zip(dflt, names):
+            out.append((b, mo, z, e, 'Default band. VERIFY against data/migration.json.', 50, True))
+        return out
+    s = mj['species'][key]
+    mon = {m: s['months'][str(m)] for m in range(1, 13)}
+    mx = {m: mon[m]['elevM'][1] for m in mon}
+    lo, hi = min(mx.values()), max(mx.values())
+    rng = hi - lo
+    if rng < 300:
+        groups = {'all year': list(range(1, 13))}
+    else:
+        winter = [m for m in mon if mx[m] <= lo + 0.25 * rng or 'winter' in mon[m]['where'].lower()]
+        summer = [m for m in mon if mx[m] >= hi - 0.15 * rng and m not in winter]
+        trans = [m for m in mon if m not in winter and m not in summer]
+        groups = {'winter': winter, 'transition': trans, 'summer': summer}
+    out = []
+    for b, ms in groups.items():
+        if not ms:
+            continue
+        zones = []
+        for m in ms:
+            zones += [z for z in mon[m]['zones'] if z not in zones]
+        e = [min(mon[m]['elevM'][0] for m in ms), max(mon[m]['elevM'][1] for m in ms)]
+        where = []
+        for m in ms:
+            w = mon[m]['where']
+            if w not in where:
+                where.append(w)
+        cert = min(mon[m]['cert'] for m in ms)
+        out.append((b, sorted(ms, key=lambda m: (m - 7) % 12), zones, e, ' '.join(where[:3]), cert, False))
+    return out
+
+
+def winter_months(key, default):
+    for b, ms, z, e, w, c, v in species_bands(key):
+        if b == 'winter':
+            return sorted(ms)
+    return default
+
+
+def mask_to_polys(grid, mask, min_km2=0.5, simplify=120):
+    """Raster mask to polygons (row runs, then union). Grid cell units first so edges line up exactly."""
+    rects = []
+    for r in range(mask.shape[0]):
+        row = mask[r]
+        if not row.any():
+            continue
+        d = np.diff(np.r_[0, row.astype(np.int8), 0])
+        st = np.nonzero(d == 1)[0]
+        en = np.nonzero(d == -1)[0]
+        for a, b in zip(st, en):
+            rects.append(shapely.box(int(a), -int(r) - 1, int(b), -int(r)))
+    if not rects:
+        return []
+    u = shapely.union_all(np.array(rects, dtype=object))
+    u = shapely.affinity.affine_transform(u, [grid.res, 0, 0, grid.res, grid.x0, grid.y1])
+    parts = [p for p in shapely.get_parts(u) if p.area >= min_km2 * 1e6]
+    if not parts:
+        return []
+    return list(shapely.simplify(np.array(parts, dtype=object), simplify, preserve_topology=True))
+
+
+def step_migration(cache, areas):
+    import shapely.affinity  # noqa: F401
+    info = load_info(cache)
+    mj = load_migration()
+    src_note = 'data/migration.json (research file, ' + (mj.get('updated') if mj else '') + ')' if mj else 'defaults (VERIFY)'
+    for a in areas:
+        t0 = time.time()
+        ca = clean_area(cache, a)
+        build_dem_grid(cache, a)
+        dem = DEM(cache, a)
+        G = Grid(a, res=200.0)
+        bg, bp, _ = ca['bec']
+        zones = sorted({x['zone'] for x in bp if x['zone']})
+        zc = {z: i + 1 for i, z in enumerate(zones)}
+        zr = G.burn_polys(bg, values=[zc.get(x['zone'], 0) for x in bp])
+        el = dem.sample('elev', G.lon.ravel(), G.lat.ravel()).reshape(G.lon.shape)
+        adir = OUT_LAYERS / a
+        for key, sp, label in MIG_SPECIES:
+            geoms, props = [], []
+            for band, months, zz, e, where, cert, verify in species_bands(key):
+                codes = [zc[z] for z in zz if z in zc]
+                if not codes:
+                    continue
+                m = G.inbox & np.isin(zr, codes) & (el >= e[0]) & (el <= e[1])
+                for g in mask_to_polys(G, m):
+                    geoms.append(g)
+                    props.append({'species': label, 'band': band, 'months': months, 'monthsKey': months_key(months),
+                                  'monthsText': month_span(months), 'zones': ', '.join(zz), 'elevM': f'{fmt_int(e[0])} to {fmt_int(e[1])} m',
+                                  'where': where, 'cert': cert, 'label': 'general pattern' + (' (VERIFY)' if verify else '')})
+            lid = f'season_{sp}'
+            if geoms:
+                emit(info, lid, a, adir / lid, np.array(geoms, dtype=object), props, 0, TODAY)
+                info[lid][a]['source'] = src_note
+            else:
+                info.get(lid, {}).pop(a, None)
+        # ducks: staging and wintering waters
+        if mj and 'ducks' in mj.get('species', {}):
+            dm = mj['species']['ducks']['months']
+            passage = [m for m in range(1, 13) if re.search(r'migra|passage', dm[str(m)]['where'], re.I)]
+            winter = [m for m in range(1, 13) if re.search(r'winter', dm[str(m)]['where'], re.I)]
+            dcert = min(dm[str(m)]['cert'] for m in passage + winter)
+            dverify = False
+        else:
+            passage, winter, dcert, dverify = [3, 4, 9, 10, 11], [12, 1, 2], 50, True
+        geoms, props = [], []
+        for k, kind in (('lakes', 'lake'), ('wetlands', 'wetland'), ('rivers', 'river')):
+            g, p, _ = ca[k]
+            if len(g) == 0:
+                continue
+            rep = shapely.point_on_surface(g)
+            ev = dem.sample_xy('elev', shapely.get_x(rep), shapely.get_y(rep))
+            for gi, pi, e in zip(g, p, ev):
+                if kind != 'river' and pi['ha'] < 20:
+                    continue
+                if kind == 'river' and pi['ha'] < 20:
+                    continue
+                bands = []
+                if kind != 'river' and e < 1000:
+                    bands.append(('fall and spring passage', passage))
+                if e < 700 and (kind == 'river' or pi['ha'] >= 50):
+                    bands.append(('winter open water', winter))
+                for b, ms in bands:
+                    geoms.append(gi)
+                    props.append({'name': pi['name'] or f'Unnamed {kind}', 'ha': round(pi['ha']), 'band': b, 'months': ms,
+                                  'monthsKey': months_key(ms), 'monthsText': month_span(ms), 'elevM': int(round(e)),
+                                  'cert': dcert, 'label': 'general pattern' + (' (VERIFY)' if dverify else '')})
+        if geoms:
+            emit(info, 'duck_waters', a, adir / 'duck_waters', np.array(geoms, dtype=object), props, 20, TODAY)
+            info['duck_waters'][a]['source'] = src_note
+        # quail: resident habitat (no migration), area C trip only
+        if a == 'C':
+            qb = species_bands('quail') if mj and 'quail' in mj.get('species', {}) else [('all year', list(range(1, 13)), ['BG', 'PP'], [250, 750], 'Default band. VERIFY.', 50, True)]
+            geoms, props = [], []
+            for band, months, zz, e, where, cert, verify in qb:
+                codes = [zc[z] for z in zz if z in zc]
+                m = G.inbox & np.isin(zr, codes) & (el >= e[0]) & (el <= e[1])
+                for g in mask_to_polys(G, m, min_km2=0.2):
+                    geoms.append(g)
+                    props.append({'species': 'California quail', 'band': 'resident all year', 'months': list(range(1, 13)),
+                                  'monthsKey': months_key(list(range(1, 13))), 'monthsText': 'all year', 'zones': ', '.join(zz),
+                                  'elevM': f'{fmt_int(e[0])} to {fmt_int(e[1])} m', 'where': where, 'cert': cert,
+                                  'label': 'general pattern, no migration' + (' (VERIFY)' if verify else '')})
+            if geoms:
+                emit(info, 'quail_range', a, adir / 'quail_range', np.array(geoms, dtype=object), props, 0, TODAY)
+                info['quail_range'][a]['source'] = src_note
+        log(f'migration {a} in {time.time() - t0:.0f}s')
+    save_info(cache, info)
 
 
 # ======================================================================================

@@ -2,7 +2,7 @@
    Saves OpenFreeMap vector tiles (zoom 0 to 14), terrain tiles (zoom 0 to 12, one tile margin for contours),
    the fonts the style uses, the tile index, and our layer files for the area. Satellite is not bulk downloaded (licence).
    The service worker answers these hosts cache first. OpenFreeMap tile keys drop the weekly version so saved areas keep working. */
-import { esc, prefs, savePrefs, units, tileRange, fmtNum, throttle } from './util.js';
+import { esc, prefs, savePrefs, tileRange, fmtNum, throttle } from './util.js';
 import { OFM_TILEJSON, OFM_GLYPHS, FONTS, TERRARIUM, DEM_MAXZOOM } from './style.js';
 import * as layers from './layers.js';
 
@@ -248,4 +248,3 @@ async function layerFiles(bbox) {
   }
   return [...out];
 }
-export const units_ = units;

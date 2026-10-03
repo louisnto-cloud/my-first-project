@@ -68,7 +68,7 @@ sharp-tailed-grouse-snow | Sharp tailed grouse in snow near Fort St. John, BC.
 ## Habitat and the grouse day
 
 - Ruffed grouse: early forest of aspen, poplar, birch and alder, with buds and catkins as winter food (85%). In fall: berries, clover, leaves and seeds (85%).
-- They live their whole life within a few hectares and do not migrate (85%). Males drum on a log; the log is piled with droppings (85%).
+- Adults live their whole life within a few hectares and do not migrate; young birds disperse in fall (80%). Males drum on a log; the log is piled with droppings (85%).
 - Spruce grouse: mostly on the ground late spring to early autumn, then up in the trees from late autumn through spring eating pine and spruce needles (80%).
 - Dusky grouse: open edges, even sagebrush flats, in summer. In autumn they walk **uphill** into dense conifers for winter, up to 50 km but usually much less (75%).
 - Daily pattern: feed early morning and late afternoon; dust and gravel on roadsides; sit in cover midday; roost in trees or on the ground at night (75%).

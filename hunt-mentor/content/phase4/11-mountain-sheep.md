@@ -96,7 +96,7 @@ checked: 2026-10-01
 - **Grass eaters.** Grasses, sedges, fescues and low plants; they seldom browse twigs (85%). They seek mineral licks in spring and summer (85%).
 - **Daily:** feed morning and evening on open slopes, bed on ledges or benches with a view through midday (Tip).
 - **Summer:** rams in bands of about 5 to 15 on their own alpine ranges, away from ewes and lambs (85%).
-- **Lambs** are born early May to mid June (85%).
+- **Lambs** are born from the last week of April to early June (85%, BC government sheep account).
 - **Winter:** south facing, wind blown grassland where snow stays shallow (85%).
 - **Escape terrain:** cliffs and broken rock. A ram rarely beds far from it (Tip).
 

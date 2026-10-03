@@ -91,3 +91,8 @@ Certainty scale: see CLAUDE.md.
 | BC Fish and Wildlife ID page | https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/wild-system/fish-wildlife-id | Licences |
 | BC regulation corrections page (last updated 19 August 2026) | https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/regulations-synopsis | Countdown, BC rules |
 | Wikimedia Commons (photos, each credited on the Photo credits page) | https://commons.wikimedia.org | Species sessions, flashcards |
+
+## Added 2026-10-03 (migration, named areas, quail, camping)
+
+- Full list with links, sections and certainty: `research/2026-10-03-migration-and-areas.md`. Main sources: BC Wildlife Federation Southern Interior Mule Deer Project pages; BC government species accounts (deer, sheep); Management Plan for the Mountain Goat in BC (2010); Gaines 2003 (black bear denning, Washington Cascades); WildSafeBC; BC Ungulate Winter Range layer (BC Data Catalogue); BC Recreation Sites and Trails data; BC Parks pages; B.C. Reg. 24/2015 (Lower Mainland WMA camping rules); BC Wildfire Service campfire status (changes daily).
+- Synopsis 2 October 2026 edition, read directly for the Rule Book sessions; royalty amounts from the Wildlife Act Commercial Activities Regulation, Schedule 1.06 (BC Laws, current to 29 September 2026).

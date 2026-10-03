@@ -13,7 +13,7 @@ const R = ['Noto Sans Regular'], B = ['Noto Sans Bold'], I = ['Noto Sans Italic'
 const P = {
   land: '#d4d9c3', open: '#e2e4d4', farm: '#e4e3d2', town: '#dddcd2', ice: '#f4f6f5', rock: '#d8d5c9', sand: '#e7e1c9', wetland: '#c9d8cc',
   water: '#a6bfcc', waterLine: '#84a7b9', waterText: '#47708a',
-  contour: '#8f8a6e', contourIdx: '#7d7658', contourText: '#69634a',
+  contour: '#857f62', contourIdx: '#756e50', contourText: '#625c43',
   road: '#ffffff', casing: '#a3a596', major: '#f7e7b4', majorCase: '#bfa66e', motor: '#f2cf86', motorCase: '#b98b3e',
   path: '#6b6656', rail: '#9a988e', text: '#26281f', halo: '#f3f4ec', park: '#6f9256',
 };
@@ -60,7 +60,9 @@ export function buildStyle({ dem, prefs }) {
   add(T, { id: 'water', type: 'fill', source: 'omt', 'source-layer': 'water', filter: notTunnel, paint: { 'fill-color': P.water, 'fill-outline-color': '#8fb0c1' } });
   add(T, { id: 'waterway', type: 'line', source: 'omt', 'source-layer': 'waterway', filter: notTunnel, layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: {
     'line-color': P.waterLine,
-    'line-width': ['match', ['get', 'class'], 'river', z([[8, 1], [12, 2], [16, 5]]), 'canal', z([[10, 0.8], [16, 3]]), z([[10, 0.6], [13, 1.2], [16, 2.4]])],
+    'line-width': ['interpolate', ['exponential', 1.5], ['zoom'],
+      8, ['match', ['get', 'class'], 'river', 1, 0.3], 12, ['match', ['get', 'class'], 'river', 2, 'canal', 1.4, 0.9],
+      14, ['match', ['get', 'class'], 'river', 3.2, 'canal', 2, 1.5], 16, ['match', ['get', 'class'], 'river', 5, 'canal', 3, 2.4]],
     'line-dasharray': ['case', ['==', ['get', 'intermittent'], 1], ['literal', [3, 2]], ['literal', [1, 0]]],
   } });
 
@@ -69,8 +71,8 @@ export function buildStyle({ dem, prefs }) {
 
   // ---------- contours ----------
   const cModes = ALL; // shown on satellite and hybrid only when prefs.satContours is not false
-  add(cModes, { id: 'contour-minor', type: 'line', source: 'contours', 'source-layer': 'contours', filter: ['==', ['get', 'level'], 0], minzoom: 9, paint: { 'line-color': P.contour, 'line-opacity': z([[9, 0.25], [12, 0.45], [15, 0.55]]), 'line-width': z([[9, 0.4], [14, 0.7], [17, 1]]) } });
-  add(cModes, { id: 'contour-index', type: 'line', source: 'contours', 'source-layer': 'contours', filter: ['>', ['get', 'level'], 0], minzoom: 9, paint: { 'line-color': P.contourIdx, 'line-opacity': z([[9, 0.4], [12, 0.65], [15, 0.75]]), 'line-width': z([[9, 0.7], [14, 1.2], [17, 1.6]]) } });
+  add(cModes, { id: 'contour-minor', type: 'line', source: 'contours', 'source-layer': 'contours', filter: ['==', ['get', 'level'], 0], minzoom: 9, paint: { 'line-color': P.contour, 'line-opacity': z([[9, 0.3], [12, 0.55], [15, 0.62]]), 'line-width': z([[9, 0.45], [14, 0.8], [17, 1.1]]) } });
+  add(cModes, { id: 'contour-index', type: 'line', source: 'contours', 'source-layer': 'contours', filter: ['>', ['get', 'level'], 0], minzoom: 9, paint: { 'line-color': P.contourIdx, 'line-opacity': z([[9, 0.45], [12, 0.72], [15, 0.8]]), 'line-width': z([[9, 0.75], [14, 1.3], [17, 1.7]]) } });
 
   // ---------- boundaries and parks ----------
   add(T, { id: 'park-line', type: 'line', source: 'omt', 'source-layer': 'park', minzoom: 8, paint: { 'line-color': P.park, 'line-opacity': 0.55, 'line-width': z([[8, 0.6], [14, 1.6]]), 'line-dasharray': [3, 2] } });
@@ -83,13 +85,12 @@ export function buildStyle({ dem, prefs }) {
   // ---------- roads (topo) ----------
   const isLine = ['match', ['geometry-type'], ['LineString', 'MultiLineString'], true, false];
   const roadW = {
-    motor: z([[5, 0.8], [10, 2.2], [14, 5], [18, 14]]), major: z([[6, 0.6], [10, 1.8], [14, 4.2], [18, 12]]), mid: z([[8, 0.5], [11, 1.2], [14, 3.2], [18, 10]]),
-    minor: z([[11, 0.6], [14, 2.4], [18, 8]]), track: z([[11, 0.5], [14, 1.6], [18, 4]]),
+    motor: [[5, 0.8], [10, 2.2], [14, 5], [18, 14]], major: [[6, 0.6], [10, 1.8], [14, 4.2], [18, 12]], mid: [[8, 0.5], [11, 1.2], [14, 3.2], [18, 10]],
+    minor: [[11, 0.6], [14, 2.4], [18, 8]], track: [[11, 0.5], [14, 1.6], [18, 4]],
   };
-  const casing = (w) => ['+', w, 1.6];
   const road = (id, filter, color, caseColor, w, minzoom) => {
-    add(T, { id: id + '-case', type: 'line', source: 'omt', 'source-layer': 'transportation', minzoom, filter: ['all', isLine, filter], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': caseColor, 'line-width': casing(w) } });
-    L.push({ id, type: 'line', source: 'omt', 'source-layer': 'transportation', minzoom, filter: ['all', isLine, filter], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': color, 'line-width': w }, metadata: meta(T) });
+    add(T, { id: id + '-case', type: 'line', source: 'omt', 'source-layer': 'transportation', minzoom, filter: ['all', isLine, filter], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': caseColor, 'line-width': z(w.map(([k, v]) => [k, v + (k < 11 ? 0.8 : 1.6)])) } });
+    L.push({ id, type: 'line', source: 'omt', 'source-layer': 'transportation', minzoom, filter: ['all', isLine, filter], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': color, 'line-width': z(w) }, metadata: meta(T) });
   };
   // paths go under roads so road casings stay clean
   add(T, { id: 'path', type: 'line', source: 'omt', 'source-layer': 'transportation', minzoom: 12, filter: ['all', isLine, cls('path')], layout: { 'line-join': 'round' }, paint: { 'line-color': P.path, 'line-opacity': 0.85, 'line-width': z([[12, 0.8], [16, 1.8]]), 'line-dasharray': [3, 2] } });
@@ -111,7 +112,7 @@ export function buildStyle({ dem, prefs }) {
   const unit = sys === 'imperial' ? 'ft' : ' m';
   add(cModes, { id: 'contour-label', type: 'symbol', source: 'contours', 'source-layer': 'contours', filter: ['>', ['get', 'level'], 0], minzoom: 11, layout: {
     'symbol-placement': 'line', 'text-field': ['concat', ['number-format', ['get', 'ele'], { locale: 'en-CA' }], unit], 'text-font': I,
-    'text-size': z([[11, 10], [15, 12]]), 'symbol-spacing': 320, 'text-max-angle': 25, 'text-padding': 4, 'text-pitch-alignment': 'viewport',
+    'text-size': z([[11, 10], [15, 12]]), 'symbol-spacing': 260, 'text-max-angle': 25, 'text-padding': 2, 'text-pitch-alignment': 'viewport',
   }, paint: { 'text-color': P.contourText, 'text-halo-color': 'rgba(222,226,206,0.85)', 'text-halo-width': 1.4 } });
 
   // ---------- labels (topo and hybrid variants) ----------
@@ -149,9 +150,11 @@ function labels(add, p, modes, c) {
   add(modes, { id: `${p}-waterway-name`, type: 'symbol', source: 'omt', 'source-layer': 'waterway', minzoom: 12, filter: ['all', isLine, ['has', 'name']], layout: {
     'symbol-placement': 'line', 'text-field': name, 'text-font': I, 'text-size': z([[12, 11], [16, 13]]), 'symbol-spacing': 400, 'text-max-angle': 30, 'text-letter-spacing': 0.04,
   }, paint: { 'text-color': c.water, 'text-halo-color': c.waterHalo, 'text-halo-width': 1.3 } });
-  add(modes, { id: `${p}-water-name`, type: 'symbol', source: 'omt', 'source-layer': 'water_name', minzoom: 9, filter: ['has', 'name'], layout: {
-    'symbol-placement': ['match', ['geometry-type'], ['LineString', 'MultiLineString'], 'line', 'point'], 'text-field': name, 'text-font': I,
-    'text-size': z([[9, 11], [14, 14]]), 'text-max-width': 7, 'text-letter-spacing': 0.04,
+  add(modes, { id: `${p}-water-name`, type: 'symbol', source: 'omt', 'source-layer': 'water_name', minzoom: 9, filter: ['all', isPoint, ['has', 'name']], layout: {
+    'text-field': name, 'text-font': I, 'text-size': z([[9, 11], [14, 14]]), 'text-max-width': 7, 'text-letter-spacing': 0.04,
+  }, paint: { 'text-color': c.water, 'text-halo-color': c.waterHalo, 'text-halo-width': 1.3 } });
+  add(modes, { id: `${p}-water-name-line`, type: 'symbol', source: 'omt', 'source-layer': 'water_name', minzoom: 9, filter: ['all', isLine, ['has', 'name']], layout: {
+    'symbol-placement': 'line', 'text-field': name, 'text-font': I, 'text-size': z([[9, 11], [14, 14]]), 'text-letter-spacing': 0.04,
   }, paint: { 'text-color': c.water, 'text-halo-color': c.waterHalo, 'text-halo-width': 1.3 } });
   add(modes, { id: `${p}-road-name`, type: 'symbol', source: 'omt', 'source-layer': 'transportation_name', minzoom: 11, filter: ['all', isLine, ['has', 'name'], ['match', ['get', 'class'], ['primary', 'secondary', 'tertiary', 'trunk', 'minor', 'track', 'service', 'unclassified', 'residential'], true, false]], layout: {
     'symbol-placement': 'line', 'text-field': name, 'text-font': R, 'text-size': z([[11, 10.5], [16, 13]]), 'symbol-spacing': 350, 'text-max-angle': 30,

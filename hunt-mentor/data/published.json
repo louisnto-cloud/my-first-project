@@ -89,6 +89,8 @@
     "rb-unlawful-acts",
     "rb-legal-methods",
     "rb-bag-limits",
-    "rb-after-the-kill"
+    "rb-after-the-kill",
+    "migration",
+    "named-areas"
   ]
 }

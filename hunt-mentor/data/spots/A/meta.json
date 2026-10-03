@@ -1,0 +1,362 @@
+{
+ "area": "A",
+ "name": "Kamloops, North Thompson, Bonaparte, Shuswap west",
+ "box": [
+  -121.6,
+  50.2,
+  -119.4,
+  51.9
+ ],
+ "base": {
+  "name": "Heffley Creek",
+  "lat": 50.8581,
+  "lon": -120.2687
+ },
+ "generated": "2026-10-03",
+ "total": 3548,
+ "counts": {
+  "byCategory": {
+   "camp": 276,
+   "atv": 881,
+   "backcountry": 2,
+   "drive": 1259,
+   "walk": 1130
+  },
+  "byPrimary": {
+   "camp": 276,
+   "deer": 1174,
+   "duck": 692,
+   "grouse": 730,
+   "moose": 676
+  },
+  "byPressure": {
+   "busier": 1257,
+   "average": 2076,
+   "remote": 58,
+   "quieter": 157
+  },
+  "byPrimaryCategory": {
+   "camp:camp": 276,
+   "deer:atv": 377,
+   "deer:backcountry": 1,
+   "deer:drive": 375,
+   "deer:walk": 421,
+   "duck:drive": 364,
+   "duck:walk": 328,
+   "grouse:atv": 300,
+   "grouse:drive": 300,
+   "grouse:walk": 130,
+   "moose:atv": 204,
+   "moose:backcountry": 1,
+   "moose:drive": 220,
+   "moose:walk": 251
+  },
+  "bySpeciesTag": {
+   "deer": 1279,
+   "bear": 2200,
+   "moose": 756,
+   "duck": 692,
+   "grouse": 730
+  }
+ },
+ "routes": 4097,
+ "camps": 278,
+ "bytes": {
+  "spots.geojson": 9902079,
+  "routes.geojson": 7003822,
+  "camps.geojson": 169028
+ },
+ "layerDates": {
+  "roads": "2026-10-03",
+  "private": "2026-09-25",
+  "privateFetched": "2026-10-03",
+  "closures": "2026-10-03",
+  "mu": "2026-10-03",
+  "parks": "2026-10-03",
+  "reserves": "2026-10-03",
+  "cities": "2026-10-03",
+  "wma": "2026-10-03",
+  "cutblocks": "2026-10-03",
+  "burns": "2026-10-03",
+  "winterRange": "2026-10-03",
+  "dem": "2026-10-03"
+ },
+ "stats": {
+  "deer": {
+   "drive": {
+    "candidates": 3790,
+    "droppedWeak": 2120,
+    "droppedCap": 1220,
+    "kept": 450
+   },
+   "atv": {
+    "candidates": 2886,
+    "droppedWeak": 1572,
+    "droppedCap": 864,
+    "kept": 450
+   },
+   "walk": {
+    "candidates": 2904,
+    "droppedWeak": 1457,
+    "droppedCap": 997,
+    "kept": 450
+   },
+   "backcountry": {
+    "candidates": 6,
+    "droppedWeak": 3,
+    "droppedCap": 0,
+    "kept": 3
+   },
+   "droppedExact": 50
+  },
+  "moose": {
+   "drive": {
+    "candidates": 3593,
+    "droppedWeak": 1000,
+    "droppedCap": 2343,
+    "kept": 250
+   },
+   "atv": {
+    "candidates": 2847,
+    "droppedWeak": 916,
+    "droppedCap": 1681,
+    "kept": 250
+   },
+   "walk": {
+    "candidates": 2869,
+    "droppedWeak": 881,
+    "droppedCap": 1738,
+    "kept": 250
+   },
+   "backcountry": {
+    "candidates": 9,
+    "droppedWeak": 5,
+    "droppedCap": 0,
+    "kept": 4
+   },
+   "droppedExact": 28
+  },
+  "duck": {
+   "drive": {
+    "candidates": 4466,
+    "kept": 350,
+    "droppedCap": 1689
+   },
+   "walk": {
+    "candidates": 1429,
+    "kept": 350,
+    "droppedCap": 638
+   },
+   "backcountry": {
+    "candidates": 0,
+    "kept": 0,
+    "droppedCap": 0
+   },
+   "droppedWeak": 11091,
+   "droppedExact": 4
+  },
+  "grouse": {
+   "drive": {
+    "candidates": 888,
+    "kept": 300,
+    "droppedCap": 402
+   },
+   "atv": {
+    "candidates": 799,
+    "kept": 300,
+    "droppedCap": 284
+   },
+   "walk": {
+    "candidates": 190,
+    "kept": 130,
+    "droppedCap": 0
+   },
+   "droppedWeak": 313
+  },
+  "camp": {
+   "official": 163,
+   "crownKept": 120,
+   "droppedWeak": 64157,
+   "droppedCap": 882,
+   "droppedExact": 4
+  },
+  "spacingRemoved": 186
+ },
+ "styleLinesFlagged": 108,
+ "scoring": {
+  "weights": {
+   "deer": {
+    "uwr": 3,
+    "cut": 2,
+    "burn": 2,
+    "bec_low": 2,
+    "bec_ms": 1,
+    "aspect": 1,
+    "fields": 1
+   },
+   "moose": {
+    "wetland": 2,
+    "cut_or_burn": 2,
+    "uwr": 3
+   },
+   "duck": {
+    "size_road": 3,
+    "complex": 2,
+    "backwater": 2,
+    "low": 1
+   },
+   "grouse": {
+    "zone": 1,
+    "cut_edge": 1,
+    "riparian": 1
+   },
+   "quail": {
+    "zone": 2,
+    "farm": 2,
+    "creek": 1,
+    "draw": 1
+   },
+   "camp": {
+    "flat": 2,
+    "water": 2,
+    "named_water": 1,
+    "quiet": 1,
+    "spots_near": 1
+   }
+  },
+  "max": {
+   "deer": 11,
+   "moose": 7,
+   "duck": 8,
+   "grouse": 3,
+   "quail": 6,
+   "camp": 7
+  },
+  "min": {
+   "deer": 6,
+   "moose": 4,
+   "duck": 4,
+   "grouse": 2,
+   "quail": 4,
+   "camp": 5
+  },
+  "spacingM": 800,
+  "selectRadiusM": {
+   "drive": 1500,
+   "atv": 1500,
+   "walk": 2000,
+   "backcountry": 3000,
+   "camp": 3000
+  },
+  "capsPerCategory": {
+   "deer": 450,
+   "moose": 250,
+   "duck": 350,
+   "grouse": 300,
+   "quail": 300,
+   "camp": 120
+  },
+  "cutAgeYears": [
+   5,
+   20
+  ],
+  "burnYears": [
+   2015,
+   2023
+  ],
+  "grouseZones": [
+   "ESSF",
+   "ICH",
+   "IDF",
+   "MS"
+  ]
+ },
+ "seasonRows": {
+  "duckbag": {
+   "label": "Duck daily bag (BC)",
+   "value": "8 ducks a day (possession 24). Inside the 8: pintail 4, canvasback 4, goldeneye 2, harlequin 2.",
+   "certainty": 99,
+   "source": "Migratory Birds Regulations, 2022; BC Synopsis page 12",
+   "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",
+   "page": null,
+   "checked": "2026-10-02"
+  },
+  "ducksR3": {
+   "label": "Duck season near Kamloops",
+   "value": "District No. 3 (Kamloops area, MUs 3-12 to 3-20, 3-26 to 3-44): ducks 8 Sept to 23 Dec.",
+   "certainty": 99,
+   "source": "Migratory Birds Regulations, 2022, Schedule 3 Part 10 Table 1 item 3",
+   "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",
+   "page": null,
+   "checked": "2026-10-02"
+  },
+  "plug": {
+   "label": "Shotgun for ducks",
+   "value": "10 gauge or smaller, max 3 shells (chamber + magazine) with a plug that needs disassembly to remove. Non toxic shot only.",
+   "certainty": 99,
+   "source": "Migratory Birds Regulations, 2022, s.37 and s.38",
+   "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",
+   "page": null,
+   "checked": "2026-10-02"
+  },
+  "r3bag": {
+   "label": "Region 3 deer bag limit",
+   "value": "Deer: 3 total. Mule deer 1. White tailed deer 2, either sex. Antlerless mule deer: LEH only. Your 1 mule deer buck counts across Regions 3 to 8 combined.",
+   "certainty": 99,
+   "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+   "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
+   "page": "pages 14 and 33",
+   "checked": "2026-10-02"
+  },
+  "r3bear": {
+   "label": "Region 3 black bear",
+   "value": "1 Sept to 30 Nov and 1 Apr to 30 June. Bag 2. Never a bear under 2 years or any bear with it.",
+   "certainty": 99,
+   "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+   "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
+   "page": "page 34",
+   "checked": "2026-10-02"
+  },
+  "r3grouse": {
+   "label": "Region 3 grouse (dusky, ruffed, spruce)",
+   "value": "10 Sept to 30 Nov. 5 of each a day, 10 total (possession 3 times). .22 rimfire is legal for grouse.",
+   "certainty": 99,
+   "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+   "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
+   "page": "page 34 and page 13",
+   "checked": "2026-10-02"
+  },
+  "r3mule": {
+   "label": "Region 3 mule deer season (your MU)",
+   "value": "MU 3-27 and 3-28: 4 point bucks 10 to 30 Sept. ANY buck 1 to 31 Oct. 4 point bucks 1 Nov to 10 Dec. Antlerless: LEH only.",
+   "certainty": 99,
+   "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+   "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
+   "page": "page 34",
+   "checked": "2026-10-02"
+  },
+  "r3wt": {
+   "label": "Region 3 white tailed deer (MU 3-27, 3-28)",
+   "value": "Bucks 10 Sept to 10 Dec. Antlerless (does) 10 to 31 Oct, no draw. Bow only, either sex 11 to 20 Dec.",
+   "certainty": 99,
+   "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
+   "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
+   "page": "page 34",
+   "checked": "2026-10-02"
+  }
+ },
+ "regsEdition": {
+  "edition": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028 (in force 1 July 2026 to 30 June 2028)",
+  "lastChecked": "2026-10-02"
+ },
+ "regsWarnings": [],
+ "notes": [
+  "Candidate spots from official open data. Nobody publishes where hunters go; nothing here says animals are present.",
+  "Scores are opinion (my pick). Busier, average, quieter and remote are estimates from access.",
+  "Targets are never on private land, parks, protected areas, ecological reserves, reserves, city limits or lakes.",
+  "Parking points are never inside parks, reserves, city limits or Motor Vehicle Closed Areas.",
+  "Drive: within 300 m of a paved or gravel road. ATV: rough roads and trails 1 to 10 km from a truck parking point and 1 km or more from pavement, outside closures. Walk: 0.3 to 5 km. Backcountry: more than 5 km.",
+  "Big game targets inside the Hwy 5 (Coquihalla) single projectile zone are left out.",
+  "Assumption: road surface from the Digital Road Atlas decides truck (paved, gravel) versus ATV (rough, overgrown, trails)."
+ ]
+}

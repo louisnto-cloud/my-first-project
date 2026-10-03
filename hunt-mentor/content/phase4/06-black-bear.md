@@ -86,7 +86,7 @@ checked: 2026-10-01
 - **June to July:** mating season (75%). Boars travel widely (Tip).
 - **July to August:** berries start, ants and grubs in rotten logs (70%).
 - **August to October:** hyperphagia. Berries, mast, fruit, fish and carcasses (70%).
-- **Mid September to late November:** den entry. Sows with cubs first, adult males last (70%).
+- **Mid October to late November:** den entry in the nearest study, the Washington Cascades next to the Okanagan; out again April to May (80%, Gaines 2003). Some bears, often males with food, den later or not at all (75%, WildSafeBC). Sows with cubs first, adult males last (70%).
 - **January to February:** cubs born in the den (70%).
 
 ## Food, water and cover

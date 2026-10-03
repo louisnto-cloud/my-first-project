@@ -58,12 +58,14 @@ export default HuntMap;
 let root, map, els = {};
 
 // ---------- open and close (called by app.js) ----------
-let initP = null;
+let initP = null, wanted = false;
 export async function open(param) {
   const v = parseParam(param);
   const first = !initP;
+  wanted = true;
   if (first) initP = init(v);
   await initP;
+  if (!wanted) { root.hidden = true; return HuntMap; } // left the map while it was loading
   const wasHidden = root.hidden;
   root.hidden = false;
   HuntMap.isOpen = true;
@@ -75,6 +77,7 @@ export async function open(param) {
   return HuntMap;
 }
 export function close() {
+  wanted = false;
   if (!root) return;
   closeSheet(); search.close(); offline.cancelFrame();
   root.hidden = true; HuntMap.isOpen = false;
@@ -267,7 +270,12 @@ function createMap(v) {
   });
   HuntMap.map = map;
   map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-right');
-  map.on('styleimagemissing', (e) => { const img = makeImage(e.id); if (img && !map.hasImage(e.id)) map.addImage(e.id, img[0], img[1]); });
+  const attrib = map.getContainer().querySelector('.maplibregl-ctrl-attrib');
+  if (attrib) map.once('load', () => attrib.classList.remove('maplibregl-compact-show')); // start folded: tap (i) to read
+  // canvas drawn icons (no sprite): MapLibre 6 awaits this resolver, older versions fire styleimagemissing
+  const resolveImg = (id) => { const img = makeImage(id); if (img && !map.hasImage(id)) map.addImage(id, img[0], img[1]); };
+  if (map.setMissingStyleImageResolver) map.setMissingStyleImageResolver(async (id) => resolveImg(id));
+  else map.on('styleimagemissing', (e) => resolveImg(e.id));
   map.on('load', () => {
     if (prefs.is3d) map.setTerrain({ source: 'dem-terrain', exaggeration: prefs.exag || 1.3 });
     updatePill(); updateScale(); updateElev(); updateNorth();

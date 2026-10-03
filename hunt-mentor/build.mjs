@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import crypto from 'node:crypto';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const outArg = process.argv.indexOf('--out');
@@ -334,7 +335,13 @@ function build() {
     return 'data:image/jpeg;base64,' + fs.readFileSync(f).toString('base64');
   });
   const json = jsonPwa;
-  const version = 'hm-' + Buffer.from(json + css + js).length.toString(36) + '-' + data.built;
+  // Hunt Map: map modules and vendored libraries (precached), loaded only when the map opens
+  const listFiles = (dir) => (fs.existsSync(path.join(ROOT, dir)) ? fs.readdirSync(path.join(ROOT, dir), { recursive: true }).filter((f) => fs.statSync(path.join(ROOT, dir, f)).isFile()).map((f) => f.split(path.sep).join('/')).sort() : []);
+  const mapDirs = [['app/vendor', 'vendor'], ['app/map', 'map']];
+  const mapFiles = mapDirs.flatMap(([src, dst]) => listFiles(src).filter((f) => !/\.(txt|md)$/i.test(f)).map((f) => [path.join(ROOT, src, f), `${dst}/${f}`]));
+  const hash = crypto.createHash('sha1').update(json + css + js);
+  for (const [f] of mapFiles) hash.update(fs.readFileSync(f));
+  const version = 'hm-' + hash.digest('hex').slice(0, 10) + '-' + data.built;
   let html = read('app/index.html');
 
   // PWA build
@@ -346,11 +353,14 @@ function build() {
   fs.writeFileSync(path.join(OUT, 'style.css'), css);
   fs.writeFileSync(path.join(OUT, 'app.js'), js);
   fs.writeFileSync(path.join(OUT, 'content.js'), `window.HM=${json};`);
-  fs.writeFileSync(path.join(OUT, 'sw.js'), read('app/sw.js').replace('__VERSION__', version).replace('__PHOTOS__', JSON.stringify(photoIds.map((id) => `photos/${id}.jpg`))));
+  fs.writeFileSync(path.join(OUT, 'sw.js'), read('app/sw.js').replace('__VERSION__', version).replace('__PHOTOS__', JSON.stringify(photoIds.map((id) => `photos/${id}.jpg`))).replace('__MAP__', JSON.stringify(mapFiles.map(([, rel]) => rel))));
   fs.mkdirSync(path.join(OUT, 'photos'), { recursive: true });
   for (const id of photoIds) fs.copyFileSync(path.join(ROOT, 'photos', `${id}.jpg`), path.join(OUT, 'photos', `${id}.jpg`));
   fs.copyFileSync(path.join(ROOT, 'app/manifest.webmanifest'), path.join(OUT, 'manifest.webmanifest'));
   fs.cpSync(path.join(ROOT, 'app/icons'), path.join(OUT, 'icons'), { recursive: true });
+  for (const [src, dst] of mapDirs) if (fs.existsSync(path.join(ROOT, src))) fs.cpSync(path.join(ROOT, src), path.join(OUT, dst), { recursive: true });
+  // Map data from the pipeline (SPOTS.md): fetched on demand, cached by the service worker at run time (not precached)
+  for (const dir of ['data/layers', 'data/spots']) if (fs.existsSync(path.join(ROOT, dir))) fs.cpSync(path.join(ROOT, dir), path.join(OUT, dir), { recursive: true });
 
   // Single file offline backup
   fs.writeFileSync(path.join(OUT, 'hunt-mentor-offline.html'), html

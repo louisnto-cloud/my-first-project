@@ -36,7 +36,7 @@ checked: 2026-10-02
 - Valley bottoms, riparian strips (the green belt along rivers and creeks), farm fields (85%).
 - Local reading: North Thompson hayfields and cottonwood bottoms north of Kamloops (75%).
 - They feed in fields at dusk and night, and bed in thick brush, willow and cottonwood close by (75%).
-- They do not migrate far like mule deer. Most stay in a small home range year round (70%).
+- They do not migrate far like mule deer. Many make shorter seasonal moves along or across a valley, for example down to river bottoms (70%, BC government deer account).
 - They live close to houses and roads. Shooting distance rules matter a lot here.
 
 ```diagram deer-hillside

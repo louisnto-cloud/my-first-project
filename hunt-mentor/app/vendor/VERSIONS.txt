@@ -1,0 +1,14 @@
+Hunt Map vendored libraries (no runtime CDN). Downloaded from unpkg.com on 2026-10-03.
+
+maplibre-gl 6.11.2 (BSD 3 clause, maplibre-gl-LICENSE.txt)
+  https://unpkg.com/maplibre-gl@6.11.2/dist/maplibre-gl.mjs, maplibre-gl-shared.mjs, maplibre-gl-worker.mjs, maplibre-gl.css
+  ES modules. The worker file is found next to maplibre-gl.mjs (import.meta.url).
+
+maplibre-contour 0.1.1 (BSD 3 clause, mlcontour-LICENSE.txt)
+  https://unpkg.com/maplibre-contour@0.1.1/dist/index.min.js saved as mlcontour.min.js
+  mlcontour-worker.js: the worker source that index.min.js normally builds into a blob URL, saved as a same origin file
+  so the service worker can answer its terrain tile requests offline. Extracted by running index.min.js in Node with a
+  stub Blob and keeping the string it builds. Hunt Map sets mlcontour.workerUrl to this file.
+
+pmtiles 4.5.0 (BSD 3 clause, pmtiles-LICENSE.txt from github.com/protomaps/PMTiles)
+  https://unpkg.com/pmtiles@4.5.0/dist/pmtiles.js (classic script, global "pmtiles"). Loaded only when a layer uses .pmtiles.

@@ -83,7 +83,13 @@ function planSections(v) {
   v = parseMaybe(v);
   if (v == null || v === '') return [];
   if (typeof v === 'string') return [['Plan', v]];
-  if (Array.isArray(v)) return v.map((x, i) => (typeof x === 'string' ? [PLAN[i] ? PLAN[i][1] : `Step ${i + 1}`, x] : [x.title || x.name || x.step || (PLAN[i] ? PLAN[i][1] : ''), x.text ?? x.lines ?? x.body ?? '']));
+  if (Array.isArray(v)) {
+    return v.map((x, i) => {
+      if (typeof x !== 'string') return [x.title || x.name || x.step || (PLAN[i] ? PLAN[i][1] : ''), x.text ?? x.t ?? x.lines ?? x.body ?? ''];
+      const m = x.match(/^\s*(Drive|Park|Walk or ride|Walk|Ride|Walk or drive slowly|Camp|Hunt|Use|Legal|Verify)\s*:\s*([\s\S]*)$/i); // "Drive: from Heffley Creek, ..."
+      return m ? [cap(m[1]), m[2]] : [PLAN[i] ? PLAN[i][1] : `Step ${i + 1}`, x];
+    });
+  }
   const out = [], used = new Set();
   for (const [, title, keys] of PLAN) { const k = keys.find((a) => v[a] != null && v[a] !== ''); if (k) { out.push([title, v[k]]); used.add(k); } }
   for (const [k, t] of Object.entries(v)) if (!used.has(k) && t != null && t !== '') out.push([cap(k.replace(/_/g, ' ')), t]);
@@ -100,15 +106,24 @@ function flagsList(v) {
   v = parseMaybe(v); if (v == null) return [];
   return (Array.isArray(v) ? v : [v]).map((x) => {
     if (typeof x === 'string') { const m = x.match(/^\s*(ok|warn|stop)\s*[:\-]\s*(.*)$/i); return { level: m ? m[1].toLowerCase() : 'warn', text: m ? m[2] : x }; }
-    return { level: LEVEL(x.level ?? x.status ?? x.flag ?? x.light), text: x.text ?? x.label ?? x.msg ?? x.message ?? '', source: x.source, cert: num(x.cert ?? x.certainty), date: x.date ?? x.dataDate };
+    const text = x.text ?? x.t ?? x.label ?? x.msg ?? x.message ?? '';
+    const lv = x.level ?? x.lvl ?? x.status ?? x.flag ?? x.light;
+    return { level: lv != null ? LEVEL(lv) : guessLevel(text), text, source: x.source ?? x.src, cert: num(x.cert ?? x.certainty), date: x.date ?? x.dataDate };
   });
+}
+// No level given: stop for no hunting or no firearms words, check for closures, private land, parks, bylaws and edges, else ok.
+function guessLevel(t) {
+  t = String(t).toLowerCase();
+  if (/no hunting|no shooting|no firing|not allowed|prohibited|ecological reserve|spot is inside a motor vehicle closed area|inside city limits/.test(t)) return 'stop';
+  if (/closed|closure|private|park|reserve|bylaw|near the|check|permission|crosses|enters|highway|rule|limit/.test(t)) return 'warn';
+  return 'ok';
 }
 function evidenceList(v) {
   v = parseMaybe(v); if (v == null) return [];
-  return (Array.isArray(v) ? v : [v]).map((x) => (typeof x === 'string' ? { text: x } : { text: x.text ?? x.label ?? x.what ?? '', source: x.source, cert: num(x.cert ?? x.certainty), dist: num(x.dist_m ?? x.dist ?? x.distance_m), date: x.date ?? x.dataDate }));
+  return (Array.isArray(v) ? v : [v]).map((x) => (typeof x === 'string' ? { text: x } : { text: x.text ?? x.t ?? x.label ?? x.what ?? '', source: x.source ?? x.src, cert: num(x.cert ?? x.certainty), dist: num(x.dist_m ?? x.dist ?? x.distance_m), date: x.date ?? x.dataDate, pts: num(x.pts ?? x.points) }));
 }
 function parkPoint(p) {
-  const pk = parseMaybe(p.park_point ?? p.parking ?? (Array.isArray(p.park) ? p.park : null));
+  const pk = parseMaybe(p.parkLL ?? p.park_ll ?? p.park_point ?? p.parking ?? (Array.isArray(parseMaybe(p.park)) ? p.park : null));
   if (Array.isArray(pk) && pk.length >= 2 && !isNaN(+pk[0])) return [+pk[1], +pk[0]]; // [lon, lat] to [lat, lon]
   const la = num(p.park_lat ?? p.parkLat), lo = num(p.park_lon ?? p.park_lng ?? p.parkLon);
   return la != null && lo != null ? [la, lo] : null;
@@ -126,7 +141,7 @@ export function openCard(H, l, f) {
   const plan = planSections(p.plan ?? p.PLAN), flags = flagsList(p.legal_flags ?? p.flags ?? p.legal);
   const evid = evidenceList(p.evidence ?? p.EVIDENCE), months = p._m || parseMonths(p.months);
   const busy = p.busy ?? p.pressure ?? p.busier ?? p.crowd;
-  const max = num(p.score_max ?? p.scoreMax);
+  const max = num(p.score_max ?? p.scoreMax ?? p.scoreOf);
   const flagSrc = (x) => [x.source, x.cert != null ? `${x.cert}%` : '', x.date ? `data ${x.date}` : ''].filter(Boolean).join(', ');
   const dates = datesText(p.dates ?? p.data_dates ?? p.dataDates);
   const hasLegalWords = flags.length || plan.some(([t]) => t === 'Legal');
@@ -144,7 +159,7 @@ export function openCard(H, l, f) {
     ${plan.length ? `<h3 class="hmm-h">Plan</h3><ol class="hmm-plan">${plan.map(([t, x]) => `<li><b>${esc(t)}</b>${linesHtml(x)}</li>`).join('')}</ol>` : ''}
     ${hasLegalWords ? '<h3 class="hmm-h">Legal</h3><div class="hmm-banner">Study aid only. The official regulations are the law.</div>' : ''}
     ${flags.length ? `<ul class="hmm-flags">${flags.map((x) => `<li class="${x.level}"><i aria-hidden="true"></i><span><b class="hmm-fl">${x.level === 'ok' ? 'OK' : x.level === 'warn' ? 'Check' : 'Stop'}</b> ${esc(x.text)}${flagSrc(x) ? `<small>${esc(flagSrc(x))}</small>` : ''}</span></li>`).join('')}</ul>` : ''}
-    ${evid.length ? `<h3 class="hmm-h">Evidence</h3><ul class="hmm-evid">${evid.map((x) => `<li>${esc(x.text)}${x.dist != null ? ` <span class="hmm-muted">(${esc(units.dist(x.dist))})</span>` : ''}${x.source || x.cert != null ? `<small>${esc([x.source, x.cert != null ? `${x.cert}%` : '', x.date].filter(Boolean).join(', '))}</small>` : ''}</li>`).join('')}</ul>` : ''}
+    ${evid.length ? `<h3 class="hmm-h">Evidence</h3><ul class="hmm-evid">${evid.map((x) => `<li>${esc(x.text)}${x.pts ? ` <b class="hmm-pts">+${esc(x.pts)}</b>` : ''}${x.dist != null ? ` <span class="hmm-muted">(${esc(units.dist(x.dist))})</span>` : ''}${x.source || x.cert != null ? `<small>${esc([x.source, x.cert != null ? `${x.cert}%` : '', x.date].filter(Boolean).join(', '))}</small>` : ''}</li>`).join('')}</ul>` : ''}
     <p class="hmm-verify-line">Candidate only. Check posted signs. Private land can be unsigned.${dates ? ` Data dates: ${esc(dates)}.` : ''}</p>
   </div>`;
   if (selMk) selMk.remove();
