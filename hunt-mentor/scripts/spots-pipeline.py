@@ -979,6 +979,181 @@ def step_layers(cache, areas):
 
 
 # ======================================================================================
+# Elevation (terrarium z12) and analysis grid
+# ======================================================================================
+def build_dem_grid(cache, area):
+    from PIL import Image
+    out = Path(cache) / 'work' / area / 'dem.npy'
+    if out.exists():
+        return
+    x0, y0, x1, y1 = dem_tile_range(AREAS[area]['box'])
+    dem = np.full(((y1 - y0 + 1) * 256, (x1 - x0 + 1) * 256), np.nan, np.float32)
+    for x in range(x0, x1 + 1):
+        for y in range(y0, y1 + 1):
+            fn = Path(cache) / 'dem' / str(DEM_Z) / str(x) / f'{y}.png'
+            if not fn.exists():
+                continue
+            a = np.asarray(Image.open(fn).convert('RGB')).astype(np.float32)
+            h = a[..., 0] * 256.0 + a[..., 1] + a[..., 2] / 256.0 - 32768.0
+            dem[(y - y0) * 256:(y - y0 + 1) * 256, (x - x0) * 256:(x - x0 + 1) * 256] = h
+    out.parent.mkdir(parents=True, exist_ok=True)
+    np.save(out, dem)
+    json.dump({'x0': x0, 'y0': y0, 'x1': x1, 'y1': y1, 'z': DEM_Z}, open(out.with_suffix('.json'), 'w'))
+    log(f'  dem grid {area}: {dem.shape}, nan {int(np.isnan(dem).sum())}')
+
+
+class DEM:
+    def __init__(self, cache, area):
+        from scipy import ndimage
+        self.nd = ndimage
+        p = Path(cache) / 'work' / area / 'dem.npy'
+        self.h = np.load(p)
+        self.meta = json.load(open(p.with_suffix('.json')))
+        h = np.nan_to_num(self.h, nan=float(np.nanmean(self.h)))
+        hs = ndimage.uniform_filter(h, 3)
+        z = self.meta['z']
+        rows = np.arange(h.shape[0]) + 0.5
+        yt = self.meta['y0'] + rows / 256.0
+        lat = np.degrees(np.arctan(np.sinh(math.pi * (1 - 2 * yt / 2 ** z))))
+        px_m = 40075016.686 * np.cos(np.radians(lat)) / (256 * 2 ** z)
+        gy, gx = np.gradient(hs)
+        gx = gx / px_m[:, None]
+        gy = gy / px_m[:, None]
+        self.slope = np.degrees(np.arctan(np.hypot(gx, gy))).astype(np.float32)
+        self.aspect = ((np.degrees(np.arctan2(-gx, gy)) + 360.0) % 360.0).astype(np.float32)
+        # local relief: cell lower than its 500 m neighbourhood mean (draws, gullies)
+        k = max(3, int(round(500 / float(np.median(px_m)))) | 1)
+        self.relief = (hs - ndimage.uniform_filter(hs, k)).astype(np.float32)
+        self.hs = hs.astype(np.float32)
+
+    def _pix(self, lon, lat):
+        n = 2 ** self.meta['z']
+        lon = np.asarray(lon, float)
+        lat = np.asarray(lat, float)
+        xt = (lon + 180.0) / 360.0 * n
+        yt = (1.0 - np.arcsinh(np.tan(np.radians(lat))) / math.pi) / 2.0 * n
+        return (yt - self.meta['y0']) * 256 - 0.5, (xt - self.meta['x0']) * 256 - 0.5
+
+    def sample(self, what, lon, lat, order=1):
+        arr = {'elev': self.hs, 'slope': self.slope, 'aspect': self.aspect, 'relief': self.relief}[what]
+        r, c = self._pix(lon, lat)
+        return self.nd.map_coordinates(arr, [np.atleast_1d(r), np.atleast_1d(c)], order=order, mode='nearest')
+
+    def sample_xy(self, what, x, y, order=1):
+        lon, lat = xy_to_lonlat(x, y)
+        return self.sample(what, lon, lat, order)
+
+    def profile(self, line_albers, step=50.0):
+        """Elevations along a line every step m. Returns (climb up, max elevation, min elevation)."""
+        L = line_albers.length
+        if L <= 0:
+            return 0.0, None, None
+        d = np.linspace(0, L, max(2, int(L // step) + 1))
+        pts = shapely.line_interpolate_point(line_albers, d)
+        e = self.sample_xy('elev', shapely.get_x(pts), shapely.get_y(pts))
+        up = float(np.clip(np.diff(e), 0, None).sum())
+        return up, float(e.max()), float(e.min())
+
+
+class Grid:
+    """Analysis raster in BC Albers (default 100 m cells) covering one area box."""
+
+    def __init__(self, area, res=100.0):
+        self.area = area
+        self.res = res
+        self.poly = box_albers(AREAS[area]['box'])
+        minx, miny, maxx, maxy = self.poly.bounds
+        self.x0 = math.floor(minx / res) * res
+        self.y1 = math.ceil(maxy / res) * res
+        self.nx = int(math.ceil((maxx - self.x0) / res))
+        self.ny = int(math.ceil((self.y1 - miny) / res))
+        cols = np.arange(self.nx)
+        rows = np.arange(self.ny)
+        self.cx = self.x0 + (cols + 0.5) * res
+        self.cy = self.y1 - (rows + 0.5) * res
+        X, Y = np.meshgrid(self.cx, self.cy)
+        lon, lat = xy_to_lonlat(X.ravel(), Y.ravel())
+        b = AREAS[area]['box']
+        self.lon = lon.reshape(X.shape)
+        self.lat = lat.reshape(X.shape)
+        self.inbox = (self.lon >= b[0]) & (self.lon <= b[2]) & (self.lat >= b[1]) & (self.lat <= b[3])
+
+    def _pts(self, coords):
+        c = np.asarray(coords)
+        return list(zip(((c[:, 0] - self.x0) / self.res - 0.5).tolist(), ((self.y1 - c[:, 1]) / self.res - 0.5).tolist()))
+
+    def burn_polys(self, geoms, values=None, mode='L', base=None):
+        from PIL import Image, ImageDraw
+        img = Image.new(mode, (self.nx, self.ny), 0) if base is None else base
+        d = ImageDraw.Draw(img)
+        geoms = np.asarray(geoms, dtype=object)
+        if len(geoms) == 0:
+            return np.asarray(img)
+        parts, idx = shapely.get_parts(geoms, return_index=True)
+        order = np.argsort(-shapely.area(parts))
+        for j in order:
+            p = parts[j]
+            if shapely.get_type_id(p) != 3:
+                continue
+            v = 1 if values is None else int(values[idx[j]])
+            ext = shapely.get_coordinates(shapely.get_exterior_ring(p))
+            if len(ext) < 3:
+                continue
+            d.polygon(self._pts(ext), fill=v, outline=v)
+            for k in range(shapely.get_num_interior_rings(p)):
+                ring = shapely.get_coordinates(shapely.get_interior_ring(p, k))
+                if len(ring) >= 3:
+                    d.polygon(self._pts(ring), fill=0)
+        return np.asarray(img).copy()
+
+    def burn_lines(self, geoms, values=None, mode='L', width=1):
+        from PIL import Image, ImageDraw
+        img = Image.new(mode, (self.nx, self.ny), 0)
+        d = ImageDraw.Draw(img)
+        geoms = np.asarray(geoms, dtype=object)
+        if len(geoms) == 0:
+            return np.asarray(img).copy()
+        parts, idx = shapely.get_parts(geoms, return_index=True)
+        for j, p in enumerate(parts):
+            c = shapely.get_coordinates(p)
+            if len(c) < 2:
+                continue
+            v = 1 if values is None else int(values[idx[j]])
+            d.line(self._pts(c), fill=v, width=width)
+        return np.asarray(img).copy()
+
+    def burn_points(self, geoms):
+        m = np.zeros((self.ny, self.nx), bool)
+        if len(geoms) == 0:
+            return m
+        x = shapely.get_x(geoms)
+        y = shapely.get_y(geoms)
+        c = np.floor((x - self.x0) / self.res).astype(int)
+        r = np.floor((self.y1 - y) / self.res).astype(int)
+        ok = (c >= 0) & (c < self.nx) & (r >= 0) & (r < self.ny)
+        m[r[ok], c[ok]] = True
+        return m
+
+    def dist(self, mask):
+        from scipy import ndimage
+        mask = np.asarray(mask, bool)
+        if not mask.any():
+            return np.full(mask.shape, 1e9, np.float32)
+        return (ndimage.distance_transform_edt(~mask) * self.res).astype(np.float32)
+
+    def count_within(self, mask, radius_m):
+        """Number of True cells within a square window of side 2r (fast box sum)."""
+        from scipy import ndimage
+        k = int(2 * round(radius_m / self.res) + 1)
+        return ndimage.uniform_filter(mask.astype(np.float32), k, mode='constant') * k * k
+
+    def rc(self, x, y):
+        c = np.floor((np.asarray(x) - self.x0) / self.res).astype(int)
+        r = np.floor((self.y1 - np.asarray(y)) / self.res).astype(int)
+        return np.clip(r, 0, self.ny - 1), np.clip(c, 0, self.nx - 1)
+
+
+# ======================================================================================
 # (processing steps are defined below)
 # ======================================================================================
 
