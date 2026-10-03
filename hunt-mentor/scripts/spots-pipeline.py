@@ -127,6 +127,49 @@ LAYERS = {
 
 PAGE = 5000
 
+# --------------------------------------------------------------------------------------
+# Scoring weights (opinion, shown as "my pick"; tune here). Components follow SPOTS.md.
+# --------------------------------------------------------------------------------------
+W = {
+    'deer': {'uwr': 3, 'cut': 2, 'burn': 2, 'bec_low': 2, 'bec_ms': 1, 'aspect': 1, 'fields': 1},
+    'moose': {'wetland': 2, 'cut_or_burn': 2, 'uwr': 3},
+    'duck': {'size_road': 3, 'complex': 2, 'backwater': 2, 'low': 1},
+    'grouse': {'zone': 1, 'cut_edge': 1, 'riparian': 1},
+    'quail': {'zone': 2, 'farm': 2, 'creek': 1, 'draw': 1},
+    'camp': {'flat': 2, 'water': 2, 'named_water': 1, 'quiet': 1, 'spots_near': 1},
+}
+SCORE_MAX = {'deer': 11, 'moose': 7, 'duck': 8, 'grouse': 3, 'quail': 6, 'camp': 7}
+MIN_SCORE = {'deer': 6, 'moose': 4, 'duck': 4, 'grouse': 2, 'quail': 4, 'camp': 5}
+SPACING_M = 800            # no two spots of the same species and category closer than this
+SELECT_RADIUS = {'drive': 1500, 'atv': 1500, 'walk': 2000, 'backcountry': 3000, 'camp': 3000}
+CAPS = {'deer': 450, 'moose': 250, 'duck': 350, 'grouse': 300, 'quail': 300, 'camp': 120}   # per area and category, safety cap
+CUT_AGE = (5, 20)          # cutblock age that feeds deer, moose, bear, grouse
+BURN_YEARS = (2015, 2023)  # recent burns for scoring
+DEER_ZONES_LOW = {'BG', 'PP', 'IDF'}
+DEER_ZONES_MID = {'MS'}
+GROUSE_ZONES = {'IDF', 'MS', 'ESSF', 'ICH'}
+GROUSE_ZONES_EXTRA = {'B': {'CWH'}}   # Assumption (my pick): coastal grouse use CWH forest in area B
+QUAIL_ZONES = {'BG', 'PP'}
+QUAIL_MAX_ELEV = 700
+DUCK_MAX_ELEV = 900
+R3_ATV_LIMIT_M = 1700
+
+BEC_NAMES = {
+    'BG': 'Bunchgrass', 'PP': 'Ponderosa Pine', 'IDF': 'Interior Douglas fir', 'ICH': 'Interior Cedar Hemlock',
+    'MS': 'Montane Spruce', 'ESSF': 'Engelmann Spruce and Subalpine Fir', 'SBS': 'Sub Boreal Spruce',
+    'SBPS': 'Sub Boreal Pine and Spruce', 'IMA': 'Interior Mountain heather Alpine', 'CWH': 'Coastal Western Hemlock',
+    'MH': 'Mountain Hemlock', 'CDF': 'Coastal Douglas fir', 'CMA': 'Coastal Mountain heather Alpine',
+    'BWBS': 'Boreal White and Black Spruce', 'SWB': 'Spruce, Willow and Birch', 'BAFA': 'Boreal Altai Fescue Alpine',
+}
+# Winter range months (default, conservative; replaced by data/migration.json when present)
+SPECIES_WINTER_MONTHS = {'mule_deer': [11, 12, 1, 2, 3, 4], 'wt_deer': [11, 12, 1, 2, 3, 4], 'moose': [11, 12, 1, 2, 3, 4],
+                         'elk': [11, 12, 1, 2, 3, 4], 'sheep': [11, 12, 1, 2, 3, 4], 'goat': [11, 12, 1, 2, 3, 4],
+                         'caribou': [11, 12, 1, 2, 3, 4], 'bt_deer': [11, 12, 1, 2, 3, 4], 'thinhorn': [11, 12, 1, 2, 3, 4]}
+
+
+def months_key(months):
+    return ',' + ','.join(str(m) for m in months) + ','
+
 
 def log(*a):
     print(time.strftime('%H:%M:%S'), *a, flush=True)
