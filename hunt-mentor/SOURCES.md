@@ -35,7 +35,7 @@ Certainty scale: see CLAUDE.md.
 | ECCC BC migratory bird summary (Aug 2025 to Jul 2026 page) | https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html | FOUND | 2026-09-30 | Need the 2026 to 2027 version |
 | Migratory Birds Regulations in Canada: 2026 (report) | https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/consultation-process-regulations/report-series/july-2026.html | FOUND | 2026-09-30 | Search summary says no BC changes for 2026 to 2028 (70%, confirm on read) |
 | Migratory Game Bird Hunting Permit overview | https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/permit.html | FOUND | 2026-09-30 | |
-| Migratory Birds Regulations, 2022 (Justice Laws) | VERIFY | TODO | | |
+| Migratory Birds Regulations, 2022 (Justice Laws) | https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html | READ | 2026-10-04 | Schedule 3, Part 10, Table 1 (current to 2026-09-21): every duck, goose, coot and snipe row in `data/seasons/migratory.json` checked against it (99%) |
 | Firearms Act; storage, display, transport regulations (RCMP) | VERIFY | TODO | | |
 | CBSA (Canada Border Services Agency) firearms and wild meat | VERIFY | TODO | | Alaska trip |
 | CFIA (Canadian Food Inspection Agency) import rules for hunted meat | VERIFY | TODO | | |

@@ -39,7 +39,8 @@ Script: `scripts/spots-pipeline.py` (Python 3.11). Rerunnable. Every download is
 - Burns under 10 ha do not score (`BURN_MIN_HA`, my pick).
 - Named trails in the road atlas (rail, horse, snowmobile, bike) are walk only; rec trails count as ATV (all terrain vehicle) only when motorized use is listed.
 - Busier, average, quieter and remote are estimates from access. Labelled "(estimate)".
-- Season rows: `data/seasons/region2.json`, `region3.json`, `region8.json` (synopsis 2 October 2026 season tables, every MU expanded). Deer covers mule and white tailed deer; grouse covers sharp tailed grouse where listed. Ducks and geese stay on `data/regs.json` (federal). No file row: `data/regs.json`; still nothing: "VERIFY" with empty months.
+- Season rows: `data/seasons/region2.json`, `region3.json`, `region5.json`, `region8.json` (synopsis 2 October 2026 season tables, every MU expanded). Deer covers mule and white tailed deer; grouse covers sharp tailed grouse where listed. No file row: `data/regs.json`; still nothing: "VERIFY" with empty months.
+- Duck spots: `data/seasons/migratory.json` by MU (federal Migratory Birds Regulations, 2022, Schedule 3, Part 10: district, dates, daily and possession limits). A duck spot lists ducks, Canada geese, white fronted geese, snow and Ross's geese, coots and snipe; its months come from the duck row only. MUs 2-1, 3-45, 3-46, 5-16 and 7-1 are in no district: "No open season" (90%). Districts 1 and 2 dates move each year: rows hold the 2026 to 2027 dates.
 - Spot months come from the general rows (youth only and private land only rows left out). The card shows "Open today" live.
 
 ## Outputs and sizes (2026-10-04)
@@ -49,7 +50,8 @@ Script: `scripts/spots-pipeline.py` (Python 3.11). Rerunnable. Every download is
 - Each area folder has `meta.json`: counts, layer dates, scoring weights, dropped counts, notes.
 
 ## Gaps (honest list)
-- Season files cover Regions 2, 3 and 8. Still VERIFY (2026-10-04): 318 Region 5 spots in area A (no region5.json) and 280 duck spots outside duck District 3 (waiting on federal rows in `data/regs.json`).
+- Season rows (2026-10-04): every non camp spot in A, B and C has rows. 35 show "No general open season" (34 Region 5 moose, 1 Region 2 moose: LEH only or no row) and 1 duck spot in MU 3-45 shows "No open season" (no federal district).
+- Districts 1 and 2 duck and goose dates in `migratory.json` are for 2026 to 2027. Redo them each July.
 - Moose in area B: 5 spots only. Coastal moose habitat is thin and the scoring zones exclude CWH.
 - Sanctuaries and National Wildlife Areas are not in the data. Vaseux Lake is handled with a 2 km exclusion; any other sanctuary needs a check on the ground.
 - Gates, washouts and deactivated roads are not in the data. A road on the map can be closed.

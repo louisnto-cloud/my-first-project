@@ -1652,7 +1652,7 @@ def season_rows(species, region, mu):
 
 
 # Season rows from data/seasons/region<R>.json (synopsis season tables, every MU listed). First choice for a spot.
-# Ducks and geese stay on data/regs.json rows (federal rules live there).
+# Ducks and geese come from data/seasons/migratory.json (federal districts, by MU), see mig_rows.
 SEASON_SP = {'deer': ['mule deer', 'white tailed deer'], 'moose': ['moose'], 'elk': ['elk'], 'bear': ['black bear'],
              'grouse': ['grouse', 'sharp tailed grouse'], 'quail': ['quail'], 'chukar': ['chukar'], 'sheep': ['bighorn sheep'],
              'goat': ['mountain goat'], 'pheasant': ['pheasant'], 'turkey': ['turkey']}
@@ -1668,6 +1668,49 @@ def load_seasons():
             SEASONS['_files'].append({'region': d['region'], 'edition': d.get('edition'), 'rows': len(d.get('rows', [])),
                                       'checked': d.get('checked')})
     return SEASONS
+
+
+MIG = {}
+MIG_SP = {'duck': ['ducks', 'canada and cackling geese', 'white fronted geese', 'snow and ross geese', 'coot', 'snipe'],
+          'goose': ['canada and cackling geese', 'white fronted geese', 'snow and ross geese', 'brant']}
+MIG_MAIN = {'duck': 'ducks', 'goose': 'canada and cackling geese'}
+MIG_LABEL = {'snow and ross geese': "snow and Ross's geese", 'coot': 'coots'}
+
+
+def load_mig():
+    if not MIG:
+        p = ROOT / 'data' / 'seasons' / 'migratory.json'
+        MIG.update(json.load(open(p)) if p.exists() else {'rows': []})
+    return MIG
+
+
+def mig_rows(tag, mu):
+    """Federal rows (Migratory Birds Regulations, 2022) for a duck or goose spot, by MU. None when the MU is in no list."""
+    d = load_mig()
+    names = MIG_SP.get(tag)
+    if not names or not mu or not d.get('rows'):
+        return None
+    law = 'Migratory Birds Regulations, 2022, Schedule 3, Part 10'
+    nd = d.get('noDistrict') or {}
+    if mu in nd.get('mus', []):
+        return [{'sp': MIG_MAIN[tag], 'cls': '', 'dates': 'No open season', 'notes': nd['notes'], 'src': law,
+                 'cert': nd['cert'], 'none': True}]
+    dist = next((k for k, v in d.get('districts', {}).items() if mu in v['mus']), None)
+    if not dist:
+        return None
+    out = []
+    for n in names:
+        for r in d['rows']:
+            if r['district'] != dist or r['species'] != n or ('mus' in r and mu not in r['mus']):
+                continue
+            o = {'sp': MIG_LABEL.get(n, n), 'cls': '', 'open': r['open'], 'close': r['close'],
+                 'dates': f"{md_text(r['open'])} to {md_text(r['close'])}" + (f" ({r['season']})" if r.get('season') else ''),
+                 'limit': f"{r['daily']} a day, {r['possession']} in possession", 'notes': f"District {dist}. {r.get('notes') or ''}".strip(),
+                 'src': f"{law}, {r['item'].replace('Table 1, ', 'Table 1 ')}", 'cert': r['cert'], 'months': r['months']}
+            if n != MIG_MAIN[tag]:
+                o['side'] = True
+            out.append(o)
+    return out or None
 
 
 def md_text(md):
@@ -1716,13 +1759,13 @@ def spot_seasons(s):
     keys, notes, months, rows = [], {}, [], []
     s.pop('seasonNote', None)
     for t in s['species']:
-        fr = file_rows(t, s.get('region'), s.get('mu'))
+        fr = mig_rows(t, s.get('mu')) if t in MIG_SP else file_rows(t, s.get('region'), s.get('mu'))
         if fr:
             for r in fr:
                 r['tag'] = t
             rows += fr
             if t == s['sp']:
-                months = sorted({m for r in fr if not r.get('limited') for m in r.get('months', [])})
+                months = sorted({m for r in fr if not r.get('limited') and not r.get('side') for m in r.get('months', [])})
             continue
         k, mo, note = season_rows(t, s.get('region'), s.get('mu'))
         keys += [kk for kk in k if kk not in keys]
@@ -2876,12 +2919,14 @@ def make_plan(rf, s):
     season_txt = ''
     prim = [r for r in s.get('seasonRows', []) if r.get('tag') == sp]
     if prim:
-        gen = [r for r in prim if r.get('open') and not r.get('limited')]
+        gen = [r for r in prim if r.get('open') and not r.get('limited') and not r.get('side')]
+        where = lambda r: 'federal Migratory Birds Regulations' if r.get('src') else f"synopsis page {r['page']}"
         if gen:
             season_txt = (f" Season: {gen[0]['sp']}{' ' + gen[0]['cls'].lower() if gen[0]['cls'] else ''} {gen[0]['dates']}"
-                          f"{' and more rows' if len(prim) > 1 else ''} (synopsis page {gen[0]['page']}, {gen[0]['cert']}%).")
+                          f"{', ' + gen[0]['limit'] if gen[0].get('limit') else ''}"
+                          f"{' and more rows' if len(prim) > 1 else ''} ({where(gen[0])}, {gen[0]['cert']}%).")
         else:
-            season_txt = f" Season: {prim[0]['dates'].lower()} (synopsis page {prim[0]['page']}, {prim[0]['cert']}%)."
+            season_txt = f" Season: {prim[0]['dates'].lower()} ({where(prim[0])}, {prim[0]['cert']}%)."
     elif s.get('seasons'):
         it = REGS.get(s['seasons'][0], {})
         season_txt = f" Season: {it.get('value', '')} ({it.get('certainty', '')}%)."
@@ -3168,7 +3213,7 @@ def spot_feature(s, sid):
         'evidence': [{k: v for k, v in e.items()} for e in s['evidence']],
         'flags': s['flags'],
         'seasons': s['seasons'], 'seasonNote': s.get('seasonNote'), 'months': s['months'], 'monthsKey': months_key(s['months']),
-        'seasonRows': [{k: v for k, v in r.items() if k not in ('months', 'tag')} for r in s.get('seasonRows', [])],
+        'seasonRows': [{k: v for k, v in r.items() if k not in ('months', 'tag', 'side')} for r in s.get('seasonRows', [])],
         'plan': s['plan'],
         'gmaps': lk['gmaps'], 'gdir': lk['gdir'], 'apple': lk['apple'],
     }
@@ -3327,7 +3372,8 @@ def step_spots(cache, areas):
             'seasonRows': {k: {kk: REGS[k].get(kk) for kk in ('label', 'value', 'certainty', 'source', 'url', 'page', 'checked')}
                            for k in sorted({k for s in spots for k in s['seasons']}) if k in REGS},
             'regsEdition': REGS.get('_meta'), 'regsWarnings': REGS_WARN,
-            'seasonFiles': load_seasons().get('_files'),
+            'seasonFiles': load_seasons().get('_files') + [{'file': 'migratory.json', 'edition': load_mig().get('edition'),
+                                                             'rows': len(load_mig().get('rows', [])), 'checked': load_mig().get('checked')}],
             'seasonCoverage': {'withFileRows': sum(1 for s in spots if any(r.get('tag') == s['sp'] for r in s.get('seasonRows', []))),
                                'withRegsRows': sum(1 for s in spots if s['sp'] != 'camp' and s['seasons'] and not s.get('seasonNote')
                                                    and not any(r.get('tag') == s['sp'] for r in s.get('seasonRows', []))),

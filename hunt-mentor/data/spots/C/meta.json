@@ -67,7 +67,7 @@
  "routes": 1503,
  "camps": 74,
  "bytes": {
-  "spots.geojson": 4750167,
+  "spots.geojson": 5074643,
   "routes.geojson": 2208233,
   "camps.geojson": 60390
  },
@@ -308,26 +308,7 @@
    "MS"
   ]
  },
- "seasonRows": {
-  "duckbag": {
-   "label": "Duck daily bag (BC)",
-   "value": "8 ducks a day (possession 24). Inside the 8: pintail 4, canvasback 4, goldeneye 2, harlequin 2.",
-   "certainty": 99,
-   "source": "Migratory Birds Regulations, 2022; BC Synopsis page 12",
-   "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",
-   "page": null,
-   "checked": "2026-10-02"
-  },
-  "plug": {
-   "label": "Shotgun for ducks",
-   "value": "10 gauge or smaller, max 3 shells (chamber + magazine) with a plug that needs disassembly to remove. Non toxic shot only.",
-   "certainty": 99,
-   "source": "Migratory Birds Regulations, 2022, s.37 and s.38",
-   "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",
-   "page": null,
-   "checked": "2026-10-02"
-  }
- },
+ "seasonRows": {},
  "regsEdition": {
   "edition": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028 (in force 1 July 2026 to 30 June 2028)",
   "lastChecked": "2026-10-02"
@@ -347,16 +328,28 @@
    "checked": "2026-10-04"
   },
   {
+   "region": 5,
+   "edition": "2026-10-02",
+   "rows": 48,
+   "checked": "2026-10-04"
+  },
+  {
    "region": 8,
    "edition": "2026-10-02",
    "rows": 43,
    "checked": "2026-10-04"
+  },
+  {
+   "file": "migratory.json",
+   "edition": "2026-09-21",
+   "rows": 74,
+   "checked": "2026-10-04"
   }
  ],
  "seasonCoverage": {
-  "withFileRows": 1066,
+  "withFileRows": 1219,
   "withRegsRows": 0,
-  "verify": 153
+  "verify": 0
  },
  "notes": [
   "Candidate spots from official open data. Nobody publishes where hunters go; nothing here says animals are present.",
