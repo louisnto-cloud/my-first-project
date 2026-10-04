@@ -45,6 +45,32 @@
       sheet(`<h2>${esc(k)}</h2><p>${def || 'Not in the glossary yet.'}</p>`);
     }
   });
+  // step by step slides and animation replay (delegated)
+  const stepGo = (box, i) => {
+    const tr = box.querySelector('.steps-track'); const n = +box.dataset.n;
+    i = Math.max(0, Math.min(n - 1, i));
+    tr.scrollTo({ left: i * tr.clientWidth, behavior: 'smooth' });
+  };
+  const stepMark = (box) => {
+    const tr = box.querySelector('.steps-track'); const n = +box.dataset.n;
+    const i = Math.max(0, Math.min(n - 1, Math.round(tr.scrollLeft / Math.max(1, tr.clientWidth))));
+    box.querySelector('.steps-count').textContent = `${i + 1} of ${n}`;
+    box.querySelectorAll('.steps-dots i').forEach((d, k) => d.classList.toggle('on', k === i));
+    box.querySelector('.steps-prev').disabled = i === 0;
+    box.querySelector('.steps-next').disabled = i === n - 1;
+    return i;
+  };
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest && e.target.closest('.steps-prev, .steps-next');
+    if (b) { const box = b.closest('.steps'); stepGo(box, stepMark(box) + (b.classList.contains('steps-next') ? 1 : -1)); return; }
+    const r = e.target.closest && e.target.closest('.anim-replay');
+    if (r) { const svg = r.closest('figure').querySelector('svg'); if (svg && svg.setCurrentTime) { svg.setCurrentTime(0); svg.unpauseAnimations && svg.unpauseAnimations(); } }
+  });
+  document.addEventListener('scroll', (e) => {
+    const tr = e.target && e.target.classList && e.target.classList.contains('steps-track') ? e.target : null;
+    if (tr) stepMark(tr.closest('.steps'));
+  }, true);
+  const hydrateSteps = (root) => root.querySelectorAll('.steps').forEach(stepMark);
   document.addEventListener('change', (e) => {
     const c = e.target.closest('input[data-key]');
     if (c) { S.checks[c.dataset.key] = c.checked; save(); }
@@ -140,7 +166,7 @@
         ${i > 0 ? `<a class="btn" href="#/s/${id}/${i - 1}">Back</a>` : '<a class="btn" href="#/learn">List</a>'}
         ${last ? `<button class="btn primary" id="mark">${S.done[id] ? 'Done &#10003;' : 'Mark done'}</button>` : `<a class="btn primary" href="#/s/${id}/${i + 1}">Next</a>`}
       </div>`;
-    hydrateChecks(view);
+    hydrateChecks(view); hydrateSteps(view);
     renderRegs(view);
     if (st.quiz) bindQuiz(s);
     const mk = $('#mark'); if (mk) mk.onclick = () => { S.done[id] = true; save(); const nx = nextSession(); location.hash = nx ? `#/s/${nx.id}` : '#/'; };
@@ -213,7 +239,7 @@
       const c = F.cards.find((x) => x.id === sub.slice(2)); if (!c) return notFound();
       setTitle(c.title);
       view.innerHTML = `<div class="card step">${c.html}</div>`;
-      hydrateChecks(view);
+      hydrateChecks(view); hydrateSteps(view);
     }
   }
 
@@ -276,7 +302,7 @@
     view.innerHTML = `<div class="card"><div class="checklist">${l.items.map((t, k) =>
       `<label class="check"><input type="checkbox" data-key="${l.id}:${k}"><span>${t}</span></label>`).join('')}</div>
       <div class="btn-row"><button class="btn" id="reset">Untick all</button></div></div>`;
-    hydrateChecks(view);
+    hydrateChecks(view); hydrateSteps(view);
     $('#reset').onclick = () => { l.items.forEach((_, k) => delete S.checks[`${l.id}:${k}`]); save(); lists(id); };
   }
 
