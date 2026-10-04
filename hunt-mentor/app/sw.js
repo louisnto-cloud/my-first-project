@@ -62,7 +62,7 @@ async function shell(req) {
   try {
     const res = await fetch(req);
     // a precache file that was skipped at install: keep it now (map code, vendor libraries, photos)
-    if (res.ok && /\/(map|vendor|photos|seasons)\/[^/]+$|\/home\.js$/.test(new URL(req.url).pathname)) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => {}); }
+    if (res.ok && /\/(map|vendor|photos|seasons|harvest)\/[^/]+$|\/home\.js$|\/data\/migration\.json$/.test(new URL(req.url).pathname)) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => {}); }
     return res;
   } catch (err) {
     if (req.mode === 'navigate') { const idx = await caches.match('index.html'); if (idx) return idx; }

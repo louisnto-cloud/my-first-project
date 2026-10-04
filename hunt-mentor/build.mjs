@@ -341,8 +341,9 @@ function build() {
   const json = jsonPwa;
   // Hunt Map: map modules and vendored libraries (precached), loaded only when the map opens
   const listFiles = (dir) => (fs.existsSync(path.join(ROOT, dir)) ? fs.readdirSync(path.join(ROOT, dir), { recursive: true }).filter((f) => fs.statSync(path.join(ROOT, dir, f)).isFile()).map((f) => f.split(path.sep).join('/')).sort() : []);
-  const mapDirs = [['app/vendor', 'vendor'], ['app/map', 'map'], ['data/seasons', 'data/seasons']]; // season tables: used by the home dashboard offline
+  const mapDirs = [['app/vendor', 'vendor'], ['app/map', 'map'], ['data/seasons', 'data/seasons'], ['data/harvest', 'data/harvest']]; // season tables: home dashboard; harvest: map area report
   const mapFiles = mapDirs.flatMap(([src, dst]) => listFiles(src).filter((f) => !/\.(txt|md)$/i.test(f)).map((f) => [path.join(ROOT, src, f), `${dst}/${f}`]));
+  if (fs.existsSync(path.join(ROOT, 'data/migration.json'))) mapFiles.push([path.join(ROOT, 'data/migration.json'), 'data/migration.json']); // map area report (species month bands)
   const hash = crypto.createHash('sha1').update(json + css + js + askJs);
   for (const [f] of mapFiles) hash.update(fs.readFileSync(f));
   hash.update(homeJs);
@@ -368,6 +369,7 @@ function build() {
   fs.copyFileSync(path.join(ROOT, 'app/manifest.webmanifest'), path.join(OUT, 'manifest.webmanifest'));
   fs.cpSync(path.join(ROOT, 'app/icons'), path.join(OUT, 'icons'), { recursive: true });
   for (const [src, dst] of mapDirs) if (fs.existsSync(path.join(ROOT, src))) fs.cpSync(path.join(ROOT, src), path.join(OUT, dst), { recursive: true });
+  if (fs.existsSync(path.join(ROOT, 'data/migration.json'))) fs.copyFileSync(path.join(ROOT, 'data/migration.json'), path.join(OUT, 'data/migration.json'));
   // Map data from the pipeline (SPOTS.md): fetched on demand, cached by the service worker at run time (not precached)
   for (const dir of ['data/layers', 'data/spots']) if (fs.existsSync(path.join(ROOT, dir))) fs.cpSync(path.join(ROOT, dir), path.join(OUT, dir), { recursive: true });
 
