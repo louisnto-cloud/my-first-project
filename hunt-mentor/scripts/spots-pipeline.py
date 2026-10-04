@@ -56,6 +56,10 @@ AREAS = {
     # F: Region 4 (Kootenay), CWD Management Zone rules, no overlap with A to E (all west of -118.6)
     'F': {'name': 'East Kootenay: Cranbrook, Fernie, Invermere', 'box': (-116.6, 49.0, -114.6, 50.6),
           'base': {'name': 'Cranbrook', 'lat': 49.5107, 'lon': -115.7673, 'note': 'Nominatim 2026-10-04 (municipality centroid)'}},
+    # G: Regions 3, 4 and 8. Its west edge is A's east edge and its south edge is D's north edge; A and D are listed as cut outs anyway.
+    'G': {'name': 'Shuswap and Revelstoke', 'box': (-119.4, 50.5, -117.6, 51.6),
+          'excl': [(-121.6, 50.2, -119.4, 51.9), (-119.4, 49.7, -118.6, 50.5)],
+          'base': {'name': 'Salmon Arm', 'lat': 50.7005, 'lon': -119.2791, 'note': 'Nominatim 2026-10-04 (municipality centroid)'}},
 }
 
 
@@ -102,6 +106,9 @@ LAYERS = {
     'mvpr_routes': dict(type='WHSE_WILDLIFE_MANAGEMENT.WAA_MVPR_ROUTES_SP', geom='SHAPE', scope='BC',
                         props=['REGULATION_GEOGRAPHIC_NAME', 'PROHIBITION_TYPE', 'ROAD_NAME', 'ACCESS_STATUS', 'ACCESS_RANGE',
                                'ACCESS_DESCRIPTION', 'ACCESS_LIMITATION', 'REGION', 'MU_NUMBER', 'MAP_NUMBER', 'EFFECTIVE_DATE', 'EXPIRY_DATE']),
+    # national parks (Mount Revelstoke, Glacier and others): not in TA_PARK_ECORES_PA_SVW; merged into 'parks' (no hunting)
+    'natparks': dict(type='WHSE_ADMIN_BOUNDARIES.CLAB_NATIONAL_PARKS', geom='GEOMETRY', scope='BC',
+                     props=['ENGLISH_NAME', 'NATIONAL_PARK_ID']),
     'wma': dict(type='WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW', geom='SHAPE', scope='BC',
                 props=['WILDLIFE_MANAGEMENT_AREA_NAME']),
     'leh': dict(type='WHSE_WILDLIFE_MANAGEMENT.WAA_LTD_HNT_ZONE_CURR_YEAR_SVW', geom='GEOMETRY', scope='BC',
@@ -173,7 +180,7 @@ MIN_SCORE = {'deer': 7, 'moose': 4, 'duck': 4, 'grouse': 2, 'quail': 4, 'camp': 
 SPACING_M = 800            # no two spots of the same species and category closer than this
 SELECT_RADIUS = {'drive': 1500, 'atv': 1500, 'walk': 2000, 'backcountry': 3000, 'camp': 3000}
 CAPS = {'deer': 220, 'moose': 100, 'duck': 180, 'grouse': 120, 'quail': 300, 'camp': 60, 'elk': 120, 'turkey': 80}   # per area and category: best first
-AREA_CAPS = {'F': {'grouse': 80, 'moose': 60}}   # area F size budget (about 35 MB): fewer grouse routes and moose spots
+AREA_CAPS = {'F': {'grouse': 80, 'moose': 60}, 'G': {'grouse': 80, 'moose': 80}}   # area F size budget (about 35 MB): fewer grouse routes and moose spots
 
 
 def cap_for(area, sp):
@@ -188,7 +195,7 @@ DEER_ZONES_LOW = {'BG', 'PP', 'IDF'}
 DEER_ZONES_MID = {'MS'}
 GROUSE_ZONES = {'IDF', 'MS', 'ESSF', 'ICH'}
 GROUSE_ZONES_EXTRA = {'B': {'CWH'}, 'E': {'SBPS', 'SBS'}}   # Assumption (my pick): CWH forest in B; Cariboo pine and spruce in E
-QUAIL_AREAS = {'C': None, 'D': {'8'}}   # quail spots: area -> regions allowed (None = all). Region 3 has no quail season.
+QUAIL_AREAS = {'C': None, 'D': {'8'}, 'G': {'8'}}   # quail spots: area -> regions allowed (None = all). Region 3 has no quail season.
 QUAIL_ZONES = {'BG', 'PP'}
 # Elk and wild turkey spots (Region 4 has general seasons for both; my pick for the weights). Area -> on.
 ELK_AREAS = {'F'}
@@ -196,7 +203,9 @@ ELK_AREAS = {'F'}
 R4_AREAS = {'F'}
 R4_WOLF_TRENCH = ['4-2', '4-3', '4-20', '4-21', '4-22', '4-24', '4-25', '4-26', '4-34', '4-35', '4-36', '4-37', '4-40']
 R4_WOLF_LOW = ['4-4', '4-5', '4-6', '4-7']
-R4_DEER_HUNT_MUS = ['4-3', '4-4', '4-5', '4-20']   # Cranbrook Deer Hunt, Map D27 portions only
+R4_DEER_HUNT_MUS = ['4-3', '4-4', '4-5', '4-20']
+R4_TRENCH_AREAS = {'F'}
+R3_SHUSWAP_AREAS = {'G'}   # Region 3 Maps C8 Blind Bay, C9 Sicamous, C10 Salmon Arm (content/phase7/08-region-3-thompson.md)   # the Trench wolf note applies only in F: the 4-37 corner of area G is Selkirk valleys, not the Trench (my reading)   # Cranbrook Deer Hunt, Map D27 portions only
 TURKEY_AREAS = {'F'}
 ELK_ZONES_LOW = {'BG', 'PP', 'IDF'}
 TURKEY_ZONES = {'PP', 'IDF'}
@@ -780,6 +789,10 @@ def clean_bc(cache):
     out['parks'] = (g, [{'name': title_case_name(x.get('PROTECTED_LANDS_NAME')),
                          'designation': DESIGNATION.get(x.get('PROTECTED_LANDS_DESIGNATION'), x.get('PROTECTED_LANDS_DESIGNATION')),
                          'code': x.get('PROTECTED_LANDS_CODE')} for x in p], m)
+    if (Path(cache) / 'raw' / 'natparks' / 'BC' / 'done.json').exists():   # national parks: no hunting (Canada National Parks Act)
+        ng, np_, _ = load_vec(cache, 'natparks', 'BC')
+        out['parks'] = (np.concatenate([g, ng]), out['parks'][1] + [{'name': x.get('ENGLISH_NAME'), 'designation': 'National park',
+                                                                      'code': 'NP'} for x in np_], m)
     g, p, m = load_vec(cache, 'reserves', 'BC')
     out['reserves'] = (g, [{'name': x.get('ENGLISH_NAME')} for x in p], m)
     g, p, m = load_vec(cache, 'municipalities', 'BC')
@@ -1567,9 +1580,11 @@ class AreaContext:
         self.swan = self._named_lake_buffer('Swan Lake', 500, near=(-119.27, 50.30)) if area == 'D' else None
         # Region 4 synopsis No Hunting and No Shooting areas, shot only areas and access limits (area F)
         self.r4_zones = self._region4_zones() if area in R4_AREAS else []
+        # Region 3 Shuswap Lake maps C8, C9 and C10 (area G): flagged by legal_flags, excluded zones join notarget_extra
+        self.r3_zones = self._shuswap_zones() if area in R3_SHUSWAP_AREAS else []
         self.shot_only = [z for z in self.r4_zones if z.get('shotOnly')]
         nt = [self.no_hunt_zones] if self.no_hunt_zones is not None else []
-        nt += [z['geom'] for z in self.r4_zones if z.get('exclude')]
+        nt += [z['geom'] for z in self.r4_zones + self.r3_zones if z.get('exclude')]
         if self.vaseux is not None:
             nt.append(self.vaseux)
         if self.swan is not None:
@@ -1769,6 +1784,71 @@ class AreaContext:
         box = self.grid.poly.buffer(5000)
         Z = [z for z in Z if shapely.intersects(z['geom'], box.buffer(z['near']))]
         log(f"  Region 4 zones in area {self.area}: {', '.join(z['key'] for z in Z)}")
+        return Z
+
+    def _shuswap_zones(self):
+        """Region 3 synopsis Maps C8, C9 and C10 (page 35, all MU 3-26). Points from BC Geographical Names, water from FWA lakes.
+        Where the legal line is not in the data the text says so and the edge is my pick."""
+        Z = []
+        syn = 'Synopsis Region 3'
+        ng, np_, _ = self.ca['names']
+        def name_pt(n):
+            idx = [i for i, x in enumerate(np_) if (x['name'] or '').lower() == n.lower()]
+            return shapely.centroid(shapely.union_all(ng[idx])) if idx else None
+        lg, lp, _ = self.ca['lakes']
+        def lake(*names):
+            idx = [i for i, x in enumerate(lp) if (x['name'] or '') in names]
+            return shapely.union_all(lg[idx]) if idx else None
+        def add(key, geom, text, cert, src, exclude=True, near=1500):
+            if geom is None or geom.is_empty:
+                log(f'  Region 3 zone {key}: no geometry, skipped')
+                return
+            Z.append(dict(key=key, geom=geom, text=text, cert=cert, src=src, exclude=exclude, near=near))
+        water = lake('Shuswap Lake', 'Mara Lake')
+        # C9 Sicamous: waters of Mara and Shuswap lakes east of Murdock Point to Semaphore Point and north of an east west line
+        # through the mouth of Sicamous Creek
+        mp_, sp_ = name_pt('Murdock Point'), name_pt('Semaphore Point')
+        sg, spp, _ = self.ca['streams']
+        sc = [sg[i] for i, x in enumerate(spp) if (x['name'] or '') == 'Sicamous Creek']
+        if water is not None and mp_ is not None and sp_ is not None and sc:
+            mouth_y = min(shapely.get_coordinates(shapely.union_all(sc))[:, 1])   # lowest end of the creek in y (estimate of the mouth)
+            ax, ay, bx, by = mp_.x, mp_.y, sp_.x, sp_.y
+            far = 60000
+            dx, dy = bx - ax, by - ay
+            L = (dx * dx + dy * dy) ** 0.5
+            ux, uy = dx / L, dy / L
+            nx_, ny_ = uy, -ux   # normal pointing east of the line (for a line drawn roughly north south)
+            if nx_ < 0:
+                nx_, ny_ = -nx_, -ny_
+            half = shapely.Polygon([(ax - ux * far, ay - uy * far), (ax + ux * far, ay + uy * far),
+                                    (ax + ux * far + nx_ * far, ay + uy * far + ny_ * far), (ax - ux * far + nx_ * far, ay - uy * far + ny_ * far)])
+            north = shapely.box(ax - far, mouth_y, ax + far, mouth_y + far)
+            g = shapely.intersection(shapely.intersection(water, half), north)
+            add('C9', g.buffer(100) if not g.is_empty else None,
+                'Sicamous (Map C9): No Shooting or Hunting Area on all waters of Mara and Shuswap lakes east of a line from Murdock Point '
+                'to Semaphore Point and north of an east west line through the mouth of Sicamous Creek (synopsis page 35, 99%). '
+                'Drawn from the named points, the creek and FWA lake outlines plus 100 m (estimate).', 99,
+                syn + '; BC Geographical Names; FWA lakes', near=2000)
+        # C10 Salmon Arm: waters of Shuswap Lake southeast of a line from the Salmon Arm Wharf to a white marker (not in the data)
+        cg, cp = self.cities
+        sa = [cg[i] for i, x in enumerate(cp) if 'Salmon Arm' in (x['name'] or '')]
+        if water is not None and sa:
+            g = shapely.intersection(water, shapely.union_all(sa).buffer(1500))
+            add('C10', g.buffer(100) if not g.is_empty else None,
+                'Salmon Arm (Map C10): No Shooting or Hunting Area on the waters of Shuswap Lake southeast of a line from the end of the '
+                'Salmon Arm Wharf to a white marker (synopsis page 35, 99%). The wharf line is not in this data: lake water within 1.5 km '
+                'of the city limits is left out (my pick). VERIFY on the ground.', 99, syn + '; ABMS_MUNICIPALITIES_SP; FWA lakes', near=2500)
+        # C8 Blind Bay No Shooting Area: from Reedman Point to the Sorrento Eagle Bay Road (land and shore, legal line not in the data)
+        rp_, bb = name_pt('Reedman Point'), name_pt('Blind Bay')
+        pts = [q for q in (rp_, bb) if q is not None]
+        if pts:
+            add('C8', shapely.union_all([q.buffer(1500) for q in pts]),
+                'Blind Bay (Map C8): No Shooting Area from Reedman Point to the Sorrento Eagle Bay Road; bows allowed unless posted '
+                '(synopsis pages 10 and 35, 99%). The legal line is not in this data: 1.5 km around Reedman Point and Blind Bay is left '
+                'out (my pick). VERIFY on the ground.', 99, syn + '; BC Geographical Names', near=3000)
+        box = self.grid.poly.buffer(5000)
+        Z = [z for z in Z if shapely.intersects(z['geom'], box.buffer(z['near']))]
+        log(f"  Region 3 Shuswap zones in area {self.area}: {', '.join(z['key'] for z in Z)}")
         return Z
 
     def shot_only_at(self, x, y, elev=None):
@@ -3100,7 +3180,9 @@ def legal_flags(rf, s):
     if rf.park_tree is not None:
         for j in rf.park_tree.query(route, predicate='intersects'):
             p = ctx.parks[1][int(j)]
-            if p['designation'] == 'Ecological reserve':
+            if p['designation'] == 'National park':
+                rule = 'No hunting in a national park; carry firearms unloaded and cased (Canada National Parks Act, 99%).'
+            elif p['designation'] == 'Ecological reserve':
                 rule = 'No hunting and no firing a firearm or bow in an ecological reserve (synopsis page 9, 99%).'
             else:
                 rule = 'Hunting only where that park allows it, in open season. Check its bcparks.ca page (synopsis page 9, 99%).'
@@ -3165,6 +3247,11 @@ def legal_flags(rf, s):
                           'src': 'TA_WILDLIFE_MGMT_AREAS_SVW', 'date': dates['wma'], 'cert': 95})
     if region == '4':
         flags += region4_flags(rf, s, pt, route)
+    for z in getattr(ctx, 'r3_zones', []):
+        if shapely.intersects(z['geom'], route):
+            flags.append({'t': 'Route enters this area: ' + z['text'], 'src': z['src'], 'date': dates['roads'], 'cert': 85})
+        elif z['near'] and shapely.distance(z['geom'], pt) < z['near']:
+            flags.append({'t': 'Nearby: ' + z['text'], 'src': z['src'], 'date': dates['roads'], 'cert': 85})
     if getattr(ctx, 'swan', None) is not None and shapely.distance(ctx.swan, pt) < 1500:
         flags.append({'t': 'Near Swan Lake: the lake and all its marsh are a No Shooting or Hunting Area (synopsis Region 8, Map J17, 99%). '
                            'The edge is not in this data. VERIFY on the ground.',
@@ -3198,7 +3285,7 @@ def region4_flags(rf, s, pt, route):
                      'Kootenay Region (synopsis page 37, 99%). Snowmobiles may not be used for hunting in Region 4 from 1 April to '
                      '30 November (page 37, 99%).', 'src': syn, 'date': d4, 'cert': 99})
     el = s.get('elev') or 0
-    if (mu in R4_WOLF_TRENCH or mu in R4_WOLF_LOW) and el < 1100:
+    if ((mu in R4_WOLF_TRENCH and ctx.area in R4_TRENCH_AREAS) or mu in R4_WOLF_LOW) and el < 1100:
         where = 'the East Kootenay Trench part of MU ' + mu if mu in R4_WOLF_TRENCH else 'MU ' + mu
         out.append({'t': f'Wolf: no closed season in {where} below 1,100 m (synopsis page 39 footnote, 90%: the Trench line is not '
                          'mapped and "below 1,100 m" is my reading for both groups). VERIFY with the regional office.',
@@ -3928,7 +4015,14 @@ def step_spots(cache, areas):
                   'Hwy 3 Map D14 strip: 400 m no hunting or shooting from the westernmost Hwy 3 bridge over Michel Creek east of Sparwood '
                   '(Loop Bridge is not in the data, assumption) '
                   'to the Alexander Creek crossing. Canal Flats Map D17 shot only area: big game targets within 3 km of the village and under '
-                  '1,067 m are left out (my pick).'] if a in R4_AREAS else []),
+                  '1,067 m are left out (my pick).'] if a in R4_AREAS else [])
+              + (['Area G (Shuswap and Revelstoke) spans Regions 3, 4 and 8; its west edge is area A and its south edge is area D (no overlap).',
+                  'Region 4 spots in G carry the region wide ungulate and turkey feeding and baiting ban and the snowmobile for hunting closure. '
+                  'No G MU is in the CWD Management Zone. The Trench wolf note is not applied in the 4-37 corner of G (not the Trench, my reading).',
+                  'Region 3 Maps C8 Blind Bay, C9 Sicamous and C10 Salmon Arm: drawn from BC Geographical Names, FWA lakes and the city limits '
+                  'with a margin (my pick); targets inside are left out and nearby spots are flagged.',
+                  'National parks (Mount Revelstoke, Glacier) come from CLAB_NATIONAL_PARKS: no hunting, targets inside left out.',
+                  'Quail spots only in Region 8 (Region 3 and Region 4 have no quail season in G).'] if a == 'G' else []),
         }
         json.dump(meta, open(out / 'meta.json', 'w'), indent=1, ensure_ascii=False)
         log(f'spots {a}: {len(feats)} spots, {len(routes)} routes, {len(campf)} camps, '
@@ -4010,7 +4104,7 @@ def winter_months(key, default):
     return default
 
 
-MIG_POLY = {'F': {'min_km2': 3.0, 'simplify': 250}}   # mountain bands in area F are fragmented: coarser, for the size budget
+MIG_POLY = {'F': {'min_km2': 3.0, 'simplify': 250}, 'G': {'min_km2': 3.0, 'simplify': 250}}   # mountain bands in area F are fragmented: coarser, for the size budget
 
 
 def mask_to_polys(grid, mask, min_km2=0.5, simplify=120):
