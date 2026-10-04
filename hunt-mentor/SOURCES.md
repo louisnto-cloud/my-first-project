@@ -102,3 +102,9 @@ Certainty scale: see CLAUDE.md.
 | Source | Link | Used in |
 |---|---|---|
 | BC Big Game Harvest Statistics 1976 to 2024 (BC Data Catalogue, updated 2026-09-14, Open Government Licence BC) | https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024 | data/harvest/bc-harvest.json, map area report |
+
+## Videos (added 2026-10-04)
+
+- Manifest: `data/videos/videos.json`. Placements: `research/2026-10-04-video-placements.md`.
+- YouTube (64 link cards, no embeds, no thumbnails copied): every link verified with the YouTube oEmbed endpoint (https://www.youtube.com/oembed) on 2026-10-04; title and channel copied exactly. Main channels: Ducks Unlimited, Elk101, MeatEater, Parks Canada, Alberta Parks, Alberta Hunter Education Instructors' Association, Canadian Red Cross, AdventureSmart, Hunt Fish Manitoba, Pheasants Forever and Quail Forever, Ruffed Grouse Society, National Deer Association, onX Hunt, Mossy Oak, Outdoor Life, Hunter Ed, NSSF, state agencies (Ohio, New Mexico, Arkansas). Tactics only: opinion, never a source for BC rules. US videos flagged "US rules shown, BC rules differ".
+- Wikimedia Commons (21 animal behaviour clips, streamed from upload.wikimedia.org, never copied into the repo): licences read from each file page's metadata on 2026-10-04. Public domain (USFWS), CC0, CC BY 2.0 and 3.0, CC BY-SA 2.0, 3.0 and 4.0. Author and licence stored per clip in the manifest and shown as credit.

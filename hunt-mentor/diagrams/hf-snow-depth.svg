@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Snow depth against a deer's legs, side view. Up to about 30 centimetres the deer walks normally. Past about 30 centimetres it struggles. Past about 50 centimetres deer leave the slope for lower ground.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="250" width="400" height="50" fill="#c9b79c"/>
+  <ellipse cx="300" cy="140" rx="60" ry="26" fill="#8b5a2b"/>
+  <path d="M340 128 L356 96 L370 100 L356 136 Z" fill="#8b5a2b"/>
+  <ellipse cx="372" cy="92" rx="17" ry="9" fill="#8b5a2b"/>
+  <path d="M360 86 l-8 -14 l12 8 Z" fill="#8b5a2b"/>
+  <g stroke="#8b5a2b" stroke-width="8" stroke-linecap="round"><line x1="258" y1="156" x2="256" y2="250"/><line x1="276" y1="158" x2="278" y2="250"/><line x1="324" y1="158" x2="322" y2="250"/><line x1="342" y1="156" x2="344" y2="250"/></g>
+  <rect x="0" y="214" width="400" height="36" fill="#cfe0ea" opacity=".8"/>
+  <rect x="0" y="190" width="400" height="24" fill="#cfe0ea" opacity=".45"/>
+  <line x1="0" y1="214" x2="400" y2="214" stroke="#4a7fb0" stroke-width="3"/>
+  <line x1="0" y1="190" x2="400" y2="190" stroke="#c0392b" stroke-width="3" stroke-dasharray="8 6"/>
+  <text x="12" y="238" font-size="15" font-weight="bold" fill="#2f3a2b">30 cm: struggle (85%)</text>
+  <text x="12" y="182" font-size="15" font-weight="bold" fill="#c0392b">50 cm: leave slope (80%)</text>
+  <text x="12" y="30" font-size="17" font-weight="bold" fill="#2f3a2b">Snow depth</text>
+  <text x="12" y="52" font-size="17" font-weight="bold" fill="#2f3a2b">pushes deer down</text>
+  <text x="12" y="285" font-size="14" fill="#2f3a2b">Drawing not to scale</text>
+</svg>

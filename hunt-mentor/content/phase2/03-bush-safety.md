@@ -7,13 +7,23 @@ minutes: 15
 checked: 2026-10-02
 ---
 > [!why]
-> Most bad days in the bush start small: a wrong turn, wet socks, dark at 6 pm. A plan and a few tools turn them back into small problems.
+> Most bad days in the bush start small: a wrong turn, wet socks, dark at 6 pm. A plan and a few tools keep them small.
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
 ## STOP when lost
 
+```steps Lost? STOP
+gr-stop-s | Stop. Sit down. Do not keep walking.
+gr-stop-t | Think. Where did you last know where you were?
+gr-stop-o | Observe. Map, compass, sun, creeks, roads.
+gr-stop-p | Plan. Stay put, or move only if sure.
+```
+
+- STOP: Stop, Think, Observe, Plan (AdventureSmart) (75%). Lost, disoriented or hurt (75%).
+
+```more the details
 - AdventureSmart teaches STOP: Stop, Think, Observe, Plan (75%).
 - Some AdventureSmart material uses Sit instead of Stop. Same idea (70%).
 - **Stop:** do not keep walking. Most people make it worse by pushing on.
@@ -21,15 +31,23 @@ checked: 2026-10-02
 - **Observe:** map app, compass, sun, creeks, the sound of a road.
 - **Plan:** stay put, or move only if you are sure. Shelter and fire before dark.
 - Use it when lost, disoriented or hurt (75%).
+```
 
 ## The trip plan
 
+```diagram gr-trip-plan
+```
+
+- Always leave a trip plan with someone at home (75%). List the car, the [[ATV]] and the boat.
+
+```more the 3 Ts and the app
 - AdventureSmart's 3 Ts: Trip planning, Training, Taking the essentials (75%).
 - Always fill out a trip plan and leave it with someone at home (75%).
 - AdventureSmart has a free trip plan app that sends your plan to a contact (70%).
 - Write: who, vehicle and plate, where you park, route, return time, when to call for help.
 - Say who to call if you are late: 911, and police will start a search (Tip: confirm with your local police).
-- Assumption: you hunt from the car, the [[ATV]] and the boat. List all three in the plan.
+- Assumption: you hunt from the car, the ATV and the boat. List all three in the plan.
+```
 
 ```checklist bs-tripplan
 Trip plan written and sent
@@ -40,35 +58,66 @@ Phone and satellite device charged
 
 ## Satellite messengers and iPhone
 
+```diagram gr-sky-view
+```
+
+- iPhone 14 or later: Emergency SOS via satellite in Canada, iOS 16.1 or later (85%).
+- Needs open sky (75%).
+
+```more iPhone details and messengers
 - Much of the backcountry near Sun Peaks has no cell signal (Assumption: check with your carrier map).
 - iPhone 14 or later can send Emergency SOS via satellite in Canada with iOS 16.1 or later (85%).
 - Messages via satellite and Find My via satellite also work in Canada on iPhone 14 or later (80%).
 - Apple says it is free for two years from activation of the phone (80%). After that: VERIFY.
 - It needs open sky. Trees, hills and canyons slow or block it (75%).
 - A dedicated satellite messenger (two way texting and SOS) works on any phone. Needs a paid plan.
+```
 
 > [!lean]
-> iPhone 14 or later in both pockets? That covers SOS. Only one does, or an older phone? Buy or rent a satellite messenger so each hunter can call for help alone.
+> Both carry iPhone 14 or later? That covers SOS. If not, buy or rent a satellite messenger so each hunter can call for help alone.
 
 ## Hypothermia
 
+```diagram gr-hypo-scale
+```
+
+- Shivering that **stops** is an emergency (75%).
+
+```more first aid and October risk
 - Mild: shivering, cold, and the "umbles": fumbles, mumbles, stumbles, grumbles (75%).
 - Moderate: violent shivering, confusion, poor judgment (75%).
 - Severe: shivering **stops**, stiff muscles, glassy stare, slow breathing. This is an emergency (75%).
 - First aid: out of wind and wet, dry layers on, cover head and neck, rewarm gently (75%).
 - Warm sweet drinks only if fully awake and able to swallow (Tip, common first aid advice).
 - October risk: wet from sweat or rain, then sitting still glassing as the sun drops.
+```
 
 ## Weather and wildfire
 
+```diagram gr-turnback
+```
+
+- Turn back 1 hour before sunset. Dry layer and toque every trip.
+
+```more fire rules and the numbers
 - Interior October can go from sun to sleet in an afternoon. Pack a dry layer and a toque every trip.
 - Daylight is short. Turn back time = 1 hour before sunset.
 - Kamloops Fire Centre campfire and open fire rules changed in late September 2026 (75%). Today's status: VERIFY on the BC Wildfire Service app before any fire.
 - Report a wildfire: 1 800 663 5555 toll free, or *5555 on a cell (80%).
-- Never park a hot vehicle or [[ATV]] on dry grass. The exhaust can start a fire (Tip).
+- Never park a hot vehicle or ATV on dry grass. The exhaust can start a fire (Tip).
+```
 
 ## Bears and cougars
 
+```anim gr-bear-spray Aim low, sweep up.
+```
+
+```diagram gr-bear-response
+```
+
+- Spray on the hip belt or chest, not in the pack (Tip).
+
+```more spray range, grizzlies, and who to call
 - Black bears live around Kamloops and Sun Peaks (75%).
 - Grizzlies: the Thompson Nicola region holds about 317 grizzlies (65%). A Sun Peaks visitor site says only black bears at the resort (60%). My lean: carry spray as if both are there.
 - Bear spray: point it at the ground a few metres in front of the bear, then sweep up to its face (70%).
@@ -79,29 +128,40 @@ Phone and satellite device charged
 - Cougar: never run, look big, back away slowly, keep eye contact. If attacked, always fight back (75%, WildSafeBC).
 - A gut pile draws bears. Move the meat away from it fast and watch your back.
 - Report a dangerous bear or cougar: RAPP (Report All Poachers and Polluters) 1 877 952 7277, open 24/7, for wildlife and human conflicts where public safety is at risk (synopsis page 2) (95%).
+```
 
 ## First aid kit with a tourniquet
 
+```diagram gr-tourniquet
+```
+
+- Firm pressure first. Life threatening limb bleed and pressure fails: tourniquet, 5 to 10 cm (2 to 4 in) above (70%).
+
+```more Red Cross steps and the kit
 - The big killer after a fall, knife slip or gunshot is bleeding from an arm or leg.
 - Red Cross guidance: firm direct pressure first. If bleeding from a limb is life threatening and pressure fails, use a tourniquet (70%).
 - Place it about 5 to 10 cm (2 to 4 in) above the wound, between wound and heart. Tighten until bleeding stops. Write the time (70%).
 - Buy a commercial windlass tourniquet, not a homemade one. The Red Cross training kit uses the SOFTT (Special Operations Forces Tactical Tourniquet) type (65%).
 - Kit carried by each hunter on the body: tourniquet, gauze, pressure bandage, gloves, emergency blanket, lighter.
 - Take a first aid course. A kit you do not know how to use is weight.
+```
 
 > [!rule]
 > Grandpa's rule (wisdom): Tell someone where you went. Pack like you will sleep out. Leave the bush an hour before dark.
 
 > [!mistake]
-> - No trip plan because "we are only going up the road".
-> - Bear spray buried in the pack instead of on the hip belt or chest.
-> - Sweating hard on the climb in, then sitting still in wet clothes to glass.
+> - No trip plan, "only up the road".
+> - Bear spray buried in the pack.
+> - Sweating on the climb, then sitting still wet.
 
 > [!field]
-> Before the first hunt: fill out the AdventureSmart trip plan, test SOS demo mode on your iPhone, and each practise drawing bear spray from the holster in under 2 seconds with the safety clip on.
+> Fill out the AdventureSmart trip plan. Test SOS demo mode on your iPhone. Practise drawing bear spray in under 2 seconds, safety clip on.
 
 ## Sources
 
+- RAPP number read directly in the Synopsis (99%). Everything else through search previews, capped at 85%.
+
+```more all sources
 - [AdventureSmart: The Three Ts](https://www.adventuresmart.ca/the-three-ts/), checked 2026-10-01 (search preview)
 - [Global News: BC AdventureSmart safety plan, STOP](https://globalnews.ca/news/9437036/b-c-adventure-smart-safety-plan-stop), checked 2026-10-01 (search preview)
 - [Apple Support: Use Emergency SOS via satellite on your iPhone (Canada)](https://support.apple.com/en-ca/101573), checked 2026-10-01 (search preview)
@@ -119,6 +179,7 @@ Phone and satellite device charged
 - [Kamloops Fire Centre open fire update, CFJC Today](https://cfjctoday.com/2026/09/29/category-2-and-3-open-fires-permitted-within-the-cariboo-fire-centre/), checked 2026-10-01 (search preview, news)
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: page 2 (RAPP number and what to report). Checked 2026-10-02 (99%)
 - Note: all other pages read through search previews. Capped at 85%.
+```
 
 ```quiz
 [

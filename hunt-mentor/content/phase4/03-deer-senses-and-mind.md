@@ -29,12 +29,6 @@ checked: 2026-10-02
 ```diagram sg-senses-rank
 ```
 
-| Rank | Sense | Beat it? |
-|---|---|---|
-| 1 | Nose | Only with the wind (85%) |
-| 2 | Ears | Quiet gear, slow feet (85%) |
-| 3 | Eyes | Stillness and a background (85%) |
-
 > [!rule]
 > You can fool the eyes. You can quiet your feet. You can never fool the nose. Play the wind.
 
