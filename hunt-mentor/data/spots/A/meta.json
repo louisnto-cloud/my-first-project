@@ -63,7 +63,7 @@
  "camps": 220,
  "bytes": {
   "index.geojson": 421917,
-  "detail": 6677928,
+  "detail": 6678318,
   "routes": 3391304,
   "camps.geojson": 94108
  },
@@ -738,6 +738,7 @@
    "droppedCap": 886,
    "droppedExact": 2
   },
+  "outsideBC": 0,
   "spacingRemoved": 40
  },
  "styleLinesFlagged": 48,
@@ -774,6 +775,20 @@
     "creek": 1,
     "draw": 1
    },
+   "elk": {
+    "uwr": 3,
+    "burn": 2,
+    "cut": 1,
+    "bec_low": 2,
+    "bec_ms": 1,
+    "aspect": 1,
+    "water": 1
+   },
+   "turkey": {
+    "zone": 2,
+    "farm": 2,
+    "creek": 1
+   },
    "camp": {
     "flat": 2,
     "water": 2,
@@ -788,7 +803,9 @@
    "duck": 8,
    "grouse": 3,
    "quail": 6,
-   "camp": 7
+   "camp": 7,
+   "elk": 11,
+   "turkey": 5
   },
   "min": {
    "deer": 7,
@@ -796,7 +813,9 @@
    "duck": 4,
    "grouse": 2,
    "quail": 4,
-   "camp": 5
+   "camp": 5,
+   "elk": 7,
+   "turkey": 4
   },
   "spacingM": 800,
   "selectRadiusM": {
@@ -812,7 +831,9 @@
    "duck": 180,
    "grouse": 120,
    "quail": 300,
-   "camp": 60
+   "camp": 60,
+   "elk": 120,
+   "turkey": 80
   },
   "cutAgeYears": [
    5,
@@ -838,6 +859,12 @@
  "regsWarnings": [],
  "seasonFiles": [
   {
+   "region": 1,
+   "edition": "2026-10-02",
+   "rows": 38,
+   "checked": "2026-10-04"
+  },
+  {
    "region": 2,
    "edition": "2026-10-02",
    "rows": 43,
@@ -850,9 +877,33 @@
    "checked": "2026-10-04"
   },
   {
+   "region": 4,
+   "edition": "2026-10-02",
+   "rows": 53,
+   "checked": "2026-10-04"
+  },
+  {
    "region": 5,
    "edition": "2026-10-02",
    "rows": 48,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 6,
+   "edition": "2026-10-02",
+   "rows": 59,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": "7A",
+   "edition": "2026-10-02",
+   "rows": 42,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": "7B",
+   "edition": "2026-10-02",
+   "rows": 43,
    "checked": "2026-10-04"
   },
   {
