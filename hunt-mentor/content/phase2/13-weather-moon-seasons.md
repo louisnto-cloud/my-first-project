@@ -9,55 +9,113 @@ checked: 2026-10-02
 > [!why]
 > Hunters blame the moon, the pressure and the front. Know which ones the science backs, so you spend your days off on the things that matter.
 
+```diagram hf-evidence-bars
+```
+
+- The best day to hunt is the day you can go. Weather picks where, not whether (Tip).
+
+```more the evidence summary in full
 - Strong evidence: snow and cold move mule deer, the [[Rut]] moves bucks, hunting pressure changes deer.
 - Weak or mixed evidence: barometric pressure and fronts.
 - Almost no evidence: moon phase.
 - GPS (Global Positioning System) collar studies give the best data. Most are on white tailed deer in the United States (Tip: Interior mule deer may differ).
 - Bottom line (Tip): the best day to hunt is the day you can go. Weather picks where, not whether.
+```
 
 ## Snow and cold snaps
 
+```diagram hf-snow-depth
+```
+
+- Snow and cold trigger mule deer migration to [[Winter range]] (85%).
+- First real cold snap: glass lower slopes and south faces (Tip).
+
+```more snow and cold, in full
 - Snow and cold, not the rut, trigger mule deer migration to [[Winter range]] (85%, Monteith 2011, via Hunt Mentor research notes).
 - In the BC Wildlife Federation mule deer study, most collared deer migrated and returned to winter range in October to November (85%, SIMDeer, search preview).
 - Deer have trouble in snow deeper than about 30 cm (85%, BC government deer account) and leave slopes where it passes about 50 cm (80%, University of British Columbia thesis).
 - Fresh snow shows you tracks: you learn what moved last night, and how fresh (Tip). See Snow tracking.
 - First real cold snap of the fall: glass lower slopes and south faces (Tip).
 - Deer reduce movement during an actual storm (80%, Penn State Deer Forest Study).
+```
 
 ## Fronts and barometric pressure
 
+```diagram hf-storm-bars
+```
+
+- Deer slowed during storms, not before them (80%, Penn State).
+- Pressure: weak, mixed evidence. Do not cancel a hunt for it (Tip).
+
+```more fronts and pressure studies, in full
 - Hunter belief: deer feed hard before a front and when pressure falls or rises (Tip, not proven).
 - Penn State tracked collared does through 30 winter storms, 2015 to 2017. "Data show no statistical or biological significance of oncoming winter storms on behavior or movement of our collared deer." (80%, read directly)
 - Deer slowed down during storms, not before them (80%, same study).
 - A Mississippi State team found temperature explained most of the change in movement in an Oklahoma collar study, with no clear weather pattern (65%, search preview).
 - A South Carolina study of 116 collared deer found weather, temperature, wind and pressure each mattered in some seasons and hours, not all (65%, search preview).
 - Honest rating: barometric pressure is weak and mixed evidence. Do not cancel a hunt for it (Tip).
+```
 
 ## Wind, rain, heat
 
+| Weather | Do this |
+|---|---|
+| Strong wind | Glass sheltered lee slopes (Tip) |
+| Light steady wind | Best for a stalk (Tip) |
+| Rain | Bucks moved less than does (65%) |
+| Warm October spell | Shade, edges of the day (Tip) |
+| Storm | Deer move less (80%) |
+
+- Have a bench, glassing point and wind for every weather (Tip).
+
+```more wind, rain and heat, in full
 - Strong wind: you cannot hear, deer cannot hear, scent spreads unpredictably (Tip). Glass sheltered lee slopes (Tip).
 - Light steady wind is best for a stalk (Tip). See Wind and thermals.
 - Rain: bucks in one Penn State project moved less in rain than does (65%, preliminary blog notes).
 - A warm spell in October: deer bed in shade and move at the edges of the day (Tip).
 - Your plan for every weather: which bench, which glassing point, which wind (Tip). See Map scouting.
+```
 
 ## The moon
 
+```diagram hf-moon-vs-rut
+```
+
+- Moon effect on bucks: about 4 m (4 yd) an hour, inside GPS (Global Positioning System) error (75%).
+- Legal hours never change with the moon (99%).
+
+```more the moon, in full
 - Hunter belief: moon phase or moon position decides when deer move (Tip, not proven).
 - Mississippi State University Deer Lab, 48 collared bucks, September to February: moon effects were about 4 m (4 yd) an hour, inside the GPS error. "The moon has no effect on buck movement." (75%, read through a MeatEater article)
 - An older GPS collar study of white tailed deer found moon phase had no effect on day or night movement (65%, search preview).
 - The same Mississippi data showed buck travel nearly doubled in the rut (75%). Rut beats moon.
 - Legal hunting hours do not change with the moon: game, except migratory birds, not from 1 hour after sunset to 1 hour before sunrise (99%, synopsis page 11, item 38 (2 October 2026 edition)).
 - Honest rating: moon phase, weak to no evidence (Tip).
+```
 
 ## Rut and hunting pressure
 
+```diagram hf-rut-calendar
+```
+
+- Mule deer rut: mid November to mid December (80%).
+- In the rut bucks travel more, and in daylight (75%).
+
+```more rut and pressure, in full
 - Mule deer rut: mid November to mid December (80%, research notes). White tailed deer peak in November (80%).
 - In the rut bucks travel more and in daylight. This is the one calendar effect the collars agree on (75%).
 - Hunting pressure: studies report hunted deer move to thick cover, away from roads, and shift activity to night (70%, search preview).
 - One study saw the shift within 48 hours of the opener (65%, search preview).
 - Answer: walk past the last truck, hunt midweek, hunt the thick stuff others skip (Tip).
 - Opening weekend, opening morning: other hunters move deer too. Sit a crossing and let them (Tip).
+```
+
+## Beat the opening day crowd
+
+```anim hf-pressure-shift Trucks arrive, deer go thick. Follow them in.
+```
+
+- Hunt midweek. Sit a crossing on opening morning (Tip).
 
 ## The night before
 
@@ -72,19 +130,34 @@ Trip plan left with someone, return time set
 Phone and power bank charged, offline maps downloaded
 ```
 
+```more legal times and changes
 - Sunrise and sunset: the hunter decides in the field, based on terrain and circumstances (99%, synopsis page 12).
 - In season changes are posted on the synopsis website (99%, synopsis page 7).
+```
+
+## Grandpa's rule and mistakes
+
+| Date | Moon | Pressure | Temp | Deer seen |
+|---|---|---|---|---|
+| Oct 12 | full | falling | 4 C | 3 does |
+| Oct 19 | half | steady | 1 C | 1 buck |
+
+- Example rows: log your own season like this, then compare in January.
 
 > [!rule]
 > Grandpa's rule (wisdom): Snow is a fact. The moon is a story. Go when you can and hunt the wind.
 
 > [!mistake]
-> - Skipping a free weekend because the moon or the pressure looked wrong.
-> - Hunting the same high bench after the first big snow, when the deer have moved down.
-> - Hunting the roads on opening weekend with everyone else, then deciding there are no deer.
+> - Skipping a free weekend for the moon or the pressure.
+> - The same high bench after the first big snow.
+> - Hunting the roads on opening weekend, then deciding there are no deer.
 
-> [!field]
-> For one season, log moon phase, pressure trend and temperature in the weather line of your journal. In January, compare it with what you saw. Trust your own data over hunting camp lore.
+```more the mistakes and field task in full
+- Skipping a free weekend because the moon or the pressure looked wrong.
+- Hunting the same high bench after the first big snow, when the deer have moved down.
+- Hunting the roads on opening weekend with everyone else, then deciding there are no deer.
+- Field task: for one season, log moon phase, pressure trend and temperature in the weather line of your journal. In January, compare it with what you saw. Trust your own data over hunting camp lore.
+```
 
 ## Sources
 
