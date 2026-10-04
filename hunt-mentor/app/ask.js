@@ -229,6 +229,12 @@
     const need = Math.max(1, Math.ceil(base.filter((w, i) => base.indexOf(w) === i).length * 0.5));
     const quick = list.filter((r) => r.d.type !== 'screen' && r.hit >= need && sameAnimal(r, base) && (!topScreen || r.sc >= topScreen.sc * 0.55)).slice(0, 2);
     const qs = quick.length > 1 && quick[1].sc < quick[0].sc * 0.6 ? quick.slice(0, 1) : quick;
+    // a rule row often has a sibling (mule deer and white tailed deer for one MU): show both so the answer is not one sided
+    if (qs.length === 1 && qs[0].d.reg) {
+      const g = qs[0].d.reg.group, mus = base.filter((w) => /^\d-\d+$/.test(w)).concat(Object.keys(terms).filter((w) => /^region\d/.test(w) && terms[w] >= 0.9));
+      const sib = list.find((r) => r !== qs[0] && r.d.reg && r.d.reg.group === g && r.sc >= qs[0].sc * 0.35 && sameAnimal(r, base) && mus.every((m) => r.c[m]));
+      if (sib) qs.push(sib);
+    }
     const used = new Set(qs.map((r) => r.d)), per = {}, cards = [];
     for (const r of list) {
       if (cards.length >= 5) break;
@@ -276,7 +282,11 @@
       const h = '#/ask/' + encodeURIComponent(v);
       if (location.hash === h) view(param); else location.hash = h;
     };
-    if (!q) { if (!('ontouchstart' in window)) $('#hma-q').focus(); return; }
+    if (!q) {
+      if (!('ontouchstart' in window)) $('#hma-q').focus();
+      if (!IX) setTimeout(() => { if (!IX) build(); }, 120); // build while the owner types
+      return;
+    }
     const a = answer(q);
     $('#hma-res').innerHTML = a.html + mentorBox(q);
     const m = $('#hma-ask-mentor');
