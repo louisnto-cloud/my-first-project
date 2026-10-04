@@ -29,8 +29,8 @@ export function contourTiles(dem, system) {
   return [dem.contourProtocolUrl({
     multiplier: imperial ? 3.28084 : 1,
     thresholds: imperial
-      ? { 9: [500, 2500], 10: [200, 1000], 11: [100, 500], 12: [40, 200] }
-      : { 9: [200, 1000], 10: [100, 500], 11: [50, 250], 12: [20, 100] },
+      ? { 9: [500, 2500], 10: [200, 1000], 11: [100, 500], 12: [40, 200], 14: [20, 100] }
+      : { 9: [200, 1000], 10: [100, 500], 11: [50, 250], 12: [20, 100], 14: [10, 50] },
     elevationKey: 'ele', levelKey: 'level', contourLayer: 'contours', buffer: 1,
   })];
 }
@@ -76,8 +76,8 @@ export function buildStyle({ dem, prefs }) {
 
   // ---------- boundaries and parks ----------
   add(T, { id: 'park-line', type: 'line', source: 'omt', 'source-layer': 'park', minzoom: 8, paint: { 'line-color': P.park, 'line-opacity': 0.55, 'line-width': z([[8, 0.6], [14, 1.6]]), 'line-dasharray': [3, 2] } });
-  add(ALL, { id: 'admin-prov', type: 'line', source: 'omt', 'source-layer': 'boundary', filter: ['all', ['>=', ['get', 'admin_level'], 3], ['<=', ['get', 'admin_level'], 4], ['!=', ['get', 'maritime'], 1]], paint: { 'line-color': '#8c8a80', 'line-width': z([[4, 0.6], [10, 1.4]]), 'line-dasharray': [4, 2, 1, 2] } });
-  add(ALL, { id: 'admin-country', type: 'line', source: 'omt', 'source-layer': 'boundary', filter: ['all', ['==', ['get', 'admin_level'], 2], ['!=', ['get', 'maritime'], 1]], paint: { 'line-color': '#86ad72', 'line-width': z([[3, 1], [10, 2.5]]), 'line-opacity': 0.85 } });
+  add(ALL, { id: 'admin-prov', type: 'line', source: 'omt', 'source-layer': 'boundary', filter: ['all', ['>=', ['to-number', ['get', 'admin_level'], 0], 3], ['<=', ['to-number', ['get', 'admin_level'], 0], 4], ['!=', ['get', 'maritime'], 1]], paint: { 'line-color': '#8c8a80', 'line-width': z([[4, 0.6], [10, 1.4]]), 'line-dasharray': [4, 2, 1, 2] } });
+  add(ALL, { id: 'admin-country', type: 'line', source: 'omt', 'source-layer': 'boundary', filter: ['all', ['==', ['to-number', ['get', 'admin_level'], 0], 2], ['!=', ['get', 'maritime'], 1]], paint: { 'line-color': '#86ad72', 'line-width': z([[3, 1], [10, 2.5]]), 'line-opacity': 0.85 } });
   add(T, { id: 'building', type: 'fill', source: 'omt', 'source-layer': 'building', minzoom: 13, paint: { 'fill-color': '#cbc8bd', 'fill-outline-color': '#b7b3a6' } });
 
   L.push({ id: ANCHORS.fills, type: 'background', layout: { visibility: 'none' }, paint: {} });

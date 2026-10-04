@@ -99,14 +99,20 @@ function ensureAdded(st) {
     if (st.pm) {
       st.adding = true;
       loadPmtiles().then(async (pm) => {
+        st.gj = [];
         for (const [i, f] of st.files.entries()) {
           const src = `hm-src-${l.id}-${i}`, url = new URL(f.url, location.href).href;
+          if (!/\.pmtiles(\?|$)/i.test(f.url)) { // mixed layer: this area ships GeoJSON (small areas), loaded when the view is near
+            if (!map.getSource(src)) map.addSource(src, { type: 'geojson', data: EMPTY, tolerance: 0.45, attribution: l.attribution || 'BC Data Catalogue (Open Government Licence BC)' });
+            st.mapIds.push(...addLayerSet(st, src, `-${i}`, null)); st.gj.push({ src, f, req: false });
+            continue;
+          }
           let sl = l.sourceLayer;
           if (!sl) { try { const meta = await new pm.PMTiles(url).getMetadata(); sl = meta && meta.vector_layers && meta.vector_layers[0] && meta.vector_layers[0].id; } catch (err) { sl = null; } }
           if (!map.getSource(src)) map.addSource(src, { type: 'vector', url: `pmtiles://${url}`, attribution: l.attribution || 'BC Data Catalogue (Open Government Licence BC)' });
           st.mapIds.push(...addLayerSet(st, src, `-${i}`, sl || l.id));
         }
-        finishAdd(st); pmMonthFilter(st); setVis(st, !!lp(l.id).on && monthOk(st)); refreshRows();
+        finishAdd(st); pmMonthFilter(st); setVis(st, !!lp(l.id).on && monthOk(st)); loadNear(st); refreshRows();
       }).catch((err) => { st.error = String(err && err.message || err); console.warn('Hunt Map layer', l.id, err); refreshRows(); })
         .finally(() => { st.adding = false; });
       return;
@@ -176,9 +182,10 @@ function darken(c) {
 // ---------- loading near the view ----------
 function viewBox(pad = 0.5) { const b = map.getBounds(); return padBbox([b.getWest(), b.getSouth(), b.getEast(), b.getNorth()], pad); }
 function loadNear(st) {
-  if (!st.added || !lp(st.l.id).on || st.pm) return;
+  if (!st.added || !lp(st.l.id).on) return;
   if (map.getZoom() < (st.l.minzoom || 0) - 1) return;
   const v = viewBox();
+  if (st.pm) { for (const g of st.gj || []) if (!g.req && (!g.f.box || bboxIntersects(v, g.f.box))) { g.req = true; map.getSource(g.src)?.setData(g.f.url); } return; }
   for (const f of st.files) if (!st.loaded.has(f.url) && !st.failed.has(f.url) && (!f.box || bboxIntersects(v, f.box))) loadFile(st, f);
 }
 export function onMove() { for (const st of L.values()) if (lp(st.l.id).on) loadNear(st); refreshRows(); }
