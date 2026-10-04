@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Region 3 rule: above 1,700 metres, all motor vehicles except snowmobiles must stay on existing roads and trails. Below the line, other closures may still apply. No new tracks across the alpine.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Region 3: the 1,700 m line</text>
+  <path d="M0 270 L80 200 L150 120 L210 60 L270 110 L330 150 L400 210 L400 300 L0 300 Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+  <line x1="0" y1="140" x2="400" y2="140" stroke="#e8590c" stroke-width="3" stroke-dasharray="10 6"/>
+  <text x="10" y="132" font-size="15" font-weight="bold" fill="#e8590c">1,700 m</text>
+  <path d="M60 260 Q 120 210 160 150 Q 190 110 210 64" stroke="#8b5a2b" stroke-width="5" fill="none"/>
+  <path d="M232 92 Q 260 120 300 128" stroke="#2f3a2b" stroke-width="3" stroke-dasharray="4 4" fill="none"/>
+  <path d="M256 96 l20 20 M276 96 l-20 20" stroke="#c0392b" stroke-width="5"/>
+  <text x="300" y="80" font-size="14" font-weight="bold" fill="#c0392b">No new tracks</text>
+  <text x="120" y="100" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Existing road</text><text x="120" y="116" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">or trail only</text>
+  <text x="290" y="250" font-size="14" fill="#2f3a2b" text-anchor="middle">Below: check your MU map</text>
+  <text x="290" y="286" font-size="14" fill="#2f3a2b" text-anchor="middle">Snowmobiles excepted</text>
+</svg>

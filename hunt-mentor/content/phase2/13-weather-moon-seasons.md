@@ -139,10 +139,10 @@ Phone and power bank charged, offline maps downloaded
 
 | Date | Moon | Pressure | Temp | Deer seen |
 |---|---|---|---|---|
-| Oct 12 | full | falling | 4 C | 3 does |
-| Oct 19 | half | steady | 1 C | 1 buck |
+| Oct 12 | full | falling | 4°C | 3 does |
+| Oct 19 | half | steady | 1°C | 1 buck |
 
-- Example rows: log your own season like this, then compare in January.
+- Made up example rows. Log your own season like this.
 
 > [!rule]
 > Grandpa's rule (wisdom): Snow is a fact. The moon is a story. Go when you can and hunt the wind.
@@ -158,6 +158,9 @@ Phone and power bank charged, offline maps downloaded
 - Hunting the roads on opening weekend with everyone else, then deciding there are no deer.
 - Field task: for one season, log moon phase, pressure trend and temperature in the weather line of your journal. In January, compare it with what you saw. Trust your own data over hunting camp lore.
 ```
+
+> [!field]
+> Log moon, pressure and temperature all season. Compare in January. Trust your own data.
 
 ## Sources
 

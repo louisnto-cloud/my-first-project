@@ -12,12 +12,29 @@ checked: 2026-10-01
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+| Way out | Good for | Rules |
+|---|---|---|
+| Your back | Anywhere | Edible portions |
+| Sled | Snow, downhill | Edible portions |
+| ATV (all terrain vehicle) | Where allowed | Wildlife Act, ORV Act, firearm transport |
+
+- Every edible portion comes out, however many trips (95%).
+
+```more the three ways out
 - Three ways out: on your back, on a sled, on the [[ATV]] (all terrain vehicle).
 - The ATV has its own rulebook: the Wildlife Act, the Off Road Vehicle Act, and federal firearm transport rules.
 - The one rule that never changes: every edible portion comes out, however many trips it takes (95%).
+```
 
 ## The edible portions rule
 
+```diagram quartering
+```
+
+- Big game: neck, ribs, four quarters and loins come home (95%).
+- Birds: both breasts (95%). Bones, hide, head and guts can stay (95%).
+
+```more the law in full
 > [!law]
 > Unlawful: "To kill wildlife (with the exception of a fur bearing animal other than a black bear) and fail to remove from the carcass the edible portions (see definitions section) to the person's normal dwelling place or to a meat cutter or the owner or operator of a cold storage plant" (95%, synopsis p. 12).
 
@@ -26,9 +43,18 @@ checked: 2026-10-01
 - You may hand the animal to someone else who then takes the edible portions home. The duty moves with the meat (95%, p. 12).
 - Boning out is fine. Bones, hide, head and guts can stay at the site, or go to a landfill (95%, p. 12; p. 81 on landfill disposal of cervid parts).
 - Not within municipal boundaries and not where people go: a carcass is an attractant (95%, p. 9, p. 15).
+```
 
 ## ATV: the Wildlife Act rules
 
+```diagram sk-atv-unloaded
+```
+
+- ATV (all terrain vehicle): no live round in the chamber or attached magazine (99%).
+- No hunting from it. Check closures for your MU (Management Unit) (95%).
+- Region 3: MUs 3-28, 3-29, 3-30 and part of 3-17 closed Sept 1 to Dec 10 (95%).
+
+```more the Wildlife Act rules in full
 - An ATV is a "motor vehicle" under the hunting rules (95%, p. 4 definition).
 - Unlawful: a firearm "containing live ammunition in its breech or in its magazine attached to the firearm, in or on a railway car, motor vehicle, sleigh, aircraft, bicycle or other conveyance" (99%, page 11, item 28 (2 October 2026 edition)).
 - So: magazine out, chamber empty, before you touch the ATV. Clip with rounds in the rifle counts as loaded (95%, p. 3).
@@ -38,9 +64,20 @@ checked: 2026-10-01
 - Region 3 ATV for Hunting Closed Areas: "from Sept 1 - Dec 10 in MUs 3-28, 3-29, 3-30, and that portion of MU 3-17 shown on Map C3" (95%, p. 33).
 - Stake Lake cross country ski trails near Kamloops: closed to ATVs and snowmobiles (95%, p. 33).
 - Maps for every closure: [gov.bc.ca/motorvehicleprohibitions](https://www.gov.bc.ca/motorvehicleprohibitions) (95%, p. 10). Signs may be missing. "The regulation is the final authority" (95%).
+```
 
 ## ATV: the Off Road Vehicle Act
 
+| You need | When |
+|---|---|
+| Registration, plate shown | Always (95%) |
+| Helmet | Ride astride (95%) |
+| Driver's licence, $200,000 liability | On a Forest Service Road (95%) |
+| Spark arrestor | Wildfire conditions (95%) |
+
+- ORV (Off Road Vehicle) fines: $230 unregistered, $368 careless (95%).
+
+```more the ORV Act in full
 - The [[ORV]] (Off Road Vehicle) Act "applies to ORVs on Crown land and prescribed private land" (95%, p. 9).
 - "Mandatory registration applies to ORVs. The plate or sticker must be clearly displayed on the front, back or left side of the ORV" (95%, p. 9). Registration is through the Insurance Corporation of British Columbia (95%, ORV Act s. 4).
 - "Mandatory safety laws apply to all ORVs; this includes helmets for ride astride ORVs and seatbelts (if installed). People under 16 must be supervised by an adult at least 19 years" (95%, p. 9).
@@ -49,9 +86,17 @@ checked: 2026-10-01
 - Fines: $230 for an unregistered ORV, $368 for careless operation (95%, BC ORV page).
 - Spark arrestor required during wildfire conditions. $460 ticket without one (95%, BC ORV page).
 - Crossing or riding a public highway needs ICBC basic insurance and a free police issued operation permit where it applies (90%, BC ORV page and search summary). VERIFY with ICBC for your route.
+```
 
 ## ATV: firearms and game on the rack
 
+```diagram sk-atv-load
+```
+
+- Rifle unloaded in transport. It goes with you, not on the parked quad (95%, Tip).
+- Licence travels with the meat. Brother's deer: his Record of Receipt (95%).
+
+```more firearms and game in detail
 - Federal transport rule: a non restricted rifle may be transported only if "it is unloaded" (95%, SOR/98-209 s. 10).
 - Unattended ATV with the rifle on it: no lockable trunk, so the rifle must be "not visible from outside the vehicle" and the compartment "securely locked" (95%, s. 10). Practical answer: the rifle goes with you, not on the parked quad. Tip.
 - Carrying your own game on an ATV: no extra rule in the synopsis beyond closures (85%, my reading). The licence travels with the meat (95%, p. 15).
@@ -59,18 +104,34 @@ checked: 2026-10-01
 - Strap quarters in game bags on the rear rack, meat away from the exhaust. Tip.
 - Whole deer across the front rack: head up, belly cavity open, drive slowly. Tip.
 - A loaded rack changes the handling. Low speed, no side hills. Tip.
+```
 
 ## Frame packs and sleds
 
+```anim sk-pack-load Heavy piece high and close, then strap it tight.
+```
+
+- 20 to 30 kg per trip is sustainable for a fit adult (Tip).
+- Going back to a cache: wind in your face, make noise (70%).
+
+```more packs, sleds and drags
 - A pack frame with a load shelf carries a quarter or two bags. Strap the load high and tight to your back. Tip.
 - Fit adult, rough ground: 20 to 30 kg per trip is sustainable. 40 kg is a one trip hero load. Tip.
 - "A load that blocks your view or pulls you off balance is too heavy" (70%, BC Outdoors Magazine).
 - Sleds: a plastic game sled or kids toboggan on snow, with a rope harness. Whole deer in one pull downhill. Tip.
 - Drag a whole deer by the antlers or a rope around the neck, head first, hide on. Tip.
 - Return trips: approach the cache with the wind in your face and make noise. Bears claim meat (70%, BC Outdoors Magazine).
+```
 
 ## Meat weights
 
+```diagram sk-meat-yield
+```
+
+- Deer: about 48% of field dressed weight is meat (70 to 80%).
+- Bone in quarters weigh about double the meat in them (Tip).
+
+```more the full weight table
 | Animal | Field dressed | Boneless meat | Source |
 |---|---|---|---|
 | White tailed deer, average of 115 | 49 kg (108 lb) | 24 kg (52 lb), about 48% | Ohio Department of Natural Resources, 2017 (80%) |
@@ -83,9 +144,17 @@ checked: 2026-10-01
 
 - Mule deer bucks in Region 3 run bigger than the Ohio white tails. Expect 25 to 35 kg of boneless meat from a mature buck (Tip, estimate).
 - Bone in quarters weigh roughly double the boneless meat in them (Tip).
+```
 
 ## Trips math
 
+```diagram sk-moose-trips
+```
+
+- One deer, two people, 1 km: one trip each (Tip).
+- Never shoot a moose farther than four return trips before dark (Tip).
+
+```more the trip math in detail
 - One deer, two people, 1 km in. Boneless meat about 25 kg, plus head and cape if wanted. One trip each (Tip).
 - Same deer whole and gutted: about 50 kg. One hard drag, or an ATV if the area allows (Tip).
 - One moose, two people, no ATV. Say 200 kg boneless plus antlers (Tip, from the table above).
@@ -96,17 +165,27 @@ checked: 2026-10-01
 
 > [!lean]
 > Deer first year: whole, gutted, dragged or on the ATV rack. Moose later: gutless, boned out, frame packs, and a drop point where the ATV can legally reach.
+```
+
+## Grandpa's rule and mistakes
+
+| Mistake | Fix |
+|---|---|
+| ATV into a closed area "to pick up the deer" | Pack it out on foot |
+| Magazine in the rifle on the rack | That is loaded: take it out |
+| One giant load | 20 to 30 kg trips |
 
 > [!rule]
 > The animal is yours when the last bag is in the truck, not when it hits the ground.
 
-> [!mistake]
-> - Riding the ATV into an ATV for Hunting Closed Area "just to pick up the deer".
-> - Rifle on the rack with the magazine in. That is loaded in BC.
-> - One giant load that ends in a fall, a torn knee and meat still on the hill.
+```more 3 common mistakes and the field habit
+- Riding the ATV into an ATV for Hunting Closed Area "just to pick up the deer".
+- Rifle on the rack with the magazine in. That is loaded in BC.
+- One giant load that ends in a fall, a torn knee and meat still on the hill.
 
 > [!field]
 > Before the shot: where is the ATV allowed, how far is the drop point, how many trips, how much light.
+```
 
 ```checklist p5s9-pack
 ATV closure map checked for this MU
@@ -121,6 +200,9 @@ Licence with the meat, Record of Receipt if needed
 
 ## Sources
 
+- Synopsis, ORV (Off Road Vehicle) Act, BC ORV pages and federal transport rules 95%. Yields 60 to 80%. Checked 2026-10-01.
+
+```more all sources
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly. Printed p. 3 (loaded, edible portions), p. 4 (motor vehicle), p. 9 (ORV Act, FSR insurance, carcasses), p. 10 (motor vehicle prohibitions), p. 11 (22, 27), p. 12 (44), p. 15 (transport, attractants), p. 33 (Region 3 closures). Checked 2026-10-01. Quotes have hyphens removed.
 - [BC Off road vehicles page](https://www2.gov.bc.ca/gov/content/industry/crown-land-water/crown-land/crown-land-uses/off-road-vehicles) and [ORV safety page](https://www2.gov.bc.ca/gov/content/industry/crown-land-water/crown-land/crown-land-uses/off-road-vehicles/safety), read directly. Checked 2026-10-01.
 - [Off Road Vehicle Act, SBC 2014 c. 14](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/14005), read directly, s. 4. Checked 2026-10-01.
@@ -128,6 +210,7 @@ Licence with the meat, Record of Receipt if needed
 - [Ohio Department of Natural Resources, Venison meat yield (PDF)](https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/wildlife/wild-ohio-harvest-community/Venison%20Yield.pdf), read directly, 80%. [National Deer Association, how much venison](https://deerassociation.com/how-much-venison-can-you-expect-from-your-deer/), 70%. Checked 2026-10-01.
 - Moose and elk yields: search summaries only, 60 to 65%. [Alaska Department of Fish and Game moose hunting page](https://www.adfg.alaska.gov/index.cfm?adfg=moosehunting.main) did not show the figures when read. VERIFY.
 - [BC Outdoors Magazine, After the shot](https://www.bcoutdoorsmagazine.com/after-the-shot/), 70%. Trip math and load limits: Tip.
+```
 
 ```quiz
 [
