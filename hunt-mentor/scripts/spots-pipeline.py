@@ -53,6 +53,9 @@ AREAS = {
           'excl': [(-121.6, 50.2, -119.4, 51.9)],
           'base': {'name': '100 Mile House', 'lat': 51.6428, 'lon': -121.2957,
                    'note': 'Nominatim 2026-10-04. The town sits inside area A; area E spots lie west of -121.6 and north of 51.9.'}},
+    # F: Region 4 (Kootenay), CWD Management Zone rules, no overlap with A to E (all west of -118.6)
+    'F': {'name': 'East Kootenay: Cranbrook, Fernie, Invermere', 'box': (-116.6, 49.0, -114.6, 50.6),
+          'base': {'name': 'Cranbrook', 'lat': 49.5107, 'lon': -115.7673, 'note': 'Nominatim 2026-10-04 (municipality centroid)'}},
 }
 
 
@@ -161,13 +164,15 @@ W = {
     'duck': {'size_road': 3, 'complex': 2, 'backwater': 2, 'low': 1},
     'grouse': {'zone': 1, 'cut_edge': 1, 'riparian': 1},
     'quail': {'zone': 2, 'farm': 2, 'creek': 1, 'draw': 1},
+    'elk': {'uwr': 3, 'burn': 2, 'cut': 1, 'bec_low': 2, 'bec_ms': 1, 'aspect': 1, 'water': 1},
+    'turkey': {'zone': 2, 'farm': 2, 'creek': 1},
     'camp': {'flat': 2, 'water': 2, 'named_water': 1, 'quiet': 1, 'spots_near': 1},
 }
-SCORE_MAX = {'deer': 11, 'moose': 7, 'duck': 8, 'grouse': 3, 'quail': 6, 'camp': 7}
-MIN_SCORE = {'deer': 7, 'moose': 4, 'duck': 4, 'grouse': 2, 'quail': 4, 'camp': 5}
+SCORE_MAX = {'deer': 11, 'moose': 7, 'duck': 8, 'grouse': 3, 'quail': 6, 'camp': 7, 'elk': 11, 'turkey': 5}
+MIN_SCORE = {'deer': 7, 'moose': 4, 'duck': 4, 'grouse': 2, 'quail': 4, 'camp': 5, 'elk': 7, 'turkey': 4}
 SPACING_M = 800            # no two spots of the same species and category closer than this
 SELECT_RADIUS = {'drive': 1500, 'atv': 1500, 'walk': 2000, 'backcountry': 3000, 'camp': 3000}
-CAPS = {'deer': 220, 'moose': 100, 'duck': 180, 'grouse': 120, 'quail': 300, 'camp': 60}   # per area and category: best first
+CAPS = {'deer': 220, 'moose': 100, 'duck': 180, 'grouse': 120, 'quail': 300, 'camp': 60, 'elk': 120, 'turkey': 80}   # per area and category: best first
 TILE_M = 15000             # caps are spread round robin over 15 km tiles (balanced_cap)
 CUT_AGE = (5, 20)          # cutblock age that feeds deer, moose, bear, grouse
 BURN_YEARS = (2015, 2023)  # recent burns for scoring
@@ -178,6 +183,17 @@ GROUSE_ZONES = {'IDF', 'MS', 'ESSF', 'ICH'}
 GROUSE_ZONES_EXTRA = {'B': {'CWH'}, 'E': {'SBPS', 'SBS'}}   # Assumption (my pick): CWH forest in B; Cariboo pine and spruce in E
 QUAIL_AREAS = {'C': None, 'D': {'8'}}   # quail spots: area -> regions allowed (None = all). Region 3 has no quail season.
 QUAIL_ZONES = {'BG', 'PP'}
+# Elk and wild turkey spots (Region 4 has general seasons for both; my pick for the weights). Area -> on.
+ELK_AREAS = {'F'}
+# Region 4 (Kootenay) legal layers: synopsis map areas, CWD zone, feeding ban, wolf note (content/phase7/13-region-4-kootenay.md)
+R4_AREAS = {'F'}
+R4_WOLF_TRENCH = ['4-2', '4-3', '4-20', '4-21', '4-22', '4-24', '4-25', '4-26', '4-34', '4-35', '4-36', '4-37', '4-40']
+R4_WOLF_LOW = ['4-4', '4-5', '4-6', '4-7']
+R4_DEER_HUNT_MUS = ['4-3', '4-4', '4-5', '4-20']   # Cranbrook Deer Hunt, Map D27 portions only
+TURKEY_AREAS = {'F'}
+ELK_ZONES_LOW = {'BG', 'PP', 'IDF'}
+TURKEY_ZONES = {'PP', 'IDF'}
+TURKEY_MAX_ELEV = 1100   # Merriam's turkeys in the Kootenay winter low, near farms (my pick)
 QUAIL_MAX_ELEV = 700
 DUCK_MAX_ELEV = 900
 R3_ATV_LIMIT_M = 1700
@@ -365,6 +381,54 @@ def step_fetch(cache, areas):
         for k, L in LAYERS.items():
             if L['scope'] == 'area':
                 fetch_layer(cache, k, a, area_fetch_box(a, k))
+        fetch_osm(cache, a)
+
+
+# --------------------------------------------------------------------------------------
+# OpenStreetMap outlines (Nominatim) for synopsis map areas that are not in the BC Data Catalogue
+# (Region 4 Maps D9, D13, D16, D19, D20, D22, D11). One request at a time, 1.5 s apart, cached in cache/osm/.
+# --------------------------------------------------------------------------------------
+NOMINATIM = 'https://nominatim.openstreetmap.org/search'
+OSM_FEATURES = {
+    'F': [('skookumchuck_mill', 'Skookumchuck mill', 'landuse'), ('elkview', 'Elkview Operations', 'landuse'),
+          ('greenhills', 'Greenhills Operations', 'landuse'), ('line_creek', 'Line Creek Operations', 'landuse'),
+          ('fording_river', 'Fording River Operations', 'landuse'), ('coal_mountain', 'Coal Mountain Operations', 'landuse'),
+          ('fairmont', 'Fairmont Hot Springs, British Columbia', 'place'), ('windermere', 'Windermere, British Columbia', 'place'),
+          ('radium', 'Radium Hot Springs', 'boundary'), ('baynes_village', 'Baynes Lake, British Columbia', 'place'),
+          ('alexander_creek', 'Alexander Creek', 'waterway'), ('wasa', 'Wasa, British Columbia', 'place')],
+}
+
+
+def fetch_osm(cache, area):
+    feats = OSM_FEATURES.get(area)
+    if not feats:
+        return
+    b = AREAS[area]['box']
+    d = Path(cache) / 'osm'
+    d.mkdir(parents=True, exist_ok=True)
+    for key, q, cls in feats:
+        f = d / f'{key}.json'
+        if f.exists():
+            continue
+        url = NOMINATIM + '?' + urllib.parse.urlencode({'format': 'json', 'limit': 3, 'polygon_geojson': 1, 'countrycodes': 'ca',
+                                                         'viewbox': f'{b[0] - 0.4},{b[3] + 0.4},{b[2] + 0.4},{b[1] - 0.4}',
+                                                         'bounded': 1, 'q': q})
+        raw = http_get(url, min_gap=1.5)
+        res = [r for r in json.loads(raw or b'[]') if r.get('class') == cls]
+        json.dump({'query': q, 'fetched': TODAY, 'results': res[:1]}, open(f, 'w'))
+        log(f'  osm {key}: {len(res)} result(s)')
+
+
+def load_osm(cache, key):
+    """Albers geometry of a cached Nominatim result, or None."""
+    f = Path(cache) / 'osm' / f'{key}.json'
+    if not f.exists():
+        return None
+    r = json.load(open(f)).get('results') or []
+    if not r:
+        return None
+    g = shapely.from_geojson(json.dumps(r[0]['geojson']))
+    return to_albers(np.array([g], dtype=object))[0]
 
 
 # --------------------------------------------------------------------------------------
@@ -1475,7 +1539,11 @@ class AreaContext:
         # Swan Lake north of Vernon (MU 8-22): No Shooting or Hunting Area, the lake and all its marsh (synopsis Map J17).
         # Edge not in the data: 500 m buffer around the lake (my pick).
         self.swan = self._named_lake_buffer('Swan Lake', 500, near=(-119.27, 50.30)) if area == 'D' else None
+        # Region 4 synopsis No Hunting and No Shooting areas, shot only areas and access limits (area F)
+        self.r4_zones = self._region4_zones() if area in R4_AREAS else []
+        self.shot_only = [z for z in self.r4_zones if z.get('shotOnly')]
         nt = [self.no_hunt_zones] if self.no_hunt_zones is not None else []
+        nt += [z['geom'] for z in self.r4_zones if z.get('exclude')]
         if self.vaseux is not None:
             nt.append(self.vaseux)
         if self.swan is not None:
@@ -1523,12 +1591,164 @@ class AreaContext:
             if '97C' in nums and '5' not in nums and lon > -120.66 and lat < 50.0:
                 nh.append(gi)
                 self.no_hunt_text.add('Hwy 97C (Okanagan Connector) between Aspen Grove and Peachland')
+            # Region 4 Map D14: Hwy 3 No Hunting/Shooting Area, 400 m each side from Loop Bridge to the Alexander Creek bridge
+            # (MU 4-23, east of Sparwood). Ends from hwy3_d14_range (estimate).
+            if '3' in nums and self.area in R4_AREAS:
+                r = self._hwy3_d14_range()
+                if r and r[0] <= lon <= r[1] and lat > 49.6:
+                    nh.append(gi)
+                    self.no_hunt_text.add('Hwy 3 from Loop Bridge to the Alexander Creek bridge (Map D14)')
             # Hwy 5 (Coquihalla) between Hope and the Hwy 1 and 5 junction at Kamloops: single projectile ban 400 m
             if '5' in nums and '1' not in nums and lat < 50.66:
                 sp.append(gi)
         nhz = shapely.union_all(shapely.buffer(np.array(nh, dtype=object), 415)) if nh else None
         spz = shapely.union_all(shapely.buffer(np.array(sp, dtype=object), 415)) if sp else None
         return nhz, spz
+
+    def _hwy3_d14_range(self):
+        """Longitude range of the Map D14 strip: from the east edge of Sparwood (Loop Bridge is not in the data; assumption)
+        to where Alexander Creek (OpenStreetMap) meets Hwy 3."""
+        if hasattr(self, '_d14'):
+            return self._d14
+        self._d14 = None
+        g, p, _ = self.ca['dra']
+        h3 = [gi for gi, pi in zip(g, p) if '3' in hwy_numbers(pi.get('hwy'))]
+        ac = load_osm(self.cache, 'alexander_creek')
+        sp = [i for i, x in enumerate(self.cities[1]) if 'Sparwood' in (x['name'] or '')]
+        if not h3 or ac is None or not sp:
+            return None
+        h3u = shapely.union_all(h3)
+        x = shapely.intersection(h3u, ac.buffer(30))
+        if x.is_empty:
+            return None
+        e_lon = float(xy_to_lonlat(*shapely.centroid(x).coords[0])[0])
+        b = shapely.bounds(self.cities[0][sp[0]])
+        w_lon = float(xy_to_lonlat(b[2], (b[1] + b[3]) / 2)[0])
+        self._d14 = (min(w_lon, e_lon), max(w_lon, e_lon))
+        log(f'  Map D14 strip: Hwy 3 from lon {self._d14[0]:.3f} to {self._d14[1]:.3f} (estimate)')
+        return self._d14
+
+    def _region4_zones(self):
+        """Region 4 synopsis map areas (pages 37, 40, 41) inside or near the area. Each: geom (Albers), exclude (targets left out),
+        near (flag distance, m), text, cert, src. Edges come from the closure polygons, FWA water, road names or OpenStreetMap;
+        where an edge is only an estimate the text says so."""
+        Z = []
+        mg, mp = self.mvpr
+        def mv(name):
+            idx = [i for i, x in enumerate(mp) if (x['name'] or '') == name]
+            return shapely.union_all(mg[idx]) if idx else None
+        def add(key, geom, text, cert, src, exclude=True, near=1500, **kw):
+            if geom is None or geom.is_empty:
+                log(f'  Region 4 zone {key}: no geometry, skipped')
+                return
+            Z.append(dict(key=key, geom=geom, text=text, cert=cert, src=src, exclude=exclude, near=near, **kw))
+        syn = 'Synopsis Region 4'
+        # D2 Elizabeth Lake: the Motor Vehicle Closed Area polygon of the same name, plus the lake
+        el = mv('Elizabeth Lake')
+        lk = self._named_lake_buffer('Elizabeth Lake', 100, near=(-115.79, 49.50))
+        add('D2', shapely.union_all([g for g in (el, lk) if g is not None]) if (el is not None or lk is not None) else None,
+            'Elizabeth Lake (Map D2): No Hunting, Shooting or Trapping Area and Motor Vehicle Closed Area (synopsis page 40, 99%). '
+            'Edge from the closure polygon and the lake (estimate).', 99, syn + '; WAA_MVPR_AREAS_SP')
+        # D23 Columbia Lake and River Wildlife Sanctuary: lake, marshes, sand and gravel bars
+        parts = [g for g in (mv('Columbia Lake'), self._named_lake_buffer('Columbia Lake', 300, near=(-115.86, 50.23))) if g is not None]
+        rg, rp, _ = self.ca['rivers']
+        riv = [rg[i] for i, x in enumerate(rp) if (x['name'] or '') == 'Columbia River'
+               and 50.26 < float(xy_to_lonlat(*shapely.centroid(rg[i]).coords[0])[1]) < 50.45]
+        if riv:
+            parts.append(shapely.union_all(shapely.buffer(np.array(riv, dtype=object), 200)))
+        add('D23', shapely.union_all(parts) if parts else None,
+            'Columbia Lake and River Wildlife Sanctuary (Map D23): No Shooting, Hunting or Trapping Area, all marshes, sand and gravel '
+            'bars included (synopsis page 41, 99%). Edge not in this data: lake and river plus 200 to 300 m (my pick). VERIFY on the ground.',
+            99, syn + '; FWA lakes and rivers', near=2000)
+        # D9 Skookumchuck pulp mill
+        g = load_osm(self.cache, 'skookumchuck_mill')
+        add('D9', g.buffer(150) if g is not None else None,
+            'Skookumchuck Pulp Mill No Shooting Area (Map D9, synopsis page 40, 99%). Mill outline from OpenStreetMap plus 150 m (estimate).',
+            99, syn + '; OpenStreetMap')
+        # D10 Wasa Slough Wildlife Sanctuary: GNS name if present, else Wasa village (estimate)
+        ng, np_, _ = self.ca['names']
+        ws = [ng[i] for i, x in enumerate(np_) if (x['name'] or '').lower() == 'wasa slough']
+        if ws:
+            add('D10', shapely.union_all(ws).buffer(800),
+                'Wasa Slough Wildlife Sanctuary (Map D10): No Shooting, Hunting or Trapping Area (synopsis page 40, 99%). '
+                'Edge not in this data: 800 m around the named slough (my pick). VERIFY on the ground.', 99, syn + '; BC Geographical Names', near=2500)
+        else:
+            g = load_osm(self.cache, 'wasa')
+            add('D10', g.buffer(1500) if g is not None else None,
+                'Wasa Slough Wildlife Sanctuary (Map D10) is at Wasa: No Shooting, Hunting or Trapping Area (synopsis page 40, 99%). '
+                'Edge not in this data: 1.5 km around Wasa left out (my pick). VERIFY on the ground.', 99, syn + '; OpenStreetMap', near=3500)
+        # D13 and D16 Elk Valley coal mines: private property, No Hunting/No Shooting and No Shooting Areas
+        mines = [(k, n) for k, n in (('fording_river', 'Fording River'), ('greenhills', 'Greenhills'), ('line_creek', 'Line Creek'),
+                                    ('elkview', 'Elkview'), ('coal_mountain', 'Coal Mountain'))]
+        for k, n in mines:
+            g = load_osm(self.cache, k)
+            add('D16 ' + n, g.buffer(100) if g is not None else None,
+                f'{n} coal mine (Maps D13 and D16): No Hunting/No Shooting and No Shooting Areas on private property; company '
+                'permission before entry, maps at the gate houses (synopsis page 41, 99%). Mine outline from OpenStreetMap (estimate).',
+                99, syn + '; OpenStreetMap', near=1000)
+        # D19 Fairmont and D20 Windermere No Shooting Areas: around the communities (edge not in the data)
+        for key, k, n, m in (('D19', 'fairmont', 'Fairmont', 'D19'), ('D20', 'windermere', 'Windermere', 'D20')):
+            g = load_osm(self.cache, k)
+            add(key, g.buffer(2000) if g is not None else None,
+                f'{n} No Shooting Area (Map {m}, synopsis page 41, 99%). Edge not in this data: 2 km around {n} left out (my pick). '
+                'VERIFY on the ground.', 99, syn + '; OpenStreetMap', near=4000)
+        # D22 Radium No Shooting or Hunting Area
+        g = load_osm(self.cache, 'radium')
+        add('D22', g.buffer(1000) if g is not None else None,
+            'Radium No Shooting or Hunting Area (Map D22, synopsis page 41, 99%). Edge not in this data: village limits plus 1 km '
+            'left out (my pick). VERIFY on the ground.', 99, syn + '; OpenStreetMap', near=3000)
+        # D11 Baynes Lake: access limits (not a hunting closure, so targets stay)
+        g = load_osm(self.cache, 'baynes_village')
+        add('D11', g.buffer(1500) if g is not None else None,
+            'Baynes Lake area (Map D11, Lake Koocanusa shore lot): motorized use prohibited all year; public access prohibited 15 April to '
+            '15 July except public beaches 1 and 2 (synopsis page 40, 99%). The lot edge is not in this data.', 99, syn + '; OpenStreetMap',
+            exclude=False, near=3000)
+        # D12 Sulphur Creek (MU 4-22): no public access beyond 3 m of Sulphur Creek Road up to 1,310 m
+        mug, mup = self.mu
+        m22 = [mug[i] for i, x in enumerate(mup) if x['MU'] == '4-22']
+        sg, sp_, _ = self.ca['streams']
+        sc = [sg[i] for i, x in enumerate(sp_) if (x['name'] or '') == 'Sulphur Creek']
+        if m22 and sc:
+            scg = shapely.intersection(shapely.union_all(sc), shapely.union_all(m22))
+            add('D12', scg.buffer(1000) if not scg.is_empty else None,
+                'Sulphur Creek (Map D12): from Sulphur Creek Bridge to Hartley Pass Road, no public access beyond 3 m of Sulphur Creek '
+                'Road, up to 1,310 m elevation (synopsis page 40, 99%). Edge not in this data: 1 km around the creek left out (my pick).',
+                99, syn + '; FWA streams', near=2500)
+        # Whiteswan FSR No Shooting Area: 50 m each side of about 4.9 km of road (page 37)
+        roads = []
+        for key in ('dra', 'ften'):
+            g, p, _ = self.ca[key]
+            roads += [g[i] for i, x in enumerate(p) if 'whiteswan' in (x.get('name') or '').lower()]
+        add('Whiteswan', shapely.union_all(shapely.buffer(np.array(roads, dtype=object), 65)) if roads else None,
+            'Whiteswan FSR No Shooting Area: no firearms on or within 50 m of the road from Inlet Creek Campground to the White River '
+            'bridge, and from the White Moscow junction to the Moscow and Home Basin Campground junction, about 4.9 km (synopsis page 37, 99%). '
+            'Which stretch is not in this data: targets within 65 m of any Whiteswan road are left out (my pick).', 99,
+            syn + '; road atlas', near=100, routeOnly=True)
+        # D17 Canal Flats Firearms Using Shot Only Area, below the 1,067 m contour (edge around the village: estimate)
+        cf = [i for i, x in enumerate(self.cities[1]) if 'Canal Flats' in (x['name'] or '')]
+        if cf:
+            add('D17', self.cities[0][cf[0]].buffer(3000),
+                'Canal Flats Firearms Using Shot Only Area (Map D17), below the 1,067 m contour: shotgun with shot only, no rifle, slug or .22 '
+                '(synopsis page 41, 99%). Edge not in this data: 3 km around the village below 1,067 m (my pick).', 99,
+                syn + '; ABMS_MUNICIPALITIES_SP; AWS terrain tiles', exclude=False, near=0, shotOnly=1067)
+        # D1 McDougall Wildlife Sanctuary: the McDougall Creek Motor Vehicle Closed Area polygon (my reading that they match)
+        add('D1', mv('McDougall Creek'),
+            'McDougall Wildlife Sanctuary (Map D1): No Shooting, Hunting or Trapping Area and Motor Vehicle Closed Area (synopsis page 40, 99%). '
+            'Edge from the McDougall Creek closure polygon (my reading, 85%).', 99, syn + '; WAA_MVPR_AREAS_SP')
+        box = self.grid.poly.buffer(5000)
+        Z = [z for z in Z if shapely.intersects(z['geom'], box.buffer(z['near']))]
+        log(f"  Region 4 zones in area {self.area}: {', '.join(z['key'] for z in Z)}")
+        return Z
+
+    def shot_only_at(self, x, y, elev=None):
+        """Shot only zone (Region 4 Map D17) at this point, below its elevation contour."""
+        pt = shapely.points(x, y)
+        for z in self.shot_only:
+            if shapely.intersects(z['geom'], pt):
+                el = elev if elev is not None else float(self.dem.sample_xy('elev', x, y)[0])
+                if el < z['shotOnly']:
+                    return z
+        return None
 
     def _named_lake_buffer(self, name, dist, near=None):
         g, p, _ = self.ca['lakes']
@@ -1558,6 +1778,7 @@ class AreaContext:
         R['wetland'] = G.burn_polys(wg) > 0
         R['notarget'] = (G.burn_polys([self.notarget_extra]) > 0) if self.notarget_extra is not None else np.zeros((G.ny, G.nx), bool)
         R['singleproj'] = (G.burn_polys([self.single_proj_zones]) > 0) if self.single_proj_zones is not None else np.zeros((G.ny, G.nx), bool)
+        so_cells = [(G.burn_polys([z['geom']]) > 0, z['shotOnly']) for z in self.shot_only]
         bg, bp, _ = ca['bec']
         zones = sorted({x['zone'] for x in bp if x['zone']})
         self.zone_codes = {z: i + 1 for i, z in enumerate(zones)}
@@ -1586,6 +1807,8 @@ class AreaContext:
         for k in ('elev', 'slope', 'relief'):
             R[k] = self.dem.sample(k, lon, lat).reshape(G.lon.shape).astype(np.float32)
         R['aspect'] = self.dem.sample('aspect', lon, lat, order=0).reshape(G.lon.shape).astype(np.float32)
+        for m_, lim in so_cells:   # shot only areas below their contour (Region 4 Map D17)
+            R['singleproj'] |= m_ & (R['elev'] < lim)
         # distances (m)
         D = {}
         for k in ('car_park', 'paved', 'atvzone', 'cut_young', 'burn', 'wetland', 'stream', 'rec', 'city', 'lake', 'river'):
@@ -1640,7 +1863,7 @@ class AreaContext:
 BANNER = 'Study aid only. The official regulations are the law.'
 SYNOPSIS = 'BC Hunting and Trapping Regulations Synopsis 2026 to 2028'
 SPECIES_LABEL = {'deer': 'deer', 'moose': 'moose', 'elk': 'elk', 'bear': 'black bear', 'grouse': 'grouse',
-                 'duck': 'ducks', 'quail': 'California quail', 'sheep': 'bighorn sheep'}
+                 'duck': 'ducks', 'quail': 'California quail', 'sheep': 'bighorn sheep', 'turkey': 'wild turkey'}
 MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
 
 
@@ -1797,7 +2020,7 @@ def file_rows(tag, region, mu):
             o = {'sp': n, 'cls': r.get('class') or '', 'open': r['open'], 'close': r['close'],
                  'dates': 'No closed season' if r.get('allYear') else f"{md_text(r['open'])} to {md_text(r['close'])}",
                  'notes': r.get('notes') or '', 'page': r['page'], 'cert': r['cert'], 'months': r['months']}
-            if re.search(r'youth|private land only', o['notes'], re.I):
+            if re.search(r'youth|private land only|Map D27', o['notes'], re.I):
                 o['limited'] = True
             out.append(o)
         if mine:
@@ -1938,6 +2161,18 @@ def grid_scores(ctx, sp):
              + w['draw'] * ((R['relief'] < -10) & (R['slope'] >= 5) & (R['slope'] <= 35)))
         TB = 0.5 * (1 - clip01(D['fields'] / 1000)) + 0.49 * (1 - clip01(D['stream'] / 1000))
         extra = R['elev'] < QUAIL_MAX_ELEV
+    elif sp == 'elk':
+        S = (w['uwr'] * (D['uwr_elk'] <= 500) + w['burn'] * (D['burn'] <= 1000) + w['cut'] * (D['cut_young'] <= 1000)
+             + w['bec_low'] * zone_mask(ctx, ELK_ZONES_LOW) + w['bec_ms'] * zone_mask(ctx, DEER_ZONES_MID)
+             + w['aspect'] * ((R['slope'] >= 5) & (R['aspect'] >= 135) & (R['aspect'] <= 315))
+             + w['water'] * (D['water'] <= 500))
+        TB = (0.35 * (1 - clip01(D['uwr_elk'] / 2000)) + 0.3 * (1 - clip01(D['burn'] / 1000))
+              + 0.15 * (1 - clip01(D['cut_young'] / 1000)) + 0.19 * clip01(1 - np.abs(R['slope'] - 12) / 15))
+        extra = ~zone_mask(ctx, {'IMA', 'CMA', 'BAFA'}) & ~R['singleproj']
+    elif sp == 'turkey':
+        S = w['zone'] * zone_mask(ctx, TURKEY_ZONES) + w['farm'] * (D['fields'] <= 1000) + w['creek'] * (D['stream'] <= 300)
+        TB = 0.5 * (1 - clip01(D['fields'] / 1000)) + 0.49 * (1 - clip01(D['stream'] / 300))
+        extra = R['elev'] < TURKEY_MAX_ELEV
     else:
         raise ValueError(sp)
     return S.astype(np.int16), TB.astype(np.float32), extra
@@ -2662,6 +2897,49 @@ def evidence(rf, s):
         rel = float(rf.ctx.dem.sample_xy('relief', x, y)[0])
         if rel < -10 and 5 <= sl <= 35:
             items.append({'t': f'Draw or gully (ground {abs(rel):.0f} m below its surroundings, estimate): brushy cover.', 'pts': w['draw']})
+    elif sp == 'elk':
+        w = W['elk']
+        u = _uwr_near(rf, x, y, {'elk'}, 500)
+        if u:
+            items.append({'t': f"Elk winter range {u['uwr']} unit {u['unit']} (official), {u['where']}.", 'pts': w['uwr']})
+        else:
+            items.append({'t': 'No official elk winter range within 500 m, so the top score here is 8 of 11.', 'pts': 0})
+        b = _burn_near(rf, x, y, 1000)
+        if b:
+            items.append({'t': f"Burn from {b['year']} (fire {b['fire']}, {fmt_int(b['ha'])} ha), {b['where']}: grass and shrubs.", 'pts': w['burn']})
+        c = _cut_near(rf, x, y, 1000)
+        if c:
+            items.append({'t': f"Cutblock harvested {c['year']} ({c['age']} years old), {c['where']}.", 'pts': w['cut']})
+        z, lab = _zone_at(rf, x, y)
+        if z in ELK_ZONES_LOW:
+            items.append({'t': f'Habitat zone {BEC_NAMES.get(z, z)} ({lab}): open forest and grass, fall and winter elk range.', 'pts': w['bec_low']})
+        elif z in DEER_ZONES_MID:
+            items.append({'t': f'Habitat zone {BEC_NAMES.get(z, z)} ({lab}).', 'pts': w['bec_ms']})
+        sl = float(rf.ctx.dem.sample_xy('slope', x, y)[0])
+        a = float(rf.ctx.dem.sample_xy('aspect', x, y, order=0)[0])
+        if sl >= 5 and 135 <= a <= 315:
+            items.append({'t': f'{compass8(a)} facing slope, {sl:.0f} degrees: grass greens up and snow melts first.', 'pts': w['aspect']})
+        wn = _water_near(rf, x, y, 500)
+        if wn:
+            items.append({'t': f"Water: {wn['name'] or 'unnamed ' + wn['kind']} {wn['where']}.", 'pts': w['water']})
+    elif sp == 'turkey':
+        w = W['turkey']
+        el = float(rf.ctx.dem.sample_xy('elev', x, y)[0])
+        if el >= TURKEY_MAX_ELEV:
+            return items, 0
+        items.append({'t': f'Elevation {fmt_int(el)} m: valley bottom, under {fmt_int(TURKEY_MAX_ELEV)} m (my pick).', 'pts': 0})
+        z, lab = _zone_at(rf, x, y)
+        if z in TURKEY_ZONES:
+            items.append({'t': f'Habitat zone {BEC_NAMES.get(z, z)} ({lab}): open pine and fir with roost trees.', 'pts': w['zone']})
+        f = _fields_near(rf, x, y, 1000)
+        if f:
+            items.append({'t': f"Farm fields (private) {f['where']}: turkeys feed on field edges (Tip). Do not cross without permission.", 'pts': w['farm']})
+        if rf.stream_tree is not None:
+            j, d = rf.stream_tree.query_nearest(shapely.points(x, y), max_distance=300, return_distance=True)
+            if len(j):
+                g = ctx.ca['streams'][0][int(j[0])]
+                where, _ = _feat_dir(x, y, g)
+                items.append({'t': f"{ctx.ca['streams'][1][int(j[0])]['name']} {where}: creek bottom cover and roosts.", 'pts': w['creek']})
     elif sp == 'duck':
         w = W['duck']
         wpp = s['waterProps']
@@ -2842,8 +3120,12 @@ def legal_flags(rf, s):
     if rf.wma_tree is not None:
         for j in rf.wma_tree.query(pt, predicate='intersects'):
             p = ctx.wma[1][int(j)]
-            flags.append({'t': f"Inside {p['name']} Wildlife Management Area: rules differ by area. Call the regional office before you hunt (synopsis page 9, 99%).",
+            extra = (' No conveyance with a motor over 10 hp, except boats on navigable parts of the Columbia River; no electric or gas boats '
+                     'in the wetlands (synopsis pages 38 and 41, Map D21, 99%).') if 'COLUMBIA WETLANDS' in (p['name'] or '').upper() else ''
+            flags.append({'t': f"Inside {p['name']} Wildlife Management Area: rules differ by area. Call the regional office before you hunt (synopsis page 9, 99%).{extra}",
                           'src': 'TA_WILDLIFE_MGMT_AREAS_SVW', 'date': dates['wma'], 'cert': 95})
+    if region == '4':
+        flags += region4_flags(rf, s, pt, route)
     if getattr(ctx, 'swan', None) is not None and shapely.distance(ctx.swan, pt) < 1500:
         flags.append({'t': 'Near Swan Lake: the lake and all its marsh are a No Shooting or Hunting Area (synopsis Region 8, Map J17, 99%). '
                            'The edge is not in this data. VERIFY on the ground.',
@@ -2853,6 +3135,55 @@ def legal_flags(rf, s):
                            '(synopsis page 67, 99%). Their edges are not in this data. VERIFY on the ground.',
                       'src': 'Synopsis Region 8', 'date': dates['roads'], 'cert': 99})
     return flags
+
+
+def region4_flags(rf, s, pt, route):
+    """Region 4 rules: CWD Management Zone, feeding and baiting ban, snowmobile closure, wolf note, Cranbrook Deer Hunt and the
+    synopsis map areas near the spot (content/phase7/13-region-4-kootenay.md, synopsis pages 15, 36 to 41)."""
+    ctx = rf.ctx
+    dates = rf.dates
+    mu = s.get('mu')
+    out = []
+    syn = 'Synopsis Region 4'
+    d4 = (load_seasons().get('4') or {}).get('checked') or dates['mu']
+    cwd = (load_seasons().get('4') or {}).get('cwdZone') or {}
+    if mu in cwd.get('mus', []):
+        t = (f'CWD (Chronic Wasting Disease) Management Zone, MU {mu}: every deer, elk and moose taken here must have its head sampled at a '
+             'designated CWD freezer before you leave the zone (www.gov.bc.ca/CWDdropoff). The brain and the spinal column, vertebrae '
+             'included but not the tail, may not leave the zone: leave them at the kill site or a landfill inside it (synopsis pages 15, 36, 37, 99%).')
+        if mu == '4-25':
+            t += ' From MU 4-25 you have 24 hours to take the animal to the Invermere or Canal Flats freezer through MU 4-26 (page 15, 99%).'
+        out.append({'t': t, 'src': syn + ' (CWD Management Zone)', 'date': d4, 'cert': 99, 'cwd': True})
+        s['cwd'] = True
+    out.append({'t': 'Region 4: it is unlawful to feed or bait deer, elk, moose and other hoofed game, or turkeys, anywhere in the '
+                     'Kootenay Region (synopsis page 37, 99%). Snowmobiles may not be used for hunting in Region 4 from 1 April to '
+                     '30 November (page 37, 99%).', 'src': syn, 'date': d4, 'cert': 99})
+    el = s.get('elev') or 0
+    if (mu in R4_WOLF_TRENCH or mu in R4_WOLF_LOW) and el < 1100:
+        where = 'the East Kootenay Trench part of MU ' + mu if mu in R4_WOLF_TRENCH else 'MU ' + mu
+        out.append({'t': f'Wolf: no closed season in {where} below 1,100 m (synopsis page 39 footnote, 90%: the Trench line is not '
+                         'mapped and "below 1,100 m" is my reading for both groups). VERIFY with the regional office.',
+                    'src': syn, 'date': d4, 'cert': 90})
+    if mu in R4_DEER_HUNT_MUS and 'deer' in s.get('species', []):
+        out.append({'t': 'Cranbrook Deer Hunt (Map D27): 5 to 31 January, one extra deer of either species and either sex, only inside '
+                         'the mapped portions of MUs 4-3, 4-4, 4-5 and 4-20. Never more than 3 deer province wide (synopsis pages 37 '
+                         'and 41, 99%). The Map D27 line is not in this data: check the map.', 'src': syn, 'date': d4, 'cert': 99})
+    for z in ctx.r4_zones:
+        g = z['geom']
+        if z.get('shotOnly'):
+            if ctx.shot_only_at(s['x'], s['y'], s.get('elev')):
+                out.append({'t': 'Spot is inside this area: ' + z['text'], 'src': z['src'], 'date': d4, 'cert': 85})
+                s['singleProj'] = True
+            continue
+        if z.get('routeOnly'):
+            if shapely.intersects(g, route.buffer(z['near'])):
+                out.append({'t': 'Route or spot is on or near the road: ' + z['text'], 'src': z['src'], 'date': d4, 'cert': 85})
+            continue
+        if shapely.intersects(g, route):
+            out.append({'t': 'Route enters this area: ' + z['text'], 'src': z['src'], 'date': d4, 'cert': 85})
+        elif z['near'] and shapely.distance(g, pt) < z['near']:
+            out.append({'t': 'Nearby: ' + z['text'], 'src': z['src'], 'date': d4, 'cert': 85})
+    return out
 
 
 # ---------------------------------------------------------------- pressure (estimate)
@@ -2897,6 +3228,7 @@ USE = {
     'duck': 'Use: 12 gauge, steel 2 to 4 (non toxic shot only), modified or improved cylinder rated for steel, plugged to 3 shells (regs).',
     'grouse': 'Use: .22 rimfire for a sitting grouse inside 25 m (27 yd), or a shotgun with lead 6 or 7.5 (Tip).',
     'quail': 'Use: a shotgun, improved cylinder, lead 7.5 or 6, or steel 6 (Tip). No rifle or .22 for quail (synopsis page 13, 95%).',
+    'turkey': 'Use: a 12 or 20 gauge shotgun, full or turkey choke, lead or non toxic 4 to 6 shot, head and neck inside 35 m (38 yd) (Tip).',
     'sheep': 'Use: VERIFY. Sheep hunting needs special rules or a draw. Not in data/regs.json yet.',
 }
 
@@ -2966,6 +3298,13 @@ def make_plan(rf, s):
         t = f"Hunt: ducks, {when}. Set up on the shore with the wind at your back: ducks land into the wind (Tip). Shoot only birds you can retrieve."
     elif sp == 'grouse':
         t = f"Hunt: grouse, {when}. Walk slowly in the first and last 2 hours of light. Watch where cutblocks and creeks meet the road (Tip)."
+    elif sp == 'elk':
+        feat = s.get('watch') or 'the open grass slopes and burn edges'
+        t = (f"Hunt: elk, {when}. Glass {feat} at first and last light; in September listen for bugling bulls. "
+             "Keep the wind in your face (Tip).")
+    elif sp == 'turkey':
+        t = (f"Hunt: wild turkey, {when}. Find roost trees by the creek, set up before first light, call softly. "
+             "Never bait: unlawful in Region 4 (Tip).")
     elif sp == 'quail':
         t = f"Hunt: California quail, {when}. Walk the brushy draws and field edges in the morning. Listen for coveys calling (Tip)."
     else:
@@ -2980,6 +3319,10 @@ def make_plan(rf, s):
         lines.append([use, ''])
     # legal
     lt = f"Legal: MU (Management Unit) {s.get('mu') or 'VERIFY'}, Region {s.get('region') or 'VERIFY'}."
+    if s.get('cwd'):
+        lt += ' CWD zone: deer, elk and moose heads go to a CWD freezer; brain and spine stay in the zone.'
+    if s.get('region') == '4':
+        lt += ' No baiting in Region 4.'
     nflags = len(s['flags'])
     season_txt = ''
     prim = [r for r in s.get('seasonRows', []) if r.get('tag') == sp]
@@ -3060,7 +3403,7 @@ def finalize(rf, s, stats):
     ctx = rf.ctx
     sp = s['sp']
     st = stats.setdefault(sp, {})
-    if sp == 'deer':
+    if sp in ('deer', 'elk'):
         c = _cut_near(rf, s['x'], s['y'], 300)
         b = _burn_near(rf, s['x'], s['y'], 300)
         g = c['geom'] if c and (not b or c['d'] <= b['d']) else (b['geom'] if b else None)
@@ -3104,15 +3447,15 @@ def finalize(rf, s, stats):
     s['walkDir'] = compass8(az)
     # secondary species tags (vector checks)
     tags = [sp] if sp != 'camp' else []
-    if sp in ('deer', 'moose', 'grouse'):
+    if sp in ('deer', 'moose', 'grouse', 'elk'):
         c = _cut_near(rf, x, y, 300)
         b = _burn_near(rf, x, y, 500)
         sunny = sl >= 5 and 135 <= asp <= 315
         if b or (c and sunny):
             tags.append('bear')
             items.append({'t': 'Black bear: young cutblocks and burns grow berries in late summer and fall (Tip).', 'pts': 0, 'tag': 'bear'})
-    if sp in ('deer', 'moose'):
-        u = _uwr_near(rf, x, y, {'elk'}, 1000)
+    if sp in ('deer', 'moose', 'elk'):
+        u = _uwr_near(rf, x, y, {'elk'}, 1000) if sp != 'elk' else None
         if u:
             tags.append('elk')
             items.append({'t': f"Elk winter range {u['uwr']} (official), {u['where']}.", 'pts': 0, 'tag': 'elk'})
@@ -3125,13 +3468,14 @@ def finalize(rf, s, stats):
         if u:
             tags.append('moose')
             items.append({'t': f"Moose winter range {u['uwr']} (official), {u['where']}.", 'pts': 0, 'tag': 'moose'})
-    if sp == 'moose':
+    if sp in ('moose', 'elk'):
         u = _uwr_near(rf, x, y, {'mule_deer', 'wt_deer'}, 500)
         if u:
             tags.append('deer')
             items.append({'t': f"{u['species']} winter range {u['uwr']} (official), {u['where']}.", 'pts': 0, 'tag': 'deer'})
-    if s.get('singleProj') or (ctx.single_proj_zones is not None and shapely.intersects(ctx.single_proj_zones, shapely.points(x, y))):
-        tags = [t for t in tags if t in ('duck', 'grouse', 'quail')]
+    if (s.get('singleProj') or (ctx.single_proj_zones is not None and shapely.intersects(ctx.single_proj_zones, shapely.points(x, y)))
+            or ctx.shot_only_at(x, y, s['elev'])):
+        tags = [t for t in tags if t in ('duck', 'grouse', 'quail', 'turkey')]
         if not tags and sp != 'camp':
             st['droppedSingleProjectile'] = st.get('droppedSingleProjectile', 0) + 1
             return None
@@ -3180,8 +3524,8 @@ def finalize(rf, s, stats):
         if len(jj) and rf.rec_p[int(jj[0])].get('directions'):
             s['recName'] = title_case_name(rf.rec_p[int(jj[0])]['name']) + ' rec site'
             s['recDirections'] = rf.rec_p[int(jj[0])]['directions']
-    # watch feature for the deer plan
-    if sp == 'deer':
+    # watch feature for the deer and elk plan
+    if sp in ('deer', 'elk'):
         for it in items:
             if it['t'].startswith('Cutblock'):
                 m = re.match(r'Cutblock harvested (\d+) .*?, (.+)\.$', it['t'])
@@ -3282,6 +3626,8 @@ def spot_feature(s, sid):
         'plan': s['plan'],
         'gmaps': lk['gmaps'], 'gdir': lk['gdir'], 'apple': lk['apple'],
     }
+    if s.get('cwd'):
+        props['cwd'] = True
     if s.get('recDirections'):
         props['recName'] = s['recName']
         props['recDirections'] = s['recDirections']
@@ -3372,7 +3718,8 @@ def step_spots(cache, areas):
         rf = Refiner(ctx, dates)
         stats = {}
         cands = []
-        for sp in ('deer', 'moose') + (('quail',) if a in QUAIL_AREAS else ()):
+        for sp in (('deer', 'moose') + (('quail',) if a in QUAIL_AREAS else ()) + (('elk',) if a in ELK_AREAS else ())
+                   + (('turkey',) if a in TURKEY_AREAS else ())):
             c = grid_candidates(ctx, sp, stats)
             log(f'  {sp}: {len(c)} grid candidates')
             cands += c
@@ -3528,7 +3875,17 @@ def step_spots(cache, areas):
                   'Swan Lake north of Vernon: No Shooting or Hunting Area (Map J17); targets within 500 m of the lake are left out (my pick).',
                   'Quail spots only in Region 8 (Region 3 has no quail season).'] if a == 'D' else [])
               + (['Area E leaves out the part of its box inside area A (south of 51.9 and east of -121.6). 100 Mile House itself is in area A.',
-                  'Assumption: grouse zones include SBPS and SBS (Sub Boreal Pine and Spruce, Sub Boreal Spruce) in area E (my pick).'] if a == 'E' else []),
+                  'Assumption: grouse zones include SBPS and SBS (Sub Boreal Pine and Spruce, Sub Boreal Spruce) in area E (my pick).'] if a == 'E' else [])
+              + (['Area F is Region 4 (Kootenay). Every spot in MUs 4-1 to 4-8 and 4-20 to 4-25 carries the CWD (Chronic Wasting Disease) '
+                  'Management Zone flag: head sampling at a CWD freezer and the brain and spine transport ban (synopsis pages 15, 36, 37).',
+                  'Every Region 4 spot carries the region wide ungulate and turkey feeding and baiting ban and the snowmobile for hunting closure.',
+                  'Elk spots (my pick weights: elk winter range, burns, cutblocks, open low habitat zones, sunny slopes, water) and wild turkey '
+                  'spots (valley bottom under 1,100 m, pine and fir zones, field edges, creeks) are scored only in area F.',
+                  'Synopsis map areas without official polygons (Maps D9, D10, D13, D16, D19, D20, D22, D23 and the Whiteswan FSR) are drawn from '
+                  'OpenStreetMap, FWA water or road names with a margin (my pick); targets inside are left out and nearby spots are flagged.',
+                  'Hwy 3 Map D14 strip: 400 m no hunting or shooting from the east edge of Sparwood (Loop Bridge is not in the data, assumption) '
+                  'to the Alexander Creek crossing. Canal Flats Map D17 shot only area: big game targets within 3 km of the village and under '
+                  '1,067 m are left out (my pick).'] if a in R4_AREAS else []),
         }
         json.dump(meta, open(out / 'meta.json', 'w'), indent=1, ensure_ascii=False)
         log(f'spots {a}: {len(feats)} spots, {len(routes)} routes, {len(campf)} camps, '
