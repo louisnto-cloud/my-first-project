@@ -129,3 +129,8 @@ hunt-mentor/
 
 ## 8. Open questions
 - See chat. Answers get logged here.
+
+## 7e. Owner update (2026-10-04)
+- Hunt Map (onX style) live: topo, satellite, 3D, layers, 3,534 candidate spots (areas A, B, C).
+- Map tools live: waypoints, lines with elevation profile, areas, range rings, wind and scent cone, forecast, Insights, Go and Track, GPX and KML import and export.
+- Rule Book complete for general rules plus Regions 3 and 8. Next: Region 2, federal migratory birds, season data per MU for spot cards.
