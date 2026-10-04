@@ -210,8 +210,8 @@
     {
       "group": "quail",
       "key": "r8quail",
-      "label": "Region 8 quail (the synopsis row says only "QUAIL")",
-      "value": "quail (the synopsis row says only "QUAIL"), Region 8 MUs 8-1 to 8-15 and 8-21 to 8-26: 1 Oct to 30 Nov. Daily 10, possession 30.",
+      "label": "Region 8 quail (the synopsis row says only QUAIL)",
+      "value": "quail (the synopsis row says only QUAIL), Region 8 MUs 8-1 to 8-15 and 8-21 to 8-26: 1 Oct to 30 Nov. Daily 10, possession 30.",
       "certainty": 99,
       "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
       "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-8-okanagan.pdf",
@@ -221,7 +221,7 @@
     {
       "group": "quail",
       "key": "r3quail",
-      "label": "Region 3 quail (the synopsis row says only "QUAIL")",
+      "label": "Region 3 quail (the synopsis row says only QUAIL)",
       "value": "No quail season in Region 3 (no row in the season table).",
       "note": "",
       "certainty": 95,
