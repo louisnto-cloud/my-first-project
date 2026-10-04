@@ -841,9 +841,12 @@ def clean_area(cache, area):
     g, p, m = load_vec(cache, 'uwr', area)
     props = []
     for x in p:
-        sp = [UWR_SPECIES.get(x.get('SPECIES_1'), (None, None)), UWR_SPECIES.get(x.get('SPECIES_2'), (None, None))]
-        props.append({'uwr': x.get('UWR_NUMBER'), 'unit': x.get('UWR_UNIT_NUMBER'),
-                      'sp1': sp[0][0], 'sp2': sp[1][0], 'species': ' and '.join(s[1] for s in sp if s[1]),
+        # Region 4 lists several species in one field, separated by ';' (for example 'M-CEEL;M-OVCA;M-ODHE')
+        codes = [c.strip() for f in ('SPECIES_1', 'SPECIES_2') for c in str(x.get(f) or '').split(';') if c.strip()]
+        sp = [UWR_SPECIES[c] for c in dict.fromkeys(codes) if c in UWR_SPECIES] or [(None, None)]
+        sp2 = sp[1] if len(sp) > 1 else (None, None)
+        props.append({'uwr': x.get('UWR_NUMBER'), 'unit': x.get('UWR_UNIT_NUMBER'), 'sps': [s[0] for s in sp if s[0]],
+                      'sp1': sp[0][0], 'sp2': sp2[0], 'species': ' and '.join(s[1] for s in sp if s[1]),
                       'approved': date_only(x.get('APPROVAL_DATE')), 'ha': round(float(x.get('HECTARES') or 0), 1)})
     out['uwr'] = (g, props, m)
     # private land (dissolved)
@@ -1029,7 +1032,7 @@ def step_layers(cache, areas):
         # winter ranges by species
         g, p, m = ca['uwr']
         for code, (sp, label) in UWR_SPECIES.items():
-            idx = [i for i, x in enumerate(p) if sp in (x['sp1'], x['sp2'])]
+            idx = [i for i, x in enumerate(p) if sp in uwr_sps(x)]
             lid = f'uwr_{sp}'
             if not idx:
                 info.get(lid, {}).pop(a, None)
@@ -1039,8 +1042,22 @@ def step_layers(cache, areas):
                         f.unlink()
                 continue
             months = winter_months(MIG_KEY.get(sp), SPECIES_WINTER_MONTHS.get(sp, [11, 12, 1, 2, 3, 4]))
-            pp = [dict(p[i], months=months, monthsKey=months_key(months)) for i in idx]
-            emit(info, lid, a, adir / lid, g[idx], pp, 15, adate('uwr'), newest(pp, 'approved'))
+            pp = [dict({k: v for k, v in p[i].items() if k != 'sps'}, months=months, monthsKey=months_key(months)) for i in idx]
+            gg = g[idx]
+            if len(idx) > 5000:   # Region 4 winter ranges come in tens of thousands of small pieces: dissolve per UWR number for the map
+                groups = {}
+                for k, x in zip(range(len(idx)), pp):
+                    groups.setdefault(x['uwr'], []).append(k)
+                gg2, pp2 = [], []
+                for u, ks in groups.items():
+                    d = shapely.union_all(shapely.buffer(gg[ks], 20)).buffer(-20)
+                    for part in getattr(d, 'geoms', [d]):
+                        if part.area >= 20000:   # under 2 ha left out of the map layer (spots still use every piece)
+                            gg2.append(part)
+                            pp2.append(dict(pp[ks[0]], unit='several', ha=round(part.area / 1e4, 1), species=label))
+                log(f'  {lid} {a}: {len(idx)} pieces dissolved into {len(gg2)} polygons for the map')
+                gg, pp = np.array(gg2, dtype=object), pp2
+            emit(info, lid, a, adir / lid, gg, pp, 15, adate('uwr'), newest(pp, 'approved'))
         # young cutblocks (25 years or less)
         g, p, m = ca['cutblocks']
         idx = [i for i, x in enumerate(p) if x['age'] <= 25]
@@ -1786,7 +1803,7 @@ class AreaContext:
         R['bec'] = G.burn_polys(bg, values=[self.zone_codes.get(x['zone'], 0) for x in bp])
         ug, up, _ = ca['uwr']
         for sp in ('mule_deer', 'wt_deer', 'moose', 'elk', 'sheep'):
-            idx = [i for i, x in enumerate(up) if sp in (x['sp1'], x['sp2'])]
+            idx = [i for i, x in enumerate(up) if sp in uwr_sps(x)]
             R['uwr_' + sp] = (G.burn_polys(ug[idx]) > 0) if idx else np.zeros((G.ny, G.nx), bool)
         cg, cp, _ = ca['cutblocks']
         young = [i for i, x in enumerate(cp) if CUT_AGE[0] <= x['age'] <= CUT_AGE[1]]
@@ -2748,6 +2765,11 @@ def _zone_at(rf, x, y):
     return p['zone'], p['label']
 
 
+def uwr_sps(x):
+    """Species keys of a winter range record (several in Region 4)."""
+    return x.get('sps') or [v for v in (x.get('sp1'), x.get('sp2')) if v]
+
+
 def _uwr_near(rf, x, y, species_set, maxd):
     if rf.uwr_tree is None:
         return None
@@ -2756,7 +2778,7 @@ def _uwr_near(rf, x, y, species_set, maxd):
     best = None
     for k in rf.uwr_tree.query(pt.buffer(maxd)):
         p = up[k]
-        if not ({p['sp1'], p['sp2']} & species_set):
+        if not (set(uwr_sps(p)) & species_set):
             continue
         d = shapely.distance(ug[k], pt)
         if d <= maxd and (best is None or d < best[0]):
@@ -2766,7 +2788,7 @@ def _uwr_near(rf, x, y, species_set, maxd):
     d, k = best
     p = up[k]
     where, _ = _feat_dir(x, y, ug[k])
-    sp = [UWR_SPECIES[c][1] for c in UWR_SPECIES if UWR_SPECIES[c][0] in ({p['sp1'], p['sp2']} & species_set)]
+    sp = [UWR_SPECIES[c][1] for c in UWR_SPECIES if UWR_SPECIES[c][0] in (set(uwr_sps(p)) & species_set)]
     return {'d': d, 'where': where, 'uwr': p['uwr'], 'unit': re.sub(r'\.0$', '', str(p['unit'])), 'species': ' and '.join(sp)}
 
 
