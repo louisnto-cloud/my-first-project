@@ -1651,6 +1651,90 @@ def season_rows(species, region, mu):
     return keys, sorted(months), note
 
 
+# Season rows from data/seasons/region<R>.json (synopsis season tables, every MU listed). First choice for a spot.
+# Ducks and geese stay on data/regs.json rows (federal rules live there).
+SEASON_SP = {'deer': ['mule deer', 'white tailed deer'], 'moose': ['moose'], 'elk': ['elk'], 'bear': ['black bear'],
+             'grouse': ['grouse', 'sharp tailed grouse'], 'quail': ['quail'], 'chukar': ['chukar'], 'sheep': ['bighorn sheep'],
+             'goat': ['mountain goat'], 'pheasant': ['pheasant'], 'turkey': ['turkey']}
+SEASONS = {}
+
+
+def load_seasons():
+    if not SEASONS:
+        SEASONS['_files'] = []
+        for p in sorted((ROOT / 'data' / 'seasons').glob('region*.json')):
+            d = json.load(open(p))
+            SEASONS[str(d['region'])] = d
+            SEASONS['_files'].append({'region': d['region'], 'edition': d.get('edition'), 'rows': len(d.get('rows', [])),
+                                      'checked': d.get('checked')})
+    return SEASONS
+
+
+def md_text(md):
+    m, d = md.split('-')
+    return f'{MONTHS[int(m) - 1]} {int(d)}'
+
+
+def file_rows(tag, region, mu):
+    """Rows for one species tag in one MU from data/seasons. None when the region has no file or the tag is not covered."""
+    d = load_seasons().get(str(region)) if region else None
+    names = SEASON_SP.get(tag)
+    if not d or not names or not mu:
+        return None
+    out = []
+    for c in d.get('closedMus', []):
+        if c['mu'] == mu:
+            return [{'sp': SPECIES_LABEL.get(tag, tag), 'cls': '', 'dates': 'No hunting', 'notes': c['notes'],
+                     'page': c['page'], 'cert': c['cert'], 'none': True}]
+    nr = d.get('noRow') or {}
+    for n in names:
+        rows = [r for r in d['rows'] if r['species'] == n]
+        mine = [r for r in rows if mu in r['mus']]
+        for r in mine:
+            o = {'sp': n, 'cls': r.get('class') or '', 'open': r['open'], 'close': r['close'],
+                 'dates': 'No closed season' if r.get('allYear') else f"{md_text(r['open'])} to {md_text(r['close'])}",
+                 'notes': r.get('notes') or '', 'page': r['page'], 'cert': r['cert'], 'months': r['months']}
+            if re.search(r'youth|private land only', o['notes'], re.I):
+                o['limited'] = True
+            out.append(o)
+        if mine:
+            for l in d.get('leh', []):
+                if l['species'] == n:
+                    out.append({'sp': n, 'cls': l['class'], 'dates': 'LEH draw only', 'notes': 'LEH (Limited Entry Hunting): '
+                                'draw only, not a general open season', 'page': l['page'], 'cert': l['cert'], 'leh': True})
+        elif n in nr.get('species', []):
+            out.append({'sp': n, 'cls': '', 'dates': 'No general open season', 'notes': nr.get('notes', ''),
+                        'page': nr['page'], 'cert': nr['cert'], 'none': True})
+        elif rows:
+            out.append({'sp': n, 'cls': '', 'dates': 'No general open season', 'cert': 95, 'page': rows[0]['page'], 'none': True,
+                        'notes': f"MU {mu} is not listed in the Region {region} {n} rows (my reading of the table)."})
+    return out or None
+
+
+def spot_seasons(s):
+    """Season rows for every species tag of a spot: data/seasons first, then data/regs.json, then VERIFY."""
+    keys, notes, months, rows = [], {}, [], []
+    s.pop('seasonNote', None)
+    for t in s['species']:
+        fr = file_rows(t, s.get('region'), s.get('mu'))
+        if fr:
+            for r in fr:
+                r['tag'] = t
+            rows += fr
+            if t == s['sp']:
+                months = sorted({m for r in fr if not r.get('limited') for m in r.get('months', [])})
+            continue
+        k, mo, note = season_rows(t, s.get('region'), s.get('mu'))
+        keys += [kk for kk in k if kk not in keys]
+        if t == s['sp']:
+            months = mo
+            if note:
+                s['seasonNote'] = note
+        if note:
+            notes[t] = note
+    s['seasons'], s['seasonNotes'], s['months'], s['seasonRows'] = keys, notes, months, rows
+
+
 def fmt_dist(m):
     if m < 950:
         return f'{int(round(m / 10.0) * 10)} m'
@@ -2790,7 +2874,15 @@ def make_plan(rf, s):
     lt = f"Legal: MU (Management Unit) {s.get('mu') or 'VERIFY'}, Region {s.get('region') or 'VERIFY'}."
     nflags = len(s['flags'])
     season_txt = ''
-    if s.get('seasons'):
+    prim = [r for r in s.get('seasonRows', []) if r.get('tag') == sp]
+    if prim:
+        gen = [r for r in prim if r.get('open') and not r.get('limited')]
+        if gen:
+            season_txt = (f" Season: {gen[0]['sp']}{' ' + gen[0]['cls'].lower() if gen[0]['cls'] else ''} {gen[0]['dates']}"
+                          f"{' and more rows' if len(prim) > 1 else ''} (synopsis page {gen[0]['page']}, {gen[0]['cert']}%).")
+        else:
+            season_txt = f" Season: {prim[0]['dates'].lower()} (synopsis page {prim[0]['page']}, {prim[0]['cert']}%)."
+    elif s.get('seasons'):
         it = REGS.get(s['seasons'][0], {})
         season_txt = f" Season: {it.get('value', '')} ({it.get('certainty', '')}%)."
     elif s.get('seasonNote'):
@@ -2936,17 +3028,7 @@ def finalize(rf, s, stats):
     s['species'] = tags
     s['flags'] = legal_flags(rf, s)
     # seasons
-    keys, notes, months = [], {}, []
-    for t in tags:
-        k, mo, note = season_rows(t, s.get('region'), s.get('mu'))
-        keys += [kk for kk in k if kk not in keys]
-        if t == sp:
-            months = mo
-            if note:
-                s['seasonNote'] = note
-        if note:
-            notes[t] = note
-    s['seasons'], s['seasonNotes'], s['months'] = keys, notes, months
+    spot_seasons(s)
     s['pressure'], s['pressureWhy'] = pressure(rf, s)
     # names, parking description, drive route
     if sp == 'duck':
@@ -3052,18 +3134,7 @@ def enforce_spacing(spots):
 
 def post_spot(rf, s):
     """Season rows (for the final tags) and plan text."""
-    keys, notes, months = [], {}, []
-    s.pop('seasonNote', None)
-    for t in s['species']:
-        k, mo, note = season_rows(t, s.get('region'), s.get('mu'))
-        keys += [kk for kk in k if kk not in keys]
-        if t == s['sp']:
-            months = mo
-            if note:
-                s['seasonNote'] = note
-        if note:
-            notes[t] = note
-    s['seasons'], s['seasonNotes'], s['months'] = keys, notes, months
+    spot_seasons(s)
     s['plan'] = make_plan(rf, s)
 
 
@@ -3097,6 +3168,7 @@ def spot_feature(s, sid):
         'evidence': [{k: v for k, v in e.items()} for e in s['evidence']],
         'flags': s['flags'],
         'seasons': s['seasons'], 'seasonNote': s.get('seasonNote'), 'months': s['months'], 'monthsKey': months_key(s['months']),
+        'seasonRows': [{k: v for k, v in r.items() if k not in ('months', 'tag')} for r in s.get('seasonRows', [])],
         'plan': s['plan'],
         'gmaps': lk['gmaps'], 'gdir': lk['gdir'], 'apple': lk['apple'],
     }
@@ -3255,6 +3327,11 @@ def step_spots(cache, areas):
             'seasonRows': {k: {kk: REGS[k].get(kk) for kk in ('label', 'value', 'certainty', 'source', 'url', 'page', 'checked')}
                            for k in sorted({k for s in spots for k in s['seasons']}) if k in REGS},
             'regsEdition': REGS.get('_meta'), 'regsWarnings': REGS_WARN,
+            'seasonFiles': load_seasons().get('_files'),
+            'seasonCoverage': {'withFileRows': sum(1 for s in spots if any(r.get('tag') == s['sp'] for r in s.get('seasonRows', []))),
+                               'withRegsRows': sum(1 for s in spots if s['sp'] != 'camp' and s['seasons'] and not s.get('seasonNote')
+                                                   and not any(r.get('tag') == s['sp'] for r in s.get('seasonRows', []))),
+                               'verify': sum(1 for s in spots if s['sp'] != 'camp' and s.get('seasonNote'))},
             'notes': [
                 'Candidate spots from official open data. Nobody publishes where hunters go; nothing here says animals are present.',
                 'Scores are opinion (my pick). Busier, average, quieter and remote are estimates from access.',

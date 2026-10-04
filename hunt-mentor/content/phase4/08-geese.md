@@ -102,7 +102,7 @@ checked: 2026-10-01
 
 - District 3 Canada geese are **closed 21 to 30 September** between the two fall periods (99%). Your October hunt is inside the open period (99%).
 - District 2 note: in MU 2-4 the Canada goose season "does not apply to the area 100 metres on either side of any dyke in the Municipality of Delta" (99%, synopsis page 28). Mission is in MU 2-8, so this does not touch your base (90%).
-- BC synopsis, page 12, prints the same limits: Canada and cackling geese in aggregate 10 a day, white fronted geese 5 a day, snow and Ross's geese 5 a day except MUs 2-4 and 2-5 (99%).
+- BC synopsis, page 12: Canada and cackling geese in aggregate 10 a day, white fronted geese 5 a day, snow and Ross's geese 5 a day except MUs 2-4 and 2-5 (99%). The federal District 2 table and the synopsis page 28 footnote say 10 a day (30 in possession), at most 5 Ross's; the federal table is the law, so use 10 in District 2 (85%, my reading).
 
 
 ## The rules that catch goose hunters

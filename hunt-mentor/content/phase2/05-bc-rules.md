@@ -148,7 +148,7 @@ checked: 2026-10-02
 - Holds **3 shells max**, chamber plus magazine. Plug must need the gun taken apart to remove (99%).
 - No hunting from a **moving** boat with a motor or sail (99%).
 - OK once the boat has stopped moving under motor or sail, for example beached, anchored or tied off (95%).
-- A motorboat may be used to retrieve a bird already shot down or wounded (99%). No shooting from it while the motor drives it (99%).
+- Retrieving: the BC synopsis (page 12, 2 October 2026 edition) says retrieving a bird with a boat is lawful when the boat is not being propelled by a motor or sail (99%). Federal section 41 allows retrieval from a moving boat (99%). The rules differ, so the safe way is to paddle or drift to the bird with every gun unloaded (Tip). No shooting while the motor drives the boat (99%).
 - Possession limit: 3 times the daily limit, at all times, **including at home** (99%). The federal limit counts birds not yet preserved (99%).
 - Daily limits: ducks 8, Canada and cackling geese 10 (99%). Other species: the Rules tab.
 

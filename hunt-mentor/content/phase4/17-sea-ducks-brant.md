@@ -87,8 +87,8 @@ checked: 2026-10-01
 ## Methods on the water
 
 - Hours: half an hour before sunrise to half an hour after sunset (98%).
-- No hunting migratory birds from a power boat unless it is beached, at anchor, or tied to a fixed blind (98%).
-- You may retrieve a dead or wounded bird with a power boat if no one aboard has a loaded firearm (98%).
+- No hunting migratory birds from a moving boat that has a motor or sail; a boat still gliding counts as moving (99%, page 11 item 24, 2 October 2026 edition).
+- Retrieving: the BC synopsis (page 12, 2 October 2026 edition) says retrieving a bird with a boat is lawful when the boat is not being propelled by a motor or sail (99%). Federal section 41 allows retrieval from a moving boat (99%). The rules differ, so the safe way is to paddle or drift to the bird with every gun unloaded (Tip).
 - Non toxic shot only, in the gun and in your pockets (98%). Shotgun 10 gauge or smaller, no slugs, plugged to 3 shells (98%).
 - Leave one feathered wing or the feathered head on every bird until home (98%).
 - No shooting within 400 m of bait (98%).
@@ -178,6 +178,6 @@ Take a cold water safety course before any boat hunt
   {"q": "Where and when is brant open in BC?", "options": ["All coastal MUs, October to January", "MU 2-4 only, March 1 to 10", "Vancouver Island, February"], "answer": 1, "why": "The federal table for District 2 lists Brant March 1 to 10 only in MU 2-4, 3 a day and 9 in possession. Every other district says no open season."},
   {"q": "Besides the hunting licence and the MGBHP, what does MU 2-4 require?", "options": ["Nothing else", "The Fraser Valley Special Area licence and $1,000,000 liability insurance", "A guide"], "answer": 1, "why": "Map B10's note requires the Fraser Valley Special Area Hunting Licence and $1,000,000 public liability and property damage insurance for MU 2-4 and parts of MU 2-8."},
   {"q": "How many harlequin ducks may you take in a day?", "options": ["8", "2", "None"], "answer": 1, "why": "The 8 duck aggregate caps harlequins at 2 a day and 6 in possession, with the same caps on goldeneyes."},
-  {"q": "When may you shoot a duck from a boat with a motor?", "options": ["Any time the motor is off", "Only when the boat is beached, at anchor, or tied to a fixed blind", "Never"], "answer": 1, "why": "Page 11 item 23: it is unlawful to hunt migratory birds from a power boat unless it is beached, resting at anchor, or fastened within or tied alongside a fixed hunting blind."}
+  {"q": "When may you shoot a duck from a boat with a motor?", "options": ["Any time the motor is running slowly", "Only when the boat is not moving, for example beached, anchored or tied off, and not gliding from the motor", "Never"], "answer": 1, "why": "Page 11 item 24: it is unlawful to hunt migratory birds from or by using a moving boat that is equipped with a motor or sail. A boat still gliding from its motor counts as moving."}
 ]
 ```
