@@ -91,6 +91,8 @@
     "rb-bag-limits",
     "rb-after-the-kill",
     "migration",
-    "named-areas"
+    "named-areas",
+    "rb-region-3",
+    "rb-region-8"
   ]
 }

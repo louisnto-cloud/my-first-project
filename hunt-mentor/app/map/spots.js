@@ -97,8 +97,8 @@ function planSections(v) {
 }
 function linesHtml(t) {
   t = parseMaybe(t);
-  const lines = Array.isArray(t) ? t.map((x) => (typeof x === 'object' ? x.text || JSON.stringify(x) : x)) : String(t).split(/\n+/);
-  const clean = lines.map((x) => String(x).trim()).filter(Boolean);
+  const lines = Array.isArray(t) ? t.map((x) => (typeof x === 'object' ? x.text || JSON.stringify(x) : x)) : String(t).replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g, '').split(/\n+/);
+  const clean = lines.flatMap((x) => String(x).replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g, '').split(/\n+/)).map((x) => x.trim()).filter(Boolean);
   return clean.length > 1 ? `<ul>${clean.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : `<p>${esc(clean[0] || '')}</p>`;
 }
 const LEVEL = (s) => { s = String(s || '').toLowerCase(); return /stop|red|no\b|closed|illegal|not allowed/.test(s) ? 'stop' : /warn|amber|yellow|caution|check|maybe/.test(s) ? 'warn' : 'ok'; };

@@ -3420,8 +3420,222 @@ def step_migration(cache, areas):
 
 
 # ======================================================================================
-# (processing steps are defined below)
+# Step: manifest (data/layers/manifest.json, contract in MAP.md)
 # ======================================================================================
+OGL = 'Open Government Licence BC'
+_FILL = lambda c, o, line=None: dict({'fill-color': c, 'fill-opacity': o}, **({'fill-outline-color': line} if line else {}))
+# id in manifest -> (info id, group, label, type, minzoom, paint, popup, labelField, source, about, cert)
+MANIFEST_SPEC = [
+    ('private_land', 'private_land', 'Land status', 'Private land', 'fill', 9, _FILL('#e4472b', 0.32, '#b5321b'), [], None,
+     'WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW (ParcelMap BC)',
+     "Private parcels, merged into blocks. You need the owner's permission to hunt here. Owner names are not open data in BC. "
+     'Not every parcel is fenced or signed.', 90),
+    ('parks', 'parks', 'Land status', 'Parks and protected areas', 'fill', 6, _FILL('#3f8f3a', 0.22, '#2e6b2b'),
+     [['Name', 'name'], ['Designation', 'designation']], 'name', 'WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW',
+     'Provincial parks, ecological reserves and protected areas. Hunting rules differ by park.', 95),
+    ('reserves', 'reserves', 'Land status', 'Reserves', 'fill', 7, _FILL('#8e5bb5', 0.25), [['Name', 'name']], 'name',
+     'WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES', 'First Nations reserves. Hunting needs permission from the Nation.', 95),
+    ('city_limits', 'city_limits', 'Land status', 'City and town limits', 'fill', 7, _FILL('#78909c', 0.15, '#546e7a'),
+     [['Name', 'name']], 'abbr', 'WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP',
+     'Cities, towns and villages. Most ban shooting inside their limits by bylaw. Check the local bylaw.', 95),
+    ('wma', 'wma', 'Land status', 'Wildlife Management Areas', 'fill', 7, _FILL('#00897b', 0.2, '#00695c'), [['Name', 'name']], 'name',
+     'WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW',
+     'Crown land set aside for wildlife. Hunting is often allowed, but some have their own rules. Read the area notes.', 95),
+    ('mu', 'mu_lines', 'Hunting', 'Management Units', 'fill', 5, {'fill-color': 'rgba(0,0,0,0)', 'fill-outline-color': '#6b3fa0'},
+     [['MU (Management Unit)', 'MU'], ['Region', 'regionName'], ['Zone', 'zone']], None,
+     'WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW',
+     'Seasons and limits are set by MU (Management Unit). Check the unit before you hunt.', 95),
+    ('mu_labels', 'mu_labels', 'Hunting', 'Management Unit numbers', 'symbol', 6,
+     {'text-color': '#4b2a75', 'text-halo-color': '#ffffff', 'text-halo-width': 2}, [['MU (Management Unit)', 'MU']], 'MU',
+     'WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW', 'Unit numbers like 3-27.', 95),
+    ('leh', 'leh', 'Hunting', 'Limited Entry Hunting zones', 'fill', 7, _FILL('#f9a825', 0.12, '#f57f17'),
+     [['Zone', 'label'], ['Species', 'species'], ['Management Units', 'MUs']], 'label',
+     'WHSE_WILDLIFE_MANAGEMENT.WAA_LTD_HNT_ZONE_CURR_YEAR_SVW',
+     'Zones where some seasons need a Limited Entry Hunting draw permit. Zones overlap by species.', 90),
+    ('closures', 'closures', 'Access', 'Motor vehicle closures', 'fill', 7, _FILL('#d81b60', 0.18, '#ad1457'),
+     [['Name', 'name'], ['Type', 'type'], ['Dates', 'dates'], ['Exemption', 'exemption'], ['MU (Management Unit)', 'MU'],
+      ['Synopsis map', 'map']], 'name', 'WHSE_WILDLIFE_MANAGEMENT.WAA_MVPR_AREAS_SP',
+     'Motor Vehicle Closed Areas and ATV (all terrain vehicle) closures from the hunting synopsis maps.', 90),
+    ('closure_routes', 'closure_routes', 'Access', 'Routes in closures', 'line', 8,
+     {'line-color': '#1565c0', 'line-width': 2.5, 'line-dasharray': [2, 1]}, [['Name', 'name'], ['Status', 'status'], ['Dates', 'range']],
+     None, 'WHSE_WILDLIFE_MANAGEMENT.WAA_MVPR_ROUTES_SP', 'Roads open or closed to motor vehicles inside closures.', 90),
+    ('forest_roads', 'forest_roads', 'Access', 'Forest Service roads', 'line', 9,
+     {'line-color': '#8d6e63', 'line-width': ['interpolate', ['linear'], ['zoom'], 9, 0.8, 14, 2.2]},
+     [['Road', 'name'], ['Type', 'type'], ['Section', 'section']], 'name', 'WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW',
+     'Resource roads on the forest tenure list. A road on the map can be gated, washed out or deactivated.', 85),
+    ('rec_sites', 'rec_sites', 'Access', 'Recreation sites', 'circle', 8,
+     {'circle-color': '#2e7d32', 'circle-radius': ['interpolate', ['linear'], ['zoom'], 8, 3, 14, 7], 'circle-stroke-color': '#ffffff',
+      'circle-stroke-width': 1.5},
+     [['Name', 'name'], ['Kind', 'kind'], ['Campsites', 'campsites'], ['Activities', 'activities'], ['Closure', 'closure'],
+      ['Directions', 'directions']], 'name', 'WHSE_FOREST_TENURE.FTEN_REC_SITE_POINTS_SVW and FTEN_REC_TRAIL_HEADS_SVW',
+     'Free or low cost campsites run by Recreation Sites and Trails BC.', 90),
+    ('rec_trails', 'rec_trails', 'Access', 'Recreation trails', 'line', 9, {'line-color': '#6a1b9a', 'line-width': 2, 'line-dasharray': [2, 1.5]},
+     [['Trail', 'name'], ['Activities', 'activities'], ['Closure', 'closure']], 'name', 'WHSE_FOREST_TENURE.FTEN_REC_TRAILS_SVW',
+     'Official trails from Recreation Sites and Trails BC.', 90),
+    ('uwr_mule_deer', 'uwr_mule_deer', 'Habitat and migration', 'Mule deer winter range', 'fill', 7, _FILL('#b8860b', 0.3),
+     [['Range', 'uwr'], ['Species', 'species'], ['Approved', 'approved'], ['Hectares', 'ha']], None,
+     'WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP',
+     'Official ungulate winter range. Deer gather here from about November to April. None is mapped near Heffley Creek.', 95),
+    ('uwr_wt_deer', 'uwr_wt_deer', 'Habitat and migration', 'White tailed deer winter range', 'fill', 7, _FILL('#a1887f', 0.3),
+     [['Range', 'uwr'], ['Species', 'species'], ['Approved', 'approved'], ['Hectares', 'ha']], None,
+     'WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP', 'Official white tailed deer winter range.', 95),
+    ('uwr_moose', 'uwr_moose', 'Habitat and migration', 'Moose winter range', 'fill', 7, _FILL('#6d4c41', 0.3),
+     [['Range', 'uwr'], ['Species', 'species'], ['Approved', 'approved'], ['Hectares', 'ha']], None,
+     'WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP', 'Official moose winter range.', 95),
+    ('uwr_elk', 'uwr_elk', 'Habitat and migration', 'Elk winter range', 'fill', 7, _FILL('#8d6e63', 0.3),
+     [['Range', 'uwr'], ['Species', 'species'], ['Approved', 'approved'], ['Hectares', 'ha']], None,
+     'WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP', 'Official elk winter range.', 95),
+    ('uwr_sheep', 'uwr_sheep', 'Habitat and migration', 'Bighorn sheep winter range', 'fill', 7, _FILL('#bcaaa4', 0.35),
+     [['Range', 'uwr'], ['Species', 'species'], ['Approved', 'approved'], ['Hectares', 'ha']], None,
+     'WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP', 'Official bighorn sheep winter range.', 95),
+    ('uwr_goat', 'uwr_goat', 'Habitat and migration', 'Mountain goat winter range', 'fill', 7, _FILL('#90a4ae', 0.35),
+     [['Range', 'uwr'], ['Species', 'species'], ['Approved', 'approved'], ['Hectares', 'ha']], None,
+     'WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP', 'Ungulate winter range for mountain goats, set by government order.', 95),
+    ('burns', 'burns', 'Habitat and migration', 'Burns by year', 'fill', 8,
+     {'fill-color': ['step', ['get', 'year'], '#9e9e9e', 2010, '#ff9800', 2017, '#f4511e'], 'fill-opacity': 0.3},
+     [['Year', 'year'], ['Hectares', 'ha'], ['Cause', 'cause']], None, 'WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP',
+     'Fires since 2000. Burns 3 to 15 years old grow food for deer, moose and bears.', 95),
+    ('cutblocks', 'cutblocks', 'Habitat and migration', 'Cutblocks by age', 'fill', 9,
+     {'fill-color': ['match', ['get', 'ageClass'], '5 to 20 years', '#7cb342', '0 to 4 years', '#dce775', '#c5e1a5'], 'fill-opacity': 0.4},
+     [['Harvest year', 'year'], ['Age', 'age'], ['Age class', 'ageClass']], None, 'WHSE_FOREST_VEGETATION.RSLT_OPENING_SVW',
+     'Logged openings 25 years old or less. Blocks 5 to 20 years old feed deer, moose, bears and grouse.', 90),
+    ('wetlands', 'wetlands', 'Habitat and migration', 'Wetlands', 'fill', 9, _FILL('#4fc3f7', 0.35), [['Name', 'name'], ['Hectares', 'ha']],
+     None, 'WHSE_BASEMAPPING.FWA_WETLANDS_POLY', 'Marshes, swamps and bogs from the Freshwater Atlas. Good for moose and ducks.', 90),
+    ('habitat_zones', 'habitat_zones', 'Habitat and migration', 'Habitat zones', 'fill', 9,
+     {'fill-color': ['match', ['get', 'zone'], 'BG', '#e6c86e', 'PP', '#d4a259', 'IDF', '#9ccc65', 'MS', '#4db6ac', 'ESSF', '#64b5f6',
+                     'ICH', '#81c784', 'SBS', '#aed581', 'CWH', '#66bb6a', 'CDF', '#c0ca33', 'MH', '#90caf9', 'IMA', '#e0e0e0',
+                     'CMA', '#e0e0e0', '#bdbdbd'], 'fill-opacity': 0.25},
+     [['Zone', 'zoneName'], ['Code', 'label']], 'label', 'WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY',
+     'Biogeoclimatic zones: the plant community you will find. Bunchgrass and Ponderosa Pine are low winter country.', 90),
+]
+MIG_PAINT = {'mule_deer': '#b8860b', 'wt_deer': '#a1887f', 'moose': '#6d4c41', 'elk': '#8d6e63', 'sheep': '#bcaaa4'}
+MIG_POPUP = [['Species', 'species'], ['Band', 'band'], ['Months', 'monthsText'], ['Habitat zones', 'zones'], ['Elevation', 'elevM'],
+             ['Where', 'where'], ['Certainty %', 'cert'], ['Label', 'label']]
+
+
+def _files_entry(rec, areas_order=('A', 'B', 'C')):
+    """{area: info} -> manifest keys: file with {area} when uniform, else files list."""
+    ar = [a for a in areas_order if a in rec]
+    if not ar:
+        return None
+    if ar == ['BC'] or 'BC' in rec:
+        return {'file': rec['BC']['file'], 'areas': 'BC'}
+    paths = [rec[a]['file'] for a in ar]
+    tmpl = {p.replace(f'/{a}/', '/{area}/') for p, a in zip(paths, ar)}
+    if len(tmpl) == 1:
+        return {'file': tmpl.pop(), 'areas': ar}
+    return {'files': [{'area': a, 'file': rec[a]['file']} for a in ar], 'areas': ar}
+
+
+def _date_of(rec):
+    ds = [v.get('newestRecord') or v.get('dataDate') for v in rec.values() if isinstance(v, dict)]
+    ds = [d for d in ds if d]
+    return min(ds) if ds else TODAY
+
+
+def _duck_months():
+    mj = load_migration()
+    if mj and 'ducks' in mj.get('species', {}):
+        dm = mj['species']['ducks']['months']
+        return [m for m in range(1, 13) if re.search(r'migra|passage|winter', dm[str(m)]['where'], re.I)]
+    return [9, 10, 11, 12, 1, 2, 3, 4]
+
+
+def step_manifest(cache, areas):
+    info = load_info(cache)
+    mpath = OUT_LAYERS / 'manifest.json'
+    old = json.load(open(mpath)) if mpath.exists() else {'layers': []}
+    out, made = [], set()
+
+    def add(entry, rec):
+        fe = _files_entry(rec)
+        if not fe:
+            return
+        entry.update(fe)
+        entry['licence'] = OGL
+        entry['dataDate'] = _date_of(rec)
+        entry['bytes'] = sum(v.get('bytes', 0) for v in rec.values() if isinstance(v, dict))
+        out.append(entry)
+        made.add(entry['id'])
+
+    for mid, iid, group, label, typ, mz, paint, popup, lf, src, about, cert in MANIFEST_SPEC:
+        rec = info.get(iid) or {}
+        e = {'id': mid, 'group': group, 'label': label, 'type': typ, 'minzoom': mz, 'paint': paint, 'popup': popup}
+        if lf:
+            e['labelField'] = lf
+        e.update({'source': src, 'about': about, 'cert': cert})
+        if iid.startswith('uwr_'):
+            sp = iid[4:]
+            e['months'] = winter_months(MIG_KEY.get(sp), SPECIES_WINTER_MONTHS.get(sp, [11, 12, 1, 2, 3, 4]))
+        add(e, rec)
+    # seasonal bands (general pattern) from data/migration.json
+    for key, sp, label in MIG_SPECIES:
+        lid = f'season_{sp}'
+        rec = info.get(lid) or {}
+        months = sorted({m for b in species_bands(key) for m in b[1]})
+        add({'id': lid, 'group': 'Habitat and migration', 'label': f'{label} by month (general pattern)', 'type': 'fill', 'minzoom': 7,
+             'paint': {'fill-color': MIG_PAINT.get(sp, '#8d6e63'),
+                       'fill-opacity': ['match', ['get', 'band'], 'winter', 0.35, 'transition', 0.22, 0.15]},
+             'popup': MIG_POPUP, 'source': 'data/migration.json (cited studies) with BEC zones and elevation (terrarium tiles)',
+             'about': f'Where {label.lower()} tend to be by month: habitat zones and elevation bands from studies. General pattern, '
+                      'not mapped corridors. Use the month slider.', 'cert': 60, 'months': months, 'legal': False}, rec)
+    rec = info.get('duck_waters') or {}
+    add({'id': 'duck_waters', 'group': 'Habitat and migration', 'label': 'Duck staging and winter waters', 'type': 'fill', 'minzoom': 8,
+         'paint': {'fill-color': ['match', ['get', 'band'], 'winter open water', '#1e88e5', '#4dd0e1'], 'fill-opacity': 0.45,
+                   'fill-outline-color': '#0d47a1'},
+         'popup': [['Name', 'name'], ['Hectares', 'ha'], ['Band', 'band'], ['Months', 'monthsText'], ['Elevation m', 'elevM'],
+                   ['Label', 'label']],
+         'source': 'FWA lakes, wetlands and rivers with data/migration.json flyway timing',
+         'about': 'Valley lakes and wetlands of 20 ha or more where ducks stop in fall and spring, and low open water in winter. '
+                  'General pattern.', 'cert': 60,
+         'months': _duck_months(), 'legal': False}, rec)
+    rec = info.get('quail_range') or {}
+    add({'id': 'quail_range', 'group': 'Habitat and migration', 'label': 'California quail habitat (no migration)', 'type': 'fill',
+         'minzoom': 8, 'paint': _FILL('#c0a060', 0.3, '#8d6e3f'), 'popup': MIG_POPUP,
+         'source': 'BEC zones and elevation with data/migration.json',
+         'about': 'Quail do not migrate. Low Bunchgrass and Ponderosa Pine country near farms and brushy creeks, all year. General pattern.',
+         'cert': 60, 'months': list(range(1, 13)), 'legal': False}, rec)
+    # spots, routes, camps
+    sp_areas = [a for a in ('A', 'B', 'C') if (OUT_SPOTS / a / 'spots.geojson').exists()]
+
+    def spot_rec(fname):
+        r = {}
+        for a in sp_areas:
+            f = OUT_SPOTS / a / fname
+            if f.exists():
+                md = json.load(open(OUT_SPOTS / a / 'meta.json')) if (OUT_SPOTS / a / 'meta.json').exists() else {}
+                r[a] = {'file': rel(f), 'bytes': f.stat().st_size, 'dataDate': md.get('generated', TODAY)}
+        return r
+    add({'id': 'spots', 'group': 'Spots', 'kind': 'spots', 'label': 'Candidate spots', 'type': 'symbol', 'minzoom': 6,
+         'popup': [], 'source': 'Hunt Mentor spot pipeline (scripts/spots-pipeline.py) from BC Data Catalogue layers',
+         'about': 'Candidate spots scored from open data (my pick): drive, ATV (all terrain vehicle), walk, backcountry and camp. '
+                  'Busier and quieter are estimates. Candidate, scout it first.', 'cert': 60}, spot_rec('spots.geojson'))
+    add({'id': 'routes', 'group': 'Spots', 'kind': 'routes', 'label': 'Walk and ride routes', 'type': 'line', 'minzoom': 10,
+         'paint': {'line-color': ['match', ['get', 'kind'], 'ride', '#6d4c41', 'roadside', '#f9a825', 'backcountry', '#5e35b1', '#e8590c'],
+                   'line-width': 3, 'line-dasharray': [1, 1.5]},
+         'popup': [['Route', 'name'], ['Kind', 'kind'], ['Length km', 'km'], ['Climb m', 'climbM']],
+         'source': 'Hunt Mentor spot pipeline (road atlas, forest roads, rec trails)', 'about': 'Suggested approach lines (estimate).',
+         'cert': 60, 'legal': False}, spot_rec('routes.geojson'))
+    add({'id': 'camps', 'group': 'Access', 'kind': 'camps', 'label': 'Camps (rec sites and candidates)', 'type': 'circle', 'minzoom': 9,
+         'paint': {'circle-color': ['match', ['get', 'kind'], 'Rec site', '#2e7d32', 'Backcountry camp', '#5e35b1', '#8bc34a'],
+                   'circle-radius': 5, 'circle-stroke-color': '#ffffff', 'circle-stroke-width': 1.5},
+         'popup': [['Name', 'name'], ['Kind', 'kind'], ['Campsites', 'campsites'], ['Water', 'water'], ['Note', 'note']],
+         'labelField': 'name', 'source': 'FTEN_REC_SITE_POINTS_SVW plus Crown land camp candidates (Hunt Mentor spot pipeline)',
+         'about': 'Official rec sites and Crown land camp candidates (flat, near water, not private, park or reserve). Scout it first.',
+         'cert': 60, 'legal': False}, spot_rec('camps.geojson'))
+    # keep layers the pipeline does not make (hand added), drop the old per area spot ids
+    for l in old.get('layers', []):
+        if l.get('id') in made or l.get('id') in ('spots_a', 'routes_a', 'spots_b', 'routes_b', 'spots_c', 'routes_c'):
+            continue
+        if l.get('id') in {s[0] for s in MANIFEST_SPEC}:
+            continue   # pipeline layer with no data this run
+        out.append(l)
+    man = {'updated': TODAY, 'layers': out}
+    tmp = mpath.with_suffix('.tmp')
+    json.dump(man, open(tmp, 'w'), indent=1, ensure_ascii=False)
+    tmp.replace(mpath)
+    tot = sum(l.get('bytes', 0) for l in out)
+    log(f'manifest: {len(out)} layers, {tot / 1e6:.1f} MB of data listed')
 
 
 # ======================================================================================
