@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 460" role="img" aria-label="Schematic sketch of the Kamloops area, not to scale. The North Thompson River runs from Barriere at the top, past Heffley Creek, south to Kamloops. The South Thompson River runs from Kamloops east toward Chase. Kamloops Lake lies west of the city. Sun Peaks is northeast of Heffley Creek. Paul Lake is east of the North Thompson, north of the South Thompson. Lac du Bois grasslands are northwest of the city. Approximate MU numbers: 3-38 at the top, 3-28 west of the North Thompson, 3-27 east of it, 3-29 north of Kamloops Lake, 3-19 south of the lake, 3-20 south of the South Thompson, 3-26 to the east. A band along the South Thompson east of the city marks the Kamloops no shooting and no hunting area. Label: schematic, not a legal map.">
+  <rect x="0" y="0" width="400" height="460" fill="#fffaf0"/>
+  <text x="200" y="22" font-family="sans-serif" font-size="16" font-weight="bold" fill="#23261f" text-anchor="middle">Kamloops area: schematic, not a legal map</text>
+  <text x="200" y="40" font-family="sans-serif" font-size="14" fill="#6b4f35" text-anchor="middle">Not to scale. MU numbers are approximate.</text>
+
+  <!-- Kamloops Lake -->
+  <path d="M12 262 Q 40 248 95 256 Q 125 262 150 268 Q 125 282 95 280 Q 40 284 12 270 Z" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="16" y="300" font-family="sans-serif" font-size="14" fill="#23261f">Kamloops Lake</text>
+
+  <!-- North Thompson River -->
+  <path d="M185 50 Q 175 100 180 150 Q 172 200 158 268" fill="none" stroke="#2f3a2b" stroke-width="6"/>
+  <!-- South Thompson River -->
+  <path d="M158 268 Q 220 256 280 258 Q 340 262 392 240" fill="none" stroke="#2f3a2b" stroke-width="6"/>
+  <!-- Kamloops no shooting and no hunting band -->
+  <path d="M170 258 Q 220 246 280 248 Q 340 252 385 232" fill="none" stroke="#e8590c" stroke-width="12" stroke-opacity="0.45"/>
+  <text x="392" y="304" font-family="sans-serif" font-size="13" fill="#e8590c" text-anchor="end">No shooting band (Map C7)</text>
+
+  <!-- Highway 5 dashed -->
+  <path d="M200 48 Q 192 110 196 160 Q 188 215 172 262" fill="none" stroke="#6b4f35" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="206" y="100" font-family="sans-serif" font-size="14" fill="#6b4f35">Hwy 5</text>
+
+  <!-- Towns -->
+  <circle cx="158" cy="268" r="8" fill="#23261f"/>
+  <text x="140" y="292" font-family="sans-serif" font-size="16" font-weight="bold" fill="#23261f">Kamloops</text>
+  <circle cx="181" cy="150" r="7" fill="#e8590c"/>
+  <text x="192" y="146" font-family="sans-serif" font-size="16" font-weight="bold" fill="#e8590c">Heffley Creek (base)</text>
+  <circle cx="185" cy="52" r="6" fill="#23261f"/>
+  <text x="196" y="57" font-family="sans-serif" font-size="15" fill="#23261f">Barriere</text>
+  <polygon points="300,90 310,70 320,90" fill="#2f3a2b"/>
+  <text x="300" y="108" font-family="sans-serif" font-size="15" fill="#23261f">Sun Peaks</text>
+  <ellipse cx="262" cy="200" rx="22" ry="8" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="240" y="222" font-family="sans-serif" font-size="15" fill="#23261f">Paul Lake</text>
+  <path d="M60 200 Q 80 170 115 180 Q 125 210 100 235 Q 70 240 60 200 Z" fill="#c9b79c" stroke="#6b4f35" stroke-width="2"/>
+  <text x="48" y="182" font-family="sans-serif" font-size="15" fill="#23261f">Lac du Bois</text>
+  <text x="48" y="198" font-family="sans-serif" font-size="14" fill="#6b4f35">grasslands</text>
+
+  <!-- MU labels -->
+  <g font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b">
+    <text x="50" y="80">3-38 (approx)</text>
+    <text x="95" y="130">3-28</text>
+    <text x="235" y="170">3-27</text>
+    <text x="20" y="240">3-29</text>
+    <text x="330" y="190">3-26</text>
+    <text x="70" y="345">3-19</text>
+    <text x="280" y="330">3-20</text>
+  </g>
+  <text x="200" y="372" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">North Thompson River: 3-28 west bank, 3-27 east bank</text>
+  <text x="200" y="390" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">South Thompson River: 3-27 north, 3-20 south</text>
+  <text x="200" y="408" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Kamloops Lake: 3-29 north shore, 3-19 south shore</text>
+  <text x="200" y="440" font-family="sans-serif" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Schematic, not a legal map. Check the official MU map.</text>
+  <text x="392" y="282" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="end">to Chase</text>
+  <text x="226" y="282" font-family="sans-serif" font-size="13" fill="#23261f">South Thompson</text>
+  <text x="150" y="245" font-family="sans-serif" font-size="13" fill="#23261f" transform="rotate(-80 150 245)">North Thompson</text>
+</svg>

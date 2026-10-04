@@ -1,0 +1,1542 @@
+{
+ "updated": "2026-10-04",
+ "layers": [
+  {
+   "id": "private_land",
+   "group": "Land status",
+   "label": "Private land",
+   "type": "fill",
+   "minzoom": 9,
+   "paint": {
+    "fill-color": "#e4472b",
+    "fill-opacity": 0.32,
+    "fill-outline-color": "#b5321b"
+   },
+   "popup": [],
+   "source": "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW (ParcelMap BC)",
+   "about": "Private parcels, merged into blocks. You need the owner's permission to hunt here. Owner names are not open data in BC. Not every parcel is fenced or signed.",
+   "cert": 90,
+   "file": "data/layers/{area}/private_land.geojson",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-09-25",
+   "bytes": 9006864
+  },
+  {
+   "id": "parks",
+   "group": "Land status",
+   "label": "Parks and protected areas",
+   "type": "fill",
+   "minzoom": 6,
+   "paint": {
+    "fill-color": "#3f8f3a",
+    "fill-opacity": 0.22,
+    "fill-outline-color": "#2e6b2b"
+   },
+   "popup": [
+    [
+     "Name",
+     "name"
+    ],
+    [
+     "Designation",
+     "designation"
+    ]
+   ],
+   "labelField": "name",
+   "source": "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
+   "about": "Provincial parks, ecological reserves and protected areas. Hunting rules differ by park.",
+   "cert": 95,
+   "file": "data/layers/bc/parks.geojson",
+   "areas": "BC",
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-03",
+   "bytes": 1530781
+  },
+  {
+   "id": "reserves",
+   "group": "Land status",
+   "label": "Reserves",
+   "type": "fill",
+   "minzoom": 7,
+   "paint": {
+    "fill-color": "#8e5bb5",
+    "fill-opacity": 0.25
+   },
+   "popup": [
+    [
+     "Name",
+     "name"
+    ]
+   ],
+   "labelField": "name",
+   "source": "WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES",
+   "about": "First Nations reserves. Hunting needs permission from the Nation.",
+   "cert": 95,
+   "file": "data/layers/bc/reserves.geojson",
+   "areas": "BC",
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-03",
+   "bytes": 816342
+  },
+  {
+   "id": "city_limits",
+   "group": "Land status",
+   "label": "City and town limits",
+   "type": "fill",
+   "minzoom": 7,
+   "paint": {
+    "fill-color": "#78909c",
+    "fill-opacity": 0.15,
+    "fill-outline-color": "#546e7a"
+   },
+   "popup": [
+    [
+     "Name",
+     "name"
+    ]
+   ],
+   "labelField": "abbr",
+   "source": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP",
+   "about": "Cities, towns and villages. Most ban shooting inside their limits by bylaw. Check the local bylaw.",
+   "cert": 95,
+   "file": "data/layers/bc/city_limits.geojson",
+   "areas": "BC",
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-06-22",
+   "bytes": 267222
+  },
+  {
+   "id": "wma",
+   "group": "Land status",
+   "label": "Wildlife Management Areas",
+   "type": "fill",
+   "minzoom": 7,
+   "paint": {
+    "fill-color": "#00897b",
+    "fill-opacity": 0.2,
+    "fill-outline-color": "#00695c"
+   },
+   "popup": [
+    [
+     "Name",
+     "name"
+    ]
+   ],
+   "labelField": "name",
+   "source": "WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW",
+   "about": "Crown land set aside for wildlife. Hunting is often allowed, but some have their own rules. Read the area notes.",
+   "cert": 95,
+   "file": "data/layers/bc/wma.geojson",
+   "areas": "BC",
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-03",
+   "bytes": 96703
+  },
+  {
+   "id": "mu",
+   "group": "Hunting",
+   "label": "Management Units",
+   "type": "fill",
+   "minzoom": 5,
+   "paint": {
+    "fill-color": "rgba(0,0,0,0)",
+    "fill-outline-color": "#6b3fa0"
+   },
+   "popup": [
+    [
+     "MU (Management Unit)",
+     "MU"
+    ],
+    [
+     "Region",
+     "regionName"
+    ],
+    [
+     "Zone",
+     "zone"
+    ]
+   ],
+   "source": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+   "about": "Seasons and limits are set by MU (Management Unit). Check the unit before you hunt.",
+   "cert": 95,
+   "file": "data/layers/bc/mu.geojson",
+   "areas": "BC",
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-03",
+   "bytes": 2550494
+  },
+  {
+   "id": "mu_labels",
+   "group": "Hunting",
+   "label": "Management Unit numbers",
+   "type": "symbol",
+   "minzoom": 6,
+   "paint": {
+    "text-color": "#4b2a75",
+    "text-halo-color": "#ffffff",
+    "text-halo-width": 2
+   },
+   "popup": [
+    [
+     "MU (Management Unit)",
+     "MU"
+    ]
+   ],
+   "labelField": "MU",
+   "source": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+   "about": "Unit numbers like 3-27.",
+   "cert": 95,
+   "file": "data/layers/bc/mu_labels.geojson",
+   "areas": "BC",
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-03",
+   "bytes": 27889
+  },
+  {
+   "id": "leh",
+   "group": "Hunting",
+   "label": "Limited Entry Hunting zones",
+   "type": "fill",
+   "minzoom": 7,
+   "paint": {
+    "fill-color": "#f9a825",
+    "fill-opacity": 0.12,
+    "fill-outline-color": "#f57f17"
+   },
+   "popup": [
+    [
+     "Zone",
+     "label"
+    ],
+    [
+     "Species",
+     "species"
+    ],
+    [
+     "Management Units",
+     "MUs"
+    ]
+   ],
+   "labelField": "label",
+   "source": "WHSE_WILDLIFE_MANAGEMENT.WAA_LTD_HNT_ZONE_CURR_YEAR_SVW",
+   "about": "Zones where some seasons need a Limited Entry Hunting draw permit. Zones overlap by species.",
+   "cert": 90,
+   "file": "data/layers/bc/leh.geojson",
+   "areas": "BC",
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-03",
+   "bytes": 5335837
+  },
+  {
+   "id": "closures",
+   "group": "Access",
+   "label": "Motor vehicle closures",
+   "type": "fill",
+   "minzoom": 7,
+   "paint": {
+    "fill-color": "#d81b60",
+    "fill-opacity": 0.18,
+    "fill-outline-color": "#ad1457"
+   },
+   "popup": [
+    [
+     "Name",
+     "name"
+    ],
+    [
+     "Type",
+     "type"
+    ],
+    [
+     "Dates",
+     "dates"
+    ],
+    [
+     "Exemption",
+     "exemption"
+    ],
+    [
+     "MU (Management Unit)",
+     "MU"
+    ],
+    [
+     "Synopsis map",
+     "map"
+    ]
+   ],
+   "labelField": "name",
+   "source": "WHSE_WILDLIFE_MANAGEMENT.WAA_MVPR_AREAS_SP",
+   "about": "Motor Vehicle Closed Areas and ATV (all terrain vehicle) closures from the hunting synopsis maps.",
+   "cert": 90,
+   "file": "data/layers/bc/closures.geojson",
+   "areas": "BC",
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-03",
+   "bytes": 5608236
+  },
+  {
+   "id": "closure_routes",
+   "group": "Access",
+   "label": "Routes in closures",
+   "type": "line",
+   "minzoom": 8,
+   "paint": {
+    "line-color": "#1565c0",
+    "line-width": 2.5,
+    "line-dasharray": [
+     2,
+     1
+    ]
+   },
+   "popup": [
+    [
+     "Name",
+     "name"
+    ],
+    [
+     "Status",
+     "status"
+    ],
+    [
+     "Dates",
+     "range"
+    ]
+   ],
+   "source": "WHSE_WILDLIFE_MANAGEMENT.WAA_MVPR_ROUTES_SP",
+   "about": "Roads open or closed to motor vehicles inside closures.",
+   "cert": 90,
+   "file": "data/layers/bc/closure_routes.geojson",
+   "areas": "BC",
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-03",
+   "bytes": 276416
+  },
+  {
+   "id": "forest_roads",
+   "group": "Access",
+   "label": "Forest Service roads",
+   "type": "line",
+   "minzoom": 9,
+   "paint": {
+    "line-color": "#8d6e63",
+    "line-width": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     9,
+     0.8,
+     14,
+     2.2
+    ]
+   },
+   "popup": [
+    [
+     "Road",
+     "name"
+    ],
+    [
+     "Type",
+     "type"
+    ],
+    [
+     "Section",
+     "section"
+    ]
+   ],
+   "labelField": "name",
+   "source": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+   "about": "Resource roads on the forest tenure list. A road on the map can be gated, washed out or deactivated.",
+   "cert": 85,
+   "file": "data/layers/{area}/forest_roads.pmtiles",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-03",
+   "bytes": 11090053
+  },
+  {
+   "id": "rec_sites",
+   "group": "Access",
+   "label": "Recreation sites",
+   "type": "circle",
+   "minzoom": 8,
+   "paint": {
+    "circle-color": "#2e7d32",
+    "circle-radius": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     8,
+     3,
+     14,
+     7
+    ],
+    "circle-stroke-color": "#ffffff",
+    "circle-stroke-width": 1.5
+   },
+   "popup": [
+    [
+     "Name",
+     "name"
+    ],
+    [
+     "Kind",
+     "kind"
+    ],
+    [
+     "Campsites",
+     "campsites"
+    ],
+    [
+     "Activities",
+     "activities"
+    ],
+    [
+     "Closure",
+     "closure"
+    ],
+    [
+     "Directions",
+     "directions"
+    ]
+   ],
+   "labelField": "name",
+   "source": "WHSE_FOREST_TENURE.FTEN_REC_SITE_POINTS_SVW and FTEN_REC_TRAIL_HEADS_SVW",
+   "about": "Free or low cost campsites run by Recreation Sites and Trails BC.",
+   "cert": 90,
+   "file": "data/layers/{area}/rec_sites.geojson",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-03",
+   "bytes": 226876
+  },
+  {
+   "id": "rec_trails",
+   "group": "Access",
+   "label": "Recreation trails",
+   "type": "line",
+   "minzoom": 9,
+   "paint": {
+    "line-color": "#6a1b9a",
+    "line-width": 2,
+    "line-dasharray": [
+     2,
+     1.5
+    ]
+   },
+   "popup": [
+    [
+     "Trail",
+     "name"
+    ],
+    [
+     "Activities",
+     "activities"
+    ],
+    [
+     "Closure",
+     "closure"
+    ]
+   ],
+   "labelField": "name",
+   "source": "WHSE_FOREST_TENURE.FTEN_REC_TRAILS_SVW",
+   "about": "Official trails from Recreation Sites and Trails BC.",
+   "cert": 90,
+   "file": "data/layers/{area}/rec_trails.geojson",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-03",
+   "bytes": 1237013
+  },
+  {
+   "id": "uwr_mule_deer",
+   "group": "Habitat and migration",
+   "label": "Mule deer winter range",
+   "type": "fill",
+   "minzoom": 7,
+   "paint": {
+    "fill-color": "#b8860b",
+    "fill-opacity": 0.3
+   },
+   "popup": [
+    [
+     "Range",
+     "uwr"
+    ],
+    [
+     "Species",
+     "species"
+    ],
+    [
+     "Approved",
+     "approved"
+    ],
+    [
+     "Hectares",
+     "ha"
+    ]
+   ],
+   "source": "WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP",
+   "about": "Official ungulate winter range. Deer gather here from about November to April. None is mapped near Heffley Creek.",
+   "cert": 95,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    11,
+    12
+   ],
+   "file": "data/layers/{area}/uwr_mule_deer.geojson",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2008-07-25",
+   "bytes": 1441792
+  },
+  {
+   "id": "uwr_moose",
+   "group": "Habitat and migration",
+   "label": "Moose winter range",
+   "type": "fill",
+   "minzoom": 7,
+   "paint": {
+    "fill-color": "#6d4c41",
+    "fill-opacity": 0.3
+   },
+   "popup": [
+    [
+     "Range",
+     "uwr"
+    ],
+    [
+     "Species",
+     "species"
+    ],
+    [
+     "Approved",
+     "approved"
+    ],
+    [
+     "Hectares",
+     "ha"
+    ]
+   ],
+   "source": "WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP",
+   "about": "Official moose winter range.",
+   "cert": 95,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    12
+   ],
+   "file": "data/layers/{area}/uwr_moose.geojson",
+   "areas": [
+    "A",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2006-07-24",
+   "bytes": 49967
+  },
+  {
+   "id": "uwr_goat",
+   "group": "Habitat and migration",
+   "label": "Mountain goat winter range",
+   "type": "fill",
+   "minzoom": 7,
+   "paint": {
+    "fill-color": "#90a4ae",
+    "fill-opacity": 0.35
+   },
+   "popup": [
+    [
+     "Range",
+     "uwr"
+    ],
+    [
+     "Species",
+     "species"
+    ],
+    [
+     "Approved",
+     "approved"
+    ],
+    [
+     "Hectares",
+     "ha"
+    ]
+   ],
+   "source": "WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP",
+   "about": "Ungulate winter range for mountain goats, set by government order.",
+   "cert": 95,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    10,
+    11,
+    12
+   ],
+   "file": "data/layers/{area}/uwr_goat.geojson",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2006-07-24",
+   "bytes": 196030
+  },
+  {
+   "id": "burns",
+   "group": "Habitat and migration",
+   "label": "Burns by year",
+   "type": "fill",
+   "minzoom": 8,
+   "paint": {
+    "fill-color": [
+     "step",
+     [
+      "get",
+      "year"
+     ],
+     "#9e9e9e",
+     2010,
+     "#ff9800",
+     2017,
+     "#f4511e"
+    ],
+    "fill-opacity": 0.3
+   },
+   "popup": [
+    [
+     "Year",
+     "year"
+    ],
+    [
+     "Hectares",
+     "ha"
+    ],
+    [
+     "Cause",
+     "cause"
+    ]
+   ],
+   "source": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP",
+   "about": "Fires since 2000. Burns 3 to 15 years old grow food for deer, moose and bears.",
+   "cert": 95,
+   "file": "data/layers/{area}/burns.geojson",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-03",
+   "bytes": 1329923
+  },
+  {
+   "id": "cutblocks",
+   "group": "Habitat and migration",
+   "label": "Cutblocks by age",
+   "type": "fill",
+   "minzoom": 9,
+   "paint": {
+    "fill-color": [
+     "match",
+     [
+      "get",
+      "ageClass"
+     ],
+     "5 to 20 years",
+     "#7cb342",
+     "0 to 4 years",
+     "#dce775",
+     "#c5e1a5"
+    ],
+    "fill-opacity": 0.4
+   },
+   "popup": [
+    [
+     "Harvest year",
+     "year"
+    ],
+    [
+     "Age",
+     "age"
+    ],
+    [
+     "Age class",
+     "ageClass"
+    ]
+   ],
+   "source": "WHSE_FOREST_VEGETATION.RSLT_OPENING_SVW",
+   "about": "Logged openings 25 years old or less. Blocks 5 to 20 years old feed deer, moose, bears and grouse.",
+   "cert": 90,
+   "file": "data/layers/{area}/cutblocks.pmtiles",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-03",
+   "bytes": 20473692
+  },
+  {
+   "id": "wetlands",
+   "group": "Habitat and migration",
+   "label": "Wetlands",
+   "type": "fill",
+   "minzoom": 9,
+   "paint": {
+    "fill-color": "#4fc3f7",
+    "fill-opacity": 0.35
+   },
+   "popup": [
+    [
+     "Name",
+     "name"
+    ],
+    [
+     "Hectares",
+     "ha"
+    ]
+   ],
+   "source": "WHSE_BASEMAPPING.FWA_WETLANDS_POLY",
+   "about": "Marshes, swamps and bogs from the Freshwater Atlas. Good for moose and ducks.",
+   "cert": 90,
+   "files": [
+    {
+     "area": "A",
+     "file": "data/layers/A/wetlands.pmtiles"
+    },
+    {
+     "area": "B",
+     "file": "data/layers/B/wetlands.geojson"
+    },
+    {
+     "area": "C",
+     "file": "data/layers/C/wetlands.geojson"
+    }
+   ],
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-03",
+   "bytes": 6922194
+  },
+  {
+   "id": "habitat_zones",
+   "group": "Habitat and migration",
+   "label": "Habitat zones",
+   "type": "fill",
+   "minzoom": 9,
+   "paint": {
+    "fill-color": [
+     "match",
+     [
+      "get",
+      "zone"
+     ],
+     "BG",
+     "#e6c86e",
+     "PP",
+     "#d4a259",
+     "IDF",
+     "#9ccc65",
+     "MS",
+     "#4db6ac",
+     "ESSF",
+     "#64b5f6",
+     "ICH",
+     "#81c784",
+     "SBS",
+     "#aed581",
+     "CWH",
+     "#66bb6a",
+     "CDF",
+     "#c0ca33",
+     "MH",
+     "#90caf9",
+     "IMA",
+     "#e0e0e0",
+     "CMA",
+     "#e0e0e0",
+     "#bdbdbd"
+    ],
+    "fill-opacity": 0.25
+   },
+   "popup": [
+    [
+     "Zone",
+     "zoneName"
+    ],
+    [
+     "Code",
+     "label"
+    ]
+   ],
+   "labelField": "label",
+   "source": "WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY",
+   "about": "Biogeoclimatic zones: the plant community you will find. Bunchgrass and Ponderosa Pine are low winter country.",
+   "cert": 90,
+   "files": [
+    {
+     "area": "A",
+     "file": "data/layers/A/habitat_zones.pmtiles"
+    },
+    {
+     "area": "B",
+     "file": "data/layers/B/habitat_zones.geojson"
+    },
+    {
+     "area": "C",
+     "file": "data/layers/C/habitat_zones.geojson"
+    }
+   ],
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-03",
+   "bytes": 13716972
+  },
+  {
+   "id": "season_mule_deer",
+   "group": "Habitat and migration",
+   "label": "Mule deer by month (general pattern)",
+   "type": "fill",
+   "minzoom": 7,
+   "paint": {
+    "fill-color": "#b8860b",
+    "fill-opacity": [
+     "match",
+     [
+      "get",
+      "band"
+     ],
+     "winter",
+     0.35,
+     "transition",
+     0.22,
+     0.15
+    ]
+   },
+   "popup": [
+    [
+     "Species",
+     "species"
+    ],
+    [
+     "Band",
+     "band"
+    ],
+    [
+     "Months",
+     "monthsText"
+    ],
+    [
+     "Habitat zones",
+     "zones"
+    ],
+    [
+     "Elevation",
+     "elevM"
+    ],
+    [
+     "Where",
+     "where"
+    ],
+    [
+     "Certainty %",
+     "cert"
+    ],
+    [
+     "Label",
+     "label"
+    ]
+   ],
+   "source": "data/migration.json (cited studies) with BEC zones and elevation (terrarium tiles)",
+   "about": "Where mule deer tend to be by month: habitat zones and elevation bands from studies. General pattern, not mapped corridors. Use the month slider.",
+   "cert": 60,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "legal": false,
+   "file": "data/layers/{area}/season_mule_deer.geojson",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-04",
+   "bytes": 1113445
+  },
+  {
+   "id": "season_wt_deer",
+   "group": "Habitat and migration",
+   "label": "White tailed deer by month (general pattern)",
+   "type": "fill",
+   "minzoom": 7,
+   "paint": {
+    "fill-color": "#a1887f",
+    "fill-opacity": [
+     "match",
+     [
+      "get",
+      "band"
+     ],
+     "winter",
+     0.35,
+     "transition",
+     0.22,
+     0.15
+    ]
+   },
+   "popup": [
+    [
+     "Species",
+     "species"
+    ],
+    [
+     "Band",
+     "band"
+    ],
+    [
+     "Months",
+     "monthsText"
+    ],
+    [
+     "Habitat zones",
+     "zones"
+    ],
+    [
+     "Elevation",
+     "elevM"
+    ],
+    [
+     "Where",
+     "where"
+    ],
+    [
+     "Certainty %",
+     "cert"
+    ],
+    [
+     "Label",
+     "label"
+    ]
+   ],
+   "source": "data/migration.json (cited studies) with BEC zones and elevation (terrarium tiles)",
+   "about": "Where white tailed deer tend to be by month: habitat zones and elevation bands from studies. General pattern, not mapped corridors. Use the month slider.",
+   "cert": 60,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "legal": false,
+   "file": "data/layers/{area}/season_wt_deer.geojson",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-04",
+   "bytes": 393838
+  },
+  {
+   "id": "season_moose",
+   "group": "Habitat and migration",
+   "label": "Moose by month (general pattern)",
+   "type": "fill",
+   "minzoom": 7,
+   "paint": {
+    "fill-color": "#6d4c41",
+    "fill-opacity": [
+     "match",
+     [
+      "get",
+      "band"
+     ],
+     "winter",
+     0.35,
+     "transition",
+     0.22,
+     0.15
+    ]
+   },
+   "popup": [
+    [
+     "Species",
+     "species"
+    ],
+    [
+     "Band",
+     "band"
+    ],
+    [
+     "Months",
+     "monthsText"
+    ],
+    [
+     "Habitat zones",
+     "zones"
+    ],
+    [
+     "Elevation",
+     "elevM"
+    ],
+    [
+     "Where",
+     "where"
+    ],
+    [
+     "Certainty %",
+     "cert"
+    ],
+    [
+     "Label",
+     "label"
+    ]
+   ],
+   "source": "data/migration.json (cited studies) with BEC zones and elevation (terrarium tiles)",
+   "about": "Where moose tend to be by month: habitat zones and elevation bands from studies. General pattern, not mapped corridors. Use the month slider.",
+   "cert": 60,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "legal": false,
+   "file": "data/layers/{area}/season_moose.geojson",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-04",
+   "bytes": 1189610
+  },
+  {
+   "id": "season_elk",
+   "group": "Habitat and migration",
+   "label": "Elk by month (general pattern)",
+   "type": "fill",
+   "minzoom": 7,
+   "paint": {
+    "fill-color": "#8d6e63",
+    "fill-opacity": [
+     "match",
+     [
+      "get",
+      "band"
+     ],
+     "winter",
+     0.35,
+     "transition",
+     0.22,
+     0.15
+    ]
+   },
+   "popup": [
+    [
+     "Species",
+     "species"
+    ],
+    [
+     "Band",
+     "band"
+    ],
+    [
+     "Months",
+     "monthsText"
+    ],
+    [
+     "Habitat zones",
+     "zones"
+    ],
+    [
+     "Elevation",
+     "elevM"
+    ],
+    [
+     "Where",
+     "where"
+    ],
+    [
+     "Certainty %",
+     "cert"
+    ],
+    [
+     "Label",
+     "label"
+    ]
+   ],
+   "source": "data/migration.json (cited studies) with BEC zones and elevation (terrarium tiles)",
+   "about": "Where elk tend to be by month: habitat zones and elevation bands from studies. General pattern, not mapped corridors. Use the month slider.",
+   "cert": 60,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "legal": false,
+   "file": "data/layers/{area}/season_elk.geojson",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-04",
+   "bytes": 1572559
+  },
+  {
+   "id": "season_sheep",
+   "group": "Habitat and migration",
+   "label": "Bighorn sheep by month (general pattern)",
+   "type": "fill",
+   "minzoom": 7,
+   "paint": {
+    "fill-color": "#bcaaa4",
+    "fill-opacity": [
+     "match",
+     [
+      "get",
+      "band"
+     ],
+     "winter",
+     0.35,
+     "transition",
+     0.22,
+     0.15
+    ]
+   },
+   "popup": [
+    [
+     "Species",
+     "species"
+    ],
+    [
+     "Band",
+     "band"
+    ],
+    [
+     "Months",
+     "monthsText"
+    ],
+    [
+     "Habitat zones",
+     "zones"
+    ],
+    [
+     "Elevation",
+     "elevM"
+    ],
+    [
+     "Where",
+     "where"
+    ],
+    [
+     "Certainty %",
+     "cert"
+    ],
+    [
+     "Label",
+     "label"
+    ]
+   ],
+   "source": "data/migration.json (cited studies) with BEC zones and elevation (terrarium tiles)",
+   "about": "Where bighorn sheep tend to be by month: habitat zones and elevation bands from studies. General pattern, not mapped corridors. Use the month slider.",
+   "cert": 60,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "legal": false,
+   "file": "data/layers/{area}/season_sheep.geojson",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-04",
+   "bytes": 1295549
+  },
+  {
+   "id": "duck_waters",
+   "group": "Habitat and migration",
+   "label": "Duck staging and winter waters",
+   "type": "fill",
+   "minzoom": 8,
+   "paint": {
+    "fill-color": [
+     "match",
+     [
+      "get",
+      "band"
+     ],
+     "winter open water",
+     "#1e88e5",
+     "#4dd0e1"
+    ],
+    "fill-opacity": 0.45,
+    "fill-outline-color": "#0d47a1"
+   },
+   "popup": [
+    [
+     "Name",
+     "name"
+    ],
+    [
+     "Hectares",
+     "ha"
+    ],
+    [
+     "Band",
+     "band"
+    ],
+    [
+     "Months",
+     "monthsText"
+    ],
+    [
+     "Elevation m",
+     "elevM"
+    ],
+    [
+     "Label",
+     "label"
+    ]
+   ],
+   "source": "FWA lakes, wetlands and rivers with data/migration.json flyway timing",
+   "about": "Valley lakes and wetlands of 20 ha or more where ducks stop in fall and spring, and low open water in winter. General pattern.",
+   "cert": 60,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "legal": false,
+   "file": "data/layers/{area}/duck_waters.geojson",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-04",
+   "bytes": 1240677
+  },
+  {
+   "id": "quail_range",
+   "group": "Habitat and migration",
+   "label": "California quail habitat (no migration)",
+   "type": "fill",
+   "minzoom": 8,
+   "paint": {
+    "fill-color": "#c0a060",
+    "fill-opacity": 0.3,
+    "fill-outline-color": "#8d6e3f"
+   },
+   "popup": [
+    [
+     "Species",
+     "species"
+    ],
+    [
+     "Band",
+     "band"
+    ],
+    [
+     "Months",
+     "monthsText"
+    ],
+    [
+     "Habitat zones",
+     "zones"
+    ],
+    [
+     "Elevation",
+     "elevM"
+    ],
+    [
+     "Where",
+     "where"
+    ],
+    [
+     "Certainty %",
+     "cert"
+    ],
+    [
+     "Label",
+     "label"
+    ]
+   ],
+   "source": "BEC zones and elevation with data/migration.json",
+   "about": "Quail do not migrate. Low Bunchgrass and Ponderosa Pine country near farms and brushy creeks, all year. General pattern.",
+   "cert": 60,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "legal": false,
+   "file": "data/layers/{area}/quail_range.geojson",
+   "areas": [
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-04",
+   "bytes": 37290
+  },
+  {
+   "id": "spots",
+   "group": "Spots",
+   "kind": "spots",
+   "label": "Candidate spots",
+   "type": "symbol",
+   "minzoom": 6,
+   "popup": [],
+   "source": "Hunt Mentor spot pipeline (scripts/spots-pipeline.py) from BC Data Catalogue layers",
+   "about": "Candidate spots scored from open data (my pick): drive, ATV (all terrain vehicle), walk, backcountry and camp. Busier and quieter are estimates. Candidate, scout it first.",
+   "cert": 60,
+   "file": "data/spots/{area}/spots.geojson",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-04",
+   "bytes": 9278199
+  },
+  {
+   "id": "routes",
+   "group": "Spots",
+   "kind": "routes",
+   "label": "Walk and ride routes",
+   "type": "line",
+   "minzoom": 10,
+   "paint": {
+    "line-color": [
+     "match",
+     [
+      "get",
+      "kind"
+     ],
+     "ride",
+     "#6d4c41",
+     "roadside",
+     "#f9a825",
+     "backcountry",
+     "#5e35b1",
+     "#e8590c"
+    ],
+    "line-width": 3,
+    "line-dasharray": [
+     1,
+     1.5
+    ]
+   },
+   "popup": [
+    [
+     "Route",
+     "name"
+    ],
+    [
+     "Kind",
+     "kind"
+    ],
+    [
+     "Length km",
+     "km"
+    ],
+    [
+     "Climb m",
+     "climbM"
+    ]
+   ],
+   "source": "Hunt Mentor spot pipeline (road atlas, forest roads, rec trails)",
+   "about": "Suggested approach lines (estimate).",
+   "cert": 60,
+   "legal": false,
+   "file": "data/spots/{area}/routes.geojson",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-04",
+   "bytes": 7160960
+  },
+  {
+   "id": "camps",
+   "group": "Access",
+   "kind": "camps",
+   "label": "Camps (rec sites and candidates)",
+   "type": "circle",
+   "minzoom": 9,
+   "paint": {
+    "circle-color": [
+     "match",
+     [
+      "get",
+      "kind"
+     ],
+     "Rec site",
+     "#2e7d32",
+     "Backcountry camp",
+     "#5e35b1",
+     "#8bc34a"
+    ],
+    "circle-radius": 5,
+    "circle-stroke-color": "#ffffff",
+    "circle-stroke-width": 1.5
+   },
+   "popup": [
+    [
+     "Name",
+     "name"
+    ],
+    [
+     "Kind",
+     "kind"
+    ],
+    [
+     "Campsites",
+     "campsites"
+    ],
+    [
+     "Water",
+     "water"
+    ],
+    [
+     "Note",
+     "note"
+    ]
+   ],
+   "labelField": "name",
+   "source": "FTEN_REC_SITE_POINTS_SVW plus Crown land camp candidates (Hunt Mentor spot pipeline)",
+   "about": "Official rec sites and Crown land camp candidates (flat, near water, not private, park or reserve). Scout it first.",
+   "cert": 60,
+   "legal": false,
+   "file": "data/spots/{area}/camps.geojson",
+   "areas": [
+    "A",
+    "B",
+    "C"
+   ],
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-04",
+   "bytes": 194866
+  }
+ ]
+}

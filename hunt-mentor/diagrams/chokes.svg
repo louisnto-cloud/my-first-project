@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="560" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Chokes: spread at 37 m (40 yd)</text>
+  <text x="200" y="48" font-size="14" fill="#23261f" text-anchor="middle">Dashed ring = 76 cm (30 in) circle</text>
+
+  <!-- Cylinder -->
+  <text x="15" y="100" font-size="16" font-weight="bold" fill="#23261f">Cylinder</text>
+  <text x="15" y="120" font-size="14" fill="#23261f">0 squeeze</text>
+  <text x="15" y="140" font-size="14" fill="#23261f">about 40% in ring</text>
+  <circle cx="225" cy="115" r="56" fill="#8a9a6b" fill-opacity="0.45" stroke="#2f3a2b" stroke-width="2"/>
+  <circle cx="225" cy="115" r="40" fill="none" stroke="#23261f" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="296" y="120" font-size="16" font-weight="bold" fill="#2f3a2b">Steel OK</text>
+
+  <!-- IC -->
+  <text x="15" y="212" font-size="16" font-weight="bold" fill="#23261f">IC</text>
+  <text x="15" y="230" font-size="14" fill="#23261f">Improved Cylinder</text>
+  <text x="15" y="248" font-size="14" fill="#23261f">about 0.25 mm</text>
+  <text x="15" y="266" font-size="14" fill="#23261f">about 50% in ring</text>
+  <circle cx="225" cy="240" r="49" fill="#8a9a6b" fill-opacity="0.55" stroke="#2f3a2b" stroke-width="2"/>
+  <circle cx="225" cy="240" r="40" fill="none" stroke="#23261f" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="296" y="245" font-size="16" font-weight="bold" fill="#2f3a2b">Steel OK</text>
+
+  <!-- Modified -->
+  <text x="15" y="350" font-size="16" font-weight="bold" fill="#23261f">M (Modified)</text>
+  <text x="15" y="370" font-size="14" fill="#23261f">about 0.5 mm</text>
+  <text x="15" y="390" font-size="14" fill="#23261f">about 60% in ring</text>
+  <circle cx="225" cy="365" r="42" fill="#8a9a6b" fill-opacity="0.7" stroke="#2f3a2b" stroke-width="2"/>
+  <circle cx="225" cy="365" r="40" fill="none" stroke="#23261f" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="296" y="360" font-size="16" font-weight="bold" fill="#2f3a2b">Steel</text>
+  <text x="296" y="380" font-size="16" font-weight="bold" fill="#2f3a2b">OK *</text>
+
+  <!-- Full -->
+  <text x="15" y="475" font-size="16" font-weight="bold" fill="#23261f">Full</text>
+  <text x="15" y="495" font-size="14" fill="#23261f">about 0.8 to 1 mm</text>
+  <text x="15" y="515" font-size="14" fill="#23261f">about 70% in ring</text>
+  <circle cx="225" cy="490" r="34" fill="#6b4f35" fill-opacity="0.7" stroke="#23261f" stroke-width="2"/>
+  <circle cx="225" cy="490" r="40" fill="none" stroke="#23261f" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="296" y="485" font-size="16" font-weight="bold" fill="#e8590c">NO</text>
+  <text x="296" y="505" font-size="14" font-weight="bold" fill="#e8590c">unless</text>
+  <text x="296" y="521" font-size="14" font-weight="bold" fill="#e8590c">marked</text>
+
+  <text x="200" y="548" font-size="14" fill="#23261f" text-anchor="middle">General guide only. * Most makers. Your manual wins.</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 490" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="490" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#23261f" text-anchor="middle">Where the meat is: quartering a deer</text>
+
+  <g stroke="#23261f" stroke-width="2.5" stroke-linejoin="round">
+    <!-- legs -->
+    <rect x="118" y="196" width="14" height="70" rx="5" fill="#8a9a6b"/>
+    <rect x="140" y="196" width="14" height="66" rx="5" fill="#8a9a6b"/>
+    <rect x="262" y="196" width="14" height="70" rx="5" fill="#6b4f35"/>
+    <rect x="284" y="196" width="14" height="66" rx="5" fill="#6b4f35"/>
+    <!-- body base -->
+    <ellipse cx="210" cy="170" rx="112" ry="44" fill="#d9d2b8"/>
+    <!-- front quarter (shoulder) -->
+    <path d="M104 150 C 110 128, 150 124, 168 138 C 178 160, 170 196, 150 206 C 126 206, 104 190, 104 150 Z" fill="#8a9a6b"/>
+    <!-- hind quarter -->
+    <path d="M252 134 C 276 122, 312 130, 320 160 C 322 190, 300 206, 272 206 C 252 196, 240 160, 252 134 Z" fill="#6b4f35"/>
+    <!-- backstrap strip along the spine -->
+    <path d="M122 132 C 160 118, 260 118, 310 134 L 310 146 C 260 130, 160 130, 122 144 Z" fill="#e8590c"/>
+    <!-- tenderloin (inside, dashed) -->
+    <path d="M232 152 C 250 150, 262 154, 268 162" fill="none" stroke="#e8590c" stroke-width="4" stroke-dasharray="5 4"/>
+    <!-- ribs and flank -->
+    <g stroke="#6b4f35" stroke-width="2" fill="none">
+      <path d="M176 150 C 180 170, 180 190, 176 206"/>
+      <path d="M192 150 C 196 170, 196 190, 192 208"/>
+      <path d="M208 150 C 212 170, 212 190, 208 208"/>
+      <path d="M224 150 C 228 170, 228 190, 224 206"/>
+    </g>
+    <!-- neck -->
+    <path d="M116 158 L80 108 L104 96 L140 142 Z" fill="#2f3a2b"/>
+    <!-- head -->
+    <ellipse cx="80" cy="100" rx="30" ry="16" fill="#8a9a6b"/>
+    <path d="M96 88 L112 68 L106 92 Z" fill="#8a9a6b"/>
+    <path d="M90 86 L94 58 M94 70 L84 60 M94 64 L104 52" fill="none" stroke="#6b4f35" stroke-width="4" stroke-linecap="round"/>
+    <!-- tail -->
+    <path d="M320 154 L336 146 L332 162 Z" fill="#fffaf0"/>
+  </g>
+
+  <!-- leader lines and labels -->
+  <g stroke="#23261f" stroke-width="1.5" fill="none">
+    <path d="M140 160 L60 200"/>
+    <path d="M290 162 L350 230"/>
+    <path d="M216 128 L216 70"/>
+    <path d="M250 158 L300 117"/>
+    <path d="M200 180 L200 300"/>
+    <path d="M110 128 L40 60"/>
+  </g>
+  <g font-size="15" font-weight="bold">
+    <text x="10" y="216" fill="#2f3a2b">Front quarter</text>
+    <text x="10" y="234" fill="#23261f" font-weight="normal" font-size="14">shoulder and</text>
+    <text x="10" y="252" fill="#23261f" font-weight="normal" font-size="14">shank</text>
+    <text x="303" y="246" fill="#6b4f35">Hind quarter</text>
+    <text x="303" y="264" fill="#23261f" font-weight="normal" font-size="14">the big roasts</text>
+    <text x="150" y="60" fill="#e8590c">Backstrap (loin)</text>
+    <text x="150" y="78" fill="#23261f" font-weight="normal" font-size="14">both sides of the spine</text>
+    <text x="392" y="96" fill="#e8590c" text-anchor="end">Tenderloin</text>
+    <text x="392" y="113" fill="#23261f" font-weight="normal" font-size="14" text-anchor="end">inside, under the spine</text>
+    <text x="150" y="318" fill="#6b4f35">Ribs and flank</text>
+    <text x="150" y="336" fill="#23261f" font-weight="normal" font-size="14">trim the meat off the bone</text>
+    <text x="10" y="52" fill="#2f3a2b">Neck</text>
+  </g>
+
+  <!-- legend -->
+  <rect x="16" y="360" width="368" height="116" rx="6" fill="#f1ead8" stroke="#8a9a6b" stroke-width="1.5"/>
+  <text x="28" y="384" font-size="15" font-weight="bold" fill="#23261f">BC legal edible portions, big game:</text>
+  <text x="28" y="406" font-size="15" fill="#23261f">neck, ribs, four quarters and the loins.</text>
+  <text x="28" y="428" font-size="14" fill="#6b4f35">Take every one of these out. Leaving them is wastage.</text>
+  <text x="28" y="448" font-size="14" fill="#6b4f35">Heart and liver are optional extras.</text>
+  <text x="28" y="466" font-size="14" fill="#6b4f35">Take them if you like them.</text>
+</svg>

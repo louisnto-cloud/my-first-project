@@ -1,0 +1,57 @@
+/* Hunt Map tools (Phase 2): waypoints, drawing, profile, My Content. Uses the .hmm colour tokens, so light, dark and sun themes follow. */
+.hmt-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; margin: 6px 0; }
+.hmt-tile { display: flex; align-items: center; gap: 10px; min-height: 60px; padding: 8px 10px; border-radius: 14px; border: 1.5px solid var(--hmm-line); background: var(--hmm-card); text-align: left; font-weight: 700; font-size: 15px; }
+.hmt-tile > svg { flex: none; }
+.hmt-tile > b { flex: none; min-width: 44px; font-size: 14px; color: var(--hmm-accent); }
+.hmt-tile span { display: flex; flex-direction: column; min-width: 0; }
+.hmt-tile small { font-weight: 400; font-size: 12.5px; color: var(--hmm-muted); }
+.hmt-tile:active, .hmt-row:active { background: var(--hmm-soft); }
+
+.hmt-icons { display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 6px; }
+.hmt-icons button { display: flex; flex-direction: column; align-items: center; gap: 2px; min-height: 64px; padding: 6px 2px; border-radius: 12px; border: 2px solid transparent; background: var(--hmm-soft); font-size: 11.5px; font-weight: 600; line-height: 1.15; color: var(--hmm-ink); }
+.hmt-icons button[aria-checked="true"] { border-color: var(--hmm-accent); background: var(--hmm-card); }
+.hmt-colors { display: flex; flex-wrap: wrap; gap: 6px; }
+.hmt-colors button { width: 44px; height: 44px; border-radius: 50%; border: 3px solid var(--hmm-card); background: var(--c); box-shadow: 0 0 0 1.5px var(--hmm-line); }
+.hmt-colors button[aria-checked="true"] { box-shadow: 0 0 0 3px var(--hmm-accent); }
+.hmm-field textarea { min-height: 70px; border-radius: 12px; border: 1.5px solid var(--hmm-line); background: var(--hmm-card); color: var(--hmm-ink); padding: 10px 12px; font: inherit; font-size: 16px; resize: vertical; -webkit-user-select: text; user-select: text; }
+.hmt-photo img { display: block; width: 100%; max-height: 260px; object-fit: cover; border-radius: 12px; margin-top: 8px; }
+
+.hmt-drawstat { margin: 4px 0 8px; font-size: 17px; }
+.hmt-drawbtns { display: flex; flex-wrap: wrap; gap: 8px; }
+.hmt-drawbtns .hmm-primary { flex: 1 1 120px; min-height: 46px; }
+.hmm-btn2:disabled { opacity: 0.45; }
+
+.hmt-chart { position: relative; height: 140px; border-radius: 12px; background: var(--hmm-soft); overflow: hidden; touch-action: none; }
+.hmt-chart svg { display: block; width: 100%; height: 100%; cursor: crosshair; }
+.hmt-area { fill: var(--hmm-accent); fill-opacity: 0.22; }
+.hmt-ln { fill: none; stroke: var(--hmm-accent); stroke-width: 2.4; vector-effect: non-scaling-stroke; }
+.hmt-cur { stroke: var(--hmm-ink); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.hmt-hi, .hmt-lo, .hmt-read { position: absolute; left: 8px; font-size: 12px; font-weight: 700; color: var(--hmm-muted); pointer-events: none; }
+.hmt-hi { top: 4px; } .hmt-lo { bottom: 4px; }
+.hmt-read { right: 8px; left: auto; top: 4px; color: var(--hmm-ink); background: var(--hmm-card); padding: 1px 6px; border-radius: 6px; }
+.hmt-axis { display: flex; justify-content: space-between; font-size: 12px; color: var(--hmm-muted); margin: 2px 2px 0; }
+
+.hmt-top { margin-top: 4px; }
+.hmt-item { display: flex; align-items: center; border-bottom: 1px solid var(--hmm-line); }
+.hmt-item.off .hmt-row { opacity: 0.5; }
+.hmt-row { flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; min-height: 56px; padding: 4px 0; border: 0; background: none; text-align: left; width: 100%; }
+.hmt-row > svg { flex: none; }
+.hmt-rn { display: flex; flex-direction: column; min-width: 0; font-weight: 700; }
+.hmt-rn, .hmt-rn small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hmt-rn small { font-weight: 400; font-size: 13px; color: var(--hmm-muted); }
+.hmt-sw { flex: none; width: 30px; height: 30px; border-radius: 8px; background: var(--c, #e8590c); display: inline-block; }
+.hmt-sw.line, .hmt-sw.track { height: 8px; border-radius: 4px; margin: 11px 0; }
+.hmt-sw.area { opacity: 0.75; border: 2px solid var(--hmm-ink); }
+.hmt-folder { margin: 8px 0; border: 1.5px solid var(--hmm-line); border-radius: 14px; padding: 0 4px 0 10px; }
+.hmt-folder.off .hmt-flist { opacity: 0.5; }
+.hmt-fh { display: flex; align-items: center; }
+.hmt-fname { flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; min-height: 50px; border: 0; background: none; font-weight: 800; text-align: left; color: var(--hmm-muted); }
+.hmt-fname span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--hmm-ink); }
+.hmt-fname small { color: var(--hmm-muted); font-weight: 600; }
+.hmt-flist .hmt-item:last-child { border-bottom: 0; }
+.hmm-field > input, .hmm-field > select { flex: none; font-weight: 400; }
+.hmm-field textarea { font-weight: 400; }
+.hmm button.hmm-btn2 { font-weight: 700; }
+.hmt-edit { margin: 12px 0 4px; border: 1.5px solid var(--hmm-line); border-radius: 12px; padding: 0 12px; }
+.hmt-edit summary { min-height: 46px; display: flex; align-items: center; font-weight: 700; cursor: pointer; }
+.hmt-edit[open] { padding-bottom: 10px; }

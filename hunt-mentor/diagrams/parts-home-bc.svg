@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Deer, elk, moose or caribou from outside BC</text>
+  <text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">BC synopsis 2026 to 2028, page 12, item 50</text>
+
+  <rect x="14" y="62" width="176" height="210" rx="10" fill="#e9efe0" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="102" y="86" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">May enter BC</text>
+  <text x="26" y="112" font-size="14" fill="#23261f">Edible meat of:</text>
+  <text x="36" y="132" font-size="14" fill="#23261f">four quarters</text>
+  <text x="36" y="150" font-size="14" fill="#23261f">loins</text>
+  <text x="36" y="168" font-size="14" fill="#23261f">neck and ribs</text>
+  <text x="26" y="196" font-size="14" fill="#23261f">Hide, antlers, skull plate</text>
+  <text x="26" y="214" font-size="14" fill="#23261f">only if cleaned of</text>
+  <text x="26" y="232" font-size="14" fill="#23261f">ALL tissue before</text>
+  <text x="26" y="250" font-size="14" fill="#23261f">crossing into BC</text>
+
+  <rect x="210" y="62" width="176" height="210" rx="10" fill="#f6ddd0" stroke="#e8590c" stroke-width="2"/>
+  <text x="298" y="86" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Stays behind</text>
+  <text x="222" y="112" font-size="14" fill="#23261f">Head and brain</text>
+  <text x="222" y="132" font-size="14" fill="#23261f">Spinal column</text>
+  <text x="222" y="152" font-size="14" fill="#23261f">Eyes, lymph nodes</text>
+  <text x="222" y="172" font-size="14" fill="#23261f">Guts and organs</text>
+  <text x="222" y="192" font-size="14" fill="#23261f">Bone in neck or back</text>
+  <text x="222" y="222" font-size="14" fill="#23261f">Uncleaned skull cap</text>
+  <text x="222" y="242" font-size="14" fill="#23261f">Hide with flesh on it</text>
+
+  <rect x="14" y="282" width="372" height="2" fill="#8a9a6b"/>
+  <text x="200" y="296" font-size="11" fill="#6b4f35" text-anchor="middle">Bone out the meat and clean the skull plate before you leave the kill area</text>
+</svg>

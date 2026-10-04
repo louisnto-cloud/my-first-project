@@ -1,0 +1,53 @@
+[
+ {
+  "id": "mallard-drake",
+  "species": "Mallard",
+  "caption": "Mallard drake. Green head, white neck ring, chestnut chest, yellow bill.",
+  "author": "Charles J. Sharp",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mallard_drake_(anas_platyrhynchos).JPG",
+  "card": true,
+  "cardBack": "Mallard drake. Green head, white neck ring, chestnut chest. Blue purple speculum edged in white."
+ },
+ {
+  "id": "mallard-drake-flight",
+  "species": "Mallard",
+  "caption": "Mallard drake in flight. Green head and a blue purple wing patch with white edges.",
+  "author": "Bert de Tilly",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mallard_drake.03.jpg"
+ },
+ {
+  "id": "mallard-hen",
+  "species": "Mallard",
+  "caption": "Mallard hen. Mottled brown, orange bill with dark centre, blue purple wing patch edged in white.",
+  "author": "Dave Hosford",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_-USA_-female-8.jpg",
+  "card": true,
+  "cardBack": "Mallard hen. Brown, orange and black bill, blue purple speculum with white edges on both sides."
+ },
+ {
+  "id": "pintail-drake",
+  "species": "Northern pintail",
+  "caption": "Northern pintail drake. Brown head, white stripe up the neck, long thin black tail.",
+  "author": "USFWSAlaska",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Northern_pintail_drake_(51102248085).jpg",
+  "card": true,
+  "cardBack": "Northern pintail drake. Brown head, white neck stripe, long needle tail. Slim and long necked."
+ },
+ {
+  "id": "pintail-drake-flight",
+  "species": "Northern pintail",
+  "caption": "Northern pintail drake in flight. Long neck and long pointed tail give a slim cross shape.",
+  "author": "Frank Schulenburg",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Northern_pintail_drake_in_flight_at_Llano_Seco-2961.jpg"
+ }
+]

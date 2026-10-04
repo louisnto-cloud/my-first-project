@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Timeline of District No. 3 migratory bird seasons from September to March. Ducks, coots and snipe run 8 September to 23 December. Canada and cackling geese run 8 to 20 September, 1 October to 23 December and 1 to 10 March. White fronted, snow and Ross's geese run 8 September to 23 December. Doves 1 to 30 September. Band tailed pigeons 15 to 30 September in MUs 3-13 to 3-17 only.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <!-- October highlight: the owner's hunt -->
+  <rect x="89" y="30" width="52" height="262" fill="#e8590c" fill-opacity="0.12"/>
+  <!-- month grid -->
+  <g stroke="#8a9a6b" stroke-width="1" fill="none">
+    <line x1="40" y1="30" x2="40" y2="292"/>
+    <line x1="89" y1="30" x2="89" y2="292"/>
+    <line x1="141" y1="30" x2="141" y2="292"/>
+    <line x1="190" y1="30" x2="190" y2="292"/>
+    <line x1="241" y1="30" x2="241" y2="292"/>
+    <line x1="292" y1="30" x2="292" y2="292"/>
+    <line x1="339" y1="30" x2="339" y2="292"/>
+    <line x1="390" y1="30" x2="390" y2="292"/>
+  </g>
+  <g font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">
+    <text x="64" y="22">Sep</text>
+    <text x="115" y="22">Oct</text>
+    <text x="165" y="22">Nov</text>
+    <text x="215" y="22">Dec</text>
+    <text x="266" y="22">Jan</text>
+    <text x="315" y="22">Feb</text>
+    <text x="364" y="22">Mar</text>
+  </g>
+  <!-- Row 1: ducks, coots, snipe: Sept 8 to Dec 23 -->
+  <text x="42" y="48" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f">Ducks, coots, snipe: 8 Sep to 23 Dec</text>
+  <rect x="52" y="54" width="176" height="16" fill="#2f3a2b"/>
+  <!-- Row 2: Canada and cackling geese -->
+  <text x="42" y="96" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f">Canada, cackling geese: 3 periods</text>
+  <rect x="52" y="102" width="21" height="16" fill="#6b4f35"/>
+  <rect x="89" y="102" width="139" height="16" fill="#6b4f35"/>
+  <rect x="339" y="102" width="16" height="16" fill="#6b4f35"/>
+  <text x="76" y="131" font-family="sans-serif" font-size="14" fill="#e8590c">closed 21 to 30 Sep</text>
+  <!-- Row 3: white fronted, snow and Ross's geese -->
+  <text x="42" y="158" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f">White fronted, snow, Ross's: 8 Sep to 23 Dec</text>
+  <rect x="52" y="164" width="176" height="16" fill="#6b4f35"/>
+  <!-- Row 4: doves -->
+  <text x="42" y="206" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f">Mourning, collared doves: 1 to 30 Sep</text>
+  <rect x="40" y="212" width="49" height="16" fill="#8a9a6b"/>
+  <!-- Row 5: band tailed pigeons -->
+  <text x="42" y="254" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f">Band tailed pigeons: 15 to 30 Sep, MUs 3-13 to 3-17</text>
+  <rect x="63" y="260" width="26" height="16" fill="#8a9a6b"/>
+  <text x="115" y="290" font-family="sans-serif" font-size="14" fill="#e8590c" text-anchor="middle">your hunt</text>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 790" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="790" fill="#fffaf0"/>
+  <text x="200" y="28" font-size="20" font-weight="bold" fill="#23261f" text-anchor="middle">Is it legal to shoot?</text>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#23261f"/></marker>
+    <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#c92a2a"/></marker>
+  </defs>
+  <!-- red stop column -->
+  <rect x="312" y="48" width="80" height="618" rx="10" fill="#c92a2a"/>
+  <text transform="translate(360 357) rotate(-90)" font-size="26" font-weight="bold" fill="#fffaf0" text-anchor="middle">DO NOT SHOOT</text>
+  <!-- question boxes: y = 48 + i*70, height 44 -->
+  <g font-size="15" fill="#23261f">
+    <rect x="8" y="48" width="252" height="44" rx="8" fill="#e9eedd" stroke="#2f3a2b" stroke-width="2"/>
+    <text x="134" y="75" text-anchor="middle" fill="#23261f">1. Licences on me?</text>
+    <rect x="8" y="118" width="252" height="44" rx="8" fill="#e9eedd" stroke="#2f3a2b" stroke-width="2"/>
+    <text x="134" y="145" text-anchor="middle" fill="#23261f">2. Legal hours right now?</text>
+    <rect x="8" y="188" width="252" height="44" rx="8" fill="#e9eedd" stroke="#2f3a2b" stroke-width="2"/>
+    <text x="134" y="215" text-anchor="middle" fill="#23261f">3. Season open, MU, sex?</text>
+    <rect x="8" y="258" width="252" height="44" rx="8" fill="#e9eedd" stroke="#2f3a2b" stroke-width="2"/>
+    <text x="134" y="285" text-anchor="middle" fill="#23261f">4. 100% sure what it is?</text>
+    <rect x="8" y="328" width="252" height="44" rx="8" fill="#e9eedd" stroke="#2f3a2b" stroke-width="2"/>
+    <text x="134" y="355" text-anchor="middle" fill="#23261f">5. Off road, out of vehicle?</text>
+    <rect x="8" y="398" width="252" height="44" rx="8" fill="#e9eedd" stroke="#2f3a2b" stroke-width="2"/>
+    <text x="134" y="425" text-anchor="middle" fill="#23261f">6. Over 100 m from buildings?</text>
+    <rect x="8" y="468" width="252" height="44" rx="8" fill="#e9eedd" stroke="#2f3a2b" stroke-width="2"/>
+    <text x="134" y="495" text-anchor="middle" fill="#23261f">7. Allowed on this land?</text>
+    <rect x="8" y="538" width="252" height="44" rx="8" fill="#e9eedd" stroke="#2f3a2b" stroke-width="2"/>
+    <text x="134" y="565" text-anchor="middle" fill="#23261f">8. Safe backstop?</text>
+    <rect x="8" y="608" width="252" height="44" rx="8" fill="#e9eedd" stroke="#2f3a2b" stroke-width="2"/>
+    <text x="134" y="635" text-anchor="middle" fill="#23261f">9. Clean shot, in my range?</text>
+  </g>
+  <!-- yes arrows down -->
+  <g stroke="#23261f" stroke-width="2.5" fill="none" marker-end="url(#ah)">
+    <line x1="134" y1="92" x2="134" y2="116"/>
+    <line x1="134" y1="162" x2="134" y2="186"/>
+    <line x1="134" y1="232" x2="134" y2="256"/>
+    <line x1="134" y1="302" x2="134" y2="326"/>
+    <line x1="134" y1="372" x2="134" y2="396"/>
+    <line x1="134" y1="442" x2="134" y2="466"/>
+    <line x1="134" y1="512" x2="134" y2="536"/>
+    <line x1="134" y1="582" x2="134" y2="606"/>
+    <line x1="134" y1="652" x2="134" y2="690"/>
+  </g>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b">
+    <text x="142" y="110" fill="#2f3a2b">Yes</text>
+    <text x="142" y="180" fill="#2f3a2b">Yes</text>
+    <text x="142" y="250" fill="#2f3a2b">Yes</text>
+    <text x="142" y="320" fill="#2f3a2b">Yes</text>
+    <text x="142" y="390" fill="#2f3a2b">Yes</text>
+    <text x="142" y="460" fill="#2f3a2b">Yes</text>
+    <text x="142" y="530" fill="#2f3a2b">Yes</text>
+    <text x="142" y="600" fill="#2f3a2b">Yes</text>
+    <text x="142" y="676" fill="#2f3a2b">Yes</text>
+  </g>
+  <!-- no arrows right -->
+  <g stroke="#c92a2a" stroke-width="2.5" fill="none" marker-end="url(#ahr)">
+    <line x1="260" y1="70" x2="310" y2="70"/>
+    <line x1="260" y1="140" x2="310" y2="140"/>
+    <line x1="260" y1="210" x2="310" y2="210"/>
+    <line x1="260" y1="280" x2="310" y2="280"/>
+    <line x1="260" y1="350" x2="310" y2="350"/>
+    <line x1="260" y1="420" x2="310" y2="420"/>
+    <line x1="260" y1="490" x2="310" y2="490"/>
+    <line x1="260" y1="560" x2="310" y2="560"/>
+    <line x1="260" y1="630" x2="310" y2="630"/>
+  </g>
+  <g font-size="14" font-weight="bold" fill="#c92a2a">
+    <text x="270" y="63" fill="#c92a2a">No</text>
+    <text x="270" y="133" fill="#c92a2a">No</text>
+    <text x="270" y="203" fill="#c92a2a">No</text>
+    <text x="270" y="273" fill="#c92a2a">No</text>
+    <text x="270" y="343" fill="#c92a2a">No</text>
+    <text x="270" y="413" fill="#c92a2a">No</text>
+    <text x="270" y="483" fill="#c92a2a">No</text>
+    <text x="270" y="553" fill="#c92a2a">No</text>
+    <text x="270" y="623" fill="#c92a2a">No</text>
+  </g>
+  <!-- final -->
+  <rect x="8" y="692" width="384" height="86" rx="10" fill="#2f3a2b"/>
+  <text x="200" y="726" font-size="20" font-weight="bold" fill="#fffaf0" text-anchor="middle">All 9 yes: you may shoot</text>
+  <text x="200" y="756" font-size="15" fill="#fffaf0" text-anchor="middle">Any doubt at any step means no.</text>
+</svg>

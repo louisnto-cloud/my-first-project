@@ -1,0 +1,6 @@
+[
+  { "id": "heffley", "name": "Heffley Creek", "lat": 50.86, "lon": -120.27, "region": "Region 3 Thompson", "note": "Approximate centre point. Seconds of difference only." },
+  { "id": "sunpeaks", "name": "Sun Peaks", "lat": 50.88, "lon": -119.89, "region": "Region 3 Thompson", "note": "Approximate village centre." },
+  { "id": "mission", "name": "Mission", "lat": 49.13, "lon": -122.31, "region": "Region 2 Lower Mainland", "note": "Approximate city centre." },
+  { "id": "okanagan", "name": "Okanagan (Kelowna)", "lat": 49.89, "lon": -119.49, "region": "Region 8 Okanagan", "note": "Approximate city centre." }
+]

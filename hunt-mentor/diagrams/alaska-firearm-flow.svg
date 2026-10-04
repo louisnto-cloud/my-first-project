@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="560" fill="#fffaf0"/>
+  <defs>
+    <marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#23261f"/></marker>
+  </defs>
+  <text x="200" y="28" font-size="19" font-weight="bold" fill="#23261f" text-anchor="middle">Your rifle to Alaska and back</text>
+
+  <rect x="40" y="48" width="320" height="62" rx="10" fill="#e9efe0" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="200" y="72" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1. Buy your Alaska hunting licence online</text>
+  <text x="200" y="94" font-size="14" fill="#23261f" text-anchor="middle">ATF needs a copy of it with your application</text>
+  <line x1="200" y1="110" x2="200" y2="130" stroke="#23261f" stroke-width="2" marker-end="url(#ak)"/>
+
+  <rect x="40" y="132" width="320" height="62" rx="10" fill="#e9efe0" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="200" y="156" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. File ATF Form 6NIA, one per hunter</text>
+  <text x="200" y="178" font-size="14" fill="#23261f" text-anchor="middle">About 4 to 6 weeks. Approval valid 1 year</text>
+  <line x1="200" y1="194" x2="200" y2="214" stroke="#23261f" stroke-width="2" marker-end="url(#ak)"/>
+
+  <rect x="40" y="216" width="320" height="62" rx="10" fill="#e9efe0" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="200" y="240" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3. Leave Canada</text>
+  <text x="200" y="262" font-size="14" fill="#23261f" text-anchor="middle">Optional: CBSA card BSF407 listing serial numbers</text>
+  <line x1="200" y1="278" x2="200" y2="298" stroke="#23261f" stroke-width="2" marker-end="url(#ak)"/>
+
+  <rect x="40" y="300" width="320" height="62" rx="10" fill="#f6ddd0" stroke="#e8590c" stroke-width="2"/>
+  <text x="200" y="324" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">4. US border (CBP): declare the firearm</text>
+  <text x="200" y="346" font-size="14" fill="#23261f" text-anchor="middle">Show approved 6NIA plus the Alaska licence</text>
+  <line x1="200" y1="362" x2="200" y2="382" stroke="#23261f" stroke-width="2" marker-end="url(#ak)"/>
+
+  <rect x="40" y="384" width="320" height="62" rx="10" fill="#e9efe0" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="200" y="408" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">5. Hunt. Keep 6NIA and licence on you</text>
+  <text x="200" y="430" font-size="14" fill="#23261f" text-anchor="middle">Unloaded and cased in the truck is the safe habit</text>
+  <line x1="200" y1="446" x2="200" y2="466" stroke="#23261f" stroke-width="2" marker-end="url(#ak)"/>
+
+  <rect x="40" y="468" width="320" height="62" rx="10" fill="#f6ddd0" stroke="#e8590c" stroke-width="2"/>
+  <text x="200" y="492" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">6. Back into Canada (CBSA): declare it</text>
+  <text x="200" y="514" font-size="14" fill="#23261f" text-anchor="middle">Show your PAL. Non restricted re entry only</text>
+
+  <text x="200" y="550" font-size="13" fill="#6b4f35" text-anchor="middle">Ammunition rides on the same 6NIA. Keep every paper in one folder.</text>
+</svg>

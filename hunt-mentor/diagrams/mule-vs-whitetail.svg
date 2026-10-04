@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="420" fill="#fffaf0"/>
+  <line x1="200" y1="10" x2="200" y2="410" stroke="#8a9a6b" stroke-width="2" stroke-dasharray="6 6" fill="none"/>
+  <text x="100" y="30" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Mule deer</text>
+  <text x="300" y="30" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">White tail</text>
+  <text x="200" y="52" font-size="14" fill="#6b4f35" text-anchor="middle">Antlers (one side, seen from front)</text>
+  <!-- mule deer antler: forks that split again -->
+  <g stroke="#6b4f35" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M100 190 L100 160"/>
+    <path d="M100 160 L70 110"/>
+    <path d="M100 160 L130 110"/>
+    <path d="M70 110 L55 72"/>
+    <path d="M70 110 L85 75"/>
+    <path d="M130 110 L118 74"/>
+    <path d="M130 110 L148 76"/>
+    <path d="M100 178 L86 168"/>
+  </g>
+  <text x="100" y="212" font-size="14" fill="#23261f" text-anchor="middle">Forks that fork again</text>
+  <text x="100" y="230" font-size="14" fill="#23261f" text-anchor="middle">("Y" on a "Y")</text>
+  <!-- whitetail antler: one main beam, tines up -->
+  <g stroke="#6b4f35" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M250 190 Q240 120 300 100 Q345 90 360 120"/>
+    <path d="M262 140 L258 112"/>
+    <path d="M285 108 L282 72"/>
+    <path d="M315 98 L318 64"/>
+    <path d="M343 102 L350 76"/>
+  </g>
+  <text x="300" y="212" font-size="14" fill="#23261f" text-anchor="middle">One main beam,</text>
+  <text x="300" y="230" font-size="14" fill="#23261f" text-anchor="middle">single tines up</text>
+  <text x="200" y="262" font-size="14" fill="#6b4f35" text-anchor="middle">Tail and rump (seen from behind)</text>
+  <!-- mule deer rump -->
+  <ellipse cx="100" cy="330" rx="48" ry="48" fill="#f3ead8" stroke="#23261f" stroke-width="2"/>
+  <rect x="94" y="290" width="12" height="62" rx="6" fill="#f3ead8" stroke="#23261f" stroke-width="2"/>
+  <rect x="94" y="340" width="12" height="18" rx="6" fill="#23261f" stroke="#23261f" stroke-width="2"/>
+  <text x="100" y="396" font-size="14" fill="#23261f" text-anchor="middle">Big white rump,</text>
+  <text x="100" y="413" font-size="14" fill="#23261f" text-anchor="middle">thin tail, black tip</text>
+  <!-- whitetail flag -->
+  <ellipse cx="300" cy="345" rx="40" ry="34" fill="#b08a5e" stroke="#23261f" stroke-width="2"/>
+  <path d="M300 340 C270 320 268 285 285 275 L300 270 L315 275 C332 285 330 320 300 340 Z" fill="#ffffff" stroke="#23261f" stroke-width="2"/>
+  <text x="300" y="300" font-size="12" fill="#6b4f35" text-anchor="middle">flag up</text>
+  <text x="300" y="396" font-size="14" fill="#23261f" text-anchor="middle">Wide brown tail,</text>
+  <text x="300" y="413" font-size="14" fill="#23261f" text-anchor="middle">white below, waved up</text>
+</svg>

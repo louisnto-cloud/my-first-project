@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="350" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="19" font-weight="bold" fill="#23261f" text-anchor="middle">Species licence:</text>
+  <text x="200" y="47" font-size="19" font-weight="bold" fill="#23261f" text-anchor="middle">where the notches go (generic)</text>
+
+  <!-- the licence card -->
+  <rect x="40" y="80" width="320" height="200" rx="6" fill="#ffffff" stroke="#23261f" stroke-width="2"/>
+  <text x="200" y="128" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">BC RESIDENT SPECIES LICENCE</text>
+  <text x="200" y="148" font-size="14" fill="#23261f" text-anchor="middle">Mule deer   2026 to 2027</text>
+  <text x="200" y="168" font-size="13" fill="#23261f" text-anchor="middle">FWID 000 000 000</text>
+  <text x="200" y="186" font-size="13" fill="#23261f" text-anchor="middle">Licence No. 0000000</text>
+  <!-- barcode -->
+  <g fill="#23261f">
+    <rect x="130" y="198" width="3" height="22"/><rect x="136" y="198" width="2" height="22"/><rect x="141" y="198" width="4" height="22"/>
+    <rect x="148" y="198" width="2" height="22"/><rect x="153" y="198" width="3" height="22"/><rect x="159" y="198" width="2" height="22"/>
+    <rect x="164" y="198" width="4" height="22"/><rect x="171" y="198" width="2" height="22"/><rect x="176" y="198" width="3" height="22"/>
+    <rect x="182" y="198" width="2" height="22"/><rect x="187" y="198" width="4" height="22"/><rect x="194" y="198" width="2" height="22"/>
+    <rect x="199" y="198" width="3" height="22"/><rect x="205" y="198" width="2" height="22"/><rect x="210" y="198" width="4" height="22"/>
+    <rect x="217" y="198" width="2" height="22"/><rect x="222" y="198" width="3" height="22"/><rect x="228" y="198" width="2" height="22"/>
+    <rect x="233" y="198" width="4" height="22"/><rect x="240" y="198" width="2" height="22"/><rect x="245" y="198" width="3" height="22"/>
+    <rect x="251" y="198" width="2" height="22"/><rect x="256" y="198" width="4" height="22"/><rect x="263" y="198" width="2" height="22"/>
+  </g>
+
+  <!-- MONTH strip along the top edge -->
+  <g font-size="14" fill="#23261f" text-anchor="middle">
+    <rect x="40" y="80" width="320" height="26" fill="#f1ead8" stroke="#23261f" stroke-width="1"/>
+    <text x="92" y="102">SEP</text><text x="146" y="102">OCT</text><text x="200" y="102">NOV</text><text x="254" y="102">DEC</text><text x="308" y="102">JAN</text>
+  </g>
+  <!-- notch cut at OCT -->
+  <path d="M136 80 L146 90 L156 80 Z" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/>
+
+  <!-- DAY strip along the right edge -->
+  <rect x="334" y="106" width="26" height="148" fill="#f1ead8" stroke="#23261f" stroke-width="1"/>
+  <g font-size="12" fill="#23261f" text-anchor="middle">
+    <text x="341" y="126">1</text><text x="341" y="146">5</text><text x="341" y="166">10</text><text x="341" y="186">15</text><text x="341" y="206">20</text><text x="341" y="226">25</text><text x="341" y="246">31</text>
+  </g>
+  <!-- notch cut at 15 -->
+  <path d="M360 172 L350 182 L360 192 Z" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/>
+
+  <!-- REGION strip along the bottom edge -->
+  <rect x="40" y="254" width="320" height="26" fill="#f1ead8" stroke="#23261f" stroke-width="1"/>
+  <g font-size="13" fill="#23261f" text-anchor="middle">
+    <text x="63" y="268">1</text><text x="95" y="268">2</text><text x="127" y="268">3</text><text x="159" y="268">4</text><text x="191" y="268">5</text><text x="223" y="268">6</text><text x="259" y="268">7A</text><text x="298" y="268">7B</text><text x="335" y="268">8</text>
+  </g>
+  <!-- notch cut at region 3 -->
+  <path d="M117 280 L127 270 L137 280 Z" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/>
+
+  <!-- CLASS strip along the left edge -->
+  <rect x="40" y="106" width="26" height="148" fill="#f1ead8" stroke="#23261f" stroke-width="1"/>
+  <g font-size="12" fill="#23261f" text-anchor="middle">
+    <text transform="translate(62 207) rotate(-90)">ANTLERLESS</text>
+    <text transform="translate(62 134) rotate(-90)">BUCK</text>
+  </g>
+  <!-- notch cut at BUCK -->
+  <path d="M40 124 L50 134 L40 144 Z" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/>
+
+  <!-- labels around -->
+  <text x="20" y="72" font-size="14" fill="#e8590c">Month</text>
+  <text x="366" y="128" font-size="14" fill="#e8590c">Day</text>
+  <text x="20" y="302" font-size="14" fill="#e8590c">Region</text>
+  <text x="2" y="210" font-size="14" fill="#e8590c" transform="rotate(-90 14 210)">Class</text>
+
+  <text x="200" y="320" font-size="14" fill="#23261f" text-anchor="middle">Orange: notches cut out. This card is a generic example.</text>
+  <text x="200" y="340" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Follow the instructions printed on YOUR licence.</text>
+</svg>
