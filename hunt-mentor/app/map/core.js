@@ -276,11 +276,17 @@ function createMap(v) {
   const resolveImg = (id) => { const img = makeImage(id); if (img && !map.hasImage(id)) map.addImage(id, img[0], img[1]); };
   if (map.setMissingStyleImageResolver) map.setMissingStyleImageResolver(async (id) => resolveImg(id));
   else map.on('styleimagemissing', (e) => resolveImg(e.id));
-  map.on('load', () => {
+  // 'load' waits for the first tiles. Offline with nothing saved it can take a long time, so also go ready once the style is in.
+  let isReady = false;
+  const onReady = () => {
+    if (isReady) return; isReady = true;
     if (prefs.is3d) map.setTerrain({ source: 'dem-terrain', exaggeration: prefs.exag || 1.3 });
     updatePill(); updateScale(); updateElev(); updateNorth();
     resolveReady(map);
-  });
+  };
+  map.on('load', onReady);
+  const fallback = () => { if (isReady) return; if (map.isStyleLoaded()) onReady(); else setTimeout(fallback, 1500); };
+  setTimeout(fallback, 6000);
   map.on('error', onMapError);
   const fast = throttle(() => { updateScale(); updateNorth(); }, 60);
   const slow = throttle(updateElev, 400);
