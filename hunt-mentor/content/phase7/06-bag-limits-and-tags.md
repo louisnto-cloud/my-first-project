@@ -59,6 +59,8 @@ checked: 2026-10-03
 >
 > "The daily bag limit for Snow and Ross’s geese in aggregate is 5 except for MUs 2-4 and 2-5 where 15 Snow Geese may be taken."
 
+- Note: the federal District 2 table and the Region 2 page 28 footnote give 10 a day (30 in possession), at most 5 Ross's, outside MUs 2-4 and 2-5. The federal table is the law (85%, my reading).
+
 | Birds | Daily bag limit |
 |---|---|
 | Ducks, all species together | 8 |

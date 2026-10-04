@@ -57,7 +57,7 @@ checked: 2026-10-01
 - More numerous in the northwest; strong populations in the Rockies, Coast, Cariboo, Selkirk and Purcell ranges (85%).
 - **Region 3:** no goat row in the general open season table (page 34), so LEH only (95%).
 - **Region 3 LEH hunts:** Kamloops zones in MUs 3-16, 3-32, 3-33, 3-35, 3-36, 3-42 and 3-46, and Nahatlatch River (3-15), Sept 1 to Nov 30; 2025 first choice odds from about 4.5 to 1 up to 76 to 1 (95%).
-- **General open seasons elsewhere:** Region 1 (MUs 1-14, 1-15, Sept 10 to Nov 30), Region 2 (MU 2-5, Sept 10 to Oct 15), Region 4 (MUs 4-28 to part of 4-30, 4-37 north and west of Windy Creek, 4-39, 4-40, Sept 10 to Nov 30), Region 5 (some MUs, Sept 1 to Oct 31), Region 6 (Aug 1 to Oct 15), Region 7A (Aug 15 to Oct 15), Region 7B (Aug 25 to Oct 15), bag limit 1, with closed and LEH only areas on the regional maps (98%).
+- **General open seasons elsewhere:** Region 1 (MUs 1-14, 1-15, Sept 10 to Nov 30), Region 2 (MU 2-5 Sept 10 to Oct 15; MU 2-6 Sept 10 to 30, see Map B9 closed area; MUs 2-12 to 2-15 Sept 10 to Oct 31, see Maps B18 and B19; 99%, page 28), Region 4 (MUs 4-28 to part of 4-30, 4-37 north and west of Windy Creek, 4-39, 4-40, Sept 10 to Nov 30), Region 5 (some MUs, Sept 1 to Oct 31), Region 6 (Aug 1 to Oct 15), Region 7A (Aug 15 to Oct 15), Region 7B (Aug 25 to Oct 15), bag limit 1, with closed and LEH only areas on the regional maps (98%).
 - The Region 5 and 7 tables add: "Mountain goat populations are sensitive to harvest. Hunters are requested to select male mountain goat." (98%)
 
 ## Day, year, food, cover

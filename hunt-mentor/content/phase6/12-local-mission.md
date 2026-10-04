@@ -126,7 +126,7 @@ Trip plan left, RAPP number saved
 
 > [!mistake]
 > - Shooting ducks from the Mission dyke without the Fraser Valley Special Area Hunting Licence and the insurance.
-> - Taking a rifle to the Hatzic or Nicomen lowland. Rifles are prohibited there and shot only applies near Highway 7.
+> - Taking a rifle to the Hatzic or Nicomen lowland. Rifles are prohibited there: the Nicomen shot only area covers the Hatzic, Nicomen and Deroche lowland and Harrison Bay (95%, Closed Areas Regulation Schedule 9 s. 9).
 > - Calling a white tail a black tail. Region 2 has no white tailed deer season.
 
 > [!field]
