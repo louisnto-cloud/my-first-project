@@ -5,6 +5,7 @@
   const $ = (s, el = document) => el.querySelector(s);
   const view = $('#view');
   const KEY = 'hm.v1';
+  const MAP_KEY = 'hm.map.v1'; // Hunt Map preferences (map/util.js), included in the backup
   const TZ = 'America/Vancouver';
 
   // ---------- storage ----------
@@ -77,6 +78,7 @@
   }
   const hhmm = (dt) => dt ? dt.toLocaleTimeString('en-CA', { timeZone: TZ, hour: 'numeric', minute: '2-digit' }) : 'n/a';
   const addMin = (dt, m) => dt ? new Date(+dt + m * 6e4) : null;
+  window.HuntMentor = { sunEvent, hhmm, TZ }; // shared with the map (Insights)
 
   // ---------- views ----------
   function progress(phase) {
@@ -288,7 +290,7 @@
         <a class="item" href="#/glossary"><span class="grow">Glossary</span></a>
         <a class="item" href="#/journal"><span class="grow">Hunt journal</span></a>
         <a class="item" href="#/print"><span class="grow">Print pocket cards</span></a>
-        <a class="item" href="#/credits"><span class="grow">Photo credits</span></a>
+        <a class="item" href="#/credits"><span class="grow">Credits: photos and map data</span></a>
         <a class="item" href="#/review"><span class="grow">Review missed questions</span></a>
         <a class="item" href="#/sources"><span class="grow">Regulation data and sources</span></a>
         <a class="item" href="#/install"><span class="grow">Install on iPhone or Android</span></a>
@@ -297,10 +299,19 @@
         <div class="btn-row"><button class="btn" id="exp">Export backup</button><label class="btn">Import<input type="file" id="imp" accept=".json" hidden></label></div></div>`;
     view.querySelectorAll('#theme button').forEach((b) => b.onclick = () => { S.settings.theme = b.dataset.v; save(); applyTheme(); more(); });
     $('#fh').onchange = (e) => { S.settings.firstHunt = e.target.value; save(); };
-    $('#exp').onclick = () => download(`hunt-mentor-backup-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(S), 'application/json');
+    $('#exp').onclick = () => {
+      let mp = null; try { mp = JSON.parse(localStorage.getItem(MAP_KEY) || 'null'); } catch (e) { mp = null; }
+      download(`hunt-mentor-backup-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(Object.assign({}, S, mp ? { mapPrefs: mp } : {})), 'application/json');
+    };
     $('#imp').onchange = (e) => {
       const f = e.target.files[0]; if (!f) return;
-      f.text().then((t) => { try { S = Object.assign({}, blank, JSON.parse(t)); save(); applyTheme(); alert('Backup restored.'); more(); } catch (err) { alert('That file is not a Hunt Mentor backup.'); } });
+      f.text().then((t) => {
+        try {
+          const o = JSON.parse(t);
+          if (o.mapPrefs) { try { localStorage.setItem(MAP_KEY, JSON.stringify(o.mapPrefs)); } catch (e) { /* storage blocked */ } delete o.mapPrefs; }
+          S = Object.assign({}, blank, o); save(); applyTheme(); alert('Backup restored.'); more();
+        } catch (err) { alert('That file is not a Hunt Mentor backup.'); }
+      });
     };
   }
   function download(name, text, type) {
@@ -432,10 +443,42 @@
   }
 
   function credits() {
-    setTitle('Photo credits'); tab('more');
+    setTitle('Credits'); tab('more');
     const P = HM.photos || [];
-    view.innerHTML = `<p class="muted">Every photo is public domain or Creative Commons, used with credit. Tap source to see the original and its licence.</p>
+    const M = [
+      ['MapLibre GL JS', 'The map engine. BSD (Berkeley Software Distribution) 3 clause licence.', 'https://maplibre.org/'],
+      ['maplibre-contour', 'Contour lines drawn from terrain tiles. BSD 3 clause licence.', 'https://github.com/onthegomap/maplibre-contour'],
+      ['OpenStreetMap contributors', 'Roads, trails, water and place names. Open Database Licence.', 'https://www.openstreetmap.org/copyright'],
+      ['OpenFreeMap', 'Free vector map tiles and map fonts, built on OpenMapTiles.', 'https://openfreemap.org/'],
+      ['Esri World Imagery', 'Satellite imagery: Esri, Maxar, Earthstar Geographics and the GIS User Community.', 'https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9'],
+      ['Terrain Tiles', 'Elevation for relief shading, 3D, contours and the elevation readout: Mapzen, Amazon Web Services Open Data.', 'https://registry.opendata.aws/terrain-tiles/'],
+      ['Open-Meteo', 'Weather and wind forecasts. Creative Commons Attribution 4.0 licence.', 'https://open-meteo.com/'],
+      ['BC Data Catalogue', 'Hunting layers: Management Units, closures, parks, land status and habitat. Open Government Licence BC.', 'https://catalogue.data.gov.bc.ca/'],
+      ['BC Geographical Names and BC Address Geocoder', 'Place search. Open Government Licence BC.', 'https://www2.gov.bc.ca/gov/content/data/geographic-data-services'],
+      ['Nominatim', 'Place search when the BC services find nothing, using OpenStreetMap data.', 'https://nominatim.org/'],
+      ['PMTiles', 'Reads large map layers. BSD 3 clause licence.', 'https://github.com/protomaps/PMTiles'],
+    ];
+    view.innerHTML = `<div class="card"><h2>Map data and software</h2>${M.map(([n, t, u]) => `<p><strong><a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a></strong>: ${esc(t)}</p>`).join('')}</div>
+      <h2>Photos</h2><p class="muted">Every photo is public domain or Creative Commons, used with credit. Tap source to see the original and its licence.</p>
       <div class="card">${P.length ? P.map((p) => `<p><strong>${esc(p.species || p.id)}</strong>: ${esc(p.caption || '')}<br><span class="muted">Photo: ${esc(p.author || 'unknown')}, ${esc(p.licence || '')}${p.source ? `, <a href="${esc(p.source)}" target="_blank" rel="noopener">source</a>` : ''}</span></p>`).join('') : '<p>No photos yet.</p>'}</div>`;
+  }
+
+  // ---------- Hunt Map (map/core.js, loaded only when the map opens) ----------
+  let mapMod = null;
+  function mapView(param) {
+    document.body.classList.add('map-open'); tab('map');
+    (mapMod ? Promise.resolve(mapMod) : import('./map/core.js').then((m) => (mapMod = m)))
+      .then((m) => { if (/^#\/map/.test(location.hash)) return m.open(param); })
+      .catch((err) => {
+        console.warn('Hunt Map could not load', err);
+        document.body.classList.remove('map-open'); setTitle('Map');
+        view.innerHTML = '<div class="card"><h2>The map could not open</h2><p>The map works in the installed app. It needs an internet connection the first time it opens.</p><a class="btn" href="#/">Home</a></div>';
+      });
+  }
+  function leaveMap() {
+    if (!document.body.classList.contains('map-open')) return;
+    document.body.classList.remove('map-open');
+    if (mapMod) mapMod.close();
   }
 
   function notFound() { view.innerHTML = '<div class="card"><h2>Not found</h2><a href="#/">Home</a></div>'; }
@@ -446,6 +489,8 @@
     $('#sheet').hidden = true;
     const h = location.hash.replace(/^#\/?/, '').split('/');
     const [a, b, c] = h;
+    if (a === 'map') return mapView(h.slice(1).join('/'));
+    leaveMap();
     if (!a) home();
     else if (a === 'learn') learn();
     else if (a === 's') session(b, c);
