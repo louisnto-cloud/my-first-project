@@ -327,6 +327,10 @@ function build() {
   fs.mkdirSync(OUT, { recursive: true });
   const css = read('app/style.css');
   const js = read('app/app.js');
+  // Ask the app (offline question box): optional add on, loaded before app.js so its route exists on first load
+  const askJs = fs.existsSync(path.join(ROOT, 'app/ask.js')) ? read('app/ask.js') : '';
+  // Home dashboard (This week cards): optional add on, loaded before app.js
+  const homeJs = fs.existsSync(path.join(ROOT, 'app/home.js')) ? read('app/home.js') : '';
   const photoIds = Object.keys(PHOTOS).filter((id) => fs.existsSync(path.join(ROOT, 'photos', `${id}.jpg`)));
   const jsonPwa = JSON.stringify(data).replace(/__PHOTO__([\w-]+)__/g, 'photos/$1.jpg');
   const jsonSingle = JSON.stringify(data).replace(/__PHOTO__([\w-]+)__/g, (_, id) => {
@@ -337,10 +341,11 @@ function build() {
   const json = jsonPwa;
   // Hunt Map: map modules and vendored libraries (precached), loaded only when the map opens
   const listFiles = (dir) => (fs.existsSync(path.join(ROOT, dir)) ? fs.readdirSync(path.join(ROOT, dir), { recursive: true }).filter((f) => fs.statSync(path.join(ROOT, dir, f)).isFile()).map((f) => f.split(path.sep).join('/')).sort() : []);
-  const mapDirs = [['app/vendor', 'vendor'], ['app/map', 'map']];
+  const mapDirs = [['app/vendor', 'vendor'], ['app/map', 'map'], ['data/seasons', 'data/seasons']]; // season tables: used by the home dashboard offline
   const mapFiles = mapDirs.flatMap(([src, dst]) => listFiles(src).filter((f) => !/\.(txt|md)$/i.test(f)).map((f) => [path.join(ROOT, src, f), `${dst}/${f}`]));
-  const hash = crypto.createHash('sha1').update(json + css + js);
+  const hash = crypto.createHash('sha1').update(json + css + js + askJs);
   for (const [f] of mapFiles) hash.update(fs.readFileSync(f));
+  hash.update(homeJs);
   hash.update(read('app/sw.js') + read('app/index.html') + photoIds.join(',')); // a service worker or page change alone also bumps the cache version
   const version = 'hm-' + hash.digest('hex').slice(0, 10) + '-' + data.built;
   let html = read('app/index.html');
@@ -349,12 +354,15 @@ function build() {
   fs.writeFileSync(path.join(OUT, 'index.html'), html
     .replace('<!--CSS-->', '<link rel="stylesheet" href="style.css">')
     .replace('<!--DATA-->', '<script src="content.js"></script>')
-    .replace('<!--JS-->', '<script src="app.js"></script>')
+    .replace('<!--HOME-->', homeJs ? '<script src="home.js"></script>' : '')
+    .replace('<!--JS-->', (askJs ? '<script src="ask.js"></script>' : '') + '<script src="app.js"></script>')
     .replace('<!--SW-->', '<script>if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js");</script>'));
   fs.writeFileSync(path.join(OUT, 'style.css'), css);
   fs.writeFileSync(path.join(OUT, 'app.js'), js);
+  if (homeJs) fs.writeFileSync(path.join(OUT, 'home.js'), homeJs);
+  if (askJs) fs.writeFileSync(path.join(OUT, 'ask.js'), askJs);
   fs.writeFileSync(path.join(OUT, 'content.js'), `window.HM=${json};`);
-  fs.writeFileSync(path.join(OUT, 'sw.js'), read('app/sw.js').replace('__VERSION__', version).replace('__PHOTOS__', JSON.stringify(photoIds.map((id) => `photos/${id}.jpg`))).replace('__MAP__', JSON.stringify(mapFiles.map(([, rel]) => rel))));
+  fs.writeFileSync(path.join(OUT, 'sw.js'), read('app/sw.js').replace('__VERSION__', version).replace('__PHOTOS__', JSON.stringify(photoIds.map((id) => `photos/${id}.jpg`))).replace('__MAP__', JSON.stringify([...(askJs ? ['ask.js'] : []), ...mapFiles.map(([, rel]) => rel)])));
   fs.mkdirSync(path.join(OUT, 'photos'), { recursive: true });
   for (const id of photoIds) fs.copyFileSync(path.join(ROOT, 'photos', `${id}.jpg`), path.join(OUT, 'photos', `${id}.jpg`));
   fs.copyFileSync(path.join(ROOT, 'app/manifest.webmanifest'), path.join(OUT, 'manifest.webmanifest'));
@@ -367,7 +375,8 @@ function build() {
   fs.writeFileSync(path.join(OUT, 'hunt-mentor-offline.html'), html
     .replace('<!--CSS-->', `<style>${css}</style>`)
     .replace('<!--DATA-->', `<script>window.HM=${jsonSingle.replace(/<\//g, '<\\/')};</script>`)
-    .replace('<!--JS-->', `<script>${js.replace(/<\//g, '<\\/')}</script>`)
+    .replace('<!--JS-->', (askJs ? `<script>${askJs.replace(/<\//g, '<\\/')}</script>` : '') + `<script>${js.replace(/<\//g, '<\\/')}</script>`)
+    .replace('<!--HOME-->', homeJs ? `<script>${homeJs.replace(/<\//g, '<\\/')}</script>` : '')
     .replace('<!--SW-->', '')
     .replace(/<link rel="manifest"[^>]*>/, '')
     .replace(/<link rel="apple-touch-icon"[^>]*>/, ''));

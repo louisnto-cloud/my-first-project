@@ -110,6 +110,7 @@
       </div>
       ${misses ? `<a class="btn block" href="#/review">Review ${misses} missed quiz question${misses > 1 ? 's' : ''}</a>` : ''}
       <p class="muted">Regulation data last checked: ${esc(HM.regs.lastChecked)}. Content built ${esc(HM.built)}.</p>`;
+    if (window.HMHome) try { window.HMHome.render(view, { S, save, daysTo, sunEvent, hhmm, addMin, certBadge, mentorUrl: MENTOR_URL, hasSession: (id) => !!byId[id], refresh: home }); } catch (e) { console.warn("Home dashboard", e); }
   }
 
   function learn() {
@@ -288,6 +289,7 @@
         ${[['', 'Auto'], ['light', 'Light'], ['dark', 'Dark'], ['sun', 'Sunlight']].map(([v, l]) => `<button data-v="${v}" class="${th === v ? 'on' : ''}">${l}</button>`).join('')}</div></div>
       <div class="card"><h2>First hunt date</h2><input type="date" id="fh" value="${esc(firstHunt())}"></div>
       <div class="card list">
+        <a class="item" href="#/ask"><span class="grow">Ask the app (works with no signal)</span></a>
         <a class="item" href="#/cards"><span class="grow">Flashcards</span></a>
         <a class="item" href="#/glossary"><span class="grow">Glossary</span></a>
         <a class="item" href="#/journal"><span class="grow">Hunt journal</span></a>
@@ -339,7 +341,7 @@
 
   function search() {
     setTitle('Search'); tab('');
-    view.innerHTML = `<input type="search" id="q" placeholder="Search sessions, glossary, rules" autofocus><div id="res" style="margin-top:12px"></div>`;
+    view.innerHTML = `<input type="search" id="q" placeholder="Search sessions, glossary, rules" autofocus>${window.HMRoutes && window.HMRoutes.ask ? '<a class="btn block" id="ask-link" href="#/ask" style="margin-top:10px">Ask a question instead</a>' : ''}<div id="res" style="margin-top:12px"></div>`;
     const run = (q) => {
       q = q.trim().toLowerCase(); if (q.length < 2) { $('#res').innerHTML = ''; return; }
       const ses = sessions.filter((s) => s.text.includes(q) || s.title.toLowerCase().includes(q));
@@ -351,7 +353,7 @@
         ${rg.length ? `<div class="card"><h2>Rules data</h2>${rg.map((r) => `<p><strong>${esc(r.label)}</strong>: ${r.value ? esc(r.value) : 'VERIFY'} ${certBadge(r.certainty)}</p>`).join('')}</div>` : ''}
         ${!ses.length && !gl.length && !rg.length ? '<p>No results.</p>' : ''}`;
     };
-    $('#q').oninput = (e) => run(e.target.value);
+    $('#q').oninput = (e) => { run(e.target.value); const al = $('#ask-link'); if (al) al.href = '#/ask' + (e.target.value.trim() ? '/' + encodeURIComponent(e.target.value.trim()) : ''); };
   }
 
   function sources() {
@@ -548,6 +550,7 @@
     else if (a === 'print') printCards();
     else if (a === 'credits') credits();
     else if (a === 'journal') journal(b === 'new' ? -1 : b != null ? +b : undefined);
+    else if (window.HMRoutes && window.HMRoutes[a]) window.HMRoutes[a](h.slice(1)); // add on views (ask.js)
     else notFound();
   }
   window.addEventListener('hashchange', route);
