@@ -9,64 +9,131 @@ checked: 2026-10-01
 > [!why]
 > Phones die, fog comes in, every draw looks the same at dusk. A compass and one bearing get you back to the truck.
 
+```diagram hf-nav-layers
+```
+
+- Phone with offline maps, baseplate compass, paper map of the block (Tip).
+- Set the compass for local declination once a season.
+
+```more acronyms on this page
+- GPS (Global Positioning System), UTM (Universal Transverse Mercator), NTS (National Topographic System), [[MU]] (Management Unit), NRCan (Natural Resources Canada).
 - Carry three things: a phone with offline maps, a baseplate compass, and a paper map of the block (Tip).
 - Set the compass up once for local declination and it is done for the season.
-- Acronyms used here: GPS (Global Positioning System), UTM (Universal Transverse Mercator), NTS (National Topographic System), [[MU]] (Management Unit), NRCan (Natural Resources Canada).
+```
 
 ## Compass parts
 
 ```diagram compass
 ```
 
+- Red end of the needle points to magnetic north (95%).
+- Buy one with adjustable declination.
+
+```more each part, in words
 - **Baseplate:** the clear plate with a ruler and the direction of travel arrow (95%).
 - **Bezel:** the ring that turns, marked 0 to 360 degrees (95%).
 - **Orienting arrow:** the outline arrow inside the bezel. Hunters call it the shed (Tip).
 - **Needle:** the red end points to magnetic north (95%).
 - **Index line:** the mark at the top where you read the bearing (95%).
 - Buy one with adjustable declination. A sighting mirror helps. Prices: VERIFY at a local store.
+```
 
 ## Taking and following a bearing
 
+```steps Take a bearing and walk it
+hf-bearing-1 | Point the travel arrow at the target.
+hf-bearing-2 | Turn the ring: red in the shed.
+hf-bearing-3 | Read the number at the index line.
+hf-bearing-4 | Hold it flat, turn your body, walk.
+hf-bearing-5 | Pick a tree on the line, walk to it, repeat.
+hf-bearing-6 | Going home: add or take off 180.
+```
+
+```more the six steps in words
 1. Point the direction of travel arrow at the object: the saddle, the truck, the far knob.
 2. Turn the bezel until the orienting arrow boxes the red needle. Red in the shed.
 3. Read the number at the index line. That is your bearing (95%).
 4. To follow it: hold the compass flat, turn your body until red is in the shed, walk toward the direction of travel arrow.
 5. Pick a tree on that line, walk to it, repeat. Do not stare at the needle while walking (Tip).
 6. Back bearing to return: add 180, or subtract 180 if the bearing is over 180 (95%).
+```
+
+## Watch it: red in the shed
+
+```anim hf-red-shed Let the needle settle, then turn the ring.
+```
+
+- Red needle inside the outline arrow. Then read the number.
 
 ## Declination near Kamloops
 
+```diagram hf-declination
+```
+
+- Near Kamloops the needle points about 15 degrees east of true north (80%).
+- Map to compass: subtract 15. Compass to map: add 15 (90%).
+
+```more declination details and sources
 - True north is the pole. Magnetic north is where the needle points. The angle between them is declination (98%).
 - Heffley Creek, October 2026: about 15.1 degrees east, falling about 0.13 degrees a year (80%). Computed with the World Magnetic Model 2025. Mission: about 15.2 degrees east (80%).
 - East declination means the needle points to the right of true north (98%).
-- NRCan rhyme (98%): "declination west, magnetic best (add); declination east, magnetic least (subtract)."
+- NRCan (Natural Resources Canada) rhyme (98%): "declination west, magnetic best (add); declination east, magnetic least (subtract)."
 - So: map bearing to compass bearing, subtract 15. Compass bearing to map bearing, add 15 (90%). My reading of the rhyme for east declination.
 - Adjustable compass: set 15 degrees east once and read map bearings straight off the bezel (90%).
-- Printed NTS maps show grid declination for the year printed plus a yearly change. Old maps drift (98%).
+- Printed NTS (National Topographic System) maps show grid declination for the year printed plus a yearly change. Old maps drift (98%).
 - Phone apps correct declination for you (85%). Your compass does not.
+```
 
 ## UTM versus latitude and longitude
 
+```diagram hf-utm
+```
+
+- UTM (Universal Transverse Mercator): read right, then up (95%).
+- Kamloops is zone 10U. East of 120 degrees west is 11U (90%).
+
+```more UTM, latitude and longitude details
 - Latitude and longitude: degrees north and west. Three formats get mixed up: decimal degrees, degrees and minutes, degrees minutes seconds (90%). Pick decimal degrees and stick to it.
-- UTM: a metric grid. NTS maps are drawn on it (98%). Zone, easting (metres east), northing (metres north).
+- UTM (Universal Transverse Mercator): a metric grid. NTS (National Topographic System) maps are drawn on it (98%). Zone, easting (metres east), northing (metres north).
 - Kamloops and Heffley Creek are in zone 10U. East of the 120 degree west line, roughly Sun Peaks and the Shuswap, is zone 11U (90%). Zones are 6 degrees wide. A wrong zone puts you hundreds of kilometres out.
 - Read right, then up: easting first, northing second (95%).
 - The blue grid on a 1:50,000 sheet is 1 km squares, 2 cm on the paper (85%).
 - Datum: Canadian maps use NAD83 and phones use WGS84. For hunting they agree within a couple of metres (75%).
 - Search and rescue wants one line: zone, easting, northing, or decimal degrees. Write both formats on your [[Trip plan]] (Tip).
+```
 
 ## GPS basics
 
+```diagram hf-gps
+```
+
+- GPS (Global Positioning System) needs no cell signal (95%).
+- Map tiles do. Download them at home.
+
+```more GPS details
 - GPS works with no cell signal. The satellites are free (95%). The map tiles are not: download them at home.
 - Accuracy is a few metres in the open, worse under thick timber and in narrow canyons (80%).
 - Airplane mode on: GPS still works and the battery lasts longer (85%).
 - Cold kills batteries. Phone in an inside pocket, power bank in the pack (Tip).
 - Mark the truck as a waypoint before you walk. Mark the deer before you start cutting (Tip).
 - Paper map and compass go anyway. Every time (Tip).
+```
 
 ## Phone apps compared
 
-| App | Price checked 2026-10-01 | Offline maps | BC MU and land layers |
+| App | Per year (CAD) | BC hunting layers |
+|---|---|---|
+| iHunter BC Pro | $14.99 (95%) | Management Units, seasons, land (95%) |
+| Avenza Plus | $49.99 (95%) | Opens BC closure maps (95%) |
+| BRMB PRO | $59.99 (95%) | Hunt areas, Crown land (95%) |
+| Gaia Premium | $74.90 (95%) | None found: VERIFY |
+| onX Elite | $99.99, currency VERIFY (80%) | Management Unit layer: VERIFY |
+
+> [!lean]
+> iHunter BC Pro plus Avenza Plus with the Region 3 closure maps. About $65 a year.
+
+```more full app table, prices and notes
+| App | Price checked 2026-10-01 | Offline maps | BC MU (Management Unit) and land layers |
 |---|---|---|---|
 | onX Hunt | Elite, all states plus Canada: $99.99 a year or $14.99 a month (80%). Shown in dollars, currency not confirmed | Yes (95%) | Canada coverage and land ownership claimed (85%). BC MU layer: VERIFY |
 | Gaia GPS | Premium $74.90 a year CAD (95%). With Outside+ $115.99 (95%) | Yes with Premium (90%) | Strong topo and satellite. No BC hunting layers found: VERIFY |
@@ -77,27 +144,45 @@ checked: 2026-10-01
 - Prices come from the Canadian App Store page or the maker's site, read 2026-10-01. They change.
 - BC publishes its closure maps as georeferenced PDFs "that can be used in mobile applications" (98%). Avenza is built for exactly that.
 - Avenza's free tier no longer imports your own maps, so the BC closure files need Plus (70%). Search preview.
-
-> [!lean]
-> iHunter BC Pro for the MU and land layers, plus Avenza Plus with the Region 3 closure maps loaded. About $65 a year. Add BRMB if you want FSRs and Crown land across BC in one app.
+- My lean in full: iHunter BC Pro for the MU and land layers, plus Avenza Plus with the Region 3 closure maps loaded. About $65 a year. Add BRMB if you want FSRs and Crown land across BC in one app.
+```
 
 ## Battery and backup
 
-- Day kit: phone at 100 percent, power bank of 10,000 mAh or more, cable, compass, paper map, headlamp (Tip).
+```diagram hf-nav-kit
+```
+
+- Brightness down, airplane mode on (Tip).
+- Share your route and return time before you lose signal (Tip).
+
+```more battery and backup details
+- Day kit: phone at 100 percent, power bank of 10,000 mAh (milliamp hours) or more, cable, compass, paper map, headlamp (Tip).
 - Screen brightness down, airplane mode on, tracking off while you sit (Tip).
 - Share your route and return time before you lose signal (Tip). See Bush safety.
 - A [[Satellite messenger]] or a satellite capable iPhone covers the no signal gap (80%). See Bush safety.
+```
+
+## Grandpa's rule and mistakes
+
+```diagram hf-decl-wrong
+```
 
 > [!rule]
 > Grandpa's rule (wisdom): Take a bearing to the truck before you leave the truck. Last light is not the time to learn your compass.
 
 > [!mistake]
-> - Setting the compass to 15 degrees west instead of east. Walk 30 degrees wrong for an hour and you are in the next drainage.
-> - Reading a UTM coordinate as zone 10 when the map says 11.
-> - One phone, no backup, and the hunt ends at 40 percent battery in the cold.
+> - Compass set to 15 west, not east: 30 degrees wrong.
+> - Reading a UTM (Universal Transverse Mercator) zone as 10 when the map says 11.
+> - One phone, no backup, dead at 40 percent in the cold.
+
+```more the mistakes in full
+- Setting the compass to 15 degrees west instead of east. Walk 30 degrees wrong for an hour and you are in the next drainage.
+- Reading a UTM coordinate as zone 10 when the map says 11.
+- One phone, no backup, and the hunt ends at 40 percent battery in the cold.
+```
 
 > [!field]
-> From a known point, take a bearing to a landmark 1 km away. Walk it. Check the phone when you arrive. Then walk the back bearing home.
+> Take a bearing to a landmark 1 km away. Walk it. Check the phone. Walk the back bearing home.
 
 ## Sources
 

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 4: set eye relief. Rifle at your shoulder, scope on highest power. A black ring around the view means move the scope. Slide it until you see the full picture, then 1 centimetre more forward.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Set eye relief</text>
+  <circle cx="100" cy="130" r="66" fill="#2f3a2b"/><circle cx="100" cy="130" r="34" fill="#dfe6d3"/>
+  <circle cx="300" cy="130" r="66" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="6"/>
+  <g stroke="#2f3a2b" stroke-width="1.5"><line x1="66" y1="130" x2="134" y2="130"/><line x1="100" y1="96" x2="100" y2="164"/><line x1="234" y1="130" x2="366" y2="130"/><line x1="300" y1="64" x2="300" y2="196"/></g>
+  <g font-size="15" font-weight="bold" text-anchor="middle"><text x="100" y="222" fill="#c0392b">Black ring ✗</text><text x="300" y="222" fill="#2f6b3a">Full picture ✓</text></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="100" y="242">slide the scope</text><text x="300" y="242">then 1 cm forward</text></g>
+  <text x="200" y="280" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Highest power, rifle at your shoulder</text>
+</svg>

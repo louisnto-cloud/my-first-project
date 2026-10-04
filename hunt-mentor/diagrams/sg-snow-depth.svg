@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Snow depth chart. Deer have trouble past about 30 cm of snow and leave a slope past about 50 cm. Moose move freely to about 40 cm and are slowed by 40 to 70 cm. Elk sit between deer and moose.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How much snow is too much?</text>
+  <g stroke="#dfe6d3" stroke-width="2"><path d="M110 45 V230 M170 45 V230 M230 45 V230 M290 45 V230 M350 45 V230"/></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="110" y="250">0</text><text x="170" y="250">20</text><text x="230" y="250">40</text><text x="290" y="250">60</text><text x="350" y="250">80 cm</text></g>
+  <g font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end"><text x="100" y="85">Deer</text><text x="100" y="145">Elk</text><text x="100" y="205">Moose</text></g>
+  <rect x="110" y="64" width="90" height="30" fill="#8a9a6b"/><rect x="200" y="64" width="60" height="30" fill="#f2a56b"/><rect x="260" y="64" width="90" height="30" fill="#e8590c"/>
+  <rect x="110" y="124" width="240" height="30" fill="#dfe6d3"/>
+  <text x="230" y="145" font-size="14" fill="#2f3a2b" text-anchor="middle">between deer and moose</text>
+  <rect x="110" y="184" width="120" height="30" fill="#8a9a6b"/><rect x="230" y="184" width="90" height="30" fill="#f2a56b"/>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="200" y="110">30: trouble</text><text x="260" y="58">50: leaves</text><text x="230" y="230">40</text><text x="320" y="230">70</text></g>
+  <g font-size="14" fill="#2f3a2b"><rect x="20" y="262" width="14" height="14" fill="#8a9a6b"/><text x="40" y="274">easy</text><rect x="100" y="262" width="14" height="14" fill="#f2a56b"/><text x="120" y="274">slowed</text><rect x="190" y="262" width="14" height="14" fill="#e8590c"/><text x="210" y="274">moves away</text></g>
+</svg>

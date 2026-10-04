@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Mistake: declination set to 15 west instead of 15 east puts you 30 degrees off. The planned line goes up to the saddle. The wrong line drifts 30 degrees to the side and, after an hour of walking, ends in the next drainage.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect y="0" width="400" height="300" fill="#dfe6d3" opacity=".5"/>
+  <path d="M250 0 C 240 90, 260 180, 250 300" fill="none" stroke="#4a7fb0" stroke-width="4"/>
+  <text x="262" y="40" font-size="14" fill="#4a7fb0">next drainage</text>
+  <polygon points="80,70 110,30 140,70" fill="#8a9a6b"/><text x="110" y="88" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Saddle</text>
+  <circle cx="110" cy="270" r="9" fill="#e8590c"/><text x="124" y="290" font-size="14" fill="#2f3a2b">Start</text>
+  <path d="M110 260 L110 98" stroke="#2f6e3b" stroke-width="4"/><polygon points="102,104 118,104 110,90" fill="#2f6e3b"/>
+  <path d="M114 260 L232 64" stroke="#c0392b" stroke-width="4" stroke-dasharray="9 6"/><polygon points="226,62 240,70 238,52" fill="#c0392b"/>
+  <path d="M110 200 A 60 60 0 0 1 140 208" fill="none" stroke="#e8590c" stroke-width="3"/>
+  <text x="146" y="214" font-size="18" font-weight="bold" fill="#e8590c">30 off</text>
+  <rect x="270" y="150" width="122" height="96" rx="8" fill="#2f3a2b"/>
+  <text x="331" y="174" font-size="14" fill="#fff" text-anchor="middle">Set 15 WEST</text>
+  <text x="331" y="194" font-size="14" fill="#fff" text-anchor="middle">by mistake</text>
+  <text x="331" y="220" font-size="14" font-weight="bold" fill="#ffd34d" text-anchor="middle">1 hour later:</text>
+  <text x="331" y="238" font-size="14" font-weight="bold" fill="#ffd34d" text-anchor="middle">wrong valley</text>
+</svg>

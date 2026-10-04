@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" font-family="sans-serif" role="img" aria-label="How a deer sees colour, a rough picture. Deer have two colour cones, blue near 455 nanometres and green near 537, and no red cone. Blaze orange looks dull, close to grey or brown. Blue stands out. Some detergent brighteners may glow in ultraviolet. Motion and outline give you away, not colour.">
+  <rect width="400" height="320" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You see / a deer sees</text>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b"><text x="14" y="82">You</text><text x="14" y="162">Deer</text></g>
+  <rect x="80" y="55" width="70" height="44" rx="6" fill="#ff6a00"/><rect x="160" y="55" width="70" height="44" rx="6" fill="#4f7f3a"/><rect x="240" y="55" width="70" height="44" rx="6" fill="#2f63c9"/><rect x="320" y="55" width="66" height="44" rx="6" fill="#f2f2f2" stroke="#2f3a2b"/>
+  <rect x="80" y="135" width="70" height="44" rx="6" fill="#9c9478"/><rect x="160" y="135" width="70" height="44" rx="6" fill="#7f8a6a"/><rect x="240" y="135" width="70" height="44" rx="6" fill="#2f63e0"/><rect x="320" y="135" width="66" height="44" rx="6" fill="#d8e6ff" stroke="#4a7fb0" stroke-width="3"/>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="115" y="120">orange</text><text x="195" y="120">green</text><text x="275" y="120">blue</text><text x="353" y="120">bright wash</text></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="115" y="200">dull</text><text x="195" y="200">greyer</text><text x="275" y="200">stands out</text><text x="353" y="200">UV glow?</text></g>
+  <rect x="14" y="222" width="372" height="86" rx="10" fill="#2f3a2b"/>
+  <text x="200" y="250" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Colour is not the problem.</text>
+  <text x="200" y="274" font-size="16" font-weight="bold" fill="#f3d36b" text-anchor="middle">Motion and outline are.</text>
+  <text x="200" y="298" font-size="14" fill="#fff" text-anchor="middle">Rough picture, not exact colours (Tip)</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 6, the back bearing. Walking out on a bearing of 40, the way home is the opposite direction, 220. Under 180 add 180. Over 180 subtract 180.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="12" y="28" font-size="16" font-weight="bold" fill="#e8590c">Step 6: back bearing home</text>
+  <rect x="40" y="226" width="44" height="24" rx="4" fill="#2f3a2b"/><circle cx="50" cy="252" r="5" fill="#2f3a2b"/><circle cx="76" cy="252" r="5" fill="#2f3a2b"/>
+  <text x="62" y="278" font-size="14" fill="#2f3a2b" text-anchor="middle">Truck</text>
+  <polygon points="250,90 280,50 310,90" fill="#8a9a6b"/><text x="280" y="108" font-size="14" fill="#2f3a2b" text-anchor="middle">Saddle</text>
+  <path d="M90 220 L240 96" stroke="#e8590c" stroke-width="4"/><polygon points="244,92 228,96 238,108" fill="#e8590c"/>
+  <path d="M232 128 L112 228" stroke="#4a7fb0" stroke-width="4" stroke-dasharray="9 6"/><polygon points="106,232 122,228 112,216" fill="#4a7fb0"/>
+  <text x="110" y="150" font-size="18" font-weight="bold" fill="#e8590c">Out: 40</text>
+  <text x="200" y="200" font-size="18" font-weight="bold" fill="#4a7fb0">Home: 220</text>
+  <rect x="210" y="226" width="182" height="62" rx="8" fill="#2f3a2b"/>
+  <text x="301" y="252" font-size="14" fill="#fff" text-anchor="middle">Under 180: add 180</text>
+  <text x="301" y="274" font-size="14" fill="#fff" text-anchor="middle">Over 180: take off 180</text>
+</svg>

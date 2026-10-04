@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Tourniquet on an arm. Use it for life threatening bleeding from a limb when firm pressure fails. Put it a few centimetres above the wound, between the wound and the heart, never on a joint. Tighten until the bleeding stops and write down the time.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tourniquet: where it goes</text>
+  <!-- arm -->
+  <path d="M20 120 L180 110 Q 200 108 210 120 L380 126 L380 176 L210 170 Q 200 182 180 180 L20 180 Z" fill="#d9b48f" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="30" y="104" font-size="14" font-weight="bold" fill="#2f3a2b">Heart side</text>
+  <!-- elbow -->
+  <circle cx="200" cy="146" r="20" fill="none" stroke="#c0392b" stroke-width="3" stroke-dasharray="5 4"/>
+  <text x="200" y="208" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Not on a joint</text>
+  <!-- wound -->
+  <ellipse cx="320" cy="150" rx="14" ry="8" fill="#c0392b"/>
+  <text x="340" y="208" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Wound</text>
+  <!-- tourniquet -->
+  <rect x="262" y="120" width="18" height="60" rx="3" fill="#2f3a2b"/><rect x="250" y="104" width="42" height="10" rx="3" fill="#e8590c"/>
+  <line x1="271" y1="114" x2="271" y2="122" stroke="#2f3a2b" stroke-width="3"/>
+  <text x="271" y="96" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Above the wound</text>
+  <path d="M282 196 L308 196" stroke="#e8590c" stroke-width="3"/><path d="M286 190 l-6 6 l6 6 M304 190 l6 6 l-6 6" stroke="#e8590c" stroke-width="3" fill="none"/>
+  <!-- clock -->
+  <circle cx="70" cy="248" r="24" fill="#fff" stroke="#2f3a2b" stroke-width="3"/><path d="M70 248 V232 M70 248 h12" stroke="#2f3a2b" stroke-width="3"/>
+  <text x="104" y="244" font-size="15" font-weight="bold" fill="#2f3a2b">Tighten until bleeding stops.</text>
+  <text x="104" y="264" font-size="15" font-weight="bold" fill="#e8590c">Write the time.</text>
+  <text x="104" y="286" font-size="14" fill="#2f3a2b">Firm pressure first</text>
+</svg>

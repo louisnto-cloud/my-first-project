@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Which gun and load for which hunt. Tikka .308: deer, 150 to 165 grain hunting bullet. 12 gauge: ducks and geese, steel number 2 or 3, non toxic only. 12 gauge: grouse and quail, number 6 to 7.5 shot. CZ 457 .22: grouse only, head shots.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Your guns, your loads</text>
+  <g font-size="14" font-weight="bold" fill="#fff">
+    <rect x="10" y="38" width="120" height="26" fill="#2f3a2b"/><text x="20" y="56">Gun</text>
+    <rect x="132" y="38" width="110" height="26" fill="#2f3a2b"/><text x="142" y="56">Hunt</text>
+    <rect x="244" y="38" width="146" height="26" fill="#2f3a2b"/><text x="254" y="56">Load</text>
+  </g>
+  <g font-size="15" fill="#2f3a2b">
+    <rect x="10" y="68" width="380" height="54" fill="#dfe6d3"/>
+    <text x="20" y="92" font-weight="bold">Tikka .308</text><text x="142" y="92">Deer</text><text x="254" y="92" font-weight="bold" fill="#e8590c">150 to 165 gr</text><text x="254" y="112" font-size="14">one load, zeroed</text>
+    <rect x="10" y="126" width="380" height="54" fill="#4a7fb0" fill-opacity=".18"/>
+    <text x="20" y="150" font-weight="bold">12 gauge</text><text x="142" y="150">Ducks, geese</text><text x="254" y="150" font-weight="bold" fill="#e8590c">Steel #2 or #3</text><text x="254" y="170" font-size="14">non toxic only</text>
+    <rect x="10" y="184" width="380" height="54" fill="#dfe6d3"/>
+    <text x="20" y="208" font-weight="bold">12 gauge</text><text x="142" y="208">Grouse, quail</text><text x="254" y="208" font-weight="bold" fill="#e8590c">#6 to #7.5</text><text x="254" y="228" font-size="14">1 to 1 1/8 oz</text>
+    <rect x="10" y="242" width="380" height="54" fill="#8b5a2b" fill-opacity=".15"/>
+    <text x="20" y="266" font-weight="bold">CZ 457 .22</text><text x="142" y="266">Grouse only</text><text x="254" y="266" font-weight="bold" fill="#e8590c">.22 LR</text><text x="254" y="286" font-size="14">head shots (Tip)</text>
+  </g>
+</svg>

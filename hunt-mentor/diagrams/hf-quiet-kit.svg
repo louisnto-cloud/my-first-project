@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Four ways to quiet your kit in a 2 by 2 grid: wear wool or brushed fleece, not hard nylon. Tape metal parts that clink, like sling swivels and buckles. Swap Velcro for buttons or magnets. Jump up and down at the truck and fix anything that rattles.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <g fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.5"><rect x="8" y="8" width="188" height="138" rx="10"/><rect x="204" y="8" width="188" height="138" rx="10"/><rect x="8" y="154" width="188" height="138" rx="10"/><rect x="204" y="154" width="188" height="138" rx="10"/></g>
+  <path d="M60 40 L140 40 L150 110 L50 110 Z" fill="#8b5a2b"/><g stroke="#6b4f35" stroke-width="2"><line x1="70" y1="55" x2="130" y2="55"/><line x1="66" y1="75" x2="134" y2="75"/><line x1="62" y1="95" x2="138" y2="95"/></g>
+  <text x="102" y="134" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Wool, not nylon</text>
+  <circle cx="270" cy="70" r="20" fill="none" stroke="#2f3a2b" stroke-width="6"/><rect x="286" y="60" width="50" height="20" rx="4" fill="#e8590c"/>
+  <text x="298" y="134" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tape metal parts</text>
+  <rect x="50" y="176" width="44" height="60" rx="4" fill="#4a7fb0"/><path d="M60 196 l24 24 M84 196 l-24 24" stroke="#c0392b" stroke-width="5"/>
+  <rect x="110" y="176" width="44" height="60" rx="4" fill="#4a7fb0"/><circle cx="132" cy="206" r="8" fill="#fffaf0"/>
+  <text x="102" y="278" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Velcro to buttons</text>
+  <circle cx="298" cy="182" r="10" fill="#2f3a2b"/><rect x="288" y="194" width="20" height="36" rx="5" fill="#2f3a2b"/>
+  <path d="M260 236 L336 236" stroke="#2f3a2b" stroke-width="3"/><path d="M298 170 L298 160 M284 172 L278 164 M312 172 L318 164" stroke="#e8590c" stroke-width="3"/>
+  <text x="298" y="278" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Jump test at truck</text>
+</svg>

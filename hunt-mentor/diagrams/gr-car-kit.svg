@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Car kit grid: winter tires for the route, spare tire and jack, shovel, tow strap, booster cables or jump pack, full fuel tank, spare dry clothes and boots, coolers with block ice, firearm case and lock.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="22" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Car kit</text>
+  <g fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.5">
+    <rect x="6" y="32" width="126" height="84" rx="8"/><rect x="137" y="32" width="126" height="84" rx="8"/><rect x="268" y="32" width="126" height="84" rx="8"/>
+    <rect x="6" y="122" width="126" height="84" rx="8"/><rect x="137" y="122" width="126" height="84" rx="8"/><rect x="268" y="122" width="126" height="84" rx="8"/>
+    <rect x="6" y="212" width="126" height="84" rx="8"/><rect x="137" y="212" width="126" height="84" rx="8"/><rect x="268" y="212" width="126" height="84" rx="8"/>
+  </g>
+  <!-- icons -->
+  <circle cx="69" cy="62" r="20" fill="#2f3a2b"/><circle cx="69" cy="62" r="9" fill="#8a8f88"/><g stroke="#fff" stroke-width="2"><path d="M53 50 l6 4 M49 62 h7 M53 74 l6 -4"/></g>
+  <circle cx="186" cy="62" r="20" fill="#2f3a2b"/><circle cx="186" cy="62" r="8" fill="#8a8f88"/><path d="M214 80 l20 -30 l8 4 l-20 30 Z" fill="#c0392b"/>
+  <path d="M330 44 v30" stroke="#8b5a2b" stroke-width="4"/><path d="M318 74 h24 l-4 16 h-16 Z" fill="#8a8f88" stroke="#2f3a2b"/>
+  <path d="M40 152 q30 -16 60 0 q-30 16 -60 0" fill="none" stroke="#e8590c" stroke-width="5"/><rect x="92" y="146" width="14" height="12" fill="#2f3a2b"/>
+  <path d="M170 140 q20 40 40 0" fill="none" stroke="#c0392b" stroke-width="4"/><path d="M180 140 q20 40 40 0" fill="none" stroke="#2f3a2b" stroke-width="4"/>
+  <rect x="314" y="134" width="32" height="40" rx="4" fill="#c0392b"/><rect x="322" y="128" width="16" height="8" fill="#2f3a2b"/><text x="330" y="160" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">F</text>
+  <path d="M46 236 l12 -8 h22 l12 8 l6 16 l-8 4 v12 h-40 v-12 l-8 -4 Z" fill="#6b6f48"/>
+  <rect x="166" y="230" width="68" height="40" rx="6" fill="#4a7fb0"/><rect x="166" y="230" width="68" height="10" rx="4" fill="#2f3a2b"/><rect x="180" y="246" width="16" height="16" fill="#fff"/><rect x="200" y="246" width="16" height="16" fill="#fff"/>
+  <rect x="290" y="236" width="82" height="22" rx="6" fill="#2f3a2b"/><rect x="322" y="228" width="18" height="12" rx="4" fill="none" stroke="#e8590c" stroke-width="3"/><rect x="324" y="238" width="14" height="10" fill="#e8590c"/>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">
+    <text x="69" y="106">Winter tires</text><text x="200" y="106">Spare, jack</text><text x="331" y="106">Shovel</text>
+    <text x="69" y="196">Tow strap</text><text x="200" y="196">Boosters</text><text x="331" y="196">Full fuel</text>
+    <text x="69" y="286">Dry clothes</text><text x="200" y="286">Coolers, ice</text><text x="331" y="286">Gun case, lock</text>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A 3 inch chamber fires 2 and three quarter inch and 3 inch shells. A 3 and a half inch shell does not fit and adds kick for little gain. Barrel: 28 inch is a good one gun choice, 26 inch swings faster in thick timber.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">12 gauge, 3 inch chamber</text>
+  <rect x="96" y="40" width="114" height="140" fill="#4a7fb0" opacity=".12" stroke="#4a7fb0" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="153" y="58" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="middle">3 in chamber</text>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b">
+    <rect x="96" y="70" width="14" height="24" fill="#c9a227"/><rect x="110" y="72" width="88" height="20" rx="2" fill="#e8590c"/><text x="20" y="88">2 3/4 in</text><text x="220" y="88" fill="#2f6b3a">✓ fits</text>
+    <rect x="96" y="104" width="14" height="24" fill="#c9a227"/><rect x="110" y="106" width="100" height="20" rx="2" fill="#e8590c"/><text x="20" y="122">3 in</text><text x="220" y="122" fill="#2f6b3a">✓ fits</text>
+    <rect x="96" y="138" width="14" height="24" fill="#c9a227"/><rect x="110" y="140" width="120" height="20" rx="2" fill="#e8590c" opacity=".5"/><text x="20" y="156">3 1/2 in</text><text x="240" y="156" fill="#c0392b">✗ too long</text>
+  </g>
+  <text x="20" y="204" font-size="15" font-weight="bold" fill="#2f3a2b">Barrel length</text>
+  <g font-size="14" fill="#2f3a2b">
+    <rect x="20" y="216" width="260" height="10" fill="#6b6f68"/><text x="290" y="226" font-weight="bold">28 in: one gun</text>
+    <rect x="20" y="250" width="242" height="10" fill="#6b6f68"/><text x="272" y="260" font-weight="bold">26 in: timber</text>
+  </g>
+  <text x="20" y="290" font-size="14" fill="#2f3a2b">Synthetic stock, coated finish for rain (Tip)</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation: a deer trots left to right. Prints appear farther apart and almost in one straight narrow line. Final label: trot, moving with purpose, not panicked.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="28" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Trot</text>
+<rect x="0" y="110" width="400" height="110" fill="#dfe6d3"/>
+<path id="sg-gait-trot-path" d="M0 80 L350 80" fill="none" stroke="none"/>
+<g transform="translate(30 175) rotate(90) scale(.7)" fill="#6b4f35" opacity="0"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/><animate attributeName="opacity" from="0" to="1" begin="0.30s" dur=".2s" fill="freeze"/></g>
+<g transform="translate(100 160) rotate(90) scale(.7)" fill="#6b4f35" opacity="0"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/><animate attributeName="opacity" from="0" to="1" begin="0.75s" dur=".2s" fill="freeze"/></g>
+<g transform="translate(170 175) rotate(90) scale(.7)" fill="#6b4f35" opacity="0"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/><animate attributeName="opacity" from="0" to="1" begin="1.20s" dur=".2s" fill="freeze"/></g>
+<g transform="translate(240 160) rotate(90) scale(.7)" fill="#6b4f35" opacity="0"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/><animate attributeName="opacity" from="0" to="1" begin="1.65s" dur=".2s" fill="freeze"/></g>
+<g transform="translate(310 175) rotate(90) scale(.7)" fill="#6b4f35" opacity="0"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/><animate attributeName="opacity" from="0" to="1" begin="2.10s" dur=".2s" fill="freeze"/></g>
+<g transform="translate(380 160) rotate(90) scale(.7)" fill="#6b4f35" opacity="0"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/><animate attributeName="opacity" from="0" to="1" begin="2.55s" dur=".2s" fill="freeze"/></g>
+<g><ellipse rx="20" ry="9" fill="#8b5a2b"/><path d="M14 -6 L24 -20 L30 -18 L22 -2 Z" fill="#8b5a2b"/><path d="M-12 6 v14 M-6 6 v14 M10 6 v14 M15 6 v14" stroke="#8b5a2b" stroke-width="3"/><animateMotion dur="3.2s" fill="freeze"><mpath href="#sg-gait-trot-path"/></animateMotion></g>
+
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="3.2s" dur=".5s" fill="freeze"/><rect x="40" y="232" width="320" height="58" rx="8" fill="#2f3a2b"/><text x="200" y="256" font-size="17" font-weight="bold" fill="#fff" text-anchor="middle">Trot: longer stride, narrow line</text><text x="200" y="280" font-size="15" fill="#fff" text-anchor="middle">Moving with purpose, not panicked</text></g>
+</svg>

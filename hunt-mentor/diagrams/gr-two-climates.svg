@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Two climates, two kits. Kamloops in the Interior: cold and possible snow, so merino base, fleece, puffy, quiet soft shell, toque and insulated boots. Mission in the Fraser Valley: rain, so synthetic base, fleece, fully waterproof jacket and pants, waders or rubber boots.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="0" width="198" height="300" fill="#dfe6d3" opacity=".5"/>
+  <rect x="202" y="0" width="198" height="300" fill="#4a7fb0" opacity=".12"/>
+  <g font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="99" y="26">Kamloops: cold</text><text x="301" y="26">Mission: wet</text></g>
+  <g fill="#fff" stroke="#8a9a6b" stroke-width="1"><circle cx="30" cy="50" r="4"/><circle cx="170" cy="60" r="4"/><circle cx="60" cy="90" r="3"/><circle cx="150" cy="100" r="3"/></g>
+  <g stroke="#4a7fb0" stroke-width="2"><line x1="230" y1="44" x2="226" y2="56"/><line x1="370" y1="50" x2="366" y2="62"/><line x1="250" y1="90" x2="246" y2="102"/><line x1="356" y1="96" x2="352" y2="108"/></g>
+  <!-- cold figure -->
+  <path d="M86 52 Q 99 40 112 52 Z" fill="#e8590c"/><circle cx="99" cy="62" r="11" fill="#d9b48f"/>
+  <rect x="78" y="74" width="42" height="60" rx="10" fill="#6b6f48"/>
+  <rect x="80" y="134" width="38" height="50" fill="#5c5a4a"/><rect x="76" y="184" width="22" height="16" rx="3" fill="#6b4f35"/><rect x="100" y="184" width="22" height="16" rx="3" fill="#6b4f35"/>
+  <!-- wet figure -->
+  <path d="M286 64 Q 301 40 316 64 Z" fill="#2f6b3a"/><circle cx="301" cy="64" r="10" fill="#d9b48f"/>
+  <rect x="280" y="74" width="42" height="60" rx="10" fill="#2f6b3a"/>
+  <rect x="282" y="120" width="38" height="70" fill="#4a5a3a"/><rect x="278" y="184" width="46" height="16" rx="3" fill="#2f3a2b"/>
+  <g font-size="14" fill="#2f3a2b">
+    <text x="12" y="224">Merino base</text><text x="12" y="242">Fleece, puffy</text><text x="12" y="260">Quiet soft shell</text><text x="12" y="278">Insulated boots</text>
+    <text x="214" y="224">Synthetic base</text><text x="214" y="242">Fleece mid</text><text x="214" y="260" font-weight="bold">Waterproof shell</text><text x="214" y="278">Waders, rubber boots</text>
+  </g>
+</svg>

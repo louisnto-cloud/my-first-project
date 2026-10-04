@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Capsize step 4: if you cannot get out, use the HELP, Heat Escape Lessening Posture: arms crossed on your chest, knees up, ankles crossed.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4. Stuck in? HELP</text>
+  <rect x="0" y="150" width="400" height="150" fill="#4a7fb0" opacity=".35"/>
+  <path d="M0 150 q 25 -8 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0" fill="none" stroke="#4a7fb0" stroke-width="3"/>
+  <circle cx="200" cy="110" r="12" fill="#d9b48f"/><rect x="180.0" y="124" width="40" height="40" rx="7" fill="#e8590c"/><path d="M184 140 L216 150 M216 140 L184 150" stroke="#d9b48f" stroke-width="6" stroke-linecap="round"/><path d="M190 164 L176 190 L196 210 M210 164 L226 190 L206 210" stroke="#5c5a4a" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <text x="200" y="290" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">HELP: knees up, arms crossed</text>
+</svg>

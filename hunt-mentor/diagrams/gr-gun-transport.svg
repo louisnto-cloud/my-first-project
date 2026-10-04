@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Firearm in a vehicle. Unloaded means no cartridge in the chamber and none in an attached or inserted magazine. Magazine out, chamber empty, before it goes in the car or on the ATV. Vehicle left alone: firearm locked in the trunk, or out of sight with the vehicle locked.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Guns in the car: unloaded</text>
+  <!-- rifle -->
+  <path d="M20 80 L110 74 L118 74 L126 96 L200 94 L200 102 L120 106 L104 114 L92 108 L20 122 Z" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="110" y="66" width="70" height="16" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/><rect x="180" y="70" width="190" height="7" fill="#6b6f68"/>
+  <rect x="126" y="68" width="30" height="8" fill="#fffaf0" stroke="#2f3a2b"/>
+  <rect x="140" y="128" width="26" height="30" rx="3" fill="#2f3a2b"/>
+  <path d="M152 112 v12" stroke="#e8590c" stroke-width="3"/><path d="M146 118 l6 8 l6 -8" stroke="#e8590c" stroke-width="3" fill="none"/>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b"><text x="176" y="140">Magazine out</text><text x="176" y="160">Chamber empty</text></g>
+  <text x="140" y="56" font-size="14" fill="#2f3a2b" text-anchor="middle">Look: empty</text>
+  <!-- car -->
+  <path d="M20 250 L20 220 L60 216 L90 190 L190 190 L220 216 L290 220 L300 250 Z" fill="#4a7fb0" stroke="#2f3a2b" stroke-width="2"/>
+  <circle cx="70" cy="252" r="16" fill="#2f3a2b"/><circle cx="240" cy="252" r="16" fill="#2f3a2b"/>
+  <rect x="226" y="222" width="62" height="20" rx="3" fill="#2f3a2b"/><rect x="232" y="226" width="50" height="12" rx="2" fill="#6b4f35"/>
+  <rect x="270" y="196" width="16" height="12" rx="3" fill="none" stroke="#e8590c" stroke-width="3"/><rect x="266" y="206" width="24" height="16" fill="#e8590c"/>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b"><text x="310" y="214">Left alone?</text></g>
+  <g font-size="14" fill="#2f3a2b"><text x="310" y="234">Locked trunk</text><text x="310" y="252">No trunk:</text><text x="310" y="270">hidden, locked</text></g>
+  <text x="20" y="292" font-size="14" font-weight="bold" fill="#e8590c">An ATV counts as a vehicle too</text>
+</svg>

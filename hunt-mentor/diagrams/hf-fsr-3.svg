@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Forest Service Road habit 3. A car parked on a blind corner is crossed out. A car parked in a wide straight pullout with clear sight lines is ticked.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <path d="M0 230 C 120 230, 160 200, 180 120 C 196 60, 260 40, 400 40 L400 100 C 280 100, 250 110, 238 150 C 214 240, 160 290, 0 290 Z" fill="#c9b79c"/>
+  <rect x="190" y="110" width="30" height="50" rx="5" fill="#4a7fb0" transform="rotate(20 205 135)"/>
+  <path d="M180 100 L235 170 M235 100 L180 170" stroke="#c0392b" stroke-width="6"/>
+  <text x="150" y="200" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="end">Corner: never</text>
+  <rect x="320" y="104" width="60" height="30" fill="#c9b79c"/>
+  <rect x="330" y="108" width="44" height="24" rx="5" fill="#4a7fb0"/>
+  <path d="M330 170 l12 12 l26 -30" fill="none" stroke="#2f6e3b" stroke-width="6"/>
+  <text x="352" y="210" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Straight</text>
+  <text x="352" y="228" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">pullout</text>
+  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Park where trucks can see you</text>
+</svg>

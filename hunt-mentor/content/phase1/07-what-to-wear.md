@@ -7,10 +7,17 @@ minutes: 15
 checked: 2026-10-01
 ---
 > [!why]
-> Cold and wet end hunts early. Dress in layers you can add and remove, and you stay out, quiet and safe.
+> Cold and wet end hunts early. Dress in layers you add and remove: you stay out, quiet and safe.
 
 ## Key points
 
+```diagram gr-wear-kit
+```
+
+- Four layers: **base, mid, insulation, shell** (70%). No cotton next to skin (Tip).
+- Boots and socks matter more than any jacket (Tip).
+
+```more the full key points
 - Four layers: **base, mid, insulation, shell** (70%).
 - No cotton next to skin. It holds water and chills you (Tip).
 - Kamloops in late October: cold mornings, possible snow. Assumption: below freezing at dawn. VERIFY the forecast.
@@ -18,17 +25,23 @@ checked: 2026-10-01
 - Boots and socks matter more than any jacket (Tip).
 - The 2026 to 2028 BC [[Synopsis]] contains no hunter orange requirement (90%). Wear blaze orange anyway in deer season: a strong safety tip (Tip).
 - Your sizes: boots 9 regular, waders medium, jacket medium, gloves medium.
+```
 
 ## The four layers
 
 ```diagram layering
 ```
 
+```anim gr-layer-swap Walk in cool. Puffy on when you sit.
+```
+
+```more what each layer does
 - **Base:** thin, against skin. Moves sweat away (70%).
 - **Mid:** fleece or light wool. Traps warmth while you walk (70%).
 - **Insulation:** puffy jacket for sitting still. Pack it on the walk in, put it on when you stop (Tip).
 - **Shell:** stops wind and rain. Quiet fabric for deer, fully waterproof for ducks (Tip).
 - Walk in cool. Start the hike a little cold, so you do not soak your base layer in sweat (Tip).
+```
 
 ## Wool vs synthetic
 
@@ -40,30 +53,50 @@ checked: 2026-10-01
 | Durability | Lower (65%) | Higher (65%) |
 | Cost | Higher (70%) | Lower (70%) |
 
-- Wool: great for sitting in cold deer country (Tip).
-- Synthetic: great for wet, active days and for the budget (Tip).
+- Wool for cold sits. Synthetic for wet, active days and the budget (Tip).
 
 ## Two climates, two kits
 
-### BC Interior near Kamloops
+```diagram gr-two-climates
+```
+
+- Interior: warm. Fraser Valley: **fully waterproof** (Tip).
+
+```more both kits in full
+#### BC Interior near Kamloops
 - Merino base, fleece mid, puffy insulation, quiet soft shell (Tip).
 - Toque, neck gaiter, warm gloves plus a spare pair (Tip).
 - Insulated leather boots for snow and frozen ground (Tip).
 
-### Wet Fraser Valley near Mission
+#### Wet Fraser Valley near Mission
 - Synthetic base, fleece mid, **fully waterproof** shell jacket and pants (Tip).
 - Waders for the marsh. Rubber boots for walking field edges (Tip).
 - Spare dry layer in a dry bag in the car (Tip).
+```
 
 ## Boots
 
+```diagram gr-boots
+```
+
+- Spare merino or synthetic socks in a zip bag (Tip).
+
+```more boot details
 - Deer, Interior: insulated waterproof leather boot, about 400 g insulation for cold sits (Tip).
 - Ducks, Fraser Valley: waders or tall rubber boots (Tip).
 - Break new boots in for a week before the hunt. Wear the socks you will hunt in (Tip).
 - Merino or synthetic socks. Bring a spare pair in a zip bag (Tip).
+```
 
 ## Waders
 
+```diagram gr-wader-belt
+```
+
+- Always a **wader belt**, cinched. It slows water rushing in if you fall (65%).
+- In the boat or kayak: [[PFD]] (personal flotation device) over your waders (Tip).
+
+```more neoprene vs breathable, fit
 | | Neoprene | Breathable |
 |---|---|---|
 | Warmth | Warmer in cold water (65%) | Need layers underneath (65%) |
@@ -74,13 +107,22 @@ checked: 2026-10-01
 
 - Bootfoot waders: check the boot size too. Try size 9 with thick socks (Tip).
 - Fit for "medium" varies by brand. Try them on in store (Tip).
-
-> [!warn]
-> Always wear a **wader belt**, cinched at the waist. It slows water rushing in if you fall (65%).
-> In the 10 ft boat or the kayak, wear a [[PFD]] (personal flotation device) over your waders (Tip). Session on water safety has more.
+- The water safety session has more.
+```
 
 ## Gloves, hats, blaze orange
 
+| Item | When | Why |
+|---|---|---|
+| Thin gloves | Shooting | Feel the trigger (Tip) |
+| Warm mitts | Sitting | Warm hands (Tip) |
+| Neoprene gloves | Decoys | Waterproof (Tip) |
+| Toque | Cold | Warm head (Tip) |
+| Brimmed cap | Rain | Dry glasses (Tip) |
+
+- BC: no orange rule (90%). Wear an orange vest and toque on the walk in and out (Tip).
+
+```more orange rules by province
 - Two pairs of gloves: thin shooting gloves, plus warm mitts or waterproof gloves for sitting (Tip).
 - Duck gloves: waterproof neoprene for setting decoys (Tip).
 - Toque in cold. Brimmed cap in rain keeps water off your glasses (Tip).
@@ -91,19 +133,26 @@ checked: 2026-10-01
 > **Alberta:** one secondary source says no colour requirement (60%). VERIFY.
 
 - Deer season on [[Crown land]] near Kamloops: orange vest and toque on the walk in and out (Tip).
+```
 
 ## Camo vs earth tones
 
+```diagram gr-deer-vision
+```
+
+- Deer cannot tell orange from green (65%). Avoid blue in deer country (Tip).
+- Stillness beats camo pattern (Tip).
+
+```more deer, ducks and fabric
 - Deer see blue and yellow well. They cannot tell orange from green (65%). Orange keeps you safe and still blends for deer (65%).
 - Avoid blue jeans and blue jackets in deer country (Tip).
 - Pattern and stillness matter more than the exact camo (Tip).
 - Ducks see colour well. Use dull marsh tones and hide your face and hands (Tip).
 - Earth tones (brown, olive, grey) work for most hunts if you sit still (Tip).
 - Choose quiet fabrics. Stiff nylon rustles in brush (Tip).
+```
 
 ## Shopping list: shells and boots
-
-Price checked 2026-10-01. Prices in CAD (Canadian dollars) from search previews, verify at checkout. Sizes: jacket M, boots 9 regular.
 
 | Item | Entry | Mid | Premium |
 |---|---|---|---|
@@ -111,9 +160,9 @@ Price checked 2026-10-01. Prices in CAD (Canadian dollars) from search previews,
 | Insulated hunting boot | VERIFY | Irish Setter VaprTrek 400 g, $244.99 to $259.95 (65%) | Kenetrek Mountain Extreme 400, $835 (65%) |
 | Blaze orange | Huntshield vest and cap set, $44.99 (60%) | VERIFY | VERIFY |
 
-## Shopping list: waders and layers
+- CAD (Canadian dollars). Price checked 2026-10-01. Search preview prices, verify at checkout. Sizes: jacket M, boots 9 regular.
 
-Price checked 2026-10-01. Search preview prices, verify at checkout. Sizes: waders M, gloves M.
+## Shopping list: waders and layers
 
 | Item | Entry | Mid | Premium |
 |---|---|---|---|
@@ -123,25 +172,33 @@ Price checked 2026-10-01. Search preview prices, verify at checkout. Sizes: wade
 | Gloves | VERIFY | VERIFY | VERIFY |
 | Wader belt | Often included with waders (Tip) | | |
 
+- Price checked 2026-10-01. Verify at checkout. Sizes: waders M, gloves M.
+
+```more price note
 - Base layer prices found only in US dollars. Canadian price: VERIFY in store.
+- Search preview prices, verify at checkout.
+```
 
 > [!lean]
 > Spend on **boots, waders and a waterproof shell**. Go cheap on base and mid layers to start.
-> Entry waders and a mid boot get you through this October. Upgrade what fails, not what is fine.
+> Upgrade what fails, not what is fine.
 
 > [!rule]
-> Be bold, start cold. You will warm up in 10 minutes of walking.
+> Be bold, start cold. You warm up in 10 minutes of walking.
 
 > [!mistake]
 > - Cotton hoodie and jeans in the rain.
-> - New boots on the first hunt day. Blisters by noon.
+> - New boots on day one. Blisters by noon.
 > - Waders with no belt.
 
 > [!field]
-> Lay out every layer on the floor the night before. Put on the full kit and walk 20 minutes. Fix what rubs or rustles.
+> Night before: put on the full kit and walk 20 minutes. Fix what rubs or rustles.
 
 ## Sources
 
+- Orange rule: whole BC Synopsis searched (90%). Clothing and vision facts: secondary sources (60 to 70%).
+
+```more all sources
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly. All 84 pages searched for "orange" and "blaze", covers checked by image: no hunter orange requirement. Checked 2026-10-02 (90%)
 - [BC Firearms Academy: gear for a first BC hunt](https://bcfirearmsacademy.ca/what-gear-do-i-need-for-my-first-hunt-in-bc-bc-firearms-academy/), blaze orange not required, checked 2026-10-01 (65%)
 - [Outdoor Canada: why wear blaze orange](https://www.outdoorcanada.ca/opinion-why-we-should-all-wear-blaze-orange-when-hunting-big-game/), checked 2026-10-01 (65%, opinion)
@@ -152,6 +209,7 @@ Price checked 2026-10-01. Search preview prices, verify at checkout. Sizes: wade
 - [Ducks Unlimited: when a duck hunt becomes a survival situation](https://www.ducks.org/hunting/waterfowl-hunting-tips/when-a-duck-hunt-becomes-a-survival-situation), wader belt, checked 2026-10-01 (65%)
 - [Sitka: what colours can deer see](https://www.sitkagear.com/experience/what-colors-can-deer-see), University of Georgia research summary, checked 2026-10-01 (65%)
 - Prices: search previews of Kenetrek Canada, Lefebvre's, La Tulipe, Bass Pro Canada, Sail, Canadian Tire, Sports Headquarters, Royal Distributing, The Fishin' Hole, price checked 2026-10-01 (60 to 65%)
+```
 
 ```quiz
 [

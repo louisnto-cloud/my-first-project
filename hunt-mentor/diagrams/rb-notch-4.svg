@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 4: only after the licence is cancelled may you handle the animal: field dress it and drag it out." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="34" font-size="20" fill="#23261f" text-anchor="middle" font-weight="bold">4. Now you may handle it</text>
+<g transform="translate(150 150) scale(2.0)"><ellipse cx="0" cy="6" rx="30" ry="10" fill="#8b5a2b"/><circle cx="30" cy="4" r="7" fill="#8b5a2b"/><path d="M-24 12 l-10 4 M-16 14 l-6 6 M18 14 l8 6 M24 12 l12 2" stroke="#8b5a2b" stroke-width="3"/><path d="M33 -2 l6 -10 l4 3 M36 -6 l-2 -8" stroke="#5c3b1c" stroke-width="2" fill="none"/></g><path d="M296 130 L312.8 146.8 L344 110.8" fill="none" stroke="#5c7a3a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><text x="320" y="186" font-size="16" fill="#5c7a3a" text-anchor="middle" font-weight="bold">gut, drag</text>
+<text x="200" y="262" font-size="15" fill="#2f3a2b" text-anchor="middle">Cancel first, then touch the animal.</text>
+</svg>

@@ -9,10 +9,17 @@ checked: 2026-10-03
 > [!warn]
 > Study aid only. The official regulations are the law.
 
-- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
+```diagram rb-unlawful-1
+```
+
+```diagram rb-unlawful-2
+```
 
 > [!why]
 > Most hunting tickets come from this one list. Know every line and you avoid nearly every fine.
+
+```more what this session covers
+- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
 
 - This session carries the whole "It's Unlawful" list from printed pages 11 and 12, item by item, in the order printed (99%).
 - Each item: the official words in quotes, then one plain English line for you, a deer, duck and grouse hunter with a rifle, a shotgun and a 10 ft boat with a motor.
@@ -20,9 +27,16 @@ checked: 2026-10-03
 - This edition renumbered the list. Items 22 to 24 are new boat and vehicle wording, so items 25 to the first 38 sit one number higher than in the July 2026 edition (99%).
 - The edition prints two items numbered 38: hunting hours, then lights. Both are kept here with their printed number (99%).
 - Items 23 and 24 are printed in green, the synopsis mark for new or changed rules (99%, page 2 key).
+```
 
 ## What is wildlife?
 
+| Animal | Status |
+|---|---|
+| Native animals, not fish or insects | Wildlife, protected (99%) |
+| Schedule B and C pests | Fewer limits, still kill humanely (99%) |
+
+```more the page 11 words
 > [!law] What is "Wildlife"?, page 11
 > "All native species of animals in the province, and some non-native species, excluding invertebrates and fish, have been designated as wildlife. This designation gives them protection under the Wildlife Act. These species may not be hunted, killed, captured, kept as pets or used for commercial purposes unless specifically allowed by regulation or under the authority of a permit."
 >
@@ -30,9 +44,19 @@ checked: 2026-10-03
 
 - Every native animal except fish and invertebrates (insects, snails and the like) is protected unless a regulation or permit says otherwise (99%, page 11, 2 October 2026 edition).
 - Schedule B and C animals are pests. Fewer limits apply, but you must still kill them humanely (99%).
+```
 
 ## Schedule B and Schedule C
 
+| | Schedule B | Schedule C |
+|---|---|---|
+| Licence | Private land, protecting property: no | None needed for listed ones |
+| Season | Crown land: open season applies | No closed season |
+| Example | Snowshoe hare, skunk, crows | Starling, rock dove, cottontail |
+
+- Every cell: page 11 (99%).
+
+```more the page 11 words
 > [!law] Page 11
 > "Schedule B lists animals that may be captured or killed on private land only for the specific purpose of protecting property; no hunting licence or open season is required. On Crown land a person must abide by the open seasons for Schedule B species (see Regional Schedules for open seasons). Schedule B species include coast mole, snowshoe hare, voles and lemmings, bushy-tailed woodrat, deer mice, porcupine, northern pocket gopher, yellow-bellied marmot, woodchuck, Columbian ground squirrel, striped skunk, spotted skunk, racoon, Northwestern crow, American crow, black-billed magpie, and brown-headed cowbird."
 >
@@ -44,9 +68,19 @@ checked: 2026-10-03
 - A snowshoe hare on Crown land is hunted in its open season, not any time (99%).
 - Schedule C: no closed season, no bag limit, no edible portion rule, no report, and electronic calls are allowed for Schedule C birds (99%).
 - No hunting licence needed for the Schedule C animals named above, such as starlings, rock doves and eastern cottontails (99%).
+```
 
 ## Feral pigs and the rules that still apply
 
+| Rule | Applies to pests too? |
+|---|---|
+| Hunting hours, closures, No Shooting Areas | Yes (99%) |
+| No selling meat | Yes (99%) |
+| Wounded one | Must kill it (99%) |
+
+- Feral pig: hunting licence needed, except on or damaging your own property (99%).
+
+```more the page 11 words
 > [!law] Page 11
 > "You do need a hunting licence to hunt feral pigs UNLESS you are hunting them on your property or they are damaging your property."
 >
@@ -60,9 +94,17 @@ checked: 2026-10-03
 - Never move a live feral pig unless you are its owner or the owner's agent getting it back (99%).
 - Shooting a starling or a rock dove still follows hunting hours, closures, No Shooting Areas and the ban on selling meat (99%).
 - Wound a Schedule B or C animal and you must finish it (99%).
+```
 
 ## Illegal guiding
 
+| Taking someone hunting | Guiding? |
+|---|---|
+| For pay or reward, given or promised | Yes: needs a licence (99%) |
+| Your brother, for free | No (90%, my reading) |
+| You pay an unlicensed guide | You can be charged too (99%) |
+
+```more the page 11 words
 > [!law] Illegal Guiding, page 11
 > "The Wildlife Act defines “guide” as: “a person who, for compensation or reward, received or promised, accompanies and assists another person to hunt wildlife”."
 >
@@ -75,9 +117,16 @@ checked: 2026-10-03
 - Pay or reward, given or promised, is what makes it guiding (99%, page 11, 2 October 2026 edition).
 - Taking your brother hunting for free is not guiding (90%, my reading).
 - Pay an unlicensed guide and you can be charged with the same offence as the guide (99%).
+```
 
 ## Illegal transporting
 
+| Moving hunters | Licence? |
+|---|---|
+| For money or other pay | Yes, a transport licence (99%) |
+| Friends in your boat, free | No (90%, my reading) |
+
+```more the page 11 words
 > [!law] Illegal Transporting, page 11
 > "The definition of “transporter” in the Wildlife Act Commercial Activities Regulation is: a person who, for money or other compensation, transports a hunter to, from or between locations so that the hunter can hunt but does not include a person who operates a scheduled commercial flight or a chartered aircraft unless the person also provides ground transportation, accommodation, or other ground services to the hunter."
 >
@@ -85,9 +134,16 @@ checked: 2026-10-03
 
 - Running hunters to their spot for money or other pay makes you a transporter, and that needs a licence (99%, page 11, 2 October 2026 edition).
 - Your 10 ft boat: ferry hunting friends for free, never for a fee (90%, my reading).
+```
 
 ## Dispatching wounded dangerous game
 
+| Wounded black bear, cougar or wolf | |
+|---|---|
+| Who may finish it | A licensed guide, a youth's supervisor, or a permit to accompany holder (99%) |
+| Whose licence | The hunter who wounded it cancels their own (99%) |
+
+```more the page 11 words
 > [!law] Dispatching Dangerous Wildlife, page 11
 > "A guide outfitter/assistant guide that holds a valid B.C. hunting licence may track and dispatch a black bear, cougar, or wolf that has been wounded by a guided hunter. The guided hunter then cancels their species licence."
 >
@@ -95,9 +151,21 @@ checked: 2026-10-03
 
 - A wounded black bear, cougar or wolf may be followed up and finished by the licensed guide, the youth's supervisor, or the permit to accompany holder (99%, page 11, 2 October 2026 edition).
 - The hunter who wounded it still cancels their own species licence (99%).
+```
 
 ## It is unlawful: items 1 to 5
 
+| Item | It is unlawful to |
+|---|---|
+| 1 | Have big game without a cancelled licence. Cancel before you touch it |
+| 2 | Use another person's licence, or lend yours |
+| 3 | Lie to an officer |
+| 4 | Keep live wildlife without a permit |
+| 5 | Take songbirds, eggs or nests |
+
+- Every item: page 11 (99%).
+
+```more the exact words and what each means for you
 > [!law] Item 1, page 11
 > "To be in possession of a big game animal without a properly cancelled species licence or otherwise authorized by licence, permit, or an exemption provided by regulation. Any person who kills any big game species must immediately after the kill and before handling the big game killed, cancel the appropriate species licence in accordance with the instructions on that licence."
 
@@ -122,9 +190,21 @@ checked: 2026-10-03
 > "To possess or wantonly take, injure or destroy a bird, egg, or the nest of a bird except those designated by regulations (i.e., crows, house sparrows, cowbirds, magpies, rock doves or European starlings or their egg or nest)."
 
 - Songbirds, their eggs and nests are off limits. The exceptions are crows, house sparrows, cowbirds, magpies, rock doves and European starlings (99%). Game birds in season under your licence are the lawful case (95%, my reading).
+```
 
 ## It is unlawful: items 6 to 10
 
+| Item | It is unlawful to |
+|---|---|
+| 6 | Buy or sell migratory birds |
+| 7 | Sell or trade wildlife meat |
+| 8 | Sell dead wildlife or parts, with exceptions |
+| 9 | Litter |
+| 10 | Shoot a hawk, falcon, owl or eagle |
+
+- Every item: page 11 (99%).
+
+```more the exact words and what each means for you
 > [!law] Item 6, page 11
 > "To buy or sell migratory birds (or their eggs or nest)."
 
@@ -149,9 +229,21 @@ checked: 2026-10-03
 > "To shoot, hunt or capture any hawk, falcon, owl or eagle except under permit."
 
 - Hawks, falcons, owls and eagles are never targets, even one sitting on your grouse (99%).
+```
 
 ## It is unlawful: items 11 to 15
 
+| Item | It is unlawful to |
+|---|---|
+| 11 | Deface a Wildlife Act notice |
+| 12 | Touch a lawfully set trap |
+| 13 | Hunt a nanny goat with a kid |
+| 14 | Hunt a black bear under 2, or a bear with it |
+| 15 | Hunt a white or blue (Glacier) black bear |
+
+- Every item: page 11 (99%).
+
+```more the exact words and what each means for you
 > [!law] Item 11, page 11
 > "To deface any notice posted under authority of the Wildlife Act."
 
@@ -176,9 +268,21 @@ checked: 2026-10-03
 > "To hunt the white or blue (Glacier) colour phases of the black bear."
 
 - A white black bear or a blue (Glacier) black bear is never legal (99%).
+```
 
 ## It is unlawful: items 16 to 20
 
+| Item | It is unlawful to |
+|---|---|
+| 16 | Hunt a cougar kitten, or its mother |
+| 17 | Hunt a lynx or bobcat with others |
+| 18 | Fail to report an accidental kill |
+| 19 | Kill wildlife while breaking another law |
+| 20 | Feed bears, cougars, coyotes or wolves |
+
+- Every item: page 11 (99%).
+
+```more the exact words and what each means for you
 > [!law] Item 16, page 11
 > "To hunt a cougar kitten (any cougar with spots or under 1 yr. of age) or any cougar accompanying it."
 
@@ -203,9 +307,21 @@ checked: 2026-10-03
 > "To intentionally feed or attempt to feed dangerous wildlife (cougar, coyote, wolf, and bear), except when lawfully engaged in hunting or trapping where baiting is authorized (cougar, coyote, and wolf only)."
 
 - Never put food out for bears, cougars, coyotes or wolves. Baiting is only for cougar, coyote and wolf where it is authorized, never bear (99%).
+```
 
 ## It is unlawful: items 21 to 24
 
+```diagram rb-boat-rules
+```
+
+| Item | It is unlawful to |
+|---|---|
+| 21 | Hunt bears over bait |
+| 22 | Hunt from a motor vehicle |
+| 23 | Hunt from a boat the motor is pushing (new) |
+| 24 | Hunt migratory birds from a moving motor or sail boat (new) |
+
+```more the exact words and what each means for you
 > [!law] Item 21, page 11
 > "To hunt bears by placing bait or by using a dead animal or using part of it as bait."
 
@@ -227,9 +343,22 @@ checked: 2026-10-03
 
 - Ducks and geese: no shooting from your boat while it moves, and no using the moving boat to hunt them (99%).
 - A boat still gliding after you cut the motor counts as moving: "a boat is considered to be moving if it continues to move because of motion that was imparted by its motor or sail" (99%, Hunting Regulation section 17(1.2), in force 1 October 2026).
+```
 
 ## It is unlawful: items 25 to 29
 
+```anim rb-loaded-truck Item 28: chamber and magazine empty in any vehicle.
+```
+
+| Item | It is unlawful to |
+|---|---|
+| 25 | Herd or harass wildlife with a boat, plane or vehicle |
+| 26 | Shoot big game while it swims, unless wounded |
+| 27 | Hunt big game with anything but rifle, shotgun, muzzleloader or bow |
+| 28 | Have a loaded firearm in or on a vehicle |
+| 29 | Carry a cocked crossbow in a vehicle |
+
+```more the exact words and what each means for you
 > [!law] Item 25, page 11
 > "To use a power boat, aircraft, or motor vehicle or other mechanical device to herd or harass wildlife."
 
@@ -255,9 +384,21 @@ checked: 2026-10-03
 > "To carry a cocked crossbow in or on a vehicle, or to discharge a bow from a vehicle of any kind."
 
 - Crossbow uncocked in any vehicle, and no arrow or bolt shot from one (99%).
+```
 
 ## It is unlawful: items 30 to 34
 
+| Item | It is unlawful to |
+|---|---|
+| 30 | Use a wireless camera to hunt, 1 August to 10 December (Region 1: own rule) |
+| 31 | Use a helicopter to hunt or haul |
+| 32 | Use a helicopter on a hunting trip |
+| 33 | Hunt from an aircraft, or within 6 hours of flying (not scheduled flights) |
+| 34 | Hunt with location info from an aircraft |
+
+- Every item: page 11 (99%).
+
+```more the exact words and what each means for you
 > [!law] Item 30, page 11
 > "To use a wireless camera for the purposes of hunting from Aug. 1 to Dec. 10, except in region 1 (see page 20 for further details)."
 
@@ -284,9 +425,22 @@ checked: 2026-10-03
 > "To hunt using information on the location of wildlife that is obtained by means of an aircraft."
 
 - Moose spotted from a plane may not be hunted on that tip (99%).
+```
 
 ## It is unlawful: items 35 to 38
 
+```anim rb-sunrise-hours Items 37 and 38: legal hours.
+```
+
+| Item | It is unlawful to |
+|---|---|
+| 35 | Share aircraft spotting info for hunting |
+| 36 | Have a drone on the trip |
+| 37 | Hunt migratory birds outside 30 minutes before sunrise to 30 after sunset |
+| 38 | Hunt game outside 1 hour before sunrise to 1 after sunset |
+| 38 | Hunt with a light |
+
+```more the exact words and what each means for you
 > [!law] Item 35, page 11
 > "To share or assist in sharing, information on the location of wildlife that is obtained by means of an aircraft and shared for the purpose of hunting wildlife."
 
@@ -312,9 +466,21 @@ checked: 2026-10-03
 > "To hunt wildlife by the use of, or with the aid of a light or illuminating device."
 
 - No spotlight, headlamp or truck lights to hunt by (99%). A headlamp to walk in before light is not hunting with a light (90%, my reading).
+```
 
 ## It is unlawful: items 39 to 43
 
+| Item | It is unlawful to |
+|---|---|
+| 39 | Have infrared optics on the trip |
+| 40 | Use poison |
+| 41 | Use electronic calls, except listed predators and Schedule C birds |
+| 42 | Use live decoys or recorded calls for game birds |
+| 43 | Hunt ducks within 400 m of bait, until 7 days bait free |
+
+- Items 39 page 11, 40 to 43 page 12 (99%).
+
+```more the exact words and what each means for you
 > [!law] Item 39, page 11
 > "To use or possess infrared optics on a hunting expedition."
 
@@ -339,18 +505,35 @@ checked: 2026-10-03
 > "To hunt migratory game birds within 400 m of any place where bait has been deposited unless that place has been free of bait for at least 7 days."
 
 - No duck or goose hunting within 400 m (437 yd) of bait, such as spilled grain put out on purpose, until the spot has been bait free for 7 days (95%, my reading for the grain example).
+```
 
 ## It is unlawful: item 44, the meat rule
 
+```diagram rb-edible
+```
+
+```more the exact words and what it means for you
 > [!law] Item 44, page 12
 > "To kill wildlife (with the exception of a fur bearing animal other than a black bear) and fail to remove from the carcass the edible portions (see definitions section) to the person’s normal dwelling place or to a meat cutter or the owner or operator of a cold storage plant. A person who kills wildlife is exempted from the requirement to remove the edible portions if that person transfers possession of the wildlife to a recipient who complies with the requirement. Of a furbearing animal other than a black bear, the hide and/or edible portions must be removed to the person’s normal dwelling place or to a meat cutter, the owner or operator of a cold storage plant or to a taxidermist, tanner or a fur trader. A person who kills a furbearing animal is exempted from the requirement to remove the hide if that person transfers possession of the wildlife to another person who complies with the requirement."
 
 - Deer: the neck, ribs, all four quarters and the loins go home or to a meat cutter or cold storage plant. Ducks and grouse: both breasts (99%, page 12 and page 3, 2 October 2026 edition). Those are the [[Edible portions]].
 - Gave the deer to a friend who takes the meat home? Then you are covered (99%).
 - A black bear follows the meat rule like a deer (99%).
+```
 
 ## It is unlawful: items 45 to 49
 
+| Item | It is unlawful to |
+|---|---|
+| 45 | Block or harass a legal hunter or trapper |
+| 46 | Hunt with a handgun |
+| 47 | Hunt with pack goats or sheep; camelids in Regions 6, 7A, 7B (not Haida Gwaii) |
+| 48 | Keep or sell bear galls |
+| 49 | Sell bear paws |
+
+- Every item: page 12 (99%).
+
+```more the exact words and what each means for you
 > [!law] Item 45, page 12
 > "To interfere with or obstruct a person licensed or permitted to hunt, guide or trap while that person is lawfully so engaged."
 
@@ -375,9 +558,22 @@ checked: 2026-10-03
 > "To traffic in bear paws, separated from the carcass or hide, although possession of bear paws under lawful authority of a licence or permit is allowed for personal and ceremonial use."
 
 - Keep the paws of your legal bear for yourself. Never sell or trade them (99%).
+```
 
 ## It is unlawful: items 50 to 54
 
+```diagram parts-home-bc
+```
+
+| Item | It is unlawful to |
+|---|---|
+| 50 | Bring in deer family parts from outside BC, except meat and clean parts |
+| 51 | Use deer family scents from outside BC |
+| 52 | Hunt without all your species licences |
+| 53 | Hunt crop land or a stocked grazing lease without consent |
+| 54 | Alter antlers from an antler restricted season |
+
+```more the exact words and what each means for you
 > [!law] Item 50, page 12
 > "To possess any part of a Cervidae (caribou, deer, elk, moose), that was killed outside of British Columbia, other than (1) the edible meat of the four quarters, loins, neck, and ribs, or (2) the hide, antlers, and skull plate if, before being brought into British Columbia, the part is cleaned in a manner that removes all tissue."
 
@@ -402,9 +598,18 @@ checked: 2026-10-03
 > "To alter or tamper with horns or antlers of wildlife harvested during an antler/horn restricted season (i.e., spike-fork moose, full curl sheep, 6 pt. elk) until the carcass is given to a meatcutter or owner/operator of a cold storage plant, arrives at the person's normal dwelling place and is butchered and stored there for consumption on the premises, or is submitted for compulsory inspection."
 
 - A buck taken in a [[4 point buck]] only season: leave the antlers whole on the skull until the deer is at the meat cutter or cold storage, butchered and stored at home, or inspected (95%, my reading: a 4 point season is antler restricted).
+```
 
 ## Retrieval: the it is lawful lines
 
+| Fetching game by boat | Lawful? |
+|---|---|
+| Nobody aboard has a loaded firearm | Yes (99%) |
+| Motor not pushing it (or sail, for birds) | Yes (99%) |
+
+- Tip: everyone unloads before the motor starts.
+
+```more the page 12 words
 > [!law] Retrieval, page 12
 > "No person shall kill, cripple or wound game without making all reasonable effort to locate, dispatch, retrieve and include it in their bag limit."
 >
@@ -418,9 +623,17 @@ checked: 2026-10-03
 - Your boat may fetch a downed duck or deer if nobody aboard has a loaded firearm (99%).
 - Or if the boat is not being propelled by its motor (or by a sail, for a migratory bird). These two lines are new in this edition (99%).
 - Safest for you: everyone unloads before the motor starts, then go get the bird (95%, my reading).
+```
 
 ## Ear tags and collars
 
+| Tagged or collared animal | Do this |
+|---|---|
+| Legal to hunt? | Yes, unless the region says no (99%) |
+| Killed one | Call the Ministry office before eating it (99%) |
+| The tag or collar | Return it (99%) |
+
+```more the page 7 words
 > [!law] Ear Tags and Collars, page 7
 > "Please DO NOT AVOID hunting animals with ear tags or collars, unless specified under regional sections in the synopsis. This will ensure that biologists acquire accurate data on mortality rates. If you kill a marked animal, please contact your local Ministry office with the number on the ear tag or collar because the meat may not be safe to eat if immobilization drugs were used. Ear tags and collars must be returned to the Ministry office."
 
@@ -428,6 +641,7 @@ checked: 2026-10-03
 - Killed one? Call the local Ministry office with the tag or collar number before you eat the meat. Drugs used to catch it may make it unsafe (99%).
 - The tag or collar goes back to the Ministry office (99%).
 - The contents page lists this section on page 11, but it is printed on page 7 (99%).
+```
 
 > [!rule]
 > If you would not want a conservation officer to watch you do it, do not do it.
@@ -442,11 +656,15 @@ checked: 2026-10-03
 
 ## Sources
 
+- Every source, page and date checked: tap below.
+
+```more every source, page and date checked
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the PDF text and checked against rendered page images: page 7 (ear tags and collars), page 11 (what is wildlife, illegal guiding and transporting, dispatching dangerous wildlife, items 1 to 39 including both items numbered 38), page 12 (items 40 to 54, retrieval), page 20 (Region 1 wireless camera line), pages 2, 3, 4 and 5 for the green key and definitions. Checked 2026-10-03 (99%).
 - Superseded July 2026 edition, pages 11 and 12, compared only to confirm the renumbering of items 22 to 38. Checked 2026-10-03 (99%).
 - [Firearm Violence Prevention Act, Bill 4, 2021, third reading text (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/bills/billsprevious/1st42nd:gov04-3), section 4(1), read directly. [Order in Council 156/2026](https://www.bclaws.gov.bc.ca/civix/document/id/oic/oic_cur/0156_2026) brings it into force 1 October 2026, read directly. Checked 2026-10-03 (99%).
 - [Designation and Exemption Regulation, B.C. Reg. 168/90, as amended by B.C. Reg. 66/2026 (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_90anif66_2026), section 18, and the [Hunting Regulation amendment](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84anif66_2026), section 17(1.2), both effective 1 October 2026, read directly. Checked 2026-10-03 (99%).
 - Lines marked "my reading" are this app's interpretation, 85 to 95%.
+```
 
 ```quiz
 [

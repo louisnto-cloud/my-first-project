@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="At 25 metres: fire 1 shot, then a 3 shot group. Get the group centred left and right. It can sit a little off up and down for now.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">25 m: get on paper</text>
+  <rect x="100" y="40" width="200" height="200" fill="#fff" stroke="#2f3a2b" stroke-width="2"/>
+  <circle cx="200" cy="140" r="60" fill="none" stroke="#2f3a2b" stroke-width="2"/><circle cx="200" cy="140" r="30" fill="none" stroke="#2f3a2b" stroke-width="2"/><circle cx="200" cy="140" r="8" fill="#e8590c"/>
+  <g fill="#2f3a2b"><circle cx="196" cy="168" r="5"/><circle cx="206" cy="174" r="5"/><circle cx="200" cy="162" r="5"/></g>
+  <line x1="200" y1="40" x2="200" y2="240" stroke="#4a7fb0" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="200" y="266" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Centred left and right ✓</text>
+  <text x="200" y="288" font-size="14" fill="#2f3a2b" text-anchor="middle">At 25 m you need 4 times the clicks</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 296" role="img" aria-label="How to read entries in the regional season tables. 2(1) for deer: 2 for the season, only 1 may be antlerless. 10(20) for grouse: 10 a day, 20 in possession. NBL: No Bag Limit, no maximum." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="296" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Reading the season tables</text>
+<rect x="10" y="44" width="380" height="72" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<rect x="18" y="56" width="110" height="48" rx="8" fill="#e8590c" stroke="#e8590c" stroke-width="2"/><text x="73" y="88" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">2(1)</text>
+<text x="142" y="76" font-size="15" fill="#23261f" text-anchor="start">Deer: 2 for the season,</text>
+<text x="142" y="96" font-size="15" fill="#23261f" text-anchor="start">only 1 may be antlerless</text>
+<rect x="10" y="126" width="380" height="72" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<rect x="18" y="138" width="110" height="48" rx="8" fill="#e8590c" stroke="#e8590c" stroke-width="2"/><text x="73" y="170" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">10(20)</text>
+<text x="142" y="158" font-size="15" fill="#23261f" text-anchor="start">Grouse: 10 a day,</text>
+<text x="142" y="178" font-size="15" fill="#23261f" text-anchor="start">20 in possession</text>
+<rect x="10" y="208" width="380" height="72" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<rect x="18" y="220" width="110" height="48" rx="8" fill="#e8590c" stroke="#e8590c" stroke-width="2"/><text x="73" y="252" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">NBL</text>
+<text x="142" y="240" font-size="15" fill="#23261f" text-anchor="start">No Bag Limit:</text>
+<text x="142" y="260" font-size="15" fill="#23261f" text-anchor="start">no maximum</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Wind check tool 2: a milkweed fluff floats far. Its path climbs, stalls and curls back, showing thermals and swirls over the ground.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <path d="M0 260 L400 200 L400 300 L0 300 Z" fill="#8a9a6b"/>
+  <path d="M60 210 C 120 180, 180 120, 240 110 S 330 140, 300 90 S 250 60, 290 50" fill="none" stroke="#4a7fb0" stroke-width="3" stroke-dasharray="6 6"/>
+  <g transform="translate(60 210)"><line x1="0" y1="0" x2="0" y2="10" stroke="#8b5a2b" stroke-width="2"/><g stroke="#c9b79c" stroke-width="2"><line x1="0" y1="0" x2="-10" y2="-12"/><line x1="0" y1="0" x2="0" y2="-15"/><line x1="0" y1="0" x2="10" y2="-12"/><line x1="0" y1="0" x2="-14" y2="-4"/><line x1="0" y1="0" x2="14" y2="-4"/></g></g>
+  <g transform="translate(290 50)"><g stroke="#8b5a2b" stroke-width="2"><line x1="0" y1="0" x2="-10" y2="-12"/><line x1="0" y1="0" x2="0" y2="-15"/><line x1="0" y1="0" x2="10" y2="-12"/></g></g>
+  <text x="200" y="30" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Milkweed fluff</text>
+  <text x="250" y="160" font-size="15" font-weight="bold" fill="#4a7fb0">climbs, curls</text>
+  <text x="200" y="290" font-size="15" fill="#fff" text-anchor="middle">Shows thermals and swirls (70%)</text>
+</svg>

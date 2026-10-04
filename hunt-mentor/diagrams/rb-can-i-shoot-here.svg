@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 812" role="img" aria-label="Flowchart, can I shoot here. Nine questions, each must be yes, and a question that does not apply counts as yes: outside every National Park, outside every ecological reserve, not in a BC Park or its page allows hunting in an open season, over 100 metres from occupied buildings and schools, off the road allowance and not shooting across it, outside No Shooting and No Hunting Areas, on a listed highway a rifle only past 400 metres from the road allowance, owner consent for fenced, posted, leased or crop land, and inside a town the bylaw must allow it. Any no means do not shoot. All yes means the place is OK, then check season, licence, target and backstop." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="812" fill="#fffaf0"/>
+<text x="200" y="28" font-size="21" fill="#23261f" text-anchor="middle" font-weight="bold">Can I shoot here?</text>
+<text x="200" y="50" font-size="15" fill="#2f3a2b" text-anchor="middle">Yes goes down. Does not apply? Count it yes.</text>
+<rect x="318" y="66" width="74" height="652" rx="10" fill="#c92a2a" stroke="#c92a2a" stroke-width="2"/>
+<text transform="translate(362 399.0) rotate(-90)" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">DO NOT SHOOT</text>
+<rect x="10" y="66" width="260" height="52" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="30" cy="92" r="13" fill="#e8590c"/><text x="30" y="97.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+<text x="50" y="88" font-size="15" fill="#23261f" text-anchor="start">Outside every</text>
+<text x="50" y="107" font-size="15" fill="#23261f" text-anchor="start">National Park?</text>
+<line x1="270" y1="92" x2="310.0" y2="92.0" stroke="#c92a2a" stroke-width="2.5"/><polygon points="316,92 307.0,96.3 307.0,87.7" fill="#c92a2a"/>
+<text x="293" y="86" font-size="14" fill="#c92a2a" text-anchor="middle" font-weight="bold">No</text>
+<line x1="140" y1="118" x2="140.0" y2="134.0" stroke="#23261f" stroke-width="2.5"/><polygon points="140,140 135.7,131.0 144.3,131.0" fill="#23261f"/>
+<text x="150" y="134" font-size="14" fill="#5c7a3a" text-anchor="start" font-weight="bold">Yes</text>
+<rect x="10" y="140" width="260" height="52" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="30" cy="166" r="13" fill="#e8590c"/><text x="30" y="171.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+<text x="50" y="162" font-size="15" fill="#23261f" text-anchor="start">Outside every</text>
+<text x="50" y="181" font-size="15" fill="#23261f" text-anchor="start">ecological reserve?</text>
+<line x1="270" y1="166" x2="310.0" y2="166.0" stroke="#c92a2a" stroke-width="2.5"/><polygon points="316,166 307.0,170.3 307.0,161.7" fill="#c92a2a"/>
+<text x="293" y="160" font-size="14" fill="#c92a2a" text-anchor="middle" font-weight="bold">No</text>
+<line x1="140" y1="192" x2="140.0" y2="208.0" stroke="#23261f" stroke-width="2.5"/><polygon points="140,214 135.7,205.0 144.3,205.0" fill="#23261f"/>
+<text x="150" y="208" font-size="14" fill="#5c7a3a" text-anchor="start" font-weight="bold">Yes</text>
+<rect x="10" y="214" width="260" height="52" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="30" cy="240" r="13" fill="#e8590c"/><text x="30" y="245.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text>
+<text x="50" y="236" font-size="15" fill="#23261f" text-anchor="start">Not a BC Park, or its page</text>
+<text x="50" y="255" font-size="15" fill="#23261f" text-anchor="start">allows hunting in season?</text>
+<line x1="270" y1="240" x2="310.0" y2="240.0" stroke="#c92a2a" stroke-width="2.5"/><polygon points="316,240 307.0,244.3 307.0,235.7" fill="#c92a2a"/>
+<text x="293" y="234" font-size="14" fill="#c92a2a" text-anchor="middle" font-weight="bold">No</text>
+<line x1="140" y1="266" x2="140.0" y2="282.0" stroke="#23261f" stroke-width="2.5"/><polygon points="140,288 135.7,279.0 144.3,279.0" fill="#23261f"/>
+<text x="150" y="282" font-size="14" fill="#5c7a3a" text-anchor="start" font-weight="bold">Yes</text>
+<rect x="10" y="288" width="260" height="52" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="30" cy="314" r="13" fill="#e8590c"/><text x="30" y="319.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">4</text>
+<text x="50" y="310" font-size="15" fill="#23261f" text-anchor="start">Over 100 m (109 yd) from</text>
+<text x="50" y="329" font-size="15" fill="#23261f" text-anchor="start">occupied buildings, schools?</text>
+<line x1="270" y1="314" x2="310.0" y2="314.0" stroke="#c92a2a" stroke-width="2.5"/><polygon points="316,314 307.0,318.3 307.0,309.7" fill="#c92a2a"/>
+<text x="293" y="308" font-size="14" fill="#c92a2a" text-anchor="middle" font-weight="bold">No</text>
+<line x1="140" y1="340" x2="140.0" y2="356.0" stroke="#23261f" stroke-width="2.5"/><polygon points="140,362 135.7,353.0 144.3,353.0" fill="#23261f"/>
+<text x="150" y="356" font-size="14" fill="#5c7a3a" text-anchor="start" font-weight="bold">Yes</text>
+<rect x="10" y="362" width="260" height="52" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="30" cy="388" r="13" fill="#e8590c"/><text x="30" y="393.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">5</text>
+<text x="50" y="384" font-size="15" fill="#23261f" text-anchor="start">Off the road allowance,</text>
+<text x="50" y="403" font-size="15" fill="#23261f" text-anchor="start">not shooting across it?</text>
+<line x1="270" y1="388" x2="310.0" y2="388.0" stroke="#c92a2a" stroke-width="2.5"/><polygon points="316,388 307.0,392.3 307.0,383.7" fill="#c92a2a"/>
+<text x="293" y="382" font-size="14" fill="#c92a2a" text-anchor="middle" font-weight="bold">No</text>
+<line x1="140" y1="414" x2="140.0" y2="430.0" stroke="#23261f" stroke-width="2.5"/><polygon points="140,436 135.7,427.0 144.3,427.0" fill="#23261f"/>
+<text x="150" y="430" font-size="14" fill="#5c7a3a" text-anchor="start" font-weight="bold">Yes</text>
+<rect x="10" y="436" width="260" height="52" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="30" cy="462" r="13" fill="#e8590c"/><text x="30" y="467.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">6</text>
+<text x="50" y="458" font-size="15" fill="#23261f" text-anchor="start">Outside No Shooting and</text>
+<text x="50" y="477" font-size="15" fill="#23261f" text-anchor="start">No Hunting Areas?</text>
+<line x1="270" y1="462" x2="310.0" y2="462.0" stroke="#c92a2a" stroke-width="2.5"/><polygon points="316,462 307.0,466.3 307.0,457.7" fill="#c92a2a"/>
+<text x="293" y="456" font-size="14" fill="#c92a2a" text-anchor="middle" font-weight="bold">No</text>
+<line x1="140" y1="488" x2="140.0" y2="504.0" stroke="#23261f" stroke-width="2.5"/><polygon points="140,510 135.7,501.0 144.3,501.0" fill="#23261f"/>
+<text x="150" y="504" font-size="14" fill="#5c7a3a" text-anchor="start" font-weight="bold">Yes</text>
+<rect x="10" y="510" width="260" height="52" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="30" cy="536" r="13" fill="#e8590c"/><text x="30" y="541.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7</text>
+<text x="50" y="532" font-size="15" fill="#23261f" text-anchor="start">Listed highway: is a rifle</text>
+<text x="50" y="551" font-size="15" fill="#23261f" text-anchor="start">past 400 m from its allowance?</text>
+<line x1="270" y1="536" x2="310.0" y2="536.0" stroke="#c92a2a" stroke-width="2.5"/><polygon points="316,536 307.0,540.3 307.0,531.7" fill="#c92a2a"/>
+<text x="293" y="530" font-size="14" fill="#c92a2a" text-anchor="middle" font-weight="bold">No</text>
+<line x1="140" y1="562" x2="140.0" y2="578.0" stroke="#23261f" stroke-width="2.5"/><polygon points="140,584 135.7,575.0 144.3,575.0" fill="#23261f"/>
+<text x="150" y="578" font-size="14" fill="#5c7a3a" text-anchor="start" font-weight="bold">Yes</text>
+<rect x="10" y="584" width="260" height="52" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="30" cy="610" r="13" fill="#e8590c"/><text x="30" y="615.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">8</text>
+<text x="50" y="606" font-size="15" fill="#23261f" text-anchor="start">Fenced, posted, leased or</text>
+<text x="50" y="625" font-size="15" fill="#23261f" text-anchor="start">crop land: owner said yes?</text>
+<line x1="270" y1="610" x2="310.0" y2="610.0" stroke="#c92a2a" stroke-width="2.5"/><polygon points="316,610 307.0,614.3 307.0,605.7" fill="#c92a2a"/>
+<text x="293" y="604" font-size="14" fill="#c92a2a" text-anchor="middle" font-weight="bold">No</text>
+<line x1="140" y1="636" x2="140.0" y2="652.0" stroke="#23261f" stroke-width="2.5"/><polygon points="140,658 135.7,649.0 144.3,649.0" fill="#23261f"/>
+<text x="150" y="652" font-size="14" fill="#5c7a3a" text-anchor="start" font-weight="bold">Yes</text>
+<rect x="10" y="658" width="260" height="52" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="30" cy="684" r="13" fill="#e8590c"/><text x="30" y="689.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">9</text>
+<text x="50" y="680" font-size="15" fill="#23261f" text-anchor="start">In a town: does the local</text>
+<text x="50" y="699" font-size="15" fill="#23261f" text-anchor="start">bylaw allow it?</text>
+<line x1="270" y1="684" x2="310.0" y2="684.0" stroke="#c92a2a" stroke-width="2.5"/><polygon points="316,684 307.0,688.3 307.0,679.7" fill="#c92a2a"/>
+<text x="293" y="678" font-size="14" fill="#c92a2a" text-anchor="middle" font-weight="bold">No</text>
+<line x1="140" y1="718" x2="140.0" y2="732.0" stroke="#23261f" stroke-width="2.5"/><polygon points="140,738 135.7,729.0 144.3,729.0" fill="#23261f"/>
+<rect x="10" y="738" width="380" height="62" rx="10" fill="#5c7a3a" stroke="#5c7a3a" stroke-width="2"/>
+<text x="200" y="764" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">All yes: the place is OK.</text>
+<text x="200" y="783" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Now check season, licence, target, backstop.</text>
+</svg>

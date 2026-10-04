@@ -11,15 +11,29 @@ checked: 2026-10-01
 
 ## Key points
 
+```diagram gr-ammo-match
+```
+
+- Ducks: [[Non toxic shot]] only (99%). No .22 for quail (95%).
+- .22 LR means .22 long rifle. Gr means grains, a bullet weight.
+
+```more the full key points
 - **.308 for deer:** a 150 to 165 gr (grain) hunting bullet does the job (65%).
 - **One load rule:** pick one .308 load, zero with it, hunt with it (Tip).
-- **Ducks:** [[Non toxic shot]] only (99%). Steel #2 or #3 is the all round choice (70%).
+- **Ducks:** non toxic shot only (99%). Steel #2 or #3 is the all round choice (70%).
 - **Quail and grouse:** #6 to #7.5 shot, 1 to 1 1/8 oz (65%).
 - **.22 LR (long rifle):** legal for grouse (99%). Head shots only (Tip). Not legal for quail: use the shotgun (95%).
 - Buy 3 to 4 boxes of the **same lot** of .308 if you can (Tip).
+```
 
 ## .308 loads by animal
 
+```diagram gr-bullet-weights
+```
+
+- Deer near Kamloops: **150 gr cup and core** is plenty (Tip).
+
+```more the table and bullet types
 | Animal | Bullet weight | Bullet type | Certainty |
 |---|---|---|---|
 | Deer | 150 gr | Cup and core is fine | (65%) |
@@ -30,36 +44,67 @@ checked: 2026-10-01
 - Cup and core: lead core in a copper jacket. Cheap and accurate, expands fast (65%).
 - Bonded and Partition: hold together through bone (65%).
 - Monolithic copper: all copper, deep penetration, lead free (65%).
+```
 
 > [!lean]
-> One box each of 2 deer loads at the range. Keep the one that groups best. Buy 3 more boxes of that exact load.
-> 150 gr cup and core is plenty for deer near Kamloops.
+> One box each of 2 deer loads at the range. Keep the one that groups best. Buy 3 more boxes of it.
 
 ## The one load rule
 
+```diagram gr-one-load
+```
+
+- Switch loads and you must **re zero** (75%).
+
+```more the details
 - Every load hits a different spot from the same zero (75%).
 - Switch loads and you must re zero (75%).
 - Write the load name and lot number on your zero card (Tip).
 - Never mix boxes in your pocket on a hunt (Tip).
+```
 
 ## Waterfowl shot sizes
 
+```diagram gr-shot-sizes
+```
+
+- Non toxic only for ducks, geese, coots and snipe (99%). **Steel #2** is the all round duck load (70%).
+
+```more loads, speeds, exceptions
 - Non toxic shot is required for ducks, geese, coots and snipe: steel, bismuth, tungsten, tin (99%). Pigeons and doves are the exception (99%).
 - [[Steel shot]] #2: all round duck load (70%).
 - Steel #3: medium ducks and close decoying birds (70%).
 - Steel #4: teal and very close shots (70%).
 - Steel BB: geese (70%).
 - About 1 1/8 to 1 1/4 oz at 1,400 to 1,550 fps (feet per second). More pellets beats more speed (70%).
+```
 
 ## Bismuth and tungsten
 
+| | Steel | Bismuth | Tungsten, TSS |
+|---|---|---|---|
+| Feel | Hard | Softer, like lead | Very dense |
+| Best for | New 3 inch gun | Older guns, fixed chokes | Long range |
+| Cost | Lowest | Several times steel | Several times steel |
+
+- Start with steel in your new gun (Tip).
+
+```more the details
 - **Bismuth:** softer than steel, closer to lead. Kinder to older guns and fixed chokes (65%).
 - **Tungsten** and TSS (tungsten super shot): very dense, hit hard at range (65%). Price in CAD (Canadian dollars): VERIFY.
 - Both cost several times more than steel (65%).
 - Your new 3 inch gun with IC (Improved Cylinder) or M (Modified) chokes shoots steel well. Start with steel (Tip).
+```
 
 ## Upland loads
 
+```diagram gr-lead-ok
+```
+
+- Grouse #6, quail #7.5, 1 to 1 1/8 oz (65%). Lead is legal for upland birds (99%).
+- Ducks the same day? Carry **only steel** (Tip).
+
+```more the full rules
 - Grouse: #6 shot (65%).
 - Quail: #7.5 shot (65%).
 - Load: 1 to 1 1/8 oz (65%).
@@ -67,9 +112,17 @@ checked: 2026-10-01
 - Lead is banned for ducks, geese, coots and snipe (99%).
 - Lead is also banned in National Wildlife Areas: any hunting allowed there must use non toxic shot (95%).
 - Hunting quail and ducks the same day? Carry only steel so you never load lead at the marsh (Tip).
+```
 
 ## .22 LR for grouse
 
+```diagram gr-legal-guns
+```
+
+- .22 LR (long rifle): grouse, ptarmigan or turkey only (99%). **Head shots** (Tip).
+- No rifle of any kind for ducks or geese (99%).
+
+```more the full rules
 - In BC a .22 or other rimfire is legal among game birds for grouse, ptarmigan or turkey only (99%).
 - A centrefire rifle, like your .308: grouse or ptarmigan only (99%).
 - So **no .22 for quail** (95%). Of your guns, only the shotgun is legal for quail (95%).
@@ -77,10 +130,9 @@ checked: 2026-10-01
 - With the CZ 457: head shots only. A body shot ruins meat or the bird runs (Tip).
 - Know your [[Backstop]]. A .22 LR bullet carries far past a missed grouse (Tip).
 - CCI Mini Mag is a common, reliable choice (65%).
+```
 
 ## Price table
-
-Price checked 2026-10-01. Search preview prices, verify at checkout.
 
 | Load | Box | CAD price | Certainty |
 |---|---|---|---|
@@ -97,21 +149,28 @@ Price checked 2026-10-01. Search preview prices, verify at checkout.
 | Winchester Super X Heavy Game Load (upland) | 25 | $17 to $22 | (65%) |
 | CCI Mini Mag .22 LR | 100 | $13.79 to $16.99 | (65%) |
 
+- CAD (Canadian dollars). Price checked 2026-10-01. Search preview prices, verify at checkout.
+
+```more scam warning
 - Avoid ammo sites with scam warning signs: bulkammocanada.com, canfirearm.com, mcadamgundealer.com (55%). Buy from a known store (Tip).
+```
 
 > [!rule]
-> Know one load like you know your own phone number. That load goes in the rifle every time.
+> Know one load like your own phone number. That load goes in the rifle every time.
 
 > [!mistake]
-> - Zeroing with one brand and hunting with another.
-> - Lead shot in your pocket at the duck marsh.
+> - Zeroing with one brand, hunting with another.
+> - Lead shot in your pocket at the marsh.
 > - Body shots on grouse with the .22.
 
 > [!field]
-> Put a strip of tape on each ammo box: gun, load, use. "Ducks, steel #2" or "Deer, zeroed".
+> Tape on each ammo box: gun, load, use. "Ducks, steel #2" or "Deer, zeroed".
 
 ## Sources
 
+- Shot and gun rules read directly in federal and BC law (95 to 99%). Loads and prices: secondary sources (65 to 70%).
+
+```more all sources
 - [Migratory Birds Regulations, 2022 (SOR/2022-105), full text](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html), read directly, current to 2026-09-21: s. 37(1) (only a shotgun, bow or crossbow for migratory game birds), s. 38 (non toxic shot, pigeon and dove exceptions). Checked 2026-10-02 (99%)
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly and checked against the rendered page image. Printed p. 13 (legal methods table, notes 2, 3 and 4, shot ban notice). Checked 2026-10-02 (99%)
 - [BC Hunting Regulation, BC Reg 190/84](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_01), read directly, current to 22 September 2026: s. 17(1)(f) (rifles only for turkey, grouse and ptarmigan among game birds), s. 17(1)(q) (no centrefire for turkey), s. 17(1)(p) and s. 17(2) (non toxic shot for waterfowl, coot and snipe). Checked 2026-10-02 (99%)
@@ -120,6 +179,7 @@ Price checked 2026-10-01. Search preview prices, verify at checkout.
 - Steel shot sizes and speeds: Ducks Unlimited and Outdoor Life via gear research 2026-10-01 (70%)
 - .308 bullet weights and types: gear research 2026-10-01 (65%)
 - Ammo prices: search previews of Canadian retailer pages, price checked 2026-10-01 (65%)
+```
 
 ```quiz
 [

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img" aria-label="Side view of a scoped rifle showing the four places that make it loaded under the BC definition: 1, the chamber; 2, a fixed magazine inside the firearm; 3, a magazine with a hinged floor plate; 4, a detachable magazine clipped in or inside. A round in any one of them means the firearm is loaded, even with the safety on, the bolt open or the action broken. A magazine taken out and carried in your pocket is not a loaded firearm, which is this app&#x27;s reading." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="360" fill="#fffaf0"/>
+<text x="200" y="26" font-size="20" fill="#23261f" text-anchor="middle" font-weight="bold">What makes a firearm loaded</text>
+<text x="200" y="48" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">A round in ANY one spot = loaded</text>
+<path d="M14 130 L110 112 L110 140 L22 160 Z" fill="#8b5a2b"/>
+<rect x="108" y="108" width="96" height="30" fill="#2f3a2b"/>
+<rect x="204" y="116" width="182" height="10" fill="#2f3a2b"/>
+<rect x="120" y="86" width="80" height="14" rx="6" fill="#2f3a2b"/>
+<path d="M190 138 L250 128 L252 136 L196 148 Z" fill="#8b5a2b"/>
+<rect x="176" y="114" width="30" height="10" rx="3" fill="#e0a526"/>
+<rect x="132" y="138" width="34" height="34" fill="#4d4d4d" stroke="#2f3a2b" stroke-width="2"/>
+<rect x="136" y="143" width="26" height="6" rx="2" fill="#e0a526"/>
+<rect x="136" y="152" width="26" height="6" rx="2" fill="#e0a526"/>
+<rect x="136" y="161" width="26" height="6" rx="2" fill="#e0a526"/>
+<line x1="191" y1="114" x2="224" y2="71" stroke="#e8590c" stroke-width="2"/>
+<text x="230" y="76" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">1 Chamber</text>
+<line x1="166" y1="150" x2="180" y2="181" stroke="#e8590c" stroke-width="2"/>
+<text x="186" y="186" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">2 Fixed magazine inside</text>
+<line x1="166" y1="158" x2="180" y2="205" stroke="#e8590c" stroke-width="2"/>
+<text x="186" y="210" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">3 Hinged floor plate</text>
+<line x1="166" y1="166" x2="180" y2="229" stroke="#e8590c" stroke-width="2"/>
+<text x="186" y="234" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">4 Detachable, clipped in</text>
+<circle cx="191" cy="104" r="10" fill="#e8590c"/><text x="191" y="108.55" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+<rect x="10" y="262" width="186" height="86" rx="8" fill="#fdecea" stroke="#c92a2a" stroke-width="2"/>
+<text x="20" y="284" font-size="15" fill="#c92a2a" text-anchor="start" font-weight="bold">LOADED, even with</text>
+<text x="20" y="304" font-size="15" fill="#c92a2a" text-anchor="start" font-weight="bold">safety on, bolt open</text>
+<text x="20" y="324" font-size="15" fill="#c92a2a" text-anchor="start" font-weight="bold">or action broken</text>
+<rect x="204" y="262" width="186" height="86" rx="8" fill="#eef3e6" stroke="#5c7a3a" stroke-width="2"/>
+<text x="214" y="284" font-size="15" fill="#5c7a3a" text-anchor="start" font-weight="bold">Not loaded (reading):</text>
+<text x="214" y="304" font-size="15" fill="#5c7a3a" text-anchor="start" font-weight="bold">magazine out, in</text>
+<text x="214" y="324" font-size="15" fill="#5c7a3a" text-anchor="start" font-weight="bold">your pocket</text>
+</svg>

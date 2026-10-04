@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" font-family="sans-serif" role="img" aria-label="Aging a track in snow. Fresh: sharp walls and loose snow crumbs that fall apart when poked. Hours: crumbs bonded into a crust, trackers call it sintering. Sun: edges rounded, floor glazed. Wind or new snow: drifted in or filled. Ice floor and ice walls: made before last night's freeze. Cold clear nights keep tracks crisp for days, so trust the crumbs and your own test print.">
+  <rect width="400" height="340" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Aging a track in snow</text>
+  <g fill="#eef2f6" stroke="#4a7fb0" stroke-width="2">
+    <path d="M10 70 H34 V105 H70 V70 H94 V125 H10 Z"/>
+    <path d="M108 70 H132 V105 H168 V70 H192 V125 H108 Z"/>
+    <path d="M206 70 H222 Q234 76 236 98 Q240 105 250 105 Q262 105 264 98 Q266 76 278 70 H294 V125 H206 Z"/>
+    <path d="M304 70 H322 Q330 84 334 96 Q348 100 362 96 Q366 84 374 70 H392 V125 H304 Z"/>
+  </g>
+  <g fill="#fff" stroke="#4a7fb0" stroke-width="1.5"><circle cx="24" cy="64" r="4"/><circle cx="80" cy="62" r="4"/><circle cx="90" cy="64" r="3"/><circle cx="16" cy="62" r="3"/></g>
+  <path d="M116 66 q8 -6 16 0 M168 66 q8 -6 16 0" stroke="#4a7fb0" stroke-width="4" fill="none"/>
+  <path d="M238 104 Q250 100 262 104" stroke="#9cc3e6" stroke-width="4" fill="none"/>
+  <path d="M322 84 Q348 94 372 84" stroke="#4a7fb0" stroke-width="2" fill="#fff"/>
+  <g font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle"><text x="52" y="150">Fresh</text><text x="150" y="150">Hours</text><text x="250" y="150">Sun</text><text x="348" y="150">Wind, snow</text></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle">
+    <text x="52" y="170">loose crumbs</text><text x="52" y="188">sharp walls</text>
+    <text x="150" y="170">crumbs</text><text x="150" y="188">bonded</text>
+    <text x="250" y="170">rounded,</text><text x="250" y="188">glazed</text>
+    <text x="348" y="170">drifted</text><text x="348" y="188">or filled</text>
+  </g>
+  <rect x="10" y="208" width="380" height="120" rx="10" fill="#eef2f6"/>
+  <text x="24" y="234" font-size="16" font-weight="bold" fill="#4a7fb0">Tests</text>
+  <text x="24" y="258" font-size="15" fill="#2f3a2b">Poke a crumb: holds together means time passed</text>
+  <text x="24" y="280" font-size="15" fill="#2f3a2b">Ice floor and walls: before last night's freeze</text>
+  <text x="24" y="302" font-size="15" fill="#2f3a2b">Make your own print each hour: your clock</text>
+  <text x="24" y="320" font-size="14" fill="#6b4f35">Cold still nights keep tracks crisp for days</text>
+</svg>

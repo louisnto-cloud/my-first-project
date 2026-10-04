@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Sighting in plan in 4 steps: 1 bore sight, 2 get on paper at 25 metres, 3 set the real zero at 100 metres with 3 shot groups, 4 practise from field positions. Use the same load you hunt with.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sighting in: the plan</text>
+  <g font-size="15" font-weight="bold" text-anchor="middle">
+    <rect x="14" y="50" width="176" height="96" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+    <circle cx="44" cy="80" r="16" fill="#e8590c"/><text x="44" y="86" fill="#fff">1</text>
+    <text x="118" y="86" fill="#2f3a2b">Bore sight</text><text x="102" y="124" font-size="14" fill="#2f3a2b">look down the barrel</text>
+    <rect x="210" y="50" width="176" height="96" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+    <circle cx="240" cy="80" r="16" fill="#e8590c"/><text x="240" y="86" fill="#fff">2</text>
+    <text x="316" y="86" fill="#2f3a2b">25 m</text><text x="298" y="124" font-size="14" fill="#2f3a2b">get on paper</text>
+    <rect x="14" y="160" width="176" height="96" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+    <circle cx="44" cy="190" r="16" fill="#e8590c"/><text x="44" y="196" fill="#fff">3</text>
+    <text x="118" y="196" fill="#2f3a2b">100 m (109 yd)</text><text x="102" y="234" font-size="14" fill="#2f3a2b">real zero, 3 shot groups</text>
+    <rect x="210" y="160" width="176" height="96" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+    <circle cx="240" cy="190" r="16" fill="#e8590c"/><text x="240" y="196" fill="#fff">4</text>
+    <text x="316" y="196" fill="#2f3a2b">Field</text><text x="298" y="234" font-size="14" fill="#2f3a2b">sitting, sticks</text>
+  </g>
+  <g stroke="#e8590c" stroke-width="3" fill="none"><path d="M190 98 h18 m-8 -6 l8 6 l-8 6"/><path d="M298 146 Q 200 160 110 158 m8 -8 l-8 8 l8 6"/><path d="M190 208 h18 m-8 -6 l8 6 l-8 6"/></g>
+  <text x="200" y="284" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Same load you will hunt with</text>
+</svg>

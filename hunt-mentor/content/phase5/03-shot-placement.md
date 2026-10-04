@@ -11,6 +11,17 @@ checked: 2026-10-01
 
 ## Key points
 
+```steps Find the spot in 3 steps
+sk-aim-1 | Find the near front leg.
+sk-aim-2 | Slide straight up its back edge.
+sk-aim-3 | Stop one third up the chest.
+```
+
+- Aim for both lungs, just behind the shoulder (85%).
+- Broadside is best, quartering away is second (85%).
+- No head, neck or rear end shots (85%).
+
+```more all key points
 - The target is the heart and lungs: in the chest, just behind the front shoulder, about one third of the way up from the bottom of the chest (85%).
 - Broadside is the best angle for deer, elk, moose and bear. Quartering away is second (85%).
 - Aim for both lungs, not the heart. The lungs are the biggest vital target and give the most room for error (85%).
@@ -18,9 +29,17 @@ checked: 2026-10-01
 - Head and neck shots: small targets, small margin, lost animals. Not for you (85%).
 - Bears: the heart sits low, the lungs reach well back, and the hair fools your eye. Halfway up, tight behind the shoulder (85%).
 - After the hit, read the reaction and the blood. It tells you how long to wait (85%).
+```
 
 ## Where the vitals are
 
+```diagram sk-organs
+```
+
+- Lungs fill the chest behind the shoulder: your target (85%).
+- Heart sits low. Liver and paunch behind the lungs are slow kills (85%).
+
+```more each organ in detail
 - **Heart:** low in the chest, just above and slightly behind the front leg. Small and deadly (85%).
 - **Lungs:** fill the chest above and behind the heart. On a deer the pair is about the size of a volleyball (75%).
 - **Shoulder bones:** the shoulder blade and upper leg bone sit over the front of the chest. A .308 bullet breaks them. An arrow does not (85%).
@@ -28,9 +47,17 @@ checked: 2026-10-01
 - **Spine:** runs along the top of the back, a little below the hair line. A hit drops the animal. A near miss above it is a clean miss (75%).
 - **Paunch:** behind the liver. Stomach and guts. A hit there is a slow death and a hard track (85%).
 - Hunter Ed's rule: find the near front leg, go straight up its back edge, aim one third of the way up from the bottom of the chest (85%).
+```
 
 ## The three angles
 
+```anim sk-angles Watch the bullet line as the deer turns.
+```
+
+- Broadside: best. Quartering away: good, exit the far shoulder (85%).
+- Quartering toward: wait for the turn (Tip). Facing away: never (85%).
+
+```more the angle table and how to tell
 | Angle | What you see | Rifle aim point | Beginner call |
 |---|---|---|---|
 | Broadside | Full side, both front legs lined up | Behind the shoulder, one third up | Best shot (85%) |
@@ -41,36 +68,54 @@ checked: 2026-10-01
 - Quartering to: a light bullet can deflect off the shoulder bones of elk, deer or a big bear (85%). Beginners wait for the turn (Tip).
 - Test for broadside: can you see the roundness of the far hip, or the far shoulder? Then it is quartering, not broadside (70%).
 - The animal moves. The aim point moves with it. Decide the angle, then decide the spot (Tip).
+```
 
 ## Deer
 
 ```diagram vitals-deer
 ```
 
+- Up the back of the front leg, one third up the chest (85%).
+- Wait for the near leg to step forward (85%).
+- Vital zone with margin: about 20 to 25 cm (8 to 10 in) (75%).
+
+```more deer details
 - Broadside: straight up the back of the front leg, one third up the chest. Both lungs, top of the heart (85%).
 - Quartering away: aim at the off shoulder. The bullet enters behind the ribs and crosses both lungs (85%).
 - Quartering to: front of the near shoulder. Not for your first season (Tip).
 - Wait for the near leg to step forward. It opens the chest (85%).
 - Mule deer in the rut carry thick necks and shoulders. Keep the aim behind the shoulder, not in it (75%).
 - Vital zone with margin: about 20 to 25 cm (8 to 10 in) (75%).
+```
 
 ## Moose
 
 ```diagram vitals-moose
 ```
 
+- Same spot: behind the front leg, one third up (85%).
+- The hump fools you: aim lower than instinct says (65%).
+- Moose seldom drop. Wait a few minutes, then follow up quietly (85%).
+
+```more moose details
 - Same rule: just behind the front leg, one third up the body. Both lungs, maybe the heart (85%).
 - The heart and lung zone is about the size of a basketball, the largest vital zone of any animal you will hunt (85%).
 - The trap: the hump reads as the top of the animal, so hunters centre the chest below it and hit above the lungs. Aim lower than instinct says (65%).
 - Moose seldom drop in their tracks and may show no sign of a hit. Wait a few minutes, then follow up every shot quietly (85%).
 - Pushed right away, a wounded moose can travel a long way before dying (85%).
 - Look at what is behind and below the moose. A moose that runs 30 m into a beaver pond is a brutal recovery (Tip).
+```
 
 ## Elk
 
 ```diagram vitals-elk
 ```
 
+- Up the front leg, one third to one half up the chest (85%).
+- Aim for the lungs, not the heavy shoulder blade (65%).
+- Quartering away: far shoulder. Never the paunch (85%).
+
+```more elk details
 - Aim spot: up the back of the front leg, one third to one half up the chest. Centre of the lungs or slightly lower (85%).
 - Elk are three times a deer. Thicker skin, heavier bone, a bigger paunch (85%).
 - The shoulder blade sits farther back and up to 2.5 in (6 cm) thick on a bull. Aim for the lungs, slightly forward of where instinct pulls you, not for the heart (65%).
@@ -78,12 +123,18 @@ checked: 2026-10-01
 - Head and neck shots: avoid. More wounded, unrecovered elk (85%).
 - Both lungs hit: bulls usually go down within 100 m. One lung: they can go hundreds of metres (65%).
 - Bullet for elk: the ammo session lists 178 to 180 gr bonded, partition or copper loads (65%).
+```
 
 ## Black bear
 
 ```diagram vitals-bear
 ```
 
+- Halfway up the body, tight behind the shoulder, near leg forward (85%).
+- Hair and fat make the bear look bigger than it is (70%).
+- No shoulder or head shots. Thin blood trails: mark where it went (85%).
+
+```more black bear details
 - A bear is built differently. The chest is compressed front to back, the shoulder sits farther forward, the hair is long and the fat is thick (85%).
 - Fat makes up 2.5 to 5 cm of the body and the hair adds another 8 to 10 cm. The bear looks bigger than it is (70%).
 - **Low:** the heart sits low in the chest, behind the shoulder. **Back:** the lungs reach past the middle of the body (70%).
@@ -95,9 +146,17 @@ checked: 2026-10-01
 - Shoulder shots: not recommended. Heavy bone, and a hit ahead of the shoulder misses the vitals (85%).
 - Head shots: not recommended. The skull is dense and sloped, bullets glance off (85%).
 - Hair and fat hide the wound. Bears leave thin blood trails, so mark exactly where it stood and where it went (85%).
+```
 
 ## When NOT to shoot
 
+```diagram sk-no-shoot
+```
+
+> [!warn]
+> Not sure of the angle, the range or the backstop? That is a no. The animal walks, you hunt tomorrow.
+
+```more why each one is a no
 - **Facing straight on.** Small target between the shoulders, lots of bone, ruins meat. Hunter Ed: rarely a clean kill (85%).
 - **Walking straight away, the "Texas heart shot".** No vitals in reach, guts and hams in the way. Never (85%).
 - **Running.** Hard to hit a vital on a moving animal. Wait for it to stop (85%).
@@ -107,21 +166,37 @@ checked: 2026-10-01
 - **Another animal behind it.** The bullet exits. The second animal is your bullet too (Tip).
 - **Lying down or sitting.** The vitals are hidden or twisted. Outdoor Canada's bear rule, and it holds for deer (70%).
 - Whistle or grunt softly. A walking moose often stops and turns to the sound. Deer often do the same (Tip).
-
-> [!warn]
-> Not sure of the angle, the range or the backstop? That is a no. The animal walks, you hunt tomorrow.
+```
 
 ## Neck and head shots
 
+| Target | Size | Call |
+|---|---|---|
+| Brain | Small, moving | No |
+| Spine in the neck | Pencil sized | No |
+| Lungs | Volleyball | Yes |
+
+- Miss the spine by a few centimetres: a wounded animal (Tip).
+- Hunter Ed discourages neck, head and spine shots (85%).
+
+```more neck and head shot details
 - A well placed neck shot can drop an animal instantly (85%). Miss the spine by a few centimetres and the animal leaves with a flesh wound or a broken jaw (Tip).
 - The brain is small and moving. The spine is a pencil sized target under thick muscle and hide (85%).
 - The only big artery in the neck is the carotid, about the thickness of a pencil (85%).
 - Bear skulls are dense and sloped. Bullets glance off (85%).
 - Hunter Ed: neck, head and spine shots are discouraged because the margin for error is small and animals are lost (85%).
 - Experienced shooters use them at close range with a rest. You are not there yet (Tip).
+```
 
 ## After the hit, by zone
 
+```diagram sk-blood-chart
+```
+
+- Flag the exact spot where it stood before you move (85%).
+- Liver or gut: back out quietly and wait (85%).
+
+```more reaction, distance and wait by zone
 | Zone | What you see | Blood sign | How far | Wait |
 |---|---|---|---|---|
 | Heart | Bolts, often a jump or kick | Bright red, lots | Deer: rarely over 50 m (85%) | 30 min (85%) |
@@ -135,6 +210,7 @@ checked: 2026-10-01
 - Back out quietly on a liver or gut hit. Pushing the animal early is how it gets lost (85%).
 - Bear: thin trail even on a good hit. Go to where you last heard it. A double lung bear usually dies within sight or sound (70%).
 - The after the shot session covers tracking, tagging and field dressing.
+```
 
 ```checklist s5-before-trigger
 Angle: broadside or quartering away
@@ -145,19 +221,31 @@ Position: sitting or sticks, not offhand
 Breath half out, squeeze, follow through
 ```
 
+## Grandpa's rule and mistakes
+
+| Mistake | Fix |
+|---|---|
+| Shooting at the whole animal | Pick a spot one third up |
+| "Almost broadside" quartering to | Wait for the turn |
+| Walking straight to a gut shot deer | Back out, wait hours |
+
 > [!rule]
 > Pick a hair, not a deer. Shoot at an animal and you hit an animal somewhere. Shoot at a hair and you hit the lungs.
-
-> [!mistake]
-> - Shooting at the whole animal instead of a spot one third up behind the shoulder.
-> - Taking the quartering to shot because the deer was "almost broadside".
-> - Walking straight to a gut shot animal and pushing it off the property.
 
 > [!field]
 > Say the angle out loud: "Broadside." Say the spot: "Behind the shoulder, one third up." Then squeeze. Three words, then a bullet.
 
+```more 3 common mistakes
+- Shooting at the whole animal instead of a spot one third up behind the shoulder.
+- Taking the quartering to shot because the deer was "almost broadside".
+- Walking straight to a gut shot animal and pushing it off the property.
+```
+
 ## Sources
 
+- Hunter education, state agencies and bowhunter guides 85%. Magazines 65 to 70%. Checked 2026-10-01.
+
+```more all sources
 - [Hunter Ed: shot angles, broadside](https://www.hunter-ed.com/national/studyGuide/Shot-Angles-Broadside/201099_92932/), [quartering away](https://www.hunter-ed.com/national/studyGuide/Shot-Angles-Quartering-Away/201099_92933/), [quartering toward](https://www.hunter-ed.com/national/studyGuide/Shot-Angles-Quartering-Toward/201099_92934/), [head on](https://www.hunter-ed.com/national/studyGuide/Shot-Angles-Head-On/201099_92935/), [rear end](https://www.hunter-ed.com/national/studyGuide/Shot-Angles-Rear-End/201099_92936/), read directly, checked 2026-10-01 (85%)
 - [Hunter Ed blog: deer anatomy for hunters](https://www.hunter-ed.com/blog/hunting-basics-understanding-deer-anatomy-for-a-successful-hunt/), vitals, blood sign, run distances, wait times, read directly, checked 2026-10-01 (85%)
 - [Hunter Ed blog: knowing where to shoot a deer](https://www.hunter-ed.com/blog/hunter-tip-knowing-where-to-shoot-a-deer/), heart shot distance, read directly, checked 2026-10-01 (85%)
@@ -172,6 +260,7 @@ Breath half out, squeeze, follow through
 - [Grand View Outdoors: black bear shot placement, Clay Newcomb](https://www.grandviewoutdoors.com/bear/deadly-black-bear-shot-placement-for-bowhunters), heart low, hair and fat, read directly, checked 2026-10-01 (65%)
 - [onX Hunt: where to shoot an elk](https://www.onxmaps.com/hunt/blog/where-to-shoot-an-elk), shoulder blade, run distances, broadside test, read directly, checked 2026-10-01 (65%)
 - [Victory Ridge Sports: where to shoot a moose](https://victoryridgesports.ca/where-to-shoot-a-moose/), hump trap, read directly, checked 2026-10-01 (65%)
+```
 
 ```quiz
 [

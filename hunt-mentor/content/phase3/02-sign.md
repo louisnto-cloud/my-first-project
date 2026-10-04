@@ -7,15 +7,34 @@ minutes: 15
 checked: 2026-10-01
 ---
 > [!why]
-> Animals leave more than tracks. Scat, beds, rubs and chewed twigs tell you what lives here, what it eats, and whether it was here this morning or last month.
+> Scat, beds, rubs and chewed twigs tell you what lives here, what it eats, and when it was here.
 
+```gallery
+hab-deer-pellets-fresh | Fresh deer pellets: dark, shiny, moist.
+hab-deer-rub | A buck rub, knee to waist high.
+hab-bear-scat-berries | Bear scat full of berries.
+hab-elk-wallow | Elk wallow: a muddy rut pit.
+```
+
+- Sign is everything an animal leaves except the track.
+- Gloves and a stick for scat, never bare hands (Tip).
+
+```more what this session covers
 - Sign is everything an animal leaves behind except the track itself.
 - This session: scat by species, beds, rubs, scrapes, wallows, browse lines, hair on fences, grouse sign, kill sites, and how to judge freshness.
 - Tracks are in [Tracks](#/s/tracks). Where sign adds up to a trail or a funnel is in [Trails and funnels](#/s/funnels).
 - Carry nitrile gloves and a stick. Do not handle scat bare handed (Tip).
+```
 
 ## Scat: hoofed animals and hare
 
+```diagram sg-scat-hoofed
+```
+
+- Size overlaps: check the tracks beside the pile (Tip).
+- Piles are not a count of deer (70%).
+
+```more the full pellet table
 | Animal | Shape and size | Notes |
 |---|---|---|
 | Deer (both) | Oval pellets about 1 to 1.5 cm long, in piles (70%) | Summer on green feed: soft clumps. Fall and winter: firm separate pellets (70%) |
@@ -26,9 +45,22 @@ checked: 2026-10-01
 - Deer drop about 13 to 34 pellet groups a day, so piles are not a count of deer (70%).
 - Pellet size overlaps between a big deer and a small elk. Look at the tracks beside the pile (Tip).
 - Mule deer and white tail pellets look the same (60%).
+```
+
+```gallery
+hab-elk-pellets | Elk pellets, boot for scale.
+hab-deer-pellets-old | Old deer pellets: dry, pale, crumbly.
+```
 
 ## Scat: predators and grouse
 
+```diagram sg-scat-predators
+```
+
+- Deer hair and bone: wolf or cougar. Mouse hair: coyote (70%).
+- Big fresh berry scat on the trail: go loud (Tip).
+
+```more the full predator table
 | Animal | Shape and size | Contents |
 |---|---|---|
 | Black bear | Tube about 4 to 6 cm across and 13 to 30 cm long, often a loose pile in berry season (65%) | Berries, grass, insect parts, hair (70%) |
@@ -41,18 +73,43 @@ checked: 2026-10-01
 - Wolf scat usually holds deer sized hair and bone. Coyote scat holds mouse sized hair (70%).
 - Fresh bear scat draws flies within hours, then lightens and cracks as it dries (65%).
 - Big fresh bear scat full of berries on a trail: a bear fed here in the last day. Go loud (Tip).
+```
+
+```gallery
+hab-bear-scat-okanagan | Black bear scat on a trail, full of seeds and skins.
+```
 
 ## Aging scat
 
+```diagram sg-scat-age
+```
+
+- Wet and shiny: hours. Faded with moss: weeks (60%).
+- Mixed ages in one spot: a place used again and again (Tip).
+
+```more every aging clue
 - Hours: wet, shiny, warm, strong smell, flies (60%).
 - A day or two: dull surface, a dry crust, still soft inside (60%).
 - Days to a week: dry, lighter colour, cracks (65%).
 - Weeks: faded, crumbling, moss or mould, insect holes (60%).
 - Cold slows all of this. Frozen pellets in November can look fresh for a week (Tip).
 - Pellets in a pile that are all one colour and one age were dropped at once. A mix of ages means a bed or a feeding spot used again and again (Tip).
+```
+
+```gallery
+hab-deer-pellets-fresh | Fresh: dark, shiny, moist.
+hab-deer-pellets-old | Old: dry, pale, crumbly.
+```
 
 ## Beds
 
+```diagram sg-bed-spot
+```
+
+- Deer bed: an oval 0.9 to 1.2 m long (70%). Elk beds are bigger, in groups (65%).
+- Warm bed means minutes. Do not linger (Tip).
+
+```more bed sizes and the snow test
 - A deer bed is an oval of flattened grass, duff or snow about 0.9 to 1.2 m long, often with pellets and a few hairs (70%).
 - Elk beds are bigger, about 1.2 to 1.5 m, and come in groups (65%).
 - Moose beds are bigger again and often alone, in willow or timber near water (60%). Typical size: VERIFY.
@@ -60,12 +117,33 @@ checked: 2026-10-01
 - In snow a used bed melts and refreezes into an icy bowl. A bed with a dry crisp floor and no refreeze is recent (65%).
 - Warm bed test: put your hand in it. Warm means minutes. Do not sit down to think about it; the animal may be watching you (Tip).
 - Bedding areas have many beds, trails between them, and pellets of mixed age (Tip).
+```
+
+```gallery
+g-md-does-bedded | Bedded deer show only heads and ears.
+g-md-buck-bedded | A bedded buck: big rack, body hidden.
+```
 
 ## Rubs and scrapes
+
+```diagram sg-rub-height
+```
+
+- The rubbed side faces where the buck came from (60%).
+- A line of rubs is his road between bed and feed (60%).
+
+```photo hab-deer-rub
+```
+
+## Scrapes
 
 ```diagram rubs-scrapes
 ```
 
+- [[Scrape]]: pawed bare dirt under a chewed licking branch (65%).
+- White tails scrape, mule deer rarely do (60%).
+
+```more rub and scrape details
 - A [[Rub]] is bark stripped from a sapling by a buck's antlers and forehead. Most rubs sit about 30 to 105 cm above the ground (65%).
 - Rub height says more about buck size than tree size. A rub centred 75 cm or higher suggests a mature buck (60%).
 - Tree thickness still helps: 2.5 to 5 cm trees are often yearlings; over 10 cm is usually an older buck (60%).
@@ -74,27 +152,58 @@ checked: 2026-10-01
 - A [[Scrape]] is a pawed bare oval of dirt under an overhanging **licking branch** about 1.2 to 1.5 m up (65%). The buck chews the branch and urinates in the scrape (70%).
 - About 80% of scraping in the north happens from mid October to mid November (65%). White tails scrape; mule deer rarely do (60%).
 - Fresh scrape: dark moist soil, pawed leaves thrown back, a urine smell, branch tip chewed (Tip).
+```
 
 ## Moose and elk rut sign
 
+```gallery
+hab-elk-wallow | Elk wallow: muddy, stinks of urine.
+hab-elk-rub | Elk rub: bark stripped above your head.
+hab-moose-willows | Moose browse willow at chest height.
+```
+
+- Moose dig rut pits, elk roll in wallows (65%).
+- Sharp ammonia smell and muddy water: used within hours (60%).
+
+```more rut pits, wallows and Region 3 notes
 - Bull moose dig **rut pits**: a pawed hole about 45 to 105 cm long and 8 to 15 cm deep, soaked with urine, strong smell (65%).
 - Bulls thrash shrubs and small trees with their antlers many times an hour in the rut. Look for broken, stripped willow and alder (65%).
 - Bull elk **wallow**: a muddy depression the size of a bathtub at a seep or spring, stinking of urine, with mud rubbed on nearby trees (65%).
 - A wallow with muddy water, wet edges and a sharp ammonia smell was used within hours (60%).
 - Elk rub and strip bigger trees than deer, often above your head (Tip).
 - Region 3 moose and elk: most hunts are [[LEH]] (Limited Entry Hunting). Spike fork bull moose general seasons exist in some [[MU]] (Management Unit) areas (95%). Details in [The rut](#/s/the-rut).
+```
 
 ## Browse and browse lines
 
+```diagram sg-browse-cut
+```
+
+- Torn end: deer. Clean 45 degree cut: hare (75%).
+
+```diagram sg-browse-line
+```
+
+- The height of the line tells you who ate (65%).
+
+```more browse details and 3 plants to learn
 - Deer have no upper front teeth. They **tear** twigs, leaving a ragged, shredded end (75%).
 - Hares and rabbits **cut** twigs clean at 45 degrees, like pruning shears, on stems under about 1.2 cm (75%).
 - Fresh browse: the torn end is pale green or white and moist. Old browse: grey and dry (Tip).
 - A **browse line** is the height below which every twig is eaten. Deer reach to about 1.2 m. A line at 1.5 to 1.8 m says elk. 1.8 to 2.4 m says moose (65%).
 - Shrubs that look clipped into a hedge mark heavy winter use. You are standing on [[Winter range]] (65%).
 - Learn three plants first: saskatoon, red osier dogwood and Oregon grape. Browsed saskatoon in October means deer are feeding here now (Tip).
+```
 
 ## Hair on fences and crossings
 
+```diagram sg-fence-crossing
+```
+
+- Same crossing, night after night (65%).
+- Fences often mean private land: consent first (95%).
+
+```more crossing details and the land rule
 - Deer and elk cross fences at the same spots. Look for a hard packed path running straight at the wire and a polished, sagging top strand (65%).
 - Hair caught in the barbs is the giveaway. Brown or grey deer hair, coarse black or brown bear hair (65%).
 - Hair in the barbs is usually a doe, fawn or young buck going **through**. A big buck often jumps and leaves nothing (60%).
@@ -103,17 +212,36 @@ checked: 2026-10-01
 
 > [!warn]
 > Fences often mean private or leased land. Cultivated land, and grazing leases with livestock on them, need consent to hunt (95%). See [BC rules](#/s/bc-rules).
+```
 
 ## Grouse: feathers, dusting bowls, roosts
 
+```gallery
+hab-grouse-snow-roost | Snow roost hole: a grouse burst out here.
+hab-grouse-wing-prints | Wing prints where a grouse took off.
+hab-grouse-tracks-snow | Ruffed grouse tracks in soft snow.
+```
+
+- Dusting bowl: a 20 cm scrape in fine dirt with feathers (65%).
+- A pile of droppings marks a night roost (70%).
+
+```more bowls, roosts, feathers and seasons
 - A dusting bowl is a round to oval scrape in dry fine soil, about 20 cm across, often on a trail or road edge, with a few feathers in it (65%).
 - Grouse droppings in a pile mark a night roost. In winter, a hole in soft snow with a pile of droppings inside is a snow roost (70%).
 - Feathers: a hawk or owl plucks and leaves whole feathers with clean quills. A fox or coyote bites, so quills are chewed or cut (60%).
 - A few loose feathers and a dusting bowl near Douglas fir, aspen and rose thickets: come back with the shotgun (Tip).
 - Grouse are upland game birds in the [[Synopsis]] with their own seasons and limits. Check your MU before you carry the shotgun (85%).
+```
 
 ## Kill sites and predator sign
 
+```diagram sg-kill-sites
+```
+
+- Covered carcass: the owner is close and coming back (75%).
+- Back out the way you came, talking loudly. Tell your brother (Tip).
+
+```more kill site details
 - Cougar: drags the kill into cover, eats the chest and organs first, then **covers it** with leaves, snow, dirt or sticks (75%). It stays nearby and feeds for 6 to 8 days (70%).
 - Wolves: the carcass is torn apart in the open, bones crushed and scattered, many tracks (60%).
 - Bears: cache by raking dirt and debris over the carcass. The ground looks rototilled. Bears defend caches (70%).
@@ -122,21 +250,37 @@ checked: 2026-10-01
 
 > [!warn]
 > A covered carcass means a cougar or bear is close and will come back. Do not touch it. Back out the way you came, talking loudly, and tell your brother where it is.
+```
 
 ## Freshness: putting it together
 
+```diagram sg-fresh-ladder
+```
+
+- Pick the freshest sign and hunt near it at dawn or dusk (Tip).
+- Lots of mixed age sign: they live here (60%).
+
+```more freshness in words
 - Fresh, minutes to hours: wet scat, warm bed, green browse ends, crisp track walls, dew knocked off grass (Tip).
 - Today: track edges still sharp, scat dull but soft, scrape dark and damp (Tip).
 - This week: dry scat, grey browse ends, track softened, bed with refrozen snow (Tip).
 - Old: faded, crumbling, moss, leaves in the track (Tip).
 - Pick the freshest sign on your walk and hunt within 300 m of it at dawn or dusk (Tip).
 - The best sign is lots of mixed age sign: the animals live here, they did not just pass through (hunter lore) (60%).
+```
 
 ## Rules that touch this session
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+| Rule | Where |
+|---|---|
+| No baiting ungulates within 200 m of homes or schools, Region 3 (95%) | page 33 |
+| No wireless camera for hunting, 1 August to 10 December (99%) | page 11, item 30 |
+| No drone on a hunting trip (99%) | page 11, item 36 |
+
+```more the rules in full
 - Region 3: it is unlawful to intentionally bait or feed ungulates within 200 m of a dwelling, school yard or playground (95%). Synopsis, Region 3 pages, page 33.
 - Province wide: it is unlawful to use a wireless camera for the purposes of hunting from 1 August to 10 December in every region except Region 1, where wireless cameras for hunting are banned all year (99%, page 20). Synopsis page 11, item 30 (2 October 2026 edition). A normal trail camera with a memory card is not a wireless camera (85%, interpretation).
 - It is unlawful to operate or possess a drone on a hunting or trapping expedition (99%). Synopsis page 11, item 36 (2 October 2026 edition).
@@ -152,6 +296,28 @@ checked: 2026-10-01
 
 > [!field]
 > On your next walk, find one pile of pellets and one bed. Age each: hours, today, this week, or old. Say why. Write it in the Journal with a photo.
+```
+
+## Grandpa's rule and mistakes
+
+```photo hab-deer-pellets-fresh Fresh sign beats a good map.
+```
+
+> [!rule]
+> Fresh sign beats a good map. Hunt where the animals told you they were this morning, not where they should be.
+
+> [!mistake]
+> - Counting pellet piles as deer. One deer makes a few dozen a day.
+> - Walking through a bedding area at noon to check for beds. You just evicted the deer.
+> - Kneeling over a cougar covered carcass to take photos.
+
+## Do this in the field
+
+```diagram sg-scat-age
+```
+
+> [!field]
+> Next walk: find one pellet pile and one bed. Age each: hours, today, this week, or old. Say why. Journal it with a photo.
 
 ## Sources
 
@@ -180,3 +346,4 @@ checked: 2026-10-01
   {"q": "A tube of scat full of deer hair and bone chips, about 3 cm across and tapered at one end. Most likely?", "options": ["Coyote", "Wolf", "Grouse"], "answer": 1, "why": "Over 2.5 cm across with deer sized hair and bone says wolf. Coyote scat is thinner and holds mouse and hare hair."}
 ]
 ```
+

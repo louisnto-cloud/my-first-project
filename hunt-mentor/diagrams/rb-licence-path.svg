@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 616" role="img" aria-label="Licence path in order. 1, CORE hunter safety course, about 21 hours, needed for most licences. 2, FWID in WILD, free, age 10 or older, one per hunter. 3, prove BC residency, renewed every three years. 4, resident hunting licence, 32 dollars or 7 dollars at 65 or older, electronic. 5, a species licence for each animal that needs one, deer 15 dollars, mailed if bought online, right away in person. 6, LEH draw, only for Limited Entry Hunting seasons. 7, for ducks or geese the federal bird permit, 17 dollars. Carry photo ID, your FWID number and every species licence, used or not." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="616" fill="#fffaf0"/>
+<text x="200" y="28" font-size="20" fill="#23261f" text-anchor="middle" font-weight="bold">What to get, in order</text>
+<rect x="10" y="46" width="380" height="56" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<circle cx="36" cy="74" r="15" fill="#e8590c"/><text x="36" y="79.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+<text x="62" y="70" font-size="16" fill="#23261f" text-anchor="start" font-weight="bold">CORE hunter safety course</text>
+<text x="62" y="90" font-size="14" fill="#2f3a2b" text-anchor="start">About 21 hours. Needed for most licences</text>
+<line x1="36" y1="102" x2="36.0" y2="110.0" stroke="#23261f" stroke-width="2.5"/><polygon points="36,116 31.7,107.0 40.3,107.0" fill="#23261f"/>
+<rect x="10" y="116" width="380" height="56" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<circle cx="36" cy="144" r="15" fill="#e8590c"/><text x="36" y="149.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+<text x="62" y="140" font-size="16" fill="#23261f" text-anchor="start" font-weight="bold">FWID in WILD</text>
+<text x="62" y="160" font-size="14" fill="#2f3a2b" text-anchor="start">Free. Age 10 or older. One per hunter</text>
+<line x1="36" y1="172" x2="36.0" y2="180.0" stroke="#23261f" stroke-width="2.5"/><polygon points="36,186 31.7,177.0 40.3,177.0" fill="#23261f"/>
+<rect x="10" y="186" width="380" height="56" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<circle cx="36" cy="214" r="15" fill="#e8590c"/><text x="36" y="219.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text>
+<text x="62" y="210" font-size="16" fill="#23261f" text-anchor="start" font-weight="bold">Prove BC residency</text>
+<text x="62" y="230" font-size="14" fill="#2f3a2b" text-anchor="start">Renew every three years</text>
+<line x1="36" y1="242" x2="36.0" y2="250.0" stroke="#23261f" stroke-width="2.5"/><polygon points="36,256 31.7,247.0 40.3,247.0" fill="#23261f"/>
+<rect x="10" y="256" width="380" height="56" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<circle cx="36" cy="284" r="15" fill="#e8590c"/><text x="36" y="289.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">4</text>
+<text x="62" y="280" font-size="16" fill="#23261f" text-anchor="start" font-weight="bold">Resident hunting licence</text>
+<text x="62" y="300" font-size="14" fill="#2f3a2b" text-anchor="start">$32 ($7 at 65 or older). Electronic</text>
+<line x1="36" y1="312" x2="36.0" y2="320.0" stroke="#23261f" stroke-width="2.5"/><polygon points="36,326 31.7,317.0 40.3,317.0" fill="#23261f"/>
+<rect x="10" y="326" width="380" height="56" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<circle cx="36" cy="354" r="15" fill="#e8590c"/><text x="36" y="359.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">5</text>
+<text x="62" y="350" font-size="16" fill="#23261f" text-anchor="start" font-weight="bold">Species licence per animal</text>
+<text x="62" y="370" font-size="14" fill="#2f3a2b" text-anchor="start">Deer $15. Online: mailed. In person: now</text>
+<line x1="36" y1="382" x2="36.0" y2="390.0" stroke="#23261f" stroke-width="2.5"/><polygon points="36,396 31.7,387.0 40.3,387.0" fill="#23261f"/>
+<rect x="10" y="396" width="380" height="56" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<circle cx="36" cy="424" r="15" fill="#8a9a6b"/><text x="36" y="429.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">6</text>
+<text x="62" y="420" font-size="16" fill="#23261f" text-anchor="start" font-weight="bold">LEH draw</text>
+<text x="62" y="440" font-size="14" fill="#2f3a2b" text-anchor="start">Only for Limited Entry Hunting seasons</text>
+<line x1="36" y1="452" x2="36.0" y2="460.0" stroke="#23261f" stroke-width="2.5"/><polygon points="36,466 31.7,457.0 40.3,457.0" fill="#23261f"/>
+<rect x="10" y="466" width="380" height="56" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<circle cx="36" cy="494" r="15" fill="#e8590c"/><text x="36" y="499.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7</text>
+<text x="62" y="490" font-size="16" fill="#23261f" text-anchor="start" font-weight="bold">Ducks or geese?</text>
+<text x="62" y="510" font-size="14" fill="#2f3a2b" text-anchor="start">Federal bird permit, $17</text>
+<rect x="10" y="536" width="380" height="66" rx="10" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200" y="562" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Carry: photo ID, FWID number,</text>
+<text x="200" y="584" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">every species licence (used or not)</text>
+</svg>

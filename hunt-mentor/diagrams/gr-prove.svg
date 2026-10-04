@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="PROVE it safe, 5 steps. P: Point the firearm in the safest available direction. R: Remove all cartridges. O: Observe the chamber. V: Verify the feeding path. E: Examine the bore for obstructions.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <g font-size="15" font-weight="bold">
+    <rect x="6" y="6" width="388" height="52" rx="8" fill="#dfe6d3"/><circle cx="34" cy="32" r="20" fill="#e8590c"/><text x="34" y="40" font-size="22" fill="#fff" text-anchor="middle">P</text><text x="64" y="30" fill="#2f3a2b">Point it the safest way</text><text x="64" y="48" font-size="14" font-weight="normal" fill="#2f3a2b">muzzle at the ground or open hillside</text>
+    <rect x="6" y="64" width="388" height="52" rx="8" fill="#dfe6d3"/><circle cx="34" cy="90" r="20" fill="#e8590c"/><text x="34" y="98" font-size="22" fill="#fff" text-anchor="middle">R</text><text x="64" y="88" fill="#2f3a2b">Remove all cartridges</text><text x="64" y="106" font-size="14" font-weight="normal" fill="#2f3a2b">magazine out, chamber emptied</text>
+    <rect x="6" y="122" width="388" height="52" rx="8" fill="#dfe6d3"/><circle cx="34" cy="148" r="20" fill="#e8590c"/><text x="34" y="156" font-size="22" fill="#fff" text-anchor="middle">O</text><text x="64" y="146" fill="#2f3a2b">Observe the chamber</text><text x="64" y="164" font-size="14" font-weight="normal" fill="#2f3a2b">look in: empty</text>
+    <rect x="6" y="180" width="388" height="52" rx="8" fill="#dfe6d3"/><circle cx="34" cy="206" r="20" fill="#e8590c"/><text x="34" y="214" font-size="22" fill="#fff" text-anchor="middle">V</text><text x="64" y="204" fill="#2f3a2b">Verify the feeding path</text><text x="64" y="222" font-size="14" font-weight="normal" fill="#2f3a2b">magazine well and tube empty</text>
+    <rect x="6" y="238" width="388" height="56" rx="8" fill="#dfe6d3"/><circle cx="34" cy="266" r="20" fill="#e8590c"/><text x="34" y="274" font-size="22" fill="#fff" text-anchor="middle">E</text><text x="64" y="262" fill="#2f3a2b">Examine the bore</text><text x="64" y="280" font-size="14" font-weight="normal" fill="#2f3a2b">no mud, snow or blockage</text>
+  </g>
+  <g fill="none" stroke="#2f3a2b" stroke-width="3">
+    <path d="M330 40 l30 -14 m-8 -2 l8 2 l-4 8"/>
+    <rect x="330" y="80" width="14" height="22" rx="2"/><path d="M356 92 h20"/>
+    <ellipse cx="350" cy="148" rx="16" ry="9"/><circle cx="354" cy="148" r="4" fill="#4a7fb0"/>
+    <path d="M330 206 h40 M360 198 l10 8 l-10 8"/>
+    <circle cx="350" cy="266" r="16"/><circle cx="350" cy="266" r="6" fill="#dfe6d3"/>
+  </g>
+</svg>

@@ -48,7 +48,7 @@ checked: 2026-10-02
 
 - Evidence of sex stays **naturally attached** to the carcass, or to one part of it, until it is home and butchered there, at a meat cutter or cold storage plant, or inspected (99%).
 - Buck: the unskinned tail **and** a testicle or part of the penis (99%).
-- Doe: the unskinned tail **and** part of the udder or teats (99%).
+- Doe: the unskinned tail **and** part of the udder and teats (99%).
 - Antlers on the head are not on the deer list. Keep the tail and sex parts even on a buck (95%).
 - Antler restricted season (like 4 point): keep the antlers naturally attached to part of the upper skull, together with the species licence, while you return from hunting (99%).
 - Do **not** cut these off during field dressing. Plan your cuts around them. Tip.

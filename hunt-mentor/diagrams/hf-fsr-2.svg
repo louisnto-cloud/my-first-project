@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Forest Service Road habit 2. A loaded logging truck comes down the road. Your car pulls right onto the shoulder and stops to let it pass.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="120" y="0" width="160" height="300" fill="#c9b79c"/>
+  <rect x="140" y="30" width="56" height="130" rx="6" fill="#8b5a2b"/>
+  <g fill="#6b4f35"><rect x="146" y="60" width="44" height="12" rx="6"/><rect x="146" y="78" width="44" height="12" rx="6"/><rect x="146" y="96" width="44" height="12" rx="6"/><rect x="146" y="114" width="44" height="12" rx="6"/></g>
+  <rect x="146" y="134" width="44" height="24" rx="4" fill="#2f3a2b"/>
+  <path d="M168 170 L168 200" stroke="#2f3a2b" stroke-width="3"/><polygon points="160,196 176,196 168,210" fill="#2f3a2b"/>
+  <rect x="236" y="190" width="36" height="60" rx="6" fill="#4a7fb0"/>
+  <path d="M220 280 C 230 250, 250 250, 254 252" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="12" y="200" font-size="15" font-weight="bold" fill="#2f3a2b">Loaded truck</text>
+  <text x="12" y="218" font-size="15" fill="#2f3a2b">coming down</text>
+  <text x="300" y="150" font-size="16" font-weight="bold" fill="#e8590c">Pull right.</text>
+  <text x="300" y="170" font-size="16" font-weight="bold" fill="#e8590c">Stop.</text>
+</svg>

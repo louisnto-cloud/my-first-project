@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" font-family="sans-serif" role="img" aria-label="Flowchart for guns in a boat in BC. Is the motor pushing the boat? Yes: every gun unloaded, no shooting. No, or no motor: a loaded gun is allowed while hunting or retrieving. For ducks and geese, also ask: is the boat still moving, even drifting from the motor? If yes, no hunting.">
+  <rect width="400" height="320" fill="#fffaf0"/>
+  <text x="200" y="22" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Guns in the boat</text>
+  <g font-size="15" font-weight="bold" text-anchor="middle">
+    <rect x="80" y="36" width="240" height="44" rx="22" fill="#2f3a2b"/><text x="200" y="64" fill="#fff">Motor pushing the boat?</text>
+    <rect x="10" y="110" width="170" height="60" rx="8" fill="#c0392b"/><text x="95" y="136" fill="#fff">Yes: all guns</text><text x="95" y="156" fill="#fff">unloaded, no shots</text>
+    <rect x="220" y="110" width="170" height="60" rx="8" fill="#8a9a6b"/><text x="305" y="134" fill="#fff">No, or no motor:</text><text x="305" y="154" font-size="14" fill="#fff">loaded OK while hunting</text>
+    <rect x="200" y="196" width="190" height="44" rx="22" fill="#4a7fb0"/><text x="295" y="216" fill="#fff">Ducks, geese: still</text><text x="295" y="233" font-size="14" fill="#fff">moving or drifting?</text>
+    <rect x="200" y="264" width="90" height="44" rx="8" fill="#c0392b"/><text x="245" y="292" fill="#fff">Yes: no</text>
+    <rect x="300" y="264" width="90" height="44" rx="8" fill="#2f6b3a"/><text x="345" y="292" fill="#fff">Still: OK</text>
+  </g>
+  <g stroke="#2f3a2b" stroke-width="3" fill="none"><path d="M150 80 L100 108"/><path d="M250 80 L300 108"/><path d="M305 170 V194"/><path d="M260 240 L250 262"/><path d="M330 240 L340 262"/></g>
+  <text x="20" y="200" font-size="14" fill="#2f3a2b">Safest habit (Tip):</text><text x="20" y="218" font-size="14" fill="#2f3a2b">cased and unloaded</text><text x="20" y="236" font-size="14" fill="#2f3a2b">while moving. Shoot</text><text x="20" y="254" font-size="14" fill="#2f3a2b">from shore</text>
+</svg>

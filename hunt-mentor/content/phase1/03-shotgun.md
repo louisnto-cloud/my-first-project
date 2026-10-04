@@ -7,18 +7,32 @@ minutes: 15
 checked: 2026-10-01
 ---
 > [!why]
-> One shotgun has to do ducks with steel shot and quail and grouse. Pick the action, chokes and fit right once.
+> One 12 gauge does ducks with steel and grouse and quail. Know its parts, action, chokes and plug.
 
 ## The short answer
 
+```diagram gr-shotgun-parts
+```
+
+- One **12 gauge**, **3 inch chamber**, screw in chokes (70%).
+- A **gas semi auto** is softest with heavy steel loads (70%).
+
+```more budget and the full short answer
 - You need **one 12 gauge** with a **3 inch chamber** and screw in chokes (70%).
 - That gun covers ducks with steel and upland birds (70%).
 - A **gas semi auto** is the softest shooting choice with heavy steel loads (70%).
 - Budget: entry about $420 to $900, mid about $850 to $1,870, premium about $1,950 to $2,900 (65%). Price checked 2026-10-01.
 - Prices are in CAD (Canadian dollars), from search previews of retailer pages. Verify at checkout.
+```
 
 ## Action types
 
+```diagram gr-shotgun-actions
+```
+
+- Pump kicks most. Gas semi auto kicks least (70%).
+
+```more the full table
 | Action | Pros | Cons |
 |---|---|---|
 | Pump | Cheapest, simple, cycles any load | Most felt recoil. Beginners short stroke it under stress |
@@ -30,9 +44,16 @@ checked: 2026-10-01
 - Gas semi auto: spreads recoil, so 3 inch steel feels softer (70%).
 - Inertia semi auto: stays clean and runs in cold weather (70%).
 - Over/under: weak as a one gun for ducks plus upland, check steel rating (65%).
+```
 
 ## Gauge, chamber, barrel
 
+```diagram gr-shells
+```
+
+- 3 inch chamber fires 2 3/4 and 3 inch shells (75%). 28 inch barrel for one gun (65%).
+
+```more 20 gauge, 3 1/2 inch, finish
 - **Gauge:** 12 gauge has the widest choice of steel loads in every shop (70%).
   - 20 gauge kicks less but steel loads are weaker for ducks (65%).
 - **Chamber:** 3 inch is enough. It fires 2 3/4 inch and 3 inch shells (75%).
@@ -40,25 +61,39 @@ checked: 2026-10-01
 - **Barrel:** 28 inch is a good compromise for one gun (65%).
   - 26 inch swings faster in thick grouse timber (65%).
 - **Finish:** synthetic stock and a coated or camo finish for rain and salt (Tip).
+```
 
 ## Chokes and steel shot
 
-- A [[Choke]] is a short tube at the muzzle. It squeezes the shot to control spread (85%).
+```anim gr-choke-spread Tighter choke, tighter pattern.
+```
+
+- A [[Choke]] squeezes the shot at the muzzle (85%).
+- With steel: **nothing tighter than Modified** unless marked steel safe (75%).
+
+```more how chokes work, numbers
+- A choke is a short tube at the muzzle. It squeezes the shot to control spread (85%).
 - Tighter choke means a smaller, denser pattern at range (85%).
 - Steel is hard. It does not squeeze like lead. Tight chokes can damage the choke or barrel (75%).
 - Rule of thumb: **nothing tighter than Modified with steel** unless the choke says steel safe (75%).
 - IC (Improved Cylinder) for ducks over decoys and close grouse. M (Modified) for longer passing ducks (70%).
-
-```diagram chokes
-```
-
 - Squeeze in a 12 gauge: IC about 0.25 mm (0.010 in), M about 0.5 mm (0.020 in) (70%).
 - Full about 0.76 to 1 mm (0.030 to 0.040 in). Makers differ (70%).
 - Classic benchmark at 37 m (40 yd): Cylinder 40%, IC 50%, M 60%, Full 70% of pellets inside a 76 cm (30 in) circle (70%).
 - You test your own gun on paper in Session 5 (patterning).
+```
+
+```diagram chokes
+```
 
 ## Steel and chokes by brand
 
+```diagram gr-choke-steel
+```
+
+- **Your gun's manual wins** (Tip). Learn the notches or stamps on your tubes (Tip).
+
+```more what each maker says
 | Brand | What the maker says about steel (general) |
 |---|---|
 | Benelli | No tighter than Modified with steel (80%) |
@@ -69,19 +104,35 @@ checked: 2026-10-01
 | Remington | Full only if the tube says "for steel or lead shot" (75%) |
 | Franchi, Winchester | VERIFY in the owner's manual |
 
+- IC means Improved Cylinder.
 - These are general summaries of maker guidance. **Your gun's manual wins** (Tip).
 - Choke tubes are often stamped or notched. Learn your marks before the hunt (Tip).
+```
 
 ## Fit
 
+```diagram gr-fit
+```
+
+- Try guns on **in your hunting jacket** (Tip).
+
+```more length of pull and shims
 - LOP (length of pull) is trigger to the end of the stock. Most adults need about 14 to 14.75 inches (65%).
 - A winter jacket makes the stock feel longer. Try guns on **in your hunting jacket** (Tip).
 - Beretta A300 Ultima: about 13.8 inch stock plus 2 spacers to lengthen it (70%).
 - Quick test: mount the gun with eyes shut, open them. You should look straight down the rib (Tip).
 - Many semi autos come with shims to change drop and cast. Ask the shop to set it (Tip).
+```
 
 ## The 3 shell plug
 
+```diagram gr-plug
+```
+
+- Ducks and geese: **3 shells max**, one piece plug (99%).
+- Quail and grouse in BC: plug in too, magazine 2 max (99%).
+
+```more the exact law and non toxic shot
 > [!law]
 > For migratory birds (ducks, geese), the shotgun may hold **no more than 3 shells** in magazine and chamber combined (99%).
 > The [[Magazine plug]] must be one piece and removable only by taking the gun apart (99%).
@@ -90,6 +141,7 @@ checked: 2026-10-01
 - Most new semi autos and pumps ship with the plug installed. Check before every duck hunt (Tip).
 - Quail and grouse too: in BC a pump, semi auto or other repeating shotgun needs a plug so the magazine holds no more than 2 shells (99%). Leave it in all season (Tip).
 - [[Non toxic shot]] (steel, bismuth, tungsten, tin) is required for ducks, geese, coots and snipe (99%). Pigeons and doves are the exception (99%).
+```
 
 ## Buying used: checklist
 
@@ -107,11 +159,11 @@ Serial number present and readable
 Show your PAL (Possession and Acquisition Licence). Seller checks it with the RCMP (Royal Canadian Mounted Police)
 ```
 
+```more private sale
 - For a private sale, the seller must confirm your PAL with the RCMP and get a reference number (75%). Exact steps: VERIFY.
+```
 
 ## Entry tier
-
-Price checked 2026-10-01. Search preview prices, verify at checkout.
 
 | Model | Action | CAD price | Certainty |
 |---|---|---|---|
@@ -121,9 +173,9 @@ Price checked 2026-10-01. Search preview prices, verify at checkout.
 | Stoeger M3000 | Inertia semi auto | $725 to $890 | (65%) |
 | Mossberg 835 Waterfowl | Pump, 3 1/2 inch | $809.99 | (65%) |
 
-## Mid tier
+- CAD (Canadian dollars). Price checked 2026-10-01. Search preview prices, verify at checkout.
 
-Price checked 2026-10-01. Search preview prices, verify at checkout.
+## Mid tier
 
 | Model | Action | CAD price | Certainty |
 |---|---|---|---|
@@ -133,9 +185,9 @@ Price checked 2026-10-01. Search preview prices, verify at checkout.
 | Winchester SX4 Waterfowl | Gas semi auto | $1,367 to $1,570 | (65%) |
 | Browning Silver Field | Gas semi auto | $1,630 to $1,865 | (65%) |
 
-## Premium tier
+- CAD (Canadian dollars). Price checked 2026-10-01. Search preview prices, verify at checkout.
 
-Price checked 2026-10-01. Search preview prices, verify at checkout.
+## Premium tier
 
 | Model | Action | CAD price | Certainty |
 |---|---|---|---|
@@ -144,26 +196,33 @@ Price checked 2026-10-01. Search preview prices, verify at checkout.
 | Beretta A400 Xtreme Plus | Gas semi auto | $2,515 to $2,760 | (65%) |
 | Benelli Montefeltro Silver | Inertia semi auto | $2,595 to $2,710 | (65%) |
 
+- Premium buys softer recoil and finish, not more ducks (Tip).
+
+```more price note
+- CAD (Canadian dollars). Price checked 2026-10-01. Search preview prices, verify at checkout.
 - Premium buys softer recoil, better finish and resale. It does not buy more ducks (Tip).
+```
 
 > [!lean]
-> A **Beretta A300**, gas semi auto, 12 gauge, 3 inch, 28 inch barrel.
-> Outlander if it fits you, Ultima if you need the adjustable stock. About $1,120 to $1,525.
-> Soft recoil with steel, simple to clean, wide shop support. Try the Winchester SX4 and Stoeger M3000 side by side and buy the one that fits.
+> A **Beretta A300**, gas semi auto, 12 gauge, 3 inch, 28 inch barrel. About $1,120 to $1,525.
+> Outlander if it fits, Ultima if you need the adjustable stock. Try the SX4 and M3000 side by side too.
 
 > [!rule]
-> Buy the gun that fits, not the gun that wins the magazine test. A gun that fits you kills birds.
+> Buy the gun that fits, not the gun that wins the magazine test.
 
 > [!mistake]
-> - Shooting steel through a Full choke that is not marked steel safe.
-> - Pulling the plug for quail. BC law needs it for all bird hunting (99%).
-> - Trying the gun on in a T shirt, then hunting in a thick jacket.
+> - Steel through a Full choke not marked steel safe.
+> - Pulling the plug for quail. BC law needs it (99%).
+> - Fitting the gun in a T shirt, hunting in a thick jacket.
 
 > [!field]
-> At the shop: wear your hunting jacket, mount 3 guns 10 times each, and ask which chokes come in the box.
+> At the shop: wear your hunting jacket, mount 3 guns 10 times each, ask which chokes come in the box.
 
 ## Sources
 
+- Plug and shot rules read directly in federal and BC law (99%). Gear, chokes and prices: secondary sources (65 to 80%).
+
+```more all sources
 - [Migratory Birds Regulations, 2022 (SOR/2022-105), full text](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html), read directly, current to 2026-09-21: s. 37 (3 shells, one piece plug, detachable magazine), s. 38 (non toxic shot, pigeon and dove exceptions). Checked 2026-10-02 (99%)
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly. Printed p. 12 (shotgun plug), p. 13 (note 4, shot ban notice). Checked 2026-10-02 (99%)
 - [Wildlife Act, RSBC 1996 c. 488](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96488_01), s. 26(1)(h) (plug rule for pump, repeating and auto loading shotguns), read directly, current to 22 September 2026. Checked 2026-10-02 (99%)
@@ -173,6 +232,7 @@ Price checked 2026-10-01. Search preview prices, verify at checkout.
 - Action pros and cons: Field and Stream, Impact Guns, Ducks Unlimited, via Hunt Mentor gear research 2026-10-01 (70%)
 - Retail prices: search previews of Canadian retailer pages, price checked 2026-10-01 (65%)
 - Note: check your own gun's manual for choke and steel rules.
+```
 
 ```quiz
 [

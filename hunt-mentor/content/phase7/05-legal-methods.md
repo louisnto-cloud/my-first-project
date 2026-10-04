@@ -9,18 +9,27 @@ checked: 2026-10-03
 > [!warn]
 > Study aid only. The official regulations are the law.
 
-- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
+```diagram rb-methods-grid
+```
 
 > [!why]
 > The right animal in the right place is still illegal with the wrong gun, the wrong shell or at the wrong hour.
+
+```more what this session covers
+- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
 
 - This session carries the Legal Hunting Methods rules from printed pages 12 and 13: the firearm rules, the full methods table, all 8 notes, the snare line, the five bow classes and the shot ban notice (99%).
 - It also gathers the method rules from the "It's Unlawful" list on pages 11 and 12: hunting hours, lights, infrared optics, calls, decoys and bait. The full list is in the Rule Book session "it is unlawful" (99%).
 - Dogs and falconry from page 12 are here too (99%).
 - The provincial bag limit column of the page 13 table is in the Rule Book bag limits session (99%).
+```
 
 ## Firearm rules, page 12
 
+```diagram rb-deer-gun-flow
+```
+
+```more the page 12 words
 > [!law] Legal Hunting Methods, Firearms, page 12
 > "It is unlawful to hunt with a firearm that has an electronically controlled firing mechanism."
 >
@@ -34,9 +43,16 @@ checked: 2026-10-03
 - No handgun, and no long gun with a barrel under 305 mm (12 in) (99%).
 - Your deer rifle needs an expanding hunting bullet. Full metal jacket, tracer, incendiary and explosive bullets are banned (99%).
 - No tracer or incendiary shotshells (99%).
+```
 
 ## Shotgun plug and muzzleloaders
 
+```diagram rb-plug
+```
+
+- No set gun, ever (99%).
+
+```more the page 12 words and muzzleloaders
 > [!law] Page 12
 > "It is unlawful to hunt or trap with a set gun or with a pump, repeating or auto loading shotgun unless the magazine contains a plug that is incapable of holding more than 2 cartridges. Where the use of a shotgun is allowed for hunting or trapping big game, an unplugged shotgun holding more than 2 cartridges and firing single projectiles only (slugs) may be used."
 >
@@ -47,9 +63,18 @@ checked: 2026-10-03
 - For big game, where shotguns are allowed: the plug may come out if you shoot slugs only (99%).
 - A muzzleloader with powder and ball down the barrel but no cap or pan powder is not loaded under the Criminal Code (Canada) (99%).
 - Item 27 on page 11 names the muzzle loader as a legal big game weapon. Pages 12 and 13 set no calibre minimum for it (99%).
+```
 
 ## The methods table: how to read it
 
+| In the table | Means |
+|---|---|
+| Yes | Legal province wide (99%) |
+| No | Not legal (99%) |
+| Yes, small number | Read that note (99%) |
+| Bow A, C, D | Those bow classes only (99%) |
+
+```more more on reading the table
 - Page 13 is one table: Firearms (rifles split into Air, Rimfire and Centrefire, then Shotguns), then Archery, then Provincial Bag Limits (99%, page 13, 2 October 2026 edition).
 - "Yes" means that method is legal for that animal province wide. "No" means it is not (99%).
 - The table has no muzzleloader column. Item 27 on page 11 allows a muzzle loader for big game (99%). Regional rules can still narrow it (90%, my reading).
@@ -58,6 +83,7 @@ checked: 2026-10-03
 - The box above the table says: "Note: Some hunts and areas have specific restrictions. See regional sections for descriptions" (99%).
 - An air rifle is a firearm under the page 3 definition, so the air column follows the firearm rules (95%, my reading).
 - Every cell below was checked against a zoomed image of page 13 (99%).
+```
 
 ## Methods table: big game, bison to elk
 
@@ -71,8 +97,12 @@ checked: 2026-10-03
 | Deer | Yes, note 8 | No | Yes | Yes, note 1 | Bow B, C, D |
 | Elk | No | No | Yes | No | Bow A, C, D |
 
+- Deer: centrefire, air rifle .35 or larger, 20 gauge or larger with No. 1 Buck, or bow B, C, D (99%).
+
+```more notes on these rows
 - Deer: centrefire rifle, an air rifle of .35 calibre or larger, a 20 gauge or larger shotgun with No. 1 Buck or larger, or bow class B, C or D. No .22 (99%, page 13, 2 October 2026 edition).
 - Elk, caribou and bison: no shotgun and no air rifle (99%).
+```
 
 ## Methods table: big game, lynx to wolverine
 
@@ -85,8 +115,12 @@ checked: 2026-10-03
 | Wolf | Yes, note 8 | No | Yes | Yes, note 1 | Bow A, C, D |
 | Wolverine | Yes, note 8 | Yes | Yes | Yes, note 1 | Bow B, C, D |
 
+- Moose: centrefire rifle or bow only (99%).
+
+```more notes on these rows
 - Moose, in the table: centrefire rifle or bow. No shotgun, rimfire or air rifle (99%, page 13, 2 October 2026 edition).
 - Rimfire is legal only for bobcat, lynx and wolverine among big game (99%).
+```
 
 ## Methods table: small game and birds
 
@@ -96,13 +130,31 @@ checked: 2026-10-03
 | Other small game (includes coyote) | Yes | Yes | Yes | Yes for coyote, note 1 | Bow B, C, D |
 | Migratory game birds | No | No | No | Yes, notes 4 and 5 | Bow D |
 
+- Ducks and geese: shotgun or a class D bow only (99%).
+
+```more notes on these rows
 - Grouse: shotgun, air rifle, bow, a [[Rimfire]] such as a .22 (note 2), or even a [[Centrefire]] (note 3) (99%, page 13, 2 October 2026 edition).
 - Quail, pheasant and partridge: shotgun, air rifle or bow. Notes 2 and 3 keep rifles for grouse, ptarmigan and turkey only (95%, my reading).
 - Ducks and geese: shotgun or a class D bow only (99%).
 - The other small game shotgun cell reads "Yes for Coyote" with note 1. My reading: shotguns are legal for other small game, and for coyote the note 1 limits apply (85%, my reading).
+```
 
 ## The 8 notes under the table
 
+| Note | In short |
+|---|---|
+| 1 | Shotgun: 20 gauge or larger, No. 1 Buck or larger |
+| 2 | Rimfire: grouse, ptarmigan, turkey only |
+| 3 | Centrefire: grouse, ptarmigan only |
+| 4 | Non toxic shot only, except pigeons, doves |
+| 5 | Ducks: no slugs, 10 gauge max, 1 shotgun unless others cased |
+| 6 | Bears: no bait |
+| 7 | Bison: 175 grain or more, 2,712 joules or more at 100 m |
+| 8 | Air rifle: .35 calibre or larger |
+
+- Every note: page 13 (99%).
+
+```more the exact notes and what they mean for you
 > [!law] Notes, page 13
 > "1. Shotgun must have a bore size of 20 gauge or larger and use shells of shot size No. 1 Buck or larger."
 >
@@ -126,17 +178,30 @@ checked: 2026-10-03
 - Note 6 is the bear bait rule. The table marks Black bear with note 4 and no row with note 6. My reading: note 6 is the one meant for bears (85%). The July 2026 edition prints the same marker (99%).
 - Note 7, bison: a bullet of 11.3 g (175 grain) or more that keeps 2,712 joules (2,000 ft lb) or more at 100 m (109 yd) (99%).
 - Note 8, air rifles for big game: .35 calibre or larger (99%).
+```
 
 ## Snaring hares
 
+| Snaring snowshoe hare | Rule (99%) |
+|---|---|
+| When | Open season only |
+| You need | Hunting licence and trapper education |
+| Wire | Not braided, 20 gauge or lighter |
+
+```more the page 13 words
 > [!law] Page 13
 > "A person may snare snowshoe hare during the open season if they have a hunting licence and completed the trapper education course. The snare must be non-braided and no heavier than 20 gauge."
 
 - Snowshoe hare snares: open season only, with a hunting licence and the trapper education course done (99%, page 13, 2 October 2026 edition).
 - Snare wire: not braided, and no heavier than 20 gauge (99%).
+```
 
 ## Bows and crossbows: the five classes
 
+```diagram rb-bow-pull
+```
+
+```more the exact page 13 words for each class
 > [!law] Archery, page 13
 > "Bow A (Crossbow) (does not include compound crossbow) - Must have a pull of no less than 68 kg (150 lbs.) or a bolt (quarrel) weighing no less than 16.2 g (250 grains). For big game, the bolt (quarrel) must have a broadhead of at least 2.2 cm (7/8 in) at the widest point."
 >
@@ -147,6 +212,7 @@ checked: 2026-10-03
 > "Bow D (Longbow, Recurve, Compound) - Must have pull of no less than 18 kg (40 lbs.) within the archer’s draw length. For big game, must have an arrow with a broadhead at least 2.2 cm (7/8 in) at the widest point."
 >
 > "Bow E (Bison only) - For bison, the bow (does not include compound crossbow) must have a pull no less than 22.6 kg (50 lbs.) within the archer’s draw length, an arrow greater than 26 g (400 grains) in weight, and a broadhead greater than 8.1 g in weight and 2.2 cm (7/8 in) at its widest point."
+```
 
 ## Bows and crossbows: in plain numbers
 
@@ -158,13 +224,21 @@ checked: 2026-10-03
 | D | Longbow, recurve, compound | 18 kg (40 lb) within your draw length | No weight set | At least 2.2 cm (7/8 in) wide |
 | E | Any bow but a compound crossbow, bison only | 22.6 kg (50 lb) within your draw length | Arrow over 26 g (400 gr) | Over 8.1 g and 2.2 cm (7/8 in) wide |
 
+- Deer: class B, C or D. Elk, moose, bear: class A, C or D (99%).
+
+```more notes on the classes
 - Crossbow class depends on the animal. Deer, bobcat, lynx, wolverine and small game allow class B. Black bear, caribou, cougar, elk, moose, mountain goat, mountain sheep and wolf need class A, C or D (99%, page 13, 2 October 2026 edition).
 - Classes A, B and C say pull "or" bolt weight. Read literally, either one meets the rule (85%, my reading). Tip: meet both.
 - Broadhead rules apply to big game only. Grouse with a bow: class B, C or D, any legal point (95%, my reading).
 - A crossbow is a bow, so it is legal in bow only seasons (99%, page 3).
+```
 
 ## Shot ban notice
 
+```diagram rb-shot-ban
+```
+
+```more the page 13 notice and the shot types
 > [!law] Notice! Shot Ban, page 13
 > "The use of toxic (lead) shot for hunting waterfowl has been prohibited in British Columbia since 1995 and in Canada since 1997. The ban applies to all ducks, geese, coots and snipe. It does not apply to upland game birds (grouse, ptarmigan, quail, partridge, pheasants, and turkey), migratory upland game birds (pigeons, doves), ravens (where seasons exist), or target shooting, although a local restriction may be implemented if there is a conflict with an important wetland."
 >
@@ -175,25 +249,37 @@ checked: 2026-10-03
 - Lead is still legal for grouse, quail, pheasant, partridge, turkey, pigeons, doves and ravens, unless a local wetland rule says otherwise (99%).
 - Canadian Wildlife Service in Delta: 604 350 1950 (99%).
 - Tip: [[Steel shot]] needs a [[Choke]] rated for steel. Check the barrel marking.
+```
 
 ## Hunting hours
 
-> [!law] Items 37 and 38 (first), page 11
-> "To hunt migratory game birds from 1/2 hour after sunset to 1/2 hour before sunrise."
->
-> "To hunt game, except migratory game birds from one hour after sunset to one hour before sunrise."
+```anim rb-sunrise-hours Deer legal 1 hour before sunrise. Ducks 30 minutes.
+```
 
 | Hunting | Earliest | Latest |
 |---|---|---|
 | Deer, grouse, quail and all other game except migratory birds | 1 hour before sunrise | 1 hour after sunset |
 | Ducks, geese and other migratory game birds | 30 minutes before sunrise | 30 minutes after sunset |
 
+```more items 37 and 38, and sunrise tables
+> [!law] Items 37 and 38 (first), page 11
+> "To hunt migratory game birds from 1/2 hour after sunset to 1/2 hour before sunrise."
+>
+> "To hunt game, except migratory game birds from one hour after sunset to one hour before sunrise."
+
 - Both rows: 99%, page 11, 2 October 2026 edition.
 - Sunrise and sunset: the synopsis names a local newspaper or the [National Research Council calculator](https://nrc-cnrc.gc.ca/eng/services/sunrise/index.html). Judging it in the field, given the terrain, is your job (99%).
 - Duck mornings give you 30 minutes less light than deer mornings (99%).
+```
 
 ## Lights and infrared optics
 
+| Item | Banned |
+|---|---|
+| 38 | Any light or illuminating device to hunt by (99%) |
+| 39 | Infrared optics, like thermal scopes, on the trip, even unused (99%) |
+
+```more items 38 and 39, page 11
 > [!law] Item 38 (second) and item 39, page 11
 > "To hunt wildlife by the use of, or with the aid of a light or illuminating device."
 >
@@ -202,9 +288,14 @@ checked: 2026-10-03
 - No light of any kind to hunt by (99%, page 11, 2 October 2026 edition). That covers a spotlight, a headlamp, a weapon light or the truck's lights used to find, hold or shoot game (95%, my reading).
 - Infrared optics are any optic that can detect infrared radiation: thermal scopes and thermal monoculars (99%, page 3).
 - Possession on the trip is enough (99%). Leave them at home, not in the truck (95%, my reading).
+```
 
 ## Dogs and falconry
 
+```diagram rb-dog-leash
+```
+
+```more the page 12 words and falconry
 > [!law] Dogs, page 12
 > "The use of dogs is permitted in the hunting of all game, but dogs must be on a leash when used to hunt deer, elk, moose, mountain sheep, mountain goat and caribou. Unleashed dogs may be used to hunt small game, lynx, bobcat, black bear, or cougar. Any person may train dogs by allowing them, under supervision, to pursue game birds from Aug 1- Apr 30."
 >
@@ -218,9 +309,18 @@ checked: 2026-10-03
 > "Falconers, with a valid possession permit, may hunt small game with the use or aid of raptors throughout the province during the regular open season or during bow only seasons subject to the applicable bag limits as indicated in the regional schedules, as long as they have acquired the necessary hunting licence(s)."
 
 - A falconer with a possession permit and a hunting licence may hunt small game with a raptor, in the open season or a bow only season, within the bag limits (99%).
+```
 
 ## Calls and decoys
 
+| Call or decoy | Deer, ducks, grouse |
+|---|---|
+| Electronic or recorded call | No (99%) |
+| Mouth, grunt, rattle, hand call | Yes (95%, my reading) |
+| Live bird decoy | No (99%) |
+| Fake decoy | Yes (99%) |
+
+```more items 41 and 42, page 12
 > [!law] Items 41 and 42, page 12
 > "To use recorded or electronic calls to hunt wildlife except wolf, coyote, cougar, lynx, or bobcat or any bird listed in Schedule C (see “What is Wildlife?” Section)."
 >
@@ -230,9 +330,19 @@ checked: 2026-10-03
 - Mouth calls, grunt tubes, rattling antlers and hand calls are not recorded or electronic, so they are allowed (95%, my reading).
 - Electronic calls are allowed for wolf, coyote, cougar, lynx and bobcat, and for Schedule C birds such as starlings and rock doves (99%, pages 11 and 12).
 - Decoys must not be live birds (99%). A decoy is not bait under the page 3 definition (99%).
+```
 
 ## Bait
 
+| Animal | Bait rule |
+|---|---|
+| Bears | Never over bait or a carcass (99%) |
+| Ducks and geese | Not within 400 m of bait until 7 days bait free (99%) |
+| Deer, grouse | No province wide ban on pages 11 to 13 (99%) |
+
+- Tip: read your region's pages first.
+
+```more the definition and items 20, 21 and 43
 > [!law] Definition, page 3
 > "BAIT - means anything, including meat, cereals, cultivated crops, restrained animal or any manufactured product or material, that may attract wildlife and includes plastic or other imitation foods, but does not include a decoy as described under these regulations."
 
@@ -247,6 +357,7 @@ checked: 2026-10-03
 - Ducks and geese: not within 400 m (437 yd) of bait until it has been gone 7 days (99%, page 12).
 - Pages 11 to 13 print no province wide bait ban for deer or grouse (99%). Region 1 bans baiting or feeding ungulates or turkey within 200 m of a dwelling, school yard or playground (99%, page 20).
 - Tip: read your region's pages before you put out any bait.
+```
 
 > [!rule]
 > Match the load to the animal before you leave the house. The shell in your pocket is the one you will shoot.
@@ -261,9 +372,13 @@ checked: 2026-10-03
 
 ## Sources
 
+- Every source, page and date checked: tap below.
+
+```more every source, page and date checked
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the PDF text and checked against rendered page images: page 3 (bait, crossbow and infrared definitions), page 11 (items 20, 21, 27, 37, both items 38, 39), page 12 (firearm rules, items 41 to 43, dogs, falconry), page 13 (the full methods table checked cell by cell on a 200 dpi image, notes 1 to 8, the snare line, bow classes A to E, the shot ban notice), page 20 (Region 1 baiting line). Checked 2026-10-03 (99%).
 - The Black bear note 4 marker was read in the PDF text layer and on a 500 dpi crop of page 13, and compared with the July 2026 edition, page 13 (99%).
 - Lines marked "my reading" are this app's interpretation, 85 to 95%.
+```
 
 ```quiz
 [

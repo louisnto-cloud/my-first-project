@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" font-family="sans-serif" role="img" aria-label="Map of the sign walk. Start at the truck, walk along the edge where grassland meets Douglas fir, past a creek and pond, and loop back. Ten numbered stops: track, scat, trail, browse, bed seen from the edge, rub, grouse sign, water sign, fence crossing, predator sign. Mid morning, 2 to 3 hours.">
+<rect width="400" height="320" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The 10 sign walk</text>
+<rect x="0" y="40" width="400" height="280" fill="#e9dfa8"/>
+<path d="M120 40 Q200 130 400 90 V40 Z" fill="#8a9a6b"/>
+<g fill="#2f3a2b"><polygon points="250,75 260,48 270,75"/><polygon points="300,80 310,52 320,80"/><polygon points="350,70 360,44 370,70"/><polygon points="200,65 210,40 220,65"/></g>
+<path d="M330 320 Q350 260 380 230 Q395 215 400 210" stroke="#4a7fb0" stroke-width="8" fill="none"/>
+<ellipse cx="365" cy="245" rx="20" ry="11" fill="#4a7fb0"/>
+<path d="M240 320 V230 M240 230 H400" stroke="#6b4f35" stroke-width="2" stroke-dasharray="3 3"/>
+<path d="M20 290 C 40 250, 70 210, 140 175 S 230 160, 290 120 S 360 190, 350 220 S 280 260, 200 262 S 60 300, 20 290" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6"/>
+<rect x="8" y="284" width="26" height="16" rx="3" fill="#2f3a2b"/>
+<text x="40" y="312" font-size="14" fill="#2f3a2b">Truck: start</text>
+<text x="150" y="120" font-size="14" font-weight="bold" fill="#fff">Douglas fir</text>
+<text x="40" y="160" font-size="14" font-weight="bold" fill="#6b4f35">Grass</text>
+<circle cx="40" cy="250" r="11" fill="#2f3a2b"/><text x="40" y="255" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+<circle cx="85" cy="205" r="11" fill="#2f3a2b"/><text x="85" y="210" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<circle cx="140" cy="175" r="11" fill="#2f3a2b"/><text x="140" y="180" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+<circle cx="195" cy="190" r="11" fill="#2f3a2b"/><text x="195" y="195" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">4</text>
+<circle cx="240" cy="150" r="11" fill="#2f3a2b"/><text x="240" y="155" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">5</text>
+<circle cx="290" cy="120" r="11" fill="#2f3a2b"/><text x="290" y="125" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">6</text>
+<circle cx="330" cy="160" r="11" fill="#2f3a2b"/><text x="330" y="165" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">7</text>
+<circle cx="350" cy="220" r="11" fill="#2f3a2b"/><text x="350" y="225" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">8</text>
+<circle cx="290" cy="250" r="11" fill="#2f3a2b"/><text x="290" y="255" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">9</text>
+<circle cx="200" cy="262" r="11" fill="#2f3a2b"/><text x="200" y="267" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">10</text>
+</svg>

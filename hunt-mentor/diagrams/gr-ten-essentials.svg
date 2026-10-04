@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="AdventureSmart's 10 essentials as icons: 1 light, 2 fire kit, 3 whistle or mirror, 4 extra food and water, 5 extra clothing, 6 map and compass, 7 first aid kit, 8 emergency shelter, 9 pocket knife, 10 sun protection.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="22" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The 10 essentials</text>
+  <g fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.5">
+    <rect x="6" y="34" width="74" height="124" rx="8"/><rect x="85" y="34" width="74" height="124" rx="8"/><rect x="164" y="34" width="74" height="124" rx="8"/><rect x="243" y="34" width="74" height="124" rx="8"/><rect x="322" y="34" width="74" height="124" rx="8"/>
+    <rect x="6" y="166" width="74" height="124" rx="8"/><rect x="85" y="166" width="74" height="124" rx="8"/><rect x="164" y="166" width="74" height="124" rx="8"/><rect x="243" y="166" width="74" height="124" rx="8"/><rect x="322" y="166" width="74" height="124" rx="8"/>
+  </g>
+  <g font-size="14" font-weight="bold" fill="#e8590c">
+    <text x="12" y="52">1</text><text x="91" y="52">2</text><text x="170" y="52">3</text><text x="249" y="52">4</text><text x="328" y="52">5</text>
+    <text x="12" y="184">6</text><text x="91" y="184">7</text><text x="170" y="184">8</text><text x="249" y="184">9</text><text x="328" y="184">10</text>
+  </g>
+  <!-- 1 headlamp -->
+  <path d="M24 92 q19 -26 38 0" fill="none" stroke="#2f3a2b" stroke-width="4"/><rect x="34" y="78" width="18" height="14" rx="3" fill="#2f3a2b"/><path d="M52 82 l14 -8 v24 Z" fill="#e8b10c"/>
+  <!-- 2 fire -->
+  <path d="M122 106 q-20 -18 0 -44 q4 18 12 20 q8 12 -12 24 Z" fill="#e8590c"/>
+  <!-- 3 whistle -->
+  <rect x="180" y="78" width="36" height="18" rx="9" fill="#2f3a2b"/><rect x="210" y="74" width="16" height="10" fill="#2f3a2b"/>
+  <!-- 4 food water -->
+  <rect x="258" y="66" width="16" height="40" rx="4" fill="#4a7fb0"/><rect x="280" y="80" width="26" height="26" rx="3" fill="#8b5a2b"/>
+  <!-- 5 clothing -->
+  <path d="M340 70 l10 -6 h14 l10 6 l8 18 l-8 4 v18 h-34 v-18 l-8 -4 Z" fill="#6b6f48"/>
+  <!-- 6 map compass -->
+  <rect x="16" y="210" width="34" height="40" fill="#fff" stroke="#2f3a2b"/><circle cx="58" cy="236" r="14" fill="#fff" stroke="#2f3a2b" stroke-width="2"/><path d="M58 224 l4 12 h-8 Z" fill="#c0392b"/>
+  <!-- 7 first aid -->
+  <rect x="100" y="208" width="44" height="40" rx="5" fill="#c0392b"/><path d="M122 214 v28 M108 228 h28" stroke="#fff" stroke-width="6"/>
+  <!-- 8 shelter -->
+  <path d="M174 252 L201 206 L228 252 Z" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/>
+  <!-- 9 knife -->
+  <path d="M254 238 L292 220 L298 224 L262 244 Z" fill="#8a8f88" stroke="#2f3a2b"/><rect x="246" y="238" width="18" height="10" rx="3" transform="rotate(-25 255 243)" fill="#8b5a2b"/>
+  <!-- 10 sun -->
+  <circle cx="359" cy="230" r="13" fill="#e8b10c"/><g stroke="#e8b10c" stroke-width="3"><line x1="359" y1="206" x2="359" y2="212"/><line x1="359" y1="248" x2="359" y2="254"/><line x1="335" y1="230" x2="341" y2="230"/><line x1="377" y1="230" x2="383" y2="230"/></g>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">
+    <text x="43" y="132">Light</text><text x="122" y="132">Fire kit</text><text x="201" y="132">Whistle</text><text x="280" y="126">Food,</text><text x="280" y="144">water</text><text x="359" y="126">Extra</text><text x="359" y="144">layers</text>
+    <text x="43" y="276">Map</text><text x="122" y="270">First</text><text x="122" y="286">aid</text><text x="201" y="276">Shelter</text><text x="280" y="276">Knife</text><text x="359" y="276">Sun</text>
+  </g>
+</svg>

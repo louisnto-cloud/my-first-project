@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Day navigation kit laid out in a grid of six: phone charged to 100 percent, a power bank of 10,000 milliamp hours or more, a cable, a baseplate compass, a paper map, and a headlamp.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <g fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.5"><rect x="10" y="10" width="124" height="135" rx="8"/><rect x="138" y="10" width="124" height="135" rx="8"/><rect x="266" y="10" width="124" height="135" rx="8"/>
+  <rect x="10" y="155" width="124" height="135" rx="8"/><rect x="138" y="155" width="124" height="135" rx="8"/><rect x="266" y="155" width="124" height="135" rx="8"/></g>
+  <rect x="52" y="24" width="40" height="70" rx="7" fill="#2f3a2b"/><rect x="57" y="32" width="30" height="50" fill="#8a9a6b"/><rect x="57" y="32" width="30" height="50" fill="#e8590c" opacity=".3"/>
+  <text x="72" y="116" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Phone</text><text x="72" y="134" font-size="14" fill="#2f3a2b" text-anchor="middle">at 100 percent</text>
+  <rect x="170" y="36" width="60" height="50" rx="6" fill="#4a7fb0"/><rect x="194" y="30" width="12" height="8" fill="#4a7fb0"/>
+  <text x="200" y="116" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Power bank</text><text x="200" y="134" font-size="14" fill="#2f3a2b" text-anchor="middle">10,000 mAh plus</text>
+  <path d="M300 40 C 360 40, 280 90, 350 90" fill="none" stroke="#2f3a2b" stroke-width="4"/><rect x="292" y="34" width="12" height="12" fill="#2f3a2b"/><rect x="346" y="84" width="12" height="12" fill="#2f3a2b"/>
+  <text x="328" y="116" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cable</text>
+  <rect x="48" y="166" width="48" height="76" rx="6" fill="#cfe0ea" stroke="#4a7fb0" stroke-width="2"/><circle cx="72" cy="214" r="18" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/><polygon points="72,200 67,214 77,214" fill="#c0392b"/>
+  <text x="72" y="264" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Compass</text>
+  <path d="M164 172 L194 166 L210 172 L236 166 L236 236 L210 242 L194 236 L164 242 Z" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/><path d="M172 200 C 190 190, 210 215, 228 196" fill="none" stroke="#8b5a2b" stroke-width="2"/>
+  <text x="200" y="264" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Paper map</text>
+  <rect x="306" y="196" width="44" height="28" rx="6" fill="#2f3a2b"/><circle cx="328" cy="210" r="9" fill="#ffd34d"/><path d="M296 210 C 300 180, 356 180, 360 210" fill="none" stroke="#8a9a6b" stroke-width="5"/>
+  <text x="328" y="264" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Headlamp</text>
+</svg>

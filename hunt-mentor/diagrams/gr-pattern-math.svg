@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Pattern math. 82 holes in the circle divided by 138 pellets in the shell is about 59 percent, which acts like Modified. Benchmarks: Cylinder 40 percent, Improved Cylinder 50, Modified 60, Full 70.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Read your pattern</text>
+  <g font-size="16" font-weight="bold" text-anchor="middle">
+    <rect x="14" y="40" width="100" height="50" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><text x="64" y="62" fill="#2f3a2b">82 holes</text><text x="64" y="80" font-size="13" fill="#2f3a2b">in circle</text>
+    <text x="128" y="72" fill="#2f3a2b">÷</text>
+    <rect x="142" y="40" width="110" height="50" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><text x="197" y="62" fill="#2f3a2b">138 pellets</text><text x="197" y="80" font-size="13" fill="#2f3a2b">in shell</text>
+    <text x="266" y="72" fill="#2f3a2b">=</text>
+    <rect x="280" y="40" width="106" height="50" rx="8" fill="#e8590c"/><text x="333" y="72" font-size="20" fill="#fff">59%</text>
+  </g>
+  <line x1="60" y1="270" x2="380" y2="270" stroke="#2f3a2b" stroke-width="2"/>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">
+    <rect x="76" y="190" width="56" height="80" fill="#8a9a6b"/><text x="104" y="184">40%</text><text x="104" y="290">Cyl</text>
+    <rect x="148" y="170" width="56" height="100" fill="#8a9a6b"/><text x="176" y="164">50%</text><text x="176" y="290">IC</text>
+    <rect x="220" y="150" width="56" height="120" fill="#4a7fb0"/><text x="248" y="144">60%</text><text x="248" y="290">M</text>
+    <rect x="292" y="130" width="56" height="140" fill="#8a9a6b"/><text x="320" y="124">70%</text><text x="320" y="290">Full</text>
+  </g>
+  <line x1="60" y1="152" x2="380" y2="152" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="62" y="146" font-size="14" font-weight="bold" fill="#e8590c">Yours: 59%</text>
+  <text x="20" y="108" font-size="14" fill="#2f3a2b">Benchmarks at 37 m: your gun acts like Modified</text>
+</svg>

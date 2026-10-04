@@ -9,19 +9,37 @@ checked: 2026-10-02
 > [!warn]
 > Study aid only. The official regulations are the law.
 
-- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
+| Everyday word | Why it matters |
+|---|---|
+| Loaded | A clipped in magazine counts (99%) |
+| Hunting | Starts when you search with a weapon (99%) |
+| 4 point | The brow tine does not count on mule deer (99%) |
 
 > [!why]
 > The law gives everyday words exact meanings. "Loaded", "hunting" and "4 point" decide whether you are legal before you ever pull a trigger.
+
+```more what this session covers
+- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
 
 - This session carries every definition from the Definitions section, pages 3 to 5 of the synopsis, in alphabetical order (99%).
 - Each entry: the term in bold, the official words in quotes, then one plain English line.
 - Printed page numbers are cited. Page 3 and 4 hold nearly all of them; the last four spill onto page 5 (99%).
 - The pictures in the synopsis (caribou, elk, moose, sheep, mule deer, tine) are described in words under the term they belong to.
 - Terms with the same word are grouped as the synopsis groups them: three moose classes together, four mountain sheep classes together.
+```
 
 ## Definitions: Accompany to Antlerless animal
 
+```diagram rb-accompany
+```
+
+| Word | In plain words |
+|---|---|
+| ATV (All Terrain Vehicle) | Quad, side by side, dirt bike. Not a snowmobile (99%) |
+| Antlered | Deer family, over 1 year, visible antlers (99%) |
+| Antlerless | No visible antlers. A button buck counts (99%) |
+
+```more the official words
 - **Accompany** (99%, page 3, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -49,9 +67,18 @@ checked: 2026-10-02
 > "ANTLERLESS ANIMAL - means a member of the deer family bearing no visible antlers. The small skin or hair covered protuberances of male fawns and calves do not constitute antlers."
 
 - Plain English: no visible antlers means antlerless. A button buck, a male fawn with skin covered bumps, counts as antlerless (99%).
+```
 
 ## Definitions: Bait to Big game
 
+| Word | In plain words |
+|---|---|
+| Bait | Anything put out to draw animals. A decoy is not bait (99%) |
+| B.C. resident | Main home in BC, and enough time here: see the rule (99%) |
+| Bearded turkey | Any turkey with a visible beard (99%) |
+| Big game | 13 named animals, wolf and bobcat included (99%) |
+
+```more the official words
 - **Bait** (99%, page 3, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -79,9 +106,18 @@ checked: 2026-10-02
 > "BIG GAME - means any mountain sheep, mountain goat, bison, caribou, elk, moose, deer, black bear, cougar, wolf, bobcat, lynx, wolverine or other animal designated by regulation."
 
 - Plain English: 13 named animals, plus any other the regulations add. Wolf, bobcat, lynx and wolverine are big game too, not only the hoofed animals (99%).
+```
 
 ## Definitions: Bolt to Buck or bull
 
+| Word | In plain words |
+|---|---|
+| Bolt | A crossbow arrow (99%) |
+| Bow | Includes a crossbow (99%) |
+| Brow tine | First point forward or up, lower third. Not counted on a mule deer 4 point (99%) |
+| Buck or bull | Deer, moose, elk: visible antlers. Caribou: a male with antlers (99%) |
+
+```more the official words
 - **Bolt** (99%, page 3, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -109,9 +145,20 @@ checked: 2026-10-02
 > "BUCK OR BULL - with reference to deer, moose or elk means one bearing visible bony antlers but does not include a calf; with reference to caribou means a male bearing visible bony antlers but does not include a calf."
 
 - Plain English: for deer, moose and elk the law goes by visible antlers, not by sex. For caribou it must be a male with antlers, because cow caribou grow antlers too (99%).
+```
 
 ## Definitions: Calf to Caribou
 
+```photo g-moose-cow-calf Calf: much smaller, short stubby face. Be sure of your target.
+```
+
+| Word | In plain words |
+|---|---|
+| Calf | Under 1 year old (99%) |
+| Cancelled species licence | Cut or notched as the licence shows (99%) |
+| Caribou 5 point bull | Count points above the rear point (99%) |
+
+```more the official words
 - **[[Calf]]** (99%, page 3, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -141,9 +188,21 @@ checked: 2026-10-02
 
 - Plain English: on one antler, count the points above the rear point. The tip of the main beam counts as one (99%).
 - What the picture shows: two caribou antlers drawn side by side, each with an arrow to its rear point, the tine that sticks backward low on the main beam. Everything above that is what you count (99%).
+```
 
 ## Definitions: Compound crossbow to Crossbow
 
+```photo cougar-kitten Spots or under 1 year old: a kitten.
+```
+
+| Word | In plain words |
+|---|---|
+| Compound crossbow | A crossbow with cams or pulleys (99%) |
+| Cougar kitten | Spots, or under 1 year (99%) |
+| Cow moose | Adult female, no antlers (99%) |
+| Crossbow | Legal in bow only seasons (99%) |
+
+```more the official words
 - **Compound crossbow** (99%, page 3, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -171,9 +230,21 @@ checked: 2026-10-02
 > "CROSSBOW - means a bow fixed across a stock with a groove for the arrow or bolt and a mechanism for holding and releasing the string. (NOTE: The use of crossbows is permitted during special bow only seasons.)"
 
 - Plain English: a crossbow is legal in bow only seasons (99%).
+```
 
 ## Definitions: Decoy to Electric bicycle
 
+```diagram rb-edible
+```
+
+| Word | In plain words |
+|---|---|
+| Decoy | Made to look like an animal or bird (99%) |
+| Deer family | Deer, moose, elk, caribou (99%) |
+| Drone | Any pilotless aircraft (99%) |
+| Electric bicycle | A pedal bike with a motor (99%) |
+
+```more the official words
 - **Decoy** (99%, page 3, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -208,9 +279,20 @@ checked: 2026-10-02
 > "ELECTRIC BICYCLE - a wheeled device (a) on which a person may ride, (b) with pedals or hand cranks that allow it to be propelled with human power, and (c) with an electric motor."
 
 - Plain English: a bike you can pedal that also has an electric motor (99%).
+```
 
 ## Definitions: Elk and Existing road or trail
 
+```diagram elk-antlers
+```
+
+| Word | In plain words |
+|---|---|
+| 6 point bull elk | 6 or more tines on one antler, brow included (99%) |
+| 3 point bull elk | 3 or more tines on one antler (99%) |
+| Existing road or trail | Paved, logging or mining road, service road, two track (99%) |
+
+```more the official words
 - **Elk, six points or greater bull** (99%, page 3, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -232,9 +314,19 @@ checked: 2026-10-02
 > "EXISTING ROAD OR TRAIL - means (a) a road or trail with a paved surface, (b) a cross-country or downhill ski route marked in a ski area by the owner of the ski area, (c) a road used for logging or mining, (d) a road or trail used for access to fences, power lines, wind generators or communication towers, or (e) a trail on which there is no vegetation except on a strip that, if present, can be straddled by a 4-wheel vehicle."
 
 - Plain English: this matters in motor vehicle closed areas where you may only drive on existing roads and trails. A paved road, a logging or mining road, a service road to a power line or tower, a marked ski run, or a bare two track with at most a grass strip down the middle all count (99%). A game trail or an overgrown track does not (90%, my reading).
+```
 
 ## Definitions: Feral pig to Game bird
 
+| Word | In plain words |
+|---|---|
+| Feral pig | A loose pig nobody controls (99%) |
+| Firearm | Rifle, shotgun, handgun, air gun. Not a bow (99%) |
+| Furbearing animal | The trapping list (99%) |
+| Game | Big game, small game, game birds, furbearers (99%) |
+| Game bird | Upland birds plus ducks and geese (99%) |
+
+```more the official words
 - **Feral pig** (99%, page 3, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -269,9 +361,20 @@ checked: 2026-10-02
 > "GAME BIRD - means any grouse, partridge, quail, pheasant, ptarmigan, migratory game bird, or wild turkey."
 
 - Plain English: upland birds plus the migratory game birds, ducks and geese included (99%).
+```
 
 ## Definitions: Handgun to Licence year
 
+```diagram rb-hunting-def
+```
+
+| Word | In plain words |
+|---|---|
+| Handgun | One handed, or barrel under 305 mm (99%) |
+| Infrared optics | Thermal scopes and monoculars (99%) |
+| Licence year | Hunting: 1 April to 31 March (99%) |
+
+```more the official words
 - **Handgun** (99%, page 3, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -299,9 +402,17 @@ checked: 2026-10-02
 > "LICENCE YEAR - Hunting and Guide Licences - means the period from April 1 - March 31 of the following year. Trapping and Fur Trader's Licences - means the period from July 1 - June 30 of the following year."
 
 - Plain English: hunting licences run 1 April to 31 March. Trapping licences run 1 July to 30 June (99%).
+```
 
 ## Definitions: Loaded firearm and Migratory game birds
 
+```diagram rb-loaded-firearm
+```
+
+```anim rb-loaded-truck Unload both spots before any vehicle.
+```
+
+```more the official words
 - **[[Loaded]] firearm** (99%, page 3, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -317,9 +428,16 @@ checked: 2026-10-02
 > "MIGRATORY GAME BIRDS - for which there may be an open season in B.C. and for which a Canadian Migratory Game Bird hunting permit is required are: waterfowl (ducks and geese, including Brant); American Coot; Common Snipe; Band-tailed Pigeon, and Mourning Dove."
 
 - Plain English: ducks, geese, brant, coots, snipe, band tailed pigeon and mourning dove. For all of these you need the federal permit, the [[MGBHP]] (Migratory Game Bird Hunting Permit), on top of your BC licence (99%).
+```
 
 ## Definitions: Moose (three classes)
 
+```diagram moose-antlers
+```
+
+- Count tines on ONE antler. Only true tines count (99%).
+
+```more the official words
 - **Moose, spike fork bull** (99%, page 3, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -343,9 +461,18 @@ checked: 2026-10-02
 
 - Plain English: find the deepest notch (bay) in the antler, the one whose bottom sits closest to the antler base. The palm in front of that notch is the brow palm. Three or more true tines on that [[Brow palm]] and he is a [[Tripalm bull]] (99%).
 - What the picture shows: a full moose rack drawn from the front, labelled Tripalm Bull Moose. Labels mark the Main Palm (the big upper palm), the Brow Palm (the smaller forward palm low on each side), the Antler Base where the antler meets the skull, and the Vertex of the deepest bay, the bottom of the notch between brow palm and main palm. The caption reads: at least 3 points on brow palm (99%).
+```
 
 ## Definitions: Motorcycle to Mountain goat kid
 
+```diagram rb-vehicles
+```
+
+| Word | In plain words |
+|---|---|
+| Mountain goat kid | Horns shorter than 10 cm (99%) |
+
+```more the official words
 - **Motorcycle** (99%, page 4, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -367,9 +494,16 @@ checked: 2026-10-02
 > "MOUNTAIN GOAT KID - means a mountain goat with horns less than 10 cm in length."
 
 - Plain English: horns shorter than 10 cm make it a kid (99%).
+```
 
 ## Definitions: Mountain sheep (four classes)
 
+```diagram sheep-curl
+```
+
+- Judge the curl from square on the side of the head (99%).
+
+```more the official words
 - **Mountain sheep, full curl bighorn ram** (99%, page 4, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -400,9 +534,19 @@ checked: 2026-10-02
 
 - Plain English: a thinhorn ram is full curl if he is 8 years old by true horn rings, as judged by the regional manager, or if a horn tip rises above the nose bridge line (99%). In the field, judge the curl, not the rings, because false rings fool you (99%).
 - What the picture shows: a panel titled Full Curl Thinhorn / Mature Bighorn. Two ram heads in profile with a dotted line along the bridge of the nose. LEGAL: the horn tip climbs above the nose bridge line. ILLEGAL: it stays below (99%).
+```
 
 ## Definitions: Mule deer to No shooting area
 
+```diagram rb-4point
+```
+
+| Word | In plain words |
+|---|---|
+| No hunting area | Hunting itself is banned (99%) |
+| No Shooting Area | Firing a firearm is banned (99%) |
+
+```more the official words
 - **Mule (black tailed) deer, four points or greater buck** (99%, page 4, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -424,9 +568,19 @@ checked: 2026-10-02
 > "NO SHOOTING AREA - means a designated area in which the discharge of firearms is prohibited."
 
 - Plain English: firing a firearm is banned there. Compare the two: a no shooting area bans the shot, a no hunting area bans the hunt (99%). A bow is not a firearm under these definitions, but other closures may still apply, so treat both areas as closed unless the regional pages say otherwise (85%, my reading).
+```
 
 ## Definitions: Non resident to Non toxic shot
 
+| Word | In plain words |
+|---|---|
+| Non resident | Canadian, main home outside BC (99%) |
+| Non resident alien | Everyone else (99%) |
+| Restricted licence | No hunter safety proof: always accompanied (99%) |
+| Unrestricted licence | Small game alone. Big game still guided (99%) |
+| Non toxic shot | Steel, bismuth, tungsten. Lead 1% or less (99%) |
+
+```more the official words
 - **Non resident** (99%, page 4, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -461,9 +615,18 @@ checked: 2026-10-02
 > "NON-TOXIC SHOT - means shotgun pellets consisting of, by weight, not more than one percent lead."
 
 - Plain English: steel, bismuth, tungsten and the like. Lead must be 1 percent or less by weight (99%).
+```
 
 ## Definitions: Raptor to Snowmobile
 
+| Word | In plain words |
+|---|---|
+| Raptor | Falcons, hawks, eagles, vultures, owls. Never game (99%) |
+| Shot | 8 or more pellets. A slug is not shot (99%) |
+| Small game | Small animals plus all game birds (99%) |
+| Snowmobile | A motor vehicle, not an ATV (All Terrain Vehicle) (99%) |
+
+```more the official words
 - **Raptor** (99%, page 4, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -491,9 +654,18 @@ checked: 2026-10-02
 > "SNOWMOBILE - means a vehicle designed primarily for travel on snow or ice, having one or more steering skis, self-propelled and using one or more endless belts or tracks driven in contact with the ground."
 
 - Plain English: a sled with skis up front and a track behind. It is a motor vehicle but not an ATV (99%).
+```
 
 ## Definitions: Tine or point, and Traffic
 
+```diagram rb-tine
+```
+
+| Word | In plain words |
+|---|---|
+| Traffic | Sell, trade or give for value, or offer to (99%) |
+
+```more the official words
 - **[[Tine]] or point** (99%, page 4, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -509,9 +681,18 @@ checked: 2026-10-02
 > "TRAFFIC OR TRAFFICKING - means to buy, sell, trade or distribute for gain or consideration or to offer to do so."
 
 - Plain English: selling, trading or handing out wildlife or its parts for anything of value, or offering to (99%).
+```
 
 ## Definitions: Upland game bird to Wireless camera
 
+| Word | In plain words |
+|---|---|
+| Upland game bird | Land birds, not ducks or geese (99%) |
+| Vehicle | Anything on wheels or tracks on a highway (99%) |
+| Wildlife | Bigger than game: raptors count too (99%) |
+| Wireless camera | A cell trail camera (99%) |
+
+```more the official words
 - **Upland game bird** (99%, page 5, 2 October 2026 edition)
 
 > [!law] Official definition
@@ -539,14 +720,22 @@ checked: 2026-10-02
 > "WIRELESS CAMERA - means a camera that obtains an image by means of a remote or infrared sensor and that is capable of sending an image remotely to an electronic device."
 
 - Plain English: a cell trail camera, one that sends pictures to your phone (99%).
+```
 
 ## What this edition no longer defines
 
+| Term | Status |
+|---|---|
+| Power boat | Definition removed this edition (99%) |
+| Off road vehicle | Never defined in this section (99%) |
+
+```more the detail
 - **[[Power boat]]**: gone. The July 2026 edition defined it on page 4 as a boat, canoe or yacht powered by electric, gasoline, oil, steam or other mechanical means, not counting a manually powered boat or one with an outboard tilted or disengaged so it was not ready for immediate use (99%, July 2026 edition, page 4).
 - The 2 October 2026 edition has no such entry anywhere in the Definitions section, pages 3 to 5 (99%).
 - The words "power boat" still appear once, in item 25 on page 11, which makes it unlawful to use a power boat, aircraft, motor vehicle or other mechanical device to herd or harass wildlife (99%, page 11, 2 October 2026 edition).
 - The boat rules for hunting now read differently: item 23 covers hunting wildlife other than migratory game birds from a boat that is not being propelled by a motor, or held stationary by its motor, and item 24 bans hunting migratory birds from or by using a moving boat that is equipped with a motor or sail (99%, page 11, 2 October 2026 edition).
 - **Off road vehicle**: never a defined term in this section. The vehicle terms here are ATV, motorcycle, motor vehicle, snowmobile, vehicle and electric bicycle (99%).
+```
 
 > [!rule]
 > If a word in a season table looks ordinary, it probably is not. Flip to the definition before you decide an animal is legal.
@@ -561,9 +750,13 @@ checked: 2026-10-02
 
 ## Sources
 
+- Every source, page and date checked: tap below.
+
+```more every source, page and date checked
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the PDF text and checked against rendered page images: pages 3, 4 and 5 (every definition and the caribou, elk, calf moose, moose, mountain sheep, mule deer and tine pictures), page 11 (items 23, 24 and 25, boat wording), page 9 (Off Road Vehicle Act note), page 12 (muzzle loader note). Checked 2026-10-02 (99%).
 - The superseded July 2026 edition of the same synopsis, page 4: the old power boat definition, read for comparison only. Checked 2026-10-02 (99%).
 - Lines marked "my reading" are this app's interpretation of the definition, 85 to 95%.
+```
 
 ```quiz
 [

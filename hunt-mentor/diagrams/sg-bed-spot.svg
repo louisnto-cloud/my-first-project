@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Where a deer beds. A hillside seen from the side. The deer lies on a bench in the top third of the slope, under a tree. Its eyes watch the open ground below. Air coming down from above carries the smell of anything sneaking in from behind. Tip, hunter lore.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sees below, smells above</text>
+  <path d="M0 290 L0 260 Q120 250 200 170 L250 150 Q300 120 330 70 L400 50 L400 290 Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+  <path d="M215 160 L265 150" stroke="#8a9a6b" stroke-width="5"/>
+  <g fill="#2f3a2b"><polygon points="270,150 284,104 298,150"/><rect x="281" y="150" width="6" height="8"/><polygon points="330,72 342,34 354,72"/><polygon points="360,62 372,24 384,62"/></g>
+  <g transform="translate(245 145)"><ellipse rx="18" ry="8" fill="#8b5a2b"/><circle cx="-16" cy="-8" r="6" fill="#8b5a2b"/><path d="M-18 -13 l-5 -9 M-13 -13 l3 -9" stroke="#5c3b1c" stroke-width="2"/></g>
+  <path d="M225 140 L60 245" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6"/>
+  <path d="M232 145 L130 255" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6"/>
+  <text x="40" y="200" font-size="16" font-weight="bold" fill="#e8590c">Eyes watch</text>
+  <text x="40" y="220" font-size="16" font-weight="bold" fill="#e8590c">below</text>
+  <g stroke="#4a7fb0" stroke-width="3" fill="none"><path d="M380 100 Q340 120 300 128"/><path d="M308 122 l-10 7 l12 3"/></g>
+  <text x="300" y="175" font-size="16" font-weight="bold" fill="#4a7fb0">Nose covers</text>
+  <text x="300" y="195" font-size="16" font-weight="bold" fill="#4a7fb0">behind</text>
+  <text x="150" y="130" font-size="15" fill="#2f3a2b" text-anchor="middle">Bench, top third</text>
+  <text x="200" y="285" font-size="14" fill="#6b4f35" text-anchor="middle">Tip: hunter lore, not a rule</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-label="Two kinds of motor vehicle closure. Type 1, Motor Vehicle Closed Area: no driving the vehicles it covers at all, hunter or not. Type 2, Motor Vehicle for Hunting Closed Area: you may drive, but not to hunt, and not to haul game, gear or hunters. Either can cover all vehicles, only ATVs and electric bicycles, or only snowmobiles, seasonal or all year." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="290" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Two kinds of vehicle closure</text>
+<text x="200.0" y="48" font-size="14" fill="#2f3a2b" text-anchor="middle">Either can cover e bikes, ATVs or snowmobiles.</text>
+<rect x="6" y="58" width="191" height="222" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<rect x="6" y="58" width="191" height="30" rx="10" fill="#c92a2a"/><rect x="6" y="76" width="191" height="12" fill="#c92a2a"/>
+<text x="101.5" y="79" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Type 1</text>
+<g transform="translate(101.5 120) scale(1.0)"><rect x="-34" y="-14" width="40" height="22" rx="3" fill="#4a7fb0"/><path d="M6 -14 L22 -14 L32 -2 L32 8 L6 8 Z" fill="#4a7fb0"/><path d="M10 -10 L20 -10 L27 -2 L10 -2 Z" fill="#ffffff"/><circle cx="-20" cy="10" r="7" fill="#2f3a2b"/><circle cx="20" cy="10" r="7" fill="#2f3a2b"/></g><circle cx="101.5" cy="120" r="28" fill="none" stroke="#c92a2a" stroke-width="4"/><line x1="81.9" y1="139.6" x2="121.1" y2="100.4" stroke="#c92a2a" stroke-width="4"/>
+<text x="101.5" y="176" font-size="14" fill="#23261f" text-anchor="middle">Motor Vehicle</text>
+<text x="101.5" y="194" font-size="14" fill="#23261f" text-anchor="middle">Closed Area:</text>
+<text x="101.5" y="212" font-size="14" fill="#23261f" text-anchor="middle">no driving the</text>
+<text x="101.5" y="230" font-size="14" fill="#23261f" text-anchor="middle">covered vehicles</text>
+<text x="101.5" y="248" font-size="14" fill="#23261f" text-anchor="middle">at all</text>
+<rect x="203" y="58" width="191" height="222" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<rect x="203" y="58" width="191" height="30" rx="10" fill="#e8590c"/><rect x="203" y="76" width="191" height="12" fill="#e8590c"/>
+<text x="298.5" y="79" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Type 2</text>
+<g transform="translate(278.5 124) scale(0.9)"><path d="M-24 0 L-14 -12 L16 -12 L24 0 Z" fill="#8a9a6b"/><rect x="-4" y="-20" width="4" height="10" fill="#2f3a2b"/><rect x="-10" y="-22" width="16" height="3" fill="#2f3a2b"/><circle cx="-18" cy="6" r="9" fill="#2f3a2b"/><circle cx="18" cy="6" r="9" fill="#2f3a2b"/></g><g transform="translate(332.5 120) scale(0.6)"><ellipse cx="0" cy="0" rx="24" ry="11" fill="#8b5a2b"/><path d="M16 -6 L24 -20 L30 -18 L24 -2 Z" fill="#8b5a2b"/><ellipse cx="29" cy="-20" rx="8" ry="5" fill="#8b5a2b"/><path d="M-18 8 L-20 26 M-10 8 L-9 26 M12 8 L11 26 M19 6 L21 26" stroke="#8b5a2b" stroke-width="4"/><path d="M-24 -4 l-5 -2" stroke="#8b5a2b" stroke-width="4"/><path d="M26 -24 L22 -36 L16 -42 M22 -36 L28 -44 M30 -24 L34 -36 L30 -44 M34 -36 L40 -42" stroke="#5c3b1c" stroke-width="2.5" fill="none"/></g><circle cx="332.5" cy="118" r="22" fill="none" stroke="#c92a2a" stroke-width="3"/><line x1="317.1" y1="133.4" x2="347.9" y2="102.6" stroke="#c92a2a" stroke-width="3"/>
+<text x="298.5" y="176" font-size="14" fill="#23261f" text-anchor="middle">For Hunting:</text>
+<text x="298.5" y="194" font-size="14" fill="#23261f" text-anchor="middle">drive, but not to</text>
+<text x="298.5" y="212" font-size="14" fill="#23261f" text-anchor="middle">hunt or haul</text>
+<text x="298.5" y="230" font-size="14" fill="#23261f" text-anchor="middle">game, gear or</text>
+<text x="298.5" y="248" font-size="14" fill="#23261f" text-anchor="middle">hunters</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Elevation turret seen from above. The dial is marked UP with an arrow. Each click is one quarter MOA, about 0.73 centimetres at 100 metres. 4 clicks make 1 MOA, about 2.9 centimetres. Turn the dial the way the arrow shows to move the bullet. A cap screws on to stop bumps.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The turret, seen from above</text>
+  <circle cx="120" cy="160" r="96" fill="#4a4f48" stroke="#2f3a2b" stroke-width="4"/>
+  <circle cx="120" cy="160" r="70" fill="#2f3a2b"/>
+  <g stroke="#fffaf0" stroke-width="2">
+    <line x1="120" y1="66" x2="120" y2="86"/><line x1="152" y1="71" x2="146" y2="88"/><line x1="181" y1="88" x2="170" y2="102"/><line x1="203" y1="113" x2="188" y2="122"/><line x1="214" y1="144" x2="198" y2="148"/>
+    <line x1="88" y1="71" x2="94" y2="88"/><line x1="59" y1="88" x2="70" y2="102"/><line x1="37" y1="113" x2="52" y2="122"/><line x1="26" y1="144" x2="42" y2="148"/>
+  </g>
+  <text x="120" y="122" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">UP</text>
+  <path d="M92 150 A 34 34 0 0 1 148 150" fill="none" stroke="#e8590c" stroke-width="4"/>
+  <path d="M140 140 l10 12 l4 -15" fill="none" stroke="#e8590c" stroke-width="4"/>
+  <text x="120" y="190" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">1/4 MOA</text>
+  <text x="120" y="208" font-size="14" fill="#fffaf0" text-anchor="middle">per click</text>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b">
+    <text x="236" y="76">1 click</text><text x="236" y="96" fill="#e8590c">0.73 cm at 100 m</text>
+    <text x="236" y="136">4 clicks = 1 MOA</text><text x="236" y="156" fill="#e8590c">2.9 cm at 100 m</text>
+    <text x="236" y="196">Turn the way</text><text x="236" y="216">you want the</text><text x="236" y="236">bullet to go</text>
+  </g>
+  <text x="236" y="276" font-size="14" fill="#2f3a2b">Capped turrets: no bumps</text>
+</svg>

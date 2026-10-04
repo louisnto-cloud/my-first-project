@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Distance from water. Studies elsewhere found deer prefer water within about 1 km and rarely live more than about 2.4 km from it. In a dry fall, sit water at dawn and dusk.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Deer stay near water</text>
+  <circle cx="200" cy="160" r="120" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2" stroke-dasharray="6 5"/>
+  <circle cx="200" cy="160" r="55" fill="#e9dfa8" stroke="#8a9a6b" stroke-width="2"/>
+  <ellipse cx="200" cy="160" rx="26" ry="15" fill="#4a7fb0"/>
+  <g fill="#8b5a2b"><circle cx="230" cy="140" r="5"/><circle cx="175" cy="190" r="5"/><circle cx="160" cy="135" r="5"/><circle cx="240" cy="190" r="5"/><circle cx="290" cy="110" r="5"/></g>
+  <text x="200" y="128" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1 km</text>
+  <text x="200" y="70" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2.4 km</text>
+  <text x="200" y="230" font-size="14" fill="#2f3a2b" text-anchor="middle">preferred</text>
+  <text x="200" y="295" font-size="14" fill="#6b4f35" text-anchor="middle">Rarely farther than 2.4 km (65%)</text>
+  <text x="200" y="165" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">pond</text>
+</svg>

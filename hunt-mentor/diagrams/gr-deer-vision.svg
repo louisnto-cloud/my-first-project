@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Simplified picture of colour vision. To you, a blaze orange vest is bright. To a deer, orange looks much like green and blends in, while blue jeans stand out. Wear orange for safety, skip blue, and sit still.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <g font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="100" y="24">What you see</text><text x="300" y="24">What a deer sees</text></g>
+  <rect x="10" y="36" width="180" height="210" rx="8" fill="#6b8a4a" opacity=".5"/>
+  <rect x="210" y="36" width="180" height="210" rx="8" fill="#9a9a7a" opacity=".5"/>
+  <!-- you view -->
+  <circle cx="100" cy="74" r="13" fill="#d9b48f"/><path d="M88 60 Q 100 50 112 60 Z" fill="#e8590c"/>
+  <path d="M78 90 L122 90 L126 160 L74 160 Z" fill="#e8590c"/>
+  <path d="M76 160 L124 160 L120 234 L102 234 L100 186 L98 234 L80 234 Z" fill="#3a6fc0"/>
+  <g transform="translate(-24 0)"><!-- deer view -->
+  <circle cx="300" cy="74" r="13" fill="#b5b29a"/><path d="M288 60 Q 300 50 312 60 Z" fill="#9a9a6a"/>
+  <path d="M278 90 L322 90 L326 160 L274 160 Z" fill="#9a9a6a"/>
+  <path d="M276 160 L324 160 L320 234 L302 234 L300 186 L298 234 L280 234 Z" fill="#2d5fd0"/>
+  </g>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b">
+    <text x="130" y="126">Bright</text><text x="308" y="120">Blends</text><text x="308" y="138" font-weight="normal">like green</text>
+    <text x="308" y="200" fill="#2d5fd0">Blue</text><text x="308" y="218" fill="#2d5fd0">stands out</text>
+  </g>
+  <text x="200" y="270" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Wear orange. Skip blue. Sit still.</text>
+  <text x="200" y="290" font-size="14" fill="#2f3a2b" text-anchor="middle">Simplified colours</text>
+</svg>

@@ -9,39 +9,98 @@ checked: 2026-10-01
 > [!why]
 > Every animal needs to eat, drink and hide. Find all three close together and you have found where it lives this week.
 
+```diagram sg-fwc-venn
+```
+
+- The overlap moves with the season.
+- Learn 5 plants this month (Tip).
+
+```more what this session covers
 - Food, water and cover change with the season. The deer of September are not where the deer of December are.
 - This session: what deer eat in Region 3 (Thompson) and Region 2 (Fraser Valley) by season, the plants to learn, berries and mast, farm fields, water in a dry fall, thermal cover in cold, and how snow changes it all.
 - Plant names here are the ones BC biologists and hunters use. Learn 5 plants this month and you are ahead of most beginners (Tip).
+```
+
+## Region 3 through the fall
+
+```diagram sg-fwc-seasons
+```
+
+- The deer of September are not where the deer of December are.
+- Frost kills the feed, snow moves the deer (85%).
+
+```photo hab-kamloops-pond-farm
+```
 
 ## Region 3: September to mid October
 
+```gallery
+hab-saskatoon-berries | Saskatoon: top deer browse all year.
+hab-wells-gray-cutblock | Cut blocks: high summer feed.
+```
+
+- Browse: shrub twigs, leaves, green forbs (85%).
+- Dry fall: deer stay near water (70%).
+
+```more September details
 - Deer are browsers: twigs, leaves and buds of shrubs plus forbs, with little grass in fall (85%).
 - Early fall feed near Kamloops: forbs still green on north slopes and in draws, shrub leaves, the last berries (85%).
 - Key shrubs: saskatoon, red osier dogwood, willow, rose, snowbrush, bitterbrush, Oregon grape, rabbitbrush, sagebrush (80%).
 - Mule deer are often still high in September: subalpine meadows, old burns and cut blocks (75%).
 - Water matters now. In a dry Interior fall, deer stay within reach of seeps, springs, stock ponds and lakes (70%).
 - Cover: shade. Deer bed in timber on north slopes and in draws on warm days (80%).
+```
 
 ## Region 3: mid October to November
 
+```gallery
+hab-woods-rose-hips | Rose hips: fall and winter food.
+hab-douglas-fir-stand | Mature Douglas fir: thermal cover.
+```
+
+- Shrub twigs become the main meal (80%).
+- Hayfields pull white tails every evening (80%).
+
+```more October and November details
 - Green feed fades. After fall rain, grassland greens up again and deer use new grass shoots and forbs (75%).
 - Shrub twigs and leaves become the main meal: saskatoon, red osier dogwood, willow, rose hips (80%).
 - Douglas fir needles enter the diet in late fall and peak in December and January (85%).
 - Hayfields and alfalfa in the North Thompson valley pull white tails every evening and mule deer in hard weather (80%).
 - Bucks eat less and move more as the [[Rut]] nears (70%). See [The rut](#/s/the-rut).
 - Cover shifts to thermal cover as nights freeze: mature Douglas fir on south and west slopes (85%).
+```
 
 ## Region 3: December and the snow
 
+```diagram sg-snow-depth
+```
+
+- Snow and cold, not the rut, push deer down (85%).
+- Do not push deer on winter range for fun (Tip).
+
+```more winter range details
 - Snow and cold, not the rut, push deer down to [[Winter range]]: south and west facing slopes with old Douglas fir, often below about 760 m north of Kamloops (85%).
 - Deer have trouble in snow deeper than about 30 cm and leave slopes where it passes about 50 cm (75%). Moose move freely to about 40 cm and are restricted by 40 to 70 cm (70%). Elk sit between (65%).
 - Winter diet: Douglas fir, shrubs, and whatever bunchgrass is blown clear on windy ridges (80%).
 - Winter range shows browse lines and hedged shrubs, trails between beds and feed, and pellets everywhere (65%).
 - Many Region 3 mule deer general seasons end 10 December (65%, VERIFY your [[MU]] (Management Unit) in the [[Synopsis]]). Late season means hunting winter range in snow (Tip).
 - Do not push deer on winter range for fun. Every run costs them fat they cannot replace (Tip).
+```
 
 ## Plants to learn
 
+```gallery
+hab-saskatoon-flowers | Saskatoon: oval toothed leaves.
+hab-dogwood-stems | Red osier dogwood: bright red stems.
+hab-bitterbrush-leaf | Bitterbrush: tiny wedge leaves, 3 teeth.
+hab-willow-shrub | Willow: long narrow leaves, wet ground.
+hab-douglas-fir-tree | Douglas fir: soft needles, thick bark.
+hab-woods-rose-hips | Rose: thorny stems, red hips.
+```
+
+- Learn these 6 plus Oregon grape (Tip).
+
+```more how to know each plant
 | Plant | How to know it | Why it matters |
 |---|---|---|
 | Saskatoon | Shrub 1 to 4 m, oval toothed leaves, purple berries in July (80%) | Top deer browse all year (80%) |
@@ -51,56 +110,115 @@ checked: 2026-10-01
 | Willow | Many kinds, long leaves, wet ground and cut blocks (80%) | Moose and deer browse (85%) |
 | Douglas fir | Soft flat needles, cones with 3 pointed bracts (85%) | Winter food and thermal cover (85%) |
 | Rose | Thorny stems, red hips in fall (80%) | Hips and twigs eaten in fall and winter (75%) |
+```
 
 ## Mast and berries
 
+```diagram sg-berry-calendar
+```
+
+- Interior mast is berries, rose hips and conifer seed (70%).
+- Fresh seedy bear scat marks a patch (Tip).
+
+```more berries, bears and grouse
 - Mast is the fruit and nuts of trees and shrubs. In the Interior there are no acorns; the mast is berries, rose hips and conifer seed (70%).
 - Berry season for bears and grouse: saskatoon and soopolallie in July and August, huckleberry in August and September, rose hips and snowberry into winter (70%).
 - Bears work berry patches hard in September to fatten up. Fresh bear scat full of seeds marks a patch (Tip).
 - Grouse eat rose hips, snowberry, kinnikinnick berries and clover along roads in October (65%).
 - Fraser Valley: Himalayan blackberry fruits August to September; wild crabapple, hazelnut and old orchard apples draw black tailed deer and bears (60%).
 - Cottonwood, aspen and alder leaves on the ground in October are a quick deer snack (Tip).
+```
+
+```gallery
+hab-huckleberry-berry | Huckleberry: bear fat in August and September.
+hab-snowberry | Snowberry: white berries into winter.
+hab-bear-berry-patch | A bear working a berry patch.
+```
 
 ## Farm fields and edges
 
+```photo hab-kamloops-pond-farm
+```
+
+- White tails live on farm edges (80%).
+- Same corner most nights, wind in their favour (60%).
+- Cultivated land: owner's consent first (95%).
+
+```more fields, edges and asking a farmer
 - White tails live on farm edges: alfalfa and hay regrowth, grain stubble, and the brushy fence lines between (80%).
 - Mule deer come to hayfields too, mostly in hard weather and in the rut (65%).
 - Fraser Valley: corn stubble, berry fields, pasture and hay draw black tailed deer at dusk, and ducks and geese in winter (65%).
 - Field deer come out the same corner most nights, from the nearest thick cover, with the wind in their favour (hunter lore) (60%).
 - Hunting cultivated land needs the owner's consent (95%). Many farms welcome a polite ask for deer; ask in person, early, and offer to share (Tip).
 - Never shoot toward buildings, roads or livestock. Field hunting is backstop hunting (Tip).
+```
 
 ## Water in a dry fall
 
+```diagram sg-water-rings
+```
+
+- When feed dries, deer need surface water (75%).
+- Sit a pond at dusk until the big rain (Tip).
+
+```more water details
 - Deer get much of their water from green feed. When the feed dries, they need surface water (75%).
 - Studies elsewhere found deer rarely live more than about 2.4 km from water and prefer it within about 1 km (65%).
 - In the Thompson grassland in October, water means seeps, springs, stock ponds (dugouts), small lakes and the river (Tip).
 - Tracks at a muddy pond edge tell you who drinks here. Deer drink at dawn and dusk (70%).
 - Sitting water is a good evening stand in a dry October, until the first big rain refills every puddle (Tip).
 - Moose live by water: willow swamps, lake edges, beaver ponds (85%).
+```
 
 ## Thermal cover in cold
 
+```diagram sg-thermal-cover
+```
+
+- Closed canopy above 3 m: warmer, less wind and snow (80%).
+- Cold snap: timber by day, sunny edge in the afternoon (75%).
+
+```more thermal cover details
 - Thermal cover is forest that keeps an animal warmer: a closed canopy above 3 m that traps heat, cuts wind, and catches snow (80%).
 - Mule deer winter survival in the Interior depends on mature or old Douglas fir on warm aspects, with a mix of open and closed canopy (85%).
 - Cold snap: look for deer in the timber by day and on the sunny open slope right beside it in the afternoon (75%).
 - Thermal cover for the hunter means wind blocks and sun. Pick a stand with a tree at your back and the sun on your chest (Tip).
 - Elk and moose stand cold better than deer. They stay higher, longer (70%).
+```
 
 ## Region 2: Fraser Valley
 
+```gallery
+hab-salal | Salal: fall and winter deer food.
+hab-blackberry | Blackberry tangles: cover on valley edges.
+hab-salmonberry | Salmonberry: spring and summer food.
+hab-geese-stubble | Flooded stubble: ducks and geese in winter.
+```
+
+- Columbian black tailed deer, rut November to early December (80%).
+
+```more Fraser Valley details
 - The deer of Region 2 is the Columbian black tailed deer, a coastal mule deer (85%). Its [[Rut]] is November to early December (80%).
 - Fall and winter food: salal, red huckleberry, trailing blackberry, Douglas fir, western red cedar, deer fern and tree lichens (80%).
 - Spring and summer: grasses, fireweed, salmonberry, willow, maple and many forbs (80%).
 - Winter pushes them to low, warm, south facing slopes and floodplains with little snow (80%).
 - Cover: thick second growth, blackberry tangles, cedar and hemlock. Edges along cut blocks and power lines are the feed (Tip).
 - Ducks: Fraser Valley fields, sloughs and the delta are a major wintering area; fields flood after rain and ducks feed on stubble and grass (70%).
+```
 
 ## Rules that touch this session
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+| Rule | Where |
+|---|---|
+| Consent for cultivated land and grazed leases (95%) | page 12, item 53 |
+| No baiting ungulates within 200 m of homes or schools, Region 3 (95%) | page 33 |
+| No duck hunting within 400 m of bait unless bait free 7 days (95%) | page 12, item 43 |
+| No shooting in Lac du Bois or Crown land in Kamloops (95%) | page 33 |
+
+```more the rules in full
 - You may not hunt on cultivated land, or on Crown land under a grazing lease while livestock are on it, without the consent of the owner, lessee or occupant (95%). Synopsis page 12, item 53.
 - Region 3: it is unlawful to intentionally bait or feed ungulates within 200 m of a dwelling, school yard or playground (95%). Region 3 synopsis page 33.
 - Hunting migratory game birds within 400 m of a place where bait has been deposited is unlawful unless the place has been bait free for at least 7 days (95%). Synopsis page 12, item 43.
@@ -116,6 +234,28 @@ checked: 2026-10-01
 
 > [!field]
 > Find and photograph 5 plants from the table. Then find one browsed by deer. Mark where the nearest water is. That triangle of feed, water and timber is your first hunting spot.
+```
+
+## Grandpa's rule and mistakes
+
+```photo hab-grass-fir-edge Walk the feed at noon, sit the edge at dusk.
+```
+
+> [!rule]
+> Walk the feed at noon, sit the edge at dusk. The deer are where the groceries are, and the groceries move with the frost.
+
+> [!mistake]
+> - Hunting a summer spot in late October after the frost killed the feed.
+> - Glassing a hayfield from the field. Glass it from 400 m away with the sun behind you.
+> - Forgetting water in a dry October. A stock pond in the grassland can beat any trail.
+
+## Do this in the field
+
+```diagram sg-fwc-venn
+```
+
+> [!field]
+> Photograph 5 plants from the gallery. Find one browsed by deer. Mark the nearest water. That triangle of feed, water and timber is your first hunting spot.
 
 ## Sources
 
@@ -139,3 +279,4 @@ checked: 2026-10-01
   {"q": "Can you hunt a farmer's hayfield without asking?", "options": ["Yes if there is no sign", "No, cultivated land needs the owner's consent", "Yes in October only"], "answer": 1, "why": "The synopsis says you may not hunt cultivated land without the consent of the owner, lessee or occupant."}
 ]
 ```
+

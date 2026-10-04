@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation: a bear comes toward you. Aim the spray at the ground a few metres in front of the bear, then sweep up to its face. The orange cloud forms a wall the bear runs into. Never spray into the wind.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bear spray: low, then sweep up</text>
+  <rect y="210" width="400" height="90" fill="#dfe6d3"/>
+  <circle cx="50" cy="150" r="13" fill="#2f3a2b"/><line x1="50" y1="164" x2="50" y2="210" stroke="#2f3a2b" stroke-width="10" stroke-linecap="round"/>
+  <line x1="52" y1="174" x2="80" y2="176" stroke="#2f3a2b" stroke-width="7" stroke-linecap="round"/><rect x="78" y="168" width="16" height="22" rx="4" fill="#e8590c"/>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="60 0;0 0" dur="5s" fill="freeze"/>
+    <ellipse cx="320" cy="180" rx="44" ry="28" fill="#2f2a26"/><circle cx="278" cy="166" r="18" fill="#2f2a26"/><circle cx="272" cy="150" r="6" fill="#2f2a26"/>
+    <rect x="290" y="196" width="12" height="18" fill="#2f2a26"/><rect x="340" y="196" width="12" height="18" fill="#2f2a26"/>
+  </g>
+  <path d="M96 180 L250 206 L250 160 Z" fill="#e8590c" opacity="0">
+    <animate attributeName="opacity" values="0;.55;.55" keyTimes="0;0.2;1" begin="1s" dur="3s" fill="freeze"/>
+    <animate attributeName="d" values="M96 180 L230 214 L230 196 Z;M96 180 L230 214 L230 196 Z;M96 180 L240 200 L240 140 Z" keyTimes="0;0.4;1" begin="1s" dur="3s" fill="freeze"/>
+  </path>
+  <g opacity="0"><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" begin="1s" dur="1.6s" fill="freeze"/><text x="150" y="250" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">1. Aim at the ground</text></g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="2.6s" dur=".4s" fill="freeze"/><text x="150" y="250" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">2. Sweep up to the face</text></g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="4.5s" dur=".4s" fill="freeze"/><rect x="60" y="262" width="280" height="30" rx="6" fill="#2f3a2b"/><text x="200" y="283" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Never spray into the wind</text></g>
+</svg>

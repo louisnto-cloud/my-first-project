@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Side view: the hunter glasses from a high point with the low sun behind them. The far slope and the deer are lit up. The hunter sits in shadow, and the deer would look into the sun to see them.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <circle cx="30" cy="60" r="22" fill="#e8590c"/>
+  <g stroke="#e8590c" stroke-width="3" opacity=".5"><line x1="56" y1="70" x2="300" y2="150"/><line x1="56" y1="80" x2="300" y2="190"/></g>
+  <path d="M0 300 L0 150 L80 130 L150 260 L230 270 L400 120 L400 300 Z" fill="#8a9a6b"/>
+  <path d="M230 270 L400 120 L400 300 Z" fill="#dfe6d3" opacity=".6"/>
+  <circle cx="70" cy="122" r="9" fill="#2f3a2b"/><rect x="62" y="130" width="16" height="10" fill="#2f3a2b"/>
+  <g transform="translate(320 186)"><ellipse rx="16" ry="8" fill="#8b5a2b"/><circle cx="-14" cy="-8" r="6" fill="#8b5a2b"/></g>
+  <path d="M84 120 L300 180" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="4 5"/>
+  <text x="60" y="104" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You</text>
+  <text x="330" y="160" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">deer lit up</text>
+  <text x="200" y="28" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sun behind you, glass from above</text>
+  <text x="120" y="290" font-size="14" fill="#fff" text-anchor="middle">you sit in shade (Tip)</text>
+</svg>

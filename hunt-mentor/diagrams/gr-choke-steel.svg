@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Choke ladder from open to tight: Cylinder, Improved Cylinder and Modified are fine with steel shot. Improved Modified, Full and Extra Full are not, unless the tube is marked steel safe. Your gun's manual wins.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Steel shot: which chokes?</text>
+  <g font-size="15" font-weight="bold">
+    <rect x="20" y="40" width="200" height="34" rx="6" fill="#8a9a6b"/><text x="32" y="63" fill="#fff">Cylinder</text>
+    <rect x="20" y="80" width="200" height="34" rx="6" fill="#8a9a6b"/><text x="32" y="103" fill="#fff">Improved Cylinder</text>
+    <rect x="20" y="120" width="200" height="34" rx="6" fill="#8a9a6b"/><text x="32" y="143" fill="#fff">Modified</text>
+    <rect x="20" y="164" width="200" height="34" rx="6" fill="#c0392b" opacity=".8"/><text x="32" y="187" fill="#fff">Improved Modified</text>
+    <rect x="20" y="204" width="200" height="34" rx="6" fill="#c0392b" opacity=".8"/><text x="32" y="227" fill="#fff">Full</text>
+    <rect x="20" y="244" width="200" height="34" rx="6" fill="#c0392b" opacity=".8"/><text x="32" y="267" fill="#fff">Extra Full, turkey</text>
+  </g>
+  <line x1="20" y1="159" x2="380" y2="159" stroke="#2f3a2b" stroke-width="3" stroke-dasharray="8 5"/>
+  <g font-size="15" font-weight="bold">
+    <text x="236" y="86" fill="#2f6b3a">✓ Steel OK</text><text x="236" y="106" font-size="14" fill="#2f3a2b">IC: decoys, grouse</text><text x="236" y="126" font-size="14" fill="#2f3a2b">M: passing ducks</text>
+    <text x="236" y="204" fill="#c0392b">✗ Not with steel</text><text x="236" y="224" font-size="14" fill="#2f3a2b">unless marked</text><text x="236" y="244" font-size="14" fill="#2f3a2b">steel safe</text>
+  </g>
+  <text x="380" y="40" font-size="14" fill="#2f3a2b" text-anchor="end">Open</text><text x="380" y="294" font-size="14" fill="#2f3a2b" text-anchor="end">Tight</text>
+</svg>

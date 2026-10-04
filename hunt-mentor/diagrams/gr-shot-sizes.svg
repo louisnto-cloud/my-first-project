@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Shot size by bird, pellets drawn at relative size. Steel number 4 for teal and very close shots. Steel 3 for medium ducks and decoying birds. Steel 2 for all round ducks. Steel BB for geese. Upland: number 7.5 for quail, number 6 for grouse. Bigger number means smaller pellet.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="22" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Shot size by bird</text>
+  <text x="200" y="40" font-size="14" fill="#2f3a2b" text-anchor="middle">Bigger number = smaller pellet</text>
+  <rect x="10" y="50" width="380" height="24" fill="#4a7fb0"/><text x="20" y="67" font-size="14" font-weight="bold" fill="#fff">Waterfowl: steel (non toxic)</text>
+  <g font-size="15" fill="#2f3a2b">
+    <circle cx="40" cy="96" r="6.5" fill="#8a8f88" stroke="#2f3a2b"/><text x="70" y="101" font-weight="bold">#4</text><text x="130" y="101">Teal, very close</text>
+    <circle cx="40" cy="126" r="7" fill="#8a8f88" stroke="#2f3a2b"/><text x="70" y="131" font-weight="bold">#3</text><text x="130" y="131">Medium ducks, decoying</text>
+    <circle cx="40" cy="157" r="7.5" fill="#e8590c" stroke="#2f3a2b"/><text x="70" y="162" font-weight="bold" fill="#e8590c">#2</text><text x="130" y="162" font-weight="bold">All round ducks</text>
+    <circle cx="40" cy="190" r="9" fill="#8a8f88" stroke="#2f3a2b"/><text x="70" y="195" font-weight="bold">BB</text><text x="130" y="195">Geese</text>
+  </g>
+  <rect x="10" y="214" width="380" height="24" fill="#8a9a6b"/><text x="20" y="231" font-size="14" font-weight="bold" fill="#fff">Upland: lead or steel</text>
+  <g font-size="15" fill="#2f3a2b">
+    <circle cx="40" cy="256" r="4.8" fill="#8a8f88" stroke="#2f3a2b"/><text x="70" y="261" font-weight="bold">#7.5</text><text x="130" y="261">Quail</text>
+    <circle cx="40" cy="282" r="5.5" fill="#8a8f88" stroke="#2f3a2b"/><text x="70" y="287" font-weight="bold">#6</text><text x="130" y="287">Grouse</text>
+  </g>
+  <text x="390" y="287" font-size="13" fill="#2f3a2b" text-anchor="end">Relative size</text>
+</svg>

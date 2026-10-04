@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" font-family="sans-serif" role="img" aria-label="Flowchart: keep tracking or stop? Question 1: is there legal light left? If no, mark the track, go home, come back at first light. Question 2: is the ground safe, with no avalanche slope, cliff, ice or private land without consent? If no, stop. Question 3: fresh grizzly or cougar tracks on top of yours? If yes, back out. Question 4: tired, wet or unsure of the way out? If yes, stop. Question 5: an unwounded deer walking straight with the day half gone? If yes, stop. If you pass every question, keep going slowly. A wounded animal: keep going while there is light and safe ground, and return at first light if you lose it.">
+<rect width="400" height="520" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Keep tracking or stop?</text>
+<rect x="10" y="44" width="220" height="54" rx="10" fill="#2f3a2b"/>
+<text x="120" y="66" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">1. Legal light left?</text>
+<path d="M230 71 H262" stroke="#c0392b" stroke-width="3"/><text x="246" y="64" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">No</text>
+<rect x="262" y="48" width="130" height="46" rx="8" fill="#f6dccb"/>
+<text x="327" y="66" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Mark it.</text>
+<text x="327" y="84" font-size="14" fill="#c0392b" text-anchor="middle">Back at first light</text>
+<path d="M120 98 V114" stroke="#2f3a2b" stroke-width="3"/>
+<rect x="10" y="114" width="220" height="54" rx="10" fill="#2f3a2b"/>
+<text x="120" y="136" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">2. Safe ground? No avalanche,</text>
+<text x="120" y="156" font-size="14" fill="#fff" text-anchor="middle">cliff, ice or private land</text>
+<path d="M230 141 H262" stroke="#c0392b" stroke-width="3"/><text x="246" y="134" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">No</text>
+<rect x="262" y="118" width="130" height="46" rx="8" fill="#f6dccb"/>
+<text x="327" y="136" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Stop.</text>
+<text x="327" y="154" font-size="14" fill="#c0392b" text-anchor="middle">Do not follow</text>
+<path d="M120 168 V184" stroke="#2f3a2b" stroke-width="3"/>
+<rect x="10" y="184" width="220" height="54" rx="10" fill="#2f3a2b"/>
+<text x="120" y="206" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">3. Fresh grizzly or cougar</text>
+<text x="120" y="226" font-size="14" fill="#fff" text-anchor="middle">tracks on top of yours?</text>
+<path d="M230 211 H262" stroke="#c0392b" stroke-width="3"/><text x="246" y="204" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Yes</text>
+<rect x="262" y="188" width="130" height="46" rx="8" fill="#f6dccb"/>
+<text x="327" y="216" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Back out now</text>
+<path d="M120 238 V254" stroke="#2f3a2b" stroke-width="3"/>
+<rect x="10" y="254" width="220" height="54" rx="10" fill="#2f3a2b"/>
+<text x="120" y="276" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">4. Tired, wet, unsure of</text>
+<text x="120" y="296" font-size="14" fill="#fff" text-anchor="middle">the way out?</text>
+<path d="M230 281 H262" stroke="#c0392b" stroke-width="3"/><text x="246" y="274" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Yes</text>
+<rect x="262" y="258" width="130" height="46" rx="8" fill="#f6dccb"/>
+<text x="327" y="276" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Stop.</text>
+<text x="327" y="294" font-size="14" fill="#c0392b" text-anchor="middle">Head out</text>
+<path d="M120 308 V324" stroke="#2f3a2b" stroke-width="3"/>
+<rect x="10" y="324" width="220" height="54" rx="10" fill="#2f3a2b"/>
+<text x="120" y="346" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">5. Unwounded, walking straight,</text>
+<text x="120" y="366" font-size="14" fill="#fff" text-anchor="middle">day half gone?</text>
+<path d="M230 351 H262" stroke="#c0392b" stroke-width="3"/><text x="246" y="344" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Yes</text>
+<rect x="262" y="328" width="130" height="46" rx="8" fill="#f6dccb"/>
+<text x="327" y="346" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Stop.</text>
+<text x="327" y="364" font-size="14" fill="#c0392b" text-anchor="middle">You will not catch it</text>
+<path d="M120 378 V398" stroke="#2f3a2b" stroke-width="3"/>
+<rect x="10" y="398" width="220" height="44" rx="10" fill="#8a9a6b"/><text x="120" y="426" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Keep going, slowly</text>
+<rect x="10" y="456" width="380" height="58" rx="10" fill="#e8590c"/>
+<text x="200" y="480" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Wounded animal: keep going while light</text>
+<text x="200" y="500" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">and ground allow. Back at first light.</text>
+</svg>

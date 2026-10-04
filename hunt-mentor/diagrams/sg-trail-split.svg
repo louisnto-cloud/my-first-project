@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Reading where a trail goes. Left: one trail splits into many faint lines, it is entering a feeding or bedding area. Right: many faint lines gather into one packed trail, it is heading for a crossing. Tip.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Where is the trail going?</text>
+  <rect x="10" y="45" width="185" height="180" rx="10" fill="#dfe6d3"/>
+  <rect x="205" y="45" width="185" height="180" rx="10" fill="#dfe6d3"/>
+  <path d="M100 215 V150" stroke="#8b5a2b" stroke-width="7"/>
+  <g stroke="#8b5a2b" stroke-width="3" stroke-dasharray="6 5" fill="none"><path d="M100 150 Q60 110 30 60"/><path d="M100 150 Q85 100 75 55"/><path d="M100 150 Q115 100 125 55"/><path d="M100 150 Q140 110 175 60"/></g>
+  <g stroke="#8b5a2b" stroke-width="3" stroke-dasharray="6 5" fill="none"><path d="M225 60 Q260 120 297 150"/><path d="M265 55 Q285 110 297 150"/><path d="M330 55 Q310 110 297 150"/><path d="M372 60 Q335 120 297 150"/></g>
+  <path d="M297 150 V215" stroke="#8b5a2b" stroke-width="7"/>
+  <path d="M280 215 h34" stroke="#4a7fb0" stroke-width="8"/>
+  <text x="102" y="252" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Splits apart</text>
+  <text x="102" y="274" font-size="14" fill="#2f3a2b" text-anchor="middle">entering feed or beds</text>
+  <text x="297" y="252" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Gathers into one</text>
+  <text x="297" y="274" font-size="14" fill="#2f3a2b" text-anchor="middle">heading to a crossing</text>
+  <text x="200" y="295" font-size="14" fill="#6b4f35" text-anchor="middle">Tip: follow far enough to know both ends</text>
+</svg>

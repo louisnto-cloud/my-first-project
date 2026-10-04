@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="How old is the scat? A timeline of 4 stages. Hours: wet, shiny, dark, flies. A day or two: dull with a dry crust, soft inside. Days to a week: dry, lighter colour, cracked. Weeks: faded, crumbling, moss or mould. Cold slows every stage.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How old is the scat?</text>
+  <path d="M20 200 H380" stroke="#2f3a2b" stroke-width="3"/>
+  <path d="M370 192 l12 8 l-12 8" fill="#2f3a2b"/>
+  <g fill="#2b1a0e"><ellipse cx="55" cy="120" rx="12" ry="17"/><ellipse cx="74" cy="132" rx="12" ry="17"/></g>
+  <g fill="#fff"><ellipse cx="51" cy="112" rx="3" ry="5"/><ellipse cx="70" cy="124" rx="3" ry="5"/></g>
+  <g fill="#2f3a2b"><circle cx="40" cy="90" r="3"/><circle cx="88" cy="96" r="3"/><path d="M37 86 l-6 -4 M43 86 l6 -4 M85 92 l-6 -4 M91 92 l6 -4" stroke="#2f3a2b" stroke-width="1.5"/></g>
+  <g fill="#4d3420"><ellipse cx="150" cy="120" rx="12" ry="17"/><ellipse cx="169" cy="132" rx="12" ry="17"/></g>
+  <g fill="#8a6a48"><ellipse cx="245" cy="120" rx="12" ry="17"/><ellipse cx="264" cy="132" rx="12" ry="17"/></g>
+  <path d="M240 112 l8 8 l-4 6 M258 126 l8 6" stroke="#fffaf0" stroke-width="2" fill="none"/>
+  <g fill="#b9a68a"><ellipse cx="335" cy="122" rx="12" ry="16"/><ellipse cx="354" cy="134" rx="11" ry="15"/></g>
+  <g fill="#8a9a6b"><circle cx="330" cy="112" r="5"/><circle cx="358" cy="126" r="6"/><circle cx="342" cy="140" r="4"/></g>
+  <g fill="#e8590c"><circle cx="62" cy="200" r="7"/><circle cx="160" cy="200" r="7"/><circle cx="255" cy="200" r="7"/><circle cx="345" cy="200" r="7"/></g>
+  <g text-anchor="middle">
+    <text x="62" y="228" font-size="16" font-weight="bold" fill="#2f3a2b">Hours</text>
+    <text x="160" y="228" font-size="16" font-weight="bold" fill="#2f3a2b">1 to 2 days</text>
+    <text x="255" y="228" font-size="16" font-weight="bold" fill="#2f3a2b">A week</text>
+    <text x="345" y="228" font-size="16" font-weight="bold" fill="#2f3a2b">Weeks</text>
+    <text x="62" y="250" font-size="14" fill="#2f3a2b">wet, shiny</text><text x="62" y="268" font-size="14" fill="#2f3a2b">flies</text>
+    <text x="160" y="250" font-size="14" fill="#2f3a2b">dull crust</text><text x="160" y="268" font-size="14" fill="#2f3a2b">soft inside</text>
+    <text x="255" y="250" font-size="14" fill="#2f3a2b">dry, lighter</text><text x="255" y="268" font-size="14" fill="#2f3a2b">cracks</text>
+    <text x="345" y="250" font-size="14" fill="#2f3a2b">faded</text><text x="345" y="268" font-size="14" fill="#2f3a2b">moss, mould</text>
+  </g>
+  <text x="200" y="292" font-size="14" fill="#4a7fb0" text-anchor="middle">Cold slows it all: frozen pellets look fresh for days</text>
+</svg>

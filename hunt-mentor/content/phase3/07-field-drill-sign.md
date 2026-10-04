@@ -9,29 +9,60 @@ checked: 2026-10-01
 > [!why]
 > Reading sign is a skill, and skills are built on your feet. One walk with this list teaches more than ten sessions on the couch.
 
+```diagram sg-drill-map
+```
+
+- One walk, 2 to 3 hours, 10 kinds of sign. Score yourself.
+- Do it before your first hunt and again after the first snow (Tip).
+
+```more the drill in full
 - The drill: one walk of 2 to 3 hours near Heffley Creek or anywhere in Region 3 (Thompson). Find 10 kinds of sign, record each, score yourself.
 - Do it before your first deer hunt, then again after the first snow. Compare scores (Tip).
 - Take your brother. Two sets of eyes find twice the sign and it is safer (Tip).
 - Everything you need is in the last four sessions: [Tracks](#/s/tracks), [Reading sign](#/s/sign), [Trails and funnels](#/s/funnels), [Food, water and cover](#/s/food-water-cover).
+```
 
 ## Where and when
 
+```photo hab-grass-fir-edge Pick an edge, add water.
+```
+
+- An edge with water: grass against fir, cut block against timber (Tip).
+- Mid morning: deer are bedded, you will not bump them (Tip).
+
+```more where, when and the land rules
 - Pick ground with an edge: grassland against Douglas fir, a cut block against timber, a hayfield against cottonwoods (Tip).
 - Include water: a creek crossing, a stock pond, a lake edge (Tip).
 - Go mid morning. Deer are bedded, you are not hunting, and you will not bump them if you stay out of thick timber (Tip).
 - Crown land is open to walk. Cultivated land and grazing leases with livestock need consent to hunt, and enclosed land is trespass without permission (85%). See [BC rules](#/s/bc-rules).
 - Lac du Bois grassland inside the City of Kamloops boundary: no firearm discharge (95%), but it is a superb sign walk (Tip).
 - Heffley Creek [[MU]] (Management Unit): VERIFY on the official map before you carry a rifle.
+```
 
 ## What to bring
 
+```diagram sg-drill-kit
+```
+
+- A ruler in every photo (Tip).
+- Carry a firearm and you are hunting: all the rules apply (95%).
+
+```more the kit list in full
 - Small tape measure or ruler, nitrile gloves, a stick, phone for photos, a notebook or the Journal (Tip).
 - Binoculars, water, bear spray, a map with the walk marked, a satellite messenger if there is no signal (Tip).
 - A ruler in every photo. A track without scale is a guess later (Tip).
 - Flagging tape only if you take it out again (Tip).
 - If you carry a firearm, you are hunting: licences on you, the season open in that MU, legal hours, and no loaded firearm in the truck (95%).
+```
 
 ## The ten signs
+
+```gallery
+hab-deer-track-foothills | 1. Track
+hab-deer-pellets-fresh | 2. Scat
+hab-deer-rub | 5. Rub
+hab-grouse-snow-roost | 8. Grouse sign
+```
 
 ```checklist s3-ten-signs
 Track: name the animal, measure it, say which way it went
@@ -46,12 +77,21 @@ Predator sign: track or scat of coyote, wolf, cougar or bear
 Water sign: tracks at a pond, seep or creek crossing
 ```
 
+```more photos, Journal lines and bonus items
 - One photo per item with the ruler, plus the time and a map pin (Tip).
 - Write one line per item in the Journal: what, who, how old, which direction (Tip).
 - Bonus items: a kill site seen from a distance, a browse line, a shed antler, a stot trail, a snow roost (Tip).
+```
 
 ## Scoring guide
 
+```diagram sg-drill-score
+```
+
+- One point per item found, named and aged (Tip).
+- Walked through a bedding area at midday? Lose all points (Tip).
+
+```more the full scoring rules
 | Score | Rating | Next step |
 |---|---|---|
 | 0 to 3 | Beginner eyes | Walk slower. Stop every 50 m and look at the ground for a full minute (Tip) |
@@ -63,12 +103,20 @@ Water sign: tracks at a pond, seep or creek crossing
 - Lose a point for every item you touched bare handed or knelt over (Tip).
 - Lose all points if you walked through a bedding area at midday to find beds (Tip).
 - Two extra points if you can draw the walk from memory: trail, water, feed, bed and your stand (Tip).
+```
 
 ## Safety and rules on the walk
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```photo hab-bear-berry-patch Bears feed hard in October. Talk, spray on your belt.
+```
+
+- Close every gate you open. Give bulls room (Tip).
+- Leave a covered carcass alone (Tip).
+
+```more safety and the rules in full
 - Bears are feeding hard in October. Talk, keep spray on your belt, and leave a covered carcass alone (Tip).
 - Cattle on Crown range: close every gate you open and give bulls room (Tip).
 - Hunting on cultivated land, or on Crown land under a grazing lease with livestock on it, needs the consent of the owner, lessee or occupant (95%). Synopsis page 12, item 53.
@@ -86,6 +134,28 @@ Water sign: tracks at a pond, seep or creek crossing
 
 > [!field]
 > Book the drill for this week: 3 hours, mid morning, an edge with water. Take the list, the ruler and your brother. Score it in the Journal.
+```
+
+## Grandpa's rule and mistakes
+
+```photo hab-deer-track-dirt Look at the ground until the ground looks back.
+```
+
+> [!rule]
+> Look at the ground until the ground looks back. Then look up, because the deer already has.
+
+> [!mistake]
+> - Walking fast to cover ground. Sign is found at a crawl.
+> - Photographing a track with nothing for scale.
+> - Scoring yourself 10 because you saw lots of deer poop.
+
+## Do this in the field
+
+```diagram sg-drill-map
+```
+
+> [!field]
+> Book the drill this week: 3 hours, mid morning, an edge with water. Take the list, the ruler and your brother. Score it in the Journal.
 
 ## Sources
 
@@ -102,3 +172,4 @@ Water sign: tracks at a pond, seep or creek crossing
   {"q": "You carry the rifle on the drill. What must be true?", "options": ["Nothing, it is just a walk", "Licences on you, season open in that MU, legal hours, firearm unloaded in the truck", "Only that it is unloaded"], "answer": 1, "why": "With a firearm in the field you are hunting under the Wildlife Act. All the hunting rules apply."}
 ]
 ```
+

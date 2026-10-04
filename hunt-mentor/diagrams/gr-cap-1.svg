@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Capsize step 1: expect the gasp. Mouth closed if you can. Float in your PFD and get your breathing under control for about 1 minute.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1. Expect the gasp</text>
+  <rect x="0" y="150" width="400" height="150" fill="#4a7fb0" opacity=".35"/>
+  <path d="M0 150 q 25 -8 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0" fill="none" stroke="#4a7fb0" stroke-width="3"/>
+  <circle cx="120" cy="130" r="12" fill="#d9b48f"/><rect x="105.0" y="144" width="30" height="34" rx="7" fill="#e8590c"/><path d="M150 110 q10 -10 20 0 q10 10 20 0" stroke="#2f3a2b" stroke-width="3" fill="none"/><text x="250" y="90" font-size="16" font-weight="bold" fill="#c0392b">1 min</text><text x="250" y="110" font-size="14" fill="#2f3a2b">gasp, then calm</text>
+  <text x="200" y="290" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Mouth closed. Float. Breathe for about 1 minute</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Wind check tool 4: a light thread tied to a rifle sling or bow. It is always on and shows the breeze without using your hands.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <path d="M60 220 L340 140" stroke="#6b4f35" stroke-width="12" stroke-linecap="round"/>
+  <path d="M320 146 L360 134" stroke="#2f3a2b" stroke-width="8" stroke-linecap="round"/>
+  <path d="M120 200 C 110 130, 260 160, 240 90" fill="none" stroke="#8b5a2b" stroke-width="5"/>
+  <path d="M200 175 C 220 180, 240 170, 270 178 S 300 172, 320 180" fill="none" stroke="#e8590c" stroke-width="3"/>
+  <text x="200" y="30" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Thread on the sling</text>
+  <text x="300" y="210" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">always on</text>
+  <text x="200" y="268" font-size="15" fill="#2f3a2b" text-anchor="middle">No hands needed (Tip)</text>
+</svg>

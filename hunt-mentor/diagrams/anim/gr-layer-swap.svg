@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation: a hunter walks in wearing only base and mid layers, a little cool, puffy jacket in the pack. At the glassing spot the hunter sits down and puts the puffy on to stay warm while still.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Walk cool. Puffy on when you stop.</text>
+  <path d="M0 250 Q 120 230 220 236 T 400 220 L400 300 L0 300 Z" fill="#dfe6d3"/>
+  <ellipse cx="320" cy="226" rx="40" ry="14" fill="#8a8f88"/>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;250 -22" dur="4s" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 12" keyTimes="0;0.8;1" dur="5s" fill="freeze"/>
+      <circle cx="60" cy="170" r="11" fill="#d9b48f"/>
+      <rect x="48" y="182" width="24" height="38" rx="6" fill="#8a9a6b"/>
+      <rect x="70" y="186" width="14" height="24" rx="3" fill="#6b4f35"/>
+      <rect x="44" y="180" width="32" height="42" rx="8" fill="#e8590c" opacity="0">
+        <animate attributeName="opacity" values="0;1" begin="5s" dur=".8s" fill="freeze"/>
+      </rect>
+      <g stroke="#2f3a2b" stroke-width="6" stroke-linecap="round">
+        <line x1="54" y1="220" x2="48" y2="246"><animate attributeName="x2" values="44;62;44;62;44;62;44;62;48" dur="4s" fill="freeze"/></line>
+        <line x1="66" y1="220" x2="70" y2="246"><animate attributeName="x2" values="76;58;76;58;76;58;76;58;70" dur="4s" fill="freeze"/></line>
+      </g>
+    </g>
+  </g>
+  <g opacity="1"><animate attributeName="opacity" values="1;0" begin="3.6s" dur=".4s" fill="freeze"/>
+    <rect x="20" y="40" width="190" height="50" rx="8" fill="#2f3a2b"/><text x="115" y="62" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Walking: base + mid</text><text x="115" y="80" font-size="14" fill="#fff" text-anchor="middle">puffy in the pack</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="5.4s" dur=".5s" fill="freeze"/>
+    <rect x="180" y="40" width="200" height="50" rx="8" fill="#e8590c"/><text x="280" y="62" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Sitting: puffy on</text><text x="280" y="80" font-size="14" fill="#fff" text-anchor="middle">stay warm while still</text>
+  </g>
+</svg>

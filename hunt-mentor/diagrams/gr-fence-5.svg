@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Fence with a partner, seen from above: one hunter unloads and holds both firearms, actions open. The other crosses, then takes both guns over the fence. Then the first hunter crosses.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect y="36" width="400" height="230" fill="#dfe6d3" opacity=".6"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">With a partner</text>
+  <line x1="200" y1="40" x2="200" y2="262" stroke="#6b4f35" stroke-width="4" stroke-dasharray="2 10"/>
+  <g fill="#6b4f35"><rect x="194" y="50" width="12" height="12"/><rect x="194" y="150" width="12" height="12"/><rect x="194" y="250" width="12" height="12"/></g>
+  <text x="208" y="54" font-size="14" fill="#2f3a2b">Fence</text>
+  <circle cx="120" cy="160" r="14" fill="#2f3a2b"/><line x1="98" y1="120" x2="98" y2="200" stroke="#8b5a2b" stroke-width="8"/><line x1="142" y1="120" x2="142" y2="200" stroke="#8b5a2b" stroke-width="8"/><text x="120" y="232" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Holds both</text><circle cx="290" cy="160" r="14" fill="#2f3a2b"/><path d="M150 90 Q 200 70 280 140" stroke="#e8590c" stroke-width="4" fill="none" stroke-dasharray="7 5"/><text x="290" y="200" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Crosses, takes</text><text x="290" y="218" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">both guns</text>
+  <text x="200" y="290" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">One holds both, actions open. Other crosses.</text>
+  <text x="392" y="54" font-size="13" fill="#2f3a2b" text-anchor="end">Seen from above</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 528" role="img" aria-label="Chart, is this firearm legal for deer. Centrefire rifle with an expanding hunting bullet: yes, but full metal jacket or tracer bullets no. Rimfire such as a .22: never for deer. Shotgun: yes if 20 gauge or larger and No. 1 Buck or larger shot, or slugs. Air rifle: yes if .35 calibre or larger. Bow or crossbow: yes if class B, C or D. Handgun or a barrel under 305 millimetres: no. Bird shot is never legal for deer." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="528" fill="#fffaf0"/>
+<text x="200" y="28" font-size="20" fill="#23261f" text-anchor="middle" font-weight="bold">Is this firearm legal for deer?</text>
+<text x="200" y="50" font-size="14" fill="#2f3a2b" text-anchor="middle">BC synopsis pages 12 and 13</text>
+<rect x="8" y="66" width="384" height="74" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<text x="18" y="88" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Centrefire rifle</text>
+<text x="18" y="108" font-size="14" fill="#2f3a2b" text-anchor="start">Expanding hunting bullet</text>
+<text x="18" y="128" font-size="14" fill="#2f3a2b" text-anchor="start">Full metal jacket, tracer: NO</text>
+<rect x="318" y="74" width="64" height="26" rx="13" fill="#5c7a3a" stroke="#5c7a3a" stroke-width="2"/>
+<text x="350" y="92" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">YES</text>
+<rect x="8" y="148" width="384" height="54" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<text x="18" y="170" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Rimfire, like a .22</text>
+<text x="18" y="190" font-size="14" fill="#2f3a2b" text-anchor="start">Never for deer</text>
+<rect x="318" y="156" width="64" height="26" rx="13" fill="#c92a2a" stroke="#c92a2a" stroke-width="2"/>
+<text x="350" y="174" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">NO</text>
+<rect x="8" y="210" width="384" height="74" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<text x="18" y="232" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Shotgun</text>
+<text x="18" y="252" font-size="14" fill="#2f3a2b" text-anchor="start">20 gauge or larger AND</text>
+<text x="18" y="272" font-size="14" fill="#2f3a2b" text-anchor="start">No. 1 Buck or larger, or slugs</text>
+<rect x="318" y="218" width="64" height="26" rx="13" fill="#5c7a3a" stroke="#5c7a3a" stroke-width="2"/>
+<text x="350" y="236" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">YES</text>
+<rect x="8" y="292" width="384" height="54" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<text x="18" y="314" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Air rifle</text>
+<text x="18" y="334" font-size="14" fill="#2f3a2b" text-anchor="start">.35 calibre or larger</text>
+<rect x="318" y="300" width="64" height="26" rx="13" fill="#5c7a3a" stroke="#5c7a3a" stroke-width="2"/>
+<text x="350" y="318" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">YES</text>
+<rect x="8" y="354" width="384" height="54" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<text x="18" y="376" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Bow or crossbow</text>
+<text x="18" y="396" font-size="14" fill="#2f3a2b" text-anchor="start">Class B, C or D</text>
+<rect x="318" y="362" width="64" height="26" rx="13" fill="#5c7a3a" stroke="#5c7a3a" stroke-width="2"/>
+<text x="350" y="380" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">YES</text>
+<rect x="8" y="416" width="384" height="74" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<text x="18" y="438" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Handgun</text>
+<text x="18" y="458" font-size="14" fill="#2f3a2b" text-anchor="start">Never for hunting</text>
+<text x="18" y="478" font-size="14" fill="#2f3a2b" text-anchor="start">Barrel under 305 mm: NO</text>
+<rect x="318" y="424" width="64" height="26" rx="13" fill="#c92a2a" stroke="#c92a2a" stroke-width="2"/>
+<text x="350" y="442" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">NO</text>
+<text x="200" y="512" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">Bird shot is never legal for deer.</text>
+</svg>

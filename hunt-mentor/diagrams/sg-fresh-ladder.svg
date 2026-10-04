@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" font-family="sans-serif" role="img" aria-label="Freshness ladder, all Tip. Minutes to hours: wet scat, warm bed, green browse ends, crisp tracks, dew knocked off grass. Today: track edges sharp, scat dull but soft, scrape dark and damp. This week: dry scat, grey browse ends, softened tracks, bed with refrozen snow. Old: faded, crumbling, moss, leaves in the track. Hunt within 300 m of the freshest sign at dawn or dusk.">
+  <rect width="400" height="320" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Freshness ladder</text>
+  <rect x="14" y="44" width="372" height="56" rx="8" fill="#e8590c"/>
+  <rect x="14" y="106" width="372" height="56" rx="8" fill="#f2a56b"/>
+  <rect x="14" y="168" width="372" height="56" rx="8" fill="#dfe6d3"/>
+  <rect x="14" y="230" width="372" height="56" rx="8" fill="#e6e1d3"/>
+  <g font-size="16" font-weight="bold">
+    <text x="26" y="68" fill="#fff">Hours</text><text x="26" y="130" fill="#2f3a2b">Today</text><text x="26" y="192" fill="#2f3a2b">This week</text><text x="26" y="254" fill="#2f3a2b">Old</text>
+  </g>
+  <g font-size="14">
+    <text x="26" y="89" fill="#fff">wet scat, warm bed, green twig ends, dew off</text>
+    <text x="26" y="151" fill="#2f3a2b">sharp track edges, soft scat, damp scrape</text>
+    <text x="26" y="213" fill="#2f3a2b">dry scat, grey twig ends, refrozen bed</text>
+    <text x="26" y="275" fill="#2f3a2b">faded, crumbling, moss, leaves in the track</text>
+  </g>
+  <text x="200" y="310" font-size="14" fill="#6b4f35" text-anchor="middle">Hunt within 300 m of the freshest (Tip)</text>
+</svg>

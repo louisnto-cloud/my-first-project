@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Season timeline chart for Region 3 deer, September to December, synopsis page 34. White tailed deer bucks: 10 September to 10 December. White tailed deer antlerless: 10 to 31 October. Mule deer bucks: 1 to 31 October. Mule deer 4 point bucks only: 1 November to 10 December. Units listed in the synopsis rows.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <g fill="#dfe6d3"><rect x="90" y="30" width="75" height="220"/><rect x="240" y="30" width="75" height="220"/></g>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="127" y="24">Sep</text><text x="202" y="24">Oct</text><text x="277" y="24">Nov</text><text x="352" y="24">Dec</text></g>
+  <g font-size="14" fill="#2f3a2b">
+    <text x="8" y="62" font-weight="bold">Whitetail</text><text x="8" y="78">bucks</text>
+    <text x="8" y="112" font-weight="bold">Whitetail</text><text x="8" y="128">antlerless</text>
+    <text x="8" y="162" font-weight="bold">Mule deer</text><text x="8" y="178">bucks</text>
+    <text x="8" y="212" font-weight="bold">Mule deer</text><text x="8" y="228">4 point only</text>
+  </g>
+  <rect x="114" y="54" width="225" height="24" rx="4" fill="#8a9a6b"/>
+  <rect x="190" y="104" width="52" height="24" rx="4" fill="#8a9a6b"/>
+  <rect x="165" y="154" width="75" height="24" rx="4" fill="#e8590c"/>
+  <rect x="240" y="204" width="100" height="24" rx="4" fill="#8b5a2b"/>
+  <g font-size="14" font-weight="bold" fill="#fff"><text x="122" y="71">Sep 10 to Dec 10</text><text x="172" y="171">Oct</text></g>
+  <text x="246" y="121" font-size="14" font-weight="bold" fill="#2f3a2b">Oct 10 to 31</text><text x="236" y="246" font-size="14" font-weight="bold" fill="#8b5a2b">Nov 1 to Dec 10</text>
+  <text x="200" y="272" font-size="14" fill="#2f3a2b" text-anchor="middle">Region 3, synopsis page 34 (99%)</text>
+  <text x="200" y="292" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">The class is the rule, not just the date</text>
+</svg>

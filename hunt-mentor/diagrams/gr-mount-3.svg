@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 3: lay the scope in the bottom ring halves. Put the ring caps on loosely so the scope can still slide.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Scope in, caps loose</text>
+  <rect x="30" y="220" width="340" height="24" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/>
+  <g fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"><path d="M110 220 L110 178 L150 178 L150 220 Z"/><path d="M260 220 L260 178 L300 178 L300 220 Z"/></g>
+  <path d="M30 150 L70 156 L70 184 L30 190 Z" fill="#2f3a2b"/><rect x="70" y="156" width="240" height="26" fill="#2f3a2b"/><path d="M310 156 L340 140 L380 140 L380 196 L340 196 L310 182 Z" fill="#2f3a2b"/>
+  <g fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2" opacity=".9"><path d="M110 132 L150 132 L150 146 L110 146 Z"/><path d="M260 132 L300 132 L300 146 L260 146 Z"/></g>
+  <g stroke="#e8590c" stroke-width="2" stroke-dasharray="4 3"><line x1="130" y1="146" x2="130" y2="156"/><line x1="280" y1="146" x2="280" y2="156"/></g>
+  <text x="200" y="100" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Caps on loosely</text>
+  <text x="200" y="276" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bottom ring halves hold the tube</text>
+  <path d="M60 120 h-30 m8 -6 l-8 6 l8 6 M330 120 h30 m-8 -6 l8 6 l-8 6" stroke="#2f3a2b" stroke-width="3" fill="none"/>
+  <text x="200" y="124" font-size="14" fill="#2f3a2b" text-anchor="middle">Still slides</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Side view of wind crossing a ridge into a draw. Straight wind blows over the top, then tumbles and curls in the draw and against the timber below. In a swirl no setup is safe: back out.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <path d="M0 160 L120 70 L170 70 L250 230 L290 240 L400 150 L400 300 L0 300 Z" fill="#8a9a6b"/>
+  <g fill="#2f3a2b"><polygon points="330,200 340,170 350,200"/><polygon points="355,182 365,150 375,182"/><polygon points="305,222 315,192 325,222"/></g>
+  <g stroke="#4a7fb0" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M10 60 L100 30"/><path d="M90 26 l12 4 l-8 10"/>
+    <path d="M110 30 L200 40"/><path d="M188 32 l12 8 l-12 6"/>
+    <path d="M200 120 c 40 -30, 70 10, 40 30 c -25 15, -40 -15, -15 -20"/>
+    <path d="M250 190 c 30 -40, 70 -10, 50 20 c -15 20, -40 0, -25 -15"/>
+  </g>
+  <text x="12" y="22" font-size="15" font-weight="bold" fill="#4a7fb0">Steady wind over the top</text>
+  <text x="300" y="110" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Swirl in</text>
+  <text x="300" y="130" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">the draw</text>
+  <rect x="12" y="236" width="196" height="50" rx="8" fill="#2f3a2b"/>
+  <text x="110" y="258" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">No setup is safe here.</text>
+  <text x="110" y="276" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Back out, come back</text>
+</svg>

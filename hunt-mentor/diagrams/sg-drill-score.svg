@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Score the drill out of 10. 0 to 3: beginner eyes, walk slower. 4 to 6: getting it, now age and give direction every time. 7 to 8: reader, pick a glassing point and sit it at dusk. 9 to 10: tracker, repeat after snow with 3 bonus items.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Score yourself out of 10</text>
+  <rect x="20" y="50" width="120" height="44" fill="#e6e1d3"/>
+  <rect x="140" y="50" width="120" height="44" fill="#dfe6d3"/>
+  <rect x="260" y="50" width="80" height="44" fill="#f2a56b"/>
+  <rect x="340" y="50" width="40" height="44" fill="#e8590c"/>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="80" y="78">0 to 3</text><text x="200" y="78">4 to 6</text><text x="300" y="78">7 to 8</text><text x="360" y="78" fill="#fff">9+</text></g>
+  <g font-size="15" fill="#2f3a2b">
+    <text x="20" y="130" font-weight="bold">Beginner eyes</text><text x="160" y="130">walk slower, stop every 50 m</text>
+    <text x="20" y="166" font-weight="bold">Getting it</text><text x="160" y="166">age it, give direction</text>
+    <text x="20" y="202" font-weight="bold">Reader</text><text x="160" y="202">sit a glassing point at dusk</text>
+    <text x="20" y="238" font-weight="bold">Tracker</text><text x="160" y="238">redo after snow, 3 bonus</text>
+  </g>
+  <text x="200" y="280" font-size="14" fill="#6b4f35" text-anchor="middle">Tip: the scoring is the mentor's own design</text>
+</svg>

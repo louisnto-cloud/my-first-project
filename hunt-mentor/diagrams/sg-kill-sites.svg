@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Who made the kill? Cougar: kill dragged into cover and covered with leaves, sticks or snow. Wolves: carcass torn apart in the open, bones scattered, many tracks. Bear: dirt and debris raked over the carcass, the ground looks rototilled. All three: back out and leave.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Who made the kill?</text>
+  <g><rect x="10" y="45" width="120" height="140" rx="10" fill="#dfe6d3"/>
+    <path d="M30 150 Q70 100 110 150 Z" fill="#8a9a6b"/>
+    <g stroke="#6b4f35" stroke-width="3"><path d="M35 140 L80 118 M60 150 L100 125 M45 120 L90 145"/></g>
+    <g fill="#2f3a2b"><polygon points="20,110 30,70 40,110"/><polygon points="100,105 110,62 120,105"/></g></g>
+  <g><rect x="140" y="45" width="120" height="140" rx="10" fill="#dfe6d3"/>
+    <g stroke="#f1e2c0" stroke-width="6" stroke-linecap="round"><path d="M160 80 l20 8 M210 70 l14 16 M170 150 l26 -6 M225 140 l18 10 M195 110 l20 0 M155 120 l10 14"/></g>
+    <g fill="#6b4f35"><circle cx="232" cy="110" r="3"/><circle cx="240" cy="102" r="3"/><circle cx="175" cy="105" r="3"/><circle cx="168" cy="98" r="3"/><circle cx="205" cy="160" r="3"/><circle cx="213" cy="168" r="3"/></g></g>
+  <g><rect x="270" y="45" width="120" height="140" rx="10" fill="#dfe6d3"/>
+    <path d="M285 150 Q330 90 375 150 Z" fill="#a88f6d"/>
+    <g stroke="#6b4f35" stroke-width="2"><path d="M290 160 l20 -10 M320 165 l25 -12 M350 162 l20 -8 M295 125 l15 10 M355 120 l12 12"/></g></g>
+  <g text-anchor="middle">
+    <text x="70" y="210" font-size="17" font-weight="bold" fill="#2f3a2b">Cougar</text>
+    <text x="200" y="210" font-size="17" font-weight="bold" fill="#2f3a2b">Wolves</text>
+    <text x="330" y="210" font-size="17" font-weight="bold" fill="#2f3a2b">Bear</text>
+    <text x="70" y="230" font-size="14" fill="#2f3a2b">in cover,</text><text x="70" y="247" font-size="14" fill="#2f3a2b">covered neatly</text>
+    <text x="200" y="230" font-size="14" fill="#2f3a2b">in the open,</text><text x="200" y="247" font-size="14" fill="#2f3a2b">bones scattered</text>
+    <text x="330" y="230" font-size="14" fill="#2f3a2b">raked dirt,</text><text x="330" y="247" font-size="14" fill="#2f3a2b">rototilled</text>
+  </g>
+  <rect x="60" y="260" width="280" height="32" rx="8" fill="#e8590c"/>
+  <text x="200" y="282" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Do not touch. Back out, talk loud.</text>
+</svg>

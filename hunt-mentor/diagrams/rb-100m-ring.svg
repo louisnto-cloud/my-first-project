@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 386" role="img" aria-label="A 100 metre ring, 109 yards, around an occupied house. A deer inside the ring: no hunting and no shooting. A deer outside the ring: check the other rules. The ring applies to an occupied dwelling, a farm or ranch building with people or domestic animals, a church, a school building or school yard, a playground and a regional district park. Owner permission does not lift it." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="386" fill="#fffaf0"/>
+<text x="200" y="24" font-size="20" fill="#23261f" text-anchor="middle" font-weight="bold">The 100 m rule</text>
+<rect x="0" y="36" width="400" height="244" fill="#dfe6d3"/>
+<circle cx="200" cy="158" r="112" fill="#e8590c" opacity=".18" stroke="#e8590c" stroke-width="3" stroke-dasharray="10 7"/>
+<g transform="translate(200 160) scale(1.6)"><rect x="-18" y="-6" width="36" height="24" fill="#8b5a2b"/><path d="M-24 -4 L0 -24 L24 -4 Z" fill="#2f3a2b"/><rect x="-5" y="6" width="10" height="12" fill="#fffaf0"/></g>
+<text x="200" y="210" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">occupied</text>
+<line x1="200" y1="160" x2="304.0" y2="160.0" stroke="#e8590c" stroke-width="2.5"/><polygon points="310,160 301.0,164.3 301.0,155.7" fill="#e8590c"/>
+<text x="262" y="184" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">100 m (109 yd)</text>
+<g transform="translate(130 104) scale(0.9)"><ellipse cx="0" cy="0" rx="24" ry="11" fill="#8b5a2b"/><path d="M16 -6 L24 -20 L30 -18 L24 -2 Z" fill="#8b5a2b"/><ellipse cx="29" cy="-20" rx="8" ry="5" fill="#8b5a2b"/><path d="M-18 8 L-20 26 M-10 8 L-9 26 M12 8 L11 26 M19 6 L21 26" stroke="#8b5a2b" stroke-width="4"/><path d="M-24 -4 l-5 -2" stroke="#8b5a2b" stroke-width="4"/><path d="M26 -24 L22 -36 L16 -42 M22 -36 L28 -44 M30 -24 L34 -36 L30 -44 M34 -36 L40 -42" stroke="#5c3b1c" stroke-width="2.5" fill="none"/></g><circle cx="150" cy="82" r="14" fill="none" stroke="#c92a2a" stroke-width="3"/><line x1="140.2" y1="91.8" x2="159.8" y2="72.2" stroke="#c92a2a" stroke-width="3"/>
+<text x="118" y="130" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">NO</text>
+<g transform="translate(360 250) scale(0.8)"><ellipse cx="0" cy="0" rx="24" ry="11" fill="#8b5a2b"/><path d="M16 -6 L24 -20 L30 -18 L24 -2 Z" fill="#8b5a2b"/><ellipse cx="29" cy="-20" rx="8" ry="5" fill="#8b5a2b"/><path d="M-18 8 L-20 26 M-10 8 L-9 26 M12 8 L11 26 M19 6 L21 26" stroke="#8b5a2b" stroke-width="4"/><path d="M-24 -4 l-5 -2" stroke="#8b5a2b" stroke-width="4"/><path d="M26 -24 L22 -36 L16 -42 M22 -36 L28 -44 M30 -24 L34 -36 L30 -44 M34 -36 L40 -42" stroke="#5c3b1c" stroke-width="2.5" fill="none"/></g>
+<text x="352" y="226" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">outside</text>
+<text x="14" y="302" font-size="15" fill="#23261f" text-anchor="start">Counts: an occupied house, a farm or ranch</text>
+<text x="14" y="322" font-size="15" fill="#23261f" text-anchor="start">building with people or animals, a church,</text>
+<text x="14" y="342" font-size="15" fill="#23261f" text-anchor="start">school, school yard, playground, regional</text>
+<text x="14" y="362" font-size="15" fill="#23261f" text-anchor="start">district park. Permission does not lift it.</text>
+</svg>

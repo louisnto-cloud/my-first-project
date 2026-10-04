@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, bird's eye view. Wind blows from the left. A buck track in snow turns downwind toward thick timber where the deer is likely bedded. Walking the track would carry your scent to the bed. Instead the hunter leaves the track, loops wide, and comes toward the timber from downwind with the wind in their face.">
+  <rect width="400" height="300" fill="#eef2f6"/>
+  <g fill="#2f3a2b"><polygon points="235,120 247,82 259,120"/><polygon points="265,130 277,92 289,130"/><polygon points="250,160 262,122 274,160"/><polygon points="285,165 297,127 309,165"/></g>
+  <text x="270" y="190" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">likely bed</text>
+  <g stroke="#4a7fb0" stroke-width="3" fill="none"><path d="M10 50 H80 m-12 -8 l12 8 l-12 8"><animateTransform attributeName="transform" type="translate" values="0 0;16 0;0 0" dur="2s" repeatCount="indefinite"/></path></g>
+  <text x="96" y="56" font-size="16" font-weight="bold" fill="#4a7fb0">Wind</text>
+  <path d="M30 270 C 90 250, 120 200, 170 190 S 220 160, 245 145" fill="none" stroke="#6b4f35" stroke-width="3" stroke-dasharray="3 7"/>
+  <text x="40" y="292" font-size="14" fill="#6b4f35">buck track</text>
+  <path id="sg-snow-loop-path" d="M30 270 C 90 250, 120 200, 170 190 C 220 240, 330 270, 380 220 C 395 190, 380 160, 355 145" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="7 6" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.2s" dur=".3s" fill="freeze"/></path>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.2s" dur=".3s" fill="freeze"/>
+    <path d="M175 185 L240 150" stroke="#c0392b" stroke-width="3"/><path d="M195 158 l18 18 M213 158 l-18 18" stroke="#c0392b" stroke-width="4"/>
+    <text x="190" y="140" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">scent to the bed</text></g>
+  <g><circle r="9" fill="#e8590c"/><text y="-14" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">You</text>
+    <animateMotion dur="7s" fill="freeze"><mpath href="#sg-snow-loop-path"/></animateMotion></g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="7s" dur=".5s" fill="freeze"/>
+    <rect x="20" y="70" width="210" height="40" rx="8" fill="#2f3a2b"/>
+    <text x="125" y="96" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Loop: wind in your face</text></g>
+</svg>

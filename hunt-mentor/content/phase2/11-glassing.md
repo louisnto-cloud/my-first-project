@@ -9,26 +9,56 @@ checked: 2026-10-02
 > [!why]
 > In open Interior country you find more deer with your eyes than with your boots. [[Glassing]] lets you see them before they see you.
 
+```photo g-md-distance Find the deer: grey bodies, white rumps, big ears.
+```
+
+- Sit, brace, glass slowly in strips. Look for parts of deer.
+
 ## Binocular technique
 
+```steps Get steady glass
+hf-bino-setup | Set eye cups and the right eye dial once, at home.
+hf-bino-brace | Sit. Elbows on knees, back on a pack or tree.
+hf-bino-glare | Low sun ahead? Shade the lenses.
+```
+
+- Move the binoculars, not your eyes inside them (Tip).
+
+```more binocular technique in full
 - Set the eye cups and the right eye dial (diopter) once at home. Mark the setting.
 - Brace. Elbows on knees, back on a tree or pack. Shaking binoculars hide deer.
 - Hold still and let the view settle. Move the binoculars, not your eyes inside them (Tip).
 - Look through the binoculars for a long time, rest your eyes for a few seconds, then go back (Tip).
 - Use a hat brim or hand to cut glare when the sun is low in front of you.
+```
 
 ## Tripods
 
+```diagram hf-shake
+```
+
+- A tripod steadies the view and stops arm fatigue (65%).
+
+> [!lean]
+> Use the binoculars you have plus a cheap tripod adapter. Upgrade glass later.
+
+```more tripods in full
 - A tripod steadies the binoculars and stops arm fatigue on long sessions (65%).
 - Many western hunters rate a tripod as a bigger upgrade than better glass (60%, hunter opinion).
 - A light tripod and a binocular adapter is enough to start.
 - Steady glass shows small movement: a tail flick at 800 m (875 yd) you would miss handheld (Tip).
-
-> [!lean]
-> Start with the binoculars you have plus a cheap tripod adapter. Upgrade glass later, once you know what you use.
+- My lean in full: start with the binoculars you have plus a cheap tripod adapter. Upgrade glass later, once you know what you use.
+```
 
 ## The grid method
 
+```anim hf-glass-sweep Slow strips, a third overlap, stop and look at each view.
+```
+
+- Quick scan of open slopes first, then the grid (65%).
+- Then glass it all again. Deer stand up and move (Tip).
+
+```more the seven grid steps
 1. Pick a spot with a wide view and the wind right (see Wind and thermals).
 2. Quick scan first: open slopes, cut blocks, edges where deer are easy to see (65%).
 3. Then split the view into a grid in your head (65%).
@@ -36,9 +66,23 @@ checked: 2026-10-02
 5. Overlap each binocular view by about a third so nothing falls in a gap (60%).
 6. Drop down one strip and come back right to left (65%).
 7. Then glass it again. Deer stand up, move and turn as light changes.
+```
+
+## Grid order
+
+```diagram glassing-grid
+```
+
+- Start near, finish far. 1 to 2 minutes a square.
 
 ## What to look for
 
+```diagram hf-look-parts
+```
+
+- Look for **parts**: a flat back, legs, an ear flick, a white rump (65%).
+
+```more what to look for, in full
 - Do not look for a whole deer. Look for **parts** (65%).
 - A **horizontal line** in a world of vertical trees: a back or belly (65%).
 - **Vertical legs** under a shape that does not belong (65%).
@@ -46,9 +90,28 @@ checked: 2026-10-02
 - The **white rump** of a mule deer, or the flash of a white tail (Tip).
 - A shape that is the wrong colour: grey brown body against green or yellow.
 - Antler tips catching light, or a shiny black nose.
+```
+
+## Practise on real deer
+
+```gallery
+g-md-does-bedded | Two bedded does: only heads and ears show.
+g-md-buck-bedded | Bedded buck: the rack shows, the body hides.
+g-bt-bedded | Bedded buck: head, ears and a back line.
+g-md-buck-rear | From behind: the white rump gives it away.
+```
+
+- Find each deer, then name the part you saw first.
 
 ## Best times and places
 
+```diagram hf-glass-day
+```
+
+- Glass at first light and in the last hour (Tip).
+- Deer legal hours: 1 hour before sunrise to 1 hour after sunset (99%).
+
+```more times and places in full
 - Deer are most active at dawn and dusk (70%).
 - Glass first light and the last hour before legal shooting light ends (Tip).
 - Legal hunting hours for deer: 1 hour before sunrise to 1 hour after sunset (synopsis page 11, item 38) (99%).
@@ -56,17 +119,30 @@ checked: 2026-10-02
 - Midday: glass shade, timber edges and benches where deer bed (Tip).
 - Glass from above, with the sun behind you, so deer are lit and you are not (Tip).
 - Near Sun Peaks: cut blocks, burns, open grass slopes and timber edges (Tip, check on your map).
+```
+
+## Sun behind you
+
+```diagram hf-sun-behind
+```
+
+- Glass from above with the sun behind you. Deer are lit, you are not (Tip).
+
+## Grandpa's rule and mistakes
+
+```diagram hf-fast-vs-slow
+```
 
 > [!rule]
 > Grandpa's rule (wisdom): Sit longer than you think. When you want to move, glass it one more time.
 
 > [!mistake]
-> - Sweeping the binoculars fast across a hillside, like a camera pan.
+> - Sweeping fast across a hillside, like a camera pan.
 > - Looking only for a whole standing deer in the open.
 > - Glassing straight into a rising or setting sun.
 
 > [!field]
-> Pick a hillside. Set a 20 minute timer. Glass it with the grid twice. Write down every thing you thought might be a deer, then check it.
+> Set a 20 minute timer. Glass one hillside with the grid twice. Write down every maybe, then check it.
 
 ## Sources
 

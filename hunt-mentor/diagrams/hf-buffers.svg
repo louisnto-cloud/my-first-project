@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Two no shooting buffers. Left: a park road with a 400 metre band on each side of its centre line, no hunting or discharge inside the band. Right: a recreation site with a 100 metre circle around structures, camping areas and trailheads, no discharge inside it.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="20" y="40" width="160" height="220" fill="#dfe6d3"/>
+  <rect x="60" y="40" width="80" height="220" fill="#c0392b" opacity=".2"/>
+  <line x1="100" y1="40" x2="100" y2="260" stroke="#2f3a2b" stroke-width="6"/>
+  <line x1="100" y1="40" x2="100" y2="260" stroke="#ffd34d" stroke-width="2" stroke-dasharray="10 8"/>
+  <path d="M100 150 L140 150" stroke="#c0392b" stroke-width="2.5"/><polygon points="140,145 140,155 148,150" fill="#c0392b"/>
+  <text x="100" y="28" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Park road</text>
+  <text x="100" y="282" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">400 m each side</text>
+  <text x="100" y="298" font-size="14" fill="#2f3a2b" text-anchor="middle">of the centre line</text>
+  <rect x="220" y="40" width="170" height="220" fill="#dfe6d3"/>
+  <circle cx="305" cy="150" r="80" fill="#c0392b" opacity=".2"/>
+  <polygon points="290,160 305,135 320,160" fill="#8b5a2b"/><rect x="286" y="160" width="38" height="4" fill="#8b5a2b"/>
+  <rect x="330" y="150" width="20" height="14" fill="#2f3a2b"/>
+  <path d="M305 150 L385 150" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="305" y="28" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Recreation site</text>
+  <text x="305" y="282" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">100 m from camp,</text>
+  <text x="305" y="298" font-size="14" fill="#2f3a2b" text-anchor="middle">structure, trailhead</text>
+  <text x="345" y="140" font-size="14" font-weight="bold" fill="#c0392b">100 m</text>
+</svg>

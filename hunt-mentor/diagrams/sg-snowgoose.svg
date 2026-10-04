@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="sans-serif" role="img" aria-label="Snow geese calendar. They reach the Fraser delta by early October, peak mid October to mid December, mostly shift to the Skagit in Washington late December to February, return mid March to mid April, then fly home to Wrangel Island, Russia, in April.">
+<rect width="400" height="260" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Snow geese and the Fraser delta</text>
+<line x1="100" y1="44" x2="100" y2="182" stroke="#dfe6d3" stroke-width="2"/>
+<text x="111" y="200" font-size="14" fill="#2f3a2b" text-anchor="middle">J</text>
+<line x1="124" y1="44" x2="124" y2="182" stroke="#dfe6d3" stroke-width="2"/>
+<text x="135" y="200" font-size="14" fill="#2f3a2b" text-anchor="middle">F</text>
+<line x1="146" y1="44" x2="146" y2="182" stroke="#dfe6d3" stroke-width="2"/>
+<text x="157" y="200" font-size="14" fill="#2f3a2b" text-anchor="middle">M</text>
+<line x1="170" y1="44" x2="170" y2="182" stroke="#dfe6d3" stroke-width="2"/>
+<text x="181" y="200" font-size="14" fill="#2f3a2b" text-anchor="middle">A</text>
+<line x1="194" y1="44" x2="194" y2="182" stroke="#dfe6d3" stroke-width="2"/>
+<text x="205" y="200" font-size="14" fill="#2f3a2b" text-anchor="middle">M</text>
+<line x1="218" y1="44" x2="218" y2="182" stroke="#dfe6d3" stroke-width="2"/>
+<text x="229" y="200" font-size="14" fill="#2f3a2b" text-anchor="middle">J</text>
+<line x1="241" y1="44" x2="241" y2="182" stroke="#dfe6d3" stroke-width="2"/>
+<text x="252" y="200" font-size="14" fill="#2f3a2b" text-anchor="middle">J</text>
+<line x1="266" y1="44" x2="266" y2="182" stroke="#dfe6d3" stroke-width="2"/>
+<text x="276" y="200" font-size="14" fill="#2f3a2b" text-anchor="middle">A</text>
+<line x1="290" y1="44" x2="290" y2="182" stroke="#dfe6d3" stroke-width="2"/>
+<text x="301" y="200" font-size="14" fill="#2f3a2b" text-anchor="middle">S</text>
+<line x1="313" y1="44" x2="313" y2="182" stroke="#dfe6d3" stroke-width="2"/>
+<text x="324" y="200" font-size="14" fill="#2f3a2b" text-anchor="middle">O</text>
+<line x1="337" y1="44" x2="337" y2="182" stroke="#dfe6d3" stroke-width="2"/>
+<text x="348" y="200" font-size="14" fill="#2f3a2b" text-anchor="middle">N</text>
+<line x1="361" y1="44" x2="361" y2="182" stroke="#dfe6d3" stroke-width="2"/>
+<text x="372" y="200" font-size="14" fill="#2f3a2b" text-anchor="middle">D</text>
+<text x="92" y="75" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Fraser delta</text>
+<rect x="313" y="59" width="71" height="22" rx="6" fill="#4a7fb0"/>
+<rect x="157" y="59" width="24" height="22" rx="6" fill="#4a7fb0"/>
+<text x="92" y="119" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Peak</text>
+<rect x="324" y="103" width="48" height="22" rx="6" fill="#e8590c"/>
+<text x="92" y="163" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Skagit, WA</text>
+<rect x="380" y="147" width="6" height="22" rx="6" fill="#8a9a6b"/>
+<rect x="100" y="147" width="45" height="22" rx="6" fill="#8a9a6b"/>
+<text x="200" y="224" font-size="14" fill="#6b4f35" text-anchor="middle">April: home to Wrangel Island, Russia (80%)</text>
+</svg>

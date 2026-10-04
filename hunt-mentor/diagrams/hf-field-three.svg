@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Field task chart. Stand mid slope three times on a scouting day: 7 am, 12 noon and 5 pm. Puff or release milkweed each time and draw which way it went in your journal. Blank boxes for your arrows.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="28" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Test the air 3 times, one day</text>
+  <g fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"><rect x="12" y="50" width="120" height="180" rx="10"/><rect x="140" y="50" width="120" height="180" rx="10"/><rect x="268" y="50" width="120" height="180" rx="10"/></g>
+  <g fill="#8a9a6b"><path d="M20 210 L124 130 L124 222 L20 222 Z"/><path d="M148 210 L252 130 L252 222 L148 222 Z"/><path d="M276 210 L380 130 L380 222 L276 222 Z"/></g>
+  <circle cx="72" cy="172" r="7" fill="#e8590c"/><circle cx="200" cy="172" r="7" fill="#e8590c"/><circle cx="328" cy="172" r="7" fill="#e8590c"/>
+  <g font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="72" y="80">7 am</text><text x="200" y="80">12 noon</text><text x="328" y="80">5 pm</text></g>
+  <g fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.5" stroke-dasharray="4 4"><rect x="42" y="94" width="60" height="40"/><rect x="170" y="94" width="60" height="40"/><rect x="298" y="94" width="60" height="40"/></g>
+  <text x="200" y="258" font-size="15" fill="#2f3a2b" text-anchor="middle">Draw the drift arrow in each box</text>
+  <text x="200" y="280" font-size="15" fill="#2f3a2b" text-anchor="middle">Puffer or milkweed, mid slope</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Forest Service Road habit 1. At the start of the road a sign posts the radio channel and kilometre markers. Note the channel and drive with headlights on.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <path d="M120 300 L180 120 L220 120 L330 300 Z" fill="#c9b79c"/>
+  <rect x="30" y="60" width="150" height="100" rx="6" fill="#2f6e3b"/>
+  <rect x="98" y="160" width="12" height="80" fill="#6b4f35"/>
+  <text x="105" y="88" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">ROAD CHANNEL</text>
+  <text x="105" y="114" font-size="20" font-weight="bold" fill="#ffd34d" text-anchor="middle">RR ##</text>
+  <text x="105" y="142" font-size="14" fill="#fff" text-anchor="middle">call km and direction</text>
+  <rect x="210" y="190" width="80" height="50" rx="8" fill="#4a7fb0"/>
+  <circle cx="226" cy="230" r="7" fill="#ffd34d"/><circle cx="274" cy="230" r="7" fill="#ffd34d"/>
+  <path d="M226 230 L190 290 L262 290 Z" fill="#ffd34d" opacity=".35"/>
+  <text x="300" y="60" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Note the channel</text>
+  <text x="300" y="82" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Headlights on</text>
+  <text x="105" y="270" font-size="14" fill="#2f3a2b" text-anchor="middle">Channel varies by road</text>
+</svg>

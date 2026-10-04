@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 416" role="img" aria-label="A deer seen from the side with the parts that must stay naturally attached circled. The unskinned tail. For a buck, a testicle or part of the penis. For a doe, a portion of the udder and teats, as page 15 prints it. In an antler restricted season, the antlers stay on part of the upper skull with the species licence. These stay on until the meat is home and butchered, at a meat cutter or cold storage plant, or inspected." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="416" fill="#fffaf0"/>
+<text x="200" y="26" font-size="20" fill="#23261f" text-anchor="middle" font-weight="bold">Deer: what stays attached</text>
+<g transform="translate(0 44)">
+<ellipse cx="190" cy="130" rx="95" ry="40" fill="#8b5a2b"/>
+<path d="M255 105 L290 52 L312 58 L282 120 Z" fill="#8b5a2b"/><ellipse cx="308" cy="54" rx="26" ry="15" fill="#8b5a2b"/>
+<path d="M300 40 L292 14 L280 4 M292 14 L304 0 M314 40 L322 14 L318 0 M322 14 L336 6" stroke="#5c3b1c" stroke-width="4" fill="none"/>
+<rect x="118" y="160" width="10" height="56" fill="#8b5a2b"/>
+<rect x="140" y="160" width="10" height="56" fill="#8b5a2b"/>
+<rect x="236" y="160" width="10" height="56" fill="#8b5a2b"/>
+<rect x="256" y="160" width="10" height="56" fill="#8b5a2b"/>
+<path d="M96 116 Q 80 120 84 146 Q 92 140 98 128 Z" fill="#f3e9d8" stroke="#2f3a2b" stroke-width="1.5"/>
+<circle cx="88" cy="132" r="22" fill="none" stroke="#e8590c" stroke-width="3"/>
+<text x="14" y="84" font-size="15" fill="#e8590c" text-anchor="start" font-weight="bold">Unskinned tail</text>
+<line x1="60" y1="90" x2="80" y2="112" stroke="#e8590c" stroke-width="2"/>
+<circle cx="160" cy="166" r="16" fill="none" stroke="#e8590c" stroke-width="3"/>
+<line x1="160" y1="182" x2="160" y2="230" stroke="#e8590c" stroke-width="2"/>
+<circle cx="310" cy="20" r="26" fill="none" stroke="#4a7fb0" stroke-width="3"/>
+<text x="362" y="100" font-size="14" fill="#4a7fb0" text-anchor="middle" font-weight="bold">Antler</text>
+<text x="362" y="117" font-size="14" fill="#4a7fb0" text-anchor="middle" font-weight="bold">season:</text>
+<text x="362" y="134" font-size="14" fill="#4a7fb0" text-anchor="middle" font-weight="bold">antlers</text>
+<text x="362" y="151" font-size="14" fill="#4a7fb0" text-anchor="middle" font-weight="bold">on skull</text>
+</g>
+<text x="14" y="300" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Buck: a testicle or part of the penis</text>
+<text x="14" y="321" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Doe: a portion of the udder and teats</text>
+<rect x="8" y="344" width="384" height="62" rx="8" fill="#eef3e6" stroke="#5c7a3a" stroke-width="2"/>
+<text x="200" y="368" font-size="15" fill="#23261f" text-anchor="middle">Naturally attached, together with the tail,</text>
+<text x="200" y="388" font-size="15" fill="#23261f" text-anchor="middle">until home and butchered, cut, or inspected.</text>
+</svg>

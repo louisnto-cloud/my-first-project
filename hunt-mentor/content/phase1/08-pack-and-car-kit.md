@@ -11,15 +11,29 @@ checked: 2026-10-01
 
 ## Key points
 
+```diagram gr-three-ts
+```
+
+- Carry the **10 essentials** every time, even for 2 hours (75%).
+- Leave a [[Trip plan]] with someone who will call for help (75%).
+
+```more the full key points
 - AdventureSmart's Three Ts: **Trip planning, Training, Taking the essentials** (75%).
 - Carry the **10 essentials** every time, even for a 2 hour hunt (75%).
 - Add hunting extras: tourniquet, knife, game bags, rope (Tip).
-- Leave a [[Trip plan]] with someone who will call for help if you are late (75%).
+- Leave a trip plan with someone who will call for help if you are late (75%).
 - A [[Satellite messenger]] works where your phone has no signal (70%).
 - Plan the meat: cooler, ice, and a way to keep it dry (Tip).
+```
 
 ## The 10 essentials (AdventureSmart)
 
+```diagram gr-ten-essentials
+```
+
+- Add for hunting: tourniquet, knife, game bags, rope (Tip).
+
+```more the list in words
 1. Flashlight or headlamp, spare batteries (75%).
 2. Fire making kit: waterproof matches or lighter, fire starter (75%).
 3. Signalling device: whistle or mirror (75%).
@@ -30,22 +44,27 @@ checked: 2026-10-01
 8. Emergency shelter: blanket or tarp (75%).
 9. Pocket knife (75%).
 10. Sun protection: glasses, sunscreen, hat (75%).
+```
 
 ## First aid and the tourniquet
 
-- A firearm or knife accident can bleed out fast. Carry a **[[Tourniquet]]** in the same pocket every hunt (Tip).
+```diagram gr-tourniquet
+```
+
+- [[Tourniquet]] in the **same pocket** every hunt (Tip). Place it 5 to 8 cm (2 to 3 in) above the wound (65%).
+- Take a course with tourniquet practice (Tip).
+
+```more when, how, and fakes
+- A firearm or knife accident can bleed out fast. Carry a tourniquet in the same pocket every hunt (Tip).
 - Use one for life threatening bleeding from an arm or leg that pressure does not stop (65%).
 - Place it 5 to 8 cm (2 to 3 in) above the wound, not on a joint (65%).
 - Tighten until the bleeding stops. Note the time. Leave it on until help arrives (65%).
 - CAT (Combat Application Tourniquet) Gen 7: $52 to $59.99 CAD (Canadian dollars). Price checked 2026-10-01 (60%).
 - Counterfeits exist. A CAT under about $32 is probably fake. Buy from a known medical seller (60%).
 - Take a first aid course with tourniquet practice. Owning one is not knowing how (Tip).
+```
 
 ## Knife, game bags, rope
-
-- **Knife:** one fixed blade plus a replaceable blade knife (Tip).
-
-Price checked 2026-10-01. Search preview prices, verify at checkout.
 
 | Item | Entry | Mid | Premium |
 |---|---|---|---|
@@ -53,18 +72,31 @@ Price checked 2026-10-01. Search preview prices, verify at checkout.
 | Game bags | VERIFY | Caribou Gear Muley set (4 quarter bags + 1 parts bag), $94.99 (65%) | VERIFY |
 | Satellite messenger | Garmin inReach Mini 2, $349.99 sale to $489.99 (65%) | Garmin inReach Messenger Plus, $569.99 sale (60%) | VERIFY |
 
+- About 15 m of strong cord to hang quarters or drag a deer (Tip).
+
+```more notes and price check
+- **Knife:** one fixed blade plus a replaceable blade knife (Tip).
 - **Rope:** about 15 m of strong cord to hang quarters or drag a deer (Tip).
 - Game bags let meat breathe and keep flies and dirt off (Tip).
 - Satellite messengers need a paid plan. Plan cost: VERIFY.
+- Price checked 2026-10-01. Search preview prices, verify at checkout.
+```
 
-## Headlamp, fire, navigation
+## Pack it: what goes where
 
+```diagram gr-pack-layout
+```
+
+- Same spot every time. You find it in the dark (Tip).
+
+```more headlamp, fire, navigation
 - **Headlamp:** you have one. Add spare batteries and a small backup light (Tip).
 - **Fire:** lighter plus waterproof matches plus fire starter cubes. Three ways (Tip).
   - Check fire bans before every trip: VERIFY with BC Wildfire Service.
 - **Navigation:** phone with offline maps, plus paper map and compass as backup (Tip).
   - Download the map area at home on Wi Fi. Phone batteries die in cold. Carry a power bank (Tip).
 - **Satellite messenger:** send an SOS (emergency call for help) and texts with no cell signal (70%).
+```
 
 ```checklist pack-day
 Tourniquet in the same pocket every time
@@ -89,6 +121,15 @@ Trip plan left with someone
 
 ## Car and ATV kit
 
+```diagram gr-car-kit
+```
+
+- Winter tires on many BC highways from 1 October (70%). Check DriveBC.
+
+```diagram gr-gun-transport
+```
+
+```more roads, ATV and firearm transport
 - Many BC highways need winter tires (M+S, mud and snow, or mountain snowflake symbol, 3.5 mm tread) from 1 October (70%). Check your route on DriveBC.
 - Gravel [[FSR]] (Forest Service Road) trips: spare tire, jack, and know how to change it (Tip).
 - Shovel, tow strap, booster cables or jump pack (Tip).
@@ -98,9 +139,17 @@ Trip plan left with someone
 - Firearm transport: every gun **unloaded**, nothing in the chamber or in an attached magazine (99%). Assumption: your guns are non restricted.
 - Vehicle left unattended (no adult or firearms licence holder with it): gun in the locked trunk. No trunk: out of sight, vehicle locked (99%).
 - BC: no loaded gun in or on any motor vehicle, and an ATV counts (95%).
+```
 
 ## Cooler and ice plan for meat
 
+```diagram gr-cooler
+```
+
+- Cool meat fast. Bacteria grow quickly above about 4 °C (40 °F) (65%).
+- Block ice, a rack, drain open. Meat **dry** (65%).
+
+```more the full cooler plan
 - Cool meat fast. Bacteria grow quickly above about 4 °C (40 °F) (65%).
 - Skin and quarter soon after the kill when you can. Hide holds heat (65%).
 - Pre chill the cooler the night before (65%).
@@ -108,6 +157,7 @@ Trip plan left with someone
 - Keep meat **dry**: game bags on a rack or bag ice, never in meltwater. Open the drain (65%).
 - Cold Interior day? Hang quarters in shade and let air move round them (Tip).
 - Assumption: one deer in quarters fits in about 2 large coolers. VERIFY with your coolers at home.
+```
 
 ```checklist pack-car
 Winter tires or chains for the route
@@ -131,15 +181,18 @@ ATV: helmet, tools, tow rope, fuel
 > Pack it like you will sleep out tonight. One day you will.
 
 > [!mistake]
-> - Leaving the first aid kit in the truck "just for a short walk".
+> - First aid kit left in the truck "for a short walk".
 > - No trip plan. Nobody knows where to look.
-> - Meat sitting in cooler meltwater for the drive home.
+> - Meat in cooler meltwater on the drive home.
 
 > [!field]
-> Pack the day pack tonight. Weigh it. Then unpack it and say what each item is for. If you can't, learn it or leave it.
+> Pack the day pack tonight. Unpack it and say what each item is for. If you can't, learn it or leave it.
 
 ## Sources
 
+- Firearm transport read directly in federal and BC law (90 to 99%). Gear, first aid and meat care: secondary sources (60 to 75%).
+
+```more all sources
 - [AdventureSmart: The Three Ts](https://www.adventuresmart.ca/the-three-ts/), checked 2026-10-01 (75%, search preview)
 - [AdventureSmart 10 essentials](https://old.adventuresmart.ca/land/survive-essentials.htm), checked 2026-10-01 (75%, search preview)
 - [Ohio State Health: stopping a bleed and using a tourniquet](https://health.osu.edu/health/general-health/tourniquet), checked 2026-10-01 (65%)
@@ -150,6 +203,7 @@ ATV: helmet, tools, tow rope, fuel
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly. Printed p. 4 (motor vehicle includes an ATV), p. 11 (It's Unlawful 27, loaded firearm in or on a vehicle). Checked 2026-10-02 (99%)
 - [Firearm Violence Prevention Act, SBC 2021 c. 7](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/21007), s. 4(1): no loaded firearm in or on a vehicle or boat. Read in the Bill 4, 2021 third reading text. The BC Laws Table of Legislative Changes lists ss. 1 to 4 in force 1 October 2026. Checked 2026-10-02 (90%)
 - Prices: search previews of Canadian retailer pages (Best Buy, MEC, Sail, Deakin, The Trip Shed, Bass Pro Canada, Mountain Man Outdoors, Jim Bow's Archery, 911supply), price checked 2026-10-01 (60 to 65%)
+```
 
 ```quiz
 [

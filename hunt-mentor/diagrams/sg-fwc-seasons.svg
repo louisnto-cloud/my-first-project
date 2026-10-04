@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" font-family="sans-serif" role="img" aria-label="Region 3 deer through the fall. September to mid October: still high, green forbs on north slopes, near water, shade in timber. Mid October to November: shrub twigs, hayfields, thermal cover in mature Douglas fir. December: snow pushes deer down to south and west facing winter range with old Douglas fir, often below about 760 m north of Kamloops.">
+  <rect width="400" height="360" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Where the groceries move</text>
+  <g>
+    <rect x="10" y="44" width="380" height="96" rx="10" fill="#dfe6d3"/>
+    <text x="24" y="70" font-size="17" font-weight="bold" fill="#2f3a2b">Sept to mid Oct</text>
+    <text x="24" y="92" font-size="14" fill="#2f3a2b">Food: green forbs, shrub leaves, last berries</text>
+    <text x="24" y="110" font-size="14" fill="#4a7fb0">Water: seeps, springs, ponds matter now</text>
+    <text x="24" y="128" font-size="14" fill="#2f3a2b">Cover: shade in north slope timber</text>
+    <path d="M330 120 L355 60 L380 120 Z" fill="#8a9a6b"/><circle cx="355" cy="72" r="5" fill="#8b5a2b"/>
+  </g>
+  <g>
+    <rect x="10" y="148" width="380" height="96" rx="10" fill="#e9dfa8"/>
+    <text x="24" y="174" font-size="17" font-weight="bold" fill="#2f3a2b">Mid Oct to Nov</text>
+    <text x="24" y="196" font-size="14" fill="#2f3a2b">Food: shrub twigs, rose hips, hay, new grass</text>
+    <text x="24" y="214" font-size="14" fill="#2f3a2b">Douglas fir needles start</text>
+    <text x="24" y="232" font-size="14" fill="#2f3a2b">Cover: thermal cover, mature fir</text>
+    <path d="M330 224 L355 164 L380 224 Z" fill="#8a9a6b"/><circle cx="350" cy="196" r="5" fill="#8b5a2b"/>
+  </g>
+  <g>
+    <rect x="10" y="252" width="380" height="96" rx="10" fill="#eef2f6"/>
+    <text x="24" y="278" font-size="17" font-weight="bold" fill="#2f3a2b">December, snow</text>
+    <text x="24" y="300" font-size="14" fill="#2f3a2b">Food: Douglas fir, shrubs, blown clear grass</text>
+    <text x="24" y="318" font-size="14" fill="#2f3a2b">Winter range: south and west slopes</text>
+    <text x="24" y="336" font-size="14" fill="#2f3a2b">often below about 760 m</text>
+    <path d="M330 328 L355 268 L380 328 Z" fill="#8a9a6b"/><path d="M342 296 L355 268 L368 296 Z" fill="#fff"/><circle cx="343" cy="318" r="5" fill="#8b5a2b"/>
+  </g>
+</svg>

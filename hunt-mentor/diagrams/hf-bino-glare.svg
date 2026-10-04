@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Low sun in front of you causes glare in the lenses. A hat brim or your hand held above the binoculars shades the glass.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <circle cx="350" cy="80" r="26" fill="#e8590c"/>
+  <g stroke="#e8590c" stroke-width="3" opacity=".6"><line x1="320" y1="96" x2="200" y2="140"/><line x1="320" y1="104" x2="200" y2="160"/></g>
+  <circle cx="110" cy="160" r="40" fill="#2f3a2b"/>
+  <path d="M60 116 L200 116 L200 126 L80 130 Z" fill="#6b4f35"/>
+  <rect x="146" y="146" width="56" height="26" rx="6" fill="#8a9a6b"/>
+  <path d="M200 116 L230 150" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="150" y="98" font-size="16" font-weight="bold" fill="#6b4f35">hat brim shades</text>
+  <text x="200" y="30" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Low sun ahead? Shade the glass</text>
+  <text x="200" y="250" font-size="15" fill="#2f3a2b" text-anchor="middle">Brim or a hand above the lenses</text>
+  <text x="200" y="272" font-size="15" fill="#2f3a2b" text-anchor="middle">Better: glass with the sun behind you</text>
+</svg>

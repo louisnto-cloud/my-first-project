@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Blood colour and how long to wait. Bright pink and frothy: lungs, wait about 30 minutes. Dark red: liver or muscle, wait hours. Green or brown smear: gut, wait hours. Pushing a wounded animal makes it run farther.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Read the blood, then wait</text>
+  <rect x="10" y="44" width="380" height="64" rx="10" fill="#eef2f6"/>
+  <rect x="10" y="116" width="380" height="64" rx="10" fill="#eef2f6"/>
+  <rect x="10" y="188" width="380" height="64" rx="10" fill="#eef2f6"/>
+  <g><circle cx="45" cy="76" r="16" fill="#f08080"/><circle cx="40" cy="70" r="4" fill="#fff"/><circle cx="52" cy="80" r="3" fill="#fff"/></g>
+  <circle cx="45" cy="148" r="16" fill="#7b1414"/>
+  <path d="M30 220 q15 -10 30 0 q-15 10 -30 0 Z" fill="#6b6b2b"/>
+  <g font-size="16" font-weight="bold" fill="#2f3a2b"><text x="75" y="72">Pink, frothy</text><text x="75" y="144">Dark red</text><text x="75" y="216">Green or brown</text></g>
+  <g font-size="14" fill="#2f3a2b"><text x="75" y="94">lungs</text><text x="75" y="166">liver or muscle</text><text x="75" y="238">gut</text></g>
+  <g font-size="18" font-weight="bold" fill="#e8590c" text-anchor="end"><text x="378" y="82">30 min</text><text x="378" y="154">hours</text><text x="378" y="226">hours</text></g>
+  <text x="200" y="280" font-size="15" fill="#2f3a2b" text-anchor="middle">Push it and it runs farther (70%)</text>
+</svg>

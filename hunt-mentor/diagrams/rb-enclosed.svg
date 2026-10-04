@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 396 248" role="img" aria-label="Three ways private or leased land counts as enclosed under the Trespass Act, any one is enough: no trespassing signs clearly visible at each ordinary access point; a lawful fence all the way round; or a natural boundary all the way round, such as a riverbank or a hedge about 1.4 metres high. Enclosed land needs the owner&#x27;s permission." font-family="sans-serif">
+  <rect x="0" y="0" width="396" height="248" fill="#fffaf0"/>
+<text x="198.0" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Enclosed land: any ONE of these</text>
+<text x="198.0" y="48" font-size="14" fill="#2f3a2b" text-anchor="middle">Then you need the owner&#x27;s permission.</text>
+<rect x="6" y="58" width="124" height="180" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<rect x="6" y="58" width="124" height="30" rx="10" fill="#c92a2a"/><rect x="6" y="76" width="124" height="12" fill="#c92a2a"/>
+<text x="68.0" y="79" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Signs</text>
+<rect x="64.0" y="114" width="8" height="40" fill="#8b5a2b"/><rect x="38.0" y="90" width="60" height="30" rx="3" fill="#ffffff" stroke="#c92a2a" stroke-width="2"/><text x="68.0" y="110" font-size="14" fill="#c92a2a" text-anchor="middle" font-weight="bold">NO</text>
+<text x="68.0" y="176" font-size="14" fill="#23261f" text-anchor="middle">No trespassing</text>
+<text x="68.0" y="194" font-size="14" fill="#23261f" text-anchor="middle">signs at each</text>
+<text x="68.0" y="212" font-size="14" fill="#23261f" text-anchor="middle">normal way in</text>
+<rect x="136" y="58" width="124" height="180" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<rect x="136" y="58" width="124" height="30" rx="10" fill="#c92a2a"/><rect x="136" y="76" width="124" height="12" fill="#c92a2a"/>
+<text x="198.0" y="79" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Fence</text>
+<rect x="156.0" y="100" width="6" height="40" fill="#8b5a2b"/><rect x="176.0" y="100" width="6" height="40" fill="#8b5a2b"/><rect x="196.0" y="100" width="6" height="40" fill="#8b5a2b"/><rect x="216.0" y="100" width="6" height="40" fill="#8b5a2b"/><rect x="236.0" y="100" width="6" height="40" fill="#8b5a2b"/><line x1="152.0" y1="112" x2="244.0" y2="112" stroke="#2f3a2b" stroke-width="2"/><line x1="152.0" y1="126" x2="244.0" y2="126" stroke="#2f3a2b" stroke-width="2"/>
+<text x="198.0" y="176" font-size="14" fill="#23261f" text-anchor="middle">A lawful fence</text>
+<text x="198.0" y="194" font-size="14" fill="#23261f" text-anchor="middle">all the way</text>
+<text x="198.0" y="212" font-size="14" fill="#23261f" text-anchor="middle">round</text>
+<rect x="266" y="58" width="124" height="180" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<rect x="266" y="58" width="124" height="30" rx="10" fill="#c92a2a"/><rect x="266" y="76" width="124" height="12" fill="#c92a2a"/>
+<text x="328.0" y="79" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Natural edge</text>
+<path d="M282.0 100 q 30 10 20 24 t 30 18 t 40 0" fill="none" stroke="#4a7fb0" stroke-width="10" stroke-linecap="round"/><circle cx="348.0" cy="102" r="8" fill="#5c7a3a"/><circle cx="354.0" cy="106" r="8" fill="#5c7a3a"/><circle cx="360.0" cy="102" r="8" fill="#5c7a3a"/><circle cx="366.0" cy="106" r="8" fill="#5c7a3a"/>
+<text x="328.0" y="176" font-size="14" fill="#23261f" text-anchor="middle">Riverbank, or a</text>
+<text x="328.0" y="194" font-size="14" fill="#23261f" text-anchor="middle">hedge about</text>
+<text x="328.0" y="212" font-size="14" fill="#23261f" text-anchor="middle">1.4 m high</text>
+</svg>

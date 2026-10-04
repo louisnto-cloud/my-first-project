@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Mistake versus right way. Top: one fast sweep across the hillside, like a camera pan, misses a bedded deer. Bottom: slow overlapping views, one after another, land right on the same deer.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="10" y="40" width="380" height="100" rx="8" fill="#efe2d6"/><rect x="10" y="170" width="380" height="100" rx="8" fill="#dfe6d3"/>
+  <path d="M30 90 L370 90" stroke="#c0392b" stroke-width="4"/><polygon points="366,82 366,98 382,90" fill="#c0392b"/>
+  <g transform="translate(250 112)"><ellipse rx="12" ry="6" fill="#8b5a2b"/><path d="M-4 -6 l-4 -8 l6 4 Z M4 -6 l4 -8 l-6 4 Z" fill="#8b5a2b"/></g>
+  <text x="20" y="32" font-size="16" font-weight="bold" fill="#c0392b">Fast pan: deer missed</text>
+  <g fill="none" stroke="#2f6e3b" stroke-width="3">
+    <circle cx="60" cy="230" r="28"/><circle cx="105" cy="230" r="28"/><circle cx="150" cy="230" r="28"/><circle cx="195" cy="230" r="28"/><circle cx="240" cy="230" r="28"/><circle cx="285" cy="230" r="28"/><circle cx="330" cy="230" r="28" opacity=".4"/>
+  </g>
+  <g transform="translate(250 242)"><ellipse rx="12" ry="6" fill="#8b5a2b"/><path d="M-4 -6 l-4 -8 l6 4 Z M4 -6 l4 -8 l-6 4 Z" fill="#8b5a2b"/></g>
+  <text x="20" y="162" font-size="16" font-weight="bold" fill="#2f6e3b">Slow, overlapping: found</text>
+  <text x="200" y="292" font-size="14" fill="#2f3a2b" text-anchor="middle">Overlap each view by about a third (60%)</text>
+</svg>

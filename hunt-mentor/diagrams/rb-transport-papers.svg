@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 326" role="img" aria-label="Which paper goes with meat you move. Your own animal: your species licence travels with the meat. Someone else&#x27;s animal: a Record of Receipt from the hunter. At the butcher: get a receipt showing the hunter&#x27;s FWID, the species licence number, the species and the sex." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="326" fill="#fffaf0"/>
+<text x="200" y="26" font-size="20" fill="#23261f" text-anchor="middle" font-weight="bold">Moving meat: which paper?</text>
+<rect x="8" y="46" width="384" height="74" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<text x="18" y="74" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Your own animal</text>
+<line x1="132" y1="83" x2="150.0" y2="83.0" stroke="#23261f" stroke-width="2.5"/><polygon points="156,83 147.0,87.3 147.0,78.7" fill="#23261f"/>
+<g transform="translate(192 83) scale(1.1)"><rect x="-26" y="-18" width="52" height="36" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/><line x1="-18" y1="-8" x2="18" y2="-8" stroke="#2f3a2b" stroke-width="2.5"/><line x1="-18" y1="0" x2="10" y2="0" stroke="#2f3a2b" stroke-width="2"/><line x1="-18" y1="8" x2="14" y2="8" stroke="#2f3a2b" stroke-width="2"/><path d="M-26 -8 l6 3 l-6 3 Z M26 2 l-6 3 l6 3 Z" fill="#e8590c"/></g>
+<text x="228" y="76" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Your species licence</text>
+<text x="228" y="96" font-size="14" fill="#2f3a2b" text-anchor="start">travels with the meat</text>
+<rect x="8" y="130" width="384" height="74" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<text x="18" y="158" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Someone else&#x27;s</text>
+<line x1="132" y1="167" x2="150.0" y2="167.0" stroke="#23261f" stroke-width="2.5"/><polygon points="156,167 147.0,171.3 147.0,162.7" fill="#23261f"/>
+<rect x="174" y="142" width="36" height="50" rx="3" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/><line x1="180" y1="152" x2="204" y2="152" stroke="#2f3a2b" stroke-width="2"/><line x1="180" y1="161" x2="204" y2="161" stroke="#2f3a2b" stroke-width="2"/><line x1="180" y1="170" x2="204" y2="170" stroke="#2f3a2b" stroke-width="2"/><line x1="180" y1="179" x2="204" y2="179" stroke="#2f3a2b" stroke-width="2"/>
+<text x="228" y="160" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Record of Receipt</text>
+<text x="228" y="180" font-size="14" fill="#2f3a2b" text-anchor="start">from the hunter</text>
+<rect x="8" y="214" width="384" height="74" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<text x="18" y="242" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">At the butcher</text>
+<line x1="132" y1="251" x2="150.0" y2="251.0" stroke="#23261f" stroke-width="2.5"/><polygon points="156,251 147.0,255.3 147.0,246.7" fill="#23261f"/>
+<g transform="translate(192 251) scale(0.9)"><path d="M-18 -10 Q 0 -22 18 -8 Q 26 6 10 14 Q -10 20 -20 6 Z" fill="#c4564a"/><circle cx="-14" cy="12" r="5" fill="#f3e9d8"/><path d="M-14 12 L-26 22" stroke="#f3e9d8" stroke-width="5"/></g>
+<text x="228" y="244" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Receipt: FWID, licence</text>
+<text x="228" y="264" font-size="14" fill="#2f3a2b" text-anchor="start">number, species, sex</text>
+<text x="200" y="312" font-size="15" fill="#2f3a2b" text-anchor="middle">Applies anywhere in BC.</text>
+</svg>

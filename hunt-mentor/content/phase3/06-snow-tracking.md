@@ -9,22 +9,50 @@ checked: 2026-10-01
 > [!why]
 > Fresh snow writes down everything that moved last night. For a beginner it is the best teacher there is.
 
+```photo hab-deer-trail-snow
+```
+
+- Who, how many, which way, how long ago, and what it did.
+- Late Region 3 deer season is mostly snow hunting (75%).
+
+```more what this session covers
 - Snow turns every animal into an open book: who, how many, which way, how long ago, and what it did.
 - This session: reading a snow track, aging in snow, backtracking versus following, tracking a wounded animal, tracking safely, and when to stop.
 - Late season Region 3 deer hunting, November into early December, is mostly snow hunting on [[Winter range]] (75%).
 - Track basics are in [Tracks](#/s/tracks). Winter feed and cover are in [Food, water and cover](#/s/food-water-cover).
+```
 
 ## Reading a snow track
 
+```diagram sg-snow-urine
+```
+
+- Find the clearest print in shallow snow (Tip).
+- Wide straddle, big prints, drag marks: a buck worth following (60%).
+
+```more drag marks, counting and urine lore
 - Snow shows size and shape clearly in the first few centimetres. Deep powder blurs everything into holes; look for the clearest print in a shallow spot (Tip).
 - Hoof drag marks run into each print from behind. Bucks and older deer drag more; a long drag in shallow snow suggests a heavy animal (hunter lore) (60%).
 - A wide straddle, big prints and drag marks together is buck sign worth following. A big doe can fool you (60%).
 - Deer in snow walk in each other's prints. Count the trails leaving a bed area, not the prints (Tip).
 - Stot groups in snow are easy to read: 4 holes close together, a long gap, 4 more (85%).
 - Urine in snow: a doe squats, so the stain is behind the hind prints. A buck dribbles while walking, so the stain is between or ahead of the hind prints (hunter lore) (60%).
+```
+
+```gallery
+hab-moose-trail-snow | A moose ploughed through deep snow.
+hab-elk-trail-snow | Elk walk single file in each other's prints.
+```
 
 ## Aging a track in snow
 
+```diagram sg-snow-age
+```
+
+- Loose crumbs: fresh. Bonded crumbs: hours (65%).
+- Your own test print is your clock (Tip).
+
+```more every snow aging clue
 - Fresh: sharp walls and loose crumbs of snow scattered around the print that have not bonded (70%).
 - The crumbs bond into a crust within hours. Trackers call this sintering. Poke a crumb; if it holds together, time has passed (65%).
 - Sun rounds the edges and glazes the floor. Wind drifts snow into the print. New snow fills it (75%).
@@ -32,9 +60,17 @@ checked: 2026-10-01
 - Cold clear Interior nights with no wind keep a track crisp for days. In that weather trust the snow crumbs and your own test print, not the edges (65%).
 - Melt and refreeze: a print with an ice floor and ice walls was made before last night's freeze (65%).
 - Make your own print beside it every hour. Watch how yours ages; that is your clock (Tip).
+```
 
 ## Backtracking versus following
 
+```anim sg-snow-loop Track turns downwind? Loop around it.
+```
+
+- Backtrack to learn its life. Follow to catch it (Tip).
+- Look ahead, not down. Glass every few steps (Tip).
+
+```more backtrack or follow in detail
 - **Backtrack** (walk the trail the way it came) to learn where the deer fed, bedded and crossed. You will not catch the deer, but you will learn its life (Tip).
 - **Follow** (walk the way it went) to catch up with it. The trail tells you when you are close: feeding turns to walking, then a single line going uphill, then a bed (hunter lore) (60%).
 - Follow with the wind in your face or across you. If the trail turns downwind, loop around rather than walking your scent to the bed (Tip).
@@ -44,9 +80,20 @@ checked: 2026-10-01
 
 > [!tip]
 > Big woods trackers walk a buck track until he beds, then stalk the bed from above. It takes all day and fails more often than it works. For a beginner, backtracking teaches more.
+```
 
 ## Tracking a wounded animal in snow
 
+```diagram sg-blood-wait
+```
+
+- Mark where it stood and where you last saw it. Then wait (Tip).
+- You must make all reasonable effort to find it (95%).
+
+```diagram blood-grid
+```
+
+```more wounded animal details
 - Mark the spot where the animal stood when you shot and the spot where you last saw it, then wait (Tip).
 - Wait about 30 minutes for a heart or lung hit; hours for a single lung, liver or gut hit (65%). Pushing a wounded animal makes it run farther (70%).
 - Blood: bright pink and frothy is lungs. Dark red is liver or muscle. A green or brown smear is gut (65%).
@@ -54,9 +101,20 @@ checked: 2026-10-01
 - Lost the blood? Walk small circles out from the last spot and check every trail leaving it. A wounded deer often heads downhill and toward water or thick cover (60%).
 - You must make all reasonable effort to locate, dispatch and retrieve game you kill, cripple or wound (95%). Synopsis page 12, Retrieval.
 - Full after the shot steps: [After the shot](#/s/after-the-shot).
+```
 
 ## Tracking safely
 
+```diagram sg-avalanche
+```
+
+- Set a turn around time and keep it (Tip).
+- Leave a [[Trip plan]]. Carry a [[Satellite messenger]] (Tip).
+
+> [!warn]
+> Region 3: no motor vehicles except snowmobiles above 1,700 m off roads and trails (95%). Never shoot from a vehicle (95%).
+
+```more safety details and the snowmobile rules
 - Snow tracking pulls you far from the truck. Set a turn around time before you start and keep it (Tip).
 - Leave a [[Trip plan]] with someone at home. Carry a [[Satellite messenger]] in the Thompson backcountry (Tip). See [Bush safety](#/s/bush-safety).
 - Avalanche terrain starts around 30 degrees of slope once there is enough snow to slide. Open slopes, gullies and the run outs below them can slide in November (70%). Avalanche Canada forecasts cover the North Columbia and South Columbia regions near Kamloops (65%).
@@ -67,18 +125,36 @@ checked: 2026-10-01
 
 > [!warn]
 > Region 3: motor vehicles except snowmobiles are prohibited above 1,700 m except on existing roads and trails (95%). Snowmobiles may not be used for hunting year round in [[MU]] (Management Unit) areas 3-45 and 3-46, and from 1 April to 14 December in MU 3-28 (95%). Shooting wildlife from a motor vehicle is unlawful anywhere (95%).
+```
 
 ## When to stop
 
+```diagram sg-snow-decide
+```
+
+- A buck is not worth a night out (Tip).
+
+```more when to stop, in words
 - Stop when legal light ends: one hour after sunset for game other than migratory birds (95%). Mark the track and come back at first light (Tip).
 - Stop when the track crosses into terrain you cannot handle: avalanche slopes, cliffs, ice, or private land without consent (Tip).
 - Stop when the animal is walking steadily in a straight line and the day is half gone. It is not bedding; you will not catch it (60%).
 - Stop when you are tired, wet or unsure of the way out. A buck is not worth a night out (Tip).
 - Stop and back out if you find fresh grizzly or cougar tracks on top of your own (Tip).
 - A wounded animal changes the rule: keep going while there is light and safe ground, and return at first light if you lose it (95% on the duty to retrieve, Tip on the method).
+```
 
 ## Winter scouting
 
+```gallery
+hab-deer-trail-snow | Count trails on south and west slopes.
+hab-grouse-snow-roost | Grouse roost holes: small game country.
+snowshoe-hare-winter | Snowshoe hare: small game for a rifle or shotgun day.
+```
+
+- December to February teaches you deer numbers (Tip).
+- Keep your distance: deep snow costs deer fat (Tip).
+
+```more winter scouting details
 - December to February on winter range teaches you more about deer numbers than any October walk (Tip).
 - Count trails, beds and browse lines on south and west slopes below about 760 m north of Kamloops (80%).
 - Note where tracks cross roads; those are year round crossings (Tip).
@@ -96,6 +172,28 @@ checked: 2026-10-01
 
 > [!field]
 > After the first snow, pick a deer trail and backtrack it for 1 hour. Find where it fed, where it crossed a road or creek, and where it bedded. Draw the route on your map and in the Journal.
+```
+
+## Grandpa's rule and mistakes
+
+```photo g-md-doe-sage-snow Snow tells the truth.
+```
+
+> [!rule]
+> Snow tells the truth. Walk the track backward to learn, forward to hunt, and home before dark either way.
+
+> [!mistake]
+> - Reading a 3 day old track as fresh on a cold shaded slope.
+> - Following a wounded deer 10 minutes after the shot. It runs a kilometre and you lose it.
+> - Chasing a track onto steep open snow with no avalanche training or gear.
+
+## Do this in the field
+
+```photo hab-elk-trail-snow Backtrack one trail for 1 hour after the first snow.
+```
+
+> [!field]
+> After the first snow, backtrack one deer trail for 1 hour. Find where it fed, crossed and bedded. Draw the route in the Journal.
 
 ## Sources
 
@@ -117,3 +215,4 @@ checked: 2026-10-01
   {"q": "Backtracking a deer trail teaches you", "options": ["Where the deer is right now", "Where it fed, crossed and bedded", "Nothing useful"], "answer": 1, "why": "Backtracking shows the deer's routine. Following is how you try to catch up with it."}
 ]
 ```
+

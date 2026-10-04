@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A mule deer year. December to March: low winter range. April: green up on low south slopes. April and May: most migrants move up. June to September: high country, fawns born late May to June. October to December: back down to winter range. Rut in November and early December.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A mule deer year</text>
+<text x="35" y="56" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">J</text>
+<text x="65" y="56" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">F</text>
+<text x="95" y="56" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">M</text>
+<text x="125" y="56" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A</text>
+<text x="155" y="56" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">M</text>
+<text x="185" y="56" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">J</text>
+<text x="215" y="56" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">J</text>
+<text x="245" y="56" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A</text>
+<text x="275" y="56" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">S</text>
+<text x="305" y="56" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">O</text>
+<text x="335" y="56" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">N</text>
+<text x="365" y="56" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">D</text>
+<rect x="20" y="70" width="360" height="40" fill="#8a9a6b" opacity=".35"/><rect x="20" y="160" width="360" height="40" fill="#e9dfa8" opacity=".7"/>
+<text x="384" y="95" font-size="14" fill="#2f3a2b" text-anchor="end">high</text><text x="384" y="185" font-size="14" fill="#2f3a2b" text-anchor="end">low</text>
+<path d="M20 180 L110 180 L125 175 L140 170 L170 95 L185 90 L290 90 L305 110 L350 175 L380 180" fill="none" stroke="#8b5a2b" stroke-width="5" stroke-linejoin="round"/>
+<rect x="320" y="216" width="50" height="18" rx="5" fill="#e8590c"/><text x="345" y="250" font-size="14" fill="#e8590c" text-anchor="middle">rut</text>
+<rect x="155" y="216" width="35" height="18" rx="5" fill="#4a7fb0"/><text x="172" y="250" font-size="14" fill="#4a7fb0" text-anchor="middle">fawns</text>
+<text x="65" y="150" font-size="14" fill="#2f3a2b" text-anchor="middle">winter range</text>
+<text x="230" y="130" font-size="14" fill="#2f3a2b" text-anchor="middle">summer high</text>
+<text x="200" y="285" font-size="14" fill="#6b4f35" text-anchor="middle">Snow and cold move them, not the rut (85%)</text>
+</svg>

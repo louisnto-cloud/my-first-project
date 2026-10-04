@@ -7,8 +7,15 @@ minutes: 18
 checked: 2026-10-03
 ---
 > [!why]
-> The deer you scouted in August can be 50 km away by November. Know where each animal goes and when, and you stop hunting empty country.
+> The deer you scouted in August can be 50 km away by November. Know where each animal goes and when.
 
+```diagram sg-mig-types
+```
+
+- Snow depth, cold and food move them (85%).
+- General patterns, not mapped routes. Your valley can run 2 weeks early or late (Tip).
+
+```more the 4 groups and the map slider
 - Three ways animals use the year (my grouping of the sources below):
   - **Up and down migrants:** mule deer, black tailed deer, moose, elk, bighorn sheep, mountain goats. Summer high, winter low.
   - **Upside down migrant:** dusky grouse. Breeds lower and more open, winters higher in dense conifers.
@@ -17,9 +24,16 @@ checked: 2026-10-03
 - What moves them: snow depth, cold and food (85%). For mule deer the rut does not trigger the move down; snow and cold do (85%).
 - Everything here is a **general pattern** for southern BC, not a mapped route. Your valley can run 2 weeks early or late (Tip).
 - The Spot Finder map's month slider uses this same data. Set the month, read the elevation band, then scout it.
+```
 
 ## The big picture: elevation bands
 
+```diagram migration-elevation
+```
+
+- Valley grass and pine low, spruce and subalpine fir high (90%).
+
+```more the zones and their elevations
 - Zones from the valley up (90%, BC Ministry of Forests):
   - BG (Bunchgrass): valley floor to 700 to 1,000 m.
   - PP (Ponderosa Pine): 335 to 900 m.
@@ -27,101 +41,191 @@ checked: 2026-10-03
   - MS (Montane Spruce): about 1,100 to 1,700 m.
   - ESSF (Engelmann Spruce Subalpine Fir): about 1,200 to 2,300 m. Alpine above.
 
-```diagram migration-elevation
-```
-
 - Near Heffley Creek: valley grass and pine benches are the low band; spruce and subalpine fir toward Sun Peaks are the high band (my reading of the zone map, 65%).
+```
 
 ## Mule deer: the year
 
+```anim sg-mig-snowline Snow drops, deer drop.
+```
+
+- Summer high, winter low (85%).
+- The move down: October to December, earlier in a snowy fall (75%).
+
+```diagram sg-md-year
+```
+
+```more month by month
 - **December to March:** [[Winter range]]. Steep south and west facing slopes with shrubs and old Douglas fir, below deep snow (85%). Near Kamloops the studied range sits below about 760 m (80%).
 - **April:** green up on low south facing grass, the best month to see big groups (85%).
 - **April to May:** most migrants head for summer range (85%).
 - **June to September:** moister high country (85%). Openings, cutblocks and burns are the feed to check (Tip). Fawns are born late May to June (85%). Some deer stay low all year (85%).
 - **October to November:** back to winter range. In 2019 nearly all collared deer were back by mid October (85%). An older BC account says many stay high until December (85%). Plan on October to December, earlier in a snowy fall (my reading, 75%).
 - **Rut:** November and early December (85%). See [[Rut]].
+```
 
 ## Mule deer: how far and why
 
+```diagram sg-md-distance
+```
+
+- Same path down in fall as up in spring (85%).
+- Trouble past 30 cm of snow, gone by 50 cm (75%).
+
+```more distances, triggers and winter range maps
 - In the SIMDeer (Southern Interior Mule Deer Project) study, 74% of collared deer that could migrate did, averaging 47.2 km a year (85%).
 - An earlier update put the average trip at 55 km. One doe went 102 km in a straight line, from near Apex Mountain to west of Aspen Grove, in 11 days (85%).
 - Most deer use nearly the same path down in fall as up in spring (85%).
 - The trigger is snow and cold, not the rut (85%).
 - Deer struggle in snow over about 30 cm and leave a slope by about 50 cm (75%, two sources combined).
 - No official winter range is mapped around Kamloops and Heffley Creek. The mapped ones sit south toward Merritt and in the Okanagan (90%, provincial map layer).
+```
 
 ## White tailed and black tailed deer
 
+```diagram sg-home-range
+```
+
+- White tails: valley bottoms all year, short moves (85%).
+- Black tails: some migrate, some stay put (80%).
+
+```more white tail and black tail details
 - **White tails:** valley bottoms with farmland all year. Short moves only: up or down the valley, or across it from north slopes in summer to south slopes in winter (85%, BC account built on Kootenay data).
 - White tail summer: floodplains, river terraces, hay and alfalfa. Early winter: aspen, cottonwood and willow along rivers, then conifer patches as snow deepens (85%).
 - White tail rut peaks in November. Fawns are born late May or June (85%).
 - **Black tails (Mission, Hope):** some migrate within one watershed, some stay put. Migrants use about 1,770 hectares a year, residents about 140 hectares (80%).
 - Black tail winter: low old forest, warm south slopes and floodplains. Above 1,000 m is rarely used in winter (80%). Rut in November and early December (80%).
 - Black tail dates come from Vancouver Island studies. No Fraser Valley collar study was found, so treat the dates as rough (Tip).
+```
+
+```gallery
+g-wt-doe | White tail: farm valleys, short moves.
+g-bt-doe | Black tail: low, warm slopes in winter.
+```
 
 ## Moose and elk
 
+```gallery
+g-moose-cow-calf | Moose: drift down slowly, last of all.
+g-elk-herd | Elk: subalpine in summer, pushed down by snow.
+```
+
+- Moose stay high longest and handle 40 cm of snow (85%).
+- Elk: up in May and June, down with autumn snow (85%).
+
+```more moose and elk details
 - **Moose in the mountains:** summer high, winter in valley bottoms; some stay in the valleys all year (85%).
 - **Moose on plateaus (the Bonaparte is one):** summer spread out near lakes, swamps and beaver ponds; winter packed into river valleys, burns, cutblocks and wetland complexes (85%).
 - Moose stay high in fall longer than deer, elk or sheep and drift down slowly (85%). They walk easily in 40 cm of snow and often winter in 50 cm or more (85%).
 - Most moose calves are conceived in late September and early October, and born in late May and June (85%).
 - **Elk:** up to subalpine basins in May and June, bulls first; autumn snow pushes them back down (85%). Rut in mid September (85%).
 - Few elk near your bases: about 1,350 in the Thompson Okanagan area in 2000 (85% for that year).
+```
 
 ## Bighorn sheep and mountain goats
 
+```gallery
+g-bighorn-ram | Bighorn: low steep grassland in winter.
+mountain-goat-billy | Goat: never far from cliffs.
+```
+
+- Bighorn: low steep south grass in winter, alpine in summer (85%).
+- Goats stay within 400 to 500 m of cliffs (85%).
+
+```more sheep and goat details
 - **Bighorn:** winter and spring on low, steep south to southwest grassland, 300 to 1,825 m (85%).
 - Lambs are born from the last week of April to early June, in cliffs near winter range (85%).
 - Migratory herds go to alpine pastures in May or June and return in late September or October when snow covers the feed. Many Fraser River sheep stay low all year (85%).
 - Bighorn rut: early November to mid December (85%).
 - **Goats:** interior goats summer at or above treeline, drop lower in spring for green up and mineral licks, then winter on windswept high slopes or bluffs near treeline. Coastal goats winter lower, in old forest near cliffs (85%).
 - Goats rarely go more than 400 to 500 m from cliffs. Rut runs early November to early December, peak 15 to 20 November (85%).
+```
 
 ## Black bear: the den calendar
 
+```diagram sg-bear-den
+```
+
+- Not a migrant: follows food in its home range (85%).
+- Interior bears den about 5 to 7 months (85%).
+
+```more den and food details
 - Not a migrant. Bears follow food inside home ranges of about 5 to 150 km2 (85%).
 - **Asleep:** interior bears den about 5 to 7 months, south coast bears 3 to 5 (85%). Cubs are born in January or February (85%).
 - **Out:** a study in the northeast Cascades of Washington, just south of BC, had males out 4 April to 7 May and females 4 April to 22 May (80%).
 - **Spring:** grassy south slopes, meadows, riparian strips, avalanche chutes and burns (85%).
 - **Summer and fall:** berries, then spawning fish on the coast; fall is a feeding binge (80%).
 - **In:** the same study had dens entered 15 October to 19 November (80%). WildSafeBC says most bears are denned December to April (75%).
+```
 
 ## Ducks and geese: the Pacific Flyway
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram sg-snowgoose
+```
+
+- Fall migration: late September to late November, as lakes freeze (75%).
+- Tranquille: No Shooting (85%). Vaseux Lake: no hunting (99%).
+
+```more flyway details and named water
 - Fall migration is well under way by late September and mostly over by late November, when interior lakes freeze (75%, Ducks Unlimited).
 - High plateau lakes freeze first; birds then crowd onto open valley water and the coast (my reading, 60%).
 - Named wintering water: the South Thompson River from Little Shuswap Lake to Kamloops Lake, Vaseux Lake, and the Fraser delta and valley marshes (80 to 90%, Important Bird Area and Wildlife Management Area pages).
 - Tranquille, at the head of Kamloops Lake, is spring and fall staging for geese and swans (90%). It is a No Shooting area (85%, synopsis Map C17). Vaseux Lake is a bird sanctuary with no hunting (99%, synopsis page 67).
 - Snow geese reach the Fraser delta by early October, peak mid October to mid December, mostly shift to the Skagit in Washington late December to February, return mid March to mid April, then fly home to Wrangel Island, Russia (80%).
 - Mallard, goldeneye and wood duck nest on interior wetlands such as Tranquille (90%).
+```
 
 ## Grouse: who moves and who stays
 
+```diagram sg-grouse-move
+```
+
+- Dusky grouse climb into conifers in fall (70%).
+- Ruffed grouse stay home; young birds scatter (70%).
+
+```more grouse details
 - **Ruffed grouse:** resident on a home range of about 2.4 to 16 hectares (70%, US agency data). In fall the young birds scatter to new ground, the "fall shuffle"; adults stay put (70%).
 - Most ruffed grouse in BC live at 750 to 1,250 m (85%).
 - **Dusky (blue) grouse:** in fall they walk and fly from open breeding ground **up** into dense conifers and eat needles all winter, up to about 48 km but usually much less (70%).
 - They come back down to breed in late March or April (70%). In BC many breed high anyway, at 1,500 to 2,250 m (85%).
 - **Spruce grouse:** resident in conifers; on the ground late spring to early fall, in the trees eating needles in winter (75%). Some move up to 9.5 km between summer and winter ranges (70%).
 - Around Mission the blue grouse is the sooty grouse. Washington sources say it also moves to higher conifers in fall, but not everywhere (60%).
+```
 
 ## Quail and chukar: they stay home
 
+```gallery
+g-quail-pair | California quail: same small range all winter.
+g-chukar | Chukar: drop lower in heavy snow.
+```
+
+- Quail stay within 15 to 30 m of cover (75%).
+- Chukar drop onto low south slopes in heavy snow (75%).
+
+```more quail, chukar, pheasant and turkey
 - **California quail do not migrate** (75%). A [[Covey]] stays on a small range all winter, about 7 to 18 hectares in a California study (75%).
 - In BC they live in the Okanagan and Kettle valleys, mostly below 750 m and most often at 250 to 500 m, on farm, orchard and suburban edges with thick brush (85%).
 - They seldom go more than 15 to 30 m from cover (75%). Winter coveys grow larger, and a hard winter is what kills them (60 to 70%).
 - **Chukar** stay too, but drop lower and onto south slopes in heavy snow (75%). In 1962 they ran from Lytton to Kamloops at 195 to 610 m (80%).
 - Chukar winter flocks break up in late February; coveys form again from mid June (80%).
 - Pheasant: resident, mostly below 500 m (80%). Wild turkey: resident, spreading into the south Okanagan (80%).
+```
 
 ## Grandpa's rule
+
+```anim sg-mig-snowline Follow the snow line and the green line.
+```
 
 > [!rule]
 > Wisdom, not law: follow the snow line and the green line. Fall snow pushes them down, spring green pulls them up. Hunt the edge between.
 
 ## Common mistakes
+
+```diagram sg-md-year
+```
 
 > [!mistake]
 > - Scouting a high basin in August and hunting it in late November. The migrants left.
@@ -130,8 +234,11 @@ checked: 2026-10-03
 
 ## Do this in the field
 
+```photo hab-subalpine-forest Note the snow line on every trip.
+```
+
 > [!field]
-> Pick one slope near home. On every trip write the date, the snow line, the lowest green feed and each animal you see with its elevation. After one season you have your own migration map.
+> Every trip: date, snow line, lowest green feed, each animal and its elevation. One season makes your own map.
 
 ```checklist s3-12-migration
 Snow line elevation written down
@@ -166,3 +273,4 @@ Compared with the map month slider
   {"q": "About how long do interior black bears stay in the den?", "options": ["About 1 month", "About 5 to 7 months", "They do not den"], "answer": 1, "why": "The BC account says 5 to 7 months in the interior and 3 to 5 on the south coast. A study just south of BC had dens entered mid October to mid November."}
 ]
 ```
+
