@@ -7,10 +7,19 @@ const CACHE = '__VERSION__';
 const TILES = 'hm-tiles';
 const DATA = 'hm-data';
 const TILE_CAP = 4000;
-const FILES = [...__PHOTOS__, ...__MAP__, './', 'index.html', 'style.css', 'app.js', 'content.js', 'manifest.webmanifest', 'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png', 'hunt-mentor-offline.html'];
+// CORE must all load or the install fails (the old version keeps running). EXTRA files are added one by one:
+// a missing photo or map file is skipped (fetched on demand later) instead of breaking the whole install.
+const CORE = ['./', 'index.html', 'style.css', 'app.js', 'content.js'];
+const EXTRA = ['manifest.webmanifest', 'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png', ...__MAP__, ...__PHOTOS__, 'hunt-mentor-offline.html'];
+const fresh = (u) => new Request(u, { cache: 'reload' }); // skip the browser HTTP cache so one version never mixes with another
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(CACHE).then(async (c) => {
+    await c.addAll(CORE.map(fresh));
+    let i = 0;
+    const worker = async () => { while (i < EXTRA.length) { const u = EXTRA[i++]; try { await c.add(fresh(u)); } catch (err) { /* skipped, loads on demand */ } } };
+    await Promise.all([worker(), worker(), worker(), worker()]);
+  }).then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', (e) => {
   e.waitUntil(caches.keys()
@@ -50,7 +59,12 @@ self.addEventListener('fetch', (e) => {
 async function shell(req) {
   const hit = await caches.open(CACHE).then((c) => c.match(req, { ignoreSearch: true }));
   if (hit) return hit;
-  try { return await fetch(req); } catch (err) {
+  try {
+    const res = await fetch(req);
+    // a precache file that was skipped at install: keep it now (map code, vendor libraries, photos)
+    if (res.ok && /\/(map|vendor|photos)\/[^/]+$/.test(new URL(req.url).pathname)) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => {}); }
+    return res;
+  } catch (err) {
     if (req.mode === 'navigate') { const idx = await caches.match('index.html'); if (idx) return idx; }
     throw err;
   }
