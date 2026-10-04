@@ -44,7 +44,7 @@ g-md-doe-sage-snow | Doe in snowy sagebrush, Wyoming. Grey winter coat, tail hel
 
 ```gallery
 g-md-bound | Doe bounding across a road, Utah. Legs tucked, a stiff legged bounce.
-g-md-run-away | Running away, California. Tail stays down. Look for the black tip.
+g-md-run-away | Running away, California. Tail stays down. A dark tail like this may mean a black tailed deer or a cross; a true mule deer tail is white with a black tip.
 ```
 
 - A spooked mule deer often [[Stot|stots]]: all four feet hit and push off together, like a pogo stick (85%).
@@ -53,6 +53,8 @@ g-md-run-away | Running away, California. Tail stays down. Look for the black ti
 ## Bedded, in cover and in sagebrush
 
 ```gallery
+g-md-buck-bedded | Buck bedded in sagebrush, Wyoming. Antlers show; the body hides.
+g-md-does-bedded | Two deer bedded in snowy sage. Look for ears above the brush.
 g-md-fawn-bedded | Fawn bedded in grass. Only the head and ears show. Leave fawns alone.
 g-md-doe-fawn-cover | Doe and fawn in brush, Wyoming. In cover you see ears and a face first.
 g-md-buck-cover | Buck in brush, Oregon. Pick out the antler tines against the twigs.

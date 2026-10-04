@@ -20,7 +20,7 @@ checked: 2026-10-04
 ```gallery
 wigeon-drake | Drake, Reifel sanctuary, Ladner, BC. White crown, green band behind the eye.
 wigeon-hen | Hen. Grey head, rusty sides, small blue grey bill with a black tip.
-@@WIGFL@@
+g-wigeon-flight | Drake dropping in, South Dakota. White shoulder patches.
 ```
 
 - Drake: white forehead and crown, so hunters call it baldpate (80%).
@@ -31,7 +31,7 @@ wigeon-hen | Hen. Grey head, rusty sides, small blue grey bill with a black tip.
 ```gallery
 green-winged-teal-drake | Drake. Chestnut head, green swoosh, white bar on the side.
 green-winged-teal-hen | Hen, California. Very small brown duck, small dark bill.
-@@GWTFL@@
+g-gwt-flight | Flock in flight, Wyoming. Small, fast, bunched.
 blue-winged-teal-drake | Look alike: blue winged teal drake in flight. White face crescent, pale blue forewing.
 ```
 
@@ -54,7 +54,8 @@ gadwall-drake-flight | Drake in flight, Oregon. Small square white patch on the 
 ```gallery
 shoveler-drake | Drake, North Dakota. Spoon bill, green head, white chest, rusty sides.
 shoveler-hen | Hen. Mottled brown with a long spoon bill.
-@@SHOVFL@@
+g-shoveler-flight | Drake in flight. Spoon bill, pale blue forewing, rusty belly.
+g-shoveler-flock | Flock taking off, Texas.
 ```
 
 - The bill is longer than the head and wide at the tip (80%). Flies with the bill pointed slightly down (Tip).
@@ -64,7 +65,7 @@ shoveler-hen | Hen. Mottled brown with a long spoon bill.
 ```gallery
 wood-duck-drake | Drake. Green crest, white chin straps, red eye.
 wood-duck-hen | Hen. White teardrop around the eye.
-@@WOODFL@@
+g-wood-duck-flight | Drake in flight, Texas. Long square tail, head up.
 ```
 
 - Lives on wooded ponds, beaver ponds and sloughs with trees (80%).
@@ -77,7 +78,7 @@ ring-necked-duck-drake | Ring necked drake, New Mexico. Peaked head, white ring 
 ring-necked-duck-hen | Ring necked hen. White eye ring, pale band on the bill.
 lesser-scaup-drake | Scaup drake. Black at both ends, white sides, grey back.
 lesser-scaup-hen | Scaup hen. Bold white patch at the bill base.
-@@SCAUPFL@@
+g-scaup-flight | Scaup in flight, South Dakota. Dark front, pale back, fast wingbeats.
 ```
 
 - Ring necked drake: black back. Scaup drake: grey back (80%).
@@ -96,7 +97,16 @@ barrows-goldeneye-hen | Barrow's goldeneye hen. Mostly orange yellow bill.
 
 - Goldeneye wings whistle in flight (80%).
 - Goldeneyes have their own limit inside the duck bag: 2 a day, Barrow's and common together (99%, page 12, 2 October 2026 edition).
-@@BUFFL@@
+
+## Bufflehead and goldeneye in flight
+
+```gallery
+g-bufflehead-flight | Bufflehead drake, California. Big white wing patches, white head wedge.
+g-goldeneye-flight | Common goldeneye hen. Brown head, white wing patches.
+```
+
+- Both fly fast and low over open water, often in small groups (Tip).
+- Black and white small diver with a white head wedge: bufflehead. Bigger, with a round white face spot: goldeneye drake (80%).
 
 ## Canvasback and redhead
 
@@ -105,7 +115,7 @@ canvasback-drake | Canvasback drake, Maryland. Long sloping black bill, rusty he
 canvasback-hen | Canvasback hen. Pale, same sloping profile.
 redhead-drake | Redhead drake. Round head, grey back, blue bill with a black tip.
 redhead-hen | Redhead hen, Ontario. Plain brown, round head.
-@@CANVFL@@
+g-redhead-flight | Redheads in flight, South Dakota. Round red heads, black chests.
 ```
 
 - Profile tells them apart: canvasback forehead runs straight into the bill; redhead has a round head (80%).
@@ -129,7 +139,7 @@ pintail-hen | Pintail hen in flight. Long neck, slim body, pointed tail.
 canada-goose | Canada goose. Long neck, black head, white chin strap.
 cackling-goose | Cackling goose. Same colours, mallard sized, stubby bill.
 cackling-and-canada-geese | Cackling geese with a Canada goose (right). Compare neck and bill.
-@@CANGFL@@
+g-canada-goose-flight | Canada goose in flight, Burnaby Lake, BC.
 ```
 
 - A [[Cackling goose|cackling goose]] is a separate species from the Canada goose, not a young one (85%).
@@ -141,7 +151,8 @@ cackling-and-canada-geese | Cackling geese with a Canada goose (right). Compare 
 snow-goose | Snow goose. White, black wing tips, pink bill with a dark grin patch.
 ross-goose | Ross's goose. Smaller, stubby bill, no grin patch.
 snow-and-ross-geese | Snow (left) and Ross's (right) side by side.
-@@SNOWFL@@
+g-snow-geese-skagit | Snow geese over the Skagit Valley, Washington. Black wing tips.
+g-snow-geese-flock | Snow geese lifting off, California. Dark birds are the blue form.
 ```
 
 - White geese show black wing tips in flight. A swan is all white and much bigger (80%).
@@ -149,7 +160,11 @@ snow-and-ross-geese | Snow (left) and Ross's (right) side by side.
 ## Do not shoot
 
 ```gallery
-@@DNS@@
+g-loon | Common loon. Dagger bill, checkered back.
+g-western-grebe | Western grebes. Long white neck, thin yellow bill.
+g-horned-grebe | Horned grebe in winter. Small, black cap, white cheeks.
+g-trumpeter-swan | Trumpeter swan. Huge, all white, black bill.
+g-tundra-swans-flight | Tundra swans in flight. No black wing tips.
 ```
 
 > [!warn] Study aid only. The official regulations are the law.

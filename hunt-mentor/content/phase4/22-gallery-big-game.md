@@ -110,19 +110,29 @@ g-griz-face | Grizzly: short round ears, dished face.
 | Front claws | Short, dark, curved (85%) | Long, pale, straighter (85%) |
 | Colour | Any colour (85%) | Any colour, often silver tips (85%) |
 
-## Bighorn sheep and mountain goat
+## Bighorn sheep
 
 ```gallery
-bighorn-ram-full-curl | Bighorn ram. Heavy curled brown horns.
+g-bighorn-ram | Ram, Grand Teton. Massive brown horns curling back, down and forward.
+bighorn-ram-full-curl | Mature ram in winter. Horns near a full curl.
 g-bighorn-pair | Ram (left) and ewe, Wyoming. Compare the horns.
-bighorn-ewe | Bighorn ewe. Short, thin, slightly curved horns.
-mountain-goat-billy | Mountain goat. White shaggy coat, short black horns, beard.
-mountain-goat-nanny-kid | Nanny with her kid on a cliff top.
-@@GOAT@@
+bighorn-ewe | Ewe. Short, thin, slightly curved horns.
 ```
 
-- Bighorn: brown with a white rump; ram horns curl back, down and forward (85%).
-- Mountain goat: all white, black dagger horns on both sexes (85%). A sheep's horns are amber or brown, never black (85%).
+- Bighorn: brown body, white muzzle, white belly and rump patch (85%).
+- Ram horns are heavy and curl; ewe horns are short and thin, like a goat's (85%).
+
+## Mountain goat
+
+```gallery
+mountain-goat-billy | White shaggy coat, short black horns, beard.
+g-goat-face | Glacier National Park. Long white face, black dagger horns.
+g-goat-radium | Near Radium, BC, shedding its winter coat in summer.
+mountain-goat-nanny-kid | Nanny with her kid on a cliff top.
+```
+
+- Mountain goat: all white, black dagger horns on both sexes, black hooves (85%).
+- A sheep's horns are amber or brown, never black (85%).
 
 ## Cougar, lynx and bobcat
 
@@ -131,7 +141,8 @@ cougar | Cougar. Plain tan coat, long heavy tail with a black tip.
 cougar-kitten | Cougar kitten. Spots mean a kitten.
 canada-lynx | Canada lynx, Yukon. Long ear tufts, huge paws, short black tipped tail.
 bobcat | Bobcat. Spotted, barred legs, tail black on top only.
-@@CATS@@
+g-cougar-glacier | Cougar, Glacier National Park. Small round head, plain tawny coat, heavy legs.
+g-lynx | Canada lynx in summer. Ear tufts, long legs, big paws.
 ```
 
 - Cougar tail is long, about a third of its body (85%). Lynx and bobcat tails are short (85%).
@@ -142,7 +153,10 @@ bobcat | Bobcat. Spotted, barred legs, tail black on top only.
 ```gallery
 grey-wolf | Grey wolf, Yellowstone. Long legs, big feet, broad muzzle.
 coyote | Coyote, Yosemite. Slim, pointed muzzle, tall ears.
-@@CANIDS@@
+g-wolf-grey | Grey wolf in snow, Yellowstone. Long legs, broad head.
+g-coyote-snow | Coyote in snow, Yosemite. Slim, pointed muzzle, tall ears.
+g-wolf-black | Dark wolf, Yellowstone. Wolves can be black.
+g-coyote-howl | Coyote, Colorado. Rusty ears and legs, bushy tail.
 ```
 
 - Wolf: 30 to 50 kg in BC; coyote: 9 to 23 kg (85%).

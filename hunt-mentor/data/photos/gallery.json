@@ -1,1013 +1,1460 @@
 [
-  {
-    "id": "g-md-buck-front",
-    "species": "Mule deer",
-    "caption": "Mule deer buck, front view, North Dakota badlands. Huge ears held out to the side, white throat patch, antlers that fork and fork again.",
-    "author": "Matt Reinbold from USA",
-    "licence": "CC BY-SA 2.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:I_Think_He%27s_Noticed_Me_(3875851465).jpg",
-    "card": true,
-    "cardBack": "Mule deer buck. Big mule ears, white throat patch, antlers that branch in forks (each beam splits, then splits again).",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "g-md-buck-sage",
-    "species": "Mule deer",
-    "caption": "Mule deer buck in sagebrush, Craters of the Moon, Idaho. Note the white rump and the thin white tail with a black tip.",
-    "author": "NPS Photo",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:The_most_commonly_seen_large_mammal_at_Craters_of_the_Moon,_mule_deer_congregate_where_grasses_and_shrubs_dominate._(78fc15f6-e7ed-4ab1-9701-a68cd124c383).JPG"
-  },
-  {
-    "id": "g-md-doe-sage-snow",
-    "species": "Mule deer",
-    "caption": "Mule deer doe in snowy sagebrush, Wyoming. Grey winter coat, white rump, small tail held down.",
-    "author": "USFWS Mountain-Prairie",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Mule_Deer_Doe_in_Southwest_Wyoming_(23267627529).jpg"
-  },
-  {
-    "id": "g-md-doe-front",
-    "species": "Mule deer",
-    "caption": "Mule deer doe, front view. No antlers, huge ears, pale face with a dark forehead.",
-    "author": "USFWS Mountain-Prairie",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Mule_Deer_Doe_on_Seedskadee_National_Wildlife_Refuge_(22181735559).jpg"
-  },
-  {
-    "id": "g-md-radium",
-    "species": "Mule deer",
-    "caption": "Three mule deer near Radium, British Columbia. Open pine and grass, typical Kootenay winter range.",
-    "author": "Sir-Mister-Horse",
-    "licence": "CC BY 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:RIMG0316.jpg"
-  },
-  {
-    "id": "g-wt-buck-flag",
-    "species": "White tailed deer",
-    "caption": "White tailed buck running in snow with the tail up. The tail is the flag: broad, flipped up, white underneath.",
-    "author": "ForestWander",
-    "licence": "CC BY-SA 3.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/us/deed.en",
-    "source": "https://commons.wikimedia.org/wiki/File:Whitetail-buck-running-snow_-_West_Virginia_-_ForestWander.jpg"
-  },
-  {
-    "id": "g-wt-doe-flag",
-    "species": "White tailed deer",
-    "caption": "White tailed doe trotting with the tail raised: the white flag of alarm.",
-    "author": "HARRY W. McCORMACK ( TEABERRYEAGLE )",
-    "licence": "CC BY 3.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
-    "source": "https://commons.wikimedia.org/wiki/File:EASTERN_WHITETAIL_DEER_-_A_DOE_WITH_TAIL_UP,_THE_WHITE_FLAG_OF_ALARM.jpg"
-  },
-  {
-    "id": "g-wt-doe",
-    "species": "White tailed deer",
-    "caption": "White tailed doe, side view, in snow. Brown back, long brown tail, smaller ears than a mule deer.",
-    "author": "U.S. Fish and Wildlife Service - Midwest Region",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:White-tailed_deer_(54365597311).jpg",
-    "card": true,
-    "cardBack": "White tailed doe. No antlers, smaller ears than a mule deer, long wide brown tail with white edges.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "g-md-buck-cover",
-    "species": "Mule deer",
-    "caption": "Mule deer buck in brush, Malheur refuge, Oregon. In cover, look for the ears and the antler tines first.",
-    "author": "U.S. Fish and Wildlife Service Headquarters",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_buck_at_Malheur_Refuge_(5448494556).jpg"
-  },
-  {
-    "id": "g-md-doe-fawns-rear",
-    "species": "Mule deer",
-    "caption": "Mule deer doe and two fawns from behind. Big white rump patches, thin rope tails with black tips.",
-    "author": "USFWS Mountain-Prairie",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Mule_Deer_Doe_and_Fawns_SW_Wyoming_(23204526004).jpg"
-  },
-  {
-    "id": "g-md-doe-fawn-cover",
-    "species": "Mule deer",
-    "caption": "Mule deer doe and fawn half hidden in brush. In cover you often see only ears and a face.",
-    "author": "USFWS Mountain-Prairie",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_doe_and_fawns_on_Seedskadee_National_Wildlife_Refuge_01_(15334284900).jpg"
-  },
-  {
-    "id": "g-md-distance",
-    "species": "Mule deer",
-    "caption": "Mule deer at distance in sagebrush, eastern Oregon. Grey bodies, white rumps and big ears are what you pick out first.",
-    "author": "BLM Oregon & Washington",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_in_eastern_Oregon_(29844645086).jpg"
-  },
-  {
-    "id": "g-md-fawn-bedded",
-    "species": "Mule deer",
-    "caption": "Mule deer fawn bedded and hiding in grass. Its mother is close by. Leave it alone.",
-    "author": "USFWS Mountain Prairie",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_fawn_(50131622062).jpg"
-  },
-  {
-    "id": "g-md-fawn",
-    "species": "Mule deer",
-    "caption": "Mule deer fawn in summer, North Dakota. White spots on a red brown coat; the spots fade by fall.",
-    "author": "James St. John",
-    "licence": "CC BY 2.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Odocoileus_hemionus_(mule_deer)_3_(8270240814).jpg"
-  },
-  {
-    "id": "g-wt-buck-side",
-    "species": "White tailed deer",
-    "caption": "White tailed deer buck, side view, New Jersey. Brown tail with white edges, antler tines rising from one main beam.",
-    "author": "Famartin",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:2025-11-09_07_48_17_White-tailed_Deer_buck_in_autumn_along_Aquetong_Lane_in_the_Mountainview_section_of_Ewing_Township,_Mercer_County,_New_Jersey.jpg",
-    "card": true,
-    "cardBack": "White tailed buck. Smaller ears, wide brown tail with white edges, tines that grow up off one main beam.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "g-wt-buck-front",
-    "species": "White tailed deer",
-    "caption": "White tailed deer buck, front view. White band across the nose, white throat patch, tines off a main beam that sweeps forward.",
-    "author": "Famartin",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:2024-11-08_10_54_30_White-tailed_Deer_buck_along_Montague_Avenue_in_the_Mountainview_section_of_Ewing_Township,_Mercer_County,_New_Jersey.jpg"
-  },
-  {
-    "id": "g-wt-run",
-    "species": "White tailed deer",
-    "caption": "White tailed deer bounding away on open prairie, Montana. Running long and low, tails up, not the stiff legged bounce of a mule deer.",
-    "author": "NPS",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:2_White-tailed_deer_run_past_the_Indian_Memorial._(74cf0194-1dd8-b71b-0b1f-3242b5474cf7).jpg"
-  },
-  {
-    "id": "g-moose-bull-side",
-    "species": "Moose",
-    "caption": "Bull moose, side view, in fall. Tall front shoulders, hump, long legs, broad flat antler palms.",
-    "author": "Jacob W. Frank",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Alces_alces_1.jpg",
-    "card": true,
-    "cardBack": "Bull moose. Black brown, horse sized, shoulder hump, long face, wide palmated (flat, hand shaped) antlers.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "g-moose-bull-front",
-    "species": "Moose",
-    "caption": "Bull moose, front view, Grand Teton. Antlers spread wide like two open hands; heavy bulbous nose.",
-    "author": "GrandTetonNPS",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Bull_Moose_Sticking_Tongue_Out_(28257188958).jpg"
-  },
-  {
-    "id": "g-moose-young-bull",
-    "species": "Moose",
-    "caption": "Young bull moose with small spike and fork antlers, Grand Teton. Measure carefully: young bulls are often not legal.",
-    "author": "GrandTetonNPS",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Bull_Moose_Portrait_(41410522174).jpg"
-  },
-  {
-    "id": "g-moose-cow",
-    "species": "Moose",
-    "caption": "Cow moose feeding in a lake, Glacier National Park. No antlers, long pale legs, brown body.",
-    "author": "naturenps",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Cow_moose_(33233257795).jpg",
-    "card": true,
-    "cardBack": "Cow moose. No antlers, long legs, big nose, often with a calf. Look for the pale patch under the tail.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "g-moose-cow-head",
-    "species": "Moose",
-    "caption": "Cow moose, head close up. Long drooping nose, big ears, a bell (flap of skin) under the throat.",
-    "author": "Veronika Ronkos",
-    "licence": "CC BY-SA 3.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Cow_moose_profile.jpg"
-  },
-  {
-    "id": "g-moose-cow-calf",
-    "species": "Moose",
-    "caption": "Shiras moose cow and calf, Wyoming. Never shoot a cow with a calf at side unless the rules say you may.",
-    "author": "USFWS Mountain-Prairie",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Shiras_Moose_Cow_and_Calf_Seedskadee_NWR_(15072335119).jpg"
-  },
-  {
-    "id": "g-moose-calf",
-    "species": "Moose",
-    "caption": "Moose calf in spring, Alaska, beside its mother. Red brown and gangly; it stays with the cow its first year.",
-    "author": "USFWSAlaska",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Moose_calf_(50007803527).jpg"
-  },
-  {
-    "id": "g-moose-calf-winter",
-    "species": "Moose",
-    "caption": "Moose calf in its first winter, Grand Teton. Smaller body, short face and no antlers: do not mistake it for a cow.",
-    "author": "GrandTetonNPS",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Moose_Calf_(48910979441).jpg"
-  },
-  {
-    "id": "g-elk-bull-side",
-    "species": "Elk",
-    "caption": "Bull elk near Maligne Canyon, Jasper, Alberta. Dark mane, pale body, long swept back antlers with many tines.",
-    "author": "Wilson Hui from Calgary, Canada",
-    "licence": "CC BY 2.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Bull_Elk_Stag_(32272946993).jpg",
-    "card": true,
-    "cardBack": "Bull elk. Tan body, dark brown neck and mane, straw coloured rump, long antlers swept back over the body.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "g-elk-bull-rear",
-    "species": "Elk",
-    "caption": "Bull elk looking back. Note the straw coloured rump patch and the dark neck.",
-    "author": "NPS Photo",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:A_bull_elk_checks_his_surroundings_for_danger._(c16b5aae-0192-4ceb-9ea1-66ec852197ba).JPG"
-  },
-  {
-    "id": "g-elk-bulls-distance",
-    "species": "Elk",
-    "caption": "Bull elk at distance in snow, National Elk Refuge, Wyoming. Pale bodies and dark necks stand out a long way off.",
-    "author": "USFWS Mountain Prairie",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Bull_Gathering_(13541386053).jpg"
-  },
-  {
-    "id": "g-elk-cow",
-    "species": "Elk",
-    "caption": "Cow elk, Glacier National Park. No antlers, long neck, darker head and neck than the body.",
-    "author": "GlacierNPS",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Cow_Elk_Glacier_National_Park.jpg",
-    "card": true,
-    "cardBack": "Cow elk. No antlers, tan body, dark head and neck, pale rump. Much bigger than a deer, smaller than a moose.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "g-elk-cow-rear",
-    "species": "Elk",
-    "caption": "Cow elk from behind, Firehole River, Yellowstone. The big pale rump patch is the elk signature.",
-    "author": "Yellowstone National Park",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Cow_elk,_Firehole_River_(32984223473).jpg"
-  },
-  {
-    "id": "g-elk-herd",
-    "species": "Elk",
-    "caption": "Cow elk herd in winter, Yellowstone. Elk live in herds; check every animal before you pick one.",
-    "author": "Yellowstone National Park from Yellowstone NP, USA",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Cow_elk_near_the_North_Entrance_(15905706616).jpg"
-  },
-  {
-    "id": "g-bb-side",
-    "species": "Black bear",
-    "caption": "Black bear male, side view, near Whistler, BC. Back line highest at the rump, no shoulder hump, tall pointed ears.",
-    "author": "Charles J. Sharp",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Olympic_black_bear_(Ursus_americanus_altifrontalis)_male_Whistler.jpg",
-    "card": true,
-    "cardBack": "Black bear. No shoulder hump, straight face profile, tall ears, short curved claws. Colour does NOT tell you the species.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "g-bb-face",
-    "species": "Black bear",
-    "caption": "Black bear face, Jasper. Straight profile from forehead to nose, tall ears, brown muzzle.",
-    "author": "Thomas Fuhrmann",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:American_black_bear_(Ursus_americanus)_-_Jasper_National_Park_01.jpg"
-  },
-  {
-    "id": "g-bb-tofino",
-    "species": "Black bear",
-    "caption": "Vancouver Island black bear on the shore at low tide, Tofino, BC. Coastal bears turn rocks for crabs.",
-    "author": "Charles J. Sharp",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Vancouver_Island_black_bear_(Ursus_americanus_vancouveri)_Tofino_4.jpg"
-  },
-  {
-    "id": "g-bb-brown",
-    "species": "Black bear",
-    "caption": "Brown phase black bear, Tatshenshini Alsek park, Yukon. Brown, but no hump and a straight face: still a black bear.",
-    "author": "Diego Delso",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Oso_negro_(Ursus_americanus),_Parque_natural_provincial_Tatshenshini-Alsek,_Yuk%C3%B3n,_Canad%C3%A1,_2017-08-25,_DD_84.jpg"
-  },
-  {
-    "id": "g-bb-cinnamon",
-    "species": "Black bear",
-    "caption": "Cinnamon phase black bear eating dandelions, Waterton Lakes, Alberta. Light brown coat, tall ears, no hump.",
-    "author": "Traveler100",
-    "licence": "CC BY-SA 3.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Blackbearwaterton.jpg"
-  },
-  {
-    "id": "g-bb-blonde",
-    "species": "Black bear",
-    "caption": "Pale brown black bear along the Dempster Highway, Yukon. Even this light coat sits on a black bear body shape.",
-    "author": "Naturedata",
-    "licence": "CC0",
-    "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "source": "https://commons.wikimedia.org/wiki/File:Black_Bear_on_the_Dempster_Highway.jpg"
-  },
-  {
-    "id": "g-bb-sow-cubs",
-    "species": "Black bear",
-    "caption": "Black bear sow with two cubs, one black and one cinnamon, Yellowstone. Colour phases mix in one family. Cubs and sows with cubs are protected in BC (VERIFY page).",
-    "author": "Neal Herbert",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Black_bear_with_cubs_(772a9ae1-a841-4d01-910a-484d8842cda0).jpg"
-  },
-  {
-    "id": "g-griz-front",
-    "species": "Grizzly bear",
-    "caption": "Grizzly bear in sagebrush, Yellowstone. Big shoulder hump, dished face, short round ears.",
-    "author": "NPS/Jim Peaco",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:File-Grizzly_bear_on_Swan_Lake_Flats;-Jim_Peaco;-June_2005;-Catalog_18220d;-Original_IT8M3358_(f3aced99-1dd8-b71b-0bfc-4ad5c6105cb2).jpg",
-    "card": true,
-    "cardBack": "Grizzly bear. Shoulder hump, dished (concave) face, short round ears, long pale claws. Often silver tipped fur.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "g-griz-side",
-    "species": "Grizzly bear",
-    "caption": "Grizzly walking in snow, Yellowstone. The hump is the highest point of the back; the rump sits lower.",
-    "author": "NPS/Jim Peaco",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Grizzly_bear_walking_on_top_of_snow_near_Obsidian_Creek._(101778c8-84ea-4999-8bcc-798e123ce44f).jpg"
-  },
-  {
-    "id": "g-griz-profile",
-    "species": "Grizzly bear",
-    "caption": "Grizzly on a gravel bar, Noatak River, Alaska. From side on at distance, the hump shows clearly.",
-    "author": "NPS Photo",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Grizzly_on_the_Noatak_River_(3925fb42-1dd8-b71c-0799-6752404c98d4).jpg"
-  },
-  {
-    "id": "g-griz-face",
-    "species": "Grizzly bear",
-    "caption": "Grizzly face close up, Yellowstone. Dish between eyes and nose, small round ears, grizzled silver tips.",
-    "author": "Terry Tollefsbol, NATIONAL CONSERVATION TRAINING CENTER-PUBLICATIONS AND TRAINING MATERIALS",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Grizzly_Bear_Yellowstone.jpg"
-  },
-  {
-    "id": "g-griz-sow",
-    "species": "Grizzly bear",
-    "caption": "Grizzly sow with a yearling cub, Yellowstone. Never get between a sow and her cub.",
-    "author": "NPS/Jim Peaco",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Grizzly_sow_and_yearling_(f3cf0ba1-1dd8-b71b-0b5a-6f044194d3ea).jpg"
-  },
-  {
-    "id": "g-md-run-away",
-    "species": "Mule deer",
-    "caption": "Mule deer running away, California. From behind: white rump, thin tail with a black tip, held down even when running.",
-    "author": "Wingchi Poon",
-    "licence": "CC BY-SA 3.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Deer_running_away.JPG"
-  },
-  {
-    "id": "g-bighorn-pair",
-    "species": "Bighorn sheep",
-    "caption": "Bighorn ram (left) and ewe, Wyoming. Ram: massive curled horns. Ewe: short, thin, slightly curved horns, like a goat's.",
-    "author": "Bureau of Land Management",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:My_Public_Lands_Roadtrip-_Wildlife_in_Wyoming_(19912484675).jpg"
-  },
-  {
-    "id": "g-md-buck-side",
-    "species": "Mule deer",
-    "caption": "Mule deer buck, side view, in snow, Siskiyou County, California. Grey coat, white rump, black tipped tail, forked antlers.",
-    "author": "Marshal Hedin from San Diego",
-    "licence": "CC BY-SA 2.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_buck_(Odocoileus_hemionus),_Little_Shasta,_Siskiyou_County_CA_(24178985295).jpg",
-    "card": true,
-    "cardBack": "Mule deer buck. Grey brown, white rump patch, thin white tail with a black tip, antlers that fork.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "g-md-buck-rear",
-    "species": "Mule deer",
-    "caption": "Mule deer buck from behind, Colorado. Big white rump patch and a thin rope tail with a black tip.",
-    "author": "USFWS Mountain-Prairie",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Mule_Deer_Buck_(15382465555).jpg"
-  },
-  {
-    "id": "g-md-buck-4pt",
-    "species": "Mule deer",
-    "caption": "Mule deer buck in snow, Oregon. Practise counting the tips on each antler; forks on forks are the mule deer pattern.",
-    "author": "Oregon Department of Fish & Wildlife",
-    "licence": "CC BY-SA 2.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Mule_buck_elk_creek_m_myatt_(5489214303).jpg"
-  },
-  {
-    "id": "g-md-buck-open",
-    "species": "Mule deer",
-    "caption": "Mule deer buck crossing open flats, Yellowstone. At 300 m you see a grey body, a white rump and antlers above the ears.",
-    "author": "Yellowstone National Park",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_buck_and_Roosevelt_Arch_(37686230234).jpg"
-  },
-  {
-    "id": "g-md-bound",
-    "species": "Mule deer",
-    "caption": "Mule deer doe bounding across a road, Utah. A spooked mule deer often stots: all four feet push off together in a stiff legged bounce.",
-    "author": "BLMUtah",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_crossing_the_road_(53658855485).jpg"
-  },
-  {
-    "id": "g-md-buck-small",
-    "species": "Mule deer",
-    "caption": "Young mule deer buck, Yellowstone. Count each antler: well under 4 tines a side. Not a 4 point buck.",
-    "author": "Yellowstone National Park from Yellowstone NP, USA",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_buck_(15877888045).jpg"
-  },
-  {
-    "id": "g-md-forkhorn",
-    "species": "Mule deer",
-    "caption": "Young mule deer buck in velvet, Yosemite. Each antler is a simple fork: 2 points a side.",
-    "author": "Guywelch2000",
-    "licence": "CC0",
-    "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_buck_in_velvet_Mariposa_Grove.jpg"
-  },
-  {
-    "id": "g-bt-buck-velvet",
-    "species": "Black tailed deer",
-    "caption": "Columbian black tailed deer buck in velvet, Mount Rainier, Washington. Smaller and darker than a mule deer; antlers still fork.",
-    "author": "Charles J. Sharp",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Columbian_black-tailed_deer_(Odocoileus_hemionus_columbianus)_male_Mt_Rainier.jpg"
-  },
-  {
-    "id": "g-bt-victoria",
-    "species": "Black tailed deer",
-    "caption": "Young black tailed buck, Victoria, BC. Note the wide tail, dark brown to black on top, held down.",
-    "author": "Gordon Leggett",
-    "licence": "CC BY 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:2025-04-13_01_Black-tailed_deer_(Odocoileus_hemionus_columbianus)_%E2%80%93_Victoria_BC_Canada.jpg"
-  },
-  {
-    "id": "g-bt-doe",
-    "species": "Black tailed deer",
-    "caption": "Black tailed doe, Washington. The whole top of the tail is dark, not just the tip like a mule deer.",
-    "author": "Walter Siegmund (talk)",
-    "licence": "CC BY-SA 3.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Odocoileus_hemionus_5432.JPG",
-    "card": true,
-    "cardBack": "Black tailed deer. Coast deer. Tail wider than a mule deer's and dark or black all the way down the top.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "g-bt-bedded",
-    "species": "Black tailed deer",
-    "caption": "Young black tailed buck bedded by a highway, Ucluelet, Vancouver Island. Bedded deer show only head, ears and back.",
-    "author": "Buiobuione",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Black-tailed_deer_-_Odocoileus_hemionus_columbianus_-_05.jpg"
-  },
-  {
-    "id": "g-bt-buck",
-    "species": "Black tailed deer",
-    "caption": "Columbian black tailed buck in the Dungeness River, Washington, a doe at left. Red brown coat, dark tail, forked antlers like a mule deer.",
-    "author": "Philip Cohen",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Columbian_Black-tailed_Deer_buck.jpg",
-    "card": true,
-    "cardBack": "Black tailed buck. Forked antlers like a mule deer, but a smaller, darker deer with a wide tail dark all down the top.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "g-md-young-bucks",
-    "species": "Mule deer",
-    "caption": "Three young mule deer bucks with small antlers, Wind Cave, South Dakota. Young bucks travel together; count every one.",
-    "author": "NPS photo",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_are_commonly_seen_around_the_park,_especially_near_the_campground_and_visitor_center._Also_called_blacktail_deer,_they_(95abdd64-155d-4519-3ebc-81b1b3cab293).jpg"
-  },
-  {
-    "id": "wigeon-drake",
-    "species": "American wigeon",
-    "caption": "American wigeon drake, Reifel sanctuary, Ladner, BC. White crown stripe, green swoosh behind the eye, pinkish brown sides.",
-    "author": "Judy Gallagher",
-    "licence": "CC BY 2.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:American_Wigeon_(male)_-_Anas_americana,_Reifel_Sanctuary,_Ladner,_British_Columbia.jpg",
-    "card": true,
-    "cardBack": "American wigeon drake. White forehead and crown (the baldpate), green band behind the eye, pink brown sides, small blue grey bill.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "wigeon-hen",
-    "species": "American wigeon",
-    "caption": "American wigeon hen. Grey speckled head, warm orange brown sides, small blue grey bill with a black tip.",
-    "author": "Mdf",
-    "licence": "CC BY-SA 3.0",
-    "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-    "source": "https://commons.wikimedia.org/wiki/File:Anas-americana-004.jpg",
-    "card": true,
-    "cardBack": "American wigeon hen. Plain grey head, rusty orange sides, short blue grey bill with a black tip.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "green-winged-teal-drake",
-    "species": "Green winged teal",
-    "caption": "Green winged teal drake. Chestnut head with a green eye patch, a white bar down the side of the chest, cream patch under the tail.",
-    "author": "Rhododendrites",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Green-winged_teal_drake_(83852).jpg",
-    "card": true,
-    "cardBack": "Green winged teal drake. Tiny duck, chestnut head with a green swoosh, white vertical bar in front of the wing.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "green-winged-teal-hen",
-    "species": "Green winged teal",
-    "caption": "Green winged teal hen, California. Small brown duck, small dark bill, a flash of green in the wing.",
-    "author": "Mike's Birds from Riverside, CA, US",
-    "licence": "CC BY-SA 2.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Female_Green-winged_Teal-_Bolsa_Chica_Wetlands_(4412427221).jpg",
-    "card": true,
-    "cardBack": "Green winged teal hen. Very small brown duck, small dark bill, green wing patch.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "blue-winged-teal-drake",
-    "species": "Blue winged teal",
-    "caption": "Blue winged teal drake in flight, California. White crescent on the face, big pale blue patch on the front of the wing.",
-    "author": "Frank Schulenburg",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Blue-winged_teal_at_Sacramento_National_Wildlife_Refuge-5326.jpg"
-  },
-  {
-    "id": "blue-winged-teal-hen",
-    "species": "Blue winged teal",
-    "caption": "Blue winged teal hen. Small brown duck with a dark eye line and a pale spot at the base of the bill.",
-    "author": "U.S. Fish and Wildlife Service - Midwest Region",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Blue-winged_Teal_Hen_(26234389506).jpg"
-  },
-  {
-    "id": "gadwall-drake",
-    "species": "Gadwall",
-    "caption": "Gadwall drake. Plain grey body, black rear end, dark bill. The quiet grey duck.",
-    "author": "Department of the Interior. U.S. Fish and Wildlife Service. National Conservation Training Center. 10/1997-8888",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Gadwall_Drake_-_DPLA_-_3a0518ab1519a6044a5182c72add2cba.jpg",
-    "card": true,
-    "cardBack": "Gadwall drake. Grey all over, black stern (rear end), dark bill, white patch in the wing.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "gadwall-drake-flight",
-    "species": "Gadwall",
-    "caption": "Gadwall drake in flight, Oregon. Look for the small square white patch on the back edge of the wing.",
-    "author": "Oregon Department of Fish & Wildlife",
-    "licence": "CC BY-SA 2.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Gadwall_male_myatt_odfw_(7591220124).jpg"
-  },
-  {
-    "id": "gadwall-hen",
-    "species": "Gadwall",
-    "caption": "Gadwall hen, North Dakota. Like a mallard hen but slimmer, with an orange bill edged in dark and a white wing patch.",
-    "author": "USFWS Mountain Prairie",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Hen_Gadwall_at_J_Clark_Salyer_NWR_(29622615338).jpg",
-    "card": true,
-    "cardBack": "Gadwall hen. Mottled brown, orange sided bill with a dark top, white square in the wing (a mallard hen shows blue).",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "shoveler-drake",
-    "species": "Northern shoveler",
-    "caption": "Northern shoveler drake, North Dakota. Huge spoon bill, green head, white chest, chestnut sides.",
-    "author": "USFWS Mountain Prairie",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Drake_Northern_Shoveler_at_J_Clark_Salyer_NWR_(42589430525).jpg",
-    "card": true,
-    "cardBack": "Northern shoveler drake. Big spoon shaped bill, green head, white chest, rusty sides.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "shoveler-hen",
-    "species": "Northern shoveler",
-    "caption": "Northern shoveler hen. Mottled brown, but the long spoon bill gives her away.",
-    "author": "Charles J. Sharp",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Northern_shoveler_(Spatula_clypeata)_female_Marken.jpg",
-    "card": true,
-    "cardBack": "Northern shoveler hen. Brown like a mallard hen, but with a long, wide spoon bill.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "wood-duck-drake",
-    "species": "Wood duck",
-    "caption": "Wood duck drake. Green crested head with white stripes, red eye, chestnut chest.",
-    "author": "Rhododendrites",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Wood_duck_drake_vocalizing_in_Central_Park_(86815).jpg",
-    "card": true,
-    "cardBack": "Wood duck drake. Swept back green crest, white chin straps, red eye and bill base.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "wood-duck-hen",
-    "species": "Wood duck",
-    "caption": "Wood duck hen. Grey brown with a white teardrop around the eye and a small crest.",
-    "author": "Russ",
-    "licence": "CC BY 2.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Wood_duck_hen,_mill_pond_(35953689361).jpg",
-    "card": true,
-    "cardBack": "Wood duck hen. Grey brown, white teardrop eye ring, small crest.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "common-goldeneye-drake",
-    "species": "Common goldeneye",
-    "caption": "Common goldeneye drake. Round white spot in front of the yellow eye, mostly white sides.",
-    "author": "CheepShot",
-    "licence": "CC BY 2.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Winthrop_Harbor_(13334802213).jpg",
-    "card": true,
-    "cardBack": "Common goldeneye drake. Green black head, round white cheek spot, yellow eye, white sides.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "common-goldeneye-hen",
-    "species": "Common goldeneye",
-    "caption": "Common goldeneye hen. Chocolate brown head, yellow eye, grey body, dark bill with a yellow tip.",
-    "author": "Charles J. Sharp",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Common_goldeneye_(Bucephala_clangula_americana)_female_Prince%27s_Island.jpg"
-  },
-  {
-    "id": "barrows-goldeneye-drake",
-    "species": "Barrow's goldeneye",
-    "caption": "Barrow's goldeneye drake, Wyoming. Crescent shaped white face patch, purple sheen on the head, a row of white spots on black sides.",
-    "author": "USFWS Mountain-Prairie",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Barrow%27s_Goldeneye_Drake_Seedskadee_NWR_(16656643482).jpg",
-    "card": true,
-    "cardBack": "Barrow's goldeneye drake. White crescent (not a round spot) in front of the eye, more black on the back and sides.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "barrows-goldeneye-hen",
-    "species": "Barrow's goldeneye",
-    "caption": "Barrow's goldeneye hen. Brown head, yellow eye, mostly yellow orange bill.",
-    "author": "Pacific Southwest Region USFWS from Sacramento, US",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Barrow%27s_Goldeneye_(female)_(6881754634).jpg"
-  },
-  {
-    "id": "bufflehead-drake",
-    "species": "Bufflehead",
-    "caption": "Bufflehead drake, California. Small black and white duck with a big white patch on the back of the head.",
-    "author": "Mike's Birds from Riverside, CA, US",
-    "licence": "CC BY-SA 2.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Male_Bufflehead_(4239833567).jpg",
-    "card": true,
-    "cardBack": "Bufflehead drake. Tiny, mostly white, with a large white wedge on the back of a dark head.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "bufflehead-hen",
-    "species": "Bufflehead",
-    "caption": "Bufflehead hen. Small grey brown duck with an oval white cheek patch.",
-    "author": "Mdf",
-    "licence": "CC BY-SA 3.0",
-    "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-    "source": "https://commons.wikimedia.org/wiki/File:Bucephala-albeola-010.jpg",
-    "card": true,
-    "cardBack": "Bufflehead hen. Very small, dark head, one white oval patch on the cheek.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "ring-necked-duck-drake",
-    "species": "Ring necked duck",
-    "caption": "Ring necked duck drake, New Mexico. Peaked black head, white ring near the bill tip, white spur in front of the wing.",
-    "author": "Chuck Homler d/b/a Focus On Wildlife",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Ring-necked_duck_(Aythya_collaris)_-_Las_Cruces_-_New_Mexico_-_USA_(cropped).jpg",
-    "card": true,
-    "cardBack": "Ring necked duck drake. Black back, grey sides with a white spur at the front, white ring around the bill.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "ring-necked-duck-hen",
-    "species": "Ring necked duck",
-    "caption": "Ring necked duck hen. Brown, peaked head, white eye ring and a pale band on the bill.",
-    "author": "Polinova",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Ring-necked_Duck_Female.jpg"
-  },
-  {
-    "id": "lesser-scaup-drake",
-    "species": "Lesser scaup",
-    "caption": "Lesser scaup drake. Dark head, yellow eye, grey back, black chest and tail, white sides.",
-    "author": "Chuck Homler d/b/a Focus On Wildlife",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Drake_Lesser_Scaup_(Aythya_affinis)_Barengat_Inlet,_New_Jersey,_USA.jpg",
-    "card": true,
-    "cardBack": "Scaup drake. Black at both ends, white sides, grey back, yellow eye, blue bill.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "lesser-scaup-hen",
-    "species": "Lesser scaup",
-    "caption": "Lesser scaup hen. Brown with a white patch at the base of the bill.",
-    "author": "Chuck Homler d/b/a Focus On Wildlife",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Hen_Lesser_Scaup_(Aythya_affinis),_Barnegat_Inlet,_New_Jersey,_USA.jpg",
-    "card": true,
-    "cardBack": "Scaup hen. Brown diving duck with a bold white patch around the bill base.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "canvasback-drake",
-    "species": "Canvasback",
-    "caption": "Canvasback drake, Maryland. Long sloping forehead into a black bill, rusty head, white body.",
-    "author": "Judy Gallagher",
-    "licence": "CC BY 2.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Canvasback_(male)_-_Aythya_valisineria,_Cambridge,_Maryland.jpg",
-    "card": true,
-    "cardBack": "Canvasback drake. Red brown head, long sloping black bill and forehead, bright white back.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "canvasback-hen",
-    "species": "Canvasback",
-    "caption": "Canvasback hen. Pale brown head and grey body, same long sloping profile as the drake.",
-    "author": "Judy Gallagher",
-    "licence": "CC BY 2.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Canvasback_(female)_-_Aythya_valisineria,_Oakley_Street,_Cambridge,_Maryland.jpg"
-  },
-  {
-    "id": "redhead-drake",
-    "species": "Redhead",
-    "caption": "Redhead drake. Round red head, grey body, blue grey bill with a black tip.",
-    "author": "Rhododendrites",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Redhead_in_Central_Park_(15503).jpg",
-    "card": true,
-    "cardBack": "Redhead drake. Round red head, grey back, blue bill with a white ring and black tip.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "redhead-hen",
-    "species": "Redhead",
-    "caption": "Redhead hen, Ontario. Plain brown with a rounded head and a blue grey bill.",
-    "author": "Mykola Swarnyk",
-    "licence": "CC BY-SA 3.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Aythya_americana_f_Ontario.jpg"
-  },
-  {
-    "id": "common-merganser-drake",
-    "species": "Common merganser",
-    "caption": "Common merganser drake, Toronto. Long thin red bill, dark green head, white body. A fish eating duck.",
-    "author": "Mykola Swarnyk",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Mergus_merganser_m_Humber_Bay_West_Toronto.jpg"
-  },
-  {
-    "id": "common-merganser-hen",
-    "species": "Common merganser",
-    "caption": "Common merganser hen. Shaggy rusty head, thin red bill, clean white chin.",
-    "author": "USFWSmidwest",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Common_Merganser_Hen_(12973022533).jpg"
-  },
-  {
-    "id": "hooded-merganser-drake",
-    "species": "Hooded merganser",
-    "caption": "Hooded merganser drake. White fan shaped crest edged in black, thin dark bill.",
-    "author": "Peterwchen",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Lophodytes_cucullatus-male.jpg"
-  },
-  {
-    "id": "hooded-merganser-hen",
-    "species": "Hooded merganser",
-    "caption": "Hooded merganser hen. Cinnamon bushy crest, thin bill.",
-    "author": "Peterwchen",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Lophodytes_cucullatus-female.jpg"
-  },
-  {
-    "id": "divers-taking-off",
-    "species": "Diving ducks",
-    "caption": "Diving ducks running across the water to take off, South Dakota. Divers patter along the surface; puddle ducks jump straight up.",
-    "author": "USFWS Mountain Prairie",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Waterfowl_Lake_Andes_National_Wildlife_Refuge_South_Dakota_(52781566934).jpg"
-  },
-  {
-    "id": "mallards-flushing",
-    "species": "Mallard",
-    "caption": "Ducks flushing off a wetland, Nebraska. Pick one bird before you shoot, and know what it is.",
-    "author": "USFWS Mountain Prairie",
-    "licence": "Public domain",
-    "licenceUrl": "",
-    "source": "https://commons.wikimedia.org/wiki/File:Rainwater_Basin_Wetland_Management_District_(32227957367).jpg"
-  },
-  {
-    "id": "mallards-flying",
-    "species": "Mallard",
-    "caption": "Mallards taking off over a lake. Drakes show green heads; every bird shows the blue wing patch.",
-    "author": "Jocelyn Anderson",
-    "licence": "CC BY 3.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Mallard_Ducks_Taking_Off_Over_A_Lake_(185682473).jpeg"
-  },
-  {
-    "id": "pintail-hen",
-    "species": "Northern pintail",
-    "caption": "Northern pintail hen in flight. Long neck, slim body, pointed tail, plain brown head.",
-    "author": "Frank Schulenburg",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Female_northern_pintail_in_flight-1827.jpg"
-  },
-  {
-    "id": "canada-goose",
-    "species": "Canada goose",
-    "caption": "Canada goose. Black neck and head, white chin strap, brown body. Large, with a long neck.",
-    "author": "Joe Ravi",
-    "licence": "CC BY-SA 3.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Canada_Goose_(Branta_Canadensis).jpg",
-    "card": true,
-    "cardBack": "Canada goose. Black head and neck, white chin strap, brown grey body, long neck.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "cackling-goose",
-    "species": "Cackling goose",
-    "caption": "Cackling goose. Same pattern as a Canada goose but mallard sized, with a short neck and a stubby bill.",
-    "author": "VJAnderson",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Cackling_Goose_02.jpg",
-    "card": true,
-    "cardBack": "Cackling goose. Looks like a small Canada goose: short neck, tiny stubby bill, square head.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "cackling-and-canada-geese",
-    "species": "Cackling goose",
-    "caption": "Cackling geese with a Canada goose (right). Compare size, neck length and bill length.",
-    "author": "Andy Reago & Chrissy McClarren",
-    "licence": "CC BY 2.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Cackling_Goose_(31714908975).jpg"
-  },
-  {
-    "id": "snow-goose",
-    "species": "Snow goose",
-    "caption": "Snow goose. White body, black wing tips, pink bill with a black grin patch.",
-    "author": "Paul Danese",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:20250118_snow_goose_barnes_boat_launch_PD000302.jpg",
-    "card": true,
-    "cardBack": "Snow goose. White with black wing tips; pink bill with a dark grin patch.",
-    "cardDeck": "Photo ID"
-  },
-  {
-    "id": "ross-goose",
-    "species": "Ross's goose",
-    "caption": "Ross's goose. A small white goose with a stubby bill and no black grin patch.",
-    "author": "Andrew C",
-    "licence": "CC BY 2.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Ross%27s_Goose_(Chen_rossii)_(23108182770).jpg"
-  },
-  {
-    "id": "snow-and-ross-geese",
-    "species": "Snow goose",
-    "caption": "Snow goose (left) and Ross's goose (right). The Ross's is smaller, with a short bill and a round head.",
-    "author": "Nomdeploom",
-    "licence": "CC0",
-    "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "source": "https://commons.wikimedia.org/wiki/File:Snow_Goose_Ross_Goose_comparison.jpg"
-  },
-  {
-    "id": "white-fronted-goose",
-    "species": "Greater white fronted goose",
-    "caption": "Greater white fronted goose in flight. Grey brown, white band at the bill base, black bars on the belly.",
-    "author": "Frank Schulenburg",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Greater_white-fronted_goose_in_flight-1413.jpg"
-  },
-  {
-    "id": "brant",
-    "species": "Brant",
-    "caption": "Black brant, San Diego. Small dark goose, black neck with a white necklace. A coastal goose.",
-    "author": "Lucwrte",
-    "licence": "CC BY-SA 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Black_Brant_at_Vacation_Isle,_San_Diego.jpg"
-  }
+ {
+  "id": "g-md-buck-front",
+  "species": "Mule deer",
+  "caption": "Mule deer buck, front view, North Dakota badlands. Huge ears held out to the side, white throat patch, antlers that fork and fork again.",
+  "author": "Matt Reinbold from USA",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:I_Think_He%27s_Noticed_Me_(3875851465).jpg",
+  "card": true,
+  "cardBack": "Mule deer buck. Big mule ears, white throat patch, antlers that branch in forks (each beam splits, then splits again).",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-md-buck-sage",
+  "species": "Mule deer",
+  "caption": "Mule deer buck in sagebrush, Craters of the Moon, Idaho. Note the white rump and the thin white tail with a black tip.",
+  "author": "NPS Photo",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:The_most_commonly_seen_large_mammal_at_Craters_of_the_Moon,_mule_deer_congregate_where_grasses_and_shrubs_dominate._(78fc15f6-e7ed-4ab1-9701-a68cd124c383).JPG"
+ },
+ {
+  "id": "g-md-doe-sage-snow",
+  "species": "Mule deer",
+  "caption": "Mule deer doe in snowy sagebrush, Wyoming. Grey winter coat, white rump, small tail held down.",
+  "author": "USFWS Mountain-Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_Deer_Doe_in_Southwest_Wyoming_(23267627529).jpg"
+ },
+ {
+  "id": "g-md-doe-front",
+  "species": "Mule deer",
+  "caption": "Mule deer doe, front view. No antlers, huge ears, pale face with a dark forehead.",
+  "author": "USFWS Mountain-Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_Deer_Doe_on_Seedskadee_National_Wildlife_Refuge_(22181735559).jpg"
+ },
+ {
+  "id": "g-md-radium",
+  "species": "Mule deer",
+  "caption": "Three mule deer near Radium, British Columbia. Open pine and grass, typical Kootenay winter range.",
+  "author": "Sir-Mister-Horse",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:RIMG0316.jpg"
+ },
+ {
+  "id": "g-wt-buck-flag",
+  "species": "White tailed deer",
+  "caption": "White tailed buck running in snow with the tail up. The tail is the flag: broad, flipped up, white underneath.",
+  "author": "ForestWander",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/us/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Whitetail-buck-running-snow_-_West_Virginia_-_ForestWander.jpg"
+ },
+ {
+  "id": "g-wt-doe-flag",
+  "species": "White tailed deer",
+  "caption": "White tailed doe trotting with the tail raised: the white flag of alarm.",
+  "author": "HARRY W. McCORMACK ( TEABERRYEAGLE )",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:EASTERN_WHITETAIL_DEER_-_A_DOE_WITH_TAIL_UP,_THE_WHITE_FLAG_OF_ALARM.jpg"
+ },
+ {
+  "id": "g-wt-doe",
+  "species": "White tailed deer",
+  "caption": "White tailed doe, side view, in snow. Brown back, long brown tail, smaller ears than a mule deer.",
+  "author": "U.S. Fish and Wildlife Service - Midwest Region",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:White-tailed_deer_(54365597311).jpg",
+  "card": true,
+  "cardBack": "White tailed doe. No antlers, smaller ears than a mule deer, long wide brown tail with white edges.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-md-buck-cover",
+  "species": "Mule deer",
+  "caption": "Mule deer buck in brush, Malheur refuge, Oregon. In cover, look for the ears and the antler tines first.",
+  "author": "U.S. Fish and Wildlife Service Headquarters",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_buck_at_Malheur_Refuge_(5448494556).jpg"
+ },
+ {
+  "id": "g-md-doe-fawns-rear",
+  "species": "Mule deer",
+  "caption": "Mule deer doe and two fawns from behind. Big white rump patches, thin rope tails with black tips.",
+  "author": "USFWS Mountain-Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_Deer_Doe_and_Fawns_SW_Wyoming_(23204526004).jpg"
+ },
+ {
+  "id": "g-md-doe-fawn-cover",
+  "species": "Mule deer",
+  "caption": "Mule deer doe and fawn half hidden in brush. In cover you often see only ears and a face.",
+  "author": "USFWS Mountain-Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_doe_and_fawns_on_Seedskadee_National_Wildlife_Refuge_01_(15334284900).jpg"
+ },
+ {
+  "id": "g-md-distance",
+  "species": "Mule deer",
+  "caption": "Mule deer at distance in sagebrush, eastern Oregon. Grey bodies, white rumps and big ears are what you pick out first.",
+  "author": "BLM Oregon & Washington",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_in_eastern_Oregon_(29844645086).jpg"
+ },
+ {
+  "id": "g-md-fawn-bedded",
+  "species": "Mule deer",
+  "caption": "Mule deer fawn bedded and hiding in grass. Its mother is close by. Leave it alone.",
+  "author": "USFWS Mountain Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_fawn_(50131622062).jpg"
+ },
+ {
+  "id": "g-md-fawn",
+  "species": "Mule deer",
+  "caption": "Mule deer fawn in summer, North Dakota. White spots on a red brown coat; the spots fade by fall.",
+  "author": "James St. John",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Odocoileus_hemionus_(mule_deer)_3_(8270240814).jpg"
+ },
+ {
+  "id": "g-wt-buck-side",
+  "species": "White tailed deer",
+  "caption": "White tailed deer buck, side view, New Jersey. Brown tail with white edges, antler tines rising from one main beam.",
+  "author": "Famartin",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:2025-11-09_07_48_17_White-tailed_Deer_buck_in_autumn_along_Aquetong_Lane_in_the_Mountainview_section_of_Ewing_Township,_Mercer_County,_New_Jersey.jpg",
+  "card": true,
+  "cardBack": "White tailed buck. Smaller ears, wide brown tail with white edges, tines that grow up off one main beam.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-wt-buck-front",
+  "species": "White tailed deer",
+  "caption": "White tailed deer buck, front view. White band across the nose, white throat patch, tines off a main beam that sweeps forward.",
+  "author": "Famartin",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:2024-11-08_10_54_30_White-tailed_Deer_buck_along_Montague_Avenue_in_the_Mountainview_section_of_Ewing_Township,_Mercer_County,_New_Jersey.jpg"
+ },
+ {
+  "id": "g-wt-run",
+  "species": "White tailed deer",
+  "caption": "White tailed deer bounding away on open prairie, Montana. Running long and low, tails up, not the stiff legged bounce of a mule deer.",
+  "author": "NPS",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:2_White-tailed_deer_run_past_the_Indian_Memorial._(74cf0194-1dd8-b71b-0b1f-3242b5474cf7).jpg"
+ },
+ {
+  "id": "g-moose-bull-side",
+  "species": "Moose",
+  "caption": "Bull moose, side view, in fall. Tall front shoulders, hump, long legs, broad flat antler palms.",
+  "author": "Jacob W. Frank",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Alces_alces_1.jpg",
+  "card": true,
+  "cardBack": "Bull moose. Black brown, horse sized, shoulder hump, long face, wide palmated (flat, hand shaped) antlers.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-moose-bull-front",
+  "species": "Moose",
+  "caption": "Bull moose, front view, Grand Teton. Antlers spread wide like two open hands; heavy bulbous nose.",
+  "author": "GrandTetonNPS",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Bull_Moose_Sticking_Tongue_Out_(28257188958).jpg"
+ },
+ {
+  "id": "g-moose-young-bull",
+  "species": "Moose",
+  "caption": "Young bull moose with small spike and fork antlers, Grand Teton. Measure carefully: young bulls are often not legal.",
+  "author": "GrandTetonNPS",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Bull_Moose_Portrait_(41410522174).jpg"
+ },
+ {
+  "id": "g-moose-cow",
+  "species": "Moose",
+  "caption": "Cow moose feeding in a lake, Glacier National Park. No antlers, long pale legs, brown body.",
+  "author": "naturenps",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Cow_moose_(33233257795).jpg",
+  "card": true,
+  "cardBack": "Cow moose. No antlers, long legs, big nose, often with a calf. Look for the pale patch under the tail.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-moose-cow-head",
+  "species": "Moose",
+  "caption": "Cow moose, head close up. Long drooping nose, big ears, a bell (flap of skin) under the throat.",
+  "author": "Veronika Ronkos",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Cow_moose_profile.jpg"
+ },
+ {
+  "id": "g-moose-cow-calf",
+  "species": "Moose",
+  "caption": "Shiras moose cow and calf, Wyoming. Never shoot a cow with a calf at side unless the rules say you may.",
+  "author": "USFWS Mountain-Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Shiras_Moose_Cow_and_Calf_Seedskadee_NWR_(15072335119).jpg"
+ },
+ {
+  "id": "g-moose-calf",
+  "species": "Moose",
+  "caption": "Moose calf in spring, Alaska, beside its mother. Red brown and gangly; it stays with the cow its first year.",
+  "author": "USFWSAlaska",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Moose_calf_(50007803527).jpg"
+ },
+ {
+  "id": "g-moose-calf-winter",
+  "species": "Moose",
+  "caption": "Moose calf in its first winter, Grand Teton. Smaller body, short face and no antlers: do not mistake it for a cow.",
+  "author": "GrandTetonNPS",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Moose_Calf_(48910979441).jpg"
+ },
+ {
+  "id": "g-elk-bull-side",
+  "species": "Elk",
+  "caption": "Bull elk near Maligne Canyon, Jasper, Alberta. Dark mane, pale body, long swept back antlers with many tines.",
+  "author": "Wilson Hui from Calgary, Canada",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bull_Elk_Stag_(32272946993).jpg",
+  "card": true,
+  "cardBack": "Bull elk. Tan body, dark brown neck and mane, straw coloured rump, long antlers swept back over the body.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-elk-bull-rear",
+  "species": "Elk",
+  "caption": "Bull elk looking back. Note the straw coloured rump patch and the dark neck.",
+  "author": "NPS Photo",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:A_bull_elk_checks_his_surroundings_for_danger._(c16b5aae-0192-4ceb-9ea1-66ec852197ba).JPG"
+ },
+ {
+  "id": "g-elk-bulls-distance",
+  "species": "Elk",
+  "caption": "Bull elk at distance in snow, National Elk Refuge, Wyoming. Pale bodies and dark necks stand out a long way off.",
+  "author": "USFWS Mountain Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Bull_Gathering_(13541386053).jpg"
+ },
+ {
+  "id": "g-elk-cow",
+  "species": "Elk",
+  "caption": "Cow elk, Glacier National Park. No antlers, long neck, darker head and neck than the body.",
+  "author": "GlacierNPS",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Cow_Elk_Glacier_National_Park.jpg",
+  "card": true,
+  "cardBack": "Cow elk. No antlers, tan body, dark head and neck, pale rump. Much bigger than a deer, smaller than a moose.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-elk-cow-rear",
+  "species": "Elk",
+  "caption": "Cow elk from behind, Firehole River, Yellowstone. The big pale rump patch is the elk signature.",
+  "author": "Yellowstone National Park",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Cow_elk,_Firehole_River_(32984223473).jpg"
+ },
+ {
+  "id": "g-elk-herd",
+  "species": "Elk",
+  "caption": "Cow elk herd in winter, Yellowstone. Elk live in herds; check every animal before you pick one.",
+  "author": "Yellowstone National Park from Yellowstone NP, USA",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Cow_elk_near_the_North_Entrance_(15905706616).jpg"
+ },
+ {
+  "id": "g-bb-side",
+  "species": "Black bear",
+  "caption": "Black bear male, side view, near Whistler, BC. Back line highest at the rump, no shoulder hump, tall pointed ears.",
+  "author": "Charles J. Sharp",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Olympic_black_bear_(Ursus_americanus_altifrontalis)_male_Whistler.jpg",
+  "card": true,
+  "cardBack": "Black bear. No shoulder hump, straight face profile, tall ears, short curved claws. Colour does NOT tell you the species.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-bb-face",
+  "species": "Black bear",
+  "caption": "Black bear face, Jasper. Straight profile from forehead to nose, tall ears, brown muzzle.",
+  "author": "Thomas Fuhrmann",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:American_black_bear_(Ursus_americanus)_-_Jasper_National_Park_01.jpg"
+ },
+ {
+  "id": "g-bb-tofino",
+  "species": "Black bear",
+  "caption": "Vancouver Island black bear on the shore at low tide, Tofino, BC. Coastal bears turn rocks for crabs.",
+  "author": "Charles J. Sharp",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Vancouver_Island_black_bear_(Ursus_americanus_vancouveri)_Tofino_4.jpg"
+ },
+ {
+  "id": "g-bb-brown",
+  "species": "Black bear",
+  "caption": "Brown phase black bear, Tatshenshini Alsek park, Yukon. Brown, but no hump and a straight face: still a black bear.",
+  "author": "Diego Delso",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Oso_negro_(Ursus_americanus),_Parque_natural_provincial_Tatshenshini-Alsek,_Yuk%C3%B3n,_Canad%C3%A1,_2017-08-25,_DD_84.jpg"
+ },
+ {
+  "id": "g-bb-cinnamon",
+  "species": "Black bear",
+  "caption": "Cinnamon phase black bear eating dandelions, Waterton Lakes, Alberta. Light brown coat, tall ears, no hump.",
+  "author": "Traveler100",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Blackbearwaterton.jpg"
+ },
+ {
+  "id": "g-bb-blonde",
+  "species": "Black bear",
+  "caption": "Pale brown black bear along the Dempster Highway, Yukon. Even this light coat sits on a black bear body shape.",
+  "author": "Naturedata",
+  "licence": "CC0",
+  "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_Bear_on_the_Dempster_Highway.jpg"
+ },
+ {
+  "id": "g-bb-sow-cubs",
+  "species": "Black bear",
+  "caption": "Black bear sow with two cubs, one black and one cinnamon, Yellowstone. Colour phases mix in one family. Cubs and sows with cubs are protected in BC (VERIFY page).",
+  "author": "Neal Herbert",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_bear_with_cubs_(772a9ae1-a841-4d01-910a-484d8842cda0).jpg"
+ },
+ {
+  "id": "g-griz-front",
+  "species": "Grizzly bear",
+  "caption": "Grizzly bear in sagebrush, Yellowstone. Big shoulder hump, dished face, short round ears.",
+  "author": "NPS/Jim Peaco",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:File-Grizzly_bear_on_Swan_Lake_Flats;-Jim_Peaco;-June_2005;-Catalog_18220d;-Original_IT8M3358_(f3aced99-1dd8-b71b-0bfc-4ad5c6105cb2).jpg",
+  "card": true,
+  "cardBack": "Grizzly bear. Shoulder hump, dished (concave) face, short round ears, long pale claws. Often silver tipped fur.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-griz-side",
+  "species": "Grizzly bear",
+  "caption": "Grizzly walking in snow, Yellowstone. The hump is the highest point of the back; the rump sits lower.",
+  "author": "NPS/Jim Peaco",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Grizzly_bear_walking_on_top_of_snow_near_Obsidian_Creek._(101778c8-84ea-4999-8bcc-798e123ce44f).jpg"
+ },
+ {
+  "id": "g-griz-profile",
+  "species": "Grizzly bear",
+  "caption": "Grizzly on a gravel bar, Noatak River, Alaska. From side on at distance, the hump shows clearly.",
+  "author": "NPS Photo",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Grizzly_on_the_Noatak_River_(3925fb42-1dd8-b71c-0799-6752404c98d4).jpg"
+ },
+ {
+  "id": "g-griz-face",
+  "species": "Grizzly bear",
+  "caption": "Grizzly face close up, Yellowstone. Dish between eyes and nose, small round ears, grizzled silver tips.",
+  "author": "Terry Tollefsbol, NATIONAL CONSERVATION TRAINING CENTER-PUBLICATIONS AND TRAINING MATERIALS",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Grizzly_Bear_Yellowstone.jpg"
+ },
+ {
+  "id": "g-griz-sow",
+  "species": "Grizzly bear",
+  "caption": "Grizzly sow with a yearling cub, Yellowstone. Never get between a sow and her cub.",
+  "author": "NPS/Jim Peaco",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Grizzly_sow_and_yearling_(f3cf0ba1-1dd8-b71b-0b5a-6f044194d3ea).jpg"
+ },
+ {
+  "id": "g-md-run-away",
+  "species": "Mule deer",
+  "caption": "Mule deer running away, California. From behind: white rump, thin tail with a black tip, held down even when running. Taken in California; the dark tail means it may be a black tailed deer or a cross.",
+  "author": "Wingchi Poon",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Deer_running_away.JPG"
+ },
+ {
+  "id": "g-bighorn-pair",
+  "species": "Bighorn sheep",
+  "caption": "Bighorn ram (left) and ewe, Wyoming. Ram: massive curled horns. Ewe: short, thin, slightly curved horns, like a goat's.",
+  "author": "Bureau of Land Management",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:My_Public_Lands_Roadtrip-_Wildlife_in_Wyoming_(19912484675).jpg"
+ },
+ {
+  "id": "g-md-buck-side",
+  "species": "Mule deer",
+  "caption": "Mule deer buck, side view, in snow, Siskiyou County, California. Grey coat, white rump, black tipped tail, forked antlers.",
+  "author": "Marshal Hedin from San Diego",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_buck_(Odocoileus_hemionus),_Little_Shasta,_Siskiyou_County_CA_(24178985295).jpg",
+  "card": true,
+  "cardBack": "Mule deer buck. Grey brown, white rump patch, thin white tail with a black tip, antlers that fork.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-md-buck-rear",
+  "species": "Mule deer",
+  "caption": "Mule deer buck from behind, Colorado. Big white rump patch and a thin rope tail with a black tip.",
+  "author": "USFWS Mountain-Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_Deer_Buck_(15382465555).jpg"
+ },
+ {
+  "id": "g-md-buck-4pt",
+  "species": "Mule deer",
+  "caption": "Mule deer buck in snow, Oregon. Practise counting the tips on each antler; forks on forks are the mule deer pattern.",
+  "author": "Oregon Department of Fish & Wildlife",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_buck_elk_creek_m_myatt_(5489214303).jpg"
+ },
+ {
+  "id": "g-md-buck-open",
+  "species": "Mule deer",
+  "caption": "Mule deer buck crossing open flats, Yellowstone. At 300 m you see a grey body, a white rump and antlers above the ears.",
+  "author": "Yellowstone National Park",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_buck_and_Roosevelt_Arch_(37686230234).jpg"
+ },
+ {
+  "id": "g-md-bound",
+  "species": "Mule deer",
+  "caption": "Mule deer doe bounding across a road, Utah. A spooked mule deer often stots: all four feet push off together in a stiff legged bounce.",
+  "author": "BLMUtah",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_crossing_the_road_(53658855485).jpg"
+ },
+ {
+  "id": "g-md-buck-small",
+  "species": "Mule deer",
+  "caption": "Young mule deer buck, Yellowstone. Count each antler: well under 4 tines a side. Not a 4 point buck.",
+  "author": "Yellowstone National Park from Yellowstone NP, USA",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_buck_(15877888045).jpg"
+ },
+ {
+  "id": "g-md-forkhorn",
+  "species": "Mule deer",
+  "caption": "Young mule deer buck in velvet, Yosemite. Each antler is a simple fork: 2 points a side.",
+  "author": "Guywelch2000",
+  "licence": "CC0",
+  "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_buck_in_velvet_Mariposa_Grove.jpg"
+ },
+ {
+  "id": "g-bt-buck-velvet",
+  "species": "Black tailed deer",
+  "caption": "Columbian black tailed deer buck in velvet, Mount Rainier, Washington. Smaller and darker than a mule deer; antlers still fork.",
+  "author": "Charles J. Sharp",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Columbian_black-tailed_deer_(Odocoileus_hemionus_columbianus)_male_Mt_Rainier.jpg"
+ },
+ {
+  "id": "g-bt-victoria",
+  "species": "Black tailed deer",
+  "caption": "Young black tailed buck, Victoria, BC. Note the wide tail, dark brown to black on top, held down.",
+  "author": "Gordon Leggett",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:2025-04-13_01_Black-tailed_deer_(Odocoileus_hemionus_columbianus)_%E2%80%93_Victoria_BC_Canada.jpg"
+ },
+ {
+  "id": "g-bt-doe",
+  "species": "Black tailed deer",
+  "caption": "Black tailed doe, Washington. The whole top of the tail is dark, not just the tip like a mule deer.",
+  "author": "Walter Siegmund (talk)",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Odocoileus_hemionus_5432.JPG",
+  "card": true,
+  "cardBack": "Black tailed deer. Coast deer. Tail wider than a mule deer's and dark or black all the way down the top.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-bt-bedded",
+  "species": "Black tailed deer",
+  "caption": "Young black tailed buck bedded by a highway, Ucluelet, Vancouver Island. Bedded deer show only head, ears and back.",
+  "author": "Buiobuione",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Black-tailed_deer_-_Odocoileus_hemionus_columbianus_-_05.jpg"
+ },
+ {
+  "id": "g-bt-buck",
+  "species": "Black tailed deer",
+  "caption": "Columbian black tailed buck in the Dungeness River, Washington, a doe at left. Red brown coat, dark tail, forked antlers like a mule deer.",
+  "author": "Philip Cohen",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Columbian_Black-tailed_Deer_buck.jpg",
+  "card": true,
+  "cardBack": "Black tailed buck. Forked antlers like a mule deer, but a smaller, darker deer with a wide tail dark all down the top.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-md-young-bucks",
+  "species": "Mule deer",
+  "caption": "Three young mule deer bucks with small antlers, Wind Cave, South Dakota. Young bucks travel together; count every one.",
+  "author": "NPS photo",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_are_commonly_seen_around_the_park,_especially_near_the_campground_and_visitor_center._Also_called_blacktail_deer,_they_(95abdd64-155d-4519-3ebc-81b1b3cab293).jpg"
+ },
+ {
+  "id": "g-wigeon-flight",
+  "species": "American wigeon",
+  "caption": "Wigeon drake dropping in, South Dakota. Big white shoulder patches on the front of each wing.",
+  "author": "USFWS Mountain Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:American_Wigeon_in_Flight_Huron_Wetland_Management_District_(53659241482).jpg"
+ },
+ {
+  "id": "g-gwt-flight",
+  "species": "Green winged teal",
+  "caption": "Green winged teal in flight, Wyoming. Small, fast, tight flocks; green speculum on the back of the wing.",
+  "author": "U.S. Fish and Wildlife Service Headquarters",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Seedskadee_National_Wildlife_Refuge_(53485904507).jpg"
+ },
+ {
+  "id": "g-shoveler-flight",
+  "species": "Northern shoveler",
+  "caption": "Shoveler drake in flight (photo from Algeria; the same species winters there). Spoon bill, pale blue forewing, rusty belly.",
+  "author": "mourad-harzallah",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Male_Northern_shoveler_(Spatula_clypeata)_flying.jpg"
+ },
+ {
+  "id": "g-shoveler-flock",
+  "species": "Northern shoveler",
+  "caption": "Shovelers taking flight, Texas. Drakes show green heads, white chests and chestnut sides.",
+  "author": "Steve Hillebrand, U.S. Fish and Wildlife Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Anas_clypeata_flying_(cropped).jpeg"
+ },
+ {
+  "id": "g-wood-duck-flight",
+  "species": "Wood duck",
+  "caption": "Wood duck drake in flight, Texas. Long square tail, head held high, white belly, dark back.",
+  "author": "Manjith Kainickara from Dallas, Texas, USA",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Aix_sponsa_-Texas,_USA_-flying-8.jpg"
+ },
+ {
+  "id": "g-scaup-flight",
+  "species": "Lesser scaup",
+  "caption": "Lesser scaup in flight, South Dakota. Dark heads and chests, pale bellies and backs, fast wingbeats low over big water.",
+  "author": "USFWS Mountain Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Lesser_Scaup_Flying_Lake_Andes_National_Wildlife_Refuge_South_Dakota_(52780921182).jpg"
+ },
+ {
+  "id": "g-bufflehead-flight",
+  "species": "Bufflehead",
+  "caption": "Bufflehead drake in flight, California. Small, fast, big white wing patches and white head wedge.",
+  "author": "Bill Bouton from San Luis Obispo, CA, USA",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bucephala_albeola_-San_Luis_Obispo,_California,_USA_-flying-8.jpg"
+ },
+ {
+  "id": "g-goldeneye-flight",
+  "species": "Common goldeneye",
+  "caption": "Common goldeneye hen in flight. Brown head, white wing patches; goldeneye wings whistle.",
+  "author": "Casey Helton",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_Goldeneye_flying_(54278907808).jpg"
+ },
+ {
+  "id": "g-canada-goose-flight",
+  "species": "Canada goose",
+  "caption": "Canada goose in flight, Burnaby Lake, BC. Long black neck, white chin strap, brown back.",
+  "author": "Image taken by Alan D. Wilson, and modified by Diliff (cropped and noise reduction applied).",
+  "licence": "CC BY-SA 2.5",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+  "source": "https://commons.wikimedia.org/wiki/File:Canada_goose_flight_cropped_and_NR.jpg"
+ },
+ {
+  "id": "g-snow-geese-skagit",
+  "species": "Snow goose",
+  "caption": "Snow geese over the Skagit Valley, Washington, just south of the BC border. White bodies, black wing tips.",
+  "author": "Eric Frommer",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Skagit_Valley_Snow_Geese.jpg"
+ },
+ {
+  "id": "g-snow-geese-flock",
+  "species": "Snow goose",
+  "caption": "Snow geese lifting off, Sacramento refuge, California. The dark birds are the blue form of the same species.",
+  "author": "Frank Schulenburg",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Snow_geese_flying_up_at_Sacramento_National_Wildlife_Refuge.jpg"
+ },
+ {
+  "id": "g-loon",
+  "species": "Common loon",
+  "caption": "Common loon, Wisconsin. Dagger bill, black head, checkered back. Protected: never shoot.",
+  "author": "John Picken from Chicago, USA",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Gavia_immer_-Minocqua,_Wisconsin,_USA_-swimming-8.jpg"
+ },
+ {
+  "id": "g-western-grebe",
+  "species": "Western grebe",
+  "caption": "Western grebes, Colorado. Long white neck, thin yellow bill, black cap. Protected: never shoot.",
+  "author": "Ron Knight from Seaford, East Sussex, United Kingdom",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Western_Grebe_(Aechmophorus_occidentalis)_(20357238151).jpg"
+ },
+ {
+  "id": "g-redhead-flight",
+  "species": "Redhead",
+  "caption": "Redheads in flight, South Dakota. Round red heads, black chests, grey backs; the bird at right is a hen.",
+  "author": "USFWS Mountain Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Redheads_Lake_Andes_National_Wildlife_Refuge_South_Dakota_(53921083806).jpg"
+ },
+ {
+  "id": "g-trumpeter-swan",
+  "species": "Trumpeter swan",
+  "caption": "Trumpeter swan, Anchorage, Alaska. All white, huge, long neck, all black bill. Never shoot a swan.",
+  "author": "TRinaud",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Trumpeter_swan_(Cygnus_buccinator)_2023_2.jpg"
+ },
+ {
+  "id": "g-tundra-swans-flight",
+  "species": "Tundra swan",
+  "caption": "Tundra swans in flight. All white wings with no black tips, long straight necks. A snow goose has black wing tips.",
+  "author": "U.S. Fish and Wildlife Service - Midwest Region",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Tundra_Swan_(26260317135).jpg"
+ },
+ {
+  "id": "g-horned-grebe",
+  "species": "Horned grebe",
+  "caption": "Horned grebe in winter, Maine. Small, black cap, white cheeks, thin pointed bill, red eye. Protected.",
+  "author": "Chuck Homler, Focus On Wildlife",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Horned_Grebe_(Podiceps_auritus)_in_winter_plumage,_Scarborough_Marsh,_Maine,_USA.png"
+ },
+ {
+  "id": "g-quail-male-vernon",
+  "species": "California quail",
+  "caption": "California quail male, Vernon, BC. Black face edged in white, forward curling black plume, scaled belly.",
+  "author": "Alan D. Wilson",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:California_Quail_(Male).jpg",
+  "card": true,
+  "cardBack": "California quail male. Black teardrop plume, black face with a white border, grey chest, scaly belly.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-quail-pair",
+  "species": "California quail",
+  "caption": "California quail male (right) and female, Nevada. The female is plain brown grey with a smaller plume.",
+  "author": "BLM Nevada",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:California_Quail_Fallon_NV_(19978763835).jpg"
+ },
+ {
+  "id": "g-quail-female",
+  "species": "California quail",
+  "caption": "California quail female with a chick. Grey brown face, small plume, scaled belly like the male.",
+  "author": "Alan Vernon",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Callipepla_californica_-California,_USA_-female_and_chick-_8.jpg",
+  "card": true,
+  "cardBack": "California quail female. Plain grey brown face, short plume, scaly belly. Often with a covey of young.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-chukar",
+  "species": "Chukar",
+  "caption": "Chukar. Red bill and legs, black necklace around a cream throat, bold black bars on the flanks.",
+  "author": "Artemy Voikhansky",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Chukar_partridge.jpg",
+  "card": true,
+  "cardBack": "Chukar. Grey partridge sized bird with red legs and bill, black eye stripe and necklace, barred sides. Lives on steep rocky slopes.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-ruffed-snow",
+  "species": "Ruffed grouse",
+  "caption": "Ruffed grouse in snow, Oregon. Small crest, barred body, long fan tail with a dark band near the tip.",
+  "author": "Oregon Department of Fish & Wildlife",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:1553_ruffed_grouse_matthews_odfw_(4423732628).jpg"
+ },
+ {
+  "id": "g-spruce-male",
+  "species": "Spruce grouse",
+  "caption": "Spruce grouse male displaying, Algonquin park, Ontario. Black throat and breast, red comb over the eye.",
+  "author": "Mdf",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Falcipennis-canadensis-002.jpg",
+  "card": true,
+  "cardBack": "Spruce grouse male. Dark grey and black, black throat edged in white, red comb. Very tame. Conifer forest.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-sooty-male",
+  "species": "Sooty grouse",
+  "caption": "Sooty grouse male displaying, Washington. The coast form of the old blue grouse: slate grey, dark tail, white neck feathers.",
+  "author": "Walter Siegmund (talk)",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Dendragapus_fuliginosus_5058.JPG"
+ },
+ {
+  "id": "g-sooty-hen",
+  "species": "Sooty grouse",
+  "caption": "Sooty grouse hen, Lassen park, California. Mottled brown and grey, longer tail than a spruce grouse.",
+  "author": "LassenNPS",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Sooty_Grouse-_Dendragapus_fuliginosus_(9403816948).jpg"
+ },
+ {
+  "id": "g-ptarmigan-summer",
+  "species": "White tailed ptarmigan",
+  "caption": "White tailed ptarmigan in summer, Mount Rainier. Mottled brown and black on rock above treeline.",
+  "author": "USFWS - Pacific Region",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mount_Rainier_White-Tailed_Ptarmigan_(53058740798).jpg",
+  "card": true,
+  "cardBack": "White tailed ptarmigan. Small alpine grouse. Mottled brown in summer, all white in winter, white tail all year.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-ptarmigan-winter",
+  "species": "Willow ptarmigan",
+  "caption": "Willow ptarmigan in winter, Alaska. All white except black tail feathers; a white tailed ptarmigan has a white tail.",
+  "author": "Colin Canterbury/USFWS",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Willow_ptarmigan_winter_plumage.png"
+ },
+ {
+  "id": "g-pheasant-rooster",
+  "species": "Ring necked pheasant",
+  "caption": "Ring necked pheasant rooster, South Dakota. Green head, red face wattle, white neck ring, long pointed tail.",
+  "author": "USFWS Mountain Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Ring-necked_pheasant_at_LaCreek_National_Wildlife_Refuge_(51154749494).jpg",
+  "card": true,
+  "cardBack": "Pheasant rooster. Green head, red face, white neck ring, copper body, very long pointed tail.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-pheasant-hen",
+  "species": "Ring necked pheasant",
+  "caption": "Pheasant hen, Oxfordshire, England (same species as ours). Buff brown with dark spots, long pointed tail.",
+  "author": "Charles J. Sharp",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_pheasant_(Phasianus_colchicus)_hen.jpg",
+  "card": true,
+  "cardBack": "Pheasant hen. Mottled buff brown, long pointed tail, no colour on the head.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-turkey-tom",
+  "species": "Wild turkey",
+  "caption": "Wild turkey tom strutting, Zion National Park, Utah. Fanned tail, bare red and blue head, beard on the chest.",
+  "author": "Zion National Park",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Wild_Turkey_(6384983627).jpg",
+  "card": true,
+  "cardBack": "Wild turkey tom. Huge dark bird, bare red and blue head, beard hanging from the chest, fans its tail.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-turkey-hen",
+  "species": "Wild turkey",
+  "caption": "Wild turkey hen, Virginia. Smaller, browner, with a feathered grey blue head. Most hens have no beard.",
+  "author": "Judy Gallagher",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Wild_Turkey_(female)_-_Meleagris_gallopavo,_Occoquan_Bay_National_Wildlife_Refuge,_Woodbridge,_Virginia.jpg"
+ },
+ {
+  "id": "g-turkey-flock",
+  "species": "Wild turkey",
+  "caption": "Wild turkey flock, Petaluma, California. Turkeys travel in groups; check each bird for a beard in spring.",
+  "author": "Missvain",
+  "licence": "CC0",
+  "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Meleagris_gallopavo_-_November_2024_-_Sarah_Stierch_02.jpg"
+ },
+ {
+  "id": "g-sage-grouse",
+  "species": "Greater sage grouse",
+  "caption": "Greater sage grouse male displaying. Spiky fanned tail, white chest with yellow air sacs. No season in BC: never shoot.",
+  "author": "Bureau of Land Management",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Greater_sage-grouse_(Centrocercus_urophasianus).jpg"
+ },
+ {
+  "id": "g-ruffed-grey",
+  "species": "Ruffed grouse",
+  "caption": "Grey phase ruffed grouse displaying, Cecil Lake, Peace River country, BC. Grey tail with a black band, crest raised.",
+  "author": "72426950scott",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Ruffed_Grouse_(1).jpg",
+  "card": true,
+  "cardBack": "Ruffed grouse. Small crest, barred brown or grey body, fan tail with one wide dark band near the tip.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-ruffed-tree",
+  "species": "Ruffed grouse",
+  "caption": "Ruffed grouse in a tree, Glacier National Park. Grouse often sit in aspen and birch to eat buds.",
+  "author": "GlacierNPS",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Ruffed_Grouse_-_Bonasa_umbellus_(23883619240).jpg"
+ },
+ {
+  "id": "g-md-does-bedded",
+  "species": "Mule deer",
+  "caption": "Two mule deer bedded in snowy sagebrush, Wyoming. Bedded deer show just heads and ears above the brush.",
+  "author": "USFWS Mountain-Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_Deer_Bedded_Down_in_Sagebrush_and_Snow_(15523121163).jpg"
+ },
+ {
+  "id": "g-md-buck-bedded",
+  "species": "Mule deer",
+  "caption": "Mule deer buck bedded in sagebrush, Wyoming. Big forked rack, but the body is almost hidden.",
+  "author": "USFWS Mountain-Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_Deer_Buck_in_Southwest_Wyoming_(23007137314).jpg"
+ },
+ {
+  "id": "g-goat-radium",
+  "species": "Mountain goat",
+  "caption": "Mountain goat shedding its winter coat, near Radium, BC. Black horns, black hooves, beard, ragged summer moult.",
+  "author": "Charles J. Sharp",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mountain_goat_(Oreamnos_americanus)_Radium.jpg"
+ },
+ {
+  "id": "g-goat-face",
+  "species": "Mountain goat",
+  "caption": "Mountain goat, Glacier National Park. Short black dagger horns, long white face, beard.",
+  "author": "GlacierNPS",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mountain_Goat_-_Oreamnos_americanus_(51361810348).jpg"
+ },
+ {
+  "id": "g-wolf-grey",
+  "species": "Grey wolf",
+  "caption": "Grey wolf in snow, Yellowstone. Long legs, big feet, broad head; tail carried straight.",
+  "author": "Yellowstone National Park from Yellowstone NP, USA",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_and_grey_wolf_(female_from_Druid_pack,-Half_Black-)_walking_in_road_near_Lamar_River_bridge_(cropped).jpg"
+ },
+ {
+  "id": "g-wolf-black",
+  "species": "Grey wolf",
+  "caption": "Dark grey wolf, Yellowstone. Grey wolves come in black, grey and white; size and build, not colour, say wolf.",
+  "author": "Yellowstone National Park",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Wolf_at_Biscuit_Basin_(50087877481).jpg",
+  "card": true,
+  "cardBack": "Grey wolf. 30 to 50 kg in BC, long legs, broad blocky muzzle, short rounded ears. Black, grey or white.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-coyote-snow",
+  "species": "Coyote",
+  "caption": "Coyote walking in snow, Yosemite. Slim legs, narrow pointed muzzle, tall pointed ears.",
+  "author": "Yathin S Krishnappa",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Canis_latrans_(Yosemite,_2009).jpg",
+  "card": true,
+  "cardBack": "Coyote. 9 to 23 kg, slim, narrow pointed muzzle, tall ears, bushy tail held low.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "g-coyote-howl",
+  "species": "Coyote",
+  "caption": "Coyote howling, Colorado. Tan grey coat, rusty legs and ears, bushy tail with a black tip.",
+  "author": "USFWS Mountain-Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Howl_(cropped).jpg"
+ },
+ {
+  "id": "g-lynx",
+  "species": "Canada lynx",
+  "caption": "Canada lynx in summer, Canada. Long black ear tufts, long legs, big paws, grey coat.",
+  "author": "timboucher",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Lynx_canadensis_390072761.jpg"
+ },
+ {
+  "id": "g-cougar-glacier",
+  "species": "Cougar",
+  "caption": "Cougar, Glacier National Park, Montana. Plain tawny coat, small round head, heavy legs and big paws.",
+  "author": "National Park Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mountain_Lion_in_Glacier_National_Park.jpg"
+ },
+ {
+  "id": "g-bighorn-ram",
+  "species": "Bighorn sheep",
+  "caption": "Bighorn ram, Grand Teton. Massive brown horns curling back, down and forward; white muzzle and rump.",
+  "author": "GrandTetonNPS",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Bighorn_Ram_(28284978928).jpg"
+ },
+ {
+  "id": "wigeon-drake",
+  "species": "American wigeon",
+  "caption": "American wigeon drake, Reifel sanctuary, Ladner, BC. White crown stripe, green swoosh behind the eye, pinkish brown sides.",
+  "author": "Judy Gallagher",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:American_Wigeon_(male)_-_Anas_americana,_Reifel_Sanctuary,_Ladner,_British_Columbia.jpg",
+  "card": true,
+  "cardBack": "American wigeon drake. White forehead and crown (the baldpate), green band behind the eye, pink brown sides, small blue grey bill.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "wigeon-hen",
+  "species": "American wigeon",
+  "caption": "American wigeon hen. Grey speckled head, warm orange brown sides, small blue grey bill with a black tip.",
+  "author": "Mdf",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Anas-americana-004.jpg",
+  "card": true,
+  "cardBack": "American wigeon hen. Plain grey head, rusty orange sides, short blue grey bill with a black tip.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "green-winged-teal-drake",
+  "species": "Green winged teal",
+  "caption": "Green winged teal drake. Chestnut head with a green eye patch, a white bar down the side of the chest, cream patch under the tail.",
+  "author": "Rhododendrites",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Green-winged_teal_drake_(83852).jpg",
+  "card": true,
+  "cardBack": "Green winged teal drake. Tiny duck, chestnut head with a green swoosh, white vertical bar in front of the wing.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "green-winged-teal-hen",
+  "species": "Green winged teal",
+  "caption": "Green winged teal hen, California. Small brown duck, small dark bill, a flash of green in the wing.",
+  "author": "Mike's Birds from Riverside, CA, US",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Female_Green-winged_Teal-_Bolsa_Chica_Wetlands_(4412427221).jpg",
+  "card": true,
+  "cardBack": "Green winged teal hen. Very small brown duck, small dark bill, green wing patch.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "blue-winged-teal-drake",
+  "species": "Blue winged teal",
+  "caption": "Blue winged teal drake in flight, California. White crescent on the face, big pale blue patch on the front of the wing.",
+  "author": "Frank Schulenburg",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Blue-winged_teal_at_Sacramento_National_Wildlife_Refuge-5326.jpg"
+ },
+ {
+  "id": "blue-winged-teal-hen",
+  "species": "Blue winged teal",
+  "caption": "Blue winged teal hen. Small brown duck with a dark eye line and a pale spot at the base of the bill.",
+  "author": "U.S. Fish and Wildlife Service - Midwest Region",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Blue-winged_Teal_Hen_(26234389506).jpg"
+ },
+ {
+  "id": "gadwall-drake",
+  "species": "Gadwall",
+  "caption": "Gadwall drake. Plain grey body, black rear end, dark bill. The quiet grey duck.",
+  "author": "Department of the Interior. U.S. Fish and Wildlife Service. National Conservation Training Center. 10/1997-8888",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Gadwall_Drake_-_DPLA_-_3a0518ab1519a6044a5182c72add2cba.jpg",
+  "card": true,
+  "cardBack": "Gadwall drake. Grey all over, black stern (rear end), dark bill, white patch in the wing.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "gadwall-drake-flight",
+  "species": "Gadwall",
+  "caption": "Gadwall drake in flight, Oregon. Look for the small square white patch on the back edge of the wing.",
+  "author": "Oregon Department of Fish & Wildlife",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Gadwall_male_myatt_odfw_(7591220124).jpg"
+ },
+ {
+  "id": "gadwall-hen",
+  "species": "Gadwall",
+  "caption": "Gadwall hen, North Dakota. Like a mallard hen but slimmer, with an orange bill edged in dark and a white wing patch.",
+  "author": "USFWS Mountain Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Hen_Gadwall_at_J_Clark_Salyer_NWR_(29622615338).jpg",
+  "card": true,
+  "cardBack": "Gadwall hen. Mottled brown, orange sided bill with a dark top, white square in the wing (a mallard hen shows blue).",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "shoveler-drake",
+  "species": "Northern shoveler",
+  "caption": "Northern shoveler drake, North Dakota. Huge spoon bill, green head, white chest, chestnut sides.",
+  "author": "USFWS Mountain Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Drake_Northern_Shoveler_at_J_Clark_Salyer_NWR_(42589430525).jpg",
+  "card": true,
+  "cardBack": "Northern shoveler drake. Big spoon shaped bill, green head, white chest, rusty sides.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "shoveler-hen",
+  "species": "Northern shoveler",
+  "caption": "Northern shoveler hen. Mottled brown, but the long spoon bill gives her away.",
+  "author": "Charles J. Sharp",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Northern_shoveler_(Spatula_clypeata)_female_Marken.jpg",
+  "card": true,
+  "cardBack": "Northern shoveler hen. Brown like a mallard hen, but with a long, wide spoon bill.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "wood-duck-drake",
+  "species": "Wood duck",
+  "caption": "Wood duck drake. Green crested head with white stripes, red eye, chestnut chest.",
+  "author": "Rhododendrites",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Wood_duck_drake_vocalizing_in_Central_Park_(86815).jpg",
+  "card": true,
+  "cardBack": "Wood duck drake. Swept back green crest, white chin straps, red eye and bill base.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "wood-duck-hen",
+  "species": "Wood duck",
+  "caption": "Wood duck hen. Grey brown with a white teardrop around the eye and a small crest.",
+  "author": "Russ",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Wood_duck_hen,_mill_pond_(35953689361).jpg",
+  "card": true,
+  "cardBack": "Wood duck hen. Grey brown, white teardrop eye ring, small crest.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "common-goldeneye-drake",
+  "species": "Common goldeneye",
+  "caption": "Common goldeneye drake. Round white spot in front of the yellow eye, mostly white sides.",
+  "author": "CheepShot",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Winthrop_Harbor_(13334802213).jpg",
+  "card": true,
+  "cardBack": "Common goldeneye drake. Green black head, round white cheek spot, yellow eye, white sides.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "common-goldeneye-hen",
+  "species": "Common goldeneye",
+  "caption": "Common goldeneye hen. Chocolate brown head, yellow eye, grey body, dark bill with a yellow tip.",
+  "author": "Charles J. Sharp",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_goldeneye_(Bucephala_clangula_americana)_female_Prince%27s_Island.jpg"
+ },
+ {
+  "id": "barrows-goldeneye-drake",
+  "species": "Barrow's goldeneye",
+  "caption": "Barrow's goldeneye drake, Wyoming. Crescent shaped white face patch, purple sheen on the head, a row of white spots on black sides.",
+  "author": "USFWS Mountain-Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Barrow%27s_Goldeneye_Drake_Seedskadee_NWR_(16656643482).jpg",
+  "card": true,
+  "cardBack": "Barrow's goldeneye drake. White crescent (not a round spot) in front of the eye, more black on the back and sides.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "barrows-goldeneye-hen",
+  "species": "Barrow's goldeneye",
+  "caption": "Barrow's goldeneye hen. Brown head, yellow eye, mostly yellow orange bill.",
+  "author": "Pacific Southwest Region USFWS from Sacramento, US",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Barrow%27s_Goldeneye_(female)_(6881754634).jpg"
+ },
+ {
+  "id": "bufflehead-drake",
+  "species": "Bufflehead",
+  "caption": "Bufflehead drake, California. Small black and white duck with a big white patch on the back of the head.",
+  "author": "Mike's Birds from Riverside, CA, US",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Male_Bufflehead_(4239833567).jpg",
+  "card": true,
+  "cardBack": "Bufflehead drake. Tiny, mostly white, with a large white wedge on the back of a dark head.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "bufflehead-hen",
+  "species": "Bufflehead",
+  "caption": "Bufflehead hen. Small grey brown duck with an oval white cheek patch.",
+  "author": "Mdf",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Bucephala-albeola-010.jpg",
+  "card": true,
+  "cardBack": "Bufflehead hen. Very small, dark head, one white oval patch on the cheek.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "ring-necked-duck-drake",
+  "species": "Ring necked duck",
+  "caption": "Ring necked duck drake, New Mexico. Peaked black head, white ring near the bill tip, white spur in front of the wing.",
+  "author": "Chuck Homler d/b/a Focus On Wildlife",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Ring-necked_duck_(Aythya_collaris)_-_Las_Cruces_-_New_Mexico_-_USA_(cropped).jpg",
+  "card": true,
+  "cardBack": "Ring necked duck drake. Black back, grey sides with a white spur at the front, white ring around the bill.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "ring-necked-duck-hen",
+  "species": "Ring necked duck",
+  "caption": "Ring necked duck hen. Brown, peaked head, white eye ring and a pale band on the bill.",
+  "author": "Polinova",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Ring-necked_Duck_Female.jpg"
+ },
+ {
+  "id": "lesser-scaup-drake",
+  "species": "Lesser scaup",
+  "caption": "Lesser scaup drake. Dark head, yellow eye, grey back, black chest and tail, white sides.",
+  "author": "Chuck Homler d/b/a Focus On Wildlife",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Drake_Lesser_Scaup_(Aythya_affinis)_Barengat_Inlet,_New_Jersey,_USA.jpg",
+  "card": true,
+  "cardBack": "Scaup drake. Black at both ends, white sides, grey back, yellow eye, blue bill.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "lesser-scaup-hen",
+  "species": "Lesser scaup",
+  "caption": "Lesser scaup hen. Brown with a white patch at the base of the bill.",
+  "author": "Chuck Homler d/b/a Focus On Wildlife",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Hen_Lesser_Scaup_(Aythya_affinis),_Barnegat_Inlet,_New_Jersey,_USA.jpg",
+  "card": true,
+  "cardBack": "Scaup hen. Brown diving duck with a bold white patch around the bill base.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "canvasback-drake",
+  "species": "Canvasback",
+  "caption": "Canvasback drake, Maryland. Long sloping forehead into a black bill, rusty head, white body.",
+  "author": "Judy Gallagher",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Canvasback_(male)_-_Aythya_valisineria,_Cambridge,_Maryland.jpg",
+  "card": true,
+  "cardBack": "Canvasback drake. Red brown head, long sloping black bill and forehead, bright white back.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "canvasback-hen",
+  "species": "Canvasback",
+  "caption": "Canvasback hen. Pale brown head and grey body, same long sloping profile as the drake.",
+  "author": "Judy Gallagher",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Canvasback_(female)_-_Aythya_valisineria,_Oakley_Street,_Cambridge,_Maryland.jpg"
+ },
+ {
+  "id": "redhead-drake",
+  "species": "Redhead",
+  "caption": "Redhead drake. Round red head, grey body, blue grey bill with a black tip.",
+  "author": "Rhododendrites",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Redhead_in_Central_Park_(15503).jpg",
+  "card": true,
+  "cardBack": "Redhead drake. Round red head, grey back, blue bill with a white ring and black tip.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "redhead-hen",
+  "species": "Redhead",
+  "caption": "Redhead hen, Ontario. Plain brown with a rounded head and a blue grey bill.",
+  "author": "Mykola Swarnyk",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Aythya_americana_f_Ontario.jpg"
+ },
+ {
+  "id": "common-merganser-drake",
+  "species": "Common merganser",
+  "caption": "Common merganser drake, Toronto. Long thin red bill, dark green head, white body. A fish eating duck.",
+  "author": "Mykola Swarnyk",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mergus_merganser_m_Humber_Bay_West_Toronto.jpg"
+ },
+ {
+  "id": "common-merganser-hen",
+  "species": "Common merganser",
+  "caption": "Common merganser hen. Shaggy rusty head, thin red bill, clean white chin.",
+  "author": "USFWSmidwest",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_Merganser_Hen_(12973022533).jpg"
+ },
+ {
+  "id": "hooded-merganser-drake",
+  "species": "Hooded merganser",
+  "caption": "Hooded merganser drake. White fan shaped crest edged in black, thin dark bill.",
+  "author": "Peterwchen",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Lophodytes_cucullatus-male.jpg"
+ },
+ {
+  "id": "hooded-merganser-hen",
+  "species": "Hooded merganser",
+  "caption": "Hooded merganser hen. Cinnamon bushy crest, thin bill.",
+  "author": "Peterwchen",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Lophodytes_cucullatus-female.jpg"
+ },
+ {
+  "id": "divers-taking-off",
+  "species": "Diving ducks",
+  "caption": "Diving ducks running across the water to take off, South Dakota. Divers patter along the surface; puddle ducks jump straight up.",
+  "author": "USFWS Mountain Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Waterfowl_Lake_Andes_National_Wildlife_Refuge_South_Dakota_(52781566934).jpg"
+ },
+ {
+  "id": "mallards-flushing",
+  "species": "Mallard",
+  "caption": "Ducks flushing off a wetland, Nebraska. Pick one bird before you shoot, and know what it is.",
+  "author": "USFWS Mountain Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Rainwater_Basin_Wetland_Management_District_(32227957367).jpg"
+ },
+ {
+  "id": "mallards-flying",
+  "species": "Mallard",
+  "caption": "Mallards taking off over a lake. Drakes show green heads; every bird shows the blue wing patch.",
+  "author": "Jocelyn Anderson",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mallard_Ducks_Taking_Off_Over_A_Lake_(185682473).jpeg"
+ },
+ {
+  "id": "pintail-hen",
+  "species": "Northern pintail",
+  "caption": "Northern pintail hen in flight. Long neck, slim body, pointed tail, plain brown head.",
+  "author": "Frank Schulenburg",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Female_northern_pintail_in_flight-1827.jpg"
+ },
+ {
+  "id": "canada-goose",
+  "species": "Canada goose",
+  "caption": "Canada goose. Black neck and head, white chin strap, brown body. Large, with a long neck.",
+  "author": "Joe Ravi",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Canada_Goose_(Branta_Canadensis).jpg",
+  "card": true,
+  "cardBack": "Canada goose. Black head and neck, white chin strap, brown grey body, long neck.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "cackling-goose",
+  "species": "Cackling goose",
+  "caption": "Cackling goose. Same pattern as a Canada goose but mallard sized, with a short neck and a stubby bill.",
+  "author": "VJAnderson",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Cackling_Goose_02.jpg",
+  "card": true,
+  "cardBack": "Cackling goose. Looks like a small Canada goose: short neck, tiny stubby bill, square head.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "cackling-and-canada-geese",
+  "species": "Cackling goose",
+  "caption": "Cackling geese with a Canada goose (right). Compare size, neck length and bill length.",
+  "author": "Andy Reago & Chrissy McClarren",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Cackling_Goose_(31714908975).jpg"
+ },
+ {
+  "id": "snow-goose",
+  "species": "Snow goose",
+  "caption": "Snow goose. White body, black wing tips, pink bill with a black grin patch.",
+  "author": "Paul Danese",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:20250118_snow_goose_barnes_boat_launch_PD000302.jpg",
+  "card": true,
+  "cardBack": "Snow goose. White with black wing tips; pink bill with a dark grin patch.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "ross-goose",
+  "species": "Ross's goose",
+  "caption": "Ross's goose. A small white goose with a stubby bill and no black grin patch.",
+  "author": "Andrew C",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Ross%27s_Goose_(Chen_rossii)_(23108182770).jpg"
+ },
+ {
+  "id": "snow-and-ross-geese",
+  "species": "Snow goose",
+  "caption": "Snow goose (left) and Ross's goose (right). The Ross's is smaller, with a short bill and a round head.",
+  "author": "Nomdeploom",
+  "licence": "CC0",
+  "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Snow_Goose_Ross_Goose_comparison.jpg"
+ },
+ {
+  "id": "white-fronted-goose",
+  "species": "Greater white fronted goose",
+  "caption": "Greater white fronted goose in flight. Grey brown, white band at the bill base, black bars on the belly.",
+  "author": "Frank Schulenburg",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Greater_white-fronted_goose_in_flight-1413.jpg"
+ },
+ {
+  "id": "brant",
+  "species": "Brant",
+  "caption": "Black brant, San Diego. Small dark goose, black neck with a white necklace. A coastal goose.",
+  "author": "Lucwrte",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_Brant_at_Vacation_Isle,_San_Diego.jpg"
+ }
 ]

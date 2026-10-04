@@ -99,6 +99,10 @@
     "habitat-upland",
     "habitat-big-game",
     "rb-migratory-birds",
-    "rb-region-2"
+    "rb-region-2",
+    "gallery-deer",
+    "gallery-waterfowl",
+    "gallery-upland",
+    "gallery-big-game"
   ]
 }
