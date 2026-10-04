@@ -62,7 +62,7 @@
  "routes": 1869,
  "camps": 220,
  "bytes": {
-  "spots.geojson": 4554411,
+  "spots.geojson": 5704365,
   "routes.geojson": 3387993,
   "camps.geojson": 94108
  },
@@ -302,60 +302,6 @@
    "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",
    "page": null,
    "checked": "2026-10-02"
-  },
-  "r3bag": {
-   "label": "Region 3 deer bag limit",
-   "value": "Deer: 3 total. Mule deer 1. White tailed deer 2, either sex. Antlerless mule deer: LEH only. Your 1 mule deer buck counts across Regions 3 to 8 combined.",
-   "certainty": 99,
-   "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
-   "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
-   "page": "pages 14 and 33",
-   "checked": "2026-10-02"
-  },
-  "r3bear": {
-   "label": "Region 3 black bear",
-   "value": "1 Sept to 30 Nov and 1 Apr to 30 June. Bag 2. Never a bear under 2 years or any bear with it.",
-   "certainty": 99,
-   "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
-   "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
-   "page": "page 34",
-   "checked": "2026-10-02"
-  },
-  "r3grouse": {
-   "label": "Region 3 grouse (dusky, ruffed, spruce)",
-   "value": "10 Sept to 30 Nov. 5 of each a day, 10 total (possession 3 times). .22 rimfire is legal for grouse.",
-   "certainty": 99,
-   "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
-   "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
-   "page": "page 34 and page 13",
-   "checked": "2026-10-02"
-  },
-  "r3moose": {
-   "label": "Moose near Heffley Creek (MU 3-27, 3-28)",
-   "value": "Spike fork bulls only, 1 to 15 Nov. Bag 1. Mandatory Hunter Report by 31 March.",
-   "certainty": 99,
-   "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
-   "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
-   "page": "page 34",
-   "checked": "2026-10-02"
-  },
-  "r3mule": {
-   "label": "Region 3 mule deer season (your MU)",
-   "value": "MU 3-27 and 3-28: 4 point bucks 10 to 30 Sept. ANY buck 1 to 31 Oct. 4 point bucks 1 Nov to 10 Dec. Antlerless: LEH only.",
-   "certainty": 99,
-   "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
-   "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
-   "page": "page 34",
-   "checked": "2026-10-02"
-  },
-  "r3wt": {
-   "label": "Region 3 white tailed deer (MU 3-27, 3-28)",
-   "value": "Bucks 10 Sept to 10 Dec. Antlerless (does) 10 to 31 Oct, no draw. Bow only, either sex 11 to 20 Dec.",
-   "certainty": 99,
-   "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
-   "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
-   "page": "page 34",
-   "checked": "2026-10-02"
   }
  },
  "regsEdition": {
@@ -363,6 +309,31 @@
   "lastChecked": "2026-10-02"
  },
  "regsWarnings": [],
+ "seasonFiles": [
+  {
+   "region": 2,
+   "edition": "2026-10-02",
+   "rows": 43,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 3,
+   "edition": "2026-10-02",
+   "rows": 50,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 8,
+   "edition": "2026-10-02",
+   "rows": 43,
+   "checked": "2026-10-04"
+  }
+ ],
+ "seasonCoverage": {
+  "withFileRows": 918,
+  "withRegsRows": 247,
+  "verify": 323
+ },
  "notes": [
   "Candidate spots from official open data. Nobody publishes where hunters go; nothing here says animals are present.",
   "Scores are opinion (my pick). Busier, average, quieter and remote are estimates from access.",
