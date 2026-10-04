@@ -205,7 +205,7 @@ R4_WOLF_TRENCH = ['4-2', '4-3', '4-20', '4-21', '4-22', '4-24', '4-25', '4-26', 
 R4_WOLF_LOW = ['4-4', '4-5', '4-6', '4-7']
 R4_DEER_HUNT_MUS = ['4-3', '4-4', '4-5', '4-20']
 R4_TRENCH_AREAS = {'F'}
-R3_SHUSWAP_AREAS = {'G'}   # Region 3 Maps C8 Blind Bay, C9 Sicamous, C10 Salmon Arm (content/phase7/08-region-3-thompson.md)   # the Trench wolf note applies only in F: the 4-37 corner of area G is Selkirk valleys, not the Trench (my reading)   # Cranbrook Deer Hunt, Map D27 portions only
+R3_SHUSWAP_AREAS = {'A', 'G'}   # Region 3 Maps C8 Blind Bay, C9 Sicamous, C10 Salmon Arm (content/phase7/08-region-3-thompson.md)   # the Trench wolf note applies only in F: the 4-37 corner of area G is Selkirk valleys, not the Trench (my reading)   # Cranbrook Deer Hunt, Map D27 portions only
 TURKEY_AREAS = {'F'}
 ELK_ZONES_LOW = {'BG', 'PP', 'IDF'}
 TURKEY_ZONES = {'PP', 'IDF'}
@@ -1857,6 +1857,24 @@ class AreaContext:
                 'Blind Bay (Map C8): No Shooting Area from Reedman Point to the Sorrento Eagle Bay Road; bows allowed unless posted '
                 '(synopsis pages 10 and 35, 99%). The legal line is not in this data: 1.5 km around Reedman Point and Blind Bay is left '
                 'out (my pick). VERIFY on the ground.', 99, syn + '; BC Geographical Names', near=3000)
+        # Roderick Haig-Brown Recreation Area (MU 3-37, near Chase): no hunting south of the Squilax Anglemont Road and downstream
+        # of the Adams River bridge. Bridge = where that road meets the Adams River; zone = park land south of the bridge (estimate)
+        pg, pp = self.parks
+        hb = [pg[i] for i, x in enumerate(pp) if 'Haig' in (x['name'] or '')]
+        dg, dp, _ = self.ca['dra']
+        rd = [dg[i] for i, x in enumerate(dp) if 'squilax' in (x['name'] or '').lower()]
+        ar = [sg[i] for i, x in enumerate(spp) if (x['name'] or '') == 'Adams River']
+        if hb and rd and ar:
+            park = shapely.union_all(hb)
+            br = shapely.intersection(shapely.union_all(rd), shapely.union_all(ar).buffer(50))
+            if not br.is_empty and shapely.intersects(br, park.buffer(500)):
+                by = shapely.centroid(br).y
+                b0 = park.bounds
+                g = shapely.intersection(park, shapely.box(b0[0] - 10, b0[1] - 10, b0[2] + 10, by))
+                add('HB', g.buffer(100) if not g.is_empty else None,
+                    'Roderick Haig Brown Recreation Area (MU 3-37, near Chase): no hunting south of the Squilax Anglemont Road and '
+                    'downstream of the Adams River bridge (synopsis Region 3, 99%). Drawn as park land south of the bridge plus 100 m '
+                    '(estimate). VERIFY on the ground.', 99, syn + '; TA_PARK_ECORES_PA_SVW; DRA; FWA streams', near=2000)
         box = self.grid.poly.buffer(5000)
         Z = [z for z in Z if shapely.intersects(z['geom'], box.buffer(z['near']))]
         log(f"  Region 3 Shuswap zones in area {self.area}: {', '.join(z['key'] for z in Z)}")
