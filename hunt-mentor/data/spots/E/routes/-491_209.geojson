@@ -1,0 +1,9 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"spotId":"E-duck-drive-0096","kind":"walk","km":0.11,"climbM":0,"name":"Unnamed lake 1.8 km E of Mackin Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-122.51735,52.28055],[-122.51869,52.28003]]}},
+{"type":"Feature","properties":{"spotId":"E-duck-walk-0123","kind":"walk","km":0.45,"climbM":0,"name":"Unnamed lake 1.6 km E of Mackin Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-122.51633,52.27915],[-122.52249,52.27773]]}},
+{"type":"Feature","properties":{"spotId":"E-duck-walk-0124","kind":"walk","km":0.45,"climbM":3,"name":"Unnamed wetland by Beaverdam Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-122.58215,52.29971],[-122.58306,52.29572]]}},
+{"type":"Feature","properties":{"spotId":"E-duck-walk-0143","kind":"walk","km":0.39,"climbM":1,"name":"Unnamed wetland 2.9 km NW of Natsy Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-122.51912,52.25749],[-122.52449,52.25866]]}},
+{"type":"Feature","properties":{"spotId":"E-moose-walk-0003","kind":"walk","km":0.34,"climbM":0,"name":"1.4 km SE of Mackin Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-122.52513,52.29549],[-122.52061,52.29671]]}},
+{"type":"Feature","properties":{"spotId":"E-moose-walk-0004","kind":"walk","km":0.36,"climbM":3,"name":"800 m SE of Mackin Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-122.55415,52.2583],[-122.55164,52.26113]]}},
+{"type":"Feature","properties":{"spotId":"E-moose-walk-0035","kind":"walk","km":1.56,"climbM":25,"name":"540 m W of Mackin Creek","flags":["Route crosses private land (ParcelMap BC, updated 2026-09-22): get permission first or go around."]},"geometry":{"type":"LineString","coordinates":[[-122.53713,52.30229],[-122.55203,52.29161]]}}
+]}

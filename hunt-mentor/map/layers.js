@@ -7,8 +7,8 @@ import * as spots from './spots.js';
 
 const MANIFEST = 'data/layers/manifest.json';
 export const GROUPS = ['Land status', 'Hunting', 'Habitat and migration', 'Access', 'Spots', 'My Content'];
-const AREA_BOXES = { A: [-121.6, 50.2, -119.4, 51.9], B: [-122.9, 49.0, -121.3, 49.95], C: [-120.1, 49.0, -119.2, 49.7] };
-const AREA_NAMES = { A: 'Kamloops, North Thompson, Bonaparte, Shuswap west', B: 'Mission, Fraser Valley, Harrison, Hope, Fraser Canyon', C: 'South Okanagan and Similkameen', BC: 'Province wide' };
+const AREA_BOXES = { A: [-121.6, 50.2, -119.4, 51.9], B: [-122.9, 49.0, -121.3, 49.95], C: [-120.1, 49.0, -119.2, 49.7], D: [-121.3, 49.7, -118.6, 50.5], E: [-122.6, 51.2, -120.4, 52.3] };
+const AREA_NAMES = { A: 'Kamloops, North Thompson, Bonaparte, Shuswap west', B: 'Mission, Fraser Valley, Harrison, Hope, Fraser Canyon', C: 'South Okanagan and Similkameen', D: 'Merritt, Nicola and North Okanagan', E: 'Cariboo south: 100 Mile House to Williams Lake', BC: 'Province wide' };
 const LEGAL_GROUPS = ['Land status', 'Hunting', 'Access'];
 const BANNER = '<div class="hmm-banner">Study aid only. The official regulations are the law.</div>';
 const EMPTY = { type: 'FeatureCollection', features: [] };
@@ -431,7 +431,7 @@ function wirePanel(body) {
 function openInfo(id) {
   const st = L.get(id); if (!st) return;
   const l = st.l;
-  const areas = !l.areas || l.areas === 'BC' ? 'Province wide' : [].concat(l.areas).map((a) => AREA_NAMES[String(a).toUpperCase()] || a).join('; ');
+  const areas = !l.areas || l.areas === 'BC' ? 'Province wide' : [].concat(l.areas).map((a) => (M && M.areaNames && M.areaNames[a]) || AREA_NAMES[String(a).toUpperCase()] || a).join('; ');
   const certWord = l.cert == null ? '' : l.cert >= 95 ? 'Read directly in the official source.' : l.cert >= 80 ? 'Official source, some interpretation.' : l.cert >= 60 ? 'Reliable secondary source.' : 'Not a fact: treat it as a tip.';
   const body = H.openSheet({ title: l.label || l.id, html: `${st.legal ? BANNER : ''}
     <div class="hmm-info-h">${swatch(st)}<span>${esc(l.group || '')}</span></div>

@@ -1,0 +1,11 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"spotId":"E-duck-drive-0007","kind":"walk","km":0.03,"climbM":0,"name":"Unnamed wetland 610 m N of McKusky Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.76181,52.29839],[-120.76175,52.29814]]}},
+{"type":"Feature","properties":{"spotId":"E-duck-drive-0069","kind":"walk","km":0.07,"climbM":0,"name":"Unnamed wetland 400 m SW of McKinley Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.99597,52.27606],[-120.99683,52.2758]]}},
+{"type":"Feature","properties":{"spotId":"E-duck-walk-0005","kind":"walk","km":0.44,"climbM":0,"name":"Unnamed wetland 120 m N of McKusky Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.77851,52.29816],[-120.78164,52.29467]]}},
+{"type":"Feature","properties":{"spotId":"E-duck-walk-0058","kind":"walk","km":0.3,"climbM":0,"name":"Unnamed wetland 1.6 km W of Crooked Lake South rec site","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.75827,52.26386],[-120.76018,52.26631]]}},
+{"type":"Feature","properties":{"spotId":"E-duck-walk-0077","kind":"walk","km":0.44,"climbM":72,"name":"McKee Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.81019,52.2484],[-120.80528,52.25092]]}},
+{"type":"Feature","properties":{"spotId":"E-moose-drive-0002","kind":"walk","km":0.3,"climbM":8,"name":"360 m N of Elbow Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.81439,52.24965],[-120.81619,52.25206]]}},
+{"type":"Feature","properties":{"spotId":"E-moose-drive-0003","kind":"walk","km":0.1,"climbM":0,"name":"930 m N of Tisdall Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.98124,52.25275],[-120.98157,52.25187]]}},
+{"type":"Feature","properties":{"spotId":"E-moose-walk-0027","kind":"walk","km":2.79,"climbM":211,"name":"1.7 km SE of Offset Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.81274,52.24983],[-120.80664,52.27459]]}},
+{"type":"Feature","properties":{"spotId":"E-moose-walk-0029","kind":"walk","km":3.29,"climbM":353,"name":"1.8 km SW of Offset Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.81588,52.24927],[-120.85363,52.26763]]}}
+]}
