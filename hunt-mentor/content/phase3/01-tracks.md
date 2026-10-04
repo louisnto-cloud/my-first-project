@@ -83,6 +83,10 @@ hab-moose-tracks-mud | Moose: much bigger, long pointed toes.
 hab-elk-tracks-shore | Elk: a herd churned this shore.
 ```
 
+```video
+yt-deer-tracks | Read a deer track: size, gait, age, direction.
+```
+
 ## Paws: bears
 
 ```diagram sg-bear-toeline
@@ -198,6 +202,10 @@ anim:sg-gait-stot | Stot: groups of 4. It saw you.
 - **Dust and mud:** in fine dust a fresh print has a thin raised rim that collapses within hours (60%). In mud, fresh means the walls are still shiny and wet (Tip).
 - **Snow:** see [Snow tracking](#/s/snow-tracking). Cold still nights in the Interior keep a track crisp for days, so crisp does not always mean fresh (65%).
 - Best test: make your own boot print right beside it and compare (Tip).
+```
+
+```video
+yt-age-tracks | Sharp edges mean fresh. Rounded and filled means old.
 ```
 
 ## Direction of travel

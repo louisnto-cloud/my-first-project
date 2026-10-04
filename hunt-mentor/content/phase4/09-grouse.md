@@ -74,6 +74,10 @@ sharp-tailed-grouse-snow | Sharp tailed grouse in snow near Fort St. John, BC.
 - Daily pattern: feed early morning and late afternoon; dust and gravel on roadsides; sit in cover midday; roost in trees or on the ground at night (75%).
 - The best fall weeks: late September and October, when young birds feed on berries and clover along road edges and cut blocks (hunter lore, 65%).
 
+```video
+yt-ruffed-grouse-tips | Find young forest, edges and food. That is where grouse are.
+```
+
 ## Sign
 
 - Droppings: curved cylinders about pencil thick, with a white cap, in piles under a roost or on a drum log (85%).
@@ -81,6 +85,10 @@ sharp-tailed-grouse-snow | Sharp tailed grouse in snow near Fort St. John, BC.
 - Tracks: three toes forward, one back, about 5 cm long, in mud or snow (Tip).
 - Snow roosts: a grouse dives into soft snow and leaves a hole and a burst of wing marks (80%).
 - Chewed clover and dropped berries on a road edge at dawn mean birds were feeding there (Tip).
+
+```video
+commons-ruffed-grouse-drum | Hear the drum: a ruffed grouse beating its wings on a log.
+```
 
 ## Season and bag limits by region
 
@@ -153,6 +161,10 @@ sharp-tailed-grouse-snow | Sharp tailed grouse in snow near Fort St. John, BC.
 
 > [!lean]
 > Option A with the shotgun for the first trips. Add the .22 once you can tell the three species on the ground every time.
+
+```video
+yt-grouse-anyone | Grouse hunting needs no special gear. Just walk.
+```
 
 ## Care and yield
 

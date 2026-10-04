@@ -29,6 +29,10 @@ checked: 2026-10-02
 - Tip: use the 10 minutes for one job: get out of the water or onto the hull. Do not swim for shore unless it is very close.
 ```
 
+```video
+yt-cold-water-1-10-1 | Fall in cold water? 1 minute breathe, 10 minutes move, 1 hour.
+```
+
 ## PFD worn, not stowed
 
 ```diagram gr-pfd-worn

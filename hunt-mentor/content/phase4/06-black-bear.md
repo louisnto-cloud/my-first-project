@@ -40,6 +40,10 @@ checked: 2026-10-01
 > [!warn]
 > Shadows, brush and a head on view hide the hump and the face. If you cannot see the profile, you cannot shoot.
 
+```video
+commons-grizzly-bear | Grizzly: shoulder hump, dished face, short round ears. No season in BC.
+```
+
 ## Why grizzly hunting is closed in BC
 
 - 18 December 2017: the BC government announced an end to grizzly bear hunting across the province, effective immediately, for residents and non residents (news release, search preview) (85%).
@@ -99,6 +103,10 @@ checked: 2026-10-01
 > [!tip]
 > Find the food, find the bear. In October, glass a south slope of ripe berries or a creek with hawthorn in the last hour of light.
 
+```video
+commons-black-bear-salmon | Black bears at a salmon run: note the straight face and no shoulder hump.
+```
+
 ## Tracks and sign
 
 - Front track: wide, about 11 cm by 10 cm, five toes in a curve, claws close to the toes (65%).
@@ -107,6 +115,10 @@ checked: 2026-10-01
 - Scat: a thick cylinder or loose pile, full of berries, seeds, grass or hair (65%).
 - Torn logs and stumps, flipped rocks, claw marks on trees, and bear trails worn through brush (Tip).
 - Fresh: wet scat, sharp track edges, sap still oozing from claw marks (Tip).
+
+```video
+commons-black-bear-marking | Bear sign in action: a black bear rubbing and marking trees.
+```
 
 ## Tactics: options
 

@@ -46,6 +46,10 @@ checked: 2026-10-01
 - On calm days, thermals beat the light breeze. In strong wind, the wind wins (Tip).
 ```
 
+```video
+yt-thermals-onx | Warm air rises in the day, cool air sinks at night.
+```
+
 ## Where to sit
 
 ```diagram thermals
@@ -66,6 +70,10 @@ checked: 2026-10-01
 - Swirl also happens around the switch time, mid morning and near sunset, as thermals change direction (Tip).
 - Lakes and creeks: cold air often slides down creek bottoms in the evening (Tip).
 - In a swirl, no setup is safe. Back out and come back with steadier air.
+```
+
+```video
+yt-thermals-explained | See thermals carry scent downhill in real hunt footage.
 ```
 
 ## How to check the wind

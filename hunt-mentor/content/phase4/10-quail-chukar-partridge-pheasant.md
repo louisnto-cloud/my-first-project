@@ -126,6 +126,10 @@ checked: 2026-10-01
 > [!lean]
 > Option A for quail and partridge, Option C once you are fit and know one chukar slope. Pheasant only with a landowner who wants them gone.
 
+```video
+yt-upland-basics | Walk the cover slowly; the stop makes birds flush.
+```
+
 ## Safety near orchards, vineyards and homes
 
 - "It is unlawful to hunt or discharge a firearm within 100 m of a church, school building, school yard, playground, regional district park, dwelling house, or farm or ranch building that is occupied by persons or domestic animals." (99%)

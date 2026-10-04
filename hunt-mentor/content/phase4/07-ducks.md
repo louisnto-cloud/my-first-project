@@ -51,6 +51,10 @@ pintail-drake-flight | Pintail drake in flight. Slim cross shape, long tail.
 
 - Mallard hens and drakes share the same wing patch. Look for it on every brown duck (Tip).
 
+```video
+commons-mallards | Mallards up close: green head drake, brown hen, blue wing patch.
+```
+
 ## Puddle ducks: who is who
 
 | Duck | Drake | Hen, wing and flight |
@@ -153,6 +157,10 @@ pintail-drake-flight | Pintail drake in flight. Slim cross shape, long tail.
 > [!lean]
 > Option A on a shallow pond you can wade, or Option B on a creek with a slow current. Shoot only where the bird falls where you can reach it.
 
+```video
+yt-decoy-spreads-three | Three spread shapes and where the birds will land.
+```
+
 ## Gun, load, choke, max range
 
 - Your 12 gauge with [[Steel shot]] is the standard duck gun (Tip). Legal maximum is 10 gauge (99%).
@@ -208,6 +216,10 @@ pintail-drake-flight | Pintail drake in flight. Slim cross shape, long tail.
 - **Bait:** no hunting within 400 m of bait unless the place has been bait free for 7 days (99%). Standing crops and normal harvest spill do not count as bait (99%).
 - **Calls and decoys:** no live birds, no electronic calls for any migratory bird in BC (97%). BC also bans recorded calls for game birds, page 12 item 42 (99%). Mouth calls and plastic decoys are fine (99%).
 - **Vehicles:** no hunting from a motorized land vehicle (99%). BC: no loaded firearm in or on a vehicle or boat, and no shooting wildlife from a motor vehicle or a boat propelled by a motor (99%).
+
+```video
+yt-duck-call-basics | Hold the call right, then learn the basic quack.
+```
 
 ## Possession, wing or head, transport
 

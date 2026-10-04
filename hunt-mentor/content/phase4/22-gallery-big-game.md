@@ -40,6 +40,10 @@ g-moose-calf-winter | Calf in its first winter, Grand Teton. Short face, small b
 - A cow has no antlers. A calf stays with her through its first winter (85%).
 - A [[Calf|calf]] is a moose in its first year; it is never a spike fork bull (99%, page 3).
 
+```video
+commons-moose-calf | A moose calf. If you see a calf, the cow is close by.
+```
+
 ## Elk
 
 ```gallery
@@ -55,6 +59,10 @@ g-elk-bulls-distance | Bulls at distance in snow, Wyoming.
 - Bigger than a deer, smaller and much paler than a moose (85%).
 - Antlers sweep back over the body with long tines; count the brow tine on elk (99%, page 3).
 
+```video
+commons-elk-bull-yoho | A bull elk in BC: note the pale rump and dark neck mane.
+```
+
 ## Black bear: colour phases
 
 ```gallery
@@ -68,6 +76,10 @@ g-bb-tofino | On the beach at low tide, Tofino, Vancouver Island.
 
 - Black bears come in black, brown, cinnamon and blonde [[Colour phase|colour phases]] (85%).
 - No open season on the white (Kermode) or blue (Glacier) phases (98%, page 80, Notice to Black Bear Hunters).
+
+```video
+commons-black-bear-yoho | A black bear in BC. Colour alone does not tell black from grizzly.
+```
 
 ## Sow with cubs
 
@@ -162,6 +174,10 @@ g-coyote-howl | Coyote, Colorado. Rusty ears and legs, bushy tail.
 - Wolf: 30 to 50 kg in BC; coyote: 9 to 23 kg (85%).
 - Wolf: broad blocky muzzle, short rounded ears. Coyote: narrow pointed muzzle, tall pointed ears (85%).
 - Coyotes run with the tail down; wolves carry it straight out (Tip).
+
+```video
+commons-wolf | Wolves: big feet, long legs, straight tail. Bigger than a coyote.
+```
 
 ## Grandpa's rule
 

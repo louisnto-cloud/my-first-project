@@ -145,6 +145,10 @@ g-canada-goose-flight | Canada goose in flight, Burnaby Lake, BC.
 - A [[Cackling goose|cackling goose]] is a separate species from the Canada goose, not a young one (85%).
 - Both sit in the dark goose bag in BC; check your district's goose limits (VERIFY for your area).
 
+```video
+commons-canada-geese-flight | Canada geese in flight: long black neck, white chin strap.
+```
+
 ## Snow goose and Ross's goose
 
 ```gallery

@@ -87,6 +87,11 @@ g-wt-buck-side | White tailed buck.
 - Scents: skip deer urine lures. The rule is on the next screen (95%).
 ```
 
+```video
+yt-deer-rattling-science | Rattle during the pre rut, near cover, with the wind right.
+yt-deer-grunt-call | Short soft grunts. Less is more.
+```
+
 ## The CWD rule on lures
 
 > [!warn]
@@ -126,6 +131,10 @@ hab-elk-wallow | Elk wallow: rut sign at a wet meadow.
 - No elk general open season appears in the Region 3 pages (95%). Elk in Region 3 are LEH or closed: VERIFY in the LEH regulations.
 - Moose rut tactic: sit a willow swamp or lake edge at dawn and dusk from the last week of September, call softly, and listen for grunts and antler raking (hunter lore) (60%).
 - Elk rut tactic: find bugling at first light, get the wind, and cow call from 100 m back in cover (hunter lore) (60%).
+```
+
+```video
+yt-moose-calling-eastmans | Hear real moose calls and when to use each one.
 ```
 
 ## Region 3 deer seasons

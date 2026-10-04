@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="ATV rules. Left: on the ATV the rifle has an empty chamber and no loaded magazine attached. Loaded means a round in the chamber or in an attached magazine. No shooting from the machine. Right: on a 2 lane public road, no hunting or shooting within 15 metres each side of the centre, and never across the road.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="8" y="8" width="188" height="284" rx="10" fill="#dfe6d3"/><rect x="204" y="8" width="188" height="284" rx="10" fill="#efe6cf"/>
+  <text x="102" y="34" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">On the ATV</text>
+  <rect x="40" y="110" width="110" height="34" rx="8" fill="#2f6e3b"/><circle cx="56" cy="152" r="16" fill="#2f3a2b"/><circle cx="134" cy="152" r="16" fill="#2f3a2b"/>
+  <path d="M30 96 L170 96" stroke="#6b4f35" stroke-width="7"/>
+  <g font-size="14" fill="#2f3a2b"><text x="22" y="200" font-weight="bold">Chamber: empty</text><text x="22" y="220" font-weight="bold">Magazine: off</text><text x="22" y="240">or empty</text></g>
+  <text x="102" y="276" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Never shoot from it</text>
+  <text x="298" y="34" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Public road</text>
+  <rect x="260" y="50" width="76" height="190" fill="#9a9a9a"/>
+  <line x1="298" y1="50" x2="298" y2="240" stroke="#ffd34d" stroke-width="3" stroke-dasharray="10 8"/>
+  <rect x="240" y="50" width="116" height="190" fill="#c0392b" opacity=".18"/>
+  <path d="M298 140 L354 140" stroke="#c0392b" stroke-width="2.5"/><polygon points="350,134 350,146 360,140" fill="#c0392b"/>
+  <text x="330" y="132" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">15 m</text>
+  <text x="298" y="264" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">No shots in or across</text>
+  <text x="298" y="282" font-size="14" fill="#2f3a2b" text-anchor="middle">FSRs: VERIFY</text>
+</svg>

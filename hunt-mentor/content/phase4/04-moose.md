@@ -95,6 +95,10 @@ Synopsis definitions, pages 3 and 4 (98%):
 > [!tip]
 > Find a willow flat with chest high broken tips and big tracks in the mud. That is a moose kitchen.
 
+```video
+commons-moose-bull | A bull moose browsing: moose eat twigs and leaves, not grass.
+```
+
 ## Tracks and sign
 
 - Track: heart shaped like a huge deer print, about 13 to 18 cm long (65%).
@@ -123,6 +127,10 @@ Synopsis definitions, pages 3 and 4 (98%):
 
 > [!lean]
 > Option B, with a cow call in your pocket for the first week of a late September block. Hunt with your brother and plan the pack out before the shot.
+
+```video
+yt-moose-calling-strategies | Cow calls, bull grunts and raking brush for moose.
+```
 
 ## Rifle, load and range
 

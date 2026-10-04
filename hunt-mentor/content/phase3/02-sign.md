@@ -252,6 +252,10 @@ hab-grouse-tracks-snow | Ruffed grouse tracks in soft snow.
 > A covered carcass means a cougar or bear is close and will come back. Do not touch it. Back out the way you came, talking loudly, and tell your brother where it is.
 ```
 
+```video
+yt-bear-sign | Bear sign: scat, torn logs, tracks, rubbed trees.
+```
+
 ## Freshness: putting it together
 
 ```diagram sg-fresh-ladder

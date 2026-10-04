@@ -27,6 +27,10 @@ checked: 2026-10-02
 - Wording read in search previews of the course handbook and course provider pages, not the full handbook (see Sources).
 ```
 
+```video
+yt-firearm-safety-rules | The four firearm safety rules. US rules shown, BC rules differ.
+```
+
 ## Know your rifle
 
 ```diagram gr-rifle-parts
@@ -53,6 +57,10 @@ checked: 2026-10-02
 - Tip: say each letter out loud when you PROVE it. Have your brother do the same. You each catch the other skipping a step.
 ```
 
+```video
+yt-think-firearm-safety | Firearm safety from Canadian hunter educators.
+```
+
 ## Zones of fire
 
 ```diagram zones-of-fire
@@ -65,6 +73,11 @@ checked: 2026-10-02
 - Hunter education teaches about 45 degrees straight ahead for each hunter (75%).
 - Never swing the muzzle outside it, even tracking a running deer (75%).
 - Every shot also needs a safe backstop. Sky is never one.
+```
+
+```video
+yt-upland-safety | Upland safety basics before your first walk. US rules shown, BC rules differ.
+yt-firearm-carry | Safe ways to carry a firearm in the field. US rules shown, BC rules differ.
 ```
 
 ## Two hunters walking side by side
@@ -82,6 +95,10 @@ checked: 2026-10-02
 - Lose sight of each other? Muzzles up or down, no shooting, call out.
 - Tip: bright orange on hat and vest helps you see each other in timber. My lean: wear it.
 - BC law does not require it. The synopsis, the Wildlife Act and the Hunting Regulation have no blaze orange rule (95%).
+```
+
+```video
+yt-upland-ethics | Know your zone of fire when walking in a line.
 ```
 
 ## Safe carries
@@ -133,6 +150,10 @@ gr-fence-5 | With a partner: one holds both guns, actions open.
 - Cross well away from the muzzle, then pick it up by the stock (75%).
 - With a partner: one unloads and holds both firearms, actions open. The other crosses, then takes both. Then the first crosses (Tip, common hunter education method).
 - Never climb a fence, log or bank with a loaded firearm in your hands.
+```
+
+```video
+yt-fence-crossing | Unload, pass it under, cross away from the muzzle.
 ```
 
 ## At the car

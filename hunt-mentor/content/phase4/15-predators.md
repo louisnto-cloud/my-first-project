@@ -50,6 +50,10 @@ checked: 2026-10-01
 > [!law]
 > A cougar kitten is any cougar with spots or under one year old. You may not hunt a kitten or any cougar in its company (98%). You may not hunt a lynx or bobcat that is with another lynx or bobcat (98%).
 
+```video
+commons-cougar | A cougar: long thick tail, low body, silent walk.
+```
+
 ## Region 3 seasons and limits, quoted
 
 > [!warn]
@@ -107,6 +111,10 @@ checked: 2026-10-01
 - Coyotes breed late January to mid March, pups in April to May; by early winter more than half the population is young of the year (85%).
 - Lynx follow snowshoe hares; where hares boom, lynx follow a few years later (Tip).
 - Winter is fur season: pelts are prime from about November to February, which matches the cat seasons (Tip).
+
+```video
+commons-cougar-trailcam | Cougars use the same trails as deer. Hunters rarely see them.
+```
 
 ## Tracks and sign
 

@@ -28,6 +28,10 @@ checked: 2026-10-01
 - Both depend on wind. Read the wind session first.
 ```
 
+```video
+yt-hunting-styles | Three ways to hunt: still, ambush, spot and stalk.
+```
+
 ## Pace
 
 ```anim hf-step-cadence 2 or 3 steps, then a long look.
@@ -43,6 +47,10 @@ checked: 2026-10-01
 - Look near as well as far. A bedded deer may be very close (65%).
 - Before each step, pick where your foot goes next.
 - Heel down softly, roll to the ball, test before putting weight on it (65%).
+```
+
+```video
+yt-still-hunting-tips | Still hunting is mostly standing still. Step, stop, look.
 ```
 
 ## Each quiet step
@@ -68,6 +76,10 @@ hf-foot-4 | Quiet? Full weight. Crack? Lift and move.
 - Keep a tree or bush between you and where deer may be, then look around it, not over it (Tip).
 - Move from one piece of cover to the next. Pause at each.
 - Freeze when a deer looks up. Wait until it relaxes (Tip).
+```
+
+```video
+yt-spot-stalk-tips | Five spot and stalk tips for open country.
 ```
 
 ## Look around, not over

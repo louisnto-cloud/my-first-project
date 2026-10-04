@@ -31,6 +31,10 @@ checked: 2026-10-02
 > [!warn]
 > A doe and a "button buck" (male fawn with tiny bumps) look alike. Both count as antlerless (page 3) (99%). Know the rule before you shoot.
 
+```video
+commons-whitetail-walk | See the white tail and how a whitetail picks its way through cover.
+```
+
 ## Where they live near Heffley Creek
 
 - Valley bottoms, riparian strips (the green belt along rivers and creeks), farm fields (85%).
@@ -103,6 +107,10 @@ checked: 2026-10-02
 
 > [!lean]
 > Option A. Get permission on one hayfield edge, find the main trail, and sit it at dusk.
+
+```video
+yt-deer-calling-mistakes | Avoid the three big deer calling mistakes.
+```
 
 ## Rifle, load and range
 

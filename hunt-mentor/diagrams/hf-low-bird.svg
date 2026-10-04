@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Side view. Crossed: a quail flies low over the brush with your partner beyond it. Ticked: a quail climbs above head height with open sky beyond. A low bird is a free bird.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="230" width="400" height="70" fill="#c9b79c"/>
+  <g fill="#8a9a6b"><ellipse cx="120" cy="222" rx="80" ry="22"/><ellipse cx="300" cy="222" rx="70" ry="22"/></g>
+  <line x1="0" y1="150" x2="400" y2="150" stroke="#2f3a2b" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <text x="392" y="144" font-size="14" fill="#2f3a2b" text-anchor="end">head height</text>
+  <g transform="translate(120 196)"><ellipse rx="10" ry="7" fill="#6b6f78"/><circle cx="9" cy="-5" r="5" fill="#2f3a2b"/></g>
+  <circle cx="186" cy="176" r="10" fill="#4a7fb0"/><rect x="178" y="186" width="16" height="44" rx="5" fill="#4a7fb0"/>
+  <text x="186" y="168" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="middle">partner</text>
+  <path d="M80 80 L150 150 M150 80 L80 150" stroke="#c0392b" stroke-width="6"/>
+  <g transform="translate(300 80)"><ellipse rx="10" ry="7" fill="#6b6f78"/><circle cx="9" cy="-5" r="5" fill="#2f3a2b"/></g>
+  <path d="M330 110 l12 12 l26 -30" fill="none" stroke="#2f6e3b" stroke-width="6"/>
+  <text x="115" y="40" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Low: let it go</text>
+  <text x="300" y="40" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">High, sky beyond</text>
+  <text x="200" y="276" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A low bird is a free bird</text>
+</svg>

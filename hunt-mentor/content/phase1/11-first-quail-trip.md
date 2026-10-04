@@ -9,55 +9,134 @@ checked: 2026-10-02
 > [!why]
 > Quail are fast, fun and live close to farms and homes. Most of the skill is getting permission and keeping every shot safe.
 
+```photo g-quail-male-vernon California quail male, Vernon: black face, curled plume.
+```
+
+- Residents need only the BC hunting licence for quail. No species licence (99%).
+
+```more trip assumptions
 - Trip: the Okanagan, Region 8. Two hunters with shotguns.
 - Assumption: no landowner permission yet. No dog.
 - Residents need only the BC hunting licence for quail. No species licence (99%).
+```
 
 ## Season and limits
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+| Region 8 quail | Rule |
+|---|---|
+| Season | 1 October to 30 November (99%) |
+| Daily bag | 10 (99%) |
+| Possession | 30 (99%) |
+| Open MUs | 8-1 to 8-15, 8-21 to 8-26 (99%) |
+| Hours | 1 hour before sunrise to 1 hour after sunset (99%) |
+
+- Lead shot is legal for quail (99%). Steel works fine (Tip).
+
+```more season and limits in full
 - Region 8 quail, synopsis page 68: 1 October to 30 November (99%). The row says only "QUAIL"; California quail is the one you will see (Tip).
 - Daily bag 10. Possession 30 (99%).
 - Open in MUs (Management Units) 8-1 to 8-15 and 8-21 to 8-26 (99%).
 - Legal hours: 1 hour before sunrise to 1 hour after sunset (99%).
 - Lead shot is legal for quail. The shot ban covers ducks, geese, coots and snipe, not upland birds (99%). BC lists one non toxic shot only area, the Delta and Surrey dykes, far from the Okanagan (99%). Steel works fine (Tip).
 - Each hunter has a personal bag limit (99%). Birds you shoot count in your own bag, so you cannot fill your partner's limit (90%).
+```
 
 ## California quail: habitat and habits
 
+```gallery
+g-quail-pair | Male (right) and plainer female.
+hab-quail-vernon | A lookout cock on a post.
+hab-blackberry | Blackberry thicket: quail cover.
+hab-kamloops-pond-farm | Farm edge: water, food, shelter close.
+```
+
+- They would rather **run** than fly. Pushed, they burst up with whirring wings (75%).
+
+```more habitat and habits in full
 - In BC, mostly in the Okanagan and Kettle valleys and on southeast Vancouver Island (75%).
 - They live in farm and suburban edges with lots of cover, and in brushy creeks, grassland and open forest (75%).
 - Fall and winter flocks are called coveys. Often family groups, sometimes very large (75%).
 - They feed mornings and evenings. They rest in shrubs midday and roost in trees (75%).
 - A lookout bird, often a male, watches while the rest feed (75%).
 - They would rather **run** than fly. When pushed, they burst up with loud whirring wings (75%).
+```
+
+```video
+commons-quail-feeding | Quail scratch for seeds in small flocks. Find one, find the covey.
+```
+
+## A quail day
+
+```diagram hf-quail-day
+```
 
 ## Where to look
 
+```diagram hf-quail-cover
+```
+
+- Listen at first light. Their call carries far (Tip).
+- After the first flush, singles hold tighter (Tip).
+
+```more where to look in full
 - Brushy draws, blackberry and rose thickets, creek edges near grain or orchards (Tip).
 - Listen at first light. Their call carries far (Tip).
 - Look for dusting spots and tracks on dirt roads near cover (Tip).
 - After the first flush, singles hold tighter. Mark where they landed and follow up (Tip).
+- Best time, my opinion: the first 2 hours after legal light and the last 2 hours before sunset, on calm days. Late October and November, after leaves drop, you can see them better.
+```
 
-> [!tip]
-> Best time, my opinion: the first 2 hours after legal light and the last 2 hours before sunset, on calm days. Late October and November, after leaves drop, you can see them better.
+```video
+yt-quail-tips | Three quick tips for finding and flushing quail.
+```
+
+## How to walk a draw
+
+```steps Walk a brushy draw with two hunters
+hf-draw-1 | Walk both edges, level, 15 to 25 m apart.
+hf-draw-2 | Quail run ahead. Keep level and slow.
+hf-draw-3 | Cover runs out: they burst. Pick one bird.
+hf-draw-4 | Mark where singles land. Follow up.
+```
+
+- Blaze orange hat and vest on both of you in brush (Tip).
 
 ## The covey flush
 
-```diagram quail-covey
+```anim hf-covey-flush Pick one bird. Never swing through your partner.
 ```
 
+- Shoot only birds above head height, open sky beyond (Tip).
+- **Never swing through your partner.** Gun up, safety on (Tip).
+
+```more covey flush in full
 - Walk in a straight line, side by side, 15 to 25 m (16 to 27 yd) apart (Tip).
 - Each hunter takes birds on their own side of centre (Tip).
 - Shoot only birds above head height with open ground or sky beyond (Tip).
 - **Never swing through your partner.** Stop the swing, gun up, safety on (Tip).
 - Blaze orange hat and vest on both of you in brush (Tip).
 - Pick one bird. Shoot it. Then pick another. Shooting at the whole covey misses (Tip).
+```
+
+```diagram quail-covey
+```
+
+```video
+yt-quail-newbies | Quail basics: find the cover, find the covey. US rules shown, BC rules differ.
+```
 
 ## Near orchards and buildings
 
+```diagram hf-orchard-buffer
+```
+
+- **No hunting or shooting within 100 m (109 yd) of a dwelling or occupied farm building** (99%).
+- Orchards are cultivated land: permission needed (95%).
+
+```more orchard rules and closed areas in full
 - **No hunting or shooting within 100 m (109 yd) of a dwelling house, or a farm or ranch building occupied by people or domestic animals** (99%).
 - So it covers houses and worker housing, barns with animals, and packing sheds while people are in them (90%).
 - Cultivated land needs the permission of the owner, lessee or occupant (99%). Orchards count as cultivated land (95%).
@@ -66,9 +145,17 @@ checked: 2026-10-02
 - Region 8 maps, pages 69 and 70: No Shooting Areas at Kaleden and Okanagan Falls (Map J10), Naramata (Map J11) and Upper Carmi Road near Penticton (Map J8). No Shooting or Hunting Area at Swan Lake, Vernon (Map J17) (99%).
 - No hunting in the Vaseux Migratory Bird Sanctuary or any National Wildlife Area (99%).
 - Town and regional district bylaws are not in the synopsis (99%). VERIFY the local bylaw for each town or district you hunt in.
+```
 
 ## Asking permission
 
+```diagram hf-permission-note
+```
+
+- Go in person, daytime, no guns showing (Tip).
+- Get it in writing and keep it on you (60%).
+
+```more the permission script
 - Go in person, daytime, clean clothes, no guns showing (Tip).
 - Short script:
   - "Hi, I'm (name). My brother and I hunt quail. Could we walk your fence lines and brush on a weekday morning?"
@@ -77,29 +164,51 @@ checked: 2026-10-02
   - "Can I write down your OK and a phone number?"
 - Get it written: name, date, area, your names. Keep it on you (60%, legal advice from secondary sources).
 - Bring back a thank you: cleaned birds, a card, or help with a job (Tip).
+```
 
 ## Crown land options
 
+```diagram hf-land-flow
+```
+
+- Check land status on iMapBC or a land layer app before you drive (Tip).
+
+```more Crown land in full
 - Crown land is public land owned by the province. Hunting is often allowed unless closed (Tip).
 - How to find it: an offline map app with a land ownership layer, or iMapBC. Check before you drive (Tip).
 - Grazing lease land needs the lease holder's OK while livestock are on it (99%). Leased land also falls under the Trespass Act, livestock or not (99%).
 - First Nations reserve land is not open Crown land. The synopsis calls reserves private land: permission "must be obtained from the local Indian business office" to hunt on or across them (99%).
 - Ecological reserves: no hunting and no shooting (99%). BC Parks: many are closed, so check the park's page before you hunt (99%). No Shooting Areas: Region 8 maps, pages 69 and 70 (99%).
 - Specific Okanagan Crown spots that hold quail: VERIFY with the local rod and gun club or a BC Wildlife Federation member.
+```
 
 ## Chukar note
 
+```photo g-chukar Chukar: red bill and legs, black necklace, barred flanks.
+```
+
+- Region 3 and 8: 1 October to 30 November. Daily 5, possession 15 (99%).
+
+```more chukar in full
 - Chukar live on dry, steep, rocky slopes and talus. In the Thompson, mostly 250 to 500 m elevation (75%).
 - Best numbers are on low slopes of the Thompson valley from Kamloops to Lytton (75%).
 - They run uphill and flush downhill. Hard work for 2 hunters (Tip).
 - Chukar in Region 3 (page 34) and Region 8 (page 68): 1 October to 30 November. Daily bag 5, possession 15 (99%).
 - Region 3 chukar MUs are 3-12 to 3-20 and 3-26 to 3-44, so Heffley Creek is open for chukar (99%).
+```
 
 ## Quail at Heffley Creek?
 
+```diagram hf-quail-regions
+```
+
+- Region 3 has no quail season (95%). See quail at the property? Journal it. Do not shoot.
+
+```more why not at Heffley Creek
 - The Region 3 season table on page 34 has no quail row (99%). So there is no quail season in Region 3 (95%). Do not hunt quail there.
 - Heffley Creek is outside the main BC quail range (60%).
 - See quail at the property? Note it in your journal. Do not shoot.
+```
 
 ```checklist s11-quail
 Quail season open today in my exact MU (full synopsis table)
@@ -111,6 +220,11 @@ Shells for quail and a game vest or bag
 Cooler with ice for the drive home
 ```
 
+## Grandpa's rule and mistakes
+
+```diagram hf-low-bird
+```
+
 > [!rule]
 > A low bird is a free bird. Let it go.
 
@@ -120,7 +234,7 @@ Cooler with ice for the drive home
 > - Shooting into the covey instead of picking one bird.
 
 > [!field]
-> Before the trip: list 5 Okanagan farms with brushy edges on the map. Plan to knock on doors in person on day 1, and hunt day 2.
+> List 5 Okanagan farms with brushy edges. Knock on doors on day 1. Hunt day 2.
 
 ## Sources
 

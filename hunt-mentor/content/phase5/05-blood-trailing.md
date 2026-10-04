@@ -135,6 +135,10 @@ checked: 2026-10-01
 - Wounded animals head downhill and to water, often on a game trail. Check creeks (70%, National Deer Association).
 ```
 
+```video
+yt-blood-trail-mossy | Mark the spot, wait, then follow the blood slowly.
+```
+
 ## Grid search
 
 ```anim sk-grid-search Circles at 20 m and 40 m, then lanes 10 m apart.
@@ -149,6 +153,10 @@ checked: 2026-10-01
 - Brother on one lane, you on the next. Talk low so you stay even. Tip.
 - Look under deadfall, in thickets, in creek bottoms. A dead deer is brown and low. Tip.
 - Still nothing: come back at first light. Ravens and magpies will show you. Tip.
+```
+
+```video
+yt-blood-trail-beyond | When the blood stops, look for tracks and disturbed ground.
 ```
 
 ## The law on hours and lights

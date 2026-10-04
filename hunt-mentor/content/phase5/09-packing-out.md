@@ -123,6 +123,10 @@ checked: 2026-10-01
 - Return trips: approach the cache with the wind in your face and make noise. Bears claim meat (70%, BC Outdoors Magazine).
 ```
 
+```video
+yt-pack-out-meat | Heavy meat high and close to your back.
+```
+
 ## Meat weights
 
 ```diagram sk-meat-yield

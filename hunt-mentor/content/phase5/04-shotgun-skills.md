@@ -66,6 +66,10 @@ sk-mount-3 | Stock to your cheek, then your shoulder.
 - Read the line. A crossing duck is often also climbing or dropping. Lead along the real line, not level (70%).
 ```
 
+```video
+yt-shotgun-three-leads | Three lead methods. Pick one and practise it.
+```
+
 ## How much lead
 
 ```diagram lead
@@ -83,6 +87,10 @@ sk-mount-3 | Stock to your cheek, then your shoulder.
 - At 40 yd and beyond, hold more lead than feels right. Nearly all misses there are behind (70%).
 - Do not compute lead in the blind. Keep the eyes on the head, keep the gun moving, and the lead comes from the swing (70%).
 - Miss? Change something on the next shot. Usually that means more lead (70%).
+```
+
+```video
+yt-shotgun-lead-du | Lead the bird: shoot where it will be.
 ```
 
 ## Range with steel

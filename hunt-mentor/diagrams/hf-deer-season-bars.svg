@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" font-family="sans-serif" role="img" aria-label="Region 3 general deer seasons, MUs 3-12 to 3-20 and 3-26 to 3-44, synopsis page 34. Mule deer: 4 point bucks 10 to 30 September, any buck 1 to 31 October, 4 point bucks 1 November to 10 December. White tailed deer: bucks 10 September to 10 December, antlerless 10 to 31 October, bow only either sex 11 to 20 December.">
+  <rect width="400" height="320" fill="#fffaf0"/>
+  <g fill="#dfe6d3"><rect x="90" y="30" width="75" height="230"/><rect x="240" y="30" width="75" height="230"/></g>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="127" y="24">Sep</text><text x="202" y="24">Oct</text><text x="277" y="24">Nov</text><text x="352" y="24">Dec</text></g>
+  <text x="8" y="56" font-size="15" font-weight="bold" fill="#8b5a2b">Mule deer</text>
+  <rect x="112" y="64" width="53" height="24" rx="4" fill="#8b5a2b"/><rect x="165" y="64" width="75" height="24" rx="4" fill="#e8590c"/><rect x="240" y="64" width="99" height="24" rx="4" fill="#8b5a2b"/>
+  <g font-size="14" font-weight="bold" fill="#fff" text-anchor="middle"><text x="138" y="81">4 pt</text><text x="202" y="81">any buck</text><text x="290" y="81">4 pt</text></g>
+  <text x="8" y="130" font-size="15" font-weight="bold" fill="#6b4f35">White tail</text>
+  <rect x="112" y="138" width="227" height="24" rx="4" fill="#8a9a6b"/><text x="225" y="155" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">bucks, Sep 10 to Dec 10</text>
+  <rect x="187" y="170" width="53" height="24" rx="4" fill="#4a7fb0"/><text x="182" y="187" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="end">antlerless</text>
+  <rect x="339" y="202" width="25" height="24" rx="4" fill="#2f3a2b"/><text x="334" y="219" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">bow only, either sex</text>
+  <text x="200" y="282" font-size="14" fill="#2f3a2b" text-anchor="middle">MU 3-27 and 3-28 included, page 34 (99%)</text>
+  <text x="200" y="302" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Antlerless mule deer: LEH draw only</text>
+</svg>

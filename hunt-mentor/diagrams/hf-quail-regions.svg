@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Quail and chukar by region. Region 8, Okanagan: quail open 1 October to 30 November, chukar open the same dates. Region 3, Heffley Creek: no quail season at all, chukar open 1 October to 30 November.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="8" y="8" width="188" height="284" rx="10" fill="#dfe6d3"/><rect x="204" y="8" width="188" height="284" rx="10" fill="#efe2d6"/>
+  <text x="102" y="36" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Region 8</text><text x="102" y="56" font-size="14" fill="#2f3a2b" text-anchor="middle">Okanagan</text>
+  <text x="298" y="36" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Region 3</text><text x="298" y="56" font-size="14" fill="#2f3a2b" text-anchor="middle">Heffley Creek</text>
+  <rect x="24" y="80" width="156" height="70" rx="8" fill="#2f6e3b"/><text x="102" y="108" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Quail open</text><text x="102" y="130" font-size="14" fill="#fff" text-anchor="middle">Oct 1 to Nov 30</text>
+  <rect x="220" y="80" width="156" height="70" rx="8" fill="#c0392b"/><text x="298" y="108" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">No quail</text><text x="298" y="130" font-size="14" fill="#fff" text-anchor="middle">no season (95%)</text>
+  <rect x="24" y="170" width="156" height="70" rx="8" fill="#8b5a2b"/><text x="102" y="198" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Chukar open</text><text x="102" y="220" font-size="14" fill="#fff" text-anchor="middle">Oct 1 to Nov 30</text>
+  <rect x="220" y="170" width="156" height="70" rx="8" fill="#8b5a2b"/><text x="298" y="198" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Chukar open</text><text x="298" y="220" font-size="14" fill="#fff" text-anchor="middle">Oct 1 to Nov 30</text>
+  <text x="102" y="272" font-size="14" fill="#2f3a2b" text-anchor="middle">page 68 (99%)</text><text x="298" y="272" font-size="14" fill="#2f3a2b" text-anchor="middle">page 34 (99%)</text>
+</svg>

@@ -50,6 +50,10 @@ checked: 2026-10-01
 - In bitter cold they may sit on the roost all morning and feed in the warm afternoon (65%).
 - Sign: green and white droppings about the size of a cigarette, flattened grass, feathers, tracks like big webbed arrows in mud (Tip).
 
+```video
+commons-canada-goose-family | Geese graze grass like cattle. That is why they love fields.
+```
+
 ## Tactics: field or water
 
 ### Option A: a cut field over decoys
@@ -68,6 +72,11 @@ checked: 2026-10-01
 > [!lean]
 > Option A with permission and a dozen decoys, or Option B on a river bar you can reach with the boat. Scouting beats gear every time.
 
+```video
+yt-goose-tips-manitoba | Scout the field, hide well, call less.
+yt-goose-field-spread | A basic field spread for geese, wind at your back.
+```
+
 ## Calling
 
 - Four basic sounds: the honk, the cluck (short excited honk), the murmur (feeding) and the moan (65%).
@@ -75,6 +84,10 @@ checked: 2026-10-01
 - The biggest mistake is calling too much (65%). A beginner can win with a mouth call used little, or no call at all and good decoys (Tip).
 - Electronic calls and recordings are banned for geese in BC (97%). Flags and hand waved wings are allowed (Tip).
 - One hunter calls the shot. Everyone else stays hidden and still until "take them" (Tip).
+
+```video
+yt-goose-calling-fields | Read the flock and call to match it.
+```
 
 ## Gun, shot size, range
 

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" font-family="sans-serif" role="img" aria-label="Map of the property, Scenario A. Red 100 metre circles surround the house, the barn and the neighbour's house: no hunting or shooting inside them. What is left of the 20 acres is small. The Crown land behind the property line is the real hunting ground. A centre line splits it: you take the left side, your brother the right. Shots only into a hillside backstop.">
+  <rect width="400" height="320" fill="#fffaf0"/>
+  <rect x="0" y="0" width="400" height="130" fill="#c6d1b5"/>
+  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Crown land: the real option</text>
+  <line x1="0" y1="130" x2="400" y2="130" stroke="#2f3a2b" stroke-width="3" stroke-dasharray="10 6"/>
+  <text x="392" y="148" font-size="14" fill="#2f3a2b" text-anchor="end">property line</text>
+  <rect x="0" y="130" width="400" height="190" fill="#efe6cf"/>
+  <g fill="#c0392b" opacity=".18"><circle cx="120" cy="250" r="80"/><circle cx="230" cy="270" r="80"/><circle cx="360" cy="220" r="80"/></g>
+  <g fill="none" stroke="#c0392b" stroke-width="2.5"><circle cx="120" cy="250" r="80"/><circle cx="230" cy="270" r="80"/><circle cx="360" cy="220" r="80"/></g>
+  <g fill="#2f3a2b"><rect x="108" y="240" width="24" height="20"/><polygon points="104,240 120,226 136,240"/><rect x="216" y="260" width="30" height="20"/><rect x="348" y="210" width="24" height="20"/><polygon points="344,210 360,196 376,210"/></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="120" y="282">his house</text><text x="232" y="300">barn</text><text x="360" y="250">neighbour</text></g>
+  <text x="120" y="190" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">100 m: no shooting</text>
+  <line x1="200" y1="40" x2="200" y2="128" stroke="#e8590c" stroke-width="3"/>
+  <circle cx="200" cy="124" r="8" fill="#e8590c"/>
+  <text x="100" y="80" font-size="16" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Your side</text>
+  <text x="300" y="80" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">His side</text>
+  <path d="M40 40 C 120 30, 280 30, 360 40" fill="none" stroke="#6b4f35" stroke-width="6"/>
+  <text x="200" y="52" font-size="14" fill="#6b4f35" text-anchor="middle">hillside backstop</text>
+</svg>

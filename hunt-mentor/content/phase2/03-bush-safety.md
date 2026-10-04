@@ -33,6 +33,10 @@ gr-stop-p | Plan. Stay put, or move only if sure.
 - Use it when lost, disoriented or hurt (75%).
 ```
 
+```video
+yt-hug-a-tree | Lost? Stop. Stay put. Shelter and signal.
+```
+
 ## The trip plan
 
 ```diagram gr-trip-plan
@@ -92,6 +96,10 @@ Phone and satellite device charged
 - October risk: wet from sweat or rain, then sitting still glassing as the sun drops.
 ```
 
+```video
+yt-hypothermia-red-cross | Spot hypothermia early: shivering, fumbling, confusion.
+```
+
 ## Weather and wildfire
 
 ```diagram gr-turnback
@@ -128,6 +136,11 @@ Phone and satellite device charged
 - Cougar: never run, look big, back away slowly, keep eye contact. If attacked, always fight back (75%, WildSafeBC).
 - A gut pile draws bears. Move the meat away from it fast and watch your back.
 - Report a dangerous bear or cougar: RAPP (Report All Poachers and Polluters) 1 877 952 7277, open 24/7, for wildlife and human conflicts where public safety is at risk (synopsis page 2) (95%).
+```
+
+```video
+yt-bear-spray-parks | Remove the clip, aim low, spray a cloud between you and the bear.
+yt-bear-spray-alberta | One minute bear spray demo.
 ```
 
 ## First aid kit with a tourniquet

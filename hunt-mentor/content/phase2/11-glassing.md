@@ -50,6 +50,10 @@ hf-bino-glare | Low sun ahead? Shade the lenses.
 - My lean in full: start with the binoculars you have plus a cheap tripod adapter. Upgrade glass later, once you know what you use.
 ```
 
+```video
+yt-glassing-spotting-scope | Binoculars find the animal, the spotting scope judges it.
+```
+
 ## The grid method
 
 ```anim hf-glass-sweep Slow strips, a third overlap, stop and look at each view.
@@ -66,6 +70,10 @@ hf-bino-glare | Low sun ahead? Shade the lenses.
 5. Overlap each binocular view by about a third so nothing falls in a gap (60%).
 6. Drop down one strip and come back right to left (65%).
 7. Then glass it again. Deer stand up, move and turn as light changes.
+```
+
+```video
+yt-glassing-how-to | Sit, steady your binoculars and search the slope in a grid.
 ```
 
 ## Grid order

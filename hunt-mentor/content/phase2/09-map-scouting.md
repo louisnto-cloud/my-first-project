@@ -88,6 +88,10 @@ checked: 2026-10-02
 - On imagery, benches look like a lighter, flatter patch with scattered trees, under a darker band of timber (Tip).
 ```
 
+```video
+yt-escout-terrain | Find saddles, benches and funnels on the map first.
+```
+
 ## Step 5: edges and water
 
 ```diagram hf-venn

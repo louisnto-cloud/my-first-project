@@ -40,6 +40,10 @@ checked: 2026-10-01
 - Trim, shank, neck: burger and sausage. About a third of the deer by weight (Tip).
 - Heart and liver: fresh within two days (80%, Washington Department of Fish and Wildlife fridge life).
 
+```video
+yt-skin-debone-deer | Skin and debone a deer for the freezer.
+```
+
 ## Equipment
 
 | Tier | What | Price |

@@ -27,6 +27,10 @@ checked: 2026-10-01
 - **Elk or deer?** Elk are 2 to 3 times a mule deer's size, with the big cream rump and the dark neck (Tip).
 - Synopsis: a "bull" is one bearing visible bony antlers, and does not include a calf (page 3) (98%).
 
+```video
+commons-elk-cow-calf | A cow elk and calf on a game trail. No antlers, smaller body.
+```
+
 ## The 6 point rule
 
 ```diagram elk-antlers
@@ -51,6 +55,10 @@ checked: 2026-10-01
 - Roosevelt elk live on Vancouver Island and parts of the coast. Not your hunt (75%).
 - Near Heffley Creek: rare. Treat any elk sighting as a note for the Journal, not a hunt (Tip).
 
+```video
+commons-roosevelt-elk | Roosevelt elk: the coastal elk. Watch how the herd stays together.
+```
+
 ## Rut and bugling
 
 - The rut runs early September to mid October. Bugling can continue into November (80%).
@@ -59,6 +67,10 @@ checked: 2026-10-01
 - Bulls are most vocal at dawn, dusk and through the night (70%).
 - The Region 8 rifle dates, 10 September to 20 October, sit right on the rut. Calling works then (Tip).
 - Cows call too: a short mew or chirp. A cow call pulls bulls as well as a bugle does (hunter consensus) (65%).
+
+```video
+yt-elk-bugle | Bugle step by step: low start, high scream, grunts.
+```
 
 ## A day in the life: late September
 
@@ -111,6 +123,10 @@ checked: 2026-10-01
 
 > [!lean]
 > Not an October hunt from Heffley Creek. If you go to Region 8 in September with your brother, Option B first, Option A once you have heard real bulls.
+
+```video
+yt-elk-cow-call | Learn the cow mew first. It works all season.
+```
 
 ## Rifle, load and range
 
@@ -165,6 +181,10 @@ checked: 2026-10-01
 - Elk hide is thick and holds heat. Skin or quarter quickly in September heat (Tip).
 - [[Edible portions]] rule applies: neck, ribs, four quarters, loins (page 11) (98%).
 - [[Record of Receipt]] when your brother carries your meat (page 14) (90%).
+
+```video
+yt-quarter-elk | Quarter an elk in the field, one side at a time.
+```
 
 ## Beginner mistakes
 

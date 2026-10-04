@@ -88,6 +88,10 @@ sk-aim-3 | Stop one third up the chest.
 - Vital zone with margin: about 20 to 25 cm (8 to 10 in) (75%).
 ```
 
+```video
+yt-shot-placement-deer | Aim at the heart and lungs, just behind the front leg.
+```
+
 ## Moose
 
 ```diagram vitals-moose
@@ -146,6 +150,10 @@ sk-aim-3 | Stop one third up the chest.
 - Shoulder shots: not recommended. Heavy bone, and a hit ahead of the shoulder misses the vitals (85%).
 - Head shots: not recommended. The skull is dense and sloped, bullets glance off (85%).
 - Hair and fat hide the wound. Bears leave thin blood trails, so mark exactly where it stood and where it went (85%).
+```
+
+```video
+yt-shot-placement-bear | Bears are built differently. Aim lower and further forward.
 ```
 
 ## When NOT to shoot

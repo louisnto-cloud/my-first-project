@@ -122,6 +122,10 @@ sk-gut-7 | Wipe dry, prop open.
 - Leave the evidence of sex attached. Check before each cut. Tip.
 ```
 
+```video
+yt-field-dress-huntingsmart | A short, clear walkthrough of gutting a deer.
+```
+
 ## 6. Gutless method (overview)
 
 ```anim sk-gutless-order Front, hind, backstrap, neck, ribs, tenderloin. Flip.

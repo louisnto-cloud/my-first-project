@@ -43,6 +43,10 @@ anim:gr-bore-align | Rifle still. Turn turrets onto the same spot.
 - A shop laser bore sighter does the same job. It still is not a zero (Tip).
 ```
 
+```video
+yt-sight-in-midway | Bore sight first, then fine tune at 100 m.
+```
+
 ## Step 2: 25 m, then 100 m
 
 ```steps Zero in 4 steps
@@ -59,6 +63,10 @@ gr-zero-field | Then shoot from sitting with sticks.
 - Turn the turrets the right number of clicks (next screen).
 - Fire another 3 shot group to confirm. Repeat until centred.
 - Then shoot from sitting and kneeling with sticks. That is how you will shoot a deer (Tip).
+```
+
+```video
+yt-zero-scope-vortex | Zero your scope in three shots with a solid rest.
 ```
 
 ## Click math (1/4 MOA scope)

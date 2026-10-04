@@ -58,6 +58,10 @@ hf-bearing-6 | Going home: add or take off 180.
 6. Back bearing to return: add 180, or subtract 180 if the bearing is over 180 (95%).
 ```
 
+```video
+yt-map-compass-rei | Take a bearing off the map and walk it.
+```
+
 ## Watch it: red in the shed
 
 ```anim hf-red-shed Let the needle settle, then turn the ring.

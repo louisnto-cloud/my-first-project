@@ -40,6 +40,10 @@ g-sooty-hen | Sooty hen, California. Mottled, long dark tail.
 - Sooty grouse is the coast form; the synopsis lists it in Region 2 as "SOOTY (Blue)" (99%).
 - Male: plain slate grey with a pale grey band at the tail tip (80%).
 
+```video
+commons-dusky-grouse | A male dusky (blue) grouse showing off for a hen.
+```
+
 ## Spruce grouse
 
 ```gallery
@@ -76,6 +80,10 @@ hab-quail-vernon | Quail country near Vernon: brushy draws and farm edges.
 - Both sexes carry the teardrop plume; the male's is bigger and black (80%).
 - They live in a [[Covey|covey]] and run before they fly (80%).
 - Legal in Region 8, not in Region 3 (99%, Region 3 page 34 has no quail row).
+
+```video
+commons-quail-male | Male California quail: black face, curled plume.
+```
 
 ## Chukar and pheasant
 

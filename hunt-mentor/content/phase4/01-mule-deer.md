@@ -30,6 +30,10 @@ checked: 2026-10-02
 > [!tip]
 > A buck in October has a thick neck. A doe has a thin neck and a long, narrow face. If you can't see antlers clearly, you have not identified a buck.
 
+```video
+commons-mule-deer-okanagan | Watch the big ears and how often a feeding deer lifts its head.
+```
+
 ## Mule deer or white tail?
 
 ```diagram mule-vs-whitetail
@@ -177,6 +181,10 @@ checked: 2026-10-02
 
 > [!lean]
 > Option B for the first trip. Dawn and dusk on a slope with a long view. Midday, scout with binoculars and learn the trails.
+
+```video
+yt-stalking-mule-deer | Plan the stalk from where you glassed: landmarks, wind, cover.
+```
 
 ## Rifle, load and range
 

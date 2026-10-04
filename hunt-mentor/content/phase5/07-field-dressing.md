@@ -95,6 +95,10 @@ sk-gut-8 | Cool it in shade, off the ground.
 - Gut contents on the meat: wash that spot with clean water and dry it right away. Otherwise do not wash. Water removes the blood glaze that slows bacteria (80%, Alaska Department of Fish and Game).
 ```
 
+```video
+yt-field-dress-deer | Gut a deer step by step, blade up, no punctured gut.
+```
+
 ## Gutless method, step by step
 
 ```steps Gutless in 8 steps
@@ -131,6 +135,10 @@ sk-gutless-8 | Bag every piece. Flip and repeat.
 > Deer within 300 m of the truck or ATV (all terrain vehicle): gut it and drag or carry it whole. Deer a kilometre into the timber, or any moose: gutless, into bags, pack it out. Gutless keeps the paunch away from the meat but you must still reach in for the tenderloins.
 ```
 
+```video
+yt-gutless-vs-gutting | Gutless method: take the meat, leave the guts inside.
+```
+
 ## The gutless order, animated
 
 ```anim sk-gutless-order Six cuts, one side, then flip.
@@ -154,6 +162,10 @@ sk-gutless-8 | Bag every piece. Flip and repeat.
 - A gutted deer can be split in half across the spine behind the ribs for two people to carry. Tip.
 ```
 
+```video
+yt-quarter-pack | Quarter the animal so you can carry it out.
+```
+
 ## Skinning
 
 ```diagram sk-skin-hang
@@ -169,6 +181,10 @@ sk-gutless-8 | Bag every piece. Flip and repeat.
 - Head off at the atlas joint: the first joint behind the skull (80%).
 - Hide on or off? On: insulation in hard cold, protection on the drag. Off: faster cooling. Above freezing on a big animal or a bear, skin it as soon as you can (80%, Washington Department of Fish and Wildlife, Penn State Extension).
 - Skin it before it freezes stiff. A frozen hide is a long job. Tip.
+```
+
+```video
+yt-skin-deer-meatsmith | Skin a hanging deer and keep hair off the meat.
 ```
 
 ## Caping for a mount

@@ -66,6 +66,10 @@ sk-cooler | Into a cooler the same day.
 - No plastic, no tarp on a warm carcass. "Plastic will hold heat in" (80%).
 ```
 
+```video
+yt-meat-care-new-hunters | Cool it fast, keep it clean, keep it dry.
+```
+
 ## Why never a tarp
 
 ```anim sk-tarp-heat Open air lets heat out. A tarp holds it in.
@@ -87,6 +91,10 @@ sk-cooler | Into a cooler the same day.
 - Hang bags apart. Do not stack them, do not put them in garbage bags (80%).
 - Entry: cheesecloth style, about $20 a set. Mid: synthetic reusable, about $60 to $90. Premium: heavy synthetic moose sets. Prices not checked, VERIFY before buying.
 - Wash and reuse. Dry fully before storing. Tip.
+```
+
+```video
+yt-game-bags | Game bags keep flies and dirt off the meat.
 ```
 
 ## Hanging and aging

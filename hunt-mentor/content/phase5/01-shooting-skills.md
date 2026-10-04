@@ -54,6 +54,11 @@ sk-pos-4 | Sticks: two legs to you, one to the deer.
   - Beginner rule: offhand only when the animal is close and there is no time to sit (Tip).
 ```
 
+```video
+yt-field-positions | Get as low and steady as the terrain allows.
+yt-prone-position | Prone is the steadiest field position. Learn it first.
+```
+
 ## Sticks and tripods
 
 ```diagram sk-sticks
