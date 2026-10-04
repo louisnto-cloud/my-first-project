@@ -11,7 +11,7 @@
 import { esc, prefs, units, parseMonths, monthsText, fmtNum, haversine } from './util.js';
 import { SPOT_CATS, spotIconSvg } from './style.js';
 
-export const SPECIES = ['deer', 'moose', 'elk', 'bear', 'grouse', 'duck', 'goose', 'quail', 'chukar', 'sheep', 'goat'];
+export const SPECIES = ['deer', 'moose', 'elk', 'bear', 'grouse', 'duck', 'goose', 'quail', 'turkey', 'chukar', 'sheep', 'goat'];
 export const isSpotLayer = (l) => l.group === 'Spots' && (l.kind === 'spots' || l.type === 'circle' || l.type === 'symbol');
 export const iconHtml = (cat, size) => spotIconSvg(cat, size);
 
