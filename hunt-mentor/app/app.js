@@ -78,7 +78,9 @@
   }
   const hhmm = (dt) => dt ? dt.toLocaleTimeString('en-CA', { timeZone: TZ, hour: 'numeric', minute: '2-digit' }) : 'n/a';
   const addMin = (dt, m) => dt ? new Date(+dt + m * 6e4) : null;
-  window.HuntMentor = { sunEvent, hhmm, TZ }; // shared with the map (Insights)
+  // AI mentor: a claude.ai Artifact page that answers from the owner's own Claude plan (no key in this app)
+  const MENTOR_URL = 'https://claude.ai/artifact/NbQDFag1TnNXfaFBiaQQT1';
+  window.HuntMentor = { sunEvent, hhmm, TZ, mentorUrl: MENTOR_URL }; // shared with the map (Insights)
 
   // ---------- views ----------
   function progress(phase) {
@@ -490,12 +492,45 @@
 
   function notFound() { view.innerHTML = '<div class="card"><h2>Not found</h2><a href="#/">Home</a></div>'; }
 
+  // ---------- Ask the mentor: copy what is on screen, open the mentor in a new tab ----------
+  const askBtn = document.createElement('a');
+  askBtn.className = 'hm-ask'; askBtn.href = MENTOR_URL; askBtn.target = '_blank'; askBtn.rel = 'noopener';
+  askBtn.setAttribute('aria-label', 'Ask the mentor'); askBtn.title = 'Ask the mentor'; askBtn.hidden = true;
+  askBtn.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4Z"/><path d="M9 10h.01M12 10h.01M15 10h.01" stroke-linecap="round" stroke-width="2.6"/></svg>';
+  document.body.appendChild(askBtn);
+  const toastEl = document.createElement('div'); toastEl.className = 'hm-toast'; toastEl.setAttribute('role', 'status'); document.body.appendChild(toastEl);
+  let toastT;
+  const toast = (msg) => { toastEl.textContent = msg; toastEl.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => toastEl.classList.remove('on'), 3500); };
+  function readingText() {
+    const clean = (t) => String(t || '').replace(/\n{3,}/g, '\n\n').trim();
+    if (document.body.classList.contains('map-open')) {
+      const sh = document.querySelector('.hmm-sheet:not([hidden])');
+      const t = sh && sh.querySelector('.hmm-sheet-h h2'), b = sh && sh.querySelector('.hmm-sheet-b');
+      if (b && b.innerText.trim()) return `Hunt Mentor map: ${clean(t && t.textContent) || 'Hunt Map'}\n${clean(b.innerText)}`;
+      const m = window.HuntMap && window.HuntMap.map, c = m && m.getCenter && m.getCenter();
+      return `Hunt Mentor map: Hunt Map${c ? `, centre ${c.lat.toFixed(4)}, ${c.lng.toFixed(4)}` : ''}`;
+    }
+    const st = $('article.step', view);
+    return `Hunt Mentor screen: ${$('#top-title').textContent}\n${clean(st ? st.innerText : view.innerText)}`;
+  }
+  function copyText(text) {
+    const legacy = () => { const ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); let ok = false; try { ok = document.execCommand('copy'); } catch (e) { ok = false; } ta.remove(); return ok; };
+    if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(text).then(() => true, legacy);
+    return Promise.resolve(legacy());
+  }
+  // The link opens the mentor itself; this only copies first. Also used by the map's Insights button.
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('.hm-ask, [data-ask-mentor]'); if (!a) return;
+    copyText(readingText().slice(0, 8000)).then((ok) => toast(ok ? "Copied what you're reading. Tap Paste in the mentor." : 'Opening the mentor. Copy did not work, so type your question there.'));
+  });
+
   // ---------- router ----------
   function route() {
     document.body.classList.remove('field');
     $('#sheet').hidden = true;
     const h = location.hash.replace(/^#\/?/, '').split('/');
     const [a, b, c] = h;
+    askBtn.hidden = !(a === 's' || a === 'map');
     if (a === 'map') return mapView(h.slice(1).join('/'));
     leaveMap();
     if (!a) home();

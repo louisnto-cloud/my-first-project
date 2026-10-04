@@ -7,6 +7,7 @@ import { esc, compass8 } from './util.js';
 import * as layers from './layers.js';
 
 let H, map;
+const MENTOR = () => (window.HuntMentor && window.HuntMentor.mentorUrl) || ''; // app.js MENTOR_URL
 const BANNER = '<div class="hmm-banner">Study aid only. The official regulations are the law.</div>';
 
 export default function init(api) {
@@ -79,7 +80,7 @@ export async function insightsAt(p, name) {
     <h3 class="hmm-h">Wind and weather</h3><div data-out="wx"><p class="hmm-muted">Getting the forecast</p></div>
     <h3 class="hmm-h">${n ? `Rules for Region ${esc(n)}` : 'Rules for this area'}</h3>
     ${n ? regionRows(n, mu.id) : '<p class="hmm-muted">Once the MU is found, the rules for its region show here.</p>'}
-    <div class="hmm-btnrow">${rb ? `<a class="hmm-btn2" href="#/s/${esc(rb.id)}">${esc(rb.title)}</a>` : ''}<a class="hmm-btn2" href="#/field/light">Full legal light table</a><a class="hmm-btn2" href="#/sources">All rules data</a></div>`;
+    <div class="hmm-btnrow">${rb ? `<a class="hmm-btn2" href="#/s/${esc(rb.id)}">${esc(rb.title)}</a>` : ''}<a class="hmm-btn2" href="#/field/light">Full legal light table</a><a class="hmm-btn2" href="#/sources">All rules data</a>${MENTOR() ? `<a class="hmm-btn2" data-ask-mentor href="${esc(MENTOR())}" target="_blank" rel="noopener">Ask the mentor</a>` : ''}</div>`;
   wind(body, lng, lat);
 }
 

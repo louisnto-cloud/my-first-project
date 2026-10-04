@@ -167,3 +167,14 @@ label.f { display: block; font-weight: 700; margin: 12px 0 4px; font-size: 15px;
 body.map-open { overflow: hidden; padding-bottom: 0; }
 body.map-open > .top, body.map-open > .banner, body.map-open > main, body.map-open > .tabs { display: none; }
 .tabs a span svg { vertical-align: middle; }
+
+/* Ask the mentor: small floating button on session screens and the map, plus a toast */
+.hm-ask { position: fixed; right: 12px; bottom: calc(72px + env(safe-area-inset-bottom)); z-index: 6; width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; background: var(--card); color: var(--accent); border: 1px solid var(--line); box-shadow: 0 2px 8px rgba(0,0,0,.18); }
+.hm-ask[hidden] { display: none; }
+body.map-open .hm-ask { z-index: 31; bottom: auto; top: calc(env(safe-area-inset-top) + 146px); right: 13px; }
+body.map-open:has(.hmm-sheet:not([hidden]), .hmm-search:not([hidden]), .hmm-fpanel) .hm-ask { display: none; } /* panels carry their own Ask button (Insights) */
+.hm-toast { position: fixed; left: 50%; bottom: calc(128px + env(safe-area-inset-bottom)); transform: translate(-50%, 8px); z-index: 40; max-width: calc(100% - 32px); width: max-content;
+  background: var(--ink); color: var(--bg); padding: 10px 14px; border-radius: 10px; font-size: 15px; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; }
+.hm-toast.on { opacity: 1; transform: translate(-50%, 0); }
+main:has(article.step) { padding-bottom: 64px; }
