@@ -98,3 +98,53 @@ mule-deer-doe | Doe, front view. Big ears, black tipped tail.
 - Maps: name the map (Map C7) and give its boundary in the synopsis words. Never invent a boundary.
 - Screen 1 of every rule book session starts with `> [!warn] Study aid only. The official regulations are the law.` and the edition date.
 - Certainty: 99% for a direct read, 85 to 95% for your reading of a rule (say "my reading").
+
+## Visual learning blocks (2026-10-04, owner: "too word heavy, more pictures, step by step, diagrams, grids, charts, videos")
+Goal per screen: picture first, then at most 3 short lines. Detail goes behind a `more` tap. Never delete a rule, number, source or certainty: move it into `more`.
+
+### Step by step slides
+````
+```steps Gut a deer in 6 steps
+gut-1 | Roll the deer on its back, head uphill.
+gut-2 | Cut from the pelvis to the ribs, blade up.
+photo:muledeer_buck_side | Real photo frames work too.
+anim:stalk-wind | An animation can be a frame.
+```
+````
+- One frame per line: `diagram-id | caption`. Diagram = `diagrams/<id>.svg`. `photo:<id>` uses the photo manifest. `anim:<id>` uses `diagrams/anim/<id>.svg`.
+- 3 to 8 frames. Caption: one short line, an action ("Do X"), under about 12 words.
+- Each frame SVG: viewBox 400 x 300 (landscape), same style as `diagrams/glassing-grid.svg`.
+
+### Animations ("short videos" we draw)
+````
+```anim stalk-wind Keep the wind in your face.
+```
+````
+- File `diagrams/anim/<id>.svg`. Model: `diagrams/anim/stalk-wind.svg`.
+- SMIL only (`<animate>`, `<animateMotion>`, `<animateTransform>`, `<set>`). No CSS `<style>`, no `@keyframes`, no script (inline SVG CSS leaks into the whole page).
+- Any `id` inside the SVG must be prefixed with the file id (`sw-path`), because SVGs sit inline in one page.
+- 4 to 10 seconds, end on a clear final state (`fill="freeze"`), the Replay button restarts it. Loops only for wind or water.
+- `role="img"` and an `aria-label` that tells the whole story in words.
+
+### Videos
+````
+```video
+yt-field-dress-deer | How to gut a deer, step by step.
+commons-mule-deer-walk | A mule deer walking: watch the stiff legged bounce.
+```
+````
+- Manifest `data/videos/*.json`: `{ "id", "kind": "youtube"|"commons", "title", "author", "url" (YouTube watch link), "file" (Commons direct media URL), "source" (Commons file page), "licence", "minutes", "caption", "checked", "why" }`.
+- YouTube: link card only (no embed, no thumbnail copied). Verify each link with the oEmbed endpoint and copy title and author exactly. Prefer government, BC Wildlife Federation, conservation groups, well known hunting educators.
+- Commons: free licence only (PD, CC0, CC BY, CC BY-SA), credit shown. Streams online, never copied into the repo.
+
+### More (tap to open)
+````
+```more the full legal text
+- Long detail, quotes, extra numbers.
+```
+````
+- Markdown inside (lists, tables, callouts). No nested ``` fences inside `more`.
+
+### Grids and charts
+- Use Markdown tables for comparisons (short cells, 2 to 5 columns).
+- Bar charts, timelines, flowcharts: hand drawn SVG in `diagrams/`, big labels (14 px or more at 400 wide), colours from the existing diagrams (#2f3a2b ink, #e8590c orange, #4a7fb0 water, #8a9a6b sage, #8b5a2b brown, #fffaf0 paper).

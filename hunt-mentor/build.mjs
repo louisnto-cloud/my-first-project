@@ -143,6 +143,56 @@ function fenced(kind, arg, body, ctx) {
     }).filter(Boolean);
     return figs.length ? `<div class="gallery">${figs.join('')}</div>` : '';
   }
+  if (kind === 'steps') {
+    // ```steps Title```, one "diagram-id | caption" per line (or "photo:id | ..." or "anim:id | ...") -> swipe slides
+    const frames = body.split('\n').map((l) => l.trim()).filter(Boolean).map((l, n, all) => {
+      const [ref, ...c] = l.split('|'); const cap = c.join('|').trim(); const r = ref.trim();
+      let media = '';
+      if (r.startsWith('photo:')) {
+        const id = r.slice(6); const ph = PHOTOS[id];
+        if (!ph || !fs.existsSync(path.join(ROOT, 'photos', `${id}.jpg`))) { ctx.missingPhotos.push(id); media = DRAFTS ? `<p class="verify">Photo missing: ${esc(id)}</p>` : ''; }
+        else media = `<img src="__PHOTO__${id}__" alt="${esc(cap)}" loading="lazy"><span class="credit">Photo: ${esc(ph.author || 'unknown')}, ${esc(ph.licence || '')}</span>`;
+      } else {
+        const anim = r.startsWith('anim:'); const id = anim ? r.slice(5) : r;
+        const file = path.join(ROOT, 'diagrams', anim ? 'anim' : '', `${id}.svg`);
+        if (!fs.existsSync(file)) { ctx.missing.push(`${anim ? 'anim/' : ''}${id}.svg`); media = '<p class="verify">Diagram missing</p>'; }
+        else media = fs.readFileSync(file, 'utf8');
+      }
+      return `<figure class="step-frame">${media}<figcaption><b>${n + 1}.</b> ${inline(cap)}</figcaption></figure>`;
+    });
+    const n = frames.length;
+    return `<div class="steps" data-n="${n}"><div class="steps-head"><b>${inline(arg || 'Step by step')}</b><span class="steps-count">1 of ${n}</span></div>` +
+      `<div class="steps-track">${frames.join('')}</div>` +
+      `<div class="steps-nav"><button class="steps-prev" aria-label="Back">‹ Back</button><span class="steps-dots">${'<i></i>'.repeat(n)}</span><button class="steps-next" aria-label="Next">Next ›</button></div></div>`;
+  }
+  if (kind === 'anim') {
+    // ```anim id [caption]``` -> animated SVG (SMIL) from diagrams/anim/, with a replay button
+    const [id, ...rest] = arg.split(/\s+/);
+    const file = path.join(ROOT, 'diagrams', 'anim', `${id}.svg`);
+    if (!fs.existsSync(file)) { ctx.missing.push(`anim/${id}.svg`); return '<p class="verify">Animation missing</p>'; }
+    const cap = rest.join(' ') || body.trim();
+    return `<figure class="diagram anim">${fs.readFileSync(file, 'utf8')}<figcaption>${cap ? inline(cap) + ' ' : ''}<button class="anim-replay">↻ Replay</button></figcaption></figure>`;
+  }
+  if (kind === 'video') {
+    // ```video id id``` and/or one "id | caption" per line -> data/videos/*.json manifest (Commons files or YouTube links)
+    const specs = [...arg.split(/\s+/).filter(Boolean).map((id) => ({ id })),
+      ...body.split('\n').map((l) => l.trim()).filter(Boolean).map((l) => { const [id, ...c] = l.split('|'); return { id: id.trim(), caption: c.join('|').trim() }; })];
+    return specs.map(({ id, caption }) => {
+      const v = VIDEOS[id];
+      if (!v) { ctx.missingVideos.push(id); return DRAFTS ? `<p class="verify">Video missing: ${esc(id)}</p>` : ''; }
+      const cap = caption || v.caption || v.title;
+      if (v.kind === 'youtube') {
+        return `<a class="yt-card" href="${esc(v.url)}" target="_blank" rel="noopener"><span class="yt-play">▶</span><span class="yt-text"><b>${esc(v.title)}</b>` +
+          `<small>${inline(cap === v.title ? '' : cap)}${cap === v.title ? '' : '<br>'}${esc(v.author || '')}, YouTube${v.minutes ? `, ${v.minutes} min` : ''}. Needs internet.</small></span></a>`;
+      }
+      return `<figure class="video"><video controls preload="none" playsinline src="${esc(v.file)}"${v.poster ? ` poster="${esc(v.poster)}"` : ''}></video>` +
+        `<figcaption>${inline(cap)} <span class="credit">Video: ${esc(v.author || 'unknown')}, ${esc(v.licence || 'licence VERIFY')}, <a href="${esc(v.source)}" target="_blank" rel="noopener">source</a>. Needs internet.</span></figcaption></figure>`;
+    }).join('');
+  }
+  if (kind === 'more') {
+    // ```more Label``` + Markdown body -> tap to open details
+    return `<details class="more"><summary>More: ${inline(arg || 'details')}</summary>${blocks(body, ctx)}</details>`;
+  }
   if (kind === 'regs') {
     // ```regs key  -> rendered from data/regs.json at runtime
     return `<div class="regs" data-regs="${arg}"></div>`;
@@ -164,6 +214,19 @@ function loadPhotos() {
   return out;
 }
 const PHOTOS = loadPhotos();
+function loadVideos() {
+  const dir = path.join(ROOT, 'data', 'videos');
+  const out = {};
+  if (!fs.existsSync(dir)) return out;
+  for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.json')).sort()) {
+    for (const v of JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'))) {
+      if (out[v.id]) console.warn(`Duplicate video id ${v.id} in ${f}`);
+      out[v.id] = v;
+    }
+  }
+  return out;
+}
+const VIDEOS = loadVideos();
 function photoFigure(ph, caption) {
   const credit = `Photo: ${esc(ph.author || 'unknown')}, ${esc(ph.licence || 'licence VERIFY')}` +
     (ph.source ? `, <a href="${esc(ph.source)}" target="_blank" rel="noopener">source</a>` : '');
@@ -184,7 +247,7 @@ function screenUnits(md) {
     if (fence) {
       const ls = [lines[i++]]; while (i < lines.length && !lines[i].startsWith('```')) ls.push(lines[i++]); if (i < lines.length) ls.push(lines[i++]);
       const k = fence[1] || '';
-      const w = k === 'quiz' ? 0 : k === 'diagram' ? 50 : k === 'photo' ? 40 : k === 'gallery' ? 90 : k === 'checklist' ? ls.length * 8 : k === 'regs' ? 60 : 40;
+      const w = k === 'quiz' ? 0 : k === 'diagram' ? 50 : k === 'steps' ? 70 : k === 'anim' ? 50 : k === 'video' ? 30 : k === 'more' ? 15 : k === 'photo' ? 40 : k === 'gallery' ? 90 : k === 'checklist' ? ls.length * 8 : k === 'regs' ? 60 : 40;
       push(ls, w); continue;
     }
     if (/^#{3,4}\s/.test(l)) { push([lines[i++]], 2, true); continue; }
@@ -236,7 +299,7 @@ function loadSessions() {
   walk(dir);
   const sessions = files.map((f) => {
     const { meta, body } = frontMatter(fs.readFileSync(f, 'utf8'));
-    const ctx = { id: meta.id, quiz: [], checklists: [], missing: [], missingPhotos: [] };
+    const ctx = { id: meta.id, quiz: [], checklists: [], missing: [], missingPhotos: [], missingVideos: [] };
     const parts = body.split(/^## /m);
     const steps = [];
     const intro = parts.shift().trim();
@@ -246,8 +309,9 @@ function loadSessions() {
       const nl = p.indexOf('\n');
       addScreen(p.slice(0, nl).trim(), p.slice(nl + 1));
     }
-    const text = body.replace(/```[\s\S]*?```/g, '').replace(/[#>*`|[\]]/g, ' ').replace(/\s+/g, ' ').toLowerCase();
+    const text = body.replace(/```(?!more)[\s\S]*?```/g, '').replace(/[#>*`|[\]]/g, ' ').replace(/\s+/g, ' ').toLowerCase();
     if (ctx.missingPhotos.length) console.warn(`Photos missing in ${meta.id}: ${ctx.missingPhotos.join(', ')}`);
+    if (ctx.missingVideos.length) console.warn(`Videos missing in ${meta.id}: ${ctx.missingVideos.join(', ')}`);
     return { ...meta, phase: +meta.phase, num: +meta.num, minutes: +meta.minutes, steps, quiz: ctx.quiz, checklists: ctx.checklists, missing: ctx.missing, text };
   });
   sessions.sort((a, b) => a.phase - b.phase || a.num - b.num);
@@ -285,8 +349,8 @@ function lint(sessions) {
     let fence = null; // kind of the fenced block we are inside, if any
     fs.readFileSync(f, 'utf8').split('\n').forEach((l, n) => {
       if (l.startsWith('```')) { fence = fence === null ? (l.slice(3).trim().split(/\s+/)[0] || 'code') : null; return; }
-      if (fence && fence !== 'checklist' && fence !== 'gallery') return;
-      if (fence === 'gallery') l = l.replace(/^\s*[\w-]+\s*\|?/, '');
+      if (fence && !['checklist', 'gallery', 'steps', 'video', 'more'].includes(fence)) return;
+      if (['gallery', 'steps', 'video'].includes(fence)) l = l.replace(/^\s*[\w:-]+\s*\|?/, '');
       if (/^---$/.test(l) || /^\|[-| :]+\|$/.test(l)) return;
       const prose = l.replace(/\]\([^)]*\)/g, ']').replace(/https?:\/\/\S+/g, '').replace(/`[^`]*`/g, '').replace(/\{[^}]*\}/g, '').replace(/"[^"]*"/g, '');
       if (/—/.test(prose)) problems.push(`${rel}:${n + 1} em dash`);
