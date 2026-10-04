@@ -329,3 +329,50 @@ input:disabled + .hmm-switch { opacity: 0.4; }
 .hmm-sheet.withbar ~ .hmm-bar, .hmm-bar.over { z-index: 7; }
 .hmm-sheet.withbar .hmm-sheet-b { padding-bottom: calc(var(--sb) + 96px); }
 @media (min-width: 700px) { .hmm-sheet.withbar .hmm-sheet-b { padding-bottom: 22px; } }
+
+/* Go & Track (tools-track.js) */
+.hmm-bar button.hmk-rec { position: relative; color: #d62828; font-weight: 800; font-variant-numeric: tabular-nums; }
+.hmm-bar button.hmk-rec.paused { color: inherit; }
+.hmk-dot { position: absolute; top: 6px; right: calc(50% - 22px); width: 11px; height: 11px; border-radius: 50%; background: #d62828; border: 2px solid var(--hmm-bar); animation: hmk-pulse 1.4s ease-in-out infinite; }
+.hmk-rec.paused .hmk-dot { background: var(--hmm-muted); animation: none; }
+@keyframes hmk-pulse { 50% { opacity: 0.35; } }
+@media (prefers-reduced-motion: reduce) { .hmk-dot { animation: none; } }
+.hmk-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.hmk-stats b { font-size: 20px; font-variant-numeric: tabular-nums; }
+.hmk-back { background: var(--hmm-soft); border-radius: 12px; padding: 10px 12px; margin: 8px 0; font-size: 15px; }
+.hmk-gps { font-size: 13px; margin: 6px 0; }
+.hmk-warn b { display: block; }
+.hmk-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0 8px; }
+.hmk-btns > button { width: 100%; justify-content: center; }
+.hmk-wide { width: 100%; justify-content: center; }
+.hmk-lbl { display: block; font-weight: 700; font-size: 14px; margin: 10px 0 4px; }
+.hmk-in { width: 100%; min-height: 44px; box-sizing: border-box; padding: 0 12px; border-radius: 12px; border: 1.5px solid var(--hmm-line); background: var(--hmm-card); color: var(--hmm-ink); font: inherit; font-size: 16px; }
+.hmk-row { display: flex; flex-direction: column; align-items: flex-start; width: 100%; min-height: 52px; padding: 6px 12px; margin: 0 0 6px; border: 1.5px solid var(--hmm-line);
+  border-radius: 12px; background: var(--hmm-card); color: var(--hmm-ink); font: inherit; text-align: left; }
+.hmk-row small { color: var(--hmm-muted); font-size: 13px; }
+
+/* Weather, wind and Insights (tools-wind.js, tools-insights.js) */
+.hmm-btn.on { color: var(--hmm-accent); box-shadow: var(--hmm-shadow), inset 0 0 0 2px var(--hmm-accent); }
+.hmw-arr { flex: none; color: #0b4f8a; transition: transform 0.2s; }
+.hmw-now { display: flex; align-items: center; gap: 14px; padding: 12px; margin: 8px 0; border-radius: 14px; background: var(--hmm-soft); }
+.hmw-now > div { display: flex; flex-direction: column; gap: 3px; min-width: 0; font-size: 15px; }
+.hmw-big { font-size: 18px; }
+.hmw-days { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+.hmw-day { display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 1.5px solid var(--hmm-line); border-radius: 14px; font-size: 14px; }
+.hmw-day > b { font-size: 16px; }
+.hmw-t { font-size: 18px; font-weight: 800; }
+.hmw-t small { font-size: 14px; font-weight: 600; color: var(--hmm-muted); }
+.hmw-w { display: flex; align-items: center; gap: 6px; }
+.hmw-stale { background: var(--hmm-warn-bg); border-radius: 10px; padding: 8px 12px; font-size: 14px; margin: 8px 0; }
+.hmw-list { margin: 8px 0; padding-left: 20px; font-size: 15px; }
+.hmw-list li { margin: 4px 0; }
+.hmw-tip { margin: 10px 0; padding: 10px 12px; border-left: 4px solid #7a8f2e; background: var(--hmm-soft); border-radius: 8px; font-size: 15px; }
+.hmw-hours { display: flex; gap: 8px; overflow-x: auto; padding: 4px 2px 8px; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; }
+.hmw-hours > div { flex: none; width: 62px; min-height: 44px; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 4px;
+  border: 1.5px solid var(--hmm-line); border-radius: 12px; scroll-snap-align: start; font-size: 14px; }
+.hmw-hours small { font-size: 12px; color: var(--hmm-muted); }
+.hmw-reg { padding: 10px 0; border-bottom: 1px solid var(--hmm-line); }
+.hmw-reg p { margin: 4px 0; font-size: 15px; }
+.hmw-reg small { font-size: 13px; color: var(--hmm-muted); }
+:root[data-theme="dark"] .hmw-arr { color: #7cc0ff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]):not([data-theme="sun"]) .hmw-arr { color: #7cc0ff; } }

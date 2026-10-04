@@ -31,7 +31,7 @@ import * as search from './search.js';
 import * as layers from './layers.js';
 import * as offline from './offline.js';
 
-const PLUGINS = []; // for example './tools.js', './track.js'
+const PLUGINS = ['./tools-main.js', './tools-track.js', './tools-wind.js', './tools-insights.js']; // for example './tools.js', './track.js'
 const DEFAULT_VIEW = { lng: -120.2687, lat: 50.8581, zoom: 12, bearing: 0, pitch: 0 }; // Heffley Creek base (SPOTS.md)
 
 const mlcontour = globalThis.mlcontour;
@@ -206,7 +206,7 @@ const defaultBar = {
 };
 
 function comingNext(title, text, bar) {
-  openSheet({ title, bar, html: `<p class="hmm-soon">Coming next</p><p>${esc(text)}</p>` });
+  openSheet({ title, bar, html: `<p>${esc(text)}</p><p class="hmm-muted">Still loading this tool. Try again in a moment.</p>` }); // shown only until the tools plugins load
 }
 
 /** Round map button for other modules. */

@@ -500,9 +500,12 @@ body.map-open > .top, body.map-open > .banner, body.map-open > main, body.map-op
         <div class="btn-row"><button class="btn" id="exp">Export backup<\/button><label class="btn">Import<input type="file" id="imp" accept=".json" hidden><\/label><\/div><\/div>`;
     view.querySelectorAll('#theme button').forEach((b) => b.onclick = () => { S.settings.theme = b.dataset.v; save(); applyTheme(); more(); });
     $('#fh').onchange = (e) => { S.settings.firstHunt = e.target.value; save(); };
-    $('#exp').onclick = () => {
+    // Hunt Map user data (waypoints, lines, areas, tracks, photos) lives in IndexedDB (map/store.js): added as mapData
+    const mapStore = () => import('./map/store.js').catch(() => null);
+    $('#exp').onclick = async () => {
       let mp = null; try { mp = JSON.parse(localStorage.getItem(MAP_KEY) || 'null'); } catch (e) { mp = null; }
-      download(`hunt-mentor-backup-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(Object.assign({}, S, mp ? { mapPrefs: mp } : {})), 'application/json');
+      let md = null; try { const m = await mapStore(); if (m) md = await m.exportAll(); } catch (e) { md = null; }
+      download(`hunt-mentor-backup-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(Object.assign({}, S, mp ? { mapPrefs: mp } : {}, md ? { mapData: md } : {})), 'application/json');
     };
     $('#imp').onchange = (e) => {
       const f = e.target.files[0]; if (!f) return;
@@ -510,7 +513,11 @@ body.map-open > .top, body.map-open > .banner, body.map-open > main, body.map-op
         try {
           const o = JSON.parse(t);
           if (o.mapPrefs) { try { localStorage.setItem(MAP_KEY, JSON.stringify(o.mapPrefs)); } catch (e) { /* storage blocked */ } delete o.mapPrefs; }
-          S = Object.assign({}, blank, o); save(); applyTheme(); alert('Backup restored.'); more();
+          const md = o.mapData; delete o.mapData;
+          S = Object.assign({}, blank, o); save(); applyTheme();
+          const done = (n) => { alert(n ? "Backup restored, including your map items." : 'Backup restored.'); more(); };
+          if (md) mapStore().then((m) => (m ? m.importAll(md) : 0)).then((n) => { const T = window.HuntMap && window.HuntMap.tools; if (T) T.refresh(); done(n); }, () => { alert('Backup restored, but the map items could not be saved on this phone.'); more(); });
+          else done(0);
         } catch (err) { alert('That file is not a Hunt Mentor backup.'); }
       });
     };
