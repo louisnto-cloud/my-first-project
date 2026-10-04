@@ -62,7 +62,7 @@ checked: 2026-10-01
 
 ### Region 1 Vancouver Island (page 21)
 - "TURKEY | 1-1 to 1-7 | Any Turkey | No Closed Season | NBL" (98%). NBL means no bag limit (98%).
-- Baiting or feeding turkeys is unlawful in Region 1 (90%).
+- Region 1: no baiting or feeding turkeys within 200 m of a dwelling, school yard or playground (99%, page 20). Region 4 has a region wide ban (99%, Region 4 pages).
 
 ## Bearded bird rules and the rest of the law
 

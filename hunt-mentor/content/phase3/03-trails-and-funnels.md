@@ -64,7 +64,7 @@ checked: 2026-10-01
 - Contour lines close together: steep. A ridge line with a dip in it: a saddle. A wide gap between lines on a hillside: a bench (85%).
 - Satellite view shows cut blocks, burns, hayfields and timber edges. Mark each, then mark the narrowest strip of cover between them (Tip).
 - Walk the ground in daylight, at midday when deer are bedded, and from downwind of the bedding (Tip).
-- Trail cameras work on funnels. A wireless camera is illegal for hunting from 1 August to 10 December except in Region 1 (95%). Use a memory card camera (85%, interpretation).
+- Trail cameras work on funnels. A wireless camera is illegal for hunting from 1 August to 10 December in every region except Region 1, where wireless cameras for hunting are banned all year (page 20) (95%). Use a memory card camera (85%, interpretation).
 - Drones are illegal on a hunting expedition (95%).
 
 ## Rules that touch this session
@@ -73,7 +73,7 @@ checked: 2026-10-01
 > Study aid only. The official regulations are the law.
 
 - You may not hunt on cultivated land, or on Crown land under a grazing lease while livestock are on it, without the consent of the owner, lessee or occupant (95%). Synopsis page 12, item 53.
-- It is unlawful to use a wireless camera for the purposes of hunting from 1 August to 10 December, except in Region 1 (99%). Synopsis page 11, item 30 (2 October 2026 edition).
+- It is unlawful to use a wireless camera for the purposes of hunting from 1 August to 10 December in every region except Region 1, where wireless cameras for hunting are banned all year (99%, page 20). Synopsis page 11, item 30 (2 October 2026 edition).
 - It is unlawful to operate or possess a drone on a hunting or trapping expedition (99%). Synopsis page 11, item 36 (2 October 2026 edition).
 - Region 3: all motor vehicles except snowmobiles are prohibited above 1,700 m elevation except on existing roads and trails (95%). Region 3 synopsis page 33. Many good saddles are above that line; walk in.
 - Ask yourself where the deer will fall. A trail on the far side of a creek can mean a wet pack out (Tip).
@@ -107,6 +107,6 @@ checked: 2026-10-01
   {"q": "Morning sit on a hillside trail. Where do you set up?", "options": ["Below the trail", "Above or beside the trail, so rising air carries your scent away", "Right on the trail"], "answer": 1, "why": "Morning thermals rise. Sit above or to the side so your scent climbs away from deer moving up to bed."},
   {"q": "Which of these is a pinch point?", "options": ["A wide open hayfield", "A creek crossing with low banks where several trails meet", "A north facing timber slope"], "answer": 1, "why": "A pinch point is the narrowest spot deer must pass. Crossings, gaps, gates and field corners are classics."},
   {"q": "Your planned stand faces the wrong wind today. Best move?", "options": ["Sit anyway, deer are not that smart", "Use your B spot for this wind", "Walk through the feed to a new spot"], "answer": 1, "why": "Plan an A and a B spot for each wind. Forcing a bad wind educates deer and ruins the spot."},
-  {"q": "A wireless trail camera on a funnel in October in Region 3?", "options": ["Legal", "Illegal for hunting from 1 August to 10 December outside Region 1", "Legal only on private land"], "answer": 1, "why": "The synopsis bans wireless cameras for hunting from 1 August to 10 December except in Region 1. Use a memory card camera."}
+  {"q": "A wireless trail camera on a funnel in October in Region 3?", "options": ["Legal", "Illegal for hunting from 1 August to 10 December, and all year in Region 1", "Legal only on private land"], "answer": 1, "why": "The synopsis bans wireless cameras for hunting from 1 August to 10 December in every region except Region 1, where wireless cameras for hunting are banned all year (page 20). Use a memory card camera."}
 ]
 ```
