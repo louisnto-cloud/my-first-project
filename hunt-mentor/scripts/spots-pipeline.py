@@ -173,6 +173,13 @@ MIN_SCORE = {'deer': 7, 'moose': 4, 'duck': 4, 'grouse': 2, 'quail': 4, 'camp': 
 SPACING_M = 800            # no two spots of the same species and category closer than this
 SELECT_RADIUS = {'drive': 1500, 'atv': 1500, 'walk': 2000, 'backcountry': 3000, 'camp': 3000}
 CAPS = {'deer': 220, 'moose': 100, 'duck': 180, 'grouse': 120, 'quail': 300, 'camp': 60, 'elk': 120, 'turkey': 80}   # per area and category: best first
+AREA_CAPS = {'F': {'grouse': 80, 'moose': 60}}   # area F size budget (about 35 MB): fewer grouse routes and moose spots
+
+
+def cap_for(area, sp):
+    return AREA_CAPS.get(area, {}).get(sp, CAPS[sp])
+
+
 TILE_M = 15000             # caps are spread round robin over 15 km tiles (balanced_cap)
 CUT_AGE = (5, 20)          # cutblock age that feeds deer, moose, bear, grouse
 BURN_YEARS = (2015, 2023)  # recent burns for scoring
@@ -1044,6 +1051,7 @@ def step_layers(cache, areas):
             months = winter_months(MIG_KEY.get(sp), SPECIES_WINTER_MONTHS.get(sp, [11, 12, 1, 2, 3, 4]))
             pp = [dict({k: v for k, v in p[i].items() if k != 'sps'}, months=months, monthsKey=months_key(months)) for i in idx]
             gg = g[idx]
+            tol, fpm = 15, False
             if len(idx) > 5000:   # Region 4 winter ranges come in tens of thousands of small pieces: dissolve per UWR number for the map
                 groups = {}
                 for k, x in zip(range(len(idx)), pp):
@@ -1052,12 +1060,13 @@ def step_layers(cache, areas):
                 for u, ks in groups.items():
                     d = shapely.union_all(shapely.buffer(gg[ks], 20)).buffer(-20)
                     for part in getattr(d, 'geoms', [d]):
-                        if part.area >= 20000:   # under 2 ha left out of the map layer (spots still use every piece)
+                        if part.area >= 50000:   # under 5 ha left out of the map layer (spots still use every piece)
                             gg2.append(part)
                             pp2.append(dict(pp[ks[0]], unit='several', ha=round(part.area / 1e4, 1), species=label))
                 log(f'  {lid} {a}: {len(idx)} pieces dissolved into {len(gg2)} polygons for the map')
                 gg, pp = np.array(gg2, dtype=object), pp2
-            emit(info, lid, a, adir / lid, gg, pp, 15, adate('uwr'), newest(pp, 'approved'))
+                tol, fpm = 30, True   # size budget (about 35 MB for area F): coarser outline, PMTiles
+            emit(info, lid, a, adir / lid, gg, pp, tol, adate('uwr'), newest(pp, 'approved'), force_pm=fpm)
         # young cutblocks (25 years or less)
         g, p, m = ca['cutblocks']
         idx = [i for i, x in enumerate(p) if x['age'] <= 25]
@@ -1612,7 +1621,7 @@ class AreaContext:
             # (MU 4-23, east of Sparwood). Ends from hwy3_d14_range (estimate).
             if '3' in nums and self.area in R4_AREAS:
                 r = self._hwy3_d14_range()
-                if r and r[0] <= lon <= r[1] and lat > 49.6:
+                if r and r[0] - 0.01 <= lon <= r[1] + 0.01 and lat > 49.6:
                     nh.append(gi)
                     self.no_hunt_text.add('Hwy 3 from Loop Bridge to the Alexander Creek bridge (Map D14)')
             # Hwy 5 (Coquihalla) between Hope and the Hwy 1 and 5 junction at Kamloops: single projectile ban 400 m
@@ -1623,25 +1632,30 @@ class AreaContext:
         return nhz, spz
 
     def _hwy3_d14_range(self):
-        """Longitude range of the Map D14 strip: from the east edge of Sparwood (Loop Bridge is not in the data; assumption)
-        to where Alexander Creek (OpenStreetMap) meets Hwy 3."""
+        """Longitude range of the Map D14 strip. East end: the easternmost Hwy 3 crossing of Alexander Creek (FWA streams).
+        West end: Loop Bridge is not in the data; assumption: the westernmost Hwy 3 bridge over Michel Creek east of Sparwood
+        (lon -114.88), which errs on the side of a longer no hunting strip."""
         if hasattr(self, '_d14'):
             return self._d14
         self._d14 = None
         g, p, _ = self.ca['dra']
         h3 = [gi for gi, pi in zip(g, p) if '3' in hwy_numbers(pi.get('hwy'))]
-        ac = load_osm(self.cache, 'alexander_creek')
-        sp = [i for i, x in enumerate(self.cities[1]) if 'Sparwood' in (x['name'] or '')]
-        if not h3 or ac is None or not sp:
+        sg, sp_, _ = self.ca['streams']
+        if not h3:
             return None
         h3u = shapely.union_all(h3)
-        x = shapely.intersection(h3u, ac.buffer(30))
-        if x.is_empty:
+
+        def cross(name):
+            st = [sg[i] for i, x in enumerate(sp_) if (x['name'] or '') == name]
+            if not st:
+                return []
+            x = shapely.intersection(h3u, shapely.union_all(st))
+            return [float(xy_to_lonlat(*pt.coords[0])[0]) for pt in getattr(x, 'geoms', [x]) if not pt.is_empty and pt.geom_type == 'Point']
+        ac = cross('Alexander Creek')
+        mc = [lon for lon in cross('Michel Creek') if lon > -114.88]
+        if not ac or not mc:
             return None
-        e_lon = float(xy_to_lonlat(*shapely.centroid(x).coords[0])[0])
-        b = shapely.bounds(self.cities[0][sp[0]])
-        w_lon = float(xy_to_lonlat(b[2], (b[1] + b[3]) / 2)[0])
-        self._d14 = (min(w_lon, e_lon), max(w_lon, e_lon))
+        self._d14 = (min(mc), max(ac))
         log(f'  Map D14 strip: Hwy 3 from lon {self._d14[0]:.3f} to {self._d14[1]:.3f} (estimate)')
         return self._d14
 
@@ -2034,9 +2048,12 @@ def file_rows(tag, region, mu):
         rows = [r for r in d['rows'] if r['species'] == n]
         mine = [r for r in rows if mu in r['mus']]
         for r in mine:
+            # the Region 4 CWD note is repeated on rows that also cover MUs outside the zone: the spot's own CWD flag says it instead
+            nt = re.sub(r';?\s*CWD Management Zone MUs: mandatory head submission and carcass transport rules \(pages 15, 37\)\.?', '',
+                        r.get('notes') or '').strip(' ;.')
             o = {'sp': n, 'cls': r.get('class') or '', 'open': r['open'], 'close': r['close'],
                  'dates': 'No closed season' if r.get('allYear') else f"{md_text(r['open'])} to {md_text(r['close'])}",
-                 'notes': r.get('notes') or '', 'page': r['page'], 'cert': r['cert'], 'months': r['months']}
+                 'notes': nt, 'page': r['page'], 'cert': r['cert'], 'months': r['months']}
             if re.search(r'youth|private land only|Map D27', o['notes'], re.I):
                 o['limited'] = True
             out.append(o)
@@ -2265,8 +2282,8 @@ def grid_candidates(ctx, sp, stats):
         kept = nms_select(xs, ys, order, max(SPACING_M, SELECT_RADIUS[cat]))
         strong = [i for i in kept if s[i] >= MIN_SCORE[sp]]
         weak = len(kept) - len(strong)
-        capped = max(0, len(strong) - CAPS[sp])
-        strong = balanced_cap(strong, xs, ys, CAPS[sp])
+        capped = max(0, len(strong) - cap_for(ctx.area, sp))
+        strong = balanced_cap(strong, xs, ys, cap_for(ctx.area, sp))
         st[cat] = {'candidates': len(kept), 'droppedWeak': weak, 'droppedCap': capped, 'kept': len(strong)}
         for i in strong:
             out.append({'sp': sp, 'cat': cat, 'x': float(xs[i]), 'y': float(ys[i]), 'score': int(s[i]), 'tb': float(tb[i]),
@@ -2449,8 +2466,8 @@ def grouse_candidates(ctx, stats):
         order = sorted(range(len(cs)), key=lambda i: (-cs[i]['score'], -cs[i]['tb']))
         xs, ys = [c['x'] for c in cs], [c['y'] for c in cs]
         kept = nms_select(xs, ys, order, max(SPACING_M, 1500))
-        capped = max(0, len(kept) - CAPS['grouse'])
-        kept = balanced_cap(kept, xs, ys, CAPS['grouse'])
+        capped = max(0, len(kept) - cap_for(ctx.area, 'grouse'))
+        kept = balanced_cap(kept, xs, ys, cap_for(ctx.area, 'grouse'))
         st[cat] = {'candidates': len(cs), 'kept': len(kept), 'droppedCap': capped}
         res += [cs[i] for i in kept]
     st['droppedWeak'] = weak
@@ -2770,7 +2787,7 @@ def uwr_sps(x):
     return x.get('sps') or [v for v in (x.get('sp1'), x.get('sp2')) if v]
 
 
-def _uwr_near(rf, x, y, species_set, maxd):
+def _uwr_near(rf, x, y, species_set, maxd, first=False):
     if rf.uwr_tree is None:
         return None
     pt = shapely.points(x, y)
@@ -2778,7 +2795,7 @@ def _uwr_near(rf, x, y, species_set, maxd):
     best = None
     for k in rf.uwr_tree.query(pt.buffer(maxd)):
         p = up[k]
-        if not (set(uwr_sps(p)) & species_set):
+        if not (set(uwr_sps(p)[:1] if first else uwr_sps(p)) & species_set):
             continue
         d = shapely.distance(ug[k], pt)
         if d <= maxd and (best is None or d < best[0]):
@@ -3171,8 +3188,8 @@ def region4_flags(rf, s, pt, route):
     cwd = (load_seasons().get('4') or {}).get('cwdZone') or {}
     if mu in cwd.get('mus', []):
         t = (f'CWD (Chronic Wasting Disease) Management Zone, MU {mu}: every deer, elk and moose taken here must have its head sampled at a '
-             'designated CWD freezer before you leave the zone (www.gov.bc.ca/CWDdropoff). The brain and the spinal column, vertebrae '
-             'included but not the tail, may not leave the zone: leave them at the kill site or a landfill inside it (synopsis pages 15, 36, 37, 99%).')
+             'CWD freezer before you leave the zone (www.gov.bc.ca/CWDdropoff). Brain and spinal column (vertebrae, not the tail) may not '
+             'leave the zone: leave them at the kill site or a landfill in it (synopsis pages 15, 36, 37, 99%).')
         if mu == '4-25':
             t += ' From MU 4-25 you have 24 hours to take the animal to the Invermere or Canal Flats freezer through MU 4-26 (page 15, 99%).'
         out.append({'t': t, 'src': syn + ' (CWD Management Zone)', 'date': d4, 'cert': 99, 'cwd': True})
@@ -3481,7 +3498,7 @@ def finalize(rf, s, stats):
         if u:
             tags.append('elk')
             items.append({'t': f"Elk winter range {u['uwr']} (official), {u['where']}.", 'pts': 0, 'tag': 'elk'})
-        u = _uwr_near(rf, x, y, {'sheep'}, 1000)
+        u = _uwr_near(rf, x, y, {'sheep'}, 1000, first=True)
         if u:
             tags.append('sheep')
             items.append({'t': f"Bighorn sheep winter range {u['uwr']} (official), {u['where']}.", 'pts': 0, 'tag': 'sheep'})
@@ -3773,6 +3790,9 @@ def step_spots(cache, areas):
             s = finalize(rf, c, stats)
             if s:
                 spots.append(s)
+        n0 = len(spots)
+        spots = [s for s in spots if s.get('mu')]   # outside every BC MU (Alberta side of the box): not ours
+        stats['outsideBC'] = n0 - len(spots)
         if area_excl(a):   # keep areas apart: a spot whose point falls in a cut out box belongs to the other area
             n0 = len(spots)
             spots = [s for s in spots if not in_excl(a, *ll(s['x'], s['y']))]
@@ -3905,7 +3925,8 @@ def step_spots(cache, areas):
                   'spots (valley bottom under 1,100 m, pine and fir zones, field edges, creeks) are scored only in area F.',
                   'Synopsis map areas without official polygons (Maps D9, D10, D13, D16, D19, D20, D22, D23 and the Whiteswan FSR) are drawn from '
                   'OpenStreetMap, FWA water or road names with a margin (my pick); targets inside are left out and nearby spots are flagged.',
-                  'Hwy 3 Map D14 strip: 400 m no hunting or shooting from the east edge of Sparwood (Loop Bridge is not in the data, assumption) '
+                  'Hwy 3 Map D14 strip: 400 m no hunting or shooting from the westernmost Hwy 3 bridge over Michel Creek east of Sparwood '
+                  '(Loop Bridge is not in the data, assumption) '
                   'to the Alexander Creek crossing. Canal Flats Map D17 shot only area: big game targets within 3 km of the village and under '
                   '1,067 m are left out (my pick).'] if a in R4_AREAS else []),
         }
@@ -3989,6 +4010,9 @@ def winter_months(key, default):
     return default
 
 
+MIG_POLY = {'F': {'min_km2': 3.0, 'simplify': 250}}   # mountain bands in area F are fragmented: coarser, for the size budget
+
+
 def mask_to_polys(grid, mask, min_km2=0.5, simplify=120):
     """Raster mask to polygons (row runs, then union). Grid cell units first so edges line up exactly."""
     rects = []
@@ -4035,7 +4059,7 @@ def step_migration(cache, areas):
                 if not codes:
                     continue
                 m = G.inbox & np.isin(zr, codes) & (el >= e[0]) & (el <= e[1])
-                for g in mask_to_polys(G, m):
+                for g in mask_to_polys(G, m, **MIG_POLY.get(a, {})):
                     geoms.append(g)
                     props.append({'species': label, 'band': band, 'months': months, 'monthsKey': months_key(months),
                                   'monthsText': month_span(months), 'zones': ', '.join(zz), 'elevM': f'{fmt_int(e[0])} to {fmt_int(e[1])} m',

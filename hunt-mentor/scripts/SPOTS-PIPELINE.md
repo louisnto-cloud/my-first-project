@@ -11,16 +11,17 @@ Script: `scripts/spots-pipeline.py` (Python 3.11). Rerunnable. Every download is
 - Only rebuild spots and the manifest (no downloads):
   `python3 scripts/spots-pipeline.py --cache /path/to/gis-cache --areas A,B,C --steps spots,manifest`
 - Areas D and E (2026-10-04): `--areas D,E --steps fetch,dem,layers,spots,migration`, then `--areas A,B,C,D,E --steps manifest`.
+- Area F (2026-10-04): `--areas F --steps fetch,dem,layers,spots,migration`, then `--areas A,B,C,D,E,F --steps manifest`. Fetch also caches a few OpenStreetMap outlines from Nominatim (`osm/`, 1.5 s apart) for Region 4 map areas that have no official polygon.
 - Run `manifest` with all areas, so every area stays listed. The manifest also carries `areaBoxes` and `areaNames` for the app.
 - The cache used on 2026-10-03 and 04: the session scratchpad `.../scratchpad/gis/` (`raw/`, `dem/12/`, `work/`).
 
 ## Steps (in order)
 | Step | What it does | Time (this machine) |
 |---|---|---|
-| fetch | BC Data Catalogue WFS pages, one request at a time, cached in `raw/` | about 23 min for A, B, C (first run); D 20 min (Vernon parcels, many 504 retries); E 5 min |
+| fetch | BC Data Catalogue WFS pages, one request at a time, cached in `raw/` | about 23 min for A, B, C (first run); D 20 min (Vernon parcels, many 504 retries); E 5 min; F 11 min |
 | dem | AWS terrarium z12 tiles, then an elevation grid per area | 7 min first run; seconds after |
 | layers | clean, simplify, write `data/layers/bc/*` and `data/layers/<area>/*` | A 5 min; B and C 5 min |
-| spots | score, pick, refine and write `data/spots/<area>/*` | A 1 min 45 s; B 30 s; C 35 s; D 65 s; E 58 s |
+| spots | score, pick, refine and write `data/spots/<area>/*` | A 1 min 45 s; B 30 s; C 35 s; D 65 s; E 58 s; F 75 s |
 | migration | seasonal bands per species, duck waters, quail habitat | 40 s for all three |
 | manifest | write `data/layers/manifest.json` | under 1 s |
 
@@ -50,6 +51,15 @@ Script: `scripts/spots-pipeline.py` (Python 3.11). Rerunnable. Every download is
 - Area D: Hwy 97C (Okanagan Connector) from Aspen Grove to Peachland is a 400 m no hunting or shooting strip (synopsis page 10): targets left out, routes flagged. Swan Lake north of Vernon (Map J17, No Shooting or Hunting Area): 500 m buffer, targets left out (my pick). Quail spots only in Region 8 (`QUAIL_AREAS`; Region 3 has no quail season).
 - Area E: grouse zones add SBPS and SBS (my pick, `GROUSE_ZONES_EXTRA`).
 - Spot months come from the general rows (youth only and private land only rows left out). The card shows "Open today" live.
+
+## Area F: Region 4 rules (2026-10-04)
+- Winter ranges in Region 4 list several species in one field (`M-CEEL;M-OVCA;M-ODHE`): split on `;` (`sps`). They come in about 100,000 small pieces: the map layers dissolve them per UWR number (pieces under 5 ha dropped, 30 m simplify, PMTiles); spots use every piece. Sheep tags count only ranges where sheep is listed first.
+- CWD (Chronic Wasting Disease) Management Zone (MUs from `region4.json` `cwdZone`): flag with the head sampling and brain and spine transport rules, 24 hour route note for MU 4-25, a short line in the plan, `cwd: true` on the spot. The CWD sentence is stripped from season row notes (those rows also cover MUs outside the zone).
+- Every Region 4 spot: feeding and baiting ban (ungulates and turkeys) and the snowmobile for hunting closure. Wolf note below 1,100 m in the listed Trench MUs and 4-4 to 4-7 (90%, Trench line not mapped). Deer spots in 4-3, 4-4, 4-5, 4-20: Cranbrook Deer Hunt (Map D27) note; the January row is treated as limited (not in spot months).
+- Motor vehicle closures: the WAA_MVPR_AREAS_SP layer has the Region 4 list (120 polygons), used as for other areas. Not in that layer: Soowa Mountain (4-2), Baynes Lake (Map D11, flag only), Oveson Creek.
+- Map areas (`_region4_zones`): D2 Elizabeth Lake (closure polygon plus lake), D23 Columbia Lake and River sanctuary (closure polygon, lake plus 300 m, river reach plus 200 m), D9 Skookumchuck mill, D13 and D16 Elk Valley mines, D19 Fairmont and D20 Windermere (2 km), D22 Radium (limits plus 1 km), D10 Wasa Slough (no GNS name: 1.5 km around Wasa), D12 Sulphur Creek (1 km), Whiteswan FSR (65 m), D1 McDougall (closure polygon): targets inside left out, nearby spots flagged. D17 Canal Flats shot only (3 km, under 1,067 m): big game dropped. D14 Hwy 3: 400 m strip from the westernmost Michel Creek bridge east of Sparwood (Loop Bridge not in the data, assumption) to the Alexander Creek crossing. All edges my pick or estimate, and the flag says so.
+- Elk spots (weights in `W['elk']`, max 11, min 7) and turkey spots (`W['turkey']`, under 1,100 m, max 5, min 4) only where `ELK_AREAS` and `TURKEY_AREAS` list the area. `AREA_CAPS` trims F grouse (80) and moose (60) per category for the size budget. Spots outside every BC MU (Alberta side of the box) are dropped (`outsideBC`).
+- F sizes: layers 22.4 MB, spots 13.0 MB (1,695 spots). Migration bands in F use `MIG_POLY` (3 km2 minimum, 250 m simplify).
 
 ## Outputs and sizes (2026-10-04)
 - D: layers 17.1 MB, spots 10.8 MB. E: layers 13.2 MB, spots 10.0 MB. All data now about 157 MB (layers 115, spots 42), a little over the 150 MB budget.
