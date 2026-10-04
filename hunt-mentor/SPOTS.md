@@ -97,3 +97,11 @@ MU and region; inside a Motor Vehicle Closed Area or ATV closure (dates); park, 
 - A spot never claims animals are there. It shows the evidence and the score.
 - Legal flags are facts with sources and dates. Everything else is labelled opinion (Tip, my pick, estimate).
 - No invented names: GNIS names, road atlas names, rec site names as given; otherwise "2.3 km NE of Mayson Lake rec site".
+
+## 2026-10-04 area A rerun
+- Area A now applies Region 3 Map C8 Blind Bay and the Roderick Haig Brown Recreation Area closure (MU 3-37).
+- The park is named TSUTSWECW PARK in TA_PARK_ECORES_PA_SVW (renamed from Roderick Haig-Brown, 90
+## 2026-10-04 area A rerun
+- Area A now applies Region 3 Map C8 Blind Bay and the Roderick Haig Brown Recreation Area closure (MU 3-37).
+- The park is named TSUTSWECW PARK in TA_PARK_ECORES_PA_SVW (renamed from Roderick Haig-Brown, 90%). Zone = park land south of the Squilax Anglemont Road bridge over the Adams River, plus 100 m (estimate, VERIFY).
+- No area A spot sat inside either zone; one nearby spot now carries the warning.

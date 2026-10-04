@@ -1860,19 +1860,19 @@ class AreaContext:
         # Roderick Haig-Brown Recreation Area (MU 3-37, near Chase): no hunting south of the Squilax Anglemont Road and downstream
         # of the Adams River bridge. Bridge = where that road meets the Adams River; zone = park land south of the bridge (estimate)
         pg, pp = self.parks
-        hb = [pg[i] for i, x in enumerate(pp) if 'Haig' in (x['name'] or '')]
+        hb = [pg[i] for i, x in enumerate(pp) if re.search(r'haig|tsutswecw', x['name'] or '', re.I)]
         dg, dp, _ = self.ca['dra']
         rd = [dg[i] for i, x in enumerate(dp) if 'squilax' in (x['name'] or '').lower()]
         ar = [sg[i] for i, x in enumerate(spp) if (x['name'] or '') == 'Adams River']
         if hb and rd and ar:
             park = shapely.union_all(hb)
-            br = shapely.intersection(shapely.union_all(rd), shapely.union_all(ar).buffer(50))
+            br = shapely.intersection(shapely.union_all(rd), shapely.union_all(ar).buffer(150))
             if not br.is_empty and shapely.intersects(br, park.buffer(500)):
                 by = shapely.centroid(br).y
                 b0 = park.bounds
                 g = shapely.intersection(park, shapely.box(b0[0] - 10, b0[1] - 10, b0[2] + 10, by))
                 add('HB', g.buffer(100) if not g.is_empty else None,
-                    'Roderick Haig Brown Recreation Area (MU 3-37, near Chase): no hunting south of the Squilax Anglemont Road and '
+                    'Roderick Haig Brown Recreation Area, now Tsutswecw Park (MU 3-37, near Chase): no hunting south of the Squilax Anglemont Road and '
                     'downstream of the Adams River bridge (synopsis Region 3, 99%). Drawn as park land south of the bridge plus 100 m '
                     '(estimate). VERIFY on the ground.', 99, syn + '; TA_PARK_ECORES_PA_SVW; DRA; FWA streams', near=2000)
         box = self.grid.poly.buffer(5000)
