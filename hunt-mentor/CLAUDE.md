@@ -44,7 +44,7 @@
   - 60 to 79%: reliable secondary source.
   - Under 60%: not a fact. Label it "Tip" or mark VERIFY.
 - Tactics, tips and "Grandpa's rules" are opinion. Label them.
-- All seasons, limits and fees live in ONE data file: `data/regs.json`,
+- Seasons, limits and fees live in `data/regs.json` plus per region season tables in `data/seasons/`,
   with a `lastChecked` date per entry.
 - Every screen with rules shows the banner:
   "Study aid only. The official regulations are the law."
