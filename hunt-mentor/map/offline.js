@@ -5,6 +5,7 @@
 import { esc, prefs, savePrefs, tileRange, fmtNum, throttle } from './util.js';
 import { OFM_TILEJSON, OFM_GLYPHS, FONTS, TERRARIUM, DEM_MAXZOOM } from './style.js';
 import * as layers from './layers.js';
+import * as spots from './spots.js';
 
 const MAX_TILES = 25000;
 const GLYPH_RANGES = ['0-255', '256-511', '512-767', '768-1023', '7680-7935', '8192-8447'];
@@ -245,6 +246,7 @@ async function layerFiles(bbox) {
     const st = layers.stateOf(l.id);
     if (!st || st.unsupported) continue;
     for (const f of st.files) if (!f.box || (f.box[0] <= bbox[2] && f.box[2] >= bbox[0] && f.box[1] <= bbox[3] && f.box[3] >= bbox[1])) out.add(f.url);
+    if (st.spot) for (const u of spots.detailFiles(l, bbox)) out.add(u); // spot cards (detail tiles)
   }
   return [...out];
 }

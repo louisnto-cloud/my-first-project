@@ -1,4 +1,8 @@
-/* Hunt Map spots: candidate spots from data/spots/<area>/spots.geojson (SPOTS.md), listed in the manifest under group "Spots".
+/* Hunt Map spots: candidate spots (SPOTS.md), listed in the manifest under group "Spots".
+   Files (phone friendly): data/spots/<area>/index.geojson holds light points (id, name, cat, species, score, busy, mu, months)
+   for markers and clusters; the full card for a tapped spot comes from the manifest "detail" template
+   (data/spots/<area>/detail/<tile>.json, keyed by id, tile = floor(lon / tileDeg)_floor(lat / tileDeg), same rule as the
+   pipeline), fetched once and kept in memory. Routes are their own layer, split in tiles too (layers.js, loadMinzoom).
    Clustered, with category icons (drive, atv, walk, backcountry, camp) and species filter chips. Tap a spot for its card.
    Property names read (first found wins): name | title; category | cat | type | access; species (array or "deer, moose");
    score, score_max; busy | pressure | busier; months; plan (object with drive, park, walk or walk_or_ride, camp, hunt, use,
@@ -150,8 +154,46 @@ function datesText(v) {
   return String(v);
 }
 
-let selMk = null;
+// ---------- detail tiles ----------
+const detailCache = new Map(); // url -> Promise of { id: properties }
+const tileKey = (l, lon, lat) => { const d = +l.tileDeg || 0.25; return `${Math.floor(lon / d)}_${Math.floor(lat / d)}`; };
+function detailUrl(l, p, c) {
+  if (!l.detail || !p._area || !c) return null;
+  return `${l.detail.replace(/\{area\}/g, p._area).replace(/\{tile\}/g, tileKey(l, c[0], c[1]))}?v=${encodeURIComponent(l.dataDate || '1')}`;
+}
+function getDetail(url) {
+  if (!detailCache.has(url)) {
+    const pr = fetch(url).then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); });
+    pr.catch(() => detailCache.delete(url)); // try again on the next tap
+    detailCache.set(url, pr);
+  }
+  return detailCache.get(url);
+}
+/** Detail tile URLs of a spots layer for a bbox (Offline Maps). */
+export function detailFiles(l, bbox) {
+  if (!l.detail || !l.detailTiles) return [];
+  const d = +l.tileDeg || 0.25, out = [];
+  for (const [area, keys] of Object.entries(l.detailTiles)) {
+    for (const k of keys || []) {
+      const [x, y] = k.split('_').map(Number), b = [x * d, y * d, (x + 1) * d, (y + 1) * d];
+      if (b[0] <= bbox[2] && b[2] >= bbox[0] && b[1] <= bbox[3] && b[3] >= bbox[1]) out.push(`${l.detail.replace(/\{area\}/g, area).replace(/\{tile\}/g, k)}?v=${encodeURIComponent(l.dataDate || '1')}`);
+    }
+  }
+  return out;
+}
+const withDetail = (f, d) => (d ? { type: 'Feature', geometry: f.geometry, properties: Object.assign({}, f.properties, d, pick(f.properties)) } : f);
+const pick = (p) => Object.fromEntries(Object.entries(p).filter(([k]) => k.startsWith('_')));
+
+let selMk = null, cardTok = 0;
 export function openCard(H, l, f) {
+  const p = f.properties, url = p.plan == null ? detailUrl(l, p, f.geometry.coordinates) : null;
+  if (!url) { renderCard(H, l, f); return; }
+  const tok = ++cardTok;
+  H.openSheet({ title: p._name, html: '<p class="hmm-muted">Loading spot details</p>', modal: false, tall: true, onClose: () => { if (tok === cardTok) cardTok++; } });
+  getDetail(url).then((d) => { if (tok === cardTok) renderCard(H, l, withDetail(f, d && d[p.id])); })
+    .catch(() => { if (tok === cardTok) renderCard(H, l, f, true); });
+}
+function renderCard(H, l, f, failed) {
   const map = H.map, p = f.properties, [lng, lat] = f.geometry.coordinates;
   const cat = SPOT_CATS[p._cat] || SPOT_CATS.other, park = parkPoint(p);
   const plan = planSections(p.plan ?? p.PLAN), flags = flagsList(p.legal_flags ?? p.flags ?? p.legal);
@@ -171,6 +213,7 @@ export function openCard(H, l, f) {
       ${busy ? `<div><small>Hunters</small><b>${esc(cap(String(busy)))}</b><em>estimate</em></div>` : ''}
       ${months.length ? `<div><small>Months</small><b>${esc(monthsText(months))}</b></div>` : ''}
     </div>
+    ${failed ? `<p class="hmm-muted">The full plan did not load. ${navigator.onLine ? 'Try again in a moment.' : 'You are offline and this area is not saved.'}</p>` : ''}
     ${H.ui.linksHtml(lat, lng, p._name, park)}
     <p class="hmm-coord">${esc(units.coord(lng, lat))}${park ? `<br><span class="hmm-muted">Park at ${esc(units.coord(park[1], park[0]))}, ${esc(units.dist(haversine([lng, lat], [park[1], park[0]])))} away</span>` : ''}</p>
     ${plan.length ? `<h3 class="hmm-h">Plan</h3><ol class="hmm-plan">${plan.map(([t, x]) => `<li><b>${esc(t)}</b>${linesHtml(x)}</li>`).join('')}</ol>` : ''}
