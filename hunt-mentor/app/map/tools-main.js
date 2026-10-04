@@ -1,31 +1,32 @@
 /* Hunt Map tools (Phase 2), plugin entry. Loaded by core.js after the map is ready.
    Draws the user's waypoints, lines, areas and tracks (tools-store.js, IndexedDB), the Tools sheet, waypoint and item sheets,
-   line, area and measure drawing, range rings, the elevation profile, and long press. Wind, weather and Insights: tools-wind.js.
-   Go & Track: tools-track.js. My Content, import and export: tools-content.js. */
-import * as store from './tools-store.js';
-import { WPT, WPT_BY, COLORS, wptSvg, glyphImage, arrowImage, lineLength, ringArea, perimeter, sampleLine, climb, fmtDur } from './tools-geo.js';
+   line, area and measure drawing, range rings, the elevation profile, and long press. My Content, import and export: tools-content.js.
+   Wind, weather and Insights (tools-wind.js, tools-insights.js) and Go & Track (tools-track.js) are separate plugins.
+   Hooks they may set on HuntMap, used here when present: H.scentCone([lng, lat]), H.insightsAt([lng, lat], name).
+   Exposed for them: H.tools (this ctx: items, refresh(), openItem(id), drawOverlays(), profileHtml(coords, el)). */
+import * as store from './store.js';
+import { WPT, WPT_BY, COLORS, wptSvg, glyphImage, lineLength, ringArea, perimeter, sampleLine, climb, fmtDur } from './tools-geo.js';
 import { esc, circleRing, haversine, bearingTo, compass8, bboxOf, debounce } from './util.js';
-import * as wind from './tools-wind.js';
-import * as track from './tools-track.js';
 import * as content from './tools-content.js';
 
 const SRC = 'hm-user', TOOL = 'hm-tool';
 const USER_LAYERS = ['hm-u-area', 'hm-u-area-line', 'hm-u-line', 'hm-u-wpt', 'hm-u-wpt-ic', 'hm-u-wpt-t'];
-const ctx = { H: null, map: null, items: [], folders: [], overlays: { rings: null, cone: null, draft: null, marker: null, live: null } };
+const ctx = { H: null, map: null, items: [], folders: [], overlays: { rings: null, draft: null, marker: null } };
 const KIND = { wpt: 'Waypoint', line: 'Line', area: 'Area', track: 'Track' };
 ctx.KIND = KIND;
 
 export default async function init(H) {
   ctx.H = H; ctx.map = H.map;
-  Object.assign(ctx, { refresh, openItem, drawOverlays, dropWaypoint, itemStats, profileHtml, fitItem, here, fieldRows, toolsSheet });
+  Object.assign(ctx, { refresh, saveAny, deleteAny, openItem, drawOverlays, dropWaypoint, itemStats, profileHtml, fitItem, here, fieldRows, toolsSheet });
   loadCss();
   addImages(); addLayers();
   H.on('units', () => drawOverlays());
+  H.on('tracks', () => refresh()); // Go & Track saved or removed a track
   H.setBarAction('tools', toolsSheet);
   H.setBarAction('profile', profilePicker);
   H.onClick(onMapClick);
   longPress();
-  wind.init(ctx); track.init(ctx); content.init(ctx);
+  content.init(ctx);
   H.tools = ctx;
   await refresh();
 }
@@ -40,7 +41,6 @@ function loadCss() {
 function addImages() {
   const m = ctx.map;
   for (const [id] of WPT) for (const dark of [0, 1]) { const k = `wg-${id}-${dark}`; if (!m.hasImage(k)) { const g = glyphImage(id, dark); m.addImage(k, g.img, { pixelRatio: g.pixelRatio }); } }
-  if (!m.hasImage('hm-arrow')) { const a = arrowImage(); m.addImage('hm-arrow', a.img, { pixelRatio: a.pixelRatio }); }
 }
 const EMPTY = { type: 'FeatureCollection', features: [] };
 function addLayers() {
@@ -55,7 +55,7 @@ function addLayers() {
   m.addLayer({ id: 'hm-t-fill', type: 'fill', source: TOOL, filter: ['==', ['get', 't'], 'fill'], paint: { 'fill-color': ['coalesce', ['get', 'color'], '#e8590c'], 'fill-opacity': ['coalesce', ['get', 'op'], 0.2] } });
   m.addLayer({ id: 'hm-t-line', type: 'line', source: TOOL, filter: ['==', ['get', 't'], 'line'], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': ['coalesce', ['get', 'color'], '#e8590c'], 'line-width': ['coalesce', ['get', 'w'], 3], 'line-dasharray': [2, 1.2] } });
   m.addLayer({ id: 'hm-t-pt', type: 'circle', source: TOOL, filter: ['==', ['get', 't'], 'pt'], paint: { 'circle-radius': ['coalesce', ['get', 'r'], 6], 'circle-color': ['coalesce', ['get', 'color'], '#e8590c'], 'circle-stroke-color': '#fff', 'circle-stroke-width': 2.5 } });
-  m.addLayer({ id: 'hm-t-label', type: 'symbol', source: TOOL, filter: ['==', ['get', 't'], 'label'], layout: { 'text-field': ['get', 'text'], 'text-font': ['Noto Sans Bold'], 'text-size': 13, 'text-max-width': 12, 'text-allow-overlap': true, 'text-ignore-placement': true }, paint: { 'text-color': '#1f211b', 'text-halo-color': 'rgba(255,255,255,0.95)', 'text-halo-width': 2 } });
+  m.addLayer({ id: 'hm-t-label', type: 'symbol', source: TOOL, filter: ['==', ['get', 't'], 'label'], layout: { 'text-field': ['get', 'text'], 'text-font': ['Noto Sans Bold'], 'text-size': 13, 'text-max-width': 12, 'text-padding': 4, 'text-anchor': ['coalesce', ['get', 'anchor'], 'center'], 'text-offset': ['case', ['==', ['get', 'anchor'], 'left'], ['literal', [1.1, 0]], ['literal', [0, 0]]] }, paint: { 'text-color': '#1f211b', 'text-halo-color': 'rgba(255,255,255,0.95)', 'text-halo-width': 2 } });
   m.addLayer({ id: 'hm-u-wpt', type: 'circle', source: SRC, filter: ['==', ['get', 'kind'], 'wpt'], paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], 8, 9, 13, 14], 'circle-color': col, 'circle-stroke-color': '#ffffff', 'circle-stroke-width': 2.5 } });
   m.addLayer({ id: 'hm-u-wpt-ic', type: 'symbol', source: SRC, filter: ['==', ['get', 'kind'], 'wpt'], layout: { 'icon-image': ['concat', 'wg-', ['get', 'icon'], '-', ['get', 'dark']], 'icon-size': ['interpolate', ['linear'], ['zoom'], 8, 0.62, 13, 0.92], 'icon-allow-overlap': true, 'icon-ignore-placement': true } });
   m.addLayer({ id: 'hm-u-wpt-t', type: 'symbol', source: SRC, filter: ['==', ['get', 'kind'], 'wpt'], minzoom: 11.5, layout: { 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Bold'], 'text-size': 12, 'text-anchor': 'top', 'text-offset': [0, 1.35], 'text-optional': true, 'text-max-width': 9 }, paint: { 'text-color': '#1f211b', 'text-halo-color': 'rgba(255,255,255,0.95)', 'text-halo-width': 1.8 } });
@@ -69,8 +69,37 @@ function feature(it) {
   if (it.kind === 'area') return { type: 'Feature', properties: props, geometry: { type: 'Polygon', coordinates: [[...cs, cs[0]]] } };
   return { type: 'Feature', properties: props, geometry: { type: 'LineString', coordinates: cs } };
 }
+// Go & Track saves to the 'tracks' store (tools-track.js). Read those too, whatever the point shape.
+const ptOf = (p) => (Array.isArray(p) ? p : [p.lng ?? p.lon ?? p.longitude, p.lat ?? p.latitude, p.ele ?? p.alt ?? p.altitude].filter((v, i) => i < 2 || v != null));
+const timeOf = (p) => (Array.isArray(p) ? null : (p.t ?? p.time ?? p.timestamp ?? null));
+function fromTrackStore(r) {
+  const raw = r.coords || r.points || r.pts || (r.geometry && r.geometry.coordinates) || [];
+  const coords = raw.map(ptOf).filter((c) => c && isFinite(c[0]) && isFinite(c[1]));
+  const times = r.times || (raw.some((p) => timeOf(p) != null) ? raw.map(timeOf).map((t) => (typeof t === 'string' ? Date.parse(t) : t)) : undefined);
+  return { id: r.id, kind: 'track', _store: 'tracks', name: r.name || 'Track', note: r.note || '', color: r.color || '#d62828', folder: r.folder || '', hidden: !!r.hidden,
+    coords, times, moving: r.moving ?? (r.stats && r.stats.moving) ?? r.movingMs, created: r.created ?? r.start ?? r.started ?? (times && times[0]) ?? 0, photo: r.photo || '' };
+}
+const EDITABLE = ['name', 'note', 'color', 'folder', 'hidden', 'icon', 'coords', 'photo'];
+/** Save an item to the store it came from. Tracks from Go & Track keep their own record shape: only the user fields change. */
+async function saveAny(it) {
+  if (it._store) {
+    const rec = (await store.get(it._store, it.id)) || { id: it.id };
+    for (const k of EDITABLE) if (k !== 'coords' && it[k] !== undefined) rec[k] = it[k];
+    rec.updated = Date.now();
+    return store.put(it._store, rec);
+  }
+  return store.saveItem(it);
+}
+async function deleteAny(it) {
+  if (it.photo) await store.del('photos', it.photo).catch(() => {});
+  return store.del(it._store || 'items', it.id);
+}
 async function refresh() {
-  try { [ctx.items, ctx.folders] = await Promise.all([store.all('items'), store.all('folders')]); } catch (err) { ctx.items = []; ctx.folders = []; ctx.H.toast('Saving is blocked in this browser, so your map items will not stay.', 5000); }
+  try {
+    const [items, folders, tracks] = await Promise.all([store.list('items'), store.list('folders'), store.list('tracks').catch(() => [])]);
+    ctx.folders = folders;
+    ctx.items = items.concat(tracks.filter((r) => r && r.id != null && !r.recording && !r.active).map(fromTrackStore).filter((t) => t.coords.length > 1));
+  } catch (err) { ctx.items = []; ctx.folders = []; ctx.H.toast('Saving is blocked in this browser, so your map items will not stay.', 5000); }
   ctx.items.sort((a, b) => (b.created || 0) - (a.created || 0));
   const hiddenF = new Set(ctx.folders.filter((f) => f.hidden).map((f) => f.id));
   const src = ctx.map.getSource(SRC);
@@ -78,13 +107,13 @@ async function refresh() {
   return ctx.items;
 }
 
-// ---------- overlays: draft drawing, range rings, scent cone, live track, profile marker ----------
+// ---------- overlays: draft drawing, range rings, profile marker ----------
 const YD = 1.09361;
 function drawOverlays() {
   const f = [], o = ctx.overlays;
   const line = (cs, p = {}) => f.push({ type: 'Feature', properties: Object.assign({ t: 'line' }, p), geometry: { type: 'LineString', coordinates: cs } });
   const pt = (c, p = {}) => f.push({ type: 'Feature', properties: Object.assign({ t: 'pt' }, p), geometry: { type: 'Point', coordinates: c } });
-  const label = (c, text) => f.push({ type: 'Feature', properties: { t: 'label', text }, geometry: { type: 'Point', coordinates: c } });
+  const label = (c, text, anchor) => f.push({ type: 'Feature', properties: { t: 'label', text, anchor: anchor || 'center' }, geometry: { type: 'Point', coordinates: c } });
   if (o.rings) {
     for (const r of [100, 200, 300]) {
       const ring = circleRing(o.rings, r, 72); line(ring, { color: '#d62828', w: 2.5 });
@@ -92,20 +121,13 @@ function drawOverlays() {
     }
     pt(o.rings, { color: '#d62828', r: 5 });
   }
-  if (o.cone) {
-    f.push({ type: 'Feature', properties: { t: 'fill', color: '#7b2cbf', op: 0.22 }, geometry: { type: 'Polygon', coordinates: [o.cone.ring] } });
-    line(o.cone.ring, { color: '#7b2cbf', w: 2 });
-    label(o.cone.tip, o.cone.text);
-    pt(o.cone.ring[0], { color: '#7b2cbf', r: 5 });
-  }
-  if (o.live && o.live.length > 1) line(o.live.map((c) => c.slice(0, 2)), { color: '#d62828', w: 4 });
   const d = o.draft;
   if (d && d.pts.length) {
     const cs = d.pts;
     if (d.kind === 'area' && cs.length > 2) f.push({ type: 'Feature', properties: { t: 'fill', color: '#e8590c', op: 0.2 }, geometry: { type: 'Polygon', coordinates: [[...cs, cs[0]]] } });
     if (cs.length > 1) line(d.kind === 'area' && cs.length > 2 ? [...cs, cs[0]] : cs, { color: d.kind === 'measure' ? '#1a73e8' : '#e8590c' });
     cs.forEach((c, i) => pt(c, { r: i === cs.length - 1 ? 7 : 5, color: d.kind === 'measure' ? '#1a73e8' : '#e8590c' }));
-    if (d.kind === 'measure' && cs.length > 1) label(cs[cs.length - 1], `   ${ctx.H.units.dist(lineLength(cs))}`);
+    if (d.kind === 'measure' && cs.length > 1) label(cs[cs.length - 1], ctx.H.units.dist(lineLength(cs)), 'left');
   }
   if (o.marker) pt(o.marker, { color: '#1f211b', r: 7 });
   const s = ctx.map.getSource(TOOL); if (s) s.setData({ type: 'FeatureCollection', features: f });
@@ -139,22 +161,21 @@ function toolsSheet() {
   const H = ctx.H, o = ctx.overlays;
   const body = H.openSheet({ title: 'Tools', bar: 'tools', html: `
     <h3 class="hmm-h">Waypoint</h3>
-    <div class="hmt-tiles">${tile('wpt-c', wptSvg('other', '#e8590c', 26), 'At map centre', 'Under the cross')}${tile('wpt-g', wptSvg('stand', '#1a73e8', 26), 'At my location', 'GPS')}</div>
+    <div class="hmt-tiles">${tile('wpt-c', wptSvg('other', '#e8590c', 26), 'At map centre', 'Under the cross')}${tile('wpt-g', wptSvg('stand', '#1a73e8', 26), 'At my location', 'GPS (Global Positioning System)')}</div>
     <p class="hmm-muted">Tip: press and hold on the map to drop a waypoint right there.</p>
     <h3 class="hmm-h">Draw and measure</h3>
     <div class="hmt-tiles">${tile('line', I.line, 'Line or route', 'Distance and climb')}${tile('area', I.area, 'Area', 'Hectares, perimeter')}${tile('measure', I.ruler, 'Measure', 'Quick ruler')}${tile('rings', I.rings, 'Range rings', '100, 200, 300 m')}</div>
-    <h3 class="hmm-h">Wind</h3>
-    <div class="hmt-tiles">${tile('cone', I.cone, 'Scent cone', 'From map centre')}${tile('cone-g', I.cone, 'Scent cone', 'From my location')}${tile('windgrid', I.wind, wind.gridOn() ? 'Hide wind arrows' : 'Wind arrows', 'For this view')}${tile('weather', H.icons.weather, 'Weather', '3 day forecast')}</div>
-    ${o.rings || o.cone ? `<div class="hmm-btnrow"><button class="hmm-btn2" data-t="clear">${I.clear}<span>Clear rings and cone</span></button></div>` : ''}` });
+    ${typeof H.scentCone === 'function' ? `<h3 class="hmm-h">Wind</h3>
+    <div class="hmt-tiles">${tile('cone', I.cone, 'Scent cone', 'From map centre')}${tile('cone-g', I.cone, 'Scent cone', 'From my location')}${tile('weather', H.icons.weather, 'Weather', 'Wind and forecast')}</div>` : ''}
+    ${o.rings ? `<div class="hmm-btnrow"><button class="hmm-btn2" data-t="clear">${I.clear}<span>Clear range rings</span></button></div>` : ''}` });
   body.querySelectorAll('[data-t]').forEach((b) => b.onclick = () => {
     const t = b.dataset.t;
     if (t === 'wpt-c' || t === 'wpt-g') { const p = here(t === 'wpt-g' ? 'gps' : 'centre'); if (p) dropWaypoint(p); }
     else if (t === 'line' || t === 'area' || t === 'measure') startDraw(t);
     else if (t === 'rings') { const p = here('centre'); H.closeSheet(); setRings(p); }
-    else if (t === 'cone' || t === 'cone-g') { const p = here(t === 'cone-g' ? 'gps' : 'centre'); if (p) { H.closeSheet(); wind.cone(p); } }
-    else if (t === 'windgrid') { wind.toggleGrid(); H.closeSheet(); }
-    else if (t === 'weather') wind.weatherSheet();
-    else if (t === 'clear') { o.rings = null; o.cone = null; drawOverlays(); H.closeSheet(); }
+    else if (t === 'cone' || t === 'cone-g') { const p = here(t === 'cone-g' ? 'gps' : 'centre'); if (p) { H.closeSheet(); H.scentCone(p); } }
+    else if (t === 'weather') { H.closeSheet(); H.els.stackR.querySelector('[data-act="weather"]').click(); }
+    else if (t === 'clear') { o.rings = null; drawOverlays(); H.closeSheet(); }
   });
 }
 
@@ -192,7 +213,7 @@ function itemStats(it) {
 function fitItem(it) {
   if (it.kind === 'wpt') { ctx.map.easeTo({ center: it.coords, zoom: Math.max(ctx.map.getZoom(), 14), duration: 700 }); return; }
   const b = bboxOf({ type: 'LineString', coordinates: it.coords });
-  if (b) ctx.map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: { top: 90, bottom: Math.round(window.innerHeight * 0.5), left: 40, right: 40 }, maxZoom: 16, duration: 700 });
+  if (b) ctx.map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: { top: 90, bottom: Math.round(window.innerHeight * 0.62), left: 40, right: 40 }, maxZoom: 16, duration: 700 });
 }
 function fieldRows(it) {
   const folders = ctx.folders.slice().sort((a, b) => a.name.localeCompare(b.name));
@@ -205,19 +226,19 @@ async function openItem(id, { fresh = false } = {}) {
   const H = ctx.H, it = ctx.items.find((i) => i.id === id) || await store.get('items', id);
   if (!it) return;
   const u = H.units, isW = it.kind === 'wpt';
-  const save = async (fit) => { try { await store.saveItem(it); } catch (err) { H.toast('Could not save.'); } await refresh(); if (fit) drawOverlays(); };
+  const save = async (fit) => { try { await saveAny(it); } catch (err) { H.toast('Could not save.'); } await refresh(); if (fit) drawOverlays(); };
   const saveSoon = debounce(save, 350);
   const iconGrid = isW ? `<div class="hmm-field">Icon<div class="hmt-icons" role="radiogroup" aria-label="Icon">${WPT.map(([k, l]) => `<button role="radio" aria-checked="${it.icon === k}" data-icon="${k}" aria-label="${esc(l)}">${wptSvg(k, it.color || null, 34)}<span>${esc(l)}</span></button>`).join('')}</div></div>` : '';
   const coordTxt = isW ? u.coord(it.coords[0], it.coords[1]) : '';
-  const body = H.openSheet({ title: it.name || KIND[it.kind], tall: true, html: `
+  const body = H.openSheet({ title: it.name || KIND[it.kind], tall: isW, html: `
     <p class="hmm-muted">${esc(KIND[it.kind])}${it.created ? `, added ${new Date(it.created).toLocaleDateString('en-CA', { month: 'short', day: 'numeric', year: 'numeric' })}` : ''}</p>
     ${isW ? `<dl class="hmm-dl"><dt>Coordinates</dt><dd><span>${esc(coordTxt)}</span>${H.ui.copyBtn(coordTxt)}</dd><dt>Elevation</dt><dd data-out="elev">Checking</dd></dl>` : `<div class="hmm-stats" data-out="stats"></div>`}
     ${it.kind === 'line' || it.kind === 'track' ? '<h3 class="hmm-h">Elevation profile</h3><div data-out="profile" class="hmt-prof"><p class="hmm-muted">Reading the terrain</p></div>' : ''}
     ${isW ? `<div class="hmt-photo" data-out="photo"></div>` : ''}
-    ${iconGrid}${fieldRows(it)}
+    ${isW ? iconGrid + fieldRows(it) : `<details class="hmt-edit" ${fresh ? 'open' : ''}><summary>Name, note, colour and folder</summary>${fieldRows(it)}</details>`}
     ${isW ? `<div class="hmm-btnrow">
-      <button class="hmm-btn2" data-a="rings">Range rings here</button><button class="hmm-btn2" data-a="cone">Scent cone here</button>
-      <button class="hmm-btn2" data-a="insights">Insights here</button><button class="hmm-btn2" data-a="move">Move to map centre</button></div>${H.ui.linksHtml(it.coords[1], it.coords[0], it.name)}` : `<div class="hmm-btnrow"><button class="hmm-btn2" data-a="fit">Show on map</button></div>`}
+      <button class="hmm-btn2" data-a="rings">Range rings here</button>${typeof H.scentCone === 'function' ? '<button class="hmm-btn2" data-a="cone">Scent cone here</button>' : ''}
+      ${typeof H.insightsAt === 'function' ? '<button class="hmm-btn2" data-a="insights">Insights here</button>' : ''}<button class="hmm-btn2" data-a="move">Move to map centre</button></div>${H.ui.linksHtml(it.coords[1], it.coords[0], it.name)}` : `<div class="hmm-btnrow"><button class="hmm-btn2" data-a="fit">Show on map</button></div>`}
     <div class="hmm-btnrow"><button class="hmm-btn2" data-a="share">Share or export</button><button class="hmm-btn2 danger" data-a="del">${H.icons.trash}<span>Delete</span></button></div>` });
   H.ui.wireCopy(body);
   const q = (s) => body.querySelector(s);
@@ -241,10 +262,10 @@ async function openItem(id, { fresh = false } = {}) {
   });
   body.querySelectorAll('[data-a]').forEach((b) => b.onclick = async () => {
     const a = b.dataset.a;
-    if (a === 'del') { if (!confirm(`Delete "${it.name}"? This cannot be undone.`)) return; await store.deleteItem(it.id); await refresh(); H.closeSheet(); H.toast('Deleted'); }
+    if (a === 'del') { if (!confirm(`Delete "${it.name}"? This cannot be undone.`)) return; await deleteAny(it); await refresh(); H.closeSheet(); H.toast('Deleted'); }
     else if (a === 'rings') { H.closeSheet(); setRings(it.coords); }
-    else if (a === 'cone') { H.closeSheet(); wind.cone(it.coords); }
-    else if (a === 'insights') wind.insights(it.coords, it.name);
+    else if (a === 'cone') { H.closeSheet(); H.scentCone(it.coords); }
+    else if (a === 'insights') H.insightsAt(it.coords, it.name);
     else if (a === 'move') { const c = here('centre'); it.coords = [+c[0].toFixed(6), +c[1].toFixed(6)]; await save(); openItem(it.id); H.toast('Moved to the map centre'); }
     else if (a === 'fit') fitItem(it);
     else if (a === 'share') content.exportSheet([it], it.name);
@@ -350,6 +371,7 @@ function profilePicker() {
 }
 
 // ---------- drawing: line, area, measure ----------
+let redrawing = false;
 const DRAW_T = { line: 'Draw a line', area: 'Draw an area', measure: 'Measure' };
 function startDraw(kind) {
   ctx.overlays.draft = { kind, pts: [] };
@@ -367,7 +389,8 @@ function drawPanel() {
     stats = `${u.dist(len)}${d.kind === 'measure' ? `, last leg ${u.dist(haversine(last[0], last[1]))} toward ${compass8(brg)} (${Math.round(brg)}°)` : ''}`;
   } else stats = n ? 'Add the next point' : 'Add the first point';
   const canSave = d.kind === 'area' ? n > 2 : n > 1;
-  const body = H.openSheet({ title: DRAW_T[d.kind], modal: false, onClose: () => { if (ctx.overlays.draft === d) { ctx.overlays.draft = null; drawOverlays(); } }, html: `
+  redrawing = true; // openSheet runs the previous panel's onClose: keep the draft while we only re-render
+  const body = H.openSheet({ title: DRAW_T[d.kind], modal: false, onClose: () => { if (!redrawing && ctx.overlays.draft === d) { ctx.overlays.draft = null; drawOverlays(); } }, html: `
     <p class="hmt-drawstat" aria-live="polite"><b>${esc(stats)}</b></p>
     <div class="hmt-drawbtns">
       <button class="hmm-btn2" data-d="add">${H.icons.target}<span>Add centre point</span></button>
@@ -375,6 +398,7 @@ function drawPanel() {
       ${d.kind === 'measure' ? `<button class="hmm-btn2" data-d="clear" ${n ? '' : 'disabled'}>Clear</button><button class="hmm-primary" data-d="save" ${canSave ? '' : 'disabled'}>Save as line</button>`
     : `<button class="hmm-primary" data-d="save" ${canSave ? '' : 'disabled'}>Save</button>`}
     </div>` });
+  redrawing = false;
   body.querySelectorAll('[data-d]').forEach((b) => b.onclick = async () => {
     const a = b.dataset.d;
     if (a === 'add') addDraftPoint(here('centre'));
@@ -408,12 +432,13 @@ function spotMenu(ll) {
   ctx.overlays.marker = p; drawOverlays();
   const body = H.openSheet({ title: 'This spot', onClose: () => { ctx.overlays.marker = null; drawOverlays(); }, html: `
     <p class="hmm-muted">${esc(txt)}</p>
-    <div class="hmt-tiles">${tile('wpt', wptSvg('other', '#e8590c', 26), 'Drop waypoint')}${tile('rings', I.rings, 'Range rings')}${tile('cone', I.cone, 'Scent cone')}${tile('insights', H.icons.insights, 'Insights')}</div>` });
+    <div class="hmt-tiles">${tile('wpt', wptSvg('other', '#e8590c', 26), 'Drop waypoint')}${tile('rings', I.rings, 'Range rings')}${tile('measure', I.ruler, 'Measure from here')}${typeof H.scentCone === 'function' ? tile('cone', I.cone, 'Scent cone') : ''}${typeof H.insightsAt === 'function' ? tile('insights', H.icons.insights, 'Insights') : ''}</div>` });
   body.querySelectorAll('[data-t]').forEach((b) => b.onclick = () => {
     const t = b.dataset.t; ctx.overlays.marker = null;
     if (t === 'wpt') dropWaypoint(p);
     else if (t === 'rings') { H.closeSheet(); setRings(p); }
-    else if (t === 'cone') { H.closeSheet(); wind.cone(p); }
-    else if (t === 'insights') wind.insights(p);
+    else if (t === 'measure') { startDraw('measure'); addDraftPoint(p); }
+    else if (t === 'cone') { H.closeSheet(); H.scentCone(p); }
+    else if (t === 'insights') H.insightsAt(p);
   });
 }
