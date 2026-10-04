@@ -45,7 +45,7 @@ Script: `scripts/spots-pipeline.py` (Python 3.11). Rerunnable. Every download is
 
 ## Outputs and sizes (2026-10-04)
 - `data/layers/**`: 86 MB. Biggest: A cutblocks 18.2 MB, A forest roads 9.4 MB, A habitat zones 9.2 MB (PMTiles).
-- `data/spots/**`: 17 MB (A 8.0 MB, B 3.0 MB, C 5.6 MB including routes).
+- `data/spots/**`: about 21 MB. Per area: `index.geojson` (light points for the map: id, name, cat, species, score, busy, mu, months; A 422 KB, B 132 KB, C 323 KB), `detail/<tile>.json` (full spot properties keyed by id, fetched when a spot is tapped), `routes/<tile>.geojson` (fetched for tiles in view from zoom 12), `camps.geojson`, `meta.json`. Tile = 0.25 degree grid, key `floor(lon/0.25)_floor(lat/0.25)`; routes go in their spot's tile. The old whole area `spots.geojson` and `routes.geojson` are no longer written (2026-10-04).
 - Total about 106 MB (budget about 150 MB).
 - Each area folder has `meta.json`: counts, layer dates, scoring weights, dropped counts, notes.
 

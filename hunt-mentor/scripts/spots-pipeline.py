@@ -3240,6 +3240,61 @@ def write_fc(path, feats):
     return len(txt.encode('utf-8'))
 
 
+TILE_DEG = 0.25   # spot detail and route tiles: 0.25 degree grid, key "<floor(lon/0.25)>_<floor(lat/0.25)>" (same rule in app/map/spots.js)
+INDEX_KEYS = (('id', 'id'), ('name', 'name'), ('category', 'cat'), ('species', 'species'), ('score', 'score'),
+              ('pressure', 'busy'), ('mu', 'mu'), ('months', 'months'))
+
+
+def tile_key(lon, lat):
+    return f'{math.floor(lon / TILE_DEG)}_{math.floor(lat / TILE_DEG)}'
+
+
+def write_spot_tiles(out, feats, routes):
+    """Phone friendly spot files: index.geojson (light points for the map), detail/<tile>.json (full properties by id,
+    fetched when a spot is tapped) and routes/<tile>.geojson (routes by their spot's tile, fetched in view at zoom 12+).
+    Returns (sizes, tiles) where tiles = {'detail': [keys], 'routes': {key: bbox}}."""
+    import shutil
+    for d in ('detail', 'routes'):
+        if (out / d).exists():
+            shutil.rmtree(out / d)
+    for old in ('spots.geojson', 'routes.geojson'):   # the old whole area files (replaced by the tiles)
+        if (out / old).exists():
+            (out / old).unlink()
+    idx, detail, where = [], {}, {}
+    for f in feats:
+        p = f['properties']
+        lon, lat = (round(c, 5) for c in f['geometry']['coordinates'][:2])
+        ip = {k2: p[k] for k, k2 in INDEX_KEYS if p.get(k) not in (None, '', [])}
+        idx.append({'type': 'Feature', 'properties': ip, 'geometry': {'type': 'Point', 'coordinates': [lon, lat]}})
+        k = tile_key(lon, lat)
+        detail.setdefault(k, {})[p['id']] = p
+        where[p['id']] = k
+    rt, boxes = {}, {}
+    for f in routes:
+        k = where.get(f['properties'].get('spotId'))
+        if k is None:
+            c = f['geometry']['coordinates'][0]
+            k = tile_key(c[0], c[1])
+        rt.setdefault(k, []).append(f)
+        xs, ys = [], []
+        for c in (f['geometry']['coordinates'] if f['geometry']['type'] == 'LineString'
+                  else [c for part in f['geometry']['coordinates'] for c in part]):
+            xs.append(c[0]); ys.append(c[1])
+        b = boxes.get(k) or [999, 999, -999, -999]
+        boxes[k] = [min(b[0], min(xs)), min(b[1], min(ys)), max(b[2], max(xs)), max(b[3], max(ys))]
+    sizes = {'index.geojson': write_fc(out / 'index.geojson', idx), 'detail': 0, 'routes': 0}
+    (out / 'detail').mkdir(parents=True, exist_ok=True)
+    for k, d in sorted(detail.items()):
+        txt = json.dumps(d, ensure_ascii=False, separators=(',', ':'))
+        (out / 'detail' / f'{k}.json').write_text(txt, encoding='utf-8')
+        sizes['detail'] += len(txt.encode('utf-8'))
+    for k, fs in sorted(rt.items()):
+        sizes['routes'] += write_fc(out / 'routes' / f'{k}.geojson', fs)
+    rbox = {k: [math.floor(b[0] * 1000) / 1000, math.floor(b[1] * 1000) / 1000, math.ceil(b[2] * 1000) / 1000,
+                math.ceil(b[3] * 1000) / 1000] for k, b in sorted(boxes.items())}
+    return sizes, {'deg': TILE_DEG, 'detail': sorted(detail), 'routes': rbox}
+
+
 def step_spots(cache, areas):
     load_regs()
     for w_ in REGS_WARN:
@@ -3337,8 +3392,8 @@ def step_spots(cache, areas):
                     idx = kd.query_ball_point([float(cx), float(cy)], 5000)
                     c['properties']['spotIds'] = [sids[i] for i in sorted(idx)][:40]
         out = OUT_SPOTS / a
-        sizes = {'spots.geojson': write_fc(out / 'spots.geojson', feats), 'routes.geojson': write_fc(out / 'routes.geojson', routes),
-                 'camps.geojson': write_fc(out / 'camps.geojson', campf)}
+        sizes, tiles = write_spot_tiles(out, feats, routes)
+        sizes['camps.geojson'] = write_fc(out / 'camps.geojson', campf)
         # style check of generated text
         bad = 0
         for f in feats:
@@ -3364,7 +3419,7 @@ def step_spots(cache, areas):
         load_regs()
         meta = {
             'area': a, 'name': AREAS[a]['name'], 'box': AREAS[a]['box'], 'base': AREAS[a]['base'], 'generated': TODAY,
-            'total': len(feats), 'counts': counts, 'routes': len(routes), 'camps': len(campf), 'bytes': sizes,
+            'total': len(feats), 'counts': counts, 'routes': len(routes), 'camps': len(campf), 'bytes': sizes, 'tiles': tiles,
             'layerDates': dates, 'stats': stats, 'styleLinesFlagged': bad,
             'scoring': {'weights': W, 'max': SCORE_MAX, 'min': MIN_SCORE, 'spacingM': SPACING_M, 'selectRadiusM': SELECT_RADIUS,
                         'capsPerCategory': CAPS, 'cutAgeYears': CUT_AGE, 'burnYears': BURN_YEARS, 'burnMinHa': BURN_MIN_HA,
@@ -3398,7 +3453,7 @@ def step_spots(cache, areas):
         }
         json.dump(meta, open(out / 'meta.json', 'w'), indent=1, ensure_ascii=False)
         log(f'spots {a}: {len(feats)} spots, {len(routes)} routes, {len(campf)} camps, '
-            f'{sizes["spots.geojson"] / 1e6:.2f} MB, style flags {bad}, in {time.time() - t0:.0f}s')
+            f'index {sizes["index.geojson"] / 1e3:.0f} KB, detail {sizes["detail"] / 1e6:.2f} MB, routes {sizes["routes"] / 1e6:.2f} MB, style flags {bad}, in {time.time() - t0:.0f}s')
         log('  ' + json.dumps(counts))
 
 
@@ -3764,7 +3819,8 @@ def step_manifest(cache, areas):
          'about': 'Quail do not migrate. Low Bunchgrass and Ponderosa Pine country near farms and brushy creeks, all year. General pattern.',
          'cert': 60, 'months': list(range(1, 13)), 'legal': False}, rec)
     # spots, routes, camps
-    sp_areas = [a for a in ('A', 'B', 'C') if (OUT_SPOTS / a / 'spots.geojson').exists()]
+    sp_areas = [a for a in ('A', 'B', 'C') if (OUT_SPOTS / a / 'index.geojson').exists()]
+    sp_meta = {a: json.load(open(OUT_SPOTS / a / 'meta.json')) if (OUT_SPOTS / a / 'meta.json').exists() else {} for a in sp_areas}
 
     def spot_rec(fname):
         r = {}
@@ -3777,13 +3833,30 @@ def step_manifest(cache, areas):
     add({'id': 'spots', 'group': 'Spots', 'kind': 'spots', 'label': 'Candidate spots', 'type': 'symbol', 'minzoom': 6,
          'popup': [], 'source': 'Hunt Mentor spot pipeline (scripts/spots-pipeline.py) from BC Data Catalogue layers',
          'about': 'Candidate spots scored from open data (my pick): drive, ATV (all terrain vehicle), walk, backcountry and camp. '
-                  'Busier and quieter are estimates. Candidate, scout it first.', 'cert': 60}, spot_rec('spots.geojson'))
-    add({'id': 'routes', 'group': 'Spots', 'kind': 'routes', 'label': 'Walk and ride routes', 'type': 'line', 'minzoom': 10,
+                  'Busier and quieter are estimates. Candidate, scout it first.', 'cert': 60,
+         # index.geojson holds light points; a tapped spot's full card comes from detail/<tile>.json (keyed by id)
+         'detail': 'data/spots/{area}/detail/{tile}.json', 'tileDeg': TILE_DEG,
+         'detailTiles': {a: sp_meta[a].get('tiles', {}).get('detail', []) for a in sp_areas}}, spot_rec('index.geojson'))
+    # routes: one file per tile (the tile of the route's spot), each with the bbox of its lines, loaded in view from zoom 12
+    rt_files, rt_bytes, rt_date = [], 0, TODAY
+    for a in sp_areas:
+        for k, b in sp_meta[a].get('tiles', {}).get('routes', {}).items():
+            f = OUT_SPOTS / a / 'routes' / f'{k}.geojson'
+            if f.exists():
+                rt_files.append({'area': a, 'file': rel(f), 'bbox': b})
+                rt_bytes += f.stat().st_size
+        rt_date = sp_meta[a].get('generated', rt_date)
+    rt = {'id': 'routes', 'group': 'Spots', 'kind': 'routes', 'label': 'Walk and ride routes', 'type': 'line', 'minzoom': 12,
+          'loadMinzoom': 12,
          'paint': {'line-color': ['match', ['get', 'kind'], 'ride', '#6d4c41', 'roadside', '#f9a825', 'backcountry', '#5e35b1', '#e8590c'],
                    'line-width': 3, 'line-dasharray': [1, 1.5]},
          'popup': [['Route', 'name'], ['Kind', 'kind'], ['Length km', 'km'], ['Climb m', 'climbM']],
          'source': 'Hunt Mentor spot pipeline (road atlas, forest roads, rec trails)', 'about': 'Suggested approach lines (estimate).',
-         'cert': 60, 'legal': False}, spot_rec('routes.geojson'))
+         'cert': 60, 'legal': False}
+    if rt_files:
+        rt.update({'files': rt_files, 'areas': sp_areas, 'licence': OGL, 'dataDate': rt_date, 'bytes': rt_bytes})
+        out.append(rt)
+        made.add('routes')
     add({'id': 'camps', 'group': 'Access', 'kind': 'camps', 'label': 'Camps (rec sites and candidates)', 'type': 'circle', 'minzoom': 9,
          'paint': {'circle-color': ['match', ['get', 'kind'], 'Rec site', '#2e7d32', 'Backcountry camp', '#5e35b1', '#8bc34a'],
                    'circle-radius': 5, 'circle-stroke-color': '#ffffff', 'circle-stroke-width': 1.5},

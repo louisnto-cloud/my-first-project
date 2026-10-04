@@ -1,0 +1,4 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"spotId":"B-camp-camp-0064","kind":"walk","km":0.03,"climbM":1,"name":"160 m W of Coquitlam Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-122.79441,49.35846],[-122.79478,49.35862]]}},
+{"type":"Feature","properties":{"spotId":"B-duck-walk-0010","kind":"walk","km":2.05,"climbM":35,"name":"Unnamed wetland 130 m E of Coquitlam River","flags":[]},"geometry":{"type":"LineString","coordinates":[[-122.7949,49.50944],[-122.79229,49.4911]]}}
+]}

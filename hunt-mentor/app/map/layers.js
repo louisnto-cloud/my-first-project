@@ -85,6 +85,8 @@ export function setOn(id, on) {
 function turnOn(st) {
   if (st.unsupported) return;
   ensureAdded(st); setVis(st, monthOk(st)); loadNear(st);
+  // the style can be busy (another layer's source just added): try again when the map is idle, or a second layer never shows
+  if (!st.added && !st.adding && !st.error && !st.retry) { st.retry = true; map.once('idle', () => { st.retry = false; if (lp(st.l.id).on) turnOn(st); }); }
 }
 function updateBadge() { H.ui.setBadge([...L.values()].filter((s) => lp(s.l.id).on && !s.unsupported).length); }
 function setVis(st, on) {
@@ -183,7 +185,7 @@ function darken(c) {
 function viewBox(pad = 0.5) { const b = map.getBounds(); return padBbox([b.getWest(), b.getSouth(), b.getEast(), b.getNorth()], pad); }
 function loadNear(st) {
   if (!st.added || !lp(st.l.id).on) return;
-  if (map.getZoom() < (st.l.minzoom || 0) - 1) return;
+  if (map.getZoom() < (st.l.loadMinzoom ?? (st.l.minzoom || 0) - 1)) return; // loadMinzoom: tiled layers (routes) load only from there
   const v = viewBox();
   if (st.pm) { for (const g of st.gj || []) if (!g.req && (!g.f.box || bboxIntersects(v, g.f.box))) { g.req = true; map.getSource(g.src)?.setData(g.f.url); } return; }
   for (const f of st.files) if (!st.loaded.has(f.url) && !st.failed.has(f.url) && (!f.box || bboxIntersects(v, f.box))) loadFile(st, f);
@@ -195,7 +197,7 @@ function loadFile(st, f) {
   if (st.loading.has(f.url)) return st.loading.get(f.url);
   const p = fetch(f.url).then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); }).then((gj) => {
     const feats = (gj && gj.features || []).filter((x) => x && x.geometry);
-    for (const ft of feats) prep(st, ft);
+    for (const ft of feats) prep(st, ft, f.area);
     st.loaded.set(f.url, feats);
     refresh(st);
     return feats;
@@ -208,9 +210,10 @@ function loadFile(st, f) {
   p.catch(() => {});
   return p;
 }
-function prep(st, ft) {
+function prep(st, ft, area) {
   const p = ft.properties || (ft.properties = {});
   p._hid = ++hid; raw.set(p._hid, { st, f: ft });
+  if (st.spot && area) p._area = area; // spots.js finds the detail tile by area
   const m = parseMonths(p.months != null ? p.months : p.MONTHS);
   if (m.length) { p._m = m; st.hasMonths = true; }
   if (st.spot) spots.prep(p);
@@ -288,7 +291,7 @@ export function handleClick(e) {
   return true;
 }
 
-const HIDE = new Set(['_hid', '_m', '_cat', '_name', '_score', '_sp', 'months', 'MONTHS', 'OBJECTID', 'SE_ANNO_CAD_DATA', 'FEATURE_AREA_SQM', 'FEATURE_LENGTH_M', 'GEOMETRY', 'id']);
+const HIDE = new Set(['_hid', '_area', '_m', '_cat', '_name', '_score', '_sp', 'months', 'MONTHS', 'OBJECTID', 'SE_ANNO_CAD_DATA', 'FEATURE_AREA_SQM', 'FEATURE_LENGTH_M', 'GEOMETRY', 'id']);
 const human = (k) => String(k).replace(/_/g, ' ').toLowerCase().replace(/^\w/, (c) => c.toUpperCase());
 function fmtVal(v) {
   if (v == null || v === '') return '';
