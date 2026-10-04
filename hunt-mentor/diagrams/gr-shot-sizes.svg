@@ -14,5 +14,5 @@
     <circle cx="40" cy="256" r="4.8" fill="#8a8f88" stroke="#2f3a2b"/><text x="70" y="261" font-weight="bold">#7.5</text><text x="130" y="261">Quail</text>
     <circle cx="40" cy="282" r="5.5" fill="#8a8f88" stroke="#2f3a2b"/><text x="70" y="287" font-weight="bold">#6</text><text x="130" y="287">Grouse</text>
   </g>
-  <text x="390" y="287" font-size="13" fill="#2f3a2b" text-anchor="end">Relative size</text>
+  <text x="390" y="287" font-size="14" fill="#2f3a2b" text-anchor="end">Relative size</text>
 </svg>

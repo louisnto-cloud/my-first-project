@@ -7,5 +7,5 @@
   <text x="208" y="54" font-size="14" fill="#2f3a2b">Fence</text>
   <line x1="240" y1="230" x2="240" y2="90" stroke="#8b5a2b" stroke-width="9" stroke-linecap="round"/><line x1="240" y1="160" x2="240" y2="90" stroke="#6b6f68" stroke-width="5"/><circle cx="240" cy="86" r="9" fill="none" stroke="#e8590c" stroke-width="3"/><text x="254" y="94" font-size="14" font-weight="bold" fill="#e8590c">Muzzle</text><circle cx="150" cy="240" r="14" fill="#2f3a2b"/><path d="M164 240 Q 200 270 290 246" stroke="#e8590c" stroke-width="4" fill="none" stroke-dasharray="7 5"/><path d="M280 238 l12 8 l-12 8" stroke="#e8590c" stroke-width="4" fill="none"/><circle cx="300" cy="246" r="14" fill="#2f3a2b"/>
   <text x="200" y="290" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cross at the butt end, far from the muzzle</text>
-  <text x="392" y="54" font-size="13" fill="#2f3a2b" text-anchor="end">Seen from above</text>
+  <text x="392" y="54" font-size="14" fill="#2f3a2b" text-anchor="end">Seen from above</text>
 </svg>

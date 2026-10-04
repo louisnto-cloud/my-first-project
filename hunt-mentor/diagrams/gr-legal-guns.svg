@@ -16,5 +16,5 @@
     <text x="172" y="188" fill="#2f6b3a">✓</text><text x="260" y="192" fill="#c0392b">✗</text><text x="348" y="192" fill="#c0392b">✗</text>
     <text x="172" y="262" fill="#2f6b3a">✓</text><text x="260" y="262" fill="#2f6b3a">✓</text><text x="348" y="262" fill="#2f6b3a">✓</text>
   </g>
-  <g font-size="13" fill="#2f3a2b" text-anchor="middle"><text x="172" y="136">head shots</text><text x="348" y="278">non toxic</text></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="172" y="136">head shots</text><text x="348" y="278">non toxic</text></g>
 </svg>

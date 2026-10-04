@@ -17,5 +17,5 @@
   <g font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle"><text x="70" y="224">150 gr</text><text x="200" y="224">165 to 168 gr</text><text x="330" y="224">178 to 180 gr</text></g>
   <g font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="70" y="246">Deer</text><text x="200" y="246">Deer, black bear</text><text x="330" y="246">Elk, moose</text></g>
   <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="70" y="266">Cup and core</text><text x="200" y="266">Bonded, Partition</text><text x="330" y="266">Bonded or copper</text></g>
-  <g font-size="13" fill="#2f3a2b"><rect x="10" y="280" width="12" height="12" fill="#8a8f88"/><text x="26" y="291">lead core</text><rect x="110" y="280" width="12" height="12" fill="#c87533"/><text x="126" y="291">copper</text><text x="240" y="291">Not to scale</text></g>
+  <g font-size="14" fill="#2f3a2b"><rect x="10" y="280" width="12" height="12" fill="#8a8f88"/><text x="26" y="291">lead core</text><rect x="110" y="280" width="12" height="12" fill="#c87533"/><text x="126" y="291">copper</text><text x="240" y="291">Not to scale</text></g>
 </svg>

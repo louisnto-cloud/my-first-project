@@ -2,9 +2,9 @@
   <rect width="400" height="300" fill="#fffaf0"/>
   <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Read your pattern</text>
   <g font-size="16" font-weight="bold" text-anchor="middle">
-    <rect x="14" y="40" width="100" height="50" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><text x="64" y="62" fill="#2f3a2b">82 holes</text><text x="64" y="80" font-size="13" fill="#2f3a2b">in circle</text>
+    <rect x="14" y="40" width="100" height="50" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><text x="64" y="62" fill="#2f3a2b">82 holes</text><text x="64" y="80" font-size="14" fill="#2f3a2b">in circle</text>
     <text x="128" y="72" fill="#2f3a2b">÷</text>
-    <rect x="142" y="40" width="110" height="50" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><text x="197" y="62" fill="#2f3a2b">138 pellets</text><text x="197" y="80" font-size="13" fill="#2f3a2b">in shell</text>
+    <rect x="142" y="40" width="110" height="50" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><text x="197" y="62" fill="#2f3a2b">138 pellets</text><text x="197" y="80" font-size="14" fill="#2f3a2b">in shell</text>
     <text x="266" y="72" fill="#2f3a2b">=</text>
     <rect x="280" y="40" width="106" height="50" rx="8" fill="#e8590c"/><text x="333" y="72" font-size="20" fill="#fff">59%</text>
   </g>
