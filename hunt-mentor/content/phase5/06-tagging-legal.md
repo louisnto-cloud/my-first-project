@@ -82,7 +82,7 @@ checked: 2026-10-01
 
 | Type | Species | Deadline |
 |---|---|---|
-| Compulsory Inspection (CI) | Mountain goat, mountain sheep, caribou, cougar anywhere, black bear in MUs 6-12 and 6-13 | Within 30 days, by appointment (95%, p. 17) |
+| Compulsory Inspection (CI) | Mountain goat, mountain sheep, caribou, cougar anywhere, black bear in MUs 6-12 and 6-13 | Within 30 days, by appointment (95%, p. 17). Exception: a cougar killed in Region 6 must be inspected in Region 6 within 4 days (99%, p. 17 item 4) |
 | [[Compulsory reporting]] (CR) | Lynx in Regions 3, 6, 7A, 7B. Wolverine. Bobcat in Regions 2 and 3. Wolf in Regions 1 and 2. Feral pig anywhere | Within 30 days (95%, p. 17) |
 | Mandatory Hunter Report | Everyone who buys an elk, moose or caribou species licence | By March 31, hunt or no hunt (95%, p. 16) |
 
