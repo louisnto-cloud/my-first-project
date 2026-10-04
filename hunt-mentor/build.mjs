@@ -341,6 +341,7 @@ function build() {
   const mapFiles = mapDirs.flatMap(([src, dst]) => listFiles(src).filter((f) => !/\.(txt|md)$/i.test(f)).map((f) => [path.join(ROOT, src, f), `${dst}/${f}`]));
   const hash = crypto.createHash('sha1').update(json + css + js);
   for (const [f] of mapFiles) hash.update(fs.readFileSync(f));
+  hash.update(read('app/sw.js') + read('app/index.html') + photoIds.join(',')); // a service worker or page change alone also bumps the cache version
   const version = 'hm-' + hash.digest('hex').slice(0, 10) + '-' + data.built;
   let html = read('app/index.html');
 

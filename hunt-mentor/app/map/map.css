@@ -116,7 +116,7 @@
 .hmm-sheet-h { display: flex; align-items: center; gap: 8px; padding: 2px 6px 2px 18px; flex: none; }
 .hmm-sheet-h h2 { flex: 1; margin: 0; font-size: 19px; font-weight: 800; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .hmm-x { width: 44px; height: 44px; border: 0; background: none; display: grid; place-items: center; border-radius: 50%; color: var(--hmm-muted); }
-.hmm-sheet-b { overflow-y: auto; overflow-x: hidden; padding: 2px 18px 22px; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; -webkit-user-select: text; user-select: text; flex: 1 1 auto; }
+.hmm-sheet-b { overflow-wrap: anywhere; overflow-y: auto; overflow-x: hidden; padding: 2px 18px 22px; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; -webkit-user-select: text; user-select: text; flex: 1 1 auto; }
 .hmm-sheet-b p { margin: 8px 0; }
 .hmm-h { margin: 18px 0 6px; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--hmm-muted); }
 .hmm-muted { color: var(--hmm-muted); font-size: 14px; }
@@ -324,3 +324,8 @@ input:disabled + .hmm-switch { opacity: 0.4; }
   .hmm-sheet.tall { height: calc(100% - var(--st) - 200px); }
 }
 .hmm-pts { font-size: 12px; color: #2e7d32; background: rgba(46, 125, 50, 0.12); padding: 0 6px; border-radius: 6px; }
+
+/* Sheets opened from the bottom bar keep the bar on top, so you can switch between Offline Maps, Insights and the rest */
+.hmm-sheet.withbar ~ .hmm-bar, .hmm-bar.over { z-index: 7; }
+.hmm-sheet.withbar .hmm-sheet-b { padding-bottom: calc(var(--sb) + 96px); }
+@media (min-width: 700px) { .hmm-sheet.withbar .hmm-sheet-b { padding-bottom: 22px; } }

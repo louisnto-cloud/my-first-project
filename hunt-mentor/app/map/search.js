@@ -100,6 +100,9 @@ async function run(q, submit) {
   if (my !== seq) return;
   if (names && names.length) groups.push({ title: 'BC Geographical Names', items: names });
   if (addr && addr.length) groups.push({ title: 'BC places and roads', items: addr });
+  // Spots named "1 km SW of Louis Creek" should not push Louis Creek itself down: place names first unless a spot name matches exactly
+  const li = groups.findIndex((g) => g.title === 'Spots and rec sites');
+  if (li >= 0 && !groups[li].items.some((it) => String(it.name).toLowerCase() === q.toLowerCase())) groups.push(groups.splice(li, 1)[0]);
   const offline = names == null && addr == null;
   if (!submit && ((names || []).length + (addr || []).length) > 0) { render(groups, offline ? 'Offline: place search needs a connection.' : ''); return; }
   if (offline && !navigator.onLine) { render(groups, 'Offline: place search needs a connection. Coordinates and MU numbers still work.'); return; }

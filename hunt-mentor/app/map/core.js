@@ -227,7 +227,7 @@ function openSheet({ title = '', html = '', onClose = null, modal = true, tall =
   els.sheetT.textContent = title;
   els.sheetB.innerHTML = '';
   if (typeof html === 'string') els.sheetB.innerHTML = html; else if (html) els.sheetB.appendChild(html);
-  s.classList.toggle('tall', !!tall);
+  s.classList.toggle('tall', !!tall); s.classList.toggle('withbar', !!bar); els.bar.classList.toggle('over', !!bar);
   s.setAttribute('aria-modal', modal ? 'true' : 'false');
   s.style.transform = '';
   els.scrim.hidden = !modal;
@@ -240,7 +240,7 @@ function openSheet({ title = '', html = '', onClose = null, modal = true, tall =
 function closeSheet() {
   if (!els.sheet || els.sheet.hidden) return false;
   const fn = sheetClose; sheetClose = null;
-  els.sheet.classList.remove('on'); els.sheet.hidden = true; els.scrim.hidden = true;
+  els.sheet.classList.remove('on'); els.sheet.hidden = true; els.scrim.hidden = true; els.bar.classList.remove('over');
   root.querySelectorAll('[data-bar]').forEach((b) => b.classList.remove('on'));
   if (fn) { try { fn(); } catch (err) { console.warn(err); } }
   return true;
