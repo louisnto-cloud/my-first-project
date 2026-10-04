@@ -1,0 +1,1815 @@
+{
+ "edition": "2026-09-21",
+ "source": "Migratory Birds Regulations, 2022 (SOR/2022-105), Schedule 3, Part 10 (British Columbia), Table 1",
+ "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",
+ "consolidation": "current to 2026-09-21, last amended 2026-06-12",
+ "checked": "2026-10-04",
+ "note": "Federal seasons and daily and possession limits per BC district, for ducks, geese, coots and snipe. Doves and band tailed pigeons are left out. open and close are MM-DD (month and day). Rows with a season field use dates worked out from the federal wording for that season. A row with mus applies only to those MUs; otherwise the whole district. BC closed areas and no shooting areas still apply on top. No Table 2 (special measures) for BC. Copied from content/phase7/11-migratory-birds-bc.md and checked row by row against the regulation text.",
+ "districts": {
+  "1": {
+   "name": "Vancouver Island",
+   "printed": "Provincial Management Units 1-1 to 1-15",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "cert": 99
+  },
+  "2": {
+   "name": "Lower Mainland",
+   "printed": "Provincial Management Units 2-2 to 2-19",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "cert": 99
+  },
+  "3": {
+   "name": "Thompson",
+   "printed": "Provincial Management Units 3-12 to 3-20 and 3-26 to 3-44",
+   "mus": [
+    "3-12",
+    "3-13",
+    "3-14",
+    "3-15",
+    "3-16",
+    "3-17",
+    "3-18",
+    "3-19",
+    "3-20",
+    "3-26",
+    "3-27",
+    "3-28",
+    "3-29",
+    "3-30",
+    "3-31",
+    "3-32",
+    "3-33",
+    "3-34",
+    "3-35",
+    "3-36",
+    "3-37",
+    "3-38",
+    "3-39",
+    "3-40",
+    "3-41",
+    "3-42",
+    "3-43",
+    "3-44"
+   ],
+   "cert": 99
+  },
+  "4": {
+   "name": "Kootenay",
+   "printed": "Provincial Management Units 4-1 to 4-9 and 4-14 to 4-40",
+   "mus": [
+    "4-1",
+    "4-2",
+    "4-3",
+    "4-4",
+    "4-5",
+    "4-6",
+    "4-7",
+    "4-8",
+    "4-9",
+    "4-14",
+    "4-15",
+    "4-16",
+    "4-17",
+    "4-18",
+    "4-19",
+    "4-20",
+    "4-21",
+    "4-22",
+    "4-23",
+    "4-24",
+    "4-25",
+    "4-26",
+    "4-27",
+    "4-28",
+    "4-29",
+    "4-30",
+    "4-31",
+    "4-32",
+    "4-33",
+    "4-34",
+    "4-35",
+    "4-36",
+    "4-37",
+    "4-38",
+    "4-39",
+    "4-40"
+   ],
+   "cert": 99
+  },
+  "5": {
+   "name": "Cariboo",
+   "printed": "Provincial Management Units 5-1 to 5-15",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "cert": 99
+  },
+  "6": {
+   "name": "Skeena",
+   "printed": "Provincial Management Units 6-1 to 6-30",
+   "mus": [
+    "6-1",
+    "6-2",
+    "6-3",
+    "6-4",
+    "6-5",
+    "6-6",
+    "6-7",
+    "6-8",
+    "6-9",
+    "6-10",
+    "6-11",
+    "6-12",
+    "6-13",
+    "6-14",
+    "6-15",
+    "6-16",
+    "6-17",
+    "6-18",
+    "6-19",
+    "6-20",
+    "6-21",
+    "6-22",
+    "6-23",
+    "6-24",
+    "6-25",
+    "6-26",
+    "6-27",
+    "6-28",
+    "6-29",
+    "6-30"
+   ],
+   "cert": 99
+  },
+  "7": {
+   "name": "Omineca and Peace",
+   "printed": "Provincial Management Units 7-2 to 7-58",
+   "mus": [
+    "7-2",
+    "7-3",
+    "7-4",
+    "7-5",
+    "7-6",
+    "7-7",
+    "7-8",
+    "7-9",
+    "7-10",
+    "7-11",
+    "7-12",
+    "7-13",
+    "7-14",
+    "7-15",
+    "7-16",
+    "7-17",
+    "7-18",
+    "7-19",
+    "7-20",
+    "7-21",
+    "7-22",
+    "7-23",
+    "7-24",
+    "7-25",
+    "7-26",
+    "7-27",
+    "7-28",
+    "7-29",
+    "7-30",
+    "7-31",
+    "7-32",
+    "7-33",
+    "7-34",
+    "7-35",
+    "7-36",
+    "7-37",
+    "7-38",
+    "7-39",
+    "7-40",
+    "7-41",
+    "7-42",
+    "7-43",
+    "7-44",
+    "7-45",
+    "7-46",
+    "7-47",
+    "7-48",
+    "7-49",
+    "7-50",
+    "7-51",
+    "7-52",
+    "7-53",
+    "7-54",
+    "7-55",
+    "7-56",
+    "7-57",
+    "7-58"
+   ],
+   "cert": 99
+  },
+  "8": {
+   "name": "Okanagan",
+   "printed": "Provincial Management Units 8-1 to 8-15 and 8-21 to 8-26",
+   "mus": [
+    "8-1",
+    "8-2",
+    "8-3",
+    "8-4",
+    "8-5",
+    "8-6",
+    "8-7",
+    "8-8",
+    "8-9",
+    "8-10",
+    "8-11",
+    "8-12",
+    "8-13",
+    "8-14",
+    "8-15",
+    "8-21",
+    "8-22",
+    "8-23",
+    "8-24",
+    "8-25",
+    "8-26"
+   ],
+   "cert": 99
+  }
+ },
+ "noDistrict": {
+  "mus": [
+   "2-1",
+   "3-45",
+   "3-46",
+   "5-16",
+   "7-1"
+  ],
+  "cert": 90,
+  "notes": "In a BC region but in no federal district (s. 1 of Part 10 compared with the synopsis page 2 MU ranges). My reading: no federal open season, so no duck, goose, coot or snipe hunting (s. 28(1)). VERIFY with the Canadian Wildlife Service."
+ },
+ "noOpenSeason": [
+  {
+   "district": "1",
+   "species": "brant",
+   "item": "Table 1, item 1(e)",
+   "cert": 99
+  },
+  {
+   "district": "3",
+   "species": "brant",
+   "item": "Table 1, item 3(e)",
+   "cert": 99
+  },
+  {
+   "district": "4",
+   "species": "brant",
+   "item": "Table 1, item 4(e)",
+   "cert": 99
+  },
+  {
+   "district": "5",
+   "species": "brant",
+   "item": "Table 1, item 5(e)",
+   "cert": 99
+  },
+  {
+   "district": "6",
+   "species": "brant",
+   "item": "Table 1, item 6(e)",
+   "cert": 99
+  },
+  {
+   "district": "7",
+   "species": "brant",
+   "item": "Table 1, item 7(e)",
+   "cert": 99
+  },
+  {
+   "district": "8",
+   "species": "brant",
+   "item": "Table 1, item 8(e)",
+   "cert": 99
+  }
+ ],
+ "rows": [
+  {
+   "district": "1",
+   "species": "ducks",
+   "open": "10-10",
+   "close": "01-24",
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ],
+   "daily": 8,
+   "possession": 24,
+   "printed": "The first Saturday after the first Monday in October to the first Sunday after January 19",
+   "item": "Table 1, item 1(a)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Within the 8 a day: 4 northern pintails, 4 canvasbacks, 2 Barrow's or common goldeneyes together, 2 harlequins. Possession 24: 12, 12, 6, 6. Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "1",
+   "species": "canada and cackling geese",
+   "open": "09-05",
+   "close": "09-15",
+   "months": [
+    9
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(i) the first Saturday in September to the Tuesday after the second Saturday in September (only in Provincial Management Units 1-1, 1-2 and 1-4 to 1-7)",
+   "item": "Table 1, item 1(b)",
+   "cert": 99,
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7"
+   ],
+   "season": "2026 to 2027",
+   "notes": "Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "1",
+   "species": "canada and cackling geese",
+   "open": "10-10",
+   "close": "11-22",
+   "months": [
+    10,
+    11
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(ii) the Saturday after the first Monday in October to the first Sunday after November 17",
+   "item": "Table 1, item 1(b)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "1",
+   "species": "canada and cackling geese",
+   "open": "11-23",
+   "close": "12-18",
+   "months": [
+    11,
+    12
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(iii) the first Monday after November 18 to the Friday before the third Saturday in December (only in Provincial Management Units 1-3 and 1-8 to 1-15)",
+   "item": "Table 1, item 1(b)",
+   "cert": 99,
+   "mus": [
+    "1-3",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "season": "2026 to 2027",
+   "notes": "Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "1",
+   "species": "canada and cackling geese",
+   "open": "12-19",
+   "close": "01-10",
+   "months": [
+    12,
+    1
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(iv) the third Saturday in December to the first Sunday after January 5",
+   "item": "Table 1, item 1(b)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "1",
+   "species": "canada and cackling geese",
+   "open": "01-11",
+   "close": "01-24",
+   "months": [
+    1
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(v) the first Monday after January 6 to the first Sunday after January 19 (only in Provincial Management Units 1-3 and 1-8 to 1-15)",
+   "item": "Table 1, item 1(b)",
+   "cert": 99,
+   "mus": [
+    "1-3",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "season": "2026 to 2027",
+   "notes": "Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "1",
+   "species": "canada and cackling geese",
+   "open": "02-10",
+   "close": "03-10",
+   "months": [
+    2,
+    3
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(vi) in a year that is not a leap year, February 10 to March 10 (only in Provincial Management Units 1-1, 1-2 and 1-4 to 1-7)",
+   "item": "Table 1, item 1(b)",
+   "cert": 99,
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7"
+   ],
+   "season": "2026 to 2027",
+   "notes": "2027 is not a leap year. In a leap year (2028) it starts February 11."
+  },
+  {
+   "district": "1",
+   "species": "white fronted geese",
+   "open": "10-10",
+   "close": "01-24",
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "The Saturday after the first Monday in October to the first Sunday after January 19",
+   "item": "Table 1, item 1(c)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "1",
+   "species": "snow and ross geese",
+   "open": "10-10",
+   "close": "01-24",
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "The Saturday after the first Monday in October to the first Sunday after January 19",
+   "item": "Table 1, item 1(d)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "1",
+   "species": "coot",
+   "open": "10-10",
+   "close": "01-24",
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "The Saturday after the first Monday in October to the first Sunday after January 19",
+   "item": "Table 1, item 1(f)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "1",
+   "species": "snipe",
+   "open": "10-10",
+   "close": "01-24",
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "The Saturday after the first Monday in October to the first Sunday after January 19",
+   "item": "Table 1, item 1(g)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "2",
+   "species": "ducks",
+   "open": "10-10",
+   "close": "01-24",
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ],
+   "daily": 8,
+   "possession": 24,
+   "printed": "The Saturday after the first Monday in October to the first Sunday after January 19",
+   "item": "Table 1, item 2(a)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Within the 8 a day: 4 northern pintails, 4 canvasbacks, 2 Barrow's or common goldeneyes together, 2 harlequins. Possession 24: 12, 12, 6, 6. Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "2",
+   "species": "canada and cackling geese",
+   "open": "09-05",
+   "close": "09-15",
+   "months": [
+    9
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(i) the first Saturday in September to the Tuesday after the second Saturday in September",
+   "item": "Table 1, item 2(b)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "2",
+   "species": "canada and cackling geese",
+   "open": "10-10",
+   "close": "11-22",
+   "months": [
+    10,
+    11
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(ii) the Saturday after the first Monday in October to the first Sunday after November 17",
+   "item": "Table 1, item 2(b)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "2",
+   "species": "canada and cackling geese",
+   "open": "12-19",
+   "close": "01-10",
+   "months": [
+    12,
+    1
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(iii) the third Saturday in December to the first Sunday after January 5",
+   "item": "Table 1, item 2(b)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "2",
+   "species": "canada and cackling geese",
+   "open": "02-10",
+   "close": "03-10",
+   "months": [
+    2,
+    3
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(iv) in a year that is not a leap year, February 10 to March 10",
+   "item": "Table 1, item 2(b)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "2027 is not a leap year. In a leap year (2028) it starts February 11."
+  },
+  {
+   "district": "2",
+   "species": "white fronted geese",
+   "open": "10-10",
+   "close": "01-24",
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "The Saturday after the first Monday in October to the first Sunday after January 19",
+   "item": "Table 1, item 2(c)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "2",
+   "species": "snow and ross geese",
+   "open": "10-10",
+   "close": "01-05",
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(i) the Saturday after the first Monday in October to the first Tuesday after December 31",
+   "item": "Table 1, item 2(d)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Daily 10, not more than 5 Ross's geese; possession 30, not more than 15 Ross's. MUs 2-4 and 2-5: 5 more snow geese a day, 15 more in possession. Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "2",
+   "species": "snow and ross geese",
+   "open": "02-20",
+   "close": "03-10",
+   "months": [
+    2,
+    3
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(ii) in a year that is not a leap year, February 20 to March 10",
+   "item": "Table 1, item 2(d)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Daily 10, not more than 5 Ross's geese; possession 30, not more than 15 Ross's. MUs 2-4 and 2-5: 5 more snow geese a day, 15 more in possession. 2027 is not a leap year. In a leap year (2028) it starts February 21."
+  },
+  {
+   "district": "2",
+   "species": "brant",
+   "open": "03-01",
+   "close": "03-10",
+   "months": [
+    3
+   ],
+   "daily": 3,
+   "possession": 9,
+   "printed": "March 1 to March 10 (only in Provincial Management Unit 2-4)",
+   "item": "Table 1, item 2(e)",
+   "cert": 99,
+   "mus": [
+    "2-4"
+   ]
+  },
+  {
+   "district": "2",
+   "species": "coot",
+   "open": "10-10",
+   "close": "01-24",
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "The Saturday after the first Monday in October to the first Sunday after January 19",
+   "item": "Table 1, item 2(f)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year."
+  },
+  {
+   "district": "2",
+   "species": "snipe",
+   "open": "10-10",
+   "close": "01-24",
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "The Saturday after the first Monday in October to the first Sunday after January 19",
+   "item": "Table 1, item 2(g)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "Date for 2026 to 2027, worked out from the federal wording and matched to the BC synopsis (page 21 Region 1, page 28 Region 2). It moves each year. BC closes Boundary Bay Wildlife Management Area to snipe (synopsis page 28)."
+  },
+  {
+   "district": "3",
+   "species": "ducks",
+   "open": "09-08",
+   "close": "12-23",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 8,
+   "possession": 24,
+   "printed": "September 8 to December 23",
+   "item": "Table 1, item 3(a)",
+   "cert": 99,
+   "notes": "Within the 8 a day: 4 northern pintails, 4 canvasbacks, 2 Barrow's or common goldeneyes together, 2 harlequins. Possession 24: 12, 12, 6, 6."
+  },
+  {
+   "district": "3",
+   "species": "canada and cackling geese",
+   "open": "09-08",
+   "close": "09-20",
+   "months": [
+    9
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(i) September 8 to September 20",
+   "item": "Table 1, item 3(b)",
+   "cert": 99
+  },
+  {
+   "district": "3",
+   "species": "canada and cackling geese",
+   "open": "10-01",
+   "close": "12-23",
+   "months": [
+    10,
+    11,
+    12
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(ii) October 1 to December 23",
+   "item": "Table 1, item 3(b)",
+   "cert": 99
+  },
+  {
+   "district": "3",
+   "species": "canada and cackling geese",
+   "open": "03-01",
+   "close": "03-10",
+   "months": [
+    3
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(iii) March 1 to March 10",
+   "item": "Table 1, item 3(b)",
+   "cert": 99
+  },
+  {
+   "district": "3",
+   "species": "white fronted geese",
+   "open": "09-08",
+   "close": "12-23",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "September 8 to December 23",
+   "item": "Table 1, item 3(c)",
+   "cert": 99
+  },
+  {
+   "district": "3",
+   "species": "snow and ross geese",
+   "open": "09-08",
+   "close": "12-23",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "September 8 to December 23",
+   "item": "Table 1, item 3(d)",
+   "cert": 99
+  },
+  {
+   "district": "3",
+   "species": "coot",
+   "open": "09-08",
+   "close": "12-23",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "September 8 to December 23",
+   "item": "Table 1, item 3(f)",
+   "cert": 99
+  },
+  {
+   "district": "3",
+   "species": "snipe",
+   "open": "09-08",
+   "close": "12-23",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "September 8 to December 23",
+   "item": "Table 1, item 3(g)",
+   "cert": 99
+  },
+  {
+   "district": "4",
+   "species": "ducks",
+   "open": "09-08",
+   "close": "12-23",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 8,
+   "possession": 24,
+   "printed": "September 8 to December 23",
+   "item": "Table 1, item 4(a)",
+   "cert": 99,
+   "notes": "Within the 8 a day: 4 northern pintails, 4 canvasbacks, 2 Barrow's or common goldeneyes together, 2 harlequins. Possession 24: 12, 12, 6, 6."
+  },
+  {
+   "district": "4",
+   "species": "canada and cackling geese",
+   "open": "09-08",
+   "close": "12-23",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "September 8 to December 23",
+   "item": "Table 1, item 4(b)",
+   "cert": 99
+  },
+  {
+   "district": "4",
+   "species": "white fronted geese",
+   "open": "09-08",
+   "close": "12-23",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "September 8 to December 23",
+   "item": "Table 1, item 4(c)",
+   "cert": 99
+  },
+  {
+   "district": "4",
+   "species": "snow and ross geese",
+   "open": "09-08",
+   "close": "12-23",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "September 8 to December 23",
+   "item": "Table 1, item 4(d)",
+   "cert": 99
+  },
+  {
+   "district": "4",
+   "species": "coot",
+   "open": "09-08",
+   "close": "12-23",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "September 8 to December 23",
+   "item": "Table 1, item 4(f)",
+   "cert": 99
+  },
+  {
+   "district": "4",
+   "species": "snipe",
+   "open": "09-08",
+   "close": "12-23",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "September 8 to December 23",
+   "item": "Table 1, item 4(g)",
+   "cert": 99
+  },
+  {
+   "district": "5",
+   "species": "ducks",
+   "open": "09-13",
+   "close": "12-25",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 8,
+   "possession": 24,
+   "printed": "September 13 to December 25",
+   "item": "Table 1, item 5(a)",
+   "cert": 99,
+   "notes": "Within the 8 a day: 4 northern pintails, 4 canvasbacks, 2 Barrow's or common goldeneyes together, 2 harlequins. Possession 24: 12, 12, 6, 6."
+  },
+  {
+   "district": "5",
+   "species": "canada and cackling geese",
+   "open": "09-13",
+   "close": "12-25",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "September 13 to December 25",
+   "item": "Table 1, item 5(b)",
+   "cert": 99
+  },
+  {
+   "district": "5",
+   "species": "white fronted geese",
+   "open": "09-13",
+   "close": "12-25",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "September 13 to December 25",
+   "item": "Table 1, item 5(c)",
+   "cert": 99
+  },
+  {
+   "district": "5",
+   "species": "snow and ross geese",
+   "open": "09-13",
+   "close": "12-25",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "September 13 to December 25",
+   "item": "Table 1, item 5(d)",
+   "cert": 99
+  },
+  {
+   "district": "5",
+   "species": "coot",
+   "open": "09-13",
+   "close": "12-25",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "September 13 to December 25",
+   "item": "Table 1, item 5(f)",
+   "cert": 99
+  },
+  {
+   "district": "5",
+   "species": "snipe",
+   "open": "09-13",
+   "close": "12-25",
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "September 13 to December 25",
+   "item": "Table 1, item 5(g)",
+   "cert": 99
+  },
+  {
+   "district": "6",
+   "species": "ducks",
+   "open": "09-01",
+   "close": "09-30",
+   "months": [
+    9
+   ],
+   "daily": 8,
+   "possession": 24,
+   "printed": "(i) September 1 to September 30 (only in Provincial Management Units 6-1, 6-2, 6-4 to 6-10 and 6-15 to 6-30)",
+   "item": "Table 1, item 6(a)",
+   "cert": 99,
+   "mus": [
+    "6-1",
+    "6-2",
+    "6-4",
+    "6-5",
+    "6-6",
+    "6-7",
+    "6-8",
+    "6-9",
+    "6-10",
+    "6-15",
+    "6-16",
+    "6-17",
+    "6-18",
+    "6-19",
+    "6-20",
+    "6-21",
+    "6-22",
+    "6-23",
+    "6-24",
+    "6-25",
+    "6-26",
+    "6-27",
+    "6-28",
+    "6-29",
+    "6-30"
+   ],
+   "notes": "Within the 8 a day: 4 northern pintails, 4 canvasbacks, 2 Barrow's or common goldeneyes together, 2 harlequins. Possession 24: 12, 12, 6, 6."
+  },
+  {
+   "district": "6",
+   "species": "ducks",
+   "open": "10-01",
+   "close": "11-30",
+   "months": [
+    10,
+    11
+   ],
+   "daily": 8,
+   "possession": 24,
+   "printed": "(ii) October 1 to November 30",
+   "item": "Table 1, item 6(a)",
+   "cert": 99,
+   "notes": "Within the 8 a day: 4 northern pintails, 4 canvasbacks, 2 Barrow's or common goldeneyes together, 2 harlequins. Possession 24: 12, 12, 6, 6."
+  },
+  {
+   "district": "6",
+   "species": "ducks",
+   "open": "12-01",
+   "close": "01-15",
+   "months": [
+    12,
+    1
+   ],
+   "daily": 8,
+   "possession": 24,
+   "printed": "(iii) December 1 to January 15 (only in Provincial Management Units 6-3 and 6-11 to 6-14)",
+   "item": "Table 1, item 6(a)",
+   "cert": 99,
+   "mus": [
+    "6-3",
+    "6-11",
+    "6-12",
+    "6-13",
+    "6-14"
+   ],
+   "notes": "Within the 8 a day: 4 northern pintails, 4 canvasbacks, 2 Barrow's or common goldeneyes together, 2 harlequins. Possession 24: 12, 12, 6, 6."
+  },
+  {
+   "district": "6",
+   "species": "canada and cackling geese",
+   "open": "09-01",
+   "close": "09-30",
+   "months": [
+    9
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(i) September 1 to September 30 (only in Provincial Management Units 6-1, 6-2, 6-4 to 6-10 and 6-15 to 6-30)",
+   "item": "Table 1, item 6(b)",
+   "cert": 99,
+   "mus": [
+    "6-1",
+    "6-2",
+    "6-4",
+    "6-5",
+    "6-6",
+    "6-7",
+    "6-8",
+    "6-9",
+    "6-10",
+    "6-15",
+    "6-16",
+    "6-17",
+    "6-18",
+    "6-19",
+    "6-20",
+    "6-21",
+    "6-22",
+    "6-23",
+    "6-24",
+    "6-25",
+    "6-26",
+    "6-27",
+    "6-28",
+    "6-29",
+    "6-30"
+   ]
+  },
+  {
+   "district": "6",
+   "species": "canada and cackling geese",
+   "open": "10-01",
+   "close": "11-30",
+   "months": [
+    10,
+    11
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(ii) October 1 to November 30",
+   "item": "Table 1, item 6(b)",
+   "cert": 99
+  },
+  {
+   "district": "6",
+   "species": "canada and cackling geese",
+   "open": "12-01",
+   "close": "01-15",
+   "months": [
+    12,
+    1
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(iii) December 1 to January 15 (only in Provincial Management Units 6-3 and 6-11 to 6-14)",
+   "item": "Table 1, item 6(b)",
+   "cert": 99,
+   "mus": [
+    "6-3",
+    "6-11",
+    "6-12",
+    "6-13",
+    "6-14"
+   ]
+  },
+  {
+   "district": "6",
+   "species": "white fronted geese",
+   "open": "09-01",
+   "close": "09-30",
+   "months": [
+    9
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "(i) September 1 to September 30 (only in Provincial Management Units 6-1, 6-2, 6-4 to 6-10 and 6-15 to 6-30)",
+   "item": "Table 1, item 6(c)",
+   "cert": 99,
+   "mus": [
+    "6-1",
+    "6-2",
+    "6-4",
+    "6-5",
+    "6-6",
+    "6-7",
+    "6-8",
+    "6-9",
+    "6-10",
+    "6-15",
+    "6-16",
+    "6-17",
+    "6-18",
+    "6-19",
+    "6-20",
+    "6-21",
+    "6-22",
+    "6-23",
+    "6-24",
+    "6-25",
+    "6-26",
+    "6-27",
+    "6-28",
+    "6-29",
+    "6-30"
+   ]
+  },
+  {
+   "district": "6",
+   "species": "white fronted geese",
+   "open": "10-01",
+   "close": "11-30",
+   "months": [
+    10,
+    11
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "(ii) October 1 to November 30",
+   "item": "Table 1, item 6(c)",
+   "cert": 99
+  },
+  {
+   "district": "6",
+   "species": "white fronted geese",
+   "open": "12-01",
+   "close": "01-15",
+   "months": [
+    12,
+    1
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "(iii) December 1 to January 15 (only in Provincial Management Units 6-3 and 6-11 to 6-14)",
+   "item": "Table 1, item 6(c)",
+   "cert": 99,
+   "mus": [
+    "6-3",
+    "6-11",
+    "6-12",
+    "6-13",
+    "6-14"
+   ]
+  },
+  {
+   "district": "6",
+   "species": "snow and ross geese",
+   "open": "09-01",
+   "close": "09-30",
+   "months": [
+    9
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "(i) September 1 to September 30 (only in Provincial Management Units 6-1, 6-2, 6-4 to 6-10 and 6-15 to 6-30)",
+   "item": "Table 1, item 6(d)",
+   "cert": 99,
+   "mus": [
+    "6-1",
+    "6-2",
+    "6-4",
+    "6-5",
+    "6-6",
+    "6-7",
+    "6-8",
+    "6-9",
+    "6-10",
+    "6-15",
+    "6-16",
+    "6-17",
+    "6-18",
+    "6-19",
+    "6-20",
+    "6-21",
+    "6-22",
+    "6-23",
+    "6-24",
+    "6-25",
+    "6-26",
+    "6-27",
+    "6-28",
+    "6-29",
+    "6-30"
+   ]
+  },
+  {
+   "district": "6",
+   "species": "snow and ross geese",
+   "open": "10-01",
+   "close": "11-30",
+   "months": [
+    10,
+    11
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "(ii) October 1 to November 30",
+   "item": "Table 1, item 6(d)",
+   "cert": 99
+  },
+  {
+   "district": "6",
+   "species": "snow and ross geese",
+   "open": "12-01",
+   "close": "01-15",
+   "months": [
+    12,
+    1
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "(iii) December 1 to January 15 (only in Provincial Management Units 6-3 and 6-11 to 6-14)",
+   "item": "Table 1, item 6(d)",
+   "cert": 99,
+   "mus": [
+    "6-3",
+    "6-11",
+    "6-12",
+    "6-13",
+    "6-14"
+   ]
+  },
+  {
+   "district": "6",
+   "species": "coot",
+   "open": "09-01",
+   "close": "09-30",
+   "months": [
+    9
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(i) September 1 to September 30 (only in Provincial Management Units 6-1, 6-2, 6-4 to 6-10 and 6-15 to 6-30)",
+   "item": "Table 1, item 6(f)",
+   "cert": 99,
+   "mus": [
+    "6-1",
+    "6-2",
+    "6-4",
+    "6-5",
+    "6-6",
+    "6-7",
+    "6-8",
+    "6-9",
+    "6-10",
+    "6-15",
+    "6-16",
+    "6-17",
+    "6-18",
+    "6-19",
+    "6-20",
+    "6-21",
+    "6-22",
+    "6-23",
+    "6-24",
+    "6-25",
+    "6-26",
+    "6-27",
+    "6-28",
+    "6-29",
+    "6-30"
+   ]
+  },
+  {
+   "district": "6",
+   "species": "coot",
+   "open": "10-01",
+   "close": "11-30",
+   "months": [
+    10,
+    11
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(ii) October 1 to November 30",
+   "item": "Table 1, item 6(f)",
+   "cert": 99
+  },
+  {
+   "district": "6",
+   "species": "coot",
+   "open": "12-01",
+   "close": "01-15",
+   "months": [
+    12,
+    1
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(iii) December 1 to January 15 (only in Provincial Management Units 6-3 and 6-11 to 6-14)",
+   "item": "Table 1, item 6(f)",
+   "cert": 99,
+   "mus": [
+    "6-3",
+    "6-11",
+    "6-12",
+    "6-13",
+    "6-14"
+   ]
+  },
+  {
+   "district": "6",
+   "species": "snipe",
+   "open": "09-01",
+   "close": "09-30",
+   "months": [
+    9
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(i) September 1 to September 30 (only in Provincial Management Units 6-1, 6-2, 6-4 to 6-10 and 6-15 to 6-30)",
+   "item": "Table 1, item 6(g)",
+   "cert": 99,
+   "mus": [
+    "6-1",
+    "6-2",
+    "6-4",
+    "6-5",
+    "6-6",
+    "6-7",
+    "6-8",
+    "6-9",
+    "6-10",
+    "6-15",
+    "6-16",
+    "6-17",
+    "6-18",
+    "6-19",
+    "6-20",
+    "6-21",
+    "6-22",
+    "6-23",
+    "6-24",
+    "6-25",
+    "6-26",
+    "6-27",
+    "6-28",
+    "6-29",
+    "6-30"
+   ]
+  },
+  {
+   "district": "6",
+   "species": "snipe",
+   "open": "10-01",
+   "close": "11-30",
+   "months": [
+    10,
+    11
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(ii) October 1 to November 30",
+   "item": "Table 1, item 6(g)",
+   "cert": 99
+  },
+  {
+   "district": "6",
+   "species": "snipe",
+   "open": "12-01",
+   "close": "01-15",
+   "months": [
+    12,
+    1
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(iii) December 1 to January 15 (only in Provincial Management Units 6-3 and 6-11 to 6-14)",
+   "item": "Table 1, item 6(g)",
+   "cert": 99,
+   "mus": [
+    "6-3",
+    "6-11",
+    "6-12",
+    "6-13",
+    "6-14"
+   ]
+  },
+  {
+   "district": "7",
+   "species": "ducks",
+   "open": "09-01",
+   "close": "11-30",
+   "months": [
+    9,
+    10,
+    11
+   ],
+   "daily": 8,
+   "possession": 24,
+   "printed": "September 1 to November 30",
+   "item": "Table 1, item 7(a)",
+   "cert": 99,
+   "notes": "Within the 8 a day: 4 northern pintails, 4 canvasbacks, 2 Barrow's or common goldeneyes together, 2 harlequins. Possession 24: 12, 12, 6, 6."
+  },
+  {
+   "district": "7",
+   "species": "canada and cackling geese",
+   "open": "09-01",
+   "close": "11-30",
+   "months": [
+    9,
+    10,
+    11
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "September 1 to November 30",
+   "item": "Table 1, item 7(b)",
+   "cert": 99
+  },
+  {
+   "district": "7",
+   "species": "white fronted geese",
+   "open": "09-01",
+   "close": "11-30",
+   "months": [
+    9,
+    10,
+    11
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "September 1 to November 30",
+   "item": "Table 1, item 7(c)",
+   "cert": 99
+  },
+  {
+   "district": "7",
+   "species": "snow and ross geese",
+   "open": "09-01",
+   "close": "11-30",
+   "months": [
+    9,
+    10,
+    11
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "September 1 to November 30",
+   "item": "Table 1, item 7(d)",
+   "cert": 99
+  },
+  {
+   "district": "7",
+   "species": "coot",
+   "open": "09-01",
+   "close": "11-30",
+   "months": [
+    9,
+    10,
+    11
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "September 1 to November 30",
+   "item": "Table 1, item 7(f)",
+   "cert": 99
+  },
+  {
+   "district": "7",
+   "species": "snipe",
+   "open": "09-01",
+   "close": "11-30",
+   "months": [
+    9,
+    10,
+    11
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "September 1 to November 30",
+   "item": "Table 1, item 7(g)",
+   "cert": 99
+  },
+  {
+   "district": "8",
+   "species": "ducks",
+   "open": "09-23",
+   "close": "01-07",
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1
+   ],
+   "daily": 8,
+   "possession": 24,
+   "printed": "September 23 to January 7",
+   "item": "Table 1, item 8(a)",
+   "cert": 99,
+   "notes": "Within the 8 a day: 4 northern pintails, 4 canvasbacks, 2 Barrow's or common goldeneyes together, 2 harlequins. Possession 24: 12, 12, 6, 6."
+  },
+  {
+   "district": "8",
+   "species": "canada and cackling geese",
+   "open": "09-20",
+   "close": "11-28",
+   "months": [
+    9,
+    10,
+    11
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(i) September 20 to November 28",
+   "item": "Table 1, item 8(b)",
+   "cert": 99
+  },
+  {
+   "district": "8",
+   "species": "canada and cackling geese",
+   "open": "12-20",
+   "close": "01-05",
+   "months": [
+    12,
+    1
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(ii) December 20 to January 5",
+   "item": "Table 1, item 8(b)",
+   "cert": 99
+  },
+  {
+   "district": "8",
+   "species": "canada and cackling geese",
+   "open": "02-21",
+   "close": "03-10",
+   "months": [
+    2,
+    3
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "(iii) in a year that is not a leap year, February 21 to March 10",
+   "item": "Table 1, item 8(b)",
+   "cert": 99,
+   "season": "2026 to 2027",
+   "notes": "2027 is not a leap year. In a leap year (2028) it starts February 22."
+  },
+  {
+   "district": "8",
+   "species": "white fronted geese",
+   "open": "09-23",
+   "close": "01-07",
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "September 23 to January 7",
+   "item": "Table 1, item 8(c)",
+   "cert": 99
+  },
+  {
+   "district": "8",
+   "species": "snow and ross geese",
+   "open": "09-23",
+   "close": "01-07",
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1
+   ],
+   "daily": 5,
+   "possession": 15,
+   "printed": "September 23 to January 7",
+   "item": "Table 1, item 8(d)",
+   "cert": 99
+  },
+  {
+   "district": "8",
+   "species": "coot",
+   "open": "09-23",
+   "close": "01-07",
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "September 23 to January 7",
+   "item": "Table 1, item 8(f)",
+   "cert": 99
+  },
+  {
+   "district": "8",
+   "species": "snipe",
+   "open": "09-23",
+   "close": "01-07",
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1
+   ],
+   "daily": 10,
+   "possession": 30,
+   "printed": "September 23 to January 7",
+   "item": "Table 1, item 8(g)",
+   "cert": 99
+  }
+ ]
+}

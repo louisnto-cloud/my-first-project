@@ -178,3 +178,35 @@ body.map-open:has(.hmm-sheet:not([hidden]), .hmm-search:not([hidden]), .hmm-fpan
   background: var(--ink); color: var(--bg); padding: 10px 14px; border-radius: 10px; font-size: 15px; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; }
 .hm-toast.on { opacity: 1; transform: translate(-50%, 0); }
 main:has(article.step) { padding-bottom: 64px; }
+
+/* Home dashboard (app/home.js): compact "This week" cards */
+.hmd-card { padding: 12px 14px; margin-bottom: 10px; }
+.hmd-card h2 { font-size: 18px; margin-bottom: 6px; }
+.hmd .big { font-size: 34px; }
+.hmd-edit { min-height: 44px; padding: 0 12px; font-size: 15px; }
+.hmd-q { margin: 4px 0 8px; }
+.hmd-seg button { font-size: 14px; min-height: 44px; padding: 0 2px; }
+.hmd-where { margin: 8px 0 0; }
+.hmd-small { font-size: 13px; margin: 4px 0 0; }
+.hmd-link { background: none; border: 0; padding: 0; color: var(--accent); font: inherit; text-decoration: underline; cursor: pointer; }
+.hmd-law { background: var(--warn-bg); border-left: 4px solid var(--accent); padding: 6px 10px; border-radius: 0 8px 8px 0; font-size: 14px; font-weight: 700; margin: 0 0 6px; }
+.hmd-list { list-style: none; margin: 0; padding: 0; }
+.hmd-sr { padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 16px; line-height: 1.35; }
+.hmd-sr:last-child { border-bottom: 0; }
+.hmd-soon { color: var(--bad); }
+.hmd-kv { display: flex; justify-content: space-between; gap: 10px; padding: 4px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
+.hmd-kv:last-of-type { border-bottom: 0; }
+.hmd-kv span { color: var(--muted); }
+.hmd-kv b { text-align: right; }
+.hmd-now { align-items: center; }
+.hmd-wind { color: var(--accent); }
+.hmd-wind .hmd-arr { width: 34px; height: 34px; }
+.hmd-hrs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; margin: 8px 0 4px; text-align: center; font-size: 13px; }
+.hmd-hr { display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 0; border-radius: 8px; background: var(--bg); min-width: 0; }
+.hmd-hr b { font-size: 15px; }
+.hmd-rain { color: var(--muted); font-size: 12px; }
+.hmd-arr { display: block; color: inherit; }
+.hmd-tip { margin: 6px 0 0; font-size: 15px; font-weight: 600; }
+.hmd-links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 14px; }
+.hmd-links .btn { min-height: 48px; padding: 0 8px; font-size: 16px; }
+:root[data-theme="sun"] .hmd-hr { border: 1px solid #000; }
