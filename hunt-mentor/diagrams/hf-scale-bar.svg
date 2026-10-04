@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Map scale ruler. On a 1 to 50,000 map, 1 centimetre is 500 metres on the ground, so 2 centimetres, about a thumb width, is 1 kilometre, about 20 to 30 minutes of walking in hills. On a 1 to 250,000 map, 1 centimetre is 2.5 kilometres.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1:50,000 map</text>
+  <g>
+    <rect x="40" y="50" width="80" height="24" fill="#2f3a2b"/><rect x="120" y="50" width="80" height="24" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+    <rect x="200" y="50" width="80" height="24" fill="#2f3a2b"/><rect x="280" y="50" width="80" height="24" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+  </g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle">
+    <text x="40" y="92">0</text><text x="120" y="92">1 cm</text><text x="200" y="92">2 cm</text><text x="280" y="92">3 cm</text><text x="360" y="92">4 cm</text>
+    <text x="40" y="110">0</text><text x="120" y="110">500 m</text><text x="200" y="110">1 km</text><text x="280" y="110">1.5 km</text><text x="360" y="110">2 km</text>
+  </g>
+  <path d="M40 130 L200 130" stroke="#e8590c" stroke-width="4"/>
+  <polygon points="40,122 40,138 30,130" fill="#e8590c"/><polygon points="200,122 200,138 210,130" fill="#e8590c"/>
+  <rect x="80" y="145" width="80" height="44" rx="22" fill="#c9b79c" stroke="#8b5a2b" stroke-width="2"/>
+  <text x="120" y="173" font-size="14" fill="#2f3a2b" text-anchor="middle">thumb</text>
+  <text x="225" y="160" font-size="15" font-weight="bold" fill="#e8590c">Thumb about 2 cm</text>
+  <text x="225" y="178" font-size="15" fill="#2f3a2b">= 1 km on the ground</text>
+  <text x="225" y="196" font-size="15" fill="#2f3a2b">= 20 to 30 min in hills</text>
+  <line x1="20" y1="218" x2="380" y2="218" stroke="#8a9a6b" stroke-width="2"/>
+  <text x="200" y="246" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1:250,000 map</text>
+  <rect x="40" y="258" width="80" height="16" fill="#8a9a6b"/>
+  <text x="130" y="272" font-size="15" fill="#2f3a2b">1 cm = 2.5 km. Driving only</text>
+</svg>

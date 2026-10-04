@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Map view of a bench. Tight contour lines above and below a wide gap. The wide gap, shaded orange, is a flat step on the slope where a deer lies bedded. A small side view shows the step shape.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="36" width="400" height="232" fill="#dfe6d3" opacity=".6"/>
+  <path d="M0 82 C 120 76, 260 90, 400 84 L400 168 C 260 176, 120 160, 0 166 Z" fill="#e8590c" opacity=".18"/>
+  <g fill="none" stroke="#8b5a2b" stroke-width="2.5">
+    <path d="M0 50 C 120 44, 260 58, 400 52"/><path d="M0 66 C 120 60, 260 74, 400 68"/><path d="M0 82 C 120 76, 260 90, 400 84"/>
+    <path d="M0 166 C 120 160, 260 176, 400 168"/><path d="M0 182 C 120 176, 260 192, 400 184"/><path d="M0 198 C 120 192, 260 208, 400 200"/><path d="M0 214 C 120 208, 260 224, 400 216"/>
+  </g>
+  <g transform="translate(110 128)">
+    <ellipse rx="20" ry="9" fill="#8b5a2b"/><circle cx="17" cy="-9" r="7" fill="#8b5a2b"/>
+    <path d="M15 -15 l-4 -9 M21 -15 l4 -9" stroke="#5c3b1c" stroke-width="2"/>
+  </g>
+  <text x="250" y="132" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Bench: wide gap</text>
+  <text x="12" y="26" font-size="18" font-weight="bold" fill="#2f3a2b">Bench</text>
+  <text x="388" y="26" font-size="14" fill="#2f3a2b" text-anchor="end">High ground at top</text>
+  <rect x="250" y="226" width="140" height="66" fill="#fffaf0" stroke="#8a9a6b" stroke-width="1.5"/>
+  <path d="M258 236 L300 262 L345 264 L382 288" fill="none" stroke="#2f3a2b" stroke-width="3"/>
+  <text x="320" y="254" font-size="14" fill="#2f3a2b" text-anchor="middle">side view</text>
+  <text x="12" y="290" font-size="15" fill="#2f3a2b">Tight lines above and below</text>
+</svg>

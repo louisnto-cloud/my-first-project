@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Quick check, side by side. Left: a ridge, contour Vs point downhill, no water. Right: a draw, contour Vs point uphill and a creek runs in it. High ground is at the top of both.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="10" y="40" width="185" height="210" fill="#dfe6d3" opacity=".6"/><rect x="205" y="40" width="185" height="210" fill="#dfe6d3" opacity=".6"/>
+  <g fill="none" stroke="#8b5a2b" stroke-width="2.5">
+    <path d="M40 60 L102 130 L165 60"/><path d="M30 100 L102 180 L175 100"/><path d="M20 140 L102 230 L185 140"/>
+    <path d="M215 120 L297 60 L380 120"/><path d="M215 170 L297 110 L380 170"/><path d="M215 220 L297 160 L380 220"/>
+  </g>
+  <path d="M297 56 C 293 120, 302 180, 297 248" fill="none" stroke="#4a7fb0" stroke-width="4"/>
+  <text x="102" y="30" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Ridge</text>
+  <text x="297" y="30" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Draw</text>
+  <text x="102" y="272" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">V points down</text>
+  <text x="102" y="292" font-size="14" fill="#2f3a2b" text-anchor="middle">dry spine</text>
+  <text x="297" y="272" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">V points up</text>
+  <text x="297" y="292" font-size="14" fill="#4a7fb0" text-anchor="middle">water runs in it</text>
+</svg>

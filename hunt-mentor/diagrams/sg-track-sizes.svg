@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" font-family="sans-serif" role="img" aria-label="Bar chart of front track length in centimetres. Grouse 5 to 7. Coyote 6 to 7. Deer 4 to 10. Cougar 7.5 to 10 wide. Wolf 9 to 13. Elk 10 to 13. Black bear 10 to 16. Moose 11 to 18. Grizzly about 18. Measure, then look here.">
+<rect width="400" height="420" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Front track length (cm)</text>
+<line x1="120" y1="45" x2="120" y2="372" stroke="#dfe6d3" stroke-width="2"/>
+<text x="120" y="392" font-size="14" fill="#2f3a2b" text-anchor="middle">0</text>
+<line x1="185" y1="45" x2="185" y2="372" stroke="#dfe6d3" stroke-width="2"/>
+<text x="185" y="392" font-size="14" fill="#2f3a2b" text-anchor="middle">5</text>
+<line x1="250" y1="45" x2="250" y2="372" stroke="#dfe6d3" stroke-width="2"/>
+<text x="250" y="392" font-size="14" fill="#2f3a2b" text-anchor="middle">10</text>
+<line x1="315" y1="45" x2="315" y2="372" stroke="#dfe6d3" stroke-width="2"/>
+<text x="315" y="392" font-size="14" fill="#2f3a2b" text-anchor="middle">15</text>
+<line x1="380" y1="45" x2="380" y2="372" stroke="#dfe6d3" stroke-width="2"/>
+<text x="380" y="392" font-size="14" fill="#2f3a2b" text-anchor="middle">20</text>
+<text x="112" y="66" font-size="15" fill="#2f3a2b" text-anchor="end">Grouse</text>
+<rect x="185" y="50" width="26" height="20" rx="6" fill="#8a9a6b"/>
+<text x="217" y="65" font-size="14" fill="#2f3a2b" text-anchor="start">5 to 7</text>
+<text x="112" y="102" font-size="15" fill="#2f3a2b" text-anchor="end">Coyote</text>
+<rect x="198" y="86" width="13" height="20" rx="6" fill="#e8590c"/>
+<text x="217" y="101" font-size="14" fill="#2f3a2b" text-anchor="start">6 to 7</text>
+<text x="112" y="138" font-size="15" fill="#2f3a2b" text-anchor="end">Deer</text>
+<rect x="172" y="122" width="78" height="20" rx="6" fill="#8b5a2b"/>
+<text x="256" y="137" font-size="14" fill="#2f3a2b" text-anchor="start">4 to 10</text>
+<text x="112" y="174" font-size="15" fill="#2f3a2b" text-anchor="end">Cougar</text>
+<rect x="217.5" y="158" width="32.5" height="20" rx="6" fill="#e8590c"/>
+<text x="256" y="173" font-size="14" fill="#2f3a2b" text-anchor="start">7.5 to 10 wide</text>
+<text x="112" y="210" font-size="15" fill="#2f3a2b" text-anchor="end">Wolf</text>
+<rect x="237" y="194" width="52" height="20" rx="6" fill="#e8590c"/>
+<text x="295" y="209" font-size="14" fill="#2f3a2b" text-anchor="start">9 to 13</text>
+<text x="112" y="246" font-size="15" fill="#2f3a2b" text-anchor="end">Elk</text>
+<rect x="250" y="230" width="39" height="20" rx="6" fill="#8b5a2b"/>
+<text x="295" y="245" font-size="14" fill="#2f3a2b" text-anchor="start">10 to 13</text>
+<text x="112" y="282" font-size="15" fill="#2f3a2b" text-anchor="end">Black bear</text>
+<rect x="250" y="266" width="78" height="20" rx="6" fill="#2f3a2b"/>
+<text x="244" y="281" font-size="14" fill="#2f3a2b" text-anchor="end">10 to 16</text>
+<text x="112" y="318" font-size="15" fill="#2f3a2b" text-anchor="end">Moose</text>
+<rect x="263" y="302" width="91" height="20" rx="6" fill="#8b5a2b"/>
+<text x="257" y="317" font-size="14" fill="#2f3a2b" text-anchor="end">11 to 18</text>
+<text x="112" y="354" font-size="15" fill="#2f3a2b" text-anchor="end">Grizzly</text>
+<circle cx="354" cy="348" r="9" fill="#2f3a2b"/>
+<text x="340" y="353" font-size="14" fill="#2f3a2b" text-anchor="end">about 18</text>
+<text x="200" y="412" font-size="14" fill="#6b4f35" text-anchor="middle">Brown hoofs, orange cat and dog, dark bears</text>
+</svg>

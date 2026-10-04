@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Map view of a ridge. Nested U shaped contour lines point downhill, toward the bottom of the page. An orange dashed line runs down the spine of the ridge.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="36" width="400" height="232" fill="#dfe6d3" opacity=".6"/>
+  <g fill="none" stroke="#8b5a2b" stroke-width="2.5">
+    <path d="M150 36 C 150 110, 250 110, 250 36"/>
+    <path d="M120 36 C 120 150, 280 150, 280 36"/>
+    <path d="M90 36 C 90 190, 310 190, 310 36"/>
+    <path d="M60 36 C 60 230, 340 230, 340 36"/>
+    <path d="M30 36 C 30 268, 370 268, 370 36"/>
+  </g>
+  <line x1="200" y1="40" x2="200" y2="262" stroke="#e8590c" stroke-width="4" stroke-dasharray="10 6"/>
+  <text x="12" y="26" font-size="18" font-weight="bold" fill="#2f3a2b">Ridge</text>
+  <text x="388" y="26" font-size="14" fill="#2f3a2b" text-anchor="end">High ground at top</text>
+  <text x="208" y="250" font-size="14" font-weight="bold" fill="#e8590c">spine</text>
+  <text x="200" y="292" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">U or V points DOWNHILL</text>
+  <polygon points="360,240 376,240 368,256" fill="#2f3a2b"/><line x1="368" y1="210" x2="368" y2="242" stroke="#2f3a2b" stroke-width="3"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 5, measure the straddle: the width of the whole trail, from the outer edge of the left prints to the outer edge of the right prints. Then read the whole trail, not one print.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="30" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">5. Measure the straddle</text>
+  <rect x="10" y="60" width="260" height="170" rx="10" fill="#dfe6d3"/>
+  <g fill="#8b5a2b">
+    <g transform="translate(50 175) rotate(90) scale(.8)"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/></g>
+    <g transform="translate(120 115) rotate(90) scale(.8)"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/></g>
+    <g transform="translate(190 175) rotate(90) scale(.8)"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/></g>
+    <g transform="translate(235 115) rotate(90) scale(.8)"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/></g>
+  </g>
+  <g stroke="#2f3a2b" stroke-width="1.5" stroke-dasharray="5 4"><path d="M20 103 H260 M20 187 H260"/></g>
+  <g stroke="#e8590c" stroke-width="3" fill="none"><path d="M285 103 V187 M277 103 H293 M277 187 H293"/></g>
+  <text x="300" y="140" font-size="17" font-weight="bold" fill="#e8590c">Straddle</text>
+  <text x="300" y="160" font-size="14" fill="#2f3a2b">outer edge</text>
+  <text x="300" y="176" font-size="14" fill="#2f3a2b">to outer</text>
+  <text x="300" y="192" font-size="14" fill="#2f3a2b">edge</text>
+  <text x="200" y="262" font-size="16" fill="#2f3a2b" text-anchor="middle">Wide straddle: a big, heavy animal</text>
+  <text x="200" y="284" font-size="15" fill="#6b4f35" text-anchor="middle">Then read the whole trail, not one print</text>
+</svg>

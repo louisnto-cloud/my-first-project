@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 3, measure one clear print. Length runs from the tip of the toes to the back of the heel. Width runs across the widest part. A tape or a knife beside it gives scale.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="30" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3. Measure one clear print</text>
+  <rect x="40" y="50" width="320" height="220" rx="10" fill="#dfe6d3"/>
+  <g transform="translate(170 160) scale(4)" fill="#8b5a2b">
+    <path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/>
+    <path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/>
+  </g>
+  <g stroke="#e8590c" stroke-width="3" fill="none">
+    <path d="M245 80 V240 M237 80 H253 M237 240 H253"/>
+    <path d="M120 255 H220 M120 247 V263 M220 247 V263"/>
+  </g>
+  <text x="258" y="155" font-size="17" font-weight="bold" fill="#e8590c">Length</text>
+  <text x="258" y="175" font-size="15" fill="#2f3a2b">toe tip to heel</text>
+  <text x="170" y="290" font-size="17" font-weight="bold" fill="#e8590c" text-anchor="middle">Width</text>
+  <rect x="60" y="70" width="20" height="160" fill="#f3d36b" stroke="#2f3a2b"/>
+  <g stroke="#2f3a2b" stroke-width="1.5"><path d="M60 90 h8 M60 110 h12 M60 130 h8 M60 150 h12 M60 170 h8 M60 190 h12 M60 210 h8"/></g>
+  <text x="70" y="250" font-size="14" fill="#2f3a2b" text-anchor="middle">tape</text>
+</svg>

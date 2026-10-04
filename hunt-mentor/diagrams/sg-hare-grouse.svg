@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Small tracks. Snowshoe hare: two big hind prints side by side land ahead of two small front prints, making a Y that points the way it went. Grouse: 3 toes forward and 1 short toe back, about 5 to 7 cm, in a single zig zag line.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hare and grouse</text>
+  <rect x="15" y="45" width="175" height="190" rx="10" fill="#eef2f6"/>
+  <rect x="210" y="45" width="175" height="190" rx="10" fill="#eef2f6"/>
+  <g fill="#8b5a2b">
+    <ellipse cx="80" cy="85" rx="12" ry="24"/><ellipse cx="125" cy="85" rx="12" ry="24"/>
+    <circle cx="102" cy="140" r="8"/><circle cx="100" cy="170" r="8"/>
+  </g>
+  <path d="M102 225 V200" stroke="#e8590c" stroke-width="3"/>
+  <path d="M102 60 l-8 14 h16 Z" fill="#e8590c"/>
+  <text x="140" y="140" font-size="14" fill="#2f3a2b">front</text>
+  <text x="140" y="156" font-size="14" fill="#2f3a2b">small</text>
+  <text x="30" y="128" font-size="14" fill="#2f3a2b">hind</text>
+  <text x="30" y="144" font-size="14" fill="#2f3a2b">big</text>
+  <g stroke="#8b5a2b" stroke-width="4" stroke-linecap="round" fill="none">
+    <g transform="translate(275 200)"><path d="M0 0 V-22 M0 0 L-12 -18 M0 0 L12 -18 M0 0 V7"/></g>
+    <g transform="translate(320 150)"><path d="M0 0 V-22 M0 0 L-12 -18 M0 0 L12 -18 M0 0 V7"/></g>
+    <g transform="translate(278 100)"><path d="M0 0 V-22 M0 0 L-12 -18 M0 0 L12 -18 M0 0 V7"/></g>
+  </g>
+  <path d="M355 120 l-8 14 h16 Z" fill="#e8590c"/><path d="M355 220 V134" stroke="#e8590c" stroke-width="3"/>
+  <text x="102" y="260" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hare: a Y</text>
+  <text x="102" y="282" font-size="14" fill="#2f3a2b" text-anchor="middle">big hind prints lead</text>
+  <text x="297" y="260" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Grouse: 3 + 1</text>
+  <text x="297" y="282" font-size="14" fill="#2f3a2b" text-anchor="middle">5 to 7 cm, one line</text>
+</svg>

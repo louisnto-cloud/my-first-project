@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" font-family="sans-serif" role="img" aria-label="Track age chart. Cut through a print from the side. Minutes to hours: crisp sharp walls, shiny wet mud, a thin raised rim in dust. A day: edges start to round, the rim collapses. Days: walls rounded and soft. A week or more: leaves, needles and spider web inside. Frost or rain pits inside a print mean it was made before the frost or rain.">
+  <rect width="400" height="360" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How old is the track?</text>
+  <text x="200" y="48" font-size="14" fill="#6b4f35" text-anchor="middle">The print cut in half, seen from the side</text>
+  <g fill="#c9b79c" stroke="#6b4f35" stroke-width="2">
+    <path d="M12 80 H34 V112 H66 V80 H90 V130 H12 Z"/>
+    <path d="M108 80 H128 Q132 80 132 90 V112 H164 V90 Q164 80 168 80 H188 V130 H108 Z"/>
+    <path d="M206 80 H222 Q232 84 234 104 Q236 112 248 112 Q262 112 264 104 Q266 84 276 80 H292 V130 H206 Z"/>
+    <path d="M302 80 H316 Q330 90 334 106 Q340 110 352 108 Q362 92 376 80 H392 V130 H302 Z"/>
+  </g>
+  <path d="M30 78 l4 -6 l4 6 M62 78 l4 -6 l4 6" stroke="#6b4f35" stroke-width="2" fill="none"/>
+  <g fill="#8a9a6b"><path d="M330 100 l10 -6 l8 8 Z"/><path d="M345 104 l12 -8 l2 10 Z"/></g>
+  <path d="M322 92 L366 92 M330 86 L350 100" stroke="#2f3a2b" stroke-width="1"/>
+  <g font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">
+    <text x="51" y="156">Hours</text><text x="148" y="156">A day</text><text x="249" y="156">Days</text><text x="347" y="156">A week</text>
+  </g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle">
+    <text x="51" y="178">crisp walls</text><text x="51" y="196">shiny mud</text><text x="51" y="214">dust rim</text>
+    <text x="148" y="178">edges</text><text x="148" y="196">softening</text><text x="148" y="214">rim gone</text>
+    <text x="249" y="178">walls</text><text x="249" y="196">rounded</text>
+    <text x="347" y="178">leaves,</text><text x="347" y="196">web inside</text>
+  </g>
+  <rect x="12" y="236" width="376" height="112" rx="10" fill="#eef2f6"/>
+  <text x="26" y="262" font-size="16" font-weight="bold" fill="#4a7fb0">Weather clocks</text>
+  <text x="26" y="286" font-size="15" fill="#2f3a2b">Frost or rain pits inside: made before</text>
+  <text x="26" y="308" font-size="15" fill="#2f3a2b">Print cuts through frost: made this morning</text>
+  <text x="26" y="330" font-size="15" fill="#2f3a2b">Best test: your own boot print beside it</text>
+</svg>
