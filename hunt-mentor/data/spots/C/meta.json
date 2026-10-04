@@ -67,7 +67,7 @@
  "routes": 1503,
  "camps": 74,
  "bytes": {
-  "spots.geojson": 3372609,
+  "spots.geojson": 4750167,
   "routes.geojson": 2208233,
   "camps.geojson": 60390
  },
@@ -326,15 +326,6 @@
    "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html",
    "page": null,
    "checked": "2026-10-02"
-  },
-  "r8quail": {
-   "label": "Region 8 quail (the synopsis row says only QUAIL)",
-   "value": "quail (the synopsis row says only QUAIL), Region 8 MUs 8-1 to 8-15 and 8-21 to 8-26: 1 Oct to 30 Nov. Daily 10, possession 30.",
-   "certainty": 99,
-   "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
-   "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-8-okanagan.pdf",
-   "page": "page 68",
-   "checked": "2026-10-02"
   }
  },
  "regsEdition": {
@@ -342,6 +333,31 @@
   "lastChecked": "2026-10-02"
  },
  "regsWarnings": [],
+ "seasonFiles": [
+  {
+   "region": 2,
+   "edition": "2026-10-02",
+   "rows": 43,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 3,
+   "edition": "2026-10-02",
+   "rows": 50,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 8,
+   "edition": "2026-10-02",
+   "rows": 43,
+   "checked": "2026-10-04"
+  }
+ ],
+ "seasonCoverage": {
+  "withFileRows": 1066,
+  "withRegsRows": 0,
+  "verify": 153
+ },
  "notes": [
   "Candidate spots from official open data. Nobody publishes where hunters go; nothing here says animals are present.",
   "Scores are opinion (my pick). Busier, average, quieter and remote are estimates from access.",

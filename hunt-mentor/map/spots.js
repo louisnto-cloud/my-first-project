@@ -128,6 +128,21 @@ function parkPoint(p) {
   const la = num(p.park_lat ?? p.parkLat), lo = num(p.park_lon ?? p.park_lng ?? p.parkLon);
   return la != null && lo != null ? [la, lo] : null;
 }
+// Season rows from data/seasons (pipeline): { sp, cls, open, close (MM-DD), dates, notes, page, cert, leh, none }.
+function seasonList(v) { v = parseMaybe(v); return Array.isArray(v) ? v.filter((r) => r && typeof r === 'object' && (r.sp || r.dates)) : []; }
+function openToday(r) {
+  if (!r.open || !r.close) return r.dates === 'No closed season';
+  const d = new Date(), t = `${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  return r.open <= r.close ? t >= r.open && t <= r.close : t >= r.open || t <= r.close;
+}
+function seasonsHtml(rows, mu) {
+  if (!rows.length) return '';
+  return `<h3 class="hmm-h">Seasons${mu ? ` for MU ${esc(mu)}` : ''}</h3><ul class="hmm-evid hmm-seas">${rows.map((r) => {
+    const on = !r.none && !r.leh && openToday(r);
+    const src = [r.page != null ? `Synopsis page ${r.page}` : '', r.cert != null ? `${r.cert}%` : ''].filter(Boolean).join(', ');
+    return `<li><b>${esc(cap(r.sp || ''))}${r.cls ? `, ${esc(String(r.cls).toLowerCase())}` : ''}</b> ${esc(r.dates || '')}${on ? ' <span class="hmm-open">Open today</span>' : ''}<small>${esc([r.notes ? cap(r.notes) : '', src].filter(Boolean).join('. '))}</small></li>`;
+  }).join('')}</ul><p class="hmm-muted">Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028. Youth, bow and LEH (Limited Entry Hunting) rows need the right hunter or a draw.</p>`;
+}
 function datesText(v) {
   v = parseMaybe(v); if (v == null || v === '') return '';
   if (typeof v === 'object') return Object.entries(v).map(([k, d]) => `${k.replace(/_/g, ' ')} ${d}`).join(', ');
@@ -144,7 +159,8 @@ export function openCard(H, l, f) {
   const max = num(p.score_max ?? p.scoreMax ?? p.scoreOf);
   const flagSrc = (x) => [x.source, x.cert != null ? `${x.cert}%` : '', x.date ? `data ${x.date}` : ''].filter(Boolean).join(', ');
   const dates = datesText(p.dates ?? p.data_dates ?? p.dataDates);
-  const hasLegalWords = flags.length || plan.some(([t]) => t === 'Legal');
+  const seas = seasonList(p.seasonRows);
+  const hasLegalWords = flags.length || seas.length || plan.some(([t]) => t === 'Legal');
   const html = `<div class="hmm-spot">
     <div class="hmm-spot-h"><span class="hmm-spot-ic" style="border-color:${cat.color}">${spotIconSvg(p._cat, 28)}</span>
       <div><div class="hmm-spot-cat" style="color:${cat.color}">${esc(cat.label)}</div><div class="hmm-muted">Candidate spot. Scout it first.</div></div></div>
@@ -158,6 +174,7 @@ export function openCard(H, l, f) {
     <p class="hmm-coord">${esc(units.coord(lng, lat))}${park ? `<br><span class="hmm-muted">Park at ${esc(units.coord(park[1], park[0]))}, ${esc(units.dist(haversine([lng, lat], [park[1], park[0]])))} away</span>` : ''}</p>
     ${plan.length ? `<h3 class="hmm-h">Plan</h3><ol class="hmm-plan">${plan.map(([t, x]) => `<li><b>${esc(t)}</b>${linesHtml(x)}</li>`).join('')}</ol>` : ''}
     ${hasLegalWords ? '<h3 class="hmm-h">Legal</h3><div class="hmm-banner">Study aid only. The official regulations are the law.</div>' : ''}
+    ${seasonsHtml(seas, p.mu)}
     ${flags.length ? `<ul class="hmm-flags">${flags.map((x) => `<li class="${x.level}"><i aria-hidden="true"></i><span><b class="hmm-fl">${x.level === 'ok' ? 'OK' : x.level === 'warn' ? 'Check' : 'Stop'}</b> ${esc(x.text)}${flagSrc(x) ? `<small>${esc(flagSrc(x))}</small>` : ''}</span></li>`).join('')}</ul>` : ''}
     ${evid.length ? `<h3 class="hmm-h">Evidence</h3><ul class="hmm-evid">${evid.map((x) => `<li>${esc(x.text)}${x.pts ? ` <b class="hmm-pts">+${esc(x.pts)}</b>` : ''}${x.dist != null ? ` <span class="hmm-muted">(${esc(units.dist(x.dist))})</span>` : ''}${x.source || x.cert != null ? `<small>${esc([x.source, x.cert != null ? `${x.cert}%` : '', x.date].filter(Boolean).join(', '))}</small>` : ''}</li>`).join('')}</ul>` : ''}
     <p class="hmm-verify-line">Candidate only. Check posted signs. Private land can be unsigned.${dates ? ` Data dates: ${esc(dates)}.` : ''}</p>

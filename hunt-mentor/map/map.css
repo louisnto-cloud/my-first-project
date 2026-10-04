@@ -376,3 +376,4 @@ input:disabled + .hmm-switch { opacity: 0.4; }
 .hmw-reg small { font-size: 13px; color: var(--hmm-muted); }
 :root[data-theme="dark"] .hmw-arr { color: #7cc0ff; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]):not([data-theme="sun"]) .hmw-arr { color: #7cc0ff; } }
+.hmm-seas .hmm-open { display: inline-block; margin-left: 4px; padding: 1px 7px; border-radius: 10px; background: #2e7d32; color: #fff; font-size: 12px; font-weight: 600; }
