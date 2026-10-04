@@ -14,9 +14,11 @@ Owner asks (2026-10-02 and 10-03): thousands of locations on a map; popular spot
 | A | Kamloops, North Thompson, Bonaparte, Shuswap west | -121.6, 50.2, -119.4, 51.9 | Heffley Creek 50.8581, -120.2687 |
 | B | Mission, Fraser Valley, Harrison, Hope, Fraser Canyon | -122.9, 49.0, -121.3, 49.95 | Mission 49.1327, -122.3045 |
 | C | South Okanagan and Similkameen (quail trip) | -120.1, 49.0, -119.2, 49.7 | Oliver 49.1830, -119.5500 (assumption) |
+| D | Merritt, Nicola and North Okanagan | -121.3, 49.7, -118.6, 50.5, minus A's box (so D1 -121.3 to -119.4 at 49.7 to 50.2, D2 -119.4 to -118.6 at 49.7 to 50.5) | Merritt 50.1113, -120.7862 (Nominatim) |
+| E | Cariboo south: 100 Mile House to Williams Lake | -122.6, 51.2, -120.4, 52.3, minus A's box (west of -121.6, or north of 51.9) | 100 Mile House 51.6428, -121.2957 (Nominatim; the town itself is in A) |
 | BC | Province wide, small layers only | whole province | none |
 
-Build A first, then B, then C. Owner's own onX pins seen in screenshots: Upper Louis Creek Road (area A) and near Mission and Hope (area B).
+Build A first, then B, then C, then D and E (2026-10-04). Areas never overlap: D and E cut out A's box (`excl` in the pipeline's area table). Seasons: D is Regions 3 and 8, E is Regions 5 and 3 (each spot's region comes from the MU layer). Owner's own onX pins seen in screenshots: Upper Louis Creek Road (area A) and near Mission and Hope (area B).
 
 ## Data sources (BC Data Catalogue WFS, free, no key; build time only: the server does not allow browser access from github.io)
 Endpoint: `https://openmaps.gov.bc.ca/geo/pub/ows?service=WFS&version=1.0.0&request=GetFeature&outputFormat=application/json&srsName=EPSG:4326&typeName=pub:<LAYER>&bbox=<lonmin>,<latmin>,<lonmax>,<latmax>,EPSG:4326&maxFeatures=5000&startIndex=<n>` (version 1.0.0 bbox order is lon,lat). CQL: `&CQL_FILTER=...` (geometry column `GEOMETRY`). One request at a time, User-Agent header, retry with backoff, cache raw pages in the scratchpad (never in the repo).

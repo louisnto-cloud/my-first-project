@@ -10,18 +10,24 @@ Script: `scripts/spots-pipeline.py` (Python 3.11). Rerunnable. Every download is
   `python3 scripts/spots-pipeline.py --cache /path/to/gis-cache --areas A,B,C --steps all`
 - Only rebuild spots and the manifest (no downloads):
   `python3 scripts/spots-pipeline.py --cache /path/to/gis-cache --areas A,B,C --steps spots,manifest`
-- Run `manifest` with all areas, so every area stays listed.
+- Areas D and E (2026-10-04): `--areas D,E --steps fetch,dem,layers,spots,migration`, then `--areas A,B,C,D,E --steps manifest`.
+- Run `manifest` with all areas, so every area stays listed. The manifest also carries `areaBoxes` and `areaNames` for the app.
 - The cache used on 2026-10-03 and 04: the session scratchpad `.../scratchpad/gis/` (`raw/`, `dem/12/`, `work/`).
 
 ## Steps (in order)
 | Step | What it does | Time (this machine) |
 |---|---|---|
-| fetch | BC Data Catalogue WFS pages, one request at a time, cached in `raw/` | about 23 min for A, B, C (first run) |
+| fetch | BC Data Catalogue WFS pages, one request at a time, cached in `raw/` | about 23 min for A, B, C (first run); D 20 min (Vernon parcels, many 504 retries); E 5 min |
 | dem | AWS terrarium z12 tiles, then an elevation grid per area | 7 min first run; seconds after |
 | layers | clean, simplify, write `data/layers/bc/*` and `data/layers/<area>/*` | A 5 min; B and C 5 min |
-| spots | score, pick, refine and write `data/spots/<area>/*` | A 1 min 45 s; B 30 s; C 35 s |
+| spots | score, pick, refine and write `data/spots/<area>/*` | A 1 min 45 s; B 30 s; C 35 s; D 65 s; E 58 s |
 | migration | seasonal bands per species, duck waters, quail habitat | 40 s for all three |
 | manifest | write `data/layers/manifest.json` | under 1 s |
+
+## Cut outs (areas never overlap)
+- An area can list `excl` boxes (lon min, lat min, lon max, lat max). D and E cut out A's box.
+- Fetch skips tiles that lie wholly inside a cut out; the analysis grid marks cut out cells out of the area; area layers are clipped (`emit`); a spot whose point lands in a cut out is dropped (`inOtherArea` in meta stats).
+- Private parcels are fetched in pages of 2000 (`page` per layer): dense Vernon tiles timed out at 5000. A Java exception reply from the server is retried 5 times with a growing wait.
 
 ## How a spot is made
 1. Grid (200 m) scores per species, weights in `W` at the top of the script (my pick, from SPOTS.md).
@@ -41,15 +47,24 @@ Script: `scripts/spots-pipeline.py` (Python 3.11). Rerunnable. Every download is
 - Busier, average, quieter and remote are estimates from access. Labelled "(estimate)".
 - Season rows: `data/seasons/region2.json`, `region3.json`, `region5.json`, `region8.json` (synopsis 2 October 2026 season tables, every MU expanded). Deer covers mule and white tailed deer; grouse covers sharp tailed grouse where listed. No file row: `data/regs.json`; still nothing: "VERIFY" with empty months.
 - Duck spots: `data/seasons/migratory.json` by MU (federal Migratory Birds Regulations, 2022, Schedule 3, Part 10: district, dates, daily and possession limits). A duck spot lists ducks, Canada geese, white fronted geese, snow and Ross's geese, coots and snipe; its months come from the duck row only. MUs 2-1, 3-45, 3-46, 5-16 and 7-1 are in no district: "No open season" (90%). Districts 1 and 2 dates move each year: rows hold the 2026 to 2027 dates.
+- Area D: Hwy 97C (Okanagan Connector) from Aspen Grove to Peachland is a 400 m no hunting or shooting strip (synopsis page 10): targets left out, routes flagged. Swan Lake north of Vernon (Map J17, No Shooting or Hunting Area): 500 m buffer, targets left out (my pick). Quail spots only in Region 8 (`QUAIL_AREAS`; Region 3 has no quail season).
+- Area E: grouse zones add SBPS and SBS (my pick, `GROUSE_ZONES_EXTRA`).
 - Spot months come from the general rows (youth only and private land only rows left out). The card shows "Open today" live.
 
 ## Outputs and sizes (2026-10-04)
+- D: layers 17.1 MB, spots 10.8 MB. E: layers 13.2 MB, spots 10.0 MB. All data now about 157 MB (layers 115, spots 42), a little over the 150 MB budget.
 - `data/layers/**`: 86 MB. Biggest: A cutblocks 18.2 MB, A forest roads 9.4 MB, A habitat zones 9.2 MB (PMTiles).
 - `data/spots/**`: about 21 MB. Per area: `index.geojson` (light points for the map: id, name, cat, species, score, busy, mu, months; A 422 KB, B 132 KB, C 323 KB), `detail/<tile>.json` (full spot properties keyed by id, fetched when a spot is tapped), `routes/<tile>.geojson` (fetched for tiles in view from zoom 12), `camps.geojson`, `meta.json`. Tile = 0.25 degree grid, key `floor(lon/0.25)_floor(lat/0.25)`; routes go in their spot's tile. The old whole area `spots.geojson` and `routes.geojson` are no longer written (2026-10-04).
 - Total about 106 MB (budget about 150 MB).
 - Each area folder has `meta.json`: counts, layer dates, scoring weights, dropped counts, notes.
 
 ## Gaps (honest list)
+- D and E (2026-10-04): every non camp spot has season rows, 0 VERIFY. E: 264 Region 5 moose spots (all of them) show "No general open season" (Region 5 moose is LEH only); 30 Region 3 moose spots in E have a general season. Sharp tailed grouse rows say "No general open season" in 3-12, 3-13 and Region 8 MUs and in some Region 5 MUs (the grouse row itself is open).
+- 100 Mile House sits inside area A. Area E starts about 20 km west (west of -121.6) and north of 51.9 (Lac la Hache north to Williams Lake and the Fraser).
+- Region 5 regional No Shooting Areas were not reviewed against the synopsis map pages (no Region 5 study file yet). Silver Star Park No Hunting Area (Map J16) is covered only by the park polygon.
+- E has no moose winter range in the UWR layer (only mule deer and goat).
+- FWA source typo kept as given: "CanoeLake" in area E.
+- The style checker flags official road names with hyphens (Hornet-Deadman FSR, Merritt-Princeton Hwy 5A): D 34 lines, E 43, all names (same as A, B, C).
 - Season rows (2026-10-04): every non camp spot in A, B and C has rows. 35 show "No general open season" (34 Region 5 moose, 1 Region 2 moose: LEH only or no row) and 1 duck spot in MU 3-45 shows "No open season" (no federal district).
 - Districts 1 and 2 duck and goose dates in `migratory.json` are for 2026 to 2027. Redo them each July.
 - Moose in area B: 5 spots only. Coastal moose habitat is thin and the scoring zones exclude CWH.

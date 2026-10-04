@@ -45,7 +45,33 @@ AREAS = {
           'base': {'name': 'Mission', 'lat': 49.1327, 'lon': -122.3045}},
     'C': {'name': 'South Okanagan and Similkameen (quail trip)', 'box': (-120.1, 49.0, -119.2, 49.7),
           'base': {'name': 'Oliver', 'lat': 49.1830, 'lon': -119.5500, 'note': 'Assumption: Oliver town centre'}},
+    # D and E: 'excl' boxes are cut out so areas never overlap (here: area A's box). 'box' stays the bounding box.
+    'D': {'name': 'Merritt, Nicola and North Okanagan', 'box': (-121.3, 49.7, -118.6, 50.5),
+          'excl': [(-121.6, 50.2, -119.4, 51.9)],
+          'base': {'name': 'Merritt', 'lat': 50.1113, 'lon': -120.7862, 'note': 'Nominatim 2026-10-04 (town 50.1125, -120.7884)'}},
+    'E': {'name': 'Cariboo south: 100 Mile House to Williams Lake', 'box': (-122.6, 51.2, -120.4, 52.3),
+          'excl': [(-121.6, 50.2, -119.4, 51.9)],
+          'base': {'name': '100 Mile House', 'lat': 51.6428, 'lon': -121.2957,
+                   'note': 'Nominatim 2026-10-04. The town sits inside area A; area E spots lie west of -121.6 and north of 51.9.'}},
 }
+
+
+def area_excl(area):
+    return AREAS.get(area, {}).get('excl') or []
+
+
+def in_excl(area, lon, lat):
+    """True where lon/lat (arrays or scalars) fall inside a cut out box of the area."""
+    lon, lat = np.asarray(lon), np.asarray(lat)
+    m = np.zeros(np.broadcast(lon, lat).shape, bool)
+    for b in area_excl(area):
+        m |= (lon > b[0]) & (lon < b[2]) & (lat > b[1]) & (lat < b[3])
+    return m
+
+
+def excl_poly_albers(area):
+    ex = area_excl(area)
+    return shapely.union_all([box_albers(b) for b in ex]) if ex else None
 BC_BOX = (-139.1, 48.2, -114.0, 60.0)
 
 WFS = 'https://openmaps.gov.bc.ca/geo/pub/ows'
@@ -82,7 +108,7 @@ LAYERS = {
     'uwr': dict(type='WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP', geom='GEOMETRY', scope='area',
                 props=['UWR_NUMBER', 'UWR_UNIT_NUMBER', 'SPECIES_1', 'SPECIES_2', 'APPROVAL_DATE', 'HECTARES', 'TIMBER_HARVEST_CODE']),
     'private': dict(type='WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW', geom='SHAPE', scope='area', tile=0.2, margin=0,
-                    cql="OWNER_TYPE='Private' AND NOT (PARCEL_CLASS IN ('Building Strata','Air Space'))",
+                    page=2000, cql="OWNER_TYPE='Private' AND NOT (PARCEL_CLASS IN ('Building Strata','Air Space'))",
                     props=['PARCEL_CLASS', 'MUNICIPALITY', 'WHEN_UPDATED']),
     'openings': dict(type='WHSE_FOREST_VEGETATION.RSLT_OPENING_SVW', geom='GEOMETRY', scope='area', tile=0.5,
                      props=['OPENING_ID', 'OPENING_CATEGORY_CODE', 'OPENING_STATUS_CODE', 'APPROVE_DATE', 'DISTURBANCE_START_DATE',
@@ -149,7 +175,8 @@ BURN_MIN_HA = 10           # smaller spot fires grow too little feed to score (m
 DEER_ZONES_LOW = {'BG', 'PP', 'IDF'}
 DEER_ZONES_MID = {'MS'}
 GROUSE_ZONES = {'IDF', 'MS', 'ESSF', 'ICH'}
-GROUSE_ZONES_EXTRA = {'B': {'CWH'}}   # Assumption (my pick): coastal grouse use CWH forest in area B
+GROUSE_ZONES_EXTRA = {'B': {'CWH'}, 'E': {'SBPS', 'SBS'}}   # Assumption (my pick): CWH forest in B; Cariboo pine and spruce in E
+QUAIL_AREAS = {'C': None, 'D': {'8'}}   # quail spots: area -> regions allowed (None = all). Region 3 has no quail season.
 QUAIL_ZONES = {'BG', 'PP'}
 QUAIL_MAX_ELEV = 700
 DUCK_MAX_ELEV = 900
@@ -260,7 +287,11 @@ def fetch_layer(cache, layer, scope_key, box):
     t0 = time.time()
     n = 0
     tiles = tiles_for(box, L.get('tile')) if box else [None]
+    ex = area_excl(scope_key)
+    pg = L.get('page', PAGE)   # smaller pages for heavy layers (dense parcels time out at 5000)
     for ti, tb in enumerate(tiles):
+        if tb and any(tb[0] >= b[0] and tb[2] <= b[2] and tb[1] >= b[1] and tb[3] <= b[3] for b in ex):
+            continue   # tile lies inside a cut out box (another area covers it)
         start = 0
         while True:
             key = hashlib.sha1(json.dumps([tb, start, L.get('cql'), L['props']]).encode()).hexdigest()[:12]
@@ -269,21 +300,27 @@ def fetch_layer(cache, layer, scope_key, box):
                 with gzip.open(fn, 'rt') as f:
                     m = json.load(f).get('_n', 0)
             else:
-                p = wfs_params(layer, tb, start)
+                p = wfs_params(layer, tb, start, count=pg)
                 url = WFS + '?' + urllib.parse.urlencode(p, safe=":,'()")
-                b = http_get(url)
-                try:
-                    js = json.loads(b)
-                except Exception:
+                js = None
+                for attempt in range(5):   # the server sometimes answers with a Java exception under load: wait and retry
+                    b = http_get(url)
+                    try:
+                        js = json.loads(b)
+                        break
+                    except Exception:
+                        log(f'  bad response {attempt + 1} for {layer}: {b[:600]!r}'[:900])
+                        time.sleep(30 * (attempt + 1))
+                if js is None:
                     raise RuntimeError(f'{layer}: bad response {b[:300]!r}')
                 m = len(js.get('features', []))
                 js['_n'] = m
                 with gzip.open(fn, 'wt') as f:
                     json.dump(js, f)
             n += m
-            if m < PAGE:
+            if m < pg:
                 break
-            start += PAGE
+            start += pg
     json.dump({'features': n, 'seconds': round(time.time() - t0, 1), 'date': TODAY, 'box': box}, open(done, 'w'))
     log(f'  fetched {layer} {scope_key}: {n} features (with tile overlaps) in {time.time() - t0:.0f}s')
 
@@ -850,6 +887,12 @@ def emit(info, lid, scope, base_path, geoms_albers, props, tol, data_date, newes
     """Simplify (tol m), write GeoJSON; if over 6 MB write PMTiles instead. Records file info."""
     t0 = time.time()
     g = np.asarray(geoms_albers, dtype=object)
+    exp = excl_poly_albers(scope) if scope in AREAS else None
+    if exp is not None and len(g):
+        hit = shapely.intersects(g, exp)
+        if hit.any():
+            g = g.copy()
+            g[hit] = shapely.difference(g[hit], exp)
     if tol:
         g = simplify_m(g, tol)
     keep = ~(shapely.is_missing(g) | shapely.is_empty(g))
@@ -1083,6 +1126,8 @@ class Grid:
         self.lon = lon.reshape(X.shape)
         self.lat = lat.reshape(X.shape)
         self.inbox = (self.lon >= b[0]) & (self.lon <= b[2]) & (self.lat >= b[1]) & (self.lat <= b[3])
+        if area_excl(area):
+            self.inbox &= ~in_excl(area, self.lon, self.lat)
 
     def _pts(self, coords):
         c = np.asarray(coords)
@@ -1424,11 +1469,17 @@ class AreaContext:
         self.private = self.ca['private'][0]
         self.dem = DEM(cache, area)
         # special no hunting and single projectile zones along listed highways (synopsis, highway rules)
+        self.no_hunt_text = set()
         self.no_hunt_zones, self.single_proj_zones = self._highway_zones()
         self.vaseux = self._named_lake_buffer('Vaseux Lake', 2000) if area == 'C' else None
+        # Swan Lake north of Vernon (MU 8-22): No Shooting or Hunting Area, the lake and all its marsh (synopsis Map J17).
+        # Edge not in the data: 500 m buffer around the lake (my pick).
+        self.swan = self._named_lake_buffer('Swan Lake', 500, near=(-119.27, 50.30)) if area == 'D' else None
         nt = [self.no_hunt_zones] if self.no_hunt_zones is not None else []
         if self.vaseux is not None:
             nt.append(self.vaseux)
+        if self.swan is not None:
+            nt.append(self.swan)
         nt += list(mg[self.no_shoot_idx])
         self.notarget_extra = shapely.union_all(nt) if nt else None
         self.no_park_polys = np.concatenate([self.parks[0], self.reserves[0], self.cities[0], self.closed_mv_polys])
@@ -1466,6 +1517,12 @@ class AreaContext:
             # Hwy 3 between Hope and Manning Park: no hunting within 400 m of the road allowance
             if '3' in nums and self.area == 'B' and lon > -121.45:
                 nh.append(gi)
+                self.no_hunt_text.add('Hwy 3 between Hope and Manning Park')
+            # Hwy 97C (Okanagan Connector) between Hwy 97 near Peachland and Hwy 5 near Aspen Grove: no hunting or shooting 400 m
+            # (synopsis page 10). The 97C west and north of Merritt (to Logan Lake and Ashcroft) is not on the list.
+            if '97C' in nums and '5' not in nums and lon > -120.66 and lat < 50.0:
+                nh.append(gi)
+                self.no_hunt_text.add('Hwy 97C (Okanagan Connector) between Aspen Grove and Peachland')
             # Hwy 5 (Coquihalla) between Hope and the Hwy 1 and 5 junction at Kamloops: single projectile ban 400 m
             if '5' in nums and '1' not in nums and lat < 50.66:
                 sp.append(gi)
@@ -1473,9 +1530,12 @@ class AreaContext:
         spz = shapely.union_all(shapely.buffer(np.array(sp, dtype=object), 415)) if sp else None
         return nhz, spz
 
-    def _named_lake_buffer(self, name, dist):
+    def _named_lake_buffer(self, name, dist, near=None):
         g, p, _ = self.ca['lakes']
         idx = [i for i, x in enumerate(p) if (x['name'] or '') == name]
+        if near and idx:
+            nx, ny = lonlat_to_xy(*near)
+            idx = [i for i in idx if shapely.distance(g[i], shapely.Point(float(nx), float(ny))) < 5000]
         if not idx:
             return None
         return shapely.union_all(shapely.buffer(g[idx], dist))
@@ -2776,13 +2836,18 @@ def legal_flags(rf, s):
                       'src': 'Synopsis highway rules; DRA_DGTL_ROAD_ATLAS_MPAR_SP', 'date': dates['roads'], 'cert': 85})
         s['singleProj'] = True
     if ctx.no_hunt_zones is not None and shapely.intersects(ctx.no_hunt_zones, route):
-        flags.append({'t': 'Route crosses the 400 m no hunting strip beside Hwy 3 between Hope and Manning Park: no hunting there (synopsis, 99%).',
+        flags.append({'t': f"Route crosses the 400 m no hunting strip beside {' or '.join(sorted(ctx.no_hunt_text))}: "
+                           'no hunting or shooting there (synopsis page 10, 99%).',
                       'src': 'Synopsis highway rules; DRA_DGTL_ROAD_ATLAS_MPAR_SP', 'date': dates['roads'], 'cert': 85})
     if rf.wma_tree is not None:
         for j in rf.wma_tree.query(pt, predicate='intersects'):
             p = ctx.wma[1][int(j)]
             flags.append({'t': f"Inside {p['name']} Wildlife Management Area: rules differ by area. Call the regional office before you hunt (synopsis page 9, 99%).",
                           'src': 'TA_WILDLIFE_MGMT_AREAS_SVW', 'date': dates['wma'], 'cert': 95})
+    if getattr(ctx, 'swan', None) is not None and shapely.distance(ctx.swan, pt) < 1500:
+        flags.append({'t': 'Near Swan Lake: the lake and all its marsh are a No Shooting or Hunting Area (synopsis Region 8, Map J17, 99%). '
+                           'The edge is not in this data. VERIFY on the ground.',
+                      'src': 'Synopsis Region 8', 'date': dates['roads'], 'cert': 99})
     if ctx.vaseux is not None and shapely.distance(ctx.vaseux, pt) < 1500:
         flags.append({'t': 'Near Vaseux Lake: hunting is prohibited in the Vaseux Migratory Bird Sanctuary and the National Wildlife Areas '
                            '(synopsis page 67, 99%). Their edges are not in this data. VERIFY on the ground.',
@@ -3307,7 +3372,7 @@ def step_spots(cache, areas):
         rf = Refiner(ctx, dates)
         stats = {}
         cands = []
-        for sp in ('deer', 'moose') + (('quail',) if a == 'C' else ()):
+        for sp in ('deer', 'moose') + (('quail',) if a in QUAIL_AREAS else ()):
             c = grid_candidates(ctx, sp, stats)
             log(f'  {sp}: {len(c)} grid candidates')
             cands += c
@@ -3322,6 +3387,10 @@ def step_spots(cache, areas):
         for c in cands:
             c['area'] = a
             s = finalize(rf, c, stats)
+            if s and s['sp'] == 'quail' and QUAIL_AREAS.get(a) and str(s.get('region')) not in QUAIL_AREAS[a]:
+                stats.setdefault('quail', {}).setdefault('outsideQuailRegion', 0)
+                stats['quail']['outsideQuailRegion'] += 1
+                continue
             if s:
                 spots.append(s)
         log(f'  refined {len(spots)} of {len(cands)} hunting candidates in {time.time() - t1:.0f}s')
@@ -3335,6 +3404,10 @@ def step_spots(cache, areas):
             s = finalize(rf, c, stats)
             if s:
                 spots.append(s)
+        if area_excl(a):   # keep areas apart: a spot whose point falls in a cut out box belongs to the other area
+            n0 = len(spots)
+            spots = [s for s in spots if not in_excl(a, *ll(s['x'], s['y']))]
+            stats['inOtherArea'] = n0 - len(spots)
         spots, removed = enforce_spacing(spots)
         stats['spacingRemoved'] = removed
         for s in spots:
@@ -3449,7 +3522,13 @@ def step_spots(cache, areas):
             ] + (['No approved deer winter range near Kamloops or Heffley Creek: deer scores there come from cutblocks, burns, '
                   'habitat zone, aspect and fields (top score 8 of 11).'] if a == 'A' else [])
               + (['Assumption: grouse zones include CWH (Coastal Western Hemlock) in area B (my pick).'] if a == 'B' else [])
-              + (['Vaseux Lake: quail and duck targets within 2 km are left out (sanctuary and National Wildlife Area edges not mapped).'] if a == 'C' else []),
+              + (['Vaseux Lake: quail and duck targets within 2 km are left out (sanctuary and National Wildlife Area edges not mapped).'] if a == 'C' else [])
+              + (['Area D leaves out the part of its box inside area A (north of 50.2 and west of -119.4).',
+                  'Hwy 97C (Okanagan Connector) from Aspen Grove to Peachland: 400 m no hunting or shooting strip, targets left out.',
+                  'Swan Lake north of Vernon: No Shooting or Hunting Area (Map J17); targets within 500 m of the lake are left out (my pick).',
+                  'Quail spots only in Region 8 (Region 3 has no quail season).'] if a == 'D' else [])
+              + (['Area E leaves out the part of its box inside area A (south of 51.9 and east of -121.6). 100 Mile House itself is in area A.',
+                  'Assumption: grouse zones include SBPS and SBS (Sub Boreal Pine and Spruce, Sub Boreal Spruce) in area E (my pick).'] if a == 'E' else []),
         }
         json.dump(meta, open(out / 'meta.json', 'w'), indent=1, ensure_ascii=False)
         log(f'spots {a}: {len(feats)} spots, {len(routes)} routes, {len(campf)} camps, '
@@ -3623,12 +3702,17 @@ def step_migration(cache, areas):
             emit(info, 'duck_waters', a, adir / 'duck_waters', np.array(geoms, dtype=object), props, 20, TODAY)
             info['duck_waters'][a]['source'] = src_note
         # quail: resident habitat (no migration), area C trip only
-        if a == 'C':
+        if a in QUAIL_AREAS:
             qb = species_bands('quail') if mj and 'quail' in mj.get('species', {}) else [('all year', list(range(1, 13)), ['BG', 'PP'], [250, 750], 'Default band. VERIFY.', 50, True)]
             geoms, props = [], []
             for band, months, zz, e, where, cert, verify in qb:
                 codes = [zc[z] for z in zz if z in zc]
                 m = G.inbox & np.isin(zr, codes) & (el >= e[0]) & (el <= e[1])
+                if QUAIL_AREAS.get(a):
+                    mg_, mp_, _ = clean_bc(cache)['mu']
+                    sel_ = [i for i, x in enumerate(mp_) if x['region'] in QUAIL_AREAS[a]]
+                    sub_ = subset_box(mg_[sel_], [mp_[i] for i in sel_], G.poly)[0]
+                    m &= (G.burn_polys(sub_) > 0) if len(sub_) else False
                 for g in mask_to_polys(G, m, min_km2=0.2):
                     geoms.append(g)
                     props.append({'species': 'California quail', 'band': 'resident all year', 'months': list(range(1, 13)),
@@ -3736,7 +3820,7 @@ MIG_POPUP = [['Species', 'species'], ['Band', 'band'], ['Months', 'monthsText'],
              ['Where', 'where'], ['Certainty %', 'cert'], ['Label', 'label']]
 
 
-def _files_entry(rec, areas_order=('A', 'B', 'C')):
+def _files_entry(rec, areas_order=tuple(AREAS)):
     """{area: info} -> manifest keys: file with {area} when uniform, else files list."""
     if 'BC' in rec:
         return {'file': rec['BC']['file'], 'areas': 'BC'}
@@ -3819,7 +3903,7 @@ def step_manifest(cache, areas):
          'about': 'Quail do not migrate. Low Bunchgrass and Ponderosa Pine country near farms and brushy creeks, all year. General pattern.',
          'cert': 60, 'months': list(range(1, 13)), 'legal': False}, rec)
     # spots, routes, camps
-    sp_areas = [a for a in ('A', 'B', 'C') if (OUT_SPOTS / a / 'index.geojson').exists()]
+    sp_areas = [a for a in AREAS if (OUT_SPOTS / a / 'index.geojson').exists()]
     sp_meta = {a: json.load(open(OUT_SPOTS / a / 'meta.json')) if (OUT_SPOTS / a / 'meta.json').exists() else {} for a in sp_areas}
 
     def spot_rec(fname):
@@ -3871,7 +3955,10 @@ def step_manifest(cache, areas):
         if l.get('id') in {s[0] for s in MANIFEST_SPEC}:
             continue   # pipeline layer with no data this run
         out.append(l)
-    man = {'updated': TODAY, 'layers': out}
+    man = {'updated': TODAY,
+           'areaBoxes': {a: list(v['box']) for a, v in AREAS.items()},
+           'areaNames': {a: v['name'] for a, v in AREAS.items()},
+           'layers': out}
     tmp = mpath.with_suffix('.tmp')
     json.dump(man, open(tmp, 'w'), indent=1, ensure_ascii=False)
     tmp.replace(mpath)
