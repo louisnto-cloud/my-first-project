@@ -128,7 +128,8 @@ function parkPoint(p) {
   const la = num(p.park_lat ?? p.parkLat), lo = num(p.park_lon ?? p.park_lng ?? p.parkLon);
   return la != null && lo != null ? [la, lo] : null;
 }
-// Season rows from data/seasons (pipeline): { sp, cls, open, close (MM-DD), dates, notes, page, cert, leh, none }.
+// Season rows from data/seasons (pipeline): { sp, cls, open, close (MM-DD), dates, limit, notes, page or src, cert, leh, none }.
+// Duck and goose rows carry src (federal Migratory Birds Regulations) and limit (daily and possession).
 function seasonList(v) { v = parseMaybe(v); return Array.isArray(v) ? v.filter((r) => r && typeof r === 'object' && (r.sp || r.dates)) : []; }
 function openToday(r) {
   if (!r.open || !r.close) return r.dates === 'No closed season';
@@ -139,9 +140,9 @@ function seasonsHtml(rows, mu) {
   if (!rows.length) return '';
   return `<h3 class="hmm-h">Seasons${mu ? ` for MU ${esc(mu)}` : ''}</h3><ul class="hmm-evid hmm-seas">${rows.map((r) => {
     const on = !r.none && !r.leh && openToday(r);
-    const src = [r.page != null ? `Synopsis page ${r.page}` : '', r.cert != null ? `${r.cert}%` : ''].filter(Boolean).join(', ');
-    return `<li><b>${esc(cap(r.sp || ''))}${r.cls ? `, ${esc(String(r.cls).toLowerCase())}` : ''}</b> ${esc(r.dates || '')}${on ? ' <span class="hmm-open">Open today</span>' : ''}<small>${esc([r.notes ? cap(r.notes) : '', src].filter(Boolean).join('. '))}</small></li>`;
-  }).join('')}</ul><p class="hmm-muted">Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028. Youth, bow and LEH (Limited Entry Hunting) rows need the right hunter or a draw.</p>`;
+    const src = [r.src || (r.page != null ? `Synopsis page ${r.page}` : ''), r.cert != null ? `${r.cert}%` : ''].filter(Boolean).join(', ');
+    return `<li><b>${esc(cap(r.sp || ''))}${r.cls ? `, ${esc(String(r.cls).toLowerCase())}` : ''}</b> ${esc(r.dates || '')}${r.limit ? `, ${esc(r.limit)}` : ''}${on ? ' <span class="hmm-open">Open today</span>' : ''}<small>${esc([r.notes ? cap(r.notes) : '', src].filter(Boolean).join('. '))}</small></li>`;
+  }).join('')}</ul><p class="hmm-muted">Source: ${rows.some((r) => r.src) ? 'federal Migratory Birds Regulations, 2022 (ducks, geese, coots, snipe) and ' : ''}BC Hunting and Trapping Regulations Synopsis 2026 to 2028. Youth, bow and LEH (Limited Entry Hunting) rows need the right hunter or a draw.</p>`;
 }
 function datesText(v) {
   v = parseMaybe(v); if (v == null || v === '') return '';
