@@ -97,11 +97,11 @@
     const p = progress();
     const misses = Object.entries(S.quiz).filter(([, v]) => !v).length;
     view.innerHTML = `
-      <div class="card row">
+      ${window.HMHome ? '' : `<div class="card row">
         <div class="grow"><div class="muted">First hunt</div><div class="big">${d > 0 ? d : 0} days</div>
         <div class="muted">${esc(firstHunt())}${S.settings.firstHunt ? '' : ' (placeholder date, set yours in More)'}</div></div>
         <a class="btn primary" href="#/field">Field Mode</a>
-      </div>
+      </div>`}
       ${nx ? `<a class="card" style="display:block;text-decoration:none;color:inherit" href="#/s/${nx.id}">
         <div class="muted">Next session</div><h2>${nx.phase}.${nx.num} ${esc(nx.title)}</h2><div class="muted">${nx.minutes} min</div></a>` : '<div class="card"><h2>All sessions done</h2></div>'}
       <div class="card"><h2>Progress</h2>
