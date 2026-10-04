@@ -1810,24 +1810,32 @@ class AreaContext:
         mp_, sp_ = name_pt('Murdock Point'), name_pt('Semaphore Point')
         sg, spp, _ = self.ca['streams']
         sc = [sg[i] for i, x in enumerate(spp) if (x['name'] or '') == 'Sicamous Creek']
-        if water is not None and mp_ is not None and sp_ is not None and sc:
-            mouth_y = min(shapely.get_coordinates(shapely.union_all(sc))[:, 1])   # lowest end of the creek in y (estimate of the mouth)
-            ax, ay, bx, by = mp_.x, mp_.y, sp_.x, sp_.y
+        if water is not None and sp_ is not None and sc:
+            cc = shapely.get_coordinates(shapely.union_all(sc))
+            dd = shapely.distance(water, shapely.points(cc))
+            mouth_y = float(cc[int(np.argmin(dd)), 1])   # creek vertex nearest the lake water (estimate of the mouth)
             far = 60000
+            if mp_ is not None:
+                ax, ay, bx, by = mp_.x, mp_.y, sp_.x, sp_.y
+                how = 'the named points'
+            else:   # Murdock Point is not in BC Geographical Names: north south line through Semaphore Point (estimate)
+                ax, ay, bx, by = sp_.x, sp_.y, sp_.x, sp_.y + 1000
+                how = 'a north south line through Semaphore Point (Murdock Point is not in BC Geographical Names)'
             dx, dy = bx - ax, by - ay
             L = (dx * dx + dy * dy) ** 0.5
             ux, uy = dx / L, dy / L
-            nx_, ny_ = uy, -ux   # normal pointing east of the line (for a line drawn roughly north south)
+            nx_, ny_ = uy, -ux
             if nx_ < 0:
                 nx_, ny_ = -nx_, -ny_
             half = shapely.Polygon([(ax - ux * far, ay - uy * far), (ax + ux * far, ay + uy * far),
                                     (ax + ux * far + nx_ * far, ay + uy * far + ny_ * far), (ax - ux * far + nx_ * far, ay - uy * far + ny_ * far)])
             north = shapely.box(ax - far, mouth_y, ax + far, mouth_y + far)
-            g = shapely.intersection(shapely.intersection(water, half), north)
+            near_sic = shapely.Point(sp_.x, sp_.y).buffer(15000)   # the Sicamous end of the lakes only
+            g = shapely.intersection(shapely.intersection(shapely.intersection(water, half), north), near_sic)
             add('C9', g.buffer(100) if not g.is_empty else None,
                 'Sicamous (Map C9): No Shooting or Hunting Area on all waters of Mara and Shuswap lakes east of a line from Murdock Point '
                 'to Semaphore Point and north of an east west line through the mouth of Sicamous Creek (synopsis page 35, 99%). '
-                'Drawn from the named points, the creek and FWA lake outlines plus 100 m (estimate).', 99,
+                f'Drawn from {how}, the creek and FWA lake outlines, within 15 km of Sicamous, plus 100 m (estimate). VERIFY on the ground.', 99,
                 syn + '; BC Geographical Names; FWA lakes', near=2000)
         # C10 Salmon Arm: waters of Shuswap Lake southeast of a line from the Salmon Arm Wharf to a white marker (not in the data)
         cg, cp = self.cities
@@ -1839,8 +1847,11 @@ class AreaContext:
                 'Salmon Arm Wharf to a white marker (synopsis page 35, 99%). The wharf line is not in this data: lake water within 1.5 km '
                 'of the city limits is left out (my pick). VERIFY on the ground.', 99, syn + '; ABMS_MUNICIPALITIES_SP; FWA lakes', near=2500)
         # C8 Blind Bay No Shooting Area: from Reedman Point to the Sorrento Eagle Bay Road (land and shore, legal line not in the data)
-        rp_, bb = name_pt('Reedman Point'), name_pt('Blind Bay')
-        pts = [q for q in (rp_, bb) if q is not None]
+        rp_ = name_pt('Reedman Point')
+        pts = []
+        if rp_ is not None:   # 'Blind Bay' also names a bay on Upper Arrow Lake: keep only names within 5 km of Reedman Point
+            pts = [rp_] + [shapely.centroid(ng[i]) for i, x in enumerate(np_) if (x['name'] or '') == 'Blind Bay'
+                           and shapely.distance(ng[i], rp_) < 5000]
         if pts:
             add('C8', shapely.union_all([q.buffer(1500) for q in pts]),
                 'Blind Bay (Map C8): No Shooting Area from Reedman Point to the Sorrento Eagle Bay Road; bows allowed unless posted '

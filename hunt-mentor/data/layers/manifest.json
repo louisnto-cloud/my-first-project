@@ -36,6 +36,12 @@
    49.0,
    -114.6,
    50.6
+  ],
+  "G": [
+   -119.4,
+   50.5,
+   -117.6,
+   51.6
   ]
  },
  "areaNames": {
@@ -44,7 +50,8 @@
   "C": "South Okanagan and Similkameen (quail trip)",
   "D": "Merritt, Nicola and North Okanagan",
   "E": "Cariboo south: 100 Mile House to Williams Lake",
-  "F": "East Kootenay: Cranbrook, Fernie, Invermere"
+  "F": "East Kootenay: Cranbrook, Fernie, Invermere",
+  "G": "Shuswap and Revelstoke"
  },
  "layers": [
   {
@@ -69,11 +76,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-09-22",
-   "bytes": 13548357
+   "bytes": 14479725
   },
   {
    "id": "parks",
@@ -104,7 +112,7 @@
    "areas": "BC",
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 1530781
+   "bytes": 1890559
   },
   {
    "id": "reserves",
@@ -412,11 +420,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 16747515
+   "bytes": 18323201
   },
   {
    "id": "rec_sites",
@@ -479,11 +488,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 518495
+   "bytes": 582203
   },
   {
    "id": "rec_trails",
@@ -524,11 +534,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 2067759
+   "bytes": 2357413
   },
   {
    "id": "uwr_mule_deer",
@@ -593,6 +604,10 @@
     {
      "area": "F",
      "file": "data/layers/F/uwr_mule_deer.pmtiles"
+    },
+    {
+     "area": "G",
+     "file": "data/layers/G/uwr_mule_deer.geojson"
     }
    ],
    "areas": [
@@ -601,11 +616,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2004-12-13",
-   "bytes": 3748360
+   "bytes": 3970326
   },
   {
    "id": "uwr_wt_deer",
@@ -708,17 +724,22 @@
     {
      "area": "F",
      "file": "data/layers/F/uwr_moose.pmtiles"
+    },
+    {
+     "area": "G",
+     "file": "data/layers/G/uwr_moose.geojson"
     }
    ],
    "areas": [
     "A",
     "C",
     "D",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2006-07-24",
-   "bytes": 1934698
+   "bytes": 2015851
   },
   {
    "id": "uwr_elk",
@@ -881,6 +902,10 @@
     {
      "area": "F",
      "file": "data/layers/F/uwr_goat.pmtiles"
+    },
+    {
+     "area": "G",
+     "file": "data/layers/G/uwr_goat.geojson"
     }
    ],
    "areas": [
@@ -889,11 +914,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2006-07-24",
-   "bytes": 1389639
+   "bytes": 1599885
   },
   {
    "id": "burns",
@@ -940,11 +966,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 2576127
+   "bytes": 2953561
   },
   {
    "id": "cutblocks",
@@ -991,11 +1018,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 29285900
+   "bytes": 31157704
   },
   {
    "id": "wetlands",
@@ -1044,6 +1072,10 @@
     {
      "area": "F",
      "file": "data/layers/F/wetlands.geojson"
+    },
+    {
+     "area": "G",
+     "file": "data/layers/G/wetlands.geojson"
     }
    ],
    "areas": [
@@ -1052,11 +1084,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 13866660
+   "bytes": 14698582
   },
   {
    "id": "habitat_zones",
@@ -1137,6 +1170,10 @@
     {
      "area": "F",
      "file": "data/layers/F/habitat_zones.pmtiles"
+    },
+    {
+     "area": "G",
+     "file": "data/layers/G/habitat_zones.pmtiles"
     }
    ],
    "areas": [
@@ -1145,11 +1182,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 23462123
+   "bytes": 26940154
   },
   {
    "id": "season_mule_deer",
@@ -1231,11 +1269,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-04",
-   "bytes": 2261317
+   "bytes": 2594901
   },
   {
    "id": "season_wt_deer",
@@ -1317,11 +1356,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-04",
-   "bytes": 661242
+   "bytes": 708829
   },
   {
    "id": "season_moose",
@@ -1403,11 +1443,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-04",
-   "bytes": 2301413
+   "bytes": 2624582
   },
   {
    "id": "season_elk",
@@ -1489,11 +1530,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-04",
-   "bytes": 2913153
+   "bytes": 3382794
   },
   {
    "id": "season_sheep",
@@ -1575,11 +1617,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-04",
-   "bytes": 2988435
+   "bytes": 3372891
   },
   {
    "id": "duck_waters",
@@ -1649,11 +1692,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-04",
-   "bytes": 1999166
+   "bytes": 2475687
   },
   {
    "id": "quail_range",
@@ -2010,6 +2054,49 @@
      "-467_198",
      "-467_199",
      "-467_201"
+    ],
+    "G": [
+     "-471_202",
+     "-471_203",
+     "-471_204",
+     "-471_206",
+     "-472_201",
+     "-472_202",
+     "-472_203",
+     "-472_204",
+     "-472_205",
+     "-472_206",
+     "-473_202",
+     "-473_203",
+     "-473_204",
+     "-473_205",
+     "-473_206",
+     "-474_201",
+     "-474_202",
+     "-474_203",
+     "-474_204",
+     "-474_205",
+     "-474_206",
+     "-475_202",
+     "-475_203",
+     "-475_204",
+     "-475_205",
+     "-475_206",
+     "-476_202",
+     "-476_203",
+     "-476_204",
+     "-476_205",
+     "-476_206",
+     "-477_202",
+     "-477_203",
+     "-477_204",
+     "-477_205",
+     "-477_206",
+     "-478_202",
+     "-478_203",
+     "-478_204",
+     "-478_205",
+     "-478_206"
     ]
    },
    "file": "data/spots/{area}/index.geojson",
@@ -2019,11 +2106,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-04",
-   "bytes": 2127531
+   "bytes": 2390925
   },
   {
    "id": "routes",
@@ -4646,6 +4734,416 @@
       -116.491,
       50.509
      ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-471_202.geojson",
+     "bbox": [
+      -117.743,
+      50.483,
+      -117.617,
+      50.736
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-471_203.geojson",
+     "bbox": [
+      -117.747,
+      50.757,
+      -117.597,
+      50.935
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-471_204.geojson",
+     "bbox": [
+      -117.763,
+      51.146,
+      -117.74,
+      51.164
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-471_206.geojson",
+     "bbox": [
+      -117.768,
+      51.57,
+      -117.74,
+      51.612
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-472_201.geojson",
+     "bbox": [
+      -117.991,
+      50.485,
+      -117.857,
+      50.525
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-472_202.geojson",
+     "bbox": [
+      -118.003,
+      50.513,
+      -117.755,
+      50.76
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-472_203.geojson",
+     "bbox": [
+      -118.005,
+      50.753,
+      -117.724,
+      51.01
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-472_204.geojson",
+     "bbox": [
+      -117.954,
+      51.015,
+      -117.789,
+      51.269
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-472_205.geojson",
+     "bbox": [
+      -118.009,
+      51.221,
+      -117.801,
+      51.509
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-472_206.geojson",
+     "bbox": [
+      -117.874,
+      51.505,
+      -117.767,
+      51.571
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-473_202.geojson",
+     "bbox": [
+      -118.084,
+      50.554,
+      -117.992,
+      50.747
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-473_203.geojson",
+     "bbox": [
+      -118.253,
+      50.73,
+      -117.998,
+      50.983
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-473_204.geojson",
+     "bbox": [
+      -118.272,
+      51.001,
+      -117.95,
+      51.222
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-473_205.geojson",
+     "bbox": [
+      -118.287,
+      51.259,
+      -118.004,
+      51.519
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-473_206.geojson",
+     "bbox": [
+      -118.243,
+      51.485,
+      -118.013,
+      51.602
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-474_201.geojson",
+     "bbox": [
+      -118.398,
+      50.495,
+      -118.359,
+      50.504
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-474_202.geojson",
+     "bbox": [
+      -118.502,
+      50.506,
+      -118.341,
+      50.763
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-474_203.geojson",
+     "bbox": [
+      -118.5,
+      50.714,
+      -118.244,
+      51.016
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-474_204.geojson",
+     "bbox": [
+      -118.426,
+      50.991,
+      -118.251,
+      51.089
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-474_205.geojson",
+     "bbox": [
+      -118.547,
+      51.206,
+      -118.208,
+      51.471
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-474_206.geojson",
+     "bbox": [
+      -118.469,
+      51.508,
+      -118.22,
+      51.601
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-475_202.geojson",
+     "bbox": [
+      -118.763,
+      50.497,
+      -118.483,
+      50.74
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-475_203.geojson",
+     "bbox": [
+      -118.768,
+      50.745,
+      -118.505,
+      50.998
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-475_204.geojson",
+     "bbox": [
+      -118.704,
+      50.998,
+      -118.446,
+      51.194
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-475_205.geojson",
+     "bbox": [
+      -118.746,
+      51.271,
+      -118.537,
+      51.458
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-475_206.geojson",
+     "bbox": [
+      -118.677,
+      51.489,
+      -118.545,
+      51.604
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-476_202.geojson",
+     "bbox": [
+      -119.0,
+      50.483,
+      -118.75,
+      50.76
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-476_203.geojson",
+     "bbox": [
+      -118.992,
+      50.754,
+      -118.725,
+      51.017
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-476_204.geojson",
+     "bbox": [
+      -118.984,
+      50.969,
+      -118.766,
+      51.266
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-476_205.geojson",
+     "bbox": [
+      -119.011,
+      51.244,
+      -118.768,
+      51.487
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-476_206.geojson",
+     "bbox": [
+      -118.931,
+      51.489,
+      -118.878,
+      51.574
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-477_202.geojson",
+     "bbox": [
+      -119.286,
+      50.518,
+      -118.989,
+      50.752
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-477_203.geojson",
+     "bbox": [
+      -119.241,
+      50.721,
+      -118.997,
+      50.993
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-477_204.geojson",
+     "bbox": [
+      -119.243,
+      50.983,
+      -118.985,
+      51.286
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-477_205.geojson",
+     "bbox": [
+      -119.256,
+      51.257,
+      -118.995,
+      51.495
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-477_206.geojson",
+     "bbox": [
+      -119.25,
+      51.494,
+      -119.082,
+      51.613
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-478_202.geojson",
+     "bbox": [
+      -119.408,
+      50.516,
+      -119.25,
+      50.655
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-478_203.geojson",
+     "bbox": [
+      -119.402,
+      50.784,
+      -119.227,
+      51.033
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-478_204.geojson",
+     "bbox": [
+      -119.399,
+      51.03,
+      -119.21,
+      51.182
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-478_205.geojson",
+     "bbox": [
+      -119.402,
+      51.262,
+      -119.248,
+      51.496
+     ]
+    },
+    {
+     "area": "G",
+     "file": "data/spots/G/routes/-478_206.geojson",
+     "bbox": [
+      -119.382,
+      51.533,
+      -119.247,
+      51.595
+     ]
     }
    ],
    "areas": [
@@ -4654,11 +5152,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-04",
-   "bytes": 17416946
+   "bytes": 20409043
   },
   {
    "id": "camps",
@@ -4718,11 +5217,12 @@
     "C",
     "D",
     "E",
-    "F"
+    "F",
+    "G"
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-04",
-   "bytes": 439453
+   "bytes": 491253
   }
  ]
 }

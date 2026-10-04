@@ -12,16 +12,17 @@ Script: `scripts/spots-pipeline.py` (Python 3.11). Rerunnable. Every download is
   `python3 scripts/spots-pipeline.py --cache /path/to/gis-cache --areas A,B,C --steps spots,manifest`
 - Areas D and E (2026-10-04): `--areas D,E --steps fetch,dem,layers,spots,migration`, then `--areas A,B,C,D,E --steps manifest`.
 - Area F (2026-10-04): `--areas F --steps fetch,dem,layers,spots,migration`, then `--areas A,B,C,D,E,F --steps manifest`. Fetch also caches a few OpenStreetMap outlines from Nominatim (`osm/`, 1.5 s apart) for Region 4 map areas that have no official polygon.
+- Area G (2026-10-04): `--areas G --steps fetch,dem,layers,spots,migration`, then `--areas A,B,C,D,E,F,G --steps manifest`.
 - Run `manifest` with all areas, so every area stays listed. The manifest also carries `areaBoxes` and `areaNames` for the app.
 - The cache used on 2026-10-03 and 04: the session scratchpad `.../scratchpad/gis/` (`raw/`, `dem/12/`, `work/`).
 
 ## Steps (in order)
 | Step | What it does | Time (this machine) |
 |---|---|---|
-| fetch | BC Data Catalogue WFS pages, one request at a time, cached in `raw/` | about 23 min for A, B, C (first run); D 20 min (Vernon parcels, many 504 retries); E 5 min; F 11 min |
+| fetch | BC Data Catalogue WFS pages, one request at a time, cached in `raw/` | about 23 min for A, B, C (first run); D 20 min (Vernon parcels, many 504 retries); E 5 min; F 11 min; G 5 min (DEM 2 min) |
 | dem | AWS terrarium z12 tiles, then an elevation grid per area | 7 min first run; seconds after |
 | layers | clean, simplify, write `data/layers/bc/*` and `data/layers/<area>/*` | A 5 min; B and C 5 min |
-| spots | score, pick, refine and write `data/spots/<area>/*` | A 1 min 45 s; B 30 s; C 35 s; D 65 s; E 58 s; F 75 s |
+| spots | score, pick, refine and write `data/spots/<area>/*` | A 1 min 45 s; B 30 s; C 35 s; D 65 s; E 58 s; F 75 s; G 55 s |
 | migration | seasonal bands per species, duck waters, quail habitat | 40 s for all three |
 | manifest | write `data/layers/manifest.json` | under 1 s |
 
@@ -60,6 +61,16 @@ Script: `scripts/spots-pipeline.py` (Python 3.11). Rerunnable. Every download is
 - Map areas (`_region4_zones`): D2 Elizabeth Lake (closure polygon plus lake), D23 Columbia Lake and River sanctuary (closure polygon, lake plus 300 m, river reach plus 200 m), D9 Skookumchuck mill, D13 and D16 Elk Valley mines, D19 Fairmont and D20 Windermere (2 km), D22 Radium (limits plus 1 km), D10 Wasa Slough (no GNS name: 1.5 km around Wasa), D12 Sulphur Creek (1 km), Whiteswan FSR (65 m), D1 McDougall (closure polygon): targets inside left out, nearby spots flagged. D17 Canal Flats shot only (3 km, under 1,067 m): big game dropped. D14 Hwy 3: 400 m strip from the westernmost Michel Creek bridge east of Sparwood (Loop Bridge not in the data, assumption) to the Alexander Creek crossing. All edges my pick or estimate, and the flag says so.
 - Elk spots (weights in `W['elk']`, max 11, min 7) and turkey spots (`W['turkey']`, under 1,100 m, max 5, min 4) only where `ELK_AREAS` and `TURKEY_AREAS` list the area. `AREA_CAPS` trims F grouse (80) and moose (60) per category for the size budget. Spots outside every BC MU (Alberta side of the box) are dropped (`outsideBC`).
 - F sizes: layers 22.4 MB, spots 13.0 MB (1,695 spots). Migration bands in F use `MIG_POLY` (3 km2 minimum, 250 m simplify).
+
+## Area G: Shuswap and Revelstoke (2026-10-04)
+- Box -119.4, 50.5, -117.6, 51.6. It touches A (west) and D (south) without overlap; both are listed in `excl` anyway. Base Salmon Arm (Nominatim).
+- Regions from the MU layer: 3 (3-26, 3-34 to 3-37, 3-41, 3-42), 4 (4-29 to 4-33, 4-37 to 4-39) and 8 (8-23 to 8-26). Seasons from `region3.json`, `region4.json`, `region8.json` and `migratory.json`.
+- Region 4 spots: feeding and baiting ban and snowmobile closure (as in F). No G MU is in the CWD zone. The Trench wolf note is only applied in F (`R4_TRENCH_AREAS`): the 4-37 corner of G is not the Trench (my reading).
+- Closures in the WAA_MVPR_AREAS_SP layer cover Downie Creek (4-38, Motor Vehicle Hunting Closed Area) and Joss, Tsuius and Mabel mountains (Map J21).
+- Region 3 Maps C8 Blind Bay, C9 Sicamous and C10 Salmon Arm (`_shuswap_zones`, `R3_SHUSWAP_AREAS`): C9 from Semaphore Point (Murdock Point is not in BC Geographical Names: north south line through Semaphore Point, estimate), the Sicamous Creek mouth and FWA lakes within 15 km; C10 Shuswap Lake water within 1.5 km of the Salmon Arm city limits (my pick); C8 1.5 km around Reedman Point and Blind Bay (my pick). Targets inside left out, nearby spots flagged.
+- National parks: new BC layer `natparks` (WHSE_ADMIN_BOUNDARIES.CLAB_NATIONAL_PARKS) merged into `parks` (designation "National park", no hunting). Mount Revelstoke and Glacier now show on the parks layer for every area.
+- `AREA_CAPS` G: grouse 80, moose 80. Quail only in Region 8 (`QUAIL_AREAS`). Coarse migration bands (`MIG_POLY`). No elk or turkey spots in G.
+- G sizes: layers 12 MB, spots 7.1 MB (1,052 spots, 1,221 routes, 99 camps). 0 VERIFY. 18 style lines, all official road names (Trans-Canada Hwy, Three Valley-Mabel FSR and similar).
 
 ## Outputs and sizes (2026-10-04)
 - D: layers 17.1 MB, spots 10.8 MB. E: layers 13.2 MB, spots 10.0 MB. All data now about 157 MB (layers 115, spots 42), a little over the 150 MB budget.
