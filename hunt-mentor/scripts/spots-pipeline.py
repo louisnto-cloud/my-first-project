@@ -20,7 +20,6 @@ import argparse
 import datetime as dt
 import gzip
 import hashlib
-import io
 import json
 import math
 import os
@@ -143,8 +142,10 @@ MIN_SCORE = {'deer': 7, 'moose': 4, 'duck': 4, 'grouse': 2, 'quail': 4, 'camp': 
 SPACING_M = 800            # no two spots of the same species and category closer than this
 SELECT_RADIUS = {'drive': 1500, 'atv': 1500, 'walk': 2000, 'backcountry': 3000, 'camp': 3000}
 CAPS = {'deer': 220, 'moose': 100, 'duck': 180, 'grouse': 120, 'quail': 300, 'camp': 60}   # per area and category: best first
+TILE_M = 15000             # caps are spread round robin over 15 km tiles (balanced_cap)
 CUT_AGE = (5, 20)          # cutblock age that feeds deer, moose, bear, grouse
 BURN_YEARS = (2015, 2023)  # recent burns for scoring
+BURN_MIN_HA = 10           # smaller spot fires grow too little feed to score (my pick)
 DEER_ZONES_LOW = {'BG', 'PP', 'IDF'}
 DEER_ZONES_MID = {'MS'}
 GROUSE_ZONES = {'IDF', 'MS', 'ESSF', 'ICH'}
@@ -1199,6 +1200,8 @@ class Network:
                 continue
             if cls in WALK_CLASS or surf in WALK_SURF:
                 mode = 2
+            elif cls in TRAIL_CLASS and re.search(r'\btrail\b', pi.get('name') or '', re.I):
+                mode = 2   # named trails (rail, horse, snowmobile, bike trails): walk only, my pick (motor rules unknown)
             elif cls in TRAIL_CLASS or surf in ATV_SURF:
                 mode = 1
             elif surf in CAR_SURF:
@@ -1508,7 +1511,7 @@ class AreaContext:
         young = [i for i, x in enumerate(cp) if CUT_AGE[0] <= x['age'] <= CUT_AGE[1]]
         R['cut_young'] = G.burn_polys(cg[young]) > 0
         fg, fp, _ = ca['burns']
-        rec = [i for i, x in enumerate(fp) if BURN_YEARS[0] <= x['year'] <= BURN_YEARS[1]]
+        rec = [i for i, x in enumerate(fp) if BURN_YEARS[0] <= x['year'] <= BURN_YEARS[1] and (x.get('ha') or 0) >= BURN_MIN_HA]
         R['burn'] = G.burn_polys(fg[rec]) > 0
         net = self.net
         R['car_park'] = G.burn_lines(net.geoms[net.parkable]) > 0
@@ -1781,6 +1784,25 @@ def nms_select(xs, ys, order, radius, cap=None):
     return kept
 
 
+def balanced_cap(kept, xs, ys, cap, tile=TILE_M):
+    """Keep at most cap picks, spread over the area: round robin over tiles, best first within each tile.
+    Stops one strong corner (say, a big winter range) from taking every slot. Rank order is kept in the output."""
+    if len(kept) <= cap:
+        return list(kept)
+    tiles = {}
+    for rank, i in enumerate(kept):
+        tiles.setdefault((int(xs[i] // tile), int(ys[i] // tile)), []).append((rank, i))
+    chosen, depth = [], 0
+    while len(chosen) < cap:
+        layer = [t[depth] for t in tiles.values() if len(t) > depth]
+        if not layer:
+            break
+        layer.sort()
+        chosen += layer[:cap - len(chosen)]
+        depth += 1
+    return [i for _, i in sorted(chosen)]
+
+
 def grid_candidates(ctx, sp, stats):
     from scipy import ndimage
     G = ctx.grid
@@ -1805,7 +1827,7 @@ def grid_candidates(ctx, sp, stats):
         strong = [i for i in kept if s[i] >= MIN_SCORE[sp]]
         weak = len(kept) - len(strong)
         capped = max(0, len(strong) - CAPS[sp])
-        strong = strong[:CAPS[sp]]
+        strong = balanced_cap(strong, xs, ys, CAPS[sp])
         st[cat] = {'candidates': len(kept), 'droppedWeak': weak, 'droppedCap': capped, 'kept': len(strong)}
         for i in strong:
             out.append({'sp': sp, 'cat': cat, 'x': float(xs[i]), 'y': float(ys[i]), 'score': int(s[i]), 'tb': float(tb[i]),
@@ -1888,7 +1910,7 @@ def duck_candidates(ctx, stats):
         ys = [c['y'] for c in cs]
         kept = nms_select(xs, ys, order, max(SPACING_M, 1000))
         capped = max(0, len(kept) - CAPS['duck'])
-        kept = kept[:CAPS['duck']]
+        kept = balanced_cap(kept, xs, ys, CAPS['duck'])
         st[cat] = {'candidates': len(cs), 'kept': len(kept), 'droppedCap': capped}
         res += [cs[i] for i in kept]
     st['droppedWeak'] = weak
@@ -1986,9 +2008,10 @@ def grouse_candidates(ctx, stats):
     for cat in ('drive', 'atv', 'walk'):
         cs = [c for c in out if c['cat'] == cat]
         order = sorted(range(len(cs)), key=lambda i: (-cs[i]['score'], -cs[i]['tb']))
-        kept = nms_select([c['x'] for c in cs], [c['y'] for c in cs], order, max(SPACING_M, 1500))
+        xs, ys = [c['x'] for c in cs], [c['y'] for c in cs]
+        kept = nms_select(xs, ys, order, max(SPACING_M, 1500))
         capped = max(0, len(kept) - CAPS['grouse'])
-        kept = kept[:CAPS['grouse']]
+        kept = balanced_cap(kept, xs, ys, CAPS['grouse'])
         st[cat] = {'candidates': len(cs), 'kept': len(kept), 'droppedCap': capped}
         res += [cs[i] for i in kept]
     st['droppedWeak'] = weak
@@ -2036,7 +2059,7 @@ def camp_candidates(ctx, hunt_spots, stats):
     kept = nms_select(ox, oy, order2, 3000)
     crown = [k - len(off) for k in kept if k >= len(off)]
     capped = max(0, len(crown) - CAPS['camp'])
-    crown = crown[:CAPS['camp']]
+    crown = balanced_cap(crown, xs, ys, CAPS['camp'])
     for i in crown:
         out.append({'sp': 'camp', 'cat': 'camp', 'x': float(xs[i]), 'y': float(ys[i]), 'score': int(s[i]), 'tb': float(tb[i]),
                     'kind': 'crown', 'r': int(rows[i]), 'c': int(cols[i])})
@@ -2073,7 +2096,7 @@ class Refiner:
         self.cut_young = [i for i, x in enumerate(cp) if CUT_AGE[0] <= x['age'] <= CUT_AGE[1]]
         self.cut_tree = STRtree(cg[self.cut_young]) if self.cut_young else None
         fg, fp, _ = ca['burns']
-        self.burn_idx = [i for i, x in enumerate(fp) if BURN_YEARS[0] <= x['year'] <= BURN_YEARS[1]]
+        self.burn_idx = [i for i, x in enumerate(fp) if BURN_YEARS[0] <= x['year'] <= BURN_YEARS[1] and (x.get('ha') or 0) >= BURN_MIN_HA]
         self.burn_tree = STRtree(fg[self.burn_idx]) if self.burn_idx else None
         ug, up, _ = ca['uwr']
         self.uwr_tree = STRtree(ug) if len(ug) else None
@@ -2176,6 +2199,12 @@ class Refiner:
         np_ = shapely.ops.nearest_points(g, pt)[0] if shapely.get_type_id(g) != 0 else g
         az, dd = bearing_dist(np_.x, np_.y, x, y)
         return f'{fmt_dist(dd)} {compass8(az)} of {self.alabels[k]}'
+
+    def crosses_private(self, line):
+        """True when the line touches dissolved private land (ParcelMap BC)."""
+        if self.priv_tree is None or line is None or line.is_empty:
+            return False
+        return len(self.priv_tree.query(line, predicate='intersects')) > 0
 
     # ------------------------------------------------------------ access
     def access(self, s):
@@ -2316,7 +2345,7 @@ def _uwr_near(rf, x, y, species_set, maxd):
     p = up[k]
     where, _ = _feat_dir(x, y, ug[k])
     sp = [UWR_SPECIES[c][1] for c in UWR_SPECIES if UWR_SPECIES[c][0] in ({p['sp1'], p['sp2']} & species_set)]
-    return {'d': d, 'where': where, 'uwr': p['uwr'], 'unit': p['unit'], 'species': ' and '.join(sp)}
+    return {'d': d, 'where': where, 'uwr': p['uwr'], 'unit': re.sub(r'\.0$', '', str(p['unit'])), 'species': ' and '.join(sp)}
 
 
 def _cut_near(rf, x, y, maxd):
@@ -2378,6 +2407,9 @@ def evidence(rf, s):
         u = _uwr_near(rf, x, y, {'mule_deer', 'wt_deer'}, 500)
         if u:
             items.append({'t': f"{u['species']} winter range {u['uwr']} unit {u['unit']} (official), {u['where']}. Counts from October.", 'pts': w['uwr']})
+        else:
+            items.append({'t': 'No official deer winter range within 500 m, so the top score here is 8 of 11. '
+                               'This score leans on cutblocks, burns, habitat zone and aspect.', 'pts': 0})
         c = _cut_near(rf, x, y, 1000)
         if c:
             items.append({'t': f"Cutblock harvested {c['year']} ({c['age']} years old), {c['where']}.", 'pts': w['cut']})
@@ -2552,7 +2584,8 @@ def legal_flags(rf, s):
                 s['inClosure'] = True
             what = {'mv_closed': 'Motor Vehicle Closed Area', 'mv_hunting': 'Motor Vehicle for Hunting Closed Area',
                     'atv': 'ATV (all terrain vehicle) for Hunting Closed Area'}[p['kind']]
-            t = f"{'Spot is inside' if inside else 'Route enters'} a {what}: {p['name']}."
+            art = 'an' if what[:1].upper() in 'AEIOU' else 'a'
+            t = f"{'Spot is inside' if inside else 'Route enters'} {art} {what}: {p['name']}."
             if p['dates']:
                 t += f" {p['dates'].rstrip('.')}."
             if p['exemption']:
@@ -2671,7 +2704,7 @@ USE = {
     'elk': 'Use: .308 Winchester, 165 to 180 grain premium bullet, shots inside about 200 m (219 yd) (Tip).',
     'duck': 'Use: 12 gauge, steel 2 to 4 (non toxic shot only), modified or improved cylinder rated for steel, plugged to 3 shells (regs).',
     'grouse': 'Use: .22 rimfire for a sitting grouse inside 25 m (27 yd), or a shotgun with lead 6 or 7.5 (Tip).',
-    'quail': 'Use: shotgun only (a .22 is not legal for quail), improved cylinder, lead 7.5 or 6, or steel 6 (Tip).',
+    'quail': 'Use: a shotgun, improved cylinder, lead 7.5 or 6, or steel 6 (Tip). No rifle or .22 for quail (synopsis page 13, 95%).',
     'sheep': 'Use: VERIFY. Sheep hunting needs special rules or a draw. Not in data/regs.json yet.',
 }
 
@@ -2837,6 +2870,12 @@ def finalize(rf, s, stats):
     if not rf.access(s):
         st['droppedNoAccess'] = st.get('droppedNoAccess', 0) + 1
         return None
+    if sp != 'grouse' and not (sp == 'camp' and s.get('kind') == 'rec site'):
+        tp = shapely.points(s['x'], s['y']).buffer(10)
+        for tree in (rf.priv_tree, rf.park_tree, rf.res_tree, rf.city_tree):
+            if tree is not None and len(tree.query(tp, predicate='intersects')):
+                st['droppedOnClosedLand'] = st.get('droppedOnClosedLand', 0) + 1
+                return None
     items, score = evidence(rf, s)
     official = sp == 'camp' and s.get('kind') == 'rec site'
     if not official and score < MIN_SCORE[sp]:
@@ -3211,7 +3250,7 @@ def step_spots(cache, areas):
             'total': len(feats), 'counts': counts, 'routes': len(routes), 'camps': len(campf), 'bytes': sizes,
             'layerDates': dates, 'stats': stats, 'styleLinesFlagged': bad,
             'scoring': {'weights': W, 'max': SCORE_MAX, 'min': MIN_SCORE, 'spacingM': SPACING_M, 'selectRadiusM': SELECT_RADIUS,
-                        'capsPerCategory': CAPS, 'cutAgeYears': CUT_AGE, 'burnYears': BURN_YEARS,
+                        'capsPerCategory': CAPS, 'cutAgeYears': CUT_AGE, 'burnYears': BURN_YEARS, 'burnMinHa': BURN_MIN_HA,
                         'grouseZones': sorted(set(GROUSE_ZONES) | GROUSE_ZONES_EXTRA.get(a, set()))},
             'seasonRows': {k: {kk: REGS[k].get(kk) for kk in ('label', 'value', 'certainty', 'source', 'url', 'page', 'checked')}
                            for k in sorted({k for s in spots for k in s['seasons']}) if k in REGS},
@@ -3224,8 +3263,14 @@ def step_spots(cache, areas):
                 'Drive: within 300 m of a paved or gravel road. ATV: rough roads and trails 1 to 10 km from a truck parking point '
                 'and 1 km or more from pavement, outside closures. Walk: 0.3 to 5 km. Backcountry: more than 5 km.',
                 'Big game targets inside the Hwy 5 (Coquihalla) single projectile zone are left out.',
+                'Caps per species and category are spread round robin over 15 km tiles, so every part of the area keeps its best '
+                'spots instead of one big winter range taking every slot (my pick).',
                 'Assumption: road surface from the Digital Road Atlas decides truck (paved, gravel) versus ATV (rough, overgrown, trails).',
-            ] + (['Assumption: grouse zones include CWH (Coastal Western Hemlock) in area B (my pick).'] if a == 'B' else [])
+                'Assumption: named trails in the road atlas (rail, horse, snowmobile and bike trails) are walk only, because their motor '
+                'vehicle rules are not in the data. Rec trails count as ATV only when their listed activities include motorized use.',
+            ] + (['No approved deer winter range near Kamloops or Heffley Creek: deer scores there come from cutblocks, burns, '
+                  'habitat zone, aspect and fields (top score 8 of 11).'] if a == 'A' else [])
+              + (['Assumption: grouse zones include CWH (Coastal Western Hemlock) in area B (my pick).'] if a == 'B' else [])
               + (['Vaseux Lake: quail and duck targets within 2 km are left out (sanctuary and National Wildlife Area edges not mapped).'] if a == 'C' else []),
         }
         json.dump(meta, open(out / 'meta.json', 'w'), indent=1, ensure_ascii=False)
@@ -3515,11 +3560,11 @@ MIG_POPUP = [['Species', 'species'], ['Band', 'band'], ['Months', 'monthsText'],
 
 def _files_entry(rec, areas_order=('A', 'B', 'C')):
     """{area: info} -> manifest keys: file with {area} when uniform, else files list."""
+    if 'BC' in rec:
+        return {'file': rec['BC']['file'], 'areas': 'BC'}
     ar = [a for a in areas_order if a in rec]
     if not ar:
         return None
-    if ar == ['BC'] or 'BC' in rec:
-        return {'file': rec['BC']['file'], 'areas': 'BC'}
     paths = [rec[a]['file'] for a in ar]
     tmpl = {p.replace(f'/{a}/', '/{area}/') for p, a in zip(paths, ar)}
     if len(tmpl) == 1:

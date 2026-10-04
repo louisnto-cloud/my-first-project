@@ -51,17 +51,22 @@ hab-saskatoon-flowers | Saskatoon in flower, Manning Park BC. White starry flowe
 hab-saskatoon-berries | Saskatoon berries forming in early summer on a dry slope.
 hab-woods-rose-hips | Wild rose hips in fall. Red, oval, on thorny stems.
 hab-snowberry | Snowberry. White berries that hang on into winter.
+hab-dogwood-stems | Red osier dogwood in a wet draw. Red stems stand out after the leaves drop.
 ```
 
 - Saskatoon: shrub 1 to 4 m, oval leaves toothed on the top half, purple berries in July (80%). Top deer browse all year (80%).
 - Rose: thorny stems and red hips; hips and twigs are eaten in fall and winter (75%).
 - Snowberry: low shrub, white berries, very common in Interior draws and fir forest (80%). Deer browse it lightly (70%).
-- A draw with all three plus water is a deer kitchen. Glass it at first light (Tip).
+- Red osier dogwood: bright red stems, white berries, wet ground; a favourite fall and winter browse (80%).
+- A draw with these shrubs plus water is a deer kitchen. Glass it at first light (Tip).
 
 ## Burns, cut blocks and Douglas fir
 
 ```gallery
 hab-north-thompson-burn | Burned slope above the North Thompson River near Barriere. New green feed grows under the snags.
+hab-wells-gray-cutblock | Old cut block near Trophy Meadows, Wells Gray area. Young trees, shrubs and grass on the edges.
+hab-douglas-fir-stand | Interior Douglas fir stand. Thick old trees make shade in fall and shelter in snow.
+hab-douglas-fir-tree | A lone Douglas fir on a dry grass slope. Soft needles, thick furrowed bark.
 hab-kinnikinnick | Kinnikinnick, a low mat with red berries on dry, rocky ground under pine and fir.
 ```
 
@@ -98,17 +103,19 @@ hab-deer-trail-snow | Deer tracks on a snowy trail. One line, prints close toget
 - Fresh: sharp edges, no debris in the print. Old: crumbled edges, leaves or rain marks inside (75%).
 - In snow, deep drag marks between prints mean deep snow and a tired deer. Leave winter range deer alone (Tip).
 
-## Deer pellets
+## Deer pellets and rubs
 
 ```gallery
 hab-deer-pellets-fresh | Fresh deer pellets: dark, shiny and moist.
 hab-deer-pellets-old | Old deer pellets: dry, pale and crumbly.
+hab-deer-rub | A buck rub: bark stripped from a small tree at knee to waist height.
 ```
 
 - Deer pellets are about 1 to 1.5 cm long, oval, often with a point at one end (75%).
 - Shiny and soft means hours old. Dull, hard and pale means days to weeks (70%).
 - Many pellet piles in one area in late fall marks winter range or a feeding spot (65%).
 - Clumped pellets mean soft green feed; separate pellets mean dry browse (70%).
+- Rubs: bucks strip bark off saplings with their antlers from late summer through the rut (80%). A line of rubs marks a buck's travel route (Tip).
 
 > [!rule]
 > Grandpa's rule (wisdom): Find the edge, find the water, find the shade. The deer are where all three touch.

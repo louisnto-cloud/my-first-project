@@ -1,74 +1,72 @@
 {
- "area": "A",
- "name": "Kamloops, North Thompson, Bonaparte, Shuswap west",
+ "area": "B",
+ "name": "Mission, Fraser Valley, Harrison, Hope, Fraser Canyon",
  "box": [
-  -121.6,
-  50.2,
-  -119.4,
-  51.9
+  -122.9,
+  49.0,
+  -121.3,
+  49.95
  ],
  "base": {
-  "name": "Heffley Creek",
-  "lat": 50.8581,
-  "lon": -120.2687
+  "name": "Mission",
+  "lat": 49.1327,
+  "lon": -122.3045
  },
  "generated": "2026-10-04",
- "total": 1706,
+ "total": 538,
  "counts": {
   "byCategory": {
-   "camp": 218,
-   "atv": 368,
-   "backcountry": 2,
-   "drive": 517,
-   "walk": 601
+   "camp": 85,
+   "atv": 154,
+   "drive": 219,
+   "walk": 79,
+   "backcountry": 1
   },
   "byPrimary": {
-   "camp": 218,
-   "deer": 545,
-   "duck": 301,
-   "grouse": 360,
-   "moose": 282
+   "camp": 85,
+   "deer": 118,
+   "duck": 78,
+   "grouse": 252,
+   "moose": 5
   },
   "byPressure": {
-   "busier": 676,
-   "average": 870,
-   "remote": 51,
-   "quieter": 109
+   "busier": 298,
+   "average": 223,
+   "quieter": 9,
+   "remote": 8
   },
   "byPrimaryCategory": {
-   "camp:camp": 218,
-   "deer:atv": 163,
-   "deer:backcountry": 1,
-   "deer:drive": 161,
-   "deer:walk": 220,
-   "duck:drive": 154,
-   "duck:walk": 147,
+   "camp:camp": 85,
+   "deer:atv": 32,
+   "deer:drive": 39,
+   "deer:walk": 47,
+   "duck:backcountry": 1,
+   "duck:drive": 60,
+   "duck:walk": 17,
    "grouse:atv": 120,
    "grouse:drive": 120,
-   "grouse:walk": 120,
-   "moose:atv": 85,
-   "moose:backcountry": 1,
-   "moose:drive": 82,
-   "moose:walk": 114
+   "grouse:walk": 12,
+   "moose:atv": 2,
+   "moose:walk": 3
   },
   "bySpeciesTag": {
-   "deer": 567,
-   "bear": 676,
-   "moose": 309,
-   "duck": 301,
-   "grouse": 360
+   "deer": 118,
+   "bear": 131,
+   "duck": 78,
+   "grouse": 252,
+   "moose": 5
   }
  },
- "routes": 1869,
- "camps": 220,
+ "routes": 594,
+ "camps": 86,
  "bytes": {
-  "spots.geojson": 4554411,
-  "routes.geojson": 3387993,
-  "camps.geojson": 94108
+  "spots.geojson": 1351179,
+  "routes.geojson": 1564734,
+  "camps.geojson": 40368
  },
  "layerDates": {
   "roads": "2026-10-03",
-  "private": "2026-09-25",
+  "private": "2026-09-26",
   "privateFetched": "2026-10-03",
   "closures": "2026-10-03",
   "mu": "2026-10-03",
@@ -79,113 +77,112 @@
   "cutblocks": "2026-10-03",
   "burns": "2026-10-03",
   "winterRange": "2026-10-03",
-  "dem": "2026-10-03"
+  "dem": "2026-10-04"
  },
  "stats": {
   "deer": {
    "drive": {
-    "candidates": 3798,
-    "droppedWeak": 2964,
-    "droppedCap": 614,
-    "kept": 220
+    "candidates": 462,
+    "droppedWeak": 406,
+    "droppedCap": 0,
+    "kept": 56
    },
    "atv": {
-    "candidates": 2002,
-    "droppedWeak": 1461,
-    "droppedCap": 321,
-    "kept": 220
+    "candidates": 525,
+    "droppedWeak": 480,
+    "droppedCap": 0,
+    "kept": 45
    },
    "walk": {
-    "candidates": 3299,
-    "droppedWeak": 2395,
-    "droppedCap": 684,
-    "kept": 220
+    "candidates": 569,
+    "droppedWeak": 517,
+    "droppedCap": 0,
+    "kept": 52
    },
    "backcountry": {
-    "candidates": 6,
-    "droppedWeak": 5,
+    "candidates": 16,
+    "droppedWeak": 16,
     "droppedCap": 0,
-    "kept": 1
+    "kept": 0
    },
-   "droppedExact": 80,
-   "droppedOnClosedLand": 11
+   "droppedExact": 32,
+   "droppedOnClosedLand": 1
   },
   "moose": {
    "drive": {
-    "candidates": 3588,
-    "droppedWeak": 1003,
-    "droppedCap": 2485,
-    "kept": 100
+    "candidates": 25,
+    "droppedWeak": 23,
+    "droppedCap": 0,
+    "kept": 2
    },
    "atv": {
-    "candidates": 1926,
-    "droppedWeak": 655,
-    "droppedCap": 1171,
-    "kept": 100
+    "candidates": 31,
+    "droppedWeak": 29,
+    "droppedCap": 0,
+    "kept": 2
    },
    "walk": {
-    "candidates": 3251,
-    "droppedWeak": 960,
-    "droppedCap": 2191,
-    "kept": 100
-   },
-   "backcountry": {
-    "candidates": 9,
-    "droppedWeak": 5,
+    "candidates": 56,
+    "droppedWeak": 52,
     "droppedCap": 0,
     "kept": 4
    },
-   "droppedOnClosedLand": 7,
-   "droppedExact": 5
+   "backcountry": {
+    "candidates": 3,
+    "droppedWeak": 3,
+    "droppedCap": 0,
+    "kept": 0
+   },
+   "droppedExact": 3
   },
   "duck": {
    "drive": {
-    "candidates": 4466,
-    "kept": 180,
-    "droppedCap": 1859
-   },
-   "walk": {
-    "candidates": 1429,
-    "kept": 180,
-    "droppedCap": 808
-   },
-   "backcountry": {
-    "candidates": 0,
-    "kept": 0,
+    "candidates": 90,
+    "kept": 64,
     "droppedCap": 0
    },
-   "droppedWeak": 11091,
-   "droppedOnClosedLand": 54,
-   "droppedExact": 3
+   "walk": {
+    "candidates": 26,
+    "kept": 21,
+    "droppedCap": 0
+   },
+   "backcountry": {
+    "candidates": 1,
+    "kept": 1,
+    "droppedCap": 0
+   },
+   "droppedWeak": 157,
+   "droppedOnClosedLand": 8
   },
   "grouse": {
    "drive": {
-    "candidates": 888,
+    "candidates": 185,
     "kept": 120,
-    "droppedCap": 582
+    "droppedCap": 25
    },
    "atv": {
-    "candidates": 762,
+    "candidates": 179,
     "kept": 120,
-    "droppedCap": 455
+    "droppedCap": 24
    },
    "walk": {
-    "candidates": 275,
-    "kept": 120,
-    "droppedCap": 62
+    "candidates": 15,
+    "kept": 12,
+    "droppedCap": 0
    },
-   "droppedWeak": 318
+   "droppedWeak": 82
   },
   "camp": {
-   "official": 163,
+   "official": 35,
    "crownKept": 60,
-   "droppedWeak": 62905,
-   "droppedCap": 886,
-   "droppedExact": 2
+   "droppedWeak": 1696,
+   "droppedCap": 50,
+   "droppedExact": 6,
+   "droppedOnClosedLand": 1
   },
-  "spacingRemoved": 40
+  "spacingRemoved": 5
  },
- "styleLinesFlagged": 48,
+ "styleLinesFlagged": 55,
  "scoring": {
   "weights": {
    "deer": {
@@ -269,6 +266,7 @@
   ],
   "burnMinHa": 10,
   "grouseZones": [
+   "CWH",
    "ESSF",
    "ICH",
    "IDF",
@@ -329,33 +327,6 @@
    "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
    "page": "page 34 and page 13",
    "checked": "2026-10-02"
-  },
-  "r3moose": {
-   "label": "Moose near Heffley Creek (MU 3-27, 3-28)",
-   "value": "Spike fork bulls only, 1 to 15 Nov. Bag 1. Mandatory Hunter Report by 31 March.",
-   "certainty": 99,
-   "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
-   "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
-   "page": "page 34",
-   "checked": "2026-10-02"
-  },
-  "r3mule": {
-   "label": "Region 3 mule deer season (your MU)",
-   "value": "MU 3-27 and 3-28: 4 point bucks 10 to 30 Sept. ANY buck 1 to 31 Oct. 4 point bucks 1 Nov to 10 Dec. Antlerless: LEH only.",
-   "certainty": 99,
-   "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
-   "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
-   "page": "page 34",
-   "checked": "2026-10-02"
-  },
-  "r3wt": {
-   "label": "Region 3 white tailed deer (MU 3-27, 3-28)",
-   "value": "Bucks 10 Sept to 10 Dec. Antlerless (does) 10 to 31 Oct, no draw. Bow only, either sex 11 to 20 Dec.",
-   "certainty": 99,
-   "source": "BC Synopsis 2026 to 2028 (official PDF, read directly)",
-   "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
-   "page": "page 34",
-   "checked": "2026-10-02"
   }
  },
  "regsEdition": {
@@ -373,6 +344,6 @@
   "Caps per species and category are spread round robin over 15 km tiles, so every part of the area keeps its best spots instead of one big winter range taking every slot (my pick).",
   "Assumption: road surface from the Digital Road Atlas decides truck (paved, gravel) versus ATV (rough, overgrown, trails).",
   "Assumption: named trails in the road atlas (rail, horse, snowmobile and bike trails) are walk only, because their motor vehicle rules are not in the data. Rec trails count as ATV only when their listed activities include motorized use.",
-  "No approved deer winter range near Kamloops or Heffley Creek: deer scores there come from cutblocks, burns, habitat zone, aspect and fields (top score 8 of 11)."
+  "Assumption: grouse zones include CWH (Coastal Western Hemlock) in area B (my pick)."
  ]
 }
