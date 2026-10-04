@@ -93,6 +93,10 @@
     "migration",
     "named-areas",
     "rb-region-3",
-    "rb-region-8"
+    "rb-region-8",
+    "habitat-deer",
+    "habitat-ducks",
+    "habitat-upland",
+    "habitat-big-game"
   ]
 }

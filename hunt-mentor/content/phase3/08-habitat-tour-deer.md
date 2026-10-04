@@ -56,7 +56,6 @@ hab-dogwood-stems | Red osier dogwood in a wet draw. Red stems stand out after t
 
 - Saskatoon: shrub 1 to 4 m, oval leaves toothed on the top half, purple berries in July (80%). Top deer browse all year (80%).
 - Rose: thorny stems and red hips; hips and twigs are eaten in fall and winter (75%).
-- Snowberry: low shrub, white berries, very common in Interior draws and fir forest (80%). Deer browse it lightly (70%).
 - Red osier dogwood: bright red stems, white berries, wet ground; a favourite fall and winter browse (80%).
 - A draw with these shrubs plus water is a deer kitchen. Glass it at first light (Tip).
 
@@ -112,8 +111,7 @@ hab-deer-rub | A buck rub: bark stripped from a small tree at knee to waist heig
 ```
 
 - Deer pellets are about 1 to 1.5 cm long, oval, often with a point at one end (75%).
-- Shiny and soft means hours old. Dull, hard and pale means days to weeks (70%).
-- Many pellet piles in one area in late fall marks winter range or a feeding spot (65%).
+- Shiny and soft means hours old; dull, hard and pale means days to weeks (70%). Many piles in late fall mark winter range (65%).
 - Clumped pellets mean soft green feed; separate pellets mean dry browse (70%).
 - Rubs: bucks strip bark off saplings with their antlers from late summer through the rut (80%). A line of rubs marks a buck's travel route (Tip).
 

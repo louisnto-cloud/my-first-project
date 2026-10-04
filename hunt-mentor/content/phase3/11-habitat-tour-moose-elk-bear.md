@@ -82,7 +82,6 @@ hab-bear-track-mud | Black bear track in mud. The hind foot looks a little like 
 
 - Bear tracks show 5 toes and a wide pad; the hind track looks like a short, wide human foot (80%).
 - Berry filled scat on a trail means a berry patch is close and in use (Tip).
-- Fresh scat is wet and shiny; scat full of seeds can be a day old and still smell (70%).
 - Black bears den in mid October to late November in the Interior and come out in April and May (75%).
 - Fresh sign, a carcass smell or ravens circling: back out, talk loudly, and keep bear spray ready (Tip).
 

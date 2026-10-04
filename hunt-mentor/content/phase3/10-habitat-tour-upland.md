@@ -13,7 +13,7 @@ checked: 2026-10-04
 - California quail: Okanagan valley bottoms, farms and towns (85%).
 - Ruffed grouse: aspen, creek bottoms and mixed forest edges (80%).
 - Dusky and spruce grouse: higher conifer forest, ridges and the subalpine (80%).
-- Bird ID is in [Grouse](#/s/grouse) and [Quail, chukar, partridge and pheasant](#/s/quail-chukar-partridge-pheasant). This session is the places.
+- Bird ID is in [Grouse](#/s/grouse) and [Quail, chukar, partridge and pheasant](#/s/upland-birds). This session is the places.
 
 ## Quail country: Okanagan valley bottoms
 
