@@ -7,7 +7,7 @@
 <path d="M150 236 v-72 q0 -20 50 -20 q50 0 50 20 v72 z" fill="#e8590c"/>
 <path d="M150 236 h100 v70 h-100 z" fill="#6b4f35"/><path d="M200 236 v70" stroke="#fffaf0" stroke-width="3"/>
 <line x1="120" y1="236" x2="280" y2="236" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="6 4"/>
-<text x="286" y="240" font-size="14" fill="#2f3a2b">waist</text>
+<text x="114" y="240" font-size="14" fill="#2f3a2b" text-anchor="end">waist</text>
 <text x="14" y="90" font-size="15" font-weight="bold" fill="#e8590c">Head covering</text>
 <text x="14" y="108" font-size="14" fill="#2f3a2b">completely orange</text>
 <text x="14" y="126" font-size="14" fill="#2f3a2b">(brim excepted)</text>

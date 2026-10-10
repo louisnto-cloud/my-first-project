@@ -1,20 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" font-family="sans-serif" role="img" aria-label="Two birds side by side, 80 percent. Chukar, 540 to 765 grams: sandy grey, a black necklace from the eye around a cream throat, barred flanks, red bill and red legs. Grey partridge, the Hun, 300 to 500 grams: smaller and plainer, grey below, orange face and throat, a chestnut horseshoe on the belly, rusty tail feathers that show in flight.">
-  <rect width="400" height="290" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Two birds side by side, 80 percent. Chukar, 540 to 765 grams: black necklace, red bill and legs, sandy grey with barred flanks, the bigger bird. Grey partridge, the Hun, 300 to 500 grams: orange face, chestnut horseshoe on the belly, rusty tail, smaller and grey below.">
+  <rect width="400" height="300" fill="#fffaf0"/>
   <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Chukar or grey partridge? (80%)</text>
   <text x="100" y="52" font-size="17" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Chukar</text>
   <text x="100" y="70" font-size="13" fill="#2f3a2b" text-anchor="middle">540 to 765 g</text>
   <text x="300" y="52" font-size="17" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Grey partridge</text>
-  <text x="300" y="70" font-size="13" fill="#2f3a2b" text-anchor="middle">300 to 500 g, &quot;Huns&quot;</text>
-  <line x1="200" y1="40" x2="200" y2="290" stroke="#8a9a6b" stroke-width="2"/>
-  <g transform="translate(80 150) scale(1.6)"><ellipse rx="20" ry="13" fill="#a89a86"/><path d="M-6 -2 v10 M0 -3 v11 M6 -3 v10" stroke="#2f3a2b" stroke-width="2.5"/><circle cx="16" cy="-12" r="8" fill="#a89a86"/><path d="M10 -16 Q16 -6 24 -12" stroke="#2f3a2b" stroke-width="2.5" fill="none"/><path d="M23 -13 L29 -11 L23 -9Z" fill="#c0392b"/><path d="M-4 12 L-6 20 M6 12 L8 20" stroke="#c0392b" stroke-width="2.5"/></g>
-  <path d="M110 120 L150 96" stroke="#2f3a2b" stroke-width="1.5"/><circle cx="110" cy="120" r="3" fill="#2f3a2b"/><text x="146" y="101" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Black necklace</text>
-  <path d="M70 150 L40 212" stroke="#2f3a2b" stroke-width="1.5"/><circle cx="70" cy="150" r="3" fill="#2f3a2b"/><text x="44" y="217" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Barred flanks</text>
-  <path d="M126 132 L176 120" stroke="#2f3a2b" stroke-width="1.5"/><circle cx="126" cy="132" r="3" fill="#2f3a2b"/><text x="172" y="125" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Red bill</text>
-  <text x="100" y="270" font-size="13" fill="#2f3a2b" text-anchor="middle">Sandy grey, red bill and legs</text>
-  <g transform="translate(290 156) scale(1.4)"><path d="M-18 -2 L-30 -8 L-30 4Z" fill="#b5652f"/><ellipse rx="20" ry="13" fill="#9a9a94"/><path d="M-4 2 q6 -8 12 0 q-6 6 -12 0z" fill="#6b3a1e"/><circle cx="16" cy="-12" r="8" fill="#d98a3d"/><path d="M23 -13 L29 -11 L23 -9Z" fill="#2f3a2b"/><path d="M-4 12 L-6 20 M6 12 L8 20" stroke="#2f3a2b" stroke-width="2.5"/></g>
-  <path d="M314 138 L360 100" stroke="#2f3a2b" stroke-width="1.5"/><circle cx="314" cy="138" r="3" fill="#2f3a2b"/><text x="356" y="105" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Orange face</text>
-  <path d="M296 158 L340 220" stroke="#2f3a2b" stroke-width="1.5"/><circle cx="296" cy="158" r="3" fill="#2f3a2b"/><text x="344" y="225" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Chestnut</text>
-  <text x="352" y="238" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">horseshoe</text>
-  <path d="M250 150 L230 108" stroke="#2f3a2b" stroke-width="1.5"/><circle cx="250" cy="150" r="3" fill="#2f3a2b"/><text x="234" y="113" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Rusty tail</text>
-  <text x="300" y="270" font-size="13" fill="#2f3a2b" text-anchor="middle">Smaller, plainer, grey below</text>
+  <text x="300" y="70" font-size="13" fill="#2f3a2b" text-anchor="middle">300 to 500 g</text>
+  <line x1="200" y1="40" x2="200" y2="296" stroke="#8a9a6b" stroke-width="2"/>
+  <g transform="translate(92 134) scale(2.0)"><ellipse rx="20" ry="13" fill="#a89a86"/><path d="M-6 -2 v10 M0 -3 v11 M6 -3 v10" stroke="#2f3a2b" stroke-width="2.5"/><circle cx="16" cy="-12" r="8" fill="#a89a86"/><path d="M10 -16 Q16 -6 24 -12" stroke="#2f3a2b" stroke-width="2.5" fill="none"/><path d="M23 -13 L29 -11 L23 -9Z" fill="#c0392b"/><path d="M-4 12 L-6 20 M6 12 L8 20" stroke="#c0392b" stroke-width="2.5"/></g>
+  <g transform="translate(300 134) scale(1.8)"><path d="M-18 -2 L-30 -8 L-30 4Z" fill="#b5652f"/><ellipse rx="20" ry="13" fill="#9a9a94"/><path d="M-4 2 q6 -8 12 0 q-6 6 -12 0z" fill="#6b3a1e"/><circle cx="16" cy="-12" r="8" fill="#d98a3d"/><path d="M23 -13 L29 -11 L23 -9Z" fill="#2f3a2b"/><path d="M-4 12 L-6 20 M6 12 L8 20" stroke="#2f3a2b" stroke-width="2.5"/></g>
+  <rect x="16" y="183" width="16" height="16" rx="3" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="1"/>
+  <text x="40" y="196" font-size="14" fill="#2f3a2b" text-anchor="start">Black necklace</text>
+  <rect x="16" y="207" width="16" height="16" rx="3" fill="#c0392b" stroke="#2f3a2b" stroke-width="1"/>
+  <text x="40" y="220" font-size="14" fill="#2f3a2b" text-anchor="start">Red bill and legs</text>
+  <rect x="16" y="231" width="16" height="16" rx="3" fill="#a89a86" stroke="#2f3a2b" stroke-width="1"/>
+  <text x="40" y="244" font-size="14" fill="#2f3a2b" text-anchor="start">Sandy grey, barred</text>
+  <rect x="16" y="255" width="16" height="16" rx="3" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1"/>
+  <text x="40" y="268" font-size="14" fill="#2f3a2b" text-anchor="start">Bigger</text>
+  <rect x="214" y="183" width="16" height="16" rx="3" fill="#d98a3d" stroke="#2f3a2b" stroke-width="1"/>
+  <text x="238" y="196" font-size="14" fill="#2f3a2b" text-anchor="start">Orange face</text>
+  <rect x="214" y="207" width="16" height="16" rx="3" fill="#6b3a1e" stroke="#2f3a2b" stroke-width="1"/>
+  <text x="238" y="220" font-size="14" fill="#2f3a2b" text-anchor="start">Chestnut horseshoe</text>
+  <rect x="214" y="231" width="16" height="16" rx="3" fill="#b5652f" stroke="#2f3a2b" stroke-width="1"/>
+  <text x="238" y="244" font-size="14" fill="#2f3a2b" text-anchor="start">Rusty tail</text>
+  <rect x="214" y="255" width="16" height="16" rx="3" fill="#9a9a94" stroke="#2f3a2b" stroke-width="1"/>
+  <text x="238" y="268" font-size="14" fill="#2f3a2b" text-anchor="start">Smaller, grey below</text>
 </svg>
