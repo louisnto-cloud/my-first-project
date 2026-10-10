@@ -333,7 +333,7 @@ export const stateOf = (id) => L.get(id);
 
 // ---------- month and species ----------
 export function setMonth(m) {
-  prefs.month = m; savePrefs();
+  prefs.month = m; prefs.monthChosen = true; savePrefs();
   for (const st of L.values()) { if (!st.added) continue; refresh(st); if (lp(st.l.id).on) setVis(st, monthOk(st)); }
   H.emit('month', m);
 }

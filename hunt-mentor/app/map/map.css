@@ -317,7 +317,7 @@ input:disabled + .hmm-switch { opacity: 0.4; }
 .framing .hmm-bar, .framing .hmm-layers, .framing .hmm-lowr, .framing .hmm-stack, .framing .hmm-row .hmm-btn, .framing .hmm-cross { display: none !important; }
 
 /* toast */
-.hmm-toast { position: absolute; left: 50%; top: calc(var(--st) + 72px); transform: translate(-50%, -8px); z-index: 9; max-width: calc(100% - 32px); width: max-content;
+.hmm-toast { position: absolute; left: 50%; top: calc(var(--st) + 136px); transform: translate(-50%, -8px); z-index: 9; max-width: calc(100% - 32px); width: max-content;
   background: rgba(30, 32, 26, 0.93); color: #fff; padding: 10px 16px; border-radius: 14px; font-size: 15px; text-align: center; opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s; }
 .hmm-toast.on { opacity: 1; transform: translate(-50%, 0); }
 
