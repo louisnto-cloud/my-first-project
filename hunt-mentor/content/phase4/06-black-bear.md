@@ -9,6 +9,13 @@ checked: 2026-10-01
 > [!why]
 > The fall bear season is open when you start in October. It is also the hunt where one mistake kills a protected grizzly or a sow with cubs.
 
+```photo g-bb-side
+```
+
+- No grizzly season anywhere in BC (98%).
+- Colour tells you nothing. Shape tells you everything (Tip).
+
+```more what this session covers
 - Region 3 fall season: 1 September to 30 November in most MUs (Management Units) (98%). Spring: 1 April to 30 June (98%). Bag limit 2 (98%).
 - No open season on grizzly bears anywhere in BC (98%). The province ended the hunt on 18 December 2017 (news release, search preview) (85%).
 - No hunting a black bear under 2 years old, or any bear in its company (98%).
@@ -16,12 +23,48 @@ checked: 2026-10-01
 - Bear meat counts as edible portions. You must take the meat (98%).
 - Cook bear meat to 71 C (160 F). Freezing does not kill the parasite (75%).
 - Colour tells you nothing. Shape tells you everything (Tip).
+```
 
 ## Bear ID (identification) screen: black bear or grizzly?
+
+```steps Black bear or grizzly: 4 clues
+sa-bid-1 | Hump: none on a black bear.
+sa-bid-2 | Face: straight on a black bear, dished on a grizzly.
+sa-bid-3 | Ears: tall on a black bear, short and round on a grizzly.
+sa-bid-4 | Claws: short and curved, or long and straight.
+```
+
+- Use at least 3 clues. One is never enough (80%).
+
+> [!warn]
+> Shadows, brush and a head on view hide the hump and the face. If you cannot see the profile, you cannot shoot.
+
+```video
+commons-grizzly-bear | Grizzly: shoulder hump, dished face, short round ears. No season in BC.
+```
 
 ```diagram bear-id
 ```
 
+## Side by side: real bears
+
+```gallery
+g-bb-side | Black bear: no hump, rump high.
+g-griz-side | Grizzly: hump is the high point. No season.
+g-bb-face | Black bear: straight face, tall ears.
+g-griz-face | Grizzly: dished face, small round ears.
+```
+
+```gallery
+g-bb-brown | Brown, but a black bear: no hump.
+g-bb-cinnamon | Cinnamon black bear.
+g-bb-blonde | Pale black bear.
+g-bb-sow-cubs | One family, two colours.
+```
+
+- Interior black bears are often brown. Colour is a trap (70%).
+
+```more the clue table and colour notes
 | Clue | Black bear | Grizzly |
 |---|---|---|
 | Shoulder hump | None. The rump is the high point (80%) | A big hump of muscle over the shoulders, the highest point (80%) |
@@ -36,16 +79,17 @@ checked: 2026-10-01
 - Interior BC black bears are often brown or cinnamon. Colour is a trap (70%).
 - On Vancouver Island black bears are "uniformly black" and a brown bear there is likely a grizzly (synopsis page 19) (98%). Not true in the Interior.
 - Protected colour phases of black bear: white (Kermode) and blue (Glacier) (98%).
-
-> [!warn]
-> Shadows, brush and a head on view hide the hump and the face. If you cannot see the profile, you cannot shoot.
-
-```video
-commons-grizzly-bear | Grizzly: shoulder hump, dished face, short round ears. No season in BC.
 ```
 
 ## Why grizzly hunting is closed in BC
 
+```diagram sa-griz-timeline
+```
+
+- Grizzlies live in the North Thompson and Wells Gray (70 to 75%).
+- Rarer near Kamloops, not absent (65%).
+
+```more the history and where grizzlies live
 - 18 December 2017: the BC government announced an end to grizzly bear hunting across the province, effective immediately, for residents and non residents (news release, search preview) (85%).
 - Reason given: in fall 2017 consultation, 78% of respondents wanted the hunt stopped, and the government said the hunt "is not in line with" British Columbians' values (search preview) (85%).
 - Earlier, from 30 November 2017, trophy hunting of grizzlies and all grizzly hunting in the Great Bear Rainforest had already ended (search preview) (80%).
@@ -54,9 +98,20 @@ commons-grizzly-bear | Grizzly: shoulder hump, dished face, short round ears. No
 - Grizzlies live in the North Thompson. The Wells Gray population unit held about 317 bears in the 2012 estimate (search preview) (70%). "Grizzly bears and black bears are common in Wells Gray" (BC Parks brochure, search preview) (75%).
 - Grizzlies are "reduced or generally absent" in the dry Thompson Okanagan (search preview) (65%). Rarer near Kamloops, not absent.
 - A shot grizzly is a protected animal killed. Report wildlife crimes to [[RAPP]] (Report All Poachers and Polluters), 1 877 952 7277 (98%).
+```
 
 ## Young bear, sow, or adult boar?
 
+```diagram sa-bear-age
+```
+
+```anim sa-bear-watch Watch 5 minutes. Cubs show up late.
+```
+
+- Under 2, or any bear with one: closed (98%).
+- Pick an adult male (98%).
+
+```more the page 80 notice and the cub rule
 - Synopsis page 80 asks bear hunters: "Be patient. Don't shoot the moment you see a bear!" and "select an adult, male bear" (98%).
 - **Small or young bears** (page 80): "all legs", look over the shoulder often, pointed head, ears look big and close together, long thin neck, ears to nose lines form a skinny triangle (98%).
 - **Large adult males** (page 80): stocky legs, massive body with a belly near the ground, slow deliberate movement, big round head "like a basketball", ears look small, thick neck, ears to nose lines form an equal sided triangle (98%).
@@ -66,39 +121,76 @@ commons-grizzly-bear | Grizzly: shoulder hump, dished face, short round ears. No
 
 > [!tip]
 > A bear that looks huge at 60 m is often a small bear. Compare it to the vegetation. A big boar's belly nearly drags, and his back stands above the roadside grass.
+```
 
 ## Where bears live: BC and near your bases
 
+```diagram sa-bear-where
+```
+
+```photo hab-bear-berry-patch
+```
+
+- In every region you hunt (90%).
+
+```more numbers and local detail
 - BC's often quoted estimate is 120,000 to 160,000 black bears, but the province cannot show the data behind it (search preview) (60%).
 - Black bears live in every region you hunt: Thompson, Okanagan and Lower Mainland (90%).
 - Fall near Heffley Creek (Tip): berry slopes, old orchards and fruit trees, cutblock edges, creek bottoms with hawthorn and rose hips, grassy road margins.
 - Spring (hunting sources, search preview) (65%): south facing grassy slopes, logging road edges and cutblocks that green up first, avalanche chutes higher up.
 - Region 2 near Mission: lots of bears close to farms and houses. Watch the 100 m dwelling rule and the Fraser Valley Special Area licence (see Legal).
+```
 
 ## Senses and daily pattern
 
+```diagram sa-bear-senses
+```
+
+- Fall bears feed almost nonstop (70%).
+- Wind in your face, always (Tip).
+
+```more senses detail
 - **Nose:** the best in the bush, far better than a dog's (BearWise, search preview) (70%).
 - **Eyes:** about as good as a person's, with colour and good night vision (65%).
 - **Ears:** good, and they hear high sounds beyond our range (65%).
 - Active most at dawn and dusk, but any hour (70%). Under hunting pressure, more at night (Tip).
 - Fall bears feed almost nonstop: hyperphagia, about 20,000 calories a day (search preview) (70%).
 - Bears are most active April to November (70%).
+```
 
 ## Yearly pattern
 
+```diagram sa-bear-year
+```
+
+- Big fall feed: August to October (70%).
+- Den entry: mid October to late November (80%).
+
+```more the year in detail
 - **Late March to May:** leave the den lean and hungry. Grass, clover, dandelions, overwintered berries (70%).
 - **June to July:** mating season (75%). Boars travel widely (Tip).
 - **July to August:** berries start, ants and grubs in rotten logs (70%).
 - **August to October:** hyperphagia. Berries, mast, fruit, fish and carcasses (70%).
 - **Mid October to late November:** den entry in the nearest study, the Washington Cascades next to the Okanagan; out again April to May (80%, Gaines 2003). Some bears, often males with food, den later or not at all (75%, WildSafeBC). Sows with cubs first, adult males last (70%).
 - **January to February:** cubs born in the den (70%).
+```
+
+```diagram sg-bear-den
+```
 
 ## Food, water and cover
 
-- Omnivore, mostly plants: grasses and forbs in spring, berries in summer and fall, nuts, insects, carrion, and fawns and calves in June (70%).
-- Fall foods near Kamloops (Tip): saskatoon, chokecherry, hawthorn, rose hips, kinnikinnick, fallen apples, Oregon grape.
-- Water: bears drink daily and use creek bottoms on hot days (Tip).
-- Cover: thick brush, timber and blowdown right next to the food (Tip).
+```diagram sg-berry-calendar
+```
+
+```gallery
+hab-saskatoon-berries | Saskatoon.
+hab-chokecherry | Chokecherry.
+hab-woods-rose-hips | Rose hips.
+hab-kinnikinnick | Kinnikinnick.
+hab-huckleberry-berry | Huckleberry.
+hab-skunk-cabbage | Skunk cabbage: spring food.
+```
 
 > [!tip]
 > Find the food, find the bear. In October, glass a south slope of ripe berries or a creek with hawthorn in the last hour of light.
@@ -107,21 +199,59 @@ commons-grizzly-bear | Grizzly: shoulder hump, dished face, short round ears. No
 commons-black-bear-salmon | Black bears at a salmon run: note the straight face and no shoulder hump.
 ```
 
+```more food detail
+- Omnivore, mostly plants: grasses and forbs in spring, berries in summer and fall, nuts, insects, carrion, and fawns and calves in June (70%).
+- Fall foods near Kamloops (Tip): saskatoon, chokecherry, hawthorn, rose hips, kinnikinnick, fallen apples, Oregon grape.
+- Water: bears drink daily and use creek bottoms on hot days (Tip).
+- Cover: thick brush, timber and blowdown right next to the food (Tip).
+```
+
 ## Tracks and sign
 
+```diagram sg-bear-toeline
+```
+
+```gallery
+hab-bear-track-front | Front track: wide pad, 5 toes.
+hab-bear-track-mud | Hind track: like a flat human foot.
+hab-bear-scat-berries | Scat full of berries.
+hab-bear-claw-aspen | Claw marks on aspen.
+```
+
+- Claws far ahead of the toes: grizzly (70%).
+
+```video
+commons-black-bear-marking | Bear sign in action: a black bear rubbing and marking trees.
+```
+
+```more sign detail
 - Front track: wide, about 11 cm by 10 cm, five toes in a curve, claws close to the toes (65%).
 - Hind track: longer, about 18 cm by 9 cm, like a wide human foot with claws (65%).
 - Grizzly track: claw marks far out in front of the toes, toes in a straighter line (70%).
 - Scat: a thick cylinder or loose pile, full of berries, seeds, grass or hair (65%).
 - Torn logs and stumps, flipped rocks, claw marks on trees, and bear trails worn through brush (Tip).
 - Fresh: wet scat, sharp track edges, sap still oozing from claw marks (Tip).
-
-```video
-commons-black-bear-marking | Bear sign in action: a black bear rubbing and marking trees.
 ```
 
 ## Tactics: options
 
+```steps Spot and stalk a feeding bear
+sa-stalk-1 | Glass berry slopes and cutblocks at dawn and dusk.
+sa-stalk-2 | Pick landmarks near the bear.
+sa-stalk-3 | Wind in your face, every move.
+sa-stalk-4 | Close in out of sight.
+sa-stalk-5 | Rest, watch for cubs, wait for broadside.
+```
+
+| Option | Pros | Cons |
+|---|---|---|
+| A: spot and stalk food | Time to judge the bear | Brush hides cubs |
+| B: sit a feeding spot | Rested shot, time to watch | Needs fresh sign |
+| C: predator calling | Works in thick country | Bear comes fast and close |
+
+- My lean: Option A, watch every bear 5 minutes (Tip).
+
+```more the three options in full
 ### Option A: spot and stalk food
 - Glass berry slopes, cutblocks and road edges at dawn and the last 2 hours of light. Stalk with the wind in your face.
 - Pros: the standard BC bear method; time to judge the bear.
@@ -139,30 +269,46 @@ commons-black-bear-marking | Bear sign in action: a black bear rubbing and marki
 
 > [!lean]
 > Option A in October. Watch every bear for at least 5 minutes before you decide anything.
+```
 
 ## Rifle, load and range
 
+```diagram sa-308-range
+```
+
+- Keep shots inside 150 m (164 yd) at first (Tip).
+- No rimfire (98%).
+
+```more legal methods and load
 - Legal methods for black bear: centrefire rifle, shotgun of 20 gauge or larger with No. 1 buck or larger shot, bow, or an air rifle of .35 calibre or larger (page 13) (98%). No rimfire (98%).
 - Your .308 Winchester with a 150 to 180 grain expanding bullet is plenty (Tip).
 - Bears are not hard to kill but easy to lose: thick fur, fat, dense brush and little blood on the trail (Tip).
 - Keep shots inside 150 m (164 yd) until you have done it once (Tip).
+```
 
 ## Shot placement (brief)
 
+```diagram vitals-bear
+```
+
+- Find the leg and elbow first. The chest is lower than it looks (Tip).
+- After the shot: wait 30 minutes (Tip).
+
+```more shot detail
 - Broadside, behind the front leg, one third up (standard hunter education advice) (75%).
 - Long fur hides the body outline. The chest sits lower than it looks. Find the leg and the elbow first (Tip).
 - Wait for broadside with the near leg forward. No shots at a bear walking straight at you (Tip).
 - After the shot: watch where it goes, listen, wait 30 minutes, then follow with your brother and a loaded rifle (Tip).
 - Full lesson: the shot placement session (coming in a later phase).
+```
 
 ## Legal specifics: seasons and limits
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
-- **Species licence:** Black Bear, BC resident $20.00. Includes the HCTF (Habitat Conservation Trust Foundation) surcharge, not GST (Goods and Services Tax) (page 8) (98%).
-- **[[Bag limit]]:** 2 per licence year, 1 April to 31 March (pages 13, 28, 34 and 68) (98%).
-- **Region 3**, [[Synopsis]] page 34 (98%):
+```diagram sa-bear-seasons
+```
 
 | MU | Dates | Bag |
 |---|---|---|
@@ -170,18 +316,33 @@ commons-black-bear-marking | Bear sign in action: a black bear rubbing and marki
 | 3-46 | Sept 20 to Nov 30 | 2 |
 | 3-12 to 3-20, 3-26 to 3-44, 3-46 | Apr 1 to June 30 | 2 |
 
+```more fees, other regions and special areas
+- **Species licence:** Black Bear, BC resident $20.00. Includes the HCTF (Habitat Conservation Trust Foundation) surcharge, not GST (Goods and Services Tax) (page 8) (98%).
+- **[[Bag limit]]:** 2 per licence year, 1 April to 31 March (pages 13, 28, 34 and 68) (98%).
+- **Region 3**, [[Synopsis]] page 34 (98%):
+  - The three Region 3 rows are in the table above.
 - **Region 2**, page 28 (98%): MUs 2-2 to 2-19, Sept 10 to Nov 30; MUs 2-2 to 2-19, Apr 1 to June 15; Bow Only, MUs 2-2 to 2-19, Sept 1 to Sept 9. Footnote: "The bag limit for black bears is two per licence year (Apr 1 - Mar 31)".
 - **Region 8**, page 68 (98%): MUs 8-1 to 8-15 and 8-21 to 8-26, Apr 1 to June 30; the same MUs Aug 1 to Aug 31, "restricted to private land only. Hunters must obtain permission from landowners"; the same MUs Sept 1 to Nov 30. Bag 2.
 - Region 2 change for 2026: the proposed private property black bear hunt "was not approved" (changes summary) (95%).
 - **Fraser Valley Special Area:** hunting in MU 2-4, and the parts of MU 2-8 inside Maple Ridge, Pitt Meadows, Mission and Coquitlam, needs a Fraser Valley Special Area Hunting Licence ($10.00) plus $1,000,000 public liability and property damage insurance (pages 8 and 29) (95%).
 - **Hours:** 1 hour before sunrise to 1 hour after sunset (page 11) (98%).
 - **Your MU at Heffley Creek:** VERIFY on the official map.
+```
 
 ```regs safety
 ```
 
 ## Legal specifics: bear rules
 
+> [!warn]
+> Study aid only. The official regulations are the law.
+
+```diagram sa-bear-rules
+```
+
+- You must take the meat (98%).
+
+```more the exact words and the other rules
 - "It's unlawful: 14. To hunt a black bear less than 2 years old or any bear in its company" (page 11) (98%).
 - "15. To hunt the white or blue (Glacier) colour phases of the black bear" (page 11) (98%).
 - "21. To hunt bears by placing bait or by using a dead animal or using part of it as bait" (page 11) (98%). Methods table note 6 repeats it (page 13) (98%).
@@ -193,9 +354,20 @@ commons-black-bear-marking | Bear sign in action: a black bear rubbing and marki
 - **[[Evidence of sex]]:** the page 15 list covers caribou, elk, moose, deer, bison, goat, sheep and cougar. Black bear is not on it outside compulsory inspection areas (90%).
 - Cancel the species licence immediately after the kill, before handling (page 11) (98%).
 - Ear tagged or collared bear: contact the nearest Fish and Wildlife office immediately (page 80) (98%).
+```
 
 ## Meat care, trichinosis and yield
 
+```diagram sa-trich-temp
+```
+
+- Cook every cut to 71 C (160 F) inside (80%).
+- Skin fast: fat and hide trap heat (Tip).
+
+```diagram sa-yield-species
+```
+
+```more trichinosis, care and yield
 - Skin fast. The fat layer and thick hide trap heat (Tip). A bear shot on a warm October afternoon and left whole can spoil by morning (Tip).
 - Trim the fat and render it separately. It is fine lard (Tip).
 - **Trichinosis:** a parasitic worm in muscle. Bear is the usual source of human cases from wild game in Canada (CMAJ, Canadian Medical Association Journal, search preview) (75%).
@@ -204,9 +376,14 @@ commons-black-bear-marking | Bear sign in action: a black bear rubbing and marki
 - No rare bear steaks, no undercooked bear sausage, no tasting raw grind (Tip).
 - The synopsis sends you to the BC Centre for Disease Control for diseases you can get from wildlife (page 80) (98%).
 - Yield: a 90 kg bear gives roughly 30 to 40 kg of boneless meat once the fat is trimmed (assumption, Tip).
+```
 
 ## Beginner mistakes
 
+```diagram sa-bear-mistakes
+```
+
+```more all the mistakes
 > [!mistake]
 > - Shooting a brown bear because "grizzlies are not around here". Check the hump, the face and the ears every time.
 > - Shooting a lone bear without watching for cubs. Cubs hide.
@@ -214,8 +391,12 @@ commons-black-bear-marking | Bear sign in action: a black bear rubbing and marki
 
 - Also: a head on shot at a bear coming down the road. Wait for broadside.
 - Also: cooking bear medium rare. Trichinosis is not a story, it is a hospital stay.
+```
 
 ## Grandpa's rules
+
+```photo g-bb-sow-cubs
+```
 
 > [!rule]
 > Every bear is a grizzly until you have seen the face and the shoulders.

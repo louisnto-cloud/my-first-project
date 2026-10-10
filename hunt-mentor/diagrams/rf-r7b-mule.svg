@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 256" role="img" aria-label="Bar chart of Region 7B mule deer seasons. 4 point bucks in 7-19, 7-36, 7-42, western 7-43, 7-48 to 7-52, 7-57 and 7-58: 10 September to 5 October. 4 point bucks in 7-20 to 7-22, 7-31 to 7-35, eastern 7-43, 7-44 to 7-47 and 7-54: 1 to 30 November. Bow only bucks in 7-20, 7-21, 7-32 to 7-35 and 7-44 to 7-47: 1 to 30 September. No antlerless or youth mule deer rows." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="256" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Mule deer: 4 point bucks</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">No antlerless or youth mule deer rows</text>
+<rect x="14.0" y="60" width="31.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="60" width="30.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="60" width="30.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="60" width="31.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="60" width="31.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="60" width="31.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="96" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">North and foothill MUs, 7-43 west</text>
+<rect x="86.4" y="102" width="26.5" height="20" rx="4" fill="#e8590c"/>
+<text x="117" y="117" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 10 to Oct 5</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">South MUs, 7-43 east</text>
+<rect x="139.4" y="148" width="30.6" height="20" rx="4" fill="#e8590c"/>
+<text x="174" y="163" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Nov 1 to Nov 30</text>
+<text x="14" y="188" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, bow only, listed MUs</text>
+<rect x="77.2" y="194" width="30.6" height="20" rx="4" fill="#8b5a2b"/>
+<text x="112" y="209" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 30</text>
+<rect x="14" y="230" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="242" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+<rect x="149.60000000000002" y="230" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="168" y="242" font-size="14" fill="#23261f" text-anchor="start">Bow only</text>
+</svg>

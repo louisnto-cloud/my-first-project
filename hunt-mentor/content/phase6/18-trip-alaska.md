@@ -13,6 +13,13 @@ Study aid only. The official regulations are the law.
 
 ## Can a BC resident hunt here
 
+```diagram ld-trip-status
+```
+
+- Nonresident alien: a guide for every big game animal (85%).
+- Birds and small game: no guide (80%).
+
+```more your status, the guide rule and the kindred note
 - Yes, as a **nonresident alien**: not a US citizen and not living in the US (85%).
 - Big game: "A nonresident alien must be personally accompanied by an Alaska licensed guide to hunt ANY big game animal" (85%, quote shown without hyphen).
 - That list: black bear, brown or grizzly bear, bison, caribou, Dall sheep, deer, elk, moose, mountain goat, muskox, wolf and wolverine (85%).
@@ -20,9 +27,16 @@ Study aid only. The official regulations are the law.
 - Small game and waterfowl: no guide needed (80%).
 - The "second degree of kindred" exemption, where a US nonresident hunts sheep, goat or brown bear with a close Alaska resident relative, does **not** apply to nonresident aliens (85%).
 - Your brother is a nonresident alien too. Two guides, or one guide booked for two hunters: ask the outfitter.
+```
 
 ## Without a guide, or with one
 
+```diagram ld-ak-who
+```
+
+- Tags and harvest tickets in hand before the hunt (80%).
+
+```more the full table and tags note
 | Animal | BC resident may hunt | What it takes |
 |---|---|---|
 | Grouse, ptarmigan, hares | Yes, no guide (80%) | Nonresident alien hunting licence (85%) |
@@ -32,9 +46,16 @@ Study aid only. The official regulations are the law.
 | Bison, muskox, elk | Guide required (85%) | Draw or registration permits (80%) |
 
 - Harvest tickets and locking tags must be in hand before the hunt. The locking tag goes on the animal (80%).
+```
 
 ## Licences, draws and fees
 
+```diagram ld-ak-tags
+```
+
+- Licence $630 USD. Federal Duck Stamp fee: VERIFY.
+
+```more the full fee table, draws and guide fees
 | Item | Fee (USD) | Checked |
 |---|---|---|
 | Nonresident alien annual hunting licence | $630 (85%) | 2026-10-01 |
@@ -53,19 +74,33 @@ Study aid only. The official regulations are the law.
 - There is no cheaper small game licence for nonresident aliens. The $60 small game licence is for US nonresidents only (80%).
 - Draw permits: applications run in winter for the following season. Dates: VERIFY in the Drawing Permit Hunt Supplement.
 - Guide fees are private and large. Ask for written quotes. Not estimated here.
+```
 
 ## How to apply
 
+```diagram ld-ak-plan
+```
+
+```diagram ld-ak-apply
+```
+
+- Licence first, then the 6NIA (85%).
+
+```more the 5 steps in full
 1. Buy the nonresident alien hunting licence online at the Alaska Department of Fish and Game store. Do this first: ATF needs a copy (85%).
 2. File ATF Form 6NIA (see firearms screen). Allow 4 to 6 weeks (85%).
 3. Book a registered Alaska guide for any big game. The guide usually handles tags and permits with you (80%).
 4. Buy locking tags before the hunt. Carry harvest tickets (80%).
 5. Read the current Alaska Hunting Regulations for your GMU (Game Management Unit) (85%).
+```
 
 ## Best first trip for you
 
-> [!lean]
-> Not big game, not yet. The honest first Alaska trip for two Canadians is a September road trip through Yukon to the Tok and Anchorage country for ptarmigan, grouse and ducks on the nonresident alien licence, with the paperwork done right. It teaches you the border, the licence system and the country. Save for a guided black bear or caribou after that.
+```diagram ld-trip-distance
+```
+
+```diagram ld-trip-cost
+```
 
 | Cost line | Estimate (USD unless noted) | Note |
 |---|---|---|
@@ -76,13 +111,32 @@ Study aid only. The official regulations are the law.
 | Camping, food and one motel night each way, 12 days, two people | CAD $1,200 to $1,800 | Estimate |
 | Total, split two ways | about CAD $2,300 to $2,900 each | Estimate, opinion, at roughly 1.35 CAD per USD, Assumption |
 
+- My lean: a September bird trip first, paperwork done right.
+
+```more my lean in full and the guided bear note
+> [!lean]
+> Not big game, not yet. The honest first Alaska trip for two Canadians is a September road trip through Yukon to the Tok and Anchorage country for ptarmigan, grouse and ducks on the nonresident alien licence, with the paperwork done right. It teaches you the border, the licence system and the country. Save for a guided black bear or caribou after that.
+
 - A guided black bear trip, with flights, is a different budget again. Three quotes before you decide. Opinion.
+```
 
 ## Taking firearms there
 
-```diagram alaska-firearm-flow
+```steps Your rifle to Alaska and back
+ld-ak-gun-1 | Buy the Alaska licence first.
+ld-ak-gun-2 | File ATF Form 6NIA, 4 to 6 weeks ahead.
+ld-ak-gun-3 | Leaving Canada: BSF407 card ready.
+ld-ak-gun-4 | Ask Global Affairs about an export permit.
+ld-ak-gun-5 | Entering the US: 6NIA plus licence.
+ld-ak-gun-6 | Coming home: PAL, declare everything.
 ```
 
+```anim ld-ak-border Out with a 6NIA, home with your PAL.
+```
+
+- Start the 6NIA in June for a September trip.
+
+```more Canada, US and return rules in full
 ### Leaving Canada
 - CBSA (Canada Border Services Agency): you do not have to stop at a CBSA office when leaving with a non restricted firearm (85%).
 - Recommended: CBSA Form BSF407, Identification of Articles for Temporary Exportation, listing the serial number, so you can show the rifle was not bought abroad (85%). Formerly Form Y38 (85%).
@@ -103,9 +157,23 @@ Study aid only. The official regulations are the law.
 
 > [!warn]
 > This is the complicated part. Start the 6NIA in June for a September trip. No approved form, no rifle across the line. The guide can rent you one, but ptarmigan with a borrowed gun is not the trip you planned.
+```
+
+```diagram alaska-firearm-flow
+```
 
 ## Bringing meat, hides and antlers home
 
+```diagram ld-ak-meat
+```
+
+```diagram parts-home-bc
+```
+
+- Bears sealed, CITES for bear, wolf, lynx (85%).
+- BC: meat and cleaned parts only (99%).
+
+```more Alaska, Canada, Yukon and BC rules, quoted
 ### Alaska's export rules
 - All brown or grizzly and black bears must be **sealed** by Fish and Game before they leave Alaska (85%).
 - Sheep rams from listed units must be sealed, and horns may not leave the state before sealing (85%).
@@ -124,15 +192,23 @@ Study aid only. The official regulations are the law.
 - "To possess any part of a Cervidae (caribou, deer, elk, moose), that was killed outside of British Columbia, other than (1) the edible meat of the four quarters, loins, neck, and ribs, or (2) the hide, antlers, and skull plate if, before being brought into British Columbia, the part is cleaned in a manner that removes all tissue." (99%)
 - So an Alaska caribou or Sitka deer comes home boned out, antlers on a skull plate scraped clean. Item 51 also bans using any out of province cervid part for hunting in BC (99%).
 - You also drive through Yukon, which bans cervid carcasses and parts except cleaned skull caps with antlers, cleaned teeth, meat detached from head and backbone, finished mounts and tanned hides (85%).
+```
 
-```diagram parts-home-bc
+```anim ld-meat-home Bone out at the kill. Only meat and a clean skull plate come home.
 ```
 
 ## Blaze orange rules
 
+```diagram ld-orange-compare
+```
+
+- Alaska: not required (85%). Orange hat anyway.
+
+```more the Alaska orange notes
 - "Alaska does not require wearing hunter orange clothing, but investigators consistently have found that it reduces hunting accidents." (85%, Alaska hunter education page)
 - Some youth hunts require blaze orange vests or jackets (85%).
 - My lean: orange hat at minimum. You will be hunting the same ptarmigan slopes as locals in September.
+```
 
 ## Before you go
 
@@ -147,6 +223,8 @@ Current Alaska Hunting Regulations for your GMU downloaded
 Passports, PAL cards, licences and 6NIA in one folder
 Plan the meat: bone out, clean skull plate, keep tags with the meat
 ```
+
+## Grandpa's rule and common mistakes
 
 > [!rule]
 > Paperwork is part of the hunt. A trip that starts with a refused rifle at the border ends there.

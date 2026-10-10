@@ -9,18 +9,29 @@ checked: 2026-10-04
 > [!warn]
 > Study aid only. The official regulations are the law.
 
-- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
+```anim rf-r7b-year Slide through the Peace year.
+```
 
 > [!why]
 > The Peace has the only bison, the short moose windows and the farmland elk and white tail rules. Every season, limit, closure and map is here.
+
+```more what this session covers
+- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
 
 - This session carries printed pages 60 to 65, the Region 7B section, in the order printed (99%, contents page and page footers).
 - Page 60: contacts, changes, region map. Page 61: bag limits, firearm areas, access, notices. Pages 62 and 63: every season row. Pages 63 to 65: Maps H1 to H32 (99%).
 - Green print marks new information and regulation changes (99%, page 2 key). Green cells are flagged "new" here (99%).
 - [[MU]] (Management Unit) codes like 7-43 are official codes, so they keep their hyphen (99%).
+```
 
 ## Regional office and Conservation Officers
 
+| Who | Where | Phone |
+|---|---|---|
+| Regional office | Fort St. John | 250 787 3415 |
+| Conservation officers | 4 field offices | 1 877 952 7277 |
+
+```more the page 60 words, address and field offices
 > [!law] Fish and Wildlife Regional Office, page 60
 > "400-10003 100 Avenue"
 >
@@ -36,9 +47,17 @@ checked: 2026-10-04
 - Regional office: 400, 10003 100 Avenue, Fort St. John, phone 250 787 3415 (99%, page 60, 2 October 2026 edition).
 - Conservation officers: 1 877 952 7277 (99%).
 - Field offices: Chetwynd, Dawson Creek, Fort Nelson and Fort St. John (99%).
+```
 
 ## Compulsory inspection, RAPP and updates
 
+| Need | Detail |
+|---|---|
+| CI (Compulsory Inspection) | No towns printed. Call Fort St. John |
+| Inspect | Sheep, goat, cougar |
+| RAPP (Report All Poachers and Polluters) | 1 877 952 7277, 24 hours |
+
+```more the page 60 and page 16 notes
 > [!law] Compulsory Inspection (CI) Centres, page 60
 > "See the Ministry website at www.gov.bc.ca/hunting/compulsory-inspection or contact the Peace Fish and Wildlife Regional Office for information on CI Centres. By appointment only."
 
@@ -51,9 +70,18 @@ checked: 2026-10-04
 - Sheep, goat and cougar rows all say inspection is required (99%, pages 62 and 63).
 - A goat or sheep from MU 7-19 driven through Alberta for inspection needs no export permit (99%, page 16).
 - [[RAPP]] (Report All Poachers and Polluters): 1 877 952 7277, 24 hours (99%).
+```
 
 ## What changed for 2026 to 2028
 
+| Change | Now |
+|---|---|
+| Antlerless elk | Also MUs (Management Units) 7-49, 7-58 |
+| Lynx | Opens Nov 1 |
+| Lower Burnt River, 7-22 | New No Hunting Area |
+| Vehicle closures | Changed: see the access screens |
+
+```more the page 60 words
 > [!law] Regulation changes for 2026-2028, page 60
 > "1. Antlerless elk expanded to include MU 7-49 and 7-58."
 >
@@ -67,9 +95,16 @@ checked: 2026-10-04
 - Lynx now opens 1 November (99%, page 63, "Nov 1" printed green).
 - New Lower Burnt River no hunting area in 7-22 (99%, Map H10).
 - Vehicle closure changes: listed on the access screens (99%).
+```
 
 ## What Region 7B covers
 
+```diagram rf-r7b-mus
+```
+
+- Region 7B, Peace: 27 MUs (Management Units) (99%).
+
+```more every MU and the towns on the map
 > [!law] Page 2 region key
 > "Region 7B - Peace" "MUs 7-19 to 7-22, 7-31 to 7-36, 7-42 to 7-58"
 
@@ -79,9 +114,17 @@ checked: 2026-10-04
 - Region 7B is 27 MUs (99%, page 2).
 - One by one: 7-19, 7-20, 7-21, 7-22, 7-31, 7-32, 7-33, 7-34, 7-35, 7-36, 7-42, 7-43, 7-44, 7-45, 7-46, 7-47, 7-48, 7-49, 7-50, 7-51, 7-52, 7-53, 7-54, 7-55, 7-56, 7-57, 7-58 (99%).
 - Towns on the page 60 map include Fort St John, Dawson Creek, Chetwynd, Tumbler Ridge, Fort Nelson, Wonowon and Pink Mountain (99%).
+```
 
 ## Regional bag limits
 
+```diagram rf-r7b-bag
+```
+
+```diagram rb-deer-three
+```
+
+```more the page 61 words and the page 14 table
 > [!law] Regional Bag Limits, page 61
 > "DEER: The combined bag limit for deer in region 7B is 2. The bag limit for mule (black-tailed) deer is 1. The bag limit for white-tailed deer is 2, only one of which may be a buck, and one of which may be antlerless."
 >
@@ -96,9 +139,14 @@ checked: 2026-10-04
 - Page 14 table for 7B: all deer regional 2, provincial 3 (99%, page 14).
 - Grouse: 10 a day, dusky, spruce and ruffed together. Ptarmigan 10 a day (99%).
 - Sharp tailed grouse: 3 a day; possession is 2 times the daily limit in 7B, so 6 (99%, page 12).
+```
 
 ## Bag limits in the season table
 
+```diagram rf-r7b-bag-table
+```
+
+```more every bag cell as printed, pages 62 and 63
 | Species | Bag limit cell as printed, pages 62 and 63 |
 |---|---|
 | Mule deer | Refer to Regional Bag Limits on p. 61 and the Deer Bag Limits article on p. 14 |
@@ -130,9 +178,17 @@ checked: 2026-10-04
 
 - Every cell checked against 150 dpi images of pages 62 and 63 and the page text (99%, 2 October 2026 edition).
 - NBL (No Bag Limit): no maximum. "10 (30)" means 10 a day, 30 in [[Possession limit|possession]] (99%, page 12).
+```
 
 ## Mule deer seasons
 
+```diagram rf-r7b-mule
+```
+
+```diagram rb-4point
+```
+
+```more the full mule deer table and notes
 | MUs | Class | Season | Notes |
 |---|---|---|---|
 | 7-19, 7-36, 7-42, *7-43, 7-48 to 7-52, 7-57, 7-58 | ★ 4 point bucks | Sept 10 to Oct 5 | General season |
@@ -142,9 +198,14 @@ checked: 2026-10-04
 - Every row checked against the page 62 image and text (99%, page 62).
 - No antlerless mule deer and no youth mule deer rows in 7B (99%).
 - A [[4 point buck]] has at least 4 tines on one antler, not counting the brow tine (99%, page 4).
+```
 
 ## White tailed deer seasons
 
+```diagram rf-r7b-wt
+```
+
+```more the full white tailed deer table and notes
 | MUs | Class | Season | Notes |
 |---|---|---|---|
 | 7-19 to 7-22, 7-31 to 7-36, 7-42 to 7-50, 7-54 to 7-58 | Bucks | Sept 10 to Nov 30 | General season |
@@ -155,9 +216,16 @@ checked: 2026-10-04
 
 - Every row checked against the page 62 image (99%, page 62).
 - White tail rows skip 7-51, 7-52 and 7-53 (99%).
+```
 
 ## Moose seasons
 
+```diagram rf-r7b-moose
+```
+
+- Farm and foothill MUs (Management Units): 2 days in October, 2 in November (99%).
+
+```more the full moose table and notes
 | MUs | Class | Season | Notes |
 |---|---|---|---|
 | 7-19 to 7-22, *7-31, 7-33, 7-35, 7-46 to 7-49, 7-55 | ★ Bulls | Oct 25 to Oct 26 | Bag 1 |
@@ -167,9 +235,17 @@ checked: 2026-10-04
 - Every row checked against the page 62 image (99%, page 62).
 - In the farm and foothill MUs, moose is 2 days in October and 2 in November (99%).
 - ★ Bulls means spike fork, tripalm or 10 point bulls only, footnote below (99%).
+```
 
 ## Elk seasons
 
+```diagram rf-r7b-elk
+```
+
+```diagram rf-r7b-farm
+```
+
+```more the full elk table and notes
 | MUs | Class | Season | Notes |
 |---|---|---|---|
 | ★★7-42, 7-57 | ▲ 6 point bulls | Aug 15 to Oct 31 | Bag 1 |
@@ -183,9 +259,14 @@ checked: 2026-10-04
 
 - Every row checked against the page 62 image and text (99%, page 62).
 - 3 point and 6 point elk classes: see the Definitions session (99%, page 3).
+```
 
 ## Sheep, goat and bison seasons
 
+```diagram rf-r7b-mtn
+```
+
+```more the full tables and notes
 ### Bighorn mountain sheep
 
 | MUs | Class | Season | Notes |
@@ -212,9 +293,14 @@ checked: 2026-10-04
 
 - Every row checked against the page 62 image (99%, page 62).
 - No caribou row in 7B (99%).
+```
 
 ## Bear, wolf and furbearer seasons
 
+```diagram rf-r7b-pred
+```
+
+```more the full table and notes
 | Species | MUs | Season | Bag |
 |---|---|---|---|
 | Black bear | 7-19 to 7-22, 7-31 to 7-36, 7-42 to 7-58 | Aug 15 to Nov 15 | 2 |
@@ -230,9 +316,14 @@ checked: 2026-10-04
 - Every row checked against the images of pages 62 and 63 (99%).
 - NBL (No Bag Limit): no maximum (99%, page 12).
 - Wolf has 2 printed windows, but ▼ removes the closed season below 1,100 m (99%).
+```
 
 ## Upland bird and raven seasons
 
+```diagram rf-r7b-upland
+```
+
+```more the full table and notes
 | Species | MUs | Season | Bag |
 |---|---|---|---|
 | Dusky (blue) grouse | 7-21, 7-22, 7-31, 7-36, 7-42, 7-43, 7-50 to 7-52, 7-54, 7-57, 7-58 | Sept 1 to Nov 15 | 10 (30) |
@@ -243,9 +334,17 @@ checked: 2026-10-04
 
 - Every row checked against the page 63 image (99%, page 63).
 - The ptarmigan row skips 7-20 (99%).
+```
 
 ## Waterfowl, snipe and coot seasons
 
+```diagram rf-r7b-water
+```
+
+```diagram rb-duck-bag
+```
+
+```more the full table and notes
 | Species | MUs | Season | Bag |
 |---|---|---|---|
 | Common snipe | 7-19 to 7-22, 7-31 to 7-36, 7-42 to 7-58 | Sept 1 to Nov 30 | 10 (30) |
@@ -257,14 +356,26 @@ checked: 2026-10-04
 
 - Every row checked against the page 63 image (99%, page 63).
 - A closed area along the Peace River in MU 7-33 applies to all of these, see Map H17 (99%).
+```
 
 ## Species with no row in Region 7B
 
+```diagram rf-r7b-norow
+```
+
+```more the pages 62, 63 and page 5 notes
 - Pages 62 and 63 have no row for caribou, bobcat, raccoon, Columbian ground squirrel, pheasant, partridge, dove, band tailed pigeon, turkey or quail (99%).
 - No row means no general open season for that animal in Region 7B (95%, my reading of page 5: "Open Seasons are only those defined in this synopsis").
+```
 
 ## LEH: what these pages print
 
+```diagram rf-r7b-leh
+```
+
+- LEH (Limited Entry Hunting): a draw (99%).
+
+```more the page 62 to 65 words
 > [!law] Moose footnotes, page 62
 > "** Portion of 7-43 only. See LEH Synopsis map 7P for LEH only area. *** Portion of 7-52 only. See LEH Synopsis map 7R for LEH only area."
 
@@ -279,9 +390,19 @@ checked: 2026-10-04
 - GOS in the Map H12 caption means General Open Season (90%, my reading).
 - Goats: parts of the Sikanni Muskwa foothills are LEH only (99%, Map H18). Toad River goats too (99%, Map H29).
 - Bison: Map H25 splits LEH only and general season ground (99%).
+```
 
 ## Footnotes: deer
 
+| Mark | Means (99%) |
+|---|---|
+| * mule deer | 7-43 west, Map H22: the September window |
+| ** mule deer | 7-43 east, Map H23: the November window |
+| ★ mule deer | Antlers stay with the licence |
+| * white tail | Map H12 parts only |
+| ★ white tail | Under 18 only |
+
+```more the page 62 footnote words
 > [!law] Mule deer footnotes, page 62
 > "Bag limit for mule deer bucks is one. * Restricted to western portion of MU 7-43 See Map H22. ** Restricted to eastern portion of MU 7-43 See Map H23."
 >
@@ -296,9 +417,21 @@ checked: 2026-10-04
 > "** The bag limit for white-tailed deer is 2; one may be antlerless and one may be a buck."
 
 - Antlerless and youth either sex white tails: only in the Map H12 agricultural parts of the starred MUs (99%).
+```
 
 ## Footnotes: moose and elk
 
+```diagram rb-mhr
+```
+
+| Mark | Means (99%) |
+|---|---|
+| ★ moose | Spike fork, tripalm or 10 point bull |
+| * and + | Parts of 7-31 and 7-51 closed to moose |
+| Elk ★, ★★ | North or south part of 7-42 |
+| Elk *, ✢ | Inside or outside the Map H12 area |
+
+```more the page 62 footnote words
 > [!law] Moose footnotes, page 62
 > "All individuals with a moose species licence must submit a Mandatory Hunter Report by March 31st. See page 16 for more details."
 >
@@ -319,9 +452,19 @@ checked: 2026-10-04
 > "✢Those portions of MUs 7-20, 7-21, and 7-46 located outside the shaded portion of the MU. See Map H12. ▲ See Definitions section: Elk. The antlers must accompany the species licence."
 
 - Inside the Map H12 farm area: 3 point bulls and antlerless. Outside it: 6 point bulls (95%, my reading of * and ✢).
+```
 
 ## Footnotes: sheep, goat, bison and others
 
+| Animal | Footnote (99%) |
+|---|---|
+| Sheep, goat, cougar | Compulsory inspection |
+| Wolf, coyote | No closed season below 1,100 m |
+| Wolverine, lynx | Compulsory reporting |
+| Raven | Private land, owner's permission |
+| Snipe, coots, geese | Map H17 closed area. Map name: VERIFY |
+
+```more the page 62 and 63 footnote words
 > [!law] Sheep and goat footnotes, page 62
 > "Compulsory Inspection required."
 >
@@ -351,9 +494,14 @@ checked: 2026-10-04
 - Wolverine and lynx: [[Compulsory reporting]] (99%).
 - Ravens: private land only, with the owner's permission (99%).
 - The snipe, coot and goose rows cite Map H17; the duck row cites Map H16. Map H16 is Charlie Lake. VERIFY: Map H17 is the closed area map (95%, my reading of the captions).
+```
 
 ## Firearm and hunting closures, part 1
 
+```diagram rf-r7b-fire-1
+```
+
+```more the page 61 words and map notes
 > [!law] Firearms Restricted Areas, page 61
 > "The discharge of firearms is prohibited on the west half of Lot 1323, Peace River District, in which Halfway Elementary School is located. See Map H18."
 >
@@ -368,9 +516,14 @@ checked: 2026-10-04
 - Halfway school: the map is H19 (Upper Halfway No Shooting Area), not H18 as printed (95%, my reading of the captions).
 - Dawson Creek demonstration area: the map is H14, not H13 as printed (95%, my reading of the captions).
 - Roads 520 and 190: shotgun with shot only within 400 m (95%, my reading).
+```
 
 ## Firearm and hunting closures, part 2
 
+```diagram rf-r7b-fire-2
+```
+
+```more the page 61 words and map notes
 > [!law] Firearms Restricted Areas, page 61
 > "Hunting is prohibited on either side of the Lower Burnt Forest Service Road between kilometer 20 (latitude 55.31683; longitude -121.943050) and the crossing of the Burnt River and the Lower Burnt Forest Service Road at kilometer 22.2 (latitude 55.306279; longitude -121.971300) in MU 7-22. The northern boundary of the closure follows the north bank of the Burnt River, and the southern boundary is 400 m from the center line of the Lower Burnt Forest Service Road. See map H10."
 >
@@ -388,9 +541,19 @@ checked: 2026-10-04
 - Map H3 is captioned "One Island Pasture", not One Mile Pasture (99%, page 63). VERIFY the name.
 - Fontas: the map is H24 (Fontas No Hunting Area), not H21 as printed (95%, my reading of the captions).
 - Highway single projectile bans on Hwys 29 and 97 are on page 10 (99%).
+```
 
 ## Vehicle closures: how to read them
 
+```diagram rf-r7b-mv-key
+```
+
+```diagram rb-mv-types
+```
+
+- Maps online: www.gov.bc.ca/peaceaccess (99%).
+
+```more the page 61 symbol key, word for word
 > [!law] Access Management Areas, page 61
 > "Region 7B Motor Vehicle Prohibition maps are available online at www.gov.bc.ca/peaceaccess."
 >
@@ -403,9 +566,14 @@ checked: 2026-10-04
 - Signs may be missing; the closure still applies (99%, page 61).
 - ★ [[Motor Vehicle Closed Area]]: no motor vehicle for any purpose (99%, page 10).
 - ◆ [[ATV]] (all terrain vehicle) closure: no ATV or motorcycle for hunting use (99%).
+```
 
 ## Vehicle closures by MU
 
+```diagram rf-r7b-mv
+```
+
+```more the page 61 list, word for word
 > [!law] Access Management Areas, page 61
 > "MUs 7-19, 7-21 (portion), 7-22 (portion), 7-31, 7-35, 7-36, 7-43, 7-57, and 7-58." "★ above 1400 m in elevation. However, the use of snowmobiles (less than 450 kg in weight) is allowed from Nov 1 - Apr 30. Onion Lake Trail (MU 7-21) and West Bullmoose Road are open year-round. Contact Ministry office in Fort St. John for more information. See Map H7. Detailed maps can be reviewed online at www.gov.bc.ca/peaceaccess"
 >
@@ -419,9 +587,14 @@ checked: 2026-10-04
 - "7-22 (portion)" and "West Bullmoose Road" are printed green (99%).
 - Northern Rockies snowmobile closures: printed green, maps online only (99%).
 - The snowmobile line lists 7-23 and 7-30, which are Region 7A MUs (99%, page 2).
+```
 
 ## Vehicle closures: Muskwa Kechika
 
+```diagram rf-r7b-mk
+```
+
+```more the page 61 words
 > [!law] Access Management Areas, page 61
 > "MUs 7-36, 7-42, 7-43, 7-50, 7-51, 7-52, 7-54, and 7-57" "★ Muskwa Kechika Access Management Area and Klingzut Mountain - Restriction applies to vehicles other than aircraft in portions of these MUs. For information and maps showing specific routes and vehicle restrictions within the Muskwa Kechika, contact Ministry office in Fort St. John and Ministry of Forests offices in Fort Nelson and Dawson Creek. Please note there are several trails where travel is restricted to within 10 m of the route and only vehicles under 750 kg are permitted. See Map H26."
 >
@@ -430,9 +603,14 @@ checked: 2026-10-04
 - Muskwa Kechika: closed to all vehicles but aircraft except on set routes; some trails 10 m wide, under 750 kg (99%).
 - "Klingzut Mountain" and the MU 7-52 line are printed green (99%).
 - Map 1-58/26 is not printed in this book (99%). VERIFY where to view it.
+```
 
 ## Maps H1 to H9
 
+```diagram rf-r7b-maps-h1
+```
+
+```more the map captions
 > [!law] Map captions, page 63
 > "Map H1 Kakwa Park and Recreation Area No Hunting Area (MU 7-19)."
 >
@@ -454,9 +632,14 @@ checked: 2026-10-04
 > "Map H9 Dokie Subdivision No Shooting Area (MUs 7-22 and 7-31)."
 
 - [[No Shooting Area]]: no firearms; bows allowed unless stated (99%, page 10).
+```
 
 ## Maps H10 to H19
 
+```diagram rf-r7b-maps-h10
+```
+
+```more the map captions and labels
 > [!law] Map captions, page 64
 > "Map H10 Lower Burnt River No Hunting Area (MU 7-22)."
 >
@@ -480,9 +663,14 @@ checked: 2026-10-04
 
 - Map H17 labels the band "100m (110yds) either side of the river", near Taylor (90%, my reading of the map).
 - Map H16 labels "91m (100yds) from mean high water mark" (90%, my reading of the map).
+```
 
 ## Maps H20 to H32
 
+```diagram rf-r7b-maps-h20
+```
+
+```more the map captions and labels
 > [!law] Map captions, pages 64 and 65
 > "Map H20 Northern portion of MU 7-42 for Elk."
 >
@@ -513,9 +701,14 @@ checked: 2026-10-04
 
 - Map H24 labels "1km from trail", "1km from Fontas River", "1km from Ft Nelson River" and "1km from Sikanni Chief River" (90%, my reading of the map).
 - Map H31 labels the closure "within 1.6 km, or 1 mile, of Hwy 97" (90%, my reading of the map legend).
+```
 
 ## Notices to hunters
 
+```diagram rf-r7b-notices
+```
+
+```more the page 61 words and contacts
 > [!law] Notice to Hunters, Invasive Species, page 61
 > "Individuals are reminded that when they take livestock into the wilderness, they should purchase locally grown feed that is known to be invasive plant-free or use pelletized and processed feed."
 >
@@ -528,6 +721,7 @@ checked: 2026-10-04
 - Kaska land guardians: Daylu Lands and Resources, 250 779 3161 extension 0; Dease River First Nation, 250 239 3646 (99%).
 - Camelids such as llamas may not be used to hunt in Region 7B (99%, page 12).
 - Page 60 asks hunters to use all parts of harvested wildlife and join wildlife health sampling (99%).
+```
 
 > [!rule]
 > In the Peace, a quarter section line can change the legal elk. Know whether you stand inside the farm area or out.
@@ -542,8 +736,12 @@ checked: 2026-10-04
 
 ## Sources
 
+- Every source, page and date checked: tap below.
+
+```more every source, page and date checked
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf), printed pages 60 to 65 (PDF pages 62 to 67), every season row read from 150 dpi page images and confirmed against the page text. Also pages 2, 3, 4, 5, 10, 12, 14 and 16. Checked 2026-10-04 (99%).
 - Lines marked "my reading" are this app's interpretation, 80 to 95%. Map label readings are 90%.
+```
 
 ```quiz
 [

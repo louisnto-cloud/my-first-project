@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 308" role="img" aria-label="Four cards for the Region 7A closure symbols. Star: Motor Vehicle Closed Area, no motor vehicle for any purpose. Triangle: Motor Vehicles for Hunting Closed Area, no motor vehicle or electric bicycle to hunt or to carry hunters, gear, firearms or game. Diamond: ATVs for Hunting Closed Area, including motorcycles and electric bicycles. Dot: Snowmobiles for Hunting Closed Area." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="308" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 344" role="img" aria-label="Four cards for the Region 7A closure symbols. Star: Motor Vehicle Closed Area, no motor vehicle for any purpose. Triangle: Motor Vehicles for Hunting Closed Area, no motor vehicle or electric bicycle to hunt or to carry hunters, gear, firearms or game. Diamond: ATVs for Hunting Closed Area, including motorcycles and electric bicycles. Dot: Snowmobiles for Hunting Closed Area." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="344" fill="#fffaf0"/>
 <text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">How to read the closure symbols</text>
 <rect x="6" y="40" width="190" height="132" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
 <path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#4a7fb0"/>
@@ -18,15 +18,17 @@
 <text x="250" y="124" font-size="14" fill="#23261f" text-anchor="start">bike to hunt or</text>
 <text x="250" y="142" font-size="14" fill="#23261f" text-anchor="start">haul hunters,</text>
 <text x="250" y="160" font-size="14" fill="#23261f" text-anchor="start">gear, game</text>
-<rect x="6" y="180" width="190" height="114" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<rect x="6" y="180" width="190" height="150" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
 <path d="M6 190 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#4a7fb0"/>
 <text x="101" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">◆ ATVs for Hunting</text>
 <rect x="18.0" y="247" width="24" height="8" rx="2" fill="#2f3a2b"/><line x1="36.0" y1="247" x2="39.0" y2="241" stroke="#2f3a2b" stroke-width="2.5"/><circle cx="21.0" cy="259" r="5" fill="#2f3a2b"/><circle cx="39.0" cy="259" r="5" fill="#2f3a2b"/>
 <circle cx="30.0" cy="254" r="18" fill="none" stroke="#c92a2a" stroke-width="3"/><line x1="17.0" y1="267" x2="43.0" y2="241" stroke="#c92a2a" stroke-width="3"/>
-<text x="52" y="246" font-size="14" fill="#23261f" text-anchor="start">No ATV, motorcycle</text>
-<text x="52" y="264" font-size="14" fill="#23261f" text-anchor="start">or e bike to hunt</text>
-<text x="52" y="282" font-size="14" fill="#23261f" text-anchor="start">or haul</text>
-<rect x="204" y="180" width="190" height="114" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<text x="52" y="246" font-size="14" fill="#23261f" text-anchor="start">No all terrain</text>
+<text x="52" y="264" font-size="14" fill="#23261f" text-anchor="start">vehicle (ATV),</text>
+<text x="52" y="282" font-size="14" fill="#23261f" text-anchor="start">motorcycle or e</text>
+<text x="52" y="300" font-size="14" fill="#23261f" text-anchor="start">bike to hunt or</text>
+<text x="52" y="318" font-size="14" fill="#23261f" text-anchor="start">haul</text>
+<rect x="204" y="180" width="190" height="150" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
 <path d="M204 190 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#4a7fb0"/>
 <text x="299" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">● Snowmobiles for</text>
 <text x="299" y="216" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Hunting</text>

@@ -9,13 +9,27 @@ checked: 2026-10-02
 > [!why]
 > Memory lies by Christmas. A journal turns ten trips into one lesson you can use next year.
 
+```diagram lc-jr-export
+```
+
+- Seven fields, every trip, even blank days. Five minutes in the truck (Tip).
+- CSV (comma separated values) export is your backup (95%).
+
+```more how the app journal works
 - The app journal has seven fields. Fill every one, after every trip, even the blank days.
 - It takes five minutes in the truck before you drive home (Tip).
 - Your journal lives only on your phone, in local storage. Use **Export CSV** after each trip as a backup (95%, how this app is built).
 - CSV (comma separated values) opens in any spreadsheet app.
+```
 
 ## The seven fields
 
+```diagram lc-jr-fields
+```
+
+- Place: MU (Management Unit) plus your own pin name. No landowner names (Tip).
+
+```more what to write in each field
 | Field | What to write (Tip) |
 |---|---|
 | Date | Pick it. One entry per day, not per trip |
@@ -25,27 +39,51 @@ checked: 2026-10-02
 | What you saw | Every animal: species, sex, number, time, where, what it was doing |
 | Shots and result | Shots fired, distance, hit or miss, recovered or not. "No shots" is an answer |
 | One lesson | One thing to repeat or one thing to fix. One, not five |
+```
 
 ## Writing good entries
 
+```diagram lc-jr-good-bad
+```
+
+```anim lc-jr-wind A west wind blows from the west.
+```
+
+- Times beat feelings. Blank days are data (Tip).
+
+```more the full list
 - Times beat feelings. "7:40 am, 3 does feeding, south bench" beats "saw some deer early" (Tip).
 - Write the wind as where it came **from**: "west wind" blows from the west (90%, standard weather usage).
 - Write the distance you measured, not the distance you guessed (Tip). A rangefinder number or a map measure.
 - Log people too: other hunters, trucks at the gate, shots heard. That is hunting pressure (Tip).
 - Blank days are data. Where deer are not is half the map (Tip).
 - Keep your licences and records until the meat is eaten. The law needs the documents, and the journal tells you where they are (99%, synopsis page 7).
+```
 
 ## Review it each season
 
+```diagram lc-jr-review
+```
+
+- Mandatory Hunter Report: elk, moose or caribou licence buyers, by 31 March (99%).
+
+```more the six reviews in full
 1. **After every trip:** read the last entry before you plan the next one (Tip).
 2. **End of November:** list every spot and count deer seen per hour hunted (Tip).
 3. **January:** read the whole season with your brother. Pick the three best spots and the three dead ones (Tip).
 4. **January also:** the Hunter Sample Questionnaire is mailed to many licence holders. Your journal makes it easy to answer (99%, synopsis page 16).
 5. **By 31 March:** anyone who bought an elk, moose or caribou species licence must file the [[Mandatory Hunter Report]] (99%, synopsis page 16). Your journal has the days and areas.
 6. **August:** read last year's lessons before you scout. Turn each one into a checklist item (Tip).
+```
 
 ## Example 1: a blank morning
 
+```diagram lc-jr-page1
+```
+
+- No deer worth a shot, and still a lesson worth writing (Tip).
+
+```more the example as text
 > [!tip]
 > **Example only, not a real hunt.**
 > - Date: a mid October Saturday
@@ -55,9 +93,16 @@ checked: 2026-10-02
 > - What you saw: 6:58 am, 2 does and a fawn feeding on the bench edge. 7:25 am, they walked into timber. No bucks. One truck at the gate.
 > - Shots and result: no shots
 > - One lesson: the wind swung by 9. Leave the knob by 8:45 next time or use spot B.
+```
 
 ## Example 2: a miss
 
+```diagram lc-jr-page2
+```
+
+- A miss written down is practice planned (Tip).
+
+```more the example as text
 > [!tip]
 > **Example only, not a real hunt.**
 > - Date: an early November weekday
@@ -67,6 +112,9 @@ checked: 2026-10-02
 > - What you saw: 4:10 pm, 1 buck at the timber edge, walking, never stopped
 > - Shots and result: 1 shot, ranged 210 m (230 yd), off hand, clean miss. Checked for hair and blood 30 minutes: none
 > - One lesson: no rest, moving deer. Practise sitting and kneeling shots, and wait for a stop or pass.
+```
+
+## Grandpa's rule and mistakes
 
 > [!rule]
 > Grandpa's rule (wisdom): Write it down tonight. Tomorrow you will remember a bigger buck and a shorter walk.

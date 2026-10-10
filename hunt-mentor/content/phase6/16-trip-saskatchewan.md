@@ -13,14 +13,28 @@ Study aid only. The official regulations are the law.
 
 ## Can a BC resident hunt here
 
+```diagram ld-trip-status
+```
+
+- White tails, bear, birds: no guide (85%).
+- Mule deer, moose, elk: assume no. VERIFY.
+
+```more your status in full
 - Yes. You are a **Canadian resident**: principal residence in Canada, citizen or 12 months resident (85%).
 - No guide or outfitter is needed for white tailed deer, black bear or game birds on Canadian resident licences (85%).
 - Big game licences come in "non guided" and "guided" versions. Guided costs more and comes through an outfitter (85%).
 - Mule deer, elk, moose and pronghorn: the Big Game Draw is for Saskatchewan residents. Your eligibility for those: VERIFY, assume no.
 - Your brother applies on his own HAL (Hunting, Angling and Trapping Licence) account. One account each.
+```
 
 ## Without a guide, or with one
 
+```diagram ld-sk-who
+```
+
+- Deer: draw first, then a $180 licence (85%).
+
+```more the full table
 | Animal | BC resident may hunt | What it takes |
 |---|---|---|
 | White tailed deer | Yes, no guide | Canadian Resident White tailed Deer Draw, then a $180 licence (85%) |
@@ -28,14 +42,22 @@ Study aid only. The official regulations are the law.
 | Ducks, geese, grouse, partridge | Yes, no guide | Canadian resident game bird licence $100, federal [[MGBHP]] (Migratory Game Bird Hunting Permit) for ducks and geese (85%) |
 | Coyote | Likely yes | Licence or exemption for Canadian residents: VERIFY |
 | Mule deer, moose, elk, pronghorn | Saskatchewan resident draw | VERIFY, likely not open to you |
+```
 
 ## Draw or over the counter
 
+```diagram ld-sk-otc
+```
+
+- For you, deer is a draw (85%).
+
+```more the draw wording, quoted
 - Official wording: "Canadian residents can enter the draw for a licence to hunt white tailed deer." (85%, quote shown without hyphens)
 - "Saskatchewan residents do not need to apply in the white tailed deer draw. They may purchase a regular white tailed deer licence beginning August 1." (85%, quote shown without hyphens)
 - So for you the deer licence is **draw**. For a Saskatchewan resident it is over the counter (85%).
 - Leftover Canadian resident deer licences after the draw: not found in the official previews. VERIFY on the draw page in June.
 - Black bear and game bird licences for Canadian residents: buy them in your HAL account, no draw (85%).
+```
 
 ## Licences, draws and fees
 
@@ -48,23 +70,37 @@ Study aid only. The official regulations are the law.
 | Guided big game licence (through an outfitter) | $240 (85%) | 2026-10-01 |
 | Draw application fee | VERIFY | 2026-10-01 |
 
+- Draw fee: VERIFY.
+
+```more the draw window and results
 - Draw window: May 1 to 4 pm on the last Thursday in May. No late or changed applications (85%).
 - Results in your HAL account in June. Successful hunters buy the licence from August 1 (85%).
 - The Canadian Resident White tailed Deer Draw Supplement lists zones and quotas each year (85%).
+```
 
 ## How to apply
 
+```diagram ld-sk-draw
+```
+
+- Set an alarm for May 1 (Tip).
+
+```more the 6 steps in full
 1. Open a HAL account on saskatchewan.ca. One per hunter (85%).
 2. Buy the Wildlife Habitat Certificate (85%).
 3. In May, enter the Canadian Resident White tailed Deer Draw and pick zones from the supplement (85%).
 4. In June, check results. From August 1, buy the deer licence if drawn (85%).
 5. Any time in season: buy the game bird licence, and the black bear licence for a spring or fall bear hunt (85%).
 6. Read the current Summary of Hunting Regulations for zone dates and the blaze orange rule (85%).
+```
 
 ## Best first trip for you
 
-> [!lean]
-> Enter the deer draw next May with your brother. If drawn, hunt white tailed deer in November with the Tikka .308, no guide, in a zone the supplement shows has quota. This year, go in October with the 12 gauge for ducks, geese and sharp tailed grouse on the $100 game bird licence to learn the ground.
+```diagram ld-trip-distance
+```
+
+```diagram ld-trip-cost
+```
 
 | Cost line | Estimate (CAD) | Note |
 |---|---|---|
@@ -74,16 +110,40 @@ Study aid only. The official regulations are the law.
 | Motel and food, 6 days, two people | $900 to $1,400 | Estimate |
 | Total bird trip, split two ways | $900 to $1,200 each | Estimate, opinion |
 
+- My lean: birds this October, deer draw next May.
+
+```more my lean in full and the land access note
+> [!lean]
+> Enter the deer draw next May with your brother. If drawn, hunt white tailed deer in November with the Tikka .308, no guide, in a zone the supplement shows has quota. This year, go in October with the 12 gauge for ducks, geese and sharp tailed grouse on the $100 game bird licence to learn the ground.
+
 - Many Saskatchewan deer hunters hunt private land with permission or Wildlife Habitat Protection lands. Ask the local office which is which: VERIFY.
+```
 
 ## Taking firearms there
 
+```diagram ld-no-border-gun
+```
+
+- No border. Vehicle and road rules: VERIFY.
+
+```more firearms in Saskatchewan in full
 - No border. Your [[PAL]] (Possession and Acquisition Licence) covers you (85%).
 - Federal RCMP (Royal Canadian Mounted Police) transport rules apply as at home (85%).
 - Saskatchewan has its own rules on loaded firearms in vehicles and on road allowances. Read the summary before the trip: VERIFY specifics.
+```
 
 ## Bringing meat, hides and antlers home
 
+```diagram ld-sk-meat
+```
+
+```diagram parts-home-bc
+```
+
+- CWD is widespread. Bone out within 80 km (85%).
+- BC: meat and cleaned parts only (99%).
+
+```more Saskatchewan export, CWD and BC import rules, quoted
 ### Saskatchewan's export rule
 - No general hunter export permit was found on saskatchewan.ca. Ask the Inquiry Centre, 1 800 567 4224 (85% that the number is official). Export permit need: VERIFY.
 - Saskatchewan's own advice to its hunters: bring back only low risk parts, "deboned meat, antlers, clean skull plate, hide, finished taxidermy products" with no spine or head attached (85%).
@@ -98,18 +158,26 @@ Study aid only. The official regulations are the law.
 - "To possess any part of a Cervidae (caribou, deer, elk, moose), that was killed outside of British Columbia, other than (1) the edible meat of the four quarters, loins, neck, and ribs, or (2) the hide, antlers, and skull plate if, before being brought into British Columbia, the part is cleaned in a manner that removes all tissue." (99%)
 - Item 51: no out of province cervid part or derivative, such as scents, may be used to hunt in BC (99%).
 
-```diagram parts-home-bc
-```
-
 - You drive home through Alberta. Alberta bans nothing you are carrying if the meat is boned out, but check its transport rules: VERIFY.
 - CFIA (Canadian Food Inspection Agency): no national border, no CFIA step. VERIFY only if shipping commercially.
+```
+
+```anim ld-meat-home Bone out at the kill. Only meat and a clean skull plate come home.
+```
 
 ## Blaze orange rules
 
+```diagram ld-orange-compare
+```
+
+- Big game with a rifle: vest required (85%).
+
+```more the orange wording, quoted
 - Official wording for big game with a rifle: hunters "must wear a vest (an outer garment that covers the torso) of scarlet, bright yellow, blaze orange or white or any combination of these colours." (85%)
 - A CSA (Canadian Standards Association) labelled class 2 vest or class 3 coveralls also count (85%).
 - Head covering: older rules required one. Current wording: VERIFY in the summary.
 - My lean: orange vest and orange toque for deer. Camouflage is fine for birds.
+```
 
 ## Before you go
 
@@ -122,6 +190,8 @@ Buy the game bird licence for the October trip
 Orange vest packed
 Bone out meat and clean the skull plate before leaving the zone
 ```
+
+## Grandpa's rule and common mistakes
 
 > [!rule]
 > Set a phone alarm for May 1. The deer draw is the one date that decides the whole year.

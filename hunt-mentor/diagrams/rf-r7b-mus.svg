@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 326" role="img" aria-label="Grid of the 27 Management Units in Region 7B, Peace: 7-19 to 7-22, 7-31 to 7-36 and 7-42 to 7-58." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="326" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Region 7B: 27 Management Units</text>
+<rect x="8" y="40" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="28" y="52" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">7-19 to 7-22</text>
+<rect x="8" y="64" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="38" y="84" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-19</text>
+<rect x="73" y="64" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="102" y="84" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-20</text>
+<rect x="138" y="64" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="168" y="84" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-21</text>
+<rect x="203" y="64" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="232" y="84" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-22</text>
+<rect x="8" y="110" width="14" height="14" rx="3" fill="#8a9a6b"/>
+<text x="28" y="122" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">7-31 to 7-36</text>
+<rect x="8" y="134" width="59" height="30" rx="6" fill="#8a9a6b"/>
+<text x="38" y="154" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-31</text>
+<rect x="73" y="134" width="59" height="30" rx="6" fill="#8a9a6b"/>
+<text x="102" y="154" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-32</text>
+<rect x="138" y="134" width="59" height="30" rx="6" fill="#8a9a6b"/>
+<text x="168" y="154" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-33</text>
+<rect x="203" y="134" width="59" height="30" rx="6" fill="#8a9a6b"/>
+<text x="232" y="154" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-34</text>
+<rect x="268" y="134" width="59" height="30" rx="6" fill="#8a9a6b"/>
+<text x="298" y="154" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-35</text>
+<rect x="333" y="134" width="59" height="30" rx="6" fill="#8a9a6b"/>
+<text x="362" y="154" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-36</text>
+<rect x="8" y="180" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="28" y="192" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">7-42 to 7-58</text>
+<rect x="8" y="204" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="38" y="224" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-42</text>
+<rect x="73" y="204" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="102" y="224" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-43</text>
+<rect x="138" y="204" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="168" y="224" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-44</text>
+<rect x="203" y="204" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="232" y="224" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-45</text>
+<rect x="268" y="204" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="298" y="224" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-46</text>
+<rect x="333" y="204" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="362" y="224" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-47</text>
+<rect x="8" y="240" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="38" y="260" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-48</text>
+<rect x="73" y="240" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="102" y="260" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-49</text>
+<rect x="138" y="240" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="168" y="260" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-50</text>
+<rect x="203" y="240" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="232" y="260" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-51</text>
+<rect x="268" y="240" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="298" y="260" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-52</text>
+<rect x="333" y="240" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="362" y="260" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-53</text>
+<rect x="8" y="276" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="38" y="296" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-54</text>
+<rect x="73" y="276" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="102" y="296" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-55</text>
+<rect x="138" y="276" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="168" y="296" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-56</text>
+<rect x="203" y="276" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="232" y="296" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-57</text>
+<rect x="268" y="276" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="298" y="296" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">7-58</text>
+</svg>

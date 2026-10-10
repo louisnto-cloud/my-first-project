@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Flowchart: after the kill, which paper? Cougar: compulsory inspection within 30 days, 4 days in Region 6. Lynx, bobcat or wolverine: a Compulsory Report within 30 days, for lynx in Regions 3, 6, 7A and 7B, bobcat in Regions 2 and 3, wolverine anywhere. Wolf or coyote in Region 3: no report; a wolf report is needed only in Regions 1 and 2. 98 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">After the kill: which paper?</text>
+<rect x="110" y="42" width="180" height="34" rx="8" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="64.2" font-size="15" fill="#fff" text-anchor="middle" font-weight="bold">What did you kill?</text>
+<line x1="150" y1="76" x2="78.5" y2="101.0" stroke="#2f3a2b" stroke-width="2.5"/><polygon points="70,104 80.1,105.7 76.9,96.4" fill="#2f3a2b"/>
+<line x1="200" y1="76" x2="200.0" y2="95.0" stroke="#2f3a2b" stroke-width="2.5"/><polygon points="200,104 204.9,95.0 195.1,95.0" fill="#2f3a2b"/>
+<line x1="250" y1="76" x2="321.5" y2="101.0" stroke="#2f3a2b" stroke-width="2.5"/><polygon points="330,104 323.1,96.4 319.9,105.7" fill="#2f3a2b"/>
+<rect x="10" y="104" width="125" height="40" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
+<text x="72.5" y="129.2" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Cougar</text>
+<rect x="140" y="104" width="120" height="40" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="120.5" font-size="13" fill="#23261f" text-anchor="middle" font-weight="bold">Lynx, bobcat,</text>
+<text x="200.0" y="136.5" font-size="13" fill="#23261f" text-anchor="middle" font-weight="bold">wolverine</text>
+<rect x="265" y="104" width="125" height="40" rx="8" fill="#e3eedc" stroke="#2f6b3a" stroke-width="2"/>
+<text x="327.5" y="120.5" font-size="13" fill="#23261f" text-anchor="middle" font-weight="bold">Wolf, coyote</text>
+<text x="327.5" y="136.5" font-size="13" fill="#23261f" text-anchor="middle" font-weight="bold">in Region 3</text>
+<line x1="72" y1="144" x2="72.0" y2="157.0" stroke="#2f3a2b" stroke-width="2.5"/><polygon points="72,166 77.0,157.0 67.0,157.0" fill="#2f3a2b"/>
+<line x1="200" y1="144" x2="200.0" y2="157.0" stroke="#2f3a2b" stroke-width="2.5"/><polygon points="200,166 204.9,157.0 195.1,157.0" fill="#2f3a2b"/>
+<line x1="328" y1="144" x2="328.0" y2="157.0" stroke="#2f3a2b" stroke-width="2.5"/><polygon points="328,166 332.9,157.0 323.1,157.0" fill="#2f3a2b"/>
+<rect x="10" y="166" width="125" height="96" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
+<text x="72.5" y="191.9" font-size="14" fill="#23261f" text-anchor="middle">Inspection</text>
+<text x="72.5" y="209.9" font-size="14" fill="#23261f" text-anchor="middle">within 30 days</text>
+<text x="72.5" y="227.9" font-size="14" fill="#23261f" text-anchor="middle">(Region 6:</text>
+<text x="72.5" y="245.9" font-size="14" fill="#23261f" text-anchor="middle">4 days)</text>
+<rect x="140" y="166" width="120" height="96" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="191.9" font-size="14" fill="#23261f" text-anchor="middle">Compulsory</text>
+<text x="200.0" y="209.9" font-size="14" fill="#23261f" text-anchor="middle">Report</text>
+<text x="200.0" y="227.9" font-size="14" fill="#23261f" text-anchor="middle">within</text>
+<text x="200.0" y="245.9" font-size="14" fill="#23261f" text-anchor="middle">30 days</text>
+<rect x="265" y="166" width="125" height="96" rx="8" fill="#e3eedc" stroke="#2f6b3a" stroke-width="2"/>
+<text x="327.5" y="191.9" font-size="14" fill="#23261f" text-anchor="middle">No report</text>
+<text x="327.5" y="209.9" font-size="14" fill="#23261f" text-anchor="middle">(wolf: report</text>
+<text x="327.5" y="227.9" font-size="14" fill="#23261f" text-anchor="middle">only in</text>
+<text x="327.5" y="245.9" font-size="14" fill="#23261f" text-anchor="middle">Regions 1, 2)</text>
+<text x="200" y="284" font-size="14" fill="#2f3a2b" text-anchor="middle">Lynx: Regions 3, 6, 7A, 7B. Bobcat: 2, 3 (98%).</text>
+</svg>

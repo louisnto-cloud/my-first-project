@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" role="img" aria-label="Bar chart of Region 7B white tailed deer seasons. Bucks in 7-19 to 7-22, 7-31 to 7-36, 7-42 to 7-50 and 7-54 to 7-58: 10 September to 30 November; youth only and bow only bucks 1 to 9 September. Antlerless, 10 to 31 October, and youth either sex, 1 to 30 November, only in 7-32 to 7-34 and the Map H12 parts of 7-20, 7-21, 7-35, 7-45 and 7-46. No white tail rows for 7-51 to 7-53." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="350" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">White tailed deer seasons</text>
+<rect x="14.0" y="40" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="40" width="30.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="40" width="30.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="40" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="40" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="40" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="76" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, most MUs</text>
+<rect x="86.4" y="82" width="83.6" height="20" rx="4" fill="#e8590c"/>
+<text x="174" y="97" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 10 to Nov 30</text>
+<text x="14" y="122" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Antlerless, Map H12 parts</text>
+<rect x="116.9" y="128" width="22.4" height="20" rx="4" fill="#6a4c93"/>
+<text x="143" y="143" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 10 to Oct 31</text>
+<text x="14" y="168" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Either sex, youth, Map H12 parts</text>
+<rect x="139.4" y="174" width="30.6" height="20" rx="4" fill="#4a7fb0"/>
+<text x="174" y="189" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Nov 1 to Nov 30</text>
+<text x="14" y="214" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, youth only, most MUs</text>
+<rect x="77.2" y="220" width="9.2" height="20" rx="4" fill="#4a7fb0"/>
+<text x="90" y="235" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 9</text>
+<text x="14" y="260" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, bow only, most MUs</text>
+<rect x="77.2" y="266" width="9.2" height="20" rx="4" fill="#8b5a2b"/>
+<text x="90" y="281" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 9</text>
+<rect x="14" y="302" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="314" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+<rect x="149.60000000000002" y="302" width="14" height="14" rx="3" fill="#6a4c93"/>
+<text x="168" y="314" font-size="14" fill="#23261f" text-anchor="start">Map H12 farm area parts</text>
+<rect x="14" y="324" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="32" y="336" font-size="14" fill="#23261f" text-anchor="start">Youth only (under 18)</text>
+<rect x="201.4" y="324" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="219" y="336" font-size="14" fill="#23261f" text-anchor="start">Bow only</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Top view of the sea duck setup, 60 percent, hunter consensus. A boat is anchored from the bow only, at the edge of a scoter flight line. Two or three long lines of black decoys trail out from it. Scoters swing in along the lines. Wear the PFD and take a cold water course first. Tip.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Long line decoys from an anchored boat</text>
+  <rect x="0" y="36" width="400" height="264" fill="#4a7fb0" opacity=".3"/>
+  <path d="M370 60 L300 60 M309.0 55.7 L300 60 L309.0 64.3" stroke="#2f3a2b" stroke-width="3" fill="none" stroke-linecap="round"/><text x="335.0" y="52" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Wind</text>
+  <g transform="translate(330 170)"><path d="M-24 -10 L24 -10 L32 0 L24 10 L-24 10Z" fill="#8a7a6a"/><circle cx="-6" r="5" fill="#e8590c"/><circle cx="10" r="5" fill="#e8590c"/></g>
+  <path d="M362 170 L392 150" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="386" y="126" font-size="12" fill="#2f3a2b" text-anchor="end">Anchor</text>
+  <text x="386" y="140" font-size="12" fill="#2f3a2b" text-anchor="end">bow only</text>
+  <path d="M300 150 L60 120" stroke="#2f3a2b" stroke-width="1" stroke-dasharray="2 3"/>
+  <g transform="translate(270 146.25) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(232 141.5) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(194 136.75) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(156 132.0) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(118 127.25) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(80 122.5) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <path d="M300 180 L60 162" stroke="#2f3a2b" stroke-width="1" stroke-dasharray="2 3"/>
+  <g transform="translate(270 177.75) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(232 174.9) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(194 172.05) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(156 169.2) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(118 166.35) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(80 163.5) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <path d="M300 210 L60 204" stroke="#2f3a2b" stroke-width="1" stroke-dasharray="2 3"/>
+  <g transform="translate(270 209.25) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(232 208.3) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(194 207.35) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(156 206.4) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(118 205.45) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(80 204.5) scale(0.3)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(80 80) scale(0.6)"><ellipse rx="18" ry="5" fill="#2f3a2b"/><circle cx="18" cy="-1" r="4.5" fill="#2f3a2b"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#2f3a2b"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#2f3a2b"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#2f3a2b"/></g>
+  <g transform="translate(110 70) scale(0.6)"><ellipse rx="18" ry="5" fill="#2f3a2b"/><circle cx="18" cy="-1" r="4.5" fill="#2f3a2b"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#2f3a2b"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#2f3a2b"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#2f3a2b"/></g>
+  <path d="M130 86 L210 120 M200.0 120.5 L210 120 L203.4 112.5" stroke="#2f3a2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="200" y="260" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Scoters swing in along the lines (60%)</text>
+  <text x="200" y="282" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">PFD on. Cold water course first (Tip)</text>
+</svg>

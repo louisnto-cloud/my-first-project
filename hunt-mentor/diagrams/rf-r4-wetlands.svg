@@ -3,7 +3,7 @@
 <text x="200" y="26" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">Columbia Wetlands Wildlife Management Area</text>
 <rect x="6" y="40" width="190" height="96" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
 <path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
-<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Over 10 hp</text>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Over 10 horsepower</text>
 <path d="M14.0 96 h32 l-6 8 h-20 z" fill="#8b5a2b"/><rect x="40.0" y="88" width="6" height="9" fill="#2f3a2b"/><path d="M12.0 108 q6 -4 12 0 t12 0 t12 0" fill="none" stroke="#4a7fb0" stroke-width="2"/>
 <circle cx="30.0" cy="96" r="18" fill="none" stroke="#c92a2a" stroke-width="3"/><line x1="17.0" y1="109" x2="43.0" y2="83" stroke="#c92a2a" stroke-width="3"/>
 <text x="52" y="88" font-size="14" fill="#23261f" text-anchor="start">Nothing with a</text>

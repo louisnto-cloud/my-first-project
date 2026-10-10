@@ -9,26 +9,49 @@ checked: 2026-10-01
 > [!why]
 > These are the two "someday" animals of BC. Both are draw only, both live far from Heffley Creek, and both come with rules that trip up good hunters.
 
+```diagram sc-cb-status
+```
+
+- Caribou: every hunt is a LEH (Limited Entry Hunting) draw (98%).
+- Bison: a short season in parts of three Peace MUs (Management Units), plus draws (98%).
+
+```more the key points
 - **Caribou:** BC's herds fell from about 40,000 to about 17,000; recovery work has them near 19,000 (95%).
 - Every caribou hunt in BC is LEH (Limited Entry Hunting). The regional tables say "LIMITED ENTRY HUNTING ONLY" (98%).
 - **Bison:** one wild plains bison herd at Pink Mountain and three small wood bison herds in the northeast (85%).
 - Bison have a short general open season in parts of three Peace MUs (Management Units), plus LEH shared hunts (98%).
 - Both need Mandatory Hunter Reporting or Compulsory Inspection, and special gear rules apply to bison (98%).
+```
 
 ## Caribou: identify
 
 ```photo caribou-bull
 ```
 
+```diagram sc-caribou-id
+```
+
+- Both sexes grow antlers. Antlers alone never make it a bull (85%).
+- Most northern draws are for a 5 point bull (98%).
+
+```more every identification clue and the 5 point rule
 - A medium sized deer family animal with a white neck mane, big concave hooves and a rich brown or grey coat (85%).
 - **Both sexes grow antlers.** Only in caribou do females carry antlers (85%). A small antlered animal may be a cow.
 - Bulls: a big rack of amber antlers, a shovel over the face, shed in November or December (85%).
 - Cows keep antlers into winter, so late season "antlered" is not "bull" (85%).
 - **5 point bull** in law: one antler bears at least 5 tines, including the tip of the main beam above the rear point; if the rear point is missing, the first rear facing point is used as the rear point (98%).
 - Most northern LEH hunts are for "5 pt Bull"; some Cariboo hunts are "Bull" meaning any bull regardless of antlers (98%).
+```
 
 ## Caribou: status and where
 
+```diagram sc-caribou-numbers
+```
+
+- Draws in Regions 5, 6, 7A and 7B. None in Region 3 (98%).
+- Seen one? Shut off the quad and let it pass (95%).
+
+```more status, draw areas and odds
 - Southern Mountain and Boreal caribou are listed as "Threatened" under the federal Species at Risk Act; Northern Mountain caribou are "Special Concern" and many northern herds are abundant (95%).
 - Region 3 has **no caribou season** and about a million hectares of Crown land closed to snowmobiles for mountain caribou recovery (98%).
 - LEH caribou hunts in 2026: Cariboo Region 5 (MUs 5-01 to 5-03 and 5-15), Skeena Region 6 (Spatsizi, Level, Horseranch, Little Rancheria, Atlin and more), Omineca 7A (7-37, 7-39 to 7-41), Peace 7B (7-50 to 7-54), Aug 15 to Oct 15 in the north (98%).
@@ -38,12 +61,19 @@ checked: 2026-10-01
 
 > [!tip]
 > If you see caribou while hunting anything else, shut off the quad and let them pass. Disturbance in winter costs them energy they cannot spare (95%).
+```
 
 ## Caribou: legal specifics
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram sc-caribou-paper
+```
+
+- Report by March 31 even if you never hunted (98%).
+
+```more every caribou rule
 - Species licence: $20.00 resident (98%). Not valid until 2 days after issue (90%).
 - Provincial bag limit: 1 (98%).
 - Weapons: centrefire rifle, bow A, C or D. No rimfire, no shotgun, no air gun (98%).
@@ -53,63 +83,109 @@ checked: 2026-10-01
 - Evidence of sex for transport: the tail or a piece of hide at least 6 cm square, plus a testicle or part of the penis, or part of the udder (98%).
 - CWD (Chronic Wasting Disease) rule: no parts of deer, elk, moose or caribou killed outside BC may come in except clean meat and cleaned hide, antlers and skull plate (98%).
 - Hunting caribou is prohibited in parts of MUs 7-39 and 7-40 (Map G25) (98%).
+```
 
 ## Bison: identify and status
 
-```photo wood-bison
+```gallery
+wood-bison | Wood bison: taller hump, darker coat.
+plains-bison-bulls | Plains bison bulls: shaggy front end.
 ```
 
+```diagram sc-bison-id
+```
+
+- Strays near Kamloops are not a hunt. Report them (98%).
+
+```more size, herds and the report line
 - Massive forequarters, a hump, a bearded head and short black horns; bulls weigh about 550 to 900 kg, cows 320 to 545 kg (85%).
 - **Wood bison:** slightly larger and darker than plains bison, with a taller hump and shorter hair on the front end (85%). Listed Threatened under the federal Species at Risk Act (85%).
-
-```photo plains-bison-bulls
-```
-
 - **Plains bison:** about 50 escaped near Halfway River in 1971 and grew into the Pink Mountain herd of over 1,000 (85%).
 - Wood bison herds in BC: Nordquist (Liard River), Nahanni and Etthithun; Etthithun was estimated near 400 in 2020 to 2021 (80%).
 - Highway collisions along the Alaska Highway kill bison every year (85%).
 - Region 3 asks hunters to report any bison on public land to RAPP 1 877 952 7277 (98%). Those are strays, not a herd you may hunt.
+```
 
 ## Bison: where and seasons
 
+```diagram sc-cb-seasons
+```
+
+- General: Sept 1 to Jan 31, parts of MUs 7-42, 7-57, 7-58, Map H25 (98%).
+- Draws: groups of up to 4 may apply together (98%).
+
+```more every season detail and odds
 - **General open season (Region 7B):** either sex, Sept 1 to Jan 31, bag limit 1, restricted to portions of MUs 7-42, 7-57 and 7-58 shown on Map H25 (98%).
 - **LEH (Liard):** either sex, two week windows from Oct 1 to Jan 31 in zones of 7-42, 7-57 and 7-58; single applicants or shared groups of up to 4 (98%).
 - 2025 LEH odds ran from 72 to 1 up to about 494 to 1 (95%).
 - The LEH synopsis warns: "BISON AUTHORIZATIONS ARE CURRENTLY UNDER REVIEW AND SUBJECT TO CHANGE." (98%)
 - Snow machines are often needed for November and December access (98%).
+```
 
 ## Bison: legal specifics
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram sc-bison-rifle
+```
+
+- 175 grain or heavier, and 2,712 joules left at 100 m (98%).
+
+```more every bison rule
 - Species licence: $70.00 resident (98%). Provincial bag limit: 1 (98%).
 - **Rifle rule:** the bullet must be 175 grain or heavier and still carry 2,712 joules (2,000 ft lb) at 100 m (98%). Your .308 with 165 grain loads does **not** qualify (Tip, check the box).
 - No rimfire, no shotgun, no air gun (98%). Bow E only: at least 22.6 kg pull, arrow over 26 g, broadhead over 8.1 g and 2.2 cm wide (98%).
 - Shared hunt: any member may kill the authorized animal; everyone carries the Harvest Report (98%).
 - Evidence of sex: a testicle or part of the penis, or part of the udder or teats (98%).
 - The LEH synopsis reminds you that you must make every reasonable effort to retrieve a wounded bison; "this is particularly important with Bison" (98%).
+```
 
 ## Tactics: brief
 
+```anim sc-bison-shot Pick one bison standing alone, with nothing behind it.
+```
+
+- Within 100 m, broadside, and stay ready after the shot (Tip).
+
+```more caribou and bison tactics
 - Caribou: glass ridge tops and lichen flats, then move in across open ground with the wind; they are curious but drift fast (Tip).
 - Bison: find the herd, pick a single animal with a clear backstop, get within 100 m, wait for broadside (Tip).
 - A bison shot in the lungs may stand for a minute. Reload, stay ready, do not approach until it is down and still (Tip).
 - Bring help: a bison is 4 to 6 pack loads of meat and must not be wasted (Tip).
+```
 
 ## Shot placement (brief)
 
+```diagram sc-bison-vitals
+```
+
+- Caribou: behind the shoulder, one third up (75%).
+- Bison: lower and farther forward than the hump suggests (Tip).
+
+```more where to aim
 - Caribou: heart and lungs behind the shoulder, one third up, broadside (75%).
 - Bison: the lungs sit lower and farther forward than the hump suggests; aim behind the front leg, low third, broadside (Tip).
 - No head or neck shots; the skull and hump absorb bullets (Tip).
+```
 
 ## Meat and care
 
+```diagram rb-edible
+```
+
+- Take the neck, ribs, four quarters and loins (98%).
+
+```more meat care
 - Caribou meat spoils fast in the warm August season; skin, quarter and hang in shade or cool water the same day (Tip).
 - Bison yields several hundred kilograms of beef like meat; arrange a meat cutter before the hunt (Tip).
 - Edible portions must be removed: neck, ribs, four quarters and loins (98%).
+```
 
 ## Beginner mistakes
+
+```diagram sc-bison-rifle
+```
 
 > [!mistake]
 > - Counting a cow caribou as a bull because it has antlers.
@@ -117,6 +193,9 @@ checked: 2026-10-01
 > - Forgetting the Mandatory Hunter Report by March 31 and losing next year's licence options.
 
 ## Grandpa's rules
+
+```photo plains-bison-bulls
+```
 
 > [!rule]
 > Draw animals are earned in June on the computer, not in September on the mountain. Apply every year.

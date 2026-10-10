@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Turkey safety in four cards, Tip. Never wear red, white or blue: those are a tom&#x27;s head colours. Sit with your back against a tree wider than your shoulders. Never stalk a gobble: it may be another hunter calling. Wrap a dead bird in blaze orange to carry it out.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Turkey safety (Tip)</text>
+  <rect x="6" y="36" width="190" height="124" rx="8" fill="#dfe6d3" stroke="#c0392b" stroke-width="2"/>
+  <rect x="56" y="54" width="26" height="20" fill="#c0392b"/><rect x="86" y="54" width="26" height="20" fill="#fff" stroke="#2f3a2b"/><rect x="116" y="54" width="26" height="20" fill="#4a7fb0"/><path d="M88 50 l24.0 24.0 M112.0 50 l-24.0 24.0" stroke="#c0392b" stroke-width="5"/>
+  <text x="101" y="120" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">No red, white, blue</text>
+  <text x="101" y="138" font-size="13" fill="#2f3a2b" text-anchor="middle">A tom&#x27;s head</text>
+  <text x="101" y="154" font-size="13" fill="#2f3a2b" text-anchor="middle">colours</text>
+  <rect x="204" y="36" width="190" height="124" rx="8" fill="#dfe6d3" stroke="#2f6e3b" stroke-width="2"/>
+  <circle cx="299" cy="72" r="26" fill="#2f3a2b"/><g transform="translate(299 104) scale(1.0)"><circle r="9" fill="#e8590c"/></g>
+  <text x="299" y="120" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Back to a wide tree</text>
+  <text x="299" y="138" font-size="13" fill="#2f3a2b" text-anchor="middle">Wider than your</text>
+  <text x="299" y="154" font-size="13" fill="#2f3a2b" text-anchor="middle">shoulders</text>
+  <rect x="6" y="166" width="190" height="124" rx="8" fill="#dfe6d3" stroke="#c0392b" stroke-width="2"/>
+  <path d="M60 200 q30 -30 60 0" stroke="#2f3a2b" stroke-width="3" fill="none"/><text x="100" y="196" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">gobble?</text><path d="M130 180 l20 20 M150 180 l-20 20" stroke="#c0392b" stroke-width="5"/>
+  <text x="101" y="250" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">Never stalk a gobble</text>
+  <text x="101" y="268" font-size="13" fill="#2f3a2b" text-anchor="middle">It may be another</text>
+  <text x="101" y="284" font-size="13" fill="#2f3a2b" text-anchor="middle">hunter calling</text>
+  <rect x="204" y="166" width="190" height="124" rx="8" fill="#dfe6d3" stroke="#2f6e3b" stroke-width="2"/>
+  <rect x="272" y="182" width="56" height="40" rx="8" fill="#e8590c"/>
+  <text x="299" y="250" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Blaze orange bag</text>
+  <text x="299" y="268" font-size="13" fill="#2f3a2b" text-anchor="middle">Wrap the bird</text>
+  <text x="299" y="284" font-size="13" fill="#2f3a2b" text-anchor="middle">to carry it out</text>
+</svg>

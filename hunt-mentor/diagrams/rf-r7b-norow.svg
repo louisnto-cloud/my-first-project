@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 348" role="img" aria-label="Chips of animals with no row in the Region 7B season table, so no general open season by this app&#x27;s reading: caribou, bobcat, raccoon, Columbian ground squirrel, pheasant, partridge, dove, band tailed pigeon, turkey and quail." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="348" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">No row in Region 7B</text>
+<rect x="8" y="40" width="14" height="14" rx="3" fill="#6b6f66"/>
+<text x="28" y="52" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">No general open season (95%, my reading)</text>
+<rect x="8" y="64" width="189" height="48" rx="6" fill="#6b6f66"/>
+<text x="102" y="93" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Caribou</text>
+<rect x="203" y="64" width="189" height="48" rx="6" fill="#6b6f66"/>
+<text x="298" y="93" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Bobcat</text>
+<rect x="8" y="118" width="189" height="48" rx="6" fill="#6b6f66"/>
+<text x="102" y="147" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Raccoon</text>
+<rect x="203" y="118" width="189" height="48" rx="6" fill="#6b6f66"/>
+<text x="298" y="138" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Columbian ground</text>
+<text x="298" y="156" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">squirrel</text>
+<rect x="8" y="172" width="189" height="48" rx="6" fill="#6b6f66"/>
+<text x="102" y="201" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Pheasant</text>
+<rect x="203" y="172" width="189" height="48" rx="6" fill="#6b6f66"/>
+<text x="298" y="201" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Partridge</text>
+<rect x="8" y="226" width="189" height="48" rx="6" fill="#6b6f66"/>
+<text x="102" y="255" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Dove</text>
+<rect x="203" y="226" width="189" height="48" rx="6" fill="#6b6f66"/>
+<text x="298" y="255" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Band tailed pigeon</text>
+<rect x="8" y="280" width="189" height="48" rx="6" fill="#6b6f66"/>
+<text x="102" y="309" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Turkey</text>
+<rect x="203" y="280" width="189" height="48" rx="6" fill="#6b6f66"/>
+<text x="298" y="309" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Quail</text>
+</svg>

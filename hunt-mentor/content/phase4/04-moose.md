@@ -9,6 +9,13 @@ checked: 2026-10-01
 > [!why]
 > A moose is the most meat you will ever carry out of the bush, and the easiest animal to break the law on. The antler rule decides everything.
 
+```photo g-moose-bull-side
+```
+
+- Region 3: **spike fork bulls only** (98%).
+- Every licence holder reports by 31 March (98%).
+
+```more what this session covers
 - Moose are the biggest member of the deer family. A big bull in most of Canada can weigh up to 600 kg (search preview) (80%).
 - Region 3 general open season: **spike fork bulls only**. Cows, calves and bigger bulls are closed unless you hold an [[LEH]] (Limited Entry Hunting) authorization (98%).
 - Dates depend on your [[MU]] (Management Unit). The three Region 3 blocks run 20 September to 31 October, 15 October to 15 November, and 1 to 15 November (98%).
@@ -16,9 +23,24 @@ checked: 2026-10-01
 - The antlers must travel with the species licence (98%).
 - Your .308 Winchester can do it at modest range with heavy premium bullets (Tip).
 - Hunt moose with your brother. One person cannot pack a moose out alone in a day (Tip).
+```
 
 ## Identify: bull, cow, calf
 
+```gallery
+g-moose-bull-front | Bull: wide palm antlers.
+g-moose-young-bull | Young bull: spike or small fork. Count.
+g-moose-cow-head | Cow: no antlers. Both sexes have a bell.
+g-moose-calf-winter | Calf: small body, stubby face.
+```
+
+```diagram sa-moose-family
+```
+
+> [!warn]
+> An antlerless moose in Region 3 is closed to you without an LEH draw. Cow or calf, it does not matter. No antlers, no shot.
+
+```more the full ID list
 - **Bull:** antlers. By late August or early September the velvet is off and the antlers are hard (search preview) (75%).
 - **Young bull:** a spike or a small fork on each side. This is the legal class in Region 3 (Tip).
 - **Cow:** no antlers, about 1.8 m at the shoulder, 340 to 420 kg (synopsis definition, page 3) (98%).
@@ -26,15 +48,20 @@ checked: 2026-10-01
 - Synopsis warning: "not all moose in the accompaniment of a larger moose are necessarily calves. Be sure of your target" (98%).
 - **Bell:** the flap of skin under the throat. Both sexes have one, so it does not prove a bull (65%).
 - Mature bulls usually drop antlers in November. Some young bulls keep theirs until April (search preview) (75%).
-
-> [!warn]
-> An antlerless moose in Region 3 is closed to you without an LEH draw. Cow or calf, it does not matter. No antlers, no shot.
+```
 
 ## The antler classes
+
+```diagram sa-spikefork-test
+```
+
+- Spike fork: no more than 2 tines on one antler (98%).
+- Region 3 and Region 8 use this class only (98%).
 
 ```diagram moose-antlers
 ```
 
+```more the synopsis definitions
 Synopsis definitions, pages 3 and 4 (98%):
 - **Spike fork bull:** "a bull moose having no more than two tines (points) on one antler. (Includes tines on main antler and brow palms.) Does not include a calf."
 - **Tripalm bull:** "at least one antler with a brow palm bearing three or more tines (points)." The brow palm is split from the main palm by the deepest bay.
@@ -45,52 +72,99 @@ Synopsis definitions, pages 3 and 4 (98%):
 
 > [!tip]
 > The test is on one antler. Read literally, a bull with 2 points on one side and 3 on the other fits the spike fork definition (interpretation) (85%). My lean: if you are counting that closely, let it walk.
+```
+
+```diagram rb-tine
+```
 
 ## Where moose live: BC and near Heffley Creek
 
+```diagram sa-moose-where
+```
+
+```gallery
+hab-moose-willows | Willow browse: a moose kitchen.
+hab-wells-gray-cutblock | Young cutblock: browse and edges.
+```
+
+- Wetlands, willow flats, young cutblocks (Tip).
+- Your MU (Management Unit): VERIFY on the map.
+
+```more numbers, closures and local reading
 - Moose live across most of the BC Interior. Region 3 estimate: 7,000 to 9,000, stable (2022 provincial estimates, search preview) (80%).
 - Local reading (Tip): North Thompson wetlands, willow flats and young cutblocks toward Barriere and Clearwater; lake edges and subalpine basins in early fall.
 - Wells Gray Park is MU 3-45. Hunting and the discharge of firearms are prohibited there (page 33) (98%).
 - Region 3 bans all motor vehicles except snowmobiles above 1,700 m, except on existing roads and trails (page 33) (98%).
 - Moose use young cutblocks and burns for browse, and old conifer stands for shelter in deep snow (70%).
 - Season blocks by MU are in the Legal screen. Your MU: VERIFY on the official map.
+```
 
 ## A day in the life: October
 
+```anim sa-moose-day Feed at dawn, bed at midday, feed at dusk.
+```
+
+- Most active at dawn and dusk (75%).
+- Rut peak: late September to early October (65%).
+
+> [!field]
+> Glass a willow flat or a wetland edge at first light. Look for a dark shape and the flash of a pale antler palm.
+
+```more daily detail
 - Moose are active in daylight, most of all at dawn and dusk (search preview) (75%).
 - Midday: bedded in shade or thick cover, often close to the feeding area (Tip).
 - Late September to early October is the [[Rut]] peak. Bulls travel, grunt and answer cow calls (65%).
 - By mid to late October the rut is winding down. Bulls feed hard to recover weight (Tip).
 - Legal hunting hours: from 1 hour before sunrise to 1 hour after sunset (page 11) (98%).
 - Cold mornings after the first frosts keep moose on their feet longer (hunter lore) (60%).
-
-> [!field]
-> Glass a willow flat or a wetland edge at first light. Look for a dark shape and the flash of a pale antler palm.
+```
 
 ## Senses
 
+```diagram sa-moose-senses
+```
+
+- Keep a tree between you and a close moose (Tip).
+
+```more senses detail
 - **Eyes:** poor. Moose see motion but not detail (70%).
 - **Ears:** very good. The big ears swivel and pick up a snapped twig far away (70%).
 - **Nose:** excellent. Wind at your back ends the stalk (70%).
 - A moose often stands and stares instead of running. Do not read that as "it has not seen me" (hunter lore) (60%).
 - A rutting bull or a cow with a calf can charge. Keep a tree between you and a close moose (Tip).
+```
 
 ## Yearly pattern
 
+```diagram sa-moose-year
+```
+
+- Rut: late September to mid October (65%).
+- Antlers drop: November (75%).
+
+```more the year in detail
 - **Late May to June:** calves born, 11 to 16 kg if single, about 6 kg each as twins (search preview) (75%).
 - **Summer:** feeding on leaves and water plants, 25 to 30 kg of forage a day (search preview) (75%).
 - **Late August to early September:** velvet rubbed off (75%).
 - **Late September to mid October:** rut. Bulls with cows, wallows, grunting (65%).
 - **November:** mature bulls drop antlers (75%). Region 3 seasons end 15 November at the latest (98%).
 - **Winter:** 15 to 20 kg of twigs a day. Deep snow pushes them to willow bottoms and old forest (75%).
+```
 
 ## Food, water and cover
 
-- A browser. Winter diet is almost all twigs and shrubs: willow, red osier dogwood, birch, aspen, poplar (search preview) (75%).
-- Summer: leaves, shrubs and water plants. They dive for pond weeds (75%).
-- Water: strong swimmers from days old. Lakes and wetlands are feeding spots, not just drinking spots (75%).
-- Cover: dense young forest to hide, old conifer for shade and snow shelter (70%).
-- October menu: last leaves on willow and dogwood, then twigs (Tip).
+```gallery
+hab-willow-shrub | Willow: the top moose browse.
+hab-dogwood-stems | Red osier dogwood.
+hab-pondweed | Pondweed: moose dive for it.
+hab-aspen-grove-snow | Aspen: winter twigs.
+```
+
+| Need | What |
+|---|---|
+| Food | Willow, dogwood, birch, aspen twigs (75%) |
+| Water | Lakes and wetlands are kitchens (75%) |
+| Cover | Young forest to hide, old conifer in snow (70%) |
 
 > [!tip]
 > Find a willow flat with chest high broken tips and big tracks in the mud. That is a moose kitchen.
@@ -99,17 +173,60 @@ Synopsis definitions, pages 3 and 4 (98%):
 commons-moose-bull | A bull moose browsing: moose eat twigs and leaves, not grass.
 ```
 
+```more food detail
+- A browser. Winter diet is almost all twigs and shrubs: willow, red osier dogwood, birch, aspen, poplar (search preview) (75%).
+- Summer: leaves, shrubs and water plants. They dive for pond weeds (75%).
+- Water: strong swimmers from days old. Lakes and wetlands are feeding spots, not just drinking spots (75%).
+- Cover: dense young forest to hide, old conifer for shade and snow shelter (70%).
+- October menu: last leaves on willow and dogwood, then twigs (Tip).
+```
+
 ## Tracks and sign
 
+```diagram sg-hoof-grid
+```
+
+```gallery
+hab-moose-tracks-mud | Moose tracks: long pointed toes.
+hab-moose-trail-snow | A moose trail ploughed through snow.
+```
+
+- Track: a huge deer print, 13 to 18 cm (65%).
+- Browse snapped at chest to head height (Tip).
+
+```diagram sg-scat-hoofed
+```
+
+```more sign detail
 - Track: heart shaped like a huge deer print, about 13 to 18 cm long (65%).
 - Pellets: oval, about 2 to 4 cm, in piles in fall and winter; soft clumps in summer (65%).
 - [[Browse]]: willow and dogwood tips snapped off at chest to head height (Tip).
 - Rut sign: rubs on larger saplings, and wallows (pawed pits a bull urinates in) (65%).
 - Beds: a big flattened oval, often on a knoll or in shade (Tip).
 - Fresh sign: wet shiny pellets, sharp edged tracks, sap on broken twigs (Tip).
+```
 
 ## Tactics: options
 
+```diagram sa-call-setup
+```
+
+```video
+yt-moose-calling-strategies | Cow calls, bull grunts and raking brush for moose.
+```
+
+| Option | Pros | Cons |
+|---|---|---|
+| A: calling | Pulls a bull close in the rut | Rut mostly over by late October |
+| B: glass and still hunt | Fits October, long views | Lots of walking |
+| C: sit a wetland trail | Quiet, rested shot | Patience |
+
+- My lean: Option B, a cow call in your pocket (Tip).
+
+```anim hf-step-cadence Still hunting: a few steps, then a long look.
+```
+
+```more the three options in full
 ### Option A: calling
 - Cow call and bull grunt at dawn near a wetland, then wait and glass.
 - Pros: can pull a bull in close in the rut window (late September to early October).
@@ -127,35 +244,55 @@ commons-moose-bull | A bull moose browsing: moose eat twigs and leaves, not gras
 
 > [!lean]
 > Option B, with a cow call in your pocket for the first week of a late September block. Hunt with your brother and plan the pack out before the shot.
-
-```video
-yt-moose-calling-strategies | Cow calls, bull grunts and raking brush for moose.
 ```
 
 ## Rifle, load and range
 
+```diagram sa-308-range
+```
+
+- Centrefire rifle or bow only (98%).
+- .308: 165 to 180 grain premium, inside about 200 m (65%).
+
+```more rifle detail
 - Legal methods for moose: centrefire rifle or bow only. No shotgun, no rimfire, no air rifle (page 13) (98%).
 - Your .308 Winchester is adequate for moose with a 165 to 180 grain premium controlled expansion bullet, keeping shots inside about 200 m (219 yd) (hunter consensus) (65%).
 - Zero with the moose load you will hunt with (Tip).
 
 > [!tip]
 > Same limit as deer: shoot only as far as you can hit a 15 cm (6 in) plate 9 times in 10 from a field rest. A moose's chest is big, but the lungs sit lower and further forward than you think. Get closer.
+```
 
 ## Shot placement (brief)
 
+```diagram vitals-moose
+```
+
+- Up the back of the front leg, one third up (75%).
+- Never a swimming moose: unlawful (99%).
+
+> [!warn]
+> Count the tines before you look at the chest. Know your [[Backstop]].
+
+```more shot detail
 - Broadside: follow the back edge of the front leg up, one third of the way up the chest. Both lungs, heart just below (standard hunter education advice) (75%).
 - A moose often does not drop. It walks or trots a short way. Stay on it and be ready for a second shot (Tip).
 - No shots at a moose in the water. It is unlawful to hunt big game while it is swimming (page 11, item 26) (99%). And you cannot get it out.
 - Full lesson with diagram: the shot placement session (coming in a later phase).
-
-> [!warn]
-> Count the tines before you look at the chest. Know your [[Backstop]].
+```
 
 ## Legal specifics: seasons
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram sa-moose-seasons
+```
+
+- Bag limit 1. Licence $25.00 (98%).
+- Your MU (Management Unit) at Heffley Creek: VERIFY on the map.
+
+```more fees, the full table and other regions
 - **Species licence:** Moose, BC resident $25.00. Includes the HCTF (Habitat Conservation Trust Foundation) surcharge, not GST (Goods and Services Tax) (page 8) (98%).
 - **[[Bag limit]]:** 1 (pages 13 and 34) (98%).
 - **Region 3 general open seasons**, [[Synopsis]] page 34 (98%). The synopsis spells the class `Spike-fork Bulls`:
@@ -171,12 +308,22 @@ yt-moose-calling-strategies | Cow calls, bull grunts and raking brush for moose.
 - **Region 2** (Mission base): no moose row in the Lower Mainland table, page 28. No general open season (98%).
 - **Any other class** (cow, calf, bigger bull): LEH seasons "are open only to hunters who have drawn an LEH authorization" (page 5) (98%). Region 3 moose draws: VERIFY in the [LEH synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/limited-entry-hunting/leh-regulations-synopsis.pdf).
 - **Your MU at Heffley Creek:** VERIFY on the official map.
+```
 
 ```regs safety
 ```
 
 ## Legal specifics: after the shot
 
+> [!warn]
+> Study aid only. The official regulations are the law.
+
+```diagram sa-moose-after
+```
+
+- Miss the 31 March report and next year's licence is blocked (98%).
+
+```more the after shot rules in full
 - Cancel the species licence "immediately after the kill and before handling" the animal (page 11) (98%).
 - **Antlers:** while returning from the hunt, keep them naturally attached to a portion of the upper skull, with the species licence, available for inspection (page 15) (98%). Do not alter or tamper with them (page 11) (98%).
 - **[[Evidence of sex]]:** the tail or another hide piece of at least 6 cm², naturally attached, AND a testicle or part of the penis (page 15) (98%).
@@ -186,9 +333,20 @@ yt-moose-calling-strategies | Cow calls, bull grunts and raking brush for moose.
 - **[[CWD]] (Chronic Wasting Disease):** Region 3 asks hunters to submit deer, elk and moose heads for testing (page 31) (95%). No moose parts or scents from outside BC (page 11) (98%).
 - **Baiting:** it is unlawful to feed or bait ungulates within 200 m of a dwelling, school yard or playground in Region 3 and Region 8 (pages 33 and 67) (98%).
 - **[[Record of Receipt]]:** if your brother carries meat you killed, he needs one (page 14) (90%).
+```
 
 ## Meat care and yield
 
+```diagram sk-moose-trips
+```
+
+- Spike fork bull: about 162 kg dressed (75%).
+- Quarter on the hide, bag it, hang it in shade (Tip).
+
+```diagram sa-yield-species
+```
+
+```more yield math and meat care
 - BC central Interior carcass study: calves averaged about 82 kg dressed; spike fork bulls about 162 kg dressed (search preview) (75%).
 - Rule of thumb: field dressed is about 72% of live weight; boneless meat about 35 to 45% of live weight (hunter sources) (60%).
 - So a spike fork bull should give roughly 75 to 90 kg of boneless meat (assumption, Tip).
@@ -196,9 +354,14 @@ yt-moose-calling-strategies | Cow calls, bull grunts and raking brush for moose.
 - Heat is the enemy. A moose holds body heat for hours. Skin fast in warm weather (Tip).
 - Plan 4 to 6 trips with 2 people, or a cart or sled. Mark the kill on your map (Tip).
 - Keep the antlers on the skull plate, with the licence, in the same vehicle as the meat (Tip; see Legal).
+```
 
 ## Beginner mistakes
 
+```diagram sa-moose-mistakes
+```
+
+```more all the mistakes
 > [!mistake]
 > - Shooting a bull with 3 points on each side in a spike fork season. That is a court date, not a moose.
 > - Calling in a bull with no plan for the pack out. A moose is a 2 day job.
@@ -206,8 +369,12 @@ yt-moose-calling-strategies | Cow calls, bull grunts and raking brush for moose.
 
 - Also: forgetting the Mandatory Hunter Report because you never filled the tag.
 - Also: cutting the skull plate off the antlers before you are home.
+```
 
 ## Grandpa's rules
+
+```photo g-moose-young-bull
+```
 
 > [!rule]
 > Count twice, shoot once. If you cannot count every tine, it is not a spike fork.

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Wolf or coyote, both running. Wolf: 30 to 50 kilograms, tail held straight out behind, broad muzzle, big feet. Coyote: 9 to 23 kilograms, tail carried down, thin pointed muzzle, tall ears, small feet. 85 percent. Warning: a big dog at 200 metres looks like a wolf, a tip." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Wolf or coyote?</text>
+<text x="110" y="56" font-size="16" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Wolf, 30 to 50 kg</text>
+<text x="310" y="56" font-size="16" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Coyote, 9 to 23 kg</text>
+<g transform="translate(115 120) scale(1.25)"><path d="M-24,4 L-40,26 M-14,6 L-4,28 M20,4 L8,26 M28,2 L44,22" stroke="#7a7a74" stroke-width="7" stroke-linecap="round"/><ellipse cx="0" cy="-6" rx="38" ry="14" fill="#7a7a74" stroke="#23261f" stroke-width="1.2"/><path d="M34,-8 C50,-10 62,-10 74,-8 C66,-2 52,0 34,0" fill="#7a7a74" stroke="#23261f" stroke-width="1.2"/><path d="M-30,-14 L-44,-26 L-50,-26 L-46,-4 Z" fill="#7a7a74"/><ellipse cx="-46" cy="-16" rx="12" ry="10" fill="#7a7a74" stroke="#23261f" stroke-width="1.2"/><path d="M-44,-20 L-66,-14 L-68,-4 L-44,-2 Z" fill="#7a7a74" stroke="#23261f" stroke-width="1.2"/><path d="M-40,-28 L-36,-40 L-30,-28 Z" fill="#7a7a74" stroke="#23261f" stroke-width="1.2"/><circle cx="-50" cy="-18" r="1.8" fill="#23261f"/><circle cx="-67" cy="-10" r="2.2" fill="#23261f"/></g>
+<g transform="translate(315 125) scale(0.8)"><path d="M-24,4 L-40,26 M-14,6 L-4,28 M20,4 L8,26 M28,2 L44,22" stroke="#b08a5a" stroke-width="7" stroke-linecap="round"/><ellipse cx="0" cy="-6" rx="38" ry="14" fill="#b08a5a" stroke="#23261f" stroke-width="1.2"/><path d="M34,-6 C42,6 46,18 46,30 C40,24 36,12 32,2" fill="#b08a5a" stroke="#23261f" stroke-width="1.2"/><path d="M-30,-14 L-44,-26 L-50,-26 L-46,-4 Z" fill="#b08a5a"/><ellipse cx="-46" cy="-16" rx="12" ry="10" fill="#b08a5a" stroke="#23261f" stroke-width="1.2"/><path d="M-44,-18 L-70,-12 L-70,-8 L-44,-4 Z" fill="#b08a5a" stroke="#23261f" stroke-width="1.2"/><path d="M-40,-28 L-36,-48 L-28,-28 Z" fill="#b08a5a" stroke="#23261f" stroke-width="1.2"/><circle cx="-50" cy="-18" r="1.8" fill="#23261f"/><circle cx="-67" cy="-10" r="2.2" fill="#23261f"/></g>
+<line x1="200" y1="40" x2="200" y2="260" stroke="#8a9a6b" stroke-dasharray="6 6" stroke-width="2"/>
+<text x="100" y="190" font-size="15" fill="#23261f" text-anchor="middle">Tail straight out</text>
+<text x="100" y="209" font-size="15" fill="#23261f" text-anchor="middle">Broad muzzle</text>
+<text x="100" y="228" font-size="15" fill="#23261f" text-anchor="middle">Big feet</text>
+<text x="300" y="190" font-size="15" fill="#23261f" text-anchor="middle">Tail carried down</text>
+<text x="300" y="209" font-size="15" fill="#23261f" text-anchor="middle">Thin pointed muzzle</text>
+<text x="300" y="228" font-size="15" fill="#23261f" text-anchor="middle">Tall ears, small feet</text>
+<rect x="10" y="262" width="380" height="32" rx="6" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
+<text x="200.0" y="282.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">A big dog at 200 m looks like a wolf (Tip)</text>
+</svg>

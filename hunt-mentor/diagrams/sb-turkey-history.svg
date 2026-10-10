@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" font-family="sans-serif" role="img" aria-label="Timeline of wild turkeys in BC, 70 to 75 percent. 1910: first release on James Island. 1960s: birds spread north from Washington, Idaho and Montana into southern BC. 1980s: birds moved from the Creston Valley to the East Kootenay. 2004: about 4,000 to 5,000 birds. 2016 to 2020: Region 4 hunters took about 620 turkeys a year.">
+  <rect width="400" height="330" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How turkeys came to BC (70 to 75%)</text>
+  <line x1="40" y1="60" x2="40" y2="318" stroke="#8b5a2b" stroke-width="4"/>
+  <circle cx="40" cy="75" r="9" fill="#e8590c"/>
+  <text x="60" y="80" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="start">1910</text>
+  <text x="60" y="99" font-size="14" fill="#2f3a2b" text-anchor="start">First release: James Island</text>
+  <circle cx="40" cy="122" r="9" fill="#e8590c"/>
+  <text x="60" y="127" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="start">1960s</text>
+  <text x="60" y="146" font-size="14" fill="#2f3a2b" text-anchor="start">Spread north from Washington,</text>
+  <text x="60" y="164" font-size="14" fill="#2f3a2b" text-anchor="start">Idaho and Montana</text>
+  <circle cx="40" cy="187" r="9" fill="#e8590c"/>
+  <text x="60" y="192" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="start">1980s</text>
+  <text x="60" y="211" font-size="14" fill="#2f3a2b" text-anchor="start">Creston birds moved to</text>
+  <text x="60" y="229" font-size="14" fill="#2f3a2b" text-anchor="start">the East Kootenay</text>
+  <circle cx="40" cy="252" r="9" fill="#e8590c"/>
+  <text x="60" y="257" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="start">2004</text>
+  <text x="60" y="276" font-size="14" fill="#2f3a2b" text-anchor="start">About 4,000 to 5,000 birds</text>
+  <circle cx="40" cy="299" r="9" fill="#e8590c"/>
+  <text x="60" y="304" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="start">2016 to 2020</text>
+  <text x="60" y="323" font-size="14" fill="#2f3a2b" text-anchor="start">Region 4: about 620 taken a year</text>
+</svg>

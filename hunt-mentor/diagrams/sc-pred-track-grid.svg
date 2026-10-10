@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Predator sign in a 2 by 2 grid. Cougar track: round, 4 toes, no claws, about 8 to 10 centimetres, 85 percent. Lynx track: huge and furry, toes hard to see, 70 percent. Wolf and coyote tracks: claws show; wolf 10 to 13 centimetres long, coyote 6 to 7, 60 percent. Covered kill: a carcass with leaves and debris raked over it means a cougar. Leave at once and report it, 85 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="400" fill="#fffaf0"/>
+<line x1="200" y1="10" x2="200" y2="390" stroke="#8a9a6b" stroke-dasharray="6 6" stroke-width="2"/>
+<line x1="10" y1="200" x2="390" y2="200" stroke="#8a9a6b" stroke-dasharray="6 6" stroke-width="2"/>
+<text x="100" y="26" font-size="16" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Cougar</text>
+<g transform="translate(100 100) scale(1.6)"><path d="M-16,8 C-18,-2 -8,-6 0,-4 C8,-6 18,-2 16,8 C14,18 -14,18 -16,8 Z" fill="#5c3b1c"/><ellipse cx="-17" cy="-14" rx="6" ry="8" fill="#5c3b1c"/><ellipse cx="-6" cy="-24" rx="6" ry="8" fill="#5c3b1c"/><ellipse cx="7" cy="-24" rx="6" ry="8" fill="#5c3b1c"/><ellipse cx="18" cy="-12" rx="6" ry="8" fill="#5c3b1c"/></g>
+<text x="100" y="160" font-size="14" fill="#23261f" text-anchor="middle">Round, 4 toes, no claws</text>
+<text x="100" y="178" font-size="14" fill="#23261f" text-anchor="middle">about 8 to 10 cm (85%)</text>
+<text x="300" y="26" font-size="16" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Lynx</text>
+<g transform="translate(300 100) scale(1.4)"><circle cx="0" cy="0" r="34" fill="#cfc7b8" opacity="0.8"/><path d="M-16,8 C-18,-2 -8,-6 0,-4 C8,-6 18,-2 16,8 C14,18 -14,18 -16,8 Z" fill="#5c3b1c"/><ellipse cx="-17" cy="-14" rx="6" ry="8" fill="#5c3b1c"/><ellipse cx="-6" cy="-24" rx="6" ry="8" fill="#5c3b1c"/><ellipse cx="7" cy="-24" rx="6" ry="8" fill="#5c3b1c"/><ellipse cx="18" cy="-12" rx="6" ry="8" fill="#5c3b1c"/></g>
+<text x="300" y="160" font-size="14" fill="#23261f" text-anchor="middle">Huge, furry, toes hard</text>
+<text x="300" y="178" font-size="14" fill="#23261f" text-anchor="middle">to see (70%)</text>
+<text x="100" y="226" font-size="16" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Wolf and coyote</text>
+<g transform="translate(70 300) scale(1.4)"><path d="M-10,8 L0,-2 L10,8 C8,18 -8,18 -10,8 Z" fill="#5c3b1c"/><ellipse cx="-14" cy="-10" rx="5" ry="7" fill="#5c3b1c"/><ellipse cx="-5" cy="-24" rx="5" ry="8" fill="#5c3b1c"/><ellipse cx="5" cy="-24" rx="5" ry="8" fill="#5c3b1c"/><ellipse cx="14" cy="-10" rx="5" ry="7" fill="#5c3b1c"/><path d="M-5,-34 v-5 M5,-34 v-5 M-15,-19 l-1,-5 M15,-19 l1,-5" stroke="#23261f" stroke-width="2.5"/></g>
+<g transform="translate(150 310) scale(0.8)"><path d="M-10,8 L0,-2 L10,8 C8,18 -8,18 -10,8 Z" fill="#5c3b1c"/><ellipse cx="-14" cy="-10" rx="5" ry="7" fill="#5c3b1c"/><ellipse cx="-5" cy="-24" rx="5" ry="8" fill="#5c3b1c"/><ellipse cx="5" cy="-24" rx="5" ry="8" fill="#5c3b1c"/><ellipse cx="14" cy="-10" rx="5" ry="7" fill="#5c3b1c"/><path d="M-5,-34 v-5 M5,-34 v-5 M-15,-19 l-1,-5 M15,-19 l1,-5" stroke="#23261f" stroke-width="2.5"/></g>
+<text x="70" y="350" font-size="13" fill="#23261f" text-anchor="middle">Wolf</text>
+<text x="150" y="350" font-size="13" fill="#23261f" text-anchor="middle">Coyote</text>
+<text x="100" y="372" font-size="13" fill="#23261f" text-anchor="middle">Claws show. Wolf 10 to 13 cm,</text>
+<text x="100" y="388" font-size="13" fill="#23261f" text-anchor="middle">coyote 6 to 7 cm (60%)</text>
+<text x="300" y="226" font-size="16" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Covered kill</text>
+<path d="M240 330 C250 290 350 290 362 330 Z" fill="#a08a5a" stroke="#6b5530"/>
+<g stroke="#5f7a3a" stroke-width="2.5"><path d="M250 318 l12 -10 M270 304 l10 -12 M300 300 l6 -14 M330 304 l10 -10 M348 316 l10 -6"/></g>
+<path d="M330 330 L352 320 L360 330" fill="#8b5a2b"/>
+<text x="300" y="360" font-size="13" fill="#e8590c" text-anchor="middle" font-weight="bold">Leaves raked over it:</text>
+<text x="300" y="376" font-size="13" fill="#e8590c" text-anchor="middle" font-weight="bold">leave at once, report (85%)</text>
+</svg>

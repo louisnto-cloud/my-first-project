@@ -12,6 +12,9 @@ checked: 2026-10-01
 > [!warn]
 > Every rule here is wisdom, not law, unless it says "also law" with a synopsis page. The official regulations are the law.
 
+```diagram lc-gr50-groups
+```
+
 - Fifty rules in six groups. Each group is one card sheet. Blue LAW badge: also law.
 - Read them with your brother every August. Tip.
 
@@ -136,6 +139,8 @@ checked: 2026-10-01
 > - **49.** Teach the kid, not the trophy. "Be aware that you are a mentor when youth are observing" (99%, page 77).
 > - **50.** Go home before the storm, before dark, before the argument. There is always next season.
 ```
+
+## Make them stick
 
 ```checklist s6-rules
 Read all 50 with my brother before opening day

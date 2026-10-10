@@ -12,18 +12,37 @@ checked: 2026-10-03
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```anim ld-busy-spot A public name brings company. Hunt past the lot.
+```
+
+```diagram ld-access-types
+```
+
+- Every card shows species, MU (Management Unit), access and certainty.
+
+```more how to read this session
 - **A public name means more hunters.** Every place here is named online or in print, so plan on it being busier (Tip).
 - **The quiet spots are not on this list.** They come from the Spot Finder map's candidate spots, built from land status, roads, closures and habitat, and from your own scouting. Not from the internet (Tip).
 - Each place shows what it is known for, the access type, the source type and a certainty.
 - Access types: **Park** (the BC Parks page says firearms are permitted for hunting in open season), **WMA** (Wildlife Management Area: rules vary, so contact the regional office first), **Rec site** (recreation site: no shooting within 100 m of camp structures), **Permission** (private or reserve land), **Closed**.
 - Forum and blog mentions are capped at 60%. Treat them as leads to check, not facts.
 - MU (Management Unit) numbers are point checks on the official layer at the place name (90%). Check the boundary on the MU map before you hunt.
+```
+
+```diagram ld-source-ladder
+```
 
 ## Area A: Kamloops and North Thompson
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram ld-area-a-gov
+```
+
+- Parks open, Tranquille and Wells Gray closed (85 to 99%).
+
+```more named by government, in full
 ### Named by government
 - **Lac du Bois Grasslands Protected Area.** Bighorn, mule and white tailed deer, moose, waterfowl, sharp tailed grouse. Park, but no shooting in the part inside Kamloops city limits; ATVs (all terrain vehicles) closed for hunting 1 Sep to 10 Dec. BC Parks, synopsis page 33 (95%).
 - **Dewdrop Rosseau Creek Wildlife Management Area**, north shore of Kamloops Lake, Management Unit 3-29. Winter range for mule deer and bighorn. Motor vehicle closed, Map C16. BC page, synopsis page 33 (90%).
@@ -32,13 +51,25 @@ checked: 2026-10-03
 - **Tunkwa Provincial Park**, Tunkwa Lake in Management Unit 3-18. Moose, mule and white tailed deer, Canada goose, mallard, snipe. Park; vehicles on designated trails only. BC Parks (90%).
 - **Dunn Peak Provincial Park.** Mule deer, mountain goat, black bear. Park. BC Parks (90%).
 - **Wells Gray Park, Management Unit 3-45.** Closed: no hunting, no firearms. Synopsis page 33 (99%).
+```
 
+```diagram ld-area-a-rec
+```
+
+```more rec sites, in full
 ### Rec sites that list hunting
 - Rec site rule: no shooting within 100 m of camp structures (99%).
 - These sites have hunting among their first 3 listed activities in the provincial data (90%).
 - Near Heffley Creek: Community Lake Southwest and Sullivan Lake (Knouff), Management Unit 3-27. Toward Sun Peaks: McGillivray Lake West, Morrisey Lake West (90%).
 - North and west: Pass Lake (Management Unit 3-29), Fishtrap Creek, Dunsapie Lake and Gorman Lake (Management Unit 3-28), Mayson Lake (Management Unit 3-30) (90%).
+```
 
+```diagram ld-area-a-talk
+```
+
+- Leads to check, not facts (50 to 85%).
+
+```more hunter talk, in full
 ### Hunter talk: leads, not facts
 - **Jamieson Creek**, Management Unit 3-28 at its mouth. A 1976 study used it as Kamloops deer winter range (80%). Forum: mule deer (50%). Land status VERIFY.
 - **Barriere Lakes and the Chu Chua road ridges**, Management Unit 3-38. Blog, 2011: "Moose, Mule Deer and Black bear", ridges after snow (55%). Land status VERIFY.
@@ -47,12 +78,22 @@ checked: 2026-10-03
 - **Paul Lake, Pinantan, Heffley**, Management Unit 3-27. Forum mention: mule deer (50%).
 - **Bonaparte Plateau.** A provincial moose research area since 2012 (85%). Research, not a hunting tip.
 - The same blog calls Tunkwa Management Unit 3-19; the official layer puts Tunkwa Lake in Management Unit 3-18 (90%). Trust the layer.
+```
 
 ## Area B: Mission, Fraser Valley, Hope
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram ld-area-b-gov
+```
+
+```diagram ld-pitt-days
+```
+
+- MU 2-4 and Mission: special licence and insurance (99%).
+
+```more the special licence and named by government, in full
 - Management Unit 2-4, and the parts of Management Unit 2-8 inside Mission, Maple Ridge, Pitt Meadows and Coquitlam, need the Fraser Valley Special Area licence and $1,000,000 liability insurance (99%, synopsis page 29). See Local plan: Mission.
 
 ### Named by government
@@ -63,7 +104,12 @@ checked: 2026-10-03
 - **Pinecone Burke Provincial Park.** Black tailed deer, goats, black bear; Widgeon Slough waterfowl. Park. BC Parks (90%).
 - **Skagit Valley Provincial Park**, south of Hope. Black tailed deer and black bears seen along the road. Park. BC Parks (90%).
 - **Herrling Island near Hope**, Management Unit 2-3. Resident white tailed deer, but no open season for them. Synopsis page 27 (99%).
+```
 
+```diagram ld-area-b-talk
+```
+
+```more hunter talk, in full
 ### Hunter talk: leads, not facts
 - **Roberts Bank, "the Ladner Marsh"**, Delta, west of the area. Early season and snow goose hotspot, "busy at the beginning of the season, particularly on the weekends". Tidal: waders and tide charts (65%, BC Outdoors 2013).
 - **Pitt Marsh.** "some of the best duck hunting the Lower Mainland has to offer", and the hardest public marsh: boat and blinds (65%, BC Outdoors 2013).
@@ -72,12 +118,19 @@ checked: 2026-10-03
 - **Stave Lake area**, Management Unit 2-8. Occasional blue grouse (forum, 50%); elk released in the Stave watershed (news, 65%). Mission bylaw areas apply.
 - The same magazine: "Much of the local waterfowl hunting takes place on private land" (65%).
 - Only 1 of 39 rec sites in this area has hunting among its first 3 listed activities: Scuzzy Creek near Boston Bar, closed until further notice (90%, provincial data).
+```
 
 ## Area C: South Okanagan quail trip
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram ld-area-c-gov
+```
+
+- Quail: 1 Oct to 30 Nov, 10 a day (99%).
+
+```more the quail season and named by government, in full
 - Quail in Region 8: Management Units 8-1 to 8-15 and 8-21 to 8-26, 1 October to 30 November, 10 a day, 30 in possession (99%, synopsis page 68, 2 October 2026 edition).
 
 ### Named by government
@@ -88,7 +141,14 @@ checked: 2026-10-03
 - **Osoyoos Oxbows**, Management Unit 8-1. Waterfowl habitat in an old basin study (65%); quail filmed on the trail (news, 55%). No shooting or hunting 1 March to 30 September; vehicles on established roads only. Synopsis page 69 (99%).
 - **South Okanagan Wildlife Management Area**, Vaseux Lake to Osoyoos Lake. Species at risk, antelope brush, river oxbows. Hunting status VERIFY with the Penticton office (85%).
 - **McTaggart Cowan nsək'łniw't Wildlife Management Area**, east of Skaha Lake. Bighorn lambing and winter range; deer, elk and goat winter habitat. Hunting status VERIFY (85%).
+```
 
+```diagram ld-quail-land
+```
+
+- Cultivated land and reserves need consent (99%).
+
+```more why most birds are on private land, in full
 ### Quail: why most birds are on private land
 - California quail live on valley farm, orchard and suburban edges, mostly below 750 m (85%).
 - More than 40% of the remaining South Okanagan grasslands are private and 10% are reserve land (75%, SOSCP (South Okanagan Similkameen Conservation Program)).
@@ -96,18 +156,26 @@ checked: 2026-10-03
 - Hunter talk: Osoyoos quail are mostly on private property, so door knock early in the year (forum mention, 50%).
 - The law: no hunting on cultivated land, or on grazing lease land with livestock on it, without the owner's or lessee's consent. Reserves need the band office's OK (99%, synopsis page 9).
 - Crown parcels: use the map's candidate spots and ParcelMap BC. See Local plan: Okanagan quail.
+```
 
 ## Where you can camp
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram ld-camp-rules
+```
+
+- Check fire bans and closures before every trip (99%).
+
+```more the camping rules, quoted
 - **Crown land:** "Any person may camp on Crown land for up to 14 consecutive calendar days." Leave with your gear for 72 hours to reset the count (99%, Crown land Permission policy, section 2). No fee or application (my reading, 85%).
 - **Rec sites:** same 14 day limit (99%, Forest Recreation Regulation section 13). "Most recreation site campsites are available on a first-come, first-served basis"; fees at some sites, cash to the operator (99%).
 - At a rec site: no shooting within 100 m of camp structures, no gut piles, no taking firewood (99%, sections 10, 11, 14).
 - **No camping and no fires** in Pitt Addington Marsh, Boundary Bay, Bert Brink, Harrison Chehalis and Serpentine Wildlife Management Areas (99%, B.C. Reg. 24/2015).
 - **Campfires:** follow BC Wildfire Service bans; a campfire is at most 0.5 m by 0.5 m with water or a hand tool ready (99%). On 3 October 2026 campfires were allowed in the Kamloops and Coastal fire centres (99% for that day only).
 - Check before every trip: the [BC Wildfire map](https://wildfiresituation.nrs.gov.bc.ca/map), the park page and Recreation Sites and Trails BC closures (99%).
+```
 
 ## Grandpa's rule
 

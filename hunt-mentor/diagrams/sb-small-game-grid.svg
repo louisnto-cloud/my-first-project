@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 366" font-family="sans-serif" role="img" aria-label="Grid of small animals and whether you may hunt them, 90 to 98 percent. Snowshoe hare: small game, Region 3 season 1 August to 30 April. Columbian ground squirrel: private land only, with permission. Eastern cottontail and grey squirrels: Schedule C, no licence needed, but they do not live near Heffley Creek. Nuttall&#x27;s cottontail: protected, Okanagan, no season. White tailed jackrabbit: protected, no season. Red squirrel: not for hunters, trapping only.">
+  <rect width="400" height="366" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Small game: who you may hunt (90 to 98%)</text>
+  <rect x="6" y="36" width="190" height="104" rx="8" fill="#dfe6d3" stroke="#2f6e3b" stroke-width="2"/>
+  <g transform="translate(48 92) scale(0.9)"><ellipse rx="22" ry="13" fill="#9b8466"/><circle cx="18" cy="-8" r="9" fill="#9b8466"/><ellipse cx="14" cy="-26" rx="4" ry="12" fill="#9b8466" transform="rotate(-15 14 -26)"/><ellipse cx="20" cy="-26" rx="4" ry="12" fill="#9b8466" transform="rotate(10 20 -26)"/><circle cx="22" cy="-10" r="2" fill="#2f3a2b"/><ellipse cx="-14" cy="12" rx="12" ry="4" fill="#9b8466"/></g>
+  <text x="128" y="66" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Snowshoe</text>
+  <text x="128" y="83" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">hare</text>
+  <text x="128" y="106" font-size="12" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Small game</text>
+  <text x="128" y="123" font-size="12" fill="#2f3a2b" text-anchor="middle">R3: Aug 1 to Apr 30</text>
+  <rect x="204" y="36" width="190" height="104" rx="8" fill="#f6ead2" stroke="#e8590c" stroke-width="2"/>
+  <g transform="translate(244 96) scale(1.0)"><path d="M-10 0 Q-34 -10 -26 -30 Q-14 -40 -12 -18Z" fill="#b08a5a"/><ellipse rx="14" ry="10" fill="#b08a5a"/><circle cx="12" cy="-8" r="7" fill="#b08a5a"/><circle cx="14" cy="-9" r="1.6" fill="#2f3a2b"/></g>
+  <text x="326" y="66" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Ground</text>
+  <text x="326" y="83" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">squirrel</text>
+  <text x="326" y="106" font-size="12" font-weight="bold" fill="#e8590c" text-anchor="middle">Private land only</text>
+  <text x="326" y="123" font-size="12" fill="#2f3a2b" text-anchor="middle">with permission</text>
+  <rect x="6" y="146" width="190" height="104" rx="8" fill="#dfe6d3" stroke="#2f6e3b" stroke-width="2"/>
+  <g transform="translate(48 202) scale(0.7)"><ellipse rx="22" ry="13" fill="#8a7a6a"/><circle cx="18" cy="-8" r="9" fill="#8a7a6a"/><ellipse cx="14" cy="-26" rx="4" ry="12" fill="#8a7a6a" transform="rotate(-15 14 -26)"/><ellipse cx="20" cy="-26" rx="4" ry="12" fill="#8a7a6a" transform="rotate(10 20 -26)"/><circle cx="22" cy="-10" r="2" fill="#2f3a2b"/><ellipse cx="-14" cy="12" rx="12" ry="4" fill="#8a7a6a"/></g>
+  <text x="128" y="176" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cottontail,</text>
+  <text x="128" y="193" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">grey squirrel</text>
+  <text x="128" y="216" font-size="12" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Schedule C</text>
+  <text x="128" y="233" font-size="12" fill="#2f3a2b" text-anchor="middle">Not near Heffley Ck</text>
+  <rect x="204" y="146" width="190" height="104" rx="8" fill="#f3dcd6" stroke="#c0392b" stroke-width="2"/>
+  <g transform="translate(244 202) scale(0.7)"><ellipse rx="22" ry="13" fill="#8a7a6a"/><circle cx="18" cy="-8" r="9" fill="#8a7a6a"/><ellipse cx="14" cy="-26" rx="4" ry="12" fill="#8a7a6a" transform="rotate(-15 14 -26)"/><ellipse cx="20" cy="-26" rx="4" ry="12" fill="#8a7a6a" transform="rotate(10 20 -26)"/><circle cx="22" cy="-10" r="2" fill="#2f3a2b"/><ellipse cx="-14" cy="12" rx="12" ry="4" fill="#8a7a6a"/></g>
+  <text x="326" y="176" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Nuttall&#x27;s</text>
+  <text x="326" y="193" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">cottontail</text>
+  <text x="326" y="216" font-size="12" font-weight="bold" fill="#c0392b" text-anchor="middle">Protected</text>
+  <text x="326" y="233" font-size="12" fill="#2f3a2b" text-anchor="middle">Okanagan: no season</text>
+  <rect x="6" y="256" width="190" height="104" rx="8" fill="#f3dcd6" stroke="#c0392b" stroke-width="2"/>
+  <g transform="translate(48 312) scale(0.9)"><ellipse rx="22" ry="13" fill="#b8a888"/><circle cx="18" cy="-8" r="9" fill="#b8a888"/><ellipse cx="14" cy="-26" rx="4" ry="12" fill="#b8a888" transform="rotate(-15 14 -26)"/><ellipse cx="20" cy="-26" rx="4" ry="12" fill="#b8a888" transform="rotate(10 20 -26)"/><circle cx="22" cy="-10" r="2" fill="#2f3a2b"/><ellipse cx="-14" cy="12" rx="12" ry="4" fill="#b8a888"/></g>
+  <text x="128" y="286" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">White tailed</text>
+  <text x="128" y="303" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">jackrabbit</text>
+  <text x="128" y="326" font-size="12" font-weight="bold" fill="#c0392b" text-anchor="middle">Protected</text>
+  <text x="128" y="343" font-size="12" fill="#2f3a2b" text-anchor="middle">no season</text>
+  <rect x="204" y="256" width="190" height="104" rx="8" fill="#f3dcd6" stroke="#c0392b" stroke-width="2"/>
+  <g transform="translate(244 316) scale(1.0)"><path d="M-10 0 Q-34 -10 -26 -30 Q-14 -40 -12 -18Z" fill="#a0522d"/><ellipse rx="14" ry="10" fill="#a0522d"/><circle cx="12" cy="-8" r="7" fill="#a0522d"/><circle cx="14" cy="-9" r="1.6" fill="#2f3a2b"/></g>
+  <text x="326" y="286" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Red</text>
+  <text x="326" y="303" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">squirrel</text>
+  <text x="326" y="326" font-size="12" font-weight="bold" fill="#c0392b" text-anchor="middle">Not for hunters</text>
+  <text x="326" y="343" font-size="12" fill="#2f3a2b" text-anchor="middle">trapping only</text>
+</svg>

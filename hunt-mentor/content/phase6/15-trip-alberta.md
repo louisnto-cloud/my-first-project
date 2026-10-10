@@ -13,13 +13,29 @@ Study aid only. The official regulations are the law.
 
 ## Can a BC resident hunt here
 
+```diagram ld-trip-status
+```
+
+- Birds: no host. Big game, wolf, coyote: host or outfitter (85%).
+
+```more your status and the host rule, quoted
 - Yes. Alberta calls you a **non resident (Canadian)**: a Canadian citizen who lived in Canada the 12 months before the hunt (85%).
 - Official wording: "Anyone who is a non resident or a non resident alien hunter must be accompanied by either a hunter host or an outfitter guide if hunting big game, wolf, or coyote." (85%, quote shown without hyphens)
 - Game birds are not on that list. Upland birds and waterfowl: no host, no outfitter (85%).
 - Your brother is also a non resident. One hunter host may host at most 2 hunters a year, so one Alberta friend can cover you both (85%).
+```
 
 ## Without a guide, or with one
 
+```diagram ld-ab-host-flow
+```
+
+```diagram ld-ab-who
+```
+
+- One Alberta friend can host you both (85%).
+
+```more the full table and the host rule
 | Animal | BC resident may hunt | What it takes |
 |---|---|---|
 | Ducks, geese, grouse, partridge, pheasant | Yes, no host | WIN card, Wildlife Certificate, Game Bird Licence, pheasant licence if pheasant, federal [[MGBHP]] (Migratory Game Bird Hunting Permit) for ducks and geese (85%) |
@@ -30,6 +46,7 @@ Study aid only. The official regulations are the law.
 
 - A hunter host is an Alberta resident, usually a friend or relative, who is **not paid** to come along (85%).
 - The host needs a WIN (Wildlife Identification Number) card and a Hunter Host Licence (85%).
+```
 
 ## Licences, draws and fees
 
@@ -44,23 +61,37 @@ Study aid only. The official regulations are the law.
 | Hunter Host Licence (your Alberta friend buys it) | $19 (85%) | 2026-10-01 |
 | Pheasant licence, non resident | VERIFY | 2026-10-01 |
 
+- Plus 5% GST (85%). Pheasant fee: VERIFY.
+
+```more GST and draw rules
 - GST (Goods and Services Tax) of 5% is extra. Outfitters may add service fees (85%).
 - Draws: "Only Residents and, to a lesser extent, Non residents (Canadians) are eligible" (85%, quote shown without hyphens).
 - A non resident Canadian must apply **with at least one Alberta resident** in the draw, except the non resident trophy sheep draw (85%).
 - If drawn, you still hunt with a hunter host (85%).
+```
 
 ## How to apply
 
+```diagram ld-ab-apply
+```
+
+- WIN card first. Host licence before your deer licence (85%).
+
+```more the 5 steps in full
 1. Get a WIN card online at mywildalberta.ca or from a licence issuer. One time fee, never expires (85%).
 2. Buy the Wildlife Certificate, then the Game Bird Licence, online or from a private licence issuer (85%).
 3. Deer: your Alberta friend buys the Hunter Host Licence first. Then you buy the deer licence from a private issuer (85%).
 4. Draws open in late spring. Check the draw booklet for the exact window each year: VERIFY dates.
 5. Read the Alberta Guide to Hunting Regulations. It is updated every July (85%).
+```
 
 ## Best first trip for you
 
-> [!lean]
-> October, four days, southern or central Alberta grain country with your brother and the 12 gauge. Ducks and geese in the morning, sharp tailed grouse and Hungarian partridge after lunch. No host needed. If an Alberta friend buys a $19 host licence, add a white tailed deer licence and make it a November trip instead.
+```diagram ld-trip-distance
+```
+
+```diagram ld-trip-cost
+```
 
 | Cost line | Estimate (CAD) | Note |
 |---|---|---|
@@ -70,16 +101,40 @@ Study aid only. The official regulations are the law.
 | Total, split two ways | $550 to $800 each | Estimate, opinion |
 | Add a deer: white tailed deer licence | $193 plus GST (85%) | Only with a hunter host |
 
+- My lean: October, grain country, birds. Deer later with a host.
+
+```more my lean in full and the access note
+> [!lean]
+> October, four days, southern or central Alberta grain country with your brother and the 12 gauge. Ducks and geese in the morning, sharp tailed grouse and Hungarian partridge after lunch. No host needed. If an Alberta friend buys a $19 host licence, add a white tailed deer licence and make it a November trip instead.
+
 - Access: most of that country is private farmland. Ask permission in person, weeks ahead (opinion).
+```
 
 ## Taking firearms there
 
+```diagram ld-no-border-gun
+```
+
+- No border. Road rules differ: VERIFY.
+
+```more firearms in Alberta in full
 - No border. Your [[PAL]] (Possession and Acquisition Licence) is federal and covers Alberta (85%).
 - Transport rules are the same federal RCMP (Royal Canadian Mounted Police) rules as at home (85%).
 - Alberta road and vehicle hunting rules differ from BC. Read the general regulations section before you load a shell near a road: VERIFY.
+```
 
 ## Bringing meat, hides and antlers home
 
+```diagram ld-ab-meat
+```
+
+```diagram parts-home-bc
+```
+
+- CWD is in Alberta. Bone out (85%).
+- BC: meat and cleaned parts only (99%).
+
+```more Alberta export, CWD and BC import rules, quoted
 ### Alberta's export rule
 - No export permit is needed for a legally taken game bird, coyote, white tailed deer, mule deer, moose, elk, black bear or pronghorn if you export it within 30 days of the kill or 5 days of season close, whichever is first, you travel with it, and you carry the licence it was taken under (85%).
 - Wolf is not in that list. Ask Fish and Wildlife about an export permit: VERIFY.
@@ -93,17 +148,25 @@ Study aid only. The official regulations are the law.
 - "To possess any part of a Cervidae (caribou, deer, elk, moose), that was killed outside of British Columbia, other than (1) the edible meat of the four quarters, loins, neck, and ribs, or (2) the hide, antlers, and skull plate if, before being brought into British Columbia, the part is cleaned in a manner that removes all tissue." (99%)
 - Item 51: no out of province deer, elk, moose or caribou part or derivative, such as urine scents, may be used for hunting in BC (99%).
 
-```diagram parts-home-bc
-```
-
 - Evidence of sex for Alberta must stay attached until you are home. Boning out while keeping that evidence takes care: VERIFY Alberta's exact evidence rule.
 - CFIA (Canadian Food Inspection Agency): no national border, no CFIA step. VERIFY only if shipping commercially.
+```
+
+```anim ld-meat-home Bone out at the kill. Only meat and a clean skull plate come home.
+```
 
 ## Blaze orange rules
 
+```diagram ld-orange-compare
+```
+
+- Alberta: not required (80%). Wear it for deer anyway.
+
+```more the Alberta orange notes
 - Alberta: "High visibility clothing has not been required in practice for many years in Alberta, and this provision has now been formally repealed." (80%, search preview of Alberta regulations page)
 - Bright colours are recommended, not required (80%).
 - Grain field waterfowl hunting is done in camouflage. Deer hunts: wear orange anyway. Opinion.
+```
 
 ## Before you go
 
@@ -116,6 +179,8 @@ Read the Alberta Guide to Hunting Regulations, July edition
 Landowner permission arranged
 Bone out and clean any deer parts before the BC line
 ```
+
+## Grandpa's rule and common mistakes
 
 > [!rule]
 > Birds pay for the scouting. Hunt birds this year, learn the country, and the deer hunt next year is already half planned.

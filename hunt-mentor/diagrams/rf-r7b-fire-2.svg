@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 396" role="img" aria-label="Six cards. Lower Burnt River, new: no hunting on either side of the Lower Burnt Forest Service Road between kilometre 20 and 22.2 in 7-22, north bank of the Burnt River to 400 metres from the road centre line, Map H10. Radar Lake: no shooting or hunting within 200 metres of the high water mark. Stone Mountain Park: no shooting or hunting within 1 mile of the Alaska Highway. Dokie subdivision: no firearms, Map H9. One Mile Pasture: firearms using shot only 1 June to 15 October; Map H3 is captioned One Island Pasture, name to verify. Fontas: no hunting; the map is H24 by its caption though H21 is printed." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="396" fill="#fffaf0"/>
+<text x="200" y="26" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">Firearm and hunting closures, part 2</text>
+<rect x="6" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Lower Burnt River</text>
+<text x="101" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">(new)</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">No hunting, MU 7-22, to</text>
+<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start">400 m from the road</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start">centre line. Map H10</text>
+<rect x="204" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Radar Lake</text>
+<text x="212" y="106" font-size="14" fill="#23261f" text-anchor="start">No shooting or hunting</text>
+<text x="212" y="124" font-size="14" fill="#23261f" text-anchor="start">within 200 m of the</text>
+<text x="212" y="142" font-size="14" fill="#23261f" text-anchor="start">high water mark</text>
+<rect x="6" y="162" width="190" height="96" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#c92a2a"/>
+<text x="101" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Stone Mountain Park</text>
+<text x="14" y="210" font-size="14" fill="#23261f" text-anchor="start">No shooting or hunting</text>
+<text x="14" y="228" font-size="14" fill="#23261f" text-anchor="start">within 1 mile of the</text>
+<text x="14" y="246" font-size="14" fill="#23261f" text-anchor="start">Alaska Hwy</text>
+<rect x="204" y="162" width="190" height="96" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M204 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#e8590c"/>
+<text x="299" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Dokie subdivision</text>
+<text x="212" y="210" font-size="14" fill="#23261f" text-anchor="start">No firearms, MUs 7-22,</text>
+<text x="212" y="228" font-size="14" fill="#23261f" text-anchor="start">7-31. Map H9</text>
+<rect x="6" y="266" width="190" height="96" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<path d="M6 276 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#8a9a6b"/>
+<text x="101" y="284" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">One Mile Pasture</text>
+<text x="14" y="314" font-size="14" fill="#23261f" text-anchor="start">Shot only, June 1 to</text>
+<text x="14" y="332" font-size="14" fill="#23261f" text-anchor="start">Oct 15. Map H3 says One</text>
+<text x="14" y="350" font-size="14" fill="#23261f" text-anchor="start">Island Pasture: VERIFY</text>
+<rect x="204" y="266" width="190" height="96" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204 276 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#c92a2a"/>
+<text x="299" y="284" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Fontas</text>
+<text x="212" y="314" font-size="14" fill="#23261f" text-anchor="start">No hunting. Map H24 by</text>
+<text x="212" y="332" font-size="14" fill="#23261f" text-anchor="start">caption (95%)</text>
+<rect x="6" y="368" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="24" y="380" font-size="14" fill="#23261f" text-anchor="start">No hunting</text>
+<rect x="112.0" y="368" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="130" y="380" font-size="14" fill="#23261f" text-anchor="start">No shooting</text>
+<rect x="225.4" y="368" width="14" height="14" rx="3" fill="#8a9a6b"/>
+<text x="243" y="380" font-size="14" fill="#23261f" text-anchor="start">Shot only or bow</text>
+</svg>

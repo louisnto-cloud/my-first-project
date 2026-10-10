@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img" aria-label="Status grid. Southern Mountain caribou: Threatened under the federal Species at Risk Act, no hunt. Boreal caribou: Threatened, no hunt. Northern Mountain caribou: Special Concern, draw hunts only. Wood bison: Threatened. Plains bison, the Pink Mountain herd: over 1,000 animals. Bison hunts are only in parts of Management Units 7-42, 7-57 and 7-58, 98 percent. Every caribou hunt is a draw." font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img" aria-label="Status grid. Southern Mountain caribou: Threatened under the federal Species at Risk Act, no hunt. Boreal caribou: Threatened, no hunt. Northern Mountain caribou: Special Concern, draw hunts only. Wood bison: Threatened. Plains bison: the Pink Mountain herd is over 1,000 animals, 85 percent. Bison hunts are only in parts of Management Units 7-42, 7-57 and 7-58, 98 percent. Every caribou hunt is a draw." font-family="sans-serif">
   <rect x="0" y="0" width="400" height="360" fill="#fffaf0"/>
 <text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Caribou and bison: status</text>
 <text x="200.0" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">Federal Species at Risk Act listing</text>
 <rect x="10" y="62" width="380" height="28" fill="#2f3a2b"/>
 <text x="20" y="81" font-size="14" fill="#fff" text-anchor="start" font-weight="bold">Animal</text>
-<text x="240" y="81" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">Status</text>
+<text x="242" y="81" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">Status or size</text>
 <text x="345" y="81" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">Hunt?</text>
 <rect x="10" y="90" width="380" height="40" fill="#dfe6d3"/>
 <text x="20" y="107" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Southern Mountain</text>

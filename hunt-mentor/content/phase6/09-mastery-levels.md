@@ -15,16 +15,25 @@ checked: 2026-10-02
 ```diagram mastery-ladder
 ```
 
+- Tick a box only after doing it in the field (Tip).
+
+```more how to use the ladder
 - Each level is seasons, not sessions (Tip).
 - Tick a box only when you have done it in the field, not read about it (Tip).
 - Your brother is on the same ladder. Climb it together and check each other (Tip).
 - Most hunters stay at Hunter for life, and that is a good place to be (Tip).
+```
 
 ## Rookie
 
+```diagram lc-ml-rookie
+```
+
+```more the rookie goal in words
 - Goal: safe, legal, and out there (Tip).
 - Licensed, every firearm handled by [[ACTS]] and [[PROVE]], always hunting with a partner (Tip).
 - Season one is for learning the ground, not filling tags (Tip).
+```
 
 ```checklist s6-rookie
 FWID (Fish and Wildlife ID), basic licence and species licences bought for this year
@@ -40,8 +49,13 @@ Field dressing watched or done with help
 
 ## Apprentice
 
+```diagram lc-ml-apprentice
+```
+
+```more the apprentice goal in words
 - Goal: first animals, clean shots, all the meat home (Tip).
 - You plan most of the trip yourself. Your brother checks the plan (Tip).
+```
 
 ```checklist s6-apprentice
 First big game animal tagged on the spot, licence notched correctly
@@ -56,8 +70,13 @@ One full season of journal entries reviewed in January
 
 ## Hunter
 
+```diagram lc-ml-hunter
+```
+
+```more the hunter goal in words
 - Goal: finds game alone, fills tags most years, never loses the plot on safety (Tip).
 - You make the calls. You still hunt with a partner because it is safer (Tip).
+```
 
 ```checklist s6-hunter
 Three or more seasons on the same ground
@@ -72,11 +91,18 @@ Can explain my MU rules without opening the synopsis, then checked I was right
 
 ## Guide
 
+```diagram lc-ml-guide
+```
+
+- Supervising is law: 3 prior licence years, at most two new hunters (99%, synopsis page 6).
+
+```more the guide goal in words
 - Goal: puts others on game and keeps them safe (Tip).
 - In BC, supervising a youth or an initiation licence hunter needs, among other things, a hunting licence held in at least 3 of the licence years before this one (99%, synopsis page 6).
 - A supervisor may not take more than two youth or initiation licence hunters at a time (99%, page 6).
 - Taking someone hunting for pay or reward is guiding. It needs a guide licence (99%, synopsis page 11).
 - So "Guide" here means unpaid mentor, not a paid guide (Tip).
+```
 
 ```checklist s6-guide
 Met the 3 licence year rule on synopsis page 6
@@ -89,9 +115,16 @@ Walked someone through field dressing and meat care
 
 ## Old Timer
 
+```diagram lc-ml-oldtimer
+```
+
+- Old Timer is not about age. It is what you hand on (Tip).
+
+```more the old timer goal in words
 - Goal: teaches and gives back (Tip).
 - Old Timer is not about age. It is about what you hand on (Tip).
 - The synopsis ethics code: "Be aware that you are a mentor when youth are observing." (99%, synopsis page 77)
+```
 
 ```checklist s6-oldtimer
 Mentored two or more new hunters through their first season
@@ -101,6 +134,8 @@ Shared meat with someone who does not hunt
 Reported a violation, or helped someone report one
 Kept a journal for ten seasons and can show what it taught me
 ```
+
+## Grandpa's rule and mistakes
 
 > [!rule]
 > Grandpa's rule (wisdom): The ladder has no top. The best hunters I knew still called themselves learners.
