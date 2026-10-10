@@ -131,6 +131,9 @@ Study aid only. The official regulations are the law.
 ```diagram parts-home-bc
 ```
 
+```anim ld-meat-home Bone out at the kill. Only meat and a clean skull plate come home.
+```
+
 - CWD is in Alberta. Bone out (85%).
 - BC: meat and cleaned parts only (99%).
 
@@ -150,9 +153,6 @@ Study aid only. The official regulations are the law.
 
 - Evidence of sex for Alberta must stay attached until you are home. Boning out while keeping that evidence takes care: VERIFY Alberta's exact evidence rule.
 - CFIA (Canadian Food Inspection Agency): no national border, no CFIA step. VERIFY only if shipping commercially.
-```
-
-```anim ld-meat-home Bone out at the kill. Only meat and a clean skull plate come home.
 ```
 
 ## Blaze orange rules

@@ -124,7 +124,7 @@ bobcat | Bobcat: spots, short tufts.
 
 ## Licences, weapons and methods
 
-| Animal | Licence | Rimfire? | E calls |
+| Animal | Licence | Rimfire? | Electronic calls |
 |---|---|---|---|
 | Cougar | $30.00 | No | Yes |
 | Wolf | None | No | Yes |
@@ -163,11 +163,10 @@ bobcat | Bobcat: spots, short tufts.
 
 ## Fur and meat handling
 
-| Animal | Keep the meat? | Hide |
-|---|---|---|
-| Cougar | Yes, by law (98%) | To CI with the skull |
-| Wolf, lynx, bobcat, wolverine | Not required (98%) | Remove it to home, tanner or trader |
-| Coyote | Tip: use it | Remove it, it is fur |
+| Animal | You must take out |
+|---|---|
+| Cougar | The meat: neck, ribs, four quarters, loins (98%) |
+| Wolf, coyote, lynx, bobcat, wolverine | The hide, or the edible portions (98%) |
 
 - Cook cougar meat through: Trichinella (85%).
 

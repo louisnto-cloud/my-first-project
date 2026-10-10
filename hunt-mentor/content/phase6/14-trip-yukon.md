@@ -133,6 +133,9 @@ Study aid only. The official regulations are the law.
 ```diagram parts-home-bc
 ```
 
+```anim ld-meat-home Bone out at the kill. Only meat and a clean skull plate come home.
+```
+
 - Export permit before parts leave Yukon (85%).
 - BC: meat and cleaned parts only (99%).
 
@@ -153,9 +156,6 @@ Study aid only. The official regulations are the law.
 - So do not carry BC deer bones north with you either.
 
 - CFIA (Canadian Food Inspection Agency): no national border is crossed, so no CFIA step. VERIFY if you ever ship meat commercially.
-```
-
-```anim ld-meat-home Bone out at the kill. Only meat and a clean skull plate come home.
 ```
 
 ## Blaze orange rules

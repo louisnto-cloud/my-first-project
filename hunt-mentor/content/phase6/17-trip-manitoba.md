@@ -130,6 +130,9 @@ Study aid only. The official regulations are the law.
 ```diagram parts-home-bc
 ```
 
+```anim ld-meat-home Bone out at the kill. Only meat and a clean skull plate come home.
+```
+
 - High risk parts stay in the area (85%).
 - BC: meat and cleaned parts only (99%).
 
@@ -147,9 +150,6 @@ Study aid only. The official regulations are the law.
 
 - You will cross Saskatchewan and Alberta with that meat. Boned out meat and a cleaned skull plate satisfy all three provinces (80%).
 - CFIA (Canadian Food Inspection Agency): no national border, no CFIA step. VERIFY only if shipping commercially.
-```
-
-```anim ld-meat-home Bone out at the kill. Only meat and a clean skull plate come home.
 ```
 
 ## Blaze orange rules

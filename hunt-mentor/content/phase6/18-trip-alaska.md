@@ -170,6 +170,9 @@ ld-ak-gun-6 | Coming home: PAL, declare everything.
 ```diagram parts-home-bc
 ```
 
+```anim ld-meat-home Bone out at the kill. Only meat and a clean skull plate come home.
+```
+
 - Bears sealed, CITES for bear, wolf, lynx (85%).
 - BC: meat and cleaned parts only (99%).
 
@@ -192,9 +195,6 @@ ld-ak-gun-6 | Coming home: PAL, declare everything.
 - "To possess any part of a Cervidae (caribou, deer, elk, moose), that was killed outside of British Columbia, other than (1) the edible meat of the four quarters, loins, neck, and ribs, or (2) the hide, antlers, and skull plate if, before being brought into British Columbia, the part is cleaned in a manner that removes all tissue." (99%)
 - So an Alaska caribou or Sitka deer comes home boned out, antlers on a skull plate scraped clean. Item 51 also bans using any out of province cervid part for hunting in BC (99%).
 - You also drive through Yukon, which bans cervid carcasses and parts except cleaned skull caps with antlers, cleaned teeth, meat detached from head and backbone, finished mounts and tanned hides (85%).
-```
-
-```anim ld-meat-home Bone out at the kill. Only meat and a clean skull plate come home.
 ```
 
 ## Blaze orange rules
