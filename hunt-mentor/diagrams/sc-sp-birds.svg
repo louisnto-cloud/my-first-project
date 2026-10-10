@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 848" role="img" aria-label="Icon grid of game birds, all with a general season somewhere in BC. Basic licence only: grouse, sharp tailed grouse, ptarmigan, chukar, gray partridge, pheasant, quail, wild turkey, raven and Eurasian collared dove. Basic licence plus the federal migratory bird permit: mourning dove, band tailed pigeon, ducks, geese, coots, snipe and brant." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="848" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Game birds</text>
+<text x="200.0" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">Permit: federal migratory bird permit, $17.00</text>
+<rect x="4" y="62" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(67 112) scale(1.15)"><path d="M-6,12 L-6,18 M4,12 L4,18" stroke="#23261f" stroke-width="2"/><ellipse cx="0" cy="2" rx="14" ry="11" fill="#8b6a48" stroke="#23261f"/><path d="M12,-2 L20,2 L12,6 Z" fill="#8b6a48" stroke="#23261f"/><circle cx="-12" cy="-8" r="6" fill="#8b6a48" stroke="#23261f"/><path d="M-18,-8 L-21,-6 L-18,-5 Z" fill="#555"/><circle cx="-13" cy="-9" r="1.3" fill="#23261f"/></g>
+<text x="67" y="152" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Grouse</text>
+<rect x="9" y="166" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="67.0" y="181" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="67" y="203" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic</text>
+<rect x="137" y="62" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(200 112) scale(1.15)"><path d="M-6,12 L-6,18 M4,12 L4,18" stroke="#23261f" stroke-width="2"/><ellipse cx="0" cy="2" rx="14" ry="11" fill="#a8865a" stroke="#23261f"/><path d="M12,-2 L20,-4 L12,6 Z" fill="#a8865a" stroke="#23261f"/><circle cx="-12" cy="-8" r="6" fill="#a8865a" stroke="#23261f"/><path d="M-18,-8 L-21,-6 L-18,-5 Z" fill="#555"/><circle cx="-13" cy="-9" r="1.3" fill="#23261f"/></g>
+<text x="200" y="144" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Sharp tailed</text>
+<text x="200" y="159" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">grouse</text>
+<rect x="142" y="166" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="200.0" y="181" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="200" y="203" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic</text>
+<rect x="271" y="62" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(333 112) scale(1.15)"><path d="M-6,12 L-6,18 M4,12 L4,18" stroke="#23261f" stroke-width="2"/><ellipse cx="0" cy="2" rx="14" ry="11" fill="#ffffff" stroke="#23261f"/><path d="M12,-2 L20,2 L12,6 Z" fill="#ffffff" stroke="#23261f"/><circle cx="-12" cy="-8" r="6" fill="#ffffff" stroke="#23261f"/><path d="M-18,-8 L-21,-6 L-18,-5 Z" fill="#555"/><circle cx="-13" cy="-9" r="1.3" fill="#23261f"/></g>
+<text x="333" y="152" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Ptarmigan</text>
+<rect x="275" y="166" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="333.0" y="181" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="333" y="203" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic</text>
+<rect x="4" y="218" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(67 268) scale(1.15)"><path d="M-6,12 L-6,18 M4,12 L4,18" stroke="#23261f" stroke-width="2"/><ellipse cx="0" cy="2" rx="14" ry="11" fill="#b8a890" stroke="#23261f"/><path d="M12,-2 L20,2 L12,6 Z" fill="#b8a890" stroke="#23261f"/><circle cx="-12" cy="-8" r="6" fill="#b8a890" stroke="#23261f"/><path d="M-18,-8 L-21,-6 L-18,-5 Z" fill="#555"/><circle cx="-13" cy="-9" r="1.3" fill="#23261f"/><path d="M-4,0 l2,6 M2,0 l2,6 M8,0 l2,6" stroke="#5c3b1c" stroke-width="2"/></g>
+<text x="67" y="308" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Chukar</text>
+<rect x="9" y="322" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="67.0" y="337" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="67" y="359" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic</text>
+<rect x="137" y="218" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(200 268) scale(1.15)"><path d="M-6,12 L-6,18 M4,12 L4,18" stroke="#23261f" stroke-width="2"/><ellipse cx="0" cy="2" rx="14" ry="11" fill="#9a958a" stroke="#23261f"/><path d="M12,-2 L20,2 L12,6 Z" fill="#9a958a" stroke="#23261f"/><circle cx="-12" cy="-8" r="6" fill="#9a958a" stroke="#23261f"/><path d="M-18,-8 L-21,-6 L-18,-5 Z" fill="#555"/><circle cx="-13" cy="-9" r="1.3" fill="#23261f"/><path d="M-4,0 l2,6 M2,0 l2,6 M8,0 l2,6" stroke="#a0522d" stroke-width="2"/></g>
+<text x="200" y="308" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Gray partridge</text>
+<rect x="142" y="322" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="200.0" y="337" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="200" y="359" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic</text>
+<rect x="271" y="218" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(333 268) scale(1.15)"><path d="M-6,12 L-6,18 M4,12 L4,18" stroke="#23261f" stroke-width="2"/><ellipse cx="0" cy="2" rx="14" ry="11" fill="#a0522d" stroke="#23261f"/><path d="M10,0 L36,-8 L12,6 Z" fill="#a0522d" stroke="#23261f"/><circle cx="-12" cy="-10" r="5" fill="#2f6b3a" stroke="#23261f"/><path d="M-12,-5 h4" stroke="#fff" stroke-width="2"/><circle cx="-14" cy="-11" r="2" fill="#c0392b"/><path d="M-18,-8 L-21,-6 L-18,-5 Z" fill="#555"/><circle cx="-13" cy="-9" r="1.3" fill="#23261f"/></g>
+<text x="333" y="308" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Pheasant</text>
+<rect x="275" y="322" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="333.0" y="337" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="333" y="359" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic</text>
+<rect x="4" y="374" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(67 424) scale(1.15)"><path d="M-6,12 L-6,18 M4,12 L4,18" stroke="#23261f" stroke-width="2"/><ellipse cx="0" cy="2" rx="14" ry="11" fill="#6f7a8a" stroke="#23261f"/><path d="M12,-2 L20,2 L12,6 Z" fill="#6f7a8a" stroke="#23261f"/><circle cx="-12" cy="-8" r="6" fill="#6f7a8a" stroke="#23261f"/><path d="M-18,-8 L-21,-6 L-18,-5 Z" fill="#555"/><circle cx="-13" cy="-9" r="1.3" fill="#23261f"/><path d="M-12,-14 C-14,-20 -10,-24 -8,-22" stroke="#23261f" stroke-width="2" fill="none"/></g>
+<text x="67" y="464" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Quail</text>
+<rect x="9" y="478" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="67.0" y="493" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="67" y="515" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic</text>
+<rect x="137" y="374" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(200 424) scale(1.15)"><path d="M-6,12 L-6,18 M4,12 L4,18" stroke="#23261f" stroke-width="2"/><path d="M6,0 C10,-26 34,-20 30,6 Z" fill="#6b4a2b" stroke="#23261f"/><ellipse cx="0" cy="2" rx="14" ry="11" fill="#3e2a1a" stroke="#23261f"/><path d="M12,-2 L20,2 L12,6 Z" fill="#3e2a1a" stroke="#23261f"/><circle cx="-12" cy="-8" r="6" fill="#3e2a1a" stroke="#23261f"/><path d="M-18,-8 L-21,-6 L-18,-5 Z" fill="#555"/><circle cx="-13" cy="-9" r="1.3" fill="#23261f"/><path d="M-16,-6 C-18,-2 -16,2 -14,0" stroke="#c0392b" stroke-width="2" fill="none"/></g>
+<text x="200" y="464" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Wild turkey</text>
+<rect x="142" y="478" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="200.0" y="493" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="200" y="515" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic</text>
+<rect x="271" y="374" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(333 424) scale(1.15)"><path d="M-6,12 L-6,18 M4,12 L4,18" stroke="#23261f" stroke-width="2"/><ellipse cx="0" cy="2" rx="14" ry="11" fill="#111111" stroke="#23261f"/><path d="M12,-2 L20,2 L12,6 Z" fill="#111111" stroke="#23261f"/><circle cx="-12" cy="-8" r="6" fill="#111111" stroke="#23261f"/><path d="M-18,-8 L-24,-6 L-18,-5 Z" fill="#23261f"/><circle cx="-13" cy="-9" r="1.3" fill="#fff"/></g>
+<text x="333" y="464" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Raven</text>
+<rect x="275" y="478" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="333.0" y="493" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="333" y="515" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic</text>
+<rect x="4" y="530" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(67 580) scale(1.15)"><path d="M-6,12 L-6,18 M4,12 L4,18" stroke="#23261f" stroke-width="2"/><ellipse cx="0" cy="2" rx="14" ry="11" fill="#b8a890" stroke="#23261f"/><path d="M12,0 L24,4 L12,6 Z" fill="#b8a890" stroke="#23261f"/><circle cx="-12" cy="-6" r="4.5" fill="#b8a890" stroke="#23261f"/><path d="M-18,-8 L-21,-6 L-18,-5 Z" fill="#555"/><circle cx="-13" cy="-9" r="1.3" fill="#23261f"/></g>
+<text x="67" y="620" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Doves</text>
+<rect x="9" y="634" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="67.0" y="649" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="67" y="671" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Mourning: + permit</text>
+<rect x="137" y="530" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(200 580) scale(1.15)"><path d="M-6,12 L-6,18 M4,12 L4,18" stroke="#23261f" stroke-width="2"/><ellipse cx="0" cy="2" rx="14" ry="11" fill="#8a8f9a" stroke="#23261f"/><path d="M12,0 L24,4 L12,6 Z" fill="#8a8f9a" stroke="#23261f"/><circle cx="-12" cy="-6" r="4.5" fill="#8a8f9a" stroke="#23261f"/><path d="M-18,-8 L-21,-6 L-18,-5 Z" fill="#555"/><circle cx="-13" cy="-9" r="1.3" fill="#23261f"/></g>
+<text x="200" y="612" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Band tailed</text>
+<text x="200" y="627" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">pigeon</text>
+<rect x="142" y="634" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="200.0" y="649" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="200" y="671" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic + permit</text>
+<rect x="271" y="530" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(333 580) scale(1.15)"><path d="M-26,10 h52" stroke="#4a7fb0" stroke-width="3"/><path d="M-16,4 C-16,-8 18,-8 22,2 L16,8 L-14,8 Z" fill="#8a8a84" stroke="#23261f"/><circle cx="-14" cy="-6" r="6" fill="#5f7a3a" stroke="#23261f"/><path d="M-20,-6 L-28,-4 L-20,-3 Z" fill="#e0b030"/></g>
+<text x="333" y="612" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Ducks, coots,</text>
+<text x="333" y="627" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">snipe</text>
+<rect x="275" y="634" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="333.0" y="649" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="333" y="671" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic + permit</text>
+<rect x="4" y="686" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(67 736) scale(1.15)"><path d="M-26,10 h52" stroke="#4a7fb0" stroke-width="3"/><path d="M-16,4 C-16,-8 18,-8 22,2 L16,8 L-14,8 Z" fill="#7a6a5a" stroke="#23261f"/><path d="M-12,0 L-14,-20" stroke="#23261f" stroke-width="5"/><circle cx="-15" cy="-22" r="5" fill="#23261f"/><path d="M-20,-22 L-26,-20 L-20,-19 Z" fill="#23261f"/><path d="M-17,-22 C-16,-18 -13,-17 -12,-19" stroke="#fff" stroke-width="2.5" fill="none"/></g>
+<text x="67" y="776" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Geese</text>
+<rect x="9" y="790" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="67.0" y="805" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="67" y="827" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic + permit</text>
+<rect x="137" y="686" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(200 736) scale(1.15)"><path d="M-26,10 h52" stroke="#4a7fb0" stroke-width="3"/><path d="M-16,4 C-16,-8 18,-8 22,2 L16,8 L-14,8 Z" fill="#3a3a3a" stroke="#23261f"/><path d="M-12,0 L-14,-20" stroke="#23261f" stroke-width="5"/><circle cx="-15" cy="-22" r="5" fill="#23261f"/><path d="M-20,-22 L-26,-20 L-20,-19 Z" fill="#23261f"/><path d="M-15,-14 h3" stroke="#fff" stroke-width="2"/></g>
+<text x="200" y="776" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Brant</text>
+<rect x="142" y="790" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="200.0" y="805" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="200" y="827" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic + permit, R2</text>
+</svg>

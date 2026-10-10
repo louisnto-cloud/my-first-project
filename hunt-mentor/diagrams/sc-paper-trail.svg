@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 426" role="img" aria-label="Flowchart of the legal paper trail. Kill. Notch the licence before touching the animal. Evidence of sex stays attached. Who drives the meat? You: your species licence travels with the meat. Someone else: a Record of Receipt. At the butcher: get a receipt with the hunter&#x27;s Fish and Wildlife ID, the licence number, the species and the sex. Report if your species needs it. Keep the papers until the meat is eaten." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="426" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">The paper trail, start to finish</text>
+<rect x="60" y="40" width="280" height="32" rx="6" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="60.9" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">Kill</text>
+<line x1="200" y1="72" x2="200.0" y2="77.0" stroke="#2f3a2b" stroke-width="2"/><polygon points="200,84 203.8,77.0 196.2,77.0" fill="#2f3a2b"/>
+<rect x="60" y="84" width="280" height="32" rx="6" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="104.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Notch the licence, before touching</text>
+<line x1="200" y1="116" x2="200.0" y2="121.0" stroke="#2f3a2b" stroke-width="2"/><polygon points="200,128 203.8,121.0 196.2,121.0" fill="#2f3a2b"/>
+<rect x="60" y="128" width="280" height="32" rx="6" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="148.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Evidence of sex stays attached</text>
+<line x1="200" y1="160" x2="200.0" y2="165.0" stroke="#2f3a2b" stroke-width="2"/><polygon points="200,172 203.8,165.0 196.2,165.0" fill="#2f3a2b"/>
+<rect x="60" y="172" width="280" height="32" rx="6" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="192.9" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">Who drives the meat?</text>
+<line x1="150" y1="204" x2="111.5" y2="219.4" stroke="#2f3a2b" stroke-width="2"/><polygon points="105,222 112.9,223.0 110.1,215.8" fill="#2f3a2b"/>
+<line x1="250" y1="204" x2="288.5" y2="219.4" stroke="#2f3a2b" stroke-width="2"/><polygon points="295,222 289.9,215.8 287.1,223.0" fill="#2f3a2b"/>
+<rect x="10" y="222" width="185" height="44" rx="8" fill="#e3eedc" stroke="#2f6b3a" stroke-width="2"/>
+<text x="102.5" y="239.9" font-size="14" fill="#23261f" text-anchor="middle">You: your licence</text>
+<text x="102.5" y="257.9" font-size="14" fill="#23261f" text-anchor="middle">with the meat</text>
+<rect x="205" y="222" width="185" height="44" rx="8" fill="#dce8f3" stroke="#4a7fb0" stroke-width="2"/>
+<text x="297.5" y="239.9" font-size="14" fill="#23261f" text-anchor="middle">Someone else:</text>
+<text x="297.5" y="257.9" font-size="14" fill="#23261f" text-anchor="middle">Record of Receipt</text>
+<line x1="102" y1="266" x2="163.2" y2="280.4" stroke="#2f3a2b" stroke-width="2"/><polygon points="170,282 164.1,276.6 162.3,284.1" fill="#2f3a2b"/>
+<line x1="298" y1="266" x2="236.8" y2="280.4" stroke="#2f3a2b" stroke-width="2"/><polygon points="230,282 237.7,284.1 235.9,276.6" fill="#2f3a2b"/>
+<rect x="60" y="282" width="280" height="44" rx="6" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="299.9" font-size="14" fill="#23261f" text-anchor="middle">Butcher: get a receipt (FWID,</text>
+<text x="200.0" y="317.9" font-size="14" fill="#23261f" text-anchor="middle">licence number, species, sex)</text>
+<line x1="200" y1="326" x2="200.0" y2="331.0" stroke="#2f3a2b" stroke-width="2"/><polygon points="200,338 203.8,331.0 196.2,331.0" fill="#2f3a2b"/>
+<rect x="60" y="338" width="280" height="32" rx="6" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="358.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Report if your species needs it</text>
+<line x1="200" y1="370" x2="200.0" y2="375.0" stroke="#2f3a2b" stroke-width="2"/><polygon points="200,382 203.8,375.0 196.2,375.0" fill="#2f3a2b"/>
+<rect x="60" y="382" width="280" height="32" rx="6" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
+<text x="200.0" y="402.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Keep papers until it is eaten</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="One deer hind quarter from the gutless method, a tip. A strip of hide runs along the top to the unskinned tail. The testicle or penis stays attached to the same quarter. One hind quarter carries both, so the evidence of sex stays naturally attached to one part of the carcass." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="17" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Gutless method: plan the quarter (Tip)</text>
+<path d="M80 80 C140 60 240 60 290 90 C320 110 320 160 300 200 L250 270 L200 270 L210 210 C170 190 110 170 80 140 Z" fill="#c0504d" stroke="#23261f" stroke-width="2"/>
+<path d="M80 80 C140 60 240 60 290 90 C300 96 306 104 310 112 L250 120 C200 110 130 110 84 120 Z" fill="#8b5a2b" stroke="#23261f" stroke-width="1.5"/>
+<path d="M300 92 C330 84 350 96 346 120 C340 130 320 124 312 112 Z" fill="#ffffff" stroke="#23261f" stroke-width="2"/>
+<circle cx="220" cy="210" r="12" fill="#e3b5b5" stroke="#23261f" stroke-width="2"/>
+<line x1="360" y1="70" x2="345.5" y2="88.9" stroke="#e8590c" stroke-width="2.5"/><polygon points="340,96 349.4,91.9 341.6,85.8" fill="#e8590c"/>
+<text x="340" y="60" font-size="15" fill="#e8590c" text-anchor="middle" font-weight="bold">Unskinned tail</text>
+<line x1="140" y1="70" x2="154.5" y2="88.9" stroke="#e8590c" stroke-width="2.5"/><polygon points="160,96 158.4,85.8 150.6,91.9" fill="#e8590c"/>
+<text x="110" y="60" font-size="15" fill="#e8590c" text-anchor="middle" font-weight="bold">Strip of hide</text>
+<line x1="120" y1="240" x2="197.4" y2="216.6" stroke="#e8590c" stroke-width="2.5"/><polygon points="206,214 196.0,211.9 198.8,221.3" fill="#e8590c"/>
+<text x="90" y="258" font-size="15" fill="#e8590c" text-anchor="middle" font-weight="bold">Testicle or penis,</text>
+<text x="90" y="276" font-size="15" fill="#e8590c" text-anchor="middle" font-weight="bold">same quarter</text>
+<text x="300" y="290" font-size="14" fill="#2f3a2b" text-anchor="middle">One hind quarter carries both</text>
+</svg>

@@ -9,44 +9,52 @@ checked: 2026-10-01
 > [!why]
 > The coast an hour from Mission holds ducks you will never see at Heffley Creek, and one goose with a ten day season. The rules change at the tide line.
 
+```diagram sb-sea-paperwork
+```
+
+- Sea ducks count in your 8. Harlequin: 2 a day (98%).
+- Hunt scoters. Let the harlequins swim (Tip).
+
+```more what this session covers
 - Sea ducks in BC: three scoters, long tailed duck and harlequin. Eiders are not BC birds (75%).
 - All count in the 8 duck daily limit; harlequin is capped at 2 a day and 6 in possession (98%).
 - Brant: open only in MU (Management Unit) 2-4, March 1 to 10, 3 a day, 9 in possession (98%).
 - MU 2-4 and the Mission portion of MU 2-8 need the Fraser Valley Special Area licence **and** $1,000,000 liability insurance (98%).
 - You need the federal MGBHP (Migratory Game Bird Hunting Permit), non toxic shot, and a boat that is not moving when you shoot (98%).
 - Sea ducks taste strong; harlequins are few. Hunt scoters, let the harlequins swim (Tip).
+```
 
 ## Identify: the sea ducks
 
 ```photo surf-scoter
 ```
 
-- **Surf scoter:** male black with white patches on the forehead and nape, an orange and white swollen bill; the "skunk head". Female sooty brown with two pale face patches (75%). Common on the Pacific coast in winter (75%).
+- Surf scoter: the "skunk head" (75%).
 
 ```photo white-winged-scoter
 ```
 
-- **White winged scoter:** the biggest scoter; a white wing patch that shows in flight but hides when swimming; male has a small white teardrop at the eye (75%).
+- White winged scoter: biggest, white wing patch in flight (75%).
 
 ```photo black-scoter
 ```
 
-- **Black scoter:** male all black with an orange knob on the bill; female dark with a pale face and front of neck (75%).
+- Black scoter: all black, orange knob on the bill (75%).
 
 ```photo long-tailed-duck
 ```
 
-- **Long tailed duck:** male has a long pointed tail and a bold black and white pattern that changes between summer and winter; females pale with a square head and a stubby bill; solid dark wings in flight; very vocal flocks (75%).
+- Long tailed duck: long pointed tail, loud flocks (75%).
 
 ```photo harlequin-duck
 ```
 
-- **Harlequin:** small, under about 600 g; male slate blue with white stripes and chestnut sides; female dark brown with white face spots and a short bill (85%). Found in small flocks close to rocky shore, bobbing its head (85%).
+- Harlequin: slate blue, white stripes. **2 a day** (85%, limit 98%).
 
 ```photo common-eider
 ```
 
-- **Eiders:** heavy northern ducks of the Arctic and Atlantic; the BC federal table has no eider line (95%). Treat any eider as a once in a lifetime sighting, not a target (Tip).
+- Eider: not a BC bird. Not a target (95%).
 
 ```diagram duck-silhouettes
 ```
@@ -54,18 +62,48 @@ checked: 2026-10-01
 > [!tip]
 > Goldeneyes and buffleheads share the same bays. Goldeneye is also capped at 2 a day. Learn the white cheek spot before you shoot.
 
+```more every mark in full
+- **Surf scoter:** male black with white patches on the forehead and nape, an orange and white swollen bill; the "skunk head". Female sooty brown with two pale face patches (75%). Common on the Pacific coast in winter (75%).
+- **White winged scoter:** the biggest scoter; a white wing patch that shows in flight but hides when swimming; male has a small white teardrop at the eye (75%).
+- **Black scoter:** male all black with an orange knob on the bill; female dark with a pale face and front of neck (75%).
+- **Long tailed duck:** male has a long pointed tail and a bold black and white pattern that changes between summer and winter; females pale with a square head and a stubby bill; solid dark wings in flight; very vocal flocks (75%).
+- **Harlequin:** small, under about 600 g; male slate blue with white stripes and chestnut sides; female dark brown with white face spots and a short bill (85%). Found in small flocks close to rocky shore, bobbing its head (85%).
+- **Eiders:** heavy northern ducks of the Arctic and Atlantic; the BC federal table has no eider line (95%). Treat any eider as a once in a lifetime sighting, not a target (Tip).
+```
+
 ## Identify: brant
 
+```photo brant Brant: small dark goose, thin white necklace.
+```
+
+- Salt bays and eelgrass. Low wavering lines over water (75%).
+
+```diagram sb-goose-size
+```
+
+```more brant in full
 - A small dark goose, black head and neck with a small white neck mark, dark back; the Pacific "black brant" has a dark belly (75%).
 - Wintering flocks sit on salt bays and estuaries, feeding on eelgrass (75%).
 - Flies low in long wavering lines over the water, with a low "ruk ruk" call (75%).
 - Spring flocks pass through the Fraser delta in March on the way north to Alaska (Tip).
+```
 
 ## Rules, quoted
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram sb-brant-window
+```
+
+- Brant: MU (Management Unit) 2-4 only, 1 to 10 March, 3 a day (98%).
+
+```diagram rb-duck-bag
+```
+
+- Scoters and long tailed ducks: no own cap, they count in the 8 (95%).
+
+```more every row, verbatim
 - Federal table, Migratory Birds Regulations, 2022, Part 10, District No. 2, item (e): "Brant | 9 | March 1 to March 10 (only in Provincial Management Unit 2-4) | 3" (98%)
 - Districts 1 and 3 to 8, Brant: "No open season" (98%).
 - Provincial synopsis, Region 2, page 28: "BRANT | 2-4 | Mar 1 - Mar 10 | 3 (9)" (98%)
@@ -73,9 +111,17 @@ checked: 2026-10-01
 - "Daily aggregate bag limit for ducks is 8: max of 4 Pintails, 4 Canvasbacks, 2 Goldeneyes (Barrow's and Common in aggregate) and 2 Harlequins" (page 28) (98%)
 - Possession: 24 ducks, with not more than 6 harlequins and not more than 6 goldeneyes (98%).
 - Scoters and long tailed ducks have no separate cap; they count within the 8 (95%).
+```
 
 ## Permit conditions for MU 2-4 and Mission
 
+```diagram sb-sea-paperwork
+```
+
+- Missing the licence or the insurance? No hunt in MU (Management Unit) 2-4 (98%).
+- Burns Bog: closed. Boundary Bay: no snipe (98%).
+
+```more every condition in full
 - The Fraser Valley Special Area licence costs $10.00 (98%).
 - Map B10 note: all persons hunting in MU 2-4, and in those parts of MU 2-8 inside Maple Ridge, Pitt Meadows, Mission and Coquitlam, must buy the Fraser Valley Special Area Hunting Licence in addition to other provincial licences and the migratory bird permit (98%).
 - The same note: "$1,000,000.00 Public Liability and Property Damage insurance is required." (98%)
@@ -83,9 +129,19 @@ checked: 2026-10-01
 - Boundary Bay Wildlife Management Area (MU 2-4) is closed to snipe hunting, including all foreshore seaward of the dykes; ducks are not named in that closure (98%).
 - Burns Bog (MU 2-4) is a no hunting and no trapping area (98%).
 - The March Canada goose season in MU 2-4 does not apply within 100 m of any dyke in Delta except Westham Island (98%).
+```
 
 ## Methods on the water
 
+```diagram rb-boat-rules
+```
+
+- Shoot only from a stopped boat (99%). Non toxic shot only (98%).
+
+```anim rb-boat-glide A gliding boat is still moving. No shot.
+```
+
+```more every method rule in full
 - Hours: half an hour before sunrise to half an hour after sunset (98%).
 - No hunting migratory birds from a moving boat that has a motor or sail; a boat still gliding counts as moving (99%, page 11 item 24, 2 October 2026 edition).
 - Retrieving: the BC synopsis (page 12, 2 October 2026 edition) says retrieving a bird with a boat is lawful when the boat is not being propelled by a motor or sail (99%). Federal section 41 allows retrieval from a moving boat (99%). The rules differ, so the safe way is to paddle or drift to the bird with every gun unloaded (Tip).
@@ -93,16 +149,38 @@ checked: 2026-10-01
 - Leave one feathered wing or the feathered head on every bird until home (98%).
 - No shooting within 400 m of bait (98%).
 - Reasonable effort to retrieve every bird is the law (98%). A sea duck that dives wounded is lost without a boat (Tip).
+```
 
 ## Coastal access from Mission
 
+| What | Detail |
+|---|---|
+| Boundary Bay | MU (Management Unit) 2-4, about 47 km straight line, an hour's drive (85%, Tip) |
+| Launch and dyke access | VERIFY with Delta first |
+| Fraser at Mission | MU 2-8: special licence and insurance (98%) |
+| The clock | Tide tables (Tip) |
+
+```more access in full
 - Boundary Bay is in MU 2-4 (98%). It lies about 47 km from Mission in a straight line (calculated) (85%); about an hour's drive (Tip).
 - Public launch and dyke access points for hunting: VERIFY with Delta and the Boundary Bay Wildlife Management Area rules before you go.
 - The Fraser River at Mission is MU 2-8; inside the Mission district limits the special licence and insurance apply (98%).
 - Tide tables rule the day: scoters raft on rising water near mussel beds and move with the tide (Tip).
+```
 
 ## Tactics: options
 
+```diagram sb-longline
+```
+
+- A: anchored boat and long lines. B: a point on shore. C: brant in March (Tip).
+
+> [!lean]
+> Option B first, with a friend who has a boat on standby for retrieves. Build to Option A after a cold water course.
+
+```anim sb-tide-drift From a point, the tide takes your bird.
+```
+
+```more the three options, pros and cons
 ### Option A: layout or anchored boat with long line decoys
 - Anchor at the edge of a scoter raft's flight line, set 2 or 3 long lines of black decoys, shoot as birds swing in.
 - Pros: the standard sea duck method; the boat does the retrieving (hunter consensus) (60%).
@@ -117,45 +195,81 @@ checked: 2026-10-01
 - Scout eelgrass flats the week before, set a dozen brant decoys at low tide, hunt the rising tide.
 - Pros: a rare hunt.
 - Cons: a short window, crowded flats, and the full MU 2-4 paperwork.
-
-> [!lean]
-> Option B first, with a friend who has a boat on standby for retrieves. Build to Option A after a cold water course.
+```
 
 ## Gun and load
 
+```diagram gr-shot-sizes
+```
+
+- Steel 2 or BB for tough scoters. Steel safe modified choke (Tip).
+
+```more gun and load in full
 - A 12 gauge with a modified choke rated for steel (Tip).
 - Steel 2 or BB for scoters; they are tough and well feathered (Tip). Pattern it on paper first (Tip).
 - Shots are low over water; know where the next boat and the shore are (Tip).
+```
 
 ## Safety on salt water
 
+```diagram hf-cold-water
+```
+
+- PFD (personal flotation device) on and zipped. Trip plan filed (Tip).
+
+```diagram gr-pfd-worn
+```
+
+```more safety in full
 - Cold water kills faster than cold air; wear the PFD, carry a VHF radio or satellite messenger, and file a trip plan (Tip).
 - Anchor from the bow only; a stern anchor swamps a boat in swell (Tip).
 - Never shoot from a moving boat; it is unlawful and it is how people drown (98%).
+```
 
 ## Meat
 
+| Bird | How |
+|---|---|
+| Sea ducks | Breast out on the beach, wing stays on (98%) |
+| Strong flavour | Soak in milk or brine, sear rare, or sausage (Tip) |
+| Brant | Best eating goose on the coast: pluck and roast (Tip) |
+
+```more meat in full
 - Breast out sea ducks on the beach, keep the wing attached (98%).
 - Strong flavour: soak in milk or brine, slice thin, sear rare, or grind for sausage (Tip).
 - Brant is the best eating goose on the coast: pluck and roast (Tip).
+```
 
 ## Beginner mistakes
 
+| Mistake | Do this instead |
+|---|---|
+| No special licence or insurance | Buy both before Boundary Bay |
+| A third harlequin or goldeneye | 2 a day, inside the 8 |
+| Shooting while drifting | Anchor first |
+
+```more the mistakes in full
 > [!mistake]
 > - Hunting Boundary Bay without the special area licence and the insurance certificate.
 > - Shooting a third harlequin or goldeneye because "ducks are 8".
 > - Shooting from the boat as it drifts.
+```
 
 ## Grandpa's rules
+
+```photo surf-scoter On the coast the tide is the clock.
+```
 
 > [!rule]
 > On the coast the tide is the clock and the wind is the boss. Both are set before you leave the house.
 
+```more one more rule, and the first coastal task
 > [!rule]
 > If you cannot get the bird back, it was never yours to shoot.
 
 > [!field]
 > Before the first coastal trip: buy the special area licence, get the insurance certificate, and walk the Boundary Bay dyke at low tide with binoculars to find the scoter rafts.
+```
 
 ```checklist s4-sea-duck-start
 Buy the MGBHP, the Fraser Valley Special Area licence and insurance
@@ -167,11 +281,15 @@ Take a cold water safety course before any boat hunt
 
 ## Sources
 
+- Federal regulations, BC synopsis, Hinterland Who's Who, Audubon. Checked 2026-10-01.
+
+```more every source, page and date checked
 - Government of Canada, [Migratory Birds Regulations, 2022 (SOR/2022-105), full text](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html), Schedule 3, Part 10 British Columbia, Table 1, read directly, checked 2026-10-01 (98%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: migratory bird definition page 3; fees page 8; power boat and bait page 11; hours and limits page 12; shot and retrieval page 13; wing rule page 15; Region 2 pages 27 and 28; Map B10 page 30; checked 2026-10-01 (98%)
 - Hinterland Who's Who, [Harlequin Duck](https://www.hww.ca/en/wildlife/birds/harlequin-duck.html), checked 2026-10-01 (85%)
 - Audubon field guide, [Surf Scoter](https://www.audubon.org/field-guide/bird/surf-scoter), [White winged Scoter](https://www.audubon.org/field-guide/bird/white-winged-scoter), [Black Scoter](https://www.audubon.org/field-guide/bird/black-scoter), [Long tailed Duck](https://www.audubon.org/field-guide/bird/long-tailed-duck), [Brant](https://www.audubon.org/field-guide/bird/brant), [Common Eider](https://www.audubon.org/field-guide/bird/common-eider), checked 2026-10-01 (75%)
 - Distance Mission to Boundary Bay: calculated from base coordinates in `data/bases.json`, straight line (85%)
+```
 
 ```quiz
 [

@@ -207,11 +207,11 @@ yt-upland-basics | Walk the cover slowly; the stop makes birds flush.
 ```diagram sb-upland-pinch
 ```
 
-```anim hf-covey-flush Pick one bird, high, in your own wedge.
-```
-
 > [!lean]
 > Option A for quail and partridge, Option C once you are fit and know one chukar slope. Pheasant only with a landowner who wants them gone.
+
+```anim hf-covey-flush Pick one bird, high, in your own wedge.
+```
 
 ```more the three options, pros and cons, and the retrieval law
 ### Option A: the straight line walk

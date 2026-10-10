@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Evidence of sex by animal, 95 percent. Deer: the unskinned tail and a testicle or part of the penis, or the udder and teats; antlers do not count. Moose, elk and caribou: the tail or a hide patch at least 6 square centimetres, and a testicle or penis, or udder or teats. Black bear in Regions 2 and 3: not on the list, but no possessing a gall bladder or paws separated from the carcass. Cougar: skull and hide with evidence attached, then compulsory inspection." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Evidence of sex by animal</text>
+<line x1="200" y1="40" x2="200" y2="294" stroke="#8a9a6b" stroke-dasharray="6 6" stroke-width="2"/>
+<line x1="10" y1="166" x2="390" y2="166" stroke="#8a9a6b" stroke-dasharray="6 6" stroke-width="2"/>
+<text x="100" y="60" font-size="16" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Deer</text>
+<text x="100" y="84" font-size="14" fill="#23261f" text-anchor="middle">Unskinned tail</text>
+<text x="100" y="102" font-size="14" fill="#23261f" text-anchor="middle">AND testicle or penis,</text>
+<text x="100" y="120" font-size="14" fill="#23261f" text-anchor="middle">or udder and teats</text>
+<text x="100" y="138" font-size="14" fill="#23261f" text-anchor="middle">Antlers do not count</text>
+<text x="300" y="60" font-size="16" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Moose, elk, caribou</text>
+<text x="300" y="84" font-size="14" fill="#23261f" text-anchor="middle">Tail, or a hide patch</text>
+<text x="300" y="102" font-size="14" fill="#23261f" text-anchor="middle">at least 6 cm square,</text>
+<text x="300" y="120" font-size="14" fill="#23261f" text-anchor="middle">AND testicle or penis,</text>
+<text x="300" y="138" font-size="14" fill="#23261f" text-anchor="middle">or udder or teats</text>
+<text x="100" y="188" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Black bear, Regions 2, 3</text>
+<text x="100" y="212" font-size="14" fill="#23261f" text-anchor="middle">Not on the list.</text>
+<text x="100" y="230" font-size="14" fill="#23261f" text-anchor="middle">But no gall bladder or</text>
+<text x="100" y="248" font-size="14" fill="#23261f" text-anchor="middle">paws apart from the</text>
+<text x="100" y="266" font-size="14" fill="#23261f" text-anchor="middle">carcass</text>
+<text x="300" y="188" font-size="16" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Cougar</text>
+<text x="300" y="212" font-size="14" fill="#23261f" text-anchor="middle">Skull and hide with</text>
+<text x="300" y="230" font-size="14" fill="#23261f" text-anchor="middle">evidence attached,</text>
+<text x="300" y="248" font-size="14" fill="#23261f" text-anchor="middle">then inspection</text>
+<text x="200" y="292" font-size="13" fill="#8b5a2b" text-anchor="middle">All 95%, synopsis pages 12, 15, 17</text>
+</svg>

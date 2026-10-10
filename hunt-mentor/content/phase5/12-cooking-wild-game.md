@@ -12,12 +12,26 @@ checked: 2026-10-01
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram lc-ck-temps
+```
+
+- 71°C is Canada's food safety number for all wild game (95%).
+- Bear and ground meat: 71°C, no debate (95%).
+
+```more lean meat and the safety number
 - Deer, moose and elk have almost no fat inside the muscle. Overcooked, they turn grey and dry (80%, North Dakota State University: venison steak 1.4% fat).
 - Food safety says 71°C internal for all wild game (95%, Canadian Food Inspection Agency). Hunters often eat deer steaks pinker. That is a personal risk call, labelled below.
 - Bear and ground meat: 71°C, no debate (95%).
+```
 
 ## By cut
 
+```diagram lc-ck-cuts
+```
+
+- Tender cuts: hot and fast. Tough cuts: low and slow (Tip).
+
+```more the full table by cut
 | Cut | Method | Done when |
 |---|---|---|
 | Tenderloin, backstrap | Hot pan or grill, fast, then rest | Medium rare to medium is common hunter practice (Tip); 71°C is the food safety number (95%) |
@@ -31,17 +45,31 @@ checked: 2026-10-01
 
 - Old or stiff jointed bird: braise or stew it (80%, North Dakota State University).
 - A rutting buck or an old bull: braise and stew more, steak less. Tip.
+```
 
 ## Do not overcook
 
+```anim lc-ck-rest Pull 5°C early, rest 5 minutes. Tip.
+```
+
+- Use a probe thermometer. Grey means dry (Tip).
+
+```more the full list and my lean
 - Lean muscle has no fat to carry it past medium. Grey means dry and livery. Tip.
 - Use a probe thermometer. Pull steaks 5°C before the target and rest them 5 minutes. Tip.
 - Thin steaks: 2 to 3 minutes a side in a smoking hot pan. Tip.
 - Low and slow is for the tough cuts, not the loin. Tip.
 - Food safety sources say all game to 71°C or more (95%, Canadian Food Inspection Agency), 74°C per Washington (80%). Nobody says rare is safe. My lean: deer loin at 60°C to 63°C is what most hunters do, and the risk is theirs. Bear never.
+```
 
 ## Bear safety
 
+```diagram lc-ck-bear
+```
+
+- Frozen bear is still raw bear (95%).
+
+```more the food safety words and symptoms
 > [!law]
 > Food safety advice, not a hunting rule: "All wild game meat, pork and horse meat should be cooked to an internal temperature of at least 71°C. Curing (salting), drying, smoking or microwaving the meat does not consistently kill infective larvae" (95%, Canadian Food Inspection Agency).
 
@@ -50,38 +78,73 @@ checked: 2026-10-01
 - Thermometer in the thickest part. 71°C or more, every piece. Washington says 77°C (170°F) for bear (80%).
 - No bear jerky, no bear sausage eaten uncooked, no pink bear burgers (95%).
 - Symptoms 5 to 15 days after eating: fever, facial swelling, muscle pain, rash. See a doctor and say "bear meat" (95%).
+```
 
 ## Birds: plucking or breasting
 
+```diagram lc-ck-pluck
+```
+
+- Roast ducks whole and plucked. Pan fry grouse breasts (Tip).
+
+```more plucking and breasting in full
 - Plucking keeps the skin. "The skin helps retain flavor and moisture during cooking" (80%, Penn State Extension). Roast whole ducks plucked.
 - Pluck a few feathers at a time. Dry pluck, then paraffin and hot water for the down (80%, North Dakota State University).
 - Breasting: peel the skin, cut the breasts off the keel. Fast, and fine for grouse and quail in a pan (Tip).
 - The legal minimum you must keep from any game bird is "both breasts" (95%, synopsis p. 3). The legs are a bonus. Tip.
 - Bird meat to 74°C (165°F) (80%, North Dakota State University).
+```
 
 ## The wing or head rule while transporting
 
+```diagram rb-evidence-birds
+```
+
+- The feathered wing stays on until the bird is home (95%).
+
+```more the rule in full
 > [!law]
 > Grouse and quail: "must leave attached to the carcass one feathered wing". Ducks and geese: "one feathered wing or the feathered head" (95%, synopsis p. 15).
 
 - The wing stays on until the bird is home. Breast it out in the field if you like, but leave one feathered wing on the piece you keep (95%).
 - It lets an officer count and identify species in your cooler (Tip, the reason behind the rule).
 - Possession limit for ducks is three times the daily limit, including at home (95%, p. 12).
+```
 
 ## Three first recipes
 
+```steps Backstrap in the pan
+lc-ck-strap-1 | Dry the meat. Salt it.
+lc-ck-strap-2 | Smoking hot cast iron. 2 to 3 minutes a side.
+lc-ck-strap-3 | Butter and garlic in the last minute.
+lc-ck-strap-4 | Rest 5 minutes. Slice across the grain.
+```
+
+- Two more below: shoulder stew and grouse breasts (Tip).
+
+```more all three recipes in full
 1. Backstrap in the pan. Dry the meat. Salt. Cast iron, smoking hot, a little oil. 2 to 3 minutes a side for a 3 cm piece. Butter and garlic in the last minute. Rest 5 minutes. Slice across the grain. Tip.
 2. Shoulder stew. Cube the shoulder and neck, flour and salt them, brown in batches. Onion, carrot, garlic, a tin of tomatoes, stock to cover, bay leaf. Lid on, oven at 150°C for 3 hours. Tip. The North Dakota State University version simmers 45 minutes for small strips (80%).
 3. Grouse breasts. Flour, salt, pepper. Butter in a medium hot pan. 2 to 3 minutes a side until 74°C. Squeeze of lemon. Tip. A whole plucked duck instead: apples in the cavity, roast at 160°C (325°F) for 1 to 1.5 hours, basting (80%, North Dakota State University).
+```
 
 ## Gamey taste myths
 
+```diagram lc-ck-gamey
+```
+
+- "Gamey" is mostly handling, not the animal (80%).
+
+```more the myths and facts in full
 - "Gamey" is mostly handling. "Undesirable strong flavors in the meat can be due to inadequate bleeding, delay or carelessness in dressing or failure to cool the carcass promptly. Occasionally, the diet of the animal will affect the flavor" (80%, North Dakota State University).
 - Myth: soak it in milk. Clean, cool, well trimmed meat needs no soak. Tip.
 - Fact: deer fat is waxy. Trim it. Most "gamey" burger is fat and silver skin. Tip.
 - Fact: hair, gut contents and a warm truck taint meat. Session 8. Tip.
 - Fact: a rutting buck can taste stronger. Braise it. Tip.
 - Fact: aging at 1°C to 3°C for 7 to 14 days improves tenderness and flavour (80%, Washington Department of Fish and Wildlife).
+```
+
+## Grandpa's rule and mistakes
 
 > [!rule]
 > Hot pan, short time, long rest. Tough cuts get the whole afternoon.

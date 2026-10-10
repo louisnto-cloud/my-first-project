@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Do I owe a report? Region 2 or 3 deer or black bear: no report. Mountain goat, mountain sheep, caribou, any cougar, or black bear in MUs 6-12 and 6-13: compulsory inspection within 30 days. Lynx, wolverine, bobcat, wolf or feral pig, depending on region: a compulsory report within 30 days. Bought an elk, moose or caribou licence: the Mandatory Hunter Report by March 31, hunted or not." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Do I owe a report?</text>
+<rect x="20" y="42" width="360" height="40" rx="8" fill="#e3eedc" stroke="#2f6b3a" stroke-width="2"/>
+<text x="200.0" y="66.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Region 2 or 3 deer or black bear?  No report</text>
+<rect x="20" y="92" width="360" height="58" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
+<text x="200.0" y="116.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Goat, sheep, caribou, any cougar,</text>
+<text x="200.0" y="134.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">bear in MUs 6-12, 6-13: Inspection, 30 days</text>
+<rect x="20" y="160" width="360" height="58" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="184.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Lynx, wolverine, bobcat, wolf, feral pig</text>
+<text x="200.0" y="202.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">(by region): Compulsory Report, 30 days</text>
+<rect x="20" y="228" width="360" height="58" rx="8" fill="#dce8f3" stroke="#4a7fb0" stroke-width="2"/>
+<text x="200.0" y="252.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Bought an elk, moose or caribou licence?</text>
+<text x="200.0" y="270.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Mandatory Hunter Report by March 31</text>
+</svg>

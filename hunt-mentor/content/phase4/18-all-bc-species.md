@@ -12,24 +12,55 @@ checked: 2026-10-02
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+| Region | Name | Table page |
+|---|---|---|
+| 1 | Vancouver Island | 21 |
+| 2 | Lower Mainland | 28 |
+| 3 | Thompson (home) | 34 |
+| 4 | Kootenay | 39, 40 |
+| 5 | Cariboo | 44 |
+| 6 | Skeena | 50, 51 |
+| 7A | Omineca | 57 |
+| 7B | Peace | 62, 63 |
+| 8 | Okanagan | 68 |
+
+- "Open in" a region still means only some MUs (Management Units). Read your row (95%).
+
+```more how to read this page
 - Source: the [[Synopsis]] 2026 to 2028, general open season tables for each region, and the fee tables on page 8 (99%).
 - "Open in" means the species has a row in that region's general open season table (95%). Often only some MUs (Management Units) are open. Always read your MU row.
 - Hunts that are [[LEH]] (Limited Entry Hunting) only are not general seasons. Check the LEH synopsis for those (VERIFY).
 - Regions: 1 Vancouver Island, 2 Lower Mainland, 3 Thompson, 4 Kootenay, 5 Cariboo, 6 Skeena, 7A Omineca, 7B Peace, 8 Okanagan (99%, synopsis table of contents).
 - Table pages: Region 1 page 21, Region 2 page 28, Region 3 page 34, Region 4 pages 39 and 40, Region 5 page 44, Region 6 pages 50 and 51, Region 7A page 57, Region 7B pages 62 and 63, Region 8 page 68 (99%).
 - Every resident hunter also needs the basic hunting licence: $32.00 (99%, page 8).
+```
 
 ## The licence rules in brief
 
+```diagram sc-licence-stack
+```
+
+- Carry every species licence bought this year, used or not (99%).
+- Cougar, lynx, bobcat, wolverine, caribou, goat, sheep: valid 2 days after issue (99%).
+
+```more every licence rule
 - A [[Species licence]] is needed for big game in the page 8 table, on top of the basic licence (99%, page 8).
 - Carry all species licences bought this licence year, used and unused, while hunting (99%, page 8).
 - Bobcat, caribou, cougar, lynx, mountain goat, mountain sheep and wolverine licences are not valid until 2 days after the date of issue (99%, page 8).
 - Small game and upland game birds: no species licence for a BC resident (99%, page 8).
 - Ducks, geese, brant, coots, snipe, band tailed pigeons and mourning doves are migratory game birds. You also need the federal Canada Migratory Game Bird Hunting Permit (99%, page 3 and page 7). The synopsis lists it at $17.00 (99%, page 8).
 - All hunting and species licences expire 31 March (99%, page 8).
+```
 
 ## Big game: deer, moose, elk, bison
 
+```diagram sc-sp-hoofed
+```
+
+- Region 3 has moose and both deer. No general elk row here (95%).
+- Moose, elk and caribou: report by 31 March (99%).
+
+```more which regions, word for word
 | Species | Open in regions | Resident species licence |
 |---|---|---|
 | Mule deer (black tailed) | 1, 2, 3, 4, 5, 6, 7A, 7B, 8 (95%) | Deer, $15.00 (99%, page 8) |
@@ -42,9 +73,16 @@ checked: 2026-10-02
 
 - Moose, elk and caribou licence holders must file the [[Mandatory Hunter Report]] by 31 March (99%, page 34 note for moose; page 16).
 - No general moose season rows in Regions 1, 2 or 5 (95%). No general elk rows in Regions 1, 2, 3 or 5 (95%). LEH may exist: VERIFY.
+```
 
 ## Big game: sheep, goat, bear, cats, wolf
 
+```diagram sc-sp-mountain
+```
+
+- Region 3: bighorn, bear, cougar, wolf, lynx, bobcat. No general goat row (95%).
+
+```more which regions, word for word
 | Species | Open in regions | Resident species licence |
 |---|---|---|
 | Bighorn sheep | 3, 5, 7A, 7B (95%) | Mountain sheep, $60.00 (99%, page 8) |
@@ -59,9 +97,16 @@ checked: 2026-10-02
 
 - Lynx, bobcat, wolf and wolverine are also furbearers. They are big game when hunted (99%, page 3 definition of big game).
 - No general mountain goat rows in Regions 3 or 8, and no general sheep rows in Regions 1, 2, 4 or 8 (95%). LEH may exist: VERIFY.
+```
 
 ## Small game
 
+```diagram sc-sp-small
+```
+
+- Region 3 ground squirrels: private land only, with permission (99%).
+
+```more which regions, word for word
 | Species | Open in regions | Licence |
 |---|---|---|
 | Coyote | 2, 3, 4, 5, 6, 7A, 7B, 8 (95%) | Basic licence, no species licence (99%, page 8) |
@@ -74,9 +119,17 @@ checked: 2026-10-02
 - Small game includes fox, raccoon, coyote, skunk, snowshoe hare and game birds (99%, page 4 definition).
 - Schedule C, no licence, no closed season: opossum, eastern cottontail, European rabbit, gray and fox squirrels, house sparrow, European starling, rock dove and others (99%, page 11).
 - Feral pigs: you do need a hunting licence unless on your own property or they damage it (99%, page 11).
+```
 
 ## Game birds
 
+```diagram sc-sp-birds
+```
+
+- Ducks, geese and snipe need the federal permit too (99%).
+- Bird limits: daily, with possession in brackets (95%).
+
+```more which regions, word for word
 | Species | Open in regions | Licence |
 |---|---|---|
 | Grouse: dusky or sooty, ruffed, spruce | All 9 regions (95%) | Basic licence (99%, page 8) |
@@ -94,9 +147,16 @@ checked: 2026-10-02
 | Brant | 2 (95%) | Basic licence plus federal permit (99%, page 3) |
 
 - Bag limits for birds are daily, with a possession limit in brackets on each table (95%, page 34 example).
+```
 
 ## Closed: no open season
 
+```diagram sc-sp-closed
+```
+
+- No row in a region means no general season there (Tip).
+
+```more every closed species, word for word
 | Species or class | Reason or note | Source |
 |---|---|---|
 | [[Grizzly bear]] | "There is no open season for Grizzly Bears in B.C." (99%) | Page 19, again page 80 |
@@ -108,12 +168,25 @@ checked: 2026-10-02
 | Sharp tailed grouse, part of MU 3-30 | No open season south of the Scottie Creek FSR (Forest Service Road) (99%) | Page 34 |
 
 - No season row in a region means no general season there, even if the animal lives there (Tip). Turkey in Region 3 is one example (95%, page 34).
+```
 
 ## Furbearers: trapping, mention only
 
+```photo wolverine
+```
+
+- Trapping is its own licence and course. Not covered here (Tip).
+
+```more trapping notes
 - Beaver, fisher, marten, mink, muskrat and river otter have trapping seasons (99%, page 76).
 - Trapping needs its own licence and a registered trapline or permission. That is a separate course (Tip). Not covered by this app.
 - To snare snowshoe hare you need a hunting licence and the trapper education course (99%, page 13).
+```
+
+## Grandpa's rule and mistakes
+
+```photo snowshoe-hare-winter
+```
 
 > [!rule]
 > Grandpa's rule (wisdom): The animal you can legally take is the one on your MU row, in your class, on today's date. Everything else is a photo.

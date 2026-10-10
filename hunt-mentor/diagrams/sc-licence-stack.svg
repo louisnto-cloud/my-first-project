@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="What licence do I need? 1, the basic hunting licence, $32.00, for every resident hunter, 99 percent. Plus 2, a species licence for big game only, from deer at $15.00 up to sheep at $60.00. Plus 3, the federal migratory game bird permit, $17.00, for ducks, geese, brant, coots, snipe, mourning doves and band tailed pigeons. All expire 31 March, 99 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">What licence do I need?</text>
+<rect x="20" y="44" width="360" height="50" rx="8" fill="#e3eedc" stroke="#2f6b3a" stroke-width="2"/>
+<text x="200.0" y="64.8" font-size="15" fill="#23261f" text-anchor="middle">1  Basic hunting licence: $32.00</text>
+<text x="200.0" y="83.8" font-size="15" fill="#23261f" text-anchor="middle">Every resident hunter (99%)</text>
+<text x="200" y="116" font-size="26" fill="#2f3a2b" text-anchor="middle" font-weight="bold">+</text>
+<rect x="20" y="124" width="360" height="50" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="144.8" font-size="15" fill="#23261f" text-anchor="middle">2  Species licence: big game only</text>
+<text x="200.0" y="163.8" font-size="15" fill="#23261f" text-anchor="middle">Deer $15.00 up to sheep $60.00</text>
+<text x="200" y="196" font-size="26" fill="#2f3a2b" text-anchor="middle" font-weight="bold">+</text>
+<rect x="20" y="204" width="360" height="62" rx="8" fill="#dce8f3" stroke="#4a7fb0" stroke-width="2"/>
+<text x="200.0" y="221.9" font-size="14" fill="#23261f" text-anchor="middle">3  Federal permit: $17.00. Ducks, geese,</text>
+<text x="200.0" y="239.9" font-size="14" fill="#23261f" text-anchor="middle">brant, coots, snipe, mourning doves,</text>
+<text x="200.0" y="257.9" font-size="14" fill="#23261f" text-anchor="middle">band tailed pigeons</text>
+<text x="200" y="288" font-size="15" fill="#e8590c" text-anchor="middle" font-weight="bold">All expire 31 March (99%)</text>
+</svg>

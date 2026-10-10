@@ -12,12 +12,26 @@ checked: 2026-10-01
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram lc-bt-deer-cuts
+```
+
+- Two paths: a kitchen table and a sharp knife, or a cut and wrap shop.
+- The paperwork follows the meat either way (95%).
+
+```more the law and the businesses
 - Two paths: a kitchen table and a sharp knife, or a cut and wrap shop.
 - The law follows the meat either way: licence or Record of Receipt with it, evidence of sex on until it is butchered, butcher receipt with your [[FWID]] (Fish and Wildlife ID) (95%).
 - Business names below are confirmed only where stated. Phone before you drive.
+```
 
 ## Home or shop
 
+```diagram lc-bt-home-shop
+```
+
+- First deer: cut it yourself with your brother. Lean.
+
+```more the table and the lean in full
 | | Home | Shop |
 |---|---|---|
 | Cost | Knives and wrap you already own, plus your evening | Confirmed example: $150 flat under 125 lb, $1.50 per lb over, Maple Ridge, price checked 2026-10-01 (85%) |
@@ -28,9 +42,26 @@ checked: 2026-10-01
 
 > [!lean]
 > First deer: cut it yourself with your brother and a video. Moose: shop, or at least rent a grinder. A boned out moose is 200 kg of knife work.
+```
 
 ## Cuts from a deer
 
+```steps Break down a deer, part by part
+lc-bt-step-1 | Front quarters: roasts, or bone out for stew.
+lc-bt-step-2 | Backstraps: steaks or roasts. Never grind.
+lc-bt-step-3 | Tenderloins: inside the cavity. Eat them first.
+lc-bt-step-4 | Hind quarters: follow the seams.
+lc-bt-step-5 | Neck: braise whole, roast or grind.
+lc-bt-step-6 | Ribs, flank and trim: grind or smoke.
+```
+
+```video
+yt-skin-debone-deer | Skin and debone a deer for the freezer.
+```
+
+- Trim, shank and neck: about a third of the deer goes to grind (Tip).
+
+```more every cut in words
 - Front quarters: shoulder roasts, or bone out for stew and grind. The shank goes to grind or slow braise (80%, North Dakota State University Extension).
 - Backstraps (loins): the long muscles either side of the spine. Loin chops or whole roasts. The best steaks (80%).
 - Tenderloins: two small muscles inside the cavity. Eat them first (80%).
@@ -39,13 +70,31 @@ checked: 2026-10-01
 - Ribs and flank: trim the meat off for grind, or keep a rack for the smoker (Tip).
 - Trim, shank, neck: burger and sausage. About a third of the deer by weight (Tip).
 - Heart and liver: fresh within two days (80%, Washington Department of Fish and Wildlife fridge life).
-
-```video
-yt-skin-debone-deer | Skin and debone a deer for the freezer.
 ```
+
+## The hind quarter
+
+```diagram lc-bt-hind
+```
+
+- No saw needed: a sharp boning knife and the seams (80%).
+
+## Cuts from a moose
+
+```diagram lc-bt-moose-cuts
+```
+
+- Same cuts. About 200 kg boned out: shop, or rent a grinder. Lean.
 
 ## Equipment
 
+```diagram lc-bt-tiers
+```
+
+- Prices are guesses for budgeting. VERIFY before buying.
+- Keep meat cold: cut one quarter, fridge the rest (80%).
+
+```more the tiers and the cleaning rule
 | Tier | What | Price |
 |---|---|---|
 | Entry | 15 cm boning knife, sharpener, two cutting boards, freezer paper and tape, marker | VERIFY, about $80 |
@@ -56,47 +105,87 @@ yt-skin-debone-deer | Skin and debone a deer for the freezer.
 - Muscle boning on a table needs only a sharp boning knife. No saw (80%, North Dakota State University).
 - Keep the meat cold while you work. Cut one quarter, fridge the rest (80%, Penn State Extension).
 - Clean boards and knives in hot soapy water, then a weak bleach rinse, and let them air dry (80%, North Dakota State University).
+```
 
 ## Grinding and sausage
 
+```diagram lc-bt-grind
+```
+
+- Cook ground game to 71°C (160°F) (95%).
+
+```more grinding and shop sausage in full
 - Trim silver skin, fat, hair and bloodshot before the grinder. Venison fat tastes waxy and goes rancid (Tip, common practice).
 - Chill meat and the grinder parts near freezing. Warm meat smears (Tip).
 - Burger: add 10 to 20% pork or beef fat for juiciness, or none for lean (Tip).
 - Shops: the Maple Ridge shop runs a 25 lb (11 kg) minimum sausage batch: 19 lb game plus 6 lb of 50/50 pork (85%, read on their site 2026-10-01).
 - Sausage prices there: $4 to $7.50 per lb of finished product, plus $1 per lb for vacuum packing (85%, price checked 2026-10-01).
 - Cook ground game to 71°C (160°F) (95%, Canadian Food Inspection Agency; North Dakota State University).
+```
 
 ## Wrapping and labelling
 
+```diagram lc-bt-label
+```
+
+- Keep the notched licence until the meat is eaten (95%, synopsis p. 7).
+
+```more wrapping, freezing and the papers
 - Freezer paper with interleaving paper between steaks, or vacuum bags (80%, North Dakota State University).
 - Label every package: species, cut, weight, date, which animal. Example: "Mule deer buck, backstrap, 600 g, 18 Oct 2026, Heffley" (Tip).
 - Keep a freezer list on the door. Oldest first (Tip).
 - Minus 18°C (0°F). About a year of quality (80%, Penn State Extension).
 - Keep the notched licence "until the animal has been consumed" (95%, synopsis p. 7). Staple a photo of it to the freezer list. Tip.
 - The butcher receipt with FWID, licence number, species and sex goes in the same folder (95%, p. 15).
+```
 
 ## Near Kamloops
 
+| Shop | Status |
+|---|---|
+| Interior Cut Rite Meats | CWD (Chronic Wasting Disease) drop off, clients only (95%). Game: VERIFY |
+| Benny the Butcher | CWD drop off (95%). Game: VERIFY |
+| Kam Lake View Meats | Directory only (65%). Game: VERIFY |
+
+```more addresses, phones and how to find more
 - Interior Cut Rite Meats, 741 Tranquille Road, Kamloops, 250 554 8202. Listed by the province as a CWD drop off "clients only" (95%). Directories list it as a meat packer (70%). Wild game cut and wrap, prices, and whether 741 or 2741 Tranquille is right: VERIFY by phone.
 - Benny the Butcher, 2175 Running Horse Ranch Road, Kamloops, 250 819 0337, Tuesday to Friday 9 to 4. Listed by the province as a CWD drop off (95%). A directory says custom cutting and sausage (70%). Wild game and prices: VERIFY.
 - Kam Lake View Meats, 6453 Buckhorn Road, Kamloops. A directory lists custom cutting, sausage, a government inspected abattoir, phone 250 828 1015 (65%). Wild game: VERIFY.
 - How to find more: the province's CWD drop off list is a list of shops that handle game. The Kamloops Fish and Wildlife office, 1259 Dalhousie Drive, 250 371 6200, can point you to cutters (95%, synopsis p. 32).
+```
 
 ## Near Mission
 
+| Shop | Status |
+|---|---|
+| Iron Butcher, Maple Ridge | Prices read on its site (85%) |
+| Mission Meat Shop | Search preview only (65%). VERIFY |
+| Opening Day Game Cutting, Abbotsford | Search preview only (65%). VERIFY |
+
+```more addresses, prices and CWD drop offs
 - Mission Meat Shop, Mission. Its site says it offers cut and wrap for hunters and wants cutting instructions emailed before the kill date (65%, search preview of its own site). Address, phone, prices: VERIFY.
 - Opening Day Game Cutting, 29252 Sunvalley Crescent, Abbotsford, 604 446 8851. Custom cuts beef, lamb, pork and wild game (65%, search preview of its own site). VERIFY.
 - Iron Butcher, Maple Ridge, 22030 River Road (65%, search preview). Game processing page read directly: "Game under 125Lbs $150.00 Flat Rate Cut & Wrap", "Game Over 125LBS $1.50/LBS Cut & Wrap", "$1.00/LB Extra For Vacuum Packing", "ALL PRICES ARE ON FINISHED PRODUCT" (85%, price checked 2026-10-01). Phone: VERIFY.
 - Lower Mainland CWD drop offs are in Langley, by appointment (95%, Session 10).
+```
 
 ## Questions for any shop
 
+```diagram lc-bt-shop-q
+```
+
+- Get the receipt with your FWID (Fish and Wildlife ID) on it (95%, p. 15).
+
+```more the full question list
 - Do you cut wild game, and when do you start taking it? Tip.
 - Does my animal stay separate, or is grind pooled? Tip.
 - Price per lb on hanging weight or finished weight? Minimum charge? Sausage minimum batch? Tip.
 - Deliver skinned, quartered, or whole? Bone in or boned? Tip.
 - What do you need from me? They must record your FWID, licence number, species, sex and the MU (95%, synopsis p. 14, p. 16).
 - Get the receipt. "Obtain from the butcher a receipt" with FWID, licence number, species and sex (95%, p. 15).
+```
+
+## Grandpa's rule and mistakes
 
 > [!rule]
 > Label like a stranger will cook it. In February, you are the stranger.

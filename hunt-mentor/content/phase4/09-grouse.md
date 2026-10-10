@@ -240,12 +240,12 @@ commons-ruffed-grouse-drum | Hear the drum: a ruffed grouse beating its wings on
 | B: still hunt roosts | Look up for a dark blob midday | .22 head shots |
 | C: ride and walk | Spot from the truck, walk off, load | Only if every road rule is kept |
 
+> [!lean]
+> Option A with the shotgun for the first trips. Add the .22 once you can tell the three species on the ground every time.
+
 ```video
 yt-grouse-anyone | Grouse hunting needs no special gear. Just walk.
 ```
-
-> [!lean]
-> Option A with the shotgun for the first trips. Add the .22 once you can tell the three species on the ground every time.
 
 ```more the three options, pros and cons
 ### Option A: walk the edges

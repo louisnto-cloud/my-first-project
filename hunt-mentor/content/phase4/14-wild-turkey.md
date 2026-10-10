@@ -163,6 +163,9 @@ g-turkey-flock | A fall flock.
 > [!lean]
 > Option A in Region 8 on opening week. Scout the roost two days before.
 
+```anim sb-turkey-walkin He gobbles, flies down, goes quiet, walks in.
+```
+
 ```more the three options, pros and cons
 ### Option A: roost and call at dawn
 - Locate a roost the evening before. Set up 100 m away before light with a hen decoy, call softly as the sun comes up.

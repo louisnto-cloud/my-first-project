@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Antler restricted season: the antlers stay naturally attached to a portion of the upper skull, the skull plate, and travel together with the species licence. Keep them together until the carcass is home and butchered, at a meat cutter or cold storage, or inspected. Do not cut, alter or tamper with them, 95 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Antler restricted season</text>
+<text x="200.0" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">Antlers on the skull plate, with the licence</text>
+<path d="M150 200 C150 186 250 186 250 200 L240 214 L160 214 Z" fill="#f3ead8" stroke="#23261f" stroke-width="2"/>
+<path d="M170 196 C150 160 120 140 100 100 M130 150 C120 130 124 110 132 92 M110 120 L80 104 M100 100 L96 72" fill="none" stroke="#8b6a48" stroke-width="7" stroke-linecap="round"/>
+<path d="M230 196 C250 160 280 140 300 100 M270 150 C280 130 276 110 268 92 M290 120 L320 104 M300 100 L304 72" fill="none" stroke="#8b6a48" stroke-width="7" stroke-linecap="round"/>
+<g transform="translate(330 200) scale(0.9)"><rect x="-40" y="-26" width="80" height="52" rx="4" fill="#ffffff" stroke="#23261f" stroke-width="2"/><rect x="-40" y="-26" width="80" height="12" fill="#f1ead8" stroke="#23261f" stroke-width="1"/><text x="0" y="8" font-size="13" fill="#23261f" text-anchor="middle" font-weight="bold">Deer</text><path d="M-24 14 h48" stroke="#23261f" stroke-width="2" stroke-dasharray="2 2"/><path d="M-14 -26 L-8 -18 L-2 -26 Z" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/><path d="M40 -6 L32 0 L40 6 Z" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/></g>
+<path d="M252 206 C270 214 284 214 292 210" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="5 4" fill="none"/>
+<text x="200" y="236" font-size="14" fill="#2f3a2b" text-anchor="middle">Together until home and butchered, the</text>
+<text x="200" y="254" font-size="14" fill="#2f3a2b" text-anchor="middle">meat cutter, cold storage or inspection</text>
+<rect x="30" y="262" width="340" height="32" rx="6" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
+<text x="200.0" y="283.2" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Do not cut, alter or tamper (95%)</text>
+</svg>

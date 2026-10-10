@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" role="img" aria-label="Icon grid of small game. Coyote, snowshoe hare, raccoon, skunk and Columbian ground squirrel: general season, basic hunting licence only. Opossum: Schedule C, no hunting licence needed." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="380" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Small game</text>
+<text x="200.0" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">Basic licence: $32.00. No species licence.</text>
+<rect x="4" y="62" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(67 112) scale(1.15)"><path d="M-14,6 L-14,18" stroke="#b08a5a" stroke-width="3.5" stroke-linecap="round"/><path d="M-7,6 L-7,18" stroke="#b08a5a" stroke-width="3.5" stroke-linecap="round"/><path d="M9,6 L9,18" stroke="#b08a5a" stroke-width="3.5" stroke-linecap="round"/><path d="M15,6 L15,18" stroke="#b08a5a" stroke-width="3.5" stroke-linecap="round"/><ellipse cx="0" cy="-2" rx="20" ry="8" fill="#b08a5a"/><path d="M-16,-6 L-24,-14 L-36,-10 L-36,-6 L-24,-4 Z" fill="#b08a5a"/><path d="M-24,-13 L-22,-20 L-19,-12 Z" fill="#b08a5a"/><path d="M18,-4 C28,-2 32,8 36,12" stroke="#b08a5a" stroke-width="6" fill="none" stroke-linecap="round"/></g>
+<text x="67" y="152" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Coyote</text>
+<rect x="9" y="166" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="67.0" y="181" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="67" y="203" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic licence</text>
+<rect x="137" y="62" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(200 112) scale(1.15)"><ellipse cx="2" cy="4" rx="16" ry="11" fill="#ffffff" stroke="#23261f"/><circle cx="-14" cy="-6" r="7" fill="#ffffff" stroke="#23261f"/><path d="M-14,-12 C-16,-26 -10,-30 -8,-16 M-10,-12 C-6,-26 0,-28 -4,-14" fill="#ffffff" stroke="#23261f"/><circle cx="-16" cy="-7" r="1.5" fill="#23261f"/><path d="M-24,-26 L-12,-28" stroke="none"/></g>
+<text x="200" y="152" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Snowshoe hare</text>
+<rect x="142" y="166" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="200.0" y="181" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="200" y="203" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic licence</text>
+<rect x="271" y="62" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(333 112) scale(1.15)"><path d="M-14,4 L-14,14" stroke="#8a8a84" stroke-width="3.5" stroke-linecap="round"/><path d="M-7,4 L-7,14" stroke="#8a8a84" stroke-width="3.5" stroke-linecap="round"/><path d="M9,4 L9,14" stroke="#8a8a84" stroke-width="3.5" stroke-linecap="round"/><path d="M15,4 L15,14" stroke="#8a8a84" stroke-width="3.5" stroke-linecap="round"/><ellipse cx="0" cy="-2" rx="18" ry="10" fill="#8a8a84"/><circle cx="-20" cy="-4" r="7" fill="#8a8a84"/><path d="M-25,-6 h10" stroke="#23261f" stroke-width="4"/><path d="M-24,-10 L-24,-15 L-20,-11 Z M-17,-11 L-16,-15 L-14,-10 Z" fill="#8a8a84"/><path d="M18,-2 l4,2" stroke="#23261f" stroke-width="6"/><path d="M23,0 l4,2" stroke="#8a8a84" stroke-width="6"/><path d="M28,2 l4,2" stroke="#23261f" stroke-width="6"/><path d="M33,4 l4,2" stroke="#8a8a84" stroke-width="6"/></g>
+<text x="333" y="152" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Raccoon</text>
+<rect x="275" y="166" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="333.0" y="181" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="333" y="203" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic licence</text>
+<rect x="4" y="218" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(67 268) scale(1.15)"><path d="M-14,4 L-14,12" stroke="#23261f" stroke-width="3.5" stroke-linecap="round"/><path d="M-7,4 L-7,12" stroke="#23261f" stroke-width="3.5" stroke-linecap="round"/><path d="M9,4 L9,12" stroke="#23261f" stroke-width="3.5" stroke-linecap="round"/><path d="M15,4 L15,12" stroke="#23261f" stroke-width="3.5" stroke-linecap="round"/><ellipse cx="0" cy="-2" rx="18" ry="10" fill="#23261f"/><circle cx="-20" cy="-2" r="6" fill="#23261f"/><path d="M-20,-8 C-4,-14 10,-12 18,-6" stroke="#ffffff" stroke-width="3" fill="none"/><path d="M16,-4 C26,-14 34,-24 28,-30 C22,-34 20,-24 18,-14" fill="#23261f"/><path d="M20,-10 C24,-18 28,-24 27,-28" stroke="#fff" stroke-width="2" fill="none"/></g>
+<text x="67" y="308" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Skunk</text>
+<rect x="9" y="322" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="67.0" y="337" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="67" y="359" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic licence</text>
+<rect x="137" y="218" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(200 268) scale(1.15)"><ellipse cx="-2" cy="4" rx="10" ry="12" fill="#a8865a" stroke="#23261f"/><circle cx="-8" cy="-10" r="6" fill="#a8865a" stroke="#23261f"/><circle cx="-10" cy="-11" r="1.4" fill="#23261f"/><path d="M-6,-16 l1,-4 l2,4" fill="#a8865a" stroke="#23261f"/><path d="M6,10 C22,6 24,-14 14,-22 C10,-12 14,-2 6,4 Z" fill="#a8865a" stroke="#23261f"/></g>
+<text x="200" y="300" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Columbian</text>
+<text x="200" y="315" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">ground squirrel</text>
+<rect x="142" y="322" width="116" height="22" rx="11" fill="#5f7a3a"/><text x="200.0" y="337" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">General season</text>
+<text x="200" y="359" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Basic licence</text>
+<rect x="271" y="218" width="125" height="148" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<g transform="translate(333 268) scale(1.15)"><path d="M-14,4 L-14,12" stroke="#23261f" stroke-width="3.5" stroke-linecap="round"/><path d="M-7,4 L-7,12" stroke="#23261f" stroke-width="3.5" stroke-linecap="round"/><path d="M9,4 L9,12" stroke="#23261f" stroke-width="3.5" stroke-linecap="round"/><path d="M15,4 L15,12" stroke="#23261f" stroke-width="3.5" stroke-linecap="round"/><ellipse cx="0" cy="-2" rx="18" ry="10" fill="#b8b8b0"/><path d="M-16,-8 L-34,-2 L-16,4 Z" fill="#ffffff" stroke="#23261f"/><circle cx="-22" cy="-3" r="1.4" fill="#23261f"/><path d="M16,0 C28,4 32,12 26,16" stroke="#e3b5b5" stroke-width="3" fill="none"/></g>
+<text x="333" y="308" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Opossum</text>
+<rect x="275" y="322" width="116" height="22" rx="11" fill="#8a8a84"/><text x="333.0" y="337" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">No licence needed</text>
+<text x="333" y="359" font-size="13" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Schedule C</text>
+</svg>
