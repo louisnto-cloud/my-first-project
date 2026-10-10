@@ -47,9 +47,26 @@ function buttonNames() {
   const box = document.createElement('div'); box.className = 'hmt-names'; box.setAttribute('aria-hidden', 'true');
   const W = root.clientWidth;
   const menu = root.querySelector('[data-act="menu"]'), rowBottom = menu ? menu.getBoundingClientRect().bottom : 70;
+  // buttons side by side on the left (the 3D cluster) share one label after the last button, so labels never overlap
+  const rows = new Map();
   for (const b of list) {
+    const r = b.getBoundingClientRect();
+    if (r.left + r.width / 2 >= W / 2 || r.top < rowBottom - 10) continue;
+    const k = Math.round((r.top + r.height / 2) / 12);
+    if (!rows.has(k)) rows.set(k, []);
+    rows.get(k).push(b);
+  }
+  const names = new Map(), skip = new Set();
+  for (const row of rows.values()) {
+    if (row.length < 2) continue;
+    row.sort((a, c) => a.getBoundingClientRect().left - c.getBoundingClientRect().left);
+    row.slice(0, -1).forEach((b) => skip.add(b));
+    names.set(row[row.length - 1], row.map((b) => b.getAttribute('aria-label')).join(', '));
+  }
+  for (const b of list) {
+    if (skip.has(b)) continue;
     const r = b.getBoundingClientRect(), left = r.left + r.width / 2 < W / 2, t = document.createElement('span');
-    t.textContent = b.getAttribute('aria-label');
+    t.textContent = names.get(b) || b.getAttribute('aria-label');
     if (left && r.top < rowBottom - 10) { // top left row: under the button, nudged right so Menu and Elevation profile do not touch
       t.style.top = `${Math.round(r.bottom + 20)}px`;
       t.style.left = `${Math.round(r.left + (b.dataset.act === 'menu' ? 0 : 8))}px`;
