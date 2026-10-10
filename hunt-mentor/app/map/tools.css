@@ -55,3 +55,12 @@
 .hmt-edit { margin: 12px 0 4px; border: 1.5px solid var(--hmm-line); border-radius: 12px; padding: 0 12px; }
 .hmt-edit summary { min-height: 46px; display: flex; align-items: center; font-weight: 700; cursor: pointer; }
 .hmt-edit[open] { padding-bottom: 10px; }
+
+/* chips on the map for overlays you switched on (range rings, scent cone, wind arrows): tap to clear */
+.hmt-chips { position: absolute; z-index: 4; left: calc(var(--sl) + 12px); top: calc(var(--st) + 136px); max-width: calc(100% - var(--sl) - var(--sr) - 84px); display: flex; flex-wrap: wrap; gap: 8px; pointer-events: none; }
+.hmt-chips:empty { display: none; }
+.hmt-chip { pointer-events: auto; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 8px 0 14px; border-radius: 22px; border: 0;
+  background: var(--hmm-btn); color: var(--hmm-ink); box-shadow: var(--hmm-shadow); font-weight: 700; font-size: 14px; }
+.hmt-chip svg { width: 18px; height: 18px; color: var(--hmm-muted); }
+.framing .hmt-chips { display: none; }
+.hmt-hint { margin: 0 0 8px !important; }

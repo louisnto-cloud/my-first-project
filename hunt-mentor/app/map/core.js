@@ -19,12 +19,14 @@
      onClick(fn)         map tap interceptor for tools: fn(e) returning true stops the default (spot card, feature card)
      setBarAction(key, fn)  replace a bottom bar action: 'offline', 'content', 'tools', 'insights', 'track'; also 'weather', 'profile'
      setBase(mode), set3d(on), flyTo(lng, lat, zoom)
+     afterFirstIdle      Promise, resolves once the first view has drawn and the browser is idle (plugins, layer data and contours wait for it)
+     setExaggeration(x)  3D height boost (1 to 2.5)
    Phase 2 modules: add their paths to PLUGINS below; each default export is called with HuntMap after the map is ready. */
 
 import * as maplibregl from '../vendor/maplibre-gl.mjs';
 import '../vendor/mlcontour.min.js';
-import { prefs, savePrefs, loadPrefs, units, esc, hub, throttle, debounce, fmtNum, lon2x, lat2y, clamp, formatCoord } from './util.js';
-import { buildStyle, applyMode, setContourUnits, makeImage, ANCHORS, TERRARIUM, DEM_MAXZOOM } from './style.js';
+import { prefs, savePrefs, loadPrefs, units, esc, hub, debounce, fmtNum, lon2x, lat2y, clamp, formatCoord } from './util.js';
+import { buildStyle, applyMode, setContourUnits, makeImage, ANCHORS, TERRARIUM, DEM_MAXZOOM, DECLUTTER_PITCH } from './style.js';
 import { ICONS } from './icons.js';
 import * as geo from './location.js';
 import * as search from './search.js';
@@ -33,6 +35,12 @@ import * as offline from './offline.js';
 
 const PLUGINS = ['./tools-main.js', './tools-track.js', './tools-wind.js', './tools-insights.js']; // for example './tools.js', './track.js'
 const DEFAULT_VIEW = { lng: -120.2687, lat: 50.8581, zoom: 12, bearing: 0, pitch: 0 }; // Heffley Creek base (SPOTS.md)
+const EXAG = 1.5; // default 3D height boost
+const exag = () => clamp(+prefs.exag || EXAG, 1, 2.5);
+// first view drawn, then wait for the browser to be idle: everything not needed for the first view loads after this
+let resolveIdle;
+const afterFirstIdle = new Promise((r) => { resolveIdle = r; });
+const whenIdle = (fn) => (window.requestIdleCallback ? requestIdleCallback(fn, { timeout: 1200 }) : setTimeout(fn, 120));
 
 const mlcontour = globalThis.mlcontour;
 mlcontour.workerUrl = new URL('../vendor/mlcontour-worker.js', import.meta.url).href; // same origin, so the service worker can answer offline
@@ -46,7 +54,7 @@ const barActions = {};
 const HuntMap = {
   map: null, maplibregl, dem, units, prefs, savePrefs, anchors: ANCHORS, icons: ICONS, isOpen: false,
   ready: new Promise((r) => { resolveReady = r; }),
-  addButton, openSheet, closeSheet, toast, elevationAt, setBase, set3d, flyTo,
+  addButton, openSheet, closeSheet, toast, elevationAt, setBase, set3d, flyTo, afterFirstIdle, setExaggeration,
   getLayerData: (id, opts) => layers.getLayerData(id, opts),
   on: ev.on, emit: ev.emit,
   onClick(fn) { clickHandlers.push(fn); return () => { const i = clickHandlers.indexOf(fn); if (i >= 0) clickHandlers.splice(i, 1); }; },
@@ -95,14 +103,21 @@ function parseParam(param) {
 
 async function init(v) {
   loadPrefs();
+  if (prefs.exagV !== 2) { if (!prefs.exag || prefs.exag === 1.3) prefs.exag = EXAG; prefs.exagV = 2; savePrefs(); } // old default 1.3 becomes 1.5
   await loadCss();
   buildChrome();
   const start = Object.assign({}, DEFAULT_VIEW, prefs.view || {}, v || {});
   if (v && v.zoom == null) start.zoom = Math.max(prefs.view?.zoom || 12, 12);
   createMap(start);
-  geo.init(HuntMap); search.init(HuntMap); layers.init(HuntMap); offline.init(HuntMap);
-  HuntMap.ready.then(async () => {
-    for (const p of PLUGINS) { try { const m = await import(p); if (m.default) m.default(HuntMap); } catch (err) { console.warn('Hunt Map plugin failed', p, err); } }
+  geo.init(HuntMap); search.init(HuntMap); offline.init(HuntMap);
+  // layer data (manifest, saved layers, spots) waits for the first view: same API, only 'ready' is later
+  layers.init(Object.create(HuntMap, { ready: { value: afterFirstIdle } }));
+  afterFirstIdle.then(async () => {
+    // plugins load one at a time, each in its own idle slot, so a pan right after opening stays smooth
+    for (const p of PLUGINS) {
+      await new Promise((r) => whenIdle(r));
+      try { const m = await import(p); if (m.default) m.default(HuntMap); } catch (err) { console.warn('Hunt Map plugin failed', p, err); }
+    }
   });
 }
 
@@ -121,6 +136,13 @@ const BAR = [
   ['insights', 'insights', 'Insights'], ['track', 'track', 'Go & Track'],
 ];
 const BASES = { topo: 'Topo', satellite: 'Satellite', hybrid: 'Hybrid' };
+const sv = (d) => `<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
+const I3D = {
+  tiltUp: sv('<path d="M3 20h17M3 20 12.5 7"/><path d="M8.5 20a6 6 0 0 0-1.4-4"/><path d="M17 3.5v6M14 6.5h6"/>'),
+  tiltDown: sv('<path d="M3 20h17M3 20l15-5.5"/><path d="M9 20a6 6 0 0 0-.4-2.4"/><path d="M14 6.5h6"/>'),
+  rotL: sv('<path d="M8 4H3.5v4.5"/><path d="M3.8 8.2A8.5 8.5 0 1 1 5 17"/>'),
+  rotR: sv('<path d="M16 4h4.5v4.5"/><path d="M20.2 8.2A8.5 8.5 0 1 0 19 17"/>'),
+};
 
 function buildChrome() {
   root = document.createElement('div');
@@ -142,6 +164,13 @@ function buildChrome() {
       </div>
     </div>
     <div class="hmm-stack hmm-stack-l" id="hmm-stack-l"></div>
+    <div class="hmm-3d" role="group" aria-label="3D view controls" hidden>
+      <button class="hmm-btn hmm-3d-n" data-act="reset3d" aria-label="North up and flat (back to 2D)"><span class="hmm-north-i">${ICONS.compass}</span></button>
+      <button class="hmm-btn" data-act="tiltup" aria-label="Tilt more">${I3D.tiltUp}</button>
+      <button class="hmm-btn" data-act="tiltdown" aria-label="Tilt less">${I3D.tiltDown}</button>
+      <button class="hmm-btn" data-act="rotl" aria-label="Rotate left">${I3D.rotL}</button>
+      <button class="hmm-btn" data-act="rotr" aria-label="Rotate right">${I3D.rotR}</button>
+    </div>
     <div class="hmm-stack hmm-stack-r" id="hmm-stack-r">
       <button class="hmm-btn" data-act="weather" aria-label="Weather and wind">${ICONS.weather}</button>
       <button class="hmm-btn hmm-north" data-act="north" aria-label="Point the map north" hidden><span class="hmm-north-i">${ICONS.compass}</span></button>
@@ -149,7 +178,7 @@ function buildChrome() {
     <div class="hmm-lowr">
       <div class="hmm-pill" role="group" aria-label="Basemap and 3D">
         <button data-act="base" class="hmm-pill-base" aria-label="Choose basemap"></button>
-        <button data-act="3d" class="hmm-pill-3d" aria-label="Switch 2D or 3D"></button>
+        <button data-act="3d" class="hmm-pill-3d" aria-label="3D view" aria-pressed="false">3D</button>
       </div>
       <button class="hmm-btn hmm-locate" data-act="locate" aria-label="Show my location">${ICONS.locate}</button>
     </div>
@@ -172,7 +201,7 @@ function buildChrome() {
     scaleT: q('.hmm-scale-t'), scaleBar: q('.hmm-scale-bar'), elev: q('.hmm-elev'), north: q('.hmm-north'), northI: q('.hmm-north-i'),
     base: q('.hmm-pill-base'), d3: q('.hmm-pill-3d'), locate: q('.hmm-locate'), badge: q('.hmm-badge'),
     sheet: q('.hmm-sheet'), sheetT: q('.hmm-sheet-h h2'), sheetB: q('.hmm-sheet-b'), scrim: q('.hmm-scrim'), toast: q('.hmm-toast'),
-    stackR: q('#hmm-stack-r'), stackL: q('#hmm-stack-l'), bar: q('.hmm-bar'),
+    stackR: q('#hmm-stack-r'), stackL: q('#hmm-stack-l'), bar: q('.hmm-bar'), d3box: q('.hmm-3d'), d3n: q('.hmm-3d-n .hmm-north-i'),
   };
   HuntMap.els = els;
   root.addEventListener('click', onChromeClick);
@@ -192,6 +221,11 @@ function onChromeClick(e) {
     menu: openMenu, profile: () => comingNext('Elevation profile', 'Draw a line or pick a track to see its climb and drop on a chart.'),
     search: () => search.open(), weather: () => comingNext('Weather and wind', 'Wind arrows on the map, temperature, rain, pressure trend and a 3 day forecast for this spot, from Open-Meteo.'),
     north: () => map.easeTo({ bearing: 0, duration: 400 }), base: openBasePicker, '3d': () => set3d(!prefs.is3d), locate: () => geo.onButton(),
+    reset3d: () => set3d(false, false, true),
+    tiltup: () => map.easeTo({ pitch: Math.min(map.getPitch() + 15, 75), duration: 350 }),
+    tiltdown: () => map.easeTo({ pitch: Math.max(map.getPitch() - 15, 0), duration: 350 }),
+    rotl: () => map.easeTo({ bearing: map.getBearing() - 30, duration: 350 }),
+    rotr: () => map.easeTo({ bearing: map.getBearing() + 30, duration: 350 }),
     layers: () => layers.openPanel(), centre: openCentre,
   })[act];
   if (fn) fn(e);
@@ -263,10 +297,11 @@ function toast(msg, ms = 2800) {
 // ---------- map ----------
 function createMap(v) {
   map = new maplibregl.Map({
-    container: 'hmm-canvas', style: buildStyle({ dem, prefs }),
+    container: 'hmm-canvas', style: buildStyle({ dem, prefs, deferContours: true }),
     center: [v.lng, v.lat], zoom: v.zoom, bearing: v.bearing || 0, pitch: prefs.is3d ? (v.pitch || 55) : 0,
     minZoom: 2, maxZoom: 18.5, maxPitch: 80, attributionControl: false, pixelRatio: Math.min(window.devicePixelRatio || 1, 2),
-    fadeDuration: 200, dragRotate: true, touchPitch: true, pitchWithRotate: true, localIdeographFontFamily: 'sans-serif',
+    // fadeDuration 0: no label fade animation (fewer frames). Tile cache capped for phone memory. Expired tiles are not refetched mid session.
+    fadeDuration: 0, maxTileCacheSize: 160, refreshExpiredTiles: false, dragRotate: true, touchPitch: true, pitchWithRotate: true, localIdeographFontFamily: 'sans-serif',
   });
   HuntMap.map = map;
   map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-right');
@@ -280,23 +315,33 @@ function createMap(v) {
   let isReady = false;
   const onReady = () => {
     if (isReady) return; isReady = true;
-    if (prefs.is3d) map.setTerrain({ source: 'dem-terrain', exaggeration: prefs.exag || 1.3 });
+    if (prefs.is3d) map.setTerrain({ source: 'dem-terrain', exaggeration: exag() });
+    styleIn = true; applyView();
     updatePill(); updateScale(); updateElev(); updateNorth();
     resolveReady(map);
   };
   map.on('load', onReady);
+  // contours, layer data and plugins wait until the first view has drawn
+  let idled = false;
+  const onFirstIdle = () => {
+    if (idled) return; idled = true;
+    whenIdle(() => { contoursReady = true; applyView(); resolveIdle(map); });
+  };
+  map.once('idle', onFirstIdle);
+  HuntMap.ready.then(() => setTimeout(onFirstIdle, 8000)); // slow or offline first tiles: do not wait forever
   const fallback = () => { if (isReady) return; if (map.isStyleLoaded()) onReady(); else setTimeout(fallback, 1500); };
   setTimeout(fallback, 6000);
   map.on('error', onMapError);
-  const fast = throttle(() => { updateScale(); updateNorth(); }, 60);
-  const slow = throttle(updateElev, 400);
-  map.on('move', () => { fast(); slow(); });
-  map.on('moveend', () => { updateScale(); updateElev(); saveView(); layers.onMove(); });
+  // at most one DOM update per frame while moving; the elevation lookup runs when the map stops
+  let raf = 0;
+  const frame = () => { raf = 0; updateScale(); updateNorth(); checkDeclutter(); };
+  map.on('move', () => { if (!raf) raf = requestAnimationFrame(frame); });
+  map.on('moveend', () => { updateScale(); updateNorth(); checkDeclutter(); updateElev(); saveView(); layers.onMove(); });
   map.on('click', (e) => {
     for (const fn of clickHandlers.slice()) { try { if (fn(e) === true) return; } catch (err) { console.warn(err); } }
     layers.handleClick(e);
   });
-  map.on('pitchend', () => { if (!prefs.is3d && map.getPitch() > 20 && map.isStyleLoaded()) set3d(true, true); });
+  map.on('pitchend', () => { if (!prefs.is3d && map.getPitch() > 20 && styleIn) set3d(true, true); });
   window.addEventListener('resize', () => { if (HuntMap.isOpen) map.resize(); });
 }
 
@@ -323,41 +368,63 @@ const saveView = debounce(() => {
 function flyTo(lng, lat, zoom) { map.flyTo({ center: [lng, lat], zoom: zoom ?? Math.max(map.getZoom(), 13), essential: true }); }
 
 // ---------- base and 3D ----------
+let contoursReady = false, decluttered = false, styleIn = false;
+/** Layer visibility for the base mode, prefs and tilt. Only changed layers are touched. */
+function applyView() {
+  if (!map || !styleIn) return; // isStyleLoaded() is false while tiles load, so it is not used here
+  decluttered = !!prefs.is3d && map.getPitch() > DECLUTTER_PITCH;
+  applyMode(map, prefs.base || 'topo', prefs, { declutter: decluttered, deferContours: !contoursReady });
+}
+/** Hide minor contours and small labels when tilted past DECLUTTER_PITCH. Runs at most once per frame and does work only when the state flips. */
+function checkDeclutter() {
+  const want = !!prefs.is3d && map.getPitch() > DECLUTTER_PITCH;
+  if (want !== decluttered) applyView();
+}
 function setBase(mode) {
   if (!BASES[mode]) return;
   prefs.base = mode; savePrefs();
-  if (map.isStyleLoaded()) applyMode(map, mode, prefs); else map.once('load', () => applyMode(map, mode, prefs));
+  applyView(); // before the style is in, onReady applies it
   updatePill(); ev.emit('base', mode);
 }
-function set3d(on, keepPitch) {
+function set3d(on, keepPitch, north) {
   prefs.is3d = !!on; savePrefs();
   if (on) {
-    map.setTerrain({ source: 'dem-terrain', exaggeration: prefs.exag || 1.3 });
+    map.setTerrain({ source: 'dem-terrain', exaggeration: exag() });
     if (!keepPitch) map.easeTo({ pitch: Math.max(map.getPitch(), 60), duration: 900 });
   } else {
     map.setTerrain(null);
-    map.easeTo({ pitch: 0, duration: 700 });
+    map.easeTo(north ? { pitch: 0, bearing: 0, duration: 700 } : { pitch: 0, duration: 700 }); // one ease: a second one would cancel the first
   }
-  updatePill(); ev.emit('3d', prefs.is3d);
+  updatePill(); updateNorth(); ev.emit('3d', prefs.is3d);
+}
+function setExaggeration(x) {
+  prefs.exag = clamp(+x || EXAG, 1, 2.5); savePrefs();
+  if (prefs.is3d && map) map.setTerrain({ source: 'dem-terrain', exaggeration: prefs.exag });
 }
 function updatePill() {
   if (!els.base) return;
   els.base.textContent = BASES[prefs.base] || 'Topo';
-  els.d3.textContent = prefs.is3d ? '3D' : '2D';
   els.d3.classList.toggle('on', !!prefs.is3d);
+  els.d3.setAttribute('aria-pressed', prefs.is3d ? 'true' : 'false');
+  els.d3.setAttribute('aria-label', prefs.is3d ? '3D view is on. Tap for flat 2D' : '3D view is off. Tap to tilt the land in 3D');
+  els.d3box.hidden = !prefs.is3d;
 }
 
 function openBasePicker() {
   const body = openSheet({ title: 'Basemap', html: `
     <div class="hmm-bases">${Object.entries(BASES).map(([k, l]) => `<button class="hmm-base ${prefs.base === k ? 'on' : ''}" data-base="${k}"><i class="th-${k}"></i><span>${l}</span></button>`).join('')}</div>
     <div class="hmm-set">
-      <label class="hmm-sw-row"><span>3D terrain<small>Tilt with two fingers. Shows the land in relief.</small></span><input type="checkbox" data-set="3d" ${prefs.is3d ? 'checked' : ''}><i class="hmm-switch"></i></label>
+      <label class="hmm-sw-row"><span>3D terrain<small>Tilt with two fingers, or use the tilt and rotate buttons on the left.</small></span><input type="checkbox" data-set="3d" ${prefs.is3d ? 'checked' : ''}><i class="hmm-switch"></i></label>
+      <label class="hmm-range"><span>3D height boost <b data-out="exag">${exag().toFixed(1)} times</b></span><input type="range" min="1" max="2.5" step="0.1" value="${exag()}" data-set="exag"></label>
       <label class="hmm-sw-row"><span>Contours on satellite<small>Brown lines on Topo are always on.</small></span><input type="checkbox" data-set="satc" ${prefs.satContours !== false ? 'checked' : ''}><i class="hmm-switch"></i></label>
+      <label class="hmm-sw-row"><span>Shade hills on satellite<small>Adds soft shadows so ridges and draws stand out.</small></span><input type="checkbox" data-set="sats" ${prefs.satShade !== false ? 'checked' : ''}><i class="hmm-switch"></i></label>
     </div>
     <p class="hmm-muted">Satellite imagery from Esri is for viewing. Offline Maps saves Topo and terrain; satellite tiles you have looked at stay saved for a while.</p>` });
   body.querySelectorAll('[data-base]').forEach((b) => b.onclick = () => { setBase(b.dataset.base); body.querySelectorAll('[data-base]').forEach((x) => x.classList.toggle('on', x === b)); });
   body.querySelector('[data-set="3d"]').onchange = (e) => set3d(e.target.checked);
-  body.querySelector('[data-set="satc"]').onchange = (e) => { prefs.satContours = e.target.checked; savePrefs(); applyMode(map, prefs.base, prefs); };
+  body.querySelector('[data-set="satc"]').onchange = (e) => { prefs.satContours = e.target.checked; savePrefs(); applyView(); };
+  body.querySelector('[data-set="sats"]').onchange = (e) => { prefs.satShade = e.target.checked; savePrefs(); applyView(); };
+  wireExag(body);
 }
 
 // ---------- scale bar, elevation, north ----------
@@ -385,20 +452,19 @@ async function updateElev() {
     els.elev.textContent = e == null ? '' : `${units.elev(Math.round(e))} elevation`;
   } catch (err) { if (my === elevSeq) els.elev.textContent = ''; }
 }
+let lastBearing = null;
 function updateNorth() {
-  const b = map.getBearing();
-  els.north.hidden = Math.abs(b) < 0.5;
-  els.northI.style.transform = `rotate(${-b}deg)`;
+  const b = Math.round(map.getBearing() * 2) / 2;
+  els.north.hidden = !!prefs.is3d || Math.abs(b) < 0.5; // in 3D the compass sits in the 3D controls
+  if (b === lastBearing) return;
+  lastBearing = b;
+  els.northI.style.transform = els.d3n.style.transform = `rotate(${-b}deg)`;
 }
 
-/** Elevation in metres at a point: terrain query when 3D is on, else decoded terrarium pixels (bilinear). */
+/** Elevation in metres at a point from decoded terrarium pixels at full detail (bilinear). Same in 2D and 3D:
+   the 3D mesh is coarser and reads 0 until its tile loads. */
 async function elevationAt(ll) {
   const { lng, lat } = maplibregl.LngLat.convert(ll);
-  const t = map && map.getTerrain && map.getTerrain();
-  if (t) {
-    const e = map.queryTerrainElevation([lng, lat]);
-    if (e != null && isFinite(e)) return e / (t.exaggeration || 1);
-  }
   const z = DEM_MAXZOOM, fx = lon2x(lng, z), fy = lat2y(lat, z), tx = Math.floor(fx), ty = Math.floor(fy);
   const tile = await dem.getDemTile(z, tx, ty);
   const W = tile.width, Hh = tile.height, d = tile.data;
@@ -421,7 +487,7 @@ function openMenu() {
     <p class="hmm-muted">Decimal degrees, or degrees minutes seconds, or UTM (Universal Transverse Mercator), the metre grid on most paper topo maps.</p>
     <h3 class="hmm-h">Relief</h3>
     <label class="hmm-sw-row"><span>Hillshade<small>Soft shadows that show slopes on Topo.</small></span><input type="checkbox" data-set="hill" ${prefs.hillshade !== false ? 'checked' : ''}><i class="hmm-switch"></i></label>
-    <label class="hmm-range"><span>3D height boost <b data-out="exag">${(prefs.exag || 1.3).toFixed(1)} times</b></span><input type="range" min="1" max="2.5" step="0.1" value="${prefs.exag || 1.3}" data-set="exag"></label>
+    <label class="hmm-range"><span>3D height boost <b data-out="exag">${exag().toFixed(1)} times</b></span><input type="range" min="1" max="2.5" step="0.1" value="${exag()}" data-set="exag"></label>
     <h3 class="hmm-h">About this map</h3>
     <p class="hmm-muted">Map data from OpenStreetMap contributors and OpenFreeMap. Terrain from Terrain Tiles (Mapzen, Amazon Web Services Open Data). Satellite imagery from Esri. Hunting layers from the BC Data Catalogue. <a href="#/credits">All credits</a></p>
     <div class="hmm-banner">Study aid only. The official regulations are the law.</div>` });
@@ -431,10 +497,17 @@ function openMenu() {
     if (key === 'units') { setContourUnits(map, dem, units.system); updateScale(); updateElev(); }
     ev.emit('units', units);
   }));
-  body.querySelector('[data-set="hill"]').onchange = (e) => { prefs.hillshade = e.target.checked; savePrefs(); applyMode(map, prefs.base, prefs); };
-  body.querySelector('[data-set="exag"]').oninput = (e) => {
-    prefs.exag = +e.target.value; savePrefs(); body.querySelector('[data-out="exag"]').textContent = `${prefs.exag.toFixed(1)} times`;
-    if (prefs.is3d) map.setTerrain({ source: 'dem-terrain', exaggeration: prefs.exag });
+  body.querySelector('[data-set="hill"]').onchange = (e) => { prefs.hillshade = e.target.checked; savePrefs(); applyView(); };
+  wireExag(body);
+}
+/** Height boost slider: label updates as you slide, the terrain changes once per frame at most. */
+function wireExag(body) {
+  const inp = body.querySelector('[data-set="exag"]'), out = body.querySelector('[data-out="exag"]');
+  if (!inp) return;
+  let raf = 0;
+  inp.oninput = () => {
+    out.textContent = `${(+inp.value).toFixed(1)} times`;
+    if (!raf) raf = requestAnimationFrame(() => { raf = 0; setExaggeration(inp.value); });
   };
 }
 

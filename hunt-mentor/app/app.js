@@ -9,9 +9,10 @@
   const TZ = 'America/Vancouver';
 
   // ---------- storage ----------
-  const blank = { done: {}, pos: {}, quiz: {}, checks: {}, journal: [], settings: { theme: '', firstHunt: '' } };
+  const blank = { done: {}, pos: {}, max: {}, last: null, quiz: {}, checks: {}, journal: [], settings: { theme: '', firstHunt: '' } };
   let S;
   try { S = Object.assign({}, blank, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) { S = JSON.parse(JSON.stringify(blank)); }
+  S.pos = S.pos || {}; S.max = S.max || {};
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { /* storage blocked */ } };
   const applyTheme = () => { if (S.settings.theme) document.documentElement.dataset.theme = S.settings.theme; else delete document.documentElement.dataset.theme; };
   applyTheme();
@@ -23,7 +24,11 @@
   const phases = [...new Set(sessions.map((s) => s.phase))];
   const phaseNames = { 1: 'Fast Start', 2: 'Foundations', 3: 'Reading the Land', 4: 'Species', 5: 'The Shot and After', 6: 'Mastery', 7: 'Rule Book' };
   const setTitle = (t) => { $('#top-title').textContent = t; };
-  const tab = (name) => document.querySelectorAll('.tabs a').forEach((a) => a.classList.toggle('on', a.dataset.tab === name));
+  const tab = (name) => document.querySelectorAll('.tabs a').forEach((a) => {
+    const on = a.dataset.tab === name;
+    a.classList.toggle('on', on);
+    if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+  });
   const firstHunt = () => S.settings.firstHunt || HM.field.defaults.firstHunt;
   const daysTo = (iso) => Math.ceil((new Date(iso + 'T00:00:00') - new Date(new Date().toDateString())) / 864e5);
 
@@ -33,7 +38,20 @@
   }
   $('#sheet-close').onclick = () => { $('#sheet').hidden = true; };
   $('#sheet').onclick = (e) => { if (e.target.id === 'sheet') $('#sheet').hidden = true; };
-  $('#btn-back').onclick = () => history.back();
+  // Back arrow: the previous place in the app (history.state.d counts in app steps), else the parent page. Never out of the app.
+  const parentOf = (hash) => {
+    const [a, b] = hash.replace(/^#\/?/, '').split('/');
+    if (!a) return null;
+    if (a === 's') return '#/learn';
+    if ((a === 'field' || a === 'lists' || a === 'cards' || a === 'journal') && b != null && b !== '') return '#/' + a;
+    if (['glossary', 'review', 'sources', 'install', 'print', 'credits', 'journal', 'cards', 'ask'].includes(a)) return '#/more';
+    return '#/';
+  };
+  $('#btn-back').onclick = () => {
+    if (navDepth > 0) { history.back(); return; }
+    const up = parentOf(location.hash);
+    if (up) { history.replaceState({ d: 0 }, '', up); route(); }
+  };
   $('#btn-search').onclick = () => { location.hash = '#/search'; };
 
   // glossary taps, checklist ticks (delegated)
@@ -116,10 +134,37 @@
   }
   const nextSession = () => sessions.find((s) => !S.done[s.id]);
 
+  // ---------- lesson helpers (screen list, where you are) ----------
+  const stepCache = {};
+  const stepsOf = (s) => stepCache[s.id] || (stepCache[s.id] = s.quiz.length ? s.steps.concat([{ title: 'Quiz', quiz: true }]) : s.steps.slice());
+  const lessonLabel = (s) => `${s.phase}.${s.num} ${s.title}`;
+  // where a lesson reopens: the last screen seen, or screen 1 when it was finished on its last screen
+  function openAt(s) {
+    const n = stepsOf(s).length, p = S.pos[s.id] || 0;
+    return S.done[s.id] && p >= n - 1 ? 0 : Math.max(0, Math.min(p, n - 1));
+  }
+  // the lesson to resume: the last one opened, unless it is finished
+  function resumeInfo() {
+    const L = S.last && byId[S.last.id];
+    if (!L) return null;
+    const n = stepsOf(L).length, i = openAt(L);
+    if (S.done[L.id] && i === 0) return null;
+    return { s: L, i, n, title: (stepsOf(L)[i] || {}).title || '' };
+  }
+  const meter = (a, b) => `<div class="bar"><i style="width:${Math.round((a / Math.max(1, b)) * 100)}%"></i></div>`;
+  function startCard(cls) {
+    const r = resumeInfo(), nx = nextSession();
+    if (r) return `<a class="card cont ${cls || ''}" href="#/s/${r.s.id}/${r.i}"><div class="cont-k">Continue</div>
+      <div class="cont-t">${esc(lessonLabel(r.s))}</div><div class="muted">Screen ${r.i + 1} of ${r.n}: ${esc(r.title)}</div>${meter(r.i + 1, r.n)}</a>`;
+    if (nx) return `<a class="card cont ${cls || ''}" href="#/s/${nx.id}"><div class="cont-k">${Object.keys(S.done).length ? 'Next lesson' : 'Start here'}</div>
+      <div class="cont-t">${esc(lessonLabel(nx))}</div><div class="muted">${stepsOf(nx).length} screens, ${nx.minutes} min</div></a>`;
+    return '<div class="card"><h2>All lessons done</h2></div>';
+  }
+
   function home() {
     setTitle('Hunt Mentor'); tab('home');
     const d = daysTo(firstHunt());
-    const nx = nextSession();
+    const r = resumeInfo(), nx = nextSession();
     const p = progress();
     const misses = Object.entries(S.quiz).filter(([, v]) => !v).length;
     view.innerHTML = `
@@ -128,50 +173,256 @@
         <div class="muted">${esc(firstHunt())}${S.settings.firstHunt ? '' : ' (placeholder date, set yours in More)'}</div></div>
         <a class="btn primary" href="#/field">Field Mode</a>
       </div>`}
-      ${nx ? `<a class="card" style="display:block;text-decoration:none;color:inherit" href="#/s/${nx.id}">
-        <div class="muted">Next session</div><h2>${nx.phase}.${nx.num} ${esc(nx.title)}</h2><div class="muted">${nx.minutes} min</div></a>` : '<div class="card"><h2>All sessions done</h2></div>'}
+      ${r && nx && nx.id !== r.s.id ? `<a class="card cont cont-sm" href="#/s/${nx.id}"><div class="cont-k">Next new lesson</div><div class="cont-t">${esc(lessonLabel(nx))}</div><div class="muted">${nx.minutes} min</div></a>` : ''}
       <div class="card"><h2>Progress</h2>
-        <div class="muted">${p.done} of ${p.total} sessions</div><div class="bar"><i style="width:${p.pct}%"></i></div>
+        <div class="muted">${p.done} of ${p.total} lessons done</div><div class="bar"><i style="width:${p.pct}%"></i></div>
         ${phases.map((ph) => { const q = progress(ph); return `<div style="margin-top:10px"><div class="row"><span class="grow">${ph}. ${phaseNames[ph]}</span><span class="muted">${q.done}/${q.total}</span></div><div class="bar"><i style="width:${q.pct}%"></i></div></div>`; }).join('')}
+        <a class="btn block" href="#/learn" style="margin-top:12px">All lessons</a>
       </div>
       ${misses ? `<a class="btn block" href="#/review">Review ${misses} missed quiz question${misses > 1 ? 's' : ''}</a>` : ''}
       <p class="muted">Regulation data last checked: ${esc(HM.regs.lastChecked)}. Content built ${esc(HM.built)}.</p>`;
     if (window.HMHome) try { window.HMHome.render(view, { S, save, daysTo, sunEvent, hhmm, addMin, certBadge, mentorUrl: MENTOR_URL, hasSession: (id) => !!byId[id], refresh: home }); } catch (e) { console.warn("Home dashboard", e); }
+    view.insertAdjacentHTML('afterbegin', startCard('cont-home'));
+  }
+
+  // ---------- Learn: find a lesson (filter, topic chips, phase groups) ----------
+  // Topic chips match lesson titles, plus a few lessons whose title does not say it.
+  const CHIPS = [
+    ['Deer', /deer|\brut\b|chronic wasting/i, ['shot-placement', 'blood-trailing', 'tracks', 'sign', 'local-heffley']],
+    ['Moose', /moose/i, ['the-rut', 'shot-placement', 'blood-trailing', 'field-dressing', 'packing-out']],
+    ['Ducks', /duck|geese|goose|waterfowl|migratory|brant/i, ['shotgun-skills', 'ammo-guide', 'local-mission', 'water-safety']],
+    ['Quail', /quail|chukar|upland/i, ['grouse', 'shotgun-skills', 'shotgun-guide']],
+    ['Rules', /rule book|licen|legal|\btags?\b|\bleh\b|bc rules|atv rules/i, []],
+    ['Gear', /gear|shotgun|scope|ammo|rifle|wear|pack|\bkit\b|optic|binocular|ballistic/i, ['sighting-in', 'glassing']],
+    ['Map skills', /\bmaps?\b|terrain|compass|gps|land status|scouting/i, ['funnels', 'wind-thermals', 'top-areas', 'named-areas']],
+    ['Meat', /meat|field dress|butcher|cook|packing out|quarter|skinning|after the kill|after the shot/i, []],
+  ];
+  const chipHas = (c, s) => c[1].test(s.title) || c[2].includes(s.id);
+  const LS_OPEN = 'hm.learn.open', SS_LEARN = 'hm.learn';
+  const ssGet = (k) => { try { return JSON.parse(sessionStorage.getItem(k) || 'null'); } catch (e) { return null; } };
+  const ssSet = (k, v) => { try { sessionStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* storage blocked */ } };
+  const lsGet = (k) => { try { return JSON.parse(localStorage.getItem(k) || 'null'); } catch (e) { return null; } };
+  const lsSet = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* storage blocked */ } };
+  const norm = (t) => String(t).toLowerCase().replace(/[^a-z0-9.]+/g, ' ');
+  let learnIndex = null;
+  const getLearnIndex = () => learnIndex || (learnIndex = sessions.map((s) => ({ s, title: norm(`${s.phase}.${s.num} ${s.title}`), screens: stepsOf(s).map((st) => norm(st.title)) })));
+
+  function lessonRow(s, hit, flat) {
+    const n = stepsOf(s).length, p = S.pos[s.id] || 0, started = S.max[s.id] != null || p > 0;
+    const status = S.done[s.id] ? `Done. ${n} screens` : started ? `Screen ${openAt(s) + 1} of ${n}` : `${n} screens, ${s.minutes} min`;
+    return `<a class="item lrow ${S.done[s.id] ? 'done' : ''} ${!S.done[s.id] && started ? 'going' : ''}" href="#/s/${s.id}${hit != null ? '/' + hit.n : ''}" data-id="${s.id}">
+      <span class="num ${flat ? 'wide' : ''}">${S.done[s.id] ? '&#10003;' : flat ? `${s.phase}.${s.num}` : s.num}</span>
+      <span class="grow"><span class="lrow-t">${esc(s.title)}</span><span class="lrow-s">${hit != null ? `Screen ${hit.n + 1}: ${esc(stepsOf(s)[hit.n].title)}` : status}</span></span>
+      ${!S.done[s.id] && started ? `<span class="lrow-m" aria-hidden="true"><i style="width:${Math.round(((openAt(s) + 1) / n) * 100)}%"></i></span>` : ''}</a>`;
   }
 
   function learn() {
     setTitle('Learn'); tab('learn');
-    view.innerHTML = phases.map((ph) => `<div class="card"><h2>Phase ${ph}: ${phaseNames[ph]}</h2><div class="list">
-      ${sessions.filter((s) => s.phase === ph).map((s) => `<a class="item ${S.done[s.id] ? 'done' : ''}" href="#/s/${s.id}">
-        <span class="num">${S.done[s.id] ? '&#10003;' : s.num}</span><span class="grow">${esc(s.title)}</span><span class="pill">${s.minutes} min</span></a>`).join('')}
-    </div></div>`).join('');
+    const st = ssGet(SS_LEARN) || { q: '', chip: '' };
+    const openSaved = lsGet(LS_OPEN);
+    const r = resumeInfo(), nx = nextSession();
+    const curPh = (r ? r.s : nx || sessions[0]).phase;
+    const isOpen = (ph) => (openSaved ? openSaved.includes(ph) : ph === curPh);
+    view.innerHTML = `${startCard()}
+      <div class="lfind"><input type="search" id="lq" placeholder="Find a lesson: moose, scope, tags" aria-label="Find a lesson" autocomplete="off" value="${esc(st.q || '')}"></div>
+      <div class="chips" role="group" aria-label="Topics">${CHIPS.map((c) => `<button type="button" class="chip ${st.chip === c[0] ? 'on' : ''}" data-chip="${esc(c[0])}" aria-pressed="${st.chip === c[0]}">${esc(c[0])}</button>`).join('')}</div>
+      <p class="muted lcount" id="lcount" aria-live="polite"></p>
+      <div id="lres" hidden></div>
+      <div id="lgroups">${phases.map((ph) => { const q = progress(ph); return `<details class="card phase" data-ph="${ph}" ${isOpen(ph) ? 'open' : ''}>
+        <summary><span class="ph-t">Phase ${ph}: ${phaseNames[ph]}</span><span class="ph-c">${q.done} of ${q.total} done</span><span class="ph-bar"><i style="width:${q.pct}%"></i></span></summary>
+        <div class="list" data-list="${ph}"></div></details>`; }).join('')}</div>`;
+    const res = $('#lres', view);
+    const groups = [...view.querySelectorAll('details.phase')];
+    const lists = Object.fromEntries(groups.map((g) => [g.dataset.ph, g.querySelector('.list')]));
+    let filtering = false;
+    groups.forEach((g) => g.addEventListener('toggle', () => {
+      if (filtering) return;
+      lsSet(LS_OPEN, groups.filter((x) => x.open).map((x) => +x.dataset.ph));
+    }));
+    const qIn = $('#lq', view);
+    const draw = () => {
+      const q = norm(qIn.value).trim(), words = q.split(' ').filter(Boolean);
+      const chip = CHIPS.find((c) => c[0] === st.chip);
+      ssSet(SS_LEARN, { q: qIn.value, chip: st.chip });
+      const idx = getLearnIndex();
+      let hits = idx.filter((e) => !chip || chipHas(chip, e.s)).map((e) => {
+        if (!words.length) return { s: e.s };
+        if (words.every((w) => e.title.includes(w))) return { s: e.s, rank: 0 };
+        const n = e.screens.findIndex((t) => words.every((w) => t.includes(w)));
+        if (n > -1) return { s: e.s, rank: 1, n };
+        if (words.every((w) => (e.title + ' ' + e.screens.join(' ')).includes(w))) return { s: e.s, rank: 2 };
+        return null;
+      }).filter(Boolean);
+      let inText = false;
+      if (words.length && !hits.length && q.length >= 3) {
+        hits = sessions.filter((s) => (!chip || chipHas(chip, s)) && words.every((w) => s.text.includes(w))).map((s) => ({ s, rank: 3 }));
+        inText = hits.length > 0;
+      }
+      const active = !!(words.length || chip);
+      filtering = true;
+      for (const g of groups) {
+        const ph = +g.dataset.ph;
+        g.hidden = active;
+        if (!active) { g.open = isOpen(ph); if (!lists[ph].firstChild) lists[ph].innerHTML = sessions.filter((x) => x.phase === ph).map((x) => lessonRow(x)).join(''); }
+      }
+      filtering = false;
+      // while filtering: one flat list, best matches first (lesson titles, then screens inside lessons)
+      const main = hits.filter((h) => h.rank !== 1), inner = hits.filter((h) => h.rank === 1);
+      main.sort((x, y) => (x.rank || 0) - (y.rank || 0));
+      res.hidden = !active || !hits.length;
+      res.innerHTML = !active ? '' : `${main.length ? `<div class="card lres"><h2>${inText ? 'Lessons that mention it' : 'Lessons'}</h2><div class="list">${main.map((h) => lessonRow(h.s, null, true)).join('')}</div></div>` : ''}
+        ${inner.length ? `<div class="card lres"><h2>Screens inside lessons</h2><div class="list">${inner.map((h) => lessonRow(h.s, h, true)).join('')}</div></div>` : ''}`;
+      const what = [chip && chip[0], qIn.value.trim() && `"${qIn.value.trim()}"`].filter(Boolean).join(' and ');
+      $('#lcount', view).innerHTML = !active ? `${sessions.length} lessons in ${phases.length} phases. Tap a phase to open it.`
+        : !hits.length ? `Nothing matches ${esc(what)}. Try one word, like deer or scope. <button type="button" class="linkish" id="lclear">Clear</button>`
+        : `${hits.length} lesson${hits.length === 1 ? '' : 's'} ${inText ? 'mention' : 'match'} ${esc(what)}. <button type="button" class="linkish" id="lclear">Clear</button>`;
+      const cl = $('#lclear', view);
+      if (cl) cl.onclick = () => { qIn.value = ''; st.chip = ''; view.querySelectorAll('.chip').forEach((x) => { x.classList.remove('on'); x.setAttribute('aria-pressed', 'false'); }); draw(); };
+    };
+    qIn.addEventListener('input', draw);
+    qIn.addEventListener('keydown', (e) => { if (e.key === 'Enter') qIn.blur(); });
+    view.querySelectorAll('.chip').forEach((b) => b.onclick = () => {
+      st.chip = st.chip === b.dataset.chip ? '' : b.dataset.chip;
+      view.querySelectorAll('.chip').forEach((x) => { const on = x.dataset.chip === st.chip; x.classList.toggle('on', on); x.setAttribute('aria-pressed', String(on)); });
+      draw();
+    });
+    draw();
   }
 
+  // ---------- lesson reader: the shell renders once, a screen change swaps only the screen ----------
+  let L = null; // the mounted lesson
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function session(id, stepArg) {
     const s = byId[id]; if (!s) return notFound();
     tab('learn');
-    const steps = s.steps.slice();
-    if (s.quiz.length) steps.push({ title: 'Quiz', quiz: true });
-    let i = stepArg != null ? +stepArg : (S.pos[id] || 0);
+    const steps = stepsOf(s);
+    let i = stepArg != null && stepArg !== '' && isFinite(+stepArg) ? +stepArg : openAt(s);
     i = Math.max(0, Math.min(i, steps.length - 1));
-    S.pos[id] = i; save();
-    const st = steps[i];
-    setTitle(`${s.phase}.${s.num} ${s.title}`);
-    const last = i === steps.length - 1;
-    view.innerHTML = `
-      <div class="dots">${steps.map((_, n) => `<i class="${n <= i ? 'on' : ''}"></i>`).join('')}</div>
-      <div class="muted">${s.minutes} min. Screen ${i + 1} of ${steps.length}</div>
-      <article class="step"><h2>${esc(st.title)}</h2>${st.quiz ? quizHtml(s) : st.html}</article>
-      <div class="btn-row">
-        ${i > 0 ? `<a class="btn" href="#/s/${id}/${i - 1}">Back</a>` : '<a class="btn" href="#/learn">List</a>'}
-        ${last ? `<button class="btn primary" id="mark">${S.done[id] ? 'Done &#10003;' : 'Mark done'}</button>` : `<a class="btn primary" href="#/s/${id}/${i + 1}">Next</a>`}
-      </div>`;
-    hydrateChecks(view); hydrateSteps(view);
-    renderRegs(view);
-    if (st.quiz) bindQuiz(s);
-    const mk = $('#mark'); if (mk) mk.onclick = () => { S.done[id] = true; save(); const nx = nextSession(); location.hash = nx ? `#/s/${nx.id}` : '#/'; };
-    window.scrollTo(0, 0);
+    setTitle(lessonLabel(s));
+    if (L && L.id === id && L.root.isConnected) { showScreen(i); return; }
+    const n = steps.length;
+    view.innerHTML = `<div class="lesson" id="lesson">
+      <div class="lesson-head">
+        <div class="segs" id="ls-segs" role="slider" tabindex="0" aria-label="Screens in this lesson. Tap or drag to jump" aria-valuemin="1" aria-valuemax="${n}" aria-valuenow="1">
+          ${steps.map(() => '<i></i>').join('')}<span class="segs-tip" id="ls-tip" hidden></span></div>
+        <div class="lesson-bar">
+          <button type="button" class="lbtn" id="ls-toc" aria-haspopup="dialog"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>Contents</button>
+          <span class="lesson-count" id="ls-count" aria-live="polite"></span>
+          <button type="button" class="lbtn lbtn-ask" id="ls-ask" aria-haspopup="dialog"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4Z"/></svg>Ask</button>
+        </div>
+      </div>
+      <article class="step" id="ls-step"></article>
+      <div class="lesson-nav"><button type="button" class="btn" id="ls-prev"></button><button type="button" class="btn primary" id="ls-next"></button></div>
+    </div>`;
+    L = { id, s, steps, n, i: -1, root: $('#lesson', view), art: $('#ls-step', view), segs: [...view.querySelectorAll('#ls-segs > i')] };
+    bindLesson();
+    showScreen(i);
   }
+
+  function showScreen(i) {
+    const { s, steps, n } = L;
+    i = Math.max(0, Math.min(n - 1, i | 0));
+    const prev = L.i, dir = prev < 0 ? 0 : Math.sign(i - prev);
+    const st = steps[i];
+    if (i !== prev) {
+      L.art.innerHTML = `<h2>${esc(st.title)}</h2>${st.quiz ? quizHtml(s) : st.html}`;
+      hydrateChecks(L.art); hydrateSteps(L.art); renderRegs(L.art);
+      if (st.quiz) bindQuiz(s);
+      L.segs.forEach((g, k) => { g.className = k < i ? 'seen' : k === i ? 'on' : ''; });
+      if (dir && !reduceMotion && L.art.animate) L.art.animate([{ transform: `translateX(${dir * 28}px)`, opacity: 0.35 }, { transform: 'none', opacity: 1 }], { duration: 170, easing: 'ease-out' });
+    }
+    L.i = i;
+    $('#ls-segs', view).setAttribute('aria-valuenow', String(i + 1));
+    $('#ls-segs', view).setAttribute('aria-valuetext', `Screen ${i + 1} of ${n}: ${st.title}`);
+    $('#ls-count', view).textContent = `${i + 1} of ${n}`;
+    const last = i === n - 1;
+    const pb = $('#ls-prev', view), nb = $('#ls-next', view);
+    pb.textContent = i > 0 ? 'Back' : 'All lessons';
+    nb.innerHTML = last ? (S.done[s.id] ? 'Done &#10003;' : 'Mark done') : 'Next';
+    S.pos[s.id] = i; S.max[s.id] = Math.max(S.max[s.id] || 0, i); S.last = { id: s.id, t: Date.now() }; save();
+    // keep the address current without adding a history entry for every screen
+    const h = `#/s/${s.id}/${i}`;
+    if (location.hash !== h) history.replaceState(history.state, '', h);
+    setTrail(h);
+    if (prev !== i) window.scrollTo(0, 0);
+  }
+
+  function bindLesson() {
+    const go = (d) => showScreen(L.i + d);
+    $('#ls-prev', view).onclick = () => { if (L.i > 0) go(-1); else location.hash = '#/learn'; };
+    $('#ls-next', view).onclick = () => {
+      if (L.i < L.n - 1) return go(1);
+      const id = L.id; S.done[id] = true; save();
+      const nx = nextSession(); location.hash = nx ? `#/s/${nx.id}` : '#/learn';
+    };
+    $('#ls-toc', view).onclick = openContents;
+    $('#ls-ask', view).onclick = () => sheet(`<h2>Ask a question</h2>
+      <div class="ask-pick">${window.HMRoutes && window.HMRoutes.ask ? `<a class="btn block" href="#/ask">Ask the app<small>Answers from these lessons. Works with no signal.</small></a>` : ''}
+      <a class="btn block" href="${MENTOR_URL}" target="_blank" rel="noopener" data-ask-mentor>Ask the mentor<small>Copies this screen for you to paste. Needs internet.</small></a></div>`);
+    // progress segments: tap or drag to jump (a 44 px tall touch strip; the bars inside are thin)
+    const bar = $('#ls-segs', view), tip = $('#ls-tip', view);
+    let dragging = false, pick = -1;
+    const idxAt = (x) => { const r = bar.getBoundingClientRect(); return Math.max(0, Math.min(L.n - 1, Math.floor(((x - r.left) / r.width) * L.n))); };
+    const preview = (x) => {
+      pick = idxAt(x);
+      L.segs.forEach((g, k) => g.classList.toggle('pick', k === pick));
+      tip.hidden = false; tip.textContent = `${pick + 1}. ${L.steps[pick].title}`;
+      const r = bar.getBoundingClientRect();
+      tip.style.left = `${Math.max(8, Math.min(r.width - tip.offsetWidth - 8, x - r.left - tip.offsetWidth / 2))}px`;
+    };
+    const endPick = (commit) => {
+      if (!dragging) return; dragging = false;
+      tip.hidden = true; L.segs.forEach((g) => g.classList.remove('pick'));
+      if (commit && pick > -1) showScreen(pick);
+    };
+    bar.addEventListener('pointerdown', (e) => { dragging = true; try { bar.setPointerCapture(e.pointerId); } catch (err) { /* old browser */ } preview(e.clientX); });
+    bar.addEventListener('pointermove', (e) => { if (dragging) preview(e.clientX); });
+    bar.addEventListener('pointerup', () => endPick(true));
+    bar.addEventListener('pointercancel', () => endPick(false));
+    bar.addEventListener('keydown', (e) => {
+      const d = { ArrowRight: 1, ArrowUp: 1, ArrowLeft: -1, ArrowDown: -1 }[e.key];
+      if (d) { e.preventDefault(); go(d); } else if (e.key === 'Home') showScreen(0); else if (e.key === 'End') showScreen(L.n - 1);
+    });
+    // swipe left or right on the screen to change screens (not inside slides, tables or sideways scrolling boxes)
+    let t0 = null;
+    const blocksSwipe = (el) => {
+      for (; el && el !== L.root; el = el.parentElement) {
+        if (el.matches('.steps, .tbl, table, pre, input, textarea, select, video, .segs, .q')) return true;
+        if (el.scrollWidth > el.clientWidth + 2) { const ox = getComputedStyle(el).overflowX; if (ox === 'auto' || ox === 'scroll') return true; }
+      }
+      return false;
+    };
+    L.root.addEventListener('touchstart', (e) => {
+      const t = e.touches[0];
+      t0 = e.touches.length === 1 && t.clientX > 24 && t.clientX < innerWidth - 24 && !blocksSwipe(e.target) ? { x: t.clientX, y: t.clientY, at: Date.now() } : null;
+    }, { passive: true });
+    L.root.addEventListener('touchend', (e) => {
+      if (!t0) return;
+      const t = e.changedTouches[0], dx = t.clientX - t0.x, dy = t.clientY - t0.y, dt = Date.now() - t0.at;
+      t0 = null;
+      if (dt > 700 || Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 2) return;
+      if (window.getSelection && String(window.getSelection()).length) return;
+      if (dx < 0 && L.i < L.n - 1) go(1); else if (dx > 0 && L.i > 0) go(-1);
+    }, { passive: true });
+  }
+
+  function openContents() {
+    const { s, steps, i } = L, mx = S.max[s.id] || 0;
+    sheet(`<h2>Contents</h2><p class="muted">${esc(lessonLabel(s))}. ${steps.length} screens.</p>
+      <ol class="toc">${steps.map((st, n) => `<li><button type="button" class="toc-i ${n === i ? 'on' : ''} ${n <= mx && n !== i ? 'seen' : ''}" data-n="${n}" ${n === i ? 'aria-current="step"' : ''}>
+        <span class="toc-n">${n + 1}</span><span class="toc-t">${esc(st.title)}</span>${n === i ? '<span class="pill soon">Here</span>' : ''}</button></li>`).join('')}</ol>`);
+    const body = $('#sheet-body');
+    body.querySelectorAll('.toc-i').forEach((b) => b.onclick = () => { $('#sheet').hidden = true; showScreen(+b.dataset.n); });
+    const cur = body.querySelector('.toc-i.on');
+    if (cur) { const card = $('#sheet .sheet-card'); card.scrollTop += cur.getBoundingClientRect().top - card.getBoundingClientRect().top - card.clientHeight / 2 + cur.offsetHeight / 2; }
+  }
+  // arrow keys change screens on a keyboard
+  document.addEventListener('keydown', (e) => {
+    if (!L || !L.root.isConnected || !$('#sheet').hidden || e.altKey || e.ctrlKey || e.metaKey) return;
+    if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement && document.activeElement.tagName)) return;
+    if (document.activeElement && document.activeElement.closest && document.activeElement.closest('.steps, .segs')) return;
+    if (e.key === 'ArrowRight') showScreen(L.i + 1); else if (e.key === 'ArrowLeft') showScreen(L.i - 1);
+  });
 
   function quizHtml(s, only) {
     return s.quiz.map((q, n) => {
@@ -343,7 +594,7 @@
           const o = JSON.parse(t);
           if (o.mapPrefs) { try { localStorage.setItem(MAP_KEY, JSON.stringify(o.mapPrefs)); } catch (e) { /* storage blocked */ } delete o.mapPrefs; }
           const md = o.mapData; delete o.mapData;
-          S = Object.assign({}, blank, o); save(); applyTheme();
+          S = Object.assign({}, blank, o); S.pos = S.pos || {}; S.max = S.max || {}; save(); applyTheme();
           const done = (n) => { alert(n ? "Backup restored, including your map items." : 'Backup restored.'); more(); };
           if (md) mapStore().then((m) => (m ? m.importAll(md) : 0)).then((n) => { const T = window.HuntMap && window.HuntMap.tools; if (T) T.refresh(); done(n); }, () => { alert('Backup restored, but the map items could not be saved on this phone.'); more(); });
           else done(0);
@@ -552,15 +803,56 @@
     copyText(readingText().slice(0, 8000)).then((ok) => toast(ok ? "Copied what you're reading. Tap Paste in the mentor." : 'Opening the mentor. Copy did not work, so type your question there.'));
   });
 
+  // ---------- in app trail: depth per history entry, the place at each depth (session only) ----------
+  let navDepth = 0, routed = false, curPage = '';
+  let trail = ssGet('hm.trail') || [];
+  function syncDepth() {
+    const st = history.state;
+    const was = navDepth;
+    if (st && typeof st.d === 'number') navDepth = st.d;
+    else { navDepth = routed ? navDepth + 1 : 0; history.replaceState(Object.assign({}, st, { d: navDepth }), '', location.href); trail.length = navDepth; }
+    return navDepth < was;
+  }
+  function setTrail(h) { trail[navDepth] = h; ssSet('hm.trail', trail.slice(0, 40)); }
+  const placeBefore = () => (navDepth > 0 ? trail[navDepth - 1] || '' : '');
+  function measureChrome() {
+    const r = document.documentElement.style, top = $('.top'), tabs = $('#tabs');
+    if (top && top.offsetHeight) r.setProperty('--top-h', top.offsetHeight + 'px');
+    if (tabs && tabs.offsetHeight) r.setProperty('--tabs-h', tabs.offsetHeight + 'px');
+  }
+  window.addEventListener('resize', measureChrome);
+  // "Back to lesson" chip on the map when you came to the map from a lesson
+  const backChip = document.createElement('button');
+  backChip.type = 'button'; backChip.className = 'hm-backchip'; backChip.hidden = true;
+  document.body.appendChild(backChip);
+  backChip.onclick = () => { const p = placeBefore(); if (/^#\/s\//.test(p)) history.back(); else { const l = S.last && byId[S.last.id]; if (l) location.hash = `#/s/${l.id}`; } };
+  // shared with the map: the lesson to go back to, and a way to get there
+  window.HMNav = {
+    lastLesson() { const l = S.last && byId[S.last.id]; if (!l) return null; const n = stepsOf(l).length, i = openAt(l); return { id: l.id, title: l.title, label: lessonLabel(l), screen: i + 1, screens: n, href: `#/s/${l.id}/${i}` }; },
+    cameFromLesson: () => /^#\/s\//.test(placeBefore()),
+    backToLesson: () => backChip.onclick(),
+  };
+
   // ---------- router ----------
   function route() {
+    const goingBack = syncDepth();
+    routed = true;
+    if (curPage === 'learn') { const st = ssGet(SS_LEARN) || {}; st.y = window.scrollY; ssSet(SS_LEARN, st); }
     document.body.classList.remove('field');
     $('#sheet').hidden = true;
     const h = location.hash.replace(/^#\/?/, '').split('/');
     const [a, b, c] = h;
-    askBtn.hidden = !(a === 's' || a === 'map');
+    curPage = a || 'home';
+    setTrail(location.hash || '#/');
+    $('#btn-back').classList.toggle('off', !a && navDepth === 0);
+    document.body.classList.toggle('in-lesson', a === 's');
+    askBtn.hidden = a !== 'map';
+    const fromLesson = a === 'map' && /^#\/s\//.test(placeBefore());
+    backChip.hidden = !fromLesson;
+    if (fromLesson) { const m = placeBefore().match(/^#\/s\/([^/]+)/), l = m && byId[m[1]]; backChip.innerHTML = `<span aria-hidden="true">&#8592;</span> Back to lesson${l ? `<small>${esc(l.title)}</small>` : ''}`; }
     if (a === 'map') return mapView(h.slice(1).join('/'));
     leaveMap();
+    if (a !== 's') L = null;
     if (!a) home();
     else if (a === 'learn') learn();
     else if (a === 's') session(b, c);
@@ -578,6 +870,9 @@
     else if (a === 'journal') journal(b === 'new' ? -1 : b != null ? +b : undefined);
     else if (window.HMRoutes && window.HMRoutes[a]) window.HMRoutes[a](h.slice(1)); // add on views (ask.js)
     else notFound();
+    if (a === 'learn' && goingBack) { const y = (ssGet(SS_LEARN) || {}).y; if (y) requestAnimationFrame(() => window.scrollTo(0, y)); }
+    else if (a !== 's') window.scrollTo(0, 0);
+    measureChrome();
   }
   window.addEventListener('hashchange', route);
   route();

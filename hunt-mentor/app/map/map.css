@@ -71,7 +71,15 @@
   -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
 .hmm-pill button { min-height: 50px; border: 0; background: none; padding: 0 10px; font-size: 16px; font-weight: 600; }
 .hmm-pill button + button { border-top: 1px solid rgba(0, 0, 0, 0.1); font-size: 20px; font-weight: 800; }
-.hmm-pill .hmm-pill-3d.on { color: var(--hmm-accent); }
+.hmm-pill .hmm-pill-3d.on { color: #fff; background: var(--hmm-accent); }
+
+/* 3D controls (shown only in 3D): compass resets north and flat, then tilt and rotate. 48 px targets. */
+.hmm-3d { position: absolute; left: calc(var(--sl) + 12px); top: calc(var(--st) + 150px); display: grid; grid-template-columns: repeat(2, 48px); gap: 10px; pointer-events: none; }
+.hmm-3d[hidden] { display: none; }
+.hmm-3d .hmm-btn { width: 48px; height: 48px; }
+.hmm-3d .hmm-3d-n { grid-column: 1 / span 2; justify-self: center; width: 56px; height: 56px; }
+@media (max-height: 640px) { .hmm-3d { top: calc(var(--st) + 128px); gap: 8px; } .hmm-3d .hmm-btn { width: 46px; height: 46px; } .hmm-3d .hmm-3d-n { width: 50px; height: 50px; } }
+.framing .hmm-3d { display: none !important; }
 .hmm-locate.on { color: #1a73e8; }
 .hmm-locate.follow { background: #1a73e8; color: #fff; }
 

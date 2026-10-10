@@ -30,7 +30,7 @@ export default async function init(api) {
   store = await openStore();
   H.tracks = { list: listTracks, get: getTrack, remove: removeTrack, save: putTrack, toGeoJSON, recording: () => !!rec };
   H.setBarAction('track', sheet);
-  addLayers(); map.on('styledata', addLayers); map.on('dragstart', () => { dragged = Date.now(); });
+  map.on('dragstart', () => { dragged = Date.now(); }); // the track line layers are added on first use (draw)
   document.addEventListener('visibilitychange', () => {
     if (!rec || rec.state !== 'on') return;
     if (document.visibilityState === 'visible') { lock(); if (watchId == null) watch(); } else persist();
@@ -188,21 +188,23 @@ const defaultName = () => `Track, ${new Date(rec ? rec.started : Date.now()).toL
 
 // ---------- map line ----------
 function addLayers() {
-  if (!map || !map.isStyleLoaded() || map.getSource(SRC)) return;
+  if (!map || map.getSource(SRC)) return; // plugins start after the style is ready (isStyleLoaded is false while tiles load)
   map.addSource(SRC, { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
   const before = map.getLayer(H.anchors.symbols) ? H.anchors.symbols : undefined;
   map.addLayer({ id: SRC + '-case', type: 'line', source: SRC, filter: ['==', ['geometry-type'], 'LineString'], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': '#ffffff', 'line-width': 7, 'line-opacity': 0.9 } }, before);
   map.addLayer({ id: SRC + '-line', type: 'line', source: SRC, filter: ['==', ['geometry-type'], 'LineString'], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': ['get', 'color'], 'line-width': 4 } }, before);
   map.addLayer({ id: SRC + '-pt', type: 'circle', source: SRC, filter: ['==', ['geometry-type'], 'Point'], paint: { 'circle-radius': 7, 'circle-color': ['get', 'color'], 'circle-stroke-color': '#ffffff', 'circle-stroke-width': 2.5 } }, before);
-  draw();
 }
 function draw() {
-  const s = map && map.getSource(SRC); if (!s) return;
+  if (!map) return;
   const f = [], pts = rec ? rec.pts : done ? done.geometry.coordinates : [];
   const col = rec ? COLOR : '#9c2f2f';
   if (pts.length > 1) f.push({ type: 'Feature', properties: { color: col }, geometry: { type: 'LineString', coordinates: pts.map((p) => [p[0], p[1]]) } });
   if (pts.length) f.push({ type: 'Feature', properties: { color: '#2b8a3e' }, geometry: { type: 'Point', coordinates: pts[0].slice(0, 2) } });
   if (rec && cur && cur.pt) f.push({ type: 'Feature', properties: { color: COLOR }, geometry: { type: 'Point', coordinates: cur.pt } });
+  if (!f.length && !map.getSource(SRC)) return;
+  addLayers();
+  const s = map.getSource(SRC); if (!s) return;
   s.setData({ type: 'FeatureCollection', features: f });
 }
 

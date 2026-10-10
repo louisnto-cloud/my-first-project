@@ -35,9 +35,12 @@ function speciesList(v) {
   return [...out];
 }
 const cap = (s) => String(s).charAt(0).toUpperCase() + String(s).slice(1);
+export const CATS = ['drive', 'atv', 'walk', 'backcountry', 'camp'];
+const CAT_CHIP = { drive: 'Drive', atv: 'ATV', walk: 'Walk', backcountry: 'Backcountry', camp: 'Camp' };
 export function filter(feats) {
-  const sp = prefs.species || 'all';
-  return sp === 'all' ? feats : feats.filter((f) => (f.properties._sp || []).includes(sp));
+  const sp = prefs.species || 'all', cat = prefs.spotCat || 'all';
+  if (sp === 'all' && cat === 'all') return feats;
+  return feats.filter((f) => (sp === 'all' || (f.properties._sp || []).includes(sp)) && (cat === 'all' || f.properties._cat === cat));
 }
 export function subtitle(p) {
   return [(SPOT_CATS[p._cat] || SPOT_CATS.other).label, (p._sp || []).map(cap).join(', ')].filter(Boolean).join(', ');
@@ -45,25 +48,30 @@ export function subtitle(p) {
 export function chipsHtml(feats) {
   const found = new Set(); for (const f of feats) (f.properties._sp || []).forEach((s) => found.add(s));
   const list = found.size ? [...found].sort((a, b) => SPECIES.indexOf(a) - SPECIES.indexOf(b)) : ['deer', 'moose', 'elk', 'bear', 'grouse', 'duck', 'quail'];
-  const cur = prefs.species || 'all';
-  return `<div class="hmm-chiprow" role="group" aria-label="Species"><span class="hmm-chiplabel">Species</span>
-    ${['all', ...list].map((s) => `<button class="hmm-chip ${cur === s ? 'on' : ''}" data-sp="${esc(s)}">${s === 'all' ? 'All' : esc(cap(s))}</button>`).join('')}</div>`;
+  const cur = prefs.species || 'all', cc = prefs.spotCat || 'all';
+  return `<div class="hmm-chiprow" role="group" aria-label="How you get there"><span class="hmm-chiplabel">Access</span>
+    ${['all', ...CATS].map((c) => `<button class="hmm-chip ${cc === c ? 'on' : ''}" data-cat="${c}" ${c === 'atv' ? 'aria-label="ATV (all terrain vehicle)"' : ''}>${c === 'all' ? 'All' : `${spotIconSvg(c, 16)} ${CAT_CHIP[c]}`}</button>`).join('')}</div>
+    <div class="hmm-chiprow" role="group" aria-label="Species"><span class="hmm-chiplabel">Species</span>
+    ${['all', ...list].map((s) => `<button class="hmm-chip ${cur === s ? 'on' : ''}" data-sp="${esc(s)}">${s === 'all' ? 'All' : esc(cap(s))}</button>`).join('')}</div>
+    <p class="hmm-muted hmm-tight">ATV means all terrain vehicle. Filters change the spots on the map.</p>`;
 }
 
 export function addLayers(H, l, src) {
   const map = H.map, before = H.anchors.symbols, id = `hm-l-${l.id}`;
-  map.addSource(src, { type: 'geojson', data: { type: 'FeatureCollection', features: [] }, cluster: true, clusterRadius: 46, clusterMaxZoom: 11, attribution: 'Candidate spots: Hunt Mentor, from BC open data' });
+  // Clutter: clusters up to zoom 12 (radius wider than the biggest bubble, so bubbles never stack); single pins below
+  // zoom 14 hide when they would cover a better scored pin (symbol-sort-key), and names show from zoom 13 only where they fit.
+  map.addSource(src, { type: 'geojson', data: { type: 'FeatureCollection', features: [] }, cluster: true, clusterRadius: 80, clusterMaxZoom: 12, maxzoom: 14, tolerance: 0.5, attribution: 'Candidate spots: Hunt Mentor, from BC open data' });
   map.addLayer({ id: `${id}-cluster`, type: 'circle', source: src, filter: ['has', 'point_count'], paint: {
-    'circle-color': '#e8590c', 'circle-opacity': 0.92, 'circle-radius': ['step', ['get', 'point_count'], 15, 10, 18, 50, 22, 200, 27],
+    'circle-color': '#e8590c', 'circle-opacity': 0.92, 'circle-radius': ['step', ['get', 'point_count'], 16, 10, 19, 50, 23, 200, 27],
     'circle-stroke-color': '#ffffff', 'circle-stroke-width': 2.5,
   } }, before);
   map.addLayer({ id: `${id}-count`, type: 'symbol', source: src, filter: ['has', 'point_count'], layout: {
     'text-field': ['get', 'point_count_abbreviated'], 'text-font': ['Noto Sans Bold'], 'text-size': 13, 'text-allow-overlap': true, 'text-ignore-placement': true,
   }, paint: { 'text-color': '#ffffff' } }, before);
   map.addLayer({ id, type: 'symbol', source: src, filter: ['!', ['has', 'point_count']], layout: {
-    'icon-image': ['concat', 'spot-', ['coalesce', ['get', '_cat'], 'other']], 'icon-allow-overlap': true,
+    'icon-image': ['concat', 'spot-', ['coalesce', ['get', '_cat'], 'other']], 'icon-overlap': ['step', ['zoom'], 'never', 14, 'always'], 'icon-padding': 1,
     'symbol-sort-key': ['-', 100, ['coalesce', ['get', '_score'], 0]],
-    'text-field': ['step', ['zoom'], '', 12.5, ['get', '_name']], 'text-font': ['Noto Sans Bold'], 'text-size': 11.5,
+    'text-field': ['step', ['zoom'], '', 13, ['get', '_name']], 'text-font': ['Noto Sans Bold'], 'text-size': 11.5, 'text-padding': 4,
     'text-anchor': 'top', 'text-offset': [0, 1.4], 'text-optional': true, 'text-max-width': 9,
   }, paint: { 'text-color': '#24261f', 'text-halo-color': 'rgba(255,255,255,0.95)', 'text-halo-width': 1.6 } }, before);
   return [`${id}-cluster`, `${id}-count`, id];

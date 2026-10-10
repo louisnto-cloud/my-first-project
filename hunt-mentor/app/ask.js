@@ -296,8 +296,8 @@
   const syncOnline = () => { const m = $('#hma-mentor'); if (m) m.hidden = !navigator.onLine; };
   window.addEventListener('online', syncOnline); window.addEventListener('offline', syncOnline);
 
-  // ---------- small Ask button in the session screen header ----------
-  function headerBtn() {
+  // ---------- small Ask button in the header (not used: the lesson reader has an Ask button) ----------
+  function headerBtn() { // eslint-disable-line no-unused-vars
     const top = $('header.top'), search = $('#btn-search');
     if (!top || $('#btn-ask')) return;
     const b = document.createElement('button');
@@ -322,7 +322,7 @@
   .hma-hbtn{font-size:16px;font-weight:700;min-width:44px;padding:0 6px}.hma-hbtn[hidden]{display:none}.hma-mentor[hidden]{display:none}`;
   function init() {
     const st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
-    headerBtn();
+    // the lesson reader has its own Ask button (app.js), so no header button here
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 

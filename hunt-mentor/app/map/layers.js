@@ -85,12 +85,13 @@ export function setOn(id, on) {
 function turnOn(st) {
   if (st.unsupported) return;
   ensureAdded(st); setVis(st, monthOk(st)); loadNear(st);
+  if (st.added && !st.pm && (st.dirty || (st.win && !contains(st.win, viewBox(0))))) refresh(st);
   // the style can be busy (another layer's source just added): try again when the map is idle, or a second layer never shows
   if (!st.added && !st.adding && !st.error && !st.retry) { st.retry = true; map.once('idle', () => { st.retry = false; if (lp(st.l.id).on) turnOn(st); }); }
 }
 function updateBadge() { H.ui.setBadge([...L.values()].filter((s) => lp(s.l.id).on && !s.unsupported).length); }
-function setVis(st, on) {
-  for (const id of st.mapIds) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none');
+function setVis(st, on, ids = st.mapIds) {
+  for (const id of ids) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none');
 }
 const monthOk = (st) => !prefs.month || !st.layerMonths.length || st.layerMonths.includes(prefs.month);
 
@@ -99,34 +100,67 @@ function ensureAdded(st) {
   const l = st.l;
   try {
     if (st.pm) {
+      // vector tiles: one source and layer set per area file, added only when the view comes near that area (keeps style layers low)
       st.adding = true;
-      loadPmtiles().then(async (pm) => {
-        st.gj = [];
-        for (const [i, f] of st.files.entries()) {
-          const src = `hm-src-${l.id}-${i}`, url = new URL(f.url, location.href).href;
-          if (!/\.pmtiles(\?|$)/i.test(f.url)) { // mixed layer: this area ships GeoJSON (small areas), loaded when the view is near
-            if (!map.getSource(src)) map.addSource(src, { type: 'geojson', data: EMPTY, tolerance: 0.45, attribution: l.attribution || 'BC Data Catalogue (Open Government Licence BC)' });
-            st.mapIds.push(...addLayerSet(st, src, `-${i}`, null)); st.gj.push({ src, f, req: false });
-            continue;
-          }
-          let sl = l.sourceLayer;
-          if (!sl) { try { const meta = await new pm.PMTiles(url).getMetadata(); sl = meta && meta.vector_layers && meta.vector_layers[0] && meta.vector_layers[0].id; } catch (err) { sl = null; } }
-          if (!map.getSource(src)) map.addSource(src, { type: 'vector', url: `pmtiles://${url}`, attribution: l.attribution || 'BC Data Catalogue (Open Government Licence BC)' });
-          st.mapIds.push(...addLayerSet(st, src, `-${i}`, sl || l.id));
-        }
-        finishAdd(st); pmMonthFilter(st); setVis(st, !!lp(l.id).on && monthOk(st)); loadNear(st); refreshRows();
+      loadPmtiles().then(() => {
+        st.parts = st.files.map((f, i) => ({ f, i, gj: !/\.pmtiles(\?|$)/i.test(f.url), added: false }));
+        st.added = true; addPartsNear(st); refreshRows();
       }).catch((err) => { st.error = String(err && err.message || err); console.warn('Hunt Map layer', l.id, err); refreshRows(); })
         .finally(() => { st.adding = false; });
       return;
     }
     const src = `hm-src-${l.id}`;
-    if (st.spot) st.mapIds = spots.addLayers(H, l, src);
+    if (st.spot) adopt(st, spots.addLayers(H, l, src));
     else {
       map.addSource(src, { type: 'geojson', data: EMPTY, tolerance: 0.45, attribution: l.attribution || 'BC Data Catalogue (Open Government Licence BC)' });
-      st.mapIds = addLayerSet(st, src, '', null);
+      adopt(st, addLayerSet(st, src, '', null));
     }
-    finishAdd(st);
+    st.added = true;
   } catch (err) { st.error = String(err && err.message || err); console.warn('Hunt Map layer', l.id, err); }
+}
+function addPartsNear(st) {
+  if (!st.parts || map.getZoom() < (st.l.loadMinzoom ?? (st.l.minzoom || 0) - 1)) return;
+  const v = viewBox();
+  for (const part of st.parts) if (!part.added && (!part.f.box || bboxIntersects(v, part.f.box))) addPart(st, part);
+}
+function addPart(st, part) {
+  const l = st.l, src = `hm-src-${l.id}-${part.i}`, attribution = l.attribution || 'BC Data Catalogue (Open Government Licence BC)';
+  part.added = true;
+  try {
+    if (part.gj) { // mixed layer: this area ships GeoJSON (small areas)
+      if (!map.getSource(src)) map.addSource(src, { type: 'geojson', data: part.f.url, tolerance: 0.45, attribution });
+      adopt(st, addLayerSet(st, src, `-${part.i}`, null));
+      return;
+    }
+    // the pipeline names the vector layer after the manifest id; the source metadata is checked once it loads
+    const url = new URL(part.f.url, location.href).href, sl = l.sourceLayer || l.id;
+    if (!map.getSource(src)) map.addSource(src, { type: 'vector', url: `pmtiles://${url}`, attribution });
+    const ids = addLayerSet(st, src, `-${part.i}`, sl); adopt(st, ids);
+    if (!l.sourceLayer) checkSourceLayer(st, src, sl, ids, part);
+  } catch (err) { console.warn('Hunt Map layer', l.id, err); }
+}
+function checkSourceLayer(st, src, sl, ids, part) {
+  const on = (e) => {
+    if (e.sourceId !== src || e.sourceDataType !== 'metadata') return;
+    map.off('sourcedata', on);
+    const names = map.getSource(src) && map.getSource(src).vectorLayerIds;
+    if (!names || !names.length || names.includes(sl)) return;
+    for (const id of ids) if (map.getLayer(id)) map.removeLayer(id); // a file that names its layer differently: draw its first layer
+    st.mapIds = st.mapIds.filter((x) => !ids.includes(x));
+    adopt(st, addLayerSet(st, src, `-${part.i}`, names[0]));
+  };
+  map.on('sourcedata', on);
+}
+/** Track new style layers of a manifest layer: remember base opacity, then apply opacity, month filter and visibility. */
+function adopt(st, ids) {
+  for (const id of ids) {
+    st.mapIds.push(id);
+    const t = map.getLayer(id).type;
+    for (const p of OPACITY[t] || []) { const v = map.getPaintProperty(id, p), k = `${id}|${p}`; st.base[k] = v == null ? 1 : v; (st.cur || (st.cur = {}))[k] = JSON.stringify(st.base[k]); }
+  }
+  applyOpacity(st, ids);
+  if (st.pm) pmMonthFilter(st, ids);
+  setVis(st, !!lp(st.l.id).on && monthOk(st), ids);
 }
 function addLayerSet(st, src, sfx, sourceLayer) {
   const l = st.l, ids = [];
@@ -143,17 +177,15 @@ function addLayerSet(st, src, sfx, sourceLayer) {
     ids.push(`${id}-line`);
   }
   if (l.labelField && type !== 'symbol') {
-    map.addLayer({ id: `${id}-label`, type: 'symbol', source: src, ...sl, minzoom: Math.max(minzoom, 7), layout: {
+    // labels only once there is room for them: area names from zoom 9, line names from 11, point names from 12
+    const lz = l.labelMinzoom ?? (type === 'fill' ? 9 : type === 'line' ? 11 : 12);
+    map.addLayer({ id: `${id}-label`, type: 'symbol', source: src, ...sl, minzoom: Math.max(minzoom, lz), layout: {
       'text-field': ['to-string', ['get', l.labelField]], 'text-font': ['Noto Sans Bold'], 'text-size': ['interpolate', ['linear'], ['zoom'], 7, 11, 14, 14],
       'symbol-placement': type === 'line' ? 'line' : 'point', 'text-max-width': 8, 'text-padding': 10, 'symbol-spacing': 500,
     }, paint: { 'text-color': darken(firstColor(paint[`${type}-color`]) || '#333333'), 'text-halo-color': 'rgba(255,255,255,0.92)', 'text-halo-width': 1.8 } }, H.anchors.symbols);
     ids.push(`${id}-label`);
   }
   return ids;
-}
-function finishAdd(st) {
-  for (const id of st.mapIds) { const t = map.getLayer(id).type; for (const p of OPACITY[t] || []) { const v = map.getPaintProperty(id, p); st.base[`${id}|${p}`] = v == null ? 1 : v; } }
-  st.added = true; applyOpacity(st);
 }
 let pmReady = null;
 function loadPmtiles() {
@@ -167,12 +199,27 @@ function loadPmtiles() {
   pmReady.catch(() => { pmReady = null; });
   return pmReady;
 }
-function applyOpacity(st) {
+function applyOpacity(st, ids = st.mapIds) {
   const k = lp(st.l.id).opacity ?? 1;
-  for (const id of st.mapIds) {
+  for (const id of ids) {
     const lyr = map.getLayer(id); if (!lyr) continue;
-    for (const p of OPACITY[lyr.type] || []) { const b = st.base[`${id}|${p}`]; if (typeof b === 'number') map.setPaintProperty(id, p, +(b * k).toFixed(3)); }
+    for (const p of OPACITY[lyr.type] || []) {
+      const key = `${id}|${p}`, b = st.base[key], v = scaleOpacity(b, k), js = JSON.stringify(v);
+      if (b == null || st.cur?.[key] === js) continue;
+      (st.cur || (st.cur = {}))[key] = js;
+      map.setPaintProperty(id, p, v);
+    }
   }
+}
+// Opacity in the manifest can be a number or an expression (for example a match on "band"): scale the outputs, keep zoom at the top.
+function scaleOpacity(b, k) {
+  if (k === 1) return b;
+  if (typeof b === 'number') return +(b * k).toFixed(3);
+  if (!Array.isArray(b)) return b;
+  const zoomIn = (x) => Array.isArray(x) && x[0] === 'zoom';
+  if (b[0] === 'interpolate' && zoomIn(b[2])) return b.map((x, i) => (i > 3 && i % 2 === 0 ? scaleOpacity(x, k) : x));
+  if (b[0] === 'step' && zoomIn(b[1])) return b.map((x, i) => (i === 2 || (i > 2 && i % 2 === 0) ? scaleOpacity(x, k) : x));
+  return ['*', k, b];
 }
 const firstColor = (v) => (typeof v === 'string' ? v : Array.isArray(v) ? v.flat(Infinity).find((x) => typeof x === 'string' && /^(#|rgb|hsl)/i.test(x)) : null);
 function darken(c) {
@@ -186,11 +233,22 @@ function viewBox(pad = 0.5) { const b = map.getBounds(); return padBbox([b.getWe
 function loadNear(st) {
   if (!st.added || !lp(st.l.id).on) return;
   if (map.getZoom() < (st.l.loadMinzoom ?? (st.l.minzoom || 0) - 1)) return; // loadMinzoom: tiled layers (routes) load only from there
+  if (st.pm) { addPartsNear(st); return; }
   const v = viewBox();
-  if (st.pm) { for (const g of st.gj || []) if (!g.req && (!g.f.box || bboxIntersects(v, g.f.box))) { g.req = true; map.getSource(g.src)?.setData(g.f.url); } return; }
   for (const f of st.files) if (!st.loaded.has(f.url) && !st.failed.has(f.url) && (!f.box || bboxIntersects(v, f.box))) loadFile(st, f);
 }
-export function onMove() { for (const st of L.values()) if (lp(st.l.id).on) loadNear(st); refreshRows(); }
+// moveend can fire many times in a row (flick, pinch, 3D tilt): do the work once the map settles
+let moveT = 0;
+export function onMove() { clearTimeout(moveT); moveT = setTimeout(moveNow, 180); }
+function moveNow() {
+  for (const st of L.values()) {
+    if (!lp(st.l.id).on) continue;
+    loadNear(st);
+    if (st.win ? !contains(st.win, viewBox(0)) : st.last && st.last.length > WIN_FEATS && map.getZoom() >= 7) refresh(st); // panned out of the drawn window: draw the features around the new view
+  }
+  refreshRows();
+}
+const contains = (o, i) => i[0] >= o[0] && i[1] >= o[1] && i[2] <= o[2] && i[3] <= o[3];
 
 function loadFile(st, f) {
   if (st.loaded.has(f.url)) return Promise.resolve(st.loaded.get(f.url));
@@ -199,7 +257,7 @@ function loadFile(st, f) {
     const feats = (gj && gj.features || []).filter((x) => x && x.geometry);
     for (const ft of feats) prep(st, ft, f.area);
     st.loaded.set(f.url, feats);
-    refresh(st);
+    queueRefresh(st);
     return feats;
   }).catch((err) => {
     st.failed.add(f.url); setTimeout(() => st.failed.delete(f.url), 30000);
@@ -219,17 +277,37 @@ function prep(st, ft, area) {
   if (st.spot) spots.prep(p);
 }
 // PMTiles cannot hold arrays: the pipeline writes monthsKey like ",11,12,1,2,3,4," for seasonal features.
-function pmMonthFilter(st) {
+function pmMonthFilter(st, ids = st.mapIds) {
   const m = prefs.month ? ['any', ['!', ['has', 'monthsKey']], ['in', `,${prefs.month},`, ['to-string', ['get', 'monthsKey']]]] : null;
   const f = st.l.filter && m ? ['all', st.l.filter, m] : (st.l.filter || m);
-  for (const id of st.mapIds) if (map.getLayer(id)) map.setFilter(id, f);
+  for (const id of ids) if (map.getLayer(id)) map.setFilter(id, f);
+}
+// Several area or tile files often arrive together: one setData for the lot.
+function queueRefresh(st) {
+  if (st.refT) return;
+  st.refT = setTimeout(() => { st.refT = 0; refresh(st); }, 60);
+}
+// Big layers (private land, closures, routes) draw only the features near the view, not every loaded area:
+// less for the map worker to cut into tiles, and far less memory. The window is redrawn when the view leaves it.
+const WIN_FEATS = 300;
+const fbox = new WeakMap();
+function featBox(f) { let b = fbox.get(f); if (!b) { b = bboxOf(f.geometry) || [0, 0, 0, 0]; fbox.set(f, b); } return b; }
+function winBox() {
+  const v = viewBox(0), cx = (v[0] + v[2]) / 2, cy = (v[1] + v[3]) / 2;
+  const hw = Math.max((v[2] - v[0]) * 1.5, 0.9), hh = Math.max((v[3] - v[1]) * 1.5, 0.6);
+  return [cx - hw, cy - hh, cx + hw, cy + hh];
 }
 function refresh(st) {
   if (st.pm) { pmMonthFilter(st); return; }
   const src = map.getSource(`hm-src-${st.l.id}`); if (!src) return;
+  if (!lp(st.l.id).on) { st.dirty = true; return; } // drawn when it is turned on
+  st.dirty = false;
   let feats = [].concat(...st.loaded.values());
   if (prefs.month) feats = feats.filter((f) => !f.properties._m || f.properties._m.includes(prefs.month));
   if (st.spot) feats = spots.filter(feats);
+  if (feats.length > WIN_FEATS && map.getZoom() >= 7) { const w = (st.win = winBox()); feats = feats.filter((f) => bboxIntersects(w, featBox(f))); } else st.win = null;
+  if (st.last && st.last.length === feats.length && st.last.every((f, i) => f === feats[i])) return; // nothing changed
+  st.last = feats;
   src.setData({ type: 'FeatureCollection', features: feats });
 }
 
@@ -255,6 +333,13 @@ export function setMonth(m) {
 export function setSpecies(s) {
   prefs.species = s; savePrefs();
   for (const st of L.values()) if (st.spot && st.added) refresh(st);
+  H.emit('spotfilter', { species: prefs.species, cat: prefs.spotCat || 'all' });
+}
+/** Spot access filter: 'all', 'drive', 'atv', 'walk', 'backcountry' or 'camp'. */
+export function setSpotCat(c) {
+  prefs.spotCat = c; savePrefs();
+  for (const st of L.values()) if (st.spot && st.added) refresh(st);
+  H.emit('spotfilter', { species: prefs.species || 'all', cat: c });
 }
 
 // ---------- taps ----------
@@ -365,8 +450,36 @@ function rowHtml(st) {
     </div></div>`;
 }
 function legendHtml(l) {
-  if (!Array.isArray(l.legend) || !l.legend.length) return '';
-  return `<ul class="hmm-legend">${l.legend.map(([t, c]) => `<li><i style="background:${esc(c)}"></i>${esc(t)}</li>`).join('')}</ul>`;
+  const items = Array.isArray(l.legend) && l.legend.length ? l.legend : autoLegend(l);
+  if (!items.length) return '';
+  return `<ul class="hmm-legend">${items.map(([t, c, o]) => `<li><i style="background:${esc(c)}${o != null ? `;opacity:${Math.min(1, o * 2.2).toFixed(2)}` : ''}"></i>${esc(t)}</li>`).join('')}</ul>`;
+}
+// BEC (Biogeoclimatic Ecosystem Classification) zone codes used by the habitat zones layer
+const BEC = { BG: 'Bunchgrass', PP: 'Ponderosa Pine', IDF: 'Interior Douglas fir', MS: 'Montane Spruce', ESSF: 'Engelmann Spruce Subalpine Fir', ICH: 'Interior Cedar Hemlock', SBS: 'Sub Boreal Spruce', CWH: 'Coastal Western Hemlock', CDF: 'Coastal Douglas fir', MH: 'Mountain Hemlock', IMA: 'Interior Mountain heather Alpine', CMA: 'Coastal Mountain heather Alpine', BAFA: 'Boreal Altai Fescue Alpine', SBPS: 'Sub Boreal Pine Spruce', BWBS: 'Boreal White and Black Spruce' };
+const legendWord = (v) => { const s = String(v); return BEC[s] ? `${s} (${BEC[s]})` : s.charAt(0).toUpperCase() + s.slice(1); };
+/** Legend rows [label, colour, opacity?] read from a match or step colour (or opacity) in the manifest paint. */
+function autoLegend(l) {
+  const p = l.paint || {}, t = l.type, ck = t === 'fill' ? 'fill-color' : t === 'circle' ? 'circle-color' : t === 'symbol' ? 'text-color' : 'line-color';
+  const fromExpr = (e, make) => {
+    if (!Array.isArray(e)) return [];
+    if (e[0] === 'match' && Array.isArray(e[1]) && e[1][0] === 'get') {
+      const out = [];
+      for (let i = 2; i + 1 < e.length - 1; i += 2) out.push(make([].concat(e[i]).map(legendWord).join(', '), e[i + 1]));
+      out.push(make('Other', e[e.length - 1]));
+      return out;
+    }
+    if (e[0] === 'step' && Array.isArray(e[1]) && e[1][0] === 'get') {
+      const out = [], stops = [];
+      for (let i = 3; i + 1 < e.length; i += 2) stops.push(e[i]);
+      out.push(make(`Before ${stops[0]}`, e[2]));
+      for (let i = 0; i < stops.length; i++) out.push(make(i + 1 < stops.length ? `${stops[i]} to ${stops[i + 1] - 1}` : `${stops[i]} and later`, e[4 + i * 2]));
+      return out;
+    }
+    return [];
+  };
+  let rows = fromExpr(p[ck], (lab, c) => [lab, c]).filter(([, c]) => typeof c === 'string');
+  if (!rows.length && typeof p[ck] === 'string') rows = fromExpr(p[`${t}-opacity`], (lab, o) => [lab, p[ck], typeof o === 'number' ? o : null]);
+  return rows;
 }
 function monthsRow() {
   const has = [...L.values()].some((s) => s.layerMonths.length || s.hasMonths || s.l.group === 'Habitat and migration');
@@ -425,6 +538,7 @@ function wirePanel(body) {
     if (b.dataset.base) { H.setBase(b.dataset.base); body.querySelectorAll('[data-base]').forEach((x) => x.classList.toggle('on', x === b)); return; }
     if (b.dataset.month != null) { setMonth(+b.dataset.month); body.querySelectorAll('[data-month]').forEach((x) => x.classList.toggle('on', x === b)); refreshRows(); return; }
     if (b.dataset.sp) { setSpecies(b.dataset.sp); body.querySelectorAll('[data-sp]').forEach((x) => x.classList.toggle('on', x === b)); return; }
+    if (b.dataset.cat) { setSpotCat(b.dataset.cat); body.querySelectorAll('[data-cat]').forEach((x) => x.classList.toggle('on', x === b)); return; }
     if (b.dataset.l === 'info') openInfo(b.closest('.hmm-lrow').dataset.id);
   });
 }

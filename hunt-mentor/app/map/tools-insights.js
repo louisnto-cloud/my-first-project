@@ -275,6 +275,7 @@ export async function insightsAt(p, name) {
     onClose: () => { if (my === tok) { active = false; setMarker(null); } },
     html: `<p class="hmm-muted">${fromCentre ? 'Map centre, ' : ''}${esc(H.units.coord(lng, lat))}</p>${BANNER}<p class="hmm-muted">Checking this spot: habitat, seasons, winter ranges and spots.</p>` });
   active = true;
+  if (H.hintOnce) H.hintOnce('insights', 'While the report is open, tap anywhere on the map to check that spot.');
   const D = await gather(p);
   if (my !== tok || H.els.sheetB !== body || H.els.sheet.hidden) return;
   const t0 = performance.now();
