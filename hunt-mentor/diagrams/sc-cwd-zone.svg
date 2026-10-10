@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Sketch of southern BC, not to scale. The Chronic Wasting Disease Management Zone is an orange patch in Region 4, the Kootenay, around Cranbrook, near the Alberta and US borders. Kamloops and Mission are marked in blue, well outside the zone." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Where is the CWD zone?</text>
+<text x="200.0" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">Southern BC sketch, not to scale</text>
+<rect x="10" y="56" width="380" height="234" fill="#dfe6d3"/>
+<path d="M248.9 56 L390 56 L390 279 L378.1 279 Z" fill="#ece6d4"/>
+<path d="M248.9 56 L378.1 279" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="6 4"/>
+<rect x="10" y="279" width="380" height="11" fill="#ece6d4"/>
+<path d="M10 279 H390" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="6 4"/>
+<path d="M10 56 L40 56 C50 120 70 200 85.4 257.1 L60 279 L10 279 Z" fill="#c9dcea"/>
+<text x="372" y="80" font-size="13" fill="#8b5a2b" text-anchor="end">Alberta</text>
+<text x="200" y="286" font-size="13" fill="#8b5a2b" text-anchor="middle">USA</text>
+<path d="M275.1 162.2 C314.3 133 350.3 176.8 366.6 235.2 L360.1 279 L294.7 279 C268.5 235.2 262.0 191.4 275.1 162.2 Z" fill="#e8590c" opacity="0.55" stroke="#e8590c" stroke-width="2"/>
+<circle cx="320.8" cy="242.5" r="5" fill="#2f3a2b"/>
+<text x="320.8" y="232.5" font-size="13" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Cranbrook</text>
+<circle cx="173.7" cy="154.9" r="6" fill="#4a7fb0"/>
+<text x="173.7" y="142.9" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Kamloops</text>
+<circle cx="108.3" cy="271.7" r="5" fill="#4a7fb0"/>
+<text x="108.3" y="261.7" font-size="13" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Mission</text>
+<rect x="150" y="64" width="150" height="58" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
+<text x="225.0" y="89.5" font-size="13" fill="#23261f" text-anchor="middle" font-weight="bold">Orange: CWD zone,</text>
+<text x="225.0" y="105.5" font-size="13" fill="#23261f" text-anchor="middle" font-weight="bold">Region 4 (Kootenay)</text>
+<text x="173.7" y="178.9" font-size="13" fill="#4a7fb0" text-anchor="middle" font-weight="bold">Outside the zone</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 2: remove the antlers. In a restricted antler season, remove both antlers with the skull plate as one piece and keep them with the carcass. The lab wants the head, not the antlers, 95 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Step 2: antlers off</text>
+<g transform="translate(120 170) scale(1.2)"><path d="M10,10 L60,20 L60,70 L0,50 Z" fill="#8b5a2b" stroke="#23261f" stroke-width="2"/><path d="M10,10 C0,-10 -30,-14 -60,0 L-80,14 L-76,26 L-50,28 L-10,40 L14,40 Z" fill="#a0703a" stroke="#23261f" stroke-width="2"/><circle cx="-30" cy="6" r="4" fill="#23261f"/><path d="M-6,-6 L4,-24 L16,-10 Z" fill="#a0703a" stroke="#23261f" stroke-width="2"/><circle cx="-78" cy="18" r="3" fill="#23261f"/></g>
+<g transform="translate(300 90)"><path d="M-20,30 C-24,-6 -6,-26 18,-34 M-10,0 L-30,-14 M8,-24 L6,-44" fill="none" stroke="#c9a06a" stroke-width="6" stroke-linecap="round"/><ellipse cx="-18" cy="34" rx="18" ry="8" fill="#f3ead8" stroke="#23261f" stroke-width="2"/></g>
+<line x1="150" y1="110" x2="253.0" y2="106.3" stroke="#e8590c" stroke-width="2.5"/><polygon points="262,106 252.8,101.4 253.2,111.3" fill="#e8590c"/>
+<text x="300" y="166" font-size="14" fill="#2f3a2b" text-anchor="middle">Restricted season?</text>
+<text x="300" y="184" font-size="14" fill="#2f3a2b" text-anchor="middle">Both antlers on the</text>
+<text x="300" y="202" font-size="14" fill="#2f3a2b" text-anchor="middle">skull plate, one piece,</text>
+<text x="300" y="220" font-size="14" fill="#2f3a2b" text-anchor="middle">kept with the carcass</text>
+<rect x="10" y="260" width="380" height="34" rx="6" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="281.9" font-size="14" fill="#23261f" text-anchor="middle">The lab wants the head, not the antlers (95%)</text>
+</svg>

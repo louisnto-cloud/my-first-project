@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Crossing into BC with a deer, elk, moose or caribou killed elsewhere, 95 percent. May come in: the edible meat of the four quarters, loins, neck and ribs; the hide cleaned of all tissue; antlers and skull plate cleaned of all tissue. Stays out: the head, the spine, the whole carcass, and urine lures from outside BC. Same rule for Alberta, Yukon, Alaska, anywhere." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Crossing into BC with a cervid</text>
+<path d="M200 40 V250" stroke="#2f3a2b" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="100" y="60" font-size="16" fill="#2f6b3a" text-anchor="middle" font-weight="bold">May come in</text>
+<text x="300" y="60" font-size="16" fill="#e8590c" text-anchor="middle" font-weight="bold">Stays out</text>
+<circle cx="28" cy="92" r="11" fill="#2f6b3a"/><path d="M23 92 l4 4 l7 -8" stroke="#fff" stroke-width="3" fill="none"/>
+<text x="46" y="97" font-size="14" fill="#23261f" text-anchor="start">Meat: quarters,</text>
+<text x="46" y="113" font-size="14" fill="#23261f" text-anchor="start">loins, neck, ribs</text>
+<circle cx="28" cy="144" r="11" fill="#2f6b3a"/><path d="M23 144 l4 4 l7 -8" stroke="#fff" stroke-width="3" fill="none"/>
+<text x="46" y="149" font-size="14" fill="#23261f" text-anchor="start">Hide, cleaned of</text>
+<text x="46" y="165" font-size="14" fill="#23261f" text-anchor="start">all tissue</text>
+<circle cx="28" cy="196" r="11" fill="#2f6b3a"/><path d="M23 196 l4 4 l7 -8" stroke="#fff" stroke-width="3" fill="none"/>
+<text x="46" y="201" font-size="14" fill="#23261f" text-anchor="start">Antlers + skull</text>
+<text x="46" y="217" font-size="14" fill="#23261f" text-anchor="start">plate, cleaned</text>
+<circle cx="228" cy="92" r="11" fill="#e8590c"/><path d="M223 87 l10 10 m0 -10 l-10 10" stroke="#fff" stroke-width="3" fill="none"/>
+<text x="246" y="97" font-size="14" fill="#23261f" text-anchor="start">Head</text>
+<circle cx="228" cy="132" r="11" fill="#e8590c"/><path d="M223 127 l10 10 m0 -10 l-10 10" stroke="#fff" stroke-width="3" fill="none"/>
+<text x="246" y="137" font-size="14" fill="#23261f" text-anchor="start">Spine</text>
+<circle cx="228" cy="172" r="11" fill="#e8590c"/><path d="M223 167 l10 10 m0 -10 l-10 10" stroke="#fff" stroke-width="3" fill="none"/>
+<text x="246" y="177" font-size="14" fill="#23261f" text-anchor="start">Whole carcass</text>
+<circle cx="228" cy="212" r="11" fill="#e8590c"/><path d="M223 207 l10 10 m0 -10 l-10 10" stroke="#fff" stroke-width="3" fill="none"/>
+<text x="246" y="217" font-size="14" fill="#23261f" text-anchor="start">Urine lures from</text>
+<text x="246" y="233" font-size="14" fill="#23261f" text-anchor="start">outside BC</text>
+<rect x="10" y="256" width="380" height="38" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
+<text x="200.0" y="279.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Same rule for Alberta, Yukon, Alaska, anywhere (95%)</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 5: keep the perforated stub with your CWD number and photograph it. Results are posted online by that number. Positive results are not posted: the province phones you, 95 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Step 5: keep the stub, photograph it</text>
+<rect x="60" y="70" width="140" height="70" rx="6" fill="#ffffff" stroke="#23261f" stroke-width="2"/>
+<text x="130" y="100" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">CWD No.</text>
+<text x="130" y="124" font-size="18" fill="#e8590c" text-anchor="middle" font-weight="bold">000000</text>
+<rect x="240" y="56" width="90" height="160" rx="14" fill="#2f3a2b"/><rect x="250" y="72" width="70" height="120" rx="4" fill="#dfe6d3"/>
+<rect x="258" y="110" width="54" height="30" rx="3" fill="#ffffff" stroke="#23261f"/>
+<line x1="204" y1="104" x2="228.0" y2="116.0" stroke="#e8590c" stroke-width="3"/><polygon points="236,120 230.2,111.5 225.7,120.4" fill="#e8590c"/>
+<rect x="10" y="228" width="380" height="64" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="246.9" font-size="14" fill="#23261f" text-anchor="middle">Results go online by that number.</text>
+<text x="200.0" y="264.9" font-size="14" fill="#23261f" text-anchor="middle">Positive? Not posted: the province</text>
+<text x="200.0" y="282.9" font-size="14" fill="#23261f" text-anchor="middle">phones you (95%).</text>
+</svg>

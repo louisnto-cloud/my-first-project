@@ -8,18 +8,18 @@
 <text x="80" y="148" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">cancelled</text>
 <text x="200" y="148" font-size="14" fill="#2f3a2b" text-anchor="middle">not used</text>
 <text x="320" y="148" font-size="14" fill="#2f3a2b" text-anchor="middle">not used</text>
-<path d="M30 176 H370" stroke="#2f3a2b" stroke-width="3"/>
-<circle cx="40" cy="176" r="8" fill="#e8590c"/>
-<text x="40" y="202" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Kill</text>
-<circle cx="200" cy="176" r="8" fill="#4a7fb0"/>
-<text x="200" y="202" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Meat eaten</text>
-<line x1="48" y1="168" x2="183.0" y2="168.0" stroke="#e8590c" stroke-width="2.5"/><polygon points="192,168 183.0,163.1 183.0,172.9" fill="#e8590c"/>
-<text x="120" y="160" font-size="13" fill="#e8590c" text-anchor="middle" font-weight="bold">keep the papers</text>
-<circle cx="360" cy="176" r="8" fill="#2f6b3a"/>
-<text x="345" y="202" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Mount or hide</text>
-<text x="330" y="160" font-size="13" fill="#2f6b3a" text-anchor="middle" font-weight="bold">keep forever</text>
-<rect x="20" y="222" width="360" height="66" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
-<text x="200.0" y="241.9" font-size="14" fill="#23261f" text-anchor="middle">Lost one? Replace it at FrontCounter BC</text>
-<text x="200.0" y="259.9" font-size="14" fill="#23261f" text-anchor="middle">or Service BC for $10. Declare the</text>
-<text x="200.0" y="277.9" font-size="14" fill="#23261f" text-anchor="middle">harvest from the original (95%).</text>
+<path d="M30 192 H370" stroke="#2f3a2b" stroke-width="3"/>
+<circle cx="40" cy="192" r="8" fill="#e8590c"/>
+<text x="40" y="216" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Kill</text>
+<circle cx="200" cy="192" r="8" fill="#4a7fb0"/>
+<text x="200" y="216" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Meat eaten</text>
+<line x1="48" y1="184" x2="183.0" y2="184.0" stroke="#e8590c" stroke-width="2.5"/><polygon points="192,184 183.0,179.1 183.0,188.9" fill="#e8590c"/>
+<text x="120" y="176" font-size="13" fill="#e8590c" text-anchor="middle" font-weight="bold">keep the papers</text>
+<circle cx="360" cy="192" r="8" fill="#2f6b3a"/>
+<text x="345" y="216" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Mount or hide</text>
+<text x="330" y="176" font-size="13" fill="#2f6b3a" text-anchor="middle" font-weight="bold">keep forever</text>
+<rect x="20" y="228" width="360" height="64" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="246.9" font-size="14" fill="#23261f" text-anchor="middle">Lost one? Replace it at FrontCounter BC</text>
+<text x="200.0" y="264.9" font-size="14" fill="#23261f" text-anchor="middle">or Service BC for $10. Declare the</text>
+<text x="200.0" y="282.9" font-size="14" fill="#23261f" text-anchor="middle">harvest from the original (95%).</text>
 </svg>

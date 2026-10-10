@@ -12,19 +12,49 @@ checked: 2026-10-01
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram lc-tc-options
+```
+
+- Antlers, licence, taxidermist paper and CWD (Chronic Wasting Disease) rules all apply (95%).
+- Caping and skull cleaning sources are trade guides: 70% at best.
+
+```more the three options and the law parts
 - Three options for the head: a shoulder mount (cape and antlers), a European mount (clean skull and antlers), or antlers on a plaque.
 - The law parts: antlers stay on the skull plate in a restricted season, the licence stays with the head, the taxidermist needs your paper, and [[CWD]] (Chronic Wasting Disease) rules on heads.
 - Caping and skull cleaning are skills. Sources are trade and hunter guides, so 70% at best.
+```
 
 ## When to decide
 
+```diagram lc-tc-cape-1
+```
+
+- A throat or brisket cut ends the shoulder mount (70%).
+
+```more when to decide, in full
 - Before any cut forward of the shoulders. A throat cut or a brisket cut "amputates" the mount (70%, Outdoor Edge pro staff).
 - Look at the animal on the ground: antlers you want on a wall, hide not shot up, no rub patches. If yes, cape first, meat second. Tip.
 - Photograph the animal before any cut. The taxidermist uses it for ear and eye position (70%).
 - No decision yet? Skin the body but leave everything forward of the shoulders untouched, and cool it. Tip.
+```
 
 ## Caping
 
+```steps Cape a deer in 6 steps
+lc-tc-cape-1 | Decide on a mount. Photo first.
+lc-tc-cape-2 | Ring cut well behind the shoulders.
+lc-tc-cape-3 | Cut around each front leg, up the back.
+lc-tc-cape-4 | Cut up the back of the neck to the antlers.
+lc-tc-cape-5 | Peel forward. Never cut the throat.
+lc-tc-cape-6 | Take the head off at the atlas joint.
+```
+
+```diagram sk-cape
+```
+
+- Trade guide steps, 70%. Your taxidermist's word wins. Tip.
+
+```more every caping step in full
 - Ring cut right around the body well behind the front shoulders. Shoulder mounts need 20 to 30 cm (8 to 12 in) of hide behind the shoulder (70%).
 - Cut around each front leg above the knee and up the back of the leg to the ring cut (70%).
 - One cut up the centre of the back of the neck to between the antler bases, then a short Y around each base (70%).
@@ -32,9 +62,31 @@ checked: 2026-10-01
 - Cut the head off at the atlas joint with the cape still on it. Leave ears, eyes, lips and nose to the taxidermist (70%).
 - Cool it at once. Freeze it rolled flesh to flesh in a heavy bag, rinsed and wrung if bloody, or salt the flesh side with 1 to 2 kg of fine non iodized salt within 24 to 48 hours, fold flesh to flesh, drain, salt again next day (70%).
 - "Slip", hair coming off in patches, means the cape is lost. Heat and time cause it (70%).
+```
+
+## Cool the cape
+
+```diagram lc-tc-cool
+```
+
+```anim lc-tc-slip Two warm days in the truck: the hair slips.
+```
+
+- Freeze or salt within 24 to 48 hours (70%).
 
 ## European mount: skull cleaning
 
+```steps Clean a skull in 5 steps
+lc-tc-skull-1 | Skin it, strip the meat, flush the brain.
+lc-tc-skull-2 | Simmer, never boil. Antler bases dry.
+lc-tc-skull-3 | Scrape, pressure wash, simmer again.
+lc-tc-skull-4 | Degrease in warm soapy water.
+lc-tc-skull-5 | Whiten with peroxide, never bleach.
+```
+
+- Want a CWD (Chronic Wasting Disease) test? Submit the jaw first (95%).
+
+```more skull cleaning and the CWD note in full
 - Skin the head. Remove eyes, tongue, jaw muscles and as much meat as you can. Flush the brain out with a hose or a bent wire (Tip, common practice).
 - Simmer, never boil, in water with a squirt of dish soap for a few hours. Boiling cracks teeth and softens bone (60%, search summary of an Alaska Department of Fish and Game method, about 70°C). VERIFY.
 - Keep the antler bases out of the water. Wrap them in tape or hold the skull up (Tip).
@@ -42,26 +94,48 @@ checked: 2026-10-01
 - Degrease: soak in warm soapy water for days to weeks until no grease spots (Tip).
 - Whiten with hydrogen peroxide, not chlorine bleach. Bleach weakens bone (60%, search summary). Tip.
 - Province note: if you want the skull and a CWD test, submit the lower jaw with throat tissues for deer, plus the obex for elk and moose (95%, BC CWD testing page).
+```
 
 ## Antler care
 
+```diagram lc-tc-antlers
+```
+
+- Restricted season: no saw on the antlers until it is home and butchered (95%).
+
+```more antler care and the law in full
 - Antlers are dead bone. Dry them in shade. Sun bleaches the colour (Tip).
 - Do not cut, saw or "tidy" antlers from an antler restricted season until the carcass is at a meat cutter, cold storage, home and butchered, or inspected. Altered antlers are not "naturally attached" (95%, synopsis p. 12; Hunting Regulation s. 15.1).
 - Keep the licence with the antlers. "Keep the antlers ... and the species licence under which the wildlife was killed, together and available for inspection by an officer" (95%, synopsis p. 15).
 - Mounted trophy: keep the licence and any inspection report "indefinitely" (95%, p. 7).
 - Shed antlers you find can be picked up and even traded, "cast antlers" are exempt from the trafficking ban (95%, p. 11).
+```
 
 ## Taxidermy basics
 
+```photo g-md-buck-4pt A head worth a wall: decide before the first cut.
+```
+
+- See finished work and ask about turnaround. Costs: VERIFY.
+- Leaving BC or Canada? Permits may apply (95%).
+
+```more mounts, bear rugs and export permits in full
 - Shoulder mount: cape plus antlers. Months to a year. Cost: VERIFY, phone two shops.
 - European mount: skull only. Cheapest. Do it yourself or pay a shop. Cost: VERIFY.
 - Antler plaque: skull plate on a board. An afternoon. Tip.
 - Pick a taxidermist by seeing finished work and asking about turnaround. Tip.
 - Bear rugs: skin fast, flesh and salt the hide, roll it, freeze. Thick fat spoils a hide quickly (Tip; Washington says skin bears at once, 80%).
 - Taking a mount or hide out of BC needs an export permit unless you accompany your own animal within a year with the cancelled licence (95%, p. 15). Any bear, cougar, lynx, bobcat or wolf leaving Canada needs a CITES export permit (95%, p. 16).
+```
 
 ## What the taxidermist needs
 
+```diagram lc-tc-papers
+```
+
+- No paper, and the animal can be seized (95%).
+
+```more the full list
 - The whole cape with the head inside it, cold (70%).
 - Antlers on the skull plate, untouched (95% in a restricted season).
 - Your [[FWID]] (Fish and Wildlife ID), species licence number, species, sex and date of kill. Taxidermists are required by law to record them (95%, synopsis p. 14, p. 16).
@@ -69,6 +143,9 @@ checked: 2026-10-01
 - The location of the kill if the taxidermist is doing a compulsory inspection for you (95%, p. 16). Deer never need one. Tip.
 - Photos of the animal (70%).
 - Evidence of sex stays with the carcass, not the cape. Nothing on the cape is evidence of sex for a deer (95%, p. 15).
+```
+
+## Grandpa's rule and mistakes
 
 > [!rule]
 > If you might want it on the wall, nothing forward of the shoulders gets cut until the cape is off.

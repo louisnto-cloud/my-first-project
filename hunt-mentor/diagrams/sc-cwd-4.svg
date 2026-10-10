@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 4: put the head and its card in the supplied bag, knot it, and put it in the drop off freezer, 95 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Step 4: bag it, knot it, freeze it</text>
+<path d="M80 90 C70 150 70 220 90 250 L210 250 C230 220 230 150 220 90 Z" fill="#e7eef5" stroke="#23261f" stroke-width="2"/>
+<path d="M120 90 L150 66 L180 90" fill="none" stroke="#23261f" stroke-width="4"/>
+<text x="150" y="58" font-size="13" fill="#2f3a2b" text-anchor="middle" font-weight="bold">knot</text>
+<g transform="translate(160 180) scale(0.8)"><path d="M10,10 L60,20 L60,70 L0,50 Z" fill="#8b5a2b" stroke="#23261f" stroke-width="2"/><path d="M10,10 C0,-10 -30,-14 -60,0 L-80,14 L-76,26 L-50,28 L-10,40 L14,40 Z" fill="#a0703a" stroke="#23261f" stroke-width="2"/><circle cx="-30" cy="6" r="4" fill="#23261f"/><path d="M-6,-6 L4,-24 L16,-10 Z" fill="#a0703a" stroke="#23261f" stroke-width="2"/><circle cx="-78" cy="18" r="3" fill="#23261f"/></g>
+<rect x="250" y="80" width="130" height="170" rx="8" fill="#ffffff" stroke="#23261f" stroke-width="2"/>
+<path d="M250 140 H380" stroke="#23261f" stroke-width="2"/>
+<rect x="260" y="104" width="30" height="8" rx="3" fill="#4a7fb0"/>
+<text x="315" y="200" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Drop off</text>
+<text x="315" y="220" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">freezer</text>
+<line x1="225" y1="170" x2="241.0" y2="170.0" stroke="#e8590c" stroke-width="3"/><polygon points="250,170 241.0,165.1 241.0,174.9" fill="#e8590c"/>
+<text x="200" y="284" font-size="14" fill="#2f3a2b" text-anchor="middle">Head and card in the supplied bag (95%)</text>
+</svg>
