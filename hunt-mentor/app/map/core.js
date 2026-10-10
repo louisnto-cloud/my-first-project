@@ -478,10 +478,12 @@ async function elevationAt(ll) {
 // ---------- menu ----------
 function openMenu() {
   const nav = [['#/', 'Home'], ['#/learn', 'Learn'], ['#/field', 'Field Mode'], ['#/lists', 'Lists'], ['#/more', 'More']];
+  let lesson = null;
+  try { lesson = window.HMNav && window.HMNav.lastLesson ? window.HMNav.lastLesson() : null; } catch (err) { lesson = null; }
   const seg = (key, opts) => `<div class="hmm-seg" data-seg="${key}">${opts.map(([v, l]) => `<button data-v="${v}" class="${(prefs[key] || opts[0][0]) === v ? 'on' : ''}">${l}</button>`).join('')}</div>`;
   const body = openSheet({ title: 'Hunt Map', tall: true, html: `
     <h3 class="hmm-h">Back to Hunt Mentor</h3>
-    <div class="hmm-nav">${nav.map(([h, l]) => `<a href="${h}">${l}</a>`).join('')}</div>
+    <div class="hmm-nav">${lesson ? `<a href="${esc(lesson.href || '#/learn')}" data-back-lesson>Back to lesson: ${esc(lesson.title || lesson.label || '')}</a>` : ''}${nav.map(([h, l]) => `<a href="${h}">${l}</a>`).join('')}</div>
     <h3 class="hmm-h">Units</h3>${seg('units', [['metric', 'Metric (m, km)'], ['imperial', 'Feet and miles']])}
     <h3 class="hmm-h">Coordinates</h3>${seg('coords', [['dd', 'Decimal'], ['dms', 'Deg min sec'], ['utm', 'UTM']])}
     <p class="hmm-muted">Decimal degrees, or degrees minutes seconds, or UTM (Universal Transverse Mercator), the metre grid on most paper topo maps.</p>
@@ -491,6 +493,8 @@ function openMenu() {
     <h3 class="hmm-h">About this map</h3>
     <p class="hmm-muted">Map data from OpenStreetMap contributors and OpenFreeMap. Terrain from Terrain Tiles (Mapzen, Amazon Web Services Open Data). Satellite imagery from Esri. Hunting layers from the BC Data Catalogue. <a href="#/credits">All credits</a></p>
     <div class="hmm-banner">Study aid only. The official regulations are the law.</div>` });
+  const back = body.querySelector('[data-back-lesson]');
+  if (back) back.onclick = (e) => { if (window.HMNav && window.HMNav.backToLesson) { e.preventDefault(); closeSheet(); window.HMNav.backToLesson(); } };
   body.querySelectorAll('[data-seg]').forEach((g) => g.querySelectorAll('button').forEach((b) => b.onclick = () => {
     const key = g.dataset.seg; prefs[key] = b.dataset.v; savePrefs();
     g.querySelectorAll('button').forEach((x) => x.classList.toggle('on', x === b));

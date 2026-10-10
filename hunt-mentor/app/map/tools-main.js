@@ -33,7 +33,48 @@ export default async function init(H) {
   H.overlayChip = chip;
   H.hintOnce = hintOnce;
   backGuard();
+  buttonNames();
   await refresh();
+}
+
+// ---------- names for the round icon buttons: a tooltip, and labels beside them the first time the map opens ----------
+function buttonNames() {
+  const H = ctx.H, root = H.els.bar.parentNode;
+  const icons = () => [...root.querySelectorAll('.hmm-btn[aria-label]')].filter((b) => !b.hidden && b.offsetParent);
+  for (const b of root.querySelectorAll('button[aria-label]:not([title])')) if (!b.textContent.trim()) b.title = b.getAttribute('aria-label');
+  const list = icons();
+  if (!list.length || !H.isOpen || !firstTime('button-names')) return; // shown once, only when the map is on screen
+  const box = document.createElement('div'); box.className = 'hmt-names'; box.setAttribute('aria-hidden', 'true');
+  const W = root.clientWidth;
+  const menu = root.querySelector('[data-act="menu"]'), rowBottom = menu ? menu.getBoundingClientRect().bottom : 70;
+  for (const b of list) {
+    const r = b.getBoundingClientRect(), left = r.left + r.width / 2 < W / 2, t = document.createElement('span');
+    t.textContent = b.getAttribute('aria-label');
+    if (r.top < rowBottom - 10) { // top row: labels go below, stepped down so neighbours do not overlap
+      t.style.top = `${Math.round(r.bottom + 22)}px`;
+      if (left) t.style.left = `${Math.round(r.left)}px`; else t.style.right = `${Math.round(W - r.right)}px`;
+    } else {
+      t.style.top = `${Math.round(r.top + r.height / 2)}px`;
+      if (left) t.style.left = `${Math.round(r.right + 8)}px`; else t.style.right = `${Math.round(W - r.left + 8)}px`;
+    }
+    box.appendChild(t);
+  }
+  root.appendChild(box);
+  // move labels down until none overlap (narrow phones)
+  const placed = [];
+  for (const t of [...box.children].sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top)) {
+    for (let k = 0; k < 6; k++) {
+      const r = t.getBoundingClientRect();
+      if (!placed.some((q) => r.left < q.right && r.right > q.left && r.top < q.bottom + 4 && r.bottom > q.top - 4)) break;
+      t.style.top = `${parseFloat(t.style.top) + 34}px`;
+    }
+    placed.push(t.getBoundingClientRect());
+  }
+  const p = document.createElement('p'); p.className = 'hmt-names-tip'; p.textContent = 'These are the map buttons. Tap anywhere to start.';
+  box.appendChild(p);
+  const done = () => { box.remove(); root.removeEventListener('pointerdown', done, true); };
+  root.addEventListener('pointerdown', done, true);
+  setTimeout(done, 9000);
 }
 
 /** One line hint the first time a tool is used on this phone. */

@@ -80,6 +80,8 @@
 .hmm-3d .hmm-3d-n { grid-column: 1 / span 2; justify-self: center; width: 56px; height: 56px; }
 @media (max-height: 640px) { .hmm-3d { top: calc(var(--st) + 128px); gap: 8px; } .hmm-3d .hmm-btn { width: 46px; height: 46px; } .hmm-3d .hmm-3d-n { width: 50px; height: 50px; } }
 .framing .hmm-3d { display: none !important; }
+/* app.js shows a back to lesson chip at top: safe area + 128 px on the left; the 3D controls move below it */
+body:has(.hm-backchip:not([hidden])) .hmm-3d { top: calc(var(--st) + 186px); }
 .hmm-locate.on { color: #1a73e8; }
 .hmm-locate.follow { background: #1a73e8; color: #fff; }
 
@@ -159,6 +161,7 @@
 .hmm-primary svg { width: 22px; height: 22px; }
 .hmm-nav { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
 .hmm-nav a { min-height: 48px; display: grid; place-items: center; border-radius: 12px; background: var(--hmm-soft); color: var(--hmm-ink); text-decoration: none; font-weight: 700; }
+.hmm-nav a[data-back-lesson] { grid-column: 1 / -1; padding: 8px 14px; text-align: center; background: var(--hmm-accent); color: #fff; }
 .hmm-seg { display: flex; border: 1.5px solid var(--hmm-line); border-radius: 12px; overflow: hidden; }
 .hmm-seg button { flex: 1; min-height: 46px; border: 0; background: var(--hmm-card); font-size: 14px; font-weight: 600; padding: 0 4px; }
 .hmm-seg button + button { border-left: 1.5px solid var(--hmm-line); }

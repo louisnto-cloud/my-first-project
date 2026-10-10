@@ -117,7 +117,7 @@ function startFrame() {
   frame.innerHTML = '<div class="hmm-frame-box"><span>Move and zoom the map to fit your area in the box</span></div>';
   const opt = (a, b, sel) => Array.from({ length: b - a + 1 }, (_, i) => a + i).map((z) => `<option value="${z}" ${z === sel ? 'selected' : ''}>${z}</option>`).join('');
   const panel = document.createElement('div'); panel.className = 'hmm-fpanel';
-  panel.innerHTML = `<h2>Save an offline area</h2>
+  panel.innerHTML = `<header class="hmm-fhead"><h2>Save an offline area</h2><button class="hmm-x" data-f="x" aria-label="Close" title="Close">${H.icons.close}</button></header>
     <label class="hmm-field"><span>Name</span><input type="text" maxlength="40" data-f="name" value="${esc(defaultName())}"></label>
     <div class="hmm-zooms"><label class="hmm-field"><span>From zoom</span><select data-f="min">${opt(4, 12, 6)}</select></label>
       <label class="hmm-field"><span>To zoom</span><select data-f="max">${opt(10, 14, 14)}</select></label></div>
@@ -127,8 +127,7 @@ function startFrame() {
   host.append(frame, panel);
   ui = { frame, panel, onMove: throttle(estimate, 300) };
   map.on('move', ui.onMove); // estimate() only counts tiles (arithmetic), so this stays cheap while the map moves
-  if (H.hintOnce) H.hintOnce('offline', 'Fit your hunting area inside the white box, then tap Download.');
-  panel.querySelector('[data-f="cancel"]').onclick = () => { if (job) { job.cancelled = true; } else cancelFrame(); };
+  panel.querySelector('[data-f="cancel"]').onclick = panel.querySelector('[data-f="x"]').onclick = () => { if (job) { job.cancelled = true; } else cancelFrame(); };
   panel.querySelectorAll('select').forEach((s) => { s.onchange = estimate; });
   panel.querySelector('[data-f="go"]').onclick = () => {
     const name = panel.querySelector('[data-f="name"]').value.trim() || defaultName();

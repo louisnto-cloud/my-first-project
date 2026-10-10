@@ -402,7 +402,24 @@ function build() {
     const f = fs.existsSync(sm) ? sm : path.join(ROOT, 'photos', `${id}.jpg`);
     return 'data:image/jpeg;base64,' + fs.readFileSync(f).toString('base64');
   });
-  const json = jsonPwa;
+  const json = jsonPwa; // full content: the version hash and the single file backup
+  // PWA: a small index loads at start (lesson meta, screen titles, quiz, glossary, rules); each lesson's screens
+  // are a separate file loaded on demand; a search file (screen text without diagrams or photos) loads lazily.
+  const photoUrl = (t) => t.replace(/__PHOTO__([\w-]+)__/g, 'photos/$1.jpg');
+  const shortHash = (t) => crypto.createHash('sha1').update(t).digest('hex').slice(0, 10);
+  const lessonFiles = {}, lessonOut = [];
+  const searchData = {};
+  for (const s of sessions) {
+    const body = photoUrl(JSON.stringify(s.steps.map((st) => st.html)));
+    const file = `lessons/${s.id}.${shortHash(body)}.json`;
+    lessonFiles[s.id] = file; lessonOut.push([file, body]);
+    searchData[s.id] = s.steps.map((st) => st.html.replace(/<figure[\s\S]*?<\/figure>/g, ' ').replace(/<svg[\s\S]*?<\/svg>/g, ' '));
+  }
+  const searchBody = photoUrl(JSON.stringify(searchData));
+  const searchFile = `lessons/search.${shortHash(searchBody)}.json`;
+  const indexData = { ...data, lessonFiles, searchFile,
+    sessions: sessions.map(({ steps, text, ...meta }) => ({ ...meta, steps: steps.map((st) => ({ title: st.title })) })) };
+  const jsonIndex = photoUrl(JSON.stringify(indexData));
   // Hunt Map: map modules and vendored libraries (precached), loaded only when the map opens
   const listFiles = (dir) => (fs.existsSync(path.join(ROOT, dir)) ? fs.readdirSync(path.join(ROOT, dir), { recursive: true }).filter((f) => fs.statSync(path.join(ROOT, dir, f)).isFile()).map((f) => f.split(path.sep).join('/')).sort() : []);
   const mapDirs = [['app/vendor', 'vendor'], ['app/map', 'map'], ['data/seasons', 'data/seasons'], ['data/harvest', 'data/harvest']]; // season tables: home dashboard; harvest: map area report
@@ -421,13 +438,16 @@ function build() {
     .replace('<!--DATA-->', '<script src="content.js"></script>')
     .replace('<!--HOME-->', homeJs ? '<script src="home.js"></script>' : '')
     .replace('<!--JS-->', (askJs ? '<script src="ask.js"></script>' : '') + '<script src="app.js"></script>')
-    .replace('<!--SW-->', '<script>if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js");</script>'));
+    .replace('<!--SW-->', '<script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("sw.js");});</script>'));
   fs.writeFileSync(path.join(OUT, 'style.css'), css);
   fs.writeFileSync(path.join(OUT, 'app.js'), js);
   if (homeJs) fs.writeFileSync(path.join(OUT, 'home.js'), homeJs);
   if (askJs) fs.writeFileSync(path.join(OUT, 'ask.js'), askJs);
-  fs.writeFileSync(path.join(OUT, 'content.js'), `window.HM=${json};`);
-  fs.writeFileSync(path.join(OUT, 'sw.js'), read('app/sw.js').replace('__VERSION__', version).replace('__PHOTOS__', JSON.stringify(photoIds.map((id) => `photos/${id}.jpg`))).replace('__MAP__', JSON.stringify([...(askJs ? ['ask.js'] : []), ...mapFiles.map(([, rel]) => rel)])));
+  fs.writeFileSync(path.join(OUT, 'content.js'), `window.HM=${jsonIndex};`);
+  fs.mkdirSync(path.join(OUT, 'lessons'), { recursive: true });
+  for (const [file, body] of lessonOut) fs.writeFileSync(path.join(OUT, file), body);
+  fs.writeFileSync(path.join(OUT, searchFile), searchBody);
+  fs.writeFileSync(path.join(OUT, 'sw.js'), read('app/sw.js').replace('__VERSION__', version).replace('__PHOTOS__', JSON.stringify(photoIds.map((id) => `photos/${id}.jpg`))).replace('__CONTENT__', JSON.stringify([searchFile, ...lessonOut.map(([f]) => f)])).replace('__MAP__', JSON.stringify([...(askJs ? ['ask.js'] : []), ...mapFiles.map(([, rel]) => rel)])));
   fs.mkdirSync(path.join(OUT, 'photos'), { recursive: true });
   for (const id of photoIds) fs.copyFileSync(path.join(ROOT, 'photos', `${id}.jpg`), path.join(OUT, 'photos', `${id}.jpg`));
   fs.copyFileSync(path.join(ROOT, 'app/manifest.webmanifest'), path.join(OUT, 'manifest.webmanifest'));

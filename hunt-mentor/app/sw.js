@@ -10,7 +10,7 @@ const TILE_CAP = 4000;
 // CORE must all load or the install fails (the old version keeps running). EXTRA files are added one by one:
 // a missing photo or map file is skipped (fetched on demand later) instead of breaking the whole install.
 const CORE = ['./', 'index.html', 'style.css', 'app.js', 'content.js'];
-const EXTRA = ['home.js', 'manifest.webmanifest', 'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png', ...__MAP__, ...__PHOTOS__, 'hunt-mentor-offline.html'];
+const EXTRA = ['home.js', 'manifest.webmanifest', 'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png', ...__CONTENT__, ...__MAP__, ...__PHOTOS__, 'hunt-mentor-offline.html']; // content: lesson screens and search text (lessons/*.json)
 const fresh = (u) => new Request(u, { cache: 'reload' }); // skip the browser HTTP cache so one version never mixes with another
 
 self.addEventListener('install', (e) => {
@@ -62,7 +62,7 @@ async function shell(req) {
   try {
     const res = await fetch(req);
     // a precache file that was skipped at install: keep it now (map code, vendor libraries, photos)
-    if (res.ok && /\/(map|vendor|photos|seasons|harvest)\/[^/]+$|\/home\.js$|\/data\/migration\.json$/.test(new URL(req.url).pathname)) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => {}); }
+    if (res.ok && /\/(map|vendor|photos|seasons|harvest|lessons)\/[^/]+$|\/home\.js$|\/data\/migration\.json$/.test(new URL(req.url).pathname)) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => {}); }
     return res;
   } catch (err) {
     if (req.mode === 'navigate') { const idx = await caches.match('index.html'); if (idx) return idx; }

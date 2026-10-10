@@ -276,14 +276,14 @@ details.phase .list a.item:last-child { border-bottom: 0; }
 /* lesson reader */
 body.in-lesson main { padding-top: 0; }
 .lesson-head { position: sticky; top: var(--top-h); z-index: 4; background: var(--bg); margin: 0 -16px; padding: 0 16px 2px; border-bottom: 1px solid var(--line); }
-.segs { position: relative; display: flex; gap: 2px; align-items: center; height: 26px; cursor: pointer; touch-action: none; -webkit-user-select: none; user-select: none; }
+.segs { position: relative; display: flex; gap: 2px; align-items: center; height: 44px; cursor: pointer; touch-action: none; -webkit-user-select: none; user-select: none; }
 .segs > i { flex: 1; height: 6px; border-radius: 3px; background: var(--line); }
 .segs > i.seen { background: var(--sage); }
 .segs > i.on { background: var(--accent); height: 10px; }
 .segs > i.pick { background: var(--ink); height: 14px; }
 .segs:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
-.segs-tip { position: absolute; top: 30px; z-index: 6; max-width: 80%; padding: 6px 10px; border-radius: 8px; background: var(--ink); color: var(--bg); font-size: 14px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; pointer-events: none; }
-.lesson-bar { display: flex; align-items: center; gap: 8px; min-height: 46px; }
+.segs-tip { position: absolute; top: 40px; z-index: 6; max-width: 80%; padding: 6px 10px; border-radius: 8px; background: var(--ink); color: var(--bg); font-size: 14px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; pointer-events: none; }
+.lesson-bar { display: flex; align-items: center; gap: 8px; min-height: 46px; padding-bottom: 4px; }
 .lesson-count { flex: 1; text-align: center; color: var(--muted); font-size: 15px; font-weight: 700; font-variant-numeric: tabular-nums; }
 .lbtn { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 12px; border-radius: 22px; border: 2px solid var(--line); background: var(--card); color: var(--ink); font-size: 15px; font-weight: 700; text-decoration: none; cursor: pointer; }
 .lbtn-ask { color: var(--accent); }
@@ -315,3 +315,4 @@ body.map-open:has(.hmm-sheet:not([hidden])) .hm-backchip { display: none !import
 .lres { padding: 12px 14px 4px; }
 .lres h2 { font-size: 15px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 2px 0 0; }
 .lres .list a.item:last-child { border-bottom: 0; }
+.ls-wait { min-height: 50vh; }

@@ -134,7 +134,35 @@
   }
   const nextSession = () => sessions.find((s) => !S.done[s.id]);
 
-  // ---------- lesson helpers (screen list, where you are) ----------
+  // ---------- lesson content: a small index loads at start; each lesson's screens load on demand ----------
+  // The single file backup has everything inline (steps carry html, sessions carry text).
+  const lessonLoads = {};
+  const hasHtml = (s) => !s.steps.length || s.steps[0].html != null;
+  const getJSON = (u) => fetch(u).then((r) => { if (!r.ok) throw new Error(u + ' ' + r.status); return r.json(); });
+  function loadLesson(s) {
+    if (hasHtml(s)) return Promise.resolve(s);
+    return lessonLoads[s.id] || (lessonLoads[s.id] = getJSON(HM.lessonFiles[s.id])
+      .then((arr) => { s.steps.forEach((st, k) => { st.html = arr[k] || ''; }); return s; })
+      .catch((e) => { delete lessonLoads[s.id]; throw e; }));
+  }
+  const plain = (h) => h.replace(/<[^>]+>/g, ' ').replace(/&(amp|lt|gt|quot|#39);/g, ' ').replace(/[#>*`|[\]]/g, ' ').replace(/\s+/g, ' ').toLowerCase();
+  let searchLoad = null, searchReady = sessions.every((s) => s.text != null);
+  function loadSearch() {
+    if (searchReady) return Promise.resolve();
+    return searchLoad || (searchLoad = getJSON(HM.searchFile).then((o) => {
+      sessions.forEach((s) => { s.searchHtml = o[s.id] || []; s.text = plain(s.searchHtml.join(' ')); });
+      searchReady = true;
+    }).catch((e) => { searchLoad = null; throw e; }));
+  }
+  // shared with ask.js: screen html for the search index (diagrams and photos left out when loaded from the search file)
+  window.HMContent = {
+    loadLesson: (id) => (byId[id] ? loadLesson(byId[id]) : Promise.reject(new Error('no lesson ' + id))),
+    loadSearch,
+    searchReady: () => searchReady,
+    screenHtml: (id, i) => { const s = byId[id]; return (s.searchHtml ? s.searchHtml[i] : s.steps[i] && s.steps[i].html) || ''; },
+  };
+  const idle = window.requestIdleCallback || ((f) => setTimeout(f, 1500));
+
   const stepCache = {};
   const stepsOf = (s) => stepCache[s.id] || (stepCache[s.id] = s.quiz.length ? s.steps.concat([{ title: 'Quiz', quiz: true }]) : s.steps.slice());
   const lessonLabel = (s) => `${s.phase}.${s.num} ${s.title}`;
@@ -183,6 +211,8 @@
       <p class="muted">Regulation data last checked: ${esc(HM.regs.lastChecked)}. Content built ${esc(HM.built)}.</p>`;
     if (window.HMHome) try { window.HMHome.render(view, { S, save, daysTo, sunEvent, hhmm, addMin, certBadge, mentorUrl: MENTOR_URL, hasSession: (id) => !!byId[id], refresh: home }); } catch (e) { console.warn("Home dashboard", e); }
     view.insertAdjacentHTML('afterbegin', startCard('cont-home'));
+    const warm = resumeInfo() ? resumeInfo().s : nextSession();
+    if (warm) idle(() => loadLesson(warm).catch(() => {}));
   }
 
   // ---------- Learn: find a lesson (filter, topic chips, phase groups) ----------
@@ -254,7 +284,8 @@
         return null;
       }).filter(Boolean);
       let inText = false;
-      if (words.length && !hits.length && q.length >= 3) {
+      if (words.length && !hits.length && q.length >= 3 && !searchReady) { loadSearch().then(() => { if (qIn.isConnected) draw(); }, () => {}); }
+      if (words.length && !hits.length && q.length >= 3 && searchReady) {
         hits = sessions.filter((s) => (!chip || chipHas(chip, s)) && words.every((w) => s.text.includes(w))).map((s) => ({ s, rank: 3 }));
         inText = hits.length > 0;
       }
@@ -315,6 +346,7 @@
       <div class="lesson-nav"><button type="button" class="btn" id="ls-prev"></button><button type="button" class="btn primary" id="ls-next"></button></div>
     </div>`;
     L = { id, s, steps, n, i: -1, root: $('#lesson', view), art: $('#ls-step', view), segs: [...view.querySelectorAll('#ls-segs > i')] };
+    loadLesson(s).catch(() => {});
     bindLesson();
     showScreen(i);
   }
@@ -324,13 +356,21 @@
     i = Math.max(0, Math.min(n - 1, i | 0));
     const prev = L.i, dir = prev < 0 ? 0 : Math.sign(i - prev);
     const st = steps[i];
-    if (i !== prev) {
+    if (!st.quiz && st.html == null) {
+      // screens not loaded yet: show the title now, fill in when the lesson file arrives (cached offline after first load)
+      L.art.innerHTML = `<h2>${esc(st.title)}</h2><p class="muted ls-wait">Loading...</p>`;
+      loadLesson(s).then(() => { if (L && L.s === s && L.i === i) { L.i = -1; showScreen(i); } }, () => {
+        if (!(L && L.s === s && L.i === i)) return;
+        L.art.innerHTML = `<h2>${esc(st.title)}</h2><div class="card"><p>This lesson is not saved on this phone yet. Connect to the internet once to download it.</p><button type="button" class="btn" id="ls-retry">Try again</button></div>`;
+        $('#ls-retry', L.art).onclick = () => { L.i = -1; showScreen(i); };
+      });
+    } else if (i !== prev) {
       L.art.innerHTML = `<h2>${esc(st.title)}</h2>${st.quiz ? quizHtml(s) : st.html}`;
       hydrateChecks(L.art); hydrateSteps(L.art); renderRegs(L.art);
       if (st.quiz) bindQuiz(s);
-      L.segs.forEach((g, k) => { g.className = k < i ? 'seen' : k === i ? 'on' : ''; });
       if (dir && !reduceMotion && L.art.animate) L.art.animate([{ transform: `translateX(${dir * 28}px)`, opacity: 0.35 }, { transform: 'none', opacity: 1 }], { duration: 170, easing: 'ease-out' });
     }
+    if (i !== prev) L.segs.forEach((g, k) => { g.className = k < i ? 'seen' : k === i ? 'on' : ''; });
     L.i = i;
     $('#ls-segs', view).setAttribute('aria-valuenow', String(i + 1));
     $('#ls-segs', view).setAttribute('aria-valuetext', `Screen ${i + 1} of ${n}: ${st.title}`);
@@ -621,7 +661,8 @@
     view.innerHTML = `<input type="search" id="q" placeholder="Search sessions, glossary, rules" autofocus>${window.HMRoutes && window.HMRoutes.ask ? '<a class="btn block" id="ask-link" href="#/ask" style="margin-top:10px">Ask a question instead</a>' : ''}<div id="res" style="margin-top:12px"></div>`;
     const run = (q) => {
       q = q.trim().toLowerCase(); if (q.length < 2) { $('#res').innerHTML = ''; return; }
-      const ses = sessions.filter((s) => s.text.includes(q) || s.title.toLowerCase().includes(q));
+      if (!searchReady) loadSearch().then(() => { const el = $('#q'); if (el && el.value.trim().toLowerCase() === q) run(el.value); }, () => {});
+      const ses = sessions.filter((s) => (s.text || '').includes(q) || s.title.toLowerCase().includes(q));
       const gl = Object.keys(HM.glossary).filter((t) => (t + HM.glossary[t]).toLowerCase().includes(q));
       const rg = HM.regs.items.filter((r) => (r.label + ' ' + (r.value || '') + ' ' + (r.note || '')).toLowerCase().includes(q));
       $('#res').innerHTML = `
