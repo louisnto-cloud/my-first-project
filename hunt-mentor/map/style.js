@@ -35,7 +35,33 @@ export function contourTiles(dem, system) {
   })];
 }
 
-export function buildStyle({ dem, prefs }) {
+/* Layers hidden when the map is tilted past DECLUTTER_PITCH (3D): minor contours and small labels. Keeps the tilted view readable. */
+export const DECLUTTER_PITCH = 45;
+const DECLUTTER = new Set(['contour-minor', 'tp-hamlet', 'hy-hamlet', 'tp-waterway-name', 'hy-waterway-name', 'tp-water-name-line', 'hy-water-name-line', 'tp-park-name', 'hy-park-name', 'hy-path', 'hy-road-minor']);
+
+/** Is a style layer on for this mode and these prefs? opts: { declutter, deferContours }. */
+function layerOn(l, mode, prefs, opts = {}) {
+  const modes = l.metadata && l.metadata['hm:modes'];
+  if (!modes || !modes.includes(mode)) return false;
+  const id = l.id;
+  if (id === 'hillshade' && prefs.hillshade === false) return false;
+  if (id === 'sat-shade' && prefs.satShade === false) return false;
+  if (id.startsWith('contour')) {
+    if (opts.deferContours) return false;
+    if (mode !== 'topo' && prefs.satContours === false) return false;
+  }
+  if (opts.declutter && DECLUTTER.has(id)) return false;
+  return true;
+}
+
+/** Sky, horizon and fog for 3D: gives depth to the tilted view. Satellite gets a cooler haze. */
+export function skyFor(mode) {
+  return mode === 'topo'
+    ? { 'sky-color': '#8fb8de', 'horizon-color': '#e4ecef', 'fog-color': '#e1e5d8', 'sky-horizon-blend': 0.55, 'horizon-fog-blend': 0.6, 'fog-ground-blend': 0.55, 'atmosphere-blend': 0 }
+    : { 'sky-color': '#7fa9d1', 'horizon-color': '#dbe5ec', 'fog-color': '#c9d4dc', 'sky-horizon-blend': 0.55, 'horizon-fog-blend': 0.6, 'fog-ground-blend': 0.6, 'atmosphere-blend': 0 };
+}
+
+export function buildStyle({ dem, prefs, deferContours = false }) {
   const sys = prefs.units === 'imperial' ? 'imperial' : 'metric';
   const L = [];
   const add = (modes, l) => { l.metadata = meta(modes); L.push(l); };
@@ -51,9 +77,10 @@ export function buildStyle({ dem, prefs }) {
   add(T, { id: 'lu-town', type: 'fill', source: 'omt', 'source-layer': 'landuse', filter: cls('residential', 'suburb', 'neighbourhood', 'commercial', 'industrial', 'retail'), paint: { 'fill-color': P.town, 'fill-opacity': z([[8, 0.5], [13, 0.8]]) } });
 
   // ---------- relief ----------
+  // Stronger relief than before so ridges, draws and benches stand out (flat and 3D). 'standard' is the cheapest method on phones.
   add(T, { id: 'hillshade', type: 'hillshade', source: 'dem-hill', layout: { visibility: prefs.hillshade === false ? 'none' : 'visible' }, paint: {
-    'hillshade-method': 'standard', 'hillshade-exaggeration': ['interpolate', ['linear'], ['zoom'], 6, 0.55, 12, 0.42, 16, 0.3],
-    'hillshade-shadow-color': '#4e5843', 'hillshade-highlight-color': 'rgba(255,255,255,0.45)', 'hillshade-accent-color': '#6d725c', 'hillshade-illumination-direction': 315,
+    'hillshade-method': 'standard', 'hillshade-exaggeration': ['interpolate', ['linear'], ['zoom'], 6, 0.75, 12, 0.66, 16, 0.5],
+    'hillshade-shadow-color': '#38402f', 'hillshade-highlight-color': 'rgba(255,255,250,0.6)', 'hillshade-accent-color': '#545a44', 'hillshade-illumination-direction': 315,
   } });
 
   // ---------- water ----------
@@ -67,7 +94,12 @@ export function buildStyle({ dem, prefs }) {
   } });
 
   // ---------- satellite ----------
-  add(S, { id: 'sat', type: 'raster', source: 'esri', paint: { 'raster-fade-duration': 150 } });
+  add(S, { id: 'sat', type: 'raster', source: 'esri', paint: { 'raster-fade-duration': 0 } });
+  // optional relief blend on satellite (prefs.satShade): shadows only, so the imagery keeps its colour
+  add(S, { id: 'sat-shade', type: 'hillshade', source: 'dem-hill', paint: {
+    'hillshade-method': 'standard', 'hillshade-exaggeration': ['interpolate', ['linear'], ['zoom'], 6, 0.5, 12, 0.42, 16, 0.32],
+    'hillshade-shadow-color': 'rgba(10,14,8,0.85)', 'hillshade-highlight-color': 'rgba(255,255,255,0.12)', 'hillshade-accent-color': 'rgba(0,0,0,0.25)', 'hillshade-illumination-direction': 315,
+  } });
 
   // ---------- contours ----------
   const cModes = ALL; // shown on satellite and hybrid only when prefs.satContours is not false
@@ -123,23 +155,24 @@ export function buildStyle({ dem, prefs }) {
 
   // ---------- set mode visibility ----------
   const mode = prefs.base || 'topo';
+  const declutter = !!prefs.is3d && (prefs.view && prefs.view.pitch != null ? prefs.view.pitch : 60) > DECLUTTER_PITCH;
   for (const l of L) {
-    const modes = l.metadata && l.metadata['hm:modes'];
-    if (!modes) continue;
+    if (!(l.metadata && l.metadata['hm:modes'])) continue;
     l.layout = l.layout || {};
-    const hidden = (l.id === 'hillshade' && prefs.hillshade === false) || (l.id.startsWith('contour') && mode !== 'topo' && prefs.satContours === false);
-    l.layout.visibility = modes.includes(mode) && !hidden ? 'visible' : 'none';
+    l.layout.visibility = layerOn(l, mode, prefs, { declutter, deferContours }) ? 'visible' : 'none';
   }
+  for (const [id, prop, v] of contourColors(mode)) { const l = L.find((x) => x.id === id); if (l) l.paint[prop] = v; }
   return {
     version: 8, name: 'Hunt Map', glyphs: OFM_GLYPHS,
     sources: {
       omt: { type: 'vector', url: OFM_TILEJSON },
       'dem-hill': { type: 'raster-dem', tiles: [dem.sharedDemProtocolUrl], encoding: 'terrarium', tileSize: 256, maxzoom: DEM_MAXZOOM, attribution: '<a href="https://registry.opendata.aws/terrain-tiles/" target="_blank" rel="noopener">Terrain Tiles</a> (Mapzen, AWS Open Data)' },
-      'dem-terrain': { type: 'raster-dem', tiles: [dem.sharedDemProtocolUrl], encoding: 'terrarium', tileSize: 256, maxzoom: DEM_MAXZOOM },
+      // tileSize 512 on 256 px tiles: 3D uses one zoom less of terrain detail (a quarter of the tiles and mesh) below zoom 12; same tiles as the hillshade at zoom 12 and up
+      'dem-terrain': { type: 'raster-dem', tiles: [dem.sharedDemProtocolUrl], encoding: 'terrarium', tileSize: 512, maxzoom: DEM_MAXZOOM },
       contours: { type: 'vector', tiles: contourTiles(dem, sys), minzoom: 9, maxzoom: 15 },
       esri: { type: 'raster', tiles: [ESRI], tileSize: 256, maxzoom: 18, attribution: 'Imagery: Esri, Maxar, Earthstar Geographics and the GIS User Community' },
     },
-    sky: { 'sky-color': '#9cc3e4', 'horizon-color': '#e6edf0', 'fog-color': '#dfe3d6', 'sky-horizon-blend': 0.6, 'horizon-fog-blend': 0.7, 'fog-ground-blend': 0.85, 'atmosphere-blend': 0 },
+    sky: skyFor(mode),
     layers: L,
   };
 }
@@ -186,21 +219,27 @@ function labels(add, p, modes, c) {
   }, paint: { 'text-color': p === 'tp' ? '#6b6d60' : '#ffffff', 'text-halo-color': c.halo, 'text-halo-width': 1.2 } });
 }
 
-/** Switch base mode: topo, satellite or hybrid. */
-export function applyMode(map, mode, prefs) {
-  for (const l of map.getStyle().layers) {
-    const modes = l.metadata && l.metadata['hm:modes'];
-    if (!modes) continue;
-    let on = modes.includes(mode);
-    if (l.id === 'hillshade' && prefs.hillshade === false) on = false;
-    if (l.id.startsWith('contour') && mode !== 'topo' && prefs.satContours === false) on = false;
-    map.setLayoutProperty(l.id, 'visibility', on ? 'visible' : 'none');
-  }
+function contourColors(mode) {
   const sat = mode !== 'topo';
-  map.setPaintProperty('contour-minor', 'line-color', sat ? 'rgba(255,255,255,0.9)' : P.contour);
-  map.setPaintProperty('contour-index', 'line-color', sat ? 'rgba(255,255,255,1)' : P.contourIdx);
-  map.setPaintProperty('contour-label', 'text-color', sat ? '#ffffff' : P.contourText);
-  map.setPaintProperty('contour-label', 'text-halo-color', sat ? 'rgba(0,0,0,0.6)' : 'rgba(222,226,206,0.85)');
+  return [
+    ['contour-minor', 'line-color', sat ? 'rgba(255,255,255,0.5)' : P.contour], ['contour-index', 'line-color', sat ? 'rgba(255,255,255,0.9)' : P.contourIdx],
+    ['contour-label', 'text-color', sat ? '#ffffff' : P.contourText], ['contour-label', 'text-halo-color', sat ? 'rgba(0,0,0,0.6)' : 'rgba(222,226,206,0.85)'],
+  ];
+}
+
+/** Switch base mode (topo, satellite or hybrid) and declutter state. opts: { declutter, deferContours }.
+   Only layers whose visibility really changes are touched, so calling it again is cheap. */
+export function applyMode(map, mode, prefs, opts = {}) {
+  for (const l of map.getStyle().layers) {
+    if (!(l.metadata && l.metadata['hm:modes'])) continue;
+    const want = layerOn(l, mode, prefs, opts) ? 'visible' : 'none';
+    if ((map.getLayoutProperty(l.id, 'visibility') || 'visible') !== want) map.setLayoutProperty(l.id, 'visibility', want);
+  }
+  if (applyMode.mode !== mode) {
+    applyMode.mode = mode;
+    for (const [id, prop, v] of contourColors(mode)) map.setPaintProperty(id, prop, v);
+    if (map.setSky) map.setSky(skyFor(mode));
+  }
 }
 
 /** Change contour units (metres or feet). */

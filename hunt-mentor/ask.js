@@ -108,9 +108,11 @@
     HM.sessions.forEach((s) => {
       const sname = `${s.phase}.${s.num} ${s.title}`, stoks = toks(s.title);
       s.steps.forEach((st, i) => {
-        const r = /data-regs="([^"]+)"/.exec(st.html);
+        // screen html comes from the lazily loaded search file (app.js HMContent), or inline in the single file backup
+        const html = window.HMContent ? window.HMContent.screenHtml(s.id, i) : (st.html || '');
+        const r = /data-regs="([^"]+)"/.exec(html);
         if (r) r[1].split(',').forEach((k) => { if (!regsScreen[k]) regsScreen[k] = `#/s/${s.id}/${i}`; });
-        const text = htmlText(st.html);
+        const text = htmlText(html);
         add({ type: 'screen', sid: s.id, step: i, sess: sname, title: st.title, text }, st.title, stoks, text);
       });
     });
@@ -282,9 +284,17 @@
       const h = '#/ask/' + encodeURIComponent(v);
       if (location.hash === h) view(param); else location.hash = h;
     };
+    const C = window.HMContent;
     if (!q) {
       if (!('ontouchstart' in window)) $('#hma-q').focus();
-      if (!IX) setTimeout(() => { if (!IX) build(); }, 120); // build while the owner types
+      // load the search text and build while the owner types
+      if (!IX) (C ? C.loadSearch() : Promise.resolve()).then(() => setTimeout(() => { if (!IX) build(); }, 120), () => {});
+      return;
+    }
+    if (!IX && C && !C.searchReady()) {
+      $('#hma-res').innerHTML = '<p class="muted">Loading the lessons...</p>';
+      C.loadSearch().then(() => { if (/^#\/ask\//.test(location.hash) && decodeURIComponent(location.hash.slice(6)) === q) view(param); },
+        () => { $('#hma-res').innerHTML = '<div class="card"><p>The lesson text is not saved on this phone yet. Connect to the internet once, then ask again.</p></div>'; });
       return;
     }
     const a = answer(q);
@@ -296,8 +306,8 @@
   const syncOnline = () => { const m = $('#hma-mentor'); if (m) m.hidden = !navigator.onLine; };
   window.addEventListener('online', syncOnline); window.addEventListener('offline', syncOnline);
 
-  // ---------- small Ask button in the session screen header ----------
-  function headerBtn() {
+  // ---------- small Ask button in the header (not used: the lesson reader has an Ask button) ----------
+  function headerBtn() { // eslint-disable-line no-unused-vars
     const top = $('header.top'), search = $('#btn-search');
     if (!top || $('#btn-ask')) return;
     const b = document.createElement('button');
@@ -322,7 +332,7 @@
   .hma-hbtn{font-size:16px;font-weight:700;min-width:44px;padding:0 6px}.hma-hbtn[hidden]{display:none}.hma-mentor[hidden]{display:none}`;
   function init() {
     const st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
-    headerBtn();
+    // the lesson reader has its own Ask button (app.js), so no header button here
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 

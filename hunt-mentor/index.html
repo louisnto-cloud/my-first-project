@@ -20,7 +20,7 @@
 </header>
 <div class="banner" id="banner">Study aid only. The official regulations are the law.</div>
 <main id="view"></main>
-<nav class="tabs" id="tabs">
+<nav class="tabs" id="tabs" aria-label="Main">
   <a href="#/" data-tab="home"><span>&#8962;</span>Home</a>
   <a href="#/learn" data-tab="learn"><span>&#9776;</span>Learn</a>
   <a href="#/field" data-tab="field" class="tab-field"><span>&#9673;</span>Field</a>
@@ -32,6 +32,6 @@
 <script src="content.js"></script>
 <script src="home.js"></script>
 <script src="ask.js"></script><script src="app.js"></script>
-<script>if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js");</script>
+<script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("sw.js");});</script>
 </body>
 </html>

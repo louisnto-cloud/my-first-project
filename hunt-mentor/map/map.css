@@ -71,7 +71,17 @@
   -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
 .hmm-pill button { min-height: 50px; border: 0; background: none; padding: 0 10px; font-size: 16px; font-weight: 600; }
 .hmm-pill button + button { border-top: 1px solid rgba(0, 0, 0, 0.1); font-size: 20px; font-weight: 800; }
-.hmm-pill .hmm-pill-3d.on { color: var(--hmm-accent); }
+.hmm-pill .hmm-pill-3d.on { color: #fff; background: var(--hmm-accent); }
+
+/* 3D controls (shown only in 3D): compass resets north and flat, then tilt and rotate. 48 px targets. */
+.hmm-3d { position: absolute; left: calc(var(--sl) + 12px); top: calc(var(--st) + 150px); display: grid; grid-template-columns: repeat(2, 48px); gap: 10px; pointer-events: none; }
+.hmm-3d[hidden] { display: none; }
+.hmm-3d .hmm-btn { width: 48px; height: 48px; }
+.hmm-3d .hmm-3d-n { grid-column: 1 / span 2; justify-self: center; width: 56px; height: 56px; }
+@media (max-height: 640px) { .hmm-3d { top: calc(var(--st) + 128px); gap: 8px; } .hmm-3d .hmm-btn { width: 46px; height: 46px; } .hmm-3d .hmm-3d-n { width: 50px; height: 50px; } }
+.framing .hmm-3d { display: none !important; }
+/* app.js shows a back to lesson chip at top: safe area + 128 px on the left; the 3D controls move below it */
+body:has(.hm-backchip:not([hidden])) .hmm-3d { top: calc(var(--st) + 186px); }
 .hmm-locate.on { color: #1a73e8; }
 .hmm-locate.follow { background: #1a73e8; color: #fff; }
 
@@ -151,6 +161,7 @@
 .hmm-primary svg { width: 22px; height: 22px; }
 .hmm-nav { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
 .hmm-nav a { min-height: 48px; display: grid; place-items: center; border-radius: 12px; background: var(--hmm-soft); color: var(--hmm-ink); text-decoration: none; font-weight: 700; }
+.hmm-nav a[data-back-lesson] { grid-column: 1 / -1; padding: 8px 14px; text-align: center; background: var(--hmm-accent); color: #fff; }
 .hmm-seg { display: flex; border: 1.5px solid var(--hmm-line); border-radius: 12px; overflow: hidden; }
 .hmm-seg button { flex: 1; min-height: 46px; border: 0; background: var(--hmm-card); font-size: 14px; font-weight: 600; padding: 0 4px; }
 .hmm-seg button + button { border-left: 1.5px solid var(--hmm-line); }
@@ -306,7 +317,7 @@ input:disabled + .hmm-switch { opacity: 0.4; }
 .framing .hmm-bar, .framing .hmm-layers, .framing .hmm-lowr, .framing .hmm-stack, .framing .hmm-row .hmm-btn, .framing .hmm-cross { display: none !important; }
 
 /* toast */
-.hmm-toast { position: absolute; left: 50%; top: calc(var(--st) + 72px); transform: translate(-50%, -8px); z-index: 9; max-width: calc(100% - 32px); width: max-content;
+.hmm-toast { position: absolute; left: 50%; top: calc(var(--st) + 136px); transform: translate(-50%, -8px); z-index: 9; max-width: calc(100% - 32px); width: max-content;
   background: rgba(30, 32, 26, 0.93); color: #fff; padding: 10px 16px; border-radius: 14px; font-size: 15px; text-align: center; opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s; }
 .hmm-toast.on { opacity: 1; transform: translate(-50%, 0); }
 

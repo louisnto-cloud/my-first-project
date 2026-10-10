@@ -6,8 +6,10 @@
    Exposed for them: H.tools (this ctx: items, refresh(), openItem(id), drawOverlays(), profileHtml(coords, el)). */
 import * as store from './store.js';
 import { WPT, WPT_BY, COLORS, wptSvg, glyphImage, lineLength, ringArea, perimeter, sampleLine, climb, fmtDur } from './tools-geo.js';
-import { esc, circleRing, haversine, bearingTo, compass8, bboxOf, debounce } from './util.js';
+import { esc, circleRing, haversine, bearingTo, compass8, bboxOf, debounce, firstTime } from './util.js';
 import * as content from './tools-content.js';
+import * as search from './search.js';
+import * as offline from './offline.js';
 
 const SRC = 'hm-user', TOOL = 'hm-tool';
 const USER_LAYERS = ['hm-u-area', 'hm-u-area-line', 'hm-u-line', 'hm-u-wpt', 'hm-u-wpt-ic', 'hm-u-wpt-t'];
@@ -18,8 +20,8 @@ ctx.KIND = KIND;
 export default async function init(H) {
   ctx.H = H; ctx.map = H.map;
   Object.assign(ctx, { refresh, saveAny, deleteAny, openItem, drawOverlays, dropWaypoint, itemStats, profileHtml, fitItem, here, fieldRows, toolsSheet });
-  loadCss();
-  addImages(); addLayers();
+  const css = loadCss();
+  // Layers and icon images are added on first use (lazy), so an empty map carries no tool layers.
   H.on('units', () => drawOverlays());
   H.on('tracks', () => refresh()); // Go & Track saved or removed a track
   H.setBarAction('tools', toolsSheet);
@@ -28,37 +30,133 @@ export default async function init(H) {
   longPress();
   content.init(ctx);
   H.tools = ctx;
+  H.overlayChip = chip;
+  H.hintOnce = hintOnce;
+  backGuard();
+  css.then(buttonNames); // labels are measured, so they need tools.css first
   await refresh();
+}
+
+// ---------- names for the round icon buttons: a tooltip, and labels beside them the first time the map opens ----------
+function buttonNames() {
+  const H = ctx.H, root = H.els.bar.parentNode;
+  const icons = () => [...root.querySelectorAll('.hmm-btn[aria-label]')].filter((b) => !b.hidden && b.offsetParent);
+  for (const b of root.querySelectorAll('button[aria-label]:not([title])')) if (!b.textContent.trim()) b.title = b.getAttribute('aria-label');
+  const list = icons();
+  if (!list.length || !H.isOpen || !firstTime('button-names')) return; // shown once, only when the map is on screen
+  const box = document.createElement('div'); box.className = 'hmt-names'; box.setAttribute('aria-hidden', 'true');
+  const W = root.clientWidth;
+  const menu = root.querySelector('[data-act="menu"]'), rowBottom = menu ? menu.getBoundingClientRect().bottom : 70;
+  for (const b of list) {
+    const r = b.getBoundingClientRect(), left = r.left + r.width / 2 < W / 2, t = document.createElement('span');
+    t.textContent = b.getAttribute('aria-label');
+    if (left && r.top < rowBottom - 10) { // top left row: under the button, nudged right so Menu and Elevation profile do not touch
+      t.style.top = `${Math.round(r.bottom + 20)}px`;
+      t.style.left = `${Math.round(r.left + (b.dataset.act === 'menu' ? 0 : 8))}px`;
+    } else {
+      t.style.top = `${Math.round(r.top + r.height / 2)}px`;
+      if (left) t.style.left = `${Math.round(r.right + 8)}px`; else t.style.right = `${Math.round(W - r.left + 8)}px`;
+    }
+    box.appendChild(t);
+  }
+  root.appendChild(box);
+  const p = document.createElement('p'); p.className = 'hmt-names-tip'; p.textContent = 'These are the map buttons. Tap anywhere to start.';
+  box.appendChild(p);
+  const done = () => { box.remove(); root.removeEventListener('pointerdown', done, true); };
+  root.addEventListener('pointerdown', done, true);
+  setTimeout(done, 9000);
+}
+
+/** One line hint the first time a tool is used on this phone. */
+function hintOnce(key, text, ms = 5000) { if (firstTime(key)) ctx.H.toast(text, ms); }
+
+// ---------- chips on the map for things you switched on (range rings, scent cone, wind arrows): tap to clear ----------
+let chipBox = null;
+const chips = new Map();
+function chip(id, label, onClear) {
+  const H = ctx.H;
+  if (!chipBox) { chipBox = document.createElement('div'); chipBox.className = 'hmt-chips'; chipBox.setAttribute('aria-label', 'Shown on the map'); H.els.bar.parentNode.appendChild(chipBox); }
+  const old = chips.get(id); if (old) { old.remove(); chips.delete(id); }
+  if (!label) return;
+  const b = document.createElement('button');
+  b.type = 'button'; b.className = 'hmt-chip'; b.title = `Clear ${label.toLowerCase()} from the map`;
+  b.setAttribute('aria-label', `Clear ${label.toLowerCase()} from the map`);
+  b.innerHTML = `<span>${esc(label)}</span>${H.icons.close}`;
+  b.onclick = () => { b.remove(); chips.delete(id); onClear(); };
+  chips.set(id, b); chipBox.appendChild(b);
+}
+
+// ---------- phone back button: closes the open sheet, search or offline frame first, instead of leaving the map ----------
+function backGuard() {
+  const H = ctx.H;
+  if (H.backGuard) return; // core.js or another module already handles it
+  H.backGuard = 'tools';
+  const root = H.els.bar.parentNode, sheet = H.els.sheet;
+  let mine = null, pushed = false;
+  const searchOpen = () => { const s = root.querySelector('.hmm-search'); return !!(s && !s.hidden); };
+  const anyOpen = () => !sheet.hidden || searchOpen() || !!root.querySelector('.hmm-fpanel');
+  const onMine = () => !!(history.state && history.state.hmSheet && history.state.hmSheet === mine);
+  const mapUrl = () => { const c = ctx.map.getCenter(); return `#/map/@${c.lat.toFixed(5)},${c.lng.toFixed(5)},${ctx.map.getZoom().toFixed(2)}`; };
+  const sync = () => {
+    if (!H.isOpen || !/^#\/map/.test(location.hash)) return;
+    const open = anyOpen();
+    if (open && !onMine() && !pushed) { mine = Date.now(); pushed = true; history.pushState(Object.assign({}, history.state, { hmSheet: mine }), '', location.href); }
+    else if (!open && onMine()) { pushed = false; history.back(); }
+  };
+  const obs = new MutationObserver(() => queueMicrotask(sync));
+  obs.observe(sheet, { attributes: true, attributeFilter: ['hidden'] });
+  obs.observe(root, { childList: true });
+  const watchSearch = new MutationObserver(() => { const s = root.querySelector('.hmm-search'); if (s && !s.dataset.watched) { s.dataset.watched = '1'; obs.observe(s, { attributes: true, attributeFilter: ['hidden'] }); } });
+  watchSearch.observe(root, { childList: true });
+  window.addEventListener('popstate', (e) => {
+    if (!pushed || (e.state && e.state.hmSheet === mine)) return;
+    pushed = false; mine = null;
+    if (!H.isOpen || !/^#\/map/.test(location.hash)) return;
+    if (offline.busy && offline.busy()) { // a download is running: stay, and say how to stop it
+      mine = Date.now(); pushed = true; history.pushState(Object.assign({}, history.state, { hmSheet: mine }), '', location.href);
+      H.toast('Download in progress. Tap Cancel to stop it.'); return;
+    }
+    history.replaceState(history.state, '', mapUrl()); // keep the view: the entry we came back to may hold an older map position
+    search.close(); offline.cancelFrame(); H.closeSheet();
+  });
 }
 
 function loadCss() {
   const href = new URL('./tools.css', import.meta.url).href;
-  if ([...document.styleSheets].some((s) => s.href === href)) return;
+  if ([...document.styleSheets].some((s) => s.href === href)) return Promise.resolve();
   const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = href; document.head.appendChild(l);
+  return new Promise((res) => { l.onload = l.onerror = () => res(); setTimeout(res, 4000); });
 }
 
-// ---------- map layers ----------
-function addImages() {
-  const m = ctx.map;
-  for (const [id] of WPT) for (const dark of [0, 1]) { const k = `wg-${id}-${dark}`; if (!m.hasImage(k)) { const g = glyphImage(id, dark); m.addImage(k, g.img, { pixelRatio: g.pixelRatio }); } }
+// ---------- map layers (added on first use) ----------
+function ensureImage(icon, dark) {
+  const m = ctx.map, k = `wg-${icon}-${dark}`;
+  if (!m.hasImage(k)) { const g = glyphImage(icon, dark); m.addImage(k, g.img, { pixelRatio: g.pixelRatio }); }
 }
 const EMPTY = { type: 'FeatureCollection', features: [] };
-function addLayers() {
+const col = ['coalesce', ['get', 'color'], '#e8590c'];
+function ensureUserLayers() {
   const m = ctx.map;
+  if (m.getSource(SRC)) return;
   m.addSource(SRC, { type: 'geojson', data: EMPTY });
-  m.addSource(TOOL, { type: 'geojson', data: EMPTY });
-  const col = ['coalesce', ['get', 'color'], '#e8590c'];
-  m.addLayer({ id: 'hm-u-area', type: 'fill', source: SRC, filter: ['==', ['get', 'kind'], 'area'], paint: { 'fill-color': col, 'fill-opacity': 0.18 } });
-  m.addLayer({ id: 'hm-u-area-line', type: 'line', source: SRC, filter: ['==', ['get', 'kind'], 'area'], paint: { 'line-color': col, 'line-width': 2.5 } });
-  m.addLayer({ id: 'hm-u-line-case', type: 'line', source: SRC, filter: ['in', ['get', 'kind'], ['literal', ['line', 'track']]], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': '#ffffff', 'line-width': 6.5, 'line-opacity': 0.85 } });
-  m.addLayer({ id: 'hm-u-line', type: 'line', source: SRC, filter: ['in', ['get', 'kind'], ['literal', ['line', 'track']]], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': col, 'line-width': 3.5, 'line-dasharray': ['case', ['==', ['get', 'kind'], 'line'], ['literal', [2, 1]], ['literal', [1, 0]]] } });
-  m.addLayer({ id: 'hm-t-fill', type: 'fill', source: TOOL, filter: ['==', ['get', 't'], 'fill'], paint: { 'fill-color': ['coalesce', ['get', 'color'], '#e8590c'], 'fill-opacity': ['coalesce', ['get', 'op'], 0.2] } });
-  m.addLayer({ id: 'hm-t-line', type: 'line', source: TOOL, filter: ['==', ['get', 't'], 'line'], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': ['coalesce', ['get', 'color'], '#e8590c'], 'line-width': ['coalesce', ['get', 'w'], 3], 'line-dasharray': [2, 1.2] } });
-  m.addLayer({ id: 'hm-t-pt', type: 'circle', source: TOOL, filter: ['==', ['get', 't'], 'pt'], paint: { 'circle-radius': ['coalesce', ['get', 'r'], 6], 'circle-color': ['coalesce', ['get', 'color'], '#e8590c'], 'circle-stroke-color': '#fff', 'circle-stroke-width': 2.5 } });
-  m.addLayer({ id: 'hm-t-label', type: 'symbol', source: TOOL, filter: ['==', ['get', 't'], 'label'], layout: { 'text-field': ['get', 'text'], 'text-font': ['Noto Sans Bold'], 'text-size': 13, 'text-max-width': 12, 'text-padding': 4, 'text-anchor': ['coalesce', ['get', 'anchor'], 'center'], 'text-offset': ['case', ['==', ['get', 'anchor'], 'left'], ['literal', [1.1, 0]], ['literal', [0, 0]]] }, paint: { 'text-color': '#1f211b', 'text-halo-color': 'rgba(255,255,255,0.95)', 'text-halo-width': 2 } });
+  const below = m.getLayer('hm-t-fill') ? 'hm-t-fill' : undefined; // lines and areas sit under the drawing overlays, waypoints on top
+  m.addLayer({ id: 'hm-u-area', type: 'fill', source: SRC, filter: ['==', ['get', 'kind'], 'area'], paint: { 'fill-color': col, 'fill-opacity': 0.18 } }, below);
+  m.addLayer({ id: 'hm-u-area-line', type: 'line', source: SRC, filter: ['==', ['get', 'kind'], 'area'], paint: { 'line-color': col, 'line-width': 2.5 } }, below);
+  m.addLayer({ id: 'hm-u-line-case', type: 'line', source: SRC, filter: ['in', ['get', 'kind'], ['literal', ['line', 'track']]], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': '#ffffff', 'line-width': 6.5, 'line-opacity': 0.85 } }, below);
+  m.addLayer({ id: 'hm-u-line', type: 'line', source: SRC, filter: ['in', ['get', 'kind'], ['literal', ['line', 'track']]], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': col, 'line-width': 3.5, 'line-dasharray': ['case', ['==', ['get', 'kind'], 'line'], ['literal', [2, 1]], ['literal', [1, 0]]] } }, below);
   m.addLayer({ id: 'hm-u-wpt', type: 'circle', source: SRC, filter: ['==', ['get', 'kind'], 'wpt'], paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], 8, 9, 13, 14], 'circle-color': col, 'circle-stroke-color': '#ffffff', 'circle-stroke-width': 2.5 } });
   m.addLayer({ id: 'hm-u-wpt-ic', type: 'symbol', source: SRC, filter: ['==', ['get', 'kind'], 'wpt'], layout: { 'icon-image': ['concat', 'wg-', ['get', 'icon'], '-', ['get', 'dark']], 'icon-size': ['interpolate', ['linear'], ['zoom'], 8, 0.62, 13, 0.92], 'icon-allow-overlap': true, 'icon-ignore-placement': true } });
   m.addLayer({ id: 'hm-u-wpt-t', type: 'symbol', source: SRC, filter: ['==', ['get', 'kind'], 'wpt'], minzoom: 11.5, layout: { 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Bold'], 'text-size': 12, 'text-anchor': 'top', 'text-offset': [0, 1.35], 'text-optional': true, 'text-max-width': 9 }, paint: { 'text-color': '#1f211b', 'text-halo-color': 'rgba(255,255,255,0.95)', 'text-halo-width': 1.8 } });
+}
+function ensureToolLayers() {
+  const m = ctx.map;
+  if (m.getSource(TOOL)) return;
+  m.addSource(TOOL, { type: 'geojson', data: EMPTY });
+  const below = m.getLayer('hm-u-wpt') ? 'hm-u-wpt' : undefined;
+  m.addLayer({ id: 'hm-t-fill', type: 'fill', source: TOOL, filter: ['==', ['get', 't'], 'fill'], paint: { 'fill-color': ['coalesce', ['get', 'color'], '#e8590c'], 'fill-opacity': ['coalesce', ['get', 'op'], 0.2] } }, below);
+  m.addLayer({ id: 'hm-t-line', type: 'line', source: TOOL, filter: ['==', ['get', 't'], 'line'], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': ['coalesce', ['get', 'color'], '#e8590c'], 'line-width': ['coalesce', ['get', 'w'], 3], 'line-dasharray': [2, 1.2] } }, below);
+  m.addLayer({ id: 'hm-t-pt', type: 'circle', source: TOOL, filter: ['==', ['get', 't'], 'pt'], paint: { 'circle-radius': ['coalesce', ['get', 'r'], 6], 'circle-color': ['coalesce', ['get', 'color'], '#e8590c'], 'circle-stroke-color': '#fff', 'circle-stroke-width': 2.5 } }, below);
+  m.addLayer({ id: 'hm-t-label', type: 'symbol', source: TOOL, filter: ['==', ['get', 't'], 'label'], layout: { 'text-field': ['get', 'text'], 'text-font': ['Noto Sans Bold'], 'text-size': 13, 'text-max-width': 12, 'text-padding': 4, 'text-anchor': ['coalesce', ['get', 'anchor'], 'center'], 'text-offset': ['case', ['==', ['get', 'anchor'], 'left'], ['literal', [1.1, 0]], ['literal', [0, 0]]] }, paint: { 'text-color': '#1f211b', 'text-halo-color': 'rgba(255,255,255,0.95)', 'text-halo-width': 2 } }, below);
 }
 
 const isDark = (c) => (/^#f/i.test(c || '') && String(c).toLowerCase() !== '#f2c12e' ? 1 : 0);
@@ -102,8 +200,12 @@ async function refresh() {
   } catch (err) { ctx.items = []; ctx.folders = []; ctx.H.toast('Saving is blocked in this browser, so your map items will not stay.', 5000); }
   ctx.items.sort((a, b) => (b.created || 0) - (a.created || 0));
   const hiddenF = new Set(ctx.folders.filter((f) => f.hidden).map((f) => f.id));
-  const src = ctx.map.getSource(SRC);
-  if (src) src.setData({ type: 'FeatureCollection', features: ctx.items.filter((i) => !i.hidden && !hiddenF.has(i.folder) && i.coords && (i.kind === 'wpt' || i.coords.length > 1)).map(feature) });
+  const features = ctx.items.filter((i) => !i.hidden && !hiddenF.has(i.folder) && i.coords && (i.kind === 'wpt' || i.coords.length > 1)).map(feature);
+  if (features.length || ctx.map.getSource(SRC)) {
+    ensureUserLayers();
+    for (const f of features) if (f.properties.kind === 'wpt') ensureImage(f.properties.icon, f.properties.dark); // only the icons in use
+    ctx.map.getSource(SRC).setData({ type: 'FeatureCollection', features });
+  }
   return ctx.items;
 }
 
@@ -130,7 +232,9 @@ function drawOverlays() {
     if (d.kind === 'measure' && cs.length > 1) label(cs[cs.length - 1], ctx.H.units.dist(lineLength(cs)), 'left');
   }
   if (o.marker) pt(o.marker, { color: '#1f211b', r: 7 });
-  const s = ctx.map.getSource(TOOL); if (s) s.setData({ type: 'FeatureCollection', features: f });
+  if (!f.length && !ctx.map.getSource(TOOL)) return;
+  ensureToolLayers();
+  ctx.map.getSource(TOOL).setData({ type: 'FeatureCollection', features: f });
 }
 ctx.drawOverlays = drawOverlays;
 
@@ -143,7 +247,11 @@ function here(which) {
   }
   const c = ctx.map.getCenter(); return [c.lng, c.lat];
 }
-function setRings(p) { ctx.overlays.rings = p; drawOverlays(); if (p) ctx.H.toast('Range rings: 100, 200 and 300 m (109, 219, 328 yd)'); }
+function setRings(p) {
+  ctx.overlays.rings = p; drawOverlays();
+  chip('rings', p ? 'Range rings' : '', () => setRings(null));
+  if (p) ctx.H.toast('Range rings: 100, 200 and 300 m (109, 219, 328 yd). Tap the Range rings chip to clear them.', 4000);
+}
 ctx.setRings = setRings;
 
 // ---------- Tools sheet ----------
@@ -158,24 +266,29 @@ const I = {
   clear: '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg>',
 };
 function toolsSheet() {
-  const H = ctx.H, o = ctx.overlays;
+  const H = ctx.H, o = ctx.overlays, wind = typeof H.scentCone === 'function';
   const body = H.openSheet({ title: 'Tools', bar: 'tools', html: `
     <h3 class="hmm-h">Waypoint</h3>
     <div class="hmt-tiles">${tile('wpt-c', wptSvg('other', '#e8590c', 26), 'At map centre', 'Under the cross')}${tile('wpt-g', wptSvg('stand', '#1a73e8', 26), 'At my location', 'GPS (Global Positioning System)')}</div>
     <p class="hmm-muted">Tip: press and hold on the map to drop a waypoint right there.</p>
     <h3 class="hmm-h">Draw and measure</h3>
-    <div class="hmt-tiles">${tile('line', I.line, 'Line or route', 'Distance and climb')}${tile('area', I.area, 'Area', 'Hectares, perimeter')}${tile('measure', I.ruler, 'Measure', 'Quick ruler')}${tile('rings', I.rings, 'Range rings', '100, 200, 300 m')}</div>
-    ${typeof H.scentCone === 'function' ? `<h3 class="hmm-h">Wind</h3>
+    <div class="hmt-tiles">${tile('line', I.line, 'Line or route', 'Distance and climb')}${tile('area', I.area, 'Area', 'Hectares, perimeter')}${tile('measure', I.ruler, 'Measure', 'Quick ruler')}${tile('rings', I.rings, 'Range rings', '100, 200, 300 m')}${tile('profile', H.icons.profile, 'Elevation profile', 'Climb on a line')}</div>
+    ${wind ? `<h3 class="hmm-h">Wind</h3>
     <div class="hmt-tiles">${tile('cone', I.cone, 'Scent cone', 'From map centre')}${tile('cone-g', I.cone, 'Scent cone', 'From my location')}${tile('weather', H.icons.weather, 'Weather', 'Wind and forecast')}</div>` : ''}
+    <h3 class="hmm-h">Map files</h3>
+    <div class="hmt-tiles">${tile('files', H.icons.content, 'Import or export', 'GPX, KML, GeoJSON')}${tile('track', H.icons.track, 'Record a track', 'Go & Track')}</div>
     ${o.rings ? `<div class="hmm-btnrow"><button class="hmm-btn2" data-t="clear">${I.clear}<span>Clear range rings</span></button></div>` : ''}` });
   body.querySelectorAll('[data-t]').forEach((b) => b.onclick = () => {
     const t = b.dataset.t;
     if (t === 'wpt-c' || t === 'wpt-g') { const p = here(t === 'wpt-g' ? 'gps' : 'centre'); if (p) dropWaypoint(p); }
     else if (t === 'line' || t === 'area' || t === 'measure') startDraw(t);
     else if (t === 'rings') { const p = here('centre'); H.closeSheet(); setRings(p); }
+    else if (t === 'profile') profilePicker();
     else if (t === 'cone' || t === 'cone-g') { const p = here(t === 'cone-g' ? 'gps' : 'centre'); if (p) { H.closeSheet(); H.scentCone(p); } }
     else if (t === 'weather') { H.closeSheet(); H.els.stackR.querySelector('[data-act="weather"]').click(); }
-    else if (t === 'clear') { o.rings = null; drawOverlays(); H.closeSheet(); }
+    else if (t === 'files') ctx.contentSheet();
+    else if (t === 'track') H.els.bar.querySelector('[data-bar="track"]').click();
+    else if (t === 'clear') { setRings(null); H.closeSheet(); }
   });
 }
 
@@ -186,6 +299,7 @@ async function dropWaypoint(p, extra = {}) {
   try { await store.saveItem(it); } catch (err) { ctx.H.toast('Could not save. Storage is blocked in this browser.', 4000); return null; }
   await refresh();
   openItem(it.id, { fresh: true });
+  hintOnce('wpt', 'Waypoint saved. Pick an icon and a name: changes save by themselves.');
   return it;
 }
 
@@ -210,10 +324,17 @@ function itemStats(it) {
   if (it.kind === 'track' && it.times && it.times.length > 1) { const t0 = it.times.find((x) => x), t1 = [...it.times].reverse().find((x) => x); if (t0 && t1) return `${d}, ${fmtDur(it.moving || t1 - t0)}`; }
   return d;
 }
+/** Map pixels hidden under the open sheet at the bottom (at most 60% of the screen, so the item still gets room). */
+function sheetCover() {
+  const H = ctx.H, c = ctx.map.getContainer(), h = c.clientHeight;
+  const top = H.els.sheet.hidden ? h : H.els.sheet.offsetTop; // offsetTop ignores the slide in animation
+  return Math.round(Math.min(h * 0.6, Math.max(90, h - top + 16)));
+}
 function fitItem(it) {
-  if (it.kind === 'wpt') { ctx.map.easeTo({ center: it.coords, zoom: Math.max(ctx.map.getZoom(), 14), duration: 700 }); return; }
+  const cover = sheetCover();
+  if (it.kind === 'wpt') { ctx.map.easeTo({ center: it.coords, zoom: Math.max(ctx.map.getZoom(), 14), offset: [0, -Math.round(cover / 2)], duration: 700 }); return; } // offset, not padding: padding would stay on the map
   const b = bboxOf({ type: 'LineString', coordinates: it.coords });
-  if (b) ctx.map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: { top: 90, bottom: Math.round(window.innerHeight * 0.62), left: 40, right: 40 }, maxZoom: 16, duration: 700 });
+  if (b) ctx.map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: { top: 120, bottom: cover, left: 40, right: 40 }, maxZoom: 16, duration: 700 });
 }
 function fieldRows(it) {
   const folders = ctx.folders.slice().sort((a, b) => a.name.localeCompare(b.name));
@@ -239,7 +360,9 @@ async function openItem(id, { fresh = false } = {}) {
     ${isW ? `<div class="hmm-btnrow">
       <button class="hmm-btn2" data-a="rings">Range rings here</button>${typeof H.scentCone === 'function' ? '<button class="hmm-btn2" data-a="cone">Scent cone here</button>' : ''}
       ${typeof H.insightsAt === 'function' ? '<button class="hmm-btn2" data-a="insights">Insights here</button>' : ''}<button class="hmm-btn2" data-a="move">Move to map centre</button></div>${H.ui.linksHtml(it.coords[1], it.coords[0], it.name)}` : `<div class="hmm-btnrow"><button class="hmm-btn2" data-a="fit">Show on map</button></div>`}
-    <div class="hmm-btnrow"><button class="hmm-btn2" data-a="share">Share or export</button><button class="hmm-btn2 danger" data-a="del">${H.icons.trash}<span>Delete</span></button></div>` });
+    <div class="hmm-btnrow"><button class="hmm-btn2" data-a="share">Share or export</button><button class="hmm-btn2 danger" data-a="del">${H.icons.trash}<span>Delete</span></button></div>
+    <button class="hmm-primary block" data-a="done">Done</button>
+    <p class="hmm-muted">Changes save by themselves.</p>` });
   H.ui.wireCopy(body);
   const q = (s) => body.querySelector(s);
   body.querySelectorAll('[data-f]').forEach((el) => el.addEventListener(el.tagName === 'SELECT' ? 'change' : 'input', () => {
@@ -268,17 +391,21 @@ async function openItem(id, { fresh = false } = {}) {
     else if (a === 'insights') H.insightsAt(it.coords, it.name);
     else if (a === 'move') { const c = here('centre'); it.coords = [+c[0].toFixed(6), +c[1].toFixed(6)]; await save(); openItem(it.id); H.toast('Moved to the map centre'); }
     else if (a === 'fit') fitItem(it);
+    else if (a === 'done') H.closeSheet();
     else if (a === 'share') content.exportSheet([it], it.name);
   });
   if (fresh) { const n = q('[data-f="name"]'); if (n && !matchMedia('(pointer: coarse)').matches) n.select(); }
   if (isW) {
-    photoBox(it, q('[data-out="photo"]'), save);
-    const e = await H.elevationAt(it.coords).catch(() => null);
-    const out = q('[data-out="elev"]'); if (out) out.textContent = e == null ? 'Not available offline here' : u.elev(Math.round(e));
-  } else {
-    q('[data-out="stats"]').innerHTML = statBoxes(it);
     if (!fresh) fitItem(it);
-    if (it.kind !== 'area') profileHtml(it.coords, q('[data-out="profile"]'), it).then((r) => { if (r && q('[data-out="stats"]')) q('[data-out="stats"]').innerHTML = statBoxes(it, r); });
+    photoBox(it, q('[data-out="photo"]'), save);
+    const out = q('[data-out="elev"]'); // held now: after the wait the sheet may show something else
+    const e = await H.elevationAt(it.coords).catch(() => null);
+    if (out && out.isConnected) out.textContent = e == null ? 'Not available offline here' : u.elev(Math.round(e));
+  } else {
+    const st = q('[data-out="stats"]');
+    st.innerHTML = statBoxes(it);
+    fitItem(it);
+    if (it.kind !== 'area') profileHtml(it.coords, q('[data-out="profile"]'), it).then((r) => { if (r && st.isConnected) st.innerHTML = statBoxes(it, r); });
   }
 }
 function statBoxes(it, prof) {
@@ -327,6 +454,7 @@ async function profileHtml(coords, box, it) {
   const H = ctx.H, u = H.units, n = Math.min(160, Math.max(40, coords.length * 4));
   const pts = sampleLine(coords, n);
   const eles = await Promise.all(pts.map((p) => H.elevationAt([p[0], p[1]]).catch(() => null)));
+  if (!box.isConnected) return null; // the sheet moved on while the terrain loaded
   const ok = eles.filter((e) => e != null);
   if (ok.length < n * 0.6) {
     const rec = coords.map((c) => c[2]).filter((e) => e != null);
@@ -373,10 +501,15 @@ function profilePicker() {
 // ---------- drawing: line, area, measure ----------
 let redrawing = false;
 const DRAW_T = { line: 'Draw a line', area: 'Draw an area', measure: 'Measure' };
+const DRAW_HINT = {
+  line: 'Tap the map to add points along your route. Save when done.',
+  area: 'Tap the map around the area, at least 3 corners. Save when done.',
+  measure: 'Tap two or more points on the map to measure the distance.',
+};
 function startDraw(kind) {
   ctx.overlays.draft = { kind, pts: [] };
   drawOverlays(); drawPanel();
-  ctx.H.toast('Tap the map to add points, or move the map and tap Add centre point.', 4000);
+  hintOnce(`draw-${kind}`, DRAW_HINT[kind]);
 }
 function addDraftPoint(p) { const d = ctx.overlays.draft; if (!d) return; d.pts.push([+p[0].toFixed(6), +p[1].toFixed(6)]); drawOverlays(); drawPanel(); }
 function drawPanel() {
@@ -392,6 +525,7 @@ function drawPanel() {
   redrawing = true; // openSheet runs the previous panel's onClose: keep the draft while we only re-render
   const body = H.openSheet({ title: DRAW_T[d.kind], modal: false, onClose: () => { if (!redrawing && ctx.overlays.draft === d) { ctx.overlays.draft = null; drawOverlays(); } }, html: `
     <p class="hmt-drawstat" aria-live="polite"><b>${esc(stats)}</b></p>
+    ${n < 2 ? `<p class="hmm-muted hmt-hint">${esc(DRAW_HINT[d.kind])} Or move the map and tap Add centre point.</p>` : ''}
     <div class="hmt-drawbtns">
       <button class="hmm-btn2" data-d="add">${H.icons.target}<span>Add centre point</span></button>
       <button class="hmm-btn2" data-d="undo" ${n ? '' : 'disabled'}>Undo</button>

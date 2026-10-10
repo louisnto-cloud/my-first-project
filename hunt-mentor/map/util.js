@@ -11,7 +11,9 @@ export function loadPrefs() {
   let p = {};
   try { p = JSON.parse(localStorage.getItem(PREFS_KEY) || '{}') || {}; } catch (e) { p = {}; }
   Object.keys(prefs).forEach((k) => delete prefs[k]);
-  Object.assign(prefs, { base: 'topo', is3d: false, exag: 1.3, units: 'metric', coords: 'dd', satContours: true, hillshade: true, layers: {}, month: 0, species: 'all', offline: [] }, p);
+  Object.assign(prefs, { base: 'topo', is3d: false, exag: 1.5, units: 'metric', coords: 'dd', satContours: true, hillshade: true, layers: {}, month: 0, species: 'all', offline: [] }, p);
+  // Seasonal layers start on the current month until the hunter picks one (All stacks every season band)
+  if (!prefs.monthChosen) prefs.month = new Date().getMonth() + 1;
   return prefs;
 }
 export function savePrefs() { try { localStorage.setItem(PREFS_KEY, JSON.stringify(prefs)); } catch (e) { /* storage blocked */ } }
@@ -28,11 +30,19 @@ export function hub() {
 
 export function debounce(fn, ms) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; }
 export function throttle(fn, ms) {
-  let last = 0, t = null;
+  let last = 0, t = null, args = [];
   return (...a) => {
+    args = a; // the trailing call uses the newest arguments
     const now = Date.now(), wait = ms - (now - last);
-    if (wait <= 0) { last = now; fn(...a); } else if (!t) t = setTimeout(() => { t = null; last = Date.now(); fn(...a); }, wait);
+    if (wait <= 0) { last = now; fn(...a); } else if (!t) t = setTimeout(() => { t = null; last = Date.now(); fn(...args); }, wait);
   };
+}
+/** True the first time a tool is used on this phone (key per tool), then false. Kept in prefs, so the backup carries it. */
+export function firstTime(key) {
+  const seen = prefs.seenHints || (prefs.seenHints = {});
+  if (seen[key]) return false;
+  seen[key] = 1; savePrefs();
+  return true;
 }
 
 // ---------- units ----------

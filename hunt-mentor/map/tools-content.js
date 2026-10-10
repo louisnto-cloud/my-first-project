@@ -12,7 +12,7 @@ const open = new Set(); // folder ids folded open; all start open except when ma
 export function init(c) {
   ctx = c; H = c.H;
   H.setBarAction('content', sheet);
-  ctx.exportSheet = exportSheet; ctx.importFile = importFile;
+  ctx.exportSheet = exportSheet; ctx.importFile = importFile; ctx.contentSheet = sheet;
 }
 
 const EYE = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>';
@@ -24,7 +24,7 @@ function rowHtml(it) {
   const ic = it.kind === 'wpt' ? wptSvg(it.icon, it.color || null, 30) : `<span class="hmt-sw ${it.kind}" style="--c:${esc(it.color || '#e8590c')}"></span>`;
   const sub = [ctx.KIND[it.kind], ctx.itemStats(it)].filter(Boolean).join(', ');
   return `<div class="hmt-item ${it.hidden ? 'off' : ''}"><button class="hmt-row" data-open="${esc(it.id)}">${ic}<span class="hmt-rn">${esc(it.name || ctx.KIND[it.kind])}<small>${esc(sub)}</small></span></button>
-    <button class="hmm-i" data-eye="${esc(it.id)}" aria-pressed="${!it.hidden}" aria-label="${it.hidden ? 'Show' : 'Hide'} ${esc(it.name)} on the map">${it.hidden ? EYE_OFF : EYE}</button></div>`;
+    <button class="hmm-i" data-eye="${esc(it.id)}" aria-pressed="${!it.hidden}" title="${it.hidden ? 'Show on the map' : 'Hide from the map'}" aria-label="${it.hidden ? 'Show' : 'Hide'} ${esc(it.name)} on the map">${it.hidden ? EYE_OFF : EYE}</button></div>`;
 }
 
 export async function sheet() {
@@ -44,13 +44,13 @@ export async function sheet() {
     ${!ctx.items.length ? `<div class="hmm-empty"><b>Nothing saved yet</b><p>Drop a waypoint from Tools, press and hold on the map, draw a line, or record a track with Go & Track.</p><p class="hmm-muted">Coming from onX? Export your waypoints and tracks there as GPX (GPS Exchange Format, GPS meaning Global Positioning System) or KML (Keyhole Markup Language), then tap Import.</p></div>` : ''}
     ${groups.map(({ f, list }) => `<section class="hmt-folder ${f.hidden ? 'off' : ''}">
       <div class="hmt-fh"><button class="hmt-fname" data-fold="${esc(f.id)}" aria-expanded="${!open.has('x' + f.id)}">${FOLDER}<span>${esc(f.name)} <small>${list.length}</small></span></button>
-        <button class="hmm-i" data-feye="${esc(f.id)}" aria-pressed="${!f.hidden}" aria-label="${f.hidden ? 'Show' : 'Hide'} folder ${esc(f.name)}">${f.hidden ? EYE_OFF : EYE}</button>
-        <button class="hmm-i" data-fedit="${esc(f.id)}" aria-label="Folder ${esc(f.name)}: rename, export or delete">${H.icons.edit}</button></div>
+        <button class="hmm-i" data-feye="${esc(f.id)}" aria-pressed="${!f.hidden}" title="${f.hidden ? 'Show folder on the map' : 'Hide folder from the map'}" aria-label="${f.hidden ? 'Show' : 'Hide'} folder ${esc(f.name)}">${f.hidden ? EYE_OFF : EYE}</button>
+        <button class="hmm-i" data-fedit="${esc(f.id)}" title="Rename, export or delete the folder" aria-label="Folder ${esc(f.name)}: rename, export or delete">${H.icons.edit}</button></div>
       <div class="hmt-flist" ${open.has('x' + f.id) ? 'hidden' : ''}>${list.map(rowHtml).join('') || '<p class="hmm-muted">Empty folder. Pick it in an item\'s Folder box to move things here.</p>'}</div></section>`).join('')}
     ${loose.length ? `${groups.length ? '<h3 class="hmm-h">Not in a folder</h3>' : ''}${loose.map(rowHtml).join('')}` : ''}
     <p class="hmm-muted">Saved on this phone only. Your backup in More includes it.</p>` });
   body.querySelectorAll('[data-filter]').forEach((b) => b.onclick = () => { filter = b.dataset.filter; sheet(); });
-  body.querySelectorAll('[data-open]').forEach((b) => b.onclick = () => { const it = ctx.items.find((i) => i.id === b.dataset.open); if (it) { ctx.fitItem(it); ctx.openItem(it.id, { fresh: true }); } });
+  body.querySelectorAll('[data-open]').forEach((b) => b.onclick = () => { const it = ctx.items.find((i) => i.id === b.dataset.open); if (it) ctx.openItem(it.id); }); // the item sheet zooms to it, above the sheet
   body.querySelectorAll('[data-eye]').forEach((b) => b.onclick = async () => {
     const it = ctx.items.find((i) => i.id === b.dataset.eye); if (!it) return;
     it.hidden = !it.hidden; await ctx.saveAny(it); await ctx.refresh();

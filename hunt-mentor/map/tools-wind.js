@@ -97,7 +97,7 @@ export const failMsg = () => (navigator.onLine === false ? OFFLINE_MSG : NOANSWE
 // ---------- plugin ----------
 export default function init(api) {
   H = api; map = H.map;
-  addImage(); addLayers();
+  // Arrow image and layers are added the first time wind arrows or a scent cone are shown (lazy).
   map.on('moveend', debounce(() => { if (gridOn && H.isOpen) loadGrid(); }, 900));
   H.on('units', () => { if (gridOn) loadGrid(); if (coneData) drawCone(); });
   H.setBarAction('weather', weatherSheet);
@@ -116,8 +116,10 @@ function addImage() {
 }
 const empty = () => ({ type: 'FeatureCollection', features: [] });
 function addLayers() {
-  if (!map.getSource(SRC_C)) map.addSource(SRC_C, { type: 'geojson', data: empty() });
-  if (!map.getSource(SRC_W)) map.addSource(SRC_W, { type: 'geojson', data: empty() });
+  if (map.getSource(SRC_W)) return;
+  addImage();
+  map.addSource(SRC_C, { type: 'geojson', data: empty() });
+  map.addSource(SRC_W, { type: 'geojson', data: empty() });
   map.addLayer({ id: 'hm-wind-arrow', type: 'symbol', source: SRC_W, layout: {
     'icon-image': 'hm-wind-arrow', 'icon-rotate': ['get', 'to'], 'icon-rotation-alignment': 'map', 'icon-allow-overlap': true, 'icon-ignore-placement': true,
     'icon-size': ['interpolate', ['linear'], ['get', 'kmh'], 0, 0.75, 30, 1.3],
@@ -135,8 +137,9 @@ function addLayers() {
 function setGrid(on) {
   gridOn = on;
   const b = H.els.stackR.querySelector('[data-act="weather"]'); if (b) b.classList.toggle('on', on);
-  if (on) { loadGrid(); H.toast('Wind arrows point the way the wind blows, now. Labels say where it comes from.', 4500); }
-  else map.getSource(SRC_W).setData(empty());
+  if (H.overlayChip) H.overlayChip('wind', on ? 'Wind arrows' : '', () => setGrid(false));
+  if (on) { addLayers(); loadGrid(); H.toast('Wind arrows point the way the wind blows, now. Labels say where it comes from.', 4500); }
+  else if (map.getSource(SRC_W)) map.getSource(SRC_W).setData(empty());
 }
 async function loadGrid() {
   const cv = map.getCanvas(), w = cv.clientWidth, h = cv.clientHeight, pts = [];
@@ -144,12 +147,12 @@ async function loadGrid() {
   for (const fy of [0.22, 0.4, 0.58, 0.74]) for (const fx of [0.18, 0.48, 0.76]) { const ll = map.unproject([w * fx, h * fy]); pts.push([ll.lng, ll.lat]); }
   try {
     const r = await windAt(pts);
-    if (!gridOn) return;
+    if (!gridOn || !map.getSource(SRC_W)) return;
     map.getSource(SRC_W).setData({ type: 'FeatureCollection', features: r.map((x) => ({ type: 'Feature',
       properties: { to: (x.from + 180) % 360, kmh: x.kmh, label: x.kmh < 2 ? 'Calm' : `${compass8(x.from)} ${speed(x.kmh)}` },
       geometry: { type: 'Point', coordinates: [x.lng, x.lat] } })) });
   } catch (err) {
-    const has = map.querySourceFeatures(SRC_W).length;
+    const has = map.getSource(SRC_W) ? map.querySourceFeatures(SRC_W).length : 0;
     if (!has) { H.toast(navigator.onLine === false ? 'Wind arrows need a connection.' : 'The weather service did not answer. Try the wind arrows again in a minute.', 4500); setGrid(false); }
     else H.toast('Wind arrows could not update here, so they still show the last wind.', 4000);
   }
@@ -174,6 +177,7 @@ export async function cone(p) {
   const xs = ring.map((q) => q[0]), ys = ring.map((q) => q[1]);
   map.fitBounds([[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], { padding: pad, maxZoom: Math.max(map.getZoom(), 15), duration: 600 });
   H.toast(`${windWords(coneData.from, coneData.kmh)}${f.offline ? ' (saved forecast)' : ''}. Tap the cone for details.`, 5000);
+  if (H.hintOnce) setTimeout(() => H.hintOnce('cone', 'Tip: keep the shaded wedge off where you expect animals. Tap the Scent cone chip to clear it.'), 5200);
 }
 function coneRing(p, from) {
   const to = (from + 180) % 360, ring = [p];
@@ -182,7 +186,9 @@ function coneRing(p, from) {
   return ring;
 }
 function drawCone() {
-  if (!coneData) { map.getSource(SRC_C).setData(empty()); return; }
+  if (H.overlayChip) H.overlayChip('cone', coneData ? 'Scent cone' : '', clearCone);
+  if (!coneData) { if (map.getSource(SRC_C)) map.getSource(SRC_C).setData(empty()); return; }
+  addLayers();
   const { p, from, kmh } = coneData, to = (from + 180) % 360;
   const calm = kmh < 2;
   map.getSource(SRC_C).setData({ type: 'FeatureCollection', features: [
@@ -211,7 +217,7 @@ function fromGps() {
 }
 function startPick() {
   picking = true;
-  H.toast('Tap the map where you will stand.', 6000);
+  H.toast('Tap the map where you will stand. The scent cone starts there.', 6000);
 }
 function onTap(e) {
   if (picking) { picking = null; cone([e.lngLat.lng, e.lngLat.lat]); return true; }

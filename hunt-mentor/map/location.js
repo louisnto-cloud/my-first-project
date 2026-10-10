@@ -14,10 +14,10 @@ export function init(api) {
 
 export function onButton() {
   if (!('geolocation' in navigator)) { H.toast('This browser cannot share your location.'); return; }
-  if (mode === 'off') { askCompass(); start(); setMode('follow'); if (last) centre(true); return; }
-  if (mode === 'show') { setMode('follow'); if (last) centre(true); return; }
-  if (mode === 'follow') { if (heading != null) setMode('compass'); else { askCompass(); setMode('show'); H.toast('Compass not available yet. Map stays north up.'); } return; }
-  if (mode === 'compass') { setMode('show'); map.easeTo({ bearing: 0, duration: 500 }); }
+  if (mode === 'off') { askCompass(); start(); setMode('follow'); if (last) centre(true); H.toast('Showing your location. The map follows you until you drag it.', 3500); return; }
+  if (mode === 'show') { setMode('follow'); if (last) centre(true); H.toast('Following you again.', 2000); return; }
+  if (mode === 'follow') { if (heading != null) { setMode('compass'); H.toast('Compass mode: the map turns the way you face. Tap again for north up.', 3500); } else { askCompass(); setMode('show'); H.toast('Compass not available yet. Map stays north up.'); } return; }
+  if (mode === 'compass') { setMode('show'); map.easeTo({ bearing: 0, duration: 500 }); H.toast('North up. Tap to follow you again.', 2500); }
 }
 
 function setMode(m) {
@@ -26,7 +26,8 @@ function setMode(m) {
   b.classList.toggle('on', m !== 'off');
   b.classList.toggle('follow', m === 'follow' || m === 'compass');
   b.innerHTML = m === 'compass' ? H.icons.follow : H.icons.locate;
-  b.setAttribute('aria-label', { off: 'Show my location', show: 'Follow my location', follow: 'Turn the map with my compass', compass: 'Stop turning the map' }[m]);
+  const label = { off: 'Show my location', show: 'Follow my location', follow: 'Turn the map with my compass', compass: 'Stop turning the map' }[m];
+  b.setAttribute('aria-label', label); b.title = label;
 }
 
 function start() {
@@ -80,7 +81,7 @@ function draw() {
   const data = { type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [circleRing(ll, Math.max(last.accuracy || 0, 3))] } };
   const src = map.getSource(ACC);
   if (src) src.setData(data);
-  else if (map.isStyleLoaded()) {
+  else if (map.style) { // not isStyleLoaded(): that stays false while tiles load, so the circle never showed while following
     map.addSource(ACC, { type: 'geojson', data });
     map.addLayer({ id: ACC + '-fill', type: 'fill', source: ACC, paint: { 'fill-color': '#1a73e8', 'fill-opacity': 0.12 } });
     map.addLayer({ id: ACC + '-line', type: 'line', source: ACC, paint: { 'line-color': '#1a73e8', 'line-opacity': 0.45, 'line-width': 1 } });
@@ -109,11 +110,13 @@ function onOrient(e) {
   const so = (screen.orientation && screen.orientation.angle) || window.orientation || 0;
   setHeading((h + so + 360) % 360);
 }
+let headFrame = 0;
 function setHeading(h) {
   // smooth the needle a little
   if (heading == null) heading = h;
   else { let d = ((h - heading + 540) % 360) - 180; heading = (heading + d * 0.35 + 360) % 360; }
-  if (marker) { el.classList.add('has-heading'); marker.setRotation(heading); }
+  // The compass sensor fires up to 60 times a second: move the marker at most once per frame
+  if (!headFrame) headFrame = requestAnimationFrame(() => { headFrame = 0; if (marker) { el.classList.add('has-heading'); marker.setRotation(heading); } });
   if (mode === 'compass') turn();
 }
 const turn = throttle(() => { if (mode === 'compass' && heading != null && Math.abs(((map.getBearing() - heading + 540) % 360) - 180) > 2) map.rotateTo(heading, { duration: 180 }); }, 160);

@@ -15,6 +15,8 @@ const mb = (b) => `${fmtNum((b || 0) / 1048576, b > 1048576 * 100 ? 0 : 1)} MB`;
 
 let H, map, ui = null, job = null;
 export function init(api) { H = api; map = api.map; }
+/** True while a download runs (the phone back button then stays on the map). */
+export const busy = () => !!job;
 
 // ---------- list sheet ----------
 export function openSheet() {
@@ -27,17 +29,19 @@ export function openSheet() {
     <h3 class="hmm-h">Storage</h3><div data-o="storage"><p class="hmm-muted">Checking</p></div>
     <p class="hmm-muted">Satellite imagery is not saved for offline use (Esri licence). Satellite tiles you looked at stay on the phone for a while.</p>` });
   outlines(true);
-  body.addEventListener('click', onClick);
+  // The sheet body element is reused by every sheet: wire the click handler once, or each open added another
+  // (one tap on Save a new area then ran it 2, 3, 4 times).
+  if (!body.dataset.offlineWired) { body.dataset.offlineWired = '1'; body.addEventListener('click', onClick); }
   storage(body);
 }
 function itemHtml(a) {
   return `<div class="hmm-oitem" data-id="${esc(a.id)}">
     <div class="hmm-oname"><b>${esc(a.name)}</b><small>${mb(a.bytes)}, ${fmtNum(a.tiles)} tiles, zoom ${a.minZ} to ${a.maxZ}, saved ${esc(String(a.created).slice(0, 10))}${a.failed ? `. <span class="hmm-warn">${fmtNum(a.failed)} missing</span>` : ''}</small></div>
     <div class="hmm-obtns">
-      <button class="hmm-btn2" data-o="show">Show</button>
-      <button class="hmm-btn2" data-o="rename" aria-label="Rename ${esc(a.name)}">${H.icons.edit}</button>
+      <button class="hmm-btn2" data-o="show">Show on map</button>
+      <button class="hmm-btn2" data-o="rename" title="Rename" aria-label="Rename ${esc(a.name)}">${H.icons.edit}<span>Rename</span></button>
       ${a.failed ? '<button class="hmm-btn2" data-o="fix">Fix</button>' : ''}
-      <button class="hmm-btn2 danger" data-o="del" aria-label="Delete ${esc(a.name)}">${H.icons.trash}</button>
+      <button class="hmm-btn2 danger" data-o="del" title="Delete" aria-label="Delete ${esc(a.name)}">${H.icons.trash}<span>Delete</span></button>
     </div></div>`;
 }
 async function storage(body) {
@@ -55,7 +59,7 @@ async function storage(body) {
   el.innerHTML = html;
 }
 async function onClick(e) {
-  const b = e.target.closest('[data-o]'); if (!b) return;
+  const b = e.target.closest('[data-o]'); if (!b || !H.els.sheetB.querySelector('.hmm-olist')) return; // only while Offline Maps shows
   const act = b.dataset.o, row = b.closest('.hmm-oitem'), list = prefs.offline || [];
   const a = row && list.find((x) => x.id === row.dataset.id);
   if (act === 'new') startFrame();
@@ -79,7 +83,7 @@ async function onClick(e) {
 
 function outlines(on) {
   const id = 'hm-offline-areas';
-  if (!map.isStyleLoaded()) return;
+  if (!map.style) return; // not isStyleLoaded(): that is false while tiles load, which skipped the outlines
   if (!on) { if (map.getLayer(`${id}-line`)) map.removeLayer(`${id}-line`); if (map.getSource(id)) map.removeSource(id); return; }
   const fc = { type: 'FeatureCollection', features: (prefs.offline || []).map((a) => ({ type: 'Feature', properties: { name: a.name }, geometry: { type: 'Polygon', coordinates: [[[a.bbox[0], a.bbox[1]], [a.bbox[2], a.bbox[1]], [a.bbox[2], a.bbox[3]], [a.bbox[0], a.bbox[3]], [a.bbox[0], a.bbox[1]]]] } })) };
   if (map.getSource(id)) map.getSource(id).setData(fc);
@@ -113,7 +117,7 @@ function startFrame() {
   frame.innerHTML = '<div class="hmm-frame-box"><span>Move and zoom the map to fit your area in the box</span></div>';
   const opt = (a, b, sel) => Array.from({ length: b - a + 1 }, (_, i) => a + i).map((z) => `<option value="${z}" ${z === sel ? 'selected' : ''}>${z}</option>`).join('');
   const panel = document.createElement('div'); panel.className = 'hmm-fpanel';
-  panel.innerHTML = `<h2>Save an offline area</h2>
+  panel.innerHTML = `<header class="hmm-fhead"><h2>Save an offline area</h2><button class="hmm-x" data-f="x" aria-label="Close" title="Close">${H.icons.close}</button></header>
     <label class="hmm-field"><span>Name</span><input type="text" maxlength="40" data-f="name" value="${esc(defaultName())}"></label>
     <div class="hmm-zooms"><label class="hmm-field"><span>From zoom</span><select data-f="min">${opt(4, 12, 6)}</select></label>
       <label class="hmm-field"><span>To zoom</span><select data-f="max">${opt(10, 14, 14)}</select></label></div>
@@ -121,9 +125,9 @@ function startFrame() {
     <div class="hmm-prog" hidden><i></i></div><p class="hmm-muted hmm-progt" hidden></p>
     <div class="hmm-btnrow"><button class="hmm-btn2" data-f="cancel">Cancel</button><button class="hmm-primary" data-f="go">${H.icons.download}<span>Download</span></button></div>`;
   host.append(frame, panel);
-  ui = { frame, panel, onMove: throttle(estimate, 250) };
-  map.on('move', ui.onMove);
-  panel.querySelector('[data-f="cancel"]').onclick = () => { if (job) { job.cancelled = true; } else cancelFrame(); };
+  ui = { frame, panel, onMove: throttle(estimate, 300) };
+  map.on('move', ui.onMove); // estimate() only counts tiles (arithmetic), so this stays cheap while the map moves
+  panel.querySelector('[data-f="cancel"]').onclick = panel.querySelector('[data-f="x"]').onclick = () => { if (job) { job.cancelled = true; } else cancelFrame(); };
   panel.querySelectorAll('select').forEach((s) => { s.onchange = estimate; });
   panel.querySelector('[data-f="go"]').onclick = () => {
     const name = panel.querySelector('[data-f="name"]').value.trim() || defaultName();
@@ -152,10 +156,25 @@ function plan(bbox, minZ, maxZ) {
   const vb = vec.reduce((s, [z]) => s + (z <= 8 ? 30e3 : z <= 11 ? 20e3 : 11e3), 0), db = dem.length * 45e3;
   return { vec, dem, bytes: vb + db + 900e3 };
 }
+/** Tile count and size of a plan, by arithmetic only (plan() builds the full lists, which froze the phone on a big area). */
+function count(bbox, minZ, maxZ) {
+  let nv = 0, nd = 0, vb = 0;
+  for (let z = 0; z <= Math.min(maxZ, 14); z++) {
+    if (z > 5 && z < minZ) continue;
+    const r = tileRange(bbox, z), k = (r.x1 - r.x0 + 1) * (r.y1 - r.y0 + 1);
+    nv += k; vb += k * (z <= 8 ? 30e3 : z <= 11 ? 20e3 : 11e3);
+  }
+  for (let z = 0; z <= Math.min(maxZ, DEM_MAXZOOM); z++) {
+    if (z > 5 && z < minZ - 1) continue;
+    const r = tileRange(bbox, z), n = 2 ** z - 1;
+    nd += (Math.min(n, r.x1 + 1) - Math.max(0, r.x0 - 1) + 1) * (Math.min(n, r.y1 + 1) - Math.max(0, r.y0 - 1) + 1);
+  }
+  return { n: nv + nd, bytes: vb + nd * 45e3 + 900e3 };
+}
 function estimate() {
   if (!ui || job) return;
   const minZ = +ui.panel.querySelector('[data-f="min"]').value, maxZ = +ui.panel.querySelector('[data-f="max"]').value;
-  const p = plan(frameBbox(), minZ, Math.max(minZ, maxZ)), n = p.vec.length + p.dem.length;
+  const p = count(frameBbox(), minZ, Math.max(minZ, maxZ)), n = p.n;
   const est = ui.panel.querySelector('[data-f="est"]'), go = ui.panel.querySelector('[data-f="go"]');
   const tooBig = n > MAX_TILES, off = !navigator.onLine;
   est.innerHTML = tooBig ? `<b class="hmm-warn">Too big: ${fmtNum(n)} tiles.</b> Zoom the map in, or pick a lower To zoom.`
