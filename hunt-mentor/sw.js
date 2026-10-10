@@ -3,7 +3,7 @@
 // Map tiles, terrain, fonts: cache first. Offline areas live in hm-offline-* caches, viewed tiles in hm-tiles (size capped).
 // Our layer files (data/layers, data/spots): cache first per ?v= version. The layers manifest and the OpenFreeMap
 // tile index: network first with a cache fallback. PMTiles byte ranges are cut from a saved copy when offline.
-const CACHE = 'hm-ba45da56ec-2026-10-10';
+const CACHE = 'hm-b2dbf93b93-2026-10-10';
 const TILES = 'hm-tiles';
 const DATA = 'hm-data';
 const TILE_CAP = 4000;
