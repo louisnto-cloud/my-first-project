@@ -157,6 +157,7 @@ yt-pack-out-meat | Heavy meat high and close to your back.
 
 - One deer, two people, 1 km: one trip each (Tip).
 - Never shoot a moose farther than four return trips before dark (Tip).
+- A bone in hind quarter (45 to 55 kg) is heavier than a 30 kg load: bone it out or cut it in two before you lift it (Tip).
 
 ```more the trip math in detail
 - One deer, two people, 1 km in. Boneless meat about 25 kg, plus head and cape if wanted. One trip each (Tip).
@@ -164,6 +165,7 @@ yt-pack-out-meat | Heavy meat high and close to your back.
 - One moose, two people, no ATV. Say 200 kg boneless plus antlers (Tip, from the table above).
   - Bone in quarters: hind about 45 to 55 kg each, front about 35 to 40 kg each. Plus 40 to 50 kg of loins, neck, rib and trim in bags (Tip).
   - At 30 kg per person per trip: about 7 loads, so 4 trips each, plus one for antlers and gear. A full day for 1 km, two days for 3 km (Tip).
+  - A bone in hind quarter is over 30 kg, so it never goes in one load: bone it out, or saw it into two pieces. Your safe load is the one you can carry on rough ground without falling; 30 kg is a starting point, not a rule (Tip, 70%).
   - Boned out: about 7 loads still, lighter each but more bags. The bones are the saving on a long pack (Tip).
 - Rule of thumb: never shoot a moose further from the ATV or truck than you can make four return trips before dark. Tip.
 
