@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" role="img" aria-label="Bar chart of Region 1 upland bird seasons. Sooty and ruffed grouse: 1 September to 31 December, bow only 20 to 31 August. Ptarmigan in 1-14 and 1-15: 10 September to 30 November. California quail: 1 October to 30 November. Pheasant in 1-1 to 1-9: 1 October to 30 November. Any turkey in 1-1 to 1-7: no closed season. Band tailed pigeons: 15 to 30 September. No upland birds on Denman Island." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="440" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Upland bird seasons</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">None on Denman Island. No mountain quail.</text>
+<rect x="14.0" y="60" width="31.6" height="344" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="60" width="30.6" height="344" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="60" width="30.6" height="344" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="60" width="31.6" height="344" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="60" width="31.6" height="344" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="60" width="31.6" height="344" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="96" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sooty and ruffed grouse, 1-1 to 1-15</text>
+<rect x="77.2" y="102" width="124.3" height="20" rx="4" fill="#e8590c"/>
+<text x="206" y="117" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Dec 31</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Grouse, bow only</text>
+<rect x="65.0" y="148" width="12.2" height="20" rx="4" fill="#8b5a2b"/>
+<text x="81" y="163" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Aug 20 to Aug 31</text>
+<text x="14" y="188" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Ptarmigan, 1-14, 1-15</text>
+<rect x="86.4" y="194" width="83.6" height="20" rx="4" fill="#e8590c"/>
+<text x="174" y="209" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 10 to Nov 30</text>
+<text x="14" y="234" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">California quail, 1-1 to 1-15</text>
+<rect x="107.8" y="240" width="62.2" height="20" rx="4" fill="#e8590c"/>
+<text x="174" y="255" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 1 to Nov 30</text>
+<text x="14" y="280" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Pheasant, 1-1 to 1-9</text>
+<rect x="107.8" y="286" width="62.2" height="20" rx="4" fill="#e8590c"/>
+<text x="174" y="301" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 1 to Nov 30</text>
+<text x="14" y="326" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Turkey, any, 1-1 to 1-7</text>
+<rect x="14.0" y="332" width="372.0" height="20" rx="4" fill="#e8590c"/>
+<text x="200" y="347" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">No closed season</text>
+<text x="14" y="372" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Band tailed pigeons, 1-1 to 1-15</text>
+<rect x="91.5" y="378" width="16.3" height="20" rx="4" fill="#e8590c"/>
+<text x="112" y="393" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 15 to Sept 30</text>
+<rect x="14" y="414" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="426" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+<rect x="149.60000000000002" y="414" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="168" y="426" font-size="14" fill="#23261f" text-anchor="start">Bow only</text>
+</svg>

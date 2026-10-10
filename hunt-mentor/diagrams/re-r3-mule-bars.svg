@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 561" role="img" aria-label="Season bar chart: Region 3 mule deer: open dates. ▲ 4 point bucks: 3-15, 3-16, 3-32, 3-33: Sept 1 to Sept 9. ▲ 4 point bucks: 3-12 to 3-20, 3-26 to 3-44: Sept 10 to Sept 30. ▲ 4 point bucks: 3-46: Sept 20 to Sept 30. Bucks (any antlered buck): 3-12 to 3-20, 3-26 to 3-44, 3-46: Oct 1 to Oct 31. ▲ 4 point bucks: 3-12 to 3-20, 3-26 to 3-44, 3-46: Nov 1 to Dec 10. Youth Only bucks: 3-12 to 3-14, 3-17 to 3-20, 3-26 to 3-31, 3-34 to 3-44: Sept 1 to Sept 9. Bow Only bucks: 3-12 to 3-14, 3-17 to 3-20, 3-26 to 3-31, 3-34 to 3-44: Sept 1 to Sept 9." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="561" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 3 mule deer: open dates</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 34. Brown: 4 point bucks. Orange: any buck.</text>
+<text x="58.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="152.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="246.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<text x="340.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
+<line x1="12.0" y1="91" x2="12.0" y2="551" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="104.5" y1="91" x2="104.5" y2="551" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="200.0" y1="91" x2="200.0" y2="551" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="292.5" y1="91" x2="292.5" y2="551" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="388.0" y1="91" x2="388.0" y2="551" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<text x="12" y="107" font-size="14" font-weight="bold" fill="#23261f">▲ 4 point bucks: 3-15, 3-16, 3-32, 3-33</text>
+<rect x="12.0" y="113" width="27.7" height="22" rx="3" fill="#8b5a2b"/>
+<text x="45.7" y="129" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 9</text>
+<text x="12" y="163" font-size="14" font-weight="bold" fill="#23261f">▲ 4 point bucks: 3-12 to 3-20, 3-26 to 3-44</text>
+<rect x="39.7" y="169" width="64.7" height="22" rx="3" fill="#8b5a2b"/>
+<text x="110.5" y="185" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Sept 30</text>
+<text x="12" y="219" font-size="14" font-weight="bold" fill="#23261f">▲ 4 point bucks: 3-46</text>
+<rect x="70.6" y="225" width="33.9" height="22" rx="3" fill="#8b5a2b"/>
+<text x="110.5" y="241" font-size="14" font-weight="bold" fill="#23261f">Sept 20 to Sept 30</text>
+<text x="12" y="275" font-size="14" font-weight="bold" fill="#23261f">Bucks (any antlered buck): 3-12 to 3-20, 3-26</text>
+<text x="12" y="293" font-size="14" font-weight="bold" fill="#23261f">to 3-44, 3-46</text>
+<rect x="104.5" y="299" width="95.5" height="22" rx="3" fill="#e8590c"/>
+<text x="206.0" y="315" font-size="14" font-weight="bold" fill="#23261f">Oct 1 to Oct 31</text>
+<text x="12" y="349" font-size="14" font-weight="bold" fill="#23261f">▲ 4 point bucks: 3-12 to 3-20, 3-26 to 3-44,</text>
+<text x="12" y="367" font-size="14" font-weight="bold" fill="#23261f">3-46</text>
+<rect x="200.0" y="373" width="123.3" height="22" rx="3" fill="#8b5a2b"/>
+<text x="194.0" y="389" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Nov 1 to Dec 10</text>
+<text x="12" y="423" font-size="14" font-weight="bold" fill="#23261f">Youth Only bucks: 3-12 to 3-14, 3-17 to 3-20,</text>
+<text x="12" y="441" font-size="14" font-weight="bold" fill="#23261f">3-26 to 3-31, 3-34 to 3-44</text>
+<rect x="12.0" y="447" width="27.7" height="22" rx="3" fill="#8a9a6b"/>
+<text x="45.7" y="463" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 9</text>
+<text x="12" y="497" font-size="14" font-weight="bold" fill="#23261f">Bow Only bucks: 3-12 to 3-14, 3-17 to 3-20,</text>
+<text x="12" y="515" font-size="14" font-weight="bold" fill="#23261f">3-26 to 3-31, 3-34 to 3-44</text>
+<rect x="12.0" y="521" width="27.7" height="22" rx="3" fill="#4a7fb0"/>
+<text x="45.7" y="537" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 9</text>
+</svg>

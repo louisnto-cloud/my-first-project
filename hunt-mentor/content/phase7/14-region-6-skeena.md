@@ -9,18 +9,29 @@ checked: 2026-10-04
 > [!warn]
 > Study aid only. The official regulations are the law.
 
-- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
+```anim rf-r6-year Slide through the Skeena year.
+```
 
 > [!why]
 > Skeena runs from Haida Gwaii to the Yukon line. Every season, limit, closure and map for it is on these screens.
+
+```more what this session covers
+- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
 
 - This session carries printed pages 48 to 54, the Region 6 section, in the order printed (99%, contents page and page footers).
 - Page 48: contacts, changes, region map. Page 49: bag limits, access, notices. Pages 50 and 51: every season row. Pages 51 to 54: Maps F1 to F40 (99%).
 - Green print marks new information and regulation changes (99%, page 2 key). Green cells are flagged "new" here (99%).
 - [[MU]] (Management Unit) codes like 6-12 are official codes, so they keep their hyphen (99%, AUTHORING.md).
+```
 
 ## Regional office and Conservation Officers
 
+| Who | Where | Phone |
+|---|---|---|
+| Regional office | Smithers | 250 847 7260 |
+| Conservation officers | 5 field offices | 1 877 952 7277 |
+
+```more the page 48 words, address and field offices
 > [!law] Fish and Wildlife Regional Office, page 48
 > "Bag 5000, 3726 Alfred Avenue"
 >
@@ -36,9 +47,18 @@ checked: 2026-10-04
 - Regional office: Bag 5000, 3726 Alfred Avenue, Smithers, phone 250 847 7260 (99%, page 48, 2 October 2026 edition).
 - Conservation officers: 1 877 952 7277 for recorded information or an appointment (99%).
 - Field offices: Atlin, Daajing Giids, Dease Lake, Smithers and Terrace (99%).
+```
 
 ## Compulsory inspection, RAPP and updates
 
+| Need | Detail |
+|---|---|
+| CI (Compulsory Inspection) | Atlin, Smithers or Terrace, by appointment |
+| Cougar | Inspect in Region 6 within 4 days |
+| Haida Gwaii black bear | Inspection too |
+| RAPP (Report All Poachers and Polluters) | 1 877 952 7277, 24 hours |
+
+```more the page 48 and page 17 words
 > [!law] Compulsory Inspection (CI) Centres, page 48
 > "Qualified Compulsory Inspectors will provide this service at locations listed below. See the Ministry website at www.gov.bc.ca/hunting/compulsory-inspection or contact the regional office for more information."
 >
@@ -58,9 +78,19 @@ checked: 2026-10-04
 - A Skeena cougar must be inspected in Region 6 within 4 days of the kill (99%, page 17).
 - Black bear from MUs 6-12 and 6-13 (Haida Gwaii) also go to inspection (99%, page 17 list).
 - [[RAPP]] (Report All Poachers and Polluters): 1 877 952 7277, 24 hours (99%).
+```
 
 ## What changed for 2026 to 2028
 
+| Change | Now |
+|---|---|
+| Wolf, 6-1 and 6-2 | Region dates, Aug 1 to June 15 |
+| White tailed deer | New antlerless and December rows |
+| Shaman Island, 6-25 | No shooting, no hunting |
+| Hwy 113 | No shooting or hunting, 400 m |
+| Moose near Teslin Lake | LEH (Limited Entry Hunting) only, Map F40 |
+
+```more the page 48 words
 > [!law] Regulation changes for 2026-2028, page 48
 > "1. Removed exception to wolf season dates in MUs 6-1 and 6-2."
 >
@@ -77,9 +107,16 @@ checked: 2026-10-04
 - Shaman Island in 6-25: no shooting and no hunting (99%).
 - Hwy 113: no shooting or hunting within 400 m of the centre line, details on the closures screens (99%, page 10).
 - Moose near Teslin Lake, 6-25: now [[LEH]] (Limited Entry Hunting) draw only, Map F40. Item 5 is printed green (99%).
+```
 
 ## What Region 6 covers
 
+```diagram rf-r6-mus
+```
+
+- Region 6, Skeena: 30 MUs (Management Units), 6-1 to 6-30 (99%).
+
+```more every MU and the towns on the map
 > [!law] Page 2 region key
 > "Region 6 - Skeena" "MUs 6-1 to 6-30"
 
@@ -90,9 +127,17 @@ checked: 2026-10-04
 - One by one: 6-1, 6-2, 6-3, 6-4, 6-5, 6-6, 6-7, 6-8, 6-9, 6-10, 6-11, 6-12, 6-13, 6-14, 6-15, 6-16, 6-17, 6-18, 6-19, 6-20, 6-21, 6-22, 6-23, 6-24, 6-25, 6-26, 6-27, 6-28, 6-29, 6-30 (99%).
 - Haida Gwaii is MUs 6-12 and 6-13 (99%, page 49 feeding notice).
 - Towns on the page 48 map include Smithers, Terrace, Prince Rupert, Kitimat, Hazelton, Houston, Burns Lake, Stewart, Dease Lake, Telegraph Creek, Atlin, Masset and Queen Charlotte (99%).
+```
 
 ## Regional bag limits
 
+```diagram rf-r6-bag
+```
+
+```diagram rb-deer-three
+```
+
+```more the page 49 words and the page 14 table
 > [!law] Regional Bag Limits, page 49
 > "DEER: The bag limit and possession limit for mule (black-tailed) deer is 2, of which only one may be a buck and only one may be antlerless, except in MUs 6-12 and 6-13, where the bag limit is 15 and possession limit is 5. The bag limit for white-tailed deer is 2, only one of which may be a buck, and one of which may be antlerless."
 >
@@ -106,9 +151,14 @@ checked: 2026-10-04
 - Cougar: 1. Haida Gwaii black bear: 1 a licence year (99%).
 - Page 14 table for Region 6: mule deer antlerless 1, mule total 2, white tail bucks 1, antlerless 1, total 2, all deer 3 (99%, page 14).
 - Province wide, only 1 mule deer buck from Regions 3, 4, 5, 6, 7A, 7B and 8 combined (99%, page 14).
+```
 
 ## Haida Gwaii deer licences
 
+```diagram rf-r6-hg
+```
+
+```more the page 7 words
 > [!law] Haida Gwaii Deer Licences, page 7
 > "Up to 3 mule deer licences can be used for Haida Gwaii deer, but they will count toward the Skeena region and provincial bag limits for mule deer."
 >
@@ -117,9 +167,14 @@ checked: 2026-10-04
 - Haida Gwaii deer on a mule deer licence count toward Skeena and provincial limits (99%).
 - The first 12 on Haida Gwaii deer licences count toward nothing else (99%).
 - The full licence rules are in the Rule Book licences session (99%, page 7).
+```
 
 ## Bag limits in the season table
 
+```diagram rf-r6-bag-table
+```
+
+```more every bag cell as printed, pages 50 and 51
 | Species | Bag limit cell as printed, pages 50 and 51 |
 |---|---|
 | Mule deer, MUs 6-12 and 6-13 | ◆15 (15) |
@@ -151,9 +206,17 @@ checked: 2026-10-04
 - Every cell checked against 150 dpi images of pages 50 and 51 and the page text (99%, 2 October 2026 edition).
 - NBL (No Bag Limit): no maximum. "5 (15)" means 5 a day and 15 in [[Possession limit|possession]] (99%, page 12).
 - The ◆ cell prints "15 (15)", but its footnote and page 49 set possession at 5. The footnote is the stricter line; follow 5 (90%, my reading).
+```
 
 ## Mule deer seasons
 
+```diagram rf-r6-mule
+```
+
+```diagram rb-4point
+```
+
+```more the full mule deer table and notes
 | MUs | Class | Season | Notes |
 |---|---|---|---|
 | 6-12, 6-13 | Bucks | June 1 to Feb 28 | ◆ Haida Gwaii |
@@ -171,9 +234,14 @@ checked: 2026-10-04
 - Every row checked against the page 50 image and text (99%, page 50, 2 October 2026 edition).
 - A [[4 point buck]] has at least 4 tines on one antler, not counting the brow tine (99%, page 4).
 - ▲, ★ and ◆ are quoted on the footnote screens (99%).
+```
 
 ## White tailed deer seasons
 
+```diagram rf-r6-wt
+```
+
+```more the full white tailed deer table and notes
 | MUs | Class | Season | Notes |
 |---|---|---|---|
 | 6-1 to 6-11, 6-14, 6-15, 6-30 | Bucks | Sept 10 to Dec 10 | "Dec 10" printed green |
@@ -188,9 +256,17 @@ checked: 2026-10-04
 - Every row checked against the page 50 image (99%, page 50).
 - No white tail rows for 6-12, 6-13 or 6-16 to 6-29 (99%).
 - Bag: the regional limits, 2 white tails, no more than 1 buck and 1 antlerless (99%, page 49).
+```
 
 ## Moose and elk seasons
 
+```diagram rf-r6-moose
+```
+
+```diagram rf-r6-elk
+```
+
+```more the full moose and elk tables and notes
 ### Moose
 
 | MUs | Class | Season | Notes |
@@ -212,9 +288,16 @@ checked: 2026-10-04
 - Every row checked against the page 50 image (99%, page 50).
 - Moose in Skeena are "Bulls", not only [[Spike fork bull|spike fork bulls]], except the Haines Highway "Bulls+" row (99%).
 - A [[6 point bull]] elk: see the Definitions session (99%, page 3).
+```
 
 ## Sheep, goat, caribou and bear seasons
 
+```diagram rf-r6-mtn
+```
+
+- Haida Gwaii black bear season: VERIFY (no page 50 row).
+
+```more the full tables and notes
 ### Thinhorn mountain sheep
 
 | MUs | Class | Season | Notes |
@@ -246,9 +329,14 @@ checked: 2026-10-04
 - Every row checked against the page 50 image (99%, page 50).
 - The bow goat row is a footnote line, not a table row: "Aug 15 - Oct 19 Bow Only Season in part of MU 6-8" (99%).
 - Black bear in 6-12 and 6-13 has no row on page 50, though page 49 sets a bag of 1 there. VERIFY whether a Haida Gwaii bear season exists.
+```
 
 ## Predator, furbearer and small game seasons
 
+```diagram rf-r6-pred
+```
+
+```more the full tables and notes
 ### Wolf
 
 | MUs | Class | Season | Notes |
@@ -278,9 +366,14 @@ checked: 2026-10-04
 
 - Every row checked against the images of pages 50 and 51 (99%).
 - [[Compulsory reporting]]: report wolverine and lynx kills (99%, page 17).
+```
 
 ## Grouse and ptarmigan seasons
 
+```diagram rf-r6-upland
+```
+
+```more the full tables and notes
 ### Grouse: sooty/dusky (blue), ruffed and spruce
 
 | MUs | Class | Season | Notes |
@@ -299,9 +392,14 @@ checked: 2026-10-04
 
 - Every row checked against the page 51 image (99%, page 51).
 - [[Blue grouse]] is the old name for the dusky grouse (99%, glossary).
+```
 
 ## Waterfowl, snipe and coot seasons
 
+```diagram rf-r6-water
+```
+
+```more the full table and notes
 | Species | MUs | Season | Bag |
 |---|---|---|---|
 | Common snipe | 6-1, 6-2, 6-4 to 6-10, 6-15 to 6-30 | Sept 1 to Nov 30 | 10 (30) |
@@ -319,15 +417,27 @@ checked: 2026-10-04
 
 - Every row checked against the page 51 image (99%, page 51).
 - Coast and Haida Gwaii MUs (6-3, 6-11 to 6-14) hunt later, October to 15 January (95%, my reading).
+```
 
 ## Species with no row in Region 6
 
+```diagram rf-r6-norow
+```
+
+```more the page 50 and page 5 notes
 - Pages 50 and 51 have no row for bighorn sheep, bison, bobcat, Columbian ground squirrel, sharp tailed grouse, raven, pheasant, partridge, dove, band tailed pigeon, turkey or quail (99%).
 - No row means no general open season for that animal in Region 6 (95%, my reading of page 5: "Open Seasons are only those defined in this synopsis").
 - Raccoon is open only in 6-12 and 6-13. Cougar only in 6-1 to 6-11 (99%).
+```
 
 ## LEH: what these pages print
 
+```diagram rf-r6-leh
+```
+
+- LEH (Limited Entry Hunting): a draw. Hunts are in the separate LEH synopsis (99%).
+
+```more the page 50 and page 5 words
 > [!law] Page 50
 > "CARIBOU LIMITED ENTRY HUNTING ONLY"
 
@@ -339,9 +449,18 @@ checked: 2026-10-04
 - Thinhorn sheep: parts are LEH only, Maps F26, F28, F30, F34 and F36 (99%).
 - Mountain goat: parts are LEH only, Maps F13, F22, F24, F27, F29, F30, F31, F33, F36 and F37 (99%).
 - The hunts, codes and dates are in the separate LEH synopsis, not in this edition (99%, page 5).
+```
 
 ## Footnotes: deer
 
+| Mark | Means (99%) |
+|---|---|
+| ▲ | Please hand in a tooth and antler photo |
+| ★ | 4 point rows: antlers stay with the licence |
+| ◆ | Haida Gwaii: never more than 5 in possession |
+| * | Youth rows: under 18 only |
+
+```more the page 50 footnote words
 > [!law] Mule deer footnotes, page 50
 > "▲See Notice to Hunters, page 49, regarding request for harvest data. ★See Definitions section: Mule (Black-tailed) Deer. The antlers must accompany the species licence."
 >
@@ -355,9 +474,20 @@ checked: 2026-10-04
 > "* Restricted to hunters under the age of 18."
 
 - Youth Only rows: hunters under 18 only (99%).
+```
 
 ## Footnotes: moose and elk
 
+```diagram rb-mhr
+```
+
+| Mark | Means (99%) |
+|---|---|
+| ★ | 6-2 in Tweedsmuir Park: Oct 20 to Nov 15 |
+| ▲ | Parts closed or LEH (Limited Entry Hunting) only |
+| + | Haines Highway: spike fork, tripalm or 10 point |
+
+```more the page 50 footnote words
 > [!law] Moose footnotes, page 50
 > "All individuals with a moose species licence must submit a Mandatory Hunter Report by March 31st. See page 16 for more details."
 >
@@ -378,9 +508,17 @@ checked: 2026-10-04
 > "▲ See Definitions section: Bull. Antlers must accompany the species licence."
 
 - Elk licence: file the report by 31 March. Printed green, new (99%).
+```
 
 ## Footnotes: sheep, goat and bear
 
+| Animal | Footnote (99%) |
+|---|---|
+| Thinhorn sheep | 6-27: Map F36 part only. Inspection |
+| Goat | Part of 6-8: bow only billies. Part of 6-16 closed |
+| Black bear | Parts of the coast closed, Map F14 |
+
+```more the page 50 footnote words
 > [!law] Thinhorn sheep footnote, page 50
 > "★ A portion of MU 6-27 only. See Map F36. ▲ Parts of several MUs are open by LEH authorization only and/or have special restrictions. See Maps F26, F28, F30, F34 and F36. Compulsory Inspection required."
 
@@ -400,9 +538,18 @@ checked: 2026-10-04
 > "▲ Portions of MUs 5-9, 6-3 and 6-11 are closed to black bear hunting. See Map F14."
 
 - Parts of the coast are closed to black bear, Map F14 (99%).
+```
 
 ## Footnotes: predators, small game and birds
 
+| Animal | Footnote (99%) |
+|---|---|
+| Cougar | No kittens. Closes 72 hours after 5 females |
+| Wolverine, lynx | Compulsory reporting |
+| Grouse | Mainland 10 (30). Haida Gwaii 5 (15) |
+| Ducks | 8: max 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins |
+
+```more the page 50 and 51 footnote words
 > [!law] Cougar footnote, page 50
 > "Hunters may not hunt a cougar kitten or any cougar in its company. See Definitions section: cougar kitten. Compulsory Inspection required. The cougar season will close 72 hours after the regional manager has published that during the current licence year the total number of female cougars killed in these MUs has reached 5."
 
@@ -422,9 +569,16 @@ checked: 2026-10-04
 > "Visit www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting.html for further information on Migratory Game Bird regulations in B.C."
 
 - Inside the 8 ducks: no more than 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins (99%). These are [[Restricted species]] (99%).
+```
 
 ## Vehicle closures: snowmobiles
 
+```diagram rf-r6-sled
+```
+
+- Maps online: www.gov.bc.ca/skeenaaccess (99%).
+
+```more the page 49 words
 > [!law] Access Restrictions, page 49
 > "Region 6 Motor Vehicle Prohibition maps are available online at www.gov.bc.ca/skeenaaccess."
 >
@@ -437,9 +591,17 @@ checked: 2026-10-04
 - 6-4, 6-5, 6-6, 6-8, 6-9, 6-15, 6-30: never hunt from a snowmobile (99%).
 - Same MUs: haul game, gear or hunters by snowmobile only 16 December to 31 March (99%).
 - Every other Skeena MU: snowmobiles may carry hunters, gear and game (99%).
+```
 
 ## Vehicle closures: year round
 
+```diagram rf-r6-mvc
+```
+
+```diagram rb-mv-types
+```
+
+```more the page 49 words
 > [!law] Year round Motor Vehicle Closed Area, page 49
 > "Year-round above 1400 m in elevation on Tsatia Mountain (MU 6-20), Klastline Plateau (MU 6-21), Level Mountain (MU 6-22 and 6-26) and Gnat Pass on the east side of Hwy 37 (MU 6-19). This applies to both road and off-road areas."
 >
@@ -454,9 +616,14 @@ checked: 2026-10-04
 - 6-18 above 1,450 m: closed, trappers exempt (99%).
 - Netalzul above 1,500 m: closed 1 October to 30 April (99%, Map F6).
 - Telkwa Mountains: closed all year except Grizzly Plateau and the Meat Cache in their winter windows (99%, Map F10).
+```
 
 ## Vehicle closures: seasonal roads, part 1
 
+```diagram rf-r6-roads-1
+```
+
+```more the page 49 words and coordinates
 > [!law] Seasonal Motor Vehicle Closed Areas, page 49
 > "From May 1 - Nov 15, the operation of all motor vehicles is only allowed within 400 m on either side of the road/trail, or 10 m on either side of the road/trail as stated, when the road/trail is accessed from the point of commencement as described below:"
 >
@@ -469,9 +636,14 @@ checked: 2026-10-04
 > "Adsit Lake Road (MU 6-24), commencing at N 58° 48’ 12.36” and W 130° 8’ 56.21”, to a point 400 m beyond the end of both roads and including the road leading to Porcupine Lake."
 
 - 1 May to 15 November: on these routes, drive only within 400 m of the road, or 10 m where stated (99%).
+```
 
 ## Vehicle closures: seasonal roads, part 2
 
+```diagram rf-r6-roads-2
+```
+
+```more the page 49 words and coordinates
 > [!law] Seasonal Motor Vehicle Closed Areas, page 49
 > "Hot Lakes Road (MU 6-24), commencing at Hwy 37 to N 59° 29’ 1.8” and W 129° 38’ 3.6” (start of alpine), then within 10 m of either side to 10 m from the end of the trail at N 59⁰ 30’ 13.5” and W 129⁰ 32’ 12.0”."
 >
@@ -483,9 +655,14 @@ checked: 2026-10-04
 
 - Hot Lakes and Cassiar trails: above the stated point, stay within 10 m of the trail (99%).
 - The end points print a small raised 0 in place of the degree sign; read them as degrees (90%, my reading of the page image).
+```
 
 ## No shooting and no hunting: highways and notices
 
+```diagram rf-r6-noshoot
+```
+
+```more the page 10 and page 49 words
 > [!law] Hwy 113 No Shooting or Hunting Area, page 10
 > "No shooting or hunting within 400 m of the centre line of Hwy 113 (Nisga’a Highway) between Sterling Mountain Parking Lot Recreation Site and Kincolith (Gingolx), and east to Nass Camp."
 
@@ -503,9 +680,14 @@ checked: 2026-10-04
 - Muddy Lake and Golden Bear road: no hunting within 2 km either side (99%).
 - Lucy Island and Shaman Island: no hunting, no shooting (99%). The Shaman Island line is printed green (99%).
 - Single projectile firearm bans on parts of Hwys 16, 35, 37, 37A and 113 are on page 10 and in the Where You Can Hunt session (95%, my reading of the page 10 column order).
+```
 
 ## Maps F1 to F12: Bulkley, Morice and Tweedsmuir
 
+```diagram rf-r6-maps-f1
+```
+
+```more the map captions and labels
 > [!law] Map captions, page 51
 > "Map F1 Tweedsmuir Park No Hunting Areas (MUs 6-1 and 6-2). The general open hunting season for bull moose in that portion of 6-2 located within Tweedsmuir Park is Oct 20 - Nov 15."
 >
@@ -535,9 +717,14 @@ checked: 2026-10-04
 - [[No Shooting Area]]: no firearms; a bow is allowed unless the area says otherwise (99%, page 10).
 - Map F7 labels the band "400m each side of road" (90%, my reading of the map).
 - Map F12 labels "200m East of Buck Cr." (90%, my reading of the map).
+```
 
 ## Maps F13 to F24: coast, Terrace and Haida Gwaii
 
+```diagram rf-r6-maps-f13
+```
+
+```more the map captions and labels
 > [!law] Map captions, page 52
 > "Map F13 Skeena and Babine Mtn. Mountain Goat Limited Entry Hunting only areas (MUs 6-7, 6-8, 6-9, 6-10, 6-11, 6-14, 6-15, and 6-30) and Mountain Goat Closed Area in MU 6-30. Note: no open season for mountain goats on Skip Mountain (MU 6-14)."
 >
@@ -567,9 +754,14 @@ checked: 2026-10-04
 - Skip Mountain in 6-14: no goat season at all (99%).
 - Naikoon Park: closed, except shotgun with shot in the 50 m Tlell River strips, not along the highway (99%).
 - Map F21 also labels "200m from Shore" (90%, my reading of the map).
+```
 
 ## Maps F25 to F33: Stikine, Spatsizi and Atlin
 
+```diagram rf-r6-maps-f25
+```
+
+```more the map captions and labels
 > [!law] Map captions, pages 52 and 53
 > "Map F25 Spatsizi, Stikine, and Klappan Moose Limited Entry Hunting only areas (MUs 6-19 and 6-20). See Map F29."
 >
@@ -593,9 +785,14 @@ checked: 2026-10-04
 - Todagin Mountain: no firearms, bows only, and no goats (99%).
 - Gladys Lake [[Ecological reserve]]: no hunting. No firearms within 1 km of Cold Fish Lake Camp (99%).
 - Map F33 labels "1km inland from High Water Mark" (90%, my reading of the map).
+```
 
 ## Maps F34 to F40: Atlin, Haines Highway and the north
 
+```diagram rf-r6-maps-f34
+```
+
+```more the map captions and labels
 > [!law] Map captions, pages 53 and 54
 > "Map F34 Atlin Mountain Sheep Limited Entry Hunting Area and Mountain Sheep Open Area (MUs 6-25 and 6-27)."
 >
@@ -613,9 +810,14 @@ checked: 2026-10-04
 
 - K'waal Kitkiata in 6-11: no hunting 1 January to 31 October (99%).
 - Map F40 is printed green, new. Its zones are labelled 6-19A, 6-20A, 6-20B, 6-21A, 6-22A, 6-23A to 6-23C, 6-24A to 6-24C, 6-25A to 6-25E and 7-52A (90%, my reading of the map).
+```
 
 ## Special rules and notices
 
+```diagram rf-r6-special
+```
+
+```more the page 49 words
 > [!law] Notice to Hunters, page 49
 > "It is prohibited to intentionally feed or bait ungulates within 200m of a dwelling, school yard, or playground on Haida Gwaii (MUs 6-12 and 6-13)."
 >
@@ -630,9 +832,16 @@ checked: 2026-10-04
 - No entry to the Endako and Huckleberry mine sites (99%).
 - Mule deer tooth and antler photo: asked, not required. Drop off, do not mail (99%).
 - Camelids such as llamas may not be used to hunt in Region 6, except on Haida Gwaii (99%, page 12).
+```
 
 ## Notices from First Nations
 
+```diagram rf-r6-fn
+```
+
+- These are requests, not regulations (95%, my reading).
+
+```more the page 49 words and contacts
 > [!law] Notice to hunters, page 49
 > "The traditional territories of 34 First Nations have existed for time immemorial in this area prior to the creation of Wildlife Management Units and licensed hunting."
 >
@@ -645,6 +854,7 @@ checked: 2026-10-04
 - Kaska Nation (MUs 6-23 to 6-25): drop off parts you would leave, www.kaskadenacouncil.com (99%).
 - Gitxsan Laxyip (MUs 6-7, 6-8, 6-9, 6-15, 6-17, 6-18, 6-30, 7-27, 7-39): office 250 842 0755 (99%).
 - These are requests, not regulations (95%, my reading).
+```
 
 > [!rule]
 > Up north the map is the law. Know your zone letter, your elevation and your road before you leave the truck.
@@ -659,8 +869,12 @@ checked: 2026-10-04
 
 ## Sources
 
+- Every source, page and date checked: tap below.
+
+```more every source, page and date checked
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf), printed pages 48 to 54 (PDF pages 50 to 56), every season row read from 150 dpi page images and confirmed against the page text. Also pages 2, 4, 5, 7, 10, 12, 14 and 17. Checked 2026-10-04 (99%).
 - Lines marked "my reading" are this app's interpretation, 80 to 95%. Map label readings are 90%.
+```
 
 ```quiz
 [

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 547" role="img" aria-label="Season bar chart: Region 3 white tailed deer: open dates. Bucks: 3-12 to 3-20, 3-26 to 3-44: Sept 10 to Dec 10. Bucks: 3-46: Sept 20 to Dec 10. Antlerless: 3-12 to 3-20, 3-26 to 3-44, 3-46: Oct 10 to Oct 31. Youth Only, either sex: 3-12 to 3-20, 3-26 to 3-44, 3-46: Nov 1 to Nov 30. Youth Only bucks: 3-12 to 3-20, 3-26 to 3-44: Sept 1 to Sept 9. Bow Only bucks: 3-12 to 3-20, 3-26 to 3-44: Sept 1 to Sept 9. Bow Only, either sex: 3-12 to 3-20, 3-26 to 3-44, 3-46: Dec 11 to Dec 20. New, printed green." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="547" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 3 white tailed deer: open dates</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 34. Bag: 2 white tails, either sex.</text>
+<text x="58.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="152.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="246.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<text x="340.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
+<line x1="12.0" y1="91" x2="12.0" y2="537" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="104.5" y1="91" x2="104.5" y2="537" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="200.0" y1="91" x2="200.0" y2="537" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="292.5" y1="91" x2="292.5" y2="537" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="388.0" y1="91" x2="388.0" y2="537" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<text x="12" y="107" font-size="14" font-weight="bold" fill="#23261f">Bucks: 3-12 to 3-20, 3-26 to 3-44</text>
+<rect x="39.7" y="113" width="283.5" height="22" rx="3" fill="#e8590c"/>
+<text x="181.5" y="129" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 10 to Dec 10</text>
+<text x="12" y="163" font-size="14" font-weight="bold" fill="#23261f">Bucks: 3-46</text>
+<rect x="70.6" y="169" width="252.7" height="22" rx="3" fill="#e8590c"/>
+<text x="196.9" y="185" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 20 to Dec 10</text>
+<text x="12" y="219" font-size="14" font-weight="bold" fill="#23261f">Antlerless: 3-12 to 3-20, 3-26 to 3-44, 3-46</text>
+<rect x="132.2" y="225" width="67.8" height="22" rx="3" fill="#2f3a2b"/>
+<text x="206.0" y="241" font-size="14" font-weight="bold" fill="#23261f">Oct 10 to Oct 31</text>
+<text x="12" y="275" font-size="14" font-weight="bold" fill="#23261f">Youth Only, either sex: 3-12 to 3-20, 3-26 to</text>
+<text x="12" y="293" font-size="14" font-weight="bold" fill="#23261f">3-44, 3-46</text>
+<rect x="200.0" y="299" width="92.5" height="22" rx="3" fill="#8a9a6b"/>
+<text x="194.0" y="315" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Nov 1 to Nov 30</text>
+<text x="12" y="349" font-size="14" font-weight="bold" fill="#23261f">Youth Only bucks: 3-12 to 3-20, 3-26 to 3-44</text>
+<rect x="12.0" y="355" width="27.7" height="22" rx="3" fill="#8a9a6b"/>
+<text x="45.7" y="371" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 9</text>
+<text x="12" y="405" font-size="14" font-weight="bold" fill="#23261f">Bow Only bucks: 3-12 to 3-20, 3-26 to 3-44</text>
+<rect x="12.0" y="411" width="27.7" height="22" rx="3" fill="#4a7fb0"/>
+<text x="45.7" y="427" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 9</text>
+<text x="12" y="461" font-size="14" font-weight="bold" fill="#23261f">Bow Only, either sex: 3-12 to 3-20, 3-26 to</text>
+<text x="12" y="479" font-size="14" font-weight="bold" fill="#23261f">3-44, 3-46</text>
+<rect x="323.3" y="485" width="30.8" height="22" rx="3" fill="#4a7fb0"/>
+<text x="317.3" y="501" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Dec 11 to Dec 20</text>
+<text x="12" y="525" font-size="14" fill="#e8590c">New, printed green</text>
+</svg>

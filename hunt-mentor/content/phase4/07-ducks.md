@@ -9,13 +9,34 @@ checked: 2026-10-01
 > [!why]
 > Eight ducks a day is the most shooting you will get in BC. Every bird must be named before you fire, because four species carry their own small limits.
 
+```diagram gr-bird-permit
+```
+
+- Federal permit with stamp, plus your BC licence (99%).
+- Name every duck before you shoot.
+
+```more what this session covers
 - This session goes deeper than [Your first duck hunt](#/s/first-duck-hunt): every common duck, where it lives, when it moves, and the exact federal dates for your three bases.
 - Ducks are federal birds. Seasons and limits come from the Migratory Birds Regulations, 2022, not from BC (99%). The BC [[Synopsis]] reprints the same numbers (99%).
 - You need the federal [[MGBHP]] (Migratory Game Bird Hunting Permit) with the habitat conservation stamp on it (99%). Your BC hunting licence as well (99%).
 - Assumption: 12 gauge, steel shot, no dog, 10 ft boat and kayak, two hunters.
+```
 
 ## Puddle duck or diver?
 
+```diagram sb-dabbler-diver
+```
+
+- Tips up, jumps straight up: [[Puddle duck]] (80%).
+- Dives, runs on the water to fly: [[Diver]] (80%).
+
+```anim sb-duck-feed Watch how it feeds: tip up or dive.
+```
+
+```anim hf-duck-takeoff Puddle duck springs up. Diver runs first.
+```
+
+```more the full chart, and who is which
 | Clue | [[Puddle duck]] (dabbler) | [[Diver]] |
 |---|---|---|
 | Water | Shallow marsh, creek, flooded field (80%) | Bigger, deeper lakes and rivers (80%) |
@@ -28,16 +49,22 @@ checked: 2026-10-01
 - Mallard, pintail, wigeon, gadwall, both teal, shoveler and wood duck are puddle ducks (85%).
 - Goldeneyes, bufflehead, ring necked, scaup, canvasback and redhead are divers (85%). Mergansers dive too (85%).
 - The bufflehead is the one diver that can jump straight up off the water (80%).
+```
 
 ## Wing patches: the fastest ID
 
 ```diagram duck-id-wings
 ```
 
+- The wing patch stays the same all season (80%).
+- Size, shape, wing patch, flight. Head colour last (Tip).
+
+```more speculum, eclipse plumage and the hunter rule
 - The **speculum** is the coloured patch on the back edge of the wing (80%).
 - Wing feathers are shed only once a year, so wing colours stay the same all season. Body colours do not (80%).
 - Drakes moult into a drab **eclipse plumage** after breeding. Some teal and shovelers still look like hens into winter (80%).
 - Hunter rule: name the bird by size, shape, wing patch and flight. Head colour is the last clue, not the first (Tip).
+```
 
 ## Photos: mallard and pintail
 
@@ -49,14 +76,43 @@ pintail-drake | Pintail drake. White neck stripe, long needle tail.
 pintail-drake-flight | Pintail drake in flight. Slim cross shape, long tail.
 ```
 
-- Mallard hens and drakes share the same wing patch. Look for it on every brown duck (Tip).
-
 ```video
 commons-mallards | Mallards up close: green head drake, brown hen, blue wing patch.
 ```
 
+- Mallard hens and drakes share the same wing patch. Look for it on every brown duck (Tip).
+
 ## Puddle ducks: who is who
 
+```gallery
+wigeon-drake | Wigeon drake: white crown, green eye band.
+wigeon-hen | Wigeon hen: grey head, rusty sides.
+gadwall-drake | Gadwall drake: plain grey, black rump.
+gadwall-hen | Gadwall hen: orange bill with black.
+green-winged-teal-drake | Green winged teal drake: cinnamon head, green stripe.
+green-winged-teal-hen | Green winged teal hen: tiny, mottled brown.
+blue-winged-teal-drake | Blue winged teal drake: white crescent by the bill.
+blue-winged-teal-hen | Blue winged teal hen: small and brown.
+shoveler-drake | Shoveler drake: huge spoon bill.
+shoveler-hen | Shoveler hen: the same big bill.
+wood-duck-drake | Wood duck drake: crest, red eye, white face lines.
+wood-duck-hen | Wood duck hen: white teardrop round the eye.
+```
+
+- Brown hen? Check bill colour and the wing patch (Tip).
+
+```gallery
+g-wigeon-flight | Wigeon in the air: big white shoulder patch.
+g-gwt-flight | Green winged teal: small, fast, the flock twists as one.
+g-shoveler-flight | Shoveler in the air: the bill leads.
+g-wood-duck-flight | Wood duck in the air: dark wings, long tail.
+gadwall-drake-flight | Gadwall in the air: white wing patch.
+```
+
+```diagram sb-duck-weights
+```
+
+```more every puddle duck, drake, hen, wing and flight
 | Duck | Drake | Hen, wing and flight |
 |---|---|---|
 | **Mallard**, 1.25 kg (80%) | Green head, white neck ring, chestnut breast, yellow bill (85%) | Mottled brown, orange bill with black marks (85%). Blue patch with white bars (85%). Slow steady beats, loose flocks, loud quack (80%) |
@@ -67,9 +123,38 @@ commons-mallards | Mallards up close: green head drake, brown hen, blue wing pat
 | **Blue winged teal**, 0.4 kg (80%) | Blue grey head, white crescent in front of the eye (85%) | Small, brown. Powder blue forewing (85%). Leaves in August or early September, so rare on your October hunt (75%) |
 | **Northern shoveler**, 0.7 kg (80%) | Green head, white breast, chestnut sides, huge spoon bill (85%) | Brown, orange bill. Blue forewing like a teal but a much bigger bill (85%). Early migrant (75%) |
 | **Wood duck**, 0.7 kg (80%) | Crested head, red eye, white face lines, spotted burgundy breast (85%) | Grey brown, white teardrop around the eye (85%). Dark wings, blue patch, white trailing edge (85%). Swishing wings, wooded ponds (80%) |
+```
 
 ## Divers: who is who
 
+```gallery
+common-goldeneye-drake | Common goldeneye drake: round white spot by the bill.
+common-goldeneye-hen | Common goldeneye hen: brown head, grey body.
+barrows-goldeneye-drake | Barrow's goldeneye drake: white crescent, not a spot.
+barrows-goldeneye-hen | Barrow's goldeneye hen: hard to tell from the common.
+bufflehead-drake | Bufflehead drake: tiny, big white wedge on the head.
+bufflehead-hen | Bufflehead hen: small white cheek spot.
+ring-necked-duck-drake | Ring necked duck drake: white ring on the bill.
+ring-necked-duck-hen | Ring necked duck hen: white eye ring.
+lesser-scaup-drake | Lesser scaup drake: blue bill, pale back.
+lesser-scaup-hen | Lesser scaup hen: white patch at the bill.
+canvasback-drake | Canvasback drake: sloped forehead, long black bill.
+canvasback-hen | Canvasback hen: the same sloped head.
+redhead-drake | Redhead drake: round head, steep forehead.
+redhead-hen | Redhead hen: buffy head, pale band on the bill.
+```
+
+- Goldeneye: **2 a day**. Canvasback: **4 a day** (99%).
+
+```gallery
+g-goldeneye-flight | Goldeneye in the air: big white wing patches, wings whistle.
+g-bufflehead-flight | Bufflehead in the air: fast wingbeat, low.
+g-scaup-flight | Scaup in the air: white stripe on the back of the wing.
+g-redhead-flight | Redhead in the air.
+divers-taking-off | Divers patter along the water to take off.
+```
+
+```more every diver, drake, hen, wing and flight
 | Duck | Drake | Hen, wing and flight |
 |---|---|---|
 | **Common goldeneye**, 1 kg (80%) | Black head with green gloss, round white spot by the bill, white sides (85%) | Brown head, grey body (85%). Big white wing patches, wings whistle (85%). **Limit 2** with Barrow's (99%) |
@@ -82,21 +167,50 @@ commons-mallards | Mallards up close: green head drake, brown hen, blue wing pat
 
 - Scaup pair: the white wing stripe runs almost to the wing tip on the greater, only halfway on the lesser (80%). The lesser is the one that breeds in BC (85%).
 - Ring necked duck or scaup? The ring neck has a black back and a grey wing stripe. Scaup have a pale back and a white stripe (85%).
+```
 
 ## Mergansers and look alikes
 
+```diagram sb-legal-protected
+```
+
+- Mergansers count in your 8. Coots have their own 10 (99%).
+- Loons, grebes and swans: no open season (90%).
+
+```gallery
+common-merganser-drake | Common merganser drake: white body, green head, thin red bill.
+common-merganser-hen | Common merganser hen: rusty crest, clean white chin.
+hooded-merganser-drake | Hooded merganser drake: white fan crest.
+hooded-merganser-hen | Hooded merganser hen: brown crest.
+g-loon | Loon: protected. Dagger bill, sits low.
+g-western-grebe | Western grebe: protected.
+g-horned-grebe | Horned grebe: protected.
+g-trumpeter-swan | Trumpeter swan: protected.
+```
+
+> [!warn]
+> No name, no shot. A goldeneye hen in a flock of mallards costs you the whole day if you are already at 2.
+
+```more mergansers, harlequin, coot, loons and grebes
 - **Common merganser**, 1.1 kg: long thin orange bill with teeth. Drake white with a green head, hen grey with a rusty crested head and a clean white chin (85%). Flies low in follow the leader lines (80%). Counts inside the 8 like any duck (95%), but it eats fish and tastes like it (Tip).
 - **Hooded merganser**, 0.7 kg: drake has a white fan crest in a black head, hen a brown crest. Choppy fast wingbeats, more white on the wing than a wood duck (85%).
 - **Harlequin duck**: slate blue with white stripes. Inland it likes fast rocky rivers; winters on the coast (80%). **Limit 2** (99%).
 - **American coot**: slate grey, white chicken bill, not a duck. Its own row, 10 a day, same federal permit and non toxic shot (99%).
 - Grebes and loons have no open season. They are protected wildlife (90%). A loon has a dagger bill and sits low; a grebe is small with a thin bill (Tip).
 - Hens: a mallard hen, gadwall hen and pintail hen all look brown. Use size, bill colour and the wing patch (Tip).
-
-> [!warn]
-> No name, no shot. A goldeneye hen in a flock of mallards costs you the whole day if you are already at 2.
+```
 
 ## Restricted species: the limits inside the limit
 
+```diagram rb-duck-bag
+```
+
+- 8 ducks. Inside the 8: 4 pintail, 4 canvasback, 2 goldeneye, 2 harlequin (99%).
+
+```anim rb-duck-count At 8, you are done for the day.
+```
+
+```more the synopsis words, possession and found birds
 > [!law]
 > BC synopsis, page 12: "The daily bag limit for ducks in aggregate is 8, except for restricted species: Pintail, Goldeneye (Barrow's and Common), Harlequin, and Canvasback." (99%)
 
@@ -105,9 +219,20 @@ commons-mallards | Mallards up close: green head drake, brown hen, blue wing pat
 - The federal table says the same for every BC district (99%).
 - Each hunter has their own limit (99%). Birds you find dead or wounded and keep count in your bag (99%).
 - Once you have 8, or 2 goldeneyes, you stop hunting that group for the day (99%).
+```
 
 ## Where in BC, and near your bases
 
+| Duck | Where to look (85%) |
+|---|---|
+| Mallard, gadwall | Thompson, Nicola, Okanagan, lower Fraser |
+| Wood duck | Lower Fraser Valley: Mission |
+| Barrow's goldeneye | Dry Interior parkland |
+| Scaup, canvasback, redhead | Plateau lakes, 500 to 1,500 m |
+
+- Numbers change weekly. Scout the pond (Tip).
+
+```more where every duck breeds
 - Mallards breed in clusters in the Thompson, Nicola and Okanagan wetlands and the lower Fraser, mostly below 500 m (85%).
 - Wigeon: main concentrations include the Thompson River drainage (85%). Gadwall: Thompson Nicola, Okanagan and lower Fraser (85%).
 - Green winged teal breed across the whole Interior (85%). Blue winged teal: central southern Interior and a cluster in the lower Fraser Valley (85%).
@@ -116,9 +241,17 @@ commons-mallards | Mallards up close: green head drake, brown hen, blue wing pat
 - Lesser scaup, canvasback and redhead breed on the plateau lakes at 500 to 1,500 m (85%).
 - Common merganser stays all year wherever water stays open (85%).
 - Which pond holds what in mid October: scout it. Numbers change weekly (Tip).
+```
 
 ## When they move: migration timing
 
+```diagram sb-duck-migration
+```
+
+- Teal, shoveler, pintail go early. Goldeneyes go with the ice (75%).
+- Mid October, Kamloops: local mallards, wigeon, teal (Tip, 60%).
+
+```more every species, month by month
 - Blue winged teal, shoveler and pintail leave breeding areas in August or early September (75%).
 - Green winged teal move from September to October; most are south by November (75%).
 - Mallard, wigeon and gadwall leave in September or October and stay as long as water is open (75%).
@@ -126,9 +259,17 @@ commons-mallards | Mallards up close: green head drake, brown hen, blue wing pat
 - Goldeneyes and bufflehead go with ice, mid to late October, and arrive on wintering water in November and December (75%).
 - Common merganser is one of the last, late October to November (75%).
 - Mid to late October near Kamloops, my reading: local mallards, wigeon and green winged teal, with the first northern birds pushed down by cold, and goldeneyes and buffleheads building on the bigger lakes (Tip, 60%).
+```
 
 ## A duck's day, food and sign
 
+```diagram sb-duck-day
+```
+
+- Fields at dawn and late day. Marsh at midday and night (80%).
+- New cold front: hunt the morning after (65%).
+
+```more food, sign, weather and hours
 - Mallards feed early morning and late afternoon in harvested fields, then return to marshes and creeks for the night (80%).
 - Wigeon raft offshore until late afternoon, then move to marshes and ponds to feed (80%).
 - Redheads spend the day rafted in deep water and feed morning and evening in the shallows (80%).
@@ -136,9 +277,31 @@ commons-mallards | Mallards up close: green head drake, brown hen, blue wing pat
 - Sign: feathers along the shore, muddy tipped up feeding, droppings on logs and beaver dams, birds lifting off at dawn (Tip).
 - Weather: a cold front with north wind brings new birds. Hunt the morning after (hunter lore, 65%).
 - Hunting hours: half an hour before sunrise to half an hour after sunset (99%). Use the Legal light screen in Field Mode.
+```
 
 ## Tactics: four options
 
+```diagram sb-duck-tactics
+```
+
+```video
+yt-decoy-spreads-three | Three spread shapes and where the birds will land.
+```
+
+> [!lean]
+> Option A on a shallow pond you can wade, or Option B on a creek with a slow current. Shoot only where the bird falls where you can reach it.
+
+```steps Set a J hook spread in 4 steps
+hf-jhook-1 | Check the wind first. Ducks land into it.
+hf-jhook-2 | Set the main bunch upwind, close to your hide.
+hf-jhook-3 | Run a tail line out downwind.
+hf-jhook-4 | Leave an open pocket 20 to 25 m out.
+```
+
+```anim hf-duck-landing Ducks circle, then land into the wind in the pocket.
+```
+
+```more all four options, pros and cons
 ### Option A: decoys on a pond
 - 6 to 12 decoys in a [[J hook]], hide on shore, wind at your back or side (Tip).
 - Pros: close committed birds, best ID, best for a beginner. Cons: gear, a hide, a way to fetch.
@@ -153,16 +316,20 @@ commons-mallards | Mallards up close: green head drake, brown hen, blue wing pat
 
 ### Option D: pass shooting a flight line
 - Pros: nothing to set up. Cons: long crossing shots and wounded birds. Skip it this year (Tip).
-
-> [!lean]
-> Option A on a shallow pond you can wade, or Option B on a creek with a slow current. Shoot only where the bird falls where you can reach it.
-
-```video
-yt-decoy-spreads-three | Three spread shapes and where the birds will land.
 ```
 
 ## Gun, load, choke, max range
 
+```diagram sb-duck-range
+```
+
+- Steel 2, 3 or 4 for ducks (70%). Max 35 m (38 yd) (Tip).
+- Pattern it on paper first.
+
+```diagram gr-shot-sizes
+```
+
+```more shot sizes, chokes, pattern counts and wind
 - Your 12 gauge with [[Steel shot]] is the standard duck gun (Tip). Legal maximum is 10 gauge (99%).
 - Steel is lighter than lead, so go two sizes bigger than the old lead advice: steel 2, 3 or 4 for ducks (70%). Teal over decoys: steel 4 to 6 (70%).
 - Modified or improved cylinder [[Choke]] for decoying ducks (Tip). Steel needs a choke rated for steel. Check your manual (Tip).
@@ -170,12 +337,20 @@ yt-decoy-spreads-three | Three spread shapes and where the birds will land.
 - Max range for a beginner: 35 m (38 yd). Birds in the decoys are 20 to 30 m (Tip).
 - Wind pushes steel off line at long range (70%). Another reason to shoot close (Tip).
 - No single projectile, no rifle for ducks (99%).
+```
 
 ## Season and bag limits by district
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram sb-duck-districts
+```
+
+- 8 a day, 24 in possession, every district (99%).
+- District 3 opens first; District 2 closes last (99%).
+
+```more the district map words and verbatim limits
 - The federal regulation splits BC into districts by [[MU]] (Management Unit) (99%).
 - "District No. 3 means Provincial Management Units 3-12 to 3-20 and 3-26 to 3-44." Heffley Creek and Kamloops (99%).
 - "District No. 8 means Provincial Management Units 8-1 to 8-15 and 8-21 to 8-26." The Okanagan (99%).
@@ -192,10 +367,17 @@ yt-decoy-spreads-three | Three spread shapes and where the birds will land.
 - Hunt two districts in one day? The higher daily limit applies, and it is still 8 (99%).
 - Coots and snipe: 10 (30), same dates as ducks in each district (99%).
 - Source: Migratory Birds Regulations, 2022, Schedule 3, Part 10, Table 1, items 2, 3 and 8. Consolidated to 21 September 2026 (99%). Check for in season notices before each hunt (Tip).
-
+```
 
 ## Methods: what the federal law says
 
+```diagram hf-shotgun-rules
+```
+
+- 3 shells max, plugged. 10 gauge or smaller (99%).
+- Non toxic shot only, even in your pocket (99%).
+
+```more the exact federal words
 - **Shotgun:** 10 gauge or smaller, holding no more than 3 cartridges (99%). Section 37(1)(c) of the Migratory Birds Regulations, 2022, verbatim:
 
 "has had its capacity reduced to three cartridges in the magazine and chamber combined, by means of the cutting off or the altering or plugging of the magazine with a one-piece metal, plastic or wood filler that cannot be removed unless the gun is disassembled." (99%)
@@ -206,9 +388,28 @@ yt-decoy-spreads-three | Three spread shapes and where the birds will land.
 "A person must not hunt a migratory game bird (a) while having in their possession in the hunting area shot other than non-toxic shot; or (b) using shot other than non-toxic shot." (99%)
 
 - Lead in your pocket on a duck hunt is an offence (99%). Steel, bismuth and tungsten loads are the shop names (85%).
+```
 
 ## Methods: boats, retrieval, bait, calls
 
+```diagram rb-boat-rules
+```
+
+- Shoot only from a stopped boat: beached, anchored or tied (99%).
+
+```anim rb-boat-glide A gliding boat is still a moving boat.
+```
+
+```diagram sb-bait-400
+```
+
+```video
+yt-duck-call-basics | Hold the call right, then learn the basic quack.
+```
+
+- Mouth calls and plastic decoys: fine. Electronic calls: banned (97%).
+
+```more boats, retrieval, bait, calls and vehicles in full
 - **Boats.** Section 41: no hunting "from or using a moving boat that is equipped with a motor or a sail" (99%). Retrieving: the BC synopsis (page 12, 2 October 2026 edition) says retrieving a bird with a boat is lawful when the boat is not being propelled by a motor or sail (99%). Federal section 41 allows retrieval from a moving boat (99%). The rules differ, so the safe way is to paddle or drift to the bird with every gun unloaded (Tip).
 - BC synopsis, page 11, item 24 (2 October 2026 edition): unlawful "To hunt migratory birds from or by using a moving boat that is equipped with a motor or sail." (99%) A boat still gliding from its motor counts as moving (99%, B.C. Reg. 66/2026).
 - The old BC power boat definition with its tilted motor exception was repealed on 1 October 2026 (99%, B.C. Reg. 66/2026). A kayak or paddled boat has no motor, so the moving boat rule does not apply to it (95%).
@@ -216,13 +417,20 @@ yt-decoy-spreads-three | Three spread shapes and where the birds will land.
 - **Bait:** no hunting within 400 m of bait unless the place has been bait free for 7 days (99%). Standing crops and normal harvest spill do not count as bait (99%).
 - **Calls and decoys:** no live birds, no electronic calls for any migratory bird in BC (97%). BC also bans recorded calls for game birds, page 12 item 42 (99%). Mouth calls and plastic decoys are fine (99%).
 - **Vehicles:** no hunting from a motorized land vehicle (99%). BC: no loaded firearm in or on a vehicle or boat, and no shooting wildlife from a motor vehicle or a boat propelled by a motor (99%).
-
-```video
-yt-duck-call-basics | Hold the call right, then learn the basic quack.
 ```
 
 ## Possession, wing or head, transport
 
+```diagram rb-evidence-birds
+```
+
+- Wing or head stays on every duck until preserved (99%).
+- 24 in possession, home freezer too (99%).
+
+```diagram rb-possession
+```
+
+```more preserved, gifts and the exact sections
 - Possession limit is 24 ducks per person at any time, at home too, until the birds are **preserved** (99%).
 - Preserved means gutted and plucked and then frozen, cooked, canned, dried or smoked away from the hunting area, or breasted out and then frozen or cooked (99%).
 - Section 52(1): keep "at least one fully feathered wing or the fully feathered head" attached to any unpreserved duck you possess or transport (99%).
@@ -230,9 +438,18 @@ yt-duck-call-basics | Hold the call right, then learn the basic quack.
 - Giving ducks to your brother or a friend: label them, or preserve them first (99%). A gift counts in the receiver's possession limit (99%).
 - BC adds the same rule: a feathered wing or feathered head on a migratory game bird, page 15 (99%).
 - [[Edible portions]] of a game bird are both breasts. You must take them home (99%).
+```
 
 ## Closed water near your bases
 
+| Base | Closed, or extra rule |
+|---|---|
+| Kamloops | South Thompson no shooting area, Map C7. Lac du Bois: no firearms (99%) |
+| Mission | Special area licence, $10, plus $1,000,000 insurance (99%) |
+| Okanagan | Vaseux Lake sanctuary, Swan Lake: closed (99%) |
+| Every pond | 100 m from an occupied house or barn. Permission on private land (99%) |
+
+```more maps, bylaws and the full text
 - **Kamloops, Map C7:** "Kamloops - No Shooting or Hunting Area and No Shooting Area (MUs 3-19, 3-26)" along the South Thompson from the Overlander and CN bridges east to Pritchard Bridge (99% caption, 95% extent read from the map).
 - The map covers the South Thompson. The North Thompson at Heffley Creek is north of the mapped area (90%, map). City of Kamloops bylaws are not in the synopsis; Heffley Creek is outside the city limits: VERIFY.
 - **Lac du Bois** grasslands and Crown land inside the City of Kamloops: no firearms or bows (99%).
@@ -240,18 +457,35 @@ yt-duck-call-basics | Hold the call right, then learn the basic quack.
 - Fraser Valley Regional District bans discharge within 400 m of listed roads unless lawfully hunting; map on the FVRD site (99%).
 - **Okanagan:** no hunting in the Vaseux Lake migratory bird sanctuary and national wildlife areas (99%). Swan Lake at Vernon is a No Shooting or Hunting Area (99%).
 - The 100 m rule from any occupied house, barn, school or playground applies on every pond (99%). Private ponds need permission (99%).
+```
 
 ## Care and yield
 
+```diagram sb-bird-yield
+```
+
+- Mesh bag, cool fast, wing stays on (Tip).
+- Count by species as you clean (Tip).
+
+```more care steps and yield numbers
 - Shot ducks go in a mesh bag, not a plastic one. Let them cool (Tip).
 - Pluck and gut within a few hours in warm weather, or breast them out and keep the wing on until the freezer (Tip, law on the wing above).
 - A mallard is about 1.25 kg; a teal 0.4 kg (80%). A wild mallard study found edible parts about 60% of body weight and lean meat about 41% (60%, search preview).
 - Practical: a mallard gives two breast fillets plus legs, roughly 350 to 450 g of meat. A teal gives a single serving (Tip).
 - Mergansers and divers that eat fish or clams taste strong. Soak in salt water, cook rare, or make sausage (Tip).
 - Count birds by species as you clean them. Write the tally in the Journal with the date and MU (Tip).
+```
 
 ## Beginner mistakes
 
+| Mistake | Do this instead |
+|---|---|
+| Shooting into a flock | Pick one bird, read its wing patch |
+| A third goldeneye | Count restricted birds as you go |
+| Shooting from a gliding boat | Beach, anchor or tie up first |
+| Lead in the vest | Empty every pocket first (99%) |
+
+```more the mistakes in full
 > [!mistake]
 > - Shooting into a flock. Pick one bird, watch the wing patch, shoot that bird.
 > - Two goldeneyes at 07:30, then a third hen you "thought was a mallard".
@@ -259,17 +493,23 @@ yt-duck-call-basics | Hold the call right, then learn the basic quack.
 
 - Also: lead target loads left in the vest from the clay range (99% an offence). Empty every pocket before a duck hunt.
 - Also: a frozen block of breasts with no wing or head. Keep them identifiable until preserved (99%).
+```
 
 ## Grandpa's rules
+
+```photo mallards-flying Count the ducks you can name.
+```
 
 > [!rule]
 > Count the ducks you can name, not the ducks you can see. The named ones are the only ones you may shoot.
 
+```more one more rule, and this week's field task
 > [!rule]
 > The bird that lands in the decoys is a free lesson. Let the first flock sit and study it before you ever stand up.
 
 > [!field]
 > This week: sit at one pond for the last hour of light with binoculars. Name every duck that lands by wing patch and shape. Ten named birds without a gun is a passing grade.
+```
 
 ```checklist s4-ducks-prep
 Federal permit with stamp, BC licence, Mission special licence if hunting there
@@ -283,6 +523,9 @@ Wing or head stays on every bird until home
 
 ## Sources
 
+- Federal regulations, BC synopsis, Ducks Unlimited, BC Breeding Bird Atlas. Checked 2026-10-01.
+
+```more every source, page and date checked
 - [Migratory Birds Regulations, 2022, SOR/2022-105, full text](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html), read directly, consolidated to 21 September 2026, last amended 12 June 2026. Sections 28, 30, 31, 36 to 46, 50, 52 and Schedule 3, Part 10, Table 1, items 2, 3, 8. Checked 2026-10-01 (99%).
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly. Pages 3 (edible portions), 9, 10, 11 (items 22, 24, 28, 37), 12 (items 42, 43, bag limits, retrieval), 13 (firearms table, shot ban), 15 (wing or head). Checked 2026-10-01 (99%).
 - [Region 3 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), pages 33 (Lac du Bois), 34 (duck rows), 35 (Map C7), read directly, checked 2026-10-01 (95 to 99%).
@@ -294,6 +537,7 @@ Wing or head stays on every bird until home
 - Ducks Unlimited (US), [Shot size selection](https://www.ducks.org/hunting/shooting-tips/shotgunning-shot-size-selection) and [Kent Cartridge waterfowl loads guide](https://www.ducks.org/hunting/shooting-tips/kent-cartridge-guide-to-waterfowl-loads), read directly: steel sizes, pattern counts. Checked 2026-10-01 (70%).
 - Wild mallard carcass study (search preview only): [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0032579119309253), checked 2026-10-01 (60%).
 - Region 3 MU map 2026 (Management Unit Regulation, B.C. Reg. 64/96), read directly: Heffley Creek east of the North Thompson in MU 3-27 (90%).
+```
 
 ```quiz
 [

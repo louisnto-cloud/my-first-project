@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 288" role="img" aria-label="Bar chart of the hours when all terrain vehicles, including motorcycles and electric bicycles, may not be used for hunting in Management Units 7-7 to 7-15 and 7-24 to 7-29. 15 to 31 August: 4:30 to 8:00 am. 1 to 30 September: 5:30 to 9:00 am. 1 October to 15 November: 6:30 to 10:00 am." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="288" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">No ATV for hunting: these hours</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">MUs 7-7 to 7-15 and 7-24 to 7-29</text>
+<line x1="120.0" y1="64" x2="120.0" y2="208" stroke="#dfe6d3" stroke-width="2"/><text x="120" y="76" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">4</text>
+<line x1="158.0" y1="64" x2="158.0" y2="208" stroke="#dfe6d3" stroke-width="2"/><text x="158" y="76" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">5</text>
+<line x1="196.0" y1="64" x2="196.0" y2="208" stroke="#dfe6d3" stroke-width="2"/><text x="196" y="76" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">6</text>
+<line x1="234.0" y1="64" x2="234.0" y2="208" stroke="#dfe6d3" stroke-width="2"/><text x="234" y="76" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">7</text>
+<line x1="272.0" y1="64" x2="272.0" y2="208" stroke="#dfe6d3" stroke-width="2"/><text x="272" y="76" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">8</text>
+<line x1="310.0" y1="64" x2="310.0" y2="208" stroke="#dfe6d3" stroke-width="2"/><text x="310" y="76" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">9</text>
+<line x1="348.0" y1="64" x2="348.0" y2="208" stroke="#dfe6d3" stroke-width="2"/><text x="348" y="76" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">10</text>
+<line x1="386.0" y1="64" x2="386.0" y2="208" stroke="#dfe6d3" stroke-width="2"/><text x="386" y="76" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">11</text>
+<text x="104" y="76" font-size="14" fill="#2f3a2b" text-anchor="end" font-weight="bold">am</text>
+<text x="10" y="112" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Aug 15 to 31</text>
+<rect x="139.0" y="96" width="133.0" height="24" rx="5" fill="#c92a2a"/><text x="206" y="113" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">4:30 to 8:00</text>
+<text x="10" y="152" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to 30</text>
+<rect x="177.0" y="136" width="133.0" height="24" rx="5" fill="#c92a2a"/><text x="244" y="153" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">5:30 to 9:00</text>
+<text x="10" y="192" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 1 to Nov 15</text>
+<rect x="215.0" y="176" width="133.0" height="24" rx="5" fill="#c92a2a"/><text x="282" y="193" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">6:30 to 10:00</text>
+<text x="10" y="236" font-size="14" fill="#23261f" text-anchor="start">Red: no all terrain vehicle (ATV), motorcycle or</text>
+<text x="10" y="254" font-size="14" fill="#23261f" text-anchor="start">e bike to hunt, or to carry hunters, gear or game.</text>
+<text x="10" y="274" font-size="14" fill="#6b6f66" text-anchor="start">Outside these hours the ATV rule here does not apply.</text>
+</svg>

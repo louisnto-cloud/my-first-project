@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 326" font-family="sans-serif" role="img" aria-label="Grid of which firearm is legal for which upland bird, BC synopsis page 13, 97 to 99 percent. Grouse and ptarmigan: shotgun, .22 rimfire, centrefire rifle, air gun and bow all legal. Turkey: shotgun, .22 rimfire, air gun and bow legal, centrefire rifle not legal. Quail, chukar, partridge and pheasant: shotgun, air gun and bow only, no .22 and no centrefire rifle. Bows are classes B, C and D. Handguns are never legal for hunting. Ducks and geese: no rifle.">
+  <rect width="400" height="326" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Which gun for which bird (97 to 99%)</text>
+  <text x="174.0" y="56" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Shotgun</text>
+  <text x="222.0" y="56" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">.22</text>
+  <text x="270.0" y="56" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Rifle</text>
+  <text x="318.0" y="56" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Air gun</text>
+  <text x="366.0" y="56" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bow</text>
+  <rect x="4" y="68" width="392" height="64" rx="6" fill="#dfe6d3"/>
+  <text x="10" y="98" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Grouse,</text>
+  <text x="10" y="116" font-size="12" fill="#2f3a2b" text-anchor="start">ptarmigan</text>
+  <path d="M162.0 102 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <path d="M210.0 102 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <path d="M258.0 102 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <path d="M306.0 102 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <path d="M354.0 102 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <rect x="4" y="140" width="392" height="64" rx="6" fill="#fffaf0"/>
+  <text x="10" y="178" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Turkey</text>
+  <text x="10" y="188" font-size="12" fill="#2f3a2b" text-anchor="start"></text>
+  <path d="M162.0 174 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <path d="M210.0 174 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <path d="M260.0 162 l20 20 M280.0 162 l-20 20" stroke="#c0392b" stroke-width="5"/>
+  <path d="M306.0 174 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <path d="M354.0 174 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <rect x="4" y="212" width="392" height="64" rx="6" fill="#dfe6d3"/>
+  <text x="10" y="242" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Quail, chukar,</text>
+  <text x="10" y="260" font-size="12" fill="#2f3a2b" text-anchor="start">partridge, pheasant</text>
+  <path d="M162.0 246 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <path d="M212.0 234 l20 20 M232.0 234 l-20 20" stroke="#c0392b" stroke-width="5"/>
+  <path d="M260.0 234 l20 20 M280.0 234 l-20 20" stroke="#c0392b" stroke-width="5"/>
+  <path d="M306.0 246 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <path d="M354.0 246 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <text x="200" y="296" font-size="13" fill="#2f3a2b" text-anchor="middle">Rifle: centrefire. Bow: classes B, C and D</text>
+  <text x="200" y="316" font-size="13" font-weight="bold" fill="#c0392b" text-anchor="middle">Handguns: never. Ducks, geese: no rifle</text>
+</svg>

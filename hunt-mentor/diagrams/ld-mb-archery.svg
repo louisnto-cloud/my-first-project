@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 236" font-family="sans-serif" role="img" aria-label="Season chart for a Canadian resident white tailed deer licence in Manitoba, archery, 85 percent. 26 August to 15 September, and 14 October to 10 November, in Game Hunting Areas 5 to 7, 8, 10, 11, 15, 15A, 17 and 17B. General rifle season dates: VERIFY in Schedule B of the Hunting Seasons and Bag Limits Regulation.">
+<rect x="0" y="0" width="400" height="236" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Manitoba deer, Canadian resident</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">Archery dates, M.R. 165/91 (85%)</text>
+<rect x="118.0" y="64" width="69.1" height="112" fill="#dfe6d3"/>
+<text x="152.557" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Aug</text>
+<text x="220.557" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sep</text>
+<rect x="254.0" y="64" width="69.1" height="112" fill="#dfe6d3"/>
+<text x="288.557" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Oct</text>
+<text x="356.557" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Nov</text>
+<text x="8" y="105" font-size="14" font-weight="bold" fill="#2f3a2b">Archery</text>
+<text x="8" y="121" font-size="14" fill="#2f3a2b">part 1</text>
+<rect x="173.7" y="92" width="46.8" height="22" rx="4" fill="#8a9a6b"/>
+<text x="177.738" y="129" font-size="14" font-weight="bold" fill="#2f3a2b">Aug 26 to Sep 15</text>
+<text x="8" y="151" font-size="14" font-weight="bold" fill="#2f3a2b">Archery</text>
+<text x="8" y="167" font-size="14" fill="#2f3a2b">part 2</text>
+<rect x="283.0" y="138" width="62.4" height="22" rx="4" fill="#8a9a6b"/>
+<text x="394" y="175" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Oct 14 to Nov 10</text>
+<text x="200" y="194" font-size="14" fill="#2f3a2b" text-anchor="middle">GHAs 5 to 7, 8, 10, 11, 15, 15A, 17, 17B.</text>
+<text x="200" y="214" font-size="14" fill="#2f3a2b" text-anchor="middle">Rifle dates: VERIFY in Schedule B.</text>
+</svg>

@@ -12,15 +12,30 @@ checked: 2026-10-01
 > [!warn]
 > Study aid only. The official regulations are the law. Hunt codes change every year. Never apply from an old synopsis.
 
+```diagram lc-leh-one-in-ten
+```
+
+- LEH (Limited Entry Hunting) is BC's lottery for tightly controlled hunts (99%).
+- A win is an authorization, not a licence. You still buy both licences (99%).
+
+```more what LEH is
 - [[LEH]] (Limited Entry Hunting) is BC's lottery for hunts that need tighter control than a general season (99%).
 - Two kinds of season: GOS (General Open Season), open to every licensed hunter, and LEH, open only to hunters drawn for that hunt (99%).
 - Species under LEH somewhere in BC: bison, black bear, caribou, elk, moose, mountain goat, mountain sheep, deer and turkey (99%).
 - Region 3: antlerless mule deer are LEH only (99%). Most moose hunts are LEH, plus a short spike fork general season (99%).
 - An authorization is not a licence. You still need the resident hunting licence and the species licence (99%).
 - The official description of the draw is in the LEH synopsis and the "How LEH Works" paper. Both are quoted below (99%).
+```
 
 ## What the odds mean
 
+```diagram lc-leh-ratio
+```
+
+- Odds are last year's first choice applicants per tag (99%).
+- A guide, not a guarantee. The draw is random (99%).
+
+```more the official words on odds
 - 2025 main draw: 167,971 applications, 16,904 authorizations for 8 species (99%).
 
 "Therefore, on average, one in every 10 applications was successful. Odds for each hunt vary and depends on the number of applicants and the number of available authorizations." (99%)
@@ -32,29 +47,50 @@ checked: 2026-10-01
 - So 22.4:1 means about 22 first choice applicants for every authorization last year (95%).
 - 0.7:1 means fewer applicants than authorizations. Almost everyone who asked first choice got one (90%, my reading).
 - "LEH draws are random." Last year's odds are "not a guarantee of success" (99%).
+```
 
 ## How the draw runs
 
 ```diagram leh-draw
 ```
 
+```anim lc-leh-passes A flagged ticket is skipped on pass 1.
+```
+
+- Random numbers only. Name, date and FWID (Fish and Wildlife ID) do not matter (99%).
+
+```more the three passes in full
 - Every application gets a random number. Your name, [[FWID]] (Fish and Wildlife ID), address or the day you applied "has absolutely no influence" (99%).
 - Pass 1 works through first choices from the lowest random number up. Flagged applications (drawn last year for that species) are skipped on this pass (99%).
 - Pass 2 repeats first choices without skipping flags, to fill hunts still open (99%).
 - Pass 3 looks at second choices, only for people not yet drawn (99%).
 - Group applications carry one random number for the whole group. Too few authorizations left for every member and the whole group is passed over (99%).
+```
 
 ## Enhanced odds
 
+```diagram lc-leh-penalty
+```
+
+- Deer: no penalty. Apply every single year (99%).
+
+```more the official words on enhanced odds
 "For hunters who have not won an LEH authorization recently, enhanced odds increase their chances by reducing the chances of those who have been successful in recent years." (99%)
 
 "If you were successful for elk in Regions 1 or 2 or moose anywhere in the province, your odds are reduced by 66% for 3 years for that species. If you were successful for any other species, except deer, black bear and turkey your odds are reduced by 50% for one year for that species." (99%)
 
 - Deer, black bear and turkey carry no penalty. Win one year, apply again the next at full odds (99%).
 - If any member of a group was drawn for the same species last year, the whole group gets the reduced odds (99%).
+```
 
 ## Group hunts and shared hunts
 
+```diagram lc-leh-group-shared
+```
+
+- Moose with your brother: a shared hunt gives two tickets for one moose (99%).
+
+```more group and shared hunt rules
 - Group hunt: two, three or four hunters, one entry in the draw, and if drawn every member gets an authorization (99%).
 - Group hunts are not allowed for elk in Regions 1 and 2, moose, bison or black bear (99%).
 - Shared hunt: moose or bison only. Each member is entered separately. If any one is drawn, the whole group is drawn (99%).
@@ -64,9 +100,25 @@ checked: 2026-10-01
 "a group of four applying for a Shared Hunt has four chances to be drawn whereas an individual application has only one chance." (99%)
 
 - Any member may shoot the shared animal, but no one may kill more than one (99%). Every member must carry the paper Harvest Report while hunting and fill it in at once after a kill (99%).
+```
 
 ## Fees, dates and the paperwork
 
+```steps Apply for LEH in 5 steps
+lc-leh-apply-1 | Check your resident credential in WILD.
+lc-leh-apply-2 | Copy hunt codes from this year's synopsis.
+lc-leh-apply-3 | Pick a first and a second choice.
+lc-leh-apply-4 | Apply before the deadline. Save the receipt.
+lc-leh-apply-5 | Won? Buy the species licence and read the messages.
+```
+
+| Item | Rule |
+|---|---|
+| Fee | $6.30, not refundable (99%) |
+| Main draw 2026 | 23 June, 11:59 pm (99%) |
+| Results | In WILD (Wildlife Information and Licensing Data), not mailed (99%) |
+
+```more fees, dates and the paperwork in full
 | Item | Rule |
 |---|---|
 | Fee | $6.30 per application, taxes included, not refundable, not transferable (99%) |
@@ -81,9 +133,16 @@ checked: 2026-10-01
 
 - Residency must be proven every three years. An expired resident credential blocks the application (99%).
 - Overdue reports, unpaid Wildlife Act fines or a suspended licence make you ineligible and no refund is issued (99%).
+```
 
 ## How to read a hunt row
 
+```diagram lc-leh-row
+```
+
+- Before applying, confirm you can actually get in (99%).
+
+```more every column, and the access warning
 | Column | Means |
 |---|---|
 | Code | 4 digit hunt code. Changes year to year (99%) |
@@ -97,9 +156,16 @@ checked: 2026-10-01
 - Example, 2026 to 2027 synopsis: hunt 7014, Kamloops, MU 3-27, 1 to 30 November, antlerless, 25 authorizations, 22.4:1 (99%).
 - "Hunters should be aware access is limited in some areas and are advised to confirm access before applying." (99%)
 - Some hunts sit mostly on private land. The synopsis warns that applying "does not guarantee" access or animals (99%, Region 8 elk note).
+```
 
 ## Published odds near your bases
 
+```diagram lc-leh-odds
+```
+
+- Short bars are easier draws. Far MUs are easy for a reason. Tip.
+
+```more the full odds table
 2025 first choice odds, as printed in the 2026 to 2027 LEH synopsis (99%). Area labels are mine (90%).
 
 | Hunt | MU and area | Auth | Odds |
@@ -124,12 +190,17 @@ checked: 2026-10-01
 
 - Antlerless moose in Region 3 (codes 4001 to 4018): one authorization each, 1 to 10 November, odds from 4:1 to 58:1 (99%).
 - Region 3 bag limit for mule deer is one, antlerless included (99%).
+```
 
 ## Picking hunts as a beginner
+
+```photo g-md-doe-front Antlerless deer: apply every year in your own MU.
+```
 
 > [!lean]
 > Apply every year for antlerless mule deer, first choice in the MU you already hunt. Deer has no enhanced odds penalty, so there is no reason to skip a year.
 
+```more moose, second choices and more tips
 > [!lean]
 > Moose: apply as a shared group with your brother. Two tickets, one moose, and the group rule means either of you can shoot it. Put a low ratio hunt you can really reach as second choice. A draw 400 km from the truck is a wasted draw.
 
@@ -138,6 +209,7 @@ checked: 2026-10-01
 - Before you apply, open the LEH zone map and the Motor Vehicle Closed Area map for that MU (99% that both exist).
 - History: the BC Data Catalogue has the LEH Draw Hunt Code Report, 2002 to fall 2025, with authorizations issued per hunt (95%).
 - After a win, read the hunt's important messages and buy the species licence before you go (99%).
+```
 
 ```checklist s6-leh
 BC resident credential active in WILD (renew every 3 years)
@@ -149,6 +221,8 @@ Checked results in WILD after the draw
 Won: species licence bought, important messages read, zone map saved
 Shared hunt: paper Harvest Report printed and in the pack
 ```
+
+## Grandpa's rule and mistakes
 
 > [!rule]
 > The draw does not know how badly you want it. It only counts tickets. Buy one every year.

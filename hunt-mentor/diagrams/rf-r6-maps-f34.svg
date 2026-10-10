@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Cards for Maps F34 to F40. F34 Atlin: mountain sheep draw only area and open area. F35 Atlin Park: No Hunting Area. F36 Atlin: goat draw only area, and Atlin Park sheep closed. F37 Tagish Highlands: goat draw only. F38 K&#x27;waal Kitkiata: no hunting 1 January to 31 October. F39 Haines Highway moose restricted area: 23 to 31 August any bull, 1 September to 31 October spike fork, tripalm or 10 point bull only. F40 North Skeena, new: moose draw only areas in parts of 6-19 to 6-25." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="500" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Maps F34 to F40</text>
+<rect x="6" y="40" width="190" height="78" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#6a4c93"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F34 Atlin sheep</text>
+<text x="14" y="88" font-size="14" fill="#23261f" text-anchor="start">Draw only area and open</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">area, MUs 6-25, 6-27</text>
+<rect x="204" y="40" width="190" height="78" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#c92a2a"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F35 Atlin Park</text>
+<text x="212" y="88" font-size="14" fill="#23261f" text-anchor="start">No Hunting Area</text>
+<rect x="6" y="126" width="190" height="78" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M6 136 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#6a4c93"/>
+<text x="101" y="144" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F36 Atlin goats</text>
+<text x="14" y="174" font-size="14" fill="#23261f" text-anchor="start">Draw only. Atlin Park</text>
+<text x="14" y="192" font-size="14" fill="#23261f" text-anchor="start">sheep closed</text>
+<rect x="204" y="126" width="190" height="78" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M204 136 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#6a4c93"/>
+<text x="299" y="144" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F37 Tagish Highlands</text>
+<text x="212" y="174" font-size="14" fill="#23261f" text-anchor="start">Goat draw only,</text>
+<text x="212" y="192" font-size="14" fill="#23261f" text-anchor="start">MUs 6-27, 6-28</text>
+<rect x="6" y="212" width="190" height="150" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 222 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="101" y="230" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F38 K&#x27;waal Kitkiata</text>
+<text x="14" y="278" font-size="14" fill="#23261f" text-anchor="start">No hunting Jan 1 to Oct</text>
+<text x="14" y="296" font-size="14" fill="#23261f" text-anchor="start">31, MU 6-11</text>
+<rect x="204" y="212" width="190" height="150" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M204 222 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
+<text x="299" y="230" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F39 Haines Highway</text>
+<text x="299" y="248" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">moose</text>
+<path d="M226.0 300 v-14 l-10 -10 M226.0 286 l8 -8 l4 -6 M234.0 278 l-2 -6 M221.0 281 l-1 -7" fill="none" stroke="#8b5a2b" stroke-width="3" stroke-linecap="round"/>
+<text x="250" y="278" font-size="14" fill="#23261f" text-anchor="start">Aug 23 to 31 any</text>
+<text x="250" y="296" font-size="14" fill="#23261f" text-anchor="start">bull. Sept 1 to</text>
+<text x="250" y="314" font-size="14" fill="#23261f" text-anchor="start">Oct 31 spike fork,</text>
+<text x="250" y="332" font-size="14" fill="#23261f" text-anchor="start">tripalm or 10</text>
+<text x="250" y="350" font-size="14" fill="#23261f" text-anchor="start">point bull only</text>
+<rect x="6" y="370" width="190" height="96" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M6 380 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#6a4c93"/>
+<text x="101" y="388" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F40 North Skeena</text>
+<text x="101" y="406" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">moose (new)</text>
+<text x="14" y="436" font-size="14" fill="#23261f" text-anchor="start">Draw only areas, parts</text>
+<text x="14" y="454" font-size="14" fill="#23261f" text-anchor="start">of MUs 6-19 to 6-25</text>
+<rect x="6" y="472" width="14" height="14" rx="3" fill="#6a4c93"/>
+<text x="24" y="484" font-size="14" fill="#23261f" text-anchor="start">Draw (LEH) only</text>
+<rect x="149.0" y="472" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="167" y="484" font-size="14" fill="#23261f" text-anchor="start">No hunting</text>
+<rect x="255.0" y="472" width="14" height="14" rx="3" fill="#2f3a2b"/>
+<text x="273" y="484" font-size="14" fill="#23261f" text-anchor="start">Rule</text>
+</svg>

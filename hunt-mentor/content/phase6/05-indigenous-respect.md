@@ -12,13 +12,30 @@ checked: 2026-10-01
 > [!warn]
 > Study aid only. The official regulations are the law. Territory maps are not legal boundaries, and only the nations themselves speak for their land. Where a nation's own site could not be read, this session says so.
 
+```diagram lc-ind-three-bases
+```
+
+- Three bases, three homelands: Secwépemc, Stó:lō, Syilx (95%).
+- First Nations may hold harvest rights protected by the Constitution (99%, synopsis page 6).
+
+```more what the synopsis says
 - BC's synopsis recognises that First Nations "may have or establish Aboriginal or treaty rights protected by section 35(2) of the Constitution Act, 1982, including rights to harvest wildlife for food, social and ceremonial purposes in their traditional territories" (99%, page 6).
 - The BC government asks for mutual courtesy and respect between Indigenous hunters and all other hunters (99%, synopsis page 6, paraphrased).
 - Three bases, three homelands: Secwépemc around Kamloops, Stó:lō around Mission, Syilx in the Okanagan (95%).
 - Region 3 also holds Nlaka'pamux, St'át'imc and Syilx territory, so the nation changes as you drive (95%).
+```
 
 ## Heffley Creek and Kamloops: Secwépemc
 
+```photo hab-lac-du-bois-grassland Grassland north of Kamloops, in Secwépemc territory.
+```
+
+| Who says | What they say |
+|---|---|
+| City of Kamloops | Tk̓emlúps te Secwépemc territory, unceded Secwépemc lands (95%) |
+| Thompson Rivers University | Secwepemcúl̓ecw, unceded Secwépemc territory (95%) |
+
+```more the statements in full
 - The City of Kamloops: "we are located on Tk̓emlúps te Secwépemc territory, situated within the unceded ancestral lands of the Secwépemc Nation" (95%, City of Kamloops, Indigenous Relations page).
 - Thompson Rivers University: its Kamloops campus is "on the traditional lands of the Tk'emlúps te Secwépemc" within "Secwepemcúl̓ecw, the traditional and unceded territory of the Secwépemc" (95%).
 - The same statement says the region "also extends into the territories of the St'át'imc, Nlaka'pamux, Nuxalk, Tŝilhqot'in, Dakelh, and Syilx peoples" (95%).
@@ -27,9 +44,19 @@ checked: 2026-10-01
 - The Shuswap Nation Tribal Council was formed in 1980 by the Secwépemc Chiefs to advance Aboriginal rights and the land title question (99%, shuswapnation.org).
 - Tk'emlúps te Secwépemc's own site, tkemlups.ca, sits behind a bot check and could not be read here. Its own description of its land: VERIFY on the site.
 - Heffley Creek is about 25 km north of Kamloops. No source read here names a different nation for it than for Kamloops (85%, inference).
+```
 
 ## Mission: Stó:lō
 
+| Who says | What they say |
+|---|---|
+| Stó:lō Nation | "We are Stó:lō, People of the River" (99%) |
+| City of Mission | Unceded, shared Stó:lō territory (95%) |
+| Leq'á:mel First Nation | At Deroche, 22 km east of Mission (99%) |
+
+- Traditional language: Halq'eméylem (95%).
+
+```more the statements in full
 - The City of Mission: "This place is situated on the unceded, ancestral, and shared territory of the Stó:lō people, who have occupied these lands since time immemorial. The City of Mission is located on Leq'á:mel, Semá:th, Kwantlen, Sq'éwlets, Máthxwi, and Katzie traditional territories." (95%, City of Mission, Indigenous Relations page)
 - Stó:lō means People of the River. The Stó:lō Nation site opens "We are Stó:lō, People of the River" and its administrative area runs from Yale to Langley (99%).
 - The Stó:lō homeland is S'ólh Téméxw, "our land" or "our world" (90%, Canadian Geographic article by a Kwantlen writer; `native-land.ca` lists the territory as S'ólh Téméxw (Stó:lō)).
@@ -37,9 +64,17 @@ checked: 2026-10-01
 - Leq'á:mel describes its traditional territory, S'ólh Téméxw, as stretching "from above Yale to what is now Langley" and says its name means "the level place where people meet" (99%).
 - Kwantlen First Nation is based at Fort Langley on McMillan Island (65%, Wikipedia; the nation's own site was under construction on 2026-10-01). The City of Mission counts Kwantlen among the territories Mission sits on (95%).
 - The traditional language is Halq'eméylem (95%, City of Mission; Leq'á:mel).
+```
 
 ## The Okanagan: Syilx
 
+```photo hab-osoyoos-wetland Osoyoos Lake, in Syilx territory.
+```
+
+- Osoyoos Indian Band lands, between Oliver and Osoyoos, are private (99%).
+- Hunting is living culture here: the ONA (Okanagan Nation Alliance) runs an October Syilx Hunting Camp (99%).
+
+```more the statements in full
 - The Okanagan Nation Alliance (ONA) says the Syilx people of the Okanagan Nation are one people split at the 49th parallel by the border between Canada and the United States (99%, paraphrased from the ONA site).
 - Member communities: Okanagan Indian Band, Osoyoos Indian Band, Penticton Indian Band, Upper Nicola Band, Upper and Lower Similkameen Indian Bands, Westbank First Nation, and the Colville Confederated Tribes in Washington (99%).
 - "We, as the Syilx Okanagan people, still affirm that the land is ours, as no treaty has been negotiated." (99%)
@@ -47,9 +82,16 @@ checked: 2026-10-01
 - Upper Nicola Band is 35 km east of Merritt, in Region 3, with reserves around Nicola Lake and Douglas Lake (99%).
 - The ONA runs a community Syilx Hunting Camp each October (99%, ONA events page). Hunting is part of the living culture here, not history.
 - `native-land.ca` lists the territory as Syilx (Okanagan) and links the ONA and each band (90%).
+```
 
 ## Indigenous hunting rights in brief
 
+```diagram lc-ind-who-needs
+```
+
+- Out of season is often lawful for First Nations hunters on their territory (95%, BC Parks).
+
+```more section 35 and the rules in full
 "The existing aboriginal and treaty rights of the aboriginal peoples of Canada are hereby recognized and affirmed." (99%, Constitution Act, 1982, section 35(1), Justice Laws)
 
 - BC Parks puts it plainly: First Nations hunting on their traditional territory "can harvest fish or wildlife for food and social or ceremonial purposes. They do not need to follow provincial regulations like open season, gear restrictions, and bag limits." (95%)
@@ -59,9 +101,19 @@ checked: 2026-10-01
 - Selling or bartering wildlife is not legal for anyone "except as authorized by regulation or where there is a demonstrated Aboriginal or treaty right to do so" (99%, page 6).
 - Métis hunters in BC must hold a hunting licence and follow all regulations (99%, page 6).
 - Tsilhqot'in title lands in the South Chilcotin are not open to public hunting after the 2014 Supreme Court of Canada decision (99%, page 6).
+```
 
 ## The Sparrow case, 1990
 
+```diagram lc-ind-sparrow
+```
+
+```diagram lc-ind-rights-order
+```
+
+- Conservation first, then Indigenous food harvest, then us (85%, a reading).
+
+```more the case in full
 - Ronald Edward Sparrow, Musqueam, was charged for fishing with a net longer than his band's food fishing licence allowed. He argued he was exercising an Aboriginal right protected by section 35 (80%, Library of Parliament; 65%, Wikipedia).
 - The Supreme Court of Canada agreed the Musqueam held "an aboriginal right to fish, particularly for food, social and ceremonial purposes" and that regulation alone had not extinguished it (80%, Library of Parliament).
 - "Existing" means unextinguished in 1982, and rights are read flexibly, not frozen (80%).
@@ -69,27 +121,48 @@ checked: 2026-10-01
 - After conservation needs, Aboriginal food fishing comes before other users (80%).
 - The same logic now shapes hunting: conservation first, then Indigenous food, social and ceremonial harvest, then licensed hunters (85%, my reading of the synopsis page 6 against the case).
 - Primary sources (Supreme Court, CanLII, UBC Indigenous Foundations) were blocked from this environment. Summaries above come from the Library of Parliament paper and Wikipedia.
+```
 
 ## Reserves are private land
 
+```diagram lc-ind-reserve
+```
+
+- Crossing counts too. Ask the band office first (99%).
+
+```more the rule in full
 "Indian Reserves are private land. Permission must be obtained from the local Indian business office in order to hunt on or across these lands." (99%, synopsis page 9)
 
 - The LEH synopsis repeats it word for word on its Region 8 elk page (99%).
 - Crossing counts. A shortcut across reserve land to Crown land needs permission too (99%).
 - Reserve boundaries are on the synopsis maps only sometimes. Use the official map layers, and when in doubt, ask (90%).
 - Treaty settlement lands and declared title lands are controlled by the nation. McLeod Lake and Tsilhqot'in are examples in the synopsis (99%, pages 6 and 56).
+```
 
 ## How to be a good guest
 
+```diagram lc-ind-guest
+```
+
+- Same courtesy as any hunter. Do not disturb them (95%, BC Parks).
+
+```more the full list
 - Learn the name of the nation whose land you are on and say it right. Tip.
 - Meet an Indigenous hunter in the field: same courtesy as anyone, plus the knowledge that they may be hunting under different rules. BC Parks: "Please show respect for First Nations members participating in these activities, and do not disturb them." (95%)
 - Do not report a First Nations hunter for hunting out of season. It is probably lawful. Report only what is clearly unsafe (85%, my reading).
 - Do not touch, photograph or disturb cultural sites, pit house depressions, pictographs or fishing stations. Tip.
 - Band offices are the door for permission on reserve land. Go in person, off season, exactly as with any landowner (99% rule, tip on manner).
 - Buy from the nations when you can: fuel, licences, gas station coffee at the band store, museum tickets. The Secwépemc Museum in Kamloops is a good afternoon (99% it exists). Tip.
+```
 
 ## Saying the names
 
+```diagram lc-ind-say
+```
+
+- Try, be corrected, try again. Tip.
+
+```more every name from the guide
 From the BC government's 2018 pronunciation guide, built with input from the nations (95%). The guide itself says "The final authority on a pronunciation rests with the community" (99%).
 
 "Secwepemc: sec-wep-emc" (95%)
@@ -119,6 +192,7 @@ From the BC government's 2018 pronunciation guide, built with input from the nat
 - Tk'emlúps is not in the guide. Its name means where the rivers meet (60%, search preview). Listen to the recording on the TRU pronunciations page (99% it exists).
 - Syilx is not in the guide either. VERIFY by listening on syilx.org or asking.
 - Secwepemcúl'ecw, S'ólh Téméxw and Syilx use sounds English does not have. Try, be corrected, try again. Tip.
+```
 
 ```checklist s6-indigenous
 I can name the nation for each base: Secwépemc, Stó:lō, Syilx
@@ -127,6 +201,8 @@ Reserve boundaries checked on my map for this trip
 Band office number saved for any reserve I might need to cross
 Section 35 and food, social and ceremonial harvest understood
 ```
+
+## Grandpa's rule and mistakes
 
 > [!rule]
 > You are hunting in someone's kitchen. Wipe your feet, say thank you, and leave it the way you found it.

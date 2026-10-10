@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 2: on the side view, find two points. The centre of the nostril, and the lowest back edge of the horn base. Both are circled in orange." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Step 2: find the two points</text>
+<g transform="translate(62 18) scale(1.6)">
+<path d="M104,118 L96,172 L196,172 L150,76 Z" fill="#c9a27a" stroke="#23261f" stroke-width="1.5"/>
+<path d="M24,96 C26,86 40,76 60,66 L100,48 C112,44 124,46 134,56 L146,100 C140,112 128,118 110,120 C80,124 52,118 30,108 Z" fill="#c9a27a" stroke="#23261f" stroke-width="1.5"/>
+<path d="M24,96 C24,104 30,110 42,114 L50,98 C40,94 32,92 24,96 Z" fill="#f3ead8"/>
+<ellipse cx="92" cy="66" rx="5" ry="4" fill="#23261f"/>
+<circle cx="30" cy="100" r="2.5" fill="#23261f"/>
+<path d="M108,50 C126,18 178,26 184,78 C188,120 160,146 126,143 C96,140 78,122 74,100 C72,90 73,82 76,74" fill="none" stroke="#5c3b1c" stroke-width="12" stroke-linecap="round"/>
+<path d="M108,50 C126,18 178,26 184,78 C188,120 160,146 126,143 C96,140 78,122 74,100 C72,90 73,82 76,74" fill="none" stroke="#a07850" stroke-width="8" stroke-linecap="round"/>
+<circle cx="30" cy="100" r="5" fill="none" stroke="#e8590c" stroke-width="2.5"/>
+<circle cx="128" cy="62" r="5" fill="none" stroke="#e8590c" stroke-width="2.5"/>
+</g>
+<text x="110.0" y="218.0" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">Centre of nostril</text>
+<text x="100" y="58" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">Lowest back edge</text>
+<text x="100" y="76" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">of the horn base</text>
+<line x1="150" y1="82" x2="250.1" y2="108.9" stroke="#e8590c" stroke-width="2"/><polygon points="258.8,111.2 251.4,104.1 248.8,113.6" fill="#e8590c"/>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 406" font-family="sans-serif" role="img" aria-label="Timeline for the week before the first Mission hunt. First: print Schedule A of the Mission bylaw. Then drive Kearsley Road and the Florence Lake Forest Service Road, mark the Area D corners on the phone and find 2 safe backstops for a deer shot.">
+<rect x="0" y="0" width="400" height="406" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">This week, before the first Mission hunt</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">From the Do this in the field note</text>
+<line x1="122" y1="68" x2="122" y2="376" stroke="#8a9a6b" stroke-width="5"/>
+<text x="108" y="82" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">First</text>
+<circle cx="122" cy="78" r="8" fill="#e8590c" stroke="#fffaf0" stroke-width="3"/>
+<g transform="translate(360 86) scale(0.8)"><rect x="-20" y="-22" width="40" height="44" rx="3" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/><path d="M-13 -12 h26 M-13 -4 h26 M-13 4 h18" stroke="#8a9a6b" stroke-width="2.5"/><path d="M8 18 l18 -26 l5 3 l-18 26 l-6 2 z" fill="#e8590c"/></g>
+<text x="140" y="84" font-size="15" fill="#2f3a2b">Print Schedule A of the</text>
+<text x="140" y="103" font-size="15" fill="#2f3a2b">Mission bylaw.</text>
+<text x="108" y="164" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">Then</text>
+<circle cx="122" cy="160" r="8" fill="#e8590c" stroke="#fffaf0" stroke-width="3"/>
+<g transform="translate(360 168) scale(0.8)"><path d="M-30 8 v-12 h28 v-10 h18 l10 10 h4 v12 z" fill="#4a7fb0"/><circle cx="-18" cy="10" r="6" fill="#2f3a2b"/><circle cx="18" cy="10" r="6" fill="#2f3a2b"/><rect x="0" y="-11" width="11" height="7" fill="#fff"/></g>
+<text x="140" y="166" font-size="15" fill="#2f3a2b">Drive Kearsley Road and</text>
+<text x="140" y="185" font-size="15" fill="#2f3a2b">the Florence Lake FSR.</text>
+<text x="108" y="246" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">On the drive</text>
+<circle cx="122" cy="242" r="8" fill="#e8590c" stroke="#fffaf0" stroke-width="3"/>
+<g transform="translate(360 250) scale(0.8)"><rect x="-13" y="-22" width="26" height="44" rx="5" fill="#2f3a2b"/><rect x="-9" y="-16" width="18" height="28" fill="#4a7fb0"/><circle cx="0" cy="17" r="2.5" fill="#fff"/></g>
+<text x="140" y="248" font-size="15" fill="#2f3a2b">Mark the Area D corners on</text>
+<text x="140" y="267" font-size="15" fill="#2f3a2b">the phone.</text>
+<text x="108" y="328" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">On the drive</text>
+<circle cx="122" cy="324" r="8" fill="#e8590c" stroke="#fffaf0" stroke-width="3"/>
+<g transform="translate(360 332) scale(0.8)"><ellipse cx="0" cy="4" rx="17" ry="8" fill="#8b5a2b"/><path d="M12 0 L18 -10" stroke="#8b5a2b" stroke-width="5"/><ellipse cx="21" cy="-12" rx="6" ry="4" fill="#8b5a2b"/><path d="M19 -15 l-3 -9 m3 9 l3 -10 m-4.5 -4 l-4 -2" stroke="#6b4f35" stroke-width="2" fill="none"/><path d="M-12 10 v10 M-6 10 v10 M8 10 v10 M13 10 v10" stroke="#8b5a2b" stroke-width="3"/></g>
+<text x="140" y="330" font-size="15" fill="#2f3a2b">Find 2 safe backstops for</text>
+<text x="140" y="349" font-size="15" fill="#2f3a2b">a deer shot.</text>
+</svg>

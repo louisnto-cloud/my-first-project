@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 252" role="img" aria-label="Animation: a cursor moves from September 2026 to March 2027 over the Region 2 duck and Canada goose seasons. Canada geese open 5 to 15 September. Ducks and geese open 10 October. Geese close 23 November to 18 December while ducks stay open. Geese reopen 19 December to 10 January. Ducks close after 24 January. Geese open again 10 February to 10 March." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="252" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Near Mission, 2026 to 2027: ducks or</text>
+<text x="200" y="47" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">geese?</text>
+<text x="45.5" y="138" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="97.3" y="138" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="149.1" y="138" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<text x="200.8" y="138" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
+<text x="253.5" y="138" font-size="14" fill="#23261f" text-anchor="middle">Jan</text>
+<text x="303.6" y="138" font-size="14" fill="#23261f" text-anchor="middle">Feb</text>
+<text x="353.7" y="138" font-size="14" fill="#23261f" text-anchor="middle">Mar</text>
+<line x1="20.0" y1="146" x2="20.0" y2="242" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="70.9" y1="146" x2="70.9" y2="242" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="123.6" y1="146" x2="123.6" y2="242" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="174.5" y1="146" x2="174.5" y2="242" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="227.2" y1="146" x2="227.2" y2="242" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="279.8" y1="146" x2="279.8" y2="242" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="327.4" y1="146" x2="327.4" y2="242" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="380.0" y1="146" x2="380.0" y2="242" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<rect x="10" y="70" width="380" height="46" rx="8" fill="#dfe6d3"/>
+<text x="20" y="162" font-size="14" font-weight="bold" fill="#23261f">Ducks</text>
+<rect x="86.2" y="168" width="181.7" height="20" rx="3" fill="#4a7fb0"/>
+<text x="380" y="162" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="0.00s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="1.84s" fill="freeze"/>CLOSED</text>
+<text x="380" y="162" font-size="14" font-weight="bold" fill="#5c7a3a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="1.84s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="6.89s" fill="freeze"/>OPEN</text>
+<text x="380" y="162" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="6.89s" fill="freeze"/>CLOSED</text>
+<text x="20" y="212" font-size="14" font-weight="bold" fill="#23261f">Canada and cackling geese</text>
+<rect x="26.8" y="218" width="18.7" height="20" rx="3" fill="#8b5a2b"/>
+<rect x="86.2" y="218" width="74.7" height="20" rx="3" fill="#8b5a2b"/>
+<rect x="205.1" y="218" width="39.1" height="20" rx="3" fill="#8b5a2b"/>
+<rect x="295.1" y="218" width="49.2" height="20" rx="3" fill="#8b5a2b"/>
+<text x="380" y="212" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="0.00s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="0.19s" fill="freeze"/>CLOSED</text>
+<text x="380" y="212" font-size="14" font-weight="bold" fill="#5c7a3a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="0.19s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="0.71s" fill="freeze"/>OPEN</text>
+<text x="380" y="212" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="0.71s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="1.84s" fill="freeze"/>CLOSED</text>
+<text x="380" y="212" font-size="14" font-weight="bold" fill="#5c7a3a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="1.84s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="3.92s" fill="freeze"/>OPEN</text>
+<text x="380" y="212" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="3.92s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="5.14s" fill="freeze"/>CLOSED</text>
+<text x="380" y="212" font-size="14" font-weight="bold" fill="#5c7a3a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="5.14s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="6.23s" fill="freeze"/>OPEN</text>
+<text x="380" y="212" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="6.23s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="7.64s" fill="freeze"/>CLOSED</text>
+<text x="380" y="212" font-size="14" font-weight="bold" fill="#5c7a3a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="7.64s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="9.01s" fill="freeze"/>OPEN</text>
+<text x="380" y="212" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="9.01s" fill="freeze"/>CLOSED</text>
+<g><line x1="20" y1="144" x2="20" y2="244" stroke="#e8590c" stroke-width="3"/><animateTransform attributeName="transform" type="translate" from="0 0" to="360.0 0" begin="0s" dur="10.0s" fill="freeze"/></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="0.00s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="0.19s" fill="freeze"/><text x="200" y="90" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sept 1: all closed</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="0.19s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="0.71s" fill="freeze"/><text x="200" y="90" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sept 5: Canada geese open</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="0.71s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="1.84s" fill="freeze"/><text x="200" y="90" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sept 16: geese closed</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="1.84s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="3.92s" fill="freeze"/><text x="200" y="90" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Oct 10: ducks and geese open</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="3.92s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="5.14s" fill="freeze"/><text x="200" y="90" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Nov 23: geese closed, ducks still open</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="5.14s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="6.23s" fill="freeze"/><text x="200" y="90" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dec 19: geese open again</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="6.23s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="6.89s" fill="freeze"/><text x="200" y="90" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Jan 11: geese closed</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="6.89s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="7.64s" fill="freeze"/><text x="200" y="90" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Jan 25: ducks closed</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="7.64s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="9.01s" fill="freeze"/><text x="200" y="90" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Feb 10: geese open to Mar 10</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="9.01s" fill="freeze"/><text x="200" y="90" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Mar 11: geese closed</text></g>
+</svg>

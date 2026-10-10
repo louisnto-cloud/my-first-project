@@ -6,23 +6,33 @@ title: Rule Book: ducks, geese and other migratory birds in BC
 minutes: 40
 checked: 2026-10-04
 ---
+
 > [!warn]
 > Study aid only. The official regulations are the law.
 
-- Federal source: Migratory Birds Regulations, 2022 (SOR/2022-105), consolidation current to 21 September 2026, last amended 12 June 2026 (99%).
-- BC source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026 (99%).
+```diagram re-mb-two-layers
+```
 
 > [!why]
 > Ducks and geese run on federal dates, not BC dates. Mission and Heffley Creek open a month apart, and the phone has to know which one you are standing in.
+
+```more sources and what this session covers
+- Federal source: Migratory Birds Regulations, 2022 (SOR/2022-105), consolidation current to 21 September 2026, last amended 12 June 2026 (99%).
+- BC source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026 (99%).
 
 - Ducks, geese, brant, coots, snipe, mourning and collared doves and band tailed pigeons are federal birds. Their seasons and limits come from Schedule 3, Part 10 of the federal regulation (99%).
 - The federal table splits BC into 8 districts, each a list of [[MU]] (Management Unit) numbers (99%).
 - BC rules still apply on top: your BC licence, closed areas, no shooting areas, boat and vehicle rules (99%, page 7, 2 October 2026 edition).
 - Where the two disagree, follow the stricter one (Tip).
 - The last screens pull out Heffley Creek in October and Mission (99% rules, 85 to 95% place readings).
+```
 
 ## Permit and stamp
 
+```diagram re-mb-permit
+```
+
+```more the federal words
 > [!law] Migratory Birds Regulations, 2022, s. 31(1)
 > "A person must not hunt migratory game birds under a migratory game bird hunting permit unless a habitat conservation stamp that is authorized by the Minister appears on the permit."
 
@@ -35,9 +45,14 @@ checked: 2026-10-04
 - Carry it while hunting, and while away from home with birds that are not preserved (99%, s. 34(1)). Show it to a game officer "immediately on request" (99%, s. 34(2)).
 - Minors (under 18) get the permit and stamp free (99%, s. 32(1)).
 - Where to buy, and whether a phone copy counts: canada.ca could not be read from here. VERIFY.
+```
 
 ## Permit: BC side and youth
 
+```diagram re-mb-youth
+```
+
+```more the page 7 and s. 32 words
 > [!law] Page 7, Migratory Game Bird Hunting
 > "When hunting migratory game birds (see Definitions section), you must carry with you a valid Canadian federal Migratory Game Bird Hunting (MGBH) Permit in addition to any required provincial hunting licences."
 
@@ -53,9 +68,14 @@ checked: 2026-10-04
 - One adult, two youth at most (99%, s. 32(3)).
 - BC adds: youth and their supervising hunters carry the right BC licences too (99%, page 7).
 - BC says the youth permit is sold only through the federal online system (99%, page 7). How that system works today: VERIFY.
+```
 
 ## The 8 BC districts, in the regulation's words
 
+```diagram re-mb-districts
+```
+
+```more the regulation words
 > [!law] Schedule 3, Part 10, s. 1
 > "District No. 1 means Provincial Management Units 1-1 to 1-15."
 >
@@ -81,8 +101,12 @@ checked: 2026-10-04
 - Know your MU, and you know your [[District]] (99%).
 - The MUs are the BC ones, from the BC map regulation (99%, s. 2).
 - Same dates and limits for residents and non residents (99%, s. 3).
+```
 
 ## Which district am I in?
+
+```anim re-mb-two-towns Same day, two towns, two answers.
+```
 
 | Place | BC region and MU | District |
 |---|---|---|
@@ -93,10 +117,16 @@ checked: 2026-10-04
 | Prince George | Region 7A Omineca, MUs 7-1 to 7-18, 7-23 to 7-30, 7-37 to 7-41 (99%, page 2). The city sits in 7A (90%, page 2 map) | No. 7 (95%). Not MU 7-1 |
 | Peace | Region 7B, MUs 7-19 to 7-22, 7-31 to 7-36, 7-42 to 7-58 (99%, page 2) | No. 7 (99%) |
 
+```more the other districts
 - District 4 is the Kootenay, 5 the Cariboo, 6 Skeena (95%, my reading of the page 2 MU ranges).
+```
 
 ## MUs that are in no district
 
+```diagram re-mb-no-district
+```
+
+```more the details
 - BC regions list MUs that the federal districts leave out (99%, page 2 compared with s. 1).
 - MU 2-1: Region 2 runs 2-1 to 2-19, District 2 starts at 2-2 (99%).
 - MUs 3-45 and 3-46: Region 3 runs to 3-46, District 3 stops at 3-44 (99%).
@@ -104,9 +134,16 @@ checked: 2026-10-04
 - MU 7-1: Region 7A starts at 7-1, District 7 starts at 7-2 (99%).
 - My reading: no federal open season, so no duck or goose hunting, in those 5 MUs (90%, s. 28(1)). VERIFY with the Canadian Wildlife Service before you plan one.
 - The BC Region 3 page agrees: its duck rows stop at 3-44 (99%, page 34).
+```
 
 ## Daily and possession limits: the long words
 
+```diagram re-duck-bag
+```
+
+- 8 a day in every BC district. 24 in possession (99%, Table 1).
+
+```more the Table 1 words and s. 43
 > [!law] Table 1, every district, all Ducks, combined, daily bag limit
 > "8 (not more than 4 may be Northern Pintails, not more than 4 may be Canvasbacks, not more than 2 may be Barrow’s Goldeneyes or Common Goldeneyes, in any combination, and not more than 2 may be Harlequin Ducks)"
 
@@ -118,9 +155,14 @@ checked: 2026-10-04
 - In the tables below, "8 (24)" means this row. Daily first, possession in brackets (99%, page 12 key).
 - Hunt two districts in one day? "the highest daily bag limit of all of the areas" applies (99%, s. 43(2)).
 - Found a dead or wounded bird and kept it? It counts in your daily bag (99%, s. 43(3)).
+```
 
 ## District No. 1: Vancouver Island
 
+```diagram re-mb-d1-bars
+```
+
+```more the Table 1 rows
 | Species | Open season, as printed | 2026 to 2027 | Daily (possession) |
 |---|---|---|---|
 | All ducks | "The first Saturday after the first Monday in October to the first Sunday after January 19" | Oct 10 to Jan 24 | 8 (24) |
@@ -141,9 +183,16 @@ checked: 2026-10-04
 - Rule text: 99%, Table 1, item 1. My 2026 to 2027 dates: worked from the formula, then matched to the BC Region 1 page (99%, page 21).
 - Leap year wording (vii), February 11 to March 10, applies in 2028 (99%).
 - BC adds Ex Dinsdale property dates in MU 1-4, and no September goose season in the Cowichan Bay Seasonal No Shooting Area (99%, page 21, Map A8). Not in the federal text: VERIFY which law sets them.
+```
 
 ## District No. 2: Lower Mainland
 
+```diagram mb-district2-timeline
+```
+
+- Snow geese: 10 a day, at most 5 Ross's. MUs 2-4 and 2-5 add 5 snow geese (99%).
+
+```more the Table 1 rows
 | Species | Open season, as printed | 2026 to 2027 | Daily (possession) |
 |---|---|---|---|
 | All ducks | "The Saturday after the first Monday in October to the first Sunday after January 19" | Oct 10 to Jan 24 | 8 (24) |
@@ -169,12 +218,14 @@ checked: 2026-10-04
 - Snow geese: 10 a day, at most 5 of them Ross's. MUs 2-4 and 2-5 add 5 snow geese a day, 15 more in possession (99%).
 - Leap year wording, February 11 and February 21 starts, applies in 2028 (99%).
 - BC prints a Delta dyke exclusion for the MU 2-4 March goose days and closes Boundary Bay Wildlife Management Area to snipe (99%, page 28). Not in the federal text: VERIFY which law sets them.
-
-```diagram mb-district2-timeline
 ```
 
 ## District No. 3: Thompson, Kamloops
 
+```diagram mb-district3-timeline
+```
+
+```more the Table 1 rows
 | Species | Open season, as printed | Daily (possession) |
 |---|---|---|
 | All ducks | "September 8 to December 23" | 8 (24) |
@@ -192,12 +243,14 @@ checked: 2026-10-04
 - Every cell: 99%, Table 1, item 3. Fixed dates, the same every year (99%).
 - Matches the BC Region 3 rows on page 34 (99%, Region 3 session).
 - Canada geese are closed 21 to 30 September (99%).
-
-```diagram mb-district3-timeline
 ```
 
 ## District No. 4: Kootenay
 
+```diagram re-mb-d4-bars
+```
+
+```more the Table 1 rows
 | Species | Open season, as printed | Daily (possession) |
 |---|---|---|
 | All ducks | "September 8 to December 23" | 8 (24) |
@@ -212,9 +265,14 @@ checked: 2026-10-04
 
 - Every cell: 99%, Table 1, item 4.
 - BC adds: Creston Valley Wildlife Management Area opens to coots, snipe, ducks and geese on 1 October (99%, page 40).
+```
 
 ## District No. 5: Cariboo
 
+```diagram re-mb-d5-bars
+```
+
+```more the Table 1 rows
 | Species | Open season, as printed | Daily (possession) |
 |---|---|---|
 | All ducks | "September 13 to December 25" | 8 (24) |
@@ -228,9 +286,14 @@ checked: 2026-10-04
 | Band tailed pigeons | "No open season" | None |
 
 - Every cell: 99%, Table 1, item 5.
+```
 
 ## District No. 6: Skeena
 
+```diagram re-mb-d6-bars
+```
+
+```more the Table 1 rows
 | Species | Open season, as printed | Daily (possession) |
 |---|---|---|
 | All ducks | (i) "September 1 to September 30 (only in Provincial Management Units 6-1, 6-2, 6-4 to 6-10 and 6-15 to 6-30)" | 8 (24) |
@@ -247,9 +310,14 @@ checked: 2026-10-04
 
 - Every cell: 99%, Table 1, item 6. The table repeats the same 3 periods, word for word, for each of these species (99%).
 - In short: MUs 6-3 and 6-11 to 6-14 hunt October to 15 January; the rest hunt September to November (95%, my reading).
+```
 
 ## District No. 7: Omineca and Peace
 
+```diagram re-mb-d7-bars
+```
+
+```more the Table 1 rows
 | Species | Open season, as printed | Daily (possession) |
 |---|---|---|
 | All ducks | "September 1 to November 30" | 8 (24) |
@@ -264,9 +332,14 @@ checked: 2026-10-04
 
 - Every cell: 99%, Table 1, item 7. Prince George and the Peace share these dates (99%).
 - BC adds: a Peace River migratory game bird closed area in MU 7-33 (99%, page 63). The page cites Map H17 on some rows and Map H16 on the duck row: VERIFY which map.
+```
 
 ## District No. 8: Okanagan
 
+```diagram re-mb-d8-bars
+```
+
+```more the Table 1 rows
 | Species | Open season, as printed | Daily (possession) |
 |---|---|---|
 | All ducks | "September 23 to January 7" | 8 (24) |
@@ -283,16 +356,28 @@ checked: 2026-10-04
 
 - Every cell: 99%, Table 1, item 8. In a leap year the late goose period starts 22 February (99%).
 - Matches the Region 8 session rows (99%).
+```
 
 ## Special measures
 
+```diagram re-mb-special
+```
+
+```more the details
 - Other provinces have a Table 2, "Special Measures for Overabundant Species", with extra seasons, bigger limits and electronic calls (99%, Schedule 3, e.g. Part 11).
 - Part 10, British Columbia, has only Table 1. No Table 2 (99%, read 2026-10-04).
 - So in BC: no spring snow goose conservation season, no electronic calls, no special equipment (95%, my reading of s. 39(1)(b) and s. 59(2)).
 - The Minister can still vary seasons or limits for conservation by posted notice, valid until 31 July at the latest (99%, s. 19). Any notice for 2026 to 2027: canada.ca blocked. VERIFY.
+```
 
 ## Hours and hunting out of season
 
+```diagram rb-hours-bar
+```
+
+- Ducks and geese: half an hour before sunrise to half an hour after sunset (99%, s. 28(3)(b)).
+
+```more the s. 28 and page 11 words
 > [!law] s. 28(1) and s. 28(3)(b)
 > "A person must not hunt a species of migratory game bird in an area referred to in Schedule 3 except during the period beginning on the first day of any open season for that area and that species and ending on the last day of that season."
 >
@@ -304,9 +389,14 @@ checked: 2026-10-04
 - Legal hours: half an hour before sunrise to half an hour after sunset. All of BC is south of 60 degrees north (99%, s. 28(3)(b); page 11).
 - Big game hours are different: one hour each side (99%, page 11 item 38). Do not mix them up on a combined trip (Tip).
 - Each species has its own season. An open duck day can be a closed goose day (99%, s. 28(1)).
+```
 
 ## Methods: guns, shot and plugs
 
+```diagram re-mb-gun
+```
+
+```more the s. 37 and s. 38 words
 > [!law] s. 37(1)(c)
 > "a shotgun not larger than number 10 gauge that either (i) is designed to be capable of holding no more than three cartridges, or (ii) has had its capacity reduced to three cartridges in the magazine and chamber combined, by means of the cutting off or the altering or plugging of the magazine with a one-piece metal, plastic or wood filler that cannot be removed unless the gun is disassembled."
 
@@ -320,9 +410,14 @@ checked: 2026-10-04
 - [[Non toxic shot]] only, and none other in your pockets or boat (99%, s. 38(1)). Steel, bismuth, tungsten and tin qualify by the s. 38(4) recipe (99%).
 - Lead is still allowed for band tailed pigeon, collared dove and, in BC, mourning dove (99%, s. 38(2), (3)).
 - BC says the same plug rule its own way: a magazine plug "incapable of holding more than 2 cartridges" (99%, page 12).
+```
 
 ## Methods: bait, decoys, calls and vehicles
 
+```diagram re-mb-bait
+```
+
+```more the s. 36 and s. 39 words
 > [!law] s. 36(1)
 > "A person must not hunt for migratory game birds within a radius of 400 m from any place where bait has been deposited unless the place has been free of bait for at least seven days or the bait was deposited in accordance with subsection 6(3) or (4) or an aviculture permit."
 
@@ -335,9 +430,14 @@ checked: 2026-10-04
 - Decoys: the federal rules for permit hunters set no limit on plastic decoys. The decoy ban in s. 69 is for damage permits only (90%, my reading).
 - No live birds and no electronic calls in BC (99%, s. 39(1); page 12 item 42). Mouth calls are fine (95%, my reading).
 - No hunting from or with an aircraft or motorized land vehicle, except a stationary, authorized mobility impaired hunter (99%, s. 40).
+```
 
 ## Methods: boats
 
+```anim rb-boat-glide Gliding after the motor is cut still counts as moving.
+```
+
+```more the s. 41 and BC words
 > [!law] s. 41(1), (3) and (4)
 > "Subject to subsection (2), a person must not hunt a migratory game bird from or using a moving boat that is equipped with a motor or a sail."
 >
@@ -357,9 +457,14 @@ checked: 2026-10-04
 - Federal: picking up a downed bird is not hunting under s. 41 (99%, s. 41(3)).
 - BC, page 12: "It is lawful for a person to retrieve a dead or injured migratory game bird, with the assistance of a boat provided that the boat is not being propelled by a motor or sail." (99%)
 - My reading: in BC, pick up birds under paddle, or with the motor off and the gun unloaded, until this is confirmed (80%). VERIFY with a conservation officer.
+```
 
 ## Retrieval and daily limit
 
+```anim rb-duck-count At 8 ducks, stop hunting ducks for the day.
+```
+
+```more the s. 42 and s. 44 words
 > [!law] s. 42
 > "A person must not hunt migratory game birds unless they have adequate means at their immediate disposal for retrieving any such bird that they kill or injure."
 >
@@ -372,9 +477,14 @@ checked: 2026-10-04
 - Dead birds: fetch them as soon as you can. Wounded birds: kill them, then fetch them (99%, s. 42(2), (3)).
 - Hit 8 ducks: stop hunting ducks for the day. Geese may still be open to you (95%, my reading of s. 44).
 - BC adds: make "all reasonable effort to locate, dispatch, retrieve and include it in their bag limit" (99%, page 12).
+```
 
 ## Possession, preserving and the wing rule
 
+```diagram re-mb-preserved
+```
+
+```more the s. 1 and s. 52 words
 > [!law] s. 1, preserved
 > "(a) been eviscerated and plucked in any location and then been frozen, made into sausage, cooked, dried, canned or smoked in a location other than the hunting area;"
 >
@@ -389,9 +499,14 @@ checked: 2026-10-04
 - Frozen at home after plucking: preserved, no longer counted (99%, s. 1 and s. 47(b)).
 - Keep one feathered wing or the head on until the bird is preserved (99%, s. 45 and s. 52(1)). Store birds so each can be counted and named (99%, s. 52(2)).
 - Never let edible meat be wasted (99%, s. 55(1)).
+```
 
 ## Labelling and giving birds away
 
+```diagram re-mb-label
+```
+
+```more the s. 50 words
 > [!law] s. 50(1) and (5)
 > "A person who kills or takes a migratory game bird must not allow it to enter the possession, including the temporary possession, of another person unless it is labelled or preserved."
 >
@@ -402,6 +517,7 @@ checked: 2026-10-04
 - One label in a package covers the birds in it (99%, s. 50(6)).
 - A gift counts in the receiver's possession once accepted (99%, s. 46(5)).
 - Riding home in a private car with the hunter who shot them: no label needed (99%, s. 56).
+```
 
 ```checklist rb-mb-label
 Full name of the hunter who took the bird
@@ -412,6 +528,8 @@ Signature
 ```
 
 ## What this means at Heffley Creek in October
+
+District No. 3, Table 1, item 3 (99%).
 
 | Species | Open in October? | Daily (possession) |
 |---|---|---|
@@ -424,15 +542,19 @@ Signature
 | Band tailed pigeons | No, and only MUs 3-13 to 3-17 anyway | None |
 | Brant | No open season | None |
 
+```more district, hours and BC closures
 - Heffley Creek, MU 3-27 or 3-28, is District No. 3 (99% district, 85 to 90% MU reading).
 - Every row: 99%, Table 1, item 3.
 - Legal light: half an hour before sunrise to half an hour after sunset (99%, s. 28(3)). Use the Legal light screen in Field Mode for the times.
 - BC closures near Heffley Creek still apply, like the Map C7 band and the 3-28 ATV closure: see the Region 3 session (99%).
+```
 
 > [!field]
 > October morning: permit with stamp, BC licence, steel only, plug in, label paper in the truck. 8 ducks, then put the gun away or switch to geese.
 
 ## What this means near Mission
+
+District No. 2, Table 1, item 2 (99%).
 
 | Species | Season 2026 to 2027 | Daily (possession) |
 |---|---|---|
@@ -445,10 +567,12 @@ Signature
 | Doves | No open season | None |
 | Band tailed pigeons | Closed after 30 September | None |
 
+```more district and the Mission licence
 - Mission, MU 2-8, is District No. 2 (99% district, 95% MU).
 - Every date: 99%, Table 1, item 2, as worked out and printed on page 28.
 - Canada geese close 23 November to 18 December. Ducks stay open (99%).
 - BC: hunting inside the District of Mission part of MU 2-8 also needs the Fraser Valley Special Area Hunting Licence and "$1,000,000.00 Public Liability and Property Damage insurance" (99%, page 29, Map B10).
+```
 
 > [!rule]
 > Same day, two towns, two answers. Name the district before you load the gun.
@@ -460,12 +584,16 @@ Signature
 
 ## Sources
 
+- Migratory Birds Regulations, 2022, BC synopsis, BC Hunting Regulation. Checked 2026-10-04 (99%).
+
+```more every source and link
 - [Migratory Birds Regulations, 2022, SOR/2022-105, full text (Justice Laws)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html), current to 21 September 2026, last amended 12 June 2026, read directly 2026-10-04: s. 1, 6, 19, 28, 31 to 34, 36 to 47, 50, 52, 55, 56, 59, 69, Schedule 2 and Schedule 3 Part 10 Table 1 items 1 to 8 (99%).
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read from the PDF text: pages 2, 7, 8, 11, 12, 13, 15, 21, 28, 29, 34, 40, 63. Checked 2026-10-04 (99%).
 - [Hunting Regulation, B.C. Reg. 190/84, amended by B.C. Reg. 66/2026 (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84anif66_2026), s. 17(1)(n) and (1.2), effective 1 October 2026, read directly 2026-10-04 (99%).
 - Environment and Climate Change Canada BC hunting summary and permit pages: canada.ca is blocked from here, not read. Lines that need it say VERIFY.
 - 2026 to 2027 dates for Districts 1 and 2 are worked out from the federal formulas, then matched to synopsis pages 21 and 28 (99%).
 - Lines marked "my reading" are this app's interpretation, 80 to 95%.
+```
 
 ```quiz
 [

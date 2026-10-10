@@ -12,15 +12,30 @@ checked: 2026-10-02
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram ld-heffley-facts
+```
+
+- Base: Heffley Creek, Region 3. River = MU line.
+- Check the city boundary before any shot near the base. VERIFY.
+
+```more the base, the 3 facts and the city line in full
 - Base: Heffley Creek, on Hwy 5 north of Kamloops. You sleep there and hunt all of Region 3, the Thompson (99%).
 - The 3 facts that matter most:
   - The base side of the river is [[MU]] (Management Unit) 3-27. The far bank is 3-28 (85% for the base, 90% for the far bank, read from the official MU map).
   - In October, any mule deer buck is legal in every MU on your list. From 1 November a buck needs 4 points (99%).
   - No ATV for hunting on the west bank, MUs 3-28, 3-29 and 3-30, from 1 September to 10 December (99%).
 - Assumption to check: the City of Kamloops boundary may reach Heffley Creek. The official map shows a municipal patch ending near the Heffley Lake road junction (60%). Inside city limits no firearm may be fired at all (99%). Check the city boundary on the City of Kamloops map before any shot near the base. VERIFY.
+```
 
 ## What is open in October, within 90 minutes
 
+```diagram ld-r3-season-grid
+```
+
+- October: any mule deer buck. November: 4 points (99%).
+- 1 mule deer a year, Regions 3 to 8 combined (99%).
+
+```more the full Region 3 table and limits
 | Game | MUs | Dates | Limit |
 |---|---|---|---|
 | Mule deer, any buck | 3-12 to 3-20, 3-26 to 3-44, 3-46 | 1 to 31 Oct | 1 mule deer a year |
@@ -42,9 +57,23 @@ checked: 2026-10-02
 - Not open in October near you: moose (November), elk (no general season), quail (no row), cougar, lynx and bobcat (15 November) (95%).
 - Hours, page 11, items 37 and 38: big game and grouse from 1 hour before sunrise to 1 hour after sunset. Ducks and geese from half an hour before sunrise to half an hour after sunset (99%).
 - Buy moose and bear [[Species licence|species licences]] in person if you want the option. Deer licences have no waiting period, page 8 (99%).
+```
+
+```diagram hf-season-bars
+```
 
 ## Your MUs and drive times
 
+```diagram region3-sketch
+```
+
+```diagram ld-r3-drive-bars
+```
+
+- Nearest: 3-27 on your side, 3-28 across the river (Tip).
+- Save the official map on the phone (99%).
+
+```more what each MU holds, and the river line rule
 | MU | What it holds | Drive |
 |---|---|---|
 | 3-27 | Heffley Creek east bank, Sun Peaks, Heffley Lake, Paul Lake, Pinantan, Louis Creek | 0 to 45 min |
@@ -61,12 +90,20 @@ checked: 2026-10-02
 - River rule: where a river is an MU line, the line follows "the right hand bank of the river as you face downstream", Management Unit Regulation s. 2 (98%). The North Thompson flows south, so the line is the west bank and the water at Heffley Creek is in 3-27 (80%, interpretation).
 - The synopsis itself says its map is approximate: "For detailed maps visit www.gov.bc.ca/WildlifeManagementUnits." (99%)
 - Save the [official 2026 Region 3 map](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/89_2026_Region3_Map) on the phone. It is about 5 MB (99%).
+```
 
-```diagram region3-sketch
+```diagram hf-river-bank
 ```
 
 ## Where you cannot shoot
 
+```diagram ld-heffley-noshoot
+```
+
+- Orange on the sketch: no shooting. Check the map number before you go.
+- Kamloops city: no firing at all, no hunting exemption (99%).
+
+```more the city bylaw, maps C7 to C17, parks and reserves
 - **City of Kamloops.** Bylaw No. 24-49, section 2.1: "No person shall discharge a Firearm or other Weapon within City boundaries." The only exemptions are peace officers, farmers protecting crops or destroying predators on their own land, the airport, school archery and permit holders. There is no hunting exemption (99%, bylaw read in full, adopted 19 July 2022).
 - Synopsis page 33 backs it up for Crown land: "The discharge of firearms and bows is prohibited on that portion of Lac du Bois Grasslands Protected Area or Crown lands that are within the City of Kamloops municipal boundary." (99%)
 - **Map C7, Kamloops, page 35:** "No Shooting or Hunting Area and No Shooting Area (MUs 3-19, 3-20, 3-26, 3-27, and 3-28)." The shaded band runs along the South Thompson from the CN bridge east to the Pritchard Bridge. The North Thompson upstream of the CN bridge is not shaded (85%, map image).
@@ -77,12 +114,31 @@ checked: 2026-10-02
 - **Wells Gray:** "Hunting and the discharge of firearms are prohibited in MU 3-45 (Wells Gray Park)." Page 33 (99%).
 - **Parks:** hunting is allowed in Lac du Bois (outside the city line), Roche Lake and Bonaparte. BC Parks: "The discharge and carrying of firearms is permitted in this park for the purposes of hunting during open season." (99%) Paul Lake Park lists no hunting. Treat it as closed (95%).
 - **Reserves:** page 9: "Indian Reserves are private land. Permission must be obtained from the local Indian business office in order to hunt on or across these lands." (99%) I.R. 1 lies along the South Thompson east of Kamloops (95%).
+```
+
+```diagram rb-100m-ring
+```
+
+- 100 m from any lived in house or barn. 15 m from a road's centre (99%).
+
+```more houses, roads and ranch land
 - **Every house:** no hunting or shooting "within 100 m of a church, school building, school yard, playground, regional district park, dwelling house, or farm or ranch building that is occupied by persons or domestic animals", page 10 (99%). Your brother's house counts (85%).
 - **Roads:** no hunting or shooting within the [[Road allowance]] of numbered highways and 2 lane public roads, 15 m from the centre, page 10 (99%). Hwy 5 south of Kamloops (the Coquihalla) also bans bullets within 400 m: shot only (99%).
 - **Ranch land:** no hunting on cultivated land, or on a grazing lease with cattle on it, without consent, page 12 (99%). Leave gates as you found them, page 33 (99%).
+```
 
 ## Car and ATV
 
+```diagram ld-r3-atv-bar
+```
+
+```anim ld-atv-walk Truck to the end of the open road, then walk.
+```
+
+- West bank all fall: truck on open roads, then boots (95%).
+- Above 1,700 m: no motor vehicles off roads (99%). VERIFY the elevation.
+
+```more the ATV, road and vehicle rules in full
 - Page 33: "ATV for Hunting Closed Areas: from Sept 1 - Dec 10 in MUs 3-28, 3-29, 3-30, and that portion of MU 3-17 shown on Map C3." (99%)
   - Plain English: no [[ATV]] (All Terrain Vehicle) for hunting on the west bank all fall. Truck to an open road, then walk (95%).
 - Page 33: all motor vehicles except snowmobiles are banned "above 1,700 m elevation, except on existing roads and trails." Sun Peaks ridges may be above that line. VERIFY the elevation before you drive high (99% rule, 55% elevation).
@@ -92,18 +148,43 @@ checked: 2026-10-02
 - Page 10: "Unless specifically exempted, all motor vehicle prohibitions include private land." (99%)
 - Page 11: no [[Loaded]] firearm "in or on a railway car, motor vehicle, sleigh, aircraft, bicycle or other conveyance", and no shooting from a motor vehicle (99%).
 - [[ORV]] (Off Road Vehicle) law, page 9: register the ATV, display the plate or sticker, wear a helmet, and on an [[FSR]] (Forest Service Road) carry a driver's licence and $200,000 third party liability insurance (95%).
+```
 
 ## Roads: check before you drive
 
+```diagram ld-road-check
+```
+
+- Four checks, every trip (99%).
+
+```more the links, the closures listed on 2026-10-02 and the named roads
 - [Region 3 motor vehicle maps](https://www.gov.bc.ca/thompsonaccess): Lac du Bois Dewdrop, Skull Mountain, Greenstone and more, by MU (99%).
 - [Thompson Rivers FSR notices](https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/thompson-rivers-natural-resource-district-road-safety-information). On 2026-10-02 it listed Criss Creek FSR "closed and deactivated between 8 and 10km" and Bleeker FSR "No Access" for a road upgrade 28 September to 31 October 2026 (99%).
 - [DriveBC](https://www.drivebc.ca/) for highways. [BC Wildfire Service](https://www2.gov.bc.ca/gov/content/safety/wildfire-status) for fire bans and area closures (99%).
 - Roads on the official maps: Westsyde Road, Fishtrap FSR, Poison Creek FSR, Gorman Lake FSR, Lac du Bois Road, Long Lake Road, Dairy Creek Road, Tranquille Criss Creek FSR, Pinantan Road, Sun Peaks Road, Duffy Lake Road, Beaton Lake Road, Greenstone Mountain Road (95%).
 - BC Parks on Long Lake Road: "narrow, dirt track, steep in places. Closed during winter and spring break-up or during adverse conditions." (99%)
 - On any FSR, call your kilometres on the posted radio channel and expect loaded logging trucks (Tip).
+```
+
+```steps Forest Service Road habits
+hf-fsr-1 | Note the radio channel at the start of the road.
+hf-fsr-2 | Pull over for loaded logging trucks.
+hf-fsr-3 | Park in a wide pullout, never on a blind corner.
+hf-fsr-4 | Gate or closed sign: park, or turn around.
+```
 
 ## Late October deer: where to look
 
+```diagram hf-deer-terrain-oct
+```
+
+```anim sg-mig-snowline Snow and cold push mule deer down to winter range.
+```
+
+- Mule deer: low, sunny winter range once snow comes (85%).
+- White tails: river bottoms and hayfields (75%).
+
+```more where the deer are, seats, wind and the west bank
 - Mule deer drift down to [[Winter range]] in October and November. Snow and cold push them, not the rut (85%).
 - Winter range here is low, sunny ground: south and west faces, old Douglas fir, grassland benches (85%). The Dewdrop range below 760 m north of Kamloops is a studied winter range (80%).
 - No snow yet: bucks are often still mid slope, 900 to 1,500 m, on open fir and burn edges. The first snow moves them down (75%).
@@ -116,14 +197,38 @@ checked: 2026-10-02
 - Wind: valley air sinks downhill at night and in the evening, rises in late morning (80%). Glass from above in the morning, from below or across in the evening (Tip).
 - Cold morning: glass sunny east and south faces first. Warm afternoon: check the north and east shade where they bed (Tip).
 - 3-28 and 3-29 are truck and boots only for hunting this fall. Fewer quads, calmer deer (Tip).
+```
+
+```diagram ld-glass-seats
+```
+
+```diagram ld-heffley-day
+```
 
 ## Ducks: legal water
 
+```diagram ld-r3-duck-water
+```
+
+- Three official places. Rivers: build your own spot (Tip).
+
+```more the official places and the closed water
 - Confirmed open on an official page:
   - Lac du Bois Grasslands Protected Area, north of the city line. BC Parks names "the potholes, lakes and ponds on the grasslands" for waterfowl. Deep Lake is walk in only (99%).
   - Roche Lake Park, south of Kamloops: hunting permitted, 7 lakes, 2 with gravel roads (99%).
   - Bonaparte Park: hunting permitted. Access is "via logging roads up Jamieson Creek, which is 25 km north of Kamloops on the Westsyde road", or float plane (99%).
 - Closed to shooting: Tranquille marsh, McQueen, Griffin and Isobel Lakes, Logan Lake, Salmon Arm bay, Blind Bay, Mara Lake and the Sicamous end of Shuswap Lake (99%).
+```
+
+```steps Make your own river spot
+ld-river-1 | Check who owns the bank in iMapBC.
+rb-100m-ring | Draw a 100 m circle round every house and barn.
+ld-river-3 | Stay outside the city and the Map C7 band.
+hf-boat-moving | In the boat: shoot only when beached or anchored.
+hf-shotgun-rules | Non toxic shot, plug in, 3 shells.
+```
+
+```more the river steps in full
 - The North and South Thompson: no official page confirms a public duck spot. Make your own:
   - In iMapBC, check who owns the bank where you stand or beach the boat. Crown land or written permission only (Tip).
   - Draw a 100 m circle round every house and barn on both banks (99% rule).
@@ -131,6 +236,7 @@ checked: 2026-10-02
   - Page 11 item 24 (2 October 2026 edition): no hunting ducks or geese "from or by using a moving boat that is equipped with a motor or sail" (99%). Beached, anchored or tied to a fixed blind is fine (95%). Your 10 ft boat is a taxi, not a blind, unless it is beached or anchored. While the motor pushes the boat, every gun aboard is unloaded (95%, Firearm Violence Prevention Act).
   - [[Non toxic shot]] only, and a plug that limits the gun to 3 shells, pages 12 and 13 (99%).
 - Ask the North Thompson Fish and Game Club in Barriere or the Kamloops and District Fish and Game Association which sloughs hold ducks. Both are on the BC Wildlife Federation club list (95%).
+```
 
 ## Nearest services
 
@@ -145,19 +251,30 @@ checked: 2026-10-02
 | Store | The Horse Barn, Kamloops, firearms and hunting gear | 70%, address To confirm |
 | Butcher | Rainer Custom Cutting, Kamloops, says "Currently not taking game" | 95%, its price list page |
 
+- Serious injury: Royal Inland Hospital, Kamloops (99%).
+
+```more inspection, disease testing, butchers and clubs
 - Compulsory inspection in Region 3 is "by appointment only" at Kamloops, Merritt and Salmon Arm. Deer, bear and birds do not need it (99% for the rule, 90% for the list).
 - Page 32: "Submit deer, elk, and moose heads from MUs 3-12, 3-19, and 3-20 for Bovine Tuberculosis testing." Heads from anywhere in Region 3 are welcome for [[CWD]] (Chronic Wasting Disease) testing. CWD is Chronic Wasting Disease (99%).
 - Butcher plan: ask the Kamloops club or the store who is cutting game this year, and book before the hunt (Tip).
 - Clubs on the BC Wildlife Federation list for Region 3: Kamloops and District Fish and Game Association, North Thompson Fish and Game Club in Barriere, Highland Valley Outdoors Association in Logan Lake, Monte Lake Outdoor Club in Westwold (95%).
+```
 
 ## First Nations and respect
 
+```diagram ld-respect
+```
+
+- Secwépemc territory (95%). Reserve land is private (99%).
+
+```more the bands, offices and respect notes
 - Heffley Creek, Kamloops and the North Thompson are Secwépemc territory (95%).
 - Tk'emlúps te Secwépemc, formerly the Kamloops Indian Band, office at 200, 330 Chief Alex Thomas Way, Kamloops. Shuswap Nation Tribal Council (99%, BC Assembly of First Nations profile).
 - Simpcw First Nation, main community Chu Chua, office at 7555 Dunn Lake Road, Barriere: "Traditionally, the Simpcwúl'ecw people were known for their hunting abilities" (99%, same source).
 - Whispering Pines/Clinton Indian Band, office at 615 Whispering Pines Drive, Kamloops (99%). Its reserve near Kamloops sits on the North Thompson north of the city (70%). Check the boundary in iMapBC before you hunt the west bank. To confirm.
 - Adams Lake Indian Band, office on the Sahhaltkum reserve across from Chase (99%).
 - Reserve land is private: ask the band office before you cross it (99%). Give way to Indigenous harvesters at a spot. Pack out everything. No shots near pictographs; Lac du Bois has them (Tip).
+```
 
 ```checklist s6-11-heffley
 Official Region 3 MU map saved on the phone
@@ -169,6 +286,8 @@ Thompson Rivers FSR page and DriveBC checked
 Non toxic shot and plug in for ducks
 Trip plan left, RAPP number saved
 ```
+
+## Grandpa's rule and common mistakes
 
 > [!rule]
 > The river is the line. West bank, no quad for hunting till 10 December. East bank, mind the city limit and Sun Peaks. Learn that and you will not get a ticket in your first season.

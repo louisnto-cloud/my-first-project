@@ -9,18 +9,30 @@ checked: 2026-10-04
 > [!warn]
 > Study aid only. The official regulations are the law.
 
-- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
+```anim rf-r4-year Slide through the Kootenay year.
+```
 
 > [!why]
 > The Kootenay holds BC's only CWD zone, its longest turkey seasons and a page of vehicle closures. Every season, limit, closure and map is on these screens.
+
+```more what this session covers
+- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
 
 - This session carries printed pages 36 to 41, the Region 4 section, in the order printed (99%, contents page and page footers).
 - Page 36: contacts, changes, CWD zone box, region map. Page 37: bag limits, notices, access rules, MU closures 4-1 to 4-7, CWD reminders. Page 38: MU closures 4-9 to 4-38. Page 39 and the top of page 40: every season row. Pages 40 and 41: Maps D1 to D27 (99%).
 - Every season row was read from a 150 dpi page image and checked against the page text (99%).
 - Green print marks new information (99%, page 2 key). In Region 4 the green items are the Cranbrook Deer Hunt, the Mandatory Hunter Report dates and Map D27 (99%, page images).
+```
 
 ## Regional offices and Conservation Officers
 
+| Who | Where | Phone |
+|---|---|---|
+| Regional office | Cranbrook (closed to the public) | 250 426 1766 |
+| Regional office | Nelson | 250 354 6333 |
+| Conservation officers | 7 field offices | 1 877 952 7277 |
+
+```more the page 36 words, addresses and field offices
 > [!law] Fish and Wildlife Regional Office, page 36
 > "205 Industrial Road (closed to the public)"
 >
@@ -42,9 +54,17 @@ checked: 2026-10-04
 - Cranbrook office: 205 Industrial Road, closed to the public. Phone 250 426 1766 (99%, page 36, 2 October 2026 edition).
 - Nelson office: 401 to 333 Victoria Street is printed as "401-333", phone 250 354 6333 (99%).
 - [[Conservation officer]] line: 1 877 952 7277 (99%). Field offices: Castlegar, Cranbrook, Creston, Fernie, Golden, Invermere and Nelson (99%).
+```
 
 ## Compulsory inspection, RAPP and updates
 
+| Need | Detail |
+|---|---|
+| CI (Compulsory Inspection) | 6 towns, by appointment |
+| Inspect | Mountain goat, cougar |
+| RAPP (Report All Poachers and Polluters) | 1 877 952 7277, 24 hours |
+
+```more the page 36 words and the CI towns
 > [!law] Compulsory Inspection (CI) Centres, page 36
 > "Qualified Compulsory Inspectors will provide this service at locations listed below. See the Ministry website at www.gov.bc.ca/hunting/compulsory-inspection or contact the regional office for more information."
 >
@@ -60,17 +80,31 @@ checked: 2026-10-04
 - CI (Compulsory Inspection): appointment only, at Cranbrook, Creston, Radium Hot Springs, Revelstoke, Sparwood or Trail (99%).
 - Goats and cougars need inspection in the Region 4 table (99%, page 39).
 - [[RAPP]] (Report All Poachers and Polluters): 1 877 952 7277, 24 hours (99%).
+```
 
 ## What changed for 2026 to 2028
 
+| Change | Now |
+|---|---|
+| Cougar inspection | Within 30 days, up from 4 |
+| Cranbrook Deer Hunt (new) | Jan 5 to 31, one extra deer |
+
+```more the page 36 words
 > [!law] Regulation changes for 2026-2028, page 36
 > "1. The requirement for hunters to submit harvested cougars for compulsory inspection has been extended from 4 days to 30 days after the kill."
 
 - Cougar inspection deadline: now 30 days after the kill, up from 4 (99%, page 36).
 - New and printed green: the Cranbrook Deer Hunt, 5 to 31 January, one extra deer (99%, pages 37, 39 and 41).
+```
 
 ## What Region 4 covers
 
+```diagram rf-r4-mus
+```
+
+- Region 4, the Kootenay: 36 MUs (Management Units) (99%).
+
+```more every MU and the towns on the map
 > [!law] Page 36, under the region map
 > "The Management Unit boundaries on the map above are approximate. For detailed maps visit www.gov.bc.ca/WildlifeManagementUnits."
 
@@ -78,9 +112,16 @@ checked: 2026-10-04
 - One by one: 4-1, 4-2, 4-3, 4-4, 4-5, 4-6, 4-7, 4-8, 4-9, 4-14, 4-15, 4-16, 4-17, 4-18, 4-19, 4-20, 4-21, 4-22, 4-23, 4-24, 4-25, 4-26, 4-27, 4-28, 4-29, 4-30, 4-31, 4-32, 4-33, 4-34, 4-35, 4-36, 4-37, 4-38, 4-39, 4-40 (99%).
 - There is no MU 4-10 to 4-13 (99%, page 2 range).
 - Towns printed on the page 36 map include Cranbrook, Kimberley, Fernie, Elkford, Creston, Kitchener, Nelson, Balfour, Kaslo, Castlegar, Trail, Fauquier, Nakusp, Meadow Creek, Invermere, Fairmont Hot Springs, Canal Flats, Golden, Donald Station, Revelstoke and Mica Creek (99%).
+```
 
 ## Recreation access plans and vehicle maps
 
+```diagram rf-r4-access-plans
+```
+
+- Office number for access map calls: VERIFY (pages 37 and 40 print two numbers).
+
+```more the page 36 and 40 words
 > [!law] Recreation Access Management Plans, page 36
 > "Southern Rocky Mountain Management Plan for recreation access zoning in MUs 4-1, 4-2, 4-22 and 4-23."
 >
@@ -94,9 +135,16 @@ checked: 2026-10-04
 - Two access plans zone recreation use: Southern Rocky Mountain (MUs 4-1, 4-2, 4-22, 4-23) and Golden Backcountry (MUs 4-34, 4-36, 4-40) (99%).
 - Recreation sites such as the Cranbrook Community Forest have their own limits (99%).
 - The vehicle maps are online only (99%). Page 40 prints 250 489 8540 for the office; page 37 prints 250 426 1766. VERIFY which number takes access map calls.
+```
 
 ## CWD Management Zone: the map box
 
+```diagram rf-r4-cwd-mus
+```
+
+- Inside the CWD (Chronic Wasting Disease) zone: heads tested, carcass parts stay (99%).
+
+```more the page 36 box and the map
 > [!law] CWD Management Zone, page 36
 > "Management Units 4-1 to 4-8, and 4-20 to 4-25:"
 >
@@ -111,9 +159,19 @@ checked: 2026-10-04
 - The [[CWD]] (Chronic Wasting Disease) Management Zone is MUs 4-1, 4-2, 4-3, 4-4, 4-5, 4-6, 4-7, 4-8, 4-20, 4-21, 4-22, 4-23, 4-24 and 4-25 (99%, pages 15 and 36).
 - On the map it is the dark grey south and east: Trail, Nelson and Creston east to the Alberta line, and north up the Rocky Mountain Trench to Canal Flats and Invermere (90%, my reading of the map).
 - Inside it: deer, elk and moose heads must be submitted for testing, and carcass parts may not leave (99%).
+```
 
 ## CWD Management Zone: the law on transport
 
+```anim rf-r4-cwd-move Head to a freezer, brain and spine stay.
+```
+
+```diagram rb-cwd-leave
+```
+
+- CWD (Chronic Wasting Disease) zone: brain and spinal column never leave it (99%, page 15).
+
+```more the page 15 words
 > [!law] Carcass Transport Restrictions - Prevent Spread of Chronic Wasting Disease, page 15
 > "A person who kills a deer, elk, or moose within M.U.s 4-1 to 4-8 and 4-20 to 4-25 (the CWD Management Zone, see page 36) must not ship or transport, or engage another person to ship or transport, outside of the CWD Management Zone, the brain tissue or the spinal column, including the vertebrae and central nervous system tissue but not including the tail."
 >
@@ -122,9 +180,16 @@ checked: 2026-10-04
 - Killed a deer, elk or moose in the zone? The brain and the spinal column, vertebrae included, may not leave the zone. The tail may (99%, page 15).
 - You may not get someone else to carry them out either (99%).
 - Exception: from MUs 4-7, 4-8 and 4-25, you have 24 hours to drive the whole animal to a CWD freezer, on the listed routes only (99%).
+```
 
 ## CWD Management Zone: the 24 hour routes
 
+```diagram rf-r4-routes
+```
+
+- From MUs (Management Units) 4-7, 4-8, 4-25 only, on these routes only (99%).
+
+```more the page 15 routes, word for word
 > [!law] Page 15
 > "M.U. 4-7 Drop-off location: Nelson Route: through M.U. 4-18 on the Harrop cable ferry, Harrop Ferry Road and Highway 3A"
 >
@@ -146,9 +211,16 @@ checked: 2026-10-04
 
 - Every route: 99%, page 15, 2 October 2026 edition.
 - Off these routes, or after 24 hours, the full transport ban applies (95%, my reading of "applies only to the routes below").
+```
 
 ## CWD Management Zone: testing and the biologists' reminders
 
+```diagram rf-r4-cwd-test
+```
+
+- Freezer list: www.gov.bc.ca/CWDdropoff (99%).
+
+```more the page 37 box
 > [!law] Page 37 box
 > "Chronic Wasting Disease was confirmed in white-tailed deer and mule deer populations in the Kootenay Region in January 2024."
 >
@@ -173,9 +245,14 @@ checked: 2026-10-04
 - Leave the brain and spine at the kill site or at a landfill inside the zone (99%, a recommendation).
 - Under 1% of deer family animals in the zone are thought to carry CWD. Keep hunting there (99%).
 - The season tables repeat it: "Mandatory submission of deer heads for CWD testing in highest risk areas", and the same for elk and moose (99%, page 39).
+```
 
 ## Regional bag limits
 
+```diagram rf-r4-bag
+```
+
+```more the page 37 words and the page 14 table
 > [!law] Regional Bag Limits, page 37
 > "Bobcat: The bag limit for Bobcat is 1."
 >
@@ -195,9 +272,14 @@ checked: 2026-10-04
 - A Kootenay mule deer buck uses up your one mule deer buck from Regions 3 to 8 (99%, page 14).
 - Cougar: 2 in 4-6 to 4-8, 4-28 to 4-31, 4-38 and 4-39; 1 everywhere else (99%).
 - Grouse: 5 a day all three species together (99%). Turkey: 3 a year, 1 spring, 2 fall (99%).
+```
 
 ## Bag limits in the season table
 
+```diagram rf-r4-bag-table
+```
+
+```more every bag cell as printed, pages 39 and 40
 | Species | Bag limit cell as printed, pages 39 and 40 |
 |---|---|
 | Mule deer | "Refer to Regional Bag Limits p. 37 and Deer Bag Limits p. 14" |
@@ -232,9 +314,19 @@ checked: 2026-10-04
 - Every cell checked against the page 39 and 40 images (99%, 2 October 2026 edition).
 - NBL (No Bag Limit): no maximum. "5 (15)" means 5 a day and 15 in [[Possession limit|possession]] (99%, page 12).
 - Pheasant possession is 2 times the daily limit in Region 4 only (99%, page 12).
+```
 
 ## Mule deer seasons
 
+```diagram rf-r4-mule
+```
+
+```diagram rb-4point
+```
+
+- Mule deer close Nov 10, not Nov 30 (99%).
+
+```more the full mule deer table and notes
 ### Mule deer (black tailed)
 
 | MUs | Class | Season | Notes |
@@ -248,9 +340,14 @@ checked: 2026-10-04
 - A [[4 point buck]] has at least 4 tines on one antler, not counting the brow tine (99%, page 4).
 - Mule deer close 10 November in Region 4, not 30 November (99%).
 - The January row sits under the Youth Only label but has no label of its own. Map D27 calls it a "general open season on any deer" (99%, page 41).
+```
 
 ## White tailed deer seasons
 
+```diagram rf-r4-wt
+```
+
+```more the full white tailed deer table and notes
 ### White tailed deer
 
 | MUs | Class | Season | Notes |
@@ -266,9 +363,17 @@ checked: 2026-10-04
 
 - Every row checked against the page 39 image and text (99%, page 39, 2 October 2026 edition).
 - [[Antlerless]] white tails: 10 to 31 October in the north MUs listed, 21 to 31 October in the south and east MUs listed. Not open in 4-7 to 4-9, 4-14 to 4-19, 4-27, 4-32, 4-33 (99%, my count of the ranges).
+```
 
 ## Elk and moose seasons
 
+```diagram rf-r4-elk
+```
+
+```diagram rf-r4-moose
+```
+
+```more the full elk and moose tables and notes
 ### Elk
 
 | MUs | Class | Season | Notes |
@@ -291,9 +396,16 @@ checked: 2026-10-04
 - A [[6 point bull]] elk and a [[Spike fork bull]] moose are defined on page 3 (99%).
 - Bow only elk, 1 to 9 September, in the south and east MUs: any bull (99%).
 - MU 4-39 has no elk row (99%).
+```
 
 ## Goat and bear seasons
 
+```diagram rf-r4-goatbear
+```
+
+- August bears: private land, owner's permission (99%).
+
+```more the full tables and notes
 ### Mountain goat
 
 | MUs | Class | Season | Notes |
@@ -312,9 +424,14 @@ checked: 2026-10-04
 - Every row checked against the page 39 image (99%, page 39, 2 October 2026 edition).
 - Goat MUs: 4-28, 4-29, part of 4-30 (Map D24), 4-37 north and west of Windy Creek, 4-39 and 4-40 (99%).
 - August bears: private land only, with the owner's permission (99%).
+```
 
 ## Wolf, coyote, lynx, bobcat and cougar seasons
 
+```diagram rf-r4-pred
+```
+
+```more the full tables and notes
 ### Wolf
 
 | MUs | Class | Season | Notes |
@@ -352,9 +469,14 @@ checked: 2026-10-04
 - Every row checked against the page 39 image (99%, page 39, 2 October 2026 edition).
 - Wolf ▲: parts of some MUs have no closed season; quoted on the footnote screen (99%).
 - Cougar MU groups match the page 37 regional cougar limits (99%, my check).
+```
 
 ## Small game seasons
 
+```diagram rf-r4-small
+```
+
+```more the full tables and notes
 ### Columbian ground squirrel
 
 | MUs | Class | Season | Notes |
@@ -381,9 +503,14 @@ checked: 2026-10-04
 
 - Every row checked against the page 39 image (99%, page 39, 2 October 2026 edition).
 - Raccoons and skunks have closed seasons in Region 4, unlike some other regions (99%).
+```
 
 ## Grouse, pheasant and ptarmigan seasons
 
+```diagram rf-r4-upland
+```
+
+```more the full tables and notes
 ### Grouse: dusky (blue), ruffed and spruce
 
 | MUs | Class | Season | Notes |
@@ -404,9 +531,16 @@ checked: 2026-10-04
 
 - Every row checked against the page 39 image (99%, page 39, 2 October 2026 edition).
 - [[Franklin's grouse]] is the spruce grouse named in the page 37 bag line (99%, glossary).
+```
 
 ## Turkey seasons
 
+```diagram rf-r4-turkey
+```
+
+- Turkey: 3 a year, 1 spring, 2 fall (99%).
+
+```more the full turkey table and notes
 ### Turkey
 
 | MUs | Class | Season | Notes |
@@ -419,9 +553,14 @@ checked: 2026-10-04
 
 - Every row checked against the page 39 image (99%, page 39, 2 October 2026 edition). "May 25" is printed bold (99%).
 - The *2 cell is merged across the fall and bow rows (99%).
+```
 
 ## Dove, duck, coot, snipe and goose seasons
 
+```diagram rf-r4-birds
+```
+
+```more the full table and notes
 | Species | MUs | Season | Bag |
 |---|---|---|---|
 | Dove: mourning, Eurasian collared | 4-1 to 4-9, 4-14 to 4-40 | Sept 1 to Sept 30 | 5 (15) |
@@ -435,23 +574,44 @@ checked: 2026-10-04
 - Every row checked against the page 40 image (99%, page 40, 2 October 2026 edition).
 - Ducks: no more than 4 pintails, 4 canvasbacks, 2 goldeneyes and 2 harlequins inside the 8 (99%). These are [[Restricted species]] (99%).
 - Creston Valley WMA (Wildlife Management Area): birds open 1 October, permit needed (99%, quoted below).
+```
 
 ## Species with no row in Region 4
 
+```diagram rf-r4-norow
+```
+
+```more the page 39 and page 5 notes
 - The pages 39 and 40 table has no row for bighorn sheep, caribou, fallow deer, quail, chukar, gray partridge, sharp tailed grouse, band tailed pigeons or opossum (99%).
 - No row means no general open season for that animal in Region 4 (95%, my reading of page 5: "Open Seasons are only those defined in this synopsis").
 - Grizzly bear: no open season in BC (99%, page 19 notice).
+```
 
 ## LEH: what these pages print
 
+| LEH (Limited Entry Hunting) in Region 4 pages | |
+|---|---|
+| Hunt list printed? | No (99%) |
+| Where to look | The separate LEH synopsis (99%) |
+
+```more the page 5 words
 > [!law] Limited Entry Hunting, page 5
 > "Limited Entry Hunting (LEH) seasons are open only to hunters who have drawn an LEH authorization for the applicable licence year."
 
 - Pages 36 to 41 print no [[LEH]] (Limited Entry Hunting) line or hunt list (99%, my read of all six pages).
 - LEH hunts, codes and dates are in the separate LEH synopsis (99%, page 5).
+```
 
 ## Footnotes: deer
 
+| Mark | Means (99%) |
+|---|---|
+| ▲ | 4 point bucks: antlers stay with the licence |
+| * | Under 18 only |
+| ★ | January hunt: Map D27 parts only |
+| CWD (Chronic Wasting Disease) | Zone deer heads must be submitted |
+
+```more the page 39 footnote words
 > [!law] Mule deer footnotes, page 39
 > "▲ See Definitions for Mule (black-tailed) deer. Antlers must accompany the species licence. * Restricted to hunters under the age of 18."
 >
@@ -468,9 +628,20 @@ checked: 2026-10-04
 - * Youth rows: under 18 only (99%).
 - ★ January hunt: only the Map D27 parts of 4-3, 4-4, 4-5 and 4-20 (99%).
 - Deer heads from the CWD (Chronic Wasting Disease) zone must be submitted (99%).
+```
 
 ## Footnotes: elk, moose and goat
 
+```diagram rb-mhr
+```
+
+| Animal | Footnote (99%) |
+|---|---|
+| Elk, moose | Report by March 31. Antlers stay with the licence |
+| Elk, moose | Zone heads tested for CWD (Chronic Wasting Disease) |
+| Goat, MU (Management Unit) 4-30 | Map D24 only. Inspection |
+
+```more the page 39 footnote words
 > [!law] Elk footnotes, page 39
 > "▲ See Definitions section: Bull. Antlers must accompany the species licence."
 >
@@ -491,9 +662,18 @@ checked: 2026-10-04
 - Bought an elk or moose licence? File the [[Mandatory Hunter Report]] by 31 March, success or not (95%, my reading of "all individuals"). The elk line and "March 31st" are printed green (99%).
 - Keep the antlers with the licence (99%).
 - Goats in 4-30: Map D24 area only. Every goat goes to inspection (99%).
+```
 
 ## Footnotes: bear, wolf, cougar, small game
 
+| Animal | Footnote |
+|---|---|
+| August bear | Private land, permission first (99%) |
+| Wolf | No closed season in parts, below 1,100 m (90%, VERIFY line) |
+| Cougar | Inspection within 30 days. No kittens (99%) |
+| Ground squirrel | Private land, permission (99%) |
+
+```more the page 39 footnote words
 > [!law] Footnotes, page 39
 > "▲ Restricted to private land only, hunter must obtain permission from landowners prior to access." (black bear)
 >
@@ -507,9 +687,16 @@ checked: 2026-10-04
 - Wolves: no closed season in the East Kootenay Trench parts of the listed MUs and in 4-4 to 4-7, below 1,100 m (3,609 ft) (90%, my reading that "below 1100 m" covers both groups). The synopsis prints no map of the Trench line. VERIFY the boundary.
 - Every cougar goes to inspection, now within 30 days (99%, pages 36 and 39).
 - Ground squirrels: private land, with permission (99%).
+```
 
 ## Footnotes: birds
 
+```diagram rb-duck-bag
+```
+
+- Creston Valley WMA (Wildlife Management Area): birds from Oct 1, access permit (99%).
+
+```more the page 39 and 40 footnote words
 > [!law] Footnotes, pages 39 and 40
 > "For Dusky, Spruce, and Ruffed grouse, the daily aggregate bag limit is 5; the aggregate possession limit is 15."
 >
@@ -529,9 +716,14 @@ checked: 2026-10-04
 - Pheasant: 3 a day, 6 in possession, 12 a season (99%).
 - December turkeys: private land with permission (99%).
 - Creston Valley Wildlife Management Area: ducks, geese, coots and snipe from 1 October, with an access permit, 250 402 6900 (99%).
+```
 
 ## It's unlawful: feeding and baiting
 
+```diagram rf-r4-feed
+```
+
+```more the page 37 words
 > [!law] Notice to Hunters, page 37
 > "It is unlawful to intentionally feed or bait ungulates or turkeys in the Kootenay Region."
 >
@@ -539,18 +731,28 @@ checked: 2026-10-04
 
 - No feeding or baiting of deer, elk, moose or other hoofed game, or turkeys, anywhere in Region 4. No 200 m limit here: the whole region (99%).
 - Shot a collared animal? Return the collar to Cranbrook or Nelson (99%, a request).
+```
 
 ## No Shooting Areas in the text
 
+```diagram rf-r4-whiteswan
+```
+
+```more the page 37 words
 > [!law] NO SHOOTING AREAS, page 37
 > "The discharge of firearms is prohibited on or within 50 m of either side of the Whiteswan FSR from Inlet Creek Campground on Whiteswan FSR to White River bridge crossing and the Whiteswan FSR/White-Moscow main junction to the Moscow/Home Basin Campground junction. Total road length approximately 4.9 km."
 >
 > "See firearms restrictions as outlined in the No Hunting and No Shooting Areas section and region’s maps on pages 40-41."
 
 - Whiteswan [[FSR]] (Forest Service Road): no firearms on or within 50 m (55 yd) of the road, Inlet Creek Campground to the White River bridge, and the White Moscow junction to the Moscow and Home Basin Campground junction. About 4.9 km (99%).
+```
 
 ## Access rules: permits, caribou, Baynes Lake, Sulphur Creek
 
+```diagram rf-r4-access
+```
+
+```more the page 37 words
 > [!law] Access Restrictions, page 37
 > "Region 4 Motor Vehicle Prohibition maps are avilable online at www.gov.bc.ca/kootenayaccess or by contacting the regional office at 250-426-1766."
 >
@@ -571,9 +773,19 @@ checked: 2026-10-04
 
 - Baynes Lake, MU 4-22 (Map D11): no motor use all year; no public access 15 April to 15 July except beaches 1 and 2; dogs leashed 1 April to 31 July; Waldo Cove Road open (99%).
 - Sulphur Creek mineral lick, MU 4-22 (Map D12): stay within 3 m (3 yd) of the road, all year (99%).
+```
 
 ## Vehicle closures: the symbol key
 
+```diagram rf-r4-symbols
+```
+
+```diagram rb-mv-types
+```
+
+- ★ means no motor vehicle at all. The others: not for hunting use (99%).
+
+```more the page 37 symbol key, word for word
 > [!law] Symbol Key, page 37
 > "Use the following symbols to determine what type of motor vehicle prohibition is in place in the following areas (see also Site and Access Restrictions section, page 9)."
 >
@@ -598,9 +810,14 @@ checked: 2026-10-04
 - The other five: no vehicle or electric bicycle to hunt, haul game, carry gear or carry hunters (99%).
 - No snowmobile for hunting anywhere in Region 4, 1 April to 30 November (99%).
 - AMA (Access Management Area) and MVHCA (Motor Vehicles for Hunting Closed Area) appear in the lists below (95%, my reading).
+```
 
 ## Vehicle closures: MUs 4-1 to 4-7
 
+```diagram rf-r4-mv-1
+```
+
+```more the page 37 words and the plain English list
 > [!law] Page 37
 > "MU 4-1" "★ McDougall Wildlife Sanctuary (Map D1)" "★ Upper Flathead" "★ East Flathead"
 >
@@ -622,9 +839,14 @@ checked: 2026-10-04
 - MU 4-4 Hawkins Creek and Mt. Mahon, MU 4-5 Irishman Creek, MU 4-7 Topaz Creek: closed for hunting in spring and fall (99%). MU 4-5 Lamb Creek: 1 September to 30 June (99%).
 - MU 4-6: Channel Road closed 15 March to 30 April and 15 August to 15 October; Leadville Creek past 8 km and Sanca Creek slopes closed to all vehicles (99%).
 - MU 4-7: Corn Creek north side closed 1 September to 1 June; Corn Creek FSR (Forest Service Road) stays open (99%).
+```
 
 ## Vehicle closures: MUs 4-9 to 4-21
 
+```diagram rf-r4-mv-2
+```
+
+```more the page 38 words and the plain English list
 > [!law] Page 38
 > "MU 4-9" "▲ the watersheds of Malde, Goodeve, Morris and Shepard Creeks and the Cambridge Creek watershed upstream of the 750 m elevation" "◆ Tiger Creek watershed upstream of the Gopher Creek Crossing"
 >
@@ -643,9 +865,14 @@ checked: 2026-10-04
 - MU 4-18: Grohman Creek closed for hunting all year; Marsden Face no vehicles 1 December to 15 April; Sproule Creek spring and 1 September to 28 February (99%).
 - MU 4-20: Wycliffe properties, Baribeau Creek past 1 km and Cherry Creek closed to all vehicles; six creek watersheds closed for hunting spring and 1 September to 28 February (99%).
 - MU 4-21: Premier Ridge and parts of Lewis Creek closed to all vehicles; Coyote Creek headwaters spring and winter; Island Pond 1 September to 30 June (99%).
+```
 
 ## Vehicle closures: MUs 4-22 to 4-24
 
+```diagram rf-r4-mv-3
+```
+
+```more the page 38 words and the plain English list
 > [!law] Page 38
 > "MUs 4-22, 4-23, and 4-24" "✖ White River and Bull River"
 >
@@ -659,9 +886,14 @@ checked: 2026-10-04
 - MU 4-22: Baynes Lake, Powerplant, Pickering Hills and Sheep Mountain, Galbraith Creek closed to all vehicles; six watershed groups closed for hunting spring and 1 September to 28 February; main Harrison Creek Forest Service Road open, side roads above 67 km closed (99%).
 - MU 4-23: Chauncey Todhunter, Grave Prairie, Corbin, Weigert, Upper Elk and Fording, Alexander Creek closed to all vehicles; Barnes Lake for hunting; snowmobiles allowed where noted, but not above 1,900 m on Mt. Bleasdell and Abby Ridge (99%, order of the MU 4-23 heading read from the page image).
 - MU 4-24: upper Mutton Creek closed to all vehicles; seven watersheds closed for hunting spring and 1 September to 28 February (99%).
+```
 
 ## Vehicle closures: MUs 4-25 to 4-38
 
+```diagram rf-r4-mv-4
+```
+
+```more the page 38 words and the plain English list
 > [!law] Page 38
 > "MU 4-25" "★ Stoddart Creek area" "★ Columbia Lake area" "◆ Albert River watershed" "◆ Cross River watershed upstream from 27.3 km on the Cross River Road, and on side roads further than 100 m road distance from the Cross River main line between 20.4 km and 27.3 km" "◆ the watershed of Pedley Creek" "◆ North fork of Dry Creek watershed upstream from 19.6 km on Dry Creek Rd" "◆ the upper watersheds of Madias Creek and Tatley Creek upstream from the easterly boundary of the Columbia Lake Indian Reserve"
 >
@@ -685,9 +917,14 @@ checked: 2026-10-04
 - MU 4-30: Duncan Lardeau area closed to all vehicles; Highway 31 open (99%).
 - MU 4-32 Barnes Creek northeast side, MU 4-35 Ice River and Beaverfoot, MU 4-38 Downie and Sorcerer creeks: closed for hunting spring and 1 September to 28 February (99%).
 - MU 4-34: Holt Creek past about 4.8 km and Lang Creek past about 3.4 km closed to all vehicles (99%).
+```
 
 ## Columbia Wetlands: the 10 horsepower rule
 
+```diagram rf-r4-wetlands
+```
+
+```more the page 38 and Map D21 words
 > [!law] MUs 4-25, 4-26, 4-34, and 4-35, page 38
 > "Use of a conveyance of any description which is powered by a motor which exceeds a rating of 10 hp is prohibited within the Columbia Wetlands Wildlife Management Area (MUs 4-25, 4-26, 4-34, and 4-35). Boats operating on NAVIGABLE portions of the Columbia River are exempt from the regulation, and the following rights of way are also excluded from this regulation:"
 >
@@ -702,9 +939,14 @@ checked: 2026-10-04
 
 - Map D21 adds: no electric or gas powered boats in the wetlands, no towing in the main channel (99%, page 41).
 - Map D21 runs along the Columbia from Donald Station and Golden south past Spillimacheen, Brisco, Radium Hot Springs and Invermere to Fairmont Hot Springs (99% labels, 85% map reading).
+```
 
 ## Maps D1 to D6
 
+```diagram rf-r4-maps-d1
+```
+
+```more the map captions and map readings
 > [!law] Map captions, page 40
 > "Map D1 McDougall Wildlife Sanctuary (MU 4-1). No Shooting, Hunting, or Trapping Area and Motor Vehicle Closed Area."
 >
@@ -724,9 +966,14 @@ checked: 2026-10-04
 - D4: Summit Creek Campground and Corn Creek Marsh, by Highway 3 and West Creston Road, MU 4-7 (99% rule, 85% map reading).
 - D5: Selkirk, the Wolf, Carolina and Bayonne creek country north of Highway 3 near Stagleap Park; caribou live here (99% rule, 80% map reading).
 - D6: Walter Clough Wildlife Management Area, the Slocan River strip south of Slocan, MU 4-17 (99% rule, 85% map reading).
+```
 
 ## Maps D7 to D12
 
+```diagram rf-r4-maps-d7
+```
+
+```more the map captions and map readings
 > [!law] Map captions, page 40
 > "Map D7 Argenta Marsh Wildlife Management Area No Shooting or Hunting Area (MU 4-19)."
 >
@@ -746,9 +993,14 @@ checked: 2026-10-04
 - D10: Wasa Slough, along the old highway right of way at Wasa (99% rule, 85% map reading).
 - D11: the Lake Koocanusa shore lot at Baynes Lake (99%).
 - D12: Sulphur Creek, Sulphur Creek Bridge to Hartley Pass Road, up to 1,310 m (99%).
+```
 
 ## Maps D13 to D18
 
+```diagram rf-r4-maps-d13
+```
+
+```more the map captions and map readings
 > [!law] Map captions, page 41
 > "Map D13 Teck Coal Limited Coal Mountain Mine No Shooting Area (MU 4-23)."
 >
@@ -767,9 +1019,14 @@ checked: 2026-10-04
 - D15 and D18: Mount Assiniboine Park and Sunshine Meadows on the Alberta line, no hunting (99% rule, 85% map reading).
 - D16: the Elk Valley mines from Fording River to Hosmer. Private property: company permission before entry (99%).
 - D17: Canal Flats, shot only, below the "1067m Elevational Contour" (99% labels, 80% map reading).
+```
 
 ## Maps D19 to D27
 
+```diagram rf-r4-maps-d19
+```
+
+```more the map captions and map readings
 > [!law] Map captions, page 41
 > "Map D19 Fairmont No Shooting Area (MU 4-25)."
 >
@@ -794,6 +1051,7 @@ checked: 2026-10-04
 - D24: the 4-30 goat area, Lardeau and Duncan Lake country north of Kaslo (99% rule, 80% map reading).
 - D26: Bergenham and Moberly marshes on the Columbia, Blaeberry to Moberly Station (99% rule, 85% map reading).
 - D27: the Cranbrook Deer Hunt area around Cranbrook, Kimberley side to the St. Mary River, south past Hidden Valley Road; one extra deer, 5 to 31 January. Printed green, new (99% rule, 80% map reading).
+```
 
 > [!rule]
 > In the Kootenay, the deer is not done when it is down. Head to the freezer, spine stays in the zone.
@@ -808,8 +1066,12 @@ checked: 2026-10-04
 
 ## Sources
 
+- Every source, page and date checked: tap below.
+
+```more every source, page and date checked
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read from the PDF text and checked against 150 dpi page images: page 36 (contacts, changes, CWD box, map), page 37 (bag limits, notices, access, MU closures, CWD reminders), page 38 (MU closures), pages 39 and 40 (every season row), pages 40 and 41 (Maps D1 to D27). Also pages 2, 3, 4, 5, 10, 12, 14 and 15. Checked 2026-10-04 (99%).
 - Lines marked "my reading" are this app's interpretation, 80 to 95%. Map readings are 80 to 90%.
+```
 
 ```quiz
 [

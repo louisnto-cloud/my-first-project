@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 386" font-family="sans-serif" role="img" aria-label="Flowchart. Are you hunting inside Mission city limits, or anywhere in MU 2-4? If no, the normal licences are enough. If yes: buy the Fraser Valley Special Area Hunting Licence, 8 dollars plus a 2 dollar surcharge, GST extra. Carry 1 million dollars of public liability and property damage insurance. For ducks or geese, the Migratory Bird Licence as well. Map B10, synopsis page 29.">
+<rect x="0" y="0" width="400" height="386" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Do you need the extra licence?</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">Map B10, synopsis page 29 (99%)</text>
+<rect x="16" y="58" width="236" height="73" rx="18" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="28" y="82" font-size="15" font-weight="bold" fill="#2f3a2b">Hunting inside Mission city</text>
+<text x="28" y="101" font-size="15" font-weight="bold" fill="#2f3a2b">limits, or anywhere in MU</text>
+<text x="28" y="120" font-size="15" font-weight="bold" fill="#2f3a2b">2-4?</text>
+<line x1="252" y1="94.5" x2="282" y2="94.5" stroke="#2f3a2b" stroke-width="3"/><polygon points="280,87.5 280,101.5 290,94.5" fill="#2f3a2b"/>
+<text x="256" y="86.5" font-size="14" font-weight="bold" fill="#6b4f35">No</text>
+<rect x="290" y="58" width="96" height="73" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="298" y="80" font-size="14" font-weight="bold" fill="#2f3a2b">Normal</text>
+<text x="298" y="98" font-size="14" font-weight="bold" fill="#2f3a2b">licences are</text>
+<text x="298" y="116" font-size="14" font-weight="bold" fill="#2f3a2b">enough</text>
+<line x1="134" y1="131" x2="134" y2="153" stroke="#2f3a2b" stroke-width="3"/><polygon points="127,151 141,151 134,161" fill="#2f3a2b"/>
+<text x="144" y="152" font-size="14" font-weight="bold" fill="#6b4f35">Yes</text>
+<rect x="16" y="161" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="185" font-size="15" fill="#2f3a2b">Buy the Fraser Valley Special Area Hunting</text>
+<text x="28" y="204" font-size="15" fill="#2f3a2b">Licence: $8 plus $2, GST extra</text>
+<line x1="200.0" y1="215" x2="200.0" y2="237" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,235 207.0,235 200.0,245" fill="#2f3a2b"/>
+<rect x="16" y="245" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="269" font-size="15" fill="#2f3a2b">Carry $1,000,000 public liability and</text>
+<text x="28" y="288" font-size="15" fill="#2f3a2b">property damage insurance</text>
+<line x1="200.0" y1="299" x2="200.0" y2="321" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,319 207.0,319 200.0,329" fill="#2f3a2b"/>
+<rect x="16" y="329" width="368" height="35" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="28" y="353" font-size="15" font-weight="bold" fill="#2f3a2b">Ducks or geese: Migratory Bird Licence too</text>
+</svg>

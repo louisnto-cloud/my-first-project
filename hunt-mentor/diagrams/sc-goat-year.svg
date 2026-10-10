@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A goat year from May to December. Kids are born late May or early June. General open seasons run from August 1 in the north to November 30, depending on the region. Region 3 draw hunts run September 1 to November 30. The rut runs early November to early December, peaking about November 15 to 20." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A goat year</text>
+<text x="200.0" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">Green: seasons vary by region. Read your row.</text>
+<rect x="96.0" y="72" width="36.2" height="152" fill="#dfe6d3"/>
+<text x="114.1" y="66" font-size="14" fill="#2f3a2b" text-anchor="middle">May</text>
+<rect x="132.2" y="72" width="36.2" height="152" fill="#fffaf0"/>
+<text x="150.4" y="66" font-size="14" fill="#2f3a2b" text-anchor="middle">Jun</text>
+<rect x="168.5" y="72" width="36.2" height="152" fill="#dfe6d3"/>
+<text x="186.6" y="66" font-size="14" fill="#2f3a2b" text-anchor="middle">Jul</text>
+<rect x="204.8" y="72" width="36.2" height="152" fill="#fffaf0"/>
+<text x="222.9" y="66" font-size="14" fill="#2f3a2b" text-anchor="middle">Aug</text>
+<rect x="241.0" y="72" width="36.2" height="152" fill="#dfe6d3"/>
+<text x="259.1" y="66" font-size="14" fill="#2f3a2b" text-anchor="middle">Sep</text>
+<rect x="277.2" y="72" width="36.2" height="152" fill="#fffaf0"/>
+<text x="295.4" y="66" font-size="14" fill="#2f3a2b" text-anchor="middle">Oct</text>
+<rect x="313.5" y="72" width="36.2" height="152" fill="#dfe6d3"/>
+<text x="331.6" y="66" font-size="14" fill="#2f3a2b" text-anchor="middle">Nov</text>
+<rect x="349.8" y="72" width="36.2" height="152" fill="#fffaf0"/>
+<text x="367.9" y="66" font-size="14" fill="#2f3a2b" text-anchor="middle">Dec</text>
+<text x="90" y="96.0" font-size="14" fill="#23261f" text-anchor="end">Kids born</text>
+<rect x="120.6" y="78" width="23.8" height="26" rx="5" fill="#8b5a2b"/>
+<line x1="96" y1="110" x2="386" y2="110" stroke="#8a9a6b" stroke-width="1"/>
+<text x="90" y="127.0" font-size="13" fill="#23261f" text-anchor="end">Seasons</text>
+<text x="90" y="141.0" font-size="13" fill="#23261f" text-anchor="end">somewhere</text>
+<rect x="204.8" y="116" width="145.0" height="26" rx="5" fill="#5f7a3a"/>
+<text x="277.2" y="134.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">Aug 1 to Nov 30</text>
+<line x1="96" y1="148" x2="386" y2="148" stroke="#8a9a6b" stroke-width="1"/>
+<text x="90" y="165.0" font-size="13" fill="#23261f" text-anchor="end">Region 3</text>
+<text x="90" y="179.0" font-size="13" fill="#23261f" text-anchor="end">draw</text>
+<rect x="241.0" y="154" width="108.8" height="26" rx="5" fill="#4a7fb0"/>
+<text x="295.4" y="172.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">Sep 1 to Nov 30</text>
+<line x1="96" y1="186" x2="386" y2="186" stroke="#8a9a6b" stroke-width="1"/>
+<text x="90" y="210.0" font-size="14" fill="#23261f" text-anchor="end">Rut</text>
+<rect x="313.5" y="192" width="47.9" height="26" rx="5" fill="#e8590c"/>
+<rect x="330.4" y="192" width="7.2" height="26" rx="5" fill="#a33d06"/>
+<line x1="96" y1="224" x2="386" y2="224" stroke="#8a9a6b" stroke-width="1"/>
+<text x="200.0" y="248" font-size="14" fill="#23261f" text-anchor="middle">Rut peak about Nov 15 to 20 (85%).</text>
+<text x="200.0" y="266" font-size="14" fill="#23261f" text-anchor="middle">Groups mix in the rut: kids no longer</text>
+<text x="200.0" y="284" font-size="14" fill="#23261f" text-anchor="middle">mean nannies only.</text>
+
+</svg>

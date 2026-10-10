@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 650" font-family="sans-serif" role="img" aria-label="Season chart for Region 3 near Heffley Creek, September to December 2026, synopsis page 34. Mule deer any buck 1 to 31 October. Mule deer 4 point bucks only 1 November to 10 December. White tailed deer bucks 10 September to 10 December. White tailed deer antlerless 10 to 31 October. Black bear 1 September to 30 November. Grouse 10 September to 30 November. Chukar, grey partridge and pheasant cocks 1 October to 30 November. Ducks 8 September to 23 December. Canada and cackling geese 1 October to 23 December. Moose spike fork bulls 1 to 15 November in MUs 3-18 to 3-20 and 3-26 to 3-30.">
+<rect x="0" y="0" width="400" height="650" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Open near Heffley Creek, fall 2026</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">Region 3 table, synopsis page 34 (99%)</text>
+<rect x="118.0" y="64" width="66.9" height="526" fill="#dfe6d3"/>
+<text x="151.443" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sep</text>
+<text x="219.443" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Oct</text>
+<rect x="254.0" y="64" width="66.9" height="526" fill="#dfe6d3"/>
+<text x="287.443" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Nov</text>
+<text x="355.443" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dec</text>
+<text x="8" y="105" font-size="14" font-weight="bold" fill="#2f3a2b">Mule deer</text>
+<text x="8" y="121" font-size="14" fill="#2f3a2b">any buck</text>
+<rect x="184.9" y="92" width="69.1" height="22" rx="4" fill="#e8590c"/>
+<text x="188.885" y="129" font-size="14" font-weight="bold" fill="#e8590c">Oct 1 to 31</text>
+<text x="8" y="151" font-size="14" font-weight="bold" fill="#2f3a2b">Mule deer</text>
+<text x="8" y="167" font-size="14" fill="#2f3a2b">4 point only</text>
+<rect x="254.0" y="138" width="89.2" height="22" rx="4" fill="#8b5a2b"/>
+<text x="258" y="175" font-size="14" font-weight="bold" fill="#8b5a2b">Nov 1 to Dec 10</text>
+<text x="8" y="197" font-size="14" font-weight="bold" fill="#2f3a2b">White tail</text>
+<text x="8" y="213" font-size="14" fill="#2f3a2b">bucks</text>
+<rect x="138.1" y="184" width="205.1" height="22" rx="4" fill="#8a9a6b"/>
+<text x="142.066" y="200" font-size="14" font-weight="bold" fill="#fff">Sep 10 to Dec 10</text>
+<text x="8" y="243" font-size="14" font-weight="bold" fill="#2f3a2b">White tail</text>
+<text x="8" y="259" font-size="14" fill="#2f3a2b">antlerless</text>
+<rect x="205.0" y="230" width="49.0" height="22" rx="4" fill="#8a9a6b"/>
+<text x="208.951" y="267" font-size="14" font-weight="bold" fill="#2f3a2b">Oct 10 to 31</text>
+<text x="8" y="289" font-size="14" font-weight="bold" fill="#2f3a2b">Black bear</text>
+<rect x="118.0" y="276" width="202.9" height="22" rx="4" fill="#2f3a2b"/>
+<text x="122" y="292" font-size="14" font-weight="bold" fill="#fff">Sep 1 to Nov 30</text>
+<text x="8" y="335" font-size="14" font-weight="bold" fill="#2f3a2b">Grouse</text>
+<rect x="138.1" y="322" width="182.8" height="22" rx="4" fill="#8b5a2b"/>
+<text x="142.066" y="338" font-size="14" font-weight="bold" fill="#fff">Sep 10 to Nov 30</text>
+<text x="8" y="381" font-size="14" font-weight="bold" fill="#2f3a2b">Chukar, grey</text>
+<text x="8" y="397" font-size="14" fill="#2f3a2b">partridge</text>
+<rect x="184.9" y="368" width="136.0" height="22" rx="4" fill="#8b5a2b"/>
+<text x="188.885" y="384" font-size="14" font-weight="bold" fill="#fff">Oct 1 to Nov 30</text>
+<text x="8" y="427" font-size="14" font-weight="bold" fill="#2f3a2b">Pheasant</text>
+<text x="8" y="443" font-size="14" fill="#2f3a2b">cocks</text>
+<rect x="184.9" y="414" width="136.0" height="22" rx="4" fill="#8b5a2b"/>
+<text x="188.885" y="430" font-size="14" font-weight="bold" fill="#fff">Oct 1 to Nov 30</text>
+<text x="8" y="473" font-size="14" font-weight="bold" fill="#2f3a2b">Ducks</text>
+<rect x="133.6" y="460" width="238.6" height="22" rx="4" fill="#4a7fb0"/>
+<text x="137.607" y="476" font-size="14" font-weight="bold" fill="#fff">Sep 8 to Dec 23</text>
+<text x="8" y="519" font-size="14" font-weight="bold" fill="#2f3a2b">Canada and</text>
+<text x="8" y="535" font-size="14" fill="#2f3a2b">cackling geese</text>
+<rect x="184.9" y="506" width="187.3" height="22" rx="4" fill="#4a7fb0"/>
+<text x="188.885" y="522" font-size="14" font-weight="bold" fill="#fff">Oct 1 to Dec 23</text>
+<text x="8" y="565" font-size="14" font-weight="bold" fill="#2f3a2b">Moose, spike</text>
+<text x="8" y="581" font-size="14" fill="#2f3a2b">fork bulls</text>
+<rect x="254.0" y="552" width="33.4" height="22" rx="4" fill="#6b4f35"/>
+<text x="258" y="589" font-size="14" font-weight="bold" fill="#6b4f35">Nov 1 to 15</text>
+<text x="200" y="608" font-size="14" fill="#2f3a2b" text-anchor="middle">Moose: 3-18 to 3-20 and 3-26 to 3-30 only.</text>
+<text x="200" y="628" font-size="14" fill="#2f3a2b" text-anchor="middle">Check the MU list for every row.</text>
+</svg>

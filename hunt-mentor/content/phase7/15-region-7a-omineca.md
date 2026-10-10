@@ -9,18 +9,29 @@ checked: 2026-10-04
 > [!warn]
 > Study aid only. The official regulations are the law.
 
-- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
+```anim rf-r7a-year Slide through the Omineca year.
+```
 
 > [!why]
 > Omineca is Prince George country: moose, deer and big northern goat range. Every season, limit, closure and map for it is here.
+
+```more what this session covers
+- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
 
 - This session carries printed pages 55 to 59, the Region 7A section, in the order printed (99%, contents page and page footers).
 - Page 55: contacts, changes, region map. Page 56: bag limits, access, notices. Page 57: every season row. Pages 58 and 59: Maps G1 to G25 (99%).
 - Green print marks new information and regulation changes (99%, page 2 key). Green cells are flagged "new" here (99%).
 - [[MU]] (Management Unit) codes like 7-12 are official codes, so they keep their hyphen (99%).
+```
 
 ## Regional office and Conservation Officers
 
+| Who | Where | Phone |
+|---|---|---|
+| Regional office | Prince George | 250 614 7400 |
+| Conservation officers | 4 field offices | 1 877 952 7277 |
+
+```more the page 55 words, address and field offices
 > [!law] Fish and Wildlife Regional Office, page 55
 > "2000 Ospika Blvd S"
 >
@@ -36,9 +47,17 @@ checked: 2026-10-04
 - Regional office: 2000 Ospika Blvd S, Prince George, phone 250 614 7400 (99%, page 55, 2 October 2026 edition).
 - Conservation officers: 1 877 952 7277 (99%).
 - Field offices: Burns Lake, Mackenzie, Prince George and Vanderhoof (99%).
+```
 
 ## Compulsory inspection, RAPP and updates
 
+| Need | Detail |
+|---|---|
+| CI (Compulsory Inspection) | Prince George or Vanderhoof, by appointment |
+| Inspect | Sheep, goat, cougar |
+| RAPP (Report All Poachers and Polluters) | 1 877 952 7277, 24 hours |
+
+```more the page 55 words
 > [!law] Compulsory Inspection (CI) Centres, page 55
 > "Qualified Compulsory Inspectors will provide this service at locations listed below. See the Ministry website at www.gov.bc.ca/hunting/compulsory-inspection or contact the regional office for more information."
 >
@@ -54,9 +73,18 @@ checked: 2026-10-04
 - CI (Compulsory Inspection): Prince George or Vanderhoof, by appointment only (99%).
 - In this region the sheep, goat and cougar rows all say inspection is required (99%, page 57).
 - [[RAPP]] (Report All Poachers and Polluters): 1 877 952 7277, 24 hours (99%).
+```
 
 ## What changed for 2026 to 2028
 
+| Change | Now |
+|---|---|
+| White tailed bucks | To Dec 10 |
+| Antlerless white tails | Oct 10 to 31, every MU (Management Unit) |
+| Coyote | Opens Aug 15 |
+| Morkill FSR (Forest Service Road) closure | To Dec 10 |
+
+```more the page 55 words
 > [!law] Regulation changes for 2026-2028, page 55
 > "1. Extend white-tailed deer buck season to Dec 10."
 >
@@ -70,9 +98,16 @@ checked: 2026-10-04
 - Antlerless white tails, 10 to 31 October, now in every MU (99%, page 57, MUs printed green).
 - Coyote now opens 15 August (99%, page 57, "Aug 15" printed green).
 - Morkill [[FSR]] (Forest Service Road) hunting vehicle closure now runs to 10 December (99%, page 56).
+```
 
 ## What Region 7A covers
 
+```diagram rf-r7a-mus
+```
+
+- Region 7A, Omineca: 31 MUs (Management Units) (99%).
+
+```more every MU and the towns on the map
 > [!law] Page 2 region key
 > "Region 7A - Omineca" "MUs 7-1 to 7-18, 7-23 to 7-30, 7-37 to 7-41"
 
@@ -83,9 +118,17 @@ checked: 2026-10-04
 - One by one: 7-1 to 7-18 (7-1, 7-2, 7-3, 7-4, 7-5, 7-6, 7-7, 7-8, 7-9, 7-10, 7-11, 7-12, 7-13, 7-14, 7-15, 7-16, 7-17, 7-18), then 7-23, 7-24, 7-25, 7-26, 7-27, 7-28, 7-29, 7-30, then 7-37, 7-38, 7-39, 7-40, 7-41 (99%).
 - MU 7-1 is in the region, but no season row on page 57 names it (99%).
 - Towns on the page 55 map include Prince George, Vanderhoof, Fort St James, Mackenzie, McBride and Valemount (99%).
+```
 
 ## Regional bag limits
 
+```diagram rf-r7a-bag
+```
+
+```diagram rb-deer-three
+```
+
+```more the page 56 words and the page 14 table
 > [!law] Regional Bag Limits, page 56
 > "Deer: The bag limit for mule (black-tailed) deer in region 7A is 1. The bag limit for white-tailed deer in region 7A is 2, only one of which may be a buck, and one of which may be antlerless."
 >
@@ -96,9 +139,14 @@ checked: 2026-10-04
 - Page 14 table for 7A: mule antlerless 1, mule total 1, white tail bucks 1, antlerless 1, total 2, all deer 3 (99%, page 14).
 - Province wide: only 1 mule deer buck from Regions 3, 4, 5, 6, 7A, 7B and 8 combined (99%, page 14).
 - Grouse: 10 a day for dusky, spruce and ruffed together. Ptarmigan: 10 a day (99%). [[Franklin's grouse]] is the spruce grouse (99%, glossary).
+```
 
 ## Bag limits in the season table
 
+```diagram rf-r7a-bag-table
+```
+
+```more every bag cell as printed, page 57
 | Species | Bag limit cell as printed, page 57 |
 |---|---|
 | Mule deer | Refer to Regional Bag Limits on p. 56 and the Deer Bag Limits article on p. 14 |
@@ -130,9 +178,19 @@ checked: 2026-10-04
 
 - Every cell checked against a 150 dpi image of page 57 and the page text (99%, page 57, 2 October 2026 edition).
 - NBL (No Bag Limit): no maximum. "10 (30)" means 10 a day and 30 in [[Possession limit|possession]] (99%, page 12).
+```
 
 ## Mule deer seasons
 
+```diagram rf-r7a-mule
+```
+
+```diagram rb-4point
+```
+
+- Near Prince George (7-12 to 7-14, 7-24, 7-25): adults, 4 point only (95%).
+
+```more the full mule deer table and notes
 | MUs | Class | Season | Notes |
 |---|---|---|---|
 | 7-2 to 7-11, 7-15 to 7-18, 7-23, 7-26 to 7-30, 7-37 to 7-41 | Bucks | Oct 1 to Oct 31 | Any antlered buck |
@@ -147,9 +205,14 @@ checked: 2026-10-04
 - Every row checked against the page 57 image and text (99%, page 57).
 - MUs 7-12 to 7-14, 7-24 and 7-25 (around Prince George, Vanderhoof and Fort St James) have no any buck month: 4 points only for adults (95%, my reading of the rows; towns from the page 55 map).
 - A [[4 point buck]] has at least 4 tines on one antler, not counting the brow tine (99%, page 4).
+```
 
 ## White tailed deer seasons
 
+```diagram rf-r7a-wt
+```
+
+```more the full white tailed deer table and notes
 | MUs | Class | Season | Notes |
 |---|---|---|---|
 | 7-2 to 7-18, 7-23 to 7-30, 7-37 to 7-41 | Bucks | Sept 10 to Dec 10 | "Dec 10" printed green |
@@ -160,9 +223,17 @@ checked: 2026-10-04
 
 - Every row checked against the page 57 image (99%, page 57).
 - Bag: the regional limits, 2 white tails, no more than 1 buck and 1 antlerless (99%, page 56).
+```
 
 ## Moose and elk seasons
 
+```diagram rf-r7a-moose
+```
+
+```diagram rf-r7a-elk
+```
+
+```more the full moose and elk tables and notes
 ### Moose
 
 | MUs | Class | Season | Notes |
@@ -182,9 +253,14 @@ checked: 2026-10-04
 - Every row checked against the page 57 image (99%, page 57).
 - A [[Spike fork bull]] has no more than 2 tines on one antler (99%, page 3).
 - A [[6 point bull]] elk: see the Definitions session (99%, page 3).
+```
 
 ## Sheep, goat, caribou and bear seasons
 
+```diagram rf-r7a-mtn
+```
+
+```more the full tables and notes
 ### Bighorn mountain sheep
 
 | MUs | Class | Season | Notes |
@@ -217,9 +293,14 @@ checked: 2026-10-04
 | 7-2 to 7-18, 7-23 to 7-30, 7-37 to 7-41 | None printed | Apr 1 to June 30 | Bag 2 |
 
 - Every row checked against the page 57 image (99%, page 57).
+```
 
 ## Predator, furbearer and small game seasons
 
+```diagram rf-r7a-pred
+```
+
+```more the full table and notes
 | Species | MUs | Season | Bag |
 |---|---|---|---|
 | Wolf | 7-2 to 7-18, 7-23 to 7-30, 7-37 to 7-41 | Aug 1 to June 30 | NBL |
@@ -235,9 +316,14 @@ checked: 2026-10-04
 - Every row checked against the page 57 image (99%, page 57).
 - NBL (No Bag Limit): no maximum (99%, page 12).
 - Raccoon prints "Apr 1-Mar 31": the whole licence year, in effect no closed season (95%, my reading).
+```
 
 ## Grouse and ptarmigan seasons
 
+```diagram rf-r7a-birds
+```
+
+```more the full table and notes
 | Species | MUs | Season | Bag |
 |---|---|---|---|
 | Dusky (blue) grouse | 7-2 to 7-7, 7-17, 7-18, 7-23, 7-27, 7-28, 7-30, 7-37 to 7-41 | Sept 1 to Nov 15 | 10 (30) |
@@ -246,9 +332,16 @@ checked: 2026-10-04
 
 - Every row checked against the page 57 image (99%, page 57).
 - [[Blue grouse]] is the old name for the dusky grouse (99%, glossary).
+```
 
 ## Waterfowl, snipe and coot seasons
 
+```diagram rb-duck-bag
+```
+
+- Ducks, geese, coots, snipe: Sept 1 to Nov 30, all MUs (Management Units) (99%).
+
+```more the full table
 | Species | MUs | Season | Bag |
 |---|---|---|---|
 | Common snipe | 7-2 to 7-18, 7-23 to 7-30, 7-37 to 7-41 | Sept 1 to Nov 30 | 10 (30) |
@@ -259,15 +352,27 @@ checked: 2026-10-04
 | Geese: Canada and cackling | 7-2 to 7-18, 7-23 to 7-30, 7-37 to 7-41 | Sept 1 to Nov 30 | 10 (30) |
 
 - Every row checked against the page 57 image (99%, page 57).
+```
 
 ## Species with no row in Region 7A
 
+```diagram rf-r7a-norow
+```
+
+```more the page 57 and page 5 notes
 - Page 57 has no row for bison, bobcat, sharp tailed grouse, raven, pheasant, partridge, dove, band tailed pigeon, turkey or quail (99%).
 - No row means no general open season for that animal in Region 7A (95%, my reading of page 5: "Open Seasons are only those defined in this synopsis").
 - MU 7-1 appears in no row, so no general open season there (90%, my reading).
+```
 
 ## LEH: what these pages print
 
+```diagram rf-r7a-leh
+```
+
+- LEH (Limited Entry Hunting): a draw. Hunts are in the separate LEH synopsis (99%).
+
+```more the page 57 and page 5 words
 > [!law] Page 57
 > "CARIBOU LIMITED ENTRY HUNTING ONLY"
 >
@@ -280,9 +385,20 @@ checked: 2026-10-04
 - Goats: Maps G6, G7 and G8 allow goat hunting only for LEH permit holders (99%, page 58).
 - Caribou: Map G22 allows Zone D of 7-39 only for LEH permit holders (99%, page 59).
 - The hunts, codes and dates are in the separate LEH synopsis (99%, page 5).
+```
 
 ## Footnotes: deer, moose and elk
 
+```diagram rb-mhr
+```
+
+| Animal | Footnote (99%) |
+|---|---|
+| Mule deer ★ | Antlers stay with the licence |
+| Youth * | Under 18 only |
+| Moose, elk | Report by March 31. Antlers with the licence |
+
+```more the page 57 footnote words
 > [!law] Mule deer footnote, page 57
 > "★ See Definitions section: Mule (black-tailed) Deer. The antlers must accompany the species licence. * Restricted to hunters under the age of 18."
 
@@ -305,9 +421,19 @@ checked: 2026-10-04
 > "★ See Definitions section: Elk. Antlers must accompany the species licence."
 
 - Elk licence: report by 31 March, printed green, new (99%).
+```
 
 ## Footnotes: sheep, goat, predators and birds
 
+| Animal | Footnote (99%) |
+|---|---|
+| Sheep, goat, cougar | Compulsory inspection |
+| Sheep | Tatlatui Park, MU (Management Unit) 7-39, closed |
+| Goat | Asked: take billies |
+| Wolverine, lynx | Compulsory reporting |
+| Ground squirrel | Private land, permission |
+
+```more the page 57 footnote words
 > [!law] Sheep footnotes, page 57
 > "Compulsory Inspection required."
 >
@@ -332,9 +458,16 @@ checked: 2026-10-04
 - Ground squirrels: private land, with the owner's permission (99%).
 - Wolverine and lynx: [[Compulsory reporting]] (99%).
 - Inside the 8 ducks: no more than 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins (99%).
+```
 
 ## Vehicle closures: how to read them
 
+```diagram rf-r7a-mv-key
+```
+
+- No sign does not mean no closure (99%).
+
+```more the page 56 symbol key, word for word
 > [!law] Access Management Areas, page 56
 > "Information signs may be posted at the points of closure for road and vehicle restrictions. These signs are for the benefit of hunters, but it is the hunters’ responsibility to recognize closures whether a sign is in place or not."
 >
@@ -350,9 +483,17 @@ checked: 2026-10-04
 - ★ [[Motor Vehicle Closed Area]]: no motor vehicle for any purpose (99%, page 10).
 - ▲, ◆ and ●: that vehicle type may not be used to hunt or to carry hunters, gear or game (99%).
 - [[ATV]] (all terrain vehicle) closures here include motorcycles and electric bicycles (99%).
+```
 
 ## Vehicle closures by MU
 
+```diagram rf-r7a-mv-dates
+```
+
+```diagram rf-r7a-atv-hours
+```
+
+```more the page 56 list, word for word
 > [!law] Access Management Areas, page 56
 > "MUs 7-2 to 7-18, 7-23 to 7-30, and 7-37 to 7-39" "● from Mar 31 - Nov 30."
 >
@@ -371,9 +512,14 @@ checked: 2026-10-04
 - MUs 7-7 to 7-15 and 7-24 to 7-29: no ATV for hunting in the early morning hours listed (99%).
 - 7-38 and 7-39: no ATV for hunting anywhere in those MUs (99%).
 - Finlay area above 1,450 m: closed to all motor vehicles, with the listed exceptions (99%).
+```
 
 ## More access notes
 
+```diagram rf-r7a-access
+```
+
+```more the page 56 words and links
 > [!law] Access Management Areas, page 56
 > "Approximately one million hectares of Crown Land has been closed to snowmobile use to support Mountain Caribou recovery in the Thompson, Kootenay, Cariboo, and Omineca regions. Snowmobile closure maps with boundaries, legal access trails, prohibited dates, and identified riding areas are no longer published in the Hunting and Trapping Regulations Synopsis, they are available online at www.gov.bc.ca/snowmobileclosures."
 >
@@ -381,9 +527,14 @@ checked: 2026-10-04
 
 - Caribou snowmobile closures are online only; the book no longer prints their maps (99%).
 - The Vanderhoof Access Management Plan is also online (99%, page 56).
+```
 
 ## Maps G1 to G9: Robson Valley goats
 
+```diagram rf-r7a-maps-g1
+```
+
+```more the map captions and labels
 > [!law] Map captions, page 58
 > "Map G1 Mount Thompson Mountain Goat Closed Area (MU 7-2)."
 >
@@ -403,9 +554,14 @@ checked: 2026-10-04
 - Dore River, Holmes River, Castle Creek and Kiwa Creek: goats by LEH permit only (99%).
 - Map G1 labels a "4000ft contour" (90%, my reading of the map). Map G7 also marks a small No Hunting Area (90%, my reading of the legend).
 - Pages 58 and 59 print no Map G3 or G4 (99%).
+```
 
 ## Maps G10 to G17: parks and no shooting areas
 
+```diagram rf-r7a-maps-g10
+```
+
+```more the map captions and labels
 > [!law] Map captions, page 58
 > "Map G10 Purden Lake Park addition (MU 7-7). Shaded area is open to hunting and the discharge of firearms, bows, crossbows only during a lawful game hunting season."
 >
@@ -427,9 +583,14 @@ checked: 2026-10-04
 - Purden Lake and Dahl Lake park additions: open only during a lawful season (99%).
 - Map G17 sits by the Prince George City Limits, on the Nechako River (90%, my reading of the map labels).
 - [[No Shooting Area]]: no firearms; a bow is allowed unless the area says otherwise (99%, page 10).
+```
 
 ## Maps G18 to G25: north and caribou
 
+```diagram rf-r7a-maps-g18
+```
+
+```more the map captions and labels
 > [!law] Map captions, page 59
 > "Map G18 Gleason Creek Mountain Goat Closed Area (MU 7-18)."
 >
@@ -449,9 +610,14 @@ checked: 2026-10-04
 
 - Kennedy Siding: no hunting, no shooting 1 September to 31 March (99%).
 - Map G21 labels the 1,200 m line along the Ospika River (90%, my reading of the map).
+```
 
 ## Notices to hunters
 
+```diagram rf-r7a-notices
+```
+
+```more the page 56 words
 > [!law] Notice to Hunters, page 56
 > "Hunters, while returning from hunting, are required to keep the antlers of a bull moose taken in the Omineca region, and the species licence under which the moose was taken together and available for inspection by an officer."
 >
@@ -461,9 +627,14 @@ checked: 2026-10-04
 - White moose: please do not shoot one. A request, not a closure (95%, my reading).
 - Collared animals: legal if taken lawfully; report it to RAPP and return the collar (99%, page 56).
 - Camelids such as llamas may not be used to hunt in Region 7A (99%, page 12).
+```
 
 ## Notices from First Nations
 
+```diagram rf-r7a-fn
+```
+
+```more the page 56 words and contacts
 > [!law] Notice to hunters, page 56
 > "McLeod Lake Indian Band asks hunters to respect their Treaty Settlement Lands. Access to these lands require permission from the local Band Office and it is the hunter’s responsibility to be aware of these Treaty Settlement Lands/ Indian Reserves."
 
@@ -472,6 +643,7 @@ checked: 2026-10-04
 - Kwadacha Nation: Lands and Resources Officer, 250 471 2302 (99%).
 - Nak'azdli Whut'en (MUs 7-13 to 7-15, 7-24 to 7-26, 7-28, 7-29, 7-38): Land Guardians 250 996 0088 to share parts (99%).
 - These are requests, not regulations, except entry onto treaty lands needs permission (90%, my reading).
+```
 
 > [!rule]
 > In the Omineca, the bull you can shoot is a spike fork. Count tines twice, pull the trigger once.
@@ -486,8 +658,12 @@ checked: 2026-10-04
 
 ## Sources
 
+- Every source, page and date checked: tap below.
+
+```more every source, page and date checked
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf), printed pages 55 to 59 (PDF pages 57 to 61), every season row read from a 150 dpi page image and confirmed against the page text. Also pages 2, 3, 4, 5, 10, 12 and 14. Checked 2026-10-04 (99%).
 - Lines marked "my reading" are this app's interpretation, 80 to 95%. Map label readings are 90%.
+```
 
 ```quiz
 [

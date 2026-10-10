@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 408" font-family="sans-serif" role="img" aria-label="Flowchart for meat home from Alberta. If you export within 30 days of the kill or 5 days of season close, whichever is first, travel with it and carry the licence, no export permit is needed for a game bird, coyote, white tailed or mule deer, moose, elk, black bear or pronghorn. Wolf is not on the list: VERIFY. Bone out the meat and keep evidence of sex and species. At the BC line only boned meat and a cleaned hide, antlers and skull plate.">
+<rect x="0" y="0" width="400" height="408" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Alberta: getting meat home</text>
+<rect x="16" y="42" width="236" height="92" rx="18" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="28" y="66" font-size="15" font-weight="bold" fill="#2f3a2b">Within 30 days of the kill,</text>
+<text x="28" y="85" font-size="15" font-weight="bold" fill="#2f3a2b">or 5 days after season</text>
+<text x="28" y="104" font-size="15" font-weight="bold" fill="#2f3a2b">close? You travel with it</text>
+<text x="28" y="123" font-size="15" font-weight="bold" fill="#2f3a2b">and carry the licence?</text>
+<line x1="252" y1="88.0" x2="282" y2="88.0" stroke="#2f3a2b" stroke-width="3"/><polygon points="280,81.0 280,95.0 290,88.0" fill="#2f3a2b"/>
+<text x="256" y="80" font-size="14" font-weight="bold" fill="#6b4f35">Wolf</text>
+<rect x="290" y="42" width="96" height="92" rx="8" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="298" y="64" font-size="14" font-weight="bold" fill="#2f3a2b">Export</text>
+<text x="298" y="82" font-size="14" font-weight="bold" fill="#2f3a2b">permit for</text>
+<text x="298" y="100" font-size="14" font-weight="bold" fill="#2f3a2b">wolf: VERIFY</text>
+<line x1="134" y1="134" x2="134" y2="156" stroke="#2f3a2b" stroke-width="3"/><polygon points="127,154 141,154 134,164" fill="#2f3a2b"/>
+<text x="144" y="155" font-size="14" font-weight="bold" fill="#6b4f35">Yes</text>
+<rect x="16" y="164" width="368" height="54" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="28" y="188" font-size="15" font-weight="bold" fill="#2f3a2b">No export permit needed for birds, deer,</text>
+<text x="28" y="207" font-size="15" font-weight="bold" fill="#2f3a2b">moose, elk, bear, coyote, pronghorn (85%)</text>
+<line x1="200.0" y1="218" x2="200.0" y2="240" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,238 207.0,238 200.0,248" fill="#2f3a2b"/>
+<rect x="16" y="248" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="272" font-size="15" fill="#2f3a2b">Bone out. Keep evidence of sex and species</text>
+<text x="28" y="291" font-size="15" fill="#2f3a2b">(85%)</text>
+<line x1="200.0" y1="302" x2="200.0" y2="324" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,322 207.0,322 200.0,332" fill="#2f3a2b"/>
+<rect x="16" y="332" width="368" height="54" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="28" y="356" font-size="15" font-weight="bold" fill="#2f3a2b">BC line: boned meat, cleaned hide, antlers,</text>
+<text x="28" y="375" font-size="15" font-weight="bold" fill="#2f3a2b">skull plate only (99%)</text>
+</svg>

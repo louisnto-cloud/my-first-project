@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 236" role="img" aria-label="Bar chart of Region 6 elk seasons. 6 point bulls in 6-1, 6-2, 6-4 to 6-6, 6-8 and 6-9: 1 to 9 October. Bulls in 6-13: 15 September to 15 November, and bow only 1 to 14 September." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="236" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Elk seasons</text>
+<rect x="14.0" y="40" width="31.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="40" width="30.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="40" width="30.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="40" width="31.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="40" width="31.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="40" width="31.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="76" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">6 point bulls, 6-1, 6-2, 6-4 to 6-6, 6-8, 6-9</text>
+<rect x="107.8" y="82" width="9.2" height="20" rx="4" fill="#e8590c"/>
+<text x="121" y="97" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 1 to Oct 9</text>
+<text x="14" y="122" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bulls, 6-13</text>
+<rect x="91.5" y="128" width="63.2" height="20" rx="4" fill="#e8590c"/>
+<text x="159" y="143" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 15 to Nov 15</text>
+<text x="14" y="168" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bulls, bow only, 6-13</text>
+<rect x="77.2" y="174" width="14.3" height="20" rx="4" fill="#8b5a2b"/>
+<text x="95" y="189" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 14</text>
+<rect x="14" y="210" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="222" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+<rect x="149.60000000000002" y="210" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="168" y="222" font-size="14" fill="#23261f" text-anchor="start">Bow only</text>
+</svg>

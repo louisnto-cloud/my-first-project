@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 365" role="img" aria-label="Cards: Vehicle closures near Kamloops. Map C13 Skull Mountain, MU 3-28: Open roads only, or permit. Sept 1 to Dec 10. Map C15 Lac du Bois, MUs 3-28, 3-29: Highlighted roads only, year round. Map C16 Dewdrop Rosseau Creek WMA, MU 3-29: Open lines only, year round. Map C5 Greenstone Mtn Burn, MU 3-19: No vehicle for hunting. Duffy Lake, Beaton Lake, Greenstone Mtn roads open." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="365" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Vehicle closures near Kamloops</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 33. WMA means Wildlife Management Area.</text>
+<text x="200" y="65" font-size="14" fill="#8b5a2b" text-anchor="middle">Orange: for hunting only.</text>
+<rect x="6.0" y="87" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M6.0 133 V96 Q6.0 87 15.0 87 H187.0 Q196.0 87 196.0 96 V133 Z" fill="#8b5a2b"/>
+<text x="14.0" y="107" font-size="14" font-weight="bold" fill="#ffffff">Map C13 Skull</text>
+<text x="14.0" y="125" font-size="14" font-weight="bold" fill="#ffffff">Mountain, MU 3-28</text>
+<text x="14.0" y="153" font-size="14" fill="#23261f">Open roads only, or</text>
+<text x="14.0" y="171" font-size="14" fill="#23261f">permit. Sept 1 to Dec</text>
+<text x="14.0" y="189" font-size="14" fill="#23261f">10</text>
+<rect x="204.0" y="87" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M204.0 133 V96 Q204.0 87 213.0 87 H385.0 Q394.0 87 394.0 96 V133 Z" fill="#8b5a2b"/>
+<text x="212.0" y="107" font-size="14" font-weight="bold" fill="#ffffff">Map C15 Lac du Bois,</text>
+<text x="212.0" y="125" font-size="14" font-weight="bold" fill="#ffffff">MUs 3-28, 3-29</text>
+<text x="212.0" y="153" font-size="14" fill="#23261f">Highlighted roads only,</text>
+<text x="212.0" y="171" font-size="14" fill="#23261f">year round</text>
+<rect x="6.0" y="207" width="190.0" height="148" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M6.0 271 V216 Q6.0 207 15.0 207 H187.0 Q196.0 207 196.0 216 V271 Z" fill="#8b5a2b"/>
+<text x="14.0" y="227" font-size="14" font-weight="bold" fill="#ffffff">Map C16 Dewdrop</text>
+<text x="14.0" y="245" font-size="14" font-weight="bold" fill="#ffffff">Rosseau Creek WMA, MU</text>
+<text x="14.0" y="263" font-size="14" font-weight="bold" fill="#ffffff">3-29</text>
+<text x="14.0" y="291" font-size="14" fill="#23261f">Open lines only, year</text>
+<text x="14.0" y="309" font-size="14" fill="#23261f">round</text>
+<rect x="204.0" y="207" width="190.0" height="148" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M204.0 271 V216 Q204.0 207 213.0 207 H385.0 Q394.0 207 394.0 216 V271 Z" fill="#e8590c"/>
+<text x="212.0" y="227" font-size="14" font-weight="bold" fill="#ffffff">Map C5 Greenstone Mtn</text>
+<text x="212.0" y="245" font-size="14" font-weight="bold" fill="#ffffff">Burn, MU 3-19</text>
+<text x="212.0" y="291" font-size="14" fill="#23261f">No vehicle for hunting.</text>
+<text x="212.0" y="309" font-size="14" fill="#23261f">Duffy Lake, Beaton</text>
+<text x="212.0" y="327" font-size="14" fill="#23261f">Lake, Greenstone Mtn</text>
+<text x="212.0" y="345" font-size="14" fill="#23261f">roads open</text>
+</svg>

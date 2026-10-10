@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 236" role="img" aria-label="Bar chart of Region 7A moose seasons, spike fork bulls only. 7-2 to 7-18, 7-23 to 7-30 and 7-38: 10 September to 5 November. 7-37 and 7-39 to 7-41: 15 August to 5 November. Bow only in 7-2 to 7-15: 1 to 9 September." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="236" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Moose: spike fork bulls only</text>
+<rect x="14.0" y="40" width="31.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="40" width="30.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="40" width="30.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="40" width="31.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="40" width="31.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="40" width="31.6" height="160" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="76" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">7-2 to 7-18, 7-23 to 7-30, 7-38</text>
+<rect x="86.4" y="82" width="58.1" height="20" rx="4" fill="#e8590c"/>
+<text x="148" y="97" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 10 to Nov 5</text>
+<text x="14" y="122" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">7-37, 7-39 to 7-41</text>
+<rect x="59.9" y="128" width="84.6" height="20" rx="4" fill="#e8590c"/>
+<text x="148" y="143" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Aug 15 to Nov 5</text>
+<text x="14" y="168" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bow only, 7-2 to 7-15</text>
+<rect x="77.2" y="174" width="9.2" height="20" rx="4" fill="#8b5a2b"/>
+<text x="90" y="189" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 9</text>
+<rect x="14" y="210" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="222" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+<rect x="149.60000000000002" y="210" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="168" y="222" font-size="14" fill="#23261f" text-anchor="start">Bow only</text>
+</svg>

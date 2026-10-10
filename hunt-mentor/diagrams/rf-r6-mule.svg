@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 604" role="img" aria-label="Bar chart of Region 6 mule deer seasons. Haida Gwaii, 6-12 and 6-13: bucks 1 June to 28 February, antlerless 1 September to 28 February. 6-1, 6-2, 6-4 to 6-9 and 6-30: 4 point bucks 10 to 30 September, any antlered buck 1 to 19 October. 4 point bucks from 20 October: to 30 November in 6-7 to 6-9 and 6-30, to 15 November in 6-1, 6-2 and 6-4 to 6-6. Any buck in 6-3, 6-10, 6-11, 6-14 and 6-15: 10 September to 30 November. Bow only: bucks 1 to 9 September in 6-1 to 6-11, 6-14, 6-15 and 6-30; 1 to 10 December for bucks in 6-3, 6-10, 6-11, 6-14 and 6-15, 4 point bucks in 6-7 to 6-9 and 6-30, and antlerless in 6-10, 6-11, 6-14 and 6-15." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="604" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Mule deer seasons</text>
+<rect x="14.0" y="40" width="31.6" height="528" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="40" width="30.6" height="528" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="40" width="30.6" height="528" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="40" width="31.6" height="528" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="40" width="31.6" height="528" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="40" width="31.6" height="528" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="76" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, Haida Gwaii 6-12, 6-13</text>
+<rect x="355.4" y="82" width="30.6" height="20" rx="4" fill="#6a4c93"/>
+<rect x="14.0" y="82" width="247.7" height="20" rx="4" fill="#6a4c93"/>
+<text x="138" y="97" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">June 1 to Feb 28</text>
+<text x="14" y="122" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Antlerless, Haida Gwaii</text>
+<rect x="77.2" y="128" width="184.5" height="20" rx="4" fill="#6a4c93"/>
+<text x="169" y="143" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Sept 1 to Feb 28</text>
+<text x="14" y="168" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">4 point bucks, 6-1, 6-2, 6-4 to 6-9, 6-30</text>
+<rect x="86.4" y="174" width="21.4" height="20" rx="4" fill="#e8590c"/>
+<text x="112" y="189" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 10 to Sept 30</text>
+<text x="14" y="214" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Any buck, same MUs</text>
+<rect x="107.8" y="220" width="19.4" height="20" rx="4" fill="#e8590c"/>
+<text x="131" y="235" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 1 to Oct 19</text>
+<text x="14" y="260" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">4 point bucks, 6-7 to 6-9, 6-30</text>
+<rect x="127.1" y="266" width="42.8" height="20" rx="4" fill="#e8590c"/>
+<text x="174" y="281" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 20 to Nov 30</text>
+<text x="14" y="306" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">4 point bucks, 6-1, 6-2, 6-4 to 6-6</text>
+<rect x="127.1" y="312" width="27.5" height="20" rx="4" fill="#e8590c"/>
+<text x="159" y="327" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 20 to Nov 15</text>
+<text x="14" y="352" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Any buck, 6-3, 6-10, 6-11, 6-14, 6-15</text>
+<rect x="86.4" y="358" width="83.6" height="20" rx="4" fill="#e8590c"/>
+<text x="174" y="373" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 10 to Nov 30</text>
+<text x="14" y="398" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, bow, 6-1 to 6-11, 6-14, 6-15, 6-30</text>
+<rect x="77.2" y="404" width="9.2" height="20" rx="4" fill="#8b5a2b"/>
+<text x="90" y="419" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 9</text>
+<text x="14" y="444" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, bow, 6-3, 6-10, 6-11, 6-14, 6-15</text>
+<rect x="169.9" y="450" width="10.2" height="20" rx="4" fill="#8b5a2b"/>
+<text x="184" y="465" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Dec 1 to Dec 10</text>
+<text x="14" y="490" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">4 point bucks, bow, 6-7 to 6-9, 6-30</text>
+<rect x="169.9" y="496" width="10.2" height="20" rx="4" fill="#8b5a2b"/>
+<text x="184" y="511" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Dec 1 to Dec 10</text>
+<text x="14" y="536" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Antlerless, bow, 6-10, 6-11, 6-14, 6-15</text>
+<rect x="169.9" y="542" width="10.2" height="20" rx="4" fill="#8b5a2b"/>
+<text x="184" y="557" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Dec 1 to Dec 10</text>
+<rect x="14" y="578" width="14" height="14" rx="3" fill="#6a4c93"/>
+<text x="32" y="590" font-size="14" fill="#23261f" text-anchor="start">Haida Gwaii</text>
+<rect x="127.4" y="578" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="145" y="590" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+<rect x="263.0" y="578" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="281" y="590" font-size="14" fill="#23261f" text-anchor="start">Bow only</text>
+</svg>

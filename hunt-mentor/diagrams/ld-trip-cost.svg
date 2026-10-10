@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 344" font-family="sans-serif" role="img" aria-label="Bar chart of estimated first trip cost per person, split two ways, in Canadian dollars, opinion. Alberta bird trip: 550 to 800. Yukon bird trip: 750 to 1,000. Saskatchewan bird trip: 900 to 1,200. Manitoba deer trip: 1,200 to 1,500. Alaska bird trip: about 2,300 to 2,900. Fuel assumed at 22 cents per kilometre. Guided big game is a separate budget: get quotes.">
+<rect x="0" y="0" width="400" height="344" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">First trip cost, each, split two ways</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">CAD, my estimates and opinion</text>
+<line x1="120.0" y1="84" x2="120.0" y2="284" stroke="#dfe6d3" stroke-width="2"/>
+<text x="120" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">0</text>
+<line x1="205.3" y1="84" x2="205.3" y2="284" stroke="#dfe6d3" stroke-width="2"/>
+<text x="205.333" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1000</text>
+<line x1="290.7" y1="84" x2="290.7" y2="284" stroke="#dfe6d3" stroke-width="2"/>
+<text x="290.667" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2000</text>
+<line x1="376.0" y1="84" x2="376.0" y2="284" stroke="#dfe6d3" stroke-width="2"/>
+<text x="376" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3000</text>
+<text x="8" y="108" font-size="14" font-weight="bold" fill="#2f3a2b">Alberta</text>
+<rect x="166.9" y="92" width="21.3" height="22" rx="4" fill="#4a7fb0"/>
+<text x="194.267" y="108" font-size="14" font-weight="bold" fill="#2f3a2b">$550 to $800</text>
+<text x="8" y="148" font-size="14" font-weight="bold" fill="#2f3a2b">Yukon</text>
+<rect x="184.0" y="132" width="21.3" height="22" rx="4" fill="#4a7fb0"/>
+<text x="211.333" y="148" font-size="14" font-weight="bold" fill="#2f3a2b">$750 to $1,000</text>
+<text x="8" y="188" font-size="14" font-weight="bold" fill="#2f3a2b">Saskatchewan</text>
+<rect x="196.8" y="172" width="25.6" height="22" rx="4" fill="#4a7fb0"/>
+<text x="228.4" y="188" font-size="14" font-weight="bold" fill="#2f3a2b">$900 to $1,200</text>
+<text x="8" y="228" font-size="14" font-weight="bold" fill="#2f3a2b">Manitoba</text>
+<rect x="222.4" y="212" width="25.6" height="22" rx="4" fill="#4a7fb0"/>
+<text x="254" y="228" font-size="14" font-weight="bold" fill="#2f3a2b">$1,200 to $1,500</text>
+<text x="8" y="268" font-size="14" font-weight="bold" fill="#2f3a2b">Alaska</text>
+<rect x="316.3" y="252" width="51.2" height="22" rx="4" fill="#e8590c"/>
+<text x="310.267" y="268" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">$2,300 to $2,900</text>
+<text x="200" y="302" font-size="14" fill="#2f3a2b" text-anchor="middle">Birds, except Manitoba (deer). Fuel at $0.22 per km.</text>
+<text x="200" y="322" font-size="14" fill="#2f3a2b" text-anchor="middle">Assumption. Guided big game: get quotes.</text>
+</svg>

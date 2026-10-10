@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 439" role="img" aria-label="Season bar chart: Region 3 grouse and ptarmigan. Dusky, ruffed, spruce grouse: 3-12 to 3-20, 3-26 to 3-44: Sept 10 to Nov 30. Dusky, ruffed, spruce grouse: 3-46: Sept 20 to Nov 30. Grouse, Youth Only: 3-12 to 3-20, 3-26 to 3-44: Sept 1 to Sept 9. New, printed green. Sharp tailed grouse: ✻3-30, 3-31: Sept 10 to Nov 30. ✻ Map C18 closure. Ptarmigan: 3-12 to 3-20, 3-26 to 3-44: Sept 1 to Nov 30." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="439" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 3 grouse and ptarmigan</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 34.</text>
+<text x="74.0" y="83" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="200.0" y="83" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="326.0" y="83" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<line x1="12.0" y1="91" x2="12.0" y2="429" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="136.0" y1="91" x2="136.0" y2="429" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="264.0" y1="91" x2="264.0" y2="429" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="388.0" y1="91" x2="388.0" y2="429" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<text x="12" y="107" font-size="14" font-weight="bold" fill="#23261f">Dusky, ruffed, spruce grouse: 3-12 to 3-20,</text>
+<text x="12" y="125" font-size="14" font-weight="bold" fill="#23261f">3-26 to 3-44</text>
+<rect x="49.2" y="131" width="338.8" height="22" rx="3" fill="#8b5a2b"/>
+<text x="218.6" y="147" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 10 to Nov 30</text>
+<text x="12" y="181" font-size="14" font-weight="bold" fill="#23261f">Dusky, ruffed, spruce grouse: 3-46</text>
+<rect x="90.5" y="187" width="297.5" height="22" rx="3" fill="#8b5a2b"/>
+<text x="239.3" y="203" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 20 to Nov 30</text>
+<text x="12" y="237" font-size="14" font-weight="bold" fill="#23261f">Grouse, Youth Only: 3-12 to 3-20, 3-26 to 3-44</text>
+<rect x="12.0" y="243" width="37.2" height="22" rx="3" fill="#8a9a6b"/>
+<text x="55.2" y="259" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 9</text>
+<text x="12" y="283" font-size="14" fill="#e8590c">New, printed green</text>
+<text x="12" y="315" font-size="14" font-weight="bold" fill="#23261f">Sharp tailed grouse: ✻3-30, 3-31</text>
+<rect x="49.2" y="321" width="338.8" height="22" rx="3" fill="#e8590c"/>
+<text x="218.6" y="337" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 10 to Nov 30</text>
+<text x="12" y="361" font-size="14" fill="#e8590c">✻ Map C18 closure</text>
+<text x="12" y="393" font-size="14" font-weight="bold" fill="#23261f">Ptarmigan: 3-12 to 3-20, 3-26 to 3-44</text>
+<rect x="12.0" y="399" width="376.0" height="22" rx="3" fill="#2f3a2b"/>
+<text x="200.0" y="415" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 1 to Nov 30</text>
+</svg>

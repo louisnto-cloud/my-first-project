@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 324" role="img" aria-label="Bar chart of Region 4 mule deer seasons. 4 point bucks in all Management Units: 10 September to 10 November. Bucks, youth only: 1 to 9 September. Bucks, bow only: 1 to 9 September. Either sex in the Cranbrook Deer Hunt area of 4-3 to 4-5 and 4-20, Map D27: 5 to 31 January." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="324" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Mule deer seasons</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">All MUs: 4-1 to 4-9, 4-14 to 4-40</text>
+<rect x="14.0" y="60" width="31.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="60" width="30.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="60" width="30.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="60" width="31.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="60" width="31.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="60" width="31.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="96" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">4 point bucks, all MUs</text>
+<rect x="86.4" y="102" width="63.2" height="20" rx="4" fill="#e8590c"/>
+<text x="154" y="117" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 10 to Nov 10</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, youth only, all MUs</text>
+<rect x="77.2" y="148" width="9.2" height="20" rx="4" fill="#4a7fb0"/>
+<text x="90" y="163" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 9</text>
+<text x="14" y="188" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, bow only, all MUs</text>
+<rect x="77.2" y="194" width="9.2" height="20" rx="4" fill="#8b5a2b"/>
+<text x="90" y="209" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 9</text>
+<text x="14" y="234" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Either sex, Cranbrook Deer Hunt, Map D27</text>
+<rect x="205.6" y="240" width="27.5" height="20" rx="4" fill="#6a4c93"/>
+<text x="237" y="255" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Jan 5 to Jan 31</text>
+<rect x="14" y="276" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="288" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+<rect x="149.60000000000002" y="276" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="168" y="288" font-size="14" fill="#23261f" text-anchor="start">Youth only (under 18)</text>
+<rect x="14" y="298" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="32" y="310" font-size="14" fill="#23261f" text-anchor="start">Bow only</text>
+<rect x="105.2" y="298" width="14" height="14" rx="3" fill="#6a4c93"/>
+<text x="123" y="310" font-size="14" fill="#23261f" text-anchor="start">Cranbrook Deer Hunt (new)</text>
+</svg>

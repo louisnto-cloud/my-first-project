@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 304" role="img" aria-label="Animation. A deer, elk or moose is shot inside the Chronic Wasting Disease Management Zone, Management Units 4-1 to 4-8 and 4-20 to 4-25. The head goes to a designated freezer inside the zone for the mandatory test. The brain tissue and spinal column stay in the zone, left at the kill site or a landfill. The tail may cross the zone line and go home. Brain tissue and spinal column may never leave the zone." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="304" fill="#fffaf0"/>
+<text x="200" y="24" font-size="17" fill="#23261f" text-anchor="middle" font-weight="bold">Deer, elk or moose shot in the zone</text>
+<rect x="0" y="36" width="250" height="238" fill="#dfe6d3"/>
+<text x="125" y="56" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">CWD Management Zone</text>
+<text x="325" y="56" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Outside the zone</text>
+<line x1="250" y1="36" x2="250" y2="274" stroke="#c92a2a" stroke-width="3" stroke-dasharray="8 6"/>
+<rect x="150" y="84" width="92" height="40" rx="8" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/><text x="196" y="78" font-size="14" fill="#4a7fb0" text-anchor="middle" font-weight="bold">Freezer</text>
+<rect x="150" y="214" width="92" height="40" rx="8" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/><text x="196" y="208" font-size="14" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Kill site, landfill</text>
+<rect x="290" y="140" width="92" height="40" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/><text x="336" y="134" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Home</text>
+<path d="M30 160 l8 -10 l8 10 z" fill="#e8590c"/><text x="38" y="180" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Kill</text>
+<g><rect x="56" y="118" width="80" height="28" rx="6" fill="#4a7fb0"/><text x="96" y="137" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Head</text>
+<animateTransform attributeName="transform" type="translate" from="0 0" to="100 -28" begin="1s" dur="2s" fill="freeze"/></g>
+<g><rect x="56" y="150" width="80" height="28" rx="6" fill="#8b5a2b"/><text x="96" y="169" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Spine</text>
+<animateTransform attributeName="transform" type="translate" from="0 0" to="100 70" begin="3.5s" dur="2.0s" fill="freeze"/></g>
+<g><rect x="56" y="184" width="80" height="28" rx="6" fill="#8a9a6b"/><text x="96" y="203" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Tail</text>
+<animateTransform attributeName="transform" type="translate" from="0 0" to="240 -38" begin="6s" dur="2.5s" fill="freeze"/></g>
+<text x="200" y="294" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Head to a freezer. Brain and spine stay. Tail may go.</text>
+</svg>

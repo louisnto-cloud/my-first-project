@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 272" role="img" aria-label="Four cards. Bull moose antlers and the species licence stay together on the way home. Please do not shoot a white moose, a request. A collared animal taken lawfully is legal; report it to the Report All Poachers and Polluters line and return the collar. Camelids such as llamas may not be used to hunt in Region 7A." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="272" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Notices to hunters</text>
+<rect x="6" y="40" width="190" height="96" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Bull moose antlers</text>
+<path d="M28.0 110 v-14 l-10 -10 M28.0 96 l8 -8 l4 -6 M36.0 88 l-2 -6 M23.0 91 l-1 -7" fill="none" stroke="#8b5a2b" stroke-width="3" stroke-linecap="round"/>
+<text x="52" y="88" font-size="14" fill="#23261f" text-anchor="start">Keep them with the</text>
+<text x="52" y="106" font-size="14" fill="#23261f" text-anchor="start">licence on the way</text>
+<text x="52" y="124" font-size="14" fill="#23261f" text-anchor="start">home</text>
+<rect x="204" y="40" width="190" height="96" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">White moose</text>
+<text x="212" y="88" font-size="14" fill="#23261f" text-anchor="start">Please do not shoot</text>
+<text x="212" y="106" font-size="14" fill="#23261f" text-anchor="start">one. A request</text>
+<rect x="6" y="144" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M6 154 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
+<text x="101" y="162" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Collared animal</text>
+<rect x="22.0" y="203" width="16" height="30" rx="3" fill="#2f3a2b"/><rect x="25.0" y="207" width="10" height="18" fill="#ffffff"/>
+<text x="52" y="210" font-size="14" fill="#23261f" text-anchor="start">Legal if lawful.</text>
+<text x="52" y="228" font-size="14" fill="#23261f" text-anchor="start">Report to RAPP,</text>
+<text x="52" y="246" font-size="14" fill="#23261f" text-anchor="start">return the collar</text>
+<rect x="204" y="144" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M204 154 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
+<text x="299" y="162" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Camelids, such as</text>
+<text x="299" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">llamas</text>
+<text x="212" y="210" font-size="14" fill="#23261f" text-anchor="start">Not for hunting in</text>
+<text x="212" y="228" font-size="14" fill="#23261f" text-anchor="start">Region 7A</text>
+</svg>

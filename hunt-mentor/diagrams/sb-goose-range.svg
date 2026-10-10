@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A ruler from 0 to 50 metres from your hide. A green band marks the shooting zone, inside 35 metres. A goose at about 33 metres is ticked. A goose at 50 metres is crossed out: it looks close because it is big, but it is too far. Wait for feet down inside 35 metres, 38 yards, and aim at the head. Tip.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Geese look close. Count the metres (Tip)</text>
+  <line x1="30" y1="230" x2="390" y2="230" stroke="#2f3a2b" stroke-width="2"/>
+  <line x1="30.0" y1="224" x2="30.0" y2="236" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="30.0" y="254" font-size="13" fill="#2f3a2b" text-anchor="middle">0 m</text>
+  <line x1="94.0" y1="224" x2="94.0" y2="236" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="94.0" y="254" font-size="13" fill="#2f3a2b" text-anchor="middle">10 m</text>
+  <line x1="158.0" y1="224" x2="158.0" y2="236" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="158.0" y="254" font-size="13" fill="#2f3a2b" text-anchor="middle">20 m</text>
+  <line x1="222.0" y1="224" x2="222.0" y2="236" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="222.0" y="254" font-size="13" fill="#2f3a2b" text-anchor="middle">30 m</text>
+  <line x1="286.0" y1="224" x2="286.0" y2="236" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="286.0" y="254" font-size="13" fill="#2f3a2b" text-anchor="middle">40 m</text>
+  <line x1="350.0" y1="224" x2="350.0" y2="236" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="350.0" y="254" font-size="13" fill="#2f3a2b" text-anchor="middle">50 m</text>
+  <rect x="30" y="200" width="224.0" height="22" fill="#2f6e3b" opacity=".25"/>
+  <text x="142.0" y="216" font-size="14" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Shoot: inside 35 m</text>
+  <rect x="20" y="214" width="22" height="16" rx="3" fill="#8a9a6b"/>
+  <text x="32" y="276" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You</text>
+  <g transform="translate(241.20000000000002 150) scale(1.0)"><ellipse rx="18" ry="5" fill="#7a6a58"/><circle cx="18" cy="-1" r="4.5" fill="#7a6a58"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#7a6a58"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#7a6a58"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#7a6a58"/></g>
+  <path d="M271.20000000000005 150 l8.0 8.0 l16.0 -20.0" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <g transform="translate(350.0 110) scale(1.0)"><ellipse rx="18" ry="5" fill="#7a6a58"/><circle cx="18" cy="-1" r="4.5" fill="#7a6a58"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#7a6a58"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#7a6a58"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#7a6a58"/></g>
+  <path d="M340.0 50 l20 20 M360.0 50 l-20 20" stroke="#c0392b" stroke-width="5"/>
+  <text x="350.0" y="156" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">50 m: too far</text>
+  <text x="200" y="292" font-size="14" fill="#2f3a2b" text-anchor="middle">Feet down, inside 35 m (38 yd). Aim at the head</text>
+</svg>

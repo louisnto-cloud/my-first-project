@@ -12,12 +12,23 @@ checked: 2026-10-01
 > [!warn]
 > Every rule here is wisdom, not law, unless it says "also law" with a synopsis page. The official regulations are the law.
 
+- Fifty rules in six groups. Each group is one card sheet. Blue LAW badge: also law.
+- Read them with your brother every August. Tip.
+
+```more how the rules work
 - Six groups: safety, ethics, finding game, the shot, after the shot, camp and people. Tip.
 - Where a rule is also law, the certainty and page are given. Everything else is opinion.
 - Read them with your brother. Argue about them. That is how they stick. Tip.
+```
 
 ## Safety
 
+```diagram lc-gr50-safety
+```
+
+- Prove it unloaded. Every time, every firearm. Tip.
+
+```more rules 1 to 10 in full
 > [!rule]
 > - **1.** Every firearm is loaded until you have proved it yourself. [[ACTS]] and [[PROVE]].
 > - **2.** The muzzle points at dirt or sky. Never at anything you are not willing to destroy.
@@ -29,9 +40,16 @@ checked: 2026-10-01
 > - **8.** Tell someone where and when. Leave a [[Trip plan]].
 > - **9.** Cold, wet and tired is when accidents happen. Eat, drink, turn around.
 > - **10.** The whisky stays in camp until the guns are cased. Also the synopsis ethics code (99%, page 77).
+```
 
 ## Ethics
 
+```diagram lc-gr50-ethics
+```
+
+- Clean kill or no shot. Meat first. Tip.
+
+```more rules 11 to 18 in full
 > [!rule]
 > - **11.** If you have to ask whether it is legal, today it is not. Find out at home.
 > - **12.** The animal gets a clean death or no shot at all. "Strive to make every kill a clean one" (99%, page 77).
@@ -41,9 +59,16 @@ checked: 2026-10-01
 > - **16.** Ask once, thank twice. One yes is one season (99% that the ethics code says so, page 77).
 > - **17.** Report what you see. [[RAPP]] 1 877 952 7277 (99%, page 9).
 > - **18.** Never shoot an animal you cannot name, count the points on, and sex. Also law in antler and sex restricted seasons (95%, pages 14 and 34).
+```
 
 ## Finding game
 
+```diagram lc-gr50-finding
+```
+
+- Wind first, then glass, then glass again. Tip.
+
+```more rules 19 to 28 in full
 > [!rule]
 > - **19.** Deer are where the food is, the water is near, and the people are not.
 > - **20.** Hunt the wind first and the map second. [[Thermals]] run uphill in the morning and down at night.
@@ -55,9 +80,16 @@ checked: 2026-10-01
 > - **26.** In November, find the does and the bucks will find you.
 > - **27.** Grouse live on edges: old road, young fir, berry patch, creek.
 > - **28.** Ducks go where ducks were yesterday, unless you shot there yesterday.
+```
 
 ## The shot
 
+```diagram lc-gr50-shot
+```
+
+- No vital, no shot. Rest the rifle. Tip.
+
+```more rules 29 to 35 in full
 > [!rule]
 > - **29.** If you cannot see a vital, there is no shot. Brush is not a reason, it is an excuse.
 > - **30.** Rest the rifle on something. Offhand is for 50 m and under.
@@ -66,9 +98,16 @@ checked: 2026-10-01
 > - **33.** Broadside or quartering away. Head on and going away are gut shots waiting to happen.
 > - **34.** Never shoot at a running deer you have not already hit.
 > - **35.** Never shoot at a sound, a colour or a shape. Also the law: identify your target, and shooting any wildlife you cannot lawfully take is an offence (95%, pages 11 and 12).
+```
 
 ## After the shot
 
+```diagram lc-gr50-after
+```
+
+- Mark, wait, tag, then touch. Most of these are law.
+
+```more rules 36 to 42 in full
 > [!rule]
 > - **36.** Before you move, mark where it stood and where you last saw it.
 > - **37.** Wait 20 minutes. Longer on a gut shot. A pushed deer runs a kilometre. A left deer lies down.
@@ -77,9 +116,16 @@ checked: 2026-10-01
 > - **40.** Guts out within the hour. Hide off in warm weather. Meat cool, dry and off the ground.
 > - **41.** Evidence of sex stays attached, and antlers stay with the skull in a 4 point season. Also law (99%, page 15).
 > - **42.** A [[Record of Receipt]] goes with any meat that travels without you. Also law (99%, page 15).
+```
 
 ## Camp and people
 
+```diagram lc-gr50-camp
+```
+
+- Share, never sell. Teach the kid. Tip.
+
+```more rules 43 to 50 in full
 > [!rule]
 > - **43.** Leave camp cleaner than you found it.
 > - **44.** The hunter already on the ridge owns it for the morning. Find your own.
@@ -89,6 +135,7 @@ checked: 2026-10-01
 > - **48.** The hiker you meet decides what the public thinks of hunters. Be the good one.
 > - **49.** Teach the kid, not the trophy. "Be aware that you are a mentor when youth are observing" (99%, page 77).
 > - **50.** Go home before the storm, before dark, before the argument. There is always next season.
+```
 
 ```checklist s6-rules
 Read all 50 with my brother before opening day

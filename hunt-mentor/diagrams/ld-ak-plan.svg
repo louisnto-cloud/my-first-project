@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 526" font-family="sans-serif" role="img" aria-label="Timeline of Alaska paperwork for a September bird trip. Winter: draw permit applications for the next season, dates VERIFY. June: buy the Alaska nonresident alien licence, then file ATF Form 6NIA. 4 to 6 weeks later: approval, valid one year. Before you go: CBSA Form BSF407 card, stamps, licences and passports in one folder. September: drive through Yukon for ptarmigan, grouse and ducks.">
+<rect x="0" y="0" width="400" height="526" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Alaska: the paperwork calendar</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">For a September bird trip</text>
+<line x1="122" y1="68" x2="122" y2="496" stroke="#8a9a6b" stroke-width="5"/>
+<text x="108" y="82" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">Winter</text>
+<circle cx="122" cy="78" r="8" fill="#e8590c" stroke="#fffaf0" stroke-width="3"/>
+<g transform="translate(360 86) scale(0.8)"><rect x="-24" y="-18" width="48" height="40" rx="4" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/><rect x="-24" y="-18" width="48" height="11" fill="#e8590c"/><path d="M-13 -23 v9 M13 -23 v9" stroke="#2f3a2b" stroke-width="3"/><g fill="#8a9a6b"><rect x="-17" y="-1" width="7" height="6"/><rect x="-4" y="-1" width="7" height="6"/><rect x="9" y="-1" width="7" height="6"/><rect x="-17" y="10" width="7" height="6"/><rect x="-4" y="10" width="7" height="6" fill="#e8590c"/></g></g>
+<text x="140" y="84" font-size="15" fill="#2f3a2b">Draw permit applications</text>
+<text x="140" y="103" font-size="15" fill="#2f3a2b">for next season. Dates:</text>
+<text x="140" y="122" font-size="15" fill="#2f3a2b">VERIFY.</text>
+<text x="108" y="183" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">June</text>
+<circle cx="122" cy="179" r="8" fill="#e8590c" stroke="#fffaf0" stroke-width="3"/>
+<g transform="translate(360 187) scale(0.8)"><rect x="-24" y="-18" width="48" height="30" rx="3" fill="#4a7fb0" stroke="#2f3a2b" stroke-width="2.5"/><path d="M-30 14 h60 l-4 6 h-52 z" fill="#2f3a2b"/><path d="M-14 -6 h28 M-14 2 h18" stroke="#fff" stroke-width="2.5"/></g>
+<text x="140" y="185" font-size="15" fill="#2f3a2b">Buy the Alaska licence,</text>
+<text x="140" y="204" font-size="15" fill="#2f3a2b">then file ATF Form 6NIA.</text>
+<text x="108" y="265" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">4 to 6 weeks</text>
+<circle cx="122" cy="261" r="8" fill="#e8590c" stroke="#fffaf0" stroke-width="3"/>
+<g transform="translate(360 269) scale(0.8)"><rect x="-20" y="-22" width="40" height="44" rx="3" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/><path d="M-13 -12 h26 M-13 -4 h26 M-13 4 h18" stroke="#8a9a6b" stroke-width="2.5"/><path d="M8 18 l18 -26 l5 3 l-18 26 l-6 2 z" fill="#e8590c"/></g>
+<text x="140" y="267" font-size="15" fill="#2f3a2b">Approval. Valid one year</text>
+<text x="140" y="286" font-size="15" fill="#2f3a2b">(85%).</text>
+<text x="108" y="347" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">Before you go</text>
+<circle cx="122" cy="343" r="8" fill="#e8590c" stroke="#fffaf0" stroke-width="3"/>
+<g transform="translate(360 351) scale(0.8)"><rect x="-18" y="-22" width="36" height="44" rx="3" fill="#3b4a7a"/><circle cx="0" cy="-3" r="8" fill="none" stroke="#d9a400" stroke-width="2"/><path d="M-9 12 h18" stroke="#d9a400" stroke-width="2.5"/></g>
+<text x="140" y="349" font-size="15" fill="#2f3a2b">BSF407 card, stamps,</text>
+<text x="140" y="368" font-size="15" fill="#2f3a2b">licences, passports in one</text>
+<text x="140" y="387" font-size="15" fill="#2f3a2b">folder.</text>
+<text x="108" y="448" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">September</text>
+<circle cx="122" cy="444" r="8" fill="#e8590c" stroke="#fffaf0" stroke-width="3"/>
+<g transform="translate(360 452) scale(0.8)"><path d="M-30 8 v-12 h28 v-10 h18 l10 10 h4 v12 z" fill="#4a7fb0"/><circle cx="-18" cy="10" r="6" fill="#2f3a2b"/><circle cx="18" cy="10" r="6" fill="#2f3a2b"/><rect x="0" y="-11" width="11" height="7" fill="#fff"/></g>
+<text x="140" y="450" font-size="15" fill="#2f3a2b">Drive through Yukon.</text>
+<text x="140" y="469" font-size="15" fill="#2f3a2b">Ptarmigan, grouse, ducks.</text>
+</svg>

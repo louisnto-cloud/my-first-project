@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 383" role="img" aria-label="Cards: Mission: in the regulation, not printed. 400 m road bands, 2-8: Florence Lake FSR, Map 5.1-1/17 roads, Lost Creek, Terepocki, Lease, Murdo, Mount Kettley, Salsbury FSRs, Norrish Creek roads. Hwy 7, east of Mission: Shot only within 150 m, to Highway 1. Nicomen: Shot only lowland (Schedule 9 s. 9). Five No Shooting pieces (Schedule 5 s. 63)." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="383" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Mission: in the regulation, not printed</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Closed Areas Regulation. Hunting allowed in the</text>
+<text x="200" y="65" font-size="14" fill="#8b5a2b" text-anchor="middle">road bands (95%). FSR: Forest Service Road.</text>
+<rect x="6.0" y="87" width="190.0" height="166" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6.0 133 V96 Q6.0 87 15.0 87 H187.0 Q196.0 87 196.0 96 V133 Z" fill="#e8590c"/>
+<text x="14.0" y="107" font-size="14" font-weight="bold" fill="#ffffff">400 m road bands, 2-8</text>
+<text x="14.0" y="153" font-size="14" fill="#23261f">Florence Lake FSR, Map</text>
+<text x="14.0" y="171" font-size="14" fill="#23261f">5.1-1/17 roads, Lost</text>
+<text x="14.0" y="189" font-size="14" fill="#23261f">Creek, Terepocki,</text>
+<text x="14.0" y="207" font-size="14" fill="#23261f">Lease, Murdo, Mount</text>
+<text x="14.0" y="225" font-size="14" fill="#23261f">Kettley, Salsbury FSRs,</text>
+<text x="14.0" y="243" font-size="14" fill="#23261f">Norrish Creek roads</text>
+<rect x="204.0" y="87" width="190.0" height="166" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M204.0 133 V96 Q204.0 87 213.0 87 H385.0 Q394.0 87 394.0 96 V133 Z" fill="#4a7fb0"/>
+<text x="212.0" y="107" font-size="14" font-weight="bold" fill="#ffffff">Hwy 7, east of</text>
+<text x="212.0" y="125" font-size="14" font-weight="bold" fill="#ffffff">Mission</text>
+<text x="212.0" y="153" font-size="14" fill="#23261f">Shot only within 150 m,</text>
+<text x="212.0" y="171" font-size="14" fill="#23261f">to Highway 1</text>
+<rect x="6.0" y="261" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M6.0 289 V270 Q6.0 261 15.0 261 H187.0 Q196.0 261 196.0 270 V289 Z" fill="#4a7fb0"/>
+<text x="14.0" y="281" font-size="14" font-weight="bold" fill="#ffffff">Nicomen</text>
+<text x="14.0" y="309" font-size="14" fill="#23261f">Shot only lowland</text>
+<text x="14.0" y="327" font-size="14" fill="#23261f">(Schedule 9 s. 9). Five</text>
+<text x="14.0" y="345" font-size="14" fill="#23261f">No Shooting pieces</text>
+<text x="14.0" y="363" font-size="14" fill="#23261f">(Schedule 5 s. 63)</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" font-family="sans-serif" role="img" aria-label="Flowchart before you launch on the Fraser or Pitt. Check streamflow and flood advisories at the River Forecast Centre. Daylight only, logs run after every rain. Personal flotation device on, not stowed. A 10 foot boat belongs in sloughs, side channels and bays, not the main current. While the motor runs every gun is unloaded. Beached, anchored or tied to a fixed blind, you may shoot ducks.">
+<rect x="0" y="0" width="400" height="500" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Before you launch on the Fraser or Pitt</text>
+<rect x="16" y="42" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="66" font-size="15" fill="#2f3a2b">Check streamflow and advisories: River</text>
+<text x="28" y="85" font-size="15" fill="#2f3a2b">Forecast Centre (99%)</text>
+<line x1="200.0" y1="96" x2="200.0" y2="118" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,116 207.0,116 200.0,126" fill="#2f3a2b"/>
+<rect x="16" y="126" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="150" font-size="15" fill="#2f3a2b">Daylight only. Logs run after every rain</text>
+<text x="28" y="169" font-size="15" fill="#2f3a2b">(Tip)</text>
+<line x1="200.0" y1="180" x2="200.0" y2="202" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,200 207.0,200 200.0,210" fill="#2f3a2b"/>
+<rect x="16" y="210" width="368" height="35" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="234" font-size="15" fill="#2f3a2b">PFD on, not stowed (Tip)</text>
+<line x1="200.0" y1="245" x2="200.0" y2="267" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,265 207.0,265 200.0,275" fill="#2f3a2b"/>
+<rect x="16" y="275" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="299" font-size="15" fill="#2f3a2b">10 ft boat: sloughs, side channels and bays,</text>
+<text x="28" y="318" font-size="15" fill="#2f3a2b">not the main current (Tip)</text>
+<line x1="200.0" y1="329" x2="200.0" y2="351" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,349 207.0,349 200.0,359" fill="#2f3a2b"/>
+<rect x="16" y="359" width="368" height="35" rx="8" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="28" y="383" font-size="15" font-weight="bold" fill="#2f3a2b">Motor running: every gun unloaded (95%)</text>
+<line x1="200.0" y1="394" x2="200.0" y2="416" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,414 207.0,414 200.0,424" fill="#2f3a2b"/>
+<rect x="16" y="424" width="368" height="54" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="28" y="448" font-size="15" font-weight="bold" fill="#2f3a2b">Beached, anchored or tied to a fixed blind:</text>
+<text x="28" y="467" font-size="15" font-weight="bold" fill="#2f3a2b">you may shoot ducks (95%)</text>
+</svg>

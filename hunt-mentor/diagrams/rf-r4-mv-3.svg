@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 344" role="img" aria-label="Cards of vehicle closures in Management Units 4-22 to 4-24. White River and Bull River in 4-22 to 4-24: closed for hunting use 1 September to 30 June. 4-22: Baynes Lake, Powerplant, Pickering Hills and Sheep Mountain, and Galbraith Creek closed to all vehicles; six watershed groups closed for hunting use in spring and 1 September to 28 February; the main Harrison Creek Forest Service Road open. 4-23: Chauncey Todhunter, Grave Prairie, Corbin, Weigert, Upper Elk and Fording, and Alexander Creek closed to all vehicles, snowmobiles allowed where noted; Barnes Lake closed for hunting use. 4-24: upper Mutton Creek closed to all vehicles; seven watersheds closed for hunting use in spring and 1 September to 28 February." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="344" fill="#fffaf0"/>
+<text x="200" y="26" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">Vehicle closures, MUs 4-22 to 4-24</text>
+<rect x="6" y="40" width="190" height="150" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MUs 4-22 to 4-24</text>
+<text x="14" y="88" font-size="14" fill="#23261f" text-anchor="start">✖ White River and Bull</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">River</text>
+<rect x="204" y="40" width="190" height="150" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 4-22</text>
+<text x="212" y="88" font-size="14" fill="#23261f" text-anchor="start">★ Baynes Lake,</text>
+<text x="212" y="106" font-size="14" fill="#23261f" text-anchor="start">Powerplant, Pickering</text>
+<text x="212" y="124" font-size="14" fill="#23261f" text-anchor="start">Hills, Sheep Mtn.,</text>
+<text x="212" y="142" font-size="14" fill="#23261f" text-anchor="start">Galbraith Creek. ◆ six</text>
+<text x="212" y="160" font-size="14" fill="#23261f" text-anchor="start">watershed groups.</text>
+<text x="212" y="178" font-size="14" fill="#23261f" text-anchor="start">Harrison Creek FSR open</text>
+<rect x="6" y="198" width="190" height="132" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M6 208 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="101" y="216" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 4-23</text>
+<text x="14" y="246" font-size="14" fill="#23261f" text-anchor="start">★ Chauncey Todhunter,</text>
+<text x="14" y="264" font-size="14" fill="#23261f" text-anchor="start">Grave Prairie, Corbin,</text>
+<text x="14" y="282" font-size="14" fill="#23261f" text-anchor="start">Weigert, Upper Elk and</text>
+<text x="14" y="300" font-size="14" fill="#23261f" text-anchor="start">Fording, Alexander</text>
+<text x="14" y="318" font-size="14" fill="#23261f" text-anchor="start">Creek. ◆ Barnes Lake</text>
+<rect x="204" y="198" width="190" height="132" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M204 208 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="299" y="216" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 4-24</text>
+<text x="212" y="246" font-size="14" fill="#23261f" text-anchor="start">★ Upper Mutton Creek. ◆</text>
+<text x="212" y="264" font-size="14" fill="#23261f" text-anchor="start">seven watersheds</text>
+</svg>

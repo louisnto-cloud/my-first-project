@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 438" role="img" aria-label="Bar chart of Region 1 black tailed deer seasons on a July to June year. Bucks in all Management Units 1-1 to 1-15: 10 September to 10 December, and bow only 25 August to 9 September. Antlerless in the Special Areas on Maps A1, A10, A13, A14, A19, A20 and A32: 10 September to 10 December, and bow only 25 August to 9 September. Youth antlerless in 1-1, 1-2 and 1-4 to 1-6: 10 September to 10 December, and youth bow only 25 August to 9 September. Denman and Hornby open 5 October." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="438" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Black tailed deer seasons</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">Denman and Hornby open Oct 5 (footnote)</text>
+<rect x="14.0" y="60" width="31.6" height="298" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="60" width="30.6" height="298" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="60" width="30.6" height="298" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="60" width="31.6" height="298" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="60" width="31.6" height="298" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="60" width="31.6" height="298" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="96" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, 1-1 to 1-15</text>
+<rect x="86.4" y="102" width="93.8" height="20" rx="4" fill="#e8590c"/>
+<text x="184" y="117" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 10 to Dec 10</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, bow only, 1-1 to 1-15</text>
+<rect x="70.1" y="148" width="16.3" height="20" rx="4" fill="#8b5a2b"/>
+<text x="90" y="163" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Aug 25 to Sept 9</text>
+<text x="14" y="188" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Antlerless, Special Areas (maps)</text>
+<rect x="86.4" y="194" width="93.8" height="20" rx="4" fill="#6a4c93"/>
+<text x="184" y="209" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 10 to Dec 10</text>
+<text x="14" y="234" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Antlerless, Special Areas, bow only</text>
+<rect x="70.1" y="240" width="16.3" height="20" rx="4" fill="#8b5a2b"/>
+<text x="90" y="255" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Aug 25 to Sept 9</text>
+<text x="14" y="280" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Antlerless youth, 1-1, 1-2, 1-4 to 1-6</text>
+<rect x="86.4" y="286" width="93.8" height="20" rx="4" fill="#4a7fb0"/>
+<text x="184" y="301" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 10 to Dec 10</text>
+<text x="14" y="326" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Antlerless youth bow, same MUs</text>
+<rect x="70.1" y="332" width="16.3" height="20" rx="4" fill="#2c5d86"/>
+<text x="90" y="347" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Aug 25 to Sept 9</text>
+<rect x="14" y="368" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="380" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+<rect x="149.60000000000002" y="368" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="168" y="380" font-size="14" fill="#23261f" text-anchor="start">Bow only</text>
+<rect x="14" y="390" width="14" height="14" rx="3" fill="#6a4c93"/>
+<text x="32" y="402" font-size="14" fill="#23261f" text-anchor="start">Special Areas, Maps A1, A10, A13, A14, A19, A20, A32</text>
+<rect x="14" y="412" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="32" y="424" font-size="14" fill="#23261f" text-anchor="start">Youth only (under 18)</text>
+<rect x="201.4" y="412" width="14" height="14" rx="3" fill="#2c5d86"/>
+<text x="219" y="424" font-size="14" fill="#23261f" text-anchor="start">Youth bow only</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 310" font-family="sans-serif" role="img" aria-label="Top view from your hide on shore. A green zone from 20 to 30 metres holds the decoys: that is where decoy shots happen. An orange dashed line marks your maximum of 35 metres, 38 yards. A duck beyond the line is crossed out: too far, wounded birds. A duck inside the green zone is ticked. Tip.">
+  <rect width="400" height="310" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How far to shoot (Tip)</text>
+  <rect x="0" y="40" width="400" height="230" fill="#4a7fb0" opacity=".25"/>
+  <path d="M80 270 A120 120 0 0 1 320 270" fill="#2f6e3b" opacity=".18" stroke="#2f6e3b" stroke-width="2"/>
+  <path d="M20 270 A180 180 0 0 1 380 270" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6"/>
+  <rect x="170" y="262" width="60" height="22" rx="4" fill="#8a9a6b"/>
+  <text x="200" y="300" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Your hide</text>
+  <text x="200" y="190" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">20 to 30 m</text>
+  <text x="200" y="208" font-size="14" fill="#2f6e3b" text-anchor="middle">decoy shots</text>
+  <text x="330" y="100" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Max 35 m</text>
+  <text x="330" y="118" font-size="14" fill="#e8590c" text-anchor="middle">(38 yd)</text>
+  <g transform="translate(140 240) scale(0.35)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#8b5a2b"/><circle cx="18" cy="-20" r="9" fill="#8b5a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g><g transform="translate(170 226) scale(0.35)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#8b5a2b"/><circle cx="18" cy="-20" r="9" fill="#8b5a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g><g transform="translate(200 240) scale(0.35)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#8b5a2b"/><circle cx="18" cy="-20" r="9" fill="#8b5a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g><g transform="translate(230 226) scale(0.35)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#8b5a2b"/><circle cx="18" cy="-20" r="9" fill="#8b5a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g><g transform="translate(260 240) scale(0.35)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#8b5a2b"/><circle cx="18" cy="-20" r="9" fill="#8b5a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <g transform="translate(70 70) scale(0.7)"><ellipse rx="18" ry="5" fill="#2f3a2b"/><circle cx="18" cy="-1" r="4.5" fill="#2f3a2b"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#2f3a2b"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#2f3a2b"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#2f3a2b"/></g>
+  <path d="M54 86 l16.0 16.0 M70.0 86 l-16.0 16.0" stroke="#c0392b" stroke-width="5"/>
+  <text x="100" y="64" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="start">Too far:</text>
+  <text x="100" y="82" font-size="14" fill="#c0392b" text-anchor="start">wounded birds</text>
+  <g transform="translate(250 160) scale(0.7)"><ellipse rx="18" ry="5" fill="#8b5a2b"/><circle cx="18" cy="-1" r="4.5" fill="#8b5a2b"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#8b5a2b"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#8b5a2b"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#8b5a2b"/></g>
+  <path d="M276 170 l6.4 6.4 l12.8 -16.0" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+</svg>

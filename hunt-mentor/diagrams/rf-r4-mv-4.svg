@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 412" role="img" aria-label="Cards of vehicle closures in Management Units 4-25 to 4-38. 4-25: Stoddart Creek and Columbia Lake closed to all vehicles; five watershed areas closed for hunting use in spring and 1 September to 28 February. 4-26: Hoodoo Conservation Property, Goldie Creek above 1,525 metres, Dutch Creek Findlay and the Dutch and Brewer drainages closed to all vehicles; Lavington Creek Crown land closed for hunting use. 4-29: east Lardeau River watershed, 20 October to 10 December. 4-30: Duncan Lardeau area closed to all vehicles, Highway 31 open. 4-32 Barnes Creek, 4-35 Ice River and Beaverfoot, and 4-38 Downie and Sorcerer creeks: spring and 1 September to 28 February. 4-34: Holt Creek past about 4.8 kilometres and Lang Creek past about 3.4 kilometres closed to all vehicles." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="412" fill="#fffaf0"/>
+<text x="200" y="26" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">Vehicle closures, MUs 4-25 to 4-38</text>
+<rect x="6" y="40" width="190" height="132" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 4-25</text>
+<text x="14" y="88" font-size="14" fill="#23261f" text-anchor="start">★ Stoddart Creek,</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">Columbia Lake. ◆ five</text>
+<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start">watershed areas</text>
+<rect x="204" y="40" width="190" height="132" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 4-26</text>
+<text x="212" y="88" font-size="14" fill="#23261f" text-anchor="start">★ Hoodoo property,</text>
+<text x="212" y="106" font-size="14" fill="#23261f" text-anchor="start">Goldie Creek, Dutch</text>
+<text x="212" y="124" font-size="14" fill="#23261f" text-anchor="start">Creek Findlay, Dutch</text>
+<text x="212" y="142" font-size="14" fill="#23261f" text-anchor="start">and Brewer drainages. ◆</text>
+<text x="212" y="160" font-size="14" fill="#23261f" text-anchor="start">Lavington Creek</text>
+<rect x="6" y="180" width="190" height="96" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M6 190 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="101" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 4-29</text>
+<text x="14" y="228" font-size="14" fill="#23261f" text-anchor="start">◆ east Lardeau River</text>
+<text x="14" y="246" font-size="14" fill="#23261f" text-anchor="start">watershed, dated Oct 20</text>
+<text x="14" y="264" font-size="14" fill="#23261f" text-anchor="start">to Dec 10</text>
+<rect x="204" y="180" width="190" height="96" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M204 190 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="299" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 4-30</text>
+<text x="212" y="228" font-size="14" fill="#23261f" text-anchor="start">★ Duncan Lardeau area.</text>
+<text x="212" y="246" font-size="14" fill="#23261f" text-anchor="start">Hwy 31 open</text>
+<rect x="6" y="284" width="190" height="114" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M6 294 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="101" y="302" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MUs 4-32, 4-35, 4-38</text>
+<text x="14" y="332" font-size="14" fill="#23261f" text-anchor="start">◆ Barnes Creek, Ice</text>
+<text x="14" y="350" font-size="14" fill="#23261f" text-anchor="start">River and Beaverfoot,</text>
+<text x="14" y="368" font-size="14" fill="#23261f" text-anchor="start">Downie and Sorcerer</text>
+<text x="14" y="386" font-size="14" fill="#23261f" text-anchor="start">creeks</text>
+<rect x="204" y="284" width="190" height="114" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M204 294 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="299" y="302" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 4-34</text>
+<text x="212" y="332" font-size="14" fill="#23261f" text-anchor="start">★ Holt Creek past about</text>
+<text x="212" y="350" font-size="14" fill="#23261f" text-anchor="start">4.8 km, Lang Creek past</text>
+<text x="212" y="368" font-size="14" fill="#23261f" text-anchor="start">about 3.4 km</text>
+</svg>

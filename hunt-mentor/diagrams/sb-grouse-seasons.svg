@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" font-family="sans-serif" role="img" aria-label="Timeline chart of grouse and ptarmigan seasons, September to December, 99 percent. Region 3 grouse: youth only 1 to 9 September, then 10 September to 30 November, 5 of each kind, 10 total a day. Region 3 ptarmigan: 1 September to 30 November, 5 a day. Region 3 sharp tailed grouse in MUs 3-30 and 3-31: 10 September to 30 November, 5 a day, 10 in possession. Region 2 grouse: bow only 1 to 9 September, then 10 September to 15 December, 10 a day. Region 8 grouse: youth only 1 to 9 September, then 10 September to 30 November, bow only 1 to 10 December, 5 total a day.">
+  <rect width="400" height="340" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Grouse seasons (99%)</text>
+  <line x1="130.0" y1="50" x2="130.0" y2="296" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="162.5" y="46" font-size="14" fill="#2f3a2b" text-anchor="middle">Sep</text>
+  <line x1="195.0" y1="50" x2="195.0" y2="296" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="227.5" y="46" font-size="14" fill="#2f3a2b" text-anchor="middle">Oct</text>
+  <line x1="260.0" y1="50" x2="260.0" y2="296" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="292.5" y="46" font-size="14" fill="#2f3a2b" text-anchor="middle">Nov</text>
+  <line x1="325.0" y1="50" x2="325.0" y2="296" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="357.5" y="46" font-size="14" fill="#2f3a2b" text-anchor="middle">Dec</text>
+  <text x="122" y="80.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">R3 grouse</text>
+  <text x="122" y="96.0" font-size="12" fill="#2f3a2b" text-anchor="end">5 each, 10 total</text>
+  <rect x="130.0" y="67.0" width="19.5" height="26.0" rx="4" fill="#c9b79c"/>
+  <rect x="149.5" y="67.0" width="175.5" height="26.0" rx="4" fill="#8b5a2b"/>
+  <text x="122" y="128.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">R3 ptarmigan</text>
+  <text x="122" y="144.0" font-size="12" fill="#2f3a2b" text-anchor="end">5 a day</text>
+  <rect x="130.0" y="115.0" width="195.0" height="26.0" rx="4" fill="#4a7fb0"/>
+  <text x="122" y="176.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">R3 sharp tailed</text>
+  <text x="122" y="192.0" font-size="12" fill="#2f3a2b" text-anchor="end">3-30, 3-31 only</text>
+  <rect x="149.5" y="163.0" width="175.5" height="26.0" rx="4" fill="#e8590c"/>
+  <text x="122" y="224.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">R2 grouse</text>
+  <text x="122" y="240.0" font-size="12" fill="#2f3a2b" text-anchor="end">10 a day</text>
+  <rect x="130.0" y="211.0" width="19.5" height="26.0" rx="4" fill="#c9b79c"/>
+  <rect x="149.5" y="211.0" width="207.0" height="26.0" rx="4" fill="#2f6e3b"/>
+  <text x="122" y="272.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">R8 grouse</text>
+  <text x="122" y="288.0" font-size="12" fill="#2f3a2b" text-anchor="end">5 total a day</text>
+  <rect x="130.0" y="259.0" width="19.5" height="26.0" rx="4" fill="#c9b79c"/>
+  <rect x="149.5" y="259.0" width="175.5" height="26.0" rx="4" fill="#8b5a2b"/>
+  <rect x="325.0" y="259.0" width="21.0" height="26.0" rx="4" fill="#c9b79c"/>
+  <text x="200" y="326" font-size="13" fill="#2f3a2b" text-anchor="middle">Pale: youth only or bow only</text>
+</svg>

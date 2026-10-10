@@ -12,14 +12,29 @@ checked: 2026-10-01
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram ld-okanagan-sketch
+```
+
+- Region 8, pages 66 to 70 (99%). Two hunters, shotguns, no dog.
+- Quail: BC hunting licence only, no species licence (85%).
+
+```more the trip setup in full
 - Region 8 is the Okanagan. Its rules are on pages 66 to 70 of the synopsis (99%).
 - Two hunters, shotguns, no dog, no permission yet. Base: a motel or a friend, your choice.
 - Quotes below are verbatim except hyphens, which this app's style removes.
 - Residents need only the BC hunting licence for quail, chukar and partridge. No species licence (85%).
 - Seasons are set by [[MU]] (Management Unit). Region 8 quail MUs are 8-1 to 8-15 and 8-21 to 8-26 (99%).
+```
 
 ## Season and limits, quoted
 
+```diagram ld-r8-season-grid
+```
+
+- Quail: 10 a day, 30 in possession, each (99%).
+- Shotgun, air gun or bow. No .22 on quail (95%).
+
+```more the table, methods, plug, wing and hours, quoted
 | Bird | MUs | Season | Daily (possession) |
 |---|---|---|---|
 | Quail | 8-1 to 8-15, 8-21 to 8-26 | Oct 1 to Nov 30 | 10 (30) |
@@ -35,6 +50,10 @@ checked: 2026-10-01
 - Page 12: pump or auto shotguns need "a plug that is incapable of holding more than 2 cartridges" (99%).
 - Page 15: "Anyone who possesses or transports a game bird, other than a migratory game bird, must leave attached to the carcass one feathered wing" (99%).
 - Hours, page 12: no hunting game except migratory birds "from one hour after sunset to one hour before sunrise" (99%).
+```
+
+```diagram hf-quail-regions
+```
 
 ## Which MU is which town
 
@@ -47,11 +66,22 @@ checked: 2026-10-01
 | Kelowna east of the lake | 8-10. West side 8-11 |
 | Vernon | 8-22 |
 
+```more how sure the MU list is
 - Read from the page 66 map and the map captions J1 to J18 (80 to 90%, Kelowna is the least certain). The map is approximate; confirm on the official MU map (99%).
 - Every quail MU on this list is open 1 October to 30 November (99%).
+```
 
 ## Where quail live
 
+```diagram hf-quail-cover
+```
+
+```photo g-quail-pair
+```
+
+- Brushy edges next to food, valley floor and first benches (Tip).
+
+```more quail and chukar habitat in full
 - In BC, California quail live mainly in the Okanagan and Kettle valleys and on southeast Vancouver Island (75%).
 - They use farm and suburban edges with thick cover, brushy creeks, grassland edges and open forest (75%).
 - Fall flocks are called [[Covey|coveys]]. They feed mornings and evenings, loaf in shrubs at midday and roost in trees (75%).
@@ -59,9 +89,22 @@ checked: 2026-10-01
 - Look for: rose and blackberry thickets, orchard and vineyard edges, dry creek bottoms with willow, hedgerows next to grain or alfalfa, dusting bowls on dirt lanes (Tip).
 - The low valley floor and the first benches, roughly 280 to 600 m, hold most birds. Snow pushes them lower and closer to houses (Tip).
 - Chukar: dry, steep, rocky slopes and talus, 250 to 500 m in the Thompson. Best numbers run from Kamloops to Lytton (75%). In the Okanagan, try the rocky west facing breaks above the lakes and the Okanagan River channel (Tip).
+```
+
+```diagram hf-quail-day
+```
 
 ## No Shooting areas near the towns, quoted
 
+```diagram ld-oxbows-calendar
+```
+
+```diagram ld-okanagan-noshoot
+```
+
+- Oxbows: open in quail season, on foot from the roads (90%).
+
+```more every map caption, quoted
 - Osoyoos, Map J1, page 69: "Osoyoos Oxbows Motor Vehicle Closed Area and No Shooting or Hunting Area (MU 8-1). The operation of vehicles is restricted to established road shown as open lines. No shooting or hunting from Mar 1 - Sept 30, in the restricted area, including the roadways." (99%) So the oxbows are open to hunting in the quail season, on foot from the established roads (90%, interpretation).
 - Oliver, page 67: "Hunting is prohibited within the Vaseux Migratory Bird Sanctuary and National Wildlife Areas." (99%) No boundary in the synopsis. Blue loon signs mark it (99%). VERIFY the edge before you hunt near Vaseux Lake.
 - Oliver, Map J2: "Oliver Mountain Motor Vehicle Closed Area (MU 8-1)." Vehicles only, not shooting (99%).
@@ -71,9 +114,16 @@ checked: 2026-10-01
 - Kelowna: no No Shooting or No Hunting Area in the Region 8 pages or the Closed Areas Regulation (95%). That does not make it open. The city bylaw, the 100 m rule and private land still apply (99%).
 - Vernon, Map J17: "Swan Lake No Shooting or Hunting Area (MU 8-22)." Map J18: "Kalamalka Lake Park No Shooting or Hunting Area (MU 8-22)." Map J16: "Silver Star Park No Hunting Area" (99%).
 - Hwy 97C, page 10: hunting and shooting banned within 400 m of the Okanagan Connector from Peachland to Aspen Grove (99%).
+```
 
 ## Town bylaws
 
+```diagram ld-town-bylaws
+```
+
+- Bylaws are not in the synopsis (99%). Hunt outside town.
+
+```more the bylaw details
 - Synopsis page 9: "Most municipalities have bylaws restricting and controlling the use of weapons, firearms and bows within their boundaries. Municipal bylaws are NOT included in this synopsis." (99%)
 - Vernon, Firearms and Weapons Bylaw 5399: "No person shall discharge a firearm within the corporate boundaries of the City." Firearm includes air guns. Only farmers protecting crops and bylaw officers are exempt (99%, read in the bylaw).
 - Kelowna, Discharge of Firearms Bylaw No. 9779: no discharge of a firearm within the city limits (70%, search preview of the city page, VERIFY).
@@ -81,9 +131,21 @@ checked: 2026-10-01
 - Oliver, Osoyoos, Summerland, Peachland, Lake Country, West Kelowna: VERIFY each bylaw before you shoot inside town limits.
 - Regional districts (Okanagan Similkameen, Central Okanagan, North Okanagan): VERIFY. Page 9 warns most regional district parks ban firearms (99%).
 - Plain rule for this trip: hunt outside every town boundary. iMapBC shows municipal boundaries (95%).
+```
 
 ## Asking permission
 
+```steps Ask a farmer in 5 steps
+ld-ask-1 | Go in person on day 1, no guns showing.
+ld-ask-2 | Say who you are and exactly what you ask.
+ld-ask-3 | Ask about workers, dogs, irrigation and parking.
+hf-permission-note | Write the OK down: name, date, area, phone.
+ld-ask-5 | Offer birds or help, then text a thank you.
+```
+
+- Cultivated land needs consent (99%). Orchards count (90%).
+
+```more the law, the script and the steps in full
 - Cultivated land, page 9: no hunting "on cultivated land ... without the consent of the owner, lessee, or occupant" (99%). Orchards and vineyards are cultivated land (90%).
 - Go in person on day 1, daylight, clean clothes, no guns showing (Tip).
 - Script: "My brother and I hunt quail with shotguns. Could we walk your brushy edges one weekday morning? We stay 100 m from every building, we never shoot toward the house or the road, and we close every gate." (Tip)
@@ -91,18 +153,38 @@ checked: 2026-10-01
 - Write the OK down with the name, date, area and phone. Keep it in the vest (60%, secondary legal advice).
 - Offer cleaned birds or a hand with a chore. Send a thank you text that night (Tip).
 - Fallback if nobody says yes: Crown land options below (Tip).
+```
 
 ## Safe shooting near orchards and houses
 
+```diagram hf-orchard-buffer
+```
+
+```diagram hf-low-bird
+```
+
+```anim gr-zone-swing Each hunter owns one side. Stop the swing at your partner.
+```
+
+- 100 m from buildings, 15 m from road centres (99%).
+
+```more the rules and the safety habits in full
 - 100 m rule, page 10: no hunting or shooting "within 100 m of a church, school building, school yard, playground, regional district park, dwelling house, or farm or ranch building that is occupied by persons or domestic animals." (99%)
 - Roads, page 10: no shooting across or within the [[Road allowance]] of numbered highways and 2 lane public roads, 15 m from the centre (99%).
 - Shot falls up to 200 m or more. A low bird over a lane, a tractor or a vineyard crew is a no shot (Tip).
 - Only birds above head height with clear sky or open ground beyond. No shots toward the house, road, orchard rows with people, or your partner's side (Tip).
 - Walk side by side 15 to 25 m apart. Each hunter owns one side of the centre line. Stop the swing at your partner (Tip).
 - Blaze orange on both of you. Eye and ear protection on (Tip).
+```
 
 ## Crown land options and iMapBC
 
+```diagram ld-okanagan-parks
+```
+
+- Parks are dry upland. Valley brush holds more quail (Tip).
+
+```more each park and area in full
 - iMapBC is the province's free map tool. Turn on parcel ownership, parks and municipal boundaries. It runs on an iPhone (95%).
 - Page 9: BC Parks hunting is allowed only where the park page says so (99%). Pages that say firearms are permitted for hunting in open season:
   - South Okanagan Grasslands Protected Area: Kilpoola, Mt. Kobau, Chopaka. Vehicles closed except Kruger Mountain Road and the Mt. Kobau road. Above 1,700 m the vehicle ban applies (99%).
@@ -114,6 +196,7 @@ checked: 2026-10-01
 - South Okanagan Wildlife Management Area (WMA), Vaseux to Osoyoos: hunting status not stated on the BC page. VERIFY with the regional office, 250 490 8200 (99% for the number).
 - Honest note: the grassland parks are dry upland. Quail prefer valley bottom brush, so the oxbows near Osoyoos and private edges give better odds (Tip).
 - Grazing lease land needs the lease holder's OK while cattle are on it, page 9 (99%).
+```
 
 ## Offices, hospitals, First Nations
 
@@ -127,14 +210,28 @@ checked: 2026-10-01
 | Hospital, Oliver | South Okanagan General Hospital, 911 McKinney Road, V0H 1T3. 24 hour emergency | 99% |
 | Hospital, Vernon | Vernon Jubilee Hospital, 2101 32nd Street, V1T 5L2. 24 hour emergency | 99% |
 
+```diagram ld-respect
+```
+
+- Syilx Okanagan Nation territory (99%).
+
+```more the nations, reserves, respect and ranges
 - The Okanagan is Syilx Okanagan Nation territory (99%). The Okanagan Nation Alliance "works collectively with our member communities to advance, defend and preserve Syilx Okanagan sovereignty" (99%).
 - Member communities include the Osoyoos Indian Band, Penticton Indian Band (snpink'tn), Westbank First Nation, Okanagan Indian Band near Vernon, Upper and Lower Similkameen and Upper Nicola (99%, Okanagan Indian Band page).
 - Reserve land is private: ask the band office before you hunt on or cross it, page 9 (99%). Map J10 marks I.R. 1 (Indian Reserve 1) north of Kaleden (95%).
 - Respect: no shooting near orchards, homes or workers on reserve land either. Give way to Indigenous harvesters. Pack out shells and birds' remains (Tip).
 - Ranges if you want to pattern first: Vernon Fish and Game Club, "202 Bardolph Lake", members (99%). Penticton Shooting Sports, members (80%). Others: VERIFY.
+```
 
 ## Trip timing and a 2 day plan
 
+```diagram ld-quail-2day
+```
+
+```anim hf-covey-flush A covey bursts. Pick one high bird in your own wedge.
+```
+
+```more timing, weather and the plan in full
 - Best window: late October to mid November. Leaves are down, coveys are formed, and the season runs to 30 November (Tip, season 99%).
 - Weather: calm, cool mornings. Wind over 25 km/h keeps birds in cover (Tip).
 - Day 1, morning: drive down, stop at the Penticton office or a club if open, buy shells, check the MU map and bylaw boundaries (Tip).
@@ -142,6 +239,7 @@ checked: 2026-10-01
 - Day 2, first light: the best permission spot. Walk edges into the sun side by side. Mark where singles land, follow up slowly (Tip).
 - Day 2, midday: rest, clean birds, ice them. Last 2 hours: a second spot or the Osoyoos Oxbows on foot (Tip).
 - Drive home with birds in a cooler, one wing on each (99% for the wing rule).
+```
 
 ```checklist s6-13-okanagan
 MU and quail season checked for the exact spot
@@ -153,6 +251,8 @@ Shells, plug in, blaze orange, eyes and ears
 One wing left on every bird
 Cooler and ice for the drive home
 ```
+
+## Grandpa's rule and common mistakes
 
 > [!rule]
 > If you can see a roof, a road or a person past the bird, the bird wins.

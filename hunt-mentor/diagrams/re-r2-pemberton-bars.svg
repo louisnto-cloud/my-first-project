@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 359" role="img" aria-label="Season bar chart: MU 2-11 road closures by date. Lillooet South FSR, west of 2 km: Apr 1 to June 15, Sept 16 to Nov 30. Birkenhead Lake FSR, west of Branch 10: July 15 to Oct 31. Ryan River FSR, past the 8 km bridge: Year round. South Creek, Salal, Phelix, North Creek, Meager Creek South and North, Birkenhead FSRs: Apr 1 to June 15." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="359" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">MU 2-11 road closures by date</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 27. FSR means Forest Service Road. No motor vehicles.</text>
+<text x="28.0" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jan</text>
+<text x="58.4" y="83" font-size="14" fill="#23261f" text-anchor="middle">Feb</text>
+<text x="88.7" y="83" font-size="14" fill="#23261f" text-anchor="middle">Mar</text>
+<text x="120.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Apr</text>
+<text x="151.6" y="83" font-size="14" fill="#23261f" text-anchor="middle">May</text>
+<text x="183.0" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jun</text>
+<text x="214.4" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jul</text>
+<text x="246.4" y="83" font-size="14" fill="#23261f" text-anchor="middle">Aug</text>
+<text x="277.8" y="83" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="309.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="340.6" y="83" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<text x="372.0" y="83" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
+<line x1="12.0" y1="91" x2="12.0" y2="349" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="43.9" y1="91" x2="43.9" y2="349" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="72.8" y1="91" x2="72.8" y2="349" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="104.7" y1="91" x2="104.7" y2="349" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="135.6" y1="91" x2="135.6" y2="349" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="167.6" y1="91" x2="167.6" y2="349" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="198.5" y1="91" x2="198.5" y2="349" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="230.4" y1="91" x2="230.4" y2="349" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="262.3" y1="91" x2="262.3" y2="349" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="293.2" y1="91" x2="293.2" y2="349" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="325.2" y1="91" x2="325.2" y2="349" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="356.1" y1="91" x2="356.1" y2="349" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="388.0" y1="91" x2="388.0" y2="349" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<text x="12" y="107" font-size="14" font-weight="bold" fill="#23261f">Lillooet South FSR, west of 2 km</text>
+<rect x="104.7" y="113" width="78.3" height="22" rx="3" fill="#8b5a2b"/>
+<rect x="277.8" y="113" width="78.3" height="22" rx="3" fill="#8b5a2b"/>
+<text x="12" y="151" font-size="14" font-weight="bold" fill="#23261f">Apr 1 to June 15, Sept 16 to Nov 30</text>
+<text x="12" y="183" font-size="14" font-weight="bold" fill="#23261f">Birkenhead Lake FSR, west of Branch 10</text>
+<rect x="212.9" y="189" width="112.3" height="22" rx="3" fill="#8b5a2b"/>
+<text x="206.9" y="205" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">July 15 to Oct 31</text>
+<text x="12" y="239" font-size="14" font-weight="bold" fill="#23261f">Ryan River FSR, past the 8 km bridge</text>
+<rect x="12" y="245" width="376" height="22" rx="3" fill="#c92a2a"/>
+<text x="200" y="261" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Year round</text>
+<text x="12" y="295" font-size="14" font-weight="bold" fill="#23261f">South Creek, Salal, Phelix, North Creek,</text>
+<text x="12" y="313" font-size="14" font-weight="bold" fill="#23261f">Meager Creek South and North, Birkenhead FSRs</text>
+<rect x="104.7" y="319" width="78.3" height="22" rx="3" fill="#8b5a2b"/>
+<text x="189.0" y="335" font-size="14" font-weight="bold" fill="#23261f">Apr 1 to June 15</text>
+</svg>

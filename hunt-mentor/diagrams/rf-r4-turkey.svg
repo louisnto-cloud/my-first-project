@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 328" role="img" aria-label="Bar chart of Region 4 turkey seasons. Bearded turkey in spring, all Management Units: 15 April to 25 May, bag 1. Any turkey in 4-1 to 4-4, 4-14 to 4-24 and 4-26 to 4-40: 1 to 15 October. Any turkey in 4-5 to 4-9 and 4-25: 1 October to 30 November. Any turkey in 4-7 to 4-9 and 4-14 to 4-18: 1 to 31 December, private land only. Bearded, bow only, all units: 1 to 30 September. Fall and bow rows share the bag cell *2: 3 a year, 1 spring, 2 fall." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="328" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Turkey seasons</text>
+<rect x="14.0" y="40" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="40" width="30.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="40" width="30.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="40" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="40" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="40" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="76" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bearded, spring, all MUs</text>
+<rect x="307.5" y="82" width="41.8" height="20" rx="4" fill="#e8590c"/>
+<text x="304" y="97" font-size="14" fill="#23261f" text-anchor="end" font-weight="bold">Apr 15 to May 25</text>
+<text x="14" y="122" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Any turkey, most MUs (More)</text>
+<rect x="107.8" y="128" width="15.3" height="20" rx="4" fill="#e8590c"/>
+<text x="127" y="143" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 1 to Oct 15</text>
+<text x="14" y="168" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Any turkey, 4-5 to 4-9, 4-25</text>
+<rect x="107.8" y="174" width="62.2" height="20" rx="4" fill="#e8590c"/>
+<text x="174" y="189" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 1 to Nov 30</text>
+<text x="14" y="214" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Any turkey, 4-7 to 4-9, 4-14 to 4-18</text>
+<rect x="169.9" y="220" width="31.6" height="20" rx="4" fill="#8a9a6b"/>
+<text x="206" y="235" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Dec 1 to Dec 31</text>
+<text x="14" y="260" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bearded, bow only, all MUs</text>
+<rect x="77.2" y="266" width="30.6" height="20" rx="4" fill="#8b5a2b"/>
+<text x="112" y="281" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 30</text>
+<rect x="14" y="302" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="314" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+<rect x="149.60000000000002" y="302" width="14" height="14" rx="3" fill="#8a9a6b"/>
+<text x="168" y="314" font-size="14" fill="#23261f" text-anchor="start">Private land only</text>
+<rect x="307.40000000000003" y="302" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="325" y="314" font-size="14" fill="#23261f" text-anchor="start">Bow only</text>
+</svg>

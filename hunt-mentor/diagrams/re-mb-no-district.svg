@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 317" role="img" aria-label="Grid: MUs in no federal district. Region 2 starts at 2-1, District 2 at 2-2: 2-1. District 3 stops at 3-44: 3-45. District 3 stops at 3-44: 3-46. District 5 stops at 5-15: 5-16. District 7 starts at 7-2: 7-1." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="317" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">MUs in no federal district</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">No federal open season there (90%, my reading).</text>
+<text x="200" y="65" font-size="14" fill="#8b5a2b" text-anchor="middle">VERIFY.</text>
+<rect x="6.0" y="87" width="124.0" height="124" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="68.0" y="121" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">2-1</text>
+<text x="68.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">Region 2 starts</text>
+<text x="68.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">at 2-1,</text>
+<text x="68.0" y="181" font-size="14" fill="#23261f" text-anchor="middle">District 2 at</text>
+<text x="68.0" y="199" font-size="14" fill="#23261f" text-anchor="middle">2-2</text>
+<rect x="138.0" y="87" width="124.0" height="124" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="200.0" y="121" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">3-45</text>
+<text x="200.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">District 3</text>
+<text x="200.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">stops at 3-44</text>
+<rect x="270.0" y="87" width="124.0" height="124" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="332.0" y="121" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">3-46</text>
+<text x="332.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">District 3</text>
+<text x="332.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">stops at 3-44</text>
+<rect x="6.0" y="219" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="68.0" y="253" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">5-16</text>
+<text x="68.0" y="277" font-size="14" fill="#23261f" text-anchor="middle">District 5</text>
+<text x="68.0" y="295" font-size="14" fill="#23261f" text-anchor="middle">stops at 5-15</text>
+<rect x="138.0" y="219" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="200.0" y="253" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">7-1</text>
+<text x="200.0" y="277" font-size="14" fill="#23261f" text-anchor="middle">District 7</text>
+<text x="200.0" y="295" font-size="14" fill="#23261f" text-anchor="middle">starts at 7-2</text>
+</svg>

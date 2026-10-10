@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 231" role="img" aria-label="Animation: a cursor moves from September 2026 to January 2027. Ducks at Heffley Creek, District 3, open 8 September and close after 23 December. Ducks near Mission, District 2, open 10 October and stay open to 24 January. Same day, two towns, two answers." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="231" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Ducks: Heffley Creek or Mission?</text>
+<text x="55.3" y="117" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="127.1" y="117" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="198.8" y="117" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<text x="270.6" y="117" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
+<text x="343.5" y="117" font-size="14" fill="#23261f" text-anchor="middle">Jan</text>
+<line x1="20.0" y1="125" x2="20.0" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="90.6" y1="125" x2="90.6" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="163.5" y1="125" x2="163.5" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="234.1" y1="125" x2="234.1" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="307.1" y1="125" x2="307.1" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="380.0" y1="125" x2="380.0" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<rect x="10" y="49" width="380" height="46" rx="8" fill="#dfe6d3"/>
+<text x="20" y="141" font-size="14" font-weight="bold" fill="#23261f">Heffley Creek, District 3</text>
+<rect x="36.5" y="147" width="251.8" height="20" rx="3" fill="#e8590c"/>
+<text x="380" y="141" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="0.00s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="0.41s" fill="freeze"/>CLOSED</text>
+<text x="380" y="141" font-size="14" font-weight="bold" fill="#5c7a3a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="0.41s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="6.71s" fill="freeze"/>OPEN</text>
+<text x="380" y="141" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="6.71s" fill="freeze"/>CLOSED</text>
+<text x="20" y="191" font-size="14" font-weight="bold" fill="#23261f">Mission, District 2 (2026)</text>
+<rect x="111.8" y="197" width="251.8" height="20" rx="3" fill="#4a7fb0"/>
+<text x="380" y="191" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="0.00s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="2.29s" fill="freeze"/>CLOSED</text>
+<text x="380" y="191" font-size="14" font-weight="bold" fill="#5c7a3a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="2.29s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="8.59s" fill="freeze"/>OPEN</text>
+<text x="380" y="191" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="8.59s" fill="freeze"/>CLOSED</text>
+<g><line x1="20" y1="123" x2="20" y2="223" stroke="#e8590c" stroke-width="3"/><animateTransform attributeName="transform" type="translate" from="0 0" to="360.0 0" begin="0s" dur="9.0s" fill="freeze"/></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="0.00s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="0.41s" fill="freeze"/><text x="200" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sept 1: ducks closed in both</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="0.41s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="2.29s" fill="freeze"/><text x="200" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sept 8: Heffley Creek opens. Mission still</text><text x="200" y="88" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">closed</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="2.29s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="6.71s" fill="freeze"/><text x="200" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Oct 10: Mission opens too</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="6.71s" fill="freeze"/><text x="200" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dec 24: Heffley Creek closed. Mission open</text><text x="200" y="88" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">to Jan 24</text></g>
+</svg>

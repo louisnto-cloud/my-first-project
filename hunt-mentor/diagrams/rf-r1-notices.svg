@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 346" role="img" aria-label="Four notice cards for Region 1. Fallow deer and black tailed deer rules differ, know which one you see. Town bylaws on firearms and bows are not in the synopsis, ask the municipality. Management Unit 1-11: no black bear hunting within 800 metres of the junction of Beaver Cove Road and Telegraph Cove Road. Nanaimo River estuary: a city bylaw allows hunting in only part of it, and only in migratory bird seasons." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="346" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Notices to hunters</text>
+<rect x="6" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Fallow or black</text>
+<text x="101" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">tail?</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">Rules differ. Know</text>
+<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start">which deer is in your</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start">scope</text>
+<rect x="204" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Town bylaws</text>
+<path d="M215.0 114 l13 -12 l13 12 v12 h-26 z" fill="#8b5a2b"/><rect x="225.0" y="118" width="7" height="8" fill="#fffaf0"/>
+<text x="250" y="106" font-size="14" fill="#23261f" text-anchor="start">Not in the</text>
+<text x="250" y="124" font-size="14" fill="#23261f" text-anchor="start">synopsis. Ask the</text>
+<text x="250" y="142" font-size="14" fill="#23261f" text-anchor="start">municipality</text>
+<rect x="6" y="162" width="190" height="150" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M6 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#8b5a2b"/>
+<text x="101" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Beaver Cove, MU 1-11</text>
+<ellipse cx="30.0" cy="238" rx="15" ry="9" fill="#2f3a2b"/><circle cx="44.0" cy="232" r="6" fill="#2f3a2b"/><circle cx="42.0" cy="226" r="2.5" fill="#2f3a2b"/>
+<circle cx="30.0" cy="236" r="18" fill="none" stroke="#c92a2a" stroke-width="3"/><line x1="17.0" y1="249" x2="43.0" y2="223" stroke="#c92a2a" stroke-width="3"/>
+<text x="52" y="228" font-size="14" fill="#23261f" text-anchor="start">No black bears</text>
+<text x="52" y="246" font-size="14" fill="#23261f" text-anchor="start">within 800 m of</text>
+<text x="52" y="264" font-size="14" fill="#23261f" text-anchor="start">the Beaver Cove</text>
+<text x="52" y="282" font-size="14" fill="#23261f" text-anchor="start">and Telegraph Cove</text>
+<text x="52" y="300" font-size="14" fill="#23261f" text-anchor="start">roads junction</text>
+<rect x="204" y="162" width="190" height="150" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M204 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#e8590c"/>
+<text x="299" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Nanaimo River</text>
+<text x="299" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">estuary</text>
+<text x="212" y="228" font-size="14" fill="#23261f" text-anchor="start">City bylaw: part of it</text>
+<text x="212" y="246" font-size="14" fill="#23261f" text-anchor="start">only, in migratory bird</text>
+<text x="212" y="264" font-size="14" fill="#23261f" text-anchor="start">seasons only</text>
+<rect x="6" y="318" width="14" height="14" rx="3" fill="#2f3a2b"/>
+<text x="24" y="330" font-size="14" fill="#23261f" text-anchor="start">Rule</text>
+<rect x="67.6" y="318" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="86" y="330" font-size="14" fill="#23261f" text-anchor="start">Species closed</text>
+<rect x="203.20000000000002" y="318" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="221" y="330" font-size="14" fill="#23261f" text-anchor="start">No shooting</text>
+</svg>

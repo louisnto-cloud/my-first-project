@@ -12,15 +12,29 @@ checked: 2026-10-01
 > [!warn]
 > Study aid only. The official regulations are the law. These are public harvest estimates, not secret spots. Every MU below has closures, private land and reserves inside it. Check the synopsis map and the access maps before you go.
 
+```diagram lc-areas-how
+```
+
+- Source: BC Hunter Sample Survey, residents, 2020 to 2024 (99%).
+- Numbers say where hunters are, not where the deer are. Tip.
+
+```more where the numbers come from
 - Source: BC Big Game Harvest Statistics and the Hunter Sample Survey, both on the BC Data Catalogue (99%).
 - Numbers below are resident hunters, averaged over the five hunt years 2020 to 2024 (99%).
 - They are survey estimates with error ranges, not counts. Treat a 20% gap between two MUs as noise (95%).
 - "Success" below means kills divided by hunters who reported hunting that MU that year (99% for the method, my label).
 - Area labels come from point checks on the official MU map layer and from the synopsis map captions (90%). MU lines are what count. Open the official map.
 - No private ranch is named here, on purpose. Private land is the owner's business. Tip.
+```
 
 ## Your MUs
 
+```diagram lc-areas-bases
+```
+
+- Wells Gray Park is MU (Management Unit) 3-45. No hunting and no firearms there (99%).
+
+```more the MU table
 | Place | MU (90%) |
 |---|---|
 | Heffley Creek, Sun Peaks, Paul Lake | 3-27 |
@@ -41,12 +55,17 @@ checked: 2026-10-01
 | Penticton | 8-9 |
 
 - Wells Gray Park is MU 3-45. No hunting and no firearms there (99%).
+```
 
 ## Region 3 mule deer
 
 ```diagram region3-deer-bars
 ```
 
+- Home MU (Management Unit) 3-27: top three, above average success. Lean.
+- 3-30 is the busiest. Expect trucks on opening weekend. Lean.
+
+```more the mule deer table and the ATV closure
 | MU | Hunters | Deer | Success |
 |---|---|---|---|
 | 3-30 Cache Creek, Clinton | 2,051 | 502 | 24% |
@@ -64,9 +83,16 @@ checked: 2026-10-01
 - Rating: your home MU 3-27 is top three for harvest with above average success. Hunt from the door before you drive. Lean.
 - 3-30 is the busiest MU in the region. Expect trucks on every road on opening weekend. Lean.
 - ATVs for hunting are closed 1 September to 10 December in MUs 3-28, 3-29, 3-30 and part of 3-17 (99%). Walk or use the truck on open roads.
+```
 
 ## Region 3 white tailed deer
 
+```diagram lc-areas-wt
+```
+
+- Thin except 3-36. White tails live on valley hayfields: private land. Lean.
+
+```more the white tail table and bag limit
 | MU | Hunters | Deer | Success |
 |---|---|---|---|
 | 3-36 Bonaparte Lake side, north of Kamloops (80%) | 383 | 160 | 42% |
@@ -80,9 +106,16 @@ checked: 2026-10-01
 - Whole region 2024: 6,892 hunters, about 1,091 white tails (99%).
 - Rating: thin almost everywhere except 3-36. White tails live in the valley bottoms and hayfields, which means private land and permission. Lean.
 - Region 3 white tailed bag limit is 2, either sex, and antlerless is open 10 to 31 October (99%).
+```
 
 ## Region 3 moose, bear and birds
 
+```diagram lc-areas-r3-other
+```
+
+- Region 3 is a grouse and deer region, not a duck region. Lean.
+
+```more the full table
 | Species | Best MUs by average harvest | Note |
 |---|---|---|
 | Moose | 3-12 (43 a year, 11% of hunters), 3-26 (31), 3-28 (21), 3-31 (20), 3-39 (20, 14%) | Almost all LEH. 2024: 3,919 hunters, 341 moose (99%) |
@@ -93,9 +126,16 @@ checked: 2026-10-01
 
 - Region 3 is a grouse region and a deer region. It is not a duck region. Mission is. Lean.
 - Moose spike fork general seasons are short and MU specific. Read page 34 before you plan one (99%).
+```
 
 ## Region 2, from Mission
 
+```diagram lc-areas-r2
+```
+
+- Mission: a duck and bear base. Deer means a ferry or a landowner. Lean.
+
+```more the Region 2 table and local rules
 | Species | Where hunters score | Mission's MU 2-8 |
 |---|---|---|
 | Black tailed deer | 2-16 Bowen and Texada islands (429 a year, 75% success, ferry needed, bag limit 3), 2-11 Pemberton (223, 50%, much private land), 2-12 Powell River (96), 2-5 Sechelt (66), 2-18 Harrison Mills (43, 17%) | 138 hunters, 23 deer, 17% |
@@ -110,9 +150,19 @@ checked: 2026-10-01
 - Region 2 ducks: 10 October 2026 to 24 January 2027 (99%).
 - Fraser Valley Special Area licence, $10, needed in the mapped special area (Map B10) (99%).
 - No shooting within 400 m of listed Fraser Valley Regional District roads (99%). Pitt Addington Marsh is motor vehicle closed year round (99%). No lead shot on the Delta and Surrey dykes (99%).
+```
 
 ## Region 8, the quail trip
 
+```diagram lc-areas-r8
+```
+
+```photo g-quail-male-vernon California quail: 8-1 carries nearly all the harvest.
+```
+
+- Quail: 1 October to 30 November, 10 a day, 30 in possession (99%).
+
+```more the Region 8 table and closures
 | Species | Where hunters score |
 |---|---|
 | Quail | 8-1 Oliver and Osoyoos: 39 hunters, about 249 birds a year, 6.4 each. Every other MU is a handful of birds (95%) |
@@ -127,9 +177,19 @@ checked: 2026-10-01
 - Osoyoos Oxbows closure runs 1 March to 30 September, so it is open in quail season, but vehicles stay on established roads (99%).
 - Vaseux Lake sanctuary and the National Wildlife Areas near Oliver: no hunting (99%). Kaleden and Okanagan Falls: no shooting areas. Skaha Lake: shot only (99%).
 - Hwy 97C and Hwy 3 corridors: no hunting or shooting within 400 m (99%). Municipal bylaws are not in the synopsis (99%).
+```
 
 ## Access and the legal caution
 
+```diagram lc-areas-closers
+```
+
+```anim hf-layers-drop Stack the map layers before every trip.
+```
+
+- Signs are a courtesy. Closures apply with or without one (99%).
+
+```more access rules and map links
 - [[Crown land]] is open to hunting unless something closes it. The things that close it: No Shooting and No Hunting Areas, Motor Vehicle Closed Areas, parks, ecological reserves, grazing leases with livestock on them, in season orders and wildfire closures (99%).
 - Region 3 maps: [gov.bc.ca/thompsonaccess](https://www.gov.bc.ca/thompsonaccess). Region 8: [gov.bc.ca/okanaganaccess](https://www.gov.bc.ca/okanaganaccess). Region 2: [gov.bc.ca/southcoastaccess](https://www.gov.bc.ca/southcoastaccess) (99%).
 - Signs are posted at closures "but it is the hunter's responsibility to recognize closures whether a sign is in place or not" (99%).
@@ -137,6 +197,7 @@ checked: 2026-10-01
 - Lac du Bois and Crown land inside Kamloops city limits: no discharge of firearms or bows (99%).
 - Cultivated land and grazing leases with livestock: owner's or lessee's consent needed (99%). Indian Reserves are private land (99%). Session 5 and Session 6.
 - In season changes are posted at [gov.bc.ca/huntingregulations](https://www.gov.bc.ca/huntingregulations) (99%). Check the night before.
+```
 
 ```checklist s6-areas
 Official MU map opened and my MU confirmed for this trip
@@ -148,6 +209,8 @@ Reserve boundaries checked. No crossing without permission
 In season changes page checked the night before
 Wildfire closures checked (summer and early fall)
 ```
+
+## Grandpa's rule and mistakes
 
 > [!rule]
 > Numbers tell you where hunters are. Your boots tell you where the deer are. Start where the numbers say, then walk a ridge farther than the trucks.

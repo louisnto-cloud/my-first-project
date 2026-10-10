@@ -12,14 +12,29 @@ checked: 2026-10-01
 > [!warn]
 > Study aid only. The official regulations are the law. Trespass Act quotes below come from the BC Laws consolidation read on 2026-10-01; section numbers may differ in the 2018 revision.
 
+```diagram lc-perm-year
+```
+
+- Private land without consent is trespass, and an offence under the Wildlife Act (99%).
+- One yes, one season. Get it in writing (99% on the rule, Tip on the form).
+
+```more the rules in full
 - Hunting on private land without consent is trespass, and game taken that way is an offence under the Wildlife Act too (99%, synopsis page 11, item 19).
 - Cultivated land and leased grazing land with livestock on it need consent even when they are not fenced or posted (99%, page 9).
 - The synopsis ethics code: "Always seek permission from landowners and thank them for the opportunities given" (99%, page 77).
 - One yes, one season. "Unless explicitly stated, permission granted once does not entitle you to access the property on subsequent occasions." (99%, page 77)
 - Get it in writing. The form at the end prints from this app. Tip.
+```
 
 ## The Trespass Act in plain words
 
+```diagram rb-enclosed
+```
+
+- Fence, sign or natural boundary: any one makes it enclosed (99%, page 9).
+- On enclosed land you are presumed to have no consent (85%).
+
+```more the Act in full
 - The synopsis summary: "The provincial Trespass Act limits public access to enclosed private or leased land." (99%, page 9)
 - Land counts as enclosed if any one is true: clearly visible no trespassing signs at each ordinary access point, a lawful fence, or a natural boundary such as a riverbank or a 4 1/2 foot hedge (99%, page 9).
 
@@ -31,9 +46,16 @@ checked: 2026-10-01
 - Peace officers, including conservation officers, may arrest without warrant for trespass (85%, section 10).
 - Signs must be clearly visible and legible in daylight "from the approach to each ordinary point of access" (85%, section 5(1)). A picture with a line through it is enough notice (85%, section 5(4)).
 - "In some areas local clubs may have arrangements with landowners to exclude other hunters and may post No Hunting or No Trespassing signs." (99%, page 9)
+```
 
 ## Cultivated land and grazing leases
 
+```diagram lc-perm-lease
+```
+
+- Cattle on Crown range? The lessee decides (99%, page 9).
+
+```more the law words in full
 "A person is not permitted to hunt on cultivated land or on Crown land which is subject to a grazing lease while the land is occupied by livestock, without the consent of the owner, lessee, or occupant of the land." (99%, synopsis page 9 and page 12, item 53)
 
 "Note: leased land is subject to the Trespass Act, regardless of whether livestock are present." (99%, page 9)
@@ -42,9 +64,22 @@ checked: 2026-10-01
 - A [[Grazing lease]] is Crown land, but with cattle on it you need the lessee's consent. Without cattle, the Trespass Act still applies if it is fenced or posted (99%).
 - No hunting or shooting within 100 m of a dwelling, farm or ranch building occupied by people or animals, permission or not (99%, page 10).
 - Columbian ground squirrel seasons in Region 3 are private land only, with permission (99%, page 34). A good excuse to knock on a door in spring. Tip.
+```
 
 ## How to ask
 
+```steps Ask for permission in 6 steps
+lc-ask-1 | Knock in person, in daylight, off season.
+lc-ask-2 | Say who you are and where you live.
+lc-ask-3 | Ask one question. Then stop talking.
+lc-ask-4 | Offer phone, plate and help. Never money.
+lc-ask-5 | Fill the form together. Keep a photo.
+lc-ask-6 | Thank them. Call before every visit.
+```
+
+- A no is information. Ask who else might say yes. Tip.
+
+```more the script and the full tips
 - In person, in daylight, off season. February to June is best. The week before opening day is worst. Tip.
 - One truck, clean clothes, no firearm visible, no dog loose. Tip.
 - Start with who you are and where you live, not with what you want. Tip.
@@ -55,26 +90,44 @@ checked: 2026-10-01
 - Then stop talking. Let them answer. Tip.
 - A no is information. Thank them and ask if they know anyone who does allow it. Tip.
 - A maybe gets a card with your name, phone and plate, and a promise to call before every visit. Tip.
+```
 
 ## What to offer
 
+```diagram lc-perm-offer
+```
+
+- Ask what would help. Do not guess. Tip.
+
+```more the full list
 - Your phone number and plate before they ask. Tip.
 - To walk, not drive. To park where they say. To shoot only in the directions they say. Tip.
 - To report anything wrong: a cut fence, a sick cow, a stranger's truck. Tip.
 - Help: a day on fence, a load of firewood, a hand at calving. Ask what would help, do not guess. Tip.
 - Meat, if they want it, with a [[Record of Receipt]] if it travels without you (99% that the record is required).
 - Never money. Paid access changes the relationship and can look like guiding without a licence (85%, page 11 on illegal guiding; tip on the rest).
+```
 
 ## Keeping access
 
+```diagram lc-perm-keep
+```
+
+- Any problem on the place, you own it. Tip.
+
+```more the full list
 - Call before every visit, even with a season long yes. Tip.
 - Leave gates as found, stay off wet fields, never block a gate or a lane (99% on gates, page 33; tip on the rest).
 - Stop at the house on the way out and say what you saw and what you took. Tip.
 - A thank you card and a photo of the deer in December. Not on social media. Tip.
 - Bring nobody new without asking first. Your brother is on the form or he is not hunting. Tip.
 - Any problem on the place, you own it, even if it was not you. Fix it, then tell them. Tip.
+```
 
 ## Permission form
+
+```diagram hf-permission-note
+```
 
 Fill it in with the landowner. Keep one copy on your phone and leave one with them. Tip.
 
@@ -111,6 +164,8 @@ Called before this visit
 Thank you sent after the season
 ```
 
+## Grandpa's rule and mistakes
+
 > [!rule]
 > Ask in February, hunt in October, thank in December. Access is a year round job for a two week season.
 
@@ -118,6 +173,11 @@ Thank you sent after the season
 > - Knocking on the door the night before opening day. The answer is no and you deserved it.
 > - Assuming last year's yes is this year's yes. Permission once is not permission forever.
 > - Treating leased Crown range as open because it is Crown. With cattle on it you need the lessee.
+
+## Do this in the field
+
+```diagram sk-fence
+```
 
 > [!field]
 > A deer runs onto posted land and drops. Do not cross. Phone the landowner. No answer? Call the conservation officer line and wait at the fence. Session 13 of Phase 1 covers the rest.

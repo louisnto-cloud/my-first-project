@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 462" font-family="sans-serif" role="img" aria-label="Cards about town bylaws, which are not in the synopsis. Vernon Bylaw 5399: no discharge of a firearm in the city, 99 percent. Kelowna Bylaw 9779: no discharge, 70 percent, VERIFY. Penticton: a bylaw with permit exceptions exists, wording VERIFY. Oliver, Osoyoos, Summerland, Peachland, Lake Country and West Kelowna: VERIFY each. Regional districts: VERIFY, and most regional district parks ban firearms. Plain rule: hunt outside every town boundary, iMapBC shows the boundaries.">
+<rect x="0" y="0" width="400" height="462" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Town bylaws: not in the synopsis</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">Hunt outside every town boundary</text>
+<rect x="16" y="58" width="179" height="94" rx="10" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="26" y="82" font-size="15" font-weight="bold" fill="#23261f">Vernon</text>
+<circle cx="179.0" cy="76" r="11" fill="#e8590c"/><path d="M174.6 71.6 L183.4 80.4 M183.4 71.6 L174.6 80.4" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<text x="26" y="100" font-size="14" fill="#2f3a2b">Bylaw 5399: no</text>
+<text x="26" y="118" font-size="14" fill="#2f3a2b">firearm discharge in</text>
+<text x="26" y="136" font-size="14" fill="#2f3a2b">the city (99%).</text>
+<rect x="205" y="58" width="179" height="94" rx="10" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="215" y="82" font-size="15" font-weight="bold" fill="#23261f">Kelowna</text>
+<circle cx="368.0" cy="76" r="11" fill="#e8590c"/><path d="M363.6 71.6 L372.4 80.4 M372.4 71.6 L363.6 80.4" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<text x="215" y="100" font-size="14" fill="#2f3a2b">Bylaw 9779: no</text>
+<text x="215" y="118" font-size="14" fill="#2f3a2b">discharge (70%).</text>
+<text x="215" y="136" font-size="14" fill="#2f3a2b">VERIFY.</text>
+<rect x="16" y="162" width="179" height="132" rx="10" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="26" y="186" font-size="15" font-weight="bold" fill="#23261f">Penticton</text>
+<circle cx="179.0" cy="180" r="11" fill="#4a7fb0"/><text x="179" y="184.62" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="26" y="204" font-size="14" fill="#2f3a2b">A bylaw with permits</text>
+<text x="26" y="222" font-size="14" fill="#2f3a2b">exists. Wording:</text>
+<text x="26" y="240" font-size="14" fill="#2f3a2b">VERIFY.</text>
+<rect x="205" y="162" width="179" height="132" rx="10" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="215" y="186" font-size="15" font-weight="bold" fill="#23261f">Oliver, Osoyoos</text>
+<text x="215" y="206" font-size="15" font-weight="bold" fill="#23261f">and the rest</text>
+<circle cx="368.0" cy="180" r="11" fill="#4a7fb0"/><text x="368" y="184.62" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="215" y="224" font-size="14" fill="#2f3a2b">Summerland,</text>
+<text x="215" y="242" font-size="14" fill="#2f3a2b">Peachland, Lake</text>
+<text x="215" y="260" font-size="14" fill="#2f3a2b">Country, West</text>
+<text x="215" y="278" font-size="14" fill="#2f3a2b">Kelowna: VERIFY.</text>
+<rect x="16" y="304" width="179" height="134" rx="10" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="26" y="328" font-size="15" font-weight="bold" fill="#23261f">Regional</text>
+<text x="26" y="348" font-size="15" font-weight="bold" fill="#23261f">districts</text>
+<circle cx="179.0" cy="322" r="11" fill="#4a7fb0"/><text x="179" y="326.62" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="26" y="366" font-size="14" fill="#2f3a2b">VERIFY. Most regional</text>
+<text x="26" y="384" font-size="14" fill="#2f3a2b">district parks ban</text>
+<text x="26" y="402" font-size="14" fill="#2f3a2b">firearms (99%).</text>
+<rect x="205" y="304" width="179" height="134" rx="10" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="215" y="328" font-size="15" font-weight="bold" fill="#23261f">Plain rule</text>
+<circle cx="368.0" cy="322" r="11" fill="#8a9a6b"/><path d="M363.05 322 l3.3 3.8499999999999996 l6.6 -7.699999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<text x="215" y="346" font-size="14" fill="#2f3a2b">Outside every town.</text>
+<text x="215" y="364" font-size="14" fill="#2f3a2b">iMapBC shows the</text>
+<text x="215" y="382" font-size="14" fill="#2f3a2b">lines (95%).</text>
+<g transform="translate(235.0 418) scale(0.62)"><rect x="-13" y="-22" width="26" height="44" rx="5" fill="#2f3a2b"/><rect x="-9" y="-16" width="18" height="28" fill="#4a7fb0"/><circle cx="0" cy="17" r="2.5" fill="#fff"/></g>
+<g transform="translate(274.75 418) scale(0.62)"><path d="M-28 -16 l18 -5 l20 5 l18 -5 v36 l-18 5 l-20 -5 l-18 5 z" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2.5"/><path d="M-10 -21 v36 M10 -16 v36" stroke="#2f3a2b" stroke-width="1.5"/><path d="M-22 6 q10 -14 22 -4 t20 -6" stroke="#4a7fb0" stroke-width="3" fill="none"/><circle cx="4" cy="-6" r="4" fill="#e8590c"/></g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 304" font-family="sans-serif" role="img" aria-label="Geese drawn side by side to scale on one line. Brant, small, a coast bird. Cackling goose, 1 to 2 kilograms. Snow goose, about 3 to 3.4 kilograms, white with black wing tips. Canada goose, up to 5.45 kilograms, 1.35 to 5.45 by race, 80 percent. A swan, far bigger and all white, is protected, 90 percent.">
+  <rect width="400" height="304" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Size check: side by side</text>
+  <line x1="10" y1="250" x2="390" y2="250" stroke="#8a9a6b" stroke-width="3"/>
+  <g transform="translate(42 243.4) scale(0.55)"><path d="M-34 0 Q-38 -16 -18 -16 L12 -14 Q26 -10 24 2 Q18 12 -4 12 L-24 12 Q-36 8 -34 0Z" fill="#2f3a2b"/><path d="M14 -12 Q18 -40 24 -46 L30 -44 Q24 -36 22 -10Z" fill="#2f3a2b"/><ellipse cx="28" cy="-48" rx="7" ry="5" fill="#2f3a2b"/><path d="M34 -49 L44 -46 L34 -44Z" fill="#2f3a2b"/><path d="M24 -50 Q28 -44 30 -46" stroke="#fff" stroke-width="3" fill="none"/></g>
+  <text x="42" y="274" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Brant</text>
+  <text x="42" y="292" font-size="13" fill="#2f3a2b" text-anchor="middle">small, coast</text>
+  <g transform="translate(110 242.8) scale(0.6)"><path d="M-34 0 Q-38 -16 -18 -16 L12 -14 Q26 -10 24 2 Q18 12 -4 12 L-24 12 Q-36 8 -34 0Z" fill="#7a6a58"/><path d="M14 -12 Q18 -40 24 -46 L30 -44 Q24 -36 22 -10Z" fill="#2f3a2b"/><ellipse cx="28" cy="-48" rx="7" ry="5" fill="#2f3a2b"/><path d="M34 -49 L44 -46 L34 -44Z" fill="#2f3a2b"/><path d="M24 -50 Q28 -44 30 -46" stroke="#fff" stroke-width="3" fill="none"/></g>
+  <text x="110" y="274" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cackling</text>
+  <text x="110" y="292" font-size="13" fill="#2f3a2b" text-anchor="middle">1 to 2 kg</text>
+  <g transform="translate(186 240.16) scale(0.82)"><path d="M-34 0 Q-38 -16 -18 -16 L12 -14 Q26 -10 24 2 Q18 12 -4 12 L-24 12 Q-36 8 -34 0Z" fill="#fff" stroke="#2f3a2b" stroke-width="1.5"/><path d="M14 -12 Q18 -40 24 -46 L30 -44 Q24 -36 22 -10Z" fill="#fff" stroke="#2f3a2b" stroke-width="1.5"/><ellipse cx="28" cy="-48" rx="7" ry="5" fill="#fff" stroke="#2f3a2b" stroke-width="1.5"/><path d="M34 -49 L44 -46 L34 -44Z" fill="#e89a8c"/><path d="M24 -50 Q28 -44 30 -46" stroke="#fff" stroke-width="3" fill="none"/></g>
+  <text x="186" y="274" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Snow</text>
+  <text x="186" y="292" font-size="13" fill="#2f3a2b" text-anchor="middle">3 to 3.4 kg</text>
+  <g transform="translate(268 238.0) scale(1.0)"><path d="M-34 0 Q-38 -16 -18 -16 L12 -14 Q26 -10 24 2 Q18 12 -4 12 L-24 12 Q-36 8 -34 0Z" fill="#7a6a58"/><path d="M14 -12 Q18 -40 24 -46 L30 -44 Q24 -36 22 -10Z" fill="#2f3a2b"/><ellipse cx="28" cy="-48" rx="7" ry="5" fill="#2f3a2b"/><path d="M34 -49 L44 -46 L34 -44Z" fill="#2f3a2b"/><path d="M24 -50 Q28 -44 30 -46" stroke="#fff" stroke-width="3" fill="none"/></g>
+  <text x="268" y="274" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Canada</text>
+  <text x="268" y="292" font-size="13" fill="#2f3a2b" text-anchor="middle">up to 5.45 kg</text>
+  <g transform="translate(352 228) scale(1.25)"><path d="M-30 4 Q-34 -12 -12 -12 L14 -10 Q26 -4 20 10 L-20 12Z" fill="#fff" stroke="#2f3a2b"/><path d="M12 -8 Q4 -50 22 -56" stroke="#2f3a2b" stroke-width="8" fill="none"/><path d="M12 -8 Q4 -50 22 -56" stroke="#fff" stroke-width="6" fill="none"/><path d="M22 -58 L36 -54 L22 -52Z" fill="#2f3a2b"/></g>
+  <text x="352" y="274" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Swan</text>
+  <text x="352" y="292" font-size="13" fill="#c0392b" text-anchor="middle">protected</text>
+  <text x="200" y="60" font-size="13" fill="#2f3a2b" text-anchor="middle">Canada: 1.35 to 5.45 kg by race (80%)</text>
+  <text x="200" y="78" font-size="13" fill="#2f3a2b" text-anchor="middle">Swans: far bigger, all white (90%)</text>
+</svg>

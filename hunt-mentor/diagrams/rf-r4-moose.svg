@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 302" role="img" aria-label="Bar chart of Region 4 spike fork bull moose seasons. Management Units 4-7 to 4-9, 4-14 to 4-18, 4-27 to 4-33 and 4-36 to 4-40: 20 September to 31 October, and bow only 1 to 19 September. Management Units 4-1 to 4-6, 4-19 to 4-26, 4-34 and 4-35: 15 to 31 October, and bow only 1 September to 14 October." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="302" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Moose seasons: spike fork bulls</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">MU groups in full: tap More</text>
+<rect x="14.0" y="60" width="31.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="60" width="30.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="60" width="30.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="60" width="31.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="60" width="31.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="60" width="31.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="96" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">North and west MUs</text>
+<rect x="96.6" y="102" width="42.8" height="20" rx="4" fill="#e8590c"/>
+<text x="143" y="117" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 20 to Oct 31</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">South and east MUs</text>
+<rect x="122.0" y="148" width="17.3" height="20" rx="4" fill="#e8590c"/>
+<text x="143" y="163" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 15 to Oct 31</text>
+<text x="14" y="188" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">North and west MUs, bow only</text>
+<rect x="77.2" y="194" width="19.4" height="20" rx="4" fill="#8b5a2b"/>
+<text x="101" y="209" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 19</text>
+<text x="14" y="234" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">South and east MUs, bow only</text>
+<rect x="77.2" y="240" width="44.8" height="20" rx="4" fill="#8b5a2b"/>
+<text x="126" y="255" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Oct 14</text>
+<rect x="14" y="276" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="288" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+<rect x="149.60000000000002" y="276" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="168" y="288" font-size="14" fill="#23261f" text-anchor="start">Bow only</text>
+</svg>

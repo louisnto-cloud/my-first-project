@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A ram skull plate from the side, the part you bring to compulsory inspection: the portion of the skull with the nasal bones, the entire eye socket, and the horns naturally attached. The inspector puts a numbered aluminum plug in the horn. For transport, a testicle or part of the penis stays attached as evidence of sex, 98 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Bring to inspection (CI)</text>
+<text x="200.0" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">Compulsory Inspection: the ram skull plate</text>
+<g transform="translate(70 40) scale(1.25)"><path d="M24,96 C26,86 40,76 60,66 L100,48 C112,44 124,46 134,56 L146,100 C140,112 128,118 110,120 C80,124 52,118 30,108 Z" fill="#f3ead8" stroke="#23261f" stroke-width="1.5"/><ellipse cx="92" cy="68" rx="10" ry="9" fill="#fffaf0" stroke="#23261f" stroke-width="2"/><path d="M28,100 C50,84 70,72 96,56" fill="none" stroke="#23261f" stroke-width="1.2"/><circle cx="30" cy="100" r="2.5" fill="#23261f"/><path d="M108,50 C126,18 178,26 184,78 C188,120 160,146 126,143 C96,140 78,122 74,100 C72,90 73,82 76,74" fill="none" stroke="#5c3b1c" stroke-width="12" stroke-linecap="round"/><path d="M108,50 C126,18 178,26 184,78 C188,120 160,146 126,143 C96,140 78,122 74,100 C72,90 73,82 76,74" fill="none" stroke="#a07850" stroke-width="8" stroke-linecap="round"/><circle cx="176" cy="96" r="4" fill="#c0c0c0" stroke="#23261f"/></g>
+<line x1="60" y1="214" x2="87.4" y2="167.7" stroke="#e8590c" stroke-width="2.5"/><polygon points="92,160 83.2,165.2 91.7,170.3" fill="#e8590c"/>
+<text x="60" y="232" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">Nasal bones</text>
+<line x1="190" y1="216" x2="186.4" y2="145.0" stroke="#e8590c" stroke-width="2.5"/><polygon points="186,136 181.5,145.2 191.4,144.7" fill="#e8590c"/>
+<text x="196" y="234" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">Whole eye socket</text>
+<line x1="320" y1="82" x2="294.3" y2="92.6" stroke="#e8590c" stroke-width="2.5"/><polygon points="286,96 296.2,97.2 292.4,88.0" fill="#e8590c"/>
+<text x="340" y="76" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">Horns, attached</text>
+<line x1="360" y1="150" x2="308.9" y2="158.5" stroke="#4a7fb0" stroke-width="2.5"/><polygon points="300,160 309.7,163.4 308.1,153.6" fill="#4a7fb0"/>
+<text x="362" y="176" font-size="13" fill="#4a7fb0" text-anchor="middle" font-weight="bold">Plug goes</text>
+<text x="362" y="192" font-size="13" fill="#4a7fb0" text-anchor="middle" font-weight="bold">in the horn</text>
+<rect x="20" y="248" width="360" height="46" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="266.9" font-size="14" fill="#23261f" text-anchor="middle">Ram: testicle or part of penis stays</text>
+<text x="200.0" y="284.9" font-size="14" fill="#23261f" text-anchor="middle">attached for transport (98%)</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A sheep horn drawn from base to tip with ring grooves across it. Each winter leaves a ring, called an annulus. The newest growth is at the base, the oldest at the tip. One dashed ring is a false ring that could fool you. Warning box: never age a live ram by rings in the field, false rings fool you, 98 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Horn rings (annuli)</text>
+<text x="200.0" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">Each winter leaves a ring on the horn</text>
+<path d="M30 110 C120 92 250 100 370 150 L374 162 C250 126 120 150 30 190 Z" fill="#c9a27a" stroke="#5c3b1c" stroke-width="2.5"/>
+<line x1="80" y1="106" x2="80" y2="181" stroke="#5c3b1c" stroke-width="2.5"/>
+<line x1="125" y1="104" x2="125" y2="174" stroke="#5c3b1c" stroke-width="2.5"/>
+<line x1="165" y1="106" x2="165" y2="169" stroke="#5c3b1c" stroke-width="2.5"/>
+<line x1="202" y1="109" x2="202" y2="166" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="3 3"/>
+<line x1="236" y1="115" x2="236" y2="164" stroke="#5c3b1c" stroke-width="2.5"/>
+<line x1="266" y1="121" x2="266" y2="162" stroke="#5c3b1c" stroke-width="2.5"/>
+<line x1="294" y1="128" x2="294" y2="162" stroke="#5c3b1c" stroke-width="2.5"/>
+<line x1="320" y1="135" x2="320" y2="162" stroke="#5c3b1c" stroke-width="2.5"/>
+<text x="40" y="92" font-size="14" fill="#23261f" text-anchor="start">Base (newest)</text>
+<text x="370" y="186" font-size="14" fill="#23261f" text-anchor="end">Tip (oldest)</text>
+<text x="202" y="220" font-size="15" fill="#e8590c" text-anchor="middle" font-weight="bold">Dashed: a false ring?</text>
+<rect x="20" y="236" width="360" height="56" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
+<text x="200.0" y="259.8" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Never age a live ram by rings in the field.</text>
+<text x="200.0" y="278.8" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">False rings fool you (98%).</text>
+</svg>

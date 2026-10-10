@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 3: stay outside the City of Kamloops boundary and outside the Map C7 band along the South Thompson, 99 percent.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="34" cy="34" r="20" fill="#e8590c"/>
+<text x="34" y="41" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+<text x="64" y="32" font-size="19" font-weight="bold" fill="#23261f">Stay outside the lines</text>
+<circle cx="200" cy="124" r="52" fill="#dfe6d3"/>
+<g transform="translate(200.0 124) scale(1.6)"><path d="M-28 -16 l18 -5 l20 5 l18 -5 v36 l-18 5 l-20 -5 l-18 5 z" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2.5"/><path d="M-10 -21 v36 M10 -16 v36" stroke="#2f3a2b" stroke-width="1.5"/><path d="M-22 6 q10 -14 22 -4 t20 -6" stroke="#4a7fb0" stroke-width="3" fill="none"/><circle cx="4" cy="-6" r="4" fill="#e8590c"/></g>
+<circle cx="252.0" cy="84" r="18" fill="#e8590c"/><path d="M244.8 76.8 L259.2 91.2 M259.2 76.8 L244.8 91.2" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<text x="200" y="204" font-size="15" fill="#2f3a2b" text-anchor="middle">Outside the City of Kamloops boundary</text>
+<text x="200" y="224" font-size="15" fill="#2f3a2b" text-anchor="middle">and outside the Map C7 band (99%).</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 416" font-family="sans-serif" role="img" aria-label="Flowchart of how to apply in Yukon. One: buy the non resident small game licence online on yukon.ca, or at an Environment office or vendor. Two: bring photo ID. Three: for ducks and geese your federal Migratory Game Bird Hunting Permit from BC is valid. Four: for big game book a registered outfitter, or have a Yukon resident friend enter the special guide lottery in spring. Five: read the current Yukon hunting regulations summary.">
+<rect x="0" y="0" width="400" height="416" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Yukon: how to apply</text>
+<rect x="16" y="42" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="66" font-size="15" fill="#2f3a2b">1. Buy the small game licence online on</text>
+<text x="28" y="85" font-size="15" fill="#2f3a2b">yukon.ca, or at an office or vendor</text>
+<line x1="200.0" y1="96" x2="200.0" y2="118" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,116 207.0,116 200.0,126" fill="#2f3a2b"/>
+<rect x="16" y="126" width="368" height="35" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="150" font-size="15" fill="#2f3a2b">2. Bring photo ID</text>
+<line x1="200.0" y1="161" x2="200.0" y2="183" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,181 207.0,181 200.0,191" fill="#2f3a2b"/>
+<rect x="16" y="191" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="215" font-size="15" fill="#2f3a2b">3. Ducks and geese: your federal bird permit</text>
+<text x="28" y="234" font-size="15" fill="#2f3a2b">from BC works</text>
+<line x1="200.0" y1="245" x2="200.0" y2="267" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,265 207.0,265 200.0,275" fill="#2f3a2b"/>
+<rect x="16" y="275" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="299" font-size="15" fill="#2f3a2b">4. Big game: book an outfitter, or a Yukon</text>
+<text x="28" y="318" font-size="15" fill="#2f3a2b">friend enters the spring lottery</text>
+<line x1="200.0" y1="329" x2="200.0" y2="351" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,349 207.0,349 200.0,359" fill="#2f3a2b"/>
+<rect x="16" y="359" width="368" height="35" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="28" y="383" font-size="15" font-weight="bold" fill="#2f3a2b">5. Read the current regulations summary</text>
+</svg>

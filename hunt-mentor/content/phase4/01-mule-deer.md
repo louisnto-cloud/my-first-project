@@ -9,16 +9,39 @@ checked: 2026-10-02
 > [!why]
 > The mule deer is the deer of the hills around Heffley Creek. Learn its day and you will know where to sit at first light.
 
+```photo g-md-radium
+```
+
+- The main deer of the southern BC Interior (85%).
+- Your first hunt, mid to late October, is the **pre rut** (70%).
+
+```more what this session covers
 - Mule deer are the main deer of the southern BC Interior (85%).
 - Your first hunt is mid to late October. That is the **pre rut**: bucks start to roam, the big breeding push is still weeks away (70%).
 - This session: how to tell one, where it is hour by hour, what it eats, how it hides, and how you hunt it.
 - The deep dive on senses and alarm is in [How a deer thinks](#/s/deer-mind).
+```
 
 ## Identify: buck, doe, fawn
 
-```photo mule-deer-buck
+```diagram sa-md-id
 ```
 
+```video
+commons-mule-deer-okanagan | Watch the big ears and how often a feeding deer lifts its head.
+```
+
+- Big ears, forks on forks, thin black tipped tail (85%).
+- No clear antlers? Not a buck (Tip).
+
+```gallery
+mule-deer-buck | Buck: forked antlers, big ears.
+g-md-doe-front | Doe: no antlers, huge ears.
+g-md-fawn | Fawn in summer: spots fade by fall.
+g-md-buck-rear | From behind: white rump, black tipped tail.
+```
+
+```more the full ID list
 - **Ears:** very big, like a mule. That is the name (85%).
 - **Antlers (buck):** forks that fork again, like a "Y" on a "Y" (85%).
 - **Tail:** thin, white, rope like, with a **black tip** (85%).
@@ -29,14 +52,18 @@ checked: 2026-10-02
 
 > [!tip]
 > A buck in October has a thick neck. A doe has a thin neck and a long, narrow face. If you can't see antlers clearly, you have not identified a buck.
-
-```video
-commons-mule-deer-okanagan | Watch the big ears and how often a feeding deer lifts its head.
 ```
 
 ## Mule deer or white tail?
 
 ```diagram mule-vs-whitetail
+```
+
+```gallery
+g-md-bound | Mule deer: stiff legged bounce (stot).
+g-wt-run | White tail: long, low gallop.
+g-md-buck-rear | Mule deer tail: thin, black tip.
+g-wt-buck-flag | White tail: wide white flag.
 ```
 
 | Clue | Mule deer | White tail |
@@ -47,14 +74,23 @@ commons-mule-deer-okanagan | Watch the big ears and how often a feeding deer lif
 | Ears | Very big | Medium |
 | Leg gland | Long, 10 to 15 cm (85%) | Small (85%) |
 
+```more licences and hybrids
 - Both deer live near Heffley Creek. They need **separate** [[Species licence|species licences]] (page 14) (99%).
 - Hybrids exist but are uncommon (70%). When in doubt, do not shoot (Tip).
+```
 
 ## A day in the life: late October
+
+```anim sa-deer-day Bed, feed, water, feed, bed.
+```
+
+- Peaks: about 04:00 to 09:00 and 17:00 to 21:00 (85%).
+- Be glassing 45 minutes before legal light (Tip).
 
 ```diagram deer-day
 ```
 
+```more the hour by hour detail
 - **Night (about 21:00 to 04:00):** feeds on and off in open grass and brush, rests between bouts (75%).
 - **Before first light (04:00 to 07:00):** a strong activity peak. Feeding, moving (85%).
 - **Legal light starts:** 1 hour before sunrise (page 11, item 38) (99%). Mid to late October sunrise near Kamloops is about 07:30 to 07:50 (calculated) (75%). Use the Legal light screen in Field Mode.
@@ -66,9 +102,17 @@ commons-mule-deer-okanagan | Watch the big ears and how often a feeding deer lif
 
 > [!field]
 > Be on your glassing spot 45 minutes before legal light. The first and last hour are when you will see deer.
+```
 
 ## How it eats, poops and sleeps
 
+```diagram sa-md-habits
+```
+
+- A browser that chews cud, then beds (85%).
+- Shiny pellets = fresh (Tip).
+
+```more the detail
 - **Eats:** a browser. Twigs, leaves and buds of shrubs, plus forbs (small leafy plants), with little grass in fall (85%).
 - **Chews cud:** a ruminant. It fills up fast, then lies down to chew again (85%).
 - **Poops:** piles of oval pellets, about 1 to 1.5 cm long. Firm and dry in fall and winter (70%).
@@ -76,9 +120,25 @@ commons-mule-deer-okanagan | Watch the big ears and how often a feeding deer lif
 - **Sleeps:** in short naps, often with head up or curled, waking often (70%).
 - **Walks:** slow, stopping to look and listen. Often walks the same trails each day (75%).
 - **Drinks:** in dry fall weather, near water at dusk or dawn. With green feed and dew, it needs less (Tip).
+```
 
 ## Food by season near Kamloops
 
+```diagram sa-md-diet
+```
+
+```gallery
+hab-saskatoon-berries | Saskatoon: oval toothed leaves.
+hab-dogwood-stems | Red osier dogwood: red stems.
+hab-bitterbrush-leaf | Bitterbrush: 3 teeth on each leaf.
+hab-douglas-fir-tree | Douglas fir: winter needles.
+hab-ceanothus-patch | Snowbrush: shiny, sticky leaves.
+hab-woods-rose-hips | Wild rose: hips and twigs.
+```
+
+- Learn 3 plants: saskatoon, red osier dogwood, Oregon grape (Tip).
+
+```more the stomach study and the plant list
 - Study of deer stomachs near Kamloops, September to April (85%):
   - Grass was under 10% of the diet until spring.
   - More forbs in fall.
@@ -89,9 +149,23 @@ commons-mule-deer-okanagan | Watch the big ears and how often a feeding deer lif
 
 > [!tip]
 > Learn 3 plants this week: saskatoon, red osier dogwood (red stems) and Oregon grape (holly like leaves). Find them chewed and you are in a feeding area.
+```
 
 ## Where they are: BC and near Heffley Creek
 
+```diagram sa-md-where-season
+```
+
+- High in summer, low sunny slopes in winter (85%).
+- Elevations are rough: check a map (Tip).
+
+```diagram deer-hillside
+```
+
+```photo hab-grass-fir-edge
+```
+
+```more local reading, elevations and winter range maps
 - Mule deer like steeper, higher, open, broken ground. White tails like valley bottoms and farm fields (85%).
 - Local reading (75%):
   - Grassland and open Douglas fir benches above the valley.
@@ -101,12 +175,20 @@ commons-mule-deer-okanagan | Watch the big ears and how often a feeding deer lif
 - A study of winter range north of Kamloops used slopes below about 760 m (80%).
 - Rough elevations (Tip, VERIFY on a map): valley 370 to 450 m, Heffley Lake about 950 m, Sun Peaks village about 1,250 m.
 - Ungulate winter range maps: view the "Ungulate Winter Range, Approved" layer in iMapBC (85%). Near Kamloops there may be no approved mule deer areas (VERIFY).
-
-```diagram deer-hillside
 ```
 
 ## Migration: the big October question
 
+```anim sg-mig-snowline Snow pushes the deer down.
+```
+
+- Snow and cold start the move, not the rut (85%).
+- Snow up high? Hunt below the snow line (Tip).
+
+```diagram sg-md-distance
+```
+
+```more the migration numbers
 - About 74% of tracked mule deer in a southern Interior study migrated (85%).
 - Collared deer in the Southern Interior Mule Deer Project moved an average of about 47 to 55 km between summer and winter range, the longest about 100 km (85%, BC Wildlife Federation project pages).
 - They use the **same route every year** (85%).
@@ -117,9 +199,20 @@ commons-mule-deer-okanagan | Watch the big ears and how often a feeding deer lif
 
 > [!lean]
 > Early snow up high in October? Hunt the mid slopes below the snow line. No snow yet? Glass the high benches and openings near Heffley Lake and Paul Lake first.
+```
 
 ## Senses: what scares and attracts them
 
+```diagram sg-senses-rank
+```
+
+- Nose first, then ears, then eyes (85%).
+- Wind in your face, quiet gear, slow moves (Tip).
+
+```diagram sg-deer-hearing
+```
+
+```more what scares, calms and attracts them
 - **Nose:** strongest sense. Wind at your back toward the deer ends the hunt (85%).
 - **Ears:** hear about 115 Hz (hertz) to 54 kHz (kilohertz), best at 4 to 8 kHz (85%). That is the range of zippers, Velcro, nylon swish and metal clicks.
 - **Eyes:** see blues well, no red cone, so blaze orange looks dull to them (75%). They catch **motion and outline** fast (85%).
@@ -128,9 +221,17 @@ commons-mule-deer-okanagan | Watch the big ears and how often a feeding deer lif
 - **Attracts them:** fresh green feed, does in heat (in the rut), other deer (80%).
 - Lights: a headlamp beam swinging across a slope will move deer. Use red light and keep it on the ground (Tip).
 - Full story: [How a deer thinks](#/s/deer-mind).
+```
 
 ## Social life and the rut
 
+```diagram sg-md-year
+```
+
+- Rut: mid November to mid December (80%).
+- Late October: bucks spar, rub and check does (70%).
+
+```more groups, rut and antlers
 - Does live in family groups: mother, daughters and fawns (85%).
 - Bucks spend summer in **bachelor groups** of 2 to 4. These break up in October (80%).
 - Groups are mostly 5 or fewer. In winter 5 to 8, up to 15 to 30 (75%).
@@ -139,21 +240,53 @@ commons-mule-deer-okanagan | Watch the big ears and how often a feeding deer lif
 - **Late October:** bucks spar (push antlers, not real fights), rub small trees, and start checking doe groups (70%).
 - **In the rut:** a buck tends one doe at a time, follows her, and fights rivals (75%). Bucks get careless in daylight.
 - Antlers fall off in winter and regrow each year (85%).
+```
 
 ## Beds and bedding
 
+```diagram sa-bed-warm-cold
+```
+
+```gallery
+g-md-buck-bedded | A bedded buck: only antlers and ears show.
+g-md-does-bedded | Bedded does: heads above the brush.
+```
+
+- Deer bed where they see below and smell above (Tip).
+
+```diagram sg-bed-spot
+```
+
+```more bed detail
 - Day beds give **hiding cover** and **shelter** (80%).
 - Warm days: north facing timber, benches, draws, shade (80%).
 - Cold days: sunny south and west slopes, out of the wind (80%).
 - Lore: bucks bed in the top third of a slope, looking down, with wind from behind (hunter lore) (60%).
 - A bed is an oval of flattened grass or scraped earth, about 1 m long, often with pellets and hair nearby (70%).
 - Deer bed where they can see danger below and smell danger above (Tip).
+```
 
 ## Tracks, scat and sign
+
+```diagram sa-md-sign-grid
+```
+
+```gallery
+hab-deer-track-foothills | Track: the point shows the way it went.
+hab-deer-pellets-fresh | Fresh pellets: dark, shiny, moist.
+hab-deer-pellets-old | Old pellets: dry, pale.
+```
+
+- One track can't tell mule deer from white tail (60%).
+- A stotting trail can (85%).
 
 ```diagram deer-track
 ```
 
+```anim sg-gait-stot The stot: groups of 4 prints.
+```
+
+```more track and sign detail
 - Track: heart shape, 2 toes, pointed end shows direction of travel (85%).
 - Mule deer front track: about 5.7 to 10 cm long (60%).
 - You can't tell mule deer from white tail by one track. Too much overlap (60%).
@@ -161,9 +294,31 @@ commons-mule-deer-okanagan | Watch the big ears and how often a feeding deer lif
 - Browse sign: deer **tear** twigs (no upper front teeth). Hares **cut** clean at 45 degrees (75%).
 - Rubs: mule deer make fewer rubs than white tails, on small conifers and shrubs (60%).
 - Fresh sign: shiny wet pellets, crisp track edges, green stem ends on browse (Tip).
+```
 
 ## Tactics: options
 
+```steps Spot and stalk in 5 steps
+sa-stalk-1 | Glass from high ground at first light.
+sa-stalk-2 | Pick 2 landmarks near the deer.
+sa-stalk-3 | Check the wind before every move.
+sa-stalk-4 | Close in out of sight, behind cover.
+sa-stalk-5 | Get a rest. Wait for broadside.
+```
+
+```video
+yt-stalking-mule-deer | Plan the stalk from where you glassed: landmarks, wind, cover.
+```
+
+| Option | Pros | Cons |
+|---|---|---|
+| A: spot and stalk | Classic, see lots of country | Hard, easy to bump deer |
+| B: sit and glass a slope | Quiet, rested shot | Needs patience |
+| C: still hunt timber | Works midday | Deer see you first |
+
+- My lean: Option B on the first trip (Tip).
+
+```more the three options in full
 ### Option A: spot and stalk
 - Glass from a high point at first light, find a buck, then sneak in with the wind in your face.
 - Pros: the classic mule deer method; you see lots of country (hunter consensus) (60%).
@@ -181,13 +336,23 @@ commons-mule-deer-okanagan | Watch the big ears and how often a feeding deer lif
 
 > [!lean]
 > Option B for the first trip. Dawn and dusk on a slope with a long view. Midday, scout with binoculars and learn the trails.
+```
 
-```video
-yt-stalking-mule-deer | Plan the stalk from where you glassed: landmarks, wind, cover.
+```anim hf-step-cadence Still hunting: a few steps, then a long look.
 ```
 
 ## Rifle, load and range
 
+```diagram sa-308-range
+```
+
+- .308 Winchester, 150 to 165 grain expanding bullet (Tip).
+- Limit: a 15 cm plate, 9 of 10 (Tip).
+
+```diagram sk-drop-bars
+```
+
+```more rifle and load detail
 - Your rifle: Tikka T3x Arctic in .308 Winchester. More than enough for deer (Tip).
 - Load: 150 to 165 grain hunting bullet built to expand, from a known brand. Zero with the same box you hunt with (Tip).
 - Mule deer do not need magnum power. They need one good hit (Tip).
@@ -196,22 +361,44 @@ yt-stalking-mule-deer | Plan the stalk from where you glassed: landmarks, wind, 
 > Your maximum range is the distance where you can hit a 15 cm (6 in) plate 9 times out of 10 from a field rest. For most beginners: 200 m (219 yd). Past that, get closer.
 
 - Wind, angle and a racing heart make field shots much harder than the bench (Tip).
+```
 
 ## Shot placement (brief)
 
+```diagram vitals-deer
+```
+
+- Behind the front leg, one third up (75%).
+- Broadside or quartering away only (Tip).
+
+> [!warn]
+> Identify every animal fully before your finger touches the trigger. Know your [[Backstop]].
+
+```anim sk-angles Which angles work.
+```
+
+```more shot detail
 - Aim for the heart and lungs: just behind the front leg, one third up the body (standard hunter education advice) (75%).
 - Wait for the deer to stand **broadside** or slightly quartering away (Tip).
 - No shot at a running deer, a head, a neck, or a deer on the skyline (Tip).
 - Full lesson with diagram: the shot placement session (coming in a later phase).
-
-> [!warn]
-> Identify every animal fully before your finger touches the trigger. Know your [[Backstop]].
+```
 
 ## Legal specifics
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram hf-deer-season-bars
+```
+
+- October in MU (Management Unit) 3-27 and 3-28: any buck (99%).
+- September and November: 4 point bucks only (99%).
+
+```diagram hf-four-point
+```
+
+```more 4 point rule, MUs, bag limits and scents
 - **Your [[MU]] (Management Unit):**
   - Sun Peaks Resort: MU 3-27 (page 35, Map C11) (99%).
   - Heffley Creek, east bank of the North Thompson: MU 3-27, read from the map (page 32) (85%).
@@ -229,14 +416,25 @@ yt-stalking-mule-deer | Plan the stalk from where you glassed: landmarks, wind, 
 - Scents: using any part or product of a deer, elk, moose or caribou from outside BC for hunting is unlawful (page 12 item 51) (99%). The synopsis warns that urine based scents can spread [[CWD]] (Chronic Wasting Disease) (inside back cover) (99%). Skip deer urine lures.
 - Deer, elk, moose or caribou killed outside BC: you may possess only the edible meat of the four quarters, loins, neck and ribs, or a hide, antlers and skull plate cleaned of all tissue before it came into BC (page 12 item 50) (99%).
 
+> [!lean]
+> Until you read your MU in the [[Synopsis]], count points on every buck as if the 4 point rule applies.
+```
+
 ```regs deerR3
 ```
 
-> [!lean]
-> Until you read your MU in the [[Synopsis]], count points on every buck as if the 4 point rule applies.
-
 ## Meat care and yield
 
+```diagram hf-meat-math
+```
+
+- Boneless meat: about a third of live weight (70%).
+- Notch the licence before you touch the deer (99%).
+
+```diagram sa-yield-species
+```
+
+```more yield numbers and the after shot rules
 - A field dressed mule deer is about 70% of its live weight (70%).
 - Boneless meat is about 48% of field dressed weight, or about 34% of live weight (70%).
 - Average field dressed buck in a Wyoming study: about 52 kg (114 lb), giving about 25 kg (55 lb) of boneless meat (70%).
@@ -244,9 +442,14 @@ yt-stalking-mule-deer | Plan the stalk from where you glassed: landmarks, wind, 
 - Cancel (notch) your species licence immediately after the kill, before you handle the deer. Follow the steps printed on the licence (page 11 item 1) (99%).
 - Carry that species licence with the meat whenever you possess or transport it (page 15) (99%).
 - Leave [[Evidence of sex]] naturally attached: the unskinned tail, plus a testicle or part of the penis for a buck (page 15) (99%).
+```
 
 ## Beginner mistakes
 
+```diagram sa-md-mistakes
+```
+
+```more all the mistakes
 > [!mistake]
 > - Walking in at daylight. The deer were already up and leaving.
 > - Hunting with the wind at your back, or ignoring the thermals.
@@ -254,8 +457,12 @@ yt-stalking-mule-deer | Plan the stalk from where you glassed: landmarks, wind, 
 
 - Also: skylining yourself on a ridge, rushing a stalk, and taking a long shot you never practised.
 - Also: chasing a deer that stotted over the hill. Wait. Glass. It may stop and look back (hunter lore) (65%).
+```
 
 ## Grandpa's rules
+
+```diagram glassing-grid
+```
 
 > [!rule]
 > Glass more, walk less. The deer you see from far away is the one you can sneak up on.

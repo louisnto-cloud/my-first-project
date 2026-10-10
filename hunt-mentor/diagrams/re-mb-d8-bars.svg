@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 447" role="img" aria-label="Season bar chart: District No. 8, Okanagan. All ducks, white fronted, snow and Ross&#x27;s geese, coots, snipe: Sept 23 to Jan 7. Canada and cackling geese: Sept 20 to Nov 28, Dec 20 to Jan 5, Feb 21 to Mar 10. Leap year: from Feb 22. Mourning and collared doves: Sept 1 to Sept 30. Brant: No open season. Band tailed pigeons: No open season." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="447" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">District No. 8, Okanagan</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Table 1, item 8</text>
+<text x="38.6" y="83" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="92.7" y="83" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="146.8" y="83" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<text x="200.9" y="83" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
+<text x="255.9" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jan</text>
+<text x="308.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Feb</text>
+<text x="360.5" y="83" font-size="14" fill="#23261f" text-anchor="middle">Mar</text>
+<line x1="12.0" y1="91" x2="12.0" y2="437" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="65.2" y1="91" x2="65.2" y2="437" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="120.2" y1="91" x2="120.2" y2="437" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="173.4" y1="91" x2="173.4" y2="437" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="228.4" y1="91" x2="228.4" y2="437" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="283.4" y1="91" x2="283.4" y2="437" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="333.0" y1="91" x2="333.0" y2="437" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="388.0" y1="91" x2="388.0" y2="437" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<text x="12" y="107" font-size="14" font-weight="bold" fill="#23261f">All ducks, white fronted, snow and Ross&#x27;s</text>
+<text x="12" y="125" font-size="14" font-weight="bold" fill="#23261f">geese, coots, snipe</text>
+<rect x="51.0" y="131" width="189.8" height="22" rx="3" fill="#4a7fb0"/>
+<text x="246.8" y="147" font-size="14" font-weight="bold" fill="#23261f">Sept 23 to Jan 7</text>
+<text x="12" y="181" font-size="14" font-weight="bold" fill="#23261f">Canada and cackling geese</text>
+<rect x="45.7" y="187" width="124.2" height="22" rx="3" fill="#8b5a2b"/>
+<rect x="207.1" y="187" width="30.2" height="22" rx="3" fill="#8b5a2b"/>
+<rect x="318.8" y="187" width="31.9" height="22" rx="3" fill="#8b5a2b"/>
+<text x="12" y="225" font-size="14" font-weight="bold" fill="#23261f">Sept 20 to Nov 28, Dec 20 to Jan 5, Feb 21 to</text>
+<text x="12" y="243" font-size="14" font-weight="bold" fill="#23261f">Mar 10</text>
+<text x="12" y="265" font-size="14" fill="#e8590c">Leap year: from Feb 22</text>
+<text x="12" y="297" font-size="14" font-weight="bold" fill="#23261f">Mourning and collared doves</text>
+<rect x="12.0" y="303" width="53.2" height="22" rx="3" fill="#8a9a6b"/>
+<text x="71.2" y="319" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 30</text>
+<text x="12" y="353" font-size="14" font-weight="bold" fill="#23261f">Brant</text>
+<text x="12" y="374" font-size="14" font-weight="bold" fill="#c92a2a">No open season</text>
+<text x="12" y="405" font-size="14" font-weight="bold" fill="#23261f">Band tailed pigeons</text>
+<text x="12" y="426" font-size="14" font-weight="bold" fill="#c92a2a">No open season</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 514" font-family="sans-serif" role="img" aria-label="Cards comparing blaze orange rules. Manitoba: required, a completely orange head covering plus 2,580 square centimetres of hunter orange above the waist, for big game and coyote, 85 percent. Saskatchewan: required, a vest for big game with a rifle, 85 percent. Yukon: recommended, a legal rule was not found, VERIFY. Alberta: not required, the rule was repealed, bright colours recommended. Alaska: not required, some youth hunts need it. My lean everywhere: wear orange for big game.">
+<rect x="0" y="0" width="400" height="514" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Blaze orange on the five trips</text>
+<rect x="16" y="42" width="368" height="116" rx="10" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="26" y="66" font-size="15" font-weight="bold" fill="#23261f">Manitoba: required</text>
+<circle cx="368.0" cy="60" r="11" fill="#8a9a6b"/><path d="M363.05 60 l3.3 3.8499999999999996 l6.6 -7.699999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<text x="26" y="84" font-size="14" fill="#2f3a2b">All orange hat plus 2,580 cm2 above the</text>
+<text x="26" y="102" font-size="14" fill="#2f3a2b">waist. Big game and coyote (85%).</text>
+<g transform="translate(46.0 138) scale(0.62)"><path d="M-10 -22 h20 l4 8 h-28 z" fill="#e8590c"/><circle cx="0" cy="-8" r="7" fill="#e0b48a"/><path d="M-16 22 v-20 q0 -6 16 -6 q16 0 16 6 v20 z" fill="#e8590c"/></g>
+<rect x="16" y="168" width="368" height="98" rx="10" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="26" y="192" font-size="15" font-weight="bold" fill="#23261f">Saskatchewan: required</text>
+<circle cx="368.0" cy="186" r="11" fill="#8a9a6b"/><path d="M363.05 186 l3.3 3.8499999999999996 l6.6 -7.699999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<text x="26" y="210" font-size="14" fill="#2f3a2b">Vest for big game with a rifle (85%).</text>
+<g transform="translate(46.0 246) scale(0.62)"><path d="M-10 -22 h20 l4 8 h-28 z" fill="#e8590c"/><circle cx="0" cy="-8" r="7" fill="#e0b48a"/><path d="M-16 22 v-20 q0 -6 16 -6 q16 0 16 6 v20 z" fill="#e8590c"/></g>
+<rect x="16" y="276" width="368" height="58" rx="10" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="26" y="300" font-size="15" font-weight="bold" fill="#23261f">Yukon: recommended</text>
+<circle cx="368.0" cy="294" r="11" fill="#4a7fb0"/><text x="368" y="298.62" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="26" y="318" font-size="14" fill="#2f3a2b">A legal rule was not found. VERIFY (80%).</text>
+<rect x="16" y="344" width="368" height="58" rx="10" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="26" y="368" font-size="15" font-weight="bold" fill="#23261f">Alberta: not required</text>
+<circle cx="368.0" cy="362" r="11" fill="#e8590c"/><path d="M363.6 357.6 L372.4 366.4 M372.4 357.6 L363.6 366.4" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<text x="26" y="386" font-size="14" fill="#2f3a2b">Repealed. Bright colours recommended (80%).</text>
+<rect x="16" y="412" width="368" height="58" rx="10" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="26" y="436" font-size="15" font-weight="bold" fill="#23261f">Alaska: not required</text>
+<circle cx="368.0" cy="430" r="11" fill="#e8590c"/><path d="M363.6 425.6 L372.4 434.4 M372.4 425.6 L363.6 434.4" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<text x="26" y="454" font-size="14" fill="#2f3a2b">Some youth hunts need it (85%).</text>
+<text x="200" y="492" font-size="14" fill="#2f3a2b" text-anchor="middle">My lean: wear orange for big game anyway.</text>
+</svg>

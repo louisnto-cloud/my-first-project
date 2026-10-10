@@ -9,47 +9,93 @@ checked: 2026-10-01
 > [!why]
 > A ram is the hardest legal animal in BC to judge. Shoot one a quarter curl short and you have broken the law, not bent it.
 
+```photo g-bighorn-ram
+```
+
+- Legal by horn size only: full curl, 3/4 curl or mature ram (98%).
+- Mostly LEH (Limited Entry Hunting) draws. Every sheep goes to inspection (98%).
+- Licence $60.00, bag limit 1 (98%).
+
+```more the key points
 - BC has two sheep species: **bighorn** (Rocky Mountain and California) and **thinhorn** (Stone's and Dall's) (95%).
 - Rams are legal only by horn size: **full curl**, **3/4 curl** or **mature ram**, depending on the MU (Management Unit) (98%).
 - Every sheep killed in BC goes to **Compulsory Inspection** (CI) (98%).
 - Most sheep hunts are **LEH (Limited Entry Hunting)**. A few MUs have a general open season for full curl rams (95%).
 - Resident species licence: $60.00 (98%). Provincial bag limit: 1 (98%).
 - This is a fitness and judgment hunt. Plan it two years out (Tip).
+```
 
 ## Four sheep, two species
 
-```photo bighorn-ram-full-curl
+```diagram sc-sheep-four
 ```
 
+- Bighorn: heavy brown horns in a close curl. Thinhorn: slimmer horns that flare wide (85%).
+- Over 90% of the world's Stone's sheep live in BC (85%).
+
+```more size, colour and range of each sheep
 - **Bighorn:** brown or grey coat, white rump patch, massive brown horns that curl close to the face, often blunt (broomed) at the tips (85%).
 - **Rocky Mountain bighorn:** the East Kootenay and the Rockies south of the Peace River (85%). Rams about 100 cm at the shoulder, 90 to 135 kg (85%).
 - **California bighorn:** slightly smaller and darker, horns flare out more. Dry canyons and grass slopes of the Okanagan, Thompson, Fraser and Chilcotin (85%).
-
-```photo stones-sheep-ram
-```
-
 - **Thinhorn:** slimmer, sharper horns that flare wide. Rams up to 110 kg, horns up to 122 cm (85%).
 - **Stone's sheep:** dark grey to almost black. Northern BC from the Stikine east through the Cassiar, Omineca and Muskwa ranges (85%). Over 90% of the world's Stone's sheep live in BC (85%).
-
-```photo dalls-sheep-ram
-```
-
 - **Dall's sheep:** pure white, golden yellow horns. Only the far northwest corner, Tatshenshini and Atlin country (85%).
-
-```photo bighorn-ewe
 ```
 
+## Real sheep: rams and ewes
+
+```gallery
+bighorn-ram-full-curl | Bighorn ram: heavy horns curl close to the face.
+stones-sheep-ram | Stone's ram: dark coat, horns flare wide.
+dalls-sheep-ram | Dall's ram: pure white, golden horns.
+bighorn-ewe | Ewe: short, slightly curved horns. Yearling rams look like this.
+```
+
+- Ewe horns are only about 25 to 30 cm (85%).
+
+```more ewes and horn growth
 - **Ewes:** short, slightly curved horns, about 25 to 30 cm. Yearling rams look like ewes (85%).
 - Horns grow for life. Each winter leaves a ring (**annulus**). Count rings for age, but "false" rings can fool you (85%).
+```
 
+## Age: the horn rings
+
+```diagram sc-sheep-rings
+```
+
+- One ring per winter, but false rings fool you (85%).
+- Never age a live ram by rings in the field (98%).
+
+```more the Ministry warning
 > [!warn]
 > The Ministry says it "remains concerned over the large percentage of illegal sheep harvested in the province" (95%). Judging horns is the whole game.
+```
+
+## Judge a ram, step by step
+
+```steps Judge the curl in 6 steps
+sc-ram-1 | Look at him square from the side.
+sc-ram-2 | Find the nostril centre and the lowest back edge of the horn base.
+sc-ram-3 | Draw a line through both, carried past the horn.
+sc-ram-4 | Full curl: a horn tip rises above that line.
+sc-ram-5 | 3/4 curl: a tip reaches past the back of eye line.
+sc-ram-6 | Close call? No shot. Wait for a clear legal ram.
+```
+
+```anim sc-curl-line Watch the full curl line, then follow the horn to its tip.
+```
+
+- One horn tip is enough. Square from the side only (98%).
 
 ## Full curl: the law, with diagram
 
 ```diagram sheep-curl
 ```
 
+- Three legal tests, three different lines (98%).
+- The exact law words are below. Read them once a season.
+
+```more the law, word for word
 > [!law]
 > Full curl bighorn (plain English): seen square from the side, a horn tip must rise above a line from the centre of the nostril to the lowest back edge of the horn base (98%).
 
@@ -67,15 +113,29 @@ checked: 2026-10-01
 
 - The synopsis adds: do not use horn rings to age a ram in the field, because false rings may be present (98%).
 - The skull test at inspection uses the back edge of the eye socket, so a ram that looks borderline alive can fail on the table (95%).
+```
+
+## Just legal is not legal
 
 ```photo stones-sheep-young-ram
 ```
 
+- A young ram: nowhere near legal. Learn this look first.
+
+```more the tip
 > [!tip]
 > A ram that is "just legal" in your spotting scope is not legal. Wait for one that is legal from every angle, with daylight to spare.
+```
 
 ## Where in BC
 
+```diagram sc-sheep-seasons
+```
+
+- Near home: Region 3 draws, or MUs 3-31 and part of 3-32 for full curl (98%).
+- North: thinhorn general seasons, August 1 to October 15 (98%).
+
+```more every season row and draw odds
 - **Region 3 general open season:** MUs 3-31 and part of 3-32, full curl bighorn rams, Sept 10 to Oct 20, bag limit 1 (98%). Part of MU 3-32 is closed, see Map C21 (98%).
 - **Region 3 mature ram season:** a portion of MU 3-17 only (Map C2), mature bighorn rams, Sept 10 to Oct 20 (98%).
 - **Region 3 LEH:** Fraser River, Relay Creek and Shulaps hunts for "at least 3/4 curl" rams, Sept 20 to Oct 20; 2025 first choice odds about 82 to 1 up to 236 to 1 (95%).
@@ -86,12 +146,20 @@ checked: 2026-10-01
 - **Thinhorn general open seasons:** Region 6 (MUs 6-17 to 6-27 with map exceptions), 7A (7-37, 7-39 to 7-41) and 7B (7-36, 7-42, 7-43, 7-50 to 7-57 with park closures), full curl rams, Aug 1 to Oct 15 (98%).
 - **Northern bighorn general open seasons:** MU 7-18 and MU 7-19, full curl, Aug 15 to Sept 30 (98%).
 - About 12,250 thinhorn sheep in BC (85%). Only a few hundred Dall's sheep (80%).
+```
 
 > [!lean]
 > From Heffley Creek, the realistic path is: apply for Region 3 LEH every year, and plan one backpack trip north for a Stone's ram under the general open season when you are fit and have a partner.
 
 ## Day, year, food, cover
 
+```diagram sc-sheep-day
+```
+
+- Eyes first: sheep spot movement over a kilometre away (80%).
+- Feed on open slopes, bed near cliffs (Tip).
+
+```more food, seasons and escape terrain
 - **Eyes first.** Sheep see movement and small objects over a kilometre away. Hearing and smell matter less (80%).
 - **Grass eaters.** Grasses, sedges, fescues and low plants; they seldom browse twigs (85%). They seek mineral licks in spring and summer (85%).
 - **Daily:** feed morning and evening on open slopes, bed on ledges or benches with a view through midday (Tip).
@@ -99,17 +167,46 @@ checked: 2026-10-01
 - **Lambs** are born from the last week of April to early June (85%, BC government sheep account).
 - **Winter:** south facing, wind blown grassland where snow stays shallow (85%).
 - **Escape terrain:** cliffs and broken rock. A ram rarely beds far from it (Tip).
+```
 
 ## Tracks and sign
 
+```diagram sc-alpine-sign
+```
+
+- Blocky track, beds on ledges, trails along cliff bands (Tip).
+
+```more every sign
 - Track: blocky, squarer than a deer's, with blunt tips; about 7 to 9 cm long on a ram (60%).
 - Pellets: like deer, in piles on bedding benches (Tip).
 - Beds: pawed ovals on ridge points and ledges, often many in one spot, with old pellets (Tip).
 - Trails that contour a cliff band at one height, with hair on rock edges (Tip).
 - In rut season, the crash of rams fighting can be heard over a kilometre (85%).
+```
+
+## Glass first: the alpine basin
+
+```anim sc-alpine-glass Sit high at first light. Sweep the basin near to far.
+```
+
+- Climb once, then glass for hours. Pick one ram before you move (Tip).
+
+```video
+yt-glassing-spotting-scope | Glassing with a spotting scope, step by step.
+```
 
 ## Tactics: options
 
+```anim sc-steep-stalk Drop out of sight, climb behind the rib, finish above him.
+```
+
+| Option | Best for | Catch |
+|---|---|---|
+| A: backpack spot and stalk | Time to judge | Hard days, remote |
+| B: day hunts in Region 3 draws | Cheap, close | Need a draw |
+| C: guided or partner | Help judging | Cost or favours |
+
+```more the three options in full
 ### Option A: backpack spot and stalk (general open season)
 - Camp high, glass basins at first light, pick a ram, then plan a stalk out of sight, often from above.
 - Pros: the classic sheep hunt; you choose the ram with time to judge (hunter consensus) (60%).
@@ -124,42 +221,85 @@ checked: 2026-10-01
 - A resident may hunt with any licensed friend. Non residents need a guide or a permit to accompany (95%).
 - Pros: experience next to you when judging horns.
 - Cons: cost or favours.
+```
 
 > [!lean]
 > Option A with an experienced partner. Judge the ram together. Two "yes" votes or no shot.
 
 ## Rifle, load and range
 
+```diagram sc-uphill-hold
+```
+
+- Centrefire, big air gun or bow. **No rimfire, no shotgun** (98%).
+- Steep shot: hold for the level distance (Tip).
+
+```more weapons, load and practice
 - Legal weapons for sheep: centrefire rifle, air gun of .35 calibre or larger, or bow A, C or D. **No rimfire, no shotgun** (98%).
 - Your .308 with a 165 grain bonded bullet is plenty; sheep are deer sized (Tip).
 - Steep angles shrink the drop. Shoot for the level distance, not the line of sight (Tip).
 - Practise prone off a pack at 250 m (273 yd) before you go (Tip).
 - Dogs must be on a leash when used to hunt sheep (98%).
+```
 
 ## Shot placement (brief)
 
+```diagram sc-cliff-shot
+```
+
+- Broadside, behind the shoulder, one third up (75%).
+- Only on ground you can reach (Tip).
+
+```more where to aim and where not
 - Broadside, behind the shoulder, one third up: heart and lungs (75%).
 - Never shoot a ram standing on a cliff edge. A fall can smash the horns and lose the meat (Tip).
 - Wait until the ram is on ground you can reach (Tip).
+```
 
 ## Legal specifics
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram sc-ci-clock
+```
+
+- CI (Compulsory Inspection): within 30 days and before December 5 (98%).
+- Not legally yours until CI is done (98%).
+
+```more every legal rule
 - Species licence: $60.00 resident (98%). Not valid until 2 days after issue (90%).
 - Provincial bag limit: 1 mountain sheep per licence year (98%).
 - **Compulsory inspection** within 30 days and **before December 5** of the year of the kill, whichever is first (98%). By appointment only, no drop ins (98%).
-- Parts for CI: the portion of the skull with the nasal bones, the entire eye socket and the horns naturally attached (98%). The inspector inserts a numbered aluminum plug in the horns (98%).
 - Incisor tooth no longer required for sheep CI (changes summary) (95%).
 - You are not in legal possession of the sheep until CI is done (98%).
-- Do not alter or tamper with the horns until the carcass reaches a meat cutter, your home, or CI (98%).
-- Evidence of sex must stay attached: a testicle or part of the penis on a ram (98%).
 - Hunting with the aid of domestic goats or sheep, including as pack animals, is unlawful province wide (98%).
 - Report sheep that cough, have runny noses or scabs, or wild sheep near domestic sheep, to RAPP 1 877 952 7277 (95%).
+```
+
+## What to bring to inspection
+
+```diagram sc-sheep-ci
+```
+
+- Skull plate with nose bones, eye socket and horns (98%).
+- Do not touch the horns until home, a meat cutter or CI (98%).
+
+```more the parts rules
+- Parts for CI: the portion of the skull with the nasal bones, the entire eye socket and the horns naturally attached (98%). The inspector inserts a numbered aluminum plug in the horns (98%).
+- Do not alter or tamper with the horns until the carcass reaches a meat cutter, your home, or CI (98%).
+- Evidence of sex must stay attached: a testicle or part of the penis on a ram (98%).
+```
 
 ## LEH: how a resident gets started
 
+```diagram sc-leh-odds
+```
+
+- Apply in WILD (Wildlife Information and Licensing Data) by June 23, 2026 (98%).
+- A draw win is not a licence. Buy both licences too (98%).
+
+```more every draw rule
 - You need an FWID (Fish and Wildlife ID) with resident and hunting credentials, then apply in [[WILD]] (Wildlife Information and Licensing Data) or at Service BC or FrontCounter BC (98%).
 - Main draw deadline: 11:59 pm, Tuesday June 23, 2026 (98%). Application fee: VERIFY in WILD.
 - An LEH authorization is not a licence. You still need the resident hunting licence and the sheep species licence (98%).
@@ -168,24 +308,41 @@ checked: 2026-10-01
 - You may not apply for a second sheep hunt in the same licence year if you already won one (98%).
 - Special Mountain Sheep draw (code 6000): one "any ram" authorization, $15.75 per entry, multiple entries allowed, deadline Nov 19, 2026 for the 2027 hunt (98%).
 - LEH hunters still need Compulsory Inspection and must give the inspector the LEH number (98%).
+```
 
 ## Meat, horns and the trophy
 
+```diagram sk-cape
+```
+
+- Cool the meat fast. Skin and salt the cape the same day (Tip).
+- Keep licence and CI sheet with the horns for life (95%).
+
+```more meat and trophy care
 - Sheep meat is prized; cool it fast on the mountain, hang quarters in the shade (Tip).
 - Keep the skull plate and horns together for CI; do not boil or clean them first (Tip).
 - Keep the species licence and CI data sheet with the horns for life. Transfers and export permits need them (95%).
 - A ram cape dries out fast in the sun. Skin and salt the same day (Tip).
+```
 
 ## Beginner mistakes
+
+```diagram sc-ram-1
+```
 
 > [!mistake]
 > - Shooting a ram you judged from the front or at an angle. The law says square from the side.
 > - Counting rings on a live ram and calling him 8.
 > - Hunting a Region 3 MU without checking which part is closed (Maps C2 and C21).
 
+```more one more
 - Also: no physical training, a rifle only zeroed at 100 m, and no plan for packing 40 kg out (Tip).
+```
 
 ## Grandpa's rules
+
+```photo g-bighorn-pair
+```
 
 > [!rule]
 > If you have to argue with yourself about the curl, the ram wins.

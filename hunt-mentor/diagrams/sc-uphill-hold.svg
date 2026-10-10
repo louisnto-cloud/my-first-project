@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A steep shot drawn as a triangle. The line of sight up a 30 degree slope to the animal is 300 metres. The level distance underneath is about 260 metres. Hold for the level distance, uphill or downhill. This is a tip." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="17" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Steep shot: hold for the level distance</text>
+<path d="M40 260 L360 260 L360 75 Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<line x1="40" y1="260" x2="350" y2="81" stroke="#e8590c" stroke-width="3"/>
+<line x1="40" y1="270" x2="360" y2="270" stroke="#4a7fb0" stroke-width="3"/>
+<circle cx="40" cy="256" r="9" fill="#2f3a2b"/>
+<text x="40" y="290" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">You</text>
+<g transform="translate(356 66)"><ellipse cx="0" cy="0" rx="22" ry="11" fill="#c9a27a" stroke="#23261f"/><path d="M-18 -4 L-28 -16 L-36 -12 L-30 -2 Z" fill="#c9a27a" stroke="#23261f"/><path d="M-26 -16 c-4 -8 6 -10 5 -2" fill="none" stroke="#5c3b1c" stroke-width="3"/><path d="M-14 8 v12 M-6 9 v11 M8 9 v11 M16 8 v12" stroke="#23261f" stroke-width="3"/></g>
+<text x="165" y="160" font-size="15" fill="#e8590c" text-anchor="middle" font-weight="bold" transform="rotate(-30 165 160)">Line of sight 300 m</text>
+<text x="200" y="292" font-size="14" fill="#4a7fb0" text-anchor="middle" font-weight="bold">Level distance about 260 m: hold for this</text>
+<text x="300" y="230" font-size="14" fill="#2f3a2b" text-anchor="middle">30° slope</text>
+<text x="120" y="60" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Up or down, same rule</text>
+<text x="120" y="80" font-size="14" fill="#2f3a2b" text-anchor="middle">(Tip)</text>
+</svg>

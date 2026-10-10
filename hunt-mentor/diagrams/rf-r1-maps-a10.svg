@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 504" role="img" aria-label="Cards for Maps A10 to A15. A10 Nanaimo and Ladysmith: No Shooting Area, bow or shot only area, special antlerless mule deer season east of the powerline, and Michael Lake no shooting. A11 Englishman River: No Shooting Area. A12 Nanaimo River Camp: closed during the bow only seasons for grouse, deer and black bear, and no snowmobiles, electric bicycles or all terrain vehicles 1 September to 31 December. A13 Ladysmith and Malahat: shot only or bow, special antlerless season. A14 Nanaimo: No Shooting Area, shot only or bow, special antlerless season. A15 York Lake: No Shooting Area." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="504" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Maps A10 to A15</text>
+<rect x="6" y="40" width="190" height="150" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#8a9a6b"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">A10 Nanaimo,</text>
+<text x="101" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Ladysmith</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area, shot</text>
+<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start">only or bow area,</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start">special antlerless</text>
+<text x="14" y="160" font-size="14" fill="#23261f" text-anchor="start">season. Michael Lake no</text>
+<text x="14" y="178" font-size="14" fill="#23261f" text-anchor="start">shooting</text>
+<rect x="204" y="40" width="190" height="150" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#e8590c"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">A11 Englishman River</text>
+<text x="212" y="106" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area,</text>
+<text x="212" y="124" font-size="14" fill="#23261f" text-anchor="start">MU 1-5</text>
+<rect x="6" y="198" width="190" height="150" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M6 208 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#4a7fb0"/>
+<text x="101" y="216" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">A12 Nanaimo River</text>
+<text x="101" y="234" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Camp</text>
+<text x="14" y="264" font-size="14" fill="#23261f" text-anchor="start">Closed in bow only</text>
+<text x="14" y="282" font-size="14" fill="#23261f" text-anchor="start">grouse, deer and bear</text>
+<text x="14" y="300" font-size="14" fill="#23261f" text-anchor="start">seasons. No snowmobile,</text>
+<text x="14" y="318" font-size="14" fill="#23261f" text-anchor="start">e bike or ATV, Sept 1</text>
+<text x="14" y="336" font-size="14" fill="#23261f" text-anchor="start">to Dec 31</text>
+<rect x="204" y="198" width="190" height="150" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<path d="M204 208 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#8a9a6b"/>
+<text x="299" y="216" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">A13 Ladysmith,</text>
+<text x="299" y="234" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Malahat</text>
+<text x="212" y="264" font-size="14" fill="#23261f" text-anchor="start">Shot only or bow area,</text>
+<text x="212" y="282" font-size="14" fill="#23261f" text-anchor="start">special antlerless</text>
+<text x="212" y="300" font-size="14" fill="#23261f" text-anchor="start">season</text>
+<rect x="6" y="356" width="190" height="114" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<path d="M6 366 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#8a9a6b"/>
+<text x="101" y="374" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">A14 Nanaimo</text>
+<text x="14" y="404" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area, shot</text>
+<text x="14" y="422" font-size="14" fill="#23261f" text-anchor="start">only or bow area,</text>
+<text x="14" y="440" font-size="14" fill="#23261f" text-anchor="start">special antlerless</text>
+<text x="14" y="458" font-size="14" fill="#23261f" text-anchor="start">season</text>
+<rect x="204" y="356" width="190" height="114" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M204 366 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#e8590c"/>
+<text x="299" y="374" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">A15 York Lake</text>
+<text x="212" y="404" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area,</text>
+<text x="212" y="422" font-size="14" fill="#23261f" text-anchor="start">MU 1-5</text>
+<rect x="6" y="476" width="14" height="14" rx="3" fill="#8a9a6b"/>
+<text x="24" y="488" font-size="14" fill="#23261f" text-anchor="start">Shot only or bow</text>
+<rect x="156.4" y="476" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="174" y="488" font-size="14" fill="#23261f" text-anchor="start">No shooting</text>
+<rect x="269.8" y="476" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="288" y="488" font-size="14" fill="#23261f" text-anchor="start">Vehicle rule</text>
+</svg>

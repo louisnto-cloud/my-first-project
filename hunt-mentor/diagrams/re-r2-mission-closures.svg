@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 449" role="img" aria-label="Cards: Mission: licence and closures. Special Area licence: Mission city limits or all of 2-4: licence plus $1,000,000 insurance. FVRD roads: No shooting within 400 m unless lawfully hunting or trapping. No vehicles, all year: Pitt Addington Marsh 2-8. Bert Brink WMA 2-4. MU 2-4: Burns Bog: no hunting. Boundary Bay: no snipe. Delta, Mud Bay dykes: no lead. No Shooting maps: B12 Buntzen Lake. 2-19: B29, B32, B33. 2-3: B2, B3, B4. Regional district parks: No hunting or shooting within 100 m." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="449" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Mission: licence and closures</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Pages 9, 27, 29. FVRD: Fraser Valley Regional</text>
+<text x="200" y="65" font-size="14" fill="#8b5a2b" text-anchor="middle">District. WMA: Wildlife Management Area.</text>
+<rect x="6.0" y="87" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6.0 115 V96 Q6.0 87 15.0 87 H187.0 Q196.0 87 196.0 96 V115 Z" fill="#c92a2a"/>
+<text x="14.0" y="107" font-size="14" font-weight="bold" fill="#ffffff">Special Area licence</text>
+<text x="14.0" y="135" font-size="14" fill="#23261f">Mission city limits or</text>
+<text x="14.0" y="153" font-size="14" fill="#23261f">all of 2-4: licence</text>
+<text x="14.0" y="171" font-size="14" fill="#23261f">plus $1,000,000</text>
+<text x="14.0" y="189" font-size="14" fill="#23261f">insurance</text>
+<rect x="204.0" y="87" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M204.0 115 V96 Q204.0 87 213.0 87 H385.0 Q394.0 87 394.0 96 V115 Z" fill="#e8590c"/>
+<text x="212.0" y="107" font-size="14" font-weight="bold" fill="#ffffff">FVRD roads</text>
+<text x="212.0" y="135" font-size="14" fill="#23261f">No shooting within 400</text>
+<text x="212.0" y="153" font-size="14" fill="#23261f">m unless lawfully</text>
+<text x="212.0" y="171" font-size="14" fill="#23261f">hunting or trapping</text>
+<rect x="6.0" y="207" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M6.0 235 V216 Q6.0 207 15.0 207 H187.0 Q196.0 207 196.0 216 V235 Z" fill="#8b5a2b"/>
+<text x="14.0" y="227" font-size="14" font-weight="bold" fill="#ffffff">No vehicles, all year</text>
+<text x="14.0" y="255" font-size="14" fill="#23261f">Pitt Addington Marsh</text>
+<text x="14.0" y="273" font-size="14" fill="#23261f">2-8. Bert Brink WMA 2-4</text>
+<rect x="204.0" y="207" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204.0 235 V216 Q204.0 207 213.0 207 H385.0 Q394.0 207 394.0 216 V235 Z" fill="#c92a2a"/>
+<text x="212.0" y="227" font-size="14" font-weight="bold" fill="#ffffff">MU 2-4</text>
+<text x="212.0" y="255" font-size="14" fill="#23261f">Burns Bog: no hunting.</text>
+<text x="212.0" y="273" font-size="14" fill="#23261f">Boundary Bay: no snipe.</text>
+<text x="212.0" y="291" font-size="14" fill="#23261f">Delta, Mud Bay dykes:</text>
+<text x="212.0" y="309" font-size="14" fill="#23261f">no lead</text>
+<rect x="6.0" y="327" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6.0 373 V336 Q6.0 327 15.0 327 H187.0 Q196.0 327 196.0 336 V373 Z" fill="#e8590c"/>
+<text x="14.0" y="347" font-size="14" font-weight="bold" fill="#ffffff">No Shooting maps</text>
+<text x="14.0" y="393" font-size="14" fill="#23261f">B12 Buntzen Lake. 2-19:</text>
+<text x="14.0" y="411" font-size="14" fill="#23261f">B29, B32, B33. 2-3: B2,</text>
+<text x="14.0" y="429" font-size="14" fill="#23261f">B3, B4</text>
+<rect x="204.0" y="327" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204.0 373 V336 Q204.0 327 213.0 327 H385.0 Q394.0 327 394.0 336 V373 Z" fill="#c92a2a"/>
+<text x="212.0" y="347" font-size="14" font-weight="bold" fill="#ffffff">Regional district</text>
+<text x="212.0" y="365" font-size="14" font-weight="bold" fill="#ffffff">parks</text>
+<text x="212.0" y="393" font-size="14" fill="#23261f">No hunting or shooting</text>
+<text x="212.0" y="411" font-size="14" fill="#23261f">within 100 m</text>
+</svg>

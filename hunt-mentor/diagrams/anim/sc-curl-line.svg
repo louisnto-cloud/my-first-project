@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Animation of the full curl test on a bighorn ram seen square from the side. An orange circle marks the centre of the nostril, then the lowest back edge of the horn base. A dashed line is drawn through both points and carried on past the horn. Then the horn is traced from its base, back, down and forward around the ear, up to its tip. The tip ends above the line, circled in green: legal full curl." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="17" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Full curl: does the tip clear the line?</text>
+<g transform="translate(62 18) scale(1.6)">
+<path d="M104,118 L96,172 L196,172 L150,76 Z" fill="#c9a27a" stroke="#23261f" stroke-width="1.5"/>
+<path d="M24,96 C26,86 40,76 60,66 L100,48 C112,44 124,46 134,56 L146,100 C140,112 128,118 110,120 C80,124 52,118 30,108 Z" fill="#c9a27a" stroke="#23261f" stroke-width="1.5"/>
+<path d="M24,96 C24,104 30,110 42,114 L50,98 C40,94 32,92 24,96 Z" fill="#f3ead8"/>
+<ellipse cx="92" cy="66" rx="5" ry="4" fill="#23261f"/>
+<circle cx="30" cy="100" r="2.5" fill="#23261f"/>
+<path d="M108,50 C126,18 178,26 184,78 C188,120 160,146 126,143 C96,140 78,122 74,100 C72,90 73,82 76,74" fill="none" stroke="#5c3b1c" stroke-width="12" stroke-linecap="round" stroke-dasharray="360" stroke-dashoffset="360"><animate attributeName="stroke-dashoffset" from="360" to="0" begin="3s" dur="3s" fill="freeze"/></path>
+<circle cx="30" cy="100" r="5" fill="none" stroke="#e8590c" stroke-width="2.5" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.3s" dur="0.4s" fill="freeze"/></circle>
+<circle cx="128" cy="62" r="5" fill="none" stroke="#e8590c" stroke-width="2.5" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.4s" fill="freeze"/></circle>
+<line x1="-12" y1="116.3" x2="205" y2="32.1" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="240" stroke-dashoffset="240"><animate attributeName="stroke-dashoffset" from="240" to="0" begin="1.5s" dur="1.2s" fill="freeze"/></line>
+<circle cx="76" cy="74" r="9" fill="none" stroke="#2f6b3a" stroke-width="3" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="6s" dur="0.4s" fill="freeze"/></circle>
+</g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.3s" dur="0.4s" fill="freeze"/><text x="110.0" y="218.0" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">Nostril</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.4s" fill="freeze"/><text x="110" y="66" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">Horn base</text><line x1="150" y1="70" x2="250.4" y2="108.0" stroke="#e8590c" stroke-width="2"/><polygon points="258.8,111.2 252.1,103.4 248.6,112.6" fill="#e8590c"/></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="3s" dur="0.4s" fill="freeze"/><text x="340" y="262" font-size="14" fill="#23261f" text-anchor="middle">Follow the horn</text><text x="340" y="280" font-size="14" fill="#23261f" text-anchor="middle">to its tip</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="6.4s" dur="0.5s" fill="freeze"/><rect x="10" y="262" width="230" height="32" rx="8" fill="#2f6b3a"/><text x="125" y="284" font-size="15" fill="#fff" text-anchor="middle" font-weight="bold">Tip above the line: legal</text></g>
+</svg>

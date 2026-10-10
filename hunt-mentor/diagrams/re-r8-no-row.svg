@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 455" role="img" aria-label="Grid: No row, or protected, in Region 8. Mountain sheep: ✕. Mountain goat: ✕. Caribou: ✕. Grizzly bear: ✕. Ptarmigan: ✕. Sharp tailed grouse: ✕. Band tailed pigeon: ✕. Columbian ground squirrel: ✕. White tailed jackrabbit: Protected. Nuttall&#x27;s cottontail: Protected. Badger: Protected." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="455" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">No row, or protected, in Region 8</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Pages 67 and 68. No row means no general open</text>
+<text x="200" y="65" font-size="14" fill="#8b5a2b" text-anchor="middle">season (95%, my reading).</text>
+<rect x="6.0" y="87" width="124.0" height="70" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="68.0" y="121" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">✕</text>
+<text x="68.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">Mountain sheep</text>
+<rect x="138.0" y="87" width="124.0" height="70" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="200.0" y="121" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">✕</text>
+<text x="200.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">Mountain goat</text>
+<rect x="270.0" y="87" width="124.0" height="70" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="332.0" y="121" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">✕</text>
+<text x="332.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">Caribou</text>
+<rect x="6.0" y="165" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="68.0" y="199" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">✕</text>
+<text x="68.0" y="223" font-size="14" fill="#23261f" text-anchor="middle">Grizzly bear</text>
+<rect x="138.0" y="165" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="200.0" y="199" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">✕</text>
+<text x="200.0" y="223" font-size="14" fill="#23261f" text-anchor="middle">Ptarmigan</text>
+<rect x="270.0" y="165" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="332.0" y="199" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">✕</text>
+<text x="332.0" y="223" font-size="14" fill="#23261f" text-anchor="middle">Sharp tailed</text>
+<text x="332.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">grouse</text>
+<rect x="6.0" y="261" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="68.0" y="295" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">✕</text>
+<text x="68.0" y="319" font-size="14" fill="#23261f" text-anchor="middle">Band tailed</text>
+<text x="68.0" y="337" font-size="14" fill="#23261f" text-anchor="middle">pigeon</text>
+<rect x="138.0" y="261" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="200.0" y="295" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">✕</text>
+<text x="200.0" y="319" font-size="14" fill="#23261f" text-anchor="middle">Columbian</text>
+<text x="200.0" y="337" font-size="14" fill="#23261f" text-anchor="middle">ground squirrel</text>
+<rect x="270.0" y="261" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="332.0" y="295" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Protected</text>
+<text x="332.0" y="319" font-size="14" fill="#23261f" text-anchor="middle">White tailed</text>
+<text x="332.0" y="337" font-size="14" fill="#23261f" text-anchor="middle">jackrabbit</text>
+<rect x="6.0" y="357" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="68.0" y="391" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Protected</text>
+<text x="68.0" y="415" font-size="14" fill="#23261f" text-anchor="middle">Nuttall&#x27;s</text>
+<text x="68.0" y="433" font-size="14" fill="#23261f" text-anchor="middle">cottontail</text>
+<rect x="138.0" y="357" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="200.0" y="391" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Protected</text>
+<text x="200.0" y="415" font-size="14" fill="#23261f" text-anchor="middle">Badger</text>
+</svg>

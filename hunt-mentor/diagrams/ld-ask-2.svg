@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 2: say who you are and what you ask: two brothers hunting quail with shotguns, one weekday morning, staying 100 metres from every building, never shooting toward the house or road, closing every gate. A Tip.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="34" cy="34" r="20" fill="#e8590c"/>
+<text x="34" y="41" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<text x="64" y="32" font-size="19" font-weight="bold" fill="#23261f">Say who you are and what you</text>
+<text x="64" y="54" font-size="19" font-weight="bold" fill="#23261f">ask</text>
+<circle cx="133" cy="146" r="52" fill="#dfe6d3"/>
+<g transform="translate(133.33333333333334 146) scale(1.6)"><circle cx="-12" cy="-12" r="7" fill="#2f3a2b"/><path d="M-23 20 v-14 q0 -8 11 -8 q11 0 11 8 v14 z" fill="#e8590c"/><circle cx="12" cy="-12" r="7" fill="#2f3a2b"/><path d="M1 20 v-14 q0 -8 11 -8 q11 0 11 8 v14 z" fill="#8a9a6b"/></g>
+<circle cx="267" cy="146" r="52" fill="#dfe6d3"/>
+<g transform="translate(266.6666666666667 146) scale(1.6)"><ellipse cx="0" cy="5" rx="15" ry="10" fill="#7b7f86"/><circle cx="11" cy="-7" r="7" fill="#2f3a2b"/><path d="M10 -14 q4 -10 10 -7" stroke="#2f3a2b" stroke-width="3" fill="none"/><circle cx="10" cy="-21" r="3" fill="#2f3a2b"/><path d="M-3 14 v7 M4 14 v7" stroke="#2f3a2b" stroke-width="2.5"/></g>
+<text x="200" y="226" font-size="15" fill="#2f3a2b" text-anchor="middle">Quail, shotguns, one weekday morning.</text>
+<text x="200" y="246" font-size="15" fill="#2f3a2b" text-anchor="middle">100 m from buildings, gates closed (Tip).</text>
+</svg>

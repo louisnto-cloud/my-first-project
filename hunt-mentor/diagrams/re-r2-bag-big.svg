@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 362" role="img" aria-label="Grid: Region 2 bag limits: big game and furbearers. Mountain goat: 1. Black bear, per licence year: ★ 2. Wolf: 3. Coyote: NBL. Raccoon, skunk: NBL. Snowshoe hare (Daily): 10. Bobcat: 1. Cougar: 2." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="362" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 2 bag limits: big game and</text>
+<text x="200" y="47" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">furbearers</text>
+<text x="200" y="68" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 28. NBL means No Bag Limit.</text>
+<rect x="6.0" y="90" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="68.0" y="124" font-size="26" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1</text>
+<text x="68.0" y="148" font-size="14" fill="#23261f" text-anchor="middle">Mountain goat</text>
+<rect x="138.0" y="90" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<text x="200.0" y="124" font-size="26" font-weight="bold" fill="#8b5a2b" text-anchor="middle">★ 2</text>
+<text x="200.0" y="148" font-size="14" fill="#23261f" text-anchor="middle">Black bear, per</text>
+<text x="200.0" y="166" font-size="14" fill="#23261f" text-anchor="middle">licence year</text>
+<rect x="270.0" y="90" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="332.0" y="124" font-size="26" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3</text>
+<text x="332.0" y="148" font-size="14" fill="#23261f" text-anchor="middle">Wolf</text>
+<rect x="6.0" y="186" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="68.0" y="220" font-size="26" font-weight="bold" fill="#8a9a6b" text-anchor="middle">NBL</text>
+<text x="68.0" y="244" font-size="14" fill="#23261f" text-anchor="middle">Coyote</text>
+<rect x="138.0" y="186" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="200.0" y="220" font-size="26" font-weight="bold" fill="#8a9a6b" text-anchor="middle">NBL</text>
+<text x="200.0" y="244" font-size="14" fill="#23261f" text-anchor="middle">Raccoon, skunk</text>
+<rect x="270.0" y="186" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="332.0" y="220" font-size="26" font-weight="bold" fill="#8a9a6b" text-anchor="middle">10</text>
+<text x="332.0" y="244" font-size="14" fill="#23261f" text-anchor="middle">Snowshoe hare</text>
+<text x="332.0" y="262" font-size="14" fill="#23261f" text-anchor="middle">(Daily)</text>
+<rect x="6.0" y="282" width="124.0" height="70" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="68.0" y="316" font-size="26" font-weight="bold" fill="#e8590c" text-anchor="middle">1</text>
+<text x="68.0" y="340" font-size="14" fill="#23261f" text-anchor="middle">Bobcat</text>
+<rect x="138.0" y="282" width="124.0" height="70" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="200.0" y="316" font-size="26" font-weight="bold" fill="#e8590c" text-anchor="middle">2</text>
+<text x="200.0" y="340" font-size="14" fill="#23261f" text-anchor="middle">Cougar</text>
+</svg>

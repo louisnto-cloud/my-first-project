@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" role="img" aria-label="Duck gun rules as icons. A shotgun 10 gauge or smaller. A plug in the magazine so it holds 3 shells in total, magazine and chamber combined. A shell marked non toxic: steel, bismuth, tungsten or tin, and no other shot in your pockets or boat. A slug crossed out: no slugs. Lead is still allowed for band tailed pigeon, collared dove and, in BC, mourning dove." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="330" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Duck gun: plug, shot, gauge</text>
+<rect x="20" y="44" width="230" height="10" fill="#2f3a2b"/>
+<rect x="60" y="56" width="160" height="12" rx="3" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="74" cy="62" r="5" fill="#e8590c"/><circle cx="90" cy="62" r="5" fill="#e8590c"/>
+<rect x="100" y="57" width="118" height="10" fill="#8a9a6b"/>
+<path d="M250 44 L320 44 L340 76 L300 82 L262 60 Z" fill="#8b5a2b"/>
+<rect x="34" y="40" width="16" height="18" rx="3" fill="#e8590c"/>
+<text x="20" y="104" font-size="15" font-weight="bold" fill="#23261f">3 shells total: 2 in the magazine, 1 in the chamber</text>
+<text x="20" y="124" font-size="14" fill="#23261f">One piece plug, removed only by taking the gun apart</text>
+<g transform="translate(20,142)"><rect x="0" y="10" width="44" height="64" rx="4" fill="#4a7fb0"/><rect x="0" y="66" width="44" height="14" fill="#b08d57"/>
+<text x="22" y="48" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">steel</text></g>
+<text x="76" y="166" font-size="15" font-weight="bold" fill="#23261f">Non toxic shot only</text>
+<text x="76" y="186" font-size="14" fill="#23261f">Steel, bismuth, tungsten, tin</text>
+<text x="76" y="206" font-size="14" fill="#23261f">No other shot in pockets or boat</text>
+<g transform="translate(20,232)"><rect x="4" y="6" width="36" height="44" rx="10" fill="#2f3a2b"/><circle cx="22" cy="28" r="26" fill="none" stroke="#c92a2a" stroke-width="4"/><line x1="4" y1="46" x2="40" y2="10" stroke="#c92a2a" stroke-width="4"/></g>
+<text x="76" y="252" font-size="15" font-weight="bold" fill="#23261f">No slugs. 10 gauge or smaller</text>
+<text x="76" y="272" font-size="14" fill="#23261f">One shotgun. A second gun unloaded and</text>
+<text x="76" y="290" font-size="14" fill="#23261f">taken apart or cased</text>
+<text x="20" y="318" font-size="14" fill="#8b5a2b">Lead still OK: band tailed pigeon, doves (s. 38)</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" role="img" aria-label="Bar chart of BC sheep seasons, August to November. General open seasons in green: thinhorn rams in Regions 6, 7A and 7B, August 1 to October 15. Bighorn in MUs 7-18 and 7-19, August 15 to September 30. Region 3, MUs 3-31 and part of 3-32, full curl, September 10 to October 20. Part of MU 3-17, mature rams, September 10 to October 20. Region 5, MU 5-2, September 10 to October 20. Limited Entry Hunting draws in blue, Region 3: at least three quarter curl, September 20 to October 20; any ram, November 1 to 20; ewe or lamb, November 1 to 15." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="420" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Sheep seasons at a glance</text>
+<text x="200.0" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">Green: general open season. Blue: draw only.</text>
+<rect x="128.0" y="72" width="64.5" height="288" fill="#dfe6d3"/>
+<text x="160.2" y="66" font-size="14" fill="#2f3a2b" text-anchor="middle">Aug</text>
+<rect x="192.5" y="72" width="64.5" height="288" fill="#fffaf0"/>
+<text x="224.8" y="66" font-size="14" fill="#2f3a2b" text-anchor="middle">Sep</text>
+<rect x="257.0" y="72" width="64.5" height="288" fill="#dfe6d3"/>
+<text x="289.2" y="66" font-size="14" fill="#2f3a2b" text-anchor="middle">Oct</text>
+<rect x="321.5" y="72" width="64.5" height="288" fill="#fffaf0"/>
+<text x="353.8" y="66" font-size="14" fill="#2f3a2b" text-anchor="middle">Nov</text>
+<text x="122" y="88.0" font-size="13" fill="#23261f" text-anchor="end">Thinhorn</text>
+<text x="122" y="102.0" font-size="13" fill="#23261f" text-anchor="end">6, 7A, 7B</text>
+<rect x="128.0" y="78" width="160.2" height="24" rx="5" fill="#5f7a3a"/>
+<text x="208.1" y="95.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">Full curl</text>
+<line x1="128" y1="108" x2="386" y2="108" stroke="#8a9a6b" stroke-width="1"/>
+<text x="122" y="124.0" font-size="13" fill="#23261f" text-anchor="end">Bighorn</text>
+<text x="122" y="138.0" font-size="13" fill="#23261f" text-anchor="end">7-18, 7-19</text>
+<rect x="157.1" y="114" width="99.9" height="24" rx="5" fill="#5f7a3a"/>
+<text x="207.1" y="131.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">Full curl</text>
+<line x1="128" y1="144" x2="386" y2="144" stroke="#8a9a6b" stroke-width="1"/>
+<text x="122" y="160.0" font-size="13" fill="#23261f" text-anchor="end">Region 3</text>
+<text x="122" y="174.0" font-size="13" fill="#23261f" text-anchor="end">3-31, 3-32 part</text>
+<rect x="211.9" y="150" width="86.8" height="24" rx="5" fill="#5f7a3a"/>
+<text x="255.2" y="167.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">Full curl</text>
+<line x1="128" y1="180" x2="386" y2="180" stroke="#8a9a6b" stroke-width="1"/>
+<text x="122" y="196.0" font-size="13" fill="#23261f" text-anchor="end">Region 3</text>
+<text x="122" y="210.0" font-size="13" fill="#23261f" text-anchor="end">3-17 part</text>
+<rect x="211.9" y="186" width="86.8" height="24" rx="5" fill="#5f7a3a"/>
+<text x="255.2" y="203.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">Mature</text>
+<line x1="128" y1="216" x2="386" y2="216" stroke="#8a9a6b" stroke-width="1"/>
+<text x="122" y="232.0" font-size="13" fill="#23261f" text-anchor="end">Region 5</text>
+<text x="122" y="246.0" font-size="13" fill="#23261f" text-anchor="end">MU 5-2</text>
+<rect x="211.9" y="222" width="86.8" height="24" rx="5" fill="#5f7a3a"/>
+<text x="255.2" y="239.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">Full curl</text>
+<line x1="128" y1="252" x2="386" y2="252" stroke="#8a9a6b" stroke-width="1"/>
+<text x="122" y="268.0" font-size="13" fill="#23261f" text-anchor="end">R3 draw</text>
+<text x="122" y="282.0" font-size="13" fill="#23261f" text-anchor="end">3/4 curl</text>
+<rect x="233.3" y="258" width="65.3" height="24" rx="5" fill="#4a7fb0"/>
+<text x="266.0" y="275.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">3/4</text>
+<line x1="128" y1="288" x2="386" y2="288" stroke="#8a9a6b" stroke-width="1"/>
+<text x="122" y="304.0" font-size="13" fill="#23261f" text-anchor="end">R3 draw</text>
+<text x="122" y="318.0" font-size="13" fill="#23261f" text-anchor="end">any ram</text>
+<rect x="321.5" y="294" width="43.0" height="24" rx="5" fill="#4a7fb0"/>
+<line x1="128" y1="324" x2="386" y2="324" stroke="#8a9a6b" stroke-width="1"/>
+<text x="122" y="340.0" font-size="13" fill="#23261f" text-anchor="end">R3 draw</text>
+<text x="122" y="354.0" font-size="13" fill="#23261f" text-anchor="end">ewe, lamb</text>
+<rect x="321.5" y="330" width="32.2" height="24" rx="5" fill="#4a7fb0"/>
+<line x1="128" y1="360" x2="386" y2="360" stroke="#8a9a6b" stroke-width="1"/>
+<text x="200.0" y="384" font-size="14" fill="#23261f" text-anchor="middle">Draw = LEH (Limited Entry Hunting).</text>
+<text x="200.0" y="402" font-size="14" fill="#23261f" text-anchor="middle">Bag limit 1. Read your MU (Management Unit) row.</text>
+
+</svg>

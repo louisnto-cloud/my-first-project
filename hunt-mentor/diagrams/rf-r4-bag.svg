@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 488" role="img" aria-label="Tiles: Region 4 bag limits. Deer all together 2. Mule deer 1. White tailed deer 2, one buck and one antlerless. Plus 1 deer of either species and sex in the Cranbrook Deer Hunt, 5 to 31 January. Never more than 3 deer province wide. Bobcat 1. Cougar 1 or 2 depending on the Management Unit. Coyote no bag limit. Grouse 5 a day for all three kinds together. Turkey 3 a year: 1 in spring, 2 in fall." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="488" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Region 4 bag limits</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">NBL: No Bag Limit.</text>
+<rect x="6" y="62" width="124" height="102" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="68" y="96" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">2</text>
+<text x="68" y="118" font-size="14" fill="#23261f" text-anchor="middle">deer all</text>
+<text x="68" y="136" font-size="14" fill="#23261f" text-anchor="middle">together</text>
+<rect x="138" y="62" width="124" height="102" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="200" y="96" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">1</text>
+<text x="200" y="118" font-size="14" fill="#23261f" text-anchor="middle">mule deer</text>
+<rect x="270" y="62" width="124" height="102" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="332" y="96" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">2</text>
+<text x="332" y="118" font-size="14" fill="#23261f" text-anchor="middle">white tails: 1</text>
+<text x="332" y="136" font-size="14" fill="#23261f" text-anchor="middle">buck, 1</text>
+<text x="332" y="154" font-size="14" fill="#23261f" text-anchor="middle">antlerless</text>
+<rect x="6" y="172" width="124" height="102" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<text x="68" y="206" font-size="26" fill="#6a4c93" text-anchor="middle" font-weight="bold">+1</text>
+<text x="68" y="228" font-size="14" fill="#23261f" text-anchor="middle">Cranbrook Deer</text>
+<text x="68" y="246" font-size="14" fill="#23261f" text-anchor="middle">Hunt, Jan 5 to</text>
+<text x="68" y="264" font-size="14" fill="#23261f" text-anchor="middle">31</text>
+<rect x="138" y="172" width="124" height="102" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="200" y="206" font-size="26" fill="#c92a2a" text-anchor="middle" font-weight="bold">3</text>
+<text x="200" y="228" font-size="14" fill="#23261f" text-anchor="middle">deer province</text>
+<text x="200" y="246" font-size="14" fill="#23261f" text-anchor="middle">wide, never</text>
+<text x="200" y="264" font-size="14" fill="#23261f" text-anchor="middle">more</text>
+<rect x="270" y="172" width="124" height="102" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<text x="332" y="206" font-size="26" fill="#8b5a2b" text-anchor="middle" font-weight="bold">1</text>
+<text x="332" y="228" font-size="14" fill="#23261f" text-anchor="middle">bobcat</text>
+<rect x="6" y="282" width="124" height="84" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<text x="68" y="316" font-size="26" fill="#8b5a2b" text-anchor="middle" font-weight="bold">1 or 2</text>
+<text x="68" y="338" font-size="14" fill="#23261f" text-anchor="middle">cougar, by MU</text>
+<rect x="138" y="282" width="124" height="84" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<text x="200" y="316" font-size="26" fill="#8b5a2b" text-anchor="middle" font-weight="bold">NBL</text>
+<text x="200" y="338" font-size="14" fill="#23261f" text-anchor="middle">coyote</text>
+<rect x="270" y="282" width="124" height="84" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="332" y="316" font-size="26" fill="#8a9a6b" text-anchor="middle" font-weight="bold">5</text>
+<text x="332" y="338" font-size="14" fill="#23261f" text-anchor="middle">grouse a day,</text>
+<text x="332" y="356" font-size="14" fill="#23261f" text-anchor="middle">all 3 kinds</text>
+<rect x="6" y="374" width="124" height="102" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="68" y="408" font-size="26" fill="#8a9a6b" text-anchor="middle" font-weight="bold">3</text>
+<text x="68" y="430" font-size="14" fill="#23261f" text-anchor="middle">turkey a year:</text>
+<text x="68" y="448" font-size="14" fill="#23261f" text-anchor="middle">1 spring, 2</text>
+<text x="68" y="466" font-size="14" fill="#23261f" text-anchor="middle">fall</text>
+</svg>

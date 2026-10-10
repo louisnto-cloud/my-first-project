@@ -9,14 +9,39 @@ checked: 2026-10-02
 > [!why]
 > White tails live in the North Thompson valley bottoms, close to roads and farms. The antlerless season may be open during your October hunt.
 
+```photo g-wt-buck-side
+```
+
+- Valley bottoms, river brush and farm fields (85%).
+- A **separate species licence** from mule deer (99%).
+
+```more what this session covers
 - White tails favour valley bottoms, river edges and farm fields (85%).
 - Near Heffley Creek: North Thompson hayfields and cottonwood bottoms (75%).
 - Late October is the start of the white tail rut build up: rubs and scrapes appear (60%).
 - They are a **separate species licence** from mule deer (page 14) (99%).
 - Best methods for a beginner: sit on a stand, or still hunt slowly (hunter consensus) (65%).
+```
 
 ## Identify: buck, doe, fawn
 
+```diagram sa-wt-id
+```
+
+```video
+commons-whitetail-walk | See the white tail and how a whitetail picks its way through cover.
+```
+
+```gallery
+g-wt-buck-front | Buck: tines rise off one main beam.
+g-wt-doe | Doe: no antlers, long brown tail.
+g-wt-doe-flag | Alarm: the white flag goes up.
+g-wt-run | Runs long and low, no bounce.
+```
+
+- Tail up and white = white tail (85%).
+
+```more the full ID list
 - **Antlers (buck):** one main beam curving forward, single tines pointing up (85%).
 - **Tail:** wide, brown on top, bright white underneath (85%).
 - **Alarm:** tail goes straight up and waves, the white **flag** (85%).
@@ -24,49 +49,101 @@ checked: 2026-10-02
 - **Ears:** smaller than a mule deer's (85%).
 - **Leg gland** (metatarsal, on the outside of the hind leg): small (85%).
 - **Doe and fawn:** no antlers. By October fawns have lost their spots (75%).
+```
+
+## Look alikes: mule deer, and the button buck
 
 ```diagram mule-vs-whitetail
+```
+
+```diagram sa-button-buck
 ```
 
 > [!warn]
 > A doe and a "button buck" (male fawn with tiny bumps) look alike. Both count as antlerless (page 3) (99%). Know the rule before you shoot.
 
-```video
-commons-whitetail-walk | See the white tail and how a whitetail picks its way through cover.
-```
-
 ## Where they live near Heffley Creek
 
+```diagram sa-wt-valley
+```
+
+```photo hab-kamloops-pond-farm
+```
+
+- Bed in brush, feed in fields at dusk (75%).
+- Houses close by: the 100 m rule matters (99%).
+
+```more habitat and movement detail
 - Valley bottoms, riparian strips (the green belt along rivers and creeks), farm fields (85%).
 - Local reading: North Thompson hayfields and cottonwood bottoms north of Kamloops (75%).
 - They feed in fields at dusk and night, and bed in thick brush, willow and cottonwood close by (75%).
 - They do not migrate far like mule deer. Many make shorter seasonal moves along or across a valley, for example down to river bottoms (70%, BC government deer account).
 - They live close to houses and roads. Shooting distance rules matter a lot here.
+```
 
 ```diagram deer-hillside
 ```
 
 ## Daily pattern
 
+```anim sg-bed-feed Bed in cover, feed in the field, back at dawn.
+```
+
+- Peaks at dawn and dusk (85%).
+- Pressured deer move at night (70%).
+
+```diagram sa-wt-stand
+```
+
+> [!field]
+> Find the trail between the bedding brush and the field. Look for the most trampled path with the freshest tracks. Sit downwind of it.
+
+```more daily detail
 - Same two peaks as mule deer: dawn and dusk (85%).
 - Feeds in fields from late afternoon through the night (75%).
 - Slips back into cover at or before first light (75%).
 - Under hunting pressure, white tails move more at night (70%).
 - Late October: bucks start moving in daylight as the rut nears (70%).
 - Legal light starts 1 hour before sunrise and ends 1 hour after sunset (page 11, item 38) (99%).
-
-> [!field]
-> Find the trail between the bedding brush and the field. Look for the most trampled path with the freshest tracks. Sit downwind of it.
+```
 
 ## Food, water and cover
 
+```gallery
+hab-dogwood-stems | Red osier dogwood: browse.
+hab-willow-shrub | Willow: browse and cover.
+hab-woods-rose-hips | Wild rose: browse.
+hab-saskatoon-berries | Saskatoon along creeks.
+```
+
+| Need | Near Heffley Creek |
+|---|---|
+| Food | Hay and alfalfa regrowth, creek browse (80%) |
+| Water | Close in valley bottoms (Tip) |
+| Cover | Willow, cottonwood, young conifers (75%) |
+
+```more the full list
 - Hay and alfalfa regrowth in fall fields (80%).
 - Browse: willow, red osier dogwood, rose, saskatoon along creeks (75%).
 - Water is close in valley bottoms, so water is rarely the limit (Tip).
 - Cover: dense willow, cottonwood thickets, young conifers, brushy draws (75%).
+```
 
 ## Rut sign: rubs and scrapes
 
+```diagram rubs-scrapes
+```
+
+```photo hab-deer-rub
+```
+
+- Peak rut: November (80%).
+- Fresh rubs: pale wood, sap. Hunt those (Tip).
+
+```diagram hf-rut-calendar
+```
+
+```more rut detail
 - **Rut** (breeding season): white tail peak is November. Most does conceive about 13 to 17 November (80%).
 - **Rubs:** a buck scrapes bark off a sapling with his antlers. Bare, shredded wood at knee to waist height (60%).
 - White tails make many more rubs than mule deer (60%).
@@ -76,20 +153,57 @@ commons-whitetail-walk | See the white tail and how a whitetail picks its way th
 
 > [!tip]
 > Fresh rubs ooze sap and the wood is pale. Old rubs are grey. Hunt the fresh ones.
+```
 
 ## Tracks and sign
 
-```diagram deer-track
+```diagram sg-hoof-grid
 ```
 
+```gallery
+hab-deer-track-dirt | Track: two pointed toes.
+hab-deer-trail-reeds | Trail: packed soil through grass.
+hab-deer-pellets-fresh | Fresh pellets: shiny.
+```
+
+- Same track as mule deer: one print won't tell you (60%).
+
+```more sign detail
 - Heart shaped track, same as mule deer. You can't tell them apart by one track (60%).
 - Pellets: oval, about 1 to 1.5 cm (70%).
 - Trails: worn paths from bedding brush to field edges (75%).
 - Beds: flattened ovals in tall grass or brush near the field edge (70%).
 - Browse: torn, ragged twig ends (75%).
+```
+
+```diagram deer-track
+```
 
 ## Tactics: options
 
+```steps Set up a stand in 4 steps
+sg-stand-1 | Find the trail between bed and field.
+sg-stand-2 | Check the wind for the hour you sit.
+sg-stand-3 | Pick a spot with a rest and a backstop.
+sg-stand-4 | Walk in from behind. Never cross the trail.
+```
+
+| Option | Pros | Cons |
+|---|---|---|
+| A: stand or blind | Still, steady shot | Scouting, permission, cold |
+| B: still hunting | Works midday | Quick close shots |
+| C: rattle and grunt | Pulls bucks close | Best early November |
+
+- My lean: Option A on a hayfield edge (Tip).
+
+```diagram sa-rattle-when
+```
+
+```video
+yt-deer-calling-mistakes | Avoid the three big deer calling mistakes.
+```
+
+```more the three options in full
 ### Option A: stand or ground blind
 - Sit on the trail between bedding and food, downwind, before light or 2 hours before dark.
 - Pros: you are still, deer come to you, easy steady shot.
@@ -107,34 +221,64 @@ commons-whitetail-walk | See the white tail and how a whitetail picks its way th
 
 > [!lean]
 > Option A. Get permission on one hayfield edge, find the main trail, and sit it at dusk.
-
-```video
-yt-deer-calling-mistakes | Avoid the three big deer calling mistakes.
 ```
 
 ## Rifle, load and range
 
+```diagram sa-308-range
+```
+
+- Valley shots: often 50 to 150 m (55 to 164 yd) (Tip).
+
+> [!warn]
+> Flat fields, houses and roads. Before every shot, see a solid earth [[Backstop]]. No shots toward buildings, livestock or roads.
+
+```diagram hf-backstop
+```
+
+```more load and range detail
 - Your .308 Winchester with a 150 to 165 grain bullet built to expand is plenty (Tip).
 - Shots in valley bottoms are often 50 to 150 m (55 to 164 yd) (Tip).
 
 > [!tip]
 > Same limit as mule deer: only shoot as far as you can hit a 15 cm (6 in) plate 9 times out of 10 from a field rest. For most beginners, 200 m (219 yd).
-
-> [!warn]
-> Flat fields, houses and roads. Before every shot, see a solid earth [[Backstop]]. No shots toward buildings, livestock or roads.
+```
 
 ## Shot placement (brief)
 
+```diagram vitals-deer
+```
+
+```anim sa-wt-mark Mark where it stood and where it went in.
+```
+
+- Behind the front leg, one third up (75%).
+- Often runs 50 to 100 m after a good hit (Tip).
+
+```more shot detail
 - Heart and lungs: tight behind the front leg, one third up the body (standard hunter education advice) (75%).
 - Wait for broadside or slightly quartering away (Tip).
 - White tails often run 50 to 100 m after a good hit. Mark where it stood and where it entered cover (Tip).
 - Full lesson: the shot placement session (coming in a later phase).
+```
 
 ## Legal specifics
 
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram hf-deer-season-bars
+```
+
+- Antlerless: 10 to 31 October in MU (Management Unit) 3-27 and 3-28 (99%).
+- Bucks: 10 September to 10 December (99%).
+
+```diagram rb-100m-ring
+```
+
+- No shooting within 100 m (109 yd) of an occupied house or farm building (99%).
+
+```more MUs, bag limit, private land and bylaws
 - **Your [[MU]] (Management Unit):**
   - Sun Peaks Resort: MU 3-27 (page 35, Map C11) (99%).
   - Heffley Creek, east bank of the North Thompson: MU 3-27, read from the map (page 32) (85%).
@@ -149,20 +293,33 @@ yt-deer-calling-mistakes | Avoid the three big deer calling mistakes.
 - **Inside city limits or regional parks:** most municipalities restrict firearms by bylaw, and most regional district parks ban firearm and bow discharge. These bylaws are not in the synopsis (page 9) (99%). Local discharge bylaw: VERIFY with the City of Kamloops.
   - Kamloops notice: inside the City of Kamloops boundary, no firearm or bow discharge on the Lac du Bois Grasslands Protected Area or on Crown land (page 33) (99%).
 - Using deer, elk, moose or caribou parts or scents from outside BC for hunting is unlawful (page 12 item 51) (99%). The synopsis warns that urine based scents can spread [[CWD]] (Chronic Wasting Disease) (inside back cover) (99%).
+```
 
 ```regs deerR3,safety
 ```
 
 ## Meat care and yield
 
+```diagram sa-yield-species
+```
+
+- White tail yield: VERIFY. Assume about a third of live weight (Tip).
+- Notch the licence before you touch the deer (99%).
+
+```more meat care and the after shot rules
 - Yield for white tails: VERIFY. Expect a similar ratio to mule deer: about one third of live weight as boneless meat (Tip, assumption).
 - Cool the carcass fast. October days can be warm in the valley (Tip).
 - Cancel (notch) your white tailed deer species licence immediately after the kill, before you handle the deer. Follow the steps printed on the licence (page 11 item 1) (99%).
 - Carry that species licence with the meat whenever you possess or transport it (page 15) (99%).
 - Leave [[Evidence of sex]] naturally attached: the unskinned tail, plus a testicle or part of the penis for a buck, or part of the udder and teats for a doe (page 15) (99%).
+```
 
 ## Beginner mistakes
 
+```diagram sa-wt-mistakes
+```
+
+```more all the mistakes
 > [!mistake]
 > - Sitting right on the field edge in the open, where every deer sees you walk in.
 > - Hunting a farm without written or clear permission.
@@ -170,8 +327,12 @@ yt-deer-calling-mistakes | Avoid the three big deer calling mistakes.
 
 - Also: walking through the bedding brush to get to your stand. Go around.
 - Also: noisy truck doors and voices near the field at dusk.
+```
 
 ## Grandpa's rules
+
+```photo g-wt-buck-flag
+```
 
 > [!rule]
 > Hunt the trail, not the field. Big bucks reach the field after dark.

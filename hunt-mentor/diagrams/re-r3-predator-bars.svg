@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 563" role="img" aria-label="Season bar chart: Region 3 bear, wolf, coyote, cougar. Black bear: 3-12 to 3-20, 3-26 to 3-44: Sept 1 to Nov 30. Black bear: 3-46: Sept 20 to Nov 30. Black bear, spring: 3-12 to 3-20, 3-26 to 3-44, 3-46: Apr 1 to June 30. Wolf: 3-12 to 3-16, 3-18 to 3-20: Sept 10 to June 15. Wolf: 3-17, 3-26 to 3-44: No closed season. Coyote: 3-12 to 3-20, 3-26 to 3-44: Sept 1 to June 30. Cougar: 3-12 to 3-20, 3-26 to 3-33: Nov 15 to Mar 31. Cougar: 3-34 to 3-44: Sept 10 to Mar 31." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="563" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 3 bear, wolf, coyote, cougar</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 34. July to June.</text>
+<text x="28.0" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jul</text>
+<text x="59.9" y="83" font-size="14" fill="#23261f" text-anchor="middle">Aug</text>
+<text x="91.3" y="83" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="122.7" y="83" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="154.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<text x="185.6" y="83" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
+<text x="217.5" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jan</text>
+<text x="247.9" y="83" font-size="14" fill="#23261f" text-anchor="middle">Feb</text>
+<text x="278.3" y="83" font-size="14" fill="#23261f" text-anchor="middle">Mar</text>
+<text x="309.7" y="83" font-size="14" fill="#23261f" text-anchor="middle">Apr</text>
+<text x="341.1" y="83" font-size="14" fill="#23261f" text-anchor="middle">May</text>
+<text x="372.5" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jun</text>
+<line x1="12.0" y1="91" x2="12.0" y2="553" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="43.9" y1="91" x2="43.9" y2="553" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="75.9" y1="91" x2="75.9" y2="553" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="106.8" y1="91" x2="106.8" y2="553" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="138.7" y1="91" x2="138.7" y2="553" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="169.6" y1="91" x2="169.6" y2="553" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="201.5" y1="91" x2="201.5" y2="553" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="233.5" y1="91" x2="233.5" y2="553" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="262.3" y1="91" x2="262.3" y2="553" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="294.3" y1="91" x2="294.3" y2="553" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="325.2" y1="91" x2="325.2" y2="553" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="357.1" y1="91" x2="357.1" y2="553" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="388.0" y1="91" x2="388.0" y2="553" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<text x="12" y="107" font-size="14" font-weight="bold" fill="#23261f">Black bear: 3-12 to 3-20, 3-26 to 3-44</text>
+<rect x="75.9" y="113" width="93.7" height="22" rx="3" fill="#8b5a2b"/>
+<text x="175.6" y="129" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Nov 30</text>
+<text x="12" y="163" font-size="14" font-weight="bold" fill="#23261f">Black bear: 3-46</text>
+<rect x="95.4" y="169" width="74.2" height="22" rx="3" fill="#8b5a2b"/>
+<text x="175.6" y="185" font-size="14" font-weight="bold" fill="#23261f">Sept 20 to Nov 30</text>
+<text x="12" y="219" font-size="14" font-weight="bold" fill="#23261f">Black bear, spring: 3-12 to 3-20, 3-26 to</text>
+<text x="12" y="237" font-size="14" font-weight="bold" fill="#23261f">3-44, 3-46</text>
+<rect x="294.3" y="243" width="93.7" height="22" rx="3" fill="#8b5a2b"/>
+<text x="288.3" y="259" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Apr 1 to June 30</text>
+<text x="12" y="293" font-size="14" font-weight="bold" fill="#23261f">Wolf: 3-12 to 3-16, 3-18 to 3-20</text>
+<rect x="85.1" y="299" width="287.4" height="22" rx="3" fill="#2f3a2b"/>
+<text x="228.8" y="315" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 10 to June 15</text>
+<text x="12" y="349" font-size="14" font-weight="bold" fill="#23261f">Wolf: 3-17, 3-26 to 3-44</text>
+<rect x="12" y="355" width="376" height="22" rx="3" fill="#2f3a2b"/>
+<text x="200" y="371" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">No closed season</text>
+<text x="12" y="405" font-size="14" font-weight="bold" fill="#23261f">Coyote: 3-12 to 3-20, 3-26 to 3-44</text>
+<rect x="75.9" y="411" width="312.1" height="22" rx="3" fill="#8a9a6b"/>
+<text x="231.9" y="427" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 1 to June 30</text>
+<text x="12" y="461" font-size="14" font-weight="bold" fill="#23261f">Cougar: 3-12 to 3-20, 3-26 to 3-33</text>
+<rect x="153.1" y="467" width="141.1" height="22" rx="3" fill="#e8590c"/>
+<text x="147.1" y="483" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Nov 15 to Mar 31</text>
+<text x="12" y="517" font-size="14" font-weight="bold" fill="#23261f">Cougar: 3-34 to 3-44</text>
+<rect x="85.1" y="523" width="209.1" height="22" rx="3" fill="#e8590c"/>
+<text x="189.7" y="539" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 10 to Mar 31</text>
+</svg>

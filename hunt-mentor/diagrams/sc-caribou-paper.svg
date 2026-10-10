@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Caribou paper trail in 5 steps. 1, win the Limited Entry Hunting draw. 2, buy the $20.00 species licence, valid 2 days after issue. 3, hunt, with evidence of sex attached. 4, compulsory inspection within 30 days: the incisor tooth, the antlers, and the hide if no main beam is over 60 centimetres. 5, the Mandatory Hunter Report by March 31, hunted or not." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Caribou paper trail</text>
+<rect x="20" y="42" width="360" height="42" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="32" y="60" font-size="15" fill="#2f3a2b" text-anchor="start" font-weight="bold">1  Win the draw</text>
+<text x="32" y="77" font-size="13" fill="#23261f" text-anchor="start">LEH (Limited Entry Hunting)</text>
+<line x1="200" y1="84" x2="200.0" y2="87.0" stroke="#2f3a2b" stroke-width="2"/><polygon points="200,94 203.8,87.0 196.2,87.0" fill="#2f3a2b"/>
+<rect x="20" y="94" width="360" height="42" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="32" y="112" font-size="15" fill="#2f3a2b" text-anchor="start" font-weight="bold">2  Buy the licence</text>
+<text x="32" y="129" font-size="13" fill="#23261f" text-anchor="start">$20.00, valid 2 days after issue</text>
+<line x1="200" y1="136" x2="200.0" y2="139.0" stroke="#2f3a2b" stroke-width="2"/><polygon points="200,146 203.8,139.0 196.2,139.0" fill="#2f3a2b"/>
+<rect x="20" y="146" width="360" height="42" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="32" y="164" font-size="15" fill="#2f3a2b" text-anchor="start" font-weight="bold">3  Hunt</text>
+<text x="32" y="181" font-size="13" fill="#23261f" text-anchor="start">Evidence of sex stays attached</text>
+<line x1="200" y1="188" x2="200.0" y2="191.0" stroke="#2f3a2b" stroke-width="2"/><polygon points="200,198 203.8,191.0 196.2,191.0" fill="#2f3a2b"/>
+<rect x="20" y="198" width="360" height="42" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="32" y="216" font-size="15" fill="#2f3a2b" text-anchor="start" font-weight="bold">4  Inspection, 30 days</text>
+<text x="32" y="233" font-size="13" fill="#23261f" text-anchor="start">Tooth, antlers, hide if no beam over 60 cm</text>
+<line x1="200" y1="240" x2="200.0" y2="243.0" stroke="#2f3a2b" stroke-width="2"/><polygon points="200,250 203.8,243.0 196.2,243.0" fill="#2f3a2b"/>
+<rect x="20" y="250" width="360" height="42" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
+<text x="32" y="268" font-size="15" fill="#2f3a2b" text-anchor="start" font-weight="bold">5  Report by March 31</text>
+<text x="32" y="285" font-size="13" fill="#23261f" text-anchor="start">Mandatory Hunter Report, hunted or not</text>
+</svg>

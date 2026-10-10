@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Calling step 1. A goose flock is far off and high. Call loud and steady with honks to turn them, 65 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="210" width="400" height="90" fill="#d9c27a"/>
+  <text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Far away</text>
+  <g transform="translate(100.0 70.0) scale(0.36)"><ellipse rx="18" ry="5" fill="#7a6a58"/><circle cx="18" cy="-1" r="4.5" fill="#7a6a58"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#7a6a58"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#7a6a58"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#7a6a58"/></g><g transform="translate(82.0 60.4) scale(0.36)"><ellipse rx="18" ry="5" fill="#7a6a58"/><circle cx="18" cy="-1" r="4.5" fill="#7a6a58"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#7a6a58"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#7a6a58"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#7a6a58"/></g><g transform="translate(82.0 79.6) scale(0.36)"><ellipse rx="18" ry="5" fill="#7a6a58"/><circle cx="18" cy="-1" r="4.5" fill="#7a6a58"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#7a6a58"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#7a6a58"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#7a6a58"/></g><g transform="translate(64.0 52.0) scale(0.36)"><ellipse rx="18" ry="5" fill="#7a6a58"/><circle cx="18" cy="-1" r="4.5" fill="#7a6a58"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#7a6a58"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#7a6a58"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#7a6a58"/></g><g transform="translate(64.0 88.0) scale(0.36)"><ellipse rx="18" ry="5" fill="#7a6a58"/><circle cx="18" cy="-1" r="4.5" fill="#7a6a58"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#7a6a58"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#7a6a58"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#7a6a58"/></g>
+  <rect x="250" y="196" width="70" height="16" rx="4" fill="#8a9a6b"/>
+  <g transform="translate(270 196) scale(1.0)"><circle r="9" fill="#e8590c"/></g>
+  <g transform="translate(300 196) scale(1.0)"><circle r="9" fill="#4a7fb0"/></g>
+  <rect x="220" y="96" width="170" height="54" rx="10" fill="#fff" stroke="#2f3a2b" stroke-width="2"/><path d="M280 150 L272 180 L300 150Z" fill="#fff" stroke="#2f3a2b" stroke-width="2"/><rect x="276" y="146" width="22" height="6" fill="#fff"/>
+  <text x="305" y="120" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">HONK, HONK</text>
+  <text x="305" y="140" font-size="14" fill="#2f3a2b" text-anchor="middle">loud, steady</text>
+  <text x="200" y="262" font-size="15" fill="#2f3a2b" text-anchor="middle">Loud honks to turn</text>
+  <text x="200" y="282" font-size="15" fill="#2f3a2b" text-anchor="middle">a far flock (65%)</text>
+</svg>

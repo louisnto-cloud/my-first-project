@@ -12,22 +12,48 @@ checked: 2026-10-01
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram ld-mission-sketch
+```
+
+- Mission: north of the Fraser, MU 2-8 (90%).
+- Inside city limits: extra licence plus insurance (99%).
+
+```more Region 2 pages and the MU map in full
 - Region 2 is the Lower Mainland. Its rules are on pages 26 to 31 of the synopsis (99%).
 - Mission is north of the Fraser in [[MU]] (Management Unit) 2-8. Abbotsford, south of the river, is 2-4. Chilliwack and the Chilliwack River are 2-3. Harrison Lake west side and the Chehalis are 2-19, the east side and Hope are 2-18 and 2-17 (90%, Region 2 MU map, page 26).
 - Mission calls itself the City of Mission now; its firearms bylaw still says District of Mission (95%).
 - Quotes below are verbatim except hyphens, which this app's style removes.
+```
 
 ## The extra licence you need in Mission
 
+```diagram ld-fv-licence-flow
+```
+
+- Outside city limits in 2-8: normal licences (95%).
+- Insurance wording: VERIFY.
+
+```more the Map B10 words, cost and where to buy
 - Map B10, page 29: "All persons hunting within MU 2-4 and those portions of MU 2-8 within the corporate limits of the corporation of the district of Maple Ridge, the corporation of the district of Pitt Meadows, the district of Mission, the corporation of the district of Coquitlam are required to purchase a Fraser Valley Special Area Hunting Licence in addition to other Provincial licences and for hunting migratory game birds, the Migratory Bird Licence. $1,000,000.00 Public Liability and Property Damage insurance is required." (99%)
 - Plain English: any hunt inside Mission city limits, or anywhere in Abbotsford, Langley, Surrey and Delta (MU 2-4), needs this licence plus a million dollar liability policy (95%).
 - Cost: Fraser Valley special hunting area licence $8 plus $2 surcharge, GST (Goods and Services Tax) extra (99%, BC hunting licences page).
 - Page 27: "These special licences are available through Service BC, FrontCounter BC, participating vendors and online at www.gov.bc.ca/hunting." (99%)
 - A BC Wildlife Federation membership is one common way hunters carry liability insurance. Confirm the policy wording covers hunting: VERIFY.
 - Outside the city limits in 2-8 (Stave Lake hills, Sylvester Road country, Chehalis) the normal licences are enough (95%).
+```
 
 ## Duck areas with legal public access
 
+```diagram ld-r2-season-grid
+```
+
+```diagram ld-mission-ducks
+```
+
+- Ducks: 10 Oct to 24 Jan, 8 a day (99%).
+- Every spot has its own rule. Read it first.
+
+```more seasons and every duck area in full
 - Season, page 28: "DUCKS 2-2 to 2-19 Oct 10, 2026 - Jan 24, 2027" with bag "8 (24)" (99%). Coots and snipe the same dates, 10 (30) (99%).
 - Canada and cackling geese, page 28: "Oct 10, 2026 - Nov 22, 2026" and "Dec 19, 2026 - Jan 10, 2027", 10 (30) (99%).
 - Pitt Addington Marsh WMA (Wildlife Management Area), MU 2-8, south end of Pitt Lake: a BC management plan says waterfowl hunting is permitted in some areas on certain days, with details posted on site (80%, search preview of the official plan). Motor vehicles closed "effective year round", page 27 (99%). Its south end sits in Pitt Meadows and Maple Ridge, so the special licence applies there (85%).
@@ -37,9 +63,22 @@ checked: 2026-10-01
 - Bert Brink WMA, MU 2-4 at the Fraser and Vedder Canal: motor vehicles closed year round, page 27 (99%). Hunting status: VERIFY.
 - Boundary Bay WMA (MU 2-4) "is closed to snipe hunting", page 27 (99%).
 - How to find more: in iMapBC turn on parcel ownership and the WMA layer. Crown foreshore and bars below the high water mark are usually public; the dyke and the field behind it are usually not (Tip). Draw the 100 m circle around every house and barn (99% rule).
+```
 
 ## River safety on the Fraser and Pitt
 
+```anim ld-tide-flip The Pitt River runs backward on a flood tide.
+```
+
+```diagram ld-river-launch
+```
+
+```anim rb-boat-glide A gliding boat is still moving. Shoot when stopped.
+```
+
+- Daylight, PFD on, guns unloaded while the motor runs.
+
+```more the tide, flows and boat rules in full
 - Pitt Lake "is the largest tidal freshwater lake in the world" and the Pitt River reverses on flood tides (99%, BC WMA page). The Fraser at Mission rises and falls with the tide too (Tip).
 - Check flows before you launch: the [River Forecast Centre](https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/drought-flooding-dikes-dams/river-forecast-centre) posts current streamflow maps and flood advisories (99%).
 - A 10 ft boat belongs in sloughs, side channels and bays, not the main Fraser current in a fall rain (Tip).
@@ -47,9 +86,20 @@ checked: 2026-10-01
 - Logs and debris run after every rain. Daylight only on the river (Tip).
 - Unlawful, page 11 (2 October 2026 edition): item 22 "To hunt wildlife from a motor vehicle", item 23 no hunting game from a boat unless it is not being propelled by a motor, item 24 no hunting ducks or geese "from or by using a moving boat that is equipped with a motor or sail" (99%). Beached, anchored or tied to a fixed blind is not moving (95%).
 - You may pick up a bird that is already down with the boat if nobody aboard has a loaded firearm, or if the boat is not being propelled by a motor or sail (99%, synopsis page 12, 2 October 2026 edition). Everyone unloads before the motor starts (95%, Firearm Violence Prevention Act).
+```
 
 ## Deer, bear and grouse near Mission
 
+```photo g-bt-buck
+```
+
+```diagram ld-mission-deer
+```
+
+- 2-8 general season: bucks only (95%).
+- No white tailed deer season in Region 2 (95%).
+
+```more the season table, bag limits and every access spot
 | Species | MUs | Season | Bag |
 |---|---|---|---|
 | Mule (black tailed) deer, bucks | 2-2 to 2-4, 2-6 to 2-8, 2-13 to 2-15, 2-17 to 2-19 | Sept 10 to Dec 15 | see note |
@@ -67,15 +117,32 @@ checked: 2026-10-01
   - Davis Lake Park, 19 km north of Mission on Sylvester Road: no hunting listed on the BC Parks page. Walk in only. Treat as closed (85%).
   - Golden Ears and Rolley Lake parks: no hunting listed (85%). Treat as closed.
 - Black tailed bucks here are timber deer: edges of cutblocks, old roads, salal and alder. Still hunting and short shots, not long glassing (Tip).
+```
 
 ## No Shooting areas and bylaws, quoted
 
+```diagram ld-mission-bylaw-areas
+```
+
+```diagram ld-mission-150m
+```
+
+- Rifle only in Area D. Minimum fine $500 (99%).
+
+```more the bylaw sections, quoted
 - Mission Bylaw 5433-2014, section 4: "No person shall discharge a Firearm anywhere within the District except as permitted under this Bylaw." Section 5: no discharge in Area A, which is most of the city including all of the town and the Hatzic side (99%).
 - Section 7: no discharge "on or across any Highway", "within 150 metres of any school building, school yard, public park, playground or church" or "within 150 metres of any workshop, place of business, dwelling house, farm building, Highway or place where people are assembled" (99%). Firearm includes air guns (99%).
 - Section 11: shotgun with shot only in Area B, shotgun with shot or slug in Area C, rifle or shotgun in Area D, "while hunting" in an open season with a valid licence (99%). Section 6: no target practice except on a legal range (99%). Minimum fine $500 (99%).
+```
 
 ## Other no shooting rules around Mission
 
+```diagram ld-fv-noshoot
+```
+
+- The BC 100 m and 15 m road rules still apply on top (99%).
+
+```more every other rule, quoted
 - Abbotsford Discharge of Firearms Regulation Bylaw No. 114-95: discharge inside the city limited to farmers protecting stock, slaughter and licensed ranges (70%, search preview, VERIFY the hunting wording).
 - Closed Areas Regulation Schedule 5 item 49, Huntingdon and Sumas Mountain: all of "Electoral Area H of the Fraser Valley Regional District" is a No Shooting Area (98%).
 - Schedule 9 item 1: shot only within 150 m of "Highway 7 from the easterly boundary of Mission to its junction with Highway 1" and of Highway 1 east of Chilliwack (98%).
@@ -83,6 +150,7 @@ checked: 2026-10-01
 - FVRD (Fraser Valley Regional District) map: "With the exception of persons engaged in lawful hunting or trapping, the discharge of firearms is prohibited within 400m of the indicated roads." (99%)
 - Page 9: "Hunting and the discharge of firearms is prohibited within 100 m of all Regional District Parks in Regions 1 and 2." (99%)
 - The 100 m rule and the 15 m road allowance from the BC rules session still apply on top (99%).
+```
 
 ## Ranges, butchers, offices, hospitals
 
@@ -99,16 +167,27 @@ checked: 2026-10-01
 | Hospital, trauma | Abbotsford Regional Hospital, 32900 Marshall Road, V2S 0C2, 604 851 4700. 24 hours | 99%, Fraser Health |
 | Hospital, east | Chilliwack General Hospital, 45600 Menholm Road, 604 795 4141. 24 hours | 99%, Fraser Health |
 
+- Serious injury: Abbotsford Regional Hospital (Tip).
+
+```more hospital warning and inspection
 - Mission Memorial warns of temporary emergency department service interruptions. A serious injury goes to Abbotsford (99% for the warning, Tip for the choice).
 - Compulsory Inspection in Region 2: Agassiz, Langley, Squamish, Sunshine Coast, by appointment (99%). Bobcat and wolf need Compulsory Reporting; deer, bear and ducks need neither (95%).
+```
 
 ## First Nations and respect
 
+```diagram ld-respect
+```
+
+- Stó:lō territory (99%). Reserves are private land (99%).
+
+```more the nations, reserves and respect notes
 - The Fraser Valley is Stó:lō territory, "People of the River" (99%, Stó:lō Service Agency). The agency serves 11 member First Nations from 7201 Vedder Road, Chilliwack (99%).
 - Leq'á:mel First Nation, formerly Lakahahmen, "is located 22 kilometres east of Mission, BC" at Deroche and "is a signatory to the Sto:lo Nation" (99%, their site).
 - Matsqui Island in the Fraser at Mission is Indian Reserve 3 (95%, city bylaw map). Sts'ailes and Chehalis reserves sit on the Harrison and Chehalis rivers (85%, FVRD map and regulation road names).
 - Page 9: "Indian Reserves are private land. Permission must be obtained from the local Indian business office in order to hunt on or across these lands." (99%)
 - Respect: fishing sites on the Fraser and Harrison are in use in October. Give them room, never shoot toward boats or nets (Tip). Pack out shells and bird remains (Tip).
+```
 
 ```checklist s6-12-mission
 Fraser Valley Special Area Hunting Licence bought if hunting inside Mission or in MU 2-4
@@ -121,6 +200,8 @@ Written permission for any farm or reserve land
 Trip plan left, RAPP number saved
 ```
 
+## Grandpa's rule and common mistakes
+
 > [!rule]
 > In Mission, the map is the law. If your spot is white on Schedule A, you do not shoot there. Full stop.
 
@@ -128,6 +209,9 @@ Trip plan left, RAPP number saved
 > - Shooting ducks from the Mission dyke without the Fraser Valley Special Area Hunting Licence and the insurance.
 > - Taking a rifle to the Hatzic or Nicomen lowland. Rifles are prohibited there: the Nicomen shot only area covers the Hatzic, Nicomen and Deroche lowland and Harrison Bay (95%, Closed Areas Regulation Schedule 9 s. 9).
 > - Calling a white tail a black tail. Region 2 has no white tailed deer season.
+
+```diagram ld-mission-week
+```
 
 > [!field]
 > This week: print Schedule A of the Mission bylaw. Drive Kearsley Road and the Florence Lake FSR, mark the Area D corners on the phone, and find 2 safe backstops for a deer shot.

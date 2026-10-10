@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 454" font-family="sans-serif" role="img" aria-label="Flowchart for meat home from Saskatchewan. Field dress and bone out near the kill, or move it no more than 80 kilometres first. Leave the rest in a free carcass disposal bin. Keep only deboned meat, antlers, a clean skull plate and the hide. Export permit: VERIFY with the Inquiry Centre, 1 800 567 4224. Drive through Alberta, then at the BC line only boned meat and a cleaned skull plate.">
+<rect x="0" y="0" width="400" height="454" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Saskatchewan: getting meat home</text>
+<rect x="16" y="42" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="66" font-size="15" fill="#2f3a2b">Bone out near the kill, or move it no more</text>
+<text x="28" y="85" font-size="15" fill="#2f3a2b">than 80 km first (85%)</text>
+<line x1="200.0" y1="96" x2="200.0" y2="118" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,116 207.0,116 200.0,126" fill="#2f3a2b"/>
+<rect x="16" y="126" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="150" font-size="15" fill="#2f3a2b">Leave the rest in a free carcass disposal</text>
+<text x="28" y="169" font-size="15" fill="#2f3a2b">bin (85%)</text>
+<line x1="200.0" y1="180" x2="200.0" y2="202" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,200 207.0,200 200.0,210" fill="#2f3a2b"/>
+<rect x="16" y="210" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="234" font-size="15" fill="#2f3a2b">Keep: deboned meat, antlers, clean skull</text>
+<text x="28" y="253" font-size="15" fill="#2f3a2b">plate, hide (85%)</text>
+<line x1="200.0" y1="264" x2="200.0" y2="286" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,284 207.0,284 200.0,294" fill="#2f3a2b"/>
+<rect x="16" y="294" width="368" height="54" rx="18" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="28" y="318" font-size="15" font-weight="bold" fill="#2f3a2b">Export permit: VERIFY. Inquiry Centre 1 800</text>
+<text x="28" y="337" font-size="15" font-weight="bold" fill="#2f3a2b">567 4224</text>
+<line x1="200.0" y1="348" x2="200.0" y2="370" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,368 207.0,368 200.0,378" fill="#2f3a2b"/>
+<rect x="16" y="378" width="368" height="54" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="28" y="402" font-size="15" font-weight="bold" fill="#2f3a2b">Through Alberta, then the BC line: boned</text>
+<text x="28" y="421" font-size="15" font-weight="bold" fill="#2f3a2b">meat and cleaned plate (99%)</text>
+</svg>

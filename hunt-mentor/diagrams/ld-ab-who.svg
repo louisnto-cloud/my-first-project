@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 459" font-family="sans-serif" role="img" aria-label="Grid for Alberta, you are a non resident Canadian. Ducks, geese, grouse, partridge and pheasant: no host, bird licences. White tailed and mule deer and black bear: hunter host or outfitter. Antlered elk, antlered moose and cougar: hunter host or outfitter. Wolf and coyote: hunter host or outfitter. Draw only species such as antlerless, sheep and pronghorn: apply in the draw with an Alberta resident, then hunt with a host.">
+<rect x="0" y="0" width="400" height="459" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Alberta: who may hunt what</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">You are a non resident (Canadian) (85%)</text>
+<text x="290" y="74" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">BC resident</text>
+<rect x="8" y="83" width="384" height="84" fill="#dfe6d3" rx="4"/>
+<text x="14" y="103" font-size="14" font-weight="bold" fill="#2f3a2b">Ducks, geese,</text>
+<text x="14" y="121" font-size="14" font-weight="bold" fill="#2f3a2b">grouse,</text>
+<text x="14" y="139" font-size="14" font-weight="bold" fill="#2f3a2b">partridge,</text>
+<text x="14" y="157" font-size="14" font-weight="bold" fill="#2f3a2b">pheasant</text>
+<circle cx="290.0" cy="103" r="12" fill="#8a9a6b"/><path d="M284.6 103 l3.5999999999999996 4.199999999999999 l7.199999999999999 -8.399999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<text x="290" y="131" font-size="14" fill="#2f3a2b" text-anchor="middle">No host. Bird licences</text>
+<text x="14" y="197" font-size="14" font-weight="bold" fill="#2f3a2b">Deer, black</text>
+<text x="14" y="215" font-size="14" font-weight="bold" fill="#2f3a2b">bear</text>
+<circle cx="290.0" cy="187" r="12" fill="#4a7fb0"/><text x="290" y="192.04" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="290" y="215" font-size="14" fill="#2f3a2b" text-anchor="middle">Hunter host or</text>
+<text x="290" y="231" font-size="14" fill="#2f3a2b" text-anchor="middle">outfitter</text>
+<rect x="8" y="235" width="384" height="68" fill="#dfe6d3" rx="4"/>
+<text x="14" y="265" font-size="14" font-weight="bold" fill="#2f3a2b">Elk, moose,</text>
+<text x="14" y="283" font-size="14" font-weight="bold" fill="#2f3a2b">cougar</text>
+<circle cx="290.0" cy="255" r="12" fill="#4a7fb0"/><text x="290" y="260.04" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="290" y="283" font-size="14" fill="#2f3a2b" text-anchor="middle">Hunter host or</text>
+<text x="290" y="299" font-size="14" fill="#2f3a2b" text-anchor="middle">outfitter</text>
+<text x="14" y="342" font-size="14" font-weight="bold" fill="#2f3a2b">Wolf, coyote</text>
+<circle cx="290.0" cy="323" r="12" fill="#4a7fb0"/><text x="290" y="328.04" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="290" y="351" font-size="14" fill="#2f3a2b" text-anchor="middle">Hunter host or</text>
+<text x="290" y="367" font-size="14" fill="#2f3a2b" text-anchor="middle">outfitter</text>
+<rect x="8" y="371" width="384" height="68" fill="#dfe6d3" rx="4"/>
+<text x="14" y="392" font-size="14" font-weight="bold" fill="#2f3a2b">Antlerless,</text>
+<text x="14" y="410" font-size="14" font-weight="bold" fill="#2f3a2b">sheep,</text>
+<text x="14" y="428" font-size="14" font-weight="bold" fill="#2f3a2b">pronghorn</text>
+<circle cx="290.0" cy="391" r="12" fill="#4a7fb0"/><text x="290" y="396.04" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="290" y="419" font-size="14" fill="#2f3a2b" text-anchor="middle">Draw with a resident,</text>
+<text x="290" y="435" font-size="14" fill="#2f3a2b" text-anchor="middle">then host</text>
+</svg>
