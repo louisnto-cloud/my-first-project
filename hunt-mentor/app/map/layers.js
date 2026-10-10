@@ -26,6 +26,11 @@ const raw = new Map(); // _hid -> { st, f }
 
 export function init(api) {
   H = api; map = api.map;
+  if (!document.getElementById('hm-lyr-css')) { // small fixes for the panel chips (map.css is owned elsewhere)
+    const css = document.createElement('style'); css.id = 'hm-lyr-css';
+    css.textContent = '.hmm-chiprow .hmm-chiplabel{flex:none}.hmm-chip svg{flex:none;margin-right:5px}';
+    document.head.appendChild(css);
+  }
   H.ready.then(() => loadManifest()).then(() => {
     for (const st of L.values()) if (lp(st.l.id).on) turnOn(st);
     updateBadge();
@@ -192,9 +197,11 @@ function loadPmtiles() {
   if (pmReady) return pmReady;
   pmReady = new Promise((res, rej) => {
     if (window.pmtiles) { res(window.pmtiles); return; }
-    const sc = document.createElement('script'); sc.src = new URL('../vendor/pmtiles.js', import.meta.url).href;
-    sc.onload = () => (window.pmtiles ? res(window.pmtiles) : rej(new Error('pmtiles missing'))); sc.onerror = () => rej(new Error('pmtiles did not load'));
-    document.head.appendChild(sc);
+    let sc = document.getElementById('hm-pmtiles'); const add = !sc; // mvt.js may be loading it already
+    if (add) { sc = document.createElement('script'); sc.id = 'hm-pmtiles'; sc.src = new URL('../vendor/pmtiles.js', import.meta.url).href; }
+    sc.addEventListener('load', () => (window.pmtiles ? res(window.pmtiles) : rej(new Error('pmtiles missing'))));
+    sc.addEventListener('error', () => { sc.remove(); rej(new Error('pmtiles did not load')); });
+    if (add) document.head.appendChild(sc);
   }).then((pm) => { const proto = new pm.Protocol({ metadata: true }); H.maplibregl.addProtocol('pmtiles', proto.tile); return pm; });
   pmReady.catch(() => { pmReady = null; });
   return pmReady;

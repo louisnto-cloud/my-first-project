@@ -20,7 +20,7 @@ ctx.KIND = KIND;
 export default async function init(H) {
   ctx.H = H; ctx.map = H.map;
   Object.assign(ctx, { refresh, saveAny, deleteAny, openItem, drawOverlays, dropWaypoint, itemStats, profileHtml, fitItem, here, fieldRows, toolsSheet });
-  loadCss();
+  const css = loadCss();
   // Layers and icon images are added on first use (lazy), so an empty map carries no tool layers.
   H.on('units', () => drawOverlays());
   H.on('tracks', () => refresh()); // Go & Track saved or removed a track
@@ -33,7 +33,7 @@ export default async function init(H) {
   H.overlayChip = chip;
   H.hintOnce = hintOnce;
   backGuard();
-  buttonNames();
+  css.then(buttonNames); // labels are measured, so they need tools.css first
   await refresh();
 }
 
@@ -50,9 +50,9 @@ function buttonNames() {
   for (const b of list) {
     const r = b.getBoundingClientRect(), left = r.left + r.width / 2 < W / 2, t = document.createElement('span');
     t.textContent = b.getAttribute('aria-label');
-    if (r.top < rowBottom - 10) { // top row: labels go below, stepped down so neighbours do not overlap
-      t.style.top = `${Math.round(r.bottom + 22)}px`;
-      if (left) t.style.left = `${Math.round(r.left)}px`; else t.style.right = `${Math.round(W - r.right)}px`;
+    if (left && r.top < rowBottom - 10) { // top left row: under the button, nudged right so Menu and Elevation profile do not touch
+      t.style.top = `${Math.round(r.bottom + 20)}px`;
+      t.style.left = `${Math.round(r.left + (b.dataset.act === 'menu' ? 0 : 8))}px`;
     } else {
       t.style.top = `${Math.round(r.top + r.height / 2)}px`;
       if (left) t.style.left = `${Math.round(r.right + 8)}px`; else t.style.right = `${Math.round(W - r.left + 8)}px`;
@@ -60,16 +60,6 @@ function buttonNames() {
     box.appendChild(t);
   }
   root.appendChild(box);
-  // move labels down until none overlap (narrow phones)
-  const placed = [];
-  for (const t of [...box.children].sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top)) {
-    for (let k = 0; k < 6; k++) {
-      const r = t.getBoundingClientRect();
-      if (!placed.some((q) => r.left < q.right && r.right > q.left && r.top < q.bottom + 4 && r.bottom > q.top - 4)) break;
-      t.style.top = `${parseFloat(t.style.top) + 34}px`;
-    }
-    placed.push(t.getBoundingClientRect());
-  }
   const p = document.createElement('p'); p.className = 'hmt-names-tip'; p.textContent = 'These are the map buttons. Tap anywhere to start.';
   box.appendChild(p);
   const done = () => { box.remove(); root.removeEventListener('pointerdown', done, true); };
@@ -133,8 +123,9 @@ function backGuard() {
 
 function loadCss() {
   const href = new URL('./tools.css', import.meta.url).href;
-  if ([...document.styleSheets].some((s) => s.href === href)) return;
+  if ([...document.styleSheets].some((s) => s.href === href)) return Promise.resolve();
   const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = href; document.head.appendChild(l);
+  return new Promise((res) => { l.onload = l.onerror = () => res(); setTimeout(res, 4000); });
 }
 
 // ---------- map layers (added on first use) ----------
@@ -259,7 +250,7 @@ function here(which) {
 function setRings(p) {
   ctx.overlays.rings = p; drawOverlays();
   chip('rings', p ? 'Range rings' : '', () => setRings(null));
-  if (p) ctx.H.toast('Range rings: 100, 200 and 300 m (109, 219, 328 yd). Tap the chip at the top to clear them.', 4000);
+  if (p) ctx.H.toast('Range rings: 100, 200 and 300 m (109, 219, 328 yd). Tap the Range rings chip to clear them.', 4000);
 }
 ctx.setRings = setRings;
 

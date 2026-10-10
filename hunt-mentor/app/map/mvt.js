@@ -9,10 +9,13 @@ function loadPm() {
   if (window.pmtiles) return Promise.resolve(window.pmtiles);
   if (pmP) return pmP;
   pmP = new Promise((res, rej) => {
-    const sc = document.createElement('script'); sc.src = new URL('../vendor/pmtiles.js', import.meta.url).href;
-    sc.onload = () => (window.pmtiles ? res(window.pmtiles) : rej(new Error('pmtiles missing')));
-    sc.onerror = () => { pmP = null; rej(new Error('pmtiles did not load')); };
-    document.head.appendChild(sc);
+    // layers.js may already be loading the same script: wait for that tag instead of adding a second copy
+    let sc = document.getElementById('hm-pmtiles');
+    const add = !sc;
+    if (add) { sc = document.createElement('script'); sc.id = 'hm-pmtiles'; sc.src = new URL('../vendor/pmtiles.js', import.meta.url).href; }
+    sc.addEventListener('load', () => (window.pmtiles ? res(window.pmtiles) : rej(new Error('pmtiles missing'))));
+    sc.addEventListener('error', () => { pmP = null; sc.remove(); rej(new Error('pmtiles did not load')); });
+    if (add) document.head.appendChild(sc);
   });
   return pmP;
 }

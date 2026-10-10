@@ -177,7 +177,7 @@ export async function cone(p) {
   const xs = ring.map((q) => q[0]), ys = ring.map((q) => q[1]);
   map.fitBounds([[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], { padding: pad, maxZoom: Math.max(map.getZoom(), 15), duration: 600 });
   H.toast(`${windWords(coneData.from, coneData.kmh)}${f.offline ? ' (saved forecast)' : ''}. Tap the cone for details.`, 5000);
-  if (H.hintOnce) setTimeout(() => H.hintOnce('cone', 'Tip: keep the shaded wedge off where you expect animals. Tap the chip at the top to clear it.'), 5200);
+  if (H.hintOnce) setTimeout(() => H.hintOnce('cone', 'Tip: keep the shaded wedge off where you expect animals. Tap the Scent cone chip to clear it.'), 5200);
 }
 function coneRing(p, from) {
   const to = (from + 180) % 360, ring = [p];
