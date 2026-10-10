@@ -251,10 +251,10 @@ commons-cougar-trailcam | Cougars use the same trails as deer. Hunters rarely se
 - Carry a wolf tag mindset on deer and moose hunts; glass meadows and frozen lakes at first light.
 - Pros: no extra licence (98%); long season.
 - Cons: wolves are rarely seen; most "wolves" are dogs or coyotes at distance.
-```
 
 > [!lean]
 > Option A for your first winter. Learn the fur trade while you do it: find a licensed fur trader before you pull a trigger.
+```
 
 ## Safety with predators
 

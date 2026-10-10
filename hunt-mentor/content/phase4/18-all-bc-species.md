@@ -191,6 +191,11 @@ checked: 2026-10-02
 > [!rule]
 > Grandpa's rule (wisdom): The animal you can legally take is the one on your MU row, in your class, on today's date. Everything else is a photo.
 
+## Mistakes and your field task
+
+```diagram sc-licence-stack
+```
+
 > [!mistake]
 > - Seeing a species on this page and assuming it is open in your MU. Read the row.
 > - Shooting an elk or goat in Region 3 on a general licence. There is no general season row for them here.

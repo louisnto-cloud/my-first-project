@@ -134,9 +134,6 @@ rb-notch-5 | The cancelled licence rides with the meat.
 ```diagram sc-antler-licence
 ```
 
-```diagram rb-4point
-```
-
 - Region 3 mule deer: 4 point seasons in September and Nov to Dec 10. October is any buck (95%).
 
 ```more the law and the Region 3 seasons, word for word
@@ -149,6 +146,13 @@ rb-notch-5 | The cancelled licence rides with the meat.
 - Unlawful to "alter or tamper with horns or antlers" from a restricted season until the carcass reaches a meat cutter, cold storage, your home where it is butchered, or compulsory inspection (95%, p. 12).
 - Antlers "altered or tampered with in any way" are no longer "naturally attached" (95%, Hunting Regulation s. 15.1).
 ```
+
+## 4 point buck: count one antler
+
+```diagram rb-4point
+```
+
+- Four or more tines on one antler, brow tine not counted (99%, page 4).
 
 ## Birds
 

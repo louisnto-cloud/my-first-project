@@ -146,10 +146,10 @@ sc-ram-6 | Close call? No shot. Wait for a clear legal ram.
 - **Thinhorn general open seasons:** Region 6 (MUs 6-17 to 6-27 with map exceptions), 7A (7-37, 7-39 to 7-41) and 7B (7-36, 7-42, 7-43, 7-50 to 7-57 with park closures), full curl rams, Aug 1 to Oct 15 (98%).
 - **Northern bighorn general open seasons:** MU 7-18 and MU 7-19, full curl, Aug 15 to Sept 30 (98%).
 - About 12,250 thinhorn sheep in BC (85%). Only a few hundred Dall's sheep (80%).
-```
 
 > [!lean]
 > From Heffley Creek, the realistic path is: apply for Region 3 LEH every year, and plan one backpack trip north for a Stone's ram under the general open season when you are fit and have a partner.
+```
 
 ## Day, year, food, cover
 
