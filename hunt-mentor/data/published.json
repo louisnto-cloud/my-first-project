@@ -178,7 +178,17 @@
     "build-hunting-map",
     "land-drill-heffley",
     "moon-and-daylight",
-    "land-in-weather"
+    "land-in-weather",
+    "field-first-aid",
+    "cold-injuries",
+    "lost-survival-kit",
+    "fire-wet-weather",
+    "shelter-night-out",
+    "water-safe-drinking",
+    "bear-cougar-encounters",
+    "wildfire-smoke-heat",
+    "avalanche-hunters",
+    "ice-cold-water"
   ],
   "flashcards": [
     "quail",
@@ -187,6 +197,7 @@
     "geese",
     "mule-deer",
     "white-tailed-deer",
-    "rq"
+    "rq",
+    "fs"
   ]
 }

@@ -79,9 +79,12 @@ fn-topo-rule-5 | The V points upstream. Water flows out the open end.
 - Plain rings: a knob, high ground.
 - Ticked rings: a hole. Often wet, a pond or a sinkhole (Tip).
 
+```photo hab-lac-du-bois-potholes Pothole lakes in grassland hollows, north of Kamloops.
+```
+
 ```more knobs and holes for hunters
 - A small knob in a flat bench is a natural glassing seat: you sit a few metres higher than the cover around you (Tip).
-- Small depressions in grassland and parkland often hold water after rain or snowmelt. Kettle ponds and potholes draw deer and ducks (Tip). Lac du Bois potholes north of Kamloops are this kind of ground (see the photo in [Food, water and cover](#/s/food-water-cover/0)).
+- Small depressions in grassland and parkland often hold water after rain or snowmelt. Kettle ponds and potholes draw deer and ducks (Tip). Lac du Bois grassland north of Kamloops has pothole lakes in hollows like these (see the photo on this screen and [Habitat tour: ducks](#/s/habitat-ducks/0)) (Tip).
 - A depression can be too shallow to show at a 20 m interval. Satellite view and the Slope steepness tool fill the gap (Tip).
 ```
 

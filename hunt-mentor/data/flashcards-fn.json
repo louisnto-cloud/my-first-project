@@ -1,0 +1,1099 @@
+[
+ {
+  "id": "fn-topo-01",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "What is a contour line?",
+  "back": "A line joining points of the same height. Picture the shoreline of a rising lake.",
+  "diagram": "fn-topo-slices"
+ },
+ {
+  "id": "fn-topo-02",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "Can two contour lines cross?",
+  "back": "No. They only touch or merge at a vertical cliff.",
+  "diagram": "fn-topo-rule-1"
+ },
+ {
+  "id": "fn-topo-03",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "Lines close together mean?",
+  "back": "Steep ground. Wide apart means gentle or flat.",
+  "diagram": "fn-topo-rule-2"
+ },
+ {
+  "id": "fn-topo-04",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "What is an index contour?",
+  "back": "A thicker line, usually every fifth, with its height printed on it.",
+  "diagram": "fn-topo-rule-3"
+ },
+ {
+  "id": "fn-topo-05",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "Hunt Map contour spacing?",
+  "back": "A line every 20 m and a thick index line every 100 m. Feet mode: 40 ft and 200 ft."
+ },
+ {
+  "id": "fn-topo-06",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "Closed ring with ticks on the inside?",
+  "back": "A depression or hole. The ticks point down into the low spot. Often wet.",
+  "diagram": "fn-topo-depression"
+ },
+ {
+  "id": "fn-topo-07",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "Which way does a contour V point at a creek?",
+  "back": "Upstream, uphill. Water flows out the open end of the V.",
+  "diagram": "fn-topo-rule-5"
+ },
+ {
+  "id": "fn-topo-08",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "Vs pointing uphill, or Us pointing downhill: which is a draw?",
+  "back": "Vs pointing uphill is a draw. Us pointing downhill is a ridge or spur."
+ },
+ {
+  "id": "fn-topo-09",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "What is a saddle on the map?",
+  "back": "The hourglass of lines between two tops: a low pass where animals cross ridges (65%).",
+  "diagram": "hf-shape-saddle"
+ },
+ {
+  "id": "fn-topo-10",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "What is a bench on the map?",
+  "back": "A wide gap between tight lines on a slope: a flat shelf. Beds with a view (65%).",
+  "diagram": "hf-shape-bench"
+ },
+ {
+  "id": "fn-topo-11",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "Convex slope: how are the lines spaced?",
+  "back": "Wide near the top, tight near the bottom. It rolls away and hides the bottom.",
+  "diagram": "fn-topo-convex"
+ },
+ {
+  "id": "fn-topo-12",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "What is dead ground?",
+  "back": "Ground you cannot see from where you stand, hidden by the shape of the land. Use it to stalk.",
+  "diagram": "fn-topo-deadground"
+ },
+ {
+  "id": "fn-topo-13",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "Horseshoe of lines open downhill?",
+  "back": "A bowl or basin. Tip: wind swirls in bowls.",
+  "diagram": "fn-topo-bowl"
+ },
+ {
+  "id": "fn-topo-14",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "What makes a pinch point on the map?",
+  "back": "Two barriers close together, like a cliff band and a lake, squeezing travel into a narrow gap.",
+  "diagram": "fn-topo-pinch"
+ },
+ {
+  "id": "fn-topo-15",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "Three clues for which way is uphill?",
+  "back": "Number tops face uphill, water runs in the bottom of the V, Vs point upstream.",
+  "diagram": "fn-topo-updown"
+ },
+ {
+  "id": "fn-topo-16",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "Can a 15 m cliff hide on a 20 m contour map?",
+  "back": "Yes. Anything smaller than the interval can fit between two lines.",
+  "diagram": "fn-topo-interval"
+ },
+ {
+  "id": "fn-topo-17",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "Four steps to draw a profile?",
+  "back": "Line A to B, mark each crossing, drop each to its height, join the dots.",
+  "diagram": "fn-prof-4"
+ },
+ {
+  "id": "fn-topo-18",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "20 m lines 50 m apart on the ground: how steep?",
+  "back": "40 percent, about 22 degrees."
+ },
+ {
+  "id": "fn-topo-19",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "20 m lines 35 m apart on the ground: how steep?",
+  "back": "About 30 degrees: the avalanche angle in snow."
+ },
+ {
+  "id": "fn-topo-20",
+  "deck": "Topo maps deep dive: every contour pattern",
+  "front": "Memory hook: Big Deer Seldom Ride Cliffs?",
+  "back": "Bench, Draw, Saddle, Ridge, Cliff: the five big shapes."
+ },
+ {
+  "id": "fn-compass-01",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "Declination at Heffley Creek, October 2026?",
+  "back": "About 15.2 degrees east (NOAA World Magnetic Model). Mission 15.2 east, Osoyoos 14.6 east.",
+  "diagram": "fn-cmp-decl"
+ },
+ {
+  "id": "fn-compass-02",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "Declination east: map bearing to compass bearing?",
+  "back": "Subtract 15. Declination east, magnetic least."
+ },
+ {
+  "id": "fn-compass-03",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "Which way does declination change here each year?",
+  "back": "It falls about 0.13 degrees a year."
+ },
+ {
+  "id": "fn-compass-04",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "1 degree of error over 1 km misses by?",
+  "back": "About 17 m. 5 degrees is 87 m, 15 degrees is 268 m.",
+  "diagram": "fn-cmp-error"
+ },
+ {
+  "id": "fn-compass-05",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "Taking a bearing off the map: what do you do with the needle?",
+  "back": "Ignore it. Turn the ring so its north lines match the map north lines, then read the number.",
+  "diagram": "fn-mapbrg-2"
+ },
+ {
+  "id": "fn-compass-06",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "How do you orient a map with a compass?",
+  "back": "Turn the map until its north lines run along the needle, red to north.",
+  "diagram": "fn-cmp-orient"
+ },
+ {
+  "id": "fn-compass-07",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "Triangulation in one line?",
+  "back": "Bearings to two named landmarks, draw the back bearings from them, you are where they cross.",
+  "diagram": "fn-tri-4"
+ },
+ {
+  "id": "fn-compass-08",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "Best angle between triangulation landmarks?",
+  "back": "About 90 degrees. Nearly parallel lines give a poor fix."
+ },
+ {
+  "id": "fn-compass-09",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "What is a handrail?",
+  "back": "A line feature you can follow without the compass: creek, road, fence, ridge, timber edge.",
+  "diagram": "fn-nav-handrail"
+ },
+ {
+  "id": "fn-compass-10",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "What is a catching feature?",
+  "back": "A big feature just past your target that tells you that you overshot.",
+  "diagram": "fn-nav-catch"
+ },
+ {
+  "id": "fn-compass-11",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "What is aiming off?",
+  "back": "Aiming to one side of a target on a line on purpose, so you know which way to turn."
+ },
+ {
+  "id": "fn-compass-12",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "What is an attack point?",
+  "back": "A big easy feature near the target. Go there fast, then take a careful short bearing.",
+  "diagram": "fn-nav-attack"
+ },
+ {
+  "id": "fn-compass-13",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "How do you pace count?",
+  "back": "Count every time one foot lands on a measured 100 m: flat, uphill and in brush. A backup only.",
+  "diagram": "fn-nav-pace"
+ },
+ {
+  "id": "fn-compass-14",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "A swamp blocks your bearing. Box method?",
+  "back": "Turn 90 degrees, count paces, walk past on your bearing, turn back 90 degrees, same count, carry on.",
+  "diagram": "fn-nav-detour"
+ },
+ {
+  "id": "fn-compass-15",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "What bends a compass needle?",
+  "back": "Steel and magnets: rifle, truck, phone. Step away before you take a bearing.",
+  "diagram": "fn-cmp-metal"
+ },
+ {
+  "id": "fn-compass-16",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "Back bearing of 40?",
+  "back": "220. Add 180 if under 180, take 180 if over."
+ },
+ {
+  "id": "fn-compass-17",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "Paper NTS grid lines near Heffley Creek: true north?",
+  "back": "No. Grid north is about 2.5 degrees east of true north there, so the needle is about 12.7 degrees east of the grid (85%)."
+ },
+ {
+  "id": "fn-compass-18",
+  "deck": "Compass mastery: bearings, triangulation, handrails",
+  "front": "Memory hook HAC?",
+  "back": "Handrail, Attack point, Catching feature: plan every leg."
+ },
+ {
+  "id": "fn-gps-01",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "Does phone GPS need cell signal?",
+  "back": "No. The map tiles do, so save the area in Offline Maps first."
+ },
+ {
+  "id": "fn-gps-02",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "Typical phone GPS accuracy in open sky?",
+  "back": "About 4.9 m (16 ft). Worse near trees, cliffs and buildings.",
+  "diagram": "fn-gps-sky"
+ },
+ {
+  "id": "fn-gps-03",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "iPhone operating temperature range?",
+  "back": "0 to 35 degrees Celsius. Below that it can drain fast and shut off; it recovers when warm.",
+  "diagram": "fn-bat-cold"
+ },
+ {
+  "id": "fn-gps-04",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "Where should the phone ride on a frosty morning?",
+  "back": "Inside chest pocket, not the pack lid or hip belt."
+ },
+ {
+  "id": "fn-gps-05",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "Can you charge a frozen lithium battery?",
+  "back": "No. Warm the phone and power bank first. Charging below freezing harms the battery (75%).",
+  "diagram": "fn-bat-charge"
+ },
+ {
+  "id": "fn-gps-06",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "Why airplane mode in dead zones?",
+  "back": "It stops the phone burning battery searching for a tower. GPS keeps working.",
+  "diagram": "fn-ph-setup-4"
+ },
+ {
+  "id": "fn-gps-07",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "Biggest battery drains?",
+  "back": "A bright screen and track recording with the screen awake (Tip).",
+  "diagram": "fn-bat-drain"
+ },
+ {
+  "id": "fn-gps-08",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "Why does Go & Track keep the screen awake?",
+  "back": "iPhone web apps cannot record with the screen off."
+ },
+ {
+  "id": "fn-gps-09",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "Battery smart alternative to an all day track?",
+  "back": "Drop waypoints at the truck, glassing seat and bench with the screen off between.",
+  "diagram": "fn-bat-track-wpt"
+ },
+ {
+  "id": "fn-gps-10",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "Battery reserve for the walk out?",
+  "back": "Keep about 30 percent (Tip).",
+  "diagram": "fn-bat-budget"
+ },
+ {
+  "id": "fn-gps-11",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "iPhone satellite SOS in Canada needs?",
+  "back": "iPhone 14 or later, iOS 16.1 or later, no cell or wifi, clear view of sky and horizon.",
+  "diagram": "fn-sos-sky"
+ },
+ {
+  "id": "fn-gps-12",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "Five night before phone steps?",
+  "back": "Offline area saved, charge to 100, brightness down, airplane mode ready, Low Power Mode."
+ },
+ {
+  "id": "fn-gps-13",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "Phone dies. First step?",
+  "back": "STOP. Then warm it, power bank, then map and compass to a handrail. Lost: stay put.",
+  "diagram": "fn-ph-fail-flow"
+ },
+ {
+  "id": "fn-gps-14",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "Why lithium AA cells in the headlamp?",
+  "back": "Rated from minus 40 to 60 degrees Celsius (75%). Alkaline weakens in cold."
+ },
+ {
+  "id": "fn-gps-15",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "Two is one, one is none: list the backups.",
+  "back": "Phone with offline map, power bank and cable, paper map, compass, satellite SOS or messenger.",
+  "diagram": "fn-nav-backup"
+ },
+ {
+  "id": "fn-gps-16",
+  "deck": "GPS, phone and battery: make them last",
+  "front": "Memory hook WATCH?",
+  "back": "Warm, Airplane, Track less, Charge warm, Have backups."
+ },
+ {
+  "id": "fn-map-01",
+  "deck": "The Hunt Map like a pro",
+  "front": "Where is the Hunt Map Layers button?",
+  "back": "Low left corner of the map.",
+  "diagram": "fn-hm-lay-1"
+ },
+ {
+  "id": "fn-map-02",
+  "deck": "The Hunt Map like a pro",
+  "front": "Name the five bottom bar buttons.",
+  "back": "Offline Maps, My Content, Tools, Insights, Go & Track.",
+  "diagram": "fn-hm-bar"
+ },
+ {
+  "id": "fn-map-03",
+  "deck": "The Hunt Map like a pro",
+  "front": "Orange area with a strong edge?",
+  "back": "Private land. Owner permission to hunt or cross.",
+  "diagram": "fn-hm-land"
+ },
+ {
+  "id": "fn-map-04",
+  "deck": "The Hunt Map like a pro",
+  "front": "Yellow area with a gold edge?",
+  "back": "First Nations reserve. Treated like private land: ask the band office."
+ },
+ {
+  "id": "fn-map-05",
+  "deck": "The Hunt Map like a pro",
+  "front": "Red stripes?",
+  "back": "No hunting or shooting area."
+ },
+ {
+  "id": "fn-map-06",
+  "deck": "The Hunt Map like a pro",
+  "front": "Purple dashed edge?",
+  "back": "Motor vehicle closure. Driving or using a vehicle to hunt may be illegal inside."
+ },
+ {
+  "id": "fn-map-07",
+  "deck": "The Hunt Map like a pro",
+  "front": "Thin black lines with numbers like 3-27?",
+  "back": "Management Unit boundaries. Seasons and limits are set by MU."
+ },
+ {
+  "id": "fn-map-08",
+  "deck": "The Hunt Map like a pro",
+  "front": "Slope steepness: what does red mean?",
+  "back": "30 to 45 degrees: very steep, avalanche terrain in snow.",
+  "diagram": "fn-hm-slope"
+ },
+ {
+  "id": "fn-map-09",
+  "deck": "The Hunt Map like a pro",
+  "front": "Slope direction: which colour is a south face?",
+  "back": "Yellow. North is blue, west is red, east is green.",
+  "diagram": "fn-hm-aspect"
+ },
+ {
+  "id": "fn-map-10",
+  "deck": "The Hunt Map like a pro",
+  "front": "What can I see from here: what does pink mean?",
+  "back": "Ground you can likely see. Trees, brush and buildings are not counted.",
+  "diagram": "fn-hm-viewshed"
+ },
+ {
+  "id": "fn-map-11",
+  "deck": "The Hunt Map like a pro",
+  "front": "Sun and shade tool: why use it?",
+  "back": "Find which slopes catch first sun. Cold mornings, deer often bed where the first sun hits (Tip).",
+  "diagram": "fn-hm-sun"
+ },
+ {
+  "id": "fn-map-12",
+  "deck": "The Hunt Map like a pro",
+  "front": "Scent cone size?",
+  "back": "30 degrees wide, 400 m long, downwind of you. Opinion, labelled Tip.",
+  "diagram": "fn-hm-cone"
+ },
+ {
+  "id": "fn-map-13",
+  "deck": "The Hunt Map like a pro",
+  "front": "Fastest way to drop a waypoint where you look?",
+  "back": "Press and hold the map, then Drop waypoint.",
+  "diagram": "fn-hm-wpt-1"
+ },
+ {
+  "id": "fn-map-14",
+  "deck": "The Hunt Map like a pro",
+  "front": "Range rings distances?",
+  "back": "100, 200 and 300 m (109, 219, 328 yd).",
+  "diagram": "fn-hm-rings"
+ },
+ {
+  "id": "fn-map-15",
+  "deck": "The Hunt Map like a pro",
+  "front": "Locate button cycle?",
+  "back": "Tap 1 follow, tap 2 compass turns the map, tap 3 north up. Dragging stops follow.",
+  "diagram": "fn-hm-locate-2"
+ },
+ {
+  "id": "fn-map-16",
+  "deck": "The Hunt Map like a pro",
+  "front": "Offline Maps detail options?",
+  "back": "Most (zoom 14), Less (zoom 13, about a third of the size), Least (zoom 12).",
+  "diagram": "fn-hm-off-3"
+ },
+ {
+  "id": "fn-map-17",
+  "deck": "The Hunt Map like a pro",
+  "front": "Is satellite saved for offline use?",
+  "back": "No. Topo, terrain, layers and spots are. Viewed satellite tiles stay for a while."
+ },
+ {
+  "id": "fn-map-18",
+  "deck": "The Hunt Map like a pro",
+  "front": "Insights sections?",
+  "back": "Where you are, Animals likely here, Chance of success, When: open seasons, How they move, How to hunt it, Nearby spots, Today."
+ },
+ {
+  "id": "fn-map-19",
+  "deck": "The Hunt Map like a pro",
+  "front": "Back to start in Go & Track shows?",
+  "back": "Distance and heading in degrees to where you started. Green dot marks the start."
+ },
+ {
+  "id": "fn-map-20",
+  "deck": "The Hunt Map like a pro",
+  "front": "Measure tool bonus?",
+  "back": "It shows the bearing of the last leg in degrees from true north."
+ },
+ {
+  "id": "fn-route-01",
+  "deck": "Planning a route: time, distance, climb, turnaround",
+  "front": "Naismith's rule?",
+  "back": "1 hour per 5 km plus 1 hour per 600 m of climb.",
+  "diagram": "fn-rt-naismith"
+ },
+ {
+  "id": "fn-route-02",
+  "deck": "Planning a route: time, distance, climb, turnaround",
+  "front": "Off trail walking speed (Aitken)?",
+  "back": "About 4 km an hour."
+ },
+ {
+  "id": "fn-route-03",
+  "deck": "Planning a route: time, distance, climb, turnaround",
+  "front": "When to add about 50 percent?",
+  "back": "Heavy pack, brush, dark, rests, bad weather (60% plus Tip)."
+ },
+ {
+  "id": "fn-route-04",
+  "deck": "Planning a route: time, distance, climb, turnaround",
+  "front": "Tobler: fastest slope?",
+  "back": "A gentle downhill of about 5 percent, about 6 km an hour. Flat is 5.",
+  "diagram": "fn-rt-tobler"
+ },
+ {
+  "id": "fn-route-05",
+  "deck": "Planning a route: time, distance, climb, turnaround",
+  "front": "3 km off trail, 400 m up: time?",
+  "back": "45 min plus 40 min: about 1 h 25 min, a minimum.",
+  "diagram": "fn-rt-example"
+ },
+ {
+  "id": "fn-route-06",
+  "deck": "Planning a route: time, distance, climb, turnaround",
+  "front": "Each 100 m of climb costs about?",
+  "back": "10 minutes."
+ },
+ {
+  "id": "fn-route-07",
+  "deck": "Planning a route: time, distance, climb, turnaround",
+  "front": "Legal light end for deer?",
+  "back": "1 hour after sunset."
+ },
+ {
+  "id": "fn-route-08",
+  "deck": "Planning a route: time, distance, climb, turnaround",
+  "front": "Heffley Creek 15 October 2026: sunset and legal end?",
+  "back": "Sunset about 18:08, legal light ends about 19:08 (85%).",
+  "diagram": "fn-rt-daylight"
+ },
+ {
+  "id": "fn-route-09",
+  "deck": "Planning a route: time, distance, climb, turnaround",
+  "front": "When do clocks go back in 2026?",
+  "back": "Sunday 1 November 2026."
+ },
+ {
+  "id": "fn-route-10",
+  "deck": "Planning a route: time, distance, climb, turnaround",
+  "front": "How to set a turnaround time?",
+  "back": "When you want to be at the truck, minus the walk out, minus a 30 minute buffer.",
+  "diagram": "fn-rt-turnaround"
+ },
+ {
+  "id": "fn-route-11",
+  "deck": "Planning a route: time, distance, climb, turnaround",
+  "front": "Why break a route into legs?",
+  "back": "Checkpoints you will recognise let you compare planned and real times. 30 min behind: rethink.",
+  "diagram": "fn-rt-legs"
+ },
+ {
+  "id": "fn-route-12",
+  "deck": "Planning a route: time, distance, climb, turnaround",
+  "front": "Over a 300 m hill or around on a contour?",
+  "back": "Around can win: 300 m of climb is about 30 minutes plus a slow descent.",
+  "diagram": "fn-rt-around"
+ },
+ {
+  "id": "fn-route-13",
+  "deck": "Planning a route: time, distance, climb, turnaround",
+  "front": "What goes in a trip plan?",
+  "back": "Who, route, start and return times, where the truck is, when to call for help.",
+  "diagram": "fn-rt-plan-6"
+ },
+ {
+  "id": "fn-route-14",
+  "deck": "Planning a route: time, distance, climb, turnaround",
+  "front": "Six planning steps?",
+  "back": "Target and truck, draw route, distance and climb, time, turnaround, trip plan."
+ },
+ {
+  "id": "fn-route-15",
+  "deck": "Planning a route: time, distance, climb, turnaround",
+  "front": "Is the last legal hour light?",
+  "back": "Mostly dark. Civil twilight ends about 33 minutes after sunset here in October."
+ },
+ {
+  "id": "fn-night-01",
+  "deck": "Night navigation: back to the truck in the dark",
+  "front": "How long for night vision?",
+  "back": "20 to 40 minutes. A few seconds of bright light breaks it down.",
+  "diagram": "fn-nt-adapt"
+ },
+ {
+  "id": "fn-night-02",
+  "deck": "Night navigation: back to the truck in the dark",
+  "front": "Why a dim red light?",
+  "back": "Deep red light does not break down the night vision pigment. Bright red still can.",
+  "diagram": "fn-nt-redwhite"
+ },
+ {
+  "id": "fn-night-03",
+  "deck": "Night navigation: back to the truck in the dark",
+  "front": "Is a headlamp to walk out hunting with a light?",
+  "back": "No (90%, my reading). Using a light to find, hold or shoot game is unlawful."
+ },
+ {
+  "id": "fn-night-04",
+  "deck": "Night navigation: back to the truck in the dark",
+  "front": "Legal light ends. First thing?",
+  "back": "Unload, then walk out together on the planned route.",
+  "diagram": "fn-nt-before-5"
+ },
+ {
+  "id": "fn-night-05",
+  "deck": "Night navigation: back to the truck in the dark",
+  "front": "Five before dark steps?",
+  "back": "Truck waypoint, back bearing on your hand, catching feature, lamp check, unload at legal end.",
+  "diagram": "fn-nt-before-1"
+ },
+ {
+  "id": "fn-night-06",
+  "deck": "Night navigation: back to the truck in the dark",
+  "front": "Best night route shape?",
+  "back": "Big, simple, short legs: handrail to catching feature, aim off.",
+  "diagram": "fn-nt-route"
+ },
+ {
+  "id": "fn-night-07",
+  "deck": "Night navigation: back to the truck in the dark",
+  "front": "How do you find Polaris?",
+  "back": "Line from Merak through Dubhe, about five times the gap.",
+  "diagram": "fn-nt-polaris"
+ },
+ {
+  "id": "fn-night-08",
+  "deck": "Night navigation: back to the truck in the dark",
+  "front": "How high is Polaris at Heffley Creek?",
+  "back": "About 51 degrees, roughly your latitude."
+ },
+ {
+  "id": "fn-night-09",
+  "deck": "Night navigation: back to the truck in the dark",
+  "front": "Tracking a wounded deer after legal light with rifle and headlamp?",
+  "back": "That is hunting after hours and with a light. See Blood trailing for what to do."
+ },
+ {
+  "id": "fn-night-10",
+  "deck": "Night navigation: back to the truck in the dark",
+  "front": "Why not walk straight down a dark draw?",
+  "back": "Draws end in cliffs, creeks and blowdown (Tip).",
+  "diagram": "fn-nt-flow"
+ },
+ {
+  "id": "fn-night-11",
+  "deck": "Night navigation: back to the truck in the dark",
+  "front": "Go & Track Back to start reads 1.9 km, heading 214. What now?",
+  "back": "Walk 214 degrees with the compass, phone back in a warm pocket.",
+  "diagram": "fn-nt-back"
+ },
+ {
+  "id": "fn-night-12",
+  "deck": "Night navigation: back to the truck in the dark",
+  "front": "A swinging headlamp beam does what to game?",
+  "back": "It is pure motion. Keep the light low and steady."
+ },
+ {
+  "id": "fn-night-13",
+  "deck": "Night navigation: back to the truck in the dark",
+  "front": "Three of anything means?",
+  "back": "Help: three whistle blasts or three flashes (Tip)."
+ },
+ {
+  "id": "fn-night-14",
+  "deck": "Night navigation: back to the truck in the dark",
+  "front": "Lost at night, phone dead?",
+  "back": "STOP, try compass to a known handrail, otherwise stay put, shelter, call."
+ },
+ {
+  "id": "fn-night-15",
+  "deck": "Night navigation: back to the truck in the dark",
+  "front": "Memory hook: waypoint, bearing, road?",
+  "back": "The three before dark: truck waypoint, back bearing, catching feature road."
+ },
+ {
+  "id": "fn-weather-01",
+  "deck": "Reading weather in the field",
+  "front": "Three cloud levels?",
+  "back": "High cirrus family, mid alto family, low cumulus and stratus.",
+  "diagram": "fn-wx-levels"
+ },
+ {
+  "id": "fn-weather-02",
+  "deck": "Reading weather in the field",
+  "front": "Warm front cloud order?",
+  "back": "Cirrus, cirrostratus with halo, altostratus, nimbostratus.",
+  "diagram": "fn-wx-warmfront"
+ },
+ {
+  "id": "fn-weather-03",
+  "deck": "Reading weather in the field",
+  "front": "Halo around the sun or moon means?",
+  "back": "Thin cirrostratus, often ahead of a warm front: rain or snow within about a day.",
+  "diagram": "fn-wx-wf-2"
+ },
+ {
+  "id": "fn-weather-04",
+  "deck": "Reading weather in the field",
+  "front": "Sun looks like through frosted glass?",
+  "back": "Altostratus. Rain is getting close.",
+  "diagram": "fn-wx-wf-3"
+ },
+ {
+  "id": "fn-weather-05",
+  "deck": "Reading weather in the field",
+  "front": "Cloud with an anvil top?",
+  "back": "Cumulonimbus, the thunderstorm cloud."
+ },
+ {
+  "id": "fn-weather-06",
+  "deck": "Reading weather in the field",
+  "front": "Thunder heard: what do you do?",
+  "back": "Go to a hard topped vehicle or building and wait 30 minutes after the last thunder."
+ },
+ {
+  "id": "fn-weather-07",
+  "deck": "Reading weather in the field",
+  "front": "Behind a cold front?",
+  "back": "Wind shifts west or northwest, colder, clearing, pressure rising.",
+  "diagram": "fn-wx-coldfront"
+ },
+ {
+  "id": "fn-weather-08",
+  "deck": "Reading weather in the field",
+  "front": "Pressure falling fast means?",
+  "back": "A storm or front is coming.",
+  "diagram": "fn-wx-pressure"
+ },
+ {
+  "id": "fn-weather-09",
+  "deck": "Reading weather in the field",
+  "front": "Where does the Hunt Map show pressure trend?",
+  "back": "Weather and wind sheet: rising, falling or steady over the last 3 hours."
+ },
+ {
+  "id": "fn-weather-10",
+  "deck": "Reading weather in the field",
+  "front": "Buys Ballot's law?",
+  "back": "Back to the wind in the northern hemisphere: low pressure on your left.",
+  "diagram": "fn-wx-buys"
+ },
+ {
+  "id": "fn-weather-11",
+  "deck": "Reading weather in the field",
+  "front": "Clear calm night: where does cold air go?",
+  "back": "Down the slopes into the valley: fog and frost below (Tip: glass from above).",
+  "diagram": "fn-wx-inversion"
+ },
+ {
+  "id": "fn-weather-12",
+  "deck": "Reading weather in the field",
+  "front": "How much colder per 1,000 m up?",
+  "back": "About 6.5 degrees Celsius in standard air.",
+  "diagram": "fn-wx-lapse"
+ },
+ {
+  "id": "fn-weather-13",
+  "deck": "Reading weather in the field",
+  "front": "8 degrees at a 400 m valley. Ridge at 1,400 m?",
+  "back": "About 1.5 degrees. Rain below can be snow above."
+ },
+ {
+  "id": "fn-weather-14",
+  "deck": "Reading weather in the field",
+  "front": "Sitting still, your barometric altimeter climbs. Why?",
+  "back": "Pressure is falling."
+ },
+ {
+  "id": "fn-weather-15",
+  "deck": "Reading weather in the field",
+  "front": "Ring around the moon?",
+  "back": "Rain or snow soon. Folklore that fits the halo science."
+ },
+ {
+  "id": "fn-wind-01",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "When does upslope wind start?",
+  "back": "Soon after the sun strikes the slope.",
+  "diagram": "fn-wd-aspect"
+ },
+ {
+  "id": "fn-wind-02",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "Which slope flips to upslope first?",
+  "back": "East faces. South is strongest near midday, west peaks mid afternoon."
+ },
+ {
+  "id": "fn-wind-03",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "When does up valley wind start?",
+  "back": "Middle or late morning, after the whole valley warms. Peaks early afternoon.",
+  "diagram": "fn-wd-hours"
+ },
+ {
+  "id": "fn-wind-04",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "What happens when a slope goes into shade?",
+  "back": "Upslope dies, a brief calm, then gentle downslope flow."
+ },
+ {
+  "id": "fn-wind-05",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "Upslope wind speed?",
+  "back": "About 5 to 13 km/h (3 to 8 mph)."
+ },
+ {
+  "id": "fn-wind-06",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "Downslope wind speed at night?",
+  "back": "About 3 to 8 km/h (2 to 5 mph). Very shallow."
+ },
+ {
+  "id": "fn-wind-07",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "Forecast wind height?",
+  "back": "10 m. At head height it may be only 50 to 70 percent.",
+  "diagram": "fn-wd-height"
+ },
+ {
+  "id": "fn-wind-08",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "Beaufort 3 on land?",
+  "back": "12 to 19 km/h: leaves and small twigs in constant motion.",
+  "diagram": "fn-wd-beaufort"
+ },
+ {
+  "id": "fn-wind-09",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "Lee side of a ridge?",
+  "back": "Eddies and turbulent reversal: air can blow back uphill. Do not sit just over the crest."
+ },
+ {
+  "id": "fn-wind-10",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "Saddles do what to wind?",
+  "back": "Squeeze and speed it up. Scent pours through the gap.",
+  "diagram": "fn-wd-saddle"
+ },
+ {
+  "id": "fn-wind-11",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "Thick shady timber at 10 am?",
+  "back": "Upslope can rise above the treetops while a thin cool layer still sinks along the floor.",
+  "diagram": "fn-wd-timber"
+ },
+ {
+  "id": "fn-wind-12",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "Where do eddies form in valleys?",
+  "back": "At canyon bends and side draw junctions.",
+  "diagram": "fn-wd-junction"
+ },
+ {
+  "id": "fn-wind-13",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "Five step wind read?",
+  "back": "Forecast, terrain, clock, check with puffer, commit or plan B.",
+  "diagram": "fn-wd-read-1"
+ },
+ {
+  "id": "fn-wind-14",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "Swirl times on a calm day?",
+  "back": "The switch times, around sun arrival and shade arrival."
+ },
+ {
+  "id": "fn-wind-15",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "Night: where does cold air run in thick timber?",
+  "back": "Along openings: creeks and roads."
+ },
+ {
+  "id": "fn-wind-16",
+  "deck": "Wind mastery: terrain, swirl, eddies, thermals by hour",
+  "front": "Memory hook: sun on, air up?",
+  "back": "Shade on, air down. Slope thermals."
+ },
+ {
+  "id": "fn-unseen-01",
+  "deck": "Stay unseen: shape, shine, shadow, movement",
+  "front": "The six ways you get seen?",
+  "back": "Shape, shine, shadow, silhouette, spacing, movement.",
+  "diagram": "fn-cam-six"
+ },
+ {
+  "id": "fn-unseen-02",
+  "deck": "Stay unseen: shape, shine, shadow, movement",
+  "front": "Number one giveaway?",
+  "back": "Movement.",
+  "diagram": "fn-cam-s6"
+ },
+ {
+  "id": "fn-unseen-03",
+  "deck": "Stay unseen: shape, shine, shadow, movement",
+  "front": "How many cone types do deer have?",
+  "back": "Two. They lack the long wavelength red cone."
+ },
+ {
+  "id": "fn-unseen-04",
+  "deck": "Stay unseen: shape, shine, shadow, movement",
+  "front": "Which clothing colour is worst for deer?",
+  "back": "Blue. They likely see it well.",
+  "diagram": "fn-cam-colours"
+ },
+ {
+  "id": "fn-unseen-05",
+  "deck": "Stay unseen: shape, shine, shadow, movement",
+  "front": "How does blaze orange look to a deer?",
+  "back": "Dull, close to brown or grey (75%).",
+  "diagram": "fn-cam-orange"
+ },
+ {
+  "id": "fn-unseen-06",
+  "deck": "Stay unseen: shape, shine, shadow, movement",
+  "front": "Does BC require blaze orange?",
+  "back": "No rule found in the Hunt Mentor Rule Book (85%, my reading). VERIFY in the synopsis."
+ },
+ {
+  "id": "fn-unseen-07",
+  "deck": "Stay unseen: shape, shine, shadow, movement",
+  "front": "Pattern or colour?",
+  "back": "Pattern. The fabric colour matters little if the pattern blends."
+ },
+ {
+  "id": "fn-unseen-08",
+  "deck": "Stay unseen: shape, shine, shadow, movement",
+  "front": "What is shine?",
+  "back": "Flash from face, glasses, rifle, scope or phone in low sun. Mask, matte, shade.",
+  "diagram": "fn-cam-s2"
+ },
+ {
+  "id": "fn-unseen-09",
+  "deck": "Stay unseen: shape, shine, shadow, movement",
+  "front": "Silhouette fix?",
+  "back": "Never on the skyline. Glass from below the crest.",
+  "diagram": "fn-cam-s4"
+ },
+ {
+  "id": "fn-unseen-10",
+  "deck": "Stay unseen: shape, shine, shadow, movement",
+  "front": "Shadow fix?",
+  "back": "Sit inside shade, watch where your own shadow falls.",
+  "diagram": "fn-cam-s3"
+ },
+ {
+  "id": "fn-unseen-11",
+  "deck": "Stay unseen: shape, shine, shadow, movement",
+  "front": "Spacing for two hunters?",
+  "back": "One moves, one watches, then swap.",
+  "diagram": "fn-cam-s5"
+ },
+ {
+  "id": "fn-unseen-12",
+  "deck": "Stay unseen: shape, shine, shadow, movement",
+  "front": "Best seat?",
+  "back": "Back to something bigger than you, brush in front, in shade.",
+  "diagram": "fn-cam-backdrop"
+ },
+ {
+  "id": "fn-unseen-13",
+  "deck": "Stay unseen: shape, shine, shadow, movement",
+  "front": "How to check clothes for UV brighteners?",
+  "back": "UV flashlight in a dark room: a blue white glow means brighteners.",
+  "diagram": "fn-cam-uv-2"
+ },
+ {
+  "id": "fn-unseen-14",
+  "deck": "Stay unseen: shape, shine, shadow, movement",
+  "front": "Do deer see UV?",
+  "back": "They lack the human UV filter and likely see some UV (70 to 75%)."
+ },
+ {
+  "id": "fn-unseen-15",
+  "deck": "Stay unseen: shape, shine, shadow, movement",
+  "front": "Head down, head up?",
+  "back": "Head down, go to town. Head up, shut up: freeze."
+ },
+ {
+  "id": "fn-foot-01",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "Fox walk, four moves?",
+  "back": "Weight back, outside edge of the ball down, roll in and lower the heel, quiet then shift weight.",
+  "diagram": "fn-ft-fox-2"
+ },
+ {
+  "id": "fn-foot-02",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "When do you put weight on the front foot?",
+  "back": "Only once it is set and quiet.",
+  "diagram": "fn-ft-fox-4"
+ },
+ {
+  "id": "fn-foot-03",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "Heel first or edge first?",
+  "back": "Heel first for pace on quiet ground. Edge first on crunchy ground and the last 100 m.",
+  "diagram": "fn-ft-compare"
+ },
+ {
+  "id": "fn-foot-04",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "Why weight back?",
+  "back": "You can freeze mid step when a head comes up.",
+  "diagram": "fn-ft-freeze"
+ },
+ {
+  "id": "fn-foot-05",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "Why break the rhythm?",
+  "back": "A steady crunch, crunch sounds like a person. Deer step in uneven bursts.",
+  "diagram": "fn-ft-rhythm"
+ },
+ {
+  "id": "fn-foot-06",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "When to move in wind?",
+  "back": "During gusts. Calm air: slow almost to a stop."
+ },
+ {
+  "id": "fn-foot-07",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "A log across the path?",
+  "back": "Step over, never on. Bark cracks."
+ },
+ {
+  "id": "fn-foot-08",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "Quietest ground?",
+  "back": "Wet moss and grass. After rain the forest goes quiet."
+ },
+ {
+  "id": "fn-foot-09",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "Three crawls?",
+  "back": "Kneel and duck, hands and knees, belly crawl.",
+  "diagram": "fn-ft-crawl-2"
+ },
+ {
+  "id": "fn-foot-10",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "After any crawl, check?",
+  "back": "The barrel for snow and mud, and muzzle direction."
+ },
+ {
+  "id": "fn-foot-11",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "Cereal box drill?",
+  "back": "Cross crushed cereal in socks then boots with no crunch.",
+  "diagram": "fn-ft-drill-2"
+ },
+ {
+  "id": "fn-foot-12",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "Leaf strip drill?",
+  "back": "10 m of dry leaves while your partner listens with eyes closed.",
+  "diagram": "fn-ft-drill-3"
+ },
+ {
+  "id": "fn-foot-13",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "Freeze game?",
+  "back": "Partner calls freeze at random: hold 60 seconds.",
+  "diagram": "fn-ft-drill-4"
+ },
+ {
+  "id": "fn-foot-14",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "Timed stalk drill?",
+  "back": "100 m of timber in 30 minutes or more.",
+  "diagram": "fn-ft-drill-5"
+ },
+ {
+  "id": "fn-foot-15",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "A good stalker covers 50 m in?",
+  "back": "A long time (65%). Fast in dead ground, slow in sight lines."
+ },
+ {
+  "id": "fn-foot-16",
+  "deck": "Still hunting and stalking footwork drills",
+  "front": "Snap a stick: then what?",
+  "back": "Stop and wait a few minutes. One crack can pass; a series cannot."
+ }
+]

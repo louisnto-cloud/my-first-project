@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, side view of a slope rising to the right with rocks near the top. A coyote trots in from the left. A mule deer bounds uphill in stiff legged hops into the rough rocky ground. A white tailed deer runs down and away across the flat. Based on a 2002 study of coyote attacks.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Two deer, two escapes</text><text x="388" y="24" font-size="14" fill="#2f3a2b" text-anchor="end">side view</text>
+  <rect x="0" y="36" width="400" height="232" fill="#e3ecf3" opacity=".5"/>
+  <path d="M0 250 L160 250 L330 70 L400 60 L400 268 L0 268 Z" fill="#e9edd9" stroke="#2f3a2b" stroke-width="2.5"/>
+  <path d="M250 150 l12 -8 l6 10 l10 -6 l4 12 l-14 6 Z M300 100 l10 -8 l8 8 l6 -4 l2 10 l-16 4 Z" fill="#9a8f7c"/>
+  <path id="rl-es-flight-up" d="M150 236 C 200 210, 240 160, 300 96" fill="none"/>
+  <path id="rl-es-flight-flat" d="M120 238 C 100 238, 70 240, 44 238" fill="none"/>
+  <path id="rl-es-flight-c" d="M40 252 L120 250" fill="none"/>
+  <g><g transform="translate(0 -6) scale(1)"><ellipse rx="13" ry="5.5" fill="#8a7a5a"/><path d="M11 -3 l9 -5 l2 4 Z" fill="#8a7a5a"/><path d="M14 -7 l1 -6 l3 5" fill="#8a7a5a"/><path d="M-12 -1 l-10 4" stroke="#8a7a5a" stroke-width="4"/><path d="M-8 4 v8 M-3 4 v8 M5 4 v8 M9 4 v8" stroke="#8a7a5a" stroke-width="2"/></g><animateMotion dur="3s" fill="freeze"><mpath href="#rl-es-flight-c"/></animateMotion></g>
+  <g><g transform="translate(0 -12) scale(0.9)"><ellipse rx="14" ry="7" fill="#8b5a2b"/><circle cx="12" cy="-10" r="5.5" fill="#8b5a2b"/><path d="M9 -14 l-3 -7 M14 -14 l4 -6" stroke="#5c3b1c" stroke-width="2"/><path d="M-9 5 v9 M-4 5 v9 M6 5 v9 M10 5 v9" stroke="#8b5a2b" stroke-width="2.5"/></g><animateMotion dur="5s" begin="1.5s" fill="freeze" calcMode="linear"><mpath href="#rl-es-flight-up"/></animateMotion>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 0" dur=".5s" begin="1.5s" repeatCount="10" additive="sum"/></g>
+  <g transform="translate(0 0)"><g transform="translate(0 -12) scale(0.9)"><ellipse rx="14" ry="7" fill="#a0703c"/><circle cx="12" cy="-10" r="5.5" fill="#a0703c"/><path d="M9 -14 l-3 -7 M14 -14 l4 -6" stroke="#5c3b1c" stroke-width="2"/><path d="M-9 5 v9 M-4 5 v9 M6 5 v9 M10 5 v9" stroke="#a0703c" stroke-width="2.5"/></g><animateMotion dur="4s" begin="1.5s" fill="freeze"><mpath href="#rl-es-flight-flat"/></animateMotion></g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="6.5s" dur=".5s" fill="freeze"/>
+    <rect x="14" y="70" width="284" height="24" rx="6" fill="#e8590c"/><text x="156.0" y="87" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Mule deer: up, into rough ground</text><rect x="14" y="104" width="226" height="24" rx="6" fill="#2f3a2b"/><text x="127.0" y="121" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">White tail: down and away</text></g>
+  <text x="200" y="290" font-size="13" fill="#2f3a2b" text-anchor="middle">Based on Lingle 2002 (coyote study)</text>
+</svg>
