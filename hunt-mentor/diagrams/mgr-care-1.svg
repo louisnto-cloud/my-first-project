@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 270" role="img" aria-label="Field care step 1. A grouse with one wing outlined in orange. Note which species it is in the Journal, and leave one feathered wing attached." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="270" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Care 1: tag it in your head</text>
+<g transform="translate(140 160) scale(2.2 2.2)"><polygon points="-20,-6 -38,-20 -48,-12 -52,0 -48,8 -20,8" fill="#6b4f35"/><path d="M-40 -18 Q-50 -10 -48 6" fill="none" stroke="#23261f" stroke-width="3"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#9a6b45"/><circle cx="21" cy="-14" r="8" fill="#9a6b45"/><polygon points="16,-20 20,-28 25,-20" fill="#9a6b45"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<path d="M120 150 q30 -30 70 -10 q-20 30 -70 10" fill="#6b4f35" stroke="#e8590c" stroke-width="3"/>
+<text x="250" y="110" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Which species?</text>
+<text x="250" y="129" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Note it in the</text>
+<text x="250" y="148" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Journal.</text>
+<text x="250" y="167" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">One feathered</text>
+<text x="250" y="186" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">wing stays on.</text>
+</svg>

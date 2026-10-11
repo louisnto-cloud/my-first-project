@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-label="Field care step 4. A grouse in a cooler with ice, and a thermometer reading under 4 degrees Celsius. At home: fridge up to 3 days, freezer up to 6 months." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="280" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Care 4: cold, fast</text>
+<rect x="80" y="90" width="240" height="140" rx="12" fill="#cfe0ef" stroke="#4a7fb0" stroke-width="3"/>
+<rect x="70" y="74" width="260" height="26" rx="8" fill="#4a7fb0" stroke="none" stroke-width="0"/>
+<rect x="110" y="190" width="26" height="26" rx="4" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<rect x="170" y="190" width="26" height="26" rx="4" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<rect x="230" y="190" width="26" height="26" rx="4" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<rect x="280" y="190" width="26" height="26" rx="4" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<g transform="translate(200 160) scale(0.7 0.7)"><polygon points="-20,-6 -38,-20 -48,-12 -52,0 -48,8 -20,8" fill="#6b4f35"/><path d="M-40 -18 Q-50 -10 -48 6" fill="none" stroke="#23261f" stroke-width="3"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#9a6b45"/><circle cx="21" cy="-14" r="8" fill="#9a6b45"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<rect x="340" y="90" width="14" height="110" rx="7" fill="#ffffff" stroke="#23261f" stroke-width="2"/><circle cx="347" cy="206" r="12" fill="#c23b22"/><rect x="343" y="150" width="8" height="50" fill="#c23b22"/>
+<text x="347" y="80" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Under 4 C</text>
+<text x="200" y="262" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Cooler on ice. Fridge 3 days, freezer 6 months.</text>
+</svg>

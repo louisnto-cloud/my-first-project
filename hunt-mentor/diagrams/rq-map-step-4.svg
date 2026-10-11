@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 4: Habitat and season. Winter range, burns, cutblocks, water.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">4</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Habitat and season</text>
+<rect x="80" y="70" width="240" height="150" fill="#dfe6d3" stroke="#8a9a6b"/><path d="M100 90 L200 80 L210 150 L110 160 Z" fill="#8a9a6b"/><ellipse cx="260" cy="180" rx="35" ry="16" fill="#4a7fb0"/><text x="155" y="125" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">burn</text><text x="260" y="185" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">wetland</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Winter range, burns, cutblocks, water.</text>
+</svg>

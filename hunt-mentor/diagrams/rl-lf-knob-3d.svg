@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Sketch of a knob in the Hunt Map 3D view. A small rounded hill rises out of gentler ground, with closed contour rings around it. A hunter stands on top using it as a lookout.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Knob in 3D</text><rect x="0" y="36" width="400" height="70" fill="#e3ecf3"/><text x="388" y="24" font-size="13" fill="#2f3a2b" text-anchor="end">Hunt Map 3D view (sketch)</text>
+  <path d="M0 140 Q 200 120 400 140 L400 268 L0 268 Z" fill="#e9edd9"/>
+  <path d="M120 230 C 130 160, 170 140, 200 140 C 236 140, 270 170, 282 230 Z" fill="#cdd7b6" stroke="#2f3a2b" stroke-width="2.5"/>
+  <path d="M200 140 C 236 140, 270 170, 282 230 L230 230 C 232 190, 220 160, 200 140 Z" fill="#a9b68e"/>
+  <ellipse cx="201" cy="172" rx="44" ry="12" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+  <ellipse cx="201" cy="200" rx="68" ry="18" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+  <g transform="translate(201 146) scale(1)"><circle cy="-22" r="6" fill="#e8590c"/><path d="M0 -16 v16 M0 0 l-6 12 M0 0 l6 12 M0 -12 l-8 6 M0 -12 l8 4" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/></g>
+  <rect x="250" y="120" width="142" height="24" rx="6" fill="#e8590c"/><text x="321.0" y="137" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Knob: a lookout</text>
+  <text x="14" y="256" font-size="14" fill="#2f3a2b" text-anchor="start">gentle slope or flat</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Small closed rings: a little top</text>
+</svg>

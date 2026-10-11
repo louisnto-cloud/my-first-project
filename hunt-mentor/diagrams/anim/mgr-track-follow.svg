@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Animation in snow. A fresh line of grouse tracks winds toward a conifer. You walk beside the line slowly and stop often. As you near the cover, the grouse flushes from beside the tree. Be ready near cover." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Follow a fresh track line</text>
+<rect x="0" y="40" width="400" height="260" fill="#ffffff"/>
+<path id="mgr-track-follow-p" d="M20 270 Q120 240 160 200 Q210 150 280 140" fill="none"/>
+<g transform="translate(40 265) rotate(60)" stroke="#6b4f35" stroke-width="2.5" stroke-linecap="round" fill="none"><path d="M0 0 L0 -12 M0 0 L-6 -10 M0 0 L6 -10"/></g>
+<g transform="translate(70 258) rotate(60)" stroke="#6b4f35" stroke-width="2.5" stroke-linecap="round" fill="none"><path d="M0 0 L0 -12 M0 0 L-6 -10 M0 0 L6 -10"/></g>
+<g transform="translate(100 248) rotate(60)" stroke="#6b4f35" stroke-width="2.5" stroke-linecap="round" fill="none"><path d="M0 0 L0 -12 M0 0 L-6 -10 M0 0 L6 -10"/></g>
+<g transform="translate(128 232) rotate(60)" stroke="#6b4f35" stroke-width="2.5" stroke-linecap="round" fill="none"><path d="M0 0 L0 -12 M0 0 L-6 -10 M0 0 L6 -10"/></g>
+<g transform="translate(152 212) rotate(60)" stroke="#6b4f35" stroke-width="2.5" stroke-linecap="round" fill="none"><path d="M0 0 L0 -12 M0 0 L-6 -10 M0 0 L6 -10"/></g>
+<g transform="translate(176 188) rotate(60)" stroke="#6b4f35" stroke-width="2.5" stroke-linecap="round" fill="none"><path d="M0 0 L0 -12 M0 0 L-6 -10 M0 0 L6 -10"/></g>
+<g transform="translate(205 166) rotate(60)" stroke="#6b4f35" stroke-width="2.5" stroke-linecap="round" fill="none"><path d="M0 0 L0 -12 M0 0 L-6 -10 M0 0 L6 -10"/></g>
+<g transform="translate(235 152) rotate(60)" stroke="#6b4f35" stroke-width="2.5" stroke-linecap="round" fill="none"><path d="M0 0 L0 -12 M0 0 L-6 -10 M0 0 L6 -10"/></g>
+<g transform="translate(262 144) rotate(60)" stroke="#6b4f35" stroke-width="2.5" stroke-linecap="round" fill="none"><path d="M0 0 L0 -12 M0 0 L-6 -10 M0 0 L6 -10"/></g>
+<polygon points="320,80 284.0,160 356.0,160" fill="#2f3a2b"/><rect x="317" y="160" width="6" height="12" fill="#6b4f35"/>
+<g><circle r="9" fill="#e8590c"/><animateMotion dur="6s" fill="freeze" keyPoints="0;0.8" keyTimes="0;1" calcMode="linear"><mpath href="#mgr-track-follow-p"/></animateMotion></g>
+<path id="mgr-track-follow-q" d="M300 150 Q340 90 395 60" fill="none"/>
+<g opacity="0"><set attributeName="opacity" to="1" begin="5.5s"/><g transform="translate(0 0) scale(0.55 0.55)"><polygon points="-20,-6 -38,-20 -48,-12 -52,0 -48,8 -20,8" fill="#6b4f35"/><path d="M-40 -18 Q-50 -10 -48 6" fill="none" stroke="#23261f" stroke-width="3"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#9a6b45"/><circle cx="21" cy="-14" r="8" fill="#9a6b45"/><polygon points="16,-20 20,-28 25,-20" fill="#9a6b45"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g><animateMotion dur="1.2s" begin="5.5s" fill="freeze"><mpath href="#mgr-track-follow-q"/></animateMotion></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="1s" fill="freeze"/><text x="20" y="64" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Slow down. Stop often.</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="5.5s" fill="freeze"/><rect x="10" y="76" width="240" height="30" rx="8" fill="#2f3a2b" stroke="none" stroke-width="0"/><text x="130" y="97" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Flush near cover: be ready</text></g>
+</svg>

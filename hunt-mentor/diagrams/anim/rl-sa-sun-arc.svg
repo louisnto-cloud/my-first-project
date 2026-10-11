@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, side view of a ridge running east to west, south on the left. The sun climbs a low arc in the southern sky to about 30 degrees above the horizon at noon in mid October. Its rays strike the south face almost head on. The north face stays in shadow with no direct sun. Caption: south is the stove, north is the fridge.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Mid October noon sun</text><text x="388" y="24" font-size="14" fill="#2f3a2b" text-anchor="end">looking west</text>
+  <rect x="0" y="36" width="400" height="200" fill="#e3ecf3" opacity=".6"/>
+  <path d="M60 236 L200 120 L340 236 Z" fill="#e9edd9" stroke="#2f3a2b" stroke-width="2.5"/>
+  <path d="M200 120 L340 236 L200 236 Z" fill="#7f8f62"/>
+  <path d="M0 236 H400" stroke="#2f3a2b" stroke-width="2"/>
+  <path id="rl-sa-sun-arc-p" d="M20 226 Q 40 120 70 100" fill="none" stroke="#e8a20c" stroke-width="1.5" stroke-dasharray="4 5"/>
+  <g><circle cx="0" cy="0" r="14" fill="#f2c70c"/><path d="M0 0 m0 -18 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(0 0 0)"/><path d="M0 0 m0 -18 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(45 0 0)"/><path d="M0 0 m0 -18 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(90 0 0)"/><path d="M0 0 m0 -18 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(135 0 0)"/><path d="M0 0 m0 -18 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(180 0 0)"/><path d="M0 0 m0 -18 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(225 0 0)"/><path d="M0 0 m0 -18 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(270 0 0)"/><path d="M0 0 m0 -18 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(315 0 0)"/><animateMotion dur="5s" fill="freeze"><mpath href="#rl-sa-sun-arc-p"/></animateMotion></g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="5s" dur=".6s" fill="freeze"/>
+    <path d="M84 108 L140 150" stroke="#e8a20c" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M140 150 L128.2 147.7 L134.5 139.3 Z" fill="#e8a20c"/><path d="M96 130 L150 170" stroke="#e8a20c" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M150 170 L138.2 167.8 L144.4 159.4 Z" fill="#e8a20c"/><path d="M70 128 L122 168" stroke="#e8a20c" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M122 168 L110.3 165.5 L116.6 157.3 Z" fill="#e8a20c"/>
+    <rect x="150" y="46" width="209" height="24" rx="6" fill="#e8590c"/><text x="254.5" y="63" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Noon sun: 30 degrees up</text>
+    <rect x="220" y="150" width="167" height="24" rx="6" fill="#2f3a2b"/><text x="303.5" y="167" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">North face: no sun</text>
+  </g>
+  <text x="110" y="258" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">SOUTH face</text><text x="290" y="258" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">NORTH face</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">South is the stove. North is the fridge.</text>
+</svg>

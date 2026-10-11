@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Topo sketch of a bowl: contour lines form big U shapes nested around a basin, open at the bottom, with a small creek starting in the basin.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Bowl</text><text x="388" y="24" font-size="14" fill="#2f3a2b" text-anchor="end">Topo map</text><rect x="0" y="36" width="400" height="232" fill="#dfe6d3" opacity=".6"/>
+  <g fill="none" stroke="#8b5a2b" stroke-width="2.3">
+    <path d="M30 268 C 20 120, 100 60, 200 56 C 300 60, 380 120, 370 268"/>
+    <path d="M70 268 C 64 150, 120 96, 200 92 C 280 96, 336 150, 330 268"/>
+    <path d="M110 268 C 106 180, 140 132, 200 128 C 260 132, 294 180, 290 268"/>
+  </g>
+  <path d="M200 140 C 198 180, 204 220, 200 268" stroke="#4a7fb0" stroke-width="3.5" fill="none"/>
+  <text x="200" y="210" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">basin</text><text x="200" y="50" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">head</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Big U shapes, open toward the low side</text>
+</svg>

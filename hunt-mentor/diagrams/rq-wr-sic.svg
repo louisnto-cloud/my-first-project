@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" role="img" aria-label="Two halves. Left, open ground with deep snow. Right, old Douglas fir whose big crowns catch snow, so the ground beneath has only thin snow and a deer can walk and feed there. Winter range orders protect this snow interception cover.">
+<rect x="0" y="0" width="400" height="320" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Snow interception cover</text>
+<rect x="0" y="240" width="400" height="60" fill="#dfe6d3"/>
+<rect x="0" y="210" width="150" height="30" fill="#fff" stroke="#d8dde3"/>
+<text x="75" y="268" font-family="sans-serif" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Open: deep snow</text>
+<polygon points="190,210 230,70 270,210" fill="#3d5a3a"/><rect x="226" y="210" width="8" height="30" fill="#6b4f35"/>
+<path d="M202 165 q 28 -14 56 0" stroke="#fff" stroke-width="6" fill="none"/><path d="M212 125 q 18 -10 36 0" stroke="#fff" stroke-width="5" fill="none"/>
+<polygon points="260,210 300,70 340,210" fill="#3d5a3a"/><rect x="296" y="210" width="8" height="30" fill="#6b4f35"/>
+<path d="M272 165 q 28 -14 56 0" stroke="#fff" stroke-width="6" fill="none"/><path d="M282 125 q 18 -10 36 0" stroke="#fff" stroke-width="5" fill="none"/>
+<polygon points="330,210 370,70 410,210" fill="#3d5a3a"/><rect x="366" y="210" width="8" height="30" fill="#6b4f35"/>
+<path d="M342 165 q 28 -14 56 0" stroke="#fff" stroke-width="6" fill="none"/><path d="M352 125 q 18 -10 36 0" stroke="#fff" stroke-width="5" fill="none"/>
+<rect x="190" y="232" width="210" height="8" fill="#fff"/>
+<text x="300" y="268" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Under old fir: thin snow</text>
+<g transform="translate(300 222) scale(0.6)"><ellipse rx="20" ry="9" fill="#8b5a2b"/><circle cx="19" cy="-10" r="6.5" fill="#8b5a2b"/><rect x="-15" y="5" width="3.5" height="14" fill="#8b5a2b"/><rect x="-6" y="5" width="3.5" height="14" fill="#8b5a2b"/><rect x="7" y="5" width="3.5" height="14" fill="#8b5a2b"/><rect x="13" y="5" width="3.5" height="14" fill="#8b5a2b"/><ellipse cx="-20" cy="-2" rx="4" ry="5" fill="#f3ead8"/></g>
+<text x="46" y="70" font-family="sans-serif" font-size="14" fill="#4a7fb0">*</text><text x="56" y="78" font-family="sans-serif" font-size="14" fill="#4a7fb0">*</text><text x="66" y="70" font-family="sans-serif" font-size="14" fill="#4a7fb0">*</text><text x="76" y="78" font-family="sans-serif" font-size="14" fill="#4a7fb0">*</text><text x="86" y="70" font-family="sans-serif" font-size="14" fill="#4a7fb0">*</text><text x="76" y="110" font-family="sans-serif" font-size="14" fill="#4a7fb0">*</text><text x="86" y="118" font-family="sans-serif" font-size="14" fill="#4a7fb0">*</text><text x="96" y="110" font-family="sans-serif" font-size="14" fill="#4a7fb0">*</text><text x="106" y="118" font-family="sans-serif" font-size="14" fill="#4a7fb0">*</text><text x="26" y="150" font-family="sans-serif" font-size="14" fill="#4a7fb0">*</text><text x="36" y="158" font-family="sans-serif" font-size="14" fill="#4a7fb0">*</text><text x="46" y="150" font-family="sans-serif" font-size="14" fill="#4a7fb0">*</text><text x="56" y="158" font-family="sans-serif" font-size="14" fill="#4a7fb0">*</text>
+<text x="10" y="292" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Big crowns catch snow, so deer can walk and feed below</text>
+<text x="10" y="308" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">(80%).</text>
+</svg>

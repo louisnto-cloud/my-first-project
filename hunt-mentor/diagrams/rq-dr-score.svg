@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 354" role="img" aria-label="Scoring card out of 20: legal checks done the night before, 4 points; deer found while glassing, 3; sign read right, 4; wind plan and seat choice, 4; journal written the same night, 5.">
+<rect x="0" y="0" width="400" height="354" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Score your drill (out of 20)</text>
+<text x="14" y="64" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Legal checks done the night before</text>
+<rect x="14" y="70" width="271" height="20" rx="4" fill="#2f3a2b"/>
+<text x="290.54545454545456" y="85" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">4 points</text>
+<text x="14" y="116" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Deer found while glassing</text>
+<rect x="14" y="122" width="203" height="20" rx="4" fill="#8a9a6b"/>
+<text x="222.9090909090909" y="137" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">3 points</text>
+<text x="14" y="168" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Sign read right: who, which way, how old</text>
+<rect x="14" y="174" width="271" height="20" rx="4" fill="#8b5a2b"/>
+<text x="290.54545454545456" y="189" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">4 points</text>
+<text x="14" y="220" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Wind plan and seat choice</text>
+<rect x="14" y="226" width="271" height="20" rx="4" fill="#4a7fb0"/>
+<text x="290.54545454545456" y="241" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">4 points</text>
+<text x="14" y="272" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Journal written the same night</text>
+<rect x="14" y="278" width="338" height="20" rx="4" fill="#e8590c"/>
+<text x="346.1818181818182" y="293" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="end">5 points</text>
+<text x="14" y="330" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Tip: 16 or more, you are reading land. Under 10,</text>
+<text x="14" y="346" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">repeat the drill.</text>
+</svg>

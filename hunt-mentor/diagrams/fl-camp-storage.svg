@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 298" role="img" aria-label="Food storage options: bear resistant lockers where provided, the trunk of a vehicle or a hard sided RV, or hung at least 4 m up and 3 m from the tree. Never in the tent.">
+  <rect x="0" y="0" width="400" height="298" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Where the food goes</text>
+<rect x="10" y="46" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="24.0" y="56" width="36" height="34" rx="4" fill="#888888"/>
+<text x="80" y="68" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Bear lockers</text>
+<text x="80" y="90" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">use them where provided (85%)</text>
+<rect x="10" y="108" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="25.5" y="139.0" width="30.0" height="10.0" rx="3" fill="#2f3a2b"/><rect x="54.0" y="133.0" width="15.0" height="16.0" rx="4" fill="#2f3a2b"/><rect x="57.0" y="135.0" width="9.0" height="6.0" rx="2" fill="#cfe0ef"/><circle cx="34.0" cy="150.0" r="4.5" fill="#23261f"/><circle cx="61.0" cy="150.0" r="4.5" fill="#23261f"/><circle cx="34.0" cy="150.0" r="2.0" fill="#c9b79c"/><circle cx="61.0" cy="150.0" r="2.0" fill="#c9b79c"/>
+<text x="80" y="130" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Vehicle or hard sided RV</text>
+<text x="80" y="152" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">no lockers? lock it in (85%)</text>
+<rect x="10" y="170" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<line x1="24.0" y1="176" x2="60.0" y2="176" stroke="#6b4f35" stroke-width="4" stroke-linecap="round"/><line x1="42.0" y1="176" x2="42.0" y2="190" stroke="#23261f" stroke-width="2" stroke-linecap="round"/><rect x="34.0" y="190" width="16" height="18" rx="3" fill="#8b5a2b"/>
+<text x="80" y="192" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Hang it</text>
+<text x="80" y="214" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">4 m up, 3 m from the tree (75%)</text>
+<rect x="10" y="232" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<polygon points="42.0,253.6 24.0,274 60.0,274" fill="#e8590c"/><polygon points="42.0,253.6 37.2,274 46.8,274" fill="#2f3a2b"/><path d="M33.0 249.0 l18.0 18.0 M51.0 249.0 l-18.0 18.0" fill="none" stroke="#b3261e" stroke-width="5.0" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80" y="254" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Never in the tent</text>
+<text x="80" y="276" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">not even a snack (85%)</text>
+</svg>

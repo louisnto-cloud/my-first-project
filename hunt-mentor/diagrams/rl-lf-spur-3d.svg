@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Sketch of a spur in the Hunt Map 3D view. A main ridge runs across the back. A short finger of high ground runs off it toward you, with a draw on each side holding timber. Contour lines bend downhill around the nose of the spur.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Spur (finger ridge) in 3D</text><rect x="0" y="36" width="400" height="70" fill="#e3ecf3"/><text x="388" y="24" font-size="13" fill="#2f3a2b" text-anchor="end">Hunt Map 3D view (sketch)</text>
+  <path d="M0 110 Q 200 70 400 110 L400 268 L0 268 Z" fill="#a9b68e"/>
+  <path d="M0 110 Q 200 70 400 110" stroke="#2f3a2b" stroke-width="3" fill="none"/>
+  <path d="M200 88 C 196 150, 210 210, 205 268 L120 268 C 140 200, 170 130, 200 88 Z" fill="#e9edd9"/>
+  <path d="M200 88 C 196 150, 210 210, 205 268 L290 268 C 260 200, 230 130, 200 88 Z" fill="#c3cdaa"/>
+  <path d="M200 88 C 196 150, 210 210, 205 268" stroke="#2f3a2b" stroke-width="2.5" fill="none"/>
+  <path d="M0 150 Q 90 128 150 140 Q 196 168 202 170 Q 212 168 250 140 Q 320 128 400 150" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+  <path d="M0 196 Q 80 176 130 190 Q 190 226 206 228 Q 222 226 275 190 Q 330 176 400 196" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+  <path d="M60 156 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="58.5" y="186" width="3" height="5" fill="#6b4f35"/><path d="M88 176 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="86.5" y="206" width="3" height="5" fill="#6b4f35"/><path d="M340 162 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="338.5" y="192" width="3" height="5" fill="#6b4f35"/><path d="M366 186 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="364.5" y="216" width="3" height="5" fill="#6b4f35"/>
+  <rect x="40" y="116" width="100" height="24" rx="6" fill="#2f3a2b"/><text x="90.0" y="133" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Main ridge</text><rect x="220" y="150" width="49" height="24" rx="6" fill="#e8590c"/><text x="244.5" y="167" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Spur</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">A short ridge that runs off the main one</text>
+</svg>

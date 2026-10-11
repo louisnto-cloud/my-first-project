@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 426" role="img" aria-label="Choosing a camp site: look up for dead trees, avoid game and bear trails, stay back from water travel routes, avoid low cold hollows, check for flood and runoff, and find flat ground.">
+  <rect x="0" y="0" width="400" height="426" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Pick the site: six checks</text>
+<rect x="10.0" y="50" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<line x1="82.5" y1="107.4" x2="112.5" y2="61.400000000000006" stroke="#6b4f35" stroke-width="6" stroke-linecap="round"/><line x1="112.5" y1="61.400000000000006" x2="126.5" y2="77.4" stroke="#6b4f35" stroke-width="4" stroke-linecap="round"/>
+<text x="102.5" y="132" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Look up</text>
+<text x="102.5" y="151" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">dead trees, limbs</text>
+<rect x="205.0" y="50" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M263.5 97.4 Q297.5 57.400000000000006 331.5 97.4" fill="none" stroke="#6b4f35" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5"/>
+<text x="297.5" y="132" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Not on a trail</text>
+<text x="297.5" y="151" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">game or bear trails</text>
+<rect x="10.0" y="172" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M68.5 209.4 q17 -12 34 0 q17 12 34 0" fill="none" stroke="#4a7fb0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="102.5" y="254" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Back from water</text>
+<text x="102.5" y="273" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">animals travel there</text>
+<rect x="205.0" y="172" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M263.5 189.4 Q297.5 239.4 331.5 189.4" fill="none" stroke="#8a9a6b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="297.5" y="213.4" font-family="sans-serif" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="middle">cold</text>
+<text x="297.5" y="254" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Not in a hollow</text>
+<text x="297.5" y="273" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">cold air pools</text>
+<rect x="10.0" y="294" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M102.5 319.79999999999995 q14.4 18.0 12.6 27.0 a12.6 12.6 0 0 1 -25.2 0 q-1.8 -9.0 12.6 -27.0 z" fill="#4a7fb0" stroke="#4a7fb0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="102.5" y="376" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">High and dry</text>
+<text x="102.5" y="395" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">no runoff path</text>
+<rect x="205.0" y="294" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<line x1="263.5" y1="341.4" x2="331.5" y2="341.4" stroke="#2f3a2b" stroke-width="6" stroke-linecap="round"/><path d="M287.5 321.4 l7.0 8.0 l14.0 -16.0" fill="none" stroke="#2f3a2b" stroke-width="5.0" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="297.5" y="376" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Flat</text>
+<text x="297.5" y="395" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">sleep well</text>
+</svg>

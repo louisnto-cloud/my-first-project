@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Take every round out of the room. Magazines empty, pockets empty.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1. All ammo out of the room</text><rect x="130" y="90" width="140" height="90" rx="8" fill="#6b4f35" stroke="none" stroke-width="2"/><text x="200" y="140" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">AMMO</text><line x1="270" y1="135" x2="360" y2="135" stroke="#e8590c" stroke-width="4" stroke-linecap="round"/><path d="M351.9 138.9 L360 135 L351.9 131.1" fill="none" stroke="#e8590c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="200" y="230" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">other room, door closed</text>
+</svg>

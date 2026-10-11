@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A compass of slope directions. North facing slopes: shade, lingering snow, thick timber. South facing: sun, grass, early snow melt. East facing: first morning sun. West facing: last sun and the hottest afternoons. Caption: aspect is the direction water would run off the slope.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Which way a slope faces</text>
+  <circle cx="200" cy="158" r="64" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+  <path d="M200 158 L155 113 A64 64 0 0 1 245 113 Z" fill="#2f6fd6" opacity=".6"/>
+  <path d="M200 158 L245 113 A64 64 0 0 1 245 203 Z" fill="#3db36b" opacity=".6"/>
+  <path d="M200 158 L245 203 A64 64 0 0 1 155 203 Z" fill="#f2c70c" opacity=".7"/>
+  <path d="M200 158 L155 203 A64 64 0 0 1 155 113 Z" fill="#e03131" opacity=".55"/>
+  <text x="200" y="88" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">N</text><text x="200" y="240" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">S</text><text x="274" y="163" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">E</text><text x="126" y="163" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">W</text>
+  <text x="200" y="52" font-size="14" font-weight="bold" fill="#2f6fd6" text-anchor="middle">North: shade, snow, thick timber</text>
+  <text x="200" y="266" font-size="14" font-weight="bold" fill="#b85a00" text-anchor="middle">South: sun, grass, early melt</text>
+  <text x="292" y="140" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">East:</text><text x="292" y="158" font-size="14" fill="#2f3a2b" text-anchor="start">first sun</text>
+  <text x="108" y="140" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">West:</text><text x="108" y="158" font-size="14" fill="#2f3a2b" text-anchor="end">last sun,</text><text x="108" y="176" font-size="14" fill="#2f3a2b" text-anchor="end">hot afternoon</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Aspect = the way water would run off it</text>
+</svg>

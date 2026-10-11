@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" font-family="sans-serif" role="img" aria-label="Step 4: search a circle of about 3 metres around the spot for hair, blood, bone, tissue and scuffed ground.">
+<rect x="0" y="0" width="400" height="290" rx="0" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4. Search a 3 m circle</text>
+<rect x="0" y="60" width="400" height="220" rx="0" fill="#cfdcb5"/><circle cx="200" cy="170" r="80" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6"/><circle cx="200" cy="170" r="6" fill="#23261f"/><text x="200" y="100" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">3 m</text><text x="200" y="270" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Hair, blood, bone, tissue, scuffs</text>
+</svg>

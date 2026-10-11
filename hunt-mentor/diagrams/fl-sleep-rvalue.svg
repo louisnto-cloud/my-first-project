@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 214" role="img" aria-label="Sleeping pad R values add up when stacked. Example: foam pad R 2 plus air pad R 4 equals R 6. Higher R means more insulation from the cold ground.">
+  <rect x="0" y="0" width="400" height="214" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Pads stack: R values add</text>
+<text x="132" y="73" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">Foam pad</text>
+<rect x="140" y="56" width="57.142857142857146" height="26" rx="4" fill="#8a9a6b"/>
+<text x="203.14285714285714" y="75" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">R 2</text>
+<text x="132" y="115" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">Air pad</text>
+<rect x="140" y="98" width="114.28571428571429" height="26" rx="4" fill="#2f3a2b"/>
+<text x="260.2857142857143" y="117" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">R 4</text>
+<text x="132" y="157" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">Both stacked</text>
+<rect x="140" y="140" width="171.42857142857142" height="26" rx="4" fill="#e8590c"/>
+<text x="317.42857142857144" y="159" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">R 6</text>
+<text x="200" y="204" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Example values. ASTM F3340 lets R values add (75%)</text>
+</svg>

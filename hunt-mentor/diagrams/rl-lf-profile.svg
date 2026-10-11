@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="An elevation profile chart from 1,000 to 1,400 m. The orange line climbs, runs flat for a while (a bench), climbs to a top, dips (a saddle), climbs to a second top, then drops into a draw. Caption: a flat bit is a bench, a dip between tops is a saddle.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Read the shapes on a profile</text>
+  <rect x="20" y="40" width="370" height="200" rx="6" fill="#fff" stroke="#8a9a6b" stroke-width="1.5"/>
+  <g stroke="#8a9a6b" stroke-width="1" opacity=".6"><path d="M20 90 H390 M20 140 H390 M20 190 H390"/></g>
+  <text x="24" y="86" font-size="12" fill="#2f3a2b" text-anchor="start">1,400 m</text><text x="24" y="136" font-size="12" fill="#2f3a2b" text-anchor="start">1,200 m</text><text x="24" y="186" font-size="12" fill="#2f3a2b" text-anchor="start">1,000 m</text>
+  <path d="M20 230 L70 200 L100 186 L150 184 L190 140 L230 92 L262 120 L292 84 L330 160 L360 196 L390 214" fill="none" stroke="#e8590c" stroke-width="4" stroke-linejoin="round"/>
+  <text x="125" y="178" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">bench</text><text x="230" y="84" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">top</text><text x="262" y="142" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">saddle</text><text x="300" y="76" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">top</text>
+  <text x="370" y="190" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="middle">draw</text>
+  <text x="205" y="262" font-size="13" fill="#2f3a2b" text-anchor="middle">distance along your line</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Flat bit: bench. Dip between tops: saddle.</text>
+</svg>

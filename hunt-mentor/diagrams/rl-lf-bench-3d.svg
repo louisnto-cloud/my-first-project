@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Sketch of a bench in the Hunt Map 3D view. A steep timbered slope above, a pale flat shelf across the middle, and a steep slope below. Contour lines are packed above and below the shelf and spread wide across it. A deer beds on the shelf.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Bench in 3D</text><rect x="0" y="36" width="400" height="70" fill="#e3ecf3"/><text x="388" y="24" font-size="13" fill="#2f3a2b" text-anchor="end">Hunt Map 3D view (sketch)</text>
+  <path d="M0 106 L400 106 L400 140 L0 160 Z" fill="#a9b68e"/>
+  <path d="M0 160 L400 140 L400 178 L0 204 Z" fill="#f3ead2"/>
+  <path d="M0 204 L400 178 L400 268 L0 268 Z" fill="#a9b68e"/>
+  <path d="M0 120 L400 114" fill="none" stroke="#8b5a2b" stroke-width="1.6"/><path d="M0 136 L400 124" fill="none" stroke="#8b5a2b" stroke-width="1.6"/><path d="M0 150 L400 134" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+  <path d="M0 160 L400 140" fill="none" stroke="#8b5a2b" stroke-width="2.4"/><path d="M0 204 L400 178" fill="none" stroke="#8b5a2b" stroke-width="2.4"/>
+  <path d="M0 222 L400 196" fill="none" stroke="#8b5a2b" stroke-width="1.6"/><path d="M0 240 L400 214" fill="none" stroke="#8b5a2b" stroke-width="1.6"/><path d="M0 258 L400 232" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+  <path d="M40 110.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="38.65" y="137.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M90 106.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="88.65" y="133.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M300 98.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="298.65" y="125.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M350 96.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="348.65" y="123.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M60 214.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="58.65" y="241.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M330 200.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="328.65" y="227.4" width="2.7" height="4.5" fill="#6b4f35"/>
+  <g transform="translate(200 180) scale(1.1)"><ellipse rx="13" ry="6" fill="#8b5a2b"/><circle cx="11" cy="-7" r="5" fill="#8b5a2b"/><path d="M9 -11 l-3 -6 M13 -11 l4 -5" stroke="#5c3b1c" stroke-width="2"/></g>
+  <rect x="20" y="214" width="310" height="24" rx="6" fill="#e8590c"/><text x="175.0" y="231" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Bench: flat step, a bed with a view</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Steep above, flat shelf, steep below</text>
+</svg>

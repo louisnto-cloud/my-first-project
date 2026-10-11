@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" role="img" aria-label="Six stacked map layers, bottom to top: 1 legal base with MU and land status; 2 closures and No Shooting areas; 3 access and pressure; 4 habitat and season; 5 terrain and wind; 6 your sign, seats and routes. Build from the bottom up: law first, your sign last.">
+<rect x="0" y="0" width="400" height="330" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Build your map in 6 layers</text>
+<path d="M60 68 L200 40 L340 68 L200 96 Z" fill="#e8590c" opacity=".88" stroke="#fff" stroke-width="2"/><text x="200" y="73" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">6 Your sign, seats, routes</text>
+<path d="M60 110 L200 82 L340 110 L200 138 Z" fill="#6b4f35" opacity=".88" stroke="#fff" stroke-width="2"/><text x="200" y="115" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">5 Terrain and wind</text>
+<path d="M60 152 L200 124 L340 152 L200 180 Z" fill="#8a9a6b" opacity=".88" stroke="#fff" stroke-width="2"/><text x="200" y="157" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">4 Habitat and season</text>
+<path d="M60 194 L200 166 L340 194 L200 222 Z" fill="#c08a3e" opacity=".88" stroke="#fff" stroke-width="2"/><text x="200" y="199" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">3 Access and pressure</text>
+<path d="M60 236 L200 208 L340 236 L200 264 Z" fill="#c0392b" opacity=".88" stroke="#fff" stroke-width="2"/><text x="200" y="241" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">2 Closures, No Shooting</text>
+<path d="M60 278 L200 250 L340 278 L200 306 Z" fill="#2f3a2b" opacity=".88" stroke="#fff" stroke-width="2"/><text x="200" y="283" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">1 Legal base: MU, land</text>
+<text x="200" y="316" font-family="sans-serif" font-size="14" font-weight="bold" fill="#6b4f35" text-anchor="middle">Bottom up: law first, your sign last (Tip)</text>
+</svg>

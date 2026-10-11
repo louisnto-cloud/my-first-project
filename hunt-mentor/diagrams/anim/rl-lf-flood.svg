@@ -8,7 +8,7 @@
   </rect>
   <path d="M40 140 L120 100 L150 70 L170 50 L195 70 L215 95 L260 100 L300 120 L370 140 Z" fill="#cfd8bd" stroke="#2f3a2b" stroke-width="2.5"/>
   <path d="M0 140 H400" stroke="#2f3a2b" stroke-width="2"/>
-  <text x="60" y="70" font-size="14" fill="#2f3a2b" text-anchor="middle">steep side</text><text x="318" y="100" font-size="14" fill="#2f3a2b" text-anchor="middle">gentle side</text>
+  <text x="60" y="70" font-size="14" fill="#2f3a2b" text-anchor="middle">steep side</text><text x="340" y="132" font-size="14" fill="#2f3a2b" text-anchor="middle">gentle side</text>
   <rect x="0" y="150" width="400" height="128" fill="#dfe6d3" opacity=".6"/>
   <text x="12" y="170" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Map view</text>
   <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.96s" dur=".4s" fill="freeze"/>
@@ -28,8 +28,8 @@
     <path d="M160 140 H182" stroke="#e8590c" stroke-width="3" transform="translate(0 -80)"/>
   </g>
   <g opacity="0"><animate attributeName="opacity" values="0;1" begin="7.4s" dur=".5s" fill="freeze"/>
-    <rect x="215" y="160" width="178" height="48" rx="6" fill="#2f3a2b"/>
-    <text x="304" y="180" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Each shoreline is</text><text x="304" y="199" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">one contour line</text>
+    <rect x="215" y="44" width="178" height="48" rx="6" fill="#2f3a2b"/>
+    <text x="304" y="64" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Each shoreline is</text><text x="304" y="83" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">one contour line</text>
   </g>
   <text x="40" y="258" font-size="13" fill="#2f3a2b" text-anchor="start">lines close</text><text x="330" y="270" font-size="13" fill="#2f3a2b" text-anchor="middle">lines far apart</text>
 </svg>

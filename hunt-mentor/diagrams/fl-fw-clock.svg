@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-label="A hunt day timeline from 5:30 in the morning to 7 in the evening: breakfast, a snack about every 2 to 3 hours, lunch, and supper. Times are an example.">
+  <rect x="0" y="0" width="400" height="290" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A hunt day: eat little and often</text>
+<rect x="20" y="130" width="360" height="14" rx="7" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="20.0" cy="137" r="11" fill="#e8590c" stroke="#ffffff" stroke-width="2"/>
+<text x="20.0" y="110" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="start">Breakfast</text>
+<text x="20.0" y="92" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">5:30</text>
+<circle cx="92.0" cy="137" r="11" fill="#2f3a2b" stroke="#ffffff" stroke-width="2"/>
+<text x="92.0" y="176" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Snack</text>
+<text x="92.0" y="194" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">8:00</text>
+<circle cx="156.8" cy="137" r="11" fill="#2f3a2b" stroke="#ffffff" stroke-width="2"/>
+<text x="156.8" y="110" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Snack</text>
+<text x="156.8" y="92" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">10:30</text>
+<circle cx="221.60000000000002" cy="137" r="11" fill="#e8590c" stroke="#ffffff" stroke-width="2"/>
+<text x="221.60000000000002" y="176" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Lunch</text>
+<text x="221.60000000000002" y="194" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">12:30</text>
+<circle cx="286.4" cy="137" r="11" fill="#2f3a2b" stroke="#ffffff" stroke-width="2"/>
+<text x="286.4" y="110" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Snack</text>
+<text x="286.4" y="92" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">15:00</text>
+<circle cx="380.0" cy="137" r="11" fill="#e8590c" stroke="#ffffff" stroke-width="2"/>
+<text x="380.0" y="176" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">Supper</text>
+<text x="380.0" y="194" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="end">19:00</text>
+<rect x="20" y="220" width="360" height="50" rx="10" fill="#2f3a2b"/><text x="200" y="252" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Something every 2 to 3 hours (Tip)</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Sketch of a saddle in the Hunt Map 3D view. A ridge has two tops with a dip between them. A dotted game trail climbs from the front, crosses the ridge at the low point marked orange, and drops over the far side.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Saddle in 3D</text><rect x="0" y="36" width="400" height="70" fill="#e3ecf3"/><text x="388" y="24" font-size="13" fill="#2f3a2b" text-anchor="end">Hunt Map 3D view (sketch)</text>
+  <path d="M0 150 L80 70 L150 92 L200 128 L250 92 L320 66 L400 140 L400 268 L0 268 Z" fill="#e9edd9"/>
+  <path d="M200 128 L250 92 L320 66 L400 140 L400 268 L210 268 Z" fill="#a9b68e" opacity=".7"/>
+  <path d="M0 150 L80 70 L150 92 L200 128 L250 92 L320 66 L400 140" stroke="#2f3a2b" stroke-width="3" fill="none"/>
+  <path d="M20 214 Q 200 150 380 210" fill="none" stroke="#8b5a2b" stroke-width="1.6"/><path d="M10 252 Q 200 196 390 248" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+  <path d="M200 268 C 196 220, 206 170, 200 128 C 196 110, 204 96, 200 80" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="3 6" fill="none"/>
+  <circle cx="200" cy="128" r="10" fill="#e8590c"/>
+  <rect x="177" y="140" width="217" height="24" rx="6" fill="#e8590c"/><text x="285.5" y="157" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Saddle: the low crossing</text><text x="80" y="62" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">top</text><text x="320" y="58" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">top</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Trails cross the ridge at the dip</text>
+</svg>

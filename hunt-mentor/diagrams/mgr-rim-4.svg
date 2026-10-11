@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-label="Rimfire step 4. A large grouse with a crosshair on the head and upper neck, the aim point. The breast is shaded red: that is the meat, do not aim there. Tip: keep head shots inside 25 metres, 27 yards." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="290" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">4. Aim at the head or upper neck</text>
+<g transform="translate(200 175) scale(3.0 3.0)"><polygon points="-20,-6 -38,-20 -48,-12 -52,0 -48,8 -20,8" fill="#8b5a2b"/><path d="M-40 -18 Q-50 -10 -48 6" fill="none" stroke="#23261f" stroke-width="3"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#c9a77f"/><circle cx="21" cy="-14" r="8" fill="#c9a77f"/><polygon points="16,-20 20,-28 25,-20" fill="#c9a77f"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<circle cx="262" cy="130" r="30" fill="none" stroke="#2f3a2b" stroke-width="4"/>
+<line x1="262" y1="94" x2="262" y2="166" stroke="#23261f" stroke-width="2"/><line x1="226" y1="130" x2="298" y2="130" stroke="#23261f" stroke-width="2"/>
+<ellipse cx="200" cy="185" rx="60" ry="26" fill="#c23b22" opacity=".35"/>
+<text x="320" y="70" font-size="16" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Aim here</text>
+<text x="140" y="262" font-size="15" fill="#c23b22" text-anchor="middle" font-weight="bold">Breast = the meat. Not here.</text>
+<text x="395" y="260" font-size="14" fill="#23261f" text-anchor="end">Inside 25 m</text>
+<text x="395" y="278" font-size="14" fill="#23261f" text-anchor="end">(27 yd), Tip</text>
+</svg>

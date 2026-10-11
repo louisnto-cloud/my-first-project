@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 2: Closures, No Shooting, 100 m. Maps C7, C11, C12, C17 near your base.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Closures, No Shooting, 100 m</text>
+<rect x="80" y="70" width="240" height="150" fill="#dfe6d3" stroke="#8a9a6b"/><circle cx="250" cy="120" r="40" fill="#c0392b" opacity=".5"/><text x="250" y="125" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">no shoot</text><g transform="translate(130 170) scale(1.4)"><rect x="-10" y="-10" width="20" height="14" fill="#6b4f35"/><polygon points="-13,-10 0,-21 13,-10" fill="#e8590c"/></g><circle cx="130" cy="166" r="34" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="5 4"/><text x="130" y="214" font-family="sans-serif" font-size="13" font-weight="bold" fill="#c0392b" text-anchor="middle">100 m</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Maps C7, C11, C12, C17 near your base.</text>
+</svg>

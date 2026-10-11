@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 426" role="img" aria-label="Resource road driving rules: headlights and tail lights on, never over 80 km per hour if no limit is posted, yield to industrial traffic, dust means traffic, drive on the right, do not pass industrial vehicles unless the driver signals.">
+  <rect x="0" y="0" width="400" height="426" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Drive it like this (BC Forest Safety Council)</text>
+<rect x="10.0" y="50" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="88.5" cy="87.4" r="10" fill="#f6c343"/><circle cx="116.5" cy="87.4" r="10" fill="#f6c343"/>
+<text x="102.5" y="132" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Lights on</text>
+<text x="102.5" y="151" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">head and tail</text>
+<rect x="205.0" y="50" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="297.5" cy="87.4" r="22" fill="#ffffff" stroke="#b3261e" stroke-width="4"/><text x="297.5" y="94.4" font-family="sans-serif" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">80</text>
+<text x="297.5" y="132" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">80 max</text>
+<text x="297.5" y="151" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">if not posted</text>
+<rect x="10.0" y="172" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="71.0" y="207.20000000000002" width="42.0" height="14.0" rx="3" fill="#6b4f35"/><rect x="110.9" y="198.8" width="21.0" height="22.4" rx="4" fill="#6b4f35"/><rect x="115.1" y="201.60000000000002" width="12.6" height="8.399999999999999" rx="2" fill="#cfe0ef"/><circle cx="82.9" cy="222.6" r="6.3" fill="#23261f"/><circle cx="120.7" cy="222.6" r="6.3" fill="#23261f"/><circle cx="82.9" cy="222.6" r="2.8" fill="#c9b79c"/><circle cx="120.7" cy="222.6" r="2.8" fill="#c9b79c"/>
+<text x="102.5" y="254" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Yield</text>
+<text x="102.5" y="273" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">to industrial traffic</text>
+<rect x="205.0" y="172" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="287.5" cy="209.4" r="14" fill="#c9b79c"/><circle cx="305.5" cy="203.4" r="16" fill="#c9b79c"/><circle cx="317.5" cy="213.4" r="12" fill="#c9b79c"/>
+<text x="297.5" y="254" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dust</text>
+<text x="297.5" y="273" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">means traffic</text>
+<rect x="10.0" y="294" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<line x1="82.5" y1="341.4" x2="122.5" y2="341.4" stroke="#2f3a2b" stroke-width="4" stroke-linecap="round"/><polygon points="122.5,341.4 113.5,345.7 113.5,337.1" fill="#2f3a2b"/><line x1="72.5" y1="325.4" x2="132.5" y2="325.4" stroke="#23261f" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 4"/>
+<text x="102.5" y="376" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Keep right</text>
+<text x="102.5" y="395" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">every corner</text>
+<rect x="205.0" y="294" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M286.7 320.59999999999997 l21.599999999999998 21.599999999999998 M308.3 320.59999999999997 l-21.599999999999998 21.599999999999998" fill="none" stroke="#b3261e" stroke-width="6.0" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="297.5" y="376" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">No passing</text>
+<text x="297.5" y="395" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">unless waved on</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Bar chart. Louisiana female mallards moved 3.1 to 15 kilometres between day and night sites. Satellite marked mallards in Missouri moved about 3 kilometres a day on average, most under 13 kilometres.">
+<rect x="0" y="0" width="400" height="250" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How far ducks commute each day</text>
+<text x="14" y="64" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Louisiana mallards, day to night sites</text>
+<rect x="14" y="70" width="349" height="20" rx="4" fill="#e8590c"/>
+<text x="356.75" y="85" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="end">3.1 to 15 km</text>
+<text x="14" y="116" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Missouri mallards, average local move</text>
+<rect x="14" y="122" width="74" height="20" rx="4" fill="#8a9a6b"/>
+<text x="94.4" y="137" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">about 3 km (2 mi)</text>
+<text x="14" y="168" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Missouri mallards, most moves under</text>
+<rect x="14" y="174" width="300" height="20" rx="4" fill="#2f3a2b"/>
+<text x="319.925" y="189" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">13 km (8 mi)</text>
+<text x="14" y="226" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Link and others 2011 (85%); Ducks Unlimited</text>
+<text x="14" y="242" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">satellite tracking (65%).</text>
+</svg>

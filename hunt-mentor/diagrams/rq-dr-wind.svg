@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A slope with a feeding bench. A north wind blows down from the ridge, while the morning thermal rises up the slope. Two possible routes to a seat: A from straight below, B from the side across the slope. The answer is in the More section.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Stop 5: which way in to the seat?</text>
+<path d="M0 300 L0 160 Q 200 90 400 140 L400 300 Z" fill="#dfe6d3" stroke="#8a9a6b"/>
+<rect x="170" y="110" width="60" height="20" rx="4" fill="#cdd8b8"/><text x="200" y="104" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2f3a2b" text-anchor="middle">bench, deer feed</text>
+<g><line x1="200" y1="50" x2="200" y2="80" stroke="#4a7fb0" stroke-width="4" stroke-linecap="round"/><polygon points="200.0,80.0 195.7,71.0 204.3,71.0" fill="#4a7fb0"/></g><text x="212" y="62" font-family="sans-serif" font-size="13" font-weight="bold" fill="#4a7fb0" text-anchor="start">north wind, from the ridge</text>
+<g><line x1="120" y1="250" x2="160" y2="200" stroke="#4a7fb0" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/><polygon points="160.0,200.0 158.2,207.8 152.8,203.5" fill="#4a7fb0"/></g><text x="40" y="270" font-family="sans-serif" font-size="12" font-weight="bold" fill="#4a7fb0" text-anchor="start">morning thermal: up</text>
+<path d="M330 290 Q 320 220 260 170" stroke="#e8590c" stroke-width="3" fill="none" stroke-dasharray="7 5"/><text x="330" y="250" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e8590c" text-anchor="middle">A: from below</text>
+<path d="M60 290 Q 60 200 150 150" stroke="#2f3a2b" stroke-width="3" fill="none" stroke-dasharray="7 5"/><text x="70" y="190" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2f3a2b" text-anchor="middle">B: side, across</text>
+</svg>

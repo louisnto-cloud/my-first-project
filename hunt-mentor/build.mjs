@@ -371,7 +371,8 @@ function build() {
     bases: readJSON('data/bases.json'),
     field: readJSON('data/field.json'),
     flashcards: [
-      ...readJSON('data/flashcards.json').map((c) => {
+      // extra decks (data/flashcards-<name>.json) ship only once listed in data/published.json "flashcards" (same review gate as lessons)
+      ...['data/flashcards.json', ...((readJSON('data/published.json').flashcards) || []).map((n) => `data/flashcards-${n}.json`)].flatMap((f) => readJSON(f)).map((c) => {
         const f = c.diagram && path.join(ROOT, 'diagrams', `${c.diagram}.svg`);
         return { ...c, diagram: f && fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : undefined };
       }),

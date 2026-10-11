@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-label="A truck cooler. Ice on top, raw meat sealed at the bottom, ready to eat food kept apart. Cooler in the shade, drain the melt water. Tip.">
+  <rect x="0" y="0" width="400" height="290" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Truck cooler: keep it cold, keep it apart</text>
+<rect x="40" y="60" width="320" height="180" rx="14" fill="#e6eef5" stroke="#23261f" stroke-width="3"/>
+<rect x="60" y="80" width="120" height="70" rx="8" fill="#cfe0ef" stroke="#4a7fb0" stroke-width="2"/><text x="120" y="120" font-family="sans-serif" font-size="16" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Ice</text>
+<rect x="60" y="160" width="120" height="64" rx="8" fill="#f6e3dc" stroke="#b3261e" stroke-width="2"/><text x="120" y="190" font-family="sans-serif" font-size="15" font-weight="bold" fill="#b3261e" text-anchor="middle">Raw meat</text><text x="120" y="210" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">sealed, bottom</text>
+<rect x="200" y="80" width="140" height="144" rx="8" fill="#f2f6e8" stroke="#8a9a6b" stroke-width="2"/><text x="270" y="140" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Ready food</text><text x="270" y="162" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">on top, apart</text>
+<text x="200" y="270" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">In the shade. Drain melt water (Tip)</text>
+</svg>
