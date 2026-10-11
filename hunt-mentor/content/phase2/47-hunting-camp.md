@@ -171,6 +171,7 @@ fl-hang-4 | Tie off on a second tree.
 - During a Category 1 prohibition, only CSA (Canadian Standards Association) or ULC (Underwriters Laboratories of Canada) approved stoves using briquettes, liquid or gas fuel, with flames no taller than 15 cm, and these may also be banned in extreme conditions (95%).
 - Illegal open fire on Crown land: report to RAPP (Report All Poachers and Polluters) 1 877 952 7277 (95%).
 - Bans change fast in a dry fall. Check BC Wildfire Service the day you leave (Tip, see [Bush safety](#/s/bush-safety/0)).
+- Lighting a fire in rain and snow: [Fire in wet weather](#/s/fire-wet-weather/0).
 ```
 
 ## Sleeping bag ratings
