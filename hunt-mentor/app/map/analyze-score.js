@@ -243,6 +243,8 @@ export function analyse(input) {
     const p = blocks[id] || {}, s = sun && sun[id], raw = new Float32Array(n), lit = new Uint8Array(n);
     const used = { elev: !!band, slope: Array.isArray(p.slope_deg), aspect: !!p.aspect, sun: (p.sun === 'sun' || p.sun === 'shade') && !!s,
       water: Array.isArray(p.water_m) && !!input.water, road: p.road_m > 0 && !!input.road, terrain: !!p.terrain && p.terrain !== 'any' };
+    // a factor the model marks with certainty 0 (no source) stays neutral
+    if (p.factors) for (const f of ['slope', 'aspect', 'sun', 'water', 'road', 'terrain']) if (p.factors[f] === 0) used[f] = false;
     for (let k = 0; k < n; k++) {
       const e = elev[k];
       if (!(e === e) || !(T.slope[k] === T.slope[k])) { raw[k] = NaN; continue; }

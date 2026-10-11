@@ -64,7 +64,10 @@ function checkBlock(w, b, partial) {
     for (const k of FACTORS) if (!isCert(b.factors[k])) err(w, `factors.${k} must be 0..100`);
     const gaps = FACTORS.filter((k) => b.factors[k] === 0);
     if (has('gaps') && JSON.stringify(gaps) !== JSON.stringify(b.gaps)) err(w, `gaps ${JSON.stringify(b.gaps)} do not match factors with cert 0 ${JSON.stringify(gaps)}`);
-    if (gaps.length && !/no data/.test(b.note || '')) err(w, 'a block with cert 0 factors needs a note saying "no data"');
+    if (gaps.length && !gaps.every((g) => (b.note || '').includes(g))) err(w, 'a block with cert 0 factors must name them in note');
+    // The UI treats a block whose note says "no data" as unsupported, so only a cert 0 block may say it.
+    if (b.cert > 0 && /no data/i.test(b.note || '')) err(w, 'note says "no data" but block cert > 0');
+    if (b.cert === 0 && !/no data/i.test(b.note || '')) err(w, 'block cert 0 needs note "no data"');
     // A factor with no data must hold the neutral value.
     const neutral = {
       aspect: () => ASPECTS.every((k) => b.aspect[k] === 1),

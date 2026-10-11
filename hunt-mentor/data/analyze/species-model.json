@@ -200,7 +200,7 @@
      "gaps": [
       "water"
      ],
-     "note": "no data: water (neutral)",
+     "note": "factors without a source (neutral, cert 0): water",
      "factor_notes": {
       "aspect": "Drifts uphill or into cover to bed (85%); warm days beds on north facing timber (80%).",
       "terrain": "Lore: bucks bed in the top third of a slope (60%, not a rule).",
@@ -244,7 +244,7 @@
      "gaps": [
       "water"
      ],
-     "note": "no data: water (neutral)",
+     "note": "factors without a source (neutral, cert 0): water",
      "factor_notes": {
       "aspect": "Warm day: north facing timber, benches, draws, shade (80%).",
       "sun": "Warm day beds in shade (80%).",
@@ -288,7 +288,7 @@
      "gaps": [
       "water"
      ],
-     "note": "no data: water (neutral)",
+     "note": "factors without a source (neutral, cert 0): water",
      "factor_notes": {
       "aspect": "Late afternoon: rises and browses near the bed (80%), so still near the bed aspect.",
       "terrain": "Tip: benches near beds.",
@@ -334,7 +334,7 @@
      "gaps": [
       "sun"
      ],
-     "note": "no data: sun (neutral)",
+     "note": "factors without a source (neutral, cert 0): sun",
      "factor_notes": {
       "aspect": "South and west faces October to winter (85%).",
       "water": "Dry fall: near water at dusk or dawn (Tip); within about 1 km of water preferred (65%).",
@@ -373,7 +373,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, terrain",
        "factor_notes": {
         "aspect": "Cold day: sunny south and west slopes out of the wind (80%); winter range on warm aspects (85%).",
         "sun": "Cold day: sun (80%).",
@@ -408,7 +408,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, terrain",
        "factor_notes": {
         "aspect": "Cold day: sunny south and west slopes out of the wind (80%); winter range on warm aspects (85%).",
         "terrain": "no data",
@@ -454,7 +454,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)"
+       "note": "factors without a source (neutral, cert 0): sun"
       }
      },
      "note": "Cold months: beds on sunny south and west slopes (80%); winter range slope 10 to 45% (85%)."
@@ -488,7 +488,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, terrain",
        "factor_notes": {
         "aspect": "Cold day: sunny south and west slopes out of the wind (80%); winter range on warm aspects (85%).",
         "sun": "Cold day: sun (80%).",
@@ -523,7 +523,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, terrain",
        "factor_notes": {
         "aspect": "Cold day: sunny south and west slopes out of the wind (80%); winter range on warm aspects (85%).",
         "terrain": "no data",
@@ -569,7 +569,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)"
+       "note": "factors without a source (neutral, cert 0): sun"
       }
      },
      "note": "Cold months: beds on sunny south and west slopes (80%); winter range slope 10 to 45% (85%)."
@@ -603,7 +603,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, terrain",
        "factor_notes": {
         "aspect": "Cold day: sunny south and west slopes out of the wind (80%); winter range on warm aspects (85%).",
         "sun": "Cold day: sun (80%).",
@@ -638,7 +638,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, terrain",
        "factor_notes": {
         "aspect": "Cold day: sunny south and west slopes out of the wind (80%); winter range on warm aspects (85%).",
         "terrain": "no data",
@@ -684,7 +684,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)"
+       "note": "factors without a source (neutral, cert 0): sun"
       }
      },
      "note": "Cold months: beds on sunny south and west slopes (80%); winter range slope 10 to 45% (85%)."
@@ -752,7 +752,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)"
+       "note": "factors without a source (neutral, cert 0): sun"
       }
      },
      "note": "April green up on low south slopes (90%)."
@@ -788,7 +788,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, terrain",
        "factor_notes": {
         "aspect": "Cold day: sunny south and west slopes out of the wind (80%); winter range on warm aspects (85%).",
         "sun": "Cold day: sun (80%).",
@@ -823,7 +823,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, terrain",
        "factor_notes": {
         "aspect": "Cold day: sunny south and west slopes out of the wind (80%); winter range on warm aspects (85%).",
         "terrain": "no data",
@@ -869,7 +869,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)"
+       "note": "factors without a source (neutral, cert 0): sun"
       }
      },
      "note": "Cold months: beds on sunny south and west slopes (80%); winter range slope 10 to 45% (85%). Rut mid November to mid December (80%): bucks move all day near does (65 to 75%)."
@@ -904,7 +904,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, terrain",
        "factor_notes": {
         "aspect": "Cold day: sunny south and west slopes out of the wind (80%); winter range on warm aspects (85%).",
         "sun": "Cold day: sun (80%).",
@@ -939,7 +939,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, terrain",
        "factor_notes": {
         "aspect": "Cold day: sunny south and west slopes out of the wind (80%); winter range on warm aspects (85%).",
         "terrain": "no data",
@@ -985,7 +985,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)"
+       "note": "factors without a source (neutral, cert 0): sun"
       }
      },
      "note": "Cold months: beds on sunny south and west slopes (80%); winter range slope 10 to 45% (85%). Post rut: bucks hide and rest (90%)."
@@ -1230,7 +1230,7 @@
       "sun",
       "water"
      ],
-     "note": "no data: aspect, sun, water (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water",
      "factor_notes": {
       "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
       "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1276,7 +1276,7 @@
       "sun",
       "water"
      ],
-     "note": "no data: aspect, sun, water (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water",
      "factor_notes": {
       "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
       "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1322,7 +1322,7 @@
       "sun",
       "water"
      ],
-     "note": "no data: aspect, sun, water (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water",
      "factor_notes": {
       "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
       "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1368,7 +1368,7 @@
       "sun",
       "water"
      ],
-     "note": "no data: aspect, sun, water (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water",
      "factor_notes": {
       "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
       "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1414,7 +1414,7 @@
       "sun",
       "water"
      ],
-     "note": "no data: aspect, sun, water (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water",
      "factor_notes": {
       "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
       "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1449,7 +1449,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1481,7 +1481,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1513,7 +1513,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1545,7 +1545,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1580,7 +1580,7 @@
        "gaps": [
         "water"
        ],
-       "note": "no data: water (neutral)",
+       "note": "factors without a source (neutral, cert 0): water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1618,7 +1618,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1650,7 +1650,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1682,7 +1682,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1714,7 +1714,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1749,7 +1749,7 @@
        "gaps": [
         "water"
        ],
-       "note": "no data: water (neutral)",
+       "note": "factors without a source (neutral, cert 0): water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1787,7 +1787,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1819,7 +1819,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1851,7 +1851,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1883,7 +1883,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1918,7 +1918,7 @@
        "gaps": [
         "water"
        ],
-       "note": "no data: water (neutral)",
+       "note": "factors without a source (neutral, cert 0): water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1956,7 +1956,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -1988,7 +1988,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2020,7 +2020,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2052,7 +2052,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2084,7 +2084,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2121,7 +2121,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2153,7 +2153,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2185,7 +2185,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2217,7 +2217,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2249,7 +2249,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2286,7 +2286,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2318,7 +2318,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2350,7 +2350,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2382,7 +2382,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2414,7 +2414,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2451,7 +2451,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2483,7 +2483,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2515,7 +2515,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2547,7 +2547,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2579,7 +2579,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2609,7 +2609,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: aspect, sun, water (neutral)"
+       "note": "factors without a source (neutral, cert 0): aspect, sun, water"
       }
      },
      "note": "Rut peak mid November (80%): bucks move at all hours (70%)."
@@ -2639,7 +2639,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2671,7 +2671,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2703,7 +2703,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2735,7 +2735,7 @@
         "sun",
         "water"
        ],
-       "note": "no data: sun, water (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -2770,7 +2770,7 @@
        "gaps": [
         "water"
        ],
-       "note": "no data: water (neutral)",
+       "note": "factors without a source (neutral, cert 0): water",
        "factor_notes": {
         "slope": "Lower, flatter, brushier ground than mule deer (85%, Staudenmaier 2021); encoded as the app flat class (under 8 deg) with a shoulder to 15 deg (model choice).",
         "terrain": "Valley bottoms with farmland and river brush (85%, BC account).",
@@ -3017,7 +3017,7 @@
       "aspect",
       "sun"
      ],
-     "note": "no data: aspect, sun (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun",
      "factor_notes": {
       "water": "Wintering moose stayed mostly within 100 m of the forest and wetland edge and almost never past 200 m (Baker 1990, UBC thesis, West Chilcotin, search preview, 70%); wetlands are kitchens in every season (85%). Applied to fall: my reading.",
       "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3065,7 +3065,7 @@
       "aspect",
       "sun"
      ],
-     "note": "no data: aspect, sun (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun",
      "factor_notes": {
       "water": "Wintering moose stayed mostly within 100 m of the forest and wetland edge and almost never past 200 m (Baker 1990, UBC thesis, West Chilcotin, search preview, 70%); wetlands are kitchens in every season (85%). Applied to fall: my reading.",
       "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3112,7 +3112,7 @@
      "gaps": [
       "aspect"
      ],
-     "note": "no data: aspect (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect",
      "factor_notes": {
       "water": "Wintering moose stayed mostly within 100 m of the forest and wetland edge and almost never past 200 m (Baker 1990, UBC thesis, West Chilcotin, search preview, 70%); wetlands are kitchens in every season (85%). Applied to fall: my reading.",
       "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3161,7 +3161,7 @@
       "aspect",
       "sun"
      ],
-     "note": "no data: aspect, sun (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun",
      "factor_notes": {
       "water": "Wintering moose stayed mostly within 100 m of the forest and wetland edge and almost never past 200 m (Baker 1990, UBC thesis, West Chilcotin, search preview, 70%); wetlands are kitchens in every season (85%). Applied to fall: my reading.",
       "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3209,7 +3209,7 @@
       "aspect",
       "sun"
      ],
-     "note": "no data: aspect, sun (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun",
      "factor_notes": {
       "water": "Wintering moose stayed mostly within 100 m of the forest and wetland edge and almost never past 200 m (Baker 1990, UBC thesis, West Chilcotin, search preview, 70%); wetlands are kitchens in every season (85%). Applied to fall: my reading.",
       "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3243,7 +3243,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3274,7 +3274,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3306,7 +3306,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3338,7 +3338,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3369,7 +3369,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3405,7 +3405,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3436,7 +3436,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3468,7 +3468,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3500,7 +3500,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3531,7 +3531,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3567,7 +3567,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3598,7 +3598,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3630,7 +3630,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3662,7 +3662,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3693,7 +3693,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3731,7 +3731,7 @@
        "gaps": [
         "aspect"
        ],
-       "note": "no data: aspect (neutral)"
+       "note": "factors without a source (neutral, cert 0): aspect"
       }
      },
      "note": "Summer: lake shores, swamps and beaver ponds (90%)."
@@ -3762,7 +3762,7 @@
        "gaps": [
         "aspect"
        ],
-       "note": "no data: aspect (neutral)"
+       "note": "factors without a source (neutral, cert 0): aspect"
       }
      },
      "note": "Summer: lake shores, swamps and beaver ponds (90%)."
@@ -3793,7 +3793,7 @@
        "gaps": [
         "aspect"
        ],
-       "note": "no data: aspect (neutral)"
+       "note": "factors without a source (neutral, cert 0): aspect"
       }
      },
      "note": "Summer: lake shores, swamps and beaver ponds (90%)."
@@ -3815,7 +3815,7 @@
        "gaps": [
         "aspect"
        ],
-       "note": "no data: aspect (neutral)"
+       "note": "factors without a source (neutral, cert 0): aspect"
       }
      },
      "note": "Rut late September to early October (90%)."
@@ -3837,7 +3837,7 @@
        "gaps": [
         "aspect"
        ],
-       "note": "no data: aspect (neutral)"
+       "note": "factors without a source (neutral, cert 0): aspect"
       }
      },
      "note": "Rut late September to early October (90%)."
@@ -3866,7 +3866,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3897,7 +3897,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3929,7 +3929,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3961,7 +3961,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -3992,7 +3992,7 @@
        "gaps": [
         "sun"
        ],
-       "note": "no data: sun (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun",
        "factor_notes": {
         "water": "Winter: within 100 m of the forest and wetland edge, rarely past 200 m (70%, Baker 1990).",
         "slope": "Tip: moose favour gentle, wet ground: benches, basins, valley floors. Encoded as the app flat class.",
@@ -4243,7 +4243,7 @@
       "water",
       "terrain"
      ],
-     "note": "no data: aspect, sun, water, terrain (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water, terrain",
      "factor_notes": {
       "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
       "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%)."
@@ -4288,7 +4288,7 @@
       "water",
       "terrain"
      ],
-     "note": "no data: aspect, sun, water, terrain (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water, terrain",
      "factor_notes": {
       "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
       "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%)."
@@ -4331,7 +4331,7 @@
       "water",
       "terrain"
      ],
-     "note": "no data: water, terrain (neutral)",
+     "note": "factors without a source (neutral, cert 0): water, terrain",
      "factor_notes": {
       "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
       "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4376,7 +4376,7 @@
       "water",
       "terrain"
      ],
-     "note": "no data: water, terrain (neutral)",
+     "note": "factors without a source (neutral, cert 0): water, terrain",
      "factor_notes": {
       "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
       "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4423,7 +4423,7 @@
       "water",
       "terrain"
      ],
-     "note": "no data: aspect, sun, water, terrain (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water, terrain",
      "factor_notes": {
       "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
       "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%)."
@@ -4457,7 +4457,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4488,7 +4488,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4520,7 +4520,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4553,7 +4553,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4585,7 +4585,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4621,7 +4621,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4652,7 +4652,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4684,7 +4684,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4717,7 +4717,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4749,7 +4749,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4785,7 +4785,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4816,7 +4816,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4848,7 +4848,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4881,7 +4881,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4913,7 +4913,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4949,7 +4949,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -4980,7 +4980,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -5012,7 +5012,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -5045,7 +5045,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -5077,7 +5077,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -5105,7 +5105,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: water, terrain (neutral)"
+       "note": "factors without a source (neutral, cert 0): water, terrain"
       }
      },
      "note": "Rut: most cows bred mid to late September (90%)."
@@ -5136,7 +5136,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -5167,7 +5167,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -5199,7 +5199,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -5232,7 +5232,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -5264,7 +5264,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -5300,7 +5300,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -5331,7 +5331,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -5363,7 +5363,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -5396,7 +5396,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -5428,7 +5428,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "slope": "Elk use slopes up to about 30 to 40%, most often 15 to 30% (8.5 to 16.7 deg); use drops sharply past 40 to 50% (27 deg) (80%, BC habitat model).",
         "road": "Oregon elk used habitat within 500 m of open roads half as much (60%, search preview); hunted elk become nocturnal (90%).",
@@ -5654,7 +5654,7 @@
       "sun",
       "water"
      ],
-     "note": "no data: aspect, slope, sun, water (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, slope, sun, water",
      "factor_notes": {
       "terrain": "Tip: near Heffley Creek bears hold on timbered slopes, creek draws and cutblocks above the dry valley (my reading of the BC account).",
       "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%)."
@@ -5699,7 +5699,7 @@
       "sun",
       "water"
      ],
-     "note": "no data: aspect, slope, sun, water (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, slope, sun, water",
      "factor_notes": {
       "terrain": "Tip: near Heffley Creek bears hold on timbered slopes, creek draws and cutblocks above the dry valley (my reading of the BC account).",
       "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%)."
@@ -5743,7 +5743,7 @@
       "slope",
       "water"
      ],
-     "note": "no data: aspect, slope, water (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, slope, water",
      "factor_notes": {
       "terrain": "Tip: near Heffley Creek bears hold on timbered slopes, creek draws and cutblocks above the dry valley (my reading of the BC account).",
       "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%).",
@@ -5789,7 +5789,7 @@
       "sun",
       "water"
      ],
-     "note": "no data: aspect, slope, sun, water (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, slope, sun, water",
      "factor_notes": {
       "terrain": "Tip: near Heffley Creek bears hold on timbered slopes, creek draws and cutblocks above the dry valley (my reading of the BC account).",
       "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%)."
@@ -5834,7 +5834,7 @@
       "sun",
       "water"
      ],
-     "note": "no data: aspect, slope, sun, water (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, slope, sun, water",
      "factor_notes": {
       "terrain": "Tip: near Heffley Creek bears hold on timbered slopes, creek draws and cutblocks above the dry valley (my reading of the BC account).",
       "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%)."
@@ -5883,7 +5883,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "terrain": "no data",
         "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%).",
@@ -5922,7 +5922,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "terrain": "no data",
         "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%).",
@@ -5961,7 +5961,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "terrain": "no data",
         "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%).",
@@ -6000,7 +6000,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "terrain": "no data",
         "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%).",
@@ -6044,7 +6044,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "terrain": "no data",
         "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%).",
@@ -6083,7 +6083,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "terrain": "no data",
         "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%).",
@@ -6122,7 +6122,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "terrain": "no data",
         "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%).",
@@ -6161,7 +6161,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "terrain": "no data",
         "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%).",
@@ -6205,7 +6205,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "terrain": "no data",
         "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%).",
@@ -6244,7 +6244,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "terrain": "no data",
         "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%).",
@@ -6283,7 +6283,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "terrain": "no data",
         "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%).",
@@ -6322,7 +6322,7 @@
         "water",
         "terrain"
        ],
-       "note": "no data: sun, water, terrain (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, water, terrain",
        "factor_notes": {
         "terrain": "no data",
         "road": "Bears near people feed more at night (75%, WildSafeBC); hunters cluster within 0.5 km of roads (60%).",
@@ -6553,7 +6553,7 @@
       "water",
       "road"
      ],
-     "note": "no data: slope, water, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): slope, water, road",
      "factor_notes": {
       "aspect": "Tip: south and east faces warm first; aspen benches often sit there in the Interior.",
       "sun": "Tip: morning sun on a slope can bring birds out to feed.",
@@ -6600,7 +6600,7 @@
       "water",
       "road"
      ],
-     "note": "no data: slope, water, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): slope, water, road",
      "factor_notes": {
       "aspect": "Tip: south and east faces warm first; aspen benches often sit there in the Interior.",
       "sun": "Tip: morning sun on a slope can bring birds out to feed.",
@@ -6649,7 +6649,7 @@
       "water",
       "road"
      ],
-     "note": "no data: aspect, slope, sun, water, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, slope, sun, water, road",
      "factor_notes": {
       "aspect": "Tip: south and east faces warm first; aspen benches often sit there in the Interior.",
       "sun": "Tip: morning sun on a slope can bring birds out to feed.",
@@ -6698,7 +6698,7 @@
       "water",
       "road"
      ],
-     "note": "no data: aspect, slope, sun, water, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, slope, sun, water, road",
      "factor_notes": {
       "aspect": "Tip: south and east faces warm first; aspen benches often sit there in the Interior.",
       "sun": "Tip: morning sun on a slope can bring birds out to feed.",
@@ -6747,7 +6747,7 @@
       "water",
       "road"
      ],
-     "note": "no data: aspect, slope, sun, water, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, slope, sun, water, road",
      "factor_notes": {
       "aspect": "Tip: south and east faces warm first; aspen benches often sit there in the Interior.",
       "sun": "Tip: morning sun on a slope can bring birds out to feed.",
@@ -6779,7 +6779,7 @@
         "water",
         "road"
        ],
-       "note": "no data: aspect, slope, sun, water, road (neutral)"
+       "note": "factors without a source (neutral, cert 0): aspect, slope, sun, water, road"
       }
      },
      "note": "Hard crust or thin snow pushes birds into thick conifers (85%)."
@@ -6805,7 +6805,7 @@
         "water",
         "road"
        ],
-       "note": "no data: aspect, slope, sun, water, road (neutral)"
+       "note": "factors without a source (neutral, cert 0): aspect, slope, sun, water, road"
       }
      },
      "note": "Hard crust or thin snow pushes birds into thick conifers (85%)."
@@ -6829,7 +6829,7 @@
         "water",
         "road"
        ],
-       "note": "no data: aspect, slope, sun, water, road (neutral)"
+       "note": "factors without a source (neutral, cert 0): aspect, slope, sun, water, road"
       }
      },
      "note": "Fall: dusky and sooty grouse move uphill into dense conifers (70 to 75%)."
@@ -6853,7 +6853,7 @@
         "water",
         "road"
        ],
-       "note": "no data: aspect, slope, sun, water, road (neutral)"
+       "note": "factors without a source (neutral, cert 0): aspect, slope, sun, water, road"
       }
      },
      "note": "Fall: dusky and sooty grouse move uphill into dense conifers (70 to 75%)."
@@ -6879,7 +6879,7 @@
         "water",
         "road"
        ],
-       "note": "no data: aspect, slope, sun, water, road (neutral)"
+       "note": "factors without a source (neutral, cert 0): aspect, slope, sun, water, road"
       }
      },
      "note": "Hard crust or thin snow pushes birds into thick conifers (85%)."
@@ -7093,7 +7093,7 @@
       "water",
       "road"
      ],
-     "note": "no data: water, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): water, road",
      "factor_notes": {
       "slope": "Valley floor and first benches (85%); encoded as the app flat class with a shoulder to 15 deg (model choice, 60%).",
       "terrain": "Valley floor and first benches, brush beside food (85%).",
@@ -7139,7 +7139,7 @@
       "water",
       "road"
      ],
-     "note": "no data: water, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): water, road",
      "factor_notes": {
       "slope": "Valley floor and first benches (85%); encoded as the app flat class with a shoulder to 15 deg (model choice, 60%).",
       "terrain": "Valley floor and first benches, brush beside food (85%).",
@@ -7187,7 +7187,7 @@
       "water",
       "road"
      ],
-     "note": "no data: aspect, sun, water, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water, road",
      "factor_notes": {
       "slope": "Valley floor and first benches (85%); encoded as the app flat class with a shoulder to 15 deg (model choice, 60%).",
       "terrain": "Valley floor and first benches, brush beside food (85%).",
@@ -7235,7 +7235,7 @@
       "water",
       "road"
      ],
-     "note": "no data: aspect, sun, water, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water, road",
      "factor_notes": {
       "slope": "Valley floor and first benches (85%); encoded as the app flat class with a shoulder to 15 deg (model choice, 60%).",
       "terrain": "Valley floor and first benches, brush beside food (85%).",
@@ -7283,7 +7283,7 @@
       "water",
       "road"
      ],
-     "note": "no data: aspect, sun, water, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water, road",
      "factor_notes": {
       "slope": "Valley floor and first benches (85%); encoded as the app flat class with a shoulder to 15 deg (model choice, 60%).",
       "terrain": "Valley floor and first benches, brush beside food (85%).",
@@ -7326,7 +7326,7 @@
         "water",
         "road"
        ],
-       "note": "no data: water, road (neutral)"
+       "note": "factors without a source (neutral, cert 0): water, road"
       },
       "morning": {
        "aspect": {
@@ -7358,7 +7358,7 @@
         "water",
         "road"
        ],
-       "note": "no data: water, road (neutral)"
+       "note": "factors without a source (neutral, cert 0): water, road"
       },
       "midday": {
        "aspect": {
@@ -7384,7 +7384,7 @@
         "water",
         "road"
        ],
-       "note": "no data: water, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, road",
        "factor_notes": {
         "slope": "Valley floor and first benches (85%); encoded as the app flat class with a shoulder to 15 deg (model choice, 60%).",
         "terrain": "Valley floor and first benches, brush beside food (85%).",
@@ -7417,7 +7417,7 @@
         "water",
         "road"
        ],
-       "note": "no data: water, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, road",
        "factor_notes": {
         "slope": "Valley floor and first benches (85%); encoded as the app flat class with a shoulder to 15 deg (model choice, 60%).",
         "terrain": "Valley floor and first benches, brush beside food (85%).",
@@ -7461,7 +7461,7 @@
         "water",
         "road"
        ],
-       "note": "no data: water, road (neutral)"
+       "note": "factors without a source (neutral, cert 0): water, road"
       },
       "morning": {
        "aspect": {
@@ -7493,7 +7493,7 @@
         "water",
         "road"
        ],
-       "note": "no data: water, road (neutral)"
+       "note": "factors without a source (neutral, cert 0): water, road"
       },
       "midday": {
        "aspect": {
@@ -7519,7 +7519,7 @@
         "water",
         "road"
        ],
-       "note": "no data: water, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, road",
        "factor_notes": {
         "slope": "Valley floor and first benches (85%); encoded as the app flat class with a shoulder to 15 deg (model choice, 60%).",
         "terrain": "Valley floor and first benches, brush beside food (85%).",
@@ -7552,7 +7552,7 @@
         "water",
         "road"
        ],
-       "note": "no data: water, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, road",
        "factor_notes": {
         "slope": "Valley floor and first benches (85%); encoded as the app flat class with a shoulder to 15 deg (model choice, 60%).",
         "terrain": "Valley floor and first benches, brush beside food (85%).",
@@ -7596,7 +7596,7 @@
         "water",
         "road"
        ],
-       "note": "no data: water, road (neutral)"
+       "note": "factors without a source (neutral, cert 0): water, road"
       },
       "morning": {
        "aspect": {
@@ -7628,7 +7628,7 @@
         "water",
         "road"
        ],
-       "note": "no data: water, road (neutral)"
+       "note": "factors without a source (neutral, cert 0): water, road"
       },
       "midday": {
        "aspect": {
@@ -7654,7 +7654,7 @@
         "water",
         "road"
        ],
-       "note": "no data: water, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, road",
        "factor_notes": {
         "slope": "Valley floor and first benches (85%); encoded as the app flat class with a shoulder to 15 deg (model choice, 60%).",
         "terrain": "Valley floor and first benches, brush beside food (85%).",
@@ -7687,7 +7687,7 @@
         "water",
         "road"
        ],
-       "note": "no data: water, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): water, road",
        "factor_notes": {
         "slope": "Valley floor and first benches (85%); encoded as the app flat class with a shoulder to 15 deg (model choice, 60%).",
         "terrain": "Valley floor and first benches, brush beside food (85%).",
@@ -7904,7 +7904,7 @@
       "water",
       "road"
      ],
-     "note": "no data: aspect, sun, water, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water, road",
      "factor_notes": {
       "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
       "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -7952,7 +7952,7 @@
       "sun",
       "road"
      ],
-     "note": "no data: aspect, sun, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, road",
      "factor_notes": {
       "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
       "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8000,7 +8000,7 @@
       "sun",
       "road"
      ],
-     "note": "no data: aspect, sun, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, road",
      "factor_notes": {
       "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
       "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8048,7 +8048,7 @@
       "sun",
       "road"
      ],
-     "note": "no data: aspect, sun, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, road",
      "factor_notes": {
       "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
       "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8094,7 +8094,7 @@
       "water",
       "road"
      ],
-     "note": "no data: aspect, sun, water, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water, road",
      "factor_notes": {
       "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
       "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8128,7 +8128,7 @@
         "sun",
         "road"
        ],
-       "note": "no data: sun, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, road",
        "factor_notes": {
         "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
         "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8159,7 +8159,7 @@
         "sun",
         "road"
        ],
-       "note": "no data: sun, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, road",
        "factor_notes": {
         "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
         "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8190,7 +8190,7 @@
         "sun",
         "road"
        ],
-       "note": "no data: sun, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, road",
        "factor_notes": {
         "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
         "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8226,7 +8226,7 @@
         "sun",
         "road"
        ],
-       "note": "no data: sun, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, road",
        "factor_notes": {
         "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
         "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8257,7 +8257,7 @@
         "sun",
         "road"
        ],
-       "note": "no data: sun, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, road",
        "factor_notes": {
         "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
         "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8288,7 +8288,7 @@
         "sun",
         "road"
        ],
-       "note": "no data: sun, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, road",
        "factor_notes": {
         "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
         "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8324,7 +8324,7 @@
         "sun",
         "road"
        ],
-       "note": "no data: sun, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, road",
        "factor_notes": {
         "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
         "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8355,7 +8355,7 @@
         "sun",
         "road"
        ],
-       "note": "no data: sun, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, road",
        "factor_notes": {
         "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
         "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8386,7 +8386,7 @@
         "sun",
         "road"
        ],
-       "note": "no data: sun, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, road",
        "factor_notes": {
         "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
         "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8422,7 +8422,7 @@
         "sun",
         "road"
        ],
-       "note": "no data: sun, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, road",
        "factor_notes": {
         "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
         "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8453,7 +8453,7 @@
         "sun",
         "road"
        ],
-       "note": "no data: sun, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, road",
        "factor_notes": {
         "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
         "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8484,7 +8484,7 @@
         "sun",
         "road"
        ],
-       "note": "no data: sun, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): sun, road",
        "factor_notes": {
         "slope": "Water and fields are flat ground: app flat class (my reading, 60%).",
         "terrain": "Most important Interior waterfowl habitat lies in the valleys and on mid elevation plateaus (75%, Ducks Unlimited).",
@@ -8711,7 +8711,7 @@
       "water",
       "road"
      ],
-     "note": "no data: aspect, sun, water, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water, road",
      "factor_notes": {
       "slope": "Water and open fields are flat ground: app flat class (my reading, 60%).",
       "terrain": "Tip (65%): river bars and hay or grain fields in the valley bottom.",
@@ -8757,7 +8757,7 @@
       "water",
       "road"
      ],
-     "note": "no data: aspect, sun, water, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water, road",
      "factor_notes": {
       "slope": "Water and open fields are flat ground: app flat class (my reading, 60%).",
       "terrain": "Tip (65%): river bars and hay or grain fields in the valley bottom.",
@@ -8805,7 +8805,7 @@
       "sun",
       "road"
      ],
-     "note": "no data: aspect, sun, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, road",
      "factor_notes": {
       "slope": "Water and open fields are flat ground: app flat class (my reading, 60%).",
       "terrain": "Tip (65%): river bars and hay or grain fields in the valley bottom.",
@@ -8851,7 +8851,7 @@
       "water",
       "road"
      ],
-     "note": "no data: aspect, sun, water, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, water, road",
      "factor_notes": {
       "slope": "Water and open fields are flat ground: app flat class (my reading, 60%).",
       "terrain": "Tip (65%): river bars and hay or grain fields in the valley bottom.",
@@ -8899,7 +8899,7 @@
       "sun",
       "road"
      ],
-     "note": "no data: aspect, sun, road (neutral)",
+     "note": "factors without a source (neutral, cert 0): aspect, sun, road",
      "factor_notes": {
       "slope": "Water and open fields are flat ground: app flat class (my reading, 60%).",
       "terrain": "Tip (65%): river bars and hay or grain fields in the valley bottom.",
@@ -8930,7 +8930,7 @@
         "sun",
         "road"
        ],
-       "note": "no data: aspect, sun, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): aspect, sun, road",
        "factor_notes": {
         "slope": "Water and open fields are flat ground: app flat class (my reading, 60%).",
         "terrain": "Tip (65%): river bars and hay or grain fields in the valley bottom.",
@@ -8962,7 +8962,7 @@
         "sun",
         "road"
        ],
-       "note": "no data: aspect, sun, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): aspect, sun, road",
        "factor_notes": {
         "slope": "Water and open fields are flat ground: app flat class (my reading, 60%).",
         "terrain": "Tip (65%): river bars and hay or grain fields in the valley bottom.",
@@ -8994,7 +8994,7 @@
         "sun",
         "road"
        ],
-       "note": "no data: aspect, sun, road (neutral)",
+       "note": "factors without a source (neutral, cert 0): aspect, sun, road",
        "factor_notes": {
         "slope": "Water and open fields are flat ground: app flat class (my reading, 60%).",
         "terrain": "Tip (65%): river bars and hay or grain fields in the valley bottom.",

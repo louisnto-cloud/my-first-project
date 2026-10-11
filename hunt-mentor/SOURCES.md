@@ -115,3 +115,6 @@ Certainty scale: see CLAUDE.md.
   2026-10-11-{fs,ff,fn,fl}.md (Foundations 14 to 52), 2026-10-11-{rl,rp,rs,rq}.md (Reading the Land 13 to 52).
 - BC clock change: BC government news release 2 March 2026 ("Adopting permanent daylight saving time", news.gov.bc.ca/33415): 8 March 2026 was the last change; no fall back 1 November 2026 (read directly 2026-10-11, 95%).
 - Tikka T3x Arctic .308: Sako spec page, 1 in 10 twist (read directly by the ff writer, 95%).
+
+## 2026-10-11 Area analysis habitat model
+- `data/analyze/species-model.json` (Hunt Map "Analyze area"): built from the phase 8 Masterclass lessons, the 2026-10-11 research logs and `data/migration.json`. New sources and every model choice: research/2026-10-11-analyze-model.md. Check with `node scripts/check-species-model.mjs`.
