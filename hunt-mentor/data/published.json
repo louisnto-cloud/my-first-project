@@ -208,7 +208,17 @@
     "field-weather",
     "wind-mastery",
     "stay-unseen",
-    "stalking-footwork"
+    "stalking-footwork",
+    "bec-zones",
+    "grassland-country",
+    "dry-forest-country",
+    "wet-forest-country",
+    "wetland-country",
+    "burn-country",
+    "cutblock-country",
+    "farm-country",
+    "browse-plants",
+    "berries-mast"
   ],
   "flashcards": [
     "quail",
@@ -220,6 +230,7 @@
     "rq",
     "fs",
     "rs",
-    "fn"
+    "fn",
+    "rp"
   ]
 }
