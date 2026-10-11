@@ -63,6 +63,9 @@ rl-lf-spur-3d | Spur: trails climb the even spine.
 ```diagram rl-pp-strip
 ```
 
+```photo rl-hedgerow-field-edge A hedge along a field edge: a cover lane.
+```
+
 - Animals cross open ground where cover connects (65%).
 - A strip of timber, a brushy creek, a hedge (Tip).
 

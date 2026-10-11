@@ -108,3 +108,10 @@ Certainty scale: see CLAUDE.md.
 - Manifest: `data/videos/videos.json`. Placements: `research/2026-10-04-video-placements.md`.
 - YouTube (64 link cards, no embeds, no thumbnails copied): every link verified with the YouTube oEmbed endpoint (https://www.youtube.com/oembed) on 2026-10-04; title and channel copied exactly. Main channels: Ducks Unlimited, Elk101, MeatEater, Parks Canada, Alberta Parks, Alberta Hunter Education Instructors' Association, Canadian Red Cross, AdventureSmart, Hunt Fish Manitoba, Pheasants Forever and Quail Forever, Ruffed Grouse Society, National Deer Association, onX Hunt, Mossy Oak, Outdoor Life, Hunter Ed, NSSF, state agencies (Ohio, New Mexico, Arkansas). Tactics only: opinion, never a source for BC rules. US videos flagged "US rules shown, BC rules differ".
 - Wikimedia Commons (21 animal behaviour clips, streamed from upload.wikimedia.org, never copied into the repo): licences read from each file page's metadata on 2026-10-04. Public domain (USFWS), CC0, CC BY 2.0 and 3.0, CC BY-SA 2.0, 3.0 and 4.0. Author and licence stored per clip in the manifest and shown as credit.
+
+## 2026-10-11 Masterclass and lesson expansion research logs
+- Each batch logs every source with link, certainty and date in research/:
+  2026-10-11-masterclass-{mule-deer,white-tailed-deer,ducks,geese,grouse,quail}.md,
+  2026-10-11-{fs,ff,fn,fl}.md (Foundations 14 to 52), 2026-10-11-{rl,rp,rs,rq}.md (Reading the Land 13 to 52).
+- BC clock change: BC government news release 2 March 2026 ("Adopting permanent daylight saving time", news.gov.bc.ca/33415): 8 March 2026 was the last change; no fall back 1 November 2026 (read directly 2026-10-11, 95%).
+- Tikka T3x Arctic .308: Sako spec page, 1 in 10 twist (read directly by the ff writer, 95%).

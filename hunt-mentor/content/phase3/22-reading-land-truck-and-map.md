@@ -88,6 +88,9 @@ rl-hm-spot | 8: Weather and Scent cone for your seat.
 ```diagram rl-rt-tracks
 ```
 
+```photo rl-snowy-forest-road After fresh snow, every crossing is new.
+```
+
 - A dirt road is a tracking strip: count the crossings (Tip).
 - Fresh crossings mark live trails between bed and feed (Tip).
 

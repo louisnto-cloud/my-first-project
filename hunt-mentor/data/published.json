@@ -237,7 +237,17 @@
     "hunting-partner",
     "ethics-fair-chase",
     "season-planning",
-    "daylight-weather-bc"
+    "daylight-weather-bc",
+    "landforms-101",
+    "slope-aspect",
+    "elevation-snowline",
+    "water-on-land",
+    "edges",
+    "bedding-cover",
+    "escape-terrain",
+    "pinch-points",
+    "habitat-islands",
+    "read-land-truck-map"
   ],
   "flashcards": [
     "quail",
@@ -252,6 +262,7 @@
     "fn",
     "rp",
     "ff",
-    "fl"
+    "fl",
+    "rl"
   ]
 }

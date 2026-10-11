@@ -158,6 +158,9 @@ photo:hab-elk-tracks-shore | Look for tracks pounded into mud.
 ```diagram rl-wa-beaver
 ```
 
+```photo rl-beaver-pond-manning A beaver pond in Manning Park: still water, flooded meadow, dead snags.
+```
+
 - Water, browse and cover in one place (75%).
 - The dam is often a crossing (Tip).
 
