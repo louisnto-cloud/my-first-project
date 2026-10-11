@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Animation: two hunters leave the truck on different routes and both arrive at the same big fir tree, the meeting point agreed for 12:00.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Split up, meet at the same place and time</text>
+<rect x="0" y="40" width="400" height="260" rx="0" fill="#dfe6d3"/>
+<rect x="33.0" y="254.4" width="36.0" height="12.0" rx="3" fill="#2f3a2b"/><rect x="67.2" y="247.2" width="18.0" height="19.2" rx="4" fill="#2f3a2b"/><rect x="70.8" y="249.6" width="10.799999999999999" height="7.199999999999999" rx="2" fill="#cfe0ef"/><circle cx="43.2" cy="267.6" r="5.3999999999999995" fill="#23261f"/><circle cx="75.6" cy="267.6" r="5.3999999999999995" fill="#23261f"/><circle cx="43.2" cy="267.6" r="2.4" fill="#c9b79c"/><circle cx="75.6" cy="267.6" r="2.4" fill="#c9b79c"/><text x="60" y="290" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Truck</text>
+<polygon points="300,49.4 282.4,93.4 317.6,93.4" fill="#2f3a2b"/><rect x="296.7" y="93.4" width="6.6000000000000005" height="11.0" rx="1" fill="#6b4f35"/><text x="300" y="120" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Big fir: meet</text><text x="300" y="136" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">at 12:00</text>
+<path id="fl-pt-split-a" d="M70 250 C 40 180, 120 90, 290 95" fill="none" stroke="none"/>
+<path id="fl-pt-split-b" d="M70 250 C 200 260, 360 220, 310 100" fill="none" stroke="none"/>
+<path d="M70 250 C 40 180, 120 90, 290 95" fill="none" stroke="#2f3a2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<path d="M70 250 C 200 260, 360 220, 310 100" fill="none" stroke="#8b5a2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<g><circle cx="0" cy="0" r="9" fill="#e8590c" stroke="#2f3a2b" stroke-width="3"/><animateMotion dur="6s" fill="freeze"><mpath href="#fl-pt-split-a"/></animateMotion></g>
+<g><circle cx="0" cy="0" r="9" fill="#e8590c" stroke="#8b5a2b" stroke-width="3"/><animateMotion dur="6s" fill="freeze"><mpath href="#fl-pt-split-b"/></animateMotion></g>
+<text x="130" y="180" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You</text><text x="250" y="230" font-family="sans-serif" font-size="14" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Brother</text>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="6s" dur="0.5s" fill="freeze"/><rect x="110" y="150" width="180" height="40" rx="8" fill="#2f3a2b"/><text x="200" y="176" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Together, on time</text></g>
+</svg>

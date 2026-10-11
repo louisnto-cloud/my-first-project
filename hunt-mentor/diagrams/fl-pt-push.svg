@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A simple push. The stander sits at a crossing on a ridge or saddle with a zone of fire pointing away from where the pusher walks. The pusher walks slowly through the cover toward the stander. A deer moves ahead of the pusher. The stander never shoots back toward the pusher.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A simple push: one sits, one walks</text>
+<rect x="0" y="40" width="400" height="260" rx="0" fill="#dfe6d3"/>
+<path d="M0 120 Q200 70 400 120" fill="none" stroke="#8a9a6b" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+<polygon points="90,173.2 77.2,205.2 102.8,205.2" fill="#2f3a2b"/><rect x="87.6" y="205.2" width="4.800000000000001" height="8.0" rx="1" fill="#6b4f35"/>
+<polygon points="150,173.2 137.2,205.2 162.8,205.2" fill="#2f3a2b"/><rect x="147.6" y="205.2" width="4.800000000000001" height="8.0" rx="1" fill="#6b4f35"/>
+<polygon points="250,173.2 237.2,205.2 262.8,205.2" fill="#2f3a2b"/><rect x="247.6" y="205.2" width="4.800000000000001" height="8.0" rx="1" fill="#6b4f35"/>
+<polygon points="320,173.2 307.2,205.2 332.8,205.2" fill="#2f3a2b"/><rect x="317.6" y="205.2" width="4.800000000000001" height="8.0" rx="1" fill="#6b4f35"/>
+<circle cx="330" cy="82" r="14" fill="#e8590c" stroke="#ffffff" stroke-width="3"/><text x="330" y="62" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Stander</text>
+<path d="M330 82 L240 50 A100 100 0 0 0 250 120 Z" fill="#e8590c" opacity="0.25"/>
+<circle cx="80" cy="270" r="14" fill="#e8590c" stroke="#ffffff" stroke-width="3"/><text x="80" y="296" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Pusher</text>
+<path d="M80 256 C 120 220, 200 200, 240 150" fill="none" stroke="#e8590c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6"/>
+<ellipse cx="210" cy="156.8" rx="14.399999999999999" ry="6.6" fill="#8b5a2b"/><line x1="200.4" y1="161.6" x2="199.2" y2="173.6" stroke="#8b5a2b" stroke-width="2.4" stroke-linecap="round"/><line x1="205.2" y1="161.6" x2="205.2" y2="173.6" stroke="#8b5a2b" stroke-width="2.4" stroke-linecap="round"/><line x1="216.0" y1="161.6" x2="216.0" y2="173.6" stroke="#8b5a2b" stroke-width="2.4" stroke-linecap="round"/><line x1="220.2" y1="161.6" x2="221.4" y2="173.6" stroke="#8b5a2b" stroke-width="2.4" stroke-linecap="round"/><line x1="222.0" y1="153.2" x2="226.8" y2="144.8" stroke="#8b5a2b" stroke-width="3.5999999999999996" stroke-linecap="round"/><circle cx="228.6" cy="143.0" r="4.2" fill="#8b5a2b"/><path d="M228.0 138.8 l-4 -6.0 M230.4 138.8 l5 -6.0" fill="none" stroke="#5c3b1c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="230" y1="150" x2="280" y2="110" stroke="#8b5a2b" stroke-width="3" stroke-linecap="round"/><polygon points="280.0,110.0 276.5,117.2 272.2,111.8" fill="#8b5a2b"/>
+<text x="200" y="290" font-family="sans-serif" font-size="13" font-weight="bold" fill="#b3261e" text-anchor="middle">Stander never shoots back toward the pusher</text>
+</svg>
