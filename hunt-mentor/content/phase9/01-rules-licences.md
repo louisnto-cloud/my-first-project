@@ -85,7 +85,7 @@ checked: 2026-10-11
 > [!warn]
 > Study aid only. The official regulations are the law.
 
-- Page 5: a species licence bought online "will be mailed" and is "subject to Canada Post delivery times"; bought in person, you get it immediately (99%).
+- Page 5: a species licence bought online is mailed, subject to Canada Post delivery times. Bought in person, you get it immediately (99%).
 - Not in the mail yet? You may qualify for a free replacement if you report it to FrontCounter BC or Service BC between 15 and 30 business days after purchase (99%, page 8).
 - **Why it trips people (Tip):** everything else in the system is instant online.
 - **How common:** Tip (opinion). No count found.
@@ -106,7 +106,7 @@ checked: 2026-10-11
 > Study aid only. The official regulations are the law.
 
 - The page 8 fee table marks those 7 species with a footnote: the licence is not valid until 2 days after the date of issue (99%).
-- Owner note: Region 3 has cougar, bobcat and lynx seasons (99%, page 34). Region 8 cougar too (99%, page 68).
+- Your areas: Region 3 has cougar, bobcat and lynx seasons (99%, page 34). Region 8 cougar too (99%, page 68).
 - **Why it trips people (Tip):** deer, moose and bear licences work the day you buy them, so people expect the same of every licence.
 - **How common:** Tip (opinion). No count found.
 - **Source:** [Rule Book: licences](#/s/rb-licences-fees), page 8, 2 October 2026 edition (99%).
