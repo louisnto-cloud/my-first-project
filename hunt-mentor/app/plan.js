@@ -124,7 +124,7 @@
       if (nr && nr.length) out.flags.push({ bad: true, t: `No general open season for ${nr.join(', ')} in this region. ${R.noRow.notes || ''}`, page: R.noRow.page, cert: R.noRow.cert });
       for (const c of R.closedMus || []) if (c.mu === mu) out.flags.push({ bad: true, closed: true, t: `MU ${mu}: ${c.notes}`, page: c.page, cert: c.cert });
       for (const l of R.leh || []) if (keys.includes(String(l.species).toLowerCase())) out.flags.push({ t: `${cap(l.species)}${l.class ? ', ' + l.class : ''}: ${l.notes}. LEH (Limited Entry Hunting) is a draw. You apply ahead of time.`, page: l.page, cert: l.cert });
-      for (const b of R.bag || []) if (keyHit(keys, b.species) || keys.some((k) => String(b.species).toLowerCase().startsWith(k))) out.bag.push({ t: `${cap(b.species)}: ${b.limit}`, page: b.page, cert: b.cert });
+      for (const b of R.bag || []) if (keyHit(keys, b.species) || keys.some((k) => String(b.species).toLowerCase().startsWith(k))) out.bag.push({ t: String(b.limit).toLowerCase().startsWith(String(b.species).toLowerCase() + ':') ? cap(String(b.limit).slice(String(b.species).length + 1).trim()) : `${cap(b.species)}: ${b.limit}`, page: b.page, cert: b.cert });
     }
     if (mkeys.length) {
       try {
@@ -262,15 +262,16 @@
     for (const l of lists) if (listMatches(l.when, cond)) for (const it of l.items) add(it.cat || l.category || 'gear', it, l.title || l.id);
     return out;
   }
-  function checklistHtml(items, ticked, C, attr) {
+  function checklistHtml(items, ticked, C, attr, closed) {
     return CATS.map(([cat, label]) => {
       const its = items.filter((i) => i.cat === cat); if (!its.length) return '';
       const n = its.filter((i) => ticked(i)).length;
-      return `<div class="pl-cat"><h3>${esc(label)} <span class="pill">${n}/${its.length}</span></h3>${its.map((i) => `<label class="check pl-item${ticked(i) ? ' done' : ''}">
+      return `<details class="pl-cat" data-cat="${cat}"${closed && closed.has(cat) ? '' : ' open'}><summary><h3>${esc(label)} <span class="pill">${n}/${its.length}</span></h3></summary>${its.map((i) => `<label class="check pl-item${ticked(i) ? ' done' : ''}">
         <input type="checkbox" ${attr}="${esc(i.key)}"${ticked(i) ? ' checked' : ''}><span>${esc(i.t)}${i.cert != null ? ' ' + C.certBadge(i.cert) : ''}
-        ${i.why || i.lesson ? `<small class="pl-why">${esc(i.why || '')}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('')}</div>`;
+        ${i.why || i.lesson ? `<small class="pl-why">${esc(i.why || '')}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('')}</details>`;
     }).join('');
   }
+  const closedCats = (root) => new Set([...root.querySelectorAll('details.pl-cat:not([open])')].map((d) => d.dataset.cat));
   const lessonLinks = (ids, C) => [...new Set(ids)].filter((id) => id && C.hasSession(id)).map((id) => `<a class="pl-chip" href="#/s/${esc(id)}">${esc(C.lessonTitle(id))}</a>`).join('');
 
   // ---------- saved plans ----------
@@ -539,7 +540,7 @@
       $('#pl-check').innerHTML = `<div class="card"><div class="row"><b class="grow">${n} of ${items.length} done</b>
         <label class="pl-hide"><input type="checkbox" id="pl-hide"${p.hideDone ? ' checked' : ''}> Hide done</label></div>${'<div class="bar"><i style="width:' + Math.round((n / Math.max(1, items.length)) * 100) + '%"></i></div>'}
         <p class="muted pl-small">Your animal's list plus the lists that match your plan: ${esc(D.lists.filter((l) => listMatches(l.when, condOf(p))).map((l) => l.title || l.id).join(', ') || 'none')}. Ticks save on this phone.</p>
-        <div class="pl-list${p.hideDone ? ' pl-hide-done' : ''}">${checklistHtml(items, t, C, 'data-pk')}</div>
+        <div class="pl-list${p.hideDone ? ' pl-hide-done' : ''}">${checklistHtml(items, t, C, 'data-pk', closedCats(view))}</div>
         ${n === items.length && items.length ? '<p class="pl-alldone">All done. Good hunting.</p>' : ''}
         <div class="btn-row no-print"><button type="button" class="btn" id="pl-untick">Untick all</button></div></div>`;
       $('#pl-hide').onchange = (e) => { p.hideDone = e.target.checked; C.save(); $('#pl-check .pl-list').classList.toggle('pl-hide-done', p.hideDone); };
@@ -594,7 +595,9 @@
     const inDates = lg.rows.filter((x) => x.days.length), other = lg.rows.filter((x) => !x.days.length);
     const migIn = lg.mig.filter((x) => x.days.length), migOther = lg.mig.filter((x) => !x.days.length);
     const flags = [...lg.flags.map((f) => ({ bad: f.bad, t: f.t + (f.page ? ` Synopsis page ${f.page}.` : f.src ? ` ${f.src}.` : ''), cert: f.cert })), ...(sp.redFlags || []).map((t) => ({ t, watch: true }))];
-    const lessons = [lg.session, ...(isMigratoryOnly(sp) || (sp.migratoryKeys || []).length ? ['rb-migratory-birds'] : []), 'rb-bag-limits', 'rb-licences-fees', 'legal-to-shoot', 'rb-legal-methods', ...(sp.lessons || [])];
+    const rb = (id) => /^rb-|^legal-to-shoot$|^tagging-legal$|^licences$/.test(id);
+    const lessons = [lg.session, ...(isMigratoryOnly(sp) || (sp.migratoryKeys || []).length ? ['rb-migratory-birds'] : []), 'rb-bag-limits', 'rb-licences-fees', 'legal-to-shoot', 'rb-legal-methods', ...(sp.lessons || []).filter(rb)];
+    const more = lessonLinks((sp.lessons || []).filter((id) => !rb(id)), C);
     const hrs = H.h;
     return `${verdictHtml(lg)}
       ${inDates.length || migIn.length ? `<div class="card"><h3>Seasons in your dates</h3><ul class="pl-rows">${inDates.map(rowLi).join('')}${migIn.map(migLi).join('')}</ul></div>` : ''}
@@ -604,6 +607,7 @@
       ${(sp.licence || []).length ? `<div class="card"><h3>Licences and paperwork</h3><ul>${sp.licence.map((l) => `<li>${esc(l.t)} ${l.cert != null ? C.certBadge(l.cert) : ''}${l.lesson && C.hasSession(l.lesson) ? ` <a href="#/s/${esc(l.lesson)}">Lesson</a>` : ''}</li>`).join('')}</ul></div>` : ''}
       <div class="card"><h3>Legal shooting hours</h3><p>${hrs ? esc(hrs.text) + ' ' + C.certBadge(hrs.certainty) : '<span class="verify">VERIFY</span>'}</p><p class="muted pl-small">Each day's times are in the day by day plan.</p></div>
       <div class="card"><h3>Rule Book lessons</h3><div class="pl-chips">${lessonLinks(lessons, C) || '<span class="muted">None in the app yet.</span>'}</div>
+      ${more ? `<details class="pl-more"><summary>More lessons on ${esc(sp.name.toLowerCase())}</summary><div class="pl-chips">${more}</div></details>` : ''}
       <p class="muted pl-small">${lg.src ? `Seasons: ${esc(lg.src)}, checked ${esc(lg.checked || '')}. ` : ''}${lg.migSrc ? `Ducks and geese: ${esc(lg.migSrc)}. ` : ''}General open seasons only. LEH (Limited Entry Hunting) draws, closed areas, no shooting areas and in season changes are not all shown. Check the official synopsis before you go.</p></div>`;
   }
 
@@ -744,7 +748,7 @@
       view.innerHTML = `<div class="card"><div class="row"><b class="grow">${n} of ${items.length} done</b><label class="pl-hide"><input type="checkbox" id="pl-hide"${hide ? ' checked' : ''}> Hide done</label></div>
         <div class="bar"><i style="width:${Math.round((n / Math.max(1, items.length)) * 100)}%"></i></div>
         <p class="muted pl-small">${esc(sp.name)} list plus the lists for every hunt${firstDefault(C) ? ' and the first hunt list' : ''}. A plan adds lists for your method, access, overnight and party.</p>
-        <div class="pl-list${hide ? ' pl-hide-done' : ''}">${checklistHtml(items, t, C, 'data-ak')}</div>
+        <div class="pl-list${hide ? ' pl-hide-done' : ''}">${checklistHtml(items, t, C, 'data-ak', closedCats(view))}</div>
         <div class="btn-row no-print"><button type="button" class="btn" id="pl-untick">Untick all</button><button type="button" class="btn primary" id="pl-mk">Plan a hunt</button></div></div>
         ${lessonLinks(sp.lessons || [], C) ? `<div class="card"><h3>Lessons</h3><div class="pl-chips">${lessonLinks(sp.lessons || [], C)}</div></div>` : ''}`;
       view.querySelector('#pl-hide').onchange = (e) => { S.settings.animalHideDone = e.target.checked; C.save(); view.querySelector('.pl-list').classList.toggle('pl-hide-done', e.target.checked); };

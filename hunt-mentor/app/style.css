@@ -343,7 +343,8 @@ body.map-open:has(.hmm-sheet:not([hidden])) .hm-backchip { display: none !import
 .pl-mu-row input { flex: 1; min-width: 0; }
 .pl-mu-row .btn { flex: none; }
 .pl-dates { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 6px 0 12px; }
-.pl-dates input { width: 100%; }
+.pl-dates > div { min-width: 0; }
+.pl-dates input { width: 100%; min-width: 0; padding: 10px 8px; font-size: 16px; }
 .pl-msg p { background: var(--warn-bg); border-radius: 10px; padding: 8px 12px; margin: 10px 0; }
 .pl-wiz-foot { margin-top: 18px; }
 .btn:disabled { opacity: .5; cursor: not-allowed; }
@@ -419,3 +420,8 @@ details.pl-day > :last-child { margin-bottom: 12px; }
   #pl-s4 { break-before: page; }
   .pl-law { display: block !important; }
 }
+details.pl-cat > summary { list-style: none; display: flex; align-items: center; min-height: 44px; cursor: pointer; border-bottom: 2px solid var(--line); }
+details.pl-cat > summary::-webkit-details-marker { display: none; }
+details.pl-cat > summary h3 { flex: 1; margin: 0; }
+details.pl-cat > summary::after { content: ""; width: 9px; height: 9px; margin: 0 8px 4px; border-right: 3px solid var(--muted); border-bottom: 3px solid var(--muted); transform: rotate(45deg); }
+details.pl-cat[open] > summary::after { transform: rotate(-135deg); margin-bottom: -4px; }
