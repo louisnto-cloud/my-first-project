@@ -7,7 +7,7 @@
   <rect x="0" y="0" width="400" height="600" fill="#fffaf0"/>
   <text x="200" y="24" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Taking a bearing</text>
   <text x="200" y="52" font-size="14" fill="#2f3a2b" text-anchor="middle">Direction of travel arrow</text>
-  <rect x="70" y="60" width="260" height="292" rx="14" fill="#f3eee0" stroke="#23261f" stroke-width="2"/>
+  <rect x="16" y="60" width="368" height="292" rx="14" fill="#f3eee0" stroke="#23261f" stroke-width="2"/>
   <path d="M 200,62 L 188,82 L 212,82 Z" fill="#e8590c"/>
   <line x1="200" y1="82" x2="200" y2="104" stroke="#e8590c" stroke-width="4"/>
   <line x1="200" y1="104" x2="200" y2="122" stroke="#23261f" stroke-width="3"/>
@@ -38,7 +38,7 @@
     <path d="M 200,250 L 193,200 L 207,200 Z" fill="#ffffff" stroke="#23261f" stroke-width="1"/>
     <circle cx="200" cy="200" r="4" fill="#23261f"/>
   </g>
-  <text x="340" y="206" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Bezel: turn it</text>
+  <text x="332" y="206" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Bezel: turn</text>
   <text x="200" y="306" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Red in the shed</text>
   <text x="200" y="326" font-size="14" fill="#23261f" text-anchor="middle">Orienting arrow is the shed</text>
   <text x="200" y="344" font-size="14" fill="#23261f" text-anchor="middle">Red end of the needle points to magnetic north</text>

@@ -124,3 +124,10 @@ Certainty scale: see CLAUDE.md.
 - Place and town positions: BC Geographical Names web service, https://apps.gov.bc.ca/pub/bcgnws/names/search (exact spelling, official names first), queried 2026-10-11, Open Government Licence BC (95%; 85% or 80% when the name is shared and was picked by the MU or region named next to it; 80% for names that are not official). geographic.gov.bc.ca was not reachable from this environment.
 - Forest service road pins: the app's forest road layer (`data/layers/*/forest_roads.pmtiles`, FTEN_ROAD_SECTION_LINES_SVW, data date 2026-10-03), middle of the longest named section, only when the name is unique (85%).
 - Built by `scripts/build-places.py` into `data/places/mu.json` and `data/places/places.json`; names left out and why: `data/places/unresolved.json`.
+
+## 2026-10-11 Wait times before following a hit deer (owner: show all sources, "Your call")
+- Hunter Ed blog (Kalkomey), Jared Braddock, "Deer Anatomy for Hunters", 11 September 2026: https://www.hunter-ed.com/blog/hunting-basics-understanding-deer-anatomy-for-a-successful-hunt/ (read directly, 70% as advice). Source of the app's sk-wait-chart numbers.
+- National Deer Association, Bob Westerfield, "How to Blood Trail a Deer", 21 September 2012: https://deerassociation.com/blood-trail-deer/ (read directly, 70%). Liver 2 h minimum, gut 4 to 6 h.
+- National Deer Association, NDA Staff, "You just shot a deer. Here's how to find it", 25 October 2023: https://deerassociation.com/watch-you-just-shot-a-deer-heres-how-to-find-it/ (read directly, 70%). Liver 8 to 10 h, guts 10 to 12 h.
+- American Hunter, Jeff Johnston, 8 August 2019, and MeatEater, Mark Kenyon, 23 November 2019 (read directly, 65 to 70%). Hunter education study guides, hunter-ed.com Iowa and bowhunter-ed.com Pennsylvania (read directly, 75%).
+- All quotes and the comparison: research/2026-10-11-wait-times.md. Diagram: diagrams/sk-wait-compare.svg.

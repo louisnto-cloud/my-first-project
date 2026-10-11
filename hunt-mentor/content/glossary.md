@@ -451,3 +451,4 @@
 - **Emergency bivy bag**: A light emergency shelter bag you climb inside. Better than a foil blanket against cold ground (65%).
 - **Debris shelter**: A shelter built from branches, boughs and leaves. It gives emergency insulation but takes hours and lots of dry material (65%).
 - **Three Ts**: AdventureSmart's trip planning, training and taking the essentials (75%).
+- **NDA**: National Deer Association. A North American deer conservation and hunting group; the app quotes its articles on tracking and wait times.
