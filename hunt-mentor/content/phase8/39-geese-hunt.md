@@ -54,27 +54,6 @@ lc-ask-6 | Thank them. Call before every hunt.
 - Full lesson and form: [Asking for permission](#/s/landowner-permission). Law: [Where you can hunt](#/s/rb-where-you-can-hunt).
 ```
 
-## Scout, then commit
-
-```steps Scout the X in 5 steps
-mgs-x-1 | Glass fields from a public road at the last hour of light.
-mgs-x-2 | Watch where they land. Pin the exact spot.
-mgs-x-3 | Let them leave on their own.
-mgs-x-4 | With permission, find the thickest fresh droppings.
-mgs-x-5 | Plan the hide on the X or in cover nearby.
-```
-
-- Hunt the field they used yesterday afternoon (65%).
-
-```more the evening before, in order
-1. Last hour of light: find the flock in a field from the road (Tip).
-2. Note field, time, flock size and wind (Tip).
-3. Check tomorrow's wind on the Hunt Map Weather and wind tool. If the wind will swing, plan the hide for tomorrow's wind (Tip).
-4. Call the landowner to confirm (Tip).
-5. Pack the night before: permit with stamp, BC licence, steel shells, plug in, decoys, blinds, mud, stubble straps, flag, call (Tip). See the checklist in [Geese](#/s/geese).
-6. In the dark: set the blinds first, then decoys, then brush. Be done 30 minutes before legal light (Tip).
-```
-
 ## The field set up
 
 ```diagram mgs-field-spread
@@ -91,6 +70,29 @@ mgs-x-5 | Plan the hide on the X or in cover nearby.
 - Scatter hunters in small decoy clusters rather than a row of blinds (65%).
 - Quick lesson numbers: 1 to 3 dozen decoys for a start (65%).
 - Keep decoys off fence lines, brush and ditches (60%).
+```
+
+```anim mgs-landing Into the wind, feet down: that is the moment.
+```
+
+- Open the hole wide enough to land in (Tip).
+- High birds: a few decoys 45 to 55 m downwind pull them down (65%).
+
+```more spread tricks and high birds
+- Six decoys 50 to 60 yd (45 to 55 m) downwind, in two groups on either side of the spread, help pull high birds lower. Do not call until birds commit, then call and flag hard to stop them landing short (65%, Ducks Unlimited goose guide).
+- Change decoy numbers and shape through the season (65%).
+- Late season: smaller, very real looking spreads where nobody else hunts (65%).
+- Frosty mornings: set decoys last to cut glare (65%).
+- Gear and prices: start with what you can carry with a partner; price checks: VERIFY before you buy.
+```
+
+```more the evening before, in order
+1. Last hour of light: find the flock in a field from the road (Tip).
+2. Note field, time, flock size and wind (Tip).
+3. Check tomorrow's wind on the Hunt Map Weather and wind tool. If the wind will swing, plan the hide for tomorrow's wind (Tip).
+4. Call the landowner to confirm (Tip).
+5. Pack the night before: permit with stamp, BC licence, steel shells, plug in, decoys, blinds, mud, stubble straps, flag, call (Tip). See the checklist in [Geese](#/s/geese).
+6. In the dark: set the blinds first, then decoys, then brush. Be done 30 minutes before legal light (Tip).
 ```
 
 ## Layout blinds
@@ -113,22 +115,6 @@ mgs-layout-4 | Walk 40 m out, look back, fix it. Pick up hulls.
 - Snow: use a snow cover and scuff dirt downwind among the decoys to look like feeding (65%).
 - Layout blinds also work on sand bars, mudflats and pond edges (65%).
 - No blind? Lie in a ditch, a fence row or tall stubble 45 to 90 m off the X (65%).
-```
-
-## Decoys that finish birds
-
-```anim mgs-landing Into the wind, feet down: that is the moment.
-```
-
-- Open the hole wide enough to land in (Tip).
-- High birds: a few decoys 45 to 55 m downwind pull them down (65%).
-
-```more spread tricks
-- Six decoys 50 to 60 yd (45 to 55 m) downwind, in two groups on either side of the spread, help pull high birds lower. Do not call until birds commit, then call and flag hard to stop them landing short (65%, Ducks Unlimited goose guide).
-- Change decoy numbers and shape through the season (65%).
-- Late season: smaller, very real looking spreads where nobody else hunts (65%).
-- Frosty mornings: set decoys last to cut glare (65%).
-- Gear and prices: start with what you can carry with a partner; price checks: VERIFY before you buy.
 ```
 
 ## Calling and flagging
@@ -205,9 +191,6 @@ yt-goose-calling-fields | Read the flock and call to match it.
 - One caller. Two zones. Rise together (Tip).
 - Never swing past the middle line (Tip).
 
-```diagram gr-blind-boat
-```
-
 ```more partner rules
 - Agree before light who calls the shot and which birds each takes (65%, Ducks Unlimited).
 - Left hunter takes left birds, right hunter right birds. In a boat sit back to back (Tip, [shotgun skills](#/s/shotgun-skills)).
@@ -217,22 +200,7 @@ yt-goose-calling-fields | Read the flock and call to match it.
 - Earplugs: magnum loads damage hearing (65%).
 ```
 
-## Decisions on the day
-
-```diagram mgs-decision
-```
-
-- Birds show you what is wrong. Fix one thing at a time (Tip).
-
-```more more calls to make
-- Wind swung 90 degrees: turn the spread so the hole is downwind again, and move the blinds beside it (Tip).
-- Flock after flock lands in the next field: next time hunt that field, with permission (Tip).
-- Bright bluebird day, no wind: expect birds to circle; call less, consider an afternoon hunt (Tip). On calm days take good overhead shots near 27 m (30 yd) with BB or larger, because birds rarely commit (65%, Ducks Unlimited).
-- Bitter cold: plan for a late morning or afternoon flight (80%, Raveling 1972).
-- Bag full: unload, pick up, and leave the field as you found it (99% on the limit).
-```
-
-## What a 40 year hunter does differently
+## Decisions, and what a 40 year hunter does differently
 
 | Old hand's habit | Why (opinion, from goose guides) |
 |---|---|
@@ -249,6 +217,19 @@ yt-goose-calling-fields | Read the flock and call to match it.
 ```more where these come from
 - Every habit above is opinion from published hunting writers and guides (Ducks Unlimited goose guide, Outdoor Life, Grand View Outdoors), not a study. Label: Tip.
 - "Let the first flock land" means passing a small group so they pull in the next bigger flock. Your call; some hunters disagree (Tip).
+```
+
+```diagram mgs-decision
+```
+
+- Birds show you what is wrong. Fix one thing at a time (Tip).
+
+```more more calls to make
+- Wind swung 90 degrees: turn the spread so the hole is downwind again, and move the blinds beside it (Tip).
+- Flock after flock lands in the next field: next time hunt that field, with permission (Tip).
+- Bright bluebird day, no wind: expect birds to circle; call less, consider an afternoon hunt (Tip). On calm days take good overhead shots near 27 m (30 yd) with BB or larger, because birds rarely commit (65%, Ducks Unlimited).
+- Bitter cold: plan for a late morning or afternoon flight (80%, Raveling 1972).
+- Bag full: unload, pick up, and leave the field as you found it (99% on the limit).
 ```
 
 ## Ethics on a goose hunt

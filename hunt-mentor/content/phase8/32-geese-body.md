@@ -122,9 +122,6 @@ checked: 2026-10-11
 
 ## How long they live
 
-- Most that survive year one live 10 years or more, up to about 24 (80%).
-- About half of goslings survive to fly (80%).
-
 | Age | What it means (80%, Hinterland Who's Who) |
 |---|---|
 | Gosling | Flies at 6 to 9 weeks |
@@ -132,6 +129,9 @@ checked: 2026-10-11
 | Year 2 | Finds a mate |
 | Year 2 or 3 | First nest |
 | 10 to 24 years | Old hand of the flock |
+
+- Most that survive year one live 10 years or more, up to about 24 (80%).
+- About half of goslings survive to fly (80%).
 
 ```more longevity records
 - A Canada goose banded at the Jack Miner sanctuary in Ontario was at least 23 years old when found (70%, Auk 1955, search preview).

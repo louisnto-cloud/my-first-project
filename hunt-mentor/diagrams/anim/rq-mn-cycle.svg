@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Animation: the moon cycles new, first quarter, full, last quarter while a deer movement bar barely changes, labelled new to full about 4 to 6 metres an hour. Then the rut arrives and the bar doubles, labelled bucks travel far more. Final label: hunt the calendar, not the moon.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Moon changes. Movement barely does.</text>
+<text x="20" y="70" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Moon</text>
+<g opacity="0"><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" begin="0.0s" dur="1.2s" fill="remove"/><circle cx="110" cy="64" r="18" fill="#2f3a2b" stroke="#23261f" stroke-width="1.5"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" begin="1.2s" dur="1.2s" fill="remove"/><g><circle cx="110" cy="64" r="18" fill="#2f3a2b" stroke="#23261f" stroke-width="1.5"/><path d="M110 46 A 18 18 0 0 1 110 82 Z" fill="#f4e7b8"/></g></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" begin="2.4s" dur="1.2s" fill="remove"/><circle cx="110" cy="64" r="18" fill="#f4e7b8" stroke="#23261f" stroke-width="1.5"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" begin="3.5999999999999996s" dur="1.2s" fill="remove"/><g><circle cx="110" cy="64" r="18" fill="#2f3a2b" stroke="#23261f" stroke-width="1.5"/><path d="M110 46 A 18 18 0 0 0 110 82 Z" fill="#f4e7b8"/></g></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="4.8s" dur="0.3s" fill="freeze"/><circle cx="110" cy="64" r="18" fill="#f4e7b8" stroke="#23261f" stroke-width="1.5"/></g>
+<text x="20" y="140" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Deer movement</text>
+<rect x="20" y="150" width="360" height="22" rx="4" fill="#eee"/>
+<rect x="20" y="150" width="140" height="22" rx="4" fill="#8a9a6b"><animate attributeName="width" values="140;146;140;144;140;140;280;280" keyTimes="0;0.12;0.24;0.36;0.48;0.62;0.78;1" dur="8s" fill="freeze"/></rect>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="1s" dur="0.4s" fill="freeze"/><text x="20" y="200" font-family="sans-serif" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="start">New to full: about 4 to 6 m an hour</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="5.2s" dur="0.4s" fill="freeze"/><text x="20" y="230" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="start">The rut: bucks travel far more (75%)</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="6.8s" dur="0.5s" fill="freeze"/><rect x="40" y="248" width="320" height="36" rx="8" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="2"/><text x="200" y="272" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Hunt the calendar, not the moon</text></g>
+</svg>

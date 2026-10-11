@@ -74,9 +74,6 @@ checked: 2026-10-11
 
 ## Light and dark
 
-- Geese fly by light levels: first birds about 15 minutes before sunrise in clear weather (80%).
-- Cloud delays them about 15 minutes (80%).
-
 | Light | What a wintering flock did (80%, Raveling 1972) |
 |---|---|
 | Clear dawn | First birds 15 min before sunrise, main flight at or just after sunrise |
@@ -84,6 +81,9 @@ checked: 2026-10-11
 | Clear dusk | Back between sunset and civil twilight |
 | Cloudy dusk | Back before sunset |
 | Full moon visible | Back later in the evening |
+
+- Geese fly by light levels: first birds about 15 minutes before sunrise in clear weather (80%).
+- Cloud delays them about 15 minutes (80%).
 
 ```more night and the moon
 - A Saskatchewan flock started its morning flight at about 32 foot candles of light (80%, quoted in Raveling and others 1972).
@@ -109,6 +109,9 @@ checked: 2026-10-11
 
 ## Nose
 
+```anim sb-goose-field Wind matters for landing, not for scent.
+```
+
 - Smell is weak in waterfowl; they rely on sight (80%).
 - No study found showing geese smell hunters (VERIFY).
 
@@ -117,9 +120,6 @@ checked: 2026-10-11
 - Greylag geese can tell food plants from other plants by smell (80%).
 - About 400 taste buds in waterfowl versus about 9,000 in people (80%).
 - Hunter lore says scent control does not matter for geese (Tip). Wind still decides everything, because geese land into it. See [Chapter 9](#/s/mc-geese-09).
-```
-
-```anim sb-goose-field Wind matters for landing, not for scent.
 ```
 
 ## The watchers

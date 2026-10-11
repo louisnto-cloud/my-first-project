@@ -77,6 +77,9 @@ g-md-buck-4pt | Mature: deep chest, thick neck.
 ```
 
 ```more antlers, body and the 4 point count
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 - BC account (90%):
   - Most yearling mule deer have 2 points on each side.
   - Two year olds grow large forks or 3 points.
@@ -103,6 +106,9 @@ g-wt-buck-flag | White tail: wide flag.
 ```
 
 ```more the look alike table and the legal point
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 | Look alike | Tell it by | Legal point |
 |---|---|---|
 | White tailed deer | Wide brown tail, white flag; antler tines rise off one main beam; gallops, no stot (85%) | Separate species licence and seasons (99%, [Rule Book](#/s/rb-bag-limits)) |

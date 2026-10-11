@@ -23,7 +23,7 @@ checked: 2026-10-11
 - The cheat sheet, chapter links, the quick lesson and the planner.
 ```
 
-## Load, pattern and range
+## Load, pattern, range and lead
 
 ```diagram sb-goose-range
 ```
@@ -42,8 +42,6 @@ checked: 2026-10-11
 - Max range for you this season: 35 m (38 yd). A goose looks close at 50 m because it is big (Tip).
 - Cripple shells: steel 2 or 4, finish at about 14 m (15 yd) (65%).
 ```
-
-## Leads and the swing
 
 ```anim sk-leads Swing through, sustained lead, pull away.
 ```

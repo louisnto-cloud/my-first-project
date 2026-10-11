@@ -9,6 +9,6 @@
   <path d="M215 250 C 240 236, 270 232, 299 240 C 330 232, 360 236, 383 250 L383 258 L215 258 Z" fill="#cfe0f0" opacity=".85"/>
   <path d="M262 160 L282 210" stroke="#9cc3ea" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M282 210 L273.1 201.9 L282.8 198.0 Z" fill="#9cc3ea"/><path d="M336 160 L316 210" stroke="#9cc3ea" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M316 210 L315.2 198.0 L324.9 201.9 Z" fill="#9cc3ea"/>
   <text x="101" y="60" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sunny day</text><text x="299" y="60" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Clear night</text>
-  <text x="101" y="250" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">warm air rises</text><text x="299" y="232" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">cold pool, frost, fog</text>
+  <text x="101" y="250" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">warm air rises</text><text x="299" y="226" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">cold pool, frost, fog</text>
   <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cold air drains down at night and pools low</text>
 </svg>

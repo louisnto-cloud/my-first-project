@@ -30,6 +30,9 @@ checked: 2026-10-11
 - Bucks drop antlers, old bucks first (90%).
 
 ```more winter in detail
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 - Winter range: low elevations, warm south and west aspects, gentle to moderate slopes, Douglas fir with snow catching crowns (85%, BC habitat model).
 - Snow over about 50 cm shuts deer out; 25 to 30 cm hinders them (85%). Trouble begins near 30 cm (90%, BC account).
 - Winter diet near Kamloops shifts to tall shrubs and trees as snow deepens; Douglas fir needles peak in December and January (85%, Willms 1976).
@@ -112,6 +115,9 @@ checked: 2026-10-11
 - 4 point bucks open 10 to 30 September in 3-27 and 3-28 (99%).
 
 ```more September in detail
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 - Rising testosterone dries the velvet; the buck rubs it off on saplings and bushes, usually within 24 to 48 hours (85%, fact sheet 27). Bark tannin and blood stain the antlers brown (85%).
 - Bucks are still on or near summer range (85%).
 - Feeding hard: fat peaks heading into fall (60 to 65%, chapter 2).
@@ -127,6 +133,9 @@ checked: 2026-10-11
 - First snow up high starts the move down (85%).
 
 ```more the October shift in detail
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 - Bachelor groups break up in October (80%). Bucks spar and thrash brush (90%).
 - Snow and cold trigger the move to winter range, not the rut (85%, Monteith 2011).
 - SIMDeer: most collared deer returned to winter range in October and November; in 2019 "by mid October ... nearly all the collared deer in each study area were back" (85%).
@@ -148,6 +157,9 @@ checked: 2026-10-11
 - Bucks follow does in daylight. Hunt the does (65%).
 
 ```more the rut in detail
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 - Mule deer rut "in November and early December" in BC (90%, BC account). Peak about mid November (80%).
 - Mule deer bucks rut on winter range, so snow and rut bring them to the same open slopes (80%, [the rut](#/s/the-rut)).
 - Courtship is a **tending bond**: a buck stays with one doe and keeps other bucks away until she breeds or another buck displaces him (90%, BC account).
@@ -167,6 +179,9 @@ checked: 2026-10-11
 - A smaller second rut can follow about 4 weeks later (60%).
 
 ```more December in detail
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 - "Following the rut, bucks have lost weight and some have wounds or broken antlers, and they tend to hide and rest" (90%, BC account).
 - Unbred does cycle again about 28 days later; some late breeding in December (60%, white tail sources; Kentucky wildlife agency).
 - Deer gather on winter range; deeper snow pushes them lower (85%).

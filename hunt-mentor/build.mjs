@@ -374,7 +374,8 @@ function build() {
       // extra decks (data/flashcards-<name>.json) ship only once listed in data/published.json "flashcards" (same review gate as lessons)
       ...['data/flashcards.json', ...((readJSON('data/published.json').flashcards) || []).map((n) => `data/flashcards-${n}.json`)].flatMap((f) => readJSON(f)).map((c) => {
         const f = c.diagram && path.join(ROOT, 'diagrams', `${c.diagram}.svg`);
-        return { ...c, diagram: f && fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : undefined };
+        const ph = typeof c.photo === 'string' && /^[\w-]+$/.test(c.photo) ? PHOTOS[c.photo] : null; // plain photo id -> credited figure
+        return { ...c, diagram: f && fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : undefined, ...(ph && fs.existsSync(path.join(ROOT, 'photos', `${ph.id}.jpg`)) ? { photo: photoFigure(ph, '') } : typeof c.photo === 'string' && /^[\w-]+$/.test(c.photo) ? { photo: undefined } : {}) };
       }),
       ...Object.values(PHOTOS).filter((ph) => ph.card && fs.existsSync(path.join(ROOT, 'photos', `${ph.id}.jpg`))).map((ph) => ({
         id: 'photo-' + ph.id, deck: ph.cardDeck || 'Photo ID', front: ph.cardFront || 'What is this?', photo: photoFigure(ph, ''), back: ph.cardBack || ph.caption,

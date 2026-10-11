@@ -30,6 +30,9 @@ checked: 2026-10-11
 - Downwind of you = smelled. No exceptions (Tip).
 
 ```more how the nose works
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 - Smell is the strongest deer sense (85%, research notes). The often quoted "297 million receptors" figure is folklore (45%, not a fact).
 - Deer also have a second scent organ, the vomeronasal organ in the roof of the mouth. A rutting buck curls his lip (the flehmen face) to pull a doe's urine scent into it (65%, University of Georgia researcher via fishgame.com; Outdoor Life).
 - Deer scent glands send messages to other deer (90%, BC deer account):
@@ -127,6 +130,9 @@ checked: 2026-10-11
 - Blaze orange looks dull; blue and UV stand out (75%).
 
 ```more colour, ultraviolet and night
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 - Deer have 2 cone types, peaking near 455 nm (blue) and 537 nm (green). No red cone (85%, Jacobs 1994 via research notes).
 - They can tell blue from red but not green from red (80%, Penn State).
 - So blaze orange looks dull, close to yellowish grey (75%). The colour chart is a rough sketch, not exact (Tip).
@@ -171,6 +177,9 @@ sg-alarm-5 | Escape: the mule deer stots away.
 - Use cover and shadow, never the skyline (Tip).
 
 ```more the full kit and drills
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 - **Nose:** keep the wind in your face or quartering; plan by thermals; check the wind every 10 minutes; leave if it turns (Tip).
 - **Ears:** walk, stop, walk, like a deer; soft wool or fleece; tape sling swivels; no talking, use signals (Tip, chapter 9).
 - **Eyes:** move only when its head is down or behind cover; stay below ridgelines; sit in shadow with something behind you; glass, do not walk (Tip).

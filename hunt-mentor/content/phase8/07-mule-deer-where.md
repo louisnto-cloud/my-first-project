@@ -128,6 +128,9 @@ hab-willow-shrub | Willow: browse by water.
 - No mapped official winter range right around Kamloops (90%).
 
 ```more Heffley Creek in detail
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 - The BC habitat model lists the highest reported mule deer densities (over 1 deer per 0.2 km2) in places including the North Thompson River, the City of Kamloops and Copper Creek in the Thompson Basin (85%).
 - Approved ungulate winter range polygons: none in a box around Kamloops and Heffley Creek (90%, BC data check, research notes 2026-10-03). Use the habitat rule instead: south and west slopes, bunchgrass, ponderosa pine and Douglas fir below about 1,000 m (75%).
 - Dewdrop Rosseau Creek WMA (Wildlife Management Area), north shore of Kamloops Lake, is winter range for mule deer and bighorn sheep (90%). The synopsis lists it as a motor vehicle closed area (90%, page 33 via research notes; check [Region 3](#/s/rb-region-3)).

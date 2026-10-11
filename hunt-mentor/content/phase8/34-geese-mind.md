@@ -73,15 +73,15 @@ commons-canada-goose-family | A goose family: parents and young move as one.
 
 ## How geese learn pressure
 
-- They avoid fields where they are disturbed again and again (70%).
-- Same spread, same spot, every day: they learn it (65%).
-
 | Pressure sign | What to change (Tip, 65%) |
 |---|---|
 | Birds land 200 m off your spread | Move to where they landed next time |
 | Flocks flare at 100 m | Fix the hide; fewer blinds |
 | Birds stop using the field | Rest it a week |
 | Same flock every hunt | Change the spread size and shape |
+
+- They avoid fields where they are disturbed again and again (70%).
+- Same spread, same spot, every day: they learn it (65%).
 
 ```more the guide advice
 - Hunting the same spot with the same spread teaches local birds to avoid it. Change decoy count and layout through the season (65%, Ducks Unlimited goose guide).

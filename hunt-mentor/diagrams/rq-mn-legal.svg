@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" role="img" aria-label="Legal deer hunting windows at Heffley Creek: 15 October 6:22 to 19:11; 31 October 6:49 to 18:39; 1 November 5:51 to 17:38 if clocks fall back; 30 November 6:39 to 17:00. Ducks get half an hour less at each end.">
+<rect x="0" y="0" width="400" height="350" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Legal hours shrink through the season</text>
+<line x1="39" y1="50" x2="39" y2="280" stroke="#d6d0bf" stroke-width="1"/>
+<text x="38.8" y="46" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">6:00</text>
+<line x1="113" y1="50" x2="113" y2="280" stroke="#d6d0bf" stroke-width="1"/>
+<text x="113.2" y="46" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">9:00</text>
+<line x1="188" y1="50" x2="188" y2="280" stroke="#d6d0bf" stroke-width="1"/>
+<text x="187.6" y="46" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">12:00</text>
+<line x1="262" y1="50" x2="262" y2="280" stroke="#d6d0bf" stroke-width="1"/>
+<text x="262.0" y="46" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">15:00</text>
+<line x1="336" y1="50" x2="336" y2="280" stroke="#d6d0bf" stroke-width="1"/>
+<text x="336.4" y="46" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">18:00</text>
+<text x="14" y="80" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">15 Oct</text>
+<rect x="48" y="86" width="318" height="22" rx="4" fill="#2f3a2b"/>
+<text x="206.82" y="102" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">deer 6:22 to 19:11</text>
+<text x="14" y="134" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">31 Oct</text>
+<rect x="59" y="140" width="293" height="22" rx="4" fill="#2f3a2b"/>
+<text x="205.82799999999997" y="156" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">deer 6:49 to 18:39</text>
+<text x="14" y="188" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">1 Nov*</text>
+<rect x="35" y="194" width="292" height="22" rx="4" fill="#2f3a2b"/>
+<text x="181.152" y="210" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">deer 5:51 to 17:38</text>
+<text x="14" y="242" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">30 Nov</text>
+<rect x="55" y="248" width="257" height="22" rx="4" fill="#2f3a2b"/>
+<text x="183.26000000000002" y="264" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">deer 6:39 to 17:00</text>
+<text x="14" y="324" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">*If clocks fall back on 1 November: VERIFY. Ducks:</text>
+<text x="14" y="340" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">30 min less each end. My calculation (85%).</text>
+</svg>

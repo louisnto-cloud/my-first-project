@@ -65,6 +65,9 @@ yt-glassing-mule-deer | Sit, rest the optics, and pick the slope apart.
 ```
 
 ```more glassing in detail
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 - Be on the seat 45 minutes before legal light (Tip, quick lesson). Legal light starts 1 hour before sunrise (99%, page 11, [legal methods](#/s/rb-legal-methods)).
 - "Glass from a distance and let the spotting scope do the walking" (60%, Mule Deer Foundation, M. Luby). Set up before first light and glass into the shadows (60%).
 - In snow free country you often find mule deer by their whitish rumps; in snow, look for brown bodies (65%, Rinella).
@@ -170,6 +173,9 @@ yt-stalking-mule-deer | Plan the stalk from where you glassed: landmarks, wind, 
 ```
 
 ```more partner tactics in detail
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 - **Spotter and stalker:** the spotter stays on the glassing seat and guides with hand signals; the stalker follows landmarks (Tip).
 - **Two seats:** you and your brother glass two slopes and meet at 10:00 (Tip).
 - **Push a draw:** one hunter walks a draw with the wind at his back while the other sits the escape route up the slope; mule deer often flee uphill (70% for uphill flight; Tip for the tactic). Never with either hunter in the other's [[Zone of fire]].
@@ -204,6 +210,9 @@ yt-stalking-mule-deer | Plan the stalk from where you glassed: landmarks, wind, 
 - Lets a bad chance go (Tip).
 
 ```more the old hand's habits and ethics
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 - Glasses for hours, walks for minutes (Tip, widely taught).
 - Checks the wind all day and walks away from a bad wind (Tip).
 - Walks 500 m to 1 km past roads and pullouts (Tip).

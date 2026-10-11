@@ -118,9 +118,31 @@
     "mc-quail-07",
     "mc-quail-08",
     "mc-quail-09",
-    "mc-quail-10"
+    "mc-quail-10",
+    "mc-grouse-01",
+    "mc-grouse-02",
+    "mc-grouse-03",
+    "mc-grouse-04",
+    "mc-grouse-05",
+    "mc-grouse-06",
+    "mc-grouse-07",
+    "mc-grouse-08",
+    "mc-grouse-09",
+    "mc-grouse-10",
+    "mc-ducks-01",
+    "mc-ducks-02",
+    "mc-ducks-03",
+    "mc-ducks-04",
+    "mc-ducks-05",
+    "mc-ducks-06",
+    "mc-ducks-07",
+    "mc-ducks-08",
+    "mc-ducks-09",
+    "mc-ducks-10"
   ],
   "flashcards": [
-    "quail"
+    "quail",
+    "grouse",
+    "ducks"
   ]
 }

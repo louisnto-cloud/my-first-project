@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 310" role="img" aria-label="Four steps. Spring, days get longer: melatonin falls and antlers start to grow. Late summer, days get shorter: testosterone rises and velvet comes off. Fall, short days: the rut. Winter after the rut: testosterone falls and antlers drop. The moon is not in this chain.">
+<rect x="0" y="0" width="400" height="310" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Daylight runs the deer calendar</text>
+<rect x="14" y="44" width="372" height="54" rx="10" fill="#4a7fb0" stroke="#4a7fb0" stroke-width="2"/>
+<text x="28" y="66" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start">Spring: days get longer</text>
+<text x="28" y="86" font-family="sans-serif" font-size="14" fill="#fff" text-anchor="start">Melatonin falls, antlers start to grow (80%)</text>
+<g><line x1="200" y1="98" x2="200" y2="106" stroke="#23261f" stroke-width="2" stroke-linecap="round"/><polygon points="200.0,106.0 197.4,100.6 202.6,100.6" fill="#23261f"/></g>
+<rect x="14" y="106" width="372" height="54" rx="10" fill="#e8590c" stroke="#e8590c" stroke-width="2"/>
+<text x="28" y="128" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start">Late summer: days get shorter</text>
+<text x="28" y="148" font-family="sans-serif" font-size="14" fill="#fff" text-anchor="start">Testosterone rises, velvet comes off (70%)</text>
+<g><line x1="200" y1="160" x2="200" y2="168" stroke="#23261f" stroke-width="2" stroke-linecap="round"/><polygon points="200.0,168.0 197.4,162.6 202.6,162.6" fill="#23261f"/></g>
+<rect x="14" y="168" width="372" height="54" rx="10" fill="#8b5a2b" stroke="#8b5a2b" stroke-width="2"/>
+<text x="28" y="190" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start">Fall: short days</text>
+<text x="28" y="210" font-family="sans-serif" font-size="14" fill="#fff" text-anchor="start">The rut: breeding season (70 to 80%)</text>
+<g><line x1="200" y1="222" x2="200" y2="230" stroke="#23261f" stroke-width="2" stroke-linecap="round"/><polygon points="200.0,230.0 197.4,224.6 202.6,224.6" fill="#23261f"/></g>
+<rect x="14" y="230" width="372" height="54" rx="10" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="2"/>
+<text x="28" y="252" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="start">Winter: after the rut</text>
+<text x="28" y="272" font-family="sans-serif" font-size="14" fill="#fff" text-anchor="start">Testosterone falls, antlers drop (80%)</text>
+<text x="200" y="300" font-family="sans-serif" font-size="14" font-weight="bold" fill="#6b4f35" text-anchor="middle">The moon is not in this chain (Tip).</text>
+</svg>

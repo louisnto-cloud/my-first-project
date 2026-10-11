@@ -30,6 +30,9 @@ checked: 2026-10-11
 - Dusk: down to feed, water in dry weather (80%, Tip).
 
 ```more the daily loop
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 - Night: feeds on and off in open grass and brush, rests between bouts (75%).
 - Before first light to about 09:00: a strong activity peak (85%, Stewart and others 2002, Oregon telemetry).
 - Then it drifts uphill or into cover to bed (85%, quick lesson).
@@ -112,6 +115,9 @@ g-md-buck-bedded | Bedded buck: only the rack gives it away.
 - Weekends and roads push deer away (Tip).
 
 ```more pressure in detail
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 - Pressured deer move more at night and use thicker cover (70%, quick lesson).
 - Arizona: hunted deer shifted to better escape cover as the season went on (65%). Montana: more use of timber in hunting season (65%).
 - Hunted populations flee people at longer distances (65%, Stankowich 2008).

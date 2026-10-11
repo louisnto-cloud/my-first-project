@@ -1,0 +1,703 @@
+[
+ {
+  "id": "mgs-001",
+  "deck": "Geese Masterclass",
+  "front": "Name the 4 goose groups that count in BC.",
+  "back": "Canada and cackling (together), snow and Ross's (together), white fronted, brant (99%).",
+  "diagram": "sb-goose-groups"
+ },
+ {
+  "id": "mgs-002",
+  "deck": "Geese Masterclass",
+  "front": "5 marks of a Canada goose?",
+  "back": "Black head and neck, white chinstrap, grey brown body, white under the tail, black bill and legs (80%).",
+  "diagram": "mgs-canada-marks"
+ },
+ {
+  "id": "mgs-003",
+  "deck": "Geese Masterclass",
+  "front": "Can you tell a gander from a goose by colour?",
+  "back": "No. Sexes look alike (85%). The gander is a bit bigger (75%) and guards and leads.",
+  "diagram": "mgs-sex-age"
+ },
+ {
+  "id": "mgs-004",
+  "deck": "Geese Masterclass",
+  "front": "Cackling goose bill length vs Canada goose?",
+  "back": "Cackling 2.8 to 3.8 cm; Canada 4.1 to 5.8 cm (75%).",
+  "diagram": "mgs-cackler-vs-canada"
+ },
+ {
+  "id": "mgs-005",
+  "deck": "Geese Masterclass",
+  "front": "Is a cackling goose a young Canada goose?",
+  "back": "No. It is a separate species (85%). Same bag as Canada geese: 10 a day together (99%).",
+  "photo": "cackling-and-canada-geese"
+ },
+ {
+  "id": "mgs-006",
+  "deck": "Geese Masterclass",
+  "front": "Average weight of a cackling goose?",
+  "back": "Males about 1.5 kg, females about 0.95 kg (75%)."
+ },
+ {
+  "id": "mgs-007",
+  "deck": "Geese Masterclass",
+  "front": "Canada goose weight range by race?",
+  "back": "About 2.4 to 9 kg (Ducks Unlimited, 75%). Most you see: 1.35 to 5.45 kg (80%)."
+ },
+ {
+  "id": "mgs-008",
+  "deck": "Geese Masterclass",
+  "front": "Canada goose wingspan?",
+  "back": "About 90 cm to 2 m, by race (80%)."
+ },
+ {
+  "id": "mgs-009",
+  "deck": "Geese Masterclass",
+  "front": "How many races of Canada goose does Hinterland Who's Who count?",
+  "back": "11. Four former races now form the cackling goose (80%)."
+ },
+ {
+  "id": "mgs-010",
+  "deck": "Geese Masterclass",
+  "front": "Where did Okanagan nesting geese come from?",
+  "back": "Hybrids of races introduced in the 1960s and 70s; they never learned to migrate (85%)."
+ },
+ {
+  "id": "mgs-011",
+  "deck": "Geese Masterclass",
+  "front": "Snow goose bill mark?",
+  "back": "A dark grin patch on a pink bill (80%).",
+  "diagram": "mgs-white-geese-heads"
+ },
+ {
+  "id": "mgs-012",
+  "deck": "Geese Masterclass",
+  "front": "Ross's goose vs snow goose?",
+  "back": "Ross's: smaller, stubby bill, no grin patch, warty bluish base on older birds (70 to 80%).",
+  "photo": "snow-and-ross-geese"
+ },
+ {
+  "id": "mgs-013",
+  "deck": "Geese Masterclass",
+  "front": "All white bird, bigger than a goose, no black wing tips?",
+  "back": "A swan. No open season. Never shoot (90%).",
+  "photo": "g-tundra-swans-flight"
+ },
+ {
+  "id": "mgs-014",
+  "deck": "Geese Masterclass",
+  "front": "White fronted goose nickname and why?",
+  "back": "Specklebelly: black bars on the belly (70%).",
+  "photo": "white-fronted-goose"
+ },
+ {
+  "id": "mgs-015",
+  "deck": "Geese Masterclass",
+  "front": "White fronted goose daily limit in Districts 2, 3 and 8?",
+  "back": "5 a day, 15 in possession (99%)."
+ },
+ {
+  "id": "mgs-016",
+  "deck": "Geese Masterclass",
+  "front": "Brant: where and when can you hunt them?",
+  "back": "Only MU 2-4, 1 to 10 March, 3 a day. None in Districts 3 and 8 (99%).",
+  "photo": "brant"
+ },
+ {
+  "id": "mgs-017",
+  "deck": "Geese Masterclass",
+  "front": "Snow and Ross's limit in Districts 3 and 8?",
+  "back": "5 a day, 15 in possession (99%)."
+ },
+ {
+  "id": "mgs-018",
+  "deck": "Geese Masterclass",
+  "front": "District 2 snow goose limit, federal table?",
+  "back": "10 a day, not more than 5 Ross's; 5 more snow geese in MUs 2-4 and 2-5 (99%). Region 2 Rule Book: VERIFY for 2-8, take 5 to be safe (Tip)."
+ },
+ {
+  "id": "mgs-019",
+  "deck": "Geese Masterclass",
+  "front": "BC geese taken, 2016 vs 2024?",
+  "back": "15,539 in 2016; 6,053 in 2024 (99%, Hunter Sample Survey).",
+  "diagram": "mgs-harvest-bars"
+ },
+ {
+  "id": "mgs-020",
+  "deck": "Geese Masterclass",
+  "front": "Canada geese in North America, 1950 vs now?",
+  "back": "About 1 million in 1950; more than 8 million before the fall hunt now (80%)."
+ },
+ {
+  "id": "mgs-021",
+  "deck": "Geese Masterclass",
+  "front": "Fraser delta snow geese vs marsh capacity?",
+  "back": "About 80,000 wintered in 2004 to 2005; the marsh alone feeds about 17,500 (85%)."
+ },
+ {
+  "id": "mgs-022",
+  "deck": "Geese Masterclass",
+  "front": "What is the keel?",
+  "back": "The deep breastbone that anchors the breast (flight) muscles (80%).",
+  "diagram": "mgs-skeleton"
+ },
+ {
+  "id": "mgs-023",
+  "deck": "Geese Masterclass",
+  "front": "How many air sacs does a bird have?",
+  "back": "9 (85%). They pump air one way through the lungs.",
+  "diagram": "anim/mgs-air-sacs"
+ },
+ {
+  "id": "mgs-024",
+  "deck": "Geese Masterclass",
+  "front": "How much of a bird's body is breathing system?",
+  "back": "About one fifth, vs one twentieth in a mammal (80%)."
+ },
+ {
+  "id": "mgs-025",
+  "deck": "Geese Masterclass",
+  "front": "Where is a goose's heart?",
+  "back": "Low and forward, at the base of the neck under the keel (80%).",
+  "diagram": "mgs-heart-lungs"
+ },
+ {
+  "id": "mgs-026",
+  "deck": "Geese Masterclass",
+  "front": "Where are the lungs?",
+  "back": "Tight against the back ribs (80%)."
+ },
+ {
+  "id": "mgs-027",
+  "deck": "Geese Masterclass",
+  "front": "Bird resting heart rate?",
+  "back": "About 150 to 350 beats a minute, higher in flight (80%)."
+ },
+ {
+  "id": "mgs-028",
+  "deck": "Geese Masterclass",
+  "front": "What does the gizzard need?",
+  "back": "Grit: small stones that grind grass and grain (85%).",
+  "diagram": "mgs-gut"
+ },
+ {
+  "id": "mgs-029",
+  "deck": "Geese Masterclass",
+  "front": "How long does grass take to pass through a goose?",
+  "back": "About 1.5 hours (70%, brent geese)."
+ },
+ {
+  "id": "mgs-030",
+  "deck": "Geese Masterclass",
+  "front": "How much grass do grazing geese digest?",
+  "back": "Only 27 to 34% (70%). So they eat most of the day."
+ },
+ {
+  "id": "mgs-031",
+  "deck": "Geese Masterclass",
+  "front": "Do geese have a true crop?",
+  "back": "Sources disagree. VERIFY."
+ },
+ {
+  "id": "mgs-032",
+  "deck": "Geese Masterclass",
+  "front": "Bird body temperature resting and active?",
+  "back": "About 38.5°C resting, 41°C active (85%).",
+  "diagram": "mgs-body-heat"
+ },
+ {
+  "id": "mgs-033",
+  "deck": "Geese Masterclass",
+  "front": "How long does a hen's spring reserve last?",
+  "back": "About one month of incubation (80%).",
+  "diagram": "mgs-fat-cycle"
+ },
+ {
+  "id": "mgs-034",
+  "deck": "Geese Masterclass",
+  "front": "Lifespan after year one?",
+  "back": "Most live 10 years or more, up to about 24 (80%)."
+ },
+ {
+  "id": "mgs-035",
+  "deck": "Geese Masterclass",
+  "front": "What share of goslings survive to fly?",
+  "back": "About half (80%)."
+ },
+ {
+  "id": "mgs-036",
+  "deck": "Geese Masterclass",
+  "front": "Best pellet zone on a close decoying goose?",
+  "back": "Head and neck (Tip, 65%). Heart and lungs in the front of the body (80%).",
+  "diagram": "mgs-vitals"
+ },
+ {
+  "id": "mgs-037",
+  "deck": "Geese Masterclass",
+  "front": "Rank the goose senses.",
+  "back": "Sight first, hearing second, smell a distant third (80%).",
+  "diagram": "mgs-senses-rank"
+ },
+ {
+  "id": "mgs-038",
+  "deck": "Geese Masterclass",
+  "front": "How far does a goose see fine detail compared with you?",
+  "back": "2.5 to 3 times farther (80%)."
+ },
+ {
+  "id": "mgs-039",
+  "deck": "Geese Masterclass",
+  "front": "Goose blind spot?",
+  "back": "Narrow, behind the head; wide side vision; can see its own bill tip (90%).",
+  "diagram": "mgs-vision-field"
+ },
+ {
+  "id": "mgs-040",
+  "deck": "Geese Masterclass",
+  "front": "How many cone types: goose vs you?",
+  "back": "Goose 4 (peaks 409, 458, 509, 580 nm); you 3 (90%).",
+  "diagram": "mgs-colour-cones"
+ },
+ {
+  "id": "mgs-041",
+  "deck": "Geese Masterclass",
+  "front": "Top two things that flare geese?",
+  "back": "Movement and shine: a face up, a gun glint, frosted decoys (80% and Tip).",
+  "diagram": "anim/mgs-face-flare"
+ },
+ {
+  "id": "mgs-042",
+  "deck": "Geese Masterclass",
+  "front": "Bird hearing sweet spot?",
+  "back": "1 to 4 kHz (kilohertz), little above 10 kHz (80%).",
+  "diagram": "mgs-hearing"
+ },
+ {
+  "id": "mgs-043",
+  "deck": "Geese Masterclass",
+  "front": "Do geese smell hunters?",
+  "back": "No study found. Smell is weak in waterfowl (80%). Treat the wind as a landing tool (Tip)."
+ },
+ {
+  "id": "mgs-044",
+  "deck": "Geese Masterclass",
+  "front": "Who watches most in a flock?",
+  "back": "Ganders and birds on the edges (75%).",
+  "diagram": "mgs-sentinels"
+ },
+ {
+  "id": "mgs-045",
+  "deck": "Geese Masterclass",
+  "front": "Are electronic goose calls legal in BC?",
+  "back": "No (99%). Mouth calls and flags are fine (95%)."
+ },
+ {
+  "id": "mgs-046",
+  "deck": "Geese Masterclass",
+  "front": "The 5 steps of the alarm ladder?",
+  "back": "Feeding, heads up, tall necks and honks, head toss, flush (Tip; head toss 80%).",
+  "diagram": "mgs-alarm-ladder"
+ },
+ {
+  "id": "mgs-047",
+  "deck": "Geese Masterclass",
+  "front": "What does head tossing mean?",
+  "back": "The preflight signal: they are about to fly (80%).",
+  "diagram": "anim/mgs-head-toss"
+ },
+ {
+  "id": "mgs-048",
+  "deck": "Geese Masterclass",
+  "front": "Who gets a family into the air fastest?",
+  "back": "The gander (80%, Raveling 1969)."
+ },
+ {
+  "id": "mgs-049",
+  "deck": "Geese Masterclass",
+  "front": "What did GPS geese do on hunt days in Pennsylvania?",
+  "back": "Stayed on the area, moved less, flew when a threat got close (80%)."
+ },
+ {
+  "id": "mgs-050",
+  "deck": "Geese Masterclass",
+  "front": "How long do young geese stay with parents?",
+  "back": "A full year (80%).",
+  "diagram": "mgs-family-flock"
+ },
+ {
+  "id": "mgs-051",
+  "deck": "Geese Masterclass",
+  "front": "When do geese pair and first nest?",
+  "back": "Pair in year 2, usually for life; first nest at 2 or 3 (80%)."
+ },
+ {
+  "id": "mgs-052",
+  "deck": "Geese Masterclass",
+  "front": "Where do geese usually feed in the morning?",
+  "back": "In the field they used the afternoon before (65%).",
+  "diagram": "mgs-mistakes"
+ },
+ {
+  "id": "mgs-053",
+  "deck": "Geese Masterclass",
+  "front": "Same spread, same field, every hunt: what happens?",
+  "back": "Local birds learn it and avoid it. Change the spread (65%)."
+ },
+ {
+  "id": "mgs-054",
+  "deck": "Geese Masterclass",
+  "front": "Clutch size and incubation?",
+  "back": "4 to 7 eggs; 25 to 28 days, hen only (80%).",
+  "diagram": "mgs-year-wheel"
+ },
+ {
+  "id": "mgs-055",
+  "deck": "Geese Masterclass",
+  "front": "When do goslings fly?",
+  "back": "At 6 to 9 weeks (80%)."
+ },
+ {
+  "id": "mgs-056",
+  "deck": "Geese Masterclass",
+  "front": "How long are geese flightless in the moult?",
+  "back": "4 to 6 weeks, June into August (70%). All flight feathers drop at once.",
+  "diagram": "mgs-moult"
+ },
+ {
+  "id": "mgs-057",
+  "deck": "Geese Masterclass",
+  "front": "When do non breeders make their moult migration?",
+  "back": "Late May to early June (80%)."
+ },
+ {
+  "id": "mgs-058",
+  "deck": "Geese Masterclass",
+  "front": "When do Arctic geese reach wintering areas?",
+  "back": "October or November (75%)."
+ },
+ {
+  "id": "mgs-059",
+  "deck": "Geese Masterclass",
+  "front": "Snow geese on the Fraser delta: when?",
+  "back": "Early October; peak mid October to mid December; most to the Skagit late December to February; back mid March to mid April (80%).",
+  "diagram": "sg-snowgoose"
+ },
+ {
+  "id": "mgs-060",
+  "deck": "Geese Masterclass",
+  "front": "What changes in November in the Interior?",
+  "back": "High lakes freeze; birds crowd onto open valley water and the coast (75%).",
+  "diagram": "mgs-oct-nov"
+ },
+ {
+  "id": "mgs-061",
+  "deck": "Geese Masterclass",
+  "front": "District 3 Canada goose seasons?",
+  "back": "8 to 20 September, 1 October to 23 December, 1 to 10 March. 10 a day (99%).",
+  "diagram": "re-r3-goose-bars"
+ },
+ {
+  "id": "mgs-062",
+  "deck": "Geese Masterclass",
+  "front": "District 3 Canada goose closed gap?",
+  "back": "21 to 30 September (99%)."
+ },
+ {
+  "id": "mgs-063",
+  "deck": "Geese Masterclass",
+  "front": "District 2 Canada goose seasons 2026 to 2027?",
+  "back": "5 to 15 Sept, 10 Oct to 22 Nov, 19 Dec to 10 Jan, 10 Feb to 10 Mar (99%)."
+ },
+ {
+  "id": "mgs-064",
+  "deck": "Geese Masterclass",
+  "front": "District 8 Canada goose seasons?",
+  "back": "20 Sept to 28 Nov, 20 Dec to 5 Jan, 21 Feb to 10 Mar in a non leap year (99%)."
+ },
+ {
+  "id": "mgs-065",
+  "deck": "Geese Masterclass",
+  "front": "Clear dawn: when do the first geese leave the roost?",
+  "back": "About 15 minutes before sunrise; main flight at or just after sunrise (80%).",
+  "diagram": "mgs-day-clock"
+ },
+ {
+  "id": "mgs-066",
+  "deck": "Geese Masterclass",
+  "front": "How much does cloud delay the dawn flight?",
+  "back": "About 15 minutes (80%).",
+  "diagram": "mgs-weather-grid"
+ },
+ {
+  "id": "mgs-067",
+  "deck": "Geese Masterclass",
+  "front": "Below what sunrise temperature did geese skip the dawn flight?",
+  "back": "About minus 9°C (15°F) (80%)."
+ },
+ {
+  "id": "mgs-068",
+  "deck": "Geese Masterclass",
+  "front": "Clear evening: when do geese return to the roost?",
+  "back": "Between sunset and civil twilight (80%). Before sunset if cloudy."
+ },
+ {
+  "id": "mgs-069",
+  "deck": "Geese Masterclass",
+  "front": "Effect of a visible full moon?",
+  "back": "Later evening return (80%). Night feeding: proven in barnacle geese, lore in Canada geese (Tip).",
+  "diagram": "mgs-evidence-bars"
+ },
+ {
+  "id": "mgs-070",
+  "deck": "Geese Masterclass",
+  "front": "Does barometric pressure drive goose feeding?",
+  "back": "No study found. Treat as lore (VERIFY)."
+ },
+ {
+  "id": "mgs-071",
+  "deck": "Geese Masterclass",
+  "front": "Legal hours for geese?",
+  "back": "Half an hour before sunrise to half an hour after sunset (99%)."
+ },
+ {
+  "id": "mgs-072",
+  "deck": "Geese Masterclass",
+  "front": "Storm day goose behaviour?",
+  "back": "More flying through the day; may roost in fields (80%)."
+ },
+ {
+  "id": "mgs-073",
+  "deck": "Geese Masterclass",
+  "front": "3 things geese need close together?",
+  "back": "Safe water, open food, a clear view (80% and Tip).",
+  "diagram": "mgs-habitat-section"
+ },
+ {
+  "id": "mgs-074",
+  "deck": "Geese Masterclass",
+  "front": "What do geese eat in fall and winter?",
+  "back": "Waste grain, stubble, pasture, green grass, winter cereal (80%).",
+  "diagram": "mgs-food-seasons"
+ },
+ {
+  "id": "mgs-075",
+  "deck": "Geese Masterclass",
+  "front": "Elevation where most BC Canada geese nest?",
+  "back": "Below 500 m (85%).",
+  "diagram": "mgs-elevation-months"
+ },
+ {
+  "id": "mgs-076",
+  "deck": "Geese Masterclass",
+  "front": "Which BC MU had the most geese taken in 2024?",
+  "back": "MU 2-4: 251 hunters, 1,028 geese (99%)."
+ },
+ {
+  "id": "mgs-077",
+  "deck": "Geese Masterclass",
+  "front": "Hunting geese in Mission: extra needs?",
+  "back": "Fraser Valley Special Area licence ($10) and $1,000,000 liability insurance (99%)."
+ },
+ {
+  "id": "mgs-078",
+  "deck": "Geese Masterclass",
+  "front": "Hunt Map step 1 for geese?",
+  "back": "Turn on Private land, Wetlands, Duck staging and winter waters, and WMA layers.",
+  "diagram": "mgs-map-1"
+ },
+ {
+  "id": "mgs-079",
+  "deck": "Geese Masterclass",
+  "front": "Which Hunt Map tool finds a road spot to glass a field?",
+  "back": "What can I see from here (viewshed).",
+  "diagram": "mgs-map-3"
+ },
+ {
+  "id": "mgs-080",
+  "deck": "Geese Masterclass",
+  "front": "Orchards and vineyards: need consent?",
+  "back": "Yes. Cultivated land needs consent (99%)."
+ },
+ {
+  "id": "mgs-081",
+  "deck": "Geese Masterclass",
+  "front": "Canada goose track length?",
+  "back": "About 10 to 12 cm, three webbed toes, middle toe longest (65%).",
+  "diagram": "mgs-track-scale"
+ },
+ {
+  "id": "mgs-082",
+  "deck": "Geese Masterclass",
+  "front": "Goose dropping size and colour?",
+  "back": "5 to 10 cm tubes, finger thin, green on grass (65%).",
+  "diagram": "mgs-dropping-fresh"
+ },
+ {
+  "id": "mgs-083",
+  "deck": "Geese Masterclass",
+  "front": "What do wet, shiny green droppings tell you?",
+  "back": "Fresh: geese fed here today (Tip)."
+ },
+ {
+  "id": "mgs-084",
+  "deck": "Geese Masterclass",
+  "front": "5 steps to find the X?",
+  "back": "Glass at last light, pin where they land, let them leave, find the thickest fresh droppings with permission, plan the hide (Tip).",
+  "diagram": "mgs-x-4"
+ },
+ {
+  "id": "mgs-085",
+  "deck": "Geese Masterclass",
+  "front": "How far off the X can you set up in cover?",
+  "back": "45 to 90 m (50 to 100 yd) (65%).",
+  "diagram": "mgs-x-5"
+ },
+ {
+  "id": "mgs-086",
+  "deck": "Geese Masterclass",
+  "front": "Best goose method for a beginner?",
+  "back": "Field over decoys, with permission (Tip).",
+  "diagram": "mgs-methods"
+ },
+ {
+  "id": "mgs-087",
+  "deck": "Geese Masterclass",
+  "front": "Decoy mix?",
+  "back": "About 80% feeders, 20% heads up; actives downwind in groups of 3 to 7 (65%).",
+  "diagram": "mgs-field-spread"
+ },
+ {
+  "id": "mgs-088",
+  "deck": "Geese Masterclass",
+  "front": "Where do blinds go?",
+  "back": "About 9 m (10 yd) beside the landing hole, not in front of it (65%)."
+ },
+ {
+  "id": "mgs-089",
+  "deck": "Geese Masterclass",
+  "front": "Layout blind: 4 hiding steps?",
+  "back": "Right spot with wind at your back, lower it, mud and field stubble, walk out and look back (60 to 65%).",
+  "diagram": "mgs-layout-3"
+ },
+ {
+  "id": "mgs-090",
+  "deck": "Geese Masterclass",
+  "front": "High birds will not drop. Trick?",
+  "back": "Six decoys 45 to 55 m downwind in two groups; call and flag hard once they commit (65%).",
+  "diagram": "anim/mgs-landing"
+ },
+ {
+  "id": "mgs-091",
+  "deck": "Geese Masterclass",
+  "front": "The 4 basic goose sounds?",
+  "back": "Honk, cluck, murmur, moan (65%).",
+  "diagram": "sb-gcall-2"
+ },
+ {
+  "id": "mgs-092",
+  "deck": "Geese Masterclass",
+  "front": "Top calling mistake?",
+  "back": "Calling too much (65%)."
+ },
+ {
+  "id": "mgs-093",
+  "deck": "Geese Masterclass",
+  "front": "Can you shoot from a boat gliding after the motor is cut?",
+  "back": "No. It still counts as moving (99%).",
+  "diagram": "mgs-water-setup"
+ },
+ {
+  "id": "mgs-094",
+  "deck": "Geese Masterclass",
+  "front": "Pass shooting range limit for you?",
+  "back": "Under 30 m best; never past 35 m (Tip).",
+  "diagram": "mgs-pass-shoot"
+ },
+ {
+  "id": "mgs-095",
+  "deck": "Geese Masterclass",
+  "front": "Two hunters, one flock: the rule?",
+  "back": "One caller, two zones, never swing past the middle (Tip).",
+  "diagram": "mgs-partner-zones"
+ },
+ {
+  "id": "mgs-096",
+  "deck": "Geese Masterclass",
+  "front": "Cultivated land rule?",
+  "back": "No hunting without consent of the owner, lessee or occupant (99%)."
+ },
+ {
+  "id": "mgs-097",
+  "deck": "Geese Masterclass",
+  "front": "Bait rule for geese?",
+  "back": "No hunting within 400 m of bait until it has been gone 7 days (99%)."
+ },
+ {
+  "id": "mgs-098",
+  "deck": "Geese Masterclass",
+  "front": "All round steel pellet for big Canada geese?",
+  "back": "Steel BB; BBB or T for longer shots (70%).",
+  "diagram": "gr-shot-sizes"
+ },
+ {
+  "id": "mgs-099",
+  "deck": "Geese Masterclass",
+  "front": "Pattern standard for geese?",
+  "back": "60 pellets in a 76 cm (30 in) circle at your longest range (65%)."
+ },
+ {
+  "id": "mgs-100",
+  "deck": "Geese Masterclass",
+  "front": "Cripple finishing shells?",
+  "back": "Steel 2 or 4 at about 14 m (15 yd) (65%)."
+ },
+ {
+  "id": "mgs-101",
+  "deck": "Geese Masterclass",
+  "front": "A hit goose sails off. What now?",
+  "back": "Mark it, then kill and retrieve as soon as you can (99%).",
+  "diagram": "mgs-after-shot"
+ },
+ {
+  "id": "mgs-102",
+  "deck": "Geese Masterclass",
+  "front": "What must stay on a goose until preserved?",
+  "back": "A fully feathered wing or the head (99%).",
+  "diagram": "mgs-care-1"
+ },
+ {
+  "id": "mgs-103",
+  "deck": "Geese Masterclass",
+  "front": "Bird flu care when cleaning geese?",
+  "back": "Gloves, clean outdoors, wash hands, skip sick birds, cook to 74°C (80%)."
+ },
+ {
+  "id": "mgs-104",
+  "deck": "Geese Masterclass",
+  "front": "Boned breast from a big Canada goose?",
+  "back": "About 1 kg (60%).",
+  "diagram": "sb-bird-yield"
+ },
+ {
+  "id": "mgs-105",
+  "deck": "Geese Masterclass",
+  "front": "Giving a goose away: what is needed?",
+  "back": "A label with your name, address, date, permit number and signature, or preserve it first (99%).",
+  "diagram": "mgs-care-4"
+ },
+ {
+  "id": "mgs-106",
+  "deck": "Geese Masterclass",
+  "front": "How many shells may a goose gun hold?",
+  "back": "3, magazine and chamber combined (99%).",
+  "diagram": "mgs-rules-checklist"
+ },
+ {
+  "id": "mgs-107",
+  "deck": "Geese Masterclass",
+  "front": "Possession limit for Canada and cackling geese?",
+  "back": "30, home fridge included, until preserved (99%)."
+ }
+]

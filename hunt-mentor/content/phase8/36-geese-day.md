@@ -71,15 +71,15 @@ checked: 2026-10-11
 
 ## Cold fronts, barometer and migration
 
-- A cold snap may move new birds in. Evidence is weak (Tip).
-- Barometric pressure: no study found. Treat it as lore (VERIFY).
-
 | Claim | Evidence |
 |---|---|
 | Daylight sets the migration window | Widely stated, general (Tip, 60%) |
 | Cold fronts and north winds push migrants | Blog and hunter reports only (Tip) |
 | A falling barometer makes geese feed hard | No study found (lore) |
 | Frozen lakes push birds to open water | Fits Interior pattern (75%) |
+
+- A cold snap may move new birds in. Evidence is weak (Tip).
+- Barometric pressure: no study found. Treat it as lore (VERIFY).
 
 ```more what to do with weak evidence
 - Ducks Unlimited migration reports show cold snaps shifting some flocks south while others keep moving their own way (60%).
@@ -104,15 +104,15 @@ checked: 2026-10-11
 
 ## Hunting pressure
 
-- Hunted geese stay, but move less and flush sooner when close (80%).
-- Weekends bring more hunters (Tip).
-
 | Day | What to expect (Tip unless shown) |
 |---|---|
 | Opening weekend | Many hunters, birds move around a lot |
 | Weekdays | Quieter, birds settle |
 | After shooting on the roost | Birds may leave the area |
 | Hunt days in a study | Less flight and walking (80%) |
+
+- Hunted geese stay, but move less and flush sooner when close (80%).
+- Weekends bring more hunters (Tip).
 
 ```more pressure in full
 - Pennsylvania 2025: GPS geese on hunted Wildlife Management Areas flew less and walked less during hunting hours and on hunting days (80%).
