@@ -13,6 +13,7 @@
 - Never assume. State every assumption as "Assumption:".
 - Never guess a person's name or role. Ask.
 - Work in phases. After each phase: fact check, show, wait for "go".
+- End every message with the live app link (owner rule, 2026-10-11): https://louisnto-cloud.github.io/my-first-project/hunt-mentor/ (map: add #/map).
 - Small build choices: decide, log in PLAN.md. Content or cost changes: ask.
 
 ## Writing style (app content and chat)
