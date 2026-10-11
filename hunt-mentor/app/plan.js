@@ -246,6 +246,7 @@
       if (k === 'overnight') return !!w.overnight === !!cond.overnight;
       if (k === 'party') return (w.party || []).includes(cond.party);
       if (k === 'months') return any(w.months, cond.months);
+      if (k === 'firstHunt') return !!w.firstHunt === !!cond.firstHunt;
       return false; // a condition this app does not know: leave the list out
     });
   }
@@ -258,7 +259,7 @@
       out.push({ cat: CATS.some(([k]) => k === cat) ? cat : 'gear', t: it.t, why: it.why, cert: it.cert, lesson: it.lesson, from, key: hashKey(cat + '|' + n) });
     };
     for (const [cat] of CATS) for (const it of ((sp && sp.checklist) || {})[cat] || []) add(cat, it, sp.name);
-    for (const l of lists) if (listMatches(l.when, cond)) for (const it of l.items) add(l.category || 'gear', it, l.title || l.id);
+    for (const l of lists) if (listMatches(l.when, cond)) for (const it of l.items) add(it.cat || l.category || 'gear', it, l.title || l.id);
     return out;
   }
   function checklistHtml(items, ticked, C, attr) {
@@ -285,16 +286,18 @@
     const items = checkItems(sp, D.lists, condOf(p));
     return { done: items.filter((i) => p.ticks && p.ticks[i.key]).length, total: items.length };
   }
-  const condOf = (p) => ({ method: p.method, access: p.access || [], overnight: !!p.overnight, party: p.party, months: monthsOf(dRange(p.from, p.to)) });
+  const condOf = (p) => ({ method: p.method, access: p.access || [], overnight: !!p.overnight, party: p.party, months: monthsOf(dRange(p.from, p.to)), firstHunt: p.firstHunt !== false });
+  // first hunt: yes until there is a saved plan whose last day has passed
+  const firstDefault = (C) => !plansOf(C).some((p) => p.to && p.to < todayIso());
 
   // ---------- wizard ----------
-  const STEPS = ['animal', 'where', 'when', 'how', 'access', 'overnight', 'party'];
-  const Q = { animal: 'What animal?', where: 'Where?', when: 'When?', how: 'How will you hunt?', access: 'How do you get in?', overnight: 'Staying overnight?', party: 'Who is going?' };
+  const STEPS = ['animal', 'where', 'when', 'how', 'access', 'overnight', 'party', 'first'];
+  const Q = { animal: 'What animal?', where: 'Where?', when: 'When?', how: 'How will you hunt?', access: 'How do you get in?', overnight: 'Staying overnight?', party: 'Who is going?', first: 'Is this your first hunt?' };
   let draft = null;
   const ss = { get() { try { return JSON.parse(sessionStorage.getItem(DRAFT_KEY) || 'null'); } catch (e) { return null; } }, set(v) { try { sessionStorage.setItem(DRAFT_KEY, JSON.stringify(v)); } catch (e) { /* storage blocked */ } } };
   const getDraft = () => (draft = draft || ss.get() || {});
   const saveDraft = () => ss.set(draft);
-  const answered = (d, k) => (k === 'animal' ? !!d.species : k === 'where' ? !!(d.where && d.where.mu) : k === 'when' ? !!(d.from && d.to) : k === 'how' ? !!d.method : k === 'access' ? !!(d.access && d.access.length) : k === 'overnight' ? d.overnight != null : !!d.party);
+  const answered = (d, k) => (k === 'animal' ? !!d.species : k === 'where' ? !!(d.where && d.where.mu) : k === 'when' ? !!(d.from && d.to) : k === 'how' ? !!d.method : k === 'access' ? !!(d.access && d.access.length) : k === 'overnight' ? d.overnight != null : k === 'party' ? !!d.party : d.firstHunt != null);
   const goStep = (n) => { location.hash = `#/plan/new/${n}`; };
 
   async function wizard(view, n, C) {
@@ -344,6 +347,9 @@
         <button type="button" class="btn primary block" id="pl-next" ${a.length ? '' : 'disabled'}>Next</button>`;
     } else if (k === 'overnight') {
       body = `<div class="pl-opts pl-two"><button type="button" class="pl-opt${d.overnight === true ? ' on' : ''}" data-on="1">Yes<small>Camp or stay out</small></button><button type="button" class="pl-opt${d.overnight === false ? ' on' : ''}" data-on="0">No<small>Home each night</small></button></div>`;
+    } else if (k === 'first') {
+      const fh = d.firstHunt != null ? d.firstHunt : firstDefault(C);
+      body = `<p class="muted">Yes adds a first hunt list: the extra steps that are easy to miss the first time.</p><div class="pl-opts pl-two"><button type="button" class="pl-opt${fh ? ' on' : ''}" data-fh="1">Yes<small>First time out</small></button><button type="button" class="pl-opt${!fh ? ' on' : ''}" data-fh="0">No<small>I have hunted before</small></button></div>`;
     } else if (k === 'party') {
       body = `<div class="pl-opts">${PARTY.map(([id, l]) => `<button type="button" class="pl-opt${d.party === id ? ' on' : ''}" data-party="${id}">${esc(l)}</button>`).join('')}</div>`;
     }
@@ -416,6 +422,8 @@
       view.querySelectorAll('[data-on]').forEach((b) => b.onclick = () => done({ overnight: b.dataset.on === '1' }));
     } else if (k === 'party') {
       view.querySelectorAll('[data-party]').forEach((b) => b.onclick = () => done({ party: b.dataset.party }));
+    } else if (k === 'first') {
+      view.querySelectorAll('[data-fh]').forEach((b) => b.onclick = () => done({ firstHunt: b.dataset.fh === '1' }));
     }
   }
   // the next general season openings ahead for this animal in this MU (for the "Opening week" quick pick)
@@ -440,7 +448,7 @@
   }
   function finish(C, D) {
     const d = getDraft(), all = plansOf(C), sp = D.byId[d.species];
-    const base = { species: d.species, speciesName: sp ? sp.name : '', where: d.where, from: d.from, to: d.to, method: d.method, access: d.access, overnight: !!d.overnight, party: d.party };
+    const base = { species: d.species, speciesName: sp ? sp.name : '', where: d.where, from: d.from, to: d.to, method: d.method, access: d.access, overnight: !!d.overnight, party: d.party, firstHunt: d.firstHunt !== false };
     let id = d.editId;
     const old = id && all.find((p) => p.id === id);
     if (old) { const moved = old.where.mu !== base.where.mu || old.species !== base.species; Object.assign(old, base, { updated: Date.now() }); if (moved) delete old.spots; }
@@ -485,6 +493,7 @@
         <div class="pl-kv"><span>Access</span><b>${esc(accessLabel(p.access))}</b></div>
         <div class="pl-kv"><span>Overnight</span><b>${p.overnight ? 'Yes' : 'No'}</b></div>
         <div class="pl-kv"><span>Party</span><b>${esc(partyLabel(p.party))}</b></div>
+        <div class="pl-kv"><span>First hunt</span><b>${p.firstHunt !== false ? 'Yes' : 'No'}</b></div>
         <div class="pl-acts no-print"><button type="button" class="btn" id="pl-share">Share</button><button type="button" class="btn" id="pl-print">Print</button><button type="button" class="btn" id="pl-edit">Change</button><button type="button" class="btn" id="pl-del">Delete</button></div>
       </div>
       <nav class="pl-nav no-print" aria-label="Plan sections"><button type="button" data-go="pl-s1">1 Legal</button><button type="button" data-go="pl-s2">2 Odds</button><button type="button" data-go="pl-s3">3 Days</button><button type="button" data-go="pl-s4">4 Checklist</button></nav>
@@ -498,7 +507,7 @@
 
     // actions
     $('#pl-print').onclick = () => window.print();
-    $('#pl-edit').onclick = () => { draft = { species: p.species, where: p.where, from: p.from, to: p.to, method: p.method, access: p.access, overnight: p.overnight, party: p.party, editId: p.id }; saveDraft(); goStep(0); };
+    $('#pl-edit').onclick = () => { draft = { species: p.species, where: p.where, from: p.from, to: p.to, method: p.method, access: p.access, overnight: p.overnight, party: p.party, firstHunt: p.firstHunt !== false, editId: p.id }; saveDraft(); goStep(0); };
     $('#pl-del').onclick = () => { if (!confirm('Delete this plan? Its ticks go too.')) return; const all = plansOf(C); all.splice(all.indexOf(p), 1); C.save(); location.hash = '#/plan'; };
     $('#pl-share').onclick = () => {
       const text = shareText(m, D, C);
@@ -626,7 +635,7 @@
         <div class="pl-kv"><span>Hunter days per kill</span><b>${od.dpk ? Math.round(od.dpk) : 'n/a'}</b></div>
         <div class="tbl"><table><thead><tr><th>Year</th><th>Hunters</th><th>Kills</th><th>Success</th><th>Days</th></tr></thead><tbody>${years}</tbody></table></div>
         ${od.rows.some((r) => r.lowConfidence) ? '<p class="muted pl-small">Few hunters: fewer than 20 reported, so that year is not reliable and is left out of the average.</p>' : ''}
-        <p class="muted pl-small">Source: <a href="${esc(od.url)}" target="_blank" rel="noopener">${esc(od.src)}</a>, checked ${esc(od.checked || '')}. Hunter Sample survey estimates, general season and LEH (Limited Entry Hunting) together, all classes (bucks and does). ${C.certBadge(90)}</p></div>
+        <p class="muted pl-small">Source: <a href="${esc(od.url)}" target="_blank" rel="noopener">${esc(od.src)}</a>, checked ${esc(od.checked || '')}. Hunter Sample survey estimates, general season and LEH (Limited Entry Hunting) together, males and females together. ${C.certBadge(90)}</p></div>
       <div class="card"><h3>Is 90% realistic here?</h3>${answer}</div>${raise}`;
   }
 
@@ -717,7 +726,7 @@
     const S = C.S;
     el.innerHTML = GROUPS.concat([['', 'Other']]).map(([g, label]) => {
       const ss2 = D.species.filter((s) => (g ? s.group === g : !GROUPS.some(([x]) => x === s.group)));
-      return ss2.length ? `<h3 class="pl-lh">${esc(label)}</h3><div class="list">${ss2.map((s) => { const its = checkItems(s, D.lists, null); const n = its.filter((i) => S.checks[`an:${s.id}:${i.key}`]).length;
+      return ss2.length ? `<h3 class="pl-lh">${esc(label)}</h3><div class="list">${ss2.map((s) => { const its = checkItems(s, D.lists, { firstHunt: firstDefault(C) }); const n = its.filter((i) => S.checks[`an:${s.id}:${i.key}`]).length;
         return `<a class="item" href="#/lists/animal/${esc(s.id)}"><span class="grow">${esc(s.name)}</span><span class="pill">${n}/${its.length}</span></a>`; }).join('')}</div>` : '';
     }).join('');
   }
@@ -729,12 +738,12 @@
     C.setTitle(`${sp.name} checklist`);
     const S = C.S, k = (i) => `an:${sp.id}:${i.key}`;
     const draw = () => {
-      const items = checkItems(sp, D.lists, null);
+      const items = checkItems(sp, D.lists, { firstHunt: firstDefault(C) });
       const t = (i) => !!S.checks[k(i)], n = items.filter(t).length;
       const hide = !!(S.settings && S.settings.animalHideDone);
       view.innerHTML = `<div class="card"><div class="row"><b class="grow">${n} of ${items.length} done</b><label class="pl-hide"><input type="checkbox" id="pl-hide"${hide ? ' checked' : ''}> Hide done</label></div>
         <div class="bar"><i style="width:${Math.round((n / Math.max(1, items.length)) * 100)}%"></i></div>
-        <p class="muted pl-small">${esc(sp.name)} list plus the lists for every hunt. A plan adds lists for your method, access, overnight and party.</p>
+        <p class="muted pl-small">${esc(sp.name)} list plus the lists for every hunt${firstDefault(C) ? ' and the first hunt list' : ''}. A plan adds lists for your method, access, overnight and party.</p>
         <div class="pl-list${hide ? ' pl-hide-done' : ''}">${checklistHtml(items, t, C, 'data-ak')}</div>
         <div class="btn-row no-print"><button type="button" class="btn" id="pl-untick">Untick all</button><button type="button" class="btn primary" id="pl-mk">Plan a hunt</button></div></div>
         ${lessonLinks(sp.lessons || [], C) ? `<div class="card"><h3>Lessons</h3><div class="pl-chips">${lessonLinks(sp.lessons || [], C)}</div></div>` : ''}`;
