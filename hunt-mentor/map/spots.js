@@ -10,6 +10,8 @@
    evidence (strings or objects { text, source, cert, dist_m }); park_lat and park_lon (or park: [lon, lat]); dates | data_dates. */
 import { esc, prefs, units, parseMonths, monthsText, fmtNum, haversine } from './util.js';
 import { SPOT_CATS, spotIconSvg } from './style.js';
+import { getJSON as sharedJSON } from './spot-rundown.js';
+import { manifest as layersManifest } from './layers.js';
 
 export const SPECIES = ['deer', 'moose', 'elk', 'bear', 'grouse', 'duck', 'goose', 'quail', 'turkey', 'chukar', 'sheep', 'goat'];
 export const isSpotLayer = (l) => l.group === 'Spots' && (l.kind === 'spots' || l.type === 'circle' || l.type === 'symbol');
@@ -163,20 +165,12 @@ function datesText(v) {
 }
 
 // ---------- detail tiles ----------
-const detailCache = new Map(); // url -> Promise of { id: properties }
 const tileKey = (l, lon, lat) => { const d = +l.tileDeg || 0.25; return `${Math.floor(lon / d)}_${Math.floor(lat / d)}`; };
 function detailUrl(l, p, c) {
   if (!l.detail || !p._area || !c) return null;
   return `${l.detail.replace(/\{area\}/g, p._area).replace(/\{tile\}/g, tileKey(l, c[0], c[1]))}?v=${encodeURIComponent(l.dataDate || '1')}`;
 }
-function getDetail(url) {
-  if (!detailCache.has(url)) {
-    const pr = fetch(url).then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); });
-    pr.catch(() => detailCache.delete(url)); // try again on the next tap
-    detailCache.set(url, pr);
-  }
-  return detailCache.get(url);
-}
+function getDetail(url) { return sharedJSON(url); } // one cache with the Full rundown (spot-rundown.js); a failed fetch is tried again on the next tap
 /** Detail tile URLs of a spots layer for a bbox (Offline Maps). */
 export function detailFiles(l, bbox) {
   if (!l.detail || !l.detailTiles) return [];
@@ -221,6 +215,7 @@ function renderCard(H, l, f, failed) {
       ${busy ? `<div><small>Hunters</small><b>${esc(cap(String(busy)))}</b><em>estimate</em></div>` : ''}
       ${months.length ? `<div><small>Months</small><b>${esc(monthsText(months))}</b></div>` : ''}
     </div>
+    ${!failed && p.id ? '<div class="hmm-btnrow"><button type="button" class="hmm-btn2" data-rundown>Full rundown: where, animals, camp, tips, risks</button></div>' : ''}
     ${failed ? `<p class="hmm-muted">The full plan did not load. ${navigator.onLine ? 'Try again in a moment.' : 'You are offline and this area is not saved.'}</p>` : ''}
     ${H.ui.linksHtml(lat, lng, p._name, park)}
     <p class="hmm-coord">${esc(units.coord(lng, lat))}${park ? `<br><span class="hmm-muted">Park at ${esc(units.coord(park[1], park[0]))}, ${esc(units.dist(haversine([lng, lat], [park[1], park[0]])))} away</span>` : ''}</p>
@@ -234,6 +229,27 @@ function renderCard(H, l, f, failed) {
   if (selMk) selMk.remove();
   const el = document.createElement('div'); el.className = 'hmm-sel';
   selMk = new H.maplibregl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map);
-  H.openSheet({ title: p._name, html, modal: false, tall: true, onClose: () => { if (selMk) { selMk.remove(); selMk = null; } } });
+  const body = H.openSheet({ title: p._name, html, modal: false, tall: true, onClose: () => { if (selMk) { selMk.remove(); selMk = null; } } });
+  const rb = body.querySelector('[data-rundown]'); if (rb) rb.onclick = () => openRundown(H, l, f);
   const b = map.getBounds(); if (!b.contains([lng, lat])) map.easeTo({ center: [lng, lat], duration: 500 });
+}
+
+// ---------- Full rundown (spot-rundown.js, loaded on first open, then cached per spot) ----------
+let rdTok = 0;
+async function openRundown(H, l, f) {
+  const p = f.properties, [lng, lat] = f.geometry.coordinates, tok = ++rdTok;
+  const body = H.openSheet({ title: `Rundown: ${p._name}`, html: '<p class="hmm-muted">Putting the rundown together</p>', modal: false, tall: true, onClose: () => { if (tok === rdTok) rdTok++; } });
+  try {
+    const rd = await import('./spot-rundown.js');
+    const r = await rd.rundown({ id: p.id, name: p._name, lng, lat, area: p._area, mu: p.mu, detail: p.flags ? p : null }, {
+      H, manifest: layersManifest() || undefined, onBack: () => renderCard(H, l, f),
+      loadIndex: () => H.getLayerData(l.id, { near: [lng, lat] }),
+    });
+    if (tok !== rdTok || H.els.sheetB !== body) return;
+    body.innerHTML = r.html; r.wire(body); body.scrollTop = 0;
+  } catch (e) {
+    if (tok !== rdTok) return;
+    body.innerHTML = `<p>The rundown did not load. ${navigator.onLine ? 'Try again in a moment.' : 'You are offline and this area is not saved.'}</p><div class="hmm-btnrow"><button type="button" class="hmm-btn2" data-back>Back to the spot card</button></div>`;
+    body.querySelector('[data-back]').onclick = () => renderCard(H, l, f);
+  }
 }

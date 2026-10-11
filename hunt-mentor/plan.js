@@ -222,7 +222,7 @@
       let s = (+p.score || 0) + (same ? 3 : 0) - d / 15;
       if (Array.isArray(p.months) && p.months.length) s += p.months.some((m) => months.includes(m)) ? 1 : -3;
       if (p.cat === 'walk' && acc.includes('walk')) s += 0.5;
-      scored.push({ name: p.name, cat: p.cat, busy: p.busy, mu: p.mu, score: p.score, lat: at.lat, lon: at.lon, km: d, s });
+      scored.push({ id: p.id, name: p.name, cat: p.cat, busy: p.busy, mu: p.mu, score: p.score, lat: at.lat, lon: at.lon, km: d, s });
     }
     scored.sort((a, b) => b.s - a.s);
     const names = new Set(), list = [];
@@ -577,6 +577,26 @@
     else if ((!st || !st.list.length) && p.spots && p.spots.list.length) st = Object.assign({ saved: p.spots.at }, p.spots);
     m.spots = st;
     $('#pl-spots').innerHTML = spotsHtml(st, sp, p, C);
+    wireRundowns($('#pl-spots'), st, p, C);
+  }
+
+  // Full rundown per spot: the shared renderer (map/spot-rundown.js), loaded and worked out only when opened
+  function wireRundowns(root, st, p, C) {
+    if (!root || !st || !st.list) return;
+    root.querySelectorAll('details.pl-rd').forEach((el) => el.addEventListener('toggle', async () => {
+      if (!el.open || el.dataset.done) return;
+      el.dataset.done = '1';
+      const x = st.list[+el.dataset.rd], box = el.querySelector('.pl-rd-in');
+      try {
+        const rd = await import('./map/spot-rundown.js');
+        const r = await rd.rundown({ id: x.id, name: x.name, lng: x.lon, lat: x.lat, mu: x.mu },
+          { plan: { species: p.species, from: p.from, to: p.to, mu: p.where.mu }, getJSON, hasSession: C.hasSession });
+        box.innerHTML = r.html; r.wire(box);
+      } catch (e) {
+        delete el.dataset.done;
+        box.innerHTML = `<p class="muted">The rundown did not load. ${navigator.onLine ? 'Close it and try again.' : 'Open the Map once with signal to save this area.'}</p>`;
+      }
+    }));
   }
 
   function verdictHtml(lg) {
@@ -687,7 +707,8 @@
     const top = st.list.slice(0, 5), backup = st.list.slice(5, 7);
     const li = (x, n) => `<li class="pl-spot"><div class="row"><span class="pl-dn">${n}</span><b class="grow">${esc(x.name)}</b></div>
       <div class="muted pl-small">${esc(CAT[x.cat] || x.cat || '')}${x.busy ? `, ${esc(x.busy)}` : ''}, MU ${esc(x.mu || '?')}, ${x.km < 1 ? 'under 1' : Math.round(x.km)} km from ${p.where.src === 'typed' ? 'the MU centre' : 'your point'}</div>
-      <div class="pl-spot-a"><a class="btn" href="${mapLink(x)}">Open on map</a><a class="btn" href="${gmaps(x)}" target="_blank" rel="noopener">Google Maps</a></div></li>`;
+      <div class="pl-spot-a"><a class="btn" href="${mapLink(x)}">Open on map</a><a class="btn" href="${gmaps(x)}" target="_blank" rel="noopener">Google Maps</a></div>
+      <details class="pl-rd" data-rd="${n - 1}"><summary class="btn">Full rundown</summary><div class="pl-rd-in"><p class="muted">Putting the rundown together...</p></div></details></li>`;
     const tactics = sp.tactics || [];
     const backupLines = [
       ...backup.map((x) => `Spot ${esc(x.name)} (${esc(CAT[x.cat] || x.cat)}): <a href="${mapLink(x)}">map</a>`),

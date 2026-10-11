@@ -255,6 +255,7 @@ function addButton({ id, icon = ICONS.target, label = '', where = 'right', onCli
 // ---------- sheet ----------
 let sheetClose = null;
 function openSheet({ title = '', html = '', onClose = null, modal = true, tall = false, bar = null } = {}) {
+  document.querySelectorAll('.hmt-names').forEach((n) => n.remove()); // first time button names never sit on top of a sheet
   const prev = sheetClose; sheetClose = null;
   if (prev) { try { prev(); } catch (err) { console.warn(err); } }
   const s = els.sheet;
