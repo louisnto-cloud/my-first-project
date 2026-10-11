@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Animation: snow falls on bare ground and old tracks disappear under it. When it stops, a fresh line of tracks appears on top of the new snow, leading up the slope. Final label: a track on top of new snow was made since the snow stopped.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Snow wipes the slate. Then read it.</text>
+<rect x="0" y="40" width="400" height="260" fill="#efe6cf"/>
+<rect x="0" y="40" width="400" height="260" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1" begin="0.5s" dur="3s" fill="freeze"/></rect>
+<ellipse cx="30" cy="200" rx="5" ry="7" fill="#8f7f62"><animate attributeName="opacity" values="1;0" begin="0.5s" dur="3s" fill="freeze"/></ellipse>
+<ellipse cx="75" cy="190" rx="5" ry="7" fill="#8f7f62"><animate attributeName="opacity" values="1;0" begin="0.5s" dur="3s" fill="freeze"/></ellipse>
+<ellipse cx="120" cy="200" rx="5" ry="7" fill="#8f7f62"><animate attributeName="opacity" values="1;0" begin="0.5s" dur="3s" fill="freeze"/></ellipse>
+<ellipse cx="165" cy="190" rx="5" ry="7" fill="#8f7f62"><animate attributeName="opacity" values="1;0" begin="0.5s" dur="3s" fill="freeze"/></ellipse>
+<ellipse cx="210" cy="200" rx="5" ry="7" fill="#8f7f62"><animate attributeName="opacity" values="1;0" begin="0.5s" dur="3s" fill="freeze"/></ellipse>
+<ellipse cx="255" cy="190" rx="5" ry="7" fill="#8f7f62"><animate attributeName="opacity" values="1;0" begin="0.5s" dur="3s" fill="freeze"/></ellipse>
+<ellipse cx="300" cy="200" rx="5" ry="7" fill="#8f7f62"><animate attributeName="opacity" values="1;0" begin="0.5s" dur="3s" fill="freeze"/></ellipse>
+<ellipse cx="345" cy="190" rx="5" ry="7" fill="#8f7f62"><animate attributeName="opacity" values="1;0" begin="0.5s" dur="3s" fill="freeze"/></ellipse>
+<circle cx="15" cy="40" r="3" fill="#c9d3dc"><animate attributeName="cy" values="40;300" begin="0.0s" dur="1.6s" repeatCount="2" fill="freeze"/></circle>
+<circle cx="44" cy="40" r="3" fill="#c9d3dc"><animate attributeName="cy" values="40;300" begin="0.5s" dur="1.6s" repeatCount="2" fill="freeze"/></circle>
+<circle cx="73" cy="40" r="3" fill="#c9d3dc"><animate attributeName="cy" values="40;300" begin="1.0s" dur="1.6s" repeatCount="2" fill="freeze"/></circle>
+<circle cx="102" cy="40" r="3" fill="#c9d3dc"><animate attributeName="cy" values="40;300" begin="1.5s" dur="1.6s" repeatCount="2" fill="freeze"/></circle>
+<circle cx="131" cy="40" r="3" fill="#c9d3dc"><animate attributeName="cy" values="40;300" begin="2.0s" dur="1.6s" repeatCount="2" fill="freeze"/></circle>
+<circle cx="160" cy="40" r="3" fill="#c9d3dc"><animate attributeName="cy" values="40;300" begin="0.0s" dur="1.6s" repeatCount="2" fill="freeze"/></circle>
+<circle cx="189" cy="40" r="3" fill="#c9d3dc"><animate attributeName="cy" values="40;300" begin="0.5s" dur="1.6s" repeatCount="2" fill="freeze"/></circle>
+<circle cx="218" cy="40" r="3" fill="#c9d3dc"><animate attributeName="cy" values="40;300" begin="1.0s" dur="1.6s" repeatCount="2" fill="freeze"/></circle>
+<circle cx="247" cy="40" r="3" fill="#c9d3dc"><animate attributeName="cy" values="40;300" begin="1.5s" dur="1.6s" repeatCount="2" fill="freeze"/></circle>
+<circle cx="276" cy="40" r="3" fill="#c9d3dc"><animate attributeName="cy" values="40;300" begin="2.0s" dur="1.6s" repeatCount="2" fill="freeze"/></circle>
+<circle cx="305" cy="40" r="3" fill="#c9d3dc"><animate attributeName="cy" values="40;300" begin="0.0s" dur="1.6s" repeatCount="2" fill="freeze"/></circle>
+<circle cx="334" cy="40" r="3" fill="#c9d3dc"><animate attributeName="cy" values="40;300" begin="0.5s" dur="1.6s" repeatCount="2" fill="freeze"/></circle>
+<circle cx="363" cy="40" r="3" fill="#c9d3dc"><animate attributeName="cy" values="40;300" begin="1.0s" dur="1.6s" repeatCount="2" fill="freeze"/></circle>
+<circle cx="392" cy="40" r="3" fill="#c9d3dc"><animate attributeName="cy" values="40;300" begin="1.5s" dur="1.6s" repeatCount="2" fill="freeze"/></circle>
+<ellipse cx="40" cy="260" rx="5" ry="7" fill="#7d8a96" opacity="0"><animate attributeName="opacity" values="0;1" begin="4.40s" dur="0.3s" fill="freeze"/></ellipse>
+<ellipse cx="78" cy="242" rx="5" ry="7" fill="#7d8a96" opacity="0"><animate attributeName="opacity" values="0;1" begin="4.65s" dur="0.3s" fill="freeze"/></ellipse>
+<ellipse cx="116" cy="224" rx="5" ry="7" fill="#7d8a96" opacity="0"><animate attributeName="opacity" values="0;1" begin="4.90s" dur="0.3s" fill="freeze"/></ellipse>
+<ellipse cx="154" cy="206" rx="5" ry="7" fill="#7d8a96" opacity="0"><animate attributeName="opacity" values="0;1" begin="5.15s" dur="0.3s" fill="freeze"/></ellipse>
+<ellipse cx="192" cy="188" rx="5" ry="7" fill="#7d8a96" opacity="0"><animate attributeName="opacity" values="0;1" begin="5.40s" dur="0.3s" fill="freeze"/></ellipse>
+<ellipse cx="230" cy="170" rx="5" ry="7" fill="#7d8a96" opacity="0"><animate attributeName="opacity" values="0;1" begin="5.65s" dur="0.3s" fill="freeze"/></ellipse>
+<ellipse cx="268" cy="152" rx="5" ry="7" fill="#7d8a96" opacity="0"><animate attributeName="opacity" values="0;1" begin="5.90s" dur="0.3s" fill="freeze"/></ellipse>
+<ellipse cx="306" cy="134" rx="5" ry="7" fill="#7d8a96" opacity="0"><animate attributeName="opacity" values="0;1" begin="6.15s" dur="0.3s" fill="freeze"/></ellipse>
+<ellipse cx="344" cy="116" rx="5" ry="7" fill="#7d8a96" opacity="0"><animate attributeName="opacity" values="0;1" begin="6.40s" dur="0.3s" fill="freeze"/></ellipse>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="7.2s" dur="0.5s" fill="freeze"/><rect x="60" y="60" width="280" height="36" rx="8" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="2"/><text x="200" y="84" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">On new snow: made since it stopped</text></g>
+</svg>

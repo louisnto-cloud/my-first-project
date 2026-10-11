@@ -168,7 +168,7 @@ mgs-care-4 | Label or preserve before you give a goose away.
 | Canada and cackling | 10 (30) | 10 (30) | 10 (30) |
 | White fronted | 5 (15) | 5 (15) | 5 (15) |
 | Snow and Ross's | 5 (15) | 5 (15) | See below |
-| Brant | None | None | MU 2-4 only, 1 to 10 March, 3 (9) |
+| Brant | None | None | MU (Management Unit) 2-4 only, 1 to 10 March, 3 (9) |
 
 ```more the dates and the District 2 snow goose wording
 - All cells: 99%, federal Table 1 as copied in the [Rule Book: migratory birds](#/s/rb-migratory-birds).

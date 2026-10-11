@@ -101,7 +101,7 @@ hab-cattail-marsh | Cattail marsh: cover and nesting edges.
 ```photo hab-geese-stubble Corn stubble in winter: the Fraser Valley goose field.
 ```
 
-- Most BC geese are taken in Region 2; MU 2-4 leads (99%, survey).
+- Most BC geese are taken in Region 2; MU (Management Unit) 2-4 leads (99%, survey).
 - Mission needs the special area licence and insurance (99%).
 
 ```more Region 2 notes
@@ -133,7 +133,7 @@ hab-cattail-marsh | Cattail marsh: cover and nesting edges.
 ## Find them on the Hunt Map
 
 ```steps Find goose water and fields in 4 steps
-mgs-map-1 | Turn on Private land, Wetlands, Duck waters and WMA layers.
+mgs-map-1 | Turn on Private land, Wetlands, Duck waters, Wildlife Management Areas.
 mgs-map-2 | Slope steepness: flat open ground is goose ground.
 mgs-map-3 | What can I see from here: pick a road spot that sees the field.
 mgs-map-4 | Weather and wind, Sun and shade: wind at your back, sun behind.

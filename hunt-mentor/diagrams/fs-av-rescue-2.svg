@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Rescue step 2: switch your transceiver to search and follow the signal from the last seen point downhill.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Transceiver search</text><rect x="150" y="60" width="100" height="150" rx="14" fill="#e8590c" stroke="#2f3a2b" stroke-width="2"/><rect x="166" y="80" width="68" height="50" rx="4" fill="#e3eef8"/><text x="200" y="112" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">12 m</text><line x1="200" y1="140" x2="200" y2="178" stroke="#2f3a2b" stroke-width="4" stroke-linecap="round"/><polygon points="200,190 207,178 193,178" fill="#2f3a2b"/><text x="200" y="288" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Switch to search. Follow the numbers</text>
+</svg>

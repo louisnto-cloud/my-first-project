@@ -138,11 +138,22 @@
     "mc-ducks-07",
     "mc-ducks-08",
     "mc-ducks-09",
-    "mc-ducks-10"
+    "mc-ducks-10",
+    "mc-geese-01",
+    "mc-geese-02",
+    "mc-geese-03",
+    "mc-geese-04",
+    "mc-geese-05",
+    "mc-geese-06",
+    "mc-geese-07",
+    "mc-geese-08",
+    "mc-geese-09",
+    "mc-geese-10"
   ],
   "flashcards": [
     "quail",
     "grouse",
-    "ducks"
+    "ducks",
+    "geese"
   ]
 }

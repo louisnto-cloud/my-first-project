@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Bar chart of three studies on wind and deer movement. An Oklahoma GPS study over 7 years found little change with wind speed. A South Carolina GPS thesis found small effects in some seasons and hours. An older South Texas radio collar study found a drop at 24 to 31 kilometres an hour and a rebound above 32. The results are mixed.">
+<rect x="0" y="0" width="400" height="250" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Wind and deer movement: mixed results</text>
+<text x="14" y="64" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Oklahoma GPS, 7 years: little change</text>
+<rect x="14" y="70" width="86" height="20" rx="4" fill="#8a9a6b"/>
+<text x="105.84615384615384" y="85" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">little change (60%)</text>
+<text x="14" y="116" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">South Carolina GPS: some seasons and hours</text>
+<rect x="14" y="122" width="143" height="20" rx="4" fill="#8a9a6b"/>
+<text x="163.07692307692307" y="137" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">small effects (65%)</text>
+<text x="14" y="168" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">South Texas, 1980s: drop at 24 to 31 km/h</text>
+<rect x="14" y="174" width="200" height="20" rx="4" fill="#e8590c"/>
+<text x="220.30769230769232" y="189" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">drop, then rebound (55%)</text>
+<text x="14" y="226" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Hunting magazine and thesis summaries, search</text>
+<text x="14" y="242" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">previews. Treat as Tip level.</text>
+</svg>

@@ -1,34 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" role="img" aria-label="Partner missing: go to the meeting point and wait the agreed time; blow three blasts and listen; call or text; go to the truck as plan B; at the agreed time, call 911 or send an SOS.">
-  <rect x="0" y="0" width="400" height="330" fill="#fffaf0"/>
-<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Partner did not show up?</text>
-<rect x="20" y="48" width="250" height="40" rx="8" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
-<text x="145" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">At the meeting point?</text>
-<line x1="270" y1="68.0" x2="300" y2="68.0" stroke="#b3261e" stroke-width="3" stroke-linecap="round"/><polygon points="300.0,68.0 292.8,71.5 292.8,64.5" fill="#b3261e"/>
-<text x="285" y="62.0" font-family="sans-serif" font-size="12" fill="#b3261e" text-anchor="middle">No</text>
-<rect x="304" y="54" width="86" height="28" rx="6" fill="#f6d5cf" stroke="#b3261e" stroke-width="1.5"/>
-<text x="347" y="75" font-family="sans-serif" font-size="13" font-weight="bold" fill="#b3261e" text-anchor="middle">Go there</text>
-<line x1="145" y1="88" x2="145" y2="103" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="145.0,103.0 142.0,96.7 148.0,96.7" fill="#2f3a2b"/>
-<rect x="20" y="104" width="250" height="40" rx="8" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
-<text x="145" y="130" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">3 blasts, listen?</text>
-<line x1="270" y1="124.0" x2="300" y2="124.0" stroke="#b3261e" stroke-width="3" stroke-linecap="round"/><polygon points="300.0,124.0 292.8,127.5 292.8,120.5" fill="#b3261e"/>
-<text x="285" y="118.0" font-family="sans-serif" font-size="12" fill="#b3261e" text-anchor="middle">No reply</text>
-<rect x="304" y="110" width="86" height="28" rx="6" fill="#f6d5cf" stroke="#b3261e" stroke-width="1.5"/>
-<text x="347" y="131" font-family="sans-serif" font-size="13" font-weight="bold" fill="#b3261e" text-anchor="middle">Call, text</text>
-<line x1="145" y1="144" x2="145" y2="159" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="145.0,159.0 142.0,152.7 148.0,152.7" fill="#2f3a2b"/>
-<rect x="20" y="160" width="250" height="40" rx="8" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
-<text x="145" y="186" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">At the truck?</text>
-<line x1="270" y1="180.0" x2="300" y2="180.0" stroke="#b3261e" stroke-width="3" stroke-linecap="round"/><polygon points="300.0,180.0 292.8,183.5 292.8,176.5" fill="#b3261e"/>
-<text x="285" y="174.0" font-family="sans-serif" font-size="12" fill="#b3261e" text-anchor="middle">No</text>
-<rect x="304" y="166" width="86" height="28" rx="6" fill="#f6d5cf" stroke="#b3261e" stroke-width="1.5"/>
-<text x="347" y="187" font-family="sans-serif" font-size="11" font-weight="bold" fill="#b3261e" text-anchor="middle">Wait to agreed time</text>
-<line x1="145" y1="200" x2="145" y2="215" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="145.0,215.0 142.0,208.7 148.0,208.7" fill="#2f3a2b"/>
-<rect x="20" y="216" width="250" height="40" rx="8" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
-<text x="145" y="242" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Past the agreed time?</text>
-<line x1="270" y1="236.0" x2="300" y2="236.0" stroke="#b3261e" stroke-width="3" stroke-linecap="round"/><polygon points="300.0,236.0 292.8,239.5 292.8,232.5" fill="#b3261e"/>
-<text x="285" y="230.0" font-family="sans-serif" font-size="12" fill="#b3261e" text-anchor="middle">Yes</text>
-<rect x="304" y="222" width="86" height="28" rx="6" fill="#f6d5cf" stroke="#b3261e" stroke-width="1.5"/>
-<text x="347" y="243" font-family="sans-serif" font-size="13" font-weight="bold" fill="#b3261e" text-anchor="middle">911 or SOS</text>
-<line x1="145" y1="256" x2="145" y2="276" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="145.0,276.0 142.0,269.7 148.0,269.7" fill="#2f3a2b"/>
-<rect x="60" y="278" width="170" height="40" rx="10" fill="#2f3a2b"/>
-<text x="145" y="304" font-family="sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Keep searching with help</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 298" role="img" aria-label="Partner missing, in order: one, go to the meeting point and wait the agreed window. Two, three whistle blasts, listen, call and text. Three, go to the truck, plan B. Four, at the agreed time call 911 or send an SOS, and stay where searchers expect you.">
+  <rect x="0" y="0" width="400" height="298" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Partner did not show up? In order</text>
+<rect x="10" y="46" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="42.0" cy="70" r="17" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="42.0" y="77" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">1</text>
+<text x="80" y="68" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Meeting point</text>
+<text x="80" y="90" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">wait the agreed window</text>
+<rect x="10" y="108" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="42.0" cy="132" r="17" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="42.0" y="139" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">2</text>
+<text x="80" y="130" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Three blasts, listen</text>
+<text x="80" y="152" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">then call and text</text>
+<rect x="10" y="170" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="42.0" cy="194" r="17" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="42.0" y="201" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">3</text>
+<text x="80" y="192" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Go to the truck</text>
+<text x="80" y="214" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">plan B</text>
+<rect x="10" y="232" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="42.0" cy="256" r="17" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="42.0" y="263" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">4</text>
+<text x="80" y="254" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Agreed time passed</text>
+<text x="80" y="276" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">call 911 or send SOS; stay put</text>
 </svg>
