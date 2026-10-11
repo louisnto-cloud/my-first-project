@@ -9,7 +9,7 @@ checked: 2026-10-11
 > [!why]
 > Animals spend most of the day lying down. Know the ground and cover they pick, and you know where to glass at noon and where never to walk.
 
-```diagram rl-bd-terrain
+```photo g-md-does-bedded Bedded deer: only heads and ears show.
 ```
 
 - A good bed gives a view below, wind from behind and cover close (Tip).

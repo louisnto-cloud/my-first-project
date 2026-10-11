@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 310" role="img" aria-label="A year planner. Paperwork: licences expire 31 March, new licences from 1 April, LEH applications by late June. Training: a 12 week block from July to September. Range: zero in June, confirm in August. Scouting: maps in winter, sheds in March, glassing June to August. Hunt: September to December. Review: January and December.">
-  <rect x="0" y="0" width="400" height="310" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" role="img" aria-label="A year planner. Paperwork: licences expire 31 March, new licences from 1 April, LEH applications by late June. Training: a 12 week block from July to September. Range: zero in June, confirm in August. Scouting: maps in winter, sheds in March, glassing June to August. Hunt: September to December. Review: January and December.">
+  <rect x="0" y="0" width="400" height="340" fill="#fffaf0"/>
 <text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A year on one page</text>
 <text x="82" y="56" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">J</text>
 <text x="109" y="56" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">F</text>
@@ -16,11 +16,9 @@
 <text x="60" y="90" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="end">Paper</text>
 <rect x="68" y="74" width="326" height="24" rx="4" fill="#dfe6d3"/>
 <rect x="149" y="74" width="25" height="24" rx="4" fill="#2f3a2b"/>
-<text x="162.5" y="91" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Licences</text>
 <rect x="176" y="74" width="52" height="24" rx="4" fill="#e8590c"/>
 <text x="203.0" y="91" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">LEH</text>
 <rect x="122" y="74" width="25" height="24" rx="4" fill="#b3261e"/>
-<text x="135.5" y="91" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Expire</text>
 <text x="60" y="126" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="end">Train</text>
 <rect x="68" y="110" width="326" height="24" rx="4" fill="#dfe6d3"/>
 <rect x="230" y="110" width="79" height="24" rx="4" fill="#8b5a2b"/>
@@ -28,14 +26,12 @@
 <text x="60" y="162" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="end">Range</text>
 <rect x="68" y="146" width="326" height="24" rx="4" fill="#dfe6d3"/>
 <rect x="203" y="146" width="25" height="24" rx="4" fill="#2f3a2b"/>
-<text x="216.5" y="163" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Zero</text>
 <rect x="257" y="146" width="25" height="24" rx="4" fill="#2f3a2b"/>
-<text x="270.5" y="163" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Confirm</text>
 <text x="60" y="198" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="end">Scout</text>
 <rect x="68" y="182" width="326" height="24" rx="4" fill="#dfe6d3"/>
-<rect x="68" y="182" width="79" height="24" rx="4" fill="#8a9a6b"/>
-<text x="108.5" y="199" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Maps</text>
-<rect x="122" y="182" width="52" height="24" rx="4" fill="#8a9a6b"/>
+<rect x="68" y="182" width="52" height="24" rx="4" fill="#8a9a6b"/>
+<text x="95.0" y="199" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Maps</text>
+<rect x="122" y="182" width="52" height="24" rx="4" fill="#8b5a2b"/>
 <text x="149.0" y="199" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Sheds</text>
 <rect x="203" y="182" width="79" height="24" rx="4" fill="#8a9a6b"/>
 <text x="243.5" y="199" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Glass</text>
@@ -46,7 +42,7 @@
 <text x="60" y="270" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="end">Review</text>
 <rect x="68" y="254" width="326" height="24" rx="4" fill="#dfe6d3"/>
 <rect x="68" y="254" width="25" height="24" rx="4" fill="#2f3a2b"/>
-<text x="81.5" y="271" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Journal</text>
 <rect x="365" y="254" width="25" height="24" rx="4" fill="#2f3a2b"/>
-<text x="200" y="300" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">Deadlines: 99%. Timing of tasks: Tip</text>
+<text x="200" y="292" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">Paper: red Mar 31 expire, green Apr 1 new</text><text x="200" y="310" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">Range: zero Jun, confirm Aug. Review: Dec, Jan</text>
+<text x="200" y="328" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Deadlines: 99%. Timing of tasks: Tip</text>
 </svg>
