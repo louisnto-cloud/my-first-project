@@ -1,0 +1,751 @@
+[
+ {
+  "id": "mc-skills-001",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Binoculars, spotting scope, rifle scope: the three jobs?",
+  "back": "Binoculars find. Spotting scope judges. Rifle scope only aims (Tip). Never glass with the rifle scope: the muzzle follows your eye (95%).",
+  "diagram": "mc-skills-optic-jobs"
+ },
+ {
+  "id": "mc-skills-002",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Exit pupil of an 8x42 binocular?",
+  "back": "42 ÷ 8 = 5.25 mm. Front lens ÷ power (85%, Vortex)."
+ },
+ {
+  "id": "mc-skills-003",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Your pupil at dawn or dusk?",
+  "back": "About 4 to 5 mm; in bright light 2 to 3 mm (85%, Vortex). Big exit pupils matter most in the first and last light."
+ },
+ {
+  "id": "mc-skills-004",
+  "deck": "Hunting Skills Masterclass",
+  "front": "8x or 10x for timber?",
+  "back": "8x or 7x: Vortex calls them adequate for woodland; 10x for greater distances (85%)."
+ },
+ {
+  "id": "mc-skills-005",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Why glass from a tripod?",
+  "back": "A steady view shows the tiny ear flick or tail twitch a shaky view hides (65%, goHUNT).",
+  "diagram": "hf-shake"
+ },
+ {
+  "id": "mc-skills-006",
+  "deck": "Hunting Skills Masterclass",
+  "front": "How long does Josh Kirchner (onX) glass one spot?",
+  "back": "About one hour at a time before moving (65%)."
+ },
+ {
+  "id": "mc-skills-007",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Glassing order: near first or far first?",
+  "back": "Your call. Kirchner (onX): close and obvious first. Warren (Western Hunter): furthest points first, before heat haze (65%). Both: naked eye, quick pass, slow grid.",
+  "diagram": "mc-skills-glass-order"
+ },
+ {
+  "id": "mc-skills-008",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Grid glassing overlap?",
+  "back": "About a third of each binocular view (60%). Slow strips, then glass it all again."
+ },
+ {
+  "id": "mc-skills-009",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Why glass far ground early in the day?",
+  "back": "Heat waves (mirage) blur far slopes as the day warms (65%, Remi Warren)."
+ },
+ {
+  "id": "mc-skills-010",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Where should the sun be when you glass?",
+  "back": "Behind you or to the side: the animal is lit, you are in shade (Tip).",
+  "diagram": "mc-skills-light-angles"
+ },
+ {
+  "id": "mc-skills-011",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Name four 'parts' to look for when glassing.",
+  "back": "A flat horizontal back line, the ear V, vertical leg poles, a flicker of movement. Also a white rump, an antler glint (65%).",
+  "diagram": "mc-skills-parts-grid"
+ },
+ {
+  "id": "mc-skills-012",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Found one in the binoculars. First move?",
+  "back": "Do not move. Keep eyes on it, pick two landmarks, judge it with the scope (Tip).",
+  "diagram": "mc-skills-found-flow"
+ },
+ {
+  "id": "mc-skills-013",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Glassing from the truck with a rifle inside: legal?",
+  "back": "Hunt includes searching with a firearm (page 3) and hunting from a motor vehicle is unlawful (item 22) (99%). How they apply here: ask a conservation officer (VERIFY).",
+  "diagram": "mc-skills-truck-glass"
+ },
+ {
+  "id": "mc-skills-014",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Where do you measure a print in mud or snow?",
+  "back": "The floor of the print, not the rim. Average 3 to 5 prints (80%).",
+  "diagram": "mc-skills-track-measure"
+ },
+ {
+  "id": "mc-skills-015",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Stride versus straddle?",
+  "back": "Stride: same foot to the same foot (2 steps). Straddle: trail width, outside left to outside right (75%).",
+  "diagram": "mc-skills-track-measure"
+ },
+ {
+  "id": "mc-skills-016",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Mule deer front hoof length?",
+  "back": "About 5.7 to 10 cm (80%, North Dakota Game and Fish). Moose 11.4 to 17.8 cm."
+ },
+ {
+  "id": "mc-skills-017",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Faster gait does what to stride and straddle?",
+  "back": "Longer stride, narrower straddle (85%)."
+ },
+ {
+  "id": "mc-skills-018",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Stot or gallop groups leaving a bed mean?",
+  "back": "It was spooked, maybe by you. Walking tracks out: it left on its own (80%)."
+ },
+ {
+  "id": "mc-skills-019",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Tapered rope scat with hair: which family?",
+  "back": "Dog family: coyote, wolf, fox (75%). Gloves and a stick: a tapeworm risk in parts of BC (85%).",
+  "diagram": "mc-skills-scat-shapes"
+ },
+ {
+  "id": "mc-skills-020",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Blunt segmented scat, sometimes scratched over?",
+  "back": "Cat family: cougar, bobcat, lynx (75%).",
+  "diagram": "mc-skills-scat-shapes"
+ },
+ {
+  "id": "mc-skills-021",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Deer bed size?",
+  "back": "An oval about 0.9 to 1.2 m long, flattened, with hair and pellets (70%).",
+  "diagram": "mc-skills-sign-heights"
+ },
+ {
+  "id": "mc-skills-022",
+  "deck": "Hunting Skills Masterclass",
+  "front": "How high are most deer rubs?",
+  "back": "About 30 to 105 cm. Centred 75 cm or higher suggests a mature buck (60%). Height beats tree size.",
+  "diagram": "mc-skills-sign-heights"
+ },
+ {
+  "id": "mc-skills-023",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Scrape licking branch height?",
+  "back": "About 1.2 to 1.5 m above the pawed soil (65%).",
+  "diagram": "mc-skills-sign-heights"
+ },
+ {
+  "id": "mc-skills-024",
+  "deck": "Hunting Skills Masterclass",
+  "front": "When does most scraping happen?",
+  "back": "About 80% from mid October to mid November; most visits at night (65%)."
+ },
+ {
+  "id": "mc-skills-025",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Plucked whole quills on a stump: who?",
+  "back": "Likely a bird of prey. Bitten, wet, clumped feathers: a mammal (60%).",
+  "diagram": "mc-skills-feather-clues"
+ },
+ {
+  "id": "mc-skills-026",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Grouse dust bowl size?",
+  "back": "About 20 cm. Quail bowls 7 to 15 cm (65%)."
+ },
+ {
+  "id": "mc-skills-027",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Fresh track signs?",
+  "back": "Sharp edges, moist, shiny. Old: rounded, dry, debris or web inside (65 to 70%).",
+  "diagram": "mc-skills-age-ladder"
+ },
+ {
+  "id": "mc-skills-028",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Rain pits inside a print mean?",
+  "back": "Made before the rain. Clean print on pitted ground: after (70%).",
+  "diagram": "mc-skills-weather-stamp"
+ },
+ {
+  "id": "mc-skills-029",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Print cuts through frost?",
+  "back": "Made after the frost formed, often this morning (65%).",
+  "diagram": "mc-skills-weather-stamp"
+ },
+ {
+  "id": "mc-skills-030",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Lost the track. What next?",
+  "back": "Flag the last sure print, circle 10 m then 20 m; never walk on the trail (Tip, 70%).",
+  "diagram": "mc-skills-follow-4"
+ },
+ {
+  "id": "mc-skills-031",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Following a track with your rifle is what, legally?",
+  "back": "Hunting: following on the trail of wildlife with a firearm (95%). Hours and land rules apply."
+ },
+ {
+  "id": "mc-skills-032",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Is the '297 million receptors' figure a measured fact?",
+  "back": "No. An early 1990s estimate; experts think it may be low (65%, Outdoor Life 2026).",
+  "diagram": "mc-skills-nose-facts"
+ },
+ {
+  "id": "mc-skills-033",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Steady wind cone versus light wind cone?",
+  "back": "Steady: long and narrow. Light: short and wide. Swirl: everywhere, back out (Tip).",
+  "diagram": "mc-skills-cone-shapes"
+ },
+ {
+  "id": "mc-skills-034",
+  "deck": "Hunting Skills Masterclass",
+  "front": "When do upslope thermals start?",
+  "back": "Soon after the sun strikes the slope; east faces first (75%, Fire Weather handbook).",
+  "diagram": "thermals"
+ },
+ {
+  "id": "mc-skills-035",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Which slopes flip uphill first, strongest, last?",
+  "back": "East first, south strongest near midday, west by mid afternoon (75%)."
+ },
+ {
+  "id": "mc-skills-036",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Upslope thermal speed?",
+  "back": "About 5 to 13 km/h (3 to 8 mph). Downslope at night 3 to 8 km/h (75%)."
+ },
+ {
+  "id": "mc-skills-037",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Lee side of a ridge crest?",
+  "back": "Air can tumble back uphill (70%). Do not sit just behind the crest (Tip).",
+  "diagram": "mc-skills-terrain-wind"
+ },
+ {
+  "id": "mc-skills-038",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Shaded timber at 10 a.m.?",
+  "back": "Upslope above the canopy, but a thin cool layer can still slide downhill on the floor (75%).",
+  "diagram": "mc-skills-terrain-wind"
+ },
+ {
+  "id": "mc-skills-039",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Forecast wind versus head height wind?",
+  "back": "Forecast is for 10 m; at 2 m wind may be 50 to 70% of it (90%).",
+  "diagram": "mc-skills-wind-height"
+ },
+ {
+  "id": "mc-skills-040",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Four ways to check wind?",
+  "back": "Puffer bottle, milkweed, lighter flame, thread on the sling (70%, Tip)."
+ },
+ {
+  "id": "mc-skills-041",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Wind wrong for seat A on the morning?",
+  "back": "Go to seat B planned for that wind. Never force A (Tip).",
+  "diagram": "mc-skills-approach-plan"
+ },
+ {
+  "id": "mc-skills-042",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Scent products versus wind?",
+  "back": "No source here proves a product stops a deer smelling you (60%). Play the wind (Tip)."
+ },
+ {
+  "id": "mc-skills-043",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Still hunting versus stalking?",
+  "back": "Still hunting: slow walking to find an animal. Stalking: closing on one you have seen (70%).",
+  "diagram": "mc-skills-still-vs-stalk"
+ },
+ {
+  "id": "mc-skills-044",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Still hunting pace?",
+  "back": "2 or 3 steps, then look 20 seconds or more; a few hundred metres an hour (Tip)."
+ },
+ {
+  "id": "mc-skills-045",
+  "deck": "Hunting Skills Masterclass",
+  "front": "The fox walk?",
+  "back": "Weight back, outside edge of the ball down, roll in, heel, then shift weight (65%)."
+ },
+ {
+  "id": "mc-skills-046",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Which ground is quietest?",
+  "back": "Wet moss and grass, soft new snow. Loudest: dry leaves, crust, gravel (Tip).",
+  "diagram": "mc-skills-ground-noise"
+ },
+ {
+  "id": "mc-skills-047",
+  "deck": "Hunting Skills Masterclass",
+  "front": "What is dead ground?",
+  "back": "Low ground the animal cannot see into. Move fast there, slow in its sight (Tip).",
+  "diagram": "mc-skills-dead-ground"
+ },
+ {
+  "id": "mc-skills-048",
+  "deck": "Hunting Skills Masterclass",
+  "front": "The six S's of concealment?",
+  "back": "Shape, shine, shadow, silhouette, spacing, movement (70%, military teaching)."
+ },
+ {
+  "id": "mc-skills-049",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Deer colour vision?",
+  "back": "Two cones, no red cone: blue stands out; orange, red, green look dull (75%, National Deer Association).",
+  "diagram": "mc-skills-colour-see"
+ },
+ {
+  "id": "mc-skills-050",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Deer stares at you mid step?",
+  "back": "Freeze, even on one leg, until it feeds again. Hold longer than it does (Tip)."
+ },
+ {
+  "id": "mc-skills-051",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Two hunters stalking: how?",
+  "back": "One moves, one watches and signals. Hand signals, not voices (Tip).",
+  "diagram": "mc-skills-hand-signals"
+ },
+ {
+  "id": "mc-skills-052",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Where to wait for deer?",
+  "back": "Between bed and feed, downwind of the trail, in before first light (Tip).",
+  "diagram": "mc-skills-ambush-map"
+ },
+ {
+  "id": "mc-skills-053",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Most tree stand falls happen when?",
+  "back": "Climbing up or down or getting in and out: about 60% (70%, Iowa DNR (Department of Natural Resources) with Tree Stand Safety Awareness)."
+ },
+ {
+  "id": "mc-skills-054",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Tree stand ABC's?",
+  "back": "Always inspect, Buckle on a full body harness, Connect before your feet leave the ground (70%).",
+  "diagram": "mc-skills-stand-3"
+ },
+ {
+  "id": "mc-skills-055",
+  "deck": "Hunting Skills Masterclass",
+  "front": "How does the rifle get up the tree?",
+  "back": "Unloaded, on a haul line, after you are clipped in (80%, Wisconsin DNR (Department of Natural Resources)).",
+  "diagram": "mc-skills-stand-4"
+ },
+ {
+  "id": "mc-skills-056",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Suspension trauma: how fast?",
+  "back": "Can occur in under 20 minutes and can be fatal (80%, Wisconsin DNR)."
+ },
+ {
+  "id": "mc-skills-057",
+  "deck": "Hunting Skills Masterclass",
+  "front": "UW (University of Wisconsin) study: harness use among 117 injured stand hunters?",
+  "back": "Only 4 reported any harness use; 55% of injuries involved the spine (75%)."
+ },
+ {
+  "id": "mc-skills-058",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Electronic calls are legal for which animals?",
+  "back": "Wolf, coyote, cougar, lynx, bobcat and Schedule C birds only (99%, page 12 item 41).",
+  "diagram": "mc-skills-legal-calls"
+ },
+ {
+  "id": "mc-skills-059",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Mouth grunt tube for deer: legal?",
+  "back": "Yes: not recorded or electronic (95%, my reading)."
+ },
+ {
+  "id": "mc-skills-060",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Live bird decoys?",
+  "back": "Unlawful for game birds (99%, item 42). Fake decoys: allowed."
+ },
+ {
+  "id": "mc-skills-061",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Coyote calling: wind in your face or crosswind?",
+  "back": "Your call. Wilson (Outdoor Canada) prefers downwind; Nemnich and Wood prefer crosswind (65%). All: watch the downwind side.",
+  "diagram": "mc-skills-coyote-wind"
+ },
+ {
+  "id": "mc-skills-062",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Electronic caller distance from you?",
+  "back": "About 20 to 50 yd in front or upwind (60 to 65%, several callers)."
+ },
+ {
+  "id": "mc-skills-063",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Three ways to range?",
+  "back": "Laser rangefinder, scope reticle, eye methods; laser first (70%)."
+ },
+ {
+  "id": "mc-skills-064",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Mil ranging formula?",
+  "back": "Metres = size in metres × 1,000 ÷ mils (85%, Vortex).",
+  "diagram": "mc-skills-mil-range"
+ },
+ {
+  "id": "mc-skills-065",
+  "deck": "Hunting Skills Masterclass",
+  "front": "What makes things look nearer?",
+  "back": "Bright light, sun behind you, snow or water, clear air, a hidden dip (80%, Canadian Army).",
+  "diagram": "mc-skills-eye-errors"
+ },
+ {
+  "id": "mc-skills-066",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Your .308 drop, 100 m zero, at 200 / 250 / 300 m?",
+  "back": "About 13, 28 and 48 cm low with 150 gr (75%).",
+  "diagram": "mc-skills-308-drop"
+ },
+ {
+  "id": "mc-skills-067",
+  "deck": "Hunting Skills Masterclass",
+  "front": "20 km/h crosswind drift at 250 m (150 gr .308)?",
+  "back": "About 27 cm, more than the vitals (75%).",
+  "diagram": "mc-skills-308-wind"
+ },
+ {
+  "id": "mc-skills-068",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Wind at 45 degrees?",
+  "back": "About 70% of the full value (85%)."
+ },
+ {
+  "id": "mc-skills-069",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Steep shot: which distance to hold for?",
+  "back": "The flat distance: slope × cosine. 30° makes 250 m into 217 m (95%)."
+ },
+ {
+  "id": "mc-skills-070",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Steadiest to least steady positions?",
+  "back": "Prone, sitting, kneeling, standing (85%, hunter education).",
+  "diagram": "mc-skills-steadiness"
+ },
+ {
+  "id": "mc-skills-071",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Rifle barrel on a rock?",
+  "back": "Shoots high. Pad under the forend (85%, hunter education)."
+ },
+ {
+  "id": "mc-skills-072",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Natural point of aim?",
+  "back": "Where the rifle points with muscles relaxed; move your body, not the rifle (80%)."
+ },
+ {
+  "id": "mc-skills-073",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Breath before the shot?",
+  "back": "Deep breath, let about half out, hold, slow press (85%)."
+ },
+ {
+  "id": "mc-skills-074",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Why practise with the .22?",
+  "back": "Same positions and trigger, a fraction of the cost (65%); it teaches wind cheaply.",
+  "diagram": "mc-skills-22-drill"
+ },
+ {
+  "id": "mc-skills-075",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Rifle aim point on a broadside deer?",
+  "back": "Up the back of the near front leg, one third up the chest (85%).",
+  "diagram": "vitals-deer"
+ },
+ {
+  "id": "mc-skills-076",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Deer vital zone with margin?",
+  "back": "About 20 to 25 cm (75%)."
+ },
+ {
+  "id": "mc-skills-077",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Quartering toward: beginner's call?",
+  "back": "Wait for the turn: bone in the way (85%, Tip)."
+ },
+ {
+  "id": "mc-skills-078",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Moose aim trap?",
+  "back": "The hump makes you aim high. Aim lower than instinct (65%).",
+  "diagram": "mc-skills-vitals-compare"
+ },
+ {
+  "id": "mc-skills-079",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Black bear aim height?",
+  "back": "Halfway up, tight behind the shoulder once the near leg steps forward (85%).",
+  "diagram": "mc-skills-vitals-compare"
+ },
+ {
+  "id": "mc-skills-080",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Long duck shot limit with steel?",
+  "back": "35 m (38 yd) is a long shot (70%).",
+  "diagram": "mc-skills-pattern-range"
+ },
+ {
+  "id": "mc-skills-081",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Pellets needed for big ducks?",
+  "back": "About 100 in a 76 cm (30 in) circle at your longest range (70%, Ducks Unlimited)."
+ },
+ {
+  "id": "mc-skills-082",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Six no shoot reasons?",
+  "back": "No backstop, not 100% sure, moving, too far, through brush, lying down (70 to 85%, Tip).",
+  "diagram": "mc-skills-noshot-icons"
+ },
+ {
+  "id": "mc-skills-083",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Brush busting bullets?",
+  "back": "No bullet reliably goes through brush; a twig can throw the shot (70%, American Hunter)."
+ },
+ {
+  "id": "mc-skills-084",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Buck fever fix?",
+  "back": "Decide early, range landmarks, look at the spot not the antlers, breathe out; shaking hard means let it walk (60%, Tip).",
+  "diagram": "mc-skills-buck-fever"
+ },
+ {
+  "id": "mc-skills-085",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Mule kick and hard low run after the shot?",
+  "back": "Often heart or lungs (70%)."
+ },
+ {
+  "id": "mc-skills-086",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Hunched back and slow walk?",
+  "back": "Often a gut hit: mark it and back out for hours (70%)."
+ },
+ {
+  "id": "mc-skills-087",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Wait: heart or lungs, out of sight?",
+  "back": "30 minutes minimum (70%).",
+  "diagram": "sk-wait-chart"
+ },
+ {
+  "id": "mc-skills-088",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Wait: liver?",
+  "back": "4 to 6 hours (hunter education); 2 to 4 (National Deer Association) (70%)."
+ },
+ {
+  "id": "mc-skills-089",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Wait: gut?",
+  "back": "6 to 8 hours, or overnight if cool (hunter education, 70%); Pennsylvania: at least 8 hours."
+ },
+ {
+  "id": "mc-skills-090",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Pink frothy blood?",
+  "back": "Lungs (65 to 70%). Dark, no bubbles: liver. Green bits: gut.",
+  "diagram": "mc-skills-blood-read"
+ },
+ {
+  "id": "mc-skills-091",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Which way does a blood drop tail point?",
+  "back": "The way the animal went (80% physics, Tip in the field).",
+  "diagram": "mc-skills-blood-read"
+ },
+ {
+  "id": "mc-skills-092",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Where do wounded deer head?",
+  "back": "Downhill, to water and thick cover, often on a trail (70%)."
+ },
+ {
+  "id": "mc-skills-093",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Grid search lane spacing?",
+  "back": "About 10 m apart, each searcher in sight of the next (70%)."
+ },
+ {
+  "id": "mc-skills-094",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Tracking with rifle and headlamp after hours?",
+  "back": "No: that is hunting outside hours and with a light (95%, 85% my reading)."
+ },
+ {
+  "id": "mc-skills-095",
+  "deck": "Hunting Skills Masterclass",
+  "front": "The retrieval rule?",
+  "back": "All reasonable effort to locate, dispatch, retrieve and count it (95%, page 12).",
+  "diagram": "mc-skills-after-flow"
+ },
+ {
+  "id": "mc-skills-096",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Before you handle a big game kill?",
+  "back": "Cancel your own species licence immediately (99%).",
+  "diagram": "mc-skills-first-five"
+ },
+ {
+  "id": "mc-skills-097",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Meat temperature target?",
+  "back": "Below 4°C as fast as you can (80%).",
+  "diagram": "mc-skills-temp-ladder"
+ },
+ {
+  "id": "mc-skills-098",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Food danger zone?",
+  "back": "4 to 60°C; bacteria can double every 20 minutes (80%).",
+  "diagram": "mc-skills-temp-ladder"
+ },
+ {
+  "id": "mc-skills-099",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Cook wild game to?",
+  "back": "At least 71°C; freezing does not kill wild Trichinella in bear (95%, CFIA (Canadian Food Inspection Agency))."
+ },
+ {
+  "id": "mc-skills-100",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Guts in overnight?",
+  "back": "Spoils regardless of temperature (80%, Alaska Department of Fish and Game)."
+ },
+ {
+  "id": "mc-skills-101",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Plastic on warm meat?",
+  "back": "Never: plastic holds heat in. Cloth game bags, hung apart (80%).",
+  "diagram": "mc-skills-warm-4"
+ },
+ {
+  "id": "mc-skills-102",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Big game edible portions?",
+  "back": "Neck, ribs, four quarters and loins (95%, page 3).",
+  "diagram": "mc-skills-meat-map"
+ },
+ {
+  "id": "mc-skills-103",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Game bags needed?",
+  "back": "About 4 for a deer, 8 for a moose (80%)."
+ },
+ {
+  "id": "mc-skills-104",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Deer boneless meat yield?",
+  "back": "About 48% of field dressed weight (70 to 80%).",
+  "diagram": "mc-skills-pack-loads"
+ },
+ {
+  "id": "mc-skills-105",
+  "deck": "Hunting Skills Masterclass",
+  "front": "ACTS?",
+  "back": "Assume loaded, Control the muzzle, Trigger finger off, See it is unloaded (85%).",
+  "diagram": "mc-skills-acts-prove"
+ },
+ {
+  "id": "mc-skills-106",
+  "deck": "Hunting Skills Masterclass",
+  "front": "PROVE?",
+  "back": "Point safe, Remove cartridges, Observe chamber, Verify feed path, Examine bore (85%).",
+  "diagram": "mc-skills-acts-prove"
+ },
+ {
+  "id": "mc-skills-107",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Zone of fire for each of two hunters?",
+  "back": "About 45 degrees straight ahead; the middle and behind are no shot (75%).",
+  "diagram": "mc-skills-partner-arcs"
+ },
+ {
+  "id": "mc-skills-108",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Bleeding control order?",
+  "back": "Press, pack, tourniquet (75%)."
+ },
+ {
+  "id": "mc-skills-109",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Tourniquet distance above the wound?",
+  "back": "Your call: 5 to 8 cm (American Red Cross, Stop the Bleed, 70%) or 5 to 10 cm (Canadian Red Cross 2012, 75%). Heart side, never on a joint.",
+  "diagram": "mc-skills-tq-choices"
+ },
+ {
+  "id": "mc-skills-110",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Loosen a tourniquet after 10 minutes?",
+  "back": "Sources differ: older 2012 Canadian sheet says slowly release if bleeding dropped; newer sources say never. Ask your instructor (VERIFY).",
+  "diagram": "mc-skills-tq-choices"
+ },
+ {
+  "id": "mc-skills-111",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Early hypothermia signs?",
+  "back": "Stumbles, mumbles, fumbles, grumbles (75%). Shivering that stops is an emergency.",
+  "diagram": "gr-hypo-scale"
+ },
+ {
+  "id": "mc-skills-112",
+  "deck": "Hunting Skills Masterclass",
+  "front": "STOP?",
+  "back": "Stop, Think, Observe, Plan. Doubt means stay (75%)."
+ },
+ {
+  "id": "mc-skills-113",
+  "deck": "Hunting Skills Masterclass",
+  "front": "Distress signal?",
+  "back": "Anything in threes: whistle, mirror, horn, fires (75%)."
+ },
+ {
+  "id": "mc-skills-114",
+  "deck": "Hunting Skills Masterclass",
+  "front": "First call when you need help?",
+  "back": "911 on any phone; any tower in range (75%). No signal: satellite SOS (65 to 85%).",
+  "diagram": "mc-skills-comms"
+ }
+]

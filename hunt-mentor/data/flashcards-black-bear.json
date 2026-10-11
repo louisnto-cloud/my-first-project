@@ -1,0 +1,726 @@
+[
+ {
+  "id": "mc-black-bear-001",
+  "deck": "Black Bear Masterclass",
+  "front": "Black bear or grizzly: name the 4 shape clues.",
+  "back": "Shoulder hump, face profile, ears, front claws. Use at least 3 (85%).",
+  "diagram": "mc-black-bear-id-flow"
+ },
+ {
+  "id": "mc-black-bear-002",
+  "deck": "Black Bear Masterclass",
+  "front": "Does a black bear have a shoulder hump?",
+  "back": "No. Its rump is the high point of the back (90%). A grizzly's hump is the high point.",
+  "diagram": "sa-bid-1"
+ },
+ {
+  "id": "mc-black-bear-003",
+  "deck": "Black Bear Masterclass",
+  "front": "Black bear face profile?",
+  "back": "Straight from forehead to nose. A grizzly's is dished (90%).",
+  "diagram": "sa-bid-2"
+ },
+ {
+  "id": "mc-black-bear-004",
+  "deck": "Black Bear Masterclass",
+  "front": "Black bear ears vs grizzly ears?",
+  "back": "Black bear: taller, more pointed. Grizzly: short and round (85%).",
+  "diagram": "sa-bid-3"
+ },
+ {
+  "id": "mc-black-bear-005",
+  "deck": "Black Bear Masterclass",
+  "front": "Can you ID a black bear by colour?",
+  "back": "No. Interior black bears are often brown, cinnamon or blond (90%). Shape, not colour.",
+  "diagram": "mc-black-bear-colour-trap"
+ },
+ {
+  "id": "mc-black-bear-006",
+  "deck": "Black Bear Masterclass",
+  "front": "Is there a grizzly season in BC?",
+  "back": "No open season anywhere in BC (98%)."
+ },
+ {
+  "id": "mc-black-bear-007",
+  "deck": "Black Bear Masterclass",
+  "front": "White (Kermode) or blue (Glacier) black bear: legal?",
+  "back": "Never. Item 15, page 11 (99%)."
+ },
+ {
+  "id": "mc-black-bear-008",
+  "deck": "Black Bear Masterclass",
+  "front": "Which bears are never legal under item 14?",
+  "back": "A black bear under 2 years old, and any bear in its company (99%).",
+  "diagram": "mc-black-bear-age-classes"
+ },
+ {
+  "id": "mc-black-bear-009",
+  "deck": "Black Bear Masterclass",
+  "front": "What does the synopsis notice ask bear hunters to select?",
+  "back": "An adult male bear. \"Be patient. Don't shoot the moment you see a bear!\" (98%)",
+  "diagram": "sa-bear-age"
+ },
+ {
+  "id": "mc-black-bear-010",
+  "deck": "Black Bear Masterclass",
+  "front": "Adult male black bear weight in BC?",
+  "back": "80 to 300 kg (90%, BC account).",
+  "diagram": "mc-black-bear-size-bars"
+ },
+ {
+  "id": "mc-black-bear-011",
+  "deck": "Black Bear Masterclass",
+  "front": "Adult female black bear weight in BC?",
+  "back": "40 to 140 kg (90%)."
+ },
+ {
+  "id": "mc-black-bear-012",
+  "deck": "Black Bear Masterclass",
+  "front": "Black bear shoulder height, adult males?",
+  "back": "60 to 90 cm, about waist high (90%)."
+ },
+ {
+  "id": "mc-black-bear-013",
+  "deck": "Black Bear Masterclass",
+  "front": "How many races of black bear in BC?",
+  "back": "6, more than anywhere in Canada (90%).",
+  "diagram": "mc-black-bear-races"
+ },
+ {
+  "id": "mc-black-bear-014",
+  "deck": "Black Bear Masterclass",
+  "front": "Which race lives around Heffley Creek and the Okanagan?",
+  "back": "U. a. cinnamomum: interior, brown phase common (90%)."
+ },
+ {
+  "id": "mc-black-bear-015",
+  "deck": "Black Bear Masterclass",
+  "front": "Which race lives in the Fraser Valley?",
+  "back": "U. a. altifrontalis: south coast, mostly black (90%)."
+ },
+ {
+  "id": "mc-black-bear-016",
+  "deck": "Black Bear Masterclass",
+  "front": "Often quoted number of black bears in BC?",
+  "back": "120,000 to 160,000, about a quarter of Canada's (BC account). Data thin (70%)."
+ },
+ {
+  "id": "mc-black-bear-017",
+  "deck": "Black Bear Masterclass",
+  "front": "MU 3-27 black bear success, 2020 to 2024?",
+  "back": "About 1 hunter in 4; about 28 hunter days per bear (90%, computed).",
+  "diagram": "mc-black-bear-harvest"
+ },
+ {
+  "id": "mc-black-bear-018",
+  "deck": "Black Bear Masterclass",
+  "front": "Black bear claw length?",
+  "back": "Rarely over about 3.8 cm (1.5 in); short and curved for climbing (85%).",
+  "diagram": "mc-black-bear-claws"
+ },
+ {
+  "id": "mc-black-bear-019",
+  "deck": "Black Bear Masterclass",
+  "front": "What does plantigrade mean?",
+  "back": "Flat footed: the whole sole touches the ground, like ours (90%)."
+ },
+ {
+  "id": "mc-black-bear-020",
+  "deck": "Black Bear Masterclass",
+  "front": "How fast can a lean black bear run?",
+  "back": "Over 48 km/h (30 mph) (70%). You cannot outrun one."
+ },
+ {
+  "id": "mc-black-bear-021",
+  "deck": "Black Bear Masterclass",
+  "front": "Where do you aim on a broadside black bear?",
+  "back": "Halfway up, tight behind the shoulder, near leg forward, through both lungs (85%).",
+  "diagram": "vitals-bear"
+ },
+ {
+  "id": "mc-black-bear-022",
+  "deck": "Black Bear Masterclass",
+  "front": "Bear vital zone size?",
+  "back": "About a 20 cm (8 in) circle behind the shoulder (85%)."
+ },
+ {
+  "id": "mc-black-bear-023",
+  "deck": "Black Bear Masterclass",
+  "front": "How thick are a bear's fat and hair?",
+  "back": "Fat 2.5 to 5 cm, hair 8 to 10 cm. It looks bigger than it is (70%)."
+ },
+ {
+  "id": "mc-black-bear-024",
+  "deck": "Black Bear Masterclass",
+  "front": "Why are head and shoulder shots on bears a bad idea?",
+  "back": "Dense, sloped skull deflects bullets; heavy shoulder bone (85%)."
+ },
+ {
+  "id": "mc-black-bear-025",
+  "deck": "Black Bear Masterclass",
+  "front": "How many stomachs does a bear have?",
+  "back": "One simple stomach and a short gut. It digests fibre poorly (90%).",
+  "diagram": "mc-black-bear-gut"
+ },
+ {
+  "id": "mc-black-bear-026",
+  "deck": "Black Bear Masterclass",
+  "front": "About how much of a black bear's diet is plants?",
+  "back": "About 80% (75%, WildSafeBC)."
+ },
+ {
+  "id": "mc-black-bear-027",
+  "deck": "Black Bear Masterclass",
+  "front": "How much heavier is a bear in fall?",
+  "back": "About 20% heavier than after the den (85%, Alaska).",
+  "diagram": "mc-black-bear-fat-year"
+ },
+ {
+  "id": "mc-black-bear-028",
+  "deck": "Black Bear Masterclass",
+  "front": "Den heart rate?",
+  "back": "About 50 to 55 a minute drops to about 10 to 14 (80 to 90%)."
+ },
+ {
+  "id": "mc-black-bear-029",
+  "deck": "Black Bear Masterclass",
+  "front": "Den metabolism?",
+  "back": "About 25% of normal, with body temperature only 3 to 6°C lower (80%).",
+  "diagram": "mc-black-bear-den-body"
+ },
+ {
+  "id": "mc-black-bear-030",
+  "deck": "Black Bear Masterclass",
+  "front": "Weight lost in the den?",
+  "back": "Up to a quarter of body weight (90%). WildSafeBC says about 30% (75%)."
+ },
+ {
+  "id": "mc-black-bear-031",
+  "deck": "Black Bear Masterclass",
+  "front": "What does a denned bear not do for months?",
+  "back": "Eat, drink, urinate or defecate (90%)."
+ },
+ {
+  "id": "mc-black-bear-032",
+  "deck": "Black Bear Masterclass",
+  "front": "When does a sow first breed, and how often?",
+  "back": "Usually about age 4, then every 2 to 3 years (90%).",
+  "diagram": "mc-black-bear-cub-timeline"
+ },
+ {
+  "id": "mc-black-bear-033",
+  "deck": "Black Bear Masterclass",
+  "front": "Typical wild lifespan?",
+  "back": "15 to 20 years typical; over 30 possible (75%, WildSafeBC)."
+ },
+ {
+  "id": "mc-black-bear-034",
+  "deck": "Black Bear Masterclass",
+  "front": "Rank a bear's senses.",
+  "back": "Nose first, ears second, eyes third (70%).",
+  "diagram": "mc-black-bear-senses-rank"
+ },
+ {
+  "id": "mc-black-bear-035",
+  "deck": "Black Bear Masterclass",
+  "front": "How much bigger is a bear's nose lining than ours?",
+  "back": "About 100 times the area (70%, North American Bear Center)."
+ },
+ {
+  "id": "mc-black-bear-036",
+  "deck": "Black Bear Masterclass",
+  "front": "How far can a bear smell food?",
+  "back": "Over 1 km (70%, WildSafeBC)."
+ },
+ {
+  "id": "mc-black-bear-037",
+  "deck": "Black Bear Masterclass",
+  "front": "Bear hearing vs ours?",
+  "back": "Over twice as sensitive, with a higher range (70%)."
+ },
+ {
+  "id": "mc-black-bear-038",
+  "deck": "Black Bear Masterclass",
+  "front": "Do bears see colour?",
+  "back": "Yes, and sharp up close; distance vision untested (70%)."
+ },
+ {
+  "id": "mc-black-bear-039",
+  "deck": "Black Bear Masterclass",
+  "front": "Morning vs evening thermals?",
+  "back": "Morning: air drifts uphill. Evening: downhill (80%)."
+ },
+ {
+  "id": "mc-black-bear-040",
+  "deck": "Black Bear Masterclass",
+  "front": "When do you move on a feeding bear?",
+  "back": "When its head is down and it feeds noisily. Freeze when it looks up (Tip)."
+ },
+ {
+  "id": "mc-black-bear-041",
+  "deck": "Black Bear Masterclass",
+  "front": "A bear stands on its hind legs. Why?",
+  "back": "Usually to see and smell better, not to charge (Tip)."
+ },
+ {
+  "id": "mc-black-bear-042",
+  "deck": "Black Bear Masterclass",
+  "front": "Signs of an agitated, defensive bear?",
+  "back": "Jaw popping, woofing, moaning, stomping, bluff charge (75%).",
+  "diagram": "fs-bc-warning"
+ },
+ {
+  "id": "mc-black-bear-043",
+  "deck": "Black Bear Masterclass",
+  "front": "Defensive vs predatory bear?",
+  "back": "Defensive: noisy, fast, surprised. Predatory: quiet, stalks, keeps coming: spray and fight back (75%).",
+  "diagram": "fs-bc-attack-types"
+ },
+ {
+  "id": "mc-black-bear-044",
+  "deck": "Black Bear Masterclass",
+  "front": "Fatal black bear attacks in BC?",
+  "back": "Fewer than one every 3 years on average (75%, WildSafeBC)."
+ },
+ {
+  "id": "mc-black-bear-045",
+  "deck": "Black Bear Masterclass",
+  "front": "Black bear social groups?",
+  "back": "Mostly solitary: sow with cubs, and the brief mating pair (90%)."
+ },
+ {
+  "id": "mc-black-bear-046",
+  "deck": "Black Bear Masterclass",
+  "front": "How long do cubs stay with the sow?",
+  "back": "Their first year and first winter; on their own by the middle or end of their 2nd spring (90%)."
+ },
+ {
+  "id": "mc-black-bear-047",
+  "deck": "Black Bear Masterclass",
+  "front": "Boar home range vs sow?",
+  "back": "Boar 25 to 150 km2; sow 5 to 25 km2 (90%).",
+  "diagram": "mc-black-bear-home-range"
+ },
+ {
+  "id": "mc-black-bear-048",
+  "deck": "Black Bear Masterclass",
+  "front": "Boar behaviours to watch for?",
+  "back": "Rubbing trees, breaking saplings, chasing and dominating other bears (65%)."
+ },
+ {
+  "id": "mc-black-bear-049",
+  "deck": "Black Bear Masterclass",
+  "front": "Bears near people: when do they feed?",
+  "back": "More at night (75%)."
+ },
+ {
+  "id": "mc-black-bear-050",
+  "deck": "Black Bear Masterclass",
+  "front": "At what distance do you use bear spray?",
+  "back": "About 5 to 10 m (75%, WildSafeBC).",
+  "diagram": "fs-bc-spray-ranges"
+ },
+ {
+  "id": "mc-black-bear-051",
+  "deck": "Black Bear Masterclass",
+  "front": "How often did spray stop black bears in the Alaska study?",
+  "back": "About 90% (92% brown bears); 98% of spray carriers uninjured (80%)."
+ },
+ {
+  "id": "mc-black-bear-052",
+  "deck": "Black Bear Masterclass",
+  "front": "Where do you carry bear spray?",
+  "back": "On the chest or hip, never in the pack (75%)."
+ },
+ {
+  "id": "mc-black-bear-053",
+  "deck": "Black Bear Masterclass",
+  "front": "When do black bears mate?",
+  "back": "Early June to mid July (90%).",
+  "diagram": "mc-black-bear-year-strip"
+ },
+ {
+  "id": "mc-black-bear-054",
+  "deck": "Black Bear Masterclass",
+  "front": "What is delayed implantation?",
+  "back": "The embryo waits and implants only in October or November, if the sow is fat enough (75 to 90%)."
+ },
+ {
+  "id": "mc-black-bear-055",
+  "deck": "Black Bear Masterclass",
+  "front": "When and how big are cubs born?",
+  "back": "January or February in the den, about 400 g (90%)."
+ },
+ {
+  "id": "mc-black-bear-056",
+  "deck": "Black Bear Masterclass",
+  "front": "Cub weight leaving the den?",
+  "back": "About 2 to 5 kg (75 to 90%)."
+ },
+ {
+  "id": "mc-black-bear-057",
+  "deck": "Black Bear Masterclass",
+  "front": "Den exit near the Okanagan (Gaines 2003)?",
+  "back": "Males 4 April to 7 May; females 4 April to 22 May (80%).",
+  "diagram": "mc-black-bear-den-order"
+ },
+ {
+  "id": "mc-black-bear-058",
+  "deck": "Black Bear Masterclass",
+  "front": "Den entry near the Okanagan (Gaines 2003)?",
+  "back": "Females 15 Oct to 19 Nov; males 22 Oct to 19 Nov (80%)."
+ },
+ {
+  "id": "mc-black-bear-059",
+  "deck": "Black Bear Masterclass",
+  "front": "Who dens first and comes out last?",
+  "back": "Sows, especially with cubs. Big males den last (80%)."
+ },
+ {
+  "id": "mc-black-bear-060",
+  "deck": "Black Bear Masterclass",
+  "front": "How long do interior bears den?",
+  "back": "Probably 5 to 7 months; 3 to 5 on the south coast (90%)."
+ },
+ {
+  "id": "mc-black-bear-061",
+  "deck": "Black Bear Masterclass",
+  "front": "What is hyperphagia?",
+  "back": "The late summer and fall feeding frenzy: up to 20,000 calories a day (70%).",
+  "diagram": "rp-bear-calories"
+ },
+ {
+  "id": "mc-black-bear-062",
+  "deck": "Black Bear Masterclass",
+  "front": "Spring bear foods?",
+  "back": "Grasses, sedges, horsetail, skunk cabbage, south slopes, avalanche chutes, burns; newborn fawns and calves (90%)."
+ },
+ {
+  "id": "mc-black-bear-063",
+  "deck": "Black Bear Masterclass",
+  "front": "Fall bear foods?",
+  "back": "Berries and spawning fish; fruit and apples (90%)."
+ },
+ {
+  "id": "mc-black-bear-064",
+  "deck": "Black Bear Masterclass",
+  "front": "Region 3 black bear seasons, most MUs?",
+  "back": "1 April to 30 June and 1 September to 30 November; bag 2 (99%, page 34).",
+  "diagram": "mc-black-bear-three-areas"
+ },
+ {
+  "id": "mc-black-bear-065",
+  "deck": "Black Bear Masterclass",
+  "front": "Region 3, MU 3-46 fall bear opener?",
+  "back": "20 September (99%, page 34)."
+ },
+ {
+  "id": "mc-black-bear-066",
+  "deck": "Black Bear Masterclass",
+  "front": "Region 2 black bear seasons?",
+  "back": "1 Apr to 15 June; 10 Sept to 30 Nov; bow only 1 to 9 Sept (99%, page 28)."
+ },
+ {
+  "id": "mc-black-bear-067",
+  "deck": "Black Bear Masterclass",
+  "front": "Region 8 August bear season?",
+  "back": "1 to 31 Aug, private land only, with the owner's permission (99%, page 68)."
+ },
+ {
+  "id": "mc-black-bear-068",
+  "deck": "Black Bear Masterclass",
+  "front": "Bear bag limit?",
+  "back": "2 per licence year, 1 April to 31 March (99%)."
+ },
+ {
+  "id": "mc-black-bear-069",
+  "deck": "Black Bear Masterclass",
+  "front": "When are black bears most active?",
+  "back": "Mainly by day, with dawn and dusk peaks; more at night near people (65 to 75%).",
+  "diagram": "mc-black-bear-day-clock"
+ },
+ {
+  "id": "mc-black-bear-070",
+  "deck": "Black Bear Masterclass",
+  "front": "Legal hours for bear?",
+  "back": "1 hour before sunrise to 1 hour after sunset; no lights or infrared optics (99%)."
+ },
+ {
+  "id": "mc-black-bear-071",
+  "deck": "Black Bear Masterclass",
+  "front": "Does the moon change bear movement?",
+  "back": "No good bear data found: VERIFY. Do not plan around it.",
+  "diagram": "mc-black-bear-weather"
+ },
+ {
+  "id": "mc-black-bear-072",
+  "deck": "Black Bear Masterclass",
+  "front": "How long can a fall bear forage in a day?",
+  "back": "Up to about 20 hours (65%)."
+ },
+ {
+  "id": "mc-black-bear-073",
+  "deck": "Black Bear Masterclass",
+  "front": "Where are black bears absent?",
+  "back": "Most alpine, grassland and heavily settled land (90%).",
+  "diagram": "mc-black-bear-habitat"
+ },
+ {
+  "id": "mc-black-bear-074",
+  "deck": "Black Bear Masterclass",
+  "front": "Which cutblocks feed bears?",
+  "back": "About 5 to 20 years old (Hunt Map tip). Dense second growth makes little bear food (90%)."
+ },
+ {
+  "id": "mc-black-bear-075",
+  "deck": "Black Bear Masterclass",
+  "front": "Why are coastal bear densities higher?",
+  "back": "Spawning salmon (90%)."
+ },
+ {
+  "id": "mc-black-bear-076",
+  "deck": "Black Bear Masterclass",
+  "front": "Haida Gwaii stream study: salmon moved by bears?",
+  "back": "About 3,700 salmon (10,000 kg) along 800 m in a season; about half of each eaten (75%)."
+ },
+ {
+  "id": "mc-black-bear-077",
+  "deck": "Black Bear Masterclass",
+  "front": "Spring elevation of bears?",
+  "back": "Low: south slopes, valley bottoms, riparian strips (85%).",
+  "diagram": "mc-black-bear-elevation"
+ },
+ {
+  "id": "mc-black-bear-078",
+  "deck": "Black Bear Masterclass",
+  "front": "Fall elevation of bears?",
+  "back": "Follows berries upslope, then back down to fruit and fish (70%)."
+ },
+ {
+  "id": "mc-black-bear-079",
+  "deck": "Black Bear Masterclass",
+  "front": "No hunting within how far of a dwelling or occupied farm building?",
+  "back": "100 m (109 yd) (99%, page 10)."
+ },
+ {
+  "id": "mc-black-bear-080",
+  "deck": "Black Bear Masterclass",
+  "front": "Black bear front and hind track sizes?",
+  "back": "Front about 11 x 10 cm; hind about 18 x 9 cm, like a wide human foot (65%).",
+  "diagram": "mc-black-bear-tracks"
+ },
+ {
+  "id": "mc-black-bear-081",
+  "deck": "Black Bear Masterclass",
+  "front": "Straight edge track test?",
+  "back": "Edge across the top of the front pad cuts the toes: black bear. Toes above the line: grizzly (80%).",
+  "diagram": "mc-black-bear-track-test"
+ },
+ {
+  "id": "mc-black-bear-082",
+  "deck": "Black Bear Masterclass",
+  "front": "Claw marks ahead of toe pads: black vs grizzly?",
+  "back": "Black 2.5 to 6.4 cm (1 to 2.5 in); grizzly 5 to 11.4 cm (2 to 4.5 in) (80%)."
+ },
+ {
+  "id": "mc-black-bear-083",
+  "deck": "Black Bear Masterclass",
+  "front": "6 kinds of bear sign?",
+  "back": "Scat, torn logs, rub trees, claw marks, flipped rocks, worn trails (85 to 90%).",
+  "diagram": "mc-black-bear-sign-grid"
+ },
+ {
+  "id": "mc-black-bear-084",
+  "deck": "Black Bear Masterclass",
+  "front": "What do bears do on old trails?",
+  "back": "Step in the same footprints, year after year (90%)."
+ },
+ {
+  "id": "mc-black-bear-085",
+  "deck": "Black Bear Masterclass",
+  "front": "What does fresh fall bear scat usually hold?",
+  "back": "Berries and seeds; tells you what is ripe now (Tip).",
+  "diagram": "mc-black-bear-scat"
+ },
+ {
+  "id": "mc-black-bear-086",
+  "deck": "Black Bear Masterclass",
+  "front": "Raked mound of debris, birds, rot smell?",
+  "back": "Likely a bear cache. Back away; a bear may be bedded close (85%).",
+  "diagram": "rs-pr-bear-cache"
+ },
+ {
+  "id": "mc-black-bear-087",
+  "deck": "Black Bear Masterclass",
+  "front": "Can you hunt bears over bait or a carcass?",
+  "back": "No. Item 21, page 11 and note 6, page 13 (99%).",
+  "diagram": "mc-black-bear-methods"
+ },
+ {
+  "id": "mc-black-bear-088",
+  "deck": "Black Bear Masterclass",
+  "front": "Electronic calls for bear?",
+  "back": "No. Only wolf, coyote, cougar, lynx, bobcat and Schedule C birds (99%, page 12)."
+ },
+ {
+  "id": "mc-black-bear-089",
+  "deck": "Black Bear Masterclass",
+  "front": "Mouth or hand calls for bear?",
+  "back": "Allowed, my reading: only recorded or electronic calls are banned (95%)."
+ },
+ {
+  "id": "mc-black-bear-090",
+  "deck": "Black Bear Masterclass",
+  "front": "Unleashed dogs for black bear?",
+  "back": "Allowed, page 12 (99%)."
+ },
+ {
+  "id": "mc-black-bear-091",
+  "deck": "Black Bear Masterclass",
+  "front": "Can you use a rimfire for black bear?",
+  "back": "No (99%, page 13)."
+ },
+ {
+  "id": "mc-black-bear-092",
+  "deck": "Black Bear Masterclass",
+  "front": "Shotgun rule for black bear?",
+  "back": "20 gauge or larger, No. 1 Buck or larger (99%, page 13)."
+ },
+ {
+  "id": "mc-black-bear-093",
+  "deck": "Black Bear Masterclass",
+  "front": "Synopsis: young bear clues?",
+  "back": "All legs, looks over its shoulder, pointed head, big looking ears close together, thin neck (98%).",
+  "diagram": "mc-black-bear-judge-3"
+ },
+ {
+  "id": "mc-black-bear-094",
+  "deck": "Black Bear Masterclass",
+  "front": "Synopsis: large adult male clues?",
+  "back": "Stocky legs, belly near the ground, slow, round head, small looking ears, thick neck (98%)."
+ },
+ {
+  "id": "mc-black-bear-095",
+  "deck": "Black Bear Masterclass",
+  "front": "Judge a bear in 4 steps?",
+  "back": "Species, cubs, sex and size, then the shot (Tip).",
+  "diagram": "mc-black-bear-judge-1"
+ },
+ {
+  "id": "mc-black-bear-096",
+  "deck": "Black Bear Masterclass",
+  "front": "How long to watch a lone bear for cubs?",
+  "back": "At least 5 minutes (Tip, quick lesson).",
+  "diagram": "mc-black-bear-judge-2"
+ },
+ {
+  "id": "mc-black-bear-097",
+  "deck": "Black Bear Masterclass",
+  "front": "Partner roles on a bear?",
+  "back": "One glasses and watches for cubs; one stalks and shoots (Tip).",
+  "diagram": "mc-black-bear-partner"
+ },
+ {
+  "id": "mc-black-bear-098",
+  "deck": "Black Bear Masterclass",
+  "front": "First thing at a dead bear?",
+  "back": "Cancel the species licence before handling it (99%, item 1).",
+  "diagram": "mc-black-bear-kill-rules"
+ },
+ {
+  "id": "mc-black-bear-099",
+  "deck": "Black Bear Masterclass",
+  "front": "Must you take bear meat?",
+  "back": "Yes. The edible portions rule applies to black bear (99%)."
+ },
+ {
+  "id": "mc-black-bear-100",
+  "deck": "Black Bear Masterclass",
+  "front": "Gall bladder rule?",
+  "back": "Remove and leave it at the kill site, or dispose of the gut pile with it within 48 hours (99%)."
+ },
+ {
+  "id": "mc-black-bear-101",
+  "deck": "Black Bear Masterclass",
+  "front": "Bear paws?",
+  "back": "Keep your own for personal use; never sell or trade them (99%)."
+ },
+ {
+  "id": "mc-black-bear-102",
+  "deck": "Black Bear Masterclass",
+  "front": "Evidence of sex for black bear?",
+  "back": "No rule on page 15 (99%)."
+ },
+ {
+  "id": "mc-black-bear-103",
+  "deck": "Black Bear Masterclass",
+  "front": "Taking a bear hide out of Canada?",
+  "back": "CITES export permit (99%, page 16)."
+ },
+ {
+  "id": "mc-black-bear-104",
+  "deck": "Black Bear Masterclass",
+  "front": "Wait after a lung hit?",
+  "back": "About 30 minutes (70 to 85%).",
+  "diagram": "sk-wait-chart"
+ },
+ {
+  "id": "mc-black-bear-105",
+  "deck": "Black Bear Masterclass",
+  "front": "Why skin a bear right away?",
+  "back": "Fat and hide hold heat: meat spoils and hair slips (85%).",
+  "diagram": "mc-black-bear-skin-1"
+ },
+ {
+  "id": "mc-black-bear-106",
+  "deck": "Black Bear Masterclass",
+  "front": "Hide storage rule?",
+  "back": "Game bag or burlap, never plastic (85%).",
+  "diagram": "mc-black-bear-skin-4"
+ },
+ {
+  "id": "mc-black-bear-107",
+  "deck": "Black Bear Masterclass",
+  "front": "Salt for a black bear hide?",
+  "back": "About 4.5 to 7 kg (10 to 15 lb), non iodized (85%)."
+ },
+ {
+  "id": "mc-black-bear-108",
+  "deck": "Black Bear Masterclass",
+  "front": "Which parts of the face need turning or splitting?",
+  "back": "Ears turned, lips and eyelids split, nose trimmed to about 2.5 cm (85%).",
+  "diagram": "mc-black-bear-skin-3"
+ },
+ {
+  "id": "mc-black-bear-109",
+  "deck": "Black Bear Masterclass",
+  "front": "Bear skull score?",
+  "back": "Length plus width of the cleaned skull, after 60 days drying (75%).",
+  "diagram": "mc-black-bear-skull"
+ },
+ {
+  "id": "mc-black-bear-110",
+  "deck": "Black Bear Masterclass",
+  "front": "Safe internal temperature for bear meat?",
+  "back": "71°C (160°F), checked with a thermometer (85%).",
+  "diagram": "mc-black-bear-trich"
+ },
+ {
+  "id": "mc-black-bear-111",
+  "deck": "Black Bear Masterclass",
+  "front": "Does freezing kill Trichinella in bear?",
+  "back": "No. Trichinella nativa survives freezing for months or years (85%)."
+ },
+ {
+  "id": "mc-black-bear-112",
+  "deck": "Black Bear Masterclass",
+  "front": "BC bear meat outbreak, 2005?",
+  "back": "Victoria: frozen black bear meat; 26 probable cases among 42 eaters (75%)."
+ },
+ {
+  "id": "mc-black-bear-113",
+  "deck": "Black Bear Masterclass",
+  "front": "Which bear fat makes good lard?",
+  "back": "Fall fat from a berry fed bear; fish fed fat tastes fishy (Tip)."
+ }
+]
