@@ -216,9 +216,9 @@ export function shadowed(elev, nx, ny, cell, i, j, alt, az, maxSteps = 60) {
 }
 
 /** Top zones: highest 3 by 3 mean, at least minDist metres apart. Returns [{ i, j, pct }]. */
-export function topZones(pct, nx, ny, cell, count = 3, minDist = 400) {
+export function topZones(pct, nx, ny, cell, count = 3, minDist = 400, allow = null) {
   const sm = boxMean(pct, nx, ny, 1), order = [];
-  for (let k = 0; k < sm.length; k++) if (sm[k] === sm[k]) order.push(k);
+  for (let k = 0; k < sm.length; k++) if (sm[k] === sm[k] && pct[k] === pct[k] && (!allow || allow[k])) order.push(k);
   order.sort((a, b) => sm[b] - sm[a]);
   const out = [], md2 = (minDist / cell) ** 2;
   for (const k of order) {
@@ -233,7 +233,8 @@ export function topZones(pct, nx, ny, cell, count = 3, minDist = 400) {
 const pctl = (sorted, p) => (sorted.length ? sorted[Math.min(sorted.length - 1, Math.max(0, Math.round((sorted.length - 1) * p)))] : NaN);
 
 /** The whole area: per block scores (0 to 100), top zones, and what the best cells look like.
-    input: { elev, nx, ny, cell, water (distance m or null), road (distance m or null), blocks: { id: params }, sun: { id: { alt, az } }, band: [min, max] or null } */
+    input: { elev, nx, ny, cell, water (distance m or null), road (distance m or null), blocks: { id: params }, sun: { id: { alt, az } }, band: [min, max] or null,
+      openWater (Uint8Array, 1 = lake or river surface) and landOnly (true: those cells get no score), zoneMask (Uint8Array, 1 = a top zone may sit here) } */
 export function analyse(input) {
   const { elev, nx, ny, cell, blocks, sun } = input, n = nx * ny;
   const band = Array.isArray(input.band) ? input.band : null;
@@ -247,7 +248,7 @@ export function analyse(input) {
     if (p.factors) for (const f of ['slope', 'aspect', 'sun', 'water', 'road', 'terrain']) if (p.factors[f] === 0) used[f] = false;
     for (let k = 0; k < n; k++) {
       const e = elev[k];
-      if (!(e === e) || !(T.slope[k] === T.slope[k])) { raw[k] = NaN; continue; }
+      if (!(e === e) || !(T.slope[k] === T.slope[k]) || (input.landOnly && input.openWater && input.openWater[k])) { raw[k] = NaN; continue; }
       const i = k % nx, j = (k - i) / nx, parts = [];
       let inc = 0, sh = true;
       if (s) { inc = incidence(T.slope[k], T.aspect[k], s.alt, s.az); sh = inc <= 0.05 || shadowed(elev, nx, ny, cell, i, j, s.alt, s.az); if (!sh) lit[k] = 1; }
@@ -261,7 +262,7 @@ export function analyse(input) {
       raw[k] = combine(parts);
     }
     const pct = normalise(raw);
-    out.blocks[id] = { pct, used, zones: topZones(pct, nx, ny, cell), best: describe(pct, elev, T, lit), litShare: share(lit, raw) };
+    out.blocks[id] = { pct, used, zones: topZones(pct, nx, ny, cell, 3, 400, input.zoneMask || null), best: describe(pct, elev, T, lit), litShare: share(lit, raw) };
   }
   return out;
 }
@@ -311,4 +312,18 @@ export function analyseWithMasks(input) {
   if (W) input.water = crop(distanceField(W.mask, W.nx, W.ny, input.cell), W);
   if (R) input.road = crop(distanceField(R.mask, R.nx, R.ny, input.cell), R);
   return analyse(input);
+}
+
+/** Certainty of one block's match (0 to 100), from the model's per factor certainty ("factors": 0 = no source, left neutral).
+    Weighted mean of the sourced factors (elevation band included), scaled down when few factors are sourced
+    (0.6 + 0.4 x the sourced share of the weight), and never above the block's own cert. Without "factors": the block cert. */
+export function blockCertainty(p, elevCert) {
+  if (!p || !(p.cert > 0)) return 0;
+  if (!p.factors) return Math.round(Math.min(p.cert, elevCert > 0 ? elevCert : p.cert));
+  const keys = ['slope', 'aspect', 'sun', 'water', 'road', 'terrain'];
+  const list = keys.map((k) => ({ c: +p.factors[k] || 0, w: FACTOR_W[k] })).concat([{ c: elevCert > 0 ? elevCert : 0, w: FACTOR_W.elev }]);
+  const all = list.reduce((s, x) => s + x.w, 0), src = list.filter((x) => x.c > 0);
+  if (!src.length) return 0;
+  const sw = src.reduce((s, x) => s + x.w, 0), mean = src.reduce((s, x) => s + x.c * x.w, 0) / sw;
+  return Math.round(Math.min(p.cert, mean * (0.6 + 0.4 * (sw / all))));
 }

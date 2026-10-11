@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="How to read each rule card. The saying in big words. Then 4 rows: what it means, why it works with the evidence and certainty, when it is wrong or a myth, and where it comes from. A label says Tradition or Opinion.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <rect x="14" y="12" width="372" height="276" rx="12" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="14" y="12" width="372" height="56" rx="12" fill="#2f3a2b"/>
+  <text x="200" y="47" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fffaf0" text-anchor="middle">"The saying"</text>
+  <rect x="260" y="78" width="112" height="28" rx="14" fill="#e8590c"/>
+  <text x="316" y="97" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Tradition</text>
+  <g font-family="sans-serif" font-size="16" fill="#23261f">
+    <circle cx="36" cy="128" r="10" fill="#8a9a6b"/><text x="56" y="134">Means: plain words</text>
+    <circle cx="36" cy="170" r="10" fill="#4a7fb0"/><text x="56" y="176">Why: evidence and certainty %</text>
+    <circle cx="36" cy="212" r="10" fill="#e8590c"/><text x="56" y="218">Wrong when: limits or myth</text>
+    <circle cx="36" cy="254" r="10" fill="#8b5a2b"/><text x="56" y="260">From: who teaches it</text>
+  </g>
+</svg>

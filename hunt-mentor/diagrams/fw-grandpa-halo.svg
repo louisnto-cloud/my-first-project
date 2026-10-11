@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A ring around the moon. Thin high cloud made of ice crystals bends the moonlight into a ring. That thin high cloud often runs ahead of a warm front, so rain or snow may follow in a day or two, but not always.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <rect x="10" y="10" width="380" height="210" rx="10" fill="#2f3a2b"/>
+  <circle cx="200" cy="112" r="78" fill="none" stroke="#dfe6d3" stroke-width="6" opacity="0.8"/>
+  <circle cx="200" cy="112" r="20" fill="#fffaf0"/>
+  <g fill="#8a9a6b" opacity="0.5"><rect x="20" y="60" width="360" height="8" rx="4"/><rect x="40" y="150" width="320" height="6" rx="3"/></g>
+  <text x="200" y="210" font-family="sans-serif" font-size="14" fill="#fffaf0" text-anchor="middle">Thin high ice cloud bends the light</text>
+  <text x="200" y="250" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Often ahead of a warm front</text>
+  <text x="200" y="274" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="middle">Rain or snow may follow. Not always.</text>
+</svg>

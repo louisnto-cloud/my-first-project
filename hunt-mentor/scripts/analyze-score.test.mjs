@@ -169,3 +169,34 @@ test('area stats: slope classes and band share', () => {
   near(s.inBand, 2 / 3);
   near(s.slopeShare[0], 1 / 3); near(s.slopeShare[1], 1 / 3); near(s.slopeShare[4], 1 / 3);
 });
+
+test('block certainty: weak factor coverage lowers it, never above the block cert', async () => {
+  const { blockCertainty } = await import('../app/map/analyze-score.js');
+  assert.equal(blockCertainty({ cert: 70 }, 80), 70); // no factors object
+  assert.equal(blockCertainty({ cert: 0, factors: { slope: 90 } }, 80), 0);
+  const full = blockCertainty({ cert: 90, factors: { slope: 80, aspect: 80, sun: 80, water: 80, road: 80, terrain: 80 } }, 80);
+  assert.equal(full, 80); // everything sourced at 80
+  const weak = blockCertainty({ cert: 70, factors: { slope: 0, aspect: 0, sun: 0, water: 0, road: 0, terrain: 65 } }, 0);
+  assert.ok(weak < 45 && weak > 30, `weak ${weak}`);
+  assert.equal(blockCertainty({ cert: 50, factors: { slope: 90, aspect: 90, sun: 90, water: 90, road: 90, terrain: 90 } }, 90), 50);
+  assert.equal(blockCertainty({ cert: 60, factors: { slope: 0, aspect: 0, sun: 0, water: 0, road: 0, terrain: 0 } }, 0), 0);
+});
+
+test('open water is skipped for land animals and top zones respect the allowed area', () => {
+  const nx = 20, ny = 20, e = new Float32Array(nx * ny);
+  for (let j = 0; j < ny; j++) for (let i = 0; i < nx; i++) e[j * nx + i] = 1000 + i * 5;
+  const openWater = new Uint8Array(nx * ny); for (let j = 0; j < ny; j++) openWater[j * nx + 19] = 1;
+  const zoneMask = new Uint8Array(nx * ny); for (let j = 5; j < 15; j++) for (let i = 2; i < 10; i++) zoneMask[j * nx + i] = 1;
+  const r = analyse({ elev: e, nx, ny, cell: 30, blocks: { dawn: { slope_deg: [0, 0, 20, 40] } }, sun: {}, band: [1040, 1200], openWater, landOnly: true, zoneMask });
+  assert.ok(Number.isNaN(r.blocks.dawn.pct[5 * nx + 19]));
+  for (const z of r.blocks.dawn.zones) assert.equal(zoneMask[z.j * nx + z.i], 1);
+  const w = analyse({ elev: e, nx, ny, cell: 30, blocks: { dawn: {} }, sun: {}, band: null, openWater, landOnly: false });
+  assert.ok(!Number.isNaN(w.blocks.dawn.pct[5 * nx + 19]));
+});
+
+test('a top zone never sits on a cell with no score', () => {
+  const nx = 10, ny = 10, p = new Float32Array(nx * ny).fill(50);
+  p[55] = NaN; p[54] = 100; p[56] = 100; p[45] = 100; p[65] = 100; // NaN cell ringed by the best scores
+  const z = topZones(p, nx, ny, 30, 3, 60);
+  for (const x of z) assert.ok(!Number.isNaN(p[x.j * nx + x.i]));
+});

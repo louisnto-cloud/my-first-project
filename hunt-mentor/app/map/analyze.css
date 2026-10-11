@@ -9,8 +9,12 @@
 .hma-months button { min-height: 44px; font-size: 15px; padding: 0; }
 .hma-go { width: 100%; min-height: 52px; margin: 10px 0 4px; font-size: 17px; }
 
-.hma-ebar { position: relative; height: 22px; border-radius: 8px; background: var(--hmm-soft); border: 1px solid var(--hmm-line); margin: 8px 0 2px; overflow: hidden; }
-.hma-ebar i { position: absolute; top: 0; bottom: 0; background: #2e7d32; opacity: 0.8; }
+.hma-ebar { position: relative; height: 28px; border-radius: 8px; background: var(--hmm-soft); border: 1px solid var(--hmm-line); margin: 8px 0 2px; overflow: hidden; }
+.hma-ebar i { position: absolute; }
+.hma-ebar i.band { top: 0; bottom: 0; background: #2e7d32; opacity: 0.75; }
+.hma-ebar i.area { top: 9px; height: 10px; border-radius: 5px; background: var(--hmm-ink); opacity: 0.7; }
+.hma-eaxis i.sw { display: inline-block; width: 12px; height: 10px; border-radius: 3px; margin: 0 3px 0 6px; vertical-align: -1px; }
+.hma-eaxis i.sw.band { background: #2e7d32; } .hma-eaxis i.sw.area { background: var(--hmm-ink); opacity: 0.7; }
 .hma-eaxis { display: flex; justify-content: space-between; font-size: 13px; color: var(--hmm-muted); margin-bottom: 6px; }
 
 .hma-blk { border: 1.5px solid var(--hmm-line); border-radius: 14px; padding: 8px 12px 10px; margin: 8px 0; background: var(--hmm-card); }
@@ -34,7 +38,7 @@
 .hma-tips { margin: 6px 0; padding-left: 20px; }
 .hma-tips li { margin: 6px 0; line-height: 1.4; font-size: 16px; }
 .hma-flags { list-style: none; padding: 0; margin: 6px 0; }
-.hma-flags li { border-left: 4px solid #8d6e00; padding: 6px 8px; margin: 4px 0; font-size: 15px; }
+.hma-flags li { background: transparent !important; color: var(--hmm-ink) !important; border-left: 4px solid #8d6e00; padding: 6px 10px; margin: 4px 0; font-size: 16px; line-height: 1.4; }
 .hma-flags li.stop { border-left-color: #c62828; }
 
 /* on the map: legend and time block picker, in the chips column above Hunt Map Layers */
@@ -50,6 +54,11 @@
 .hma-seg button[aria-checked="true"] small { color: #fff; }
 .hma-pin { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 46px; height: 46px; padding: 0; border-radius: 50%;
   border: 2.5px solid #fff; background: #7a0f35; color: #fff; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45); cursor: pointer; line-height: 1; }
-.hma-pin b { font-size: 17px; }
-.hma-pin small { font-size: 11px; font-weight: 700; }
+.hma-pin b { font-size: 17px; color: #fff; }
+.hma-pin small { font-size: 12px; font-weight: 700; color: #fff; }
 .framing .hma-panel { display: none; }
+.hma-bc { margin: 2px 0 0 !important; font-size: 14px; color: var(--hmm-muted); }
+.hma-den { padding: 12px 14px; border-radius: 12px; background: var(--hmm-soft); border-left: 4px solid #5d4037; margin: 8px 0; }
+.hma-den b { font-size: 18px; }
+/* the app's "Ask the mentor" button floats in the second slot of the right stack on the map: sit below it */
+body.map-open:has(.hm-ask:not([hidden])) .hma-btn { margin-top: 52px; }

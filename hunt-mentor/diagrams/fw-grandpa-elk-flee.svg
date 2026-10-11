@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Map sketch. An open road on the left with trucks. Elk move away from the road into big dark timber on the right, some more than 10 kilometres in the first days of the season in one Montana study. Bumped elk may leave the drainage.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <rect x="10" y="10" width="380" height="230" fill="#dfe6d3"/>
+  <path d="M60 10 Q 40 120 70 240" stroke="#8b5a2b" stroke-width="12" fill="none"/>
+  <rect x="44" y="70" width="22" height="14" rx="3" fill="#e8590c"/><rect x="52" y="170" width="22" height="14" rx="3" fill="#e8590c"/>
+  <g fill="#2f3a2b">
+    <polygon points="260,60 272,30 284,60"/><polygon points="290,80 302,46 314,80"/><polygon points="320,60 332,28 344,60"/><polygon points="350,90 362,56 374,90"/>
+    <polygon points="270,150 282,116 294,150"/><polygon points="300,170 312,136 324,170"/><polygon points="334,150 346,116 358,150"/><polygon points="290,220 302,186 314,220"/><polygon points="340,220 352,186 364,220"/>
+  </g>
+  <g fill="#8b5a2b"><ellipse cx="110" cy="130" rx="14" ry="8"/><ellipse cx="128" cy="150" rx="14" ry="8"/></g>
+  <path d="M140 140 Q 220 120 300 112" stroke="#e8590c" stroke-width="4" stroke-dasharray="10 6" fill="none"/>
+  <path d="M292 104 L306 112 L292 120" fill="#e8590c"/>
+  <text x="200" y="262" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Some elk went over 10 km into timber</text>
+  <text x="200" y="284" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">in the first days of a season (one study)</text>
+  <text x="34" y="34" font-family="sans-serif" font-size="14" fill="#23261f">Road</text>
+</svg>

@@ -8,7 +8,7 @@
    Maths: analyze-score.js (pure, unit tested), run in analyze-worker.js (module worker) or on the main thread.
    Sets HuntMap.analyze = { open(), run(species, month), last (timings), clear() }. */
 import { esc, clamp, lon2x, lat2y, fmtNum, MONTH_NAMES } from './util.js';
-import { BLOCKS, DIR8, blockModel, blockWindows, analyseWithMasks } from './analyze-score.js';
+import { BLOCKS, DIR8, blockModel, blockWindows, analyseWithMasks, blockCertainty } from './analyze-score.js';
 import { demGrid, sunAt, SLOPE_CLASSES } from './tools-terrain.js';
 import { nearLayer } from './tools-insights.js';
 
@@ -26,9 +26,10 @@ const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct
 const MAX_M = 4500; // view cap (about 4 by 4 km)
 const CELL_M = 30, MAX_CELLS = 150, PAD_M = 600, DEMZ = 12, EARTH = 40075016.686, D2R = Math.PI / 180, R2D = 180 / Math.PI;
 const SRC = 'hma-heat';
+const WATER_OK = ['ducks', 'geese']; // these score open water cells; every other animal skips lakes and rivers
 const ROAD_CLASSES = ['motorway', 'trunk', 'primary', 'secondary', 'tertiary', 'minor', 'service', 'track', 'unclassified', 'residential'];
 // heat ramp (one colour ramp, light to dark): stops at match % -> [r, g, b, alpha 0..1]
-const RAMP = [[35, [255, 236, 150, 0]], [55, [254, 196, 79, 0.42]], [75, [240, 120, 30, 0.6]], [100, [176, 22, 62, 0.75]]];
+const RAMP = [[50, [255, 236, 150, 0.05]], [65, [254, 196, 79, 0.45]], [82, [240, 120, 30, 0.62]], [100, [176, 22, 62, 0.8]]];
 
 let H, map, model = null, modelErr = '', state = null, panel = null, markers = [], worker = null, wseq = 0;
 const waits = new Map();
@@ -183,6 +184,9 @@ function vectorMasks(G) {
     return { mask, nx: W, ny: Hh, pad, n };
   };
   out.water = draw(water); out.road = draw(roads);
+  const ow = draw(q('water')); // lake and river surfaces only, cropped to the view grid
+  out.open = new Uint8Array(G.nx * G.ny);
+  for (let j = 0; j < G.ny; j++) for (let i = 0; i < G.nx; i++) out.open[j * G.nx + i] = ow.mask[(j + pad) * W + i + pad];
   out.counts = { water: water.length, roads: roads.length };
   return out;
 }
@@ -231,6 +235,7 @@ export async function run(spId, month) {
   const M = await loadModel(); t.model = performance.now() - t0;
   if (!M || !M.species[spId]) { open(); return null; }
   const sp = M.species[spId], G = viewGrid();
+  if (isDenned(sp, month)) { denned(spId, sp, month); return null; }
   if (G.wM > MAX_M || G.hM > MAX_M) { zoomAsk(spId, month, G); return null; }
   const body = H.openSheet({ title: `Area analysis: ${sp.name || spId}`, bar: 'tools', html: `<p class="hma-honest">${HONEST}</p><p class="hmm-muted">Working out the habitat match for this view</p>` });
   // elevation
@@ -256,7 +261,8 @@ export async function run(spId, month) {
   const t1 = performance.now(), V = vectorMasks(G); t.vector = performance.now() - t1;
   const needWater = Object.values(blocks).some((p) => Array.isArray(p.water_m)), needRoad = Object.values(blocks).some((p) => p.road_m > 0);
   const input = { elev: E.e, nx: G.nx, ny: G.ny, cell: G.cellM, blocks, sun, band: bandOk ? mon.elev_m : null,
-    wm: needWater && V.water ? V.water : null, rm: needRoad && V.road ? V.road : null };
+    wm: needWater && V.water ? V.water : null, rm: needRoad && V.road ? V.road : null,
+    openWater: V.open || null, landOnly: !WATER_OK.includes(spId), zoneMask: zoneMask(G) };
   // keep copies so a lost worker can still run on the main thread
   const backup = { elev: E.e.slice(), wm: input.wm && { ...input.wm, mask: input.wm.mask.slice() }, rm: input.rm && { ...input.rm, mask: input.rm.mask.slice() } };
   const t2 = performance.now();
@@ -276,6 +282,31 @@ export async function run(spId, month) {
   landCheck(body);
   H.emit && H.emit('analyze', { species: spId, month, t });
   return state;
+}
+function isDenned(sp, month) {
+  const mo = sp.months && sp.months[String(month)], mb = blockModel(sp, month);
+  return /denn/i.test((mo && mo.activity) || '') || Object.values(mb.blocks).some((p) => /denn/i.test(p.doing || ''));
+}
+function denned(spId, sp, month) {
+  clear();
+  const mo = (sp.months && sp.months[String(month)]) || {}, ov = sp.month_overrides && sp.month_overrides[String(month)];
+  const body = H.openSheet({ title: `Area analysis: ${sp.name || spId}`, bar: 'tools', html: `<p class="hma-honest">${HONEST}</p>
+    <div class="hma-den"><b>Denned in ${MONTH_NAMES[month - 1]}</b><p>${esc(sp.name || spId)} are in their dens this month, so there is no habitat match to map.</p></div>
+    ${mo.note ? `<p>${esc(mo.note)} ${mo.elev_cert > 0 ? cert(mo.elev_cert) : ''}</p>` : ''}${ov && ov.note ? `<p class="hmm-muted">${esc(ov.note)}</p>` : ''}
+    <div class="hmm-btnrow"><button class="hmm-btn2" data-again>Pick another animal or month</button>${sp.lesson ? `<a class="hmm-btn2" href="#/s/${esc(sp.lesson)}">Masterclass: where they are</a>` : ''}</div>` });
+  body.querySelector('[data-again]').onclick = () => { state = { pickMonth: month }; open(); };
+}
+/** Top zone pins only where the map is not covered by the buttons, the bar and the time block panel. */
+function zoneMask(G) {
+  const c = map.getContainer(), W = c.clientWidth, Hh = c.clientHeight, m = new Uint8Array(G.nx * G.ny);
+  const box = { l: 72, r: W - 76, t: 250, b: Hh - 370 };
+  if (box.r - box.l < 80 || box.b - box.t < 80) return null;
+  let n = 0;
+  for (let j = 0; j < G.ny; j++) for (let i = 0; i < G.nx; i++) {
+    const [lng, lat] = G.cellLL(i, j), p = map.project([lng, lat]);
+    if (p.x >= box.l && p.x <= box.r && p.y >= box.t && p.y <= box.b) { m[j * G.nx + i] = 1; n++; }
+  }
+  return n > 50 ? m : null;
 }
 function pickBlock(d, win, blocks) {
   if (d.today && win) { const now = Date.now(); for (const b of BLOCKS) if (blocks[b] && now >= win[b].start && now < win[b].end) return b; }
@@ -347,7 +378,7 @@ function showPanel() {
   if (!panel) { panel = document.createElement('div'); panel.className = 'hma-panel'; }
   if (panel.parentNode !== box) box.appendChild(panel);
   panel.innerHTML = `<div class="hma-lg"><span>Low match</span><i></i><span>High match</span><button type="button" data-r aria-label="Area analysis results">Results</button></div>
-    <div class="hma-seg" role="radiogroup" aria-label="Time block">${BLOCKS.filter((b) => S.R.blocks[b]).map((b) => `<button type="button" role="radio" data-b="${b}" aria-checked="${b === S.block}"><b>${BLOCK_NAMES[b]}</b><small>${S.win ? hhmm(S.win[b].start) : ''}</small></button>`).join('')}</div>`;
+    <div class="hma-seg" role="radiogroup" aria-label="Time block">${BLOCKS.filter((b) => S.R.blocks[b]).map((b) => `<button type="button" role="radio" data-b="${b}" aria-checked="${b === S.block}"><b>${BLOCK_NAMES[b]}</b><small>${S.win ? hhmm(S.win[b].start).replace(/\s*[ap]\.?m\.?$/i, '') : ''}</small></button>`).join('')}</div>`;
   panel.querySelectorAll('[data-b]').forEach((x) => x.onclick = () => { drawBlock(x.dataset.b); syncSheetBlock(); });
   panel.querySelector('[data-r]').onclick = () => { const body = H.openSheet({ title: `Area analysis: ${S.sp.name || S.spId}`, bar: 'tools', html: '' }); renderSheet(body); landCheck(body); };
 }
@@ -366,10 +397,11 @@ export function clear() {
 }
 
 // ---------- result sheet ----------
+const bCert = (S, b) => blockCertainty(S.mb.blocks[b], S.bandOk ? S.mon.elev_cert : 0);
+/** Model certainty: the mean of the blocks' certainty (each weighted by how many of its factors have a source). */
 function modelCert(S) {
-  const c = BLOCKS.map((b) => S.mb.blocks[b] && S.mb.blocks[b].cert).filter((v) => v > 0);
-  if (S.bandOk) c.push(S.mon.elev_cert);
-  return c.length ? Math.min(...c) : 0;
+  const c = BLOCKS.filter((b) => S.mb.blocks[b]).map((b) => bCert(S, b));
+  return c.length ? Math.round(c.reduce((a, x) => a + x, 0) / c.length) : 0;
 }
 function whereTxt(B, sunUp) {
   const d = B.best; if (!d) return 'No clear pattern';
@@ -386,6 +418,11 @@ function factorList(S) {
   if (anyB('sun')) used.push('sun and shade'); if (anyB('terrain')) used.push('landform (ridge, bench, draw, valley)');
   if (S.needWater) { if (anyB('water')) used.push(`distance to water (map data, ${S.V.counts.water} features)`); else skipped.push(`distance to water (${S.V.why || 'no map data'})`); }
   if (S.needRoad) { if (anyB('road')) used.push(`distance from roads (map data, ${S.V.counts.roads} features)`); else skipped.push(`distance from roads (${S.V.why || 'no map data'})`); }
+  // factors with no research source in any block (model "factors" cert 0): left neutral
+  const blocks = BLOCKS.map((b) => S.mb.blocks[b]).filter(Boolean);
+  for (const k of ['aspect', 'slope', 'sun', 'water', 'road', 'terrain']) {
+    if (blocks.length && blocks.every((p) => p.factors && p.factors[k] === 0)) skipped.push(`${GAPW[k]} (no data in the research, left neutral)`);
+  }
   return { used, skipped };
 }
 function timeLine() {
@@ -400,15 +437,15 @@ function renderSheet(body) {
   let elevHtml;
   const lo = A.min, hi = A.max, span = Math.max(1, hi - lo);
   if (S.bandOk) {
-    const [b0, b1] = S.mon.elev_m, l = clamp((b0 - lo) / span, 0, 1) * 100, r = clamp((b1 - lo) / span, 0, 1) * 100;
-    const inside = Math.round((A.inBand || 0) * 100), unsourced = S.mon.elev_cert < 60;
+    const [b0, b1] = S.mon.elev_m, R0 = Math.min(lo, b0), R1 = Math.max(hi, b1), RS = Math.max(1, R1 - R0);
+    const x = (v) => ((v - R0) / RS) * 100, inside = Math.round((A.inBand || 0) * 100), unsourced = S.mon.elev_cert < 60;
     elevHtml = `<div class="hma-ebar" role="img" aria-label="Elevation band ${elevTxt(b0, b1)} against this area, ${elevTxt(round10(lo), round10(hi))}. ${inside}% of the area is inside the band.">
-        <i style="left:${l}%;width:${Math.max(r - l, b1 < lo || b0 > hi ? 0 : 1.5)}%"></i></div>
-      <div class="hma-eaxis"><span>${H.units.elev(round10(lo))}</span><span>this area</span><span>${H.units.elev(round10(hi))}</span></div>
+        <i class="band" style="left:${x(b0)}%;width:${Math.max(1, x(b1) - x(b0))}%"></i><i class="area" style="left:${x(lo)}%;width:${Math.max(1, x(hi) - x(lo))}%"></i></div>
+      <div class="hma-eaxis"><span>${H.units.elev(round10(R0))}</span><span><i class="sw band"></i>band <i class="sw area"></i>this area</span><span>${H.units.elev(round10(R1))}</span></div>
       ${kv('Band this month', `${elevTxt(b0, b1)} ${cert(S.mon.elev_cert)}`)}${kv('Area inside the band', `${inside}%`)}
       ${S.mon.activity ? `<p>${esc(cap(S.mon.activity))}${S.mon.note ? `: ${esc(S.mon.note)}` : ''}</p>` : ''}
       ${unsourced ? '<p><span class="hmm-verify">VERIFY</span> Low certainty for this band. Check it against the lesson and what you see on the ground.</p>' : ''}
-      ${b1 < lo || b0 > hi ? `<p><b>None of this view is inside the band.</b> Matches here are the closest the area has.</p>` : ''}`;
+`;
   } else {
     elevHtml = `<p><span class="hmm-verify">VERIFY</span> No sourced elevation band for ${MONTH_NAMES[S.month - 1]} in the model${S.mon.note ? ` (${esc(S.mon.note)})` : ''}. Elevation is not used.</p>
       <p class="hmm-muted">This area: ${elevTxt(round10(lo), round10(hi))}.</p>`;
@@ -419,6 +456,7 @@ function renderSheet(body) {
     const noData = !(p.cert > 0) || /no data/i.test(p.note || '');
     return `<div class="hma-blk${b === S.block ? ' on' : ''}" data-show="${b}">
       <div class="hma-bh"><b>${BLOCK_NAMES[b]}</b><span>${S.win ? `${hhmm(S.win[b].start)} to ${hhmm(S.win[b].end)}` : ''}</span></div>
+      <p class="hma-bc">Certainty ${noData ? '<span class="hmm-verify">VERIFY</span>' : cert(bCert(S, b))}</p>
       <ul>
         <li><span>Doing</span> ${esc(DOING[p.doing] || cap(p.doing || 'unknown'))}${p.overridden ? ' <small>(this month)</small>' : ''}</li>
         <li><span>Best match</span> ${esc(whereTxt(B, sunUp))}</li>
@@ -443,7 +481,8 @@ function renderSheet(body) {
     ${kv('Area', `${fmtNum(G.wM / 1000, 1)} by ${fmtNum(G.hM / 1000, 1)} km, the map view`)}
     ${kv('Model certainty', `${mc > 0 ? cert(mc) : '<span class="hmm-verify">VERIFY</span>'}`)}
     ${S.mb.note ? `<p><b>This month:</b> ${esc(S.mb.note)}</p>` : ''}
-    <p class="hmm-muted">Habitat match is relative within this view: 100% is the best ground here, not a sure thing. Model certainty is the lowest certainty of the research behind it.</p>
+    ${S.bandOk && A.inBand === 0 ? `<div class="hmm-banner"><b>No ground in this view is inside the ${MONTH_NAMES[S.month - 1]} elevation band</b> (${elevTxt(S.mon.elev_m[0], S.mon.elev_m[1])}). The matches below are only the best of a poor area. Try higher or lower ground.</div>` : ''}
+    <p class="hmm-muted">Habitat match is relative within this view: 100% is the best ground here, not a sure thing. Model certainty comes from the research behind each factor, and drops when factors have no source.</p>
     <h3 class="hmm-h">Elevation this month</h3>${elevHtml}
     <h3 class="hmm-h">By time of day</h3>
     <p class="hmm-muted">Clock times for ${esc(dTxt)} at the map centre, Pacific time. Numbered pins on the map show the 3 best zones for the block you pick.</p>
@@ -455,7 +494,7 @@ function renderSheet(body) {
     <ul class="hma-tips"><li><b>Used:</b> ${esc(F.used.join(', ') || 'none')}</li>${F.skipped.length ? `<li><b>Not used:</b> ${esc(F.skipped.join('; '))}</li>` : ''}
       <li>Terrain about ${Math.round(G.cellM)} m apart: small benches, cliffs and timber edges do not show. Trees, food and snow are not in the model.</li></ul>
     <div class="hmm-btnrow">${hasLesson ? `<a class="hmm-btn2" href="#/s/${esc(sp.lesson)}">Masterclass: where they are</a>` : sp.lesson ? `<span class="hmm-muted">Masterclass lesson ${esc(sp.lesson)} is not published yet.</span>` : ''}<a class="hmm-btn2" href="#/s/rb-where-you-can-hunt">Rule Book: where you can hunt</a></div>
-    <p class="hmm-muted">Sources: ${esc((sp.sources || []).join('; ') || 'see the species model')}. Model checked ${esc(model.checked || '')}.</p>
+    <details class="ter-more"><summary>Sources (model checked ${esc(model.checked || '')})</summary><ul class="hma-tips">${(sp.sources || []).map((x) => `<li>${esc(x)}</li>`).join('') || '<li>See the species model.</li>'}</ul></details>
     <p class="hmm-muted" data-out="time">${timeLine()}</p>
     <div class="hmm-btnrow"><button class="hmm-btn2" data-again>Pick another animal or month</button><button class="hmm-btn2" data-clear>Clear from the map</button></div>`;
   body.querySelectorAll('[data-b2]').forEach((x) => x.onclick = () => { drawBlock(x.dataset.b2); H.closeSheet(); });
@@ -478,13 +517,18 @@ async function landCheck(body) {
   let html;
   if (!res) html = '<p class="hmm-muted">Land layers did not answer in time. Turn on Private land and Parks in Hunt Map Layers to see them.</p>';
   else {
-    const [pv, pk] = res, flags = [];
+    const [pv, pk] = res, flags = [], priv = {}, parks = {};
     const checked = pv.some((r) => r.state === 'ok') || pk.some((r) => r.state === 'ok');
+    const add = (o, b, n) => { (o[b] = o[b] || []).push(n); };
+    const names = new Set();
     pts.forEach((p, k) => {
-      if (pv[k].hits.some((h) => h.dist === 0)) flags.push(`<li class="stop"><b>Private land</b> ${BLOCK_NAMES[p.b]} zone ${p.n}. You need the owner’s permission.</li>`);
+      if (pv[k].hits.some((h) => h.dist === 0)) add(priv, p.b, p.n);
       const park = pk[k].hits.find((h) => h.dist === 0);
-      if (park) flags.push(`<li class="warn"><b>Park</b> ${BLOCK_NAMES[p.b]} zone ${p.n}: ${esc(park.props.name || park.props.designation || '')}. Check the park rules.</li>`);
+      if (park) { add(parks, p.b, p.n); names.add(park.props.name || park.props.designation || 'Park'); }
     });
+    const list = (o) => Object.entries(o).map(([b, ns]) => `${BLOCK_NAMES[b]} ${ns.join(', ')}`).join('; ');
+    if (Object.keys(priv).length) flags.push(`<li class="stop"><b>Private land</b> at zones: ${list(priv)}. You need the owner’s permission.</li>`);
+    if (Object.keys(parks).length) flags.push(`<li class="warn"><b>Park</b> (${esc([...names].join(', '))}) at zones: ${list(parks)}. Check the park rules.</li>`);
     if (flags.length) html = `<ul class="hma-flags">${flags.join('')}</ul>`;
     else if (checked) html = '<p>No private land or park found at the top zones in the saved layers. Signs on the ground still rule.</p>';
     else html = '<p class="hmm-muted">Not checked: the private land and park layers are not saved for this area. Save it in Offline Maps with signal.</p>';

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Bar chart of waits before tracking, from the National Deer Association, 2023. Heart or lungs with a rifle: a few minutes. Liver: 8 to 10 hours. Guts: 10 to 12 hours. Leg or bone hit: track at once and look for a follow up shot. Other sources give shorter waits; longer is safer.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="28" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Wait before you track (NDA, 2023)</text>
+  <g font-family="sans-serif" font-size="15" fill="#23261f">
+    <text x="12" y="76">Heart, lungs</text><rect x="120" y="60" width="10" height="24" fill="#8a9a6b"/><text x="138" y="78">a few minutes</text>
+    <text x="12" y="126">Liver</text><rect x="120" y="110" width="150" height="24" fill="#8b5a2b"/><text x="278" y="128">8 to 10 h</text>
+    <text x="12" y="176">Guts</text><rect x="120" y="160" width="180" height="24" fill="#e8590c"/><text x="306" y="178">10 to 12 h</text>
+    <text x="12" y="226">Leg, bone</text><text x="120" y="226" font-weight="bold" fill="#e8590c">Go now, ready to shoot</text>
+  </g>
+  <text x="200" y="272" font-family="sans-serif" font-size="14" fill="#6b4f35" text-anchor="middle">Others say less. When unsure, wait longer.</text>
+</svg>

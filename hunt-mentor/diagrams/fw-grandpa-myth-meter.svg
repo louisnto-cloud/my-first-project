@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Myth meter. A scale in three parts. Left, orange: myth, science says no. Middle, light: mixed, studies disagree or it depends. Right, green: holds up, evidence supports it. Each saying in the myth check gets a place on this scale.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="40" font-family="sans-serif" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Myth meter</text>
+  <rect x="20" y="100" width="120" height="60" fill="#e8590c"/>
+  <rect x="140" y="100" width="120" height="60" fill="#dfe6d3"/>
+  <rect x="260" y="100" width="120" height="60" fill="#8a9a6b"/>
+  <rect x="20" y="100" width="360" height="60" fill="none" stroke="#2f3a2b" stroke-width="2"/>
+  <g font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">
+    <text x="80" y="137" fill="#ffffff">MYTH</text>
+    <text x="200" y="137" fill="#2f3a2b">MIXED</text>
+    <text x="320" y="137" fill="#ffffff">HOLDS UP</text>
+  </g>
+  <g font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">
+    <text x="80" y="190">Science</text><text x="80" y="208">says no</text>
+    <text x="200" y="190">Studies</text><text x="200" y="208">disagree</text>
+    <text x="320" y="190">Evidence</text><text x="320" y="208">backs it</text>
+  </g>
+  <text x="200" y="262" font-family="sans-serif" font-size="15" fill="#2f3a2b" text-anchor="middle">Tradition is not proof. Check the source.</text>
+</svg>

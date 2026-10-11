@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A bull moose standing in the shallows of a lake. Arrow shows it walking up onto dry grass. Hold the shot while it is in water. Wait for it to step onto dry ground where you can reach it, skin it and cool it.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="150" width="200" height="110" fill="#4a7fb0"/>
+  <rect x="200" y="150" width="200" height="110" fill="#d9c27a"/>
+  <path d="M190 150 Q 205 200 190 260" fill="#d9c27a"/>
+  <g fill="#6b4f35">
+    <rect x="70" y="100" width="90" height="44" rx="18"/>
+    <rect x="150" y="84" width="22" height="40" rx="6" transform="rotate(20 160 104)"/>
+    <rect x="164" y="86" width="34" height="18" rx="8"/>
+    <rect x="80" y="140" width="9" height="34"/><rect x="100" y="140" width="9" height="34"/><rect x="134" y="140" width="9" height="34"/><rect x="148" y="140" width="9" height="34"/>
+    <path d="M160 80 Q 150 60 166 58 Q 174 72 172 82 Z"/><path d="M176 80 Q 190 60 200 64 Q 192 78 180 84 Z"/>
+  </g>
+  <rect x="60" y="160" width="110" height="6" fill="#ffffff" opacity="0.5"/>
+  <path d="M190 120 L270 120" stroke="#e8590c" stroke-width="4"/><path d="M262 110 L280 120 L262 130" fill="#e8590c"/>
+  <circle cx="60" cy="50" r="22" fill="#e8590c"/><path d="M48 38 L72 62 M72 38 L48 62" stroke="#ffffff" stroke-width="4"/>
+  <circle cx="330" cy="70" r="22" fill="#8a9a6b"/><path d="M318 70 L327 80 L343 60" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <g font-family="sans-serif" font-size="15" font-weight="bold">
+    <text x="20" y="284" fill="#e8590c">In water: hold</text>
+    <text x="230" y="284" fill="#2f3a2b">On dry ground: OK</text>
+  </g>
+</svg>

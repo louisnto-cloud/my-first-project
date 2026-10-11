@@ -11,19 +11,19 @@
   <text x="298.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Region 8</text>
   <text x="298.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">Okanagan</text>
   <text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">mule deer buck</text>
-  <rect x="6" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
-  <rect x="6" y="150" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="6" y="168" width="191" height="12" fill="#b03a2e"/>
-  <text x="101.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Shared</text>
-  <text x="101.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Only 1 of these two, and of</text>
-  <text x="101.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">Regions 4 to 7B, each licence year</text>
-  <rect x="203" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-  <rect x="203" y="150" width="191" height="30" rx="10" fill="#4a7fb0"/><rect x="203" y="168" width="191" height="12" fill="#4a7fb0"/>
-  <text x="298.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Region 2</text>
-  <text x="298.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Mission black tails:</text>
-  <text x="298.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">outside that 1</text>
-  <rect x="6" y="260" width="388" height="104" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
-  <rect x="6" y="260" width="388" height="30" rx="10" fill="#2f3a2b"/><rect x="6" y="278" width="388" height="12" fill="#2f3a2b"/>
-  <text x="200.0" y="281" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">All of BC</text>
-  <text x="200.0" y="312" font-size="14" fill="#23261f" text-anchor="middle">3 deer at most</text>
-  <text x="200.0" y="330" font-size="14" fill="#23261f" text-anchor="middle">a licence year</text>
+  <rect x="6" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+  <rect x="6" y="150" width="191" height="30" rx="10" fill="#4a7fb0"/><rect x="6" y="168" width="191" height="12" fill="#4a7fb0"/>
+  <text x="101.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Region 2</text>
+  <text x="101.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Mission black tails:</text>
+  <text x="101.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">outside that 1</text>
+  <rect x="203" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+  <rect x="203" y="150" width="191" height="30" rx="10" fill="#2f3a2b"/><rect x="203" y="168" width="191" height="12" fill="#2f3a2b"/>
+  <text x="298.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">All of BC</text>
+  <text x="298.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">3 deer at most</text>
+  <text x="298.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">a licence year</text>
+  <rect x="6" y="260" width="388" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="6" y="260" width="388" height="30" rx="10" fill="#b03a2e"/><rect x="6" y="278" width="388" height="12" fill="#b03a2e"/>
+  <text x="200.0" y="281" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Shared: only 1</text>
+  <text x="200.0" y="312" font-size="14" fill="#23261f" text-anchor="middle">Only 1 mule deer buck from Regions 3, 4, 5,</text>
+  <text x="200.0" y="330" font-size="14" fill="#23261f" text-anchor="middle">6, 7A, 7B and 8 together, each licence year</text>
 </svg>
