@@ -25,7 +25,7 @@
   }
   const reEsc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   function index(mu, pl) {
-    const d = { mu, places: pl.places, muById: {}, regById: {}, placeById: {}, byName: {} };
+    const d = { mu, sources: pl.sources || {}, places: pl.places, muById: {}, regById: {}, placeById: {}, byName: {} };
     mu.mus.forEach((m) => { d.muById[m.id] = m; });
     mu.regions.forEach((r) => { d.regById[r.id] = r; });
     pl.places.forEach((p) => {
@@ -45,10 +45,11 @@
   const regName = (r) => `Region ${r.id} ${r.name}`;
   const town = (i) => { const t = D.mu.towns[i]; return t && { name: t[0], lon: t[1], lat: t[2], type: t[3] }; };
   const baseOf = (id) => (window.HM && window.HM.bases || []).find((b) => b.id === id);
+  const baseName = (b) => { const m = /\(([^)]+)\)/.exec(b.name); return m ? m[1] : b.name; }; // "Okanagan (Kelowna)" -> "Kelowna"
   const regOfMu = (m) => D.regById[m.r];
 
   // ---------- auto linking ----------
-  const SKIP = 'a,button,code,pre,svg,script,style,textarea,select,option,label,summary,input,.hmp,.q,.term,.verify,.cert,.steps-nav,.hmp-mini,.hmp-sheet';
+  const SKIP = 'h1,h2,a,button,code,pre,svg,script,style,textarea,select,option,label,summary,input,.hmp,.q,.term,.verify,.cert,.steps-nav,.hmp-mini';
   function spansIn(text) {
     const out = [];
     let m;
@@ -84,9 +85,12 @@
     if (D.nameRe) {
       D.nameRe.lastIndex = 0;
       while ((m = D.nameRe.exec(text))) {
-        const s = m.index + m[1].length;
-        out.push({ s, e: s + m[2].length, kind: 'place', id: D.byName[m[2]].id });
-        D.nameRe.lastIndex = s + m[2].length;
+        const s = m.index + m[1].length, e = s + m[2].length, p = D.byName[m[2]];
+        D.nameRe.lastIndex = e;
+        const after = text.slice(e, e + 14), before = text.slice(Math.max(0, s - 3), s);
+        if (/^ [A-Z][a-z]/.test(after) || /^ (\d|and others)/.test(after)) continue; // part of a longer name we do not know ("Nelson Street"), or a citation ("Stewart 2002")
+        if (p.g && (s === 0 || /[.!?:|]\s*$/.test(before) || /^\s*$/.test(text.slice(0, s)))) continue; // an everyday word at the start of a sentence ("Chase, bites")
+        out.push({ s, e, kind: 'place', id: p.id });
       }
     }
     out.sort((a, b) => a.s - b.s || (b.e - b.s) - (a.e - a.s));
@@ -97,8 +101,10 @@
   const quick = /MU|Region|[A-Z][a-z]/;
   function linkNow(root, seen) {
     if (!root || !D) return;
+    // a "more" box (closed details) counts as its own page: its first mention gets a link too, so the visible text is never left without one
+    const own = (n) => { const d = n.parentElement && n.parentElement.closest('details'); return !d || d === root || !root.contains(d); };
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-      acceptNode: (n) => (n.nodeValue.length > 2 && quick.test(n.nodeValue) && !(n.parentElement && n.parentElement.closest(SKIP)) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT),
+      acceptNode: (n) => (n.nodeValue.length > 2 && quick.test(n.nodeValue) && !(n.parentElement && n.parentElement.closest(SKIP)) && own(n) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT),
     });
     const nodes = []; for (let n = walker.nextNode(); n; n = walker.nextNode()) nodes.push(n);
     for (const node of nodes) {
@@ -109,8 +115,9 @@
       let at = 0;
       for (const x of sp) {
         if (x.s > at) frag.appendChild(document.createTextNode(text.slice(at, x.s)));
-        const b = document.createElement('button');
-        b.type = 'button'; b.className = 'hmp'; b.dataset.k = x.kind; b.dataset.id = x.id;
+        // a span, not a button: a button is an atomic box, and the line could break between it and the full stop after it
+        const b = document.createElement('span');
+        b.className = 'hmp'; b.setAttribute('role', 'button'); b.tabIndex = 0; b.dataset.k = x.kind; b.dataset.id = x.id;
         b.setAttribute('aria-label', `${text.slice(x.s, x.e)}: show on a map`);
         b.innerHTML = esc(text.slice(x.s, x.e)) + PIN;
         frag.appendChild(b);
@@ -119,6 +126,7 @@
       if (at < text.length) frag.appendChild(document.createTextNode(text.slice(at)));
       node.parentNode.replaceChild(frag, node);
     }
+    if (root.tagName !== 'DETAILS') root.querySelectorAll('details').forEach((d) => { if (!d.parentElement.closest('details') || d.parentElement.closest('details') === root) linkNow(d, new Set()); });
     root.querySelectorAll('.hmp-mini[data-mu]:not([data-drawn]), .hmp-mini[data-region]:not([data-drawn]), .hmp-mini[data-place]:not([data-drawn])').forEach(drawBlock);
   }
   function link(root) {
@@ -153,14 +161,31 @@
     return `<path d="M${x} ${y - 5}V${y}H${(x + len).toFixed(1)}V${y - 5}" fill="none" stroke="${C.ink}" stroke-width="2"/>${txt(x + len / 2, y - 8, `${nice} km`, { size: 13 })}`
       + `<g transform="translate(${V.W - 22} 26)"><path d="M0 -14L7 6L0 1L-7 6Z" fill="${C.ink}"/>${txt(0, 22, 'N', { size: 13, bold: true })}</g>`;
   }
+  // labels never overlap: put(x, y, w, h) reserves a box centred on x with its text baseline at y; put.box([x0, y0, x1, y1]) a raw box
   function labelPlacer() {
     const used = [];
-    return (x, y, w = 40, h = 16) => {
-      const b = [x - w / 2, y - h, x + w / 2, y + 4];
-      if (x < 8 || x > 392 || y < 14 || y > 244) return false;
+    const box = (b) => {
+      if (b[0] < 2 || b[2] > 398 || b[1] < 2 || b[3] > 248) return false;
       if (used.some((u) => overlap(u, b))) return false;
       used.push(b); return true;
     };
+    const put = (x, y, w = 40, h = 16) => box([x - w / 2, y - h, x + w / 2, y + 4]);
+    put.box = box;
+    box([360, 6, 398, 56]); box([6, 206, 140, 248]); // north arrow, scale bar
+    return put;
+  }
+  const textW = (t, size) => t.length * size * 0.56 + 4;
+  // a label beside a point: right, left, above, below, whichever is free
+  function sideLabel(put, x, y, name, o = {}) {
+    const size = o.size || 14, w = textW(name, size), g = o.gap || 9, up = o.up || 0;
+    const tries = [
+      [x + g, y + 5 - up, 'start', [x + g - 2, y - size + 5 - up, x + g + w, y + 7 - up]],
+      [x - g, y + 5 - up, 'end', [x - g - w, y - size + 5 - up, x - g + 2, y + 7 - up]],
+      [x, y - g - 4 - up, 'middle', [x - w / 2, y - g - size - 4 - up, x + w / 2, y - g - up]],
+      [x, y + g + size, 'middle', [x - w / 2, y + g, x + w / 2, y + g + size + 3]],
+    ];
+    for (const [tx, ty, anchor, b] of tries) if (put.box(b)) return txt(tx, ty, name, { anchor, size, bold: o.bold, fill: o.fill });
+    return '';
   }
   function regionsLayer(V, focusR) {
     let s = '';
@@ -174,16 +199,18 @@
   function dot(V, put, lon, lat, name, own) {
     const x = V.px(lon), y = V.py(lat);
     if (x < 4 || x > V.W - 4 || y < 4 || y > V.H - 4) return '';
-    const right = x < V.W - 110;
-    const lbl = put(right ? x + 50 : x - 50, y + 5, 96, 16);
+    put.box([x - 6, y - 6, x + 6, y + 6]);
     return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${own ? 6 : 5}" fill="${own ? C.accent : C.ink}" stroke="${C.paper}" stroke-width="2"/>`
-      + (lbl ? txt(right ? x + 9 : x - 9, y + 5, name, { anchor: right ? 'start' : 'end', size: 14, bold: own }) : '');
+      + sideLabel(put, x, y, name, { bold: own });
   }
-  // the base or town to show: an owner base in the MU first, then a town in it, then the nearest town
-  function anchorFor(m) {
-    for (const [k, v] of m.in || []) if (k === 'b') { const b = baseOf(v); if (b) return { name: b.name, lon: b.lon, lat: b.lat, own: true }; }
-    for (const [k, v] of m.in || []) if (k === 't') { const t = town(v); if (t) return t; }
-    return town(m.ref[0]);
+  // the dots to show: the owner's bases in the MU, else the biggest town in it, else the nearest town
+  function anchorsFor(m) {
+    const own = [];
+    for (const [k, v] of m.in || []) if (k === 'b') { const b = baseOf(v); if (b) own.push({ name: baseName(b), lon: b.lon, lat: b.lat, own: true }); }
+    if (own.length) return own.slice(0, 2);
+    const tw = (m.in || []).filter(([k]) => k === 't').map(([, v]) => town(v)).filter(Boolean);
+    if (tw.length) return tw.slice(0, 2);
+    const t = town(m.ref[0]); return t ? [t] : [];
   }
   function muMap(id, opts = {}) {
     const m = D.muById[id]; if (!m) return '';
@@ -199,14 +226,12 @@
     if (!opts.place && put(fx, fy + 6, 56, 20)) labels += txt(fx, fy + 6, m.id, { size: 17, bold: true, fill: C.accent });
     if (opts.place) {
       const p = opts.place, x = V.px(p.lon), y = V.py(p.lat);
-      put(x, y, 30, 34);
-      labels += `<path d="M${x} ${y}c-2-6-9-11-9-17a9 9 0 0 1 18 0c0 6-7 11-9 17Z" fill="${C.accent}" stroke="${C.paper}" stroke-width="2"/><circle cx="${x}" cy="${y - 17}" r="3.4" fill="${C.paper}"/>`;
-      const right = x < V.W - 130;
-      if (put(right ? x + 60 : x - 60, y - 6, 116, 18)) labels += txt(right ? x + 13 : x - 13, y - 8, p.name, { anchor: right ? 'start' : 'end', size: 15, bold: true });
-      if (put(fx, fy + 6, 50, 18)) labels += txt(fx, fy + 6, `MU ${m.id}`, { size: 14, bold: true, fill: C.accent });
+      put.box([x - 10, y - 27, x + 10, y + 1]);
+      labels += `<path d="M${x.toFixed(1)} ${y.toFixed(1)}c-2-6-9-11-9-17a9 9 0 0 1 18 0c0 6-7 11-9 17Z" fill="${C.accent}" stroke="${C.paper}" stroke-width="2"/><circle cx="${x.toFixed(1)}" cy="${(y - 17).toFixed(1)}" r="3.4" fill="${C.paper}"/>`;
+      labels += sideLabel(put, x, y, p.name, { size: 15, bold: true, gap: 12, up: 14 });
+      if (put(fx, fy + 6, textW(`MU ${m.id}`, 14), 18)) labels += txt(fx, fy + 6, `MU ${m.id}`, { size: 14, bold: true, fill: C.accent });
     } else {
-      const a = anchorFor(m);
-      if (a) labels += dot(V, put, a.lon, a.lat, a.name, a.own);
+      for (const a of anchorsFor(m)) labels += dot(V, put, a.lon, a.lat, a.name, a.own);
     }
     for (const o of near) {
       const x = V.px(o.c[0]), y = V.py(o.c[1]);
@@ -234,18 +259,24 @@
     let labels = '';
     const x = V.px(r.c[0]), y = V.py(r.c[1]);
     if (put(x, y, 90, 22)) labels += txt(x, y, `Region ${r.id}`, { size: 18, bold: true, fill: C.accent });
+    const shown = [];
     for (const b of (window.HM && window.HM.bases) || []) {
       const mm = muAt(b.lon, b.lat);
-      if (mm && mm.r === id) labels += dot(V, put, b.lon, b.lat, b.name.replace(/ \(.*\)$/, ''), true);
+      if (mm && mm.r === id) { labels += dot(V, put, b.lon, b.lat, baseName(b), true); shown.push([V.px(b.lon), V.py(b.lat)]); }
     }
-    for (const i of r.cities || []) { const t = town(i); if (t) labels += dot(V, put, t.lon, t.lat, t.name, false); }
+    for (const i of r.cities || []) {
+      const t = town(i); if (!t) continue;
+      const x2 = V.px(t.lon), y2 = V.py(t.lat);
+      if (shown.some(([a, c]) => Math.hypot(a - x2, c - y2) < 12)) continue; // a base already marks it
+      labels += dot(V, put, t.lon, t.lat, t.name, false);
+    }
     for (const o of D.mu.regions) {
       const ox = V.px(o.c[0]), oy = V.py(o.c[1]);
       if (o.id !== id && put(ox, oy, 70, 16)) labels += txt(ox, oy, `Region ${o.id}`, { size: 13, fill: C.bark, bold: true });
     }
     return svgWrap(V, s + labels + scaleBar(V), `Map: ${regName(r)} and the regions around it`);
   }
-  const svgWrap = (V, inner, label) => `<svg class="hmp-svg" viewBox="0 0 ${V.W} ${V.H}" role="img" aria-label="${esc(label)}"><rect width="${V.W}" height="${V.H}" fill="#dfe6ee"/>${inner}</svg>`;
+  const svgWrap = (V, inner, label) => `<svg class="hmp-svg" viewBox="0 0 ${V.W} ${V.H}" role="img" aria-label="${esc(label)}"><rect width="${V.W}" height="${V.H}" fill="#e2e1da"/>${inner}</svg>`;
   // point in polygon on the small outlines (good enough to say which MU a base sits in)
   function inRing(pt, r) {
     let c = false;
@@ -266,7 +297,7 @@
     const r = regOfMu(m);
     const own = [], tw = [];
     for (const [k, v] of m.in || []) {
-      if (k === 'b') { const b = baseOf(v); if (b) own.push(b.name.replace(/ \(.*\)$/, '') + ' (your base)'); } else { const t = town(v); if (t && !own.some((o) => o.startsWith(t.name))) tw.push(t.name); }
+      if (k === 'b') { const b = baseOf(v); if (b) own.push(baseName(b) + ' (your base)'); } else { const t = town(v); if (t && !own.some((o) => o.startsWith(t.name))) tw.push(t.name); }
     }
     const inside = own.concat(tw).slice(0, 3);
     const ref = town(m.ref[0]);
@@ -278,7 +309,9 @@
     return lines;
   }
   function regionWords(r) {
-    const lines = [`${regName(r)} is one of the 9 hunting regions of BC (British Columbia). It holds ${r.mus} MUs (Management Units), numbered ${r.id.replace(/[AB]$/, '')}-1 and up.`];
+    const nums = D.mu.mus.filter((m) => m.r === r.id).map((m) => +m.id.split('-')[1]);
+    const pre = r.id.replace(/[AB]$/, '');
+    const lines = [`${regName(r)} is one of the 9 hunting regions of BC (British Columbia). It holds ${r.mus} MUs (Management Units), numbered ${pre}-${Math.min(...nums)} to ${pre}-${Math.max(...nums)}.`];
     const cities = (r.cities || []).map((i) => town(i).name);
     if (cities.length) lines.push(`Cities in it: ${list(cities.slice(0, 6))}${cities.length > 6 ? ' and more' : ''}.`);
     return lines;
@@ -289,6 +322,11 @@
     if (!r) return '';
     if (hasLesson(r.lesson)) return `<a class="btn" href="#/s/${esc(r.lesson)}">Rules for Region ${esc(r.id)}</a>`;
     return '';
+  }
+  function srcHtml(p) {
+    const S = D.sources[p.src] || { name: p.src };
+    if (p.src === 'gn') return `<a href="${esc(S.url + p.nid)}" target="_blank" rel="noopener">${esc(S.name)}</a>, ${p.unofficial ? 'not an official name' : 'official name'}, ${esc(p.ft || p.type)}. Pin: the point the names office records${/river|creek/.test(p.type) ? ' (for a river or creek, its mouth)' : ''}.`;
+    return esc(S.name);
   }
   const SRC_MU = 'Outline: BC Data Catalogue Management Units layer, simplified for this small map (data date 2026-10-03). Towns: BC Geographical Names.';
 
@@ -311,23 +349,23 @@
       const r = regOfMu(m);
       sheet(`<h2>MU ${esc(m.id)} <small class="muted">MU (Management Unit)</small></h2>${muMap(m.id)}
         <div class="hmp-words">${muWords(m).map((l) => `<p>${esc(l)}</p>`).join('')}</div>
-        <p class="hmp-src muted">${esc(SRC_MU)} ${certB(95)} Outline is for finding the area only. The Hunt Map shows the exact line.</p>
-        <div class="btn-row hmp-btns"><a class="btn primary" href="#/map/mu/${esc(m.id)}">Open on Hunt Map</a>${rulesBtn(r)}</div>`);
+        <div class="btn-row hmp-btns"><a class="btn primary" href="#/map/mu/${esc(m.id)}">Open on Hunt Map</a>${rulesBtn(r)}</div>
+        <p class="hmp-src muted">${esc(SRC_MU)} ${certB(95)} Outline is for finding the area only. The Hunt Map shows the exact line.</p>`);
       linkNow(document.querySelector('.hmp-words'), new Set(['mu:' + m.id]));
     } else if (kind === 'region') {
       const r = D.regById[id]; if (!r) return;
       sheet(`<h2>${esc(regName(r))}</h2>${regionMap(r.id)}
         <div class="hmp-words">${regionWords(r).map((l) => `<p>${esc(l)}</p>`).join('')}</div>
-        <p class="hmp-src muted">Outline: all the region's MUs joined, BC Data Catalogue (data date 2026-10-03). ${certB(95)}${r.lesson && !hasLesson(r.lesson) ? ' The Rule Book lesson for this region is not in the app yet.' : !r.lesson ? ' No Rule Book lesson for this region yet.' : ''}</p>
-        <div class="btn-row hmp-btns"><a class="btn primary" href="#/map/region/${esc(r.id)}">Open on Hunt Map</a>${rulesBtn(r)}</div>`);
+        <div class="btn-row hmp-btns"><a class="btn primary" href="#/map/region/${esc(r.id)}">Open on Hunt Map</a>${rulesBtn(r)}</div>
+        <p class="hmp-src muted">Outline: all the region's MUs joined, BC Data Catalogue (data date 2026-10-03). ${certB(95)}${r.lesson && !hasLesson(r.lesson) ? ' The Rule Book lesson for this region is not in the app yet.' : !r.lesson ? ' No Rule Book lesson for this region yet.' : ''}</p>`);
     } else if (kind === 'place') {
       const p = D.placeById[id]; if (!p) return;
       const m = D.muById[p.mu], r = m && regOfMu(m);
       sheet(`<h2>${esc(p.name)} <small class="muted">${esc(p.type)}</small></h2>${m ? muMap(m.id, { place: p }) : ''}
         <div class="hmp-words"><p>${esc(p.desc)}</p>${p.note ? `<p class="muted">${esc(p.note)}</p>` : ''}</div>
-        <p class="hmp-src muted">Source: ${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.source)}</a>` : esc(p.source)} ${certB(p.cert)}</p>
         <div class="btn-row hmp-btns"><a class="btn primary" href="#/map/place/${esc(p.id)}">Open on Hunt Map</a>${m ? `<button type="button" class="btn hmp-go" data-k="mu" data-id="${esc(m.id)}">MU ${esc(m.id)}</button>` : ''}</div>
-        ${rulesBtn(r) ? `<div class="btn-row">${rulesBtn(r)}</div>` : ''}`);
+        ${rulesBtn(r) ? `<div class="btn-row">${rulesBtn(r)}</div>` : ''}
+        <p class="hmp-src muted">Source: ${srcHtml(p)} ${certB(p.cert)}</p>`);
       linkNow(document.querySelector('.hmp-words'), new Set(['place:' + p.id]));
     }
   }
@@ -346,9 +384,14 @@
   document.addEventListener('click', (e) => {
     const b = e.target.closest && e.target.closest('.hmp, .hmp-go');
     if (!b) return;
-    e.preventDefault();
+    e.preventDefault(); e.stopPropagation();
     open(b.dataset.k, b.dataset.id);
+  }, true);
+  document.addEventListener('keydown', (e) => {
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.classList && e.target.classList.contains('hmp')) { e.preventDefault(); open(e.target.dataset.k, e.target.dataset.id); }
   });
 
-  window.HMPlaces = { link, open, load, _spans: (t) => (D ? spansIn(t) : null) };
+  // for the Hunt Map (map/focus.js): the small outline as [[lon, lat], ...] rings
+  const outline = (k, id) => { const o = k === 'region' ? D.regById[id] : D.muById[id]; return o ? ring(o) : []; };
+  window.HMPlaces = { link, open, load, outline, _spans: (t) => (D ? spansIn(t) : null) };
 })();

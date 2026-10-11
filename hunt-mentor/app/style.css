@@ -425,3 +425,19 @@ details.pl-cat > summary::-webkit-details-marker { display: none; }
 details.pl-cat > summary h3 { flex: 1; margin: 0; }
 details.pl-cat > summary::after { content: ""; width: 9px; height: 9px; margin: 0 8px 4px; border-right: 3px solid var(--muted); border-bottom: 3px solid var(--muted); transform: rotate(45deg); }
 details.pl-cat[open] > summary::after { transform: rotate(-135deg); margin-bottom: -4px; }
+
+/* ---------- tap a place: MUs, regions and place names (app/places.js) ---------- */
+.hmp { cursor: pointer; border-bottom: 1.5px dotted var(--accent); position: relative; white-space: nowrap; -webkit-tap-highlight-color: transparent; }
+.hmp::after { content: ''; position: absolute; left: -4px; right: -4px; top: 50%; height: 44px; min-height: 100%; transform: translateY(-50%); } /* 44 px tap target, no layout change */
+.hmp .hmp-i { width: .72em; height: .72em; margin-left: .12em; vertical-align: -.02em; color: var(--accent); opacity: .85; }
+.hmp:active, .hmp:focus-visible { background: var(--warn-bg); outline: none; border-radius: 3px; }
+.hmp-sheet h2 { margin: 0 0 8px; }
+.hmp-sheet h2 small { font-size: 13px; font-weight: 400; margin-left: 4px; }
+.hmp-svg { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
+.hmp-words p { margin: 8px 0; }
+.hmp-src { font-size: 13px; margin: 6px 0 0; }
+.hmp-btns .btn { min-height: 44px; }
+.hmp-mini { margin: 12px 0; }
+.hmp-fig { margin: 0; }
+.hmp-fig figcaption { font-size: 15px; color: var(--muted); margin-top: 6px; }
+.hmp-fig .hmp-go { min-height: 44px; }

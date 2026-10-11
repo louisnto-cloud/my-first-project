@@ -118,3 +118,9 @@ Certainty scale: see CLAUDE.md.
 
 ## 2026-10-11 Area analysis habitat model
 - `data/analyze/species-model.json` (Hunt Map "Analyze area"): built from the phase 8 Masterclass lessons, the 2026-10-11 research logs and `data/migration.json`. New sources and every model choice: research/2026-10-11-analyze-model.md. Check with `node scripts/check-species-model.mjs`.
+
+## 2026-10-11 Tap a place: MU, region and place pop ups
+- MU outlines, regions, neighbours and counts: BC Data Catalogue WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW, the app copy in `data/layers/bc/mu/` (data date 2026-10-03), Open Government Licence BC (99%; neighbours 95%, worked out from the outlines). Region 7B is named Peace from the synopsis and the Rule Book; the layer says Omineca for both 7A and 7B.
+- Place and town positions: BC Geographical Names web service, https://apps.gov.bc.ca/pub/bcgnws/names/search (exact spelling, official names first), queried 2026-10-11, Open Government Licence BC (95%; 85% or 80% when the name is shared and was picked by the MU or region named next to it; 80% for names that are not official). geographic.gov.bc.ca was not reachable from this environment.
+- Forest service road pins: the app's forest road layer (`data/layers/*/forest_roads.pmtiles`, FTEN_ROAD_SECTION_LINES_SVW, data date 2026-10-03), middle of the longest named section, only when the name is unique (85%).
+- Built by `scripts/build-places.py` into `data/places/mu.json` and `data/places/places.json`; names left out and why: `data/places/unresolved.json`.

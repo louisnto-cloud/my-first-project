@@ -505,6 +505,8 @@
     </div>`;
     const $ = (s) => view.querySelector(s);
     const m = (memo[p.id] = { p, sp });
+    const link = (el) => { if (C.link && el) C.link(el); }; // MUs, regions and place names: tap for a mini map (places.js)
+    link($('.pl-sum'));
 
     // actions
     $('#pl-print').onclick = () => window.print();
@@ -560,6 +562,7 @@
     if (!alive()) return;
     m.legal = lg;
     $('#pl-legal').innerHTML = legalHtml(lg, sp, p, C, H);
+    link($('#pl-legal'));
 
     // 2. odds
     let od; try { od = await odds(p, sp, lg); } catch (e) { od = { missing: true }; }
@@ -567,6 +570,7 @@
     m.odds = od;
     od.shared = D.species.filter((x) => x.id !== sp.id && x.harvestKey && sp.harvestKey && x.harvestKey === sp.harvestKey).map((x) => x.name);
     $('#pl-odds').innerHTML = oddsHtml(od, sp, p, lg, C);
+    link($('#pl-odds'));
 
     // 3. days (spots fill in after)
     $('#pl-days').innerHTML = daysHtml(sp, p, lg, C, H) + '<div id="pl-spots"><div class="card"><h3>Top spots</h3><p class="muted">Finding candidate spots near the MU...</p></div></div>';
@@ -577,6 +581,7 @@
     else if ((!st || !st.list.length) && p.spots && p.spots.list.length) st = Object.assign({ saved: p.spots.at }, p.spots);
     m.spots = st;
     $('#pl-spots').innerHTML = spotsHtml(st, sp, p, C);
+    link($('#pl-days'));
     wireRundowns($('#pl-spots'), st, p, C);
   }
 

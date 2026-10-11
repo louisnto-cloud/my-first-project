@@ -111,11 +111,14 @@ def gn_name(name):
 def rec(f):
     p = f['properties']; x, y = f['geometry']['coordinates'][:2]
     return {'name': p['name'], 'type': p['featureType'], 'cat': int(p['featureCategory']), 'catd': p['featureCategoryDescription'],
-            'lon': x, 'lat': y, 'official': p.get('isOfficial') == 1, 'gid': p['feature']['id'], 'uri': 'https://' + p['uri']}
+            'lon': x, 'lat': y, 'official': p.get('isOfficial') == 1, 'status': p.get('status'), 'gid': p['feature']['id'], 'uri': 'https://' + p['uri']}
 
 # towns: incorporated places (category 1)
-towns = [rec(f) for f in gn_category(1)]
-towns.sort(key=lambda t: t['name'])
+# only adopted, official names (the list also holds rescinded and recorded names such as Matsqui or Borland)
+towns, _seen = [], set()
+for t in sorted((rec(f) for f in gn_category(1)), key=lambda t: t['name']):
+    if not t['official'] or t['status'] != 'adopted' or 'Regional' in t['name'] or t['name'] in _seen: continue
+    _seen.add(t['name']); towns.append(t)
 bases = json.load(open(os.path.join(ROOT, 'data', 'bases.json')))
 BIG = {'City', 'Town', 'District Municipality (1)', 'Resort Municipality', 'Mountain Resort Municipality'}
 
@@ -163,8 +166,9 @@ for m in mus:
     inside = []
     for b in bases:
         if m['g'].contains(Point(b['lon'], b['lat'])): inside.append(['b', b['id']])
-    for i, t in enumerate(towns):
-        if m['g'].contains(Point(t['lon'], t['lat'])): inside.append(['t', i])
+    RANK = {'City': 0, 'District Municipality (1)': 1, 'Town': 2, 'Mountain Resort Municipality': 3, 'Resort Municipality': 3, 'Village (1)': 4}
+    tin = [i for i, t in enumerate(towns) if m['g'].contains(Point(t['lon'], t['lat']))]
+    inside += [['t', i] for i in sorted(tin, key=lambda i: (RANK.get(towns[i]['type'], 5), towns[i]['name']))]
     # nearest bigger town outside the MU (or the biggest inside when the MU holds one)
     c = m['g'].centroid if m['g'].contains(m['g'].centroid) else lp
     ins_names = {towns[i]['name'] for k, i in inside if k == 't'}
@@ -216,12 +220,18 @@ for f in sorted(glob.glob(os.path.join(ROOT, 'data', 'flashcards*.json'))):
     for c in json.load(open(f)):
         add_text(os.path.relpath(f, ROOT), ' '.join(str(c.get(k, '')) for k in ('front', 'back')))
 for f in sorted(glob.glob(os.path.join(ROOT, 'data', 'plans', '*.json'))):
-    add_text(os.path.relpath(f, ROOT), json.dumps(json.load(open(f)), ensure_ascii=False).replace('\\n', '\n'))
+    def strings(o):
+        if isinstance(o, str): yield o
+        elif isinstance(o, list):
+            for v in o: yield from strings(v)
+        elif isinstance(o, dict):
+            for v in o.values(): yield from strings(v)
+    for t in strings(json.load(open(f))): add_text(os.path.relpath(f, ROOT), t)
 
 MU_RE = re.compile(r'\b(\d{1,2}-\d{1,3})\b')
 REG_RE = re.compile(r'\bRegions?\s+(\d[AB]?)\b')
 def ctx_of(src, reg, line):
-    ctx_mu = [x for x in MU_RE.findall(line) if x in by_id] if re.search(r'\bMUs?\b', line) else []
+    ctx_mu = [x for x in MU_RE.findall(line) if x in by_id] if re.search(r'\bMUs?\b|Management Units?|^\s*\|', line) else []
     ctx_r = REG_RE.findall(line)
     return ctx_mu, ([reg] if reg else []) + [r for r in ctx_r if r not in ('7',)]
 
@@ -280,10 +290,14 @@ SINGLE_OK = {'Agassiz', 'Atlin', 'Balfour', 'Brisco', 'Chopaka', 'Deroche', 'Dun
              'Ganges', 'Haney', 'Harrop', 'Hatzic', 'Hedley', 'Hosmer', 'Huntingdon', 'Ioco', 'Kaleden', 'Kincolith', 'Kitchener', 'Kitwanga', 'Kleindale',
              'Knutsford', 'Ladner', 'Lund', 'Malahat', 'Merville', 'Naramata', 'Othello', 'Pinantan', 'Popkum', 'Pritchard', 'Sandspit', 'Savona', 'Sorrento',
              'Spillimacheen', 'Spuzzum', 'Squilax', 'Tranquille', 'Vananda', 'Westsyde', 'Westwold', 'Windermere', 'Wonowon', 'Wycliffe', 'Pavilion', 'Glade'}
+# towns whose name is also an everyday word or a surname: linked, but never at the start of a sentence (app/places.js)
+GUARD = {'Trail', 'Hope', 'Mission', 'Chase', 'Golden', 'Delta', 'Oliver', 'Clinton', 'Nelson', 'Kent', 'Taylor', 'Victoria', 'Stewart', 'Houston', 'Terrace',
+         'Merritt', 'Sidney', 'Richmond', 'Surrey', 'Langley', 'Lumby'}
 BLOCK = {'North Star', 'Lake Hill', 'Mount Robson', 'Red Rock', 'Clearwater Station'}
 for name, rs in listed.items():
     if name in BLOCK: continue
-    if ' ' not in name and (name in COMMON or len(name) < 4): continue
+    if ' ' not in name and name not in GUARD and (name in COMMON or len(name) < 4): continue
+    if name in GUARD and not any(r['cat'] == 1 for r in rs): continue
     if ' ' not in name and not any(r['cat'] in (1, 4) for r in rs) and name not in SINGLE_OK: continue
     if re.search(r'(?<![\w-])' + re.escape(name) + r'(?![\w-])', alltext): names.add(name)
 
@@ -313,13 +327,13 @@ def km_between(a, b):
     return math.hypot(x1 - x0, y1 - y0) / 1000
 
 occ = collections.defaultdict(list)  # name -> [(src, ctx_mu, ctx_reg)]
-pat_cache = {}
-for name in names:
-    rx = re.compile(r'(?<![\w-])' + re.escape(name) + r'(?![\w-])')
-    for src, reg, line in corpus:
-        if name in line and rx.search(line):
-            cm, cr = ctx_of(src, reg, line)
-            occ[name].append((src, tuple(cm), tuple(cr)))
+# longest name first, no overlaps: the same rule the app uses when it links (a mention of "Paul Lake Park" is not one of "Paul Lake")
+big_re = re.compile(r'(?<![\w-])(' + '|'.join(re.escape(n) for n in sorted(names, key=len, reverse=True)) + r')(?![\w-])')
+for src, reg, line in corpus:
+    found = big_re.findall(line)
+    if not found: continue
+    cm, cr = ctx_of(src, reg, line)
+    for name in found: occ[name].append((src, tuple(cm), tuple(cr)))
 
 places, unresolved = [], []
 for name in sorted(names):
@@ -337,6 +351,7 @@ for name in sorted(names):
                                                  'Indian Reserve-Réserve indienne', 'Réserve indienne', 'Former Locality', 'Abandoned Locality')]
     if not recs:
         unresolved.append({'name': name, 'why': 'not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)', 'n': len(occ[name])}); continue
+    if any(r['official'] for r in recs): recs = [r for r in recs if r['official']]
     # a city, town or village with this exact name is what people mean (Campbell River, Logan Lake, Burns Lake)
     if any(r['cat'] == 1 for r in recs): recs = [r for r in recs if r['cat'] == 1]
     # type implied by the name ending
@@ -354,11 +369,10 @@ for name in sorted(names):
     # several records of the same feature (within 15 km of each other): one place
     def one_cluster(rs):
         return all(km_between(a, b) < 15 for a in rs for b in rs)
-    note, cert = '', 95
+    note, cert, ambiguous_pick = '', 95, False
     if len(pool) > 1 and not one_cluster(pool):
         # context: every mention names an MU or region that holds exactly one of them
-        picks = set()
-        ok = True
+        picks, free = set(), 0
         for src, cm, cr in occ[name]:
             got = None
             if cm:
@@ -367,11 +381,15 @@ for name in sorted(names):
             if got is None and cr:
                 inr = [r for r in pool if (lambda m: m and m['r'] in cr)(mu_at(r['lon'], r['lat']))]
                 if len(inr) == 1: got = inr[0]['gid']
-            if got is None: ok = False; break
-            picks.add(got)
-        if ok and len(picks) == 1:
+            if got is None:
+                if cm or cr: picks.add(None)  # had context, but it does not settle it
+                else: free += 1
+            else: picks.add(got)
+        if len(picks) == 1 and None not in picks:
             pool = [r for r in pool if r['gid'] in picks]
-            note, cert = 'Other places in BC share this name. Picked by the MU or region named next to it in the lessons.', 85
+            ambiguous_pick = True
+            note = 'Other places in BC share this name. Picked by the MU or region named next to it in the lessons' + (', and assumed the same where no MU or region is named.' if free else '.')
+            cert = 80 if free else 85
         else:
             unresolved.append({'name': name, 'why': f'ambiguous: {len(pool)} places in BC have this name', 'n': len(occ[name])}); continue
     if pool[0]['cat'] in POP and len(pool) > 1:
@@ -382,8 +400,12 @@ for name in sorted(names):
         unresolved.append({'name': name, 'why': 'outside the MU map (not in a BC Management Unit)', 'n': len(occ[name])}); continue
     # a mention that names an MU must agree: the place sits in that MU or next to it
     near_ok = lambda ids: any(m['id'] == x or m['id'] in nb_of.get(x, ()) for x in ids)
-    bad = [cm for _, cm, _ in occ[name] if cm and not near_ok(cm)]
-    if bad and len(bad) * 2 >= len([1 for _, cm, _ in occ[name] if cm]):
+    # checked for picks that could be wrong: same name elsewhere, or a small unincorporated place (towns, rivers and parks
+    # are often named as a reference point next to MUs they are not in)
+    risky = ambiguous_pick or len(recs) > 1 or r['cat'] in (2, 3)
+    withmu = [cm for _, cm, _ in occ[name] if cm]
+    bad = [cm for cm in withmu if not near_ok(cm)]
+    if risky and r['cat'] != 1 and bad and len(bad) == len(withmu):
         unresolved.append({'name': name, 'why': f'found in MU {m["id"]}, but the lesson names MU {", ".join(bad[0])} next to it', 'n': len(occ[name])}); continue
     places.append({'name': name, 'r': r, 'mu': m, 'note': note, 'cert': cert if r['official'] else min(cert, 80), 'n': len(occ[name])})
 
@@ -472,7 +494,7 @@ for p in places:
     out.append({'id': pid, 'name': p['name'], 'type': kind, 'lat': round(r['lat'], 5), 'lon': round(r['lon'], 5), 'mu': m['id'], 'region': m['r'],
                 'desc': describe(p['name'], kind, r['lon'], r['lat'], m),
                 'src': 'gn', 'ft': r['type'].replace(' (1)', '').replace(' (2)', ''), 'nid': r['uri'].rsplit('/', 1)[-1], **({} if r['official'] else {'unofficial': 1}),
-                'cert': p['cert'], **({'note': p['note']} if p['note'] else {})})
+                'cert': p['cert'], **({'note': p['note']} if p['note'] else {}), **({'g': 1} if p['name'] in GUARD else {})})
 for p in road_places:
     m = p['mu']; pid = slug(p['name'])
     if pid in seen: continue
@@ -489,6 +511,13 @@ pj = {'updated': TODAY, 'note': 'Place names mentioned in the lessons, glossary,
       'places': out}
 json.dump(pj, open(os.path.join(ROOT, 'data', 'places', 'places.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
 json.dump(mu_json, open(os.path.join(ROOT, 'data', 'places', 'mu.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
+# leave out phrase fragments ("Near Heffley Creek", "of Kamloops Lake", "BC Park") whose real name resolved or is generic
+done = {p['name'] for p in out}
+def fragment(n):
+    w = n.split()
+    if w[0][0].islower() or w[0] in ('BC', 'US', 'The', 'Near', 'From', 'Around', 'At', 'No', 'Many', 'District'): return True
+    return any(v in done for v in variants(n)[1:] if v)
+unresolved = [u for u in unresolved if not fragment(u['name'])]
 unresolved.sort(key=lambda u: (-u.get('n', 0), u['name']))
 json.dump({'updated': TODAY, 'note': 'Names found in the content but left out of places.json, with the reason. Not shipped in the app.', 'names': unresolved},
           open(os.path.join(ROOT, 'data', 'places', 'unresolved.json'), 'w'), ensure_ascii=False, indent=1)

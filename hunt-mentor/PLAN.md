@@ -134,3 +134,11 @@ hunt-mentor/
 - Hunt Map (onX style) live: topo, satellite, 3D, layers, 3,534 candidate spots (areas A, B, C).
 - Map tools live: waypoints, lines with elevation profile, areas, range rings, wind and scent cone, forecast, Insights, Go and Track, GPX and KML import and export.
 - Rule Book complete for general rules plus Regions 3 and 8. Next: Region 2, federal migratory birds, season data per MU for spot cards.
+
+## 7f. Tap a place to see it on the map (2026-10-11)
+- Owner ask: "When you reference a place can I click it and it will show me the map of the area."
+- MU numbers ("MU 3-27", "MUs 3-27 and 3-28"), regions ("Region 3 Thompson") and place names from the gazetteer are linked by the app as it shows a screen (lessons, glossary, flashcard backs, planner). Lesson files are not edited.
+- Tap: a bottom sheet with a small offline map (MU highlighted, neighbours, region border, owner base or town), 2 to 3 plain lines from the data, "Open on Hunt Map" (`#/map/mu/3-27`, `#/map/region/3`, `#/map/place/<id>`) and "Rules for Region N".
+- Build choices (mine): first mention of each place per screen is linked, and again inside a "More" box; screen titles are not linked; town names that are everyday words (Hope, Mission, Chase, Trail) are not linked at the start of a sentence; a name followed by another capitalised word ("Nelson Street") is not linked.
+- Data: `scripts/build-places.py` (rerun with `--cache <folder>`; `--offline` uses the cache only). New lesson block: ```` ```mumap 3-27 ```` (also `mumap region 3`, `mumap place heffley-creek`).
+- Drafts until reviewed: lesson `know-your-mus` (1.14) and deck `data/flashcards-mu.json` ("Know your MUs"). To publish, add `know-your-mus` to `sessions` and `mu` to `flashcards` in `data/published.json`.

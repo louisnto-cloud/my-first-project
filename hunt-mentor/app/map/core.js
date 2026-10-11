@@ -82,6 +82,8 @@ export async function open(param) {
     if (v) map.jumpTo({ center: [v.lng, v.lat], zoom: v.zoom ?? map.getZoom() });
   }
   ev.emit('open');
+  // #/map/mu/3-27, #/map/region/3, #/map/place/<id>: fit and outline (map/focus.js, from the "Open on Hunt Map" pop up in places.js)
+  if (/^(mu|region|place)\/[\w-]+$/.test(String(param || ''))) HuntMap.ready.then(() => import('./focus.js')).then((m) => m.default(HuntMap, String(param))).catch((err) => console.warn('Hunt Map focus', err));
   return HuntMap;
 }
 export function close() {

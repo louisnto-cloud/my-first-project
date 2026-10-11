@@ -152,15 +152,12 @@ fn-tri-4 | Where the lines cross is you.
 - Peaks, lake ends, a fire lookout or a radio tower make good landmarks (Tip).
 ```
 
-## The shortcut: one bearing plus a handrail
-
 ```diagram mc-nav-line-handrail
 ```
 
-- On a road, creek or ridge? One bearing to a landmark is enough (Tip).
-- Where the back bearing crosses your handrail is you.
+- Shortcut: on a road, creek or ridge, one bearing is enough. Its back bearing crosses your handrail at you (Tip).
 
-```more why it works
+```more the one bearing shortcut
 - You already know you are somewhere on the line feature. One more line pins the spot (85%, resection logic).
 - Pick a landmark roughly side on to the handrail, not straight ahead along it (Tip; lines that cross near 90 degrees are sharpest, 85%).
 - Check it against the shape of the land: does the slope around you match the map? ([Chapter 5](#/s/mc-nav-05)).

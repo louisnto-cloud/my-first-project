@@ -23,7 +23,7 @@ Owner ask (2026-10-03): "Build onX maps for me, exactly the same features, as hi
 
 ## Architecture
 - MapLibre GL JS (latest stable that works, BSD 3 clause) and maplibre-contour (BSD 3 clause) vendored in `app/vendor/`, licences copied. Optional: pmtiles JS (BSD 3 clause) if the pipeline ships PMTiles.
-- New route `#/map` (plus `#/map/@lat,lon,zoom` deep links). Full screen, its own chrome like onX. Map code lives in `app/map/*.js` and loads only when the map opens (the rest of the app stays light). A "Map" entry in the main nav.
+- New route `#/map` (plus `#/map/@lat,lon,zoom` deep links, and `#/map/mu/3-27`, `#/map/region/3`, `#/map/place/<id>` from the place pop ups: fit, outline, pin; `app/map/focus.js`). Full screen, its own chrome like onX. Map code lives in `app/map/*.js` and loads only when the map opens (the rest of the app stays light). A "Map" entry in the main nav.
 - Styles (built in code, not fetched at runtime except OpenFreeMap's style as a base):
   - Topo (default): OpenFreeMap vector data restyled in an onX like palette (sage green land, pale forest tint, white roads with grey casing, blue water lines, brown contours), hillshade from terrarium, contours from maplibre-contour (index lines every 100 m with labels, intermediate every 20 m; feet option shows 200 ft and 40 ft), labels for peaks, lakes, roads.
   - Satellite: Esri World Imagery plus contours toggle.

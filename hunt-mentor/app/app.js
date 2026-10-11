@@ -55,6 +55,8 @@
   };
   $('#btn-search').onclick = () => { location.hash = '#/search'; };
 
+  // place names, MUs and regions become tap targets with a mini map (places.js, optional add on)
+  const linkPlaces = (el) => { if (window.HMPlaces && el) try { window.HMPlaces.link(el); } catch (e) { console.warn('places', e); } };
   // glossary taps, checklist ticks (delegated)
   document.addEventListener('click', (e) => {
     const t = e.target.closest('.term');
@@ -62,6 +64,7 @@
       const k = t.dataset.term;
       const def = HM.glossary[k] || Object.entries(HM.glossary).find(([g]) => g.toLowerCase() === k.toLowerCase())?.[1];
       sheet(`<h2>${esc(k)}</h2><p>${def || 'Not in the glossary yet.'}</p>`);
+      linkPlaces($('#sheet-body'));
     }
   });
   // step by step slides and animation replay (delegated)
@@ -370,7 +373,7 @@
     } else if (i !== prev) {
       L.art.innerHTML = `<h2>${esc(st.title)}</h2>${st.quiz ? quizHtml(s) : st.html}`;
       hydrateChecks(L.art); hydrateSteps(L.art); renderRegs(L.art);
-      if (st.quiz) bindQuiz(s);
+      if (st.quiz) bindQuiz(s); else linkPlaces(L.art);
       if (dir && !reduceMotion && L.art.animate) L.art.animate([{ transform: `translateX(${dir * 28}px)`, opacity: 0.35 }, { transform: 'none', opacity: 1 }], { duration: 170, easing: 'ease-out' });
     }
     if (i !== prev) L.segs.forEach((g, k) => { g.className = k < i ? 'seen' : k === i ? 'on' : ''; });
@@ -658,7 +661,7 @@
     setTitle('Glossary'); tab('more');
     const terms = Object.keys(HM.glossary).sort((a, b) => a.localeCompare(b));
     view.innerHTML = `<input type="search" id="gq" placeholder="Filter terms"><div class="card" id="gl" style="margin-top:12px"></div>`;
-    const draw = (q) => { $('#gl').innerHTML = terms.filter((t) => !q || (t + HM.glossary[t]).toLowerCase().includes(q)).map((t) => `<p><strong>${esc(t)}</strong>: ${HM.glossary[t]}</p>`).join('') || '<p>No match.</p>'; };
+    const draw = (q) => { $('#gl').innerHTML = terms.filter((t) => !q || (t + HM.glossary[t]).toLowerCase().includes(q)).map((t) => `<p><strong>${esc(t)}</strong>: ${HM.glossary[t]}</p>`).join('') || '<p>No match.</p>'; linkPlaces($('#gl')); };
     $('#gq').oninput = (e) => draw(e.target.value.toLowerCase()); draw('');
   }
 
@@ -757,7 +760,8 @@
       <div class="btn-row" id="fc-btns" hidden><button class="btn" id="fc-no">Missed it</button><button class="btn primary" id="fc-yes">Knew it</button></div>
       <div class="btn-row"><a class="btn" href="#/cards">Decks</a></div>`;
     const fc = $('#fc');
-    fc.onclick = () => { fc.querySelector('.fc-back').hidden = false; $('#fc-btns').hidden = false; };
+    linkPlaces(fc.querySelector('.fc-back'));
+    fc.onclick = (e) => { if (e.target.closest('.hmp')) return; fc.querySelector('.fc-back').hidden = false; $('#fc-btns').hidden = false; };
     $('#fc-yes').onclick = () => { S.cards[card.id] = Math.min(2, (S.cards[card.id] || 0) + 1); save(); cards(deckArg); window.scrollTo(0, 0); };
     $('#fc-no').onclick = () => { S.cards[card.id] = 0; save(); cards(deckArg); window.scrollTo(0, 0); };
   }
@@ -889,7 +893,7 @@
   function planCtx() {
     return {
       get S() { return S; }, save, setTitle, tab, sunEvent, hhmm, addMin, certBadge, toast, copyText,
-      hasSession: (id) => !!byId[id], lessonTitle: (id) => (byId[id] ? byId[id].title : id),
+      hasSession: (id) => !!byId[id], lessonTitle: (id) => (byId[id] ? byId[id].title : id), link: linkPlaces,
     };
   }
 
