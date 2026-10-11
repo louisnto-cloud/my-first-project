@@ -395,9 +395,17 @@ function build() {
   const askJs = fs.existsSync(path.join(ROOT, 'app/ask.js')) ? read('app/ask.js') : '';
   // Home dashboard (This week cards): optional add on, loaded before app.js
   const homeJs = fs.existsSync(path.join(ROOT, 'app/home.js')) ? read('app/home.js') : '';
+  // Plan a hunt (wizard, saved plans, animal checklists): optional add on, loaded before app.js; data in data/plans/
+  const planJs = fs.existsSync(path.join(ROOT, 'app/plan.js')) ? read('app/plan.js') : '';
+  const planDir = path.join(ROOT, 'data/plans');
+  const planNames = fs.existsSync(planDir) ? fs.readdirSync(planDir).filter((f) => /^(species.*|checklists)\.json$/.test(f)).sort() : [];
+  const planFiles = planNames.map((f) => `data/plans/${f}`);
+  // the single file backup has no server to fetch from: the plan data goes inline (species merged, lists)
+  const plansInline = { species: [], lists: [] };
+  for (const f of planNames) { const o = JSON.parse(fs.readFileSync(path.join(planDir, f), 'utf8')); if (Array.isArray(o.species)) plansInline.species.push(...o.species); if (Array.isArray(o.lists)) plansInline.lists.push(...o.lists); }
   const photoIds = Object.keys(PHOTOS).filter((id) => fs.existsSync(path.join(ROOT, 'photos', `${id}.jpg`)));
   const jsonPwa = JSON.stringify(data).replace(/__PHOTO__([\w-]+)__/g, 'photos/$1.jpg');
-  const jsonSingle = JSON.stringify(data).replace(/__PHOTO__([\w-]+)__/g, (_, id) => {
+  const jsonSingle = JSON.stringify(planJs && planNames.length ? { ...data, plansInline } : data).replace(/__PHOTO__([\w-]+)__/g, (_, id) => {
     const sm = path.join(ROOT, 'photos', 'sm', `${id}.jpg`);
     const f = fs.existsSync(sm) ? sm : path.join(ROOT, 'photos', `${id}.jpg`);
     return 'data:image/jpeg;base64,' + fs.readFileSync(f).toString('base64');
@@ -417,17 +425,17 @@ function build() {
   }
   const searchBody = photoUrl(JSON.stringify(searchData));
   const searchFile = `lessons/search.${shortHash(searchBody)}.json`;
-  const indexData = { ...data, lessonFiles, searchFile,
+  const indexData = { ...data, lessonFiles, searchFile, ...(planJs && planFiles.length ? { planFiles } : {}),
     sessions: sessions.map(({ steps, text, ...meta }) => ({ ...meta, steps: steps.map((st) => ({ title: st.title })) })) };
   const jsonIndex = photoUrl(JSON.stringify(indexData));
   // Hunt Map: map modules and vendored libraries (precached), loaded only when the map opens
   const listFiles = (dir) => (fs.existsSync(path.join(ROOT, dir)) ? fs.readdirSync(path.join(ROOT, dir), { recursive: true }).filter((f) => fs.statSync(path.join(ROOT, dir, f)).isFile()).map((f) => f.split(path.sep).join('/')).sort() : []);
-  const mapDirs = [['app/vendor', 'vendor'], ['app/map', 'map'], ['data/seasons', 'data/seasons'], ['data/harvest', 'data/harvest']]; // season tables: home dashboard; harvest: map area report
+  const mapDirs = [['app/vendor', 'vendor'], ['app/map', 'map'], ['data/seasons', 'data/seasons'], ['data/harvest', 'data/harvest'], ['data/plans', 'data/plans']]; // season tables: home dashboard and planner; harvest: map area report and planner odds; plans: planner
   const mapFiles = mapDirs.flatMap(([src, dst]) => listFiles(src).filter((f) => !/\.(txt|md)$/i.test(f)).map((f) => [path.join(ROOT, src, f), `${dst}/${f}`]));
   if (fs.existsSync(path.join(ROOT, 'data/migration.json'))) mapFiles.push([path.join(ROOT, 'data/migration.json'), 'data/migration.json']); // map area report (species month bands)
   const hash = crypto.createHash('sha1').update(json + css + js + askJs);
   for (const [f] of mapFiles) hash.update(fs.readFileSync(f));
-  hash.update(homeJs);
+  hash.update(homeJs + planJs);
   hash.update(read('app/sw.js') + read('app/index.html') + photoIds.join(',')); // a service worker or page change alone also bumps the cache version
   const version = 'hm-' + hash.digest('hex').slice(0, 10) + '-' + data.built;
   let html = read('app/index.html');
@@ -436,18 +444,19 @@ function build() {
   fs.writeFileSync(path.join(OUT, 'index.html'), html
     .replace('<!--CSS-->', '<link rel="stylesheet" href="style.css">')
     .replace('<!--DATA-->', '<script src="content.js"></script>')
-    .replace('<!--HOME-->', homeJs ? '<script src="home.js"></script>' : '')
+    .replace('<!--HOME-->', (homeJs ? '<script src="home.js"></script>' : '') + (planJs ? '<script src="plan.js"></script>' : ''))
     .replace('<!--JS-->', (askJs ? '<script src="ask.js"></script>' : '') + '<script src="app.js"></script>')
     .replace('<!--SW-->', '<script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("sw.js");});</script>'));
   fs.writeFileSync(path.join(OUT, 'style.css'), css);
   fs.writeFileSync(path.join(OUT, 'app.js'), js);
   if (homeJs) fs.writeFileSync(path.join(OUT, 'home.js'), homeJs);
+  if (planJs) fs.writeFileSync(path.join(OUT, 'plan.js'), planJs);
   if (askJs) fs.writeFileSync(path.join(OUT, 'ask.js'), askJs);
   fs.writeFileSync(path.join(OUT, 'content.js'), `window.HM=${jsonIndex};`);
   fs.mkdirSync(path.join(OUT, 'lessons'), { recursive: true });
   for (const [file, body] of lessonOut) fs.writeFileSync(path.join(OUT, file), body);
   fs.writeFileSync(path.join(OUT, searchFile), searchBody);
-  fs.writeFileSync(path.join(OUT, 'sw.js'), read('app/sw.js').replace('__VERSION__', version).replace('__PHOTOS__', JSON.stringify(photoIds.map((id) => `photos/${id}.jpg`))).replace('__CONTENT__', JSON.stringify([searchFile, ...lessonOut.map(([f]) => f)])).replace('__MAP__', JSON.stringify([...(askJs ? ['ask.js'] : []), ...mapFiles.map(([, rel]) => rel)])));
+  fs.writeFileSync(path.join(OUT, 'sw.js'), read('app/sw.js').replace('__VERSION__', version).replace('__PHOTOS__', JSON.stringify(photoIds.map((id) => `photos/${id}.jpg`))).replace('__CONTENT__', JSON.stringify([searchFile, ...lessonOut.map(([f]) => f)])).replace('__MAP__', JSON.stringify([...(askJs ? ['ask.js'] : []), ...(planJs ? ['plan.js'] : []), ...mapFiles.map(([, rel]) => rel)])));
   fs.mkdirSync(path.join(OUT, 'photos'), { recursive: true });
   for (const id of photoIds) fs.copyFileSync(path.join(ROOT, 'photos', `${id}.jpg`), path.join(OUT, 'photos', `${id}.jpg`));
   fs.copyFileSync(path.join(ROOT, 'app/manifest.webmanifest'), path.join(OUT, 'manifest.webmanifest'));
@@ -462,7 +471,7 @@ function build() {
     .replace('<!--CSS-->', `<style>${css}</style>`)
     .replace('<!--DATA-->', `<script>window.HM=${jsonSingle.replace(/<\//g, '<\\/')};</script>`)
     .replace('<!--JS-->', (askJs ? `<script>${askJs.replace(/<\//g, '<\\/')}</script>` : '') + `<script>${js.replace(/<\//g, '<\\/')}</script>`)
-    .replace('<!--HOME-->', homeJs ? `<script>${homeJs.replace(/<\//g, '<\\/')}</script>` : '')
+    .replace('<!--HOME-->', (homeJs ? `<script>${homeJs.replace(/<\//g, '<\\/')}</script>` : '') + (planJs ? `<script>${planJs.replace(/<\//g, '<\\/')}</script>` : ''))
     .replace('<!--SW-->', '')
     .replace(/<link rel="manifest"[^>]*>/, '')
     .replace(/<link rel="apple-touch-icon"[^>]*>/, ''));

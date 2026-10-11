@@ -1,5 +1,5 @@
 /* Hunt Mentor home dashboard ("This week"). Classic script, loaded before app.js; app.js home() calls HMHome.render().
-   Cards: countdown, where picker (MU by point in polygon), open today in that MU (data/seasons), legal light,
+   Cards: Plan a hunt (plan.js, through C.planCard), countdown, where picker (MU by point in polygon), open today in that MU (data/seasons), legal light,
    wind and weather (Open-Meteo through map/tools-wind.js, saved copy hm.wx.v1), sun and moon, quick links.
    Works offline: season files are precached; weather shows the last saved forecast; anything missing hides. */
 (function () {
@@ -210,7 +210,10 @@
         <div class="hmd-kv"><span>Moon</span><b>${mo.name}, ${mo.lit}% lit</b></div></div>`;
     }
 
+    let planCard = '';
+    try { planCard = C.planCard ? C.planCard() : ''; } catch (e) { planCard = ''; }
     const html = `<section class="hmd" id="hmd" aria-label="This week">
+      ${planCard}
       <div class="card hmd-card">${count}</div>
       <div class="card hmd-card"><h2>Where</h2><div class="seg hmd-seg" role="group" aria-label="Where">${seg}</div>${whereLine}<div id="hmd-gps-msg"></div></div>
       ${mu ? `<div class="card hmd-card" id="hmd-open"><h2>Open today in MU ${esc(mu)}</h2><p class="muted">Loading seasons...</p></div>` : ''}
@@ -219,7 +222,7 @@
       ${sunMoon}
       <div class="hmd-links">
         <a class="btn" href="#/map">Map</a><a class="btn primary" href="#/field">Field Mode</a>
-        ${C.mentorUrl ? `<a class="btn" href="${esc(C.mentorUrl)}" target="_blank" rel="noopener">Ask the mentor</a>` : ''}<a class="btn" href="#/lists">Checklists</a>
+        ${C.mentorUrl ? `<a class="btn" href="${esc(C.mentorUrl)}" target="_blank" rel="noopener">Ask the mentor</a>` : ''}<a class="btn" href="#/lists">Checklists</a>${C.planCard ? '<a class="btn" href="#/plan">My hunt plans</a>' : ''}
       </div></section>`;
     view.insertAdjacentHTML('afterbegin', html);
     const root = view.querySelector('#hmd');
