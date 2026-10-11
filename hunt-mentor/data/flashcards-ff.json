@@ -1,0 +1,1158 @@
+[
+ {
+  "id": "ff-how-a-rifle-works-yo-1",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "What are the four bolt moves?",
+  "back": "Up (unlocks, cocks), back (extracts), forward (feeds), down (locks). UBFD.",
+  "diagram": "ff-rm-bolt-parts"
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-2",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "What does lifting the Tikka bolt handle do?",
+  "back": "Turns the locking lugs out of the receiver and cocks the firing pin."
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-3",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "Name the six links of the firing chain.",
+  "back": "Trigger, sear, firing pin, primer, powder gas, bullet."
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-4",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "What do the locking lugs do?",
+  "back": "Turn into recesses in the receiver and hold the pressure of the shot.",
+  "diagram": "ff-rm-bolt-parts"
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-5",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "What does the extractor do?",
+  "back": "Its claw grips the case rim and pulls the fired case out of the chamber."
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-6",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "Lands versus grooves?",
+  "back": "Grooves are the cut spiral channels. Lands are the raised ridges between them.",
+  "diagram": "ff-rm-rifling"
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-7",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "How is calibre measured?",
+  "back": "Across the bore, land to opposite land (hunter education)."
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-8",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "What does a 1:10 twist mean?",
+  "back": "One full turn of the rifling every 10 inches of barrel. Lower number, faster spin.",
+  "diagram": "ff-rm-rifling"
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-9",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "Your Arctic barrel length and twist (Sako spec)?",
+  "back": "508 mm (20 inch), 1:10 twist. Check your barrel stamp."
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-10",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "About how fast does a 150 gr .308 spin?",
+  "back": "About 3,400 turns a second at 2,820 fps from a 1:10 twist."
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-11",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "Tikka factory trigger weight and range?",
+  "back": "About 3 lb (13 to 15 N). Adjustable 2.5 to 4 lb. Never below 2.5 lb.",
+  "diagram": "ff-rm-trigger"
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-12",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "What does Sako list as the Arctic trigger type?",
+  "back": "Two stage: take up, a wall, then the break."
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-13",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "Tikka: what does safety ON lock?",
+  "back": "The bolt closed, the firing pin cocked, and the sear and trigger.",
+  "diagram": "ff-rm-safety"
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-14",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "Tikka red dot visible means?",
+  "back": "Safety OFF. Ready to fire."
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-15",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "Which rifle opens its bolt with the safety on?",
+  "back": "The CZ 457. The Tikka two position safety locks the bolt."
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-16",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "Tikka load check, in order?",
+  "back": "Muzzle safe, finger off, safety off, magazine out, bolt out, look through chamber, bolt in, decock pointing safe.",
+  "diagram": "ff-rm-check-3"
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-17",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "Click, no bang. What now?",
+  "back": "Keep it pointed safe, wait at least one minute, then unload with extreme care.",
+  "diagram": "ff-rm-misfire"
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-18",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "Tikka action screw torque, metal guard?",
+  "back": "7 Nm (62 in lb). Plastic guard: max 5 Nm (44 in lb).",
+  "diagram": "ff-rm-bedding"
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-19",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "Name four stop shooting signs.",
+  "back": "Trigger feels different, misfire, safety fails, gas spits or primer pierced, bulged or split case, odd sound.",
+  "diagram": "ff-rm-stop"
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-20",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "Arctic iron sights: factory zero and range?",
+  "back": "Zeroed at 100 m. Rear drum steps 100 to 600 m."
+ },
+ {
+  "id": "ff-how-a-rifle-works-yo-21",
+  "deck": "How a rifle works: your Tikka T3x",
+  "front": "Is a removed magazine proof the rifle is unloaded?",
+  "back": "No. A round can still be in the chamber. Look."
+ },
+ {
+  "id": "ff-how-a-cartridge-work-1",
+  "deck": "How a cartridge works",
+  "front": "Four parts of a cartridge?",
+  "back": "Case, primer, powder, bullet. CPPB.",
+  "diagram": "ff-ct-cutaway"
+ },
+ {
+  "id": "ff-how-a-cartridge-work-2",
+  "deck": "How a cartridge works",
+  "front": "Which three stamps must match before you load?",
+  "back": "Barrel stamp, box label, headstamp on each round.",
+  "diagram": "ff-ct-match"
+ },
+ {
+  "id": "ff-how-a-cartridge-work-3",
+  "deck": "How a cartridge works",
+  "front": "What does the primer do?",
+  "back": "An explosive compound that ignites the powder when struck by the firing pin."
+ },
+ {
+  "id": "ff-how-a-cartridge-work-4",
+  "deck": "How a cartridge works",
+  "front": "Smokeless powder in the open air does what?",
+  "back": "Burns slowly. It builds pressure only when confined in a chamber."
+ },
+ {
+  "id": "ff-how-a-cartridge-work-5",
+  "deck": "How a cartridge works",
+  "front": "Why does the case swell when fired?",
+  "back": "Pressure presses the brass to the chamber walls, sealing the gas so it only pushes forward.",
+  "diagram": "ff-ct-fire-4"
+ },
+ {
+  "id": "ff-how-a-cartridge-work-6",
+  "deck": "How a cartridge works",
+  "front": "Centrefire versus rimfire?",
+  "back": "Centrefire: primer in the centre of the base, most reloadable. Rimfire: priming in the rim, not reloadable.",
+  "diagram": "ff-ct-rim-centre"
+ },
+ {
+  "id": "ff-how-a-cartridge-work-7",
+  "deck": "How a cartridge works",
+  "front": "Name the parts of a rifle case.",
+  "back": "Rim, extractor groove, body, shoulder, neck. Headstamp on the base.",
+  "diagram": "ff-ct-case-parts"
+ },
+ {
+  "id": "ff-how-a-cartridge-work-8",
+  "deck": "How a cartridge works",
+  "front": "Name the parts of a hunting bullet.",
+  "back": "Tip, ogive (curved nose), shank, base (flat or boat tail).",
+  "diagram": "ff-ct-bullet-parts"
+ },
+ {
+  "id": "ff-how-a-cartridge-work-9",
+  "deck": "How a cartridge works",
+  "front": "How many grains in a pound?",
+  "back": "7,000. So 150 gr is about 9.7 g.",
+  "diagram": "ff-ct-grains"
+ },
+ {
+  "id": "ff-how-a-cartridge-work-10",
+  "deck": "How a cartridge works",
+  "front": "Cup and core bullet: strength and weakness?",
+  "back": "Cheap, accurate, opens fast. Core can separate at high impact speed.",
+  "diagram": "ff-ct-bullet-types"
+ },
+ {
+  "id": "ff-how-a-cartridge-work-11",
+  "deck": "How a cartridge works",
+  "front": "What is a bonded bullet?",
+  "back": "Core fused to the jacket so they stay together for deep penetration."
+ },
+ {
+  "id": "ff-how-a-cartridge-work-12",
+  "deck": "How a cartridge works",
+  "front": "What is a partition bullet?",
+  "back": "A copper wall splits a front core that opens and a rear core that keeps driving."
+ },
+ {
+  "id": "ff-how-a-cartridge-work-13",
+  "deck": "How a cartridge works",
+  "front": "Monolithic copper bullet: pro and con?",
+  "back": "Keeps nearly all its weight, lead free. Needs speed to open; check the maker minimum."
+ },
+ {
+  "id": "ff-how-a-cartridge-work-14",
+  "deck": "How a cartridge works",
+  "front": "Can you hunt with full metal jacket in BC?",
+  "back": "No. Full metal jacketed non expanding, tracer, incendiary and explosive bullets are unlawful for hunting with a rifle."
+ },
+ {
+  "id": "ff-how-a-cartridge-work-15",
+  "deck": "How a cartridge works",
+  "front": "What does expansion do?",
+  "back": "The bullet mushrooms, making a wider wound channel for a quick kill.",
+  "diagram": "ff-ct-bullet-types"
+ },
+ {
+  "id": "ff-how-a-cartridge-work-16",
+  "deck": "How a cartridge works",
+  "front": "Tikka rule on old ammunition?",
+  "back": "Do not fire ammunition over 10 years old.",
+  "diagram": "ff-ct-inspect"
+ },
+ {
+  "id": "ff-how-a-cartridge-work-17",
+  "deck": "How a cartridge works",
+  "front": "Name four faults to check on each round.",
+  "back": "Split neck, dents, corrosion, loose bullet, wrong headstamp, too old."
+ },
+ {
+  "id": "ff-how-a-cartridge-work-18",
+  "deck": "How a cartridge works",
+  "front": "Parts of a shotshell?",
+  "back": "Primer, powder, wad, shot, crimp.",
+  "diagram": "ff-ct-shotshell"
+ },
+ {
+  "id": "ff-how-a-cartridge-work-19",
+  "deck": "How a cartridge works",
+  "front": "Deer bullet choice for your .308 (ammo session)?",
+  "back": "150 gr cup and core or bonded. One load, zeroed."
+ },
+ {
+  "id": "ff-ballistics-deep-dive-1",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "Three kinds of ballistics?",
+  "back": "Internal (barrel), external (air), terminal (animal).",
+  "diagram": "ff-bl-three"
+ },
+ {
+  "id": "ff-ballistics-deep-dive-2",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "Why does the bullet cross the line of sight twice?",
+  "back": "The scope sits above the bore, so the bore tilts up. The bullet climbs through the line, then falls back through it at the zero."
+ },
+ {
+  "id": "ff-ballistics-deep-dive-3",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "Drop with a 100 m zero at 150, 200, 250, 300 m (150 gr)?",
+  "back": "About 4, 13, 28, 48 cm.",
+  "diagram": "ff-bl-drop-curve"
+ },
+ {
+  "id": "ff-ballistics-deep-dive-4",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "1 MOA and 1 mil at 100 m?",
+  "back": "1 MOA = 2.9 cm. 1 mil = 10 cm.",
+  "diagram": "ff-bl-moa-mil"
+ },
+ {
+  "id": "ff-ballistics-deep-dive-5",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "250 m hold on a 100 m zero in MOA?",
+  "back": "About 3.8 MOA, about 15 clicks of 1/4 MOA, about 1.1 mil."
+ },
+ {
+  "id": "ff-ballistics-deep-dive-6",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "Which clock directions are full value wind?",
+  "back": "3 and 9 o clock.",
+  "diagram": "ff-bl-wind-clock"
+ },
+ {
+  "id": "ff-ballistics-deep-dive-7",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "Wind from 1 or 11 o clock counts as?",
+  "back": "About half. 45 degrees: about 70%."
+ },
+ {
+  "id": "ff-ballistics-deep-dive-8",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "20 km/h crosswind at 250 m, 150 gr?",
+  "back": "About 27 cm. More than the vital zone."
+ },
+ {
+  "id": "ff-ballistics-deep-dive-9",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "Double the distance, the wind drift?",
+  "back": "About four times."
+ },
+ {
+  "id": "ff-ballistics-deep-dive-10",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "10 km/h wind looks like?",
+  "back": "Felt on the face, leaves rustle.",
+  "diagram": "ff-bl-wind-cues"
+ },
+ {
+  "id": "ff-ballistics-deep-dive-11",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "Uphill or downhill: which distance for the hold?",
+  "back": "The flat (horizontal) distance. Holding for the slope distance hits high."
+ },
+ {
+  "id": "ff-ballistics-deep-dive-12",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "Flat distance formula?",
+  "back": "Slope distance × cosine of the angle. cos 30 = 0.87.",
+  "diagram": "ff-bl-cosine"
+ },
+ {
+  "id": "ff-ballistics-deep-dive-13",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "Deer 250 m away, 30 degrees up. Hold for?",
+  "back": "About 217 m. Holding for 250 hits about 10 cm high."
+ },
+ {
+  "id": "ff-ballistics-deep-dive-14",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "Energy of 150 gr .308 at 300 m?",
+  "back": "About 1,700 J (1,250 ft lb).",
+  "diagram": "ff-bl-energy"
+ },
+ {
+  "id": "ff-ballistics-deep-dive-15",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "Time of flight to 200 m?",
+  "back": "About a quarter second (0.26 s).",
+  "diagram": "ff-bl-tof"
+ },
+ {
+  "id": "ff-ballistics-deep-dive-16",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "Does altitude add or reduce drop?",
+  "back": "Thin air reduces drop slightly: about 3 cm less at 300 m at 1,200 m elevation.",
+  "diagram": "ff-bl-conditions"
+ },
+ {
+  "id": "ff-ballistics-deep-dive-17",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "Point blank range of a 100 m zero, 15 cm zone?",
+  "back": "About 170 m of centre hold.",
+  "diagram": "ff-bl-pbr"
+ },
+ {
+  "id": "ff-ballistics-deep-dive-18",
+  "deck": "Ballistics deep dive: drop, wind, angles, energy",
+  "front": "What goes on your dope card?",
+  "back": "Your load, zero, drops and holds at 150 to 300 m, wind at 20 km/h, and your max range. From your own groups.",
+  "diagram": "ff-bl-dope"
+ },
+ {
+  "id": "ff-judging-distance-ran-1",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "Guess 250 m, deer at 300 m. Result?",
+  "back": "About 20 cm low with a 100 m zero: under the heart or a leg.",
+  "diagram": "ff-jd-error"
+ },
+ {
+  "id": "ff-judging-distance-ran-2",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "How does a laser rangefinder measure?",
+  "back": "It times a light pulse to the target and back.",
+  "diagram": "ff-jd-laser"
+ },
+ {
+  "id": "ff-judging-distance-ran-3",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "Box says 1,800. On deer?",
+  "back": "Roughly half. One maker lists 900 yd on deer for its 1800."
+ },
+ {
+  "id": "ff-judging-distance-ran-4",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "Three rangefinder habits?",
+  "back": "Brace it, box on the body, three readings. Brace, box, three.",
+  "diagram": "ff-jd-lrf-3"
+ },
+ {
+  "id": "ff-judging-distance-ran-5",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "Reading much too short?",
+  "back": "The beam hit brush in front. Find a gap."
+ },
+ {
+  "id": "ff-judging-distance-ran-6",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "Mil ranging formula?",
+  "back": "Metres = size in metres × 1,000 ÷ mils.",
+  "diagram": "ff-jd-formula"
+ },
+ {
+  "id": "ff-judging-distance-ran-7",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "MOA ranging formula?",
+  "back": "Yards = size in inches × 95.5 ÷ MOA."
+ },
+ {
+  "id": "ff-judging-distance-ran-8",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "0.46 m chest covers 2 mils. Range?",
+  "back": "230 m. The 46 cm deer size is hunter lore: a check only."
+ },
+ {
+  "id": "ff-judging-distance-ran-9",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "Second focal plane reticle ranging rule?",
+  "back": "Only at the power the manual names, usually the highest."
+ },
+ {
+  "id": "ff-judging-distance-ran-10",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "Unit of measure method?",
+  "back": "Picture a known 100 m and count how many fit. Not accurate past 400 m.",
+  "diagram": "ff-jd-unit"
+ },
+ {
+  "id": "ff-judging-distance-ran-11",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "Appearance method?",
+  "back": "Compare how the animal looks with known distances: detail fades and the outline blurs with range.",
+  "diagram": "ff-jd-appearance"
+ },
+ {
+  "id": "ff-judging-distance-ran-12",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "Name 3 things that make a deer look nearer.",
+  "back": "Bright light with sun behind you, over snow or water, clear mountain air, strong contrast, a hidden dip.",
+  "diagram": "ff-jd-illusions"
+ },
+ {
+  "id": "ff-judging-distance-ran-13",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "Name 3 things that make a deer look farther.",
+  "back": "Poor light or fog, sun in your eyes, only part showing, blending in, lying down."
+ },
+ {
+  "id": "ff-judging-distance-ran-14",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "Halving method?",
+  "back": "Judge the distance to halfway, then double it.",
+  "diagram": "ff-jd-halving"
+ },
+ {
+  "id": "ff-judging-distance-ran-15",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "Bracketing method?",
+  "back": "Decide near and far limits, add them and halve."
+ },
+ {
+  "id": "ff-judging-distance-ran-16",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "How do you learn your pace count?",
+  "back": "Walk a measured 100 m three times counting each left foot; average it.",
+  "diagram": "ff-jd-pace"
+ },
+ {
+  "id": "ff-judging-distance-ran-17",
+  "deck": "Judging distance: rangefinders, reticles and your eye",
+  "front": "Best practice game?",
+  "back": "Guess out loud, then laser it, and log the error."
+ },
+ {
+  "id": "ff-shooting-positions-a-1",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "Steadiest to least: four basic positions?",
+  "back": "Prone, sitting, kneeling, standing.",
+  "diagram": "ff-ps-ladder"
+ },
+ {
+  "id": "ff-shooting-positions-a-2",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "Bone or muscle support?",
+  "back": "Bone. Stack the elbows under the rifle, then relax.",
+  "diagram": "ff-ps-bone"
+ },
+ {
+  "id": "ff-shooting-positions-a-3",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "Define natural point of aim.",
+  "back": "Where the barrel points when your muscles are relaxed and you are supported."
+ },
+ {
+  "id": "ff-shooting-positions-a-4",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "Crosshair drifts off when you relax. Fix?",
+  "back": "Move your body around a pivot, not the rifle, until it settles on target.",
+  "diagram": "ff-ps-npoa-4"
+ },
+ {
+  "id": "ff-shooting-positions-a-5",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "Barrel directly on a rock shoots?",
+  "back": "High. Pad under the forend (hunter education).",
+  "diagram": "ff-ps-tree"
+ },
+ {
+  "id": "ff-shooting-positions-a-6",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "Prone with a pack: where does the pack go?",
+  "back": "Under the forend, not the barrel. Rear hand fine tunes height.",
+  "diagram": "ff-ps-pack"
+ },
+ {
+  "id": "ff-shooting-positions-a-7",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "How do you load a bipod?",
+  "back": "Lean your shoulder gently forward, same pressure every shot.",
+  "diagram": "ff-ps-bipod"
+ },
+ {
+  "id": "ff-shooting-positions-a-8",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "Three ways to sit?",
+  "back": "Crossed ankle (low, steady), open leg (slopes), with sticks (over grass).",
+  "diagram": "ff-ps-sit-types"
+ },
+ {
+  "id": "ff-shooting-positions-a-9",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "Shooting sticks set up?",
+  "back": "Two legs toward you, one toward the deer, top about armpit height, feet nearly square."
+ },
+ {
+  "id": "ff-shooting-positions-a-10",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "Downhill shot position?",
+  "back": "Sit facing downhill, heels dug in.",
+  "diagram": "ff-ps-slope"
+ },
+ {
+  "id": "ff-shooting-positions-a-11",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "Uphill shot position?",
+  "back": "Prone or kneel with the pack, or sit with sticks."
+ },
+ {
+  "id": "ff-shooting-positions-a-12",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "Tree rest rule?",
+  "back": "Hand or glove between the rifle and the bark."
+ },
+ {
+  "id": "ff-shooting-positions-a-13",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "Five steps from walking to steady?",
+  "back": "Stop, say the position, sticks out and sit, rifle in and NPOA check, safety off when ready."
+ },
+ {
+  "id": "ff-shooting-positions-a-14",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "When does the safety come off?",
+  "back": "When the crosshair is settled and you are ready to fire."
+ },
+ {
+  "id": "ff-shooting-positions-a-15",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "Cold plate drill?",
+  "back": "First shot of the day, from sticks or sitting, at hunting distance, on a 20 cm plate.",
+  "diagram": "ff-ps-drill-target"
+ },
+ {
+  "id": "ff-shooting-positions-a-16",
+  "deck": "Shooting positions and rests: drills that work in the field",
+  "front": "Position ladder drill?",
+  "back": "3 shots each prone, sitting, sticks at 100 m. All in 10 cm per position."
+ },
+ {
+  "id": "ff-a-season-practice-pl-1",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "Four parts of the shooting year?",
+  "back": "Off season, build, tune, season.",
+  "diagram": "ff-pp-year"
+ },
+ {
+  "id": "ff-a-season-practice-pl-2",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "Day 1 of the 10 day sprint?",
+  "back": "Confirm zero at 100 m, 3 shots, cold barrel.",
+  "diagram": "ff-pp-sprint"
+ },
+ {
+  "id": "ff-a-season-practice-pl-3",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "What not to do in the last two weeks?",
+  "back": "Change load, scope or rings. Each change needs a new zero."
+ },
+ {
+  "id": "ff-a-season-practice-pl-4",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "Three pillars of practice?",
+  "back": "Dry fire, range, field.",
+  "diagram": "ff-pp-pillars"
+ },
+ {
+  "id": "ff-a-season-practice-pl-5",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "Dry fire step one?",
+  "back": "All ammunition out of the room.",
+  "diagram": "ff-pp-dry-1"
+ },
+ {
+  "id": "ff-a-season-practice-pl-6",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "What goes in the chamber for dry fire?",
+  "back": "A snap cap, ideally with a spring loaded primer (Tikka).",
+  "diagram": "ff-pp-dry-2"
+ },
+ {
+  "id": "ff-a-season-practice-pl-7",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "Dummy rounds with empty primer pockets: dry fire safe?",
+  "back": "No. Good for loading practice, but they do not protect the firing pin (Tikka)."
+ },
+ {
+  "id": "ff-a-season-practice-pl-8",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "How does a dry fire session end?",
+  "back": "Say \"finished\", snap cap out, rifle locked away before ammo returns.",
+  "diagram": "ff-pp-dry-4"
+ },
+ {
+  "id": "ff-a-season-practice-pl-9",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "First shot of every range day?",
+  "back": "A cold shot from a field position. Log it.",
+  "diagram": "ff-pp-range-day"
+ },
+ {
+  "id": "ff-a-season-practice-pl-10",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "Zero check rule of thumb?",
+  "back": "Adjust only if the group centre is off by more than about 2.5 cm."
+ },
+ {
+  "id": "ff-a-season-practice-pl-11",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "Cost per shot: .308 versus .22?",
+  "back": "About $2.05 to $2.75 versus $0.14 to $0.17 (price checked 2026-10-01).",
+  "diagram": "ff-pp-cost"
+ },
+ {
+  "id": "ff-a-season-practice-pl-12",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "Downside of training only with the .22?",
+  "back": "No recoil hides a flinch. Mix in .308 shots."
+ },
+ {
+  "id": "ff-a-season-practice-pl-13",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "Where can you shoot a field course?",
+  "back": "A range, or land where discharge is lawful and safe with a backstop.",
+  "diagram": "ff-pp-field-course"
+ },
+ {
+  "id": "ff-a-season-practice-pl-14",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "Five things to log for each counting shot?",
+  "back": "Date, position, distance, wind, result.",
+  "diagram": "ff-pp-log"
+ },
+ {
+  "id": "ff-a-season-practice-pl-15",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "Low misses often mean?",
+  "back": "A jerked trigger or flinch."
+ },
+ {
+  "id": "ff-a-season-practice-pl-16",
+  "deck": "A season practice plan: dry fire, range days, field shooting",
+  "front": "When to confirm zero in season?",
+  "back": "After any knock, fall, long rough drive or flight."
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-1",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Pattern % at 40 yd: C, IC, M, F?",
+  "back": "About 40, 50, 60, 70 percent in a 76 cm circle (lead shot, a starting point).",
+  "diagram": "ff-sg-circle"
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-2",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Constriction of IC, modified, full?",
+  "back": "About .010, .020, .030 in (one maker).",
+  "diagram": "ff-sg-constriction"
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-3",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "What is choke creep?",
+  "back": "Hard steel pushing on a tight choke, deforming it and possibly locking it in the barrel.",
+  "diagram": "ff-sg-creep"
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-4",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Steel and choke rule?",
+  "back": "Use chokes your maker rates for steel; nothing tighter than modified unless marked steel safe."
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-5",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Five patterning steps?",
+  "back": "Big sheet at real distance, padded rest, circle densest 76 cm, count and divide, average 5 and look for holes.",
+  "diagram": "ff-sg-pat-3"
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-6",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Pattern percentage formula?",
+  "back": "Pellets in the 76 cm circle ÷ pellets in the shell.",
+  "diagram": "ff-sg-pat-4"
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-7",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Dense core versus fringe?",
+  "back": "The core kills; the thin fringe cripples.",
+  "diagram": "ff-sg-read"
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-8",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Steel #2 pellets per ounce?",
+  "back": "About 125. 1 1/8 oz is about 141 pellets.",
+  "diagram": "ff-sg-pellets"
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-9",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Lead #6 and #7.5 per ounce?",
+  "back": "About 225 and 350."
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-10",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Big ducks need about how many pellets in the circle?",
+  "back": "About 100 at your longest range."
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-11",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Why lead a bird?",
+  "back": "Shot takes about 0.1 s to reach 30 m and the bird keeps flying."
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-12",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Lead at 30 m, 48 km/h crossing?",
+  "back": "About 1.4 m (model). Roughly 1 to 2 m.",
+  "diagram": "ff-sg-lead-table"
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-13",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Most misses are?",
+  "back": "Behind. Add lead, keep the gun moving."
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-14",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Lead for a quartering bird?",
+  "back": "About half to 70% of the crossing lead.",
+  "diagram": "ff-sg-angles"
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-15",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Find your dominant eye?",
+  "back": "Hand triangle at arm length on a far object, pull back to your face.",
+  "diagram": "ff-sg-eye-3"
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-16",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Shell and choke for teal over decoys?",
+  "back": "Steel #4, IC, about 30 m."
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-17",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Shell and choke for quail?",
+  "back": "Lead #7.5, IC or skeet, about 25 m."
+ },
+ {
+  "id": "ff-shotgun-mastery-chok-18",
+  "deck": "Shotgun mastery: chokes, patterns, shot sizes, lead",
+  "front": "Shotgun plug rule?",
+  "back": "Pump, repeater or semi auto: magazine holds no more than 2. Three total."
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-1",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "Game birds legal with a .22 rimfire?",
+  "back": "Grouse, ptarmigan, turkey only. Not quail.",
+  "diagram": "gr-legal-guns"
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-2",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "Big game legal with a .22?",
+  "back": "Only bobcat, lynx and wolverine among big game. Not deer."
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-3",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "CCI Mini Mag specs?",
+  "back": "40 gr copper plated round nose, 1,235 fps, BC .130."
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-4",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "50 m zero: flat from where to where?",
+  "back": "Within about 1.5 cm from 15 to 55 m.",
+  "diagram": "ff-rf-trajectory"
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-5",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "Drop at 100 m with a 50 m zero?",
+  "back": "About 19 cm."
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-6",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "10 km/h wind at 50 m on a .22?",
+  "back": "About 3 cm. 11 cm at 100 m.",
+  "diagram": "ff-rf-wind"
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-7",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "How to find the ammo your .22 likes?",
+  "back": "3 or 4 kinds, warm up 10 to 20 rounds after cleaning, two 5 shot groups each at 50 m, keep the winner.",
+  "diagram": "ff-rf-test-3"
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-8",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "Where to aim on a grouse with a .22?",
+  "back": "Head or upper neck.",
+  "diagram": "ff-rf-grouse-head"
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-9",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "Grouse on a branch with sky behind?",
+  "back": "No rifle shot. No backstop.",
+  "diagram": "ff-rf-hunt-2"
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-10",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "How far can a .22 carry?",
+  "back": "Well over 1 km."
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-11",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "CZ 457 scope base?",
+  "back": "11 mm dovetail, or a Weaver rail.",
+  "diagram": "ff-rf-cz457"
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-12",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "CZ 457 bolt lift?",
+  "back": "60 degrees, to clear larger scopes."
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-13",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "CZ 457 safety on looks like?",
+  "back": "Lever back, white dot showing. Locks the trigger; the bolt still opens."
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-14",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "CZ on dry fire?",
+  "back": "Not frequently; use snap caps."
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-15",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "CZ factory zero for open sights?",
+  "back": "50 m."
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-16",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "Clean a .22 from which end?",
+  "back": "The chamber. Brush all the way through before reversing.",
+  "diagram": "ff-rf-clean"
+ },
+ {
+  "id": "ff-the-22-rimfire-accur-17",
+  "deck": "The .22 rimfire: accuracy, grouse and small game",
+  "front": "CZ 457 stock screw torque?",
+  "back": "3.5 Nm."
+ },
+ {
+  "id": "ff-cleaning-maintenance-1",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "Tikka: how soon can corrosion start?",
+  "back": "Within 24 hours, even on stainless and all weather rifles.",
+  "diagram": "ff-gc-rust"
+ },
+ {
+  "id": "ff-cleaning-maintenance-2",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "When to clean?",
+  "back": "After every use, even with no shot fired (Tikka)."
+ },
+ {
+  "id": "ff-cleaning-maintenance-3",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "Six routine cleaning steps?",
+  "back": "Unload; dry if wet; solvent brush; patches until clean; bolt, chamber, receiver; thin oil and screws.",
+  "diagram": "ff-gc-clean-3"
+ },
+ {
+  "id": "ff-cleaning-maintenance-4",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "Which way does the rod go?",
+  "back": "From the breech, through a bore guide, in the bullet direction.",
+  "diagram": "ff-gc-breech"
+ },
+ {
+  "id": "ff-cleaning-maintenance-5",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "Tikka grease points?",
+  "back": "Locking lugs, cocking cam, head of the cocking piece. Lightly.",
+  "diagram": "ff-gc-grease"
+ },
+ {
+  "id": "ff-cleaning-maintenance-6",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "Before shooting after storage?",
+  "back": "Wipe the chamber dry and run a dry patch."
+ },
+ {
+  "id": "ff-cleaning-maintenance-7",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "Periodic service: how often?",
+  "back": "At least once a year, more with heavy use or before storage."
+ },
+ {
+  "id": "ff-cleaning-maintenance-8",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "What does copper fouling do?",
+  "back": "Can make the barrel shoot inaccurately and corrode more easily."
+ },
+ {
+  "id": "ff-cleaning-maintenance-9",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "Wet rifle tonight?",
+  "back": "Out of the case, dry it warm, then clean and oil.",
+  "diagram": "ff-gc-wet"
+ },
+ {
+  "id": "ff-cleaning-maintenance-10",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "Why no leather or fabric case for storage?",
+  "back": "They attract moisture even when they look dry (Tikka)."
+ },
+ {
+  "id": "ff-cleaning-maintenance-11",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "CZ advice in very low temperatures?",
+  "back": "Remove oil from accessible parts or use a lube made for the cold.",
+  "diagram": "ff-gc-cold"
+ },
+ {
+  "id": "ff-cleaning-maintenance-12",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "Cold rifle into a warm cabin?",
+  "back": "Water beads form. Leave it cased somewhere cold and secure, or dry it well (Tip)."
+ },
+ {
+  "id": "ff-cleaning-maintenance-13",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "Muzzle in snow after a fall?",
+  "back": "Unload, bolt out, look through. Obstruction: do not fire.",
+  "diagram": "ff-gc-snow"
+ },
+ {
+  "id": "ff-cleaning-maintenance-14",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "Shotgun choke care?",
+  "back": "Remove it, clean and oil the threads, refit snug.",
+  "diagram": "ff-gc-sg-2"
+ },
+ {
+  "id": "ff-cleaning-maintenance-15",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "Loaded firearm in or on a vehicle in BC?",
+  "back": "Not allowed. Chamber and attached magazine empty.",
+  "diagram": "gr-gun-transport"
+ },
+ {
+  "id": "ff-cleaning-maintenance-16",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "Leaving the vehicle with a rifle inside?",
+  "back": "Locked trunk or lockable compartment; no trunk, out of sight and the vehicle locked."
+ },
+ {
+  "id": "ff-cleaning-maintenance-17",
+  "deck": "Cleaning, maintenance, cold and wet weather, transport",
+  "front": "Tikka storage advice?",
+  "back": "Locked away, ammunition in a separate locked place, dry."
+ },
+ {
+  "id": "ff-optics-binoculars-sp-1",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "Three optics and their jobs?",
+  "back": "Binoculars find, spotting scope judges, rifle scope aims.",
+  "diagram": "ff-op-three"
+ },
+ {
+  "id": "ff-optics-binoculars-sp-2",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "What does 10x42 mean?",
+  "back": "10 power, 42 mm objective lens."
+ },
+ {
+  "id": "ff-optics-binoculars-sp-3",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "Exit pupil formula?",
+  "back": "Objective ÷ power. 8x42 = 5.25 mm.",
+  "diagram": "ff-op-exit-pupil"
+ },
+ {
+  "id": "ff-optics-binoculars-sp-4",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "Your pupil at dawn or dusk?",
+  "back": "About 4 to 5 mm. Bright day 2 to 3 mm, dark 7 to 8 mm.",
+  "diagram": "ff-op-pupil"
+ },
+ {
+  "id": "ff-optics-binoculars-sp-5",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "8x or 10x for timber?",
+  "back": "8x: wider, steadier, brighter.",
+  "diagram": "ff-op-fov"
+ },
+ {
+  "id": "ff-optics-binoculars-sp-6",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "Light lost per bare glass surface?",
+  "back": "About 4 to 5 percent.",
+  "diagram": "ff-op-coatings"
+ },
+ {
+  "id": "ff-optics-binoculars-sp-7",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "Best coating label?",
+  "back": "Fully multi coated."
+ },
+ {
+  "id": "ff-optics-binoculars-sp-8",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "Roof versus Porro?",
+  "back": "Roof: straight, slim, durable. Porro: offset, rich depth, good value.",
+  "diagram": "ff-op-prisms"
+ },
+ {
+  "id": "ff-optics-binoculars-sp-9",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "Four binocular set up steps?",
+  "back": "Hinge to one circle; eyecups; centre focus with left eye; diopter with right eye.",
+  "diagram": "ff-op-bino-4"
+ },
+ {
+  "id": "ff-optics-binoculars-sp-10",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "After setting the diopter?",
+  "back": "Note the number. Use only the centre wheel."
+ },
+ {
+  "id": "ff-optics-binoculars-sp-11",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "Spotting scope must be on?",
+  "back": "A tripod.",
+  "diagram": "ff-op-spotter"
+ },
+ {
+  "id": "ff-optics-binoculars-sp-12",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "Angled or straight spotting scope?",
+  "back": "Angled sits lower and is easy to share; straight is quick to aim and suits a window mount."
+ },
+ {
+  "id": "ff-optics-binoculars-sp-13",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "How to focus a rifle scope reticle?",
+  "back": "Quick looks at plain sky, turn the eyepiece until the crosshair is sharp at once. Never use it to focus the target.",
+  "diagram": "ff-op-scope-1"
+ },
+ {
+  "id": "ff-optics-binoculars-sp-14",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "Parallax check?",
+  "back": "Move your head a little. If the crosshair slides on the target, adjust parallax or centre your eye.",
+  "diagram": "ff-op-scope-3"
+ },
+ {
+  "id": "ff-optics-binoculars-sp-15",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "Scope power while walking timber?",
+  "back": "Low, 3 to 4x.",
+  "diagram": "ff-op-power"
+ },
+ {
+  "id": "ff-optics-binoculars-sp-16",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "Why never glass with the rifle scope?",
+  "back": "Your muzzle points wherever you look.",
+  "diagram": "ff-op-no-scope"
+ },
+ {
+  "id": "ff-optics-binoculars-sp-17",
+  "deck": "Optics: binoculars, spotting scopes and rifle scopes",
+  "front": "Thermal monocular on a BC hunt?",
+  "back": "Banned, even in the pack.",
+  "diagram": "ff-op-no-ir"
+ }
+]

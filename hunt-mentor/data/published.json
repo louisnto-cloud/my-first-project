@@ -188,7 +188,27 @@
     "bear-cougar-encounters",
     "wildfire-smoke-heat",
     "avalanche-hunters",
-    "ice-cold-water"
+    "ice-cold-water",
+    "rs-track-measuring",
+    "rs-track-aging",
+    "rs-droppings",
+    "rs-beds",
+    "rs-rubs-scrapes",
+    "rs-bird-sign",
+    "rs-predator-sign",
+    "rs-blood-hair-tissue",
+    "rs-track-following",
+    "rs-sign-substrates",
+    "topo-deep-dive",
+    "compass-mastery",
+    "gps-phone-battery",
+    "hunt-map-pro",
+    "route-planning",
+    "night-navigation",
+    "field-weather",
+    "wind-mastery",
+    "stay-unseen",
+    "stalking-footwork"
   ],
   "flashcards": [
     "quail",
@@ -198,6 +218,8 @@
     "mule-deer",
     "white-tailed-deer",
     "rq",
-    "fs"
+    "fs",
+    "rs",
+    "fn"
   ]
 }

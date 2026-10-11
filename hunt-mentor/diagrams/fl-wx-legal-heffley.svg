@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 378" role="img" aria-label="Chart of legal big game hunting hours near Heffley Creek in 2026, on BC time UTC minus 7. Sunrise and sunset: 1 September 6:13 and 19:50, 1 October 6:59 and 18:42, 15 October 7:22 and 18:12, 31 October 7:49 and 17:40, 15 November 8:15 and 17:16, 30 November 8:39 and 17:01, 10 December 8:52 and 16:56. Legal hours run 1 hour before sunrise to 1 hour after sunset.">
+  <rect x="0" y="0" width="400" height="378" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Legal big game hours near Heffley Creek</text>
+<line x1="70.0" y1="46" x2="70.0" y2="330" stroke="#d8d2c2" stroke-width="1" stroke-linecap="round"/><text x="70.0" y="346" font-family="sans-serif" font-size="12" fill="#23261f" text-anchor="middle">4:00</text>
+<line x1="123.33333333333334" y1="46" x2="123.33333333333334" y2="330" stroke="#d8d2c2" stroke-width="1" stroke-linecap="round"/><text x="123.33333333333334" y="346" font-family="sans-serif" font-size="12" fill="#23261f" text-anchor="middle">7:00</text>
+<line x1="176.66666666666669" y1="46" x2="176.66666666666669" y2="330" stroke="#d8d2c2" stroke-width="1" stroke-linecap="round"/><text x="176.66666666666669" y="346" font-family="sans-serif" font-size="12" fill="#23261f" text-anchor="middle">10:00</text>
+<line x1="230.0" y1="46" x2="230.0" y2="330" stroke="#d8d2c2" stroke-width="1" stroke-linecap="round"/><text x="230.0" y="346" font-family="sans-serif" font-size="12" fill="#23261f" text-anchor="middle">13:00</text>
+<line x1="283.33333333333337" y1="46" x2="283.33333333333337" y2="330" stroke="#d8d2c2" stroke-width="1" stroke-linecap="round"/><text x="283.33333333333337" y="346" font-family="sans-serif" font-size="12" fill="#23261f" text-anchor="middle">16:00</text>
+<line x1="336.6666666666667" y1="46" x2="336.6666666666667" y2="330" stroke="#d8d2c2" stroke-width="1" stroke-linecap="round"/><text x="336.6666666666667" y="346" font-family="sans-serif" font-size="12" fill="#23261f" text-anchor="middle">19:00</text>
+<line x1="390.0" y1="46" x2="390.0" y2="330" stroke="#d8d2c2" stroke-width="1" stroke-linecap="round"/><text x="390.0" y="346" font-family="sans-serif" font-size="12" fill="#23261f" text-anchor="middle">22:00</text>
+<text x="64" y="74" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="end">Sep 1</text>
+<rect x="91.62962962962963" y="58" width="277.6296296296296" height="24" rx="4" fill="#e8590c" opacity="0.35"/>
+<rect x="109.4074074074074" y="58" width="242.07407407407408" height="24" rx="4" fill="#e8590c"/>
+<text x="113.4074074074074" y="75" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="start">06:13</text><text x="347.48148148148147" y="75" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="end">19:50</text>
+<text x="64" y="114" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="end">Oct 1</text>
+<rect x="105.25925925925927" y="98" width="243.85185185185182" height="24" rx="4" fill="#e8590c" opacity="0.35"/>
+<rect x="123.03703703703704" y="98" width="208.29629629629628" height="24" rx="4" fill="#e8590c"/>
+<text x="127.03703703703704" y="115" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="start">06:59</text><text x="327.3333333333333" y="115" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="end">18:42</text>
+<text x="64" y="154" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="end">Oct 15</text>
+<rect x="112.07407407407408" y="138" width="228.14814814814815" height="24" rx="4" fill="#e8590c" opacity="0.35"/>
+<rect x="129.85185185185185" y="138" width="192.5925925925926" height="24" rx="4" fill="#e8590c"/>
+<text x="133.85185185185185" y="155" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="start">07:22</text><text x="318.44444444444446" y="155" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="end">18:12</text>
+<text x="64" y="194" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="end">Oct 31</text>
+<rect x="120.07407407407408" y="178" width="210.66666666666669" height="24" rx="4" fill="#e8590c" opacity="0.35"/>
+<rect x="137.85185185185185" y="178" width="175.1111111111111" height="24" rx="4" fill="#e8590c"/>
+<text x="141.85185185185185" y="195" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="start">07:49</text><text x="308.96296296296293" y="195" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="end">17:40</text>
+<text x="64" y="234" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="end">Nov 15</text>
+<rect x="127.77777777777777" y="218" width="195.85185185185185" height="24" rx="4" fill="#e8590c" opacity="0.35"/>
+<rect x="145.55555555555554" y="218" width="160.2962962962963" height="24" rx="4" fill="#e8590c"/>
+<text x="149.55555555555554" y="235" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="start">08:15</text><text x="301.85185185185185" y="235" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="end">17:16</text>
+<text x="64" y="274" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="end">Nov 30</text>
+<rect x="134.88888888888889" y="258" width="184.29629629629633" height="24" rx="4" fill="#e8590c" opacity="0.35"/>
+<rect x="152.66666666666669" y="258" width="148.7407407407407" height="24" rx="4" fill="#e8590c"/>
+<text x="156.66666666666669" y="275" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="start">08:39</text><text x="297.4074074074074" y="275" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="end">17:01</text>
+<text x="64" y="314" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="end">Dec 10</text>
+<rect x="138.74074074074076" y="298" width="178.96296296296293" height="24" rx="4" fill="#e8590c" opacity="0.35"/>
+<rect x="156.51851851851853" y="298" width="143.4074074074074" height="24" rx="4" fill="#e8590c"/>
+<text x="160.51851851851853" y="315" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="start">08:52</text><text x="295.9259259259259" y="315" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="end">16:56</text>
+<rect x="70" y="356" width="14" height="12" rx="2" fill="#e8590c"/><text x="90" y="367" font-family="sans-serif" font-size="12" fill="#23261f" text-anchor="start">Sun up</text>
+<rect x="160" y="356" width="14" height="12" rx="2" fill="#e8590c" opacity="0.35"/><text x="180" y="367" font-family="sans-serif" font-size="12" fill="#23261f" text-anchor="start">Legal: 1 h before and after</text>
+</svg>

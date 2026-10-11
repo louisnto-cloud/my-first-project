@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="Season timing from October to December: any buck October in Region 3, first frost around mid October in Kamloops, deer migrate to winter range with snow and cold mostly October and November, the mule deer rut mid November to mid December, bucks close 10 December.">
+  <rect x="0" y="0" width="400" height="260" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">October to December: what changes</text>
+<line x1="20" y1="120" x2="380" y2="120" stroke="#2f3a2b" stroke-width="6" stroke-linecap="round"/>
+<line x1="63.04347826086957" y1="86" x2="63.04347826086957" y2="154" stroke="#4a7fb0" stroke-width="3" stroke-linecap="round"/>
+<circle cx="63.04347826086957" cy="120" r="8" fill="#4a7fb0" stroke="#ffffff" stroke-width="2"/>
+<text x="63.04347826086957" y="78" font-family="sans-serif" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="start">First frost</text>
+<text x="63.04347826086957" y="174" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Kamloops, avg Oct 12</text>
+<line x1="200.0" y1="64" x2="200.0" y2="176" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/>
+<circle cx="200.0" cy="120" r="8" fill="#e8590c" stroke="#ffffff" stroke-width="2"/>
+<text x="200.0" y="56" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Rut starts</text>
+<text x="200.0" y="196" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">mid Nov</text>
+<line x1="293.9130434782609" y1="86" x2="293.9130434782609" y2="154" stroke="#6b4f35" stroke-width="3" stroke-linecap="round"/>
+<circle cx="293.9130434782609" cy="120" r="8" fill="#6b4f35" stroke="#ffffff" stroke-width="2"/>
+<text x="293.9130434782609" y="78" font-family="sans-serif" font-size="14" font-weight="bold" fill="#6b4f35" text-anchor="middle">Bucks close</text>
+<text x="293.9130434782609" y="174" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Dec 10</text>
+<text x="20" y="246" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">Oct 1</text>
+<text x="380" y="246" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="end">Dec 31</text>
+</svg>

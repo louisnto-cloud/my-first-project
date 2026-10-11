@@ -126,7 +126,7 @@ mountain-goat-nanny-kid | A goat with her kid on a cliff top.
 ```more upland escape
 - California quail stay within 15 to 30 m of cover (75%). They run first, then flush in a burst (75%). See [Quail](#/s/upland-birds/0).
 - Ruffed grouse often flush to put a tree trunk between you and them (Tip). See [Grouse](#/s/grouse/0).
-- Chukar run uphill and flush downhill (Tip, hunter lore).
+- Chukar run uphill ahead of you, then flush back downhill: climb above them first (Tip, as in the upland lessons).
 ```
 
 ## Predict the exit before you stalk
@@ -166,7 +166,7 @@ mountain-goat-nanny-kid | A goat with her kid on a cliff top.
 - Never shoot an animal on a cliff edge or above a drop you cannot reach (Tip).
 - Your own escape plan: no stalks onto ground you cannot climb back up (Tip).
 
-```anim sc-steep-stalk Steep ground: slow, quiet, three points of contact.
+```anim sc-steep-stalk Climb out of sight behind a rib of rock, then come over above it.
 ```
 
 ```more steep ground safety

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 312" role="img" aria-label="Average daily high and low temperatures, normals 1991 to 2020. Kamloops: October 13.6 and 3.5, November 5.8 and minus 1.1. Abbotsford: October 15.0 and 6.4, November 9.5 and 2.7. Osoyoos: October 16.2 and 4.1, November 7.3 and minus 0.3.">
+  <rect x="0" y="0" width="400" height="312" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Average high and low, Oct and Nov</text>
+<line x1="40" y1="220" x2="390" y2="220" stroke="#23261f" stroke-width="2" stroke-linecap="round"/><text x="36" y="225" font-family="sans-serif" font-size="12" fill="#23261f" text-anchor="end">0 °C</text>
+<text x="36" y="135" font-family="sans-serif" font-size="12" fill="#23261f" text-anchor="end">10</text><line x1="40" y1="130" x2="390" y2="130" stroke="#d8d2c2" stroke-width="1" stroke-linecap="round"/>
+<rect x="70" y="97.60000000000001" width="30" height="90.89999999999999" rx="4" fill="#e8590c"/>
+<text x="85" y="92.60000000000001" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">13.6</text><text x="85" y="203.5" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">3.5</text>
+<rect x="114" y="167.8" width="30" height="62.099999999999994" rx="4" fill="#8b5a2b"/>
+<text x="129" y="162.8" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">5.8</text><text x="129" y="244.9" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">-1.1</text>
+<text x="107" y="280" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Kamloops</text>
+<rect x="185" y="85.0" width="30" height="77.4" rx="4" fill="#e8590c"/>
+<text x="200" y="80.0" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">15</text><text x="200" y="177.4" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">6.4</text>
+<rect x="229" y="134.5" width="30" height="61.19999999999999" rx="4" fill="#8b5a2b"/>
+<text x="244" y="129.5" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">9.5</text><text x="244" y="210.7" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">2.7</text>
+<text x="222" y="280" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Abbotsford</text>
+<rect x="300" y="74.20000000000002" width="30" height="108.89999999999998" rx="4" fill="#e8590c"/>
+<text x="315" y="69.20000000000002" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">16.2</text><text x="315" y="198.1" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">4.1</text>
+<rect x="344" y="154.3" width="30" height="68.39999999999998" rx="4" fill="#8b5a2b"/>
+<text x="359" y="149.3" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">7.3</text><text x="359" y="237.7" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">-0.3</text>
+<text x="337" y="280" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Osoyoos</text>
+<text x="200" y="302" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">Orange: October. Brown: November (95%)</text>
+</svg>
