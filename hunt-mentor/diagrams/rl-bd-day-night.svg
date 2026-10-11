@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Two panels. Cold day: a deer beds at the foot of a rock bluff in the sun, where the rock gathers heat. Clear cold night: a deer beds under a closed conifer canopy that holds its body heat in instead of losing it to the open sky. Caption: by day, bluffs and sun; by night, under the canopy.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Day cover, night cover</text>
+  <rect x="6" y="40" width="190" height="220" rx="8" fill="#e3ecf3"/><rect x="204" y="40" width="190" height="220" rx="8" fill="#2c3a55"/>
+  <circle cx="40" cy="74" r="12" fill="#f2c70c"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(0 40 74)"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(45 40 74)"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(90 40 74)"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(135 40 74)"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(180 40 74)"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(225 40 74)"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(270 40 74)"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(315 40 74)"/>
+  <path d="M110 120 L180 120 L180 250 L110 250 Z" fill="#9a8f7c"/><path d="M110 120 L180 120 L172 132 L118 132 Z" fill="#b8ad98"/>
+  <g transform="translate(90 238) scale(0.9)"><ellipse rx="13" ry="6" fill="#8b5a2b"/><circle cx="11" cy="-7" r="5" fill="#8b5a2b"/><path d="M9 -11 l-3 -6 M13 -11 l4 -5" stroke="#5c3b1c" stroke-width="2"/></g>
+  <text x="101" y="62" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cold day</text><text x="60" y="110" font-size="13" fill="#2f3a2b" text-anchor="middle">sun on rock</text><text x="60" y="126" font-size="13" fill="#2f3a2b" text-anchor="middle">gathers heat</text>
+  <path d="M220 130 C 240 100, 280 100, 300 120 C 320 100, 360 104, 380 130 L380 140 L220 140 Z" fill="#55643f"/>
+  <path d="M250 140 V250 M330 140 V250" stroke="#6b4f35" stroke-width="7"/>
+  <g transform="translate(292 238) scale(0.9)"><ellipse rx="13" ry="6" fill="#8b5a2b"/><circle cx="11" cy="-7" r="5" fill="#8b5a2b"/><path d="M9 -11 l-3 -6 M13 -11 l4 -5" stroke="#5c3b1c" stroke-width="2"/></g>
+  <path d="M292 220 C 286 200, 298 186, 292 166" stroke="#f08c00" stroke-width="2.5" fill="none"/><path d="M286 172 l6 -8 l6 8" stroke="#f08c00" stroke-width="2.5" fill="none"/>
+  <path d="M292 150 C 300 160, 286 170, 292 180" stroke="#f08c00" stroke-width="2.5" fill="none"/>
+  <text x="299" y="62" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Clear cold night</text><text x="299" y="92" font-size="13" fill="#fff" text-anchor="middle">canopy holds heat in</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">By day: bluffs and sun. By night: under the canopy.</text>
+</svg>

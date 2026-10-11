@@ -181,7 +181,7 @@ g-wt-buck-flag | White tail: wide flag.
 - In the Thompson study area, almost entirely burned in 2017, adult doe survival was 82% and overwinter fawn survival 63% over two years (85%, WAFWA 2020).
 ```
 
-## Your MUs in numbers
+## Your MUs (Management Units) in numbers
 
 ```diagram mmd-mu-success
 ```
@@ -220,7 +220,7 @@ g-wt-buck-flag | White tail: wide flag.
 - **Rhyme:** "White rump shows, mule deer goes; wide white flag, white tail's tag."
 - **Number trick:** 68 to 113: a buck's weight in kilograms; 2 thirds: the ear to head ratio (90%).
 - **Number trick:** 20 per 100: BC's goal, 20 bucks per 100 does after the hunt (85%).
-- **Number trick:** 22: hunter days per mule deer in MU 3-27, 2020 to 2024 (90%, computed).
+- **Number trick:** 22: hunter days per mule deer in MU (Management Unit) 3-27, 2020 to 2024 (90%, computed).
 - **Old hand's rule** (widely taught hunter education wisdom, opinion): "If you are not sure, you are not shooting." Be 100% sure of species, sex and points.
 - **Old hand's rule** (opinion): "Read the body before the bone." Neck, belly and legs age a buck faster than the rack.
 

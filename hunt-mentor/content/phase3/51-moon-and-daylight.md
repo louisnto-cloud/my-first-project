@@ -2,7 +2,7 @@
 id: moon-and-daylight
 phase: 3
 num: 51
-title: "Moon and daylight: what actually matters (evidence based)"
+title: Moon and daylight: what actually matters (evidence based)
 minutes: 15
 checked: 2026-10-11
 ---

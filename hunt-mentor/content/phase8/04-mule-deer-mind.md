@@ -139,7 +139,7 @@ g-md-run-away | Leaving: white rump, black tip.
 - Mule deer does vigorously defend fawns against coyotes; white tails rely more on flight (70%, Lingle, American Naturalist 2008, search preview).
 - Mule deer and white tail mothers respond to recorded fawn distress calls, even of other species in the right pitch (70%, Lingle 2007 and 2014).
 - Found a fawn? Leave it. The mother is near (85%, fact sheet 26).
-- Most fawn deaths in the first 15 weeks in SIMDeer were bears; cougars led for adult does and older fawns (85%, BC Wildlife Federation 2021 update).
+- Most fawn deaths in the first 15 weeks in SIMDeer (Southern Interior Mule Deer Project) were bears; cougars led for adult does and older fawns (85%, BC Wildlife Federation 2021 update).
 ```
 
 ```photo g-md-fawn-bedded

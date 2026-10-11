@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" role="img" aria-label="The season loop in four parts: plan from January to April, prepare from May to August, hunt from September to December, review in December and January. Then it repeats. Tip.">
+  <rect x="0" y="0" width="400" height="330" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The season loop</text>
+<path d="M209.9 70.5 A95 95 0 0 1 294.5 155.1" fill="none" stroke="#2f3a2b" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="302.5304832720494" y="66.7121574150699" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Plan</text><text x="302.5304832720494" y="84.7121574150699" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">Jan to Apr</text>
+<path d="M294.5 174.9 A95 95 0 0 1 209.9 259.5" fill="none" stroke="#8b5a2b" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="302.5304832720494" y="263.2878425849301" font-family="sans-serif" font-size="17" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Prepare</text><text x="302.5304832720494" y="281.2878425849301" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">May to Aug</text>
+<path d="M190.1 259.5 A95 95 0 0 1 105.5 174.9" fill="none" stroke="#e8590c" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="97.46951672795062" y="263.2878425849301" font-family="sans-serif" font-size="17" font-weight="bold" fill="#e8590c" text-anchor="middle">Hunt</text><text x="97.46951672795062" y="281.2878425849301" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">Sep to Dec</text>
+<path d="M105.5 155.1 A95 95 0 0 1 190.1 70.5" fill="none" stroke="#8a9a6b" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="97.46951672795059" y="66.7121574150699" font-family="sans-serif" font-size="17" font-weight="bold" fill="#8a9a6b" text-anchor="middle">Review</text><text x="97.46951672795059" y="84.7121574150699" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">Dec to Jan</text>
+<text x="200" y="171" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Every year</text>
+</svg>

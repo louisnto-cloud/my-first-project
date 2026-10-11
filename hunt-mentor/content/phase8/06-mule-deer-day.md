@@ -86,7 +86,7 @@ g-md-buck-bedded | Bedded buck: only the rack gives it away.
 - **Cold:** cold, crisp mornings put rutting animals on their feet in daylight; warm wind hides them (70%, [the rut](#/s/the-rut)).
 - **Heat:** warm October afternoons push deer into shade and timber (80%).
 - **Cold fronts:** hunters say deer feed hard before a front and move after it (Tip, 50%). Not well tested for mule deer.
-- In GPS studies of white tails, weather had an inconsistent effect within a season (70%, Webb and others 2010).
+- In GPS (Global Positioning System) studies of white tails, weather had an inconsistent effect within a season (70%, Webb and others 2010).
 ```
 
 ## Barometer and moon
@@ -94,7 +94,7 @@ g-md-buck-bedded | Bedded buck: only the rack gives it away.
 ```diagram mmd-evidence-meter
 ```
 
-- Moon phase: GPS studies found no effect (70%).
+- Moon phase: GPS (Global Positioning System) collar studies found no effect (70%).
 - Barometer: no solid evidence (40%, Tip).
 
 ```more the evidence, honestly
@@ -124,7 +124,7 @@ g-md-buck-bedded | Bedded buck: only the rack gives it away.
 - Roads and ATVs (all terrain vehicles) raise buck vulnerability (65%, Idaho Fish and Game).
 - Off trail people and dogs disturb more than on trail (85%, fact sheet 17).
 - For you: be in your seat before first light, stay through midday on busy weekends, and hunt the quiet weekdays if you can (Tip).
-- Rule recap (study aid only): no ATV for hunting 1 September to 10 December in MUs (Management Units) 3-28, 3-29 and 3-30 (99%, page 33, [Region 3](#/s/rb-region-3)). Fewer quads, calmer deer (Tip).
+- Rule recap (study aid only): no ATV (all terrain vehicle) for hunting 1 September to 10 December in MUs (Management Units) 3-28, 3-29 and 3-30 (99%, page 33, [Region 3](#/s/rb-region-3)). Fewer quads, calmer deer (Tip).
 ```
 
 ## How the day shifts through the fall

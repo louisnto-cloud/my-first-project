@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-label="Fuel cost formula: round trip kilometres divided by 100, times litres per 100 km, times price per litre. Example with made up numbers: 600 km, 14 L per 100 km, 1.70 dollars per litre is about 143 dollars.">
+  <rect x="0" y="0" width="400" height="290" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Trip fuel: the formula</text>
+<rect x="20" y="50" width="360" height="80" rx="12" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200" y="82" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">km round trip ÷ 100</text>
+<text x="200" y="110" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">x L per 100 km x $ per L</text>
+<text x="200" y="160" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Example (made up numbers):</text>
+<text x="200" y="186" font-family="sans-serif" font-size="16" fill="#23261f" text-anchor="middle">600 km ÷ 100 = 6</text>
+<text x="200" y="210" font-family="sans-serif" font-size="16" fill="#23261f" text-anchor="middle">6 x 14 L = 84 L</text>
+<text x="200" y="234" font-family="sans-serif" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">84 L x $1.70 = about $143</text>
+<text x="200" y="270" font-family="sans-serif" font-size="14" fill="#2f3a2b" text-anchor="middle">Use your own truck and today’s price</text>
+</svg>

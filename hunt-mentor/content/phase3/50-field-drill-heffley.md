@@ -2,7 +2,7 @@
 id: land-drill-heffley
 phase: 3
 num: 50
-title: "Field drill: read a piece of land near Heffley Creek"
+title: Field drill: read a piece of land near Heffley Creek
 minutes: 30
 checked: 2026-10-11
 ---

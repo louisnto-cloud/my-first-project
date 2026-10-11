@@ -2,7 +2,7 @@
 id: rs-track-following
 phase: 3
 num: 41
-title: "Following a track to the animal: technique and patience"
+title: Following a track to the animal: technique and patience
 minutes: 20
 checked: 2026-10-11
 ---
@@ -97,7 +97,7 @@ rs-tf-stick-4 | Found it: flag it, move up, repeat.
 - A common build is a dowel or old ski pole about 0.9 to 1.2 m (3 to 4 feet) long, with rubber O rings or bands as movable markers (65%, Bear Tracker and Wildwood Tracking via search preview).
 - Set the first mark at stride length, heel to heel; a second mark can show print length to confirm you are on the right trail (65%).
 - Place the tip over the last clear print and sweep in an arc while looking for the next track under the mark. Keep the stick above the ground so you do not disturb sign (65%).
-- "Stride varies with terrain and fatigue", so re set the bands every so often (65%).
+- "Stride varies with terrain and fatigue", so reset the bands every so often (65%).
 - Look for crushed needles, bent grass, moved pebbles. Mark found prints with tape so you can backtrack (65%).
 - Measure the step and stride first: [Measuring tracks](#/s/rs-track-measuring/0).
 ```
@@ -142,7 +142,7 @@ rs-tf-stick-4 | Found it: flag it, move up, repeat.
 
 ```more wind in full
 - If the trail turns downwind, loop around rather than walking your scent to the bed (Tip, from [Snow tracking](#/s/snow-tracking/0)).
-- Thermals change through the day: morning air rises, evening air sinks (75%). Re check the wind every few minutes with a puffer or thread (Tip). See [Wind and thermals](#/s/wind-thermals/0).
+- Thermals change through the day: morning air rises, evening air sinks (75%). Recheck the wind every few minutes with a puffer or thread (Tip). See [Wind and thermals](#/s/wind-thermals/0).
 ```
 
 ## The trail hooks: leave it

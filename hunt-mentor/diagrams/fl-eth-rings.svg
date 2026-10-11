@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" role="img" aria-label="Three nested rings. The outer ring is the law: what you must do. Inside it, ethics: what hunters should do. In the middle, your own code. A good hunter lives inside all three.">
+  <rect x="0" y="0" width="400" height="330" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Three rings: law, ethics, you</text>
+<circle cx="200" cy="170" r="120" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="3"/><circle cx="200" cy="200" r="72" fill="#cfd9bd" stroke="#8a9a6b" stroke-width="3"/><circle cx="200" cy="226" r="34" fill="#e8590c"/>
+<text x="200" y="90" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The law: must</text>
+<text x="200" y="166" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Ethics: should</text>
+<text x="200" y="232" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">You</text>
+<text x="200" y="316" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="middle">Your own code sits inside the other two</text>
+</svg>

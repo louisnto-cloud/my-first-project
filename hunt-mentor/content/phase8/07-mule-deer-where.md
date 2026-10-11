@@ -116,7 +116,7 @@ hab-willow-shrub | Willow: browse by water.
 - Near Tranquille, ponderosa pine and Douglas fir zones run about 610 to 1,160 m (70%, ecological reserve description, search preview).
 - Rough local heights (VERIFY on the map): valley about 370 to 450 m, Heffley Lake about 950 m, Sun Peaks village about 1,250 m (55%).
 - No snow yet in October: bucks often mid slope, about 900 to 1,500 m, on open fir and burn edges (75%, [Heffley Creek](#/s/local-heffley)).
-- Use the Hunt Map elevation profile and the BEC zone layer rather than fixed numbers (Tip).
+- Use the Hunt Map elevation profile and the BEC (Biogeoclimatic Ecosystem Classification) zone layer rather than fixed numbers (Tip).
 ```
 
 ## Heffley Creek, Region 3
@@ -185,7 +185,7 @@ hab-salal | Salal: winter food on the coast.
 - Provincial benchmark winter habitat is rated class 1 in the very dry ponderosa pine and Douglas fir zones of the South Okanagan Basin and Okanagan Range (85%, BC habitat model).
 - The Okanagan River area is listed among the highest mule deer densities (85%).
 - Access to White Lake is largely through private land; ask first (95%, BC Parks). Rules: [Region 8](#/s/rb-region-8) and [South Okanagan](#/s/local-okanagan).
-- Region 8 resident mule deer success: 23% in 2024 (90%, harvest statistics). MU 8-1: 38% in 2024 (90%).
+- Region 8 resident mule deer success: 23% in 2024 (90%, harvest statistics). MU (Management Unit) 8-1: 38% in 2024 (90%).
 - One mule deer buck for Regions 3 to 8 combined: a Heffley Creek buck uses up your Okanagan buck (95%, [bag limits](#/s/rb-bag-limits)).
 ```
 
@@ -209,7 +209,7 @@ mmd-map-6 | Wind and scent cone: plan the approach.
 - Then go and check on foot (Tip).
 
 ```more step by step in words
-1. **Layers:** turn on "Mule deer" season layer (pick the month), mule deer ungulate winter range, burns, cutblocks and BEC zones. Land status layers on: Crown land, private land, parks, closures (Tip). The season layer is a general pattern from studies, not mapped corridors (app layer note).
+1. **Layers:** turn on "Mule deer" season layer (pick the month), mule deer ungulate winter range, burns, cutblocks and BEC (Biogeoclimatic Ecosystem Classification) zones. Land status layers on: Crown land, private land, parks, closures (Tip). The season layer is a general pattern from studies, not mapped corridors (app layer note).
 2. **Terrain tools, Slope direction (aspect):** south and west faces for October to winter; north faces for hot afternoon beds (85%, chapter 6).
 3. **Slope steepness:** benches (flat) under steep ground are classic beds and feeding edges (Tip). Steep red and purple ground is escape terrain (Tip).
 4. **What can I see from here (viewshed):** drop a pin on a ridge or knob; the map shades what you can see. Pick seats that see several benches and openings (Tip).

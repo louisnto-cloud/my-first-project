@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Side view of a ridge with wind blowing from the left. The windward side on the left is cold and noisy. Wind pours over the top and swirls on the lee side on the right, where a deer beds just below the top out of the wind. Caption: windy day, look on the lee side just below the top.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Wind over a ridge</text><text x="388" y="24" font-size="14" fill="#2f3a2b" text-anchor="end">side view</text>
+  <rect x="0" y="36" width="400" height="200" fill="#e3ecf3" opacity=".6"/>
+  <path d="M0 236 L200 90 L400 236 Z" fill="#e9edd9" stroke="#2f3a2b" stroke-width="2.5"/>
+  <path d="M10 120 L80 150" stroke="#4a7fb0" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M80 150 L68.0 150.5 L72.1 140.9 Z" fill="#4a7fb0"/><path d="M20 160 L110 180" stroke="#4a7fb0" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M110 180 L98.3 182.8 L100.6 172.6 Z" fill="#4a7fb0"/><path d="M120 96 L200 76" stroke="#4a7fb0" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M200 76 L190.8 83.7 L188.3 73.6 Z" fill="#4a7fb0"/><path d="M210 74 L300 70" stroke="#4a7fb0" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M300 70 L289.4 75.7 L289.0 65.3 Z" fill="#4a7fb0"/>
+  <path d="M250 120 C 270 100, 300 110, 290 134 C 280 150, 250 140, 262 124" stroke="#4a7fb0" stroke-width="3" fill="none" stroke-dasharray="5 4"/>
+  <g transform="translate(252 150) scale(0.9)"><ellipse rx="13" ry="6" fill="#8b5a2b"/><circle cx="11" cy="-7" r="5" fill="#8b5a2b"/><path d="M9 -11 l-3 -6 M13 -11 l4 -5" stroke="#5c3b1c" stroke-width="2"/></g>
+  <rect x="10" y="46" width="192" height="24" rx="6" fill="#2f6fd6"/><text x="106.0" y="63" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Windward: cold, noisy</text><rect x="202" y="180" width="192" height="24" rx="6" fill="#e8590c"/><text x="298.0" y="197" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Lee: calm, but swirls</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Windy day: look on the lee side, just below the top</text>
+</svg>

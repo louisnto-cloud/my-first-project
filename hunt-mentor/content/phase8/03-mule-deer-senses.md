@@ -127,7 +127,7 @@ checked: 2026-10-11
 ```
 
 - Two colour types: blue and yellow green. No red cone (80 to 85%).
-- Blaze orange looks dull; blue and UV stand out (75%).
+- Blaze orange looks dull; blue and UV (ultraviolet) stand out (75%).
 
 ```more colour, ultraviolet and night
 > [!warn]
@@ -189,7 +189,7 @@ sg-alarm-5 | Escape: the mule deer stots away.
 
 ```checklist mmd-senses-kit
 Wind checker (puffer, thread or milkweed)
-Unscented soap, no UV brightener
+Unscented soap, no UV (ultraviolet) brightener
 Soft outer layer, no nylon swish
 Tape on sling swivels and pack buckles
 Red light headlamp

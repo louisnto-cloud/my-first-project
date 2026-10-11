@@ -56,9 +56,9 @@ checked: 2026-10-11
 
 ```more spring in detail
 - "The best time for viewing Mule Deer is April, when they move to low elevation, south facing grassy slopes in search of the first hints of green." The BC account names the Dewdrop Range near Kamloops (90%).
-- Most SIMDeer deer moved to summer range in April and May (85%, BC Wildlife Federation 2020 update).
+- Most SIMDeer (Southern Interior Mule Deer Project) deer moved to summer range in April and May (85%, BC Wildlife Federation 2020 update).
 - Migrations can take 2 to 4 months, most of it spent at stopover sites following the green up (85%, Mule Deer Working Group fact sheet 12).
-- Bucks take longer than does on spring migration, about twice as long in one Wyoming and Colorado GPS study (70%, USGS 2021).
+- Bucks take longer than does on spring migration, about twice as long in one Wyoming and Colorado GPS (Global Positioning System) collar study (70%, USGS, United States Geological Survey, 2021).
 - Antlers start growing in April (90%).
 - 74% of SIMDeer deer were migratory, average 47.2 km a year; the longest about 100 km (85%). Some deer stay low all year (90%).
 - Spring diet: grasses and forbs like balsamroot, clover, wild strawberry, fireweed (90%, BC account).
@@ -79,7 +79,7 @@ checked: 2026-10-11
 - Birth weight 2.7 to 4 kg. Twins are the rule; young does often have one; triplets now and then (90%).
 - Over 90% of adult does give birth each year (90%).
 - Most does breed as yearlings and have their first fawn near their second birthday (90%).
-- 45 to 70% of fawns normally die (90%). In SIMDeer, bears caused most fawn deaths in the first 15 weeks (85%).
+- 45 to 70% of fawns normally die (90%). In SIMDeer (Southern Interior Mule Deer Project), bears caused most fawn deaths in the first 15 weeks (85%).
 - Does chase off last year's young before giving birth (90%). That is when you see lone yearlings (Tip).
 ```
 
@@ -99,7 +99,7 @@ checked: 2026-10-11
 - Testosterone is low while antlers grow; it rises in autumn and hardens them (85%).
 - Bucks hold bachelor groups of 2 to 4 in summer (80%).
 - Most deer leave the dry valley side ranges for moister, higher ground in summer (90%, BC account).
-- Summer diet: forbs and leaves of many shrubs; cut blocks and burns grow good summer food (85%, BC habitat model; 2020 WAFWA notes that recent burns boosted summer forage).
+- Summer diet: forbs and leaves of many shrubs; cut blocks and burns grow good summer food (85%, BC habitat model; the 2020 WAFWA (Western Association of Fish and Wildlife Agencies) report notes that recent burns boosted summer forage).
 - Summer is your scouting season: glass basins and burn edges at first and last light (Tip).
 ```
 
@@ -121,7 +121,7 @@ checked: 2026-10-11
 - Rising testosterone dries the velvet; the buck rubs it off on saplings and bushes, usually within 24 to 48 hours (85%, fact sheet 27). Bark tannin and blood stain the antlers brown (85%).
 - Bucks are still on or near summer range (85%).
 - Feeding hard: fat peaks heading into fall (60 to 65%, chapter 2).
-- Rule recap (study aid only): MU 3-27 and 3-28 general season, 4 point bucks or better, 10 to 30 September (99%, page 34, [Region 3](#/s/rb-region-3)).
+- Rule recap (study aid only): MUs (Management Units) 3-27 and 3-28 general season, 4 point bucks or better, 10 to 30 September (99%, page 34, [Region 3](#/s/rb-region-3)).
 ```
 
 ## October: what changes
@@ -138,10 +138,10 @@ checked: 2026-10-11
 
 - Bachelor groups break up in October (80%). Bucks spar and thrash brush (90%).
 - Snow and cold trigger the move to winter range, not the rut (85%, Monteith 2011).
-- SIMDeer: most collared deer returned to winter range in October and November; in 2019 "by mid October ... nearly all the collared deer in each study area were back" (85%).
+- SIMDeer (Southern Interior Mule Deer Project): most collared deer returned to winter range in October and November; in 2019 "by mid October ... nearly all the collared deer in each study area were back" (85%).
 - The 2000 BC account says interior deer "often remain at high elevations until December" (90%). Both are true in different years: the snow decides (75%, my reading).
 - Late October: bucks start checking doe groups at dawn and dusk (70%).
-- Rule recap (study aid only): 1 to 31 October in MUs 3-27 and 3-28 is any buck (99%, page 34).
+- Rule recap (study aid only): 1 to 31 October in MUs (Management Units) 3-27 and 3-28 is any buck (99%, page 34).
 - My lean: no snow yet, glass high benches and burns at first light; snow up high, hunt mid slopes below the snow line (Tip, quick lesson).
 ```
 
@@ -167,7 +167,7 @@ checked: 2026-10-11
 - Rutting bucks smell doe urine and lift the lip (flehmen) (65%).
 - Equal mature bucks fight; bucks show up in daylight; they eat little (90%; 65% eat little).
 - "Find does and wait," and hunt all day: bucks stay active longer in the rut (65%, Rinella).
-- Rule recap (study aid only): 1 November to 10 December, 4 point bucks or better, MUs 3-27 and 3-28 (99%, page 34).
+- Rule recap (study aid only): 1 November to 10 December, 4 point bucks or better, MUs (Management Units) 3-27 and 3-28 (99%, page 34).
 ```
 
 ## December: post rut
@@ -202,7 +202,7 @@ checked: 2026-10-11
 - **Rhyme:** "Velvet in summer, bone by fall; snow brings them down, the rut brings all."
 - **Number trick:** 1, 3, 4 to 8: drop antlers January to March; grow April to August (90%).
 - **Number trick:** 24 to 48: hours to strip velvet (85%).
-- **Number trick:** 74 and 47: percent of SIMDeer deer that migrate, and kilometres a year they travel (85%).
+- **Number trick:** 74 and 47: percent of SIMDeer (Southern Interior Mule Deer Project) deer that migrate, and kilometres a year they travel (85%).
 - **Old hand's rule** (widely taught, opinion): "In the rut, hunt the does."
 - **Old hand's rule** (opinion): "Day length sets the date, weather sets the show."
 

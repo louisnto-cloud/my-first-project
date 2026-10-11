@@ -816,7 +816,12 @@
     if (mapMod) mapMod.close();
   }
 
-  function notFound() { view.innerHTML = '<div class="card"><h2>Not found</h2><a href="#/">Home</a></div>'; }
+  function notFound() {
+    const lesson = /^#\/s\//.test(location.hash);
+    view.innerHTML = lesson
+      ? '<div class="card"><h2>Coming soon</h2><p>This lesson is still being written. It will appear here in a later update.</p><p><a class="btn" href="javascript:history.back()">Go back</a> <a class="btn" href="#/learn">All lessons</a></p></div>'
+      : '<div class="card"><h2>Not found</h2><a href="#/">Home</a></div>';
+  }
 
   // ---------- Ask the mentor: copy what is on screen, open the mentor in a new tab ----------
   const askBtn = document.createElement('a');

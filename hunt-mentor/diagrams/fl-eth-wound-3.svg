@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Follow every sign slowly. Mark the last blood.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="32" r="17" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="30" y="39" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">3</text>
+<text x="56" y="39" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="start">Trail it</text>
+<circle cx="110" cy="220" r="6" fill="#b3261e"/><circle cx="160" cy="200" r="5" fill="#b3261e"/><circle cx="210" cy="186" r="6" fill="#b3261e"/><circle cx="260" cy="170" r="4" fill="#b3261e"/><path d="M300 150 l-12 -24 a14 14 0 1 1 24 0 z" fill="#e8590c" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="300" y="178" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Last blood</text>
+<rect x="10" y="262" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="285.0" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Slow. Mark the last blood.</text>
+</svg>

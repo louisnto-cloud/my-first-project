@@ -205,7 +205,7 @@ yt-meat-care-new-hunters | Field, truck and home: keep it cold, clean, dry.
 | Ears | 2/3 of head length | 90 |
 | Tail | thin, white, black tip | 90 |
 | BC mule deer | 100,000 to 170,000 | 85 |
-| MU 3-27 success | 20 to 41% a year | 90 |
+| MU (Management Unit) 3-27 success | 20 to 41% a year | 90 |
 | Hunter days per deer, 3-27 | about 22 | 90 |
 | Yearling antlers | most 2 points a side | 90 |
 | Antlers near peak | about age 4 | 85 |

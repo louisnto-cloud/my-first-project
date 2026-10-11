@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Point at plain sky. Back the eyepiece out until fuzzy, then turn in with quick looks until the crosshair is sharp at once.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1. Reticle focus: quick looks at the sky</text><circle cx="200" cy="140" r="80" fill="#e3edf5" stroke="#2f3a2b" stroke-width="2"/><line x1="120" y1="140" x2="280" y2="140" stroke="#23261f" stroke-width="3" stroke-linecap="round"/><line x1="200" y1="60" x2="200" y2="220" stroke="#23261f" stroke-width="3" stroke-linecap="round"/><text x="200" y="250" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">set once for your eye</text>
+</svg>

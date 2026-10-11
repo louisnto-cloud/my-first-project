@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 456" role="img" aria-label="Shoot or pass: six questions. Legal here and now? Sure of species, sex and antlers? Safe backstop? Clear shot at the vitals? Inside your tested range? Steady and calm? Any no means pass.">
+  <rect x="0" y="0" width="400" height="456" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Shoot or pass? Six yes answers</text>
+<rect x="20" y="48" width="250" height="40" rx="8" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+<text x="145" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Legal here and now?</text>
+<line x1="270" y1="68.0" x2="300" y2="68.0" stroke="#b3261e" stroke-width="3" stroke-linecap="round"/><polygon points="300.0,68.0 292.8,71.5 292.8,64.5" fill="#b3261e"/>
+<text x="285" y="62.0" font-family="sans-serif" font-size="12" fill="#b3261e" text-anchor="middle">No</text>
+<rect x="304" y="54" width="86" height="28" rx="6" fill="#f6d5cf" stroke="#b3261e" stroke-width="1.5"/>
+<text x="347" y="75" font-family="sans-serif" font-size="13" font-weight="bold" fill="#b3261e" text-anchor="middle">Pass</text>
+<line x1="145" y1="88" x2="145" y2="103" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="145.0,103.0 142.0,96.7 148.0,96.7" fill="#2f3a2b"/>
+<rect x="20" y="104" width="250" height="40" rx="8" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+<text x="145" y="130" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Sure what it is?</text>
+<line x1="270" y1="124.0" x2="300" y2="124.0" stroke="#b3261e" stroke-width="3" stroke-linecap="round"/><polygon points="300.0,124.0 292.8,127.5 292.8,120.5" fill="#b3261e"/>
+<text x="285" y="118.0" font-family="sans-serif" font-size="12" fill="#b3261e" text-anchor="middle">No</text>
+<rect x="304" y="110" width="86" height="28" rx="6" fill="#f6d5cf" stroke="#b3261e" stroke-width="1.5"/>
+<text x="347" y="131" font-family="sans-serif" font-size="13" font-weight="bold" fill="#b3261e" text-anchor="middle">Pass</text>
+<line x1="145" y1="144" x2="145" y2="159" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="145.0,159.0 142.0,152.7 148.0,152.7" fill="#2f3a2b"/>
+<rect x="20" y="160" width="250" height="40" rx="8" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+<text x="145" y="186" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Safe backstop?</text>
+<line x1="270" y1="180.0" x2="300" y2="180.0" stroke="#b3261e" stroke-width="3" stroke-linecap="round"/><polygon points="300.0,180.0 292.8,183.5 292.8,176.5" fill="#b3261e"/>
+<text x="285" y="174.0" font-family="sans-serif" font-size="12" fill="#b3261e" text-anchor="middle">No</text>
+<rect x="304" y="166" width="86" height="28" rx="6" fill="#f6d5cf" stroke="#b3261e" stroke-width="1.5"/>
+<text x="347" y="187" font-family="sans-serif" font-size="13" font-weight="bold" fill="#b3261e" text-anchor="middle">Pass</text>
+<line x1="145" y1="200" x2="145" y2="215" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="145.0,215.0 142.0,208.7 148.0,208.7" fill="#2f3a2b"/>
+<rect x="20" y="216" width="250" height="40" rx="8" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+<text x="145" y="242" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Clear vital shot?</text>
+<line x1="270" y1="236.0" x2="300" y2="236.0" stroke="#b3261e" stroke-width="3" stroke-linecap="round"/><polygon points="300.0,236.0 292.8,239.5 292.8,232.5" fill="#b3261e"/>
+<text x="285" y="230.0" font-family="sans-serif" font-size="12" fill="#b3261e" text-anchor="middle">No</text>
+<rect x="304" y="222" width="86" height="28" rx="6" fill="#f6d5cf" stroke="#b3261e" stroke-width="1.5"/>
+<text x="347" y="243" font-family="sans-serif" font-size="13" font-weight="bold" fill="#b3261e" text-anchor="middle">Pass</text>
+<line x1="145" y1="256" x2="145" y2="271" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="145.0,271.0 142.0,264.7 148.0,264.7" fill="#2f3a2b"/>
+<rect x="20" y="272" width="250" height="40" rx="8" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+<text x="145" y="298" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Inside tested range?</text>
+<line x1="270" y1="292.0" x2="300" y2="292.0" stroke="#b3261e" stroke-width="3" stroke-linecap="round"/><polygon points="300.0,292.0 292.8,295.5 292.8,288.5" fill="#b3261e"/>
+<text x="285" y="286.0" font-family="sans-serif" font-size="12" fill="#b3261e" text-anchor="middle">No</text>
+<rect x="304" y="278" width="86" height="28" rx="6" fill="#f6d5cf" stroke="#b3261e" stroke-width="1.5"/>
+<text x="347" y="299" font-family="sans-serif" font-size="13" font-weight="bold" fill="#b3261e" text-anchor="middle">Pass</text>
+<line x1="145" y1="312" x2="145" y2="327" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="145.0,327.0 142.0,320.7 148.0,320.7" fill="#2f3a2b"/>
+<rect x="20" y="328" width="250" height="40" rx="8" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+<text x="145" y="354" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Steady and calm?</text>
+<line x1="270" y1="348.0" x2="300" y2="348.0" stroke="#b3261e" stroke-width="3" stroke-linecap="round"/><polygon points="300.0,348.0 292.8,351.5 292.8,344.5" fill="#b3261e"/>
+<text x="285" y="342.0" font-family="sans-serif" font-size="12" fill="#b3261e" text-anchor="middle">No</text>
+<rect x="304" y="334" width="86" height="28" rx="6" fill="#f6d5cf" stroke="#b3261e" stroke-width="1.5"/>
+<text x="347" y="355" font-family="sans-serif" font-size="13" font-weight="bold" fill="#b3261e" text-anchor="middle">Pass</text>
+<line x1="145" y1="368" x2="145" y2="388" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="145.0,388.0 142.0,381.7 148.0,381.7" fill="#2f3a2b"/>
+<rect x="60" y="390" width="170" height="40" rx="10" fill="#2f3a2b"/>
+<text x="145" y="416" font-family="sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Shoot</text>
+</svg>
