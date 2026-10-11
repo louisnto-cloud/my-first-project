@@ -22,7 +22,7 @@
   const sessions = HM.sessions;
   const byId = Object.fromEntries(sessions.map((s) => [s.id, s]));
   const phases = [...new Set(sessions.map((s) => s.phase))];
-  const phaseNames = { 1: 'Fast Start', 2: 'Foundations', 3: 'Reading the Land', 4: 'Species', 5: 'The Shot and After', 6: 'Mastery', 7: 'Rule Book' };
+  const phaseNames = { 1: 'Fast Start', 2: 'Foundations', 3: 'Reading the Land', 4: 'Species', 5: 'The Shot and After', 6: 'Mastery', 7: 'Rule Book', 8: 'Masterclass' };
   const setTitle = (t) => { $('#top-title').textContent = t; };
   const tab = (name) => document.querySelectorAll('.tabs a').forEach((a) => {
     const on = a.dataset.tab === name;
@@ -43,6 +43,7 @@
     const [a, b] = hash.replace(/^#\/?/, '').split('/');
     if (!a) return null;
     if (a === 's') return '#/learn';
+    if (a === 'plan' && b != null && b !== '') return '#/plan';
     if ((a === 'field' || a === 'lists' || a === 'cards' || a === 'journal') && b != null && b !== '') return '#/' + a;
     if (['glossary', 'review', 'sources', 'install', 'print', 'credits', 'journal', 'cards', 'ask'].includes(a)) return '#/more';
     return '#/';
@@ -209,7 +210,9 @@
       </div>
       ${misses ? `<a class="btn block" href="#/review">Review ${misses} missed quiz question${misses > 1 ? 's' : ''}</a>` : ''}
       <p class="muted">Regulation data last checked: ${esc(HM.regs.lastChecked)}. Content built ${esc(HM.built)}.</p>`;
-    if (window.HMHome) try { window.HMHome.render(view, { S, save, daysTo, sunEvent, hhmm, addMin, certBadge, mentorUrl: MENTOR_URL, hasSession: (id) => !!byId[id], refresh: home }); } catch (e) { console.warn("Home dashboard", e); }
+    const planCard = window.HMPlan ? () => window.HMPlan.homeCard(planCtx()) : null;
+    if (window.HMHome) try { window.HMHome.render(view, { S, save, daysTo, sunEvent, hhmm, addMin, certBadge, mentorUrl: MENTOR_URL, hasSession: (id) => !!byId[id], refresh: home, planCard }); } catch (e) { console.warn("Home dashboard", e); }
+    else if (planCard) view.insertAdjacentHTML('afterbegin', planCard());
     view.insertAdjacentHTML('afterbegin', startCard('cont-home'));
     const warm = resumeInfo() ? resumeInfo().s : nextSession();
     if (warm) idle(() => loadLesson(warm).catch(() => {}));
@@ -578,14 +581,17 @@
   const certBadge = (v) => v == null ? '<span class="verify">VERIFY</span>' : `<span class="cert ${v >= 95 ? 'c-hi' : v >= 80 ? 'c-mid' : v >= 60 ? 'c-lo' : 'c-tip'}">${v}%</span>`;
 
   // ---------- lists ----------
-  function lists(id) {
+  function lists(id, sub) {
     setTitle('Checklists'); tab('lists');
     const L = HM.field.checklists;
+    if (id === 'animal' && window.HMPlan) return window.HMPlan.animalList(view, sub, planCtx());
     if (!id) {
       view.innerHTML = `<div class="list card">${L.map((l) => {
         const n = l.items.filter((_, k) => S.checks[`${l.id}:${k}`]).length;
         return `<a class="item" href="#/lists/${l.id}"><span class="grow">${esc(l.title)}</span><span class="pill">${n}/${l.items.length}</span></a>`;
-      }).join('')}</div>`;
+      }).join('')}</div>
+      ${window.HMPlan ? `<div class="card"><h2>By animal</h2><p class="muted">A full checklist for each animal. Make a plan to add lists for your method, access and trip.</p><a class="btn block" href="#/plan/new/0">Plan a hunt</a><div id="lists-animal"><p class="muted">Loading...</p></div></div>` : ''}`;
+      if (window.HMPlan) window.HMPlan.animalIndex($('#lists-animal', view), planCtx());
       return;
     }
     const l = L.find((x) => x.id === id); if (!l) return notFound();
@@ -874,6 +880,14 @@
     backToLesson: () => backChip.onclick(),
   };
 
+  // ---------- Plan a hunt (plan.js): what it needs from the app ----------
+  function planCtx() {
+    return {
+      get S() { return S; }, save, setTitle, tab, sunEvent, hhmm, addMin, certBadge, toast, copyText,
+      hasSession: (id) => !!byId[id], lessonTitle: (id) => (byId[id] ? byId[id].title : id),
+    };
+  }
+
   // ---------- router ----------
   function route() {
     const goingBack = syncDepth();
@@ -898,7 +912,8 @@
     else if (a === 'learn') learn();
     else if (a === 's') session(b, c);
     else if (a === 'field') field(h.slice(1).join('/'));
-    else if (a === 'lists') lists(b);
+    else if (a === 'lists') lists(b, c);
+    else if (a === 'plan' && window.HMPlan) window.HMPlan.route(view, h.slice(1), planCtx());
     else if (a === 'more') more();
     else if (a === 'glossary') glossary();
     else if (a === 'search') search();

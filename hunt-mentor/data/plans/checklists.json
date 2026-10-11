@@ -1,0 +1,1979 @@
+{
+ "updated": "2026-10-11",
+ "note": "Common checklists added to every plan by the 'when' conditions. Each item has an optional 'cat' (paperwork, firearm, gear, clothing, meat, safety, vehicle, plan) for grouping inside a list. Study aid only. The official regulations are the law.",
+ "lists": [
+  {
+   "id": "base",
+   "title": "Every hunt",
+   "category": "plan",
+   "when": {},
+   "items": [
+    {
+     "t": "BC hunting licence for this licence year, FWID (Fish and Wildlife ID) number known",
+     "why": "Electronic only. Expires 31 March",
+     "cert": 99,
+     "lesson": "licences",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Photo ID on me",
+     "why": "Show it with your FWID when an officer asks",
+     "cert": 99,
+     "lesson": "licences",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Every species licence I hold this year, used and unused, on me",
+     "cert": 99,
+     "lesson": "licences",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Ducks, geese, coots, snipe, mourning doves or pigeons: federal bird permit with stamp, paper or on my phone",
+     "cert": 99,
+     "lesson": "rb-migratory-birds",
+     "cat": "paperwork"
+    },
+    {
+     "t": "PAL (Possession and Acquisition Licence) in my wallet whenever I carry a firearm",
+     "why": "Tip: habit, not a hunting rule",
+     "lesson": "bc-rules",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Licences in a zip bag, same pocket every time",
+     "why": "Tip",
+     "lesson": "licences",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Season open today for this species, sex and class in my exact MU (Management Unit)",
+     "why": "Read the MU row, not the region headline",
+     "cert": 99,
+     "lesson": "map-scouting",
+     "cat": "plan"
+    },
+    {
+     "t": "My MU confirmed on the official MU map",
+     "cert": 99,
+     "lesson": "top-areas",
+     "cat": "plan"
+    },
+    {
+     "t": "In season regulation changes checked at gov.bc.ca/huntingregulations",
+     "cert": 99,
+     "lesson": "countdown",
+     "cat": "plan"
+    },
+    {
+     "t": "Legal start and stop times for today written down",
+     "why": "Big game and upland: 1 hour each side of sunrise and sunset. Migratory birds: half an hour",
+     "cert": 99,
+     "lesson": "legal-to-shoot",
+     "cat": "plan"
+    },
+    {
+     "t": "No Shooting Areas, closed areas, parks and ecological reserves checked on the synopsis map",
+     "cert": 99,
+     "lesson": "bc-rules",
+     "cat": "plan"
+    },
+    {
+     "t": "Private, fenced, posted or cultivated land: written permission in my pocket",
+     "why": "Consent is the law; writing proves it",
+     "cert": 99,
+     "lesson": "landowner-permission",
+     "cat": "plan"
+    },
+    {
+     "t": "Reserve land on the route: permission from the band office to hunt on or cross it",
+     "cert": 99,
+     "lesson": "indigenous-respect",
+     "cat": "plan"
+    },
+    {
+     "t": "100 m ring around every occupied house, barn, school and playground marked on my map",
+     "why": "Your brother's house counts too (95%)",
+     "cert": 99,
+     "lesson": "bc-rules",
+     "cat": "plan"
+    },
+    {
+     "t": "Area closures and fire restrictions checked (BC Wildfire Service)",
+     "cert": 95,
+     "lesson": "bush-safety",
+     "cat": "plan"
+    },
+    {
+     "t": "Deer, elk or moose in the Kootenay: CWD (Chronic Wasting Disease) zone rules checked",
+     "why": "Zone: MUs 4-1 to 4-8 and 4-20 to 4-25",
+     "cert": 99,
+     "lesson": "cwd",
+     "cat": "plan"
+    },
+    {
+     "t": "Weather checked",
+     "why": "Tip",
+     "lesson": "weather-moon",
+     "cat": "plan"
+    },
+    {
+     "t": "Trip plan left: who, vehicle and plate, where you park, route, return time, call 911 if not back by",
+     "cert": 75,
+     "lesson": "bush-safety",
+     "cat": "plan"
+    },
+    {
+     "t": "Phone charged, offline maps downloaded, power bank packed",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "plan"
+    },
+    {
+     "t": "RAPP (Report All Poachers and Polluters) 1 877 952 7277 saved in my phone",
+     "cert": 99,
+     "lesson": "bc-rules",
+     "cat": "plan"
+    },
+    {
+     "t": "Tourniquet in the same pocket every hunt",
+     "why": "Know how: take a course with tourniquet practice (Tip)",
+     "lesson": "pack-kit",
+     "cat": "safety"
+    },
+    {
+     "t": "First aid kit: gauze, pressure bandage, gloves",
+     "cert": 70,
+     "lesson": "bush-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Headlamp plus spare batteries",
+     "cert": 75,
+     "lesson": "pack-kit",
+     "cat": "gear"
+    },
+    {
+     "t": "Lighter, waterproof matches, fire starter",
+     "cert": 75,
+     "lesson": "pack-kit",
+     "cat": "gear"
+    },
+    {
+     "t": "Whistle",
+     "cert": 75,
+     "lesson": "pack-kit",
+     "cat": "gear"
+    },
+    {
+     "t": "Extra food and 1 L of water or more",
+     "cert": 75,
+     "lesson": "pack-kit",
+     "cat": "gear"
+    },
+    {
+     "t": "Paper map and compass",
+     "why": "Phone batteries die in the cold",
+     "cert": 75,
+     "lesson": "pack-kit",
+     "cat": "gear"
+    },
+    {
+     "t": "Satellite messenger charged with a plan, or iPhone 14 or later with SOS via satellite",
+     "why": "Needs open sky",
+     "cert": 85,
+     "lesson": "bush-safety",
+     "cat": "gear"
+    },
+    {
+     "t": "Emergency blanket or small tarp",
+     "cert": 75,
+     "lesson": "pack-kit",
+     "cat": "gear"
+    },
+    {
+     "t": "Knife and spare blades",
+     "cert": 75,
+     "lesson": "pack-kit",
+     "cat": "gear"
+    },
+    {
+     "t": "Game bags and 15 m of rope (big game)",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "gear"
+    },
+    {
+     "t": "Sunglasses, sunscreen",
+     "cert": 75,
+     "lesson": "pack-kit",
+     "cat": "gear"
+    },
+    {
+     "t": "Extra layer, rain shell, toque, spare gloves",
+     "cert": 75,
+     "lesson": "pack-kit",
+     "cat": "clothing"
+    },
+    {
+     "t": "Blaze orange vest and toque",
+     "why": "Not required in BC (90%). Strong safety Tip",
+     "lesson": "what-to-wear",
+     "cat": "clothing"
+    },
+    {
+     "t": "No cotton next to skin",
+     "why": "Tip",
+     "lesson": "what-to-wear",
+     "cat": "clothing"
+    },
+    {
+     "t": "ACTS and PROVE every time I pick up, put down, hand over or receive a firearm",
+     "cert": 85,
+     "lesson": "firearm-safety",
+     "cat": "firearm"
+    },
+    {
+     "t": "Ammo for this hunt only: the load I zeroed or patterned",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "firearm"
+    },
+    {
+     "t": "Earth behind every shot. Sky is never a backstop",
+     "why": "Tip",
+     "lesson": "legal-to-shoot",
+     "cat": "firearm"
+    },
+    {
+     "t": "Legal to shoot flowchart run before every shot: licence, hours, season, ID, road, 100 m, land, backstop, clean shot",
+     "cert": 99,
+     "lesson": "legal-to-shoot",
+     "cat": "firearm"
+    }
+   ]
+  },
+  {
+   "id": "rifle",
+   "title": "Rifle",
+   "category": "firearm",
+   "when": {
+    "method": [
+     "rifle"
+    ]
+   },
+   "items": [
+    {
+     "t": "Rifle zeroed at 100 m with the exact load I hunt with",
+     "why": "Zero changes between loads (85%)",
+     "lesson": "sighting-in",
+     "cat": "firearm"
+    },
+    {
+     "t": "3 to 4 boxes of the SAME load bought",
+     "why": "Tip",
+     "lesson": "countdown",
+     "cat": "firearm"
+    },
+    {
+     "t": "Zero confirmed again before the season",
+     "why": "Tip",
+     "lesson": "bc-calendar",
+     "cat": "firearm"
+    },
+    {
+     "t": "Range test done: 12 rounds, cold barrel, 20 cm circles, from the positions I hunt in. Result in the Journal",
+     "why": "Tip",
+     "lesson": "shooting-skills",
+     "cat": "firearm"
+    },
+    {
+     "t": "My tested maximum range known",
+     "why": "Tip",
+     "lesson": "shot-placement",
+     "cat": "firearm"
+    },
+    {
+     "t": "Shooting sticks or the rest I carry",
+     "why": "Tip",
+     "lesson": "shooting-skills",
+     "cat": "gear"
+    },
+    {
+     "t": "Rangefinder",
+     "why": "Tip",
+     "lesson": "bc-rules",
+     "cat": "gear"
+    },
+    {
+     "t": "Before the trigger: broadside or quartering away, one spot picked, range inside my max",
+     "why": "Tip",
+     "lesson": "shot-placement",
+     "cat": "firearm"
+    },
+    {
+     "t": "Backstop solid, no animal behind; sitting or sticks, not offhand; breathe half out, squeeze, follow through",
+     "why": "Tip",
+     "lesson": "shot-placement",
+     "cat": "firearm"
+    },
+    {
+     "t": "No full metal jacket bullets for hunting",
+     "cert": 99,
+     "lesson": "grouse",
+     "cat": "firearm"
+    },
+    {
+     "t": "Magazine out and chamber empty before the truck or ATV (all terrain vehicle)",
+     "why": "A loaded magazine clipped in counts as loaded in BC",
+     "cert": 99,
+     "lesson": "bc-rules",
+     "cat": "safety"
+    },
+    {
+     "t": "Single projectile ban zones checked, e.g. 400 m of listed highways",
+     "cert": 99,
+     "lesson": "grouse",
+     "cat": "safety"
+    },
+    {
+     "t": "No rimfire on deer, moose, elk, bear, sheep or goat",
+     "why": "Rimfire big game: bobcat, lynx, wolverine only",
+     "cert": 99,
+     "lesson": "rb-legal-methods",
+     "cat": "safety"
+    },
+    {
+     "t": "Firearm case and lock in the vehicle",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "gear"
+    }
+   ]
+  },
+  {
+   "id": "shotgun",
+   "title": "Shotgun",
+   "category": "firearm",
+   "when": {
+    "method": [
+     "shotgun"
+    ]
+   },
+   "items": [
+    {
+     "t": "Plug in: no more than 3 shells in magazine and chamber",
+     "why": "Needed for all bird hunting; for migratory birds the plug must need the gun taken apart",
+     "cert": 99,
+     "lesson": "rb-migratory-birds",
+     "cat": "firearm"
+    },
+    {
+     "t": "Patterned on paper with my hunting load and choke",
+     "why": "Ducks: 90 to 140 pellets in a 76 cm circle at your range (70%)",
+     "lesson": "sighting-in",
+     "cat": "firearm"
+    },
+    {
+     "t": "Right shells: ducks, geese, coots, snipe non toxic only, nothing else in my pockets",
+     "why": "Lead is fine for grouse, quail, partridge, pheasant, turkey, doves, pigeons",
+     "cert": 99,
+     "lesson": "rb-legal-methods",
+     "cat": "firearm"
+    },
+    {
+     "t": "Choke rated for steel if shooting steel",
+     "why": "Tip",
+     "lesson": "shotgun-guide",
+     "cat": "firearm"
+    },
+    {
+     "t": "Choke wrench and spare tubes",
+     "why": "Tip",
+     "lesson": "shotgun-guide",
+     "cat": "gear"
+    },
+    {
+     "t": "At least one clay session this season",
+     "why": "Tip",
+     "lesson": "shotgun-skills",
+     "cat": "firearm"
+    },
+    {
+     "t": "Ear and eye protection",
+     "why": "Tip",
+     "lesson": "shotgun-skills",
+     "cat": "safety"
+    },
+    {
+     "t": "Only birds above head height with open sky or ground beyond",
+     "why": "Tip",
+     "lesson": "first-quail-trip",
+     "cat": "safety"
+    },
+    {
+     "t": "Shot falls 150 to 250 m away: never toward a road, house, crew or vehicle",
+     "why": "Tip",
+     "lesson": "upland-birds",
+     "cat": "safety"
+    },
+    {
+     "t": "Deer with a shotgun: 20 gauge or larger with No. 1 Buck or larger, or slugs",
+     "cert": 99,
+     "lesson": "rb-legal-methods",
+     "cat": "firearm"
+    },
+    {
+     "t": "Migratory birds: 10 gauge or smaller, no slugs, one shotgun unless others are cased or taken apart",
+     "cert": 99,
+     "lesson": "rb-migratory-birds",
+     "cat": "firearm"
+    },
+    {
+     "t": "Magazine empty and chamber empty before the vehicle",
+     "cert": 99,
+     "lesson": "bc-rules",
+     "cat": "safety"
+    }
+   ]
+  },
+  {
+   "id": "rimfire",
+   "title": ".22 rimfire",
+   "category": "firearm",
+   "when": {
+    "method": [
+     "rimfire"
+    ]
+   },
+   "items": [
+    {
+     "t": "Legal for small game, grouse, ptarmigan and turkey only among birds",
+     "why": "Not for quail, chukar, partridge, pheasant, ducks or deer",
+     "cert": 95,
+     "lesson": "rb-legal-methods",
+     "cat": "firearm"
+    },
+    {
+     "t": ".22 zeroed at 40 m with the ammunition I hunt with",
+     "why": "Tip",
+     "lesson": "small-game",
+     "cat": "firearm"
+    },
+    {
+     "t": "Subsonic 40 grain hollow points",
+     "why": "Tip",
+     "lesson": "small-game",
+     "cat": "firearm"
+    },
+    {
+     "t": "Head or neck shots on sitting animals only: grouse inside 25 m, hares 25 to 50 m",
+     "why": "Tip",
+     "lesson": "small-game",
+     "cat": "firearm"
+    },
+    {
+     "t": "Dirt backstop every shot. A .22 carries over 1 km and skips off ice and water",
+     "why": "Tip",
+     "lesson": "small-game",
+     "cat": "safety"
+    },
+    {
+     "t": "Single projectile ban zones apply to a .22 too",
+     "cert": 99,
+     "lesson": "grouse",
+     "cat": "safety"
+    },
+    {
+     "t": "Magazine out, chamber empty before the vehicle",
+     "cert": 99,
+     "lesson": "bc-rules",
+     "cat": "safety"
+    }
+   ]
+  },
+  {
+   "id": "bow",
+   "title": "Bow or crossbow",
+   "category": "firearm",
+   "when": {
+    "method": [
+     "bow"
+    ]
+   },
+   "items": [
+    {
+     "t": "Right bow class for the animal: deer B, C or D; elk, moose, bear A, C or D; upland and small game B, C or D; migratory birds D",
+     "cert": 99,
+     "lesson": "rb-legal-methods",
+     "cat": "firearm"
+    },
+    {
+     "t": "Pull meets the class minimum, e.g. class D 18 kg (40 lb) within my draw length",
+     "cert": 99,
+     "lesson": "rb-legal-methods",
+     "cat": "firearm"
+    },
+    {
+     "t": "Big game: broadheads at least 2.2 cm (7/8 in) wide",
+     "cert": 99,
+     "lesson": "rb-legal-methods",
+     "cat": "firearm"
+    },
+    {
+     "t": "Crossbow uncocked in or on any vehicle. Never shoot a bow from a vehicle",
+     "cert": 99,
+     "lesson": "rb-unlawful-acts",
+     "cat": "safety"
+    },
+    {
+     "t": "Bow only season? A crossbow counts as a bow",
+     "cert": 99,
+     "lesson": "rb-definitions",
+     "cat": "plan"
+    },
+    {
+     "t": "Bowhunter education course through the BC Archery Association",
+     "why": "Tip",
+     "lesson": "rb-licences-fees",
+     "cat": "plan"
+    }
+   ]
+  },
+  {
+   "id": "atv",
+   "title": "ATV (all terrain vehicle)",
+   "category": "vehicle",
+   "when": {
+    "access": [
+     "atv"
+    ]
+   },
+   "items": [
+    {
+     "t": "ICBC (Insurance Corporation of British Columbia) registration copy on the quad, plate displayed",
+     "cert": 98,
+     "lesson": "atv-rules",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Driver's licence and photo ID in my jacket",
+     "cert": 98,
+     "lesson": "atv-rules",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Proof of $200,000 liability insurance for Forest Service Roads",
+     "cert": 98,
+     "lesson": "atv-rules",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Not registered yet? Book an Autoplan broker this week",
+     "cert": 95,
+     "lesson": "atv-rules",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Closure map for my MU downloaded offline",
+     "why": "Region 3: gov.bc.ca/thompsonaccess",
+     "cert": 98,
+     "lesson": "atv-rules",
+     "cat": "plan"
+    },
+    {
+     "t": "Region 3: no ATV for hunting in MUs 3-28, 3-29, 3-30, 1 September to 10 December",
+     "cert": 98,
+     "lesson": "atv-rules",
+     "cat": "plan"
+    },
+    {
+     "t": "Region 3 above 1,700 m: existing roads and trails only",
+     "cert": 98,
+     "lesson": "atv-rules",
+     "cat": "plan"
+    },
+    {
+     "t": "Fire centre ORV (Off Road Vehicle) ban checked the night before",
+     "cert": 95,
+     "lesson": "atv-rules",
+     "cat": "plan"
+    },
+    {
+     "t": "Private land: owner's consent to ride",
+     "cert": 98,
+     "lesson": "atv-rules",
+     "cat": "plan"
+    },
+    {
+     "t": "Approved helmet, eye protection, gloves, boots over the ankle",
+     "why": "Helmet is the law on Crown land",
+     "cert": 98,
+     "lesson": "atv-rules",
+     "cat": "gear"
+    },
+    {
+     "t": "Lights on from half an hour after sunset to half an hour before sunrise",
+     "cert": 98,
+     "lesson": "atv-rules",
+     "cat": "gear"
+    },
+    {
+     "t": "Spark arrestor fitted in wildfire conditions",
+     "cert": 95,
+     "lesson": "atv-rules",
+     "cat": "gear"
+    },
+    {
+     "t": "Tow strap, small tool kit, tire plug kit and pump",
+     "why": "Tip",
+     "lesson": "atv-rules",
+     "cat": "gear"
+    },
+    {
+     "t": "Spare fuel if the loop is over half a tank",
+     "why": "Tip",
+     "lesson": "atv-rules",
+     "cat": "gear"
+    },
+    {
+     "t": "First aid kit, fire kit, headlamp, whistle, water, food, warm layer",
+     "why": "Tip",
+     "lesson": "atv-rules",
+     "cat": "gear"
+    },
+    {
+     "t": "Magazine out and chamber empty before I touch the quad",
+     "cert": 98,
+     "lesson": "atv-rules",
+     "cat": "safety"
+    },
+    {
+     "t": "Get off and step away from the quad, then load",
+     "why": "Engine off is not enough (85%)",
+     "lesson": "atv-rules",
+     "cat": "safety"
+    },
+    {
+     "t": "Never hunt from the seat or rack. Never herd wildlife with it",
+     "cert": 99,
+     "lesson": "atv-rules",
+     "cat": "safety"
+    },
+    {
+     "t": "Leaving it in remote country: firearm out of sight with a trigger or cable lock",
+     "cert": 95,
+     "lesson": "bc-rules",
+     "cat": "safety"
+    },
+    {
+     "t": "Deer on the rack: quartered, low, centred, ride slower than you want",
+     "why": "Tip",
+     "lesson": "atv-rules",
+     "cat": "safety"
+    },
+    {
+     "t": "Quad on the truck: ramp straps plus 4 ratchet straps, recheck after 10 minutes",
+     "why": "Tip",
+     "lesson": "atv-rules",
+     "cat": "safety"
+    },
+    {
+     "t": "No alcohol. Logging trucks own the road",
+     "why": "Tip",
+     "lesson": "atv-rules",
+     "cat": "safety"
+    }
+   ]
+  },
+  {
+   "id": "boat",
+   "title": "Boat and kayak",
+   "category": "safety",
+   "when": {
+    "access": [
+     "boat",
+     "kayak"
+    ]
+   },
+   "items": [
+    {
+     "t": "PFD (personal flotation device) on and zipped, over all my layers",
+     "why": "The law says carry one each; an inflatable must be worn in an open boat",
+     "cert": 99,
+     "lesson": "water-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Any motor: proof of competency on board, usually the PCOC (Pleasure Craft Operator Card)",
+     "why": "No minimum motor size",
+     "cert": 99,
+     "lesson": "water-safety",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Motors adding up to 7.5 kW (about 10 hp) or more: pleasure craft licence copy on board",
+     "cert": 99,
+     "lesson": "first-duck-hunt",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Buoyant heaving line, at least 15 m (50 ft)",
+     "cert": 99,
+     "lesson": "first-duck-hunt",
+     "cat": "gear"
+    },
+    {
+     "t": "Reboarding device unless the climb in is 0.5 m or less",
+     "cert": 99,
+     "lesson": "first-duck-hunt",
+     "cat": "gear"
+    },
+    {
+     "t": "Watertight flashlight or 3 flares",
+     "cert": 99,
+     "lesson": "first-duck-hunt",
+     "cat": "gear"
+    },
+    {
+     "t": "Paddle or oars, or an anchor with 15 m of line",
+     "cert": 99,
+     "lesson": "first-duck-hunt",
+     "cat": "gear"
+    },
+    {
+     "t": "Bailer or hand bilge pump",
+     "cert": 99,
+     "lesson": "first-duck-hunt",
+     "cat": "gear"
+    },
+    {
+     "t": "Pealess whistle or horn",
+     "cert": 99,
+     "lesson": "first-duck-hunt",
+     "cat": "gear"
+    },
+    {
+     "t": "Navigation lights for before sunrise and after sunset",
+     "cert": 99,
+     "lesson": "first-duck-hunt",
+     "cat": "gear"
+    },
+    {
+     "t": "Magnetic compass unless I stay in sight of seamarks",
+     "cert": 99,
+     "lesson": "first-duck-hunt",
+     "cat": "gear"
+    },
+    {
+     "t": "Kayak or no motor: PFD, heaving line, reboarding device if needed, bailer, whistle, light in the dark",
+     "why": "Sealed sit on top kayak with PFDs worn: whistle, plus a light in the dark",
+     "cert": 99,
+     "lesson": "first-duck-hunt",
+     "cat": "gear"
+    },
+    {
+     "t": "Capacity plate checked: people, gear, guns and game",
+     "why": "VERIFY the numbers on your own boat",
+     "lesson": "water-safety",
+     "cat": "plan"
+    },
+    {
+     "t": "River flow and tide checked before launch",
+     "why": "Tip",
+     "lesson": "local-mission",
+     "cat": "plan"
+    },
+    {
+     "t": "Trip plan lists the boat. Daylight only on big rivers",
+     "why": "Tip",
+     "lesson": "bush-safety",
+     "cat": "plan"
+    },
+    {
+     "t": "Guns unloaded while the motor pushes the boat; cased is the safe habit",
+     "cert": 95,
+     "lesson": "water-safety",
+     "cat": "firearm"
+    },
+    {
+     "t": "Ducks and geese: shoot only when beached, anchored or tied off, not gliding",
+     "cert": 99,
+     "lesson": "rb-migratory-birds",
+     "cat": "firearm"
+    },
+    {
+     "t": "Other game: no hunting from a boat while a motor propels it",
+     "cert": 99,
+     "lesson": "bc-rules",
+     "cat": "firearm"
+    },
+    {
+     "t": "Never stand to shoot. Sit square, one shooter at a time, back to back",
+     "why": "Tip",
+     "lesson": "water-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Weight low and centred. One person moves at a time",
+     "why": "Tip",
+     "lesson": "water-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Fetch birds by paddle or drift with every gun unloaded. Never lean out over the side",
+     "why": "Tip",
+     "lesson": "water-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Wader belt cinched",
+     "cert": 65,
+     "lesson": "what-to-wear",
+     "cat": "clothing"
+    },
+    {
+     "t": "Dry bag: spare warm layer, lighter, phone",
+     "why": "Tip",
+     "lesson": "water-safety",
+     "cat": "gear"
+    },
+    {
+     "t": "Capsized: expect the gasp, stay with the boat, climb on the hull, HELP position",
+     "cert": 75,
+     "lesson": "water-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Salt water: VHF radio or satellite messenger, anchor from the bow only, cold water course first",
+     "why": "Tip",
+     "lesson": "sea-ducks",
+     "cat": "safety"
+    }
+   ]
+  },
+  {
+   "id": "walk-in",
+   "title": "Walking in",
+   "category": "plan",
+   "when": {
+    "access": [
+     "walk"
+    ]
+   },
+   "items": [
+    {
+     "t": "Route traced on the offline map; plan A and plan B chosen",
+     "why": "Tip",
+     "lesson": "map-scouting",
+     "cat": "plan"
+    },
+    {
+     "t": "Good wind and bad wind written for each spot",
+     "why": "Tip",
+     "lesson": "map-scouting",
+     "cat": "plan"
+    },
+    {
+     "t": "Turn back time set: 1 hour before sunset",
+     "why": "Tip",
+     "lesson": "bush-safety",
+     "cat": "plan"
+    },
+    {
+     "t": "Pack out plan: trips counted, light counted",
+     "why": "Tip",
+     "lesson": "packing-out",
+     "cat": "plan"
+    },
+    {
+     "t": "Load at the start of the walk, 15 m off the road, facing away from people and the car",
+     "why": "Tip",
+     "lesson": "firearm-safety",
+     "cat": "firearm"
+    },
+    {
+     "t": "Unload before every fence, log or bank. Lay the gun through, muzzle away",
+     "cert": 75,
+     "lesson": "firearm-safety",
+     "cat": "firearm"
+    },
+    {
+     "t": "Walk in cool: start a little cold so the base layer stays dry",
+     "why": "Tip",
+     "lesson": "what-to-wear",
+     "cat": "clothing"
+    },
+    {
+     "t": "Quiet outer layer: wool or fleece, no nylon swish",
+     "why": "Tip",
+     "lesson": "deer-mind",
+     "cat": "clothing"
+    },
+    {
+     "t": "Wind checker (powder puffer or thread)",
+     "why": "Tip",
+     "lesson": "deer-mind",
+     "cat": "gear"
+    },
+    {
+     "t": "Red light headlamp for the walk in",
+     "why": "Tip",
+     "lesson": "deer-mind",
+     "cat": "gear"
+    },
+    {
+     "t": "Tape over any clinking metal on pack and sling",
+     "why": "Tip",
+     "lesson": "deer-mind",
+     "cat": "gear"
+    },
+    {
+     "t": "Unscented soap, no UV brightener",
+     "why": "Tip",
+     "lesson": "deer-mind",
+     "cat": "gear"
+    },
+    {
+     "t": "STOP if lost: Stop, Think, Observe, Plan",
+     "cert": 75,
+     "lesson": "bush-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Hikers met: unloaded, muzzle down, greet first",
+     "why": "Tip",
+     "lesson": "etiquette",
+     "cat": "safety"
+    }
+   ]
+  },
+  {
+   "id": "overnight",
+   "title": "Overnight or camp",
+   "category": "plan",
+   "when": {
+    "overnight": true
+   },
+   "items": [
+    {
+     "t": "Trip plan has the camp location and the return day",
+     "cert": 75,
+     "lesson": "bush-safety",
+     "cat": "plan"
+    },
+    {
+     "t": "Campfire ban status checked on the BC Wildfire Service app",
+     "why": "Rules change through the fall: VERIFY each trip",
+     "lesson": "bush-safety",
+     "cat": "plan"
+    },
+    {
+     "t": "Recreation sites: no shooting within 100 m of a structure, camping area or trailhead; no game residue dumped there",
+     "cert": 99,
+     "lesson": "etiquette",
+     "cat": "plan"
+    },
+    {
+     "t": "Legal hours checked for each day of the trip",
+     "cert": 99,
+     "lesson": "legal-to-shoot",
+     "cat": "plan"
+    },
+    {
+     "t": "Pack like you will sleep out: shelter, extra layers, food and water for the extra days",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "gear"
+    },
+    {
+     "t": "Spare batteries and power bank for every night",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "gear"
+    },
+    {
+     "t": "Spare dry clothes and boots in a dry bag",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "clothing"
+    },
+    {
+     "t": "Meat hung in shade, off the ground, with air around it",
+     "cert": 80,
+     "lesson": "meat-care",
+     "cat": "meat"
+    },
+    {
+     "t": "Hang meat high or take it home: coyotes and ravens find it by morning",
+     "why": "Tip",
+     "lesson": "field-dressing",
+     "cat": "meat"
+    },
+    {
+     "t": "Gut piles and meat away from camp, trails and campsites",
+     "why": "A carcass is a wildlife attractant",
+     "cert": 95,
+     "lesson": "field-dressing",
+     "cat": "safety"
+    },
+    {
+     "t": "Firearms unloaded and locked or out of sight in camp",
+     "why": "Tip",
+     "lesson": "bc-rules",
+     "cat": "safety"
+    },
+    {
+     "t": "Leave camp cleaner than you found it: pack out everything, fire dead, meat pole down",
+     "why": "Synopsis page 77 asks it",
+     "cert": 95,
+     "lesson": "etiquette",
+     "cat": "plan"
+    }
+   ]
+  },
+  {
+   "id": "with-partner",
+   "title": "Hunting with a partner",
+   "category": "safety",
+   "when": {
+    "party": [
+     "two",
+     "group"
+    ]
+   },
+   "items": [
+    {
+     "t": "Partner has his own BC licence, species licences and bird permit. No sharing",
+     "cert": 99,
+     "lesson": "licences",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Each hunter notches only his own licence. No party hunting in BC",
+     "cert": 95,
+     "lesson": "licences",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Each hunter has his own bag limit. Do not pool birds",
+     "cert": 99,
+     "lesson": "bc-rules",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Record of Receipt if the partner carries my game without me",
+     "cert": 99,
+     "lesson": "bc-rules",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Before the walk: who covers left, who covers right, and the stop signal",
+     "why": "Tip",
+     "lesson": "firearm-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Walk side by side, always in sight. Middle and behind are no shot zones",
+     "cert": 75,
+     "lesson": "firearm-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Lose sight of each other: muzzles up or down, no shooting, call out",
+     "why": "Tip",
+     "lesson": "firearm-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Never swing through your partner. Stop the swing, gun up, safety on",
+     "why": "Tip",
+     "lesson": "first-quail-trip",
+     "cat": "safety"
+    },
+    {
+     "t": "Push or pinch drives: no shot arc agreed before the first step",
+     "why": "Tip",
+     "lesson": "upland-birds",
+     "cat": "safety"
+    },
+    {
+     "t": "In a blind: left and right agreed before first light. In a boat: one shooter at a time",
+     "why": "Tip",
+     "lesson": "first-duck-hunt",
+     "cat": "safety"
+    },
+    {
+     "t": "Blaze orange on both of us",
+     "why": "Tip",
+     "lesson": "what-to-wear",
+     "cat": "safety"
+    },
+    {
+     "t": "Only one shoots at a deer unless a backup plan was agreed",
+     "why": "Tip",
+     "lesson": "firearm-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "After a shot, both unload and walk up together. The shooter leads",
+     "why": "Tip",
+     "lesson": "firearm-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "PROVE out loud at the car, each watching the other",
+     "why": "Tip",
+     "lesson": "firearm-safety",
+     "cat": "firearm"
+    },
+    {
+     "t": "Each hunter can call for help alone: iPhone SOS or a satellite messenger",
+     "why": "Tip",
+     "lesson": "bush-safety",
+     "cat": "gear"
+    },
+    {
+     "t": "Partner's phone number and the land address written on paper too",
+     "why": "Tip",
+     "lesson": "bush-safety",
+     "cat": "plan"
+    },
+    {
+     "t": "Non hunting companion carries no firearm and walks behind or beside, never ahead",
+     "cert": 95,
+     "lesson": "firearm-safety",
+     "cat": "plan"
+    },
+    {
+     "t": "Read Grandpa's rules together before opening day",
+     "why": "Tip",
+     "lesson": "grandpas-rules",
+     "cat": "plan"
+    }
+   ]
+  },
+  {
+   "id": "cold",
+   "title": "Cold weather",
+   "category": "clothing",
+   "when": {
+    "months": [
+     11,
+     12,
+     1
+    ]
+   },
+   "items": [
+    {
+     "t": "Four layers: base, mid, insulation, shell",
+     "cert": 70,
+     "lesson": "what-to-wear",
+     "cat": "clothing"
+    },
+    {
+     "t": "Puffy insulation packed for sitting still",
+     "why": "Tip",
+     "lesson": "what-to-wear",
+     "cat": "clothing"
+    },
+    {
+     "t": "Insulated waterproof boots, about 400 g for cold sits",
+     "why": "Tip",
+     "lesson": "what-to-wear",
+     "cat": "clothing"
+    },
+    {
+     "t": "Spare merino or synthetic socks in a zip bag",
+     "why": "Tip",
+     "lesson": "what-to-wear",
+     "cat": "clothing"
+    },
+    {
+     "t": "Toque, neck gaiter, thin shooting gloves plus warm mitts",
+     "why": "Tip",
+     "lesson": "what-to-wear",
+     "cat": "clothing"
+    },
+    {
+     "t": "Spare dry layer in a dry bag",
+     "why": "Tip",
+     "lesson": "what-to-wear",
+     "cat": "gear"
+    },
+    {
+     "t": "Power bank kept warm: phone batteries die in the cold",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "gear"
+    },
+    {
+     "t": "Winter tires or chains for the route",
+     "why": "Many BC highways need them from 1 October (70%)",
+     "lesson": "pack-kit",
+     "cat": "vehicle"
+    },
+    {
+     "t": "Shovel, tow strap, booster cables",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "vehicle"
+    },
+    {
+     "t": "Full fuel tank before leaving pavement",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "vehicle"
+    },
+    {
+     "t": "Snow line and temperature checked for tomorrow",
+     "why": "Tip",
+     "lesson": "weather-moon",
+     "cat": "plan"
+    },
+    {
+     "t": "Turn back 1 hour before sunset: days are short",
+     "why": "Tip",
+     "lesson": "bush-safety",
+     "cat": "plan"
+    },
+    {
+     "t": "Hypothermia: fumbles, mumbles, stumbles. Shivering that stops is an emergency",
+     "cert": 75,
+     "lesson": "bush-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Do not sweat on the climb and then sit still wet",
+     "why": "Tip",
+     "lesson": "bush-safety",
+     "cat": "safety"
+    },
+    {
+     "t": ".22 skips off frozen ground and ice: dirt backstop",
+     "why": "Tip",
+     "lesson": "small-game",
+     "cat": "safety"
+    },
+    {
+     "t": "Hard cold: open and prop the carcass so it cools inside before the outside freezes",
+     "why": "Tip",
+     "lesson": "field-dressing",
+     "cat": "meat"
+    }
+   ]
+  },
+  {
+   "id": "bear-country",
+   "title": "Bear and cougar country",
+   "category": "safety",
+   "when": {},
+   "items": [
+    {
+     "t": "Bear spray on the hip belt or chest, not in the pack",
+     "why": "Tip",
+     "lesson": "bush-safety",
+     "cat": "gear"
+    },
+    {
+     "t": "Practise drawing the spray in under 2 seconds, safety clip on",
+     "why": "Tip",
+     "lesson": "bush-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Spray at the ground a few metres in front of the bear, then sweep up. Not into the wind. Range about 3 to 10 m: read the can",
+     "cert": 70,
+     "lesson": "bush-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Defensive black bear attack: spray; if it makes contact, play dead",
+     "cert": 75,
+     "lesson": "bush-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Predatory attack (stalks you, or at night): spray, stand big, fight back",
+     "cert": 75,
+     "lesson": "bush-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Cougar: never run, look big, back away slowly, fight back if attacked",
+     "cert": 75,
+     "lesson": "bush-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Fresh sign, carcass smell or ravens circling: back out, talk loudly, spray ready",
+     "why": "Tip",
+     "lesson": "habitat-big-game",
+     "cat": "safety"
+    },
+    {
+     "t": "Bear spray on your belt while field dressing",
+     "cert": 70,
+     "lesson": "field-dressing",
+     "cat": "safety"
+    },
+    {
+     "t": "A gut pile draws bears: move meat away from it fast and watch your back",
+     "why": "Tip",
+     "lesson": "bush-safety",
+     "cat": "meat"
+    },
+    {
+     "t": "No gut piles near towns, trails or campsites",
+     "why": "A carcass is a legal attractant",
+     "cert": 95,
+     "lesson": "field-dressing",
+     "cat": "meat"
+    },
+    {
+     "t": "Dangerous bear or cougar: report to RAPP 1 877 952 7277",
+     "cert": 95,
+     "lesson": "bush-safety",
+     "cat": "paperwork"
+    }
+   ]
+  },
+  {
+   "id": "vehicle",
+   "title": "Truck and the drive",
+   "category": "vehicle",
+   "when": {},
+   "items": [
+    {
+     "t": "Every firearm unloaded: nothing in the chamber or an attached magazine",
+     "cert": 99,
+     "lesson": "bc-rules",
+     "cat": "firearm"
+    },
+    {
+     "t": "Leaving the truck: locked trunk or locked compartment, or out of sight in the locked vehicle",
+     "cert": 99,
+     "lesson": "bc-rules",
+     "cat": "firearm"
+    },
+    {
+     "t": "No hunting or shooting from a vehicle",
+     "cert": 99,
+     "lesson": "bc-rules",
+     "cat": "safety"
+    },
+    {
+     "t": "Not on or across the road allowance of a numbered highway or 2 lane public road: 15 m each side of the middle",
+     "cert": 99,
+     "lesson": "bc-rules",
+     "cat": "safety"
+    },
+    {
+     "t": "Walk 15 m off any road, then load",
+     "why": "Tip",
+     "lesson": "bc-rules",
+     "cat": "safety"
+    },
+    {
+     "t": "Never use a vehicle to herd or harass wildlife",
+     "cert": 99,
+     "lesson": "atv-rules",
+     "cat": "safety"
+    },
+    {
+     "t": "Road and FSR (Forest Service Road) closures checked; DriveBC for the highway",
+     "cert": 95,
+     "lesson": "local-heffley",
+     "cat": "plan"
+    },
+    {
+     "t": "FSRs: logging trucks have the right of way, drive on the right, call kilometres on posted radio channels",
+     "why": "Tip",
+     "lesson": "etiquette",
+     "cat": "plan"
+    },
+    {
+     "t": "Gates left exactly as I found them",
+     "cert": 99,
+     "lesson": "etiquette",
+     "cat": "plan"
+    },
+    {
+     "t": "Never park a hot vehicle on dry grass",
+     "why": "Tip",
+     "lesson": "bush-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Spare tire, jack, lug wrench",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "vehicle"
+    },
+    {
+     "t": "Shovel and tow strap",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "vehicle"
+    },
+    {
+     "t": "Booster cables or a jump pack",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "vehicle"
+    },
+    {
+     "t": "Full fuel tank",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "vehicle"
+    },
+    {
+     "t": "Spare dry clothes and boots",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "vehicle"
+    },
+    {
+     "t": "Extra water and food",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "vehicle"
+    },
+    {
+     "t": "Coolers pre chilled, block ice or frozen jugs, rack for the cooler bottom",
+     "cert": 65,
+     "lesson": "pack-kit",
+     "cat": "meat"
+    },
+    {
+     "t": "Tarp for the truck bed, extra game bags and rope",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "meat"
+    },
+    {
+     "t": "Firearm case and lock",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "vehicle"
+    },
+    {
+     "t": "Paper map of the area",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "vehicle"
+    }
+   ]
+  },
+  {
+   "id": "night-before",
+   "title": "The night before",
+   "category": "plan",
+   "when": {},
+   "items": [
+    {
+     "t": "Forecast: wind direction and speed for morning and evening",
+     "why": "Tip",
+     "lesson": "weather-moon",
+     "cat": "plan"
+    },
+    {
+     "t": "Temperature and any snow line for tomorrow",
+     "why": "Tip",
+     "lesson": "weather-moon",
+     "cat": "plan"
+    },
+    {
+     "t": "Plan A spot fits tomorrow's wind; plan B fits the other wind",
+     "why": "Tip",
+     "lesson": "weather-moon",
+     "cat": "plan"
+    },
+    {
+     "t": "Sunrise and sunset written down; legal start and stop worked out",
+     "cert": 99,
+     "lesson": "weather-moon",
+     "cat": "plan"
+    },
+    {
+     "t": "In season regulation changes checked online",
+     "cert": 99,
+     "lesson": "weather-moon",
+     "cat": "plan"
+    },
+    {
+     "t": "Road and fire restrictions checked for the route",
+     "cert": 95,
+     "lesson": "weather-moon",
+     "cat": "plan"
+    },
+    {
+     "t": "Trip plan left, return time set",
+     "cert": 75,
+     "lesson": "weather-moon",
+     "cat": "plan"
+    },
+    {
+     "t": "Phone and power bank charged, offline maps downloaded",
+     "why": "Tip",
+     "lesson": "weather-moon",
+     "cat": "gear"
+    },
+    {
+     "t": "Day pack packed. Say what each item is for",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "gear"
+    },
+    {
+     "t": "Full kit on and a 20 minute walk: fix what rubs or rustles",
+     "why": "Tip",
+     "lesson": "what-to-wear",
+     "cat": "clothing"
+    },
+    {
+     "t": "Licences, ID and permits in the zip bag by the door",
+     "why": "Tip",
+     "lesson": "licences",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Ammo for this hunt only, counted",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "firearm"
+    },
+    {
+     "t": "Cooler pre chilled, ice ready",
+     "cert": 65,
+     "lesson": "pack-kit",
+     "cat": "meat"
+    },
+    {
+     "t": "Alarm set so I am in place before legal light",
+     "why": "Tip",
+     "lesson": "first-duck-hunt",
+     "cat": "plan"
+    }
+   ]
+  },
+  {
+   "id": "after-kill",
+   "title": "After the shot and the kill",
+   "category": "meat",
+   "when": {},
+   "items": [
+    {
+     "t": "Stay still. Watch where it goes. Listen",
+     "why": "Tip",
+     "lesson": "after-the-shot",
+     "cat": "plan"
+    },
+    {
+     "t": "Pin and flag where I shot from and where it stood",
+     "why": "Tip",
+     "lesson": "blood-trailing",
+     "cat": "plan"
+    },
+    {
+     "t": "Wait before following: at least 30 minutes for big game",
+     "why": "Tip",
+     "lesson": "after-the-shot",
+     "cat": "plan"
+    },
+    {
+     "t": "Read blood and hair at the hit site; flag every spot and walk beside the line",
+     "why": "Tip",
+     "lesson": "blood-trailing",
+     "cat": "plan"
+    },
+    {
+     "t": "Lost the trail: back to the last flag, circles, then lanes. Get help",
+     "why": "Tip",
+     "lesson": "blood-trailing",
+     "cat": "plan"
+    },
+    {
+     "t": "Legal hours and the no light rule checked before continuing",
+     "cert": 99,
+     "lesson": "blood-trailing",
+     "cat": "plan"
+    },
+    {
+     "t": "The law: all reasonable effort to find, finish and retrieve it, and count it in my bag",
+     "cert": 99,
+     "lesson": "after-the-shot",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Trail onto posted or fenced land, a closed park or a No Shooting Area: stop and get permission or call an officer",
+     "why": "No Trespass Act exception for wounded game",
+     "cert": 99,
+     "lesson": "bc-rules",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Approach from behind, rifle ready; confirm it is dead",
+     "why": "Tip",
+     "lesson": "after-the-shot",
+     "cat": "safety"
+    },
+    {
+     "t": "Big game: species licence notched right away, before I touch or move the animal",
+     "cert": 99,
+     "lesson": "tagging-legal",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Photo of the notched licence beside the animal",
+     "why": "Tip",
+     "lesson": "tagging-legal",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Evidence of sex left naturally attached: deer, unskinned tail plus testicle or udder",
+     "cert": 99,
+     "lesson": "tagging-legal",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Antler restricted season: antlers on the skull plate kept with the licence",
+     "cert": 99,
+     "lesson": "tagging-legal",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Record of Receipt filled if anyone else transports it",
+     "cert": 99,
+     "lesson": "tagging-legal",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Compulsory inspection, compulsory report or Mandatory Hunter Report deadline noted. Deer need neither inspection nor report",
+     "cert": 99,
+     "lesson": "tagging-legal",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Gloves on, rifle unloaded and set aside",
+     "why": "Tip",
+     "lesson": "field-dressing",
+     "cat": "meat"
+    },
+    {
+     "t": "Evidence of sex planned before the first cut",
+     "why": "Tip",
+     "lesson": "field-dressing",
+     "cat": "meat"
+    },
+    {
+     "t": "No gut contents on meat, or washed and dried at once",
+     "cert": 80,
+     "lesson": "field-dressing",
+     "cat": "meat"
+    },
+    {
+     "t": "Every edible portion taken: deer neck, ribs, all four quarters, loins; birds both breasts",
+     "cert": 99,
+     "lesson": "bc-rules",
+     "cat": "meat"
+    },
+    {
+     "t": "Bear: gall bladder stays at the site, or the whole gut pile is disposed of within 48 hours",
+     "cert": 95,
+     "lesson": "field-dressing",
+     "cat": "meat"
+    },
+    {
+     "t": "Guts out or meat off within the hour",
+     "cert": 80,
+     "lesson": "meat-care",
+     "cat": "meat"
+    },
+    {
+     "t": "Carcass hung or propped open, in shade, off the ground; skinned if above freezing",
+     "cert": 80,
+     "lesson": "meat-care",
+     "cat": "meat"
+    },
+    {
+     "t": "Game bags on. No plastic, no tarp on a warm carcass",
+     "cert": 80,
+     "lesson": "meat-care",
+     "cat": "meat"
+    },
+    {
+     "t": "Below 4 C as fast as possible; ice in the cavity or cooler; thermometer in the cooler",
+     "cert": 80,
+     "lesson": "meat-care",
+     "cat": "meat"
+    },
+    {
+     "t": "Meat dry, never sitting in meltwater; drain open",
+     "cert": 65,
+     "lesson": "pack-kit",
+     "cat": "meat"
+    },
+    {
+     "t": "Birds: gutted, crop out, cooled apart; wing or head left on",
+     "cert": 95,
+     "lesson": "meat-care",
+     "cat": "meat"
+    },
+    {
+     "t": "Bear meat marked: cook to 71 C or more",
+     "cert": 95,
+     "lesson": "meat-care",
+     "cat": "meat"
+    },
+    {
+     "t": "Knife and hands washed",
+     "why": "Tip",
+     "lesson": "field-dressing",
+     "cat": "meat"
+    },
+    {
+     "t": "Giving away migratory birds: labelled with name, contact information, date, permit number and signature, or preserved",
+     "cert": 99,
+     "lesson": "rb-migratory-birds",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Unpreserved migratory birds count in my possession limit, home freezer too",
+     "cert": 99,
+     "lesson": "rb-migratory-birds",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Every edible portion bagged and packed out; licence travels with the meat",
+     "cert": 99,
+     "lesson": "packing-out",
+     "cat": "plan"
+    },
+    {
+     "t": "Kootenay CWD zone: head off with 8 cm of neck, to a freezer within a week, ear card filled, location submitted, meat held for the result, tools bleached",
+     "cert": 99,
+     "lesson": "cwd",
+     "cat": "plan"
+    },
+    {
+     "t": "Butcher: shop phoned, notched licence or Record of Receipt with the meat, evidence of sex on until butchered, receipt with FWID, licence number, species, sex",
+     "cert": 99,
+     "lesson": "butchering",
+     "cat": "plan"
+    },
+    {
+     "t": "Packages labelled with species, cut, weight and date; freezer list on the door",
+     "why": "Tip",
+     "lesson": "butchering",
+     "cat": "plan"
+    },
+    {
+     "t": "Mount? Decide before any cut. No throat or brisket cuts; cape frozen or salted within 24 to 48 hours",
+     "why": "Tip",
+     "lesson": "trophy-care",
+     "cat": "plan"
+    },
+    {
+     "t": "Journal entry written: date, MU, species, what worked",
+     "why": "Tip",
+     "lesson": "hunt-journal-guide",
+     "cat": "plan"
+    }
+   ]
+  },
+  {
+   "id": "first-hunt",
+   "title": "My first hunt ever",
+   "category": "plan",
+   "when": {
+    "firstHunt": true
+   },
+   "items": [
+    {
+     "t": "Week 1: find my FWID in WILD (Wildlife Information and Licensing Data)",
+     "why": "No luck? FrontCounter BC 1 877 855 3222",
+     "cert": 99,
+     "lesson": "licences",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Week 1: BC hunting licence bought online",
+     "cert": 99,
+     "lesson": "licences",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Week 1: species licences bought IN PERSON",
+     "why": "Online orders are mailed, about 14 business days",
+     "cert": 99,
+     "lesson": "licences",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Week 1: federal bird permit bought online and saved on my phone, if hunting ducks or geese",
+     "cert": 99,
+     "lesson": "licences",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Partner: his own licences and permits bought",
+     "cert": 99,
+     "lesson": "licences",
+     "cat": "paperwork"
+    },
+    {
+     "t": "Week 1: shotgun picked and bought; plug present",
+     "why": "Tip",
+     "lesson": "shotgun-guide",
+     "cat": "firearm"
+    },
+    {
+     "t": "Week 1: steel shot for ducks; lead or steel for upland birds",
+     "why": "Tip",
+     "lesson": "ammo-guide",
+     "cat": "firearm"
+    },
+    {
+     "t": "Week 1: scope and rings mounted by the shop or with a torque wrench",
+     "why": "Tip",
+     "lesson": "scope-guide",
+     "cat": "firearm"
+    },
+    {
+     "t": "Week 1: 3 to 4 boxes of the SAME rifle load",
+     "why": "Tip",
+     "lesson": "countdown",
+     "cat": "firearm"
+    },
+    {
+     "t": "Week 1: ask the landowner where every house, barn and neighbour is",
+     "why": "Tip",
+     "lesson": "countdown",
+     "cat": "plan"
+    },
+    {
+     "t": "Week 2: bore sight, then zero the rifle at 100 m",
+     "why": "Tip",
+     "lesson": "sighting-in",
+     "cat": "firearm"
+    },
+    {
+     "t": "Week 2: 3 shot groups from a rest until they are tight",
+     "why": "Tip",
+     "lesson": "sighting-in",
+     "cat": "firearm"
+    },
+    {
+     "t": "Week 2: shoot from sitting and kneeling with shooting sticks",
+     "why": "Tip",
+     "lesson": "shooting-skills",
+     "cat": "firearm"
+    },
+    {
+     "t": "Week 2: pattern the shotgun on paper with the hunting load",
+     "why": "Tip",
+     "lesson": "sighting-in",
+     "cat": "firearm"
+    },
+    {
+     "t": "Week 2: at least one clay target session",
+     "why": "Tip",
+     "lesson": "shotgun-skills",
+     "cat": "firearm"
+    },
+    {
+     "t": "Week 2: clothing, boots and waders bought; boots broken in for a week",
+     "why": "Tip",
+     "lesson": "what-to-wear",
+     "cat": "clothing"
+    },
+    {
+     "t": "Week 2: day pack and car kit built",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "gear"
+    },
+    {
+     "t": "Week 2: offline maps downloaded; map scouting done (slopes, benches, water, roads)",
+     "why": "Tip",
+     "lesson": "map-scouting",
+     "cat": "plan"
+    },
+    {
+     "t": "Week 2: legal to shoot flowchart practised in Field Mode",
+     "why": "Tip",
+     "lesson": "legal-to-shoot",
+     "cat": "plan"
+    },
+    {
+     "t": "I can say all 9 legal to shoot steps from memory",
+     "why": "Tip",
+     "lesson": "legal-to-shoot",
+     "cat": "plan"
+    },
+    {
+     "t": "I know today's legal start and end for deer and for ducks",
+     "cert": 99,
+     "lesson": "legal-to-shoot",
+     "cat": "plan"
+    },
+    {
+     "t": "I know my MU and today's open seasons, and read my MU rows out loud",
+     "cert": 99,
+     "lesson": "legal-to-shoot",
+     "cat": "plan"
+    },
+    {
+     "t": "Rangefinded the house and the road from each stand",
+     "why": "Tip",
+     "lesson": "legal-to-shoot",
+     "cat": "plan"
+    },
+    {
+     "t": "First aid course with tourniquet practice booked",
+     "why": "Tip",
+     "lesson": "pack-kit",
+     "cat": "safety"
+    },
+    {
+     "t": "PROVE drill at the car, out loud, until it is boring",
+     "why": "Tip",
+     "lesson": "firearm-safety",
+     "cat": "safety"
+    },
+    {
+     "t": "Compass bearing walked to a landmark and back",
+     "why": "Tip",
+     "lesson": "mastery-levels",
+     "cat": "plan"
+    },
+    {
+     "t": "Hunt week: in season changes, closures, fire and road restrictions checked",
+     "cert": 99,
+     "lesson": "countdown",
+     "cat": "plan"
+    },
+    {
+     "t": "Hunt week: trip plan left; cooler and ice ready",
+     "why": "Tip",
+     "lesson": "countdown",
+     "cat": "plan"
+    },
+    {
+     "t": "Go slow. Watch more than you walk",
+     "why": "Tip",
+     "lesson": "countdown",
+     "cat": "plan"
+    },
+    {
+     "t": "Passing on a shot that is too far or too risky is a win",
+     "why": "Tip",
+     "lesson": "mastery-levels",
+     "cat": "plan"
+    }
+   ]
+  }
+ ]
+}
