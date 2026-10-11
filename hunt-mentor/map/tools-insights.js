@@ -106,7 +106,7 @@ function geoDist(f, p, radius) {
 }
 
 /** Features of a manifest layer inside or within radius (m) of p. { state: ok | nodata | missing, layer, hits: [{ props, dist }] } */
-async function nearLayer(id, p, radius = 0) {
+export async function nearLayer(id, p, radius = 0) {
   await layers.loadManifest();
   const st = layers.stateOf(id); if (!st || st.unsupported) return { state: 'missing', hits: [] };
   const k = Math.cos((p[1] * Math.PI) / 180), pad = radius / 111000 / k + 0.005;
