@@ -205,10 +205,10 @@ yt-blood-trail-beyond | When the blood stops, look for tracks and disturbed grou
 - Rain or snow coming: go sooner (Tip).
 
 ```more the plan in full
-- Wait table with sources: [Blood trailing](#/s/blood-trailing/0). Hunter education and the National Deer Association differ on liver and gut waits; this app shows the hunter education numbers (70%).
+- Wait table with sources: [Blood trailing](#/s/blood-trailing/0). The Hunter Ed blog and two National Deer Association articles differ on liver and gut waits; the app shows all of them and picks none. Your call (70%).
 - Lungs: often a short trail. Follow slowly, look ahead.
 - Liver: dark blood, then often a bed. Back out quietly and come back after the wait (70%).
-- Gut: thin blood with stomach matter. Back out at least 6 to 8 hours (70%). Pennsylvania Game Commission says at least 8 hours (70%).
+- Gut: thin blood with stomach matter. Back out for hours, the longest wait of any hit. Sources give 4 to 12 hours; Pennsylvania Game Commission says at least 8 hours (70%).
 - Leg or muscle: may travel far. Get help: your brother, a leashed dog (dogs on deer must be leashed in BC, 95%).
 - Warm afternoon on a gut hit: the meat clock fights the wait clock. Wait less, trim more (Tip).
 ```
@@ -302,7 +302,7 @@ Plan: one tracks, one watches
 ```quiz
 [
   {"q": "At the hit site you find pink frothy blood and small bits of spongy pink tissue. Most likely?", "options": ["Gut hit", "Lung hit", "Leg hit"], "answer": 1, "why": "Light coloured, bubbly blood with soft light tissue points to the lungs."},
-  {"q": "Thin blood mixed with green plant matter and a sour smell. What do you do?", "options": ["Follow right away", "Back out and wait 6 to 8 hours or more", "Give up, it will live"], "answer": 1, "why": "That is a gut hit. Pushed early, a gut hit deer runs far. Wait, then trail quietly."},
+  {"q": "Thin blood mixed with green plant matter and a sour smell. What do you do?", "options": ["Follow right away", "Back out and wait hours, longer than for a lung hit", "Give up, it will live"], "answer": 1, "why": "That is a gut hit. Pushed early, a gut hit deer runs far. Wait, then trail quietly."},
   {"q": "Blood drops on a rock each have a small tail on one side. What does the tail tell you?", "options": ["The direction the deer was moving", "How old the blood is", "Which lung was hit"], "answer": 0, "why": "A drop landing at an angle forms a tail on the far side, so tails point the way the animal went."},
   {"q": "The blood trail stops after 50 m. What is the most common reason?", "options": ["The deer healed", "Clotting, fat plugging the hole, or bleeding inside", "You followed the wrong deer"], "answer": 1, "why": "Clotting is the most common reason. No blood does not mean no hit; switch to tracks and disturbed ground."},
   {"q": "Where do wounded deer usually head?", "options": ["Uphill into open grass", "Downhill, into thick cover, toward water", "Straight back to where they were shot"], "answer": 1, "why": "Wounded deer often go downhill, to thick cover and water, often on a game trail."}

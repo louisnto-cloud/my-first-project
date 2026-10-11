@@ -66,26 +66,32 @@ mc-skills-mark-4 | Flag where it stood. Then flag the trail.
 
 ## Wait: how long?
 
-```diagram sk-wait-chart
+```diagram sk-wait-compare
 ```
 
-- Heart or lungs, out of sight: 30 minutes minimum (70%).
-- Liver: hours. Gut: 6 to 8 hours or overnight in cool weather (70%).
+- Heart or lungs, out of sight: about 30 minutes, sources agree (70%).
+- Liver and gut: hours. Sources differ: liver 2 to 10 h, gut 4 to 12 h (70%).
+- Your call. The app does not pick one. NDA: National Deer Association. All sources: [Blood trailing](#/s/blood-trailing).
 
-```more waiting times, both sources
-| What you saw | Hunter education | National Deer Association |
-|---|---|---|
-| Heart or lungs, out of sight | 30 minutes minimum (70%) | 30 minutes minimum (70%) |
-| Liver: dark blood, no bubbles | 4 to 6 hours (70%) | 2 to 4 hours (70%) |
-| Gut: green or brown, smells | 6 to 8 hours, or overnight if cool (70%) | 4 to 6 hours (70%) |
-| Muscle or leg | 30 to 60 minutes, then track hard (70%) | |
-| Not sure where it hit | Several hours (70%) | |
+```more waiting times, all sources
+> [!lean]
+> Your call. The sources disagree on liver and gut waits. The app shows them all and picks none.
 
-- These are opinions from hunter education and experienced trackers, not law (70%).
+| What you saw | Hunter Ed blog 2026 | NDA (National Deer Association) 2012 | NDA 2023 |
+|---|---|---|---|
+| Heart or lungs, out of sight | 30 minutes minimum | Rifle 30 minutes, bow 1 hour | Rifle a few minutes, bow 15 to 30 minutes |
+| Liver: dark blood, no bubbles | 4 to 6 hours | 2 hours minimum, sometimes 3 or 4 | 8 to 10 hours |
+| Gut: green or brown, smells | 6 to 8 hours, or overnight if late | 4 to 6 hours, overnight if cool | 10 to 12 hours |
+| Muscle or leg | 30 to 60 minutes | Not given | Leg or bone: track at once |
+| Not sure where it hit | Several hours | Not given | Count down from the gut wait |
+
+- All read directly 2026-10-11. Opinions from trackers and educators, not law (70%).
+- Also: American Hunter 2019 (bow) liver 3 to 6 h, gut 6 to 12 h; MeatEater 2019 liver 4 to 6 h, gut 8 to 12 h or more (65 to 70%).
+- All sources agree: liver and gut waits are hours, longer than for a lung hit; gut is the longest (70%).
 - Pennsylvania Game Commission: gut hit, at least 8 hours (70%, via [Blood, hair and tissue](#/s/rs-blood-hair-tissue)).
 - Pushed early, a gut or liver hit animal runs and is lost (85%).
 - Weather: heat or rain coming can shorten the wait for meat or sign; back off a little and still go slow (Tip).
-- A rifle hit in the heart or lungs: the deer is usually dead within about 137 m (150 yd) (70%, National Deer Association).
+- A rifle hit in the heart or lungs: the deer is usually dead within about 137 m (150 yd) (70%, National Deer Association 2012).
 ```
 
 ## The hit site
@@ -203,7 +209,8 @@ mc-skills-mark-4 | Flag where it stood. Then flag the trail.
 ```
 
 - **Rhyme:** "Watch it, mark it, wait it, track it."
-- **Number trick:** 30 minutes lungs, 4 to 6 hours liver, 6 to 8 hours gut (70%, hunter education).
+- **Number trick:** 30 minutes lungs; liver and gut in hours, gut longest (70%, all sources).
+- **Your call** (opinion): how many hours for liver and gut. Pick a source, write it in your journal.
 - **Old hand's rule** (opinion, short form of "pushing the animal early is how it gets lost", 85%, [Shot placement](#/s/shot-placement)): "Pushed early, lost forever."
 
 ```more more hooks
@@ -224,8 +231,10 @@ mc-skills-mark-4 | Flag where it stood. Then flag the trail.
 
 ## Sources
 
-- [Hunter education blog, deer anatomy and the first minutes after the shot](https://www.hunter-ed.com/blog/hunting-basics-understanding-deer-anatomy-for-a-successful-hunt/), via [Blood trailing](#/s/blood-trailing) (70 to 85%)
-- National Deer Association blood trailing advice, via [Blood trailing](#/s/blood-trailing) (70%)
+- [Hunter Ed blog, Deer anatomy for hunters](https://www.hunter-ed.com/blog/hunting-basics-understanding-deer-anatomy-for-a-successful-hunt/) (Jared Braddock, 11 September 2026), read directly 2026-10-11 (70%)
+- National Deer Association: [How to blood trail a deer](https://deerassociation.com/blood-trail-deer/) (Bob Westerfield, 21 September 2012) and [You just shot a deer: here's how to find it](https://deerassociation.com/watch-you-just-shot-a-deer-heres-how-to-find-it/) (NDA Staff, 25 October 2023), read directly 2026-10-11 (70%)
+- [American Hunter, how long to wait before tracking](https://www.americanhunter.org/content/bowhunting-how-long-to-wait-before-tracking-a-deer/) (2019) and [MeatEater, how long should you wait](https://www.themeateater.com/hunt/whitetail-deer/how-long-should-you-wait-to-blood-trail-a-deer) (2019), read directly 2026-10-11 (65 to 70%)
+- Wait time research notes: `research/2026-10-11-wait-times.md`.
 - [Norma Academy, shot analysis](https://www.norma-ammunition.com/academy/hunting/shot-analysis-wounded-game-recovery), Realtree, Deer and Deer Hunting, Bowhunter, via [Blood, hair and tissue](#/s/rs-blood-hair-tissue) (60 to 70%)
 - [United States National Institute of Justice, bloodstain tails](https://nij.ojp.gov/library/publications/bloodstain-tails-asymmetry-aids-reconstruction-oblique-impact), via [Blood, hair and tissue](#/s/rs-blood-hair-tissue) (80%)
 - [Alberta Environment, Be BearSmart: hunting in bear country](https://open.alberta.ca/dataset/76c8f428-30ac-4f0b-b4cd-184e1a6a13e3/resource/2f51f8f2-4386-4e9a-8db2-7a660df33a83/download/2013-bebearsmart-huntingbearsafety-mar2013a.pdf) (85%)
@@ -234,7 +243,7 @@ mc-skills-mark-4 | Flag where it stood. Then flag the trail.
 
 ```quiz
 [
-  {"q": "A deer hunches up after the shot and walks off slowly. What do you do?", "options": ["Follow right away", "Mark the spot and back out for hours: likely a gut hit", "Shoot again at it in the timber"], "answer": 1, "why": "Hunched back and a slow walk often mean a gut hit (70%). Hunter education says wait 6 to 8 hours, or overnight if cool (70%)."},
+  {"q": "A deer hunches up after the shot and walks off slowly. What do you do?", "options": ["Follow right away", "Mark the spot and back out for hours: likely a gut hit", "Shoot again at it in the timber"], "answer": 1, "why": "Hunched back and a slow walk often mean a gut hit (70%). Every source says hours; how many differs (4 to 12 hours, your call) (70%)."},
   {"q": "What is the first thing to do after the shot?", "options": ["Run to where it stood", "Watch it, then mark where it stood and where you last saw it", "Phone your brother"], "answer": 1, "why": "Watch the reaction and mark both spots before you move. Everything looks different from over there (Tip; flagging 70%)."},
   {"q": "Pink, frothy blood with bubbles means?", "options": ["Gut", "Lungs", "Leg"], "answer": 1, "why": "Bright pink, frothy blood is a lung hit sign (65 to 70%). Dark with no bubbles suggests liver; green matter suggests gut."},
   {"q": "The blood trail stops. What next?", "options": ["Give up", "Back to the last flag, circle 10 m then 20 m, then search in lanes about 10 m apart", "Walk straight ahead fast"], "answer": 1, "why": "Clotting often stops a trail (60%). Go back to the last sure sign, circle, then grid in lanes about 10 m apart in sight of each other (70%)."},

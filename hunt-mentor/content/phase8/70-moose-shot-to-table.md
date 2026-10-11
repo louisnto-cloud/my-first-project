@@ -57,16 +57,27 @@ checked: 2026-10-11
 - Drop a phone pin where you shot from and where it stood; note the time (Tip).
 ```
 
-```diagram sk-wait-chart
+```diagram sk-wait-compare
 ```
 
-- Then wait: lungs 30 minutes; gut 6 to 8 hours or overnight (70 to 85%).
+- Then wait: lungs about 30 minutes, sources agree (70%).
+- Liver and gut: hours. Sources differ: liver 2 to 10 h, gut 4 to 12 h (70%).
+- Your call. The app does not pick one. NDA: National Deer Association. All sources: [Blood trailing](#/s/blood-trailing).
 
 ```more waiting and tracking in detail
 > [!warn]
 > Study aid only. The official regulations are the law.
 
-- Wait times are hunter education opinion, not law (70 to 85%, [blood trailing](#/s/blood-trailing)). Pushing a hit animal early can drive it a long way (70%).
+> [!lean]
+> Your call. The sources disagree on liver and gut waits. The app shows them all and picks none.
+
+| Hit | Hunter Ed blog 2026 | NDA (National Deer Association) 2012 | NDA 2023 |
+|---|---|---|---|
+| Heart or lungs | 30 minutes | 30 minutes (rifle) | A few minutes (rifle) |
+| Liver | 4 to 6 hours | 2 hours minimum, sometimes 3 or 4 | 8 to 10 hours |
+| Gut | 6 to 8 hours, or overnight | 4 to 6 hours, overnight if cool | 10 to 12 hours |
+
+- Deer numbers, read directly 2026-10-11. Wait times are opinion, not law (70%, [blood trailing](#/s/blood-trailing)). Pushing a hit animal early can drive it a long way (70%).
 - Mark where it stood with flagging before you move (85%).
 - Two people: one on the sign, one ahead with the rifle ready (70%, hunter education via search; [partner](#/s/hunting-partner)).
 - Hunting hours still apply while you track (95%).

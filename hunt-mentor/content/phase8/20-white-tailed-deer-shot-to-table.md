@@ -76,8 +76,10 @@ yt-shot-placement-deer | Best shot placement for deer.
 | What you saw | Wait |
 |---|---|
 | Heart or lungs, out of sight | 30 min plus (70%) |
-| Liver | 4 to 6 h (70%) |
-| Gut | 6 to 8 h, or overnight if cool (70%) |
+| Liver | Hours: Hunter Ed blog 4 to 6 h; NDA (National Deer Association) 2012 2 to 4 h; NDA 2023 8 to 10 h (70%) |
+| Gut | Longest: Hunter Ed blog 6 to 8 h or overnight; NDA 2012 4 to 6 h; NDA 2023 10 to 12 h (70%) |
+
+- Your call. Sources differ on liver and gut; the app picks none. All sources: [Blood trailing](#/s/blood-trailing).
 
 - You must make all reasonable effort to find it (95%).
 
@@ -274,7 +276,7 @@ yt-field-dress-deer | How to field dress a deer.
 ```
 
 - **Rhyme:** "Watch it, mark it, wait it out; track it slow, there's no doubt."
-- **Number trick:** 30 minutes, 4 to 6 hours, 6 to 8 hours: lungs, liver, gut.
+- **Number trick:** 30 minutes for lungs; liver and gut in hours, gut longest (70%, all sources).
 - **Old hand's rule** (tradition): "Notch first, knife second."
 
 ```more more hooks, mistakes and field drill
@@ -302,7 +304,7 @@ yt-field-dress-deer | How to field dress a deer.
 ```quiz
 [
   {"q": "A white tail stands quartering away at 120 m. Where do you aim?", "options": ["Centre of the body", "Farther back, so the bullet exits the far shoulder", "The near shoulder bone"], "answer": 1, "why": "Quartering away, aim behind the near shoulder so the bullet angles through both lungs and exits the far shoulder."},
-  {"q": "The deer hunches, clamps its tail and walks off slowly. What do you do?", "options": ["Chase it now", "Mark the spot and wait several hours", "Give up"], "answer": 1, "why": "That reaction suggests a gut hit. Back out quietly and wait 6 to 8 hours, or overnight if it is cool, then track."},
+  {"q": "The deer hunches, clamps its tail and walks off slowly. What do you do?", "options": ["Chase it now", "Mark the spot and wait several hours", "Give up"], "answer": 1, "why": "That reaction suggests a gut hit. Back out quietly and wait hours (sources give 4 to 12; your call), then track."},
   {"q": "What is the first thing you do when you reach your downed white tail?", "options": ["Field dress it", "Notch (cancel) the species licence", "Take photos"], "answer": 1, "why": "Synopsis page 11 item 1: cancel the licence immediately after the kill, before you handle the deer."},
   {"q": "What is the Region 8 white tail bag limit?", "options": ["2, either sex, any mix", "2, no more than one buck and one antlerless", "1 buck only"], "answer": 1, "why": "Region 8 page 67: 2 white tails, only one of which may be a buck and one antlerless. Region 3 allows 2, either sex."},
   {"q": "Which evidence of sex must stay attached on a white tail doe?", "options": ["The head", "Part of the udder and teats", "Nothing"], "answer": 1, "why": "Page 15: the unskinned tail plus part of the udder and teats for a doe, or a testicle or part of the penis for a buck."}

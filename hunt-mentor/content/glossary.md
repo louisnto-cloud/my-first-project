@@ -3,7 +3,7 @@
 - **ACTS**: Firearm safety rules. Assume every firearm is loaded. Control the muzzle direction at all times. Trigger finger off the trigger and out of the trigger guard. See that the firearm is unloaded: PROVE it safe (85%).
 - **Antlerless**: A deer with no antlers. Usually a doe or a fawn. Some seasons only allow antlerless.
 - **ATV**: All terrain vehicle. A quad.
-- **Backstop**: What is behind your target that will stop the bullet. Earth is good. Sky is never a backstop.
+- **Backstop**: What is behind your target that will stop the bullet. Earth is good. Sky is never a backstop. In navigation lessons, a backstop is also a big line you must not cross (a river, road or ridge) that tells you that you went too far.
 - **Bag limit**: Most animals of a kind you may take in one day (birds) or one year (big game).
 - **Bore sight**: Lining up the scope with the barrel before shooting, to get on paper fast.
 - **CORE**: Conservation and Outdoor Recreation Education. BC hunter education course.
@@ -391,3 +391,63 @@
 - **Game bag**: A breathable cloth bag for meat. It keeps flies and dirt off and lets heat out; never use plastic on warm meat (80%).
 - **Bone out**: Cutting the meat off the bones in the field. Boned meat weighs about half as much; every edible portion must still come out (95%).
 - **Glaze**: The dry crust that forms on clean meat. It slows bacteria and deters egg laying insects, so do not wash meat that is clean (80%).
+- **Infrared optics**: An optical device that can detect infrared radiation, such as a thermal scope or monocular (99%, synopsis page 3). Unlawful to use or even possess on a hunting trip (99%, page 11).
+- **Drone**: An aircraft with no one aboard, flown by remote control or software, that could find, follow or watch wildlife (99%, synopsis page 3). Unlawful to fly or possess on a hunting trip, or to use what it found less than 6 hours before the trip starts (99%).
+- **Guide**: A person who, for compensation or reward, accompanies and assists another person to hunt wildlife (99%, synopsis page 11). Guiding needs a licence, and a hunter who uses an illegal guide can be charged too (99%).
+- **Transporter**: A person who, for money or other compensation, carries a hunter to, from or between places so the hunter can hunt (99%, synopsis page 11). Needs a transport licence or a guide outfitter licence (99%).
+- **Trafficking**: To buy, sell, trade or distribute for gain or consideration, or to offer to do so (99%, synopsis page 4). Trading meat for a favour counts; a true gift is not trafficking (90%).
+- **Antler restricted season**: A season open only to animals with set antlers or horns, such as spike fork moose, full curl sheep or 6 point elk (99%, synopsis pages 12 and 15). On the way home the antlers stay on part of the upper skull with the species licence, and you may not alter them (99%). A 4 point deer season counts (95%, my reading).
+- **Harvest Report**: The section of a shared LEH (Limited Entry Hunting) authorization. Carry it while hunting, fill it in at the kill, and tell every hunter in the group at once (99%, synopsis).
+- **Fraser Valley Special Area licence**: An extra licence for hunting all of MU 2-4, and the parts of MU 2-8 inside Mission, Maple Ridge, Pitt Meadows and Coquitlam. You also need $1,000,000 public liability insurance (99%, synopsis page 29, Map B10).
+- **Migratory Bird Sanctuary**: Federal land and water set aside for migratory birds. Closed to hunting unless a special federal permit is granted or notices say otherwise; blue signs with a loon mark the boundary (99%, synopsis page 9).
+- **National Wildlife Area**: Federal wildlife land. Closed to hunting unless a special federal permit is granted or notices say otherwise; blue signs with a loon mark the boundary (99%, synopsis page 9).
+- **Licence year**: For hunting licences, 1 April to 31 March of the next year (99%, synopsis page 3). All hunting and species licences expire 31 March (99%).
+- **Recreation site**: A site in BC's Recreation Sites and Trails system, under the Forest Recreation Regulation (99%). No shooting a firearm, bow or crossbow on or into its developed part: 100 m (109 yd) in every direction from a structure, campsite or staging area (99%, synopsis page 9). No gut piles there either (99%).
+- **Indian Reserve**: Reserve land is private land. Get permission from the band office to hunt on it or even to cross it (99%, synopsis page 9).
+- **Full metal jacket**: A bullet fully covered in metal that does not expand. Unlawful for hunting with a rifle, as are tracer, incendiary and explosive bullets (99%, synopsis page 12). Range ammunition is often this kind (Tip).
+- **Region**: One of BC's 9 hunting regions, such as Region 3 Thompson. Each region is split into numbered MUs (Management Units); Region 7 has two halves, 7A Omineca and 7B Peace (95 to 99%, BC MU map layer).
+- **BC**: British Columbia.
+- **Fair chase**: The ethical, sportsmanlike and lawful pursuit of free ranging wild game, where the animal has a reasonable chance to escape (85%, Boone and Crockett Club). An ethic, not the law.
+- **Spine shock**: A hit that stuns the spine without cutting the cord can drop a deer, and it may get up and run within a minute or so (85%). Reload and watch any animal that drops at the shot.
+- **Sky busting**: Shooting at birds beyond the range you can kill cleanly. It risks crippling birds (85%, Ducks Unlimited).
+- **Flock shooting**: Shooting at the whole flock or covey instead of one bird. Resist it: pick one bird, shoot, then pick the next (70 to 85%).
+- **Roost**: The water or place where birds rest and sleep. Setting up near a roost can push birds off it (65%); hunt where they feed or fly (Tip).
+- **HCTF**: Habitat Conservation Trust Foundation. Surcharges on BC hunting, angling, trapping and guiding licences go to it, and it funds fish, wildlife and habitat projects (80%).
+- **Leave No Trace**: A set of outdoor ethics principles taught by Leave No Trace Canada. Principle 3: dispose of waste properly and bring back what you carried in (85%).
+- **R3**: Recruit, retain, reactivate. Programs that bring new hunters in and keep them; keeping them is the hard part, and peer mentors help (70%).
+- **Military crest**: The line just below the top of a ridge, where your outline does not show against the sky (60%). Travel there and creep up to peek over (Tip).
+- **Back bearing**: The reverse direction of a bearing: add 180 if under 180, subtract 180 if over (95%). Walk it to go back the way you came.
+- **Aiming off**: Aiming on purpose to one side of a feature, such as the road the truck is on, so you know which way to turn when you hit it (85%). Aim off more than your likely error (Tip).
+- **Handrail**: A line feature you can follow without the compass: a creek, road, fence, power line, timber edge or ridge (85%).
+- **Catching feature**: A big line just past your target, such as a main ridge, big river or highway. Hit it and you know you went too far (85%). The navigation lessons also call it a backstop (Tip).
+- **Attack point**: A large or obvious feature near your target, best where two handrails cross. Go to it big and easy, then go to the target small and careful (85%).
+- **Collecting feature**: Something you pass on the way that tells you that you are on track, like a creek you cross (85%).
+- **Baseline**: A long line you can always reach by walking one general direction, usually the road the truck is on (Tip).
+- **Escape bearing**: The rough bearing that always reaches your baseline, such as about 180 when the road is to the south (Tip). Write it on your hand or the map margin.
+- **Orienting the map**: Turning the map until its north lines run with the compass needle, or until a road or ridge on it lines up with the real one (95%). Then left on the map is left on the ground.
+- **Terrain association**: Moving by matching the ground you see to the map, feature by feature: name three big features, find them on the map, check their order (Tip, standard land navigation term).
+- **Pace count**: How many steps you take over a measured 100 m, counting each left foot, on flat, rough and uphill ground (75%). It tells you how far you have walked.
+- **Thumbing the map**: Keeping your thumb on the map where you are and moving it as you walk, so one glance finds you (Tip, orienteering habit).
+- **Leapfrog**: A two person compass walk. One holds the bearing and waves the other onto the line, then walks to them and repeats (Tip). Best in fog, timber and flat ground.
+- **Shadow stick**: A stick on level ground used to find rough east and west. Mark the shadow tip, wait 10 to 15 minutes, mark again: the first mark is west, the second east (60%).
+- **Grid north**: The direction the grid lines on a map point. On UTM zone 10 near Heffley Creek it is about 2.5 degrees east of true north (85%, my calculation).
+- **Easting**: The UTM number in metres east. Read it first, going right across the map (95%).
+- **Northing**: The UTM number in metres north. Read it second, going up the map (95%).
+- **Index contour**: A thicker contour line with its height printed on it (95%). The Hunt Map draws one every 100 m (99%, app).
+- **Spot height**: A height printed at one point on a map, often on a hilltop or peak (85%).
+- **Scale**: The ratio between map and ground. At 1:50,000, 1 cm on the map is 500 m on the ground (99%).
+- **Datum**: The model of the earth that map coordinates are based on. Canadian maps use NAD83 and phones use WGS84; for hunting they agree within a couple of metres (75%).
+- **Last known point**: The last place a lost person is known to have been. Searchers start there, from the trip plan, and work outward (65%).
+- **Civil twilight**: The time after sunset when there is still enough light to work in the open. In October it ends about 33 minutes after sunset; after that you need a headlamp in timber (85%).
+- **SAR**: Search and rescue. In BC, call 911 and police call out the volunteer ground search and rescue (GSAR) teams; there is no charge for rescue (75 to 95%).
+- **BCSARA**: BC Search and Rescue Association. Its yearly review covers BC ground search and rescue and lists the 10 worst things you can do outdoors (95%).
+- **AdventureSmart**: An outdoor safety program that teaches the trip plan, the 10 essentials and STOP, via the BC Search and Rescue Association (75%).
+- **PLB**: Personal locator beacon. Sends a one way SOS on 406 MHz, with no monthly plan for the SOS function (60%, gear guides).
+- **SOS**: A call for help. A satellite messenger, or an iPhone 14 or later, can send one where there is no cell signal (65 to 85%). On the ground, lay out a V or SOS at least 3 m long (75%).
+- **FACETS**: Six thinking traps found in avalanche accidents: Familiarity, Acceptance, Consistency, Expert halo, Tracks or scarcity, Social facilitation (80%).
+- **Hug a Tree**: Hug a Tree and Survive, a program that teaches children to stay put, keep warm and dry, and answer searchers (70%). Lost adults should stay put too (75%).
+- **Category 1 campfire**: An open fire no larger than 0.5 m high by 0.5 m wide (80%, BC Wildfire Service). Check fire bans before every fire (80%).
+- **Turnaround time**: The time you agree to turn back for the truck, whatever happens (Tip).
+- **Emergency bivy bag**: A light emergency shelter bag you climb inside. Better than a foil blanket against cold ground (65%).
+- **Debris shelter**: A shelter built from branches, boughs and leaves. It gives emergency insulation but takes hours and lots of dry material (65%).
+- **Three Ts**: AdventureSmart's trip planning, training and taking the essentials (75%).

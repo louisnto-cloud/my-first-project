@@ -46,18 +46,28 @@ yt-shot-placement-bear | Bears are built differently. Study the vitals before th
 
 ## Reactions, waiting and the approach
 
-```diagram sk-wait-chart
+```diagram sk-wait-compare
 ```
 
 - Bears leave thin blood trails, even on good hits (85%).
 - Double lung bear: usually dies within sight or sound (70%).
+- Wait: sources differ on liver and gut (deer numbers). Your call; the app picks none. NDA: National Deer Association.
 
 ```diagram sk-reactions
 ```
 
 ```more after the shot in detail
 - Mark exactly where the bear stood and where it went out of sight; listen (85%, [shot placement](#/s/shot-placement)).
-- Wait times from hunter education (70 to 85%): heart or lungs 30 minutes; liver 4 to 6 hours; gut 6 to 8 hours or overnight. The reaction drawing shows a deer; bears react in similar ways (Tip).
+> [!lean]
+> Your call. The sources disagree on liver and gut waits. The app shows them all and picks none.
+
+| Hit | Hunter Ed blog 2026 | NDA (National Deer Association) 2012 | NDA 2023 |
+|---|---|---|---|
+| Heart or lungs | 30 minutes | 30 minutes (rifle) | A few minutes (rifle) |
+| Liver | 4 to 6 hours | 2 hours minimum, sometimes 3 or 4 | 8 to 10 hours |
+| Gut | 6 to 8 hours, or overnight | 4 to 6 hours, overnight if cool | 10 to 12 hours |
+
+- Deer numbers, read directly 2026-10-11 (70%, opinion, not law). All sources: [blood trailing](#/s/blood-trailing). The reaction drawing shows a deer; bears react in similar ways (Tip).
 - Bright red, frothy blood: lungs. Dark red: liver. Thin, green brown: gut (70 to 85%).
 - Approach from above and behind with the rifle ready; a bear with open, still eyes is dead (Tip, hunter education).
 - Hunting hours still apply while you follow up; no lights to hunt (99%, page 11).

@@ -66,17 +66,28 @@ checked: 2026-10-11
 
 ## Wait, then track
 
-```diagram sk-wait-chart
+```diagram sk-wait-compare
 ```
 
-- Heart or lungs: wait 30 minutes (70 to 85%).
-- Liver: 4 to 6 hours. Gut: 6 to 8 hours or overnight (70 to 85%).
+- Heart or lungs: about 30 minutes, sources agree (70%).
+- Liver and gut: hours. Sources differ: liver 2 to 10 h, gut 4 to 12 h (70%).
+- Your call. The app does not pick one. NDA: National Deer Association. All sources: [Blood trailing](#/s/blood-trailing).
 
 ```more waiting and tracking in detail
 > [!warn]
 > Study aid only. The official regulations are the law.
 
-- Wait times are opinion from hunter education, not law (70 to 85%, [blood trailing](#/s/blood-trailing)).
+> [!lean]
+> Your call. The sources disagree on liver and gut waits. The app shows them all and picks none.
+
+| Hit | Hunter Ed blog 2026 | NDA (National Deer Association) 2012 | NDA 2023 |
+|---|---|---|---|
+| Heart or lungs | 30 minutes | 30 minutes (rifle) | A few minutes (rifle) |
+| Liver | 4 to 6 hours | 2 hours minimum, sometimes 3 or 4 | 8 to 10 hours |
+| Gut | 6 to 8 hours, or overnight | 4 to 6 hours, overnight if cool | 10 to 12 hours |
+
+- Wait times are opinion, not law (70%, read directly 2026-10-11, [blood trailing](#/s/blood-trailing)).
+- All sources agree: liver and gut waits are hours, longer than for a lung hit; gut is the longest (70%).
 - Mark the exact spot where it stood with flagging before you move (85%).
 - Read the hit site: blood colour, bubbles, hair, stomach matter (70 to 85%):
   - Bright red, bubbly: lungs.
@@ -313,7 +324,7 @@ yt-meat-care-new-hunters | Field, truck and home: keep it cold, clean, dry.
 ```quiz
 [
   {"q": "A broadside mule deer. Where do you aim?", "options": ["Middle of the body", "Up the back of the front leg, one third up the chest", "The neck"], "answer": 1, "why": "That hits both lungs and the top of the heart (85%). The middle of the body is the rumen."},
-  {"q": "The deer hunches and walks off slowly after the shot. What do you do?", "options": ["Follow at once", "Mark the spot and wait 6 to 8 hours or overnight", "Wait 5 minutes"], "answer": 1, "why": "A hunched walk often means a gut hit (70%). Wait 6 to 8 hours or overnight in cool weather (70 to 85%). Pushing it early loses deer."},
+  {"q": "The deer hunches and walks off slowly after the shot. What do you do?", "options": ["Follow at once", "Mark the spot and back out for hours, longer than for a lung hit", "Wait 5 minutes"], "answer": 1, "why": "A hunched walk often means a gut hit (70%). Every source says wait hours; how many differs (4 to 12 hours, your call). Pushing it early loses deer."},
   {"q": "What do you do first when you reach your downed buck?", "options": ["Start gutting", "Cancel (notch) your species licence", "Take photos"], "answer": 1, "why": "Cancel the licence immediately after the kill, before you handle the deer (99%, page 11 item 1)."},
   {"q": "What temperature should the meat reach as fast as possible?", "options": ["Below 4°C", "Below 15°C", "Below 25°C"], "answer": 0, "why": "Below 4°C slows bacteria; 4 to 60°C is the danger zone (80%)."},
   {"q": "In MU 3-27 on 5 November, which mule deer buck is legal?", "options": ["Any buck", "A 4 point buck or better (4 tines on one antler, not counting the brow tine)", "No buck"], "answer": 1, "why": "1 November to 10 December is a 4 point season in MUs 3-27 and 3-28 (99%, page 34). Count tines on one side, brow tine not counted (99%, page 4)."}

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Comparison of three sources on how long to wait before following a hit deer. Your call: the app does not pick one. Heart or lungs: Hunter Ed blog 2026, 30 minutes; National Deer Association 2012 article, 30 minutes; National Deer Association 2023 article, a few minutes with a rifle. Muscle or leg: Hunter Ed, 30 to 60 minutes; 2012 article, not given; 2023 article, leg hit, track at once. Liver: Hunter Ed, 4 to 6 hours; 2012 article, 2 to 4 hours; 2023 article, 8 to 10 hours. Gut: Hunter Ed, 6 to 8 hours or overnight; 2012 article, 4 to 6 hours or overnight if cool; 2023 article, 10 to 12 hours. Not sure: Hunter Ed, several hours; 2012 article, not given; 2023 article, wait as for a gut hit. All three agree: liver and gut waits are hours, longer than for a lung hit, and gut is the longest.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="22" font-size="16" font-weight="bold" text-anchor="middle" fill="#23261f">Wait before you follow: your call</text>
+<rect x="0" y="32" width="400" height="42" fill="#2f3a2b"/>
+<text x="6" y="58" font-size="14" font-weight="bold" fill="#fffaf0">Hit</text>
+<text x="156.5" y="50" font-size="14" font-weight="bold" text-anchor="middle" fill="#fffaf0">Hunter Ed</text>
+<text x="156.5" y="67" font-size="14" text-anchor="middle" fill="#fffaf0">blog 2026</text>
+<text x="253.5" y="50" font-size="14" font-weight="bold" text-anchor="middle" fill="#fffaf0">NDA</text>
+<text x="253.5" y="67" font-size="14" text-anchor="middle" fill="#fffaf0">2012</text>
+<text x="351.0" y="50" font-size="14" font-weight="bold" text-anchor="middle" fill="#fffaf0">NDA</text>
+<text x="351.0" y="67" font-size="14" text-anchor="middle" fill="#fffaf0">2023</text>
+<rect x="0" y="74" width="400" height="42" fill="#dfe6d3"/>
+<text x="6" y="100" font-size="14" font-weight="bold" fill="#23261f">Heart, lungs</text>
+<text x="156.5" y="100" font-size="14" font-weight="bold" text-anchor="middle" fill="#2e7d32">30 min</text>
+<text x="253.5" y="100" font-size="14" font-weight="bold" text-anchor="middle" fill="#2e7d32">30 min</text>
+<text x="351.0" y="100" font-size="14" font-weight="bold" text-anchor="middle" fill="#2e7d32">a few min</text>
+<rect x="0" y="116" width="400" height="42" fill="#fffaf0"/>
+<text x="6" y="142" font-size="14" font-weight="bold" fill="#23261f">Muscle, leg</text>
+<text x="156.5" y="142" font-size="14" text-anchor="middle" fill="#2f3a2b">30 to 60 min</text>
+<text x="253.5" y="142" font-size="14" text-anchor="middle" fill="#6b4f35">not given</text>
+<text x="351.0" y="142" font-size="14" text-anchor="middle" fill="#2f3a2b">leg: go now</text>
+<rect x="0" y="158" width="400" height="42" fill="#dfe6d3"/>
+<text x="6" y="184" font-size="14" font-weight="bold" fill="#23261f">Liver</text>
+<text x="156.5" y="184" font-size="14" font-weight="bold" text-anchor="middle" fill="#e8590c">4 to 6 h</text>
+<text x="253.5" y="184" font-size="14" font-weight="bold" text-anchor="middle" fill="#e8590c">2 to 4 h</text>
+<text x="351.0" y="184" font-size="14" font-weight="bold" text-anchor="middle" fill="#e8590c">8 to 10 h</text>
+<rect x="0" y="200" width="400" height="42" fill="#fffaf0"/>
+<text x="6" y="226" font-size="14" font-weight="bold" fill="#23261f">Gut</text>
+<text x="156.5" y="218" font-size="14" font-weight="bold" text-anchor="middle" fill="#b3261e">6 to 8 h</text>
+<text x="156.5" y="236" font-size="14" text-anchor="middle" fill="#b3261e">or overnight</text>
+<text x="253.5" y="218" font-size="14" font-weight="bold" text-anchor="middle" fill="#b3261e">4 to 6 h</text>
+<text x="253.5" y="236" font-size="14" text-anchor="middle" fill="#b3261e">or overnight</text>
+<text x="351.0" y="226" font-size="14" font-weight="bold" text-anchor="middle" fill="#b3261e">10 to 12 h</text>
+<rect x="0" y="242" width="400" height="42" fill="#dfe6d3"/>
+<text x="6" y="268" font-size="14" font-weight="bold" fill="#23261f">Not sure</text>
+<text x="156.5" y="268" font-size="14" text-anchor="middle" fill="#2f3a2b">several h</text>
+<text x="253.5" y="268" font-size="14" text-anchor="middle" fill="#6b4f35">not given</text>
+<text x="351.0" y="268" font-size="14" text-anchor="middle" fill="#2f3a2b">as for gut</text>
+<line x1="108" y1="32" x2="108" y2="284" stroke="#8a9a6b" stroke-width="1"/>
+<line x1="205" y1="32" x2="205" y2="284" stroke="#8a9a6b" stroke-width="1"/>
+<line x1="302" y1="32" x2="302" y2="284" stroke="#8a9a6b" stroke-width="1"/>
+</svg>

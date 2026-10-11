@@ -42,25 +42,31 @@ checked: 2026-10-01
 
 ## Wait times by hit type
 
-```diagram sk-wait-chart
+```diagram sk-wait-compare
 ```
 
-- Heart or lungs out of sight: 30 minutes minimum (70%).
-- Liver or gut: back out for hours (70%). Opinion, not law.
+- Heart or lungs: sources agree on a short wait, about 30 minutes (70%).
+- Liver or gut: every source says hours. How many differs (70%).
+- Your call. The app does not pick one. NDA: National Deer Association. Opinion, not law.
 
-```more wait table with sources
-| What you saw | Wait | Where this comes from |
-|---|---|---|
-| Heart or lungs, went down in sight | Go when it stops moving | Tip |
-| Heart or lungs, ran out of sight | 30 minutes minimum (70%) | Hunter Ed, National Deer Association |
-| Liver: dark blood, no bubbles | 4 to 6 hours (70%) | Hunter Ed. National Deer Association says 2 to 4 hours |
-| Gut: green or brown, smells | 6 to 8 hours, or overnight if it is cool (70%) | Hunter Ed. National Deer Association says 4 to 6 hours |
-| Muscle or leg | 30 to 60 minutes, then expect thin blood (70%) | Hunter Ed |
-| Not sure where it hit | Several hours (70%) | Hunter Ed |
+```more wait table, all sources
+> [!lean]
+> Your call. The sources below disagree on liver and gut. The app shows them all and picks none.
 
-- These are opinions from hunter education material and experienced trackers, not law (70%).
-- A rifle hit in the heart or lungs: the deer is usually dead within 150 yards (137 m) (70%, National Deer Association).
-- Warm afternoon and a gut hit: the meat clock and the waiting clock fight. Wait less, trim more. Tip.
+| What you saw | Hunter Ed blog 2026 | NDA (National Deer Association) 2012 | NDA 2023 |
+|---|---|---|---|
+| Heart or lungs, out of sight | 30 minutes minimum | Rifle 30 minutes, bow 1 hour | Rifle a few minutes, bow 15 to 30 minutes |
+| Liver: dark blood, no bubbles | 4 to 6 hours | 2 hours minimum, sometimes 3 or 4 | 8 to 10 hours |
+| Gut: green or brown, smells | 6 to 8 hours, or overnight if late | 4 to 6 hours, overnight if cool | 10 to 12 hours |
+| Muscle or leg | 30 to 60 minutes | Not given | Leg or bone: track at once |
+| Not sure where it hit | Several hours | Not given | Count down from the gut wait |
+
+- All three read directly 2026-10-11 (70% as advice, opinion not law).
+- Two other sources: American Hunter 2019 (bow) liver 3 to 6 h, gut 6 to 12 h; MeatEater 2019 liver 4 to 6 h, gut 8 to 12 h or more (65 to 70%).
+- What every source agrees on: liver and gut waits are hours, longer than for a lung hit, and gut is the longest (70%).
+- Heart or lungs, went down in sight: go when it stops moving. Tip.
+- A rifle hit in the heart or lungs: the deer is usually dead within 150 yards (137 m) (70%, National Deer Association 2012).
+- Warm afternoon and a gut hit: the meat clock and the waiting clock fight. Tip.
 - Rain or snow coming: go sooner. Rain erases blood in an hour. Tip.
 ```
 
@@ -244,7 +250,7 @@ yt-blood-trail-beyond | When the blood stops, look for tracks and disturbed grou
 
 | Mistake | Fix |
 |---|---|
-| In after 5 minutes on a gut hit | Wait 6 to 8 hours |
+| In after 5 minutes on a gut hit | Back out for hours |
 | Rifle and headlamp after dark | That is hunting with a light |
 | Over the posted fence | Stop and ask |
 
@@ -279,13 +285,13 @@ Private land or closed area: stopped and called
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly. Printed p. 3 (hunt definition), p. 9 (Trespass Act summary, parks), p. 11 (It's Unlawful 18 and 19), p. 12 (36 to 39, dogs, retrieval), p. 18 (accidental harvest). Checked 2026-10-01. Quotes have hyphens removed to match app style.
 - [Trespass Act, RSBC 2018 c. 3](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/18003), read directly, s. 1, 2, 3, 4, 7. Checked 2026-10-01.
 - [Hunting Regulation, B.C. Reg. 190/84, s. 14 prohibited hours](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_01), read directly. Checked 2026-10-01.
-- Skill and opinion, 70% max: [Hunter Ed blog, deer anatomy and the first minutes after the shot](https://www.hunter-ed.com/blog/hunting-basics-understanding-deer-anatomy-for-a-successful-hunt/) (hunter education course provider); [National Deer Association, How to blood trail a deer](https://deerassociation.com/blood-trail-deer/); [American Hunter, how long to wait before tracking](https://www.americanhunter.org/content/bowhunting-how-long-to-wait-before-tracking-a-deer/); [BC Outdoors Magazine, After the shot](https://www.bcoutdoorsmagazine.com/after-the-shot/). All read directly, checked 2026-10-01.
+- Skill and opinion, 70% max: [Hunter Ed blog, Deer anatomy for hunters](https://www.hunter-ed.com/blog/hunting-basics-understanding-deer-anatomy-for-a-successful-hunt/) (Jared Braddock, 11 September 2026, hunter education course provider blog); [National Deer Association, How to blood trail a deer](https://deerassociation.com/blood-trail-deer/) (Bob Westerfield, 21 September 2012); [National Deer Association, You just shot a deer: here's how to find it](https://deerassociation.com/watch-you-just-shot-a-deer-heres-how-to-find-it/) (NDA Staff, 25 October 2023); [MeatEater, How long should you wait to blood trail a deer](https://www.themeateater.com/hunt/whitetail-deer/how-long-should-you-wait-to-blood-trail-a-deer) (Mark Kenyon, 2019); [American Hunter, how long to wait before tracking](https://www.americanhunter.org/content/bowhunting-how-long-to-wait-before-tracking-a-deer/); [BC Outdoors Magazine, After the shot](https://www.bcoutdoorsmagazine.com/after-the-shot/). All read directly, checked 2026-10-01.
 - Hair colour reading: hunter lore. Tip only.
 ```
 
 ```quiz
 [
-  {"q": "Dark red blood, no bubbles, the deer walked off hunched. What now?", "options": ["Follow right away before it gets far", "Back out and wait at least 4 hours", "Fire a shot in the air to make it run"], "answer": 1, "why": "Dark blood with no bubbles points to the liver, and a hunched walk points to the paunch. Both die if left alone. Pushed, they run for kilometres."},
+  {"q": "Dark red blood, no bubbles, the deer walked off hunched. What now?", "options": ["Follow right away before it gets far", "Back out and wait hours, much longer than for a lung hit", "Fire a shot in the air to make it run"], "answer": 1, "why": "Dark blood with no bubbles points to the liver, and a hunched walk points to the paunch. Every source says wait hours; how many differs (2 to 12 hours, your call). Pushed, they run for kilometres."},
   {"q": "Light is gone and the trail leads into timber. You take the rifle and a headlamp to finish the track. Legal?", "options": ["Yes, recovery is not hunting", "No. Following wildlife with a firearm is hunting, and hunting after hours or with a light is unlawful", "Yes if you do not shoot"], "answer": 1, "why": "The synopsis defines hunting to include following the trail of wildlife while in possession of a firearm. Hours and the light rule then apply."},
   {"q": "The blood crosses a fence with a No Trespassing sign. What is the right move?", "options": ["Cross quietly, it is only for a few minutes", "Stop, find the owner and ask, or call a conservation officer", "Shoot from your side if you see it"], "answer": 1, "why": "Enclosed land is presumed off limits without consent. There is no tracking exception in the Trespass Act."},
   {"q": "You lose the blood trail. First step?", "options": ["Walk straight ahead in the direction it was going", "Return to the last flagged blood and circle out from there", "Give up and come back next weekend"], "answer": 1, "why": "Last blood is your anchor. Circles at 20 m and 40 m, then lanes 10 m apart. Walking ahead tramples the sign."}

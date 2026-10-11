@@ -60,19 +60,25 @@ checked: 2026-10-11
 - Listen: a crash, then silence, is good news (Tip).
 ```
 
-```diagram sk-wait-chart
+```diagram sk-wait-compare
 ```
 
 - Gut: back out for hours (70%).
+- Liver and gut: hours. Sources differ: liver 2 to 10 h, gut 4 to 12 h (70%).
+- Your call. The app does not pick one. NDA: National Deer Association. All sources: [Blood trailing](#/s/blood-trailing).
 
 ```more waiting and tracking in detail
-| What you saw | Wait | Source |
-|---|---|---|
-| Heart or lungs, down in sight | Go when it stops moving | Tip |
-| Heart or lungs, out of sight | 30 minutes minimum | 70%, hunter education |
-| Liver | 4 to 6 hours | 70% |
-| Gut | 6 to 8 hours, or overnight if cool | 70% |
-| Not sure | Several hours | 70% |
+> [!lean]
+> Your call. The sources disagree on liver and gut waits. The app shows them all and picks none.
+
+| Hit | Hunter Ed blog 2026 | NDA (National Deer Association) 2012 | NDA 2023 |
+|---|---|---|---|
+| Heart or lungs | 30 minutes | 30 minutes (rifle) | A few minutes (rifle) |
+| Liver | 4 to 6 hours | 2 hours minimum, sometimes 3 or 4 | 8 to 10 hours |
+| Gut | 6 to 8 hours, or overnight | 4 to 6 hours, overnight if cool | 10 to 12 hours |
+
+- Heart or lungs, down in sight: go when it stops moving (Tip).
+- Not sure where it hit: Hunter Ed blog says several hours; NDA 2023 says count down from the gut wait (70%).
 
 - Deer derived times; elk are bigger and tougher, so lean to the longer side (Tip).
 - In September heat the meat clock fights the waiting clock: wait the minimum for the hit, then move (Tip).
@@ -314,7 +320,7 @@ yt-gutless-vs-gutting | Gutless or gutting: take the meat, leave the guts.
 [
   {"q": "What must you do before you move a dead elk?", "options": ["Gut it", "Cancel (notch) your species licence", "Take the antlers off"], "answer": 1, "why": "Page 11: cancel the species licence immediately after the kill and before handling the animal (95%). In a 6 point season the antlers stay attached to part of the skull, with the licence."},
   {"q": "About how much boneless meat does a bull elk give?", "options": ["About 20 kg", "About 75 to 99 kg", "About 250 kg"], "answer": 1, "why": "University of Wyoming: one bull gave 75 kg boneless from 181 kg field dressed; six bulls averaged 99 kg (85%)."},
-  {"q": "You hit a bull in the lungs and he ran out of sight. How long do you wait at least?", "options": ["No wait", "About 30 minutes", "Overnight"], "answer": 1, "why": "Hunter education guidance: heart or lungs out of sight, wait 30 minutes minimum (70%). Lean longer on elk, but balance it with meat cooling in heat (Tip)."},
+  {"q": "You hit a bull in the lungs and he ran out of sight. How long do you wait at least?", "options": ["No wait", "About 30 minutes", "Overnight"], "answer": 1, "why": "Hunter Ed blog and NDA (National Deer Association) 2012: heart or lungs out of sight, about 30 minutes (70%). NDA 2023 says a few minutes with a rifle; no source says overnight. Lean longer on elk, but balance it with meat cooling in heat (Tip)."},
   {"q": "Which parts must come out of the field?", "options": ["Backstraps and hind quarters only", "All four quarters, loins, neck and ribs", "Only what you can carry in one trip"], "answer": 1, "why": "Page 11, edible portions: four quarters, loins, neck and ribs (99%). Make as many trips as it takes."},
   {"q": "Who must file the Mandatory Hunter Report for elk, and by when?", "options": ["Only successful hunters, by 31 December", "Everyone who bought an elk licence, by 31 March", "Nobody, it is optional"], "answer": 1, "why": "Page 16: all individuals who purchase an elk, moose or caribou species licence report by 31 March (99%). New for elk in this edition."}
 ]

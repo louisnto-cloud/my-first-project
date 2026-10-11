@@ -235,8 +235,8 @@ Sun protection
 | Duck range, steel | 35 m (38 yd) | 70 |
 | Pattern | 100 pellets in 76 cm | 70 |
 | Wait: lungs | 30 minutes | 70 |
-| Wait: liver | 4 to 6 hours | 70 |
-| Wait: gut | 6 to 8 hours or overnight | 70 |
+| Wait: liver | hours; sources give 2 to 10 (your call) | 70 |
+| Wait: gut | longest; sources give 4 to 12 (your call) | 70 |
 | Grid lanes | about 10 m apart | 70 |
 | Retrieval | all reasonable effort | 95 |
 | Guts out | within the hour | 80 |

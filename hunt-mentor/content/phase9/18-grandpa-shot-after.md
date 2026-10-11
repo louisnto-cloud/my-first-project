@@ -122,18 +122,30 @@ checked: 2026-10-11
 
 ## 6. Wait it out
 
-```diagram fw-grandpa-wait
+```diagram sk-wait-compare
 ```
 
 > [!rule] Grandpa's rule (opinion, widely taught)
 > "Pushed early, lost forever."
 
 - **Means:** after a poor hit, wait hours before tracking. A bedded animal pushed early runs far.
-- **Label:** opinion. National Deer Association waits: liver 8 to 10 h, guts 10 to 12 h (85%).
+- **Label:** opinion. Sources differ on how long: liver 2 to 10 h, guts 4 to 12 h (70%).
+- **Your call.** The app shows every source and picks none. NDA: National Deer Association.
 
 ```more why, when it is wrong, where it comes from
-- National Deer Association (2023): heart or lungs with a firearm, wait a few minutes; liver 8 to 10 hours; guts 10 to 12 hours; stomach hit deer often bed quickly; if you bump one, back out (85%, read directly).
-- Other sources give shorter waits (liver from about 3 h, guts from about 6 h). The app's chart in [Skills masterclass 8](#/s/mc-skills-08) uses shorter ones. When unsure, wait longer (Tip).
+> [!lean]
+> Your call. The sources disagree on liver and gut waits. The app shows them all and picks none.
+
+| Hit | Hunter Ed blog 2026 | NDA (National Deer Association) 2012 | NDA 2023 |
+|---|---|---|---|
+| Heart or lungs | 30 minutes | 30 minutes (rifle) | A few minutes (rifle) |
+| Liver | 4 to 6 hours | 2 hours minimum, sometimes 3 or 4 | 8 to 10 hours |
+| Gut | 6 to 8 hours, or overnight | 4 to 6 hours, overnight if cool | 10 to 12 hours |
+
+- The two National Deer Association numbers come from two different articles: Bob Westerfield (2012) and NDA Staff (2023). Both read directly 2026-10-11 (70% as advice).
+- NDA 2023 also: stomach hit deer often bed quickly; if you bump one, back out (70%).
+- Also: American Hunter 2019 (bow) liver 3 to 6 h, gut 6 to 12 h; MeatEater 2019 liver 4 to 6 h, gut 8 to 12 h or more (65 to 70%).
+- All sources agree: liver and gut waits are hours, longer than for a lung hit; gut is the longest (70%).
 - **When it is wrong:** a leg or bone hit: the National Deer Association says track at once and look for a follow up shot (85%).
 - Hot weather can spoil meat during a long wait: a hard choice. See [Blood trailing](#/s/blood-trailing).
 - **Where it comes from:** deer hunters and blood tracking dog handlers.
@@ -234,11 +246,11 @@ checked: 2026-10-11
 
 ## Memory hooks
 
-```diagram fw-grandpa-wait
+```anim sa-wt-mark Mark it, then wait it.
 ```
 
 - **Rhyme:** "Aim small, miss small. Mark it, then wait it."
-- **Number trick:** 8 and 10: hours to wait for liver and guts, at least (85%, National Deer Association).
+- **Your call:** liver and gut waits are hours; sources give 2 to 12. Pick one and write it in your journal (70%).
 - **Number trick:** 1: minute for a stunned deer to get back up (85%).
 
 ```more more hooks
@@ -257,17 +269,20 @@ checked: 2026-10-11
 
 ## Sources
 
-- National Deer Association, ["You just shot a deer. Here's how to find it"](https://deerassociation.com/watch-you-just-shot-a-deer-heres-how-to-find-it/) (2023), read directly (85%)
+- National Deer Association, ["You just shot a deer. Here's how to find it"](https://deerassociation.com/watch-you-just-shot-a-deer-heres-how-to-find-it/) (NDA Staff, 25 October 2023), read directly (85%; waits 70% as advice)
+- National Deer Association, ["How to blood trail a deer"](https://deerassociation.com/blood-trail-deer/) (Bob Westerfield, 21 September 2012), read directly 2026-10-11 (70%)
+- Hunter Ed blog, ["Deer anatomy for hunters"](https://www.hunter-ed.com/blog/hunting-basics-understanding-deer-anatomy-for-a-successful-hunt/) (Jared Braddock, 11 September 2026), read directly 2026-10-11 (70%)
+- American Hunter, [how long to wait before tracking](https://www.americanhunter.org/content/bowhunting-how-long-to-wait-before-tracking-a-deer/) (2019), and MeatEater, [how long should you wait](https://www.themeateater.com/hunt/whitetail-deer/how-long-should-you-wait-to-blood-trail-a-deer) (2019), read directly 2026-10-11 (65 to 70%)
 - Ducks Unlimited, [Shotgunning: how far is too far](https://www.ducks.org/hunting/shooting-tips/shotgunning-how-far-is-too-far) (2025), read directly (85%), and [ducks over decoys](https://devwww.ducks.org/hunting/shooting-tips/shotgunning-ducks-over-decoys), search preview (75%)
 - Hunter Ed bowhunter course, [Spine shots](https://www.bowhunter-ed.com/pennsylvania-archery/studyGuide/Spine-Shots/303039_168048/), search preview (85%)
 - Texas Parks and Wildlife, [Vital areas](https://tpwd.texas.gov/education/hunter-education/online-course/hunting-skills-1/vital-areas) (85%, app research)
 - MeatEater, [Lies hunters believe about blood trailing deer](https://themeateater.com/wired-to-hunt/whitetail-hunting/lies-hunters-believe-about-blood-trailing-deer), and NC Wildlife, [Recovery of game](https://www.ncwildlife.org/Hunting/After-the-Hunt/Recovery-of-Game), search preview (60 to 65%)
 - Buckmasters, [Aim small, miss small](https://www.buckmasters.com/Hunting/Tips-and-Tactics/Articles/ID/6323/Aim-Small-Miss-Small), search preview (50%)
-- Research notes: `research/2026-10-11-fw-grandpa.md`.
+- Research notes: `research/2026-10-11-fw-grandpa.md`, `research/2026-10-11-wait-times.md`.
 
 ```quiz
 [
-  {"q": "Your deer hunched and walked off slowly after the shot, and you suspect a gut hit. How long does the National Deer Association suggest waiting?", "options": ["10 minutes", "About 10 to 12 hours", "No wait, go now"], "answer": 1, "why": "National Deer Association: 8 to 10 hours for liver, 10 to 12 hours for guts (85%). Gut hit deer often bed quickly; pushing them early loses them."},
+  {"q": "Your deer hunched and walked off slowly after the shot, and you suspect a gut hit. What do all the sources agree on?", "options": ["Follow after 10 minutes", "Back out for hours, longer than for a lung hit", "No wait, go now"], "answer": 1, "why": "Every source says hours for a gut hit; how many differs: Hunter Ed blog 6 to 8 or overnight, NDA (National Deer Association) 2012 4 to 6, NDA 2023 10 to 12 (70%). Your call. Pushing it early loses it."},
   {"q": "You see bone chips and no blood at the hit site. What does the National Deer Association advise?", "options": ["Wait 12 hours", "Track at once and be ready for a follow up shot", "Assume a miss and go home"], "answer": 1, "why": "Bone fragments suggest a non lethal leg hit; start tracking immediately and look for a follow up shot (85%)."},
   {"q": "A buck drops instantly at the shot. What now?", "options": ["Unload and run to it", "Reload, watch it, approach from its back side ready to shoot", "Walk away for an hour"], "answer": 1, "why": "Spine shock can wear off within about a minute (85%, bowhunter education). Down is not dead."},
   {"q": "Where do you walk when following a blood trail?", "options": ["Right on the blood", "Beside it, flagging each spot", "Ahead in a straight line"], "answer": 1, "why": "Walk beside the trail so you can read it again; flag the last blood (85%, National Deer Association; app opinion)."},

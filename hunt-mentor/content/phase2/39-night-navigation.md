@@ -181,14 +181,16 @@ yt-hug-a-tree | Hug a tree: stay put when lost.
 
 ## Shot near dark?
 
-```diagram sk-wait-chart
+```diagram sk-wait-compare
 ```
 
 - Mark the spot, the line and the time. Then follow the rules for after hours (Tip).
+- Wait times: sources differ on liver and gut. Your call; the app picks none (70%). NDA: National Deer Association.
 
 ```more late shots in full
 - Mark where you stood, where the animal was, and the direction it went with waypoints (Tip).
 - After legal light, trailing with a firearm or a light is hunting after hours and with a light (85%, Rule Book reading). See [Blood trailing](#/s/blood-trailing/0) for what you can do and who to call.
+- The chart compares the Hunter Ed blog (2026) and two NDA (National Deer Association) articles (2012, 2023), read directly 2026-10-11 (70%). Full table: [Blood trailing](#/s/blood-trailing/0).
 - Tip: a late evening shot means a night walk with meat. Pack the headlamp, rope and game bags every time.
 ```
 

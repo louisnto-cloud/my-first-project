@@ -209,8 +209,8 @@ yt-shot-placement-bear | Bears are built differently. Aim lower and further forw
 |---|---|---|---|---|
 | Heart | Bolts, often a jump or kick | Bright red, lots | Deer: rarely over 50 m (85%) | 30 min (85%) |
 | Both lungs | Runs hard, then wobbles | Bright red, bubbly or frothy | Deer: under 100 m (85%). Elk: usually under 100 m (65%) | 30 min (85%) |
-| Liver | Hunches, walks or trots | Dark red, no bubbles | Beds within a few hundred metres | 4 to 6 hours (85%) |
-| Paunch (gut) | Hunches up, walks off slowly | Thin, greenish brown, stomach matter | Beds nearby if not pushed | 6 to 8 hours or overnight (85%) |
+| Liver | Hunches, walks or trots | Dark red, no bubbles | Beds within a few hundred metres | Hours: 2 to 10, sources differ (70%) |
+| Paunch (gut) | Hunches up, walks off slowly | Thin, greenish brown, stomach matter | Beds nearby if not pushed | Longest: 4 to 12 hours, sources differ (70%) |
 | Muscle or leg | Keeps running at normal pace | Thin, inconsistent | Far | 30 to 60 min, then track hard (85%) |
 | No sign | Nothing | None at first | Unknown | Back out. Look for hair, bone, tracks (85%) |
 
@@ -276,6 +276,6 @@ Breath half out, squeeze, follow through
   {"q": "Deer quartering away. Where do you aim?", "options": ["Behind the near shoulder, same as broadside", "Farther back, so the bullet exits the far shoulder", "The near shoulder"], "answer": 1, "why": "Picture the far front leg and aim on the near side at the spot that sends the bullet there. Aiming at the near crease can clip one lung."},
   {"q": "What is wrong with the Texas heart shot?", "options": ["Nothing, it drops them", "No vitals in reach, guts and hams in the way, ruins meat", "It is only illegal in Texas"], "answer": 1, "why": "A shot at a walking away animal goes through paunch and hindquarters first. Hunter Ed says never take it."},
   {"q": "Black bear broadside, near leg forward. Where is the spot?", "options": ["Halfway up the body, tight behind the shoulder, through both lungs", "High on the shoulder to break it down", "The head"], "answer": 0, "why": "The heart sits low and the lungs reach well back. Shoulder and head shots are not recommended: heavy bone, sloped skull, lost bears."},
-  {"q": "Dark red blood, no bubbles, the deer hunched and trotted off. What now?", "options": ["Follow right away", "Mark the spot, back out, wait 4 to 6 hours", "Give up"], "answer": 1, "why": "That is a liver hit. The deer will bed and die if not pushed. Pushed early, it can go a long way."}
+  {"q": "Dark red blood, no bubbles, the deer hunched and trotted off. What now?", "options": ["Follow right away", "Mark the spot, back out, wait hours", "Give up"], "answer": 1, "why": "That is a liver hit. The deer will bed and die if not pushed. Every source says hours; how many differs (2 to 10 hours, your call: see Blood trailing). Pushed early, it can go a long way."}
 ]
 ```
