@@ -668,13 +668,13 @@
   "deck": "Mule deer Masterclass",
   "front": "Wait time after a heart or lung hit?",
   "back": "About 30 minutes (70 to 85%).",
-  "diagram": "sk-wait-chart"
+  "diagram": "sk-wait-compare"
  },
  {
   "id": "mmd-106",
   "deck": "Mule deer Masterclass",
   "front": "Wait time after a gut hit?",
-  "back": "6 to 8 hours or overnight (70 to 85%)."
+  "back": "Hours, the longest wait of any hit. Sources give 4 to 12 hours; your call (70%)."
  },
  {
   "id": "mmd-107",
