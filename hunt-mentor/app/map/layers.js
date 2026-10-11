@@ -4,6 +4,7 @@
    "areas" (and "{area_lc}" by its lower case). Or give "files": { "A": "path", "B": "path" }. Files get "?v=<dataDate or updated>". */
 import { esc, prefs, savePrefs, bboxIntersects, padBbox, parseMonths, monthsText, MONTH_NAMES, pointInGeom, bboxOf, fmtNum } from './util.js';
 import * as spots from './spots.js';
+import { withOverrides, guideFor } from './layer-guide.js';
 
 const MANIFEST = 'data/layers/manifest.json';
 export const GROUPS = ['Land status', 'Hunting', 'Habitat and migration', 'Access', 'Spots', 'My Content'];
@@ -12,6 +13,28 @@ const AREA_NAMES = { A: 'Kamloops, North Thompson, Bonaparte, Shuswap west', B: 
 const LEGAL_GROUPS = ['Land status', 'Hunting', 'Access'];
 const BANNER = '<div class="hmm-banner">Study aid only. The official regulations are the law.</div>';
 const EMPTY = { type: 'FeatureCollection', features: [] };
+// small styles for the panel, the guide and the Land chip (map.css is owned elsewhere)
+const CSS = `.hmm-chiprow .hmm-chiplabel{flex:none}.hmm-chip svg{flex:none;margin-right:5px}
+.hmm-sw.fill2{position:relative;overflow:hidden;border:2.5px solid var(--c);background:transparent}.hmm-sw.fill2.dashed{border-style:dashed}
+.hmm-sw.fill2 i,.hmm-sw.fill2 b{position:absolute;inset:0}
+.hmm-sw.sym{display:grid;place-items:center;font:800 11px/1 -apple-system,sans-serif;border:1.5px solid currentColor;background:none}
+.hmm-guide-btn{width:100%;min-height:48px;margin:2px 0 12px;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;border:1.5px solid var(--hmm-accent);background:var(--hmm-card);color:var(--hmm-ink);font-weight:800;font-size:15px}
+.hmm-guide-btn svg{width:20px;height:20px;color:var(--hmm-accent)}
+.hmm-gcard{padding:12px 0;border-bottom:1px solid var(--hmm-line)}
+.hmm-gcard h4{display:flex;align-items:center;gap:10px;margin:0 0 6px;font-size:16px;line-height:1.25}
+.hmm-gcard p{margin:5px 0;font-size:14.5px;line-height:1.4}.hmm-gcard p b{font-weight:800}
+.hmm-gcard .hmm-legend{margin:6px 0}
+.hmm-glinks{display:flex;flex-wrap:wrap;gap:0 14px}.hmm-glinks a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:14px}
+.hmm-gnav{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 6px}.hmm-gnav a{min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:18px;border:1.5px solid var(--hmm-line);font-size:13px;font-weight:700;color:var(--hmm-ink);text-decoration:none}
+.hmm-gh{margin:16px 0 0;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--hmm-muted)}
+.hmm-landchip{position:absolute;z-index:2;left:calc(var(--sl,0px) + 12px);bottom:calc(var(--low,120px) + 74px);max-width:min(240px,calc(100% - 110px));background:var(--hmm-btn);color:var(--hmm-ink);border-radius:16px;box-shadow:var(--hmm-shadow);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:700 13px/1.2 -apple-system,system-ui,sans-serif}
+.hmm-landchip[hidden],.framing .hmm-landchip{display:none}
+.hmm-landchip>button{display:flex;align-items:center;gap:6px;min-height:44px;width:100%;padding:0 12px;border:0;background:none;color:inherit;font:inherit;border-radius:16px}
+.hmm-landchip>button .hmm-sw{width:16px;height:16px;border-radius:4px;border-width:2px}
+.hmm-landchip ul{list-style:none;margin:0;padding:0 12px 4px}.hmm-landchip li{display:flex;align-items:center;gap:8px;min-height:26px}
+.hmm-landchip li .hmm-sw{width:18px;height:18px;border-radius:4px;border-width:2px}
+.hmm-landchip .hmm-lc-more{display:block;width:100%;min-height:44px;border:0;border-top:1px solid var(--hmm-line);background:none;color:var(--hmm-accent);font:inherit;font-weight:800}
+.hmm-lc-k{margin-left:auto;color:var(--hmm-muted);font-weight:600}`;
 const DEF_PAINT = {
   fill: { 'fill-color': '#e4472b', 'fill-opacity': 0.4 },
   line: { 'line-color': '#e4472b', 'line-width': 2 },
@@ -28,12 +51,13 @@ export function init(api) {
   H = api; map = api.map;
   if (!document.getElementById('hm-lyr-css')) { // small fixes for the panel chips (map.css is owned elsewhere)
     const css = document.createElement('style'); css.id = 'hm-lyr-css';
-    css.textContent = '.hmm-chiprow .hmm-chiplabel{flex:none}.hmm-chip svg{flex:none;margin-right:5px}';
+    css.textContent = CSS;
     document.head.appendChild(css);
   }
+  H.on('base', () => { for (const st of L.values()) if (st.added && lp(st.l.id).on && st.mapIds.some((x) => x.endsWith('-case'))) setVis(st, monthOk(st)); });
   H.ready.then(() => loadManifest()).then(() => {
     for (const st of L.values()) if (lp(st.l.id).on) turnOn(st);
-    updateBadge();
+    updateBadge(); updateLandChip();
   });
 }
 export const manifest = () => M;
@@ -55,6 +79,7 @@ export function loadManifest() {
 }
 
 function newState(l) {
+  l = withOverrides(l); // clearer land colours and plain English labels (layer-guide.js)
   const st = { l, files: [], loaded: new Map(), loading: new Map(), failed: new Set(), added: false, mapIds: [], base: {}, legal: l.legal != null ? !!l.legal : LEGAL_GROUPS.includes(l.group), spot: spots.isSpotLayer(l) };
   st.files = filesFor(l);
   st.pm = st.files.some((f) => /\.pmtiles(\?|$)/i.test(f.url)); // vector tiles, drawn by MapLibre tile by tile
@@ -85,7 +110,7 @@ export function setOn(id, on) {
   const st = L.get(id); if (!st) return;
   lp(id).on = !!on; savePrefs();
   if (on) turnOn(st); else setVis(st, false);
-  updateBadge(); H.emit('layers', id, !!on);
+  updateBadge(); updateLandChip(); H.emit('layers', id, !!on);
 }
 function turnOn(st) {
   if (st.unsupported) return;
@@ -95,8 +120,14 @@ function turnOn(st) {
   if (!st.added && !st.adding && !st.error && !st.retry) { st.retry = true; map.once('idle', () => { st.retry = false; if (lp(st.l.id).on) turnOn(st); }); }
 }
 function updateBadge() { H.ui.setBadge([...L.values()].filter((s) => lp(s.l.id).on && !s.unsupported).length); }
+// white edge casings only help on satellite and hybrid: hidden on Topo, so Topo draws less
+const caseOn = () => (prefs.base || 'topo') !== 'topo';
 function setVis(st, on, ids = st.mapIds) {
-  for (const id of ids) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none');
+  for (const id of ids) {
+    if (!map.getLayer(id)) continue;
+    const v = on && (!id.endsWith('-case') || caseOn()) ? 'visible' : 'none';
+    if ((map.getLayoutProperty(id, 'visibility') || 'visible') !== v) map.setLayoutProperty(id, 'visibility', v);
+  }
 }
 const monthOk = (st) => !prefs.month || !st.layerMonths.length || st.layerMonths.includes(prefs.month);
 
@@ -178,19 +209,40 @@ function addLayerSet(st, src, sfx, sourceLayer) {
   if (l.filter) sl.filter = l.filter;
   map.addLayer({ id, type, source: src, ...sl, minzoom, layout, paint }, before); ids.push(id);
   if (type === 'fill') {
-    map.addLayer({ id: `${id}-line`, type: 'line', source: src, ...sl, minzoom, layout: { 'line-join': 'round' }, paint: { 'line-color': firstColor(paint['fill-outline-color']) || firstColor(paint['fill-color']) || '#e4472b', 'line-width': ['interpolate', ['linear'], ['zoom'], 6, 0.7, 12, 1.5, 16, 2.4], 'line-opacity': 0.9 } }, H.anchors.lines);
+    // outline width: [at zoom 9, 12, 15] numbers (a zoom curve must be the top level expression, so the casing builds its own)
+    const o = l.outline || {}, wz = (w, add = 0) => ['interpolate', ['linear'], ['zoom'], 9, w[0] + add, 12, w[1] + add, 15, w[2] + add];
+    const lw = Array.isArray(o.width) && typeof o.width[0] === 'number' ? wz(o.width) : (o.width || ['interpolate', ['linear'], ['zoom'], 6, 0.7, 12, 1.5, 16, 2.4]);
+    if (l.hatch) { // closed areas: diagonal stripes read on topo and satellite alike
+      hatchImage(l.hatch);
+      map.addLayer({ id: `${id}-hatch`, type: 'fill', source: src, ...sl, minzoom, paint: { 'fill-pattern': hatchName(l.hatch), 'fill-opacity': 0.75 } }, before); ids.push(`${id}-hatch`);
+    }
+    if (o.casing) { // a soft white edge under the line so it holds up on dark satellite forest
+      map.addLayer({ id: `${id}-case`, type: 'line', source: src, ...sl, minzoom, layout: { 'line-join': 'round' }, paint: { 'line-color': '#ffffff', 'line-width': Array.isArray(o.width) && typeof o.width[0] === 'number' ? wz(o.width, 2.2) : 4, 'line-opacity': ['interpolate', ['linear'], ['zoom'], (+o.casing || 12) - 2, 0, +o.casing || 12, 0.5], 'line-blur': 0.6 } }, H.anchors.lines);
+      ids.push(`${id}-case`);
+    }
+    const lpaint = { 'line-color': o.color || firstColor(paint['fill-outline-color']) || firstColor(paint['fill-color']) || '#e4472b', 'line-width': lw, 'line-opacity': 0.95 };
+    if (o.dash) lpaint['line-dasharray'] = o.dash;
+    map.addLayer({ id: `${id}-line`, type: 'line', source: src, ...sl, minzoom, layout: { 'line-join': 'round' }, paint: lpaint }, H.anchors.lines);
     ids.push(`${id}-line`);
   }
-  if (l.labelField && type !== 'symbol') {
+  if ((l.labelField || l.labelExpr) && type !== 'symbol') {
     // labels only once there is room for them: area names from zoom 9, line names from 11, point names from 12
     const lz = l.labelMinzoom ?? (type === 'fill' ? 9 : type === 'line' ? 11 : 12);
     map.addLayer({ id: `${id}-label`, type: 'symbol', source: src, ...sl, minzoom: Math.max(minzoom, lz), layout: {
-      'text-field': ['to-string', ['get', l.labelField]], 'text-font': ['Noto Sans Bold'], 'text-size': ['interpolate', ['linear'], ['zoom'], 7, 11, 14, 14],
+      'text-field': l.labelExpr || ['to-string', ['get', l.labelField]], 'text-font': ['Noto Sans Bold'], 'text-size': l.labelSize || ['interpolate', ['linear'], ['zoom'], 7, 11, 14, 14],
       'symbol-placement': type === 'line' ? 'line' : 'point', 'text-max-width': 8, 'text-padding': 10, 'symbol-spacing': 500,
-    }, paint: { 'text-color': darken(firstColor(paint[`${type}-color`]) || '#333333'), 'text-halo-color': 'rgba(255,255,255,0.92)', 'text-halo-width': 1.8 } }, H.anchors.symbols);
+    }, paint: { 'text-color': l.labelColor || darken(firstColor(l.outline && l.outline.color) || firstColor(paint[`${type}-color`]) || '#333333'), 'text-halo-color': 'rgba(255,255,255,0.92)', 'text-halo-width': 1.8 } }, H.anchors.symbols);
     ids.push(`${id}-label`);
   }
   return ids;
+}
+const hatchName = (c) => `hm-hatch-${String(c).replace(/[^\w]/g, '')}`;
+function hatchImage(c) {
+  const name = hatchName(c); if (map.hasImage(name)) return;
+  const n = 16, r = 2, cv = document.createElement('canvas'); cv.width = cv.height = n * r;
+  const x = cv.getContext('2d'); x.scale(r, r); x.strokeStyle = c; x.lineWidth = 2.2; x.lineCap = 'square';
+  x.beginPath(); for (const d of [-n, 0, n]) { x.moveTo(d, n); x.lineTo(d + n, 0); } x.stroke();
+  map.addImage(name, x.getImageData(0, 0, n * r, n * r), { pixelRatio: r });
 }
 let pmReady = null;
 function loadPmtiles() {
@@ -420,10 +472,18 @@ function swatch(st) {
   const l = st.l, p = l.paint || {};
   if (st.spot) return `<span class="hmm-sw spot">${spots.iconHtml('walk', 20)}</span>`;
   const t = l.type, key = t === 'fill' ? 'fill-color' : t === 'circle' ? 'circle-color' : t === 'symbol' ? 'text-color' : 'line-color';
-  const cs = [...new Set(colorsIn(p[key]))].slice(0, 4); if (!cs.length) cs.push(DEF_PAINT[t] ? Object.values(DEF_PAINT[t])[0] : '#e4472b');
-  const bg = cs.length > 1 ? `linear-gradient(135deg, ${cs.map((c, i) => `${c} ${(i * 100) / cs.length}% ${((i + 1) * 100) / cs.length}%`).join(', ')})` : cs[0];
-  const dash = Array.isArray(p['line-dasharray']) ? ' dash' : '';
-  return `<span class="hmm-sw ${t}${dash}" style="--c:${esc(cs[0])};background:${t === 'fill' ? esc(bg) : ''}"></span>`;
+  const cs = [...new Set(colorsIn(p[key]))].filter((c) => !/^rgba\(.*,\s*0\)$/.test(c)).slice(0, 4);
+  if (t === 'symbol') return `<span class="hmm-sw sym" style="color:${esc(cs[0] || '#222222')}">12</span>`;
+  if (t !== 'fill') {
+    if (!cs.length) cs.push(DEF_PAINT[t] ? Object.values(DEF_PAINT[t])[0] : '#e4472b');
+    return `<span class="hmm-sw ${t}${Array.isArray(p['line-dasharray']) ? ' dash' : ''}" style="--c:${esc(cs[0])}"></span>`;
+  }
+  // fill: the edge colour and style as drawn, the fill at about the strength it shows on the map
+  const o = l.outline || {}, edge = firstColor(o.color) || firstColor(p['fill-outline-color']) || cs[0] || '#e4472b';
+  const bg = cs.length > 1 ? `linear-gradient(135deg, ${cs.map((c, i) => `${c} ${(i * 100) / cs.length}% ${((i + 1) * 100) / cs.length}%`).join(', ')})` : (cs[0] || 'transparent');
+  const fo = typeof p['fill-opacity'] === 'number' ? p['fill-opacity'] : 0.3, a = cs.length ? Math.min(0.9, Math.max(0.12, fo * 2.2)) : 0;
+  const hatch = l.hatch ? `<b style="background:repeating-linear-gradient(135deg, ${esc(l.hatch)} 0 2px, transparent 2px 6px)"></b>` : '';
+  return `<span class="hmm-sw fill2${o.dash ? ' dashed' : ''}" style="--c:${esc(edge)}"><i style="background:${esc(bg)};opacity:${a.toFixed(2)}"></i>${hatch}</span>`;
 }
 function statusText(st) {
   const l = st.l, on = lp(l.id).on;
@@ -509,6 +569,7 @@ export async function openPanel() {
 }
 function renderPanel(body) {
   let html = basesHtml();
+  if (M) html += `<button class="hmm-guide-btn" data-guide>${H.icons.info}<span>What do these colours mean?</span></button>`;
   if (!M) {
     html += `<div class="hmm-empty"><b>Layers are being built</b><p>Land status, MU (Management Unit) boundaries, closures, habitat and candidate spots will appear here after the next data update.</p>
       ${mState === 'offline' ? '<p class="hmm-muted">You are offline. Open the map once with a connection to get the layers.</p>' : ''}</div>`;
@@ -547,28 +608,89 @@ function wirePanel(body) {
     if (b.dataset.sp) { setSpecies(b.dataset.sp); body.querySelectorAll('[data-sp]').forEach((x) => x.classList.toggle('on', x === b)); return; }
     if (b.dataset.cat) { setSpotCat(b.dataset.cat); body.querySelectorAll('[data-cat]').forEach((x) => x.classList.toggle('on', x === b)); return; }
     if (b.dataset.l === 'info') openInfo(b.closest('.hmm-lrow').dataset.id);
+    if (b.dataset.guide != null) openGuide();
   });
+}
+const certWord = (c) => (c == null ? '' : c >= 95 ? 'Read directly in the official source.' : c >= 80 ? 'Official source, some interpretation.' : c >= 60 ? 'Reliable secondary source.' : 'Not a fact: treat it as a tip.');
+const CERT_SCALE = '<p class="hmm-muted">Certainty scale: 95 to 100% read directly in the official source. 80 to 94% official source with some interpretation. 60 to 79% reliable secondary source. Under 60% is a tip, not a fact.</p>';
+/** One guide card: what it shows, why a hunter cares, where the rules are, legend, source, data date and certainty. */
+function guideCard(st, head = true, src = true) {
+  const l = st.l, g = guideFor(l) || {};
+  const what = g.what || l.about || 'No description yet.';
+  const links = (g.links || []).map(([h, t]) => `<a href="${esc(h)}">${esc(t)}</a>`).join('');
+  return `<article class="hmm-gcard" data-gid="${esc(l.id)}">
+    ${head ? `<h4>${swatch(st)}<span>${esc(l.label || l.id)}</span></h4>` : ''}
+    <p><b>What it shows:</b> ${esc(what)}</p>
+    ${g.why ? `<p><b>Why a hunter cares:</b> ${esc(g.why)}</p>` : ''}
+    ${st.legal ? '<p><b>Rules:</b> this layer only marks the place. The rules for it are in the Rule Book.</p>' : ''}
+    ${legendHtml(l)}
+    ${src ? `<p class="hmm-src">${srcLine(l)}</p>` : ''}
+    ${links ? `<div class="hmm-glinks">${links}</div>` : ''}</article>`;
 }
 function openInfo(id) {
   const st = L.get(id); if (!st) return;
   const l = st.l;
   const areas = !l.areas || l.areas === 'BC' ? 'Province wide' : [].concat(l.areas).map((a) => (M && M.areaNames && M.areaNames[a]) || AREA_NAMES[String(a).toUpperCase()] || a).join('; ');
-  const certWord = l.cert == null ? '' : l.cert >= 95 ? 'Read directly in the official source.' : l.cert >= 80 ? 'Official source, some interpretation.' : l.cert >= 60 ? 'Reliable secondary source.' : 'Not a fact: treat it as a tip.';
   const body = H.openSheet({ title: l.label || l.id, html: `${st.legal ? BANNER : ''}
     <div class="hmm-info-h">${swatch(st)}<span>${esc(l.group || '')}</span></div>
-    <p>${esc(l.about || 'No description yet.')}</p>${legendHtml(l)}
+    ${guideCard(st, false, false)}
     <dl class="hmm-dl">
       <dt>Source</dt><dd>${esc(l.source || 'Not listed')}</dd>
       <dt>Licence</dt><dd>${esc(l.licence || 'Not listed')}</dd>
       <dt>Data date</dt><dd>${esc(l.dataDate || (M && M.updated) || 'Not listed')}</dd>
-      <dt>Certainty</dt><dd>${H.ui.cert(l.cert)} ${esc(certWord)}</dd>
+      <dt>Certainty</dt><dd>${H.ui.cert(l.cert)} ${esc(certWord(l.cert))}</dd>
       <dt>Areas</dt><dd>${esc(areas)}</dd>
       ${st.layerMonths.length ? `<dt>Months</dt><dd>${esc(monthsText(st.layerMonths))}</dd>` : ''}
       ${l.minzoom ? `<dt>Shows from</dt><dd>Zoom ${esc(l.minzoom)} and closer</dd>` : ''}
     </dl>
-    <p class="hmm-muted">Certainty scale: 95 to 100% read directly in the official source. 80 to 94% official source with some interpretation. 60 to 79% reliable secondary source. Under 60% is a tip, not a fact.</p>
-    <div class="hmm-btnrow"><button class="hmm-btn2" data-back>Back to layers</button></div>` });
+    ${CERT_SCALE}
+    <div class="hmm-btnrow"><button class="hmm-btn2" data-back>Back to layers</button><button class="hmm-btn2" data-all>All colours</button></div>` });
   body.querySelector('[data-back]').onclick = () => openPanel();
+  body.querySelector('[data-all]').onclick = () => openGuide(l.group);
+}
+const GUIDE_GROUPS = ['Land status', 'Hunting', 'Habitat and migration', 'Access', 'Spots'];
+const gslug = (g) => `hmg-${String(g).toLowerCase().replace(/[^a-z]+/g, '-')}`;
+/** The whole guide, every layer grouped. Opens at a group when given. */
+export async function openGuide(group) {
+  if (mState !== 'ok') await loadManifest();
+  const groups = M ? [...GUIDE_GROUPS, ...new Set(M.layers.map((l) => l.group).filter((g) => g && !GUIDE_GROUPS.includes(g) && g !== 'My Content'))] : [];
+  const lists = groups.map((g) => [g, [...L.values()].filter((st) => (st.l.group || 'Other') === g && !st.unsupported)]).filter(([, list]) => list.length);
+  const html = !M ? '<p class="hmm-muted">Layers are not loaded yet. Open the map once with a connection.</p>' : `${BANNER}
+    <p class="hmm-muted hmm-tight">Every layer in plain English: what it shows, why it matters, and where the rules are. Tap a section:</p>
+    <nav class="hmm-gnav">${lists.map(([g]) => `<a href="#" data-go="${gslug(g)}">${esc(g)}</a>`).join('')}</nav>
+    ${lists.map(([g, list]) => `<section id="${gslug(g)}"><h3 class="hmm-gh">${esc(g)}</h3>${list.map((st) => guideCard(st)).join('')}</section>`).join('')}
+    ${CERT_SCALE}
+    <p class="hmm-muted">Short forms on this screen: MU (Management Unit), LEH (Limited Entry Hunting), WMA (Wildlife Management Area), ATV (all terrain vehicle), FSR (Forest Service Road), BEC (Biogeoclimatic Ecosystem Classification).</p>
+    <div class="hmm-btnrow"><button class="hmm-btn2" data-back>Back to layers</button></div>`;
+  const body = H.openSheet({ title: 'What the colours mean', tall: true, html });
+  const back = body.querySelector('[data-back]'); if (back) back.onclick = () => openPanel();
+  body.addEventListener('click', (e) => {
+    const a = e.target.closest('[data-go]'); if (!a) return;
+    e.preventDefault(); const t = body.querySelector(`#${a.dataset.go}`); if (t) t.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  });
+  if (group) { const t = body.querySelector(`#${gslug(group)}`); if (t) requestAnimationFrame(() => t.scrollIntoView({ block: 'start' })); }
+  return body;
+}
+
+// ---------- Land chip: a small always visible key while any land status layer is on ----------
+let chip = null;
+function updateLandChip() {
+  if (!H || !H.els || !H.els.bar) return;
+  const on = [...L.values()].filter((st) => st.l.group === 'Land status' && lp(st.l.id).on && !st.unsupported);
+  if (!chip) {
+    if (!on.length) return;
+    chip = document.createElement('div'); chip.className = 'hmm-landchip';
+    H.els.bar.parentElement.insertBefore(chip, H.els.bar);
+    chip.addEventListener('click', (e) => {
+      if (e.target.closest('.hmm-lc-more')) { openGuide('Land status'); return; }
+      if (e.target.closest('.hmm-lc-t')) { prefs.landKeyOpen = !prefs.landKeyOpen; savePrefs(); updateLandChip(); }
+    });
+  }
+  chip.hidden = !on.length;
+  if (!on.length) return;
+  const open = !!prefs.landKeyOpen, short = (st) => st.l.short || st.l.label || st.l.id;
+  chip.innerHTML = `<button class="hmm-lc-t" aria-expanded="${open}" aria-label="Land colours key, ${open ? 'hide' : 'show'} names">Land ${on.map(swatch).join('')}<span class="hmm-lc-k">${open ? 'Hide' : 'Key'}</span></button>
+    ${open ? `<ul>${on.map((st) => `<li>${swatch(st)}<span>${esc(short(st))}</span></li>`).join('')}</ul><button class="hmm-lc-more">What do these mean?</button>` : ''}`;
 }
 
 // ---------- Management Units, local search ----------

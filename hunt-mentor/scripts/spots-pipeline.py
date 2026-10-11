@@ -9,6 +9,7 @@ Steps (each cached, rerunnable):
   layers     clean, simplify and write data/layers/bc/*.geojson and data/layers/<area>/*
   spots      score candidate spots, write data/spots/<area>/*
   migration  winter, transition and summer bands per species (general pattern)
+  pack       re-encode any layer with a GeoJSON file over 250 KB into PMTiles; MU polygons into one file per region
   manifest   write data/layers/manifest.json
 
 Usage:
@@ -684,7 +685,10 @@ def to_merc(g_wgs):
     return shapely.transform(g_wgs, _tf(MERC))
 
 
-def write_pmtiles(path, geoms_wgs, props, layer_name, minzoom=8, maxzoom=12):
+def write_pmtiles(path, geoms_wgs, props, layer_name, minzoom=8, maxzoom=12, tol_units=1.5, drop_units=0):
+    """Vector tiles (MVT, extent 4096) in one PMTiles file. Below maxzoom each zoom is simplified by tol_units
+    (1 screen pixel is about 8 units, tiles draw at 512 px) and polygons under drop_units squared are left out.
+    maxzoom keeps the full geometry: MapLibre overzooms past it and mvt.js answers point queries there."""
     import mapbox_vector_tile
     from pmtiles.tile import Compression, TileType, zxy_to_tileid
     from pmtiles.writer import Writer
@@ -702,8 +706,14 @@ def write_pmtiles(path, geoms_wgs, props, layer_name, minzoom=8, maxzoom=12):
             fields[kk] = 'Number' if isinstance(vv, (int, float)) else 'String'
     for z in range(minzoom, maxzoom + 1):
         size = 2 * WORLD / 2 ** z
-        tol = size / 4096 * (1.5 if z < maxzoom else 0.5)
-        gz = shapely.simplify(gm, tol, preserve_topology=True) if z < maxzoom else gm
+        unit = size / 4096
+        gz = shapely.simplify(gm, unit * tol_units, preserve_topology=True) if z < maxzoom else gm
+        zprops = props
+        if z < maxzoom and drop_units:
+            poly = shapely.get_type_id(gz) >= 3   # (multi)polygons only: lines and points always stay
+            ok = ~poly | (shapely.area(gz) >= (unit * drop_units) ** 2)
+            gz = gz[ok]
+            zprops = [x for x, k in zip(props, ok) if k]
         tree = STRtree(gz)
         tx0 = int((b[0] + WORLD) // size)
         tx1 = int((b[2] + WORLD) // size)
@@ -724,7 +734,7 @@ def write_pmtiles(path, geoms_wgs, props, layer_name, minzoom=8, maxzoom=12):
                     g = shapely.clip_by_rect(gz[i], *clip.bounds)
                     if g is None or g.is_empty:
                         continue
-                    feats.append({'geometry': g, 'properties': {k: v for k, v in props[i].items() if v is not None and not isinstance(v, (list, dict))}})
+                    feats.append({'geometry': g, 'properties': {k: v for k, v in zprops[i].items() if v is not None and not isinstance(v, (list, dict))}})
                 if not feats:
                     continue
                 data = mapbox_vector_tile.encode([{'name': layer_name, 'features': feats}],
@@ -4253,6 +4263,104 @@ def step_migration(cache, areas):
 
 
 # ======================================================================================
+# Step: pack (no big GeoJSON on the phone)
+# ======================================================================================
+# A layer whose biggest GeoJSON file is over PACK_LIMIT (250 KB) is re-encoded from those files into PMTiles (vector tiles read by
+# byte range: the map fetches only the tiles in view, mvt.js answers point queries for the area report).
+# info id -> (min zoom, max zoom, simplify units below max zoom, drop polygons under this many units squared).
+# Min zoom matches the manifest minzoom (MapLibre does not draw a vector source under its min zoom).
+# Max zoom 10 for province wide layers (already simplified 50 to 100 m; z10 holds about 6 m), 11 for coarse habitat
+# layers, 12 for parcel and wetland detail. 8 units is one screen pixel.
+PACK_LIMIT = 250 * 1024
+PACK_PM = {
+    'parks': (6, 10, 4, 8), 'reserves': (7, 10, 4, 8), 'city_limits': (7, 10, 4, 8), 'closure_routes': (8, 10, 4, 0), 'leh': (7, 10, 4, 8), 'closures': (7, 10, 4, 8),
+    'private_land': (9, 12, 4, 8), 'wetlands': (9, 12, 4, 8), 'burns': (8, 12, 4, 8), 'duck_waters': (8, 12, 4, 8),
+    'rec_trails': (9, 12, 4, 0), 'habitat_zones': (9, 11, 4, 8), 'uwr_mule_deer': (7, 11, 4, 8), 'uwr_moose': (7, 11, 4, 8),
+    'uwr_goat': (7, 11, 4, 8), 'season_mule_deer': (7, 11, 4, 8), 'season_wt_deer': (7, 11, 4, 8), 'season_moose': (7, 11, 4, 8),
+    'season_elk': (7, 11, 4, 8), 'season_sheep': (7, 11, 4, 8),
+}
+# MU (Management Unit) polygons stay GeoJSON (layers.js and home.js look up the unit for a point and search MU numbers in
+# them) but in one file per region, each with its bbox in the manifest: the map loads only the regions near the view.
+MU_REGION_DIR = 'mu'
+
+
+def _read_geojson_wgs(path):
+    d = json.load(open(path))
+    fs = [f for f in d.get('features', []) if f.get('geometry')]
+    g = np.array([shapely.geometry.shape(f['geometry']) for f in fs], dtype=object)
+    return g, [f.get('properties') or {} for f in fs]
+
+
+def pack_mu(info):
+    rec = (info.get('mu_lines') or {}).get('BC')
+    src = OUT_LAYERS / 'bc' / 'mu.geojson'
+    if not rec or not src.exists():
+        return
+    d = json.load(open(src))
+    groups = {}
+    for f in d['features']:
+        groups.setdefault(str(f['properties'].get('region') or f['properties'].get('MU', '0').split('-')[0]), []).append(f)
+    outdir = OUT_LAYERS / 'bc' / MU_REGION_DIR
+    outdir.mkdir(parents=True, exist_ok=True)
+    for old in outdir.glob('*.geojson'):
+        old.unlink()
+    parts = []
+    for r in sorted(groups, key=lambda k: (int(re.sub(r'\D', '', k) or 0), k)):
+        fs = groups[r]
+        b = shapely.total_bounds([shapely.geometry.shape(f['geometry']) for f in fs])
+        fp = outdir / f'region_{r.lower()}.geojson'
+        txt = '{"type":"FeatureCollection","features":[\n' + ',\n'.join(json.dumps(f, ensure_ascii=False, separators=(',', ':')) for f in fs) + '\n]}\n'
+        fp.write_text(txt, encoding='utf-8')
+        parts.append({'area': f'Region {r}', 'file': rel(fp), 'bbox': [round(float(x), 4) for x in b], 'bytes': fp.stat().st_size})
+    rec['parts'] = parts
+    log(f'  mu: {len(parts)} region files, largest {max(x["bytes"] for x in parts) / 1e3:.0f} KB')
+    # unit label points carry the region name and the unit bbox, so a search for "3-27" needs only this small file
+    lab = OUT_LAYERS / 'bc' / 'mu_labels.geojson'
+    if lab.exists():
+        bb = {}
+        for f in d['features']:
+            k = f['properties'].get('MU')
+            gb = shapely.bounds(shapely.geometry.shape(f['geometry']))
+            o = bb.get(k)
+            bb[k] = [float(x) for x in (gb if o is None else (min(o[0], gb[0]), min(o[1], gb[1]), max(o[2], gb[2]), max(o[3], gb[3])))]
+            bb.setdefault(('name', k), f['properties'].get('regionName'))
+        ld = json.load(open(lab))
+        for f in ld['features']:
+            pr = f['properties']
+            k = pr.get('MU')
+            if k in bb:
+                pr['regionName'] = bb[('name', k)]
+                pr['bbox'] = [round(x, 4) for x in bb[k]]
+        txt = '{"type":"FeatureCollection","features":[\n' + ',\n'.join(json.dumps(f, ensure_ascii=False, separators=(',', ':')) for f in ld['features']) + '\n]}\n'
+        lab.write_text(txt, encoding='utf-8')
+        if (info.get('mu_labels') or {}).get('BC'):
+            info['mu_labels']['BC']['bytes'] = lab.stat().st_size
+
+
+def step_pack(cache, areas):
+    info = load_info(cache)
+    pack_mu(info)
+    for iid, (zmin, zmax, tol_u, drop_u) in PACK_PM.items():
+        rec = info.get(iid) or {}
+        gj = {sc: r for sc, r in rec.items() if isinstance(r, dict) and str(r.get('file', '')).endswith('.geojson')
+              and (ROOT / r['file']).exists()}
+        if not gj or max((ROOT / r['file']).stat().st_size for r in gj.values()) <= PACK_LIMIT:
+            continue
+        for sc, r in gj.items():
+            t0 = time.time()
+            src = ROOT / r['file']
+            g, props = _read_geojson_wgs(src)
+            pm = src.with_suffix('.pmtiles')
+            size, ntiles = write_pmtiles(pm, g, props, iid, minzoom=zmin, maxzoom=zmax, tol_units=tol_u, drop_units=drop_u)
+            log(f'  {iid} {sc}: {src.stat().st_size / 1e6:.2f} MB GeoJSON -> {size / 1e6:.2f} MB PMTiles, {ntiles} tiles z{zmin} to z{zmax}, '
+                f'{time.time() - t0:.0f}s')
+            src.unlink()
+            r.update({'file': rel(pm), 'format': 'pmtiles', 'bytes': size, 'minzoom': zmin, 'maxzoom': zmax})
+        save_info(cache, info)
+    save_info(cache, info)
+
+
+# ======================================================================================
 # Step: manifest (data/layers/manifest.json, contract in MAP.md)
 # ======================================================================================
 OGL = 'Open Government Licence BC'
@@ -4349,6 +4457,8 @@ MIG_POPUP = [['Species', 'species'], ['Band', 'band'], ['Months', 'monthsText'],
 def _files_entry(rec, areas_order=tuple(AREAS)):
     """{area: info} -> manifest keys: file with {area} when uniform, else files list."""
     if 'BC' in rec:
+        if rec['BC'].get('parts'):   # one file per region, each with its bbox (layers.js loads only those near the view)
+            return {'files': [{'area': x['area'], 'file': x['file'], 'bbox': x['bbox']} for x in rec['BC']['parts']], 'areas': 'BC'}
         return {'file': rec['BC']['file'], 'areas': 'BC'}
     ar = [a for a in areas_order if a in rec]
     if not ar:
@@ -4387,7 +4497,8 @@ def step_manifest(cache, areas):
         entry.update(fe)
         entry['licence'] = OGL
         entry['dataDate'] = _date_of(rec)
-        entry['bytes'] = sum(v.get('bytes', 0) for v in rec.values() if isinstance(v, dict))
+        entry['bytes'] = sum(sum(x['bytes'] for x in v['parts']) if v.get('parts') else v.get('bytes', 0)
+                             for v in rec.values() if isinstance(v, dict))
         out.append(entry)
         made.add(entry['id'])
 
@@ -4495,7 +4606,7 @@ def step_manifest(cache, areas):
 # ======================================================================================
 # CLI
 # ======================================================================================
-STEP_ORDER = ['fetch', 'dem', 'layers', 'spots', 'migration', 'manifest']
+STEP_ORDER = ['fetch', 'dem', 'layers', 'spots', 'migration', 'pack', 'manifest']
 
 
 def main():

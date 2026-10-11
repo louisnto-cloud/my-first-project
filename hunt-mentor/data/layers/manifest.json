@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-04",
+ "updated": "2026-10-11",
  "areaBoxes": {
   "A": [
    -121.6,
@@ -69,7 +69,7 @@
    "source": "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW (ParcelMap BC)",
    "about": "Private parcels, merged into blocks. You need the owner's permission to hunt here. Owner names are not open data in BC. Not every parcel is fenced or signed.",
    "cert": 90,
-   "file": "data/layers/{area}/private_land.geojson",
+   "file": "data/layers/{area}/private_land.pmtiles",
    "areas": [
     "A",
     "B",
@@ -81,7 +81,7 @@
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-09-22",
-   "bytes": 14479725
+   "bytes": 3828424
   },
   {
    "id": "parks",
@@ -108,11 +108,11 @@
    "source": "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
    "about": "Provincial parks, ecological reserves and protected areas. Hunting rules differ by park.",
    "cert": 95,
-   "file": "data/layers/bc/parks.geojson",
+   "file": "data/layers/bc/parks.pmtiles",
    "areas": "BC",
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 1890559
+   "bytes": 976059
   },
   {
    "id": "reserves",
@@ -134,11 +134,11 @@
    "source": "WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES",
    "about": "First Nations reserves. Hunting needs permission from the Nation.",
    "cert": 95,
-   "file": "data/layers/bc/reserves.geojson",
+   "file": "data/layers/bc/reserves.pmtiles",
    "areas": "BC",
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 816342
+   "bytes": 380843
   },
   {
    "id": "city_limits",
@@ -161,11 +161,11 @@
    "source": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP",
    "about": "Cities, towns and villages. Most ban shooting inside their limits by bylaw. Check the local bylaw.",
    "cert": 95,
-   "file": "data/layers/bc/city_limits.geojson",
+   "file": "data/layers/bc/city_limits.pmtiles",
    "areas": "BC",
    "licence": "Open Government Licence BC",
    "dataDate": "2026-06-22",
-   "bytes": 267222
+   "bytes": 172715
   },
   {
    "id": "wma",
@@ -221,11 +221,102 @@
    "source": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
    "about": "Seasons and limits are set by MU (Management Unit). Check the unit before you hunt.",
    "cert": 95,
-   "file": "data/layers/bc/mu.geojson",
+   "files": [
+    {
+     "area": "Region 1",
+     "file": "data/layers/bc/mu/region_1.geojson",
+     "bbox": [
+      -129.2122,
+      48.2248,
+      -123.0089,
+      51.5249
+     ]
+    },
+    {
+     "area": "Region 2",
+     "file": "data/layers/bc/mu/region_2.geojson",
+     "bbox": [
+      -125.4526,
+      48.9973,
+      -120.5979,
+      51.3697
+     ]
+    },
+    {
+     "area": "Region 3",
+     "file": "data/layers/bc/mu/region_3.geojson",
+     "bbox": [
+      -123.7321,
+      49.5747,
+      -118.3144,
+      52.8769
+     ]
+    },
+    {
+     "area": "Region 4",
+     "file": "data/layers/bc/mu/region_4.geojson",
+     "bbox": [
+      -118.9924,
+      48.9989,
+      -114.0542,
+      52.4969
+     ]
+    },
+    {
+     "area": "Region 5",
+     "file": "data/layers/bc/mu/region_5.geojson",
+     "bbox": [
+      -129.1511,
+      50.8759,
+      -120.1394,
+      53.5447
+     ]
+    },
+    {
+     "area": "Region 6",
+     "file": "data/layers/bc/mu/region_6.geojson",
+     "bbox": [
+      -139.0613,
+      51.7181,
+      -124.4574,
+      60.0015
+     ]
+    },
+    {
+     "area": "Region 7A",
+     "file": "data/layers/bc/mu/region_7a.geojson",
+     "bbox": [
+      -127.7385,
+      52.1493,
+      -118.195,
+      58.0375
+     ]
+    },
+    {
+     "area": "Region 7B",
+     "file": "data/layers/bc/mu/region_7b.geojson",
+     "bbox": [
+      -129.6356,
+      53.7964,
+      -120.0013,
+      60.0018
+     ]
+    },
+    {
+     "area": "Region 8",
+     "file": "data/layers/bc/mu/region_8.geojson",
+     "bbox": [
+      -121.1163,
+      48.9994,
+      -118.0371,
+      50.9373
+     ]
+    }
+   ],
    "areas": "BC",
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 2550494
+   "bytes": 2550838
   },
   {
    "id": "mu_labels",
@@ -252,7 +343,7 @@
    "areas": "BC",
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 27889
+   "bytes": 43420
   },
   {
    "id": "leh",
@@ -283,11 +374,11 @@
    "source": "WHSE_WILDLIFE_MANAGEMENT.WAA_LTD_HNT_ZONE_CURR_YEAR_SVW",
    "about": "Zones where some seasons need a Limited Entry Hunting draw permit. Zones overlap by species.",
    "cert": 90,
-   "file": "data/layers/bc/leh.geojson",
+   "file": "data/layers/bc/leh.pmtiles",
    "areas": "BC",
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 5335837
+   "bytes": 2182755
   },
   {
    "id": "closures",
@@ -330,11 +421,11 @@
    "source": "WHSE_WILDLIFE_MANAGEMENT.WAA_MVPR_AREAS_SP",
    "about": "Motor Vehicle Closed Areas and ATV (all terrain vehicle) closures from the hunting synopsis maps.",
    "cert": 90,
-   "file": "data/layers/bc/closures.geojson",
+   "file": "data/layers/bc/closures.pmtiles",
    "areas": "BC",
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 5608236
+   "bytes": 2203344
   },
   {
    "id": "closure_routes",
@@ -367,11 +458,11 @@
    "source": "WHSE_WILDLIFE_MANAGEMENT.WAA_MVPR_ROUTES_SP",
    "about": "Roads open or closed to motor vehicles inside closures.",
    "cert": 90,
-   "file": "data/layers/bc/closure_routes.geojson",
+   "file": "data/layers/bc/closure_routes.pmtiles",
    "areas": "BC",
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 276416
+   "bytes": 195727
   },
   {
    "id": "forest_roads",
@@ -527,7 +618,7 @@
    "source": "WHSE_FOREST_TENURE.FTEN_REC_TRAILS_SVW",
    "about": "Official trails from Recreation Sites and Trails BC.",
    "cert": 90,
-   "file": "data/layers/{area}/rec_trails.geojson",
+   "file": "data/layers/{area}/rec_trails.pmtiles",
    "areas": [
     "A",
     "B",
@@ -539,7 +630,7 @@
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 2357413
+   "bytes": 1199761
   },
   {
    "id": "uwr_mule_deer",
@@ -580,36 +671,7 @@
     11,
     12
    ],
-   "files": [
-    {
-     "area": "A",
-     "file": "data/layers/A/uwr_mule_deer.geojson"
-    },
-    {
-     "area": "B",
-     "file": "data/layers/B/uwr_mule_deer.geojson"
-    },
-    {
-     "area": "C",
-     "file": "data/layers/C/uwr_mule_deer.geojson"
-    },
-    {
-     "area": "D",
-     "file": "data/layers/D/uwr_mule_deer.geojson"
-    },
-    {
-     "area": "E",
-     "file": "data/layers/E/uwr_mule_deer.geojson"
-    },
-    {
-     "area": "F",
-     "file": "data/layers/F/uwr_mule_deer.pmtiles"
-    },
-    {
-     "area": "G",
-     "file": "data/layers/G/uwr_mule_deer.geojson"
-    }
-   ],
+   "file": "data/layers/{area}/uwr_mule_deer.pmtiles",
    "areas": [
     "A",
     "B",
@@ -621,7 +683,7 @@
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2004-12-13",
-   "bytes": 3970326
+   "bytes": 2066009
   },
   {
    "id": "uwr_wt_deer",
@@ -959,7 +1021,7 @@
    "source": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP",
    "about": "Fires since 2000. Burns 3 to 15 years old grow food for deer, moose and bears.",
    "cert": 95,
-   "file": "data/layers/{area}/burns.geojson",
+   "file": "data/layers/{area}/burns.pmtiles",
    "areas": [
     "A",
     "B",
@@ -971,7 +1033,7 @@
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 2953561
+   "bytes": 1656837
   },
   {
    "id": "cutblocks",
@@ -1048,36 +1110,7 @@
    "source": "WHSE_BASEMAPPING.FWA_WETLANDS_POLY",
    "about": "Marshes, swamps and bogs from the Freshwater Atlas. Good for moose and ducks.",
    "cert": 90,
-   "files": [
-    {
-     "area": "A",
-     "file": "data/layers/A/wetlands.pmtiles"
-    },
-    {
-     "area": "B",
-     "file": "data/layers/B/wetlands.geojson"
-    },
-    {
-     "area": "C",
-     "file": "data/layers/C/wetlands.geojson"
-    },
-    {
-     "area": "D",
-     "file": "data/layers/D/wetlands.geojson"
-    },
-    {
-     "area": "E",
-     "file": "data/layers/E/wetlands.geojson"
-    },
-    {
-     "area": "F",
-     "file": "data/layers/F/wetlands.geojson"
-    },
-    {
-     "area": "G",
-     "file": "data/layers/G/wetlands.geojson"
-    }
-   ],
+   "file": "data/layers/{area}/wetlands.pmtiles",
    "areas": [
     "A",
     "B",
@@ -1089,7 +1122,7 @@
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 14698582
+   "bytes": 9063236
   },
   {
    "id": "habitat_zones",
@@ -1146,36 +1179,7 @@
    "source": "WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY",
    "about": "Biogeoclimatic zones: the plant community you will find. Bunchgrass and Ponderosa Pine are low winter country.",
    "cert": 90,
-   "files": [
-    {
-     "area": "A",
-     "file": "data/layers/A/habitat_zones.pmtiles"
-    },
-    {
-     "area": "B",
-     "file": "data/layers/B/habitat_zones.geojson"
-    },
-    {
-     "area": "C",
-     "file": "data/layers/C/habitat_zones.geojson"
-    },
-    {
-     "area": "D",
-     "file": "data/layers/D/habitat_zones.geojson"
-    },
-    {
-     "area": "E",
-     "file": "data/layers/E/habitat_zones.geojson"
-    },
-    {
-     "area": "F",
-     "file": "data/layers/F/habitat_zones.pmtiles"
-    },
-    {
-     "area": "G",
-     "file": "data/layers/G/habitat_zones.pmtiles"
-    }
-   ],
+   "file": "data/layers/{area}/habitat_zones.pmtiles",
    "areas": [
     "A",
     "B",
@@ -1187,7 +1191,7 @@
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-03",
-   "bytes": 26940154
+   "bytes": 20327035
   },
   {
    "id": "season_mule_deer",
@@ -1262,7 +1266,7 @@
     12
    ],
    "legal": false,
-   "file": "data/layers/{area}/season_mule_deer.geojson",
+   "file": "data/layers/{area}/season_mule_deer.pmtiles",
    "areas": [
     "A",
     "B",
@@ -1274,7 +1278,7 @@
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-04",
-   "bytes": 2594901
+   "bytes": 1730798
   },
   {
    "id": "season_wt_deer",
@@ -1349,7 +1353,7 @@
     12
    ],
    "legal": false,
-   "file": "data/layers/{area}/season_wt_deer.geojson",
+   "file": "data/layers/{area}/season_wt_deer.pmtiles",
    "areas": [
     "A",
     "B",
@@ -1361,7 +1365,7 @@
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-04",
-   "bytes": 708829
+   "bytes": 659746
   },
   {
    "id": "season_moose",
@@ -1436,7 +1440,7 @@
     12
    ],
    "legal": false,
-   "file": "data/layers/{area}/season_moose.geojson",
+   "file": "data/layers/{area}/season_moose.pmtiles",
    "areas": [
     "A",
     "B",
@@ -1448,7 +1452,7 @@
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-04",
-   "bytes": 2624582
+   "bytes": 1649342
   },
   {
    "id": "season_elk",
@@ -1523,7 +1527,7 @@
     12
    ],
    "legal": false,
-   "file": "data/layers/{area}/season_elk.geojson",
+   "file": "data/layers/{area}/season_elk.pmtiles",
    "areas": [
     "A",
     "B",
@@ -1535,7 +1539,7 @@
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-04",
-   "bytes": 3382794
+   "bytes": 1602970
   },
   {
    "id": "season_sheep",
@@ -1610,7 +1614,7 @@
     12
    ],
    "legal": false,
-   "file": "data/layers/{area}/season_sheep.geojson",
+   "file": "data/layers/{area}/season_sheep.pmtiles",
    "areas": [
     "A",
     "B",
@@ -1622,7 +1626,7 @@
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-04",
-   "bytes": 3372891
+   "bytes": 1445200
   },
   {
    "id": "duck_waters",
@@ -1685,7 +1689,7 @@
     12
    ],
    "legal": false,
-   "file": "data/layers/{area}/duck_waters.geojson",
+   "file": "data/layers/{area}/duck_waters.pmtiles",
    "areas": [
     "A",
     "B",
@@ -1697,7 +1701,7 @@
    ],
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-04",
-   "bytes": 2475687
+   "bytes": 1465420
   },
   {
    "id": "quail_range",
