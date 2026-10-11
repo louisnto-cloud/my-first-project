@@ -277,7 +277,7 @@ const fmtR = (m) => (imp() ? `${(m / 1609.344).toFixed(1)} mi` : `${m / 1000} km
 const TARGET = 1; // what you look for stands about 1 m tall (a deer's back); bare ground counts when 1 m above it shows
 
 /* Terrain sampler over z12 tiles in global pixel coordinates (256 px tiles). */
-async function demGrid(cx, cy, rPx) {
+export async function demGrid(cx, cy, rPx) {
   const W = 256, x0 = Math.floor((cx - rPx - 2) / W), x1 = Math.floor((cx + rPx + 2) / W), y0 = Math.floor((cy - rPx - 2) / W), y1 = Math.floor((cy + rPx + 2) / W);
   const tiles = new Map(), jobs = [];
   for (let tx = x0; tx <= x1; tx++) for (let ty = y0; ty <= y1; ty++) jobs.push(H.dem.getDemTile(DEMZ, tx, ty).then((t) => tiles.set(`${tx}/${ty}`, t), () => {}));

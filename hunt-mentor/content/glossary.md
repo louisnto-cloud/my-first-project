@@ -270,3 +270,124 @@
 - **Compulsory inspection**: A required check of certain killed animals by a qualified inspector, by appointment, for the species and areas listed, such as cougar in Region 8 (99%, synopsis pages 66 and 68).
 - **Game check**: A temporary roadside checking station run by an officer. Every hunter must stop and report, with or without game (99%, synopsis page 15).
 - **Preserved**: For migratory birds, gutted, plucked and then frozen, cooked, dried, canned or smoked away from the hunting area, or mounted. Until then, keep one feathered wing or the head on, and the bird counts toward your possession limit (99%, Migratory Birds Regulations, 2022, section 1).
+- **Palm**: The flat, hand shaped part of a moose antler. Yearling bulls have no real palm (90%).
+- **Northwestern moose**: The moose race found over most of BC, Kamloops and the Okanagan included (80 to 90%).
+- **Alaskan moose**: The biggest moose race. In BC only the far northwest (90%).
+- **Shiras moose**: The smallest moose race, with the smallest bodies and antlers. In BC only the far southeast corner (90%).
+- **Ruminant**: An animal with a four part stomach (rumen, reticulum, omasum, abomasum) that brings food back up to chew again. Moose, elk and deer are ruminants (85%).
+- **Rumen**: The biggest stomach chamber of a ruminant, where microbes break down plant food. It fills the belly behind the diaphragm; a shot there is a slow death (85%).
+- **Cud**: Food a ruminant brings back up from the rumen to chew again, often while bedded (85%).
+- **Diaphragm**: The sheet of muscle behind the lungs that pulls back to fill them. Everything ahead of it is the vital zone; everything behind it is a slow death (85%).
+- **Browser**: An animal that eats mostly twigs and leaves, not grass. Moose are browsers (90%).
+- **Grazer**: An animal that eats mostly grasses, sedges and forbs. Elk graze first and browse in winter and deep snow (80%).
+- **Mixed feeder**: An animal that both grazes and browses as the season allows. Elk are mixed feeders (80%).
+- **Winter tick**: A tick, also called moose tick, that lives its whole life on one moose over one winter. Heavy loads cause hair loss and can kill calves and weak moose; no health risk to people (85%).
+- **Ghost moose**: A moose that has rubbed off most of its winter hair because of winter ticks, so it looks grey. Seen January to April (85%).
+- **Rut pit**: A hole a bull moose paws out and soaks with urine in the rut, about 45 to 105 cm long (65%). Cows wallow in it too (90%).
+- **Estrus**: The heat, the short time a female will breed. A cow moose that misses her first estrus comes into heat again about 25 days later (90%).
+- **Gestation**: How long a female is pregnant. About 230 days (8 months) for moose and about 8 months for elk (85 to 90%).
+- **Crepuscular**: Most active at dawn and dusk. Moose and elk are crepuscular (75 to 80%).
+- **Dewclaw**: A small extra toe above and behind the hoof. Dewclaws show in a track when the animal sinks into mud or snow, or runs (70%).
+- **Fen**: A wetland of sedges, willow, scrub birch and red osier dogwood. Moose browse there (95%).
+- **Cutblock**: An area of forest that was logged. Moose select blocks about 10 to 30 years old and avoid fresh ones (65%, one BC study).
+- **Home range**: The area an animal lives and moves in. A moose's seasonal home range is seldom over 5 to 10 km²; a black bear boar's is 25 to 150 km², a sow's 5 to 25 km² (90%).
+- **Mineral lick**: A spot where animals come to lick or eat soil for minerals. Elk visit them (85%).
+- **Cow call**: A call that copies a female. A cow moose's long quavering rut moan carries up to 3 km (90%).
+- **Raking**: Thrashing brush with a stick, branch or moose shoulder blade to sound like a bull moose (65%). Legal, because only recorded or electronic calls are banned (95%, my reading).
+- **Hang up**: When a bull coming to a call stops out of sight and will not come closer. A few bull grunts can bring him in (65%).
+- **Wapiti**: Another name for elk. Elk are the same species as European red deer (90%).
+- **Roosevelt elk**: The coastal race of elk, slightly larger and darker (90%). Vancouver Island, the Sunshine Coast and Lower Mainland valleys, Mission included (85 to 90%).
+- **Rocky Mountain elk**: The interior race of elk, more migratory than Roosevelt elk (90%). The Heffley Creek and Okanagan elk (85%).
+- **Ivories**: The two rounded upper canine teeth of an elk, in both bulls and cows (90%). Hunters keep them as a keepsake.
+- **Spike**: An antler with no branches. Yearling bull elk usually carry spikes (90%).
+- **Raghorn**: Hunter name for a 2 year old bull elk with a slender rack of 3 or 4 points a side (90%).
+- **Harem**: The group of cows a bull elk gathers, herds and guards in the rut (90%). Bull moose do not hold harems (90%).
+- **Herd bull**: The mature bull holding a harem of cows in the rut. Younger bulls hang on the edges (Tip).
+- **Satellite bull**: A bull with no cows that hangs near a herd in the rut. Curious, and comes to calls more readily (Tip, hunter lore).
+- **Sparring**: Bulls of equal size locking antlers, pushing and twisting, then letting go with no winner. Not a real fight (90%).
+- **Matriarchal**: Led by older females. Elk cow groups are matriarchal (90%).
+- **Mew**: The most common elk call, made by cows and calves (65%). Learn it first (Tip).
+- **Chirp**: A short contact call between elk in a moving herd (65%).
+- **Alarm bark**: A cow elk's warning call. The herd may run (65%).
+- **Security cover**: Vegetation over 2 m tall that hides 90% of a standing elk at 61 m (80%).
+- **Shed**: To drop the antlers for the year. Moose shed mid November to March, elk late February to early April, oldest bulls first (90%).
+- **Cheek teeth**: The grinding teeth along the jaw. An elk calf has 4, a yearling 5, an adult 6 (85%).
+- **Shoulder blade**: The heavy bone plate over the front ribs. On a big bull elk it can be about 6 cm thick and stop a light bullet (65%).
+- **Dichromat**: An animal with two kinds of colour cones. Deer family animals see blue clearly but reds and oranges look dull (75 to 80%).
+- **Tapetum**: A reflective layer behind the retina that helps deer family animals see in dim light (80%).
+- **Blue listed**: A BC status for a species that is vulnerable. Roosevelt elk have been blue listed since 1998 (90%).
+- **Translocation**: Moving wild animals to a new area to start or grow a herd. Lower Mainland Roosevelt elk grew from about 315 to about 1,600 after translocations (85%).
+- **Hunter day**: One hunter hunting for one day. MU 3-27 took about 77 hunter days per moose, 2020 to 2024 (90%, computed).
+- **Plantigrade**: Flat footed: walking on the whole sole, like a bear (90%).
+- **Omnivore**: An animal that eats both plants and animals. Bears are classed as carnivores but eat mostly plants, about 80% of the diet (75 to 90%).
+- **Hibernation**: A bear's winter sleep in a den. The heart drops from about 55 to 14 beats a minute and the bear does not eat, drink or pass waste for months (80 to 90%).
+- **Delayed implantation**: In bears, the embryo attaches only in October or November, and only if the sow has enough fat (75 to 90%).
+- **Diurnal**: Active by day. Black bears are mainly diurnal but feed at night near people (75%).
+- **Kermode bear**: The white phase of the black bear, also called the Spirit bear, mostly on the north central coast (90%). Never legal to hunt (99%).
+- **Glacier bear**: The blue phase of the black bear, in the far northwest (90%). Never legal to hunt (99%).
+- **Jaw popping**: A bear snapping its jaws. With woofing, moaning, stomping or a bluff charge, it marks a stressed bear that wants space (75%).
+- **Woof**: A loud huff from an agitated bear (75%). A sow's woof often sends her cubs up a tree (Tip).
+- **Bluff charge**: A charge that stops short, meant as a warning. Many moose charges are bluffs, but take them seriously (85%).
+- **Defensive bear**: A bear that is surprised or guarding cubs or food. It comes noisy and fast (75%). If it makes contact, lie on your stomach with your hands over the back of your neck (75%).
+- **Predatory bear**: A bear that is quiet, stalks and keeps coming (75%). If it attacks, fight back at the face (75%).
+- **Bear spray**: Pepper spray made to stop bears. Use it at about 5 to 10 m (75%); it stopped black bears about 90% of the time in Alaska (80%).
+- **Cambium**: The soft layer just under tree bark. Bears strip bark in spring to eat it (90%).
+- **Cache**: A kill a predator has covered with raked debris. A bear may bed close by and defend it: back away (85%).
+- **Rub tree**: A tree bears rub on as a scratching post or to mark their home range. Look for hair caught in the bark (90%).
+- **Straight edge test**: Lay a straight edge across the front of a bear's front foot pad. It cuts across the toes on a black bear, but not on a grizzly (80%).
+- **Soopolallie**: Soapberry. A shrub whose berries ripen late July to mid August and are a main bear food (65%).
+- **Trichinella**: The parasitic worm in bear meat that causes trichinosis. The northern kind survives freezing; cook bear to 71°C (160°F) (85%).
+- **Skull score**: A bear's trophy measure: length plus width of the cleaned skull, lower jaw off, after 60 days of drying (75%).
+- **Slipped hide**: A hide that has spoiled so the hair falls out. It can start within a day in the wrong conditions; never store a hide in plastic (85%).
+- **Gall**: A bear's gall bladder. Possessing or trafficking bear galls or bile is unlawful (99%, synopsis page 12).
+- **Spotting scope**: A single tube telescope of about 20 to 60x, used on a tripod to judge an animal and count points (85%).
+- **Exit pupil**: Front lens size divided by power. An 8x42 binocular gives 5.25 mm; a 10x42 gives 4.2 mm (85%).
+- **Diopter**: The adjuster on one binocular eyepiece. Set the centre focus for your left eye, then the diopter for your right.
+- **Glassing grid**: Glassing a slope in slow strips with about a third overlap, then coming back the other way (60 to 65%).
+- **Mirage**: Heat waves that blur far slopes as the day warms. Glass far ground in the cool first hour (65%).
+- **Viewshed**: Everything you can see from one spot. The Hunt Map's What can I see from here tool draws it (99%, app).
+- **Scent cone**: The widening zone downwind of you that carries your scent. Any animal inside it can smell you (80%).
+- **Upwind**: Toward where the wind is coming from. Keep the animal upwind of you, so the wind blows from it to you (Tip).
+- **Downwind**: Where the wind is blowing to. Your scent drifts downwind; a bull coming to a call often circles downwind to smell it (65%).
+- **Crosswind**: Wind blowing across the line between you and the animal. Often the next best wind after wind in your face (65%).
+- **Swirl**: Wind that keeps changing direction, common at canyon bends, creek junctions and thermal switch times (75%). In a swirl, back out (Tip).
+- **Lee side**: The downwind side of a ridge, where air can tumble back uphill in eddies (70%). Do not sit just behind the crest (Tip).
+- **Puffer bottle**: A squeeze bottle of unscented powder. One puff shows wind drift and direction (70%).
+- **Beaufort scale**: A scale that names wind strength by what you see, such as smoke drifting at 1 to 5 km/h or leaves rustling at 6 to 11 km/h (95%).
+- **Stride**: In tracking, the distance from one foot to the next print of the same foot, which is 2 steps (75%).
+- **Straddle**: The width of a trail of tracks, from the outside edge of the left prints to the outside edge of the right prints (75%).
+- **Gait**: How an animal moves: walk, trot or bound. A faster gait gives a longer stride and a narrower straddle (85%).
+- **Track stick**: A pole about 0.9 to 1.2 m long with rubber bands set at stride length, used to find the next print (65%).
+- **Fox walk**: A quiet step: weight on the back foot, the outside edge of the front foot down lightly, roll in, then lower the heel (65%).
+- **Six S's**: A camouflage checklist from military teaching: shape, shine, shadow, silhouette, spacing, movement (70%). Movement matters most (75%).
+- **Skylined**: Standing out against the sky. Never stand on the skyline, and never shoot a skylined animal: there is no backstop (85%).
+- **Ground blind**: A small hide on the ground, bought or built of brush. It hides your outline and hand movement (Tip).
+- **Tree stand**: A seat fixed high in a tree. About 60% of falls happen climbing up or down or getting in and out (70%).
+- **Full body harness**: A fall arrest harness for tree stands. Connect to the tree before your feet leave the ground (70 to 80%).
+- **Haul line**: A rope to raise and lower your unloaded firearm or bow at a tree stand (80%).
+- **Suspension trauma**: Harm from hanging in a harness after a fall. It can occur in under 20 minutes and can be fatal (80%).
+- **Electronic call**: A device that plays recorded animal calls. Unlawful except for wolf, coyote, cougar, lynx, bobcat and Schedule C birds (99%, synopsis page 12).
+- **Distress call**: A call that copies a hurt or scared animal, such as a fawn or rabbit. It can bring a bear in close and fast (Tip).
+- **Wireless camera**: A trail camera that can send images to a phone or other device (99%, synopsis page 5). Unlawful to use for hunting 1 August to 10 December, and in Region 1 at any time (95 to 99%).
+- **Laser rangefinder**: A device that measures distance with a laser. On a deer it reaches about half the big number on the box (65%).
+- **Mil**: Milliradian, an angle unit marked on many scope reticles. Range in metres = size in metres × 1,000 ÷ mils (85%).
+- **Dope card**: A card of your own bullet drops at each distance, built from real groups at 100, 150, 200 and 250 m (Tip).
+- **Flat distance**: The level distance to a target up or down a slope: slope distance × cosine of the angle (75%). Hold for it or you hit high.
+- **Shooting sticks**: A two or three legged rest that makes standing or sitting shots steady (70%).
+- **Prone**: Lying flat on your belly to shoot, both elbows down. The steadiest field position (85%).
+- **NPOA**: Natural point of aim. Where the barrel points when your muscles are relaxed and supported (80%). Move your body, not the rifle, to put it on target.
+- **Follow through**: Keeping the trigger pressed and the sight picture steady until the bullet is gone (85%).
+- **Dry fire**: Practising the trigger press with an empty firearm. Use a snap cap (95%).
+- **Snap cap**: A dummy cartridge that protects the firearm during dry fire (95%).
+- **Quartering away**: An animal angled away from you. Aim so the bullet exits at the far front leg; the second best angle after broadside (85%).
+- **Quartering toward**: An animal angled toward you. A light bullet can deflect off the shoulder bones (85%); beginners wait for the turn (Tip).
+- **Buck fever**: The shakes and nerves when game appears. Too shaky to hold the crosshair still means no shot (Tip).
+- **Mule kick**: A hard kick of the hind legs at the shot. With a hard low run it often means a heart or lung hit (70%).
+- **Hit site**: Where the animal stood when hit. Look there for blood, hair, bone, tissue and scuffed ground (70%).
+- **Blood trail**: The blood a hit animal leaves as it goes. Bright and frothy means lungs, dark means liver, thin with green bits means gut (70%).
+- **Grid search**: Searching in lanes about 10 m apart, each person in sight of the next, when the trail is lost (70%).
+- **Backstrap**: The long loin along the top of the back on each side of the spine. Cook it hot and fast (Tip).
+- **Tenderloin**: The small loin inside the body under the spine, taken out from inside behind the last rib (Tip).
+- **Game bag**: A breathable cloth bag for meat. It keeps flies and dirt off and lets heat out; never use plastic on warm meat (80%).
+- **Bone out**: Cutting the meat off the bones in the field. Boned meat weighs about half as much; every edible portion must still come out (95%).
+- **Glaze**: The dry crust that forms on clean meat. It slows bacteria and deters egg laying insects, so do not wash meat that is clean (80%).
