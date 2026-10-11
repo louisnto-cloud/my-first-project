@@ -412,7 +412,7 @@ details.pl-day > :last-child { margin-bottom: 12px; }
 .pl-alldone { font-weight: 800; color: var(--ok); }
 @media (max-width: 380px) { .pl-pc { grid-template-columns: 1fr; } .pl-nav button { font-size: 13px; } }
 @media print {
-  .pl-nav, .pl-acts, .pl-wiz-foot, .hm-ask, .hm-backchip { display: none !important; }
+  .pl-nav, .pl-acts, .pl-wiz-foot, .hm-ask, .hm-backchip, .hm-toast { display: none !important; }
   .pl-hide-done .pl-item.done { display: flex !important; }
   details.pl-day, .pl-sec .card, .pl-verdict { break-inside: avoid; }
   .pl-spot-a .btn { border: 0; min-height: 0; padding: 0; text-decoration: underline; }
