@@ -90,7 +90,7 @@ checked: 2026-10-01
 - Bring the rifle to the store. **Dry fit** scope and rings before you pay (Tip).
 
 ```more rail, sight and ring notes
-- 20 inch stainless barrel, 1 in 11 twist, removable rail (80%).
+- 20 inch stainless barrel, 1 in 10 twist (Sako spec page, 95%; check the stamp on your barrel), removable rail (80%).
 - Rail is short, about 12 to 13 cm (4.75 to 5 in), to make room for the rear sight (70%).
 - Rear sight is a rotary drum peep sight, 100 to 600 m (75%).
 - Owners report **high rings** needed to clear the drum with a 40 to 44 mm scope (60%).

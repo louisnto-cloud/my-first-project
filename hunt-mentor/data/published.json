@@ -218,7 +218,17 @@
     "cutblock-country",
     "farm-country",
     "browse-plants",
-    "berries-mast"
+    "berries-mast",
+    "rifle-mechanics",
+    "cartridge-anatomy",
+    "ballistics-deep",
+    "judging-distance",
+    "field-positions",
+    "season-practice",
+    "shotgun-mastery",
+    "rimfire-22",
+    "firearm-care",
+    "optics-mastery"
   ],
   "flashcards": [
     "quail",
@@ -231,6 +241,7 @@
     "fs",
     "rs",
     "fn",
-    "rp"
+    "rp",
+    "ff"
   ]
 }
