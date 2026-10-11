@@ -11,6 +11,6 @@
 <text x="318" y="235.47" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">21.8</text><text x="358" y="229.01" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">29.4</text>
 <text x="338" y="280" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Osoyoos</text>
 <line x1="40" y1="260" x2="390" y2="260" stroke="#23261f" stroke-width="2" stroke-linecap="round"/>
-<rect x="240" y="50" width="14" height="14" rx="2" fill="#e8590c"/><text x="260" y="62" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">October mm</text><rect x="240" y="72" width="14" height="14" rx="2" fill="#8b5a2b"/><text x="260" y="84" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">November mm</text>
+<rect x="280" y="110" width="14" height="14" rx="2" fill="#e8590c"/><text x="300" y="122" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">October mm</text><rect x="280" y="132" width="14" height="14" rx="2" fill="#8b5a2b"/><text x="300" y="144" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">November mm</text>
 <text x="200" y="300" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Fraser Valley: 6 to 9 times wetter (95%)</text>
 </svg>
