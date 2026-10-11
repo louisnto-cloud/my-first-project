@@ -97,13 +97,17 @@
   }
   const inPoly = (x, y, p) => inRing(x, y, p[0]) && !p.slice(1).some((h) => inRing(x, y, h));
   async function muAt(lat, lon) {
-    let v = '';
-    try { const man = await json('data/layers/manifest.json'); const l = (man.layers || []).find((x) => x.id === 'mu'); v = (l && l.dataDate) || man.updated || ''; } catch (e) { /* no manifest: plain URL */ }
-    const fc = await json('data/layers/bc/mu.geojson' + (v ? `?v=${encodeURIComponent(v)}` : '')); // same URL as the map, so the saved copy is shared
-    for (const f of fc.features || []) {
-      const g = f.geometry; if (!g) continue;
-      const polys = g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : [];
-      if (polys.some((p) => inPoly(lon, lat, p))) { const m = String(f.properties.MU || '').match(/(\d{1,2})\s*-\s*0*(\d{1,2})/); return m ? `${+m[1]}-${+m[2]}` : null; }
+    let v = '', files = ['data/layers/bc/mu.geojson'];
+    try { const man = await json('data/layers/manifest.json'); const l = (man.layers || []).find((x) => x.id === 'mu'); v = (l && l.dataDate) || man.updated || '';
+      if (l && Array.isArray(l.files)) files = l.files.filter((f) => !f.bbox || (lon >= f.bbox[0] && lon <= f.bbox[2] && lat >= f.bbox[1] && lat <= f.bbox[3])).map((f) => f.file);
+      else if (l && l.file) files = [l.file]; } catch (e) { /* no manifest: plain URL */ }
+    for (const file of files) {
+      const fc = await json(file + (v ? `?v=${encodeURIComponent(v)}` : '')); // same URL as the map, so the saved copy is shared
+      for (const f of fc.features || []) {
+        const g = f.geometry; if (!g) continue;
+        const polys = g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : [];
+        if (polys.some((p) => inPoly(lon, lat, p))) { const m = String(f.properties.MU || '').match(/(\d{1,2})\s*-\s*0*(\d{1,2})/); return m ? `${+m[1]}-${+m[2]}` : null; }
+      }
     }
     return null;
   }

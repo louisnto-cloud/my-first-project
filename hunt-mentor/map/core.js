@@ -33,7 +33,7 @@ import * as search from './search.js';
 import * as layers from './layers.js';
 import * as offline from './offline.js';
 
-const PLUGINS = ['./tools-main.js', './tools-track.js', './tools-wind.js', './tools-insights.js']; // for example './tools.js', './track.js'
+const PLUGINS = ['./tools-main.js', './tools-track.js', './tools-wind.js', './tools-insights.js', './tools-terrain.js']; // for example './tools.js', './track.js'
 const DEFAULT_VIEW = { lng: -120.2687, lat: 50.8581, zoom: 12, bearing: 0, pitch: 0 }; // Heffley Creek base (SPOTS.md)
 const EXAG = 1.5; // default 3D height boost
 const exag = () => clamp(+prefs.exag || EXAG, 1, 2.5);
