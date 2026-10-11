@@ -172,9 +172,10 @@ for m in mus:
     km, dr = dist_dir(towns[ref]['lon'], towns[ref]['lat'], c.x, c.y)
     area = ga.area / 1e6
     mu_out.append({'id': m['id'], 'r': m['r'], 'z': m['zone'], 'b': bbox(m['g']), 'c': [round(lp.x, 3), round(lp.y, 3)],
-                   'km2': int(round(area, -1)), 'o': enc(ga, 500), 'nb': sorted(nb, key=lambda s: (s.split('-')[0], int(s.split('-')[1]))),
+                   'km2': int(round(area, -1)), 'o': enc(ga, 1100), 'nb': sorted(nb, key=lambda s: (s.split('-')[0], int(s.split('-')[1]))),
                    'in': inside[:6], 'ref': [ref, int(round(km)), dr]})
 
+nb_of = {x['id']: set(x['nb']) for x in mu_out}
 reg_out = []
 for code, name, fn in REGIONS:
     ms = [m for m in mus if m['r'] == code]
@@ -188,7 +189,7 @@ for code, name, fn in REGIONS:
 
 mu_json = {
     'updated': TODAY,
-    'note': 'Built by scripts/build-places.py. MU outlines simplified (about 500 m) for small offline maps only. Do not use the outlines for legal boundaries.',
+    'note': 'Built by scripts/build-places.py. MU outlines simplified (about 1 km) for small offline maps only. Do not use the outlines for legal boundaries.',
     'source': {'mu': 'BC Data Catalogue WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW (data/layers/bc/mu, data date 2026-10-03)',
                'towns': 'BC Geographical Names web service (apps.gov.bc.ca/pub/bcgnws), incorporated places', 'licence': 'Open Government Licence BC', 'cert': 95},
     'enc': 'o: rings of delta encoded integers, 1e-3 degrees: [lon0, lat0, dlon, dlat, ...]. in: [["b", baseId] | ["t", townIndex]]. ref: [townIndex, km, direction of the MU from that town].',
@@ -273,8 +274,17 @@ COMMON = {'Hope', 'Mission', 'Chase', 'Union', 'Lone', 'Grouse', 'Elk', 'Moose',
           'Arm', 'Falls', 'Rapids', 'Forks', 'Bend', 'Crossing', 'Landing', 'Ranch', 'Mile', 'Halfway', 'Midway', 'Mica', 'Blind', 'Wells', 'Squamish' if False else '_',
           'Tip', 'Grandpa', 'Kent', 'Hall', 'Pass', 'Nelson', 'Taylor', 'Edgewood', 'Riverside', 'Lakeview', 'Hilltop', 'Westside', 'Thompson', 'Fraser',
           'Okanagan', 'Kootenay', 'Cariboo', 'Skeena', 'Omineca', 'Peace', 'Columbia', 'Shuswap', 'Similkameen', 'Nicola', 'Boundary', 'Bonaparte'}
+# single word unincorporated names: only these (checked by hand against the lesson text, 2026-10-11); the rest are
+# everyday words or mean something else in the lessons (Alaska the state, Likely the word, Carmi in "Upper Carmi Road")
+SINGLE_OK = {'Agassiz', 'Atlin', 'Balfour', 'Brisco', 'Chopaka', 'Deroche', 'Dunster', 'Egmont', 'Endako', 'Erickson', 'Fauquier', 'Fontas', 'Gabriola',
+             'Ganges', 'Haney', 'Harrop', 'Hatzic', 'Hedley', 'Hosmer', 'Huntingdon', 'Ioco', 'Kaleden', 'Kincolith', 'Kitchener', 'Kitwanga', 'Kleindale',
+             'Knutsford', 'Ladner', 'Lund', 'Malahat', 'Merville', 'Naramata', 'Othello', 'Pinantan', 'Popkum', 'Pritchard', 'Sandspit', 'Savona', 'Sorrento',
+             'Spillimacheen', 'Spuzzum', 'Squilax', 'Tranquille', 'Vananda', 'Westsyde', 'Westwold', 'Windermere', 'Wonowon', 'Wycliffe', 'Pavilion', 'Glade'}
+BLOCK = {'North Star', 'Lake Hill', 'Mount Robson', 'Red Rock', 'Clearwater Station'}
 for name, rs in listed.items():
+    if name in BLOCK: continue
     if ' ' not in name and (name in COMMON or len(name) < 4): continue
+    if ' ' not in name and not any(r['cat'] in (1, 4) for r in rs) and name not in SINGLE_OK: continue
     if re.search(r'(?<![\w-])' + re.escape(name) + r'(?![\w-])', alltext): names.add(name)
 
 # ---------- resolve each name ----------
@@ -290,6 +300,9 @@ def kind_of(r):
     if r['cat'] in (2, 3): return 'community'
     if r['cat'] == 4: return 'park'
     low = t.lower()
+    if 'mountains' in low or 'range' in low: return 'mountain range'
+    if 'hills' in low: return 'group of hills'
+    if 'islands' in low: return 'group of islands'
     for k in ('lake', 'river', 'creek', 'mountain', 'peak', 'range', 'ridge', 'hill', 'plateau', 'island', 'bay', 'inlet', 'sound', 'valley', 'canyon', 'pass',
               'marsh', 'slough', 'pond', 'arm', 'flat', 'meadow', 'spit', 'point', 'falls', 'glacier'):
         if k in low: return {'flat': 'flats', 'meadow': 'meadows'}.get(k, k)
@@ -324,6 +337,8 @@ for name in sorted(names):
                                                  'Indian Reserve-Réserve indienne', 'Réserve indienne', 'Former Locality', 'Abandoned Locality')]
     if not recs:
         unresolved.append({'name': name, 'why': 'not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)', 'n': len(occ[name])}); continue
+    # a city, town or village with this exact name is what people mean (Campbell River, Logan Lake, Burns Lake)
+    if any(r['cat'] == 1 for r in recs): recs = [r for r in recs if r['cat'] == 1]
     # type implied by the name ending
     want = None
     for rx, cats in SUF_CAT:
@@ -365,6 +380,11 @@ for name in sorted(names):
     m = mu_at(r['lon'], r['lat'])
     if not m:
         unresolved.append({'name': name, 'why': 'outside the MU map (not in a BC Management Unit)', 'n': len(occ[name])}); continue
+    # a mention that names an MU must agree: the place sits in that MU or next to it
+    near_ok = lambda ids: any(m['id'] == x or m['id'] in nb_of.get(x, ()) for x in ids)
+    bad = [cm for _, cm, _ in occ[name] if cm and not near_ok(cm)]
+    if bad and len(bad) * 2 >= len([1 for _, cm, _ in occ[name] if cm]):
+        unresolved.append({'name': name, 'why': f'found in MU {m["id"]}, but the lesson names MU {", ".join(bad[0])} next to it', 'n': len(occ[name])}); continue
     places.append({'name': name, 'r': r, 'mu': m, 'note': note, 'cert': cert if r['official'] else min(cert, 80), 'n': len(occ[name])})
 
 # ---------- forest service roads (FSRs) from the app's own road layer ----------
@@ -436,7 +456,8 @@ def describe(name, kind, lon, lat, m):
     t = towns[tw]
     km, dr = dist_dir(t['lon'], t['lat'], lon, lat)
     where = f'in MU {m["id"]}, Region {m["r"]} {regname[m["r"]]}'
-    if km < 3: rel = f'At {t["name"]}.' if kind not in ('town',) else ''
+    if km < 3: rel = f'Next to {t["name"]}.' if kind not in ('town',) else ''
+    elif km > 150: rel = ''
     else: rel = f'About {int(round(km))} km {dr} of {t["name"]}.'
     art = 'an' if kind[0] in 'aeiou' else 'a'
     return f'{name} is {art} {kind} {where}. {rel}'.strip()
@@ -450,19 +471,22 @@ for p in places:
     seen.add(pid)
     out.append({'id': pid, 'name': p['name'], 'type': kind, 'lat': round(r['lat'], 5), 'lon': round(r['lon'], 5), 'mu': m['id'], 'region': m['r'],
                 'desc': describe(p['name'], kind, r['lon'], r['lat'], m),
-                'source': 'BC Geographical Names' + (' (official name)' if r['official'] else ' (not an official name)') + f', feature {r["gid"]}, {r["type"]}',
-                'url': r['uri'], 'cert': p['cert'], **({'note': p['note']} if p['note'] else {}), 'mentions': p['n']})
+                'src': 'gn', 'ft': r['type'].replace(' (1)', '').replace(' (2)', ''), 'nid': r['uri'].rsplit('/', 1)[-1], **({} if r['official'] else {'unofficial': 1}),
+                'cert': p['cert'], **({'note': p['note']} if p['note'] else {})})
 for p in road_places:
     m = p['mu']; pid = slug(p['name'])
     if pid in seen: continue
     seen.add(pid)
     out.append({'id': pid, 'name': p['name'], 'alias': p['alias'], 'type': 'forest service road', 'lat': round(p['lat'], 5), 'lon': round(p['lon'], 5),
                 'mu': m['id'], 'region': m['r'], 'desc': describe(p['name'], 'forest service road', p['lon'], p['lat'], m).replace(' is a forest', ' is a forest') + ' Pin: the middle of its longest mapped section.',
-                'source': 'App forest road layer (BC Data Catalogue FTEN_ROAD_SECTION_LINES_SVW, data date 2026-10-03)', 'cert': 85, 'mentions': p['n']})
+                'src': 'road', 'cert': 85})
 out.sort(key=lambda p: p['name'])
 os.makedirs(os.path.join(ROOT, 'data', 'places'), exist_ok=True)
 pj = {'updated': TODAY, 'note': 'Place names mentioned in the lessons, glossary, flashcards and planner. Coordinates only from BC Geographical Names (apps.gov.bc.ca/pub/bcgnws) or the app map data. Built by scripts/build-places.py.',
-      'licence': 'Open Government Licence BC', 'places': out}
+      'licence': 'Open Government Licence BC',
+      'sources': {'gn': {'name': 'BC Geographical Names', 'url': 'https://apps.gov.bc.ca/pub/bcgnws/names/'},
+                  'road': {'name': 'App forest road layer (BC Data Catalogue FTEN_ROAD_SECTION_LINES_SVW, data date 2026-10-03)'}},
+      'places': out}
 json.dump(pj, open(os.path.join(ROOT, 'data', 'places', 'places.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
 json.dump(mu_json, open(os.path.join(ROOT, 'data', 'places', 'mu.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
 unresolved.sort(key=lambda u: (-u.get('n', 0), u['name']))

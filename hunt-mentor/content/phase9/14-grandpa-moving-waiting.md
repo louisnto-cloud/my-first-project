@@ -43,7 +43,7 @@ checked: 2026-10-11
 
 ```more why, when it is wrong, where it comes from
 - **Why it works:** a moving hunter is easy to spot; a still one finds the animal first (Tip).
-- Hunter education: "spend at least 10 times longer being still and observing than walking" (85%, Iowa course on the Hunter Ed site, search preview). NRA Women: "maybe 10 times as much stillness as movement" (70%).
+- Hunter education: "spend at least 10 times longer being still and observing than walking" (85%, Iowa course on the Hunter Ed site, search preview). National Rifle Association Women: "maybe 10 times as much stillness as movement" (70%).
 - See [[Still hunting]] and [Moving quietly](#/s/still-hunting).
 - **When it is wrong:** when you are crossing dead ground to a glassing point, move steadily and quietly (Tip).
 - **Where it comes from:** hunter education and old timber hunters.
@@ -259,7 +259,7 @@ checked: 2026-10-11
 ## Sources
 
 - Hunter Ed course site: [Iowa, still hunting](https://www.hunter-ed.com/iowa/studyGuide/Still-Hunting/202013_12961/) and [New South Wales, still hunting](https://hunter-ed.com/newsouthwales/studyGuide/Still-hunting/201601_138920), search preview (75 to 85%)
-- NRA Women, [What is still hunting](https://www.nrawomen.com/content/what-is-still-hunting), and Buckmasters, [Rethink still hunting](https://buckmasters.com/Hunting/Tips-and-Tactics/Articles/ID/6586/Rethink-Still-Hunting), search preview (65 to 70%)
+- National Rifle Association Women, [What is still hunting](https://www.nrawomen.com/content/what-is-still-hunting), and Buckmasters, [Rethink still hunting](https://buckmasters.com/Hunting/Tips-and-Tactics/Articles/ID/6586/Rethink-Still-Hunting), search preview (65 to 70%)
 - National Deer Association, ["The Hunter's Guide to Deer Vision"](https://deerassociation.com/hunters-guide-deer-vision/), read directly (85%)
 - Outdoor Life, [Creep and peek hunting](https://outdoorlife.com/blogs/game-changers/creep-and-peek-hunting-how-avoid-being-spotted-wary-mountain-game), and MeatEater, [Still hunting techniques](https://www.themeateater.com/hunt/big-game/still-hunting-techniques), search preview (70%)
 - Outdoor Life, [One sit in the deer woods equals three days of pressure](https://outdoorlife.com/blogs/big-buck-zone/2014/07/study-one-sit-deer-woods-equals-three-days-pressure-mature-bucks), search preview (60%)
