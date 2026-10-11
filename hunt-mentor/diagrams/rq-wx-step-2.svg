@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 2 of reading a forecast for hunting: Check the temperature trend. Falling for days? Animals feed more (Tip).">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Check the temperature trend</text>
+<rect x="80" y="90" width="240" height="110" fill="#f5f1e4" stroke="#8a9a6b"/><polyline points="90,120 140,130 190,150 240,175 300,190" fill="none" stroke="#e8590c" stroke-width="4"/><text x="200" y="225" font-family="sans-serif" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Temperature trend over 3 days</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Falling for days? Animals feed more (Tip).</text>
+</svg>

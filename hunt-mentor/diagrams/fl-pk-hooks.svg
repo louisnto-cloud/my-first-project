@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 286" role="img" aria-label="Memory hook HHLS: Hips first, Heavy close, Lifters snug, Sternum last. Plus: light low, heavy close, quick on top.">
+  <rect x="0" y="0" width="400" height="286" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Memory hook: fit in four</text>
+<rect x="10" y="48" width="380" height="46" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="14" y="52" width="52" height="38" rx="8" fill="#e8590c"/>
+<text x="40" y="80" font-family="sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">H</text>
+<text x="78" y="70" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="start">Hips first</text>
+<text x="78" y="88" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">Belt on the hip bones, tight</text>
+<rect x="10" y="100" width="380" height="46" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="14" y="104" width="52" height="38" rx="8" fill="#e8590c"/>
+<text x="40" y="132" font-family="sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">S</text>
+<text x="78" y="122" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="start">Shoulders</text>
+<text x="78" y="140" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">Snug, no gap</text>
+<rect x="10" y="152" width="380" height="46" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="14" y="156" width="52" height="38" rx="8" fill="#e8590c"/>
+<text x="40" y="184" font-family="sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">L</text>
+<text x="78" y="174" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="start">Lifters</text>
+<text x="78" y="192" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">Pull the load close</text>
+<rect x="10" y="204" width="380" height="46" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="14" y="208" width="52" height="38" rx="8" fill="#e8590c"/>
+<text x="40" y="236" font-family="sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">S</text>
+<text x="78" y="226" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="start">Sternum</text>
+<text x="78" y="244" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">Clip it last</text>
+<text x="200" y="276" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Packing: light low, heavy close, quick on top</text>
+</svg>

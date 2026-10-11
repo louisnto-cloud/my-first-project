@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 549" role="img" aria-label="Season bar chart: Region 2 geese: two licence years. Snow and Ross&#x27;s: 2026 to 2027: Oct 10 to Jan 5, Feb 20 to Mar 10. Snow and Ross&#x27;s: 2027 to 2028: Oct 9 to Jan 4, Feb 21 to Mar 10. White fronted: 2026 to 2027: Oct 10 to Jan 24. White fronted: 2027 to 2028: Oct 9 to Jan 23. Canada and cackling: 2026 to 2027: Sept 5 to 15, Oct 10 to Nov 22, Dec 19 to Jan 10, Feb 10 to Mar 10. Canada and cackling: 2027 to 2028: Sept 4 to 14, Oct 9 to Nov 21, Dec 18 to Jan 9, Feb 11 to Mar 10." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="549" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 2 geese: two licence years</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 28. MUs 2-2 to 2-19.</text>
+<text x="38.6" y="83" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="92.7" y="83" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="146.8" y="83" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<text x="200.9" y="83" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
+<text x="255.9" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jan</text>
+<text x="308.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Feb</text>
+<text x="360.5" y="83" font-size="14" fill="#23261f" text-anchor="middle">Mar</text>
+<line x1="12.0" y1="91" x2="12.0" y2="539" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="65.2" y1="91" x2="65.2" y2="539" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="120.2" y1="91" x2="120.2" y2="539" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="173.4" y1="91" x2="173.4" y2="539" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="228.4" y1="91" x2="228.4" y2="539" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="283.4" y1="91" x2="283.4" y2="539" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="333.0" y1="91" x2="333.0" y2="539" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="388.0" y1="91" x2="388.0" y2="539" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<text x="12" y="107" font-size="14" font-weight="bold" fill="#23261f">Snow and Ross&#x27;s: 2026 to 2027</text>
+<rect x="81.2" y="113" width="156.1" height="22" rx="3" fill="#4a7fb0"/>
+<rect x="317.1" y="113" width="33.7" height="22" rx="3" fill="#4a7fb0"/>
+<text x="12" y="151" font-size="14" font-weight="bold" fill="#23261f">Oct 10 to Jan 5, Feb 20 to Mar 10</text>
+<text x="12" y="183" font-size="14" font-weight="bold" fill="#23261f">Snow and Ross&#x27;s: 2027 to 2028</text>
+<rect x="79.4" y="189" width="156.1" height="22" rx="3" fill="#4a7fb0"/>
+<rect x="318.8" y="189" width="31.9" height="22" rx="3" fill="#4a7fb0"/>
+<text x="12" y="227" font-size="14" font-weight="bold" fill="#23261f">Oct 9 to Jan 4, Feb 21 to Mar 10</text>
+<text x="12" y="259" font-size="14" font-weight="bold" fill="#23261f">White fronted: 2026 to 2027</text>
+<rect x="81.2" y="265" width="189.8" height="22" rx="3" fill="#8a9a6b"/>
+<text x="176.1" y="281" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Oct 10 to Jan 24</text>
+<text x="12" y="315" font-size="14" font-weight="bold" fill="#23261f">White fronted: 2027 to 2028</text>
+<rect x="79.4" y="321" width="189.8" height="22" rx="3" fill="#8a9a6b"/>
+<text x="174.3" y="337" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Oct 9 to Jan 23</text>
+<text x="12" y="371" font-size="14" font-weight="bold" fill="#23261f">Canada and cackling: 2026 to 2027</text>
+<rect x="19.1" y="377" width="19.5" height="22" rx="3" fill="#8b5a2b"/>
+<rect x="81.2" y="377" width="78.0" height="22" rx="3" fill="#8b5a2b"/>
+<rect x="205.3" y="377" width="40.8" height="22" rx="3" fill="#8b5a2b"/>
+<rect x="299.3" y="377" width="51.4" height="22" rx="3" fill="#8b5a2b"/>
+<text x="12" y="415" font-size="14" font-weight="bold" fill="#23261f">Sept 5 to 15, Oct 10 to Nov 22, Dec 19 to Jan</text>
+<text x="12" y="433" font-size="14" font-weight="bold" fill="#23261f">10, Feb 10 to Mar 10</text>
+<text x="12" y="465" font-size="14" font-weight="bold" fill="#23261f">Canada and cackling: 2027 to 2028</text>
+<rect x="17.3" y="471" width="19.5" height="22" rx="3" fill="#8b5a2b"/>
+<rect x="79.4" y="471" width="78.0" height="22" rx="3" fill="#8b5a2b"/>
+<rect x="203.5" y="471" width="40.8" height="22" rx="3" fill="#8b5a2b"/>
+<rect x="301.1" y="471" width="49.7" height="22" rx="3" fill="#8b5a2b"/>
+<text x="12" y="509" font-size="14" font-weight="bold" fill="#23261f">Sept 4 to 14, Oct 9 to Nov 21, Dec 18 to Jan</text>
+<text x="12" y="527" font-size="14" font-weight="bold" fill="#23261f">9, Feb 11 to Mar 10</text>
+</svg>

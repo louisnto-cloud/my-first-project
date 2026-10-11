@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 198" role="img" aria-label="Hunting with a dog. On a leash for deer, elk, moose, mountain sheep, mountain goat and caribou. Off leash is fine for small game and game birds, lynx, bobcat, black bear and cougar. Training on game birds under supervision runs 1 August to 30 April." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="198" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Hunting with a dog</text>
+<text x="200.0" y="48" font-size="14" fill="#2f3a2b" text-anchor="middle">Training on game birds: 1 August to 30 April.</text>
+<rect x="6" y="58" width="191" height="130" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<rect x="6" y="58" width="191" height="30" rx="10" fill="#e8590c"/><rect x="6" y="76" width="191" height="12" fill="#e8590c"/>
+<text x="101.5" y="79" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">On a leash</text>
+<text x="101.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">Deer, elk, moose,</text>
+<text x="101.5" y="128" font-size="14" fill="#23261f" text-anchor="middle">mountain sheep,</text>
+<text x="101.5" y="146" font-size="14" fill="#23261f" text-anchor="middle">mountain goat,</text>
+<text x="101.5" y="164" font-size="14" fill="#23261f" text-anchor="middle">caribou</text>
+<rect x="203" y="58" width="191" height="130" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
+<rect x="203" y="58" width="191" height="30" rx="10" fill="#5c7a3a"/><rect x="203" y="76" width="191" height="12" fill="#5c7a3a"/>
+<text x="298.5" y="79" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Off leash OK</text>
+<text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">Small game, birds,</text>
+<text x="298.5" y="128" font-size="14" fill="#23261f" text-anchor="middle">lynx, bobcat,</text>
+<text x="298.5" y="146" font-size="14" fill="#23261f" text-anchor="middle">black bear,</text>
+<text x="298.5" y="164" font-size="14" fill="#23261f" text-anchor="middle">cougar</text>
+</svg>

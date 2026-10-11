@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 302" role="img" aria-label="Bar chart of Region 4 small game seasons in all Management Units. Columbian ground squirrel: no closed season, private land only. Snowshoe hare: 1 August to 30 April. Raccoon: 10 September to 31 March. Skunk: 1 August to 30 April." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="302" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Small game seasons</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">All MUs: 4-1 to 4-9, 4-14 to 4-40</text>
+<rect x="14.0" y="60" width="31.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="60" width="30.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="60" width="30.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="60" width="31.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="60" width="31.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="60" width="31.6" height="206" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="96" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Columbian ground squirrel</text>
+<rect x="14.0" y="102" width="372.0" height="20" rx="4" fill="#8a9a6b"/>
+<text x="200" y="117" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">No closed season</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Snowshoe hare</text>
+<rect x="45.6" y="148" width="278.2" height="20" rx="4" fill="#e8590c"/>
+<text x="185" y="163" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Aug 1 to Apr 30</text>
+<text x="14" y="188" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Raccoon</text>
+<rect x="86.4" y="194" width="206.9" height="20" rx="4" fill="#e8590c"/>
+<text x="190" y="209" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Sept 10 to Mar 31</text>
+<text x="14" y="234" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Skunk</text>
+<rect x="45.6" y="240" width="278.2" height="20" rx="4" fill="#e8590c"/>
+<text x="185" y="255" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Aug 1 to Apr 30</text>
+<rect x="14" y="276" width="14" height="14" rx="3" fill="#8a9a6b"/>
+<text x="32" y="288" font-size="14" fill="#23261f" text-anchor="start">Private land only</text>
+<rect x="171.8" y="276" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="190" y="288" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+</svg>

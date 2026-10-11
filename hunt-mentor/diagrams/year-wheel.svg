@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 536" font-family="sans-serif">
+<rect x="0" y="0" width="400" height="536" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#23261f" text-anchor="middle">The BC hunter year (Region 3)</text>
+<g transform="translate(200 220) scale(0.9) translate(-200 -215)">
+<path d="M200.0 35.0 A180 180 0 0 1 290.0 59.1 L230.0 163.0 A60 60 0 0 0 200.0 155.0 Z" fill="#f1eee2" stroke="#fffaf0" stroke-width="1"/>
+<path d="M290.0 59.1 A180 180 0 0 1 355.9 125.0 L252.0 185.0 A60 60 0 0 0 230.0 163.0 Z" fill="#e9e4d2" stroke="#fffaf0" stroke-width="1"/>
+<path d="M355.9 125.0 A180 180 0 0 1 380.0 215.0 L260.0 215.0 A60 60 0 0 0 252.0 185.0 Z" fill="#f1eee2" stroke="#fffaf0" stroke-width="1"/>
+<path d="M380.0 215.0 A180 180 0 0 1 355.9 305.0 L252.0 245.0 A60 60 0 0 0 260.0 215.0 Z" fill="#e9e4d2" stroke="#fffaf0" stroke-width="1"/>
+<path d="M355.9 305.0 A180 180 0 0 1 290.0 370.9 L230.0 267.0 A60 60 0 0 0 252.0 245.0 Z" fill="#f1eee2" stroke="#fffaf0" stroke-width="1"/>
+<path d="M290.0 370.9 A180 180 0 0 1 200.0 395.0 L200.0 275.0 A60 60 0 0 0 230.0 267.0 Z" fill="#e9e4d2" stroke="#fffaf0" stroke-width="1"/>
+<path d="M200.0 395.0 A180 180 0 0 1 110.0 370.9 L170.0 267.0 A60 60 0 0 0 200.0 275.0 Z" fill="#f1eee2" stroke="#fffaf0" stroke-width="1"/>
+<path d="M110.0 370.9 A180 180 0 0 1 44.1 305.0 L148.0 245.0 A60 60 0 0 0 170.0 267.0 Z" fill="#e9e4d2" stroke="#fffaf0" stroke-width="1"/>
+<path d="M44.1 305.0 A180 180 0 0 1 20.0 215.0 L140.0 215.0 A60 60 0 0 0 148.0 245.0 Z" fill="#f1eee2" stroke="#fffaf0" stroke-width="1"/>
+<path d="M20.0 215.0 A180 180 0 0 1 44.1 125.0 L148.0 185.0 A60 60 0 0 0 140.0 215.0 Z" fill="#e9e4d2" stroke="#fffaf0" stroke-width="1"/>
+<path d="M44.1 125.0 A180 180 0 0 1 110.0 59.1 L170.0 163.0 A60 60 0 0 0 148.0 185.0 Z" fill="#f1eee2" stroke="#fffaf0" stroke-width="1"/>
+<path d="M110.0 59.1 A180 180 0 0 1 200.0 35.0 L200.0 155.0 A60 60 0 0 0 170.0 163.0 Z" fill="#e9e4d2" stroke="#fffaf0" stroke-width="1"/>
+<path d="M51.0 301.0 A172 172 0 0 1 165.4 46.5 L169.8 68.1 A150 150 0 0 0 70.1 290.0 Z" fill="#6b4f35" stroke="#fffaf0" stroke-width="1"/>
+<path d="M65.6 272.0 A146 146 0 0 1 177.9 70.7 L181.2 92.4 A124 124 0 0 0 85.9 263.5 Z" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1"/>
+<path d="M320.0 215.0 A120 120 0 0 1 216.7 333.8 L213.6 312.0 A98 98 0 0 0 298.0 215.0 Z" fill="#e8590c" stroke="#fffaf0" stroke-width="1"/>
+<path d="M247.0 133.6 A94 94 0 0 1 248.4 295.6 L237.0 276.7 A72 72 0 0 0 236.0 152.6 Z" fill="#8a9a6b" stroke="#fffaf0" stroke-width="1"/>
+<path d="M247.0 296.4 A94 94 0 0 1 119.4 263.4 L138.3 252.0 A72 72 0 0 0 236.0 277.4 Z" fill="#c9b26b" stroke="#fffaf0" stroke-width="1"/>
+<text x="249.7" y="34.5" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Jan</text>
+<text x="335.8" y="84.2" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Feb</text>
+<text x="385.5" y="170.3" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Mar</text>
+<text x="385.5" y="269.7" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Apr</text>
+<text x="335.8" y="355.8" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">May</text>
+<text x="249.7" y="405.5" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Jun</text>
+<text x="150.3" y="405.5" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Jul</text>
+<text x="64.2" y="355.8" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Aug</text>
+<text x="14.5" y="269.7" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="14.5" y="170.3" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="64.2" y="84.2" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Nov</text>
+<text x="150.3" y="34.5" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Dec</text>
+<line x1="380.0" y1="215.0" x2="260.0" y2="215.0" stroke="#e8590c" stroke-width="3"/>
+</g>
+<circle cx="200" cy="220" r="52" fill="#fffaf0" stroke="#23261f" stroke-width="2"/>
+<text x="200" y="204" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">Licence year</text>
+<text x="200" y="219" font-size="12" fill="#23261f" text-anchor="middle">1 Apr to 31 Mar</text>
+<text x="200" y="235" font-size="12" fill="#6b4f35" text-anchor="middle">reports due</text>
+<text x="200" y="250" font-size="12" fill="#6b4f35" text-anchor="middle">31 Mar</text>
+<rect x="14" y="418" width="18" height="14" fill="#6b4f35"/>
+<text x="40" y="430" font-size="13" fill="#23261f">Deer seasons: 1 Sep to 20 Dec</text>
+<text x="40" y="446" font-size="13" fill="#23261f">(4 point, any buck in Oct, bow)</text>
+<rect x="14" y="454" width="18" height="14" fill="#2f3a2b"/>
+<text x="40" y="466" font-size="13" fill="#23261f">Ducks and geese: 8 Sep to 23 Dec</text>
+<rect x="14" y="474" width="18" height="14" fill="#e8590c"/>
+<text x="40" y="486" font-size="13" fill="#23261f">LEH applications: synopsis out in April, deadline 23 Jun 2026</text>
+<rect x="14" y="494" width="18" height="14" fill="#8a9a6b"/>
+<text x="40" y="506" font-size="13" fill="#23261f">Sheds, winter range scouting: Feb to May (tip)</text>
+<rect x="14" y="514" width="18" height="14" fill="#c9b26b"/>
+<text x="40" y="526" font-size="13" fill="#23261f">Range practice, sight in, pattern: Jun to Aug (tip)</text>
+</svg>

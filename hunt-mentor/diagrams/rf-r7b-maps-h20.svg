@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 554" role="img" aria-label="Cards for Maps H20 to H32. H20 and H21: northern and southern parts of 7-42 for elk. H22 and H23: western and eastern parts of 7-43 for elk and mule deer. H24 Fontas: No Hunting Area. H25: bison draw only and general open season parts. H26: Muskwa Kechika Access Management Area and Klingzut Mountain Motor Vehicle Closed Area. H27 Terminus and H28 Hoole Creek: mountain goat closed. H29 Toad River: goat draw only and closed areas. H30 Deeh Ridge: mountain goat closed. H31 Muncho Lake Park: mountain sheep and goat closed. H32 Moose Lake: moose closed." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="554" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Maps H20 to H32</text>
+<rect x="6" y="40" width="190" height="78" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H20, H21: MU 7-42</text>
+<text x="14" y="88" font-size="14" fill="#23261f" text-anchor="start">North and south parts,</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">for elk</text>
+<rect x="204" y="40" width="190" height="78" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H22, H23: MU 7-43</text>
+<text x="212" y="88" font-size="14" fill="#23261f" text-anchor="start">West and east parts,</text>
+<text x="212" y="106" font-size="14" fill="#23261f" text-anchor="start">for elk and mule deer</text>
+<rect x="6" y="126" width="190" height="78" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 136 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#c92a2a"/>
+<text x="101" y="144" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H24 Fontas</text>
+<text x="14" y="174" font-size="14" fill="#23261f" text-anchor="start">No Hunting Area,</text>
+<text x="14" y="192" font-size="14" fill="#23261f" text-anchor="start">MUs 7-47, 7-48, 7-56</text>
+<rect x="204" y="126" width="190" height="78" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M204 136 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#6a4c93"/>
+<text x="299" y="144" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H25 Bison</text>
+<text x="212" y="174" font-size="14" fill="#23261f" text-anchor="start">LEH only and general</text>
+<text x="212" y="192" font-size="14" fill="#23261f" text-anchor="start">open season parts</text>
+<rect x="6" y="212" width="190" height="114" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M6 222 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#4a7fb0"/>
+<text x="101" y="230" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H26 Muskwa Kechika,</text>
+<text x="101" y="248" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Klingzut Mtn.</text>
+<text x="14" y="278" font-size="14" fill="#23261f" text-anchor="start">Access Management Area.</text>
+<text x="14" y="296" font-size="14" fill="#23261f" text-anchor="start">Motor Vehicle Closed</text>
+<text x="14" y="314" font-size="14" fill="#23261f" text-anchor="start">Area</text>
+<rect x="204" y="212" width="190" height="114" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M204 222 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#8b5a2b"/>
+<text x="299" y="230" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H27 Terminus, H28</text>
+<text x="299" y="248" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Hoole Creek</text>
+<text x="212" y="278" font-size="14" fill="#23261f" text-anchor="start">Mountain goat closed,</text>
+<text x="212" y="296" font-size="14" fill="#23261f" text-anchor="start">MU 7-51</text>
+<rect x="6" y="334" width="190" height="78" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M6 344 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#6a4c93"/>
+<text x="101" y="352" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H29 Toad River</text>
+<text x="14" y="382" font-size="14" fill="#23261f" text-anchor="start">Goat LEH and closed</text>
+<text x="14" y="400" font-size="14" fill="#23261f" text-anchor="start">areas, MUs 7-51, 7-54</text>
+<rect x="204" y="334" width="190" height="78" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M204 344 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#8b5a2b"/>
+<text x="299" y="352" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H30 Deeh Ridge</text>
+<text x="212" y="382" font-size="14" fill="#23261f" text-anchor="start">Mountain goat closed,</text>
+<text x="212" y="400" font-size="14" fill="#23261f" text-anchor="start">MU 7-52</text>
+<rect x="6" y="420" width="190" height="78" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M6 430 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#8b5a2b"/>
+<text x="101" y="438" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H31 Muncho Lake Park</text>
+<text x="14" y="468" font-size="14" fill="#23261f" text-anchor="start">Sheep and goat closed,</text>
+<text x="14" y="486" font-size="14" fill="#23261f" text-anchor="start">MUs 7-51, 7-54</text>
+<rect x="204" y="420" width="190" height="78" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M204 430 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#8b5a2b"/>
+<text x="299" y="438" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H32 Moose Lake</text>
+<text x="212" y="468" font-size="14" fill="#23261f" text-anchor="start">Moose closed, MU 7-51</text>
+<rect x="6" y="504" width="14" height="14" rx="3" fill="#2f3a2b"/>
+<text x="24" y="516" font-size="14" fill="#23261f" text-anchor="start">Rule</text>
+<rect x="67.6" y="504" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="86" y="516" font-size="14" fill="#23261f" text-anchor="start">No hunting</text>
+<rect x="173.6" y="504" width="14" height="14" rx="3" fill="#6a4c93"/>
+<text x="192" y="516" font-size="14" fill="#23261f" text-anchor="start">Draw (LEH) only</text>
+<rect x="6" y="526" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="24" y="538" font-size="14" fill="#23261f" text-anchor="start">Vehicle rule</text>
+<rect x="126.80000000000001" y="526" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="145" y="538" font-size="14" fill="#23261f" text-anchor="start">Species closed</text>
+</svg>

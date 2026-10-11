@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 348" role="img" aria-label="Chart of Region 7A vehicle closures by date. Snowmobiles for hunting closed 31 March to 30 November in 7-2 to 7-18, 7-23 to 7-30 and 7-37 to 7-39. Morkill Forest Road in 7-3 and 7-17 closed to motor vehicles for hunting 15 April to 30 June and 15 August to 10 December, the 10 December date new. ATVs for hunting closed in the morning hours 15 August to 15 November in 7-7 to 7-15 and 7-24 to 7-29. ATVs for hunting closed in the entire area of 7-38 and 7-39. Also the Finlay area above 1,450 metres is a Motor Vehicle Closed Area." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="348" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Vehicle closures by date</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">Finlay area above 1,450 m: no motor vehicles</text>
+<rect x="14.0" y="60" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="60" width="30.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="60" width="30.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="60" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="60" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="60" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="96" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">● Snowmobiles, most MUs (More)</text>
+<rect x="292.2" y="102" width="93.8" height="20" rx="4" fill="#c92a2a"/>
+<rect x="14.0" y="102" width="155.9" height="20" rx="4" fill="#c92a2a"/>
+<text x="92" y="117" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Mar 31 to Nov 30</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">▲ Morkill Forest Road, 7-3, 7-17</text>
+<rect x="307.5" y="148" width="78.5" height="20" rx="4" fill="#c92a2a"/>
+<text x="304" y="163" font-size="14" fill="#23261f" text-anchor="end" font-weight="bold">Apr 15 to June 30</text>
+<text x="14" y="188" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">▲ Morkill Forest Road (Dec 10 new)</text>
+<rect x="59.9" y="194" width="120.3" height="20" rx="4" fill="#c92a2a"/>
+<text x="184" y="209" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Aug 15 to Dec 10</text>
+<text x="14" y="234" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">◆ ATVs, 7-7 to 7-15, 7-24 to 7-29</text>
+<rect x="59.9" y="240" width="94.8" height="20" rx="4" fill="#c92a2a"/>
+<text x="159" y="255" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Morning hours only</text>
+<text x="14" y="280" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">◆ ATVs, all of 7-38, 7-39</text>
+<rect x="14.0" y="286" width="372.0" height="20" rx="4" fill="#c92a2a"/>
+<text x="200" y="301" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Whole MU, no dates printed</text>
+<rect x="14" y="322" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="32" y="334" font-size="14" fill="#23261f" text-anchor="start">Closed for hunting use</text>
+</svg>

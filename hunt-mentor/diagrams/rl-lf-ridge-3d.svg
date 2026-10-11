@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Sketch of a ridge in the Hunt Map 3D view. The crest runs from the far skyline toward you. The left face is in sun, the right face is in shade with trees. Contour lines cross the ridge and bend downhill, toward you, on the crest. Label: crest, walk it and glass from it.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Ridge in 3D</text><rect x="0" y="36" width="400" height="70" fill="#e3ecf3"/><text x="388" y="24" font-size="13" fill="#2f3a2b" text-anchor="end">Hunt Map 3D view (sketch)</text>
+  <path d="M200 70 C 206 140, 192 200, 200 268 L0 268 L0 140 Q 100 92 200 70 Z" fill="#e9edd9"/>
+  <path d="M200 70 C 206 140, 192 200, 200 268 L400 268 L400 140 Q 300 92 200 70 Z" fill="#a9b68e"/>
+  <path d="M0 132 Q 120 140 203 168 Q 290 140 400 132" fill="none" stroke="#8b5a2b" stroke-width="1.6"/><path d="M0 176 Q 120 186 199 214 Q 290 186 400 176" fill="none" stroke="#8b5a2b" stroke-width="1.6"/><path d="M0 222 Q 110 230 197 258 Q 290 230 400 222" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+  <path d="M200 70 C 206 140, 192 200, 200 268" stroke="#2f3a2b" stroke-width="3" fill="none"/>
+  <path d="M330 176 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="328.5" y="206" width="3" height="5" fill="#6b4f35"/><path d="M350 202 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="348.5" y="232" width="3" height="5" fill="#6b4f35"/><path d="M372 172 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="370.5" y="202" width="3" height="5" fill="#6b4f35"/><path d="M310 214 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="308.5" y="244" width="3" height="5" fill="#6b4f35"/>
+  <rect x="135" y="116" width="259" height="24" rx="6" fill="#e8590c"/><text x="264.5" y="133" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Crest: walk it, glass from it</text>
+  <text x="40" y="228" font-size="14" fill="#2f3a2b" text-anchor="start">sunny face</text><text x="300" y="172" font-size="14" fill="#2f3a2b" text-anchor="start">shady face</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Lines bend down (toward you) on the crest</text>
+</svg>

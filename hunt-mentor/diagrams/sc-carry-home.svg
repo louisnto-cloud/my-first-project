@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Driving home, what is in the truck, all 95 percent. The notched species licence, with the meat. Evidence of sex, still attached. Antlers on the skull plate in an antler restricted season. All edible portions: neck, ribs, four quarters and loins. Photo ID and your Fish and Wildlife ID number. At a check station, stop and report, with or without game." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Driving home: what is in the truck</text>
+<rect x="10" y="44" width="185" height="74" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<circle cx="32" cy="70" r="11" fill="#2f6b3a"/><path d="M27 70 l4 4 l7 -8" stroke="#fff" stroke-width="3" fill="none"/>
+<text x="50" y="75" font-size="14" fill="#2f3a2b" text-anchor="start" font-weight="bold">Notched licence</text>
+<text x="102" y="102" font-size="13" fill="#8b5a2b" text-anchor="middle">with the meat</text>
+<rect x="205" y="44" width="185" height="74" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<circle cx="227" cy="70" r="11" fill="#2f6b3a"/><path d="M222 70 l4 4 l7 -8" stroke="#fff" stroke-width="3" fill="none"/>
+<text x="245" y="75" font-size="14" fill="#2f3a2b" text-anchor="start" font-weight="bold">Evidence of sex</text>
+<text x="297" y="102" font-size="13" fill="#8b5a2b" text-anchor="middle">still attached</text>
+<rect x="10" y="128" width="185" height="74" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<circle cx="32" cy="154" r="11" fill="#2f6b3a"/><path d="M27 154 l4 4 l7 -8" stroke="#fff" stroke-width="3" fill="none"/>
+<text x="50" y="159" font-size="14" fill="#2f3a2b" text-anchor="start" font-weight="bold">Antlers + skull plate</text>
+<text x="102" y="186" font-size="13" fill="#8b5a2b" text-anchor="middle">restricted season</text>
+<rect x="205" y="128" width="185" height="74" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<circle cx="227" cy="154" r="11" fill="#2f6b3a"/><path d="M222 154 l4 4 l7 -8" stroke="#fff" stroke-width="3" fill="none"/>
+<text x="245" y="159" font-size="14" fill="#2f3a2b" text-anchor="start" font-weight="bold">All edible portions</text>
+<text x="297" y="186" font-size="13" fill="#8b5a2b" text-anchor="middle">neck, ribs, quarters, loins</text>
+<rect x="10" y="212" width="185" height="74" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<circle cx="32" cy="238" r="11" fill="#2f6b3a"/><path d="M27 238 l4 4 l7 -8" stroke="#fff" stroke-width="3" fill="none"/>
+<text x="50" y="243" font-size="14" fill="#2f3a2b" text-anchor="start" font-weight="bold">Photo ID + FWID</text>
+<text x="102" y="270" font-size="13" fill="#8b5a2b" text-anchor="middle">Fish and Wildlife ID</text>
+<rect x="205" y="212" width="185" height="74" rx="10" fill="#f3ead8" stroke="#8a9a6b"/>
+<circle cx="227" cy="238" r="11" fill="#2f6b3a"/><path d="M222 238 l4 4 l7 -8" stroke="#fff" stroke-width="3" fill="none"/>
+<text x="245" y="243" font-size="14" fill="#2f3a2b" text-anchor="start" font-weight="bold">Check station?</text>
+<text x="297" y="270" font-size="13" fill="#8b5a2b" text-anchor="middle">Stop and report</text>
+<text x="200" y="296" font-size="13" fill="#8b5a2b" text-anchor="middle">All 95%, synopsis pages 3, 5, 12, 15</text>
+</svg>

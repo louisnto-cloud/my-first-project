@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A mountain with three temperature labels on an average day: 10 degrees C in the valley at 400 m, about 3.5 degrees at 1,400 m, and about minus 3 degrees at 2,400 m, because air cools about 6.5 degrees C for every 1,000 m of climb. Caption: rain at the truck can be snow on the ridge.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Air cools as you climb</text><text x="388" y="24" font-size="14" fill="#2f3a2b" text-anchor="end">example day</text>
+  <path d="M40 268 L160 90 L200 60 L240 90 L360 268 Z" fill="#e9edd9" stroke="#2f3a2b" stroke-width="2.5"/>
+  <path d="M120 150 L280 150" stroke="#e8590c" stroke-width="2" stroke-dasharray="5 4"/>
+  <rect x="227" y="240" width="167" height="24" rx="6" fill="#2f3a2b"/><text x="310.5" y="257" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Valley 400 m: 10°C</text>
+  <rect x="210" y="140" width="184" height="24" rx="6" fill="#e8590c"/><text x="302.0" y="157" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">1,400 m: about 3.5°C</text>
+  <rect x="177" y="50" width="217" height="24" rx="6" fill="#2f6fd6"/><text x="285.5" y="67" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">2,400 m: about minus 3°C</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Rain in the truck can be snow on the ridge</text>
+</svg>

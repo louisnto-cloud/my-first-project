@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 558" font-family="sans-serif" role="img" aria-label="Four key facts for the Heffley Creek base. One: the North Thompson River is the Management Unit line, the base side is MU 3-27 and the far bank MU 3-28. Two: in October any mule deer buck is legal, from 1 November a buck needs 4 points. Three: no ATV for hunting in MUs 3-28, 3-29 and 3-30 from 1 September to 10 December. Four: no firearm may be fired inside the City of Kamloops, and its boundary may reach the base, VERIFY.">
+<rect x="0" y="0" width="400" height="558" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Heffley Creek: 4 facts first</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">Region 3, the Thompson</text>
+<rect x="16" y="58" width="368" height="116" rx="10" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="26" y="82" font-size="15" font-weight="bold" fill="#23261f">The river is the MU line</text>
+<circle cx="368.0" cy="76" r="11" fill="#8a9a6b"/><path d="M363.05 76 l3.3 3.8499999999999996 l6.6 -7.699999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<text x="26" y="100" font-size="14" fill="#2f3a2b">Base side: MU 3-27 (85%). Far bank: MU 3-28</text>
+<text x="26" y="118" font-size="14" fill="#2f3a2b">(90%).</text>
+<g transform="translate(46.0 154) scale(0.62)"><path d="M-28 -16 l18 -5 l20 5 l18 -5 v36 l-18 5 l-20 -5 l-18 5 z" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2.5"/><path d="M-10 -21 v36 M10 -16 v36" stroke="#2f3a2b" stroke-width="1.5"/><path d="M-22 6 q10 -14 22 -4 t20 -6" stroke="#4a7fb0" stroke-width="3" fill="none"/><circle cx="4" cy="-6" r="4" fill="#e8590c"/></g>
+<rect x="16" y="184" width="368" height="98" rx="10" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="26" y="208" font-size="15" font-weight="bold" fill="#23261f">October: any mule deer buck</text>
+<circle cx="368.0" cy="202" r="11" fill="#8a9a6b"/><path d="M363.05 202 l3.3 3.8499999999999996 l6.6 -7.699999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<text x="26" y="226" font-size="14" fill="#2f3a2b">From 1 November a buck needs 4 points (99%).</text>
+<g transform="translate(46.0 262) scale(0.62)"><ellipse cx="0" cy="4" rx="17" ry="8" fill="#8b5a2b"/><path d="M12 0 L18 -10" stroke="#8b5a2b" stroke-width="5"/><ellipse cx="21" cy="-12" rx="6" ry="4" fill="#8b5a2b"/><path d="M19 -15 l-3 -9 m3 9 l3 -10 m-4.5 -4 l-4 -2" stroke="#6b4f35" stroke-width="2" fill="none"/><path d="M-12 10 v10 M-6 10 v10 M8 10 v10 M13 10 v10" stroke="#8b5a2b" stroke-width="3"/></g>
+<g transform="translate(133.0 262) scale(0.62)"><rect x="-24" y="-18" width="48" height="40" rx="4" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/><rect x="-24" y="-18" width="48" height="11" fill="#e8590c"/><path d="M-13 -23 v9 M13 -23 v9" stroke="#2f3a2b" stroke-width="3"/><g fill="#8a9a6b"><rect x="-17" y="-1" width="7" height="6"/><rect x="-4" y="-1" width="7" height="6"/><rect x="9" y="-1" width="7" height="6"/><rect x="-17" y="10" width="7" height="6"/><rect x="-4" y="10" width="7" height="6" fill="#e8590c"/></g></g>
+<rect x="16" y="292" width="368" height="116" rx="10" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="26" y="316" font-size="15" font-weight="bold" fill="#23261f">West bank: no ATV for hunting</text>
+<circle cx="368.0" cy="310" r="11" fill="#e8590c"/><path d="M363.6 305.6 L372.4 314.4 M372.4 305.6 L363.6 314.4" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<text x="26" y="334" font-size="14" fill="#2f3a2b">MUs 3-28, 3-29, 3-30, 1 Sept to 10 Dec</text>
+<text x="26" y="352" font-size="14" fill="#2f3a2b">(99%).</text>
+<g transform="translate(46.0 388) scale(0.62)"><circle cx="-18" cy="10" r="9" fill="#2f3a2b"/><circle cx="18" cy="10" r="9" fill="#2f3a2b"/><path d="M-24 2 h48 l-6 -10 h-30 z" fill="#6b4f35"/><path d="M8 -8 l4 -8 h6" stroke="#2f3a2b" stroke-width="3" fill="none"/></g>
+<rect x="16" y="418" width="368" height="116" rx="10" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="26" y="442" font-size="15" font-weight="bold" fill="#23261f">City of Kamloops: no firing at all</text>
+<circle cx="368.0" cy="436" r="11" fill="#e8590c"/><path d="M363.6 431.6 L372.4 440.4 M372.4 431.6 L363.6 440.4" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<text x="26" y="460" font-size="14" fill="#2f3a2b">Its boundary may reach the base (60%).</text>
+<text x="26" y="478" font-size="14" fill="#2f3a2b">VERIFY.</text>
+<g transform="translate(46.0 514) scale(0.62)"><path d="M-20 18 v-18 l20 -16 l20 16 v18 z" fill="#c9b79c" stroke="#2f3a2b" stroke-width="2"/><rect x="-5" y="4" width="10" height="14" fill="#2f3a2b"/></g>
+</svg>

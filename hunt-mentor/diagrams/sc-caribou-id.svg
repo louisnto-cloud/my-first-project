@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A caribou bull antler from the side, with the brow shovel over the face, the bez, the rear point, and points on top numbered 1 to 5, the tip of the main beam being point 5. Legal 5 point bull: one antler bears at least 5 tines, including the main beam tip, 98 percent. Warning box: cows grow antlers too. Antlers do not mean bull, 85 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Caribou: count the points</text>
+<g transform="translate(0 30) scale(0.88)">
+<path d="M60 210 L40 238 L52 246 L78 226 L100 220 L112 200 Z" fill="#8b6a48" stroke="#23261f" stroke-width="2"/>
+<path d="M96 222 C110 240 120 270 118 300 L170 300 C160 260 140 228 112 200 Z" fill="#f3ead8" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="80" cy="218" r="3" fill="#23261f"/>
+<path d="M100 202 C130 160 150 120 150 90 C150 70 140 56 120 50" fill="none" stroke="#c9a06a" stroke-width="10" stroke-linecap="round"/>
+<path d="M102 200 C90 190 76 186 62 190 M62 190 L56 182 M62 190 L54 194" fill="none" stroke="#c9a06a" stroke-width="7" stroke-linecap="round"/>
+<path d="M118 176 C100 168 92 158 86 146" fill="none" stroke="#c9a06a" stroke-width="7" stroke-linecap="round"/>
+<path d="M146 120 C160 116 170 112 180 106" fill="none" stroke="#c9a06a" stroke-width="6" stroke-linecap="round"/>
+<path d="M150 94 C140 86 130 84 122 86" fill="none" stroke="#c9a06a" stroke-width="5" stroke-linecap="round"/>
+<path d="M148 76 C160 66 168 62 176 62" fill="none" stroke="#c9a06a" stroke-width="5" stroke-linecap="round"/>
+<path d="M140 60 C142 46 148 40 154 36" fill="none" stroke="#c9a06a" stroke-width="5" stroke-linecap="round"/>
+<path d="M128 52 C126 42 122 36 116 32" fill="none" stroke="#c9a06a" stroke-width="5" stroke-linecap="round"/>
+<circle cx="122" cy="86" r="10" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/><text x="122" y="91" font-size="13" fill="#e8590c" text-anchor="middle" font-weight="bold">1</text>
+<circle cx="176" cy="62" r="10" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/><text x="176" y="67" font-size="13" fill="#e8590c" text-anchor="middle" font-weight="bold">2</text>
+<circle cx="154" cy="36" r="10" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/><text x="154" y="41" font-size="13" fill="#e8590c" text-anchor="middle" font-weight="bold">3</text>
+<circle cx="116" cy="32" r="10" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/><text x="116" y="37" font-size="13" fill="#e8590c" text-anchor="middle" font-weight="bold">4</text>
+<circle cx="120" cy="50" r="10" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/><text x="120" y="55" font-size="13" fill="#e8590c" text-anchor="middle" font-weight="bold">5</text>
+</g>
+<text x="170" y="150" font-size="14" fill="#4a7fb0" text-anchor="middle" font-weight="bold">Rear point</text>
+<line x1="170" y1="136" x2="167.6" y2="133.0" stroke="#4a7fb0" stroke-width="2"/><polygon points="162,126 163.8,136.1 171.5,129.9" fill="#4a7fb0"/>
+<text x="20" y="290" font-size="13" fill="#e8590c" text-anchor="start" font-weight="bold">Beam tip = point 5</text>
+<line x1="230" y1="40" x2="230" y2="290" stroke="#8a9a6b" stroke-dasharray="6 6" stroke-width="2"/>
+<text x="315" y="70" font-size="14" fill="#23261f" text-anchor="middle">5 point bull:</text>
+<text x="315" y="88" font-size="14" fill="#23261f" text-anchor="middle">one antler,</text>
+<text x="315" y="106" font-size="14" fill="#23261f" text-anchor="middle">at least 5 tines,</text>
+<text x="315" y="124" font-size="14" fill="#23261f" text-anchor="middle">beam tip included</text>
+<text x="315" y="142" font-size="14" fill="#23261f" text-anchor="middle">(98%)</text>
+<rect x="240" y="170" width="150" height="120" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
+<text x="315.0" y="206.8" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Cows grow</text>
+<text x="315.0" y="225.8" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">antlers too.</text>
+<text x="315.0" y="244.8" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Antlers do not</text>
+<text x="315.0" y="263.8" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">mean bull (85%).</text>
+</svg>

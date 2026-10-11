@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Bottom: light, bulky things you need least, like a puffy jacket or sleep gear.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="32" r="17" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="30" y="39" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">1</text>
+<text x="56" y="39" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="start">Bottom: light, bulky</text>
+<rect x="140" y="60" width="120" height="180" rx="20" fill="#dfe6d3" stroke="#8b5a2b" stroke-width="4"/><rect x="150" y="190" width="100" height="42" rx="10" fill="#2f3a2b"/><text x="200" y="216" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Puffy</text>
+<rect x="10" y="262" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="285.0" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Least needed, light and bulky.</text>
+</svg>

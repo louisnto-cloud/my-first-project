@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="What each hunter carries: a BC hunting licence, a species licence for each deer species hunted, and every species licence bought this licence year, used or unused. Each hunter has their own.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="28" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Each hunter carries their own</text>
+  <g>
+    <rect x="20" y="56" width="110" height="74" rx="8" fill="#4a7fb0"/><text x="75" y="88" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">BC hunting</text><text x="75" y="108" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">licence</text>
+    <rect x="145" y="56" width="110" height="74" rx="8" fill="#8b5a2b"/><text x="200" y="88" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Mule deer</text><text x="200" y="108" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">licence</text>
+    <rect x="270" y="56" width="110" height="74" rx="8" fill="#6b4f35"/><text x="325" y="88" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">White tail</text><text x="325" y="108" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">licence</text>
+  </g>
+  <text x="75" y="152" font-size="14" fill="#2f3a2b" text-anchor="middle">always</text>
+  <text x="262" y="152" font-size="14" fill="#2f3a2b" text-anchor="middle">one for each species you hunt</text>
+  <rect x="20" y="180" width="360" height="70" rx="8" fill="#2f3a2b"/>
+  <text x="200" y="208" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Carry every species licence bought</text>
+  <text x="200" y="230" font-size="15" font-weight="bold" fill="#ffd34d" text-anchor="middle">this year, used and unused (99%)</text>
+  <text x="200" y="282" font-size="14" fill="#2f3a2b" text-anchor="middle">Plus ID. Your brother needs his own set</text>
+</svg>

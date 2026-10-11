@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 2: Be in place before legal light. Moon or not, the timing is the same (Tip).">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Be in place before legal light</text>
+<g transform="translate(200 160) scale(1.8)"><circle cy="-14" r="6" fill="#e8590c"/><rect x="-6" y="-8" width="12" height="16" rx="3" fill="#e8590c"/><rect x="-5" y="8" width="4" height="10" fill="#2f3a2b"/><rect x="1" y="8" width="4" height="10" fill="#2f3a2b"/></g><g><circle cx="300" cy="100" r="18" fill="#2f3a2b" stroke="#23261f" stroke-width="1.5"/><path d="M300 82 A 18 18 0 0 0 300 118 Z" fill="#f4e7b8"/></g><text x="200" y="230" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Set and still before legal light</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Moon or not, the timing is the same (Tip).</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A rough example, a tip, built from the numbers on this screen. 10 nannies. Up to 40 percent have no kid in a year, so about 6 kids. 40 to 60 percent of kids die in their first winter, so about 3 live. Goats refill a range slowly, 85 percent. Leave the nanny." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Why each nanny counts</text>
+<text x="200.0" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">A rough example from the numbers below (Tip)</text>
+<text x="20" y="87" font-size="15" fill="#2f3a2b" text-anchor="start" font-weight="bold">10 nannies</text>
+<circle cx="160" cy="82" r="10" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="183" cy="82" r="10" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="206" cy="82" r="10" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="229" cy="82" r="10" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="252" cy="82" r="10" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="275" cy="82" r="10" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="298" cy="82" r="10" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="321" cy="82" r="10" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="344" cy="82" r="10" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="367" cy="82" r="10" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<text x="20" y="155" font-size="15" fill="#2f3a2b" text-anchor="start" font-weight="bold">about 6 kids</text>
+<circle cx="160" cy="150" r="9" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="183" cy="150" r="9" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="206" cy="150" r="9" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="229" cy="150" r="9" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="252" cy="150" r="9" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="275" cy="150" r="9" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<text x="20" y="223" font-size="15" fill="#2f3a2b" text-anchor="start" font-weight="bold">about 3 live</text>
+<circle cx="160" cy="218" r="9" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="183" cy="218" r="9" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="206" cy="218" r="9" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/>
+<text x="380" y="122" font-size="13" fill="#8b5a2b" text-anchor="end">up to 40% have no kid</text>
+<line x1="150" y1="100" x2="150.0" y2="123.0" stroke="#8b5a2b" stroke-width="2"/><polygon points="150,132 154.9,123.0 145.1,123.0" fill="#8b5a2b"/>
+<text x="380" y="190" font-size="13" fill="#8b5a2b" text-anchor="end">40 to 60% die first winter</text>
+<line x1="150" y1="168" x2="150.0" y2="191.0" stroke="#8b5a2b" stroke-width="2"/><polygon points="150,200 154.9,191.0 145.1,191.0" fill="#8b5a2b"/>
+<rect x="20" y="246" width="360" height="46" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
+<text x="200.0" y="264.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Goats refill a range slowly (85%).</text>
+<text x="200.0" y="282.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Leave the nanny.</text>
+</svg>

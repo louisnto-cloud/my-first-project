@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 329" role="img" aria-label="Cards: Islands and the harbour. Keats Island: No rifles. Bowen Island: No Shooting Area. No hunting within 150 m of highway, school, park, house and more. Clerk 604 947 4255. Burrard Inlet: No firearms east of Point Grey to Point Atkinson. Map B31 North Thormanby Island: No Shooting or Hunting Area." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="329" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Islands and the harbour</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 27</text>
+<rect x="6.0" y="69" width="190.0" height="130" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6.0 97 V78 Q6.0 69 15.0 69 H187.0 Q196.0 69 196.0 78 V97 Z" fill="#e8590c"/>
+<text x="14.0" y="89" font-size="14" font-weight="bold" fill="#ffffff">Keats Island</text>
+<text x="14.0" y="117" font-size="14" fill="#23261f">No rifles</text>
+<rect x="204.0" y="69" width="190.0" height="130" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204.0 97 V78 Q204.0 69 213.0 69 H385.0 Q394.0 69 394.0 78 V97 Z" fill="#c92a2a"/>
+<text x="212.0" y="89" font-size="14" font-weight="bold" fill="#ffffff">Bowen Island</text>
+<text x="212.0" y="117" font-size="14" fill="#23261f">No Shooting Area. No</text>
+<text x="212.0" y="135" font-size="14" fill="#23261f">hunting within 150 m of</text>
+<text x="212.0" y="153" font-size="14" fill="#23261f">highway, school, park,</text>
+<text x="212.0" y="171" font-size="14" fill="#23261f">house and more. Clerk</text>
+<text x="212.0" y="189" font-size="14" fill="#23261f">604 947 4255</text>
+<rect x="6.0" y="207" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6.0 253 V216 Q6.0 207 15.0 207 H187.0 Q196.0 207 196.0 216 V253 Z" fill="#e8590c"/>
+<text x="14.0" y="227" font-size="14" font-weight="bold" fill="#ffffff">Burrard Inlet</text>
+<text x="14.0" y="273" font-size="14" fill="#23261f">No firearms east of</text>
+<text x="14.0" y="291" font-size="14" fill="#23261f">Point Grey to Point</text>
+<text x="14.0" y="309" font-size="14" fill="#23261f">Atkinson</text>
+<rect x="204.0" y="207" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204.0 253 V216 Q204.0 207 213.0 207 H385.0 Q394.0 207 394.0 216 V253 Z" fill="#c92a2a"/>
+<text x="212.0" y="227" font-size="14" font-weight="bold" fill="#ffffff">Map B31 North</text>
+<text x="212.0" y="245" font-size="14" font-weight="bold" fill="#ffffff">Thormanby Island</text>
+<text x="212.0" y="273" font-size="14" fill="#23261f">No Shooting or Hunting</text>
+<text x="212.0" y="291" font-size="14" fill="#23261f">Area</text>
+</svg>

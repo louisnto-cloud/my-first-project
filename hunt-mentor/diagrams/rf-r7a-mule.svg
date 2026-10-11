@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 508" role="img" aria-label="Bar chart of Region 7A mule deer seasons. 4 point bucks in all units: 10 to 30 September. In most units, 7-2 to 7-11, 7-15 to 7-18, 7-23, 7-26 to 7-30 and 7-37 to 7-41: any antlered buck 1 to 31 October, 4 point bucks 1 to 30 November, and youth bucks 10 to 30 September. In 7-12 to 7-14, 7-24 and 7-25: 4 point bucks 1 October to 15 November, youth either sex 1 to 19 October, youth bow antlerless 1 to 9 September. Bow only bucks in all units: 1 to 9 September." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="508" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Mule deer seasons</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">All MUs: 7-2 to 7-18, 7-23 to 7-30, 7-37 to 7-41</text>
+<rect x="14.0" y="60" width="31.6" height="390" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="60" width="30.6" height="390" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="60" width="30.6" height="390" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="60" width="31.6" height="390" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="60" width="31.6" height="390" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="60" width="31.6" height="390" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="96" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">4 point bucks, all MUs</text>
+<rect x="86.4" y="102" width="21.4" height="20" rx="4" fill="#e8590c"/>
+<text x="112" y="117" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 10 to Sept 30</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Any buck, most MUs (More)</text>
+<rect x="107.8" y="148" width="31.6" height="20" rx="4" fill="#e8590c"/>
+<text x="143" y="163" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 1 to Oct 31</text>
+<text x="14" y="188" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">4 point bucks, most MUs (More)</text>
+<rect x="139.4" y="194" width="30.6" height="20" rx="4" fill="#e8590c"/>
+<text x="174" y="209" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Nov 1 to Nov 30</text>
+<text x="14" y="234" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">4 point bucks, 7-12 to 7-14, 7-24, 7-25</text>
+<rect x="107.8" y="240" width="46.9" height="20" rx="4" fill="#e8590c"/>
+<text x="159" y="255" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 1 to Nov 15</text>
+<text x="14" y="280" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, youth only, most MUs</text>
+<rect x="86.4" y="286" width="21.4" height="20" rx="4" fill="#4a7fb0"/>
+<text x="112" y="301" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 10 to Sept 30</text>
+<text x="14" y="326" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Either sex, youth, 7-12 to 7-14, 7-24, 7-25</text>
+<rect x="107.8" y="332" width="19.4" height="20" rx="4" fill="#4a7fb0"/>
+<text x="131" y="347" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 1 to Oct 19</text>
+<text x="14" y="372" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Antlerless, youth bow, same 5 MUs</text>
+<rect x="77.2" y="378" width="9.2" height="20" rx="4" fill="#2c5d86"/>
+<text x="90" y="393" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 9</text>
+<text x="14" y="418" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, bow only, all MUs</text>
+<rect x="77.2" y="424" width="9.2" height="20" rx="4" fill="#8b5a2b"/>
+<text x="90" y="439" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 9</text>
+<rect x="14" y="460" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="472" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+<rect x="149.60000000000002" y="460" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="168" y="472" font-size="14" fill="#23261f" text-anchor="start">Youth only (under 18)</text>
+<rect x="14" y="482" width="14" height="14" rx="3" fill="#2c5d86"/>
+<text x="32" y="494" font-size="14" fill="#23261f" text-anchor="start">Youth bow only</text>
+<rect x="149.60000000000002" y="482" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="168" y="494" font-size="14" fill="#23261f" text-anchor="start">Bow only</text>
+</svg>

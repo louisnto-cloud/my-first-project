@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" role="img" aria-label="Cross section of one slope from valley to peak. Grass and sage at the bottom: sharp tailed grouse, open only in MUs 3-30 and 3-31. Aspen and creeks: ruffed grouse, most common at 750 to 1,250 metres. Fir and pine: dusky grouse in summer, and spruce grouse. Spruce and subalpine fir: spruce grouse, and dusky grouse in winter. Alpine at the top: white tailed ptarmigan." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="320" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">One slope, five grouse homes</text>
+<rect x="0" y="40" width="400" height="54" fill="#f4f4f0"/>
+<polygon points="20,88 40,50 60,88" fill="#b9b3a6"/><polygon points="33,64 40,50 47,64" fill="#ffffff"/>
+<text x="78" y="62" font-size="14" fill="#6b4f35" text-anchor="start" font-weight="bold">Alpine, above trees</text>
+<text x="78" y="82" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">White tailed ptarmigan</text>
+<rect x="0" y="94" width="400" height="54" fill="#c9d4bd"/>
+<polygon points="30,106 14.7,140 45.3,140" fill="#2f3a2b"/><rect x="27" y="140" width="6" height="5" fill="#6b4f35"/>
+<polygon points="52,112 39.4,140 64.6,140" fill="#2f3a2b"/><rect x="49" y="140" width="6" height="4" fill="#6b4f35"/>
+<text x="78" y="116" font-size="14" fill="#6b4f35" text-anchor="start" font-weight="bold">Spruce, subalpine fir</text>
+<text x="78" y="136" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Spruce; dusky in winter</text>
+<rect x="0" y="148" width="400" height="54" fill="#d6dec8"/>
+<polygon points="30,160 14.7,194 45.3,194" fill="#46613d"/><rect x="27" y="194" width="6" height="5" fill="#6b4f35"/>
+<polygon points="52,166 39.4,194 64.6,194" fill="#46613d"/><rect x="49" y="194" width="6" height="4" fill="#6b4f35"/>
+<text x="78" y="170" font-size="14" fill="#6b4f35" text-anchor="start" font-weight="bold">Douglas fir and pine</text>
+<text x="78" y="190" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Dusky in summer; spruce</text>
+<rect x="0" y="202" width="400" height="54" fill="#e8ead6"/>
+<rect x="27" y="234" width="6" height="20" fill="#d8d2c4" stroke="#6b4f35" stroke-width="1"/><ellipse cx="30" cy="226" rx="12" ry="14" fill="#e9c46a"/>
+<rect x="49" y="237" width="6" height="17" fill="#d8d2c4" stroke="#6b4f35" stroke-width="1"/><ellipse cx="52" cy="230" rx="10" ry="12" fill="#e9c46a"/>
+<text x="78" y="224" font-size="14" fill="#6b4f35" text-anchor="start" font-weight="bold">Aspen, creek draws</text>
+<text x="78" y="244" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Ruffed: 750 to 1,250 m</text>
+<rect x="0" y="256" width="400" height="54" fill="#efe6cf"/>
+<ellipse cx="32" cy="296" rx="14" ry="7" fill="#b8b08a"/><ellipse cx="54" cy="298" rx="10" ry="5" fill="#b8b08a"/>
+<text x="78" y="278" font-size="14" fill="#6b4f35" text-anchor="start" font-weight="bold">Grass and sage</text>
+<text x="78" y="298" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Sharp tailed: MUs 3-30, 3-31</text>
+<path d="M300 310 L330 260 L350 200 L370 140 L385 80 L395 40" fill="none" stroke="#23261f" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="398" y="312" font-size="14" fill="#23261f" text-anchor="end">Uphill</text>
+</svg>

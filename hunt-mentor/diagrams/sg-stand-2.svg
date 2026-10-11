@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 2: check the wind and the thermal for the hour you will sit. Morning air rises, so sit above or beside the line. Evening air sinks, so sit below or beside it.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<rect x="0" y="40" width="400" height="70" fill="#8a9a6b"/>
+<g fill="#2f3a2b"><polygon points="30,100 42,62 54,100"/><polygon points="90,95 102,57 114,95"/><polygon points="300,100 312,62 324,100"/><polygon points="355,95 367,57 379,95"/></g>
+<rect x="0" y="215" width="400" height="85" fill="#e9dfa8"/>
+<text x="20" y="290" font-size="15" font-weight="bold" fill="#6b4f35">Feed</text>
+<text x="160" y="62" font-size="15" font-weight="bold" fill="#fff">Bed, uphill</text>
+<path d="M180 105 C 220 140, 150 180, 200 225" fill="none" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Check wind for that hour</text>
+<g stroke="#4a7fb0" stroke-width="4" fill="none"><path d="M60 200 V130"/><path d="M50 142 l10 -14 l10 14"/><path d="M340 130 V200"/><path d="M330 188 l10 14 l10 -14"/></g><text x="60" y="125" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Morning</text><text x="60" y="160" font-size="14" fill="#2f3a2b" text-anchor="start" dx="14">sit above</text><text x="340" y="125" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Evening</text><text x="326" y="170" font-size="14" fill="#2f3a2b" text-anchor="end">sit below</text>
+</svg>

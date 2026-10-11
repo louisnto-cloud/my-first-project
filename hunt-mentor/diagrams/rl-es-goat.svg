@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Map view of a cliff band of 40 degrees or more. Orange dashed lines on each side mark about 400 to 500 m out from the cliffs, the distance mountain goats usually stay within when feeding, often less in winter. Two goats feed inside that band.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Mountain goats: never far from cliffs</text>
+  <rect x="0" y="36" width="400" height="232" fill="#e9e3c4"/>
+  <path d="M120 36 L160 120 L140 200 L170 268 L240 268 L220 190 L250 110 L230 36 Z" fill="#9a8f7c"/>
+  <path d="M120 36 L160 120 L140 200 L170 268 M230 36 L250 110 L220 190 L240 268" stroke="#2f3a2b" stroke-width="2" fill="none"/>
+  <path d="M40 36 L80 120 L60 200 L90 268 M320 36 L330 110 L300 190 L320 268" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6" fill="none"/>
+  <text x="190" y="160" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">CLIFF</text><text x="190" y="178" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">40° or more</text>
+  <ellipse cx="300" cy="80" rx="10" ry="6" fill="#fff" stroke="#2f3a2b"/><ellipse cx="80" cy="230" rx="10" ry="6" fill="#fff" stroke="#2f3a2b"/>
+  <rect x="177" y="220" width="217" height="24" rx="6" fill="#e8590c"/><text x="285.5" y="237" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Feed within 400 to 500 m</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Less in winter. Cliffs are their safety.</text>
+</svg>

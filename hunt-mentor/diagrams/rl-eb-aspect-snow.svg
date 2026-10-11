@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A mountain seen from the east with the south face on the left and the north face on the right. Snow covers only the top of the sunny south face but reaches much lower on the shady north face. Caption: deer find bare ground on the sunny side.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Snow line by aspect</text><text x="388" y="24" font-size="14" fill="#2f3a2b" text-anchor="end">looking west</text>
+  <path d="M30 268 L200 60 L370 268 Z" fill="#e9edd9" stroke="#2f3a2b" stroke-width="2.5"/>
+  <path d="M200 60 L370 268 L200 268 Z" fill="#a9b68e"/>
+  <path d="M200 60 L158 112 L242 112 Z" fill="#fff"/>
+  <path d="M200 60 L242 112 L300 182 L200 182 Z" fill="#fff"/>
+  <path d="M158 112 L242 112" stroke="#9cc3ea" stroke-width="2"/>
+  <rect x="20" y="112" width="192" height="24" rx="6" fill="#e8590c"/><text x="116.0" y="129" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">South: snow line high</text><rect x="236" y="190" width="158" height="24" rx="6" fill="#2f6fd6"/><text x="315.0" y="207" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">North: snow lower</text>
+  <text x="110" y="258" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">SOUTH</text><text x="290" y="258" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">NORTH</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Deer find bare ground on the sunny side</text>
+</svg>

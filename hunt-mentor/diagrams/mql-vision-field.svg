@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Top view of a bird head and its field of view. Each eye looks out to the side, so together they see almost all the way around. Only a narrow wedge in front, about 26 degrees in the chicken, is seen by both eyes, 70 percent. A small blind area sits behind the head. Birds have four colour cone types including ultraviolet, 85 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">What a quail sees (top view)</text>
+<circle cx="200" cy="165" r="110" fill="#f3e3c3"/>
+<path d="M200 165 L178 57 A110 110 0 0 1 222 57 Z" fill="#e8590c" opacity=".55"/>
+<path d="M200 165 L232 270 A110 110 0 0 1 168 270 Z" fill="#9a9ca2"/>
+<ellipse cx="200" cy="170" rx="22" ry="30" fill="#7d7f86"/><circle cx="200" cy="140" r="16" fill="#7d7f86"/>
+<path d="M196 124 l4 -12 l4 12 Z" fill="#333"/><circle cx="186" cy="140" r="4" fill="#111"/><circle cx="214" cy="140" r="4" fill="#111"/>
+<text x="200" y="50" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Both eyes: narrow wedge (70%)</text>
+<text x="70" y="170" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Left eye</text>
+<text x="330" y="170" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Right eye</text>
+<text x="200" y="292" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Small blind spot behind</text>
+<rect x="10" y="196" width="120" height="44" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2"/>
+<text x="70" y="215" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4 colour cones</text>
+<text x="70" y="233" font-size="14" fill="#2f3a2b" text-anchor="middle">incl. UV (85%)</text>
+<rect x="270" y="196" width="120" height="44" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2"/>
+<text x="330" y="215" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sees movement</text>
+<text x="330" y="233" font-size="14" fill="#2f3a2b" text-anchor="middle">all around (Tip)</text>
+</svg>

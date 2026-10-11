@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="560" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Walking side by side</text>
+  <path d="M120,230 L66,100 A140,140 0 0 1 174,100 Z" fill="#8a9a6b" fill-opacity="0.55" stroke="#2f3a2b" stroke-width="2"/>
+  <path d="M280,230 L226,100 A140,140 0 0 1 334,100 Z" fill="#8a9a6b" fill-opacity="0.55" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="120" y="160" font-size="15" fill="#23261f" text-anchor="middle">A shoots</text>
+  <text x="120" y="178" font-size="15" fill="#23261f" text-anchor="middle">here only</text>
+  <text x="280" y="160" font-size="15" fill="#23261f" text-anchor="middle">B shoots</text>
+  <text x="280" y="178" font-size="15" fill="#23261f" text-anchor="middle">here only</text>
+  <path d="M174,100 L200,60 L226,100 L200,215 Z" fill="#e8590c" fill-opacity="0.25" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="200" y="52" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">NO SHOT</text>
+  <circle cx="120" cy="238" r="12" fill="#6b4f35" stroke="#23261f" stroke-width="2"/>
+  <circle cx="280" cy="238" r="12" fill="#6b4f35" stroke="#23261f" stroke-width="2"/>
+  <text x="120" y="273" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">A</text>
+  <text x="280" y="273" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">B</text>
+  <path d="M140,262 L260,262" fill="none" stroke="#23261f" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="200" y="256" font-size="14" fill="#23261f" text-anchor="middle">in sight, in line</text>
+  <text x="200" y="296" font-size="14" fill="#2f3a2b" text-anchor="middle">Each arc about 45 degrees, straight ahead</text>
+  <line x1="20" y1="314" x2="380" y2="314" stroke="#8a9a6b" stroke-width="2"/>
+  <text x="200" y="344" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Small boat, back to back</text>
+  <path d="M300,450 L370,400 A86,86 0 0 1 370,500 Z" fill="#8a9a6b" fill-opacity="0.55" stroke="#2f3a2b" stroke-width="2"/>
+  <path d="M100,450 L30,400 A86,86 0 0 0 30,500 Z" fill="#8a9a6b" fill-opacity="0.55" stroke="#2f3a2b" stroke-width="2"/>
+  <path d="M95,425 L280,425 Q330,425 345,450 Q330,475 280,475 L95,475 Z" fill="#6b4f35" fill-opacity="0.35" stroke="#6b4f35" stroke-width="3"/>
+  <circle cx="270" cy="450" r="11" fill="#6b4f35" stroke="#23261f" stroke-width="2"/>
+  <circle cx="130" cy="450" r="11" fill="#6b4f35" stroke="#23261f" stroke-width="2"/>
+  <text x="270" y="415" font-size="14" fill="#23261f" text-anchor="middle">bow shooter</text>
+  <text x="130" y="415" font-size="14" fill="#23261f" text-anchor="middle">stern shooter</text>
+  <text x="372" y="390" font-size="14" fill="#23261f" text-anchor="end">bow arc</text>
+  <text x="28" y="390" font-size="14" fill="#23261f" text-anchor="start">stern arc</text>
+  <text x="200" y="456" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">NO SHOT</text>
+  <text x="200" y="512" font-size="14" fill="#23261f" text-anchor="middle">Sit to shoot. Never swing past</text>
+  <text x="200" y="530" font-size="14" fill="#23261f" text-anchor="middle">your partner. Motor off, anchored.</text>
+</svg>

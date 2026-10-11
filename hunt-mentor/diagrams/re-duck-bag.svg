@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 299" role="img" aria-label="Grid: Ducks: daily bag. All ducks together, a day: 8. Pintails, at most: 4. Canvasbacks, at most: 4. Goldeneyes, Barrow&#x27;s and Common together: 2. Harlequins, at most: 2. Ducks in possession: 24." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="299" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Ducks: daily bag</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">The 4, 4, 2 and 2 count inside the 8, never on</text>
+<text x="200" y="65" font-size="14" fill="#8b5a2b" text-anchor="middle">top.</text>
+<rect x="6.0" y="87" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="68.0" y="121" font-size="26" font-weight="bold" fill="#e8590c" text-anchor="middle">8</text>
+<text x="68.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">All ducks</text>
+<text x="68.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">together, a day</text>
+<rect x="138.0" y="87" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<text x="200.0" y="121" font-size="26" font-weight="bold" fill="#4a7fb0" text-anchor="middle">4</text>
+<text x="200.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">Pintails, at</text>
+<text x="200.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">most</text>
+<rect x="270.0" y="87" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<text x="332.0" y="121" font-size="26" font-weight="bold" fill="#4a7fb0" text-anchor="middle">4</text>
+<text x="332.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">Canvasbacks, at</text>
+<text x="332.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">most</text>
+<rect x="6.0" y="183" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<text x="68.0" y="217" font-size="26" font-weight="bold" fill="#4a7fb0" text-anchor="middle">2</text>
+<text x="68.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">Goldeneyes,</text>
+<text x="68.0" y="259" font-size="14" fill="#23261f" text-anchor="middle">Barrow&#x27;s and</text>
+<text x="68.0" y="277" font-size="14" fill="#23261f" text-anchor="middle">Common together</text>
+<rect x="138.0" y="183" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<text x="200.0" y="217" font-size="26" font-weight="bold" fill="#4a7fb0" text-anchor="middle">2</text>
+<text x="200.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">Harlequins, at</text>
+<text x="200.0" y="259" font-size="14" fill="#23261f" text-anchor="middle">most</text>
+<rect x="270.0" y="183" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<text x="332.0" y="217" font-size="26" font-weight="bold" fill="#8b5a2b" text-anchor="middle">24</text>
+<text x="332.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">Ducks in</text>
+<text x="332.0" y="259" font-size="14" fill="#23261f" text-anchor="middle">possession</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="River boundary rule. The North Thompson flows south, down the page. Face downstream: your right hand points to the west bank. The MU boundary follows that right bank. Heffley Creek, on the east bank, is in MU 3-27. The far west side is MU 3-28.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="0" width="160" height="300" fill="#c9b79c" opacity=".6"/>
+  <rect x="240" y="0" width="160" height="300" fill="#dfe6d3"/>
+  <path d="M150 0 C 140 80, 170 160, 150 300 L250 300 C 270 160, 240 80, 250 0 Z" fill="#4a7fb0" opacity=".7"/>
+  <path d="M150 0 C 140 80, 170 160, 150 300" fill="none" stroke="#c0392b" stroke-width="5" stroke-dasharray="12 6"/>
+  <path d="M200 40 L200 110" stroke="#fff" stroke-width="4"/><polygon points="192,106 208,106 200,122" fill="#fff"/>
+  <text x="208" y="70" font-size="14" font-weight="bold" fill="#fff">flow</text>
+  <circle cx="200" cy="170" r="11" fill="#e8590c"/>
+  <path d="M190 170 L150 170" stroke="#e8590c" stroke-width="3"/><polygon points="152,164 152,176 142,170" fill="#e8590c"/>
+  <text x="200" y="200" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">facing</text>
+  <text x="200" y="216" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">downstream</text>
+  <text x="78" y="130" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">your right</text>
+  <text x="78" y="148" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">hand = line</text>
+  <text x="78" y="40" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">MU 3-28</text>
+  <text x="78" y="58" font-size="14" fill="#2f3a2b" text-anchor="middle">west bank</text>
+  <text x="320" y="40" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">MU 3-27</text>
+  <text x="320" y="58" font-size="14" fill="#2f3a2b" text-anchor="middle">east bank</text>
+  <circle cx="300" cy="170" r="6" fill="#2f3a2b"/><text x="320" y="176" font-size="14" fill="#2f3a2b">Heffley</text><text x="320" y="192" font-size="14" fill="#2f3a2b">Creek</text>
+  <text x="200" y="290" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">red dashes = boundary</text>
+  <text x="380" y="290" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">N up</text>
+</svg>

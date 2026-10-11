@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Two pictures side by side. Left: a sheep or goat standing on a cliff edge, marked no, because it falls, the horns smash and the meat is lost. Right: the animal on a flat bench, marked yes, it drops where you can reach it. This is a tip." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<line x1="200" y1="40" x2="200" y2="230" stroke="#8a9a6b" stroke-width="2" stroke-dasharray="6 6"/>
+<text x="100" y="26" font-size="16" fill="#e8590c" text-anchor="middle" font-weight="bold">Cliff edge</text>
+<text x="300" y="26" font-size="16" fill="#2f6b3a" text-anchor="middle" font-weight="bold">Bench below you</text>
+<path d="M20 110 L120 110 L124 230 L20 230 Z" fill="#9a9a90" stroke="#6b6b62" stroke-width="2"/>
+<path d="M120 110 L140 230" stroke="#6b6b62" stroke-width="2" stroke-dasharray="4 4"/>
+<g transform="translate(95 89)"><ellipse cx="0" cy="0" rx="22" ry="11" fill="#c9a27a" stroke="#23261f"/><path d="M-18 -4 L-28 -16 L-36 -12 L-30 -2 Z" fill="#c9a27a" stroke="#23261f"/><path d="M-26 -16 c-4 -8 6 -10 5 -2" fill="none" stroke="#5c3b1c" stroke-width="3"/><path d="M-14 8 v12 M-6 9 v11 M8 9 v11 M16 8 v12" stroke="#23261f" stroke-width="3"/></g>
+<line x1="150" y1="110" x2="159.1" y2="201.0" stroke="#e8590c" stroke-width="3"/><polygon points="160,210 164.0,200.6 154.2,201.5" fill="#e8590c"/>
+<circle cx="100" cy="170" r="14" fill="#e8590c"/><path d="M95 165 l10 10 m0 -10 l-10 10" stroke="#fff" stroke-width="3" fill="none"/>
+<path d="M220 160 C260 150 330 150 390 160 L390 230 L220 230 Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<g transform="translate(300 140)"><ellipse cx="0" cy="0" rx="22" ry="11" fill="#c9a27a" stroke="#23261f"/><path d="M-18 -4 L-28 -16 L-36 -12 L-30 -2 Z" fill="#c9a27a" stroke="#23261f"/><path d="M-26 -16 c-4 -8 6 -10 5 -2" fill="none" stroke="#5c3b1c" stroke-width="3"/><path d="M-14 8 v12 M-6 9 v11 M8 9 v11 M16 8 v12" stroke="#23261f" stroke-width="3"/></g>
+<circle cx="300" cy="196" r="14" fill="#2f6b3a"/><path d="M295 196 l4 4 l7 -8" stroke="#fff" stroke-width="3" fill="none"/>
+<rect x="10" y="240" width="185" height="54" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
+<text x="102.5" y="262.9" font-size="14" fill="#23261f" text-anchor="middle">Falls: horns smash,</text>
+<text x="102.5" y="280.9" font-size="14" fill="#23261f" text-anchor="middle">meat lost</text>
+<rect x="205" y="240" width="185" height="54" rx="8" fill="#e3eedc" stroke="#2f6b3a" stroke-width="2"/>
+<text x="297.5" y="262.9" font-size="14" fill="#23261f" text-anchor="middle">Drops where you</text>
+<text x="297.5" y="280.9" font-size="14" fill="#23261f" text-anchor="middle">can reach it</text>
+</svg>

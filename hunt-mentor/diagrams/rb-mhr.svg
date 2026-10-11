@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 268" role="img" aria-label="Mandatory Hunter Report. Anyone who bought an elk, moose or caribou species licence reports by 31 March, hunted or not. Three ways: online in WILD, in person at FrontCounter BC, or by mail on the official form. Missing it is an offence, and you cannot buy a licence or apply for LEH next season until you file." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="268" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Mandatory Hunter Report</text>
+<rect x="10" y="42" width="380" height="58" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="200" y="66" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Bought an elk, moose or caribou licence?</text>
+<text x="200" y="86" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Report by 31 March, hunted or not.</text>
+<line x1="200" y1="100" x2="75.9" y2="122.9" stroke="#2f3a2b" stroke-width="2"/><polygon points="70,124 78.1,118.1 79.6,126.6" fill="#2f3a2b"/>
+<rect x="10" y="126" width="120" height="58" rx="10" fill="#5c7a3a" stroke="#5c7a3a" stroke-width="2"/>
+<text x="70" y="150" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">WILD</text><text x="70" y="172" font-size="14" fill="#ffffff" text-anchor="middle">online</text>
+<line x1="200" y1="100" x2="198.5" y2="118.0" stroke="#2f3a2b" stroke-width="2"/><polygon points="198,124 194.4,114.7 203.1,115.4" fill="#2f3a2b"/>
+<rect x="138" y="126" width="120" height="58" rx="10" fill="#5c7a3a" stroke="#5c7a3a" stroke-width="2"/>
+<text x="198" y="150" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">FrontCounter</text><text x="198" y="172" font-size="14" fill="#ffffff" text-anchor="middle">in person</text>
+<line x1="200" y1="100" x2="320.1" y2="122.9" stroke="#2f3a2b" stroke-width="2"/><polygon points="326,124 316.3,126.6 318.0,118.0" fill="#2f3a2b"/>
+<rect x="266" y="126" width="120" height="58" rx="10" fill="#5c7a3a" stroke="#5c7a3a" stroke-width="2"/>
+<text x="326" y="150" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Mail</text><text x="326" y="172" font-size="14" fill="#ffffff" text-anchor="middle">official form</text>
+<rect x="10" y="198" width="380" height="58" rx="10" fill="#fdecea" stroke="#c92a2a" stroke-width="2"/>
+<text x="200" y="222" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">Miss it: an offence, and no licence or</text>
+<text x="200" y="242" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">LEH application next season until you file.</text>
+</svg>

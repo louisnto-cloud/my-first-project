@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Two top views. Good, ticked: the wind blows from the deer to you, so your scent drifts behind you, away from the deer. Bad, crossed: the wind blows from you to the deer, and your scent cone reaches it.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="8" y="8" width="188" height="284" rx="10" fill="#dfe6d3"/><rect x="204" y="8" width="188" height="284" rx="10" fill="#efe2d6"/>
+  <text x="102" y="34" font-size="17" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Good</text>
+  <text x="298" y="34" font-size="17" font-weight="bold" fill="#c0392b" text-anchor="middle">Bad</text>
+  <g transform="translate(102 76)"><ellipse rx="20" ry="10" fill="#8b5a2b"/><circle cx="18" cy="-9" r="6" fill="#8b5a2b"/></g>
+  <path d="M60 110 L60 150" stroke="#4a7fb0" stroke-width="4"/><polygon points="52,146 68,146 60,160" fill="#4a7fb0"/>
+  <path d="M144 110 L144 150" stroke="#4a7fb0" stroke-width="4"/><polygon points="136,146 152,146 144,160" fill="#4a7fb0"/>
+  <path d="M102 196 L66 284 L138 284 Z" fill="#e8590c" opacity=".2"/>
+  <circle cx="102" cy="196" r="10" fill="#e8590c"/>
+  <text x="102" y="226" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You</text>
+  <text x="102" y="268" font-size="14" fill="#2f3a2b" text-anchor="middle">scent behind you</text>
+  <g transform="translate(298 76)"><ellipse rx="20" ry="10" fill="#8b5a2b"/><circle cx="18" cy="-9" r="6" fill="#8b5a2b"/></g>
+  <path d="M298 196 L262 60 L334 60 Z" fill="#e8590c" opacity=".2"/>
+  <circle cx="298" cy="196" r="10" fill="#e8590c"/>
+  <text x="298" y="226" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You</text>
+  <path d="M256 170 L256 130" stroke="#4a7fb0" stroke-width="4"/><polygon points="248,134 264,134 256,120" fill="#4a7fb0"/>
+  <path d="M340 170 L340 130" stroke="#4a7fb0" stroke-width="4"/><polygon points="332,134 348,134 340,120" fill="#4a7fb0"/>
+  <text x="298" y="268" font-size="14" fill="#2f3a2b" text-anchor="middle">deer smells you</text>
+  <text x="102" y="134" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="middle">wind</text>
+  <text x="298" y="150" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="middle">wind</text>
+</svg>

@@ -1,0 +1,719 @@
+{
+ "area": "G",
+ "name": "Shuswap and Revelstoke",
+ "box": [
+  -119.4,
+  50.5,
+  -117.6,
+  51.6
+ ],
+ "base": {
+  "name": "Salmon Arm",
+  "lat": 50.7005,
+  "lon": -119.2791,
+  "note": "Nominatim 2026-10-04 (municipality centroid)"
+ },
+ "generated": "2026-10-04",
+ "total": 1052,
+ "counts": {
+  "byCategory": {
+   "camp": 90,
+   "atv": 210,
+   "drive": 414,
+   "walk": 329,
+   "backcountry": 9
+  },
+  "byPrimary": {
+   "camp": 90,
+   "deer": 216,
+   "duck": 250,
+   "grouse": 233,
+   "moose": 207,
+   "quail": 56
+  },
+  "byPressure": {
+   "busier": 561,
+   "average": 396,
+   "remote": 61,
+   "quieter": 34
+  },
+  "byPrimaryCategory": {
+   "camp:camp": 90,
+   "deer:atv": 55,
+   "deer:drive": 75,
+   "deer:walk": 86,
+   "duck:backcountry": 2,
+   "duck:drive": 169,
+   "duck:walk": 79,
+   "grouse:atv": 79,
+   "grouse:drive": 80,
+   "grouse:walk": 74,
+   "moose:atv": 63,
+   "moose:backcountry": 7,
+   "moose:drive": 66,
+   "moose:walk": 71,
+   "quail:atv": 13,
+   "quail:drive": 24,
+   "quail:walk": 19
+  },
+  "bySpeciesTag": {
+   "deer": 231,
+   "bear": 278,
+   "moose": 256,
+   "duck": 250,
+   "grouse": 233,
+   "quail": 56
+  }
+ },
+ "routes": 1221,
+ "camps": 99,
+ "bytes": {
+  "index.geojson": 263394,
+  "detail": 3902066,
+  "routes": 2992097,
+  "camps.geojson": 51800
+ },
+ "tiles": {
+  "deg": 0.25,
+  "detail": [
+   "-471_202",
+   "-471_203",
+   "-471_204",
+   "-471_206",
+   "-472_201",
+   "-472_202",
+   "-472_203",
+   "-472_204",
+   "-472_205",
+   "-472_206",
+   "-473_202",
+   "-473_203",
+   "-473_204",
+   "-473_205",
+   "-473_206",
+   "-474_201",
+   "-474_202",
+   "-474_203",
+   "-474_204",
+   "-474_205",
+   "-474_206",
+   "-475_202",
+   "-475_203",
+   "-475_204",
+   "-475_205",
+   "-475_206",
+   "-476_202",
+   "-476_203",
+   "-476_204",
+   "-476_205",
+   "-476_206",
+   "-477_202",
+   "-477_203",
+   "-477_204",
+   "-477_205",
+   "-477_206",
+   "-478_202",
+   "-478_203",
+   "-478_204",
+   "-478_205",
+   "-478_206"
+  ],
+  "routes": {
+   "-471_202": [
+    -117.743,
+    50.483,
+    -117.617,
+    50.736
+   ],
+   "-471_203": [
+    -117.747,
+    50.757,
+    -117.597,
+    50.935
+   ],
+   "-471_204": [
+    -117.763,
+    51.146,
+    -117.74,
+    51.164
+   ],
+   "-471_206": [
+    -117.768,
+    51.57,
+    -117.74,
+    51.612
+   ],
+   "-472_201": [
+    -117.991,
+    50.485,
+    -117.857,
+    50.525
+   ],
+   "-472_202": [
+    -118.003,
+    50.513,
+    -117.755,
+    50.76
+   ],
+   "-472_203": [
+    -118.005,
+    50.753,
+    -117.724,
+    51.01
+   ],
+   "-472_204": [
+    -117.954,
+    51.015,
+    -117.789,
+    51.269
+   ],
+   "-472_205": [
+    -118.009,
+    51.221,
+    -117.801,
+    51.509
+   ],
+   "-472_206": [
+    -117.874,
+    51.505,
+    -117.767,
+    51.571
+   ],
+   "-473_202": [
+    -118.084,
+    50.554,
+    -117.992,
+    50.747
+   ],
+   "-473_203": [
+    -118.253,
+    50.73,
+    -117.998,
+    50.983
+   ],
+   "-473_204": [
+    -118.272,
+    51.001,
+    -117.95,
+    51.222
+   ],
+   "-473_205": [
+    -118.287,
+    51.259,
+    -118.004,
+    51.519
+   ],
+   "-473_206": [
+    -118.243,
+    51.485,
+    -118.013,
+    51.602
+   ],
+   "-474_201": [
+    -118.398,
+    50.495,
+    -118.359,
+    50.504
+   ],
+   "-474_202": [
+    -118.502,
+    50.506,
+    -118.341,
+    50.763
+   ],
+   "-474_203": [
+    -118.5,
+    50.714,
+    -118.244,
+    51.016
+   ],
+   "-474_204": [
+    -118.426,
+    50.991,
+    -118.251,
+    51.089
+   ],
+   "-474_205": [
+    -118.547,
+    51.206,
+    -118.208,
+    51.471
+   ],
+   "-474_206": [
+    -118.469,
+    51.508,
+    -118.22,
+    51.601
+   ],
+   "-475_202": [
+    -118.763,
+    50.497,
+    -118.483,
+    50.74
+   ],
+   "-475_203": [
+    -118.768,
+    50.745,
+    -118.505,
+    50.998
+   ],
+   "-475_204": [
+    -118.704,
+    50.998,
+    -118.446,
+    51.194
+   ],
+   "-475_205": [
+    -118.746,
+    51.271,
+    -118.537,
+    51.458
+   ],
+   "-475_206": [
+    -118.677,
+    51.489,
+    -118.545,
+    51.604
+   ],
+   "-476_202": [
+    -119.0,
+    50.483,
+    -118.75,
+    50.76
+   ],
+   "-476_203": [
+    -118.992,
+    50.754,
+    -118.725,
+    51.017
+   ],
+   "-476_204": [
+    -118.984,
+    50.969,
+    -118.766,
+    51.266
+   ],
+   "-476_205": [
+    -119.011,
+    51.244,
+    -118.768,
+    51.487
+   ],
+   "-476_206": [
+    -118.931,
+    51.489,
+    -118.878,
+    51.574
+   ],
+   "-477_202": [
+    -119.286,
+    50.518,
+    -118.989,
+    50.752
+   ],
+   "-477_203": [
+    -119.241,
+    50.721,
+    -118.997,
+    50.993
+   ],
+   "-477_204": [
+    -119.243,
+    50.983,
+    -118.985,
+    51.286
+   ],
+   "-477_205": [
+    -119.256,
+    51.257,
+    -118.995,
+    51.495
+   ],
+   "-477_206": [
+    -119.25,
+    51.494,
+    -119.082,
+    51.613
+   ],
+   "-478_202": [
+    -119.408,
+    50.516,
+    -119.25,
+    50.655
+   ],
+   "-478_203": [
+    -119.402,
+    50.784,
+    -119.227,
+    51.033
+   ],
+   "-478_204": [
+    -119.399,
+    51.03,
+    -119.21,
+    51.182
+   ],
+   "-478_205": [
+    -119.402,
+    51.262,
+    -119.248,
+    51.496
+   ],
+   "-478_206": [
+    -119.382,
+    51.533,
+    -119.247,
+    51.595
+   ]
+  }
+ },
+ "layerDates": {
+  "roads": "2026-10-04",
+  "private": "2026-09-25",
+  "privateFetched": "2026-10-04",
+  "closures": "2026-10-03",
+  "mu": "2026-10-03",
+  "parks": "2026-10-03",
+  "reserves": "2026-10-03",
+  "cities": "2026-10-03",
+  "wma": "2026-10-03",
+  "cutblocks": "2026-10-04",
+  "burns": "2026-10-04",
+  "winterRange": "2026-10-04",
+  "dem": "2026-10-04"
+ },
+ "stats": {
+  "deer": {
+   "drive": {
+    "candidates": 922,
+    "droppedWeak": 813,
+    "droppedCap": 0,
+    "kept": 109
+   },
+   "atv": {
+    "candidates": 693,
+    "droppedWeak": 610,
+    "droppedCap": 0,
+    "kept": 83
+   },
+   "walk": {
+    "candidates": 960,
+    "droppedWeak": 859,
+    "droppedCap": 0,
+    "kept": 101
+   },
+   "backcountry": {
+    "candidates": 41,
+    "droppedWeak": 41,
+    "droppedCap": 0,
+    "kept": 0
+   },
+   "droppedOnClosedLand": 9,
+   "droppedExact": 57
+  },
+  "moose": {
+   "drive": {
+    "candidates": 970,
+    "droppedWeak": 440,
+    "droppedCap": 450,
+    "kept": 80
+   },
+   "atv": {
+    "candidates": 702,
+    "droppedWeak": 342,
+    "droppedCap": 280,
+    "kept": 80
+   },
+   "walk": {
+    "candidates": 1063,
+    "droppedWeak": 594,
+    "droppedCap": 389,
+    "kept": 80
+   },
+   "backcountry": {
+    "candidates": 69,
+    "droppedWeak": 59,
+    "droppedCap": 0,
+    "kept": 10
+   },
+   "droppedOnClosedLand": 7,
+   "droppedExact": 31
+  },
+  "quail": {
+   "drive": {
+    "candidates": 503,
+    "droppedWeak": 333,
+    "droppedCap": 0,
+    "kept": 170
+   },
+   "atv": {
+    "candidates": 183,
+    "droppedWeak": 112,
+    "droppedCap": 0,
+    "kept": 71
+   },
+   "walk": {
+    "candidates": 295,
+    "droppedWeak": 196,
+    "droppedCap": 0,
+    "kept": 99
+   },
+   "backcountry": {
+    "candidates": 1,
+    "droppedWeak": 1,
+    "droppedCap": 0,
+    "kept": 0
+   },
+   "outsideQuailRegion": 227,
+   "droppedOnClosedLand": 45,
+   "droppedExact": 11
+  },
+  "duck": {
+   "drive": {
+    "candidates": 366,
+    "kept": 180,
+    "droppedCap": 38
+   },
+   "walk": {
+    "candidates": 115,
+    "kept": 84,
+    "droppedCap": 0
+   },
+   "backcountry": {
+    "candidates": 8,
+    "kept": 3,
+    "droppedCap": 0
+   },
+   "droppedWeak": 1314,
+   "droppedOnClosedLand": 16
+  },
+  "grouse": {
+   "drive": {
+    "candidates": 346,
+    "kept": 80,
+    "droppedCap": 198
+   },
+   "atv": {
+    "candidates": 355,
+    "kept": 80,
+    "droppedCap": 191
+   },
+   "walk": {
+    "candidates": 111,
+    "kept": 76,
+    "droppedCap": 0
+   },
+   "droppedWeak": 241
+  },
+  "camp": {
+   "official": 38,
+   "crownKept": 60,
+   "droppedWeak": 4843,
+   "droppedCap": 153,
+   "droppedExact": 6,
+   "droppedOnClosedLand": 2
+  },
+  "outsideBC": 0,
+  "inOtherArea": 4,
+  "spacingRemoved": 17
+ },
+ "styleLinesFlagged": 18,
+ "scoring": {
+  "weights": {
+   "deer": {
+    "uwr": 3,
+    "cut": 2,
+    "burn": 2,
+    "bec_low": 2,
+    "bec_ms": 1,
+    "aspect": 1,
+    "fields": 1
+   },
+   "moose": {
+    "wetland": 2,
+    "cut_or_burn": 2,
+    "uwr": 3
+   },
+   "duck": {
+    "size_road": 3,
+    "complex": 2,
+    "backwater": 2,
+    "low": 1
+   },
+   "grouse": {
+    "zone": 1,
+    "cut_edge": 1,
+    "riparian": 1
+   },
+   "quail": {
+    "zone": 2,
+    "farm": 2,
+    "creek": 1,
+    "draw": 1
+   },
+   "elk": {
+    "uwr": 3,
+    "burn": 2,
+    "cut": 1,
+    "bec_low": 2,
+    "bec_ms": 1,
+    "aspect": 1,
+    "water": 1
+   },
+   "turkey": {
+    "zone": 2,
+    "farm": 2,
+    "creek": 1
+   },
+   "camp": {
+    "flat": 2,
+    "water": 2,
+    "named_water": 1,
+    "quiet": 1,
+    "spots_near": 1
+   }
+  },
+  "max": {
+   "deer": 11,
+   "moose": 7,
+   "duck": 8,
+   "grouse": 3,
+   "quail": 6,
+   "camp": 7,
+   "elk": 11,
+   "turkey": 5
+  },
+  "min": {
+   "deer": 7,
+   "moose": 4,
+   "duck": 4,
+   "grouse": 2,
+   "quail": 4,
+   "camp": 5,
+   "elk": 7,
+   "turkey": 4
+  },
+  "spacingM": 800,
+  "selectRadiusM": {
+   "drive": 1500,
+   "atv": 1500,
+   "walk": 2000,
+   "backcountry": 3000,
+   "camp": 3000
+  },
+  "capsPerCategory": {
+   "deer": 220,
+   "moose": 100,
+   "duck": 180,
+   "grouse": 120,
+   "quail": 300,
+   "camp": 60,
+   "elk": 120,
+   "turkey": 80
+  },
+  "cutAgeYears": [
+   5,
+   20
+  ],
+  "burnYears": [
+   2015,
+   2023
+  ],
+  "burnMinHa": 10,
+  "grouseZones": [
+   "ESSF",
+   "ICH",
+   "IDF",
+   "MS"
+  ]
+ },
+ "seasonRows": {},
+ "regsEdition": {
+  "edition": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028 (in force 1 July 2026 to 30 June 2028)",
+  "lastChecked": "2026-10-02"
+ },
+ "regsWarnings": [],
+ "seasonFiles": [
+  {
+   "region": 1,
+   "edition": "2026-10-02",
+   "rows": 38,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 2,
+   "edition": "2026-10-02",
+   "rows": 43,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 3,
+   "edition": "2026-10-02",
+   "rows": 50,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 4,
+   "edition": "2026-10-02",
+   "rows": 53,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 5,
+   "edition": "2026-10-02",
+   "rows": 48,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 6,
+   "edition": "2026-10-02",
+   "rows": 59,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": "7A",
+   "edition": "2026-10-02",
+   "rows": 42,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": "7B",
+   "edition": "2026-10-02",
+   "rows": 43,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 8,
+   "edition": "2026-10-02",
+   "rows": 43,
+   "checked": "2026-10-04"
+  },
+  {
+   "file": "migratory.json",
+   "edition": "2026-09-21",
+   "rows": 74,
+   "checked": "2026-10-04"
+  }
+ ],
+ "seasonCoverage": {
+  "withFileRows": 962,
+  "withRegsRows": 0,
+  "verify": 0
+ },
+ "notes": [
+  "Candidate spots from official open data. Nobody publishes where hunters go; nothing here says animals are present.",
+  "Scores are opinion (my pick). Busier, average, quieter and remote are estimates from access.",
+  "Targets are never on private land, parks, protected areas, ecological reserves, reserves, city limits or lakes.",
+  "Parking points are never inside parks, reserves, city limits or Motor Vehicle Closed Areas.",
+  "Drive: within 300 m of a paved or gravel road. ATV: rough roads and trails 1 to 10 km from a truck parking point and 1 km or more from pavement, outside closures. Walk: 0.3 to 5 km. Backcountry: more than 5 km.",
+  "Big game targets inside the Hwy 5 (Coquihalla) single projectile zone are left out.",
+  "Caps per species and category are spread round robin over 15 km tiles, so every part of the area keeps its best spots instead of one big winter range taking every slot (my pick).",
+  "Assumption: road surface from the Digital Road Atlas decides truck (paved, gravel) versus ATV (rough, overgrown, trails).",
+  "Assumption: named trails in the road atlas (rail, horse, snowmobile and bike trails) are walk only, because their motor vehicle rules are not in the data. Rec trails count as ATV only when their listed activities include motorized use.",
+  "Area G (Shuswap and Revelstoke) spans Regions 3, 4 and 8; its west edge is area A and its south edge is area D (no overlap).",
+  "Region 4 spots in G carry the region wide ungulate and turkey feeding and baiting ban and the snowmobile for hunting closure. No G MU is in the CWD Management Zone. The Trench wolf note is not applied in the 4-37 corner of G (not the Trench, my reading).",
+  "Region 3 Maps C8 Blind Bay, C9 Sicamous and C10 Salmon Arm: drawn from BC Geographical Names, FWA lakes and the city limits with a margin (my pick); targets inside are left out and nearby spots are flagged.",
+  "National parks (Mount Revelstoke, Glacier) come from CLAB_NATIONAL_PARKS: no hunting, targets inside left out.",
+  "Quail spots only in Region 8 (Region 3 and Region 4 have no quail season in G)."
+ ]
+}

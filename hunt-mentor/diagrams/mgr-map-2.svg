@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Map step 2. Turn on Cutblocks by age and Burns by year. Young cutblocks around 10 to 20 years old, older blocks over 20 years, and an old burn show where young forest grows." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Step 2: young forest and burns</text>
+<rect x="10" y="40" width="380" height="210" rx="10" fill="#eef1e6" stroke="#8a9a6b" stroke-width="2"/>
+<polygon points="60,90 150,80 160,150 70,160" fill="#e9c46a" opacity=".8"/><polygon points="220,170 320,160 330,230 230,236" fill="#8fbf6a" opacity=".8"/><polygon points="250,60 360,70 350,130 260,120" fill="#9aa0a6" opacity=".6"/>
+<text x="110" y="125" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">10 to 20 yr</text>
+<text x="275" y="205" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">20 yr +</text>
+<text x="305" y="100" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Old burn</text>
+<path d="M30 240 Q120 200 180 170 Q240 140 300 160 Q350 175 380 130" fill="none" stroke="#e8590c" stroke-width="4"/>
+<text x="200" y="280" font-size="14" fill="#23261f" text-anchor="middle">Layers: Cutblocks by age, Burns by year</text>
+</svg>

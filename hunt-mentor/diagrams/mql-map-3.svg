@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Hunt Map terrain tool frame: What can I see from here shows the ground in view from one spot. Use it to pick a glassing point over a chukar slope, then plan a stalk from above. Washington Fish and Wildlife suggests glassing distant slopes for feeding or roosting chukar, 75 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Terrain tools: What can I see</text>
+<rect x="20" y="40" width="360" height="190" rx="8" fill="#dfe6d3"/>
+<path d="M20 230 L200 230 L380 80 L380 230 Z" fill="#cfe3b0"/>
+<g transform="translate(60 200)"><circle r="10" fill="#e8590c"/><text x="0" y="-16" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">glass</text></g>
+<path d="M60 200 L380 90 L380 200 Z" fill="#e8590c" opacity=".25"/>
+<g transform="translate(300 140) scale(0.6 0.6)"><ellipse cx="0" cy="0" rx="22" ry="14" fill="#b9a88a"/><path d="M-20 -2 L-30 -4 L-28 5 Z" fill="#8b6f4a"/><path d="M-8 -6 v12 M-3 -7 v13 M2 -7 v13 M7 -6 v12" stroke="#2f2f2f" stroke-width="2"/><circle cx="18" cy="-13" r="9" fill="#9fa4a8"/><path d="M12 -15 q6 -2 13 2 q-4 10 -11 10" stroke="#111" stroke-width="2.5" fill="#f3ead8"/><circle cx="20" cy="-15" r="1.6" fill="#111"/><path d="M26 -14 l5 1 l-5 3 Z" fill="#d23b2a"/><path d="M2 13 l-2 8 M9 13 l2 8" stroke="#d23b2a" stroke-width="2.5"/></g>
+<text x="300" y="112" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">in view</text>
+<rect x="10" y="240" width="380" height="52" rx="8" fill="#2f3a2b"/>
+<text x="200" y="262" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Pick a spot that sees the whole slope</text>
+<text x="200" y="282" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Glass for chukar, then stalk from above (75%)</text>
+</svg>

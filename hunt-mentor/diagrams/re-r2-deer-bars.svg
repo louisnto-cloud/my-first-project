@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 572" role="img" aria-label="Season bar chart: Region 2 black tailed deer: general, youth, senior. Bucks: 2-2 to 2-4, 2-6 to 2-8, 2-13 to 2-15, 2-17 to 2-19: Sept 10 to Dec 15. Bucks: 2-9 to 2-11: Sept 10 to Nov 30. Bucks: ◆ 2-5, 2-12: Sept 10 to Nov 30. ◆ bag 1 buck. Bucks: ▲2-16: Sept 10 to Dec 15. Antlerless: ▲2-16: Nov 5 to Nov 20. Antlerless, Youth/Senior Only ***: 2-11**: Sept 10 to Sept 30. ** Map B20 Pemberton zone only. Antlerless, Youth Only *: ▲2-16: Oct 21 to Oct 31." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="572" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 2 black tailed deer: general,</text>
+<text x="200" y="47" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">youth, senior</text>
+<text x="200" y="68" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 28. Mule deer (black tailed).</text>
+<text x="48.9" y="104" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="123.8" y="104" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="198.8" y="104" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<text x="273.7" y="104" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
+<text x="349.9" y="104" font-size="14" fill="#23261f" text-anchor="middle">Jan</text>
+<line x1="12.0" y1="112" x2="12.0" y2="562" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="85.7" y1="112" x2="85.7" y2="562" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="161.9" y1="112" x2="161.9" y2="562" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="235.6" y1="112" x2="235.6" y2="562" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="311.8" y1="112" x2="311.8" y2="562" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="388.0" y1="112" x2="388.0" y2="562" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<text x="12" y="128" font-size="14" font-weight="bold" fill="#23261f">Bucks: 2-2 to 2-4, 2-6 to 2-8, 2-13 to 2-15,</text>
+<text x="12" y="146" font-size="14" font-weight="bold" fill="#23261f">2-17 to 2-19</text>
+<rect x="34.1" y="152" width="238.4" height="22" rx="3" fill="#e8590c"/>
+<text x="153.3" y="168" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 10 to Dec 15</text>
+<text x="12" y="202" font-size="14" font-weight="bold" fill="#23261f">Bucks: 2-9 to 2-11</text>
+<rect x="34.1" y="208" width="201.5" height="22" rx="3" fill="#e8590c"/>
+<text x="241.6" y="224" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Nov 30</text>
+<text x="12" y="258" font-size="14" font-weight="bold" fill="#23261f">Bucks: ◆ 2-5, 2-12</text>
+<rect x="34.1" y="264" width="201.5" height="22" rx="3" fill="#e8590c"/>
+<text x="241.6" y="280" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Nov 30</text>
+<text x="12" y="304" font-size="14" fill="#e8590c">◆ bag 1 buck</text>
+<text x="12" y="336" font-size="14" font-weight="bold" fill="#23261f">Bucks: ▲2-16</text>
+<rect x="34.1" y="342" width="238.4" height="22" rx="3" fill="#e8590c"/>
+<text x="153.3" y="358" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 10 to Dec 15</text>
+<text x="12" y="392" font-size="14" font-weight="bold" fill="#23261f">Antlerless: ▲2-16</text>
+<rect x="171.7" y="398" width="39.3" height="22" rx="3" fill="#2f3a2b"/>
+<text x="217.1" y="414" font-size="14" font-weight="bold" fill="#23261f">Nov 5 to Nov 20</text>
+<text x="12" y="448" font-size="14" font-weight="bold" fill="#23261f">Antlerless, Youth/Senior Only ***: 2-11**</text>
+<rect x="34.1" y="454" width="51.6" height="22" rx="3" fill="#8a9a6b"/>
+<text x="91.7" y="470" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Sept 30</text>
+<text x="12" y="494" font-size="14" fill="#e8590c">** Map B20 Pemberton zone only</text>
+<text x="12" y="526" font-size="14" font-weight="bold" fill="#23261f">Antlerless, Youth Only *: ▲2-16</text>
+<rect x="134.9" y="532" width="27.0" height="22" rx="3" fill="#8a9a6b"/>
+<text x="167.9" y="548" font-size="14" font-weight="bold" fill="#23261f">Oct 21 to Oct 31</text>
+</svg>

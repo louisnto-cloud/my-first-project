@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 432" role="img" aria-label="Cards for Maps D1 to D6. D1 McDougall Wildlife Sanctuary, Management Unit 4-1: no shooting, hunting or trapping, and Motor Vehicle Closed Area. D2 Elizabeth Lake, 4-3: no hunting, shooting or trapping, and Motor Vehicle Closed Area. D3 Crawford Bay, 4-6: No Shooting Area. D4 Summit Creek Campground and Recreation Area and Corn Creek Marsh, 4-7: No Hunting Areas. D5 Selkirk, 4-7 and 4-8: No Shooting Area, watch for mountain caribou. D6 Walter Clough Wildlife Management Area, 4-17: No Shooting or Hunting Area." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="432" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Maps D1 to D6</text>
+<rect x="6" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">D1 McDougall</text>
+<text x="101" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Wildlife Sanctuary</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">No shooting, hunting or</text>
+<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start">trapping. No motor</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start">vehicles. MU 4-1</text>
+<rect x="204" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">D2 Elizabeth Lake</text>
+<text x="212" y="106" font-size="14" fill="#23261f" text-anchor="start">No hunting, shooting or</text>
+<text x="212" y="124" font-size="14" fill="#23261f" text-anchor="start">trapping. No motor</text>
+<text x="212" y="142" font-size="14" fill="#23261f" text-anchor="start">vehicles. MU 4-3</text>
+<rect x="6" y="162" width="190" height="96" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#e8590c"/>
+<text x="101" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">D3 Crawford Bay</text>
+<text x="14" y="228" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area,</text>
+<text x="14" y="246" font-size="14" fill="#23261f" text-anchor="start">MU 4-6</text>
+<rect x="204" y="162" width="190" height="96" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="299" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">D4 Summit Creek,</text>
+<text x="299" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Corn Creek Marsh</text>
+<text x="212" y="228" font-size="14" fill="#23261f" text-anchor="start">No Hunting Areas,</text>
+<text x="212" y="246" font-size="14" fill="#23261f" text-anchor="start">MU 4-7</text>
+<rect x="6" y="266" width="190" height="132" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6 276 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v54 h-190 z" fill="#e8590c"/>
+<text x="101" y="284" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">D5 Selkirk</text>
+<text x="14" y="350" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area,</text>
+<text x="14" y="368" font-size="14" fill="#23261f" text-anchor="start">MUs 4-7, 4-8. Watch for</text>
+<text x="14" y="386" font-size="14" fill="#23261f" text-anchor="start">mountain caribou</text>
+<rect x="204" y="266" width="190" height="132" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204 276 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v54 h-190 z" fill="#c92a2a"/>
+<text x="299" y="284" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">D6 Walter Clough</text>
+<text x="299" y="302" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Wildlife Management</text>
+<text x="299" y="320" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Area</text>
+<text x="212" y="350" font-size="14" fill="#23261f" text-anchor="start">No Shooting or Hunting</text>
+<text x="212" y="368" font-size="14" fill="#23261f" text-anchor="start">Area, MU 4-17</text>
+<rect x="6" y="404" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="24" y="416" font-size="14" fill="#23261f" text-anchor="start">No hunting</text>
+<rect x="112.0" y="404" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="130" y="416" font-size="14" fill="#23261f" text-anchor="start">No shooting</text>
+</svg>

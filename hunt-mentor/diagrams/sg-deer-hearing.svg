@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Deer hearing chart. Deer hear from about 115 hertz to 54 kilohertz, best around 4 to 8 kilohertz. Zippers, Velcro, nylon swish, metal on metal and snapping twigs all sit in that best band.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<line x1="30" y1="60" x2="30" y2="200" stroke="#dfe6d3" stroke-width="2"/>
+<text x="30" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle">100 Hz</text>
+<line x1="156" y1="60" x2="156" y2="200" stroke="#dfe6d3" stroke-width="2"/>
+<text x="156" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle">1 kHz</text>
+<line x1="282" y1="60" x2="282" y2="200" stroke="#dfe6d3" stroke-width="2"/>
+<text x="282" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle">10 kHz</text>
+<line x1="370" y1="60" x2="370" y2="200" stroke="#dfe6d3" stroke-width="2"/>
+<text x="370" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle">50 kHz</text>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">What a deer hears best</text>
+
+<rect x="38" y="70" width="337" height="36" rx="8" fill="#8a9a6b"/>
+<text x="46" y="94" font-size="15" font-weight="bold" fill="#fff">Deer: 115 Hz to 54 kHz</text>
+<rect x="232" y="116" width="38" height="36" rx="6" fill="#e8590c"/>
+<text x="250" y="170" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">best: 4 to 8 kHz</text>
+<path d="M250 178 V200" stroke="#e8590c" stroke-width="2"/>
+<rect x="20" y="200" width="360" height="86" rx="10" fill="#f6dccb"/>
+<text x="200" y="226" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">In the danger band:</text>
+<text x="200" y="250" font-size="15" fill="#2f3a2b" text-anchor="middle">zippers, Velcro, nylon swish,</text>
+<text x="200" y="272" font-size="15" fill="#2f3a2b" text-anchor="middle">metal on metal, snapping twigs</text>
+</svg>

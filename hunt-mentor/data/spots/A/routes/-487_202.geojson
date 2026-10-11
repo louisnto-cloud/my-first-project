@@ -1,0 +1,7 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"spotId":"A-duck-drive-0142","kind":"walk","km":0.19,"climbM":1,"name":"Unnamed wetland 1.3 km N of Blue Earth Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-121.5148,50.61678],[-121.51598,50.61529]]}},
+{"type":"Feature","properties":{"spotId":"A-duck-walk-0135","kind":"walk","km":0.45,"climbM":12,"name":"Unnamed wetland 1.2 km N of Blue Earth Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-121.51748,50.61768],[-121.52049,50.61412]]}},
+{"type":"Feature","properties":{"spotId":"A-moose-drive-0067","kind":"walk","km":0.15,"climbM":0,"name":"700 m S of Langley Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-121.53841,50.63448],[-121.54017,50.63518]]}},
+{"type":"Feature","properties":{"spotId":"A-moose-drive-0069","kind":"walk","km":0.14,"climbM":0,"name":"1.4 km SW of Blue Earth Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-121.51591,50.58999],[-121.51505,50.59111]]}},
+{"type":"Feature","properties":{"spotId":"A-moose-walk-0101","kind":"walk","km":0.79,"climbM":31,"name":"1.2 km S of Oregon Jack Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-121.53138,50.62665],[-121.52072,50.62882]]}}
+]}

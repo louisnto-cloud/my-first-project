@@ -1,0 +1,737 @@
+[
+ {
+  "id": "mmd-001",
+  "deck": "Mule deer Masterclass",
+  "front": "Mule deer from behind: what do you see?",
+  "back": "Big white rump, thin white rope tail with only a black tip (90%).",
+  "diagram": "mmd-tail-compare"
+ },
+ {
+  "id": "mmd-002",
+  "deck": "Mule deer Masterclass",
+  "front": "How long are a mule deer's ears?",
+  "back": "About two thirds the length of the head; black edged, white inside (90%)."
+ },
+ {
+  "id": "mmd-003",
+  "deck": "Mule deer Masterclass",
+  "front": "Mule deer buck weight in BC?",
+  "back": "68 to 113 kg; up to 180 kg in peak condition (90%).",
+  "diagram": "mmd-size-bars"
+ },
+ {
+  "id": "mmd-004",
+  "deck": "Mule deer Masterclass",
+  "front": "Mule deer doe weight in BC?",
+  "back": "50 to 75 kg (90%)."
+ },
+ {
+  "id": "mmd-005",
+  "deck": "Mule deer Masterclass",
+  "front": "Mule deer shoulder height?",
+  "back": "90 to 95 cm (90%)."
+ },
+ {
+  "id": "mmd-006",
+  "deck": "Mule deer Masterclass",
+  "front": "Most yearling mule deer bucks carry how many points a side?",
+  "back": "2 (90%). Two year olds: big forks or 3. Older: 4 or more plus an eye guard.",
+  "diagram": "mmd-buck-ages"
+ },
+ {
+  "id": "mmd-007",
+  "deck": "Mule deer Masterclass",
+  "front": "Is point count a good age guide?",
+  "back": "No. The BC account says points are not reliable. Read neck, chest, belly and teeth (90%)."
+ },
+ {
+  "id": "mmd-008",
+  "deck": "Mule deer Masterclass",
+  "front": "By what age are antlers about 80 to 90% of peak size?",
+  "back": "About 4 years (85%)."
+ },
+ {
+  "id": "mmd-009",
+  "deck": "Mule deer Masterclass",
+  "front": "How do mule deer antlers branch?",
+  "back": "Fork once about 15 to 25 cm above the base, then each branch forks again; brow tines small or absent (85%)."
+ },
+ {
+  "id": "mmd-010",
+  "deck": "Mule deer Masterclass",
+  "front": "Three races of Odocoileus hemionus in BC?",
+  "back": "Mule deer (interior), Columbian black tailed deer (coast, Fraser Valley), Sitka black tailed deer (north coast, introduced to Haida Gwaii) (90%).",
+  "diagram": "mmd-bc-subspecies"
+ },
+ {
+  "id": "mmd-011",
+  "deck": "Mule deer Masterclass",
+  "front": "What splits mule deer and black tails in BC?",
+  "back": "The Coast Range, especially in winter; hybrids where they meet (90%)."
+ },
+ {
+  "id": "mmd-012",
+  "deck": "Mule deer Masterclass",
+  "front": "Black tail tail vs mule deer tail?",
+  "back": "Black tail: dark brown or black on top for most of its length. Mule deer: white with a black tip only (90%)."
+ },
+ {
+  "id": "mmd-013",
+  "deck": "Mule deer Masterclass",
+  "front": "BC mule deer population (2020 western agencies report)?",
+  "back": "About 100,000 to 170,000 (85%).",
+  "diagram": "mmd-numbers"
+ },
+ {
+  "id": "mmd-014",
+  "deck": "Mule deer Masterclass",
+  "front": "BC deer harvest late 1960s vs 2000?",
+  "back": "About 75,000 then; about 20,000 by 2000 (both races) (90%)."
+ },
+ {
+  "id": "mmd-015",
+  "deck": "Mule deer Masterclass",
+  "front": "BC goal for bucks per 100 does after the hunt?",
+  "back": "20 bucks per 100 does (85%)."
+ },
+ {
+  "id": "mmd-016",
+  "deck": "Mule deer Masterclass",
+  "front": "MU 3-27 resident mule deer success 2020 to 2024?",
+  "back": "20 to 41% a year; about 22 hunter days per deer (90%, computed).",
+  "diagram": "mmd-mu-success"
+ },
+ {
+  "id": "mmd-017",
+  "deck": "Mule deer Masterclass",
+  "front": "Where is the heart on a broadside deer?",
+  "back": "Low in the chest, just behind the front leg (85%).",
+  "diagram": "mmd-body-cutaway"
+ },
+ {
+  "id": "mmd-018",
+  "deck": "Mule deer Masterclass",
+  "front": "What fills the middle of a deer's belly?",
+  "back": "The rumen. A shot there is a gut hit (85%)."
+ },
+ {
+  "id": "mmd-019",
+  "deck": "Mule deer Masterclass",
+  "front": "Aim point on a broadside deer?",
+  "back": "Up the back of the front leg, one third up the chest: both lungs, top of the heart (85%).",
+  "diagram": "vitals-deer"
+ },
+ {
+  "id": "mmd-020",
+  "deck": "Mule deer Masterclass",
+  "front": "What bone covers the front of the chest?",
+  "back": "The shoulder blade. Aim behind it (75%).",
+  "diagram": "mmd-skeleton"
+ },
+ {
+  "id": "mmd-021",
+  "deck": "Mule deer Masterclass",
+  "front": "What is the diaphragm?",
+  "back": "The dome of muscle behind the lungs; it slants, top farther back (75%).",
+  "diagram": "mmd-body-cutaway"
+ },
+ {
+  "id": "mmd-022",
+  "deck": "Mule deer Masterclass",
+  "front": "Lung hit blood looks like?",
+  "back": "Bright red, often frothy or bubbly (70%)."
+ },
+ {
+  "id": "mmd-023",
+  "deck": "Mule deer Masterclass",
+  "front": "Where does the aorta run?",
+  "back": "From the heart, back just under the spine (65%).",
+  "diagram": "mmd-heart-vessels"
+ },
+ {
+  "id": "mmd-024",
+  "deck": "Mule deer Masterclass",
+  "front": "Name the 4 stomach chambers.",
+  "back": "Rumen, reticulum, omasum, abomasum (75%)."
+ },
+ {
+  "id": "mmd-025",
+  "deck": "Mule deer Masterclass",
+  "front": "Why can hay kill a starving mule deer?",
+  "back": "Rumen microbes cannot switch foods fast; fed deer can die with full stomachs (85%)."
+ },
+ {
+  "id": "mmd-026",
+  "deck": "Mule deer Masterclass",
+  "front": "Mule deer coat summer vs winter?",
+  "back": "Summer: tawny red brown. Winter: dark or grizzled grey brown (90%).",
+  "diagram": "mmd-coat"
+ },
+ {
+  "id": "mmd-027",
+  "deck": "Mule deer Masterclass",
+  "front": "Main way mule deer beat winter cold?",
+  "back": "Habitat: warm south and west slopes, low, gentle, Douglas fir cover (85%)."
+ },
+ {
+  "id": "mmd-028",
+  "deck": "Mule deer Masterclass",
+  "front": "Energy cost of walking in 25 cm and 41 cm of snow?",
+  "back": "About 50% more and 150% more than bare ground (85%).",
+  "diagram": "mmd-snow-cost"
+ },
+ {
+  "id": "mmd-029",
+  "deck": "Mule deer Masterclass",
+  "front": "Snow depth that shuts mule deer out?",
+  "back": "Over about 50 cm; 25 to 30 cm hinders (85%)."
+ },
+ {
+  "id": "mmd-030",
+  "deck": "Mule deer Masterclass",
+  "front": "Age: tooth 3 has 3 cusps.",
+  "back": "About 1.5 years (yearling) (85%).",
+  "diagram": "mmd-jaw-age"
+ },
+ {
+  "id": "mmd-031",
+  "deck": "Mule deer Masterclass",
+  "front": "Age: tooth 3 has 2 cusps, last molar fully up.",
+  "back": "About 2.5 years (85%)."
+ },
+ {
+  "id": "mmd-032",
+  "deck": "Mule deer Masterclass",
+  "front": "Does a deer have upper front teeth?",
+  "back": "No. It presses lower incisors on a hard pad, so browse looks torn (85%)."
+ },
+ {
+  "id": "mmd-033",
+  "deck": "Mule deer Masterclass",
+  "front": "How long do most mule deer live?",
+  "back": "Few live more than 8 to 10 years (90%)."
+ },
+ {
+  "id": "mmd-034",
+  "deck": "Mule deer Masterclass",
+  "front": "What share of fawns normally die?",
+  "back": "45 to 70% (90%)."
+ },
+ {
+  "id": "mmd-035",
+  "deck": "Mule deer Masterclass",
+  "front": "Rank a deer's senses.",
+  "back": "Nose, then ears, then eyes (Tip, from the facts).",
+  "diagram": "sg-senses-rank"
+ },
+ {
+  "id": "mmd-036",
+  "deck": "Mule deer Masterclass",
+  "front": "Morning thermals: which way does scent go?",
+  "back": "Uphill, once the sun warms the slope (80%)."
+ },
+ {
+  "id": "mmd-037",
+  "deck": "Mule deer Masterclass",
+  "front": "Evening thermals: which way does scent go?",
+  "back": "Downhill as slopes cool (80%)."
+ },
+ {
+  "id": "mmd-038",
+  "deck": "Mule deer Masterclass",
+  "front": "Deer hearing range and best band?",
+  "back": "About 115 Hz to 54 kHz; best 4 to 8 kHz (85%).",
+  "diagram": "mmd-sound-band"
+ },
+ {
+  "id": "mmd-039",
+  "deck": "Mule deer Masterclass",
+  "front": "What sounds sit in the deer's best hearing band?",
+  "back": "Zippers, Velcro, nylon swish, metal clicks, snapping twigs (85%)."
+ },
+ {
+  "id": "mmd-040",
+  "deck": "Mule deer Masterclass",
+  "front": "Deer field of view without turning the head?",
+  "back": "About 310 degrees (80%).",
+  "diagram": "mmd-eye-field"
+ },
+ {
+  "id": "mmd-041",
+  "deck": "Mule deer Masterclass",
+  "front": "How many colour cones do deer have?",
+  "back": "2 (blue, green); no red cone (85%).",
+  "diagram": "mmd-colour-strip"
+ },
+ {
+  "id": "mmd-042",
+  "deck": "Mule deer Masterclass",
+  "front": "Why does blaze orange look dull to a deer?",
+  "back": "No red cone (75 to 85%). Motion and outline give you away."
+ },
+ {
+  "id": "mmd-043",
+  "deck": "Mule deer Masterclass",
+  "front": "Do deer see ultraviolet?",
+  "back": "They lack a UV filter, so UV may stand out; avoid brighteners (80%; 65% Tip)."
+ },
+ {
+  "id": "mmd-044",
+  "deck": "Mule deer Masterclass",
+  "front": "What makes deer eyeshine?",
+  "back": "The tapetum, a reflective layer behind the retina (80%)."
+ },
+ {
+  "id": "mmd-045",
+  "deck": "Mule deer Masterclass",
+  "front": "What does the metatarsal gland do?",
+  "back": "Releases an alarm scent (90%)."
+ },
+ {
+  "id": "mmd-046",
+  "deck": "Mule deer Masterclass",
+  "front": "What do the interdigital glands do?",
+  "back": "Leave a scent trail as the deer walks (90%)."
+ },
+ {
+  "id": "mmd-047",
+  "deck": "Mule deer Masterclass",
+  "front": "What is flehmen?",
+  "back": "A lip curl that pulls urine scent to the vomeronasal organ, often by rutting bucks (65%)."
+ },
+ {
+  "id": "mmd-048",
+  "deck": "Mule deer Masterclass",
+  "front": "Where do mule deer often bed relative to the wind?",
+  "back": "On the leeward side of a roll, often facing downhill (65%)."
+ },
+ {
+  "id": "mmd-049",
+  "deck": "Mule deer Masterclass",
+  "front": "5 stages of alarm?",
+  "back": "Stare, head bob, foot stamp, snort, escape (70%)."
+ },
+ {
+  "id": "mmd-050",
+  "deck": "Mule deer Masterclass",
+  "front": "A nervous mule deer walks how?",
+  "back": "Stiff and jerky (80%)."
+ },
+ {
+  "id": "mmd-051",
+  "deck": "Mule deer Masterclass",
+  "front": "Stot: bound length and top speed?",
+  "back": "2.7 to 5.2 m per bound, up to about 40 km/h (80%).",
+  "diagram": "mmd-gait-pattern"
+ },
+ {
+  "id": "mmd-052",
+  "deck": "Mule deer Masterclass",
+  "front": "Which way do mule deer flee coyotes?",
+  "back": "Uphill; white tails go down and away (70%)."
+ },
+ {
+  "id": "mmd-053",
+  "deck": "Mule deer Masterclass",
+  "front": "What do many mule deer do after stotting off?",
+  "back": "Stop on a rise and look back (65%). Big old bucks often do not."
+ },
+ {
+  "id": "mmd-054",
+  "deck": "Mule deer Masterclass",
+  "front": "Hunted deer vs park deer flight distance?",
+  "back": "Hunted deer flee from farther away (65%).",
+  "diagram": "mmd-flight-rings"
+ },
+ {
+  "id": "mmd-055",
+  "deck": "Mule deer Masterclass",
+  "front": "What causes the most avoidance in wintering deer?",
+  "back": "People off trail, and dogs (85%)."
+ },
+ {
+  "id": "mmd-056",
+  "deck": "Mule deer Masterclass",
+  "front": "Do mule deer use the same migration route each year?",
+  "back": "Yes (85%).",
+  "diagram": "mmd-learning-loop"
+ },
+ {
+  "id": "mmd-057",
+  "deck": "Mule deer Masterclass",
+  "front": "Who is in a mule deer doe clan?",
+  "back": "Related females: mothers, daughters, fawns (90%).",
+  "diagram": "mmd-social"
+ },
+ {
+  "id": "mmd-058",
+  "deck": "Mule deer Masterclass",
+  "front": "What is sparring for?",
+  "back": "Social bonding and rank, not wounds (90%)."
+ },
+ {
+  "id": "mmd-059",
+  "deck": "Mule deer Masterclass",
+  "front": "Bachelor buck groups: size and when they split?",
+  "back": "2 to 4 in summer; break up in October (80%)."
+ },
+ {
+  "id": "mmd-060",
+  "deck": "Mule deer Masterclass",
+  "front": "How much of the time does a newborn fawn hide?",
+  "back": "Over 95%; the doe is a few hundred metres away (85%).",
+  "diagram": "mmd-fawn-hide"
+ },
+ {
+  "id": "mmd-061",
+  "deck": "Mule deer Masterclass",
+  "front": "Fawn's first week strategy?",
+  "back": "Days 1 to 3 freeze; days 4 to 6 hide then bolt; 2 to 3 weeks follow mother (85%)."
+ },
+ {
+  "id": "mmd-062",
+  "deck": "Mule deer Masterclass",
+  "front": "Do mule deer does defend fawns?",
+  "back": "Yes, vigorously against coyotes (70%)."
+ },
+ {
+  "id": "mmd-063",
+  "deck": "Mule deer Masterclass",
+  "front": "Top cause of death for SIMDeer adult does?",
+  "back": "Cougars (85%)."
+ },
+ {
+  "id": "mmd-064",
+  "deck": "Mule deer Masterclass",
+  "front": "When are mule deer fawns born?",
+  "back": "Late May through June; twins are the rule (90%).",
+  "diagram": "mmd-year-wheel"
+ },
+ {
+  "id": "mmd-065",
+  "deck": "Mule deer Masterclass",
+  "front": "Mule deer gestation?",
+  "back": "About 203 days, 6 to 7 months (85 to 90%)."
+ },
+ {
+  "id": "mmd-066",
+  "deck": "Mule deer Masterclass",
+  "front": "Fawn birth weight?",
+  "back": "2.7 to 4 kg (90%)."
+ },
+ {
+  "id": "mmd-067",
+  "deck": "Mule deer Masterclass",
+  "front": "When do bucks drop antlers?",
+  "back": "January to March, older bucks first (90%).",
+  "diagram": "mmd-antler-growth"
+ },
+ {
+  "id": "mmd-068",
+  "deck": "Mule deer Masterclass",
+  "front": "When do antlers grow?",
+  "back": "April through August, in velvet (90%)."
+ },
+ {
+  "id": "mmd-069",
+  "deck": "Mule deer Masterclass",
+  "front": "How fast does velvet come off?",
+  "back": "Usually 24 to 48 hours (85%)."
+ },
+ {
+  "id": "mmd-070",
+  "deck": "Mule deer Masterclass",
+  "front": "What drives the antler cycle?",
+  "back": "Day length, via hormones (85%)."
+ },
+ {
+  "id": "mmd-071",
+  "deck": "Mule deer Masterclass",
+  "front": "What triggers the move down to winter range?",
+  "back": "Snow and cold, not the rut (85%)."
+ },
+ {
+  "id": "mmd-072",
+  "deck": "Mule deer Masterclass",
+  "front": "When is the mule deer rut?",
+  "back": "November and early December; peak about mid November (80 to 90%).",
+  "diagram": "sg-deer-rut-phases"
+ },
+ {
+  "id": "mmd-073",
+  "deck": "Mule deer Masterclass",
+  "front": "What is a tending bond?",
+  "back": "A buck stays with one doe and keeps rivals off until she breeds (90%)."
+ },
+ {
+  "id": "mmd-074",
+  "deck": "Mule deer Masterclass",
+  "front": "What changes in October?",
+  "back": "Bachelor groups split, sparring and rubs, first snow pushes deer down, bucks check does (70 to 85%).",
+  "diagram": "mmd-october-shift"
+ },
+ {
+  "id": "mmd-075",
+  "deck": "Mule deer Masterclass",
+  "front": "Best month to see mule deer on low south grass slopes?",
+  "back": "April (90%), for example the Dewdrop Range near Kamloops."
+ },
+ {
+  "id": "mmd-076",
+  "deck": "Mule deer Masterclass",
+  "front": "SIMDeer: share migratory and distance?",
+  "back": "74%; average 47.2 km a year (85%)."
+ },
+ {
+  "id": "mmd-077",
+  "deck": "Mule deer Masterclass",
+  "front": "Mule deer activity peaks?",
+  "back": "About 04:00 to 09:00 and 17:00 to 21:00 (85%).",
+  "diagram": "mmd-day-clock"
+ },
+ {
+  "id": "mmd-078",
+  "deck": "Mule deer Masterclass",
+  "front": "When are mule deer bedded?",
+  "back": "About 10:00 to 15:00 (80%)."
+ },
+ {
+  "id": "mmd-079",
+  "deck": "Mule deer Masterclass",
+  "front": "Hot day: where are deer bedded?",
+  "back": "Shade, north facing timber, benches, draws (80%)."
+ },
+ {
+  "id": "mmd-080",
+  "deck": "Mule deer Masterclass",
+  "front": "Cold day: where are deer bedded?",
+  "back": "Sunny south and west slopes out of the wind (80%)."
+ },
+ {
+  "id": "mmd-081",
+  "deck": "Mule deer Masterclass",
+  "front": "Does moon phase change deer movement?",
+  "back": "A 7 year GPS study found no effect (70%).",
+  "diagram": "mmd-evidence-meter"
+ },
+ {
+  "id": "mmd-082",
+  "deck": "Mule deer Masterclass",
+  "front": "Weather lore about fronts: fact?",
+  "back": "Lore, weakly tested (50%). Log your own sightings."
+ },
+ {
+  "id": "mmd-083",
+  "deck": "Mule deer Masterclass",
+  "front": "Legal hunting hours?",
+  "back": "1 hour before sunrise to 1 hour after sunset (99%, page 11)."
+ },
+ {
+  "id": "mmd-084",
+  "deck": "Mule deer Masterclass",
+  "front": "Why is the mule deer called an edge species?",
+  "back": "It favours forest edges with food next to escape and thermal cover (85%).",
+  "diagram": "mmd-three-needs"
+ },
+ {
+  "id": "mmd-085",
+  "deck": "Mule deer Masterclass",
+  "front": "Good hiding cover hides how much of a deer?",
+  "back": "About 90% at 60 m or less (80%)."
+ },
+ {
+  "id": "mmd-086",
+  "deck": "Mule deer Masterclass",
+  "front": "Interior mule deer winter range?",
+  "back": "Low, south and west facing, gentle to moderate slopes, old Douglas fir (85 to 90%).",
+  "diagram": "mmd-winter-canopy"
+ },
+ {
+  "id": "mmd-087",
+  "deck": "Mule deer Masterclass",
+  "front": "Winter range canopy closure?",
+  "back": "About 65 to 70% with small openings (85%)."
+ },
+ {
+  "id": "mmd-088",
+  "deck": "Mule deer Masterclass",
+  "front": "Grass in the fall and winter diet near Kamloops?",
+  "back": "Under 10% until spring (85%)."
+ },
+ {
+  "id": "mmd-089",
+  "deck": "Mule deer Masterclass",
+  "front": "Winter browse plants to know?",
+  "back": "Douglas fir, sagebrush, bitterbrush, rabbitbrush, snowbrush, saskatoon, rose (90%).",
+  "photo": "hab-bitterbrush-leaf"
+ },
+ {
+  "id": "mmd-090",
+  "deck": "Mule deer Masterclass",
+  "front": "Fraser Valley deer?",
+  "back": "Columbian black tailed deer; logged openings in spring and summer, old growth key winter cover (90%)."
+ },
+ {
+  "id": "mmd-091",
+  "deck": "Mule deer Masterclass",
+  "front": "South Okanagan winter range named by BC Parks?",
+  "back": "White Lake Grasslands and South Okanagan Grasslands (class 1) (95%)."
+ },
+ {
+  "id": "mmd-092",
+  "deck": "Mule deer Masterclass",
+  "front": "Hunt Map tool to pick a glassing seat?",
+  "back": "What can I see from here (viewshed) (Tip).",
+  "diagram": "mmd-map-4"
+ },
+ {
+  "id": "mmd-093",
+  "deck": "Mule deer Masterclass",
+  "front": "Mule deer front track length?",
+  "back": "About 5.7 to 10 cm (60%). Point shows travel direction.",
+  "diagram": "mmd-track-scale"
+ },
+ {
+  "id": "mmd-094",
+  "deck": "Mule deer Masterclass",
+  "front": "Can one track tell mule deer from white tail?",
+  "back": "No, too much overlap (60%). The stot pattern can.",
+  "diagram": "mmd-gait-pattern"
+ },
+ {
+  "id": "mmd-095",
+  "deck": "Mule deer Masterclass",
+  "front": "Deer pellet size?",
+  "back": "About 1 to 1.5 cm, oval (70%)."
+ },
+ {
+  "id": "mmd-096",
+  "deck": "Mule deer Masterclass",
+  "front": "Deer bed size?",
+  "back": "About 0.9 to 1.2 m oval (70%).",
+  "diagram": "mmd-bed-reading"
+ },
+ {
+  "id": "mmd-097",
+  "deck": "Mule deer Masterclass",
+  "front": "Torn twig vs clean 45 degree cut?",
+  "back": "Torn: deer. Clean cut: hare (75%)."
+ },
+ {
+  "id": "mmd-098",
+  "deck": "Mule deer Masterclass",
+  "front": "Lost the trail. Next step?",
+  "back": "Back to the last flag, circle out (Tip).",
+  "diagram": "mmd-follow-4"
+ },
+ {
+  "id": "mmd-099",
+  "deck": "Mule deer Masterclass",
+  "front": "Best first trip method for a beginner?",
+  "back": "Sit and glass a feeding slope at dawn and dusk; scout midday (Tip).",
+  "diagram": "mmd-method-picker"
+ },
+ {
+  "id": "mmd-100",
+  "deck": "Mule deer Masterclass",
+  "front": "Why stalk a bedded mule deer from above?",
+  "back": "They bed facing downhill (65%)."
+ },
+ {
+  "id": "mmd-101",
+  "deck": "Mule deer Masterclass",
+  "front": "Are electronic calls legal for deer?",
+  "back": "No (99%, page 12). Mouth calls and rattling are allowed (95%, my reading)."
+ },
+ {
+  "id": "mmd-102",
+  "deck": "Mule deer Masterclass",
+  "front": "Dogs for deer in BC?",
+  "back": "On a leash only (99%, page 12)."
+ },
+ {
+  "id": "mmd-103",
+  "deck": "Mule deer Masterclass",
+  "front": "Partner roles in spot and stalk?",
+  "back": "Spotter glasses and signals; stalker follows landmarks (Tip).",
+  "diagram": "mmd-partner"
+ },
+ {
+  "id": "mmd-104",
+  "deck": "Mule deer Masterclass",
+  "front": "Wind turns toward the buck mid stalk?",
+  "back": "Back out and come back another time (Tip).",
+  "diagram": "mmd-day-decision"
+ },
+ {
+  "id": "mmd-105",
+  "deck": "Mule deer Masterclass",
+  "front": "Wait time after a heart or lung hit?",
+  "back": "About 30 minutes (70 to 85%).",
+  "diagram": "sk-wait-chart"
+ },
+ {
+  "id": "mmd-106",
+  "deck": "Mule deer Masterclass",
+  "front": "Wait time after a gut hit?",
+  "back": "6 to 8 hours or overnight (70 to 85%)."
+ },
+ {
+  "id": "mmd-107",
+  "deck": "Mule deer Masterclass",
+  "front": "First thing at a downed deer?",
+  "back": "Cancel (notch) your species licence (99%, page 11 item 1)."
+ },
+ {
+  "id": "mmd-108",
+  "deck": "Mule deer Masterclass",
+  "front": "Evidence of sex for a buck?",
+  "back": "Unskinned tail plus a testicle or part of the penis, naturally attached (99%, page 15)."
+ },
+ {
+  "id": "mmd-109",
+  "deck": "Mule deer Masterclass",
+  "front": "Meat temperature target?",
+  "back": "Below 4°C as fast as you can (80%).",
+  "diagram": "sk-cooler"
+ },
+ {
+  "id": "mmd-110",
+  "deck": "Mule deer Masterclass",
+  "front": "Boneless meat yield?",
+  "back": "About a third of live weight; about 25 kg from a 52 kg field dressed buck (70%).",
+  "diagram": "hf-meat-math"
+ },
+ {
+  "id": "mmd-111",
+  "deck": "Mule deer Masterclass",
+  "front": "Canada's food safety cooking number for wild game?",
+  "back": "71°C internal (95%)."
+ },
+ {
+  "id": "mmd-112",
+  "deck": "Mule deer Masterclass",
+  "front": "MUs 3-27 and 3-28: October mule deer season?",
+  "back": "1 to 31 October, any buck (99%, page 34).",
+  "diagram": "hf-deer-season-bars"
+ },
+ {
+  "id": "mmd-113",
+  "deck": "Mule deer Masterclass",
+  "front": "MUs 3-27 and 3-28: November season?",
+  "back": "1 November to 10 December, 4 point bucks or better (99%, page 34)."
+ },
+ {
+  "id": "mmd-114",
+  "deck": "Mule deer Masterclass",
+  "front": "What is a 4 point buck?",
+  "back": "At least 4 tines on one antler, not counting the brow tine; each tine at least 2.5 cm and longer than wide (99%, pages 3 and 4).",
+  "diagram": "hf-four-point"
+ },
+ {
+  "id": "mmd-115",
+  "deck": "Mule deer Masterclass",
+  "front": "Region 3 mule deer bag?",
+  "back": "1 mule deer (deer total 3); antlerless by LEH only; 1 mule deer buck for Regions 3 to 8 combined (99%)."
+ }
+]

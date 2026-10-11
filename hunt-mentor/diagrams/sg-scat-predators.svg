@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" font-family="sans-serif" role="img" aria-label="Predator and grouse scat drawn to scale. Black bear: thick tube 4 to 6 cm across, 13 to 30 cm long, full of berries. Cougar: segmented tube 2.5 to 4 cm across with blunt ends. Wolf: tube 2.5 to 4 cm across with one tapered end, deer hair and bone. Coyote: thin twisted rope under 2.5 cm across. Grouse: pencil thick curls 2 to 3 cm long with a white tip.">
+  <rect width="400" height="340" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Predator scat, same scale</text>
+  <g font-size="16" font-weight="bold" fill="#2f3a2b">
+    <text x="14" y="70">Black bear</text><text x="14" y="135">Cougar</text><text x="14" y="190">Wolf</text><text x="14" y="245">Coyote</text><text x="14" y="300">Grouse</text>
+  </g>
+  <rect x="120" y="50" width="200" height="40" rx="20" fill="#3d2a1a"/>
+  <g fill="#7b2d4a"><circle cx="150" cy="62" r="4"/><circle cx="190" cy="78" r="4"/><circle cx="230" cy="64" r="4"/><circle cx="270" cy="76" r="4"/><circle cx="300" cy="62" r="4"/></g>
+  <g fill="#5c3b1c"><rect x="120" y="117" width="34" height="26" rx="8"/><rect x="157" y="117" width="34" height="26" rx="8"/><rect x="194" y="117" width="34" height="26" rx="8"/></g>
+  <path d="M120 172 H230 Q252 180 270 186 Q252 192 230 198 H120 Q110 185 120 172 Z" fill="#6f6252"/>
+  <path d="M120 238 Q140 230 160 240 Q180 250 200 240 Q215 232 230 242 L238 246 Q215 254 200 250 Q180 260 160 250 Q140 242 120 250 Z" fill="#6f6252"/>
+  <g fill="#5c3b1c"><path d="M120 300 q10 -14 22 -4" stroke="#5c3b1c" stroke-width="5" fill="none"/><path d="M150 302 q10 -14 22 -4" stroke="#5c3b1c" stroke-width="5" fill="none"/></g>
+  <circle cx="142" cy="296" r="3" fill="#fff"/><circle cx="172" cy="298" r="3" fill="#fff"/>
+  <g font-size="14" fill="#e8590c">
+    <text x="120" y="108">4 to 6 cm thick, berries</text>
+    <text x="236" y="136">2.5 to 4 cm</text><text x="236" y="152">segments</text>
+    <text x="276" y="185">tapered</text><text x="276" y="201">deer hair</text>
+    <text x="246" y="246">under 2.5 cm</text><text x="246" y="262">twisted</text>
+    <text x="190" y="300">2 to 3 cm, white tip</text>
+  </g>
+  <text x="200" y="332" font-size="14" fill="#6b4f35" text-anchor="middle">Gloves and a stick. Never bare hands.</text>
+</svg>

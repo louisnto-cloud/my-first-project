@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" font-family="sans-serif" role="img" aria-label="Flowchart: can I hunt here? First, is it private land or a First Nations reserve? If yes, only with permission. Next, is it a park, ecological reserve or wildlife management area? If yes, check the rules: many say no. Next, Crown land with livestock on a grazing lease? If yes, only with the lessee's consent. Next, inside a closure on the synopsis or access map? If yes, follow the closure. If all are no, Crown land in open season: yes.">
+  <rect width="400" height="420" fill="#fffaf0"/>
+  <g font-size="14" fill="#2f3a2b">
+    <rect x="10" y="10" width="250" height="56" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+    <text x="135" y="33" text-anchor="middle" font-weight="bold">Private land or a</text><text x="135" y="53" text-anchor="middle" font-weight="bold">First Nations reserve?</text>
+    <rect x="10" y="96" width="250" height="56" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+    <text x="135" y="119" text-anchor="middle" font-weight="bold">Park, ecological reserve</text><text x="135" y="139" text-anchor="middle" font-weight="bold">or wildlife area?</text>
+    <rect x="10" y="182" width="250" height="56" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+    <text x="135" y="205" text-anchor="middle" font-weight="bold">Grazing lease with</text><text x="135" y="225" text-anchor="middle" font-weight="bold">cattle on it?</text>
+    <rect x="10" y="268" width="250" height="56" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+    <text x="135" y="291" text-anchor="middle" font-weight="bold">Inside a closure on the</text><text x="135" y="311" text-anchor="middle" font-weight="bold">synopsis or access map?</text>
+    <rect x="10" y="354" width="250" height="56" rx="8" fill="#2f6e3b"/>
+    <text x="135" y="377" text-anchor="middle" font-weight="bold" fill="#fff">Crown land, open season:</text><text x="135" y="397" text-anchor="middle" font-weight="bold" fill="#fff">you may hunt</text>
+    <g fill="#e8590c"><rect x="290" y="14" width="100" height="48" rx="8"/><rect x="290" y="100" width="100" height="48" rx="8"/><rect x="290" y="186" width="100" height="48" rx="8"/><rect x="290" y="272" width="100" height="48" rx="8"/></g>
+    <g fill="#fff" font-weight="bold" text-anchor="middle"><text x="340" y="35">Permission</text><text x="340" y="53">first</text><text x="340" y="121">Check rules:</text><text x="340" y="139">often no</text><text x="340" y="207">Lessee's</text><text x="340" y="225">consent</text><text x="340" y="293">Follow the</text><text x="340" y="311">closure</text></g>
+  </g>
+  <g stroke="#2f3a2b" stroke-width="2.5"><line x1="260" y1="38" x2="288" y2="38"/><line x1="260" y1="124" x2="288" y2="124"/><line x1="260" y1="210" x2="288" y2="210"/><line x1="260" y1="296" x2="288" y2="296"/>
+  <line x1="135" y1="66" x2="135" y2="94"/><line x1="135" y1="152" x2="135" y2="180"/><line x1="135" y1="238" x2="135" y2="266"/><line x1="135" y1="324" x2="135" y2="352"/></g>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b"><text x="264" y="32">yes</text><text x="264" y="118">yes</text><text x="264" y="204">yes</text><text x="264" y="290">yes</text>
+  <text x="142" y="86">no</text><text x="142" y="172">no</text><text x="142" y="258">no</text><text x="142" y="344">no</text></g>
+</svg>

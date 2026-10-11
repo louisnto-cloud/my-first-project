@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Body heat card. Bird body temperature is about 41 to 41.7 degrees Celsius, chicken figure, 70 percent. Cold: feathers fluffed and quail roost in dense trees or shrubs, not on the ground, 70 percent. Hot: birds pant, rest in shade midday and in hot weather need free water every day, 80 percent from California wildlife habitat records.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Body heat</text>
+<rect x="160" y="40" width="80" height="150" rx="8" fill="#dfe6d3"/>
+<rect x="190" y="56" width="20" height="100" rx="10" fill="#fff" stroke="#2f3a2b" stroke-width="2"/>
+<rect x="194" y="80" width="12" height="76" fill="#c0392b"/><circle cx="200" cy="168" r="16" fill="#c0392b"/>
+<text x="200" y="210" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">41 to 41.7 °C (70%)</text>
+<rect x="12" y="40" width="140" height="150" rx="8" fill="#dfe8f2"/>
+<text x="82" y="64" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="middle">COLD</text>
+<text x="82" y="92" font-size="14" fill="#2f3a2b" text-anchor="middle">Fluff feathers</text>
+<text x="82" y="114" font-size="14" fill="#2f3a2b" text-anchor="middle">Roost in thick</text>
+<text x="82" y="134" font-size="14" fill="#2f3a2b" text-anchor="middle">trees or shrubs</text>
+<text x="82" y="156" font-size="14" fill="#2f3a2b" text-anchor="middle">off the ground</text>
+<text x="82" y="178" font-size="14" fill="#2f3a2b" text-anchor="middle">(70%)</text>
+<rect x="248" y="40" width="140" height="150" rx="8" fill="#f6e0d2"/>
+<text x="318" y="64" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">HOT</text>
+<text x="318" y="92" font-size="14" fill="#2f3a2b" text-anchor="middle">Pant, sit in</text>
+<text x="318" y="114" font-size="14" fill="#2f3a2b" text-anchor="middle">shade midday</text>
+<text x="318" y="134" font-size="14" fill="#2f3a2b" text-anchor="middle">Need water</text>
+<text x="318" y="156" font-size="14" fill="#2f3a2b" text-anchor="middle">every day (80%)</text>
+<rect x="10" y="232" width="380" height="58" rx="8" fill="#2f3a2b"/>
+<text x="200" y="256" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Hot dry day: hunt near water and shade</text>
+<text x="200" y="278" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Cold day: sunny edges near roost trees (Tip)</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 344" role="img" aria-label="Four boat panels. Motor pushing the boat: no hunting anything. Boat still gliding after the motor is cut: no shooting ducks, it still counts as moving. Boat anchored or beached, stopped: ducks are OK, 95 percent. Deer or grouse with the motor not pushing the boat: allowed by the rule, but the tip is to skip it." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="344" fill="#fffaf0"/>
+<text x="200" y="24" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Your boat: when can you shoot?</text>
+<rect x="8" y="40" width="188" height="142" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="102" y="62" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Motor pushing it</text>
+<g transform="translate(102 102) scale(1.1)"><path d="M-34 -4 L30 -4 L22 10 L-28 10 Z" fill="#8b5a2b"/><rect x="-42" y="-14" width="10" height="12" rx="2" fill="#2f3a2b"/><rect x="-39" y="-2" width="4" height="16" fill="#2f3a2b"/><path d="M-46 16 q 8 -5 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0" fill="none" stroke="#4a7fb0" stroke-width="2.5"/></g>
+<path d="M38 110 l-16 -4 M38 116 l-18 2" stroke="#4a7fb0" stroke-width="3"/>
+<text x="102" y="148" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">No hunting</text>
+<text x="102" y="167" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">anything</text>
+<rect x="204" y="40" width="188" height="142" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="298" y="62" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Glides after motor cut</text>
+<g transform="translate(298 102) scale(1.1)"><path d="M-34 -4 L30 -4 L22 10 L-28 10 Z" fill="#8b5a2b"/><rect x="-42" y="-14" width="10" height="12" rx="2" fill="#2f3a2b"/><rect x="-39" y="-2" width="4" height="16" fill="#2f3a2b"/><path d="M-46 16 q 8 -5 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0" fill="none" stroke="#4a7fb0" stroke-width="2.5"/></g>
+<path d="M354 98 l14 0 m-5 -5 l5 5 l-5 5" stroke="#23261f" stroke-width="2.5" fill="none"/>
+<text x="298" y="148" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">Ducks: NO.</text>
+<text x="298" y="167" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">Still moving</text>
+<rect x="8" y="190" width="188" height="142" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
+<text x="102" y="212" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Anchored or beached</text>
+<g transform="translate(102 252) scale(1.1)"><path d="M-34 -4 L30 -4 L22 10 L-28 10 Z" fill="#8b5a2b"/><rect x="-42" y="-14" width="10" height="12" rx="2" fill="#2f3a2b"/><rect x="-39" y="-2" width="4" height="16" fill="#2f3a2b"/><path d="M-46 16 q 8 -5 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0" fill="none" stroke="#4a7fb0" stroke-width="2.5"/></g>
+<path d="M128 262 l0 22 m-8 -6 q8 10 16 0" stroke="#2f3a2b" stroke-width="2.5" fill="none"/>
+<text x="102" y="298" font-size="15" fill="#5c7a3a" text-anchor="middle" font-weight="bold">Ducks: OK</text>
+<text x="102" y="317" font-size="15" fill="#5c7a3a" text-anchor="middle" font-weight="bold">(95%)</text>
+<rect x="204" y="190" width="188" height="142" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
+<text x="298" y="212" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Deer or grouse</text>
+<g transform="translate(298 252) scale(1.1)"><path d="M-34 -4 L30 -4 L22 10 L-28 10 Z" fill="#8b5a2b"/><rect x="-42" y="-14" width="10" height="12" rx="2" fill="#2f3a2b"/><rect x="-39" y="-2" width="4" height="16" fill="#2f3a2b"/><path d="M-46 16 q 8 -5 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0" fill="none" stroke="#4a7fb0" stroke-width="2.5"/></g>
+<text x="298" y="298" font-size="15" fill="#5c7a3a" text-anchor="middle" font-weight="bold">Motor not pushing:</text>
+<text x="298" y="317" font-size="15" fill="#5c7a3a" text-anchor="middle" font-weight="bold">allowed. Tip: skip it</text>
+</svg>

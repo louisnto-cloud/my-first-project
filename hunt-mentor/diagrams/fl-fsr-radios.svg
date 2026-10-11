@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="Two kinds of radio. A resource road mobile radio talks to logging trucks on the posted RR channels and needs a licence from ISED, Innovation, Science and Economic Development Canada. A family radio service handheld is licence exempt but only reaches your partner, not the trucks.">
+  <rect x="0" y="0" width="400" height="260" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Two kinds of radio</text>
+<rect x="10.0" y="46" width="186.0" height="204" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+<rect x="10.0" y="46" width="186.0" height="36" rx="10" fill="#2f3a2b"/>
+<text x="103.0" y="70" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Road radio</text>
+<text x="103.0" y="106" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Talks to trucks</text>
+<text x="103.0" y="128" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Posted RR</text>
+<text x="103.0" y="150" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">channels</text>
+<text x="103.0" y="172" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Needs a radio</text>
+<text x="103.0" y="194" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">licence</text>
+<text x="103.0" y="216" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Shop programs it</text>
+<rect x="204.0" y="46" width="186.0" height="204" rx="10" fill="#dfe6d3" stroke="#e8590c" stroke-width="2"/>
+<rect x="204.0" y="46" width="186.0" height="36" rx="10" fill="#e8590c"/>
+<text x="297.0" y="70" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">FRS handheld</text>
+<text x="297.0" y="106" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Talks to your</text>
+<text x="297.0" y="128" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">partner</text>
+<text x="297.0" y="150" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">No licence</text>
+<text x="297.0" y="172" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">needed</text>
+<text x="297.0" y="194" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Does not reach</text>
+<text x="297.0" y="216" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">the trucks (Tip)</text>
+</svg>

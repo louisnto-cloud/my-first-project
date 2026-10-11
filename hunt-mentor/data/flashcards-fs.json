@@ -1,0 +1,1194 @@
+[
+ {
+  "id": "fs-fa-order",
+  "deck": "First aid in the field",
+  "front": "Order of care for an injured hunter?",
+  "back": "Scene safe (guns unloaded), call for help, stop big bleeding, breathing, keep warm.",
+  "diagram": "fs-fa-priorities"
+ },
+ {
+  "id": "fs-fa-ccc",
+  "deck": "First aid in the field",
+  "front": "What are the 3 steps of the first minute?",
+  "back": "Check (scene and danger), Call (911 or SOS, location first), Care (bleeding first)."
+ },
+ {
+  "id": "fs-fa-call-first",
+  "deck": "First aid in the field",
+  "front": "On a 911 call, what do you say first?",
+  "back": "Your location. If the call drops, help still knows where to go."
+ },
+ {
+  "id": "fs-fa-911-tower",
+  "deck": "First aid in the field",
+  "front": "No bars from your carrier. Can 911 still work?",
+  "back": "Often yes: a phone can reach 911 through any carrier tower in range (BC Search and Rescue Association, 75%)."
+ },
+ {
+  "id": "fs-fa-signs",
+  "deck": "First aid in the field",
+  "front": "Name 4 signs of life threatening bleeding.",
+  "back": "Spurting, flowing that will not slow, pooling on the ground, soaking through clothes. Also a missing limb or a confused, pale person.",
+  "diagram": "fs-fa-bleed-signs"
+ },
+ {
+  "id": "fs-fa-ladder",
+  "deck": "First aid in the field",
+  "front": "The bleeding control ladder?",
+  "back": "Press, pack, tourniquet. Climb only as far as you need."
+ },
+ {
+  "id": "fs-fa-pack-where",
+  "deck": "First aid in the field",
+  "front": "Which wounds get packed instead of a tourniquet?",
+  "back": "Deep wounds in the groin, armpit or side of the neck. Not the chest or belly.",
+  "diagram": "fs-fa-press-3"
+ },
+ {
+  "id": "fs-fa-pack-hold",
+  "deck": "First aid in the field",
+  "front": "After packing a wound, how long do you press on top?",
+  "back": "At least 3 minutes, then wrap tight. Do not peek."
+ },
+ {
+  "id": "fs-fa-tq-when",
+  "deck": "First aid in the field",
+  "front": "When does a tourniquet go on?",
+  "back": "Life threatening bleeding from an arm or leg that direct pressure cannot control."
+ },
+ {
+  "id": "fs-fa-tq-where",
+  "deck": "First aid in the field",
+  "front": "Where does a tourniquet go?",
+  "back": "Above the wound on the heart side, never on a joint. Distance: 5 to 8 cm or 5 to 10 cm depending on source (VERIFY with your instructor).",
+  "diagram": "fs-fa-tq-distance"
+ },
+ {
+  "id": "fs-fa-tq-finish",
+  "deck": "First aid in the field",
+  "front": "How do you finish a tourniquet?",
+  "back": "Twist till it stops, lock, clock: lock the rod in its clip, write the time, leave it on for the medics.",
+  "diagram": "fs-fa-tq-5"
+ },
+ {
+  "id": "fs-fa-tq-second",
+  "deck": "First aid in the field",
+  "front": "First tourniquet as tight as it goes, still bleeding?",
+  "back": "Add a second tourniquet above the first, closer to the heart."
+ },
+ {
+  "id": "fs-fa-shock",
+  "deck": "First aid in the field",
+  "front": "Signs of shock and the care?",
+  "back": "Pale, cold, clammy, fast pulse, thirst, confusion. Stop bleeding, lay flat on a pad, cover, nothing to eat or drink.",
+  "diagram": "fs-fa-shock"
+ },
+ {
+  "id": "fs-fa-flush",
+  "deck": "First aid in the field",
+  "front": "How do you clean a dirty knife cut in the bush?",
+  "back": "Flush with at least 1 litre of drinkable water under pressure (squeezed bottle or pin hole bag), then cover.",
+  "diagram": "fs-fa-clean-2"
+ },
+ {
+  "id": "fs-fa-infect",
+  "deck": "First aid in the field",
+  "front": "Signs a cut is infected?",
+  "back": "Spreading redness, heat, swelling, pus, a red streak, fever. See a doctor."
+ },
+ {
+  "id": "fs-fa-knife",
+  "deck": "First aid in the field",
+  "front": "Two habits that prevent gutting cuts?",
+  "back": "Cut away from you with fingers behind the blade, and wipe the handle so a bloody grip does not slide.",
+  "diagram": "fs-fa-knife-safe"
+ },
+ {
+  "id": "fs-fa-sprain",
+  "deck": "First aid in the field",
+  "front": "Rolled ankle: field care?",
+  "back": "Sit, look for a bad bend, cool in a cloth 10 to 20 minutes, wrap firm, foot up, then the 4 step test."
+ },
+ {
+  "id": "fs-fa-4steps",
+  "deck": "First aid in the field",
+  "front": "Hurt leg: what decides walk out or wait?",
+  "back": "Can take 4 steps: wrap, poles, partner carries gear. Cannot: stay, splint, shelter, call for help.",
+  "diagram": "fs-fa-walkout"
+ },
+ {
+  "id": "fs-fa-splint",
+  "deck": "First aid in the field",
+  "front": "Splint rules?",
+  "back": "Do not straighten. Pad. Joint above to joint below. Ties off the break. Check warmth and feeling before and after."
+ },
+ {
+  "id": "fs-fa-kit",
+  "deck": "First aid in the field",
+  "front": "Trauma kit contents?",
+  "back": "Tourniquet, pressure bandage, packing gauze, gloves, shears, marker and tape. On your body, same pocket every hunt.",
+  "diagram": "fs-fa-kit"
+ },
+ {
+  "id": "fs-cold-4ways",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "Name the 4 ways your body loses heat.",
+  "back": "Conduction (cold ground), convection (wind), radiation (open sky), evaporation (sweat, wet clothes).",
+  "diagram": "fs-cold-heat-loss"
+ },
+ {
+  "id": "fs-cold-trap",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "What is the hunter cold trap?",
+  "back": "Sweating on the climb, then sitting still to glass in damp clothes as the day cools."
+ },
+ {
+  "id": "fs-cold-kam-oct",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "Kamloops Airport October average low and November average low?",
+  "back": "October 3.5 °C, November minus 1.1 °C (1991 to 2020). Higher ground is colder.",
+  "diagram": "fs-cold-oct-chart"
+ },
+ {
+  "id": "fs-cold-sunset",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "About when is sunset in Kamloops on 31 October?",
+  "back": "About 17:40, dark by about 18:14 (calculated). Clocks fall back 1 November."
+ },
+ {
+  "id": "fs-cold-habits",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "The 4 stay dry habits?",
+  "back": "Start a little cold, vent before you sweat, swap a soaked base layer, puffy on and pad under when you stop."
+ },
+ {
+  "id": "fs-cold-mild",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "Signs of mild hypothermia?",
+  "back": "Alert but shivering strongly, clumsy movement. Core about 35 to 32 °C.",
+  "diagram": "fs-cold-stages"
+ },
+ {
+  "id": "fs-cold-moderate",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "Signs of moderate hypothermia?",
+  "back": "Shivering slows or stops, drowsy but conscious. Core about 32 to 28 °C."
+ },
+ {
+  "id": "fs-cold-severe",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "Signs of severe hypothermia?",
+  "back": "No shivering, not conscious. Core under 28 °C. Check breathing and pulse up to 60 seconds."
+ },
+ {
+  "id": "fs-cold-umbles",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "What are the umbles?",
+  "back": "Stumbles, mumbles, fumbles, grumbles: early hypothermia signs.",
+  "diagram": "fs-cold-umbles"
+ },
+ {
+  "id": "fs-cold-mild-care",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "Field care for mild hypothermia?",
+  "back": "Out of wind and wet, pad under, dry layers, head covered, heat to armpits, chest and back, warm sweet food if alert, rest 30 minutes."
+ },
+ {
+  "id": "fs-cold-mod-care",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "Care for moderate or severe hypothermia?",
+  "back": "Gentle, flat, no food or drink, insulate, big heat on the upper trunk, tarp outside, call 911 or SOS.",
+  "diagram": "fs-cold-wrap-3"
+ },
+ {
+  "id": "fs-cold-handwarmers",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "Are small hand warmers enough to rewarm a cold core?",
+  "back": "No. Use large heat sources on the trunk. Small packs only for hands and feet."
+ },
+ {
+  "id": "fs-cold-afterdrop",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "What is afterdrop?",
+  "back": "Cold blood from the limbs returning to the core when limbs are warmed or moved, dropping core temperature. Warm the trunk first, move gently.",
+  "diagram": "fs-cold-afterdrop"
+ },
+ {
+  "id": "fs-cold-nip-bite",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "Frostnip or frostbite: how to tell?",
+  "back": "Frostnip is surface only and comes back fast with warming. Frostbite freezes tissue: white, waxy, hard."
+ },
+ {
+  "id": "fs-cold-fb-rub",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "Should you rub frostbite or rub snow on it?",
+  "back": "No. Never rub. Blot dry.",
+  "diagram": "fs-cold-fb-2"
+ },
+ {
+  "id": "fs-cold-fb-refreeze",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "When should you NOT thaw frostbite?",
+  "back": "When it could refreeze before you reach care. Thaw then refreeze does the most damage."
+ },
+ {
+  "id": "fs-cold-fb-water",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "Frostbite rewarming water temperature and time?",
+  "back": "37 to 39 °C, about 30 minutes, until soft and red or purple.",
+  "diagram": "fs-cold-fb-4"
+ },
+ {
+  "id": "fs-cold-windchill",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "Minus 23 °C with a 48 km/h wind: how fast can skin freeze?",
+  "back": "About 10 minutes (US National Weather Service chart).",
+  "diagram": "fs-cold-windchill"
+ },
+ {
+  "id": "fs-cold-mitts",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "Mitts or gloves for warmth?",
+  "back": "Mitts. Carry gloves for fine work."
+ },
+ {
+  "id": "fs-cold-pad",
+  "deck": "Hypothermia, frostbite and cold weather",
+  "front": "Why carry a foam sit pad?",
+  "back": "It stops conduction: cold ground or a log pulls heat out of you for hours."
+ },
+ {
+  "id": "fs-lost-stop",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "What does STOP stand for?",
+  "back": "Stop, Think, Observe, Plan (AdventureSmart).",
+  "diagram": "gr-stop-s"
+ },
+ {
+  "id": "fs-lost-how",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "Name 3 ways hunters get lost.",
+  "back": "Chasing wounded game, darkness falling, fog or snow, head down on a track, a shortcut back, never looking back.",
+  "diagram": "fs-lost-how"
+ },
+ {
+  "id": "fs-lost-stay",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "Why stay put when lost?",
+  "back": "It reduces the time and the area searchers must cover."
+ },
+ {
+  "id": "fs-lost-area",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "You wander twice as far. How much bigger is the search area?",
+  "back": "4 times. Area grows with the distance squared.",
+  "diagram": "fs-lost-search-area"
+ },
+ {
+  "id": "fs-lost-circle",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "Can you walk straight in thick timber under cloud?",
+  "back": "Usually not. Studies show people curve and even cross their own path without sun or landmarks."
+ },
+ {
+  "id": "fs-lost-downhill",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "Lost in steep country: follow the creek downhill?",
+  "back": "Not by default. Creeks drop into ravines and canyons that are hard to climb out of."
+ },
+ {
+  "id": "fs-lost-first",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "First action when you need rescue?",
+  "back": "Call 911. Police dispatch Search and Rescue.",
+  "diagram": "fs-lost-call-1"
+ },
+ {
+  "id": "fs-lost-tower",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "Your carrier has no signal. Can 911 still connect?",
+  "back": "Often yes, through any carrier tower in range."
+ },
+ {
+  "id": "fs-lost-say",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "On the call, what do you say first?",
+  "back": "Your location or coordinates.",
+  "diagram": "fs-lost-call-2"
+ },
+ {
+  "id": "fs-lost-sos",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "No signal at all. What next?",
+  "back": "Satellite SOS (iPhone 14 or later in Canada, or a satellite messenger) from open sky."
+ },
+ {
+  "id": "fs-lost-phone",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "Where does the phone ride in the cold, and why?",
+  "back": "Inside pocket against your body. Cold drains batteries and can shut the phone off (iPhone range 0 to 35 °C).",
+  "diagram": "fs-lost-phone"
+ },
+ {
+  "id": "fs-lost-threes",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "Distress signal pattern?",
+  "back": "Anything in threes: 3 whistle blasts, 3 flashes, 3 fires, 3 rock piles.",
+  "diagram": "fs-lost-threes"
+ },
+ {
+  "id": "fs-lost-v",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "Ground to air signal and size?",
+  "back": "A V or SOS at least 3 m long, high contrast."
+ },
+ {
+  "id": "fs-lost-found",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "Three ways to help searchers find you?",
+  "back": "Settle at the edge of an opening, spread orange and bright gear, whistle 3 times when you hear them."
+ },
+ {
+  "id": "fs-lost-whistle",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "Why a whistle instead of shouting?",
+  "back": "It carries farther and costs no energy."
+ },
+ {
+  "id": "fs-lost-lookback",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "Best habit to avoid getting lost?",
+  "back": "Pin the truck, look back at every junction, carry map and compass, set a turn back time.",
+  "diagram": "fs-lost-look-back"
+ },
+ {
+  "id": "fs-lost-kit",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "Pocket survival kit contents?",
+  "back": "2 lighters, fire starter, whistle, space blanket or bivy, headlamp, knife, water bag, cord.",
+  "diagram": "fs-lost-kit"
+ },
+ {
+  "id": "fs-lost-layers",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "The 3 layers of kit?",
+  "back": "Pockets (go everywhere), day pack (10 essentials, shelter), truck (food, sleeping bag, extras).",
+  "diagram": "fs-lost-kit-where"
+ },
+ {
+  "id": "fs-lost-order",
+  "deck": "Lost: what to do, and the survival kit",
+  "front": "Lost overnight: priorities in order?",
+  "back": "Calm and STOP, call or signal, shelter and warmth, fire, water, food last.",
+  "diagram": "fs-lost-priorities"
+ },
+ {
+  "id": "fs-fire-triangle",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "What 3 things does fire need?",
+  "back": "Heat, fuel and air. Wet fuel steals heat; packed wood starves air.",
+  "diagram": "fs-fire-triangle"
+ },
+ {
+  "id": "fs-fire-cat1",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "Size limit of a Category 1 campfire?",
+  "back": "One pile no larger than 0.5 m high and 0.5 m wide.",
+  "diagram": "fs-fire-cat1"
+ },
+ {
+  "id": "fs-fire-water",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "What must stand by while a campfire burns?",
+  "back": "At least 8 litres of water or a hand tool (check the current order wording)."
+ },
+ {
+  "id": "fs-fire-bans",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "Before every fire, check what?",
+  "back": "The BC Wildfire Service ban status for your fire centre."
+ },
+ {
+  "id": "fs-fire-fine",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "Fine for breaking an open fire ban?",
+  "back": "Up to $1,150. An escaped fire causing a wildfire: up to $1 million, jail and firefighting costs."
+ },
+ {
+  "id": "fs-fire-dry",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "Where is dry fuel in the rain?",
+  "back": "Standing dead wood, dead twigs under big spruce, the split core of a log, birch bark, pitch wood, your pocket fire starter.",
+  "diagram": "fs-fire-dry-spots"
+ },
+ {
+  "id": "fs-fire-snap",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "How do you test if a stick is dry?",
+  "back": "Dry dead wood snaps. Wet or green wood bends."
+ },
+ {
+  "id": "fs-fire-pitch",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "What is pitch wood?",
+  "back": "Resin soaked wood from old pine or fir stumps and knots. Burns even when the outside is wet."
+ },
+ {
+  "id": "fs-fire-ladder",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "The fuel ladder sizes?",
+  "back": "Tinder, matchstick, pencil, thumb, wrist. 2 big handfuls of each before you light.",
+  "diagram": "fs-fire-sizes"
+ },
+ {
+  "id": "fs-fire-feather",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "What is a feather stick?",
+  "back": "A split dry stick shaved into thin curls left attached. Catches from a lighter in rain.",
+  "diagram": "fs-fire-feather-2"
+ },
+ {
+  "id": "fs-fire-platform",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "Why build a platform first?",
+  "back": "It keeps tinder off wet ground or snow.",
+  "diagram": "fs-fire-build-1"
+ },
+ {
+  "id": "fs-fire-door",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "Where is the door of the tipi?",
+  "back": "On the upwind side, so wind feeds air into the tinder."
+ },
+ {
+  "id": "fs-fire-light",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "Where do you light the tinder?",
+  "back": "Low, at the bottom, from the upwind side, shielded by your body."
+ },
+ {
+  "id": "fs-fire-two",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "How many ways to light should you carry?",
+  "back": "Two, in two pockets: lighter plus fire starter, and matches or a ferro rod.",
+  "diagram": "fs-fire-ignition"
+ },
+ {
+  "id": "fs-fire-tarp",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "Tarp over a fire?",
+  "back": "High above it, never close. Tarps melt and burn.",
+  "diagram": "fs-fire-shield"
+ },
+ {
+  "id": "fs-fire-signal",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "How do you make signal smoke by day?",
+  "back": "Green boughs on a hot fire, in the open. Three fires mean help.",
+  "diagram": "fs-fire-signal"
+ },
+ {
+  "id": "fs-fire-out",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "Putting a fire out in 4 words?",
+  "back": "Drown, stir, feel, repeat. Cool to the touch everywhere.",
+  "diagram": "fs-fire-out-3"
+ },
+ {
+  "id": "fs-fire-report",
+  "deck": "Fire: building one in wet BC weather",
+  "front": "Report a wildfire: number?",
+  "back": "1 800 663 5555 toll free, or *5555 on a cell."
+ },
+ {
+  "id": "fs-sh-order",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "Shelter priority: bed or roof?",
+  "back": "Bed first, roof second. The ground pulls heat by conduction all night.",
+  "diagram": "fs-sh-ground"
+ },
+ {
+  "id": "fs-sh-when",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "When do you start building?",
+  "back": "At least an hour before dark, when the light turns gold and you are still far from the truck."
+ },
+ {
+  "id": "fs-sh-site",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "Best spot for a night out?",
+  "back": "A sheltered bench part way up, near trees, fuel and an opening. Not the valley bottom, not the windy top.",
+  "diagram": "fs-sh-site"
+ },
+ {
+  "id": "fs-sh-cold-air",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "Why not sleep in the valley bottom?",
+  "back": "Cold air sinks and pools there at night, and it is often wet."
+ },
+ {
+  "id": "fs-sh-lookup",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "Before you settle, look where?",
+  "back": "Up: no dead trees or hanging branches over you."
+ },
+ {
+  "id": "fs-sh-bed",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "What makes a good bed?",
+  "back": "Foam pad, pack, boughs, dry grass or leaves, thick enough to stay a hand thick when you lie on it."
+ },
+ {
+  "id": "fs-sh-tarp",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "Tarp shelter in 4 steps?",
+  "back": "Tight cord between trees, drape the tarp, pin the windward edge low, bed underneath.",
+  "diagram": "fs-sh-tarp-3"
+ },
+ {
+  "id": "fs-sh-wind",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "Which side of the tarp faces the wind?",
+  "back": "The low pinned edge. The open side faces away."
+ },
+ {
+  "id": "fs-sh-foil",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "What is a foil blanket bad at?",
+  "back": "Stopping heat loss into the ground. It also tears and traps moisture."
+ },
+ {
+  "id": "fs-sh-bivy",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "Foil blanket or bivy bag?",
+  "back": "Bivy bag in the pack (wraps you, stops wind); foil blanket as pocket backup. Both need a bed under."
+ },
+ {
+  "id": "fs-sh-debris",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "Debris hut steps?",
+  "back": "Pole from a stump to the ground, close ribs, pile debris thick, fill the inside, plug the door.",
+  "diagram": "fs-sh-debris-3"
+ },
+ {
+  "id": "fs-sh-debris-con",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "Downside of a debris hut?",
+  "back": "It takes hours and lots of dry material. A tarp is faster."
+ },
+ {
+  "id": "fs-sh-reflector",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "How does a reflector wall help?",
+  "back": "Logs or rocks behind a small fire bounce heat back toward you.",
+  "diagram": "fs-sh-reflector"
+ },
+ {
+  "id": "fs-sh-co",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "Fire or stove inside a closed shelter?",
+  "back": "Never. Carbon monoxide and fire risk."
+ },
+ {
+  "id": "fs-sh-night",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "Night routine?",
+  "back": "Eat, pee, dry socks on, toque on all night, boots in a bag. Cold: eat and move.",
+  "diagram": "fs-sh-night"
+ },
+ {
+  "id": "fs-sh-buddy",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "Two hunters, one night out?",
+  "back": "One bed, one cover, back to back. Colder or hurt person in the middle of the insulation.",
+  "diagram": "fs-sh-buddy"
+ },
+ {
+  "id": "fs-sh-visible",
+  "deck": "Shelter: surviving an unplanned night out",
+  "front": "Shelter hidden in thick timber. Problem?",
+  "back": "Searchers cannot see you. Put orange and bright gear in the nearest opening."
+ },
+ {
+  "id": "fs-wat-clear",
+  "deck": "Water: finding it and making it safe",
+  "front": "A creek looks crystal clear. Safe to drink?",
+  "back": "No. Treat every lake, creek and spring. Germs are invisible.",
+  "diagram": "fs-wat-clear"
+ },
+ {
+  "id": "fs-wat-giardia",
+  "deck": "Water: finding it and making it safe",
+  "front": "What is beaver fever?",
+  "back": "Giardiasis, a gut infection from the Giardia parasite, mostly from contaminated water."
+ },
+ {
+  "id": "fs-wat-delay",
+  "deck": "Water: finding it and making it safe",
+  "front": "When do Giardia symptoms usually start, and how long do they last?",
+  "back": "Usually 1 to 3 weeks after infection; they can last 2 to 6 weeks."
+ },
+ {
+  "id": "fs-wat-boil",
+  "deck": "Water: finding it and making it safe",
+  "front": "Boiling time for safe water?",
+  "back": "Rolling boil at least 1 minute; above 2,000 m at least 2 minutes (HealthLink BC).",
+  "diagram": "fs-wat-boil-2"
+ },
+ {
+  "id": "fs-wat-filter",
+  "deck": "Water: finding it and making it safe",
+  "front": "Filter pore size for Giardia?",
+  "back": "1 micron or smaller, certified (NSF). Jug filters like Brita do not count.",
+  "diagram": "fs-wat-filter-1"
+ },
+ {
+  "id": "fs-wat-virus",
+  "deck": "Water: finding it and making it safe",
+  "front": "Does a backcountry filter stop viruses?",
+  "back": "No. Boiling, chemicals or UV do.",
+  "diagram": "fs-wat-methods"
+ },
+ {
+  "id": "fs-wat-bleach",
+  "deck": "Water: finding it and making it safe",
+  "front": "Bleach dose for 1 litre of clear water?",
+  "back": "2 drops of unscented household bleach, wait 30 minutes.",
+  "diagram": "fs-wat-bleach"
+ },
+ {
+  "id": "fs-wat-bleach-cold",
+  "deck": "Water: finding it and making it safe",
+  "front": "Bleach in cloudy or cold (under 10 °C) water?",
+  "back": "Double the dose and wait 1 to 2 hours."
+ },
+ {
+  "id": "fs-wat-chlorine-giardia",
+  "deck": "Water: finding it and making it safe",
+  "front": "Is chlorine good against Giardia?",
+  "back": "Generally not effective. Boil or filter for Giardia."
+ },
+ {
+  "id": "fs-wat-cloudy",
+  "deck": "Water: finding it and making it safe",
+  "front": "Cloudy water: what first?",
+  "back": "Strain through cloth, let it settle, pour off the clear water, then treat."
+ },
+ {
+  "id": "fs-wat-uv",
+  "deck": "Water: finding it and making it safe",
+  "front": "Weak spot of a UV pen?",
+  "back": "Only works in small amounts of clear water. Particles shield germs."
+ },
+ {
+  "id": "fs-wat-nofix",
+  "deck": "Water: finding it and making it safe",
+  "front": "Green scum or a fuel sheen: boil it?",
+  "back": "No. Boiling does not remove toxins or chemicals. Find other water.",
+  "diagram": "fs-wat-no-fix"
+ },
+ {
+  "id": "fs-wat-find",
+  "deck": "Water: finding it and making it safe",
+  "front": "Signs of water in dry Interior hills?",
+  "back": "A green line of brush in a draw, cottonwood and willow, seeps below rock outcrops.",
+  "diagram": "fs-wat-find"
+ },
+ {
+  "id": "fs-wat-rank",
+  "deck": "Water: finding it and making it safe",
+  "front": "Best to worst water sources?",
+  "back": "Spring at its source, fast clear creek, lake away from shore, pond or slough or cattle water last.",
+  "diagram": "fs-wat-rank"
+ },
+ {
+  "id": "fs-wat-30m",
+  "deck": "Water: finding it and making it safe",
+  "front": "Toilet distance from water?",
+  "back": "At least 30 m.",
+  "diagram": "fs-wat-30m"
+ },
+ {
+  "id": "fs-wat-freeze",
+  "deck": "Water: finding it and making it safe",
+  "front": "Why keep the filter warm in November?",
+  "back": "Many hollow fibre filters can be damaged by freezing. Check the maker."
+ },
+ {
+  "id": "fs-bc-never-run",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Rule one with bears and cougars?",
+  "back": "Never run. Stop, stay calm."
+ },
+ {
+  "id": "fs-bc-why",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Why do hunters meet more bears?",
+  "back": "Quiet movement, dawn and dusk, blood and gut piles, calls and decoys, thick cover, kill sites.",
+  "diagram": "fs-bc-why"
+ },
+ {
+  "id": "fs-bc-noise",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Where should you call out to avoid surprising a bear?",
+  "back": "Near running water, thick brush, berry patches and in high wind.",
+  "diagram": "fs-bc-avoid-2"
+ },
+ {
+  "id": "fs-bc-carcass",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "You find a carcass you did not shoot. What do you do?",
+  "back": "Leave the area at once and report it. A bear may be guarding it.",
+  "diagram": "fs-bc-avoid-4"
+ },
+ {
+  "id": "fs-bc-unaware",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Bear has not noticed you?",
+  "back": "Leave quietly the way you came, watching it, spray ready.",
+  "diagram": "fs-bc-flow"
+ },
+ {
+  "id": "fs-bc-aware",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Bear sees you but is calm?",
+  "back": "Speak softly and back away slowly. Do not follow it."
+ },
+ {
+  "id": "fs-bc-agitated",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Signs of an agitated bear?",
+  "back": "Jaw popping, woofing, moaning, stomping, bluff charging.",
+  "diagram": "fs-bc-warning"
+ },
+ {
+  "id": "fs-bc-approach",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Bear keeps coming steadily toward you?",
+  "back": "May be predatory. Yell, stand big, move to high ground, spray, be ready to fight."
+ },
+ {
+  "id": "fs-bc-spray-range",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "At what distance does WildSafeBC say to spray?",
+  "back": "When the bear is within about 5 to 10 m.",
+  "diagram": "fs-bc-spray-ranges"
+ },
+ {
+  "id": "fs-bc-spray-where",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Where do you carry bear spray?",
+  "back": "Chest or hip holster. Never in the pack."
+ },
+ {
+  "id": "fs-bc-spray-gun",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Spray or gun: which stopped bears more often in studies?",
+  "back": "Spray: about 92% versus about 67% for guns (as reported for the Smith and Herrero studies).",
+  "diagram": "fs-bc-spray-gun"
+ },
+ {
+  "id": "fs-bc-defensive",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Defensive bear makes contact. What do you do?",
+  "back": "Lie on your stomach, pack on, hands over the back of your neck, legs apart. Stay still until it leaves.",
+  "diagram": "fs-bc-play-dead"
+ },
+ {
+  "id": "fs-bc-predatory",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Predatory bear attack?",
+  "back": "Fight back with everything, at the face, eyes and nose.",
+  "diagram": "fs-bc-attack-types"
+ },
+ {
+  "id": "fs-bc-gutpile",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "How far from the gut pile should the meat go?",
+  "back": "At least 200 m (Alberta guidance). Bears often go to the gut pile first.",
+  "diagram": "fs-bc-kill-2"
+ },
+ {
+  "id": "fs-bc-hang",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "How high and how far from trunks do you hang meat?",
+  "back": "At least 3.5 m up and 1.5 m from tree trunks, in view from a distance.",
+  "diagram": "fs-bc-kill-3"
+ },
+ {
+  "id": "fs-bc-return",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Going back to your meat: how?",
+  "back": "From upwind, stop and glass it, call out. Bear on it, or moved or buried: leave and report."
+ },
+ {
+  "id": "fs-bc-drag",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Drag the carcass back to camp?",
+  "back": "No. It lays a scent trail to where you sleep."
+ },
+ {
+  "id": "fs-bc-camp",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Camp distances in bear country?",
+  "back": "Food, cooking and meat at least 100 m from where you sleep. Never food in the tent.",
+  "diagram": "fs-bc-camp"
+ },
+ {
+  "id": "fs-bc-cougar",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Cougar encounter steps?",
+  "back": "Never run, look big, eye contact, loud voice, back away slowly, leave it an exit. Attacked: fight, face and eyes.",
+  "diagram": "fs-bc-cougar-2"
+ },
+ {
+  "id": "fs-bc-report",
+  "deck": "Bears and cougars: avoiding and handling encounters",
+  "front": "Number to report an aggressive bear or cougar?",
+  "back": "1 877 952 7277 (RAPP and Conservation Officer Service line)."
+ },
+ {
+  "id": "fs-wf-checks",
+  "deck": "Wildfire, smoke and heat",
+  "front": "The 4 checks before a fire season hunt?",
+  "back": "Fire map, area restriction orders, fire bans, air quality (AQHI).",
+  "diagram": "fs-wf-check-1"
+ },
+ {
+  "id": "fs-wf-area",
+  "deck": "Wildfire, smoke and heat",
+  "front": "What does an area restriction order mean for a hunter?",
+  "back": "No entering or staying inside without written authorization, for any purpose, including hunting.",
+  "diagram": "fs-wf-area"
+ },
+ {
+  "id": "fs-wf-evac",
+  "deck": "Wildfire, smoke and heat",
+  "front": "Evacuation order lifted. Area restriction still on. Hunt?",
+  "back": "No. Restrictions can outlast evacuation orders."
+ },
+ {
+  "id": "fs-wf-ticket",
+  "deck": "Wildfire, smoke and heat",
+  "front": "Ticket for entering a restricted area?",
+  "back": "Fire centre notices cite $1,150 violation tickets."
+ },
+ {
+  "id": "fs-wf-uphill",
+  "deck": "Wildfire, smoke and heat",
+  "front": "Which way does fire spread fastest?",
+  "back": "Uphill. Rising heat pre heats the fuel above."
+ },
+ {
+  "id": "fs-wf-traps",
+  "deck": "Wildfire, smoke and heat",
+  "front": "Terrain fire traps?",
+  "back": "Upslopes, chimneys (narrow draws), saddles, heavy dry timber.",
+  "diagram": "fs-wf-terrain"
+ },
+ {
+  "id": "fs-wf-escape",
+  "deck": "Wildfire, smoke and heat",
+  "front": "Escape direction from a wildfire?",
+  "back": "Down and across the slope, toward burned ground, rock, water or a road. Never uphill ahead of it.",
+  "diagram": "fs-wf-escape-3"
+ },
+ {
+  "id": "fs-wf-cornered",
+  "deck": "Wildfire, smoke and heat",
+  "front": "Cornered by fire, last resort?",
+  "back": "Bare ground, lie face down low with feet toward the flames, cover mouth and nose until it passes."
+ },
+ {
+  "id": "fs-wf-ash",
+  "deck": "Wildfire, smoke and heat",
+  "front": "Ash and sparks falling on you mean?",
+  "back": "The fire is probably close, within about 1.6 km."
+ },
+ {
+  "id": "fs-wf-report",
+  "deck": "Wildfire, smoke and heat",
+  "front": "Report a wildfire?",
+  "back": "1 800 663 5555 toll free, or *5555 on a cell.",
+  "diagram": "fs-wf-sparks"
+ },
+ {
+  "id": "fs-wf-exhaust",
+  "deck": "Wildfire, smoke and heat",
+  "front": "How can a hunter start a wildfire by parking?",
+  "back": "Hot exhaust on dry grass. Park on gravel or dirt."
+ },
+ {
+  "id": "fs-wf-burn",
+  "deck": "Wildfire, smoke and heat",
+  "front": "Hazards when hunting a burn?",
+  "back": "Danger trees, ash pits with smouldering roots, loose rock, flash floods.",
+  "diagram": "fs-wf-burn"
+ },
+ {
+  "id": "fs-wf-aqhi",
+  "deck": "Wildfire, smoke and heat",
+  "front": "AQHI bands?",
+  "back": "1 to 3 low, 4 to 6 moderate, 7 to 10 high, 10+ very high.",
+  "diagram": "fs-wf-aqhi"
+ },
+ {
+  "id": "fs-wf-aqhi10",
+  "deck": "Wildfire, smoke and heat",
+  "front": "AQHI 10+: what should a hunter do?",
+  "back": "Reduce or reschedule strenuous activity like a hard climb. People at higher risk avoid it."
+ },
+ {
+  "id": "fs-wf-n95",
+  "deck": "Wildfire, smoke and heat",
+  "front": "Mask for wildfire smoke if you cannot get to cleaner air?",
+  "back": "A well fitted N95 respirator."
+ },
+ {
+  "id": "fs-wf-stroke",
+  "deck": "Wildfire, smoke and heat",
+  "front": "Heat stroke vs heat exhaustion: key difference?",
+  "back": "Heat stroke: confused, hot, may stop sweating, 40 °C or more. Call 911.",
+  "diagram": "fs-wf-heat-signs"
+ },
+ {
+  "id": "fs-wf-stroke-care",
+  "deck": "Wildfire, smoke and heat",
+  "front": "Heat stroke first aid?",
+  "back": "Call 911, shade, strip extra clothes, soak with cold water, fan, cold packs on neck, armpits, groin. No aspirin or acetaminophen.",
+  "diagram": "fs-wf-heat-3"
+ },
+ {
+  "id": "fs-av-angle",
+  "deck": "Avalanche awareness for hunters",
+  "front": "Which slope angles produce most avalanches?",
+  "back": "30 to 45 degrees. 25 to 30 less often. Over 45 snow usually sluffs.",
+  "diagram": "fs-av-angle"
+ },
+ {
+  "id": "fs-av-size",
+  "deck": "Avalanche awareness for hunters",
+  "front": "How small a slope can still be dangerous?",
+  "back": "About 10 m by 10 m can hold enough snow (Avalanche Canada)."
+ },
+ {
+  "id": "fs-av-thin",
+  "deck": "Avalanche awareness for hunters",
+  "front": "How much snow on a grass or rock slab slope can slide early season?",
+  "back": "About 30 cm (Avalanche Canada warning).",
+  "diagram": "fs-av-when"
+ },
+ {
+  "id": "fs-av-runout",
+  "deck": "Avalanche awareness for hunters",
+  "front": "Can an avalanche reach flat ground below?",
+  "back": "Yes. It can run across flat ground and even uphill."
+ },
+ {
+  "id": "fs-av-traps",
+  "deck": "Avalanche awareness for hunters",
+  "front": "Name 4 terrain traps.",
+  "back": "Gullies or creek beds, cliffs below, trees and rocks in the path, flat ground right below a steep slope.",
+  "diagram": "fs-av-traps"
+ },
+ {
+  "id": "fs-av-signs",
+  "deck": "Avalanche awareness for hunters",
+  "front": "Signs of unstable snow?",
+  "back": "Recent avalanches (last 48 hours), whumpfs, shooting cracks, hollow sounds, remote triggers.",
+  "diagram": "fs-av-signs"
+ },
+ {
+  "id": "fs-av-nosigns",
+  "deck": "Avalanche awareness for hunters",
+  "front": "No warning signs today. Safe?",
+  "back": "No. The absence of signs does not mean no danger."
+ },
+ {
+  "id": "fs-av-scale",
+  "deck": "Avalanche awareness for hunters",
+  "front": "The 5 danger levels?",
+  "back": "Low, Moderate, Considerable, High, Extreme.",
+  "diagram": "fs-av-scale"
+ },
+ {
+  "id": "fs-av-considerable",
+  "deck": "Avalanche awareness for hunters",
+  "front": "Which danger level has the most deaths?",
+  "back": "Considerable (3). Many slopes should be avoided."
+ },
+ {
+  "id": "fs-av-high",
+  "deck": "Avalanche awareness for hunters",
+  "front": "Danger rated High: what do you do?",
+  "back": "Avoid all avalanche terrain. Mellow slopes or dense trees with no overhead hazard."
+ },
+ {
+  "id": "fs-av-ates",
+  "deck": "Avalanche awareness for hunters",
+  "front": "The 3 terrain classes (ATES)?",
+  "back": "Simple, challenging, complex."
+ },
+ {
+  "id": "fs-av-forecast",
+  "deck": "Avalanche awareness for hunters",
+  "front": "When do Avalanche Canada daily forecasts usually start?",
+  "back": "Late November in past years (about 22 to 25 November). Before then, read the early season conditions page.",
+  "diagram": "fs-av-travel-1"
+ },
+ {
+  "id": "fs-av-gear",
+  "deck": "Avalanche awareness for hunters",
+  "front": "Avalanche rescue gear per person?",
+  "back": "Transceiver (worn, on), probe and shovel (in the pack on your back). All three, everyone.",
+  "diagram": "fs-av-gear"
+ },
+ {
+  "id": "fs-av-cross",
+  "deck": "Avalanche awareness for hunters",
+  "front": "How do you cross a slope that could slide?",
+  "back": "One at a time, safe spot to safe spot, partner watching.",
+  "diagram": "fs-av-travel-3"
+ },
+ {
+  "id": "fs-av-caught",
+  "deck": "Avalanche awareness for hunters",
+  "front": "Caught in an avalanche?",
+  "back": "Yell, move to the side at 45 degrees, grab a tree, fight to the surface, air space and one hand up as it slows.",
+  "diagram": "fs-av-caught-1"
+ },
+ {
+  "id": "fs-av-survival",
+  "deck": "Avalanche awareness for hunters",
+  "front": "Survival of fully buried people over time?",
+  "back": "Over 90% in the first 15 to 20 minutes, about 35% by 35 minutes. Companion rescue is the best chance.",
+  "diagram": "fs-av-curve"
+ },
+ {
+  "id": "fs-av-rescue",
+  "deck": "Avalanche awareness for hunters",
+  "front": "Companion rescue order?",
+  "back": "Last seen point, transceiver search, probe, shovel from downhill, face first.",
+  "diagram": "fs-av-rescue-3"
+ },
+ {
+  "id": "fs-av-course",
+  "deck": "Avalanche awareness for hunters",
+  "front": "Course to take before alpine hunts in snow?",
+  "back": "AST 1 (Avalanche Skills Training 1)."
+ },
+ {
+  "id": "fs-ice-thick",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "Canadian Red Cross clear ice thickness: alone, group, snowmobile?",
+  "back": "15 cm, 20 cm, 25 cm. Floating ice is never 100% safe.",
+  "diagram": "fs-ice-thickness"
+ },
+ {
+  "id": "fs-ice-colour",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "Ice colour and strength?",
+  "back": "Clear blue strongest, white about half as strong, grey unsafe.",
+  "diagram": "fs-ice-colour"
+ },
+ {
+  "id": "fs-ice-white",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "On white ice, what do you do with the thickness numbers?",
+  "back": "Double them."
+ },
+ {
+  "id": "fs-ice-weak",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "Where is ice thinnest?",
+  "back": "Inlets, outlets, springs, moving water, edges by reeds and logs, patches ducks kept open.",
+  "diagram": "fs-ice-weak"
+ },
+ {
+  "id": "fs-ice-ducks",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "Why is ice near where ducks sat dangerous?",
+  "back": "Birds kept that water open longer, so the ice there is very thin."
+ },
+ {
+  "id": "fs-ice-test",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "How do you test ice?",
+  "back": "Look from shore for open water, grey or slush; chisel and measure; test again every few steps.",
+  "diagram": "fs-ice-test-2"
+ },
+ {
+  "id": "fs-ice-spread",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "Two hunters crossing ice: side by side?",
+  "back": "No. Spread out with a gap, PFDs on, picks on your neck.",
+  "diagram": "fs-ice-test-3"
+ },
+ {
+  "id": "fs-ice-kit",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "Ice kit?",
+  "back": "Ice picks, PFD, floating throw rope, chisel, phone in a dry bag, dry clothes in the truck.",
+  "diagram": "fs-ice-kit"
+ },
+ {
+  "id": "fs-ice-bird",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "A duck falls on thin ice. Retrieve it?",
+  "back": "No. Let it go. Plan shots so birds fall on open water or land.",
+  "diagram": "fs-ice-bird"
+ },
+ {
+  "id": "fs-ice-clothes",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "In the water: take off your heavy coat?",
+  "back": "No. Winter clothes trap air for warmth and flotation."
+ },
+ {
+  "id": "fs-ice-turn",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "Fell through: which way do you face?",
+  "back": "Back the way you came. That ice held you.",
+  "diagram": "fs-ice-self-2"
+ },
+ {
+  "id": "fs-ice-out",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "How do you get out of an ice hole?",
+  "back": "Arms on the solid ice, kick flat, dig in picks, slide out on your belly."
+ },
+ {
+  "id": "fs-ice-roll",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "Out of the hole: stand up?",
+  "back": "No. Lie flat and roll away several body lengths.",
+  "diagram": "fs-ice-self-4"
+ },
+ {
+  "id": "fs-ice-help",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "Someone else falls in: order of help?",
+  "back": "Call 911, then preach, reach, throw, row. Go only as a last resort.",
+  "diagram": "fs-ice-reach"
+ },
+ {
+  "id": "fs-ice-edge",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "Run to the edge of the hole to help?",
+  "back": "No. You may go in too. Reach or throw from solid ground."
+ },
+ {
+  "id": "fs-ice-after",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "After a cold water rescue, why handle gently?",
+  "back": "Afterdrop and sudden collapse can follow rescue. Keep them flat, rewarm the trunk."
+ },
+ {
+  "id": "fs-ice-wade",
+  "deck": "Ice and cold water: crossing, falling in, self rescue",
+  "front": "Wading a cold creek?",
+  "back": "Face upstream, pole as a third leg, hip belt open, one foot at a time. Over the knee and fast: find another way.",
+  "diagram": "fs-ice-wade"
+ }
+]

@@ -1,0 +1,3 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"spotId":"F-moose-backcountry-0029","kind":"backcountry","km":5.28,"climbM":865,"name":"920 m E of Middle Findlay Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-116.19975,50.0257],[-116.27166,50.01558]]}}
+]}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Animation: a high plateau pond turns white as it freezes and the label says ice locks the food. Three ducks lift off and fly down to an open valley river. The final label says hunt the open water now, a tip.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Freeze up: ducks move down and out</text>
+<path d="M0 300 L0 120 Q 80 80 160 110 Q 260 160 400 200 L400 300 Z" fill="#dfe6d3" stroke="#8a9a6b"/>
+<ellipse cx="80" cy="110" rx="40" ry="10" fill="#4a7fb0"><animate attributeName="fill" values="#4a7fb0;#4a7fb0;#ffffff;#ffffff" keyTimes="0;0.3;0.5;1" dur="8s" fill="freeze"/></ellipse>
+<text x="80" y="140" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Plateau pond</text>
+<path d="M180 260 Q 260 230 400 250" stroke="#4a7fb0" stroke-width="14" fill="none"/>
+<text x="290" y="285" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Open valley river</text>
+<path id="rq-mg-dpath" d="M70 104 Q 160 60 260 228" fill="none"/>
+<g><g transform="translate(0 0) scale(0.8)"><ellipse rx="13" ry="5" fill="#2f3a2b"/><circle cx="13" cy="-2" r="4" fill="#2f3a2b"/><path d="M16 -2 l6 1 l-6 2 Z" fill="#e8590c"/><path d="M-4 -2 L-14 -16 L6 -3 Z" fill="#2f3a2b"/><path d="M-4 2 L-12 15 L6 3 Z" fill="#2f3a2b"/></g><animateMotion dur="8s" keyPoints="0;0;1;1" keyTimes="0;0.45;0.80;1" calcMode="linear" fill="freeze"><mpath href="#rq-mg-dpath"/></animateMotion></g>
+<g><g transform="translate(0 0) scale(0.8)"><ellipse rx="13" ry="5" fill="#2f3a2b"/><circle cx="13" cy="-2" r="4" fill="#2f3a2b"/><path d="M16 -2 l6 1 l-6 2 Z" fill="#e8590c"/><path d="M-4 -2 L-14 -16 L6 -3 Z" fill="#2f3a2b"/><path d="M-4 2 L-12 15 L6 3 Z" fill="#2f3a2b"/></g><animateMotion dur="8s" keyPoints="0;0;1;1" keyTimes="0;0.48;0.83;1" calcMode="linear" fill="freeze"><mpath href="#rq-mg-dpath"/></animateMotion></g>
+<g><g transform="translate(0 0) scale(0.8)"><ellipse rx="13" ry="5" fill="#2f3a2b"/><circle cx="13" cy="-2" r="4" fill="#2f3a2b"/><path d="M16 -2 l6 1 l-6 2 Z" fill="#e8590c"/><path d="M-4 -2 L-14 -16 L6 -3 Z" fill="#2f3a2b"/><path d="M-4 2 L-12 15 L6 3 Z" fill="#2f3a2b"/></g><animateMotion dur="8s" keyPoints="0;0;1;1" keyTimes="0;0.51;0.86;1" calcMode="linear" fill="freeze"><mpath href="#rq-mg-dpath"/></animateMotion></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="2.6s" dur="0.4s" fill="freeze"/><text x="80" y="80" font-family="sans-serif" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Ice locks the food</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="7s" dur="0.5s" fill="freeze"/><rect x="170" y="50" width="220" height="34" rx="8" fill="#e8590c" stroke="#e8590c" stroke-width="2"/><text x="280" y="73" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Hunt the open water now</text></g>
+</svg>

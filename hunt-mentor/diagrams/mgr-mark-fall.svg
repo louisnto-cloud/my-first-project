@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Top view. A bird falls near a stump. 1: keep your eyes on the fall spot. 2: pick a mark, the stump, and walk straight to it. 3: search in growing circles around the mark." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Bird down: mark it, walk straight</text>
+<rect x="0" y="40" width="400" height="260" fill="#dfe6d3"/>
+<circle cx="60" cy="260" r="10" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="60" y="288" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">You</text>
+<rect x="282" y="96" width="14" height="40" fill="#6b4f35"/><ellipse cx="289" cy="92" rx="22" ry="12" fill="#8a9a6b"/>
+<text x="392" y="62" font-size="14" fill="#23261f" text-anchor="end" font-weight="bold">Mark: the stump</text>
+<path d="M285 150 l10 10 m0 -10 l-10 10" stroke="#c23b22" stroke-width="4"/>
+<line x1="70" y1="250" x2="280" y2="158" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6"/>
+<circle cx="290" cy="155" r="24" fill="none" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="5 5"/>
+<circle cx="290" cy="155" r="44" fill="none" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="5 5"/>
+<circle cx="290" cy="155" r="64" fill="none" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="10" y="74" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">1. Eyes on the fall spot</text>
+<text x="10" y="92" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">2. Walk straight to the mark</text>
+<text x="10" y="110" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">3. Search in growing circles</text>
+</svg>

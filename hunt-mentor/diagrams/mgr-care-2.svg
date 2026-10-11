@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-label="Field care step 2. A grouse outline: pull the crop at the base of the neck, then make a small cut at the vent and hook out the guts, soon after the shot." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="280" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Care 2: crop and guts out soon</text>
+<path d="M60 170 Q70 110 170 105 Q260 100 300 125 L330 108 L360 118 L330 140 Q310 220 200 230 Q90 230 60 170 Z" fill="#efe3cf" stroke="#6b4f35" stroke-width="3"/>
+<ellipse cx="300" cy="140" rx="18" ry="14" fill="#e9c46a" stroke="#e8590c" stroke-width="3"/>
+<path d="M140 210 Q200 230 240 205" fill="none" stroke="#e8590c" stroke-width="4" stroke-dasharray="6 5"/>
+<text x="300" y="80" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Crop: pull it</text>
+<line x1="300" y1="86" x2="300" y2="124" stroke="#23261f" stroke-width="1.5"/>
+<text x="160" y="266" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Small cut at the vent, hook out guts</text>
+</svg>

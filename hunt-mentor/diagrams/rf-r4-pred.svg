@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 532" role="img" aria-label="Bar chart of Region 4 predator and furbearer seasons. Wolf, no bag limit group: 1 September to 15 June. Wolf, bag 3 group: 10 September to 15 June. Parts of some Management Units have no closed season for wolf. Coyote: 10 September to 31 March. Lynx: 15 November to 31 December in most units, 1 to 31 December in 4-3 to 4-5 and 4-20. Bobcat: 15 November to 15 February. Cougar: 10 September to 28 February in 4-1 to 4-5, 4-20 to 4-26 and 4-34 to 4-36, bag 1; 10 September to 31 March in 4-6 to 4-8, 4-28 to 4-31, 4-38 and 4-39, bag 2; 10 September to 31 March in 4-9 to 4-19, 4-27, 4-32, 4-33, 4-37 and 4-40, bag 1." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="532" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Wolf, coyote, lynx, bobcat, cougar</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">Exact MU lists: tap More</text>
+<rect x="14.0" y="60" width="31.6" height="436" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="60" width="30.6" height="436" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="60" width="30.6" height="436" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="60" width="31.6" height="436" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="60" width="31.6" height="436" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="60" width="31.6" height="436" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="96" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Wolf, NBL group (More)</text>
+<rect x="77.2" y="102" width="293.5" height="20" rx="4" fill="#e8590c"/>
+<text x="224" y="117" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Sept 1 to June 15</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Wolf, bag 3 group (More)</text>
+<rect x="86.4" y="148" width="284.4" height="20" rx="4" fill="#e8590c"/>
+<text x="229" y="163" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Sept 10 to June 15</text>
+<text x="14" y="188" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Coyote, all MUs</text>
+<rect x="86.4" y="194" width="206.9" height="20" rx="4" fill="#e8590c"/>
+<text x="190" y="209" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Sept 10 to Mar 31</text>
+<text x="14" y="234" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Lynx, most MUs</text>
+<rect x="153.6" y="240" width="47.9" height="20" rx="4" fill="#e8590c"/>
+<text x="206" y="255" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Nov 15 to Dec 31</text>
+<text x="14" y="280" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Lynx, 4-3 to 4-5, 4-20</text>
+<rect x="169.9" y="286" width="31.6" height="20" rx="4" fill="#e8590c"/>
+<text x="206" y="301" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Dec 1 to Dec 31</text>
+<text x="14" y="326" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bobcat, all MUs</text>
+<rect x="153.6" y="332" width="94.8" height="20" rx="4" fill="#e8590c"/>
+<text x="252" y="347" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Nov 15 to Feb 15</text>
+<text x="14" y="372" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Cougar, bag 1, 4-1 to 4-5 and others</text>
+<rect x="86.4" y="378" width="175.3" height="20" rx="4" fill="#e8590c"/>
+<text x="174" y="393" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Sept 10 to Feb 28</text>
+<text x="14" y="418" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Cougar, bag 2, 4-6 to 4-8 and others</text>
+<rect x="86.4" y="424" width="206.9" height="20" rx="4" fill="#e8590c"/>
+<text x="190" y="439" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Sept 10 to Mar 31</text>
+<text x="14" y="464" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Cougar, bag 1, 4-9 to 4-19 and others</text>
+<rect x="86.4" y="470" width="206.9" height="20" rx="4" fill="#e8590c"/>
+<text x="190" y="485" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Sept 10 to Mar 31</text>
+<rect x="14" y="506" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="518" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Eye level sketch of a long ridge with three spurs running down toward you. The spurs are lit, open fingers of ground; the draws between them are darker and filled with trees.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Spurs from the ground</text><text x="388" y="24" font-size="14" fill="#2f3a2b" text-anchor="end">eye level</text>
+  <rect x="0" y="36" width="400" height="232" fill="#e3ecf3"/>
+  <path d="M0 110 C 100 90, 300 90, 400 110 L400 268 L0 268 Z" fill="#a9b68e"/>
+  <path d="M60 104 C 70 160, 50 210, 30 268 L120 268 C 110 210, 90 160, 70 102 Z" fill="#e9edd9"/>
+  <path d="M200 96 C 210 160, 190 210, 170 268 L270 268 C 250 210, 230 160, 210 96 Z" fill="#e9edd9"/>
+  <path d="M330 100 C 340 160, 330 210, 320 268 L400 268 L400 200 C 380 180, 350 150, 340 102 Z" fill="#e9edd9"/>
+  <path d="M140 176 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="138.5" y="206" width="3" height="5" fill="#6b4f35"/><path d="M150 216 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="148.5" y="246" width="3" height="5" fill="#6b4f35"/><path d="M290 176 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="288.5" y="206" width="3" height="5" fill="#6b4f35"/><path d="M300 212 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="298.5" y="242" width="3" height="5" fill="#6b4f35"/>
+  <rect x="150" y="120" width="167" height="24" rx="6" fill="#e8590c"/><text x="233.5" y="137" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Spurs: lit fingers</text><rect x="110" y="248" width="167" height="24" rx="6" fill="#2f3a2b"/><text x="193.5" y="265" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">draws: dark, treed</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Spurs catch light; draws hold shade and trees</text>
+</svg>

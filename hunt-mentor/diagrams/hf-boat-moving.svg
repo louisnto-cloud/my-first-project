@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="When can you shoot from a boat? Crossed: motor running, or still gliding from the motor's push, counts as moving. Ticked: beached on shore, anchored, or tied to a fixed blind, motor off.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="0" width="400" height="300" fill="#cfe0ea" opacity=".6"/>
+  <rect x="8" y="8" width="188" height="284" rx="10" fill="#efe2d6"/><rect x="204" y="8" width="188" height="284" rx="10" fill="#dfe6d3"/>
+  <text x="102" y="36" font-size="17" font-weight="bold" fill="#c0392b" text-anchor="middle">Moving: no</text>
+  <text x="298" y="36" font-size="17" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Stopped: yes</text>
+  <g><path d="M40 90 L150 90 L136 112 L54 112 Z" fill="#6b4f35"/><rect x="30" y="84" width="10" height="24" fill="#2f3a2b"/><path d="M22 112 c -6 -4, -6 -8, 0 -12" stroke="#4a7fb0" stroke-width="3" fill="none"/></g>
+  <text x="102" y="138" font-size="14" fill="#2f3a2b" text-anchor="middle">motor running</text>
+  <g><path d="M40 180 L150 180 L136 202 L54 202 Z" fill="#6b4f35"/><path d="M160 192 l14 0 m-4 -4 l4 4 l-4 4" stroke="#2f3a2b" stroke-width="2" fill="none"/><g stroke="#4a7fb0" stroke-width="2"><line x1="18" y1="196" x2="34" y2="196"/><line x1="12" y1="188" x2="30" y2="188"/></g></g>
+  <text x="102" y="228" font-size="14" fill="#2f3a2b" text-anchor="middle">motor off, still gliding</text>
+  <text x="102" y="246" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">still counts as moving</text>
+  <g><rect x="230" y="96" width="60" height="14" fill="#c9b79c"/><path d="M262 84 L352 84 L340 104 L272 104 Z" fill="#6b4f35"/></g>
+  <text x="298" y="128" font-size="14" fill="#2f3a2b" text-anchor="middle">beached</text>
+  <g><path d="M246 160 L336 160 L324 180 L258 180 Z" fill="#6b4f35"/><line x1="320" y1="172" x2="350" y2="214" stroke="#2f3a2b" stroke-width="2"/><path d="M342 214 l8 0 l-4 8 Z M350 214 l8 0" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="2"/></g>
+  <text x="298" y="200" font-size="14" fill="#2f3a2b" text-anchor="middle">anchored</text>
+  <text x="298" y="240" font-size="14" fill="#2f3a2b" text-anchor="middle">or tied to a fixed blind</text>
+  <text x="200" y="282" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Motor off, then shoot (Tip habit)</text>
+</svg>

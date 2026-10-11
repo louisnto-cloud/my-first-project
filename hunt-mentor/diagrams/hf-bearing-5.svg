@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 5. Along the bearing line, the hunter picks a tree, walks to it, then picks the next tree on the same line and repeats, instead of staring at the needle while walking.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect y="40" width="400" height="260" fill="#dfe6d3" opacity=".6"/>
+  <text x="12" y="28" font-size="16" font-weight="bold" fill="#e8590c">Step 5</text>
+  <text x="90" y="28" font-size="15" fill="#2f3a2b">Pick a tree. Walk to it. Repeat.</text>
+  <g fill="#2f3a2b">
+    <polygon points="150,210 162,175 174,210"/><polygon points="215,150 227,115 239,150"/><polygon points="280,95 292,60 304,95"/>
+    <polygon points="60,120 70,95 80,120" opacity=".5"/><polygon points="330,200 340,175 350,200" opacity=".5"/><polygon points="110,80 120,55 130,80" opacity=".5"/>
+  </g>
+  <g stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" fill="none"><path d="M95 275 L158 215"/><path d="M168 205 L222 155"/><path d="M232 145 L288 100"/></g>
+  <circle cx="92" cy="278" r="9" fill="#e8590c"/>
+  <g font-size="15" font-weight="bold" fill="#e8590c"><text x="180" y="200">1</text><text x="245" y="140">2</text><text x="312" y="86">3</text></g>
+  <text x="110" y="290" font-size="14" fill="#2f3a2b">You</text>
+  <text x="250" y="270" font-size="14" fill="#2f3a2b">Eyes on the tree,</text>
+  <text x="250" y="288" font-size="14" fill="#2f3a2b">not the needle (Tip)</text>
+</svg>

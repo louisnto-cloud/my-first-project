@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 370" role="img" aria-label="Bar chart of Region 6 moose seasons. Bulls in 6-1 and 6-2: 20 to 22 October. Bulls in 6-17 to 6-29: 23 August to 31 October. Haines Highway area in 6-28 and 6-29, Bulls+: 1 September to 31 October for spike fork, tripalm or 10 point bulls only. Bow only bulls in 6-1 and 6-2: 1 to 9 September and 16 to 20 November. In the Tweedsmuir Park part of 6-2: 20 October to 15 November." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="370" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Moose seasons</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">Tweedsmuir Park part of 6-2: Oct 20 to Nov 15</text>
+<rect x="14.0" y="60" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="60" width="30.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="60" width="30.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="60" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="60" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="60" width="31.6" height="252" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="96" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bulls, 6-1, 6-2</text>
+<rect x="127.1" y="102" width="3.1" height="20" rx="4" fill="#e8590c"/>
+<text x="134" y="117" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 20 to Oct 22</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bulls, 6-17 to 6-29</text>
+<rect x="68.0" y="148" width="71.3" height="20" rx="4" fill="#e8590c"/>
+<text x="143" y="163" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Aug 23 to Oct 31</text>
+<text x="14" y="188" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bulls+, Haines Highway, 6-28, 6-29</text>
+<rect x="77.2" y="194" width="62.2" height="20" rx="4" fill="#6a4c93"/>
+<text x="143" y="209" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Oct 31</text>
+<text x="14" y="234" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bulls, bow only, 6-1, 6-2</text>
+<rect x="77.2" y="240" width="9.2" height="20" rx="4" fill="#8b5a2b"/>
+<text x="90" y="255" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 9</text>
+<text x="14" y="280" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bulls, bow only, 6-1, 6-2</text>
+<rect x="154.6" y="286" width="5.1" height="20" rx="4" fill="#8b5a2b"/>
+<text x="164" y="301" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Nov 16 to Nov 20</text>
+<rect x="14" y="322" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="334" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+<rect x="149.60000000000002" y="322" width="14" height="14" rx="3" fill="#6a4c93"/>
+<text x="168" y="334" font-size="14" fill="#23261f" text-anchor="start">Antler restricted (Bulls+)</text>
+<rect x="14" y="344" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="32" y="356" font-size="14" fill="#23261f" text-anchor="start">Bow only</text>
+</svg>

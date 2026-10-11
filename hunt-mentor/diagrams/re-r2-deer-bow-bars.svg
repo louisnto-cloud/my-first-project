@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 377" role="img" aria-label="Season bar chart: Region 2 black tailed deer: Bow Only. Bucks: ▲2-2 to 2-19: Sept 1 to Sept 9. Bucks: ▲★2-16, Bowen Island only: Sept 1 to Dec 15. Antlerless: ▲★2-16, Bowen Island only: Nov 5 to Dec 5. Either Sex: ▲★2-16, Bowen Island only: Jan 1 to Jan 15. Either Sex: ✻2-16, Texada Island only: Dec 16 to Jan 15." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="377" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 2 black tailed deer: Bow Only</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 28. ▲ Bowen and Texada: bag 3(2).</text>
+<text x="48.9" y="83" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="123.8" y="83" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="198.8" y="83" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<text x="273.7" y="83" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
+<text x="349.9" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jan</text>
+<line x1="12.0" y1="91" x2="12.0" y2="367" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="85.7" y1="91" x2="85.7" y2="367" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="161.9" y1="91" x2="161.9" y2="367" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="235.6" y1="91" x2="235.6" y2="367" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="311.8" y1="91" x2="311.8" y2="367" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="388.0" y1="91" x2="388.0" y2="367" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<text x="12" y="107" font-size="14" font-weight="bold" fill="#23261f">Bucks: ▲2-2 to 2-19</text>
+<rect x="12.0" y="113" width="22.1" height="22" rx="3" fill="#4a7fb0"/>
+<text x="40.1" y="129" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 9</text>
+<text x="12" y="163" font-size="14" font-weight="bold" fill="#23261f">Bucks: ▲★2-16, Bowen Island only</text>
+<rect x="12.0" y="169" width="260.5" height="22" rx="3" fill="#4a7fb0"/>
+<text x="142.2" y="185" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 1 to Dec 15</text>
+<text x="12" y="219" font-size="14" font-weight="bold" fill="#23261f">Antlerless: ▲★2-16, Bowen Island only</text>
+<rect x="171.7" y="225" width="76.2" height="22" rx="3" fill="#4a7fb0"/>
+<text x="253.9" y="241" font-size="14" font-weight="bold" fill="#23261f">Nov 5 to Dec 5</text>
+<text x="12" y="275" font-size="14" font-weight="bold" fill="#23261f">Either Sex: ▲★2-16, Bowen Island only</text>
+<rect x="311.8" y="281" width="36.9" height="22" rx="3" fill="#4a7fb0"/>
+<text x="305.8" y="297" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Jan 1 to Jan 15</text>
+<text x="12" y="331" font-size="14" font-weight="bold" fill="#23261f">Either Sex: ✻2-16, Texada Island only</text>
+<rect x="272.5" y="337" width="76.2" height="22" rx="3" fill="#4a7fb0"/>
+<text x="266.5" y="353" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Dec 16 to Jan 15</text>
+</svg>

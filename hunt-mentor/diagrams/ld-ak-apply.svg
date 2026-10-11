@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 378" font-family="sans-serif" role="img" aria-label="Flowchart of how to apply in Alaska. One: buy the nonresident alien hunting licence online at the Alaska Department of Fish and Game store, first, because ATF needs a copy. Two: file ATF Form 6NIA, allow 4 to 6 weeks. Three: for any big game book a registered Alaska guide. Four: buy locking tags before the hunt and carry harvest tickets. Five: read the current Alaska Hunting Regulations for your Game Management Unit.">
+<rect x="0" y="0" width="400" height="378" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Alaska: how to apply</text>
+<rect x="16" y="42" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="66" font-size="15" fill="#2f3a2b">1. Buy the nonresident alien licence online.</text>
+<text x="28" y="85" font-size="15" fill="#2f3a2b">First: ATF needs a copy</text>
+<line x1="200.0" y1="96" x2="200.0" y2="118" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,116 207.0,116 200.0,126" fill="#2f3a2b"/>
+<rect x="16" y="126" width="368" height="35" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="150" font-size="15" fill="#2f3a2b">2. File ATF Form 6NIA. 4 to 6 weeks</text>
+<line x1="200.0" y1="161" x2="200.0" y2="183" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,181 207.0,181 200.0,191" fill="#2f3a2b"/>
+<rect x="16" y="191" width="368" height="35" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="215" font-size="15" fill="#2f3a2b">3. Big game: book a registered Alaska guide</text>
+<line x1="200.0" y1="226" x2="200.0" y2="248" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,246 207.0,246 200.0,256" fill="#2f3a2b"/>
+<rect x="16" y="256" width="368" height="35" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="280" font-size="15" fill="#2f3a2b">4. Buy locking tags, carry harvest tickets</text>
+<line x1="200.0" y1="291" x2="200.0" y2="313" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,311 207.0,311 200.0,321" fill="#2f3a2b"/>
+<rect x="16" y="321" width="368" height="35" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="28" y="345" font-size="15" font-weight="bold" fill="#2f3a2b">5. Read the regulations for your GMU</text>
+</svg>

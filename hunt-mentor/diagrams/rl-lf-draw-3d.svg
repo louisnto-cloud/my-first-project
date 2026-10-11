@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Sketch of a draw in the Hunt Map 3D view. Two slopes meet in a small valley that runs toward you. A blue creek and a strip of brush and trees fill the bottom. Contour lines bend uphill, away from you, where they cross the draw.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Draw in 3D</text><rect x="0" y="36" width="400" height="70" fill="#e3ecf3"/><text x="388" y="24" font-size="13" fill="#2f3a2b" text-anchor="end">Hunt Map 3D view (sketch)</text>
+  <path d="M0 120 Q 120 96 190 150 L205 268 L0 268 Z" fill="#e9edd9"/>
+  <path d="M400 120 Q 280 96 214 150 L205 268 L400 268 Z" fill="#a9b68e"/>
+  <path d="M190 150 Q 202 140 214 150 L205 268 Z" fill="#b9c79a"/>
+  <path d="M0 196 Q 130 186 196 160 L202 152 L208 160 Q 280 186 400 196" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+  <path d="M0 250 Q 130 240 199 212 L204 204 L209 212 Q 280 240 400 250" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+  <path d="M202 140 C 204 180, 200 220, 205 268" stroke="#4a7fb0" stroke-width="4" fill="none"/>
+  <path d="M186 174.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="184.65" y="201.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M220 178.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="218.65" y="205.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M192 214.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="190.65" y="241.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M216 218.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="214.65" y="245.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M200 148.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="198.65" y="175.4" width="2.7" height="4.5" fill="#6b4f35"/>
+  <rect x="168" y="116" width="226" height="24" rx="6" fill="#e8590c"/><text x="281.0" y="133" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Draw: brush, water, shade</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Lines bend up (away from you) in the draw</text>
+</svg>

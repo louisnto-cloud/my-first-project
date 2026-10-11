@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" role="img" aria-label="Region 3 predator seasons from August to July, from the page 34 table. Wolf A, MUs 3-12 to 3-16 and 3-18 to 3-20: September 10 to June 15, bag 3. Wolf B, MU 3-17 and 3-26 to 3-44: no closed season, no bag limit. Coyote: September 1 to June 30, no bag limit. Cougar A, 3-12 to 3-20 and 3-26 to 3-33: November 15 to March 31. Cougar B, 3-34 to 3-44: September 10 to March 31, bag 2. Bobcat and lynx: November 15 to February 15, bag 1. MU means Management Unit. Find yours, VERIFY." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="420" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Region 3 predator seasons</text>
+<text x="200.0" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">Bars show open dates. NBL: no bag limit.</text>
+<rect x="82.0" y="74" width="25.7" height="238" fill="#dfe6d3"/>
+<text x="94.8" y="68" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="107.7" y="74" width="25.7" height="238" fill="#fffaf0"/>
+<text x="120.5" y="68" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<rect x="133.3" y="74" width="25.7" height="238" fill="#dfe6d3"/>
+<text x="146.2" y="68" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="159.0" y="74" width="25.7" height="238" fill="#fffaf0"/>
+<text x="171.8" y="68" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<rect x="184.7" y="74" width="25.7" height="238" fill="#dfe6d3"/>
+<text x="197.5" y="68" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="210.3" y="74" width="25.7" height="238" fill="#fffaf0"/>
+<text x="223.2" y="68" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<rect x="236.0" y="74" width="25.7" height="238" fill="#dfe6d3"/>
+<text x="248.8" y="68" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="74" width="25.7" height="238" fill="#fffaf0"/>
+<text x="274.5" y="68" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<rect x="287.3" y="74" width="25.7" height="238" fill="#dfe6d3"/>
+<text x="300.2" y="68" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="313.0" y="74" width="25.7" height="238" fill="#fffaf0"/>
+<text x="325.8" y="68" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<rect x="338.7" y="74" width="25.7" height="238" fill="#dfe6d3"/>
+<text x="351.5" y="68" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<rect x="364.3" y="74" width="25.7" height="238" fill="#fffaf0"/>
+<text x="377.2" y="68" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="77" y="96.0" font-size="13" fill="#23261f" text-anchor="end">Wolf A</text>
+<rect x="115.4" y="80" width="236.1" height="22" rx="5" fill="#e8590c"/>
+<text x="233.4" y="96.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">bag 3</text>
+<line x1="82" y1="108" x2="390" y2="108" stroke="#8a9a6b"/>
+<text x="77" y="130.0" font-size="13" fill="#23261f" text-anchor="end">Wolf B</text>
+<rect x="82.0" y="114" width="308.0" height="22" rx="5" fill="#e8590c"/>
+<text x="236.0" y="130.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">all year, NBL</text>
+<line x1="82" y1="142" x2="390" y2="142" stroke="#8a9a6b"/>
+<text x="77" y="164.0" font-size="13" fill="#23261f" text-anchor="end">Coyote</text>
+<rect x="107.7" y="148" width="256.7" height="22" rx="5" fill="#8b5a2b"/>
+<text x="236.0" y="164.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">NBL</text>
+<line x1="82" y1="176" x2="390" y2="176" stroke="#8a9a6b"/>
+<text x="77" y="198.0" font-size="13" fill="#23261f" text-anchor="end">Cougar A</text>
+<rect x="171.0" y="182" width="116.4" height="22" rx="5" fill="#5f7a3a"/>
+<text x="229.2" y="198.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">bag 2</text>
+<line x1="82" y1="210" x2="390" y2="210" stroke="#8a9a6b"/>
+<text x="77" y="232.0" font-size="13" fill="#23261f" text-anchor="end">Cougar B</text>
+<rect x="115.4" y="216" width="172.0" height="22" rx="5" fill="#5f7a3a"/>
+<text x="201.4" y="232.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">bag 2</text>
+<line x1="82" y1="244" x2="390" y2="244" stroke="#8a9a6b"/>
+<text x="77" y="266.0" font-size="13" fill="#23261f" text-anchor="end">Bobcat</text>
+<rect x="171.0" y="250" width="78.7" height="22" rx="5" fill="#4a7fb0"/>
+<text x="210.3" y="266.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">bag 1</text>
+<line x1="82" y1="278" x2="390" y2="278" stroke="#8a9a6b"/>
+<text x="77" y="300.0" font-size="13" fill="#23261f" text-anchor="end">Lynx</text>
+<rect x="171.0" y="284" width="78.7" height="22" rx="5" fill="#4a7fb0"/>
+<text x="210.3" y="300.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">bag 1</text>
+<line x1="82" y1="312" x2="390" y2="312" stroke="#8a9a6b"/>
+<text x="200" y="334" font-size="14" fill="#23261f" text-anchor="middle">Wolf A: MUs 3-12 to 3-16, 3-18 to 3-20</text>
+<text x="200" y="352" font-size="14" fill="#23261f" text-anchor="middle">Wolf B: MU 3-17, MUs 3-26 to 3-44</text>
+<text x="200" y="370" font-size="14" fill="#23261f" text-anchor="middle">Cougar A: 3-12 to 3-20, 3-26 to 3-33</text>
+<text x="200" y="388" font-size="14" fill="#23261f" text-anchor="middle">Cougar B: 3-34 to 3-44</text>
+<text x="200" y="406" font-size="14" fill="#23261f" text-anchor="middle">MU: Management Unit. Find yours (VERIFY).</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-label="Four cards about Adenovirus Hemorrhagic Disease and Chronic Wasting Disease in Region 1. Do not eat meat from an animal found dead, sick or acting oddly. Do not move infected, dead or live deer to new areas. Dispose of carcasses by deep burial. Submit your deer, elk, moose or caribou for testing." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="290" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Deer disease: what to do</text>
+<rect x="6" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Found dead, sick or</text>
+<text x="101" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">acting oddly</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">Do not eat the meat</text>
+<rect x="204" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Moving deer</text>
+<rect x="213.0" y="106" width="20" height="12" fill="#2f3a2b"/><path d="M233.0 110 h7 l4 5 v3 h-11 z" fill="#2f3a2b"/><circle cx="219.0" cy="120" r="3.5" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/><circle cx="237.0" cy="120" r="3.5" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="228.0" cy="114" r="18" fill="none" stroke="#c92a2a" stroke-width="3"/><line x1="215.0" y1="127" x2="241.0" y2="101" stroke="#c92a2a" stroke-width="3"/>
+<text x="250" y="106" font-size="14" fill="#23261f" text-anchor="start">Do not move deer,</text>
+<text x="250" y="124" font-size="14" fill="#23261f" text-anchor="start">dead or alive, to</text>
+<text x="250" y="142" font-size="14" fill="#23261f" text-anchor="start">new areas</text>
+<rect x="6" y="162" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M6 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="101" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Carcass</text>
+<text x="14" y="210" font-size="14" fill="#23261f" text-anchor="start">Dispose of it by deep</text>
+<text x="14" y="228" font-size="14" fill="#23261f" text-anchor="start">burial</text>
+<rect x="204" y="162" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M204 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="299" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Testing</text>
+<rect x="223.0" y="204" width="10" height="26" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/><rect x="223.0" y="218" width="10" height="12" rx="5" fill="#c92a2a"/>
+<text x="250" y="210" font-size="14" fill="#23261f" text-anchor="start">Submit your deer,</text>
+<text x="250" y="228" font-size="14" fill="#23261f" text-anchor="start">elk, moose or</text>
+<text x="250" y="246" font-size="14" fill="#23261f" text-anchor="start">caribou for</text>
+<text x="250" y="264" font-size="14" fill="#23261f" text-anchor="start">testing</text>
+</svg>

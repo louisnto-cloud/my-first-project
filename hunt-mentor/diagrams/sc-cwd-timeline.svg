@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Timeline of Chronic Wasting Disease in BC. January 2024: first BC case, in Kootenay deer, 95 percent. Late 2025: 9 cases in news reports, 65 percent. 14 January 2026: the province maps positive detections. Mule deer and white tailed deer both tested positive. CWD is also in Alberta, Saskatchewan, Manitoba, Quebec and 36 US states, 95 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">CWD in BC: the story so far</text>
+<path d="M30 120 H370" stroke="#2f3a2b" stroke-width="4"/>
+<circle cx="60" cy="120" r="12" fill="#e8590c"/>
+<text x="60" y="96" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Jan 2024</text>
+<text x="60" y="152" font-size="14" fill="#23261f" text-anchor="middle">First BC case,</text>
+<text x="60" y="170" font-size="14" fill="#23261f" text-anchor="middle">Kootenay deer</text>
+<circle cx="200" cy="120" r="12" fill="#8b5a2b"/>
+<text x="200" y="96" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Late 2025</text>
+<text x="200" y="152" font-size="14" fill="#23261f" text-anchor="middle">9 cases in news</text>
+<text x="200" y="170" font-size="14" fill="#23261f" text-anchor="middle">reports (65%)</text>
+<circle cx="340" cy="120" r="12" fill="#4a7fb0"/>
+<text x="340" y="96" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">14 Jan 2026</text>
+<text x="340" y="152" font-size="14" fill="#23261f" text-anchor="middle">Province maps</text>
+<text x="340" y="170" font-size="14" fill="#23261f" text-anchor="middle">positives</text>
+<rect x="20" y="200" width="360" height="40" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="224.9" font-size="14" fill="#23261f" text-anchor="middle">Mule deer and white tails both tested positive (95%)</text>
+<rect x="20" y="248" width="360" height="44" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="265.9" font-size="14" fill="#23261f" text-anchor="middle">Also in Alberta, Saskatchewan, Manitoba,</text>
+<text x="200.0" y="283.9" font-size="14" fill="#23261f" text-anchor="middle">Quebec and 36 US states (95%)</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" font-family="sans-serif" role="img" aria-label="Timeline chart of turkey seasons, April to December, 98 percent. Region 8 spring, bearded only: 15 April to 15 May. Region 8 fall, any turkey: 1 to 15 October. Region 4 spring, bearded: 15 April to 25 May. Region 4 bow only, bearded: 1 to 30 September. Region 4 fall, any turkey: 1 to 15 October in most MUs, to 30 November in MUs 4-5 to 4-9 and 4-25, and 1 to 31 December on private land with permission in some MUs. Region 1: no closed season. Region 3: no turkey season.">
+  <rect width="400" height="380" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Turkey seasons (98%)</text>
+  <line x1="118.0" y1="50" x2="118.0" y2="336" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="133.1" y="46" font-size="12" fill="#2f3a2b" text-anchor="middle">Apr</text>
+  <line x1="148.2" y1="50" x2="148.2" y2="336" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="163.3" y="46" font-size="12" fill="#2f3a2b" text-anchor="middle">May</text>
+  <line x1="178.4" y1="50" x2="178.4" y2="336" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="193.6" y="46" font-size="12" fill="#2f3a2b" text-anchor="middle">Jun</text>
+  <line x1="208.7" y1="50" x2="208.7" y2="336" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="223.8" y="46" font-size="12" fill="#2f3a2b" text-anchor="middle">Jul</text>
+  <line x1="238.9" y1="50" x2="238.9" y2="336" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="254.0" y="46" font-size="12" fill="#2f3a2b" text-anchor="middle">Aug</text>
+  <line x1="269.1" y1="50" x2="269.1" y2="336" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="284.2" y="46" font-size="12" fill="#2f3a2b" text-anchor="middle">Sep</text>
+  <line x1="299.3" y1="50" x2="299.3" y2="336" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="314.4" y="46" font-size="12" fill="#2f3a2b" text-anchor="middle">Oct</text>
+  <line x1="329.6" y1="50" x2="329.6" y2="336" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="344.7" y="46" font-size="12" fill="#2f3a2b" text-anchor="middle">Nov</text>
+  <line x1="359.8" y1="50" x2="359.8" y2="336" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="374.9" y="46" font-size="12" fill="#2f3a2b" text-anchor="middle">Dec</text>
+  <text x="110" y="76.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">R8 spring</text>
+  <text x="110" y="92.0" font-size="12" fill="#2f3a2b" text-anchor="end">bearded, 1</text>
+  <rect x="132.1" y="63.0" width="30.7" height="26.0" rx="4" fill="#e8590c"/>
+  <text x="110" y="116.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">R8 fall</text>
+  <text x="110" y="132.0" font-size="12" fill="#2f3a2b" text-anchor="end">any turkey, 1</text>
+  <rect x="299.3" y="103.0" width="14.6" height="26.0" rx="4" fill="#8b5a2b"/>
+  <text x="110" y="156.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">R4 spring</text>
+  <text x="110" y="172.0" font-size="12" fill="#2f3a2b" text-anchor="end">bearded, 1</text>
+  <rect x="132.1" y="143.0" width="40.5" height="26.0" rx="4" fill="#e8590c"/>
+  <text x="110" y="196.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">R4 bow</text>
+  <text x="110" y="212.0" font-size="12" fill="#2f3a2b" text-anchor="end">bearded</text>
+  <rect x="269.1" y="183.0" width="30.2" height="26.0" rx="4" fill="#c9b79c"/>
+  <text x="110" y="236.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">R4 fall</text>
+  <text x="110" y="252.0" font-size="12" fill="#2f3a2b" text-anchor="end">some MUs longer</text>
+  <rect x="299.3" y="223.0" width="14.6" height="26.0" rx="4" fill="#8b5a2b"/>
+  <rect x="314.0" y="223.0" width="45.8" height="26.0" rx="4" fill="#c9b79c"/>
+  <rect x="359.8" y="223.0" width="30.2" height="26.0" rx="4" fill="#c9b79c"/>
+  <text x="110" y="276.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">R1</text>
+  <text x="110" y="292.0" font-size="12" fill="#2f3a2b" text-anchor="end">no closed season</text>
+  <rect x="118.0" y="263.0" width="272.0" height="26.0" rx="4" fill="#2f6e3b"/>
+  <text x="110" y="316.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">R3</text>
+  <text x="110" y="332.0" font-size="12" fill="#2f3a2b" text-anchor="end">no season</text>
+  <text x="200" y="366" font-size="13" fill="#2f3a2b" text-anchor="middle">Pale: only some MUs or bow only</text>
+</svg>

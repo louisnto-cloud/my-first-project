@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" font-family="sans-serif" role="img" aria-label="Cards of more no shooting rules near Mission. Abbotsford bylaw: discharge limited to farmers protecting stock, slaughter and licensed ranges, 70 percent, VERIFY. Sumas Mountain: all of Electoral Area H of the Fraser Valley Regional District is a No Shooting Area. Highway 7 east of Mission and Highway 1 east of Chilliwack: shot only within 150 metres. Nicomen Island lowland: rifles prohibited. Fraser Valley Regional District roads: no discharge within 400 metres except lawful hunting or trapping. Regional District Parks in Regions 1 and 2: no hunting or shooting within 100 metres.">
+<rect x="0" y="0" width="400" height="450" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">More no shooting rules near Mission</text>
+<rect x="16" y="42" width="179" height="114" rx="10" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="26" y="66" font-size="15" font-weight="bold" fill="#23261f">Abbotsford bylaw</text>
+<circle cx="179.0" cy="60" r="11" fill="#4a7fb0"/><text x="179" y="64.62" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="26" y="84" font-size="14" fill="#2f3a2b">Discharge limited to</text>
+<text x="26" y="102" font-size="14" fill="#2f3a2b">farmers, slaughter,</text>
+<text x="26" y="120" font-size="14" fill="#2f3a2b">ranges (70%). VERIFY.</text>
+<rect x="205" y="42" width="179" height="114" rx="10" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="215" y="66" font-size="15" font-weight="bold" fill="#23261f">Sumas Mountain,</text>
+<text x="215" y="86" font-size="15" font-weight="bold" fill="#23261f">Area H</text>
+<circle cx="368.0" cy="60" r="11" fill="#e8590c"/><path d="M363.6 55.6 L372.4 64.4 M372.4 55.6 L363.6 64.4" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<text x="215" y="104" font-size="14" fill="#2f3a2b">All of Electoral Area</text>
+<text x="215" y="122" font-size="14" fill="#2f3a2b">H: No Shooting Area</text>
+<text x="215" y="140" font-size="14" fill="#2f3a2b">(98%).</text>
+<rect x="16" y="166" width="179" height="136" rx="10" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="26" y="190" font-size="15" font-weight="bold" fill="#23261f">Highway 7 and</text>
+<text x="26" y="210" font-size="15" font-weight="bold" fill="#23261f">Highway 1</text>
+<circle cx="179.0" cy="184" r="11" fill="#4a7fb0"/><text x="179" y="188.62" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="26" y="228" font-size="14" fill="#2f3a2b">Shot only within 150</text>
+<text x="26" y="246" font-size="14" fill="#2f3a2b">m (98%).</text>
+<g transform="translate(46.0 282) scale(0.62)"><path d="M-32 1 h36 l5 -3 h24 v3 h-22 l-3 4 h-12 l-6 9 h-10 l-4 -9 h-8 z" fill="#2f3a2b"/></g>
+<rect x="205" y="166" width="179" height="136" rx="10" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="215" y="190" font-size="15" font-weight="bold" fill="#23261f">Nicomen lowland</text>
+<circle cx="368.0" cy="184" r="11" fill="#e8590c"/><path d="M363.6 179.6 L372.4 188.4 M372.4 179.6 L363.6 188.4" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<text x="215" y="208" font-size="14" fill="#2f3a2b">Rifles prohibited</text>
+<text x="215" y="226" font-size="14" fill="#2f3a2b">(90%).</text>
+<g transform="translate(235.0 262) scale(0.62)"><path d="M-30 2 h34 l6 -4 h22 v3 h-20 l-4 5 h-12 l-6 8 h-10 l-4 -8 h-6 z" fill="#6b4f35"/><rect x="-4" y="-6" width="16" height="4" fill="#2f3a2b"/></g>
+<rect x="16" y="312" width="179" height="114" rx="10" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="26" y="336" font-size="15" font-weight="bold" fill="#23261f">FVRD roads</text>
+<circle cx="179.0" cy="330" r="11" fill="#4a7fb0"/><text x="179" y="334.62" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="26" y="354" font-size="14" fill="#2f3a2b">No discharge within</text>
+<text x="26" y="372" font-size="14" fill="#2f3a2b">400 m, except lawful</text>
+<text x="26" y="390" font-size="14" fill="#2f3a2b">hunting (99%).</text>
+<rect x="205" y="312" width="179" height="114" rx="10" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="215" y="336" font-size="15" font-weight="bold" fill="#23261f">Regional District</text>
+<text x="215" y="356" font-size="15" font-weight="bold" fill="#23261f">Parks</text>
+<circle cx="368.0" cy="330" r="11" fill="#e8590c"/><path d="M363.6 325.6 L372.4 334.4 M372.4 325.6 L363.6 334.4" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<text x="215" y="374" font-size="14" fill="#2f3a2b">Regions 1 and 2: no</text>
+<text x="215" y="392" font-size="14" fill="#2f3a2b">hunting or shooting</text>
+<text x="215" y="410" font-size="14" fill="#2f3a2b">within 100 m (99%).</text>
+</svg>

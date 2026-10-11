@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="What a bench looks like on satellite imagery: a dark band of timber across the top, below it a lighter, flatter patch with scattered single trees, then a steeper open slope below. The bench is circled in orange.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="0" width="400" height="300" fill="#b9a77f"/>
+  <path d="M0 0 L400 0 L400 90 C 300 110, 120 80, 0 100 Z" fill="#33452c"/>
+  <g fill="#33452c"><circle cx="30" cy="104" r="8"/><circle cx="90" cy="98" r="7"/><circle cx="250" cy="102" r="9"/><circle cx="340" cy="96" r="7"/></g>
+  <path d="M0 100 C 120 80, 300 110, 400 90 L400 190 C 300 200, 120 175, 0 190 Z" fill="#d8cfa5"/>
+  <g fill="#4d6340"><circle cx="70" cy="140" r="7"/><circle cx="150" cy="160" r="6"/><circle cx="210" cy="130" r="7"/><circle cx="300" cy="150" r="6"/><circle cx="350" cy="130" r="5"/></g>
+  <ellipse cx="200" cy="145" rx="170" ry="52" fill="none" stroke="#e8590c" stroke-width="4" stroke-dasharray="10 6"/>
+  <rect x="8" y="10" width="150" height="28" rx="6" fill="#fffaf0"/><text x="16" y="30" font-size="15" font-weight="bold" fill="#2f3a2b">Dark timber</text>
+  <rect x="120" y="128" width="160" height="28" rx="6" fill="#fffaf0"/><text x="200" y="148" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Bench: light, flat</text>
+  <rect x="8" y="232" width="250" height="52" rx="6" fill="#fffaf0"/>
+  <text x="16" y="254" font-size="14" fill="#2f3a2b">Steeper open slope below</text>
+  <text x="16" y="274" font-size="14" fill="#2f3a2b">Scattered trees on the bench (Tip)</text>
+</svg>

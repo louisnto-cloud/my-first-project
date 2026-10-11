@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 748" role="img" aria-label="Cards for Maps F13 to F24. F13 Skeena and Babine Mountain: goat draw only areas, goat closed in 6-30, no goat season on Skip Mountain. F14: black bear No Hunting Areas in parts of 5-9, 6-3 and 6-11. F15 City of Terrace, F17 Sandspit and F18 Queen Charlotte City: No Shooting Areas. F16 Lakelse Lake: No Shooting Area and shot only area. F19 Masset: No Shooting Area, and Delkatla Slough Wildlife Sanctuary no shooting, hunting or trapping. F20 Port Clements: No Shooting Area, and Kumdis Bay shot only. F21 Naikoon Park: no shooting or hunting, except shot only in the 50 metre Tlell River strips, closed along the highway. F22 Bear Pass: goat open 1 August to 28 February. F23 North Kitsumkalum Lake: No Shooting or Hunting Area. F24 Nass: mountain goat closed area." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="748" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Maps F13 to F24</text>
+<rect x="6" y="40" width="190" height="132" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#6a4c93"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F13 Skeena, Babine</text>
+<text x="101" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Mtn.</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">Goat draw only areas.</text>
+<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start">Goat closed in 6-30. No</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start">goat season on Skip</text>
+<text x="14" y="160" font-size="14" fill="#23261f" text-anchor="start">Mountain</text>
+<rect x="204" y="40" width="190" height="132" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#8b5a2b"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F14 Black bear</text>
+<text x="212" y="106" font-size="14" fill="#23261f" text-anchor="start">No Hunting Areas, parts</text>
+<text x="212" y="124" font-size="14" fill="#23261f" text-anchor="start">of MUs 5-9, 6-3, 6-11</text>
+<rect x="6" y="180" width="190" height="78" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6 190 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#e8590c"/>
+<text x="101" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F15 City of Terrace</text>
+<text x="14" y="228" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area</text>
+<rect x="204" y="180" width="190" height="78" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<path d="M204 190 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#8a9a6b"/>
+<text x="299" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F16 Lakelse Lake</text>
+<text x="212" y="228" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area and</text>
+<text x="212" y="246" font-size="14" fill="#23261f" text-anchor="start">shot only area</text>
+<rect x="6" y="266" width="190" height="96" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6 276 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#e8590c"/>
+<text x="101" y="284" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F17 Sandspit</text>
+<text x="14" y="332" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area,</text>
+<text x="14" y="350" font-size="14" fill="#23261f" text-anchor="start">MU 6-12</text>
+<rect x="204" y="266" width="190" height="96" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M204 276 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#e8590c"/>
+<text x="299" y="284" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F18 Queen Charlotte</text>
+<text x="299" y="302" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">City</text>
+<text x="212" y="332" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area,</text>
+<text x="212" y="350" font-size="14" fill="#23261f" text-anchor="start">MU 6-13</text>
+<rect x="6" y="370" width="190" height="114" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 380 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#c92a2a"/>
+<text x="101" y="388" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F19 Masset</text>
+<text x="14" y="418" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area.</text>
+<text x="14" y="436" font-size="14" fill="#23261f" text-anchor="start">Delkatla Slough: no</text>
+<text x="14" y="454" font-size="14" fill="#23261f" text-anchor="start">shooting, hunting or</text>
+<text x="14" y="472" font-size="14" fill="#23261f" text-anchor="start">trapping</text>
+<rect x="204" y="370" width="190" height="114" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<path d="M204 380 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#8a9a6b"/>
+<text x="299" y="388" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F20 Port Clements</text>
+<text x="212" y="418" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area.</text>
+<text x="212" y="436" font-size="14" fill="#23261f" text-anchor="start">Kumdis Bay: shot only</text>
+<rect x="6" y="492" width="190" height="96" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 502 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#c92a2a"/>
+<text x="101" y="510" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F21 Naikoon Park</text>
+<text x="14" y="540" font-size="14" fill="#23261f" text-anchor="start">No shooting or hunting.</text>
+<text x="14" y="558" font-size="14" fill="#23261f" text-anchor="start">Tlell River 50 m</text>
+<text x="14" y="576" font-size="14" fill="#23261f" text-anchor="start">strips: shot only</text>
+<rect x="204" y="492" width="190" height="96" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
+<path d="M204 502 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#5c7a3a"/>
+<text x="299" y="510" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F22 Bear Pass</text>
+<text x="212" y="540" font-size="14" fill="#23261f" text-anchor="start">Goat open Aug 1 to Feb</text>
+<text x="212" y="558" font-size="14" fill="#23261f" text-anchor="start">28, MU 6-14</text>
+<rect x="6" y="596" width="190" height="96" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 606 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="101" y="614" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F23 North</text>
+<text x="101" y="632" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Kitsumkalum Lake</text>
+<text x="14" y="662" font-size="14" fill="#23261f" text-anchor="start">No Shooting or Hunting</text>
+<text x="14" y="680" font-size="14" fill="#23261f" text-anchor="start">Area, MU 6-15</text>
+<rect x="204" y="596" width="190" height="96" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M204 606 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#8b5a2b"/>
+<text x="299" y="614" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F24 Nass</text>
+<text x="212" y="662" font-size="14" fill="#23261f" text-anchor="start">Mountain goat closed,</text>
+<text x="212" y="680" font-size="14" fill="#23261f" text-anchor="start">MU 6-16</text>
+<rect x="6" y="698" width="14" height="14" rx="3" fill="#6a4c93"/>
+<text x="24" y="710" font-size="14" fill="#23261f" text-anchor="start">Draw (LEH) only</text>
+<rect x="149.0" y="698" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="167" y="710" font-size="14" fill="#23261f" text-anchor="start">Species closed</text>
+<rect x="284.6" y="698" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="303" y="710" font-size="14" fill="#23261f" text-anchor="start">No shooting</text>
+<rect x="6" y="720" width="14" height="14" rx="3" fill="#8a9a6b"/>
+<text x="24" y="732" font-size="14" fill="#23261f" text-anchor="start">Shot only or bow</text>
+<rect x="156.4" y="720" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="174" y="732" font-size="14" fill="#23261f" text-anchor="start">No hunting</text>
+<rect x="262.4" y="720" width="14" height="14" rx="3" fill="#5c7a3a"/>
+<text x="280" y="732" font-size="14" fill="#23261f" text-anchor="start">Open or allowed</text>
+</svg>

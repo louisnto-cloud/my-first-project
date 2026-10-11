@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Grouse moves. Dusky grouse are upside down migrants: in fall they move up from open breeding ground into dense conifers and eat needles all winter, then come back down to breed in late March or April. Ruffed grouse stay on a small home range all year, and young birds scatter in the fall shuffle. Spruce grouse stay in conifers, some moving up to 9.5 km.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Grouse: who moves</text>
+  <path d="M0 260 Q120 250 200 170 Q260 100 300 70 Q340 60 400 80 L400 260 Z" fill="#dfe6d3"/>
+  <g fill="#2f3a2b"><polygon points="290,90 300,60 310,90"/><polygon points="320,85 330,55 340,85"/><polygon points="350,90 360,60 370,90"/><polygon points="260,115 270,85 280,115"/></g>
+  <text x="330" y="115" font-size="14" fill="#2f3a2b" text-anchor="middle">dense conifers</text>
+  <path d="M150 215 Q210 150 270 120" stroke="#e8590c" stroke-width="4" fill="none"/><path d="M262 116 l12 2 l-5 11" stroke="#e8590c" stroke-width="4" fill="none"/>
+  <text x="110" y="150" font-size="16" font-weight="bold" fill="#e8590c">Dusky: UP</text>
+  <text x="110" y="170" font-size="14" fill="#2f3a2b">in fall, needles</text>
+  <text x="110" y="188" font-size="14" fill="#2f3a2b">all winter</text>
+  <circle cx="70" cy="240" r="18" fill="none" stroke="#8b5a2b" stroke-width="3"/><circle cx="70" cy="240" r="5" fill="#8b5a2b"/>
+  <text x="100" y="250" font-size="15" font-weight="bold" fill="#8b5a2b">Ruffed: stays home</text>
+  <text x="100" y="270" font-size="14" fill="#2f3a2b">young birds scatter in fall</text>
+  <text x="290" y="200" font-size="15" font-weight="bold" fill="#2f3a2b">Spruce: stays</text>
+  <text x="290" y="220" font-size="14" fill="#2f3a2b">in conifers</text>
+</svg>

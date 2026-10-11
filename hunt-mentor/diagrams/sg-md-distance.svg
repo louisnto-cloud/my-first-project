@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="sans-serif" role="img" aria-label="How far mule deer migrate in the southern Interior. Project average 47.2 km a year. An earlier update put the average trip at 55 km. One doe went 102 km in a straight line in 11 days.">
+  <rect width="400" height="260" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How far they walk</text>
+  <g stroke="#dfe6d3" stroke-width="2"><path d="M120 44 V190 M180 44 V190 M240 44 V190 M300 44 V190 M360 44 V190"/></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="120" y="208">0</text><text x="180" y="208">25</text><text x="240" y="208">50</text><text x="300" y="208">75</text><text x="360" y="208">100 km</text></g>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end"><text x="112" y="76">Average</text><text x="112" y="126">Earlier avg</text><text x="112" y="176">One doe</text></g>
+  <rect x="120" y="58" width="113" height="26" rx="6" fill="#8b5a2b"/><text x="240" y="77" font-size="15" fill="#2f3a2b">47.2 km</text>
+  <rect x="120" y="108" width="132" height="26" rx="6" fill="#8b5a2b" opacity=".7"/><text x="258" y="127" font-size="15" fill="#2f3a2b">55 km</text>
+  <rect x="120" y="158" width="245" height="26" rx="6" fill="#e8590c"/><text x="356" y="177" font-size="15" font-weight="bold" fill="#fff" text-anchor="end">102 km, 11 days</text>
+  <text x="200" y="240" font-size="14" fill="#6b4f35" text-anchor="middle">74% of collared deer that could migrate did (85%)</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Hunt Map terrain tool frame: Slope direction shows which way each slope faces. South facing slopes warm first and shed snow first. Washington Fish and Wildlife says chukar may roost on warmer south facing slopes on cold early season nights and gather where snow is thin, 75 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Terrain tools: Slope direction</text>
+<rect x="20" y="40" width="360" height="190" rx="8" fill="#dfe6d3"/>
+<circle cx="200" cy="135" r="80" fill="#fff"/>
+<path d="M200 135 L144 192 A80 80 0 0 0 256 192 Z" fill="#e8590c" opacity=".8"/>
+<path d="M200 135 L144 78 A80 80 0 0 1 256 78 Z" fill="#4a7fb0" opacity=".7"/>
+<text x="200" y="100" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">N: cold, snow stays</text>
+<text x="200" y="182" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">S: warm, melts first</text>
+<text x="60" y="140" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">W</text>
+<text x="340" y="140" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">E</text>
+<rect x="10" y="240" width="380" height="52" rx="8" fill="#2f3a2b"/>
+<text x="200" y="262" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Cold morning: chukar on south slopes</text>
+<text x="200" y="282" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Snow: birds on the bare patches (75%)</text>
+</svg>

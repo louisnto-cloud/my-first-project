@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 626" role="img" aria-label="Cards for Maps H10 to H19. H10 Lower Burnt River: No Hunting Area. H11: part of 7-31 closed to moose hunting. H12: the agricultural area, all of 7-32 to 7-34 and parts of 7-20, 7-21, 7-35, 7-45 and 7-46. H13 Sunset Prairie: no hunting 1 June to 31 October. H14 Dawson Creek Environmental Demonstration: No Shooting Area 9:30 to 3:30 pm daily. H15 Cecil Lake Community Pasture: no hunting 1 June to 15 October. H16 Charlie Lake: No Shooting Area. H17 Peace River: migratory game bird closed area. H18 Sikanni Muskwa Foothills: mountain goat closed or draw only areas. H19 Upper Halfway: No Shooting Area." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="626" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Maps H10 to H19</text>
+<rect x="6" y="40" width="190" height="96" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H10 Lower Burnt</text>
+<text x="101" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">River</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">No Hunting Area,</text>
+<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start">MU 7-22</text>
+<rect x="204" y="40" width="190" height="96" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#8b5a2b"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H11 MU 7-31 part</text>
+<text x="212" y="106" font-size="14" fill="#23261f" text-anchor="start">Closed to moose hunting</text>
+<rect x="6" y="144" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M6 154 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
+<text x="101" y="162" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H12 Agricultural</text>
+<text x="101" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">area</text>
+<text x="14" y="210" font-size="14" fill="#23261f" text-anchor="start">All of 7-32 to 7-34,</text>
+<text x="14" y="228" font-size="14" fill="#23261f" text-anchor="start">parts of 7-20, 7-21,</text>
+<text x="14" y="246" font-size="14" fill="#23261f" text-anchor="start">7-35, 7-45, 7-46</text>
+<rect x="204" y="144" width="190" height="114" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204 154 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="299" y="162" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H13 Sunset Prairie</text>
+<text x="212" y="210" font-size="14" fill="#23261f" text-anchor="start">No hunting June 1 to</text>
+<text x="212" y="228" font-size="14" fill="#23261f" text-anchor="start">Oct 31, MU 7-32</text>
+<rect x="6" y="266" width="190" height="114" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6 276 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v54 h-190 z" fill="#e8590c"/>
+<text x="101" y="284" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H14 Dawson Creek</text>
+<text x="101" y="302" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Environmental</text>
+<text x="101" y="320" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Demonstration</text>
+<text x="14" y="350" font-size="14" fill="#23261f" text-anchor="start">No shooting 9:30 to</text>
+<text x="14" y="368" font-size="14" fill="#23261f" text-anchor="start">3:30 pm daily, MU 7-33</text>
+<rect x="204" y="266" width="190" height="114" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204 276 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v54 h-190 z" fill="#c92a2a"/>
+<text x="299" y="284" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H15 Cecil Lake</text>
+<text x="299" y="302" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Community Pasture</text>
+<text x="212" y="350" font-size="14" fill="#23261f" text-anchor="start">No hunting June 1 to</text>
+<text x="212" y="368" font-size="14" fill="#23261f" text-anchor="start">Oct 15, MU 7-33</text>
+<rect x="6" y="388" width="190" height="78" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6 398 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#e8590c"/>
+<text x="101" y="406" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H16 Charlie Lake</text>
+<text x="14" y="436" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area,</text>
+<text x="14" y="454" font-size="14" fill="#23261f" text-anchor="start">MU 7-33</text>
+<rect x="204" y="388" width="190" height="78" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M204 398 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#8b5a2b"/>
+<text x="299" y="406" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H17 Peace River</text>
+<text x="212" y="436" font-size="14" fill="#23261f" text-anchor="start">Migratory game bird</text>
+<text x="212" y="454" font-size="14" fill="#23261f" text-anchor="start">closed area, MU 7-33</text>
+<rect x="6" y="474" width="190" height="96" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M6 484 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#6a4c93"/>
+<text x="101" y="492" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H18 Sikanni Muskwa</text>
+<text x="101" y="510" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Foothills</text>
+<text x="14" y="540" font-size="14" fill="#23261f" text-anchor="start">Goat closed or LEH only</text>
+<text x="14" y="558" font-size="14" fill="#23261f" text-anchor="start">areas</text>
+<rect x="204" y="474" width="190" height="96" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M204 484 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#e8590c"/>
+<text x="299" y="492" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">H19 Upper Halfway</text>
+<text x="212" y="540" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area,</text>
+<text x="212" y="558" font-size="14" fill="#23261f" text-anchor="start">MU 7-44</text>
+<rect x="6" y="576" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="24" y="588" font-size="14" fill="#23261f" text-anchor="start">No hunting</text>
+<rect x="112.0" y="576" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="130" y="588" font-size="14" fill="#23261f" text-anchor="start">Species closed</text>
+<rect x="247.60000000000002" y="576" width="14" height="14" rx="3" fill="#2f3a2b"/>
+<text x="266" y="588" font-size="14" fill="#23261f" text-anchor="start">Rule</text>
+<rect x="6" y="598" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="24" y="610" font-size="14" fill="#23261f" text-anchor="start">No shooting</text>
+<rect x="119.4" y="598" width="14" height="14" rx="3" fill="#6a4c93"/>
+<text x="137" y="610" font-size="14" fill="#23261f" text-anchor="start">Draw (LEH) only</text>
+</svg>

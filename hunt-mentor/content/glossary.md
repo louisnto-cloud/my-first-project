@@ -1,0 +1,152 @@
+# Glossary
+
+- **ACTS**: Firearm safety rules. Assume every firearm is loaded. Control the muzzle direction at all times. Trigger finger off the trigger and out of the trigger guard. See that the firearm is unloaded: PROVE it safe (85%).
+- **Antlerless**: A deer with no antlers. Usually a doe or a fawn. Some seasons only allow antlerless.
+- **ATV**: All terrain vehicle. A quad.
+- **Backstop**: What is behind your target that will stop the bullet. Earth is good. Sky is never a backstop.
+- **Bag limit**: Most animals of a kind you may take in one day (birds) or one year (big game).
+- **Bore sight**: Lining up the scope with the barrel before shooting, to get on paper fast.
+- **CORE**: Conservation and Outdoor Recreation Education. BC hunter education course.
+- **Crown land**: Public land owned by the province. Hunting is often allowed unless closed.
+- **CWD**: Chronic Wasting Disease. A fatal brain disease in deer, elk and moose.
+- **ECCC**: Environment and Climate Change Canada. Sets migratory bird rules.
+- **FSR**: Forest Service Road. Gravel resource road on Crown land.
+- **FWID**: Fish and Wildlife ID. Your 9 digit BC hunter number. Replaced the old hunter number card.
+- **Glassing**: Scanning country slowly with binoculars to find animals.
+- **LEH**: Limited Entry Hunting. A draw for special hunts.
+- **MGBHP**: Migratory Game Bird Hunting Permit. Federal permit to hunt ducks and geese. Includes the habitat stamp.
+- **MU**: Management Unit. A numbered hunting area, like 3 17. Rules differ by MU.
+- **PAL**: Possession and Acquisition Licence. Federal licence to own and buy firearms.
+- **Patterning**: Shooting a shotgun at paper to see how the shot spreads.
+- **PFD**: Personal flotation device. A life jacket.
+- **Picatinny rail**: A standard mounting strip with slots, used to attach scope rings.
+- **Species licence**: The BC "tag" for a big game animal. Paper, notched when you kill the animal.
+- **Synopsis**: The BC Hunting and Trapping Regulations Synopsis. Plain language summary of the law.
+- **WILD**: Wildlife Information and Licensing Data. BC online system to buy licences.
+- **Zero**: The distance where your bullet hits exactly where the crosshair points.
+- **4 point buck**: A mule deer buck with at least 4 tines (points) on one antler, not counting the brow tine (99%). A tine must be at least 2.5 cm (1 in) long and longer than it is wide (99%). Synopsis page 4, read 2026-10-02.
+- **Bachelor group**: A small summer group of bucks (2 to 4) that breaks up in fall.
+- **Brow tine**: The short point near the base of the antler, just above the eye.
+- **Browse**: Twigs, buds and leaves of shrubs and trees that deer eat. Also the sign left when they eat them.
+- **Button buck**: A male fawn with small bumps instead of antlers. Counts as antlerless.
+- **Flag**: A white tail's raised, waving white tail when it runs from danger.
+- **Forb**: A small leafy flowering plant that is not a grass.
+- **Metatarsal gland**: A scent patch on the outside of a deer's hind leg. Long on mule deer, small on white tails.
+- **Pre rut**: The weeks before the rut. Bucks spar, rub trees and start checking does.
+- **Rattling**: Clacking antlers together to sound like fighting bucks.
+- **Riparian**: The green strip of land along a river or creek.
+- **Rub**: Bark scraped off a sapling by a buck's antlers.
+- **Rut**: The breeding season. Mule deer mid November to mid December. White tails peak in November.
+- **Scrape**: A pawed bare patch of dirt under a low branch, made by a buck around the rut.
+- **Spot and stalk**: Find the animal with binoculars from far away, then sneak within range.
+- **Stand hunting**: Sitting in one spot, such as a tree stand or ground blind, on a trail and waiting.
+- **Still hunting**: Walking very slowly through cover, stopping often to look and listen.
+- **Stot**: The mule deer bounce. All 4 feet hit the ground and push off together.
+- **Thermals**: Air sliding up a slope as it warms (morning) and down as it cools (evening). They carry your scent.
+- **Tine**: A branch of an antler. Also called a point.
+- **Winter range**: The lower, sunnier slopes where deer spend the winter.
+- **PROVE**: Firearm safety steps. Point the firearm in the safest available direction. Remove all cartridges. Observe the chamber. Verify the feeding path. Examine the bore (85%).
+- **Zone of fire**: The slice of ground in front of a hunter where they may shoot, about 45 degrees. Never swing past it.
+- **Cold shock**: The gasp and fast breathing in the first minute in cold water.
+- **1 10 1 principle**: A name for cold water stages: about 1 minute of cold shock, 10 minutes of useful movement, 1 hour to unconsciousness. A guide, not exact timing.
+- **HELP**: Heat Escape Lessening Posture. Knees up and arms crossed in the water to slow heat loss.
+- **PCOC**: Pleasure Craft Operator Card. Proof of competency to run a boat fitted with a motor.
+- **FVPA**: Firearm Violence Prevention Act. BC law in force 1 October 2026 on loaded firearms and shooting from vehicles and boats.
+- **STOP**: Stop, Think, Observe, Plan. What to do when lost, disoriented or hurt.
+- **Trip plan**: A written plan of who, where, route and return time, left with someone at home.
+- **Satellite messenger**: A device that sends SOS and texts by satellite where there is no cell signal.
+- **RAPP**: Report All Poachers and Polluters. BC line to report wildlife and environmental violations: 1 877 952 7277 (85%).
+- **Tourniquet**: A band tightened above a wound on an arm or leg to stop life threatening bleeding.
+- **SOFTT**: Special Operations Forces Tactical Tourniquet. A commercial windlass tourniquet.
+- **Stalking**: Closing the distance on an animal you have already seen.
+- **Record of Receipt**: A written note that must go with game carried by someone other than the hunter who killed it.
+- **Evidence of sex**: The body part that must stay naturally attached to show if the animal was male or female.
+- **Edible portions**: Meat you must not waste. Big game (not wolf, lynx, bobcat or wolverine): the neck, ribs, all 4 quarters and the loins. Game birds: both breasts (99%, synopsis page 3, read 2026-10-02).
+- **Loaded**: In BC, a firearm with ammunition in the breech or firing chamber, in a fixed magazine inside it, in a magazine on a hinged floor plate, or in a detachable magazine that is inside or attached to it. It counts as loaded even if it cannot fire for the moment (99%, synopsis page 3, 2 October 2026 edition).
+- **Road allowance**: The strip along every numbered highway and every 2 lane or wider public road maintained by the Ministry of Transportation and Infrastructure, the federal government or another province. No hunting or shooting in it, and no shooting across it (99%). It runs 15 m either side of the middle of a road under 3 lanes, 15 m from the paved edge of a wider highway, or to the edge of private or cultivated land, whichever comes first (99%). Synopsis page 10, read 2026-10-02. See the BC rules session.
+- **No Shooting Area**: A mapped area where firing a firearm is banned.
+- **Motor Vehicle Closed Area**: An area where some or all motor vehicles are banned.
+- **Ecological reserve**: Protected land. Hunting, trapping and angling are banned, and so is firing a firearm or bow (99%, synopsis page 9, read 2026-10-02). List and maps: bcparks.ca.
+- **Enclosed land**: Under the Trespass Act, land with a lawful fence, a natural boundary, or trespass signs at each normal access point.
+- **Non toxic shot**: Shot that is not lead, such as steel, bismuth or tungsten. Required for ducks and geese.
+- **Magazine plug**: A filler that limits a shotgun to 3 shells in total. Must not come out unless the gun is taken apart.
+- **Compulsory reporting**: A required report of a kill within 30 days, for listed species and areas.
+- **Field dressing**: Removing the guts soon after the kill.
+- **Gutless method**: Taking the meat off without opening the body cavity.
+- **Conservation officer**: BC wildlife law enforcement officer.
+- **Puddle duck**: A duck that feeds by tipping up in shallow water and jumps straight up to fly. Mallard, teal, wigeon.
+- **Diver**: A duck that dives for food and runs along the water to take off. Goldeneye, bufflehead.
+- **Jump shooting**: Sneaking up on ducks on small water and shooting as they flush.
+- **Pass shooting**: Shooting ducks as they fly over between roost and feeding areas.
+- **Decoy spread**: The pattern you set decoys in.
+- **J hook**: A decoy spread shaped like a J, with an open landing pocket in front of the hunter.
+- **Landing zone**: The open water in a decoy spread where you want ducks to land.
+- **Steel shot**: Non toxic shotgun pellets made of steel. Legal for ducks.
+- **Choke**: The narrowing at the end of a shotgun barrel that controls the spread of shot. Must be rated for steel to shoot steel.
+- **Power boat**: An old BC definition (July 2026 synopsis, page 4): a boat with a motor ready to use, with a tilted motor not counting. Repealed 1 October 2026 by B.C. Reg. 66/2026 and gone from the 2 October 2026 synopsis edition (99%). The duck rule now reads like the federal one: no hunting from a moving boat that has a motor or sail, and a boat still gliding from its motor counts as moving (99%). Read 2026-10-02.
+- **Covey**: A fall or winter flock of quail.
+- **ORV**: Off Road Vehicle. An ATV, dirt bike or side by side under BC law.
+- **Cultivated land**: Farmed land, orchards included. You need permission to hunt it.
+- **Grazing lease**: Crown land leased for livestock. You need the lease holder's OK while livestock are on it.
+- **Non resident Canadian**: A Canadian hunting in a province or territory where they do not live. Each place defines it a little differently.
+- **Outfitter**: A licensed business that guides paying hunters. Required for most non resident big game hunts in Yukon, Alberta and Alaska.
+- **Hunter host**: An Alberta resident with a Hunter Host Licence who accompanies up to 2 non resident hunters a year, unpaid (85%).
+- **WIN**: Wildlife Identification Number. Alberta's lifetime hunter number.
+- **Wildlife Certificate**: Alberta's base licence, bought before any hunting licence.
+- **HAL**: Hunting, Angling and Trapping Licence system. Saskatchewan's online licence account.
+- **GHA**: Game Hunting Area. Manitoba's numbered hunting zones.
+- **WMU**: Wildlife Management Unit. Alberta's numbered hunting zones.
+- **GMU**: Game Management Unit. Alaska's numbered hunting zones.
+- **Nonresident alien**: Alaska's term for a hunter who is not a US citizen and does not live in the US. Needs a guide for every big game animal (85%).
+- **Locking tag**: Alaska's paid big game tag that locks onto the animal after the kill.
+- **Sealing**: An agency placing a seal on a bear hide or skull, or sheep horns, before export.
+- **CBSA**: Canada Border Services Agency. Canadian customs at the border.
+- **CBP**: Customs and Border Protection. US customs at the border.
+- **ATF**: Bureau of Alcohol, Tobacco, Firearms and Explosives. US agency that approves Form 6NIA.
+- **ATF Form 6NIA**: US permit a non US hunter must have approved before bringing a firearm and ammunition into the US (85%).
+- **BSF407**: CBSA card listing serial numbered goods you take out of Canada, so you can prove they were not bought abroad.
+- **CFIA**: Canadian Food Inspection Agency. Sets rules for food and animal products entering Canada.
+- **CITES**: Convention on International Trade in Endangered Species. Permit needed to export some animal parts across borders.
+- **Skull plate**: The piece of skull the antlers grow from, kept with the antlers when the rest of the head is left behind.
+- **Spike fork bull**: A bull moose with no more than 2 tines on one antler, brow palm tines included. Not a calf. The legal class in Region 3 and 8 general seasons (98%).
+- **Tripalm bull**: A bull moose with at least one antler whose brow palm carries 3 or more tines (98%).
+- **10 point bull**: A bull moose with at least 10 tines on one antler, brow palm tines included (98%).
+- **Brow palm**: The lower, forward palm of a moose antler, split from the main palm by the deepest bay (98%).
+- **Calf**: A moose, elk or caribou under 12 months of age (98%).
+- **6 point bull**: A bull elk with at least 6 tines on one antler. The brow tine counts (98%).
+- **Mandatory Hunter Report**: The report every moose, elk or caribou species licence holder must file by 31 March, hunt or no hunt (98%).
+- **Bugle**: The rising whistle scream of a bull elk in the rut.
+- **Wallow**: A muddy pit a rutting bull moose or elk paws out and urinates in.
+- **Bell**: The flap of skin under a moose's throat. Both sexes have one.
+- **Boar**: An adult male bear.
+- **Sow**: An adult female bear.
+- **Cub**: A bear in its first year. Protected, along with any bear in its company (98%).
+- **Yearling**: A bear in its second year. Bears under 2 years are protected (98%).
+- **Hyperphagia**: The fall feeding frenzy when a bear eats huge amounts before denning.
+- **Shoulder hump**: The muscle mass over a grizzly's shoulders. Black bears have none.
+- **Dished face**: The scooped profile between a grizzly's eyes and nose. A black bear's profile is straight.
+- **Colour phase**: A coat colour variation within one species. Black bears can be black, brown, cinnamon or blond.
+- **Grizzly bear**: The large brown bear with a shoulder hump and dished face. No open season in BC (98%).
+- **Trichinosis**: A parasitic worm disease from undercooked meat, bear meat above all. Cook bear to 71 C (160 F) (80%).
+- **Speculum**: The coloured patch on the back edge of a duck's wing. The steadiest ID mark.
+- **Eclipse plumage**: The drab, hen like feathers a drake wears after breeding. Some keep it into fall.
+- **Restricted species**: Ducks with their own smaller daily limit inside the 8: pintail 4, canvasback 4, goldeneye 2, harlequin 2 (99%).
+- **Aggregate bag limit**: One limit shared by several species counted together.
+- **Possession limit**: The most you may hold at any time, home included, until birds are preserved. For migratory birds, 3 times the daily limit (99%).
+- **District**: A federal migratory bird hunting area made of listed MUs. District No. 3 covers Kamloops (99%).
+- **Cackling goose**: A small Arctic goose that looks like a mini Canada goose. Counted with Canada geese (99%).
+- **Franklin's grouse**: The southern BC form of the spruce grouse.
+- **Blue grouse**: Old name for the dusky grouse (Interior) and sooty grouse (coast).
+- **Rimfire**: A cartridge fired by striking its rim, like the .22 LR. Among birds, legal only for grouse, ptarmigan and turkey (99%).
+- **Centrefire**: A cartridge with a central primer, like the .308.
+- **Huns**: Hunter name for grey (Hungarian) partridge.
+- **Initiation Hunting Licence**: A once in a lifetime $19 licence for a BC resident 18 or older who never held a BC hunting licence. Must be supervised at all times (99%).
+- **Youth Hunting Licence**: A $7 licence for ages 10 to under 18, with close supervision (99%).
+- **Supervising hunter**: An adult who meets the synopsis rules and stays with a youth or initiation hunter.
+- **Bench**: A flat step on a slope where deer often bed or feed.
+- **Aspect**: The compass direction a slope faces.
+- **Glassing point**: A spot with a wide view used to scan a bench or slope with binoculars.
+- **Edge**: The line where two kinds of cover meet, such as timber and open ground.
+- **Cold front**: The leading edge of colder air, often with wind and a pressure change.
+- **Hunting pressure**: How many hunters use an area. Pushes deer into cover and into night movement.
+- **Furbearer**: An animal trapped for fur, such as beaver, marten or mink.

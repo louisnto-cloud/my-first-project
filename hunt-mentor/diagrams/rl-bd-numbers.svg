@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Four boxes of numbers. Security cover for mule deer hides 90 percent of a deer at 60 m or less, in patches 180 m or more across. Snow catching cover: trees over 10 m tall with crowns over 60 percent closed, old big Douglas fir. Night thermal cover: closed canopy above 3 m, less wind at deer height, traps heat and catches snow. Elk, from US studies: thermal cover 12 m tall with over 70 percent crown closure, hiding cover hides 90 percent of an elk at 61 m, and the benefit of thermal cover is debated.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Cover by the numbers</text>
+  <rect x="10" y="44" width="186" height="110" rx="8" fill="#dfe6d3"/>
+  <text x="103" y="66" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Security cover</text>
+  <text x="20" y="92" font-size="13" fill="#2f3a2b" text-anchor="start">Hides 90% of a deer</text><text x="20" y="112" font-size="13" fill="#2f3a2b" text-anchor="start">at 60 m or less</text><text x="20" y="136" font-size="13" fill="#2f3a2b" text-anchor="start">Patch 180 m or more</text>
+  <rect x="204" y="44" width="186" height="110" rx="8" fill="#dfe6d3"/>
+  <text x="297" y="66" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Snow catching cover</text>
+  <text x="214" y="92" font-size="13" fill="#2f3a2b" text-anchor="start">Trees over 10 m tall</text><text x="214" y="112" font-size="13" fill="#2f3a2b" text-anchor="start">Crowns over 60% closed</text><text x="214" y="136" font-size="13" fill="#2f3a2b" text-anchor="start">Douglas fir, old and big</text>
+  <rect x="10" y="164" width="186" height="100" rx="8" fill="#dfe6d3"/>
+  <text x="103" y="186" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Night thermal cover</text>
+  <text x="20" y="210" font-size="13" fill="#2f3a2b" text-anchor="start">Closed canopy above 3 m</text><text x="20" y="230" font-size="13" fill="#2f3a2b" text-anchor="start">Less wind at deer height</text><text x="20" y="250" font-size="13" fill="#2f3a2b" text-anchor="start">Traps heat, catches snow</text>
+  <rect x="204" y="164" width="186" height="100" rx="8" fill="#dfe6d3"/>
+  <text x="297" y="186" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Elk (US studies)</text>
+  <text x="214" y="210" font-size="13" fill="#2f3a2b" text-anchor="start">Thermal: 12 m, over 70%</text><text x="214" y="230" font-size="13" fill="#2f3a2b" text-anchor="start">Hiding: 90% at 61 m</text><text x="214" y="250" font-size="13" fill="#2f3a2b" text-anchor="start">Benefit debated</text>
+</svg>

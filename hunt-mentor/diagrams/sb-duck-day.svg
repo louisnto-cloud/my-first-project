@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A mallard&#x27;s day in four panels, 80 percent. Dawn: fly to a cut grain field to feed. Midday: rest on a marsh or raft on open water. Late day: back to the field to feed. Night: marsh or creek to roost. Legal hours for ducks: 30 minutes before sunrise to 30 minutes after sunset, 99 percent. Wigeon raft offshore until late afternoon. After a cold front with a north wind, hunt the next morning, 65 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A mallard&#x27;s day (80%)</text>
+  <rect x="6" y="40" width="92" height="160" rx="8" fill="#f6d7b0"/>
+  <text x="52" y="64" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dawn</text>
+  <rect x="14" y="130" width="76" height="30" fill="#d9c27a"/>
+  <path d="M18 130 v-8 M30 130 v-8 M42 130 v-8 M54 130 v-8 M66 130 v-8 M78 130 v-8" stroke="#a88f3d" stroke-width="2"/>
+  <g transform="translate(52 98) scale(0.7)"><ellipse rx="18" ry="5" fill="#8b5a2b"/><circle cx="18" cy="-1" r="4.5" fill="#8b5a2b"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#8b5a2b"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#8b5a2b"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#8b5a2b"/></g>
+  <text x="52" y="180" font-size="13" fill="#2f3a2b" text-anchor="middle">Fly to cut</text>
+  <text x="52" y="196" font-size="13" fill="#2f3a2b" text-anchor="middle">grain field</text>
+  <rect x="104" y="40" width="92" height="160" rx="8" fill="#cfe0ef"/>
+  <text x="150" y="64" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Midday</text>
+  <rect x="112" y="134" width="76" height="26" rx="6" fill="#4a7fb0"/>
+  <g transform="translate(144 132) scale(0.6)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#8b5a2b"/><circle cx="18" cy="-20" r="9" fill="#8b5a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <path d="M180 134 v-30 M184 134 v-24" stroke="#8a9a6b" stroke-width="3"/>
+  <text x="150" y="180" font-size="13" fill="#2f3a2b" text-anchor="middle">Rest on marsh</text>
+  <text x="150" y="196" font-size="13" fill="#2f3a2b" text-anchor="middle">or raft</text>
+  <rect x="202" y="40" width="92" height="160" rx="8" fill="#f6d7b0"/>
+  <text x="248" y="64" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Late day</text>
+  <rect x="210" y="130" width="76" height="30" fill="#d9c27a"/>
+  <path d="M214 130 v-8 M226 130 v-8 M238 130 v-8 M250 130 v-8 M262 130 v-8 M274 130 v-8" stroke="#a88f3d" stroke-width="2"/>
+  <g transform="translate(248 98) scale(0.7)"><ellipse rx="18" ry="5" fill="#8b5a2b"/><circle cx="18" cy="-1" r="4.5" fill="#8b5a2b"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#8b5a2b"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#8b5a2b"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#8b5a2b"/></g>
+  <text x="248" y="180" font-size="13" fill="#2f3a2b" text-anchor="middle">Back to field</text>
+  <text x="248" y="196" font-size="13" fill="#2f3a2b" text-anchor="middle">to feed</text>
+  <rect x="300" y="40" width="92" height="160" rx="8" fill="#b9c2cf"/>
+  <text x="346" y="64" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Night</text>
+  <rect x="308" y="134" width="76" height="26" rx="6" fill="#4a7fb0"/>
+  <g transform="translate(340 132) scale(0.6)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#8b5a2b"/><circle cx="18" cy="-20" r="9" fill="#8b5a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <path d="M376 134 v-30 M380 134 v-24" stroke="#8a9a6b" stroke-width="3"/>
+  <text x="346" y="180" font-size="13" fill="#2f3a2b" text-anchor="middle">Marsh, creek</text>
+  <text x="346" y="196" font-size="13" fill="#2f3a2b" text-anchor="middle">to roost</text>
+  <rect x="6" y="214" width="388" height="34" rx="6" fill="#e8590c"/>
+  <text x="200" y="236" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Legal: 30 min before sunrise to 30 min after sunset</text>
+  <text x="200" y="274" font-size="14" fill="#2f3a2b" text-anchor="middle">Wigeon raft offshore until late afternoon (80%)</text>
+  <text x="200" y="294" font-size="14" fill="#2f3a2b" text-anchor="middle">Cold front, north wind: hunt the next morning (65%)</text>
+</svg>

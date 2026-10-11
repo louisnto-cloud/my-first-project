@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Test step 2: chop or drill a hole near shore and measure the clear ice. Test again every few steps.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Chisel and measure</text><rect x="0" y="160" width="400" height="140" rx="0" fill="#bfe0f2"/><rect x="150" y="160" width="100" height="40" rx="0" fill="#2f5f88"/><line x1="200" y1="60" x2="200" y2="170" stroke="#9a9a8f" stroke-width="6" stroke-linecap="round"/><rect x="250" y="160" width="10" height="40" rx="0" fill="#e8590c"/><text x="300" y="186" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">15 cm?</text><text x="200" y="288" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Measure, do not guess</text>
+</svg>

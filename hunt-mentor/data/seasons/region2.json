@@ -1,0 +1,1234 @@
+{
+ "edition": "2026-10-02",
+ "region": 2,
+ "source": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026",
+ "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf",
+ "checked": "2026-10-04",
+ "note": "General open seasons only. open and close are MM-DD (month and day); months lists every month the row touches. LEH hunts are in the separate LEH synopsis.",
+ "rows": [
+  {
+   "species": "mule deer",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "bucks",
+   "open": "09-10",
+   "close": "12-15",
+   "notes": "",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "2-9",
+    "2-10",
+    "2-11"
+   ],
+   "class": "bucks",
+   "open": "09-10",
+   "close": "11-30",
+   "notes": "",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "2-5",
+    "2-12"
+   ],
+   "class": "bucks",
+   "open": "09-10",
+   "close": "11-30",
+   "notes": "bag limit for bucks 10 Sept to 30 Nov in MUs 2-5 and 2-12 is one",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "2-16"
+   ],
+   "class": "bucks",
+   "open": "09-10",
+   "close": "12-15",
+   "notes": "in the Bowen Island and Texada Island parts of MU 2-16 the deer bag limit is 3(2)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "2-16"
+   ],
+   "class": "antlerless",
+   "open": "11-05",
+   "close": "11-20",
+   "notes": "in the Bowen Island and Texada Island parts of MU 2-16 the deer bag limit is 3(2)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    11
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "2-11"
+   ],
+   "class": "antlerless",
+   "open": "09-10",
+   "close": "09-30",
+   "notes": "youth or senior only: hunters under 18 or 65 and older; only portions of MU 2-11, see Maps B15 and B20; almost all private land, get permission",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "2-16"
+   ],
+   "class": "antlerless",
+   "open": "10-21",
+   "close": "10-31",
+   "notes": "youth only: hunters under 18; in the Bowen Island and Texada Island parts of MU 2-16 the deer bag limit is 3(2)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    10
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "bucks",
+   "open": "09-01",
+   "close": "09-09",
+   "notes": "bow only",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "2-16"
+   ],
+   "class": "bucks",
+   "open": "09-01",
+   "close": "12-15",
+   "notes": "bow only; Bowen Island only, see Notice to Hunters; in the Bowen Island and Texada Island parts of MU 2-16 the deer bag limit is 3(2)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "2-16"
+   ],
+   "class": "antlerless",
+   "open": "11-05",
+   "close": "12-05",
+   "notes": "bow only; Bowen Island only, see Notice to Hunters; in the Bowen Island and Texada Island parts of MU 2-16 the deer bag limit is 3(2)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    11,
+    12
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "2-16"
+   ],
+   "class": "either sex",
+   "open": "01-01",
+   "close": "01-15",
+   "notes": "bow only; Bowen Island only, see Notice to Hunters; in the Bowen Island and Texada Island parts of MU 2-16 the deer bag limit is 3(2)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    1
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "2-16"
+   ],
+   "class": "either sex",
+   "open": "12-16",
+   "close": "01-15",
+   "notes": "bow only; Texada Island only",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    12,
+    1
+   ]
+  },
+  {
+   "species": "mountain goat",
+   "mus": [
+    "2-5"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "10-15",
+   "notes": "bag 1; Compulsory Inspection required",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9,
+    10
+   ]
+  },
+  {
+   "species": "mountain goat",
+   "mus": [
+    "2-6"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "09-30",
+   "notes": "bag 1; see Map B9; Compulsory Inspection required",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "mountain goat",
+   "mus": [
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "10-31",
+   "notes": "bag 1; see Maps B18 and B19; Compulsory Inspection required",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9,
+    10
+   ]
+  },
+  {
+   "species": "black bear",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "11-30",
+   "notes": "bag 2 per licence year (1 Apr to 31 Mar)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "species": "black bear",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "04-01",
+   "close": "06-15",
+   "notes": "bag 2 per licence year (1 Apr to 31 Mar)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "species": "black bear",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "09-01",
+   "close": "09-09",
+   "notes": "bow only; bag 2 per licence year (1 Apr to 31 Mar)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "wolf",
+   "mus": [
+    "2-5",
+    "2-6",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "03-31",
+   "notes": "bag 3; Compulsory Reporting required",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "species": "wolf",
+   "mus": [
+    "2-5",
+    "2-6",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16"
+   ],
+   "class": "",
+   "open": "04-01",
+   "close": "06-15",
+   "notes": "bag 3; Compulsory Reporting required",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "species": "coyote",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "06-15",
+   "notes": "NBL (No Bag Limit)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "species": "skunk and raccoon",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "09-01",
+   "close": "03-31",
+   "notes": "NBL (No Bag Limit)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "species": "snowshoe hare",
+   "mus": [
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "08-01",
+   "close": "04-30",
+   "notes": "10 (daily)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "species": "bobcat",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "11-15",
+   "close": "02-15",
+   "notes": "bag 1; Compulsory Reporting required",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    11,
+    12,
+    1,
+    2
+   ]
+  },
+  {
+   "species": "cougar",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "03-31",
+   "notes": "bag 2; never a cougar kitten or any cougar with it; Compulsory Inspection required",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "species": "cougar",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "04-01",
+   "close": "06-15",
+   "notes": "bag 2; never a cougar kitten or any cougar with it; Compulsory Inspection required",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "species": "grouse",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "12-15",
+   "notes": "sooty (blue), ruffed and spruce: 10 (30) in aggregate",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "grouse",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "09-01",
+   "close": "09-09",
+   "notes": "bow only; 10 (30) in aggregate",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "ptarmigan",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "12-15",
+   "notes": "5 (15)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "ptarmigan",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "09-01",
+   "close": "09-09",
+   "notes": "bow only; 5 (15)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "pheasant",
+   "mus": [
+    "2-4",
+    "2-8"
+   ],
+   "class": "cocks",
+   "open": "10-10",
+   "close": "11-30",
+   "notes": "2(6); printed 10 Oct to 30 Nov 2026, then 9 Oct to 30 Nov 2027",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    10,
+    11
+   ]
+  },
+  {
+   "species": "band tailed pigeon",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "09-15",
+   "close": "09-30",
+   "notes": "5 (15)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "brant",
+   "mus": [
+    "2-4"
+   ],
+   "class": "",
+   "open": "03-01",
+   "close": "03-10",
+   "notes": "3 (9)",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    3
+   ]
+  },
+  {
+   "species": "snipe",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "10-10",
+   "close": "01-24",
+   "notes": "10 (30); Boundary Bay Wildlife Management Area closed to snipe; printed 10 Oct 2026 to 24 Jan 2027, then 9 Oct 2027 to 23 Jan 2028",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ]
+  },
+  {
+   "species": "coot",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "10-10",
+   "close": "01-24",
+   "notes": "10 (30); printed 10 Oct 2026 to 24 Jan 2027, then 9 Oct 2027 to 23 Jan 2028",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ]
+  },
+  {
+   "species": "ducks",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "10-10",
+   "close": "01-24",
+   "notes": "8 (24): max 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins; printed 10 Oct 2026 to 24 Jan 2027, then 9 Oct 2027 to 23 Jan 2028",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ]
+  },
+  {
+   "species": "snow and ross geese",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "10-10",
+   "close": "01-05",
+   "notes": "MUs 2-4 and 2-5: 15 (45), others 10 (30); no more than 5 (15) Ross's; printed 10 Oct 2026 to 5 Jan 2027, then 9 Oct 2027 to 4 Jan 2028",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ]
+  },
+  {
+   "species": "snow and ross geese",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "02-20",
+   "close": "03-10",
+   "notes": "MUs 2-4 and 2-5: 15 (45), others 10 (30); no more than 5 (15) Ross's; printed 20 Feb to 10 Mar 2027, then 21 Feb to 10 Mar 2028",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    2,
+    3
+   ]
+  },
+  {
+   "species": "white fronted geese",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "10-10",
+   "close": "01-24",
+   "notes": "5 (15); printed 10 Oct 2026 to 24 Jan 2027, then 9 Oct 2027 to 23 Jan 2028",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ]
+  },
+  {
+   "species": "canada and cackling geese",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "09-05",
+   "close": "09-15",
+   "notes": "10 (30); printed 5 to 15 Sept 2026, then 4 to 14 Sept 2027",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "canada and cackling geese",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "10-10",
+   "close": "11-22",
+   "notes": "10 (30); printed 10 Oct to 22 Nov 2026, then 9 Oct to 21 Nov 2027",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    10,
+    11
+   ]
+  },
+  {
+   "species": "canada and cackling geese",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "12-19",
+   "close": "01-10",
+   "notes": "10 (30); printed 19 Dec 2026 to 10 Jan 2027, then 18 Dec 2027 to 9 Jan 2028",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    12,
+    1
+   ]
+  },
+  {
+   "species": "canada and cackling geese",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9",
+    "2-10",
+    "2-11",
+    "2-12",
+    "2-13",
+    "2-14",
+    "2-15",
+    "2-16",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "class": "",
+   "open": "02-10",
+   "close": "03-10",
+   "notes": "10 (30); printed 10 Feb to 10 Mar 2027, then 11 Feb to 10 Mar 2028; in MU 2-4 not within 100 m of any dyke in Delta except Westham Island",
+   "page": 28,
+   "cert": 99,
+   "months": [
+    2,
+    3
+   ]
+  }
+ ],
+ "bag": [
+  {
+   "species": "deer",
+   "limit": "Unless otherwise indicated, the bag limit for mule (black-tailed) deer is 2, one of which may be antlerless.",
+   "page": 27,
+   "cert": 99
+  },
+  {
+   "species": "grouse",
+   "limit": "The daily aggregate bag limit for sooty/dusky (blue), spruce and ruffed grouse is 10.",
+   "page": 27,
+   "cert": 99
+  },
+  {
+   "species": "white tailed deer",
+   "limit": "Region 2 row of the page 14 table: white tailed deer 0. Notice to Hunters, page 27: no open season for white tailed deer at Herrling Island (MU 2-3).",
+   "page": 14,
+   "cert": 97
+  }
+ ],
+ "noRow": {
+  "species": [
+   "white tailed deer",
+   "moose",
+   "elk",
+   "bighorn sheep",
+   "quail",
+   "chukar",
+   "gray partridge",
+   "turkey",
+   "dove",
+   "sharp tailed grouse",
+   "lynx"
+  ],
+  "page": 28,
+  "cert": 95,
+  "notes": "No row in the Region 2 table, so no general open season (page 5: open seasons are only those in the synopsis)."
+ }
+}

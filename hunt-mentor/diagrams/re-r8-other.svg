@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 443" role="img" aria-label="Cards: Other Region 8 maps. J3 Similkameen Mining Co. Ltd.: No Shooting or Hunting Area. MUs 8-4, 8-5. J5 Willow Heights: No Shooting Area. MU 8-6. J6 Mascot Gold Mines: No Shooting Area. MU 8-7. J12 Jewel Lake: No Shooting or Hunting Area. MU 8-14. J13 Grand Forks: Closed Area. Rifles prohibited. MU 8-15. J15 Ward Lake: No Hunting, Shooting or Trapping Area. MU 8-15. J19 Monashee Park Addition: No Hunting Area. MU 8-23." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="443" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Other Region 8 maps</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Pages 69 and 70</text>
+<rect x="6.0" y="69" width="190.0" height="94" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6.0 115 V78 Q6.0 69 15.0 69 H187.0 Q196.0 69 196.0 78 V115 Z" fill="#c92a2a"/>
+<text x="14.0" y="89" font-size="14" font-weight="bold" fill="#ffffff">J3 Similkameen Mining</text>
+<text x="14.0" y="107" font-size="14" font-weight="bold" fill="#ffffff">Co. Ltd.</text>
+<text x="14.0" y="135" font-size="14" fill="#23261f">No Shooting or Hunting</text>
+<text x="14.0" y="153" font-size="14" fill="#23261f">Area. MUs 8-4, 8-5</text>
+<rect x="204.0" y="69" width="190.0" height="94" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M204.0 115 V78 Q204.0 69 213.0 69 H385.0 Q394.0 69 394.0 78 V115 Z" fill="#e8590c"/>
+<text x="212.0" y="89" font-size="14" font-weight="bold" fill="#ffffff">J5 Willow Heights</text>
+<text x="212.0" y="135" font-size="14" fill="#23261f">No Shooting Area. MU</text>
+<text x="212.0" y="153" font-size="14" fill="#23261f">8-6</text>
+<rect x="6.0" y="171" width="190.0" height="76" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6.0 199 V180 Q6.0 171 15.0 171 H187.0 Q196.0 171 196.0 180 V199 Z" fill="#e8590c"/>
+<text x="14.0" y="191" font-size="14" font-weight="bold" fill="#ffffff">J6 Mascot Gold Mines</text>
+<text x="14.0" y="219" font-size="14" fill="#23261f">No Shooting Area. MU</text>
+<text x="14.0" y="237" font-size="14" fill="#23261f">8-7</text>
+<rect x="204.0" y="171" width="190.0" height="76" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204.0 199 V180 Q204.0 171 213.0 171 H385.0 Q394.0 171 394.0 180 V199 Z" fill="#c92a2a"/>
+<text x="212.0" y="191" font-size="14" font-weight="bold" fill="#ffffff">J12 Jewel Lake</text>
+<text x="212.0" y="219" font-size="14" fill="#23261f">No Shooting or Hunting</text>
+<text x="212.0" y="237" font-size="14" fill="#23261f">Area. MU 8-14</text>
+<rect x="6.0" y="255" width="190.0" height="76" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6.0 283 V264 Q6.0 255 15.0 255 H187.0 Q196.0 255 196.0 264 V283 Z" fill="#e8590c"/>
+<text x="14.0" y="275" font-size="14" font-weight="bold" fill="#ffffff">J13 Grand Forks</text>
+<text x="14.0" y="303" font-size="14" fill="#23261f">Closed Area. Rifles</text>
+<text x="14.0" y="321" font-size="14" fill="#23261f">prohibited. MU 8-15</text>
+<rect x="204.0" y="255" width="190.0" height="76" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204.0 283 V264 Q204.0 255 213.0 255 H385.0 Q394.0 255 394.0 264 V283 Z" fill="#c92a2a"/>
+<text x="212.0" y="275" font-size="14" font-weight="bold" fill="#ffffff">J15 Ward Lake</text>
+<text x="212.0" y="303" font-size="14" fill="#23261f">No Hunting, Shooting or</text>
+<text x="212.0" y="321" font-size="14" fill="#23261f">Trapping Area. MU 8-15</text>
+<rect x="6.0" y="339" width="190.0" height="94" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6.0 385 V348 Q6.0 339 15.0 339 H187.0 Q196.0 339 196.0 348 V385 Z" fill="#c92a2a"/>
+<text x="14.0" y="359" font-size="14" font-weight="bold" fill="#ffffff">J19 Monashee Park</text>
+<text x="14.0" y="377" font-size="14" font-weight="bold" fill="#ffffff">Addition</text>
+<text x="14.0" y="405" font-size="14" fill="#23261f">No Hunting Area. MU</text>
+<text x="14.0" y="423" font-size="14" fill="#23261f">8-23</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" role="img" aria-label="The grouse escape plan in 5 steps. 1: freeze and trust the camouflage. 2: walk or run off under cover. 3: flush with a roar of wings. 4: glide, usually under 90 metres or 100 yards. 5: land in a tree or cover and freeze again." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="330" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Grouse escape plan: 5 steps</text>
+<rect x="14" y="46" width="372" height="46" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="36" cy="69" r="15" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="36" y="75" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+<text x="58" y="75" font-size="15" fill="#23261f" text-anchor="start">Freeze. Trust the camouflage.</text>
+<rect x="28" y="102" width="358" height="46" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="50" cy="125" r="15" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="50" y="131" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+<text x="72" y="131" font-size="15" fill="#23261f" text-anchor="start">Walk or run off under cover.</text>
+<rect x="42" y="158" width="344" height="46" rx="8" fill="#fbe3d3" stroke="#e8590c" stroke-width="2"/>
+<circle cx="64" cy="181" r="15" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="64" y="187" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text>
+<text x="86" y="187" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Flush with a roar of wings.</text>
+<rect x="56" y="214" width="330" height="46" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="78" cy="237" r="15" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="78" y="243" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">4</text>
+<text x="100" y="243" font-size="15" fill="#23261f" text-anchor="start">Glide, usually under 90 m (100 yd).</text>
+<rect x="70" y="270" width="316" height="46" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="92" cy="293" r="15" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="92" y="299" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">5</text>
+<text x="114" y="299" font-size="15" fill="#23261f" text-anchor="start">Land in a tree or cover. Freeze again.</text>
+</svg>

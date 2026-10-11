@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A deer's senses ranked. 1, nose: strongest, catches your scent far downwind, only the wind beats it. 2, ears: high clicks, zips, nylon and voices, beat it with quiet gear and slow feet. 3, eyes: motion and outline, not colour detail, beat it with stillness and a background. Bar lengths show rank, not measured distance.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Nose, then ears, then eyes</text>
+  <g font-size="17" font-weight="bold" fill="#2f3a2b"><text x="14" y="76">1 Nose</text><text x="14" y="146">2 Ears</text><text x="14" y="216">3 Eyes</text></g>
+  <rect x="100" y="56" width="285" height="28" rx="8" fill="#e8590c"/>
+  <rect x="100" y="126" width="210" height="28" rx="8" fill="#f2a56b"/>
+  <rect x="100" y="196" width="150" height="28" rx="8" fill="#8a9a6b"/>
+  <g font-size="15" font-weight="bold" fill="#fff"><text x="110" y="76">never lies</text><text x="110" y="146">metal, zips</text><text x="110" y="216">motion</text></g>
+  <g font-size="14" fill="#2f3a2b"><text x="100" y="104">Beat it: only with the wind</text><text x="100" y="174">Beat it: quiet gear, slow feet</text><text x="100" y="244">Beat it: freeze, have a background</text></g>
+  <text x="200" y="285" font-size="14" fill="#6b4f35" text-anchor="middle">Bars show rank, not distance (Tip)</text>
+</svg>

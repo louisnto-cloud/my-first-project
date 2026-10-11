@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Put it out step 3: hold the back of your hand close, then touch the ashes. They must be cool to the touch.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3. Feel it</text><rect x="0" y="220" width="400" height="80" rx="0" fill="#dfe6d3"/><rect x="130" y="200" width="140" height="18" rx="6" fill="#777"/><ellipse cx="200" cy="186" rx="31" ry="18" fill="#d9b48f" stroke="#2f3a2b" stroke-width="2"/><text x="200" y="120" font-size="18" font-weight="bold" fill="#2e7d32" text-anchor="middle">Cool to the touch</text><text x="200" y="288" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cool to the touch, everywhere</text>
+</svg>

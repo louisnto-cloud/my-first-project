@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Map step 3. Turn on the Slope direction terrain tool. North faces are cool and hold conifers. South and east faces are warm, where aspen and berry shrubs often grow. Then check Sun and shade." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Step 3: slope direction (aspect)</text>
+<rect x="10" y="40" width="380" height="210" rx="10" fill="#eef1e6" stroke="#8a9a6b" stroke-width="2"/>
+<ellipse cx="200" cy="145" rx="150" ry="85" fill="#cfd8c0"/><ellipse cx="200" cy="145" rx="90" ry="50" fill="#b8c4a4"/><ellipse cx="200" cy="145" rx="35" ry="20" fill="#a3b08c"/>
+<path d="M200 145 L200 60 A150 85 0 0 0 52 135 Z" fill="#4a7fb0" opacity=".25"/><path d="M200 145 L348 150 A150 85 0 0 1 200 230 Z" fill="#e8590c" opacity=".3"/>
+<text x="130" y="95" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">North: cool, conifer</text>
+<text x="280" y="205" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">South, east: warm</text>
+<text x="200" y="280" font-size="14" fill="#23261f" text-anchor="middle">Terrain: Slope direction, then Sun and shade</text>
+</svg>

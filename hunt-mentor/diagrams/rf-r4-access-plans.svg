@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 272" role="img" aria-label="Four cards. The Southern Rocky Mountain Management Plan zones recreation access in Management Units 4-1, 4-2, 4-22 and 4-23. The Golden Backcountry Recreation Plan zones access in 4-34, 4-36 and 4-40. Recreation sites such as the Cranbrook Community Forest have their own restrictions. Region 4 motor vehicle prohibition maps are online only." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="272" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Access plans and vehicle maps</text>
+<rect x="6" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#4a7fb0"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Southern Rocky</text>
+<text x="101" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Mountain plan</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">Recreation access</text>
+<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start">zoning, MUs 4-1, 4-2,</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start">4-22, 4-23</text>
+<rect x="204" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#4a7fb0"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Golden Backcountry</text>
+<text x="299" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">plan</text>
+<text x="212" y="106" font-size="14" fill="#23261f" text-anchor="start">Recreation access</text>
+<text x="212" y="124" font-size="14" fill="#23261f" text-anchor="start">zoning, MUs 4-34, 4-36,</text>
+<text x="212" y="142" font-size="14" fill="#23261f" text-anchor="start">4-40</text>
+<rect x="6" y="162" width="190" height="96" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M6 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="101" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Recreation sites</text>
+<text x="14" y="210" font-size="14" fill="#23261f" text-anchor="start">Own limits, such as the</text>
+<text x="14" y="228" font-size="14" fill="#23261f" text-anchor="start">Cranbrook Community</text>
+<text x="14" y="246" font-size="14" fill="#23261f" text-anchor="start">Forest</text>
+<rect x="204" y="162" width="190" height="96" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M204 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="299" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Vehicle maps</text>
+<rect x="217.0" y="204" width="22" height="28" rx="2" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/><line x1="222.0" y1="211" x2="234.0" y2="211" stroke="#2f3a2b" stroke-width="2"/><line x1="222.0" y1="217" x2="234.0" y2="217" stroke="#2f3a2b" stroke-width="2"/><line x1="222.0" y1="223" x2="234.0" y2="223" stroke="#2f3a2b" stroke-width="2"/><line x1="222.0" y1="229" x2="234.0" y2="229" stroke="#2f3a2b" stroke-width="2"/>
+<text x="250" y="210" font-size="14" fill="#23261f" text-anchor="start">Online only. The</text>
+<text x="250" y="228" font-size="14" fill="#23261f" text-anchor="start">link: tap More</text>
+</svg>

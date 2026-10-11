@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A made up drill area: timbered ridge at the top, a grass bench below it, a draw with a creek on the right, a private block on the left, a road at the bottom with a recreation site circle. Six numbered stops: 1 park, 2 walk in, 3 glass, 4 read sign, 5 seat, 6 walk out.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The drill area (made up features)</text>
+<rect x="0" y="40" width="400" height="260" fill="#dfe6d3"/>
+<path d="M0 40 L400 40 L400 90 Q 300 110 200 95 Q 100 80 0 100 Z" fill="#3d5a3a"/>
+<text x="200" y="62" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Ridge with timber (made up)</text>
+<path d="M60 150 Q 200 130 330 155 L330 175 Q 200 155 60 172 Z" fill="#cdd8b8"/>
+<text x="110" y="166" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2f3a2b" text-anchor="middle">grass bench</text>
+<path d="M340 95 Q 330 170 360 300" stroke="#4a7fb0" stroke-width="5" fill="none"/>
+<text x="370" y="220" font-family="sans-serif" font-size="12" font-weight="bold" fill="#4a7fb0" text-anchor="middle">draw</text>
+<rect x="0" y="180" width="70" height="80" fill="#c0392b" opacity=".45"/><text x="35" y="225" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">private</text>
+<rect x="0" y="272" width="400" height="10" fill="#23261f"/>
+<circle cx="150" cy="255" r="26" fill="none" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 3"/><text x="150" y="259" font-family="sans-serif" font-size="11" font-weight="bold" fill="#e8590c" text-anchor="middle">rec site</text>
+<g><polygon points="102.3,125 110,103 117.7,125" fill="#3d5a3a"/><rect x="108" y="125" width="4" height="4.4" fill="#6b4f35"/></g>
+<g><polygon points="242.3,120 250,98 257.7,120" fill="#3d5a3a"/><rect x="248" y="120" width="4" height="4.4" fill="#6b4f35"/></g>
+<g><polygon points="282.3,128 290,106 297.7,128" fill="#3d5a3a"/><rect x="288" y="128" width="4" height="4.4" fill="#6b4f35"/></g>
+<polyline points="230,268 260,230 300,200 230,185 180,140 300,235" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5"/>
+<circle cx="230" cy="268" r="11" fill="#e8590c"/><text x="230" y="273" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+<circle cx="260" cy="230" r="11" fill="#e8590c"/><text x="260" y="235" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<circle cx="300" cy="200" r="11" fill="#e8590c"/><text x="300" y="205" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+<circle cx="230" cy="185" r="11" fill="#e8590c"/><text x="230" y="190" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">4</text>
+<circle cx="180" cy="140" r="11" fill="#e8590c"/><text x="180" y="145" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">5</text>
+<circle cx="300" cy="235" r="11" fill="#e8590c"/><text x="300" y="240" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">6</text>
+<text x="200" y="296" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">1 park, 2 walk in, 3 glass, 4 sign, 5 seat, 6 out</text>
+</svg>

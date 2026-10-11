@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 430" role="img" aria-label="A 24 hour clock of a grouse day, hunter lore, 75 percent. About 6 to 9 am: feed and pick grit on edges and roads. About 9 am to 3 pm: rest and dust bathe. About 3 pm to dusk: feed again. Night: roost in trees or snow. Legal hunting hours: 1 hour before sunrise to 1 hour after sunset. Tip: at midday spruce and dusky grouse often sit in trees, which is your .22 time." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="430" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">A grouse day (hunter lore, 75%)</text>
+<circle cx="200" cy="200" r="130" fill="#2f3a4a" stroke="none" stroke-width="0"/>
+<path d="M200 200 L330.0 200.0 A130 130 0 1 1 74.4 166.4 Z" fill="#fdf3d6" opacity="1"/>
+<path d="M200 200 L322.0 200.0 A122 122 0 0 1 286.3 286.3 Z" fill="#e9c46a" opacity="0.95"/>
+<path d="M200 200 L286.3 286.3 A122 122 0 0 1 113.7 286.3 Z" fill="#8a9a6b" opacity="0.95"/>
+<path d="M200 200 L113.7 286.3 A122 122 0 0 1 79.0 184.1 Z" fill="#e9c46a" opacity="0.95"/>
+<path d="M200 200 L79.0 184.1 A122 122 0 0 1 322.0 200.0 Z" fill="#4a5a70" opacity="0.95"/>
+<circle cx="200" cy="200" r="52" fill="#fffaf0" stroke="none" stroke-width="0"/>
+<text x="200.0" y="59.0" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Midnight</text>
+<text x="346.0" y="205.0" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">6 am</text>
+<text x="200.00000000000003" y="351.0" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Noon</text>
+<text x="54.0" y="205.00000000000003" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">6 pm</text>
+<text x="286.84467605606096" y="240.97224264231843" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Feed</text>
+<text x="200.0" y="299.0" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Rest, dust</text>
+<text x="110.98856782746007" y="235.2153097384972" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Feed</text>
+<text x="206.14789414763345" y="111.20126121557128" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Roost</text>
+<text x="200" y="206" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">24 hours</text>
+<text x="10" y="384" font-size="14" fill="#23261f" text-anchor="start">Morning feed includes grit on road edges.</text>
+<text x="10" y="402" font-size="14" fill="#23261f" text-anchor="start">Legal: 1 h before sunrise to 1 h after sunset.</text>
+<text x="10" y="420" font-size="14" fill="#23261f" text-anchor="start">Midday: spruce, dusky often sit in trees (Tip).</text>
+</svg>

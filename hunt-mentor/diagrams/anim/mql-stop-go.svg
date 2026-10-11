@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, top view. You walk a few steps along a strip of brush, then stop and wait 15 to 20 seconds. Nothing. You walk again and stop again. On the second stop two quail lose their nerve and flush out of the brush. Washington Fish and Wildlife stop and go method, 75 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Stop and go: the stop makes them flush</text>
+<rect x="0" y="40" width="400" height="200" rx="8" fill="#dfe6d3"/>
+<ellipse cx="200" cy="110" rx="170" ry="34" fill="#8a9a6b"/>
+<g><g transform="translate(0 0)"><circle r="10" fill="#e8590c"/><text x="0" y="-16" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">You</text></g><animateTransform attributeName="transform" type="translate" values="30 190;120 190;120 190;220 190;220 190" keyTimes="0;.25;.5;.7;1" dur="10s" fill="freeze"/></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="2.5s"/><set attributeName="opacity" to="0" begin="5s"/><text x="120" y="160" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">stop... 15 to 20 s</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="7s"/><text x="220" y="160" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">stop...</text></g>
+<circle r="7" fill="#7d7f86" opacity="0"><set attributeName="opacity" to="1" begin="8.2s"/><animate attributeName="cx" values="240;330" begin="8.2s" dur="1.2s" fill="freeze"/><animate attributeName="cy" values="110;50" begin="8.2s" dur="1.2s" fill="freeze"/></circle>
+<circle r="7" fill="#7d7f86" opacity="0"><set attributeName="opacity" to="1" begin="8.4s"/><animate attributeName="cx" values="250;370" begin="8.4s" dur="1.2s" fill="freeze"/><animate attributeName="cy" values="104;80" begin="8.4s" dur="1.2s" fill="freeze"/></circle>
+<rect x="10" y="250" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="273" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Walk a few steps along the cover</text>
+<g opacity="0"><set attributeName="opacity" to="1" begin="2.5s"/><rect x="10" y="250" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="273" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Stop. Wait 15 to 20 seconds (75%)</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="8.2s"/><rect x="10" y="250" width="380" height="34" rx="8" fill="#e8590c"/><text x="200" y="273" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Nervous birds flush on the stop</text></g>
+</svg>

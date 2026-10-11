@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 4, top view. A hunter holds the compass flat at the belly and turns the whole body until the red needle sits in the shed again. Then walks where the direction of travel arrow points.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="12" y="30" font-size="16" font-weight="bold" fill="#e8590c">Step 4</text>
+  <text x="12" y="58" font-size="15" fill="#2f3a2b">Hold it flat. Turn</text>
+  <text x="12" y="76" font-size="15" fill="#2f3a2b">your whole body</text>
+  <text x="12" y="94" font-size="15" fill="#2f3a2b">until red is in</text>
+  <text x="12" y="112" font-size="15" fill="#2f3a2b">the shed.</text>
+  <ellipse cx="200" cy="200" rx="56" ry="26" fill="#8a9a6b"/>
+  <circle cx="200" cy="200" r="22" fill="#2f3a2b"/>
+  <rect x="186" y="150" width="28" height="36" rx="4" fill="#cfe0ea" stroke="#4a7fb0" stroke-width="2"/>
+  <polygon points="200,152 193,166 207,166" fill="#2f3a2b"/>
+  <path d="M130 222 A 80 80 0 0 0 270 222" fill="none" stroke="#e8590c" stroke-width="3"/>
+  <polygon points="270,222 258,214 262,232" fill="#e8590c"/>
+  <text x="200" y="292" font-size="14" fill="#2f3a2b" text-anchor="middle">turn feet, not just the compass</text>
+  <line x1="200" y1="146" x2="200" y2="40" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6"/>
+  <polygon points="190,48 210,48 200,30" fill="#e8590c"/>
+  <text x="300" y="70" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Walk this way</text>
+</svg>

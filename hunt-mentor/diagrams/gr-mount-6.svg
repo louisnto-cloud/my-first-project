@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 6: ring cap seen from above with 4 screws. Tighten a little at a time in a cross pattern: 1, 2, 3, 4. Keep the gaps even on both sides. Finish with a torque wrench to the ring maker's number, then a paint pen line across each screw.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tighten in a cross</text>
+  <rect x="40" y="110" width="200" height="40" fill="#2f3a2b"/>
+  <rect x="100" y="70" width="80" height="120" rx="6" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/>
+  <g fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"><circle cx="118" cy="88" r="9"/><circle cx="162" cy="172" r="9"/><circle cx="162" cy="88" r="9"/><circle cx="118" cy="172" r="9"/></g>
+  <g stroke="#e8590c" stroke-width="2"><line x1="112" y1="88" x2="124" y2="88"/><line x1="156" y1="172" x2="168" y2="172"/><line x1="156" y1="88" x2="168" y2="88"/><line x1="112" y1="172" x2="124" y2="172"/></g>
+  <g font-size="18" font-weight="bold" fill="#e8590c"><text x="84" y="94">1</text><text x="176" y="178">2</text><text x="176" y="94">3</text><text x="84" y="178">4</text></g>
+  <path d="M126 96 L154 164 M154 96 L126 164" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 4"/>
+  <!-- torque wrench -->
+  <rect x="262" y="96" width="110" height="18" rx="9" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/><circle cx="268" cy="105" r="14" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="316" y="140" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Torque wrench</text>
+  <text x="316" y="158" font-size="14" fill="#2f3a2b" text-anchor="middle">to the maker's number</text>
+  <text x="140" y="222" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Even gaps both sides</text>
+  <text x="200" y="262" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Paint pen line on each screw</text>
+  <text x="200" y="282" font-size="14" fill="#2f3a2b" text-anchor="middle">A broken line means it moved</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Both unload. Mark the shot spot and where it was last seen.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="32" r="17" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="30" y="39" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">2</text>
+<text x="56" y="39" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="start">Unload, mark</text>
+<path d="M200 200 l-12 -24 a14 14 0 1 1 24 0 z" fill="#e8590c" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="200" y="230" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Shot spot</text><path d="M320 140 l-12 -24 a14 14 0 1 1 24 0 z" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="320" y="170" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Last seen</text><text x="90" y="120" font-family="sans-serif" font-size="17" font-weight="bold" fill="#b3261e" text-anchor="middle">Both unload</text>
+<rect x="10" y="262" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="285.0" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Unload, then mark two points.</text>
+</svg>

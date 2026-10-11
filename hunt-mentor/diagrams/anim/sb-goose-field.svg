@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, top view of a field spread with the wind blowing right to left. A goose comes from downwind, flies past the decoys, swings around upwind, turns back and glides down against the wind into the open landing hole beside the hide. Final label: into the wind, into the hole.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="0" width="400" height="300" fill="#d9c27a" opacity=".6"/>
+  <path d="M360 30 L300 30 M309.0 25.7 L300 30 L309.0 34.3" stroke="#4a7fb0" stroke-width="3" fill="none" stroke-linecap="round"/><text x="330.0" y="22" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Wind</text>
+  <path id="sb-goose-field-p" d="M20 270 C 120 260, 380 240, 360 120 S 120 60, 70 150 S 140 200, 180 190" fill="none" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 6" opacity=".6"/>
+  <g transform="translate(250 120)"><ellipse rx="9" ry="5" fill="#7a6a58"/><path d="M7 1 L13 5" stroke="#2f3a2b" stroke-width="3"/></g>
+  <g transform="translate(280 150)"><ellipse rx="9" ry="5" fill="#7a6a58"/><path d="M7 1 L13 5" stroke="#2f3a2b" stroke-width="3"/></g>
+  <g transform="translate(240 170)"><ellipse rx="9" ry="5" fill="#7a6a58"/><path d="M7 1 L13 5" stroke="#2f3a2b" stroke-width="3"/></g>
+  <g transform="translate(300 190)"><ellipse rx="9" ry="5" fill="#7a6a58"/><path d="M7 1 L13 5" stroke="#2f3a2b" stroke-width="3"/></g>
+  <g transform="translate(270 210)"><ellipse rx="9" ry="5" fill="#7a6a58"/><path d="M7 1 L13 5" stroke="#2f3a2b" stroke-width="3"/></g>
+  <g transform="translate(320 140)"><ellipse rx="9" ry="5" fill="#7a6a58"/><path d="M7 1 L13 5" stroke="#2f3a2b" stroke-width="3"/></g>
+  <g transform="translate(330 220)"><ellipse rx="9" ry="5" fill="#7a6a58"/><path d="M7 1 L13 5" stroke="#2f3a2b" stroke-width="3"/></g>
+  <g transform="translate(290 110)"><ellipse rx="9" ry="5" fill="#7a6a58"/><path d="M5 -2 L9 -14" stroke="#2f3a2b" stroke-width="3"/><circle cx="9" cy="-15" r="3" fill="#2f3a2b"/></g>
+  <g transform="translate(240 220)"><ellipse rx="9" ry="5" fill="#7a6a58"/><path d="M5 -2 L9 -14" stroke="#2f3a2b" stroke-width="3"/><circle cx="9" cy="-15" r="3" fill="#2f3a2b"/></g>
+  <ellipse cx="180" cy="186" rx="40" ry="24" fill="none" stroke="#e8590c" stroke-width="2" stroke-dasharray="5 4"/>
+  <rect x="140" y="226" width="56" height="14" rx="4" fill="#8a9a6b"/>
+  <text x="168" y="256" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hide</text>
+  <g><g transform="rotate(0)"><g transform="translate(0 0) scale(0.8)"><ellipse rx="18" ry="5" fill="#7a6a58"/><circle cx="18" cy="-1" r="4.5" fill="#7a6a58"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#7a6a58"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#7a6a58"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#7a6a58"/></g></g><animateMotion dur="8s" fill="freeze" rotate="auto"><mpath href="#sb-goose-field-p"/></animateMotion></g>
+  <g opacity="0"><set attributeName="opacity" to="1" begin="7.6s"/><rect x="12" y="52" width="176" height="56" rx="8" fill="#2f3a2b"/><text x="100" y="76" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Into the wind,</text><text x="100" y="96" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">into the hole</text></g>
+</svg>

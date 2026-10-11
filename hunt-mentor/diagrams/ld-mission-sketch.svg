@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 386" font-family="sans-serif" role="img" aria-label="Sketch map, not to scale, of Mission and the Fraser Valley. The Fraser River runs east to west across the middle. Mission sits on the north bank in MU 2-8, with Hatzic and then Deroche to the east, and a small island in the river near Mission. Abbotsford is south of the river in MU 2-4, Chilliwack to the southeast in MU 2-3. Pitt Lake and Pitt Addington Marsh are northwest near Maple Ridge. Stave Lake is north of Mission, with bylaw Area D to its west. Harrison Lake is to the northeast, with the Chehalis on its west side in MU 2-19 and the east side toward Hope in MU 2-18. Inside Mission city limits and all of MU 2-4 you need the special licence and 1 million dollars of insurance. MU numbers are approximate.">
+<rect x="0" y="0" width="400" height="386" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Mission and the Fraser Valley</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">Sketch, not to scale. MUs approximate (90%).</text>
+<path d="M400 214 Q 330 196 280 206 Q 220 218 170 212 Q 110 204 60 214 Q 30 220 0 216" fill="none" stroke="#4a7fb0" stroke-width="10"/>
+<text x="14" y="238" font-size="14" font-weight="bold" fill="#4a7fb0">Fraser River</text>
+<path d="M40 70 Q 52 60 62 76 Q 66 120 58 150 Q 46 156 42 140 Q 34 110 40 70 Z" fill="#4a7fb0" opacity=".7"/>
+<text x="12" y="64" font-size="14" font-weight="bold" fill="#2f3a2b">Pitt Lake</text>
+<circle cx="52" cy="160" r="9" fill="#8a9a6b"/>
+<text x="68" y="166" font-size="14" fill="#2f3a2b">Pitt Addington Marsh</text>
+<path d="M168 70 Q 178 64 182 80 Q 186 120 176 150 Q 166 152 164 136 Q 160 100 168 70 Z" fill="#4a7fb0" opacity=".7"/>
+<text x="190" y="140" font-size="14" font-weight="bold" fill="#2f3a2b">Stave Lake</text>
+<rect x="120" y="96" width="40" height="44" fill="#8a9a6b" opacity=".5" stroke="#2f3a2b" stroke-dasharray="4 3"/>
+<text x="118" y="90" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Area D</text>
+<path transform="translate(0 16)" d="M318 60 Q 330 52 336 66 Q 344 110 334 150 Q 324 156 320 140 Q 312 100 318 60 Z" fill="#4a7fb0" opacity=".7"/>
+<text x="398" y="70" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Harrison Lake</text>
+<text x="312" y="128" font-size="14" fill="#2f3a2b" text-anchor="end">Chehalis</text>
+<circle cx="170" cy="206" r="6" fill="#e8590c"/>
+<text x="170" y="194" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Mission</text>
+<circle cx="230" cy="200" r="6" fill="#23261f"/>
+<text x="230" y="188" font-size="14" fill="#23261f" text-anchor="middle">Hatzic</text>
+<circle cx="290" cy="200" r="6" fill="#23261f"/>
+<text x="290" y="188" font-size="14" fill="#23261f" text-anchor="middle">Deroche</text>
+<circle cx="170" cy="256" r="6" fill="#23261f"/>
+<text x="170" y="276" font-size="14" fill="#23261f" text-anchor="middle">Abbotsford</text>
+<circle cx="322" cy="252" r="6" fill="#23261f"/>
+<text x="322" y="272" font-size="14" fill="#23261f" text-anchor="middle">Chilliwack</text>
+<circle cx="60" cy="196" r="6" fill="#23261f"/>
+<text x="60" y="186" font-size="14" fill="#23261f">Maple Ridge</text>
+<ellipse cx="160" cy="216" rx="12" ry="4" fill="#8a9a6b" stroke="#2f3a2b"/>
+<text x="398" y="244" font-size="14" fill="#2f3a2b" text-anchor="end">to Hope</text>
+<path d="M372 226 h18 m-6 -5 l6 5 l-6 5" stroke="#2f3a2b" stroke-width="2" fill="none"/>
+<text x="270" y="166" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">MU 2-8</text>
+<text x="100" y="290" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">MU 2-4</text>
+<text x="330" y="300" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">MU 2-3</text>
+<text x="270" y="100" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">MU 2-19</text>
+<text x="370" y="128" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">MU 2-18</text>
+<rect x="10" y="318" width="380" height="58" rx="8" fill="#dfe6d3"/>
+<text x="20" y="340" font-size="14" fill="#2f3a2b">Inside Mission city limits and all of MU 2-4:</text>
+<text x="20" y="360" font-size="14" font-weight="bold" fill="#e8590c">special licence plus $1,000,000 insurance (99%).</text>
+</svg>

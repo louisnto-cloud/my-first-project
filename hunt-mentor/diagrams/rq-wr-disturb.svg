@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 302" role="img" aria-label="Bar chart from Utah, Wyoming and US Forest Service winter range fact sheets. Dogs cause the strongest reaction, ATVs and mountain bikes more than hiking, people off trail more than on trail, hikers on a trail least.">
+<rect x="0" y="0" width="400" height="302" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">What scares wintering deer most</text>
+<text x="14" y="64" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Dogs off leash</text>
+<rect x="14" y="70" width="239" height="20" rx="4" fill="#e8590c"/>
+<text x="259.1428571428571" y="85" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">strongest (70%)</text>
+<text x="14" y="116" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">ATVs and mountain bikes</text>
+<rect x="14" y="122" width="213" height="20" rx="4" fill="#e8590c"/>
+<text x="232.57142857142858" y="137" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">more than hiking</text>
+<text x="14" y="168" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">People off trail</text>
+<rect x="14" y="174" width="186" height="20" rx="4" fill="#8b5a2b"/>
+<text x="206.0" y="189" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">more than on trail</text>
+<text x="14" y="220" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Hikers on a trail</text>
+<rect x="14" y="226" width="106" height="20" rx="4" fill="#8a9a6b"/>
+<text x="126.28571428571429" y="241" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">less</text>
+<text x="14" y="278" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Agency fact sheets, search previews (70%). Order</text>
+<text x="14" y="294" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">is my reading of them.</text>
+</svg>

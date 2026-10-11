@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 336" font-family="sans-serif" role="img" aria-label="Four goose groups, each with its own limits, 99 percent. Canada and cackling geese, counted together, 10 a day. Snow and Ross&#x27;s geese, counted together, 5 a day, more in MUs 2-4 and 2-5. White fronted geese, the specklebelly, 5 a day. Brant: coast only, MU 2-4, March 1 to 10, 3 a day. Each group has its own dates in each district.">
+  <rect width="400" height="336" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4 goose groups, 4 sets of limits (99%)</text>
+  <rect x="6" y="36" width="190" height="128" rx="8" fill="#dfe6d3" stroke="#2f6e3b" stroke-width="2"/>
+  <g transform="translate(80 96) scale(0.75)"><path d="M-34 0 Q-38 -16 -18 -16 L12 -14 Q26 -10 24 2 Q18 12 -4 12 L-24 12 Q-36 8 -34 0Z" fill="#7a6a58"/><path d="M14 -12 Q18 -40 24 -46 L30 -44 Q24 -36 22 -10Z" fill="#2f3a2b"/><ellipse cx="28" cy="-48" rx="7" ry="5" fill="#2f3a2b"/><path d="M34 -49 L44 -46 L34 -44Z" fill="#2f3a2b"/><path d="M24 -50 Q28 -44 30 -46" stroke="#fff" stroke-width="3" fill="none"/></g><g transform="translate(140 100) scale(0.5)"><path d="M-34 0 Q-38 -16 -18 -16 L12 -14 Q26 -10 24 2 Q18 12 -4 12 L-24 12 Q-36 8 -34 0Z" fill="#7a6a58"/><path d="M14 -12 Q18 -40 24 -46 L30 -44 Q24 -36 22 -10Z" fill="#2f3a2b"/><ellipse cx="28" cy="-48" rx="7" ry="5" fill="#2f3a2b"/><path d="M34 -49 L44 -46 L34 -44Z" fill="#2f3a2b"/><path d="M24 -50 Q28 -44 30 -46" stroke="#fff" stroke-width="3" fill="none"/></g>
+  <text x="101" y="120" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Canada + cackling</text>
+  <text x="101" y="138" font-size="13" fill="#2f3a2b" text-anchor="middle">Counted together</text>
+  <text x="101" y="155" font-size="13" fill="#2f3a2b" text-anchor="middle">10 a day</text>
+  <rect x="204" y="36" width="190" height="128" rx="8" fill="#dfe6d3" stroke="#2f6e3b" stroke-width="2"/>
+  <g transform="translate(270 96) scale(0.75)"><path d="M-34 0 Q-38 -16 -18 -16 L12 -14 Q26 -10 24 2 Q18 12 -4 12 L-24 12 Q-36 8 -34 0Z" fill="#fff" stroke="#2f3a2b" stroke-width="1.5"/><path d="M14 -12 Q18 -40 24 -46 L30 -44 Q24 -36 22 -10Z" fill="#fff" stroke="#2f3a2b" stroke-width="1.5"/><ellipse cx="28" cy="-48" rx="7" ry="5" fill="#fff" stroke="#2f3a2b" stroke-width="1.5"/><path d="M34 -49 L44 -46 L34 -44Z" fill="#e89a8c"/><path d="M24 -50 Q28 -44 30 -46" stroke="#fff" stroke-width="3" fill="none"/></g><g transform="translate(338 100) scale(0.5)"><path d="M-34 0 Q-38 -16 -18 -16 L12 -14 Q26 -10 24 2 Q18 12 -4 12 L-24 12 Q-36 8 -34 0Z" fill="#fff" stroke="#2f3a2b" stroke-width="1.5"/><path d="M14 -12 Q18 -40 24 -46 L30 -44 Q24 -36 22 -10Z" fill="#fff" stroke="#2f3a2b" stroke-width="1.5"/><ellipse cx="28" cy="-48" rx="7" ry="5" fill="#fff" stroke="#2f3a2b" stroke-width="1.5"/><path d="M34 -49 L44 -46 L34 -44Z" fill="#e89a8c"/><path d="M24 -50 Q28 -44 30 -46" stroke="#fff" stroke-width="3" fill="none"/></g>
+  <text x="299" y="120" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Snow + Ross&#x27;s</text>
+  <text x="299" y="138" font-size="13" fill="#2f3a2b" text-anchor="middle">Counted together</text>
+  <text x="299" y="155" font-size="13" fill="#2f3a2b" text-anchor="middle">5 a day (2-4, 2-5: more)</text>
+  <rect x="6" y="172" width="190" height="128" rx="8" fill="#dfe6d3" stroke="#2f6e3b" stroke-width="2"/>
+  <g transform="translate(100 232) scale(0.8)"><path d="M-34 0 Q-38 -16 -18 -16 L12 -14 Q26 -10 24 2 Q18 12 -4 12 L-24 12 Q-36 8 -34 0Z" fill="#8c7a66"/><path d="M14 -12 Q18 -40 24 -46 L30 -44 Q24 -36 22 -10Z" fill="#8c7a66"/><ellipse cx="28" cy="-48" rx="7" ry="5" fill="#8c7a66"/><path d="M34 -49 L44 -46 L34 -44Z" fill="#8c7a66"/><path d="M24 -50 Q28 -44 30 -46" stroke="#fff" stroke-width="3" fill="none"/></g>
+  <text x="101" y="256" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">White fronted</text>
+  <text x="101" y="274" font-size="13" fill="#2f3a2b" text-anchor="middle">&quot;Specklebelly&quot;</text>
+  <text x="101" y="291" font-size="13" fill="#2f3a2b" text-anchor="middle">5 a day</text>
+  <rect x="204" y="172" width="190" height="128" rx="8" fill="#dfe6d3" stroke="#e8590c" stroke-width="2"/>
+  <g transform="translate(300 236) scale(0.6)"><path d="M-34 0 Q-38 -16 -18 -16 L12 -14 Q26 -10 24 2 Q18 12 -4 12 L-24 12 Q-36 8 -34 0Z" fill="#2f3a2b"/><path d="M14 -12 Q18 -40 24 -46 L30 -44 Q24 -36 22 -10Z" fill="#2f3a2b"/><ellipse cx="28" cy="-48" rx="7" ry="5" fill="#2f3a2b"/><path d="M34 -49 L44 -46 L34 -44Z" fill="#2f3a2b"/><path d="M24 -50 Q28 -44 30 -46" stroke="#fff" stroke-width="3" fill="none"/></g>
+  <text x="299" y="256" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Brant</text>
+  <text x="299" y="274" font-size="13" fill="#2f3a2b" text-anchor="middle">Coast only, MU 2-4</text>
+  <text x="299" y="291" font-size="13" fill="#2f3a2b" text-anchor="middle">March 1 to 10, 3 a day</text>
+  <text x="200" y="324" font-size="14" fill="#2f3a2b" text-anchor="middle">Each group has its own dates in each district</text>
+</svg>

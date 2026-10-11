@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 540" font-family="sans-serif">
+  <defs>
+    <marker id="ct-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#e8590c"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="400" height="540" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Side view of the hill</text>
+  <g stroke="#8a9a6b" stroke-width="1" stroke-dasharray="4 4" fill="none">
+    <line x1="60" y1="80" x2="395" y2="80"/>
+    <line x1="60" y1="110" x2="395" y2="110"/>
+    <line x1="60" y1="140" x2="395" y2="140"/>
+    <line x1="60" y1="170" x2="395" y2="170"/>
+    <line x1="60" y1="200" x2="395" y2="200"/>
+  </g>
+  <g font-size="14" fill="#2f3a2b">
+    <text x="4" y="85">1400 m</text>
+    <text x="4" y="115">1300 m</text>
+    <text x="4" y="145">1200 m</text>
+    <text x="4" y="175">1100 m</text>
+    <text x="4" y="205">1000 m</text>
+  </g>
+  <path d="M 60,218 C 75,212 90,195 105,170 C 120,140 140,100 160,82 C 170,73 182,72 190,80 C 200,92 212,112 222,124 C 230,132 240,132 248,124 C 258,112 268,96 278,86 C 284,80 292,80 298,88 C 310,110 316,150 322,166 L 350,168 C 362,170 376,196 390,218 L 395,218 L 395,232 L 60,232 Z" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="178" y="62" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Peak</text>
+  <text x="288" y="70" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Peak</text>
+  <text x="236" y="154" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Saddle</text>
+  <text x="354" y="160" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Bench</text>
+  <text x="70" y="116" font-size="15" font-weight="bold" fill="#23261f">Steep</text>
+  <text x="70" y="134" font-size="14" fill="#2f3a2b">lines close</text>
+  <line x1="20" y1="248" x2="380" y2="248" stroke="#8a9a6b" stroke-width="2"/>
+  <text x="200" y="272" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Same hill from above: contours</text>
+  <g fill="none" stroke="#6b4f35" stroke-width="2">
+    <path d="M 15,395 C 15,330 80,300 140,300 C 185,300 196,335 220,348 C 246,360 256,328 290,325 C 360,322 398,372 394,420 C 388,458 350,478 300,476 C 270,476 255,480 245,478 C 232,476 226,440 218,432 C 210,440 200,478 182,480 C 152,484 120,482 100,474 C 60,464 32,450 14,425 C 6,412 8,402 15,395 Z"/>
+    <path d="M 35,395 C 35,345 90,318 140,318 C 180,318 192,348 216,360 C 240,372 250,345 286,342 C 340,340 390,372 386,418 C 380,448 350,462 302,460 C 282,459 264,462 252,460 C 240,458 230,432 218,422 C 206,432 196,458 182,460 C 155,463 128,462 108,456 C 76,448 50,440 36,418 C 29,408 30,400 35,395 Z"/>
+    <path d="M 62,392 C 62,350 108,332 140,334 C 172,336 186,360 212,372 C 234,382 246,362 282,360 C 326,358 350,382 346,412 C 342,438 322,448 290,446 C 262,444 246,428 214,422 C 196,422 182,446 142,448 C 100,450 62,430 62,392 Z"/>
+    <ellipse cx="140" cy="388" rx="42" ry="26"/>
+    <ellipse cx="288" cy="400" rx="34" ry="22"/>
+    <ellipse cx="140" cy="388" rx="20" ry="12"/>
+    <ellipse cx="288" cy="400" rx="20" ry="11"/>
+    <path d="M 112,357 Q 140,347 168,357"/>
+    <path d="M 110,352 Q 140,341 170,352"/>
+    <path d="M 108,347 Q 140,335 172,347"/>
+  </g>
+  <line x1="140" y1="388" x2="288" y2="400" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="140" y="393" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Peak</text>
+  <text x="288" y="405" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Peak</text>
+  <text x="214" y="407" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Ridge</text>
+  <g fill="none" stroke="#e8590c" stroke-width="2.5" marker-end="url(#ct-arrow)">
+    <line x1="214" y1="302" x2="214" y2="382"/>
+    <line x1="84" y1="302" x2="118" y2="342"/>
+    <line x1="236" y1="498" x2="221" y2="440"/>
+    <line x1="60" y1="512" x2="24" y2="432"/>
+    <line x1="366" y1="482" x2="366" y2="420"/>
+  </g>
+  <text x="214" y="296" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Saddle</text>
+  <text x="70" y="296" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Cliff</text>
+  <text x="396" y="496" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Bench: wide gap</text>
+  <text x="236" y="514" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Draw: V points uphill</text>
+  <text x="14" y="530" font-size="14" font-weight="bold" fill="#23261f">Spur: V points downhill</text>
+</svg>

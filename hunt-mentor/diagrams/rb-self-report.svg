@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 376" role="img" aria-label="Accidental illegal harvest, in order. 1, cancel your species licence at once and write in ink that you intend to self report. 2, with phone signal, call RAPP at 1 877 952 7277 and follow the conservation officer. 3, if a phone is a short trip away, field dress the animal, leave the carcass there and go call. 4, if remote with no phone, field dress it, care for the carcass, and call as soon as you can." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="376" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Shot the wrong animal? Do this</text>
+<rect x="10" y="42" width="380" height="62" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<circle cx="36" cy="73" r="15" fill="#e8590c"/><text x="36" y="78.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+<text x="62" y="68" font-size="15" fill="#23261f" text-anchor="start">Cancel your licence now. Write in</text>
+<text x="62" y="88" font-size="15" fill="#23261f" text-anchor="start">ink: I intend to self report.</text>
+<line x1="36" y1="104" x2="36.0" y2="112.0" stroke="#23261f" stroke-width="2.5"/><polygon points="36,118 31.7,109.0 40.3,109.0" fill="#23261f"/>
+<rect x="10" y="118" width="380" height="62" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
+<circle cx="36" cy="149" r="15" fill="#5c7a3a"/><text x="36" y="154.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+<text x="62" y="144" font-size="15" fill="#23261f" text-anchor="start">Phone signal? Call RAPP</text>
+<text x="62" y="164" font-size="15" fill="#23261f" text-anchor="start">1 877 952 7277. Follow the officer.</text>
+<line x1="36" y1="180" x2="36.0" y2="188.0" stroke="#23261f" stroke-width="2.5"/><polygon points="36,194 31.7,185.0 40.3,185.0" fill="#23261f"/>
+<rect x="10" y="194" width="380" height="62" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<circle cx="36" cy="225" r="15" fill="#4a7fb0"/><text x="36" y="230.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text>
+<text x="62" y="220" font-size="15" fill="#23261f" text-anchor="start">Phone a short trip away? Field</text>
+<text x="62" y="240" font-size="15" fill="#23261f" text-anchor="start">dress it, leave it there, go call.</text>
+<line x1="36" y1="256" x2="36.0" y2="264.0" stroke="#23261f" stroke-width="2.5"/><polygon points="36,270 31.7,261.0 40.3,261.0" fill="#23261f"/>
+<rect x="10" y="270" width="380" height="62" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<circle cx="36" cy="301" r="15" fill="#4a7fb0"/><text x="36" y="306.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">4</text>
+<text x="62" y="296" font-size="15" fill="#23261f" text-anchor="start">Remote, no phone? Field dress it,</text>
+<text x="62" y="316" font-size="15" fill="#23261f" text-anchor="start">care for the meat, call when you can.</text>
+<text x="200" y="360" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">The test is how you deal with the mistake.</text>
+</svg>

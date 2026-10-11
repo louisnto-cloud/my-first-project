@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 486" font-family="sans-serif" role="img" aria-label="Season chart for Region 2 near Mission, September 2026 to January 2027, synopsis page 28. Ducks 10 October to 24 January, 8 a day, 24 in possession. Coots and snipe the same dates, 10 and 30. Canada and cackling geese 10 October to 22 November and 19 December to 10 January. Black tailed deer bucks 10 September to 15 December. Black bear 10 September to 30 November, 2 a year. Grouse 10 September to 15 December, 10 and 30. Pheasant cocks 10 October to 30 November in MUs 2-4 and 2-8, 2 and 6. No white tailed deer season in Region 2.">
+<rect x="0" y="0" width="400" height="486" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Open near Mission, fall 2026</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">Region 2 table, synopsis page 28 (99%)</text>
+<rect x="118.0" y="64" width="53.3" height="342" fill="#dfe6d3"/>
+<text x="144.667" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sep</text>
+<text x="198.889" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Oct</text>
+<rect x="226.4" y="64" width="53.3" height="342" fill="#dfe6d3"/>
+<text x="253.111" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Nov</text>
+<text x="307.333" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dec</text>
+<rect x="334.9" y="64" width="55.1" height="342" fill="#dfe6d3"/>
+<text x="362.444" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Jan</text>
+<text x="8" y="105" font-size="14" font-weight="bold" fill="#2f3a2b">Ducks</text>
+<text x="8" y="121" font-size="14" fill="#2f3a2b">8 (24)</text>
+<rect x="187.3" y="92" width="190.2" height="22" rx="4" fill="#4a7fb0"/>
+<text x="191.333" y="108" font-size="14" font-weight="bold" fill="#fff">Oct 10 to Jan 24</text>
+<text x="8" y="151" font-size="14" font-weight="bold" fill="#2f3a2b">Coots, snipe</text>
+<text x="8" y="167" font-size="14" fill="#2f3a2b">10 (30)</text>
+<rect x="187.3" y="138" width="190.2" height="22" rx="4" fill="#4a7fb0"/>
+<text x="191.333" y="154" font-size="14" font-weight="bold" fill="#fff">Oct 10 to Jan 24</text>
+<text x="8" y="197" font-size="14" font-weight="bold" fill="#2f3a2b">Canada and</text>
+<text x="8" y="213" font-size="14" fill="#2f3a2b">cackling geese</text>
+<rect x="187.3" y="184" width="78.2" height="22" rx="4" fill="#4a7fb0"/>
+<text x="191.333" y="221" font-size="14" font-weight="bold" fill="#4a7fb0">Oct 10 to Nov 22</text>
+<rect x="311.8" y="184" width="40.9" height="22" rx="4" fill="#4a7fb0"/>
+<text x="8" y="243" font-size="14" font-weight="bold" fill="#2f3a2b">Black tailed</text>
+<text x="8" y="259" font-size="14" fill="#2f3a2b">deer, bucks</text>
+<rect x="134.0" y="230" width="172.4" height="22" rx="4" fill="#e8590c"/>
+<text x="138" y="246" font-size="14" font-weight="bold" fill="#fff">Sep 10 to Dec 15</text>
+<text x="8" y="289" font-size="14" font-weight="bold" fill="#2f3a2b">Black bear</text>
+<text x="8" y="305" font-size="14" fill="#2f3a2b">2 a year</text>
+<rect x="134.0" y="276" width="145.8" height="22" rx="4" fill="#2f3a2b"/>
+<text x="138" y="292" font-size="14" font-weight="bold" fill="#fff">Sep 10 to Nov 30</text>
+<text x="8" y="335" font-size="14" font-weight="bold" fill="#2f3a2b">Grouse</text>
+<text x="8" y="351" font-size="14" fill="#2f3a2b">10 (30)</text>
+<rect x="134.0" y="322" width="172.4" height="22" rx="4" fill="#8b5a2b"/>
+<text x="138" y="338" font-size="14" font-weight="bold" fill="#fff">Sep 10 to Dec 15</text>
+<text x="8" y="381" font-size="14" font-weight="bold" fill="#2f3a2b">Pheasant</text>
+<text x="8" y="397" font-size="14" fill="#2f3a2b">cocks 2 (6)</text>
+<rect x="187.3" y="368" width="92.4" height="22" rx="4" fill="#8b5a2b"/>
+<text x="191.333" y="405" font-size="14" font-weight="bold" fill="#8b5a2b">Oct 10 to Nov 30</text>
+<text x="200" y="424" font-size="14" fill="#2f3a2b" text-anchor="middle">Geese, second window: Dec 19 to Jan 10.</text>
+<text x="200" y="444" font-size="14" fill="#2f3a2b" text-anchor="middle">Pheasant: MUs 2-4 and 2-8 only.</text>
+<text x="200" y="464" font-size="14" fill="#2f3a2b" text-anchor="middle">No white tailed deer season in Region 2.</text>
+</svg>

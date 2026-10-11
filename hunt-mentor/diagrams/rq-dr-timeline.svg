@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 242" role="img" aria-label="Timeline for Saturday 24 October 2026 at Heffley Creek. Legal deer hunting from about 6:37, one hour before the 7:37 sunrise, to about 18:52, one hour after the 17:52 sunset. Plan: walk in before light, glass at first light, read sign mid morning, rest and map midday, sit a seat until legal end. Deer pattern: moving early and late, bedded midday.">
+<rect x="0" y="0" width="400" height="242" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Drill day: Saturday 24 October 2026</text>
+<line x1="39" y1="50" x2="39" y2="172" stroke="#d6d0bf" stroke-width="1"/>
+<text x="38.8" y="46" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">6:00</text>
+<line x1="113" y1="50" x2="113" y2="172" stroke="#d6d0bf" stroke-width="1"/>
+<text x="113.2" y="46" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">9:00</text>
+<line x1="188" y1="50" x2="188" y2="172" stroke="#d6d0bf" stroke-width="1"/>
+<text x="187.6" y="46" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">12:00</text>
+<line x1="262" y1="50" x2="262" y2="172" stroke="#d6d0bf" stroke-width="1"/>
+<text x="262.0" y="46" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">15:00</text>
+<line x1="336" y1="50" x2="336" y2="172" stroke="#d6d0bf" stroke-width="1"/>
+<text x="336.4" y="46" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">18:00</text>
+<text x="14" y="80" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Your plan</text>
+<rect x="26" y="86" width="27" height="22" rx="4" fill="#6b4f35"/>
+<rect x="54" y="86" width="72" height="22" rx="4" fill="#e8590c"/>
+<text x="89.63999999999999" y="102" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">glass</text>
+<rect x="126" y="86" width="62" height="22" rx="4" fill="#8a9a6b"/>
+<text x="156.6" y="102" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">sign</text>
+<rect x="188" y="86" width="74" height="22" rx="4" fill="#cfc6b0"/>
+<text x="224.8" y="102" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">rest, map</text>
+<rect x="262" y="86" width="96" height="22" rx="4" fill="#e8590c"/>
+<text x="309.988" y="102" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">seat</text>
+<text x="14" y="134" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Deer (pattern)</text>
+<rect x="26" y="140" width="87" height="22" rx="4" fill="#2f3a2b"/>
+<text x="69.8" y="156" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">moving</text>
+<rect x="113" y="140" width="174" height="22" rx="4" fill="#8a9a6b"/>
+<text x="200.0" y="156" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">bedded</text>
+<rect x="287" y="140" width="72" height="22" rx="4" fill="#2f3a2b"/>
+<text x="322.76" y="156" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">moving</text>
+<line x1="54" y1="58" x2="54" y2="176" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="54.176" y="192" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e8590c" text-anchor="middle">6:37 legal</text>
+<line x1="358" y1="58" x2="358" y2="176" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="357.976" y="192" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e8590c" text-anchor="middle">18:52 end</text>
+<text x="14" y="224" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Times: my calculation (85%). Deer pattern: Tip and</text>
+<text x="14" y="240" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Penn State dawn and dusk peaks (75%).</text>
+</svg>

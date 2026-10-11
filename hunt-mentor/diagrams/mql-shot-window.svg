@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="The shot window. You stand in brush. A wedge of open sky above and ahead of you is the safe window. A high bird with sky behind it: OK. A low bird over the brush: no shot. Range about 15 to 30 metres, a Tip. Loads from Washington Fish and Wildlife, 75 percent: lead 7.5 or 8, steel 6 or 7, skeet or improved cylinder choke. Straightaway birds: most hunters shoot high, so hold a hair under.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The shot window</text>
+<rect x="0" y="40" width="400" height="170" fill="#dbe8f4"/>
+<rect x="0" y="170" width="400" height="40" fill="#8a9a6b"/>
+<g transform="translate(200 228)"><circle r="10" fill="#e8590c"/><text x="0" y="-16" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">You</text></g>
+<path d="M200 220 L80 60 L320 60 Z" fill="#e8590c" opacity=".18"/>
+<path d="M200 220 L80 60 M200 220 L320 60" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 5"/>
+<g transform="translate(200 90)"><ellipse rx="10" ry="6" fill="#7d7f86"/></g>
+<text x="200" y="76" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">high bird, sky behind: OK</text>
+<g transform="translate(330 180)"><ellipse rx="10" ry="6" fill="#7d7f86"/></g>
+<text x="330" y="164" font-size="14" font-weight="bold" fill="#a33b2a" text-anchor="middle">low bird: NO</text>
+<text x="70" y="120" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">15 to 30 m</text>
+<text x="70" y="138" font-size="14" fill="#2f3a2b" text-anchor="middle">(Tip)</text>
+<rect x="10" y="246" width="380" height="46" rx="8" fill="#2f3a2b"/>
+<text x="200" y="266" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Lead 7.5 or 8 (steel 6 or 7), open choke</text>
+<text x="200" y="286" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Straightaway: hold a hair under (75%)</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 354" role="img" aria-label="Bar chart. Penn State October does moved 120 to 140 metres an hour at dawn and dusk, about 60 at night and under 50 midday. The new moon versus full moon difference was about 6 metres an hour. Mississippi State bucks showed a moon effect of about 4 metres an hour, inside GPS error.">
+<rect x="0" y="0" width="400" height="354" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Deer movement: moon versus time of day</text>
+<text x="14" y="64" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Dawn and dusk (October does)</text>
+<rect x="14" y="70" width="347" height="20" rx="4" fill="#e8590c"/>
+<text x="355.2" y="85" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="end">120 to 140 m an hour</text>
+<text x="14" y="116" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Night</text>
+<rect x="14" y="122" width="149" height="20" rx="4" fill="#2f3a2b"/>
+<text x="168.8" y="137" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">about 60 m an hour</text>
+<text x="14" y="168" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Middle of the day</text>
+<rect x="14" y="174" width="124" height="20" rx="4" fill="#8a9a6b"/>
+<text x="144.0" y="189" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">under 50 m an hour</text>
+<text x="14" y="220" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">New moon minus full moon</text>
+<rect x="14" y="226" width="15" height="20" rx="4" fill="#4a7fb0"/>
+<text x="34.88" y="241" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">about 6 m an hour</text>
+<text x="14" y="272" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Moon effect on bucks (Mississippi)</text>
+<rect x="14" y="278" width="10" height="20" rx="4" fill="#4a7fb0"/>
+<text x="29.92" y="293" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">about 4 m an hour</text>
+<text x="14" y="330" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Penn State Deer Forest blog 2017 (75%);</text>
+<text x="14" y="346" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Mississippi State Deer Lab via MeatEater (75%).</text>
+</svg>

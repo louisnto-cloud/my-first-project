@@ -1,0 +1,479 @@
+{
+ "area": "C",
+ "name": "South Okanagan and Similkameen (quail trip)",
+ "box": [
+  -120.1,
+  49.0,
+  -119.2,
+  49.7
+ ],
+ "base": {
+  "name": "Oliver",
+  "lat": 49.183,
+  "lon": -119.55,
+  "note": "Assumption: Oliver town centre"
+ },
+ "generated": "2026-10-04",
+ "total": 1290,
+ "counts": {
+  "byCategory": {
+   "camp": 71,
+   "atv": 239,
+   "drive": 509,
+   "walk": 468,
+   "backcountry": 3
+  },
+  "byPrimary": {
+   "camp": 71,
+   "deer": 476,
+   "duck": 153,
+   "grouse": 222,
+   "moose": 230,
+   "quail": 138
+  },
+  "byPressure": {
+   "busier": 858,
+   "average": 303,
+   "quieter": 85,
+   "remote": 44
+  },
+  "byPrimaryCategory": {
+   "camp:camp": 71,
+   "deer:atv": 106,
+   "deer:drive": 158,
+   "deer:walk": 212,
+   "duck:drive": 120,
+   "duck:walk": 33,
+   "grouse:atv": 57,
+   "grouse:drive": 96,
+   "grouse:walk": 69,
+   "moose:atv": 71,
+   "moose:backcountry": 3,
+   "moose:drive": 65,
+   "moose:walk": 91,
+   "quail:atv": 5,
+   "quail:drive": 70,
+   "quail:walk": 63
+  },
+  "bySpeciesTag": {
+   "deer": 534,
+   "bear": 378,
+   "moose": 262,
+   "duck": 153,
+   "grouse": 222,
+   "quail": 138
+  }
+ },
+ "routes": 1503,
+ "camps": 74,
+ "bytes": {
+  "index.geojson": 322609,
+  "detail": 4975390,
+  "routes": 2208835,
+  "camps.geojson": 60390
+ },
+ "tiles": {
+  "deg": 0.25,
+  "detail": [
+   "-477_196",
+   "-477_197",
+   "-477_198",
+   "-478_196",
+   "-478_197",
+   "-478_198",
+   "-479_196",
+   "-479_197",
+   "-479_198",
+   "-480_196",
+   "-480_197",
+   "-480_198",
+   "-481_196",
+   "-481_197",
+   "-481_198"
+  ],
+  "routes": {
+   "-477_196": [
+    -119.256,
+    49.045,
+    -119.164,
+    49.2
+   ],
+   "-477_197": [
+    -119.25,
+    49.251,
+    -119.182,
+    49.496
+   ],
+   "-477_198": [
+    -119.296,
+    49.495,
+    -119.178,
+    49.714
+   ],
+   "-478_196": [
+    -119.48,
+    49.0,
+    -119.242,
+    49.273
+   ],
+   "-478_197": [
+    -119.502,
+    49.251,
+    -119.233,
+    49.534
+   ],
+   "-478_198": [
+    -119.52,
+    49.495,
+    -119.218,
+    49.713
+   ],
+   "-479_196": [
+    -119.766,
+    49.0,
+    -119.496,
+    49.273
+   ],
+   "-479_197": [
+    -119.763,
+    49.245,
+    -119.486,
+    49.496
+   ],
+   "-479_198": [
+    -119.782,
+    49.495,
+    -119.459,
+    49.7
+   ],
+   "-480_196": [
+    -120.004,
+    49.021,
+    -119.726,
+    49.261
+   ],
+   "-480_197": [
+    -120.024,
+    49.232,
+    -119.724,
+    49.526
+   ],
+   "-480_198": [
+    -120.034,
+    49.481,
+    -119.736,
+    49.706
+   ],
+   "-481_196": [
+    -120.098,
+    49.132,
+    -119.996,
+    49.257
+   ],
+   "-481_197": [
+    -120.12,
+    49.237,
+    -119.946,
+    49.529
+   ],
+   "-481_198": [
+    -120.119,
+    49.494,
+    -119.968,
+    49.713
+   ]
+  }
+ },
+ "layerDates": {
+  "roads": "2026-10-03",
+  "private": "2026-09-25",
+  "privateFetched": "2026-10-03",
+  "closures": "2026-10-03",
+  "mu": "2026-10-03",
+  "parks": "2026-10-03",
+  "reserves": "2026-10-03",
+  "cities": "2026-10-03",
+  "wma": "2026-10-03",
+  "cutblocks": "2026-10-03",
+  "burns": "2026-10-03",
+  "winterRange": "2026-10-03",
+  "dem": "2026-10-04"
+ },
+ "stats": {
+  "deer": {
+   "drive": {
+    "candidates": 496,
+    "droppedWeak": 245,
+    "droppedCap": 31,
+    "kept": 220
+   },
+   "atv": {
+    "candidates": 239,
+    "droppedWeak": 89,
+    "droppedCap": 0,
+    "kept": 150
+   },
+   "walk": {
+    "candidates": 529,
+    "droppedWeak": 258,
+    "droppedCap": 51,
+    "kept": 220
+   },
+   "backcountry": {
+    "candidates": 11,
+    "droppedWeak": 10,
+    "droppedCap": 0,
+    "kept": 1
+   },
+   "droppedOnClosedLand": 47,
+   "droppedExact": 46
+  },
+  "moose": {
+   "drive": {
+    "candidates": 376,
+    "droppedWeak": 125,
+    "droppedCap": 151,
+    "kept": 100
+   },
+   "atv": {
+    "candidates": 202,
+    "droppedWeak": 88,
+    "droppedCap": 14,
+    "kept": 100
+   },
+   "walk": {
+    "candidates": 457,
+    "droppedWeak": 182,
+    "droppedCap": 175,
+    "kept": 100
+   },
+   "backcountry": {
+    "candidates": 13,
+    "droppedWeak": 6,
+    "droppedCap": 0,
+    "kept": 7
+   },
+   "droppedOnClosedLand": 9,
+   "droppedExact": 50
+  },
+  "quail": {
+   "drive": {
+    "candidates": 115,
+    "droppedWeak": 7,
+    "droppedCap": 0,
+    "kept": 108
+   },
+   "atv": {
+    "candidates": 13,
+    "droppedWeak": 2,
+    "droppedCap": 0,
+    "kept": 11
+   },
+   "walk": {
+    "candidates": 81,
+    "droppedWeak": 8,
+    "droppedCap": 0,
+    "kept": 73
+   },
+   "backcountry": {
+    "candidates": 1,
+    "droppedWeak": 1,
+    "droppedCap": 0,
+    "kept": 0
+   },
+   "droppedOnClosedLand": 49,
+   "droppedExact": 1
+  },
+  "duck": {
+   "drive": {
+    "candidates": 202,
+    "kept": 124,
+    "droppedCap": 0
+   },
+   "walk": {
+    "candidates": 48,
+    "kept": 38,
+    "droppedCap": 0
+   },
+   "backcountry": {
+    "candidates": 0,
+    "kept": 0,
+    "droppedCap": 0
+   },
+   "droppedWeak": 452,
+   "droppedOnClosedLand": 9
+  },
+  "grouse": {
+   "drive": {
+    "candidates": 119,
+    "kept": 96,
+    "droppedCap": 0
+   },
+   "atv": {
+    "candidates": 71,
+    "kept": 57,
+    "droppedCap": 0
+   },
+   "walk": {
+    "candidates": 119,
+    "kept": 69,
+    "droppedCap": 0
+   },
+   "droppedWeak": 35
+  },
+  "camp": {
+   "official": 18,
+   "crownKept": 60,
+   "droppedWeak": 7642,
+   "droppedCap": 64,
+   "droppedExact": 5,
+   "droppedOnClosedLand": 2
+  },
+  "spacingRemoved": 44
+ },
+ "styleLinesFlagged": 22,
+ "scoring": {
+  "weights": {
+   "deer": {
+    "uwr": 3,
+    "cut": 2,
+    "burn": 2,
+    "bec_low": 2,
+    "bec_ms": 1,
+    "aspect": 1,
+    "fields": 1
+   },
+   "moose": {
+    "wetland": 2,
+    "cut_or_burn": 2,
+    "uwr": 3
+   },
+   "duck": {
+    "size_road": 3,
+    "complex": 2,
+    "backwater": 2,
+    "low": 1
+   },
+   "grouse": {
+    "zone": 1,
+    "cut_edge": 1,
+    "riparian": 1
+   },
+   "quail": {
+    "zone": 2,
+    "farm": 2,
+    "creek": 1,
+    "draw": 1
+   },
+   "camp": {
+    "flat": 2,
+    "water": 2,
+    "named_water": 1,
+    "quiet": 1,
+    "spots_near": 1
+   }
+  },
+  "max": {
+   "deer": 11,
+   "moose": 7,
+   "duck": 8,
+   "grouse": 3,
+   "quail": 6,
+   "camp": 7
+  },
+  "min": {
+   "deer": 7,
+   "moose": 4,
+   "duck": 4,
+   "grouse": 2,
+   "quail": 4,
+   "camp": 5
+  },
+  "spacingM": 800,
+  "selectRadiusM": {
+   "drive": 1500,
+   "atv": 1500,
+   "walk": 2000,
+   "backcountry": 3000,
+   "camp": 3000
+  },
+  "capsPerCategory": {
+   "deer": 220,
+   "moose": 100,
+   "duck": 180,
+   "grouse": 120,
+   "quail": 300,
+   "camp": 60
+  },
+  "cutAgeYears": [
+   5,
+   20
+  ],
+  "burnYears": [
+   2015,
+   2023
+  ],
+  "burnMinHa": 10,
+  "grouseZones": [
+   "ESSF",
+   "ICH",
+   "IDF",
+   "MS"
+  ]
+ },
+ "seasonRows": {},
+ "regsEdition": {
+  "edition": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028 (in force 1 July 2026 to 30 June 2028)",
+  "lastChecked": "2026-10-02"
+ },
+ "regsWarnings": [],
+ "seasonFiles": [
+  {
+   "region": 2,
+   "edition": "2026-10-02",
+   "rows": 43,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 3,
+   "edition": "2026-10-02",
+   "rows": 50,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 5,
+   "edition": "2026-10-02",
+   "rows": 48,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 8,
+   "edition": "2026-10-02",
+   "rows": 43,
+   "checked": "2026-10-04"
+  },
+  {
+   "file": "migratory.json",
+   "edition": "2026-09-21",
+   "rows": 74,
+   "checked": "2026-10-04"
+  }
+ ],
+ "seasonCoverage": {
+  "withFileRows": 1219,
+  "withRegsRows": 0,
+  "verify": 0
+ },
+ "notes": [
+  "Candidate spots from official open data. Nobody publishes where hunters go; nothing here says animals are present.",
+  "Scores are opinion (my pick). Busier, average, quieter and remote are estimates from access.",
+  "Targets are never on private land, parks, protected areas, ecological reserves, reserves, city limits or lakes.",
+  "Parking points are never inside parks, reserves, city limits or Motor Vehicle Closed Areas.",
+  "Drive: within 300 m of a paved or gravel road. ATV: rough roads and trails 1 to 10 km from a truck parking point and 1 km or more from pavement, outside closures. Walk: 0.3 to 5 km. Backcountry: more than 5 km.",
+  "Big game targets inside the Hwy 5 (Coquihalla) single projectile zone are left out.",
+  "Caps per species and category are spread round robin over 15 km tiles, so every part of the area keeps its best spots instead of one big winter range taking every slot (my pick).",
+  "Assumption: road surface from the Digital Road Atlas decides truck (paved, gravel) versus ATV (rough, overgrown, trails).",
+  "Assumption: named trails in the road atlas (rail, horse, snowmobile and bike trails) are walk only, because their motor vehicle rules are not in the data. Rec trails count as ATV only when their listed activities include motorized use.",
+  "Vaseux Lake: quail and duck targets within 2 km are left out (sanctuary and National Wildlife Area edges not mapped)."
+ ]
+}

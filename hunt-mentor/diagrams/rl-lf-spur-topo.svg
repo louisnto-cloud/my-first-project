@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Topo sketch of a spur. A main ridge runs across the top. Below it the contour lines push down in a tongue of U shapes pointing downhill, with an orange dashed line along the spine of the spur. Draws sit on each side.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Spur</text><text x="388" y="24" font-size="14" fill="#2f3a2b" text-anchor="end">Topo map</text><rect x="0" y="36" width="400" height="232" fill="#dfe6d3" opacity=".6"/>
+  <g fill="none" stroke="#8b5a2b" stroke-width="2.3">
+    <path d="M0 70 C 120 64, 280 64, 400 70"/>
+    <path d="M0 100 C 100 96, 160 100, 185 130 C 195 150, 205 150, 215 130 C 240 100, 300 96, 400 100"/>
+    <path d="M0 140 C 100 136, 150 140, 178 180 C 192 206, 208 206, 222 180 C 250 140, 300 136, 400 140"/>
+    <path d="M0 180 C 100 178, 140 184, 170 226 C 188 252, 212 252, 230 226 C 260 184, 300 178, 400 180"/>
+  </g>
+  <path d="M200 70 C 200 130, 200 190, 200 246" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 5" fill="none"/>
+  <text x="16" y="62" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">main ridge</text><text x="30" y="132" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="start">draw</text><text x="330" y="132" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="start">draw</text>
+  <text x="240" y="250" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="start">spur</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Tongue of Us pointing downhill, off the ridge</text>
+</svg>

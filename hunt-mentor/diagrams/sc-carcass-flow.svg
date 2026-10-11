@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Flowchart: moving a carcass depends on where it was killed. In the CWD zone in Region 4: the brain and spinal column stay in the zone, and the head sample goes in within a week, before you leave. Elsewhere in BC: no carcass movement rule; best practice is to bone out and leave bones, head and spine at the kill site. Outside BC: only the meat of the four quarters, loins, neck and ribs, and the hide, antlers and skull plate cleaned of all tissue. Zone Management Units 4-1 to 4-8 and 4-20 to 4-25. All 95 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Moving a carcass: where was it killed?</text>
+<rect x="10" y="44" width="120" height="46" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
+<text x="70.0" y="62.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">In the CWD</text>
+<text x="70.0" y="80.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">zone, Region 4</text>
+<rect x="140" y="44" width="120" height="46" rx="8" fill="#e3eedc" stroke="#2f6b3a" stroke-width="2"/>
+<text x="200.0" y="62.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Elsewhere</text>
+<text x="200.0" y="80.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">in BC</text>
+<rect x="270" y="44" width="120" height="46" rx="8" fill="#dce8f3" stroke="#4a7fb0" stroke-width="2"/>
+<text x="330.0" y="71.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Outside BC</text>
+<line x1="70" y1="90" x2="70.0" y2="97.0" stroke="#2f3a2b" stroke-width="2.5"/><polygon points="70,106 75.0,97.0 65.0,97.0" fill="#2f3a2b"/>
+<line x1="200" y1="90" x2="200.0" y2="97.0" stroke="#2f3a2b" stroke-width="2.5"/><polygon points="200,106 204.9,97.0 195.1,97.0" fill="#2f3a2b"/>
+<line x1="330" y1="90" x2="330.0" y2="97.0" stroke="#2f3a2b" stroke-width="2.5"/><polygon points="330,106 334.9,97.0 325.1,97.0" fill="#2f3a2b"/>
+<rect x="10" y="106" width="120" height="150" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="70.0" y="145.6" font-size="13" fill="#23261f" text-anchor="middle">Brain and spine</text>
+<text x="70.0" y="161.6" font-size="13" fill="#23261f" text-anchor="middle">stay in the</text>
+<text x="70.0" y="177.6" font-size="13" fill="#23261f" text-anchor="middle">zone. Head</text>
+<text x="70.0" y="193.6" font-size="13" fill="#23261f" text-anchor="middle">sample in</text>
+<text x="70.0" y="209.6" font-size="13" fill="#23261f" text-anchor="middle">a week, before</text>
+<text x="70.0" y="225.6" font-size="13" fill="#23261f" text-anchor="middle">you leave</text>
+<rect x="140" y="106" width="120" height="150" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="145.6" font-size="13" fill="#23261f" text-anchor="middle">No movement</text>
+<text x="200.0" y="161.6" font-size="13" fill="#23261f" text-anchor="middle">rule. Best:</text>
+<text x="200.0" y="177.6" font-size="13" fill="#23261f" text-anchor="middle">bone out, leave</text>
+<text x="200.0" y="193.6" font-size="13" fill="#23261f" text-anchor="middle">bones, head,</text>
+<text x="200.0" y="209.6" font-size="13" fill="#23261f" text-anchor="middle">spine at the</text>
+<text x="200.0" y="225.6" font-size="13" fill="#23261f" text-anchor="middle">kill site</text>
+<rect x="270" y="106" width="120" height="150" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="330.0" y="145.6" font-size="13" fill="#23261f" text-anchor="middle">Only meat of</text>
+<text x="330.0" y="161.6" font-size="13" fill="#23261f" text-anchor="middle">quarters, loins,</text>
+<text x="330.0" y="177.6" font-size="13" fill="#23261f" text-anchor="middle">neck, ribs. Hide,</text>
+<text x="330.0" y="193.6" font-size="13" fill="#23261f" text-anchor="middle">antlers, skull</text>
+<text x="330.0" y="209.6" font-size="13" fill="#23261f" text-anchor="middle">plate: cleaned</text>
+<text x="330.0" y="225.6" font-size="13" fill="#23261f" text-anchor="middle">of all tissue</text>
+<rect x="10" y="264" width="380" height="30" rx="6" fill="#fffaf0" stroke="#8a9a6b" stroke-width="2"/>
+<text x="200.0" y="283.9" font-size="14" fill="#23261f" text-anchor="middle">Zone MUs 4-1 to 4-8, 4-20 to 4-25. All 95%.</text>
+</svg>

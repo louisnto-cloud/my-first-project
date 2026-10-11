@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 3: fill in the ear card at the freezer and zip tie it to the ear or skull, 95 percent. The card has a perforated stub you tear off and keep." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Step 3: fill in the ear card</text>
+<g transform="translate(150 170) scale(1.3)"><path d="M10,10 L60,20 L60,70 L0,50 Z" fill="#8b5a2b" stroke="#23261f" stroke-width="2"/><path d="M10,10 C0,-10 -30,-14 -60,0 L-80,14 L-76,26 L-50,28 L-10,40 L14,40 Z" fill="#a0703a" stroke="#23261f" stroke-width="2"/><circle cx="-30" cy="6" r="4" fill="#23261f"/><path d="M-6,-6 L4,-24 L16,-10 Z" fill="#a0703a" stroke="#23261f" stroke-width="2"/><circle cx="-78" cy="18" r="3" fill="#23261f"/></g>
+<rect x="250" y="70" width="120" height="80" rx="6" fill="#ffffff" stroke="#23261f" stroke-width="2"/>
+<path d="M262 92 h96 M262 110 h96 M262 128 h70" stroke="#23261f" stroke-width="2"/>
+<path d="M250 136 h120" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="310" y="146" font-size="12" fill="#e8590c" text-anchor="middle" font-weight="bold">stub</text>
+<path d="M162 132 C200 120 230 110 250 104" stroke="#2f3a2b" stroke-width="3" fill="none"/>
+<text x="214" y="104" font-size="13" fill="#2f3a2b" text-anchor="middle" font-weight="bold">zip tie</text>
+<rect x="10" y="252" width="380" height="42" rx="6" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="268.9" font-size="14" fill="#23261f" text-anchor="middle">Fill it in at the freezer. Zip tie it to</text>
+<text x="200.0" y="286.9" font-size="14" fill="#23261f" text-anchor="middle">the ear or skull (95%).</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 398" role="img" aria-label="Season bar chart: Region 3 partridge, pheasant, dove, pigeon. Chukar partridge: Oct 1 to Nov 30. Gray partridge (Hungarian): Oct 1 to Nov 30. Pheasant (cocks): Oct 1 to Nov 30. Dove: mourning, Eurasian collared: Sept 1 to Sept 30. Band tailed pigeons: 3-13 to 3-17 only: Sept 15 to Sept 30." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="398" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 3 partridge, pheasant, dove,</text>
+<text x="200" y="47" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">pigeon</text>
+<text x="200" y="68" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 34. MUs 3-12 to 3-20, 3-26 to 3-44 unless named.</text>
+<text x="74.0" y="104" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="200.0" y="104" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="326.0" y="104" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<line x1="12.0" y1="112" x2="12.0" y2="388" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="136.0" y1="112" x2="136.0" y2="388" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="264.0" y1="112" x2="264.0" y2="388" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="388.0" y1="112" x2="388.0" y2="388" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<text x="12" y="128" font-size="14" font-weight="bold" fill="#23261f">Chukar partridge</text>
+<rect x="136.0" y="134" width="252.0" height="22" rx="3" fill="#8b5a2b"/>
+<text x="130.0" y="150" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Oct 1 to Nov 30</text>
+<text x="12" y="184" font-size="14" font-weight="bold" fill="#23261f">Gray partridge (Hungarian)</text>
+<rect x="136.0" y="190" width="252.0" height="22" rx="3" fill="#8b5a2b"/>
+<text x="130.0" y="206" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Oct 1 to Nov 30</text>
+<text x="12" y="240" font-size="14" font-weight="bold" fill="#23261f">Pheasant (cocks)</text>
+<rect x="136.0" y="246" width="252.0" height="22" rx="3" fill="#e8590c"/>
+<text x="130.0" y="262" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Oct 1 to Nov 30</text>
+<text x="12" y="296" font-size="14" font-weight="bold" fill="#23261f">Dove: mourning, Eurasian collared</text>
+<rect x="12.0" y="302" width="124.0" height="22" rx="3" fill="#8a9a6b"/>
+<text x="142.0" y="318" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 30</text>
+<text x="12" y="352" font-size="14" font-weight="bold" fill="#23261f">Band tailed pigeons: 3-13 to 3-17 only</text>
+<rect x="69.8" y="358" width="66.1" height="22" rx="3" fill="#4a7fb0"/>
+<text x="142.0" y="374" font-size="14" font-weight="bold" fill="#23261f">Sept 15 to Sept 30</text>
+</svg>

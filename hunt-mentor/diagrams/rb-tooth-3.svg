@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Incisor tooth step 3: dry the tooth in a paper envelope, never a plastic bag. Label it with species, date of kill, region, MU, FWID and which tooth, I1 or I2. Do not send the whole jaw. Send a whole root with no gum or hide." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="32" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">3. Dry it in a paper envelope</text>
+<rect x="70" y="60" width="260" height="160" rx="6" fill="#f3e9d8" stroke="#8b5a2b" stroke-width="2"/><path d="M70 60 L200 140 L330 60" fill="none" stroke="#8b5a2b" stroke-width="2"/>
+<text x="90" y="168" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Species, date of kill,</text>
+<text x="90" y="187" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">region, MU, FWID,</text>
+<text x="90" y="206" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">I1 or I2</text>
+<text x="200" y="254" font-size="15" fill="#2f3a2b" text-anchor="middle">No plastic bag. No whole jaw.</text>
+<text x="200" y="274" font-size="15" fill="#2f3a2b" text-anchor="middle">Whole root, no gum or hide.</text>
+</svg>

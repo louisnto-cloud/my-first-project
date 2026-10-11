@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" font-family="sans-serif" role="img" aria-label="Deer hunt day timeline. Night before: legal light, wind, MU rules, closures, pack. Sunrise minus 90 minutes: leave, rifles unloaded and cased. Sunrise minus 60 minutes, legal light: sit at the first glassing spot, load only when ready. First 3 hours: glass. Mid morning: walk slowly into the wind. Midday: move spots, scout. 3 hours before sunset: back on a glassing spot. Sunset plus 60 minutes: legal light ends, unload, walk out.">
+  <rect width="400" height="340" fill="#fffaf0"/>
+  <line x1="40" y1="20" x2="40" y2="322" stroke="#8a9a6b" stroke-width="4"/>
+  <g font-size="14" fill="#2f3a2b">
+    <circle cx="40" cy="26" r="9" fill="#2f3a2b"/><text x="60" y="24" font-weight="bold">Night before</text><text x="60" y="40">legal light, wind, MU, closures</text>
+    <circle cx="40" cy="68" r="9" fill="#4a7fb0"/><text x="60" y="66" font-weight="bold">Sunrise minus 90 min</text><text x="60" y="82">leave, rifles unloaded, cased</text>
+    <circle cx="40" cy="110" r="11" fill="#e8590c"/><text x="60" y="108" font-weight="bold" fill="#e8590c">Sunrise minus 60: legal light</text><text x="60" y="124">sit and glass, load when ready</text>
+    <circle cx="40" cy="152" r="9" fill="#8a9a6b"/><text x="60" y="150" font-weight="bold">First 3 hours</text><text x="60" y="166">glass, barely walk</text>
+    <circle cx="40" cy="194" r="9" fill="#8a9a6b"/><text x="60" y="192" font-weight="bold">Mid morning</text><text x="60" y="208">slow walk into the wind, eat</text>
+    <circle cx="40" cy="236" r="9" fill="#8b5a2b"/><text x="60" y="234" font-weight="bold">Midday</text><text x="60" y="250">move spots, scout benches</text>
+    <circle cx="40" cy="278" r="9" fill="#e8590c"/><text x="60" y="276" font-weight="bold">Sunset minus 3 hours</text><text x="60" y="292">glass where deer feed</text>
+    <circle cx="40" cy="316" r="9" fill="#2f3a2b"/><text x="60" y="314" font-weight="bold">Sunset plus 60: legal light ends</text><text x="60" y="330">unload, walk out with headlamps</text>
+  </g>
+</svg>

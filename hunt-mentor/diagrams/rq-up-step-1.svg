@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 1: First hours: feeding edges. Birds leave the roost to feed and pick grit.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">First hours: feeding edges</text>
+<g><circle cx="200" cy="140" r="18" fill="#e8590c"/><line x1="200" y1="118" x2="200" y2="111" stroke="#e8590c" stroke-width="3" transform="rotate(0 200 140)"/><line x1="200" y1="118" x2="200" y2="111" stroke="#e8590c" stroke-width="3" transform="rotate(45 200 140)"/><line x1="200" y1="118" x2="200" y2="111" stroke="#e8590c" stroke-width="3" transform="rotate(90 200 140)"/><line x1="200" y1="118" x2="200" y2="111" stroke="#e8590c" stroke-width="3" transform="rotate(135 200 140)"/><line x1="200" y1="118" x2="200" y2="111" stroke="#e8590c" stroke-width="3" transform="rotate(180 200 140)"/><line x1="200" y1="118" x2="200" y2="111" stroke="#e8590c" stroke-width="3" transform="rotate(225 200 140)"/><line x1="200" y1="118" x2="200" y2="111" stroke="#e8590c" stroke-width="3" transform="rotate(270 200 140)"/><line x1="200" y1="118" x2="200" y2="111" stroke="#e8590c" stroke-width="3" transform="rotate(315 200 140)"/></g><text x="200" y="215" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Edges of feed, sunny side</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Birds leave the roost to feed and pick grit.</text>
+</svg>

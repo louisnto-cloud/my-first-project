@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" role="img" aria-label="Bar chart of Region 6 predator, furbearer and small game seasons. Wolf in all units: 1 August to 15 June. Cougar in 6-1 to 6-11: 10 September to 30 April, closing early once 5 females are taken. Coyote in 6-1 to 6-11 and 6-14 to 6-30: 1 September to 31 March. Wolverine, same units: 15 September to 28 February. Lynx in 6-1, 6-2, 6-4 to 6-9 and 6-15 to 6-30: 15 November to 15 February. Raccoon in 6-12 and 6-13: no closed season. Snowshoe hare in all units: 1 August to 30 April." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="440" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Predators, furbearers, small game</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">Cougar closes early at 5 females</text>
+<rect x="14.0" y="60" width="31.6" height="344" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="60" width="30.6" height="344" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="60" width="30.6" height="344" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="60" width="31.6" height="344" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="60" width="31.6" height="344" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="60" width="31.6" height="344" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="96" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Wolf, 6-1 to 6-30</text>
+<rect x="45.6" y="102" width="325.1" height="20" rx="4" fill="#e8590c"/>
+<text x="208" y="117" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Aug 1 to June 15</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Cougar, 6-1 to 6-11</text>
+<rect x="86.4" y="148" width="237.5" height="20" rx="4" fill="#e8590c"/>
+<text x="205" y="163" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Sept 10 to Apr 30</text>
+<text x="14" y="188" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Coyote, 6-1 to 6-11, 6-14 to 6-30</text>
+<rect x="77.2" y="194" width="216.1" height="20" rx="4" fill="#e8590c"/>
+<text x="185" y="209" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Sept 1 to Mar 31</text>
+<text x="14" y="234" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Wolverine, same MUs</text>
+<rect x="91.5" y="240" width="170.2" height="20" rx="4" fill="#e8590c"/>
+<text x="177" y="255" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Sept 15 to Feb 28</text>
+<text x="14" y="280" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Lynx, 6-1, 6-2, 6-4 to 6-9, 6-15 to 6-30</text>
+<rect x="153.6" y="286" width="94.8" height="20" rx="4" fill="#e8590c"/>
+<text x="252" y="301" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Nov 15 to Feb 15</text>
+<text x="14" y="326" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Raccoon, 6-12, 6-13</text>
+<rect x="14.0" y="332" width="372.0" height="20" rx="4" fill="#e8590c"/>
+<text x="200" y="347" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">No closed season</text>
+<text x="14" y="372" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Snowshoe hare, 6-1 to 6-30</text>
+<rect x="45.6" y="378" width="278.2" height="20" rx="4" fill="#e8590c"/>
+<text x="185" y="393" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Aug 1 to Apr 30</text>
+<rect x="14" y="414" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="426" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+</svg>

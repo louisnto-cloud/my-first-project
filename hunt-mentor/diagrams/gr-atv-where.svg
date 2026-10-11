@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Where are you riding? On a Forest Service Road: valid driver's licence and at least 200,000 dollars third party liability insurance. Other Crown land: liability insurance recommended. On or along a public road: ICBC Basic insurance, licence decal and a driver's licence, plus a police permit unless just crossing at a stop sign or light.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="80" y="10" width="240" height="40" rx="20" fill="#2f3a2b"/><text x="200" y="36" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Where are you riding?</text>
+  <g stroke="#2f3a2b" stroke-width="3"><line x1="140" y1="50" x2="68" y2="72"/><line x1="200" y1="50" x2="200" y2="72"/><line x1="260" y1="50" x2="332" y2="72"/></g>
+  <g font-size="15" font-weight="bold" text-anchor="middle">
+    <rect x="6" y="74" width="124" height="216" rx="10" fill="#e8590c"/>
+    <text x="68" y="100" fill="#fff">Forest</text><text x="68" y="118" fill="#fff">Service Road</text>
+    <text x="68" y="160" fill="#fff">Driver's</text><text x="68" y="178" fill="#fff">licence</text><text x="68" y="210" fill="#fff">$200,000</text><text x="68" y="228" fill="#fff">liability</text><text x="68" y="246" fill="#fff">insurance</text>
+    <rect x="138" y="74" width="124" height="216" rx="10" fill="#8a9a6b"/>
+    <text x="200" y="100" fill="#fff">Other</text><text x="200" y="118" fill="#fff">Crown land</text>
+    <text x="200" y="170" fill="#fff">Insurance</text><text x="200" y="188" fill="#fff">recommended</text>
+    <rect x="270" y="74" width="124" height="216" rx="10" fill="#4a7fb0"/>
+    <text x="332" y="100" fill="#fff">Public</text><text x="332" y="118" fill="#fff">road</text>
+    <text x="332" y="156" font-size="14" fill="#fff">ICBC Basic,</text><text x="332" y="174" font-size="14" fill="#fff">decal, licence</text>
+    <text x="332" y="212" font-size="14" fill="#fff">Police permit,</text><text x="332" y="230" font-size="14" fill="#fff">unless crossing</text><text x="332" y="248" font-size="14" fill="#fff">at a stop sign</text><text x="332" y="266" font-size="14" fill="#fff">or light</text>
+  </g>
+</svg>

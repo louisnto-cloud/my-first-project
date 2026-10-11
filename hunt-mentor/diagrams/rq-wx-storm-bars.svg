@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Bar chart. Penn State collared does showed no real change in movement before 30 winter storms and moved less during them. Glassing the calm after is a tip, not a finding.">
+<rect x="0" y="0" width="400" height="250" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Collared deer around a storm</text>
+<text x="14" y="64" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Day before the storm</text>
+<rect x="14" y="70" width="223" height="20" rx="4" fill="#8a9a6b"/>
+<text x="243.2" y="85" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">no real change</text>
+<text x="14" y="116" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">During the storm</text>
+<rect x="14" y="122" width="112" height="20" rx="4" fill="#e8590c"/>
+<text x="131.6" y="137" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">moved less</text>
+<text x="14" y="168" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Calm after the storm</text>
+<rect x="14" y="174" width="223" height="20" rx="4" fill="#8a9a6b"/>
+<text x="243.2" y="189" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">glass it (Tip)</text>
+<text x="14" y="226" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Penn State, 30 storms, collared does (80%). After</text>
+<text x="14" y="242" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">the storm: Tip only.</text>
+</svg>

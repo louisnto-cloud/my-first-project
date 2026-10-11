@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation: zooming from 3 to 9 times power. In a second focal plane scope, the deer grows but the crosshair stays the same size. In a first focal plane scope, the deer and the crosshair grow together.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="22" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Zoom 3x to 9x</text>
+  <clipPath id="gr-focal-plane-c1"><circle cx="100" cy="140" r="84"/></clipPath>
+  <clipPath id="gr-focal-plane-c2"><circle cx="300" cy="140" r="84"/></clipPath>
+  <circle cx="100" cy="140" r="84" fill="#dfe6d3"/><circle cx="300" cy="140" r="84" fill="#dfe6d3"/>
+  <g clip-path="url(#gr-focal-plane-c1)"><g transform="translate(100 140)"><g fill="#8b5a2b">
+    <animateTransform attributeName="transform" type="scale" values="1;3" begin="1s" dur="4s" fill="freeze"/>
+    <ellipse rx="12" ry="6"/><circle cx="11" cy="-7" r="4"/><rect x="-9" y="3" width="2.5" height="10"/><rect x="7" y="3" width="2.5" height="10"/>
+  </g>
+  <g stroke="#2f3a2b"><line x1="-84" y1="0" x2="-30" y2="0" stroke-width="5"/><line x1="30" y1="0" x2="84" y2="0" stroke-width="5"/><line x1="-30" y1="0" x2="30" y2="0" stroke-width="1.5"/><line x1="0" y1="-84" x2="0" y2="-30" stroke-width="5"/><line x1="0" y1="30" x2="0" y2="84" stroke-width="5"/><line x1="0" y1="-30" x2="0" y2="30" stroke-width="1.5"/></g>
+  </g></g>
+  <g clip-path="url(#gr-focal-plane-c2)"><g transform="translate(300 140)"><g>
+    <animateTransform attributeName="transform" type="scale" values="1;3" begin="1s" dur="4s" fill="freeze"/>
+    <g fill="#8b5a2b"><ellipse rx="12" ry="6"/><circle cx="11" cy="-7" r="4"/><rect x="-9" y="3" width="2.5" height="10"/><rect x="7" y="3" width="2.5" height="10"/></g>
+    <g stroke="#2f3a2b"><line x1="-84" y1="0" x2="-30" y2="0" stroke-width="2"/><line x1="30" y1="0" x2="84" y2="0" stroke-width="2"/><line x1="-30" y1="0" x2="30" y2="0" stroke-width=".6"/><line x1="0" y1="-84" x2="0" y2="-30" stroke-width="2"/><line x1="0" y1="30" x2="0" y2="84" stroke-width="2"/><line x1="0" y1="-30" x2="0" y2="30" stroke-width=".6"/></g>
+  </g></g></g>
+  <circle cx="100" cy="140" r="84" fill="none" stroke="#2f3a2b" stroke-width="6"/><circle cx="300" cy="140" r="84" fill="none" stroke="#2f3a2b" stroke-width="6"/>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="100" y="250">Second focal plane</text><text x="300" y="250">First focal plane</text></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="100" y="270">Crosshair stays same</text><text x="300" y="270">Crosshair grows</text></g>
+  <text x="100" y="290" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Simple: beginners</text>
+  <text x="200" y="44" font-size="14" fill="#2f3a2b" text-anchor="middle">
+    <tspan>Power: 3x</tspan>
+    <set attributeName="opacity" to="1"/>
+  </text>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="5s" dur=".4s" fill="freeze"/>
+    <rect x="160" y="30" width="80" height="20" fill="#fffaf0"/><text x="200" y="44" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Power: 9x</text>
+  </g>
+</svg>

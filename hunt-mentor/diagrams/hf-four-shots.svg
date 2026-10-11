@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Field task: a phone photo album named for your spot holds four screenshots: the parcel layer, the MU boundary, the closure map and the park layer.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="110" y="10" width="180" height="280" rx="20" fill="#2f3a2b"/>
+  <rect x="122" y="30" width="156" height="240" fill="#fffaf0"/>
+  <text x="200" y="52" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Album: My spot</text>
+  <g stroke-width="2">
+    <rect x="130" y="62" width="66" height="94" fill="#e7dccb" stroke="#8b5a2b"/><rect x="204" y="62" width="66" height="94" fill="#cfe0ea" stroke="#4a7fb0"/>
+    <rect x="130" y="164" width="66" height="94" fill="#f6d5c0" stroke="#e8590c"/><rect x="204" y="164" width="66" height="94" fill="#dfe6d3" stroke="#8a9a6b"/>
+  </g>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">
+    <text x="163" y="114">1</text><text x="237" y="114">2</text><text x="163" y="216">3</text><text x="237" y="216">4</text>
+  </g>
+  <g font-size="15" fill="#2f3a2b">
+    <text x="102" y="100" text-anchor="end">1 Parcels</text><text x="298" y="100">2 MU line</text>
+    <text x="102" y="214" text-anchor="end">3 Closures</text><text x="298" y="214">4 Parks</text>
+  </g>
+</svg>

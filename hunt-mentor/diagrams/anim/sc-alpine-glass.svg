@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Animation of glassing an alpine basin at first light. The hunter sits on a high knob with binoculars on a rest. An orange binocular circle sweeps the basin in strips, near strip first, then the middle, then the far slope. It stops on three rams bedded on a bench just below a cliff band. Message: rams bedded on a bench, cliffs right above them." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<rect x="0" y="0" width="400" height="300" fill="#e7eef5"/>
+<circle cx="60" cy="70" r="18" fill="#f2b33d" opacity="0.3"><animate attributeName="cy" values="90;60" dur="8s" fill="freeze"/><animate attributeName="opacity" values="0.3;1" dur="8s" fill="freeze"/></circle>
+<path d="M0 120 L60 60 L120 110 L190 40 L260 100 L320 50 L400 110 L400 300 L0 300 Z" fill="#cfd8c0" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M40 300 C80 200 140 170 200 170 C260 170 320 200 360 300 Z" fill="#dfe6d3"/>
+<g fill="#9a9a90" stroke="#6b6b62" stroke-width="1.5"><path d="M268 118 L300 112 L306 150 L274 158 Z"/><path d="M240 132 L262 128 L266 156 L244 160 Z"/></g>
+<path d="M236 166 L316 160" stroke="#8a9a6b" stroke-width="4"/>
+<g fill="#8b5a2b"><ellipse cx="262" cy="160" rx="9" ry="5"/><ellipse cx="284" cy="157" rx="9" ry="5"/><ellipse cx="300" cy="155" rx="8" ry="5"/></g>
+<g fill="none" stroke="#5c3b1c" stroke-width="2.5"><path d="M255 155 c-4 -6 4 -8 4 -2"/><path d="M277 152 c-4 -6 4 -8 4 -2"/><path d="M294 150 c-4 -6 4 -8 4 -2"/></g>
+<path d="M0 300 L0 250 C40 236 90 240 120 300 Z" fill="#c9b79c"/>
+<circle cx="50" cy="232" r="9" fill="#2f3a2b"/><rect x="40" y="241" width="20" height="16" rx="4" fill="#2f3a2b"/>
+<rect x="56" y="226" width="12" height="7" rx="2" fill="#2f3a2b"/>
+<text x="56" y="290" font-size="13" fill="#23261f" text-anchor="middle">You, sitting</text>
+<path id="sc-alpine-glass-path" d="M90 230 L330 230 L330 195 L90 195 L90 150 L200 150 L278 158" fill="none" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.6"/>
+<g><circle r="26" fill="none" stroke="#e8590c" stroke-width="3"/><path d="M-26 0 h52 M0 -26 v52" stroke="#e8590c" stroke-width="1"/><animateMotion dur="8s" fill="freeze" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#sc-alpine-glass-path"/></animateMotion></g>
+<text x="200" y="24" font-size="16" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Glass the basin from high, near to far</text>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="8s" dur="0.5s" fill="freeze"/><rect x="150" y="40" width="240" height="44" rx="8" fill="#2f3a2b"/><text x="270" y="58" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">Rams bedded on a bench,</text><text x="270" y="76" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">cliffs right above them</text></g>
+</svg>

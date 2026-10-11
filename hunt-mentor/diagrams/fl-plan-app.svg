@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="The app planner flow: pick the animal, pick the place, pick the dates, and get a plan with four parts: legal and open, odds for big game, day by day, and a checklist.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The app planner: Plan a hunt</text>
+<rect x="20" y="48" width="220" height="42" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="42" cy="69" r="14" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="42" y="76" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">1</text>
+<text x="64" y="75" font-family="sans-serif" font-size="16" font-weight="bold" fill="#23261f" text-anchor="start">Pick the animal</text>
+<line x1="130" y1="90" x2="130" y2="100" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="130.0,100.0 127.4,94.6 132.6,94.6" fill="#2f3a2b"/>
+<rect x="20" y="100" width="220" height="42" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="42" cy="121" r="14" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="42" y="128" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">2</text>
+<text x="64" y="127" font-family="sans-serif" font-size="16" font-weight="bold" fill="#23261f" text-anchor="start">Pick the place</text>
+<line x1="130" y1="142" x2="130" y2="152" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="130.0,152.0 127.4,146.6 132.6,146.6" fill="#2f3a2b"/>
+<rect x="20" y="152" width="220" height="42" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="42" cy="173" r="14" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="42" y="180" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">3</text>
+<text x="64" y="179" font-family="sans-serif" font-size="16" font-weight="bold" fill="#23261f" text-anchor="start">Pick the dates</text>
+<line x1="130" y1="194" x2="130" y2="204" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="130.0,204.0 127.4,198.6 132.6,198.6" fill="#2f3a2b"/>
+<rect x="20" y="204" width="220" height="42" rx="10" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="42" cy="225" r="14" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="42" y="232" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">4</text>
+<text x="64" y="231" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="start">Get your plan</text>
+<rect x="260" y="160" width="130" height="26" rx="6" fill="#e8590c"/><text x="325" y="178" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Legal and open</text>
+<rect x="260" y="190" width="130" height="26" rx="6" fill="#8a9a6b"/><text x="325" y="208" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Odds (big game)</text>
+<rect x="260" y="220" width="130" height="26" rx="6" fill="#8a9a6b"/><text x="325" y="238" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Day by day</text>
+<rect x="260" y="250" width="130" height="26" rx="6" fill="#8a9a6b"/><text x="325" y="268" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Checklist</text>
+<line x1="240" y1="225" x2="256" y2="225" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="256.0,225.0 250.6,227.6 250.6,222.4" fill="#2f3a2b"/>
+<text x="200" y="290" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Open it: #/plan in this app</text>
+</svg>

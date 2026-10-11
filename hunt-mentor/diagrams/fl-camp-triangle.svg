@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Bear triangle camp layout. Sleeping tent, cooking area and food storage each about 100 m apart, forming a triangle. Wind blows from the tent toward the food and cooking area.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The bear triangle: about 100 m a side</text>
+<polygon points="90,230 310,230 200,80" fill="none" stroke="#8a9a6b" stroke-width="3" stroke-dasharray="8 6"/>
+<polygon points="90,198.6 57.0,236 123.0,236" fill="#e8590c"/><polygon points="90,198.6 81.2,236 98.8,236" fill="#2f3a2b"/>
+<rect x="285" y="208" width="50" height="28" rx="4" fill="#6b4f35"/><path d="M310 208 q-9.0 -9.0 0 -20.0 q9.0 11.0 0 20.0 z" fill="#e8590c" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M310 208 q-4.0 -5.0 0 -10.0 q4.0 5.0 0 10.0 z" fill="#f6c343" stroke="#f6c343" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="160" y1="100" x2="240" y2="100" stroke="#6b4f35" stroke-width="4" stroke-linecap="round"/><line x1="200" y1="100" x2="200" y2="120" stroke="#23261f" stroke-width="2" stroke-linecap="round"/><rect x="188" y="120" width="24" height="26" rx="4" fill="#8b5a2b"/>
+<text x="90" y="266" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sleep</text>
+<text x="310" y="266" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cook</text>
+<text x="200" y="168" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Food stored</text>
+<text x="200" y="245" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="middle">about 100 m</text>
+<text x="120" y="150" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="middle">100 m</text><text x="282" y="150" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="middle">100 m</text>
+<line x1="20" y1="70" x2="70" y2="70" stroke="#4a7fb0" stroke-width="4" stroke-linecap="round"/><polygon points="70.0,70.0 61.0,74.3 61.0,65.7" fill="#4a7fb0"/><text x="20" y="56" font-family="sans-serif" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="start">Wind</text>
+<text x="200" y="292" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Sleep upwind of cooking and food (Tip)</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 4: plan a quiet approach that never crosses the trail, the feed or the bed. Come in from behind. Pick a B spot for the opposite wind.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<rect x="0" y="40" width="400" height="70" fill="#8a9a6b"/>
+<g fill="#2f3a2b"><polygon points="30,100 42,62 54,100"/><polygon points="90,95 102,57 114,95"/><polygon points="300,100 312,62 324,100"/><polygon points="355,95 367,57 379,95"/></g>
+<rect x="0" y="215" width="400" height="85" fill="#e9dfa8"/>
+<text x="20" y="290" font-size="15" font-weight="bold" fill="#6b4f35">Feed</text>
+<text x="160" y="62" font-size="15" font-weight="bold" fill="#fff">Bed, uphill</text>
+<path d="M180 105 C 220 140, 150 180, 200 225" fill="none" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4. Come in the back way</text>
+<path d="M400 175 C 375 172, 355 160, 332 152" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 5"/><circle cx="320" cy="150" r="11" fill="#e8590c"/><text x="390" y="200" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">back way in</text><circle cx="80" cy="160" r="11" fill="none" stroke="#e8590c" stroke-width="3"/><text x="80" y="190" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">B spot</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Year wheel for California quail in BC. January and February: big winter coveys. March: coveys break up. April: pairs. May: nests. June: peak hatch. July: broods. August: families join together. September: coveys form. October and November: the Region 8 season, 1 October to 30 November, 99 percent. December: winter coveys. Biology 65 to 80 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The quail year</text>
+<path d="M200.0 68.0 A96 96 0 0 1 248.0 80.9 L225.0 120.7 A50 50 0 0 0 200.0 114.0 Z" fill="#4a7fb0" stroke="#fffaf0" stroke-width="2"/>
+<text x="218.89379029248403" y="98.48741468089801" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Jan</text>
+<text x="227.95245687107223" y="62.748159108202486" font-size="14" fill="#2f3a2b" text-anchor="start">coveys</text>
+<path d="M248.0 80.9 A96 96 0 0 1 283.1 116.0 L243.3 139.0 A50 50 0 0 0 225.0 120.7 Z" fill="#4a7fb0" stroke="#fffaf0" stroke-width="2"/>
+<text x="251.618795026618" y="117.38120497338204" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Feb</text>
+<text x="276.3675323681471" y="91.21825406947978" font-size="14" fill="#2f3a2b" text-anchor="start">coveys</text>
+<path d="M283.1 116.0 A96 96 0 0 1 296.0 164.0 L250.0 164.0 A50 50 0 0 0 243.3 139.0 Z" fill="#8a9a6b" stroke="#fffaf0" stroke-width="2"/>
+<text x="270.51258531910196" y="150.10620970751597" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Mar</text>
+<text x="304.31998923921935" y="140.52990503872272" font-size="14" fill="#2f3a2b" text-anchor="start">break up</text>
+<path d="M296.0 164.0 A96 96 0 0 1 283.1 212.0 L243.3 189.0 A50 50 0 0 0 250.0 164.0 Z" fill="#8a9a6b" stroke="#fffaf0" stroke-width="2"/>
+<text x="270.51258531910196" y="187.89379029248403" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Apr</text>
+<text x="304.31998923921935" y="197.47009496127728" font-size="14" fill="#2f3a2b" text-anchor="start">pairs</text>
+<path d="M283.1 212.0 A96 96 0 0 1 248.0 247.1 L225.0 207.3 A50 50 0 0 0 243.3 189.0 Z" fill="#b9a88a" stroke="#fffaf0" stroke-width="2"/>
+<text x="251.618795026618" y="220.61879502661796" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">May</text>
+<text x="276.3675323681471" y="246.78174593052023" font-size="14" fill="#2f3a2b" text-anchor="start">nests</text>
+<path d="M248.0 247.1 A96 96 0 0 1 200.0 260.0 L200.0 214.0 A50 50 0 0 0 225.0 207.3 Z" fill="#b9a88a" stroke="#fffaf0" stroke-width="2"/>
+<text x="218.89379029248403" y="239.512585319102" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Jun</text>
+<text x="227.95245687107223" y="275.25184089179754" font-size="14" fill="#2f3a2b" text-anchor="start">hatch</text>
+<path d="M200.0 260.0 A96 96 0 0 1 152.0 247.1 L175.0 207.3 A50 50 0 0 0 200.0 214.0 Z" fill="#b9a88a" stroke="#fffaf0" stroke-width="2"/>
+<text x="181.10620970751597" y="239.512585319102" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Jul</text>
+<text x="172.04754312892774" y="275.25184089179754" font-size="14" fill="#2f3a2b" text-anchor="end">broods</text>
+<path d="M152.0 247.1 A96 96 0 0 1 116.9 212.0 L156.7 189.0 A50 50 0 0 0 175.0 207.3 Z" fill="#8a9a6b" stroke="#fffaf0" stroke-width="2"/>
+<text x="148.38120497338204" y="220.618795026618" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Aug</text>
+<text x="123.63246763185288" y="246.78174593052023" font-size="14" fill="#2f3a2b" text-anchor="end">families</text>
+<path d="M116.9 212.0 A96 96 0 0 1 104.0 164.0 L150.0 164.0 A50 50 0 0 0 156.7 189.0 Z" fill="#8a9a6b" stroke="#fffaf0" stroke-width="2"/>
+<text x="129.48741468089804" y="187.89379029248403" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Sep</text>
+<text x="95.68001076078063" y="197.4700949612773" font-size="14" fill="#2f3a2b" text-anchor="end">coveys</text>
+<path d="M104.0 164.0 A96 96 0 0 1 116.9 116.0 L156.7 139.0 A50 50 0 0 0 150.0 164.0 Z" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="129.487414680898" y="150.10620970751597" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Oct</text>
+<text x="95.68001076078062" y="140.52990503872272" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">SEASON</text>
+<path d="M116.9 116.0 A96 96 0 0 1 152.0 80.9 L175.0 120.7 A50 50 0 0 0 156.7 139.0 Z" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="148.381204973382" y="117.38120497338204" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Nov</text>
+<text x="123.63246763185285" y="91.21825406947978" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">SEASON</text>
+<path d="M152.0 80.9 A96 96 0 0 1 200.0 68.0 L200.0 114.0 A50 50 0 0 0 175.0 120.7 Z" fill="#4a7fb0" stroke="#fffaf0" stroke-width="2"/>
+<text x="181.106209707516" y="98.48741468089801" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Dec</text>
+<text x="172.04754312892777" y="62.748159108202486" font-size="14" fill="#2f3a2b" text-anchor="end">coveys</text>
+<text x="200" y="160" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Oct 1 to</text>
+<text x="200" y="178" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Nov 30</text>
+<text x="200" y="196" font-size="14" fill="#2f3a2b" text-anchor="middle">(99%)</text>
+</svg>

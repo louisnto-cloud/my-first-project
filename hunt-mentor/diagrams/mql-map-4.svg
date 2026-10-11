@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Hunt Map terrain tool frame: Sun and shade lights the terrain from the real sun position for a time today. Chukar spend the hottest part of the day in shady cover, US Forest Service FEIS, 80 percent. Tip: for quail, check which brushy edges get the first morning sun.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Terrain tools: Sun and shade</text>
+<rect x="20" y="40" width="360" height="190" rx="8" fill="#dfe6d3"/>
+<circle cx="340" cy="70" r="18" fill="#f2c14e"/>
+<path d="M20 230 L150 110 L280 230 Z" fill="#cfe3b0"/>
+<path d="M20 230 L150 110 L150 230 Z" fill="#6f7f5a"/>
+<text x="85" y="210" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">shade</text>
+<text x="215" y="210" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">sun</text>
+<rect x="10" y="240" width="380" height="52" rx="8" fill="#2f3a2b"/>
+<text x="200" y="262" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Midday: chukar in shade (80%)</text>
+<text x="200" y="282" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Morning: quail on the sunny edges (Tip)</text>
+</svg>

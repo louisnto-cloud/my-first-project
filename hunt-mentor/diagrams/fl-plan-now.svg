@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 318" role="img" aria-label="Bars for what is open from 11 October to 31 December 2026, from the Region tables in this app: Region 3 any mule deer buck to 31 October, Region 3 four point mule deer bucks 1 November to 10 December, Region 3 grouse to 30 November, Region 8 quail to 30 November, Region 2 ducks to 24 January, Region 3 ducks to 23 December. Check your own MU row.">
+  <rect x="0" y="0" width="400" height="318" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">What is open now (examples)</text>
+<text x="10" y="70" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="start">R3 any mule deer buck</text>
+<rect x="170" y="56" width="54.32098765432099" height="20" rx="4" fill="#e8590c"/>
+<text x="10" y="104" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="start">R3 4 point mule deer</text>
+<rect x="227.03703703703704" y="90" width="105.92592592592592" height="20" rx="4" fill="#8b5a2b"/>
+<text x="10" y="138" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="start">R3 grouse</text>
+<rect x="170" y="124" width="135.80246913580245" height="20" rx="4" fill="#2f3a2b"/>
+<text x="10" y="172" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="start">R8 quail</text>
+<rect x="170" y="158" width="135.80246913580245" height="20" rx="4" fill="#8a9a6b"/>
+<text x="10" y="206" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="start">R2 ducks</text>
+<rect x="170" y="192" width="220.0" height="20" rx="4" fill="#4a7fb0"/>
+<text x="10" y="240" font-family="sans-serif" font-size="13" font-weight="bold" fill="#23261f" text-anchor="start">R3 ducks</text>
+<rect x="170" y="226" width="198.2716049382716" height="20" rx="4" fill="#4a7fb0"/>
+<line x1="170" y1="50" x2="170" y2="258" stroke="#23261f" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 4"/>
+<text x="170" y="270" font-family="sans-serif" font-size="11" fill="#23261f" text-anchor="middle">Oct 11</text>
+<line x1="227.03703703703704" y1="50" x2="227.03703703703704" y2="272" stroke="#23261f" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 4"/>
+<text x="227.03703703703704" y="284" font-family="sans-serif" font-size="11" fill="#23261f" text-anchor="middle">Nov 1</text>
+<line x1="305.8024691358024" y1="50" x2="305.8024691358024" y2="258" stroke="#23261f" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 4"/>
+<text x="305.8024691358024" y="270" font-family="sans-serif" font-size="11" fill="#23261f" text-anchor="middle">Nov 30</text>
+<line x1="332.96296296296293" y1="50" x2="332.96296296296293" y2="272" stroke="#23261f" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 4"/>
+<text x="332.96296296296293" y="284" font-family="sans-serif" font-size="11" fill="#23261f" text-anchor="middle">Dec 10</text>
+<line x1="390.0" y1="50" x2="390.0" y2="258" stroke="#23261f" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 4"/>
+<text x="390.0" y="270" font-family="sans-serif" font-size="11" fill="#23261f" text-anchor="end">Dec 31</text>
+<text x="200" y="308" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Region 3, 2, 8 tables. Check your MU row (99%)</text>
+</svg>

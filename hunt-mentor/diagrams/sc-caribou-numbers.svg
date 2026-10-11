@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Bar chart of BC caribou numbers, 95 percent. Before: about 40,000. Low point: about 17,000. Now, with recovery work: about 19,000. Region 3 has no caribou season, 98 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">BC caribou: how many?</text>
+<text x="200.0" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">All herds together (95%)</text>
+<text x="20" y="70" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Before</text>
+<rect x="20" y="76" width="240" height="30" rx="4" fill="#8b5a2b"/>
+<text x="268.0" y="97" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">about 40,000</text>
+<text x="20" y="136" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Low point</text>
+<rect x="20" y="142" width="102" height="30" rx="4" fill="#e8590c"/>
+<text x="130.0" y="163" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">about 17,000</text>
+<text x="20" y="202" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Now, with recovery work</text>
+<rect x="20" y="208" width="114" height="30" rx="4" fill="#2f6b3a"/>
+<text x="142.0" y="229" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">about 19,000</text>
+<rect x="20" y="266" width="360" height="28" rx="6" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="284.9" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Region 3: no caribou season (98%)</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Top view of parking. Good: off the road surface, nose pointing out so you can leave fast. Bad: blocking a gate, pullout or turnaround.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Park so others can get by</text>
+<rect x="0" y="120" width="400" height="60" rx="0" fill="#c9b79c"/>
+<text x="200" y="156" font-family="sans-serif" font-size="16" font-weight="bold" fill="#6b4f35" text-anchor="middle">Road</text>
+<rect x="30" y="190" width="140" height="80" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="60" y="206" width="34" height="52" rx="6" fill="#2f3a2b"/><rect x="64" y="206" width="26" height="14" rx="2" fill="#cfe0ef"/>
+<line x1="77" y1="200" x2="77" y2="186" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/><polygon points="77.0,186.0 80.0,192.3 74.0,192.3" fill="#e8590c"/>
+<text x="100" y="290" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Off the road, nose out</text>
+<rect x="250" y="60" width="120" height="14" rx="2" fill="#6b4f35"/><rect x="250" y="50" width="6" height="70" rx="1" fill="#6b4f35"/><rect x="364" y="50" width="6" height="70" rx="1" fill="#6b4f35"/>
+<text x="310" y="48" font-family="sans-serif" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">Gate</text>
+<rect x="280" y="82" width="34" height="30" rx="4" fill="#c4c4c4" stroke="#b3261e" stroke-width="2"/><path d="M288.9 88.9 l16.2 16.2 M305.1 88.9 l-16.2 16.2" fill="none" stroke="#b3261e" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="310" y="200" font-family="sans-serif" font-size="15" font-weight="bold" fill="#b3261e" text-anchor="middle">Never block a gate,</text>
+<text x="310" y="220" font-family="sans-serif" font-size="15" font-weight="bold" fill="#b3261e" text-anchor="middle">pullout or turnaround</text>
+</svg>

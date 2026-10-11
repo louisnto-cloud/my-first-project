@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 214" role="img" aria-label="Coldest temperatures recorded at Kamloops A, 1991 to 2020: October minus 12.9, November minus 24.9, December minus 28.0 degrees.">
+  <rect x="0" y="0" width="400" height="214" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Kamloops coldest on record (1991 to 2020)</text>
+<text x="112" y="73" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">October</text>
+<rect x="120" y="56" width="74.6842105263158" height="26" rx="4" fill="#8a9a6b"/>
+<text x="200.68421052631578" y="75" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">minus 12.9 °C</text>
+<text x="112" y="115" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">November</text>
+<rect x="120" y="98" width="144.1578947368421" height="26" rx="4" fill="#4a7fb0"/>
+<text x="270.1578947368421" y="117" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">minus 24.9 °C</text>
+<text x="112" y="157" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">December</text>
+<rect x="120" y="140" width="162.10526315789474" height="26" rx="4" fill="#2f3a2b"/>
+<text x="288.10526315789474" y="159" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">minus 28 °C</text>
+<text x="200" y="204" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Shown as minus. Extreme minimum, Kamloops A (95%)</text>
+</svg>

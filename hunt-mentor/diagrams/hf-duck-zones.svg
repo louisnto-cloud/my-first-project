@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Top view of two hunters in one hide facing the water. You take the zone left of centre, your brother takes the zone right of centre. A red no swing line runs down the middle: never swing past your partner or shoot across them.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="0" width="400" height="220" fill="#cfe0ea"/><rect x="0" y="220" width="400" height="80" fill="#c9b79c"/>
+  <path d="M200 236 L20 40 L200 40 Z" fill="#4a7fb0" opacity=".35"/>
+  <path d="M200 236 L380 40 L200 40 Z" fill="#e8590c" opacity=".3"/>
+  <line x1="200" y1="236" x2="200" y2="30" stroke="#c0392b" stroke-width="5" stroke-dasharray="10 6"/>
+  <rect x="140" y="232" width="120" height="30" rx="6" fill="#2f3a2b"/>
+  <circle cx="175" cy="247" r="9" fill="#4a7fb0"/><circle cx="225" cy="247" r="9" fill="#e8590c"/>
+  <text x="90" y="120" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Your side</text>
+  <text x="310" y="120" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">His side</text>
+  <rect x="140" y="16" width="120" height="26" rx="6" fill="#c0392b"/>
+  <text x="200" y="34" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">never swing past</text>
+  <text x="200" y="288" font-size="14" fill="#2f3a2b" text-anchor="middle">One calls the shot: "Take them." (Tip)</text>
+</svg>

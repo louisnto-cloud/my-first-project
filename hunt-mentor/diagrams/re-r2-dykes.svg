@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 191" role="img" aria-label="Cards: Waterfowl notices, MU 2-4. No lead shot: For any purpose, on or seaward of any Delta dyke, or on the Surrey dykes facing Mud Bay. No snipe: Boundary Bay WMA, out to the foreshore of Boundary, Mud and Semiahmoo bays." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="191" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Waterfowl notices, MU 2-4</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 27. WMA means Wildlife Management Area.</text>
+<rect x="6.0" y="69" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6.0 97 V78 Q6.0 69 15.0 69 H187.0 Q196.0 69 196.0 78 V97 Z" fill="#c92a2a"/>
+<text x="14.0" y="89" font-size="14" font-weight="bold" fill="#ffffff">No lead shot</text>
+<text x="14.0" y="117" font-size="14" fill="#23261f">For any purpose, on or</text>
+<text x="14.0" y="135" font-size="14" fill="#23261f">seaward of any Delta</text>
+<text x="14.0" y="153" font-size="14" fill="#23261f">dyke, or on the Surrey</text>
+<text x="14.0" y="171" font-size="14" fill="#23261f">dykes facing Mud Bay</text>
+<rect x="204.0" y="69" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M204.0 97 V78 Q204.0 69 213.0 69 H385.0 Q394.0 69 394.0 78 V97 Z" fill="#e8590c"/>
+<text x="212.0" y="89" font-size="14" font-weight="bold" fill="#ffffff">No snipe</text>
+<text x="212.0" y="117" font-size="14" fill="#23261f">Boundary Bay WMA, out</text>
+<text x="212.0" y="135" font-size="14" fill="#23261f">to the foreshore of</text>
+<text x="212.0" y="153" font-size="14" fill="#23261f">Boundary, Mud and</text>
+<text x="212.0" y="171" font-size="14" fill="#23261f">Semiahmoo bays</text>
+</svg>

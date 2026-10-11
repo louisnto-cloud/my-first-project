@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Forest Service Road habit 4. Left: a locked gate on a permit road, park and walk from there. Right: a closed area sign, turn the vehicle around.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="180" width="400" height="60" fill="#c9b79c"/>
+  <rect x="30" y="150" width="10" height="70" fill="#2f3a2b"/><rect x="40" y="160" width="140" height="10" fill="#e8590c"/><rect x="40" y="190" width="140" height="10" fill="#e8590c"/>
+  <rect x="96" y="172" width="16" height="16" rx="3" fill="#2f3a2b"/>
+  <text x="105" y="80" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Locked gate</text>
+  <text x="105" y="102" font-size="15" fill="#e8590c" font-weight="bold" text-anchor="middle">Park. Walk on.</text>
+  <rect x="250" y="70" width="120" height="76" rx="6" fill="#c0392b"/>
+  <rect x="304" y="146" width="10" height="70" fill="#6b4f35"/>
+  <text x="310" y="100" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">CLOSED</text>
+  <text x="310" y="122" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">AREA</text>
+  <path d="M250 270 C 220 250, 220 220, 260 214" fill="none" stroke="#e8590c" stroke-width="3"/><polygon points="258,207 258,221 270,214" fill="#e8590c"/>
+  <text x="310" y="275" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Turn around</text>
+  <text x="105" y="275" font-size="14" fill="#2f3a2b" text-anchor="middle">(85%)</text>
+</svg>

@@ -1,0 +1,7 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"spotId":"E-duck-drive-0011","kind":"walk","km":0.23,"climbM":0,"name":"Unnamed wetland by Spanish Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.48068,51.99483],[-120.47868,51.99321]]}},
+{"type":"Feature","properties":{"spotId":"E-duck-drive-0021","kind":"walk","km":0.16,"climbM":0,"name":"Unnamed wetland 200 m N of Spanish Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.44983,52.00136],[-120.45004,51.9999]]}},
+{"type":"Feature","properties":{"spotId":"E-duck-walk-0004","kind":"walk","km":0.39,"climbM":1,"name":"Unnamed wetland by Spanish Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.49153,51.98735],[-120.48767,51.98482]]}},
+{"type":"Feature","properties":{"spotId":"E-moose-drive-0031","kind":"walk","km":0.27,"climbM":0,"name":"200 m NW of Spanish Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.45347,52.00151],[-120.45361,51.99909]]}},
+{"type":"Feature","properties":{"spotId":"E-moose-walk-0069","kind":"walk","km":2.27,"climbM":21,"name":"2.7 km NE of Pendleton Lakes","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.43777,52.00215],[-120.43273,51.98206]]}}
+]}

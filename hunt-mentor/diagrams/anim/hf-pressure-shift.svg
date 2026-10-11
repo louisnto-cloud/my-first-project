@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, top view. Before the opener, deer feed in an open field near the road. On opening day trucks park along the road. The deer move away from the road into thick timber. One hunter walks past the last truck, deep into the thick cover where the deer went.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="0" width="400" height="300" fill="#efe6cf"/>
+  <path d="M240 0 L400 0 L400 300 L270 300 C 250 220, 300 120, 240 0 Z" fill="#2f3a2b" opacity=".75"/>
+  <text x="330" y="24" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">thick timber</text>
+  <rect x="0" y="250" width="400" height="22" fill="#8b5a2b" opacity=".6"/>
+  <text x="12" y="292" font-size="14" font-weight="bold" fill="#2f3a2b">road</text>
+  <g fill="#8b5a2b">
+    <g><ellipse rx="12" ry="6"/><animateTransform attributeName="transform" type="translate" values="80 180;80 180;300 120;300 120" keyTimes="0;0.35;0.7;1" dur="9s" fill="freeze" calcMode="linear"/></g>
+    <g><ellipse rx="12" ry="6"/><animateTransform attributeName="transform" type="translate" values="130 200;130 200;330 170;330 170" keyTimes="0;0.38;0.72;1" dur="9s" fill="freeze"/></g>
+    <g><ellipse rx="12" ry="6"/><animateTransform attributeName="transform" type="translate" values="170 160;170 160;350 90;350 90" keyTimes="0;0.4;0.75;1" dur="9s" fill="freeze"/></g>
+  </g>
+  <g fill="#4a7fb0" opacity="0"><animate attributeName="opacity" values="0;1" begin="2.4s" dur=".4s" fill="freeze"/>
+    <rect x="40" y="254" width="30" height="14" rx="3"/><rect x="90" y="254" width="30" height="14" rx="3"/><rect x="140" y="254" width="30" height="14" rx="3"/><rect x="190" y="254" width="30" height="14" rx="3"/></g>
+  <g opacity="1"><animate attributeName="opacity" values="1;0" begin="2.4s" dur=".3s" fill="freeze"/><text x="12" y="40" font-size="16" font-weight="bold" fill="#2f3a2b">Before opening day</text></g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="2.4s" dur=".3s" fill="freeze"/><text x="12" y="40" font-size="16" font-weight="bold" fill="#c0392b">Opener: trucks arrive</text></g>
+  <path id="hf-pressure-shift-path" d="M260 261 C 262 230, 262 200, 280 160" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="5 5" opacity="0"><animate attributeName="opacity" values="0;1" begin="6.5s" dur=".3s" fill="freeze"/></path>
+  <circle r="8" fill="#e8590c" opacity="0"><animate attributeName="opacity" values="0;1" begin="6.5s" dur=".3s" fill="freeze"/><animateMotion begin="6.5s" dur="2.2s" fill="freeze"><mpath href="#hf-pressure-shift-path"/></animateMotion></circle>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="8.5s" dur=".4s" fill="freeze"/>
+    <rect x="12" y="60" width="210" height="50" rx="8" fill="#2f3a2b"/>
+    <text x="117" y="82" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Walk past the last truck</text>
+    <text x="117" y="100" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Hunt the thick stuff (Tip)</text></g>
+</svg>

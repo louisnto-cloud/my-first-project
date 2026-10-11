@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Example hunt day menu. Breakfast: oatmeal with nuts, eggs, coffee. Pockets: trail mix, jerky, cheese, bars, a sandwich. Supper: pasta or rice with meat, soup, a hot drink.">
+  <rect x="0" y="0" width="400" height="250" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">One day of food (example)</text>
+<rect x="10.0" y="46" width="121.33333333333333" height="194" rx="10" fill="#dfe6d3" stroke="#e8590c" stroke-width="2"/>
+<rect x="10.0" y="46" width="121.33333333333333" height="36" rx="10" fill="#e8590c"/>
+<text x="70.66666666666666" y="70" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Breakfast</text>
+<text x="70.66666666666666" y="106" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Oatmeal, nuts</text>
+<text x="70.66666666666666" y="128" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Eggs or a</text>
+<text x="70.66666666666666" y="150" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">breakfast wrap</text>
+<text x="70.66666666666666" y="172" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Coffee or tea</text>
+<text x="70.66666666666666" y="194" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Water 0.5 L</text>
+<rect x="139.33333333333331" y="46" width="121.33333333333333" height="194" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+<rect x="139.33333333333331" y="46" width="121.33333333333333" height="36" rx="10" fill="#2f3a2b"/>
+<text x="199.99999999999997" y="70" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Pockets</text>
+<text x="199.99999999999997" y="106" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Trail mix</text>
+<text x="199.99999999999997" y="128" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Jerky, cheese</text>
+<text x="199.99999999999997" y="150" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Bars</text>
+<text x="199.99999999999997" y="172" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Sandwich</text>
+<text x="199.99999999999997" y="194" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Salty snack</text>
+<rect x="268.66666666666663" y="46" width="121.33333333333333" height="194" rx="10" fill="#dfe6d3" stroke="#8b5a2b" stroke-width="2"/>
+<rect x="268.66666666666663" y="46" width="121.33333333333333" height="36" rx="10" fill="#8b5a2b"/>
+<text x="329.3333333333333" y="70" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Supper</text>
+<text x="329.3333333333333" y="106" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Pasta or rice</text>
+<text x="329.3333333333333" y="128" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">with meat</text>
+<text x="329.3333333333333" y="150" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Soup</text>
+<text x="329.3333333333333" y="172" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Hot drink</text>
+<text x="329.3333333333333" y="194" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Water</text>
+</svg>

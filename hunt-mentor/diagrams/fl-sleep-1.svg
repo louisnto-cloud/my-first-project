@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Eat a warm meal with fat and protein before bed. Your body burns it for heat.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="32" r="17" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="30" y="39" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">1</text>
+<text x="56" y="39" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="start">Eat before bed</text>
+<rect x="150" y="120" width="100" height="60" rx="30" fill="#4a7fb0"/><path d="M200 120 q-12.6 -12.6 0 -28.0 q12.6 15.399999999999999 0 28.0 z" fill="#e8590c" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M200 120 q-5.6 -7.0 0 -14.0 q5.6 7.0 0 14.0 z" fill="#f6c343" stroke="#f6c343" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/><text x="200" y="230" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Fuel for the night</text>
+<rect x="10" y="262" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="285.0" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">A warm meal before bed.</text>
+</svg>

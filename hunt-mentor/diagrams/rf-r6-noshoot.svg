@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 468" role="img" aria-label="Five cards. Highway 113, the Nisga&#x27;a Highway: no shooting or hunting within 400 metres of the centre line between Sterling Mountain Parking Lot Recreation Site and Kincolith, and east to Nass Camp. Highway 118 between Topley and Granisle: no firearm within 400 metres of either side of the road allowance. Muddy Lake and Golden Bear Access Road: no hunting within 2 kilometres either side. Lucy Island: no hunting, trapping or shooting. Shaman Island, new: no shooting, no hunting, a sacred site of the Teslin Tlingit Council." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="468" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Highways and other closures</text>
+<rect x="6" y="40" width="190" height="132" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Hwy 113, Nisga&#x27;a</text>
+<text x="101" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Highway</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">No shooting or hunting</text>
+<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start">within 400 m of the</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start">centre line, on the</text>
+<text x="14" y="160" font-size="14" fill="#23261f" text-anchor="start">listed stretch</text>
+<rect x="204" y="40" width="190" height="132" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#e8590c"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Hwy 118, Topley to</text>
+<text x="299" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Granisle</text>
+<path d="M212.0 118 l6 -6 h22 v3 h-16 l-4 6 z" fill="#8b5a2b"/><line x1="226.0" y1="111" x2="244.0" y2="111" stroke="#2f3a2b" stroke-width="2.5"/>
+<circle cx="228.0" cy="114" r="18" fill="none" stroke="#c92a2a" stroke-width="3"/><line x1="215.0" y1="127" x2="241.0" y2="101" stroke="#c92a2a" stroke-width="3"/>
+<text x="250" y="106" font-size="14" fill="#23261f" text-anchor="start">No firearm within</text>
+<text x="250" y="124" font-size="14" fill="#23261f" text-anchor="start">400 m of the road</text>
+<text x="250" y="142" font-size="14" fill="#23261f" text-anchor="start">allowance, MU 6-8</text>
+<rect x="6" y="180" width="190" height="114" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 190 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="101" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Muddy Lake, Golden</text>
+<text x="101" y="216" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Bear road</text>
+<text x="14" y="246" font-size="14" fill="#23261f" text-anchor="start">No hunting within 2 km</text>
+<text x="14" y="264" font-size="14" fill="#23261f" text-anchor="start">either side, MUs 6-22,</text>
+<text x="14" y="282" font-size="14" fill="#23261f" text-anchor="start">6-26</text>
+<rect x="204" y="180" width="190" height="114" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204 190 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="299" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Lucy Island, MU 6-13</text>
+<text x="212" y="246" font-size="14" fill="#23261f" text-anchor="start">No hunting, trapping or</text>
+<text x="212" y="264" font-size="14" fill="#23261f" text-anchor="start">shooting</text>
+<rect x="6" y="302" width="190" height="132" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 312 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="101" y="320" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Shaman Island,</text>
+<text x="101" y="338" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 6-25 (new)</text>
+<text x="14" y="368" font-size="14" fill="#23261f" text-anchor="start">No shooting, no</text>
+<text x="14" y="386" font-size="14" fill="#23261f" text-anchor="start">hunting. Sacred site of</text>
+<text x="14" y="404" font-size="14" fill="#23261f" text-anchor="start">the Teslin Tlingit</text>
+<text x="14" y="422" font-size="14" fill="#23261f" text-anchor="start">Council</text>
+<rect x="6" y="440" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="24" y="452" font-size="14" fill="#23261f" text-anchor="start">No hunting</text>
+<rect x="112.0" y="440" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="130" y="452" font-size="14" fill="#23261f" text-anchor="start">No shooting</text>
+</svg>

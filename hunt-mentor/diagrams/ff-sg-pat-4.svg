@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Count pellets in the circle, divide by pellets in the shell, average at least 5 sheets.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4. Count, divide, average 5</text><text x="200" y="120" font-size="22" font-weight="bold" fill="#e8590c" text-anchor="middle">92 in circle</text><text x="200" y="154" font-size="22" font-weight="bold" fill="#2f3a2b" text-anchor="middle">÷ 141 in shell</text><text x="200" y="194" font-size="30" font-weight="bold" fill="#2f6e3b" text-anchor="middle">= 65%</text><text x="200" y="262" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">average 5 sheets</text>
+</svg>

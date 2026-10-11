@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" font-family="sans-serif">
+  <defs>
+    <marker id="er-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#e8590c"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="400" height="400" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Eye relief and sight clearance</text>
+  <text x="200" y="46" font-size="14" fill="#23261f" text-anchor="middle">Side view, not to scale</text>
+
+  <!-- stock -->
+  <path d="M120,262 L120,292 L60,330 L20,330 L20,300 L70,282 Z" fill="#6b4f35" stroke="#23261f" stroke-width="2"/>
+  <!-- receiver -->
+  <rect x="120" y="250" width="140" height="36" rx="4" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/>
+  <!-- barrel -->
+  <rect x="260" y="258" width="130" height="14" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/>
+  <!-- rail -->
+  <rect x="170" y="242" width="80" height="8" fill="#2f3a2b" stroke="#23261f" stroke-width="1"/>
+  <!-- rear drum sight -->
+  <circle cx="142" cy="236" r="14" fill="#6b4f35" stroke="#23261f" stroke-width="2"/>
+  <!-- rings -->
+  <rect x="180" y="196" width="12" height="46" fill="#2f3a2b" stroke="#23261f" stroke-width="1"/>
+  <rect x="232" y="196" width="12" height="46" fill="#2f3a2b" stroke="#23261f" stroke-width="1"/>
+  <!-- scope -->
+  <rect x="100" y="180" width="230" height="16" fill="#23261f" stroke="#23261f" stroke-width="1"/>
+  <path d="M100,172 L80,170 L80,206 L100,204 Z" fill="#23261f" stroke="#23261f" stroke-width="1"/>
+  <path d="M300,180 L330,166 L362,166 L362,210 L330,210 L300,196 Z" fill="#23261f" stroke="#23261f" stroke-width="1"/>
+  <rect x="204" y="162" width="16" height="18" fill="#23261f" stroke="#23261f" stroke-width="1"/>
+  <text x="250" y="156" font-size="15" fill="#23261f" font-weight="bold">Scope</text>
+  <!-- eye -->
+  <ellipse cx="34" cy="188" rx="12" ry="8" fill="#ffffff" stroke="#23261f" stroke-width="2"/>
+  <circle cx="38" cy="188" r="4" fill="#23261f"/>
+  <text x="34" y="168" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Eye</text>
+  <!-- eye relief arrow -->
+  <line x1="48" y1="126" x2="78" y2="126" stroke="#e8590c" stroke-width="3" marker-start="url(#er-arrow)" marker-end="url(#er-arrow)"/>
+  <line x1="46" y1="118" x2="46" y2="180" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="80" y1="118" x2="80" y2="168" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="20" y="96" font-size="15" fill="#e8590c" font-weight="bold">Eye relief</text>
+  <text x="20" y="114" font-size="14" fill="#23261f">about 9 to 10 cm (3.5 to 4 in)</text>
+  <!-- clearance arrow -->
+  <line x1="142" y1="199" x2="142" y2="219" stroke="#e8590c" stroke-width="3" marker-start="url(#er-arrow)" marker-end="url(#er-arrow)"/>
+  <text x="20" y="362" font-size="15" fill="#e8590c" font-weight="bold">Gap: scope must clear</text>
+  <text x="20" y="382" font-size="15" fill="#e8590c" font-weight="bold">the rear drum sight</text>
+  <text x="96" y="216" font-size="15" fill="#e8590c" font-weight="bold">Gap</text>
+  <text x="10" y="252" font-size="14" fill="#23261f">Rear drum sight</text>
+  <text x="320" y="296" font-size="14" fill="#23261f">Barrel</text>
+  <text x="190" y="328" font-size="14" fill="#23261f">Rings on short rail</text>
+  <line x1="212" y1="314" x2="212" y2="252" stroke="#23261f" stroke-width="1.5" stroke-dasharray="4 3"/>
+</svg>

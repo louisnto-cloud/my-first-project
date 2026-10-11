@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" role="img" aria-label="Four spring displays. Ruffed grouse: drums on a log at dawn from March to May, and a little again in fall. Spruce grouse: struts with red combs up and tail fanned, makes a short flight and two loud wing claps. Dusky and sooty grouse: deep hoots with neck air sacs showing; the sooty hoots from high in a conifer. Sharp tailed grouse: dances on a lek at dawn, stamping its feet, rattling its tail and showing pink neck sacs." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="340" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Spring shows: 4 grouse, 4 acts</text>
+<rect x="10" y="42" width="185" height="140" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<text x="20" y="66" font-size="15" fill="#e8590c" text-anchor="start" font-weight="bold">Ruffed: drums</text>
+<text x="20" y="116" font-size="14" fill="#23261f" text-anchor="start">On a log at dawn,</text>
+<text x="20" y="134" font-size="14" fill="#23261f" text-anchor="start">March to May. Again</text>
+<text x="20" y="152" font-size="14" fill="#23261f" text-anchor="start">a little in fall.</text>
+<g transform="translate(155 88) scale(0.6 0.6)"><polygon points="-20,-6 -38,-20 -48,-12 -52,0 -48,8 -20,8" fill="#6b4f35"/><path d="M-40 -18 Q-50 -10 -48 6" fill="none" stroke="#23261f" stroke-width="3"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#9a6b45"/><circle cx="21" cy="-14" r="8" fill="#9a6b45"/><polygon points="16,-20 20,-28 25,-20" fill="#9a6b45"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<rect x="205" y="42" width="185" height="140" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<text x="215" y="66" font-size="15" fill="#e8590c" text-anchor="start" font-weight="bold">Spruce: struts</text>
+<text x="215" y="116" font-size="14" fill="#23261f" text-anchor="start">Red combs up, tail</text>
+<text x="215" y="134" font-size="14" fill="#23261f" text-anchor="start">fanned, short flight,</text>
+<text x="215" y="152" font-size="14" fill="#23261f" text-anchor="start">two loud wing claps.</text>
+<g transform="translate(350 88) scale(0.6 0.6)"><polygon points="-22,-4 -36,-8 -36,4 -22,6" fill="#23261f"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#3d3a35"/><circle cx="21" cy="-14" r="8" fill="#3d3a35"/><path d="M18 -20 q5 -5 10 0" fill="none" stroke="#c23b22" stroke-width="3"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<rect x="10" y="192" width="185" height="140" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<text x="20" y="216" font-size="15" fill="#e8590c" text-anchor="start" font-weight="bold">Dusky, sooty: hoots</text>
+<text x="20" y="266" font-size="14" fill="#23261f" text-anchor="start">Deep hoots, neck sacs</text>
+<text x="20" y="284" font-size="14" fill="#23261f" text-anchor="start">show. Sooty hoots</text>
+<text x="20" y="302" font-size="14" fill="#23261f" text-anchor="start">high in a conifer.</text>
+<g transform="translate(155 238) scale(0.6 0.6)"><polygon points="-22,-4 -50,-10 -50,4 -22,7" fill="#23261f"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#5d6670"/><circle cx="21" cy="-14" r="8" fill="#5d6670"/><path d="M18 -20 q5 -5 10 0" fill="none" stroke="#e3a21a" stroke-width="3"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<rect x="205" y="192" width="185" height="140" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<text x="215" y="216" font-size="15" fill="#e8590c" text-anchor="start" font-weight="bold">Sharp tail: dances</text>
+<text x="215" y="266" font-size="14" fill="#23261f" text-anchor="start">On a lek at dawn.</text>
+<text x="215" y="284" font-size="14" fill="#23261f" text-anchor="start">Stamp, rattle tail,</text>
+<text x="215" y="302" font-size="14" fill="#23261f" text-anchor="start">pink neck sacs.</text>
+<g transform="translate(350 238) scale(0.6 0.6)"><polygon points="-22,-3 -48,-2 -22,6" fill="#6b4f35"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#b89a74"/><circle cx="21" cy="-14" r="8" fill="#b89a74"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+</svg>

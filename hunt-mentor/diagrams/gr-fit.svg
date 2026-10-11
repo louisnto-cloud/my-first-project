@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Gun fit. Length of pull is measured from the trigger to the end of the stock, about 14 to 14.75 inches for most adults. Eyes shut test: mount the gun, open your eyes, you should look straight down the rib at the bead.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Does it fit you?</text>
+  <path d="M30 60 L190 72 L194 98 L170 100 L30 128 Z" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="20" y="58" width="12" height="72" rx="3" fill="#2f3a2b"/>
+  <rect x="190" y="64" width="60" height="30" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/><rect x="250" y="66" width="130" height="10" fill="#6b6f68"/>
+  <path d="M200 94 q 4 14 16 14" stroke="#e8590c" stroke-width="3" fill="none"/>
+  <line x1="20" y1="150" x2="206" y2="150" stroke="#e8590c" stroke-width="3"/>
+  <path d="M30 144 l-10 6 l10 6 M196 144 l10 6 l-10 6" fill="none" stroke="#e8590c" stroke-width="3"/>
+  <text x="113" y="172" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Length of pull</text>
+  <text x="113" y="190" font-size="14" fill="#2f3a2b" text-anchor="middle">most adults 14 to 14.75 in</text>
+  <!-- eye test -->
+  <ellipse cx="60" cy="250" rx="26" ry="14" fill="#fff" stroke="#2f3a2b" stroke-width="2"/><circle cx="66" cy="250" r="7" fill="#4a7fb0"/>
+  <line x1="92" y1="250" x2="340" y2="250" stroke="#2f3a2b" stroke-width="5"/>
+  <circle cx="346" cy="246" r="6" fill="#e8590c"/>
+  <text x="220" y="236" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Eyes shut, mount, open</text>
+  <text x="220" y="280" font-size="14" fill="#2f3a2b" text-anchor="middle">You see straight down the rib (Tip)</text>
+  <text x="320" y="130" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Try it on</text>
+  <text x="320" y="148" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">in your jacket</text>
+</svg>

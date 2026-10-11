@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, top view of a rocky point. You stand on the point. A scoter flies past and falls on the water. The tide current carries the dead bird away from shore, out of reach. Lesson: without a boat a bird drifts away on the tide, so shoot only where you can fetch it. Tip.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect width="400" height="300" fill="#4a7fb0" opacity=".35"/>
+  <path d="M0 300 L0 170 Q60 150 110 190 L150 300Z" fill="#8a7a6a"/>
+  <g transform="translate(70 168) scale(1.0)"><circle r="9" fill="#e8590c"/></g>
+  <text x="70" y="200" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">You, on a point</text>
+  <path d="M170 80 q12 -6 24 0 q12 6 24 0" stroke="#fff" stroke-width="2" fill="none" opacity=".8"/>
+  <path d="M230 90 q12 -6 24 0 q12 6 24 0" stroke="#fff" stroke-width="2" fill="none" opacity=".8"/>
+  <path d="M290 100 q12 -6 24 0 q12 6 24 0" stroke="#fff" stroke-width="2" fill="none" opacity=".8"/>
+  <path d="M350 110 q12 -6 24 0 q12 6 24 0" stroke="#fff" stroke-width="2" fill="none" opacity=".8"/>
+  <path d="M200 60 L360 90 M350.3 92.6 L360 90 L352.0 84.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="290" y="60" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Tide current</text>
+  <g><g transform="translate(0 0) scale(0.6)"><ellipse rx="18" ry="5" fill="#2f3a2b"/><circle cx="18" cy="-1" r="4.5" fill="#2f3a2b"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#2f3a2b"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#2f3a2b"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#2f3a2b"/></g><animateTransform attributeName="transform" type="translate" values="40 60;190 110" keyTimes="0;1" dur="2s" fill="freeze"/><set attributeName="opacity" to="0" begin="2s"/></g>
+  <g opacity="0"><set attributeName="opacity" to="1" begin="2s"/><g transform="translate(0 0) scale(0.5)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#2f3a2b"/><circle cx="18" cy="-20" r="9" fill="#2f3a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g><animateTransform attributeName="transform" type="translate" values="190 150;370 230" begin="2.4s" dur="5s" fill="freeze"/></g>
+  <g opacity="0"><set attributeName="opacity" to="1" begin="7.4s"/><rect x="160" y="250" width="232" height="44" rx="8" fill="#2f3a2b"/><text x="276" y="270" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">No boat? It drifts away.</text><text x="276" y="287" font-size="13" fill="#fff" text-anchor="middle">Shoot only where you can fetch</text></g>
+</svg>

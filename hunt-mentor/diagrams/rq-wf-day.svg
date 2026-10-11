@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 296" role="img" aria-label="Pattern bars. Mallards and other dabblers often feed at night, fly at dawn to a day roost, loaf through the day and fly out at dusk. Canada geese roost on water, fly to fields in the morning and late afternoon and rest on water at midday. On stormy days geese fly all day. Dashed lines: legal duck hours at Heffley Creek on 15 October, about 6:52 to 18:41.">
+<rect x="0" y="0" width="400" height="296" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A fall day for ducks and geese (pattern)</text>
+<line x1="39" y1="50" x2="39" y2="226" stroke="#d6d0bf" stroke-width="1"/>
+<text x="38.8" y="46" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">6:00</text>
+<line x1="113" y1="50" x2="113" y2="226" stroke="#d6d0bf" stroke-width="1"/>
+<text x="113.2" y="46" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">9:00</text>
+<line x1="188" y1="50" x2="188" y2="226" stroke="#d6d0bf" stroke-width="1"/>
+<text x="187.6" y="46" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">12:00</text>
+<line x1="262" y1="50" x2="262" y2="226" stroke="#d6d0bf" stroke-width="1"/>
+<text x="262.0" y="46" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">15:00</text>
+<line x1="336" y1="50" x2="336" y2="226" stroke="#d6d0bf" stroke-width="1"/>
+<text x="336.4" y="46" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">18:00</text>
+<text x="14" y="80" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Mallards, other dabblers</text>
+<rect x="14" y="86" width="40" height="22" rx="4" fill="#2f3a2b"/>
+<text x="33.83999999999999" y="102" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">feed</text>
+<rect x="54" y="86" width="35" height="22" rx="4" fill="#e8590c"/>
+<text x="71.03999999999999" y="102" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">fly</text>
+<rect x="88" y="86" width="211" height="22" rx="4" fill="#4a7fb0"/>
+<text x="193.8" y="102" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">roost, loaf</text>
+<rect x="299" y="86" width="42" height="22" rx="4" fill="#e8590c"/>
+<text x="320.28" y="102" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">fly</text>
+<rect x="341" y="86" width="45" height="22" rx="4" fill="#2f3a2b"/>
+<text x="363.67999999999995" y="102" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">feed</text>
+<text x="14" y="134" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Canada geese</text>
+<rect x="14" y="140" width="50" height="22" rx="4" fill="#4a7fb0"/>
+<text x="38.8" y="156" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">roost</text>
+<rect x="64" y="140" width="74" height="22" rx="4" fill="#e8590c"/>
+<text x="100.8" y="156" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">field</text>
+<rect x="138" y="140" width="112" height="22" rx="4" fill="#4a7fb0"/>
+<text x="193.8" y="156" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">water</text>
+<rect x="250" y="140" width="74" height="22" rx="4" fill="#e8590c"/>
+<text x="286.8" y="156" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">field</text>
+<rect x="324" y="140" width="62" height="22" rx="4" fill="#4a7fb0"/>
+<text x="355.0" y="156" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">roost</text>
+<text x="14" y="188" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Stormy day, geese</text>
+<rect x="64" y="194" width="273" height="22" rx="4" fill="#e8590c"/>
+<text x="200.0" y="210" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">flights all day (70%)</text>
+<line x1="60" y1="58" x2="60" y2="230" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="60.376" y="246" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e8590c" text-anchor="middle">legal 6:52</text>
+<line x1="353" y1="58" x2="353" y2="230" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="353.264" y="246" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e8590c" text-anchor="middle">18:41</text>
+<text x="14" y="278" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Pattern only (65 to 70%). Times shift by day and</text>
+<text x="14" y="294" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">place.</text>
+</svg>

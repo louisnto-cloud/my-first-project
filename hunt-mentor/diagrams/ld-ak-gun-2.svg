@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 2: file ATF Form 6NIA, allow 4 to 6 weeks. One form per hunter, listing the rifle, the shotgun and the ammunition.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="34" cy="34" r="20" fill="#e8590c"/>
+<text x="34" y="41" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<text x="64" y="32" font-size="19" font-weight="bold" fill="#23261f">File ATF Form 6NIA</text>
+<circle cx="133" cy="124" r="52" fill="#dfe6d3"/>
+<g transform="translate(133.33333333333334 124) scale(1.6)"><rect x="-20" y="-22" width="40" height="44" rx="3" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/><path d="M-13 -12 h26 M-13 -4 h26 M-13 4 h18" stroke="#8a9a6b" stroke-width="2.5"/><path d="M8 18 l18 -26 l5 3 l-18 26 l-6 2 z" fill="#e8590c"/></g>
+<circle cx="267" cy="124" r="52" fill="#dfe6d3"/>
+<g transform="translate(266.6666666666667 124) scale(1.6)"><rect x="-24" y="-18" width="48" height="40" rx="4" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/><rect x="-24" y="-18" width="48" height="11" fill="#e8590c"/><path d="M-13 -23 v9 M13 -23 v9" stroke="#2f3a2b" stroke-width="3"/><g fill="#8a9a6b"><rect x="-17" y="-1" width="7" height="6"/><rect x="-4" y="-1" width="7" height="6"/><rect x="9" y="-1" width="7" height="6"/><rect x="-17" y="10" width="7" height="6"/><rect x="-4" y="10" width="7" height="6" fill="#e8590c"/></g></g>
+<text x="200" y="204" font-size="15" fill="#2f3a2b" text-anchor="middle">4 to 6 weeks. One form per hunter.</text>
+<text x="200" y="224" font-size="15" fill="#2f3a2b" text-anchor="middle">List both guns and the ammunition (80%).</text>
+</svg>

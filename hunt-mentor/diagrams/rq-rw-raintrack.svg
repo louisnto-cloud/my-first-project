@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Two deer tracks in rain spattered dirt. Track A has rain pits inside it: made before the rain. Track B has clean, sharp walls with no pits on spattered ground around it: made after the rain. Know when the rain stopped.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Before or after the rain?</text>
+<rect x="0" y="40" width="400" height="260" fill="#cbbd9c"/>
+<circle cx="12" cy="60" r="2" fill="#a8997a"/>
+<circle cx="49" cy="113" r="2" fill="#a8997a"/>
+<circle cx="86" cy="166" r="2" fill="#a8997a"/>
+<circle cx="123" cy="219" r="2" fill="#a8997a"/>
+<circle cx="160" cy="272" r="2" fill="#a8997a"/>
+<circle cx="197" cy="105" r="2" fill="#a8997a"/>
+<circle cx="234" cy="158" r="2" fill="#a8997a"/>
+<circle cx="271" cy="211" r="2" fill="#a8997a"/>
+<circle cx="308" cy="264" r="2" fill="#a8997a"/>
+<circle cx="345" cy="97" r="2" fill="#a8997a"/>
+<circle cx="382" cy="150" r="2" fill="#a8997a"/>
+<circle cx="39" cy="203" r="2" fill="#a8997a"/>
+<circle cx="76" cy="256" r="2" fill="#a8997a"/>
+<circle cx="113" cy="89" r="2" fill="#a8997a"/>
+<circle cx="150" cy="142" r="2" fill="#a8997a"/>
+<circle cx="187" cy="195" r="2" fill="#a8997a"/>
+<circle cx="224" cy="248" r="2" fill="#a8997a"/>
+<circle cx="261" cy="81" r="2" fill="#a8997a"/>
+<circle cx="298" cy="134" r="2" fill="#a8997a"/>
+<circle cx="335" cy="187" r="2" fill="#a8997a"/>
+<circle cx="372" cy="240" r="2" fill="#a8997a"/>
+<circle cx="29" cy="73" r="2" fill="#a8997a"/>
+<circle cx="66" cy="126" r="2" fill="#a8997a"/>
+<circle cx="103" cy="179" r="2" fill="#a8997a"/>
+<circle cx="140" cy="232" r="2" fill="#a8997a"/>
+<circle cx="177" cy="65" r="2" fill="#a8997a"/>
+<circle cx="214" cy="118" r="2" fill="#a8997a"/>
+<circle cx="251" cy="171" r="2" fill="#a8997a"/>
+<circle cx="288" cy="224" r="2" fill="#a8997a"/>
+<circle cx="325" cy="277" r="2" fill="#a8997a"/>
+<circle cx="362" cy="110" r="2" fill="#a8997a"/>
+<circle cx="19" cy="163" r="2" fill="#a8997a"/>
+<circle cx="56" cy="216" r="2" fill="#a8997a"/>
+<circle cx="93" cy="269" r="2" fill="#a8997a"/>
+<circle cx="130" cy="102" r="2" fill="#a8997a"/>
+<circle cx="167" cy="155" r="2" fill="#a8997a"/>
+<circle cx="204" cy="208" r="2" fill="#a8997a"/>
+<circle cx="241" cy="261" r="2" fill="#a8997a"/>
+<circle cx="278" cy="94" r="2" fill="#a8997a"/>
+<circle cx="315" cy="147" r="2" fill="#a8997a"/>
+<g transform="translate(110 160) scale(3.2)"><path d="M-7 10 q 0 -16 6 -20 q 3 8 3 20 Z" fill="#8f7f62"/><path d="M1 10 q 0 -12 3 -20 q 6 4 6 20 Z" fill="#8f7f62"/><circle cx="-4" cy="0" r="1" fill="#6f6048"/><circle cx="5" cy="4" r="1" fill="#6f6048"/><circle cx="-3" cy="6" r="1" fill="#6f6048"/><circle cx="4" cy="-4" r="1" fill="#6f6048"/><circle cx="-5" cy="-6" r="1" fill="#6f6048"/><circle cx="6" cy="-1" r="1" fill="#6f6048"/></g><text x="110" y="240" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">A: rain pits inside</text><text x="110" y="260" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">made BEFORE the rain</text>
+<g transform="translate(290 160) scale(3.2)"><path d="M-7 10 q 0 -16 6 -20 q 3 8 3 20 Z" fill="#8f7f62"/><path d="M1 10 q 0 -12 3 -20 q 6 4 6 20 Z" fill="#8f7f62"/></g><text x="290" y="240" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">B: clean, sharp walls</text><text x="290" y="260" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">made AFTER the rain</text>
+<text x="200" y="290" font-family="sans-serif" font-size="14" font-weight="bold" fill="#6b4f35" text-anchor="middle">Know when the rain stopped (Tip).</text>
+</svg>

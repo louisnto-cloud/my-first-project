@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 468" role="img" aria-label="Grid of legal hunting methods from the page 13 table. Columns: deer, moose, black bear, grouse, ducks. Centrefire rifle: yes for deer, moose and bear, yes for grouse or ptarmigan only, no for ducks. Rimfire .22: no for deer, moose, bear and ducks, yes for grouse, ptarmigan or turkey only. Shotgun: yes for deer and bear with 20 gauge or larger and No. 1 Buck or larger, no for moose, yes for grouse, yes for ducks with non toxic shot no larger than 10 gauge. Air rifle: yes for deer and bear at .35 calibre or larger, no for moose, yes for grouse, no for ducks. Bow classes: deer B C D, moose A C D, bear A C D, grouse B C D, ducks D. Elk and caribou match moose." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="468" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Legal method for each animal</text>
+<text x="144.0" y="70" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Deer</text>
+<text x="200.0" y="70" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Moose</text>
+<text x="256.0" y="70" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Bear</text>
+<text x="312.0" y="70" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Grouse</text>
+<text x="368.0" y="70" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Ducks</text>
+<rect x="6" y="82" width="388" height="44" rx="6" fill="#ffffff" stroke="none" stroke-width="0"/>
+<text x="14" y="110" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Centrefire</text>
+<path d="M135.0 102 L141.3 108.3 L153.0 94.8" fill="none" stroke="#5c7a3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M191.0 102 L197.3 108.3 L209.0 94.8" fill="none" stroke="#5c7a3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M247.0 102 L253.3 108.3 L265.0 94.8" fill="none" stroke="#5c7a3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M303.0 102 L309.3 108.3 L321.0 94.8" fill="none" stroke="#5c7a3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="328.0" y="100" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">3</text>
+<path d="M360.0 94 L376.0 110 M376.0 94 L360.0 110" stroke="#c92a2a" stroke-width="4" stroke-linecap="round"/>
+<rect x="6" y="132" width="388" height="44" rx="6" fill="#f3f0e4" stroke="none" stroke-width="0"/>
+<text x="14" y="160" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Rimfire .22</text>
+<path d="M136.0 144 L152.0 160 M152.0 144 L136.0 160" stroke="#c92a2a" stroke-width="4" stroke-linecap="round"/>
+<path d="M192.0 144 L208.0 160 M208.0 144 L192.0 160" stroke="#c92a2a" stroke-width="4" stroke-linecap="round"/>
+<path d="M248.0 144 L264.0 160 M264.0 144 L248.0 160" stroke="#c92a2a" stroke-width="4" stroke-linecap="round"/>
+<path d="M303.0 152 L309.3 158.3 L321.0 144.8" fill="none" stroke="#5c7a3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="328.0" y="150" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">2</text>
+<path d="M360.0 144 L376.0 160 M376.0 144 L360.0 160" stroke="#c92a2a" stroke-width="4" stroke-linecap="round"/>
+<rect x="6" y="182" width="388" height="44" rx="6" fill="#ffffff" stroke="none" stroke-width="0"/>
+<text x="14" y="210" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Shotgun</text>
+<path d="M135.0 202 L141.3 208.3 L153.0 194.8" fill="none" stroke="#5c7a3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="160.0" y="200" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">1</text>
+<path d="M192.0 194 L208.0 210 M208.0 194 L192.0 210" stroke="#c92a2a" stroke-width="4" stroke-linecap="round"/>
+<path d="M247.0 202 L253.3 208.3 L265.0 194.8" fill="none" stroke="#5c7a3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="272.0" y="200" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">1</text>
+<path d="M303.0 202 L309.3 208.3 L321.0 194.8" fill="none" stroke="#5c7a3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M359.0 202 L365.3 208.3 L377.0 194.8" fill="none" stroke="#5c7a3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="384.0" y="200" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">4</text>
+<rect x="6" y="232" width="388" height="44" rx="6" fill="#f3f0e4" stroke="none" stroke-width="0"/>
+<text x="14" y="260" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Air rifle</text>
+<path d="M135.0 252 L141.3 258.3 L153.0 244.8" fill="none" stroke="#5c7a3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="160.0" y="250" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">8</text>
+<path d="M192.0 244 L208.0 260 M208.0 244 L192.0 260" stroke="#c92a2a" stroke-width="4" stroke-linecap="round"/>
+<path d="M247.0 252 L253.3 258.3 L265.0 244.8" fill="none" stroke="#5c7a3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="272.0" y="250" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">8</text>
+<path d="M303.0 252 L309.3 258.3 L321.0 244.8" fill="none" stroke="#5c7a3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M360.0 244 L376.0 260 M376.0 244 L360.0 260" stroke="#c92a2a" stroke-width="4" stroke-linecap="round"/>
+<rect x="6" y="282" width="388" height="44" rx="6" fill="#ffffff" stroke="none" stroke-width="0"/>
+<text x="14" y="310" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Bow class</text>
+<text x="144.0" y="308" font-size="14" fill="#5c7a3a" text-anchor="middle" font-weight="bold">B C D</text>
+<text x="200.0" y="308" font-size="14" fill="#5c7a3a" text-anchor="middle" font-weight="bold">A C D</text>
+<text x="256.0" y="308" font-size="14" fill="#5c7a3a" text-anchor="middle" font-weight="bold">A C D</text>
+<text x="312.0" y="308" font-size="14" fill="#5c7a3a" text-anchor="middle" font-weight="bold">B C D</text>
+<text x="368.0" y="308" font-size="14" fill="#5c7a3a" text-anchor="middle" font-weight="bold">D</text>
+<text x="14" y="348" font-size="14" fill="#2f3a2b" text-anchor="start">Moose column: elk and caribou are the same.</text>
+<text x="14" y="368" font-size="14" fill="#2f3a2b" text-anchor="start">1  Shotgun: 20 gauge or larger, No. 1 Buck or larger.</text>
+<text x="14" y="388" font-size="14" fill="#2f3a2b" text-anchor="start">2  Rimfire: grouse, ptarmigan or turkey only.</text>
+<text x="14" y="408" font-size="14" fill="#2f3a2b" text-anchor="start">3  Centrefire: grouse or ptarmigan only.</text>
+<text x="14" y="428" font-size="14" fill="#2f3a2b" text-anchor="start">4  Ducks: non toxic shot, 10 gauge or smaller.</text>
+<text x="14" y="448" font-size="14" fill="#2f3a2b" text-anchor="start">8  Air rifle: .35 calibre or larger.</text>
+</svg>

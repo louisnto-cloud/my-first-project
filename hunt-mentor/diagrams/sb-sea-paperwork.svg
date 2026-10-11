@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Four cards you need to hunt the coast in MU 2-4 and in Mission, 98 percent. Your BC hunting licence. The federal Migratory Game Bird Hunting Permit with the habitat stamp, 17 dollars. The Fraser Valley Special Area licence, 10 dollars. And 1,000,000 dollars of public liability insurance. Missing one means no hunt.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Coast paperwork: MU 2-4 and Mission (98%)</text>
+  <rect x="40" y="40" width="320" height="48" rx="8" fill="#4a7fb0"/>
+  <text x="60" y="62" font-size="15" font-weight="bold" fill="#fff" text-anchor="start">BC hunting licence</text>
+  <text x="60" y="80" font-size="13" fill="#fff" text-anchor="start"></text>
+  <path d="M320 66 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <rect x="40" y="96" width="320" height="48" rx="8" fill="#4a7fb0"/>
+  <text x="60" y="118" font-size="15" font-weight="bold" fill="#fff" text-anchor="start">Federal bird permit</text>
+  <text x="60" y="136" font-size="13" fill="#fff" text-anchor="start">MGBHP + stamp: $17</text>
+  <path d="M320 122 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <rect x="40" y="152" width="320" height="48" rx="8" fill="#e8590c"/>
+  <text x="60" y="174" font-size="15" font-weight="bold" fill="#fff" text-anchor="start">Fraser Valley Special</text>
+  <text x="60" y="192" font-size="13" fill="#fff" text-anchor="start">Area licence: $10</text>
+  <path d="M320 178 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <rect x="40" y="208" width="320" height="48" rx="8" fill="#e8590c"/>
+  <text x="60" y="230" font-size="15" font-weight="bold" fill="#fff" text-anchor="start">Liability insurance</text>
+  <text x="60" y="248" font-size="13" fill="#fff" text-anchor="start">$1,000,000</text>
+  <path d="M320 234 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <text x="200" y="286" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Missing one? No hunt in MU 2-4</text>
+</svg>

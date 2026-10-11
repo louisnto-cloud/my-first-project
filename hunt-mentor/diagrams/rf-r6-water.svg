@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 190" role="img" aria-label="Bar chart of Region 6 migratory bird seasons for ducks, all geese, coots and common snipe. Management Units 6-1, 6-2, 6-4 to 6-10 and 6-15 to 6-30: 1 September to 30 November. 6-3 and 6-11 to 6-14, the coast and Haida Gwaii: 1 October to 15 January." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="190" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Ducks, geese, coots, snipe</text>
+<rect x="14.0" y="40" width="31.6" height="114" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="40" width="30.6" height="114" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="40" width="30.6" height="114" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="40" width="31.6" height="114" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="40" width="31.6" height="114" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="40" width="31.6" height="114" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="76" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">6-1, 6-2, 6-4 to 6-10, 6-15 to 6-30</text>
+<rect x="77.2" y="82" width="92.7" height="20" rx="4" fill="#4a7fb0"/>
+<text x="174" y="97" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Nov 30</text>
+<text x="14" y="122" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">6-3, 6-11 to 6-14 (coast, Haida Gwaii)</text>
+<rect x="107.8" y="128" width="109.1" height="20" rx="4" fill="#4a7fb0"/>
+<text x="221" y="143" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 1 to Jan 15</text>
+<rect x="14" y="164" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="32" y="176" font-size="14" fill="#23261f" text-anchor="start">Open season</text>
+</svg>

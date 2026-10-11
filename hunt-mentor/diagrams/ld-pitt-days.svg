@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 274" font-family="sans-serif" role="img" aria-label="Week grid for Pitt Addington Marsh Wildlife Management Area. Waterfowl hunting only on Wednesdays, Saturdays and Sundays in the general season, only in the marked parts. Monday, Tuesday, Thursday and Friday: no hunting. Blinds come out each day. No vehicles, camping or fires. The Fraser Valley special licence and insurance apply.">
+<rect x="0" y="0" width="400" height="274" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Pitt Addington Marsh: hunting days</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">General waterfowl season, marked parts only (85%)</text>
+<rect x="16" y="66" width="47" height="80" rx="8" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="39.5" y="92" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Mon</text>
+<circle cx="39.5" cy="120" r="13" fill="#e8590c"/><path d="M34.3 114.8 L44.7 125.2 M44.7 114.8 L34.3 125.2" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<rect x="69" y="66" width="47" height="80" rx="8" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="92.5" y="92" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tue</text>
+<circle cx="92.5" cy="120" r="13" fill="#e8590c"/><path d="M87.3 114.8 L97.7 125.2 M97.7 114.8 L87.3 125.2" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<rect x="122" y="66" width="47" height="80" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="145.5" y="92" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Wed</text>
+<circle cx="145.5" cy="120" r="13" fill="#8a9a6b"/><path d="M139.65 120 l3.9 4.55 l7.8 -9.1" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<rect x="175" y="66" width="47" height="80" rx="8" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="198.5" y="92" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Thu</text>
+<circle cx="198.5" cy="120" r="13" fill="#e8590c"/><path d="M193.3 114.8 L203.7 125.2 M203.7 114.8 L193.3 125.2" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<rect x="228" y="66" width="47" height="80" rx="8" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="251.5" y="92" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Fri</text>
+<circle cx="251.5" cy="120" r="13" fill="#e8590c"/><path d="M246.3 114.8 L256.7 125.2 M256.7 114.8 L246.3 125.2" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<rect x="281" y="66" width="47" height="80" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="304.5" y="92" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sat</text>
+<circle cx="304.5" cy="120" r="13" fill="#8a9a6b"/><path d="M298.65 120 l3.9 4.55 l7.8 -9.1" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<rect x="334" y="66" width="47" height="80" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="357.5" y="92" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sun</text>
+<circle cx="357.5" cy="120" r="13" fill="#8a9a6b"/><path d="M351.65 120 l3.9 4.55 l7.8 -9.1" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<g transform="translate(80 190) scale(1.2)"><ellipse cx="-2" cy="6" rx="18" ry="8" fill="#6b4f35"/><circle cx="13" cy="-6" r="7" fill="#2e6b3a"/><path d="M19 -5 l9 2 l-9 2 z" fill="#d9a400"/><path d="M-20 4 l-8 -4" stroke="#6b4f35" stroke-width="3"/><path d="M-26 16 q26 6 52 0" stroke="#4a7fb0" stroke-width="3" fill="none"/></g><g transform="translate(160 186) scale(1.2)"><ellipse cx="-4" cy="8" rx="17" ry="8" fill="#6b4f35"/><path d="M10 4 q6 -10 4 -20" stroke="#2f3a2b" stroke-width="5" fill="none"/><ellipse cx="17" cy="-17" rx="6" ry="4" fill="#2f3a2b"/><path d="M12 -12 l6 2" stroke="#fff" stroke-width="2"/><path d="M22 -17 l6 1" stroke="#2f3a2b" stroke-width="3"/></g>
+<text x="210" y="178" font-size="15" font-weight="bold" fill="#2f3a2b">Blinds come out</text>
+<text x="210" y="198" font-size="15" font-weight="bold" fill="#2f3a2b">each day</text>
+<text x="200" y="240" font-size="14" fill="#2f3a2b" text-anchor="middle">No vehicles, camping or fires (85%).</text>
+<text x="200" y="260" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Special licence and insurance apply.</text>
+</svg>

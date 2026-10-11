@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Top view: a pile of dumped grain is bait. A red ring 400 metres around it means no hunting migratory birds inside it, 99 percent. You stand outside the ring: ticked. A card says the place must be bait free for 7 days before hunting is OK. Normal harvest spill and standing crops are not bait.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bait: the 400 m rule (99%)</text>
+  <rect x="0" y="36" width="400" height="230" fill="#dfe6d3"/>
+  <circle cx="150" cy="150" r="104" fill="#c0392b" opacity=".15" stroke="#c0392b" stroke-width="3" stroke-dasharray="8 5"/>
+  <ellipse cx="150" cy="150" rx="22" ry="12" fill="#d9c27a" stroke="#8b5a2b" stroke-width="2"/>
+  <text x="150" y="182" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dumped grain</text>
+  <text x="150" y="92" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">No hunting</text>
+  <path d="M150 150 L254 150 M245.0 154.3 L254 150 L245.0 145.7" stroke="#2f3a2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="206" y="144" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">400 m</text>
+  <g transform="translate(310 150) scale(1.0)"><circle r="9" fill="#e8590c"/><text x="0" y="-18" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">You</text></g>
+  <path d="M296 170 l8.0 8.0 l16.0 -20.0" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <rect x="270" y="210" width="120" height="48" rx="6" fill="#fff" stroke="#2f3a2b"/>
+  <text x="330" y="230" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bait free</text>
+  <text x="330" y="249" font-size="14" fill="#2f3a2b" text-anchor="middle">7 days: OK</text>
+  <path d="M12 282 l4.8 4.8 l9.6 -12.0" fill="none" stroke="#2f6e3b" stroke-width="5"/>
+  <text x="34" y="292" font-size="13" fill="#2f3a2b" text-anchor="start">Normal harvest spill and standing crops are not bait</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Wader belt. Without a belt, a fall lets water rush down into the legs. With a belt cinched at the waist, water coming in is slowed. In a boat or kayak, wear a PFD over the waders.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Always cinch a wader belt</text>
+  <rect x="0" y="150" width="400" height="150" fill="#4a7fb0" opacity=".25"/>
+  <!-- no belt -->
+  <circle cx="100" cy="66" r="13" fill="#d9b48f"/>
+  <path d="M74 82 L126 82 L130 250 L104 250 L100 170 L96 250 L70 250 Z" fill="#5c5a4a" stroke="#2f3a2b" stroke-width="2"/>
+  <path d="M73 150 L127 150 L130 250 L104 250 L100 170 L96 250 L70 250 Z" fill="#4a7fb0" opacity=".8"/>
+  <path d="M84 90 q 6 20 -2 40 M116 90 q -6 20 2 40" stroke="#4a7fb0" stroke-width="4" fill="none"/>
+  <!-- belt -->
+  <circle cx="300" cy="66" r="13" fill="#d9b48f"/>
+  <path d="M274 82 L326 82 L330 250 L304 250 L300 170 L296 250 L270 250 Z" fill="#5c5a4a" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="270" y="132" width="60" height="10" fill="#e8590c"/><rect x="294" y="130" width="12" height="14" fill="#2f3a2b"/>
+  <g font-size="15" font-weight="bold" text-anchor="middle"><text x="100" y="278" fill="#c0392b">No belt ✗</text><text x="300" y="278" fill="#2f6b3a">Belt on ✓</text></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="100" y="296">water rushes in</text><text x="300" y="296">slows the water</text></g>
+  <text x="200" y="110" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">In a boat:</text><text x="200" y="128" font-size="14" fill="#2f3a2b" text-anchor="middle">PFD over waders</text>
+</svg>

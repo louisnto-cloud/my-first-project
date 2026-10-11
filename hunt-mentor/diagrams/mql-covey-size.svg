@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Bar chart of covey size. BC usual: under 30 birds, BC Breeding Bird Atlas, 85 percent. California average: 20 to 25, 70 percent. Washington: a dozen to several dozen, 75 percent. BC big coveys: 100 or more at times, 85 percent. Tip: coveys merge in hard winters.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How many birds in a covey?</text>
+<text x="122" y="68" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">BC, usual</text>
+<rect x="132.3" y="50" width="66.69999999999999" height="26" rx="4" fill="#e8590c"/>
+<text x="207.0" y="68" font-size="14" fill="#2f3a2b" text-anchor="start">under 30 (85%)</text>
+<text x="122" y="114" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">California avg</text>
+<rect x="176.0" y="96" width="11.5" height="26" rx="4" fill="#8b5a2b"/>
+<text x="195.5" y="114" font-size="14" fill="#2f3a2b" text-anchor="start">20 to 25 (70%)</text>
+<text x="122" y="160" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Washington</text>
+<rect x="157.6" y="142" width="82.79999999999998" height="26" rx="4" fill="#8a9a6b"/>
+<text x="248.39999999999998" y="160" font-size="14" fill="#2f3a2b" text-anchor="start">a dozen to several dozen (75%)</text>
+<text x="122" y="206" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">BC, big ones</text>
+<rect x="360.0" y="188" width="8" height="26" rx="4" fill="#a33b2a"/>
+<text x="354.0" y="206" font-size="14" fill="#2f3a2b" text-anchor="end">100 or more (85%)</text>
+<line x1="130" y1="236" x2="384" y2="236" stroke="#2f3a2b" stroke-width="2"/>
+<line x1="130.0" y1="236" x2="130.0" y2="242" stroke="#2f3a2b" stroke-width="2"/><text x="130.0" y="258" font-size="14" fill="#2f3a2b" text-anchor="middle">0</text>
+<line x1="187.5" y1="236" x2="187.5" y2="242" stroke="#2f3a2b" stroke-width="2"/><text x="187.5" y="258" font-size="14" fill="#2f3a2b" text-anchor="middle">25</text>
+<line x1="245.0" y1="236" x2="245.0" y2="242" stroke="#2f3a2b" stroke-width="2"/><text x="245.0" y="258" font-size="14" fill="#2f3a2b" text-anchor="middle">50</text>
+<line x1="302.5" y1="236" x2="302.5" y2="242" stroke="#2f3a2b" stroke-width="2"/><text x="302.5" y="258" font-size="14" fill="#2f3a2b" text-anchor="middle">75</text>
+<line x1="360.0" y1="236" x2="360.0" y2="242" stroke="#2f3a2b" stroke-width="2"/><text x="360.0" y="258" font-size="14" fill="#2f3a2b" text-anchor="middle">100</text>
+<text x="256" y="280" font-size="14" fill="#2f3a2b" text-anchor="middle">birds per covey</text>
+<text x="200" y="296" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Coveys merge in hard winters (Tip)</text>
+</svg>

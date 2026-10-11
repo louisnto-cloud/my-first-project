@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" role="img" aria-label="Five step flow for a grouse seen from the road. 1: seen from the truck; never hunt from a motor vehicle, item 22. 2: pull over safely, engine off; the gun stays unloaded in the vehicle, item 28. 3: get out and walk out of the road allowance, 15 metres from the middle of a road under three lanes. 4: load and check the backstop; never shoot across the road; no backstop, no shot. 5: shoot away from the road. Forest Service roads: whether the road allowance wording covers them is unclear, VERIFY, so keep the same habit." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="420" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Grouse on the road: the legal way</text>
+<rect x="14" y="44" width="372" height="60" rx="8" fill="#ffffff" stroke="#e8590c" stroke-width="2"/>
+<circle cx="36" cy="74" r="14" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="36" y="80" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+<text x="58" y="68" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Seen from the truck</text>
+<text x="58" y="90" font-size="14" fill="#23261f" text-anchor="start">Never hunt from the vehicle (item 22).</text>
+<line x1="200" y1="104" x2="200.0" y2="118.0" stroke="#23261f" stroke-width="2"/><polygon points="200.0,118.0 195.7,109.0 204.3,109.0" fill="#23261f"/>
+<rect x="14" y="118" width="372" height="60" rx="8" fill="#ffffff" stroke="#e8590c" stroke-width="2"/>
+<circle cx="36" cy="148" r="14" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="36" y="154" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+<text x="58" y="142" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Pull over safely, engine off</text>
+<text x="58" y="164" font-size="14" fill="#23261f" text-anchor="start">Gun is unloaded in the vehicle (item 28).</text>
+<line x1="200" y1="178" x2="200.0" y2="192.0" stroke="#23261f" stroke-width="2"/><polygon points="200.0,192.0 195.7,183.0 204.3,183.0" fill="#23261f"/>
+<rect x="14" y="192" width="372" height="60" rx="8" fill="#ffffff" stroke="#e8590c" stroke-width="2"/>
+<circle cx="36" cy="222" r="14" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="36" y="228" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text>
+<text x="58" y="216" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Get out and walk</text>
+<text x="58" y="238" font-size="14" fill="#23261f" text-anchor="start">Out of the road allowance: 15 m from the middle.</text>
+<line x1="200" y1="252" x2="200.0" y2="266.0" stroke="#23261f" stroke-width="2"/><polygon points="200.0,266.0 195.7,257.0 204.3,257.0" fill="#23261f"/>
+<rect x="14" y="266" width="372" height="60" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="36" cy="296" r="14" fill="#2f3a2b" stroke="none" stroke-width="0"/>
+<text x="36" y="302" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">4</text>
+<text x="58" y="290" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Load, check backstop</text>
+<text x="58" y="312" font-size="14" fill="#23261f" text-anchor="start">Never across the road. No backstop, no shot.</text>
+<line x1="200" y1="326" x2="200.0" y2="340.0" stroke="#23261f" stroke-width="2"/><polygon points="200.0,340.0 195.7,331.0 204.3,331.0" fill="#23261f"/>
+<rect x="14" y="340" width="372" height="60" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<circle cx="36" cy="370" r="14" fill="#2f3a2b" stroke="none" stroke-width="0"/>
+<text x="36" y="376" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">5</text>
+<text x="58" y="364" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Shoot away from the road</text>
+<text x="58" y="386" font-size="14" fill="#23261f" text-anchor="start">FSRs: rule wording unclear, VERIFY. Same habit.</text>
+</svg>

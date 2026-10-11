@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" font-family="sans-serif" role="img" aria-label="Cards for Area A recreation sites with hunting among their first 3 listed activities, 90 percent. Near Heffley Creek: Community Lake Southwest and Sullivan Lake, Knouff, MU 3-27. Toward Sun Peaks: McGillivray Lake West and Morrisey Lake West. North and west: Pass Lake, MU 3-29; Fishtrap Creek, Dunsapie Lake and Gorman Lake, MU 3-28; Mayson Lake, MU 3-30. No shooting within 100 metres of camp structures.">
+<rect x="0" y="0" width="400" height="450" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Area A: rec sites that list hunting</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">No shooting within 100 m of camp structures (99%)</text>
+<rect x="16" y="58" width="368" height="116" rx="10" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="26" y="82" font-size="15" font-weight="bold" fill="#23261f">Near Heffley Creek</text>
+<circle cx="368.0" cy="76" r="11" fill="#4a7fb0"/><text x="368" y="80.62" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="26" y="100" font-size="14" fill="#2f3a2b">Community Lake Southwest, Sullivan Lake</text>
+<text x="26" y="118" font-size="14" fill="#2f3a2b">(Knouff). MU 3-27.</text>
+<g transform="translate(46.0 154) scale(0.62)"><path d="M-26 18 l26 -36 l26 36 z" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/><path d="M0 -18 v36 M-6 18 l6 -12 l6 12" stroke="#2f3a2b" stroke-width="2" fill="#fffaf0"/></g>
+<rect x="16" y="184" width="368" height="98" rx="10" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="26" y="208" font-size="15" font-weight="bold" fill="#23261f">Toward Sun Peaks</text>
+<circle cx="368.0" cy="202" r="11" fill="#4a7fb0"/><text x="368" y="206.62" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="26" y="226" font-size="14" fill="#2f3a2b">McGillivray Lake West, Morrisey Lake West.</text>
+<g transform="translate(46.0 262) scale(0.62)"><path d="M-26 18 l26 -36 l26 36 z" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/><path d="M0 -18 v36 M-6 18 l6 -12 l6 12" stroke="#2f3a2b" stroke-width="2" fill="#fffaf0"/></g>
+<rect x="16" y="292" width="368" height="134" rx="10" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="26" y="316" font-size="15" font-weight="bold" fill="#23261f">North and west</text>
+<circle cx="368.0" cy="310" r="11" fill="#4a7fb0"/><text x="368" y="314.62" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="26" y="334" font-size="14" fill="#2f3a2b">Pass Lake (3-29). Fishtrap Creek, Dunsapie</text>
+<text x="26" y="352" font-size="14" fill="#2f3a2b">Lake, Gorman Lake (3-28). Mayson Lake</text>
+<text x="26" y="370" font-size="14" fill="#2f3a2b">(3-30).</text>
+<g transform="translate(46.0 406) scale(0.62)"><path d="M-26 18 l26 -36 l26 36 z" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/><path d="M0 -18 v36 M-6 18 l6 -12 l6 12" stroke="#2f3a2b" stroke-width="2" fill="#fffaf0"/></g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 2: close up of the rail on top of the receiver. Clean and degrease it. Set two ring bases in the slots and push each one forward, toward the muzzle.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Ring bases on the rail</text>
+  <rect x="30" y="170" width="340" height="40" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="40" y="150" width="320" height="20" fill="#4a4f48"/>
+  <g fill="#fffaf0"><rect x="60" y="150" width="12" height="12"/><rect x="100" y="150" width="12" height="12"/><rect x="140" y="150" width="12" height="12"/><rect x="180" y="150" width="12" height="12"/><rect x="220" y="150" width="12" height="12"/><rect x="260" y="150" width="12" height="12"/><rect x="300" y="150" width="12" height="12"/></g>
+  <g fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"><path d="M110 150 L110 104 Q 130 92 150 104 L150 150 Z"/><path d="M270 150 L270 104 Q 290 92 310 104 L310 150 Z"/></g>
+  <g stroke="#e8590c" stroke-width="4" fill="none"><path d="M160 120 h40 m-10 -8 l10 8 l-10 8"/><path d="M320 120 h40 m-10 -8 l10 8 l-10 8"/></g>
+  <text x="340" y="80" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Push</text><text x="340" y="98" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">forward</text>
+  <text x="200" y="240" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Clean and degrease rail and screws first</text>
+  <text x="380" y="270" font-size="14" fill="#2f3a2b" text-anchor="end">Muzzle this way →</text>
+  <text x="20" y="270" font-size="14" fill="#2f3a2b">Tip</text>
+</svg>

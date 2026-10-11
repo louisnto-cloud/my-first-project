@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 416" font-family="sans-serif" role="img" aria-label="Cards about firearms on trips inside Canada. No border: your Possession and Acquisition Licence is federal and covers you, 85 percent. The same federal RCMP transport rules apply: unloaded and cased. Each province has its own road and vehicle hunting rules, read them before you load near a road, VERIFY.">
+<rect x="0" y="0" width="400" height="416" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Firearms: no border inside Canada</text>
+<rect x="16" y="42" width="368" height="98" rx="10" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="26" y="66" font-size="15" font-weight="bold" fill="#23261f">Your PAL covers you</text>
+<circle cx="368.0" cy="60" r="11" fill="#8a9a6b"/><path d="M363.05 60 l3.3 3.8499999999999996 l6.6 -7.699999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<text x="26" y="84" font-size="14" fill="#2f3a2b">The licence is federal (85%).</text>
+<g transform="translate(46.0 120) scale(0.62)"><rect x="-28" y="-18" width="56" height="36" rx="5" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/><rect x="-22" y="-11" width="15" height="19" fill="#8a9a6b"/><path d="M-2 -8 h22 M-2 -1 h22 M-2 6 h15" stroke="#2f3a2b" stroke-width="2.5"/></g>
+<rect x="16" y="150" width="368" height="116" rx="10" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="26" y="174" font-size="15" font-weight="bold" fill="#23261f">Same federal transport rules</text>
+<circle cx="368.0" cy="168" r="11" fill="#8a9a6b"/><path d="M363.05 168 l3.3 3.8499999999999996 l6.6 -7.699999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<text x="26" y="192" font-size="14" fill="#2f3a2b">Unloaded, cased, as the RCMP rules say</text>
+<text x="26" y="210" font-size="14" fill="#2f3a2b">(85%).</text>
+<g transform="translate(46.0 246) scale(0.62)"><rect x="-32" y="-12" width="64" height="24" rx="10" fill="#2f3a2b"/><rect x="-26" y="-6" width="52" height="12" rx="6" fill="#6b4f35"/><rect x="-4" y="9" width="8" height="8" rx="2" fill="#e8590c"/></g>
+<g transform="translate(133.0 246) scale(0.62)"><path d="M-30 8 v-12 h28 v-10 h18 l10 10 h4 v12 z" fill="#4a7fb0"/><circle cx="-18" cy="10" r="6" fill="#2f3a2b"/><circle cx="18" cy="10" r="6" fill="#2f3a2b"/><rect x="0" y="-11" width="11" height="7" fill="#fff"/></g>
+<rect x="16" y="276" width="368" height="116" rx="10" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="26" y="300" font-size="15" font-weight="bold" fill="#23261f">Road and vehicle rules differ</text>
+<circle cx="368.0" cy="294" r="11" fill="#4a7fb0"/><text x="368" y="298.62" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="26" y="318" font-size="14" fill="#2f3a2b">Read the province&#x27;s rules before you load</text>
+<text x="26" y="336" font-size="14" fill="#2f3a2b">near a road. VERIFY.</text>
+<g transform="translate(46.0 372) scale(0.62)"><path d="M0 -14 q-14 -6 -28 -2 v32 q14 -4 28 2 q14 -6 28 -2 v-32 q-14 -4 -28 2 z" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/><path d="M0 -14 v32" stroke="#2f3a2b" stroke-width="2"/><path d="M-22 -6 h16 M-22 2 h16 M6 -6 h16 M6 2 h16" stroke="#8a9a6b" stroke-width="2.5"/></g>
+</svg>

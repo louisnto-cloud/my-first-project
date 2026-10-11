@@ -1,0 +1,757 @@
+[
+ {
+  "id": "mwt-card-001",
+  "deck": "White tail Masterclass",
+  "front": "Wide brown tail, white underneath, held up and waving. Which deer?",
+  "back": "White tailed deer. The raised tail is the flag (85%).",
+  "diagram": "mwt-tail-compare"
+ },
+ {
+  "id": "mwt-card-002",
+  "deck": "White tail Masterclass",
+  "front": "Thin white rope tail with a black tip on a big white rump. Which deer?",
+  "back": "Mule deer (85%).",
+  "diagram": "mwt-tail-compare"
+ },
+ {
+  "id": "mwt-card-003",
+  "deck": "White tail Masterclass",
+  "front": "How do white tail antlers grow?",
+  "back": "One main beam sweeping forward, tines rising straight up off it (85%).",
+  "diagram": "mwt-antler-parts"
+ },
+ {
+  "id": "mwt-card-004",
+  "deck": "White tail Masterclass",
+  "front": "What is the brow tine?",
+  "back": "G1: the short tine just above the antler base (70%)."
+ },
+ {
+  "id": "mwt-card-005",
+  "deck": "White tail Masterclass",
+  "front": "How does a white tail run from danger?",
+  "back": "Low, smooth gallop with the tail up. A mule deer stots on all 4 feet (85%)."
+ },
+ {
+  "id": "mwt-card-006",
+  "deck": "White tail Masterclass",
+  "front": "Best first clue to a buck's age on the hoof?",
+  "back": "Body shape: neck, chest, belly, leg look. Not antlers (65%).",
+  "diagram": "mwt-age-bodies"
+ },
+ {
+  "id": "mwt-card-007",
+  "deck": "White tail Masterclass",
+  "front": "What does a yearling buck look like?",
+  "back": "A doe with antlers: lanky, thin neck, narrow waist, long legs (65%).",
+  "diagram": "mwt-age-bodies"
+ },
+ {
+  "id": "mwt-card-008",
+  "deck": "White tail Masterclass",
+  "front": "Signs of a buck 4 years or older?",
+  "back": "Deep chest, sagging belly, thick neck blending into shoulders, legs look short (65%)."
+ },
+ {
+  "id": "mwt-card-009",
+  "deck": "White tail Masterclass",
+  "front": "Is a button buck legal in a bucks only season?",
+  "back": "No. A button buck has no visible antlers, so it is antlerless (99%, synopsis page 3).",
+  "diagram": "sa-button-buck"
+ },
+ {
+  "id": "mwt-card-010",
+  "deck": "White tail Masterclass",
+  "front": "How common are mule deer and white tail hybrids on the western Canadian prairies?",
+  "back": "About 1% (85%, Russell and others 2021). Not sure what it is? Do not shoot."
+ },
+ {
+  "id": "mwt-card-011",
+  "deck": "White tail Masterclass",
+  "front": "Average live weight of a white tail buck and doe (Idaho)?",
+  "back": "Buck about 91 kg (200 lb), doe about 57 kg (125 lb) (80%).",
+  "diagram": "mwt-size-bars"
+ },
+ {
+  "id": "mwt-card-012",
+  "deck": "White tail Masterclass",
+  "front": "Mature white tail buck weight (Montana)?",
+  "back": "91 to 136 kg (200 to 300 lb). Does 25 to 40% less (80%)."
+ },
+ {
+  "id": "mwt-card-013",
+  "deck": "White tail Masterclass",
+  "front": "Which BC region had the most resident white tail kills in 2024?",
+  "back": "Region 4 Kootenay, about 3,971 (90%).",
+  "diagram": "mwt-harvest-bars"
+ },
+ {
+  "id": "mwt-card-014",
+  "deck": "White tail Masterclass",
+  "front": "Region 3 Thompson resident white tail kills, 2024?",
+  "back": "About 1,091 from about 7,900 hunters, about 14% (90%)."
+ },
+ {
+  "id": "mwt-card-015",
+  "deck": "White tail Masterclass",
+  "front": "MU 3-27 white tails taken per year, 2020 to 2024?",
+  "back": "About 97 to 145 a year; 133 in 2024, about 17% success (90%)."
+ },
+ {
+  "id": "mwt-card-016",
+  "deck": "White tail Masterclass",
+  "front": "Is there a white tail season in Region 2 (Fraser Valley)?",
+  "back": "No. The Region 2 white tailed deer bag is 0 (97%, page 14)."
+ },
+ {
+  "id": "mwt-card-017",
+  "deck": "White tail Masterclass",
+  "front": "BC white tail numbers, 1987 and 2011?",
+  "back": "About 40,000 in 1987, more than 113,000 in 2011 (80%).",
+  "diagram": "mwt-bc-trend"
+ },
+ {
+  "id": "mwt-card-018",
+  "deck": "White tail Masterclass",
+  "front": "BC white tail estimate for 2022?",
+  "back": "35,000 to 71,500 (75%). Different method from 2011: compare with care.",
+  "diagram": "mwt-bc-trend"
+ },
+ {
+  "id": "mwt-card-019",
+  "deck": "White tail Masterclass",
+  "front": "Subspecies of southern Interior white tails?",
+  "back": "Northwest white tail, Odocoileus virginianus ochrourus (75%)."
+ },
+ {
+  "id": "mwt-card-020",
+  "deck": "White tail Masterclass",
+  "front": "Where are the lungs?",
+  "back": "Filling the chest from just behind the shoulder back to the diaphragm (85%).",
+  "diagram": "mwt-body-cutaway"
+ },
+ {
+  "id": "mwt-card-021",
+  "deck": "White tail Masterclass",
+  "front": "Where is the heart?",
+  "back": "Low in the chest, near the elbows (80%).",
+  "diagram": "mwt-heart-vessels"
+ },
+ {
+  "id": "mwt-card-022",
+  "deck": "White tail Masterclass",
+  "front": "What muscle drives breathing?",
+  "back": "The diaphragm, between chest and belly (90%).",
+  "diagram": "mwt-body-cutaway"
+ },
+ {
+  "id": "mwt-card-023",
+  "deck": "White tail Masterclass",
+  "front": "Why does a double lung hit kill fast?",
+  "back": "Air enters the chest and the lungs collapse; the deer runs on stored oxygen, often 50 to 137 m (70%)."
+ },
+ {
+  "id": "mwt-card-024",
+  "deck": "White tail Masterclass",
+  "front": "What covers the front of the lungs?",
+  "back": "The shoulder blade, which slides with the leg (80%).",
+  "diagram": "mwt-shoulder-bones"
+ },
+ {
+  "id": "mwt-card-025",
+  "deck": "White tail Masterclass",
+  "front": "Where to aim on a broadside white tail?",
+  "back": "Up the back of the front leg, one third up the chest (75%).",
+  "diagram": "vitals-deer"
+ },
+ {
+  "id": "mwt-card-026",
+  "deck": "White tail Masterclass",
+  "front": "How many stomach chambers?",
+  "back": "4: rumen, reticulum, omasum, abomasum (85%).",
+  "diagram": "mwt-four-stomachs"
+ },
+ {
+  "id": "mwt-card-027",
+  "deck": "White tail Masterclass",
+  "front": "What does the rumen do?",
+  "back": "Holds microbes that ferment plant food (85%).",
+  "diagram": "mwt-four-stomachs"
+ },
+ {
+  "id": "mwt-card-028",
+  "deck": "White tail Masterclass",
+  "front": "Why can a white tail starve on hay in a hard winter?",
+  "back": "Rumen microbes need time to adjust to a new diet (80%, Montana State University Extension)."
+ },
+ {
+  "id": "mwt-card-029",
+  "deck": "White tail Masterclass",
+  "front": "How much dry food does a white tail eat a day?",
+  "back": "2 to 4% of its body weight (80%)."
+ },
+ {
+  "id": "mwt-card-030",
+  "deck": "White tail Masterclass",
+  "front": "When is a buck fattest?",
+  "back": "About September, before the rut. He burns it in November (75%).",
+  "diagram": "mwt-fat-cycle"
+ },
+ {
+  "id": "mwt-card-031",
+  "deck": "White tail Masterclass",
+  "front": "When are white tails leanest?",
+  "back": "Late winter (80%).",
+  "diagram": "mwt-fat-cycle"
+ },
+ {
+  "id": "mwt-card-032",
+  "deck": "White tail Masterclass",
+  "front": "How long do white tails live?",
+  "back": "Few past 10 years; possible 20 plus (85%).",
+  "diagram": "mwt-lifespan"
+ },
+ {
+  "id": "mwt-card-033",
+  "deck": "White tail Masterclass",
+  "front": "Average life of a buck in heavily hunted Pennsylvania?",
+  "back": "About 2 years; does about 3 (85%, US Forest Service review).",
+  "diagram": "mwt-lifespan"
+ },
+ {
+  "id": "mwt-card-034",
+  "deck": "White tail Masterclass",
+  "front": "Snow depth that makes deer travel hard?",
+  "back": "Over about 40 cm (16 in) (85%).",
+  "diagram": "mwt-winter-yard"
+ },
+ {
+  "id": "mwt-card-035",
+  "deck": "White tail Masterclass",
+  "front": "What is yarding?",
+  "back": "In hard winters deer bunch in dense cover and pack trails (80%).",
+  "diagram": "mwt-winter-yard"
+ },
+ {
+  "id": "mwt-card-036",
+  "deck": "White tail Masterclass",
+  "front": "A white tail's strongest sense?",
+  "back": "Smell (85%).",
+  "diagram": "sg-senses-rank"
+ },
+ {
+  "id": "mwt-card-037",
+  "deck": "White tail Masterclass",
+  "front": "Which way does your scent go on a sunny morning?",
+  "back": "Uphill: warming air rises (80%)."
+ },
+ {
+  "id": "mwt-card-038",
+  "deck": "White tail Masterclass",
+  "front": "Which way does your scent go in the evening?",
+  "back": "Downhill, pooling in the river bottoms where white tails bed (80%)."
+ },
+ {
+  "id": "mwt-card-039",
+  "deck": "White tail Masterclass",
+  "front": "Deer hearing range and best band?",
+  "back": "About 115 Hz to 54 kHz, best 4 to 8 kHz (85%).",
+  "diagram": "sg-deer-hearing"
+ },
+ {
+  "id": "mwt-card-040",
+  "deck": "White tail Masterclass",
+  "front": "Which sounds hit a deer's best hearing band?",
+  "back": "Zippers, Velcro, nylon, metal clicks, snapping twigs (85%).",
+  "diagram": "sg-deer-hearing"
+ },
+ {
+  "id": "mwt-card-041",
+  "deck": "White tail Masterclass",
+  "front": "White tail field of view?",
+  "back": "About 310 degrees without turning the head (80%).",
+  "diagram": "mwt-field-of-view"
+ },
+ {
+  "id": "mwt-card-042",
+  "deck": "White tail Masterclass",
+  "front": "Where is a white tail's blind spot?",
+  "back": "A narrow wedge straight behind (80%).",
+  "diagram": "mwt-field-of-view"
+ },
+ {
+  "id": "mwt-card-043",
+  "deck": "White tail Masterclass",
+  "front": "Why does blaze orange look dull to deer?",
+  "back": "2 colour cones (blue, green), no red cone (85%).",
+  "diagram": "sg-deer-vision"
+ },
+ {
+  "id": "mwt-card-044",
+  "deck": "White tail Masterclass",
+  "front": "What gives a hunter away to a deer's eyes?",
+  "back": "Motion and outline, not colour (85%)."
+ },
+ {
+  "id": "mwt-card-045",
+  "deck": "White tail Masterclass",
+  "front": "What does an unsure white tail often do?",
+  "back": "Circles downwind to smell you (Tip, widely reported).",
+  "diagram": "mwt-sense-flow"
+ },
+ {
+  "id": "mwt-card-046",
+  "deck": "White tail Masterclass",
+  "front": "Why sit high or in a dark blind?",
+  "back": "Gets you out of the eye level scan of a horizontal pupil (Tip).",
+  "diagram": "mwt-eye-level"
+ },
+ {
+  "id": "mwt-card-047",
+  "deck": "White tail Masterclass",
+  "front": "Legal status of deer urine lures from outside BC?",
+  "back": "Unlawful for hunting (95%, page 12 item 51)."
+ },
+ {
+  "id": "mwt-card-048",
+  "deck": "White tail Masterclass",
+  "front": "A doe stamps and stares. What do you do?",
+  "back": "Freeze. The stamp is a test to make you move (Tip)."
+ },
+ {
+  "id": "mwt-card-049",
+  "deck": "White tail Masterclass",
+  "front": "How many white tail calls did Atkeson and others record?",
+  "back": "12 (80%)."
+ },
+ {
+  "id": "mwt-card-050",
+  "deck": "White tail Masterclass",
+  "front": "Which call marks a dominant buck's challenge in the rut?",
+  "back": "Grunt snort wheeze (80%)."
+ },
+ {
+  "id": "mwt-card-051",
+  "deck": "White tail Masterclass",
+  "front": "What is a tending grunt?",
+  "back": "A long drawn out grunt a buck makes with a doe (70%)."
+ },
+ {
+  "id": "mwt-card-052",
+  "deck": "White tail Masterclass",
+  "front": "Why does a white tail flag?",
+  "back": "Debated: warn others, tell the predator it is seen, or guide fawns. One study found little support for warning others (70%)."
+ },
+ {
+  "id": "mwt-card-053",
+  "deck": "White tail Masterclass",
+  "front": "Where does a spooked white tail run?",
+  "back": "To the nearest thick cover, often stopping just inside to look back (Tip)."
+ },
+ {
+  "id": "mwt-card-054",
+  "deck": "White tail Masterclass",
+  "front": "Penn State collar study: what did deer do on opening day?",
+  "back": "Reacted the day before, then hid inside their home range (70%).",
+  "diagram": "mwt-pressure-map"
+ },
+ {
+  "id": "mwt-card-055",
+  "deck": "White tail Masterclass",
+  "front": "Who lives in a white tail family group?",
+  "back": "An old doe, her daughters and their fawns (80%).",
+  "diagram": "mwt-social-groups"
+ },
+ {
+  "id": "mwt-card-056",
+  "deck": "White tail Masterclass",
+  "front": "Size of a summer bachelor group?",
+  "back": "2 to 4 bucks (80%).",
+  "diagram": "mwt-social-groups"
+ },
+ {
+  "id": "mwt-card-057",
+  "deck": "White tail Masterclass",
+  "front": "What share of yearling bucks disperse?",
+  "back": "About 70%, mostly October and November (80%).",
+  "diagram": "mwt-social-groups"
+ },
+ {
+  "id": "mwt-card-058",
+  "deck": "White tail Masterclass",
+  "front": "Do mature buck home ranges grow with age?",
+  "back": "Collar study reviews say they often shrink (65%).",
+  "diagram": "mwt-old-vs-young"
+ },
+ {
+  "id": "mwt-card-059",
+  "deck": "White tail Masterclass",
+  "front": "How many bedding areas did the average Mississippi collared buck use?",
+  "back": "About 31 in a season; repeat beds had dense screening cover (65%)."
+ },
+ {
+  "id": "mwt-card-060",
+  "deck": "White tail Masterclass",
+  "front": "White tail vs mule deer bucks: which fight more?",
+  "back": "White tails (75%, Montana State University Extension). That is why rattling works."
+ },
+ {
+  "id": "mwt-card-061",
+  "deck": "White tail Masterclass",
+  "front": "When are white tail fawns born?",
+  "back": "Late May or June (85%).",
+  "diagram": "mwt-year-wheel"
+ },
+ {
+  "id": "mwt-card-062",
+  "deck": "White tail Masterclass",
+  "front": "Gestation length?",
+  "back": "About 202 days, about 7 months (80%)."
+ },
+ {
+  "id": "mwt-card-063",
+  "deck": "White tail Masterclass",
+  "front": "How long is a newborn fawn hidden?",
+  "back": "About 2 weeks; the doe returns to nurse 4 to 6 times a day (75 to 80%)."
+ },
+ {
+  "id": "mwt-card-064",
+  "deck": "White tail Masterclass",
+  "front": "When do bucks rub off velvet?",
+  "back": "Early to mid September (75%).",
+  "diagram": "mwt-antler-cycle"
+ },
+ {
+  "id": "mwt-card-065",
+  "deck": "White tail Masterclass",
+  "front": "When do bucks drop antlers?",
+  "back": "About January to March (75%).",
+  "diagram": "mwt-antler-cycle"
+ },
+ {
+  "id": "mwt-card-066",
+  "deck": "White tail Masterclass",
+  "front": "What drives the antler cycle?",
+  "back": "Day length acting through testosterone (75%).",
+  "diagram": "mwt-antler-cycle"
+ },
+ {
+  "id": "mwt-card-067",
+  "deck": "White tail Masterclass",
+  "front": "When do most does conceive?",
+  "back": "About 13 to 17 November (80%, Penn State). BC: rut peaks in November (85%).",
+  "diagram": "mwt-oct-nov"
+ },
+ {
+  "id": "mwt-card-068",
+  "deck": "White tail Masterclass",
+  "front": "How long is a doe in heat?",
+  "back": "About 24 hours (80%).",
+  "diagram": "mwt-estrus-cycle"
+ },
+ {
+  "id": "mwt-card-069",
+  "deck": "White tail Masterclass",
+  "front": "Doe not bred? When is her next heat?",
+  "back": "About 28 days later: the December second rut (80%).",
+  "diagram": "mwt-estrus-cycle"
+ },
+ {
+  "id": "mwt-card-070",
+  "deck": "White tail Masterclass",
+  "front": "How long does a buck tend a doe?",
+  "back": "1 to 3 days before her heat, 2 or 3 after (80%).",
+  "diagram": "mwt-estrus-cycle"
+ },
+ {
+  "id": "mwt-card-071",
+  "deck": "White tail Masterclass",
+  "front": "Rut phases in order?",
+  "back": "Pre rut, seeking, chasing, tending (lockdown), post rut, second rut (60%).",
+  "diagram": "mwt-oct-nov"
+ },
+ {
+  "id": "mwt-card-072",
+  "deck": "White tail Masterclass",
+  "front": "Region 3 white tail buck season (2026 to 2028)?",
+  "back": "10 September to 10 December in the listed MUs (99%, page 34)."
+ },
+ {
+  "id": "mwt-card-073",
+  "deck": "White tail Masterclass",
+  "front": "Antlerless white tails in Regions 3 and 8?",
+  "back": "10 to 31 October, no draw (99%, pages 34 and 68)."
+ },
+ {
+  "id": "mwt-card-074",
+  "deck": "White tail Masterclass",
+  "front": "When do white tails move most?",
+  "back": "Near dawn and dusk (85%).",
+  "diagram": "mwt-day-clock"
+ },
+ {
+  "id": "mwt-card-075",
+  "deck": "White tail Masterclass",
+  "front": "When are white tails active most of the day?",
+  "back": "Winter (85%, BC account)."
+ },
+ {
+  "id": "mwt-card-076",
+  "deck": "White tail Masterclass",
+  "front": "Which factor predicts movement best: moon, barometer or time of day?",
+  "back": "Time of day, then season (75%).",
+  "diagram": "mwt-weather-evidence"
+ },
+ {
+  "id": "mwt-card-077",
+  "deck": "White tail Masterclass",
+  "front": "Do deer feed hard before a storm?",
+  "back": "Penn State: no change before 30 winter storms; less movement during (80%)."
+ },
+ {
+  "id": "mwt-card-078",
+  "deck": "White tail Masterclass",
+  "front": "Does the moon move white tails?",
+  "back": "Collar studies: small or no effect; dawn and dusk win (75%)."
+ },
+ {
+  "id": "mwt-card-079",
+  "deck": "White tail Masterclass",
+  "front": "How much water does a deer drink on dry food?",
+  "back": "About 3 kg per kg of dry food (80%)."
+ },
+ {
+  "id": "mwt-card-080",
+  "deck": "White tail Masterclass",
+  "front": "When should you be in your evening stand?",
+  "back": "About 2 hours before dark (Tip).",
+  "diagram": "mwt-day-plan"
+ },
+ {
+  "id": "mwt-card-081",
+  "deck": "White tail Masterclass",
+  "front": "Legal hunting hours?",
+  "back": "1 hour before sunrise to 1 hour after sunset (99%, page 11 item 38)."
+ },
+ {
+  "id": "mwt-card-082",
+  "deck": "White tail Masterclass",
+  "front": "Classic white tail habitat?",
+  "back": "Valley bottoms with farmland, river brush and edges (85%).",
+  "diagram": "mwt-valley-section"
+ },
+ {
+  "id": "mwt-card-083",
+  "deck": "White tail Masterclass",
+  "front": "Where do valley white tails bed?",
+  "back": "Willow, cottonwood, young conifers near water (75%).",
+  "diagram": "mwt-valley-section"
+ },
+ {
+  "id": "mwt-card-084",
+  "deck": "White tail Masterclass",
+  "front": "White tail winter browse favourites?",
+  "back": "Willow, red osier dogwood, chokecherry, saskatoon (80%)."
+ },
+ {
+  "id": "mwt-card-085",
+  "deck": "White tail Masterclass",
+  "front": "White tail elevation in southern BC?",
+  "back": "About 300 to 900 m most months (60 to 70%).",
+  "diagram": "mwt-elev-months"
+ },
+ {
+  "id": "mwt-card-086",
+  "deck": "White tail Masterclass",
+  "front": "How far do white tails move to winter range?",
+  "back": "Usually under 16 km (85%)."
+ },
+ {
+  "id": "mwt-card-087",
+  "deck": "White tail Masterclass",
+  "front": "Which Hunt Map layer shows white tails by month?",
+  "back": "White tailed deer by month (general pattern).",
+  "diagram": "mwt-map-1"
+ },
+ {
+  "id": "mwt-card-088",
+  "deck": "White tail Masterclass",
+  "front": "Which Hunt Map tool finds south facing slopes?",
+  "back": "Slope direction (Tip: late season feed).",
+  "diagram": "mwt-map-3"
+ },
+ {
+  "id": "mwt-card-089",
+  "deck": "White tail Masterclass",
+  "front": "Top Region 3 MUs for white tails, 2022 to 2024?",
+  "back": "3-36, then 3-27, 3-26, 3-20, 3-19 (90%)."
+ },
+ {
+  "id": "mwt-card-090",
+  "deck": "White tail Masterclass",
+  "front": "Region 8 white tail bag limit?",
+  "back": "2: no more than 1 buck and 1 antlerless (99%, page 67)."
+ },
+ {
+  "id": "mwt-card-091",
+  "deck": "White tail Masterclass",
+  "front": "White tail track: shape and size?",
+  "back": "Heart shaped, 2 toes, about 4 to 10 cm, point shows direction (70 to 85%).",
+  "diagram": "sg-hoof-grid"
+ },
+ {
+  "id": "mwt-card-092",
+  "deck": "White tail Masterclass",
+  "front": "Gallop track pattern?",
+  "back": "Groups of 4, hind prints ahead of front prints (75%).",
+  "diagram": "mwt-track-gaits"
+ },
+ {
+  "id": "mwt-card-093",
+  "deck": "White tail Masterclass",
+  "front": "Pellet size?",
+  "back": "About 1 to 1.5 cm (70%)."
+ },
+ {
+  "id": "mwt-card-094",
+  "deck": "White tail Masterclass",
+  "front": "A deer bed: what to look for?",
+  "back": "Pressed oval about 1 m, hair, melted frost, pellets beside it (75%).",
+  "diagram": "mwt-bed-sign"
+ },
+ {
+  "id": "mwt-card-095",
+  "deck": "White tail Masterclass",
+  "front": "Which gland marks rubs?",
+  "back": "Forehead gland between the antler bases (65%)."
+ },
+ {
+  "id": "mwt-card-096",
+  "deck": "White tail Masterclass",
+  "front": "What is a scrape?",
+  "back": "Pawed bare dirt under a licking branch, often with urine (75%).",
+  "diagram": "mwt-scrape-anatomy"
+ },
+ {
+  "id": "mwt-card-097",
+  "deck": "White tail Masterclass",
+  "front": "Licking branch height?",
+  "back": "About 1.2 to 1.5 m (4 to 5 ft) (65%, Ozoga).",
+  "diagram": "mwt-scrape-anatomy"
+ },
+ {
+  "id": "mwt-card-098",
+  "deck": "White tail Masterclass",
+  "front": "Deer browse or hare browse?",
+  "back": "Deer tear twigs (no upper front teeth). Hares cut clean at 45 degrees (75%)."
+ },
+ {
+  "id": "mwt-card-099",
+  "deck": "White tail Masterclass",
+  "front": "Can a dog track your wounded deer?",
+  "back": "Yes, on a leash only (99%, page 12)."
+ },
+ {
+  "id": "mwt-card-100",
+  "deck": "White tail Masterclass",
+  "front": "Lost a blood trail. What now?",
+  "back": "Small loops out from the last marked sign (Tip).",
+  "diagram": "mwt-follow-4"
+ },
+ {
+  "id": "mwt-card-101",
+  "deck": "White tail Masterclass",
+  "front": "Beginner's best white tail method with farm permission?",
+  "back": "A stand on the trail between bedding and food, downwind (Tip).",
+  "diagram": "mwt-method-picker"
+ },
+ {
+  "id": "mwt-card-102",
+  "deck": "White tail Masterclass",
+  "front": "When does rattling work best?",
+  "back": "Late October to mid November, cool calm mornings (70%)."
+ },
+ {
+  "id": "mwt-card-103",
+  "deck": "White tail Masterclass",
+  "front": "Rattling response in the Texas study?",
+  "back": "About 65% of bucks responded (70%)."
+ },
+ {
+  "id": "mwt-card-104",
+  "deck": "White tail Masterclass",
+  "front": "Where does the shooter sit when rattling?",
+  "back": "Downwind of the caller: bucks circle downwind (Tip).",
+  "diagram": "mwt-rattle-1"
+ },
+ {
+  "id": "mwt-card-105",
+  "deck": "White tail Masterclass",
+  "front": "Electronic deer calls in BC?",
+  "back": "Not allowed for deer (99%)."
+ },
+ {
+  "id": "mwt-card-106",
+  "deck": "White tail Masterclass",
+  "front": "Hunting with a partner: first rule?",
+  "back": "Agree on zones of fire. Never shoot toward each other (Tip).",
+  "diagram": "mwt-partner-push"
+ },
+ {
+  "id": "mwt-card-107",
+  "deck": "White tail Masterclass",
+  "front": "Wind wrong for plan A stand?",
+  "back": "Go to plan B or still hunt (Tip).",
+  "diagram": "mwt-day-decision"
+ },
+ {
+  "id": "mwt-card-108",
+  "deck": "White tail Masterclass",
+  "front": "Heart or lung hit reaction?",
+  "back": "Often a kick or hard bolt, then a crash nearby (Tip).",
+  "diagram": "mwt-shot-reactions"
+ },
+ {
+  "id": "mwt-card-109",
+  "deck": "White tail Masterclass",
+  "front": "Gut hit reaction?",
+  "back": "Tail clamped, hunched, slow walk. Wait 6 to 8 hours or overnight if cool (70%).",
+  "diagram": "mwt-shot-reactions"
+ },
+ {
+  "id": "mwt-card-110",
+  "deck": "White tail Masterclass",
+  "front": "Liver hit wait?",
+  "back": "4 to 6 hours (70%)."
+ },
+ {
+  "id": "mwt-card-111",
+  "deck": "White tail Masterclass",
+  "front": "First thing at a downed white tail?",
+  "back": "Notch (cancel) the species licence (99%, page 11 item 1)."
+ },
+ {
+  "id": "mwt-card-112",
+  "deck": "White tail Masterclass",
+  "front": "Evidence of sex on a white tail doe?",
+  "back": "Unskinned tail plus part of the udder and teats (99%, page 15)."
+ },
+ {
+  "id": "mwt-card-113",
+  "deck": "White tail Masterclass",
+  "front": "Evidence of sex on a white tail buck?",
+  "back": "Unskinned tail plus a testicle or part of the penis (99%, page 15)."
+ },
+ {
+  "id": "mwt-card-114",
+  "deck": "White tail Masterclass",
+  "front": "Region 3 white tail bag?",
+  "back": "2, either sex. Aggregate deer bag 3, mule deer 1 (99%, page 33)."
+ },
+ {
+  "id": "mwt-card-115",
+  "deck": "White tail Masterclass",
+  "front": "Distance rule near houses?",
+  "back": "No hunting or shooting within 100 m of a dwelling or occupied farm or ranch building (99%, page 10)."
+ }
+]

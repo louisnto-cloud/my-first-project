@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, bore sight step 3: without moving the rifle, look through the scope. The crosshair starts off the target. Turning the turrets moves the crosshair onto the same spot you saw through the bore.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Now the scope: turn the turrets</text>
+  <clipPath id="gr-bore-align-c"><circle cx="200" cy="160" r="104"/></clipPath>
+  <circle cx="200" cy="160" r="104" fill="#dfe6d3"/>
+  <circle cx="200" cy="160" r="30" fill="#fff" stroke="#2f3a2b" stroke-width="2"/><circle cx="200" cy="160" r="10" fill="#e8590c"/>
+  <g clip-path="url(#gr-bore-align-c)"><g>
+    <animateTransform attributeName="transform" type="translate" values="60 -46;60 -46;60 0;0 0" keyTimes="0;0.2;0.55;1" dur="5s" fill="freeze"/>
+    <g stroke="#2f3a2b"><line x1="80" y1="160" x2="170" y2="160" stroke-width="5"/><line x1="230" y1="160" x2="320" y2="160" stroke-width="5"/><line x1="170" y1="160" x2="230" y2="160" stroke-width="1.5"/><line x1="200" y1="40" x2="200" y2="130" stroke-width="5"/><line x1="200" y1="190" x2="200" y2="280" stroke-width="5"/><line x1="200" y1="130" x2="200" y2="190" stroke-width="1.5"/></g>
+  </g></g>
+  <circle cx="200" cy="160" r="104" fill="none" stroke="#2f3a2b" stroke-width="6"/>
+  <g opacity="0"><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" begin="1s" dur="1.8s" fill="freeze"/><text x="330" y="160" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Down</text></g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" begin="2.8s" dur="2s" fill="freeze"/><text x="70" y="160" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Left</text></g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="5s" dur=".4s" fill="freeze"/>
+    <rect x="120" y="270" width="160" height="28" rx="6" fill="#2f3a2b"/><text x="200" y="290" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Same spot ✓</text></g>
+</svg>

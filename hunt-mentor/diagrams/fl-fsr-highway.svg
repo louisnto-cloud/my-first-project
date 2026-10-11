@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 298" role="img" aria-label="Getting to the hunt: winter tires with the mountain snowflake or M plus S mark and at least 3.5 mm of tread on many BC highways from 1 October, chains where signs require them, and check DriveBC before you leave.">
+  <rect x="0" y="0" width="400" height="298" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Highway to the hunt</text>
+<rect x="10" y="46" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="42.0" cy="70" r="20" fill="#23261f"/><circle cx="42.0" cy="70" r="9" fill="#c9b79c"/>
+<text x="80" y="68" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Winter tires from Oct 1</text>
+<text x="80" y="90" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">many BC highways (70%)</text>
+<rect x="10" y="108" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<text x="42.0" y="142" font-family="sans-serif" font-size="18" font-weight="bold" fill="#e8590c" text-anchor="middle">3.5</text>
+<text x="80" y="130" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">3.5 mm tread minimum</text>
+<text x="80" y="152" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">winter tires (80%)</text>
+<rect x="10" y="170" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M24.0 186 q9 -10 18 0 q9 10 18 0" fill="none" stroke="#23261f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80" y="192" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Chains where posted</text>
+<text x="80" y="214" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">carry them in fall (Tip)</text>
+<rect x="10" y="232" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="26.0" y="242" width="32" height="30" rx="4" fill="#4a7fb0"/>
+<text x="80" y="254" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Check DriveBC</text>
+<text x="80" y="276" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">closures, conditions (Tip)</text>
+</svg>

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Look through the triangle at a far object with both eyes open.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Frame a far object</text><path d="M150 120 L250 120 L200 190 Z" fill="none" stroke="#8b5a2b" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><circle cx="200" cy="140" r="8" fill="#e8590c" stroke="none" stroke-width="2"/><text x="200" y="250" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">door knob, post, sign</text>
+</svg>

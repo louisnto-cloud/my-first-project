@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 304" role="img" aria-label="Range bars of elevation in October, orange, and December, blue. Mule deer about 400 to 1,800 metres in October, 300 to 1,100 in December. Moose 800 to 1,900, then 400 to 1,600. Elk 600 to 2,000, then sea level to 1,200 across BC. White tails 300 to 1,000, then 300 to 900. General pattern, 55 to 70 percent.">
+<rect x="0" y="0" width="400" height="304" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Elevation band: October vs December</text>
+<line x1="110" y1="44" x2="110" y2="262" stroke="#e2dccb"/>
+<text x="110.0" y="278" font-family="sans-serif" font-size="12" fill="#6b4f35" text-anchor="middle">0 m</text>
+<line x1="173" y1="44" x2="173" y2="262" stroke="#e2dccb"/>
+<text x="173.1818181818182" y="278" font-family="sans-serif" font-size="12" fill="#6b4f35" text-anchor="middle">500 m</text>
+<line x1="236" y1="44" x2="236" y2="262" stroke="#e2dccb"/>
+<text x="236.36363636363637" y="278" font-family="sans-serif" font-size="12" fill="#6b4f35" text-anchor="middle">1000 m</text>
+<line x1="300" y1="44" x2="300" y2="262" stroke="#e2dccb"/>
+<text x="299.5454545454545" y="278" font-family="sans-serif" font-size="12" fill="#6b4f35" text-anchor="middle">1500 m</text>
+<line x1="363" y1="44" x2="363" y2="262" stroke="#e2dccb"/>
+<text x="362.72727272727275" y="278" font-family="sans-serif" font-size="12" fill="#6b4f35" text-anchor="middle">2000 m</text>
+<text x="10" y="76" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Mule deer</text>
+<rect x="161" y="58" width="177" height="16" rx="4" fill="#e8590c"/>
+<rect x="148" y="78" width="101" height="16" rx="4" fill="#4a7fb0"/>
+<text x="10" y="128" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Moose</text>
+<rect x="211" y="110" width="139" height="16" rx="4" fill="#e8590c"/>
+<rect x="161" y="130" width="152" height="16" rx="4" fill="#4a7fb0"/>
+<text x="10" y="180" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Elk</text>
+<rect x="186" y="162" width="177" height="16" rx="4" fill="#e8590c"/>
+<rect x="110" y="182" width="152" height="16" rx="4" fill="#4a7fb0"/>
+<text x="10" y="232" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">White tail</text>
+<rect x="148" y="214" width="88" height="16" rx="4" fill="#e8590c"/>
+<rect x="148" y="234" width="76" height="16" rx="4" fill="#4a7fb0"/>
+<rect x="110" y="286" width="14" height="10" fill="#e8590c"/><text x="128" y="296" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">October</text><rect x="210" y="286" width="14" height="10" fill="#4a7fb0"/><text x="228" y="296" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">December</text>
+</svg>

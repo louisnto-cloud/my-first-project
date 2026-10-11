@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Map step 4. Use the Elevation profile tool along your route. The shaded band from 750 to 1,250 metres is where ruffed grouse are most common in BC." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Step 4: walk the right height</text>
+<rect x="10" y="40" width="380" height="210" rx="10" fill="#eef1e6" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M20 230 L90 200 L160 150 L230 120 L300 90 L380 60" fill="none" stroke="#23261f" stroke-width="3"/>
+<rect x="20" y="130" width="370" height="60" fill="#e8590c" opacity=".15"/>
+<text x="380" y="150" font-size="14" fill="#23261f" text-anchor="end" font-weight="bold">1,250 m</text>
+<text x="380" y="186" font-size="14" fill="#23261f" text-anchor="end" font-weight="bold">750 m</text>
+<text x="30" y="165" font-size="15" fill="#e8590c" text-anchor="start" font-weight="bold">Ruffed band</text>
+<text x="200" y="280" font-size="14" fill="#23261f" text-anchor="middle">Tool: Elevation profile along your route</text>
+</svg>

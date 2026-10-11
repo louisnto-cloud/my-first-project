@@ -1,0 +1,1054 @@
+[
+ {
+  "id": "rp-bec-01",
+  "deck": "BC habitat zones made simple",
+  "front": "What does BEC stand for?",
+  "back": "Biogeoclimatic ecosystem classification: how BC sorts land by climate, plants and soil."
+ },
+ {
+  "id": "rp-bec-02",
+  "deck": "BC habitat zones made simple",
+  "front": "Name the Interior zones from the valley floor up.",
+  "back": "BG Bunchgrass, PP Ponderosa pine, IDF Interior Douglas fir, MS Montane spruce, ESSF Engelmann spruce and subalpine fir, AT Alpine tundra. Big Pines In Many Elk Areas.",
+  "diagram": "rp-bec-ladder"
+ },
+ {
+  "id": "rp-bec-03",
+  "deck": "BC habitat zones made simple",
+  "front": "Decode IDFxh2.",
+  "back": "IDF = Interior Douglas fir zone. x = very dry, h = hot. 2 = the local variant.",
+  "diagram": "rp-bec-code"
+ },
+ {
+  "id": "rp-bec-04",
+  "deck": "BC habitat zones made simple",
+  "front": "First small letter of a subzone: what does it tell you?",
+  "back": "How wet: x very dry, d dry, m moist, w wet, v very wet."
+ },
+ {
+  "id": "rp-bec-05",
+  "deck": "BC habitat zones made simple",
+  "front": "Second small letter of an Interior subzone?",
+  "back": "How warm: h hot, w warm, m mild, k cool, c cold."
+ },
+ {
+  "id": "rp-bec-06",
+  "deck": "BC habitat zones made simple",
+  "front": "Why is Kamloops so dry?",
+  "back": "It sits in the rain shadow of the Coast Mountains. Pacific air drops its rain on the coast side."
+ },
+ {
+  "id": "rp-bec-07",
+  "deck": "BC habitat zones made simple",
+  "front": "Rain and snow a year near Mission versus Kamloops?",
+  "back": "About 2,140 mm at Haney (Maple Ridge) versus about 242 mm at Kamloops: about 9 times more.",
+  "diagram": "rp-bec-rain-bars"
+ },
+ {
+  "id": "rp-bec-08",
+  "deck": "BC habitat zones made simple",
+  "front": "Which zone gets the most snow?",
+  "back": "ESSF: about 782 cm a year at Boss Mountain, with snowpack up to nearly 4 m.",
+  "diagram": "rp-bec-snow-bars"
+ },
+ {
+  "id": "rp-bec-09",
+  "deck": "BC habitat zones made simple",
+  "front": "What zone is Heffley Creek in?",
+  "back": "PPxh2: Ponderosa pine, very dry hot (BC zone map, 2026-10-11).",
+  "diagram": "rp-bec-bases"
+ },
+ {
+  "id": "rp-bec-10",
+  "deck": "BC habitat zones made simple",
+  "front": "What zone is Mission in?",
+  "back": "CWHdm3: Coastal Western Hemlock, dry maritime.",
+  "diagram": "rp-bec-bases"
+ },
+ {
+  "id": "rp-bec-11",
+  "deck": "BC habitat zones made simple",
+  "front": "Zones from Heffley Creek east to Sun Peaks?",
+  "back": "PPxh2 valley, IDFxh2 and IDFdk2 slopes, MSdm3 plateau, ESSFdc3 at Sun Peaks. 4 zones in about 27 km.",
+  "diagram": "rp-bec-heffley"
+ },
+ {
+  "id": "rp-bec-12",
+  "deck": "BC habitat zones made simple",
+  "front": "Big tree key: open orange barked pine park?",
+  "back": "PP, Ponderosa pine zone.",
+  "diagram": "rp-bec-trees"
+ },
+ {
+  "id": "rp-bec-13",
+  "deck": "BC habitat zones made simple",
+  "front": "Big tree key: narrow spruce and fir spires, deep snow?",
+  "back": "ESSF, Engelmann spruce and subalpine fir zone.",
+  "diagram": "rp-bec-trees"
+ },
+ {
+  "id": "rp-bec-14",
+  "deck": "BC habitat zones made simple",
+  "front": "Big tree key: cedar and hemlock in the Interior?",
+  "back": "ICH, Interior cedar and hemlock, the wet belt.",
+  "diagram": "rp-bec-trees"
+ },
+ {
+  "id": "rp-bec-15",
+  "deck": "BC habitat zones made simple",
+  "front": "How does aspect change the zone?",
+  "back": "South slopes act like a lower, hotter zone; north slopes act like a higher, cooler one.",
+  "diagram": "rp-bec-aspect"
+ },
+ {
+  "id": "rp-bec-16",
+  "deck": "BC habitat zones made simple",
+  "front": "How far can mule deer migrate to winter in the PP and IDF?",
+  "back": "Up to about 80 km."
+ },
+ {
+  "id": "rp-bec-17",
+  "deck": "BC habitat zones made simple",
+  "front": "Deer and moose snow limits?",
+  "back": "Deer struggle past about 30 cm. Moose move freely to about 40 cm, with slight difficulty at 40 to 70 cm."
+ },
+ {
+  "id": "rp-bec-18",
+  "deck": "BC habitat zones made simple",
+  "front": "What is NDT4?",
+  "back": "Ecosystems with frequent stand maintaining fires: BG, PP and IDF. Ground fires kept them open.",
+  "diagram": "rp-ndt"
+ },
+ {
+  "id": "rp-bec-19",
+  "deck": "BC habitat zones made simple",
+  "front": "The 5 steps to read a zone in the field?",
+  "back": "Height and aspect, big trees, plants at your boots, moss and snow clues, confirm on the map.",
+  "diagram": "rp-zid-5"
+ },
+ {
+  "id": "rp-grass-01",
+  "deck": "Grasslands",
+  "front": "How much of BC is grassland?",
+  "back": "Under 1% of the land, but about 30% of the province species at risk depend on it."
+ },
+ {
+  "id": "rp-grass-02",
+  "deck": "Grasslands",
+  "front": "The 3 grassland belts?",
+  "back": "Lower: sage, valley to about 700 m. Middle: no sage, 700 to 1,000 m. Upper: fescue, inside the IDF above about 900 m.",
+  "diagram": "rp-grass-belts"
+ },
+ {
+  "id": "rp-grass-03",
+  "deck": "Grasslands",
+  "front": "Main grass of the Bunchgrass zone?",
+  "back": "Bluebunch wheatgrass."
+ },
+ {
+  "id": "rp-grass-04",
+  "deck": "Grasslands",
+  "front": "Signs of overgrazed range?",
+  "back": "More sagebrush, cheatgrass, prickly pear cactus and knapweed; less bunchgrass.",
+  "diagram": "rp-grass-condition"
+ },
+ {
+  "id": "rp-grass-05",
+  "deck": "Grasslands",
+  "front": "Where are grassland deer in October at noon?",
+  "back": "In brushy draws, on timber edges and near water. DEW: Draws, Edges, Water.",
+  "diagram": "rp-grass-oct"
+ },
+ {
+  "id": "rp-grass-06",
+  "deck": "Grasslands",
+  "front": "How do you stalk a deer on open grass?",
+  "back": "Use a draw or fold below the skyline, wind in your face, move when its head is down."
+ },
+ {
+  "id": "rp-grass-07",
+  "deck": "Grasslands",
+  "front": "Hunting a grazing lease with cattle on it?",
+  "back": "Not without the consent of the lessee or occupant (synopsis page 9)."
+ },
+ {
+  "id": "rp-grass-08",
+  "deck": "Grasslands",
+  "front": "Leased land with no cattle?",
+  "back": "Still subject to the Trespass Act (synopsis page 9)."
+ },
+ {
+  "id": "rp-grass-09",
+  "deck": "Grasslands",
+  "front": "When are rattlesnakes back in their dens?",
+  "back": "Virtually all by mid October. They come out in March and April.",
+  "diagram": "rp-grass-hazards"
+ },
+ {
+  "id": "rp-grass-10",
+  "deck": "Grasslands",
+  "front": "How far do rattlesnakes usually move from a den?",
+  "back": "Seldom more than about 1.5 km."
+ },
+ {
+  "id": "rp-grass-11",
+  "deck": "Grasslands",
+  "front": "Who graze IDF grasslands in early spring?",
+  "back": "Mule and white tailed deer."
+ },
+ {
+  "id": "rp-grass-12",
+  "deck": "Grasslands",
+  "front": "Which grassland birds were introduced?",
+  "back": "California quail, pheasant and chukar; gray partridge came from Washington."
+ },
+ {
+  "id": "rp-grass-13",
+  "deck": "Grasslands",
+  "front": "Why glass a basin at first light?",
+  "back": "Deer are still on feed in the open, and you see far in grass country.",
+  "diagram": "rp-gh-1"
+ },
+ {
+  "id": "rp-grass-14",
+  "deck": "Grasslands",
+  "front": "Safe backstop on grassland?",
+  "back": "A hillside behind the animal. Never a deer on the skyline.",
+  "diagram": "rp-gh-5"
+ },
+ {
+  "id": "rp-grass-15",
+  "deck": "Grasslands",
+  "front": "Cheatgrass risk for a quail dog?",
+  "back": "Its seeds work into paws, ears and noses. Check the dog after every hunt (Tip)."
+ },
+ {
+  "id": "rp-grass-16",
+  "deck": "Grasslands",
+  "front": "Big sagebrush: where and why?",
+  "back": "The lowest, driest grassland belt; a mule deer winter food."
+ },
+ {
+  "id": "rp-dry-01",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "PP zone elevation and rain?",
+  "back": "335 to 900 m; 280 to 500 mm a year. The driest, warmest forest zone."
+ },
+ {
+  "id": "rp-dry-02",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "IDF zone elevation and rain?",
+  "back": "About 350 to 1,450 m; 300 to 750 mm a year."
+ },
+ {
+  "id": "rp-dry-03",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "Ponderosa pine needles?",
+  "back": "Mostly in 3s, 12 to 20 cm long.",
+  "diagram": "rp-pp-vs-df"
+ },
+ {
+  "id": "rp-dry-04",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "Lodgepole pine needles?",
+  "back": "In 2s, 2 to 7 cm long.",
+  "diagram": "rp-pp-vs-df"
+ },
+ {
+  "id": "rp-dry-05",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "Douglas fir needles and cones?",
+  "back": "Single soft needles 2 to 3 cm; cones with 3 pointed bracts like mouse tails.",
+  "diagram": "rp-pp-vs-df"
+ },
+ {
+  "id": "rp-dry-06",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "Why were dry pine forests open?",
+  "back": "Frequent ground fires killed small trees and brush; thick barked old trees lived."
+ },
+ {
+  "id": "rp-dry-07",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "Mean fire interval at Trout Creek near Summerland, 1715 to 1952?",
+  "back": "About 18 years."
+ },
+ {
+  "id": "rp-dry-08",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "What changed with fire control?",
+  "back": "Dense thickets of young trees filled in, cutting views and feed.",
+  "diagram": "rp-dry-then-now"
+ },
+ {
+  "id": "rp-dry-09",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "3 jobs of old fir on winter range?",
+  "back": "Catches snow, drops food (needles, lichen), and sits on a sunny south slope.",
+  "diagram": "rp-dry-winter-range"
+ },
+ {
+  "id": "rp-dry-10",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "When do fir needles peak in Kamloops mule deer diet?",
+  "back": "December and January."
+ },
+ {
+  "id": "rp-dry-11",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "Mule deer key winter foods?",
+  "back": "Big sagebrush, pasture sage, bitterbrush, rabbitbrush, snowbrush, saskatoon, rose, serviceberry and Douglas fir."
+ },
+ {
+  "id": "rp-dry-12",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "Mule deer year in dry forest country?",
+  "back": "Often high in September; moving down October and November; low PP and IDF south slopes December to March.",
+  "diagram": "rp-dry-year"
+ },
+ {
+  "id": "rp-dry-13",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "Ground plants of a dry IDF floor?",
+  "back": "Bluebunch wheatgrass, kinnikinnick, soopolallie, spirea, saskatoon."
+ },
+ {
+  "id": "rp-dry-14",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "Midday in open dry forest: where are deer?",
+  "back": "Bedded on benches, heads of draws, shady north edges, under big fir.",
+  "diagram": "rp-dh-4"
+ },
+ {
+  "id": "rp-dry-15",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "Still hunting rhythm?",
+  "back": "About 3 slow steps, then a long look. Look for parts: an ear, a leg.",
+  "diagram": "rp-dh-2"
+ },
+ {
+  "id": "rp-dry-16",
+  "deck": "Dry forests: ponderosa pine and Douglas fir",
+  "front": "Old name for dusky grouse?",
+  "back": "Blue grouse."
+ },
+ {
+  "id": "rp-wet-01",
+  "deck": "Wet forests and the coast",
+  "front": "Rainiest zone in BC?",
+  "back": "CWH, Coastal Western Hemlock: mean about 2,228 mm, range 1,000 to 4,400 mm."
+ },
+ {
+  "id": "rp-wet-02",
+  "deck": "Wet forests and the coast",
+  "front": "Main trees of the CWH?",
+  "back": "Western hemlock, western redcedar, coast Douglas fir; red alder on disturbed sites.",
+  "diagram": "rp-wet-profile"
+ },
+ {
+  "id": "rp-wet-03",
+  "deck": "Wet forests and the coast",
+  "front": "ICH means?",
+  "back": "Interior cedar and hemlock zone, the Interior wet belt: most productive Interior forest."
+ },
+ {
+  "id": "rp-wet-04",
+  "deck": "Wet forests and the coast",
+  "front": "Why is dense second growth poor deer feed?",
+  "back": "In the pole stage, crowded trees overtop and shade out shrubs and herbs.",
+  "diagram": "rp-wet-layers"
+ },
+ {
+  "id": "rp-wet-05",
+  "deck": "Wet forests and the coast",
+  "front": "How does old growth help coast deer in snow?",
+  "back": "Crowns intercept snow, and broken branches and lichens give forage."
+ },
+ {
+  "id": "rp-wet-06",
+  "deck": "Wet forests and the coast",
+  "front": "Black tailed deer winter foods?",
+  "back": "Douglas fir, western redcedar, red huckleberry, salal, deer fern, tree lichens.",
+  "diagram": "rp-blacktail-food"
+ },
+ {
+  "id": "rp-wet-07",
+  "deck": "Wet forests and the coast",
+  "front": "Black tailed deer summer and fall foods?",
+  "back": "Grasses, trailing blackberry, fireweed, pearly everlasting, forbs, and leaves of willow, salmonberry, salal and maple.",
+  "diagram": "rp-blacktail-food"
+ },
+ {
+  "id": "rp-wet-08",
+  "deck": "Wet forests and the coast",
+  "front": "Most common big mammals of the CWH?",
+  "back": "Black tailed deer, black bear, grizzly bear, gray wolf."
+ },
+ {
+  "id": "rp-wet-09",
+  "deck": "Wet forests and the coast",
+  "front": "Where do coast black bears den?",
+  "back": "Mostly in or under big trees, snags, logs or stumps."
+ },
+ {
+  "id": "rp-wet-10",
+  "deck": "Wet forests and the coast",
+  "front": "Salal ID?",
+  "back": "Leathery, sharply toothed, egg shaped evergreen leaves 3 to 9 cm; thickets."
+ },
+ {
+  "id": "rp-wet-11",
+  "deck": "Wet forests and the coast",
+  "front": "Devil's club warning?",
+  "back": "Stems armed with yellow spines 5 to 10 mm long. Do not grab it."
+ },
+ {
+  "id": "rp-wet-12",
+  "deck": "Wet forests and the coast",
+  "front": "Where to sit in thick coast cover at dusk?",
+  "back": "On the edge where timber meets a cutblock or opening, wind to you.",
+  "diagram": "rp-wh-2"
+ },
+ {
+  "id": "rp-wet-13",
+  "deck": "Wet forests and the coast",
+  "front": "Black tailed deer rut timing?",
+  "back": "About November to early December."
+ },
+ {
+  "id": "rp-wet-14",
+  "deck": "Wet forests and the coast",
+  "front": "Mission area snowfall?",
+  "back": "About 82 cm a year at the Haney station; it usually melts fast."
+ },
+ {
+  "id": "rp-wet-15",
+  "deck": "Wet forests and the coast",
+  "front": "Roosevelt elk on the coast eat?",
+  "back": "Sedges, grasses, ferns, plus willow, elderberry, blueberry, cedar and hemlock browse."
+ },
+ {
+  "id": "rp-wet-16",
+  "deck": "Wet forests and the coast",
+  "front": "First check before any Mission area spot?",
+  "back": "The Region 2 No Shooting areas in the Rule Book."
+ },
+ {
+  "id": "rp-wl-01",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "The 5 wetland classes?",
+  "back": "Open water, marsh, fen, swamp, bog. Our Moose Feed in Swamps and Bogs.",
+  "diagram": "rp-wet-classes"
+ },
+ {
+  "id": "rp-wl-02",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Shallow open water depth?",
+  "back": "Under 2 m at midsummer, under 10% emergent plants."
+ },
+ {
+  "id": "rp-wl-03",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Marsh?",
+  "back": "Flooded with nutrient rich water, over 10% cover of cattail, bulrush, sedges."
+ },
+ {
+  "id": "rp-wl-04",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Swamp?",
+  "back": "Wooded wetland: 25% or more cover of trees or tall shrubs."
+ },
+ {
+  "id": "rp-wl-05",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Bog?",
+  "back": "Sphagnum moss peat fed by rain, acid; Labrador tea, bog cranberry, stunted spruce or pine."
+ },
+ {
+  "id": "rp-wl-06",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Fen?",
+  "back": "Peat over 40 cm fed by groundwater; sedges, willow, scrub birch."
+ },
+ {
+  "id": "rp-wl-07",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Who uses the willow edge of a marsh?",
+  "back": "Moose and deer.",
+  "diagram": "rp-marsh-zones"
+ },
+ {
+  "id": "rp-wl-08",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Puddle ducks versus divers?",
+  "back": "Puddle ducks tip up in shallow water; divers dive in deeper water.",
+  "diagram": "rp-marsh-zones"
+ },
+ {
+  "id": "rp-wl-09",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Moose summer foods?",
+  "back": "Aquatic plants: horsetail, burweed, pondweeds."
+ },
+ {
+  "id": "rp-wl-10",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Moose winter foods?",
+  "back": "Willows first; red osier dogwood, cottonwood, birch, aspen, high bush cranberry."
+ },
+ {
+  "id": "rp-wl-11",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Riparian reserve on an S2 fish stream (5 to 20 m)?",
+  "back": "30 m reserve plus 20 m management zone each side (FPPR section 47).",
+  "diagram": "rp-riparian-widths"
+ },
+ {
+  "id": "rp-wl-12",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Riparian zones on an S4 stream (under 1.5 m)?",
+  "back": "No reserve; 30 m management zone.",
+  "diagram": "rp-riparian-widths"
+ },
+ {
+  "id": "rp-wl-13",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Why are creek strips good in farm country?",
+  "back": "They are hidden travel lanes from bed to feed."
+ },
+ {
+  "id": "rp-wl-14",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Beaver pond: what to look for?",
+  "back": "Ducks on the water, moose in the willow regrowth, tracks in the mud.",
+  "diagram": "rp-beaver-pond"
+ },
+ {
+  "id": "rp-wl-15",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Who calves in riparian areas in the IDF?",
+  "back": "Moose and mule deer."
+ },
+ {
+  "id": "rp-wl-16",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Approach a pond in 4 steps?",
+  "back": "Wind and sun, use cover, glass the edges, plan the retrieve.",
+  "diagram": "rp-wl-4"
+ },
+ {
+  "id": "rp-wl-17",
+  "deck": "Wetlands, marshes and riparian strips",
+  "front": "Retrieve rule over cold water?",
+  "back": "Plan it before you shoot. Never swim for a bird."
+ },
+ {
+  "id": "rp-fire-01",
+  "deck": "After fire: what a burn looks like year 1 to 20",
+  "front": "The 4 looks of a burn?",
+  "back": "Black, green, shrub, thicket.",
+  "diagram": "rp-burn-y0"
+ },
+ {
+  "id": "rp-fire-02",
+  "deck": "After fire: what a burn looks like year 1 to 20",
+  "front": "Year 1 to 2 in a burn?",
+  "back": "Grass, herbs and fireweed under the snags. Elk and bears graze.",
+  "diagram": "rp-burn-y1"
+ },
+ {
+  "id": "rp-fire-03",
+  "deck": "After fire: what a burn looks like year 1 to 20",
+  "front": "Year 3 to 5 in a burn?",
+  "back": "Shrubs and aspen root suckers: peak browse for deer and moose.",
+  "diagram": "rp-burn-y3"
+ },
+ {
+  "id": "rp-fire-04",
+  "deck": "After fire: what a burn looks like year 1 to 20",
+  "front": "Year 10 to 20 in a burn?",
+  "back": "Dense young forest: hiding cover, less food.",
+  "diagram": "rp-burn-y15"
+ },
+ {
+  "id": "rp-fire-05",
+  "deck": "After fire: what a burn looks like year 1 to 20",
+  "front": "Which seeds germinate in response to fire?",
+  "back": "Snowbrush (ceanothus) and lodgepole pine."
+ },
+ {
+  "id": "rp-fire-06",
+  "deck": "After fire: what a burn looks like year 1 to 20",
+  "front": "How does aspen come back after fire?",
+  "back": "Root suckers that quickly form a dense shrub layer."
+ },
+ {
+  "id": "rp-fire-07",
+  "deck": "After fire: what a burn looks like year 1 to 20",
+  "front": "Moose and burn severity (Mount McAllister)?",
+  "back": "Moose used low and medium severity patches, especially wet sites.",
+  "diagram": "rp-burn-mosaic"
+ },
+ {
+  "id": "rp-fire-08",
+  "deck": "After fire: what a burn looks like year 1 to 20",
+  "front": "Elk use of a prescribed burn over time (Montana)?",
+  "back": "Up in years 1 to 2, then back to normal over 3 to 10 years.",
+  "diagram": "rp-burn-who"
+ },
+ {
+  "id": "rp-fire-09",
+  "deck": "After fire: what a burn looks like year 1 to 20",
+  "front": "When do most snags fall?",
+  "back": "Most break or fall in the first 15 years; few in the first 5."
+ },
+ {
+  "id": "rp-fire-10",
+  "deck": "After fire: what a burn looks like year 1 to 20",
+  "front": "BC Wildfire Service burn hazards?",
+  "back": "Danger trees, hidden hot ash pits, floods and debris flows, unstable slopes and rockfall.",
+  "diagram": "rp-burn-hazards"
+ },
+ {
+  "id": "rp-fire-11",
+  "deck": "After fire: what a burn looks like year 1 to 20",
+  "front": "How long can post fire risks last?",
+  "back": "2 years or more in severely burned areas."
+ },
+ {
+  "id": "rp-fire-12",
+  "deck": "After fire: what a burn looks like year 1 to 20",
+  "front": "Camping rule in a burn?",
+  "back": "Park and camp in the open, more than a tree length from any snag."
+ },
+ {
+  "id": "rp-fire-13",
+  "deck": "After fire: what a burn looks like year 1 to 20",
+  "front": "Big fire effects on hunting?",
+  "back": "Area restrictions, possible season closures, and new fireguard roads."
+ },
+ {
+  "id": "rp-fire-14",
+  "deck": "After fire: what a burn looks like year 1 to 20",
+  "front": "Best place to hunt in a burn?",
+  "back": "Edges between unburned islands and burned feed.",
+  "diagram": "rp-burn-mosaic"
+ },
+ {
+  "id": "rp-fire-15",
+  "deck": "After fire: what a burn looks like year 1 to 20",
+  "front": "Cariboo 2017 fire season size?",
+  "back": "271 fires, about 871,036 ha; parts of the moose hunt north of Highway 20 closed."
+ },
+ {
+  "id": "rp-cut-01",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "The 7 BC structural stages?",
+  "back": "Sparse, herb, shrub, pole and sapling, young, mature, old.",
+  "diagram": "rp-cut-stages"
+ },
+ {
+  "id": "rp-cut-02",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "Low shrub stage 3a?",
+  "back": "Shrubs under 2 m; usually under 20 years."
+ },
+ {
+  "id": "rp-cut-03",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "Tall shrub stage 3b?",
+  "back": "Shrubs 2 to 10 m; under 40 years."
+ },
+ {
+  "id": "rp-cut-04",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "Pole and sapling stage 4?",
+  "back": "Trees over 10 m, densely stocked, overtopping shrubs; little food.",
+  "diagram": "rp-cut-s4"
+ },
+ {
+  "id": "rp-cut-05",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "Young forest stage 5 age?",
+  "back": "Generally 40 to 80 years."
+ },
+ {
+  "id": "rp-cut-06",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "Cutblock years 3 to 10: who feeds?",
+  "back": "Deer, in low shrubs.",
+  "diagram": "rp-cut-s2"
+ },
+ {
+  "id": "rp-cut-07",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "Which cutblock ages did moose select in one BC study?",
+  "back": "10 to 30 years since cut; they avoided 0 to 9 and over 30.",
+  "diagram": "rp-moose-cut-age"
+ },
+ {
+  "id": "rp-cut-08",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "Why do moose still need cover in logged country?",
+  "back": "To hide from predators and hunters, for shade and for shelter in storms."
+ },
+ {
+  "id": "rp-cut-09",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "Elk and logging?",
+  "back": "Logging creates forage that disappears once the canopy closes."
+ },
+ {
+  "id": "rp-cut-10",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "Age a block by tree height?",
+  "back": "Knee about 3 to 5 years, head about 8 to 12, twice your height about 15 to 20, dark poles 25 plus (Tip)."
+ },
+ {
+  "id": "rp-cut-11",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "Read a logged landscape on satellite images?",
+  "back": "Brown is new, bright green is young feed, dark green is old timber.",
+  "diagram": "rp-cut-map"
+ },
+ {
+  "id": "rp-cut-12",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "Best stand spot near a cutblock?",
+  "back": "The edge where a young block meets timber, downwind.",
+  "diagram": "rp-cut-map"
+ },
+ {
+  "id": "rp-cut-13",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "ATV on a Forest Service Road?",
+  "back": "Valid driver's licence and at least $200,000 third party liability insurance."
+ },
+ {
+  "id": "rp-cut-14",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "Environmental damage fine?",
+  "back": "$575; serious cases up to $100,000 and/or a year in jail."
+ },
+ {
+  "id": "rp-cut-15",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "Why worry about new logging roads in moose country?",
+  "back": "More access can lead to over harvesting."
+ },
+ {
+  "id": "rp-cut-16",
+  "deck": "Cutblocks and logging: age stages and what lives there",
+  "front": "One block over 30 years?",
+  "back": "Bare, then shrubs and deer, then tall shrubs and moose, then dark poles."
+ },
+ {
+  "id": "rp-farm-01",
+  "deck": "Farmland and orchards: Okanagan and Fraser Valley",
+  "front": "Hunting cultivated land?",
+  "back": "Only with the consent of the owner, lessee or occupant (synopsis page 9)."
+ },
+ {
+  "id": "rp-farm-02",
+  "deck": "Farmland and orchards: Okanagan and Fraser Valley",
+  "front": "The 100 m rule?",
+  "back": "No hunting or shooting within 100 m of a church, school, playground, regional park, dwelling or occupied farm or ranch building.",
+  "diagram": "rb-100m-ring"
+ },
+ {
+  "id": "rp-farm-03",
+  "deck": "Farmland and orchards: Okanagan and Fraser Valley",
+  "front": "Are orchards cultivated land?",
+  "back": "Yes. Get the owner's consent."
+ },
+ {
+  "id": "rp-farm-04",
+  "deck": "Farmland and orchards: Okanagan and Fraser Valley",
+  "front": "Where do deer enter a field?",
+  "back": "The corner or gap nearest thick cover, often the same each night (lore).",
+  "diagram": "rp-farm-field"
+ },
+ {
+  "id": "rp-farm-05",
+  "deck": "Farmland and orchards: Okanagan and Fraser Valley",
+  "front": "What do deer and elk do to fruit trees?",
+  "back": "Chew buds, spurs, shoots and leaves; antler rubbing breaks branches."
+ },
+ {
+  "id": "rp-farm-06",
+  "deck": "Farmland and orchards: Okanagan and Fraser Valley",
+  "front": "Woven wire orchard deer fence?",
+  "back": "At least 2.4 m tall with 15 cm mesh, secured to the ground.",
+  "diagram": "rp-fence-specs"
+ },
+ {
+  "id": "rp-farm-07",
+  "deck": "Farmland and orchards: Okanagan and Fraser Valley",
+  "front": "Electric orchard deer fence?",
+  "back": "1.5 to 2.1 m, 7 to 9 high tensile wires 20 to 30 cm apart.",
+  "diagram": "rp-fence-specs"
+ },
+ {
+  "id": "rp-farm-08",
+  "deck": "Farmland and orchards: Okanagan and Fraser Valley",
+  "front": "Why are farms on old winter range?",
+  "back": "Agriculture sits in low valleys and riparian areas that ungulates used in winter."
+ },
+ {
+  "id": "rp-farm-09",
+  "deck": "Farmland and orchards: Okanagan and Fraser Valley",
+  "front": "Elk favourite cultivated crops?",
+  "back": "Alfalfa and clover."
+ },
+ {
+  "id": "rp-farm-10",
+  "deck": "Farmland and orchards: Okanagan and Fraser Valley",
+  "front": "Delta winter fields by March 2021?",
+  "back": "About 60% of about 130 fields grazed to the soil by waterfowl.",
+  "diagram": "rp-fv-fields"
+ },
+ {
+  "id": "rp-farm-11",
+  "deck": "Farmland and orchards: Okanagan and Fraser Valley",
+  "front": "Most common waterfowl in Delta field surveys?",
+  "back": "Mallard, American wigeon and snow goose."
+ },
+ {
+  "id": "rp-farm-12",
+  "deck": "Farmland and orchards: Okanagan and Fraser Valley",
+  "front": "Migratory birds wintering on the Fraser estuary?",
+  "back": "About 5 million."
+ },
+ {
+  "id": "rp-farm-13",
+  "deck": "Farmland and orchards: Okanagan and Fraser Valley",
+  "front": "Scout a farm in 4 steps?",
+  "back": "Watch from public roads at dusk, mark the entry, find the owner, ask and follow their rules.",
+  "diagram": "rp-farm-4"
+ },
+ {
+  "id": "rp-farm-14",
+  "deck": "Farmland and orchards: Okanagan and Fraser Valley",
+  "front": "First rule of asking permission?",
+  "back": "In person, in daylight, no firearm in sight.",
+  "diagram": "lc-ask-1"
+ },
+ {
+  "id": "rp-farm-15",
+  "deck": "Farmland and orchards: Okanagan and Fraser Valley",
+  "front": "Farm safety basics?",
+  "back": "Know every building, worker and road; never shoot toward roofs, roads or livestock; close gates."
+ },
+ {
+  "id": "rp-browse-01",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "What is browse?",
+  "back": "Twigs, buds and leaves of shrubs and trees."
+ },
+ {
+  "id": "rp-browse-02",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "5 steps to ID a shrub?",
+  "back": "Evergreen or not, opposite or alternate, leaf shape and edge, stem colour and thorns, place and fruit.",
+  "diagram": "rp-bid-1"
+ },
+ {
+  "id": "rp-browse-03",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "Opposite leaved browse shrubs?",
+  "back": "Red osier dogwood, Douglas maple, snowberry, soopolallie, falsebox, high bush cranberry.",
+  "diagram": "rp-opposite-alt"
+ },
+ {
+  "id": "rp-browse-04",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "MAD Cap Horse?",
+  "back": "Maple, Ash, Dogwood, Caprifoliaceae, Horse chestnut: opposite leaved woody plants."
+ },
+ {
+  "id": "rp-browse-05",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "Saskatoon ID?",
+  "back": "Alternate oval leaves saw toothed mostly on the top half; purple berries with a white bloom."
+ },
+ {
+  "id": "rp-browse-06",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "Bitterbrush ID?",
+  "back": "Wedge shaped leaves 1 to 2 cm with 3 teeth at the tip, grey woolly beneath; dry slopes."
+ },
+ {
+  "id": "rp-browse-07",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "Red osier dogwood ID?",
+  "back": "Opposite leaves with veins curving to the tip, white berries, bright red young stems; wet ground."
+ },
+ {
+  "id": "rp-browse-08",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "Snowbrush ID?",
+  "back": "Evergreen, glossy sticky leaves 5 to 10 cm with 3 strong veins; dry slopes and burns."
+ },
+ {
+  "id": "rp-browse-09",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "Falsebox ID?",
+  "back": "Evergreen, small opposite leathery glossy toothed leaves 1 to 3 cm."
+ },
+ {
+  "id": "rp-browse-10",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "Moose winter food list?",
+  "back": "Willows first; red osier dogwood, cottonwood, paper birch, aspen, high bush cranberry, falsebox, subalpine fir.",
+  "diagram": "rp-browse-who"
+ },
+ {
+  "id": "rp-browse-11",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "How high do moose browse?",
+  "back": "To about 2.5 m, and they break stems down to reach higher tips."
+ },
+ {
+  "id": "rp-browse-12",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "How much does a moose eat a day in winter?",
+  "back": "Up to about 20 kg."
+ },
+ {
+  "id": "rp-browse-13",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "Deer bite or hare cut?",
+  "back": "Deer tear: ragged end. Hares cut clean at about 45 degrees.",
+  "diagram": "sg-browse-cut"
+ },
+ {
+  "id": "rp-browse-14",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "Browse line heights?",
+  "back": "Deer to about 1.2 m, elk 1.5 to 1.8 m, moose 1.8 to 2.4 m.",
+  "diagram": "sg-browse-line"
+ },
+ {
+  "id": "rp-browse-15",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "Snowberry versus saskatoon leaves?",
+  "back": "Snowberry: opposite, smooth edged. Saskatoon: alternate, toothed on the top half."
+ },
+ {
+  "id": "rp-browse-16",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "Interior elk winter foods?",
+  "back": "Sedges, horsetail and willow in wetlands; bunchgrass, forbs, serviceberry and rose on uplands."
+ },
+ {
+  "id": "rp-browse-17",
+  "deck": "Browse plants: what deer and moose eat, and how to ID them",
+  "front": "Coast evergreen browse for black tails?",
+  "back": "Salal, red huckleberry, cedar, Douglas fir, deer fern."
+ },
+ {
+  "id": "rp-berry-01",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "What is mast?",
+  "back": "The fruit and nuts of trees and shrubs. In the Interior: berries, hips and conifer seed."
+ },
+ {
+  "id": "rp-berry-02",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "When does saskatoon ripen?",
+  "back": "Valleys mid to late July; higher slopes in August.",
+  "diagram": "rp-berry-months"
+ },
+ {
+  "id": "rp-berry-03",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "When do huckleberries peak?",
+  "back": "August into September; high patches later.",
+  "diagram": "rp-berry-months"
+ },
+ {
+  "id": "rp-berry-04",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "Fruits that hang on into winter?",
+  "back": "Snowberry, rose hips, kinnikinnick, high bush cranberry."
+ },
+ {
+  "id": "rp-berry-05",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "Why does fruit ripen in a wave?",
+  "back": "Warm, low, sunny sites ripen first; high and shady sites later."
+ },
+ {
+  "id": "rp-berry-06",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "Fall bear calories a day?",
+  "back": "Up to about 20,000.",
+  "diagram": "rp-bear-calories"
+ },
+ {
+  "id": "rp-berry-07",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "Huckleberries a fall bear needs a day?",
+  "back": "About 55 kg (about 366 calories per kg).",
+  "diagram": "rp-bear-calories"
+ },
+ {
+  "id": "rp-berry-08",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "Black bear food by season?",
+  "back": "Spring green plants and newborn calves; summer insects, berries, carrion; fall berries and spawning fish."
+ },
+ {
+  "id": "rp-berry-09",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "Ruffed grouse winter food?",
+  "back": "Buds and catkins of aspen, poplar, birch and alder.",
+  "diagram": "rp-grouse-menu"
+ },
+ {
+  "id": "rp-berry-10",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "Spruce grouse winter food?",
+  "back": "Pine and spruce needles, up in the trees.",
+  "diagram": "rp-grouse-menu"
+ },
+ {
+  "id": "rp-berry-11",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "Fall grouse foods?",
+  "back": "Berries, clover, leaves and seeds; road edges at dawn.",
+  "diagram": "rp-grouse-menu"
+ },
+ {
+  "id": "rp-berry-12",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "Soopolallie ID?",
+  "back": "Bright red bitter berries, soapy when crushed; leaves scaly underneath."
+ },
+ {
+  "id": "rp-berry-13",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "Black huckleberry ID?",
+  "back": "Shrub to 1.5 m, finely toothed leaves, purple berries 7 to 10 mm; ESSF."
+ },
+ {
+  "id": "rp-berry-14",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "Who eats conifer seed?",
+  "back": "Clark's nutcracker, red crossbill, pygmy nuthatch, squirrels."
+ },
+ {
+  "id": "rp-berry-15",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "Grizzly season in BC?",
+  "back": "There is no open season for grizzly bears in BC.",
+  "diagram": "rp-patch-4"
+ },
+ {
+  "id": "rp-berry-16",
+  "deck": "Berries, seeds and mast: food for bears, grouse and deer by month",
+  "front": "Sign a berry patch is in use?",
+  "back": "Fresh seedy scat, broken branches, tracks.",
+  "diagram": "rp-patch-2"
+ }
+]

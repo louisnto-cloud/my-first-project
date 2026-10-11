@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, side view at dawn. A draw lies between two slopes. Deer are on a bench on the right slope. The hunter walks up the left slope to a knob across the draw, 300 to 800 metres from the bench. Morning thermals rise up each slope, so the hunter's scent drifts up their own slope and away from the deer.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <path d="M0 80 L60 70 L110 110 L190 250 L210 250 L290 150 L330 150 L345 130 L400 60 L400 300 L0 300 Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+  <path d="M190 250 L210 250" stroke="#4a7fb0" stroke-width="5"/>
+  <text x="200" y="276" font-size="14" fill="#4a7fb0" text-anchor="middle">draw</text>
+  <text x="310" y="176" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">bench</text>
+  <g transform="translate(312 141)"><ellipse rx="12" ry="6" fill="#8b5a2b"/><circle cx="10" cy="-7" r="5" fill="#8b5a2b"/></g>
+  <g stroke="#4a7fb0" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85">
+    <path d="M150 200 l-26 -40 m4 12 l-4 -12 l12 4"><animateTransform attributeName="transform" type="translate" values="0 0;-10 -16;0 0" dur="2s" repeatCount="indefinite"/></path>
+    <path d="M250 200 l26 -40 m-12 4 l12 -4 l-4 12"><animateTransform attributeName="transform" type="translate" values="0 0;10 -16;0 0" dur="2s" begin=".5s" repeatCount="indefinite"/></path>
+    <path d="M370 110 l14 -26 m-10 4 l10 -4 l-1 10"><animateTransform attributeName="transform" type="translate" values="0 0;6 -12;0 0" dur="2s" begin=".9s" repeatCount="indefinite"/></path>
+  </g>
+  <text x="200" y="24" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Morning: air rises up each slope</text>
+  <path id="hf-glass-point-path" d="M150 200 L120 150 L100 112 L62 72" fill="none" stroke="#e8590c" stroke-width="2" stroke-dasharray="5 5"/>
+  <g>
+    <path d="M0 0 L-24 -50 L16 -54 Z" fill="#e8590c" opacity=".18"/>
+    <circle r="8" fill="#e8590c"/>
+    <animateMotion dur="4s" fill="freeze"><mpath href="#hf-glass-point-path"/></animateMotion>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="4s" dur=".5s" fill="freeze"/>
+    <path d="M70 60 L300 120" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="3 5"/>
+    <rect x="120" y="58" width="130" height="24" rx="6" fill="#2f3a2b"/>
+    <text x="185" y="75" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">300 to 800 m</text>
+    <text x="12" y="56" font-size="14" font-weight="bold" fill="#e8590c">Your knob</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="5.5s" dur=".5s" fill="freeze"/>
+    <rect x="12" y="200" width="160" height="52" rx="8" fill="#2f3a2b"/>
+    <text x="92" y="222" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Scent goes up your</text>
+    <text x="92" y="240" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">slope, not to deer</text>
+  </g>
+</svg>

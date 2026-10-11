@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A deer day, late October</text>
+  <!-- night shading -->
+  <rect x="30" y="50" width="99" height="160" fill="#e6e1d3"/>
+  <rect x="285" y="50" width="85" height="160" fill="#e6e1d3"/>
+  <text x="60" y="100" font-size="14" fill="#6b4f35" text-anchor="middle">dark</text>
+  <text x="340" y="100" font-size="14" fill="#6b4f35" text-anchor="middle">dark</text>
+  <!-- activity curve -->
+  <path d="M30 165 C70 160 95 72 125 72 C150 72 160 178 200 180 C240 178 255 72 290 72 C320 72 335 160 370 165" fill="none" stroke="#e8590c" stroke-width="4"/>
+  <line x1="30" y1="210" x2="370" y2="210" stroke="#23261f" stroke-width="2" fill="none"/>
+  <!-- ticks: x = 30 + hour*14.17 -->
+  <g font-size="14" fill="#23261f" text-anchor="middle">
+    <text x="30" y="230">0</text>
+    <text x="115" y="230">6</text>
+    <text x="200" y="230">12</text>
+    <text x="285" y="230">18</text>
+    <text x="370" y="230">24</text>
+  </g>
+  <text x="200" y="248" font-size="14" fill="#23261f" text-anchor="middle">hour of day (24 hour clock)</text>
+  <text x="125" y="62" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">PEAK</text>
+  <text x="290" y="62" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">PEAK</text>
+  <text x="200" y="203" font-size="14" fill="#2f3a2b" text-anchor="middle">bedded, chewing cud</text>
+  <text x="200" y="272" font-size="14" fill="#2f3a2b" text-anchor="middle">Dawn: feed, then drift to beds</text>
+  <text x="200" y="292" font-size="14" fill="#2f3a2b" text-anchor="middle">Dusk: rise, move, feed into the night</text>
+</svg>

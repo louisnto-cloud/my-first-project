@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 608" role="img" aria-label="Cards for Maps F25 to F33. F25 Spatsizi, Stikine and Klappan: moose Limited Entry Hunting only areas. F26 Spatsizi: mountain sheep draw only areas. F27 Todagin Mountain: no shooting, archery only, and mountain goat closed. F28 Spatsizi, Gladys Lake, Ecological Reserve: no hunting, and no firearms within 1 kilometre of Cold Fish Lake Camp. F29 Spatsizi: goat draw only, the Dawson area is general open season. F30 Mt. Edziza Park: sheep and goat draw only. F31 Stikine and Tuya: goat draw only. F32 Midway Mine Access Trail: the seasonal vehicle route. F33 Atlin: mountain goat closed area and No Hunting Area." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="608" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Maps F25 to F33</text>
+<rect x="6" y="40" width="190" height="96" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#6a4c93"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F25 Spatsizi,</text>
+<text x="101" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Stikine, Klappan</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">Moose draw only areas,</text>
+<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start">MUs 6-19, 6-20</text>
+<rect x="204" y="40" width="190" height="96" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#6a4c93"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F26 Spatsizi</text>
+<text x="212" y="106" font-size="14" fill="#23261f" text-anchor="start">Mountain sheep draw</text>
+<text x="212" y="124" font-size="14" fill="#23261f" text-anchor="start">only areas</text>
+<rect x="6" y="144" width="190" height="114" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<path d="M6 154 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#8a9a6b"/>
+<text x="101" y="162" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F27 Todagin Mountain</text>
+<text x="14" y="210" font-size="14" fill="#23261f" text-anchor="start">No shooting, archery</text>
+<text x="14" y="228" font-size="14" fill="#23261f" text-anchor="start">only. Goat closed</text>
+<rect x="204" y="144" width="190" height="114" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204 154 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="299" y="162" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F28 Gladys Lake</text>
+<text x="299" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Ecological Reserve</text>
+<text x="212" y="210" font-size="14" fill="#23261f" text-anchor="start">No hunting. No firearms</text>
+<text x="212" y="228" font-size="14" fill="#23261f" text-anchor="start">within 1 km of Cold</text>
+<text x="212" y="246" font-size="14" fill="#23261f" text-anchor="start">Fish Lake Camp</text>
+<rect x="6" y="266" width="190" height="96" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M6 276 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#6a4c93"/>
+<text x="101" y="284" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F29 Spatsizi goats</text>
+<text x="14" y="314" font-size="14" fill="#23261f" text-anchor="start">Draw only. The Dawson</text>
+<text x="14" y="332" font-size="14" fill="#23261f" text-anchor="start">area is general open</text>
+<text x="14" y="350" font-size="14" fill="#23261f" text-anchor="start">season</text>
+<rect x="204" y="266" width="190" height="96" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M204 276 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#6a4c93"/>
+<text x="299" y="284" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F30 Mt. Edziza Park</text>
+<text x="212" y="314" font-size="14" fill="#23261f" text-anchor="start">Sheep and goat draw</text>
+<text x="212" y="332" font-size="14" fill="#23261f" text-anchor="start">only areas, MU 6-21</text>
+<rect x="6" y="370" width="190" height="96" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M6 380 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#6a4c93"/>
+<text x="101" y="388" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F31 Stikine, Tuya</text>
+<text x="14" y="436" font-size="14" fill="#23261f" text-anchor="start">Goat draw only areas,</text>
+<text x="14" y="454" font-size="14" fill="#23261f" text-anchor="start">MUs 6-21, 6-22</text>
+<rect x="204" y="370" width="190" height="96" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M204 380 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#4a7fb0"/>
+<text x="299" y="388" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F32 Midway Mine</text>
+<text x="299" y="406" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Access Trail</text>
+<text x="212" y="436" font-size="14" fill="#23261f" text-anchor="start">Seasonal vehicle route,</text>
+<text x="212" y="454" font-size="14" fill="#23261f" text-anchor="start">MU 6-24</text>
+<rect x="6" y="474" width="190" height="78" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 484 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#c92a2a"/>
+<text x="101" y="492" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">F33 Atlin</text>
+<text x="14" y="522" font-size="14" fill="#23261f" text-anchor="start">Goat closed area and No</text>
+<text x="14" y="540" font-size="14" fill="#23261f" text-anchor="start">Hunting Area</text>
+<rect x="6" y="558" width="14" height="14" rx="3" fill="#6a4c93"/>
+<text x="24" y="570" font-size="14" fill="#23261f" text-anchor="start">Draw (LEH) only</text>
+<rect x="149.0" y="558" width="14" height="14" rx="3" fill="#8a9a6b"/>
+<text x="167" y="570" font-size="14" fill="#23261f" text-anchor="start">Shot only or bow</text>
+<rect x="299.4" y="558" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="317" y="570" font-size="14" fill="#23261f" text-anchor="start">No hunting</text>
+<rect x="6" y="580" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="24" y="592" font-size="14" fill="#23261f" text-anchor="start">Vehicle rule</text>
+</svg>

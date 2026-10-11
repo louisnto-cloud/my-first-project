@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Zoom compared. At 3 times power you see a wide view with the deer small among the trees, good for close deer in timber. At 9 times power the deer fills more of a narrow view, plenty for a deer at 300 metres.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Low power vs high power</text>
+  <!-- 3x -->
+  <circle cx="100" cy="140" r="86" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="6"/>
+  <g fill="#2f3a2b"><polygon points="40,150 50,110 60,150"/><polygon points="140,140 150,100 160,140"/><polygon points="160,160 168,128 176,160"/><polygon points="62,180 70,150 78,180"/></g>
+  <g transform="translate(104 152)" fill="#8b5a2b"><ellipse rx="10" ry="5"/><circle cx="9" cy="-6" r="3.5"/><rect x="-8" y="3" width="2" height="8"/><rect x="6" y="3" width="2" height="8"/></g>
+  <g stroke="#2f3a2b"><line x1="14" y1="140" x2="74" y2="140" stroke-width="5"/><line x1="126" y1="140" x2="186" y2="140" stroke-width="5"/><line x1="74" y1="140" x2="126" y2="140" stroke-width="1.5"/><line x1="100" y1="54" x2="100" y2="114" stroke-width="5"/><line x1="100" y1="166" x2="100" y2="226" stroke-width="5"/><line x1="100" y1="114" x2="100" y2="166" stroke-width="1.5"/></g>
+  <!-- 9x -->
+  <clipPath id="gr-zoom-clip"><circle cx="300" cy="140" r="86"/></clipPath>
+  <circle cx="300" cy="140" r="86" fill="#dfe6d3"/>
+  <g clip-path="url(#gr-zoom-clip)"><g transform="translate(300 146) scale(3)" fill="#8b5a2b"><ellipse rx="10" ry="5"/><circle cx="9" cy="-6" r="3.5"/><rect x="-8" y="3" width="2" height="8"/><rect x="6" y="3" width="2" height="8"/></g></g>
+  <circle cx="300" cy="140" r="86" fill="none" stroke="#2f3a2b" stroke-width="6"/>
+  <g stroke="#2f3a2b"><line x1="214" y1="140" x2="274" y2="140" stroke-width="5"/><line x1="326" y1="140" x2="386" y2="140" stroke-width="5"/><line x1="274" y1="140" x2="326" y2="140" stroke-width="1.5"/><line x1="300" y1="54" x2="300" y2="114" stroke-width="5"/><line x1="300" y1="166" x2="300" y2="226" stroke-width="5"/><line x1="300" y1="114" x2="300" y2="166" stroke-width="1.5"/></g>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">
+    <text x="100" y="252">3x: wide view</text><text x="300" y="252">9x: big, narrow</text>
+  </g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="100" y="272">close deer in timber</text><text x="300" y="272">plenty at 300 m</text></g>
+</svg>

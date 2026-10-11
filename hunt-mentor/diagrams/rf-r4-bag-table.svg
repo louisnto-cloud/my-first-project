@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 690" role="img" aria-label="Tiles of bag limits from the Region 4 season table. Elk 1, moose 1, mountain goat 1, black bear 2. Wolf: no bag limit or 3 depending on the Management Unit group. Lynx 1, bobcat 1, cougar 1 or 2 by group. No bag limit for coyote, Columbian ground squirrel, raccoon and skunk. Snowshoe hare 10 a day. Grouse 5 a day, 15 in possession. Pheasant cocks 3 a day, possession 6, season 12. Ptarmigan 10 (30). Turkey: spring bearded 1, fall and bow rows the merged cell *2. Doves 5 (15). Ducks 8 (24). Canada and cackling geese, snipe and coots 10 (30). Snow, Ross&#x27;s and white fronted geese 5 (15)." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="690" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Bag limits from the season table</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">NBL: No Bag Limit. 5 (15): 5 a day, 15 in</text>
+<text x="200" y="64" font-size="14" fill="#6b6f66" text-anchor="middle">possession.</text>
+<rect x="6" y="80" width="124" height="66" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="68" y="114" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">1</text>
+<text x="68" y="136" font-size="14" fill="#23261f" text-anchor="middle">elk</text>
+<rect x="138" y="80" width="124" height="66" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="200" y="114" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">1</text>
+<text x="200" y="136" font-size="14" fill="#23261f" text-anchor="middle">moose</text>
+<rect x="270" y="80" width="124" height="66" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="332" y="114" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">1</text>
+<text x="332" y="136" font-size="14" fill="#23261f" text-anchor="middle">mountain goat</text>
+<rect x="6" y="154" width="124" height="84" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="68" y="188" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">2</text>
+<text x="68" y="210" font-size="14" fill="#23261f" text-anchor="middle">black bear</text>
+<rect x="138" y="154" width="124" height="84" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="200" y="188" font-size="18" fill="#e8590c" text-anchor="middle" font-weight="bold">NBL or 3</text>
+<text x="200" y="210" font-size="14" fill="#23261f" text-anchor="middle">wolf, by MU</text>
+<text x="200" y="228" font-size="14" fill="#23261f" text-anchor="middle">group</text>
+<rect x="270" y="154" width="124" height="84" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="332" y="188" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">1</text>
+<text x="332" y="210" font-size="14" fill="#23261f" text-anchor="middle">lynx</text>
+<rect x="6" y="246" width="124" height="102" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="68" y="280" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">1</text>
+<text x="68" y="302" font-size="14" fill="#23261f" text-anchor="middle">bobcat</text>
+<rect x="138" y="246" width="124" height="102" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="200" y="280" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">1 or 2</text>
+<text x="200" y="302" font-size="14" fill="#23261f" text-anchor="middle">cougar, by MU</text>
+<text x="200" y="320" font-size="14" fill="#23261f" text-anchor="middle">group</text>
+<rect x="270" y="246" width="124" height="102" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<text x="332" y="280" font-size="26" fill="#8b5a2b" text-anchor="middle" font-weight="bold">NBL</text>
+<text x="332" y="302" font-size="14" fill="#23261f" text-anchor="middle">coyote, ground</text>
+<text x="332" y="320" font-size="14" fill="#23261f" text-anchor="middle">squirrel,</text>
+<text x="332" y="338" font-size="14" fill="#23261f" text-anchor="middle">raccoon, skunk</text>
+<rect x="6" y="356" width="124" height="102" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="68" y="390" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">10</text>
+<text x="68" y="412" font-size="14" fill="#23261f" text-anchor="middle">snowshoe hare a</text>
+<text x="68" y="430" font-size="14" fill="#23261f" text-anchor="middle">day</text>
+<rect x="138" y="356" width="124" height="102" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="200" y="390" font-size="26" fill="#8a9a6b" text-anchor="middle" font-weight="bold">5 (15)</text>
+<text x="200" y="412" font-size="14" fill="#23261f" text-anchor="middle">grouse</text>
+<rect x="270" y="356" width="124" height="102" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="332" y="390" font-size="26" fill="#8a9a6b" text-anchor="middle" font-weight="bold">3</text>
+<text x="332" y="412" font-size="14" fill="#23261f" text-anchor="middle">pheasant a day.</text>
+<text x="332" y="430" font-size="14" fill="#23261f" text-anchor="middle">Possession 6,</text>
+<text x="332" y="448" font-size="14" fill="#23261f" text-anchor="middle">season 12</text>
+<rect x="6" y="466" width="124" height="102" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="68" y="500" font-size="18" fill="#8a9a6b" text-anchor="middle" font-weight="bold">10 (30)</text>
+<text x="68" y="522" font-size="14" fill="#23261f" text-anchor="middle">ptarmigan</text>
+<rect x="138" y="466" width="124" height="102" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="200" y="500" font-size="26" fill="#8a9a6b" text-anchor="middle" font-weight="bold">1 / *2</text>
+<text x="200" y="522" font-size="14" fill="#23261f" text-anchor="middle">turkey: spring</text>
+<text x="200" y="540" font-size="14" fill="#23261f" text-anchor="middle">1, fall and bow</text>
+<text x="200" y="558" font-size="14" fill="#23261f" text-anchor="middle">*2</text>
+<rect x="270" y="466" width="124" height="102" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="332" y="500" font-size="26" fill="#8a9a6b" text-anchor="middle" font-weight="bold">5 (15)</text>
+<text x="332" y="522" font-size="14" fill="#23261f" text-anchor="middle">doves</text>
+<rect x="6" y="576" width="124" height="102" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<text x="68" y="610" font-size="26" fill="#4a7fb0" text-anchor="middle" font-weight="bold">8 (24)</text>
+<text x="68" y="632" font-size="14" fill="#23261f" text-anchor="middle">ducks</text>
+<rect x="138" y="576" width="124" height="102" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<text x="200" y="610" font-size="18" fill="#4a7fb0" text-anchor="middle" font-weight="bold">10 (30)</text>
+<text x="200" y="632" font-size="14" fill="#23261f" text-anchor="middle">Canada and</text>
+<text x="200" y="650" font-size="14" fill="#23261f" text-anchor="middle">cackling geese,</text>
+<text x="200" y="668" font-size="14" fill="#23261f" text-anchor="middle">snipe, coots</text>
+<rect x="270" y="576" width="124" height="102" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<text x="332" y="610" font-size="26" fill="#4a7fb0" text-anchor="middle" font-weight="bold">5 (15)</text>
+<text x="332" y="632" font-size="14" fill="#23261f" text-anchor="middle">snow, Ross&#x27;s,</text>
+<text x="332" y="650" font-size="14" fill="#23261f" text-anchor="middle">white fronted</text>
+<text x="332" y="668" font-size="14" fill="#23261f" text-anchor="middle">geese</text>
+</svg>

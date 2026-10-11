@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 310" role="img" aria-label="Average precipitation, 1991 to 2020 normals. Kamloops: October 23 mm, November 26 mm. Abbotsford: October 144 mm, November 233 mm. Osoyoos: October 22 mm, November 29 mm. The Fraser Valley is many times wetter.">
+  <rect x="0" y="0" width="400" height="310" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">October and November precipitation</text>
+<rect x="60" y="240.365" width="36" height="19.635" rx="3" fill="#e8590c"/><rect x="100" y="238.24" width="36" height="21.76" rx="3" fill="#8b5a2b"/>
+<text x="78" y="234.365" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">23.1</text><text x="118" y="232.24" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">25.6</text>
+<text x="98" y="280" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Kamloops</text>
+<rect x="180" y="137.26" width="36" height="122.74" rx="3" fill="#e8590c"/><rect x="220" y="61.86500000000001" width="36" height="198.135" rx="3" fill="#8b5a2b"/>
+<text x="198" y="131.26" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">144.4</text><text x="238" y="55.86500000000001" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">233.1</text>
+<text x="218" y="280" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Abbotsford</text>
+<rect x="300" y="241.47" width="36" height="18.53" rx="3" fill="#e8590c"/><rect x="340" y="235.01" width="36" height="24.99" rx="3" fill="#8b5a2b"/>
+<text x="318" y="235.47" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">21.8</text><text x="358" y="229.01" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">29.4</text>
+<text x="338" y="280" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Osoyoos</text>
+<line x1="40" y1="260" x2="390" y2="260" stroke="#23261f" stroke-width="2" stroke-linecap="round"/>
+<rect x="280" y="110" width="14" height="14" rx="2" fill="#e8590c"/><text x="300" y="122" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">October mm</text><rect x="280" y="132" width="14" height="14" rx="2" fill="#8b5a2b"/><text x="300" y="144" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">November mm</text>
+<text x="200" y="300" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Fraser Valley: 6 to 9 times wetter (95%)</text>
+</svg>

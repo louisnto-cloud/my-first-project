@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Front view slice through a grouse. The backbone is at the top with the lungs on each side of it. Below, the two big breast muscles hang on each side of the keel, the blade shaped breastbone. Breast muscle is white meat built for short bursts of power." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Front view slice: the meat</text>
+<path d="M200 70 Q300 75 320 150 Q320 230 200 268 Q80 230 80 150 Q100 75 200 70 Z" fill="#efe3cf" stroke="#6b4f35" stroke-width="3"/>
+<path d="M200 140 Q290 140 300 180 Q290 240 200 262 Z" fill="#f2d7c9" stroke="#c9a491" stroke-width="2"/>
+<path d="M200 140 Q110 140 100 180 Q110 240 200 262 Z" fill="#f2d7c9" stroke="#c9a491" stroke-width="2"/>
+<polygon points="196,140 204,140 206,272 194,272" fill="#ffffff" stroke="#6b4f35" stroke-width="2"/>
+<circle cx="200" cy="90" r="12" fill="#ffffff" stroke="#6b4f35" stroke-width="2"/>
+<ellipse cx="160" cy="112" rx="22" ry="12" fill="#b5524a"/><ellipse cx="240" cy="112" rx="22" ry="12" fill="#b5524a"/>
+<text x="20" y="60" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Backbone</text>
+<line x1="80" y1="64" x2="188" y2="88" stroke="#23261f" stroke-width="1.5"/>
+<text x="320" y="60" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Lungs</text>
+<line x1="330" y1="64" x2="258" y2="108" stroke="#23261f" stroke-width="1.5"/>
+<text x="318" y="200" font-size="14" fill="#23261f" text-anchor="start">Breast:</text>
+<text x="318" y="218" font-size="14" fill="#23261f" text-anchor="start">white meat,</text>
+<text x="318" y="236" font-size="14" fill="#23261f" text-anchor="start">burst power</text>
+<line x1="316" y1="196" x2="290" y2="196" stroke="#23261f" stroke-width="1.5"/>
+<text x="6" y="214" font-size="14" fill="#23261f" text-anchor="start">Keel: the</text>
+<text x="6" y="232" font-size="14" fill="#23261f" text-anchor="start">breastbone</text>
+<text x="6" y="250" font-size="14" fill="#23261f" text-anchor="start">blade</text>
+<line x1="80" y1="228" x2="194" y2="250" stroke="#23261f" stroke-width="1.5"/>
+</svg>

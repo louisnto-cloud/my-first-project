@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 348" role="img" aria-label="Animation: a red line for today walks through the Region 6 licence year from July to June. Wolf in all Management Units: 1 August to 15 June. Black bear in 6-1 to 6-11 and 6-14 to 6-30: 15 August to 30 November and 1 April to 30 June. Grouse on the mainland: bow only 1 to 9 September, then 10 September to 15 November. Ducks in the inland units: 1 September to 30 November. Ducks in 6-3 and 6-11 to 6-14: 1 October to 15 January. At the end every season shows." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="348" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Region 6 year at a glance</text>
+<rect x="14.0" y="46" width="31.6" height="236" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="46" width="30.6" height="236" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="46" width="30.6" height="236" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="46" width="31.6" height="236" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="46" width="31.6" height="236" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="46" width="31.6" height="236" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="80" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Wolf, 6-1 to 6-30</text>
+<rect x="45.6" y="86" width="325.1" height="16" rx="4" fill="#2f3a2b" opacity=".3"><set attributeName="opacity" to="1" begin="0.85s" dur="8.74s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Black bear, mainland</text>
+<rect x="59.9" y="130" width="110.1" height="16" rx="4" fill="#8b5a2b" opacity=".3"><set attributeName="opacity" to="1" begin="1.23s" dur="2.96s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<rect x="293.3" y="130" width="92.7" height="16" rx="4" fill="#8b5a2b" opacity=".3"><set attributeName="opacity" to="1" begin="7.51s" dur="2.49s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<text x="14" y="168" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Grouse, mainland</text>
+<rect x="77.2" y="174" width="9.2" height="16" rx="4" fill="#8a9a6b" opacity=".3"><set attributeName="opacity" to="1" begin="1.70s" dur="0.25s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<rect x="86.4" y="174" width="68.3" height="16" rx="4" fill="#8a9a6b" opacity=".3"><set attributeName="opacity" to="1" begin="1.95s" dur="1.84s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<text x="14" y="212" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Ducks, inland MUs</text>
+<rect x="77.2" y="218" width="92.7" height="16" rx="4" fill="#4a7fb0" opacity=".3"><set attributeName="opacity" to="1" begin="1.70s" dur="2.49s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<text x="14" y="256" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Ducks, 6-3, 6-11 to 6-14</text>
+<rect x="107.8" y="262" width="109.1" height="16" rx="4" fill="#2c5d86" opacity=".3"><set attributeName="opacity" to="1" begin="2.52s" dur="2.93s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<g><line x1="14" y1="44" x2="14" y2="286" stroke="#c92a2a" stroke-width="3"/><circle cx="14" cy="290" r="6" fill="#c92a2a"/><animateTransform attributeName="transform" type="translate" from="0 0" to="372 0" begin="0s" dur="10.0s" fill="freeze"/></g>
+<text x="200" y="316" font-size="14" fill="#23261f" text-anchor="middle">Red line: today. A bar lights up when it is open.</text>
+<text x="200" y="336" font-size="14" fill="#6b6f66" text-anchor="middle">At the end every season shows.</text>
+</svg>

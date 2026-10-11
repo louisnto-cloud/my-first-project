@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Pellets drawn to scale against a centimetre ruler. Deer: oval pellets about 1 to 1.5 cm long. Elk: rounder, 1 to 1.5 cm across, often dimpled on one end. Moose: big, 1.5 to 2 cm across and 2.5 to 4 cm long. Snowshoe hare: slightly flat round balls about 1.2 cm.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Pellets to scale</text>
+  <g fill="#5c3b1c">
+    <ellipse cx="45" cy="100" rx="9" ry="14"/><ellipse cx="70" cy="95" rx="9" ry="14" transform="rotate(20 70 95)"/><ellipse cx="58" cy="125" rx="9" ry="14" transform="rotate(-30 58 125)"/><ellipse cx="82" cy="125" rx="9" ry="13"/>
+    <circle cx="150" cy="100" r="13"/><circle cx="178" cy="104" r="13"/><circle cx="162" cy="128" r="13"/>
+    <ellipse cx="250" cy="100" rx="13" ry="22"/><ellipse cx="282" cy="112" rx="13" ry="21" transform="rotate(25 282 112)"/>
+    <ellipse cx="350" cy="105" rx="9" ry="7" fill="#a0784a"/><ellipse cx="368" cy="122" rx="9" ry="7" fill="#a0784a"/>
+  </g>
+  <g fill="#8b5a2b"><path d="M146 92 q4 4 8 0" stroke="#2f3a2b" stroke-width="2" fill="none"/><path d="M174 96 q4 4 8 0" stroke="#2f3a2b" stroke-width="2" fill="none"/></g>
+  <g text-anchor="middle">
+    <text x="62" y="172" font-size="17" font-weight="bold" fill="#2f3a2b">Deer</text>
+    <text x="162" y="172" font-size="17" font-weight="bold" fill="#2f3a2b">Elk</text>
+    <text x="265" y="172" font-size="17" font-weight="bold" fill="#2f3a2b">Moose</text>
+    <text x="358" y="172" font-size="17" font-weight="bold" fill="#2f3a2b">Hare</text>
+    <text x="62" y="194" font-size="14" fill="#e8590c">oval</text><text x="62" y="212" font-size="14" fill="#e8590c">1 to 1.5 cm</text>
+    <text x="162" y="194" font-size="14" fill="#e8590c">round, dimple</text><text x="162" y="212" font-size="14" fill="#e8590c">1 to 1.5 cm</text>
+    <text x="265" y="194" font-size="14" fill="#e8590c">big oval</text><text x="265" y="212" font-size="14" fill="#e8590c">2.5 to 4 cm</text>
+    <text x="358" y="194" font-size="14" fill="#e8590c">flat ball</text><text x="358" y="212" font-size="14" fill="#e8590c">1.2 cm</text>
+  </g>
+  <rect x="20" y="235" width="360" height="26" fill="#f3d36b" stroke="#2f3a2b"/>
+  <g stroke="#2f3a2b" stroke-width="1.5">
+    <path d="M38 235 v14 M56 235 v8 M74 235 v14 M92 235 v8 M110 235 v14 M128 235 v8 M146 235 v14 M164 235 v8 M182 235 v14"/>
+  </g>
+  <text x="290" y="254" font-size="14" fill="#2f3a2b" text-anchor="middle">ruler: 1 tick = 1 cm</text>
+  <text x="200" y="288" font-size="14" fill="#6b4f35" text-anchor="middle">Summer on green feed: soft clumps or patties</text>
+</svg>

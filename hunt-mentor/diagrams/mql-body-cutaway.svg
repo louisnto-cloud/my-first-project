@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Side view cutaway of a quail. Crop at the base of the neck. Lungs pressed up under the back. Pale blue air sacs fill much of the body. The heart sits low in the chest behind the crop. The gizzard is lower and further back. The big breast muscle covers the keel underneath. An orange dashed ring marks heart and lungs in the front half of the body. General bird anatomy, 70 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Inside a quail (side view)</text>
+<g transform="translate(190 160)">
+<ellipse cx="0" cy="0" rx="130" ry="80" fill="#cfd2d6"/>
+<path d="M-125 -10 L-175 -30 L-170 20 Z" fill="#9a9ca2"/>
+<circle cx="110" cy="-80" r="38" fill="#cfd2d6"/>
+<path d="M140 -78 l20 6 l-20 8 Z" fill="#555"/><circle cx="122" cy="-88" r="5" fill="#111"/>
+<path d="M100 -112 q-6 -36 26 -30 q-14 4 -16 30 Z" fill="#111"/>
+<ellipse cx="80" cy="-20" rx="20" ry="16" fill="#e8c27a"/>
+<ellipse cx="-30" cy="-40" rx="70" ry="22" fill="#bcd3ea"/>
+<ellipse cx="-70" cy="10" rx="40" ry="26" fill="#bcd3ea"/>
+<ellipse cx="20" cy="-52" rx="34" ry="12" fill="#e79aa0"/>
+<path d="M30 0 q14 -18 28 0 q-14 24 -28 0 Z" fill="#b3222b"/>
+<ellipse cx="-20" cy="34" rx="26" ry="20" fill="#8b5a2b"/>
+<path d="M-20 70 Q60 80 100 30 L100 60 Q60 92 -20 78 Z" fill="#d98c8c" opacity=".8"/>
+<ellipse cx="40" cy="-14" rx="62" ry="50" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5"/>
+</g>
+<text x="270" y="128" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Crop</text>
+<line x1="268" y1="124" x2="290" y2="140" stroke="#2f3a2b" stroke-width="1"/>
+<text x="160" y="92" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Lungs</text>
+<text x="100" y="118" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Air sacs</text>
+<text x="232" y="196" font-size="14" font-weight="bold" fill="#b3222b" text-anchor="middle">Heart</text>
+<text x="168" y="236" font-size="14" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Gizzard</text>
+<text x="300" y="250" font-size="14" font-weight="bold" fill="#a0484f" text-anchor="middle">Breast muscle</text>
+<rect x="10" y="262" width="380" height="32" rx="8" fill="#2f3a2b"/>
+<text x="200" y="284" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Orange ring: heart and lungs, the front half</text>
+</svg>

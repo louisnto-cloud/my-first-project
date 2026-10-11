@@ -1,0 +1,754 @@
+[
+ {
+  "id": "mdk-001",
+  "deck": "Ducks Masterclass",
+  "front": "Name the four duck groups in BC.",
+  "back": "Puddle ducks, divers, mergansers, sea ducks (85%).",
+  "diagram": "mdk-groups"
+ },
+ {
+  "id": "mdk-002",
+  "deck": "Ducks Masterclass",
+  "front": "Tips up to feed, jumps straight up to fly. Which group?",
+  "back": "Puddle duck (dabbler) (80%).",
+  "diagram": "sb-dabbler-diver"
+ },
+ {
+  "id": "mdk-003",
+  "deck": "Ducks Masterclass",
+  "front": "Dives to feed, patters along the water to take off. Which group?",
+  "back": "Diver (80%). Exception: the bufflehead can jump straight up."
+ },
+ {
+  "id": "mdk-004",
+  "deck": "Ducks Masterclass",
+  "front": "Which diver can jump straight off the water?",
+  "back": "The bufflehead (80%)."
+ },
+ {
+  "id": "mdk-005",
+  "deck": "Ducks Masterclass",
+  "front": "Big, broad wings, slow steady beats, loose flocks. Who?",
+  "back": "Mallard (80%).",
+  "diagram": "mdk-sil-dabblers"
+ },
+ {
+  "id": "mdk-006",
+  "deck": "Ducks Masterclass",
+  "front": "Slim cross shape, long neck, needle tail. Who?",
+  "back": "Northern pintail (80%).",
+  "diagram": "mdk-sil-dabblers"
+ },
+ {
+  "id": "mdk-007",
+  "deck": "Ducks Masterclass",
+  "front": "White patch on the FRONT of the wing in flight. Who?",
+  "back": "American wigeon (85%)."
+ },
+ {
+  "id": "mdk-008",
+  "deck": "Ducks Masterclass",
+  "front": "Tiny, low, fast; the whole flock twists as one. Who?",
+  "back": "Green winged teal (80%)."
+ },
+ {
+  "id": "mdk-009",
+  "deck": "Ducks Masterclass",
+  "front": "Huge bill held low in flight. Who?",
+  "back": "Northern shoveler (85%)."
+ },
+ {
+  "id": "mdk-010",
+  "deck": "Ducks Masterclass",
+  "front": "Long square tail, dark wings, head held up. Who?",
+  "back": "Wood duck (80%)."
+ },
+ {
+  "id": "mdk-011",
+  "deck": "Ducks Masterclass",
+  "front": "Wings set far back, big white wing patches, wings whistle. Who?",
+  "back": "A goldeneye (85%).",
+  "diagram": "mdk-sil-divers"
+ },
+ {
+  "id": "mdk-012",
+  "deck": "Ducks Masterclass",
+  "front": "White stripe along the back of the wing, pale back. Who?",
+  "back": "Scaup (85%). Lesser: stripe halfway; greater: almost to the tip."
+ },
+ {
+  "id": "mdk-013",
+  "deck": "Ducks Masterclass",
+  "front": "Grey wing stripe and a black back. Who?",
+  "back": "Ring necked duck (85%)."
+ },
+ {
+  "id": "mdk-014",
+  "deck": "Ducks Masterclass",
+  "front": "Long sloped head, long body, fast, flies in lines or a V. Who?",
+  "back": "Canvasback (80%)."
+ },
+ {
+  "id": "mdk-015",
+  "deck": "Ducks Masterclass",
+  "front": "What is the speculum?",
+  "back": "The coloured patch on the back edge of the wing (80%). It stays the same all season.",
+  "diagram": "mdk-speculum"
+ },
+ {
+  "id": "mdk-016",
+  "deck": "Ducks Masterclass",
+  "front": "Blue patch with white bars on both sides?",
+  "back": "Mallard, hen or drake (85%)."
+ },
+ {
+  "id": "mdk-017",
+  "deck": "Ducks Masterclass",
+  "front": "The only puddle duck with a white speculum?",
+  "back": "Gadwall (85%)."
+ },
+ {
+  "id": "mdk-018",
+  "deck": "Ducks Masterclass",
+  "front": "Green speculum, white trailing edge, slim body?",
+  "back": "Pintail (85%)."
+ },
+ {
+  "id": "mdk-019",
+  "deck": "Ducks Masterclass",
+  "front": "Why read the wing before the head in October?",
+  "back": "Drakes are still in drab eclipse plumage; the wing patch never changes during the season (80%).",
+  "diagram": "mdk-eclipse"
+ },
+ {
+  "id": "mdk-020",
+  "deck": "Ducks Masterclass",
+  "front": "By when are about 90% of mallard drakes back in colour?",
+  "back": "Mid November, in a California study (75%)."
+ },
+ {
+  "id": "mdk-021",
+  "deck": "Ducks Masterclass",
+  "front": "How do you tell a young duck in the hand?",
+  "back": "Notched tips on tail feathers (75%). In mallards the notch is unreliable from early September (70%)."
+ },
+ {
+  "id": "mdk-022",
+  "deck": "Ducks Masterclass",
+  "front": "Brown hen, orange and black bill, blue patch?",
+  "back": "Mallard hen (85%).",
+  "photo": "mallard-hen"
+ },
+ {
+  "id": "mdk-023",
+  "deck": "Ducks Masterclass",
+  "front": "Brown hen, white patch at the base of the bill?",
+  "back": "Scaup hen (85%).",
+  "photo": "lesser-scaup-hen"
+ },
+ {
+  "id": "mdk-024",
+  "deck": "Ducks Masterclass",
+  "front": "Dagger bill, sits low, dives near your decoys. Shoot?",
+  "back": "No. A loon or a grebe: no open season (90%).",
+  "diagram": "mdk-noshot-flow"
+ },
+ {
+  "id": "mdk-025",
+  "deck": "Ducks Masterclass",
+  "front": "Slate grey, white chicken bill. Legal?",
+  "back": "American coot: legal, its own limit of 10 a day (99%)."
+ },
+ {
+  "id": "mdk-026",
+  "deck": "Ducks Masterclass",
+  "front": "Thin red bill with teeth. Duck or not?",
+  "back": "Merganser: a duck, counts in your 8 (95%)."
+ },
+ {
+  "id": "mdk-027",
+  "deck": "Ducks Masterclass",
+  "front": "Daily duck limit and the four restricted species?",
+  "back": "8 a day. Inside it: 4 pintail, 4 canvasback, 2 goldeneye (both kinds), 2 harlequin (99%).",
+  "diagram": "rb-duck-bag"
+ },
+ {
+  "id": "mdk-028",
+  "deck": "Ducks Masterclass",
+  "front": "Duck possession limit?",
+  "back": "24, and not more than 12 pintail or canvasback, not more than 6 goldeneye or harlequin (99%)."
+ },
+ {
+  "id": "mdk-029",
+  "deck": "Ducks Masterclass",
+  "front": "Weigh it: mallard, teal, canvasback.",
+  "back": "Mallard 1.25 kg, teal 0.4 kg, canvasback 1.35 kg (80%).",
+  "diagram": "sb-duck-weights"
+ },
+ {
+  "id": "mdk-030",
+  "deck": "Ducks Masterclass",
+  "front": "How many ducks breed in BC, and what share in the Interior?",
+  "back": "About 1.7 million; about 65% in the Interior (75%).",
+  "diagram": "mdk-bc-numbers"
+ },
+ {
+  "id": "mdk-031",
+  "deck": "Ducks Masterclass",
+  "front": "What share of the world's Barrow's goldeneyes breed in the BC Interior?",
+  "back": "More than 60% (70%)."
+ },
+ {
+  "id": "mdk-032",
+  "deck": "Ducks Masterclass",
+  "front": "Which way does air move through a bird's lung?",
+  "back": "One way, pushed by the air sacs, on both in and out breaths (80%).",
+  "diagram": "mdk-air-sacs"
+ },
+ {
+  "id": "mdk-033",
+  "deck": "Ducks Masterclass",
+  "front": "How many breaths move one gulp of air through a bird?",
+  "back": "Two (80%)."
+ },
+ {
+  "id": "mdk-034",
+  "deck": "Ducks Masterclass",
+  "front": "How many air sacs does a bird have?",
+  "back": "9: four pairs plus one at the base of the neck (80%).",
+  "diagram": "mdk-air-sacs"
+ },
+ {
+  "id": "mdk-035",
+  "deck": "Ducks Masterclass",
+  "front": "Where does air from the sacs reach besides the lungs?",
+  "back": "Into hollow bones, including the upper wing bone (80%)."
+ },
+ {
+  "id": "mdk-036",
+  "deck": "Ducks Masterclass",
+  "front": "Where are a duck's heart and lungs?",
+  "back": "High and forward, under the wing roots; heart low in the chest behind the keel (75%).",
+  "diagram": "mdk-anatomy"
+ },
+ {
+  "id": "mdk-037",
+  "deck": "Ducks Masterclass",
+  "front": "What is mostly in a duck's rear belly?",
+  "back": "Air sacs and gut. Hits there cripple (Tip).",
+  "diagram": "mdk-shot-zones"
+ },
+ {
+  "id": "mdk-038",
+  "deck": "Ducks Masterclass",
+  "front": "How many pellet hits in the vitals kill a duck, with the right size?",
+  "back": "1 to 2 (70%, Roster lethality table)."
+ },
+ {
+  "id": "mdk-039",
+  "deck": "Ducks Masterclass",
+  "front": "What happens to a diver's heart on a long or forced dive?",
+  "back": "It slows hard to save oxygen, more than in puddle ducks (80%)."
+ },
+ {
+  "id": "mdk-040",
+  "deck": "Ducks Masterclass",
+  "front": "What anchors the big flight muscles?",
+  "back": "The keel on the breastbone (75%)."
+ },
+ {
+  "id": "mdk-041",
+  "deck": "Ducks Masterclass",
+  "front": "What does a duck use instead of teeth?",
+  "back": "A muscular gizzard with grit (80%).",
+  "diagram": "mdk-gut"
+ },
+ {
+  "id": "mdk-042",
+  "deck": "Ducks Masterclass",
+  "front": "Do ducks have a true crop?",
+  "back": "No. The gullet stretches to store food (80%)."
+ },
+ {
+  "id": "mdk-043",
+  "deck": "Ducks Masterclass",
+  "front": "How much grain can a mallard hold in its gullet?",
+  "back": "Up to about 113 g, a quarter pound (75%)."
+ },
+ {
+  "id": "mdk-044",
+  "deck": "Ducks Masterclass",
+  "front": "Why do diving ducks have bigger gizzards?",
+  "back": "They eat hard food like clams and snails (75%)."
+ },
+ {
+  "id": "mdk-045",
+  "deck": "Ducks Masterclass",
+  "front": "How do ducks stand on ice without freezing?",
+  "back": "Countercurrent heat exchange: warm blood down beside cool blood back (80%).",
+  "diagram": "mdk-feet-heat"
+ },
+ {
+  "id": "mdk-046",
+  "deck": "Ducks Masterclass",
+  "front": "How much more energy does flying cost than resting?",
+  "back": "About 12 times (75%).",
+  "diagram": "mdk-fat-year"
+ },
+ {
+  "id": "mdk-047",
+  "deck": "Ducks Masterclass",
+  "front": "When do ducks fatten?",
+  "back": "Before fall migration, and again in early winter (75%)."
+ },
+ {
+  "id": "mdk-048",
+  "deck": "Ducks Masterclass",
+  "front": "Adult mallard yearly survival?",
+  "back": "About 0.6 to 0.66: 6 in 10 live a year (75%).",
+  "diagram": "mdk-survival"
+ },
+ {
+  "id": "mdk-049",
+  "deck": "Ducks Masterclass",
+  "front": "Oldest known wild mallard?",
+  "back": "About 27 years (70%)."
+ },
+ {
+  "id": "mdk-050",
+  "deck": "Ducks Masterclass",
+  "front": "How much of the circle does a mallard see?",
+  "back": "About 360 degrees (70%). Treat it as seeing everything.",
+  "diagram": "mdk-vision-field"
+ },
+ {
+  "id": "mdk-051",
+  "deck": "Ducks Masterclass",
+  "front": "How many colour cones do ducks have?",
+  "back": "Four, including ultraviolet (75%). You have three.",
+  "diagram": "mdk-cones"
+ },
+ {
+  "id": "mdk-052",
+  "deck": "Ducks Masterclass",
+  "front": "Number one thing that flares ducks?",
+  "back": "Movement, especially a face looking up (75% motion, Tip for the face).",
+  "diagram": "mdk-look-down"
+ },
+ {
+  "id": "mdk-053",
+  "deck": "Ducks Masterclass",
+  "front": "How much farther than you can a bird see fine detail?",
+  "back": "About 2.5 to 3 times (70%)."
+ },
+ {
+  "id": "mdk-054",
+  "deck": "Ducks Masterclass",
+  "front": "How does a duck judge depth?",
+  "back": "By moving its head to see from two angles (70%)."
+ },
+ {
+  "id": "mdk-055",
+  "deck": "Ducks Masterclass",
+  "front": "Mallard hearing range and best spot?",
+  "back": "About 66 Hz to 7.6 kHz; best near 2 kHz (75%).",
+  "diagram": "mdk-hearing"
+ },
+ {
+  "id": "mdk-056",
+  "deck": "Ducks Masterclass",
+  "front": "Where do duck calls sit in pitch?",
+  "back": "1 to 3 kHz, their best hearing band (75%)."
+ },
+ {
+  "id": "mdk-057",
+  "deck": "Ducks Masterclass",
+  "front": "Can ducks smell?",
+  "back": "Probably yes, but it is barely studied for hunting. Play the wind for the landing (Tip)."
+ },
+ {
+  "id": "mdk-058",
+  "deck": "Ducks Masterclass",
+  "front": "Which ducks in a sleeping row keep one eye open?",
+  "back": "The edge birds, eye facing out: about 32% vs 12% for middle birds (75%).",
+  "diagram": "mdk-one-eye"
+ },
+ {
+  "id": "mdk-059",
+  "deck": "Ducks Masterclass",
+  "front": "When does most migration happen?",
+  "back": "At night, peaking near midnight (80%)."
+ },
+ {
+  "id": "mdk-060",
+  "deck": "Ducks Masterclass",
+  "front": "Necks up, still, bunching up. What does it mean?",
+  "back": "Alert: about to leave. Freeze (Tip).",
+  "diagram": "mdk-alarm"
+ },
+ {
+  "id": "mdk-061",
+  "deck": "Ducks Masterclass",
+  "front": "What did GPS mallards do in heavily hunted areas?",
+  "back": "Avoided hunted ground in shooting hours; about 2 flights a day (80%).",
+  "diagram": "mdk-pressure-map"
+ },
+ {
+  "id": "mdk-062",
+  "deck": "Ducks Masterclass",
+  "front": "How far apart can refuges be and still be linked for mallards?",
+  "back": "Under about 16 km (10 miles) (80%)."
+ },
+ {
+  "id": "mdk-063",
+  "deck": "Ducks Masterclass",
+  "front": "How long should you rest a duck spot?",
+  "back": "A week or more: ducks perceive safety in weeks, not days (75 to 80%)."
+ },
+ {
+  "id": "mdk-064",
+  "deck": "Ducks Masterclass",
+  "front": "Where do pressured ducks feed?",
+  "back": "At night, flying out from refuges after dark (80%)."
+ },
+ {
+  "id": "mdk-065",
+  "deck": "Ducks Masterclass",
+  "front": "When do most mallard hens pair up?",
+  "back": "Over 80% by early December; courtship peaks Oct to Nov (75%).",
+  "diagram": "mdk-pairs"
+ },
+ {
+  "id": "mdk-066",
+  "deck": "Ducks Masterclass",
+  "front": "When does the mallard drake leave the hen?",
+  "back": "Within days of the start of incubation (70%)."
+ },
+ {
+  "id": "mdk-067",
+  "deck": "Ducks Masterclass",
+  "front": "Young or adult ducks: which are shot more?",
+  "back": "Young of the year (80%).",
+  "diagram": "mdk-young-old"
+ },
+ {
+  "id": "mdk-068",
+  "deck": "Ducks Masterclass",
+  "front": "Which way do ducks land?",
+  "back": "Into the wind (80%)."
+ },
+ {
+  "id": "mdk-069",
+  "deck": "Ducks Masterclass",
+  "front": "Old hand's rule about the roost?",
+  "back": "Never shoot the roost (opinion)."
+ },
+ {
+  "id": "mdk-070",
+  "deck": "Ducks Masterclass",
+  "front": "Peak fall passage through the Interior?",
+  "back": "October (60%).",
+  "diagram": "mdk-year-chart"
+ },
+ {
+  "id": "mdk-071",
+  "deck": "Ducks Masterclass",
+  "front": "What ends most Interior migration?",
+  "back": "Freeze up in late November (65%)."
+ },
+ {
+  "id": "mdk-072",
+  "deck": "Ducks Masterclass",
+  "front": "Mallard clutch and incubation?",
+  "back": "About 9 eggs (5 to 15); about 28 days (75%).",
+  "diagram": "mdk-nest-timeline"
+ },
+ {
+  "id": "mdk-073",
+  "deck": "Ducks Masterclass",
+  "front": "When do ducklings fly?",
+  "back": "At about 50 to 60 days (70%)."
+ },
+ {
+  "id": "mdk-074",
+  "deck": "Ducks Masterclass",
+  "front": "How long are ducks flightless in the moult?",
+  "back": "About 3 to 4 weeks; mallards about 23 to 26 days (75 to 80%)."
+ },
+ {
+  "id": "mdk-075",
+  "deck": "Ducks Masterclass",
+  "front": "First ducks to leave BC in fall?",
+  "back": "Blue winged teal, shoveler, pintail: August to early September (75%).",
+  "diagram": "sb-duck-migration"
+ },
+ {
+  "id": "mdk-076",
+  "deck": "Ducks Masterclass",
+  "front": "Last ducks to leave?",
+  "back": "Goldeneyes, bufflehead and common mergansers, with the ice (75%)."
+ },
+ {
+  "id": "mdk-077",
+  "deck": "Ducks Masterclass",
+  "front": "Name 3 changes in October and November.",
+  "back": "Drakes back in colour, pairs forming, peak passage, freeze up, divers arrive (60 to 75%).",
+  "diagram": "mdk-oct-nov"
+ },
+ {
+  "id": "mdk-078",
+  "deck": "Ducks Masterclass",
+  "front": "A mallard's daily commute?",
+  "back": "Fields at dawn and late day, water at midday and night (80%).",
+  "diagram": "mdk-day-clock"
+ },
+ {
+  "id": "mdk-079",
+  "deck": "Ducks Masterclass",
+  "front": "Legal hours for ducks?",
+  "back": "30 minutes before sunrise to 30 minutes after sunset (99%)."
+ },
+ {
+  "id": "mdk-080",
+  "deck": "Ducks Masterclass",
+  "front": "Which weather effect has the strongest evidence for moving ducks?",
+  "back": "Ice and snow cover (80%).",
+  "diagram": "mdk-weather-evidence"
+ },
+ {
+  "id": "mdk-081",
+  "deck": "Ducks Masterclass",
+  "front": "What do ducks do on moonlit, windy evenings?",
+  "back": "Leave to feed earlier (75%)."
+ },
+ {
+  "id": "mdk-082",
+  "deck": "Ducks Masterclass",
+  "front": "Cold front with a north wind: hunter lore?",
+  "back": "New birds; hunt the morning after (65%, lore)."
+ },
+ {
+  "id": "mdk-083",
+  "deck": "Ducks Masterclass",
+  "front": "Barometer alone and ducks?",
+  "back": "No good study found (VERIFY)."
+ },
+ {
+  "id": "mdk-084",
+  "deck": "Ducks Masterclass",
+  "front": "Where do redheads spend midday?",
+  "back": "Rafted on deep open water; they feed morning and evening (80%).",
+  "photo": "g-redhead-flight"
+ },
+ {
+  "id": "mdk-085",
+  "deck": "Ducks Masterclass",
+  "front": "Water depth puddle ducks feed in?",
+  "back": "Under about 30 cm (75%).",
+  "diagram": "mdk-wetland-section"
+ },
+ {
+  "id": "mdk-086",
+  "deck": "Ducks Masterclass",
+  "front": "Fall foods for ducks?",
+  "back": "Marsh seeds, pondweed, waste grain; divers add snails and clams (80%).",
+  "diagram": "mdk-food-calendar"
+ },
+ {
+  "id": "mdk-087",
+  "deck": "Ducks Masterclass",
+  "front": "Summer elevation band for breeding ducks?",
+  "back": "About 300 to 1,500 m (60%).",
+  "diagram": "mdk-elev-month"
+ },
+ {
+  "id": "mdk-088",
+  "deck": "Ducks Masterclass",
+  "front": "Winter elevation for ducks?",
+  "back": "Low valley water below about 700 m (65%)."
+ },
+ {
+  "id": "mdk-089",
+  "deck": "Ducks Masterclass",
+  "front": "Centre of wood duck abundance in BC?",
+  "back": "The lower Fraser Valley: Mission (85%).",
+  "photo": "wood-duck-drake"
+ },
+ {
+  "id": "mdk-090",
+  "deck": "Ducks Masterclass",
+  "front": "Barrow's goldeneye core range?",
+  "back": "Dry Interior parkland: your Kamloops country (85%)."
+ },
+ {
+  "id": "mdk-091",
+  "deck": "Ducks Masterclass",
+  "front": "Hunt Map layers to find duck water?",
+  "back": "Duck staging and winter waters, plus Wetlands.",
+  "diagram": "mdk-map-1"
+ },
+ {
+  "id": "mdk-092",
+  "deck": "Ducks Masterclass",
+  "front": "Hunt Map layers to check you can hunt it?",
+  "back": "Private land, Parks and protected areas, MU (Management Unit) lines.",
+  "diagram": "mdk-map-2"
+ },
+ {
+  "id": "mdk-093",
+  "deck": "Ducks Masterclass",
+  "front": "Can you hunt Vaseux Lake?",
+  "back": "No: it is a migratory bird sanctuary (99%)."
+ },
+ {
+  "id": "mdk-094",
+  "deck": "Ducks Masterclass",
+  "front": "Five pond clues?",
+  "back": "Droppings, feathers, muddy water, lanes in duckweed, webbed tracks (Tip).",
+  "diagram": "mdk-shore-sign"
+ },
+ {
+  "id": "mdk-095",
+  "deck": "Ducks Masterclass",
+  "front": "Describe a duck track.",
+  "back": "Three forward toes joined by web, tiny hind toe; mallard about 6 cm (60 to 80%).",
+  "diagram": "mdk-track"
+ },
+ {
+  "id": "mdk-096",
+  "deck": "Ducks Masterclass",
+  "front": "Coot track vs duck track?",
+  "back": "Coot: lobed toes, no full web (80%)."
+ },
+ {
+  "id": "mdk-097",
+  "deck": "Ducks Masterclass",
+  "front": "Loud, repeated quack?",
+  "back": "Mallard hen. The drake is quieter and raspy (75%)."
+ },
+ {
+  "id": "mdk-098",
+  "deck": "Ducks Masterclass",
+  "front": "Whistling drakes?",
+  "back": "Wigeon, pintail and teal drakes (70%)."
+ },
+ {
+  "id": "mdk-099",
+  "deck": "Ducks Masterclass",
+  "front": "Best scouting sign for ducks?",
+  "back": "The flight line at first and last light (Tip)."
+ },
+ {
+  "id": "mdk-100",
+  "deck": "Ducks Masterclass",
+  "front": "Duck down, head up, swimming?",
+  "back": "Shoot again at once, mark it, fetch it (65%; retrieval is the law, 99%)."
+ },
+ {
+  "id": "mdk-101",
+  "deck": "Ducks Masterclass",
+  "front": "Four ways to hunt ducks?",
+  "back": "Decoys on water, jump shooting, fields, pass shooting (Tip).",
+  "diagram": "sb-duck-tactics"
+ },
+ {
+  "id": "mdk-102",
+  "deck": "Ducks Masterclass",
+  "front": "Four scouting steps?",
+  "back": "Map shortlist, watch from far, write it down, permission and wind (Tip).",
+  "diagram": "mdk-scout-2"
+ },
+ {
+  "id": "mdk-103",
+  "deck": "Ducks Masterclass",
+  "front": "Where is the landing pocket in a J hook?",
+  "back": "In front of the hide, about 20 to 25 m out (Tip).",
+  "diagram": "decoy-spread"
+ },
+ {
+  "id": "mdk-104",
+  "deck": "Ducks Masterclass",
+  "front": "Why a side wind?",
+  "back": "Ducks cross in front instead of staring at the hide (Tip).",
+  "diagram": "mdk-crosswind"
+ },
+ {
+  "id": "mdk-105",
+  "deck": "Ducks Masterclass",
+  "front": "Electronic calls for ducks?",
+  "back": "Banned. Mouth calls only (97%)."
+ },
+ {
+  "id": "mdk-106",
+  "deck": "Ducks Masterclass",
+  "front": "Jump shooting in one line?",
+  "back": "Bend to bend behind cover, rise together, pick one drake (Tip)."
+ },
+ {
+  "id": "mdk-107",
+  "deck": "Ducks Masterclass",
+  "front": "The five yeses before a shot?",
+  "back": "Name it, under limit, inside 35 m, safe, can fetch (Tip).",
+  "diagram": "mdk-shoot-flow"
+ },
+ {
+  "id": "mdk-108",
+  "deck": "Ducks Masterclass",
+  "front": "Can you shoot from a moving boat with a motor?",
+  "back": "No. Beached, anchored or tied (99%).",
+  "diagram": "rb-boat-rules"
+ },
+ {
+  "id": "mdk-109",
+  "deck": "Ducks Masterclass",
+  "front": "Where to aim on a decoying duck?",
+  "back": "At the bill: head and front half (65%)."
+ },
+ {
+  "id": "mdk-110",
+  "deck": "Ducks Masterclass",
+  "front": "Minimum pellets in a 76 cm circle: big ducks, teal?",
+  "back": "85 to 90 for mallards; 135 to 145 for teal (70%).",
+  "diagram": "mdk-pattern-ring"
+ },
+ {
+  "id": "mdk-111",
+  "deck": "Ducks Masterclass",
+  "front": "Best all round steel size for ducks in Roster's table?",
+  "back": "Steel 3 (70%)."
+ },
+ {
+  "id": "mdk-112",
+  "deck": "Ducks Masterclass",
+  "front": "Your beginner max range?",
+  "back": "35 m (38 yd) (Tip).",
+  "diagram": "sk-steel-range"
+ },
+ {
+  "id": "mdk-113",
+  "deck": "Ducks Masterclass",
+  "front": "What must stay on a duck until preserved?",
+  "back": "A fully feathered wing or the head (99%).",
+  "diagram": "rb-evidence-birds"
+ },
+ {
+  "id": "mdk-114",
+  "deck": "Ducks Masterclass",
+  "front": "Bird flu habits when cleaning?",
+  "back": "Gloves, outdoors, no eating or drinking, wash up, leave sick birds (75%).",
+  "diagram": "mdk-care-2"
+ },
+ {
+  "id": "mdk-115",
+  "deck": "Ducks Masterclass",
+  "front": "USDA safe internal temperature for duck?",
+  "back": "74 °C (165 °F) (65%).",
+  "diagram": "mdk-care-4"
+ },
+ {
+  "id": "mdk-116",
+  "deck": "Ducks Masterclass",
+  "front": "Common quoted share of ducks shot but not recovered?",
+  "back": "About 1 in 5 (65%)."
+ }
+]

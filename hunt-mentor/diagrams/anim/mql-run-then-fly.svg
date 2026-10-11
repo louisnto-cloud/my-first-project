@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, top view. A strip of brush with open ground past its end. You walk along the brush from the left. The covey runs ahead of you inside the cover. When the cover runs out, the birds burst into the air and fan out over the open. Quail run rather than fly, 70 percent. Tip: be ready at the end of the cover.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">They run first, then fly</text>
+<rect x="0" y="40" width="400" height="210" rx="8" fill="#dfe6d3"/>
+<rect x="40" y="110" width="250" height="60" rx="20" fill="#8a9a6b"/>
+<text x="165" y="104" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">strip of brush</text>
+<text x="345" y="104" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">open</text>
+<g><g transform="translate(0 0)"><circle r="10" fill="#e8590c"/><text x="0" y="-16" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">You</text></g><animateTransform attributeName="transform" type="translate" values="20 196;200 196;200 196" keyTimes="0;.6;1" dur="9s" fill="freeze"/></g>
+<circle r="6" fill="#7d7f86"><animate attributeName="cx" values="90;270;270;340;340" keyTimes="0;.55;.62;.8;1" dur="9s" fill="freeze"/><animate attributeName="cy" values="126;126;126;70;70" keyTimes="0;.55;.62;.8;1" dur="9s" fill="freeze"/></circle>
+<circle r="6" fill="#7d7f86"><animate attributeName="cx" values="102;274;274;350;350" keyTimes="0;.55;.62;.8;1" dur="9s" fill="freeze"/><animate attributeName="cy" values="140;140;140;100;100" keyTimes="0;.55;.62;.8;1" dur="9s" fill="freeze"/></circle>
+<circle r="6" fill="#7d7f86"><animate attributeName="cx" values="114;278;278;360;360" keyTimes="0;.55;.62;.8;1" dur="9s" fill="freeze"/><animate attributeName="cy" values="154;154;154;130;130" keyTimes="0;.55;.62;.8;1" dur="9s" fill="freeze"/></circle>
+<circle r="6" fill="#7d7f86"><animate attributeName="cx" values="126;282;282;370;370" keyTimes="0;.55;.62;.8;1" dur="9s" fill="freeze"/><animate attributeName="cy" values="134;134;134;160;160" keyTimes="0;.55;.62;.8;1" dur="9s" fill="freeze"/></circle>
+<circle r="6" fill="#7d7f86"><animate attributeName="cx" values="138;286;286;380;380" keyTimes="0;.55;.62;.8;1" dur="9s" fill="freeze"/><animate attributeName="cy" values="148;148;148;190;190" keyTimes="0;.55;.62;.8;1" dur="9s" fill="freeze"/></circle>
+<rect x="10" y="256" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="279" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">You walk the brush. The covey runs ahead.</text>
+<g opacity="0"><set attributeName="opacity" to="1" begin="5.2s"/><rect x="10" y="256" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="279" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Cover runs out: they burst into the air</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="7.4s"/><rect x="10" y="256" width="380" height="34" rx="8" fill="#e8590c"/><text x="200" y="279" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Be ready at the END of the cover (Tip)</text></g>
+</svg>

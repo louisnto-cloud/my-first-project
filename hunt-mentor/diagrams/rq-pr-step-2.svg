@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 2: Shade about 1 km around roads. 73% within 0.5 km; average farthest 0.84 km.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Shade about 1 km around roads</text>
+<rect x="60" y="80" width="280" height="150" fill="#dfe6d3" stroke="#8a9a6b"/><path d="M60 200 Q 160 180 200 130 T 340 100" stroke="#e8590c" stroke-width="44" fill="none" opacity=".35"/><path d="M60 200 Q 160 180 200 130 T 340 100" stroke="#23261f" stroke-width="5" fill="none"/><text x="200" y="250" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">About 1 km each side = the pressure</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">73% within 0.5 km; average farthest 0.84 km.</text>
+</svg>

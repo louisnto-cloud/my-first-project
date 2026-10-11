@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 321" role="img" aria-label="Season bar chart: Map J1 Osoyoos Oxbows, MU 8-1. No shooting or hunting, roads included: Mar 1 to Sept 30. Vehicles: established roads only: All year (95%, my reading). Ecological reserve at the oxbows: Closed all year. Quail season, for comparison: Oct 1 to Nov 30." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="321" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Map J1 Osoyoos Oxbows, MU 8-1</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 69</text>
+<text x="28.0" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jan</text>
+<text x="58.4" y="83" font-size="14" fill="#23261f" text-anchor="middle">Feb</text>
+<text x="88.7" y="83" font-size="14" fill="#23261f" text-anchor="middle">Mar</text>
+<text x="120.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Apr</text>
+<text x="151.6" y="83" font-size="14" fill="#23261f" text-anchor="middle">May</text>
+<text x="183.0" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jun</text>
+<text x="214.4" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jul</text>
+<text x="246.4" y="83" font-size="14" fill="#23261f" text-anchor="middle">Aug</text>
+<text x="277.8" y="83" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="309.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="340.6" y="83" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<text x="372.0" y="83" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
+<line x1="12.0" y1="91" x2="12.0" y2="311" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="43.9" y1="91" x2="43.9" y2="311" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="72.8" y1="91" x2="72.8" y2="311" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="104.7" y1="91" x2="104.7" y2="311" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="135.6" y1="91" x2="135.6" y2="311" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="167.6" y1="91" x2="167.6" y2="311" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="198.5" y1="91" x2="198.5" y2="311" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="230.4" y1="91" x2="230.4" y2="311" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="262.3" y1="91" x2="262.3" y2="311" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="293.2" y1="91" x2="293.2" y2="311" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="325.2" y1="91" x2="325.2" y2="311" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="356.1" y1="91" x2="356.1" y2="311" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="388.0" y1="91" x2="388.0" y2="311" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<text x="12" y="107" font-size="14" font-weight="bold" fill="#23261f">No shooting or hunting, roads included</text>
+<rect x="72.8" y="113" width="220.4" height="22" rx="3" fill="#c92a2a"/>
+<text x="183.0" y="129" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Mar 1 to Sept 30</text>
+<text x="12" y="163" font-size="14" font-weight="bold" fill="#23261f">Vehicles: established roads only</text>
+<rect x="12" y="169" width="376" height="22" rx="3" fill="#8b5a2b"/>
+<text x="200" y="185" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">All year (95%, my reading)</text>
+<text x="12" y="219" font-size="14" font-weight="bold" fill="#23261f">Ecological reserve at the oxbows</text>
+<rect x="12" y="225" width="376" height="22" rx="3" fill="#2f3a2b"/>
+<text x="200" y="241" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Closed all year</text>
+<text x="12" y="275" font-size="14" font-weight="bold" fill="#23261f">Quail season, for comparison</text>
+<rect x="293.2" y="281" width="62.8" height="22" rx="3" fill="#e8590c"/>
+<text x="287.2" y="297" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Oct 1 to Nov 30</text>
+</svg>

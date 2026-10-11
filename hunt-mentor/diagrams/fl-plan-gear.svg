@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Gear buying timeline: big purchases in winter and spring, set up and test in summer, nothing new on the hunt.">
+  <rect x="0" y="0" width="400" height="250" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">When to buy gear (Tip)</text>
+<line x1="20" y1="120" x2="380" y2="120" stroke="#2f3a2b" stroke-width="6" stroke-linecap="round"/>
+<line x1="48.8" y1="86" x2="48.8" y2="154" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/>
+<circle cx="48.8" cy="120" r="8" fill="#2f3a2b" stroke="#ffffff" stroke-width="2"/>
+<text x="48.8" y="78" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Winter</text>
+<text x="48.8" y="174" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">big buys, sales</text>
+<line x1="164.0" y1="64" x2="164.0" y2="176" stroke="#8b5a2b" stroke-width="3" stroke-linecap="round"/>
+<circle cx="164.0" cy="120" r="8" fill="#8b5a2b" stroke="#ffffff" stroke-width="2"/>
+<text x="164.0" y="56" font-family="sans-serif" font-size="14" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Spring</text>
+<text x="164.0" y="196" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">fit, break in</text>
+<line x1="243.2" y1="86" x2="243.2" y2="154" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/>
+<circle cx="243.2" cy="120" r="8" fill="#e8590c" stroke="#ffffff" stroke-width="2"/>
+<text x="243.2" y="78" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Summer</text>
+<text x="243.2" y="174" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">test on hikes</text>
+<line x1="351.2" y1="64" x2="351.2" y2="176" stroke="#b3261e" stroke-width="3" stroke-linecap="round"/>
+<circle cx="351.2" cy="120" r="8" fill="#b3261e" stroke="#ffffff" stroke-width="2"/>
+<text x="351.2" y="56" font-family="sans-serif" font-size="14" font-weight="bold" fill="#b3261e" text-anchor="end">Fall</text>
+<text x="351.2" y="196" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="end">nothing new</text>
+<text x="20" y="236" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">Jan</text>
+<text x="380" y="236" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="end">Dec</text>
+</svg>

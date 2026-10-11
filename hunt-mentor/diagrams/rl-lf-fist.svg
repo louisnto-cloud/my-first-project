@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A closed fist drawn as a mountain. The knuckles are tops or knobs, the dips between knuckles are saddles, the fingers running down are ridges and spurs, and the gaps between fingers are draws.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Your fist is a mountain</text>
+  <path d="M60 250 C 50 200, 60 150, 80 130 C 92 104, 120 100, 136 114 C 150 92, 182 90, 196 110 C 212 90, 244 92, 256 114 C 272 98, 302 104, 310 128 C 330 150, 340 200, 330 250 Z" fill="#f1d3b5" stroke="#2f3a2b" stroke-width="3"/>
+  <path d="M136 114 C 134 160, 132 200, 128 240 M196 110 C 196 160, 196 200, 196 240 M256 114 C 258 160, 262 200, 266 240" stroke="#2f3a2b" stroke-width="2" fill="none" opacity=".6"/>
+  <rect x="70" y="60" width="133" height="24" rx="6" fill="#e8590c"/><text x="136.5" y="77" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Knuckles: tops</text><rect x="250" y="60" width="125" height="24" rx="6" fill="#e8590c"/><text x="312.5" y="77" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Dips: saddles</text>
+  <path d="M130 84 L108 110 M296 84 L226 104" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="196" y="280" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Fingers: ridges and spurs. Gaps: draws.</text>
+</svg>

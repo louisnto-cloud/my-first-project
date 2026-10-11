@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 2: measure width at the widest point, at right angles to the length, on the floor of the print.">
+<rect x="0" y="0" width="400" height="300" rx="0" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Width</text>
+<g transform="translate(200 150) rotate(0) scale(2.6)" fill="#8b5a2b"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/></g><line x1="165" y1="210" x2="235" y2="210" stroke="#e8590c" stroke-width="3"/><line x1="165" y1="200" x2="165" y2="220" stroke="#e8590c" stroke-width="3"/><line x1="235" y1="200" x2="235" y2="220" stroke="#e8590c" stroke-width="3"/><text x="200" y="240" font-size="17" font-weight="bold" fill="#e8590c" text-anchor="middle">Width</text><text x="200" y="268" font-size="15" fill="#23261f" text-anchor="middle">Widest point, square to the length</text><text x="200" y="288" font-size="15" fill="#6b4f35" text-anchor="middle">Measure on the floor of the print</text>
+</svg>

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Set a turnaround time by working back from dark and adding a buffer.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="26" cy="26" r="17" fill="#e8590c" stroke="none" stroke-width="2"/><text x="26" y="32" font-family="sans-serif" font-size="18" fill="#fff" text-anchor="middle" font-weight="bold">5</text><text x="52" y="32" font-family="sans-serif" font-size="18" fill="#2f3a2b" text-anchor="start" font-weight="bold">Set the turnaround</text><rect x="40" y="60" width="320" height="170" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/><text x="200" y="140" font-family="sans-serif" font-size="22" fill="#e8590c" text-anchor="middle" font-weight="bold">Turn around 16:15</text><text x="20" y="270" font-family="sans-serif" font-size="15" fill="#2f3a2b" text-anchor="start" font-weight="bold">Back from dark, plus a buffer</text>
+</svg>

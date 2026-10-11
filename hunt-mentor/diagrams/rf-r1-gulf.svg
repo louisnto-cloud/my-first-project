@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 344" role="img" aria-label="Six cards for the Gulf Islands Special Hunting Area: every island in Management Unit 1-1 except Vancouver Island, plus Denman and Hornby. Adults 18 and up must buy the Gulf Islands Special Area Licence. Carry 100,000 dollars liability insurance unless guided. Get the owner&#x27;s permission on private land. Under 18: go with an adult who holds the licence. No hunting in Gulf Islands National Park. No grouse, pheasant or quail season on Denman Island." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="344" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Gulf Islands Special Hunting Area</text>
+<rect x="6" y="40" width="190" height="96" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Special Area Licence</text>
+<rect x="19.0" y="82" width="22" height="28" rx="2" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/><line x1="24.0" y1="89" x2="36.0" y2="89" stroke="#2f3a2b" stroke-width="2"/><line x1="24.0" y1="95" x2="36.0" y2="95" stroke="#2f3a2b" stroke-width="2"/><line x1="24.0" y1="101" x2="36.0" y2="101" stroke="#2f3a2b" stroke-width="2"/><line x1="24.0" y1="107" x2="36.0" y2="107" stroke="#2f3a2b" stroke-width="2"/>
+<text x="52" y="88" font-size="14" fill="#23261f" text-anchor="start">Age 18 and up must</text>
+<text x="52" y="106" font-size="14" fill="#23261f" text-anchor="start">buy it</text>
+<rect x="204" y="40" width="190" height="96" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Insurance</text>
+<rect x="217.0" y="82" width="22" height="28" rx="2" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/><line x1="222.0" y1="89" x2="234.0" y2="89" stroke="#2f3a2b" stroke-width="2"/><line x1="222.0" y1="95" x2="234.0" y2="95" stroke="#2f3a2b" stroke-width="2"/><line x1="222.0" y1="101" x2="234.0" y2="101" stroke="#2f3a2b" stroke-width="2"/><line x1="222.0" y1="107" x2="234.0" y2="107" stroke="#2f3a2b" stroke-width="2"/>
+<text x="250" y="88" font-size="14" fill="#23261f" text-anchor="start">$100,000</text>
+<text x="250" y="106" font-size="14" fill="#23261f" text-anchor="start">liability, unless</text>
+<text x="250" y="124" font-size="14" fill="#23261f" text-anchor="start">guided</text>
+<rect x="6" y="144" width="190" height="82" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M6 154 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="101" y="162" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Private land</text>
+<path d="M17.0 200 l13 -12 l13 12 v12 h-26 z" fill="#8b5a2b"/><rect x="27.0" y="204" width="7" height="8" fill="#fffaf0"/>
+<text x="52" y="192" font-size="14" fill="#23261f" text-anchor="start">Get the owner&#x27;s</text>
+<text x="52" y="210" font-size="14" fill="#23261f" text-anchor="start">permission first</text>
+<rect x="204" y="144" width="190" height="82" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M204 154 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="299" y="162" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Under 18</text>
+<text x="212" y="192" font-size="14" fill="#23261f" text-anchor="start">Go with an adult who</text>
+<text x="212" y="210" font-size="14" fill="#23261f" text-anchor="start">holds the licence</text>
+<rect x="6" y="234" width="190" height="96" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 244 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="101" y="252" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Gulf Islands</text>
+<text x="101" y="270" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">National Park</text>
+<text x="14" y="300" font-size="14" fill="#23261f" text-anchor="start">No hunting</text>
+<rect x="204" y="234" width="190" height="96" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M204 244 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#8b5a2b"/>
+<text x="299" y="252" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Denman Island</text>
+<text x="212" y="300" font-size="14" fill="#23261f" text-anchor="start">No grouse, pheasant or</text>
+<text x="212" y="318" font-size="14" fill="#23261f" text-anchor="start">quail season</text>
+</svg>

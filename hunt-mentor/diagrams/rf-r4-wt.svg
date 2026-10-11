@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 508" role="img" aria-label="Bar chart of Region 4 white tailed deer seasons. Bucks in all Management Units: 10 September to 30 November. Antlerless in 4-28 to 4-31, 4-38 and 4-39: 10 to 31 October. Antlerless in 4-1 to 4-6, 4-20 to 4-26, 4-34 to 4-37 and 4-40: 21 to 31 October. Either sex, Cranbrook Deer Hunt, Map D27: 5 to 31 January. Youth only: either sex 1 to 30 November, bucks 1 to 9 September. Bow only: bucks 1 to 9 September, either sex 1 to 20 December." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="508" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">White tailed deer seasons</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">All MUs: 4-1 to 4-9, 4-14 to 4-40</text>
+<rect x="14.0" y="60" width="31.6" height="390" fill="#dfe6d3" opacity=".55"/>
+<text x="30" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="61" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="77.2" y="60" width="30.6" height="390" fill="#dfe6d3" opacity=".55"/>
+<text x="92" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
+<text x="124" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
+<rect x="139.4" y="60" width="30.6" height="390" fill="#dfe6d3" opacity=".55"/>
+<text x="155" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
+<text x="186" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
+<rect x="201.5" y="60" width="31.6" height="390" fill="#dfe6d3" opacity=".55"/>
+<text x="217" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="247" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
+<rect x="261.7" y="60" width="31.6" height="390" fill="#dfe6d3" opacity=".55"/>
+<text x="277" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="309" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
+<rect x="323.8" y="60" width="31.6" height="390" fill="#dfe6d3" opacity=".55"/>
+<text x="340" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
+<text x="371" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
+<text x="14" y="96" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, all MUs</text>
+<rect x="86.4" y="102" width="83.6" height="20" rx="4" fill="#e8590c"/>
+<text x="174" y="117" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 10 to Nov 30</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Antlerless, 4-28 to 4-31, 4-38, 4-39</text>
+<rect x="116.9" y="148" width="22.4" height="20" rx="4" fill="#e8590c"/>
+<text x="143" y="163" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 10 to Oct 31</text>
+<text x="14" y="188" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Antlerless, south and east MUs (More)</text>
+<rect x="128.1" y="194" width="11.2" height="20" rx="4" fill="#e8590c"/>
+<text x="143" y="209" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 21 to Oct 31</text>
+<text x="14" y="234" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Either sex, Cranbrook Deer Hunt, Map D27</text>
+<rect x="205.6" y="240" width="27.5" height="20" rx="4" fill="#6a4c93"/>
+<text x="237" y="255" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Jan 5 to Jan 31</text>
+<text x="14" y="280" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Either sex, youth only, all MUs</text>
+<rect x="139.4" y="286" width="30.6" height="20" rx="4" fill="#4a7fb0"/>
+<text x="174" y="301" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Nov 1 to Nov 30</text>
+<text x="14" y="326" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, youth only, all MUs</text>
+<rect x="77.2" y="332" width="9.2" height="20" rx="4" fill="#4a7fb0"/>
+<text x="90" y="347" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 9</text>
+<text x="14" y="372" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, bow only, all MUs</text>
+<rect x="77.2" y="378" width="9.2" height="20" rx="4" fill="#8b5a2b"/>
+<text x="90" y="393" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 9</text>
+<text x="14" y="418" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Either sex, bow only, all MUs</text>
+<rect x="169.9" y="424" width="20.4" height="20" rx="4" fill="#8b5a2b"/>
+<text x="194" y="439" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Dec 1 to Dec 20</text>
+<rect x="14" y="460" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="472" font-size="14" fill="#23261f" text-anchor="start">General season</text>
+<rect x="149.60000000000002" y="460" width="14" height="14" rx="3" fill="#6a4c93"/>
+<text x="168" y="472" font-size="14" fill="#23261f" text-anchor="start">Cranbrook Deer Hunt (new)</text>
+<rect x="14" y="482" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="32" y="494" font-size="14" fill="#23261f" text-anchor="start">Youth only (under 18)</text>
+<rect x="201.4" y="482" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="219" y="494" font-size="14" fill="#23261f" text-anchor="start">Bow only</text>
+</svg>

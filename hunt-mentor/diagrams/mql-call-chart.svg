@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Table of California quail calls. Assembly call, chi CA go or cu CA cow, loudest on the middle note: given by a bird separated from the covey or as the covey moves. Contact calls, soft clucks and pips, while feeding. Alarm, sharp pit pit, when danger is close. Advertising call, one loud cow, by unpaired males in spring. Fighting call, squill, by males sorting rank in spring. 70 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Quail calls and what they mean</text>
+<text x="70" y="52" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Call</text>
+<text x="185" y="52" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sounds like</text>
+<text x="320" y="52" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">When</text>
+<rect x="10" y="60" width="120" height="38" rx="8" fill="#e8590c"/>
+<text x="70" y="85" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Assembly</text>
+<rect x="134" y="60" width="256" height="38" rx="8" fill="#dfe6d3"/>
+<text x="190" y="85" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">&quot;chi CA go&quot;</text>
+<text x="322" y="85" font-size="14" fill="#2f3a2b" text-anchor="middle">Lost, or covey moving</text>
+<rect x="10" y="104" width="120" height="38" rx="8" fill="#8a9a6b"/>
+<text x="70" y="129" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Contact</text>
+<rect x="134" y="104" width="256" height="38" rx="8" fill="#dfe6d3"/>
+<text x="190" y="129" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">soft clucks, pips</text>
+<text x="322" y="129" font-size="14" fill="#2f3a2b" text-anchor="middle">Feeding together</text>
+<rect x="10" y="148" width="120" height="38" rx="8" fill="#a33b2a"/>
+<text x="70" y="173" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Alarm</text>
+<rect x="134" y="148" width="256" height="38" rx="8" fill="#dfe6d3"/>
+<text x="190" y="173" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">sharp &quot;pit pit&quot;</text>
+<text x="322" y="173" font-size="14" fill="#2f3a2b" text-anchor="middle">Danger close</text>
+<rect x="10" y="192" width="120" height="38" rx="8" fill="#4a7fb0"/>
+<text x="70" y="217" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Advertising</text>
+<rect x="134" y="192" width="256" height="38" rx="8" fill="#dfe6d3"/>
+<text x="190" y="217" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">one loud &quot;cow&quot;</text>
+<text x="322" y="217" font-size="14" fill="#2f3a2b" text-anchor="middle">Spring, unpaired male</text>
+<rect x="10" y="236" width="120" height="38" rx="8" fill="#8b5a2b"/>
+<text x="70" y="261" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Fighting</text>
+<rect x="134" y="236" width="256" height="38" rx="8" fill="#dfe6d3"/>
+<text x="190" y="261" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">&quot;squill&quot;</text>
+<text x="322" y="261" font-size="14" fill="#2f3a2b" text-anchor="middle">Spring, males sort rank</text>
+<text x="200" y="292" font-size="14" fill="#2f3a2b" text-anchor="middle">From bird guides (70%)</text>
+</svg>

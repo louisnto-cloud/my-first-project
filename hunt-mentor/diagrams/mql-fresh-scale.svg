@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Table of fresh versus old sign, a Tip. Droppings: fresh are moist, dark and shiny; old are dry, pale and crumbly. Tracks: fresh have sharp edges; old are blurred or pocked by rain. Dust bowls: fresh have loose dust; old are crusted with leaves in them. Feathers: fresh are clean and fluffy; old are flat and dirty. Note the last rain or wind: it dates the sign.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How fresh is it? (Tip)</text>
+<rect x="130" y="40" width="126" height="30" rx="8" fill="#e8590c"/>
+<text x="193" y="61" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Fresh</text>
+<rect x="262" y="40" width="126" height="30" rx="8" fill="#9a9ca2"/>
+<text x="325" y="61" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Old</text>
+<text x="122" y="104" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Droppings</text>
+<rect x="130" y="78" width="126" height="40" rx="8" fill="#dfe6d3"/>
+<text x="193" y="104" font-size="14" fill="#2f3a2b" text-anchor="middle">moist, dark, shiny</text>
+<rect x="262" y="78" width="126" height="40" rx="8" fill="#dfe6d3"/>
+<text x="325" y="104" font-size="14" fill="#2f3a2b" text-anchor="middle">dry, pale, crumbly</text>
+<text x="122" y="150" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Tracks</text>
+<rect x="130" y="124" width="126" height="40" rx="8" fill="#dfe6d3"/>
+<text x="193" y="150" font-size="14" fill="#2f3a2b" text-anchor="middle">sharp edges</text>
+<rect x="262" y="124" width="126" height="40" rx="8" fill="#dfe6d3"/>
+<text x="325" y="150" font-size="14" fill="#2f3a2b" text-anchor="middle">rain pocked, blurred</text>
+<text x="122" y="196" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Dust bowl</text>
+<rect x="130" y="170" width="126" height="40" rx="8" fill="#dfe6d3"/>
+<text x="193" y="196" font-size="14" fill="#2f3a2b" text-anchor="middle">loose fresh dust</text>
+<rect x="262" y="170" width="126" height="40" rx="8" fill="#dfe6d3"/>
+<text x="325" y="196" font-size="14" fill="#2f3a2b" text-anchor="middle">crusted, leaves in it</text>
+<text x="122" y="242" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Feathers</text>
+<rect x="130" y="216" width="126" height="40" rx="8" fill="#dfe6d3"/>
+<text x="193" y="242" font-size="14" fill="#2f3a2b" text-anchor="middle">clean, fluffy</text>
+<rect x="262" y="216" width="126" height="40" rx="8" fill="#dfe6d3"/>
+<text x="325" y="242" font-size="14" fill="#2f3a2b" text-anchor="middle">flat, dirty</text>
+<text x="200" y="290" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Note the last rain or wind: it dates the sign</text>
+</svg>

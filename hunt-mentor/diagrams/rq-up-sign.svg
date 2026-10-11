@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" role="img" aria-label="Four cards of upland bird sign: dust bowls, shallow scrapes in dry soil; droppings piled under roosts and drum logs; tracks in dust, mud or snow along edges; feathers under roosts and at dust bowls.">
+<rect x="0" y="0" width="400" height="320" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sign that birds use a spot</text>
+<rect x="10" y="40" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<ellipse cx="40" cy="80" rx="20" ry="8" fill="#c9b79c"/>
+<text x="70" y="70" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Dust bowls</text>
+<text x="20" y="114" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Shallow scrapes in dry</text>
+<text x="20" y="131" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">soil (80%).</text>
+<rect x="204" y="40" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<rect x="220" y="74" width="5" height="12" rx="2" fill="#6b4f35"/><rect x="229" y="74" width="5" height="12" rx="2" fill="#6b4f35"/><rect x="238" y="74" width="5" height="12" rx="2" fill="#6b4f35"/><rect x="247" y="74" width="5" height="12" rx="2" fill="#6b4f35"/>
+<text x="264" y="70" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Droppings</text>
+<text x="214" y="114" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Piles under roosts and</text>
+<text x="214" y="131" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">drum logs (85%).</text>
+<rect x="10" y="176" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<path d="M40 222 l0 -18 m0 18 l-9 -12 m9 12 l9 -12" stroke="#23261f" stroke-width="2.5" fill="none"/>
+<text x="70" y="206" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Tracks</text>
+<text x="20" y="250" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">In dust, mud or snow</text>
+<text x="20" y="267" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">along edges (Tip).</text>
+<rect x="204" y="176" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<path d="M220 220 q 14 -30 28 0" fill="none" stroke="#6b4f35" stroke-width="5"/>
+<text x="264" y="206" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Feathers</text>
+<text x="214" y="250" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Under roosts, at dust</text>
+<text x="214" y="267" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">bowls (Tip).</text>
+</svg>

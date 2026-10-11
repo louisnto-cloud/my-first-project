@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="The BC hunting licence runs from 1 April to 31 March. Adult resident cost 32 dollars: a 25 dollar fee plus a 7 dollar surcharge, plus GST. It is electronic only, on your phone or in WILD.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">BC hunting licence</text>
+  <rect x="20" y="52" width="360" height="34" rx="6" fill="#8a9a6b"/>
+  <g font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">
+    <text x="50" y="74">Apr</text><text x="110" y="74">Jun</text><text x="170" y="74">Aug</text><text x="230" y="74">Oct</text><text x="290" y="74">Dec</text><text x="350" y="74">Mar</text>
+  </g>
+  <rect x="216" y="48" width="30" height="42" rx="4" fill="none" stroke="#e8590c" stroke-width="3"/>
+  <text x="231" y="108" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">Hunt</text>
+  <text x="20" y="108" font-size="14" fill="#2f3a2b">Starts 1 April</text>
+  <text x="380" y="108" font-size="14" fill="#2f3a2b" text-anchor="end">Ends 31 March</text>
+  <g font-size="16" font-weight="bold" text-anchor="middle">
+    <rect x="20" y="132" width="90" height="50" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><text x="65" y="163" fill="#2f3a2b">$25 fee</text>
+    <text x="124" y="164" fill="#2f3a2b">+</text>
+    <rect x="138" y="132" width="110" height="50" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><text x="193" y="154" fill="#2f3a2b">$7</text><text x="193" y="172" font-size="14" fill="#2f3a2b">surcharge</text>
+    <text x="262" y="164" fill="#2f3a2b">=</text>
+    <rect x="276" y="132" width="104" height="50" rx="8" fill="#e8590c"/><text x="328" y="163" fill="#fff">$32 + GST</text>
+  </g>
+  <!-- phone -->
+  <rect x="150" y="200" width="56" height="88" rx="8" fill="#2f3a2b"/><rect x="156" y="210" width="44" height="66" fill="#dfe6d3"/>
+  <path d="M166 244 l8 8 l16 -18" stroke="#2f6b3a" stroke-width="4" fill="none"/>
+  <text x="222" y="238" font-size="15" font-weight="bold" fill="#2f3a2b">Electronic only</text>
+  <text x="222" y="258" font-size="14" fill="#2f3a2b">No paper needed</text>
+</svg>

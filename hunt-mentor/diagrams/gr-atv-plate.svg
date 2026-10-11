@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Registering your ATV with ICBC. One time fee of 48 dollars for plate and registration. The plate or sticker goes on the front, back or left side, flat and readable. Carry a copy of the registration. Riding unregistered on Crown land: 230 dollar fine.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Register once, plate on</text>
+  <g transform="translate(130 130) scale(2.2)"><rect x="-40" y="-18" width="80" height="20" rx="6" fill="#4a5a3a" stroke="#2f3a2b" stroke-width="2"/><rect x="-46" y="-26" width="26" height="8" fill="#2f3a2b"/><rect x="20" y="-26" width="26" height="8" fill="#2f3a2b"/><circle cx="-28" cy="10" r="14" fill="#2f3a2b"/><circle cx="28" cy="10" r="14" fill="#2f3a2b"/><path d="M-6 -18 l6 -14 h10" stroke="#2f3a2b" stroke-width="4" fill="none"/></g>
+  <rect x="200" y="78" width="40" height="22" rx="3" fill="#fff" stroke="#e8590c" stroke-width="3"/><text x="220" y="94" font-size="12" font-weight="bold" fill="#2f3a2b" text-anchor="middle">ORV</text>
+  <text x="246" y="94" font-size="14" font-weight="bold" fill="#e8590c">front, back or left</text>
+  <g font-size="16" font-weight="bold" text-anchor="middle">
+    <rect x="10" y="196" width="120" height="84" rx="10" fill="#8a9a6b"/><text x="70" y="232" font-size="24" fill="#fff">$48</text><text x="70" y="258" fill="#fff">one time</text>
+    <rect x="140" y="196" width="120" height="84" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><text x="200" y="230" fill="#2f3a2b">Carry the</text><text x="200" y="252" fill="#2f3a2b">registration</text>
+    <rect x="270" y="196" width="120" height="84" rx="10" fill="#c0392b"/><text x="330" y="232" font-size="24" fill="#fff">$230</text><text x="330" y="258" font-size="14" fill="#fff">unregistered</text>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="How water looks on the Hunt Map Topo base: a solid blue line for a creek that flows all year, a dashed blue line for an intermittent creek that may be dry, a pale green grey fill for wetlands, and blue fill for lakes and ponds. Caption: springs and seeps often are not drawn at all.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Water on the Hunt Map Topo</text>
+  <rect x="14" y="50" width="372" height="210" rx="8" fill="#dfe6d3"/>
+  <path d="M30 80 H120" stroke="#4a7fb0" stroke-width="4"/><text x="132" y="86" font-size="14" fill="#2f3a2b" text-anchor="start">Creek that flows all year</text>
+  <path d="M30 124 H120" stroke="#4a7fb0" stroke-width="4" stroke-dasharray="9 6"/><text x="132" y="130" font-size="14" fill="#2f3a2b" text-anchor="start">Intermittent: may be dry</text>
+  <rect x="30" y="152" width="90" height="26" rx="4" fill="#c9d8cc"/><text x="132" y="172" font-size="14" fill="#2f3a2b" text-anchor="start">Wetland: marsh, swamp, bog</text>
+  <rect x="30" y="198" width="90" height="34" rx="12" fill="#4a7fb0" opacity=".7"/><text x="132" y="220" font-size="14" fill="#2f3a2b" text-anchor="start">Lake or pond</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Springs and seeps often are not drawn at all</text>
+</svg>

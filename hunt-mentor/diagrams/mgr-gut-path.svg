@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Flow chart of a grouse gut. Bill: picks buds and berries. Crop: stores a meal at the base of the neck. Gizzard: grinds food with swallowed grit. Intestine: absorbs. Ceca: two long pouches that ferment fibre. In winter the ceca and gut grow longer for woody food. Open the crop of a bird you shoot to see what they eat." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">The food path</text>
+<rect x="12" y="50" width="116" height="76" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<text x="70" y="80" font-size="17" fill="#23261f" text-anchor="middle" font-weight="bold">Bill</text>
+<text x="70" y="104" font-size="14" fill="#23261f" text-anchor="middle">picks buds, berries</text>
+<rect x="140" y="50" width="116" height="76" rx="8" fill="#fbe3d3" stroke="#e8590c" stroke-width="2"/>
+<text x="198" y="80" font-size="17" fill="#23261f" text-anchor="middle" font-weight="bold">Crop</text>
+<text x="198" y="104" font-size="14" fill="#23261f" text-anchor="middle">stores a meal</text>
+<rect x="268" y="50" width="116" height="76" rx="8" fill="#fbe3d3" stroke="#e8590c" stroke-width="2"/>
+<text x="326" y="80" font-size="17" fill="#23261f" text-anchor="middle" font-weight="bold">Gizzard</text>
+<text x="326" y="104" font-size="14" fill="#23261f" text-anchor="middle">grinds with grit</text>
+<rect x="12" y="160" width="116" height="76" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<text x="70" y="190" font-size="17" fill="#23261f" text-anchor="middle" font-weight="bold">Intestine</text>
+<text x="70" y="214" font-size="14" fill="#23261f" text-anchor="middle">absorbs</text>
+<rect x="140" y="160" width="116" height="76" rx="8" fill="#fbe3d3" stroke="#e8590c" stroke-width="2"/>
+<text x="198" y="190" font-size="17" fill="#23261f" text-anchor="middle" font-weight="bold">Ceca</text>
+<text x="198" y="214" font-size="14" fill="#23261f" text-anchor="middle">ferment fibre</text>
+<line x1="128" y1="88" x2="140.0" y2="88.0" stroke="#e8590c" stroke-width="3"/><polygon points="140.0,88.0 131.0,92.3 131.0,83.7" fill="#e8590c"/>
+<line x1="256" y1="88" x2="268.0" y2="88.0" stroke="#e8590c" stroke-width="3"/><polygon points="268.0,88.0 259.0,92.3 259.0,83.7" fill="#e8590c"/>
+<line x1="326" y1="126" x2="326.0" y2="140.0" stroke="#e8590c" stroke-width="3"/><polygon points="326.0,140.0 321.7,131.0 330.3,131.0" fill="#e8590c"/>
+<path d="M326 126 Q326 150 200 150 Q70 150 70 160" fill="none" stroke="#e8590c" stroke-width="3"/>
+<line x1="70" y1="152" x2="70.0" y2="160.0" stroke="#e8590c" stroke-width="3"/><polygon points="70.0,160.0 65.7,151.0 74.3,151.0" fill="#e8590c"/>
+<line x1="128" y1="198" x2="140.0" y2="198.0" stroke="#e8590c" stroke-width="3"/><polygon points="140.0,198.0 131.0,202.3 131.0,193.7" fill="#e8590c"/>
+<text x="270" y="190" font-size="14" fill="#2f3a2b" text-anchor="start" font-weight="bold">Winter: ceca and</text>
+<text x="270" y="208" font-size="14" fill="#2f3a2b" text-anchor="start" font-weight="bold">gut grow longer</text>
+<text x="270" y="226" font-size="14" fill="#2f3a2b" text-anchor="start" font-weight="bold">for woody food</text>
+<text x="200" y="285" font-size="14" fill="#23261f" text-anchor="middle">Pull the crop open after the shot: it shows what they eat.</text>
+</svg>

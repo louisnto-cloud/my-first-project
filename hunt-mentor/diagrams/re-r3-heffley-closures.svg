@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 521" role="img" aria-label="Cards: Heffley Creek: closures in 3-27 and 3-28. Map C7, both MUs: South Thompson band: no hunting or shooting to the Lafarge Bridge, no shooting to the Pritchard Bridge. 3-27 Map C11 Sun Peaks: No hunting or shooting within 400 m. 3-28 Map C12 McQueen Lake: No shooting within 1 km. 3-28 Maps C13 and C15: Skull Mtn: open roads only Sept 1 to Dec 10. Lac du Bois: highlighted roads only. 3-28 ATV and snowmobile: No ATV or e bike for hunting Sept 1 to Dec 10. No snowmobile for hunting Apr 1 to Dec 14. Both MUs: 1,700 m vehicle rule and the 200 m feeding and baiting ban." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="521" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Heffley Creek: closures in 3-27 and 3-28</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">3-27 has no ATV (All Terrain Vehicle) for</text>
+<text x="200" y="65" font-size="14" fill="#8b5a2b" text-anchor="middle">hunting closure</text>
+<rect x="6.0" y="87" width="190.0" height="148" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6.0 133 V96 Q6.0 87 15.0 87 H187.0 Q196.0 87 196.0 96 V133 Z" fill="#c92a2a"/>
+<text x="14.0" y="107" font-size="14" font-weight="bold" fill="#ffffff">Map C7, both MUs</text>
+<text x="14.0" y="153" font-size="14" fill="#23261f">South Thompson band: no</text>
+<text x="14.0" y="171" font-size="14" fill="#23261f">hunting or shooting to</text>
+<text x="14.0" y="189" font-size="14" fill="#23261f">the Lafarge Bridge, no</text>
+<text x="14.0" y="207" font-size="14" fill="#23261f">shooting to the</text>
+<text x="14.0" y="225" font-size="14" fill="#23261f">Pritchard Bridge</text>
+<rect x="204.0" y="87" width="190.0" height="148" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204.0 133 V96 Q204.0 87 213.0 87 H385.0 Q394.0 87 394.0 96 V133 Z" fill="#c92a2a"/>
+<text x="212.0" y="107" font-size="14" font-weight="bold" fill="#ffffff">3-27 Map C11 Sun</text>
+<text x="212.0" y="125" font-size="14" font-weight="bold" fill="#ffffff">Peaks</text>
+<text x="212.0" y="153" font-size="14" fill="#23261f">No hunting or shooting</text>
+<text x="212.0" y="171" font-size="14" fill="#23261f">within 400 m</text>
+<rect x="6.0" y="243" width="190.0" height="130" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6.0 289 V252 Q6.0 243 15.0 243 H187.0 Q196.0 243 196.0 252 V289 Z" fill="#e8590c"/>
+<text x="14.0" y="263" font-size="14" font-weight="bold" fill="#ffffff">3-28 Map C12 McQueen</text>
+<text x="14.0" y="281" font-size="14" font-weight="bold" fill="#ffffff">Lake</text>
+<text x="14.0" y="309" font-size="14" fill="#23261f">No shooting within 1 km</text>
+<rect x="204.0" y="243" width="190.0" height="130" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M204.0 289 V252 Q204.0 243 213.0 243 H385.0 Q394.0 243 394.0 252 V289 Z" fill="#8b5a2b"/>
+<text x="212.0" y="263" font-size="14" font-weight="bold" fill="#ffffff">3-28 Maps C13 and C15</text>
+<text x="212.0" y="309" font-size="14" fill="#23261f">Skull Mtn: open roads</text>
+<text x="212.0" y="327" font-size="14" fill="#23261f">only Sept 1 to Dec 10.</text>
+<text x="212.0" y="345" font-size="14" fill="#23261f">Lac du Bois:</text>
+<text x="212.0" y="363" font-size="14" fill="#23261f">highlighted roads only</text>
+<rect x="6.0" y="381" width="190.0" height="130" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6.0 427 V390 Q6.0 381 15.0 381 H187.0 Q196.0 381 196.0 390 V427 Z" fill="#e8590c"/>
+<text x="14.0" y="401" font-size="14" font-weight="bold" fill="#ffffff">3-28 ATV and</text>
+<text x="14.0" y="419" font-size="14" font-weight="bold" fill="#ffffff">snowmobile</text>
+<text x="14.0" y="447" font-size="14" fill="#23261f">No ATV or e bike for</text>
+<text x="14.0" y="465" font-size="14" fill="#23261f">hunting Sept 1 to Dec</text>
+<text x="14.0" y="483" font-size="14" fill="#23261f">10. No snowmobile for</text>
+<text x="14.0" y="501" font-size="14" fill="#23261f">hunting Apr 1 to Dec 14</text>
+<rect x="204.0" y="381" width="190.0" height="130" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M204.0 427 V390 Q204.0 381 213.0 381 H385.0 Q394.0 381 394.0 390 V427 Z" fill="#8b5a2b"/>
+<text x="212.0" y="401" font-size="14" font-weight="bold" fill="#ffffff">Both MUs</text>
+<text x="212.0" y="447" font-size="14" fill="#23261f">1,700 m vehicle rule</text>
+<text x="212.0" y="465" font-size="14" fill="#23261f">and the 200 m feeding</text>
+<text x="212.0" y="483" font-size="14" fill="#23261f">and baiting ban</text>
+</svg>

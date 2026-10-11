@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 475" role="img" aria-label="Season bar chart: Region 3 moose and bighorn sheep. Moose ✻ spike fork bulls: 3-34 to 3-38, 3-40 to 3-44, 3-46: Sept 20 to Oct 31. Moose ✻ spike fork bulls: 3-15 to 3-17, 3-31 to 3-33: Oct 15 to Nov 15. Moose ✻ spike fork bulls: 3-12 to 3-14, 3-18 to 3-20, 3-26 to 3-30, 3-39: Nov 1 to Nov 15. Sheep, full curl bighorn rams: 3-31, +3-32: Sept 10 to Oct 20. + Map C21 closure. Sheep, mature bighorn rams: ✻3-17: Sept 10 to Oct 20. ✻ Map C2 only." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="475" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 3 moose and bighorn sheep</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 34. Bag 1 each.</text>
+<text x="74.0" y="83" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="200.0" y="83" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="326.0" y="83" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<line x1="12.0" y1="91" x2="12.0" y2="465" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="136.0" y1="91" x2="136.0" y2="465" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="264.0" y1="91" x2="264.0" y2="465" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="388.0" y1="91" x2="388.0" y2="465" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<text x="12" y="107" font-size="14" font-weight="bold" fill="#23261f">Moose ✻ spike fork bulls: 3-34 to 3-38, 3-40</text>
+<text x="12" y="125" font-size="14" font-weight="bold" fill="#23261f">to 3-44, 3-46</text>
+<rect x="90.5" y="131" width="173.5" height="22" rx="3" fill="#8b5a2b"/>
+<text x="177.3" y="147" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 20 to Oct 31</text>
+<text x="12" y="181" font-size="14" font-weight="bold" fill="#23261f">Moose ✻ spike fork bulls: 3-15 to 3-17, 3-31</text>
+<text x="12" y="199" font-size="14" font-weight="bold" fill="#23261f">to 3-33</text>
+<rect x="193.8" y="205" width="132.2" height="22" rx="3" fill="#8b5a2b"/>
+<text x="187.8" y="221" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Oct 15 to Nov 15</text>
+<text x="12" y="255" font-size="14" font-weight="bold" fill="#23261f">Moose ✻ spike fork bulls: 3-12 to 3-14, 3-18</text>
+<text x="12" y="273" font-size="14" font-weight="bold" fill="#23261f">to 3-20, 3-26 to 3-30, 3-39</text>
+<rect x="264.0" y="279" width="62.0" height="22" rx="3" fill="#8b5a2b"/>
+<text x="258.0" y="295" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Nov 1 to Nov 15</text>
+<text x="12" y="329" font-size="14" font-weight="bold" fill="#23261f">Sheep, full curl bighorn rams: 3-31, +3-32</text>
+<rect x="49.2" y="335" width="169.4" height="22" rx="3" fill="#2f3a2b"/>
+<text x="224.6" y="351" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Oct 20</text>
+<text x="12" y="375" font-size="14" fill="#e8590c">+ Map C21 closure</text>
+<text x="12" y="407" font-size="14" font-weight="bold" fill="#23261f">Sheep, mature bighorn rams: ✻3-17</text>
+<rect x="49.2" y="413" width="169.4" height="22" rx="3" fill="#2f3a2b"/>
+<text x="224.6" y="429" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Oct 20</text>
+<text x="12" y="453" font-size="14" fill="#e8590c">✻ Map C2 only</text>
+</svg>

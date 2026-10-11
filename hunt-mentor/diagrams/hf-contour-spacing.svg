@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Contour lines on a slope. On the left the lines bunch close together: steep. On the right they spread far apart: gentle. One thicker index line carries the height number 1200, and the top of the number faces uphill.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="40" width="400" height="230" fill="#dfe6d3" opacity=".6"/>
+  <g fill="none" stroke="#8b5a2b" stroke-width="2">
+    <path d="M10 120 C 140 116, 260 70, 390 60"/>
+    <path d="M10 132 C 140 130, 260 104, 390 100"/>
+    <path d="M10 156 C 140 156, 260 172, 390 180"/>
+    <path d="M10 168 C 140 170, 260 206, 390 220"/>
+    <path d="M10 180 C 140 184, 260 240, 390 260"/>
+  </g>
+  <path d="M10 144 C 140 143, 260 138, 390 140" fill="none" stroke="#8b5a2b" stroke-width="5"/>
+  <rect x="226" y="124" width="52" height="22" fill="#fffaf0"/>
+  <text x="252" y="141" font-size="16" font-weight="bold" fill="#8b5a2b" text-anchor="middle">1200</text>
+  <text x="200" y="26" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Uphill this way</text>
+  <path d="M352 50 L352 20" stroke="#2f3a2b" stroke-width="3"/><polygon points="344,24 360,24 352,10" fill="#2f3a2b"/>
+  <text x="20" y="104" font-size="16" font-weight="bold" fill="#e8590c">Steep</text>
+  <text x="20" y="214" font-size="14" fill="#2f3a2b">lines close</text>
+  <text x="300" y="166" font-size="16" font-weight="bold" fill="#e8590c">Gentle</text>
+  <text x="290" y="200" font-size="14" fill="#2f3a2b">far apart</text>
+  <text x="200" y="290" font-size="14" fill="#2f3a2b" text-anchor="middle">Thick line = index, has the height number</text>
+</svg>

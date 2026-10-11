@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 424" font-family="sans-serif" role="img" aria-label="Sketch map, not to scale, not a legal map, of no shooting places near Heffley Creek. The North Thompson River runs south from the base to Kamloops. The City of Kamloops is shaded: no firing at all. The Map C7 band runs east along the South Thompson to the Pritchard Bridge. Sun Peaks has a 400 metre ring. McQueen Lake, on the west side, has a 1 kilometre ring. Tranquille marsh at the head of Kamloops Lake is closed. Paul Lake Park is treated as closed. Wells Gray Park, MU 3-45, to the north is closed to hunting. Everywhere: 100 metres from any house or barn and 15 metres from the centre of a public road.">
+<rect x="0" y="0" width="400" height="424" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Where you cannot shoot near the base</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">Sketch, not to scale. Not a legal map.</text>
+<path d="M12 262 Q 40 248 95 256 Q 125 262 150 268 Q 125 282 95 280 Q 40 284 12 270 Z" fill="#4a7fb0" opacity=".55" stroke="#2f3a2b" stroke-width="2"/>
+<text x="16" y="300" font-size="14" fill="#2f3a2b">Kamloops Lake</text>
+<path d="M190 70 Q 175 110 180 150 Q 172 200 158 268" fill="none" stroke="#4a7fb0" stroke-width="6"/>
+<path d="M158 268 Q 220 256 280 258 Q 340 262 392 240" fill="none" stroke="#4a7fb0" stroke-width="6"/>
+<path d="M120 240 Q 150 225 200 238 Q 225 262 205 292 Q 160 308 125 292 Q 105 270 120 240 Z" fill="#e8590c" opacity=".25" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="165" y="326" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">City of Kamloops: no firing at all</text>
+<path d="M205 252 Q 250 246 280 248 Q 330 252 360 238" fill="none" stroke="#e8590c" stroke-width="14" stroke-opacity=".45"/>
+<text x="392" y="230" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">Map C7 band, east</text>
+<text x="392" y="280" font-size="14" fill="#2f3a2b" text-anchor="end">to Pritchard Bridge</text>
+<circle cx="181" cy="150" r="8" fill="#e8590c"/>
+<text x="194" y="154" font-size="15" font-weight="bold" fill="#e8590c">Heffley Creek (base)</text>
+<circle cx="320" cy="96" r="22" fill="#e8590c" opacity=".2" stroke="#e8590c" stroke-width="2"/><polygon points="310,104 320,82 330,104" fill="#2f3a2b"/>
+<text x="320" y="136" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sun Peaks: 400 m</text>
+<ellipse cx="110" cy="170" rx="12" ry="7" fill="#4a7fb0" opacity=".7"/><circle cx="110" cy="170" r="26" fill="none" stroke="#e8590c" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="14" y="150" font-size="14" font-weight="bold" fill="#2f3a2b">McQueen Lake: 1 km</text>
+<circle cx="140" cy="258" r="9" fill="#e8590c" opacity=".8"/>
+<text x="16" y="238" font-size="14" font-weight="bold" fill="#2f3a2b">Tranquille marsh</text>
+<ellipse cx="262" cy="196" rx="20" ry="7" fill="#4a7fb0" opacity=".7"/><circle cx="292" cy="204" r="9" fill="#e8590c"/><path d="M288.4 200.4 L295.6 207.6 M295.6 200.4 L288.4 207.6" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<text x="226" y="182" font-size="14" font-weight="bold" fill="#2f3a2b">Paul Lake Park</text>
+<path d="M190 70 L190 52" stroke="#2f3a2b" stroke-width="2"/>
+<text x="198" y="66" font-size="14" fill="#2f3a2b">North to Wells Gray, MU 3-45:</text>
+<text x="198" y="82" font-size="14" font-weight="bold" fill="#e8590c">closed to hunting</text>
+<rect x="10" y="342" width="380" height="72" rx="8" fill="#dfe6d3"/>
+<text x="20" y="362" font-size="14" fill="#2f3a2b">Orange: no shooting (and often no hunting).</text>
+<text x="20" y="382" font-size="14" fill="#2f3a2b">Plus everywhere: 100 m from any house or barn,</text>
+<text x="20" y="402" font-size="14" fill="#2f3a2b">15 m from the centre of a public road (99%).</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 234" role="img" aria-label="A row of September days with 10 to 30 September shaded. Season dates are inclusive: the first day, the 10th, and the last day, the 30th, both count. No row in the season table means no season." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="234" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Season dates are inclusive</text>
+<text x="200" y="48" font-size="15" fill="#2f3a2b" text-anchor="middle">Example: a season of 10 to 30 September</text>
+<rect x="10.0" y="66" width="13" height="40" rx="2" fill="#ffffff" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="25.2" y="66" width="13" height="40" rx="2" fill="#ffffff" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="40.4" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="55.6" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="70.8" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="86.0" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="101.2" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="116.4" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="131.6" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="146.8" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="162.0" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="177.2" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="192.4" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="207.6" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="222.8" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="238.0" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="253.2" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="268.4" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="283.6" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="298.8" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="314.0" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="329.2" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="344.4" y="66" width="13" height="40" rx="2" fill="#5c7a3a" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="359.6" y="66" width="13" height="40" rx="2" fill="#ffffff" stroke="#2f3a2b" stroke-width="1"/>
+<rect x="374.8" y="66" width="13" height="40" rx="2" fill="#ffffff" stroke="#2f3a2b" stroke-width="1"/>
+<text x="46.4" y="168" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">10th</text><text x="350.4" y="168" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">30th</text>
+<line x1="46.4" y1="150" x2="46.4" y2="118.0" stroke="#5c7a3a" stroke-width="2.5"/><polygon points="46.4,112 50.7,121.0 42.1,121.0" fill="#5c7a3a"/><line x1="350.4" y1="150" x2="350.4" y2="118.0" stroke="#5c7a3a" stroke-width="2.5"/><polygon points="350.4,112 354.7,121.0 346.1,121.0" fill="#5c7a3a"/>
+<text x="200" y="194" font-size="16" fill="#5c7a3a" text-anchor="middle" font-weight="bold">First day and last day both count.</text>
+<text x="200" y="218" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">No row in the season table = no season.</text>
+</svg>

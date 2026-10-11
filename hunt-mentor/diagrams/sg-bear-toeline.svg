@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="The bear toe line test. Lay a straight edge across the top of the front palm pad. Black bear: toes in a curved row, the small outer toe falls below the line, short claws close to the toes. Grizzly: toes in a straighter row, all 5 sit above the line, long claw marks far ahead of the toes.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The toe line test</text>
+  <g transform="translate(100 160)">
+    <path d="M-45 0 Q-40 -18 0 -18 Q40 -18 45 0 Q45 38 0 42 Q-45 38 -45 0 Z" fill="#8b5a2b"/>
+    <g fill="#8b5a2b"><ellipse cx="-42" cy="-20" rx="9" ry="10"/><ellipse cx="-24" cy="-42" rx="10" ry="11"/><ellipse cx="0" cy="-50" rx="10" ry="12"/><ellipse cx="24" cy="-44" rx="10" ry="11"/><ellipse cx="44" cy="-28" rx="9" ry="10"/></g>
+    <g fill="#2f3a2b"><circle cx="-46" cy="-34" r="3"/><circle cx="-27" cy="-58" r="3"/><circle cx="0" cy="-67" r="3"/><circle cx="27" cy="-60" r="3"/><circle cx="48" cy="-43" r="3"/></g>
+    <line x1="-60" y1="-24" x2="60" y2="-24" stroke="#e8590c" stroke-width="3"/>
+  </g>
+  <g transform="translate(300 165)">
+    <path d="M-45 0 Q-40 -16 0 -16 Q40 -16 45 0 Q45 34 0 38 Q-45 34 -45 0 Z" fill="#8b5a2b"/>
+    <g fill="#8b5a2b"><ellipse cx="-38" cy="-34" rx="9" ry="10"/><ellipse cx="-19" cy="-38" rx="9" ry="11"/><ellipse cx="0" cy="-40" rx="9" ry="11"/><ellipse cx="19" cy="-38" rx="9" ry="11"/><ellipse cx="38" cy="-34" rx="9" ry="10"/></g>
+    <g stroke="#2f3a2b" stroke-width="4" stroke-linecap="round"><path d="M-40 -50 v-22 M-20 -55 v-24 M0 -57 v-25 M20 -55 v-24 M40 -50 v-22"/></g>
+    <line x1="-60" y1="-22" x2="60" y2="-22" stroke="#e8590c" stroke-width="3"/>
+  </g>
+  <text x="100" y="232" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Black bear</text>
+  <text x="100" y="254" font-size="14" fill="#2f3a2b" text-anchor="middle">outer toe dips below</text>
+  <text x="100" y="272" font-size="14" fill="#2f3a2b" text-anchor="middle">short claws</text>
+  <text x="300" y="232" font-size="17" font-weight="bold" fill="#e8590c" text-anchor="middle">Grizzly</text>
+  <text x="300" y="254" font-size="14" fill="#2f3a2b" text-anchor="middle">all toes above, in a row</text>
+  <text x="300" y="272" font-size="14" fill="#2f3a2b" text-anchor="middle">long claws, far ahead</text>
+  <text x="200" y="294" font-size="14" fill="#e8590c" text-anchor="middle">Orange line: along the top of the palm pad</text>
+</svg>

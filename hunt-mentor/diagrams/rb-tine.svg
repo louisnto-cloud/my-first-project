@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Two antler bumps in a 2.5 centimetre box. Left: a low wide bump, wider than it is long, not a tine. Right: a tall narrow spike, at least 2.5 centimetres long and longer than it is wide, a tine. Width is measured at least 2.5 centimetres down from the tip." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Is it a tine (point)?</text>
+<rect x="20" y="44" width="170" height="190" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<rect x="60" y="96" width="90" height="90" fill="none" stroke="#8a9a6b" stroke-width="2" stroke-dasharray="5 4"/>
+<rect x="40" y="186" width="130" height="18" fill="#8b5a2b"/>
+<path d="M50 186 Q 105 140 160 186 Z" fill="#8b5a2b"/>
+<text x="105" y="70" font-size="16" fill="#c92a2a" text-anchor="middle" font-weight="bold">NOT a tine</text>
+<text x="105" y="226" font-size="14" fill="#2f3a2b" text-anchor="middle">2.5 cm box</text>
+<rect x="210" y="44" width="170" height="190" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
+<rect x="250" y="96" width="90" height="90" fill="none" stroke="#8a9a6b" stroke-width="2" stroke-dasharray="5 4"/>
+<rect x="230" y="186" width="130" height="18" fill="#8b5a2b"/>
+<path d="M280 186 L292 90 L306 186 Z" fill="#8b5a2b"/>
+<text x="295" y="70" font-size="16" fill="#5c7a3a" text-anchor="middle" font-weight="bold">A tine</text>
+<text x="295" y="226" font-size="14" fill="#2f3a2b" text-anchor="middle">2.5 cm box</text>
+<text x="14" y="262" font-size="15" fill="#23261f" text-anchor="start">At least 2.5 cm (1 in) long, AND longer than it</text>
+<text x="14" y="282" font-size="15" fill="#23261f" text-anchor="start">is wide. Width measured 2.5 cm down from the tip.</text>
+</svg>

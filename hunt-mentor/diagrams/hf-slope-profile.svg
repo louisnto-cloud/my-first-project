@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Four slopes drawn at true angle over the same 500 metres of ground. 4 percent is a gentle stroll. 12 percent is a steady climb. 20 percent is hard work. 40 percent is hands on, pick another line.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="22" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Same 500 m of ground, true angle</text>
+  <g stroke-width="5" stroke-linecap="round">
+    <line x1="20" y1="80" x2="200" y2="73" stroke="#8a9a6b"/>
+    <line x1="20" y1="140" x2="200" y2="118" stroke="#8a9a6b"/>
+    <line x1="20" y1="205" x2="200" y2="169" stroke="#e8590c"/>
+    <line x1="20" y1="280" x2="200" y2="208" stroke="#c0392b"/>
+  </g>
+  <g font-size="15" fill="#2f3a2b">
+    <text x="215" y="70" font-weight="bold">4 percent</text><text x="215" y="88">1 line per cm: stroll</text>
+    <text x="215" y="124" font-weight="bold">12 percent</text><text x="215" y="142">3 lines: steady climb</text>
+    <text x="215" y="184" font-weight="bold" fill="#e8590c">20 percent</text><text x="215" y="202">5 lines: hard</text>
+    <text x="215" y="244" font-weight="bold" fill="#c0392b">40 percent</text><text x="215" y="262">10 lines: hands on</text>
+  </g>
+  <text x="200" y="296" font-size="14" fill="#2f3a2b" text-anchor="middle">Lines per cm at a 20 m interval</text>
+</svg>

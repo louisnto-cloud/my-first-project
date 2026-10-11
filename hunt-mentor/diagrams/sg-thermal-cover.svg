@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Thermal cover. Under a closed canopy above 3 m of mature Douglas fir, heat stays in, wind is cut and snow is caught in the branches, so the deer stays warmer and the ground has less snow. Out in the open, wind and snow hit the deer. In a cold snap, deer sit in the timber by day and step onto the sunny open slope beside it in the afternoon.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Thermal cover</text>
+  <rect x="0" y="240" width="400" height="60" fill="#fff"/>
+  <rect x="0" y="240" width="230" height="60" fill="#dfe6d3"/>
+  <g fill="#2f3a2b">
+    <polygon points="20,240 45,70 70,240"/><polygon points="70,240 100,60 130,240"/><polygon points="130,240 160,70 190,240"/><polygon points="180,240 205,80 230,240"/>
+  </g>
+  <g fill="#fff"><path d="M28 120 h34 l-4 6 h-26 Z"/><path d="M80 110 h40 l-4 6 h-32 Z"/><path d="M140 120 h40 l-4 6 h-32 Z"/></g>
+  <path d="M10 70 H230" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="120" y="56" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">closed canopy above 3 m</text>
+  <g transform="translate(125 225)"><ellipse rx="18" ry="9" fill="#8b5a2b"/><circle cx="16" cy="-9" r="6" fill="#8b5a2b"/></g>
+  <g stroke="#4a7fb0" stroke-width="3" fill="none"><path d="M390 150 H260"/><path d="M272 142 l-12 8 l12 8"/><path d="M390 190 H260"/><path d="M272 182 l-12 8 l12 8"/></g>
+  <g fill="#4a7fb0"><circle cx="300" cy="100" r="3"/><circle cx="340" cy="120" r="3"/><circle cx="370" cy="90" r="3"/><circle cx="320" cy="70" r="3"/></g>
+  <text x="320" y="225" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Open: wind, snow</text>
+  <text x="115" y="270" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Warmer, less snow</text>
+  <text x="200" y="292" font-size="14" fill="#6b4f35" text-anchor="middle">Cold snap: timber by day, sunny edge in the afternoon</text>
+</svg>

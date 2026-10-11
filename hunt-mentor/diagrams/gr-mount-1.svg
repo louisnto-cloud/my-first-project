@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 1: the rifle sits in a rest, pointed a safe way. The bolt is out and lies beside it. Look in the chamber and magazine well: empty.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bolt out. Empty.</text>
+  <path d="M20 120 L130 112 L140 112 L150 140 L250 138 L250 150 L140 156 L118 168 L104 160 L20 176 Z" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="130" y="102" width="80" height="20" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="210" y="106" width="176" height="9" fill="#6b6f68"/>
+  <rect x="150" y="104" width="40" height="10" fill="#fffaf0" stroke="#2f3a2b"/>
+  <path d="M150 156 q 2 16 22 14 l2 -14" fill="none" stroke="#2f3a2b" stroke-width="3"/>
+  <!-- bolt -->
+  <rect x="120" y="214" width="120" height="14" rx="6" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/>
+  <path d="M130 228 l-8 22" stroke="#2f3a2b" stroke-width="5"/><circle cx="121" cy="253" r="7" fill="#2f3a2b"/>
+  <path d="M170 140 L180 200" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 4"/><path d="M172 194 l8 10 l4 -12" fill="none" stroke="#e8590c" stroke-width="3"/>
+  <text x="260" y="226" font-size="15" font-weight="bold" fill="#2f3a2b">Bolt</text>
+  <text x="200" y="90" font-size="14" fill="#2f3a2b" text-anchor="middle">Look: chamber and magazine empty</text>
+  <text x="380" y="140" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">Muzzle safe way</text>
+</svg>

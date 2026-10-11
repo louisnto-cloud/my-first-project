@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Map view of a draw, a small valley. Nested V shaped contour lines point uphill, toward the top of the page. A blue creek runs down through the points of the Vs.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="36" width="400" height="232" fill="#dfe6d3" opacity=".6"/>
+  <g fill="none" stroke="#8b5a2b" stroke-width="2.5">
+    <path d="M30 70 L200 50 L370 70"/>
+    <path d="M30 120 L200 90 L370 120"/>
+    <path d="M30 170 L200 130 L370 170"/>
+    <path d="M30 220 L200 172 L370 220"/>
+    <path d="M30 262 L200 214 L370 262"/>
+  </g>
+  <path d="M200 44 C 196 100, 206 150, 198 200 S 202 250, 200 268" fill="none" stroke="#4a7fb0" stroke-width="4"/>
+  <text x="12" y="26" font-size="18" font-weight="bold" fill="#2f3a2b">Draw</text>
+  <text x="388" y="26" font-size="14" fill="#2f3a2b" text-anchor="end">High ground at top</text>
+  <text x="210" y="252" font-size="14" font-weight="bold" fill="#4a7fb0">water runs down</text>
+  <text x="200" y="292" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">V points UPHILL</text>
+  <polygon points="360,58 376,58 368,42" fill="#2f3a2b"/><line x1="368" y1="56" x2="368" y2="88" stroke="#2f3a2b" stroke-width="3"/>
+</svg>

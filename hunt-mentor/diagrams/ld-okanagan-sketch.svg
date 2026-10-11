@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 570" font-family="sans-serif" role="img" aria-label="Sketch map, not to scale, of Okanagan towns from north to south with their MUs. Vernon at the top, MU 8-22, with Swan Lake, Kalamalka Lake Park and Silver Star Park closed. Kelowna east of Okanagan Lake, MU 8-10, west side 8-11. Peachland and Summerland on the west shore, MU 8-8. Naramata on the east shore, MU 8-9. Penticton between Okanagan and Skaha lakes, on the 8-8 and 8-9 line. Okanagan Falls and Kaleden where 8-1, 8-8 and 8-9 meet. Vaseux Lake, Oliver and Osoyoos in MU 8-1. Highway 97C, the Okanagan Connector from Peachland to Aspen Grove, has a 400 metre no hunting band. Quail are open in all these MUs from 1 October to 30 November.">
+<rect x="0" y="0" width="400" height="570" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Okanagan towns and MUs</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">Sketch, not to scale. MUs from the map (80 to 90%).</text>
+<path d="M200 80 Q 214 76 216 100 Q 222 180 206 250 Q 198 300 190 318 Q 180 320 182 300 Q 190 240 192 170 Q 192 110 200 80 Z" fill="#4a7fb0" opacity=".7" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="186" y="110" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="end">Okanagan</text>
+<text x="186" y="126" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="end">Lake</text>
+<path d="M188 350 Q 196 346 196 362 Q 196 384 188 392 Q 182 380 184 360 Z" fill="#4a7fb0" opacity=".7" stroke="#2f3a2b" stroke-width="1.5"/>
+<path d="M186 432 Q 192 430 192 440 Q 190 452 185 452 Q 182 444 186 432 Z" fill="#4a7fb0" opacity=".7" stroke="#2f3a2b" stroke-width="1.5"/>
+<path d="M182 500 Q 190 496 192 512 Q 190 530 182 532 Q 176 520 182 500 Z" fill="#4a7fb0" opacity=".7" stroke="#2f3a2b" stroke-width="1.5"/>
+<path d="M190 318 Q 190 334 190 350 M188 392 Q 188 412 186 432 M185 452 Q 184 476 182 500" stroke="#4a7fb0" stroke-width="3" fill="none"/>
+<circle cx="214" cy="70" r="5" fill="#23261f"/>
+<text x="222" y="72" font-size="15" font-weight="bold" fill="#23261f">Vernon</text>
+<text x="222" y="88" font-size="14" fill="#6b4f35">MU 8-22</text>
+<circle cx="222" cy="176" r="5" fill="#23261f"/>
+<text x="230" y="178" font-size="15" font-weight="bold" fill="#23261f">Kelowna</text>
+<text x="230" y="194" font-size="14" fill="#6b4f35">MU 8-10 (east)</text>
+<circle cx="180" cy="248" r="5" fill="#23261f"/>
+<text x="172" y="250" font-size="15" font-weight="bold" fill="#23261f" text-anchor="end">Peachland</text>
+<text x="172" y="266" font-size="14" fill="#6b4f35" text-anchor="end">MU 8-8</text>
+<circle cx="178" cy="296" r="5" fill="#23261f"/>
+<text x="170" y="298" font-size="15" font-weight="bold" fill="#23261f" text-anchor="end">Summerland</text>
+<text x="170" y="314" font-size="14" fill="#6b4f35" text-anchor="end">MU 8-8</text>
+<circle cx="204" cy="280" r="5" fill="#23261f"/>
+<text x="212" y="282" font-size="15" font-weight="bold" fill="#23261f">Naramata</text>
+<text x="212" y="298" font-size="14" fill="#6b4f35">MU 8-9</text>
+<circle cx="194" cy="336" r="5" fill="#23261f"/>
+<text x="202" y="338" font-size="15" font-weight="bold" fill="#23261f">Penticton</text>
+<text x="202" y="354" font-size="14" fill="#6b4f35">on the 8-8 / 8-9 line</text>
+<circle cx="198" cy="400" r="5" fill="#23261f"/>
+<text x="206" y="402" font-size="15" font-weight="bold" fill="#23261f">Okanagan Falls, Kaleden</text>
+<text x="206" y="418" font-size="14" fill="#6b4f35">8-1, 8-8, 8-9 meet</text>
+<circle cx="196" cy="446" r="5" fill="#23261f"/>
+<text x="204" y="448" font-size="15" font-weight="bold" fill="#23261f">Vaseux Lake</text>
+<text x="204" y="464" font-size="14" fill="#6b4f35">MU 8-1</text>
+<circle cx="172" cy="470" r="5" fill="#23261f"/>
+<text x="164" y="472" font-size="15" font-weight="bold" fill="#23261f" text-anchor="end">Oliver</text>
+<text x="164" y="488" font-size="14" fill="#6b4f35" text-anchor="end">MU 8-1</text>
+<circle cx="196" cy="520" r="5" fill="#23261f"/>
+<text x="204" y="522" font-size="15" font-weight="bold" fill="#23261f">Osoyoos</text>
+<text x="204" y="538" font-size="14" fill="#6b4f35">MU 8-1</text>
+<text x="150" y="156" font-size="14" fill="#6b4f35" text-anchor="end">West side 8-11</text>
+<path d="M176 248 Q 160 226 40 234" stroke="#6b4f35" stroke-width="3" stroke-dasharray="7 5" fill="none"/>
+<text x="16" y="222" font-size="14" font-weight="bold" fill="#e8590c">Hwy 97C: 400 m</text>
+<text x="16" y="204" font-size="14" fill="#2f3a2b">to Aspen Grove</text>
+<text x="262" y="100" font-size="14" font-weight="bold" fill="#e8590c">Closed near Vernon:</text>
+<text x="262" y="116" font-size="14" font-weight="bold" fill="#e8590c">Swan Lake,</text>
+<text x="262" y="132" font-size="14" font-weight="bold" fill="#e8590c">Kalamalka Park,</text>
+<text x="262" y="148" font-size="14" font-weight="bold" fill="#e8590c">Silver Star Park</text>
+<text x="200" y="556" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Quail open in all these MUs: 1 Oct to 30 Nov (99%).</text>
+</svg>

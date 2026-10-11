@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" role="img" aria-label="Grid of duck daily bag limits as 8 boxes. All ducks together: 8. Inside that 8, at most 4 canvasback, 4 northern pintail, 2 goldeneye counting Barrow&#x27;s and common together, and 2 harlequin. The restricted species count inside the 8, never on top. Regions can set lower limits." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="350" fill="#fffaf0"/>
+<text x="200" y="26" font-size="20" fill="#23261f" text-anchor="middle" font-weight="bold">Ducks: daily bag limit</text>
+<text x="12" y="72" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">All ducks</text>
+<rect x="120" y="54" width="24" height="24" rx="4" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="150" y="54" width="24" height="24" rx="4" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="180" y="54" width="24" height="24" rx="4" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="210" y="54" width="24" height="24" rx="4" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="240" y="54" width="24" height="24" rx="4" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="270" y="54" width="24" height="24" rx="4" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="300" y="54" width="24" height="24" rx="4" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="330" y="54" width="24" height="24" rx="4" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="372" y="73" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">8</text>
+<text x="12" y="116" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Canvasback</text>
+<rect x="120" y="98" width="24" height="24" rx="4" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="150" y="98" width="24" height="24" rx="4" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="180" y="98" width="24" height="24" rx="4" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="210" y="98" width="24" height="24" rx="4" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="240" y="98" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="270" y="98" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="300" y="98" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="330" y="98" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="372" y="117" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">4</text>
+<text x="12" y="160" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Pintail</text>
+<rect x="120" y="142" width="24" height="24" rx="4" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="150" y="142" width="24" height="24" rx="4" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="180" y="142" width="24" height="24" rx="4" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="210" y="142" width="24" height="24" rx="4" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="240" y="142" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="270" y="142" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="300" y="142" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="330" y="142" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="372" y="161" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">4</text>
+<text x="12" y="204" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Goldeneye</text>
+<rect x="120" y="186" width="24" height="24" rx="4" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="150" y="186" width="24" height="24" rx="4" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="180" y="186" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="210" y="186" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="240" y="186" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="270" y="186" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="300" y="186" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="330" y="186" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="372" y="205" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">2</text>
+<text x="12" y="248" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Harlequin</text>
+<rect x="120" y="230" width="24" height="24" rx="4" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="150" y="230" width="24" height="24" rx="4" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="180" y="230" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="210" y="230" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="240" y="230" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="270" y="230" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="300" y="230" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="330" y="230" width="24" height="24" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="372" y="249" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">2</text>
+<text x="12" y="288" font-size="15" fill="#2f3a2b" text-anchor="start">The 4 orange species count INSIDE the 8,</text>
+<text x="12" y="308" font-size="15" fill="#2f3a2b" text-anchor="start">never on top. Goldeneye: Barrow&#x27;s and common</text>
+<text x="12" y="328" font-size="15" fill="#2f3a2b" text-anchor="start">together. Regions can set lower limits.</text>
+</svg>

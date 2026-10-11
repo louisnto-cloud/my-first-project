@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A quail day as a timeline chart. Morning: feed at the edges of cover. Midday: rest inside shrubs. Evening: feed again. Night: roost in trees. Best hunting, my opinion: first 2 hours after legal light and last 2 hours before sunset.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A quail day</text>
+  <g font-weight="bold" font-size="14" text-anchor="middle">
+    <rect x="10" y="50" width="90" height="70" rx="8" fill="#e8590c"/><text x="55" y="80" fill="#fff">Morning</text><text x="55" y="100" fill="#fff">feed</text>
+    <rect x="105" y="50" width="90" height="70" rx="8" fill="#8a9a6b"/><text x="150" y="80" fill="#fff">Midday</text><text x="150" y="100" fill="#fff">in shrubs</text>
+    <rect x="200" y="50" width="90" height="70" rx="8" fill="#e8590c"/><text x="245" y="80" fill="#fff">Evening</text><text x="245" y="100" fill="#fff">feed</text>
+    <rect x="295" y="50" width="95" height="70" rx="8" fill="#2f3a2b"/><text x="342" y="80" fill="#fff">Night</text><text x="342" y="100" fill="#fff">roost, trees</text>
+  </g>
+  <text x="200" y="146" font-size="14" fill="#2f3a2b" text-anchor="middle">Pattern from bird guides (75%)</text>
+  <rect x="10" y="168" width="380" height="60" rx="8" fill="#dfe6d3"/>
+  <text x="200" y="192" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hunt: first 2 hours after legal light,</text>
+  <text x="200" y="214" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">last 2 hours before sunset (Tip)</text>
+  <text x="200" y="258" font-size="14" fill="#2f3a2b" text-anchor="middle">A lookout bird watches while others feed (75%)</text>
+  <text x="200" y="280" font-size="14" fill="#2f3a2b" text-anchor="middle">Calm days, after leaves drop: easier (Tip)</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Grid of six birds, legal or not, from the app Rule Book. California quail, curled plume: yes, Region 8. Mountain quail, straight plume: no open season. Chukar, red bill and black necklace: yes, Regions 3 and 8. Gray partridge, orange face: yes, Regions 3 and 8. Pheasant cock, green head and white ring: yes, cocks only. Pheasant hen, brown with a long tail: never. 99 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Legal or not? From the Rule Book</text>
+<rect x="12" y="36" width="184" height="72" rx="8" fill="#dfe6d3"/>
+<text x="104" y="58" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">California quail</text>
+<text x="104" y="78" font-size="14" fill="#2f3a2b" text-anchor="middle">Curled plume</text>
+<rect x="34" y="86" width="140" height="20" rx="6" fill="#3f7f3a"/>
+<text x="104" y="101" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">YES, Region 8</text>
+<rect x="204" y="36" width="184" height="72" rx="8" fill="#dfe6d3"/>
+<text x="296" y="58" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Mountain quail</text>
+<text x="296" y="78" font-size="14" fill="#2f3a2b" text-anchor="middle">Straight plume</text>
+<rect x="226" y="86" width="140" height="20" rx="6" fill="#c0392b"/>
+<text x="296" y="101" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">NO season</text>
+<rect x="12" y="113" width="184" height="72" rx="8" fill="#dfe6d3"/>
+<text x="104" y="135" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Chukar</text>
+<text x="104" y="155" font-size="14" fill="#2f3a2b" text-anchor="middle">Red bill, necklace</text>
+<rect x="34" y="163" width="140" height="20" rx="6" fill="#3f7f3a"/>
+<text x="104" y="178" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">YES, Regions 3, 8</text>
+<rect x="204" y="113" width="184" height="72" rx="8" fill="#dfe6d3"/>
+<text x="296" y="135" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Gray partridge</text>
+<text x="296" y="155" font-size="14" fill="#2f3a2b" text-anchor="middle">Orange face</text>
+<rect x="226" y="163" width="140" height="20" rx="6" fill="#3f7f3a"/>
+<text x="296" y="178" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">YES, Regions 3, 8</text>
+<rect x="12" y="190" width="184" height="72" rx="8" fill="#dfe6d3"/>
+<text x="104" y="212" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Pheasant cock</text>
+<text x="104" y="232" font-size="14" fill="#2f3a2b" text-anchor="middle">Green head, ring</text>
+<rect x="34" y="240" width="140" height="20" rx="6" fill="#3f7f3a"/>
+<text x="104" y="255" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">YES, cocks only</text>
+<rect x="204" y="190" width="184" height="72" rx="8" fill="#dfe6d3"/>
+<text x="296" y="212" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Pheasant hen</text>
+<text x="296" y="232" font-size="14" fill="#2f3a2b" text-anchor="middle">Brown, long tail</text>
+<rect x="226" y="240" width="140" height="20" rx="6" fill="#c0392b"/>
+<text x="296" y="255" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">NEVER</text>
+<text x="200" y="292" font-size="14" fill="#2f3a2b" text-anchor="middle">Seasons: Rule Book (99%)</text>
+</svg>

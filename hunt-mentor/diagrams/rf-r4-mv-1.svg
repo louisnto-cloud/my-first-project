@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 642" role="img" aria-label="Cards of vehicle closures in Management Units 4-1 to 4-7. 4-1: McDougall Wildlife Sanctuary, Map D1, Upper Flathead and East Flathead closed to all vehicles. 4-2: Wigwam Flats, Mt. Broadwood and Sportsman Ridge, Galton Range and Upper Wigwam closed to all vehicles; Soowa Mountain closed for hunting use 1 September to 30 June. 4-3: Purcell Creek and Elizabeth Lake, Map D2, closed for hunting use in spring and 1 September to 28 February; Linklater Creek Access Management Area closed to all vehicles; Linklater Motor Vehicles for Hunting Closed Area 1 September to 30 November. 4-4: Hawkins Creek and Mt. Mahon, spring and fall. 4-5: Irishman Creek spring and fall; Lamb Creek 1 September to 30 June. 4-6: Channel Road closed 15 March to 30 April and 15 August to 15 October; Leadville Creek and Sanca Creek slopes closed to all vehicles. 4-7: Topaz Creek spring and fall; Corn Creek north side closed 1 September to 1 June; Corn Creek Forest Service Road open." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="642" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Vehicle closures, MUs 4-1 to 4-7</text>
+<rect x="6" y="40" width="190" height="132" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 4-1</text>
+<text x="14" y="88" font-size="14" fill="#23261f" text-anchor="start">★ McDougall Wildlife</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">Sanctuary (Map D1),</text>
+<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start">Upper Flathead, East</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start">Flathead</text>
+<rect x="204" y="40" width="190" height="132" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 4-2</text>
+<text x="212" y="88" font-size="14" fill="#23261f" text-anchor="start">★ Wigwam Flats, Mt.</text>
+<text x="212" y="106" font-size="14" fill="#23261f" text-anchor="start">Broadwood, Sportsman</text>
+<text x="212" y="124" font-size="14" fill="#23261f" text-anchor="start">Ridge, Galton Range,</text>
+<text x="212" y="142" font-size="14" fill="#23261f" text-anchor="start">Upper Wigwam. ✖ Soowa</text>
+<text x="212" y="160" font-size="14" fill="#23261f" text-anchor="start">Mountain</text>
+<rect x="6" y="180" width="190" height="168" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M6 190 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="101" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 4-3</text>
+<text x="14" y="228" font-size="14" fill="#23261f" text-anchor="start">◆ Purcell Creek,</text>
+<text x="14" y="246" font-size="14" fill="#23261f" text-anchor="start">Elizabeth Lake (Map</text>
+<text x="14" y="264" font-size="14" fill="#23261f" text-anchor="start">D2). ★ Linklater Creek</text>
+<text x="14" y="282" font-size="14" fill="#23261f" text-anchor="start">Access Management Area.</text>
+<text x="14" y="300" font-size="14" fill="#23261f" text-anchor="start">✢ Linklater Motor</text>
+<text x="14" y="318" font-size="14" fill="#23261f" text-anchor="start">Vehicles for Hunting</text>
+<text x="14" y="336" font-size="14" fill="#23261f" text-anchor="start">Closed Area</text>
+<rect x="204" y="180" width="190" height="168" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M204 190 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="299" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 4-4</text>
+<text x="212" y="228" font-size="14" fill="#23261f" text-anchor="start">▲ Hawkins Creek</text>
+<text x="212" y="246" font-size="14" fill="#23261f" text-anchor="start">watershed and Mt. Mahon</text>
+<text x="212" y="264" font-size="14" fill="#23261f" text-anchor="start">slopes</text>
+<rect x="6" y="356" width="190" height="132" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M6 366 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="101" y="374" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 4-5</text>
+<text x="14" y="404" font-size="14" fill="#23261f" text-anchor="start">▲ Irishman Creek. ✖</text>
+<text x="14" y="422" font-size="14" fill="#23261f" text-anchor="start">Lamb Creek</text>
+<rect x="204" y="356" width="190" height="132" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M204 366 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="299" y="374" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 4-6</text>
+<text x="212" y="404" font-size="14" fill="#23261f" text-anchor="start">★ Channel Road, Mar 15</text>
+<text x="212" y="422" font-size="14" fill="#23261f" text-anchor="start">to Apr 30 and Aug 15 to</text>
+<text x="212" y="440" font-size="14" fill="#23261f" text-anchor="start">Oct 15. ★ Leadville</text>
+<text x="212" y="458" font-size="14" fill="#23261f" text-anchor="start">Creek, Sanca Creek</text>
+<text x="212" y="476" font-size="14" fill="#23261f" text-anchor="start">slopes</text>
+<rect x="6" y="496" width="190" height="132" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M6 506 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#4a7fb0"/>
+<text x="101" y="514" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 4-7</text>
+<text x="14" y="544" font-size="14" fill="#23261f" text-anchor="start">▲ Topaz Creek. ★ Corn</text>
+<text x="14" y="562" font-size="14" fill="#23261f" text-anchor="start">Creek north side, Sept</text>
+<text x="14" y="580" font-size="14" fill="#23261f" text-anchor="start">1 to June 1. Corn Creek</text>
+<text x="14" y="598" font-size="14" fill="#23261f" text-anchor="start">Forest Service Road</text>
+<text x="14" y="616" font-size="14" fill="#23261f" text-anchor="start">open</text>
+</svg>

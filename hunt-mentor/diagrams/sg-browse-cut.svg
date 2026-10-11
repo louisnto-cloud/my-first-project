@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Who bit the twig? Deer have no upper front teeth, so they tear twigs and leave a ragged, shredded end. Hares cut twigs clean at 45 degrees, like pruning shears. Fresh ends are pale and moist, old ends grey and dry.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Who bit the twig?</text>
+  <path d="M100 280 L100 120" stroke="#6b4f35" stroke-width="16"/>
+  <path d="M92 120 l3 -14 l3 10 l3 -16 l3 12 l3 -10 l3 14 l-2 4 Z" fill="#f1e2c0" stroke="#6b4f35" stroke-width="1.5"/>
+  <polygon points="292,280 308,280 308,122 292,138" fill="#6b4f35"/>
+  <ellipse cx="300" cy="130" rx="11" ry="4" transform="rotate(-45 300 130)" fill="#f1e2c0"/>
+  <text x="100" y="80" font-size="18" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Deer: torn</text>
+  <text x="100" y="100" font-size="14" fill="#2f3a2b" text-anchor="middle">ragged, shredded</text>
+  <text x="300" y="80" font-size="18" font-weight="bold" fill="#e8590c" text-anchor="middle">Hare: cut</text>
+  <text x="300" y="100" font-size="14" fill="#2f3a2b" text-anchor="middle">clean, 45 degrees</text>
+  <rect x="140" y="170" width="120" height="70" rx="8" fill="#eef2f6"/>
+  <text x="200" y="195" font-size="14" fill="#2f3a2b" text-anchor="middle">Pale, moist:</text>
+  <text x="200" y="212" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">fresh</text>
+  <text x="200" y="230" font-size="14" fill="#2f3a2b" text-anchor="middle">Grey, dry: old</text>
+</svg>

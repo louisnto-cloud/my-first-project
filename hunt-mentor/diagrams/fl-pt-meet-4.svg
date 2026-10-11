@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Plan B: if no one shows, go to the truck. Agree the time you call for help.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="32" r="17" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="30" y="39" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">4</text>
+<text x="56" y="39" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="start">Plan B: the truck</text>
+<rect x="128.0" y="158.4" width="96.0" height="32.0" rx="3" fill="#2f3a2b"/><rect x="219.2" y="139.2" width="48.0" height="51.2" rx="4" fill="#2f3a2b"/><rect x="228.8" y="145.6" width="28.8" height="19.200000000000003" rx="2" fill="#cfe0ef"/><circle cx="155.2" cy="193.6" r="14.4" fill="#23261f"/><circle cx="241.6" cy="193.6" r="14.4" fill="#23261f"/><circle cx="155.2" cy="193.6" r="6.4" fill="#c9b79c"/><circle cx="241.6" cy="193.6" r="6.4" fill="#c9b79c"/><text x="200" y="100" font-family="sans-serif" font-size="18" font-weight="bold" fill="#e8590c" text-anchor="middle">Still no one?</text>
+<rect x="10" y="262" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="285.0" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Truck next. Then call for help at the agreed time.</text>
+</svg>

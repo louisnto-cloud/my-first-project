@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Carry every species licence bought this licence year, cancelled and not, 95 percent: a cancelled deer licence, an unused moose licence and an unused black bear licence. Timeline: from the kill until the meat is eaten, keep the papers. For a mount or tanned hide, keep the licence forever. Lost one? Replace it at FrontCounter BC or Service BC for $10 and declare the harvest from the original, 95 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Carry every licence</text>
+<text x="200.0" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">Cancelled and not, all licence year (95%)</text>
+<g transform="translate(80 100) scale(1.1)"><rect x="-40" y="-26" width="80" height="52" rx="4" fill="#ffffff" stroke="#23261f" stroke-width="2"/><rect x="-40" y="-26" width="80" height="12" fill="#f1ead8" stroke="#23261f" stroke-width="1"/><text x="0" y="8" font-size="13" fill="#23261f" text-anchor="middle" font-weight="bold">Deer</text><path d="M-24 14 h48" stroke="#23261f" stroke-width="2" stroke-dasharray="2 2"/><path d="M-14 -26 L-8 -18 L-2 -26 Z" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/><path d="M40 -6 L32 0 L40 6 Z" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/></g>
+<g transform="translate(200 100) scale(1.1)"><rect x="-40" y="-26" width="80" height="52" rx="4" fill="#ffffff" stroke="#23261f" stroke-width="2"/><rect x="-40" y="-26" width="80" height="12" fill="#f1ead8" stroke="#23261f" stroke-width="1"/><text x="0" y="8" font-size="13" fill="#23261f" text-anchor="middle" font-weight="bold">Moose</text><path d="M-24 14 h48" stroke="#23261f" stroke-width="2" stroke-dasharray="2 2"/></g>
+<g transform="translate(320 100) scale(1.1)"><rect x="-40" y="-26" width="80" height="52" rx="4" fill="#ffffff" stroke="#23261f" stroke-width="2"/><rect x="-40" y="-26" width="80" height="12" fill="#f1ead8" stroke="#23261f" stroke-width="1"/><text x="0" y="8" font-size="13" fill="#23261f" text-anchor="middle" font-weight="bold">Black bear</text><path d="M-24 14 h48" stroke="#23261f" stroke-width="2" stroke-dasharray="2 2"/></g>
+<text x="80" y="148" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">cancelled</text>
+<text x="200" y="148" font-size="14" fill="#2f3a2b" text-anchor="middle">not used</text>
+<text x="320" y="148" font-size="14" fill="#2f3a2b" text-anchor="middle">not used</text>
+<path d="M30 192 H370" stroke="#2f3a2b" stroke-width="3"/>
+<circle cx="40" cy="192" r="8" fill="#e8590c"/>
+<text x="40" y="216" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Kill</text>
+<circle cx="200" cy="192" r="8" fill="#4a7fb0"/>
+<text x="200" y="216" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Meat eaten</text>
+<line x1="48" y1="184" x2="183.0" y2="184.0" stroke="#e8590c" stroke-width="2.5"/><polygon points="192,184 183.0,179.1 183.0,188.9" fill="#e8590c"/>
+<text x="120" y="176" font-size="13" fill="#e8590c" text-anchor="middle" font-weight="bold">keep the papers</text>
+<circle cx="360" cy="192" r="8" fill="#2f6b3a"/>
+<text x="345" y="216" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Mount or hide</text>
+<text x="330" y="176" font-size="13" fill="#2f6b3a" text-anchor="middle" font-weight="bold">keep forever</text>
+<rect x="20" y="228" width="360" height="64" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="246.9" font-size="14" fill="#23261f" text-anchor="middle">Lost one? Replace it at FrontCounter BC</text>
+<text x="200.0" y="264.9" font-size="14" fill="#23261f" text-anchor="middle">or Service BC for $10. Declare the</text>
+<text x="200.0" y="282.9" font-size="14" fill="#23261f" text-anchor="middle">harvest from the original (95%).</text>
+</svg>

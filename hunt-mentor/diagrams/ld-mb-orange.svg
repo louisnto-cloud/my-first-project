@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" font-family="sans-serif" role="img" aria-label="Figure of a hunter for the Manitoba hunter orange rule, General Hunting Regulation M.R. 351/87. A head covering completely hunter orange except the brim. Plus 2,580 square centimetres, 400 square inches, of hunter orange above the waist, visible from all sides. The rule also covers anyone who dresses or retrieves big game, or guides or accompanies the hunter, so your brother too.">
+<rect x="0" y="0" width="400" height="360" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Manitoba orange: both, every person</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">General Hunting Regulation, M.R. 351/87 (85%)</text>
+<path d="M160 82 h80 l10 22 h-100 z" fill="#e8590c"/><rect x="146" y="102" width="108" height="8" rx="3" fill="#6b4f35"/>
+<circle cx="200" cy="126" r="20" fill="#e0b48a"/>
+<path d="M150 236 v-72 q0 -20 50 -20 q50 0 50 20 v72 z" fill="#e8590c"/>
+<path d="M150 236 h100 v70 h-100 z" fill="#6b4f35"/><path d="M200 236 v70" stroke="#fffaf0" stroke-width="3"/>
+<line x1="120" y1="236" x2="280" y2="236" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="114" y="240" font-size="14" fill="#2f3a2b" text-anchor="end">waist</text>
+<text x="14" y="90" font-size="15" font-weight="bold" fill="#e8590c">Head covering</text>
+<text x="14" y="108" font-size="14" fill="#2f3a2b">completely orange</text>
+<text x="14" y="126" font-size="14" fill="#2f3a2b">(brim excepted)</text>
+<text x="262" y="170" font-size="15" font-weight="bold" fill="#e8590c">2,580 cm2</text>
+<text x="262" y="188" font-size="14" fill="#2f3a2b">(400 in2)</text>
+<text x="262" y="206" font-size="14" fill="#2f3a2b">above the waist,</text>
+<text x="262" y="224" font-size="14" fill="#2f3a2b">seen from all sides</text>
+<text x="200" y="330" font-size="14" fill="#2f3a2b" text-anchor="middle">Also anyone who dresses, retrieves, guides</text>
+<text x="200" y="348" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">or comes along: your brother too (85%).</text>
+</svg>

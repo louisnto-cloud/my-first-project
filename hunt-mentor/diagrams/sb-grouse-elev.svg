@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 328" font-family="sans-serif" role="img" aria-label="Elevation chart in metres, 85 percent, BC Breeding Bird Atlas. Ruffed grouse are most abundant from 750 to 1,250 metres. Dusky grouse breed from about 500 to 2,250 metres. Spruce grouse live up to 2,500 metres, drawn as a dashed bar because no lower limit is given. White tailed ptarmigan breed from 1,830 to 2,650 metres in the Interior. Ruffed grouse like aspen near water; spruce grouse like pine and spruce.">
+  <rect width="400" height="328" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How high they live in BC (85%)</text>
+  <line x1="60" y1="270" x2="392" y2="270" stroke="#8a9a6b" stroke-dasharray="3 4"/>
+  <text x="54" y="275.0" font-size="13" fill="#2f3a2b" text-anchor="end">0</text>
+  <line x1="60" y1="231" x2="392" y2="231" stroke="#8a9a6b" stroke-dasharray="3 4"/>
+  <text x="54" y="235.71428571428572" font-size="13" fill="#2f3a2b" text-anchor="end">500</text>
+  <line x1="60" y1="191" x2="392" y2="191" stroke="#8a9a6b" stroke-dasharray="3 4"/>
+  <text x="54" y="196.42857142857144" font-size="13" fill="#2f3a2b" text-anchor="end">1,000</text>
+  <line x1="60" y1="152" x2="392" y2="152" stroke="#8a9a6b" stroke-dasharray="3 4"/>
+  <text x="54" y="157.14285714285714" font-size="13" fill="#2f3a2b" text-anchor="end">1,500</text>
+  <line x1="60" y1="113" x2="392" y2="113" stroke="#8a9a6b" stroke-dasharray="3 4"/>
+  <text x="54" y="117.85714285714286" font-size="13" fill="#2f3a2b" text-anchor="end">2,000</text>
+  <line x1="60" y1="74" x2="392" y2="74" stroke="#8a9a6b" stroke-dasharray="3 4"/>
+  <text x="54" y="78.57142857142858" font-size="13" fill="#2f3a2b" text-anchor="end">2,500</text>
+  <text x="18" y="160" font-size="13" fill="#2f3a2b" text-anchor="middle" transform="rotate(-90 18 160)">metres</text>
+  <rect x="80" y="172" width="54" height="39" rx="5" fill="#8b5a2b"/>
+  <text x="107" y="292" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Ruffed</text>
+  <text x="107" y="165.78571428571428" font-size="12" font-weight="bold" fill="#2f3a2b" text-anchor="middle">750 to 1,250</text>
+  <rect x="160" y="93" width="54" height="138" rx="5" fill="#4b4f55"/>
+  <text x="187" y="292" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dusky</text>
+  <text x="187" y="87.21428571428572" font-size="12" font-weight="bold" fill="#2f3a2b" text-anchor="middle">500 to 2,250</text>
+  <rect x="240" y="74" width="54" height="196" rx="5" fill="none" stroke="#2f3a2b" stroke-width="3" stroke-dasharray="6 5"/>
+  <rect x="240" y="74" width="54" height="16" rx="5" fill="#2f3a2b"/>
+  <text x="267" y="292" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Spruce</text>
+  <text x="267" y="67.57142857142858" font-size="12" font-weight="bold" fill="#2f3a2b" text-anchor="middle">to 2,500 m</text>
+  <rect x="320" y="62" width="54" height="64" rx="5" fill="#4a7fb0"/>
+  <text x="347" y="292" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Ptarmigan</text>
+  <text x="347" y="55.78571428571428" font-size="12" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1,830 to 2,650</text>
+  <text x="200" y="318" font-size="13" fill="#2f3a2b" text-anchor="middle">Ruffed: aspen near water. Spruce: pine, spruce</text>
+</svg>

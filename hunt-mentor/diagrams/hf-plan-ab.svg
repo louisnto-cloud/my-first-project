@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Plan A and plan B on a map. Spot A on the west side of a bench works in an east wind. Spot B on the south side works in a north wind. Forecast says north wind: go to B, do not force A.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect width="400" height="300" fill="#dfe6d3" opacity=".5"/>
+  <ellipse cx="220" cy="120" rx="80" ry="40" fill="#e8590c" opacity=".2"/>
+  <text x="220" y="125" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">bedding bench</text>
+  <circle cx="80" cy="120" r="16" fill="#2f3a2b"/><text x="80" y="126" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">A</text>
+  <circle cx="220" cy="230" r="16" fill="#2f3a2b"/><text x="220" y="236" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">B</text>
+  <path d="M150 70 L110 70" stroke="#4a7fb0" stroke-width="4"/><polygon points="114,62 114,78 100,70" fill="#4a7fb0"/>
+  <text x="40" y="160" font-size="14" fill="#2f3a2b">A: east wind</text>
+  <path d="M330 170 L330 210" stroke="#4a7fb0" stroke-width="4"/><polygon points="322,206 338,206 330,220" fill="#4a7fb0"/>
+  <text x="250" y="270" font-size="14" fill="#2f3a2b">B: north wind</text>
+  <text x="388" y="30" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">N up</text>
+  <rect x="12" y="236" width="180" height="52" rx="8" fill="#2f3a2b"/>
+  <text x="102" y="258" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Wrong wind for A?</text>
+  <text x="102" y="278" font-size="14" font-weight="bold" fill="#ffd34d" text-anchor="middle">Go to B. Do not force A</text>
+</svg>

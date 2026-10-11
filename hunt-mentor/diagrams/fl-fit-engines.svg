@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Three engines to train: heart and lungs with walking and hiking, legs with strength moves twice a week, and carrying with a weighted pack on hills in the last weeks.">
+  <rect x="0" y="0" width="400" height="250" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Train three engines</text>
+<rect x="10.0" y="46" width="121.33333333333333" height="194" rx="10" fill="#dfe6d3" stroke="#e8590c" stroke-width="2"/>
+<rect x="10.0" y="46" width="121.33333333333333" height="36" rx="10" fill="#e8590c"/>
+<text x="70.66666666666666" y="70" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Heart</text>
+<text x="70.66666666666666" y="106" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Walks, hikes</text>
+<text x="70.66666666666666" y="128" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Bike, stairs</text>
+<text x="70.66666666666666" y="150" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Talk pace</text>
+<text x="70.66666666666666" y="172" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">3 to 5 days</text>
+<text x="70.66666666666666" y="194" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">a week</text>
+<rect x="139.33333333333331" y="46" width="121.33333333333333" height="194" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+<rect x="139.33333333333331" y="46" width="121.33333333333333" height="36" rx="10" fill="#2f3a2b"/>
+<text x="199.99999999999997" y="70" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Legs</text>
+<text x="199.99999999999997" y="106" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Step ups</text>
+<text x="199.99999999999997" y="128" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Split squats</text>
+<text x="199.99999999999997" y="150" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Hip hinge</text>
+<text x="199.99999999999997" y="172" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">2 days</text>
+<text x="199.99999999999997" y="194" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">a week</text>
+<rect x="268.66666666666663" y="46" width="121.33333333333333" height="194" rx="10" fill="#dfe6d3" stroke="#8b5a2b" stroke-width="2"/>
+<rect x="268.66666666666663" y="46" width="121.33333333333333" height="36" rx="10" fill="#8b5a2b"/>
+<text x="329.3333333333333" y="70" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Carry</text>
+<text x="329.3333333333333" y="106" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Pack on hills</text>
+<text x="329.3333333333333" y="128" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Add a little</text>
+<text x="329.3333333333333" y="150" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">each week</text>
+<text x="329.3333333333333" y="172" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Weeks 5</text>
+<text x="329.3333333333333" y="194" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">to 12</text>
+</svg>

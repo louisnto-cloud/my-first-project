@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Where lead shot is allowed. Lead is OK for BC upland birds: grouse, ptarmigan, quail, partridge, pheasant and turkey, unless a local wetland rule applies. Non toxic only for ducks, geese, coots and snipe, and for any hunting in a National Wildlife Area.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Lead or non toxic?</text>
+  <rect x="10" y="40" width="185" height="250" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+  <rect x="205" y="40" width="185" height="250" rx="10" fill="#4a7fb0" fill-opacity=".15" stroke="#4a7fb0" stroke-width="2"/>
+  <g font-size="16" font-weight="bold"><text x="102" y="68" fill="#2f6b3a" text-anchor="middle">Lead OK</text><text x="297" y="68" fill="#4a7fb0" text-anchor="middle">Non toxic only</text></g>
+  <g font-size="15" fill="#2f3a2b">
+    <text x="24" y="100">Grouse</text><text x="24" y="124">Ptarmigan</text><text x="24" y="148">Quail</text><text x="24" y="172">Partridge</text><text x="24" y="196">Pheasant</text><text x="24" y="220">Turkey</text>
+    <text x="24" y="252" font-size="14">Watch for a local</text><text x="24" y="270" font-size="14">wetland rule</text>
+    <text x="219" y="100">Ducks</text><text x="219" y="124">Geese</text><text x="219" y="148">Coots</text><text x="219" y="172">Snipe</text>
+    <text x="219" y="212" font-weight="bold">Any hunt in a</text><text x="219" y="232" font-weight="bold">National</text><text x="219" y="252" font-weight="bold">Wildlife Area</text>
+  </g>
+</svg>

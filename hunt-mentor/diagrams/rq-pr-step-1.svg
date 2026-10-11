@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 1: Mark every open road. Truck roads, ATV routes, gates. Check closures.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Mark every open road</text>
+<rect x="60" y="80" width="280" height="150" fill="#dfe6d3" stroke="#8a9a6b"/><path d="M60 200 Q 160 180 200 130 T 340 100" stroke="#23261f" stroke-width="5" fill="none"/><g transform="translate(120 190) scale(0.8)"><rect x="-22" y="-14" width="28" height="14" fill="#2f3a2b"/><path d="M6 -14 h10 l8 8 v6 h-18 Z" fill="#2f3a2b"/><circle cx="-12" cy="2" r="5" fill="#23261f"/><circle cx="14" cy="2" r="5" fill="#23261f"/></g>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Truck roads, ATV routes, gates. Check closures.</text>
+</svg>

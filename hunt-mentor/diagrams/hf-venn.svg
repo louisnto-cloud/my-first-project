@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Three overlapping circles: bench, edge, and water. Where all three overlap is the star spot to mark on your map.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <circle cx="150" cy="120" r="85" fill="#8a9a6b" opacity=".45"/>
+  <circle cx="250" cy="120" r="85" fill="#8b5a2b" opacity=".35"/>
+  <circle cx="200" cy="200" r="85" fill="#4a7fb0" opacity=".4"/>
+  <g font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="110" y="95">Bench</text><text x="290" y="95">Edge</text><text x="200" y="262">Water</text></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="110" y="114">flat step</text><text x="290" y="114">open meets cover</text><text x="200" y="280">pond, spring, creek</text></g>
+  <polygon points="200,128 207,146 226,146 211,157 217,176 200,165 183,176 189,157 174,146 193,146" fill="#e8590c"/>
+  <text x="200" y="22" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Mark spots with all three (Tip)</text>
+</svg>

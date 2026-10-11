@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Animation, top view, a tip. Wind blows across the field from left to right. The hunter sits at the bottom edge with brush behind. An electronic caller sits about 40 metres out, a little upwind. The hunter&#x27;s scent drifts off to the right, downwind. A coyote comes out of the timber, trots toward the call, then hooks downwind to smell it. That puts him in the open in front of the hunter, before he reaches the hunter&#x27;s scent. The shot comes then." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<rect x="0" y="0" width="400" height="300" fill="#e9e3c9"/>
+<path d="M0 0 L400 0 L400 46 C330 56 260 40 200 52 C130 64 60 44 0 56 Z" fill="#8a9a6b"/>
+<path d="M0 300 L0 262 C80 252 160 266 240 258 C320 250 360 262 400 256 L400 300 Z" fill="#8a9a6b"/>
+<g stroke="#4a7fb0" stroke-width="3" fill="none" opacity="0.8"><path d="M20 120 h50 m-9 -6 l9 6 l-9 6"><animateTransform attributeName="transform" type="translate" values="0 0;24 0;0 0" dur="2s" repeatCount="indefinite"/></path><path d="M20 200 h50 m-9 -6 l9 6 l-9 6"><animateTransform attributeName="transform" type="translate" values="0 0;24 0;0 0" dur="2s" begin="0.7s" repeatCount="indefinite"/></path></g>
+<text x="60" y="100" font-size="14" fill="#4a7fb0" text-anchor="middle" font-weight="bold">Wind</text>
+<circle cx="180" cy="262" r="10" fill="#2f3a2b"/>
+<text x="180" y="292" font-size="13" fill="#2f3a2b" text-anchor="middle" font-weight="bold">You</text>
+<path d="M186 258 L400 200 L400 300 L186 268 Z" fill="#e8590c" opacity="0.15"/>
+<text x="330" y="248" font-size="13" fill="#e8590c" text-anchor="middle" font-weight="bold">Your scent</text>
+<rect x="132" y="150" width="16" height="12" rx="2" fill="#2f3a2b"/>
+<text x="140" y="182" font-size="13" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Caller</text>
+<circle cx="140" cy="156" r="10" fill="none" stroke="#2f3a2b" stroke-width="2" opacity="0"><animate attributeName="r" values="10;50" dur="1.5s" repeatCount="5"/><animate attributeName="opacity" values="0.8;0" dur="1.5s" repeatCount="5"/></circle>
+<path id="sc-coyote-call-path" d="M60 50 C90 90 110 110 150 120 C200 130 240 150 250 190" fill="none" stroke="#8b5a2b" stroke-width="2" stroke-dasharray="5 6"/>
+<g><g transform="scale(0.5)"><ellipse cx="0" cy="0" rx="26" ry="10" fill="#b08a5a" stroke="#23261f"/><circle cx="-26" cy="-6" r="8" fill="#b08a5a" stroke="#23261f"/><path d="M-30 -12 l2 -10 l4 8 Z" fill="#b08a5a"/><path d="M24 0 C32 8 34 14 34 20" stroke="#b08a5a" stroke-width="6" fill="none"/></g><animateMotion dur="7s" fill="freeze" rotate="auto" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#sc-coyote-call-path"/></animateMotion></g>
+<text x="200" y="24" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">Crosswind setup for coyotes (Tip)</text>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="7s" dur="0.5s" fill="freeze"/><line x1="186" y1="256" x2="246" y2="196" stroke="#e8590c" stroke-width="2" stroke-dasharray="5 4"/><rect x="250" y="62" width="144" height="84" rx="8" fill="#2f3a2b"/><text x="322" y="82" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">He circles downwind,</text><text x="322" y="100" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">crosses the open.</text><text x="322" y="118" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">Shoot before he</text><text x="322" y="136" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">smells you.</text></g>
+</svg>

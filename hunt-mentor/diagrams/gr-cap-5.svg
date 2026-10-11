@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Capsize step 5: two people huddle, chests together. Once out of the water, stay out. Let the gun go, it is replaceable.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">5. Two people? Huddle</text>
+  <rect x="0" y="150" width="400" height="150" fill="#4a7fb0" opacity=".35"/>
+  <path d="M0 150 q 25 -8 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0" fill="none" stroke="#4a7fb0" stroke-width="3"/>
+  <circle cx="180" cy="116" r="12" fill="#d9b48f"/><rect x="165.0" y="130" width="30" height="34" rx="7" fill="#e8590c"/><circle cx="220" cy="116" r="12" fill="#d9b48f"/><rect x="205.0" y="130" width="30" height="34" rx="7" fill="#e8590c"/><path d="M190 146 h20" stroke="#d9b48f" stroke-width="6"/><text x="276" y="100" font-size="14" font-weight="bold" fill="#2f3a2b">Let the gun go.</text><text x="276" y="118" font-size="14" fill="#2f3a2b">It is replaceable</text>
+  <text x="200" y="290" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Chests together. Once out, stay out</text>
+</svg>

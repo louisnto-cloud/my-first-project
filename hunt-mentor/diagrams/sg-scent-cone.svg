@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Your scent cone. Wind carries scent from your breath, skin, clothes and boots in a widening cone downwind. A deer standing in the cone smells you. A deer upwind or off to the side of the cone does not. Your truck leaves scent too.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Your scent cone</text>
+  <rect x="0" y="40" width="400" height="220" fill="#dfe6d3" opacity=".6"/>
+  <path d="M70 150 L390 60 L390 240 Z" fill="#e8590c" opacity=".18"/>
+  <g stroke="#4a7fb0" stroke-width="3" fill="none"><path d="M20 60 H90 m-12 -8 l12 8 l-12 8"/></g>
+  <text x="100" y="66" font-size="16" font-weight="bold" fill="#4a7fb0">Wind</text>
+  <circle cx="70" cy="150" r="12" fill="#e8590c"/><text x="70" y="182" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">You</text>
+  <g transform="translate(320 160)"><ellipse rx="18" ry="9" fill="#8b5a2b"/><circle cx="-16" cy="-8" r="6" fill="#8b5a2b"/></g>
+  <text x="320" y="196" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">smells you</text>
+  <g transform="translate(250 255)"><ellipse rx="16" ry="8" fill="#8b5a2b"/><circle cx="-14" cy="-7" r="5" fill="#8b5a2b"/></g>
+  <text x="250" y="285" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">safe: outside the cone</text>
+  <text x="150" y="110" font-size="14" fill="#2f3a2b">breath, skin,</text>
+  <text x="150" y="128" font-size="14" fill="#2f3a2b">clothes, boots</text>
+</svg>

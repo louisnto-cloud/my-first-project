@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 599" role="img" aria-label="Cards: Region 8 vehicle closures. ★ Oliver Mountain, 8-1: No motor vehicles. ★ Osoyoos Oxbows, 8-1: Established roadways only. ★ Crater Mountain, 8-3: No motor vehicles. ★ Placer Mtn to Border Lake, 8-3, 8-4: No motor vehicles. ★ Garnet Valley, 8-8: No motor vehicles. Trapper exempt. ▲ Tulameen FSR, 8-5: South of Vuich Creek: no vehicle for hunting. ★ Skaha Lake Eastside, 8-9: The lots named: no motor vehicles. ★ Granby, 8-14, 8-15: Snowmobiles allowed Nov 1 to May 31. ✖ Galloping Hills, 8-15: No ATVs, e bikes, snowmobiles Jun 1 to Oct 31. ★ Joss, Tsuius, Mabel, 8-23, 8-24: Permitted FSRs only May 1 to Nov 30. Snowmobiles allowed." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="599" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 8 vehicle closures</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 67. ★ no driving. ▲ not for hunting. ✖ no</text>
+<text x="200" y="65" font-size="14" fill="#8b5a2b" text-anchor="middle">ATV (All Terrain Vehicle), e bike, snowmobile.</text>
+<text x="200" y="83" font-size="14" fill="#8b5a2b" text-anchor="middle">FSR: Forest Service Road.</text>
+<rect x="6.0" y="105" width="190.0" height="94" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6.0 151 V114 Q6.0 105 15.0 105 H187.0 Q196.0 105 196.0 114 V151 Z" fill="#c92a2a"/>
+<text x="14.0" y="125" font-size="14" font-weight="bold" fill="#ffffff">★ Oliver Mountain,</text>
+<text x="14.0" y="143" font-size="14" font-weight="bold" fill="#ffffff">8-1</text>
+<text x="14.0" y="171" font-size="14" fill="#23261f">No motor vehicles</text>
+<rect x="204.0" y="105" width="190.0" height="94" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204.0 151 V114 Q204.0 105 213.0 105 H385.0 Q394.0 105 394.0 114 V151 Z" fill="#c92a2a"/>
+<text x="212.0" y="125" font-size="14" font-weight="bold" fill="#ffffff">★ Osoyoos Oxbows, 8-1</text>
+<text x="212.0" y="171" font-size="14" fill="#23261f">Established roadways</text>
+<text x="212.0" y="189" font-size="14" fill="#23261f">only</text>
+<rect x="6.0" y="207" width="190.0" height="76" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6.0 253 V216 Q6.0 207 15.0 207 H187.0 Q196.0 207 196.0 216 V253 Z" fill="#c92a2a"/>
+<text x="14.0" y="227" font-size="14" font-weight="bold" fill="#ffffff">★ Crater Mountain,</text>
+<text x="14.0" y="245" font-size="14" font-weight="bold" fill="#ffffff">8-3</text>
+<text x="14.0" y="273" font-size="14" fill="#23261f">No motor vehicles</text>
+<rect x="204.0" y="207" width="190.0" height="76" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204.0 253 V216 Q204.0 207 213.0 207 H385.0 Q394.0 207 394.0 216 V253 Z" fill="#c92a2a"/>
+<text x="212.0" y="227" font-size="14" font-weight="bold" fill="#ffffff">★ Placer Mtn to</text>
+<text x="212.0" y="245" font-size="14" font-weight="bold" fill="#ffffff">Border Lake, 8-3, 8-4</text>
+<text x="212.0" y="273" font-size="14" fill="#23261f">No motor vehicles</text>
+<rect x="6.0" y="291" width="190.0" height="76" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6.0 319 V300 Q6.0 291 15.0 291 H187.0 Q196.0 291 196.0 300 V319 Z" fill="#c92a2a"/>
+<text x="14.0" y="311" font-size="14" font-weight="bold" fill="#ffffff">★ Garnet Valley, 8-8</text>
+<text x="14.0" y="339" font-size="14" fill="#23261f">No motor vehicles.</text>
+<text x="14.0" y="357" font-size="14" fill="#23261f">Trapper exempt</text>
+<rect x="204.0" y="291" width="190.0" height="76" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M204.0 319 V300 Q204.0 291 213.0 291 H385.0 Q394.0 291 394.0 300 V319 Z" fill="#e8590c"/>
+<text x="212.0" y="311" font-size="14" font-weight="bold" fill="#ffffff">▲ Tulameen FSR, 8-5</text>
+<text x="212.0" y="339" font-size="14" fill="#23261f">South of Vuich Creek:</text>
+<text x="212.0" y="357" font-size="14" fill="#23261f">no vehicle for hunting</text>
+<rect x="6.0" y="375" width="190.0" height="94" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6.0 421 V384 Q6.0 375 15.0 375 H187.0 Q196.0 375 196.0 384 V421 Z" fill="#c92a2a"/>
+<text x="14.0" y="395" font-size="14" font-weight="bold" fill="#ffffff">★ Skaha Lake</text>
+<text x="14.0" y="413" font-size="14" font-weight="bold" fill="#ffffff">Eastside, 8-9</text>
+<text x="14.0" y="441" font-size="14" fill="#23261f">The lots named: no</text>
+<text x="14.0" y="459" font-size="14" fill="#23261f">motor vehicles</text>
+<rect x="204.0" y="375" width="190.0" height="94" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204.0 421 V384 Q204.0 375 213.0 375 H385.0 Q394.0 375 394.0 384 V421 Z" fill="#c92a2a"/>
+<text x="212.0" y="395" font-size="14" font-weight="bold" fill="#ffffff">★ Granby, 8-14, 8-15</text>
+<text x="212.0" y="441" font-size="14" fill="#23261f">Snowmobiles allowed Nov</text>
+<text x="212.0" y="459" font-size="14" fill="#23261f">1 to May 31</text>
+<rect x="6.0" y="477" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M6.0 523 V486 Q6.0 477 15.0 477 H187.0 Q196.0 477 196.0 486 V523 Z" fill="#8b5a2b"/>
+<text x="14.0" y="497" font-size="14" font-weight="bold" fill="#ffffff">✖ Galloping Hills,</text>
+<text x="14.0" y="515" font-size="14" font-weight="bold" fill="#ffffff">8-15</text>
+<text x="14.0" y="543" font-size="14" fill="#23261f">No ATVs, e bikes,</text>
+<text x="14.0" y="561" font-size="14" fill="#23261f">snowmobiles Jun 1 to</text>
+<text x="14.0" y="579" font-size="14" fill="#23261f">Oct 31</text>
+<rect x="204.0" y="477" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M204.0 523 V486 Q204.0 477 213.0 477 H385.0 Q394.0 477 394.0 486 V523 Z" fill="#c92a2a"/>
+<text x="212.0" y="497" font-size="14" font-weight="bold" fill="#ffffff">★ Joss, Tsuius,</text>
+<text x="212.0" y="515" font-size="14" font-weight="bold" fill="#ffffff">Mabel, 8-23, 8-24</text>
+<text x="212.0" y="543" font-size="14" fill="#23261f">Permitted FSRs only May</text>
+<text x="212.0" y="561" font-size="14" fill="#23261f">1 to Nov 30.</text>
+<text x="212.0" y="579" font-size="14" fill="#23261f">Snowmobiles allowed</text>
+</svg>

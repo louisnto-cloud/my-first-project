@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 5: level the crosshair to the rifle, not to the floor. Seen from behind, the vertical crosshair lines up with the centre line of the rifle.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Level to the rifle</text>
+  <text x="200" y="48" font-size="14" fill="#2f3a2b" text-anchor="middle">View from behind the rifle</text>
+  <circle cx="200" cy="120" r="54" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="6"/>
+  <g stroke="#2f3a2b" stroke-width="2"><line x1="146" y1="120" x2="254" y2="120"/><line x1="200" y1="66" x2="200" y2="174"/></g>
+  <rect x="180" y="174" width="40" height="24" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="172" y="198" width="56" height="40" rx="8" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/>
+  <path d="M184 238 L176 286 L224 286 L216 238 Z" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="2"/>
+  <line x1="200" y1="60" x2="200" y2="292" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="300" y="150" font-size="15" font-weight="bold" fill="#e8590c">Rifle centre</text><text x="300" y="170" font-size="15" font-weight="bold" fill="#e8590c">line</text>
+  <text x="20" y="150" font-size="15" font-weight="bold" fill="#2f3a2b">Crosshair</text><text x="20" y="170" font-size="15" font-weight="bold" fill="#2f3a2b">straight up</text>
+</svg>

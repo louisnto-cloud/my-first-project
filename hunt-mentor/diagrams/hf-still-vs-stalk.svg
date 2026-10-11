@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Two panels. Still hunting: in thick timber, you creep slowly, searching for a deer you have not seen yet. Stalking: in open country, you have already seen the deer and close the distance using cover.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="8" y="44" width="188" height="200" rx="10" fill="#c6d1b5"/><rect x="204" y="44" width="188" height="200" rx="10" fill="#efe6cf"/>
+  <text x="102" y="32" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Still hunting</text>
+  <text x="298" y="32" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Stalking</text>
+  <g fill="#2f3a2b"><polygon points="30,110 42,74 54,110"/><polygon points="80,90 92,54 104,90"/><polygon points="140,120 152,84 164,120"/><polygon points="40,200 52,164 64,200"/><polygon points="150,210 162,174 174,210"/><polygon points="100,150 112,114 124,150"/></g>
+  <circle cx="100" cy="220" r="9" fill="#e8590c"/>
+  <text x="70" y="186" font-size="26" font-weight="bold" fill="#e8590c">?</text><text x="126" y="176" font-size="26" font-weight="bold" fill="#e8590c">?</text>
+  <g transform="translate(330 80)"><ellipse rx="16" ry="8" fill="#8b5a2b"/><circle cx="14" cy="-8" r="5" fill="#8b5a2b"/></g>
+  <g fill="#8a9a6b"><circle cx="250" cy="200" r="14"/><circle cx="280" cy="150" r="14"/><circle cx="300" cy="110" r="12"/></g>
+  <path d="M240 228 C 236 200, 268 180, 272 160 S 290 124, 296 120" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 5"/>
+  <circle cx="240" cy="228" r="9" fill="#e8590c"/>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="102" y="266">deer not seen yet</text><text x="102" y="284">thick timber, quiet days</text>
+  <text x="298" y="266">deer already seen</text><text x="298" y="284">open country, after glassing</text></g>
+</svg>

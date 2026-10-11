@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 304" role="img" aria-label="Recovery: sleep 7 to 9 hours, make every fourth week easier, eat enough after training, take at least one rest day a week.">
+  <rect x="0" y="0" width="400" height="304" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Recovery is training too</text>
+<rect x="10.0" y="50" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="102.5" cy="87.4" r="18" fill="#2f3a2b"/><circle cx="110.5" cy="81.4" r="16" fill="#dfe6d3"/>
+<text x="102.5" y="132" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sleep</text>
+<text x="102.5" y="151" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">7 to 9 hours</text>
+<rect x="205.0" y="50" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="267.5" y="77.4" width="60" height="24" rx="4" fill="#8a9a6b"/>
+<text x="297.5" y="132" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Easy week</text>
+<text x="297.5" y="151" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">every 4th week</text>
+<rect x="10.0" y="172" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="102.5" cy="209.4" r="20" fill="#8b5a2b"/><circle cx="102.5" cy="209.4" r="12" fill="#c9b79c"/>
+<text x="102.5" y="254" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Eat</text>
+<text x="102.5" y="273" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">after you train</text>
+<rect x="205.0" y="172" width="185.0" height="112" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<text x="297.5" y="217.4" font-family="sans-serif" font-size="30" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Z</text>
+<text x="297.5" y="254" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Rest day</text>
+<text x="297.5" y="273" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">one or more a week</text>
+</svg>

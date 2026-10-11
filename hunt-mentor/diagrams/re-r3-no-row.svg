@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 323" role="img" aria-label="Grid: No row in the Region 3 table. Elk: ✕. Quail: ✕. Wild turkey: ✕. Caribou: ✕. Mountain goat: ✕. Wolverine: ✕. Skunk: ✕." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="323" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">No row in the Region 3 table</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 34. No row means no general open season</text>
+<text x="200" y="65" font-size="14" fill="#8b5a2b" text-anchor="middle">(95%, my reading).</text>
+<rect x="6.0" y="87" width="124.0" height="70" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="68.0" y="121" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">✕</text>
+<text x="68.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">Elk</text>
+<rect x="138.0" y="87" width="124.0" height="70" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="200.0" y="121" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">✕</text>
+<text x="200.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">Quail</text>
+<rect x="270.0" y="87" width="124.0" height="70" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="332.0" y="121" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">✕</text>
+<text x="332.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">Wild turkey</text>
+<rect x="6.0" y="165" width="124.0" height="70" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="68.0" y="199" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">✕</text>
+<text x="68.0" y="223" font-size="14" fill="#23261f" text-anchor="middle">Caribou</text>
+<rect x="138.0" y="165" width="124.0" height="70" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="200.0" y="199" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">✕</text>
+<text x="200.0" y="223" font-size="14" fill="#23261f" text-anchor="middle">Mountain goat</text>
+<rect x="270.0" y="165" width="124.0" height="70" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="332.0" y="199" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">✕</text>
+<text x="332.0" y="223" font-size="14" fill="#23261f" text-anchor="middle">Wolverine</text>
+<rect x="6.0" y="243" width="124.0" height="70" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="68.0" y="277" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">✕</text>
+<text x="68.0" y="301" font-size="14" fill="#23261f" text-anchor="middle">Skunk</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 365" role="img" aria-label="Cards: Region 3 vehicle closures: high peaks. Above 1,920 m, MUs 3-16, 3-32: Cayoosh, Shulaps, China Head, Nine Mile Ridge, Red Mountain French Mountain, Hogback. Roads that stay open: China Head: Yalakom Big Bar Rd. Red Mtn French Mtn: Poison Mountain Saddle Rd, Yalakom Big Bar Rd. Map C22, MU 3-44: Miledge, Chappell, Lempriere creeks above 1,700 m. Snowmobiles in the marked area Dec 1 to May 31." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="365" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 3 vehicle closures: high peaks</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 33</text>
+<rect x="6.0" y="69" width="190.0" height="148" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M6.0 115 V78 Q6.0 69 15.0 69 H187.0 Q196.0 69 196.0 78 V115 Z" fill="#8b5a2b"/>
+<text x="14.0" y="89" font-size="14" font-weight="bold" fill="#ffffff">Above 1,920 m, MUs</text>
+<text x="14.0" y="107" font-size="14" font-weight="bold" fill="#ffffff">3-16, 3-32</text>
+<text x="14.0" y="135" font-size="14" fill="#23261f">Cayoosh, Shulaps, China</text>
+<text x="14.0" y="153" font-size="14" fill="#23261f">Head, Nine Mile Ridge,</text>
+<text x="14.0" y="171" font-size="14" fill="#23261f">Red Mountain French</text>
+<text x="14.0" y="189" font-size="14" fill="#23261f">Mountain, Hogback</text>
+<rect x="204.0" y="69" width="190.0" height="148" rx="9" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<path d="M204.0 115 V78 Q204.0 69 213.0 69 H385.0 Q394.0 69 394.0 78 V115 Z" fill="#8a9a6b"/>
+<text x="212.0" y="89" font-size="14" font-weight="bold" fill="#ffffff">Roads that stay open</text>
+<text x="212.0" y="135" font-size="14" fill="#23261f">China Head: Yalakom Big</text>
+<text x="212.0" y="153" font-size="14" fill="#23261f">Bar Rd. Red Mtn French</text>
+<text x="212.0" y="171" font-size="14" fill="#23261f">Mtn: Poison Mountain</text>
+<text x="212.0" y="189" font-size="14" fill="#23261f">Saddle Rd, Yalakom Big</text>
+<text x="212.0" y="207" font-size="14" fill="#23261f">Bar Rd</text>
+<rect x="6.0" y="225" width="190.0" height="130" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<path d="M6.0 253 V234 Q6.0 225 15.0 225 H187.0 Q196.0 225 196.0 234 V253 Z" fill="#8b5a2b"/>
+<text x="14.0" y="245" font-size="14" font-weight="bold" fill="#ffffff">Map C22, MU 3-44</text>
+<text x="14.0" y="273" font-size="14" fill="#23261f">Miledge, Chappell,</text>
+<text x="14.0" y="291" font-size="14" fill="#23261f">Lempriere creeks above</text>
+<text x="14.0" y="309" font-size="14" fill="#23261f">1,700 m. Snowmobiles in</text>
+<text x="14.0" y="327" font-size="14" fill="#23261f">the marked area Dec 1</text>
+<text x="14.0" y="345" font-size="14" fill="#23261f">to May 31</text>
+</svg>

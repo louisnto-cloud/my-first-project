@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 196" role="img" aria-label="Deer, elk or moose killed in the Chronic Wasting Disease Management Zone, Management Units 4-1 to 4-8 and 4-20 to 4-25. Stays in the zone: brain tissue and the spinal column, including vertebrae and nerve tissue. May leave: the tail, and meat boned out, which is this app&#x27;s reading." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="196" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">CWD zone: MU 4-1 to 4-8, 4-20 to 4-25</text>
+<text x="200.0" y="48" font-size="14" fill="#2f3a2b" text-anchor="middle">Deer, elk, moose. Regions 3 and 8 are not in it.</text>
+<rect x="6" y="58" width="191" height="128" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<rect x="6" y="58" width="191" height="30" rx="10" fill="#c92a2a"/><rect x="6" y="76" width="191" height="12" fill="#c92a2a"/>
+<text x="101.5" y="79" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Stays in zone</text>
+<text x="101.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">Brain tissue</text>
+<text x="101.5" y="128" font-size="14" fill="#23261f" text-anchor="middle">Spinal column,</text>
+<text x="101.5" y="146" font-size="14" fill="#23261f" text-anchor="middle">vertebrae, nerve</text>
+<text x="101.5" y="164" font-size="14" fill="#23261f" text-anchor="middle">tissue</text>
+<rect x="203" y="58" width="191" height="128" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
+<rect x="203" y="58" width="191" height="30" rx="10" fill="#5c7a3a"/><rect x="203" y="76" width="191" height="12" fill="#5c7a3a"/>
+<text x="298.5" y="79" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">May leave</text>
+<text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">The tail</text>
+<text x="298.5" y="128" font-size="14" fill="#23261f" text-anchor="middle">Meat boned out</text>
+<text x="298.5" y="146" font-size="14" fill="#23261f" text-anchor="middle">(my reading, 95%)</text>
+</svg>

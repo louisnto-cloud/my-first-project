@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 672" font-family="sans-serif" role="img" aria-label="Cards for Area C, South Okanagan, places named by government. Quail open in MUs 8-1 to 8-15 and 8-21 to 8-26 from 1 October to 30 November. South Okanagan Grasslands Protected Area, Kilpoola MU 8-2, Mount Kobau MU 8-1 and Chopaka: park, bighorn and mule deer winter range. White Lake Grasslands, MU 8-1: park, no vehicles. Vaseux Protected Area: park, bighorn winter range, next to the closed sanctuary. Vaseux Lake, MU 8-1: closed, bird sanctuary and National Wildlife Areas. Osoyoos Oxbows, MU 8-1: no shooting or hunting 1 March to 30 September. South Okanagan Wildlife Management Area: status VERIFY with the Penticton office. McTaggart Cowan nsək&#x27;łniw&#x27;t Wildlife Management Area east of Skaha Lake: status VERIFY.">
+<rect x="0" y="0" width="400" height="672" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Area C: South Okanagan, named by government</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">Quail: 8-1 to 8-15, 8-21 to 8-26, 1 Oct to 30 Nov (99%)</text>
+<rect x="16" y="58" width="179" height="154" rx="10" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="26" y="82" font-size="15" font-weight="bold" fill="#23261f">South Okanagan</text>
+<text x="26" y="102" font-size="15" font-weight="bold" fill="#23261f">Grasslands</text>
+<circle cx="179.0" cy="76" r="11" fill="#8a9a6b"/><path d="M174.05 76 l3.3 3.8499999999999996 l6.6 -7.699999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<text x="26" y="120" font-size="14" fill="#2f3a2b">Kilpoola 8-2, Mount</text>
+<text x="26" y="138" font-size="14" fill="#2f3a2b">Kobau 8-1, Chopaka.</text>
+<text x="26" y="156" font-size="14" fill="#2f3a2b">Park (95%).</text>
+<g transform="translate(46.0 192) scale(0.62)"><ellipse cx="0" cy="4" rx="17" ry="9" fill="#b08a5a"/><ellipse cx="18" cy="-6" rx="7" ry="6" fill="#b08a5a"/><circle cx="14" cy="-8" r="6" fill="none" stroke="#6b4f35" stroke-width="4"/><path d="M-11 12 v10 M-5 12 v10 M7 12 v10 M12 12 v10" stroke="#b08a5a" stroke-width="3"/></g>
+<g transform="translate(85.75 192) scale(0.62)"><ellipse cx="0" cy="4" rx="17" ry="8" fill="#8b5a2b"/><path d="M12 0 L18 -10" stroke="#8b5a2b" stroke-width="5"/><ellipse cx="21" cy="-12" rx="6" ry="4" fill="#8b5a2b"/><path d="M19 -15 l-3 -9 m3 9 l3 -10 m-4.5 -4 l-4 -2" stroke="#6b4f35" stroke-width="2" fill="none"/><path d="M-12 10 v10 M-6 10 v10 M8 10 v10 M13 10 v10" stroke="#8b5a2b" stroke-width="3"/></g>
+<rect x="205" y="58" width="179" height="154" rx="10" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="215" y="82" font-size="15" font-weight="bold" fill="#23261f">White Lake</text>
+<text x="215" y="102" font-size="15" font-weight="bold" fill="#23261f">Grasslands</text>
+<circle cx="368.0" cy="76" r="11" fill="#8a9a6b"/><path d="M363.05 76 l3.3 3.8499999999999996 l6.6 -7.699999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<text x="215" y="120" font-size="14" fill="#2f3a2b">MU 8-1. Park, no</text>
+<text x="215" y="138" font-size="14" fill="#2f3a2b">vehicles (95%).</text>
+<g transform="translate(235.0 174) scale(0.62)"><ellipse cx="0" cy="4" rx="17" ry="8" fill="#8b5a2b"/><path d="M12 0 L18 -10" stroke="#8b5a2b" stroke-width="5"/><ellipse cx="21" cy="-12" rx="6" ry="4" fill="#8b5a2b"/><path d="M19 -15 l-3 -9 m3 9 l3 -10 m-4.5 -4 l-4 -2" stroke="#6b4f35" stroke-width="2" fill="none"/><path d="M-12 10 v10 M-6 10 v10 M8 10 v10 M13 10 v10" stroke="#8b5a2b" stroke-width="3"/></g>
+<g transform="translate(274.75 174) scale(0.62)"><ellipse cx="0" cy="4" rx="17" ry="9" fill="#b08a5a"/><ellipse cx="18" cy="-6" rx="7" ry="6" fill="#b08a5a"/><circle cx="14" cy="-8" r="6" fill="none" stroke="#6b4f35" stroke-width="4"/><path d="M-11 12 v10 M-5 12 v10 M7 12 v10 M12 12 v10" stroke="#b08a5a" stroke-width="3"/></g>
+<rect x="16" y="222" width="179" height="154" rx="10" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="26" y="246" font-size="15" font-weight="bold" fill="#23261f">Vaseux Protected</text>
+<text x="26" y="266" font-size="15" font-weight="bold" fill="#23261f">Area</text>
+<circle cx="179.0" cy="240" r="11" fill="#8a9a6b"/><path d="M174.05 240 l3.3 3.8499999999999996 l6.6 -7.699999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<text x="26" y="284" font-size="14" fill="#2f3a2b">Park, next to the</text>
+<text x="26" y="302" font-size="14" fill="#2f3a2b">closed sanctuary</text>
+<text x="26" y="320" font-size="14" fill="#2f3a2b">(90%).</text>
+<g transform="translate(46.0 356) scale(0.62)"><ellipse cx="0" cy="4" rx="17" ry="9" fill="#b08a5a"/><ellipse cx="18" cy="-6" rx="7" ry="6" fill="#b08a5a"/><circle cx="14" cy="-8" r="6" fill="none" stroke="#6b4f35" stroke-width="4"/><path d="M-11 12 v10 M-5 12 v10 M7 12 v10 M12 12 v10" stroke="#b08a5a" stroke-width="3"/></g>
+<rect x="205" y="222" width="179" height="154" rx="10" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="215" y="246" font-size="15" font-weight="bold" fill="#23261f">Vaseux Lake</text>
+<circle cx="368.0" cy="240" r="11" fill="#e8590c"/><path d="M363.6 235.6 L372.4 244.4 M372.4 235.6 L363.6 244.4" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<text x="215" y="264" font-size="14" fill="#2f3a2b">MU 8-1. Closed: bird</text>
+<text x="215" y="282" font-size="14" fill="#2f3a2b">sanctuary (99%).</text>
+<g transform="translate(235.0 318) scale(0.62)"><ellipse cx="-2" cy="6" rx="18" ry="8" fill="#6b4f35"/><circle cx="13" cy="-6" r="7" fill="#2e6b3a"/><path d="M19 -5 l9 2 l-9 2 z" fill="#d9a400"/><path d="M-20 4 l-8 -4" stroke="#6b4f35" stroke-width="3"/><path d="M-26 16 q26 6 52 0" stroke="#4a7fb0" stroke-width="3" fill="none"/></g>
+<g transform="translate(274.75 318) scale(0.62)"><ellipse cx="-4" cy="8" rx="17" ry="8" fill="#fff" stroke="#2f3a2b" stroke-width="2"/><path d="M10 4 q8 -14 2 -22" stroke="#fff" stroke-width="5" fill="none"/><path d="M10 4 q8 -14 2 -22" stroke="#2f3a2b" stroke-width="1" fill="none"/><path d="M12 -18 l8 2" stroke="#2f3a2b" stroke-width="3"/></g>
+<rect x="16" y="386" width="179" height="116" rx="10" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="26" y="410" font-size="15" font-weight="bold" fill="#23261f">Osoyoos Oxbows</text>
+<circle cx="179.0" cy="404" r="11" fill="#4a7fb0"/><text x="179" y="408.62" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="26" y="428" font-size="14" fill="#2f3a2b">MU 8-1. Closed 1 Mar</text>
+<text x="26" y="446" font-size="14" fill="#2f3a2b">to 30 Sep (99%).</text>
+<g transform="translate(46.0 482) scale(0.62)"><ellipse cx="0" cy="5" rx="15" ry="10" fill="#7b7f86"/><circle cx="11" cy="-7" r="7" fill="#2f3a2b"/><path d="M10 -14 q4 -10 10 -7" stroke="#2f3a2b" stroke-width="3" fill="none"/><circle cx="10" cy="-21" r="3" fill="#2f3a2b"/><path d="M-3 14 v7 M4 14 v7" stroke="#2f3a2b" stroke-width="2.5"/></g>
+<g transform="translate(85.75 482) scale(0.62)"><ellipse cx="-2" cy="6" rx="18" ry="8" fill="#6b4f35"/><circle cx="13" cy="-6" r="7" fill="#2e6b3a"/><path d="M19 -5 l9 2 l-9 2 z" fill="#d9a400"/><path d="M-20 4 l-8 -4" stroke="#6b4f35" stroke-width="3"/><path d="M-26 16 q26 6 52 0" stroke="#4a7fb0" stroke-width="3" fill="none"/></g>
+<rect x="205" y="386" width="179" height="116" rx="10" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="215" y="410" font-size="15" font-weight="bold" fill="#23261f">South Okanagan</text>
+<text x="215" y="430" font-size="15" font-weight="bold" fill="#23261f">WMA</text>
+<circle cx="368.0" cy="404" r="11" fill="#4a7fb0"/><text x="368" y="408.62" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="215" y="448" font-size="14" fill="#2f3a2b">Status: VERIFY,</text>
+<text x="215" y="466" font-size="14" fill="#2f3a2b">Penticton office</text>
+<text x="215" y="484" font-size="14" fill="#2f3a2b">(85%).</text>
+<rect x="16" y="512" width="179" height="136" rx="10" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="26" y="536" font-size="15" font-weight="bold" fill="#23261f">McTaggart Cowan</text>
+<text x="26" y="556" font-size="15" font-weight="bold" fill="#23261f">WMA</text>
+<circle cx="179.0" cy="530" r="11" fill="#4a7fb0"/><text x="179" y="534.62" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+<text x="26" y="574" font-size="14" fill="#2f3a2b">East of Skaha Lake.</text>
+<text x="26" y="592" font-size="14" fill="#2f3a2b">Status: VERIFY (85%).</text>
+<g transform="translate(46.0 628) scale(0.62)"><ellipse cx="0" cy="4" rx="17" ry="9" fill="#b08a5a"/><ellipse cx="18" cy="-6" rx="7" ry="6" fill="#b08a5a"/><circle cx="14" cy="-8" r="6" fill="none" stroke="#6b4f35" stroke-width="4"/><path d="M-11 12 v10 M-5 12 v10 M7 12 v10 M12 12 v10" stroke="#b08a5a" stroke-width="3"/></g>
+<g transform="translate(85.75 628) scale(0.62)"><ellipse cx="0" cy="4" rx="17" ry="8" fill="#8b5a2b"/><path d="M12 0 L18 -10" stroke="#8b5a2b" stroke-width="5"/><ellipse cx="21" cy="-12" rx="6" ry="4" fill="#8b5a2b"/><path d="M19 -15 l-3 -9 m3 9 l3 -10 m-4.5 -4 l-4 -2" stroke="#6b4f35" stroke-width="2" fill="none"/><path d="M-12 10 v10 M-6 10 v10 M8 10 v10 M13 10 v10" stroke="#8b5a2b" stroke-width="3"/></g>
+</svg>

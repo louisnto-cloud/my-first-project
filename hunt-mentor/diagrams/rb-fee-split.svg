@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 186" role="img" aria-label="Bar showing the 32 dollar resident hunting licence split into 25 dollars to general government revenue and a 7 dollar surcharge to the Habitat Conservation Trust Foundation, which spends it on habitat and conservation projects. A replacement licence costs 10 dollars." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="186" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Where your $32 goes</text>
+<rect x="14" y="46" width="290" height="50" rx="6" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="2"/><text x="159" y="77" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">$25 general revenue</text>
+<rect x="304" y="46" width="82" height="50" rx="6" fill="#5c7a3a" stroke="#5c7a3a" stroke-width="2"/><text x="345" y="77" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">$7 HCTF</text>
+<text x="14" y="124" font-size="15" fill="#23261f" text-anchor="start">HCTF (Habitat Conservation Trust Foundation)</text>
+<text x="14" y="144" font-size="15" fill="#23261f" text-anchor="start">spends the surcharge on habitat and</text>
+<text x="14" y="164" font-size="15" fill="#23261f" text-anchor="start">conservation projects. Lost licence: $10.</text>
+</svg>

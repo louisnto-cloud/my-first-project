@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Sketch of a bowl in the Hunt Map 3D view. A ring of high ridges wraps around three sides of a basin that opens toward you. Contour lines curve in big U shapes around the head of the basin. Two deer feed in a green meadow in the bottom.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Bowl in 3D</text><rect x="0" y="36" width="400" height="70" fill="#e3ecf3"/><text x="388" y="24" font-size="13" fill="#2f3a2b" text-anchor="end">Hunt Map 3D view (sketch)</text>
+  <path d="M0 268 L0 120 L90 74 L200 60 L310 74 L400 120 L400 268 Z" fill="#a9b68e"/>
+  <path d="M40 268 C 60 180, 120 140, 200 136 C 280 140, 340 180, 360 268 Z" fill="#e9edd9"/>
+  <path d="M0 120 L90 74 L200 60 L310 74 L400 120" stroke="#2f3a2b" stroke-width="3" fill="none"/>
+  <path d="M20 200 C 50 120, 120 96, 200 92 C 280 96, 350 120, 380 200" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+  <path d="M60 250 C 80 170, 130 150, 200 148 C 270 150, 320 170, 340 250" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+  <ellipse cx="200" cy="214" rx="70" ry="22" fill="#cfe0b8"/>
+  <g transform="translate(170 214) scale(0.9)"><ellipse rx="14" ry="7" fill="#8b5a2b"/><circle cx="12" cy="-10" r="5.5" fill="#8b5a2b"/><path d="M9 -14 l-3 -7 M14 -14 l4 -6" stroke="#5c3b1c" stroke-width="2"/><path d="M-9 5 v9 M-4 5 v9 M6 5 v9 M10 5 v9" stroke="#8b5a2b" stroke-width="2.5"/></g><g transform="translate(232 222) scale(0.9)"><ellipse rx="14" ry="7" fill="#8b5a2b"/><circle cx="12" cy="-10" r="5.5" fill="#8b5a2b"/><path d="M9 -14 l-3 -7 M14 -14 l4 -6" stroke="#5c3b1c" stroke-width="2"/><path d="M-9 5 v9 M-4 5 v9 M6 5 v9 M10 5 v9" stroke="#8b5a2b" stroke-width="2.5"/></g>
+  <rect x="152" y="112" width="242" height="24" rx="6" fill="#e8590c"/><text x="273.0" y="129" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Bowl: basin open at one end</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Lines curve in a big U around the head</text>
+</svg>

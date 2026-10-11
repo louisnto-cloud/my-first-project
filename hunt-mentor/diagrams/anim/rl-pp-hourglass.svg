@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, map view. A lake on the left and cliffs on the right leave a narrow gap of land between them. Four dotted game trails from the open ground below all converge on that gap, ringed orange as the pinch point, and one trail continues beyond. A deer walks one trail through the gap.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">The land squeezes the trails</text><text x="388" y="24" font-size="14" fill="#2f3a2b" text-anchor="end">map view</text>
+  <rect x="0" y="36" width="400" height="232" fill="#dfe6d3" opacity=".7"/>
+  <path d="M0 36 H200 C 190 90, 170 130, 180 150 C 150 160, 60 150, 0 170 Z" fill="#4a7fb0" opacity=".55"/>
+  <path d="M400 36 H230 C 226 80, 214 120, 222 150 C 260 160, 340 150, 400 170 Z" fill="#9a8f7c"/>
+  <path d="M222 150 C 214 120, 226 80, 230 36" stroke="#2f3a2b" stroke-width="2" fill="none"/>
+  <text x="80" y="80" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">lake</text><text x="320" y="90" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">cliffs</text>
+  <g stroke="#8b5a2b" stroke-width="2.5" stroke-dasharray="3 5" fill="none">
+    <path d="M40 268 C 120 220, 180 180, 201 150 C 205 120, 202 80, 210 36"/><path d="M120 268 C 160 220, 190 190, 201 150"/>
+    <path d="M300 268 C 260 220, 220 190, 201 150"/><path d="M380 268 C 300 210, 230 180, 201 150"/></g>
+  <path id="rl-pp-hourglass-p" d="M380 268 C 300 210, 230 180, 201 150 C 205 120, 202 80, 210 36" fill="none"/>
+  <g><g transform="translate(0 0) scale(0.9)"><ellipse rx="14" ry="7" fill="#8b5a2b"/><circle cx="12" cy="-10" r="5.5" fill="#8b5a2b"/><path d="M9 -14 l-3 -7 M14 -14 l4 -6" stroke="#5c3b1c" stroke-width="2"/><path d="M-9 5 v9 M-4 5 v9 M6 5 v9 M10 5 v9" stroke="#8b5a2b" stroke-width="2.5"/></g><animateMotion dur="7s" fill="freeze" rotate="0"><mpath href="#rl-pp-hourglass-p"/></animateMotion></g>
+  <circle cx="201" cy="150" r="14" fill="none" stroke="#e8590c" stroke-width="4"/>
+  <rect x="240" y="196" width="108" height="24" rx="6" fill="#e8590c"/><text x="294.0" y="213" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Pinch point</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Four trails in, one way through</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Clip the sternum strap across your chest at a comfortable height so the shoulder straps stay in place.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="32" r="17" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="30" y="39" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">5</text>
+<text x="56" y="39" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="start">Sternum strap</text>
+<rect x="140" y="84" width="120" height="140" rx="20" fill="#8b5a2b"/>
+<rect x="150" y="94" width="100" height="36" rx="10" fill="#6b4f35"/>
+<rect x="110" y="204" width="180" height="26" rx="10" fill="#2f3a2b"/>
+<line x1="160" y1="84" x2="152" y2="62" stroke="#2f3a2b" stroke-width="10" stroke-linecap="round"/>
+<line x1="240" y1="84" x2="248" y2="62" stroke="#2f3a2b" stroke-width="10" stroke-linecap="round"/>
+<line x1="165" y1="94" x2="152" y2="70" stroke="#8a9a6b" stroke-width="4" stroke-linecap="round"/>
+<line x1="235" y1="94" x2="248" y2="70" stroke="#8a9a6b" stroke-width="4" stroke-linecap="round"/>
+<rect x="170" y="140" width="60" height="8" rx="3" fill="#e8590c"/>
+<text x="330" y="120" font-family="sans-serif" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Across chest</text>
+<rect x="10" y="262" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="285.0" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Clip it. Breathe easy.</text>
+</svg>

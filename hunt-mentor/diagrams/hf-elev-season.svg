@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Side view of a mountain. Summer range is high. A dashed line at 1,700 metres marks Region 3's rule: no motor vehicles above it except on existing roads and trails. Arrows show mule deer moving down in late October to November to winter range: low, south and west facing slopes in old Douglas fir. Snow over about 30 centimetres slows deer, over about 50 centimetres pushes them off.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <path d="M0 280 L60 250 L140 150 L210 50 L280 140 L400 230 L400 300 L0 300 Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+  <path d="M180 92 L210 50 L240 88 Z" fill="#fff" stroke="#cfe0ea" stroke-width="2"/>
+  <line x1="0" y1="120" x2="400" y2="120" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="8 6"/>
+  <text x="12" y="30" font-size="14" font-weight="bold" fill="#c0392b">1,700 m line:</text>
+  <text x="12" y="48" font-size="14" fill="#c0392b">no vehicles above,</text>
+  <text x="12" y="66" font-size="14" fill="#c0392b">except existing</text>
+  <text x="12" y="84" font-size="14" fill="#c0392b">roads and trails</text>
+  <text x="250" y="75" font-size="15" font-weight="bold" fill="#2f3a2b">Summer range</text>
+  <g fill="#2f3a2b"><polygon points="40,262 48,240 56,262"/><polygon points="60,256 68,232 76,256"/><polygon points="84,236 92,212 100,236"/></g>
+  <path d="M170 140 C 140 180, 110 210, 90 238" fill="none" stroke="#e8590c" stroke-width="4"/>
+  <polygon points="84,232 98,234 88,246" fill="#e8590c"/>
+  <text x="150" y="196" font-size="14" font-weight="bold" fill="#e8590c">late Oct to Nov</text>
+  <text x="12" y="170" font-size="15" font-weight="bold" fill="#2f3a2b">Winter range</text>
+  <text x="12" y="188" font-size="14" fill="#2f3a2b">south, west, old fir</text>
+  <rect x="200" y="236" width="190" height="54" rx="8" fill="#2f3a2b"/>
+  <text x="295" y="258" font-size="14" fill="#fff" text-anchor="middle">Snow over 30 cm: slows deer</text>
+  <text x="295" y="280" font-size="14" fill="#fff" text-anchor="middle">over 50 cm: pushes them off</text>
+</svg>

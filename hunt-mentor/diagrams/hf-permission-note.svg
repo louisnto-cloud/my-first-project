@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A written permission note to keep in your pocket. Lines for the owner's name, phone number, date, the area you may hunt, places to avoid, and your two names.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="50" y="20" width="300" height="260" rx="6" fill="#fff" stroke="#8b5a2b" stroke-width="3" transform="rotate(-2 200 150)"/>
+  <g transform="rotate(-2 200 150)" font-size="15" fill="#2f3a2b">
+    <text x="200" y="52" font-size="17" font-weight="bold" text-anchor="middle">Permission to hunt</text>
+    <text x="70" y="88" font-weight="bold">Owner:</text><line x1="140" y1="90" x2="330" y2="90" stroke="#8a9a6b" stroke-width="2"/>
+    <text x="70" y="120" font-weight="bold">Phone:</text><line x1="140" y1="122" x2="330" y2="122" stroke="#8a9a6b" stroke-width="2"/>
+    <text x="70" y="152" font-weight="bold">Date:</text><line x1="140" y1="154" x2="330" y2="154" stroke="#8a9a6b" stroke-width="2"/>
+    <text x="70" y="184" font-weight="bold">Area:</text><line x1="140" y1="186" x2="330" y2="186" stroke="#8a9a6b" stroke-width="2"/>
+    <text x="70" y="216" font-weight="bold">Avoid:</text><line x1="140" y1="218" x2="330" y2="218" stroke="#8a9a6b" stroke-width="2"/>
+    <text x="70" y="248" font-weight="bold">Hunters:</text><line x1="150" y1="250" x2="330" y2="250" stroke="#8a9a6b" stroke-width="2"/>
+  </g>
+</svg>
