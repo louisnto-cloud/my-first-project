@@ -120,7 +120,7 @@ fn-rt-plan-6 | Leave a trip plan.
 ```
 
 - Mid October: sunset about 18:08, legal light ends 19:08 (85%).
-- Clocks go back on 1 November 2026 (90%).
+- BC clocks do NOT go back on 1 November 2026 (95%, [Weather, daylight and season timing](#/s/daylight-weather-bc)). November sunrise and sunset are an hour later on the clock than older tables show.
 
 ```more light in full
 - Times for Heffley Creek, 50.86 N 120.27 W, worked out with the standard sunrise equations (85%; within a couple of minutes, check the app's legal light table on the day).
@@ -130,11 +130,11 @@ fn-rt-plan-6 | Leave a trip plan.
 | 15 Oct 2026 | 7:25 | 18:08 | 19:08 |
 | 25 Oct 2026 | 7:41 | 17:48 | 18:48 |
 | 31 Oct 2026 | 7:52 | 17:37 | 18:37 |
-| 15 Nov 2026, standard time | 7:17 | 16:14 | 17:14 |
+| 15 Nov 2026 (no fall back) | 8:17 | 17:14 | 18:14 |
 
 - Legal hours, deer and grouse: from 1 hour before sunrise to 1 hour after sunset (99%, synopsis page 11). Ducks and geese: half an hour before sunrise to half an hour after sunset (99%). See [Rule Book: legal methods](#/s/rb-legal-methods/0).
 - Civil twilight (enough light to walk without a lamp in the open) ends about 33 minutes after sunset here in October (85%, my calculation). So the last legal hour is mostly dark. Walking out after legal light means walking in the dark.
-- Daylight saving time ends Sunday 1 November 2026 (90%, first Sunday in November rule).
+- BC stays on daylight time (UTC minus 7) all year from March 2026, so there is no fall back on 1 November (95%, BC government news release, 2 March 2026). Older apps and US websites may still show November times an hour early (Tip).
 - Mission and the Okanagan are a few minutes different (Tip). Use the app's Field Mode: [legal light](#/field/light).
 ```
 
@@ -259,7 +259,7 @@ Trip plan left with someone
 
 ```more more hooks
 - **Down is not always faster:** steep descents with meat are slow.
-- **Fall back, Sunday the first:** clocks change 1 November 2026.
+- **No fall back in 2026:** November light comes an hour later on the clock.
 - **Checkpoint, clock, compare.**
 ```
 

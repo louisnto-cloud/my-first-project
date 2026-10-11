@@ -35,7 +35,7 @@ checked: 2026-10-11
 ```more dark and weather in full
 - Legal hours for deer and grouse: 1 hour before sunrise to 1 hour after sunset (99%, [Rule Book: legal methods](#/s/rb-legal-methods)).
 - Heffley Creek legal light ends (85%, my calculation, BC time): about 19:08 on 15 October, 18:48 on 25 October, 18:37 on 31 October, 18:14 on 15 November.
-- BC no longer falls back: clocks stay on daylight time after March 2026 (95%, BC government release via [Weather, daylight and season timing](#/s/daylight-weather-bc)). Note: [Planning a route](#/s/route-planning) still says clocks go back on 1 November; the newer lessons say they do not (VERIFY, flagged for the lead).
+- BC no longer falls back: clocks stay on daylight time after March 2026 (95%, BC government release via [Weather, daylight and season timing](#/s/daylight-weather-bc)). 
 - Civil twilight ends about 33 minutes after sunset in October (85%). After that you need a headlamp in timber.
 - Kamloops Airport November average low minus 1.1°C; higher ground is colder (75%).
 - Plan: a turnaround time, a headlamp and a second light, a dry layer and toque every trip (Tip, [Bush safety](#/s/bush-safety)).
