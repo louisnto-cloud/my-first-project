@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 266" role="img" aria-label="Four cards. Your own kill: your species licence travels with the meat. Someone else kill: you need a Record of Receipt from the hunter. Selling or trading wildlife meat: never. A true gift with nothing back is not trafficking, this app reading at 90 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="266" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Moving game meat</text>
+  <rect x="6" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
+  <rect x="6" y="40" width="191" height="30" rx="10" fill="#5c7a3a"/><rect x="6" y="58" width="191" height="12" fill="#5c7a3a"/>
+  <text x="101.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Your kill</text>
+  <text x="101.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">Your species</text>
+  <text x="101.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">licence with it</text>
+  <rect x="203" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
+  <rect x="203" y="40" width="191" height="30" rx="10" fill="#5c7a3a"/><rect x="203" y="58" width="191" height="12" fill="#5c7a3a"/>
+  <text x="298.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Their kill</text>
+  <text x="298.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">A Record of</text>
+  <text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">Receipt with it</text>
+  <rect x="6" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="6" y="150" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="6" y="168" width="191" height="12" fill="#b03a2e"/>
+  <text x="101.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Sell or trade</text>
+  <text x="101.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Never. Not even</text>
+  <text x="101.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">an offer</text>
+  <rect x="203" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+  <rect x="203" y="150" width="191" height="30" rx="10" fill="#8a9a6b"/><rect x="203" y="168" width="191" height="12" fill="#8a9a6b"/>
+  <text x="298.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Gift</text>
+  <text x="298.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Nothing back:</text>
+  <text x="298.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">not trafficking (90%)</text>
+</svg>

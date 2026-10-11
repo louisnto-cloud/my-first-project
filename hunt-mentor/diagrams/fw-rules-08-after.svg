@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 266" role="img" aria-label="Four steps after big game is down. 1: cancel the species licence before you touch the animal. 2: leave the unskinned tail and evidence of sex attached. 3: take the edible portions, neck, ribs, four quarters and loins, home or to a meat cutter. 4: moose, elk or caribou licence: file the Mandatory Hunter Report by 31 March, hunt or no hunt." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="266" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">After the shot, in order</text>
+  <rect x="6" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+  <rect x="6" y="40" width="191" height="30" rx="10" fill="#e8590c"/><rect x="6" y="58" width="191" height="12" fill="#e8590c"/>
+  <text x="101.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1 Cancel</text>
+  <text x="101.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">The licence, before</text>
+  <text x="101.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">you touch it</text>
+  <rect x="203" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+  <rect x="203" y="40" width="191" height="30" rx="10" fill="#e8590c"/><rect x="203" y="58" width="191" height="12" fill="#e8590c"/>
+  <text x="298.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">2 Leave on</text>
+  <text x="298.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">Tail and</text>
+  <text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">evidence of sex</text>
+  <rect x="6" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+  <rect x="6" y="150" width="191" height="30" rx="10" fill="#e8590c"/><rect x="6" y="168" width="191" height="12" fill="#e8590c"/>
+  <text x="101.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">3 Take home</text>
+  <text x="101.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Neck, ribs, quarters,</text>
+  <text x="101.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">loins</text>
+  <rect x="203" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+  <rect x="203" y="150" width="191" height="30" rx="10" fill="#e8590c"/><rect x="203" y="168" width="191" height="12" fill="#e8590c"/>
+  <text x="298.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">4 Report</text>
+  <text x="298.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Moose or elk licence:</text>
+  <text x="298.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">by 31 March</text>
+</svg>

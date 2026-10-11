@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 376" role="img" aria-label="Four cards. Bought online: the species licence comes by mail, so allow for delivery. Bought in person: you get it right away. Cougar, goat, sheep, caribou, bobcat, lynx and wolverine licences are not valid until 2 days after issue. Deer, moose, elk and bear have no wait. Carry every species licence from this licence year, used or not." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="376" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Species licence: in hand first</text>
+  <rect x="6" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+  <rect x="6" y="40" width="191" height="30" rx="10" fill="#e8590c"/><rect x="6" y="58" width="191" height="12" fill="#e8590c"/>
+  <text x="101.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Online</text>
+  <text x="101.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">Mailed to you.</text>
+  <text x="101.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">Allow for the post.</text>
+  <rect x="203" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
+  <rect x="203" y="40" width="191" height="30" rx="10" fill="#5c7a3a"/><rect x="203" y="58" width="191" height="12" fill="#5c7a3a"/>
+  <text x="298.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">In person</text>
+  <text x="298.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">In your hand</text>
+  <text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">right away.</text>
+  <rect x="6" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="6" y="150" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="6" y="168" width="191" height="12" fill="#b03a2e"/>
+  <text x="101.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">2 day wait</text>
+  <text x="101.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Cougar, goat, sheep,</text>
+  <text x="101.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">caribou, bobcat,</text>
+  <text x="101.5" y="238" font-size="14" fill="#23261f" text-anchor="middle">lynx, wolverine</text>
+  <rect x="203" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+  <rect x="203" y="150" width="191" height="30" rx="10" fill="#4a7fb0"/><rect x="203" y="168" width="191" height="12" fill="#4a7fb0"/>
+  <text x="298.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">No wait</text>
+  <text x="298.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Deer, moose,</text>
+  <text x="298.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">elk, black bear</text>
+  <rect x="6" y="260" width="388" height="104" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+  <rect x="6" y="260" width="388" height="30" rx="10" fill="#2f3a2b"/><rect x="6" y="278" width="388" height="12" fill="#2f3a2b"/>
+  <text x="200.0" y="281" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Carry them all</text>
+  <text x="200.0" y="312" font-size="14" fill="#23261f" text-anchor="middle">Every species licence this licence year,</text>
+  <text x="200.0" y="330" font-size="14" fill="#23261f" text-anchor="middle">used or not, while you hunt.</text>
+</svg>

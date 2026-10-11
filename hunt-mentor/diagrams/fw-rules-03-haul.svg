@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 376" role="img" aria-label="In a Motor Vehicle for Hunting Closed Area, or an ATV for hunting closure, four uses are banned: hunting from or with the vehicle, carrying hunters to the animals, carrying hunting gear and supplies, and hauling game out. Region 3 example: MU 3-28, ATVs and electric bicycles, 1 September to 10 December." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="376" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Closed for hunting? All of this counts</text>
+  <rect x="6" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="6" y="40" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="6" y="58" width="191" height="12" fill="#b03a2e"/>
+  <text x="101.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Hunting</text>
+  <text x="101.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">No riding the</text>
+  <text x="101.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">vehicle to hunt</text>
+  <rect x="203" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="203" y="40" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="203" y="58" width="191" height="12" fill="#b03a2e"/>
+  <text x="298.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Carry hunters</text>
+  <text x="298.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">No ride to</text>
+  <text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">the animals</text>
+  <rect x="6" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="6" y="150" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="6" y="168" width="191" height="12" fill="#b03a2e"/>
+  <text x="101.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Carry gear</text>
+  <text x="101.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">No hunting gear</text>
+  <text x="101.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">or supplies</text>
+  <rect x="203" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="203" y="150" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="203" y="168" width="191" height="12" fill="#b03a2e"/>
+  <text x="298.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Haul game</text>
+  <text x="298.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">No hauling</text>
+  <text x="298.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">the deer out</text>
+  <rect x="6" y="260" width="388" height="104" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+  <rect x="6" y="260" width="388" height="30" rx="10" fill="#4a7fb0"/><rect x="6" y="278" width="388" height="12" fill="#4a7fb0"/>
+  <text x="200.0" y="281" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Region 3 example</text>
+  <text x="200.0" y="312" font-size="14" fill="#23261f" text-anchor="middle">MU 3-28: no ATV or e bike for hunting,</text>
+  <text x="200.0" y="330" font-size="14" fill="#23261f" text-anchor="middle">1 September to 10 December</text>
+</svg>

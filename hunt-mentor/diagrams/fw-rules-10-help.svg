@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 266" role="img" aria-label="Four cards. Taking your brother along for free: not guiding, this app reading at 90 percent. Taking pay or a promised reward to help someone hunt: that is guiding and needs a guide licence. Running hunters to their spot by boat for money: that needs a transport licence. Paying an unlicensed guide: you can be charged with the same offence." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="266" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Helping, or guiding?</text>
+  <rect x="6" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
+  <rect x="6" y="40" width="191" height="30" rx="10" fill="#5c7a3a"/><rect x="6" y="58" width="191" height="12" fill="#5c7a3a"/>
+  <text x="101.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Free help</text>
+  <text x="101.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">Your brother, for</text>
+  <text x="101.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">nothing: fine (90%)</text>
+  <rect x="203" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="203" y="40" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="203" y="58" width="191" height="12" fill="#b03a2e"/>
+  <text x="298.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Paid help</text>
+  <text x="298.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">Guide licence</text>
+  <text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">needed</text>
+  <rect x="6" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="6" y="150" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="6" y="168" width="191" height="12" fill="#b03a2e"/>
+  <text x="101.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Paid boat ride</text>
+  <text x="101.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Transport licence</text>
+  <text x="101.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">needed</text>
+  <rect x="203" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="203" y="150" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="203" y="168" width="191" height="12" fill="#b03a2e"/>
+  <text x="298.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">You pay them</text>
+  <text x="298.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">You can be</text>
+  <text x="298.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">charged too</text>
+</svg>

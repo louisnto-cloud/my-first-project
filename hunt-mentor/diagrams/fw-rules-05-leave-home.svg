@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 376" role="img" aria-label="Five things that break the rules just by being on the hunt or being used to hunt. Thermal or other infrared optics: possession on the trip is an offence. Drone: possession on the trip is an offence. Cell trail camera that sends pictures: not for hunting 1 August to 10 December. Electronic caller: not for deer, ducks, geese or grouse. Spotlight or any light: never to hunt by." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="376" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Leave these at home</text>
+  <rect x="6" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="6" y="40" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="6" y="58" width="191" height="12" fill="#b03a2e"/>
+  <text x="101.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Thermal optic</text>
+  <text x="101.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">Even unused,</text>
+  <text x="101.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">even in the pack</text>
+  <rect x="203" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="203" y="40" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="203" y="58" width="191" height="12" fill="#b03a2e"/>
+  <text x="298.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Drone</text>
+  <text x="298.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">Not on the trip.</text>
+  <text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">No drone scouting</text>
+  <rect x="6" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="6" y="150" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="6" y="168" width="191" height="12" fill="#b03a2e"/>
+  <text x="101.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Cell trail camera</text>
+  <text x="101.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Not for hunting</text>
+  <text x="101.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">1 Aug to 10 Dec</text>
+  <rect x="203" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="203" y="150" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="203" y="168" width="191" height="12" fill="#b03a2e"/>
+  <text x="298.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Electronic caller</text>
+  <text x="298.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Not for deer,</text>
+  <text x="298.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">ducks or grouse</text>
+  <rect x="6" y="260" width="388" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="6" y="260" width="388" height="30" rx="10" fill="#b03a2e"/><rect x="6" y="278" width="388" height="12" fill="#b03a2e"/>
+  <text x="200.0" y="281" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Spotlight</text>
+  <text x="200.0" y="312" font-size="14" fill="#23261f" text-anchor="middle">No light of any kind</text>
+  <text x="200.0" y="330" font-size="14" fill="#23261f" text-anchor="middle">to hunt by</text>
+</svg>
