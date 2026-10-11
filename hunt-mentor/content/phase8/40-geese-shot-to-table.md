@@ -199,7 +199,7 @@ mgs-care-4 | Label or preserve before you give a goose away.
 | 10 | Canada goose weight | about 2.4 to 9 kg by race | 75% |
 | 11 | Sees detail farther than you | 2.5 to 3 times | 80% |
 | 12 | Cone types, goose vs you | 4 vs 3 | 90% |
-| 13 | Hears best | 1 to 4 kHz | 80% |
+| 13 | Hears best | 1 to 4 kHz (kilohertz) | 80% |
 | 14 | Air sacs | 9 | 85% |
 | 15 | Body temperature, active | about 41°C | 85% |
 | 16 | Grass bill to dropping | about 1.5 h | 70% |

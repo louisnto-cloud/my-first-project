@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Two panels. Left: from the truck you see snow on the top of a mountain down to a line. Right: on the map, that same line matches one contour ring, marked orange: snow starts at 1,400 m in this example. Caption: match the snow edge to a contour line.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Put a number on the snow line</text>
+  <rect x="6" y="40" width="190" height="220" rx="8" fill="#e3ecf3"/>
+  <path d="M6 260 L70 120 L100 90 L150 130 L196 200 L196 260 Z" fill="#a9b68e"/>
+  <path d="M70 120 L100 90 L150 130 L134 140 L110 128 L86 140 Z" fill="#fff"/>
+  <text x="101" y="60" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">From the truck</text>
+  <rect x="204" y="40" width="190" height="220" rx="8" fill="#dfe6d3"/>
+  <g fill="none" stroke="#8b5a2b" stroke-width="2"><ellipse cx="299" cy="150" rx="80" ry="90"/><ellipse cx="299" cy="150" rx="55" ry="62"/><ellipse cx="299" cy="150" rx="30" ry="34"/></g>
+  <ellipse cx="299" cy="150" rx="55" ry="62" fill="none" stroke="#e8590c" stroke-width="4"/>
+  <text x="299" y="60" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">On the map</text><rect x="183" y="214" width="211" height="24" rx="6" fill="#e8590c"/><text x="288.5" y="231" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Snow starts here: 1,400 m</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Match the snow edge to a contour line</text>
+</svg>

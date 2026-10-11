@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Hang paper about 1.2 m square at the distance you will shoot, 35 m for ducks.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1. Big paper at your real distance</text><rect x="110" y="50" width="180" height="180" rx="0" fill="#f2ead8" stroke="#2f3a2b" stroke-width="2"/><circle cx="200" cy="140" r="5" fill="#e8590c" stroke="none" stroke-width="2"/><text x="200" y="262" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">about 1.2 m square, aim mark centre</text>
+</svg>
