@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Timeline of quail and chukar in BC. 1860: California quail released near Victoria. 1912: first Okanagan record, 70 percent. 1950s: chukar released in BC. 1970s: BC quail harvest up to 4,600 birds. 1970 to 2012: breeding bird survey trend up, low reliability. 2008 to 2012: the atlas finds the Fraser Valley population apparently gone. Recent harvest under 1,000 a year, 65 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Quail and chukar in BC: a short history</text>
+<line x1="30" y1="40" x2="30" y2="256" stroke="#8a9a6b" stroke-width="4"/>
+<circle cx="30" cy="40" r="7" fill="#e8590c"/>
+<text x="46" y="45" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">1860</text>
+<text x="150" y="45" font-size="14" fill="#2f3a2b" text-anchor="start">Quail released near Victoria</text>
+<circle cx="30" cy="82" r="7" fill="#e8590c"/>
+<text x="46" y="87" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">1912</text>
+<text x="150" y="87" font-size="14" fill="#2f3a2b" text-anchor="start">First Okanagan record (70%)</text>
+<circle cx="30" cy="124" r="7" fill="#e8590c"/>
+<text x="46" y="129" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">1950s</text>
+<text x="150" y="129" font-size="14" fill="#2f3a2b" text-anchor="start">Chukar released in BC</text>
+<circle cx="30" cy="166" r="7" fill="#e8590c"/>
+<text x="46" y="171" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">1970s</text>
+<text x="150" y="171" font-size="14" fill="#2f3a2b" text-anchor="start">BC quail harvest up to 4,600</text>
+<circle cx="30" cy="208" r="7" fill="#e8590c"/>
+<text x="46" y="213" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">1970 to 2012</text>
+<text x="150" y="213" font-size="14" fill="#2f3a2b" text-anchor="start">Quail count trend up (low reliability)</text>
+<circle cx="30" cy="250" r="7" fill="#e8590c"/>
+<text x="46" y="255" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">2008 to 2012</text>
+<text x="150" y="255" font-size="14" fill="#2f3a2b" text-anchor="start">Atlas: Fraser Valley birds gone</text>
+<text x="200" y="292" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Recent harvest: under 1,000 a year (65%)</text>
+</svg>

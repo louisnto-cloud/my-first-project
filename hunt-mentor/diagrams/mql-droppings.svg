@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Two panels. One bird dropping: a dark coil with a white cap of urates, 70 percent. A roost pile: many droppings under a roost tree, because California quail roost in dense trees or shrubs, 70 percent. Chukar roost on the ground under rock ledges and sagebrush, so piles collect there, 80 percent. Tip: a fresh pile means the covey roosts there now.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Droppings and roost piles</text>
+<rect x="12" y="40" width="182" height="180" rx="8" fill="#dfe6d3"/>
+<rect x="206" y="40" width="182" height="180" rx="8" fill="#dfe6d3"/>
+<path d="M70 120 q30 -26 50 0 q-18 20 -50 0 Z" fill="#6b5a3a"/>
+<ellipse cx="114" cy="112" rx="10" ry="7" fill="#fff" stroke="#2f3a2b"/>
+<text x="103" y="66" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">One dropping</text>
+<text x="103" y="160" font-size="14" fill="#2f3a2b" text-anchor="middle">Dark coil,</text>
+<text x="103" y="180" font-size="14" fill="#2f3a2b" text-anchor="middle">white cap (urates)</text>
+<text x="103" y="204" font-size="14" fill="#2f3a2b" text-anchor="middle">(70%)</text>
+<path d="M260 160 l20 -70 l20 70 Z" fill="#556b2f"/>
+<rect x="276" y="150" width="8" height="22" fill="#6b4f35"/>
+<g fill="#6b5a3a"><ellipse cx="270" cy="182" rx="5" ry="3"/><ellipse cx="282" cy="186" rx="5" ry="3"/><ellipse cx="294" cy="182" rx="5" ry="3"/><ellipse cx="288" cy="190" rx="5" ry="3"/><ellipse cx="276" cy="191" rx="5" ry="3"/></g>
+<text x="297" y="66" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Roost pile</text>
+<text x="330" y="120" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">under a</text>
+<text x="330" y="138" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">roost tree</text>
+<text x="297" y="212" font-size="14" fill="#2f3a2b" text-anchor="middle">quail: trees (70%)</text>
+<rect x="10" y="230" width="380" height="62" rx="8" fill="#2f3a2b"/>
+<text x="200" y="254" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Chukar: piles under rock ledges and sage (80%)</text>
+<text x="200" y="278" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Fresh pile = covey roosts here now (Tip)</text>
+</svg>

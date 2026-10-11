@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Three panels show the same saddle. Panel 1, the topo map: two sets of closed rings with an hourglass between them. Panel 2, the Hunt Map in 3D: a ridge with a dip between two high points. Panel 3, on the ground: a low notch on the skyline between two wooded tops. An orange dot marks the saddle in each.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">One saddle, three views</text>
+  <rect x="6" y="40" width="124" height="200" rx="8" fill="#dfe6d3"/>
+  <g fill="none" stroke="#8b5a2b" stroke-width="2">
+    <ellipse cx="34" cy="140" rx="16" ry="22"/><ellipse cx="102" cy="140" rx="16" ry="22"/>
+    <path d="M68 118 C 50 90, 14 92, 14 140 C 14 188, 50 190, 68 162 C 86 190, 122 188, 122 140 C 122 92, 86 90, 68 118 Z"/>
+  </g>
+  <circle cx="68" cy="140" r="9" fill="#e8590c"/>
+  <text x="68" y="262" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1 Topo map</text><text x="68" y="280" font-size="13" fill="#2f3a2b" text-anchor="middle">hourglass</text>
+  <rect x="138" y="40" width="124" height="200" rx="8" fill="#e3ecf3"/>
+  <path d="M138 170 L160 110 L185 95 L200 128 L215 100 L240 92 L262 150 L262 240 L138 240 Z" fill="#e9edd9" stroke="#2f3a2b" stroke-width="2"/>
+  <path d="M185 95 L200 128 L215 100 L216 160 L180 170 Z" fill="#a9b68e" opacity=".6"/>
+  <g fill="none" stroke="#8b5a2b" stroke-width="1.3"><path d="M146 190 C 175 175, 190 150, 200 150 C 210 150, 225 172, 258 186"/><path d="M142 214 C 175 200, 190 178, 200 178 C 212 178, 228 198, 260 208"/></g>
+  <circle cx="200" cy="128" r="8" fill="#e8590c"/>
+  <text x="200" y="262" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2 Hunt Map 3D</text><text x="200" y="280" font-size="13" fill="#2f3a2b" text-anchor="middle">a dip in the ridge</text>
+  <rect x="270" y="40" width="124" height="200" rx="8" fill="#eef2f5"/>
+  <path d="M270 150 C 290 110, 310 100, 320 118 C 328 132, 336 132, 344 118 C 354 100, 378 110, 394 140 L394 240 L270 240 Z" fill="#8a9a6b"/>
+  <path d="M286 108.8 l7.2 14.4 h-4.0 l5.6000000000000005 9.600000000000001 h-17.6 l5.6000000000000005 -9.600000000000001 h-4.0 Z" fill="#7f8f62"/><rect x="284.8" y="132.8" width="2.4000000000000004" height="4.0" fill="#6b4f35"/><path d="M300 96.8 l7.2 14.4 h-4.0 l5.6000000000000005 9.600000000000001 h-17.6 l5.6000000000000005 -9.600000000000001 h-4.0 Z" fill="#7f8f62"/><rect x="298.8" y="120.8" width="2.4000000000000004" height="4.0" fill="#6b4f35"/><path d="M370 100.8 l7.2 14.4 h-4.0 l5.6000000000000005 9.600000000000001 h-17.6 l5.6000000000000005 -9.600000000000001 h-4.0 Z" fill="#7f8f62"/><rect x="368.8" y="124.8" width="2.4000000000000004" height="4.0" fill="#6b4f35"/><path d="M384 112.8 l7.2 14.4 h-4.0 l5.6000000000000005 9.600000000000001 h-17.6 l5.6000000000000005 -9.600000000000001 h-4.0 Z" fill="#7f8f62"/><rect x="382.8" y="136.8" width="2.4000000000000004" height="4.0" fill="#6b4f35"/>
+  <circle cx="332" cy="128" r="8" fill="#e8590c"/>
+  <text x="332" y="262" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3 On the ground</text><text x="332" y="280" font-size="13" fill="#2f3a2b" text-anchor="middle">low spot on skyline</text>
+</svg>

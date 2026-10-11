@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Six weather tiles. Strong wind: birds are wild and flush far, hunt sheltered draws, hunter lore. Rain: birds sit under thick conifers to stay dry, hunter lore. Fresh snow: read tracks and roosts; birds dive into soft snow 20 centimetres or deeper, 75 percent. Bitter cold: feeding may shift to midday, hunter lore. Pressure front: no grouse study found, watch and log it. Moon: no grouse study found, do not plan around it." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="400" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Weather: where to look</text>
+<rect x="10" y="40" width="185" height="108" rx="8" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<text x="20" y="64" font-size="16" fill="#4a7fb0" text-anchor="start" font-weight="bold">Strong wind</text>
+<text x="20" y="90" font-size="14" fill="#23261f" text-anchor="start">Birds wild, flush far.</text>
+<text x="20" y="108" font-size="14" fill="#23261f" text-anchor="start">Hunt sheltered draws.</text>
+<text x="20" y="126" font-size="14" fill="#23261f" text-anchor="start">Hunter lore (Tip)</text>
+<rect x="205" y="40" width="185" height="108" rx="8" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<text x="215" y="64" font-size="16" fill="#4a7fb0" text-anchor="start" font-weight="bold">Rain</text>
+<text x="215" y="90" font-size="14" fill="#23261f" text-anchor="start">Under thick conifers.</text>
+<text x="215" y="108" font-size="14" fill="#23261f" text-anchor="start">Birds stay dry there.</text>
+<text x="215" y="126" font-size="14" fill="#23261f" text-anchor="start">Hunter lore (Tip)</text>
+<rect x="10" y="156" width="185" height="108" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<text x="20" y="180" font-size="16" fill="#2f3a2b" text-anchor="start" font-weight="bold">Fresh snow</text>
+<text x="20" y="206" font-size="14" fill="#23261f" text-anchor="start">Tracks and roosts.</text>
+<text x="20" y="224" font-size="14" fill="#23261f" text-anchor="start">Birds dive into soft</text>
+<text x="20" y="242" font-size="14" fill="#23261f" text-anchor="start">snow 20 cm+ (75%)</text>
+<rect x="205" y="156" width="185" height="108" rx="8" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<text x="215" y="180" font-size="16" fill="#4a7fb0" text-anchor="start" font-weight="bold">Bitter cold</text>
+<text x="215" y="206" font-size="14" fill="#23261f" text-anchor="start">Feeding may shift</text>
+<text x="215" y="224" font-size="14" fill="#23261f" text-anchor="start">to midday.</text>
+<text x="215" y="242" font-size="14" fill="#23261f" text-anchor="start">Hunter lore (Tip)</text>
+<rect x="10" y="272" width="185" height="108" rx="8" fill="#ffffff" stroke="#9aa0a6" stroke-width="2"/>
+<text x="20" y="296" font-size="16" fill="#23261f" text-anchor="start" font-weight="bold">Pressure front</text>
+<text x="20" y="322" font-size="14" fill="#23261f" text-anchor="start">No grouse study</text>
+<text x="20" y="340" font-size="14" fill="#23261f" text-anchor="start">found. Watch and</text>
+<text x="20" y="358" font-size="14" fill="#23261f" text-anchor="start">log it (Journal).</text>
+<rect x="205" y="272" width="185" height="108" rx="8" fill="#ffffff" stroke="#9aa0a6" stroke-width="2"/>
+<text x="215" y="296" font-size="16" fill="#23261f" text-anchor="start" font-weight="bold">Moon</text>
+<text x="215" y="322" font-size="14" fill="#23261f" text-anchor="start">No grouse study</text>
+<text x="215" y="340" font-size="14" fill="#23261f" text-anchor="start">found. Do not plan</text>
+<text x="215" y="358" font-size="14" fill="#23261f" text-anchor="start">around it.</text>
+</svg>

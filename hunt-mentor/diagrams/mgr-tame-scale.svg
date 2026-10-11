@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-label="A scale from lets you close to flushes far, hunter lore. Spruce grouse, the fool hen, at the tame end. Dusky and sooty grouse next. Sharp tailed grouse early in the season in the middle. Ruffed grouse toward the wild end. Sharp tailed grouse late in the season at the wild end. Tip: every bird learns, and a bird shot at or chased gets wilder." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="280" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Tame or wild? (Tip, hunter lore)</text>
+<defs><linearGradient id="mgr-tame-scale-g" x1="0" x2="1"><stop offset="0" stop-color="#8a9a6b"/><stop offset="1" stop-color="#e8590c"/></linearGradient></defs>
+<rect x="20" y="120" width="360" height="22" rx="11" fill="url(#mgr-tame-scale-g)"/>
+<text x="20" y="108" font-size="15" fill="#2f3a2b" text-anchor="start" font-weight="bold">Lets you close</text>
+<text x="380" y="108" font-size="15" fill="#c23b22" text-anchor="end" font-weight="bold">Flushes far</text>
+<polygon points="40,146 33,160 47,160" fill="#23261f"/>
+<text x="40" y="180" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Spruce</text>
+<text x="40" y="198" font-size="14" fill="#23261f" text-anchor="middle">&quot;fool hen&quot;</text>
+<polygon points="120,146 113,160 127,160" fill="#23261f"/>
+<text x="120" y="180" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Dusky,</text>
+<text x="120" y="198" font-size="14" fill="#23261f" text-anchor="middle">sooty</text>
+<polygon points="215,146 208,160 222,160" fill="#23261f"/>
+<text x="215" y="180" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Sharp tail,</text>
+<text x="215" y="198" font-size="14" fill="#23261f" text-anchor="middle">early</text>
+<polygon points="290,146 283,160 297,160" fill="#23261f"/>
+<text x="290" y="180" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Ruffed</text>
+<text x="290" y="198" font-size="14" fill="#23261f" text-anchor="middle"></text>
+<polygon points="355,146 348,160 362,160" fill="#23261f"/>
+<text x="355" y="180" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Sharp tail,</text>
+<text x="355" y="198" font-size="14" fill="#23261f" text-anchor="middle">late</text>
+<text x="20" y="240" font-size="14" fill="#23261f" text-anchor="start">Every bird learns. A bird shot at or chased</text>
+<text x="20" y="258" font-size="14" fill="#23261f" text-anchor="start">by a dog gets wilder (Tip).</text>
+</svg>

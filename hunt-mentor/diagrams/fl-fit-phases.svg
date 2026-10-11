@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 210" role="img" aria-label="Three phases of four weeks each: weeks 1 to 4 build the base, weeks 5 to 8 add hills and strength, weeks 9 to 12 add pack load and long days. Every fourth week is easier.">
+  <rect x="0" y="0" width="400" height="210" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Three blocks of four weeks</text>
+<rect x="20" y="104" width="119.88000000000001" height="32" rx="6" fill="#2f3a2b"/>
+<text x="79.94" y="126" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Base</text>
+<rect x="139.88" y="104" width="119.88000000000001" height="32" rx="6" fill="#8b5a2b"/>
+<text x="199.82000000000002" y="126" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Hills, strength</text>
+<rect x="259.76" y="104" width="120.23999999999998" height="32" rx="6" fill="#e8590c"/>
+<text x="319.88" y="126" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Pack, long days</text>
+<line x1="139.88" y1="86" x2="139.88" y2="154" stroke="#8a9a6b" stroke-width="3" stroke-linecap="round"/>
+<circle cx="139.88" cy="120" r="8" fill="#8a9a6b" stroke="#ffffff" stroke-width="2"/>
+<text x="139.88" y="78" font-family="sans-serif" font-size="14" font-weight="bold" fill="#8a9a6b" text-anchor="middle">Week 4 easy</text>
+<line x1="259.76" y1="86" x2="259.76" y2="154" stroke="#8a9a6b" stroke-width="3" stroke-linecap="round"/>
+<circle cx="259.76" cy="120" r="8" fill="#8a9a6b" stroke="#ffffff" stroke-width="2"/>
+<text x="259.76" y="78" font-family="sans-serif" font-size="14" font-weight="bold" fill="#8a9a6b" text-anchor="middle">Week 8 easy</text>
+<line x1="380.0" y1="86" x2="380.0" y2="154" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/>
+<circle cx="380.0" cy="120" r="8" fill="#e8590c" stroke="#ffffff" stroke-width="2"/>
+<text x="380.0" y="78" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">Test</text>
+<text x="20" y="196" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">Week 1</text>
+<text x="380" y="196" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="end">Week 12</text>
+</svg>

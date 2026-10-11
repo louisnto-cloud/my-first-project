@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Frostbite step 2: do not rub it or rub snow on it. Blot dry. Rubbing damages frozen tissue.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Do not rub it</text><ellipse cx="200" cy="150" rx="62" ry="36" fill="#d9b48f" stroke="#2f3a2b" stroke-width="2"/><line x1="173" y1="123" x2="227" y2="177" stroke="#c0392b" stroke-width="15" stroke-linecap="round"/><line x1="227" y1="123" x2="173" y2="177" stroke="#c0392b" stroke-width="15" stroke-linecap="round"/><text x="200" y="240" font-size="18" font-weight="bold" fill="#c0392b" text-anchor="middle">No rubbing, no snow</text><text x="200" y="288" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">No rubbing. No snow on it</text>
+</svg>

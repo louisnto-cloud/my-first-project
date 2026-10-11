@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Twenty four hour clock of a quail day in fall, general pattern from bird guides and Washington Fish and Wildlife, 70 to 75 percent. Night: roost in dense trees or shrubs. First light: the covey leaves the roost after assembly calls. Morning: feed and pick grit at road edges. Midday: loaf in cover, dust bathe and drink. Late afternoon: feed again. Dusk: a calling chorus, then roost.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A quail day (October, general pattern)</text>
+<path d="M200.0 66.0 A92 92 0 0 1 291.2 170.0 L251.6 164.8 A52 52 0 0 0 200.0 106.0 Z" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/>
+<path d="M291.2 170.0 A92 92 0 0 1 285.0 193.2 L248.0 177.9 A52 52 0 0 0 251.6 164.8 Z" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<path d="M285.0 193.2 A92 92 0 0 1 235.2 243.0 L219.9 206.0 A52 52 0 0 0 248.0 177.9 Z" fill="#e89b5c" stroke="#fffaf0" stroke-width="2"/>
+<path d="M235.2 243.0 A92 92 0 0 1 134.9 223.1 L163.2 194.8 A52 52 0 0 0 219.9 206.0 Z" fill="#8a9a6b" stroke="#fffaf0" stroke-width="2"/>
+<path d="M134.9 223.1 A92 92 0 0 1 108.8 170.0 L148.4 164.8 A52 52 0 0 0 163.2 194.8 Z" fill="#e89b5c" stroke="#fffaf0" stroke-width="2"/>
+<path d="M108.8 170.0 A92 92 0 0 1 108.8 146.0 L148.4 151.2 A52 52 0 0 0 148.4 164.8 Z" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<path d="M108.8 146.0 A92 92 0 0 1 200.0 66.0 L200.0 106.0 A52 52 0 0 0 148.4 151.2 Z" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/>
+<text x="200.0" y="131.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">0</text>
+<text x="232.0" y="163.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">6</text>
+<text x="200.0" y="195.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">12</text>
+<text x="168.0" y="163.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">18</text>
+<text x="296" y="120" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="start">first light:</text>
+<text x="296" y="138" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="start">leave roost</text>
+<text x="296" y="236" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">feed + grit</text>
+<text x="200" y="272" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">loaf, dust, water</text>
+<text x="104" y="236" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">feed again</text>
+<text x="104" y="150" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">dusk calls</text>
+<text x="110" y="70" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">roost in trees</text>
+<text x="200" y="294" font-size="14" fill="#2f3a2b" text-anchor="middle">A sketch from bird guides (70 to 75%)</text>
+</svg>

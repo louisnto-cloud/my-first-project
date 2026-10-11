@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Diagram of rings around a hunter. The first flush is close, the second flush farther, the third farther still. Washington Fish and Wildlife says gray partridge flush farther on each approach, and pressured quail near trees may fly up and perch, 75 percent. Lesson: make the first chance count.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Pressure teaches them: each flush is farther</text>
+<rect x="0" y="40" width="400" height="190" rx="8" fill="#dfe6d3"/>
+<g transform="translate(50 140)"><circle r="10" fill="#e8590c"/><text x="0" y="-16" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">You</text></g>
+<path d="M50 84.0 A70 56.0 0 0 1 50 196.0" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6"/>
+<g transform="translate(120 150) scale(0.6 0.6)"><ellipse cx="0" cy="0" rx="20" ry="13" fill="#8f9396"/><path d="M-18 -2 L-27 -4 L-25 5 Z" fill="#b5652b"/><path d="M-6 4 q6 -6 12 0 q-6 4 -12 0 Z" fill="#6b3a1e"/><circle cx="16" cy="-12" r="8" fill="#d9822b"/><circle cx="18" cy="-13" r="1.6" fill="#111"/><path d="M23 -12 l4 1 l-4 2 Z" fill="#555"/><path d="M2 12 l-2 7 M8 12 l2 7" stroke="#6b4f35" stroke-width="2"/></g>
+<text x="120" y="182" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1st</text>
+<path d="M50 52 A130 88 0 0 1 50 228" fill="none" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="8 6"/>
+<g transform="translate(180 130) scale(0.6 0.6)"><ellipse cx="0" cy="0" rx="20" ry="13" fill="#8f9396"/><path d="M-18 -2 L-27 -4 L-25 5 Z" fill="#b5652b"/><path d="M-6 4 q6 -6 12 0 q-6 4 -12 0 Z" fill="#6b3a1e"/><circle cx="16" cy="-12" r="8" fill="#d9822b"/><circle cx="18" cy="-13" r="1.6" fill="#111"/><path d="M23 -12 l4 1 l-4 2 Z" fill="#555"/><path d="M2 12 l-2 7 M8 12 l2 7" stroke="#6b4f35" stroke-width="2"/></g>
+<text x="180" y="172" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2nd</text>
+<path d="M50 52 A200 88 0 0 1 50 228" fill="none" stroke="#a33b2a" stroke-width="3" stroke-dasharray="8 6"/>
+<g transform="translate(250 110) scale(0.6 0.6)"><ellipse cx="0" cy="0" rx="20" ry="13" fill="#8f9396"/><path d="M-18 -2 L-27 -4 L-25 5 Z" fill="#b5652b"/><path d="M-6 4 q6 -6 12 0 q-6 4 -12 0 Z" fill="#6b3a1e"/><circle cx="16" cy="-12" r="8" fill="#d9822b"/><circle cx="18" cy="-13" r="1.6" fill="#111"/><path d="M23 -12 l4 1 l-4 2 Z" fill="#555"/><path d="M2 12 l-2 7 M8 12 l2 7" stroke="#6b4f35" stroke-width="2"/></g>
+<text x="250" y="162" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3rd</text>
+<text x="200" y="252" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Huns: farther on the 2nd and 3rd approach (75%)</text>
+<text x="200" y="274" font-size="14" fill="#2f3a2b" text-anchor="middle">Quail near trees may fly up and perch (75%)</text>
+<text x="200" y="294" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">So: make the first chance count (75%)</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 198" role="img" aria-label="Bar chart. In an Oregon GPS study during hunting season, mule deer averaged 190 metres from closed roads and 1,250 metres from open roads.">
+<rect x="0" y="0" width="400" height="198" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Mule deer and roads in hunting season</text>
+<text x="14" y="64" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Average distance to a CLOSED road</text>
+<rect x="14" y="70" width="54" height="20" rx="4" fill="#8a9a6b"/>
+<text x="74.36923076923077" y="85" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">190 m</text>
+<text x="14" y="116" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Average distance to an OPEN road</text>
+<rect x="14" y="122" width="358" height="20" rx="4" fill="#e8590c"/>
+<text x="365.6923076923077" y="137" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="end">1,250 m</text>
+<text x="14" y="174" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Curtis and Du Toit 2017, via Conservation Evidence</text>
+<text x="14" y="190" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">(70%).</text>
+</svg>

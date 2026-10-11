@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-label="Bar chart for spruce grouse. Gut length in winter is about 40 percent longer than in summer. In the snow season, conifer needles make up 99 percent of the diet. Alberta study by Pendergast and Boag, 1973, 75 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="290" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Summer gut vs winter gut (spruce grouse)</text>
+<text x="20" y="70" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Gut length</text>
+<rect x="20" y="80" width="200" height="26" rx="4" fill="#8a9a6b" stroke="none" stroke-width="0"/>
+<text x="228" y="99" font-size="14" fill="#23261f" text-anchor="start">summer</text>
+<rect x="20" y="112" width="280" height="26" rx="4" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="308" y="131" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">winter, +40%</text>
+<text x="20" y="175" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Snow season diet</text>
+<rect x="20" y="185" width="360" height="26" rx="4" fill="#e5e5e5" stroke="none" stroke-width="0"/>
+<rect x="20" y="185" width="356" height="26" rx="4" fill="#2f3a2b" stroke="none" stroke-width="0"/>
+<text x="200" y="204" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Conifer needles: 99%</text>
+<text x="20" y="248" font-size="14" fill="#23261f" text-anchor="start">Alberta study, Pendergast and Boag 1973 (75%).</text>
+<text x="20" y="266" font-size="14" fill="#23261f" text-anchor="start">A longer gut gets more from tough needles.</text>
+</svg>

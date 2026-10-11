@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 412" role="img" aria-label="Month by month chart. Mule deer: winter range January to March, up in April and May, high in summer, down in October and November. Interior elk: up in May and June, pushed down by autumn snow. Moose stay high longer and drift down in November and December. Interior ducks move north March and April and south September to November. Snow geese on the Fraser delta from October, shift to the Skagit late December, leave in April. Dusky grouse move uphill into conifers in fall.">
+<rect x="0" y="0" width="400" height="412" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Who moves when (shaded: Oct to Nov)</text>
+<text x="29.5" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#6b4f35" text-anchor="middle">J</text>
+<line x1="14" y1="56" x2="14" y2="366" stroke="#e2dccb" stroke-width="1"/>
+<text x="60.5" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#6b4f35" text-anchor="middle">F</text>
+<line x1="45" y1="56" x2="45" y2="366" stroke="#e2dccb" stroke-width="1"/>
+<text x="91.5" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#6b4f35" text-anchor="middle">M</text>
+<line x1="76" y1="56" x2="76" y2="366" stroke="#e2dccb" stroke-width="1"/>
+<text x="122.5" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#6b4f35" text-anchor="middle">A</text>
+<line x1="107" y1="56" x2="107" y2="366" stroke="#e2dccb" stroke-width="1"/>
+<text x="153.5" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#6b4f35" text-anchor="middle">M</text>
+<line x1="138" y1="56" x2="138" y2="366" stroke="#e2dccb" stroke-width="1"/>
+<text x="184.5" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#6b4f35" text-anchor="middle">J</text>
+<line x1="169" y1="56" x2="169" y2="366" stroke="#e2dccb" stroke-width="1"/>
+<text x="215.5" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#6b4f35" text-anchor="middle">J</text>
+<line x1="200" y1="56" x2="200" y2="366" stroke="#e2dccb" stroke-width="1"/>
+<text x="246.5" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#6b4f35" text-anchor="middle">A</text>
+<line x1="231" y1="56" x2="231" y2="366" stroke="#e2dccb" stroke-width="1"/>
+<text x="277.5" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#6b4f35" text-anchor="middle">S</text>
+<line x1="262" y1="56" x2="262" y2="366" stroke="#e2dccb" stroke-width="1"/>
+<text x="308.5" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#6b4f35" text-anchor="middle">O</text>
+<line x1="293" y1="56" x2="293" y2="366" stroke="#e2dccb" stroke-width="1"/>
+<text x="339.5" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#6b4f35" text-anchor="middle">N</text>
+<line x1="324" y1="56" x2="324" y2="366" stroke="#e2dccb" stroke-width="1"/>
+<text x="370.5" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#6b4f35" text-anchor="middle">D</text>
+<line x1="355" y1="56" x2="355" y2="366" stroke="#e2dccb" stroke-width="1"/>
+<rect x="293" y="56" width="62" height="310" fill="#e8590c" opacity=".08"/>
+<text x="14" y="80" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Mule deer</text>
+<rect x="14" y="85" width="93" height="20" rx="4" fill="#8a9a6b"/>
+<text x="60.5" y="100" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">winter</text>
+<rect x="107" y="85" width="62" height="20" rx="4" fill="#4a7fb0"/>
+<text x="138.0" y="100" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">up</text>
+<rect x="169" y="85" width="124" height="20" rx="4" fill="#2f3a2b"/>
+<text x="231.0" y="100" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">summer high</text>
+<rect x="293" y="85" width="62" height="20" rx="4" fill="#e8590c"/>
+<text x="324.0" y="100" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">down</text>
+<rect x="355" y="85" width="31" height="20" rx="4" fill="#8a9a6b"/>
+<text x="14" y="130" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Elk (Interior)</text>
+<rect x="14" y="135" width="124" height="20" rx="4" fill="#8a9a6b"/>
+<text x="76.0" y="150" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">winter</text>
+<rect x="138" y="135" width="62" height="20" rx="4" fill="#4a7fb0"/>
+<text x="169.0" y="150" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">up</text>
+<rect x="200" y="135" width="93" height="20" rx="4" fill="#2f3a2b"/>
+<text x="246.5" y="150" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">high</text>
+<rect x="293" y="135" width="62" height="20" rx="4" fill="#e8590c"/>
+<text x="324.0" y="150" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">snow push</text>
+<rect x="355" y="135" width="31" height="20" rx="4" fill="#8a9a6b"/>
+<text x="14" y="180" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Moose</text>
+<rect x="14" y="185" width="93" height="20" rx="4" fill="#8a9a6b"/>
+<text x="60.5" y="200" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">valleys</text>
+<rect x="138" y="185" width="186" height="20" rx="4" fill="#2f3a2b"/>
+<text x="231.0" y="200" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">high, longer</text>
+<rect x="324" y="185" width="62" height="20" rx="4" fill="#e8590c"/>
+<text x="355.0" y="200" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">drift down</text>
+<text x="14" y="230" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Ducks (Interior)</text>
+<rect x="76" y="235" width="62" height="20" rx="4" fill="#4a7fb0"/>
+<text x="107.0" y="250" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">north</text>
+<rect x="262" y="235" width="93" height="20" rx="4" fill="#e8590c"/>
+<text x="308.5" y="250" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">south, freeze up</text>
+<text x="14" y="280" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Snow geese (coast)</text>
+<rect x="14" y="285" width="62" height="20" rx="4" fill="#8a9a6b"/>
+<text x="45.0" y="300" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Skagit</text>
+<rect x="76" y="285" width="62" height="20" rx="4" fill="#4a7fb0"/>
+<text x="107.0" y="300" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">leave Apr</text>
+<rect x="293" y="285" width="93" height="20" rx="4" fill="#e8590c"/>
+<text x="339.5" y="300" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Fraser delta</text>
+<text x="14" y="330" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Dusky grouse</text>
+<rect x="107" y="335" width="124" height="20" rx="4" fill="#8a9a6b"/>
+<text x="169.0" y="350" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">open breeding</text>
+<rect x="231" y="335" width="93" height="20" rx="4" fill="#e8590c"/>
+<text x="277.5" y="350" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">uphill</text>
+<rect x="324" y="335" width="62" height="20" rx="4" fill="#2f3a2b"/>
+<text x="355.0" y="350" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">conifers</text>
+<text x="14" y="390" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">General pattern from data/migration.json, 55 to 85%.</text>
+<text x="14" y="406" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Your hill varies.</text>
+</svg>

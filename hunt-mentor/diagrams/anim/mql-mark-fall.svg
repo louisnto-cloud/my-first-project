@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation. A quail is hit and falls into brush. You keep your eyes on the spot where it fell, drop your orange hat where you stood, and walk straight to the spot before shooting at any other bird. Missouri Conservation Department tip, 60 percent. Retrieval is the law: all reasonable effort to find it, 99 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Mark the fall</text>
+<rect x="0" y="40" width="400" height="200" rx="8" fill="#dfe6d3"/>
+<ellipse cx="300" cy="200" rx="80" ry="30" fill="#8a9a6b"/>
+<g transform="translate(80 210)"><circle r="10" fill="#e8590c"/><text x="0" y="-16" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">You</text></g>
+<circle r="7" fill="#7d7f86"><animate attributeName="cx" values="150;260;300;300" keyTimes="0;.3;.45;1" dur="10s" fill="freeze"/><animate attributeName="cy" values="70;60;196;196" keyTimes="0;.3;.45;1" dur="10s" fill="freeze"/></circle>
+<g opacity="0"><set attributeName="opacity" to="1" begin="4.5s"/><line x1="80" y1="210" x2="300" y2="196" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6"/><text x="300" y="172" font-size="20" font-weight="bold" fill="#a33b2a" text-anchor="middle">X</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="6s"/><rect x="66" y="222" width="28" height="10" fill="#e8590c"/><text x="80" y="230" font-size="14" fill="#2f3a2b" text-anchor="middle"></text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="7s"/><g><g transform="translate(0 0)"><circle r="10" fill="#e8590c"/><text x="0" y="-16" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle"></text></g><animateTransform attributeName="transform" type="translate" values="80 210;290 198" begin="7s" dur="2.5s" fill="freeze"/></g></g>
+<rect x="10" y="250" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="273" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Bird falls. Eyes stay on the spot.</text>
+<g opacity="0"><set attributeName="opacity" to="1" begin="6s"/><rect x="10" y="250" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="273" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Drop your hat where you stood</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="8s"/><rect x="10" y="250" width="380" height="34" rx="8" fill="#e8590c"/><text x="200" y="273" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Walk straight to it. No second bird first.</text></g>
+</svg>

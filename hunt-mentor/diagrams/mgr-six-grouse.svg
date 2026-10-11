@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" role="img" aria-label="Six cards of the BC grouse you can hunt, each with a simple bird shape, its home habitat and its weight. Ruffed grouse: aspen and creek edges, 450 to 750 grams. Spruce grouse: pine and spruce, 450 to 750 grams. Dusky grouse: interior fir ridges, 0.9 to 1.6 kilograms. Sooty grouse: coast conifers, the coast twin of the dusky. Sharp tailed grouse: grass and aspen, 0.6 to 1 kilogram. Ptarmigan, three kinds: above the treeline, 350 to 800 grams." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="440" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">BC&#x27;s huntable grouse</text>
+<rect x="10" y="42" width="185" height="124" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<g transform="translate(110 84) scale(0.95 0.95)"><polygon points="-20,-6 -38,-20 -48,-12 -52,0 -48,8 -20,8" fill="#6b4f35"/><path d="M-40 -18 Q-50 -10 -48 6" fill="none" stroke="#23261f" stroke-width="3"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#9a6b45"/><circle cx="21" cy="-14" r="8" fill="#9a6b45"/><polygon points="16,-20 20,-28 25,-20" fill="#9a6b45"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<text x="18" y="126" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Ruffed grouse</text>
+<text x="18" y="144" font-size="14" fill="#23261f" text-anchor="start">Aspen, creek edges</text>
+<text x="18" y="160" font-size="14" fill="#6b4f35" text-anchor="start">450 to 750 g</text>
+<rect x="205" y="42" width="185" height="124" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<g transform="translate(305 84) scale(0.95 0.95)"><polygon points="-22,-4 -36,-8 -36,4 -22,6" fill="#23261f"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#3d3a35"/><circle cx="21" cy="-14" r="8" fill="#3d3a35"/><path d="M18 -20 q5 -5 10 0" fill="none" stroke="#c23b22" stroke-width="3"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<text x="213" y="126" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Spruce grouse</text>
+<text x="213" y="144" font-size="14" fill="#23261f" text-anchor="start">Pine and spruce</text>
+<text x="213" y="160" font-size="14" fill="#6b4f35" text-anchor="start">450 to 750 g</text>
+<rect x="10" y="174" width="185" height="124" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<g transform="translate(110 216) scale(0.95 0.95)"><polygon points="-22,-4 -50,-10 -50,4 -22,7" fill="#23261f"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#5d6670"/><circle cx="21" cy="-14" r="8" fill="#5d6670"/><path d="M18 -20 q5 -5 10 0" fill="none" stroke="#e3a21a" stroke-width="3"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<text x="18" y="258" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Dusky grouse</text>
+<text x="18" y="276" font-size="14" fill="#23261f" text-anchor="start">Interior fir ridges</text>
+<text x="18" y="292" font-size="14" fill="#6b4f35" text-anchor="start">0.9 to 1.6 kg</text>
+<rect x="205" y="174" width="185" height="124" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<g transform="translate(305 216) scale(0.95 0.95)"><polygon points="-22,-4 -50,-10 -50,4 -22,7" fill="#23261f"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#4f5660"/><circle cx="21" cy="-14" r="8" fill="#4f5660"/><path d="M18 -20 q5 -5 10 0" fill="none" stroke="#e3a21a" stroke-width="3"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<text x="213" y="258" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Sooty grouse</text>
+<text x="213" y="276" font-size="14" fill="#23261f" text-anchor="start">Coast conifers</text>
+<text x="213" y="292" font-size="14" fill="#6b4f35" text-anchor="start">Coast twin of dusky</text>
+<rect x="10" y="306" width="185" height="124" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<g transform="translate(110 348) scale(0.95 0.95)"><polygon points="-22,-3 -48,-2 -22,6" fill="#6b4f35"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#b89a74"/><circle cx="21" cy="-14" r="8" fill="#b89a74"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<text x="18" y="390" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Sharp tailed</text>
+<text x="18" y="408" font-size="14" fill="#23261f" text-anchor="start">Grass and aspen</text>
+<text x="18" y="424" font-size="14" fill="#6b4f35" text-anchor="start">0.6 to 1 kg</text>
+<rect x="205" y="306" width="185" height="124" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<g transform="translate(305 348) scale(0.95 0.95)"><polygon points="-22,-4 -36,-8 -36,4 -22,6" fill="#9aa0a6"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#e9e6df"/><circle cx="21" cy="-14" r="8" fill="#e9e6df"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<text x="213" y="390" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Ptarmigan (3 kinds)</text>
+<text x="213" y="408" font-size="14" fill="#23261f" text-anchor="start">Above the treeline</text>
+<text x="213" y="424" font-size="14" fill="#6b4f35" text-anchor="start">350 to 800 g</text>
+</svg>

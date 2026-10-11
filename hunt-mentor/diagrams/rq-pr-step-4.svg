@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 4: Pick the trail between. A saddle or draw between pressure and refuge.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">4</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Pick the trail between</text>
+<path d="M60 220 Q 200 120 340 140" stroke="#8b5a2b" stroke-width="4" stroke-dasharray="7 6" fill="none"/><g transform="translate(200 160) scale(1.0)"><circle cy="-14" r="6" fill="#e8590c"/><rect x="-6" y="-8" width="12" height="16" rx="3" fill="#e8590c"/><rect x="-5" y="8" width="4" height="10" fill="#2f3a2b"/><rect x="1" y="8" width="4" height="10" fill="#2f3a2b"/><text x="0" y="-26" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e8590c" text-anchor="middle">You</text></g><text x="80" y="240" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">pressure</text><text x="330" y="170" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">refuge</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">A saddle or draw between pressure and refuge.</text>
+</svg>

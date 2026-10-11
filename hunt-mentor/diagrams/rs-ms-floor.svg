@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A print cut in half from the side. The top edge is wider because mud and snow push the rim out. Measure the floor of the print instead.">
+<rect x="0" y="0" width="400" height="300" rx="0" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Measure the floor, not the rim</text>
+<path d="M20 120 H120 Q130 120 136 140 L150 200 H250 L264 140 Q270 120 280 120 H380 V250 H20 Z" fill="#c9b79c" stroke="#6b4f35" stroke-width="2"/><line x1="136" y1="108" x2="264" y2="108" stroke="#c62828" stroke-width="3"/><text x="200" y="98" font-size="15" font-weight="bold" fill="#c62828" text-anchor="middle">Top edge: too big</text><line x1="152" y1="194" x2="248" y2="194" stroke="#e8590c" stroke-width="4"/><text x="200" y="240" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Floor: measure here</text><text x="200" y="280" font-size="15" fill="#23261f" text-anchor="middle">Mud and snow push the rim out</text>
+</svg>

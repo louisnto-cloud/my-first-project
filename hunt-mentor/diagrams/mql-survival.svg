@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Bar chart from an early California banding study, 60 percent, search preview. Of 101 quail banded, 52 were known alive at 6 months, 15 at 1 year, 4 at 2 years and 1 at 3 years. Lesson: most quail in a fall covey are young of the year.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Few quail live long (early banding study)</text>
+<line x1="60" y1="240" x2="380" y2="240" stroke="#2f3a2b" stroke-width="2"/>
+<line x1="60" y1="50" x2="60" y2="240" stroke="#2f3a2b" stroke-width="2"/>
+<rect x="80" y="68.30000000000001" width="44" height="171.7" rx="3" fill="#e8590c"/>
+<text x="102" y="62.30000000000001" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">101</text>
+<text x="102" y="258" font-size="14" fill="#2f3a2b" text-anchor="middle">start</text>
+<rect x="142" y="151.60000000000002" width="44" height="88.39999999999999" rx="3" fill="#8a9a6b"/>
+<text x="164" y="145.60000000000002" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">52</text>
+<text x="164" y="258" font-size="14" fill="#2f3a2b" text-anchor="middle">6 mo</text>
+<rect x="204" y="214.5" width="44" height="25.5" rx="3" fill="#8a9a6b"/>
+<text x="226" y="208.5" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">15</text>
+<text x="226" y="258" font-size="14" fill="#2f3a2b" text-anchor="middle">1 yr</text>
+<rect x="266" y="233.2" width="44" height="6.8" rx="3" fill="#8a9a6b"/>
+<text x="288" y="227.2" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4</text>
+<text x="288" y="258" font-size="14" fill="#2f3a2b" text-anchor="middle">2 yr</text>
+<rect x="328" y="238.3" width="44" height="1.7" rx="3" fill="#8a9a6b"/>
+<text x="350" y="232.3" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1</text>
+<text x="350" y="258" font-size="14" fill="#2f3a2b" text-anchor="middle">3 yr</text>
+<text x="220" y="282" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">101 birds banded: how many were still seen (60%)</text>
+</svg>

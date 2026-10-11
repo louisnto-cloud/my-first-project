@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, top view. After a flush, single quail sit in four patches of brush and give the chi CA go assembly call to regroup. You walk toward the nearest calling bird. The single holds tight, then flushes close in front of you. Washington Fish and Wildlife and bird guides, 70 to 75 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hunting the singles after a scatter</text>
+<rect x="0" y="40" width="400" height="200" rx="8" fill="#dfe6d3"/>
+<ellipse cx="90" cy="80" rx="36" ry="20" fill="#8a9a6b"/>
+<ellipse cx="300" cy="70" rx="36" ry="20" fill="#8a9a6b"/>
+<ellipse cx="330" cy="190" rx="36" ry="20" fill="#8a9a6b"/>
+<ellipse cx="150" cy="200" rx="36" ry="20" fill="#8a9a6b"/>
+<g><g transform="translate(0 0)"><circle r="10" fill="#e8590c"/><text x="0" y="-16" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">You</text></g><animateTransform attributeName="transform" type="translate" values="200 220;200 220;270 100;270 100" keyTimes="0;.35;.75;1" dur="10s" fill="freeze"/></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.0s"/><set attributeName="opacity" to="0" begin="2.6s"/><text x="90" y="54" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">chi CA go</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.6s"/><set attributeName="opacity" to="0" begin="3.2s"/><text x="300" y="44" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">chi CA go</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="2.2s"/><set attributeName="opacity" to="0" begin="3.8s"/><text x="330" y="164" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">chi CA go</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="2.8s"/><set attributeName="opacity" to="0" begin="4.4s"/><text x="150" y="174" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">chi CA go</text></g>
+<circle r="7" fill="#7d7f86" opacity="0"><set attributeName="opacity" to="1" begin="7.6s"/><animate attributeName="cx" values="300;380" begin="7.6s" dur="1.2s" fill="freeze"/><animate attributeName="cy" values="70;46" begin="7.6s" dur="1.2s" fill="freeze"/></circle>
+<rect x="10" y="250" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="273" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Scattered singles call to regroup</text>
+<g opacity="0"><set attributeName="opacity" to="1" begin="3.6s"/><rect x="10" y="250" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="273" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Walk to the nearest calling bird</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="7.6s"/><rect x="10" y="250" width="380" height="34" rx="8" fill="#e8590c"/><text x="200" y="273" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Singles hold tight, then flush close</text></g>
+</svg>

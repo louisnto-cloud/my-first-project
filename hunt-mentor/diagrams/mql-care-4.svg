@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Bird care step 4: in the cooler on ice for the drive home, then cook to 74 degrees Celsius, 165 Fahrenheit, inside, USDA poultry guidance, 90 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bird care: 4 Ice, then cook to 74 °C</text>
+<rect x="10" y="40" width="380" height="196" rx="8" fill="#dfe6d3"/>
+<rect x="110" y="80" width="180" height="120" rx="8" fill="#4a7fb0"/>
+<rect x="110" y="80" width="180" height="26" rx="8" fill="#2f5f8a"/>
+<text x="200" y="150" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">cooler + ice</text>
+<rect x="300" y="90" width="30" height="100" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2"/>
+<rect x="309" y="120" width="12" height="62" fill="#c0392b"/>
+<text x="315" y="212" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">74 °C</text>
+<rect x="10" y="246" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="269" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Cook to 74 °C inside (90%)</text>
+</svg>

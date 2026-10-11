@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 345" role="img" aria-label="A ladder of five boxes: freezing days add up, snow covers fields, shallow water ices over, food is locked away, dabbling ducks move south or to open water. Based on a Missouri weather severity index study.">
+<rect x="0" y="0" width="400" height="345" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Ducks leave when cold stacks up</text>
+<rect x="40" y="46" width="320" height="38" rx="8" fill="#4a7fb0" stroke="#4a7fb0" stroke-width="2"/>
+<text x="200" y="71" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Days at or below 0 C add up</text>
+<g><line x1="200" y1="84" x2="200" y2="95" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round"/><polygon points="200.0,95.0 197.4,89.6 202.6,89.6" fill="#2f3a2b"/></g>
+<rect x="40" y="96" width="320" height="38" rx="8" fill="#4a7fb0" stroke="#4a7fb0" stroke-width="2"/>
+<text x="200" y="121" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Snow covers fields</text>
+<g><line x1="200" y1="134" x2="200" y2="145" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round"/><polygon points="200.0,145.0 197.4,139.6 202.6,139.6" fill="#2f3a2b"/></g>
+<rect x="40" y="146" width="320" height="38" rx="8" fill="#4a7fb0" stroke="#4a7fb0" stroke-width="2"/>
+<text x="200" y="171" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Shallow water ices over</text>
+<g><line x1="200" y1="184" x2="200" y2="195" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round"/><polygon points="200.0,195.0 197.4,189.6 202.6,189.6" fill="#2f3a2b"/></g>
+<rect x="40" y="196" width="320" height="38" rx="8" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200" y="221" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Food is locked away</text>
+<g><line x1="200" y1="234" x2="200" y2="245" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round"/><polygon points="200.0,245.0 197.4,239.6 202.6,239.6" fill="#2f3a2b"/></g>
+<rect x="40" y="246" width="320" height="38" rx="8" fill="#e8590c" stroke="#e8590c" stroke-width="2"/>
+<text x="200" y="271" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Dabblers move south or to open water</text>
+<text x="14" y="312" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Missouri study 1995 to 2005: a cumulative weather</text>
+<text x="14" y="328" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">severity index best explained duck numbers (75%).</text>
+</svg>

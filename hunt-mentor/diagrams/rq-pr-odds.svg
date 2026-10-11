@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 302" role="img" aria-label="Bar chart from a Pennsylvania public land study. 73 percent of hunters were within half a kilometre of a road. The average farthest point from a road was 0.84 kilometres. Each kilometre closer to a road made an area about 3 times more likely to be hunted, and each 10 degrees flatter, 1.25 times.">
+<rect x="0" y="0" width="400" height="302" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Who hunts where (Pennsylvania aerial survey)</text>
+<text x="14" y="64" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Hunters within 0.5 km of a road</text>
+<rect x="14" y="70" width="272" height="20" rx="4" fill="#e8590c"/>
+<text x="291.56" y="85" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">73%</text>
+<text x="14" y="116" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Average farthest distance walked from road</text>
+<rect x="14" y="122" width="312" height="20" rx="4" fill="#6b4f35"/>
+<text x="320.48" y="137" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="end">0.84 km</text>
+<text x="14" y="168" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Each 1 km closer to a road</text>
+<rect x="14" y="174" width="372" height="20" rx="4" fill="#2f3a2b"/>
+<text x="380.0" y="189" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="end">about 3 times more hunters</text>
+<text x="14" y="220" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Each 10 degrees flatter</text>
+<rect x="14" y="226" width="156" height="20" rx="4" fill="#8a9a6b"/>
+<text x="176.24" y="241" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">1.25 times more hunters</text>
+<text x="14" y="278" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Luloff and others 2004, Penn State, read directly</text>
+<text x="14" y="294" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">(90% for Pennsylvania).</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Chart of a quail flight. White breast muscle, 70 percent: a fast burst on whirring wings, then a glide, then the bird lands and runs. Most flights are short, so mark where the bird lands. White fibres are fast but have little staying power, from poultry anatomy, 70 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">White muscle: burst, glide, land, run</text>
+<rect x="10" y="40" width="380" height="170" rx="8" fill="#dfe6d3"/>
+<path d="M30 190 Q70 80 150 80 L290 120 Q320 150 330 180" fill="none" stroke="#2f3a2b" stroke-width="3" stroke-dasharray="8 5"/>
+<g transform="translate(30 182) scale(0.9 0.9)"><ellipse cx="0" cy="0" rx="20" ry="13" fill="#7d7f86"/><path d="M-18 -2 L-28 -6 L-26 4 Z" fill="#5f6168"/><ellipse cx="-2" cy="6" rx="14" ry="6" fill="#c9b48a"/><path d="M-10 4 l3 3 M-4 4 l3 3 M2 4 l3 3 M8 4 l3 3" stroke="#5f6168" stroke-width="1.5"/><path d="M-12 -4 l14 -2 M-12 0 l14 -2" stroke="#fffaf0" stroke-width="1.5"/><circle cx="16" cy="-12" r="8" fill="#7d7f86"/><path d="M14 -10 a7 7 0 0 0 9 6 L22 -2 a9 9 0 0 1 -9 -8 Z" fill="#111"/><path d="M12 -9 q4 9 12 6" stroke="#fffaf0" stroke-width="1.5" fill="none"/><path d="M14 -19 q-2 -10 8 -9 q-4 1 -5 9 Z" fill="#111"/><circle cx="19" cy="-13" r="1.6" fill="#111"/><path d="M23 -12 l4 1 l-4 2 Z" fill="#333"/><path d="M2 12 l-2 8 M8 12 l2 8" stroke="#6b4f35" stroke-width="2"/></g>
+<g transform="translate(330 172) scale(0.9 0.9)"><ellipse cx="0" cy="0" rx="20" ry="13" fill="#7d7f86"/><path d="M-18 -2 L-28 -6 L-26 4 Z" fill="#5f6168"/><ellipse cx="-2" cy="6" rx="14" ry="6" fill="#c9b48a"/><path d="M-10 4 l3 3 M-4 4 l3 3 M2 4 l3 3 M8 4 l3 3" stroke="#5f6168" stroke-width="1.5"/><path d="M-12 -4 l14 -2 M-12 0 l14 -2" stroke="#fffaf0" stroke-width="1.5"/><circle cx="16" cy="-12" r="8" fill="#7d7f86"/><path d="M14 -10 a7 7 0 0 0 9 6 L22 -2 a9 9 0 0 1 -9 -8 Z" fill="#111"/><path d="M12 -9 q4 9 12 6" stroke="#fffaf0" stroke-width="1.5" fill="none"/><path d="M14 -19 q-2 -10 8 -9 q-4 1 -5 9 Z" fill="#111"/><circle cx="19" cy="-13" r="1.6" fill="#111"/><path d="M23 -12 l4 1 l-4 2 Z" fill="#333"/><path d="M2 12 l-2 8 M8 12 l2 8" stroke="#6b4f35" stroke-width="2"/></g>
+<text x="70" y="120" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">BURST</text>
+<text x="70" y="138" font-size="14" fill="#2f3a2b" text-anchor="middle">whirring</text>
+<text x="220" y="72" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="middle">GLIDE</text>
+<text x="340" y="120" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">LAND</text>
+<line x1="330" y1="192" x2="384" y2="192" stroke="#2f3a2b" stroke-width="3"/><polygon points="384,192 375.0,196.3 375.0,187.7" fill="#2f3a2b"/>
+<text x="350" y="206" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">run</text>
+<text x="200" y="236" font-size="14" fill="#2f3a2b" text-anchor="middle">White fibres: fast, short, little staying power (70%)</text>
+<text x="200" y="258" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Most flights are short (75%)</text>
+<text x="200" y="282" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">So: mark where it lands, then go (Tip)</text>
+</svg>

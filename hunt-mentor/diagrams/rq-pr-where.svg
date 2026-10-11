@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" role="img" aria-label="Four cards: pushed game goes to thick cover, steep and far ground beyond one kilometre from roads, land closed to hunting, and into the night.">
+<rect x="0" y="0" width="400" height="320" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Where pushed game goes</text>
+<rect x="10" y="40" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<g><polygon points="28.1,88 40,54 51.9,88" fill="#2f3a2b"/><rect x="38" y="88" width="4" height="6.800000000000001" fill="#6b4f35"/></g><g><polygon points="42.9,90 52,64 61.1,90" fill="#2f3a2b"/><rect x="50" y="90" width="4" height="5.2" fill="#6b4f35"/></g>
+<text x="70" y="70" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Thick cover</text>
+<text x="20" y="114" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Timber, dense brush,</text>
+<text x="20" y="131" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">dark draws (Tip).</text>
+<rect x="204" y="40" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<path d="M216 90 L234 58 L252 90 Z" fill="#8a9a6b"/>
+<text x="264" y="70" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Steep and far</text>
+<text x="214" y="114" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Past 1 km, up the steep</text>
+<text x="214" y="131" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">side (Tip).</text>
+<rect x="10" y="176" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<g transform="translate(40 216) scale(1.2)"><rect x="-10" y="-10" width="20" height="14" fill="#6b4f35"/><polygon points="-13,-10 0,-21 13,-10" fill="#e8590c"/></g>
+<text x="70" y="206" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">No hunting</text>
+<text x="70" y="224" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">land</text>
+<text x="20" y="250" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Private or closed areas</text>
+<text x="20" y="267" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">(80% elk).</text>
+<rect x="204" y="176" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<g><circle cx="234" cy="210" r="14" fill="#2f3a2b" stroke="#23261f" stroke-width="1.5"/><path d="M234 196 A 14 14 0 0 1 234 224 Z" fill="#f4e7b8"/></g>
+<text x="264" y="206" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Night</text>
+<text x="214" y="250" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">They wait for dark</text>
+<text x="214" y="267" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">(65%).</text>
+</svg>

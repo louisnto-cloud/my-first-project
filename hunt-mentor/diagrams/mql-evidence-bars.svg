@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Evidence bars for weather claims. Hot dry weather, quail need water daily: 80 percent. Storms, they feed in the breaks: 70 percent. A hawk about, they may skip the afternoon feed: 70 percent. Wind, gray partridge shelter in lee cover: 60 percent. Cold fronts and barometric pressure moving birds: no good data, a Tip only. Moon phase: no good data, a Tip only.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Weather and the day: how sure?</text>
+<text x="222" y="63" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Hot dry day: drink daily</text>
+<rect x="230" y="44" width="150" height="26" rx="4" fill="#efe9dc"/>
+<rect x="230" y="44" width="120.0" height="26" rx="4" fill="#e8590c"/>
+<text x="236" y="63" font-size="14" font-weight="bold" fill="#fff" text-anchor="start">80%</text>
+<text x="222" y="101" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Storm: feed in the breaks</text>
+<rect x="230" y="82" width="150" height="26" rx="4" fill="#efe9dc"/>
+<rect x="230" y="82" width="105.0" height="26" rx="4" fill="#8b5a2b"/>
+<text x="236" y="101" font-size="14" font-weight="bold" fill="#fff" text-anchor="start">70%</text>
+<text x="222" y="139" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Hawk about: skip a meal</text>
+<rect x="230" y="120" width="150" height="26" rx="4" fill="#efe9dc"/>
+<rect x="230" y="120" width="105.0" height="26" rx="4" fill="#8b5a2b"/>
+<text x="236" y="139" font-size="14" font-weight="bold" fill="#fff" text-anchor="start">70%</text>
+<text x="222" y="177" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Windy: hide in lee cover</text>
+<rect x="230" y="158" width="150" height="26" rx="4" fill="#efe9dc"/>
+<rect x="230" y="158" width="90.0" height="26" rx="4" fill="#8a9a6b"/>
+<text x="236" y="177" font-size="14" font-weight="bold" fill="#fff" text-anchor="start">60%</text>
+<text x="222" y="215" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Cold front: moves birds?</text>
+<rect x="230" y="196" width="150" height="26" rx="4" fill="#efe9dc"/>
+<text x="236" y="215" font-size="14" font-weight="bold" fill="#a33b2a" text-anchor="start">no good data: Tip</text>
+<text x="222" y="253" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Moon phase: matters?</text>
+<rect x="230" y="234" width="150" height="26" rx="4" fill="#efe9dc"/>
+<text x="236" y="253" font-size="14" font-weight="bold" fill="#a33b2a" text-anchor="start">no good data: Tip</text>
+<text x="200" y="290" font-size="14" fill="#2f3a2b" text-anchor="middle">Windy row: Huns, Washington data</text>
+</svg>

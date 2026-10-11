@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Stack of Hunt Map layer cards for a quail trip. California quail habitat, 60 percent general pattern. Private land: ask first. City and town limits: bylaws. Reserves: permission from the Nation. Parks and protected areas. Wildlife Management Areas. Management Units. Download area C, South Okanagan and Similkameen.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hunt Map: Layers for a quail trip</text>
+<rect x="20" y="40" width="360" height="30" rx="8" fill="#fff" stroke="#e8590c" stroke-width="2"/>
+<rect x="28" y="47" width="16" height="16" rx="3" fill="#e8590c"/>
+<text x="56" y="61" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">California quail habitat (60%)</text>
+<rect x="24" y="74" width="352" height="30" rx="8" fill="#fff" stroke="#e4472b" stroke-width="2"/>
+<rect x="32" y="81" width="16" height="16" rx="3" fill="#e4472b"/>
+<text x="60" y="95" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Private land: ask first</text>
+<rect x="28" y="108" width="344" height="30" rx="8" fill="#fff" stroke="#78909c" stroke-width="2"/>
+<rect x="36" y="115" width="16" height="16" rx="3" fill="#78909c"/>
+<text x="64" y="129" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">City and town limits: bylaws</text>
+<rect x="32" y="142" width="336" height="30" rx="8" fill="#fff" stroke="#8e5bb5" stroke-width="2"/>
+<rect x="40" y="149" width="16" height="16" rx="3" fill="#8e5bb5"/>
+<text x="68" y="163" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Reserves: permission from the Nation</text>
+<rect x="36" y="176" width="328" height="30" rx="8" fill="#fff" stroke="#3f8f3a" stroke-width="2"/>
+<rect x="44" y="183" width="16" height="16" rx="3" fill="#3f8f3a"/>
+<text x="72" y="197" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Parks and protected areas</text>
+<rect x="40" y="210" width="320" height="30" rx="8" fill="#fff" stroke="#6b8e23" stroke-width="2"/>
+<rect x="48" y="217" width="16" height="16" rx="3" fill="#6b8e23"/>
+<text x="76" y="231" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Wildlife Management Areas</text>
+<rect x="44" y="244" width="312" height="30" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2"/>
+<rect x="52" y="251" width="16" height="16" rx="3" fill="#2f3a2b"/>
+<text x="80" y="265" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Management Units (MU)</text>
+<text x="200" y="292" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Download area C first (Tip)</text>
+</svg>

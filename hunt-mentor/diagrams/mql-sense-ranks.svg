@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Bar chart of how much each sense matters to a quail. Eyes: strongest, wide field and four colour cones, 70 to 85 percent. Ears: strong, best range about 1 to 4 kilohertz, 75 percent. Nose: weak in fowl, 70 percent. The covey adds many eyes and a sentinel on a high perch, 70 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Which sense does a quail trust?</text>
+<text x="90" y="76" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">Eyes</text>
+<rect x="100" y="58" width="270" height="26" rx="5" fill="#e8590c"/>
+<text x="380" y="76" font-size="14" fill="#2f3a2b" text-anchor="middle"></text>
+<text x="90" y="122" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">Ears</text>
+<rect x="100" y="104" width="220" height="26" rx="5" fill="#4a7fb0"/>
+<text x="90" y="168" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">Nose</text>
+<rect x="100" y="150" width="50" height="26" rx="5" fill="#8a9a6b"/>
+<text x="160" y="168" font-size="14" fill="#2f3a2b" text-anchor="start">weak (70%)</text>
+<text x="235" y="76" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">strongest (70 to 85%)</text>
+<text x="210" y="122" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">strong (75%)</text>
+<rect x="10" y="196" width="380" height="94" rx="8" fill="#dfe6d3"/>
+<text x="200" y="222" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Plus the covey: many eyes at once,</text>
+<text x="200" y="244" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">and a sentinel on a high perch (70%)</text>
+<text x="200" y="270" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Beat the eyes first. Then the ears. (Tip)</text>
+</svg>

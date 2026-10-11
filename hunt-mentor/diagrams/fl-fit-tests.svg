@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 190" role="img" aria-label="Three field tests: a 2 hour hill hike with your hunting pack, getting up from the ground with your pack on, and arriving at the shot calm enough to hold steady.">
+  <rect x="0" y="0" width="400" height="190" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Three tests before the hunt</text>
+<rect x="10.0" y="50" width="120.0" height="120" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<polygon points="35.0,111.80000000000001 70.0,67.80000000000001 105.0,111.80000000000001" fill="#8a9a6b"/><rect x="87.9" y="87.30000000000001" width="16.2" height="22.5" rx="3.6" fill="#8b5a2b"/><rect x="90.6" y="91.80000000000001" width="10.8" height="6.3" rx="1.8" fill="#6b4f35"/><rect x="86.1" y="103.50000000000001" width="19.8" height="3.6" rx="1.35" fill="#2f3a2b"/>
+<text x="70.0" y="140" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hill hike</text>
+<text x="70.0" y="159" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">2 h, your pack</text>
+<rect x="140.0" y="50" width="120.0" height="120" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="189.0" y="92.9" width="9.9" height="18.700000000000003" rx="2.75" fill="#8b5a2b"/>
+<circle cx="200.0" cy="86.30000000000001" r="4.95" fill="#2f3a2b"/>
+<line x1="200.0" y1="91.25000000000001" x2="200.0" y2="109.4" stroke="#2f3a2b" stroke-width="3.3000000000000003" stroke-linecap="round"/>
+<line x1="200.0" y1="109.4" x2="195.05" y2="123.70000000000002" stroke="#2f3a2b" stroke-width="2.75" stroke-linecap="round"/>
+<line x1="200.0" y1="109.4" x2="204.95" y2="123.70000000000002" stroke="#2f3a2b" stroke-width="2.75" stroke-linecap="round"/>
+<line x1="200.0" y1="95.10000000000001" x2="193.95" y2="105.00000000000001" stroke="#2f3a2b" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="200.0" y1="95.10000000000001" x2="206.05" y2="105.00000000000001" stroke="#2f3a2b" stroke-width="2.2" stroke-linecap="round"/>
+<text x="200.0" y="140" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Get up</text>
+<text x="200.0" y="159" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">from the ground</text>
+<rect x="270.0" y="50" width="120.0" height="120" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="330.0" cy="91.80000000000001" r="20" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><circle cx="330.0" cy="91.80000000000001" r="6" fill="#e8590c"/>
+<text x="330.0" y="140" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Steady shot</text>
+<text x="330.0" y="159" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">after a climb</text>
+</svg>
