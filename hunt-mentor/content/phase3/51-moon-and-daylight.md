@@ -117,8 +117,8 @@ checked: 2026-10-11
 
 - The moon changes nothing: no hunting outside these hours, and no light of any kind to hunt by (99%, page 11, items 37 and 38).
 - Sunrise and sunset: the synopsis names the [National Research Council calculator](https://nrc-cnrc.gc.ca/eng/services/sunrise/index.html) or a local newspaper (99%).
-- Assumption: clocks fall back 1 hour on 1 November 2026. VERIFY. Legal hours follow the sun, so a clock change moves the numbers on your watch, not the rule.
-- Heffley Creek windows (my calculation, 85%): 15 October 6:22 to 19:11; 31 October 6:49 to 18:39; 1 November 5:51 to 17:38 if clocks fall back; 30 November 6:39 to 17:00. Ducks: 30 minutes less at each end.
+- BC no longer changes clocks: the 8 March 2026 spring forward was the last change, so there is no fall back on 1 November 2026 (95%, BC government news release, 2 March 2026). Legal hours follow the sun, not the clock.
+- Heffley Creek windows (my calculation, 85%): 15 October 6:22 to 19:11; 31 October 6:49 to 18:39; 1 November 6:51 to 18:38; 30 November 7:39 to 18:00 (no clock change). Ducks: 30 minutes less at each end.
 ```
 
 ## Plan around light, not the moon

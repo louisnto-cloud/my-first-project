@@ -99,7 +99,7 @@ photo:hab-lac-du-bois-potholes | Ground: fir patches sit on the ridges.
 ```steps Spur: map, 3D, ground
 rl-lf-spur-topo | Topo: a tongue of Us off the main ridge.
 rl-lf-spur-3d | 3D: a short finger of high ground.
-photo:rl-spurs-finlieve | Ground: spurs drop off a main ridge.
+rl-lf-spur-ground | Ground: lit fingers with dark draws between.
 ```
 
 - A short ridge that runs down off a bigger ridge (90%).
@@ -139,7 +139,7 @@ photo:hab-dogwood-stems | Ground: red osier dogwood fills a wet draw.
 ```steps Saddle: map, 3D, ground
 hf-shape-saddle | Topo: an hourglass between two tops.
 rl-lf-saddle-3d | 3D: a dip in the ridge. Trails cross here.
-photo:rl-col-binnian | Ground: the low notch between two tops.
+rl-lf-saddle-ground | Ground: the low notch between two tops.
 ```
 
 - The low point on a ridge between two higher points (90%).

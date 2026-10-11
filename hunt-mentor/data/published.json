@@ -228,7 +228,16 @@
     "shotgun-mastery",
     "rimfire-22",
     "firearm-care",
-    "optics-mastery"
+    "optics-mastery",
+    "hunt-fitness",
+    "packs-carrying",
+    "fsr-vehicles-radio",
+    "hunting-camp",
+    "hunt-food-water",
+    "hunting-partner",
+    "ethics-fair-chase",
+    "season-planning",
+    "daylight-weather-bc"
   ],
   "flashcards": [
     "quail",
@@ -242,6 +251,7 @@
     "rs",
     "fn",
     "rp",
-    "ff"
+    "ff",
+    "fl"
   ]
 }

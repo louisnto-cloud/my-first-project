@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Map view of a dirt road with two game trails crossing it. Crossing 1 has old tracks. Crossing 2 has fresh tracks from three deer. Caption: drive slow after rain or snow and count crossings.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">The road is a tracking strip</text><text x="388" y="24" font-size="14" fill="#2f3a2b" text-anchor="end">map view</text>
+  <rect x="0" y="36" width="400" height="232" fill="#dfe6d3" opacity=".7"/>
+  <rect x="0" y="130" width="400" height="44" fill="#d9c9a3"/>
+  <path d="M120 36 C 126 90, 116 120, 122 130 M122 174 C 126 200, 110 240, 104 268" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="3 6" fill="none"/>
+  <path d="M280 36 C 286 90, 276 120, 282 130 M282 174 C 270 210, 300 240, 310 268" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="3 6" fill="none"/>
+  <g fill="#8b5a2b"><path d="M116 140 l4 8 l4 -8 Z M120 156 l4 8 l4 -8 Z M276 140 l4 8 l4 -8 Z M280 156 l4 8 l4 -8 Z M286 144 l4 8 l4 -8 Z"/></g>
+  <rect x="14" y="186" width="142" height="24" rx="6" fill="#2f3a2b"/><text x="85.0" y="203" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Crossing 1: old</text><rect x="168" y="226" width="226" height="24" rx="6" fill="#e8590c"/><text x="281.0" y="243" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Crossing 2: fresh, 3 deer</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Drive slow after rain or snow; count crossings</text>
+</svg>

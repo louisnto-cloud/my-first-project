@@ -235,7 +235,7 @@ hab-douglas-fir-stand | Thick Douglas fir: cooler, shadier faces.
 > Pick one valley. Name the aspect of both sides, then say what grows on each and where deer would be at dawn, noon and dusk.
 
 ```checklist rl-sa-field
-Turn on Slope direction and find the south faces in your MU
+Turn on Slope direction and find the south faces in your MU (Management Unit)
 Turn on Slope steepness and find three benches
 Use Sun and shade to see which faces get first light tomorrow
 At first light, glass a sunny east or south face

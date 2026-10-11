@@ -74,6 +74,9 @@ hab-woods-rose-slope | Rose along a dry creek: a brushy strip.
 - **Treeline:** forest meets alpine. Mule deer and elk use it in early fall (70%).
 ```
 
+> [!warn]
+> Study aid only. The official regulations are the law.
+
 ## Shapes on an edge
 
 ```diagram rl-ed-shapes
@@ -248,7 +251,7 @@ Sit 100 to 200 m off the edge with a rest
 - Smith, Managing Edge Habitat, Alabama Cooperative Extension System, 19 September 2022, [web page](https://www.aces.edu/blog/topics/forestry-wildlife/managing-edge-habitat/), read directly, checked 2026-10-11 (75%).
 - Leopold 1933 and the interspersion reading: Oklahoma State University Extension and McConnell, Martin and Burger, search preview, checked 2026-10-11 (70%).
 - Wildlife habitat rating account, Mule deer, BC Ecological Reports Catalogue, 2004, [PDF](https://a100.gov.bc.ca/pub/acat/documents/r1573/whr_4109_modhe_1097078581992_3f7c787cc7c9486aa185bdad7e4c4f53.pdf), read directly, checked 2026-10-11 (85%): cover within 200 m, security cover 60 m and 180 m.
-- California quail cover distance: California Department of Fish and Wildlife life history, as logged in research/2026-10-03-migration-and-areas.md (75%).
+- California quail cover distance: California Department of Fish and Wildlife life history, as logged in `research/2026-10-03-migration-and-areas.md` (75%).
 - Hunt Mentor app layer list (Cutblocks by age, Burns by year, Private land) and black bear area lesson, read 2026-10-11 (99% for the app).
 - Animal edge use: the habitat tour lessons and species lessons (70 to 85%); where to sit is hunter craft (Tip).
 - Photo credits show under each photo. Research log: `research/2026-10-11-rl.md`.

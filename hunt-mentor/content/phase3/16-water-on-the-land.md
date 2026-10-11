@@ -90,7 +90,7 @@ hab-cattail-head | Cattail: marsh from 500 m.
 ```steps Find a spring
 rl-lf-bench-3d | Look at the toe of a bench or slope break.
 rl-wa-green | Look for green in a brown slope.
-hab-elk-tracks-shore | Look for tracks pounded into mud.
+photo:hab-elk-tracks-shore | Look for tracks pounded into mud.
 ```
 
 - Springs often appear where a slope eases: the foot of a bench or a draw head (Tip).

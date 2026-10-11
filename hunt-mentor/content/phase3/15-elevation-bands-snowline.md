@@ -193,7 +193,7 @@ rl-hm-tools | Tools: Elevation profile for any line.
 - Long press a spot and open Insights for zone, height and species (99%, app).
 
 ```more layer names and what they show
-- Habitat zones: the BEC zone of the ground (99%, app layer list).
+- Habitat zones: the BEC (Biogeoclimatic Ecosystem Classification) zone of the ground (99%, app layer list).
 - Mule deer by month, White tailed deer by month, Moose by month, Elk by month, Bighorn sheep by month: general seasonal patterns, not collar data (99%, app layer names).
 - Winter range layers for mule deer, white tails, moose, elk, sheep and goats (99%, app). See [Winter ranges](#/s/winter-range-legal/0) for what they mean.
 - Insights says its likelihood is an estimate based on habitat, never a fact (99%, app).
@@ -228,7 +228,7 @@ Read the height of your truck spot on the Hunt Map
 Log the snowline height on the warm and the cool face
 Turn on Habitat zones and name the band you hunt
 Note frost or fog in the valley at dawn
-Check your height before leaving a road on the ATV
+Check your height before leaving a road on the ATV (All Terrain Vehicle)
 ```
 
 ## Memory hooks
@@ -258,7 +258,7 @@ Check your height before leaving a road on the ATV
 
 ## Sources
 
-- Meidinger and Pojar 1991, Ecosystems of British Columbia, BC Ministry of Forests Special Report Series 6, as logged in research/2026-10-03-migration-and-areas.md (90%).
+- Meidinger and Pojar 1991, Ecosystems of British Columbia, BC Ministry of Forests Special Report Series 6, as logged in `research/2026-10-03-migration-and-areas.md` (90%).
 - Wildlife habitat rating account, Mule deer, BC Ecological Reports Catalogue, 2004, [PDF](https://a100.gov.bc.ca/pub/acat/documents/r1573/whr_4109_modhe_1097078581992_3f7c787cc7c9486aa185bdad7e4c4f53.pdf), read directly, checked 2026-10-11 (85%): 25 cm and 50 cm snow, winter range below 1,500 m, south and west aspects.
 - BCWF Southern Interior Mule Deer Project updates, as logged in the research notes, checked 2026-10-03 (85%).
 - BC species accounts (moose 2000, bighorn sheep 2000) and BC Breeding Bird Atlas grouse and quail accounts, as logged in the research notes (85%).

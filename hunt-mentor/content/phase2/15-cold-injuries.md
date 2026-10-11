@@ -47,15 +47,15 @@ checked: 2026-10-11
 |---|---|---|---|
 | 15 Oct | 7:22 | 18:11 | 18:44 |
 | 31 Oct | 7:49 | 17:40 | 18:14 |
-| 15 Nov | 7:15 | 16:16 | 16:52 |
+| 15 Nov | 8:15 | 17:16 | 17:52 |
 
-- Kamloops times, my calculation (80%). Clocks fall back 1 November.
+- Kamloops times, my calculation (80%). BC no longer changes clocks: it stays on daylight time all year (95%, BC government news release, 2 March 2026).
 
 ```more the numbers in full
 - Kamloops Airport averages, 1991 to 2020: October high 13.6 °C, low 3.5 °C; November high 5.8 °C, low minus 1.1 °C (75%, Wikipedia climate table from the national climate normals).
 - Record lows: October minus 17.1 °C, November minus 30.0 °C (75%, same table).
 - The airport sits low in the valley. Hunting ground higher up is colder: Sun Peaks village is at about 1,255 m (70%), and one source gives October lows near minus 2 °C there (60%).
-- Sun times: calculated by me with the standard sunrise formula for Kamloops (50.67 N, 120.33 W). Daylight time until 1 November 2026, then standard time. "Dark" here means end of civil twilight (sun 6 degrees below the horizon). Accuracy about 2 minutes (80%).
+- Sun times: calculated by me with the standard sunrise formula for Kamloops (50.67 N, 120.33 W). BC stays on daylight time (UTC minus 7) all year from March 2026, so there is no fall back on 1 November (95%, BC government news release 2 March 2026). "Dark" here means end of civil twilight (sun 6 degrees below the horizon). Accuracy about 2 minutes (80%).
 - Legal shooting hours are a separate rule: see the [Rule Book](#/s/rb-legal-methods/0). Do not use this table for legal hours.
 - Half a day of light is gone by mid November. A wounded deer at 16:00 means tracking in the dark and cold (Tip).
 ```
