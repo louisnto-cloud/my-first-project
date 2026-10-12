@@ -474,3 +474,4 @@ details.pl-cat[open] > summary::after { transform: rotate(-135deg); margin-botto
   :root:not([data-theme="light"]):not([data-theme="sun"]) .chip.on,
   :root:not([data-theme="light"]):not([data-theme="sun"]) .hs-chips select.chip.on { background: var(--accent); border-color: var(--accent); }
 }
+.hs-rest > summary { font-size: 15px; }

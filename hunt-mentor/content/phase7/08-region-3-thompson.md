@@ -48,16 +48,16 @@ mus: 3-27, 3-28
 
 | # | Rule | Source |
 |---|---|---|
-| 1 | Mule deer: any buck only 1 to 31 October. 1 November to 10 December: 4 point bucks only, antlers stay with the licence. See [Mule deer seasons](#/s/rb-region-3/@@Mule deer seasons@@) and [antler rules](#/s/fw-rules-06/0) | page 34 (99%) |
-| 2 | Antlerless white tails: 10 to 31 October. Youth only either sex in November, bow only 11 to 20 December. See [White tailed deer seasons](#/s/rb-region-3/@@White tailed deer seasons@@) | page 34 (99%) |
+| 1 | Mule deer: any buck only 1 to 31 October. 1 November to 10 December: 4 point bucks only, antlers stay with the licence. See [Mule deer seasons](#/s/rb-region-3/8) and [antler rules](#/s/fw-rules-06/0) | page 34 (99%) |
+| 2 | Antlerless white tails: 10 to 31 October. Youth only either sex in November, bow only 11 to 20 December. See [White tailed deer seasons](#/s/rb-region-3/9) | page 34 (99%) |
 | 3 | Moose in 3-27 and 3-28: spike fork bulls, 1 to 15 November. Every moose licence holder files a Mandatory Hunter Report by 31 March | page 34 (99%; the report: 95%, my reading) |
-| 4 | MU 3-28, 3-29, 3-30: no ATV (all terrain vehicle) or electric bicycle for hunting, hauling game included, 1 September to 10 December. See [ATV closures](#/s/rb-region-3/@@ATV, snowmobile and other closures@@) and [vehicle rules](#/s/fw-rules-03/0) | page 33 (99%) |
-| 5 | Above 1,700 m, all of Region 3, all year: vehicles only on existing roads and trails. See [above 1,700 m](#/s/rb-region-3/@@Region wide: above 1,700 m@@) | page 33 (99%) |
-| 6 | MU 3-28: Skull Mountain (Map C13) open roads only 1 September to 10 December; Lac du Bois (Map C15) highlighted roads only. See [near Kamloops](#/s/rb-region-3/@@Vehicle closures near Kamloops@@) | pages 33, 35 (99%) |
-| 7 | City of Kamloops line: no firearms or bows on Lac du Bois or Crown land inside it. Map C7: no hunting or shooting on the South Thompson band. See [Map C7](#/s/rb-region-3/@@Map C7 Kamloops@@) and [where you can hunt](#/s/fw-rules-04/0) | pages 33, 35 (99%) |
-| 8 | Sun Peaks (3-27): no hunting or shooting within 400 m of lifts, runs, buildings. McQueen, Griffin, Isobel lakes (3-28): no shooting within 1 km. See [Maps C11 and C12](#/s/rb-region-3/@@Maps C11 and C12: Sun Peaks and McQueen Lake@@) | page 35 (99%) |
-| 9 | Roads: no hunting or shooting on the road allowance. Coquihalla, Hope to Kamloops: no bullets or slugs within 400 m. See [highway rules](#/s/rb-region-3/@@Highway rules in Region 3@@) | page 10 (99%) |
-| 10 | New: no feeding or baiting deer, moose or other hoofed game within 200 m of a home, school yard or playground. See [the 200 m rule](#/s/rb-region-3/@@Feeding and baiting: the 200 m rule@@) | page 33 (99%) |
+| 4 | MU 3-28, 3-29, 3-30: no ATV (all terrain vehicle) or electric bicycle for hunting, hauling game included, 1 September to 10 December. See [ATV closures](#/s/rb-region-3/29) and [vehicle rules](#/s/fw-rules-03/0) | page 33 (99%) |
+| 5 | Above 1,700 m, all of Region 3, all year: vehicles only on existing roads and trails. See [above 1,700 m](#/s/rb-region-3/25) | page 33 (99%) |
+| 6 | MU 3-28: Skull Mountain (Map C13) open roads only 1 September to 10 December; Lac du Bois (Map C15) highlighted roads only. See [near Kamloops](#/s/rb-region-3/28) | pages 33, 35 (99%) |
+| 7 | City of Kamloops line: no firearms or bows on Lac du Bois or Crown land inside it. Map C7: no hunting or shooting on the South Thompson band. See [Map C7](#/s/rb-region-3/33) and [where you can hunt](#/s/fw-rules-04/0) | pages 33, 35 (99%) |
+| 8 | Sun Peaks (3-27): no hunting or shooting within 400 m of lifts, runs, buildings. McQueen, Griffin, Isobel lakes (3-28): no shooting within 1 km. See [Maps C11 and C12](#/s/rb-region-3/34) | page 35 (99%) |
+| 9 | Roads: no hunting or shooting on the road allowance. Coquihalla, Hope to Kamloops: no bullets or slugs within 400 m. See [highway rules](#/s/rb-region-3/41) | page 10 (99%) |
+| 10 | New: no feeding or baiting deer, moose or other hoofed game within 200 m of a home, school yard or playground. See [the 200 m rule](#/s/rb-region-3/42) | page 33 (99%) |
 
 ## Strategy here
 
@@ -1151,7 +1151,7 @@ Every row: page 34, 2 October 2026 edition (99%). Limits: page 33 (99%).
 - Page 32: contacts, changes and testing boxes, the region map. Page 33: bag limits, vehicle closures, notices. Page 34: every season row. Page 35: Maps C1 to C22 (99%).
 - Where the synopsis gives only a map, the boundary words come from the Closed Areas Regulation or the Motor Vehicle Prohibition Regulation, quoted (99%).
 - Green print in the synopsis marks new information and regulation changes (99%, page 2 key). Green rows are flagged "new" here (99%).
-- The last screens pull out Heffley Creek: [[MU]] (Management Unit) 3-27 east of the North Thompson River, 3-28 west of it (85 to 90%, my reading of the official 2026 Region 3 MU map).
+- The first six screens pull out Heffley Creek: [[MU]] (Management Unit) 3-27 east of the North Thompson River, 3-28 west of it (85 to 90%, my reading of the official 2026 Region 3 MU map).
 ```
 
 ```quiz

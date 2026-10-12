@@ -12,13 +12,13 @@ checked: 2026-10-04
 > [!warn]
 > Study aid only. The official regulations are the law. Synopsis edition dated 2 October 2026.
 
+- Oliver and Osoyoos: [[MU]] (Management Unit) 8-1, Region 8 Okanagan (95%). Penticton: MU 8-8 and 8-9 line (90%).
+- Quail, chukar, gray partridge, pheasant cocks: 1 October to 30 November, every MU (99%, page 68).
+
 ```seasons
 region: 8
 mus: 8-1, 8-9
 ```
-
-- The quail trip is in Region 8 Okanagan. Oliver and Osoyoos are [[MU]] (Management Unit) 8-1 (95%). Penticton sits on the MU 8-8 and 8-9 line (90%, my reading of Map J10).
-- Quail, chukar, gray partridge and pheasant cocks: 1 October to 30 November in every Region 8 MU (99%, page 68).
 
 ## Bag limits in plain numbers: big game
 
@@ -60,21 +60,25 @@ mus: 8-1, 8-9
 | Snow and Ross's geese | 5 (15) | 99%, page 68 |
 | White fronted geese | 5 (15) | 99%, page 68 |
 
+```more the fine print
 - Grouse is 5 in total, not 5 of each as in Region 3 (99%, pages 34 and 67).
 - Inside the 8 ducks: no more than 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins (99%, page 68).
+```
 
 ## 10 rules that catch hunters here
 
-1. Pheasant: cocks only. A hen is never legal (99%, page 68). [Birds](#/s/fw-rules-07)
-2. Grouse: 5 a day of the three kinds together (99%, page 67).
-3. The row says only "QUAIL". Whether it covers mountain quail: VERIFY. Shoot California quail only (Tip).
-4. Osoyoos Oxbows, Map J1: no shooting or hunting 1 March to 30 September. Vehicles on established roads only, all year (99%, page 69).
-5. Vaseux Lake: no hunting in the bird sanctuary or the National Wildlife Areas. Blue loon signs mark them (99%, pages 9 and 67).
-6. Oliver Mountain, Map J2: no motor vehicles. Above 1,700 m anywhere in Region 8: no vehicles off existing roads (99%, page 67). [Vehicles](#/s/fw-rules-03)
-7. 100 m from a home, occupied farm or ranch building, school or playground: no hunting, no shooting (99%, page 10). [Where you can hunt](#/s/fw-rules-04)
-8. Orchards, vineyards, and grazing leases with livestock on them: the owner's consent first (99% rule, page 9; 90% that orchards are cultivated land).
-9. Quail, chukar, partridge, pheasant: shotgun, air gun or bow, no rifle. Plug a pump or semi auto to 2 shells (95 to 99%, pages 12 and 13). [Firearms](#/s/fw-rules-02)
-10. Leave one feathered wing on each bird until home (99%, page 15). [After the kill](#/s/fw-rules-08)
+| # | Rule | Source |
+|---|---|---|
+| 1 | Pheasant: cocks only. A hen is never legal. [Birds](#/s/fw-rules-07) | 99%, page 68 |
+| 2 | Grouse: 5 a day of the three kinds together. | 99%, page 67 |
+| 3 | The row says only "QUAIL". Does it cover mountain quail? VERIFY. Shoot California quail only. | 99% row, page 68; Tip |
+| 4 | Osoyoos Oxbows, Map J1: no shooting or hunting 1 March to 30 September. Vehicles on established roads only, all year. | 99%, page 69 |
+| 5 | Vaseux Lake: no hunting in the bird sanctuary or the National Wildlife Areas. Blue loon signs mark them. | 99%, pages 9 and 67 |
+| 6 | Oliver Mountain, Map J2: no motor vehicles. Above 1,700 m anywhere in Region 8: no vehicles off existing roads. [Vehicles](#/s/fw-rules-03) | 99%, page 67 |
+| 7 | 100 m from a home, occupied farm or ranch building, school or playground: no hunting, no shooting. [Where you can hunt](#/s/fw-rules-04) | 99%, page 10 |
+| 8 | Orchards, vineyards, and grazing leases with livestock on them: the owner's consent first. | 99% rule, page 9; 90% that orchards are cultivated land |
+| 9 | Quail, chukar, partridge, pheasant: shotgun, air gun or bow, no rifle. Plug a pump or semi auto to 2 shells. [Firearms](#/s/fw-rules-02) | 95 to 99%, pages 12 and 13 |
+| 10 | Leave one feathered wing on each bird until home. [After the kill](#/s/fw-rules-08) | 99%, page 15 |
 
 ```more more rules near Oliver
 - Hours: one hour before sunrise to one hour after sunset (99%, page 11). [Hours and methods](#/s/fw-rules-05)

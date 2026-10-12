@@ -12,13 +12,13 @@ checked: 2026-10-04
 > [!warn]
 > Study aid only. The official regulations are the law. Synopsis edition dated 2 October 2026.
 
+- Home: Mission, [[MU]] (Management Unit) 2-8, Region 2 Lower Mainland. Next door: MU 2-4, 2-3, 2-19 (90%, page 26 map).
+- Mission and all of MU 2-4: Fraser Valley Special Area licence plus $1,000,000 insurance (99%, page 29).
+
 ```seasons
 region: 2
 mus: 2-8, 2-4, 2-3, 2-19
 ```
-
-- Home is Mission, [[MU]] (Management Unit) 2-8, in Region 2 Lower Mainland. Next door: MU 2-4 (Abbotsford, Delta), MU 2-3 (Chilliwack), MU 2-19 (Chehalis) (90%, my reading of the page 26 map).
-- Hunting inside Mission's limits or anywhere in MU 2-4 needs the Fraser Valley Special Area licence and $1,000,000 insurance (99%, page 29, Map B10).
 
 ## Bag limits in plain numbers: big game
 
@@ -62,21 +62,25 @@ mus: 2-8, 2-4, 2-3, 2-19
 | Snow and Ross's geese, MU 2-8 | VERIFY: page 28 says 10 (30), page 12 says 5 a day | 99% both pages |
 | Brant. MU 2-4 only, March | 3 (9) | 99%, page 28 |
 
+```more the fine print
 - Inside the 8 ducks: no more than 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins (99%, page 28).
 - Until the snow goose limit in MU 2-8 is settled, take 5 a day (Tip).
+```
 
 ## 10 rules that catch hunters here
 
-1. Fraser Valley Special Area licence ($10) and $1,000,000 liability insurance: all of MU (Management Unit) 2-4, and MU 2-8 inside Maple Ridge, Pitt Meadows, Mission and Coquitlam (99%, pages 8 and 29). [Licences](#/s/fw-rules-01)
-2. Deer in MU 2-8: bucks only, 10 September to 15 December. A doe is never legal there (99%, page 28). [Big game](#/s/fw-rules-06)
-3. No season means no hunting: no white tailed deer anywhere in Region 2, no wolf in MU 2-8 (99%, pages 14, 27, 28).
-4. Fraser Valley Regional District roads: no shooting within 400 m, unless lawfully hunting or trapping. Target shooting is out (99%, page 27).
-5. Pitt Addington Marsh (MU 2-8) and Bert Brink Wildlife Management Area (MU 2-4): no motor vehicles, all year (99%, page 27). [Vehicles](#/s/fw-rules-03)
-6. Other Region 2 vehicle closures: 1 April to 15 June. No sign does not mean no closure (99%, page 27).
-7. Regional district parks: no hunting or shooting within 100 m (99%, page 9). [Where you can hunt](#/s/fw-rules-04)
-8. Highway 7, east of Mission to Highway 1: shot only within 150 m (99%, Closed Areas Regulation). More shot only and No Shooting land at Nicomen and Hatzic (99% rule, 85% my reading of the boundaries). Mission's bylaw adds more: [Local plan: Mission](#/s/local-mission)
-9. Ducks and geese: federal permit, no lead shot on Delta and Mud Bay dykes, no snipe in Boundary Bay, no hunting in Burns Bog (99%, pages 3 and 27). [Migratory birds](#/s/fw-rules-07)
-10. Every cougar and mountain goat to Compulsory Inspection, by appointment. Wolf and bobcat: Compulsory Reporting (99%, pages 26 and 28). [After the kill](#/s/fw-rules-08)
+| # | Rule | Source |
+|---|---|---|
+| 1 | Fraser Valley Special Area licence ($10) and $1,000,000 liability insurance: all of MU (Management Unit) 2-4, and MU 2-8 inside Maple Ridge, Pitt Meadows, Mission and Coquitlam. [Licences](#/s/fw-rules-01) | 99%, pages 8 and 29 |
+| 2 | Deer in MU 2-8: bucks only, 10 September to 15 December. A doe is never legal there. [Big game](#/s/fw-rules-06) | 99%, page 28 |
+| 3 | No season means no hunting: no white tailed deer anywhere in Region 2, no wolf in MU 2-8. | 99%, pages 14, 27, 28 |
+| 4 | Fraser Valley Regional District roads: no shooting within 400 m, unless lawfully hunting or trapping. Target shooting is out. | 99%, page 27 |
+| 5 | Pitt Addington Marsh (MU 2-8) and Bert Brink Wildlife Management Area (MU 2-4): no motor vehicles, all year. [Vehicles](#/s/fw-rules-03) | 99%, page 27 |
+| 6 | Other Region 2 vehicle closures: 1 April to 15 June. No sign does not mean no closure. | 99%, page 27 |
+| 7 | Regional district parks: no hunting or shooting within 100 m. [Where you can hunt](#/s/fw-rules-04) | 99%, page 9 |
+| 8 | Highway 7, east of Mission to Highway 1: shot only within 150 m. More shot only and No Shooting land at Nicomen and Hatzic. Mission's bylaw adds more: [Local plan: Mission](#/s/local-mission) | 99%, Closed Areas Regulation; 85% my reading of the Nicomen lines |
+| 9 | Ducks and geese: federal permit, no lead shot on Delta and Mud Bay dykes, no snipe in Boundary Bay, no hunting in Burns Bog. [Migratory birds](#/s/fw-rules-07) | 99%, pages 3 and 27 |
+| 10 | Every cougar and mountain goat to Compulsory Inspection, by appointment. Wolf and bobcat: Compulsory Reporting. [After the kill](#/s/fw-rules-08) | 99%, pages 26 and 28 |
 
 ## Strategy here: deer, bear and grouse
 
@@ -119,7 +123,7 @@ Every row: page 28, 2 October 2026 edition (99%).
 
 | Game | Class | Dates in MUs 2-3, 2-4, 2-8, 2-19 | Limit |
 |---|---|---|---|
-| Mule deer (black tailed) | Bucks | Sept 10 to Dec 15 | 2 a licence year, bucks only here |
+| Mule deer (black tailed) | Bucks | Sept 10 to Dec 15 | 2, bucks only |
 | Black bear | None printed | Sept 10 to Nov 30 | 2 per licence year |
 | Grouse: sooty, ruffed, spruce | None printed | Sept 10 to Dec 15 | 10 (30), all three together |
 | Ptarmigan | None printed | Sept 10 to Dec 15 | 5 (15). Not in 2-4 |

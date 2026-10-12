@@ -7,32 +7,128 @@ minutes: 40
 checked: 2026-10-04
 ---
 
+## Open today near Kamloops and in the Fraser Valley
+
 > [!warn]
 > Study aid only. The official regulations are the law.
 
-```diagram re-mb-two-layers
+- Heffley Creek, MU (Management Unit) 3-27 and MU 3-28: District No. 3. Fraser Valley, MU 2-8 and MU 2-4: District No. 2 (99% districts, 85 to 95% MU readings).
+- District 2 opens 10 October 2026, a month after District 3 (99%).
+
+```seasons
+region: migratory
+mus: 3-27, 3-28, 2-8, 2-4
 ```
 
-> [!why]
-> Ducks and geese run on federal dates, not BC dates. Mission and Heffley Creek open a month apart, and the phone has to know which one you are standing in.
+## Bag limits in plain numbers
 
-```more sources and what this session covers
-- Federal source: Migratory Birds Regulations, 2022 (SOR/2022-105), consolidation current to 21 September 2026, last amended 12 June 2026 (99%).
-- BC source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026 (99%).
+| Bird | District 3, Kamloops | District 2, Fraser Valley |
+|---|---|---|
+| Ducks, all kinds together | 8 (24) | 8 (24) |
+| Inside the 8: northern pintail | 4 (12) | 4 (12) |
+| Inside the 8: canvasback | 4 (12) | 4 (12) |
+| Inside the 8: Barrow's and common goldeneye together | 2 (6) | 2 (6) |
+| Inside the 8: harlequin | 2 (6) | 2 (6) |
+| Canada and cackling geese | 10 (30) | 10 (30) |
+| White fronted geese | 5 (15) | 5 (15) |
+| Snow and Ross's geese | 5 (15) | 10 (30), at most 5 (15) Ross's. MUs 2-4 and 2-5: 5 more snow geese a day, 15 more in possession |
+| Brant | No open season | MU 2-4 only, 1 to 10 March: 3 (9) |
+| Coots | 10 (30) | 10 (30) |
+| Snipe | 10 (30) | 10 (30) |
+| Mourning and collared doves | 5 (15), 1 to 30 September | No open season |
+| Band tailed pigeons | 5 (15), MUs 3-13 to 3-17 only | 5 (15), 15 to 30 September |
 
-- Ducks, geese, brant, coots, snipe, mourning and collared doves and band tailed pigeons are federal birds. Their seasons and limits come from Schedule 3, Part 10 of the federal regulation (99%).
-- The federal table splits BC into 8 districts, each a list of [[MU]] (Management Unit) numbers (99%).
-- BC rules still apply on top: your BC licence, closed areas, no shooting areas, boat and vehicle rules (99%, page 7, 2 October 2026 edition).
-- Where the two disagree, follow the stricter one (Tip).
-- The last screens pull out Heffley Creek in October and Mission (99% rules, 85 to 95% place readings).
+- Daily limit first, possession in brackets (99%, page 12 key). Every cell: 99%, federal Table 1, items 2 and 3. MU (Management Unit) 2-8 gets no extra snow geese (99%).
+- Two districts in one day: the higher daily limit of the two, not both added (99%, s. 43(2)).
+- Possession counts every bird not yet preserved: truck, cooler, home fridge (99%, s. 46(1)).
+- BC's provincial table prints "Ducks: see page 12" and "Geese: see page 12": the same federal numbers (99%, page 13).
+- Other districts: [the district screens](#/s/rb-migratory-birds/22).
+
+## 10 rules that catch hunters here
+
+- **1.** Carry the federal permit with its stamp ($8.50 plus $8.50) and your BC hunting licence (99%, s. 31, page 7). [Permit](#/s/rb-migratory-birds/15), [Rule 7](#/s/fw-rules-01/7).
+- **2.** Shotgun 10 gauge or smaller, 3 shells total with the plug in (99%, s. 37(1)(c)). [Rule 62](#/s/fw-rules-07/2).
+- **3.** Non toxic shot only, and no lead shells in your pocket or boat (99%, s. 38(1)). [Rule 61](#/s/fw-rules-07/1).
+- **4.** Hours: half an hour before sunrise to half an hour after sunset, not the big game hour (99%, s. 28(3)(b), page 11 item 37). [Rule 42](#/s/fw-rules-05/2).
+- **5.** District 3: Canada and cackling geese close 21 to 30 September while ducks stay open (99%, Table 1, item 3).
+- **6.** District 2: ducks and geese open 10 October 2026, a month after District 3 (99%, Table 1, item 2). [Rule 69](#/s/fw-rules-07/9).
+- **7.** Mission city limits and all of MU (Management Unit) 2-4: Fraser Valley Special Area licence plus $1,000,000 liability insurance (99%, page 29, Map B10). [Rule 9](#/s/fw-rules-01/9).
+- **8.** No hunting within 400 m (437 yd) of bait until it has been gone 7 days. No electronic calls, no live decoys (99%, s. 36(1), s. 39(1)). [Rule 68](#/s/fw-rules-07/8).
+- **9.** Motor or sail boat: no shooting while it still moves, gliding included (99%, s. 41(4), B.C. Reg. 66/2026). [Boats](#/s/rb-migratory-birds/34), [Rule 70](#/s/fw-rules-07/10).
+- **10.** At your daily limit, stop hunting that bird. Keep a wing or the head on, label any bird you hand over (99%, s. 44, 52, 50). [Rule 63](#/s/fw-rules-07/3), [Rule 66](#/s/fw-rules-07/6), [Rule 67](#/s/fw-rules-07/7).
+
+## Strategy here
+
+> [!tip]
+> Strategy is opinion. Each line is labelled Tip, or carries the certainty of its Masterclass source.
+
+- **Ducks near Kamloops.** Where: valley wetlands and Thompson and Nicola sloughs, mostly below 500 m, and the Lac du Bois potholes (85%). When: early October brings local mallards, wigeon and green winged teal; plateau lakes freeze and push birds to valley water in November (Tip, 60 to 65%). How: decoys on water, first light, birds landing into the wind toward you (Tip). Tranquille marsh is closed to shooting (99%, Heffley Creek local plan).
+- **Ducks in the Fraser Valley.** Where: sloughs, wet fields and the lower valley wood duck country (65 to 85%). When: 10 October to 24 January, so you hunt the wintering birds (99% dates). How: field hunt the field they used yesterday, with permission (Tip; 99% that private land needs permission).
+- **Geese near Kamloops.** Where: private hay and grain fields near ponds (Tip, 65%). When: September birds are local family groups; Canada geese reopen 1 October (Tip; 99% dates). How: a dozen or two decoys in a scouted field, written permission, lie still (Tip).
+- **Geese in the Fraser Valley.** Where: corn stubble and farm fields; snow geese on the Fraser delta (80%). When: snow geese peak mid October to mid December (80%). How: field set up with permission (Tip).
+- Masterclass: [Ducks: where](#/s/mc-ducks-07), [Ducks: how to hunt](#/s/mc-ducks-09), [Geese: where](#/s/mc-geese-07), [Geese: how to hunt](#/s/mc-geese-09). Map: [Area analysis](#/map).
+
+## What this means at Heffley Creek in October
+
+District No. 3, Table 1, item 3 (99%).
+
+| Species | Open in October? | Daily (possession) |
+|---|---|---|
+| Ducks | Yes, every day, 8 September to 23 December | 8 (24) with the pintail, canvasback, goldeneye, harlequin caps |
+| Canada and cackling geese | Yes, from 1 October to 23 December | 10 (30) |
+| White fronted geese | Yes, 8 September to 23 December | 5 (15) |
+| Snow and Ross's geese | Yes, 8 September to 23 December | 5 (15) |
+| Coots, snipe | Yes, 8 September to 23 December | 10 (30) each |
+| Mourning and collared doves | No, closed after 30 September | None |
+| Band tailed pigeons | No, and only MUs 3-13 to 3-17 anyway | None |
+| Brant | No open season | None |
+
+```more district, hours and BC closures
+- Heffley Creek, MU 3-27 or 3-28, is District No. 3 (99% district, 85 to 90% MU reading).
+- Every row: 99%, Table 1, item 3.
+- Legal light: half an hour before sunrise to half an hour after sunset (99%, s. 28(3)). Use the Legal light screen in Field Mode for the times.
+- BC closures near Heffley Creek still apply, like the Map C7 band and the 3-28 ATV closure: see the Region 3 session (99%).
 ```
+
+> [!field]
+> October morning: permit with stamp, BC licence, steel only, plug in, label paper in the truck. 8 ducks, then put the gun away or switch to geese.
+
+## What this means near Mission
+
+District No. 2, Table 1, item 2 (99%).
+
+| Species | Season 2026 to 2027 | Daily (possession) |
+|---|---|---|
+| Ducks | 10 October to 24 January. Closed 1 to 9 October | 8 (24) |
+| Canada and cackling geese | 10 October to 22 November, 19 December to 10 January, 10 February to 10 March | 10 (30) |
+| White fronted geese | 10 October to 24 January | 5 (15) |
+| Snow and Ross's geese | 10 October to 5 January, 20 February to 10 March | 10 (30), at most 5 (15) Ross's. No extra 5 in MU 2-8 |
+| Coots, snipe | 10 October to 24 January | 10 (30) each |
+| Brant | MU 2-4 only, not Mission | None |
+| Doves | No open season | None |
+| Band tailed pigeons | Closed after 30 September | None |
+
+```more district and the Mission licence
+- Mission, MU 2-8, is District No. 2 (99% district, 95% MU).
+- Every date: 99%, Table 1, item 2, as worked out and printed on page 28.
+- Canada geese close 23 November to 18 December. Ducks stay open (99%).
+- BC: hunting inside the District of Mission part of MU 2-8 also needs the Fraser Valley Special Area Hunting Licence and "$1,000,000.00 Public Liability and Property Damage insurance" (99%, page 29, Map B10).
+```
+
+> [!rule]
+> Same day, two towns, two answers. Name the district before you load the gun.
+
+> [!mistake]
+> - Driving to Mission on 5 October because "duck season is open". It opens 10 October in District 2.
+> - Shooting Canada geese at Heffley Creek on 25 September. District 3 closes them 21 to 30 September.
+> - Filling the freezer with unplucked ducks over three weekends. Not preserved means they still count toward 24.
 
 ## Permit and stamp
 
 ```diagram re-mb-permit
 ```
 
-```more the federal words
+```more Official wording (Migratory Birds Regulations, 2022, s. 31 and Schedule 2)
 > [!law] Migratory Birds Regulations, 2022, s. 31(1)
 > "A person must not hunt migratory game birds under a migratory game bird hunting permit unless a habitat conservation stamp that is authorized by the Minister appears on the permit."
 
@@ -52,7 +148,7 @@ checked: 2026-10-04
 ```diagram re-mb-youth
 ```
 
-```more the page 7 and s. 32 words
+```more Official wording (synopsis page 7, federal s. 32)
 > [!law] Page 7, Migratory Game Bird Hunting
 > "When hunting migratory game birds (see Definitions section), you must carry with you a valid Canadian federal Migratory Game Bird Hunting (MGBH) Permit in addition to any required provincial hunting licences."
 
@@ -75,7 +171,7 @@ checked: 2026-10-04
 ```diagram re-mb-districts
 ```
 
-```more the regulation words
+```more Official wording (federal Schedule 3, Part 10)
 > [!law] Schedule 3, Part 10, s. 1
 > "District No. 1 means Provincial Management Units 1-1 to 1-15."
 >
@@ -143,7 +239,7 @@ checked: 2026-10-04
 
 - 8 a day in every BC district. 24 in possession (99%, Table 1).
 
-```more the Table 1 words and s. 43
+```more Official wording (federal Table 1 and s. 43)
 > [!law] Table 1, every district, all Ducks, combined, daily bag limit
 > "8 (not more than 4 may be Northern Pintails, not more than 4 may be Canvasbacks, not more than 2 may be Barrow’s Goldeneyes or Common Goldeneyes, in any combination, and not more than 2 may be Harlequin Ducks)"
 
@@ -201,8 +297,8 @@ checked: 2026-10-04
 | | (iii) third Saturday in December to the first Sunday after January 5 | Dec 19 to Jan 10 | 10 (30) |
 | | (iv) not a leap year: February 10 to March 10 | Feb 10 to Mar 10, 2027 | 10 (30) |
 | White fronted geese | Saturday after the first Monday in October to the first Sunday after January 19 | Oct 10 to Jan 24 | 5 (15) |
-| Snow and Ross's geese | (i) Saturday after the first Monday in October to the first Tuesday after December 31 | Oct 10 to Jan 5 | 10 (30), see below |
-| | (ii) not a leap year: February 20 to March 10 | Feb 20 to Mar 10, 2027 | 10 (30), see below |
+| Snow and Ross's geese | (i) Saturday after the first Monday in October to the first Tuesday after December 31 | Oct 10 to Jan 5 | 10 (30), at most 5 (15) Ross's. MUs 2-4 and 2-5: 5 (15) more snow geese |
+| | (ii) not a leap year: February 20 to March 10 | Feb 20 to Mar 10, 2027 | 10 (30), at most 5 (15) Ross's. MUs 2-4 and 2-5: 5 (15) more snow geese |
 | Brant | "March 1 to March 10 (only in Provincial Management Unit 2-4)" | Mar 1 to Mar 10, 2027 | 3 (9) |
 | Coots | Same as white fronted | Oct 10 to Jan 24 | 10 (30) |
 | Snipe | Same as white fronted | Oct 10 to Jan 24 | 10 (30) |
@@ -377,7 +473,7 @@ checked: 2026-10-04
 
 - Ducks and geese: half an hour before sunrise to half an hour after sunset (99%, s. 28(3)(b)).
 
-```more the s. 28 and page 11 words
+```more Official wording (federal s. 28, synopsis page 11)
 > [!law] s. 28(1) and s. 28(3)(b)
 > "A person must not hunt a species of migratory game bird in an area referred to in Schedule 3 except during the period beginning on the first day of any open season for that area and that species and ending on the last day of that season."
 >
@@ -396,7 +492,7 @@ checked: 2026-10-04
 ```diagram re-mb-gun
 ```
 
-```more the s. 37 and s. 38 words
+```more Official wording (federal s. 37 and s. 38)
 > [!law] s. 37(1)(c)
 > "a shotgun not larger than number 10 gauge that either (i) is designed to be capable of holding no more than three cartridges, or (ii) has had its capacity reduced to three cartridges in the magazine and chamber combined, by means of the cutting off or the altering or plugging of the magazine with a one-piece metal, plastic or wood filler that cannot be removed unless the gun is disassembled."
 
@@ -417,7 +513,7 @@ checked: 2026-10-04
 ```diagram re-mb-bait
 ```
 
-```more the s. 36 and s. 39 words
+```more Official wording (federal s. 36 and s. 39)
 > [!law] s. 36(1)
 > "A person must not hunt for migratory game birds within a radius of 400 m from any place where bait has been deposited unless the place has been free of bait for at least seven days or the bait was deposited in accordance with subsection 6(3) or (4) or an aviculture permit."
 
@@ -437,7 +533,7 @@ checked: 2026-10-04
 ```anim rb-boat-glide Gliding after the motor is cut still counts as moving.
 ```
 
-```more the s. 41 and BC words
+```more Official wording (federal s. 41 and BC)
 > [!law] s. 41(1), (3) and (4)
 > "Subject to subsection (2), a person must not hunt a migratory game bird from or using a moving boat that is equipped with a motor or a sail."
 >
@@ -464,7 +560,7 @@ checked: 2026-10-04
 ```anim rb-duck-count At 8 ducks, stop hunting ducks for the day.
 ```
 
-```more the s. 42 and s. 44 words
+```more Official wording (federal s. 42 and s. 44)
 > [!law] s. 42
 > "A person must not hunt migratory game birds unless they have adequate means at their immediate disposal for retrieving any such bird that they kill or injure."
 >
@@ -484,7 +580,7 @@ checked: 2026-10-04
 ```diagram re-mb-preserved
 ```
 
-```more the s. 1 and s. 52 words
+```more Official wording (federal s. 1 and s. 52)
 > [!law] s. 1, preserved
 > "(a) been eviscerated and plucked in any location and then been frozen, made into sausage, cooked, dried, canned or smoked in a location other than the hunting area;"
 >
@@ -506,7 +602,7 @@ checked: 2026-10-04
 ```diagram re-mb-label
 ```
 
-```more the s. 50 words
+```more Official wording (federal s. 50)
 > [!law] s. 50(1) and (5)
 > "A person who kills or takes a migratory game bird must not allow it to enter the possession, including the temporary possession, of another person unless it is labelled or preserved."
 >
@@ -527,61 +623,6 @@ Migratory game bird hunting permit number
 Signature
 ```
 
-## What this means at Heffley Creek in October
-
-District No. 3, Table 1, item 3 (99%).
-
-| Species | Open in October? | Daily (possession) |
-|---|---|---|
-| Ducks | Yes, every day, 8 September to 23 December | 8 (24) with the pintail, canvasback, goldeneye, harlequin caps |
-| Canada and cackling geese | Yes, from 1 October to 23 December | 10 (30) |
-| White fronted geese | Yes, 8 September to 23 December | 5 (15) |
-| Snow and Ross's geese | Yes, 8 September to 23 December | 5 (15) |
-| Coots, snipe | Yes, 8 September to 23 December | 10 (30) each |
-| Mourning and collared doves | No, closed after 30 September | None |
-| Band tailed pigeons | No, and only MUs 3-13 to 3-17 anyway | None |
-| Brant | No open season | None |
-
-```more district, hours and BC closures
-- Heffley Creek, MU 3-27 or 3-28, is District No. 3 (99% district, 85 to 90% MU reading).
-- Every row: 99%, Table 1, item 3.
-- Legal light: half an hour before sunrise to half an hour after sunset (99%, s. 28(3)). Use the Legal light screen in Field Mode for the times.
-- BC closures near Heffley Creek still apply, like the Map C7 band and the 3-28 ATV closure: see the Region 3 session (99%).
-```
-
-> [!field]
-> October morning: permit with stamp, BC licence, steel only, plug in, label paper in the truck. 8 ducks, then put the gun away or switch to geese.
-
-## What this means near Mission
-
-District No. 2, Table 1, item 2 (99%).
-
-| Species | Season 2026 to 2027 | Daily (possession) |
-|---|---|---|
-| Ducks | 10 October to 24 January. Closed 1 to 9 October | 8 (24) |
-| Canada and cackling geese | 10 October to 22 November, 19 December to 10 January, 10 February to 10 March | 10 (30) |
-| White fronted geese | 10 October to 24 January | 5 (15) |
-| Snow and Ross's geese | 10 October to 5 January, 20 February to 10 March | 10 (30), at most 5 (15) Ross's. No extra 5 in MU 2-8 |
-| Coots, snipe | 10 October to 24 January | 10 (30) each |
-| Brant | MU 2-4 only, not Mission | None |
-| Doves | No open season | None |
-| Band tailed pigeons | Closed after 30 September | None |
-
-```more district and the Mission licence
-- Mission, MU 2-8, is District No. 2 (99% district, 95% MU).
-- Every date: 99%, Table 1, item 2, as worked out and printed on page 28.
-- Canada geese close 23 November to 18 December. Ducks stay open (99%).
-- BC: hunting inside the District of Mission part of MU 2-8 also needs the Fraser Valley Special Area Hunting Licence and "$1,000,000.00 Public Liability and Property Damage insurance" (99%, page 29, Map B10).
-```
-
-> [!rule]
-> Same day, two towns, two answers. Name the district before you load the gun.
-
-> [!mistake]
-> - Driving to Mission on 5 October because "duck season is open". It opens 10 October in District 2.
-> - Shooting Canada geese at Heffley Creek on 25 September. District 3 closes them 21 to 30 September.
-> - Filling the freezer with unplucked ducks over three weekends. Not preserved means they still count toward 24.
-
 ## Sources
 
 - Migratory Birds Regulations, 2022, BC synopsis, BC Hunting Regulation. Checked 2026-10-04 (99%).
@@ -593,6 +634,25 @@ District No. 2, Table 1, item 2 (99%).
 - Environment and Climate Change Canada BC hunting summary and permit pages: canada.ca is blocked from here, not read. Lines that need it say VERIFY.
 - 2026 to 2027 dates for Districts 1 and 2 are worked out from the federal formulas, then matched to synopsis pages 21 and 28 (99%).
 - Lines marked "my reading" are this app's interpretation, 80 to 95%.
+```
+
+## Where this is in the synopsis
+
+```diagram re-mb-two-layers
+```
+
+> [!why]
+> Ducks and geese run on federal dates, not BC dates. Mission and Heffley Creek open a month apart, and the phone has to know which one you are standing in.
+
+```more Sources and what this lesson covers
+- Federal source: Migratory Birds Regulations, 2022 (SOR/2022-105), consolidation current to 21 September 2026, last amended 12 June 2026 (99%).
+- BC source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026 (99%).
+
+- Ducks, geese, brant, coots, snipe, mourning and collared doves and band tailed pigeons are federal birds. Their seasons and limits come from Schedule 3, Part 10 of the federal regulation (99%).
+- The federal table splits BC into 8 districts, each a list of [[MU]] (Management Unit) numbers (99%).
+- BC rules still apply on top: your BC licence, closed areas, no shooting areas, boat and vehicle rules (99%, page 7, 2 October 2026 edition).
+- Where the two disagree, follow the stricter one (Tip).
+- The last screens pull out Heffley Creek in October and Mission (99% rules, 85 to 95% place readings).
 ```
 
 ```quiz

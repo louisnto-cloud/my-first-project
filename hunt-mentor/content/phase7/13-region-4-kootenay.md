@@ -6,23 +6,82 @@ title: Rule Book: Region 4 Kootenay
 minutes: 50
 checked: 2026-10-04
 ---
+
+## Open today in Region 4 Kootenay
+
 > [!warn]
 > Study aid only. The official regulations are the law.
+
+- Region 4 Kootenay: MU (Management Unit) 4-1 to 4-9 and 4-14 to 4-40 (99%, page 2).
+- CWD (Chronic Wasting Disease) zone, MUs 4-1 to 4-8 and 4-20 to 4-25: heads tested, brain and spine stay in (99%, page 15).
+
+```seasons
+region: 4
+```
+
+## Bag limits in plain numbers
+
+### Deer
+
+| Deer | Limit | Source |
+|---|---|---|
+| All deer together, Region 4 | 2 a licence year | 99%, page 37 |
+| Mule deer | 1. Page 14: 1 buck, 0 antlerless | 99%, pages 14, 37 |
+| White tailed deer | 2: at most 1 buck and 1 antlerless | 99%, page 37 |
+| Cranbrook Deer Hunt, 5 to 31 January, Map D27 | 1 extra deer, either species, either sex | 99%, pages 14, 37 |
+| Mule deer bucks, province wide | 1 from Regions 3, 4, 5, 6, 7A, 7B and 8 combined | 99%, page 14 |
+| All deer, province wide | 3 a licence year | 99%, page 14 |
+
+### Other game
+
+| Species | Limit (daily, possession for birds) | Source |
+|---|---|---|
+| Elk, moose, mountain goat | 1 each | 99%, page 39 |
+| Black bear | 2 | 99%, page 39 |
+| Wolf | No bag limit in the 1 September MUs; 3 in the 10 September MUs | 99%, page 39 |
+| Cougar | 2 in MUs 4-6 to 4-8, 4-28 to 4-31, 4-38, 4-39; 1 everywhere else | 99%, pages 37, 39 |
+| Lynx, bobcat | 1 each | 99%, pages 37, 39 |
+| Coyote, raccoon, skunk, Columbian ground squirrel | No bag limit | 99%, page 39 |
+| Snowshoe hare | 10 a day | 99%, page 39 |
+| Turkey | 3 a year: 1 in spring, 2 in fall | 99%, page 37 |
+| Grouse: dusky, ruffed and spruce together | 5 (15) | 99%, pages 37, 39 |
+| Pheasant cocks, MUs 4-6 and 4-7 | 3 a day, 6 in possession, 12 a season | 99%, page 39 |
+| Ptarmigan | 10 (30) | 99%, page 39 |
+| Mourning and Eurasian collared doves | 5 (15) | 99%, page 40 |
+| Ducks | 8 (24): at most 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins | 99%, page 40 |
+| Canada and cackling geese | 10 (30) | 99%, page 40 |
+| White fronted, snow and Ross's geese | 5 (15) each | 99%, page 40 |
+| Coots, snipe | 10 (30) each | 99%, page 40 |
+
+- Province wide caps for the licence year: elk 1, moose 1, mountain goat 1, black bear 2, cougar 2, wolf 3, lynx 1, bobcat 5 (99%, page 13). The Kootenay bobcat limit of 1 is the one that stops you (99%, page 37). Some Kootenay wolf rows print no bag limit; page 13 marks wolf with a star for regional exceptions (99%). My reading: those rows are such an exception (80%). VERIFY.
+
+## 10 rules that catch hunters here
+
+- **1.** CWD (Chronic Wasting Disease) zone, MUs (Management Units) 4-1 to 4-8 and 4-20 to 4-25: every deer, elk and moose head goes to a designated freezer before you leave the zone (99%, pages 15, 37). [CWD testing](#/s/rb-region-4/18).
+- **2.** Brain and spinal column never leave the zone. The 24 hour route exception is only from MUs 4-7, 4-8 and 4-25 to a listed freezer (99%, page 15). [The routes](#/s/rb-region-4/17).
+- **3.** Mule deer general season: 4 point bucks only, and it closes 10 November (99%, page 39). [Rule 51](#/s/fw-rules-06/1).
+- **4.** No feeding or baiting deer, elk, moose or turkeys anywhere in Region 4 (99%, page 37). [Rule 50](#/s/fw-rules-05/10).
+- **5.** No snowmobile for hunting anywhere in Region 4, 1 April to 30 November (99%, page 37).
+- **6.** Vehicle closures by symbol, maps online at www.gov.bc.ca/kootenayaccess. No sign is no excuse (99%, page 37). [Symbol key](#/s/rb-region-4/39), [Rule 25](#/s/fw-rules-03/5).
+- **7.** Whiteswan FSR (Forest Service Road): no firearm within 50 m (55 yd) of the road on the listed stretches (99%, page 37). [No Shooting Areas](#/s/rb-region-4/37).
+- **8.** Creston Valley WMA (Wildlife Management Area): access permit needed; ducks, geese, coots and snipe open there 1 October (99%, pages 37, 40).
+- **9.** Columbia Wetlands WMA: nothing with a motor over 10 hp (horsepower), except boats on the navigable Columbia River (99%, page 38). [10 horsepower rule](#/s/rb-region-4/44).
+- **10.** Elk or moose licence: Mandatory Hunter Report by 31 March, antlers stay with the licence. Cougar inspection within 30 days (99%, pages 36, 39). [Rule 77](#/s/fw-rules-08/7).
+
+## Strategy here
+
+> [!tip]
+> Strategy is opinion. Each line is labelled Tip, or carries the certainty of its Masterclass source.
 
 ```anim rf-r4-year Slide through the Kootenay year.
 ```
 
-> [!why]
-> The Kootenay holds BC's only CWD zone, its longest turkey seasons and a page of vehicle closures. Every season, limit, closure and map is on these screens.
-
-```more what this session covers
-- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
-
-- This session carries printed pages 36 to 41, the Region 4 section, in the order printed (99%, contents page and page footers).
-- Page 36: contacts, changes, CWD zone box, region map. Page 37: bag limits, notices, access rules, MU closures 4-1 to 4-7, CWD reminders. Page 38: MU closures 4-9 to 4-38. Page 39 and the top of page 40: every season row. Pages 40 and 41: Maps D1 to D27 (99%).
-- Every season row was read from a 150 dpi page image and checked against the page text (99%).
-- Green print marks new information (99%, page 2 key). In Region 4 the green items are the Cranbrook Deer Hunt, the Mandatory Hunter Report dates and Map D27 (99%, page images).
-```
+- **White tailed deer.** Where: valley bottoms with farmland, river brush and edges (85%). When: rut weeks of November, and antlerless windows in October (Tip; 99% dates). How: sit a trail or field edge, wind first (Tip, 80%). [Where](#/s/mc-white-tailed-deer-07), [How](#/s/mc-white-tailed-deer-09).
+- **Mule deer.** Where: steep, broken, open slopes; high in summer, low and sunny in winter (85 to 90%). When: 10 September to 10 November, 4 points only (99%). How: glass first, then stalk with the wind (Tip). [Where](#/s/mc-mule-deer-07), [How](#/s/mc-mule-deer-09).
+- **Elk.** Where: edges of timber and openings, summer basins, low benches later (90%). When: bugle weeks in September (Tip). How: listen, call, still hunt timber (Tip). [Where](#/s/mc-elk-07), [How](#/s/mc-elk-09).
+- **Moose.** Where: willow, water and young cutblocks or burns (85 to 90%). When: spike fork bulls, 20 September or 15 October to 31 October by MU (99%). How: sit a wetland at first light (Tip). [Where](#/s/mc-moose-07), [How](#/s/mc-moose-09).
+- **Black bear and turkey.** Bears: spring green slopes, fall berries (85%). Turkey: spring bearded birds, 15 April to 25 May (99%); ask landowners (Tip). [Bear](#/s/mc-black-bear-07), [Turkey](#/s/wild-turkey).
+- The province asks hunters to keep hunting the CWD zone: hunting helps hold the disease down (99%, page 37). Map: [Area analysis](#/map).
 
 ## Regional offices and Conservation Officers
 
@@ -32,7 +91,7 @@ checked: 2026-10-04
 | Regional office | Nelson | 250 354 6333 |
 | Conservation officers | 7 field offices | 1 877 952 7277 |
 
-```more the page 36 words, addresses and field offices
+```more Official wording (synopsis page 36), addresses and field offices
 > [!law] Fish and Wildlife Regional Office, page 36
 > "205 Industrial Road (closed to the public)"
 >
@@ -64,7 +123,7 @@ checked: 2026-10-04
 | Inspect | Mountain goat, cougar |
 | RAPP (Report All Poachers and Polluters) | 1 877 952 7277, 24 hours |
 
-```more the page 36 words and the CI towns
+```more Official wording (synopsis page 36) and the CI towns
 > [!law] Compulsory Inspection (CI) Centres, page 36
 > "Qualified Compulsory Inspectors will provide this service at locations listed below. See the Ministry website at www.gov.bc.ca/hunting/compulsory-inspection or contact the regional office for more information."
 >
@@ -89,7 +148,7 @@ checked: 2026-10-04
 | Cougar inspection | Within 30 days, up from 4 |
 | Cranbrook Deer Hunt (new) | Jan 5 to 31, one extra deer |
 
-```more the page 36 words
+```more Official wording (synopsis page 36)
 > [!law] Regulation changes for 2026-2028, page 36
 > "1. The requirement for hunters to submit harvested cougars for compulsory inspection has been extended from 4 days to 30 days after the kill."
 
@@ -121,7 +180,7 @@ checked: 2026-10-04
 
 - Office number for access map calls: VERIFY (pages 37 and 40 print two numbers).
 
-```more the page 36 and 40 words
+```more Official wording (synopsis pages 36 and 40)
 > [!law] Recreation Access Management Plans, page 36
 > "Southern Rocky Mountain Management Plan for recreation access zoning in MUs 4-1, 4-2, 4-22 and 4-23."
 >
@@ -171,7 +230,7 @@ checked: 2026-10-04
 
 - CWD (Chronic Wasting Disease) zone: brain and spinal column never leave it (99%, page 15).
 
-```more the page 15 words
+```more Official wording (synopsis page 15)
 > [!law] Carcass Transport Restrictions - Prevent Spread of Chronic Wasting Disease, page 15
 > "A person who kills a deer, elk, or moose within M.U.s 4-1 to 4-8 and 4-20 to 4-25 (the CWD Management Zone, see page 36) must not ship or transport, or engage another person to ship or transport, outside of the CWD Management Zone, the brain tissue or the spinal column, including the vertebrae and central nervous system tissue but not including the tail."
 >
@@ -252,7 +311,7 @@ checked: 2026-10-04
 ```diagram rf-r4-bag
 ```
 
-```more the page 37 words and the page 14 table
+```more Official wording (synopsis page 37) and the page 14 table
 > [!law] Regional Bag Limits, page 37
 > "Bobcat: The bag limit for Bobcat is 1."
 >
@@ -282,8 +341,8 @@ checked: 2026-10-04
 ```more every bag cell as printed, pages 39 and 40
 | Species | Bag limit cell as printed, pages 39 and 40 |
 |---|---|
-| Mule deer | "Refer to Regional Bag Limits p. 37 and Deer Bag Limits p. 14" |
-| White tailed deer | "Refer to Regional Bag Limits on p. 37 and the Deer Bag Limits article on p. 14" |
+| Mule deer | "Refer to Regional Bag Limits p. 37 and Deer Bag Limits p. 14". In numbers: 1 (a buck), inside 2 deer a year in Region 4 |
+| White tailed deer | "Refer to Regional Bag Limits on p. 37 and the Deer Bag Limits article on p. 14". In numbers: 2, at most 1 buck and 1 antlerless, inside 2 deer a year in Region 4 |
 | Elk | 1 |
 | Moose | 1 |
 | Mountain goat | 1 |
@@ -594,7 +653,7 @@ checked: 2026-10-04
 | Hunt list printed? | No (99%) |
 | Where to look | The separate LEH synopsis (99%) |
 
-```more the page 5 words
+```more Official wording (synopsis page 5)
 > [!law] Limited Entry Hunting, page 5
 > "Limited Entry Hunting (LEH) seasons are open only to hunters who have drawn an LEH authorization for the applicable licence year."
 
@@ -611,7 +670,7 @@ checked: 2026-10-04
 | ★ | January hunt: Map D27 parts only |
 | CWD (Chronic Wasting Disease) | Zone deer heads must be submitted |
 
-```more the page 39 footnote words
+```more Official wording, footnotes (synopsis page 39)
 > [!law] Mule deer footnotes, page 39
 > "▲ See Definitions for Mule (black-tailed) deer. Antlers must accompany the species licence. * Restricted to hunters under the age of 18."
 >
@@ -641,7 +700,7 @@ checked: 2026-10-04
 | Elk, moose | Zone heads tested for CWD (Chronic Wasting Disease) |
 | Goat, MU (Management Unit) 4-30 | Map D24 only. Inspection |
 
-```more the page 39 footnote words
+```more Official wording, footnotes (synopsis page 39)
 > [!law] Elk footnotes, page 39
 > "▲ See Definitions section: Bull. Antlers must accompany the species licence."
 >
@@ -673,7 +732,7 @@ checked: 2026-10-04
 | Cougar | Inspection within 30 days. No kittens (99%) |
 | Ground squirrel | Private land, permission (99%) |
 
-```more the page 39 footnote words
+```more Official wording, footnotes (synopsis page 39)
 > [!law] Footnotes, page 39
 > "▲ Restricted to private land only, hunter must obtain permission from landowners prior to access." (black bear)
 >
@@ -696,7 +755,7 @@ checked: 2026-10-04
 
 - Creston Valley WMA (Wildlife Management Area): birds from Oct 1, access permit (99%).
 
-```more the page 39 and 40 footnote words
+```more Official wording, footnotes (synopsis pages 39 and 40)
 > [!law] Footnotes, pages 39 and 40
 > "For Dusky, Spruce, and Ruffed grouse, the daily aggregate bag limit is 5; the aggregate possession limit is 15."
 >
@@ -723,7 +782,7 @@ checked: 2026-10-04
 ```diagram rf-r4-feed
 ```
 
-```more the page 37 words
+```more Official wording (synopsis page 37)
 > [!law] Notice to Hunters, page 37
 > "It is unlawful to intentionally feed or bait ungulates or turkeys in the Kootenay Region."
 >
@@ -738,7 +797,7 @@ checked: 2026-10-04
 ```diagram rf-r4-whiteswan
 ```
 
-```more the page 37 words
+```more Official wording (synopsis page 37)
 > [!law] NO SHOOTING AREAS, page 37
 > "The discharge of firearms is prohibited on or within 50 m of either side of the Whiteswan FSR from Inlet Creek Campground on Whiteswan FSR to White River bridge crossing and the Whiteswan FSR/White-Moscow main junction to the Moscow/Home Basin Campground junction. Total road length approximately 4.9 km."
 >
@@ -752,7 +811,7 @@ checked: 2026-10-04
 ```diagram rf-r4-access
 ```
 
-```more the page 37 words
+```more Official wording (synopsis page 37)
 > [!law] Access Restrictions, page 37
 > "Region 4 Motor Vehicle Prohibition maps are avilable online at www.gov.bc.ca/kootenayaccess or by contacting the regional office at 250-426-1766."
 >
@@ -817,7 +876,7 @@ checked: 2026-10-04
 ```diagram rf-r4-mv-1
 ```
 
-```more the page 37 words and the plain English list
+```more Official wording (synopsis page 37) and the plain English list
 > [!law] Page 37
 > "MU 4-1" "★ McDougall Wildlife Sanctuary (Map D1)" "★ Upper Flathead" "★ East Flathead"
 >
@@ -846,7 +905,7 @@ checked: 2026-10-04
 ```diagram rf-r4-mv-2
 ```
 
-```more the page 38 words and the plain English list
+```more Official wording (synopsis page 38) and the plain English list
 > [!law] Page 38
 > "MU 4-9" "▲ the watersheds of Malde, Goodeve, Morris and Shepard Creeks and the Cambridge Creek watershed upstream of the 750 m elevation" "◆ Tiger Creek watershed upstream of the Gopher Creek Crossing"
 >
@@ -872,7 +931,7 @@ checked: 2026-10-04
 ```diagram rf-r4-mv-3
 ```
 
-```more the page 38 words and the plain English list
+```more Official wording (synopsis page 38) and the plain English list
 > [!law] Page 38
 > "MUs 4-22, 4-23, and 4-24" "✖ White River and Bull River"
 >
@@ -893,7 +952,7 @@ checked: 2026-10-04
 ```diagram rf-r4-mv-4
 ```
 
-```more the page 38 words and the plain English list
+```more Official wording (synopsis page 38) and the plain English list
 > [!law] Page 38
 > "MU 4-25" "★ Stoddart Creek area" "★ Columbia Lake area" "◆ Albert River watershed" "◆ Cross River watershed upstream from 27.3 km on the Cross River Road, and on side roads further than 100 m road distance from the Cross River main line between 20.4 km and 27.3 km" "◆ the watershed of Pedley Creek" "◆ North fork of Dry Creek watershed upstream from 19.6 km on Dry Creek Rd" "◆ the upper watersheds of Madias Creek and Tatley Creek upstream from the easterly boundary of the Columbia Lake Indian Reserve"
 >
@@ -924,7 +983,7 @@ checked: 2026-10-04
 ```diagram rf-r4-wetlands
 ```
 
-```more the page 38 and Map D21 words
+```more Official wording (synopsis page 38 and Map D21)
 > [!law] MUs 4-25, 4-26, 4-34, and 4-35, page 38
 > "Use of a conveyance of any description which is powered by a motor which exceeds a rating of 10 hp is prohibited within the Columbia Wetlands Wildlife Management Area (MUs 4-25, 4-26, 4-34, and 4-35). Boats operating on NAVIGABLE portions of the Columbia River are exempt from the regulation, and the following rights of way are also excluded from this regulation:"
 >
@@ -1071,6 +1130,20 @@ checked: 2026-10-04
 ```more every source, page and date checked
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read from the PDF text and checked against 150 dpi page images: page 36 (contacts, changes, CWD box, map), page 37 (bag limits, notices, access, MU closures, CWD reminders), page 38 (MU closures), pages 39 and 40 (every season row), pages 40 and 41 (Maps D1 to D27). Also pages 2, 3, 4, 5, 10, 12, 14 and 15. Checked 2026-10-04 (99%).
 - Lines marked "my reading" are this app's interpretation, 80 to 95%. Map readings are 80 to 90%.
+```
+
+## Where this is in the synopsis
+
+> [!why]
+> The Kootenay holds BC's only CWD zone, its longest turkey seasons and a page of vehicle closures. Every season, limit, closure and map is on these screens.
+
+```more Pages and what this lesson covers
+- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
+
+- This session carries printed pages 36 to 41, the Region 4 section, in the order printed (99%, contents page and page footers).
+- Page 36: contacts, changes, CWD zone box, region map. Page 37: bag limits, notices, access rules, MU closures 4-1 to 4-7, CWD reminders. Page 38: MU closures 4-9 to 4-38. Page 39 and the top of page 40: every season row. Pages 40 and 41: Maps D1 to D27 (99%).
+- Every season row was read from a 150 dpi page image and checked against the page text (99%).
+- Green print marks new information (99%, page 2 key). In Region 4 the green items are the Cranbrook Deer Hunt, the Mandatory Hunter Report dates and Map D27 (99%, page images).
 ```
 
 ```quiz

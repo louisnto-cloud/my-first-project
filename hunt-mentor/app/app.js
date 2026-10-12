@@ -560,7 +560,13 @@
         : (hw.every((w) => rw.includes(w)) && rw.every((w) => fw.includes(w))) || rw.every((w) => hw.includes(w));
       if (!ok) continue;
       const lm = labelMus(b.species); if (mu && lm && !lm.has(mu)) continue;
-      out.push({ label: regional ? 'Regional limit' : b.species, text: b.limit === 'NBL' ? 'No bag limit (NBL)' : b.limit, page: b.page, cert: b.cert });
+      let text = b.limit === 'NBL' ? 'No bag limit (NBL)' : b.limit;
+      if (regional) { // keep the sentences about this species or all of them: "aggregate ... is 3", "mule deer is 1", not the white tail one
+        const Q = ['mule', 'white', 'ptarmigan'];
+        const keep = String(b.limit).replace(/^[A-Za-z ]+:\s*/, '').split(/(?<=\.)\s+/).filter((x) => !Q.some((q) => sWords(x).includes(q) && !rw.includes(q)));
+        if (keep.length) text = keep.join(' ');
+      }
+      out.push({ label: regional ? 'Regional limit' : b.species, text, full: b.limit, page: b.page, cert: b.cert });
     }
     return out;
   }
@@ -613,16 +619,15 @@
           const dates = (r) => r.allYear ? 'No closed season' : r.open && r.close ? `${smd(r.open)} to ${smd(r.close)}` : '<span class="verify">VERIFY</span>';
           const item = (r, open) => {
             const tag = sTag(r.notes), note = sNote(r.notes), mt = muTxt(r);
-            const when = r.allYear ? 'No closed season' : open ? (() => { const d = sDays(r.close, iso); return `${smd(r.open)} to ${smd(r.close)}. <b class="${d <= 7 ? 'hs-soon' : ''}">${d === 0 ? 'Closes today' : `Closes in ${d} day${d === 1 ? '' : 's'}`}</b>`; })()
-              : (() => { const d = sDays(r.open, iso); return `Opens ${smd(r.open)} (in ${d} day${d === 1 ? '' : 's'}), closes ${smd(r.close)}`; })();
+            const when = r.allYear ? 'No closed season' : open ? (() => { const d = sDays(r.close, iso); return `${smd(r.open)} to ${smd(r.close)}, <b class="${d <= 7 ? 'hs-soon' : ''}">${d === 0 ? 'closes today' : `${d} day${d === 1 ? '' : 's'} left`}</b>`; })()
+              : (() => { const d = sDays(r.open, iso); return `<b>Opens ${smd(r.open)}</b> (in ${d} day${d === 1 ? '' : 's'}), to ${smd(r.close)}`; })();
             return `<li class="hs-item"><div class="row"><b class="grow">${esc(scap(r.species))}${r.class ? `: ${esc(r.class)}` : ''}</b>${tag ? `<span class="pill">${esc(tag)}</span>` : ''}</div>
-              <div class="hs-small">${when}</div>
-              <div class="hs-small">Limit: ${limitHtml(r)}</div>
-              ${note && note.toLowerCase() !== String(tag).toLowerCase() ? `<div class="muted hs-small">${esc(note)}</div>` : ''}
-              ${mt ? `<div class="muted hs-small">${esc(mt)}</div>` : ''}
-              <div class="muted hs-small">${src(r)}</div></li>`;
+              <div class="hs-small">${when}. Limit: ${limitHtml(r)}</div>
+              <div class="muted hs-small">${note && note.toLowerCase() !== String(tag).toLowerCase() ? `${esc(scap(note))}. ` : ''}${mt ? `${esc(mt)}. ` : ''}${src(r)}</div></li>`;
           };
-          const open = rows.filter((r) => sOpenOn(r, t)).sort((a, b) => (a.allYear ? 1 : 0) - (b.allYear ? 1 : 0) || (sTag(a.notes) ? 1 : 0) - (sTag(b.notes) ? 1 : 0) || sDays(a.close || '12-31', iso) - sDays(b.close || '12-31', iso));
+          const spIdx = (r) => (R.rows || []).findIndex((x) => x.species === r.species);
+          const list = (arr, isOpen, max) => !arr.length ? '' : `<ul class="hs-list">${arr.slice(0, max).map((r) => item(r, isOpen)).join('')}</ul>${arr.length > max ? `<details class="more hs-rest"><summary>${arr.length - max} more ${isOpen ? 'open today' : 'opening soon'}</summary><ul class="hs-list">${arr.slice(max).map((r) => item(r, isOpen)).join('')}</ul></details>` : ''}`;
+          const open = rows.filter((r) => sOpenOn(r, t)).sort((a, b) => (a.allYear ? 1 : 0) - (b.allYear ? 1 : 0) || spIdx(a) - spIdx(b) || (sTag(a.notes) ? 1 : 0) - (sTag(b.notes) ? 1 : 0) || sDays(a.close || '12-31', iso) - sDays(b.close || '12-31', iso));
           const next = rows.filter((r) => !sOpenOn(r, t) && r.open && sDays(r.open, iso) > 0 && sDays(r.open, iso) <= 60).sort((a, b) => sDays(a.open, iso) - sDays(b.open, iso));
           // full table, grouped by species in the order of the data
           const groups = [];
@@ -631,7 +636,7 @@
           const table = groups.map((g) => {
             const b = bags(g.sp);
             return `<h4 class="hs-sp">${esc(scap(g.sp))}</h4>
-              ${b.map((x) => `<p class="hs-bag"><b>${esc(x.label === 'Regional limit' ? 'Regional limit' : 'Bag limit')}:</b> ${esc(x.text)} <span class="muted">page ${esc(x.page)}</span> ${certBadge(x.cert)}</p>`).join('')}
+              ${b.map((x) => `<p class="hs-bag"><b>${esc(x.label === 'Regional limit' ? 'Regional limit' : 'Bag limit')}:</b> ${esc(x.full === 'NBL' ? 'No bag limit (NBL)' : x.full)} <span class="muted">page ${esc(x.page)}</span> ${certBadge(x.cert)}</p>`).join('')}
               <div class="tbl"><table class="hs-tbl"><thead><tr><th>Class</th><th>Dates</th><th>Limit</th><th>Source</th></tr></thead><tbody>${g.rows.map((r) => {
                 const tag = sTag(r.notes), note = sNote(r.notes), mt = muTxt(r), lim = rowLimit(r);
                 return `<tr${sOpenOn(r, t) ? ' class="hs-on"' : ''}><td>${r.class ? esc(r.class) : 'All'}${tag ? ` <span class="pill">${esc(tag)}</span>` : ''}${note && note.toLowerCase() !== String(tag).toLowerCase() ? `<div class="muted hs-small">${esc(note)}</div>` : ''}${mt ? `<div class="muted hs-small">${esc(mt)}</div>` : ''}</td>
@@ -655,9 +660,9 @@
           el.querySelector('.hs-body').innerHTML = `
             ${extra.filter((x) => x.includes('hs-warn')).join('')}
             <h3 class="hs-h">Open today in ${esc(where)} <span class="muted hs-date">${esc(today)}</span></h3>
-            ${open.length ? `<ul class="hs-list">${open.map((r) => item(r, true)).join('')}</ul>` : `<p>Nothing in this table is open today in ${esc(where)}.</p>`}
+            ${open.length ? list(open, true, 6) : `<p>Nothing in this table is open today in ${esc(where)}.</p>`}
             <h3 class="hs-h">Opens in the next 60 days</h3>
-            ${next.length ? `<ul class="hs-list">${next.map((r) => item(r, false)).join('')}</ul>` : '<p class="muted">No season in this table opens in the next 60 days.</p>'}
+            ${next.length ? list(next, false, 4) : '<p class="muted">No season in this table opens in the next 60 days.</p>'}
             <details class="more hs-all"${el.dataset.open ? ' open' : ''}><summary>All seasons in ${esc(where)} (${rows.length})</summary>${table || '<p>No rows.</p>'}</details>
             ${extra.filter((x) => !x.includes('hs-warn')).join('')}
             <p class="muted hs-small">${esc(R.source || '')}${R.checked ? `, checked ${esc(R.checked)}` : ''}. General open seasons only: LEH draws, closed areas, no shooting areas and in season changes are not all shown. Daily limit first, possession limit in brackets. Today is ${esc(iso)} on this phone.</p>`;

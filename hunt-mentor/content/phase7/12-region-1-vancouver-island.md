@@ -6,23 +6,82 @@ title: Rule Book: Region 1 Vancouver Island
 minutes: 45
 checked: 2026-10-04
 ---
+
+## Open today in Region 1 Vancouver Island
+
 > [!warn]
 > Study aid only. The official regulations are the law.
+
+- Region 1 Vancouver Island: MU (Management Unit) 1-1 to 1-15, the Island, Gulf Islands and mainland inlets (99%, page 2).
+- No row for white tailed deer, elk or moose: no general season (95%, page 21).
+
+```seasons
+region: 1
+```
+
+## Bag limits in plain numbers
+
+### Deer
+
+| Deer | Limit | Source |
+|---|---|---|
+| Black tailed (mule) deer, Region 1 | 3 a licence year: at most 2 bucks, at most 2 antlerless | 99%, page 20 |
+| Antlerless, adults | Special Areas only (Maps A1, A10, A13, A14, A19, A20, A32), or LEH (Limited Entry Hunting) in part of MU (Management Unit) 1-15 | 99%, pages 20, 21 |
+| Youth antlerless, MUs 1-1, 1-2, 1-4 to 1-6 | 1 per youth season | 99%, page 20 |
+| White tailed deer | 0, no season | 99%, page 14 |
+| Fallow deer, MUs 1-1 to 1-7 | No bag limit, no species licence | 99%, page 21 |
+| All deer, province wide | 3 a licence year | 99%, page 14 |
+| 1 mule deer buck rule, Regions 3 to 8 | An Island buck does not use it up; it still counts toward the 3 | 95%, my reading of page 14 |
+
+### Other game
+
+| Species | Limit (daily, possession for birds) | Source |
+|---|---|---|
+| Black bear | 2 a year | 99%, page 21 |
+| Mountain goat, MUs 1-14 and 1-15 | 1 | 99%, page 21 |
+| Wolf | 3 | 99%, page 21 |
+| Cougar | 2 | 99%, page 21 |
+| Raccoon | 10 | 99%, page 21 |
+| Snowshoe hare, MUs 1-14 and 1-15 | 10 a day | 99%, page 21 |
+| Turkey, opossum, skunk | No bag limit | 99%, page 21 |
+| Sooty (blue) and ruffed grouse | 5 each a day (15 each) | 99%, pages 20, 21 |
+| Ptarmigan, California quail | 5 (15) each | 99%, page 21 |
+| Pheasant | 2 (6) | 99%, page 21 |
+| Band tailed pigeons | 5 (15) | 99%, page 21 |
+| Ducks | 8 (24): at most 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins | 99%, page 21 |
+| Canada and cackling geese | 10 (30) | 99%, page 21 |
+| White fronted, snow and Ross's geese | 5 (15) each | 99%, page 21 |
+| Coots, snipe | 10 (30) each | 99%, page 21 |
+
+- Province wide caps for the licence year: black bear 2, cougar 2, wolf 3, mountain goat 1 (99%, page 13).
+
+## 10 rules that catch hunters here
+
+- **1.** Antlerless black tails: Special Areas, youth seasons or an LEH (Limited Entry Hunting) draw only. Never in rifle country (99%, page 20). [LEH screen](#/s/rb-region-1/22).
+- **2.** MU (Management Unit) 1-1: no rifles, except Valdes, Sidney and James islands or by permit (99%, page 20). [Rifles and no shooting lines](#/s/rb-region-1/29).
+- **3.** No wireless camera for hunting in Region 1, on any date (99%, page 20). [Rule 47](#/s/fw-rules-05/7).
+- **4.** No baiting or feeding deer, other hoofed game or turkey within 200 m (219 yd) of a home, school yard or playground (99%, page 20). [Rule 50](#/s/fw-rules-05/10).
+- **5.** Gulf Islands: Special Area Licence ($2.00), $100,000 liability insurance unless guided, and the owner's permission (99%, pages 8, 20). [Gulf Islands](#/s/rb-region-1/30).
+- **6.** Map A26, part of MU 1-6: bucks with 2 points or better only; keep the antlers with the licence (99%, page 21). [Rule 54](#/s/fw-rules-06/4).
+- **7.** Denman and Hornby open 5 October, not 10 September. No bow season there, on the MU 1-1 Gulf Islands (Gabriola aside) or in Zone B of MU 1-5 (99%, page 21).
+- **8.** No motor vehicles all year at the Parksville Qualicum Beach WMA (Wildlife Management Area), Willow Creek and Green Mountain Block 1392; no ATV (all terrain vehicle) or snowmobile at Nanaimo River Camp, 1 September to 31 December (99%, page 20). [Vehicle closures](#/s/rb-region-1/26).
+- **9.** No shooting areas: Cowichan River 100 m (109 yd), Nanoose Bay, Westcan Terminals, CRD (Capital Regional District) water and park lands, and 100 m from regional district parks (99%, pages 9, 20, 23). [Rule 39](#/s/fw-rules-04/9).
+- **10.** A brown bear on the Island is likely a grizzly: never shoot, report it. Every goat and cougar goes to inspection; every wolf is reported (99%, pages 19, 21).
+
+## Strategy here
+
+> [!tip]
+> Strategy is opinion. Each line is labelled Tip, or carries the certainty of its Masterclass source.
 
 ```anim rf-r1-year Slide through the Island year.
 ```
 
-> [!why]
-> Vancouver Island runs on its own rules: black tailed deer bag of 3, fallow deer and turkey with no closed season, and a long list of shot only and no shooting maps.
-
-```more what this session covers
-- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
-
-- This session carries printed pages 19 to 25, the Region 1 section, in the order printed (99%, contents page and page footers).
-- Page 19: contacts, changes, grizzly notice, region map. Page 20: bag limits, access, unlawful acts, notices, Gulf Islands, ungulate health. Page 21: every season row. Pages 22 to 25: Maps A1 to A37 and the Capital Regional District map (99%).
-- Every season row was read from a 150 dpi page image and checked against the page text (99%).
-- Region 1 prints no green (new) text in this edition (99%, my check of the page images).
-```
+- **Black tailed deer.** Where: edges where young cutblocks or brush meet cover (Tip, 85% for edges, mule deer Masterclass). When: dawn and dusk, 10 September to 10 December (Tip; 99% dates). How: glass openings, still hunt edges, check the map first for rifle, shot only or bow (Tip). [Where](#/s/mc-mule-deer-07), [How](#/s/mc-mule-deer-09).
+- **Black bear.** Where: forest edges near the richest food of the week (90%). When: spring on the first green, fall on berries (85%). How: glass, judge, stalk (Tip). [Where](#/s/mc-black-bear-07), [How](#/s/mc-black-bear-09).
+- **Grouse.** Where: ruffed grouse in aspen and poplar near water (85%); blue grouse higher, in fir and spruce (Tip; 85% for the Interior dusky grouse). When: 1 September to 31 December (99%). How: walk cover slowly (Tip). [Where](#/s/mc-grouse-07), [How](#/s/mc-grouse-09).
+- **Ducks and geese.** Where: estuaries and farm fields, but check the no shooting maps and the Nanaimo River estuary bylaw first (99% rules; Tip on spots). When: from 10 October 2026 (99%). [Where](#/s/mc-ducks-07), [How](#/s/mc-ducks-09).
+- **Turkey and fallow deer.** MUs 1-1 to 1-7, no closed season (99%). On private land, ask the owner first (99% law; Tip on timing). [Wild turkey](#/s/wild-turkey).
+- Map: [Area analysis](#/map).
 
 ## Regional office and Conservation Officers
 
@@ -31,7 +90,7 @@ checked: 2026-10-04
 | Regional office | Nanaimo | 250 751 7220 |
 | Conservation officers | 6 field offices | 1 877 952 7277 |
 
-```more the page 19 words, address and field offices
+```more Official wording (synopsis page 19), address and field offices
 > [!law] Fish and Wildlife Regional Office, page 19
 > "2080A Labieux Road"
 >
@@ -58,7 +117,7 @@ checked: 2026-10-04
 | Report | Every wolf |
 | RAPP (Report All Poachers and Polluters) | 1 877 952 7277, 24 hours |
 
-```more the page 19 words and the updates line
+```more Official wording (synopsis page 19) and the updates line
 > [!law] Compulsory Inspection (CI) Centres, page 19
 > "Qualified Compulsory Inspectors will provide this service at locations listed below. See the Ministry website at www.gov.bc.ca/hunting/compulsory-inspection or contact the regional office for more information."
 >
@@ -83,7 +142,7 @@ checked: 2026-10-04
 |---|---|
 | None (99%, page 19) | Still apply: see the earlier Rule Book screens |
 
-```more the page 19 words
+```more Official wording (synopsis page 19)
 > [!law] Regulation changes for 2026-2028, page 19
 > "No changes"
 
@@ -133,7 +192,7 @@ checked: 2026-10-04
 
 - Antlerless black tails: Special Areas, youth seasons or an LEH (Limited Entry Hunting) draw only (99%, page 20).
 
-```more the page 20 words and the page 14 table
+```more Official wording (synopsis page 20) and the page 14 table
 > [!law] Regional Bag Limits, page 20
 > "Deer: The bag limit for mule (black-tailed) deer is 3, of which only two may be antlerless from Special Areas and only two may be bucks."
 >
@@ -156,7 +215,7 @@ checked: 2026-10-04
 ```more every bag cell as printed, page 21
 | Species | Bag limit cell as printed, page 21 |
 |---|---|
-| Mule deer (black tailed) | "Refer to Regional Bag Limits on p. 20 and the Deer Bag Limits article on p. 14" |
+| Mule deer (black tailed) | "Refer to Regional Bag Limits on p. 20 and the Deer Bag Limits article on p. 14". In numbers: 3 a year, at most 2 bucks, at most 2 antlerless |
 | Fallow deer | NBL |
 | Mountain goat | 1 |
 | Black bear | 2 |
@@ -203,7 +262,7 @@ checked: 2026-10-04
 | ★1-1, 1-2, 1-4, 1-5, 1-6 | Antlerless | Aug 25 to Sept 9 | Youth Bow Only ** |
 
 - Every row checked against the page 21 image and text (99%, page 21, 2 October 2026 edition).
-- Bag limit: the regional deer limits above (99%).
+- Bag limit: 3 black tails a licence year, at most 2 bucks and at most 2 antlerless (99%, page 20).
 - ▼, ✻, ★ and ** are footnotes, quoted on the footnote screens below (99%).
 - The Special Areas sit in MUs 1-1, 1-2, 1-4, 1-5, 1-6 and 1-15, going by the MUs in the map captions (90%, my reading of pages 22 to 25).
 ```
@@ -412,7 +471,7 @@ checked: 2026-10-04
 | ✻ | Denman and Hornby open Oct 5 |
 | ★ | No bow only season on some islands and Zone B |
 
-```more the page 21 footnote words
+```more Official wording, footnotes (synopsis page 21)
 > [!law] Mule deer footnotes, page 21
 > "▼ A portion of MU 1-6 is restricted to two point or greater mule deer; keep antlers with species licence. See Map A26."
 >
@@ -442,7 +501,7 @@ checked: 2026-10-04
 | Wolf | Compulsory reported |
 | Opossum | Asked to hand in the carcass |
 
-```more the page 21 footnote words
+```more Official wording, footnotes (synopsis page 21)
 > [!law] Footnotes, page 21
 > "Compulsory Inspection required." (mountain goat)
 >
@@ -467,7 +526,7 @@ checked: 2026-10-04
 
 - Ex Dinsdale property: its own goose windows only (99%).
 
-```more the page 21 footnote words
+```more Official wording, footnotes (synopsis page 21)
 > [!law] Footnotes, page 21
 > "★ There is no bow only season on the Gulf Islands in MU 1-1 (except Gabriola Island) or in zone B of MU 1-5 (see Map A12) or on Denman and Hornby Islands (MU 1-6)" (grouse)
 >
@@ -493,7 +552,7 @@ checked: 2026-10-04
 
 - Maps online: www.gov.bc.ca/westcoastaccess (99%).
 
-```more the page 20 words and map readings
+```more Official wording (synopsis page 20) and map readings
 > [!law] Access Restrictions, page 20
 > "Region 1 Motor Vehicle Prohibition maps are available online at www.gov.bc.ca/westcoastaccess."
 >
@@ -519,7 +578,7 @@ checked: 2026-10-04
 ```diagram rf-r1-unlawful
 ```
 
-```more the page 20 words
+```more Official wording (synopsis page 20)
 > [!law] It's Unlawful, page 20
 > "To use a wireless camera for the purpose of hunting in region 1."
 >
@@ -534,7 +593,7 @@ checked: 2026-10-04
 ```diagram rf-r1-notices
 ```
 
-```more the page 20 words
+```more Official wording (synopsis page 20)
 > [!law] Notice to Hunters, page 20
 > "Hunting regulations for Mule (black-tailed) deer and Fallow deer are very different. Please ensure that you are informed and able to distinguish between the two species when hunting."
 >
@@ -555,7 +614,7 @@ checked: 2026-10-04
 ```diagram rf-r1-noshoot
 ```
 
-```more the page 20 words
+```more Official wording (synopsis page 20)
 > [!law] Notice to Hunters, page 20
 > "The discharge of rifles is prohibited in MU 1-1 except on Valdes Island, Sidney Island and James Island (and except by permit elsewhere). Note: No Shooting or Hunting areas in MU 1-1, Maps A1, A2, A4, and A7."
 >
@@ -583,7 +642,7 @@ checked: 2026-10-04
 
 - Covers every island in MU (Management Unit) 1-1 except Vancouver Island, plus Denman and Hornby (99%).
 
-```more the page 20 words
+```more Official wording (synopsis page 20)
 > [!law] Gulf Islands Special Hunting Area, page 20
 > "Gulf Islands special hunting area comprised of Denman and Hornby Islands (MU 1-6) and all islands within MU 1-1 (except Vancouver Island)."
 >
@@ -770,7 +829,7 @@ checked: 2026-10-04
 ```diagram rf-r1-crd
 ```
 
-```more the page 23 words
+```more Official wording (synopsis page 23)
 > [!law] Capital Regional District, page 23
 > "Hunting and discharge of firearms, bows and crossbows are prohibited within CRD Water Supply and Regional Park lands. Represented here in Dark Grey, these lands are located northwest of Victoria, south and southwest of Shawnigan Lake, south of Renfrew Road, west of the Malahat and east of the Bear Creek Reservoir."
 >
@@ -788,7 +847,7 @@ checked: 2026-10-04
 
 - AHD (Adenovirus Hemorrhagic Disease): often fatal in black tailed deer (99%, page 20).
 
-```more the page 20 words and signs
+```more Official wording (synopsis page 20) and signs
 > [!law] Ungulate Health, page 20
 > "AHD was first identified in the fall of 2020 on several Gulf Islands (Galiano, Mayne, Pender, and Salt Spring) and southern Vancouver Island as far north as Merville. AHD is a highly contagious and often fatal disease, particularly in black-tailed deer."
 >
@@ -821,6 +880,20 @@ checked: 2026-10-04
 ```more every source, page and date checked
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read from the PDF text and checked against 150 dpi page images: page 19 (contacts, changes, grizzly notice, map), page 20 (bag limits, access, notices, Gulf Islands, ungulate health), page 21 (every season row), pages 22 to 25 (Maps A1 to A37, CRD map). Also pages 2, 5, 8, 10, 12 and 14. Checked 2026-10-04 (99%).
 - Lines marked "my reading" are this app's interpretation, 80 to 95%. Map readings are 80 to 90%.
+```
+
+## Where this is in the synopsis
+
+> [!why]
+> Vancouver Island runs on its own rules: black tailed deer bag of 3, fallow deer and turkey with no closed season, and a long list of shot only and no shooting maps.
+
+```more Pages and what this lesson covers
+- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
+
+- This session carries printed pages 19 to 25, the Region 1 section, in the order printed (99%, contents page and page footers).
+- Page 19: contacts, changes, grizzly notice, region map. Page 20: bag limits, access, unlawful acts, notices, Gulf Islands, ungulate health. Page 21: every season row. Pages 22 to 25: Maps A1 to A37 and the Capital Regional District map (99%).
+- Every season row was read from a 150 dpi page image and checked against the page text (99%).
+- Region 1 prints no green (new) text in this edition (99%, my check of the page images).
 ```
 
 ```quiz
