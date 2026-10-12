@@ -144,3 +144,8 @@ hunt-mentor/
 - Drafts until reviewed: lesson `know-your-mus` (1.14) and deck `data/flashcards-mu.json` ("Know your MUs"). To publish, add `know-your-mus` to `sessions` and `mu` to `flashcards` in `data/published.json`.
 
 - 2026-10-12: Diagram redraw batch 1 (20 worst, mix of field guide A and infographic B) published; owner approved.
+- 2026-10-12 PAUSED by owner. State:
+  - Live: everything up to diagram batch 1 and the Rule Book "answers first" rewrite.
+  - Saved, NOT published (awaiting owner "go"): diagram batch 2 (50 diagrams, ranks 21 to 70 of the diagram audit). Before versions kept in the session scratchpad only.
+  - Next: owner reviews batch 2, then batch 3 (next 50, start with field dressing steps sk-gut-1, 2, 4 to 8 so the sequence matches).
+  - Open owner decisions: AI images (allow for scenes only, or keep all hand drawn); 13 "ask a conservation officer" rules; 42 VERIFY items in moose, elk, bear, skills Masterclasses.
