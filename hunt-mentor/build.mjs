@@ -200,6 +200,17 @@ function fenced(kind, arg, body, ctx) {
     if (!/^[\w-]+$/.test(id || '')) { ctx.missing.push(`mumap ${arg}`); return ''; }
     return `<div class="hmp-mini" data-${k}="${id}"${cap || body.trim() ? ` data-cap="${esc(cap || body.trim())}"` : ''}><p class="muted">Map loading...</p></div>`;
   }
+  if (kind === 'seasons') {
+    // ```seasons + "region: 3", optional "mus: 3-27, 3-28", "species: mule deer, white tailed deer" -> open today, opens next and the
+    // full season table, drawn on the phone from data/seasons/<file>.json (app/app.js renderSeasons; inline in the single file backup)
+    const o = {};
+    for (const l of body.split('\n')) { const m = l.match(/^\s*(region|mus|species)\s*:\s*(.*?)\s*$/i); if (m) o[m[1].toLowerCase()] = m[2]; }
+    const reg = String(o.region || arg || '').toLowerCase().replace(/^region\s*/, '');
+    if (!/^(1|2|3|4|5|6|7a|7b|8|migratory)$/.test(reg) || !fs.existsSync(path.join(ROOT, 'data/seasons', `${reg === 'migratory' ? 'migratory' : 'region' + reg}.json`))) { ctx.missing.push(`seasons region ${reg}`); return ''; }
+    const mus = (o.mus || '').split(/[,\s]+/).filter((x) => /^\d{1,2}-\d{1,2}$/.test(x));
+    const sp = (o.species || '').split(',').map((x) => x.trim().toLowerCase()).filter(Boolean);
+    return `<div class="hm-seasons" data-region="${reg}"${mus.length ? ` data-mus="${mus.join(',')}"` : ''}${sp.length ? ` data-species="${esc(sp.join('|'))}"` : ''}><p class="hm-law">Study aid only. The official regulations are the law.</p><p class="muted">Season table loading...</p></div>`;
+  }
   if (kind === 'regs') {
     // ```regs key  -> rendered from data/regs.json at runtime
     return `<div class="regs" data-regs="${arg}"></div>`;
@@ -254,7 +265,7 @@ function screenUnits(md) {
     if (fence) {
       const ls = [lines[i++]]; while (i < lines.length && !lines[i].startsWith('```')) ls.push(lines[i++]); if (i < lines.length) ls.push(lines[i++]);
       const k = fence[1] || '';
-      const w = k === 'quiz' ? 0 : k === 'diagram' ? 50 : k === 'steps' ? 70 : k === 'anim' ? 50 : k === 'video' ? 30 : k === 'more' ? 15 : k === 'photo' ? 40 : k === 'gallery' ? 90 : k === 'checklist' ? ls.length * 8 : k === 'regs' ? 60 : 40;
+      const w = k === 'quiz' ? 0 : k === 'diagram' ? 50 : k === 'steps' ? 70 : k === 'anim' ? 50 : k === 'video' ? 30 : k === 'more' ? 15 : k === 'photo' ? 40 : k === 'gallery' ? 90 : k === 'checklist' ? ls.length * 8 : k === 'regs' ? 60 : k === 'seasons' ? 60 : 40;
       push(ls, w); continue;
     }
     if (/^#{3,4}\s/.test(l)) { push([lines[i++]], 2, true); continue; }
@@ -419,7 +430,10 @@ function build() {
   for (const f of planNames) { const o = JSON.parse(fs.readFileSync(path.join(planDir, f), 'utf8')); if (Array.isArray(o.species)) plansInline.species.push(...o.species); if (Array.isArray(o.lists)) plansInline.lists.push(...o.lists); }
   const photoIds = Object.keys(PHOTOS).filter((id) => fs.existsSync(path.join(ROOT, 'photos', `${id}.jpg`)));
   const jsonPwa = JSON.stringify(data).replace(/__PHOTO__([\w-]+)__/g, 'photos/$1.jpg');
-  const jsonSingle = JSON.stringify({ ...data, ...(planJs && planNames.length ? { plansInline } : {}), ...(placesInline ? { placesInline } : {}) }).replace(/__PHOTO__([\w-]+)__/g, (_, id) => {
+  // season tables (data/seasons) inline too, for the seasons lesson block (no fetch from a file:// page)
+  const seasonsDir = path.join(ROOT, 'data/seasons');
+  const seasonsInline = fs.existsSync(seasonsDir) ? Object.fromEntries(fs.readdirSync(seasonsDir).filter((f) => /^[\w-]+\.json$/.test(f)).sort().map((f) => [f.replace(/\.json$/, ''), JSON.parse(fs.readFileSync(path.join(seasonsDir, f), 'utf8'))])) : null;
+  const jsonSingle = JSON.stringify({ ...data, ...(seasonsInline ? { seasonsInline } : {}), ...(planJs && planNames.length ? { plansInline } : {}), ...(placesInline ? { placesInline } : {}) }).replace(/__PHOTO__([\w-]+)__/g, (_, id) => {
     const sm = path.join(ROOT, 'photos', 'sm', `${id}.jpg`);
     const f = fs.existsSync(sm) ? sm : path.join(ROOT, 'photos', `${id}.jpg`);
     return 'data:image/jpeg;base64,' + fs.readFileSync(f).toString('base64');

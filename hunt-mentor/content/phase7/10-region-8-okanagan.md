@@ -7,23 +7,171 @@ minutes: 40
 checked: 2026-10-04
 ---
 
-> [!warn]
-> Study aid only. The official regulations are the law.
+## Open today near Oliver, MU 8-1
 
-```diagram re-r8-pages
+> [!warn]
+> Study aid only. The official regulations are the law. Synopsis edition dated 2 October 2026.
+
+```seasons
+region: 8
+mus: 8-1, 8-9
 ```
 
-> [!why]
-> The quail trip is in Region 8. Every Okanagan season, limit, closure and map is on these screens, so you know the rules before you leave Heffley Creek.
+- The quail trip is in Region 8 Okanagan. Oliver and Osoyoos are [[MU]] (Management Unit) 8-1 (95%). Penticton sits on the MU 8-8 and 8-9 line (90%, my reading of Map J10).
+- Quail, chukar, gray partridge and pheasant cocks: 1 October to 30 November in every Region 8 MU (99%, page 68).
 
-```more what this session covers
-- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
+## Bag limits in plain numbers: big game
 
-- This session carries printed pages 66 to 70, the Region 8 section, in the order printed (99%).
-- Page 66: contacts, changes and testing boxes, the region map. Page 67: bag limits, vehicle closures, notices. Page 68: every season row. Pages 69 and 70: Maps J1 to J21 (99%).
-- Every season cell was checked against a 200 dpi image of page 68 and the page text (99%).
-- Green print in the synopsis marks new information and regulation changes (99%, page 2 key). Green cells are flagged "new" here (99%).
-- The last screens pull out the quail trip: quail, chukar, pheasant, partridge and grouse by [[MU]] (Management Unit) in October and November, and the closures near Oliver, Osoyoos, Penticton and Vernon.
+| Game | Limit | Source |
+|---|---|---|
+| Deer, all kinds, Region 8 | 3 a licence year | 99%, page 67 |
+| Antlerless deer | 2 at most, only 1 of each species | 99%, page 67 |
+| Mule deer | 1. Antlerless only by LEH (Limited Entry Hunting) draw | 99%, page 67 |
+| Mule deer buck, all of BC | 1 from Regions 3, 4, 5, 6, 7A, 7B and 8 combined | 99%, page 14 |
+| White tailed deer | 2: at most 1 buck, at most 1 antlerless | 99%, page 67 |
+| Moose, spike fork bull | 1 | 99%, page 68 |
+| Elk, 6 point bull | 1 | 99%, page 68 |
+| Black bear | 2 | 99%, page 68 |
+| Turkey | 2 a year: 1 spring, 1 fall | 99%, page 67 |
+| Wolf | 3 | 99%, page 68 |
+| Cougar, bobcat, lynx | 1 each | 99%, page 68 |
+| Coyote, skunk, raccoon | No limit | 99%, page 68 |
+| Snowshoe hare | 10 a day | 99%, page 68 |
+
+```more how the deer numbers fit together
+- Example: 1 mule deer buck, 1 white tailed buck and 1 white tailed doe is 3 deer, the Region 8 ceiling (95%, my reading of page 67).
+- A Heffley Creek mule deer buck uses up your Okanagan mule deer buck (95%, my reading of page 14).
+- Cougar is 1 here, 2 in Region 3 (99%, pages 34 and 68).
+```
+
+## Bag limits in plain numbers: birds
+
+| Bird | A day (in possession) | Source |
+|---|---|---|
+| Quail | 10 (30) | 99%, page 68 |
+| Chukar partridge | 5 (15) | 99%, page 68 |
+| Gray (Hungarian) partridge | 3 (9) | 99%, page 68 |
+| Pheasant, cocks only | 2 (6) | 99%, page 68 |
+| Grouse: dusky, ruffed, spruce together | 5 (15) | 99%, pages 67, 68 |
+| Mourning and Eurasian collared dove | 5 (15) | 99%, page 68 |
+| Ducks | 8 (24) | 99%, page 68 |
+| Coots, snipe | 10 (30) each | 99%, page 68 |
+| Canada and cackling geese | 10 (30) | 99%, page 68 |
+| Snow and Ross's geese | 5 (15) | 99%, page 68 |
+| White fronted geese | 5 (15) | 99%, page 68 |
+
+- Grouse is 5 in total, not 5 of each as in Region 3 (99%, pages 34 and 67).
+- Inside the 8 ducks: no more than 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins (99%, page 68).
+
+## 10 rules that catch hunters here
+
+1. Pheasant: cocks only. A hen is never legal (99%, page 68). [Birds](#/s/fw-rules-07)
+2. Grouse: 5 a day of the three kinds together (99%, page 67).
+3. The row says only "QUAIL". Whether it covers mountain quail: VERIFY. Shoot California quail only (Tip).
+4. Osoyoos Oxbows, Map J1: no shooting or hunting 1 March to 30 September. Vehicles on established roads only, all year (99%, page 69).
+5. Vaseux Lake: no hunting in the bird sanctuary or the National Wildlife Areas. Blue loon signs mark them (99%, pages 9 and 67).
+6. Oliver Mountain, Map J2: no motor vehicles. Above 1,700 m anywhere in Region 8: no vehicles off existing roads (99%, page 67). [Vehicles](#/s/fw-rules-03)
+7. 100 m from a home, occupied farm or ranch building, school or playground: no hunting, no shooting (99%, page 10). [Where you can hunt](#/s/fw-rules-04)
+8. Orchards, vineyards, and grazing leases with livestock on them: the owner's consent first (99% rule, page 9; 90% that orchards are cultivated land).
+9. Quail, chukar, partridge, pheasant: shotgun, air gun or bow, no rifle. Plug a pump or semi auto to 2 shells (95 to 99%, pages 12 and 13). [Firearms](#/s/fw-rules-02)
+10. Leave one feathered wing on each bird until home (99%, page 15). [After the kill](#/s/fw-rules-08)
+
+```more more rules near Oliver
+- Hours: one hour before sunrise to one hour after sunset (99%, page 11). [Hours and methods](#/s/fw-rules-05)
+- White tailed jackrabbit, Nuttall's cottontail and badger are protected. No season (99%, page 67).
+- No feeding or baiting deer and other hoofed game within 200 m of a home, school yard or playground (99%, page 67, new).
+- The Oliver Mountain line points to Map J3, but the map is J2 (99%, pages 67 and 69). VERIFY with the Penticton office.
+- Kaleden and Okanagan Falls are No Shooting Areas; Skaha Lake is shot only (99%, Map J10).
+- Oliver, Osoyoos and Penticton bylaws are not in the synopsis (99%). VERIFY each town's firearm bylaw.
+```
+
+## Strategy here: quail, chukar and partridge
+
+Strategy is opinion. Each line says Tip or gives its source.
+
+### California quail, 1 October to 30 November
+- Where: brushy edges beside food on the valley floor and first benches, about 280 to 600 m. Rose and blackberry thickets, orchard and vineyard edges, dry creek bottoms (Tip). [Where](#/s/mc-quail-07)
+- Most South Okanagan quail are on private land: ask first (Tip, 75%).
+- When: late October to mid November, calm cool mornings. Wind over 25 km/h keeps birds in cover (Tip).
+- How: two hunters walk the edges 15 to 25 m apart. Pick one bird, mark where singles land (Tip). [How to hunt](#/s/mc-quail-09)
+
+### Chukar and gray partridge, same dates
+- Where: chukar on dry, steep, rocky slopes with cheatgrass (75 to 80%). Here, try the rocky west facing breaks above the lakes (Tip).
+- How: move quickly, then stop 30 seconds near cover (75%, Washington).
+
+## Strategy here: grouse, pheasant and deer
+
+Strategy is opinion. Each line says Tip or gives its source.
+
+### Grouse, to 30 November
+- Where: ruffed in aspen and poplar near water, about 750 to 1,250 m (85%). Dusky climbs in fall (70 to 75%). [Where](#/s/mc-grouse-07)
+- How: walk a Forest Service road edge at first light (Tip). [How to hunt](#/s/mc-grouse-09)
+
+### Pheasant cocks, to 30 November
+- Where and how: the same farm edges as quail, with permission. Walk slowly into thick cover (Tip).
+
+### White tailed deer, bucks to 30 November, antlerless 10 to 31 October
+- Where: lower, flatter, brushier ground than mule deer (85%). MU (Management Unit) 8-1 gave about 200 white tails in 3 years (90%). [Where](#/s/mc-white-tailed-deer-07)
+- How: pair a late October quail trip with an evening white tail sit (Tip). [How to hunt](#/s/mc-white-tailed-deer-09)
+
+### Mule deer bucks: any buck in October, 4 point 1 to 10 November
+- Where: grassland and dry pine slopes; the Okanagan River area has some of the highest densities (85%). [Where](#/s/mc-mule-deer-07)
+
+### Find your spot
+- Open the [Hunt Map](#/map), tap MU 8-1, run Area analysis, then check private land and the closure maps below (Tip).
+
+## Quail trip: seasons and closures by town
+
+```diagram re-r8-quail-gun
+```
+
+| Bird | MUs | October | November | Limit |
+|---|---|---|---|---|
+| Quail | 8-1 to 8-15, 8-21 to 8-26 | Open from Oct 1 | Open to Nov 30 | 10 (30) |
+| Chukar | 8-1 to 8-15, 8-21 to 8-26 | Open from Oct 1 | Open to Nov 30 | 5 (15) |
+| Gray partridge | 8-1 to 8-15, 8-21 to 8-26 | Open from Oct 1 | Open to Nov 30 | 3 (9) |
+| Pheasant, cocks | 8-1 to 8-15, 8-21 to 8-26 | Open from Oct 1 | Open to Nov 30 | 2 (6) |
+| Grouse: dusky, ruffed, spruce | 8-1 to 8-15, 8-21 to 8-26 | Open | Open to Nov 30 | 5 total (15) |
+| Turkey, any | 8-1, 8-9, 8-10, 8-12 to 8-15, 8-22 to 8-26 | Oct 1 to Oct 15 only | Closed | 1 in fall |
+
+```more gun rules and closures by town
+- Every row: 99%, page 68, 2 October 2026 edition. Oliver, Osoyoos, Penticton and Vernon MUs are inside every upland range (85 to 90%, my reading of the map).
+- Grouse bow only season runs on, 1 to 10 December (99%).
+- Gun: shotgun, air gun or bow for quail, chukar, partridge and pheasant. A [[Rimfire|rimfire]] is only for grouse, ptarmigan or turkey; a [[Centrefire|centrefire]] only for grouse or ptarmigan (95%, my reading of page 13 notes 2 and 3).
+- The lead shot ban does not apply to upland birds (99%, page 13). Ducks need [[Non toxic shot|non toxic shot]] (99%, page 13).
+- Pump or semi auto: [[Magazine plug|plug]] it to hold no more than 2 shells (99%, page 12).
+- Hours: one hour before sunrise to one hour after sunset (99%, page 11).
+- Each bird keeps one feathered wing on until home (99%, page 15).
+
+### Closures near Oliver and Osoyoos
+- Osoyoos Oxbows (Map J1): shooting and hunting open again from 1 October; vehicles on established roads only, all year (95%, my reading).
+- Ecological reserve at the oxbows: closed all year (99% rule, 95% map label).
+- Vaseux Lake sanctuary and National Wildlife Areas: no hunting (99%).
+- Oliver Mountain (Map J2): vehicles out, shooting not closed by the synopsis (99%).
+
+### Closures near Penticton
+- Kaleden and Okanagan Falls (Map J10): No Shooting Areas (99%).
+- Skaha Lake: shot only (99%). Naramata (Map J11): No Shooting core, shot only around it (99%).
+- Upper Carmi Road (Map J8): No Shooting, mostly private land (99%).
+- Hwy 97C from Peachland: 400 m no hunting or shooting (99%).
+- Skaha Lake Eastside lots: no motor vehicles (99%).
+
+### Closures near Vernon
+- Swan Lake (Map J17) and Kalamalka Lake Park (Map J18): no shooting or hunting (99%).
+- Silver Star (Map J16): no hunting (99%).
+
+### Everywhere in the valley
+> [!law] Page 10
+> "It is unlawful to hunt or discharge a firearm within 100 m of a church, school building, school yard, playground, regional district park, dwelling house, or farm or ranch building that is occupied by persons or domestic animals."
+
+> [!law] Page 9
+> "A person is not permitted to hunt on cultivated land or on Crown land which is subject to a grazing lease while the land is occupied by livestock, without the consent of the owner, lessee, or occupant of the land."
+>
+> "Municipal bylaws are NOT included in this synopsis. Consult municipal clerks for details."
+
+- 100 m (109 yd) from homes, occupied farm buildings, schools and playgrounds (99%).
+- Orchards and vineyards are [[Cultivated land|cultivated land]]: get the owner's consent (90%, my reading).
+- Oliver, Osoyoos, Penticton, Summerland, Kelowna and Vernon bylaws are not in the synopsis (99%). VERIFY each town's firearm bylaw.
 ```
 
 ## Regional office and Conservation Officers
@@ -31,7 +179,7 @@ checked: 2026-10-04
 ```diagram re-r8-contacts
 ```
 
-```more the page 66 words
+```more Official wording (synopsis page 66)
 > [!law] Fish and Wildlife Regional Office, page 66
 > "102 Industrial Place"
 >
@@ -57,7 +205,7 @@ checked: 2026-10-04
 | Inspection | Cougar |
 | RAPP (Report All Poachers and Polluters) | 1 877 952 7277, 24 hours |
 
-```more the page 66 words
+```more Official wording (synopsis page 66)
 > [!law] Compulsory Inspection (CI) Centres, page 66
 > "Qualified Compulsory Inspectors will provide this service at locations listed below. See the Ministry website at www.gov.bc.ca/hunting/compulsory-inspection or contact the regional office for more information."
 >
@@ -81,7 +229,7 @@ checked: 2026-10-04
 ```diagram re-r8-changes
 ```
 
-```more the page 66 words
+```more Official wording (synopsis page 66)
 > [!law] Regulation changes for 2026-2028, page 66
 > "1. No intentional feeding or baiting of ungulates within 200m of a dwelling, school yard, or playground."
 >
@@ -111,14 +259,14 @@ checked: 2026-10-04
 - Penticton sits on the 8-8 and 8-9 line. Map J10 prints "M.U. 8-8" west of the city and "M.U. 8-9" east (90%, my reading). Check your spot on the official MU map before you rely on a turkey MU (VERIFY).
 ```
 
-## Regional bag limits
+## Regional bag limits: the official words
 
 ```diagram re-r8-deer-bag
 ```
 
 - Grouse: 5 a day in total, not 5 of each. Turkey: 1 spring, 1 fall (99%, page 67).
 
-```more the page 67 words
+```more Official wording (synopsis page 67)
 > [!law] Regional Bag Limits, page 67
 > "DEER: The aggregate bag limit for deer is 3. Two deer may be antlerless but only one antlerless deer of each species may be taken. The bag limit for mule deer is 1. Antlerless mule deer are available only through LEH. The bag limit for white-tailed deer is 2, only one of which may be a buck, and one of which may be antlerless."
 >
@@ -143,7 +291,7 @@ checked: 2026-10-04
 ```diagram re-r8-bag-birds
 ```
 
-```more the page 68 bag limit column
+```more The bag limit column as printed (synopsis page 68)
 | Species | Bag limit cell as printed, page 68 |
 |---|---|
 | Mule deer | Refer to Regional Bag Limits on p. 67 and the Deer Bag Limits article on p. 14 |
@@ -186,7 +334,7 @@ checked: 2026-10-04
 ```diagram re-r8-whitetail-bars
 ```
 
-```more the page 68 rows
+```more Every row as printed (synopsis page 68)
 ### Mule deer (black tailed)
 
 | MUs | Class | Season | Notes |
@@ -216,7 +364,7 @@ checked: 2026-10-04
 
 - Every row checked against the page 68 image (99%, page 68, 2 October 2026 edition).
 - Antlerless white tails need no draw from 10 to 31 October (99%).
-- Bag: the regional deer limits above (99%).
+- Bag: 3 deer in Region 8; white tailed 2, at most 1 buck and 1 antlerless (99%, page 67).
 ```
 
 ## Moose and elk seasons
@@ -224,7 +372,7 @@ checked: 2026-10-04
 ```diagram re-r8-moose-elk-bars
 ```
 
-```more the page 68 rows
+```more Every row as printed (synopsis page 68)
 ### Moose
 
 | MUs | Class | Season | Notes |
@@ -249,7 +397,7 @@ checked: 2026-10-04
 ```diagram re-r8-predator-bars
 ```
 
-```more the page 68 rows
+```more Every row as printed (synopsis page 68)
 ### Black bear
 
 | MUs | Class | Season | Notes |
@@ -280,7 +428,7 @@ checked: 2026-10-04
 ```diagram re-r8-upland-bars
 ```
 
-```more the page 68 rows
+```more Every row as printed (synopsis page 68)
 ### Grouse: dusky (blue), ruffed and spruce
 
 | MUs | Class | Season | Notes |
@@ -328,7 +476,7 @@ checked: 2026-10-04
 ```diagram re-r8-water-bars
 ```
 
-```more the page 68 rows
+```more Every row as printed (synopsis page 68)
 ### Wild turkey
 
 | MUs | Class | Season | Notes |
@@ -371,7 +519,7 @@ checked: 2026-10-04
 ```diagram re-r8-no-row
 ```
 
-```more the page 67 and 68 words
+```more Official wording (synopsis pages 67 and 68)
 - The page 68 table has no row for mountain sheep, mountain goat, caribou, grizzly bear, ptarmigan, sharp tailed grouse, band tailed pigeon or Columbian ground squirrel (99%, page 68).
 - No row means no general open season for that animal in Region 8 (95%, my reading of page 5: "Open Seasons are only those defined in this synopsis").
 
@@ -389,7 +537,7 @@ checked: 2026-10-04
 | Hunts, codes, dates | Separate LEH synopsis |
 | You need | Draw authorization, hunting licence, species licence |
 
-```more the page 5 and 67 words
+```more Official wording (synopsis pages 5 and 67)
 > [!law] Page 67
 > "Antlerless mule deer are available only through LEH."
 
@@ -412,7 +560,7 @@ checked: 2026-10-04
 | ★ moose, ▲ elk | Antlers go with the licence |
 | Moose, elk licence | Mandatory Hunter Report by 31 March |
 
-```more the page 68 footnotes
+```more Official wording: footnotes (synopsis page 68)
 > [!law] Mule deer footnote, page 68
 > "* Restricted to hunters under the age of 18. ★ See Definitions section: Mule (Black-tailed) Deer. The antlers must accompany the species licence."
 
@@ -453,7 +601,7 @@ checked: 2026-10-04
 
 - Bear in August: private land only. Grouse: 5 a day together. Turkey: 1 spring, 1 fall (99%, page 68).
 
-```more the page 68 footnotes
+```more Official wording: footnotes (synopsis page 68)
 > [!law] Black bear footnote, page 68
 > "▲ MU's 8-1 to 8-15 and 8-21 to 8-26 is restricted to private land only. Hunters must obtain permission from landowners."
 
@@ -498,7 +646,7 @@ checked: 2026-10-04
 | ▲ | No vehicle for hunting |
 | ✖ | No ATV, e bike or snowmobile |
 
-```more the page 10 and 67 words
+```more Official wording (synopsis pages 10 and 67)
 > [!law] Access Management Areas, page 67
 > "Region 8 Motor Vehicle Prohibition maps are available online at www.gov.bc.ca/okanaganaccess."
 >
@@ -526,7 +674,7 @@ checked: 2026-10-04
 ```diagram re-r8-1700
 ```
 
-```more the page 67 words
+```more Official wording (synopsis page 67)
 > [!law] Access Management Areas, page 67
 > "★ The operation of all motor vehicles (including electric bicycles), excluding snowmobiles is prohibited in region 8 above 1,700 m elevation, except on existing roads and trails. See page 10 for definition of existing road or trail."
 
@@ -539,7 +687,7 @@ checked: 2026-10-04
 ```diagram re-r8-vehicle-areas
 ```
 
-```more the page 67 words, table and map mismatches
+```more Official wording, table and map mismatches (synopsis page 67)
 > [!law] Access Management Areas, page 67
 > "★ Oliver Mountain Area (MU 8-1). See Map J3."
 >
@@ -617,7 +765,7 @@ checked: 2026-10-04
 ```diagram re-area-labels
 ```
 
-```more the page 4 and 10 words
+```more Official wording (synopsis pages 4 and 10)
 > [!law] Definitions, page 4
 > "NO HUNTING AREA - means a designated area in which hunting (see definition) is prohibited."
 >
@@ -638,7 +786,7 @@ checked: 2026-10-04
 ```diagram re-r8-highways
 ```
 
-```more the page 10 and 67 words
+```more Official wording (synopsis pages 10 and 67)
 > [!law] Notice to Hunters, page 67
 > "No Shooting Areas: Hunters should note the Highway No Shooting Areas as outlined on page 10. Note also that the closures for Highway 3 between Manning Park and Princeton and for the Coquihalla Phase III (Okanagan Connector) Hwy 97C are No Shooting and No Hunting Closures."
 
@@ -663,7 +811,7 @@ checked: 2026-10-04
 ```anim re-r8-oxbow-week The Oxbows close to shooting 1 March to 30 September.
 ```
 
-```more the page 69 and regulation words
+```more Official wording (synopsis page 69 and the Closed Areas Regulation)
 > [!law] Map J1, page 69
 > "Map J1 Osoyoos Oxbows Motor Vehicle Closed Area and No Shooting or Hunting Area (MU 8-1). The operation of vehicles is restricted to established road shown as open lines. No shooting or hunting from Mar 1 - Sept 30, in the restricted area, including the roadways."
 
@@ -682,7 +830,7 @@ checked: 2026-10-04
 ```diagram re-r8-vaseux
 ```
 
-```more the page 9 and 67 words
+```more Official wording (synopsis pages 9 and 67)
 > [!law] Notice to Hunters, page 67
 > "Hunting is prohibited within the Vaseux Migratory Bird Sanctuary and National Wildlife Areas. For more information visit www.canada.ca/en/environment-climate-change/services/migratory-bird-sanctuaries/locations/vaseux-lake.html."
 
@@ -698,7 +846,7 @@ checked: 2026-10-04
 ```diagram re-r8-south
 ```
 
-```more the page 69 and regulation words
+```more Official wording (synopsis page 69 and the Closed Areas Regulation)
 > [!law] Map J10, page 69
 > "Map J10 Kaleden, and Okanagan Falls No Shooting Areas and Skaha Lake Firearms Using Shot Only Area (MUs 8-1, 8-8 and 8-9)."
 
@@ -718,7 +866,7 @@ checked: 2026-10-04
 | J8 | Upper Carmi Road, MU 8-9 | No Shooting Area. Almost all private land |
 | J11 | Naramata, MU 8-9 | No Shooting Area and Shot Only Area |
 
-```more the page 69, 70 and regulation words
+```more Official wording (synopsis pages 69, 70 and the Closed Areas Regulation)
 > [!law] Map J8, page 69
 > "Map J8 Upper Carmi Road No Shooting Area (MU 8-9). The Upper Carmi Road No Shooting Area is almost entirely private land, and it is unlawful to hunt private land without consent of the appropriate landowner."
 
@@ -740,7 +888,7 @@ checked: 2026-10-04
 | J9 | Brenda Mines, MU 8-8 | No Shooting Area |
 | J7 | Garnet Valley, Summerland | Vehicle closure only |
 
-```more the page 69 words and map notes
+```more Official wording and map notes (synopsis page 69)
 > [!law] Map J9, page 69
 > "Map J9 Brenda Mines No Shooting Area (MU 8-8)."
 
@@ -753,7 +901,7 @@ checked: 2026-10-04
 ```diagram re-r8-vernon
 ```
 
-```more the page 70 and regulation words
+```more Official wording (synopsis page 70 and the Closed Areas Regulation)
 > [!law] Maps J16 to J18, page 70
 > "Map J16 Silver Star Park No Hunting Area (MUs 8-22, 8-25, and 8-26). Contact Ministry offices in Vernon or Penticton for details."
 >
@@ -807,7 +955,7 @@ checked: 2026-10-04
 | No baiting or feeding ungulates | Within 200 m (219 yd) of a dwelling, school yard, playground |
 | Status | New, printed green |
 
-```more the page 67 words
+```more Official wording (synopsis page 67)
 > [!law] It's Unlawful, page 67
 > "To intentionally bait or feed ungulates within 200m of a dwelling, school yard, or playground in region 8."
 
@@ -822,7 +970,7 @@ checked: 2026-10-04
 | Submit | Deer, elk, moose heads, whole region |
 | Bovine tuberculosis box | None |
 
-```more the page 66 words
+```more Official wording (synopsis page 66)
 > [!law] Chronic Wasting Disease Testing, page 66
 > "Submit deer, elk, and moose heads for CWD testing."
 >
@@ -831,60 +979,6 @@ checked: 2026-10-04
 - [[CWD]] (Chronic Wasting Disease): the region asks for deer, elk and moose heads from anywhere in Region 8 (99%).
 - The box says "Submit", a request, not an offence line (90%, my reading).
 - No bovine tuberculosis box on the Region 8 pages (99%).
-```
-
-## What this means for a quail trip
-
-```diagram re-r8-quail-gun
-```
-
-| Bird | MUs | October | November | Limit |
-|---|---|---|---|---|
-| Quail | 8-1 to 8-15, 8-21 to 8-26 | Open from Oct 1 | Open to Nov 30 | 10 (30) |
-| Chukar | 8-1 to 8-15, 8-21 to 8-26 | Open from Oct 1 | Open to Nov 30 | 5 (15) |
-| Gray partridge | 8-1 to 8-15, 8-21 to 8-26 | Open from Oct 1 | Open to Nov 30 | 3 (9) |
-| Pheasant, cocks | 8-1 to 8-15, 8-21 to 8-26 | Open from Oct 1 | Open to Nov 30 | 2 (6) |
-| Grouse: dusky, ruffed, spruce | 8-1 to 8-15, 8-21 to 8-26 | Open | Open to Nov 30 | 5 total (15) |
-| Turkey, any | 8-1, 8-9, 8-10, 8-12 to 8-15, 8-22 to 8-26 | Oct 1 to Oct 15 only | Closed | 1 in fall |
-
-```more gun rules and closures by town
-- Every row: 99%, page 68, 2 October 2026 edition. Oliver, Osoyoos, Penticton and Vernon MUs are inside every upland range (85 to 90%, my reading of the map).
-- Grouse bow only season runs on, 1 to 10 December (99%).
-- Gun: shotgun, air gun or bow for quail, chukar, partridge and pheasant. A [[Rimfire|rimfire]] is only for grouse, ptarmigan or turkey; a [[Centrefire|centrefire]] only for grouse or ptarmigan (95%, my reading of page 13 notes 2 and 3).
-- The lead shot ban does not apply to upland birds (99%, page 13). Ducks need [[Non toxic shot|non toxic shot]] (99%, page 13).
-- Pump or semi auto: [[Magazine plug|plug]] it to hold no more than 2 shells (99%, page 12).
-- Hours: one hour before sunrise to one hour after sunset (99%, page 11).
-- Each bird keeps one feathered wing on until home (99%, page 15).
-
-### Closures near Oliver and Osoyoos
-- Osoyoos Oxbows (Map J1): shooting and hunting open again from 1 October; vehicles on established roads only, all year (95%, my reading).
-- Ecological reserve at the oxbows: closed all year (99% rule, 95% map label).
-- Vaseux Lake sanctuary and National Wildlife Areas: no hunting (99%).
-- Oliver Mountain (Map J2): vehicles out, shooting not closed by the synopsis (99%).
-
-### Closures near Penticton
-- Kaleden and Okanagan Falls (Map J10): No Shooting Areas (99%).
-- Skaha Lake: shot only (99%). Naramata (Map J11): No Shooting core, shot only around it (99%).
-- Upper Carmi Road (Map J8): No Shooting, mostly private land (99%).
-- Hwy 97C from Peachland: 400 m no hunting or shooting (99%).
-- Skaha Lake Eastside lots: no motor vehicles (99%).
-
-### Closures near Vernon
-- Swan Lake (Map J17) and Kalamalka Lake Park (Map J18): no shooting or hunting (99%).
-- Silver Star (Map J16): no hunting (99%).
-
-### Everywhere in the valley
-> [!law] Page 10
-> "It is unlawful to hunt or discharge a firearm within 100 m of a church, school building, school yard, playground, regional district park, dwelling house, or farm or ranch building that is occupied by persons or domestic animals."
-
-> [!law] Page 9
-> "A person is not permitted to hunt on cultivated land or on Crown land which is subject to a grazing lease while the land is occupied by livestock, without the consent of the owner, lessee, or occupant of the land."
->
-> "Municipal bylaws are NOT included in this synopsis. Consult municipal clerks for details."
-
-- 100 m (109 yd) from homes, occupied farm buildings, schools and playgrounds (99%).
-- Orchards and vineyards are [[Cultivated land|cultivated land]]: get the owner's consent (90%, my reading).
-- Oliver, Osoyoos, Penticton, Summerland, Kelowna and Vernon bylaws are not in the synopsis (99%). VERIFY each town's firearm bylaw.
 ```
 
 > [!rule]
@@ -907,6 +1001,23 @@ checked: 2026-10-04
 - [Region 8 Okanagan excerpt (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-8-okanagan.pdf): text matches pages 66 to 70 of the full edition (99%).
 - [Closed Areas Regulation, B.C. Reg. 76/84 (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_01): Schedule 3 ss. 6, 38, 65; Schedule 5 ss. 48, 75, 76, 121, 128; Schedule 6 s. 6; Schedule 7 s. 37; Schedule 9 ss. 3, 15. Consolidation current to 22 September 2026, read directly 2026-10-04 (99%).
 - Lines marked "my reading" are this app's interpretation, 85 to 95%. Map readings are 85 to 95%.
+```
+
+## Where this is in the synopsis
+```diagram re-r8-pages
+```
+
+> [!why]
+> The quail trip is in Region 8. Every Okanagan season, limit, closure and map is on these screens, so you know the rules before you leave Heffley Creek.
+
+```more what this session covers
+- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
+
+- This session carries printed pages 66 to 70, the Region 8 section, in the order printed (99%).
+- Page 66: contacts, changes and testing boxes, the region map. Page 67: bag limits, vehicle closures, notices. Page 68: every season row. Pages 69 and 70: Maps J1 to J21 (99%).
+- Every season cell was checked against a 200 dpi image of page 68 and the page text (99%).
+- Green print in the synopsis marks new information and regulation changes (99%, page 2 key). Green cells are flagged "new" here (99%).
+- The Quail trip screen, right after Strategy, pulls out the trip: quail, chukar, pheasant, partridge and grouse by [[MU]] (Management Unit) in October and November, and the closures near Oliver, Osoyoos, Penticton and Vernon.
 ```
 
 ```quiz

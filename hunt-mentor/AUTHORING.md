@@ -148,3 +148,19 @@ commons-mule-deer-walk | A mule deer walking: watch the stiff legged bounce.
 ### Grids and charts
 - Use Markdown tables for comparisons (short cells, 2 to 5 columns).
 - Bar charts, timelines, flowcharts: hand drawn SVG in `diagrams/`, big labels (14 px or more at 400 wide), colours from the existing diagrams (#2f3a2b ink, #e8590c orange, #4a7fb0 water, #8a9a6b sage, #8b5a2b brown, #fffaf0 paper).
+
+### Seasons block (open today, opens next, full table; added 2026-10-12)
+````
+```seasons
+region: 3
+mus: 3-27, 3-28
+species: mule deer, white tailed deer
+```
+````
+- `region:` one of 1, 2, 3, 4, 5, 6, 7a, 7b, 8 or migratory. Reads `data/seasons/region<N>.json` (or `migratory.json`) on the phone, offline (precached; inline in the single file backup). Unknown region: the build lists it as missing.
+- `mus:` optional. The owner's MUs first. Each becomes a chip; an "All Region N" chip and an "Other MU" picker are always added, so one block works for the whole region. Omit it to start on the whole region.
+- `species:` optional filter, comma separated, matched by words ("deer" matches mule deer and white tailed deer).
+- It draws: the "Study aid only" banner, any closed MU warning, "Open today in MU X" (class, dates, days to close, limit, page, certainty, Youth only and Bow only tags), "Opens in the next 60 days", then "All seasons" behind a tap (one table per species: Class, Dates, Limit, Source; today's open rows shaded), LEH only rows and "No general open season" species from the data.
+- Dates use today's date on the phone (America/Vancouver). Seasons that wrap past New Year (Nov 15 to Mar 31) and "No closed season" rows are handled.
+- Limits come only from the data: the row notes ("Bag 2", "5 (15)" = 5 a day, 15 in possession, "NBL"), the federal daily and possession numbers, or the region `bag` list (the regional paragraph, e.g. the Region 3 deer limits, page 33). A row with no limit in the data shows VERIFY. Fix the data file, not the lesson, when a limit is missing.
+- Put it on screen 1 of a Rule Book region lesson with at most 2 lines of text around it (it counts as most of a screen).

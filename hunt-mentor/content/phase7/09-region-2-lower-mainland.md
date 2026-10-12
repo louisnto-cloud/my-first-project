@@ -7,24 +7,176 @@ minutes: 50
 checked: 2026-10-04
 ---
 
-> [!warn]
-> Study aid only. The official regulations are the law.
+## Open today in MU 2-8 and the Fraser Valley
 
-```diagram re-r2-pages
+> [!warn]
+> Study aid only. The official regulations are the law. Synopsis edition dated 2 October 2026.
+
+```seasons
+region: 2
+mus: 2-8, 2-4, 2-3, 2-19
 ```
 
-> [!why]
-> Mission is in Region 2. Every Lower Mainland season, limit, closure and map is on these screens, so the phone is the only book you carry.
+- Home is Mission, [[MU]] (Management Unit) 2-8, in Region 2 Lower Mainland. Next door: MU 2-4 (Abbotsford, Delta), MU 2-3 (Chilliwack), MU 2-19 (Chehalis) (90%, my reading of the page 26 map).
+- Hunting inside Mission's limits or anywhere in MU 2-4 needs the Fraser Valley Special Area licence and $1,000,000 insurance (99%, page 29, Map B10).
 
-```more what this session covers
-- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
+## Bag limits in plain numbers: big game
 
-- This session carries printed pages 26 to 31, the Region 2 section, in the order printed (99%).
-- Page 26: contacts, the changes box, the region map. Page 27: bag limits, notices, vehicle closures. Page 28: every season row. Pages 29 to 31: Maps B1 to B33 (99%).
-- Every season cell was checked against a 150 dpi image of page 28, 220 dpi crops of the deer and bird rows, and the page text (99%).
-- Where the synopsis gives only a map, the boundary words come from the map labels (map reading) or the Closed Areas Regulation, quoted (99%).
-- No green print (new rules) shows on pages 26 to 31 (95%, my reading of the page images).
-- The last screens pull out Mission: [[MU]] (Management Unit) 2-8, with 2-4, 2-3 and 2-19 next door (90%, my reading of the page 26 map and Map B10).
+| Game | Limit | Source |
+|---|---|---|
+| Black tailed deer, Region 2 | 2 a licence year, at most 1 antlerless | 99%, page 27 |
+| Deer in MU (Management Unit) 2-8 | Bucks only. No antlerless season | 99%, page 28 |
+| Deer, MUs 2-5 and 2-12 | 1 buck, Sept 10 to Nov 30 | 99%, page 28 |
+| Deer, Bowen and Texada (MU 2-16) | 3 | 99%, page 28 |
+| White tailed deer | 0. No season in Region 2 | 99%, pages 14, 27 |
+| All deer, all of BC | 3 a licence year | 99%, page 14 |
+| Black bear | 2 a licence year (Apr 1 to Mar 31) | 99%, page 28 |
+| Cougar | 2 | 99%, page 28 |
+| Mountain goat | 1 | 99%, page 28 |
+| Wolf | 3. Not open in MU 2-8 | 99%, page 28 |
+| Bobcat | 1 | 99%, page 28 |
+| Coyote, raccoon, skunk | No limit | 99%, page 28 |
+| Snowshoe hare | 10 a day | 99%, page 28 |
+
+```more how the deer numbers fit together
+- Page 27 is the Region 2 ceiling: 2 black tailed deer, 1 of them antlerless at most (99%).
+- Page 14, Region 2 row: bucks 2, antlerless 1, total 2, white tailed deer 0 (99%).
+- A limit is not a season. In MU 2-8 the only general deer row is bucks, so the antlerless 1 is out of reach there (99%, page 28).
+- Bowen and Texada print "3(2)". The "(2)" is my reading: up to 2 of the 3 antlerless (80%). VERIFY.
+- A Region 2 black tailed buck does not count against the one mule deer buck for Regions 3 to 8 combined (95%, my reading of page 14).
+```
+
+## Bag limits in plain numbers: birds
+
+| Bird | A day (in possession) | Source |
+|---|---|---|
+| Grouse: sooty, ruffed, spruce together | 10 (30) | 99%, page 28 |
+| Ptarmigan. Not in MU (Management Unit) 2-4 | 5 (15) | 99%, page 28 |
+| Pheasant, cocks. MUs 2-4, 2-8 only | 2 (6) | 99%, page 28 |
+| Band tailed pigeon | 5 (15) | 99%, page 28 |
+| Ducks | 8 (24) | 99%, page 28 |
+| Coots, snipe | 10 (30) each | 99%, page 28 |
+| Canada and cackling geese | 10 (30) | 99%, page 28 |
+| White fronted geese | 5 (15) | 99%, page 28 |
+| Snow and Ross's geese, MUs 2-4 and 2-5 | 15 (45), Ross's 5 (15) at most | 99%, page 28 |
+| Snow and Ross's geese, MU 2-8 | VERIFY: page 28 says 10 (30), page 12 says 5 a day | 99% both pages |
+| Brant. MU 2-4 only, March | 3 (9) | 99%, page 28 |
+
+- Inside the 8 ducks: no more than 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins (99%, page 28).
+- Until the snow goose limit in MU 2-8 is settled, take 5 a day (Tip).
+
+## 10 rules that catch hunters here
+
+1. Fraser Valley Special Area licence ($10) and $1,000,000 liability insurance: all of MU (Management Unit) 2-4, and MU 2-8 inside Maple Ridge, Pitt Meadows, Mission and Coquitlam (99%, pages 8 and 29). [Licences](#/s/fw-rules-01)
+2. Deer in MU 2-8: bucks only, 10 September to 15 December. A doe is never legal there (99%, page 28). [Big game](#/s/fw-rules-06)
+3. No season means no hunting: no white tailed deer anywhere in Region 2, no wolf in MU 2-8 (99%, pages 14, 27, 28).
+4. Fraser Valley Regional District roads: no shooting within 400 m, unless lawfully hunting or trapping. Target shooting is out (99%, page 27).
+5. Pitt Addington Marsh (MU 2-8) and Bert Brink Wildlife Management Area (MU 2-4): no motor vehicles, all year (99%, page 27). [Vehicles](#/s/fw-rules-03)
+6. Other Region 2 vehicle closures: 1 April to 15 June. No sign does not mean no closure (99%, page 27).
+7. Regional district parks: no hunting or shooting within 100 m (99%, page 9). [Where you can hunt](#/s/fw-rules-04)
+8. Highway 7, east of Mission to Highway 1: shot only within 150 m (99%, Closed Areas Regulation). More shot only and No Shooting land at Nicomen and Hatzic (99% rule, 85% my reading of the boundaries). Mission's bylaw adds more: [Local plan: Mission](#/s/local-mission)
+9. Ducks and geese: federal permit, no lead shot on Delta and Mud Bay dykes, no snipe in Boundary Bay, no hunting in Burns Bog (99%, pages 3 and 27). [Migratory birds](#/s/fw-rules-07)
+10. Every cougar and mountain goat to Compulsory Inspection, by appointment. Wolf and bobcat: Compulsory Reporting (99%, pages 26 and 28). [After the kill](#/s/fw-rules-08)
+
+## Strategy here: deer, bear and grouse
+
+Strategy is opinion. Each line says Tip or gives its source.
+
+### Black tailed deer, bucks, to 15 December
+- Where: cutblock edges, old roads, salal and alder. Logged openings spring to fall, old growth higher up in winter (90%, BC account). [Where](#/s/mc-mule-deer-07)
+- When: the rut runs November into early December (80%). Late season is your best window (Tip).
+- How: still hunt slowly with short shots, not long glassing (Tip). [How to hunt](#/s/mc-mule-deer-09)
+
+### Black bear, to 30 November
+- Where and when: fall berry patches, Himalayan blackberry on valley edges, young cutblocks (90%). [Where](#/s/mc-black-bear-07)
+- How: glass berry slopes in the evening (Tip). [How to hunt](#/s/mc-black-bear-09)
+
+### Grouse, to 15 December
+- Where: ruffed in aspen and poplar near water; sooty in conifers, often higher in winter (65 to 85%). [Where](#/s/mc-grouse-07)
+- How: walk a Forest Service road edge at first light, then step off the road to shoot (Tip). [How to hunt](#/s/mc-grouse-09)
+
+## Strategy here: ducks, geese and pheasant
+
+Strategy is opinion. Each line says Tip or gives its source.
+
+### Ducks, to 24 January
+- Where: the lower Fraser Valley is the centre of wood duck country in BC (85%). Sloughs and side channels off the Fraser (Tip). [Where](#/s/mc-ducks-07)
+- How: scout the evening before (Tip). Ducks land into the wind (80%), so set up with the wind at your back (Tip). [How to hunt](#/s/mc-ducks-09)
+
+### Canada geese, to 22 November, again 19 December
+- Where: corn stubble and pasture fields, almost all private: written permission first (Tip, 65%). Most BC geese come from MU 2-4 (99%, survey). [Where](#/s/mc-geese-07)
+- How: find yesterday's field, hide in it before first light (Tip). [How to hunt](#/s/mc-geese-09)
+
+### Pheasant cocks, to 30 November, MUs (Management Units) 2-4 and 2-8
+- Where and how: farm edges and hedgerows with permission; walk slowly into cover (Tip).
+
+### Find your spot
+- Open the [Hunt Map](#/map), tap your MU, run Area analysis, then check private land and the closures on the Mission screens (Tip).
+
+## Mission: October to December seasons
+
+Every row: page 28, 2 October 2026 edition (99%).
+
+| Game | Class | Dates in MUs 2-3, 2-4, 2-8, 2-19 | Limit |
+|---|---|---|---|
+| Mule deer (black tailed) | Bucks | Sept 10 to Dec 15 | 2 a licence year, bucks only here |
+| Black bear | None printed | Sept 10 to Nov 30 | 2 per licence year |
+| Grouse: sooty, ruffed, spruce | None printed | Sept 10 to Dec 15 | 10 (30), all three together |
+| Ptarmigan | None printed | Sept 10 to Dec 15 | 5 (15). Not in 2-4 |
+| Pheasant | Cocks | Oct 10 to Nov 30, 2026 | 2 (6). 2-4 and 2-8 only |
+| Ducks | None printed | Oct 10, 2026 to Jan 24, 2027 | 8 (24) |
+| Coots, snipe | None printed | Oct 10, 2026 to Jan 24, 2027 | 10 (30) each |
+| Canada and cackling geese | None printed | Oct 10 to Nov 22, then Dec 19 to Jan 10 | 10 (30) |
+| White fronted geese | None printed | Oct 10, 2026 to Jan 24, 2027 | 5 (15) |
+| Snow and Ross's geese | None printed | Oct 10, 2026 to Jan 5, 2027 | 15 a day in 2-4; 2-8: 10 a day, 30 in possession, at most 5 Ross's (85%, federal District 2 table governs; page 12 says 5) |
+| Cougar | None printed | Sept 10 to Mar 31 | 2 |
+| Bobcat | None printed | Nov 15 to Feb 15 | 1 |
+| Coyote | None printed | Sept 10 to June 15 | NBL |
+| Raccoon, skunk | None printed | Sept 1 to Mar 31 | NBL |
+| Snowshoe hare | None printed | Aug 1 to Apr 30 | 10 a day. 2-8 and 2-19 only |
+
+```more what is not open near Mission
+- Every row: 99%, page 28, 2 October 2026 edition. The MU ranges on page 28 cover all four MUs unless the limit cell says otherwise (99%).
+- Not open near Mission: antlerless deer, white tailed deer, wolf, moose and elk (99%, page 28).
+- Bow Only deer and grouse seasons, 1 to 9 September, are over by October (99%).
+- Ducks and geese: the federal rules (permit, plugs, steel shot, hours) are on the federal Rule Book page when it is in the app. Until then the Phase 4 Ducks and Geese sessions carry them (99%).
+```
+
+## Mission: the licence and the closures
+
+```diagram re-r2-mission-closures
+```
+
+```more every line
+- Hunting inside the Mission city limits, or anywhere in 2-4: Fraser Valley Special Area licence plus $1,000,000 liability insurance (99%, Map B10).
+- FVRD roads: no shooting within 400 m except while lawfully hunting or trapping (99%, page 27).
+- Pitt Addington Marsh, 2-8: no motor vehicles all year (99%). Bert Brink WMA, 2-4: the same (99%).
+- Burns Bog, 2-4: no hunting. Boundary Bay, 2-4: no snipe. Delta and Mud Bay dykes: no lead shot (99%, page 27).
+- Map B12 Buntzen Lake, 2-8: No Shooting (99%). In 2-19: Maps B29 Elbow Lake, B32 Hemlock Valley and B33 Chehalis (99%). In 2-3: Maps B2, B3 and B4 (99%).
+- Regional district parks: no hunting or shooting within 100 m (99%, page 9).
+```
+
+## Mission: closures in the regulation, not printed
+
+```diagram re-r2-mission-reg
+```
+
+```more Official wording (Closed Areas Regulation)
+> [!law] Closed Areas Regulation, Schedule 5.1 ss. 7 and 9
+> "That portion of M.U. 2-8 being all Crown land within 400 m of the midline of Florence Lake Forest Service Road from the northern boundary of the District of Mission northerly to the terminus of Florence Lake Forest Service Road, including any spur roads."
+>
+> "Those portions of M.U. 2-8, in the vicinity of the District of Mission, being all Crown land within 400 m of the midline of the portions highlighted in red of the roads on Map No. 5.1-1/17 in Schedule 15."
+
+- Schedule 5.1 s. 8 adds the Lost Creek, Terepocki, Lease, Murdo, Mount Kettley and Salsbury FSRs; s. 10 every road in the Norrish Creek watershed. All are 400 m bands on [[Crown land]] in 2-8 (99%).
+- These are the FVRD roads on page 27: no target shooting, hunting allowed (95%, my reading of page 27 with Schedule 5.1).
+
+> [!law] Closed Areas Regulation, Schedule 9 s. 1
+> "(2) Highway 7 from the easterly boundary of Mission to its junction with Highway 1."
+
+- Within 150 m (164 yd) of Highway 7, east of Mission to Highway 1: shot only (99%, Schedule 9 s. 1).
+- Schedule 9 s. 9, Nicomen: shot only on the lowland from Hatzic Lake east through Nicomen and Deroche toward Davis Lake Park and Norrish Creek, and at Harrison Bay (99% rule, 85% my reading of the long boundary).
+- Schedule 5 s. 63, Nicomen: five No Shooting pieces east of Mission, around Farms, Durieu and Sylvester roads, Hatzic Slough, north of Highway 7 at Hatzic Lake, and Ross Road to Deroche Creek (99% rule, 85% my reading).
+- None of these is printed on the Region 2 pages (99%). Mission's own firearms bylaw adds more; see the Local plan: Mission session (99%).
 ```
 
 ## Regional office and Conservation Officers
@@ -32,7 +184,7 @@ checked: 2026-10-04
 ```diagram re-r2-contacts
 ```
 
-```more the page 26 words
+```more Official wording (synopsis page 26)
 > [!law] Fish and Wildlife Regional Office, page 26
 > "200-10428 153 Street"
 >
@@ -59,7 +211,7 @@ checked: 2026-10-04
 | Compulsory Reporting | Wolf and bobcat |
 | RAPP (Report All Poachers and Polluters) | 1 877 952 7277, 24 hours |
 
-```more the page 26 words
+```more Official wording (synopsis page 26)
 > [!law] Compulsory Inspection (CI) Centres, page 26
 > "Qualified Compulsory Inspectors will provide this service at locations listed below. See the Ministry website at www.gov.bc.ca/hunting/compulsory-inspection or contact the regional office for more information."
 >
@@ -86,7 +238,7 @@ checked: 2026-10-04
 ```diagram re-r2-changes
 ```
 
-```more the page 26 words
+```more Official wording (synopsis page 26)
 > [!law] Regulation changes for 2026-2028, page 26
 > "No changes"
 
@@ -111,14 +263,14 @@ checked: 2026-10-04
 - The page 26 map is approximate. The legal MU lines are in the Management Unit Regulation maps (99%).
 ```
 
-## Regional bag limits
+## Regional bag limits: the official words
 
 ```diagram re-r2-deer-bag
 ```
 
 - Grouse: no more than 10 a day of the three kinds together (99%, page 27).
 
-```more the page 14 and 27 words
+```more Official wording (synopsis pages 14 and 27)
 > [!law] Regional Bag Limits, page 27
 > "Deer: Unless otherwise indicated, the bag limit for mule (black-tailed) deer is 2, one of which may be antlerless."
 >
@@ -145,7 +297,7 @@ checked: 2026-10-04
 ```diagram re-r2-bag-birds
 ```
 
-```more the page 28 bag limit column
+```more The bag limit column as printed (synopsis page 28)
 | Species | Bag limit cell as printed, page 28 |
 |---|---|
 | Mule deer (black tailed) | Refer to Regional Bag Limits on p. 27 and the Deer Bag Limits article on p. 14 |
@@ -182,7 +334,7 @@ checked: 2026-10-04
 ```diagram re-r2-deer-bow-bars
 ```
 
-```more the page 28 rows
+```more Every row as printed (synopsis page 28)
 ### Mule deer (black tailed)
 
 | MUs | Class | Season | Notes |
@@ -211,7 +363,7 @@ checked: 2026-10-04
 ```diagram re-r2-goat-bear-bars
 ```
 
-```more the page 28 rows
+```more Every row as printed (synopsis page 28)
 ### Mountain goat
 
 | MUs | Class | Season | Notes |
@@ -240,7 +392,7 @@ checked: 2026-10-04
 
 - No wolf season in Mission's 2-8 (99%, page 28).
 
-```more the page 28 rows
+```more Every row as printed (synopsis page 28)
 ### Wolf
 
 | MUs | Class | Season | Notes |
@@ -289,7 +441,7 @@ checked: 2026-10-04
 ```diagram re-r2-upland-bars
 ```
 
-```more the page 28 rows
+```more Every row as printed (synopsis page 28)
 ### Grouse: sooty (blue), ruffed and spruce
 
 | MUs | Class | Season | Notes |
@@ -325,7 +477,7 @@ checked: 2026-10-04
 ```anim re-r2-goose-week Ducks and Canada geese do not open and close together.
 ```
 
-```more the page 28 rows
+```more Every row as printed (synopsis page 28)
 ### Band tailed pigeons
 
 | MUs | Class | Season | Notes |
@@ -370,7 +522,7 @@ checked: 2026-10-04
 ```diagram re-r2-goose-bars
 ```
 
-```more the page 28 rows
+```more Every row as printed (synopsis page 28)
 ### Geese: snow and Ross's
 
 | MUs | Class | Season | Notes |
@@ -425,7 +577,7 @@ checked: 2026-10-04
 | Hunts, codes, dates | Separate LEH synopsis |
 | You need | Draw authorization, hunting licence, species licence |
 
-```more the page 5 words
+```more Official wording (synopsis page 5)
 > [!law] Limited Entry Hunting, page 5
 > "Limited Entry Hunting (LEH) seasons are open only to hunters who have drawn an LEH authorization for the applicable licence year."
 >
@@ -446,7 +598,7 @@ checked: 2026-10-04
 | `**` | Part of 2-11, Maps B15 and B20. Mostly private land |
 | ◆ | 2-5 and 2-12: 1 buck, Sept 10 to Nov 30 |
 
-```more the page 28 deer footnotes
+```more Official wording: deer footnotes (synopsis page 28)
 > [!law] Mule deer footnotes, page 28
 > "▲ In those portions of MU 2-16 being Bowen Island and Texada Island, the bag limit for deer is 3(2)."
 >
@@ -482,7 +634,7 @@ checked: 2026-10-04
 | Wolf, bobcat | Compulsory Reporting |
 | Cougar | No kittens or cougars with them. Inspection |
 
-```more the page 3 and 28 words
+```more Official wording (synopsis pages 3 and 28)
 > [!law] Mountain goat footnotes, page 28
 > "★ See Map B9 ▲ See Maps B18, B19"
 >
@@ -517,7 +669,7 @@ checked: 2026-10-04
 
 - Snow geese in 2-8: page 28 and page 12 disagree. VERIFY.
 
-```more the page 12 and 28 words
+```more Official wording (synopsis pages 12 and 28)
 > [!law] Grouse footnote, page 28
 > "For Sooty/Dusky, Spruce, and Ruffed grouse, the daily aggregate bag limit is 10; the aggregate possession limit is 30."
 
@@ -555,7 +707,7 @@ checked: 2026-10-04
 ```diagram re-r2-dykes
 ```
 
-```more the page 27 words
+```more Official wording (synopsis page 27)
 > [!law] Notice to Hunters, page 27
 > "No person shall use lead shot for any purpose when discharging a firearm on any dyke or on the water side (seaward or river side) of any dyke in the municipality of Delta, or on any foreshore dyke facing Mud Bay in the city of Surrey."
 
@@ -572,7 +724,7 @@ checked: 2026-10-04
 ```diagram re-r2-fvsla
 ```
 
-```more the page 8, 27 and 29 words
+```more Official wording (synopsis pages 8, 27 and 29)
 > [!law] Notice to Hunters, page 27
 > "Fraser Valley Special Area - Hunters should take note of the special licence area in the Fraser Valley (see Map B10). These special licences are available through Service BC, FrontCounter BC, participating vendors and online at www.gov.bc.ca/hunting."
 
@@ -597,7 +749,7 @@ checked: 2026-10-04
 
 - Region 2: every closure runs 1 April to 15 June unless dated (99%, page 27).
 
-```more the page 10 and 27 words
+```more Official wording (synopsis pages 10 and 27)
 > [!law] Access Restrictions, page 27
 > "Region 2 Motor Vehicle Prohibition maps are available online at www.gov.bc.ca/southcoastaccess."
 >
@@ -619,7 +771,7 @@ checked: 2026-10-04
 ```diagram re-r2-vehicle-mus
 ```
 
-```more the page 27 words
+```more Official wording (synopsis page 27)
 > [!law] Motor Vehicle Closed Areas, page 27
 > "MU 2-4" "★ Bert Brink Wildlife Management Area - effective year-round."
 >
@@ -640,7 +792,7 @@ checked: 2026-10-04
 ```diagram re-r2-pemberton-bars
 ```
 
-```more the page 27 words
+```more Official wording (synopsis page 27)
 > [!law] Motor Vehicle Closed Areas, page 27
 > "MU 2-11" "★ Lillooet South FSR west of the 2 km mark; Apr 1 - June 15, Sept 16 - Nov 30."
 >
@@ -662,7 +814,7 @@ checked: 2026-10-04
 ```diagram re-area-labels
 ```
 
-```more the page 4, 10 and 27 words
+```more Official wording (synopsis pages 4, 10 and 27)
 > [!law] Definitions, page 4
 > "NO HUNTING AREA - means a designated area in which hunting (see definition) is prohibited."
 >
@@ -685,7 +837,7 @@ checked: 2026-10-04
 ```diagram re-r2-roads-noshoot
 ```
 
-```more the page 27 words
+```more Official wording (synopsis page 27)
 > [!law] Notice to Hunters, page 27
 > "Unless lawfully hunting or trapping, the discharge of firearms is prohibited:"
 >
@@ -709,7 +861,7 @@ checked: 2026-10-04
 | Squamish Valley Forest Service Road | 800 m west, 400 m east (99% legend) |
 | Branch 200, first 3.5 km | 400 m (99% legend) |
 
-```more the page 29 words and map notes
+```more Official wording and map notes (synopsis page 29)
 > [!law] Map B11, page 29
 > "Map B11 Squamish River Valley No Shooting Areas. Discharge of firearms for the purpose of hunting permitted (MU 2-6)."
 >
@@ -729,7 +881,7 @@ checked: 2026-10-04
 | 400 m bands on roads and streams | No target shooting |
 | Hunting with a firearm | Allowed |
 
-```more the page 31 and regulation words
+```more Official wording (synopsis page 31 and the Closed Areas Regulation)
 > [!law] Map B33, page 31
 > "Map B33 Chehalis-Fleetwood No Shooting Area. Discharge of firearms for the purpose of hunting permitted (MU 2-19)."
 
@@ -745,7 +897,7 @@ checked: 2026-10-04
 ```diagram re-r2-sea-to-sky
 ```
 
-```more the page 10 and 27 words
+```more Official wording (synopsis pages 10 and 27)
 > [!law] Notice to Hunters, page 27
 > "Whistler Olympic Park No Hunting Area. Hunting is prohibited within the boundaries of Whistler Olympic Park."
 >
@@ -768,7 +920,7 @@ checked: 2026-10-04
 ```diagram re-r2-islands
 ```
 
-```more the page 27 words
+```more Official wording (synopsis page 27)
 > [!law] Notice to Hunters, page 27
 > "The discharge of rifles is prohibited on Keats Island (MU 2-16, east of Gibsons)."
 >
@@ -789,7 +941,7 @@ checked: 2026-10-04
 ```diagram re-r2-no-hunt
 ```
 
-```more the page 9 and 27 words
+```more Official wording (synopsis pages 9 and 27)
 > [!law] Notice to Hunters, page 27
 > "Burns Bog (MU 2-4) No Hunting or Trapping Area - no hunting or trapping in the Burns Bog Partnership Lands."
 >
@@ -808,7 +960,7 @@ checked: 2026-10-04
 ```diagram re-r2-maps-b1
 ```
 
-```more the page 29 words and map notes
+```more Official wording and map notes (synopsis page 29)
 > [!law] Maps B1 to B4, page 29
 > "Map B1 Hope - No Shooting Area (MUs 2-2 and 2-17)."
 >
@@ -829,7 +981,7 @@ checked: 2026-10-04
 ```diagram re-r2-maps-b5
 ```
 
-```more the page 29 words and map notes
+```more Official wording and map notes (synopsis page 29)
 > [!law] Maps B5 to B8, page 29
 > "Map B5 Pender Harbour - No Shooting Area and Firearms Using Shot Only Area (MU 2-5)."
 >
@@ -853,7 +1005,7 @@ checked: 2026-10-04
 ```diagram re-r2-maps-goat
 ```
 
-```more the page 29 and 30 words
+```more Official wording (synopsis pages 29 and 30)
 > [!law] Maps B9, B18 and B19, pages 29 and 30
 > "Map B9 Ashlu - Squamish Rivers Mountain Goat Closed Area (MU 2-6)."
 >
@@ -871,7 +1023,7 @@ checked: 2026-10-04
 ```diagram re-r2-maps-b12
 ```
 
-```more the page 30 and regulation words
+```more Official wording (synopsis page 30 and the Closed Areas Regulation)
 > [!law] Maps B12 to B14, page 30
 > "Map B12 Buntzen Lake - No Shooting Area (MU 2-8)."
 >
@@ -893,7 +1045,7 @@ checked: 2026-10-04
 ```diagram re-r2-maps-b15
 ```
 
-```more the page 30 words and map notes
+```more Official wording and map notes (synopsis page 30)
 > [!law] Maps B15 to B17, page 30
 > "Map B15 Pemberton - Firearms Using Shot Only Area (MUs 2-9, 2-10, and 2-11)."
 >
@@ -915,7 +1067,7 @@ checked: 2026-10-04
 ```diagram re-r2-maps-b21
 ```
 
-```more the page 30, 31 and regulation words
+```more Official wording (synopsis pages 30, 31 and the Closed Areas Regulation)
 > [!law] Maps B21 to B23, pages 30 and 31
 > "Map B21 Powell River Firearms Using Shot Only Area (MU 2-12)."
 >
@@ -936,7 +1088,7 @@ checked: 2026-10-04
 ```diagram re-r2-maps-texada
 ```
 
-```more the page 31 and regulation words
+```more Official wording (synopsis page 31 and the Closed Areas Regulation)
 > [!law] Maps B24 to B28, page 31
 > "Map B24 Blubber Bay - No Shooting Area (MU 2-16)."
 >
@@ -963,7 +1115,7 @@ checked: 2026-10-04
 ```diagram re-r2-maps-b29
 ```
 
-```more the page 31 and regulation words
+```more Official wording (synopsis page 31 and the Closed Areas Regulation)
 > [!law] Maps B29 to B32, page 31
 > "Map B29 Elbow Lake - No Shooting Area (MU 2-19)."
 >
@@ -998,72 +1150,6 @@ checked: 2026-10-04
 - Region 2 prints no cattle, gate or bison notices (99%, page 27).
 ```
 
-## Mission: October to December seasons
-
-Every row: page 28, 2 October 2026 edition (99%).
-
-| Game | Class | Dates in MUs 2-3, 2-4, 2-8, 2-19 | Limit |
-|---|---|---|---|
-| Mule deer (black tailed) | Bucks | Sept 10 to Dec 15 | Regional deer limits |
-| Black bear | None printed | Sept 10 to Nov 30 | 2 per licence year |
-| Grouse: sooty, ruffed, spruce | None printed | Sept 10 to Dec 15 | 10 (30), all three together |
-| Ptarmigan | None printed | Sept 10 to Dec 15 | 5 (15). Not in 2-4 |
-| Pheasant | Cocks | Oct 10 to Nov 30, 2026 | 2 (6). 2-4 and 2-8 only |
-| Ducks | None printed | Oct 10, 2026 to Jan 24, 2027 | 8 (24) |
-| Coots, snipe | None printed | Oct 10, 2026 to Jan 24, 2027 | 10 (30) each |
-| Canada and cackling geese | None printed | Oct 10 to Nov 22, then Dec 19 to Jan 10 | 10 (30) |
-| White fronted geese | None printed | Oct 10, 2026 to Jan 24, 2027 | 5 (15) |
-| Snow and Ross's geese | None printed | Oct 10, 2026 to Jan 5, 2027 | 15 a day in 2-4; 2-8: 10 a day, 30 in possession, at most 5 Ross's (85%, federal District 2 table governs; page 12 says 5) |
-| Cougar | None printed | Sept 10 to Mar 31 | 2 |
-| Bobcat | None printed | Nov 15 to Feb 15 | 1 |
-| Coyote | None printed | Sept 10 to June 15 | NBL |
-| Raccoon, skunk | None printed | Sept 1 to Mar 31 | NBL |
-| Snowshoe hare | None printed | Aug 1 to Apr 30 | 10 a day. 2-8 and 2-19 only |
-
-```more what is not open near Mission
-- Every row: 99%, page 28, 2 October 2026 edition. The MU ranges on page 28 cover all four MUs unless the limit cell says otherwise (99%).
-- Not open near Mission: antlerless deer, white tailed deer, wolf, moose and elk (99%, page 28).
-- Bow Only deer and grouse seasons, 1 to 9 September, are over by October (99%).
-- Ducks and geese: the federal rules (permit, plugs, steel shot, hours) are on the federal Rule Book page when it is in the app. Until then the Phase 4 Ducks and Geese sessions carry them (99%).
-```
-
-## Mission: the licence and the closures
-
-```diagram re-r2-mission-closures
-```
-
-```more every line
-- Hunting inside the Mission city limits, or anywhere in 2-4: Fraser Valley Special Area licence plus $1,000,000 liability insurance (99%, Map B10).
-- FVRD roads: no shooting within 400 m except while lawfully hunting or trapping (99%, page 27).
-- Pitt Addington Marsh, 2-8: no motor vehicles all year (99%). Bert Brink WMA, 2-4: the same (99%).
-- Burns Bog, 2-4: no hunting. Boundary Bay, 2-4: no snipe. Delta and Mud Bay dykes: no lead shot (99%, page 27).
-- Map B12 Buntzen Lake, 2-8: No Shooting (99%). In 2-19: Maps B29 Elbow Lake, B32 Hemlock Valley and B33 Chehalis (99%). In 2-3: Maps B2, B3 and B4 (99%).
-- Regional district parks: no hunting or shooting within 100 m (99%, page 9).
-```
-
-## Mission: closures in the regulation, not printed
-
-```diagram re-r2-mission-reg
-```
-
-```more the regulation words
-> [!law] Closed Areas Regulation, Schedule 5.1 ss. 7 and 9
-> "That portion of M.U. 2-8 being all Crown land within 400 m of the midline of Florence Lake Forest Service Road from the northern boundary of the District of Mission northerly to the terminus of Florence Lake Forest Service Road, including any spur roads."
->
-> "Those portions of M.U. 2-8, in the vicinity of the District of Mission, being all Crown land within 400 m of the midline of the portions highlighted in red of the roads on Map No. 5.1-1/17 in Schedule 15."
-
-- Schedule 5.1 s. 8 adds the Lost Creek, Terepocki, Lease, Murdo, Mount Kettley and Salsbury FSRs; s. 10 every road in the Norrish Creek watershed. All are 400 m bands on [[Crown land]] in 2-8 (99%).
-- These are the FVRD roads on page 27: no target shooting, hunting allowed (95%, my reading of page 27 with Schedule 5.1).
-
-> [!law] Closed Areas Regulation, Schedule 9 s. 1
-> "(2) Highway 7 from the easterly boundary of Mission to its junction with Highway 1."
-
-- Within 150 m (164 yd) of Highway 7, east of Mission to Highway 1: shot only (99%, Schedule 9 s. 1).
-- Schedule 9 s. 9, Nicomen: shot only on the lowland from Hatzic Lake east through Nicomen and Deroche toward Davis Lake Park and Norrish Creek, and at Harrison Bay (99% rule, 85% my reading of the long boundary).
-- Schedule 5 s. 63, Nicomen: five No Shooting pieces east of Mission, around Farms, Durieu and Sylvester roads, Hatzic Slough, north of Highway 7 at Hatzic Lake, and Ross Road to Deroche Creek (99% rule, 85% my reading).
-- None of these is printed on the Region 2 pages (99%). Mission's own firearms bylaw adds more; see the Local plan: Mission session (99%).
-```
-
 > [!rule]
 > Read the row, then the map, then the bylaw. In the Fraser Valley the closure is usually the answer.
 
@@ -1084,6 +1170,24 @@ Every row: page 28, 2 October 2026 edition (99%).
 - [Closed Areas Regulation, B.C. Reg. 76/84 (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_01): Schedule 3 s. 17; Schedule 5 ss. 33, 61, 62, 63, 67; Schedule 5.1 ss. 7 to 10, 14; Schedule 7 s. 52; Schedule 9 ss. 1, 9, 23. Consolidation current to 22 September 2026, read directly 2026-10-04 (99%).
 - Older Region 2 digest from 2026-10-01 (7 July 2026 edition) used as a cross check only.
 - Lines marked "my reading" are this app's interpretation, 80 to 95%. Map readings are 80 to 90%.
+```
+
+## Where this is in the synopsis
+```diagram re-r2-pages
+```
+
+> [!why]
+> Mission is in Region 2. Every Lower Mainland season, limit, closure and map is on these screens, so the phone is the only book you carry.
+
+```more what this session covers
+- Source: BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026.
+
+- This session carries printed pages 26 to 31, the Region 2 section, in the order printed (99%).
+- Page 26: contacts, the changes box, the region map. Page 27: bag limits, notices, vehicle closures. Page 28: every season row. Pages 29 to 31: Maps B1 to B33 (99%).
+- Every season cell was checked against a 150 dpi image of page 28, 220 dpi crops of the deer and bird rows, and the page text (99%).
+- Where the synopsis gives only a map, the boundary words come from the map labels (map reading) or the Closed Areas Regulation, quoted (99%).
+- No green print (new rules) shows on pages 26 to 31 (95%, my reading of the page images).
+- The Mission screens, right after Strategy, pull out [[MU]] (Management Unit) 2-8, with 2-4, 2-3 and 2-19 next door (90%, my reading of the page 26 map and Map B10).
 ```
 
 ```quiz
