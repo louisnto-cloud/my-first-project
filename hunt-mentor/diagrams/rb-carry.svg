@@ -26,7 +26,7 @@
 <text x="102" y="420" font-size="15" fill="#2f3a2b" text-anchor="middle">electronic,</text>
 <text x="102" y="438" font-size="15" fill="#2f3a2b" text-anchor="middle">no paper needed</text>
 <rect x="204" y="308" width="188" height="142" rx="10" fill="#ffffff" stroke="#6b5b4b" stroke-width="2"/>
-<g transform="translate(298 350)"><rect x="-34" y="-22" width="68" height="44" rx="5" fill="#eef0e6" stroke="#6b7a55" stroke-width="1.6"/><path d="M-26 4 L18 -6 L26 -6 L26 -2 L-2 4 L-6 12 L-12 12 L-10 6 L-26 8z" fill="#4a3a26"/><path d="M-24 14 H24" stroke="#9aa588" stroke-width="2.2"/></g>
+<g transform="translate(298 350)"><rect x="-34" y="-22" width="68" height="44" rx="5" fill="#eef0e6" stroke="#6b7a55" stroke-width="1.6"/><path d="M-28 -2 C-24 -4 -18 -4 -12 -3 L-4 -4 H28 V-1 H0 L-4 2 L-6 3 L-8 8 L-12 8 L-11 2 L-16 1 C-20 4 -24 6 -28 6z" fill="#5a3d22"/><rect x="-6" y="-9" width="18" height="4" rx="2" fill="#2f3a2b"/><path d="M-4 -5 v1 M10 -5 v1" stroke="#2f3a2b" stroke-width="1.6"/><path d="M-24 14 H24" stroke="#9aa588" stroke-width="2.2"/></g>
 <text x="298" y="400" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">PAL (Tip)</text>
 <text x="298" y="420" font-size="15" fill="#2f3a2b" text-anchor="middle">with any firearm: habit,</text>
 <text x="298" y="438" font-size="15" fill="#2f3a2b" text-anchor="middle">not a hunting rule</text>

@@ -1,4 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A fan of slope angles: 25, 30, 45 and 60 degrees. The wedge from 30 to 45 degrees is shaded red: most avalanches start there. Caption: an avalanche can run far out onto flat ground below the slope.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Where avalanches start</text><path d="M30 260 H390" stroke="#2f3a2b" stroke-width="2"/><path d="M30 260 L302 133" stroke="#2f3a2b" stroke-width="1.5" stroke-dasharray="4 4"/><text x="309.1427984072882" y="129.83357538386457" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">25°</text><path d="M30 260 L290 110" stroke="#2f3a2b" stroke-width="1.5" stroke-dasharray="4 4"/><text x="296.73582436560713" y="106.00000000000003" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">30°</text><path d="M30 260 L242 48" stroke="#2f3a2b" stroke-width="1.5" stroke-dasharray="4 4"/><text x="247.78888860545666" y="42.211111394543394" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">45°</text><path d="M30 260 L180 0" stroke="#2f3a2b" stroke-width="1.5" stroke-dasharray="4 4"/><text x="184.00000000000003" y="-6.735824365607073" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">60°</text><path d="M30 260 L290 110 A300 300 0 0 0 242 48 Z" fill="#e03131" opacity=".35"/><rect x="185" y="200" width="209" height="24" rx="6" fill="#e03131"/><text x="289.5" y="217" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Most start at 30 to 45°</text><text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Can run far onto flat ground below</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 316" font-family="sans-serif" role="img" aria-label="A snowy mountain face drawn side on with a fan of slope angles at its foot: 25, 30, 45 and 60 degrees. The wedge from 30 to 45 degrees is shaded red: most avalanches start there (85%). A fracture line high on the face and a red arrow show a slide that runs down and far out onto the flat ground below, leaving snow debris on the valley floor.">
+<rect width="400" height="316" fill="#fffaf0"/>
+<defs><clipPath id="rl-sa-avalanche-c"><rect x="8" y="8" width="384" height="274" rx="10"/></clipPath></defs>
+<g clip-path="url(#rl-sa-avalanche-c)">
+<rect x="8" y="8" width="384" height="274" fill="#dbe8f1"/>
+<path d="M8 200 L60 150 L98 176 L140 136 L200 170 L262 112 L318 146 L392 104 V282 H8z" fill="#c7d2dc"/><path d="M140 136 L152 147 L144 146 L134 142z M262 112 L276 125 L266 123 L254 120z" fill="#f7f9fb"/>
+<path d="M150 262 L332.8 119.2 L354.8 103.2 L392 149.2 V282 H150z" fill="#8b8f93"/>
+<path d="M150 262 L332.8 119.2 L354.8 103.2 L392 149.2 L392 165.2 L352.8 125.2 L166 262z" fill="#f7f9fb" stroke="#c9d3dc" stroke-width="1"/>
+<path d="M289.7 139.0 l14 4 l-4 6 l14 4" fill="none" stroke="#5b6f84" stroke-width="2"/>
+<path d="M8 262 H392 V282 H8z" fill="#e9eef2"/>
+<path d="M180 262 C120 248 70 250 30 258 L30 262 z" fill="#ffffff" stroke="#b9c5d0" stroke-width="1.2"/>
+<circle cx="68" cy="259" r="3.3" fill="#fff" stroke="#b9c5d0" stroke-width="1"/>
+<circle cx="59" cy="260" r="3.3" fill="#fff" stroke="#b9c5d0" stroke-width="1"/>
+<circle cx="150" cy="254" r="4.0" fill="#fff" stroke="#b9c5d0" stroke-width="1"/>
+<circle cx="67" cy="256" r="3.1" fill="#fff" stroke="#b9c5d0" stroke-width="1"/>
+<circle cx="61" cy="259" r="2.9" fill="#fff" stroke="#b9c5d0" stroke-width="1"/>
+<circle cx="151" cy="254" r="4.1" fill="#fff" stroke="#b9c5d0" stroke-width="1"/>
+<circle cx="136" cy="259" r="3.1" fill="#fff" stroke="#b9c5d0" stroke-width="1"/>
+<circle cx="115" cy="255" r="4.2" fill="#fff" stroke="#b9c5d0" stroke-width="1"/>
+<circle cx="146" cy="259" r="3.7" fill="#fff" stroke="#b9c5d0" stroke-width="1"/>
+<circle cx="121" cy="256" r="2.9" fill="#fff" stroke="#b9c5d0" stroke-width="1"/>
+<circle cx="97" cy="259" r="4.4" fill="#fff" stroke="#b9c5d0" stroke-width="1"/>
+<circle cx="144" cy="256" r="3.1" fill="#fff" stroke="#b9c5d0" stroke-width="1"/>
+<path d="M299.7 155.0 L164 250 C130 244 80 242 52 242" fill="none" stroke="#c0392b" stroke-width="2.6" stroke-dasharray="7 5"/><path d="M44.0 242.0 L55.0 248.1 L55.0 235.9z" fill="#c0392b"/>
+<rect x="364.5" y="260.0" width="3" height="5" fill="#5a3d22"/><path d="M366.0 242.0 L371.1 251.9 L368.8 251.9 L375.2 261.0 L356.8 261.0 L363.2 251.9 L360.9 251.9z" fill="#3a5a31"/><rect x="380.5" y="260.0" width="3" height="5" fill="#5a3d22"/><path d="M382.0 246.0 L386.2 254.1 L384.3 254.1 L389.6 261.0 L374.4 261.0 L379.7 254.1 L377.8 254.1z" fill="#456b3a"/>
+</g>
+<rect x="8" y="8" width="384" height="274" rx="10" fill="none" stroke="#6b5b4b" stroke-width="1.5"/>
+<path d="M150 262 L335.3 155.0 A214 214 0 0 0 301.3 110.7z" fill="#c0392b" opacity=".3"/>
+<line x1="150" y1="262" x2="343.9" y2="171.6" stroke="#2f3a2b" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="358.5" y="169.8" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#dbe8f1" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">25°</text>
+<line x1="150" y1="262" x2="335.3" y2="155.0" stroke="#2f3a2b" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="349.2" y="152" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle" stroke="#dbe8f1" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">30°</text>
+<line x1="150" y1="262" x2="301.3" y2="110.7" stroke="#2f3a2b" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="312.6" y="104.4" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle" stroke="#dbe8f1" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">45°</text>
+<line x1="150" y1="262" x2="257.0" y2="76.7" stroke="#2f3a2b" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="265" y="67.8" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#dbe8f1" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">60°</text>
+<circle cx="150" cy="262" r="4" fill="#2f3a2b"/>
+<rect x="98.0" y="20.0" width="232.0" height="27.0" rx="5" fill="#fffaf0" stroke="#c0392b" stroke-width="1.2"/>
+<text x="213.98" y="39" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">Most start at 30 to 45° (85%)</text>
+<text x="200" y="304" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Can run far onto flat ground below</text>
 </svg>
