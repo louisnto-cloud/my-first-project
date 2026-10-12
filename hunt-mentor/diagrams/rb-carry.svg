@@ -1,35 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 374" role="img" aria-label="What to carry while hunting. Photo ID, shown when an officer asks. Your FWID number: know it or produce it. Every species licence from this licence year, used or not. For ducks and geese, the federal migratory bird permit. The hunting licence itself is electronic, no paper needed. Tip: carry your PAL with any firearm, a habit, not a hunting rule." font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="374" fill="#fffaf0"/>
-<text x="200.0" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">In your pocket while hunting</text>
-<rect x="6" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<rect x="6" y="40" width="191" height="30" rx="10" fill="#e8590c"/><rect x="6" y="58" width="191" height="12" fill="#e8590c"/>
-<text x="101.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Photo ID</text>
-<text x="101.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">Show it when</text>
-<text x="101.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">an officer asks</text>
-<rect x="203" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<rect x="203" y="40" width="191" height="30" rx="10" fill="#e8590c"/><rect x="203" y="58" width="191" height="12" fill="#e8590c"/>
-<text x="298.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">FWID number</text>
-<text x="298.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">Know it or</text>
-<text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">produce it</text>
-<rect x="6" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<rect x="6" y="150" width="191" height="30" rx="10" fill="#e8590c"/><rect x="6" y="168" width="191" height="12" fill="#e8590c"/>
-<text x="101.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Species licences</text>
-<text x="101.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Every one this</text>
-<text x="101.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">year, used or not</text>
-<rect x="203" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<rect x="203" y="150" width="191" height="30" rx="10" fill="#4a7fb0"/><rect x="203" y="168" width="191" height="12" fill="#4a7fb0"/>
-<text x="298.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Duck permit</text>
-<text x="298.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Federal permit</text>
-<text x="298.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">for ducks, geese</text>
-<rect x="6" y="260" width="191" height="104" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
-<rect x="6" y="260" width="191" height="30" rx="10" fill="#5c7a3a"/><rect x="6" y="278" width="191" height="12" fill="#5c7a3a"/>
-<text x="101.5" y="281" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Hunting licence</text>
-<text x="101.5" y="312" font-size="14" fill="#23261f" text-anchor="middle">Electronic. No</text>
-<text x="101.5" y="330" font-size="14" fill="#23261f" text-anchor="middle">paper needed</text>
-<rect x="203" y="260" width="191" height="104" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
-<rect x="203" y="260" width="191" height="30" rx="10" fill="#8a9a6b"/><rect x="203" y="278" width="191" height="12" fill="#8a9a6b"/>
-<text x="298.5" y="281" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">PAL (Tip)</text>
-<text x="298.5" y="312" font-size="14" fill="#23261f" text-anchor="middle">With any firearm.</text>
-<text x="298.5" y="330" font-size="14" fill="#23261f" text-anchor="middle">Habit, not a</text>
-<text x="298.5" y="348" font-size="14" fill="#23261f" text-anchor="middle">hunting rule</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 458" font-family="sans-serif" role="img" aria-label="What to carry while hunting, drawn as the items. Photo ID: show it when an officer asks. Your FWID number: know it or produce it. Every species licence from this licence year, used or not. For ducks and geese, the federal migratory bird permit. The hunting licence itself is electronic, no paper needed. Tip: carry your PAL with any firearm, a habit, not a hunting rule.">
+<rect width="400" height="458" fill="#fffaf0"/>
+<rect x="8" y="8" width="188" height="142" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(102 50)"><rect x="-34" y="-22" width="68" height="44" rx="5" fill="#dfe8f0" stroke="#5b6f84" stroke-width="1.6"/><rect x="-28" y="-15" width="22" height="28" rx="3" fill="#b9c7d6"/><circle cx="-17" cy="-6" r="5" fill="#5b6f84"/><path d="M-26 12 C-26 2 -8 2 -8 12z" fill="#5b6f84"/><path d="M0 -10 H26 M0 -2 H22 M0 6 H26" stroke="#5b6f84" stroke-width="2.4" stroke-linecap="round"/></g>
+<text x="102" y="100" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Photo ID</text>
+<text x="102" y="120" font-size="15" fill="#2f3a2b" text-anchor="middle">show it when</text>
+<text x="102" y="138" font-size="15" fill="#2f3a2b" text-anchor="middle">an officer asks</text>
+<rect x="204" y="8" width="188" height="142" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(298 50)"><rect x="-34" y="-22" width="68" height="44" rx="5" fill="#fdf1e6" stroke="#b3470a" stroke-width="1.6"/><text x="0" y="-4" font-size="14" font-weight="bold" fill="#b3470a" text-anchor="middle">FWID</text><path d="M-24 10 h48" stroke="#b3470a" stroke-width="3" stroke-dasharray="5 3"/></g>
+<text x="298" y="100" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">FWID number</text>
+<text x="298" y="120" font-size="15" fill="#2f3a2b" text-anchor="middle">know it or</text>
+<text x="298" y="138" font-size="15" fill="#2f3a2b" text-anchor="middle">produce it</text>
+<rect x="8" y="158" width="188" height="142" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(102 200)"><g transform="translate(-14 4) rotate(-10)"><path d="M-16 -24 H12 L16 -20 V24 H-16z" fill="#fffdf6" stroke="#8a7f6a" stroke-width="1.4"/><path d="M-10 -14 H10 M-10 -6 H10 M-10 2 H6" stroke="#b9ae96" stroke-width="2"/><circle cx="0" cy="-19" r="2.2" fill="#8a7f6a"/></g><g transform="translate(0 0) rotate(0)"><path d="M-16 -24 H12 L16 -20 V24 H-16z" fill="#fffdf6" stroke="#8a7f6a" stroke-width="1.4"/><path d="M-10 -14 H10 M-10 -6 H10 M-10 2 H6" stroke="#b9ae96" stroke-width="2"/><circle cx="0" cy="-19" r="2.2" fill="#8a7f6a"/></g><g transform="translate(14 4) rotate(10)"><path d="M-16 -24 H12 L16 -20 V24 H-16z" fill="#fffdf6" stroke="#8a7f6a" stroke-width="1.4"/><path d="M-10 -14 H10 M-10 -6 H10 M-10 2 H6" stroke="#b9ae96" stroke-width="2"/><circle cx="0" cy="-19" r="2.2" fill="#8a7f6a"/></g><path d="M20 2 l4 -4 l4 4 l-4 4z" fill="#fffaf0" stroke="#c0392b" stroke-width="1.6"/></g>
+<text x="102" y="250" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Species licences</text>
+<text x="102" y="270" font-size="15" fill="#2f3a2b" text-anchor="middle">every one this year,</text>
+<text x="102" y="288" font-size="15" fill="#2f3a2b" text-anchor="middle">used or not</text>
+<rect x="204" y="158" width="188" height="142" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<g transform="translate(298 200)"><rect x="-30" y="-24" width="60" height="48" rx="4" fill="#fffdf6" stroke="#2f63a6" stroke-width="1.6"/><rect x="-22" y="-16" width="26" height="22" fill="#2f63a6"/><path d="M-19 0 C-15 -6 -6 -6 -3 -2 L1 -4 L0 0 C-4 3 -15 3 -19 0z M-3 -2 C-3 -7 -6 -9 -8 -7" fill="#fffaf0"/><path d="M8 -12 H24 M8 -4 H24 M-22 14 H24" stroke="#9fb2c8" stroke-width="2.2"/></g>
+<text x="298" y="250" font-size="16" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Duck permit</text>
+<text x="298" y="270" font-size="15" fill="#2f3a2b" text-anchor="middle">federal, for</text>
+<text x="298" y="288" font-size="15" fill="#2f3a2b" text-anchor="middle">ducks and geese</text>
+<rect x="8" y="308" width="188" height="142" rx="10" fill="#ffffff" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(102 350)"><rect x="-17" y="-28" width="34" height="56" rx="6" fill="#2f3a2b"/><rect x="-13" y="-22" width="26" height="42" rx="2" fill="#e8f2e0"/><circle cx="0" cy="-4" r="9" fill="#2f6e3b"/><path d="M-4 -4 l3 3 l6 -7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M-8 10 H8 M-8 15 H5" stroke="#9fb08a" stroke-width="2"/></g>
+<text x="102" y="400" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Hunting licence</text>
+<text x="102" y="420" font-size="15" fill="#2f3a2b" text-anchor="middle">electronic,</text>
+<text x="102" y="438" font-size="15" fill="#2f3a2b" text-anchor="middle">no paper needed</text>
+<rect x="204" y="308" width="188" height="142" rx="10" fill="#ffffff" stroke="#6b5b4b" stroke-width="2"/>
+<g transform="translate(298 350)"><rect x="-34" y="-22" width="68" height="44" rx="5" fill="#eef0e6" stroke="#6b7a55" stroke-width="1.6"/><path d="M-26 4 L18 -6 L26 -6 L26 -2 L-2 4 L-6 12 L-12 12 L-10 6 L-26 8z" fill="#4a3a26"/><path d="M-24 14 H24" stroke="#9aa588" stroke-width="2.2"/></g>
+<text x="298" y="400" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">PAL (Tip)</text>
+<text x="298" y="420" font-size="15" fill="#2f3a2b" text-anchor="middle">with any firearm: habit,</text>
+<text x="298" y="438" font-size="15" fill="#2f3a2b" text-anchor="middle">not a hunting rule</text>
 </svg>
