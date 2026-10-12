@@ -372,7 +372,7 @@
       });
     } else if (i !== prev) {
       L.art.innerHTML = `<h2>${esc(st.title)}</h2>${st.quiz ? quizHtml(s) : st.html}`;
-      hydrateChecks(L.art); hydrateSteps(L.art); renderRegs(L.art);
+      hydrateChecks(L.art); hydrateSteps(L.art); renderRegs(L.art); renderSeasons(L.art);
       if (st.quiz) bindQuiz(s); else linkPlaces(L.art);
       if (dir && !reduceMotion && L.art.animate) L.art.animate([{ transform: `translateX(${dir * 28}px)`, opacity: 0.35 }, { transform: 'none', opacity: 1 }], { duration: 170, easing: 'ease-out' });
     }
@@ -513,6 +513,174 @@
         <td><span class="cert ${r.certainty >= 95 ? 'c-hi' : r.certainty >= 80 ? 'c-mid' : r.certainty >= 60 ? 'c-lo' : 'c-tip'}">${r.certainty}%</span></td>
         <td>${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.source)}</a>` : esc(r.source || '')}${r.page ? `, ${esc(r.page)}` : ''}<div class="muted">checked ${esc(r.checked)}</div></td></tr>`).join('')}</tbody></table></div>`
         : '<p><span class="verify">VERIFY</span> No checked data yet.</p>';
+    });
+  }
+
+  // ---------- seasons lesson block (```seasons, build.mjs) ----------
+  // Open today, opens in the next 60 days and the full table, from data/seasons/<file>.json (precached; HM.seasonsInline in the single file backup).
+  // Same open logic as home.js and plan.js (MM-DD dates, seasons that wrap past New Year, allYear). Never shows a value the data does not have.
+  const SZ = { cache: {} };
+  const SMON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const scap = (s) => String(s || '').charAt(0).toUpperCase() + String(s || '').slice(1);
+  const smd = (mmdd) => { const [m, d] = String(mmdd).split('-').map(Number); return `${SMON[m - 1]} ${d}`; };
+  const sOpenOn = (r, t) => r.allYear ? true : !r.open || !r.close ? false : r.open <= r.close ? t >= r.open && t <= r.close : t >= r.open || t <= r.close;
+  const sDays = (mmdd, iso) => { // days from iso to the next mmdd (0 = today)
+    const y = +iso.slice(0, 4), now = new Date(iso + 'T00:00:00Z');
+    let d = new Date(`${y}-${mmdd}T00:00:00Z`); if (d < now) d = new Date(`${y + 1}-${mmdd}T00:00:00Z`);
+    return Math.round((d - now) / 864e5);
+  };
+  const sYearKey = (mmdd) => { const [m, d] = String(mmdd || '04-01').split('-').map(Number); return ((m + 8) % 12) * 100 + d; }; // licence year order, April first
+  const muNum = (mu) => { const [a, b] = mu.split('-').map(Number); return a * 100 + b; };
+  function muRanges(list) { // ["3-12","3-13","3-14","3-20"] -> "3-12 to 3-14, 3-20"
+    const s = [...new Set(list)].sort((a, b) => muNum(a) - muNum(b)); const out = [];
+    for (let i = 0; i < s.length; i++) {
+      let j = i; while (j + 1 < s.length && muNum(s[j + 1]) === muNum(s[j]) + 1) j++;
+      out.push(j > i ? `${s[i]} to ${s[j]}` : s[i]); i = j;
+    }
+    return out.join(', ');
+  }
+  function labelMus(label) { // "Wolf, MUs 3-12 to 3-16, 3-18 to 3-20" -> Set of MUs, or null when the label names none
+    const m = String(label).match(/MUs? ([\d\s,toand-]+)$/); if (!m) return null;
+    const out = new Set();
+    for (const part of m[1].split(/,| and /)) {
+      const r = part.trim().match(/^(\d+)-(\d+)(?: to (\d+)-(\d+))?$/); if (!r) return null;
+      for (let k = +r[2]; k <= (r[3] ? +r[4] : +r[2]); k++) out.add(`${+r[1]}-${k}`);
+    }
+    return out;
+  }
+  const sWords = (x) => String(x || '').toLowerCase().replace(/\([^)]*\)/g, ' ').replace(/'s\b/g, '').replace(/[^a-z]+/g, ' ').split(' ').filter(Boolean).map((w) => w.length > 3 ? w.replace(/s$/, '') : w);
+  function bagFor(R, sp, mu) { // bag table lines for a species (regional text and the table limit), filtered to the MU when the label names MUs
+    const rw = sWords(sp), out = [];
+    for (const b of R.bag || []) {
+      if (/^refer to/i.test(b.limit || '')) continue; // "Refer to Regional Bag Limits": the regional line itself is shown instead
+      const head = String(b.species).split(/[:,]/)[0], hw = sWords(head), fw = sWords(b.species);
+      const regional = b.species === b.species.toLowerCase() && !/[:,]/.test(b.species); // "deer", "grouse": the regional bag limit paragraph
+      const lw = sWords(b.limit);
+      const ok = regional ? hw.every((w) => rw.includes(w)) && rw.every((w) => hw.includes(w) || lw.includes(w))
+        : (hw.every((w) => rw.includes(w)) && rw.every((w) => fw.includes(w))) || rw.every((w) => hw.includes(w));
+      if (!ok) continue;
+      const lm = labelMus(b.species); if (mu && lm && !lm.has(mu)) continue;
+      let text = b.limit === 'NBL' ? 'No bag limit (NBL)' : b.limit;
+      if (regional) { // keep the sentences about this species or all of them: "aggregate ... is 3", "mule deer is 1", not the white tail one
+        const Q = ['mule', 'white', 'ptarmigan'];
+        const keep = String(b.limit).replace(/^[A-Za-z ]+:\s*/, '').split(/(?<=\.)\s+/).filter((x) => !Q.some((q) => sWords(x).includes(q) && !rw.includes(q)));
+        if (keep.length) text = keep.join(' ');
+      }
+      out.push({ label: regional ? 'Regional limit' : b.species, text, full: b.limit, page: b.page, cert: b.cert });
+    }
+    return out;
+  }
+  function rowLimit(r) { // the limit printed in the row itself, in plain words; '' when the row has none
+    if (r.daily != null) return `${r.daily} a day, ${r.possession != null ? r.possession : 'VERIFY'} in possession`;
+    const n = String(r.notes || '');
+    if (/\bNBL\b/.test(n)) return 'No bag limit';
+    const pairs = n.match(/\b\d+(?: each)? ?\(\d+(?: each)?\)/g) || [];
+    if (pairs.length > 1) return n.split(';')[0]; // several limits by MU: as printed
+    let m;
+    if ((m = n.match(/\bbag (\d+)((?: antlerless)?(?: \(\w+\))?(?: per licence year)?)/i))) return `Bag ${m[1]}${m[2] || ''}`;
+    if ((m = n.match(/\b(\d+)( each)? ?\((\d+)( each)?\)/))) return `${m[1]}${m[2] || ''} a day, ${m[3]}${m[4] || ''} in possession`;
+    if ((m = n.match(/\b(\d+) \(daily\)/))) return `${m[1]} a day`;
+    return '';
+  }
+  const sTag = (n) => { const m = String(n || '').match(/youth (?:or senior )?(?:bow )?only|bow only|private land only/i); return m ? scap(m[0].toLowerCase()) : ''; };
+  const sNote = (n) => String(n || '').replace(/^\s*(NBL( \(No Bag Limit\))?|bag \d+[^.;]*|\d+(?: each)? ?\(\d+(?: each)?\)|\d+ \(daily\))\s*[.;:]?\s*/i, '').replace(/^No closed season$/i, '').trim();
+  function seasonsFile(f) {
+    if (HM.seasonsInline && HM.seasonsInline[f]) return Promise.resolve(HM.seasonsInline[f]);
+    return (SZ.cache[f] = SZ.cache[f] || fetch(`data/seasons/${f}.json`, { credentials: 'omit' }).then((r) => { if (!r.ok) throw new Error(f); return r.json(); }).catch((e) => { delete SZ.cache[f]; throw e; }));
+  }
+
+  function renderSeasons(root) {
+    root.querySelectorAll('.hm-seasons[data-region]').forEach((el) => {
+      if (el.dataset.done) return; el.dataset.done = '1';
+      const reg = el.dataset.region, mig = reg === 'migratory';
+      const want = (el.dataset.mus || '').split(',').filter(Boolean);
+      const spf = (el.dataset.species || '').split('|').filter(Boolean);
+      const law = '<p class="hm-law">Study aid only. The official regulations are the law.</p>';
+      seasonsFile(mig ? 'migratory' : 'region' + reg).then((R) => {
+        const allMus = mig ? Object.values(R.districts || {}).flatMap((d) => d.mus || []) : [...new Set((R.rows || []).flatMap((r) => r.mus || []))];
+        allMus.sort((a, b) => muNum(a) - muNum(b));
+        const regName = mig ? 'all BC districts' : `Region ${String(reg).toUpperCase()}`;
+        const spOk = (sp) => !spf.length || spf.some((f) => { const a = sWords(f), b = sWords(sp); return a.every((w) => b.includes(w)) || b.every((w) => a.includes(w)); });
+        let cur = want[0] || '';
+        const draw = () => {
+          const iso = new Date().toLocaleDateString('en-CA', { timeZone: TZ }), t = iso.slice(5);
+          const where = cur ? `MU ${cur}` : regName;
+          let dk = '', rows;
+          if (mig) {
+            dk = cur ? Object.keys(R.districts || {}).find((k) => (R.districts[k].mus || []).includes(cur)) || '' : '';
+            rows = (R.rows || []).filter((r) => (!cur || (r.district === dk && (!r.mus || r.mus.includes(cur)))));
+          } else rows = (R.rows || []).filter((r) => !cur || (r.mus || []).includes(cur));
+          rows = rows.filter((r) => spOk(r.species));
+          const muTxt = (r) => mig ? (cur ? '' : `District ${r.district} (${(R.districts[r.district] || {}).name || ''})${r.mus ? `, MUs ${muRanges(r.mus)}` : ''}`) : cur ? '' : `MUs ${muRanges(r.mus || [])}`;
+          const src = (r) => mig ? `${esc(r.item || 'Schedule 3')} ${certBadge(r.cert)}` : `${r.page != null ? `page ${esc(r.page)}` : '<span class="verify">VERIFY</span> page'} ${certBadge(r.cert)}`;
+          const bagCache = {};
+          const bags = (sp) => (bagCache[sp] = bagCache[sp] || (mig ? [] : bagFor(R, sp, cur)));
+          const limitHtml = (r) => { const l = rowLimit(r); if (l) return esc(l); const b = bags(r.species); return b.length ? b.map((x) => esc(x.text)).join('<br>') : '<span class="verify">VERIFY</span>'; };
+          const dates = (r) => r.allYear ? 'No closed season' : r.open && r.close ? `${smd(r.open)} to ${smd(r.close)}` : '<span class="verify">VERIFY</span>';
+          const item = (r, open) => {
+            const tag = sTag(r.notes), note = sNote(r.notes), mt = muTxt(r);
+            const when = r.allYear ? 'No closed season' : open ? (() => { const d = sDays(r.close, iso); return `${smd(r.open)} to ${smd(r.close)}, <b class="${d <= 7 ? 'hs-soon' : ''}">${d === 0 ? 'closes today' : `${d} day${d === 1 ? '' : 's'} left`}</b>`; })()
+              : (() => { const d = sDays(r.open, iso); return `<b>Opens ${smd(r.open)}</b> (in ${d} day${d === 1 ? '' : 's'}), to ${smd(r.close)}`; })();
+            return `<li class="hs-item"><div class="row"><b class="grow">${esc(scap(r.species))}${r.class ? `: ${esc(r.class)}` : ''}</b>${tag ? `<span class="pill">${esc(tag)}</span>` : ''}</div>
+              <div class="hs-small">${when}. Limit: ${limitHtml(r)}</div>
+              <div class="muted hs-small">${note && note.toLowerCase() !== String(tag).toLowerCase() ? `${esc(scap(note))}. ` : ''}${mt ? `${esc(mt)}. ` : ''}${src(r)}</div></li>`;
+          };
+          const spIdx = (r) => (R.rows || []).findIndex((x) => x.species === r.species);
+          const list = (arr, isOpen, max) => !arr.length ? '' : `<ul class="hs-list">${arr.slice(0, max).map((r) => item(r, isOpen)).join('')}</ul>${arr.length > max ? `<details class="more hs-rest"><summary>${arr.length - max} more ${isOpen ? 'open today' : 'opening soon'}</summary><ul class="hs-list">${arr.slice(max).map((r) => item(r, isOpen)).join('')}</ul></details>` : ''}`;
+          const open = rows.filter((r) => sOpenOn(r, t)).sort((a, b) => (a.allYear ? 1 : 0) - (b.allYear ? 1 : 0) || spIdx(a) - spIdx(b) || (sTag(a.notes) ? 1 : 0) - (sTag(b.notes) ? 1 : 0) || sDays(a.close || '12-31', iso) - sDays(b.close || '12-31', iso));
+          const next = rows.filter((r) => !sOpenOn(r, t) && r.open && sDays(r.open, iso) > 0 && sDays(r.open, iso) <= 60).sort((a, b) => sDays(a.open, iso) - sDays(b.open, iso));
+          // full table, grouped by species in the order of the data
+          const groups = [];
+          for (const r of [...rows].sort((a, b) => sYearKey(a.open) - sYearKey(b.open))) { let g = groups.find((x) => x.sp === r.species); if (!g) groups.push(g = { sp: r.species, rows: [] }); g.rows.push(r); }
+          const order = [...new Set(rows.map((r) => r.species))]; groups.sort((a, b) => order.indexOf(a.sp) - order.indexOf(b.sp));
+          const table = groups.map((g) => {
+            const b = bags(g.sp);
+            return `<h4 class="hs-sp">${esc(scap(g.sp))}</h4>
+              ${b.map((x) => `<p class="hs-bag"><b>${esc(x.label === 'Regional limit' ? 'Regional limit' : 'Bag limit')}:</b> ${esc(x.full === 'NBL' ? 'No bag limit (NBL)' : x.full)} <span class="muted">page ${esc(x.page)}</span> ${certBadge(x.cert)}</p>`).join('')}
+              <div class="tbl"><table class="hs-tbl"><thead><tr><th>Class</th><th>Dates</th><th>Limit</th><th>Source</th></tr></thead><tbody>${g.rows.map((r) => {
+                const tag = sTag(r.notes), note = sNote(r.notes), mt = muTxt(r), lim = rowLimit(r);
+                return `<tr${sOpenOn(r, t) ? ' class="hs-on"' : ''}><td>${r.class ? esc(r.class) : 'All'}${tag ? ` <span class="pill">${esc(tag)}</span>` : ''}${note && note.toLowerCase() !== String(tag).toLowerCase() ? `<div class="muted hs-small">${esc(note)}</div>` : ''}${mt ? `<div class="muted hs-small">${esc(mt)}</div>` : ''}</td>
+                  <td>${dates(r)}${sOpenOn(r, t) ? '<div class="hs-small"><b>Open today</b></div>' : ''}</td><td>${lim ? esc(lim) : b.length ? 'As above' : '<span class="verify">VERIFY</span>'}</td><td class="hs-small">${src(r)}</td></tr>`;
+              }).join('')}</tbody></table></div>`;
+          }).join('');
+          // what the data says is not open, LEH only or closed
+          const extra = [];
+          if (!mig) {
+            const closed = (R.closedMus || []).filter((c) => !cur || c.mu === cur);
+            for (const c of closed) extra.push(`<p class="hs-warn"><b>MU ${esc(c.mu)}:</b> ${esc(c.notes)} <span class="muted">page ${esc(c.page)}</span> ${certBadge(c.cert)}</p>`);
+            const leh = (R.leh || []).filter((x) => spOk(x.species));
+            if (leh.length) extra.push(`<p class="hs-small"><b>LEH (Limited Entry Hunting) only:</b> ${leh.map((x) => `${esc(scap([x.class, x.species].filter(Boolean).join(' ')))}${x.notes && !/^l(eh|imited entry hunting) only$/i.test(x.notes) ? ` (${esc(x.notes)})` : ''} <span class="muted">page ${esc(x.page)}</span> ${certBadge(x.cert)}`).join('; ')}</p>`);
+            if (R.noRow && (R.noRow.species || []).length && !spf.length) extra.push(`<p class="hs-small"><b>No general open season:</b> ${esc(R.noRow.species.join(', '))}. ${esc(R.noRow.notes || '')} <span class="muted">page ${esc(R.noRow.page)}</span> ${certBadge(R.noRow.cert)}</p>`);
+          } else {
+            if (cur && !dk) extra.push(R.noDistrict && (R.noDistrict.mus || []).includes(cur) ? `<p class="hs-warn">${esc(R.noDistrict.notes)} ${certBadge(R.noDistrict.cert)}</p>` : '<p class="hs-warn"><span class="verify">VERIFY</span> No federal district found for this MU.</p>');
+            const nos = (R.noOpenSeason || []).filter((x) => !cur || x.district === dk);
+            if (nos.length && cur) extra.push(`<p class="hs-small"><b>No open season:</b> ${nos.map((x) => `${esc(x.species)} (${esc(x.item)}) ${certBadge(x.cert)}`).join(', ')}</p>`);
+          }
+          const today = new Date(iso + 'T12:00:00Z').toLocaleDateString('en-CA', { timeZone: 'UTC', weekday: 'short', month: 'short', day: 'numeric' });
+          el.querySelector('.hs-body').innerHTML = `
+            ${extra.filter((x) => x.includes('hs-warn')).join('')}
+            <h3 class="hs-h">Open today in ${esc(where)} <span class="muted hs-date">${esc(today)}</span></h3>
+            ${open.length ? list(open, true, 6) : `<p>Nothing in this table is open today in ${esc(where)}.</p>`}
+            <h3 class="hs-h">Opens in the next 60 days</h3>
+            ${next.length ? list(next, false, 4) : '<p class="muted">No season in this table opens in the next 60 days.</p>'}
+            <details class="more hs-all"${el.dataset.open ? ' open' : ''}><summary>All seasons in ${esc(where)} (${rows.length})</summary>${table || '<p>No rows.</p>'}</details>
+            ${extra.filter((x) => !x.includes('hs-warn')).join('')}
+            <p class="muted hs-small">${esc(R.source || '')}${R.checked ? `, checked ${esc(R.checked)}` : ''}. General open seasons only: LEH draws, closed areas, no shooting areas and in season changes are not all shown. Daily limit first, possession limit in brackets. Today is ${esc(iso)} on this phone.</p>`;
+          const det = el.querySelector('.hs-all'); det.ontoggle = () => { el.dataset.open = det.open ? '1' : ''; };
+          el.querySelectorAll('.hs-chips .chip').forEach((c) => c.classList.toggle('on', c.dataset.mu === cur));
+          const sel = el.querySelector('.hs-other'); if (sel) { sel.value = want.includes(cur) || !cur ? '' : cur; sel.classList.toggle('on', !!sel.value); }
+          linkPlaces(el.querySelector('.hs-body'));
+        };
+        const others = allMus.filter((m) => !want.includes(m));
+        el.innerHTML = `${law}<div class="chips hs-chips" role="group" aria-label="Pick a Management Unit">
+            ${want.map((m) => `<button type="button" class="chip" data-mu="${esc(m)}">MU ${esc(m)}</button>`).join('')}
+            <button type="button" class="chip" data-mu="">${mig ? 'All districts' : `All ${esc(regName)}`}</button>
+            ${others.length ? `<select class="hs-other chip" aria-label="Another MU"><option value="">Other MU</option>${others.map((m) => `<option value="${esc(m)}">MU ${esc(m)}</option>`).join('')}</select>` : ''}
+          </div><div class="hs-body"></div>`;
+        el.querySelectorAll('.hs-chips button').forEach((b) => { b.onclick = () => { cur = b.dataset.mu; draw(); }; });
+        const sel = el.querySelector('.hs-other'); if (sel) sel.onchange = () => { if (sel.value) { cur = sel.value; draw(); } };
+        draw();
+      }).catch(() => { el.innerHTML = `${law}<p class="muted">The season table is not saved on this phone yet. Open the app once with signal.</p>`; });
     });
   }
 
