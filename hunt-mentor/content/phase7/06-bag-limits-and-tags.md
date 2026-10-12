@@ -35,7 +35,7 @@ checked: 2026-10-03
 - Daily limit reached: stop hunting that species for the day (99%).
 - Season limit reached: stop that species for the licence year (99%).
 
-```more the page 12 words and examples
+```more Official wording, synopsis page 12 and examples
 > [!law] Provincial Bag and Possession Limits, page 12
 > "Check regional sections for open seasons, additional restrictions and regional bag limits."
 >
@@ -54,7 +54,7 @@ checked: 2026-10-03
 
 - Licence year: 1 April to 31 March (99%).
 
-```more the page 12 words and examples
+```more Official wording, synopsis page 12 and examples
 > [!law] Page 12
 > "In the regional schedules, NBL means No Bag Limit (no maximum number of a species or type of wildlife that a person may take or kill)"
 >
@@ -88,7 +88,7 @@ checked: 2026-10-03
 | Snow and Ross's geese together | 5 |
 | Snow geese in MU (Management Unit) 2-4 and 2-5 | 15 |
 
-```more the page 12 words, the federal note and every row
+```more Official wording, synopsis page 12, the federal note and every row
 > [!law] Page 12
 > "The daily bag limit for ducks in aggregate is 8, except for restricted species: Pintail, Goldeneye (Barrow's and Common), Harlequin, and Canvasback."
 >
@@ -114,7 +114,7 @@ checked: 2026-10-03
 
 - Restricted ducks in possession: at most 12 pintails or canvasbacks, 6 goldeneyes or harlequins (99%).
 
-```more the page 12 words, upland birds and Region 3
+```more Official wording, synopsis page 12, upland birds and Region 3
 > [!law] Page 12
 > "The possession limit for all migratory game birds at all times (including while hunting, returning from hunting or at a residence) is three times the daily limit. For ducks, not more than 12 may be Northern Pintails or Canvasbacks. Not more than 6 may be Goldeneyes or Harlequins."
 >
@@ -147,7 +147,7 @@ checked: 2026-10-03
 
 - One licence year, all of BC. A star means the region sets its own limit too (99%).
 
-```more the page 13 header and notes
+```more Official wording, synopsis page 13 header and notes
 > [!law] Page 13 header and footnote
 > "Provincial Bag Limits (Applies to all licenced hunters)"
 >
@@ -182,7 +182,7 @@ checked: 2026-10-03
 ```diagram rb-deer-three
 ```
 
-```more the page 7 rule on how many deer licences
+```more Official wording, synopsis page 7 rule on how many deer licences
 > [!law] Deer Licences, page 7
 > "The provincial bag limit for deer is 3."
 
@@ -327,7 +327,7 @@ rb-notch-5 | Keep the licence with the meat.
 ```diagram rb-transport-papers
 ```
 
-```more the page 15 words and detail
+```more Official wording, synopsis page 15 and detail
 > [!law] Transporting Wildlife, page 15
 > "All people who possess, transport or ship wildlife meat or parts of wildlife within the province must have with them the species licence under which the animal was taken by that person, or, if the animal was taken by another person, a Record of Receipt of the wildlife (see page 14) showing:"
 >

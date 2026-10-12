@@ -36,7 +36,7 @@ checked: 2026-10-03
 | You offer the pelt for sale | Yes, first, unless sold to a licensed fur trader (99%) |
 | Permit to accompany a non resident | You pay, within 30 days after the hunt (99%) |
 
-```more the page 15 words and how to pay
+```more Official wording, synopsis page 15 and how to pay
 > [!law] Royalty Fees, page 15
 > "It is unlawful to offer for sale the pelt or skin from a furbearing animal taken under a hunting licence unless a royalty on the pelt or skin has been paid. If the hunter sells the pelt of a furbearing animal to a licensed Fur Trader, they are exempt from paying the royalty."
 >
@@ -78,7 +78,7 @@ checked: 2026-10-03
 ```diagram rb-evidence-birds
 ```
 
-```more the page 15 words and field breasting
+```more Official wording, synopsis page 15 and field breasting
 > [!law] Possession and Transportation, Game Birds, page 15
 > "Anyone who possesses or transports a game bird, other than a migratory game bird, must leave attached to the carcass one feathered wing and for turkey, also the beard, if harvested during a bearded turkey only season."
 >
@@ -97,7 +97,7 @@ checked: 2026-10-03
 | Hit by your truck, or shot by mistake | It may not go home with you. Report it (99%) |
 | Antler restricted season | Antlers stay on part of the upper skull, with the licence (99%) |
 
-```more the page 15 words
+```more Official wording, synopsis page 15
 > [!law] Big Game, page 15
 > "It is unlawful to possess or transport a big game animal that was killed unintentionally, by accident or collision, or was illegally killed."
 >
@@ -142,7 +142,7 @@ checked: 2026-10-03
 
 - Then your piece needs no tail or evidence of sex (99%). Cougar is not in this exception (99%).
 
-```more the page 15 words
+```more Official wording, synopsis page 15
 > [!law] Page 15
 > "The above sections (1) - (3) do not apply if a person possesses a portion of a carcass or hide which they did not kill, provided that: i. they possess the portion of carcass or hide for the purpose of transporting it to their residence, a meatcutter, a cold storage plant or a Compulsory Inspector, AND ii. they have a Record of Receipt as described in the Transporting Wildlife section (page 14), AND iii. the person who killed the wildlife possesses a portion of the carcass or hide with the parts attached as described in sections (1) - (3) on this page."
 
@@ -158,7 +158,7 @@ checked: 2026-10-03
 ```diagram rb-evidence-off
 ```
 
-```more the page 15 words
+```more Official wording, synopsis page 15
 > [!law] Removing Evidence of Sex and Species, page 15
 > "Evidence of species and sex may be removed from the carcass or the hide of game: after it arrives at a person’s normal dwelling place and is butchered and stored there for consumption on the premises, after it is taken to a meat cutter or the owner or operator of a cold storage plant, or after it has been inspected by a qualified Compulsory Inspector."
 
@@ -174,7 +174,7 @@ checked: 2026-10-03
 ```diagram rb-transport-papers
 ```
 
-```more the page 15 words and the six details
+```more Official wording, synopsis page 15 and the six details
 > [!law] Transporting Wildlife, page 15
 > "All people who possess, transport or ship wildlife meat or parts of wildlife within the province must have with them the species licence under which the animal was taken by that person, or, if the animal was taken by another person, a Record of Receipt of the wildlife (see page 14) showing: the date and place of receipt, the name and address of the person who killed the animal, or from whom it was acquired, the name and address of the person to whom the wildlife parts are to be delivered, the Fish and Wildlife ID or permit number of the person who killed the animal, the species licence number under which the animal was taken, and the species and sex of the animal taken."
 >
@@ -200,7 +200,7 @@ checked: 2026-10-03
 | MU 4-25 | Invermere | Through MU 4-26 |
 | MU 4-25 | Canal Flats | Through MU 4-26 on Highway 93 or Highway 95 |
 
-```more the page 15 words and the 24 hour routes
+```more Official wording, synopsis page 15 and the 24 hour routes
 > [!law] Carcass Transport Restrictions, page 15
 > "A person who kills a deer, elk, or moose within M.U.s 4-1 to 4-8 and 4-20 to 4-25 (the CWD Management Zone, see page 36) must not ship or transport, or engage another person to ship or transport, outside of the CWD Management Zone, the brain tissue or the spinal column, including the vertebrae and central nervous system tissue but not including the tail."
 >
@@ -220,7 +220,7 @@ checked: 2026-10-03
 | First conviction | Up to $50,000, 6 months jail, or both (99%) |
 | Game check station | Always stop, even with nothing (99%) |
 
-```more the page 15 words
+```more Official wording, synopsis page 15
 > [!law] Disposal of Carcasses or Wildlife Parts, page 15
 > "Carcasses or part of a carcass of an animal or fish are included in the Wildlife Act definition of an attractant. Other than for the purpose of hunting in accordance with the provisions of the Wildlife Act and regulations, it is prohibited to provide, leave, or place an attractant in, on or about any land or premises where there are or where there are likely to be people in a manner in which the attractant could attract dangerous wildlife to the land or premises and be accessible to dangerous wildlife. A person that commits an offence under this provision is liable, on a first conviction, to a fine up to $50,000 and/or a term of imprisonment not exceeding 6 months."
 
@@ -241,7 +241,7 @@ checked: 2026-10-03
 | Shipped, or sent later by a taxidermist, tanner or meat cutter | Yes (95%, my reading) |
 | Game from elsewhere only passing through BC, with its own papers | No (99%) |
 
-```more the pages 15 and 16 words
+```more Official wording, synopsis pages 15 and 16
 > [!law] Export from the Province, pages 15 and 16
 > "It is unlawful to export wildlife or wildlife parts from B.C. unless you have a valid export permit or are exempted from holding an export permit"
 >
@@ -264,7 +264,7 @@ checked: 2026-10-03
 | Goat, sheep or caribou driven through the Yukon to an inspector | No export permit (99%) |
 | Goat or sheep from MU (Management Unit) 7-19 through Alberta | No export permit, new (99%) |
 
-```more the page 16 words
+```more Official wording, synopsis page 16
 > [!law] Page 16
 > "British Columbia is part of a North American system of recording wild sheep identification. All sheep harvested in the province must be inspected by a qualified Compulsory Inspector and a numbered plug inserted in one of the horns."
 >
@@ -289,7 +289,7 @@ checked: 2026-10-03
 
 - CITES: Convention on International Trade in Endangered Species.
 
-```more the page 16 words and how to apply
+```more Official wording, synopsis page 16 and how to apply
 > [!law] CITES Export, page 16
 > "The “Convention on the International Trade of Endangered Species” (CITES) requires that a CITES Export Permit be obtained for the export out of Canada of all bears, cougar, lynx, bobcat, wolf, sea otter, or river otter or parts of these animals. Such permits leaving Canada directly from B.C. may be obtained by applying to www.gov.bc.ca/cites-permit. For assistance with your application contact FrontCounter at 1-877-855-3222. For all other CITES listed species contact CITES Canada directly at www.canada.ca/en/environment-climate-change/services/convention-international-trade-endangered-species/permits/application-forms.html."
 >
@@ -309,7 +309,7 @@ checked: 2026-10-03
 | LEH (Limited Entry Hunting) authorization | If the hunt needed one (99%) |
 | Compulsory Inspection Data Sheet | If inspection applies (99%) |
 
-```more the page 16 words and their records
+```more Official wording, synopsis page 16 and their records
 > [!law] Page 16
 > "Taxidermists, tanners, meatcutters, fur traders and cold storage plant operators are required under the Wildlife Act and regulations to keep records of their transactions."
 >
@@ -329,7 +329,7 @@ checked: 2026-10-03
 | You give them | Every detail, the kill location too |
 | Details missing | The animal can be seized until papers turn up |
 
-```more the page 16 words and grizzly reporting
+```more Official wording, synopsis page 16 and grizzly reporting
 > [!law] Page 16
 > "Presentation of this documentation helps to protect the recipient, i.e., the taxidermist, tanner or meatcutter, from prosecution for illegal possession; it is required by law, and a “paper trail” exists should an investigation be required. In addition, some taxidermists, as agents for their clients, present the necessary parts of game animals for Compulsory Inspection by a Wildlife Act officer, when the hunter is unable to do so personally. In such cases it is mandatory that the hunter provide the taxidermist with all the information required for the inspection, including the location of the kill. If such information cannot be produced by an agent, then the animal may be seized by a conservation officer or constable until all the documentation is provided."
 
@@ -345,7 +345,7 @@ checked: 2026-10-03
 | Every January | Answer it, even if you got nothing (99%) |
 | Upland birds | Get the MU (Management Unit) and species right (99%) |
 
-```more the page 16 words and why it matters
+```more Official wording, synopsis page 16 and why it matters
 > [!law] Submitting Your Hunter Sample Questionnaire, page 16
 > "The largest source of hunter activity and game harvest information is the annual Hunter Sample Questionnaire. Every January, a large portion of the B.C. residents who have purchased a hunting licence in the previous year are sent a questionnaire referring to the species for which a particular licence was purchased. Hunters may receive questionnaires for more than one species. Replies from those who did not hunt that season, or who were unsuccessful, are just as valuable to wildlife managers as the information from hunters who hunted or harvested an animal."
 >
@@ -363,7 +363,7 @@ checked: 2026-10-03
 ```diagram rb-mhr
 ```
 
-```more the page 16 words and the three ways to file
+```more Official wording, synopsis page 16 and the three ways to file
 > [!law] Mandatory Hunter Report, page 16
 > "All individuals who purchase an elk, moose or caribou species licence are required to submit a report on their hunting activity by March 31."
 >
@@ -388,7 +388,7 @@ checked: 2026-10-03
 
 - CI (Compulsory Inspection): skip it and you are not in legal possession (99%).
 
-```more the page 17 words
+```more Official wording, synopsis page 17
 > [!law] Compulsory Inspection and Reporting, page 17
 > "Appointments must be arranged by the hunter for all CIs ahead of time, drop ins will not be accepted."
 >
@@ -472,7 +472,7 @@ checked: 2026-10-03
 
 - Within 30 days after the kill. No tooth needed (99%).
 
-```more the page 17 words and what to report
+```more Official wording, synopsis page 17 and what to report
 > [!law] Compulsory Reporting (CR), page 17
 > "A person who takes or kills the following species in any Management Unit: lynx in regions 3, 6, 7A, or 7B, wolverine, bobcat in regions 2 and 3, wolf in regions 1 and 2, feral pig anywhere in B.C. must, within 30 days after the date of the kill, report:"
 
@@ -510,7 +510,7 @@ rb-tooth-3 | Dry it in a labelled paper envelope.
 ```diagram rb-self-report
 ```
 
-```more the page 18 words and steps
+```more Official wording, synopsis page 18 and steps
 > [!law] Hunter Notice, Accidental Illegal Harvest, page 18
 > "Immediately cancel your species licence and mark in ink on the species licence that your intention is to self-report."
 >

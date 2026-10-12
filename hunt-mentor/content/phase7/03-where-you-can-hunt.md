@@ -31,7 +31,7 @@ checked: 2026-10-03
 
 - National Park: no hunting. Passing through: firearm taken apart, cased, or wrapped (99%).
 
-```more the page 9 words
+```more Official wording, synopsis page 9
 > [!law] National Parks, page 9
 > "Hunting is prohibited in all National Parks. All firearms transported in National Parks must be dismantled, carried in a closed case, or wrapped and tied securely so as not to expose any part of the firearm."
 >
@@ -50,7 +50,7 @@ checked: 2026-10-03
 | Regions 1 and 2 | No hunting or shooting within 100 m (109 yd) of one (99%) |
 | Everywhere | Local bylaw rules there. Ask the regional district (99%) |
 
-```more the page 9 words
+```more Official wording, synopsis page 9
 > [!law] Regional District Parks, page 9
 > "The discharge of firearms and bows is prohibited in most regional district parks. Regional district bylaws are NOT included in this synopsis. Contact the Regional District for further information."
 >
@@ -70,7 +70,7 @@ checked: 2026-10-03
 | Boundary | Blue signs with a loon (99%) |
 | Questions | Canadian Wildlife Service, Delta, 604 350 1950 (99%) |
 
-```more the page 9 words
+```more Official wording, synopsis page 9
 > [!law] Page 9
 > "Hunting is prohibited in National Wildlife Areas and Migratory Bird Sanctuaries unless a special federal permit is granted or notices to the contrary are posted. Blue signs depicting a loon mark the boundaries. Contact Canadian Wildlife Service in Delta for more information (604) 350-1950."
 
@@ -88,7 +88,7 @@ checked: 2026-10-03
 | 2 | A lawful open season is on (99%) |
 | 3 | Park Act and hunting rules both apply (99%) |
 
-```more the page 9 words
+```more Official wording, synopsis page 9
 > [!law] BC Parks, page 9
 > "Individuals visiting BC Parks, either a Park, Conservancy, Recreation Area, or Protected Area should be aware that the Park Act and its regulations apply, as do the hunting regulations in this synopsis. Visit www.bcparks.ca for more information on activities allowed or prohibited in specific parks."
 >
@@ -107,7 +107,7 @@ checked: 2026-10-03
 
 - Park closed to hunting: firearm or bow stays in the vehicle (99%).
 
-```more the page 9 words on firearms, vehicles and roads
+```more Official wording, synopsis page 9 on firearms, vehicles and roads
 > [!law] BC Parks, page 9
 > "When a BC Park is closed to hunting or there is no open season for any species, both the possession and discharge of a firearm or bow are prohibited except when authorized by a park officer. Possession is only allowed when such weapons are carried within a vehicle or when authorized by a park officer."
 
@@ -131,7 +131,7 @@ checked: 2026-10-03
 ```diagram rb-rec-site
 ```
 
-```more the page 9 words and links
+```more Official wording, synopsis page 9 and links
 > [!law] Recreation Sites and Trails, page 9
 > "Provincial Recreation Orders prohibiting motorized use."
 >
@@ -155,7 +155,7 @@ checked: 2026-10-03
 | Ecological reserve | No hunting, trapping, fishing, or firing a firearm or bow (99%) |
 | Conservation land | Some limit or ban hunting. Call the regional office first (99%) |
 
-```more the page 9 words
+```more Official wording, synopsis page 9
 > [!law] Ecological Reserves, page 9
 > "Hunting, trapping, and angling are prohibited in Ecological Reserves in B.C. The discharge of a firearm, or bow is prohibited. A complete list of Ecological Reserves, maps and legal descriptions is available at www.bcparks.ca/eco_reserve."
 
@@ -181,7 +181,7 @@ checked: 2026-10-03
 | Reserve | Private land. Band office permission to hunt on or cross it (99%) |
 | Trapper or guide cabin | Private. Do not enter or disturb (99%) |
 
-```more the page 9 words
+```more Official wording, synopsis page 9
 > [!law] Municipal Restrictions, page 9
 > "Most municipalities have bylaws restricting and controlling the use of weapons, firearms and bows within their boundaries. Municipal bylaws are NOT included in this synopsis. Consult municipal clerks for details."
 >
@@ -206,7 +206,7 @@ checked: 2026-10-03
 ```diagram rb-enclosed
 ```
 
-```more the page 9 words and club leases
+```more Official wording, synopsis page 9 and club leases
 - "Several laws govern access" (99%, page 9, 2 October 2026 edition). The synopsis names four: the Trespass Act, the Forest and Range Practices Act, the Off Road Vehicle Act and the Wildlife Act (99%).
 
 > [!law] Trespass Act, page 9
@@ -230,7 +230,7 @@ checked: 2026-10-03
 | Serious cases | Up to $100,000, a year in jail, or both (99%) |
 | ATV (All Terrain Vehicle) on a Forest Service Road | Driver's licence and $200,000 liability insurance (99%) |
 
-```more the page 9 words
+```more Official wording, synopsis page 9
 > [!law] Forest and Range Practices Act, page 9
 > "It is illegal for individuals to cause environmental damage. Irresponsible off-road vehicle use can disturb soil and destroy plants, risk watershed and water source quality, threaten or kill wildlife, introduce invasive plants, and reduce forage. Environmental damage includes any change to soil that adversely alters an ecosystem. Individuals found to have caused environmental damage may be fined $575. More serious cases of damage could lead to penalties of up to $100,000 and/or a year in jail."
 >
@@ -250,7 +250,7 @@ checked: 2026-10-03
 | Seatbelt | If fitted |
 | Under 16 | Supervised by an adult 19 or older |
 
-```more the page 9 words and links
+```more Official wording, synopsis page 9 and links
 > [!law] Off Road Vehicle Act, page 9
 > "The Off Road Vehicle Act (ORV) applies to ORVs on Crown land and prescribed private land. ORVs include ATVs, motorcycles, snowmobiles, side-by-sides, and on-highway vehicles (under 4,536 kg)."
 >
@@ -275,7 +275,7 @@ checked: 2026-10-03
 | Grazing lease with livestock on it | Yes (99%) |
 | Leased land, no livestock | Trespass Act still applies (99%) |
 
-```more the page 9 words
+```more Official wording, synopsis page 9
 > [!law] Wildlife Act, page 9
 > "A person is not permitted to hunt on cultivated land or on Crown land which is subject to a grazing lease while the land is occupied by livestock, without the consent of the owner, lessee, or occupant of the land."
 >
@@ -292,7 +292,7 @@ checked: 2026-10-03
 ```diagram rb-mv-types
 ```
 
-```more the page 10 words
+```more Official wording, synopsis page 10
 > [!law] Motor Vehicle Prohibitions and Restrictions, page 10
 > "There are 2 types of motor vehicle prohibitions under the Wildlife Act, and all types can be seasonal or year-round."
 >
@@ -314,7 +314,7 @@ checked: 2026-10-03
 | Highways? | Not covered, unless named |
 | Sign and rule disagree? | The regulation wins |
 
-```more the page 10 words and links
+```more Official wording, synopsis page 10 and links
 > [!law] Page 10
 > "Unless specifically exempted, all motor vehicle prohibitions include private land. Unless specifically included, motor vehicle prohibitions do not include highways (as defined in the Motor Vehicle Act). See definitions section for vehicle types."
 >
@@ -334,7 +334,7 @@ checked: 2026-10-03
 
 - Your hunting licence is not a firearms licence (99%).
 
-```more the page 10 words
+```more Official wording, synopsis page 10
 > [!law] Federal Firearms Legislation, page 10
 > "A BC hunting licence does not give authority to carry a firearm."
 >
@@ -357,7 +357,7 @@ checked: 2026-10-03
 | No Shooting Area | Firing a firearm. Bows OK unless restricted (99%) |
 | No Hunting Area | Hunting itself, bow or firearm (95%, my reading) |
 
-```more the page 10 words
+```more Official wording, synopsis page 10
 > [!law] No Shooting Areas, page 10
 > "It is unlawful to discharge a firearm in a No Shooting Area (see Definitions section). No Shooting Areas are open to the use of bows (including crossbows) unless specifically restricted (see regional sections)."
 
@@ -375,7 +375,7 @@ checked: 2026-10-03
 ```anim rb-road-walk Walk out of the road allowance before you load.
 ```
 
-```more the page 10 words
+```more Official wording, synopsis page 10
 > [!law] Highway No Shooting or Hunting Areas, page 10
 > "It is unlawful to discharge a firearm across or to discharge a firearm or hunt within the road allowances of all numbered highways and any two lane or greater public road in B.C. that is maintained by the Ministry of Transportation and Infrastructure (or their contractors), the federal government or another province or territory. The road allowance extends:"
 >
@@ -437,7 +437,7 @@ checked: 2026-10-03
 | Shotgun with shot | Yes (99%) |
 | Road allowance itself | Nothing (99%) |
 
-```more the page 10 words
+```more Official wording, synopsis page 10
 > [!law] 400 Metre Single Projectile (Firearm) Prohibited Areas, page 10
 > "Several major or heavily populated routes in the province have an additional 400 m area bordering the road allowance in which the discharge of a firearm using a single projectile is prohibited. The discharge of a shotgun using shot only is permitted."
 >
@@ -526,7 +526,7 @@ checked: 2026-10-03
 | Provincial or multi region | Page 10, this session |
 | Your region's own | Its regional pages |
 
-```more the page 10 words, and the session wrap up
+```more Official wording, synopsis page 10, and the session wrap up
 > [!law] Regional No Hunting or Shooting Areas, page 10
 > "The No Hunting or Shooting areas described above are provincial or multi-regional in area."
 

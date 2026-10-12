@@ -89,7 +89,7 @@ checked: 2026-10-02
 ```diagram rb-carry
 ```
 
-```more the page 5 words
+```more Official wording, synopsis page 5
 > [!law]
 > "You are not required to carry a paper copy of your resident, non-resident or non-resident alien hunting licence, initiation licence, youth licence, upland game bird licence, Fraser Valley, and Gulf Islands special area licences, LEH authorization, or permit to accompany while hunting, or carry a copy of your guide outfitter licence while guiding."
 
@@ -115,7 +115,7 @@ checked: 2026-10-02
 | Is it a licence? | No. You still need the hunting and species licence (99%) |
 | Shared hunt | Carry the Harvest Report, tell the group at once (99%) |
 
-```more the page 5 words, maps and phone
+```more Official wording, synopsis page 5, maps and phone
 > [!law]
 > "Limited Entry Hunting (LEH) seasons are open only to hunters who have drawn an LEH authorization for the applicable licence year."
 
@@ -135,7 +135,7 @@ checked: 2026-10-02
 ```diagram rb-inclusive
 ```
 
-```more the page 5 words
+```more Official wording, synopsis page 5
 > [!law]
 > "Open Seasons are only those defined in this synopsis. It is unlawful to hunt at any time during the year except within the open season, or by authority of a permit issued under the Wildlife Act."
 
@@ -154,7 +154,7 @@ checked: 2026-10-02
 | Whose job | Yours, not theirs (99%) |
 | This app | Follows the 2 October 2026 edition |
 
-```more the page 5 notice
+```more Official wording, synopsis page 5 notice
 > [!law] Notice to Hunters, page 5
 > "In-season regulation changes are posted on the Hunting and Trapping Regulations Synopsis website"
 > "Regulations are subject to change; it is the hunter’s responsibility to be informed of regulations. Check our website for in-season changes before your hunt: www.gov.bc.ca/huntingregulations"
@@ -173,7 +173,7 @@ checked: 2026-10-02
 | Registered under the Indian Act, living in BC | Not required. Federal firearms licence and safety, health and conservation rules still apply (99%) |
 | Métis | Required (99%) |
 
-```more the page 6 words
+```more Official wording, synopsis page 6
 - The Ministry of Water, Land and Resource Stewardship puts the long term conservation of wildlife and habitat first (99%, page 6, 2 October 2026 edition).
 - It recognizes that First Nations may have or establish Aboriginal or treaty rights protected by the Constitution Act, 1982 (the synopsis cites section 35(2)), including rights to harvest wildlife for food, social and ceremonial purposes in their traditional territories (99%).
 - Harvest under those rights must be sustainable, and the methods must not put safety or the use and enjoyment of property at risk (99%).
@@ -194,7 +194,7 @@ checked: 2026-10-02
 | LEH (Limited Entry Hunting) draw | FWID (Fish and Wildlife ID) with BC resident credential |
 | Tsilhqot'in title area | Not open for public hunting at this time |
 
-```more the page 6 detail
+```more Official wording, synopsis page 6 detail
 - Outside their traditional territory or treaty area, First Nation members must follow the hunting regulations in both synopses, apart from the licence exemption above. That includes applying through the LEH (Limited Entry Hunting) draw (99%, page 6, 2 October 2026 edition).
 - To apply for LEH they need an FWID (Fish and Wildlife ID) with an active BC resident credential, plus either a hunting credential or a licence exemption WA S.11(9) credential (99%).
 - Proof of status for those credentials: a Secure Certificate of Indian Status from the Government of Canada, a TCRD (Temporary Confirmation of Registration Document), or a letter from the Band Office or First Nation Government. LEH fees apply (99%).
@@ -218,7 +218,7 @@ checked: 2026-10-02
 
 - Every row: pages 6 and 8 (99%).
 
-```more the page 6 detail
+```more Official wording, synopsis page 6 detail
 - Three types of hunting licence are available to BC residents: the Resident Hunting Licence, the Youth Hunting Licence and the Initiation Hunting Licence (99%, page 6, 2 October 2026 edition).
 - **Resident Hunting Licence**: for residents 10 or older who hold a valid FWID (Fish and Wildlife ID) with resident and hunting credentials (99%).
 - A hunting licence, with the species licence where one is required, gives you a personal [[Bag limit]] (99%).
@@ -236,7 +236,7 @@ checked: 2026-10-02
 | Supervision | Always, by a qualified adult (99%) |
 | Under 10 | May not hunt at all (99%) |
 
-```more the page 6 words
+```more Official wording, synopsis page 6
 - Youth aged 10 or older and under 18 who have an FWID (Fish and Wildlife ID) may get a Hunting Licence or a [[Youth Hunting Licence]]. A youth licence gives no personal bag limit (99%, page 6, 2 October 2026 edition).
 - It is issued only to a parent or guardian, on behalf of their child or ward aged 10 to under 18. No hunter safety training is needed. The parent or guardian needs an FWID to hold it (99%).
 - A youth hunter, trained or not, on either licence, must be accompanied and under the close personal supervision of an adult who carries the proper licences and qualifies as a supervising hunter (99%).
@@ -258,7 +258,7 @@ checked: 2026-10-02
 | Training | None needed (99%) |
 | Supervisor | Always. Signs a form each day (99%) |
 
-```more the page 6 words
+```more Official wording, synopsis page 6
 > [!law]
 > "An Initiation Hunting Licence is a once in a lifetime annual licence that can only be issued to a person who is a B.C. resident, is 18 years of age or older, and has not held a B.C. hunting licence in the past (with the exception of a youth or junior licence)."
 
@@ -295,7 +295,7 @@ checked: 2026-10-02
 | All deer licences together | 15 (99%) |
 | Deer you may take, province wide | 3 (99%) |
 
-```more the page 7 words and Haida Gwaii
+```more Official wording, synopsis page 7 and Haida Gwaii
 > [!law]
 > "The provincial bag limit for deer is 3."
 
@@ -317,7 +317,7 @@ checked: 2026-10-02
 | Federal MGBH (Migratory Game Bird Hunting) permit | Yes, $17.00 (99%) |
 | Youth permit | Federal online system only (99%) |
 
-```more the page 7 words and banded birds
+```more Official wording, synopsis page 7 and banded birds
 > [!law]
 > "When hunting migratory game birds (see Definitions section), you must carry with you a valid Canadian federal Migratory Game Bird Hunting (MGBH) Permit in addition to any required provincial hunting licences."
 
@@ -338,7 +338,7 @@ checked: 2026-10-02
 | Licence and inspection report for a mount | Forever, safe place (99%) |
 | Ear tag or collar | Return it to the Ministry (99%) |
 
-```more the page 7 words
+```more Official wording, synopsis page 7
 > [!law]
 > "Hunters must keep all documents under which an animal was taken until the animal has been consumed."
 
@@ -356,7 +356,7 @@ checked: 2026-10-02
 | Small game alone | Needs proof of hunter safety |
 | Big game | Always with a guide or permit to accompany holder |
 
-```more the page 7 words and permits to accompany
+```more Official wording, synopsis page 7 and permits to accompany
 - Non residents of BC must follow all hunting regulations and need an FWID (Fish and Wildlife ID) to get licences (99%, page 7, 2 October 2026 edition).
 - Small game alone needs an unrestricted licence, which needs proof of hunter safety training: upload the certificate in WILD (Wildlife Information and Licensing Data) or show it at Service BC or FrontCounter BC. A certificate not in English or French needs the original plus a notarized translation (99%).
 - With no hunting credential you can only get a restricted licence and must be accompanied by a guide outfitter, assistant guide outfitter or a permit to accompany holder whenever you hunt (99%).
@@ -455,7 +455,7 @@ checked: 2026-10-02
 ```diagram rb-fee-split
 ```
 
-```more the page 8 detail
+```more Official wording, synopsis page 8 detail
 - Lost, stolen or destroyed species licence, cancelled or not? You must replace it if you plan to keep hunting this licence year (99%, page 8, 2 October 2026 edition).
 - Go to a FrontCounter BC or Service BC office. If the original was cancelled you must declare the harvest details from it (99%).
 - Replacement fee: $10.00 (99%).
@@ -469,7 +469,7 @@ checked: 2026-10-02
 ```anim rb-mail-vs-counter Online species licences come by mail. In person: right away.
 ```
 
-```more the page 8 detail
+```more Official wording, synopsis page 8 detail
 - Online at [www.gov.bc.ca/hunting](https://www.gov.bc.ca/hunting), or at Service BC, FrontCounter BC and participating commercial outlets and sporting goods stores (99%, page 8, 2 October 2026 edition).
 - A species licence bought online is mailed and depends on Canada Post delivery times (99%).
 - Not in the mail yet? You may qualify for a free replacement if you report the loss to FrontCounter BC or Service BC between 15 and 30 business days after the purchase date (99%).

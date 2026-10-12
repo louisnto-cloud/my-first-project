@@ -114,7 +114,7 @@ region: 7b
 | Inspect | Sheep, goat, cougar |
 | RAPP (Report All Poachers and Polluters) | 1 877 952 7277, 24 hours |
 
-```more the page 60 and page 16 notes
+```more Official wording, synopsis page 60 and page 16 notes
 > [!law] Compulsory Inspection (CI) Centres, page 60
 > "See the Ministry website at www.gov.bc.ca/hunting/compulsory-inspection or contact the Peace Fish and Wildlife Regional Office for information on CI Centres. By appointment only."
 
@@ -420,7 +420,7 @@ region: 7b
 ```diagram rf-r7b-norow
 ```
 
-```more the pages 62, 63 and page 5 notes
+```more Official wording, synopsis pages 62, 63 and page 5 notes
 - Pages 62 and 63 have no row for caribou, bobcat, raccoon, Columbian ground squirrel, pheasant, partridge, dove, band tailed pigeon, turkey or quail (99%).
 - No row means no general open season for that animal in Region 7B (95%, my reading of page 5: "Open Seasons are only those defined in this synopsis").
 ```
@@ -610,7 +610,7 @@ region: 7b
 
 - Maps online: www.gov.bc.ca/peaceaccess (99%).
 
-```more the page 61 symbol key, word for word
+```more Official wording, synopsis page 61 symbol key, word for word
 > [!law] Access Management Areas, page 61
 > "Region 7B Motor Vehicle Prohibition maps are available online at www.gov.bc.ca/peaceaccess."
 >
@@ -630,7 +630,7 @@ region: 7b
 ```diagram rf-r7b-mv
 ```
 
-```more the page 61 list, word for word
+```more Official wording, synopsis page 61 list, word for word
 > [!law] Access Management Areas, page 61
 > "MUs 7-19, 7-21 (portion), 7-22 (portion), 7-31, 7-35, 7-36, 7-43, 7-57, and 7-58." "★ above 1400 m in elevation. However, the use of snowmobiles (less than 450 kg in weight) is allowed from Nov 1 - Apr 30. Onion Lake Trail (MU 7-21) and West Bullmoose Road are open year-round. Contact Ministry office in Fort St. John for more information. See Map H7. Detailed maps can be reviewed online at www.gov.bc.ca/peaceaccess"
 >

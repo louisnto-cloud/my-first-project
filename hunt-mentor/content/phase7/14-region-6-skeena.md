@@ -482,7 +482,7 @@ region: 6
 ```diagram rf-r6-norow
 ```
 
-```more the page 50 and page 5 notes
+```more Official wording, synopsis page 50 and page 5 notes
 - Pages 50 and 51 have no row for bighorn sheep, bison, bobcat, Columbian ground squirrel, sharp tailed grouse, raven, pheasant, partridge, dove, band tailed pigeon, turkey or quail (99%).
 - No row means no general open season for that animal in Region 6 (95%, my reading of page 5: "Open Seasons are only those defined in this synopsis").
 - Raccoon is open only in 6-12 and 6-13. Cougar only in 6-1 to 6-11 (99%).

@@ -203,7 +203,7 @@ region: 4
 
 - Inside the CWD (Chronic Wasting Disease) zone: heads tested, carcass parts stay (99%).
 
-```more the page 36 box and the map
+```more Official wording, synopsis page 36 box and the map
 > [!law] CWD Management Zone, page 36
 > "Management Units 4-1 to 4-8, and 4-20 to 4-25:"
 >
@@ -248,7 +248,7 @@ region: 4
 
 - From MUs (Management Units) 4-7, 4-8, 4-25 only, on these routes only (99%).
 
-```more the page 15 routes, word for word
+```more Official wording, synopsis page 15 routes, word for word
 > [!law] Page 15
 > "M.U. 4-7 Drop-off location: Nelson Route: through M.U. 4-18 on the Harrop cable ferry, Harrop Ferry Road and Highway 3A"
 >
@@ -279,7 +279,7 @@ region: 4
 
 - Freezer list: www.gov.bc.ca/CWDdropoff (99%).
 
-```more the page 37 box
+```more Official wording, synopsis page 37 box
 > [!law] Page 37 box
 > "Chronic Wasting Disease was confirmed in white-tailed deer and mule deer populations in the Kootenay Region in January 2024."
 >
@@ -640,7 +640,7 @@ region: 4
 ```diagram rf-r4-norow
 ```
 
-```more the page 39 and page 5 notes
+```more Official wording, synopsis page 39 and page 5 notes
 - The pages 39 and 40 table has no row for bighorn sheep, caribou, fallow deer, quail, chukar, gray partridge, sharp tailed grouse, band tailed pigeons or opossum (99%).
 - No row means no general open season for that animal in Region 4 (95%, my reading of page 5: "Open Seasons are only those defined in this synopsis").
 - Grizzly bear: no open season in BC (99%, page 19 notice).
@@ -844,7 +844,7 @@ region: 4
 
 - ★ means no motor vehicle at all. The others: not for hunting use (99%).
 
-```more the page 37 symbol key, word for word
+```more Official wording, synopsis page 37 symbol key, word for word
 > [!law] Symbol Key, page 37
 > "Use the following symbols to determine what type of motor vehicle prohibition is in place in the following areas (see also Site and Access Restrictions section, page 9)."
 >

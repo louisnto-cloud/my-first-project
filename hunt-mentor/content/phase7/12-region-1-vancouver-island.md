@@ -173,7 +173,7 @@ region: 1
 ```diagram rf-r1-grizzly
 ```
 
-```more the page 19 notice
+```more Official wording, synopsis page 19 notice
 > [!law] Notice!, page 19
 > "There have been a number of Grizzly Bear sightings on northern Vancouver Island in recent years. Appropriate safety precautions should be taken, and hunters are reminded that there is no open season for Grizzly Bears in B.C. Please report any sightings of a Grizzly Bear on Vancouver Island (which would be brown in colour compared to the uniformly black colour of Black Bears on Vancouver Island) to the Nanaimo Regional office, (250) 751-7220, or the 24-hour call center line at 1-877-952-7277. For more information on bear safety visit: www.gov.bc.ca/bear-smart"
 
@@ -438,7 +438,7 @@ region: 1
 ```diagram rf-r1-norow
 ```
 
-```more the page 21 and page 5 notes
+```more Official wording, synopsis page 21 and page 5 notes
 - The page 21 table has no row for white tailed deer, moose, elk, bighorn sheep, caribou, coyote, lynx, bobcat, Columbian ground squirrel, spruce grouse, sharp tailed grouse, chukar, gray partridge or doves (99%, page 21).
 - No row means no general open season for that animal in Region 1 (95%, my reading of page 5: "Open Seasons are only those defined in this synopsis").
 - Mountain quail: "No open season on mountain quail." (99%, page 21).
@@ -453,7 +453,7 @@ region: 1
 | Youth | MUs 1-1, 1-2, 1-4, 1-5, 1-6 |
 | Shot only and bow areas | Special seasons on the maps |
 
-```more the page 20 notice
+```more Official wording, synopsis page 20 notice
 > [!law] Notice to Hunters, page 20
 > "Antlerless deer hunters please review the regulations carefully. There is no open season for antlerless Mule (black-tailed) deer in areas where rifles are permitted in region 1 except by way of Limited Entry Hunting in a portion of MU 1-15 and for youth hunters in MUs 1-1, 1-2, 1-4, 1-5, and 1-6. Please refer to special seasons in special shotgun or bow only portions of MUs 1-2, 1-4, 1-5, 1-6, and 1-15: see Maps A10, A13, A14, A19, A20, and A32."
 

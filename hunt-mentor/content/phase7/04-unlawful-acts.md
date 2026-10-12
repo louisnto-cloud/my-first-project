@@ -36,7 +36,7 @@ checked: 2026-10-03
 | Native animals, not fish or insects | Wildlife, protected (99%) |
 | Schedule B and C pests | Fewer limits, still kill humanely (99%) |
 
-```more the page 11 words
+```more Official wording, synopsis page 11
 > [!law] What is "Wildlife"?, page 11
 > "All native species of animals in the province, and some non-native species, excluding invertebrates and fish, have been designated as wildlife. This designation gives them protection under the Wildlife Act. These species may not be hunted, killed, captured, kept as pets or used for commercial purposes unless specifically allowed by regulation or under the authority of a permit."
 >
@@ -56,7 +56,7 @@ checked: 2026-10-03
 
 - Every cell: page 11 (99%).
 
-```more the page 11 words
+```more Official wording, synopsis page 11
 > [!law] Page 11
 > "Schedule B lists animals that may be captured or killed on private land only for the specific purpose of protecting property; no hunting licence or open season is required. On Crown land a person must abide by the open seasons for Schedule B species (see Regional Schedules for open seasons). Schedule B species include coast mole, snowshoe hare, voles and lemmings, bushy-tailed woodrat, deer mice, porcupine, northern pocket gopher, yellow-bellied marmot, woodchuck, Columbian ground squirrel, striped skunk, spotted skunk, racoon, Northwestern crow, American crow, black-billed magpie, and brown-headed cowbird."
 >
@@ -80,7 +80,7 @@ checked: 2026-10-03
 
 - Feral pig: hunting licence needed, except on or damaging your own property (99%).
 
-```more the page 11 words
+```more Official wording, synopsis page 11
 > [!law] Page 11
 > "You do need a hunting licence to hunt feral pigs UNLESS you are hunting them on your property or they are damaging your property."
 >
@@ -104,7 +104,7 @@ checked: 2026-10-03
 | Your brother, for free | No (90%, my reading) |
 | You pay an unlicensed guide | You can be charged too (99%) |
 
-```more the page 11 words
+```more Official wording, synopsis page 11
 > [!law] Illegal Guiding, page 11
 > "The Wildlife Act defines “guide” as: “a person who, for compensation or reward, received or promised, accompanies and assists another person to hunt wildlife”."
 >
@@ -126,7 +126,7 @@ checked: 2026-10-03
 | For money or other pay | Yes, a transport licence (99%) |
 | Friends in your boat, free | No (90%, my reading) |
 
-```more the page 11 words
+```more Official wording, synopsis page 11
 > [!law] Illegal Transporting, page 11
 > "The definition of “transporter” in the Wildlife Act Commercial Activities Regulation is: a person who, for money or other compensation, transports a hunter to, from or between locations so that the hunter can hunt but does not include a person who operates a scheduled commercial flight or a chartered aircraft unless the person also provides ground transportation, accommodation, or other ground services to the hunter."
 >
@@ -143,7 +143,7 @@ checked: 2026-10-03
 | Who may finish it | A licensed guide, a youth's supervisor, or a permit to accompany holder (99%) |
 | Whose licence | The hunter who wounded it cancels their own (99%) |
 
-```more the page 11 words
+```more Official wording, synopsis page 11
 > [!law] Dispatching Dangerous Wildlife, page 11
 > "A guide outfitter/assistant guide that holds a valid B.C. hunting licence may track and dispatch a black bear, cougar, or wolf that has been wounded by a guided hunter. The guided hunter then cancels their species licence."
 >
@@ -609,7 +609,7 @@ checked: 2026-10-03
 
 - Tip: everyone unloads before the motor starts.
 
-```more the page 12 words
+```more Official wording, synopsis page 12
 > [!law] Retrieval, page 12
 > "No person shall kill, cripple or wound game without making all reasonable effort to locate, dispatch, retrieve and include it in their bag limit."
 >
@@ -633,7 +633,7 @@ checked: 2026-10-03
 | Killed one | Call the Ministry office before eating it (99%) |
 | The tag or collar | Return it (99%) |
 
-```more the page 7 words
+```more Official wording, synopsis page 7
 > [!law] Ear Tags and Collars, page 7
 > "Please DO NOT AVOID hunting animals with ear tags or collars, unless specified under regional sections in the synopsis. This will ensure that biologists acquire accurate data on mortality rates. If you kill a marked animal, please contact your local Ministry office with the number on the ear tag or collar because the meat may not be safe to eat if immobilization drugs were used. Ear tags and collars must be returned to the Ministry office."
 

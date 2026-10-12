@@ -29,7 +29,7 @@ checked: 2026-10-03
 ```diagram rb-deer-gun-flow
 ```
 
-```more the page 12 words
+```more Official wording, synopsis page 12
 > [!law] Legal Hunting Methods, Firearms, page 12
 > "It is unlawful to hunt with a firearm that has an electronically controlled firing mechanism."
 >
@@ -52,7 +52,7 @@ checked: 2026-10-03
 
 - No set gun, ever (99%).
 
-```more the page 12 words and muzzleloaders
+```more Official wording, synopsis page 12 and muzzleloaders
 > [!law] Page 12
 > "It is unlawful to hunt or trap with a set gun or with a pump, repeating or auto loading shotgun unless the magazine contains a plug that is incapable of holding more than 2 cartridges. Where the use of a shotgun is allowed for hunting or trapping big game, an unplugged shotgun holding more than 2 cartridges and firing single projectiles only (slugs) may be used."
 >
@@ -188,7 +188,7 @@ checked: 2026-10-03
 | You need | Hunting licence and trapper education |
 | Wire | Not braided, 20 gauge or lighter |
 
-```more the page 13 words
+```more Official wording, synopsis page 13
 > [!law] Page 13
 > "A person may snare snowshoe hare during the open season if they have a hunting licence and completed the trapper education course. The snare must be non-braided and no heavier than 20 gauge."
 
@@ -238,7 +238,7 @@ checked: 2026-10-03
 ```diagram rb-shot-ban
 ```
 
-```more the page 13 notice and the shot types
+```more Official wording, synopsis page 13 notice and the shot types
 > [!law] Notice! Shot Ban, page 13
 > "The use of toxic (lead) shot for hunting waterfowl has been prohibited in British Columbia since 1995 and in Canada since 1997. The ban applies to all ducks, geese, coots and snipe. It does not apply to upland game birds (grouse, ptarmigan, quail, partridge, pheasants, and turkey), migratory upland game birds (pigeons, doves), ravens (where seasons exist), or target shooting, although a local restriction may be implemented if there is a conflict with an important wetland."
 >
@@ -295,7 +295,7 @@ checked: 2026-10-03
 ```diagram rb-dog-leash
 ```
 
-```more the page 12 words and falconry
+```more Official wording, synopsis page 12 and falconry
 > [!law] Dogs, page 12
 > "The use of dogs is permitted in the hunting of all game, but dogs must be on a leash when used to hunt deer, elk, moose, mountain sheep, mountain goat and caribou. Unleashed dogs may be used to hunt small game, lynx, bobcat, black bear, or cougar. Any person may train dogs by allowing them, under supervision, to pursue game birds from Aug 1- Apr 30."
 >

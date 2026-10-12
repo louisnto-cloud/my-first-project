@@ -413,7 +413,7 @@ region: 7a
 ```diagram rf-r7a-norow
 ```
 
-```more the page 57 and page 5 notes
+```more Official wording, synopsis page 57 and page 5 notes
 - Page 57 has no row for bison, bobcat, sharp tailed grouse, raven, pheasant, partridge, dove, band tailed pigeon, turkey or quail (99%).
 - No row means no general open season for that animal in Region 7A (95%, my reading of page 5: "Open Seasons are only those defined in this synopsis").
 - MU 7-1 appears in no row, so no general open season there (90%, my reading).
@@ -521,7 +521,7 @@ region: 7a
 
 - No sign does not mean no closure (99%).
 
-```more the page 56 symbol key, word for word
+```more Official wording, synopsis page 56 symbol key, word for word
 > [!law] Access Management Areas, page 56
 > "Information signs may be posted at the points of closure for road and vehicle restrictions. These signs are for the benefit of hunters, but it is the hunters’ responsibility to recognize closures whether a sign is in place or not."
 >
@@ -547,7 +547,7 @@ region: 7a
 ```diagram rf-r7a-atv-hours
 ```
 
-```more the page 56 list, word for word
+```more Official wording, synopsis page 56 list, word for word
 > [!law] Access Management Areas, page 56
 > "MUs 7-2 to 7-18, 7-23 to 7-30, and 7-37 to 7-39" "● from Mar 31 - Nov 30."
 >
