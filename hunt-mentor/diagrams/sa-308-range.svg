@@ -1,4 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 404" font-family="sans-serif" role="img" aria-label="Chart for the .308 Winchester. Mule deer and white tail: 150 to 165 grain bullets, shot limit 200 metres. Black bear: 150 to 180 grain, keep shots inside 150 metres until you have done it once. Moose and elk: 165 to 180 grain premium bullets, about 200 metres. All are tips or hunter consensus. Your real limit is the distance where you hit a 15 centimetre plate 9 times out of 10 from a field rest, for most beginners 200 metres.">
-<rect x="0" y="0" width="400" height="404" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Your .308: load and max range</text><text x="200" y="48" font-size="13" fill="#6b4f35" text-anchor="middle">Bullet weight in grains (gr). Bar = your shot limit.</text><line x1="120.0" y1="62" x2="120.0" y2="312" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 4"/><text x="120.0" y="62" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">0 m</text><line x1="203.33333333333331" y1="62" x2="203.33333333333331" y2="312" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 4"/><text x="203.33333333333331" y="62" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">100 m</text><line x1="286.66666666666663" y1="62" x2="286.66666666666663" y2="312" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 4"/><text x="286.66666666666663" y="62" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">200 m</text><line x1="370.0" y1="62" x2="370.0" y2="312" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 4"/><text x="370.0" y="62" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">300 m</text><text x="8" y="94" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Mule deer</text><text x="8" y="114" font-size="13" fill="#6b4f35" text-anchor="start">150 to 165 gr</text><rect x="120" y="82" width="167" height="22" rx="4" fill="#8a9a6b"/><text x="292.66666666666663" y="99" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">200 m</text><text x="8" y="144" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">White tail</text><text x="8" y="164" font-size="13" fill="#6b4f35" text-anchor="start">150 to 165 gr</text><rect x="120" y="132" width="167" height="22" rx="4" fill="#8a9a6b"/><text x="292.66666666666663" y="149" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">200 m</text><text x="8" y="194" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Black bear</text><text x="8" y="214" font-size="13" fill="#6b4f35" text-anchor="start">150 to 180 gr</text><rect x="120" y="182" width="125" height="22" rx="4" fill="#e8590c"/><text x="251.0" y="199" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">150 m</text><text x="8" y="244" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Moose</text><text x="8" y="264" font-size="13" fill="#6b4f35" text-anchor="start">165 to 180 gr premium</text><rect x="120" y="232" width="167" height="22" rx="4" fill="#8a9a6b"/><text x="292.66666666666663" y="249" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">about 200 m</text><text x="8" y="294" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Elk</text><text x="8" y="314" font-size="13" fill="#6b4f35" text-anchor="start">165 to 180 gr premium</text><rect x="120" y="282" width="167" height="22" rx="4" fill="#8a9a6b"/><text x="292.66666666666663" y="299" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">about 200 m</text><rect x="8" y="336" width="384" height="58" rx="8" fill="#fffaf0" stroke="#e8590c" stroke-width="1.5"/><text x="18" y="358" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Your real limit: hit a 15 cm (6 in) plate</text><text x="18" y="380" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">9 of 10 from a field rest. Most beginners: 200 m.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 398" font-family="sans-serif" role="img" aria-label="Chart for the .308 Winchester, bullet weight in grains and shot limit in metres. Mule deer and white tail: 150 to 165 grain bullets, shot limit 200 metres. Black bear: 150 to 180 grain, 150 metres, keep shots inside 150 metres until you have done it once. Moose and elk: 165 to 180 grain premium bullets, about 200 metres. All are tips or hunter consensus. Your real limit is the distance where you hit a 15 centimetre (6 inch) plate 9 times out of 10 from a field rest, for most beginners 200 metres.">
+<rect width="400" height="398" fill="#fffaf0"/>
+<text x="12" y="26" font-size="15" font-weight="bold" fill="#6b5b4b">.308: bullet in grains (gr), shot limit</text>
+<text x="60" y="58" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">0</text>
+<text x="164" y="58" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">100 m</text>
+<text x="268" y="58" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">200 m</text>
+<text x="372" y="58" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">300 m</text>
+
+<text x="60" y="90" font-size="17" font-weight="bold" fill="#2f3a2b">Deer (mule, white tail)</text>
+<text x="392" y="90" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">150 to 165 gr</text>
+<g transform="translate(8 96)"><path d="M8 10 C10 4 18 2 28 3 L33 -4 L36 -2 L34 4 C38 4 40 8 38 10 L34 11 L30 9 L28 22 L25 22 L25 12 L14 12 L12 22 L9 22 L9 13 C7 13 6 12 8 10z" fill="#2f3a2b"/></g>
+<line x1="60.0" y1="96" x2="60.0" y2="132" stroke="#d9d3c3" stroke-width="1.5"/>
+<line x1="164.0" y1="96" x2="164.0" y2="132" stroke="#d9d3c3" stroke-width="1.5"/>
+<line x1="268.0" y1="96" x2="268.0" y2="132" stroke="#d9d3c3" stroke-width="1.5"/>
+<line x1="372.0" y1="96" x2="372.0" y2="132" stroke="#d9d3c3" stroke-width="1.5"/>
+<rect x="60" y="100" width="208.0" height="28" rx="5" fill="#8a9a6b"/>
+<text x="258" y="120" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="end">200 m</text>
+
+<text x="60" y="160" font-size="17" font-weight="bold" fill="#2f3a2b">Black bear</text>
+<text x="392" y="160" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">150 to 180 gr</text>
+<g transform="translate(8 166)"><path d="M4 10 C2 2 10 -2 22 -2 C30 -2 34 0 37 4 L42 6 C44 7 43 10 40 10 L36 11 L36 22 L32 22 L31 14 L14 14 L13 22 L9 22 L9 15 C6 14 4 12 4 10z" fill="#2f3a2b"/></g>
+<line x1="60.0" y1="166" x2="60.0" y2="202" stroke="#d9d3c3" stroke-width="1.5"/>
+<line x1="164.0" y1="166" x2="164.0" y2="202" stroke="#d9d3c3" stroke-width="1.5"/>
+<line x1="268.0" y1="166" x2="268.0" y2="202" stroke="#d9d3c3" stroke-width="1.5"/>
+<line x1="372.0" y1="166" x2="372.0" y2="202" stroke="#d9d3c3" stroke-width="1.5"/>
+<rect x="60" y="170" width="156.0" height="28" rx="5" fill="#e8590c"/>
+<text x="206" y="190" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="end">150 m</text>
+
+<text x="60" y="230" font-size="17" font-weight="bold" fill="#2f3a2b">Moose, elk</text>
+<text x="60" y="250" font-size="15" font-weight="bold" fill="#8b5a2b">165 to 180 gr premium</text>
+<g transform="translate(8 254)"><path d="M6 6 C6 0 14 -4 22 -4 L28 -2 L36 2 L42 6 C43 9 40 10 38 10 L34 10 L33 14 L32 24 L29 24 L28 12 L14 12 L13 24 L10 24 L9 12 C7 11 6 9 6 6z M33 10 L33 16 L31 12z" fill="#2f3a2b"/></g>
+<line x1="60.0" y1="254" x2="60.0" y2="290" stroke="#d9d3c3" stroke-width="1.5"/>
+<line x1="164.0" y1="254" x2="164.0" y2="290" stroke="#d9d3c3" stroke-width="1.5"/>
+<line x1="268.0" y1="254" x2="268.0" y2="290" stroke="#d9d3c3" stroke-width="1.5"/>
+<line x1="372.0" y1="254" x2="372.0" y2="290" stroke="#d9d3c3" stroke-width="1.5"/>
+<rect x="60" y="258" width="208.0" height="28" rx="5" fill="#8a9a6b"/>
+<text x="258" y="278" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="end">about 200 m</text>
+<rect x="8" y="306" width="384" height="84" rx="12" fill="#2f3a2b"/>
+<circle cx="46" cy="348" r="24" fill="#fffaf0"/><circle cx="46" cy="348" r="15" fill="none" stroke="#e8590c" stroke-width="3"/><circle cx="46" cy="348" r="5" fill="#e8590c"/>
+<text x="84" y="332" font-size="16" font-weight="bold" fill="#fffaf0">Your real limit: a 15 cm (6 in)</text>
+<text x="84" y="354" font-size="16" fill="#fffaf0">plate, 9 of 10 from a field rest</text>
+<text x="84" y="376" font-size="16" font-weight="bold" fill="#f6b98f">Most beginners: 200 m</text>
 </svg>

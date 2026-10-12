@@ -1,8 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 640" font-family="sans-serif">
-<rect x="0" y="0" width="400" height="640" fill="#fffaf0"/>
-<text x="200" y="24" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Deer: where to aim</text>
-<g transform="translate(0,34)"><rect x="6" y="2" width="388" height="186" rx="8" fill="#fffaf0" stroke="#8a9a6b" stroke-width="1.5"/><text x="16" y="22" font-size="16" font-weight="bold" fill="#23261f">1  Broadside</text><text x="388" y="22" font-size="14" fill="#2f3a2b" text-anchor="end">best</text><rect x="214" y="113" width="9" height="36" rx="4" fill="#2f3a2b" stroke="#23261f" stroke-width="2"/><rect x="297" y="113" width="9" height="36" rx="4" fill="#2f3a2b" stroke="#23261f" stroke-width="2"/><path d="M216 73 L188 59 L192 75 L208 102 Z" fill="#8a9a6b" stroke="#23261f" stroke-width="2.5" stroke-linejoin="round"/><ellipse cx="182" cy="65" rx="15" ry="9" fill="#8a9a6b" stroke="#23261f" stroke-width="2.5"/><path d="M191 58 L198 45 L200 60 Z" fill="#8a9a6b" stroke="#23261f" stroke-width="2"/><circle cx="172" cy="65" r="2.2" fill="#23261f"/><path d="M186 56 L184 34 M184 43 L175 36 M184 49 L193 38" fill="none" stroke="#6b4f35" stroke-width="3.1" stroke-linecap="round"/><ellipse cx="262" cy="96" rx="68" ry="27" fill="#8a9a6b" stroke="#23261f" stroke-width="2.5"/><path d="M326 86 L342 80 L338 98 Z" fill="#fffaf0" stroke="#23261f" stroke-width="2"/><rect x="221" y="113" width="9" height="36" rx="4" fill="#8a9a6b" stroke="#23261f" stroke-width="2"/><rect x="306" y="113" width="9" height="36" rx="4" fill="#8a9a6b" stroke="#23261f" stroke-width="2"/><ellipse cx="235" cy="97" rx="16" ry="17" fill="#e8590c" fill-opacity="0.35" stroke="#e8590c" stroke-width="1.5"/><circle cx="228" cy="108" r="6" fill="#6b4f35" stroke="#23261f" stroke-width="1.5"/><circle cx="232" cy="105" r="8" fill="#e8590c" stroke="#23261f" stroke-width="2"/><line x1="227" y1="105" x2="237" y2="105" stroke="#fffaf0" stroke-width="2"/><line x1="232" y1="100" x2="232" y2="110" stroke="#fffaf0" stroke-width="2"/><text x="248" y="110" font-size="14" font-weight="bold" fill="#e8590c">aim</text><text x="16" y="166" font-size="14" fill="#23261f">Up the back of the front leg, one third up.</text><text x="16" y="183" font-size="14" fill="#23261f">Both lungs, top of the heart.</text></g>
-<g transform="translate(0,228)"><rect x="6" y="2" width="388" height="186" rx="8" fill="#fffaf0" stroke="#8a9a6b" stroke-width="1.5"/><text x="16" y="22" font-size="16" font-weight="bold" fill="#23261f">2  Quartering away</text><text x="388" y="22" font-size="14" fill="#2f3a2b" text-anchor="end">good</text><rect x="235" y="107" width="8" height="32" rx="4" fill="#2f3a2b" stroke="#23261f" stroke-width="2"/><rect x="245" y="109" width="8" height="32" rx="4" fill="#2f3a2b" stroke="#23261f" stroke-width="2"/><ellipse cx="201" cy="69" rx="14" ry="8" fill="#2f3a2b" stroke="#23261f" stroke-width="2.5"/><path d="M209 63 L215 51 L217 64 Z" fill="#2f3a2b" stroke="#23261f" stroke-width="2"/><circle cx="192" cy="69" r="2.0" fill="#23261f"/><path d="M204 61 L203 42 M203 50 L195 43 M203 55 L211 45" fill="none" stroke="#6b4f35" stroke-width="2.8" stroke-linecap="round"/><path d="M239 75 L209 65 L211 77 L233 100 Z" fill="#2f3a2b" stroke="#23261f" stroke-width="2.5" stroke-linejoin="round"/><ellipse cx="272" cy="96" rx="49" ry="27" fill="#8a9a6b" stroke="#23261f" stroke-width="2.5"/><ellipse cx="299" cy="102" rx="21" ry="26" fill="#8a9a6b" stroke="#23261f" stroke-width="2.5"/><rect x="287" y="115" width="10" height="36" rx="4" fill="#8a9a6b" stroke="#23261f" stroke-width="2"/><rect x="302" y="117" width="10" height="36" rx="4" fill="#8a9a6b" stroke="#23261f" stroke-width="2"/><ellipse cx="256" cy="97" rx="14" ry="16" fill="#e8590c" fill-opacity="0.35" stroke="#e8590c" stroke-width="1.5"/><line x1="271" y1="104" x2="234" y2="92" stroke="#23261f" stroke-width="2.5" stroke-dasharray="6 4"/><circle cx="234" cy="92" r="5" fill="#23261f"/><text x="230" y="114" font-size="13" fill="#23261f" text-anchor="end">far shoulder</text><circle cx="271" cy="104" r="8" fill="#e8590c" stroke="#23261f" stroke-width="2"/><line x1="266" y1="104" x2="276" y2="104" stroke="#fffaf0" stroke-width="2"/><line x1="271" y1="99" x2="271" y2="109" stroke="#fffaf0" stroke-width="2"/><text x="287" y="109" font-size="14" font-weight="bold" fill="#e8590c">aim</text><text x="388" y="59" font-size="13" fill="#23261f" text-anchor="end">rump toward you</text><text x="16" y="166" font-size="14" fill="#23261f">Aim farther back. Bullet exits the far shoulder.</text><text x="16" y="183" font-size="14" fill="#23261f">Picture the far front leg.</text></g>
-<g transform="translate(0,422)"><rect x="6" y="2" width="388" height="186" rx="8" fill="#fffaf0" stroke="#8a9a6b" stroke-width="1.5"/><text x="16" y="22" font-size="16" font-weight="bold" fill="#23261f">3  Quartering to</text><text x="388" y="22" font-size="14" fill="#2f3a2b" text-anchor="end">experienced only</text><rect x="233" y="109" width="8" height="32" rx="4" fill="#2f3a2b" stroke="#23261f" stroke-width="2"/><rect x="294" y="107" width="8" height="32" rx="4" fill="#2f3a2b" stroke="#23261f" stroke-width="2"/><ellipse cx="272" cy="96" rx="49" ry="27" fill="#8a9a6b" stroke="#23261f" stroke-width="2.5"/><ellipse cx="242" cy="100" rx="18" ry="26" fill="#8a9a6b" stroke="#23261f" stroke-width="2.5"/><path d="M245 71 L217 61 L221 79 L243 106 Z" fill="#8a9a6b" stroke="#23261f" stroke-width="2.5" stroke-linejoin="round"/><ellipse cx="207" cy="67" rx="18" ry="10" fill="#8a9a6b" stroke="#23261f" stroke-width="2.5"/><path d="M218 59 L226 44 L228 61 Z" fill="#8a9a6b" stroke="#23261f" stroke-width="2"/><circle cx="195" cy="67" r="2.6" fill="#23261f"/><path d="M211 56 L209 31 M209 42 L199 33 M209 48 L220 36" fill="none" stroke="#6b4f35" stroke-width="3.7" stroke-linecap="round"/><rect x="242" y="115" width="10" height="36" rx="4" fill="#8a9a6b" stroke="#23261f" stroke-width="2"/><rect x="302" y="113" width="9" height="36" rx="4" fill="#8a9a6b" stroke="#23261f" stroke-width="2"/><ellipse cx="257" cy="97" rx="14" ry="16" fill="#e8590c" fill-opacity="0.35" stroke="#e8590c" stroke-width="1.5"/><line x1="244" y1="100" x2="284" y2="100" stroke="#23261f" stroke-width="2.5" stroke-dasharray="6 4"/><circle cx="244" cy="100" r="8" fill="#e8590c" stroke="#23261f" stroke-width="2"/><line x1="239" y1="100" x2="249" y2="100" stroke="#fffaf0" stroke-width="2"/><line x1="244" y1="95" x2="244" y2="105" stroke="#fffaf0" stroke-width="2"/><text x="258" y="90" font-size="14" font-weight="bold" fill="#e8590c">aim</text><rect x="306" y="30" width="78" height="24" rx="5" fill="#e8590c"/><text x="345" y="47" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">WAIT</text><text x="16" y="166" font-size="14" fill="#23261f">Front of the near shoulder. Experienced only.</text><text x="16" y="183" font-size="14" fill="#23261f">Beginner: wait for the turn.</text></g>
-<text x="200" y="634" font-size="13" fill="#6b4f35" text-anchor="middle">Shaded: lungs. Dark: heart. Orange: aim point. Not to scale.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" font-family="sans-serif" role="img" aria-label="Deer, broadside, a male with antlers, drawn as a field guide plate with the lungs and heart shown through the body. Aim up the back of the front leg, one third up the chest: both lungs, top of the heart. A dashed circle marks the vital zone with margin, about 20 to 25 centimetres, 8 to 10 inches. Below, three top views: broadside is best; quartering away is good, the bullet enters behind the ribs and exits the far shoulder; quartering to is for experienced hunters only, beginners wait.">
+  <defs>
+    <g id="vitals-deer-top">
+      <ellipse cx="0" cy="0" rx="30" ry="11" fill="#a87b52" stroke="#5a3e26" stroke-width="1.4"/>
+      <path d="M-26 -4 L-38 -3 L-38 3 L-26 4z" fill="#a87b52" stroke="#5a3e26" stroke-width="1.2"/>
+      <ellipse cx="-44" cy="0" rx="7" ry="5" fill="#8f6744" stroke="#5a3e26" stroke-width="1.2"/>
+      <ellipse cx="-41" cy="-6" rx="3" ry="2" fill="#8f6744"/><ellipse cx="-41" cy="6" rx="3" ry="2" fill="#8f6744"/>
+      <ellipse cx="29" cy="0" rx="4" ry="3" fill="#f3ead8"/>
+      <ellipse cx="-12" cy="0" rx="11" ry="8" fill="#e9a3a0" fill-opacity=".85"/>
+    </g>
+  </defs>
+  <rect width="400" height="520" fill="#fffaf0"/>
+  <!-- ground shadow -->
+  <ellipse cx="250" cy="302" rx="120" ry="7" fill="#d8ccb2"/>
+  <!-- far legs -->
+  <path d="M200 216 L212 218 L214 260 L216 298 L206 300 L204 262 L198 236z" fill="#7a5638"/>
+  <path d="M290 212 L314 216 L318 248 L322 296 L312 298 L306 252 L294 230z" fill="#7a5638"/>
+  <!-- near body outline -->
+  <path d="M62 128 C62 122 70 116 80 112 L98 102 C104 98 112 98 116 104 C128 118 148 138 172 147 C210 143 270 145 316 149 C330 151 338 157 342 166 C344 188 340 208 330 222 L326 246 L330 296 L320 298 L316 250 C312 236 306 226 300 220 C270 228 222 230 196 222 L194 246 L196 296 L186 298 L184 250 C182 238 178 230 170 226 C158 222 150 212 148 198 C140 174 118 150 100 138 C92 136 80 134 70 134 L62 130z" fill="#a87b52" stroke="#5a3e26" stroke-width="1.6" stroke-linejoin="round"/>
+  <!-- belly shade, throat and rump patches -->
+  <path d="M200 220 C230 226 270 224 298 216 C290 208 250 214 200 212z" fill="#c9a37a"/>
+  <path d="M104 140 C116 150 128 160 136 172 C126 168 114 158 104 148z" fill="#f3ead8"/>
+  <path d="M336 160 C344 172 344 196 336 208 C332 196 332 176 336 160z" fill="#f3ead8"/>
+  <path d="M340 158 C350 162 352 176 346 186 C342 178 340 168 340 158z" fill="#f3ead8" stroke="#5a3e26" stroke-width="1"/>
+  <!-- ear, eye, nose, antlers -->
+  <path d="M110 102 C116 86 126 76 134 72 C134 86 126 100 116 106z" fill="#a87b52" stroke="#5a3e26" stroke-width="1.4"/>
+  <circle cx="90" cy="114" r="2.6" fill="#2f241a"/>
+  <ellipse cx="64" cy="126" rx="3.4" ry="2.6" fill="#2f241a"/>
+  <path d="M104 100 C102 80 108 62 122 50 M108 76 C98 70 94 60 96 50 M118 54 C122 44 132 40 140 40 M122 50 C118 40 118 32 122 26" fill="none" stroke="#6b4f35" stroke-width="3" stroke-linecap="round"/>
+  <!-- vitals seen through the body -->
+  <path d="M172 158 C196 150 232 150 250 162 C258 178 246 202 222 210 C204 214 184 210 174 196 C166 184 166 168 172 158z" fill="#e9a3a0" fill-opacity=".9" stroke="#b55b57" stroke-width="1.4"/>
+  <path d="M186 198 C186 190 194 188 198 194 C202 188 210 190 208 200 C206 208 198 214 196 216 C192 212 186 206 186 198z" fill="#8e2a2a" stroke="#5e1717" stroke-width="1"/>
+  <!-- vital zone with margin -->
+  <circle cx="202" cy="186" r="21" fill="none" stroke="#2f3a2b" stroke-width="1.6" stroke-dasharray="4 3"/>
+  <!-- one third up guide on the back of the front leg -->
+  <line x1="198" y1="146" x2="198" y2="222" stroke="#fffaf0" stroke-width="1.2" stroke-dasharray="2 3"/>
+  <g stroke="#2f3a2b" stroke-width="1.6"><line x1="146" y1="147" x2="160" y2="147"/><line x1="146" y1="222" x2="160" y2="222"/><line x1="153" y1="147" x2="153" y2="222"/><line x1="146" y1="197" x2="160" y2="197"/></g>
+  <!-- aim point -->
+  <circle cx="198" cy="196" r="7" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+  <path d="M198 186 v20 M188 196 h20" stroke="#fffaf0" stroke-width="1.6"/>
+  <!-- labels with leader lines -->
+  <g font-size="14" fill="#2f3a2b" font-weight="bold">
+    <line x1="230" y1="166" x2="280" y2="124" stroke="#2f3a2b" stroke-width="1.2"/>
+    <text x="284" y="122">lungs</text>
+    <line x1="194" y1="206" x2="232" y2="262" stroke="#2f3a2b" stroke-width="1.2"/>
+    <text x="236" y="272">heart</text>
+    <line x1="146" y1="197" x2="118" y2="212" stroke="#2f3a2b" stroke-width="1.2"/>
+    <text x="112" y="226" text-anchor="end">1/3 up</text>
+    <line x1="203" y1="190" x2="226" y2="80" stroke="#e8590c" stroke-width="1.6"/>
+    <rect x="160" y="18" width="234" height="62" rx="6" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/>
+    <text x="172" y="42" fill="#e8590c">AIM: up the back of the</text>
+    <text x="172" y="60" fill="#e8590c">front leg, one third up</text>
+    <text x="172" y="74" font-size="14" font-weight="normal">both lungs, top of the heart (85%)</text>
+  </g>
+  <!-- legend line under the plate -->
+  <circle cx="26" cy="326" r="9" fill="none" stroke="#2f3a2b" stroke-width="1.6" stroke-dasharray="4 3"/>
+  <text x="44" y="324" font-size="14" fill="#2f3a2b">Vital zone with margin: about 20 to 25 cm</text>
+  <text x="44" y="341" font-size="14" fill="#2f3a2b">(8 to 10 in) (75%)</text>
+  <!-- angle cards, top view -->
+  <g font-size="14" text-anchor="middle" fill="#2f3a2b">
+    <rect x="12" y="358" width="120" height="122" rx="8" fill="#f2ecdd" stroke="#c9bb9c"/>
+    <text x="72" y="377" font-weight="bold">Broadside</text><text x="72" y="394" fill="#2f6e3b" font-weight="bold">best</text>
+    <use href="#vitals-deer-top" transform="translate(80 422)"/>
+    <line x1="68" y1="472" x2="68" y2="433" stroke="#2f3a2b" stroke-width="1.8"/><line x1="68" y1="433" x2="68" y2="411" stroke="#2f3a2b" stroke-width="1.4" stroke-dasharray="3 3"/>
+    <circle cx="68" cy="433" r="4" fill="#e8590c"/>
+    <rect x="140" y="358" width="120" height="122" rx="8" fill="#f2ecdd" stroke="#c9bb9c"/>
+    <text x="200" y="377" font-weight="bold">Quartering away</text><text x="200" y="394" fill="#2f6e3b" font-weight="bold">good</text>
+    <use href="#vitals-deer-top" transform="translate(212 428) rotate(35)"/>
+    <line x1="201" y1="472" x2="201" y2="433" stroke="#2f3a2b" stroke-width="1.8"/><line x1="201" y1="433" x2="201" y2="409" stroke="#2f3a2b" stroke-width="1.4" stroke-dasharray="3 3"/>
+    <circle cx="201" cy="433" r="4" fill="#e8590c"/><circle cx="201" cy="409" r="3" fill="#2f3a2b"/>
+    <rect x="268" y="358" width="120" height="122" rx="8" fill="#f2ecdd" stroke="#c9bb9c"/>
+    <text x="328" y="377" font-weight="bold">Quartering to</text><text x="328" y="394" fill="#c0392b" font-weight="bold">experienced only</text>
+    <use href="#vitals-deer-top" transform="translate(344 414) rotate(-35)"/>
+    <line x1="333" y1="472" x2="333" y2="433" stroke="#2f3a2b" stroke-width="1.8"/>
+    <circle cx="333" cy="433" r="4" fill="#e8590c"/>
+    <rect x="336" y="446" width="48" height="22" rx="4" fill="#c0392b"/><text x="360" y="462" fill="#fffaf0" font-weight="bold" font-size="14">WAIT</text>
+  </g>
+  <text x="200" y="504" font-size="14" fill="#6b5b4b" text-anchor="middle">Seen from above. Orange dot: bullet entry.</text>
 </svg>

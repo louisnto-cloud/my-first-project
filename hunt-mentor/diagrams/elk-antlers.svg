@@ -1,51 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="360" fill="#fffaf0"/>
-  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">6 point bull elk</text>
-  <text x="200" y="42" font-size="13" fill="#6b4f35" text-anchor="middle">Count tines on ONE antler. The brow tine counts.</text>
-  <text x="200" y="58" font-size="13" fill="#6b4f35" text-anchor="middle">Each tine at least 2.5 cm and longer than it is wide.</text>
-  <line x1="200" y1="66" x2="200" y2="318" stroke="#8a9a6b" stroke-width="2" stroke-dasharray="6 6" fill="none"/>
-
-  <text x="90" y="82" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">6 point: legal</text>
-  <g transform="translate(0,30)">
-    <g stroke="#6b4f35" stroke-width="7" stroke-linecap="round" fill="none">
-      <path d="M70 270 C72 220 90 170 120 130 C140 104 160 92 176 86"/>
-      <path d="M74 240 L48 226"/>
-      <path d="M80 206 L54 186"/>
-      <path d="M96 170 L76 142"/>
-      <path d="M118 134 L112 100"/>
-      <path d="M150 104 L156 72"/>
-    </g>
-    <g font-size="11" font-weight="bold" fill="#fffaf0" text-anchor="middle">
-      <circle cx="44" cy="224" r="8" fill="#e8590c" stroke="#23261f" stroke-width="1.5"/><text x="44" y="228">1</text>
-      <circle cx="50" cy="184" r="8" fill="#e8590c" stroke="#23261f" stroke-width="1.5"/><text x="50" y="188">2</text>
-      <circle cx="72" cy="138" r="8" fill="#e8590c" stroke="#23261f" stroke-width="1.5"/><text x="72" y="142">3</text>
-      <circle cx="110" cy="94" r="8" fill="#e8590c" stroke="#23261f" stroke-width="1.5"/><text x="110" y="98">4</text>
-      <circle cx="158" cy="66" r="8" fill="#e8590c" stroke="#23261f" stroke-width="1.5"/><text x="158" y="70">5</text>
-      <circle cx="184" cy="82" r="8" fill="#e8590c" stroke="#23261f" stroke-width="1.5"/><text x="184" y="86">6</text>
-    </g>
-    <text x="44" y="248" font-size="11" fill="#6b4f35" text-anchor="middle">brow</text>
-    <text x="182" y="104" font-size="11" fill="#6b4f35" text-anchor="middle">beam tip</text>
-  </g>
-  <text x="100" y="318" font-size="12" fill="#23261f" text-anchor="middle">The beam tip counts as a tine</text>
-
-  <text x="300" y="82" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">5 point: NOT legal</text>
-  <g transform="translate(0,30)">
-    <g stroke="#6b4f35" stroke-width="7" stroke-linecap="round" fill="none">
-      <path d="M270 270 C272 220 290 170 320 130 C340 104 360 92 376 86"/>
-      <path d="M274 240 L248 226"/>
-      <path d="M280 206 L254 186"/>
-      <path d="M296 170 L276 142"/>
-      <path d="M350 104 L356 72"/>
-    </g>
-    <g font-size="11" font-weight="bold" fill="#fffaf0" text-anchor="middle">
-      <circle cx="244" cy="224" r="8" fill="#8a9a6b" stroke="#23261f" stroke-width="1.5"/><text x="244" y="228">1</text>
-      <circle cx="250" cy="184" r="8" fill="#8a9a6b" stroke="#23261f" stroke-width="1.5"/><text x="250" y="188">2</text>
-      <circle cx="272" cy="138" r="8" fill="#8a9a6b" stroke="#23261f" stroke-width="1.5"/><text x="272" y="142">3</text>
-      <circle cx="358" cy="66" r="8" fill="#8a9a6b" stroke="#23261f" stroke-width="1.5"/><text x="358" y="70">4</text>
-      <circle cx="384" cy="82" r="8" fill="#8a9a6b" stroke="#23261f" stroke-width="1.5"/><text x="384" y="86">5</text>
-    </g>
-  </g>
-  <text x="300" y="318" font-size="12" fill="#23261f" text-anchor="middle">5 one side, 6 the other: legal</text>
-  <text x="200" y="338" font-size="13" fill="#e8590c" font-weight="bold" text-anchor="middle">Can't count every tine clearly?</text>
-  <text x="200" y="354" font-size="13" fill="#e8590c" font-weight="bold" text-anchor="middle">Then it is not a 6 point. Do not shoot.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 482" font-family="sans-serif" role="img" aria-label="Two bull elk heads in side view with the antler drawn and its tines numbered. Count ONE antler. Left: 6 point, legal: brow tine 1, then tines 2 to 5 up the beam, and the beam tip is tine 6. The brow tine counts and the beam tip counts as a tine. Right: the same antler missing one tine, 5 point, NOT legal. Each tine is at least 2.5 centimetres and longer than it is wide. 5 on one side and 6 on the other is legal. Cannot count every tine clearly? Then it is not a 6 point. Do not shoot.">
+<rect width="400" height="482" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Count ONE antler</text>
+<rect x="8" y="40" width="188" height="292" rx="10" fill="#f4eedf" stroke="#d8cfb8"/>
+<rect x="204" y="40" width="188" height="292" rx="10" fill="#f6e7e2" stroke="#e2c4bb"/>
+<text x="102" y="66" font-size="17" font-weight="bold" fill="#2f6e3b" text-anchor="middle">6 point: legal</text>
+<text x="298" y="66" font-size="17" font-weight="bold" fill="#c0392b" text-anchor="middle">5 point: NOT legal</text>
+<path d="M118 330 C114 306 104 290 94 280 C84 270 72 270 64 276 C54 284 42 300 32 312 C28 318 32 324 40 324 C54 322 68 316 78 316 C84 322 86 328 88 330z" fill="#8b6a48" stroke="#3f2c1c" stroke-width="1.4"/>
+<path d="M88 330 C88 318 94 306 104 300 C112 308 116 320 118 330z" fill="#5a3f2a"/>
+<path d="M94 282 L118 270 L104 290z" fill="#8b6a48" stroke="#3f2c1c" stroke-width="1.2"/>
+<circle cx="66" cy="288" r="2.6" fill="#1f160e"/><ellipse cx="34" cy="316" rx="4" ry="3" fill="#1f160e"/>
+<path d="M83.2 262.4 Q61.1 261.7 42.6 251.1 L41.6 253.7 Q59.2 266.9 80.0 271.1z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="2" stroke-linejoin="round"/>
+<path d="M87.4 245.8 Q67.7 241.5 53.5 228.4 L52.0 230.7 Q64.7 246.2 82.5 253.6z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="2" stroke-linejoin="round"/>
+<path d="M101.1 204.6 Q84.3 197.1 75.1 182.4 L73.1 184.3 Q80.4 201.0 94.5 211.0z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="2" stroke-linejoin="round"/>
+<path d="M120.7 165.4 Q104.9 148.6 98.5 127.3 L96.0 128.5 Q99.9 151.1 112.4 169.4z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="2" stroke-linejoin="round"/>
+<path d="M143.6 132.5 Q133.3 119.6 133.2 104.2 L130.5 104.9 Q128.0 121.0 134.7 134.8z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="2" stroke-linejoin="round"/>
+<path d="M80 278 C86 226 114 150 164 108" fill="none" stroke="#6b4f35" stroke-width="12" stroke-linecap="round"/>
+<path d="M80 278 C86 226 114 150 164 108" fill="none" stroke="#ecdfc3" stroke-width="8" stroke-linecap="round"/>
+<ellipse cx="80" cy="279" rx="8" ry="5" fill="#b89b6e" stroke="#6b4f35" stroke-width="1.4"/>
+<circle cx="28.0" cy="247.3" r="10.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="28" y="252.3" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<circle cx="40.0" cy="221.6" r="10.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="40" y="226.6" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<circle cx="63.7" cy="172.5" r="10.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="63.7" y="177.5" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<circle cx="90.7" cy="114.4" r="10.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="90.7" y="119.4" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<circle cx="128.3" cy="90.0" r="10.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="128.3" y="95" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text>
+<circle cx="175.5" cy="98.4" r="10.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="175.5" y="103.4" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">6</text>
+<path d="M316 330 C312 306 302 290 292 280 C282 270 270 270 262 276 C252 284 240 300 230 312 C226 318 230 324 238 324 C252 322 266 316 276 316 C282 322 284 328 286 330z" fill="#8b6a48" stroke="#3f2c1c" stroke-width="1.4"/>
+<path d="M286 330 C286 318 292 306 302 300 C310 308 314 320 316 330z" fill="#5a3f2a"/>
+<path d="M292 282 L316 270 L302 290z" fill="#8b6a48" stroke="#3f2c1c" stroke-width="1.2"/>
+<circle cx="264" cy="288" r="2.6" fill="#1f160e"/><ellipse cx="232" cy="316" rx="4" ry="3" fill="#1f160e"/>
+<path d="M281.2 262.4 Q259.1 261.7 240.6 251.1 L239.6 253.7 Q257.2 266.9 278.0 271.1z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="2" stroke-linejoin="round"/>
+<path d="M285.4 245.8 Q265.7 241.5 251.5 228.4 L250.0 230.7 Q262.7 246.2 280.5 253.6z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="2" stroke-linejoin="round"/>
+<path d="M299.1 204.6 Q282.3 197.1 273.1 182.4 L271.1 184.3 Q278.4 201.0 292.5 211.0z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="2" stroke-linejoin="round"/>
+<path d="M341.6 132.5 Q331.3 119.6 331.2 104.2 L328.5 104.9 Q326.0 121.0 332.7 134.8z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="2" stroke-linejoin="round"/>
+<path d="M278 278 C284 226 312 150 362 108" fill="none" stroke="#6b4f35" stroke-width="12" stroke-linecap="round"/>
+<path d="M278 278 C284 226 312 150 362 108" fill="none" stroke="#ecdfc3" stroke-width="8" stroke-linecap="round"/>
+<ellipse cx="278" cy="279" rx="8" ry="5" fill="#b89b6e" stroke="#6b4f35" stroke-width="1.4"/>
+<circle cx="226.0" cy="247.3" r="10.5" fill="#7d8a6a" stroke="#fffaf0" stroke-width="1.5"/><text x="226" y="252.3" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<circle cx="238.0" cy="221.6" r="10.5" fill="#7d8a6a" stroke="#fffaf0" stroke-width="1.5"/><text x="238" y="226.6" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<circle cx="261.7" cy="172.5" r="10.5" fill="#7d8a6a" stroke="#fffaf0" stroke-width="1.5"/><text x="261.7" y="177.5" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<circle cx="326.3" cy="90.0" r="10.5" fill="#7d8a6a" stroke="#fffaf0" stroke-width="1.5"/><text x="326.3" y="95" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<circle cx="373.5" cy="98.4" r="10.5" fill="#7d8a6a" stroke="#fffaf0" stroke-width="1.5"/><text x="373.5" y="103.4" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text>
+<text x="200" y="358" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Brow (1) and beam tip (6) both count</text>
+<text x="200" y="382" font-size="15" fill="#2f3a2b" text-anchor="middle">Each tine: 2.5 cm or more, longer than wide</text>
+<text x="200" y="406" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">5 one side, 6 the other: legal</text>
+<rect x="8" y="418" width="384" height="56" rx="10" fill="#c0392b"/>
+<text x="200" y="441" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Can&#x27;t count every tine clearly?</text>
+<text x="200" y="463" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Not a 6 point. Do not shoot.</text>
 </svg>
