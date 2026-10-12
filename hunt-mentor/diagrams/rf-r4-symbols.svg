@@ -1,54 +1,128 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 534" role="img" aria-label="Chart of Region 4 vehicle closure symbols on a July to June year. Star: Motor Vehicle Closed Area, no motor vehicle at all, year round unless dates are given. The other symbols are Motor Vehicles for Hunting Closed Areas. Snowflake: closed year round. Diamond: closed 1 April to 30 June and 1 September to 28 February. Cross: closed 1 September to 30 June. Triangle: closed 1 April to 30 June and 1 September to 30 November. Four point cross: closed 1 September to 30 November. Snowmobiles for hunting are closed in the entire Kootenay Region 1 April to 30 November." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="534" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Closure symbols: when closed</text>
-<rect x="14.0" y="40" width="31.6" height="436" fill="#dfe6d3" opacity=".55"/>
-<text x="30" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
-<text x="61" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
-<rect x="77.2" y="40" width="30.6" height="436" fill="#dfe6d3" opacity=".55"/>
-<text x="92" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
-<text x="124" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
-<rect x="139.4" y="40" width="30.6" height="436" fill="#dfe6d3" opacity=".55"/>
-<text x="155" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
-<text x="186" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
-<rect x="201.5" y="40" width="31.6" height="436" fill="#dfe6d3" opacity=".55"/>
-<text x="217" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
-<text x="247" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
-<rect x="261.7" y="40" width="31.6" height="436" fill="#dfe6d3" opacity=".55"/>
-<text x="277" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
-<text x="309" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
-<rect x="323.8" y="40" width="31.6" height="436" fill="#dfe6d3" opacity=".55"/>
-<text x="340" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
-<text x="371" y="54" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
-<text x="14" y="76" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">★ Motor Vehicle Closed Area</text>
-<rect x="14.0" y="82" width="372.0" height="20" rx="4" fill="#4a7fb0"/>
-<text x="200" y="97" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">All year unless dated</text>
-<text x="14" y="122" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">❄ Hunting use closed</text>
-<rect x="14.0" y="128" width="372.0" height="20" rx="4" fill="#c92a2a"/>
-<text x="200" y="143" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Year round</text>
-<text x="14" y="168" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">◆ Hunting use closed</text>
-<rect x="293.3" y="174" width="92.7" height="20" rx="4" fill="#c92a2a"/>
-<text x="289" y="189" font-size="14" fill="#23261f" text-anchor="end" font-weight="bold">Apr 1 to June 30</text>
-<text x="14" y="214" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">◆ Hunting use closed</text>
-<rect x="77.2" y="220" width="184.5" height="20" rx="4" fill="#c92a2a"/>
-<text x="169" y="235" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Sept 1 to Feb 28</text>
-<text x="14" y="260" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">✖ Hunting use closed</text>
-<rect x="77.2" y="266" width="308.8" height="20" rx="4" fill="#c92a2a"/>
-<text x="232" y="281" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Sept 1 to June 30</text>
-<text x="14" y="306" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">▲ Hunting use closed</text>
-<rect x="293.3" y="312" width="92.7" height="20" rx="4" fill="#c92a2a"/>
-<text x="289" y="327" font-size="14" fill="#23261f" text-anchor="end" font-weight="bold">Apr 1 to June 30</text>
-<text x="14" y="352" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">▲ Hunting use closed</text>
-<rect x="77.2" y="358" width="92.7" height="20" rx="4" fill="#c92a2a"/>
-<text x="174" y="373" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Nov 30</text>
-<text x="14" y="398" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">✢ Hunting use closed</text>
-<rect x="77.2" y="404" width="92.7" height="20" rx="4" fill="#c92a2a"/>
-<text x="174" y="419" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Nov 30</text>
-<text x="14" y="444" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Snowmobiles for hunting, whole region</text>
-<rect x="293.3" y="450" width="92.7" height="20" rx="4" fill="#c92a2a"/>
-<rect x="14.0" y="450" width="155.9" height="20" rx="4" fill="#c92a2a"/>
-<text x="92" y="465" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Apr 1 to Nov 30</text>
-<rect x="14" y="486" width="14" height="14" rx="3" fill="#4a7fb0"/>
-<text x="32" y="498" font-size="14" fill="#23261f" text-anchor="start">No motor vehicle at all</text>
-<rect x="14" y="508" width="14" height="14" rx="3" fill="#c92a2a"/>
-<text x="32" y="520" font-size="14" fill="#23261f" text-anchor="start">No vehicle to hunt, haul game, gear or hunters</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 551" font-family="sans-serif" role="img" aria-label="Closed periods for the Region 4 vehicle closure symbols, on a July to June year. Star: Motor Vehicle Closed Area, no motor vehicle at all, all year unless dates are given. The other symbols close motor vehicles for hunting use. Snowflake: all year. Diamond: 1 April to 30 June and 1 September to 28 February. Cross: 1 September to 30 June. Triangle: 1 April to 30 June and 1 September to 30 November. Four point cross: 1 September to 30 November. Snowmobiles for hunting are closed in the whole region 1 April to 30 November.">
+<rect width="400" height="551" fill="#fffaf0"/>
+<text x="29.8" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="61.4" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="92.5" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">S</text>
+<text x="123.6" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">O</text>
+<text x="154.6" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">N</text>
+<text x="185.7" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">D</text>
+<text x="217.3" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="247.4" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">F</text>
+<text x="277.5" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="308.5" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="339.6" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="370.7" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="14" y="50" font-size="16" font-weight="bold" fill="#2f3a2b">★ Motor Vehicle Closed Area</text>
+<text x="14" y="70" font-size="15" font-weight="bold" fill="#2c5d86">All year unless dated</text>
+<rect x="14.0" y="78" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="78" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="78" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="78" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="78" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="78" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="78" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="78" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="78" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="78" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="78" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="78" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="14.0" y="79" width="372.0" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="124" font-size="16" font-weight="bold" fill="#2f3a2b">❄ Hunting use closed</text>
+<text x="386" y="124" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="end">All year</text>
+<rect x="14.0" y="132" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="132" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="132" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="132" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="132" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="132" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="132" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="132" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="132" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="132" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="132" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="132" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="14.0" y="133" width="372.0" height="14" rx="3" fill="#c92a2a"/>
+<text x="14" y="178" font-size="16" font-weight="bold" fill="#2f3a2b">◆ Hunting use closed</text>
+<text x="14" y="198" font-size="15" font-weight="bold" fill="#c92a2a">Apr 1 to June 30, Sept 1 to Feb 28</text>
+<rect x="14.0" y="206" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="206" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="206" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="206" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="206" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="206" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="206" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="206" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="206" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="206" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="206" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="206" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="293.3" y="207" width="92.7" height="14" rx="3" fill="#c92a2a"/>
+<rect x="77.2" y="207" width="184.5" height="14" rx="3" fill="#c92a2a"/>
+<text x="14" y="252" font-size="16" font-weight="bold" fill="#2f3a2b">✖ Hunting use closed</text>
+<text x="386" y="252" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="end">Sept 1 to June 30</text>
+<rect x="14.0" y="260" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="260" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="260" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="260" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="260" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="260" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="260" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="260" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="260" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="260" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="260" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="260" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="261" width="308.8" height="14" rx="3" fill="#c92a2a"/>
+<text x="14" y="306" font-size="16" font-weight="bold" fill="#2f3a2b">▲ Hunting use closed</text>
+<text x="14" y="326" font-size="15" font-weight="bold" fill="#c92a2a">Apr 1 to June 30, Sept 1 to Nov 30</text>
+<rect x="14.0" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="334" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="334" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="334" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="334" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="334" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="334" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="334" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="334" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="293.3" y="335" width="92.7" height="14" rx="3" fill="#c92a2a"/>
+<rect x="77.2" y="335" width="92.7" height="14" rx="3" fill="#c92a2a"/>
+<text x="14" y="380" font-size="16" font-weight="bold" fill="#2f3a2b">✢ Hunting use closed</text>
+<text x="386" y="380" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="end">Sept 1 to Nov 30</text>
+<rect x="14.0" y="388" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="388" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="388" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="388" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="388" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="388" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="388" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="388" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="388" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="388" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="388" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="388" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="389" width="92.7" height="14" rx="3" fill="#c92a2a"/>
+<text x="14" y="434" font-size="16" font-weight="bold" fill="#2f3a2b">Snowmobiles for hunting</text>
+<text x="386" y="434" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="end">Apr 1 to Nov 30</text>
+<text x="14" y="454" font-size="14" fill="#6b5b4b">Whole region</text>
+<rect x="14.0" y="461" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="461" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="461" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="461" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="461" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="461" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="461" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="461" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="461" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="461" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="461" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="461" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="293.3" y="462" width="92.7" height="14" rx="3" fill="#c92a2a"/>
+<rect x="14.0" y="462" width="155.9" height="14" rx="3" fill="#c92a2a"/>
+<rect x="14" y="496" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="34" y="508" font-size="14" fill="#2f3a2b">No motor vehicle at all</text>
+<rect x="14" y="520" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="34" y="532" font-size="14" fill="#2f3a2b">No vehicle to hunt, haul game, gear or hunters</text>
 </svg>

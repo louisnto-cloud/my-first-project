@@ -1,14 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" font-family="sans-serif" role="img" aria-label="Region 3 general deer seasons, MUs 3-12 to 3-20 and 3-26 to 3-44, synopsis page 34. Mule deer: 4 point bucks 10 to 30 September, any buck 1 to 31 October, 4 point bucks 1 November to 10 December. White tailed deer: bucks 10 September to 10 December, antlerless 10 to 31 October, bow only either sex 11 to 20 December.">
-  <rect width="400" height="320" fill="#fffaf0"/>
-  <g fill="#dfe6d3"><rect x="90" y="30" width="75" height="230"/><rect x="240" y="30" width="75" height="230"/></g>
-  <g font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="127" y="24">Sep</text><text x="202" y="24">Oct</text><text x="277" y="24">Nov</text><text x="352" y="24">Dec</text></g>
-  <text x="8" y="56" font-size="15" font-weight="bold" fill="#8b5a2b">Mule deer</text>
-  <rect x="112" y="64" width="53" height="24" rx="4" fill="#8b5a2b"/><rect x="165" y="64" width="75" height="24" rx="4" fill="#e8590c"/><rect x="240" y="64" width="99" height="24" rx="4" fill="#8b5a2b"/>
-  <g font-size="14" font-weight="bold" fill="#fff" text-anchor="middle"><text x="138" y="81">4 pt</text><text x="202" y="81">any buck</text><text x="290" y="81">4 pt</text></g>
-  <text x="8" y="130" font-size="15" font-weight="bold" fill="#6b4f35">White tail</text>
-  <rect x="112" y="138" width="227" height="24" rx="4" fill="#8a9a6b"/><text x="225" y="155" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">bucks, Sep 10 to Dec 10</text>
-  <rect x="187" y="170" width="53" height="24" rx="4" fill="#4a7fb0"/><text x="182" y="187" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="end">antlerless</text>
-  <rect x="339" y="202" width="25" height="24" rx="4" fill="#2f3a2b"/><text x="334" y="219" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">bow only, either sex</text>
-  <text x="200" y="282" font-size="14" fill="#2f3a2b" text-anchor="middle">MU 3-27 and 3-28 included, page 34 (99%)</text>
-  <text x="200" y="302" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Antlerless mule deer: LEH draw only</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 376" font-family="sans-serif" role="img" aria-label="Region 3 general deer seasons, MUs 3-12 to 3-20 and 3-26 to 3-44, synopsis page 34, MU 3-27 and 3-28 included (99%). Timeline September to December. Mule deer: 4 point bucks 10 to 30 September, any buck 1 to 31 October, 4 point bucks 1 November to 10 December. White tailed deer: bucks 10 September to 10 December, antlerless 10 to 31 October, bow only either sex 11 to 20 December. Antlerless mule deer: LEH draw only.">
+<rect width="400" height="376" fill="#fffaf0"/>
+<text x="59.7" y="18" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sep</text>
+<text x="152.7" y="18" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Oct</text>
+<text x="245.7" y="18" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Nov</text>
+<text x="338.7" y="18" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dec</text>
+<text x="14" y="46" font-size="17" font-weight="bold" fill="#8b5a2b">Mule deer</text>
+<text x="386" y="46" font-size="14" fill="#6b5b4b" text-anchor="end">4 pt: 4 point bucks</text>
+<rect x="14.0" y="54" width="91.5" height="28" fill="#efe8d6"/><rect x="105.5" y="54" width="94.5" height="28" fill="#f8f3e6"/><rect x="200.0" y="54" width="91.5" height="28" fill="#efe8d6"/><rect x="291.5" y="54" width="94.5" height="28" fill="#f8f3e6"/>
+<rect x="41.4" y="56" width="64.0" height="24" rx="4" fill="#8b5a2b"/><text x="73.5" y="73" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4 pt</text>
+<rect x="105.5" y="56" width="94.5" height="24" rx="4" fill="#e8590c"/><text x="152.7" y="73" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">any buck</text>
+<rect x="200.0" y="56" width="122.0" height="24" rx="4" fill="#8b5a2b"/><text x="261" y="73" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4 pt</text>
+<text x="14" y="102" font-size="14" fill="#e8590c">10 to 30 Sep</text>
+<text x="152.7" y="102" font-size="14" fill="#e8590c" text-anchor="middle">1 to 31 Oct</text>
+<text x="261" y="102" font-size="14" fill="#e8590c" text-anchor="middle">1 Nov to 10 Dec</text>
+<line x1="14" y1="120" x2="386" y2="120" stroke="#d8ccb4"/>
+<text x="14" y="144" font-size="17" font-weight="bold" fill="#5e6e46">White tailed deer</text>
+<text x="14" y="166" font-size="15" font-weight="bold" fill="#2f3a2b">bucks</text>
+<text x="386" y="166" font-size="14" fill="#e8590c" text-anchor="end">10 Sep to 10 Dec</text>
+<rect x="14.0" y="172" width="91.5" height="22" fill="#efe8d6"/><rect x="105.5" y="172" width="94.5" height="22" fill="#f8f3e6"/><rect x="200.0" y="172" width="91.5" height="22" fill="#efe8d6"/><rect x="291.5" y="172" width="94.5" height="22" fill="#f8f3e6"/>
+<rect x="41.4" y="174" width="280.5" height="18" rx="4" fill="#8a9a6b"/>
+<text x="14" y="220" font-size="15" font-weight="bold" fill="#2f3a2b">antlerless</text>
+<text x="386" y="220" font-size="14" fill="#e8590c" text-anchor="end">10 to 31 Oct</text>
+<rect x="14.0" y="226" width="91.5" height="22" fill="#efe8d6"/><rect x="105.5" y="226" width="94.5" height="22" fill="#f8f3e6"/><rect x="200.0" y="226" width="91.5" height="22" fill="#efe8d6"/><rect x="291.5" y="226" width="94.5" height="22" fill="#f8f3e6"/>
+<rect x="132.9" y="228" width="67.1" height="18" rx="4" fill="#4a7fb0"/>
+<text x="14" y="274" font-size="15" font-weight="bold" fill="#2f3a2b">bow only, either sex</text>
+<text x="386" y="274" font-size="14" fill="#e8590c" text-anchor="end">11 to 20 Dec</text>
+<rect x="14.0" y="280" width="91.5" height="22" fill="#efe8d6"/><rect x="105.5" y="280" width="94.5" height="22" fill="#f8f3e6"/><rect x="200.0" y="280" width="91.5" height="22" fill="#efe8d6"/><rect x="291.5" y="280" width="94.5" height="22" fill="#f8f3e6"/>
+<rect x="322.0" y="282" width="30.5" height="18" rx="4" fill="#2f3a2b"/>
+<text x="200" y="322" font-size="14" fill="#6b5b4b" text-anchor="middle">MU 3-27 and 3-28 included, page 34 (99%)</text>
+<rect x="8" y="334" width="384" height="34" rx="8" fill="#f6e7e2" stroke="#c0392b" stroke-width="1.4"/>
+<text x="200" y="357" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Antlerless mule deer: LEH draw only</text>
 </svg>

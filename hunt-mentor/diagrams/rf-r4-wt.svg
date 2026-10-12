@@ -1,55 +1,147 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 508" role="img" aria-label="Bar chart of Region 4 white tailed deer seasons. Bucks in all Management Units: 10 September to 30 November. Antlerless in 4-28 to 4-31, 4-38 and 4-39: 10 to 31 October. Antlerless in 4-1 to 4-6, 4-20 to 4-26, 4-34 to 4-37 and 4-40: 21 to 31 October. Either sex, Cranbrook Deer Hunt, Map D27: 5 to 31 January. Youth only: either sex 1 to 30 November, bucks 1 to 9 September. Bow only: bucks 1 to 9 September, either sex 1 to 20 December." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="508" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">White tailed deer seasons</text>
-<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">All MUs: 4-1 to 4-9, 4-14 to 4-40</text>
-<rect x="14.0" y="60" width="31.6" height="390" fill="#dfe6d3" opacity=".55"/>
-<text x="30" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
-<text x="61" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
-<rect x="77.2" y="60" width="30.6" height="390" fill="#dfe6d3" opacity=".55"/>
-<text x="92" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
-<text x="124" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
-<rect x="139.4" y="60" width="30.6" height="390" fill="#dfe6d3" opacity=".55"/>
-<text x="155" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
-<text x="186" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
-<rect x="201.5" y="60" width="31.6" height="390" fill="#dfe6d3" opacity=".55"/>
-<text x="217" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
-<text x="247" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
-<rect x="261.7" y="60" width="31.6" height="390" fill="#dfe6d3" opacity=".55"/>
-<text x="277" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
-<text x="309" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
-<rect x="323.8" y="60" width="31.6" height="390" fill="#dfe6d3" opacity=".55"/>
-<text x="340" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
-<text x="371" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
-<text x="14" y="96" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, all MUs</text>
-<rect x="86.4" y="102" width="83.6" height="20" rx="4" fill="#e8590c"/>
-<text x="174" y="117" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 10 to Nov 30</text>
-<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Antlerless, 4-28 to 4-31, 4-38, 4-39</text>
-<rect x="116.9" y="148" width="22.4" height="20" rx="4" fill="#e8590c"/>
-<text x="143" y="163" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 10 to Oct 31</text>
-<text x="14" y="188" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Antlerless, south and east MUs (More)</text>
-<rect x="128.1" y="194" width="11.2" height="20" rx="4" fill="#e8590c"/>
-<text x="143" y="209" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Oct 21 to Oct 31</text>
-<text x="14" y="234" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Either sex, Cranbrook Deer Hunt, Map D27</text>
-<rect x="205.6" y="240" width="27.5" height="20" rx="4" fill="#6a4c93"/>
-<text x="237" y="255" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Jan 5 to Jan 31</text>
-<text x="14" y="280" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Either sex, youth only, all MUs</text>
-<rect x="139.4" y="286" width="30.6" height="20" rx="4" fill="#4a7fb0"/>
-<text x="174" y="301" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Nov 1 to Nov 30</text>
-<text x="14" y="326" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, youth only, all MUs</text>
-<rect x="77.2" y="332" width="9.2" height="20" rx="4" fill="#4a7fb0"/>
-<text x="90" y="347" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 9</text>
-<text x="14" y="372" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bucks, bow only, all MUs</text>
-<rect x="77.2" y="378" width="9.2" height="20" rx="4" fill="#8b5a2b"/>
-<text x="90" y="393" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 9</text>
-<text x="14" y="418" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Either sex, bow only, all MUs</text>
-<rect x="169.9" y="424" width="20.4" height="20" rx="4" fill="#8b5a2b"/>
-<text x="194" y="439" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Dec 1 to Dec 20</text>
-<rect x="14" y="460" width="14" height="14" rx="3" fill="#e8590c"/>
-<text x="32" y="472" font-size="14" fill="#23261f" text-anchor="start">General season</text>
-<rect x="149.60000000000002" y="460" width="14" height="14" rx="3" fill="#6a4c93"/>
-<text x="168" y="472" font-size="14" fill="#23261f" text-anchor="start">Cranbrook Deer Hunt (new)</text>
-<rect x="14" y="482" width="14" height="14" rx="3" fill="#4a7fb0"/>
-<text x="32" y="494" font-size="14" fill="#23261f" text-anchor="start">Youth only (under 18)</text>
-<rect x="201.4" y="482" width="14" height="14" rx="3" fill="#8b5a2b"/>
-<text x="219" y="494" font-size="14" fill="#23261f" text-anchor="start">Bow only</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 605" font-family="sans-serif" role="img" aria-label="Season bars for Region 4 white tailed deer, July to June. All units are 4-1 to 4-9 and 4-14 to 4-40. Bucks in all units: 10 September to 30 November. Antlerless in 4-28 to 4-31, 4-38 and 4-39: 10 to 31 October. Antlerless in the south and east units: 21 to 31 October. Either sex, Cranbrook Deer Hunt, Map D27, new: 5 to 31 January. Youth only, under 18: either sex 1 to 30 November, bucks 1 to 9 September. Bow only: bucks 1 to 9 September, either sex 1 to 20 December.">
+<rect width="400" height="605" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">All MUs unless listed: 4-1 to 4-9, 4-14 to 4-40</text>
+<text x="29.8" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="61.4" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="92.5" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">S</text>
+<text x="123.6" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">O</text>
+<text x="154.6" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">N</text>
+<text x="185.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">D</text>
+<text x="217.3" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="247.4" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">F</text>
+<text x="277.5" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="308.5" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="339.6" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="370.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">Bucks</text>
+<text x="386" y="72" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 10 to Nov 30</text>
+<rect x="14.0" y="80" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="80" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="80" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="80" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="80" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="80" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="80" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="80" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="80" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="80" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="80" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="80" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="86.4" y="81" width="83.6" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="126" font-size="16" font-weight="bold" fill="#2f3a2b">Antlerless</text>
+<text x="386" y="126" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Oct 10 to 31</text>
+<text x="14" y="146" font-size="14" fill="#6b5b4b">4-28 to 4-31, 4-38, 4-39</text>
+<rect x="14.0" y="153" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="153" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="153" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="153" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="153" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="153" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="153" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="153" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="153" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="153" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="153" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="153" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="116.9" y="154" width="22.4" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="199" font-size="16" font-weight="bold" fill="#2f3a2b">Antlerless</text>
+<text x="386" y="199" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Oct 21 to 31</text>
+<text x="14" y="219" font-size="14" fill="#6b5b4b">South and east MUs (More)</text>
+<rect x="14.0" y="226" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="226" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="226" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="226" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="226" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="226" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="226" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="226" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="226" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="226" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="226" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="226" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="128.1" y="227" width="11.2" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="272" font-size="16" font-weight="bold" fill="#2f3a2b">Either sex</text>
+<text x="386" y="272" font-size="15" font-weight="bold" fill="#6a4c93" text-anchor="end">Jan 5 to 31</text>
+<text x="14" y="292" font-size="14" fill="#6b5b4b">Cranbrook Deer Hunt, Map D27</text>
+<rect x="14.0" y="299" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="299" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="299" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="299" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="299" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="299" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="299" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="299" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="299" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="299" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="299" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="299" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="205.6" y="300" width="27.5" height="14" rx="3" fill="#6a4c93"/>
+<text x="14" y="345" font-size="16" font-weight="bold" fill="#2f3a2b">Youth: either sex</text>
+<text x="386" y="345" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">Nov 1 to 30</text>
+<rect x="14.0" y="353" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="353" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="353" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="353" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="353" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="353" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="353" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="353" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="353" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="353" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="353" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="353" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="354" width="30.6" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="399" font-size="16" font-weight="bold" fill="#2f3a2b">Youth: bucks</text>
+<text x="386" y="399" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">Sept 1 to 9</text>
+<rect x="14.0" y="407" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="407" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="407" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="407" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="407" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="407" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="407" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="407" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="407" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="407" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="407" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="407" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="408" width="9.2" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="453" font-size="16" font-weight="bold" fill="#2f3a2b">Bow: bucks</text>
+<text x="386" y="453" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Sept 1 to 9</text>
+<rect x="14.0" y="461" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="461" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="461" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="461" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="461" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="461" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="461" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="461" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="461" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="461" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="461" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="461" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="462" width="9.2" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="507" font-size="16" font-weight="bold" fill="#2f3a2b">Bow: either sex</text>
+<text x="386" y="507" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Dec 1 to 20</text>
+<rect x="14.0" y="515" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="515" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="515" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="515" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="515" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="515" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="515" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="515" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="515" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="515" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="515" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="515" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="169.9" y="516" width="20.4" height="14" rx="3" fill="#8b5a2b"/>
+<rect x="14" y="550" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="34" y="562" font-size="14" fill="#2f3a2b">General season</text>
+<rect x="151.12" y="550" width="14" height="14" rx="3" fill="#6a4c93"/>
+<text x="171.12" y="562" font-size="14" fill="#2f3a2b">Cranbrook Deer Hunt (new)</text>
+<rect x="14" y="574" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="34" y="586" font-size="14" fill="#2f3a2b">Youth only (under 18)</text>
+<rect x="192.0" y="574" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="212" y="586" font-size="14" fill="#2f3a2b">Bow only</text>
 </svg>

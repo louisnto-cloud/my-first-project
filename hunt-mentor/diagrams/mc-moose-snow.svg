@@ -1,4 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 298" font-family="sans-serif" role="img" aria-label="Snow layers beside a moose and a deer. Moose move easily in snow up to 40 centimetres, with only slight difficulty at 40 to 70 centimetres, and often winter where snow is 50 centimetres or more. Deer have trouble past about 30 centimetres.">
-<rect x="0" y="0" width="400" height="298" fill="#fffaf0"/>
-<text x="200" y="24" font-size="17" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Long legs, deep snow</text><rect x="20" y="210" width="360" height="40" fill="#eef3f8"/><rect x="20" y="160" width="360" height="50" fill="#dde8f2"/><rect x="20" y="110" width="360" height="50" fill="#c9daea"/><g transform="translate(105 192) scale(0.95)"><rect x="-36" y="4" width="8" height="52" rx="4" fill="#9c8a76" stroke="#23261f" stroke-width="1.5"/><rect x="-26" y="4" width="8" height="52" rx="4" fill="#9c8a76" stroke="#23261f" stroke-width="1.5"/><rect x="26" y="4" width="8" height="52" rx="4" fill="#9c8a76" stroke="#23261f" stroke-width="1.5"/><rect x="36" y="4" width="8" height="52" rx="4" fill="#9c8a76" stroke="#23261f" stroke-width="1.5"/><path d="M-46 0 Q-48 -26 -20 -26 Q10 -40 34 -34 Q48 -26 44 2 Q20 22 -30 18 Q-48 16 -46 0 Z" fill="#3b2a1c" stroke="#23261f" stroke-width="2"/><path d="M30 -30 L56 -40 L66 -26 L40 0 Z" fill="#3b2a1c" stroke="#23261f" stroke-width="2" stroke-linejoin="round"/><path d="M56 -44 L86 -30 Q92 -22 84 -18 L64 -20 Q54 -26 56 -44 Z" fill="#3b2a1c" stroke="#23261f" stroke-width="2" stroke-linejoin="round"/><path d="M66 -22 Q66 -6 60 -4 Q58 -12 62 -22 Z" fill="#3b2a1c" stroke="#23261f" stroke-width="2"/><ellipse cx="54" cy="-50" rx="8" ry="3.5" transform="rotate(-30 54 -50)" fill="#3b2a1c" stroke="#23261f" stroke-width="2"/><circle cx="70" cy="-34" r="1.8" fill="#eeeeee"/></g><text x="390" y="246" font-size="14" fill="#23261f" text-anchor="end" font-weight="bold">to 40 cm: easy</text><text x="390" y="196" font-size="14" fill="#23261f" text-anchor="end" font-weight="bold">40 to 70 cm: slight trouble</text><text x="390" y="146" font-size="14" fill="#23261f" text-anchor="end" font-weight="bold">often winters in 50 cm plus</text><text x="200" y="272" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Long legs: moose own deep snow</text><text x="200" y="290" font-size="14" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Deer: trouble past about 30 cm</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 398" font-family="sans-serif" role="img" aria-label="A cow moose and a mule deer side by side, drawn at a rough common scale, standing in layered snow with depth marks. Moose move easily in snow up to 40 centimetres, with only slight trouble at 40 to 70 centimetres, and often winter where snow is 50 centimetres or more. Deer have trouble past about 30 centimetres.">
+<rect width="400" height="398" fill="#fffaf0"/>
+<defs><clipPath id="mc-moose-snow-c"><rect x="8" y="40" width="384" height="236" rx="8"/></clipPath></defs>
+<text x="14" y="26" font-size="17" font-weight="bold" fill="#2f3a2b">Long legs: moose own deep snow</text>
+<g clip-path="url(#mc-moose-snow-c)">
+<rect x="8" y="40" width="384" height="236" fill="#e7edf2"/>
+<rect x="8" y="262" width="384" height="14" fill="#b9c6cf"/>
+<path d="M139.0 158.0 L141.0 204.0 L151.0 204.0 L157.0 158.0z" fill="#2a1e15"/><path d="M141.0 204.0 L138.8 258.0 L135.5 262.0 L146.5 262.0 L147.2 258.0 L151.0 204.0z" fill="#6f675c"/>
+<path d="M235.0 154.0 L253.0 206.0 L263.0 206.0 L253.0 154.0z" fill="#2a1e15"/><path d="M253.0 206.0 L245.8 258.0 L242.5 262.0 L253.5 262.0 L254.2 258.0 L263.0 206.0z" fill="#6f675c"/>
+<path d="M120 102.0 C122 86.0 132 74.0 150 71.0 C166 69.0 178 78.0 196 84.0 C226 88.0 252 90.0 266 98.0 C276 106.0 276 130.0 270 146.0 C262 156.0 252 158.0 240 156.0 C210 159.0 180 162.0 154 164.0 C136 164.0 124 154.0 120 138.0z" fill="#3b2a1e"/>
+<path d="M126 86.0 C116 86.0 104 90.0 96 94.0 C84 96.0 70 102.0 56 110.0 C46 115.0 38 119.0 34 126.0 C30 133.0 32 140.0 40 142.0 C46 144.0 52 140.0 56 136.0 C66 132.0 80 130.0 92 126.0 C104 124.0 114 132.0 122 138.0 L126 112.0z" fill="#3b2a1e"/>
+<path d="M100 124.0 C96 134.0 96 148.0 100 156.0 C106 148.0 108 136.0 108 126.0z" fill="#3b2a1e"/>
+<path d="M98 94.0 L112 66.0 L118 68.0 L108 96.0z" fill="#3b2a1e"/>
+<path d="M34 128.0 C36 134.0 40 136.0 44 134.0" stroke="#14100c" stroke-width="2" fill="none"/>
+<circle cx="80" cy="106.0" r="2.4" fill="#e8e0d0"/>
+<path d="M268 102.0 l7 9 l-6 2z" fill="#3b2a1e"/>
+<path d="M123.0 158.0 L125.0 206.0 L135.0 206.0 L141.0 158.0z" fill="#3b2a1e"/><path d="M125.0 206.0 L122.8 258.0 L119.5 262.0 L130.5 262.0 L131.2 258.0 L135.0 206.0z" fill="#8f8577"/>
+<path d="M249.0 152.0 L267.0 206.0 L277.0 206.0 L267.0 152.0z" fill="#3b2a1e"/><path d="M267.0 206.0 L259.8 258.0 L256.5 262.0 L267.5 262.0 L268.2 258.0 L277.0 206.0z" fill="#8f8577"/>
+<path d="M296.0 198.0 L301.4 228.0 L295.6 259.0 L294.2 262.0 L299.8 262.0 L300.4 259.0 L306.6 228.0 L304.0 198.0z" fill="#6e5236"/>
+<path d="M342.0 198.0 L341.4 230.0 L343.6 259.0 L344.2 262.0 L349.8 262.0 L348.4 259.0 L346.6 230.0 L350.0 198.0z" fill="#6e5236"/>
+<path d="M292 184.0 C292 170.0 302 164.0 316 165.0 L346 164.0 C356 164.0 362 168.0 364 176.0 C364 190.0 358 200.0 346 200.0 L308 200.0 C298 200.0 292 194.0 292 184.0z" fill="#8a6a4a"/>
+<path d="M350 168.0 C354 156.0 358 146.0 362 140.0 L372 144.0 C368 154.0 366 166.0 364 178.0z" fill="#8a6a4a"/>
+<path d="M360 136.0 C366 132.0 374 134.0 386 146.0 C388 150.0 384 152.0 380 150.0 L370 146.0 C364 146.0 360 142.0 360 136.0z" fill="#8a6a4a"/>
+<ellipse cx="358" cy="128.0" rx="5" ry="11" transform="rotate(-35 358 128.0)" fill="#8a6a4a"/>
+<circle cx="372" cy="140.0" r="1.6" fill="#1e1610"/>
+<path d="M293 172.0 C287 176.0 286 184.0 290 188.0 L294 182.0z" fill="#f2ead8"/><path d="M290 188.0 l-2 -3" stroke="#1e1610" stroke-width="3" stroke-linecap="round"/>
+<path d="M302.0 198.0 L306.4 228.0 L301.6 259.0 L300.2 262.0 L305.8 262.0 L306.4 259.0 L311.6 228.0 L310.0 198.0z" fill="#9c7c5a"/>
+<path d="M350.0 196.0 L349.4 230.0 L352.6 259.0 L353.2 262.0 L358.8 262.0 L357.4 259.0 L354.6 230.0 L358.0 196.0z" fill="#9c7c5a"/>
+<rect x="8" y="222.0" width="384" height="40.0" fill="#ffffff" opacity=".55"/>
+<rect x="8" y="192.0" width="384" height="30.0" fill="#9fc0dc" opacity=".45"/>
+<line x1="8" y1="192.0" x2="392" y2="192.0" stroke="#6f93b3" stroke-width="1.2"/>
+<line x1="8" y1="222.0" x2="392" y2="222.0" stroke="#6f93b3" stroke-width="1.2"/>
+<line x1="110" y1="212.0" x2="278" y2="212.0" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="7 4"/>
+<line x1="286" y1="232.0" x2="366" y2="232.0" stroke="#e8590c" stroke-width="2.4" stroke-dasharray="7 4"/>
+</g>
+<rect x="8" y="40" width="384" height="236" rx="8" fill="none" stroke="#6b5b4b" stroke-width="1.5"/>
+<text x="14" y="188" font-size="14" font-weight="bold" fill="#2c5d86" stroke="#e7edf2" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">70 cm</text>
+<text x="14" y="218" font-size="14" font-weight="bold" fill="#2c5d86" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">40 cm</text>
+<text x="282" y="217" font-size="14" font-weight="bold" fill="#2f3a2b" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">50</text>
+<text x="372" y="237" font-size="14" font-weight="bold" fill="#c2410c" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">30</text>
+<text x="214" y="72" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#e7edf2" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">moose</text>
+<text x="318" y="144" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#e7edf2" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">deer</text>
+<rect x="14" y="290" width="28" height="16" fill="#f4f7f9" stroke="#6f93b3"/><text x="52" y="303" font-size="16" font-weight="bold" fill="#2f3a2b">To 40 cm: easy</text>
+<rect x="14" y="316" width="28" height="16" fill="#c9dbe9" stroke="#6f93b3"/><text x="52" y="329" font-size="16" font-weight="bold" fill="#2f3a2b">40 to 70 cm: slight trouble</text>
+<line x1="14" y1="350" x2="42" y2="350" stroke="#2f3a2b" stroke-width="2.4" stroke-dasharray="7 4"/><text x="52" y="355" font-size="16" font-weight="bold" fill="#2f3a2b">Moose often winter in 50 cm plus</text>
+<line x1="14" y1="376" x2="42" y2="376" stroke="#e8590c" stroke-width="2.4" stroke-dasharray="7 4"/><text x="52" y="381" font-size="16" font-weight="bold" fill="#8b5a2b">Deer: trouble past about 30 cm</text>
 </svg>

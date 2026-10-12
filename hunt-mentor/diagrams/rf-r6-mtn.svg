@@ -1,50 +1,119 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" role="img" aria-label="Bar chart, Region 6. Full curl thinhorn rams in 6-17, 6-18 to 6-26 and part of 6-27: 1 August to 15 October. Mountain goat in 6-7 and 6-17 to 6-30: 1 August to 15 October. Goat in 6-3, part of 6-9, 6-11 and 6-14 to 6-16: 1 August to 15 November. Goat at Bear Pass in 6-14, Map F22: 1 August to 28 February. Billy goats, bow only, part of 6-8, Map F4: 15 August to 19 October. Black bear in 6-1 to 6-11 and 6-14 to 6-30: 15 August to 30 November and 1 April to 30 June. Caribou: draw only." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="440" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Sheep, goat and bear</text>
-<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">Caribou: Limited Entry Hunting (draw) only</text>
-<rect x="14.0" y="60" width="31.6" height="344" fill="#dfe6d3" opacity=".55"/>
-<text x="30" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
-<text x="61" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
-<rect x="77.2" y="60" width="30.6" height="344" fill="#dfe6d3" opacity=".55"/>
-<text x="92" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
-<text x="124" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
-<rect x="139.4" y="60" width="30.6" height="344" fill="#dfe6d3" opacity=".55"/>
-<text x="155" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
-<text x="186" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
-<rect x="201.5" y="60" width="31.6" height="344" fill="#dfe6d3" opacity=".55"/>
-<text x="217" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
-<text x="247" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
-<rect x="261.7" y="60" width="31.6" height="344" fill="#dfe6d3" opacity=".55"/>
-<text x="277" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
-<text x="309" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
-<rect x="323.8" y="60" width="31.6" height="344" fill="#dfe6d3" opacity=".55"/>
-<text x="340" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
-<text x="371" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
-<text x="14" y="96" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Full curl thinhorn rams, 6-17 to 6-27</text>
-<rect x="45.6" y="102" width="77.5" height="20" rx="4" fill="#e8590c"/>
-<text x="127" y="117" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Aug 1 to Oct 15</text>
-<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Goat, 6-7, 6-17 to 6-30</text>
-<rect x="45.6" y="148" width="77.5" height="20" rx="4" fill="#e8590c"/>
-<text x="127" y="163" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Aug 1 to Oct 15</text>
-<text x="14" y="188" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Goat, 6-3, 6-9, 6-11, 6-14 to 6-16</text>
-<rect x="45.6" y="194" width="109.1" height="20" rx="4" fill="#e8590c"/>
-<text x="159" y="209" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Aug 1 to Nov 15</text>
-<text x="14" y="234" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Goat, Bear Pass, 6-14, Map F22</text>
-<rect x="45.6" y="240" width="216.1" height="20" rx="4" fill="#6a4c93"/>
-<text x="154" y="255" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Aug 1 to Feb 28</text>
-<text x="14" y="280" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Goat, billy only, part of 6-8, Map F4</text>
-<rect x="59.9" y="286" width="67.3" height="20" rx="4" fill="#8b5a2b"/>
-<text x="131" y="301" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Aug 15 to Oct 19</text>
-<text x="14" y="326" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Black bear, 6-1 to 6-11, 6-14 to 6-30</text>
-<rect x="59.9" y="332" width="110.1" height="20" rx="4" fill="#e8590c"/>
-<text x="174" y="347" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Aug 15 to Nov 30</text>
-<text x="14" y="372" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Black bear, spring</text>
-<rect x="293.3" y="378" width="92.7" height="20" rx="4" fill="#e8590c"/>
-<text x="289" y="393" font-size="14" fill="#23261f" text-anchor="end" font-weight="bold">Apr 1 to June 30</text>
-<rect x="14" y="414" width="14" height="14" rx="3" fill="#e8590c"/>
-<text x="32" y="426" font-size="14" fill="#23261f" text-anchor="start">General season</text>
-<rect x="149.60000000000002" y="414" width="14" height="14" rx="3" fill="#6a4c93"/>
-<text x="168" y="426" font-size="14" fill="#23261f" text-anchor="start">Map area only</text>
-<rect x="277.8" y="414" width="14" height="14" rx="3" fill="#8b5a2b"/>
-<text x="296" y="426" font-size="14" fill="#23261f" text-anchor="start">Bow only</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 531" font-family="sans-serif" role="img" aria-label="Season bars for Region 6, July to June. Full curl thinhorn rams in 6-17, 6-18 to 6-26 and part of 6-27: 1 August to 15 October. Mountain goat in 6-7 and 6-17 to 6-30: 1 August to 15 October. Goat in 6-3, part of 6-9, 6-11 and 6-14 to 6-16: 1 August to 15 November. Goat at Bear Pass in 6-14, Map F22: 1 August to 28 February. Billy goats, bow only, part of 6-8, Map F4: 15 August to 19 October. Black bear in 6-1 to 6-11 and 6-14 to 6-30: 15 August to 30 November and 1 April to 30 June. Caribou: Limited Entry Hunting (draw) only.">
+<rect width="400" height="531" fill="#fffaf0"/>
+<text x="29.8" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="61.4" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="92.5" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">S</text>
+<text x="123.6" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">O</text>
+<text x="154.6" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">N</text>
+<text x="185.7" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">D</text>
+<text x="217.3" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="247.4" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">F</text>
+<text x="277.5" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="308.5" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="339.6" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="370.7" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="14" y="50" font-size="16" font-weight="bold" fill="#2f3a2b">Full curl thinhorn rams</text>
+<text x="386" y="50" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Aug 1 to Oct 15</text>
+<text x="14" y="70" font-size="14" fill="#6b5b4b">6-17, 6-18 to 6-26, part of 6-27</text>
+<rect x="14.0" y="77" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="77" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="77" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="77" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="77" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="77" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="77" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="77" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="77" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="77" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="77" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="77" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="45.6" y="78" width="77.5" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="123" font-size="16" font-weight="bold" fill="#2f3a2b">Goat</text>
+<text x="386" y="123" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Aug 1 to Oct 15</text>
+<text x="14" y="143" font-size="14" fill="#6b5b4b">6-7, 6-17 to 6-30</text>
+<rect x="14.0" y="150" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="150" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="150" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="150" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="150" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="150" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="150" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="150" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="150" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="150" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="150" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="150" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="45.6" y="151" width="77.5" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="196" font-size="16" font-weight="bold" fill="#2f3a2b">Goat</text>
+<text x="386" y="196" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Aug 1 to Nov 15</text>
+<text x="14" y="216" font-size="14" fill="#6b5b4b">6-3, part of 6-9, 6-11, 6-14 to 6-16</text>
+<rect x="14.0" y="223" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="223" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="223" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="223" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="223" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="223" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="223" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="223" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="223" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="223" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="223" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="223" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="45.6" y="224" width="109.1" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="269" font-size="16" font-weight="bold" fill="#2f3a2b">Goat, Bear Pass</text>
+<text x="386" y="269" font-size="15" font-weight="bold" fill="#6a4c93" text-anchor="end">Aug 1 to Feb 28</text>
+<text x="14" y="289" font-size="14" fill="#6b5b4b">6-14, Map F22</text>
+<rect x="14.0" y="296" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="296" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="296" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="296" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="296" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="296" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="296" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="296" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="296" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="296" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="296" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="296" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="45.6" y="297" width="216.1" height="14" rx="3" fill="#6a4c93"/>
+<text x="14" y="342" font-size="16" font-weight="bold" fill="#2f3a2b">Goat, billy only, bow</text>
+<text x="386" y="342" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Aug 15 to Oct 19</text>
+<text x="14" y="362" font-size="14" fill="#6b5b4b">Part of 6-8, Map F4</text>
+<rect x="14.0" y="369" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="369" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="369" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="369" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="369" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="369" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="369" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="369" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="369" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="369" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="369" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="369" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="59.9" y="370" width="67.3" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="415" font-size="16" font-weight="bold" fill="#2f3a2b">Black bear</text>
+<text x="386" y="415" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Aug 15 to Nov 30, Apr 1 to June 30</text>
+<text x="14" y="435" font-size="14" fill="#6b5b4b">6-1 to 6-11, 6-14 to 6-30</text>
+<rect x="14.0" y="442" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="442" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="442" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="442" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="442" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="442" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="442" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="442" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="442" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="442" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="442" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="442" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="59.9" y="443" width="110.1" height="14" rx="3" fill="#e8590c"/>
+<rect x="293.3" y="443" width="92.7" height="14" rx="3" fill="#e8590c"/>
+<rect x="14" y="477" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="34" y="489" font-size="14" fill="#2f3a2b">General season</text>
+<rect x="151.12" y="477" width="14" height="14" rx="3" fill="#6a4c93"/>
+<text x="171.12" y="489" font-size="14" fill="#2f3a2b">Map area only</text>
+<rect x="280.68" y="477" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="300.68" y="489" font-size="14" fill="#2f3a2b">Bow only</text>
+<text x="14" y="517" font-size="15" font-weight="bold" fill="#2f3a2b">Caribou: Limited Entry Hunting (draw) only</text>
 </svg>

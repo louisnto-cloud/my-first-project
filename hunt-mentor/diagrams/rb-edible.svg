@@ -1,15 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 292" role="img" aria-label="Outline of a big game animal with the edible portions labelled: neck, ribs, loins, front quarters and hind quarters. Big game: the neck, ribs, all four quarters and the loins. Game birds: both breasts. Wolf, lynx, bobcat and wolverine are exempt. They go to your home, a meat cutter or a cold storage plant." font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="292" fill="#fffaf0"/>
-<text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Edible portions: take these out</text>
-<ellipse cx="190" cy="120" rx="110" ry="46" fill="#8b5a2b" opacity=".35"/>
-<path d="M290 98 L330 50 L352 56 L318 112 Z" fill="#8b5a2b" opacity=".35"/>
-<rect x="271.6" y="68" width="36.8" height="24" rx="6" fill="#e8590c" stroke="#e8590c" stroke-width="2"/><text x="290" y="84" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Neck</text>
-<rect x="181.6" y="106" width="36.8" height="24" rx="6" fill="#e8590c" stroke="#e8590c" stroke-width="2"/><text x="200" y="122" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Ribs</text>
-<rect x="167.0" y="70" width="46.0" height="24" rx="6" fill="#e8590c" stroke="#e8590c" stroke-width="2"/><text x="190" y="86" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Loins</text>
-<rect x="203.60000000000002" y="134" width="128.79999999999998" height="24" rx="6" fill="#e8590c" stroke="#e8590c" stroke-width="2"/><text x="268" y="150" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Front quarters</text>
-<rect x="50.2" y="134" width="119.6" height="24" rx="6" fill="#e8590c" stroke="#e8590c" stroke-width="2"/><text x="110" y="150" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Hind quarters</text>
-<text x="14" y="204" font-size="15" fill="#23261f" text-anchor="start">Big game: neck, ribs, all four quarters, loins.</text>
-<text x="14" y="225" font-size="15" fill="#23261f" text-anchor="start">Game birds: both breasts.</text>
-<text x="14" y="246" font-size="15" fill="#23261f" text-anchor="start">Wolf, lynx, bobcat, wolverine: exempt.</text>
-<text x="14" y="267" font-size="15" fill="#23261f" text-anchor="start">To your home, a meat cutter or cold storage.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 598" font-family="sans-serif" role="img" aria-label="A deer, as an example of big game, drawn side on with its edible portions shaded as meat: the neck, the loins along the back, the ribs, the front quarters and the hind quarters, two of each quarter. For big game these must come out of the carcass: neck, ribs, all four quarters and the loins. Game birds: both breasts, shaded on a duck. Wolf, lynx, bobcat and wolverine are exempt. Take the edible portions to your home, a meat cutter or a cold storage plant.">
+<rect width="400" height="598" fill="#fffaf0"/>
+<defs><clipPath id="rb-edible-body"><path d="M62 128 C62 122 70 116 80 112 L98 102 C104 98 112 98 116 104 C128 118 148 138 172 147 C210 143 270 145 316 149 C330 151 338 157 342 166 C344 188 340 208 330 222 L326 246 L330 296 L320 298 L316 250 C312 236 306 226 300 220 C270 228 222 230 196 222 L194 246 L196 296 L186 298 L184 250 C182 238 178 230 170 226 C158 222 150 212 148 198 C140 174 118 150 100 138 C92 136 80 134 70 134 L62 130z"/></clipPath></defs>
+<g transform="translate(0 4)">
+<ellipse cx="250" cy="302" rx="120" ry="7" fill="#d8ccb2"/>
+<!-- far legs -->
+  <path d="M200 216 L212 218 L214 260 L216 298 L206 300 L204 262 L198 236z" fill="#7a5638"/>
+  <path d="M290 212 L314 216 L318 248 L322 296 L312 298 L306 252 L294 230z" fill="#7a5638"/>
+  
+<path d="M62 128 C62 122 70 116 80 112 L98 102 C104 98 112 98 116 104 C128 118 148 138 172 147 C210 143 270 145 316 149 C330 151 338 157 342 166 C344 188 340 208 330 222 L326 246 L330 296 L320 298 L316 250 C312 236 306 226 300 220 C270 228 222 230 196 222 L194 246 L196 296 L186 298 L184 250 C182 238 178 230 170 226 C158 222 150 212 148 198 C140 174 118 150 100 138 C92 136 80 134 70 134 L62 130z" fill="#a87b52" stroke="#5a3e26" stroke-width="1.6" stroke-linejoin="round"/>
+<!-- belly shade, throat and rump patches -->
+  <path d="M200 220 C230 226 270 224 298 216 C290 208 250 214 200 212z" fill="#c9a37a"/>
+  <path d="M104 140 C116 150 128 160 136 172 C126 168 114 158 104 148z" fill="#f3ead8"/>
+  <path d="M336 160 C344 172 344 196 336 208 C332 196 332 176 336 160z" fill="#f3ead8"/>
+  <path d="M340 158 C350 162 352 176 346 186 C342 178 340 168 340 158z" fill="#f3ead8" stroke="#5a3e26" stroke-width="1"/>
+  
+<g clip-path="url(#rb-edible-body)" opacity=".92">
+<path d="M112 104 L174 104 L170 150 L148 200 L136 200 L120 150 L108 130z" fill="#d98a72"/>
+<path d="M148 140 L206 140 L206 236 L186 244 L172 228 L148 210z" fill="#b35a47"/>
+<path d="M206 172 L298 172 L300 222 L206 226z" fill="#c96f5a"/>
+<path d="M170 138 L300 138 L298 172 L206 172 L170 160z" fill="#a24a3a"/>
+<path d="M298 120 L360 120 L360 236 L300 232z" fill="#b35a47"/>
+<g stroke="#fbe9df" stroke-width="2" stroke-dasharray="5 3" fill="none"><path d="M174 106 L170 150 L148 200"/><path d="M206 140 V230"/><path d="M170 160 L206 172 H298"/><path d="M300 120 L299 228"/></g>
+</g>
+<path d="M62 128 C62 122 70 116 80 112 L98 102 C104 98 112 98 116 104 C128 118 148 138 172 147 C210 143 270 145 316 149 C330 151 338 157 342 166 C344 188 340 208 330 222 L326 246 L330 296 L320 298 L316 250 C312 236 306 226 300 220 C270 228 222 230 196 222 L194 246 L196 296 L186 298 L184 250 C182 238 178 230 170 226 C158 222 150 212 148 198 C140 174 118 150 100 138 C92 136 80 134 70 134 L62 130z" fill="none" stroke="#5a3e26" stroke-width="1.6" stroke-linejoin="round"/>
+<!-- ear, eye, nose, antlers -->
+  <path d="M110 102 C116 86 126 76 134 72 C134 86 126 100 116 106z" fill="#a87b52" stroke="#5a3e26" stroke-width="1.4"/>
+  <circle cx="90" cy="114" r="2.6" fill="#2f241a"/>
+  <ellipse cx="64" cy="126" rx="3.4" ry="2.6" fill="#2f241a"/>
+  <path d="M104 100 C102 80 108 62 122 50 M108 76 C98 70 94 60 96 50 M118 54 C122 44 132 40 140 40 M122 50 C118 40 118 32 122 26" fill="none" stroke="#6b4f35" stroke-width="3" stroke-linecap="round"/>
+  
+</g>
+<rect x="170.3" y="82.0" width="51.3" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="196" y="102.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">loins</text>
+<line x1="236" y1="156" x2="200" y2="111" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="236" cy="156" r="2.6" fill="#2f3a2b"/>
+<rect x="244.5" y="82.0" width="145.5" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="317.259" y="102.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">hind quarters (2)</text>
+<line x1="326" y1="192" x2="330" y2="111" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="326" cy="192" r="2.6" fill="#2f3a2b"/>
+<rect x="14.0" y="174.0" width="51.0" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="39.4896" y="194.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">neck</text>
+<line x1="134" y1="162" x2="64.9792" y2="188" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="134" cy="162" r="2.6" fill="#2f3a2b"/>
+<rect x="35.0" y="318.0" width="149.9" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="110" y="338.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">front quarters (2)</text>
+<line x1="176" y1="204" x2="150" y2="318" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="176" cy="204" r="2.6" fill="#2f3a2b"/>
+<rect x="240.3" y="318.0" width="43.4" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="262" y="338.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">ribs</text>
+<line x1="252" y1="208" x2="258" y2="318" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="252" cy="208" r="2.6" fill="#2f3a2b"/>
+<line x1="12" y1="370" x2="388" y2="370" stroke="#d8ccb4"/>
+<g transform="translate(40 406)"><path d="M-28 -2 C-24 -10 -8 -10 6 -8 C14 -7 18 -4 20 0 C22 8 12 13 -2 13 C-16 13 -26 8 -28 -2z" fill="#9a9488" stroke="#4a4436" stroke-width="1.2"/><path d="M-26 -3 L-34 -6 L-30 2z" fill="#3a3a3a"/><path d="M-14 -6 C-6 -9 4 -8 8 -4 C2 -2 -8 -2 -14 -6z" fill="#6b6456"/><path d="M8 -8 C14 -9 20 -4 21 2 C20 8 14 12 6 13 C10 6 10 -2 8 -8z" fill="#c96f5a" stroke="#8e3f2f" stroke-width="1"/><path d="M10 -8 C10 -16 14 -22 20 -22 C26 -22 28 -18 26 -14 C24 -10 20 -8 16 -6z" fill="#2f6e3b" stroke="#1d3a22" stroke-width="1"/><path d="M26 -17 L35 -15 C35 -13 33 -12 26 -13z" fill="#e2b33c"/><circle cx="21" cy="-17" r="1.6" fill="#111"/></g>
+<text x="84" y="412" font-size="16" font-weight="bold" fill="#2f3a2b">Game birds: both breasts</text>
+<circle cx="40" cy="452" r="13" fill="#fffaf0" stroke="#6b5b4b" stroke-width="3.5"/><line x1="30.9" y1="461.1" x2="49.1" y2="442.9" stroke="#6b5b4b" stroke-width="3.5"/>
+<text x="84" y="458" font-size="16" fill="#2f3a2b">Exempt: wolf, lynx, bobcat, wolverine</text>
+<line x1="12" y1="482" x2="388" y2="482" stroke="#d8ccb4"/>
+<text x="200" y="508" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Take them to</text>
+<circle cx="70" cy="544" r="20" fill="#f4eedf" stroke="#c9bb9c"/>
+<g transform="translate(70 545)" fill="#2f3a2b"><path d="M-14 0 L0 -13 L14 0z"/><rect x="-10" y="0" width="20" height="13"/><rect x="-3" y="5" width="6" height="8" fill="#fffaf0"/></g>
+<text x="70" y="586" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">home</text>
+<circle cx="200" cy="544" r="20" fill="#f4eedf" stroke="#c9bb9c"/>
+<g transform="translate(200 545)" fill="#2f3a2b"><path d="M-14 -11 H6 V5 C-2 9 -10 9 -14 5z"/><rect x="6" y="-8" width="12" height="6" rx="2" fill="#8b5a2b"/><circle cx="-9" cy="-6" r="2.2" fill="#fffaf0"/></g>
+<text x="200" y="586" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">meat cutter</text>
+<circle cx="330" cy="544" r="20" fill="#f4eedf" stroke="#c9bb9c"/>
+<g transform="translate(330 545)" fill="#2f3a2b"><g stroke="#2f3a2b" stroke-width="2.6" stroke-linecap="round"><path d="M0 -14 V14 M-12 -7 L12 7 M-12 7 L12 -7"/><path d="M-4 -11 L0 -7 L4 -11 M-4 11 L0 7 L4 11"/></g></g>
+<text x="330" y="586" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">cold storage</text>
 </svg>

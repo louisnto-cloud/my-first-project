@@ -1,4 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Phone sketch of the Hunt Map. The Topo base button in the pill is ringed. Tap it to open the Basemap sheet, where a slider sets the 3D height boost from 1 to 2.5 times. Default 1.5; try 2 to make benches and saddles pop.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Hunt Map: height boost</text><rect x="24" y="40" width="150" height="250" rx="14" fill="#2f3a2b"/><rect x="30" y="48" width="138" height="234" rx="8" fill="#dfe6d3"/><path d="M30 190 C 64 150, 104 170, 168 140" stroke="#8b5a2b" stroke-width="1.4" fill="none"/><path d="M30 210 C 64 172, 104 192, 168 164" stroke="#8b5a2b" stroke-width="1.4" fill="none"/><circle cx="44" cy="62" r="8" fill="#fff" stroke="#2f3a2b" stroke-width="1.2"/><circle cx="64" cy="62" r="8" fill="#fff" stroke="#2f3a2b" stroke-width="1.2"/><circle cx="154" cy="62" r="8" fill="#fff" stroke="#2f3a2b" stroke-width="1.2"/><text x="109" y="66" font-size="10" font-weight="bold" fill="#2f3a2b" text-anchor="middle">HUNT MAP</text><rect x="36" y="76" width="84" height="12" rx="3" fill="#fff"/><text x="78" y="86" font-size="9" font-weight="bold" fill="#2f3a2b" text-anchor="middle">842 m elevation</text><rect x="36" y="100" width="16" height="14" rx="3" fill="#fff" stroke="#2f3a2b" stroke-width="1"/><rect x="36" y="118" width="16" height="14" rx="3" fill="#fff" stroke="#2f3a2b" stroke-width="1"/><rect x="36" y="136" width="16" height="14" rx="3" fill="#fff" stroke="#2f3a2b" stroke-width="1"/><rect x="36" y="154" width="16" height="14" rx="3" fill="#fff" stroke="#2f3a2b" stroke-width="1"/><rect x="36" y="172" width="16" height="14" rx="3" fill="#fff" stroke="#2f3a2b" stroke-width="1"/><rect x="94" y="218" width="62" height="18" rx="9" fill="#fff" stroke="#2f3a2b" stroke-width="1.2"/><text x="111" y="231" font-size="9" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Topo</text><text x="141" y="231" font-size="10" font-weight="bold" fill="#e8590c" text-anchor="middle">3D</text><rect x="36" y="218" width="46" height="18" rx="5" fill="#fff" stroke="#2f3a2b" stroke-width="1.2"/><text x="59" y="231" font-size="9" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Layers</text><rect x="30" y="244" width="138" height="30" fill="#fff"/><text x="44.0" y="264" font-size="7.5" fill="#2f3a2b" text-anchor="middle">Offline</text><text x="71.5" y="264" font-size="7.5" fill="#2f3a2b" text-anchor="middle">Content</text><text x="99.0" y="264" font-size="7.5" fill="#2f3a2b" text-anchor="middle">Tools</text><text x="126.5" y="264" font-size="7.5" fill="#2f3a2b" text-anchor="middle">Insights</text><text x="154.0" y="264" font-size="7.5" fill="#2f3a2b" text-anchor="middle">Track</text><circle cx="111" cy="227" r="18" fill="none" stroke="#e8590c" stroke-width="4"/><text x="196" y="70" font-size="17" font-weight="bold" fill="#e8590c" text-anchor="start">Boost the hills</text><text x="196" y="96" font-size="15" fill="#2f3a2b" text-anchor="start">Tap Topo, then slide</text><text x="196" y="118" font-size="15" fill="#2f3a2b" text-anchor="start">3D height boost.</text><text x="196" y="140" font-size="15" fill="#2f3a2b" text-anchor="start">1 to 2.5 times, default</text><text x="196" y="162" font-size="15" fill="#2f3a2b" text-anchor="start">1.5. Try 2 for benches.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" font-family="sans-serif" role="img" aria-label="Phone sketch of the Hunt Map in 3D. Step 1: the Topo base button in the pill at the bottom right of the map is ringed. Tap it to open the Basemap sheet. Step 2: slide 3D height boost. It runs 1 to 2.5 times, default 1.5; the slider is set to 2, to make benches and saddles pop.">
+<rect width="400" height="400" fill="#fffaf0"/>
+<rect x="14" y="8" width="372" height="330" rx="22" fill="#2f3a2b"/>
+<rect x="24" y="18" width="352" height="150" fill="#e6ead6"/>
+<path d="M24 48 C120 24 220 54 376 28" fill="none" stroke="#b08a5e" stroke-width="1.8" opacity=".7"/>
+<path d="M24 68 C120 44 220 74 376 48" fill="none" stroke="#b08a5e" stroke-width="1" opacity=".7"/>
+<path d="M24 88 C120 64 220 94 376 68" fill="none" stroke="#b08a5e" stroke-width="1" opacity=".7"/>
+<path d="M24 108 C120 84 220 114 376 88" fill="none" stroke="#b08a5e" stroke-width="1.8" opacity=".7"/>
+<path d="M64 18 C84 60 54 100 96 168" fill="none" stroke="#4a7fb0" stroke-width="3"/>
+<rect x="262" y="128" width="104" height="30" rx="15" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.2"/>
+<text x="294" y="148" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Topo</text>
+<line x1="326" y1="134" x2="326" y2="152" stroke="#c9c2ae"/>
+<text x="346" y="148" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">3D</text>
+<rect x="259" y="124" width="70" height="38" rx="19" fill="none" stroke="#e8590c" stroke-width="3.5"/>
+<circle cx="246.0" cy="143.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="246" y="148" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<path d="M24 328 V186 a12 12 0 0 1 12 -12 H364 a12 12 0 0 1 12 12 V328z" fill="#ffffff"/>
+<text x="44" y="204" font-size="17" font-weight="bold" fill="#e8590c">Basemap</text>
+<text x="44" y="236" font-size="16" font-weight="bold" fill="#2f3a2b">3D height boost</text>
+<line x1="64" y1="262" x2="336" y2="262" stroke="#d6d0bf" stroke-width="6" stroke-linecap="round"/>
+<line x1="64" y1="262" x2="245.3" y2="262" stroke="#e8590c" stroke-width="6" stroke-linecap="round"/>
+<line x1="64.0" y1="272" x2="64.0" y2="278" stroke="#6b5b4b" stroke-width="1.4"/>
+<text x="64" y="296" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1</text>
+<line x1="154.7" y1="272" x2="154.7" y2="278" stroke="#6b5b4b" stroke-width="1.4"/>
+<text x="154.7" y="296" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1.5</text>
+<line x1="245.3" y1="272" x2="245.3" y2="278" stroke="#6b5b4b" stroke-width="1.4"/>
+<text x="245.3" y="296" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2</text>
+<line x1="336.0" y1="272" x2="336.0" y2="278" stroke="#6b5b4b" stroke-width="1.4"/>
+<text x="336" y="296" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2.5</text>
+<text x="154.7" y="316" font-size="14" fill="#6b5b4b" text-anchor="middle">default</text>
+<text x="245.3" y="316" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">try</text>
+<circle cx="245.3" cy="262" r="11" fill="#ffffff" stroke="#e8590c" stroke-width="3"/>
+<circle cx="271.3" cy="240.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="271.3" y="245" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="200" y="364" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tap Topo, then slide 3D height boost</text>
+<text x="200" y="388" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">1 to 2.5 times. Try 2 for benches</text>
 </svg>

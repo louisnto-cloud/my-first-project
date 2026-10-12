@@ -1,4 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Belly cut from the pelvis to the breastbone, blade edge up. Inset: two fingers lift the skin away from the guts and the blade rides between them, edge up.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="24" font-size="17" font-weight="bold" text-anchor="middle" fill="#23261f">3  Belly cut: blade edge up</text><g transform="translate(215 150)"><g stroke="#23261f" stroke-width="2.5" stroke-linejoin="round"><line x1="-62" y1="-34" x2="-96" y2="-92" stroke="#23261f" stroke-width="14" stroke-linecap="round"/><line x1="-62" y1="-34" x2="-96" y2="-92" stroke="#8a9a6b" stroke-width="9" stroke-linecap="round"/><line x1="-62" y1="34" x2="-96" y2="92" stroke="#23261f" stroke-width="14" stroke-linecap="round"/><line x1="-62" y1="34" x2="-96" y2="92" stroke="#8a9a6b" stroke-width="9" stroke-linecap="round"/><line x1="58" y1="-32" x2="96" y2="-94" stroke="#23261f" stroke-width="14" stroke-linecap="round"/><line x1="58" y1="-32" x2="96" y2="-94" stroke="#8a9a6b" stroke-width="9" stroke-linecap="round"/><line x1="58" y1="32" x2="96" y2="94" stroke="#23261f" stroke-width="14" stroke-linecap="round"/><line x1="58" y1="32" x2="96" y2="94" stroke="#8a9a6b" stroke-width="9" stroke-linecap="round"/><rect x="-134" y="-11" width="40" height="22" rx="6" fill="#8a9a6b"/><ellipse cx="0" cy="0" rx="100" ry="42" fill="#8a9a6b"/><ellipse cx="-150" cy="0" rx="22" ry="13" fill="#8a9a6b"/><path d="M100 -5 L116 0 L100 5 Z" fill="#fff"/></g><line x1="80" y1="0" x2="-55" y2="0" stroke="#e8590c" stroke-width="4" stroke-dasharray="9 6" stroke-linecap="round"/><path d="M-46 -7 L-58 0 L-46 7" fill="none" stroke="#e8590c" stroke-width="4"/></g><text x="160" y="98" font-size="13" font-weight="bold" text-anchor="middle" fill="#23261f">breastbone</text><text x="295" y="98" font-size="13" font-weight="bold" text-anchor="middle" fill="#23261f">pelvis</text><rect x="8" y="214" width="118" height="72" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="1.5"/><path d="M14 266 Q 67 222 120 266" fill="none" stroke="#8a9a6b" stroke-width="5"/><path d="M50 282 L64 244 M70 282 L72 244" stroke="#e8c4a0" stroke-width="7" stroke-linecap="round"/><path d="M60 240 L68 226 L76 240 Z" fill="#9aa0a6" stroke="#23261f" stroke-width="1.5"/><text x="20" y="230" font-size="13" font-weight="bold" fill="#23261f">skin</text><text x="84" y="232" font-size="13" font-weight="bold" fill="#e8590c">edge up</text><text x="250" y="270" font-size="14" font-weight="bold" fill="#23261f">Two fingers lift the</text><text x="250" y="286" font-size="14" font-weight="bold" fill="#23261f">skin off the guts</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 338" font-family="sans-serif" role="img" aria-label="Step 3, belly cut. A deer lies on its back, legs up, head to the left. An orange dashed line runs up the belly from the pelvis to the breastbone: cut that way, blade edge up. Inset cross section: two fingers lift the skin away from the guts, and the blade rides between them, edge up.">
+<rect width="400" height="338" fill="#fffaf0"/>
+<defs><clipPath id="sk-gut-3-inset"><circle cx="88" cy="252" r="72"/></clipPath></defs>
+<rect x="8" y="8" width="384" height="170" rx="10" fill="#e3e8cf"/>
+<path d="M8 162 H392 V170 Q392 178 384 178 H16 Q8 178 8 170z" fill="#cdbf9f"/>
+<path d="M186 100 L196 66 L186 38" fill="none" stroke="#5a3e26" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><path d="M186 100 L196 66 L186 38" fill="none" stroke="#8a6440" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M182 40 L181 30 L186 34 L191 30 L190 40z" fill="#2f241a"/><path d="M300 100 L304 62 L316 36" fill="none" stroke="#5a3e26" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><path d="M300 100 L304 62 L316 36" fill="none" stroke="#8a6440" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M312 38 L311 28 L316 32 L321 28 L320 38z" fill="#2f241a"/>
+<path d="M118 138 C104 142 90 148 80 152" stroke="#5a3e26" stroke-width="26" stroke-linecap="round"/><path d="M118 138 C104 142 90 148 80 152" stroke="#a87b52" stroke-width="23" stroke-linecap="round"/>
+<path d="M38 156 C42 146 58 140 74 140 C88 138 98 144 100 152 C98 162 86 166 72 166 C56 166 42 164 38 156z" fill="#a87b52" stroke="#5a3e26" stroke-width="1.4"/>
+<path d="M86 142 C92 126 104 120 112 118 C110 132 102 142 94 146z" fill="#a87b52" stroke="#5a3e26" stroke-width="1.2"/>
+<ellipse cx="40" cy="154" rx="3.6" ry="2.8" fill="#2f241a"/><circle cx="66" cy="148" r="2.4" fill="#2f241a"/>
+<path d="M112 126 C112 100 150 90 220 90 C290 90 334 100 336 126 C338 150 300 164 220 164 C150 164 112 152 112 126z" fill="#a87b52" stroke="#5a3e26" stroke-width="1.6"/>
+<path d="M140 104 C170 94 270 94 310 104 C300 110 260 112 220 112 C180 112 150 110 140 104z" fill="#efe4cf"/>
+<path d="M334 116 C344 112 350 120 346 130 C342 134 336 132 334 126z" fill="#f3ead8" stroke="#5a3e26" stroke-width="1"/>
+<path d="M170 100 L160 64 L170 34" fill="none" stroke="#5a3e26" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M170 100 L160 64 L170 34" fill="none" stroke="#a87b52" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M166 36 L165 26 L170 30 L175 26 L174 36z" fill="#2f241a"/><path d="M284 98 L268 58 L282 30" fill="none" stroke="#5a3e26" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><path d="M284 98 L268 58 L282 30" fill="none" stroke="#a87b52" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><path d="M278 32 L277 22 L282 26 L287 22 L286 32z" fill="#2f241a"/>
+<path d="M296 102  C250 94 200 94 166 102" fill="none" stroke="#e8590c" stroke-width="4" stroke-dasharray="9 6" stroke-linecap="round"/>
+<path d="M154.0 103.0 L165.6 112.3 L168.0 98.2z" fill="#e8590c"/>
+<circle cx="296" cy="102" r="5" fill="#e8590c"/>
+<rect x="44.6" y="22.0" width="94.9" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="92" y="41" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">breastbone</text>
+<line x1="154" y1="108" x2="104" y2="49" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="154" cy="108" r="2.6" fill="#2f3a2b"/>
+<rect x="323.2" y="22.0" width="57.7" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="352" y="41" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">pelvis</text>
+<line x1="298" y1="106" x2="344" y2="49" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="298" cy="106" r="2.6" fill="#2f3a2b"/>
+<circle cx="88" cy="252" r="72" fill="#f6efe2"/>
+<g clip-path="url(#sk-gut-3-inset)">
+<path d="M16 280 C30 258 60 266 70 278 C84 264 110 260 160 280 V324 H16z" fill="#b7bd9a"/>
+<circle cx="40" cy="304" r="22" fill="#9fa784" stroke="#7d8566" stroke-width="1.2"/>
+<circle cx="84" cy="310" r="24" fill="#9fa784" stroke="#7d8566" stroke-width="1.2"/>
+<circle cx="130" cy="302" r="22" fill="#9fa784" stroke="#7d8566" stroke-width="1.2"/>
+<path d="M16 230 C40 228 60 208 88 208 C116 208 136 226 160 230 V214 C136 210 116 192 88 192 C60 192 40 210 16 214z" fill="#a87b52" stroke="#5a3e26" stroke-width="1.4"/>
+<path d="M16 230 C40 228 60 208 88 208 C116 208 136 226 160 230" stroke="#d9b9a0" stroke-width="3" fill="none"/>
+<path d="M58 322 L72 224" stroke="#a8774f" stroke-width="15" stroke-linecap="round"/><path d="M58 322 L72 224" stroke="#e3b48e" stroke-width="12" stroke-linecap="round"/>
+<path d="M118 322 L104 224" stroke="#a8774f" stroke-width="15" stroke-linecap="round"/><path d="M118 322 L104 224" stroke="#e3b48e" stroke-width="12" stroke-linecap="round"/>
+<path d="M88 332 L88 246" stroke="#3b2a1a" stroke-width="7"/>
+<path d="M84 248 L84 220 L88 210 L92 222 L92 248z" fill="#c9ced3" stroke="#5b6168" stroke-width="1.2"/>
+<path d="M88 210 L92 222 L92 242" stroke="#fff" stroke-width="1.4" fill="none"/>
+</g>
+<circle cx="88" cy="252" r="72" fill="none" stroke="#6b5b4b" stroke-width="1.6"/>
+<rect x="178.0" y="192.0" width="44.5" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="200.248" y="211" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">skin</text>
+<line x1="146" y1="218" x2="178" y2="205" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="146" cy="218" r="2.6" fill="#2f3a2b"/>
+<rect x="178.0" y="234.0" width="71.8" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="213.89" y="253" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">edge up</text>
+<line x1="92" y1="214" x2="178" y2="247" stroke="#e8590c" stroke-width="1.4"/><circle cx="92" cy="214" r="2.6" fill="#e8590c"/>
+<rect x="178.0" y="288.0" width="45.8" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="200.889" y="307" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">guts</text>
+<line x1="150" y1="298" x2="178" y2="301" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="150" cy="298" r="2.6" fill="#2f3a2b"/>
+<text x="256" y="214" font-size="16" font-weight="bold" fill="#2f3a2b">Two fingers lift</text>
+<text x="256" y="234" font-size="16" font-weight="bold" fill="#2f3a2b">the skin off</text>
+<text x="256" y="254" font-size="16" font-weight="bold" fill="#2f3a2b">the guts</text>
+<circle cx="26.0" cy="26.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="26" y="31" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
 </svg>
