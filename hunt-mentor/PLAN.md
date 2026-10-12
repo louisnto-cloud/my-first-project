@@ -142,3 +142,5 @@ hunt-mentor/
 - Build choices (mine): first mention of each place per screen is linked, and again inside a "More" box; screen titles are not linked; town names that are everyday words (Hope, Mission, Chase, Trail) are not linked at the start of a sentence; a name followed by another capitalised word ("Nelson Street") is not linked.
 - Data: `scripts/build-places.py` (rerun with `--cache <folder>`; `--offline` uses the cache only). New lesson block: ```` ```mumap 3-27 ```` (also `mumap region 3`, `mumap place heffley-creek`).
 - Drafts until reviewed: lesson `know-your-mus` (1.14) and deck `data/flashcards-mu.json` ("Know your MUs"). To publish, add `know-your-mus` to `sessions` and `mu` to `flashcards` in `data/published.json`.
+
+- 2026-10-12: Diagram redraw batch 1 (20 worst, mix of field guide A and infographic B) published; owner approved.
