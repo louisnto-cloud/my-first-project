@@ -74,6 +74,10 @@
 - Diagrams: hand drawn SVG only. Big clear labels.
 - Photos (owner decision 2026-10-02): public domain or Creative Commons only, credit shown under each photo and on the Photo credits page. See AUTHORING.md. No other copied images.
 - AI images (owner decision 2026-10-13): allowed. Every AI image is labelled "AI image, not a photo" with the tool name. Labels, numbers and arrows are added by us on top (not drawn by the AI), and anatomy, animal ID and shot placement images are checked against the lesson's sourced facts before use.
+- Image tools (owner rule 2026-10-13): for photos and diagrams, use Gemini or ChatGPT image generation first, not Claude's own drawing. The owner has paid (Pro) accounts on both, signed in with his Gmail.
+  - When Claude runs on the owner's computer with his browser (Claude in Chrome or the desktop app's browser), use his signed in Gemini or ChatGPT tab.
+  - In a cloud session, use the API keys GEMINI_API_KEY or OPENAI_API_KEY from the environment settings if present; if not, ask the owner to add one.
+  - Never ask for, store or type his passwords. Hand drawn SVG stays only for exact labels, numbers and arrows layered on top.
 - No runtime frameworks. Tiny vanilla JavaScript. Build step may use Node.
 - Must work offline after first load. Also ship a single HTML file backup.
 - User data (progress, checklists, journal) stays in the phone's local storage only.
