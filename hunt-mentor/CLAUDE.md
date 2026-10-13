@@ -73,6 +73,7 @@
 - One Markdown file per session in `content/`. Front matter holds metadata.
 - Diagrams: hand drawn SVG only. Big clear labels.
 - Photos (owner decision 2026-10-02): public domain or Creative Commons only, credit shown under each photo and on the Photo credits page. See AUTHORING.md. No other copied images.
+- AI images (owner decision 2026-10-13): allowed. Every AI image is labelled "AI image, not a photo" with the tool name. Labels, numbers and arrows are added by us on top (not drawn by the AI), and anatomy, animal ID and shot placement images are checked against the lesson's sourced facts before use.
 - No runtime frameworks. Tiny vanilla JavaScript. Build step may use Node.
 - Must work offline after first load. Also ship a single HTML file backup.
 - User data (progress, checklists, journal) stays in the phone's local storage only.
