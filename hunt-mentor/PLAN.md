@@ -149,3 +149,4 @@ hunt-mentor/
   - Saved, NOT published: diagram batch 2 (50 diagrams). Owner 2026-10-15: published now (changed from hold). AI images replace some later.
   - Next: owner reviews batch 2, then batch 3 (next 50, start with field dressing steps sk-gut-1, 2, 4 to 8 so the sequence matches).
   - Open owner decisions: AI images (allow for scenes only, or keep all hand drawn); 13 "ask a conservation officer" rules; 42 VERIFY items in moose, elk, bear, skills Masterclasses.
+- 2026-10-15: AI photos on hold. Redrawing all remaining 765 flagged diagrams in waves of about 155 (5 writers x 31), lists in scratchpad waves/list-01..25; publish each wave after checks.
