@@ -1,34 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation of still hunting cadence, top view. The hunter takes 3 slow steps, then stops and scans left and right for 20 seconds or more. Then 3 more steps and another long stop. Look much more than you walk.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <rect width="400" height="300" fill="#dfe6d3" opacity=".5"/>
-  <g fill="#2f3a2b" opacity=".8"><polygon points="60,90 72,58 84,90"/><polygon points="200,70 212,38 224,70"/><polygon points="330,100 342,68 354,100"/><polygon points="120,270 132,238 144,270"/><polygon points="280,262 292,230 304,262"/></g>
-  <g fill="#8b5a2b">
-    <ellipse cx="50" cy="160" rx="10" ry="6" opacity="0"><set attributeName="opacity" to="1" begin="0.3s" fill="freeze"/></ellipse>
-    <ellipse cx="95" cy="180" rx="10" ry="6" opacity="0"><set attributeName="opacity" to="1" begin="0.9s" fill="freeze"/></ellipse>
-    <ellipse cx="140" cy="160" rx="10" ry="6" opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/></ellipse>
-    <ellipse cx="185" cy="180" rx="10" ry="6" opacity="0"><set attributeName="opacity" to="1" begin="5.0s" fill="freeze"/></ellipse>
-    <ellipse cx="230" cy="160" rx="10" ry="6" opacity="0"><set attributeName="opacity" to="1" begin="5.6s" fill="freeze"/></ellipse>
-    <ellipse cx="275" cy="180" rx="10" ry="6" opacity="0"><set attributeName="opacity" to="1" begin="6.2s" fill="freeze"/></ellipse>
-  </g>
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="20 170;50 170;95 170;140 170;140 170;185 170;230 170;275 170;275 170" keyTimes="0;0.03;0.09;0.15;0.5;0.53;0.59;0.65;1" dur="10s" fill="freeze"/>
-    <g opacity="0">
-      <animate attributeName="opacity" values="0;0;1;1;0;0;1;1" keyTimes="0;0.16;0.17;0.48;0.49;0.66;0.67;1" dur="10s" fill="freeze"/>
-      <path d="M0 0 L90 -45 A 100 100 0 0 1 90 45 Z" fill="#e8590c" opacity=".2">
-        <animateTransform attributeName="transform" type="rotate" values="-50;50;-50;50;0" dur="3s" begin="1.7s" fill="freeze"/><animateTransform attributeName="transform" type="rotate" values="0;-50;50;-50;0" dur="3s" begin="6.7s" fill="freeze"/>
-      </path>
-    </g>
-    <circle r="11" fill="#e8590c"/>
-  </g>
-  <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0;1;1" keyTimes="0;0.16;0.17;0.48;0.49;0.66;0.67;1" dur="10s" fill="freeze"/>
-    <rect x="110" y="16" width="180" height="34" rx="8" fill="#2f3a2b"/>
-    <text x="200" y="39" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">STOP. Look 20 s +</text>
-  </g>
-  <g opacity="1"><animate attributeName="opacity" values="1;1;0;0;1;1;0;0" keyTimes="0;0.16;0.17;0.48;0.49;0.66;0.67;1" dur="10s" fill="freeze"/>
-    <text x="200" y="39" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2 or 3 slow steps</text>
-  </g>
-  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="9s" dur=".5s" fill="freeze"/>
-    <rect x="60" y="230" width="280" height="34" rx="8" fill="#e8590c"/>
-    <text x="200" y="253" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Look much more than you walk</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation of still hunting cadence, top view. The hunter takes 3 slow steps, leaving boot prints, then stops and scans left and right for 20 seconds or more. Then 3 more steps and another long stop. Look much more than you walk.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<rect width="400" height="300" fill="#cfd9b8"/>
+<circle cx="66" cy="176" r="2.5" fill="#b4c299"/>
+<circle cx="192" cy="99" r="2.7" fill="#b4c299"/>
+<circle cx="323" cy="147" r="2.3" fill="#b4c299"/>
+<circle cx="94" cy="65" r="2.1" fill="#b4c299"/>
+<circle cx="234" cy="75" r="2.7" fill="#b4c299"/>
+<circle cx="93" cy="102" r="1.6" fill="#b4c299"/>
+<circle cx="399" cy="184" r="2.8" fill="#b4c299"/>
+<circle cx="246" cy="70" r="2.0" fill="#b4c299"/>
+<circle cx="199" cy="83" r="2.9" fill="#b4c299"/>
+<circle cx="147" cy="89" r="2.7" fill="#b4c299"/>
+<circle cx="50" cy="214" r="2.2" fill="#b4c299"/>
+<circle cx="221" cy="120" r="2.2" fill="#b4c299"/>
+<circle cx="75" cy="70" r="2.8" fill="#b4c299"/>
+<circle cx="94" cy="190" r="1.8" fill="#b4c299"/>
+<circle cx="388" cy="209" r="2.6" fill="#b4c299"/>
+<circle cx="305" cy="158" r="2.6" fill="#b4c299"/>
+<circle cx="49" cy="141" r="2.7" fill="#b4c299"/>
+<circle cx="80" cy="214" r="2.8" fill="#b4c299"/>
+<circle cx="164" cy="123" r="2.2" fill="#b4c299"/>
+<circle cx="154" cy="225" r="2.1" fill="#b4c299"/>
+<circle cx="11" cy="79" r="2.6" fill="#b4c299"/>
+<circle cx="397" cy="144" r="2.2" fill="#b4c299"/>
+<circle cx="220" cy="185" r="1.8" fill="#b4c299"/>
+<circle cx="244" cy="154" r="2.4" fill="#b4c299"/>
+<circle cx="72" cy="92" r="2.0" fill="#b4c299"/>
+<circle cx="371" cy="120" r="2.4" fill="#b4c299"/>
+<circle cx="123" cy="81" r="1.6" fill="#b4c299"/>
+<circle cx="325" cy="190" r="2.1" fill="#b4c299"/>
+<circle cx="273" cy="173" r="2.8" fill="#b4c299"/>
+<circle cx="383" cy="130" r="3.0" fill="#b4c299"/>
+<circle cx="385" cy="160" r="2.8" fill="#b4c299"/>
+<circle cx="196" cy="125" r="1.9" fill="#b4c299"/>
+<circle cx="350" cy="90" r="1.6" fill="#b4c299"/>
+<circle cx="322" cy="189" r="2.2" fill="#b4c299"/>
+<circle cx="335" cy="72" r="1.9" fill="#b4c299"/>
+<circle cx="116" cy="132" r="1.8" fill="#b4c299"/>
+<circle cx="28" cy="119" r="2.8" fill="#b4c299"/>
+<circle cx="393" cy="185" r="2.2" fill="#b4c299"/>
+<circle cx="101" cy="219" r="2.3" fill="#b4c299"/>
+<circle cx="291" cy="69" r="1.8" fill="#b4c299"/>
+<circle cx="335" cy="193" r="2.8" fill="#b4c299"/>
+<circle cx="241" cy="133" r="2.4" fill="#b4c299"/>
+<circle cx="340" cy="114" r="2.3" fill="#b4c299"/>
+<circle cx="110" cy="188" r="1.5" fill="#b4c299"/>
+<circle cx="274" cy="219" r="1.5" fill="#b4c299"/>
+<circle cx="237" cy="168" r="2.8" fill="#b4c299"/>
+<circle cx="234" cy="106" r="2.1" fill="#b4c299"/>
+<circle cx="383" cy="211" r="1.7" fill="#b4c299"/>
+<circle cx="38" cy="79" r="1.5" fill="#b4c299"/>
+<circle cx="179" cy="87" r="2.8" fill="#b4c299"/>
+<circle cx="262" cy="84" r="2.3" fill="#b4c299"/>
+<circle cx="130" cy="144" r="1.8" fill="#b4c299"/>
+<circle cx="66" cy="94" r="2.1" fill="#b4c299"/>
+<circle cx="284" cy="153" r="1.6" fill="#b4c299"/>
+<circle cx="284" cy="206" r="2.7" fill="#b4c299"/>
+<circle cx="316" cy="65" r="2.2" fill="#b4c299"/>
+<circle cx="25" cy="188" r="1.8" fill="#b4c299"/>
+<circle cx="285" cy="105" r="2.5" fill="#b4c299"/>
+<circle cx="125" cy="71" r="2.1" fill="#b4c299"/>
+<circle cx="124" cy="210" r="1.9" fill="#b4c299"/>
+<circle cx="40" cy="92" r="22" fill="#3f6a33"/><circle cx="34" cy="86" r="12" fill="#5b8744"/>
+<circle cx="122" cy="84" r="16" fill="#3f6a33"/><circle cx="118" cy="80" r="9" fill="#5b8744"/>
+<circle cx="214" cy="92" r="20" fill="#3f6a33"/><circle cx="209" cy="87" r="11" fill="#5b8744"/>
+<circle cx="322" cy="84" r="24" fill="#3f6a33"/><circle cx="316" cy="78" r="13" fill="#5b8744"/>
+<circle cx="378" cy="120" r="16" fill="#3f6a33"/><circle cx="374" cy="116" r="9" fill="#5b8744"/>
+<circle cx="70" cy="228" r="18" fill="#3f6a33"/><circle cx="66" cy="224" r="10" fill="#5b8744"/>
+<circle cx="176" cy="230" r="22" fill="#3f6a33"/><circle cx="170" cy="224" r="12" fill="#5b8744"/>
+<circle cx="300" cy="232" r="20" fill="#3f6a33"/><circle cx="295" cy="227" r="11" fill="#5b8744"/>
+<circle cx="372" cy="222" r="14" fill="#3f6a33"/><circle cx="368" cy="218" r="8" fill="#5b8744"/>
+<rect width="400" height="58" fill="#fffaf0"/><rect y="250" width="400" height="50" fill="#fffaf0"/>
+<g opacity="0"><set attributeName="opacity" to="1" begin="0.3s" fill="freeze"/><g transform="translate(50 158)"><rect x="-9" y="-4" width="15" height="9" rx="4.5" fill="#6b4f35"/><rect x="8" y="-3.5" width="7" height="7" rx="3" fill="#6b4f35"/></g></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="0.9s" fill="freeze"/><g transform="translate(95 182)"><rect x="-9" y="-4" width="15" height="9" rx="4.5" fill="#6b4f35"/><rect x="8" y="-3.5" width="7" height="7" rx="3" fill="#6b4f35"/></g></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/><g transform="translate(140 158)"><rect x="-9" y="-4" width="15" height="9" rx="4.5" fill="#6b4f35"/><rect x="8" y="-3.5" width="7" height="7" rx="3" fill="#6b4f35"/></g></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="5.0s" fill="freeze"/><g transform="translate(185 182)"><rect x="-9" y="-4" width="15" height="9" rx="4.5" fill="#6b4f35"/><rect x="8" y="-3.5" width="7" height="7" rx="3" fill="#6b4f35"/></g></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="5.6s" fill="freeze"/><g transform="translate(230 158)"><rect x="-9" y="-4" width="15" height="9" rx="4.5" fill="#6b4f35"/><rect x="8" y="-3.5" width="7" height="7" rx="3" fill="#6b4f35"/></g></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="6.2s" fill="freeze"/><g transform="translate(275 182)"><rect x="-9" y="-4" width="15" height="9" rx="4.5" fill="#6b4f35"/><rect x="8" y="-3.5" width="7" height="7" rx="3" fill="#6b4f35"/></g></g>
+<g><animateTransform attributeName="transform" type="translate" values="20 170;50 170;95 170;140 170;140 170;185 170;230 170;275 170;275 170" keyTimes="0;0.03;0.09;0.15;0.5;0.53;0.59;0.65;1" dur="10s" fill="freeze"/>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0;1;1" keyTimes="0;0.16;0.17;0.48;0.49;0.66;0.67;1" dur="10s" fill="freeze"/><path d="M0 0 L90 -45 A 100 100 0 0 1 90 45 Z" fill="#e8590c" opacity=".25"><animateTransform attributeName="transform" type="rotate" values="-50;50;-50;50;0" dur="3s" begin="1.7s" fill="freeze"/><animateTransform attributeName="transform" type="rotate" values="0;-50;50;-50;0" dur="3s" begin="6.7s" fill="freeze"/></path></g>
+<ellipse cx="-2" cy="0" rx="9" ry="15" fill="#e8590c" stroke="#a63c06" stroke-width="1.2"/><circle cx="1" cy="0" r="7" fill="#d9480f" stroke="#a63c06" stroke-width="1.2"/><path d="M7 0 h6" stroke="#a63c06" stroke-width="3" stroke-linecap="round"/>
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0;1;1" keyTimes="0;0.16;0.17;0.48;0.49;0.66;0.67;1" dur="10s" fill="freeze"/><rect x="100" y="12" width="200" height="36" rx="8" fill="#2f3a2b"/><text x="200" y="37" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">STOP. Look 20 s +</text></g>
+<g opacity="1"><animate attributeName="opacity" values="1;1;0;0;1;1;0;0" keyTimes="0;0.16;0.17;0.48;0.49;0.66;0.67;1" dur="10s" fill="freeze"/><text x="200" y="37" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2 or 3 slow steps</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="9s" dur=".5s" fill="freeze"/><rect x="50" y="257" width="300" height="36" rx="8" fill="#e8590c"/><text x="200" y="281" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Look much more than you walk</text></g>
 </svg>
