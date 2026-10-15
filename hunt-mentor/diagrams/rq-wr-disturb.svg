@@ -1,18 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 302" role="img" aria-label="Bar chart from Utah, Wyoming and US Forest Service winter range fact sheets. Dogs cause the strongest reaction, ATVs and mountain bikes more than hiking, people off trail more than on trail, hikers on a trail least.">
-<rect x="0" y="0" width="400" height="302" fill="#fffaf0"/>
-<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">What scares wintering deer most</text>
-<text x="14" y="64" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Dogs off leash</text>
-<rect x="14" y="70" width="239" height="20" rx="4" fill="#e8590c"/>
-<text x="259.1428571428571" y="85" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">strongest (70%)</text>
-<text x="14" y="116" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">ATVs and mountain bikes</text>
-<rect x="14" y="122" width="213" height="20" rx="4" fill="#e8590c"/>
-<text x="232.57142857142858" y="137" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">more than hiking</text>
-<text x="14" y="168" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">People off trail</text>
-<rect x="14" y="174" width="186" height="20" rx="4" fill="#8b5a2b"/>
-<text x="206.0" y="189" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">more than on trail</text>
-<text x="14" y="220" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Hikers on a trail</text>
-<rect x="14" y="226" width="106" height="20" rx="4" fill="#8a9a6b"/>
-<text x="126.28571428571429" y="241" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">less</text>
-<text x="14" y="278" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Agency fact sheets, search previews (70%). Order</text>
-<text x="14" y="294" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">is my reading of them.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 342" font-family="sans-serif" role="img" aria-label="Ranked bar chart from winter range agency fact sheets, search previews (70%): dogs off leash cause the strongest reaction, ATVs and mountain bikes more than hiking, people off trail more than on trail, hikers on a trail least. The order is my reading of them.">
+<rect width="400" height="342" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">What scares wintering deer most</text>
+<rect x="8" y="44" width="64" height="56" rx="8" fill="#f1ead9"/>
+<g transform="translate(42 92) scale(0.42 0.42)"><path d="M-22 -30 L-46 -14 L-50 -12" stroke="#8a6334" stroke-width="8.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 -6)"/><path d="M-14 -30 L-34 -10 L-38 -8" stroke="#8a6334" stroke-width="8.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 -6)"/><path d="M22 -30 L44 -14 L50 -10" stroke="#8a6334" stroke-width="8.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 -6)"/><path d="M28 -32 L52 -22 L58 -22" stroke="#8a6334" stroke-width="8.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 -6)"/><g transform="translate(0 -6)"><path d="M34 -40 C44 -42 52 -48 56 -56" stroke="#c99a55" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M-33 -38 C-35 -50 -22 -54 -4 -51 C14 -48 30 -48 38 -42 C44 -36 40 -26 30 -25 C14 -23 -4 -23 -18 -25 C-28 -27 -33 -31 -33 -38z" fill="#c99a55" stroke="#8a6334" stroke-width="1.2"/><path d="M-33 -40 C-37 -48 -38 -54 -38 -60 L-21 -63 C-19 -56 -14 -51 -8 -50z" fill="#c99a55"/><path d="M-26 -62 C-20 -66 -14 -60 -16 -54 C-20 -50 -26 -52 -28 -56z" fill="#c99a55"/><path d="M-24 -66 C-34 -70 -44 -66 -50 -60 C-54 -56 -54 -52 -50 -51 C-44 -50 -36 -52 -30 -52 C-26 -54 -22 -58 -24 -66z" fill="#c99a55" stroke="#8a6334" stroke-width="1.2"/><path d="M-26 -64 C-20 -62 -18 -54 -20 -48 C-24 -48 -26 -54 -28 -58z" fill="#8a6334"/><ellipse cx="-52" cy="-56" rx="3" ry="2.4" fill="#1f160e"/><circle cx="-38" cy="-62" r="1.9" fill="#1f160e"/><path d="M-33 -45 C-30 -48 -24 -50 -19 -48" stroke="#c0392b" stroke-width="3.4" fill="none" stroke-linecap="round"/></g></g>
+<text x="80" y="64" font-size="16" font-weight="bold" fill="#2f3a2b">Dogs off leash</text>
+<rect x="80" y="74" width="150.0" height="20" rx="4" fill="#e8590c"/>
+<text x="238" y="89" font-size="15" font-weight="bold" fill="#2f3a2b">strongest (70%)</text>
+<rect x="8" y="108" width="64" height="56" rx="8" fill="#f1ead9"/>
+<g transform="translate(30 154) scale(0.62)"><path d="M-20 -16 H-4 L0 -22 H10 L14 -16 H22 L20 -9 H-22z" fill="#5c7a3a"/><path d="M12 -22 L16 -30 M12 -30 H20" stroke="#2b2b2b" stroke-width="2.4" stroke-linecap="round"/><rect x="-6" y="-26" width="12" height="4" rx="2" fill="#2b2b2b"/><circle cx="-14" cy="-7" r="7.5" fill="#2b2b2b"/><circle cx="-14" cy="-7" r="3" fill="#a8a8a8"/><circle cx="15" cy="-7" r="7.5" fill="#2b2b2b"/><circle cx="15" cy="-7" r="3" fill="#a8a8a8"/></g><g transform="translate(56 154) scale(0.55)" fill="none" stroke="#3d5a80" stroke-width="2.6"><circle cx="-12" cy="-8" r="8"/><circle cx="12" cy="-8" r="8"/><path d="M-12 -8 L-4 -22 L8 -22 L12 -8 M-4 -22 L0 -8 L8 -22 M6 -26 h6"/></g>
+<text x="80" y="128" font-size="16" font-weight="bold" fill="#2f3a2b">ATVs and mountain bikes</text>
+<rect x="80" y="138" width="117.0" height="20" rx="4" fill="#e8590c"/>
+<text x="205" y="153" font-size="15" font-weight="bold" fill="#2f3a2b">more than hiking</text>
+<rect x="8" y="172" width="64" height="56" rx="8" fill="#f1ead9"/>
+<path d="M10 216 H70" stroke="#c4b186" stroke-width="5"/><g transform="translate(48 206) scale(0.62 0.62)"><path d="M-2 -20 L-8 0 M2 -20 L8 -1" stroke="#4a4136" stroke-width="5" stroke-linecap="round"/><path d="M-6 -40 C-6 -44 6 -44 6 -40 L5 -19 H-5z" fill="#6b7a8a"/><rect x="-15" y="-41" width="10" height="17" rx="3" fill="#7a5a3a"/><circle cx="0" cy="-47" r="5.5" fill="#e0b48c"/><path d="M4 -36 L11 -26" stroke="#e0b48c" stroke-width="3.4" stroke-linecap="round"/></g>
+<path d="M24 214 L44 206" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="3 3"/>
+<text x="80" y="192" font-size="16" font-weight="bold" fill="#2f3a2b">People off trail</text>
+<rect x="80" y="202" width="84.0" height="20" rx="4" fill="#8b5a2b"/>
+<text x="172" y="217" font-size="15" font-weight="bold" fill="#2f3a2b">more than on trail</text>
+<rect x="8" y="236" width="64" height="56" rx="8" fill="#f1ead9"/>
+<path d="M10 280 H70" stroke="#c4b186" stroke-width="5"/><g transform="translate(40 280) scale(0.62 0.62)"><path d="M-2 -20 L-8 0 M2 -20 L8 -1" stroke="#4a4136" stroke-width="5" stroke-linecap="round"/><path d="M-6 -40 C-6 -44 6 -44 6 -40 L5 -19 H-5z" fill="#6b7a8a"/><rect x="-15" y="-41" width="10" height="17" rx="3" fill="#7a5a3a"/><circle cx="0" cy="-47" r="5.5" fill="#e0b48c"/><path d="M4 -36 L11 -26" stroke="#e0b48c" stroke-width="3.4" stroke-linecap="round"/></g>
+<text x="80" y="256" font-size="16" font-weight="bold" fill="#2f3a2b">Hikers on a trail</text>
+<rect x="80" y="266" width="45.0" height="20" rx="4" fill="#8a9a6b"/>
+<text x="133" y="281" font-size="15" font-weight="bold" fill="#2f3a2b">less</text>
+<text x="200" y="314" font-size="14" fill="#6b5b4b" text-anchor="middle">Agency fact sheets, search previews (70%).</text>
+<text x="200" y="332" font-size="14" fill="#6b5b4b" text-anchor="middle">Order is my reading of them.</text>
 </svg>

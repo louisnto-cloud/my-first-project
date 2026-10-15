@@ -1,23 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Timeline from October to January. Today is 11 October. First hunts mid to late October. Buck seasons run to 10 December. A 12 week plan started today ends about 3 January. So this plan pays off in the late season and next year.">
-  <rect x="0" y="0" width="400" height="250" fill="#fffaf0"/>
-<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Your hunts and the 12 week plan</text>
-<line x1="20" y1="120" x2="380" y2="120" stroke="#2f3a2b" stroke-width="6" stroke-linecap="round"/>
-<line x1="49.26829268292683" y1="86" x2="49.26829268292683" y2="154" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/>
-<circle cx="49.26829268292683" cy="120" r="8" fill="#e8590c" stroke="#ffffff" stroke-width="2"/>
-<text x="49.26829268292683" y="78" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="start">Today</text>
-<text x="49.26829268292683" y="174" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Oct 11</text>
-<line x1="93.17073170731707" y1="64" x2="93.17073170731707" y2="176" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/>
-<circle cx="93.17073170731707" cy="120" r="8" fill="#2f3a2b" stroke="#ffffff" stroke-width="2"/>
-<text x="93.17073170731707" y="56" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">First hunts</text>
-<text x="93.17073170731707" y="196" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">mid to late Oct</text>
-<line x1="224.8780487804878" y1="86" x2="224.8780487804878" y2="154" stroke="#6b4f35" stroke-width="3" stroke-linecap="round"/>
-<circle cx="224.8780487804878" cy="120" r="8" fill="#6b4f35" stroke="#ffffff" stroke-width="2"/>
-<text x="224.8780487804878" y="78" font-family="sans-serif" font-size="14" font-weight="bold" fill="#6b4f35" text-anchor="middle">Bucks close</text>
-<text x="224.8780487804878" y="174" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Dec 10</text>
-<line x1="295.1219512195122" y1="64" x2="295.1219512195122" y2="176" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/>
-<circle cx="295.1219512195122" cy="120" r="8" fill="#e8590c" stroke="#ffffff" stroke-width="2"/>
-<text x="295.1219512195122" y="56" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Week 12</text>
-<text x="295.1219512195122" y="196" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">about Jan 3</text>
-<text x="20" y="236" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="start">Oct 1</text>
-<text x="380" y="236" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="end">Jan 31</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 351" font-family="sans-serif" role="img" aria-label="Timeline from 1 October to 31 January. Today is 11 October. First hunts are mid to late October. Deer buck seasons close on 10 December. A 12 week plan started today ends about 3 January; weeks 1 to 8 land before 10 December. So start now and peak for the late season and next year. Tip.">
+<rect width="400" height="351" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Your hunts and the 12 week plan</text>
+<rect x="38.9" y="42.0" width="119.0" height="27.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="98.336" y="61" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Today: Oct 11</text>
+<path d="M52.9 69.0 V252" stroke="#e8590c" stroke-width="3"/>
+<path d="M226.0 86 V202" stroke="#b3261e" stroke-width="2.5" stroke-dasharray="6 4"/>
+<rect x="64.4" y="92" width="46.2" height="22" rx="4" fill="#e8590c" opacity=".85"/>
+<text x="64.4" y="136" font-size="16" font-weight="bold" fill="#2f3a2b">First hunts</text>
+<text x="64.4" y="154" font-size="15" fill="#2f3a2b">mid to late Oct</text>
+<circle cx="226.0" cy="103" r="7" fill="#b3261e"/>
+<text x="234" y="136" font-size="16" font-weight="bold" fill="#b3261e">Bucks close</text>
+<text x="234" y="154" font-size="15" fill="#2f3a2b">Dec 10</text>
+<rect x="52.9" y="172" width="18.7" height="24" fill="#2f3a2b"/>
+<rect x="73.0" y="172" width="18.7" height="24" fill="#2f3a2b"/>
+<rect x="93.2" y="172" width="18.7" height="24" fill="#2f3a2b"/>
+<rect x="113.4" y="172" width="18.7" height="24" fill="#2f3a2b"/>
+<rect x="133.6" y="172" width="18.7" height="24" fill="#2f3a2b"/>
+<rect x="153.8" y="172" width="18.7" height="24" fill="#2f3a2b"/>
+<rect x="174.0" y="172" width="18.7" height="24" fill="#2f3a2b"/>
+<rect x="194.2" y="172" width="18.7" height="24" fill="#2f3a2b"/>
+<rect x="214.4" y="172" width="18.7" height="24" fill="#8a9a6b"/>
+<rect x="234.6" y="172" width="18.7" height="24" fill="#8a9a6b"/>
+<rect x="254.8" y="172" width="18.7" height="24" fill="#8a9a6b"/>
+<rect x="275.0" y="172" width="18.7" height="24" fill="#8a9a6b"/>
+<text x="54.9" y="189" font-size="14" font-weight="bold" fill="#fffaf0">1</text>
+<text x="292.2" y="189" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">12</text>
+<text x="58.9" y="218" font-size="16" font-weight="bold" fill="#2f3a2b">12 week plan</text>
+<text x="295.2" y="218" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Week 12</text>
+<text x="295.2" y="236" font-size="15" fill="#2f3a2b" text-anchor="middle">about Jan 3</text>
+<path d="M24.0 254 H376.0" stroke="#2f3a2b" stroke-width="2"/>
+<path d="M24.0 248 V260" stroke="#2f3a2b" stroke-width="2"/>
+<path d="M113.4 248 V260" stroke="#2f3a2b" stroke-width="2"/>
+<path d="M200.0 248 V260" stroke="#2f3a2b" stroke-width="2"/>
+<path d="M289.4 248 V260" stroke="#2f3a2b" stroke-width="2"/>
+<path d="M376.0 248 V260" stroke="#2f3a2b" stroke-width="2"/>
+<text x="68.7" y="276" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="156.7" y="276" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="244.7" y="276" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<text x="332.7" y="276" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Jan</text>
+<rect x="8" y="288" width="384" height="55" rx="8" fill="#2f3a2b"/><text x="200" y="311.6" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Start now. Peak for late season</text><text x="200" y="331.6" font-size="14" fill="#fffaf0" text-anchor="middle">and next year (Tip)</text>
 </svg>

@@ -1,16 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 304" role="img" aria-label="A document card for order u-3-003, Merritt Timber Supply Area, mule deer. Its authority is the Government Actions Regulation. It sets rules for timber harvest, silviculture and roads, requires keeping snow interception cover, and says nothing about hunting. Signed 21 January 2008.">
-<rect x="0" y="0" width="400" height="304" fill="#fffaf0"/>
-<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">What order u-3-003 says</text>
-<rect x="30" y="44" width="340" height="236" rx="6" fill="#fff" stroke="#2f3a2b" stroke-width="2"/>
-<text x="200" y="72" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">ORDER: UNGULATE WINTER RANGE</text>
-<text x="200" y="92" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">u-3-003, Merritt TSA, mule deer</text>
-<rect x="50" y="112" width="300" height="32" rx="6" fill="#2f3a2b"/>
-<text x="200" y="133" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Authority: Government Actions Regulation</text>
-<rect x="50" y="152" width="300" height="32" rx="6" fill="#2f3a2b"/>
-<text x="200" y="173" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Rules for timber harvest, silviculture, roads</text>
-<rect x="50" y="192" width="300" height="32" rx="6" fill="#e8590c"/>
-<text x="200" y="213" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Keep snow interception cover</text>
-<rect x="50" y="232" width="300" height="32" rx="6" fill="#4a7fb0"/>
-<text x="200" y="253" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Nothing about hunting</text>
-<text x="200" y="294" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="middle">Signed 21 January 2008 (99%, read directly)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 376" font-family="sans-serif" role="img" aria-label="A document card for order u-3-003, Merritt Timber Supply Area, mule deer. Its authority is the Government Actions Regulation. It sets rules for timber harvest, silviculture and roads, requires keeping snow interception cover, and says nothing about hunting. Signed 21 January 2008. 99 percent, read directly.">
+<rect width="400" height="376" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">What order u-3-003 says</text>
+<path d="M22 42 H354 L378 66 V344 H22z" fill="#fff" stroke="#2f3a2b" stroke-width="1.8"/><path d="M354 42 V66 H378" fill="#efe8d8" stroke="#2f3a2b" stroke-width="1.4"/>
+<text x="200" y="72" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">ORDER: UNGULATE WINTER RANGE</text>
+<text x="200" y="92" font-size="15" fill="#2f3a2b" text-anchor="middle">u-3-003, Merritt TSA, mule deer</text>
+<rect x="34" y="106" width="332" height="46" rx="8" fill="#efe8d8"/>
+<path d="M47 117.0 h13 l5 5 v19 h-18z" fill="#fff" stroke="#2f3a2b" stroke-width="1.6"/><path d="M51 126.0 h10 M51 131.0 h10 M51 136.0 h7" stroke="#2f3a2b" stroke-width="1.4"/>
+<text x="78" y="126" font-size="15" font-weight="bold" fill="#2f3a2b">Authority</text>
+<text x="78" y="144" font-size="15" fill="#2f3a2b">Government Actions Regulation</text>
+<rect x="34" y="160" width="332" height="46" rx="8" fill="#efe8d8"/>
+<rect x="54.5" y="192.0" width="3" height="5" fill="#5a3d22"/><path d="M56.0 170.0 L62.0 181.7 L59.3 181.7 L66.9 193.0 L45.1 193.0 L52.7 181.7 L50.0 181.7z" fill="#3f6a33"/>
+<text x="78" y="180" font-size="15" font-weight="bold" fill="#2f3a2b">Rules for</text>
+<text x="78" y="198" font-size="15" fill="#2f3a2b">timber harvest, silviculture, roads</text>
+<rect x="34" y="214" width="332" height="46" rx="8" fill="#e8590c"/>
+<line x1="46.0" y1="237.0" x2="66.0" y2="237.0" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"/><line x1="51.0" y1="228.3" x2="61.0" y2="245.7" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"/><line x1="61.0" y1="228.3" x2="51.0" y2="245.7" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"/>
+<text x="78" y="234" font-size="15" font-weight="bold" fill="#fffaf0">Keep</text>
+<text x="78" y="252" font-size="15" fill="#fffaf0">snow interception cover</text>
+<rect x="34" y="268" width="332" height="34" rx="8" fill="#4a7fb0"/>
+<circle cx="56" cy="285.0" r="11" fill="#4a7fb0" stroke="#fffaf0" stroke-width="3.5"/><line x1="48.3" y1="292.7" x2="63.7" y2="277.3" stroke="#fffaf0" stroke-width="3.5"/>
+<text x="78" y="290" font-size="16" font-weight="bold" fill="#fffaf0">Nothing about hunting</text>
+<path d="M44 326 c8 -14 14 6 22 -6 c6 -10 10 8 18 -2 c6 -6 10 2 16 0" stroke="#2f3a2b" stroke-width="1.6" fill="none"/>
+<text x="116" y="328" font-size="15" font-weight="bold" fill="#2f3a2b">Signed 21 January 2008</text>
+<text x="200" y="366" font-size="14" fill="#6b5b4b" text-anchor="middle">99%, read directly. TSA: Timber Supply Area.</text>
 </svg>
