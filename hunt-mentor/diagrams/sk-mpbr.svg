@@ -1,4 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Maximum point blank range drawn as a 20 cm pipe. The bullet path rises to 9 cm high at 100 m, crosses the crosshair at 230 m and leaves the bottom of the pipe at about 270 m. Inside that, hold dead centre.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="24" font-size="17" font-weight="bold" text-anchor="middle" fill="#23261f">Point blank range: the pipe idea</text><rect x="30.0" y="100" width="345.0" height="100" fill="#e8590c" fill-opacity=".12" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="6 4"/><text x="34.6" y="92" font-size="14" font-weight="bold" fill="#e8590c">20 cm pipe (deer vitals)</text><line x1="30.0" y1="150" x2="375.0" y2="150" stroke="#2f3a2b" stroke-width="1.5" stroke-dasharray="3 4"/><text x="34.0" y="166" font-size="13" fill="#2f3a2b">crosshair</text><path d="M30.0 169.0 C39.6 162.1, 68.3 138.2, 87.5 127.5 C106.7 116.8, 128.7 109.3, 145.0 105.0 C161.3 100.7, 171.8 100.7, 185.2 101.5 C198.7 102.3, 207.3 101.9, 225.5 110.0 C243.7 118.1, 275.3 135.0, 294.5 150.0 C313.7 165.0, 327.1 185.0, 340.5 200.0 C353.9 215.0, 369.2 233.3, 375.0 240.0" fill="none" stroke="#23261f" stroke-width="3"/><circle cx="294.5" cy="150" r="5" fill="#2f3a2b"/><text x="294.5" y="138" font-size="13" font-weight="bold" text-anchor="middle" fill="#23261f">zero 230 m</text><circle cx="145.0" cy="105" r="5" fill="#2f3a2b"/><text x="145.0" y="127" font-size="13" font-weight="bold" text-anchor="middle" fill="#23261f">9 cm high</text><circle cx="340.5" cy="200" r="6" fill="#b3261e"/><text x="330.5" y="226" font-size="15" font-weight="bold" text-anchor="end" fill="#b3261e">MPBR 270 m</text><text x="30.0" y="284" font-size="13" text-anchor="middle" fill="#23261f">0 m</text><text x="145.0" y="284" font-size="13" text-anchor="middle" fill="#23261f">100 m</text><text x="260.0" y="284" font-size="13" text-anchor="middle" fill="#23261f">200 m</text><text x="375.0" y="284" font-size="13" text-anchor="middle" fill="#23261f">300 m</text><text x="200" y="262" font-size="13" text-anchor="middle" fill="#2f3a2b">150 gr, 20 cm zone. Hold centre, no hold over</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 353.0" font-family="sans-serif" role="img" aria-label="Maximum point blank range, MPBR, drawn as a 20 cm pipe the size of deer vitals. For a 150 grain bullet the path rises to 9 cm high at 100 m, crosses the crosshair at the 230 m zero and leaves the bottom of the pipe at about 270 m. Inside that, hold dead centre, no hold over.">
+<rect width="400" height="353.0" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Point blank range: the pipe idea</text>
+<rect x="30.0" y="110.0" width="336.0" height="80.0" fill="#fde3d3"/>
+<path d="M30.0 110.0 H366.0 M30.0 190.0 H366.0" stroke="#e8590c" stroke-width="2" stroke-dasharray="7 4"/>
+<ellipse cx="366.0" cy="150" rx="8" ry="40.0" fill="#f9cdb2" stroke="#e8590c" stroke-width="2"/>
+<ellipse cx="30.0" cy="150" rx="8" ry="40.0" fill="none" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 3"/>
+<line x1="30.0" y1="150" x2="366.0" y2="150" stroke="#2f3a2b" stroke-width="1.6" stroke-dasharray="3 4"/>
+<path d="M30.0 165.2 C39.3 159.2 67.3 137.7 86.0 129.2 C104.7 120.7 124.8 117.2 142.0 114.0 C159.2 110.8 173.2 108.8 189.0 110.0 C204.9 111.2 220.8 114.5 237.2 121.2 C253.6 127.9 271.7 138.5 287.6 150.0 C303.5 161.5 320.1 178.3 332.4 190.0 C344.7 201.7 356.7 215.0 361.5 220.0" fill="none" stroke="#2f3a2b" stroke-width="3.4" stroke-linecap="round"/>
+<circle cx="142.0" cy="114.0" r="5" fill="#2f3a2b"/>
+<circle cx="287.6" cy="150" r="5" fill="#2f3a2b"/>
+<circle cx="332.4" cy="190.0" r="6" fill="#c0392b"/>
+<text x="32" y="100" font-size="16" font-weight="bold" fill="#c2410c">20 cm pipe (deer vitals)</text>
+<text x="142" y="140" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#fde3d3" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">9 cm high</text>
+<text x="283.12" y="172" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end" stroke="#fde3d3" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">zero 230 m</text>
+<text x="70.32" y="170" font-size="15" fill="#2f3a2b" stroke="#fde3d3" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">crosshair</text>
+<line x1="332.4" y1="196.0" x2="332.4" y2="212.0" stroke="#c0392b" stroke-width="1.6"/>
+<text x="332.4" y="230" font-size="17" font-weight="bold" fill="#c0392b" text-anchor="middle">MPBR 270 m</text>
+<line x1="30.0" y1="256.0" x2="366.0" y2="256.0" stroke="#6b5b4b" stroke-width="1.4"/>
+<line x1="30.0" y1="256.0" x2="30.0" y2="262.0" stroke="#6b5b4b" stroke-width="1.4"/>
+<text x="30" y="278" font-size="15" fill="#2f3a2b">0 m</text>
+<line x1="142.0" y1="256.0" x2="142.0" y2="262.0" stroke="#6b5b4b" stroke-width="1.4"/>
+<text x="142" y="278" font-size="15" fill="#2f3a2b" text-anchor="middle">100 m</text>
+<line x1="254.0" y1="256.0" x2="254.0" y2="262.0" stroke="#6b5b4b" stroke-width="1.4"/>
+<text x="254" y="278" font-size="15" fill="#2f3a2b" text-anchor="middle">200 m</text>
+<line x1="366.0" y1="256.0" x2="366.0" y2="262.0" stroke="#6b5b4b" stroke-width="1.4"/>
+<text x="366" y="278" font-size="15" fill="#2f3a2b" text-anchor="end">300 m</text>
+<rect x="8" y="290.0" width="384" height="57" rx="8" fill="#2f3a2b"/><text x="200" y="313.6" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">150 gr, 20 cm zone.</text><text x="200" y="334.6" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Hold centre, no hold over</text>
 </svg>
