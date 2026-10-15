@@ -1,4 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Cutaway side view of a white tailed deer facing left. Behind the front leg the chest holds the lungs, with the heart low between the front legs. A dashed curved diaphragm separates the chest from the belly. Behind it sit the dark liver, then the large rumen in the middle of the belly, then the guts toward the hind legs. The spine runs along the top." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<g opacity="1" transform="translate(14 14)"><rect x="118" y="190" width="14" height="62" rx="6" fill="#d9c7a7" stroke="#6b4f35" stroke-width="2"/><rect x="140" y="190" width="14" height="62" rx="6" fill="#d9c7a7" stroke="#6b4f35" stroke-width="2"/><rect x="300" y="190" width="14" height="62" rx="6" fill="#d9c7a7" stroke="#6b4f35" stroke-width="2"/><rect x="322" y="190" width="14" height="62" rx="6" fill="#d9c7a7" stroke="#6b4f35" stroke-width="2"/><ellipse cx="220" cy="150" rx="130" ry="58" fill="#e9dcc2" stroke="#6b4f35" stroke-width="3"/><path d="M120 112 L66 52 L88 40 L150 100 Z" fill="#e9dcc2" stroke="#6b4f35" stroke-width="3" stroke-linejoin="round"/><ellipse cx="56" cy="46" rx="28" ry="15" fill="#e9dcc2" stroke="#6b4f35" stroke-width="3"/><path d="M72 34 L84 14 L88 36 Z" fill="#e9dcc2" stroke="#6b4f35" stroke-width="2"/><circle cx="46" cy="42" r="3" fill="#23261f"/><path d="M346 128 C 362 132 366 150 360 166" fill="none" stroke="#6b4f35" stroke-width="5" stroke-linecap="round"/></g><g transform="translate(14 14)"><path d="M110 102 Q 220 86 340 112" fill="none" stroke="#23261f" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 6"/><ellipse cx="236" cy="150" rx="52" ry="44" fill="#8a9a6b"/><path d="M290 136 c 14 -8 28 4 18 16 c -10 12 14 22 24 10 c 8 -10 0 30 -16 30 c -20 2 -36 -10 -30 -26 Z" fill="#c9b79c" stroke="#6b4f35" stroke-width="1.5"/><path d="M184 118 C 200 130 204 170 190 196 L 178 196 C 190 170 186 136 176 122 Z" fill="#5c3b1c"/><path d="M176 104 C 196 130 194 176 172 204" fill="none" stroke="#23261f" stroke-width="3" stroke-dasharray="6 4"/><ellipse cx="140" cy="142" rx="34" ry="38" fill="#f2b48e" stroke="#e8590c" stroke-width="2"/><ellipse cx="136" cy="182" rx="14" ry="16" fill="#9b2c1c"/></g><text x="200" y="22" font-size="17" fill="#23261f" text-anchor="middle" font-weight="bold">Inside a white tail (left side)</text><text x="200" y="290" font-size="14" fill="#6b4f35" text-anchor="middle">Lungs fill the chest from the shoulder to the diaphragm.</text><g transform="translate(14 14)"><text x="140" y="146" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Lungs</text><text x="84" y="214" font-size="15" fill="#9b2c1c" text-anchor="end" font-weight="bold">Heart</text><line x1="86" y1="210" x2="124" y2="190" stroke="#9b2c1c" stroke-width="2"/><text x="236" y="154" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Rumen</text><text x="176" y="78" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Diaphragm</text><line x1="178" y1="82" x2="180" y2="104" stroke="#23261f" stroke-width="2"/><text x="196" y="232" font-size="14" fill="#5c3b1c" text-anchor="middle" font-weight="bold">Liver</text><line x1="194" y1="218" x2="188" y2="200" stroke="#5c3b1c" stroke-width="2"/><text x="340" y="232" font-size="14" fill="#6b4f35" text-anchor="middle" font-weight="bold">Guts</text><line x1="336" y1="218" x2="318" y2="182" stroke="#6b4f35" stroke-width="2"/><text x="260" y="84" font-size="14" fill="#23261f" text-anchor="middle">Spine</text></g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Cutaway side view of a white tailed deer facing left. Behind the front leg the chest holds the lungs, with the heart low between the front legs. A dashed curved diaphragm separates the chest from the belly. Behind it sit the dark liver, then the large rumen in the middle of the belly, then the guts toward the hind legs. The spine runs along the top. Lungs fill the chest from the shoulder to the diaphragm.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="14" y="28" font-size="18" font-weight="bold" fill="#2f3a2b">Inside a white tail (left side)</text>
+<path d="M152 176 L166 184 L164 218 L166 256 L160 260 L154 256 L152 220 L146 190z" fill="#9c7a55" stroke="#8b6a48" stroke-width="1"/>
+<path d="M282 168 L306 170 L308 212 L300 256 L294 260 L288 256 L294 218 L282 196z" fill="#9c7a55" stroke="#8b6a48" stroke-width="1"/>
+<path d="M154 256 h12 v6 h-13z M288 256 h12 v6 h-13z" fill="#2b2420"/>
+<path d="M38 100 C40 92 50 84 62 76 C68 70 76 66 84 66 C92 70 104 84 120 98 C134 108 146 108 162 106 C210 102 260 106 300 108 C320 110 334 114 338 126 C342 140 340 156 334 170 C326 182 316 186 306 186 C280 188 250 196 210 198 C180 198 156 194 142 188 C128 182 116 170 110 156 C104 140 98 126 90 116 C80 108 66 108 58 108 C50 108 42 106 38 100z" fill="#c49a6c" stroke="#8b6a48" stroke-width="1.6"/>
+<path d="M110 156 C120 176 134 188 150 192 C170 196 196 198 214 196" stroke="#f3ead8" stroke-width="5" fill="none" opacity=".7"/>
+<path d="M122 172 L146 180 L146 214 L148 256 L140 260 L134 256 L134 218 L124 192z" fill="#c49a6c" stroke="#8b6a48" stroke-width="1"/>
+<path d="M296 160 L334 164 L330 210 L322 256 L314 260 L308 256 L316 218 L298 196z" fill="#c49a6c" stroke="#8b6a48" stroke-width="1"/>
+<path d="M134 256 h14 v6 h-15z M308 256 h14 v6 h-15z" fill="#2b2420"/>
+<path d="M336 118 C346 116 352 122 350 132 C348 138 342 138 340 132z" fill="#c49a6c" stroke="#8b6a48" stroke-width="1.2"/><path d="M344 134 C346 128 346 124 344 120" stroke="#ffffff" stroke-width="2.4" fill="none"/>
+<path d="M84 68 C88 54 96 44 104 42 C106 50 100 62 92 70z" fill="#c49a6c" stroke="#8b6a48" stroke-width="1.2"/>
+<circle cx="66" cy="82" r="3" fill="#1b1b1b"/><ellipse cx="41" cy="98" rx="4" ry="3" fill="#1b1b1b"/>
+<path d="M48 104 C56 106 66 106 72 102" stroke="#f3ead8" stroke-width="3" fill="none"/>
+<path d="M126 118 C160 112 260 112 322 120 C330 140 326 166 312 178 C280 184 240 190 206 192 C178 192 150 188 136 180 C124 164 120 140 126 118z" fill="#f6e7da" stroke="#b0846a" stroke-width="1.2"/>
+<rect x="134" y="110.0" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<rect x="146" y="110.0" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<rect x="158" y="110.1" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<rect x="170" y="110.2" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<rect x="182" y="110.3" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<rect x="194" y="110.4" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<rect x="206" y="110.6" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<rect x="218" y="110.9" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<rect x="230" y="111.1" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<rect x="242" y="111.4" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<rect x="254" y="111.8" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<rect x="266" y="112.2" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<rect x="278" y="112.6" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<rect x="290" y="113.0" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<rect x="302" y="113.5" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<rect x="314" y="114.0" width="9" height="7" rx="2" fill="#efe6d2" stroke="#9c8a6a" stroke-width="1"/>
+<path d="M130 126 C150 118 190 118 214 124 C204 144 192 166 182 186 C166 188 150 186 138 180 C128 164 126 144 130 126z" fill="#e8a598" stroke="#b56a5c" stroke-width="1.4"/>
+<path d="M150 140 C162 146 176 146 190 140 M146 156 C160 162 174 162 186 156" stroke="#c9837a" stroke-width="1.2" fill="none"/>
+<path d="M148 164 C154 156 166 158 168 166 C170 176 162 184 156 190 C148 184 142 174 148 164z" fill="#9b2226" stroke="#6a1519" stroke-width="1.2"/>
+<path d="M216 126 C220 128 224 130 228 132 C218 152 206 172 196 190 C192 190 188 190 184 189 C194 168 206 146 216 126z" fill="#5a1f1a"/>
+<path d="M216 122 C204 146 194 166 182 190" stroke="#2f3a2b" stroke-width="2.4" stroke-dasharray="5 4" fill="none"/>
+<ellipse cx="266" cy="154" rx="40" ry="30" fill="#8a9a6b" stroke="#5b6b3e" stroke-width="1.4"/>
+<path d="M240 146 C252 140 268 140 282 146 M238 162 C252 168 270 168 288 160" stroke="#a7b58a" stroke-width="2" fill="none"/>
+<path d="M300 150 C300 142 316 142 316 150 C316 156 306 156 306 150" stroke="#d99a7b" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M310 164 C310 156 326 156 326 164 C326 170 316 170 316 164" stroke="#d99a7b" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M296 170 C296 162 312 162 312 170 C312 176 302 176 302 170" stroke="#d99a7b" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M288 158 C288 150 304 150 304 158 C304 164 294 164 294 158" stroke="#d99a7b" stroke-width="5" fill="none" stroke-linecap="round"/>
+<line x1="166" y1="132" x2="166" y2="71" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="166" cy="132" r="2.6" fill="#2f3a2b"/>
+<line x1="210" y1="132" x2="210" y2="71" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="210" cy="132" r="2.6" fill="#2f3a2b"/>
+<line x1="300" y1="114" x2="300" y2="71" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="300" cy="114" r="2.6" fill="#2f3a2b"/>
+<line x1="152" y1="176" x2="74.902" y2="196" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="152" cy="176" r="2.6" fill="#2f3a2b"/>
+<line x1="194" y1="180" x2="194" y2="222" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="194" cy="180" r="2.6" fill="#2f3a2b"/>
+<line x1="258" y1="172" x2="258" y2="222" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="258" cy="172" r="2.6" fill="#2f3a2b"/>
+<line x1="316" y1="168" x2="351.974" y2="186" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="316" cy="168" r="2.6" fill="#2f3a2b"/>
+<rect x="120.2" y="44.0" width="59.6" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="150" y="63" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Lungs</text>
+<rect x="179.8" y="44.0" width="92.3" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="226" y="63" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Diaphragm</text>
+<rect x="288.3" y="44.0" width="55.4" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="316" y="63" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Spine</text>
+<rect x="29.1" y="196.0" width="53.8" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="56" y="215" font-size="15" font-weight="bold" fill="#9b2226" text-anchor="middle">Heart</text>
+<rect x="169.7" y="222.0" width="52.5" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="196" y="241" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Liver</text>
+<rect x="215.6" y="222.0" width="64.7" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="248" y="241" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Rumen</text>
+<rect x="344.0" y="186.0" width="48.0" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="367.987" y="205" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Guts</text>
+<text x="200" y="288" font-size="14" fill="#2f3a2b" text-anchor="middle">Lungs fill the chest from the shoulder to the diaphragm.</text>
 </svg>

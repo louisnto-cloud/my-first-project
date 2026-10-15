@@ -1,31 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, side view at dawn. A draw lies between two slopes. Deer are on a bench on the right slope. The hunter walks up the left slope to a knob across the draw, 300 to 800 metres from the bench. Morning thermals rise up each slope, so the hunter's scent drifts up their own slope and away from the deer.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <path d="M0 80 L60 70 L110 110 L190 250 L210 250 L290 150 L330 150 L345 130 L400 60 L400 300 L0 300 Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
-  <path d="M190 250 L210 250" stroke="#4a7fb0" stroke-width="5"/>
-  <text x="200" y="276" font-size="14" fill="#4a7fb0" text-anchor="middle">draw</text>
-  <text x="310" y="176" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">bench</text>
-  <g transform="translate(312 141)"><ellipse rx="12" ry="6" fill="#8b5a2b"/><circle cx="10" cy="-7" r="5" fill="#8b5a2b"/></g>
-  <g stroke="#4a7fb0" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85">
-    <path d="M150 200 l-26 -40 m4 12 l-4 -12 l12 4"><animateTransform attributeName="transform" type="translate" values="0 0;-10 -16;0 0" dur="2s" repeatCount="indefinite"/></path>
-    <path d="M250 200 l26 -40 m-12 4 l12 -4 l-4 12"><animateTransform attributeName="transform" type="translate" values="0 0;10 -16;0 0" dur="2s" begin=".5s" repeatCount="indefinite"/></path>
-    <path d="M370 110 l14 -26 m-10 4 l10 -4 l-1 10"><animateTransform attributeName="transform" type="translate" values="0 0;6 -12;0 0" dur="2s" begin=".9s" repeatCount="indefinite"/></path>
-  </g>
-  <text x="200" y="24" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Morning: air rises up each slope</text>
-  <path id="hf-glass-point-path" d="M150 200 L120 150 L100 112 L62 72" fill="none" stroke="#e8590c" stroke-width="2" stroke-dasharray="5 5"/>
-  <g>
-    <path d="M0 0 L-24 -50 L16 -54 Z" fill="#e8590c" opacity=".18"/>
-    <circle r="8" fill="#e8590c"/>
-    <animateMotion dur="4s" fill="freeze"><mpath href="#hf-glass-point-path"/></animateMotion>
-  </g>
-  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="4s" dur=".5s" fill="freeze"/>
-    <path d="M70 60 L300 120" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="3 5"/>
-    <rect x="120" y="58" width="130" height="24" rx="6" fill="#2f3a2b"/>
-    <text x="185" y="75" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">300 to 800 m</text>
-    <text x="12" y="56" font-size="14" font-weight="bold" fill="#e8590c">Your knob</text>
-  </g>
-  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="5.5s" dur=".5s" fill="freeze"/>
-    <rect x="12" y="200" width="160" height="52" rx="8" fill="#2f3a2b"/>
-    <text x="92" y="222" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Scent goes up your</text>
-    <text x="92" y="240" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">slope, not to deer</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, side view at dawn. A draw with a creek lies between two slopes. Deer are on a bench on the right slope. The hunter walks up the left slope to a knob across the draw, 300 to 800 metres from the bench. Morning thermals rise up each slope, so the hunter&#x27;s scent drifts up their own slope, not to the deer.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<rect x="0" y="0" width="400" height="300" fill="#f6e9da"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#2c5d86" text-anchor="middle" stroke="#f6e9da" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Morning: air rises up each slope</text>
+<path d="M0 86 C20 76 44 68 62 70 C80 72 96 90 110 112 L180 236 C188 250 212 250 220 236 L286 152 L336 150 L352 128 L400 64 L400 300 L0 300z" fill="#cfd8bd" stroke="#7d8d5c" stroke-width="2"/>
+<path d="M286 152 L336 150 L332 158 L290 160z" fill="#e6dcae"/>
+<path d="M186 244 C194 250 206 250 214 244" stroke="#4a7fb0" stroke-width="5" fill="none" stroke-linecap="round"/>
+<rect x="166.5" y="222.0" width="3" height="5" fill="#5a3d22"/><path d="M168.0 204.0 L173.1 213.9 L170.8 213.9 L177.2 223.0 L158.8 223.0 L165.2 213.9 L162.9 213.9z" fill="#4f6b3c"/>
+<rect x="230.5" y="218.0" width="3" height="5" fill="#5a3d22"/><path d="M232.0 198.0 L237.5 208.8 L235.0 208.8 L242.1 219.0 L221.9 219.0 L229.0 208.8 L226.5 208.8z" fill="#4f6b3c"/>
+<rect x="244.5" y="200.0" width="3" height="5" fill="#5a3d22"/><path d="M246.0 182.0 L251.1 191.9 L248.8 191.9 L255.2 201.0 L236.8 201.0 L243.2 191.9 L240.9 191.9z" fill="#4f6b3c"/>
+<rect x="152.5" y="200.0" width="3" height="5" fill="#5a3d22"/><path d="M154.0 184.0 L158.6 193.0 L156.5 193.0 L162.4 201.0 L145.6 201.0 L151.5 193.0 L149.4 193.0z" fill="#4f6b3c"/>
+<rect x="370.5" y="104.0" width="3" height="5" fill="#5a3d22"/><path d="M372.0 84.0 L377.5 94.8 L375.0 94.8 L382.1 105.0 L361.9 105.0 L369.0 94.8 L366.5 94.8z" fill="#4f6b3c"/>
+<rect x="386.5" y="88.0" width="3" height="5" fill="#5a3d22"/><path d="M388.0 70.0 L393.1 79.9 L390.8 79.9 L397.2 89.0 L378.8 89.0 L385.2 79.9 L382.9 79.9z" fill="#4f6b3c"/>
+<g transform="translate(304 152) scale(0.75 0.75)"><path d="M-8 -18 L-10 0 M-4 -18 L-3 0 M12 -18 L13 0 M16 -18 L18 0" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/><path d="M-12 -28 C-12 -34 -4 -34 6 -34 C14 -34 20 -32 20 -26 C20 -20 16 -17 8 -17 L-6 -17 C-10 -17 -12 -21 -12 -28z" fill="#9a7350"/><path d="M-10 -30 L-16 -42 L-12 -44 L-6 -32z" fill="#9a7350"/><path d="M-16 -42 C-20 -43 -24 -40 -24 -38 L-20 -37 C-17 -37 -14 -39 -13 -41z" fill="#9a7350"/><path d="M-14 -44 L-18 -50 L-12 -45z M-12 -44 L-9 -50 L-10 -44z" fill="#9a7350"/><ellipse cx="18" cy="-27" rx="3" ry="4" fill="#f3ead8"/><circle cx="-18" cy="-41" r=".9" fill="#111"/></g><g transform="translate(322 151) scale(0.7 0.7)"><path d="M-8 -18 L-10 0 M-4 -18 L-3 0 M12 -18 L13 0 M16 -18 L18 0" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/><path d="M-12 -28 C-12 -34 -4 -34 6 -34 C14 -34 20 -32 20 -26 C20 -20 16 -17 8 -17 L-6 -17 C-10 -17 -12 -21 -12 -28z" fill="#9a7350"/><path d="M-10 -30 L-16 -42 L-12 -44 L-6 -32z" fill="#9a7350"/><path d="M-16 -42 C-20 -43 -24 -40 -24 -38 L-20 -37 C-17 -37 -14 -39 -13 -41z" fill="#9a7350"/><path d="M-14 -44 L-18 -50 L-12 -45z M-12 -44 L-9 -50 L-10 -44z" fill="#9a7350"/><ellipse cx="18" cy="-27" rx="3" ry="4" fill="#f3ead8"/><circle cx="-18" cy="-41" r=".9" fill="#111"/></g>
+<path d="M146 196 l-24 -38 m4 12 l-4 -12 l12 4" stroke="#4a7fb0" stroke-width="3.2" fill="none" stroke-linecap="round" opacity=".9"><animateTransform attributeName="transform" type="translate" values="0 0;-10 -16;0 0" dur="2s" begin="0s" repeatCount="indefinite"/></path>
+<path d="M252 196 l24 -38 m-12 4 l12 -4 l-4 12" stroke="#4a7fb0" stroke-width="3.2" fill="none" stroke-linecap="round" opacity=".9"><animateTransform attributeName="transform" type="translate" values="0 0;10 -16;0 0" dur="2s" begin=".5s" repeatCount="indefinite"/></path>
+<path d="M368 112 l14 -26 m-10 4 l10 -4 l-1 10" stroke="#4a7fb0" stroke-width="3.2" fill="none" stroke-linecap="round" opacity=".9"><animateTransform attributeName="transform" type="translate" values="0 0;6 -12;0 0" dur="2s" begin=".9s" repeatCount="indefinite"/></path>
+<path id="hf-glass-point-path" d="M150 202 L122 152 L100 112 L66 76" fill="none" stroke="#e8590c" stroke-width="2" stroke-dasharray="5 5"/>
+<g><path d="M0 -6 L-26 -54 L14 -58z" fill="#e8590c" opacity=".16"/><path d="M-2 -10 L-4 0 M2 -10 L4 0" stroke="#4a4136" stroke-width="3" stroke-linecap="round"/><path d="M-4 -22 C-4 -25 4 -25 4 -22 L4 -10 H-4z" fill="#e8590c"/><circle cx="0" cy="-26" r="3.6" fill="#e0b48c"/><animateMotion dur="4s" fill="freeze"><mpath href="#hf-glass-point-path"/></animateMotion></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="4s" dur=".5s" fill="freeze"/><path d="M72 70 L300 136" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="3 5"/><rect x="175.9" y="80.0" width="120.1" height="29.0" rx="5" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="1.2"/>
+<text x="236" y="100.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">300 to 800 m</text><rect x="92.0" y="36.0" width="93.4" height="29.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="138.718" y="56.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Your knob</text></g>
+<rect x="287.3" y="182.0" width="57.3" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="316" y="201" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">bench</text>
+<rect x="174.5" y="260.0" width="50.9" height="27.0" rx="5" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.2"/>
+<text x="200" y="279" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">draw</text>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="5.5s" dur=".5s" fill="freeze"/><rect x="10" y="214" width="146" height="62" rx="8" fill="#2f3a2b"/><text x="83" y="238" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Scent goes up</text><text x="83" y="260" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">your slope</text></g>
 </svg>

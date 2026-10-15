@@ -1,14 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Top view of two hunters in one hide facing the water. You take the zone left of centre, your brother takes the zone right of centre. A red no swing line runs down the middle: never swing past your partner or shoot across them.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <rect x="0" y="0" width="400" height="220" fill="#cfe0ea"/><rect x="0" y="220" width="400" height="80" fill="#c9b79c"/>
-  <path d="M200 236 L20 40 L200 40 Z" fill="#4a7fb0" opacity=".35"/>
-  <path d="M200 236 L380 40 L200 40 Z" fill="#e8590c" opacity=".3"/>
-  <line x1="200" y1="236" x2="200" y2="30" stroke="#c0392b" stroke-width="5" stroke-dasharray="10 6"/>
-  <rect x="140" y="232" width="120" height="30" rx="6" fill="#2f3a2b"/>
-  <circle cx="175" cy="247" r="9" fill="#4a7fb0"/><circle cx="225" cy="247" r="9" fill="#e8590c"/>
-  <text x="90" y="120" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Your side</text>
-  <text x="310" y="120" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">His side</text>
-  <rect x="140" y="16" width="120" height="26" rx="6" fill="#c0392b"/>
-  <text x="200" y="34" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">never swing past</text>
-  <text x="200" y="288" font-size="14" fill="#2f3a2b" text-anchor="middle">One calls the shot: "Take them." (Tip)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Top view of two hunters in one hide facing the water. You take the zone left of centre, your brother takes the zone right of centre. A red no swing line runs down the middle: never swing past your partner or shoot across them. Tip: one calls the shot, &quot;Take them.&quot;">
+<rect width="400" height="300" fill="#fffaf0"/>
+<rect x="0" y="0" width="400" height="214" fill="#cfe0ea"/>
+<rect x="0" y="214" width="400" height="86" fill="#c9b79c"/>
+<path d="M6 216 l-3 -12 M11 216 l1 -14 M15 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M20 216 l-3 -12 M25 216 l1 -14 M29 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M34 216 l-3 -12 M39 216 l1 -14 M43 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M48 216 l-3 -12 M53 216 l1 -14 M57 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M62 216 l-3 -12 M67 216 l1 -14 M71 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M76 216 l-3 -12 M81 216 l1 -14 M85 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M90 216 l-3 -12 M95 216 l1 -14 M99 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M104 216 l-3 -12 M109 216 l1 -14 M113 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M118 216 l-3 -12 M123 216 l1 -14 M127 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M132 216 l-3 -12 M137 216 l1 -14 M141 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M146 216 l-3 -12 M151 216 l1 -14 M155 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M160 216 l-3 -12 M165 216 l1 -14 M169 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M174 216 l-3 -12 M179 216 l1 -14 M183 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M188 216 l-3 -12 M193 216 l1 -14 M197 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M202 216 l-3 -12 M207 216 l1 -14 M211 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M216 216 l-3 -12 M221 216 l1 -14 M225 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M230 216 l-3 -12 M235 216 l1 -14 M239 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M244 216 l-3 -12 M249 216 l1 -14 M253 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M258 216 l-3 -12 M263 216 l1 -14 M267 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M272 216 l-3 -12 M277 216 l1 -14 M281 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M286 216 l-3 -12 M291 216 l1 -14 M295 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M300 216 l-3 -12 M305 216 l1 -14 M309 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M314 216 l-3 -12 M319 216 l1 -14 M323 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M328 216 l-3 -12 M333 216 l1 -14 M337 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M342 216 l-3 -12 M347 216 l1 -14 M351 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M356 216 l-3 -12 M361 216 l1 -14 M365 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M370 216 l-3 -12 M375 216 l1 -14 M379 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M384 216 l-3 -12 M389 216 l1 -14 M393 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M398 216 l-3 -12 M403 216 l1 -14 M407 216 l4 -11" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M200 226 L18 34 L200 34 Z" fill="#4a7fb0" opacity=".35"/>
+<path d="M200 226 L382 34 L200 34 Z" fill="#e8590c" opacity=".3"/>
+<line x1="200" y1="226" x2="200" y2="46" stroke="#c0392b" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="122" y="92" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Your side</text><text x="278" y="92" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">His side</text>
+<rect x="132" y="222" width="136" height="38" rx="8" fill="#6b5b3b" stroke="#3d3420" stroke-width="1.5"/>
+<ellipse cx="172" cy="246" rx="15" ry="9" fill="#4a7fb0"/><circle cx="172" cy="242" r="8" fill="#e8590c" stroke="#fff" stroke-width="1.5"/><path d="M178 240 L182 218" stroke="#3b2a1a" stroke-width="3" stroke-linecap="round"/><ellipse cx="228" cy="246" rx="15" ry="9" fill="#5d6b45"/><circle cx="228" cy="242" r="8" fill="#e8590c" stroke="#fff" stroke-width="1.5"/><path d="M234 240 L238 218" stroke="#3b2a1a" stroke-width="3" stroke-linecap="round"/>
+<text x="84" y="250" font-size="16" font-weight="bold" fill="#2c5d8a" text-anchor="middle">You</text><text x="320" y="250" font-size="16" font-weight="bold" fill="#4f6d2f" text-anchor="middle">Brother</text>
+<rect x="138" y="8" width="124" height="28" rx="7" fill="#c0392b"/><text x="200" y="27" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">never swing past</text>
+<text x="200" y="288" font-size="15.5" font-weight="bold" fill="#2f3a2b" text-anchor="middle">One calls the shot: &quot;Take them.&quot; (Tip)</text>
 </svg>

@@ -1,11 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Two panels. Dry fall: one water source with trails from every side leading to it. Wet fall: puddles and pools everywhere, so sit food and cover instead. Caption: water stands work best in a dry spell, a tip.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Dry fall vs wet fall</text>
-  <rect x="6" y="40" width="190" height="220" rx="8" fill="#e6d8b3"/><rect x="204" y="40" width="190" height="220" rx="8" fill="#dfe6d3"/>
-  <circle cx="101" cy="170" r="18" fill="#4a7fb0"/>
-  <path d="M30 70 L92 160 M170 70 L112 160 M30 250 L90 182 M172 250 L112 182" stroke="#8b5a2b" stroke-width="2.5" stroke-dasharray="3 5"/>
-  <text x="101" y="62" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dry: few sources</text><text x="101" y="236" font-size="13" fill="#2f3a2b" text-anchor="middle">trails lead to it</text>
-  <circle cx="240" cy="90" r="8" fill="#4a7fb0"/><circle cx="350" cy="110" r="10" fill="#4a7fb0"/><circle cx="300" cy="180" r="9" fill="#4a7fb0"/><circle cx="250" cy="220" r="7" fill="#4a7fb0"/><circle cx="360" cy="230" r="8" fill="#4a7fb0"/>
-  <text x="299" y="62" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Wet: water everywhere</text><text x="299" y="252" font-size="13" fill="#2f3a2b" text-anchor="middle">sit food and cover instead</text>
-  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Water stands work best in a dry spell (Tip)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 296" font-family="sans-serif" role="img" aria-label="Two panels from above. Dry fall: few sources, one water hole with trails from every side leading to it. Wet fall: puddles and pools everywhere, so sit food and cover instead. Tip: water stands work best in a dry spell.">
+<rect width="400" height="296" fill="#fffaf0"/>
+<text x="200" y="24" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dry fall vs wet fall</text>
+<rect x="8" y="38" width="188" height="208" rx="8" fill="#e6d3a7"/>
+<path d="M20 80 l14 6 l8 -4" stroke="#c9b07c" stroke-width="1.6" fill="none"/>
+<path d="M150 214 l10 -8 l12 4" stroke="#c9b07c" stroke-width="1.6" fill="none"/>
+<path d="M160 90 l10 8 l-4 8" stroke="#c9b07c" stroke-width="1.6" fill="none"/>
+<path d="M8 120 Q50 128 102 150" stroke="#8b6a3e" stroke-width="2.4" fill="none" stroke-dasharray="5 4"/>
+<path d="M110 72 Q96 110 102 150" stroke="#8b6a3e" stroke-width="2.4" fill="none" stroke-dasharray="5 4"/>
+<path d="M196 118 Q150 140 102 150" stroke="#8b6a3e" stroke-width="2.4" fill="none" stroke-dasharray="5 4"/>
+<path d="M190 244 Q140 190 102 150" stroke="#8b6a3e" stroke-width="2.4" fill="none" stroke-dasharray="5 4"/>
+<ellipse cx="102" cy="150" rx="26" ry="15" fill="#4a7fb0" stroke="#2c5d8a" stroke-width="1.5"/>
+<text x="102" y="60" font-size="16" font-weight="bold" fill="#6b4f35" text-anchor="middle">Dry: few sources</text>
+<rect x="14.0" y="188.0" width="88.2" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="58.0755" y="207" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">trails lead</text>
+<text x="58.0755" y="225" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">to it</text>
+<g transform="translate(150 158) scale(0.75 0.75)"><path d="M-8 -18 L-10 0 M-4 -18 L-3 0 M12 -18 L13 0 M16 -18 L18 0" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/><path d="M-12 -28 C-12 -34 -4 -34 6 -34 C14 -34 20 -32 20 -26 C20 -20 16 -17 8 -17 L-6 -17 C-10 -17 -12 -21 -12 -28z" fill="#9a7350"/><path d="M-10 -30 L-16 -42 L-12 -44 L-6 -32z" fill="#9a7350"/><path d="M-16 -42 C-20 -43 -24 -40 -24 -38 L-20 -37 C-17 -37 -14 -39 -13 -41z" fill="#9a7350"/><path d="M-14 -44 L-18 -50 L-12 -45z M-12 -44 L-9 -50 L-10 -44z" fill="#9a7350"/><ellipse cx="18" cy="-27" rx="3" ry="4" fill="#f3ead8"/><circle cx="-18" cy="-41" r=".9" fill="#111"/></g>
+<rect x="204" y="38" width="188" height="208" rx="8" fill="#d3e0c2"/>
+<ellipse cx="234" cy="92" rx="12" ry="7" fill="#4a7fb0" opacity=".85"/>
+<ellipse cx="344" cy="84" rx="16" ry="9" fill="#4a7fb0" opacity=".85"/>
+<ellipse cx="290" cy="128" rx="10" ry="6" fill="#4a7fb0" opacity=".85"/>
+<ellipse cx="372" cy="140" rx="9" ry="6" fill="#4a7fb0" opacity=".85"/>
+<ellipse cx="226" cy="150" rx="14" ry="8" fill="#4a7fb0" opacity=".85"/>
+<ellipse cx="318" cy="166" rx="16" ry="8" fill="#4a7fb0" opacity=".85"/>
+<ellipse cx="222" cy="214" rx="9" ry="5" fill="#4a7fb0" opacity=".85"/>
+<ellipse cx="376" cy="210" rx="10" ry="6" fill="#4a7fb0" opacity=".85"/>
+<text x="298" y="60" font-size="16" font-weight="bold" fill="#2c5d8a" text-anchor="middle">Wet: water everywhere</text>
+<rect x="241.1" y="194.0" width="113.8" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="298" y="213" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">sit food and</text>
+<text x="298" y="231" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">cover instead</text>
+<rect x="8" y="256" width="384" height="32" rx="8" fill="#2f3a2b"/><text x="200" y="277" font-size="15.5" font-weight="bold" fill="#fffaf0" text-anchor="middle">Water stands work best in a dry spell (Tip)</text>
 </svg>
