@@ -1,10 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Three overlapping circles: bench, edge, and water. Where all three overlap is the star spot to mark on your map.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <circle cx="150" cy="120" r="85" fill="#8a9a6b" opacity=".45"/>
-  <circle cx="250" cy="120" r="85" fill="#8b5a2b" opacity=".35"/>
-  <circle cx="200" cy="200" r="85" fill="#4a7fb0" opacity=".4"/>
-  <g font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="110" y="95">Bench</text><text x="290" y="95">Edge</text><text x="200" y="262">Water</text></g>
-  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="110" y="114">flat step</text><text x="290" y="114">open meets cover</text><text x="200" y="280">pond, spring, creek</text></g>
-  <polygon points="200,128 207,146 226,146 211,157 217,176 200,165 183,176 189,157 174,146 193,146" fill="#e8590c"/>
-  <text x="200" y="22" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Mark spots with all three (Tip)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Three overlapping circles: bench, a flat step; edge, where open meets cover; and water, a pond, spring or creek. Where all three overlap is the star spot to mark on your map. Tip.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="17" font-weight="bold" fill="#e8590c" text-anchor="middle">Mark spots with all three (Tip)</text>
+<circle cx="146" cy="116" r="84" fill="#8a9a6b" opacity=".45"/>
+<circle cx="254" cy="116" r="84" fill="#8b5a2b" opacity=".35"/>
+<circle cx="200" cy="202" r="84" fill="#4a7fb0" opacity=".4"/>
+<text x="104" y="96" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bench</text><text x="104" y="116" font-size="15" fill="#2f3a2b" text-anchor="middle">flat step</text>
+<text x="296" y="96" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Edge</text><text x="298" y="116" font-size="15" fill="#2f3a2b" text-anchor="middle">open meets</text><text x="298" y="134" font-size="15" fill="#2f3a2b" text-anchor="middle">cover</text>
+<text x="200" y="232" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Water</text><text x="200" y="252" font-size="15" fill="#2f3a2b" text-anchor="middle">pond, spring,</text><text x="200" y="269" font-size="15" fill="#2f3a2b" text-anchor="middle">creek</text>
+<polygon points="200.0,128.0 205.0,141.1 219.0,141.8 208.1,150.6 211.8,164.2 200.0,156.5 188.2,164.2 191.9,150.6 181.0,141.8 195.0,141.1" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/>
 </svg>

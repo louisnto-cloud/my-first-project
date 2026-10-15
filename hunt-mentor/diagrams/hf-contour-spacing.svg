@@ -25,8 +25,7 @@
 <rect x="0" y="192" width="400" height="118" fill="#f6f1e2"/>
 <ellipse cx="195.0" cy="250" rx="152.2" ry="56.0" fill="none" stroke="#9a6a3a" stroke-width="1.5"/>
 <ellipse cx="181.6" cy="250" rx="121.7" ry="44.8" fill="none" stroke="#9a6a3a" stroke-width="1.5"/>
-<ellipse cx="168.2" cy="250" rx="91.3" ry="33.6" fill="none" stroke="#9a6a3a" stroke-width="3.2"/>
-<rect x="249.5" y="228.0" width="20" height="44" fill="#f6f1e2"/>
+<path d="M232.1 274.0 A91.3 33.6 0 1 1 232.1 226.0" fill="none" stroke="#9a6a3a" stroke-width="3.2"/>
 <text x="265.5" y="250.0" font-size="16" font-weight="bold" fill="#9a6a3a" text-anchor="middle" transform="rotate(-90 265.5 250.0)">1200</text>
 <ellipse cx="154.8" cy="250" rx="60.9" ry="22.4" fill="none" stroke="#9a6a3a" stroke-width="1.5"/>
 <ellipse cx="141.4" cy="250" rx="30.4" ry="11.2" fill="none" stroke="#9a6a3a" stroke-width="1.5"/>
