@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 417" font-family="sans-serif" role="img" aria-label="Animation: a red line for today walks through the Region 6 licence year from July to June. Wolf in all Management Units, 6-1 to 6-30: 1 August to 15 June. Black bear on the mainland, 6-1 to 6-11 and 6-14 to 6-30: 15 August to 30 November and 1 April to 30 June. Grouse on the mainland: bow only 1 to 9 September, then 10 September to 15 November. Ducks in the inland units: 1 September to 30 November. Ducks in 6-3 and 6-11 to 6-14: 1 October to 15 January. At the end every season shows.">
-<rect width="400" height="417" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 433" font-family="sans-serif" role="img" aria-label="Animation: a red line for today walks through the Region 6 licence year from July to June. Wolf in all Management Units, 6-1 to 6-30: 1 August to 15 June. Black bear on the mainland, 6-1 to 6-11 and 6-14 to 6-30: 15 August to 30 November and 1 April to 30 June. Grouse on the mainland: bow only 1 to 9 September, then 10 September to 15 November. Ducks in the inland units: 1 September to 30 November. Ducks in 6-3 and 6-11 to 6-14: 1 October to 15 January. At the end every season shows.">
+<rect width="400" height="433" fill="#fffaf0"/>
 <text x="29.8" y="26" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
 <text x="61.4" y="26" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
 <text x="92.5" y="26" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">S</text>
@@ -96,6 +96,6 @@
 <text x="171.12" y="357" font-size="14" fill="#2f3a2b">Bow only</text>
 <rect x="249.88" y="345" width="14" height="14" rx="3" fill="#4a7fb0"/>
 <text x="269.88" y="357" font-size="14" fill="#2f3a2b">Ducks</text>
-<text x="14" y="372" font-size="15" font-weight="bold" fill="#c92a2a">Red line: today. A bar lights up when it is open.</text>
-<text x="14" y="393" font-size="14" fill="#6b5b4b">At the end every season shows.</text>
+<text x="14" y="388" font-size="15" font-weight="bold" fill="#c92a2a">Red line: today. A bar lights up when it is open.</text>
+<text x="14" y="409" font-size="14" fill="#6b5b4b">At the end every season shows.</text>
 </svg>

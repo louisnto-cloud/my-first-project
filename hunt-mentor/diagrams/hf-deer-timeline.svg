@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 374" font-family="sans-serif" role="img" aria-label="Deer hunt day timeline. Night before: check legal light, wind, MU (Management Unit) rules, closures, pack. Sunrise minus 90 minutes: leave, rifles unloaded and cased. Sunrise minus 60 minutes, legal light starts: sit at the first glassing spot, load only when ready. First 3 hours: glass, barely walk. Mid morning: walk slowly into the wind, eat. Midday: move spots, scout benches. Sunset minus 3 hours: back on a glassing spot where deer feed. Sunset plus 60 minutes: legal light ends, unload, walk out with headlamps. A bracket marks legal light from sunrise minus 60 to sunset plus 60.">
 <rect width="400" height="374" fill="#fffaf0"/>
 <line x1="26" y1="32" x2="26" y2="340" stroke="#8a9a6b" stroke-width="4"/>
-<path d="M372 120 H384 V188 M384 272 V340 H372" fill="none" stroke="#e8590c" stroke-width="2.6"/>
-<text transform="translate(389 230) rotate(90)" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle" >Legal light</text>
+<path d="M368 120 H380 V188 M380 272 V340 H368" fill="none" stroke="#e8590c" stroke-width="2.6"/>
+<text transform="translate(381 230) rotate(90)" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle" >Legal light</text>
 <circle cx="26" cy="32" r="8" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/>
 <text x="46" y="29" font-size="16" font-weight="bold" fill="#2f3a2b">Night before</text>
 <text x="46" y="48" font-size="15" fill="#2f3a2b">legal light, wind, MU, closures</text>
