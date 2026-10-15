@@ -1,67 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 618" role="img" aria-label="Tiles of bag limits from the Region 1 season table. Mountain goat 1, black bear 2, wolf 3, cougar 2, raccoon 10, snowshoe hare 10 a day. No bag limit for fallow deer, turkey, opossum and skunk. Birds, as a day then possession: each grouse kind 5 (15), ptarmigan 5 (15), California quail 5 (15), pheasant 2 (6), band tailed pigeons 5 (15), ducks 8 (24), Canada and cackling geese 10 (30), snow, Ross&#x27;s and white fronted geese 5 (15), snipe and coots 10 (30)." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="618" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Bag limits from the season table</text>
-<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">NBL: No Bag Limit. 5 (15): 5 a day, 15 in</text>
-<text x="200" y="64" font-size="14" fill="#6b6f66" text-anchor="middle">possession.</text>
-<rect x="6" y="80" width="124" height="66" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<text x="68" y="114" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">1</text>
-<text x="68" y="136" font-size="14" fill="#23261f" text-anchor="middle">mountain goat</text>
-<rect x="138" y="80" width="124" height="66" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<text x="200" y="114" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">2</text>
-<text x="200" y="136" font-size="14" fill="#23261f" text-anchor="middle">black bear</text>
-<rect x="270" y="80" width="124" height="66" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<text x="332" y="114" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">3</text>
-<text x="332" y="136" font-size="14" fill="#23261f" text-anchor="middle">wolf</text>
-<rect x="6" y="154" width="124" height="84" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<text x="68" y="188" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">2</text>
-<text x="68" y="210" font-size="14" fill="#23261f" text-anchor="middle">cougar</text>
-<rect x="138" y="154" width="124" height="84" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<text x="200" y="188" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">10</text>
-<text x="200" y="210" font-size="14" fill="#23261f" text-anchor="middle">raccoon</text>
-<rect x="270" y="154" width="124" height="84" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<text x="332" y="188" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">10</text>
-<text x="332" y="210" font-size="14" fill="#23261f" text-anchor="middle">snowshoe hare a</text>
-<text x="332" y="228" font-size="14" fill="#23261f" text-anchor="middle">day</text>
-<rect x="6" y="246" width="124" height="66" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
-<text x="68" y="280" font-size="26" fill="#8b5a2b" text-anchor="middle" font-weight="bold">NBL</text>
-<text x="68" y="302" font-size="14" fill="#23261f" text-anchor="middle">fallow deer</text>
-<rect x="138" y="246" width="124" height="66" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
-<text x="200" y="280" font-size="26" fill="#8b5a2b" text-anchor="middle" font-weight="bold">NBL</text>
-<text x="200" y="302" font-size="14" fill="#23261f" text-anchor="middle">turkey</text>
-<rect x="270" y="246" width="124" height="66" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
-<text x="332" y="280" font-size="26" fill="#8b5a2b" text-anchor="middle" font-weight="bold">NBL</text>
-<text x="332" y="302" font-size="14" fill="#23261f" text-anchor="middle">opossum, skunk</text>
-<rect x="6" y="320" width="124" height="84" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
-<text x="68" y="354" font-size="26" fill="#8a9a6b" text-anchor="middle" font-weight="bold">5 (15)</text>
-<text x="68" y="376" font-size="14" fill="#23261f" text-anchor="middle">each grouse</text>
-<text x="68" y="394" font-size="14" fill="#23261f" text-anchor="middle">kind</text>
-<rect x="138" y="320" width="124" height="84" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
-<text x="200" y="354" font-size="26" fill="#8a9a6b" text-anchor="middle" font-weight="bold">5 (15)</text>
-<text x="200" y="376" font-size="14" fill="#23261f" text-anchor="middle">ptarmigan</text>
-<rect x="270" y="320" width="124" height="84" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
-<text x="332" y="354" font-size="26" fill="#8a9a6b" text-anchor="middle" font-weight="bold">5 (15)</text>
-<text x="332" y="376" font-size="14" fill="#23261f" text-anchor="middle">California</text>
-<text x="332" y="394" font-size="14" fill="#23261f" text-anchor="middle">quail</text>
-<rect x="6" y="412" width="124" height="84" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
-<text x="68" y="446" font-size="26" fill="#8a9a6b" text-anchor="middle" font-weight="bold">2 (6)</text>
-<text x="68" y="468" font-size="14" fill="#23261f" text-anchor="middle">pheasant</text>
-<rect x="138" y="412" width="124" height="84" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
-<text x="200" y="446" font-size="26" fill="#8a9a6b" text-anchor="middle" font-weight="bold">5 (15)</text>
-<text x="200" y="468" font-size="14" fill="#23261f" text-anchor="middle">band tailed</text>
-<text x="200" y="486" font-size="14" fill="#23261f" text-anchor="middle">pigeons</text>
-<rect x="270" y="412" width="124" height="84" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<text x="332" y="446" font-size="26" fill="#4a7fb0" text-anchor="middle" font-weight="bold">8 (24)</text>
-<text x="332" y="468" font-size="14" fill="#23261f" text-anchor="middle">ducks</text>
-<rect x="6" y="504" width="124" height="102" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<text x="68" y="538" font-size="18" fill="#4a7fb0" text-anchor="middle" font-weight="bold">10 (30)</text>
-<text x="68" y="560" font-size="14" fill="#23261f" text-anchor="middle">Canada and</text>
-<text x="68" y="578" font-size="14" fill="#23261f" text-anchor="middle">cackling geese</text>
-<rect x="138" y="504" width="124" height="102" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<text x="200" y="538" font-size="26" fill="#4a7fb0" text-anchor="middle" font-weight="bold">5 (15)</text>
-<text x="200" y="560" font-size="14" fill="#23261f" text-anchor="middle">snow, Ross&#x27;s,</text>
-<text x="200" y="578" font-size="14" fill="#23261f" text-anchor="middle">white fronted</text>
-<text x="200" y="596" font-size="14" fill="#23261f" text-anchor="middle">geese</text>
-<rect x="270" y="504" width="124" height="102" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<text x="332" y="538" font-size="18" fill="#4a7fb0" text-anchor="middle" font-weight="bold">10 (30)</text>
-<text x="332" y="560" font-size="14" fill="#23261f" text-anchor="middle">snipe, coots</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 814" font-family="sans-serif" role="img" aria-label="Bag limits from the Region 1 season table, page 21. NBL means No Bag Limit; 5 (15) means 5 a day and 15 in possession. Mountain goat 1, black bear 2, cougar 2, wolf 3, raccoon 10, snowshoe hare 10 a day. No bag limit for fallow deer, opossum, skunk and turkey. Grouse, sooty (blue) and ruffed: 5 each (15 each). Ptarmigan, California quail and band tailed pigeons 5 (15). Pheasant 2 (6). Ducks 8 (24). Canada and cackling geese, snipe and coots 10 (30). Snow, Ross&#x27;s and white fronted geese 5 (15).">
+<rect width="400" height="814" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Page 21. NBL: No Bag Limit. 5 (15): 5 a day, 15 in</text>
+<text x="14" y="42" font-size="14" font-weight="bold" fill="#6b5b4b">possession.</text>
+<text x="14" y="68" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">MAMMALS</text>
+<line x1="119" y1="63" x2="392" y2="63" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="78" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="108.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">1</text>
+<text x="130" y="105.5" font-size="16" fill="#2f3a2b">Mountain goat</text>
+<text x="64" y="154.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">2</text>
+<text x="130" y="151.5" font-size="16" fill="#2f3a2b">Black bear, cougar</text>
+<rect x="8" y="170" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="200.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">3</text>
+<text x="130" y="197.5" font-size="16" fill="#2f3a2b">Wolf</text>
+<text x="64" y="246.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">10</text>
+<text x="130" y="243.5" font-size="16" fill="#2f3a2b">Raccoon</text>
+<rect x="8" y="262" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="292.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">10 a day</text>
+<text x="130" y="289.5" font-size="16" fill="#2f3a2b">Snowshoe hare</text>
+<text x="64" y="338.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">NBL</text>
+<text x="130" y="335.5" font-size="16" fill="#2f3a2b">Fallow deer, opossum, skunk</text>
+<text x="14" y="380" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">UPLAND BIRDS</text>
+<line x1="155" y1="375" x2="392" y2="375" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="390" width="384" height="52" rx="6" fill="#f4eedf"/>
+<text x="64" y="413" font-size="20" font-weight="bold" fill="#8b5a2b" text-anchor="middle">5 each</text>
+<text x="64" y="433" font-size="17" font-weight="bold" fill="#8b5a2b" text-anchor="middle">(15 each)</text>
+<text x="130" y="421.5" font-size="16" fill="#2f3a2b">Grouse: sooty (blue) and ruffed</text>
+<text x="64" y="481.6" font-size="24" font-weight="bold" fill="#8b5a2b" text-anchor="middle">5 (15)</text>
+<text x="130" y="468" font-size="16" fill="#2f3a2b">Ptarmigan, California quail, band</text>
+<text x="130" y="489" font-size="16" fill="#2f3a2b">tailed pigeons</text>
+<rect x="8" y="504" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="534.6" font-size="24" font-weight="bold" fill="#8b5a2b" text-anchor="middle">2 (6)</text>
+<text x="130" y="531.5" font-size="16" fill="#2f3a2b">Pheasant</text>
+<text x="64" y="580.6" font-size="24" font-weight="bold" fill="#8b5a2b" text-anchor="middle">NBL</text>
+<text x="130" y="577.5" font-size="16" fill="#2f3a2b">Turkey</text>
+<text x="14" y="622" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">WATERFOWL</text>
+<line x1="138" y1="617" x2="392" y2="617" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="632" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="662.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">8 (24)</text>
+<text x="130" y="659.5" font-size="16" fill="#2f3a2b">Ducks</text>
+<text x="64" y="715.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">10 (30)</text>
+<text x="130" y="702" font-size="16" fill="#2f3a2b">Canada and cackling geese,</text>
+<text x="130" y="723" font-size="16" fill="#2f3a2b">snipe, coots</text>
+<rect x="8" y="738" width="384" height="58" rx="6" fill="#f4eedf"/>
+<text x="64" y="775.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">5 (15)</text>
+<text x="130" y="762" font-size="16" fill="#2f3a2b">Snow, Ross&#x27;s, white fronted</text>
+<text x="130" y="783" font-size="16" fill="#2f3a2b">geese</text>
 </svg>

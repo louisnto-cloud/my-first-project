@@ -1,48 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 468" role="img" aria-label="Five cards. Haida Gwaii: no feeding or baiting hoofed game within 200 metres of a dwelling, school yard or playground. White and blue, glacier, colour phases of the black bear are closed: pass up any very light coloured black bear. Endako and Huckleberry mine sites: access prohibited. Mule deer hunters are asked to drop off a front incisor and an antler photo at the Smithers office, not by mail. Camelids such as llamas may not be used to hunt in Region 6 except on Haida Gwaii." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="468" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Special rules and notices</text>
-<rect x="6" y="40" width="190" height="132" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
-<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#c92a2a"/>
-<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Haida Gwaii feeding</text>
-<path d="M18.0 94 h24 l-3 12 h-18 z" fill="#8b5a2b"/><circle cx="25.0" cy="91" r="4" fill="#c92a2a"/><circle cx="34.0" cy="90" r="4" fill="#c92a2a"/>
-<circle cx="30.0" cy="96" r="18" fill="none" stroke="#c92a2a" stroke-width="3"/><line x1="17.0" y1="109" x2="43.0" y2="83" stroke="#c92a2a" stroke-width="3"/>
-<text x="52" y="88" font-size="14" fill="#23261f" text-anchor="start">No feeding or</text>
-<text x="52" y="106" font-size="14" fill="#23261f" text-anchor="start">baiting hoofed</text>
-<text x="52" y="124" font-size="14" fill="#23261f" text-anchor="start">game within 200 m</text>
-<text x="52" y="142" font-size="14" fill="#23261f" text-anchor="start">of a home, school</text>
-<text x="52" y="160" font-size="14" fill="#23261f" text-anchor="start">yard or playground</text>
-<rect x="204" y="40" width="190" height="132" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
-<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#8b5a2b"/>
-<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">White and blue bears</text>
-<ellipse cx="228.0" cy="98" rx="15" ry="9" fill="#2f3a2b"/><circle cx="242.0" cy="92" r="6" fill="#2f3a2b"/><circle cx="240.0" cy="86" r="2.5" fill="#2f3a2b"/>
-<circle cx="228.0" cy="96" r="18" fill="none" stroke="#c92a2a" stroke-width="3"/><line x1="215.0" y1="109" x2="241.0" y2="83" stroke="#c92a2a" stroke-width="3"/>
-<text x="250" y="88" font-size="14" fill="#23261f" text-anchor="start">Colour phases</text>
-<text x="250" y="106" font-size="14" fill="#23261f" text-anchor="start">closed. Pass up</text>
-<text x="250" y="124" font-size="14" fill="#23261f" text-anchor="start">any very light</text>
-<text x="250" y="142" font-size="14" fill="#23261f" text-anchor="start">black bear</text>
-<rect x="6" y="180" width="190" height="132" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
-<path d="M6 190 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
-<text x="101" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Endako, Huckleberry</text>
-<text x="101" y="216" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">mines</text>
-<text x="14" y="246" font-size="14" fill="#23261f" text-anchor="start">No access, MU 6-4</text>
-<rect x="204" y="180" width="190" height="132" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
-<path d="M204 190 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
-<text x="299" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Mule deer tooth</text>
-<text x="212" y="246" font-size="14" fill="#23261f" text-anchor="start">Asked: a front tooth</text>
-<text x="212" y="264" font-size="14" fill="#23261f" text-anchor="start">and antler photo. Drop</text>
-<text x="212" y="282" font-size="14" fill="#23261f" text-anchor="start">off in Smithers, do not</text>
-<text x="212" y="300" font-size="14" fill="#23261f" text-anchor="start">mail</text>
-<rect x="6" y="320" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
-<path d="M6 330 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
-<text x="101" y="338" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Camelids, such as</text>
-<text x="101" y="356" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">llamas</text>
-<text x="14" y="386" font-size="14" fill="#23261f" text-anchor="start">Not for hunting in</text>
-<text x="14" y="404" font-size="14" fill="#23261f" text-anchor="start">Region 6, except Haida</text>
-<text x="14" y="422" font-size="14" fill="#23261f" text-anchor="start">Gwaii</text>
-<rect x="6" y="440" width="14" height="14" rx="3" fill="#c92a2a"/>
-<text x="24" y="452" font-size="14" fill="#23261f" text-anchor="start">No hunting</text>
-<rect x="112.0" y="440" width="14" height="14" rx="3" fill="#8b5a2b"/>
-<text x="130" y="452" font-size="14" fill="#23261f" text-anchor="start">Species closed</text>
-<rect x="247.60000000000002" y="440" width="14" height="14" rx="3" fill="#2f3a2b"/>
-<text x="266" y="452" font-size="14" fill="#23261f" text-anchor="start">Rule</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 463" font-family="sans-serif" role="img" aria-label="Region 6 special rules and notices, synopsis pages 12 and 49. Haida Gwaii, Management Units 6-12 and 6-13: no feeding or baiting hoofed game within 200 metres of a dwelling, school yard or playground. White and blue, glacier, colour phases of the black bear are closed: pass up any very light coloured black bear. Endako and Huckleberry mine sites, MU 6-4: access prohibited. Mule deer hunters are asked to drop off a front incisor and an antler photo at the Smithers office, not by mail. Camelids such as llamas may not be used to hunt in Region 6 except on Haida Gwaii.">
+<rect width="400" height="463" fill="#fffaf0"/>
+<text x="12" y="25" font-size="14" font-weight="bold" fill="#6b5b4b">Special rules and notices, pages 12 and 49</text>
+<rect x="10" y="34" width="380" height="89" rx="7" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.6"/>
+<path d="M17 34 H88 V123 H17 A7 7 0 0 1 10 116 V41 A7 7 0 0 1 17 34z" fill="#c92a2a"/>
+<text x="49" y="72.5" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">6-12, 6-13</text>
+<g transform="translate(49.0 92.5)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M-7 7 L7 -7" stroke-width="3"/></g>
+<text x="102" y="57" font-size="16" font-weight="bold" fill="#2f3a2b">Haida Gwaii feeding</text>
+<text x="102" y="76" font-size="15" fill="#2f3a2b">No feeding or baiting hoofed game</text>
+<text x="102" y="95" font-size="15" fill="#2f3a2b">within 200 m of a home, school yard or</text>
+<text x="102" y="114" font-size="15" fill="#2f3a2b">playground</text>
+<rect x="10" y="131" width="380" height="70" rx="7" fill="#fffaf0" stroke="#8b5a2b" stroke-width="1.6"/>
+<path d="M17 131 H88 V201 H17 A7 7 0 0 1 10 194 V138 A7 7 0 0 1 17 131z" fill="#8b5a2b"/>
+<text x="49" y="160" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Bear</text>
+<g transform="translate(49.0 180.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M-7 7 L7 -7" stroke-width="3"/></g>
+<text x="102" y="154" font-size="16" font-weight="bold" fill="#2f3a2b">White and blue bears</text>
+<text x="102" y="173" font-size="15" fill="#2f3a2b">Colour phases closed. Pass up any very</text>
+<text x="102" y="192" font-size="15" fill="#2f3a2b">light black bear</text>
+<rect x="10" y="209" width="380" height="56" rx="7" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.6"/>
+<path d="M17 209 H88 V265 H17 A7 7 0 0 1 10 258 V216 A7 7 0 0 1 17 209z" fill="#c92a2a"/>
+<text x="49" y="231" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">6-4</text>
+<g transform="translate(49.0 251.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M-7 7 L7 -7" stroke-width="3"/></g>
+<text x="102" y="232" font-size="16" font-weight="bold" fill="#2f3a2b">Endako, Huckleberry mines</text>
+<text x="102" y="251" font-size="15" fill="#2f3a2b">No access</text>
+<rect x="10" y="273" width="380" height="70" rx="7" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.6"/>
+<path d="M17 273 H88 V343 H17 A7 7 0 0 1 10 336 V280 A7 7 0 0 1 17 273z" fill="#2f3a2b"/>
+<text x="49" y="302" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">Mule deer</text>
+<g transform="translate(49.0 322.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M0 -1 V6"/><circle cy="-5.5" r="1.6" fill="#fffaf0" stroke="none"/></g>
+<text x="102" y="296" font-size="16" font-weight="bold" fill="#2f3a2b">Mule deer tooth</text>
+<text x="102" y="315" font-size="15" fill="#2f3a2b">Asked: a front tooth and antler photo.</text>
+<text x="102" y="334" font-size="15" fill="#2f3a2b">Drop off in Smithers, do not mail</text>
+<rect x="10" y="351" width="380" height="70" rx="7" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.6"/>
+<path d="M17 351 H88 V421 H17 A7 7 0 0 1 10 414 V358 A7 7 0 0 1 17 351z" fill="#2f3a2b"/>
+<text x="49" y="380" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Region 6</text>
+<g transform="translate(49.0 400.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M0 -1 V6"/><circle cy="-5.5" r="1.6" fill="#fffaf0" stroke="none"/></g>
+<text x="102" y="374" font-size="16" font-weight="bold" fill="#2f3a2b">Camelids, such as llamas</text>
+<text x="102" y="393" font-size="15" fill="#2f3a2b">Not for hunting in Region 6, except</text>
+<text x="102" y="412" font-size="15" fill="#2f3a2b">Haida Gwaii</text>
+<rect x="12" y="434" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="32" y="446" font-size="14" fill="#2f3a2b">No hunting</text>
+<rect x="118.88" y="434" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="138.88" y="446" font-size="14" fill="#2f3a2b">Species closed</text>
+<rect x="254.88" y="434" width="14" height="14" rx="3" fill="#2f3a2b"/>
+<text x="274.88" y="446" font-size="14" fill="#2f3a2b">Rule</text>
 </svg>

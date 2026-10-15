@@ -1,34 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 496" role="img" aria-label="Season bar chart: Region 2 grouse, ptarmigan, pheasant, pigeon. Grouse, sooty, ruffed, spruce: 2-2 to 2-19: Sept 10 to Dec 15. Grouse, Bow Only: 2-2 to 2-19: Sept 1 to Sept 9. Ptarmigan: 2-2, 2-3, 2-5 to 2-19: Sept 10 to Dec 15. Ptarmigan, Bow Only: 2-2, 2-3, 2-5 to 2-19: Sept 1 to Sept 9. Pheasant (cocks): 2-4, 2-8: Oct 10 to Nov 30, 2026. 2027: Oct 9 to Nov 30. Band tailed pigeons: 2-2 to 2-19: Sept 15 to Sept 30." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="496" fill="#fffaf0"/>
-<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 2 grouse, ptarmigan, pheasant,</text>
-<text x="200" y="47" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">pigeon</text>
-<text x="200" y="68" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 28.</text>
-<text x="58.2" y="104" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
-<text x="152.2" y="104" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
-<text x="246.2" y="104" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
-<text x="340.2" y="104" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
-<line x1="12.0" y1="112" x2="12.0" y2="486" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="104.5" y1="112" x2="104.5" y2="486" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="200.0" y1="112" x2="200.0" y2="486" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="292.5" y1="112" x2="292.5" y2="486" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="388.0" y1="112" x2="388.0" y2="486" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<text x="12" y="128" font-size="14" font-weight="bold" fill="#23261f">Grouse, sooty, ruffed, spruce: 2-2 to 2-19</text>
-<rect x="39.7" y="134" width="299.0" height="22" rx="3" fill="#8b5a2b"/>
-<text x="189.2" y="150" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 10 to Dec 15</text>
-<text x="12" y="184" font-size="14" font-weight="bold" fill="#23261f">Grouse, Bow Only: 2-2 to 2-19</text>
-<rect x="12.0" y="190" width="27.7" height="22" rx="3" fill="#4a7fb0"/>
-<text x="45.7" y="206" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 9</text>
-<text x="12" y="240" font-size="14" font-weight="bold" fill="#23261f">Ptarmigan: 2-2, 2-3, 2-5 to 2-19</text>
-<rect x="39.7" y="246" width="299.0" height="22" rx="3" fill="#2f3a2b"/>
-<text x="189.2" y="262" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 10 to Dec 15</text>
-<text x="12" y="296" font-size="14" font-weight="bold" fill="#23261f">Ptarmigan, Bow Only: 2-2, 2-3, 2-5 to 2-19</text>
-<rect x="12.0" y="302" width="27.7" height="22" rx="3" fill="#4a7fb0"/>
-<text x="45.7" y="318" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 9</text>
-<text x="12" y="352" font-size="14" font-weight="bold" fill="#23261f">Pheasant (cocks): 2-4, 2-8</text>
-<rect x="132.2" y="358" width="160.3" height="22" rx="3" fill="#e8590c"/>
-<text x="12" y="396" font-size="14" fill="#23261f">Oct 10 to Nov 30, 2026</text>
-<text x="12" y="418" font-size="14" fill="#e8590c">2027: Oct 9 to Nov 30</text>
-<text x="12" y="450" font-size="14" font-weight="bold" fill="#23261f">Band tailed pigeons: 2-2 to 2-19</text>
-<rect x="55.1" y="456" width="49.3" height="22" rx="3" fill="#8a9a6b"/>
-<text x="110.5" y="472" font-size="14" font-weight="bold" fill="#23261f">Sept 15 to Sept 30</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 550" font-family="sans-serif" role="img" aria-label="Season bars for Region 2 grouse, ptarmigan, pheasant and pigeon, synopsis page 28, September to December. Grouse, sooty, ruffed and spruce, in 2-2 to 2-19: 10 September to 15 December. Grouse, Bow Only, 2-2 to 2-19: 1 to 9 September. Ptarmigan in 2-2, 2-3 and 2-5 to 2-19: 10 September to 15 December. Ptarmigan, Bow Only, same units: 1 to 9 September. Pheasant (cocks) in 2-4 and 2-8: 10 October to 30 November 2026; in 2027, 9 October to 30 November. Band tailed pigeons in 2-2 to 2-19: 15 to 30 September.">
+<rect width="400" height="550" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">Page 28. Region 2 upland birds</text>
+<text x="59.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
+<text x="152.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="245.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="338.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">Grouse: sooty, ruffed, spruce</text>
+<text x="14" y="92" font-size="15" font-weight="bold" fill="#c2410c">Sept 10 to Dec 15</text>
+<text x="14" y="112" font-size="14" fill="#6b5b4b">2-2 to 2-19</text>
+<rect x="14.0" y="119" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="119" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="119" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="119" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="41.4" y="120" width="295.8" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="165" font-size="16" font-weight="bold" fill="#2f3a2b">Grouse, Bow Only</text>
+<text x="386" y="165" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Sept 1 to 9</text>
+<text x="14" y="185" font-size="14" fill="#6b5b4b">2-2 to 2-19</text>
+<rect x="14.0" y="192" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="192" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="192" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="192" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="14.0" y="193" width="27.4" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="238" font-size="16" font-weight="bold" fill="#2f3a2b">Ptarmigan</text>
+<text x="386" y="238" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 10 to Dec 15</text>
+<text x="14" y="258" font-size="14" fill="#6b5b4b">2-2, 2-3, 2-5 to 2-19</text>
+<rect x="14.0" y="265" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="265" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="265" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="265" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="41.4" y="266" width="295.8" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="311" font-size="16" font-weight="bold" fill="#2f3a2b">Ptarmigan, Bow Only</text>
+<text x="386" y="311" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Sept 1 to 9</text>
+<text x="14" y="331" font-size="14" fill="#6b5b4b">2-2, 2-3, 2-5 to 2-19</text>
+<rect x="14.0" y="338" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="338" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="338" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="338" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="14.0" y="339" width="27.4" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="384" font-size="16" font-weight="bold" fill="#2f3a2b">Pheasant (cocks)</text>
+<text x="386" y="384" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Oct 10 to Nov 30, 2026</text>
+<text x="14" y="404" font-size="14" fill="#6b5b4b">2-4, 2-8. 2027: Oct 9 to Nov 30</text>
+<rect x="14.0" y="411" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="411" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="411" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="411" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="132.9" y="412" width="158.6" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="457" font-size="16" font-weight="bold" fill="#2f3a2b">Band tailed pigeons</text>
+<text x="386" y="457" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 15 to 30</text>
+<text x="14" y="477" font-size="14" fill="#6b5b4b">2-2 to 2-19</text>
+<rect x="14.0" y="484" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="484" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="484" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="484" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="56.7" y="485" width="48.8" height="14" rx="3" fill="#e8590c"/>
+<rect x="14" y="519" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="34" y="531" font-size="14" fill="#2f3a2b">General season</text>
+<rect x="151.12" y="519" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="171.12" y="531" font-size="14" fill="#2f3a2b">Bow only</text>
 </svg>

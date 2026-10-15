@@ -1,48 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 470" role="img" aria-label="Five cards of Region 7B vehicle closures. Above 1,400 metres in 7-19, parts of 7-21 and 7-22, 7-31, 7-35, 7-36, 7-43, 7-57 and 7-58: no motor vehicles, but snowmobiles under 450 kilograms allowed 1 November to 30 April, Map H7. Onion Lake Trail in 7-21 and West Bullmoose Road are open year round. Northern Rockies snowmobile closed areas, new, maps online. Dickebush Creek and Trapper Mainline Road in 7-21: Motor Vehicle Closed Area, Map H6. 7-36 east of Aylard Creek: no all terrain vehicles for hunting 15 August to 31 October." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="470" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Vehicle closures by MU</text>
-<rect x="6" y="40" width="190" height="150" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#4a7fb0"/>
-<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Above 1,400 m,</text>
-<text x="101" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">listed MUs</text>
-<path d="M13.0 125 l11 -18 l6 8 l5 -6 l12 16 z" fill="#8a9a6b"/><path d="M24.0 107 l3 5 h-6 z" fill="#ffffff"/><line x1="12.0" y1="111" x2="48.0" y2="111" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 3"/>
-<text x="52" y="106" font-size="14" fill="#23261f" text-anchor="start">No motor vehicles.</text>
-<text x="52" y="124" font-size="14" fill="#23261f" text-anchor="start">Snowmobiles under</text>
-<text x="52" y="142" font-size="14" fill="#23261f" text-anchor="start">450 kg allowed Nov</text>
-<text x="52" y="160" font-size="14" fill="#23261f" text-anchor="start">1 to Apr 30.</text>
-<text x="52" y="178" font-size="14" fill="#23261f" text-anchor="start">Map H7</text>
-<rect x="204" y="40" width="190" height="150" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
-<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#5c7a3a"/>
-<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Open all year</text>
-<rect x="213.0" y="106" width="20" height="12" fill="#2f3a2b"/><path d="M233.0 110 h7 l4 5 v3 h-11 z" fill="#2f3a2b"/><circle cx="219.0" cy="120" r="3.5" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/><circle cx="237.0" cy="120" r="3.5" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
-<text x="250" y="106" font-size="14" fill="#23261f" text-anchor="start">Onion Lake Trail</text>
-<text x="250" y="124" font-size="14" fill="#23261f" text-anchor="start">(MU 7-21) and West</text>
-<text x="250" y="142" font-size="14" fill="#23261f" text-anchor="start">Bullmoose Road</text>
-<rect x="6" y="198" width="190" height="118" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<path d="M6 208 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v54 h-190 z" fill="#4a7fb0"/>
-<text x="101" y="216" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Northern Rockies</text>
-<text x="101" y="234" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">(new)</text>
-<path d="M16.0 292 h22 l6 -7 h-9 l-4 -5 h-9 z" fill="#2f3a2b"/><path d="M14.0 298 h24 q6 0 8 -4" fill="none" stroke="#2f3a2b" stroke-width="2.5"/>
-<circle cx="30.0" cy="290" r="18" fill="none" stroke="#c92a2a" stroke-width="3"/><line x1="17.0" y1="303" x2="43.0" y2="277" stroke="#c92a2a" stroke-width="3"/>
-<text x="52" y="282" font-size="14" fill="#23261f" text-anchor="start">Snowmobile closed</text>
-<text x="52" y="300" font-size="14" fill="#23261f" text-anchor="start">areas. Maps online</text>
-<rect x="204" y="198" width="190" height="118" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<path d="M204 208 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v54 h-190 z" fill="#4a7fb0"/>
-<text x="299" y="216" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Dickebush Creek,</text>
-<text x="299" y="234" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Trapper Mainline</text>
-<text x="299" y="252" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Road</text>
-<rect x="213.0" y="282" width="20" height="12" fill="#2f3a2b"/><path d="M233.0 286 h7 l4 5 v3 h-11 z" fill="#2f3a2b"/><circle cx="219.0" cy="296" r="3.5" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/><circle cx="237.0" cy="296" r="3.5" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
-<circle cx="228.0" cy="290" r="18" fill="none" stroke="#c92a2a" stroke-width="3"/><line x1="215.0" y1="303" x2="241.0" y2="277" stroke="#c92a2a" stroke-width="3"/>
-<text x="250" y="282" font-size="14" fill="#23261f" text-anchor="start">No motor vehicles,</text>
-<text x="250" y="300" font-size="14" fill="#23261f" text-anchor="start">MU 7-21. Map H6</text>
-<rect x="6" y="324" width="190" height="132" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<path d="M6 334 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#4a7fb0"/>
-<text x="101" y="342" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 7-36, east of</text>
-<text x="101" y="360" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Aylard Creek</text>
-<rect x="18.0" y="391" width="24" height="8" rx="2" fill="#2f3a2b"/><line x1="36.0" y1="391" x2="39.0" y2="385" stroke="#2f3a2b" stroke-width="2.5"/><circle cx="21.0" cy="403" r="5" fill="#2f3a2b"/><circle cx="39.0" cy="403" r="5" fill="#2f3a2b"/>
-<circle cx="30.0" cy="398" r="18" fill="none" stroke="#c92a2a" stroke-width="3"/><line x1="17.0" y1="411" x2="43.0" y2="385" stroke="#c92a2a" stroke-width="3"/>
-<text x="52" y="390" font-size="14" fill="#23261f" text-anchor="start">No all terrain</text>
-<text x="52" y="408" font-size="14" fill="#23261f" text-anchor="start">vehicle for</text>
-<text x="52" y="426" font-size="14" fill="#23261f" text-anchor="start">hunting, Aug 15 to</text>
-<text x="52" y="444" font-size="14" fill="#23261f" text-anchor="start">Oct 31</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 492" font-family="sans-serif" role="img" aria-label="Region 7B vehicle closures, page 61. No motor vehicles: above 1,400 metres in MUs 7-19, parts of 7-21 and 7-22, 7-31, 7-35, 7-36, 7-43, 7-57 and 7-58, but snowmobiles under 450 kilograms are allowed 1 November to 30 April, Map H7. Dickebush Creek and Trapper Mainline Road in MU 7-21: Motor Vehicle Closed Area, Map H6. Northern Rockies snowmobile closed areas, new, maps online. No all terrain vehicle (ATV) for hunting in MU 7-36 east of Aylard Creek, 15 August to 31 October. Open all year: Onion Lake Trail in MU 7-21 and West Bullmoose Road.">
+<rect width="400" height="492" fill="#fffaf0"/>
+<rect x="8" y="8" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 23) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="29" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO MOTOR VEHICLES</text>
+<rect x="8" y="44" width="384" height="74" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="81.0" r="20" fill="#fffaf0" stroke="#c0392b" stroke-width="2"/>
+<g transform="translate(41.0 81.0) scale(0.8)" fill="#c0392b" stroke="none"><path d="M-15 11 L-4 -9 L2 1 L6 -4 L15 11z"/><path d="M-4 -9 L-1 -4 L-6 -3z" fill="#fffaf0"/></g>
+<text x="78" y="67" font-size="16" font-weight="bold" fill="#2f3a2b">Above 1,400 m, listed MUs</text>
+<text x="78" y="86" font-size="15" fill="#2f3a2b">Snowmobiles under 450 kg allowed Nov 1</text>
+<text x="78" y="105" font-size="15" fill="#2f3a2b">to Apr 30. Map H7</text>
+<rect x="14" y="142.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="163.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">7-21</text>
+<text x="78" y="143" font-size="16" font-weight="bold" fill="#2f3a2b">Dickebush Creek, Trapper Mainline</text>
+<text x="78" y="163" font-size="16" font-weight="bold" fill="#2f3a2b">Road</text>
+<text x="78" y="182" font-size="15" fill="#2f3a2b">Map H6</text>
+<rect x="8" y="197" width="384" height="55" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="224.5" r="20" fill="#fffaf0" stroke="#c0392b" stroke-width="2"/>
+<g transform="translate(41.0 224.5) scale(0.8)" fill="#c0392b" stroke="none"><path d="M-14 9 H12 C15 9 16 6 14 5" stroke="#c0392b" stroke-width="2.4" fill="none"/><path d="M-13 4 L-11 -2 H-2 L1 -8 H6 L8 -2 H13 L13 4z"/><rect x="-4" y="-12" width="3" height="6" rx="1"/></g>
+<circle cx="41.0" cy="224.5" r="20" fill="none" stroke="#c0392b" stroke-width="3"/><path d="M27.0 210.5 L55.0 238.5" stroke="#c0392b" stroke-width="3"/>
+<text x="78" y="220" font-size="16" font-weight="bold" fill="#2f3a2b">Northern Rockies (new)</text>
+<text x="78" y="239" font-size="15" fill="#2f3a2b">Snowmobile closed areas. Maps online</text>
+<rect x="8" y="262" width="384" height="30" rx="6" fill="#e8590c"/>
+<text x="18" y="283" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO ATV FOR HUNTING</text>
+<rect x="8" y="298" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="310.5" width="54" height="30" rx="6" fill="#e8590c"/>
+<text x="41" y="331.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">7-36</text>
+<text x="78" y="321" font-size="16" font-weight="bold" fill="#2f3a2b">East of Aylard Creek</text>
+<text x="78" y="340" font-size="15" fill="#2f3a2b">Aug 15 to Oct 31</text>
+<rect x="8" y="363" width="384" height="30" rx="6" fill="#2f6e3b"/>
+<text x="18" y="384" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">OPEN ALL YEAR</text>
+<rect x="8" y="399" width="384" height="56" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="427.0" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 427.0) scale(0.8)" fill="#2f6e3b" stroke="none"><path d="M-6 -14 L-14 14 H14 L6 -14z"/><path d="M0 -12 V-6 M0 -1 V5 M0 9 V14" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="78" y="422" font-size="16" font-weight="bold" fill="#2f3a2b">Onion Lake Trail (MU 7-21), West</text>
+<text x="78" y="442" font-size="16" font-weight="bold" fill="#2f3a2b">Bullmoose Road</text>
+<text x="14" y="479" font-size="14" fill="#6b5b4b">ATV: All Terrain Vehicle</text>
 </svg>

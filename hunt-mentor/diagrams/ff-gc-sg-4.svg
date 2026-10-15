@@ -1,4 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Refit the choke snug with the wrench. Check it before every hunt.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4. Choke back in, snug</text><rect x="120" y="120" width="80" height="40" rx="0" fill="#b6b9b3" stroke="#2f3a2b" stroke-width="2"/><path d="M246.0 140 l9.799999999999999 11.2 l19.599999999999998 -22.4" fill="none" stroke="#2f6e3b" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/><text x="200" y="220" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">snug, not cranked</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 4 of cleaning a shotgun: refit the choke tube with its wrench, snug, not cranked. Check it before every hunt.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4. Choke back in, snug</text>
+<rect x="14" y="120" width="236" height="40" fill="#3a3f3a"/>
+<path d="M14 126 H250" stroke="#5b605a" stroke-width="3"/>
+<rect x="246" y="118" width="18" height="44" rx="2" fill="#9ea29b" stroke="#2f3a2b" stroke-width="1.6"/>
+<line x1="249" y1="123.0" x2="261" y2="123.0" stroke="#2f3a2b" stroke-width="1.2"/>
+<line x1="249" y1="131.5" x2="261" y2="131.5" stroke="#2f3a2b" stroke-width="1.2"/>
+<line x1="249" y1="140.0" x2="261" y2="140.0" stroke="#2f3a2b" stroke-width="1.2"/>
+<line x1="249" y1="148.5" x2="261" y2="148.5" stroke="#2f3a2b" stroke-width="1.2"/>
+<line x1="249" y1="157.0" x2="261" y2="157.0" stroke="#2f3a2b" stroke-width="1.2"/>
+<rect x="262" y="128" width="16" height="24" rx="2" fill="#3a3f3a"/>
+<rect x="270" y="134" width="96" height="12" rx="6" fill="#3a3f3a"/>
+<path d="M282 90 A46 46 0 0 1 330 102" fill="none" stroke="#e8590c" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M334.0 106.0 L331.6 93.7 L322.3 101.5z" fill="#e8590c"/>
+<line x1="255" y1="118" x2="200" y2="82" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="255" cy="118" r="2.6" fill="#2f3a2b"/><rect x="113.9" y="60.0" width="132.1" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="180" y="80.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">choke tube rim</text>
+<line x1="330" y1="146" x2="330" y2="168" stroke="#2f3a2b" stroke-width="1.4"/><rect x="294.1" y="168.0" width="71.9" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="330" y="188.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">wrench</text>
+<path d="M40.2 218.0 l7.0 7.0 l14.0 -15.4" fill="none" stroke="#2f6e3b" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="70" y="226" font-size="18" font-weight="bold" fill="#2f6e3b">snug</text>
+<path d="M170.8 208.8 l14.4 14.4 M185.2 208.8 l-14.4 14.4" stroke="#c0392b" stroke-width="3.8" stroke-linecap="round"/>
+<text x="194" y="224" font-size="18" font-weight="bold" fill="#c0392b">not cranked</text>
+<text x="200" y="282" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Check it before every hunt</text>
 </svg>

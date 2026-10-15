@@ -1,56 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 522" role="img" aria-label="Cards for Maps A1 to A4. Map A1: Saanich Peninsula and Gulf Islands, rifles prohibited, special antlerless season. Valdes Island: rifles permitted, 1 to 10 November antlerless deer season. Sidney and James Islands: rifles permitted, special antlerless season. Mudge and DeCourcy Islands: no hunting, no shooting. Link Island: no shooting. Map A2 Ganges: No Shooting Area. Map A3 Cherry Point: No Shooting Area. Map A4 Saturna Island: No Shooting or Hunting Area." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="522" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Maps A1 to A4</text>
-<rect x="6" y="40" width="190" height="132" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
-<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v54 h-190 z" fill="#8a9a6b"/>
-<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">A1 Saanich</text>
-<text x="101" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Peninsula, Gulf</text>
-<text x="101" y="94" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Islands</text>
-<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start">Rifles prohibited.</text>
-<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start">Special antlerless</text>
-<text x="14" y="160" font-size="14" fill="#23261f" text-anchor="start">season</text>
-<rect x="204" y="40" width="190" height="132" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
-<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v54 h-190 z" fill="#5c7a3a"/>
-<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">A1 Valdes Island</text>
-<text x="212" y="124" font-size="14" fill="#23261f" text-anchor="start">Rifles permitted. Nov 1</text>
-<text x="212" y="142" font-size="14" fill="#23261f" text-anchor="start">to 10 antlerless deer</text>
-<rect x="6" y="180" width="190" height="114" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
-<path d="M6 190 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#5c7a3a"/>
-<text x="101" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">A1 Sidney and James</text>
-<text x="101" y="216" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Islands</text>
-<text x="14" y="246" font-size="14" fill="#23261f" text-anchor="start">Rifles permitted.</text>
-<text x="14" y="264" font-size="14" fill="#23261f" text-anchor="start">Special antlerless</text>
-<text x="14" y="282" font-size="14" fill="#23261f" text-anchor="start">season</text>
-<rect x="204" y="180" width="190" height="114" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
-<path d="M204 190 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
-<text x="299" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">A1 Mudge, DeCourcy</text>
-<text x="299" y="216" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Islands</text>
-<text x="212" y="246" font-size="14" fill="#23261f" text-anchor="start">No hunting, no shooting</text>
-<rect x="6" y="302" width="190" height="60" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<path d="M6 312 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#e8590c"/>
-<text x="101" y="320" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">A1 Link Island</text>
-<text x="14" y="350" font-size="14" fill="#23261f" text-anchor="start">No shooting</text>
-<rect x="204" y="302" width="190" height="60" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<path d="M204 312 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#e8590c"/>
-<text x="299" y="320" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">A2 Ganges, MU 1-1</text>
-<text x="212" y="350" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area</text>
-<rect x="6" y="370" width="190" height="96" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<path d="M6 380 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#e8590c"/>
-<text x="101" y="388" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">A3 Cherry Point,</text>
-<text x="101" y="406" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 1-4</text>
-<text x="14" y="436" font-size="14" fill="#23261f" text-anchor="start">No Shooting Area</text>
-<rect x="204" y="370" width="190" height="96" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
-<path d="M204 380 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
-<text x="299" y="388" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">A4 Saturna Island,</text>
-<text x="299" y="406" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">MU 1-1</text>
-<text x="212" y="436" font-size="14" fill="#23261f" text-anchor="start">No Shooting or Hunting</text>
-<text x="212" y="454" font-size="14" fill="#23261f" text-anchor="start">Area</text>
-<rect x="6" y="472" width="14" height="14" rx="3" fill="#8a9a6b"/>
-<text x="24" y="484" font-size="14" fill="#23261f" text-anchor="start">Shot only or bow</text>
-<rect x="156.4" y="472" width="14" height="14" rx="3" fill="#5c7a3a"/>
-<text x="174" y="484" font-size="14" fill="#23261f" text-anchor="start">Open or allowed</text>
-<rect x="299.4" y="472" width="14" height="14" rx="3" fill="#c92a2a"/>
-<text x="317" y="484" font-size="14" fill="#23261f" text-anchor="start">No hunting</text>
-<rect x="6" y="494" width="14" height="14" rx="3" fill="#e8590c"/>
-<text x="24" y="506" font-size="14" fill="#23261f" text-anchor="start">No shooting</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 665" font-family="sans-serif" role="img" aria-label="Maps A1 to A4, the Gulf Islands and Saanich, grouped by rule. Rifles prohibited: Map A1 Saanich Peninsula and Gulf Islands, with a special antlerless season. Rifles permitted: Map A1 Valdes Island, with a 1 to 10 November antlerless deer season; Map A1 Sidney and James Islands, with a special antlerless season. No shooting or hunting: Map A1 Mudge and DeCourcy Islands, no hunting and no shooting; Map A4 Saturna Island, No Shooting or Hunting Area, MU 1-1. No shooting: Map A1 Link Island; Map A2 Ganges, No Shooting Area, MU 1-1; Map A3 Cherry Point, No Shooting Area, MU 1-4.">
+<rect width="400" height="665" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Maps A1 to A4. MU: Management Unit</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#5b6b3e"/>
+<g transform="translate(31 47) scale(0.62)" fill="#fffaf0" stroke="none"><path d="M-16 -2 H8 V-5 H12 V-2 H16 V1 H-2 L-4 3 H-8 L-11 8 H-16 L-13 1 H-16z"/></g>
+<text x="50" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">RIFLES PROHIBITED</text>
+<rect x="8" y="68" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="80.5" width="54" height="30" rx="6" fill="#5b6b3e"/>
+<text x="41" y="101.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A1</text>
+<text x="78" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">Saanich Peninsula, Gulf Islands</text>
+<text x="78" y="110" font-size="15" fill="#2f3a2b">Special antlerless season</text>
+<rect x="8" y="133" width="384" height="30" rx="6" fill="#2f6e3b"/>
+<g transform="translate(31 148) scale(0.62)" fill="#fffaf0" stroke="none"><path d="M-16 -2 H8 V-5 H12 V-2 H16 V1 H-2 L-4 3 H-8 L-11 8 H-16 L-13 1 H-16z"/></g>
+<text x="50" y="154" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">RIFLES PERMITTED</text>
+<rect x="8" y="169" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="181.5" width="54" height="30" rx="6" fill="#2f6e3b"/>
+<text x="41" y="202.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A1</text>
+<text x="78" y="192" font-size="16" font-weight="bold" fill="#2f3a2b">Valdes Island</text>
+<text x="78" y="211" font-size="15" fill="#2f3a2b">Nov 1 to 10 antlerless deer season</text>
+<rect x="14" y="238.5" width="54" height="30" rx="6" fill="#2f6e3b"/>
+<text x="41" y="259.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A1</text>
+<text x="78" y="249" font-size="16" font-weight="bold" fill="#2f3a2b">Sidney and James Islands</text>
+<text x="78" y="268" font-size="15" fill="#2f3a2b">Special antlerless season</text>
+<rect x="8" y="291" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 306) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="312" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO SHOOTING OR HUNTING</text>
+<rect x="8" y="327" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="339.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="360.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A1</text>
+<text x="78" y="350" font-size="16" font-weight="bold" fill="#2f3a2b">Mudge, DeCourcy Islands</text>
+<text x="78" y="369" font-size="15" fill="#2f3a2b">No hunting, no shooting</text>
+<rect x="14" y="396.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="417.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A4</text>
+<text x="78" y="407" font-size="16" font-weight="bold" fill="#2f3a2b">Saturna Island</text>
+<text x="78" y="426" font-size="15" fill="#2f3a2b">MU 1-1</text>
+<rect x="8" y="449" width="384" height="30" rx="6" fill="#d9480f"/>
+<g transform="translate(31 464) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="470" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO SHOOTING</text>
+<rect x="8" y="485" width="384" height="48" rx="6" fill="#f4eedf"/>
+<rect x="14" y="494.0" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="514.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A1</text>
+<text x="78" y="514" font-size="16" font-weight="bold" fill="#2f3a2b">Link Island</text>
+<rect x="14" y="547.5" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="568.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A2</text>
+<text x="78" y="558" font-size="16" font-weight="bold" fill="#2f3a2b">Ganges</text>
+<text x="78" y="577" font-size="15" fill="#2f3a2b">MU 1-1</text>
+<rect x="8" y="592" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="604.5" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="625.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A3</text>
+<text x="78" y="615" font-size="16" font-weight="bold" fill="#2f3a2b">Cherry Point</text>
+<text x="78" y="634" font-size="15" fill="#2f3a2b">MU 1-4</text>
 </svg>
