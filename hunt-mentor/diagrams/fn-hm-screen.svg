@@ -8,7 +8,7 @@
 <path d="M118 216 C 150 198, 210 238, 282 208" fill="none" stroke="#9c8f6a" stroke-width="1.2"/>
 <path d="M118 252 C 150 234, 210 274, 282 244" fill="none" stroke="#9c8f6a" stroke-width="1.2"/>
 <path d="M118 288 C 150 270, 210 310, 282 280" fill="none" stroke="#9c8f6a" stroke-width="1.2"/>
-<path d="M150 400 C 160 330, 200 300, 210 230 C 214 200, 240 160, 250 120" fill="none" stroke="#4a7fb0" stroke-width="2.4"/>
+<path d="M204 352 C 200 320, 226 280, 222 240 C 214 200, 240 160, 250 120" fill="none" stroke="#4a7fb0" stroke-width="2.4"/>
 <rect x="118" y="20" width="164" height="34" rx="9" fill="#fffaf0" opacity=".92"/>
 <circle cx="132" cy="37" r="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.6"/>
 <circle cx="152" cy="37" r="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.6"/>
@@ -21,6 +21,7 @@
 <circle cx="268" cy="104" r="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.6"/><path d="M262 107 a4 4 0 0 1 3 -7 a5 5 0 0 1 9 2 a3 3 0 0 1 0 5z" fill="#9aa"/>
 <circle cx="200" cy="214" r="7" fill="none" stroke="#2f3a2b" stroke-width="1.4"/><path d="M188 214 h24 M200 202 v24" stroke="#2f3a2b" stroke-width="1.4"/>
 <rect x="218" y="312" width="40" height="22" rx="11" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="238" y="328" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3D</text>
 <circle cx="270" cy="323" r="11" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="270" cy="323" r="4" fill="#4a7fb0"/>
 <rect x="126" y="312" width="66" height="24" rx="6" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.6"/>
 <text x="159" y="329" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Layers</text>
