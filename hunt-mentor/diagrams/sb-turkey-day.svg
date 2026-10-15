@@ -1,34 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" font-family="sans-serif" role="img" aria-label="A turkey&#x27;s day in six panels, 75 percent. Roost in a tall pine at night. Fly down at first light. Feed and travel through the morning. Loaf at midday. Feed again late in the day. Back to the roost at dusk. In spring toms gobble on the roost from mid April. Roost trees are big pines on ridges, used year after year. Hunting hours: 1 hour before sunrise to 1 hour after sunset, 98 percent.">
-  <rect width="400" height="290" fill="#fffaf0"/>
-  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A turkey&#x27;s day (75%)</text>
-  <rect x="6" y="44" width="61" height="130" rx="6" fill="#b9c2cf"/>
-  <text x="36" y="150" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Roost</text>
-  <text x="36" y="166" font-size="12" fill="#2f3a2b" text-anchor="middle">tall pine</text>
-  <g fill="#2f3a2b" transform="translate(36 120) scale(1.6)"><polygon points="-12,0 0,-34 12,0"/><rect x="-3" y="0" width="6" height="8"/></g>
-  <ellipse cx="42" cy="80" rx="7" ry="5" fill="#4a3b2c"/>
-  <rect x="71" y="44" width="61" height="130" rx="6" fill="#f6d7b0"/>
-  <text x="101" y="150" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Fly down</text>
-  <text x="101" y="166" font-size="12" fill="#2f3a2b" text-anchor="middle">first light</text>
-  <g transform="translate(97 110) scale(0.4)"><path d="M-24 -6 L-48 -2 L-24 6Z" fill="#4a3b2c"/><ellipse cx="0" cy="0" rx="28" ry="20" fill="#4a3b2c"/><path d="M18 -8 Q26 -30 30 -40" stroke="#c0392b" stroke-width="7" fill="none"/><circle cx="31" cy="-42" r="7" fill="#7fb0d8"/><path d="M37 -43 L44 -41 L37 -39Z" fill="#2f3a2b"/><path d="M30 -36 q4 8 0 14" stroke="#c0392b" stroke-width="4" fill="none"/><path d="M-4 18 L-6 34 M8 18 L10 34" stroke="#b07a5a" stroke-width="3"/></g>
-  <rect x="136" y="44" width="61" height="130" rx="6" fill="#e9e2b8"/>
-  <text x="166" y="150" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Feed,</text>
-  <text x="166" y="166" font-size="12" fill="#2f3a2b" text-anchor="middle">travel</text>
-  <g transform="translate(162 110) scale(0.4)"><path d="M-24 -6 L-48 -2 L-24 6Z" fill="#4a3b2c"/><ellipse cx="0" cy="0" rx="28" ry="20" fill="#4a3b2c"/><path d="M18 -8 Q26 -30 30 -40" stroke="#c0392b" stroke-width="7" fill="none"/><circle cx="31" cy="-42" r="7" fill="#7fb0d8"/><path d="M37 -43 L44 -41 L37 -39Z" fill="#2f3a2b"/><path d="M30 -36 q4 8 0 14" stroke="#c0392b" stroke-width="4" fill="none"/><path d="M-4 18 L-6 34 M8 18 L10 34" stroke="#b07a5a" stroke-width="3"/></g>
-  <rect x="201" y="44" width="61" height="130" rx="6" fill="#dfe6d3"/>
-  <text x="231" y="150" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Loaf</text>
-  <text x="231" y="166" font-size="12" fill="#2f3a2b" text-anchor="middle">midday</text>
-  <g transform="translate(227 110) scale(0.4)"><path d="M-10 -10 L-60.4 -22.8 L-56.8 -32.6Z" fill="#4a3b2c"/><circle cx="-56.0" cy="-26.8" r="4" fill="#efe6d6"/><path d="M-10 -10 L-54.2 -37.4 L-47.9 -45.6Z" fill="#4a3b2c"/><circle cx="-48.9" cy="-39.8" r="4" fill="#efe6d6"/><path d="M-10 -10 L-43.9 -49.4 L-35.4 -55.4Z" fill="#4a3b2c"/><circle cx="-38.1" cy="-50.1" r="4" fill="#efe6d6"/><path d="M-10 -10 L-30.5 -57.8 L-20.6 -60.9Z" fill="#4a3b2c"/><circle cx="-24.7" cy="-56.7" r="4" fill="#efe6d6"/><path d="M-10 -10 L-15.2 -61.7 L-4.8 -61.7Z" fill="#4a3b2c"/><circle cx="-10.0" cy="-59.0" r="4" fill="#efe6d6"/><path d="M-10 -10 L0.6 -60.9 L10.5 -57.8Z" fill="#4a3b2c"/><circle cx="4.7" cy="-56.7" r="4" fill="#efe6d6"/><path d="M-10 -10 L15.4 -55.4 L23.9 -49.4Z" fill="#4a3b2c"/><circle cx="18.1" cy="-50.1" r="4" fill="#efe6d6"/><path d="M-10 -10 L27.9 -45.6 L34.2 -37.4Z" fill="#4a3b2c"/><circle cx="28.9" cy="-39.8" r="4" fill="#efe6d6"/><path d="M-10 -10 L36.8 -32.6 L40.4 -22.8Z" fill="#4a3b2c"/><circle cx="36.0" cy="-26.8" r="4" fill="#efe6d6"/><ellipse cx="0" cy="0" rx="28" ry="20" fill="#4a3b2c"/><path d="M18 -8 Q26 -30 30 -40" stroke="#c0392b" stroke-width="7" fill="none"/><circle cx="31" cy="-42" r="7" fill="#7fb0d8"/><path d="M37 -43 L44 -41 L37 -39Z" fill="#2f3a2b"/><path d="M30 -36 q4 8 0 14" stroke="#c0392b" stroke-width="4" fill="none"/><path d="M-4 18 L-6 34 M8 18 L10 34" stroke="#b07a5a" stroke-width="3"/></g>
-  <rect x="266" y="44" width="61" height="130" rx="6" fill="#e9e2b8"/>
-  <text x="296" y="150" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Feed</text>
-  <text x="296" y="166" font-size="12" fill="#2f3a2b" text-anchor="middle">late day</text>
-  <g transform="translate(292 110) scale(0.4)"><path d="M-24 -6 L-48 -2 L-24 6Z" fill="#4a3b2c"/><ellipse cx="0" cy="0" rx="28" ry="20" fill="#4a3b2c"/><path d="M18 -8 Q26 -30 30 -40" stroke="#c0392b" stroke-width="7" fill="none"/><circle cx="31" cy="-42" r="7" fill="#7fb0d8"/><path d="M37 -43 L44 -41 L37 -39Z" fill="#2f3a2b"/><path d="M30 -36 q4 8 0 14" stroke="#c0392b" stroke-width="4" fill="none"/><path d="M-4 18 L-6 34 M8 18 L10 34" stroke="#b07a5a" stroke-width="3"/></g>
-  <rect x="331" y="44" width="61" height="130" rx="6" fill="#b9c2cf"/>
-  <text x="361" y="150" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Roost</text>
-  <text x="361" y="166" font-size="12" fill="#2f3a2b" text-anchor="middle">at dusk</text>
-  <g fill="#2f3a2b" transform="translate(361 120) scale(1.6)"><polygon points="-12,0 0,-34 12,0"/><rect x="-3" y="0" width="6" height="8"/></g>
-  <ellipse cx="367" cy="80" rx="7" ry="5" fill="#4a3b2c"/>
-  <rect x="6" y="186" width="388" height="40" rx="6" fill="#e8590c"/>
-  <text x="200" y="212" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Spring: toms gobble on the roost from mid April</text>
-  <text x="200" y="252" font-size="13" fill="#2f3a2b" text-anchor="middle">Roost trees: big pines on ridges, used year after year</text>
-  <text x="200" y="272" font-size="13" fill="#2f3a2b" text-anchor="middle">Hours: 1 hour before sunrise to 1 hour after sunset (98%)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 442" font-family="sans-serif" role="img" aria-label="A turkey&#x27;s day in six panels, 75 percent. Roost in a tall pine at night. Fly down at first light. Feed and travel through the morning. Loaf at midday. Feed again late in the day. Back to the roost at dusk. In spring toms gobble on the roost from mid April. Roost trees are big pines on ridges, used year after year. Hunting hours: 1 hour before sunrise to 1 hour after sunset, 98 percent.">
+<rect width="400" height="442" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A turkey&#x27;s day (75%)</text>
+<clipPath id="sb-turkey-day-c0"><rect x="8" y="40" width="124" height="128" rx="7"/></clipPath>
+<g clip-path="url(#sb-turkey-day-c0)">
+<rect x="8" y="40" width="124" height="128" fill="#fffaf0"/>
+<rect x="8" y="40" width="124" height="84" fill="#9aa6bb"/>
+<rect x="8" y="116" width="124" height="10" fill="#b9b08a"/>
+<path d="M54 44 L67.68 72.88 L61.98 72.88 L76.8 104.8 L31.2 104.8 L46.02 72.88 L40.32 72.88z" fill="#2f3a2b"/><rect x="51.5" y="104.8" width="5" height="15.200000000000001" fill="#5a412a"/>
+<path d="M54 86 L92 82" stroke="#5a412a" stroke-width="3"/>
+<g transform="translate(86 83) scale(0.5 0.5)"><path d="M-4 -18 L-7 0 M6 -18 L8 0 M-7 0 l-5 1 M-7 0 l3 2 M8 0 l5 1 M8 0 l-2 2" stroke="#c08a6a" stroke-width="2.6" stroke-linecap="round"/><path d="M-20 -26 L-34 -18 L-32 -13 L-18 -18z" fill="#4a3b2c"/><ellipse cx="0" cy="-26" rx="22" ry="14" fill="#4a3b2c"/><path d="M-14 -32 C-4 -38 10 -36 16 -28" stroke="#7a5a36" stroke-width="4" fill="none"/><path d="M-12 -24 C-2 -18 8 -18 14 -22" stroke="#d9cfb8" stroke-width="1.6" fill="none" stroke-dasharray="3 3"/><path d="M12 -28 l1 12" stroke="#2b2118" stroke-width="2.2"/><path d="M16 -30 C22 -38 22 -48 22 -56" stroke="#c0392b" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="23" cy="-58" r="5" fill="#8fb8dc"/><path d="M27 -59 l6 2 l-6 2z" fill="#3a2e22"/><path d="M22 -54 q3 6 0 10" stroke="#c0392b" stroke-width="3" fill="none"/><circle cx="24.5" cy="-59" r="1.1" fill="#111"/></g>
+<circle cx="112" cy="56" r="7" fill="#f3e7b3"/><circle cx="115" cy="54" r="6" fill="#9aa6bb"/>
+</g>
+<text x="70" y="146" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Roost</text>
+<text x="70" y="163" font-size="14" fill="#6b5b4b" text-anchor="middle">tall pine</text>
+<clipPath id="sb-turkey-day-c1"><rect x="138" y="40" width="124" height="128" rx="7"/></clipPath>
+<g clip-path="url(#sb-turkey-day-c1)">
+<rect x="138" y="40" width="124" height="128" fill="#fffaf0"/>
+<rect x="138" y="40" width="124" height="84" fill="#f6d7b0"/>
+<rect x="138" y="116" width="124" height="10" fill="#b9b08a"/>
+<path d="M160 50 L172.6 76.6 L167.35 76.6 L181.0 106.0 L139.0 106.0 L152.65 76.6 L147.4 76.6z" fill="#2f3a2b"/><rect x="157.5" y="106.0" width="5" height="14.0" fill="#5a412a"/>
+<path d="M174 62 C198 74 218 96 236 112" stroke="#8b6a4a" stroke-width="1.6" fill="none" stroke-dasharray="4 3"/>
+<g transform="translate(208 90) scale(0.6 0.6)"><path d="M-18 -2 L-36 -4 L-34 4z" fill="#4a3b2c"/><ellipse cx="0" cy="0" rx="20" ry="9" fill="#4a3b2c"/><path d="M-6 -4 C-14 -22 -30 -30 -40 -30 C-30 -20 -20 -10 -8 0z" fill="#7a5a36"/><path d="M4 -4 C6 -20 12 -30 22 -36 C18 -22 14 -10 10 0z" fill="#4a3b2c"/><path d="M18 -2 C24 -2 28 0 32 4" stroke="#c0392b" stroke-width="4.5" fill="none" stroke-linecap="round"/><circle cx="34" cy="6" r="4.2" fill="#8fb8dc"/><path d="M-4 8 L-8 16 M4 8 L2 16" stroke="#c08a6a" stroke-width="2.2"/></g>
+<circle cx="246" cy="118" r="10" fill="#f5b041"/><rect x="138" y="116" width="124" height="10" fill="#b9b08a"/>
+</g>
+<text x="200" y="146" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Fly down</text>
+<text x="200" y="163" font-size="14" fill="#6b5b4b" text-anchor="middle">first light</text>
+<clipPath id="sb-turkey-day-c2"><rect x="268" y="40" width="124" height="128" rx="7"/></clipPath>
+<g clip-path="url(#sb-turkey-day-c2)">
+<rect x="268" y="40" width="124" height="128" fill="#fffaf0"/>
+<rect x="268" y="40" width="124" height="84" fill="#efe6b8"/>
+<rect x="268" y="116" width="124" height="10" fill="#b9b08a"/>
+<g transform="translate(328 118) scale(0.9 0.9)"><path d="M-4 -18 L-7 0 M6 -18 L8 0 M-7 0 l-5 1 M-7 0 l3 2 M8 0 l5 1 M8 0 l-2 2" stroke="#c08a6a" stroke-width="2.6" stroke-linecap="round"/><path d="M-20 -26 L-34 -18 L-32 -13 L-18 -18z" fill="#4a3b2c"/><ellipse cx="0" cy="-26" rx="22" ry="14" fill="#4a3b2c"/><path d="M-14 -32 C-4 -38 10 -36 16 -28" stroke="#7a5a36" stroke-width="4" fill="none"/><path d="M-12 -24 C-2 -18 8 -18 14 -22" stroke="#d9cfb8" stroke-width="1.6" fill="none" stroke-dasharray="3 3"/><path d="M16 -28 C24 -24 28 -16 30 -8" stroke="#c0392b" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="31" cy="-5" r="4.5" fill="#8fb8dc"/><path d="M33 -2 l3 5 l-5 -2z" fill="#3a2e22"/></g>
+<g fill="#8a7a4a"><circle cx="362" cy="117" r="1.6"/><circle cx="368" cy="119" r="1.6"/><circle cx="356" cy="120" r="1.6"/></g>
+</g>
+<text x="330" y="146" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Feed, travel</text>
+<text x="330" y="163" font-size="14" fill="#6b5b4b" text-anchor="middle">morning</text>
+<clipPath id="sb-turkey-day-c3"><rect x="8" y="174" width="124" height="128" rx="7"/></clipPath>
+<g clip-path="url(#sb-turkey-day-c3)">
+<rect x="8" y="174" width="124" height="128" fill="#fffaf0"/>
+<rect x="8" y="174" width="124" height="84" fill="#dfe6d3"/>
+<rect x="8" y="250" width="124" height="10" fill="#b9b08a"/>
+<path d="M104 190 L115.52 214.32 L110.72 214.32 L123.2 241.2 L84.8 241.2 L97.28 214.32 L92.48 214.32z" fill="#3f5a3a"/><rect x="101.5" y="241.2" width="5" height="12.8" fill="#5a412a"/>
+<ellipse cx="78" cy="252" rx="40" ry="5" fill="#8f9a74" opacity=".6"/>
+<g transform="translate(64 252) scale(0.9 0.9)"><path d="M-20 -12 L-34 -4 L-32 1 L-18 -4z" fill="#4a3b2c"/><ellipse cx="0" cy="-12" rx="22" ry="14" fill="#4a3b2c"/><path d="M-14 -18 C-4 -24 10 -22 16 -14" stroke="#7a5a36" stroke-width="4" fill="none"/><path d="M-12 -10 C-2 -4 8 -4 14 -8" stroke="#d9cfb8" stroke-width="1.6" fill="none" stroke-dasharray="3 3"/><path d="M16 -16 C22 -24 22 -34 22 -42" stroke="#c0392b" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="23" cy="-44" r="5" fill="#8fb8dc"/><path d="M27 -45 l6 2 l-6 2z" fill="#3a2e22"/><path d="M22 -40 q3 6 0 10" stroke="#c0392b" stroke-width="3" fill="none"/><circle cx="24.5" cy="-45" r="1.1" fill="#111"/></g>
+<circle cx="28" cy="190" r="9" fill="#f5c542"/>
+</g>
+<text x="70" y="280" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Loaf</text>
+<text x="70" y="297" font-size="14" fill="#6b5b4b" text-anchor="middle">midday</text>
+<clipPath id="sb-turkey-day-c4"><rect x="138" y="174" width="124" height="128" rx="7"/></clipPath>
+<g clip-path="url(#sb-turkey-day-c4)">
+<rect x="138" y="174" width="124" height="128" fill="#fffaf0"/>
+<rect x="138" y="174" width="124" height="84" fill="#f3dcae"/>
+<rect x="138" y="250" width="124" height="10" fill="#b9b08a"/>
+<g transform="translate(198 252) scale(0.9 0.9)"><path d="M-4 -18 L-7 0 M6 -18 L8 0 M-7 0 l-5 1 M-7 0 l3 2 M8 0 l5 1 M8 0 l-2 2" stroke="#c08a6a" stroke-width="2.6" stroke-linecap="round"/><path d="M-20 -26 L-34 -18 L-32 -13 L-18 -18z" fill="#4a3b2c"/><ellipse cx="0" cy="-26" rx="22" ry="14" fill="#4a3b2c"/><path d="M-14 -32 C-4 -38 10 -36 16 -28" stroke="#7a5a36" stroke-width="4" fill="none"/><path d="M-12 -24 C-2 -18 8 -18 14 -22" stroke="#d9cfb8" stroke-width="1.6" fill="none" stroke-dasharray="3 3"/><path d="M16 -28 C24 -24 28 -16 30 -8" stroke="#c0392b" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="31" cy="-5" r="4.5" fill="#8fb8dc"/><path d="M33 -2 l3 5 l-5 -2z" fill="#3a2e22"/></g>
+<g fill="#8a7a4a"><circle cx="232" cy="251" r="1.6"/><circle cx="238" cy="253" r="1.6"/><circle cx="226" cy="254" r="1.6"/></g>
+</g>
+<text x="200" y="280" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Feed</text>
+<text x="200" y="297" font-size="14" fill="#6b5b4b" text-anchor="middle">late day</text>
+<clipPath id="sb-turkey-day-c5"><rect x="268" y="174" width="124" height="128" rx="7"/></clipPath>
+<g clip-path="url(#sb-turkey-day-c5)">
+<rect x="268" y="174" width="124" height="128" fill="#fffaf0"/>
+<rect x="268" y="174" width="124" height="84" fill="#b6a6c4"/>
+<rect x="268" y="250" width="124" height="10" fill="#b9b08a"/>
+<path d="M314 178 L327.68 206.88 L321.98 206.88 L336.8 238.8 L291.2 238.8 L306.02 206.88 L300.32 206.88z" fill="#2f3a2b"/><rect x="311.5" y="238.8" width="5" height="15.200000000000001" fill="#5a412a"/>
+<path d="M314 220 L352 216" stroke="#5a412a" stroke-width="3"/>
+<g transform="rotate(28 362 236)"><g transform="translate(362 236) scale(-0.58 0.58)"><path d="M-18 -2 L-36 -4 L-34 4z" fill="#4a3b2c"/><ellipse cx="0" cy="0" rx="20" ry="9" fill="#4a3b2c"/><path d="M-6 -4 C-14 -22 -30 -30 -40 -30 C-30 -20 -20 -10 -8 0z" fill="#7a5a36"/><path d="M4 -4 C6 -20 12 -30 22 -36 C18 -22 14 -10 10 0z" fill="#4a3b2c"/><path d="M18 -2 C24 -2 28 0 32 4" stroke="#c0392b" stroke-width="4.5" fill="none" stroke-linecap="round"/><circle cx="34" cy="6" r="4.2" fill="#8fb8dc"/><path d="M-4 8 L-8 16 M4 8 L2 16" stroke="#c08a6a" stroke-width="2.2"/></g></g>
+<path d="M384 252 C378 248 374 246 370 244" stroke="#fffaf0" stroke-width="1.8" fill="none" stroke-dasharray="3 3"/>
+</g>
+<text x="330" y="280" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Roost</text>
+<text x="330" y="297" font-size="14" fill="#6b5b4b" text-anchor="middle">at dusk</text>
+<rect x="8" y="312" width="384" height="34" rx="7" fill="#e8590c"/>
+<text x="200" y="335" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Spring: toms gobble on the roost from mid April</text>
+<text x="14" y="364" font-size="15" font-weight="bold" fill="#2f3a2b">Roost trees: big pines on ridges,</text>
+<text x="14" y="384" font-size="15" fill="#2f3a2b">used year after year.</text>
+<text x="14" y="404" font-size="15" font-weight="bold" fill="#2f3a2b">Hours: 1 hour before sunrise to</text>
+<text x="14" y="424" font-size="15" fill="#2f3a2b">1 hour after sunset (98%).</text>
 </svg>

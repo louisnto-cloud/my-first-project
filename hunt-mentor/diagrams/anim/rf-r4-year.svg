@@ -1,40 +1,94 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 348" role="img" aria-label="Animation: a red line for today walks through the Region 4 licence year from July to June. Mule deer bucks: 1 to 9 September for youth or bow only, then 4 point bucks 10 September to 10 November. White tailed deer bucks: 1 to 9 September youth or bow, then 10 September to 30 November. Black bear: August on private land only, 1 to 9 September bow only, 10 September to 30 November, and 1 April to 30 June. Grouse: 1 September to 30 November. Ducks and geese: 8 September to 23 December. At the end every season shows." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="348" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Region 4 year at a glance</text>
-<rect x="14.0" y="46" width="31.6" height="236" fill="#dfe6d3" opacity=".55"/>
-<text x="30" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
-<text x="61" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
-<rect x="77.2" y="46" width="30.6" height="236" fill="#dfe6d3" opacity=".55"/>
-<text x="92" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
-<text x="124" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
-<rect x="139.4" y="46" width="30.6" height="236" fill="#dfe6d3" opacity=".55"/>
-<text x="155" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
-<text x="186" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
-<rect x="201.5" y="46" width="31.6" height="236" fill="#dfe6d3" opacity=".55"/>
-<text x="217" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
-<text x="247" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
-<rect x="261.7" y="46" width="31.6" height="236" fill="#dfe6d3" opacity=".55"/>
-<text x="277" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
-<text x="309" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
-<rect x="323.8" y="46" width="31.6" height="236" fill="#dfe6d3" opacity=".55"/>
-<text x="340" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
-<text x="371" y="60" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
-<text x="14" y="80" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Mule deer bucks</text>
-<rect x="77.2" y="86" width="9.2" height="16" rx="4" fill="#e8590c" opacity=".3"><set attributeName="opacity" to="1" begin="1.70s" dur="0.25s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
-<rect x="86.4" y="86" width="63.2" height="16" rx="4" fill="#e8590c" opacity=".3"><set attributeName="opacity" to="1" begin="1.95s" dur="1.70s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
-<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">White tailed deer bucks</text>
-<rect x="77.2" y="130" width="9.2" height="16" rx="4" fill="#b8460a" opacity=".3"><set attributeName="opacity" to="1" begin="1.70s" dur="0.25s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
-<rect x="86.4" y="130" width="83.6" height="16" rx="4" fill="#b8460a" opacity=".3"><set attributeName="opacity" to="1" begin="1.95s" dur="2.25s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
-<text x="14" y="168" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Black bear (Aug: private land)</text>
-<rect x="45.6" y="174" width="31.6" height="16" rx="4" fill="#8b5a2b" opacity=".3"><set attributeName="opacity" to="1" begin="0.85s" dur="0.85s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
-<rect x="77.2" y="174" width="9.2" height="16" rx="4" fill="#8b5a2b" opacity=".3"><set attributeName="opacity" to="1" begin="1.70s" dur="0.25s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
-<rect x="86.4" y="174" width="83.6" height="16" rx="4" fill="#8b5a2b" opacity=".3"><set attributeName="opacity" to="1" begin="1.95s" dur="2.25s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
-<rect x="293.3" y="174" width="92.7" height="16" rx="4" fill="#8b5a2b" opacity=".3"><set attributeName="opacity" to="1" begin="7.51s" dur="2.49s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
-<text x="14" y="212" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Grouse</text>
-<rect x="77.2" y="218" width="92.7" height="16" rx="4" fill="#8a9a6b" opacity=".3"><set attributeName="opacity" to="1" begin="1.70s" dur="2.49s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
-<text x="14" y="256" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Ducks and geese</text>
-<rect x="84.3" y="262" width="109.1" height="16" rx="4" fill="#4a7fb0" opacity=".3"><set attributeName="opacity" to="1" begin="1.89s" dur="2.93s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
-<g><line x1="14" y1="44" x2="14" y2="286" stroke="#c92a2a" stroke-width="3"/><circle cx="14" cy="290" r="6" fill="#c92a2a"/><animateTransform attributeName="transform" type="translate" from="0 0" to="372 0" begin="0s" dur="10.0s" fill="freeze"/></g>
-<text x="200" y="316" font-size="14" fill="#23261f" text-anchor="middle">Red line: today. A bar lights up when it is open.</text>
-<text x="200" y="336" font-size="14" fill="#6b6f66" text-anchor="middle">At the end every season shows.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 388" font-family="sans-serif" role="img" aria-label="Animation: a red line for today walks through the Region 4 licence year from July to June. Mule deer bucks: 1 to 9 September for youth or bow only, then 4 point bucks 10 September to 10 November. White tailed deer bucks: 1 to 9 September youth or bow, then 10 September to 30 November. Black bear: August on private land only, 1 to 9 September bow only, 10 September to 30 November, and 1 April to 30 June. Grouse: 1 September to 30 November. Ducks and geese: 8 September to 23 December. At the end every season shows.">
+<rect width="400" height="388" fill="#fffaf0"/>
+<text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Region 4 year at a glance</text>
+<text x="29.8" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="61.4" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="92.5" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">S</text>
+<text x="123.6" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">O</text>
+<text x="154.6" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">N</text>
+<text x="185.7" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">D</text>
+<text x="217.3" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="247.4" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">F</text>
+<text x="277.5" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="308.5" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="339.6" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="370.7" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="14" y="82" font-size="16" font-weight="bold" fill="#2f3a2b">Mule deer bucks</text>
+<rect x="14.0" y="88" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="45.6" y="88" width="31.6" height="18" fill="#f8f3e6"/>
+<rect x="77.2" y="88" width="30.6" height="18" fill="#efe8d6"/>
+<rect x="107.8" y="88" width="31.6" height="18" fill="#f8f3e6"/>
+<rect x="139.4" y="88" width="30.6" height="18" fill="#efe8d6"/>
+<rect x="169.9" y="88" width="31.6" height="18" fill="#f8f3e6"/>
+<rect x="201.5" y="88" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="233.1" y="88" width="28.5" height="18" fill="#f8f3e6"/>
+<rect x="261.7" y="88" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="293.3" y="88" width="30.6" height="18" fill="#f8f3e6"/>
+<rect x="323.8" y="88" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="355.4" y="88" width="30.6" height="18" fill="#f8f3e6"/>
+<rect x="77.2" y="89" width="8.2" height="16" rx="3" fill="#e8590c" opacity=".3"><set attributeName="opacity" to="1" begin="1.70s" dur="0.25s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<rect x="86.4" y="89" width="62.2" height="16" rx="3" fill="#e8590c" opacity=".3"><set attributeName="opacity" to="1" begin="1.95s" dur="1.70s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<text x="14" y="136" font-size="16" font-weight="bold" fill="#2f3a2b">White tailed deer bucks</text>
+<rect x="14.0" y="142" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="45.6" y="142" width="31.6" height="18" fill="#f8f3e6"/>
+<rect x="77.2" y="142" width="30.6" height="18" fill="#efe8d6"/>
+<rect x="107.8" y="142" width="31.6" height="18" fill="#f8f3e6"/>
+<rect x="139.4" y="142" width="30.6" height="18" fill="#efe8d6"/>
+<rect x="169.9" y="142" width="31.6" height="18" fill="#f8f3e6"/>
+<rect x="201.5" y="142" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="233.1" y="142" width="28.5" height="18" fill="#f8f3e6"/>
+<rect x="261.7" y="142" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="293.3" y="142" width="30.6" height="18" fill="#f8f3e6"/>
+<rect x="323.8" y="142" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="355.4" y="142" width="30.6" height="18" fill="#f8f3e6"/>
+<rect x="77.2" y="143" width="8.2" height="16" rx="3" fill="#b8460a" opacity=".3"><set attributeName="opacity" to="1" begin="1.70s" dur="0.25s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<rect x="86.4" y="143" width="82.6" height="16" rx="3" fill="#b8460a" opacity=".3"><set attributeName="opacity" to="1" begin="1.95s" dur="2.25s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<text x="14" y="190" font-size="16" font-weight="bold" fill="#2f3a2b">Black bear (Aug: private land)</text>
+<rect x="14.0" y="196" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="45.6" y="196" width="31.6" height="18" fill="#f8f3e6"/>
+<rect x="77.2" y="196" width="30.6" height="18" fill="#efe8d6"/>
+<rect x="107.8" y="196" width="31.6" height="18" fill="#f8f3e6"/>
+<rect x="139.4" y="196" width="30.6" height="18" fill="#efe8d6"/>
+<rect x="169.9" y="196" width="31.6" height="18" fill="#f8f3e6"/>
+<rect x="201.5" y="196" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="233.1" y="196" width="28.5" height="18" fill="#f8f3e6"/>
+<rect x="261.7" y="196" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="293.3" y="196" width="30.6" height="18" fill="#f8f3e6"/>
+<rect x="323.8" y="196" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="355.4" y="196" width="30.6" height="18" fill="#f8f3e6"/>
+<rect x="45.6" y="197" width="30.6" height="16" rx="3" fill="#8b5a2b" opacity=".3"><set attributeName="opacity" to="1" begin="0.85s" dur="0.85s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<rect x="77.2" y="197" width="8.2" height="16" rx="3" fill="#8b5a2b" opacity=".3"><set attributeName="opacity" to="1" begin="1.70s" dur="0.25s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<rect x="86.4" y="197" width="82.6" height="16" rx="3" fill="#8b5a2b" opacity=".3"><set attributeName="opacity" to="1" begin="1.95s" dur="2.25s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<rect x="293.3" y="197" width="91.7" height="16" rx="3" fill="#8b5a2b" opacity=".3"><set attributeName="opacity" to="1" begin="7.51s" dur="2.49s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<text x="14" y="244" font-size="16" font-weight="bold" fill="#2f3a2b">Grouse</text>
+<rect x="14.0" y="250" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="45.6" y="250" width="31.6" height="18" fill="#f8f3e6"/>
+<rect x="77.2" y="250" width="30.6" height="18" fill="#efe8d6"/>
+<rect x="107.8" y="250" width="31.6" height="18" fill="#f8f3e6"/>
+<rect x="139.4" y="250" width="30.6" height="18" fill="#efe8d6"/>
+<rect x="169.9" y="250" width="31.6" height="18" fill="#f8f3e6"/>
+<rect x="201.5" y="250" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="233.1" y="250" width="28.5" height="18" fill="#f8f3e6"/>
+<rect x="261.7" y="250" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="293.3" y="250" width="30.6" height="18" fill="#f8f3e6"/>
+<rect x="323.8" y="250" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="355.4" y="250" width="30.6" height="18" fill="#f8f3e6"/>
+<rect x="77.2" y="251" width="91.7" height="16" rx="3" fill="#8a9a6b" opacity=".3"><set attributeName="opacity" to="1" begin="1.70s" dur="2.49s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<text x="14" y="298" font-size="16" font-weight="bold" fill="#2f3a2b">Ducks and geese</text>
+<rect x="14.0" y="304" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="45.6" y="304" width="31.6" height="18" fill="#f8f3e6"/>
+<rect x="77.2" y="304" width="30.6" height="18" fill="#efe8d6"/>
+<rect x="107.8" y="304" width="31.6" height="18" fill="#f8f3e6"/>
+<rect x="139.4" y="304" width="30.6" height="18" fill="#efe8d6"/>
+<rect x="169.9" y="304" width="31.6" height="18" fill="#f8f3e6"/>
+<rect x="201.5" y="304" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="233.1" y="304" width="28.5" height="18" fill="#f8f3e6"/>
+<rect x="261.7" y="304" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="293.3" y="304" width="30.6" height="18" fill="#f8f3e6"/>
+<rect x="323.8" y="304" width="31.6" height="18" fill="#efe8d6"/>
+<rect x="355.4" y="304" width="30.6" height="18" fill="#f8f3e6"/>
+<rect x="84.3" y="305" width="108.1" height="16" rx="3" fill="#4a7fb0" opacity=".3"><set attributeName="opacity" to="1" begin="1.89s" dur="2.93s"/><set attributeName="opacity" to="1" begin="10.20s" fill="freeze"/></rect>
+<g><line x1="14" y1="36" x2="14" y2="328" stroke="#c92a2a" stroke-width="3"/><circle cx="14" cy="332" r="6" fill="#c92a2a"/><animateTransform attributeName="transform" type="translate" from="0 0" to="372 0" begin="0s" dur="10.0s" fill="freeze"/></g>
+<text x="200" y="358" font-size="15" fill="#2f3a2b" text-anchor="middle">Red line: today. A bar lights up when it is open.</text>
+<text x="200" y="378" font-size="15" fill="#6b5b4b" text-anchor="middle">At the end every season shows.</text>
 </svg>

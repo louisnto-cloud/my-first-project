@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation of still hunting cadence, top view. The hunter takes 3 slow steps, leaving boot prints, then stops and scans left and right for 20 seconds or more. Then 3 more steps and another long stop. Look much more than you walk.">
 <rect width="400" height="300" fill="#fffaf0"/>
-<rect width="400" height="300" fill="#cfd9b8"/>
+<defs><clipPath id="hf-step-cadence-c"><rect x="0" y="58" width="400" height="192"/></clipPath></defs><rect width="400" height="300" fill="#cfd9b8"/>
 <circle cx="66" cy="176" r="2.5" fill="#b4c299"/>
 <circle cx="192" cy="99" r="2.7" fill="#b4c299"/>
 <circle cx="323" cy="147" r="2.3" fill="#b4c299"/>
@@ -71,16 +71,16 @@
 <circle cx="300" cy="232" r="20" fill="#3f6a33"/><circle cx="295" cy="227" r="11" fill="#5b8744"/>
 <circle cx="372" cy="222" r="14" fill="#3f6a33"/><circle cx="368" cy="218" r="8" fill="#5b8744"/>
 <rect width="400" height="58" fill="#fffaf0"/><rect y="250" width="400" height="50" fill="#fffaf0"/>
-<g opacity="0"><set attributeName="opacity" to="1" begin="0.3s" fill="freeze"/><g transform="translate(50 158)"><rect x="-9" y="-4" width="15" height="9" rx="4.5" fill="#6b4f35"/><rect x="8" y="-3.5" width="7" height="7" rx="3" fill="#6b4f35"/></g></g>
-<g opacity="0"><set attributeName="opacity" to="1" begin="0.9s" fill="freeze"/><g transform="translate(95 182)"><rect x="-9" y="-4" width="15" height="9" rx="4.5" fill="#6b4f35"/><rect x="8" y="-3.5" width="7" height="7" rx="3" fill="#6b4f35"/></g></g>
-<g opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/><g transform="translate(140 158)"><rect x="-9" y="-4" width="15" height="9" rx="4.5" fill="#6b4f35"/><rect x="8" y="-3.5" width="7" height="7" rx="3" fill="#6b4f35"/></g></g>
-<g opacity="0"><set attributeName="opacity" to="1" begin="5.0s" fill="freeze"/><g transform="translate(185 182)"><rect x="-9" y="-4" width="15" height="9" rx="4.5" fill="#6b4f35"/><rect x="8" y="-3.5" width="7" height="7" rx="3" fill="#6b4f35"/></g></g>
-<g opacity="0"><set attributeName="opacity" to="1" begin="5.6s" fill="freeze"/><g transform="translate(230 158)"><rect x="-9" y="-4" width="15" height="9" rx="4.5" fill="#6b4f35"/><rect x="8" y="-3.5" width="7" height="7" rx="3" fill="#6b4f35"/></g></g>
-<g opacity="0"><set attributeName="opacity" to="1" begin="6.2s" fill="freeze"/><g transform="translate(275 182)"><rect x="-9" y="-4" width="15" height="9" rx="4.5" fill="#6b4f35"/><rect x="8" y="-3.5" width="7" height="7" rx="3" fill="#6b4f35"/></g></g>
-<g><animateTransform attributeName="transform" type="translate" values="20 170;50 170;95 170;140 170;140 170;185 170;230 170;275 170;275 170" keyTimes="0;0.03;0.09;0.15;0.5;0.53;0.59;0.65;1" dur="10s" fill="freeze"/>
+<g opacity="0"><set attributeName="opacity" to="1" begin="0.3s" fill="freeze"/><g transform="translate(50 158)"><path d="M-10 -3 Q-10 -6 -6 -6 H3 Q9 -6 9 0 Q9 6 3 6 H-6 Q-10 6 -10 3z" fill="#6b4f35"/><rect x="11" y="-4.5" width="7" height="9" rx="3" fill="#6b4f35"/></g></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="0.9s" fill="freeze"/><g transform="translate(95 182)"><path d="M-10 -3 Q-10 -6 -6 -6 H3 Q9 -6 9 0 Q9 6 3 6 H-6 Q-10 6 -10 3z" fill="#6b4f35"/><rect x="11" y="-4.5" width="7" height="9" rx="3" fill="#6b4f35"/></g></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/><g transform="translate(140 158)"><path d="M-10 -3 Q-10 -6 -6 -6 H3 Q9 -6 9 0 Q9 6 3 6 H-6 Q-10 6 -10 3z" fill="#6b4f35"/><rect x="11" y="-4.5" width="7" height="9" rx="3" fill="#6b4f35"/></g></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="5.0s" fill="freeze"/><g transform="translate(185 182)"><path d="M-10 -3 Q-10 -6 -6 -6 H3 Q9 -6 9 0 Q9 6 3 6 H-6 Q-10 6 -10 3z" fill="#6b4f35"/><rect x="11" y="-4.5" width="7" height="9" rx="3" fill="#6b4f35"/></g></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="5.6s" fill="freeze"/><g transform="translate(230 158)"><path d="M-10 -3 Q-10 -6 -6 -6 H3 Q9 -6 9 0 Q9 6 3 6 H-6 Q-10 6 -10 3z" fill="#6b4f35"/><rect x="11" y="-4.5" width="7" height="9" rx="3" fill="#6b4f35"/></g></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="6.2s" fill="freeze"/><g transform="translate(275 182)"><path d="M-10 -3 Q-10 -6 -6 -6 H3 Q9 -6 9 0 Q9 6 3 6 H-6 Q-10 6 -10 3z" fill="#6b4f35"/><rect x="11" y="-4.5" width="7" height="9" rx="3" fill="#6b4f35"/></g></g>
+<g clip-path="url(#hf-step-cadence-c)"><g><animateTransform attributeName="transform" type="translate" values="20 170;50 170;95 170;140 170;140 170;185 170;230 170;275 170;275 170" keyTimes="0;0.03;0.09;0.15;0.5;0.53;0.59;0.65;1" dur="10s" fill="freeze"/>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0;1;1" keyTimes="0;0.16;0.17;0.48;0.49;0.66;0.67;1" dur="10s" fill="freeze"/><path d="M0 0 L90 -45 A 100 100 0 0 1 90 45 Z" fill="#e8590c" opacity=".25"><animateTransform attributeName="transform" type="rotate" values="-50;50;-50;50;0" dur="3s" begin="1.7s" fill="freeze"/><animateTransform attributeName="transform" type="rotate" values="0;-50;50;-50;0" dur="3s" begin="6.7s" fill="freeze"/></path></g>
 <ellipse cx="-2" cy="0" rx="9" ry="15" fill="#e8590c" stroke="#a63c06" stroke-width="1.2"/><circle cx="1" cy="0" r="7" fill="#d9480f" stroke="#a63c06" stroke-width="1.2"/><path d="M7 0 h6" stroke="#a63c06" stroke-width="3" stroke-linecap="round"/>
-</g>
+</g></g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0;1;1" keyTimes="0;0.16;0.17;0.48;0.49;0.66;0.67;1" dur="10s" fill="freeze"/><rect x="100" y="12" width="200" height="36" rx="8" fill="#2f3a2b"/><text x="200" y="37" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">STOP. Look 20 s +</text></g>
 <g opacity="1"><animate attributeName="opacity" values="1;1;0;0;1;1;0;0" keyTimes="0;0.16;0.17;0.48;0.49;0.66;0.67;1" dur="10s" fill="freeze"/><text x="200" y="37" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2 or 3 slow steps</text></g>
 <g opacity="0"><animate attributeName="opacity" values="0;1" begin="9s" dur=".5s" fill="freeze"/><rect x="50" y="257" width="300" height="36" rx="8" fill="#e8590c"/><text x="200" y="281" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Look much more than you walk</text></g>

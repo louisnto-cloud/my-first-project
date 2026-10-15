@@ -1,4 +1,101 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, side view of a ponderosa pine stand. A low ground fire sweeps from left to right through the grass. The small young fir trees die and disappear. The big old thick barked pines survive. Final label: old thick bark pines live, small trees and brush die, so the forest stays open.">
-<rect width="400" height="300" fill="#fffaf0"/>
-<text x="200.0" y="26" font-size="19" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A ground fire keeps the forest open</text><rect x="0" y="230" width="400" height="70" rx="0" fill="#d9c78f"/><rect x="67.5" y="160.0" width="5" height="72.0" rx="0" fill="#6b4f35"/><ellipse cx="70" cy="145.6" rx="33.6" ry="26.4" fill="#4f6b3a"/><rect x="197.5" y="160.0" width="5" height="72.0" rx="0" fill="#6b4f35"/><ellipse cx="200" cy="145.6" rx="33.6" ry="26.4" fill="#4f6b3a"/><rect x="327.5" y="160.0" width="5" height="72.0" rx="0" fill="#6b4f35"/><ellipse cx="330" cy="145.6" rx="33.6" ry="26.4" fill="#4f6b3a"/><g><polygon points="112.3,226.9 120.0,198.0 127.7,226.9" fill="#4f6b3a"/><rect x="118" y="226.9" width="4" height="5.1" rx="0" fill="#6b4f35"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.24;0.32;1" dur="7s" fill="freeze"/></g><g><polygon points="142.3,226.9 150.0,198.0 157.7,226.9" fill="#4f6b3a"/><rect x="148" y="226.9" width="4" height="5.1" rx="0" fill="#6b4f35"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.30;0.38;1" dur="7s" fill="freeze"/></g><g><polygon points="247.3,226.9 255.0,198.0 262.6,226.9" fill="#4f6b3a"/><rect x="253" y="226.9" width="4" height="5.1" rx="0" fill="#6b4f35"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.51;0.59;1" dur="7s" fill="freeze"/></g><g><polygon points="282.4,226.9 290.0,198.0 297.6,226.9" fill="#4f6b3a"/><rect x="288" y="226.9" width="4" height="5.1" rx="0" fill="#6b4f35"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.58;0.66;1" dur="7s" fill="freeze"/></g><g><polygon points="362.4,226.9 370.0,198.0 377.6,226.9" fill="#4f6b3a"/><rect x="368" y="226.9" width="4" height="5.1" rx="0" fill="#6b4f35"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.74;0.82;1" dur="7s" fill="freeze"/></g><g><path transform="translate(0 236) scale(0.9)" d="M0 0 C -10 -8 -6 -18 0 -28 C 2 -18 10 -16 8 -8 C 7 -3 4 0 0 0 Z" fill="#e8590c"/><path transform="translate(14 238) scale(0.7)" d="M0 0 C -10 -8 -6 -18 0 -28 C 2 -18 10 -16 8 -8 C 7 -3 4 0 0 0 Z" fill="#e8590c"/><animateTransform attributeName="transform" type="translate" values="-40 0;420 0" dur="6s" begin="0.0s" fill="freeze"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.9;1" dur="6s" fill="freeze"/></g><g><path transform="translate(0 236) scale(0.9)" d="M0 0 C -10 -8 -6 -18 0 -28 C 2 -18 10 -16 8 -8 C 7 -3 4 0 0 0 Z" fill="#e8590c"/><path transform="translate(14 238) scale(0.7)" d="M0 0 C -10 -8 -6 -18 0 -28 C 2 -18 10 -16 8 -8 C 7 -3 4 0 0 0 Z" fill="#e8590c"/><animateTransform attributeName="transform" type="translate" values="-60 0;400 0" dur="6s" begin="0.1s" fill="freeze"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.9;1" dur="6s" fill="freeze"/></g><g><path transform="translate(0 236) scale(0.9)" d="M0 0 C -10 -8 -6 -18 0 -28 C 2 -18 10 -16 8 -8 C 7 -3 4 0 0 0 Z" fill="#e8590c"/><path transform="translate(14 238) scale(0.7)" d="M0 0 C -10 -8 -6 -18 0 -28 C 2 -18 10 -16 8 -8 C 7 -3 4 0 0 0 Z" fill="#e8590c"/><animateTransform attributeName="transform" type="translate" values="-80 0;380 0" dur="6s" begin="0.2s" fill="freeze"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.9;1" dur="6s" fill="freeze"/></g><g><path transform="translate(0 236) scale(0.9)" d="M0 0 C -10 -8 -6 -18 0 -28 C 2 -18 10 -16 8 -8 C 7 -3 4 0 0 0 Z" fill="#e8590c"/><path transform="translate(14 238) scale(0.7)" d="M0 0 C -10 -8 -6 -18 0 -28 C 2 -18 10 -16 8 -8 C 7 -3 4 0 0 0 Z" fill="#e8590c"/><animateTransform attributeName="transform" type="translate" values="-100 0;360 0" dur="6s" begin="0.30000000000000004s" fill="freeze"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.9;1" dur="6s" fill="freeze"/></g><g><path transform="translate(0 236) scale(0.9)" d="M0 0 C -10 -8 -6 -18 0 -28 C 2 -18 10 -16 8 -8 C 7 -3 4 0 0 0 Z" fill="#e8590c"/><path transform="translate(14 238) scale(0.7)" d="M0 0 C -10 -8 -6 -18 0 -28 C 2 -18 10 -16 8 -8 C 7 -3 4 0 0 0 Z" fill="#e8590c"/><animateTransform attributeName="transform" type="translate" values="-120 0;340 0" dur="6s" begin="0.4s" fill="freeze"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.9;1" dur="6s" fill="freeze"/></g><text x="200" y="270" font-size="14" fill="#2f3a2b" text-anchor="middle">flames stay low, under 1 m</text><g opacity="0"><rect x="40" y="44" width="320" height="52" rx="8" fill="#2f3a2b"/><text x="200" y="66" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Old thick bark pines live.</text><text x="200" y="86" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Small trees and brush die.</text><animate attributeName="opacity" values="0;1" begin="6.5s" dur="0.5s" fill="freeze"/></g><text x="200.0" y="292" font-size="14" fill="#6b4f35" text-anchor="middle">Low flame height is a Tip, not measured</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 372" font-family="sans-serif" role="img" aria-label="Animation, side view of a ponderosa pine stand. A low ground fire sweeps from left to right through the grass, flames under 1 m (a Tip, not measured). The small young fir trees die and disappear. The big old thick barked pines survive with only a scorched base. Final label: old thick bark pines live, small trees and brush die, so the forest stays open.">
+<rect width="400" height="372" fill="#fffaf0"/>
+<defs><clipPath id="rp-ground-fire-c"><rect x="8" y="40" width="384" height="212" rx="8"/></clipPath></defs>
+<text x="200" y="27" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A ground fire keeps the forest open</text>
+<g clip-path="url(#rp-ground-fire-c)">
+<rect x="8" y="40" width="384" height="212" fill="#dcebf5"/>
+<path d="M8 150 Q120 130 220 146 T392 140 V222 H8z" fill="#c7d0b2"/>
+<rect x="8" y="222" width="384" height="40" fill="#d9c78f"/>
+<path d="M190 242 l-2 -7 M190 242 l2 -8 M190 242 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M263 229 l-2 -7 M263 229 l2 -8 M263 229 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M14 235 l-2 -7 M14 235 l2 -8 M14 235 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M114 245 l-2 -7 M114 245 l2 -8 M114 245 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M272 240 l-2 -7 M272 240 l2 -8 M272 240 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M222 242 l-2 -7 M222 242 l2 -8 M222 242 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M65 237 l-2 -7 M65 237 l2 -8 M65 237 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M72 248 l-2 -7 M72 248 l2 -8 M72 248 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M32 246 l-2 -7 M32 246 l2 -8 M32 246 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M38 242 l-2 -7 M38 242 l2 -8 M38 242 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M138 236 l-2 -7 M138 236 l2 -8 M138 236 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M330 226 l-2 -7 M330 226 l2 -8 M330 226 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M33 248 l-2 -7 M33 248 l2 -8 M33 248 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M203 228 l-2 -7 M203 228 l2 -8 M203 228 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M385 249 l-2 -7 M385 249 l2 -8 M385 249 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M53 236 l-2 -7 M53 236 l2 -8 M53 236 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M61 234 l-2 -7 M61 234 l2 -8 M61 234 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M246 230 l-2 -7 M246 230 l2 -8 M246 230 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M275 227 l-2 -7 M275 227 l2 -8 M275 227 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M75 246 l-2 -7 M75 246 l2 -8 M75 246 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M162 236 l-2 -7 M162 236 l2 -8 M162 236 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M236 237 l-2 -7 M236 237 l2 -8 M236 237 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M156 227 l-2 -7 M156 227 l2 -8 M156 227 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M286 249 l-2 -7 M286 249 l2 -8 M286 249 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M381 242 l-2 -7 M381 242 l2 -8 M381 242 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M145 235 l-2 -7 M145 235 l2 -8 M145 235 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M272 242 l-2 -7 M272 242 l2 -8 M272 242 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M53 232 l-2 -7 M53 232 l2 -8 M53 232 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M148 238 l-2 -7 M148 238 l2 -8 M148 238 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M318 238 l-2 -7 M318 238 l2 -8 M318 238 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M21 246 l-2 -7 M21 246 l2 -8 M21 246 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M173 238 l-2 -7 M173 238 l2 -8 M173 238 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M94 236 l-2 -7 M94 236 l2 -8 M94 236 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M158 245 l-2 -7 M158 245 l2 -8 M158 245 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M49 239 l-2 -7 M49 239 l2 -8 M49 239 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M78 243 l-2 -7 M78 243 l2 -8 M78 243 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M24 233 l-2 -7 M24 233 l2 -8 M24 233 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M141 241 l-2 -7 M141 241 l2 -8 M141 241 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M30 237 l-2 -7 M30 237 l2 -8 M30 237 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M89 233 l-2 -7 M89 233 l2 -8 M89 233 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M191 249 l-2 -7 M191 249 l2 -8 M191 249 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M193 249 l-2 -7 M193 249 l2 -8 M193 249 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M74 248 l-2 -7 M74 248 l2 -8 M74 248 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M148 231 l-2 -7 M148 231 l2 -8 M148 231 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M294 248 l-2 -7 M294 248 l2 -8 M294 248 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M13 232 l-2 -7 M13 232 l2 -8 M13 232 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M303 234 l-2 -7 M303 234 l2 -8 M303 234 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M102 226 l-2 -7 M102 226 l2 -8 M102 226 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M25 241 l-2 -7 M25 241 l2 -8 M25 241 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M384 250 l-2 -7 M384 250 l2 -8 M384 250 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M201 227 l-2 -7 M201 227 l2 -8 M201 227 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M133 245 l-2 -7 M133 245 l2 -8 M133 245 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M326 241 l-2 -7 M326 241 l2 -8 M326 241 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M97 239 l-2 -7 M97 239 l2 -8 M97 239 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M191 241 l-2 -7 M191 241 l2 -8 M191 241 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M110 249 l-2 -7 M110 249 l2 -8 M110 249 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M350 230 l-2 -7 M350 230 l2 -8 M350 230 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M121 247 l-2 -7 M121 247 l2 -8 M121 247 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M116 249 l-2 -7 M116 249 l2 -8 M116 249 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M206 243 l-2 -7 M206 243 l2 -8 M206 243 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M278 231 l-2 -7 M278 231 l2 -8 M278 231 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M118 232 l-2 -7 M118 232 l2 -8 M118 232 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M270 243 l-2 -7 M270 243 l2 -8 M270 243 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M60 247 l-2 -7 M60 247 l2 -8 M60 247 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M170 232 l-2 -7 M170 232 l2 -8 M170 232 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M175 250 l-2 -7 M175 250 l2 -8 M175 250 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M223 241 l-2 -7 M223 241 l2 -8 M223 241 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M360 249 l-2 -7 M360 249 l2 -8 M360 249 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M299 236 l-2 -7 M299 236 l2 -8 M299 236 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<path d="M234 248 l-2 -7 M234 248 l2 -8 M234 248 l0 -9" stroke="#b49e5c" stroke-width="1.2"/>
+<rect x="8" y="222" width="0" height="40" fill="#5e5242"><animate attributeName="width" values="0;384" dur="6s" fill="freeze"/></rect>
+<rect x="63" y="74" width="14" height="150" fill="#b5652f"/><path d="M64 88 h5 M71 96 h5" stroke="#7a3f1c" stroke-width="1.6"/><path d="M64 109 h5 M71 117 h5" stroke="#7a3f1c" stroke-width="1.6"/><path d="M64 131 h5 M71 139 h5" stroke="#7a3f1c" stroke-width="1.6"/><path d="M64 152 h5 M71 160 h5" stroke="#7a3f1c" stroke-width="1.6"/><path d="M64 173 h5 M71 181 h5" stroke="#7a3f1c" stroke-width="1.6"/><path d="M64 195 h5 M71 203 h5" stroke="#7a3f1c" stroke-width="1.6"/><ellipse cx="54" cy="70" rx="20" ry="14" fill="#4b6b38"/><ellipse cx="84" cy="66" rx="21" ry="15" fill="#4b6b38"/><ellipse cx="70" cy="56" rx="22" ry="16" fill="#4b6b38"/><ellipse cx="64" cy="84" rx="18" ry="12" fill="#4b6b38"/><ellipse cx="82" cy="86" rx="18" ry="12" fill="#4b6b38"/><rect x="63" y="206" width="14" height="16" fill="#2b2420" opacity="0"><set attributeName="opacity" to=".85" begin="1.30s" fill="freeze"/></rect>
+<rect x="199" y="66" width="14" height="158" fill="#b5652f"/><path d="M200 80 h5 M207 88 h5" stroke="#7a3f1c" stroke-width="1.6"/><path d="M200 103 h5 M207 111 h5" stroke="#7a3f1c" stroke-width="1.6"/><path d="M200 125 h5 M207 133 h5" stroke="#7a3f1c" stroke-width="1.6"/><path d="M200 148 h5 M207 156 h5" stroke="#7a3f1c" stroke-width="1.6"/><path d="M200 171 h5 M207 179 h5" stroke="#7a3f1c" stroke-width="1.6"/><path d="M200 193 h5 M207 201 h5" stroke="#7a3f1c" stroke-width="1.6"/><ellipse cx="190" cy="62" rx="20" ry="14" fill="#4b6b38"/><ellipse cx="220" cy="58" rx="21" ry="15" fill="#4b6b38"/><ellipse cx="206" cy="48" rx="22" ry="16" fill="#4b6b38"/><ellipse cx="200" cy="76" rx="18" ry="12" fill="#4b6b38"/><ellipse cx="218" cy="78" rx="18" ry="12" fill="#4b6b38"/><rect x="199" y="206" width="14" height="16" fill="#2b2420" opacity="0"><set attributeName="opacity" to=".85" begin="3.08s" fill="freeze"/></rect>
+<rect x="327" y="80" width="14" height="144" fill="#b5652f"/><path d="M328 94 h5 M335 102 h5" stroke="#7a3f1c" stroke-width="1.6"/><path d="M328 114 h5 M335 122 h5" stroke="#7a3f1c" stroke-width="1.6"/><path d="M328 135 h5 M335 143 h5" stroke="#7a3f1c" stroke-width="1.6"/><path d="M328 155 h5 M335 163 h5" stroke="#7a3f1c" stroke-width="1.6"/><path d="M328 175 h5 M335 183 h5" stroke="#7a3f1c" stroke-width="1.6"/><path d="M328 196 h5 M335 204 h5" stroke="#7a3f1c" stroke-width="1.6"/><ellipse cx="318" cy="76" rx="20" ry="14" fill="#4b6b38"/><ellipse cx="348" cy="72" rx="21" ry="15" fill="#4b6b38"/><ellipse cx="334" cy="62" rx="22" ry="16" fill="#4b6b38"/><ellipse cx="328" cy="90" rx="18" ry="12" fill="#4b6b38"/><ellipse cx="346" cy="92" rx="18" ry="12" fill="#4b6b38"/><rect x="327" y="206" width="14" height="16" fill="#2b2420" opacity="0"><set attributeName="opacity" to=".85" begin="4.75s" fill="freeze"/></rect>
+<g><path d="M118 188 L127 220 H109z" fill="#2f5236"/><rect x="116.5" y="219" width="3" height="4" fill="#6b4f35"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.276;0.326;1" dur="7s" fill="freeze"/></g>
+<path d="M117 222 v-6 M120 222 v-4" stroke="#1f1a16" stroke-width="2" opacity="0"><set attributeName="opacity" to="1" begin="2.23s" fill="freeze"/></path>
+<g><path d="M150 196 L159 220 H141z" fill="#2f5236"/><rect x="148.5" y="219" width="3" height="4" fill="#6b4f35"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.335;0.385;1" dur="7s" fill="freeze"/></g>
+<path d="M149 222 v-6 M152 222 v-4" stroke="#1f1a16" stroke-width="2" opacity="0"><set attributeName="opacity" to="1" begin="2.65s" fill="freeze"/></path>
+<g><path d="M256 190 L265 220 H247z" fill="#2f5236"/><rect x="254.5" y="219" width="3" height="4" fill="#6b4f35"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.533;0.583;1" dur="7s" fill="freeze"/></g>
+<path d="M255 222 v-6 M258 222 v-4" stroke="#1f1a16" stroke-width="2" opacity="0"><set attributeName="opacity" to="1" begin="4.03s" fill="freeze"/></path>
+<g><path d="M290 198 L299 220 H281z" fill="#2f5236"/><rect x="288.5" y="219" width="3" height="4" fill="#6b4f35"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.596;0.646;1" dur="7s" fill="freeze"/></g>
+<path d="M289 222 v-6 M292 222 v-4" stroke="#1f1a16" stroke-width="2" opacity="0"><set attributeName="opacity" to="1" begin="4.47s" fill="freeze"/></path>
+<g><path d="M372 192 L381 220 H363z" fill="#2f5236"/><rect x="370.5" y="219" width="3" height="4" fill="#6b4f35"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.749;0.799;1" dur="7s" fill="freeze"/></g>
+<path d="M371 222 v-6 M374 222 v-4" stroke="#1f1a16" stroke-width="2" opacity="0"><set attributeName="opacity" to="1" begin="5.54s" fill="freeze"/></path>
+<g><path d="M34 200 L43 220 H25z" fill="#2f5236"/><rect x="32.5" y="219" width="3" height="4" fill="#6b4f35"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.119;0.169;1" dur="7s" fill="freeze"/></g>
+<path d="M33 222 v-6 M36 222 v-4" stroke="#1f1a16" stroke-width="2" opacity="0"><set attributeName="opacity" to="1" begin="1.13s" fill="freeze"/></path>
+<g><path transform="translate(-26 224) scale(0.8)" d="M0 0 C-9 -7 -6 -15 0 -24 C2 -15 9 -13 7 -6 C6 -2 4 0 0 0Z" fill="#e8590c"/><path transform="translate(-14 224) scale(1.0)" d="M0 0 C-9 -7 -6 -15 0 -24 C2 -15 9 -13 7 -6 C6 -2 4 0 0 0Z" fill="#e8590c"/><path transform="translate(-4 224) scale(0.75)" d="M0 0 C-9 -7 -6 -15 0 -24 C2 -15 9 -13 7 -6 C6 -2 4 0 0 0Z" fill="#f7b32b"/><path transform="translate(6 224) scale(0.95)" d="M0 0 C-9 -7 -6 -15 0 -24 C2 -15 9 -13 7 -6 C6 -2 4 0 0 0Z" fill="#e8590c"/><path transform="translate(16 224) scale(0.7)" d="M0 0 C-9 -7 -6 -15 0 -24 C2 -15 9 -13 7 -6 C6 -2 4 0 0 0Z" fill="#f7b32b"/><path d="M-30 194 q8 -10 0 -18 q-6 -8 2 -16" stroke="#9aa0a6" stroke-width="3" fill="none" opacity=".5"/><animateTransform attributeName="transform" type="translate" values="-30 0;430 0" dur="6s" fill="freeze"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.92;1" dur="6s" fill="freeze"/></g>
+</g>
+<rect x="8" y="40" width="384" height="212" rx="8" fill="none" stroke="#6b5b4b" stroke-width="1.5"/>
+<text x="200" y="276" font-size="17" font-weight="bold" fill="#c2410c" text-anchor="middle">Flames stay low, under 1 m</text>
+<text x="200" y="296" font-size="14" fill="#6b5b4b" text-anchor="middle">Low flame height is a Tip, not measured</text>
+<g opacity="0"><rect x="20" y="308" width="360" height="56" rx="8" fill="#2f3a2b"/><text x="200" y="332" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Old thick bark pines live.</text><text x="200" y="354" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Small trees and brush die.</text><animate attributeName="opacity" values="0;1" begin="6.5s" dur="0.5s" fill="freeze"/></g>
 </svg>

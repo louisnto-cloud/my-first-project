@@ -3,11 +3,11 @@
 <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Elevation bands near Kamloops</text>
 <defs><clipPath id="rl-eb-bands-mt"><path d="M8 274 L40 236 L58 214 L74 182 L90 156 L100 124 L112 92 L118 70 L126 52 L136 68 L144 94 L160 128 L172 158 L190 188 L206 216 L222 240 L246 274z"/></clipPath></defs>
 <g clip-path="url(#rl-eb-bands-mt)">
-<rect x="0" y="52" width="250" height="41" fill="#eeeae2"/>
-<rect x="0" y="92" width="250" height="43" fill="#93ad8f"/>
-<rect x="0" y="134" width="250" height="45" fill="#adc293"/>
-<rect x="0" y="178" width="250" height="47" fill="#cbd4a0"/>
-<rect x="0" y="224" width="250" height="51" fill="#e6dcaa"/>
+<rect x="8" y="52" width="240" height="41" fill="#eeeae2"/>
+<rect x="8" y="92" width="240" height="43" fill="#93ad8f"/>
+<rect x="8" y="134" width="240" height="45" fill="#adc293"/>
+<rect x="8" y="178" width="240" height="47" fill="#cbd4a0"/>
+<rect x="8" y="224" width="240" height="51" fill="#e6dcaa"/>
 <path d="M126 52 L114 82 L122 76 L128 86 L134 76 L142 88 L136 68z" fill="#ffffff"/>
 <circle cx="120" cy="88" r="3" fill="#a8a093"/><circle cx="134" cy="89" r="2.5" fill="#a8a093"/>
 <rect x="112.5" y="124.0" width="3" height="5" fill="#5a3d22"/><path d="M114.0 108.0 L118.6 117.0 L116.5 117.0 L122.4 125.0 L105.6 125.0 L111.5 117.0 L109.4 117.0z" fill="#2f4a2b"/>
@@ -39,8 +39,7 @@
 <line x1="226" y1="249.0" x2="244" y2="249.0" stroke="#6b5b4b" stroke-width="1.2"/><circle cx="226" cy="249.0" r="2.6" fill="#6b5b4b"/>
 <text x="250" y="245" font-size="16" font-weight="bold" fill="#2f3a2b">Bunchgrass:</text>
 <text x="250" y="264" font-size="16" font-weight="bold" fill="#2f3a2b">valley bottoms</text>
-<text x="14" y="56" font-size="14" fill="#2c5d86">high, cold,</text>
-<text x="14" y="74" font-size="14" fill="#2c5d86">snowy</text>
+<text x="14" y="47" font-size="14" fill="#2c5d86">high, cold, snowy</text>
 <text x="14" y="294" font-size="14" fill="#8b5a2b">low and dry</text>
 <text x="200" y="322" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bands overlap; aspect and rainfall move them</text>
 </svg>

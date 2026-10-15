@@ -2,7 +2,7 @@
 <rect width="400" height="314" fill="#fffaf0"/>
 <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tricks the eye plays</text>
 <rect x="8" y="40" width="384" height="128" rx="8" fill="#fbe9dc"/>
-<rect x="8" y="40" width="384" height="34" rx="8" fill="#e8590c"/><rect x="8" y="60" width="384" height="14" fill="#e8590c"/>
+<path d="M8 74 V48 Q8 40 16 40 H384 Q392 40 392 48 V74z" fill="#e8590c"/>
 <text x="200" y="64" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">Looks NEARER</text>
 <circle cx="22" cy="97" r="3.2" fill="#e8590c"/>
 <text x="32" y="103" font-size="16" fill="#2f3a2b">bright sun behind you</text>
@@ -17,7 +17,7 @@
 <circle cx="210" cy="153" r="3.2" fill="#e8590c"/>
 <text x="220" y="159" font-size="16" fill="#2f3a2b">big object</text>
 <rect x="8" y="178" width="384" height="128" rx="8" fill="#e3edf6"/>
-<rect x="8" y="178" width="384" height="34" rx="8" fill="#4a7fb0"/><rect x="8" y="198" width="384" height="14" fill="#4a7fb0"/>
+<path d="M8 212 V186 Q8 178 16 178 H384 Q392 178 392 186 V212z" fill="#4a7fb0"/>
 <text x="200" y="202" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">Looks FARTHER</text>
 <circle cx="22" cy="235" r="3.2" fill="#4a7fb0"/>
 <text x="32" y="241" font-size="16" fill="#2f3a2b">poor light, fog</text>
