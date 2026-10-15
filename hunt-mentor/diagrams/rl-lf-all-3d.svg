@@ -1,18 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Sketch of one mountain in the Hunt Map 3D view with seven landforms labelled: 1 a ridge along the skyline, 2 a saddle at a dip in it, 3 a spur running down off the ridge, 4 a draw with a creek and trees, 5 a bench as a flat step on the slope, 6 a knob as a small rounded hill low on the right, 7 a bowl as a green basin under the high ridge.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Seven shapes, one mountain</text><rect x="0" y="36" width="400" height="70" fill="#e3ecf3"/><text x="388" y="24" font-size="13" fill="#2f3a2b" text-anchor="end">3D sketch</text>
-  <path d="M0 150 L60 92 L120 76 L170 104 L205 90 L240 60 L300 70 L340 96 L400 120 L400 268 L0 268 Z" fill="#e9edd9"/>
-  <path d="M240 60 L300 70 L340 96 L400 120 L400 268 L300 268 C 290 200, 270 140, 240 60 Z" fill="#a9b68e"/>
-  <path d="M260 120 C 230 130, 220 160, 235 170 C 260 180, 300 165, 310 140 C 300 118, 280 112, 260 120 Z" fill="#cfe0b8" stroke="#2f3a2b" stroke-width="1.5"/>
-  <path d="M0 150 L60 92 L120 76 L170 104 L205 90 L240 60 L300 70 L340 96 L400 120" stroke="#2f3a2b" stroke-width="3" fill="none"/>
-  <path d="M120 76 C 110 140, 100 190, 70 268" stroke="#2f3a2b" stroke-width="2.4" fill="none"/>
-  <path d="M10 196 L140 182" stroke="#8b5a2b" stroke-width="5" opacity=".5"/>
-  <path d="M160 110 C 166 160, 176 210, 172 268" stroke="#4a7fb0" stroke-width="3.5" fill="none"/>
-  <ellipse cx="350" cy="236" rx="30" ry="14" fill="#cdd7b6" stroke="#2f3a2b" stroke-width="2"/>
-  <path d="M150 158.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="148.65" y="185.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M186 178.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="184.65" y="205.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M176 214.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="174.65" y="241.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M320 118.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="318.65" y="145.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M360 138.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="358.65" y="165.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M380 168.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="378.65" y="195.4" width="2.7" height="4.5" fill="#6b4f35"/>
-  <g font-size="13" font-weight="bold" fill="#fff">
-  <rect x="24" y="52" width="70" height="24" rx="6" fill="#e8590c"/><text x="59.0" y="69" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">1 Ridge</text><rect x="150" y="118" width="78" height="24" rx="6" fill="#e8590c"/><text x="189.0" y="135" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">2 Saddle</text><rect x="36" y="132" width="62" height="24" rx="6" fill="#e8590c"/><text x="67.0" y="149" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">3 Spur</text>
-  <rect x="178" y="150" width="62" height="24" rx="6" fill="#4a7fb0"/><text x="209.0" y="167" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">4 Draw</text><rect x="14" y="200" width="70" height="24" rx="6" fill="#e8590c"/><text x="49.0" y="217" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">5 Bench</text><rect x="300" y="200" width="62" height="24" rx="6" fill="#e8590c"/><text x="331.0" y="217" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">6 Knob</text><rect x="246" y="96" width="62" height="24" rx="6" fill="#e8590c"/><text x="277.0" y="113" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">7 Bowl</text></g>
-  <path d="M60 64 L60 90 M190 118 L170 106 M60 156 L104 150 M200 174 L168 176 M50 214 L70 198 M330 224 L340 230 M262 120 L268 128" stroke="#2f3a2b" stroke-width="1.6"/>
-  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Find all seven on your own hunting map</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 314" font-family="sans-serif" role="img" aria-label="Sketch of one mountain in the Hunt Map 3D view with seven landforms labelled: 1 a ridge along the skyline, 2 a saddle at a dip in it, 3 a spur running down off the ridge, 4 a draw with a creek and trees, 5 a bench as a flat step on the slope, 6 a knob as a small rounded hill low on the right, 7 a bowl as a green basin under the high ridge. Caption: find all seven on your own hunting map.">
+<rect width="400" height="314" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b">Seven shapes, one mountain</text>
+<text x="388" y="24" font-size="14" fill="#6b5b4b" text-anchor="end">3D sketch</text>
+<rect x="0" y="34" width="400" height="214" fill="#e3ecf3"/>
+<path d="M0 170 L50 128 L110 96 L150 116 L178 128 L212 110 L262 90 L320 102 L370 122 L400 136 L400 248 L0 248 Z" fill="#c4cfa6"/>
+<path d="M110 96 C 96 130, 70 170, 40 248 L 128 248 C 132 200, 140 150, 150 116 Z" fill="#d6dfba"/>
+<path d="M110 96 C 112 140, 120 190, 128 248 L 150 248 C 150 200, 152 150, 150 116 Z" fill="#a9b68e"/>
+<path d="M110 96 C 106 140, 116 190, 122 248" stroke="#2f3a2b" stroke-width="2" fill="none"/>
+<path d="M150 116 L178 128 L212 110 C 200 160, 196 200, 196 248 L 150 248 C 156 200, 160 160, 150 116 Z" fill="#93a37a"/>
+<path d="M178 130 C 176 170, 172 210, 174 248" stroke="#4a7fb0" stroke-width="3.2" fill="none"/>
+<g transform="translate(166 168) scale(0.9)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(188 186) scale(0.9)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(164 214) scale(0.9)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(190 230) scale(0.9)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(182 150) scale(0.9)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<path d="M222 108 C 226 150, 246 172, 268 172 C 292 172, 312 150, 318 104 L 262 90 Z" fill="#dce6c3"/>
+<path d="M222 108 C 226 150, 246 172, 268 172 C 292 172, 312 150, 318 104" stroke="#2f3a2b" stroke-width="1.6" fill="none" stroke-dasharray="5 4"/>
+<g transform="translate(340 150) scale(1.0)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(366 170) scale(1.0)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(322 190) scale(1.0)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(384 200) scale(1.0)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(240 200) scale(1.0)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(262 222) scale(1.0)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<path d="M0 204 L 62 192 L 66 202 L 0 216 Z" fill="#f3ead2" stroke="#8b5a2b" stroke-width="1.4"/>
+<path d="M292 248 C 298 214, 328 204, 346 204 C 366 204, 388 220, 394 248 Z" fill="#b4c190" stroke="#5b6b3e" stroke-width="1.6"/>
+<path d="M346 206 C 368 208, 386 224, 392 246 L 372 246 C 368 228, 360 214, 346 206 Z" fill="#9aa97a"/>
+<path d="M0 170 L50 128 L110 96 L150 116 L178 128 L212 110 L262 90 L320 102 L370 122 L400 136" stroke="#2f3a2b" stroke-width="3" fill="none"/>
+<line x1="70" y1="118" x2="51.0875" y2="68" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="70" cy="118" r="2.6" fill="#2f3a2b"/>
+<rect x="14.0" y="42" width="74.2" height="26" rx="6" fill="#e8590c"/><text x="51.1" y="60" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">1 Ridge</text>
+<line x1="178" y1="127" x2="181.421" y2="68" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="178" cy="127" r="2.6" fill="#2f3a2b"/>
+<rect x="140.0" y="42" width="82.8" height="26" rx="6" fill="#e8590c"/><text x="181.4" y="60" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">2 Saddle</text>
+<line x1="268" y1="150" x2="335.322" y2="68" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="268" cy="150" r="2.6" fill="#2f3a2b"/>
+<rect x="300.0" y="42" width="70.6" height="26" rx="6" fill="#e8590c"/><text x="335.3" y="60" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">7 Bowl</text>
+<line x1="30" y1="207" x2="45.174" y2="258" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="30" cy="207" r="2.6" fill="#2f3a2b"/>
+<rect x="6.0" y="258" width="78.3" height="26" rx="6" fill="#e8590c"/><text x="45.2" y="276" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">5 Bench</text>
+<line x1="100" y1="150" x2="125.396" y2="258" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="100" cy="150" r="2.6" fill="#2f3a2b"/>
+<rect x="92.0" y="258" width="66.8" height="26" rx="6" fill="#e8590c"/><text x="125.4" y="276" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">3 Spur</text>
+<line x1="175" y1="200" x2="207.964" y2="258" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="175" cy="200" r="2.6" fill="#2f3a2b"/>
+<rect x="172.0" y="258" width="71.9" height="26" rx="6" fill="#4a7fb0"/><text x="208" y="276" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">4 Draw</text>
+<line x1="340" y1="222" x2="348.841" y2="258" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="340" cy="222" r="2.6" fill="#2f3a2b"/>
+<rect x="314.0" y="258" width="69.7" height="26" rx="6" fill="#e8590c"/><text x="348.8" y="276" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">6 Knob</text>
+<text x="200" y="304" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Find all seven on your own hunting map</text>
 </svg>

@@ -1,4 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Cooler cross section: frozen water jugs or bagged ice on the bottom, meat in game bags on top, a thermometer reading under 4 degrees, and a drain for melt water emptied daily. Lid shut, cooler in the shade.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="24" font-size="17" font-weight="bold" text-anchor="middle" fill="#23261f">Cooler: ice under, meat on top</text><rect x="60" y="80" width="240" height="160" rx="10" fill="#fff" stroke="#23261f" stroke-width="3"/><rect x="54" y="62" width="252" height="22" rx="6" fill="#4a7fb0" stroke="#23261f" stroke-width="2.5"/><rect x="74" y="186" width="44" height="46" rx="6" fill="#d6ecfa" stroke="#4a7fb0" stroke-width="2.5"/><rect x="130" y="186" width="44" height="46" rx="6" fill="#d6ecfa" stroke="#4a7fb0" stroke-width="2.5"/><rect x="186" y="186" width="44" height="46" rx="6" fill="#d6ecfa" stroke="#4a7fb0" stroke-width="2.5"/><rect x="242" y="186" width="44" height="46" rx="6" fill="#d6ecfa" stroke="#4a7fb0" stroke-width="2.5"/><text x="96" y="214" font-size="13" font-weight="bold" text-anchor="middle" fill="#4a7fb0">ice</text><text x="152" y="214" font-size="13" font-weight="bold" text-anchor="middle" fill="#4a7fb0">ice</text><text x="208" y="214" font-size="13" font-weight="bold" text-anchor="middle" fill="#4a7fb0">ice</text><text x="264" y="214" font-size="13" font-weight="bold" text-anchor="middle" fill="#4a7fb0">ice</text><path d="M80 110 q 30.0 -8 60 0 l -3 64 q -27.0 7 -54 0 Z" fill="#f4efe2" stroke="#23261f" stroke-width="2"/><path d="M150 110 q 30.0 -8 60 0 l -3 64 q -27.0 7 -54 0 Z" fill="#f4efe2" stroke="#23261f" stroke-width="2"/><path d="M220 110 q 30.0 -8 60 0 l -3 64 q -27.0 7 -54 0 Z" fill="#f4efe2" stroke="#23261f" stroke-width="2"/><text x="180" y="104" font-size="13" font-weight="bold" text-anchor="middle" fill="#23261f">meat in game bags</text><rect x="300" y="222" width="16" height="10" fill="#23261f"/><path d="M316 230 q 8 6 6 16" stroke="#4a7fb0" stroke-width="3" fill="none"/><text x="330" y="214" font-size="14" font-weight="bold" fill="#23261f">Drain</text><text x="330" y="230" font-size="14" font-weight="bold" fill="#23261f">melt</text><text x="330" y="246" font-size="14" font-weight="bold" fill="#23261f">daily</text><rect x="318" y="100" width="12" height="60" rx="6" fill="#fff" stroke="#23261f" stroke-width="2"/><rect x="321" y="132" width="6" height="26" fill="#b3261e"/><text x="336" y="118" font-size="14" font-weight="bold" fill="#2e7d32">Under</text><text x="336" y="134" font-size="14" font-weight="bold" fill="#2e7d32">4°C</text><text x="200" y="272" font-size="14" text-anchor="middle" fill="#2f3a2b">Lid shut, in the shade, never in the cab</text><text x="200" y="292" font-size="14" text-anchor="middle" fill="#2f3a2b">Tip: a 70 L cooler holds a boned deer with ice</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Cooler cross section: frozen water jugs or bagged ice on the bottom, meat in game bags on top, a thermometer reading under 4 degrees, and a drain for melt water emptied daily. Lid shut, cooler in the shade, never in the cab. Tip: a 70 litre cooler holds a boned deer with ice.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cooler: ice under, meat on top</text>
+<rect x="20" y="64" width="238" height="148" rx="12" fill="#f2f2ee" stroke="#2f3a2b" stroke-width="2.4"/>
+<rect x="29" y="74" width="220" height="128" rx="6" fill="#dfe9f2" stroke="#9fb3c6" stroke-width="1.4"/>
+<rect x="16" y="50" width="246" height="20" rx="7" fill="#4a7fb0" stroke="#2c5d86" stroke-width="2"/>
+<rect x="117.0" y="44" width="44" height="8" rx="3" fill="#2c5d86"/>
+<rect x="10" y="120" width="10" height="24" rx="3" fill="#2c5d86"/><rect x="258" y="120" width="10" height="24" rx="3" fill="#2c5d86"/>
+<path d="M40 168 H84 V200 H40z" fill="#e8f4fb" stroke="#4a7fb0" stroke-width="2"/><rect x="68" y="160" width="10" height="9" rx="2" fill="#4a7fb0"/><path d="M46 168 C46 158 62 158 62 168" stroke="#4a7fb0" stroke-width="2.4" fill="none"/><path d="M46 180 H78" stroke="#b6d3ea" stroke-width="2"/>
+<path d="M150 168 H194 V200 H150z" fill="#e8f4fb" stroke="#4a7fb0" stroke-width="2"/><rect x="178" y="160" width="10" height="9" rx="2" fill="#4a7fb0"/><path d="M156 168 C156 158 172 158 172 168" stroke="#4a7fb0" stroke-width="2.4" fill="none"/><path d="M156 180 H188" stroke="#b6d3ea" stroke-width="2"/>
+<path d="M92 200 C88 182 94 170 114 170 C134 170 140 182 136 200z" fill="#f4fbff" stroke="#4a7fb0" stroke-width="1.8"/><rect x="100" y="182" width="9" height="8" rx="2" fill="#cfe5f3" stroke="#9fc3e0" stroke-width="1"/><rect x="112" y="178" width="9" height="8" rx="2" fill="#cfe5f3" stroke="#9fc3e0" stroke-width="1"/><rect x="120" y="188" width="9" height="8" rx="2" fill="#cfe5f3" stroke="#9fc3e0" stroke-width="1"/><rect x="106" y="190" width="9" height="8" rx="2" fill="#cfe5f3" stroke="#9fc3e0" stroke-width="1"/>
+<path d="M200 200 C196 182 202 170 222 170 C242 170 248 182 244 200z" fill="#f4fbff" stroke="#4a7fb0" stroke-width="1.8"/><rect x="208" y="182" width="9" height="8" rx="2" fill="#cfe5f3" stroke="#9fc3e0" stroke-width="1"/><rect x="220" y="178" width="9" height="8" rx="2" fill="#cfe5f3" stroke="#9fc3e0" stroke-width="1"/><rect x="228" y="188" width="9" height="8" rx="2" fill="#cfe5f3" stroke="#9fc3e0" stroke-width="1"/><rect x="214" y="190" width="9" height="8" rx="2" fill="#cfe5f3" stroke="#9fc3e0" stroke-width="1"/>
+<path d="M34 94 C44 86 84 86 94 94 L98 158 H30z" fill="#f6f0e2" stroke="#b9ab8a" stroke-width="1.6"/><path d="M48 91 C56 96 72 96 80 91" stroke="#8b7a5a" stroke-width="2" fill="none"/><ellipse cx="64" cy="130" rx="20" ry="13" fill="#c0392b" opacity=".55"/>
+<path d="M36 102 H92" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M36 111 H92" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M36 120 H92" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M36 129 H92" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M36 138 H92" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M36 147 H92" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M106 94 C116 86 156 86 166 94 L170 158 H102z" fill="#f6f0e2" stroke="#b9ab8a" stroke-width="1.6"/><path d="M120 91 C128 96 144 96 152 91" stroke="#8b7a5a" stroke-width="2" fill="none"/><ellipse cx="136" cy="130" rx="20" ry="13" fill="#c0392b" opacity=".55"/>
+<path d="M108 102 H164" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M108 111 H164" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M108 120 H164" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M108 129 H164" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M108 138 H164" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M108 147 H164" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M178 94 C188 86 228 86 238 94 L242 158 H174z" fill="#f6f0e2" stroke="#b9ab8a" stroke-width="1.6"/><path d="M192 91 C200 96 216 96 224 91" stroke="#8b7a5a" stroke-width="2" fill="none"/><ellipse cx="208" cy="130" rx="20" ry="13" fill="#c0392b" opacity=".55"/>
+<path d="M180 102 H236" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M180 111 H236" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M180 120 H236" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M180 129 H236" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M180 138 H236" stroke="#d8ccb0" stroke-width=".8"/>
+<path d="M180 147 H236" stroke="#d8ccb0" stroke-width=".8"/>
+<rect x="232" y="80" width="8" height="58" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.6"/><rect x="234.5" y="114" width="3" height="24" fill="#c0392b"/><circle cx="236" cy="142" r="6" fill="#c0392b" stroke="#2f3a2b" stroke-width="1.6"/>
+<rect x="258" y="186" width="16" height="10" rx="2" fill="#2f3a2b"/><path d="M271 200 C267 208 275 208 271 200z" fill="#4a7fb0"/>
+<path d="M271 210 C267 218 275 218 271 210z" fill="#4a7fb0"/>
+<rect x="284.5" y="42.0" width="91.0" height="27.0" rx="5" fill="#fffaf0" stroke="#2f6e3b" stroke-width="1.2"/>
+<text x="330" y="61.5" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Under 4°C</text>
+<line x1="241" y1="94" x2="284.48" y2="56" stroke="#2f6e3b" stroke-width="1.4"/><circle cx="241" cy="94" r="2.6" fill="#2f6e3b"/>
+<rect x="280.2" y="84.0" width="99.6" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="330" y="104.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Meat in</text>
+<text x="330" y="124.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">game bags</text>
+<line x1="208" y1="130" x2="280.2" y2="106" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="208" cy="130" r="2.6" fill="#2f3a2b"/>
+<rect x="276.8" y="140.0" width="106.4" height="45.0" rx="5" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.2"/>
+<text x="330" y="159.5" font-size="16" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Ice under</text>
+<text x="330" y="177" font-size="15" fill="#4a7fb0" text-anchor="middle">jugs or bags</text>
+<line x1="244" y1="186" x2="276.776" y2="162" stroke="#4a7fb0" stroke-width="1.4"/><circle cx="244" cy="186" r="2.6" fill="#4a7fb0"/>
+<rect x="281.9" y="194.0" width="96.2" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="330" y="214.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Drain melt</text>
+<text x="330" y="234.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">daily</text>
+<line x1="274" y1="191" x2="281.912" y2="210" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="274" cy="191" r="2.6" fill="#2f3a2b"/>
+<text x="200" y="266" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Lid shut, in the shade, never in the cab</text>
+<text x="200" y="289" font-size="15" fill="#6b5b4b" text-anchor="middle">Tip: a 70 L cooler holds a boned deer with ice</text>
 </svg>

@@ -1,19 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Top view of a bird head and its field of view. Each eye looks out to the side, so together they see almost all the way around. Only a narrow wedge in front, about 26 degrees in the chicken, is seen by both eyes, 70 percent. A small blind area sits behind the head. Birds have four colour cone types including ultraviolet, 85 percent.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">What a quail sees (top view)</text>
-<circle cx="200" cy="165" r="110" fill="#f3e3c3"/>
-<path d="M200 165 L178 57 A110 110 0 0 1 222 57 Z" fill="#e8590c" opacity=".55"/>
-<path d="M200 165 L232 270 A110 110 0 0 1 168 270 Z" fill="#9a9ca2"/>
-<ellipse cx="200" cy="170" rx="22" ry="30" fill="#7d7f86"/><circle cx="200" cy="140" r="16" fill="#7d7f86"/>
-<path d="M196 124 l4 -12 l4 12 Z" fill="#333"/><circle cx="186" cy="140" r="4" fill="#111"/><circle cx="214" cy="140" r="4" fill="#111"/>
-<text x="200" y="50" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Both eyes: narrow wedge (70%)</text>
-<text x="70" y="170" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Left eye</text>
-<text x="330" y="170" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Right eye</text>
-<text x="200" y="292" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Small blind spot behind</text>
-<rect x="10" y="196" width="120" height="44" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2"/>
-<text x="70" y="215" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4 colour cones</text>
-<text x="70" y="233" font-size="14" fill="#2f3a2b" text-anchor="middle">incl. UV (85%)</text>
-<rect x="270" y="196" width="120" height="44" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2"/>
-<text x="330" y="215" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sees movement</text>
-<text x="330" y="233" font-size="14" fill="#2f3a2b" text-anchor="middle">all around (Tip)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Top view of a quail head and its field of view. Each eye looks out to the side, so together they see almost all the way around: the left eye covers the blue half, the right eye the tan half. Only a narrow wedge in front, about 26 degrees in the chicken, is seen by both eyes, 70 percent. A small blind area sits behind the head. Birds have four colour cone types including ultraviolet, 85 percent. They see movement all around, a tip.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">What a quail sees (top view)</text>
+<path d="M200 156 L171.9 247.8 A96 96 0 0 1 221.6 62.5 Z" fill="#cfe0ee" opacity=".9"/>
+<path d="M200 156 L178.4 62.5 A96 96 0 0 1 228.1 247.8 Z" fill="#f3e3c3" opacity=".9"/>
+<path d="M200 156 L178.4 62.5 A96 96 0 0 1 221.6 62.5 Z" fill="#e8590c" opacity=".7"/>
+<path d="M200 156 L228.1 247.8 A96 96 0 0 1 171.9 247.8 Z" fill="#9a9ca2"/>
+<circle cx="200" cy="156" r="96" fill="none" stroke="#6b5b4b" stroke-width="1.2"/>
+<g transform="translate(200 164) scale(1.15)"><ellipse cx="0" cy="22" rx="20" ry="28" fill="#7f7469" stroke="#4a4038" stroke-width="1.2"/><path d="M-14 12 C-6 18 6 18 14 12 M-16 24 C-6 30 6 30 16 24 M-14 36 C-6 41 6 41 14 36" stroke="#5c5249" stroke-width="1.6" fill="none"/><circle cx="0" cy="-8" r="13" fill="#6b6259" stroke="#4a4038" stroke-width="1.2"/><path d="M-3 -14 C-6 -24 -2 -32 6 -32 C2 -26 3 -20 3 -14 Z" fill="#1f2420"/><path d="M-4 -19 L0 -27 L4 -19 Z" fill="#2f2a25"/><ellipse cx="-12" cy="-9" rx="3.2" ry="4.2" fill="#111"/><ellipse cx="12" cy="-9" rx="3.2" ry="4.2" fill="#111"/></g>
+<text x="200" y="50" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Both eyes: narrow wedge (70%)</text>
+<text x="130" y="152" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Left eye</text>
+<text x="270" y="152" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Right eye</text>
+<rect x="8" y="216" width="120" height="48" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="68" y="236" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4 colour cones</text>
+<text x="68" y="255" font-size="15" fill="#2f3a2b" text-anchor="middle">incl. UV (85%)</text>
+<rect x="272" y="216" width="120" height="48" rx="8" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="332" y="236" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sees movement</text>
+<text x="332" y="255" font-size="15" fill="#2f3a2b" text-anchor="middle">all around (Tip)</text>
+<text x="200" y="290" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Small blind spot behind</text>
 </svg>

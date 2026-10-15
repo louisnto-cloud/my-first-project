@@ -8,7 +8,7 @@
 <line x1="267.97839999999997" y1="44" x2="287.97839999999997" y2="44" stroke="#4a7fb0" stroke-width="4" stroke-linecap="round"/>
 <text x="293.978" y="49" font-size="14" font-weight="bold" fill="#2f3a2b">165 gr Fusion</text>
 <line x1="52" y1="72.0" x2="366" y2="72.0" stroke="#ddd6c6" stroke-width="1"/>
-<text x="46" y="77" font-size="14" fill="#2f3a2b" text-anchor="end">0</text>
+<text x="46" y="77" font-size="14" fill="#2f3a2b" text-anchor="end">0 cm</text>
 <line x1="52" y1="105.6" x2="366" y2="105.6" stroke="#ddd6c6" stroke-width="1"/>
 <text x="46" y="110.6" font-size="14" fill="#2f3a2b" text-anchor="end">25</text>
 <line x1="52" y1="139.2" x2="366" y2="139.2" stroke="#ddd6c6" stroke-width="1"/>
@@ -19,7 +19,6 @@
 <text x="46" y="211.4" font-size="14" fill="#2f3a2b" text-anchor="end">100</text>
 <line x1="52" y1="240.0" x2="366" y2="240.0" stroke="#ddd6c6" stroke-width="1"/>
 <text x="46" y="245" font-size="14" fill="#2f3a2b" text-anchor="end">125</text>
-<text x="46" y="62" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">cm</text>
 <text x="52" y="262" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">100 m</text>
 <text x="156.7" y="262" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">200 m</text>
 <text x="261.3" y="262" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">300 m</text>
