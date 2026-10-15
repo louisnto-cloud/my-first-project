@@ -59,11 +59,11 @@
 <rect x="8" y="276" width="384" height="20" fill="#b9b19c"/><line x1="8" y1="286" x2="392" y2="286" stroke="#f5efdc" stroke-width="1.6" stroke-dasharray="10 8"/>
 <circle cx="150" cy="248" r="22" fill="#f3e8d5" stroke="#6b5b4b" stroke-width="1.6" stroke-dasharray="4 3"/>
 <path d="M138 258 L150 236 L162 258z" fill="#c26a2c"/><path d="M150 246 L146 258 H154z" fill="#f3e8d5"/>
-<line x1="232" y1="262" x2="262" y2="226" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" opacity="0.55"/>
-<line x1="262" y1="226" x2="300" y2="204" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" opacity="0.55"/>
-<line x1="300" y1="204" x2="232" y2="170" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" opacity="0.55"/>
-<line x1="232" y1="170" x2="182" y2="126" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" opacity="0.55"/>
-<line x1="182" y1="126" x2="196" y2="240" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" opacity="0.55"/>
+<line x1="241.6" y1="250.5" x2="252.4" y2="237.5" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" opacity="0.6"/>
+<line x1="275.0" y1="218.5" x2="287.0" y2="211.5" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" opacity="0.6"/>
+<line x1="286.6" y1="197.3" x2="245.4" y2="176.7" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" opacity="0.6"/>
+<line x1="220.7" y1="160.1" x2="193.3" y2="135.9" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" opacity="0.6"/>
+<line x1="183.8" y1="140.9" x2="194.2" y2="225.1" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" opacity="0.6"/>
 </g>
 <rect x="8" y="8" width="384" height="300" rx="8" fill="none" stroke="#6b5b4b" stroke-width="1.5"/>
 <text x="200" y="52" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">timbered ridge (made up)</text>
@@ -84,7 +84,7 @@
 <g opacity="0"><set attributeName="opacity" to="1" begin="1.21s" fill="freeze"/><set attributeName="opacity" to="0" begin="2.35s" fill="freeze"/><circle cx="146.0" cy="361.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="146" y="366" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text><text x="166" y="367" font-size="17" font-weight="bold" fill="#2f3a2b">walk in</text></g>
 <g opacity="0"><set attributeName="opacity" to="1" begin="2.35s" fill="freeze"/><set attributeName="opacity" to="0" begin="4.31s" fill="freeze"/><circle cx="146.0" cy="361.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="146" y="366" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text><text x="166" y="367" font-size="17" font-weight="bold" fill="#2f3a2b">glass</text></g>
 <g opacity="0"><set attributeName="opacity" to="1" begin="4.31s" fill="freeze"/><set attributeName="opacity" to="0" begin="6.03s" fill="freeze"/><circle cx="146.0" cy="361.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="146" y="366" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text><text x="166" y="367" font-size="17" font-weight="bold" fill="#2f3a2b">read sign</text></g>
-<g opacity="0"><set attributeName="opacity" to="1" begin="6.03s" fill="freeze"/><set attributeName="opacity" to="0" begin="9.00s" fill="freeze"/><circle cx="146.0" cy="361.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="146" y="366" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text><text x="166" y="367" font-size="17" font-weight="bold" fill="#2f3a2b">sit</text></g>
-<g opacity="0"><set attributeName="opacity" to="1" begin="9.00s" fill="freeze"/><set attributeName="opacity" to="0" begin="8.50s" fill="freeze"/><circle cx="146.0" cy="361.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="146" y="366" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">6</text><text x="166" y="367" font-size="17" font-weight="bold" fill="#2f3a2b">walk out</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="6.03s" fill="freeze"/><set attributeName="opacity" to="0" begin="6.63s" fill="freeze"/><circle cx="146.0" cy="361.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="146" y="366" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text><text x="166" y="367" font-size="17" font-weight="bold" fill="#2f3a2b">sit</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="6.63s" fill="freeze"/><set attributeName="opacity" to="0" begin="8.50s" fill="freeze"/><circle cx="146.0" cy="361.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="146" y="366" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">6</text><text x="166" y="367" font-size="17" font-weight="bold" fill="#2f3a2b">walk out</text></g>
 <g opacity="0"><animate attributeName="opacity" values="0;1" begin="8.5s" dur="0.5s" fill="freeze"/><rect x="96" y="346" width="208" height="30" rx="8" fill="#2f3a2b"/><text x="200" y="367" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Out, then the Journal</text></g>
 </svg>

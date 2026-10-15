@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 428" font-family="sans-serif" role="img" aria-label="Decision chart: can I hunt near this winter range? 1, if the season is closed for this animal, class and MU today, do not hunt. 2, if inside a No Shooting or closed area, do not shoot. 3, if private, reserve or Wildlife Management Area land, get permission or call the regional office first. 4, if a motor vehicle closure applies, park and walk in. Otherwise hunt it on foot, quietly, then leave.">
-<rect width="400" height="428" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 446" font-family="sans-serif" role="img" aria-label="Decision chart: can I hunt near this winter range? 1, if the season is closed for this animal, class and MU today, do not hunt. 2, if inside a No Shooting or closed area, do not shoot. 3, if private, reserve or Wildlife Management Area land, get permission or call the regional office first. 4, if a motor vehicle closure applies, park and walk in. Otherwise hunt it on foot, quietly, then leave.">
+<rect width="400" height="446" fill="#fffaf0"/>
 <rect x="10" y="8" width="238" height="78" rx="10" fill="#f4eedf" stroke="#2f3a2b" stroke-width="1.6"/>
-<circle cx="12.0" cy="10.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="12" y="15" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
-<g transform="translate(40 47.0)"><rect x="-14" y="-12" width="28" height="26" rx="3" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/><rect x="-14" y="-12" width="28" height="8" rx="2" fill="#2f3a2b"/><path d="M-8 -16 v6 M8 -16 v6" stroke="#2f3a2b" stroke-width="2.4" stroke-linecap="round"/><path d="M-4.5 0.5 l9.0 9.0 M4.5 0.5 l-9.0 9.0" stroke="#c0392b" stroke-width="2.4" stroke-linecap="round"/></g>
-<text x="66" y="32" font-size="16" font-weight="bold" fill="#2f3a2b">Season closed for</text>
-<text x="66" y="52" font-size="16" font-weight="bold" fill="#2f3a2b">this animal, class and</text>
-<text x="66" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">MU today?</text>
+<circle cx="26.0" cy="47.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="26" y="52" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<g transform="translate(60 47.0)"><rect x="-14" y="-12" width="28" height="26" rx="3" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/><rect x="-14" y="-12" width="28" height="8" rx="2" fill="#2f3a2b"/><path d="M-8 -16 v6 M8 -16 v6" stroke="#2f3a2b" stroke-width="2.4" stroke-linecap="round"/><path d="M-4.5 0.5 l9.0 9.0 M4.5 0.5 l-9.0 9.0" stroke="#c0392b" stroke-width="2.4" stroke-linecap="round"/></g>
+<text x="86" y="32" font-size="16" font-weight="bold" fill="#2f3a2b">Season closed for</text>
+<text x="86" y="52" font-size="16" font-weight="bold" fill="#2f3a2b">this animal, class</text>
+<text x="86" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">and MU today?</text>
 <line x1="250" y1="47.0" x2="278" y2="47.0" stroke="#e8590c" stroke-width="3"/><path d="M285.0 47.0 L276.0 42.0 L276.0 52.0z" fill="#e8590c"/>
 <text x="265" y="40" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">yes</text>
 <rect x="286" y="12" width="104" height="70" rx="10" fill="#e8590c"/>
@@ -13,43 +13,44 @@
 <text x="338" y="62" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">hunt</text>
 <line x1="129.0" y1="86" x2="129.0" y2="104" stroke="#2f3a2b" stroke-width="3"/><path d="M129.0 110.0 L133.9 101.0 L124.0 101.0z" fill="#2f3a2b"/>
 <text x="139" y="104" font-size="14" font-weight="bold" fill="#2f3a2b">no</text>
-<rect x="10" y="112" width="238" height="60" rx="10" fill="#f4eedf" stroke="#2f3a2b" stroke-width="1.6"/>
-<circle cx="12.0" cy="114.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="12" y="119" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
-<g><circle cx="40" cy="142.0" r="8" fill="none" stroke="#2f3a2b" stroke-width="1.8"/><path d="M29 142.0 h22 M40 131.0 v22" stroke="#2f3a2b" stroke-width="1.6"/></g><circle cx="40" cy="142.0" r="15" fill="none" stroke="#c0392b" stroke-width="3.2"/><line x1="29.4" y1="152.6" x2="50.6" y2="131.4" stroke="#c0392b" stroke-width="3.2"/>
-<text x="66" y="137" font-size="16" font-weight="bold" fill="#2f3a2b">Inside a No Shooting</text>
-<text x="66" y="157" font-size="16" font-weight="bold" fill="#2f3a2b">or closed area?</text>
-<line x1="250" y1="142.0" x2="278" y2="142.0" stroke="#e8590c" stroke-width="3"/><path d="M285.0 142.0 L276.0 137.1 L276.0 146.9z" fill="#e8590c"/>
-<text x="265" y="135" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">yes</text>
-<rect x="286" y="116" width="104" height="52" rx="10" fill="#e8590c"/>
-<text x="338" y="137" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Do not</text>
-<text x="338" y="157" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">shoot</text>
-<line x1="129.0" y1="172" x2="129.0" y2="190" stroke="#2f3a2b" stroke-width="3"/><path d="M129.0 196.0 L133.9 187.0 L124.0 187.0z" fill="#2f3a2b"/>
-<text x="139" y="190" font-size="14" font-weight="bold" fill="#2f3a2b">no</text>
-<rect x="10" y="198" width="238" height="60" rx="10" fill="#f4eedf" stroke="#2f3a2b" stroke-width="1.6"/>
-<circle cx="12.0" cy="200.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="12" y="205" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
-<g transform="translate(40 228.0) scale(1.0)" fill="#8b5a2b" stroke="none"><path d="M-14 0 L0 -13 L14 0z"/><rect x="-10" y="0" width="20" height="13"/><rect x="-3" y="5" width="6" height="8" fill="#fffaf0"/></g>
-<text x="66" y="223" font-size="16" font-weight="bold" fill="#2f3a2b">Private, reserve or</text>
-<text x="66" y="243" font-size="16" font-weight="bold" fill="#2f3a2b">WMA land?</text>
-<line x1="250" y1="228.0" x2="278" y2="228.0" stroke="#e8590c" stroke-width="3"/><path d="M285.0 228.0 L276.0 223.1 L276.0 232.9z" fill="#e8590c"/>
-<text x="265" y="221" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">yes</text>
-<rect x="286" y="202" width="104" height="52" rx="10" fill="#e8590c"/>
-<text x="338" y="223" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Permission</text>
-<text x="338" y="243" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">or call first</text>
-<line x1="129.0" y1="258" x2="129.0" y2="276" stroke="#2f3a2b" stroke-width="3"/><path d="M129.0 282.0 L133.9 273.0 L124.0 273.0z" fill="#2f3a2b"/>
-<text x="139" y="276" font-size="14" font-weight="bold" fill="#2f3a2b">no</text>
-<rect x="10" y="284" width="238" height="60" rx="10" fill="#f4eedf" stroke="#2f3a2b" stroke-width="1.6"/>
-<circle cx="12.0" cy="286.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="12" y="291" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
-<g transform="translate(40 314.0) scale(1.0)" fill="#2f3a2b" stroke="none"><rect x="-15" y="-10" width="3.5" height="23"/><rect x="11.5" y="-10" width="3.5" height="23"/><path d="M-12 -5 H12 M-12 3 H12 M-12 3 L12 -5" stroke="#2f3a2b" stroke-width="2.6"/></g>
-<text x="66" y="309" font-size="16" font-weight="bold" fill="#2f3a2b">Motor vehicle closure</text>
-<text x="66" y="329" font-size="16" font-weight="bold" fill="#2f3a2b">here?</text>
-<line x1="250" y1="314.0" x2="278" y2="314.0" stroke="#e8590c" stroke-width="3"/><path d="M285.0 314.0 L276.0 309.1 L276.0 318.9z" fill="#e8590c"/>
-<text x="265" y="307" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">yes</text>
-<rect x="286" y="288" width="104" height="52" rx="10" fill="#e8590c"/>
-<text x="338" y="309" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Park and</text>
-<text x="338" y="329" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">walk in</text>
-<line x1="129.0" y1="344" x2="129.0" y2="362" stroke="#2f3a2b" stroke-width="3"/><path d="M129.0 368.0 L133.9 359.0 L124.0 359.0z" fill="#2f3a2b"/>
-<text x="139" y="362" font-size="14" font-weight="bold" fill="#2f3a2b">no</text>
-<rect x="10" y="370" width="380" height="50" rx="10" fill="#2f6e3b"/>
-<g transform="translate(40 417) scale(0.85 0.85)"><path d="M-5 -20 L-6 0 M4 -20 L6 0" stroke="#4a4136" stroke-width="5" stroke-linecap="round"/><path d="M-8 -40 C-8 -44 8 -44 8 -40 L7 -19 H-7z" fill="#e8590c"/><circle cx="0" cy="-47" r="5.5" fill="#e0b48c"/><path d="M-6 -49 C-6 -56 6 -56 6 -49z" fill="#e8590c"/><path d="M4 -36 L22 -42" stroke="#3b2a1a" stroke-width="2.6" stroke-linecap="round"/><path d="M4 -36 L10 -31" stroke="#e0b48c" stroke-width="3" stroke-linecap="round"/></g>
-<text x="214" y="401" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Hunt it on foot, quietly, then leave</text>
+<rect x="10" y="112" width="238" height="78" rx="10" fill="#f4eedf" stroke="#2f3a2b" stroke-width="1.6"/>
+<circle cx="26.0" cy="151.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="26" y="156" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<g><circle cx="60" cy="151.0" r="8" fill="none" stroke="#2f3a2b" stroke-width="1.8"/><path d="M49 151.0 h22 M60 140.0 v22" stroke="#2f3a2b" stroke-width="1.6"/></g><circle cx="60" cy="151.0" r="15" fill="none" stroke="#c0392b" stroke-width="3.2"/><line x1="49.4" y1="161.6" x2="70.6" y2="140.4" stroke="#c0392b" stroke-width="3.2"/>
+<text x="86" y="136" font-size="16" font-weight="bold" fill="#2f3a2b">Inside a No</text>
+<text x="86" y="156" font-size="16" font-weight="bold" fill="#2f3a2b">Shooting or closed</text>
+<text x="86" y="176" font-size="16" font-weight="bold" fill="#2f3a2b">area?</text>
+<line x1="250" y1="151.0" x2="278" y2="151.0" stroke="#e8590c" stroke-width="3"/><path d="M285.0 151.0 L276.0 146.1 L276.0 155.9z" fill="#e8590c"/>
+<text x="265" y="144" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">yes</text>
+<rect x="286" y="116" width="104" height="70" rx="10" fill="#e8590c"/>
+<text x="338" y="146" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Do not</text>
+<text x="338" y="166" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">shoot</text>
+<line x1="129.0" y1="190" x2="129.0" y2="208" stroke="#2f3a2b" stroke-width="3"/><path d="M129.0 214.0 L133.9 205.0 L124.0 205.0z" fill="#2f3a2b"/>
+<text x="139" y="208" font-size="14" font-weight="bold" fill="#2f3a2b">no</text>
+<rect x="10" y="216" width="238" height="60" rx="10" fill="#f4eedf" stroke="#2f3a2b" stroke-width="1.6"/>
+<circle cx="26.0" cy="246.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="26" y="251" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<g transform="translate(60 246.0) scale(1.0)" fill="#8b5a2b" stroke="none"><path d="M-14 0 L0 -13 L14 0z"/><rect x="-10" y="0" width="20" height="13"/><rect x="-3" y="5" width="6" height="8" fill="#fffaf0"/></g>
+<text x="86" y="241" font-size="16" font-weight="bold" fill="#2f3a2b">Private, reserve or</text>
+<text x="86" y="261" font-size="16" font-weight="bold" fill="#2f3a2b">WMA land?</text>
+<line x1="250" y1="246.0" x2="278" y2="246.0" stroke="#e8590c" stroke-width="3"/><path d="M285.0 246.0 L276.0 241.1 L276.0 250.9z" fill="#e8590c"/>
+<text x="265" y="239" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">yes</text>
+<rect x="286" y="220" width="104" height="52" rx="10" fill="#e8590c"/>
+<text x="338" y="241" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Permission</text>
+<text x="338" y="261" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">or call first</text>
+<line x1="129.0" y1="276" x2="129.0" y2="294" stroke="#2f3a2b" stroke-width="3"/><path d="M129.0 300.0 L133.9 291.0 L124.0 291.0z" fill="#2f3a2b"/>
+<text x="139" y="294" font-size="14" font-weight="bold" fill="#2f3a2b">no</text>
+<rect x="10" y="302" width="238" height="60" rx="10" fill="#f4eedf" stroke="#2f3a2b" stroke-width="1.6"/>
+<circle cx="26.0" cy="332.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="26" y="337" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<g transform="translate(60 332.0) scale(1.0)" fill="#2f3a2b" stroke="none"><rect x="-15" y="-10" width="3.5" height="23"/><rect x="11.5" y="-10" width="3.5" height="23"/><path d="M-12 -5 H12 M-12 3 H12 M-12 3 L12 -5" stroke="#2f3a2b" stroke-width="2.6"/></g>
+<text x="86" y="327" font-size="16" font-weight="bold" fill="#2f3a2b">Motor vehicle</text>
+<text x="86" y="347" font-size="16" font-weight="bold" fill="#2f3a2b">closure here?</text>
+<line x1="250" y1="332.0" x2="278" y2="332.0" stroke="#e8590c" stroke-width="3"/><path d="M285.0 332.0 L276.0 327.1 L276.0 336.9z" fill="#e8590c"/>
+<text x="265" y="325" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">yes</text>
+<rect x="286" y="306" width="104" height="52" rx="10" fill="#e8590c"/>
+<text x="338" y="327" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Park and</text>
+<text x="338" y="347" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">walk in</text>
+<line x1="129.0" y1="362" x2="129.0" y2="380" stroke="#2f3a2b" stroke-width="3"/><path d="M129.0 386.0 L133.9 377.0 L124.0 377.0z" fill="#2f3a2b"/>
+<text x="139" y="380" font-size="14" font-weight="bold" fill="#2f3a2b">no</text>
+<rect x="10" y="388" width="380" height="50" rx="10" fill="#2f6e3b"/>
+<g transform="translate(40 435) scale(0.85 0.85)"><path d="M-5 -20 L-6 0 M4 -20 L6 0" stroke="#4a4136" stroke-width="5" stroke-linecap="round"/><path d="M-8 -40 C-8 -44 8 -44 8 -40 L7 -19 H-7z" fill="#e8590c"/><circle cx="0" cy="-47" r="5.5" fill="#e0b48c"/><path d="M-6 -49 C-6 -56 6 -56 6 -49z" fill="#e8590c"/><path d="M4 -36 L22 -42" stroke="#3b2a1a" stroke-width="2.6" stroke-linecap="round"/><path d="M4 -36 L10 -31" stroke="#e0b48c" stroke-width="3" stroke-linecap="round"/></g>
+<text x="214" y="419" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Hunt it on foot, quietly, then leave</text>
 </svg>
