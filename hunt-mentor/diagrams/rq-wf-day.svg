@@ -1,9 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 348" font-family="sans-serif" role="img" aria-label="Pattern bars for a fall day, 5:00 to 20:00, pattern only, 65 to 70 percent. Mallards and other dabblers often feed at night, fly at dawn to a day roost, roost and loaf through the day and fly out at dusk to feed. Canada geese roost on water, fly to fields in the morning and late afternoon and rest on water at midday, then roost. On stormy days geese fly all day, 70 percent. Dashed lines: legal duck hours at Heffley Creek on 15 October, about 6:52 to 18:41; shaded parts are outside legal hours. Times shift by day and place.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 348" font-family="sans-serif" role="img" aria-label="Pattern bars for a fall day, 5:00 to 20:00, pattern only, 65 to 70 percent. Mallards and other dabblers often feed at night, fly at dawn to a day roost, roost and loaf through the day and fly out at dusk to feed. Canada geese roost on water, fly to fields in the morning and late afternoon and rest on water at midday, then roost. On stormy days geese fly all day, 70 percent. Dashed lines: legal duck hours at Heffley Creek on 15 October, about 6:52 to 18:41. Times shift by day and place.">
 <rect width="400" height="348" fill="#fffaf0"/>
 <text x="14" y="24" font-size="18" font-weight="bold" fill="#2f3a2b">A fall day for ducks and geese</text>
 <text x="14" y="44" font-size="15" fill="#6b5b4b">Pattern only (65 to 70%)</text>
-<rect x="14" y="56" width="46.3" height="238" fill="#3c4a5c" opacity=".16"/>
-<rect x="353.3" y="56" width="32.7" height="238" fill="#3c4a5c" opacity=".16"/>
 <line x1="38.8" y1="78" x2="38.8" y2="294" stroke="#d6d0bf" stroke-width="1"/>
 <text x="38.8" y="72" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">6:00</text>
 <line x1="113.2" y1="78" x2="113.2" y2="294" stroke="#d6d0bf" stroke-width="1"/>
@@ -43,5 +41,5 @@
 <text x="64.3" y="308" font-size="15" font-weight="bold" fill="#c2410c">legal 6:52</text>
 <line x1="353.3" y1="78" x2="353.3" y2="290" stroke="#e8590c" stroke-width="2.2" stroke-dasharray="5 3"/>
 <text x="349.3" y="308" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">18:41</text>
-<text x="14" y="334" font-size="14" fill="#6b5b4b">Shaded: outside legal hours. Times shift by day and place.</text>
+<text x="14" y="334" font-size="14" fill="#6b5b4b">Times shift by day and place.</text>
 </svg>

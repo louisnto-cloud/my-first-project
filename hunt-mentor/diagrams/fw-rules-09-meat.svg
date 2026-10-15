@@ -13,7 +13,7 @@
 <text x="86" y="160" font-size="15" fill="#2f3a2b">A Record of Receipt with it</text>
 <rect x="8" y="176" width="384" height="60" rx="6" fill="#f4eedf"/>
 <circle cx="44" cy="206.0" r="26" fill="#fffaf0" stroke="#d8cfb8" stroke-width="1.4"/>
-<g transform="translate(44 206.0) scale(1.15)" fill="#c0392b" stroke="none"><circle r="13"/><text y="6" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">$</text></g>
+<g transform="translate(44 206.0) scale(1.15)" fill="#c0392b" stroke="none"><circle r="13"/><path d="M5 -5 C2 -8 -6 -8 -6 -3 C-6 2 6 -1 6 4 C6 9 -2 9 -6 6 M0 -10 V10" stroke="#fffaf0" stroke-width="2.4" fill="none" stroke-linecap="round"/></g>
 <circle cx="44" cy="206.0" r="26" fill="none" stroke="#c0392b" stroke-width="3"/><path d="M25.8 187.8 L62.2 224.2" stroke="#c0392b" stroke-width="3"/>
 <text x="86" y="202" font-size="17" font-weight="bold" fill="#2f3a2b">Sell or trade</text>
 <text x="86" y="222" font-size="15" fill="#2f3a2b">Never. Not even an offer</text>
