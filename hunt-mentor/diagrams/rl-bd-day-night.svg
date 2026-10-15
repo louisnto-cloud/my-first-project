@@ -1,16 +1,82 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Two panels. Cold day: a deer beds at the foot of a rock bluff in the sun, where the rock gathers heat. Clear cold night: a deer beds under a closed conifer canopy that holds its body heat in instead of losing it to the open sky. Caption: by day, bluffs and sun; by night, under the canopy.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Day cover, night cover</text>
-  <rect x="6" y="40" width="190" height="220" rx="8" fill="#e3ecf3"/><rect x="204" y="40" width="190" height="220" rx="8" fill="#2c3a55"/>
-  <circle cx="40" cy="74" r="12" fill="#f2c70c"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(0 40 74)"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(45 40 74)"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(90 40 74)"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(135 40 74)"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(180 40 74)"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(225 40 74)"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(270 40 74)"/><path d="M40 74 m0 -16 v-8" stroke="#e8a20c" stroke-width="3" transform="rotate(315 40 74)"/>
-  <path d="M110 120 L180 120 L180 250 L110 250 Z" fill="#9a8f7c"/><path d="M110 120 L180 120 L172 132 L118 132 Z" fill="#b8ad98"/>
-  <g transform="translate(90 238) scale(0.9)"><ellipse rx="13" ry="6" fill="#8b5a2b"/><circle cx="11" cy="-7" r="5" fill="#8b5a2b"/><path d="M9 -11 l-3 -6 M13 -11 l4 -5" stroke="#5c3b1c" stroke-width="2"/></g>
-  <text x="101" y="62" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cold day</text><text x="60" y="110" font-size="13" fill="#2f3a2b" text-anchor="middle">sun on rock</text><text x="60" y="126" font-size="13" fill="#2f3a2b" text-anchor="middle">gathers heat</text>
-  <path d="M220 130 C 240 100, 280 100, 300 120 C 320 100, 360 104, 380 130 L380 140 L220 140 Z" fill="#55643f"/>
-  <path d="M250 140 V250 M330 140 V250" stroke="#6b4f35" stroke-width="7"/>
-  <g transform="translate(292 238) scale(0.9)"><ellipse rx="13" ry="6" fill="#8b5a2b"/><circle cx="11" cy="-7" r="5" fill="#8b5a2b"/><path d="M9 -11 l-3 -6 M13 -11 l4 -5" stroke="#5c3b1c" stroke-width="2"/></g>
-  <path d="M292 220 C 286 200, 298 186, 292 166" stroke="#f08c00" stroke-width="2.5" fill="none"/><path d="M286 172 l6 -8 l6 8" stroke="#f08c00" stroke-width="2.5" fill="none"/>
-  <path d="M292 150 C 300 160, 286 170, 292 180" stroke="#f08c00" stroke-width="2.5" fill="none"/>
-  <text x="299" y="62" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Clear cold night</text><text x="299" y="92" font-size="13" fill="#fff" text-anchor="middle">canopy holds heat in</text>
-  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">By day: bluffs and sun. By night: under the canopy.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 376" font-family="sans-serif" role="img" aria-label="Two panels. Cold day: a deer beds at the foot of a rock bluff in the sun, where the sun on the rock gathers heat. Clear cold night: a deer beds under a closed conifer canopy that holds its body heat in instead of losing it to the open sky. By day, bluffs and sun; by night, under the canopy.">
+<rect width="400" height="376" fill="#fffaf0"/>
+<defs><clipPath id="rl-bd-day-night-a"><rect x="8" y="40" width="188" height="222" rx="10"/></clipPath><clipPath id="rl-bd-day-night-b"><rect x="204" y="40" width="188" height="222" rx="10"/></clipPath></defs>
+<text x="200" y="27" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Day cover, night cover</text>
+<g clip-path="url(#rl-bd-day-night-a)">
+<rect x="8" y="40" width="188" height="222" fill="#dcebf5"/>
+<g transform="translate(40 92)"><circle r="13" fill="#f2a516"/><line x1="17.0" y1="0.0" x2="23.0" y2="0.0" stroke="#f2a516" stroke-width="2.4" stroke-linecap="round"/><line x1="12.0" y1="12.0" x2="16.3" y2="16.3" stroke="#f2a516" stroke-width="2.4" stroke-linecap="round"/><line x1="0.0" y1="17.0" x2="0.0" y2="23.0" stroke="#f2a516" stroke-width="2.4" stroke-linecap="round"/><line x1="-12.0" y1="12.0" x2="-16.3" y2="16.3" stroke="#f2a516" stroke-width="2.4" stroke-linecap="round"/><line x1="-17.0" y1="0.0" x2="-23.0" y2="0.0" stroke="#f2a516" stroke-width="2.4" stroke-linecap="round"/><line x1="-12.0" y1="-12.0" x2="-16.3" y2="-16.3" stroke="#f2a516" stroke-width="2.4" stroke-linecap="round"/><line x1="-0.0" y1="-17.0" x2="-0.0" y2="-23.0" stroke="#f2a516" stroke-width="2.4" stroke-linecap="round"/><line x1="12.0" y1="-12.0" x2="16.3" y2="-16.3" stroke="#f2a516" stroke-width="2.4" stroke-linecap="round"/></g>
+<path d="M8 226 Q80 214 196 220 V262 H8z" fill="#c9c08a"/>
+<path d="M118 224 L124 150 L134 120 L150 104 L170 98 L196 96 V226z" fill="#9a8f80"/>
+<path d="M124 150 L134 120 L150 104 L156 112 L142 132 L136 160 L132 224 H118z" fill="#b8ad9c"/>
+<path d="M146 130 L152 160 L148 190" fill="none" stroke="#6f665a" stroke-width="1.6"/>
+<path d="M168 112 L164 150 L170 182 L166 214" fill="none" stroke="#6f665a" stroke-width="1.6"/>
+<path d="M184 120 L188 170" fill="none" stroke="#6f665a" stroke-width="1.6"/>
+<line x1="60" y1="104" x2="116" y2="136" stroke="#f2a516" stroke-width="2.2" stroke-dasharray="5 4"/>
+<line x1="68" y1="118" x2="122" y2="156" stroke="#f2a516" stroke-width="2.2" stroke-dasharray="5 4"/>
+<line x1="76" y1="132" x2="128" y2="176" stroke="#f2a516" stroke-width="2.2" stroke-dasharray="5 4"/>
+<path d="M116 172 q-6 -5 -12 0 t-12 0 t-12 0" fill="none" stroke="#e8590c" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M116 186 q-6 -5 -12 0 t-12 0 t-12 0" fill="none" stroke="#e8590c" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M116 200 q-6 -5 -12 0 t-12 0 t-12 0" fill="none" stroke="#e8590c" stroke-width="2.4" stroke-linecap="round"/>
+<g transform="translate(92 228) scale(1.5 1.5)"><ellipse cx="4" cy="-6" rx="14" ry="6.5" fill="#9a7350"/><path d="M-8 -8 L-12 -20 L-7 -21 L-3 -10z" fill="#9a7350"/><path d="M-12 -20 C-16 -21 -19 -18 -19 -16 L-14 -15 C-12 -16 -10 -17 -9 -19z" fill="#9a7350"/><path d="M-11 -21 L-15 -27 L-9 -22z M-9 -21 L-6 -27 L-7 -21z" fill="#9a7350"/><ellipse cx="16" cy="-6" rx="2.4" ry="3" fill="#f3ead8"/><path d="M-6 -1 H8" stroke="#5a3e26" stroke-width="2" stroke-linecap="round"/></g>
+<path d="M75 251 l-2 -6 M75 251 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
+<path d="M92 257 l-2 -6 M92 257 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
+<path d="M87 256 l-2 -6 M87 256 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
+<path d="M17 244 l-2 -6 M17 244 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
+<path d="M106 249 l-2 -6 M106 249 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
+<path d="M102 235 l-2 -6 M102 235 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
+<path d="M60 238 l-2 -6 M60 238 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
+<path d="M67 247 l-2 -6 M67 247 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
+<path d="M15 238 l-2 -6 M15 238 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
+<path d="M41 256 l-2 -6 M41 256 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
+<path d="M89 236 l-2 -6 M89 236 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
+<path d="M92 236 l-2 -6 M92 236 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
+<path d="M75 235 l-2 -6 M75 235 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
+<path d="M14 255 l-2 -6 M14 255 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
+</g>
+<rect x="8" y="40" width="188" height="30" rx="10" fill="#f2a516"/><rect x="8" y="60" width="188" height="10" fill="#f2a516"/>
+<text x="102" y="61" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cold day</text>
+<text x="102" y="284" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">sun on rock</text>
+<text x="102" y="304" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">gathers heat</text>
+
+<g clip-path="url(#rl-bd-day-night-b)">
+<rect x="204" y="40" width="188" height="222" fill="#25324a"/>
+<circle cx="247" cy="78" r="1" fill="#e8ecf5"/>
+<circle cx="365" cy="79" r="1" fill="#e8ecf5"/>
+<circle cx="306" cy="86" r="1" fill="#e8ecf5"/>
+<circle cx="242" cy="91" r="1" fill="#e8ecf5"/>
+<circle cx="382" cy="90" r="1.3" fill="#e8ecf5"/>
+<circle cx="214" cy="81" r="1" fill="#e8ecf5"/>
+<circle cx="257" cy="80" r="1.6" fill="#e8ecf5"/>
+<circle cx="314" cy="85" r="1.6" fill="#e8ecf5"/>
+<circle cx="270" cy="80" r="1.3" fill="#e8ecf5"/>
+<circle cx="296" cy="80" r="1.3" fill="#e8ecf5"/>
+<circle cx="294" cy="77" r="1.3" fill="#e8ecf5"/>
+<circle cx="384" cy="74" r="1.6" fill="#e8ecf5"/>
+<circle cx="274" cy="81" r="1.6" fill="#e8ecf5"/>
+<circle cx="350" cy="81" r="1.6" fill="#e8ecf5"/>
+<circle cx="360" cy="82" r="1.6" fill="#e8ecf5"/>
+<circle cx="242" cy="91" r="1" fill="#e8ecf5"/>
+<circle cx="231" cy="78" r="1.3" fill="#e8ecf5"/>
+<circle cx="271" cy="80" r="1.6" fill="#e8ecf5"/>
+<path d="M204 232 Q300 224 392 230 V262 H204z" fill="#3d4636"/>
+<rect x="228" y="120" width="8" height="112" fill="#5a4330"/>
+<rect x="296" y="120" width="8" height="112" fill="#5a4330"/>
+<rect x="362" y="120" width="8" height="112" fill="#5a4330"/>
+<path d="M214 96 L240 140 L188 140z" fill="#2f5236"/>
+<path d="M246 92 L272 136 L220 136z" fill="#2f5236"/>
+<path d="M282 98 L308 142 L256 142z" fill="#2f5236"/>
+<path d="M318 90 L344 134 L292 134z" fill="#2f5236"/>
+<path d="M352 96 L378 140 L326 140z" fill="#2f5236"/>
+<path d="M388 92 L414 136 L362 136z" fill="#2f5236"/>
+<path d="M204 128 Q300 140 392 128 V146 Q300 156 204 146z" fill="#2a4a31"/>
+<path d="M290 188 C286 176 294 164 290 156 Q296 142 301 156 C304 166 298 174 302 180" fill="none" stroke="#e8590c" stroke-width="2.4"/><path d="M302 188 l-5 -9 h10z" fill="#e8590c"/>
+<path d="M326 188 C322 176 330 164 326 156 Q332 142 337 156 C340 166 334 174 338 180" fill="none" stroke="#e8590c" stroke-width="2.4"/><path d="M338 188 l-5 -9 h10z" fill="#e8590c"/>
+<g transform="translate(322 234) scale(1.5 1.5)"><ellipse cx="4" cy="-6" rx="14" ry="6.5" fill="#8a6848"/><path d="M-8 -8 L-12 -20 L-7 -21 L-3 -10z" fill="#8a6848"/><path d="M-12 -20 C-16 -21 -19 -18 -19 -16 L-14 -15 C-12 -16 -10 -17 -9 -19z" fill="#8a6848"/><path d="M-11 -21 L-15 -27 L-9 -22z M-9 -21 L-6 -27 L-7 -21z" fill="#8a6848"/><ellipse cx="16" cy="-6" rx="2.4" ry="3" fill="#f3ead8"/><path d="M-6 -1 H8" stroke="#5a3e26" stroke-width="2" stroke-linecap="round"/></g>
+</g>
+<rect x="204" y="40" width="188" height="30" rx="10" fill="#1b2436"/><rect x="204" y="60" width="188" height="10" fill="#1b2436"/>
+<text x="298" y="61" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Clear cold night</text>
+<text x="298" y="284" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">canopy</text>
+<text x="298" y="304" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">holds heat in</text>
+<text x="200" y="342" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">By day: bluffs and sun.</text>
+<text x="200" y="364" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">By night: under the canopy.</text>
 </svg>

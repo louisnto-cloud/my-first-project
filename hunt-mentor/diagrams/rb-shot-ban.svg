@@ -1,22 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 296" role="img" aria-label="Which shot for which bird. Ducks, geese, coots and snipe: non toxic shot only, such as steel, bismuth, the tungsten types and tin. Grouse, quail, pheasant, partridge, ptarmigan, turkey, pigeons and doves: lead is still legal, unless a local wetland rule says otherwise." font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="296" fill="#fffaf0"/>
-<text x="200.0" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Which shot for which bird</text>
-<text x="200.0" y="48" font-size="14" fill="#2f3a2b" text-anchor="middle">Unless a local wetland rule says otherwise.</text>
-<rect x="6" y="58" width="191" height="228" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<rect x="6" y="58" width="191" height="30" rx="10" fill="#4a7fb0"/><rect x="6" y="76" width="191" height="12" fill="#4a7fb0"/>
-<text x="101.5" y="79" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Non toxic only</text>
-<g transform="translate(101.5 120) scale(1.3)"><ellipse cx="0" cy="0" rx="18" ry="9" fill="#8b5a2b"/><circle cx="15" cy="-9" r="7" fill="#2e6b3a"/><path d="M21 -9 L29 -7 L21 -5 Z" fill="#e0a526"/><path d="M-18 -2 L-26 -6 L-22 2 Z" fill="#8b5a2b"/></g>
-<text x="101.5" y="176" font-size="14" fill="#23261f" text-anchor="middle">Ducks, geese,</text>
-<text x="101.5" y="194" font-size="14" fill="#23261f" text-anchor="middle">coots, snipe</text>
-<text x="101.5" y="212" font-size="14" fill="#23261f" text-anchor="middle"></text>
-<text x="101.5" y="230" font-size="14" fill="#23261f" text-anchor="middle">Steel, bismuth,</text>
-<text x="101.5" y="248" font-size="14" fill="#23261f" text-anchor="middle">tungsten types, tin</text>
-<rect x="203" y="58" width="191" height="228" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
-<rect x="203" y="58" width="191" height="30" rx="10" fill="#8b5a2b"/><rect x="203" y="76" width="191" height="12" fill="#8b5a2b"/>
-<text x="298.5" y="79" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Lead still legal</text>
-<g transform="translate(298.5 120) scale(1.3)"><ellipse cx="0" cy="0" rx="16" ry="11" fill="#8b5a2b"/><circle cx="14" cy="-10" r="6" fill="#8b5a2b"/><path d="M19 -10 L24 -9 L19 -7 Z" fill="#2f3a2b"/><path d="M-14 -4 L-28 -12 L-28 4 Z" fill="#8b5a2b"/><path d="M-2 10 L-2 18 M4 10 L4 18" stroke="#2f3a2b" stroke-width="2"/></g>
-<text x="298.5" y="176" font-size="14" fill="#23261f" text-anchor="middle">Grouse, quail,</text>
-<text x="298.5" y="194" font-size="14" fill="#23261f" text-anchor="middle">pheasant, partridge,</text>
-<text x="298.5" y="212" font-size="14" fill="#23261f" text-anchor="middle">ptarmigan, turkey,</text>
-<text x="298.5" y="230" font-size="14" fill="#23261f" text-anchor="middle">pigeons, doves</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" font-family="sans-serif" role="img" aria-label="Which shot for which bird. Left, a mallard drake on water: ducks, geese, coots and snipe need non toxic shot only, such as steel, bismuth, the tungsten types and tin. Right, a ruffed grouse: for grouse, quail, pheasant, partridge, ptarmigan, turkey, pigeons and doves lead is still legal, unless a local wetland rule says otherwise.">
+<rect width="400" height="340" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Which shot for which bird</text>
+<text x="200" y="50" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Unless a local wetland rule says otherwise.</text>
+<rect x="8" y="64" width="188" height="268" rx="10" fill="#ffffff" stroke="#2c5d86" stroke-width="2"/>
+<path d="M8 100 V74 a10 10 0 0 1 10 -10 H186 a10 10 0 0 1 10 10 V100z" fill="#2c5d86"/>
+<text x="102" y="88" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Non toxic only</text>
+<rect x="204" y="64" width="188" height="268" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2"/>
+<path d="M204 100 V74 a10 10 0 0 1 10 -10 H382 a10 10 0 0 1 10 10 V100z" fill="#8b5a2b"/>
+<text x="298" y="88" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Lead still legal</text>
+<g transform="translate(108 182) scale(1.12)"><path d="M-34 -6 C-36 -22 -16 -30 10 -28 C34 -27 52 -22 60 -13 C60 -6 56 2 40 5 C20 8 -10 8 -24 4 C-30 2 -33 -1 -34 -6z" fill="#cfc8bb" stroke="#5a5247" stroke-width="1.2"/><path d="M-34 -6 C-36 -18 -29 -26 -18 -28 C-12 -19 -13 -6 -18 6 C-26 4 -32 1 -34 -6z" fill="#7a3f22"/><path d="M42 -25 C52 -22 59 -17 60 -13 C60 -6 56 -1 48 2 C44 -6 42 -16 42 -25z" fill="#1f1f1f"/><path d="M50 -24 C52 -32 46 -34 45 -30" fill="none" stroke="#1f1f1f" stroke-width="2.2" stroke-linecap="round"/><path d="M-8 -25 C10 -31 34 -29 50 -21 C38 -14 12 -12 -4 -16z" fill="#a59b8a" stroke="#6d6556" stroke-width="1"/><path d="M24 -21 L40 -20 L38 -16 L22 -17z" fill="#3d4fa8" stroke="#ffffff" stroke-width="1.2"/><path d="M-30 -24 C-33 -30 -35 -36 -36 -40 L-24 -42 C-23 -35 -20 -30 -16 -27z" fill="#1f6b3a"/><path d="M-33 -29 C-28 -31 -22 -31 -18 -29" stroke="#ffffff" stroke-width="2.6" fill="none"/><ellipse cx="-33" cy="-46" rx="13" ry="10" fill="#1f6b3a"/><path d="M-30 -54 C-26 -52 -22 -48 -21 -43" stroke="#3f9a62" stroke-width="2" fill="none" opacity=".7"/><path d="M-44 -48 C-52 -48 -60 -45 -62 -42 C-58 -40 -50 -40 -44 -42z" fill="#d9b13c" stroke="#8a6d1f" stroke-width=".8"/><circle cx="-36" cy="-48" r="1.8" fill="#111"/><path d="M-48 6 H-30 M-14 10 H18 M30 7 H62" stroke="#4a7fb0" stroke-width="2" stroke-linecap="round" opacity=".7"/></g>
+<g transform="translate(290 188) scale(1.12)"><path d="M28 -24 L60 -20 C63 -12 62 -2 57 6 L26 -8z" fill="#8a6440" stroke="#4a3320" stroke-width="1"/><path d="M55 -19 C58 -11 58 -1 54 5" stroke="#1d1a16" stroke-width="3" fill="none"/><path d="M44 -21 L42 0 M36 -22 L34 -4" stroke="#6b4a2a" stroke-width="1" opacity=".7"/><path d="M-30 -26 C-30 -40 -12 -46 8 -42 C26 -38 36 -28 32 -14 C28 -4 10 0 -8 -2 C-22 -4 -30 -14 -30 -26z" fill="#a07a52" stroke="#5a3e26" stroke-width="1.2"/><path d="M-2 -38 C10 -40 22 -34 28 -26 C18 -28 6 -30 -2 -32z" fill="#7d5a38"/><path d="M-22 -16 l5 3 l5 -3" stroke="#f0e2c8" stroke-width="1.4" fill="none"/><path d="M-12 -12 l5 3 l5 -3" stroke="#f0e2c8" stroke-width="1.4" fill="none"/><path d="M-2 -10 l5 3 l5 -3" stroke="#f0e2c8" stroke-width="1.4" fill="none"/><path d="M-18 -24 l5 3 l5 -3" stroke="#f0e2c8" stroke-width="1.4" fill="none"/><path d="M-8 -20 l5 3 l5 -3" stroke="#f0e2c8" stroke-width="1.4" fill="none"/><path d="M4 -18 l5 3 l5 -3" stroke="#f0e2c8" stroke-width="1.4" fill="none"/><path d="M8 -28 l5 3 l5 -3" stroke="#f0e2c8" stroke-width="1.4" fill="none"/><path d="M16 -22 l5 3 l5 -3" stroke="#f0e2c8" stroke-width="1.4" fill="none"/><path d="M-26 -32 C-30 -38 -30 -44 -28 -48 L-18 -46 C-18 -40 -16 -36 -14 -34z" fill="#a07a52"/><path d="M-22 -40 C-18 -42 -16 -38 -17 -34 C-21 -32 -24 -35 -22 -40z" fill="#2b2118"/><circle cx="-30" cy="-50" r="9" fill="#a07a52" stroke="#5a3e26" stroke-width="1"/><path d="M-28 -59 L-20 -64 L-22 -55z" fill="#7d5a38"/><path d="M-38 -51 L-44 -49 L-38 -47z" fill="#3a2f22"/><circle cx="-33" cy="-52" r="1.7" fill="#111"/><path d="M-6 -3 L-8 0 M4 -2 L5 0" stroke="#6b5b4b" stroke-width="2.6" stroke-linecap="round"/><path d="M-14 0 H-2 M-2 0 H12" stroke="#6b5b4b" stroke-width="1.6" stroke-linecap="round"/></g>
+<text x="102" y="216" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Ducks, geese,</text>
+<text x="102" y="237" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">coots, snipe</text>
+<line x1="24" y1="252" x2="180" y2="252" stroke="#d8cfb8" stroke-width="1.4"/>
+<text x="102" y="274" font-size="15" fill="#2c5d86" text-anchor="middle">Steel, bismuth,</text>
+<text x="102" y="294" font-size="15" fill="#2c5d86" text-anchor="middle">tungsten types, tin</text>
+<text x="298" y="216" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Grouse, quail,</text>
+<text x="298" y="237" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">pheasant, partridge,</text>
+<text x="298" y="258" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">ptarmigan, turkey,</text>
+<text x="298" y="279" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">pigeons, doves</text>
 </svg>

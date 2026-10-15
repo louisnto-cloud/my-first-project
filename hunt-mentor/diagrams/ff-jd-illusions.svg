@@ -5,30 +5,30 @@
 <rect x="8" y="40" width="384" height="34" rx="8" fill="#e8590c"/><rect x="8" y="60" width="384" height="14" fill="#e8590c"/>
 <text x="200" y="64" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">Looks NEARER</text>
 <circle cx="22" cy="97" r="3.2" fill="#e8590c"/>
-<text x="32" y="102" font-size="15" fill="#2f3a2b">bright sun behind you</text>
+<text x="32" y="103" font-size="16" fill="#2f3a2b">bright sun behind you</text>
 <circle cx="210" cy="97" r="3.2" fill="#e8590c"/>
-<text x="220" y="102" font-size="15" fill="#2f3a2b">colour stands out</text>
+<text x="220" y="103" font-size="16" fill="#2f3a2b">colour stands out</text>
 <circle cx="22" cy="125" r="3.2" fill="#e8590c"/>
-<text x="32" y="130" font-size="15" fill="#2f3a2b">over water or snow</text>
+<text x="32" y="131" font-size="16" fill="#2f3a2b">over water or snow</text>
 <circle cx="210" cy="125" r="3.2" fill="#e8590c"/>
-<text x="220" y="130" font-size="15" fill="#2f3a2b">clear mountain air</text>
+<text x="220" y="131" font-size="16" fill="#2f3a2b">clear mountain air</text>
 <circle cx="22" cy="153" r="3.2" fill="#e8590c"/>
-<text x="32" y="158" font-size="15" fill="#2f3a2b">hidden dip between</text>
+<text x="32" y="159" font-size="16" fill="#2f3a2b">hidden dip between</text>
 <circle cx="210" cy="153" r="3.2" fill="#e8590c"/>
-<text x="220" y="158" font-size="15" fill="#2f3a2b">big object</text>
+<text x="220" y="159" font-size="16" fill="#2f3a2b">big object</text>
 <rect x="8" y="178" width="384" height="128" rx="8" fill="#e3edf6"/>
 <rect x="8" y="178" width="384" height="34" rx="8" fill="#4a7fb0"/><rect x="8" y="198" width="384" height="14" fill="#4a7fb0"/>
 <text x="200" y="202" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">Looks FARTHER</text>
 <circle cx="22" cy="235" r="3.2" fill="#4a7fb0"/>
-<text x="32" y="240" font-size="15" fill="#2f3a2b">poor light, fog</text>
+<text x="32" y="241" font-size="16" fill="#2f3a2b">poor light, fog</text>
 <circle cx="210" cy="235" r="3.2" fill="#4a7fb0"/>
-<text x="220" y="240" font-size="15" fill="#2f3a2b">sun in your eyes</text>
+<text x="220" y="241" font-size="16" fill="#2f3a2b">sun in your eyes</text>
 <circle cx="22" cy="263" r="3.2" fill="#4a7fb0"/>
-<text x="32" y="268" font-size="15" fill="#2f3a2b">only part showing</text>
+<text x="32" y="269" font-size="16" fill="#2f3a2b">only part showing</text>
 <circle cx="210" cy="263" r="3.2" fill="#4a7fb0"/>
-<text x="220" y="268" font-size="15" fill="#2f3a2b">blends with cover</text>
+<text x="220" y="269" font-size="16" fill="#2f3a2b">blends with cover</text>
 <circle cx="22" cy="291" r="3.2" fill="#4a7fb0"/>
-<text x="32" y="296" font-size="15" fill="#2f3a2b">down a tree lined road</text>
+<text x="32" y="297" font-size="16" fill="#2f3a2b">down a tree lined road</text>
 <circle cx="210" cy="291" r="3.2" fill="#4a7fb0"/>
-<text x="220" y="296" font-size="15" fill="#2f3a2b">you lying down</text>
+<text x="220" y="297" font-size="16" fill="#2f3a2b">you lying down</text>
 </svg>

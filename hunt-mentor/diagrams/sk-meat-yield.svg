@@ -1,4 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Bar chart of meat yield. Average deer: 49 kg field dressed gives 24 kg of boneless meat. Average buck: 59 kg gives 28 kg. Large bull moose: about 430 kg field dressed gives about 225 kg boneless. Deer yield is about 48 percent of field dressed weight.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="24" font-size="17" font-weight="bold" text-anchor="middle" fill="#23261f">How much meat comes home</text><text x="20" y="52" font-size="14" font-weight="bold" fill="#2f3a2b">Deer (scale 0 to 60 kg)</text><text x="114" y="88" font-size="14" font-weight="bold" text-anchor="end" fill="#23261f">Deer, avg</text><rect x="120" y="64" width="186.2" height="18" fill="#8a9a6b"/><rect x="120" y="84" width="91.19999999999999" height="18" fill="#e8590c"/><text x="310.2" y="78" font-size="13" font-weight="bold" fill="#23261f">49 kg</text><text x="215.2" y="98" font-size="13" font-weight="bold" fill="#e8590c">24 kg</text><text x="114" y="134" font-size="14" font-weight="bold" text-anchor="end" fill="#23261f">Buck, avg</text><rect x="120" y="110" width="224.2" height="18" fill="#8a9a6b"/><rect x="120" y="130" width="106.39999999999998" height="18" fill="#e8590c"/><text x="348.2" y="124" font-size="13" font-weight="bold" fill="#23261f">59 kg</text><text x="230.39999999999998" y="144" font-size="13" font-weight="bold" fill="#e8590c">28 kg</text><text x="20" y="178" font-size="14" font-weight="bold" fill="#2f3a2b">Bull moose (scale 0 to 450 kg)</text><text x="114" y="214" font-size="14" font-weight="bold" text-anchor="end" fill="#23261f">Large bull</text><rect x="120" y="190" width="249.39999999999998" height="18" fill="#8a9a6b"/><rect x="120" y="210" width="130.5" height="18" fill="#e8590c"/><text x="365.4" y="204" font-size="13" font-weight="bold" text-anchor="end" fill="#fff">430 kg</text><text x="254.5" y="224" font-size="13" font-weight="bold" fill="#e8590c">225 kg (65%)</text><rect x="20" y="250" width="16" height="12" fill="#8a9a6b"/><text x="42" y="261" font-size="13" fill="#23261f">field dressed</text><rect x="150" y="250" width="16" height="12" fill="#e8590c"/><text x="172" y="261" font-size="13" fill="#23261f">boneless meat</text><text x="200" y="288" font-size="14" text-anchor="middle" fill="#2f3a2b">Deer: about 48% of field dressed weight</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 430" font-family="sans-serif" role="img" aria-label="Bar chart of field dressed weight against boneless meat. Deer average: 49 kilograms field dressed gives 24 kilograms of boneless meat. Buck average: 59 kilograms gives 28 kilograms. Large bull moose: about 430 kilograms field dressed gives about 225 kilograms of meat, 65 percent certainty. Deer meat is about 48 percent of field dressed weight.">
+<rect width="400" height="430" fill="#fffaf0"/>
+<text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How much meat comes home</text>
+<rect x="60" y="44" width="16" height="16" rx="3" fill="#8a9a6b"/><text x="82" y="57" font-size="15" fill="#2f3a2b">field dressed</text>
+<rect x="214" y="44" width="16" height="16" rx="3" fill="#e8590c"/><text x="236" y="57" font-size="15" fill="#2f3a2b">boneless meat</text>
+<rect x="8" y="76" width="384" height="30" rx="6" fill="#f4eedf"/>
+<g transform="translate(36 103) scale(0.6 0.6)"><path d="M-8 -18 L-10 0 M-4 -18 L-3 0 M12 -18 L13 0 M16 -18 L18 0" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/><path d="M-12 -28 C-12 -34 -4 -34 6 -34 C14 -34 20 -32 20 -26 C20 -20 16 -17 8 -17 L-6 -17 C-10 -17 -12 -21 -12 -28z" fill="#8b5a2b"/><path d="M-10 -30 L-16 -42 L-12 -44 L-6 -32z" fill="#8b5a2b"/><path d="M-16 -42 C-20 -43 -24 -40 -24 -38 L-20 -37 C-17 -37 -14 -39 -13 -41z" fill="#8b5a2b"/><path d="M-14 -44 L-18 -50 L-12 -45z M-12 -44 L-9 -50 L-10 -44z" fill="#8b5a2b"/><ellipse cx="18" cy="-27" rx="3" ry="4" fill="#f3ead8"/><circle cx="-18" cy="-41" r=".9" fill="#111"/><path d="M-14 -46 C-16 -54 -10 -60 -4 -60 M-11 -54 L-14 -60" stroke="#6b4f35" stroke-width="1.6" fill="none"/></g>
+<text x="64" y="97" font-size="15" font-weight="bold" fill="#6b5b4b">Deer (scale 0 to 60 kg)</text>
+<text x="14" y="130" font-size="16" font-weight="bold" fill="#2f3a2b">Deer, average</text>
+<rect x="14" y="138" width="254.8" height="20" rx="3" fill="#8a9a6b"/>
+<text x="274.8" y="153" font-size="15" font-weight="bold" fill="#2f3a2b">49 kg</text>
+<rect x="14" y="162" width="124.8" height="20" rx="3" fill="#e8590c"/>
+<text x="144.8" y="177" font-size="15" font-weight="bold" fill="#c2410c">24 kg</text>
+<text x="14" y="208" font-size="16" font-weight="bold" fill="#2f3a2b">Buck, average</text>
+<rect x="14" y="216" width="306.8" height="20" rx="3" fill="#8a9a6b"/>
+<text x="326.8" y="231" font-size="15" font-weight="bold" fill="#2f3a2b">59 kg</text>
+<rect x="14" y="240" width="145.6" height="20" rx="3" fill="#e8590c"/>
+<text x="165.6" y="255" font-size="15" font-weight="bold" fill="#c2410c">28 kg</text>
+<rect x="8" y="270" width="384" height="30" rx="6" fill="#f4eedf"/>
+<g transform="translate(34 298) scale(0.42)" fill="#5a3e26"><g transform="translate(0 -10)"><path d="M-14 -40 C-6 -46 10 -46 20 -40 C26 -36 28 -30 28 -24 L26 -14 L-16 -14 C-20 -20 -20 -32 -14 -40z"/><path d="M-12 -38 L-24 -34 L-34 -28 L-36 -22 L-30 -20 L-22 -24 L-14 -26z"/><path d="M-24 -26 C-24 -20 -22 -16 -20 -14 L-17 -22z"/><path d="M-16 -40 C-22 -48 -30 -48 -34 -44 L-30 -50 L-26 -46 L-24 -52 L-20 -46 L-17 -50 z"/><path d="M-14 -41 C-8 -50 0 -52 4 -48 L2 -54 L-2 -50 L-4 -56 L-8 -50 L-11 -54 z"/></g><path d="M-13 -26 L-14 0 M-7 -26 L-8 0 M18 -26 L19 0 M23 -26 L25 0" stroke="#5a3e26" stroke-width="3.6" stroke-linecap="round"/></g>
+<text x="64" y="291" font-size="15" font-weight="bold" fill="#6b5b4b">Bull moose (scale 0 to 450 kg)</text>
+<text x="14" y="324" font-size="16" font-weight="bold" fill="#2f3a2b">Large bull</text>
+<rect x="14" y="332" width="296.7" height="20" rx="3" fill="#8a9a6b"/>
+<text x="316.7" y="347" font-size="15" font-weight="bold" fill="#2f3a2b">430 kg</text>
+<rect x="14" y="356" width="155.2" height="20" rx="3" fill="#e8590c"/>
+<text x="175.2" y="371" font-size="15" font-weight="bold" fill="#c2410c">225 kg (65%)</text>
+<rect x="8" y="386" width="384" height="34" rx="8" fill="#2f3a2b"/>
+<text x="200" y="409" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Deer: about 48% of field dressed weight</text>
 </svg>

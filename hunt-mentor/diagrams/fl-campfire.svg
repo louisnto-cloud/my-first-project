@@ -1,13 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Category 1 campfire rules: no larger than 0.5 m high by 0.5 m wide, at least 8 litres of water or a hand tool on hand, a fuel break around it, never unattended, fully out before you leave. Check for bans first.">
-  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Campfire rules (Category 1)</text>
-<rect x="10" y="214" width="210" height="10" rx="2" fill="#c9b79c"/>
-<circle cx="130" cy="190" r="62" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6"/>
-<path d="M130 214 q-28.8 -28.8 0 -64.0 q28.8 35.2 0 64.0 z" fill="#e8590c" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M130 214 q-12.8 -16.0 0 -32.0 q12.8 16.0 0 32.0 z" fill="#f6c343" stroke="#f6c343" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="36" y1="150" x2="36" y2="214" stroke="#2f3a2b" stroke-width="2" stroke-linecap="round"/><text x="36" y="140" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">0.5 m</text>
-<text x="130" y="286" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Fuel break all round</text>
-<rect x="232" y="60" width="158" height="44" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><text x="311" y="79" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">No bigger than</text><text x="311" y="97" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">0.5 m high, 0.5 m wide</text>
-<rect x="232" y="110" width="158" height="44" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><text x="311" y="129" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">8 L water or</text><text x="311" y="147" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">a hand tool, always</text>
-<rect x="232" y="160" width="158" height="44" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><text x="311" y="179" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Never leave it</text><text x="311" y="197" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">alone, not a minute</text>
-<rect x="232" y="210" width="158" height="44" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><text x="311" y="229" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Out cold</text><text x="311" y="247" font-family="sans-serif" font-size="13" fill="#23261f" text-anchor="middle">before you leave</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 370" font-family="sans-serif" role="img" aria-label="Category 1 campfire rules. A small fire in a rock ring: no bigger than 0.5 m high and 0.5 m wide. Keep 8 litres of water or a hand tool beside it, always. Keep a fuel break of bare ground all round it. Never leave it alone, not for a minute. Put it out cold before you leave. Check for bans first.">
+<rect width="400" height="370" fill="#fffaf0"/>
+<text x="200" y="27" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Campfire rules (Category 1)</text>
+<rect x="10" y="40" width="380" height="218" rx="10" fill="#e3e8d6" stroke="#c9d1b5"/>
+<path d="M10 140 H390 V248 a10 10 0 0 1 -10 10 H20 a10 10 0 0 1 -10 -10z" fill="#b9c79a"/>
+<path d="M246 155 l-2 -6 M246 155 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M21 235 l-2 -6 M21 235 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M382 197 l-2 -6 M382 197 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M251 164 l-2 -6 M251 164 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M263 155 l-2 -6 M263 155 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M127 151 l-2 -6 M127 151 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M161 231 l-2 -6 M161 231 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M180 245 l-2 -6 M180 245 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M66 171 l-2 -6 M66 171 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M263 165 l-2 -6 M263 165 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M121 155 l-2 -6 M121 155 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M49 231 l-2 -6 M49 231 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M242 153 l-2 -6 M242 153 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M237 151 l-2 -6 M237 151 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M241 164 l-2 -6 M241 164 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<ellipse cx="160" cy="192" rx="106" ry="32" fill="#cdb894" stroke="#e8590c" stroke-width="2.6" stroke-dasharray="7 5"/>
+<ellipse cx="114.0" cy="192.0" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/><ellipse cx="115.0" cy="189.5" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/><ellipse cx="118.0" cy="187.1" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/><ellipse cx="122.8" cy="184.9" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/><ellipse cx="129.2" cy="183.1" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/><ellipse cx="137.0" cy="181.6" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/><ellipse cx="145.8" cy="180.6" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/><ellipse cx="155.2" cy="180.1" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/><ellipse cx="164.8" cy="180.1" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/><ellipse cx="174.2" cy="180.6" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/><ellipse cx="183.0" cy="181.6" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/><ellipse cx="190.8" cy="183.1" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/><ellipse cx="197.2" cy="184.9" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/><ellipse cx="202.0" cy="187.1" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/><ellipse cx="205.0" cy="189.5" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/><ellipse cx="206.0" cy="192.0" rx="8" ry="5.5" fill="#8d8a80" stroke="#6b675e"/>
+<path d="M128 196 L192 180" stroke="#6b4f35" stroke-width="8" stroke-linecap="round"/><path d="M130 180 L194 196" stroke="#7d5c3c" stroke-width="8" stroke-linecap="round"/>
+<path d="M128 188 Q124 154 140 142 Q138 162 148 162 Q142 134 160 122 Q166 148 174 156 Q178 138 188 136 Q198 164 192 188z" fill="#e8590c"/>
+<path d="M140 188 Q138 166 150 158 Q152 170 158 168 Q156 148 162 140 Q164 162 178 162 Q184 174 180 188z" fill="#f7b32b"/>
+<path d="M148 188 Q148 172 160 164 Q170 174 170 188z" fill="#fde68a"/>
+<ellipse cx="206.0" cy="192.0" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/><ellipse cx="205.0" cy="194.5" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/><ellipse cx="202.0" cy="196.9" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/><ellipse cx="197.2" cy="199.1" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/><ellipse cx="190.8" cy="200.9" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/><ellipse cx="183.0" cy="202.4" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/><ellipse cx="174.2" cy="203.4" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/><ellipse cx="164.8" cy="203.9" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/><ellipse cx="155.2" cy="203.9" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/><ellipse cx="145.8" cy="203.4" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/><ellipse cx="137.0" cy="202.4" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/><ellipse cx="129.2" cy="200.9" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/><ellipse cx="122.8" cy="199.1" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/><ellipse cx="118.0" cy="196.9" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/><ellipse cx="115.0" cy="194.5" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/><ellipse cx="114.0" cy="192.0" rx="8.5" ry="6" fill="#a19d93" stroke="#6b675e"/>
+<line x1="112" y1="122" x2="112" y2="188" stroke="#2f3a2b" stroke-width="2"/><line x1="106" y1="122" x2="118" y2="122" stroke="#2f3a2b" stroke-width="2"/><line x1="106" y1="188" x2="118" y2="188" stroke="#2f3a2b" stroke-width="2"/>
+<text x="102" y="140" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">0.5 m</text>
+<text x="102" y="159" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">high</text>
+<line x1="128" y1="112" x2="192" y2="112" stroke="#2f3a2b" stroke-width="2"/><line x1="128" y1="106" x2="128" y2="118" stroke="#2f3a2b" stroke-width="2"/><line x1="192" y1="106" x2="192" y2="118" stroke="#2f3a2b" stroke-width="2"/>
+<text x="160" y="104" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">0.5 m wide</text>
+<rect x="18.0" y="50.0" width="121.9" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="78.928" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">No bigger than</text>
+<g transform="translate(300 206)"><rect x="-18" y="-42" width="36" height="42" rx="5" fill="#4a7fb0"/><rect x="-7" y="-50" width="14" height="9" rx="2" fill="#2c5d86"/><path d="M-11 -42 v-6 h22 v6" fill="none" stroke="#2c5d86" stroke-width="3"/><text x="0" y="-15" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">8 L</text></g>
+<g transform="translate(350 212) rotate(-10)"><rect x="-2.5" y="-84" width="5" height="64" fill="#8b5a2b"/><rect x="-9" y="-90" width="18" height="7" rx="3" fill="#6b4f35"/><path d="M-12 -22 H12 L10 2 Q0 10 -10 2z" fill="#6b675e"/></g>
+<rect x="220.1" y="50.0" width="159.7" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="300" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">8 L water or</text>
+<text x="300" y="87" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">a hand tool, always</text>
+<line x1="234" y1="215" x2="231.37699999999995" y2="224" stroke="#e8590c" stroke-width="1.8"/>
+<rect x="221.4" y="224.0" width="162.6" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="302.688" y="243" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Fuel break all round</text>
+<rect x="10" y="270" width="380" height="44" rx="10" fill="#2f3a2b"/><g transform="translate(32 292)"><path d="M-16 0 Q0 -14 16 0 Q0 14 -16 0z" fill="#fffaf0"/><circle r="6" fill="#e8590c"/><circle r="2.8" fill="#2f3a2b"/></g><text x="54" y="298" font-size="17" font-weight="bold" fill="#fffaf0">Never leave it alone, not a minute</text>
+<rect x="10" y="318" width="380" height="44" rx="10" fill="#2f3a2b"/><g transform="translate(32 340)"><path d="M0 -15 Q10 -2 10 4 A10 10 0 0 1 -10 4 Q-10 -2 0 -15z" fill="#6ea0cf"/><path d="M-3 1 q1.5 5 6 5" stroke="#fffaf0" stroke-width="2" fill="none"/></g><text x="54" y="346" font-size="17" font-weight="bold" fill="#fffaf0">Out cold before you leave</text>
 </svg>

@@ -1,40 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 362" font-family="sans-serif" role="img" aria-label="Field dressing kit, eight items: a sharp 8 to 10 cm fixed blade knife, a small sharpener, a bone saw for the skull plate and ribs, cloth game bags (4 for a deer, 8 for a moose), nitrile gloves, 10 m of rope and zip ties, a headlamp with spare batteries, and a tarp.">
-<rect width="400" height="362" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 370" font-family="sans-serif" role="img" aria-label="Field dressing kit, eight items: a sharp 8 to 10 cm fixed blade knife, a small sharpener, a bone saw for the skull plate and ribs, cloth game bags (4 for a deer, 8 for a moose), nitrile gloves, 10 m of rope and zip ties, a headlamp with spare batteries, and a tarp.">
+<rect width="400" height="370" fill="#fffaf0"/>
 <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Field dressing kit</text>
-<rect x="8" y="40" width="190" height="74" rx="8" fill="#f4eedf"/>
-<g transform="translate(52 77)"><path d="M-6 -6 H18 C26 -6 31 -3 33 1 C26 4 14 5 -6 5z" fill="#d5d9dd" stroke="#2f3a2b" stroke-width="1.6"/><path d="M-6 0 H26" stroke="#9aa1a8" stroke-width="1"/><rect x="-10" y="-9" width="4" height="17" rx="1.5" fill="#2f3a2b"/><path d="M-10 -6 H-30 C-34 -6 -35 -2 -34 1 C-33 4 -32 5 -28 5 H-10z" fill="#6b4f35" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="-24" cy="-0.5" r="1.6" fill="#ecdfc3"/><circle cx="-16" cy="-0.5" r="1.6" fill="#ecdfc3"/></g>
-<text x="94" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">Sharp knife</text>
-<text x="94" y="92" font-size="15" fill="#2f3a2b">8 to 10 cm</text>
-<rect x="202" y="40" width="190" height="74" rx="8" fill="#f4eedf"/>
-<g transform="translate(246 77)"><rect x="-12" y="-4" width="46" height="8" rx="4" fill="#8f969c" stroke="#2f3a2b" stroke-width="1.4"/><path d="M-6 -4 V4 M2 -4 V4 M10 -4 V4 M18 -4 V4 M26 -4 V4" stroke="#6c7378" stroke-width="1"/><rect x="-16" y="-7" width="4" height="14" rx="1.5" fill="#2f3a2b"/><rect x="-34" y="-5" width="18" height="10" rx="4" fill="#2f3a2b"/></g>
-<text x="288" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">Sharpener</text>
-<text x="288" y="92" font-size="15" fill="#2f3a2b">keep it sharp</text>
-<rect x="8" y="120" width="190" height="74" rx="8" fill="#f4eedf"/>
-<g transform="translate(52 157)"><path d="M-20 -6 H30 C33 -4 33 2 30 4 L28 4 L-17.5 8 L-15 4 L-12.5 8 L-10 4 L-7.5 8 L-5 4 L-2.5 8 L0 4 L2.5 8 L5 4 L7.5 8 L10 4 L12.5 8 L15 4 L17.5 8 L20 4 L22.5 8 L25 4 L27.5 8 L30 4  L-20 4z" fill="#c9ced3" stroke="#2f3a2b" stroke-width="1.4" stroke-linejoin="round"/><path d="M-36 -8 H-18 V6 H-36 C-40 6 -40 -8 -36 -8z" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="-24" cy="-1" r="2" fill="#2f3a2b"/></g>
-<text x="94" y="152" font-size="16" font-weight="bold" fill="#2f3a2b">Bone saw</text>
-<text x="94" y="172" font-size="15" fill="#2f3a2b">skull plate,</text>
-<text x="94" y="189" font-size="15" fill="#2f3a2b">ribs</text>
-<rect x="202" y="120" width="190" height="74" rx="8" fill="#f4eedf"/>
-<g transform="translate(246 157)"><path d="M-16 -16 C-14 -18 14 -18 16 -16 L18 18 C10 22 -10 22 -18 18z" fill="#f4efe2" stroke="#2f3a2b" stroke-width="1.6"/><path d="M-15 -11 C-5 -8 5 -8 15 -11" stroke="#8b5a2b" stroke-width="2" fill="none"/><path d="M4 -9 C6 -2 9 0 12 -2" stroke="#8b5a2b" stroke-width="2" fill="none"/><path d="M-10 0 L-8 14 M0 0 V16 M10 0 L9 14" stroke="#d9cfb8" stroke-width="1.2"/></g>
-<text x="288" y="152" font-size="16" font-weight="bold" fill="#2f3a2b">Game bags</text>
-<text x="288" y="172" font-size="15" fill="#2f3a2b">4 deer, 8</text>
-<text x="288" y="189" font-size="15" fill="#2f3a2b">moose</text>
-<rect x="8" y="200" width="190" height="74" rx="8" fill="#f4eedf"/>
-<g transform="translate(52 237)"><path d="M-12 20 V2 L-18 -6 C-20 -9 -16 -12 -13 -9 L-9 -4 V-18 C-9 -22 -4 -22 -4 -18 V-6 V-22 C-4 -26 1 -26 1 -22 V-6 V-20 C1 -24 6 -24 6 -20 V-5 V-15 C6 -19 11 -19 11 -15 V6 C11 14 8 20 6 20z" fill="#5b8fd0" stroke="#2c5d86" stroke-width="1.6" stroke-linejoin="round"/><path d="M-12 14 H6" stroke="#2c5d86" stroke-width="1.4"/></g>
-<text x="94" y="232" font-size="16" font-weight="bold" fill="#2f3a2b">Gloves</text>
-<text x="94" y="252" font-size="15" fill="#2f3a2b">nitrile</text>
-<rect x="202" y="200" width="190" height="74" rx="8" fill="#f4eedf"/>
-<g transform="translate(246 237)"><ellipse cx="-4" cy="0" rx="22" ry="15" fill="none" stroke="#a0784a" stroke-width="5"/><ellipse cx="-4" cy="0" rx="13" ry="8" fill="none" stroke="#8b5a2b" stroke-width="5"/><path d="M14 9 C20 14 26 14 30 18" stroke="#a0784a" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M24 -16 C34 -16 36 -6 30 -2 C26 1 22 -2 24 -6" stroke="#2f3a2b" stroke-width="2.2" fill="none"/><rect x="22" y="-9" width="5" height="5" fill="#2f3a2b"/></g>
-<text x="288" y="232" font-size="16" font-weight="bold" fill="#2f3a2b">Rope 10 m</text>
-<text x="288" y="252" font-size="15" fill="#2f3a2b">and zip ties</text>
-<rect x="8" y="280" width="190" height="74" rx="8" fill="#f4eedf"/>
-<g transform="translate(52 317)"><path d="M-28 -2 C-28 -16 28 -16 28 -2" stroke="#2f3a2b" stroke-width="4.5" fill="none"/><path d="M-28 -2 C-28 10 28 10 28 -2" stroke="#4d5a49" stroke-width="4.5" fill="none"/><rect x="-11" y="2" width="22" height="16" rx="4" fill="#2f3a2b"/><circle cx="0" cy="10" r="5.5" fill="#f5d77a" stroke="#c9a23a" stroke-width="1"/><path d="M7 16 L22 26 M2 18 L8 30" stroke="#f5d77a" stroke-width="2.4" stroke-linecap="round"/></g>
-<text x="94" y="312" font-size="16" font-weight="bold" fill="#2f3a2b">Headlamp</text>
-<text x="94" y="332" font-size="15" fill="#2f3a2b">spare</text>
-<text x="94" y="349" font-size="15" fill="#2f3a2b">batteries</text>
-<rect x="202" y="280" width="190" height="74" rx="8" fill="#f4eedf"/>
-<g transform="translate(246 317)"><path d="M-30 -14 L22 -18 L30 14 L-26 18z" fill="#4f7a64" stroke="#2f3a2b" stroke-width="1.6" stroke-linejoin="round"/><path d="M22 -18 L30 14 L12 4z" fill="#6f9a82" stroke="#2f3a2b" stroke-width="1.2" stroke-linejoin="round"/><circle cx="-25" cy="-10" r="2.2" fill="#d9d2bf"/><circle cx="-22" cy="13" r="2.2" fill="#d9d2bf"/><circle cx="-2" cy="-15" r="2.2" fill="#d9d2bf"/></g>
-<text x="288" y="312" font-size="16" font-weight="bold" fill="#2f3a2b">Tarp</text>
-<text x="288" y="332" font-size="15" fill="#2f3a2b">clean work</text>
-<text x="288" y="349" font-size="15" fill="#2f3a2b">mat</text>
+<rect x="8" y="40" width="190" height="76" rx="8" fill="#f4eedf"/>
+<g transform="translate(45 78) scale(0.84)"><path d="M-6 -6 H18 C26 -6 31 -3 33 1 C26 4 14 5 -6 5z" fill="#d5d9dd" stroke="#2f3a2b" stroke-width="1.6"/><path d="M-6 0 H26" stroke="#9aa1a8" stroke-width="1"/><rect x="-10" y="-9" width="4" height="17" rx="1.5" fill="#2f3a2b"/><path d="M-10 -6 H-30 C-34 -6 -35 -2 -34 1 C-33 4 -32 5 -28 5 H-10z" fill="#6b4f35" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="-24" cy="-0.5" r="1.6" fill="#ecdfc3"/><circle cx="-16" cy="-0.5" r="1.6" fill="#ecdfc3"/></g>
+<text x="82" y="74" font-size="16" font-weight="bold" fill="#2f3a2b">Sharp knife</text>
+<text x="82" y="94" font-size="15" fill="#2f3a2b">8 to 10 cm</text>
+<rect x="202" y="40" width="190" height="76" rx="8" fill="#f4eedf"/>
+<g transform="translate(239 78) scale(0.84)"><rect x="-12" y="-4" width="46" height="8" rx="4" fill="#8f969c" stroke="#2f3a2b" stroke-width="1.4"/><path d="M-6 -4 V4 M2 -4 V4 M10 -4 V4 M18 -4 V4 M26 -4 V4" stroke="#6c7378" stroke-width="1"/><rect x="-16" y="-7" width="4" height="14" rx="1.5" fill="#2f3a2b"/><rect x="-34" y="-5" width="18" height="10" rx="4" fill="#2f3a2b"/></g>
+<text x="276" y="74" font-size="16" font-weight="bold" fill="#2f3a2b">Sharpener</text>
+<text x="276" y="94" font-size="15" fill="#2f3a2b">keep it sharp</text>
+<rect x="8" y="122" width="190" height="76" rx="8" fill="#f4eedf"/>
+<g transform="translate(45 160) scale(0.84)"><path d="M-20 -6 H30 C33 -4 33 2 30 4 L28 4 L-17.5 8 L-15 4 L-12.5 8 L-10 4 L-7.5 8 L-5 4 L-2.5 8 L0 4 L2.5 8 L5 4 L7.5 8 L10 4 L12.5 8 L15 4 L17.5 8 L20 4 L22.5 8 L25 4 L27.5 8 L30 4  L-20 4z" fill="#c9ced3" stroke="#2f3a2b" stroke-width="1.4" stroke-linejoin="round"/><path d="M-36 -8 H-18 V6 H-36 C-40 6 -40 -8 -36 -8z" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="-24" cy="-1" r="2" fill="#2f3a2b"/></g>
+<text x="82" y="156" font-size="16" font-weight="bold" fill="#2f3a2b">Bone saw</text>
+<text x="82" y="176" font-size="15" fill="#2f3a2b">skull plate, ribs</text>
+<rect x="202" y="122" width="190" height="76" rx="8" fill="#f4eedf"/>
+<g transform="translate(239 160) scale(0.84)"><path d="M-16 -16 C-14 -18 14 -18 16 -16 L18 18 C10 22 -10 22 -18 18z" fill="#f4efe2" stroke="#2f3a2b" stroke-width="1.6"/><path d="M-15 -11 C-5 -8 5 -8 15 -11" stroke="#8b5a2b" stroke-width="2" fill="none"/><path d="M4 -9 C6 -2 9 0 12 -2" stroke="#8b5a2b" stroke-width="2" fill="none"/><path d="M-10 0 L-8 14 M0 0 V16 M10 0 L9 14" stroke="#d9cfb8" stroke-width="1.2"/></g>
+<text x="276" y="156" font-size="16" font-weight="bold" fill="#2f3a2b">Game bags</text>
+<text x="276" y="176" font-size="15" fill="#2f3a2b">4 deer, 8 moose</text>
+<rect x="8" y="204" width="190" height="76" rx="8" fill="#f4eedf"/>
+<g transform="translate(45 242) scale(0.84)"><path d="M-12 20 V2 L-18 -6 C-20 -9 -16 -12 -13 -9 L-9 -4 V-18 C-9 -22 -4 -22 -4 -18 V-6 V-22 C-4 -26 1 -26 1 -22 V-6 V-20 C1 -24 6 -24 6 -20 V-5 V-15 C6 -19 11 -19 11 -15 V6 C11 14 8 20 6 20z" fill="#5b8fd0" stroke="#2c5d86" stroke-width="1.6" stroke-linejoin="round"/><path d="M-12 14 H6" stroke="#2c5d86" stroke-width="1.4"/></g>
+<text x="82" y="238" font-size="16" font-weight="bold" fill="#2f3a2b">Gloves</text>
+<text x="82" y="258" font-size="15" fill="#2f3a2b">nitrile</text>
+<rect x="202" y="204" width="190" height="76" rx="8" fill="#f4eedf"/>
+<g transform="translate(239 242) scale(0.84)"><ellipse cx="-4" cy="0" rx="22" ry="15" fill="none" stroke="#a0784a" stroke-width="5"/><ellipse cx="-4" cy="0" rx="13" ry="8" fill="none" stroke="#8b5a2b" stroke-width="5"/><path d="M14 9 C20 14 26 14 30 18" stroke="#a0784a" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M24 -16 C34 -16 36 -6 30 -2 C26 1 22 -2 24 -6" stroke="#2f3a2b" stroke-width="2.2" fill="none"/><rect x="22" y="-9" width="5" height="5" fill="#2f3a2b"/></g>
+<text x="276" y="238" font-size="16" font-weight="bold" fill="#2f3a2b">Rope 10 m</text>
+<text x="276" y="258" font-size="15" fill="#2f3a2b">and zip ties</text>
+<rect x="8" y="286" width="190" height="76" rx="8" fill="#f4eedf"/>
+<g transform="translate(45 324) scale(0.84)"><path d="M-28 -2 C-28 -16 28 -16 28 -2" stroke="#2f3a2b" stroke-width="4.5" fill="none"/><path d="M-28 -2 C-28 10 28 10 28 -2" stroke="#4d5a49" stroke-width="4.5" fill="none"/><rect x="-11" y="2" width="22" height="16" rx="4" fill="#2f3a2b"/><circle cx="0" cy="10" r="5.5" fill="#f5d77a" stroke="#c9a23a" stroke-width="1"/><path d="M7 16 L22 26 M2 18 L8 30" stroke="#f5d77a" stroke-width="2.4" stroke-linecap="round"/></g>
+<text x="82" y="320" font-size="16" font-weight="bold" fill="#2f3a2b">Headlamp</text>
+<text x="82" y="340" font-size="15" fill="#2f3a2b">spare batteries</text>
+<rect x="202" y="286" width="190" height="76" rx="8" fill="#f4eedf"/>
+<g transform="translate(239 324) scale(0.84)"><path d="M-30 -14 L22 -18 L30 14 L-26 18z" fill="#4f7a64" stroke="#2f3a2b" stroke-width="1.6" stroke-linejoin="round"/><path d="M22 -18 L30 14 L12 4z" fill="#6f9a82" stroke="#2f3a2b" stroke-width="1.2" stroke-linejoin="round"/><circle cx="-25" cy="-10" r="2.2" fill="#d9d2bf"/><circle cx="-22" cy="13" r="2.2" fill="#d9d2bf"/><circle cx="-2" cy="-15" r="2.2" fill="#d9d2bf"/></g>
+<text x="276" y="320" font-size="16" font-weight="bold" fill="#2f3a2b">Tarp</text>
+<text x="276" y="340" font-size="15" fill="#2f3a2b">clean work mat</text>
 </svg>

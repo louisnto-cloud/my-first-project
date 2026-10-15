@@ -1,19 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 198" role="img" aria-label="Hunting with a dog. On a leash for deer, elk, moose, mountain sheep, mountain goat and caribou. Off leash is fine for small game and game birds, lynx, bobcat, black bear and cougar. Training on game birds under supervision runs 1 August to 30 April." font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="198" fill="#fffaf0"/>
-<text x="200.0" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Hunting with a dog</text>
-<text x="200.0" y="48" font-size="14" fill="#2f3a2b" text-anchor="middle">Training on game birds: 1 August to 30 April.</text>
-<rect x="6" y="58" width="191" height="130" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<rect x="6" y="58" width="191" height="30" rx="10" fill="#e8590c"/><rect x="6" y="76" width="191" height="12" fill="#e8590c"/>
-<text x="101.5" y="79" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">On a leash</text>
-<text x="101.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">Deer, elk, moose,</text>
-<text x="101.5" y="128" font-size="14" fill="#23261f" text-anchor="middle">mountain sheep,</text>
-<text x="101.5" y="146" font-size="14" fill="#23261f" text-anchor="middle">mountain goat,</text>
-<text x="101.5" y="164" font-size="14" fill="#23261f" text-anchor="middle">caribou</text>
-<rect x="203" y="58" width="191" height="130" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
-<rect x="203" y="58" width="191" height="30" rx="10" fill="#5c7a3a"/><rect x="203" y="76" width="191" height="12" fill="#5c7a3a"/>
-<text x="298.5" y="79" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Off leash OK</text>
-<text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">Small game, birds,</text>
-<text x="298.5" y="128" font-size="14" fill="#23261f" text-anchor="middle">lynx, bobcat,</text>
-<text x="298.5" y="146" font-size="14" fill="#23261f" text-anchor="middle">black bear,</text>
-<text x="298.5" y="164" font-size="14" fill="#23261f" text-anchor="middle">cougar</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" font-family="sans-serif" role="img" aria-label="Hunting with a dog. Left, a dog walking on a leash: on a leash for deer, elk, moose, mountain sheep, mountain goat and caribou. Right, a dog running free after a flushed grouse: off leash is fine for small game and game birds, lynx, bobcat, black bear and cougar. Training on game birds under supervision runs 1 August to 30 April.">
+<rect width="400" height="340" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hunting with a dog</text>
+<text x="200" y="50" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Training on game birds: 1 August to 30 April.</text>
+<rect x="8" y="64" width="188" height="268" rx="10" fill="#ffffff" stroke="#c2410c" stroke-width="2"/>
+<path d="M8 100 V74 a10 10 0 0 1 10 -10 H186 a10 10 0 0 1 10 10 V100z" fill="#c2410c"/>
+<text x="102" y="88" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">On a leash</text>
+<rect x="204" y="64" width="188" height="268" rx="10" fill="#ffffff" stroke="#4f6b2e" stroke-width="2"/>
+<path d="M204 100 V74 a10 10 0 0 1 10 -10 H382 a10 10 0 0 1 10 10 V100z" fill="#4f6b2e"/>
+<text x="298" y="88" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Off leash OK</text>
+<line x1="18" y1="214" x2="186" y2="214" stroke="#b9ad90" stroke-width="2"/><line x1="214" y1="214" x2="382" y2="214" stroke="#b9ad90" stroke-width="2"/>
+<g transform="translate(104 214) scale(1.08 1.08)"><path d="M-24 -30 L-25 -12 L-26 0" stroke="#8a6334" stroke-width="8.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 0)"/><path d="M-16 -30 L-16 -12 L-17 0" stroke="#8a6334" stroke-width="8.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 0)"/><path d="M20 -32 L24 -16 L20 0" stroke="#8a6334" stroke-width="8.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 0)"/><path d="M28 -32 L32 -16 L29 0" stroke="#8a6334" stroke-width="8.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 0)"/><g transform="translate(0 0)"><path d="M34 -40 C44 -42 52 -48 56 -56" stroke="#c99a55" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M-33 -38 C-35 -50 -22 -54 -4 -51 C14 -48 30 -48 38 -42 C44 -36 40 -26 30 -25 C14 -23 -4 -23 -18 -25 C-28 -27 -33 -31 -33 -38z" fill="#c99a55" stroke="#8a6334" stroke-width="1.2"/><path d="M-33 -40 C-37 -48 -38 -54 -38 -60 L-21 -63 C-19 -56 -14 -51 -8 -50z" fill="#c99a55"/><path d="M-26 -62 C-20 -66 -14 -60 -16 -54 C-20 -50 -26 -52 -28 -56z" fill="#c99a55"/><path d="M-24 -66 C-34 -70 -44 -66 -50 -60 C-54 -56 -54 -52 -50 -51 C-44 -50 -36 -52 -30 -52 C-26 -54 -22 -58 -24 -66z" fill="#c99a55" stroke="#8a6334" stroke-width="1.2"/><path d="M-26 -64 C-20 -62 -18 -54 -20 -48 C-24 -48 -26 -54 -28 -58z" fill="#8a6334"/><ellipse cx="-52" cy="-56" rx="3" ry="2.4" fill="#1f160e"/><circle cx="-38" cy="-62" r="1.9" fill="#1f160e"/><path d="M-33 -45 C-30 -48 -24 -50 -19 -48" stroke="#c0392b" stroke-width="3.4" fill="none" stroke-linecap="round"/></g></g>
+<path d="M76 163 C80 148 88 134 96 126" fill="none" stroke="#2f3a2b" stroke-width="2.4"/>
+<path d="M92 118 C96 112 108 116 108 124 C108 130 98 134 94 130z" fill="#e2b48a" stroke="#8a5a3a" stroke-width="1.2"/>
+<path d="M8 122 L26 126 M8 132 L26 132" stroke="#4f6b2e" stroke-width="7" stroke-linecap="butt" opacity=".0"/>
+<g transform="translate(304 210) scale(1.0 1.0)"><path d="M-22 -30 L-46 -14 L-50 -12" stroke="#8a6334" stroke-width="8.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 -6)"/><path d="M-14 -30 L-34 -10 L-38 -8" stroke="#8a6334" stroke-width="8.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 -6)"/><path d="M22 -30 L44 -14 L50 -10" stroke="#8a6334" stroke-width="8.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 -6)"/><path d="M28 -32 L52 -22 L58 -22" stroke="#8a6334" stroke-width="8.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 -6)"/><g transform="translate(0 -6)"><path d="M34 -40 C44 -42 52 -48 56 -56" stroke="#c99a55" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M-33 -38 C-35 -50 -22 -54 -4 -51 C14 -48 30 -48 38 -42 C44 -36 40 -26 30 -25 C14 -23 -4 -23 -18 -25 C-28 -27 -33 -31 -33 -38z" fill="#c99a55" stroke="#8a6334" stroke-width="1.2"/><path d="M-33 -40 C-37 -48 -38 -54 -38 -60 L-21 -63 C-19 -56 -14 -51 -8 -50z" fill="#c99a55"/><path d="M-26 -62 C-20 -66 -14 -60 -16 -54 C-20 -50 -26 -52 -28 -56z" fill="#c99a55"/><path d="M-24 -66 C-34 -70 -44 -66 -50 -60 C-54 -56 -54 -52 -50 -51 C-44 -50 -36 -52 -30 -52 C-26 -54 -22 -58 -24 -66z" fill="#c99a55" stroke="#8a6334" stroke-width="1.2"/><path d="M-26 -64 C-20 -62 -18 -54 -20 -48 C-24 -48 -26 -54 -28 -58z" fill="#8a6334"/><ellipse cx="-52" cy="-56" rx="3" ry="2.4" fill="#1f160e"/><circle cx="-38" cy="-62" r="1.9" fill="#1f160e"/><path d="M-33 -45 C-30 -48 -24 -50 -19 -48" stroke="#c0392b" stroke-width="3.4" fill="none" stroke-linecap="round"/></g></g>
+<g transform="translate(236 130) scale(0.9)"><path d="M-10 0 C-14 -10 -6 -16 4 -14 C12 -12 14 -4 10 2 C6 6 -6 6 -10 0z" fill="#a07a52"/><path d="M-2 -8 C-12 -22 -24 -22 -28 -16 C-18 -16 -10 -10 -6 -4z M2 -10 C8 -24 20 -26 24 -20 C14 -18 8 -12 6 -6z" fill="#7d5a38"/><circle cx="-12" cy="-2" r="4.4" fill="#a07a52"/><path d="M-16 -2 l-4 1 l4 1z" fill="#3a2f22"/><path d="M10 0 L20 4 L18 -4z" fill="#8a6440"/></g>
+<text x="102" y="244" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Deer, elk, moose,</text>
+<text x="102" y="265" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">mountain sheep,</text>
+<text x="102" y="286" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">mountain goat,</text>
+<text x="102" y="307" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">caribou</text>
+<text x="298" y="244" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Small game, birds,</text>
+<text x="298" y="265" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">lynx, bobcat, black</text>
+<text x="298" y="286" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">bear, cougar</text>
 </svg>

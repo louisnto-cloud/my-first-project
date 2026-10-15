@@ -1,4 +1,94 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation. A lone black bear feeds in the open while a timer counts minutes 0 to 5. At about minute 4 a small cub walks out of the bushes behind it. An orange ring marks the cub. The sow is closed to hunting because the cub, under 2 years old, is in her company. Grandpa&#x27;s rule: watch every bear for five minutes; cubs show up in the fourth.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<rect x="0" y="0" width="400" height="300" fill="#dfe6d3" opacity=".6"/><g transform="translate(190 190) scale(1.1 1.1)"><rect x="-38" y="8" width="11" height="28" rx="5.5" fill="#1d1d1b" stroke="#23261f" stroke-width="1.5"/><rect x="-26" y="8" width="11" height="28" rx="5.5" fill="#1d1d1b" stroke="#23261f" stroke-width="1.5"/><rect x="24" y="8" width="11" height="28" rx="5.5" fill="#1d1d1b" stroke="#23261f" stroke-width="1.5"/><rect x="34" y="8" width="11" height="28" rx="5.5" fill="#1d1d1b" stroke="#23261f" stroke-width="1.5"/><path d="M-46 6 Q-52 -28 -24 -30 Q0 -26 26 -22 Q46 -18 46 4 Q30 24 -30 22 Q-46 20 -46 6 Z" fill="#1d1d1b" stroke="#23261f" stroke-width="2"/><path d="M40 -20 L62 -16 L78 -8 Q82 -2 76 0 L56 4 Q44 2 40 -20 Z" fill="#1d1d1b" stroke="#23261f" stroke-width="2" stroke-linejoin="round"/><path d="M48 -18 L50 -32 L56 -18 Z" fill="#1d1d1b" stroke="#23261f" stroke-width="2"/><path d="M66 -10 L78 -8 Q82 -2 76 0 L64 -2 Z" fill="#8b6a4a"/><circle cx="60" cy="-12" r="1.8" fill="#eee"/></g><g opacity="0"><set attributeName="opacity" to="1" begin="6.2s"/><g><g transform="translate(0 0) scale(-0.45 0.45)"><rect x="-38" y="8" width="11" height="28" rx="5.5" fill="#1d1d1b" stroke="#23261f" stroke-width="1.5"/><rect x="-26" y="8" width="11" height="28" rx="5.5" fill="#1d1d1b" stroke="#23261f" stroke-width="1.5"/><rect x="24" y="8" width="11" height="28" rx="5.5" fill="#1d1d1b" stroke="#23261f" stroke-width="1.5"/><rect x="34" y="8" width="11" height="28" rx="5.5" fill="#1d1d1b" stroke="#23261f" stroke-width="1.5"/><path d="M-46 6 Q-52 -28 -24 -30 Q0 -26 26 -22 Q46 -18 46 4 Q30 24 -30 22 Q-46 20 -46 6 Z" fill="#1d1d1b" stroke="#23261f" stroke-width="2"/><path d="M40 -20 L62 -16 L78 -8 Q82 -2 76 0 L56 4 Q44 2 40 -20 Z" fill="#1d1d1b" stroke="#23261f" stroke-width="2" stroke-linejoin="round"/><path d="M48 -18 L50 -32 L56 -18 Z" fill="#1d1d1b" stroke="#23261f" stroke-width="2"/><path d="M66 -10 L78 -8 Q82 -2 76 0 L64 -2 Z" fill="#8b6a4a"/><circle cx="60" cy="-12" r="1.8" fill="#eee"/></g><animateTransform attributeName="transform" type="translate" from="360 230" to="300 226" begin="6.2s" dur="1s" fill="freeze"/></g></g><ellipse cx="360" cy="226" rx="38.4" ry="24.0" fill="#8a9a6b"/><ellipse cx="384.0" cy="214.0" rx="24.0" ry="19.2" fill="#8a9a6b"/><ellipse cx="330" cy="240" rx="25.6" ry="16.0" fill="#8a9a6b"/><ellipse cx="346.0" cy="232.0" rx="16.0" ry="12.8" fill="#8a9a6b"/><rect x="8" y="8" width="150" height="54" rx="8" fill="#2f3a2b"/><text x="20" y="30" font-size="14" font-weight="bold" fill="#fff" text-anchor="start">Watching</text><g opacity="1"><set attributeName="opacity" to="1" begin="0.0s"/><set attributeName="opacity" to="0" begin="1.5s"/><text x="20" y="54" font-size="18" font-weight="bold" fill="#e8590c" text-anchor="start">minute 0</text></g><g opacity="0"><set attributeName="opacity" to="1" begin="1.5s"/><set attributeName="opacity" to="0" begin="3.0s"/><text x="20" y="54" font-size="18" font-weight="bold" fill="#e8590c" text-anchor="start">minute 1</text></g><g opacity="0"><set attributeName="opacity" to="1" begin="3.0s"/><set attributeName="opacity" to="0" begin="4.5s"/><text x="20" y="54" font-size="18" font-weight="bold" fill="#e8590c" text-anchor="start">minute 2</text></g><g opacity="0"><set attributeName="opacity" to="1" begin="4.5s"/><set attributeName="opacity" to="0" begin="6.0s"/><text x="20" y="54" font-size="18" font-weight="bold" fill="#e8590c" text-anchor="start">minute 3</text></g><g opacity="0"><set attributeName="opacity" to="1" begin="6.0s"/><set attributeName="opacity" to="0" begin="7.5s"/><text x="20" y="54" font-size="18" font-weight="bold" fill="#e8590c" text-anchor="start">minute 4</text></g><g opacity="0"><set attributeName="opacity" to="1" begin="7.5s"/><text x="20" y="54" font-size="18" font-weight="bold" fill="#e8590c" text-anchor="start">minute 5</text></g><g opacity="0"><set attributeName="opacity" to="1" begin="6.8s"/><circle cx="300" cy="226" r="34" fill="none" stroke="#e8590c" stroke-width="4"/><rect x="170" y="70" width="222" height="58" rx="8" fill="#c92a2a"/><text x="182" y="94" font-size="15" font-weight="bold" fill="#fff" text-anchor="start">A cub! Mother is closed:</text><text x="182" y="116" font-size="15" font-weight="bold" fill="#fff" text-anchor="start">it is in her company.</text></g><text x="10" y="290" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">Grandpa&#x27;s rule: cubs show up in the fourth minute.</text>
+<rect width="400" height="300" fill="#fffaf0"/>
+<rect width="400" height="300" fill="#e4ecf0"/>
+<path d="M0 132 L6 100 L18 117 L30 99 L42 117 L54 101 L66 115 L78 95 L90 112 L102 96 L114 116 L126 98 L138 116 L150 101 L162 117 L174 100 L186 111 L198 95 L210 112 L222 96 L234 116 L246 100 L258 113 L270 96 L282 111 L294 95 L306 117 L318 97 L330 113 L342 98 L354 117 L366 98 L378 117 L390 95 L402 111 L400 140 H0z" fill="#3d5a44"/>
+<rect x="0" y="136" width="400" height="164" fill="#b9c79a"/>
+<path d="M0 136 H400 V150 Q200 142 0 152z" fill="#a8b886"/>
+<path d="M219 198 l-2 -6 M219 198 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M360 235 l-2 -6 M360 235 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M350 272 l-2 -6 M350 272 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M203 213 l-2 -6 M203 213 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M239 216 l-2 -6 M239 216 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M67 199 l-2 -6 M67 199 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M323 164 l-2 -6 M323 164 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M22 242 l-2 -6 M22 242 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M114 230 l-2 -6 M114 230 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M189 204 l-2 -6 M189 204 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M395 184 l-2 -6 M395 184 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M166 185 l-2 -6 M166 185 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M252 195 l-2 -6 M252 195 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M143 258 l-2 -6 M143 258 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M130 233 l-2 -6 M130 233 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M358 172 l-2 -6 M358 172 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M28 189 l-2 -6 M28 189 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M304 240 l-2 -6 M304 240 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M97 202 l-2 -6 M97 202 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M74 220 l-2 -6 M74 220 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M21 251 l-2 -6 M21 251 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M355 286 l-2 -6 M355 286 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M292 287 l-2 -6 M292 287 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M11 197 l-2 -6 M11 197 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M383 262 l-2 -6 M383 262 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M165 284 l-2 -6 M165 284 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M247 268 l-2 -6 M247 268 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M119 184 l-2 -6 M119 184 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M178 176 l-2 -6 M178 176 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M154 287 l-2 -6 M154 287 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M134 159 l-2 -6 M134 159 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M22 181 l-2 -6 M22 181 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M311 207 l-2 -6 M311 207 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M118 171 l-2 -6 M118 171 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M389 215 l-2 -6 M389 215 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M86 166 l-2 -6 M86 166 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M26 181 l-2 -6 M26 181 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M269 178 l-2 -6 M269 178 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M20 224 l-2 -6 M20 224 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M102 292 l-2 -6 M102 292 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M52 229 l-2 -6 M52 229 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M307 213 l-2 -6 M307 213 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M391 222 l-2 -6 M391 222 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M99 213 l-2 -6 M99 213 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M18 214 l-2 -6 M18 214 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M101 277 l-2 -6 M101 277 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M330 225 l-2 -6 M330 225 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M16 192 l-2 -6 M16 192 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M99 186 l-2 -6 M99 186 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M95 275 l-2 -6 M95 275 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M60 165 l-2 -6 M60 165 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M368 234 l-2 -6 M368 234 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M392 212 l-2 -6 M392 212 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M357 246 l-2 -6 M357 246 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M314 258 l-2 -6 M314 258 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M198 170 l-2 -6 M198 170 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M87 275 l-2 -6 M87 275 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M357 282 l-2 -6 M357 282 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M136 246 l-2 -6 M136 246 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M317 244 l-2 -6 M317 244 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M323 229 l-2 -6 M323 229 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M261 250 l-2 -6 M261 250 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M109 282 l-2 -6 M109 282 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M379 168 l-2 -6 M379 168 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M385 287 l-2 -6 M385 287 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M266 164 l-2 -6 M266 164 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M356 175 l-2 -6 M356 175 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M384 247 l-2 -6 M384 247 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M28 180 l-2 -6 M28 180 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<path d="M253 234 l-2 -6 M253 234 l2 -7" stroke="#8fa16c" stroke-width="1.2"/>
+<g transform="translate(176 238) scale(1.0)"><path d="M-30 -30 L-34 0 H-20 L-18 -28z M36 -30 L40 0 H54 L50 -30z" fill="#0c0c0b"/><path d="M-84 -42 Q-83 -47 -76 -48 L-64 -53 Q-60 -60 -55 -62 Q-50 -66 -46 -60 Q-42 -60 -36 -61 Q-10 -66 20 -66 Q50 -68 60 -54 Q66 -42 62 -30 L62 -6 L66 0 H46 L44 -24 Q20 -26 -4 -26 L-10 -26 L-12 -6 L-8 0 H-28 L-30 -24 Q-44 -30 -48 -36 Q-56 -38 -64 -38 L-74 -38 Q-82 -38 -84 -40z" fill="#1d1d1b"/><path d="M-84 -42 Q-83 -47 -76 -48 L-66 -51 Q-64 -43 -68 -38 L-74 -38 Q-82 -38 -84 -40z" fill="#a07a52"/><circle cx="-84" cy="-43" r="2.6" fill="#000"/><circle cx="-62" cy="-52" r="1.7" fill="#ddd"/><path d="M-56 -60 Q-58 -70 -51 -70 Q-46 -69 -47 -60z" fill="#1d1d1b"/></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="6.2s" fill="freeze"/><g><g transform="scale(0.5)"><path d="M-30 -30 L-34 0 H-20 L-18 -28z M36 -30 L40 0 H54 L50 -30z" fill="#0c0c0b"/><path d="M-84 -42 Q-83 -47 -76 -48 L-64 -53 Q-60 -60 -55 -62 Q-50 -66 -46 -60 Q-42 -60 -36 -61 Q-10 -66 20 -66 Q50 -68 60 -54 Q66 -42 62 -30 L62 -6 L66 0 H46 L44 -24 Q20 -26 -4 -26 L-10 -26 L-12 -6 L-8 0 H-28 L-30 -24 Q-44 -30 -48 -36 Q-56 -38 -64 -38 L-74 -38 Q-82 -38 -84 -40z" fill="#1d1d1b"/><path d="M-84 -42 Q-83 -47 -76 -48 L-66 -51 Q-64 -43 -68 -38 L-74 -38 Q-82 -38 -84 -40z" fill="#a07a52"/><circle cx="-84" cy="-43" r="2.6" fill="#000"/><circle cx="-62" cy="-52" r="1.7" fill="#ddd"/><path d="M-56 -60 Q-58 -70 -51 -70 Q-46 -69 -47 -60z" fill="#1d1d1b"/></g><animateTransform attributeName="transform" type="translate" from="352 238" to="300 240" begin="6.2s" dur="1s" fill="freeze"/></g></g>
+<ellipse cx="372" cy="226" rx="40" ry="26" fill="#5f7a45"/>
+<ellipse cx="392" cy="212" rx="26" ry="22" fill="#6d8a4f"/>
+<ellipse cx="340" cy="240" rx="26" ry="16" fill="#6d8a4f"/>
+<ellipse cx="360" cy="244" rx="18" ry="12" fill="#5f7a45"/>
+<rect x="10" y="10" width="148" height="58" rx="8" fill="#2f3a2b"/>
+<text x="22" y="33" font-size="16" font-weight="bold" fill="#fffaf0">Watching</text>
+<g opacity="1"><set attributeName="opacity" to="1" begin="0.0s"/><set attributeName="opacity" to="0" begin="1.5s"/><text x="22" y="59" font-size="20" font-weight="bold" fill="#ff8a4c">minute 0</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.5s"/><set attributeName="opacity" to="0" begin="3.0s"/><text x="22" y="59" font-size="20" font-weight="bold" fill="#ff8a4c">minute 1</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="3.0s"/><set attributeName="opacity" to="0" begin="4.5s"/><text x="22" y="59" font-size="20" font-weight="bold" fill="#ff8a4c">minute 2</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="4.5s"/><set attributeName="opacity" to="0" begin="6.0s"/><text x="22" y="59" font-size="20" font-weight="bold" fill="#ff8a4c">minute 3</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="6.0s"/><set attributeName="opacity" to="0" begin="7.5s"/><text x="22" y="59" font-size="20" font-weight="bold" fill="#ff8a4c">minute 4</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="7.5s"/><text x="22" y="59" font-size="20" font-weight="bold" fill="#ff8a4c">minute 5</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="6.8s" fill="freeze"/><circle cx="300" cy="222" r="34" fill="none" stroke="#e8590c" stroke-width="4"/><rect x="168" y="78" width="224" height="58" rx="8" fill="#c92a2a"/><text x="280" y="102" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A cub! Mother is closed:</text><text x="280" y="124" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">it is in her company.</text></g>
+<rect x="0" y="268" width="400" height="32" fill="#fffaf0" opacity=".92"/>
+<text x="200" y="290" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Grandpa&#x27;s rule: cubs show up in the fourth minute.</text>
 </svg>

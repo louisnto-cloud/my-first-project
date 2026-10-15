@@ -1,25 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" font-family="sans-serif" role="img" aria-label="Flowchart before you launch on the Fraser or Pitt. Check streamflow and flood advisories at the River Forecast Centre. Daylight only, logs run after every rain. Personal flotation device on, not stowed. A 10 foot boat belongs in sloughs, side channels and bays, not the main current. While the motor runs every gun is unloaded. Beached, anchored or tied to a fixed blind, you may shoot ducks.">
-<rect x="0" y="0" width="400" height="500" fill="#fffaf0"/>
-<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Before you launch on the Fraser or Pitt</text>
-<rect x="16" y="42" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
-<text x="28" y="66" font-size="15" fill="#2f3a2b">Check streamflow and advisories: River</text>
-<text x="28" y="85" font-size="15" fill="#2f3a2b">Forecast Centre (99%)</text>
-<line x1="200.0" y1="96" x2="200.0" y2="118" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,116 207.0,116 200.0,126" fill="#2f3a2b"/>
-<rect x="16" y="126" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
-<text x="28" y="150" font-size="15" fill="#2f3a2b">Daylight only. Logs run after every rain</text>
-<text x="28" y="169" font-size="15" fill="#2f3a2b">(Tip)</text>
-<line x1="200.0" y1="180" x2="200.0" y2="202" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,200 207.0,200 200.0,210" fill="#2f3a2b"/>
-<rect x="16" y="210" width="368" height="35" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
-<text x="28" y="234" font-size="15" fill="#2f3a2b">PFD on, not stowed (Tip)</text>
-<line x1="200.0" y1="245" x2="200.0" y2="267" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,265 207.0,265 200.0,275" fill="#2f3a2b"/>
-<rect x="16" y="275" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
-<text x="28" y="299" font-size="15" fill="#2f3a2b">10 ft boat: sloughs, side channels and bays,</text>
-<text x="28" y="318" font-size="15" fill="#2f3a2b">not the main current (Tip)</text>
-<line x1="200.0" y1="329" x2="200.0" y2="351" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,349 207.0,349 200.0,359" fill="#2f3a2b"/>
-<rect x="16" y="359" width="368" height="35" rx="8" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
-<text x="28" y="383" font-size="15" font-weight="bold" fill="#2f3a2b">Motor running: every gun unloaded (95%)</text>
-<line x1="200.0" y1="394" x2="200.0" y2="416" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,414 207.0,414 200.0,424" fill="#2f3a2b"/>
-<rect x="16" y="424" width="368" height="54" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
-<text x="28" y="448" font-size="15" font-weight="bold" fill="#2f3a2b">Beached, anchored or tied to a fixed blind:</text>
-<text x="28" y="467" font-size="15" font-weight="bold" fill="#2f3a2b">you may shoot ducks (95%)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 504" font-family="sans-serif" role="img" aria-label="Checklist before you launch on the Fraser or Pitt. Check first: streamflow and advisories at the River Forecast Centre, 99 percent. Daylight only, logs run after every rain, a tip. PFD (personal flotation device) on, not stowed, a tip. A 10 foot boat belongs in sloughs, side channels and bays, not the main current, a tip. Shooting ducks from the boat: with the motor running every gun is unloaded, 95 percent. Beached, anchored or tied to a fixed blind, you may shoot ducks, 95 percent.">
+<rect width="400" height="504" fill="#fffaf0"/>
+<text x="14" y="26" font-size="18" font-weight="bold" fill="#2f3a2b">Before you launch: Fraser or Pitt</text>
+<rect x="8" y="40" width="384" height="30" rx="6" fill="#2f3a2b"/><text x="18" y="61" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">CHECK FIRST</text>
+<rect x="8" y="76" width="384" height="54" rx="6" fill="#f4eedf"/>
+<circle cx="38" cy="103.0" r="20" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<g transform="translate(38 103.0)"><path d="M-14 6 A14 14 0 0 1 14 6" stroke="#2f3a2b" stroke-width="4" fill="none"/><path d="M0 6 L8 -6" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><circle cy="6" r="3" fill="#2f3a2b"/><path d="M-15 12 C-10 9 -5 15 0 12 C5 9 10 15 15 12" stroke="#2f3a2b" stroke-width="2.4" fill="none"/></g>
+<text x="70" y="98.5" font-size="16" font-weight="bold" fill="#2f3a2b">Streamflow and advisories</text>
+<text x="70" y="117.5" font-size="15" fill="#6b5b4b">River Forecast Centre (99%)</text>
+<circle cx="38" cy="159.0" r="20" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<g transform="translate(38 159.0)"><circle r="7" fill="#2f3a2b"/><path d="M10.0 0.0 L15.0 0.0" stroke="#2f3a2b" stroke-width="2.6" stroke-linecap="round"/><path d="M7.1 7.1 L10.6 10.6" stroke="#2f3a2b" stroke-width="2.6" stroke-linecap="round"/><path d="M0.0 10.0 L0.0 15.0" stroke="#2f3a2b" stroke-width="2.6" stroke-linecap="round"/><path d="M-7.1 7.1 L-10.6 10.6" stroke="#2f3a2b" stroke-width="2.6" stroke-linecap="round"/><path d="M-10.0 0.0 L-15.0 0.0" stroke="#2f3a2b" stroke-width="2.6" stroke-linecap="round"/><path d="M-7.1 -7.1 L-10.6 -10.6" stroke="#2f3a2b" stroke-width="2.6" stroke-linecap="round"/><path d="M-0.0 -10.0 L-0.0 -15.0" stroke="#2f3a2b" stroke-width="2.6" stroke-linecap="round"/><path d="M7.1 -7.1 L10.6 -10.6" stroke="#2f3a2b" stroke-width="2.6" stroke-linecap="round"/></g>
+<text x="70" y="154.5" font-size="16" font-weight="bold" fill="#2f3a2b">Daylight only</text>
+<text x="70" y="173.5" font-size="15" fill="#6b5b4b">Logs run after every rain (Tip)</text>
+<rect x="8" y="188" width="384" height="54" rx="6" fill="#f4eedf"/>
+<circle cx="38" cy="215.0" r="20" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<g transform="translate(38 215.0)"><path d="M-9 -14 L-3 -14 L0 -6 L3 -14 L9 -14 C10 -9 12 -7 14 -6 L13 14 L-13 14 L-14 -6 C-12 -7 -10 -9 -9 -14z" fill="#2f3a2b"/><path d="M-13 2 H13 M-13 8 H13" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="70" y="210.5" font-size="16" font-weight="bold" fill="#2f3a2b">PFD on, not stowed</text>
+<text x="70" y="229.5" font-size="15" fill="#6b5b4b">Tip</text>
+<circle cx="38" cy="281.0" r="20" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<g transform="translate(38 281.0) scale(1.0)" fill="#2f3a2b" stroke="none"><path d="M-16 2 H16 L11 10 H-11z"/><path d="M-2 2 V-14 L10 0z" fill="#2f3a2b"/></g>
+<text x="70" y="266.5" font-size="16" font-weight="bold" fill="#2f3a2b">10 ft boat: sloughs, side channels,</text>
+<text x="70" y="286.5" font-size="16" font-weight="bold" fill="#2f3a2b">bays</text>
+<text x="70" y="305.5" font-size="15" fill="#6b5b4b">Not the main current (Tip)</text>
+<rect x="8" y="328" width="384" height="30" rx="6" fill="#e8590c"/><text x="18" y="349" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">SHOOTING DUCKS FROM THE BOAT</text>
+<rect x="8" y="364" width="384" height="54" rx="6" fill="#f8e0d6"/>
+<circle cx="38" cy="391.0" r="20" fill="#fffaf0" stroke="#c0392b" stroke-width="2"/>
+<g transform="translate(38 391.0) scale(0.9)" fill="#2f3a2b" stroke="none"><path d="M-16 -2 H8 V-5 H12 V-2 H16 V1 H-2 L-4 3 H-8 L-11 8 H-16 L-13 1 H-16z"/></g>
+<circle cx="38" cy="391.0" r="20" fill="none" stroke="#c0392b" stroke-width="3"/><path d="M24.0 377.0 L52.0 405.0" stroke="#c0392b" stroke-width="3"/>
+<text x="70" y="386.5" font-size="16" font-weight="bold" fill="#2f3a2b">Motor running: every gun unloaded</text>
+<text x="70" y="405.5" font-size="15" fill="#c0392b">95%</text>
+<rect x="8" y="420" width="384" height="74" rx="6" fill="#e3ead6"/>
+<circle cx="38" cy="457.0" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(38 457.0)" fill="none" stroke="#2f6e3b" stroke-width="3" stroke-linecap="round"><circle cy="-11" r="3.5"/><path d="M0 -7 V13 M-6 -3 H6"/><path d="M-12 4 C-11 12 -5 14 0 14 C5 14 11 12 12 4"/></g>
+<text x="70" y="442.5" font-size="16" font-weight="bold" fill="#2f3a2b">Beached, anchored or tied to a fixed</text>
+<text x="70" y="462.5" font-size="16" font-weight="bold" fill="#2f3a2b">blind</text>
+<text x="70" y="481.5" font-size="15" fill="#2f6e3b">You may shoot ducks (95%)</text>
 </svg>

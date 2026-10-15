@@ -1,50 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 410" font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="410" fill="#fffaf0"/>
-  <text x="200" y="24" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Lead: duck crossing at 30 m (33 yd)</text>
-  <text x="200" y="42" font-size="14" fill="#23261f" text-anchor="middle">Duck flying right to left at 40 to 60 km/h</text>
-
-  <!-- shot cloud, where the pellets arrive -->
-  <g fill="#23261f">
-    <circle cx="130" cy="118" r="3"/><circle cx="142" cy="106" r="3"/><circle cx="118" cy="108" r="3"/>
-    <circle cx="150" cy="122" r="3"/><circle cx="112" cy="126" r="3"/><circle cx="136" cy="132" r="3"/>
-    <circle cx="124" cy="96" r="3"/><circle cx="146" cy="136" r="3"/><circle cx="106" cy="114" r="3"/>
-    <circle cx="156" cy="110" r="3"/><circle cx="128" cy="144" r="3"/><circle cx="116" cy="138" r="3"/>
-    <circle cx="140" cy="94" r="3"/><circle cx="104" cy="100" r="3"/><circle cx="152" cy="98" r="3"/>
-  </g>
-  <circle cx="130" cy="118" r="34" fill="none" stroke="#8a9a6b" stroke-width="1.5" stroke-dasharray="4 4"/>
-  <text x="130" y="74" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Shot lands here</text>
-
-  <!-- duck -->
-  <g transform="translate(300,118)">
-    <ellipse cx="0" cy="0" rx="28" ry="12" fill="#23261f"/>
-    <circle cx="-30" cy="-8" r="8" fill="#23261f"/>
-    <path d="M-38 -8 L-50 -5 L-38 -3 Z" fill="#e8590c"/>
-    <path d="M-6 -4 L10 -34 L22 -6 Z" fill="#2f3a2b"/>
-    <path d="M-4 4 L8 24 L20 6 Z" fill="#2f3a2b"/>
-    <path d="M26 -4 L40 -8 L38 4 Z" fill="#23261f"/>
-  </g>
-  <text x="300" y="164" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Duck now</text>
-
-  <!-- flight arrow -->
-  <line x1="352" y1="118" x2="372" y2="118" stroke="#8a9a6b" stroke-width="2"/>
-  <path d="M350 112 L340 118 L350 124 Z" fill="#8a9a6b"/>
-
-  <!-- lead dimension -->
-  <line x1="130" y1="182" x2="250" y2="182" stroke="#e8590c" stroke-width="3"/>
-  <line x1="130" y1="174" x2="130" y2="190" stroke="#e8590c" stroke-width="3"/>
-  <line x1="250" y1="174" x2="250" y2="190" stroke="#e8590c" stroke-width="3"/>
-  <text x="190" y="208" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Lead: about 1 to 2 m (4 to 6 ft)</text>
-
-  <text x="200" y="234" font-size="14" fill="#2f3a2b" text-anchor="middle">Swing from behind, through the head, fire ahead.</text>
-  <text x="200" y="252" font-size="14" fill="#2f3a2b" text-anchor="middle">Keep the gun moving after the shot.</text>
-
-  <!-- gun and swing -->
-  <g transform="translate(200,366)">
-    <line x1="0" y1="0" x2="-52" y2="-84" stroke="#6b4f35" stroke-width="7" stroke-linecap="round"/>
-    <line x1="0" y1="0" x2="46" y2="-86" stroke="#6b4f35" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 5"/>
-    <path d="M40 -92 A96 96 0 0 0 -44 -94" fill="none" stroke="#2f3a2b" stroke-width="2.5" stroke-dasharray="6 4"/>
-    <path d="M-50 -88 L-40 -100 L-34 -86 Z" fill="#2f3a2b"/>
-  </g>
-  <text x="200" y="388" font-size="12" fill="#6b4f35" text-anchor="middle">Shot takes about 0.1 s to reach 30 m.</text>
-  <text x="200" y="403" font-size="12" fill="#6b4f35" text-anchor="middle">Hunt Mentor estimate, not a measurement.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 336" font-family="sans-serif" role="img" aria-label="A drake mallard crossing from right to left at 30 metres (33 yards), flying 40 to 60 kilometres per hour. The shot pattern lands ahead of the duck. Lead: about 1 to 2 metres (4 to 6 feet) in front of the head. Swing from behind the duck, through the head, fire ahead, and keep the gun moving after the shot. Shot takes about 0.1 second to reach 30 metres, a Hunt Mentor estimate, not a measurement.">
+<rect width="400" height="336" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Lead: duck crossing at 30 m (33 yd)</text>
+<text x="200" y="46" font-size="15" fill="#6b5b4b" text-anchor="middle">Flying right to left at 40 to 60 km/h</text>
+<rect x="0" y="56" width="400" height="156" fill="#e3ecf3"/>
+<circle cx="136" cy="128" r="30" fill="#fffaf0" opacity=".6" stroke="#2f3a2b" stroke-width="1.4" stroke-dasharray="4 4"/>
+<circle cx="136.7" cy="136.3" r="2.4" fill="#2f3a2b"/>
+<circle cx="127.9" cy="134.2" r="2.4" fill="#2f3a2b"/>
+<circle cx="151.1" cy="134.7" r="2.4" fill="#2f3a2b"/>
+<circle cx="156.2" cy="116.5" r="2.4" fill="#2f3a2b"/>
+<circle cx="137.2" cy="115.8" r="2.4" fill="#2f3a2b"/>
+<circle cx="122.7" cy="124.9" r="2.4" fill="#2f3a2b"/>
+<circle cx="140.0" cy="135.5" r="2.4" fill="#2f3a2b"/>
+<circle cx="141.6" cy="152.4" r="2.4" fill="#2f3a2b"/>
+<circle cx="147.1" cy="107.5" r="2.4" fill="#2f3a2b"/>
+<circle cx="139.6" cy="117.1" r="2.4" fill="#2f3a2b"/>
+<circle cx="128.4" cy="147.1" r="2.4" fill="#2f3a2b"/>
+<circle cx="133.3" cy="104.1" r="2.4" fill="#2f3a2b"/>
+<circle cx="141.6" cy="122.8" r="2.4" fill="#2f3a2b"/>
+<circle cx="119.2" cy="114.9" r="2.4" fill="#2f3a2b"/>
+<circle cx="125.0" cy="127.6" r="2.4" fill="#2f3a2b"/>
+<circle cx="128.3" cy="129.3" r="2.4" fill="#2f3a2b"/>
+<circle cx="158.2" cy="118.3" r="2.4" fill="#2f3a2b"/>
+<circle cx="122.4" cy="123.8" r="2.4" fill="#2f3a2b"/>
+<path d="M346 126 H380" stroke="#8a9a6b" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M346 134 H380" stroke="#8a9a6b" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M346 142 H380" stroke="#8a9a6b" stroke-width="2.4" stroke-linecap="round"/>
+<g transform="translate(302 132) scale(1.15)"><path d="M-4 2 L10 22 L18 20 L12 2z" fill="#6f6a60"/><path d="M22 -2 L36 -6 L36 4 L22 4z" fill="#3a3a36"/><path d="M28 -4 L38 -2 L28 1z" fill="#f4f1ea"/><ellipse cx="2" cy="0" rx="26" ry="9" fill="#b5b0a6"/><ellipse cx="-16" cy="2" rx="11" ry="8" fill="#7a4a2e"/><path d="M-22 -3 C-26 -8 -30 -10 -34 -9" stroke="#2e6b3a" stroke-width="7" stroke-linecap="round"/><path d="M-24 -4 L-23 1" stroke="#f4f1ea" stroke-width="2.4"/><circle cx="-35" cy="-9" r="7" fill="#2e6b3a"/><circle cx="-37" cy="-11" r="1.4" fill="#111"/><path d="M-41 -10 L-50 -8 L-41 -5z" fill="#e0b030"/><path d="M-6 -4 L6 -36 L16 -34 L14 -4z" fill="#8a8274"/><path d="M2 -14 L12 -14 L13 -8 L1 -8z" fill="#3b5fa8"/></g>
+<rect x="70.7" y="64.0" width="130.5" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="136" y="83" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Shot lands here</text>
+<rect x="248.1" y="64.0" width="87.8" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="292" y="83" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Duck now</text>
+<path d="M136 176 H262" stroke="#e8590c" stroke-width="3.4"/><path d="M136 167 v18 M262 167 v18" stroke="#e8590c" stroke-width="3.4"/>
+<path d="M262 136 V166" stroke="#e8590c" stroke-width="1.4" stroke-dasharray="3 3"/>
+<text x="200" y="198" font-size="18" font-weight="bold" fill="#c2410c" text-anchor="middle">Lead: about 1 to 2 m (4 to 6 ft)</text>
+<defs><marker id="lead-ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#2f3a2b"/></marker></defs>
+<path d="M372 228 H365" fill="none" stroke="#2f3a2b" stroke-width="2.6" stroke-dasharray="8 5"/>
+<path d="M335 228 H277" fill="none" stroke="#2f3a2b" stroke-width="2.6" stroke-dasharray="8 5"/>
+<path d="M247 228 H151" fill="none" stroke="#2f3a2b" stroke-width="2.6" stroke-dasharray="8 5"/>
+<path d="M121 228 H96" fill="none" stroke="#2f3a2b" stroke-width="2.6" stroke-dasharray="8 5" marker-end="url(#lead-ah)"/>
+<circle cx="350.0" cy="228.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="350" y="233" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<text x="350" y="262" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Swing from</text>
+<text x="350" y="281" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">behind</text>
+<circle cx="262.0" cy="228.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="262" y="233" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="262" y="262" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Through</text>
+<text x="262" y="281" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">the head</text>
+<circle cx="136.0" cy="228.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="136" y="233" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="136" y="262" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Fire ahead,</text>
+<text x="136" y="281" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">keep swinging</text>
+<text x="200" y="306" font-size="14" fill="#2f3a2b" text-anchor="middle">Shot takes about 0.1 s to reach 30 m.</text>
+<text x="200" y="325" font-size="14" fill="#6b5b4b" text-anchor="middle">Hunt Mentor estimate, not a measurement.</text>
 </svg>

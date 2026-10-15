@@ -1,35 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" font-family="sans-serif">
-<rect x="0" y="0" width="400" height="400" fill="#fffaf0"/>
-<text x="200" y="24" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">.308, 150 gr: 100 m zero vs 200 m zero</text>
-<text x="200" y="42" font-size="14" fill="#23261f" text-anchor="middle">Numbers in cm. Height scale exaggerated.</text>
-<line x1="44" y1="170" x2="368" y2="170" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="8 5"/>
-<text x="50" y="188" font-size="13" fill="#2f3a2b">Line of sight</text>
-<rect x="12" y="176" width="34" height="9" fill="#6b4f35" stroke="#23261f" stroke-width="1.5"/>
-<line x1="152" y1="149" x2="152" y2="300" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 4"/>
-<text x="152" y="316" font-size="14" fill="#23261f" text-anchor="middle">100 m</text>
-<line x1="206" y1="149" x2="206" y2="300" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 4"/>
-<text x="206" y="316" font-size="14" fill="#23261f" text-anchor="middle">150</text>
-<line x1="260" y1="149" x2="260" y2="300" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 4"/>
-<text x="260" y="316" font-size="14" fill="#23261f" text-anchor="middle">200</text>
-<line x1="314" y1="149" x2="314" y2="300" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 4"/>
-<text x="314" y="316" font-size="14" fill="#23261f" text-anchor="middle">250</text>
-<line x1="368" y1="149" x2="368" y2="300" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 4"/>
-<text x="368" y="316" font-size="14" fill="#23261f" text-anchor="middle">300 m</text>
-<text x="152" y="331" font-size="12" fill="#23261f" text-anchor="middle">(109 yd)</text><text x="260" y="331" font-size="12" fill="#23261f" text-anchor="middle">(219 yd)</text><text x="368" y="331" font-size="12" fill="#23261f" text-anchor="middle">(328 yd)</text>
-<path d="M44.0 179.9 C53.0 177.0 80.0 167.1 98.0 162.7 C116.0 158.4 134.0 155.1 152.0 153.9 C170.0 152.7 188.0 153.0 206.0 155.7 C224.0 158.4 242.0 162.8 260.0 170.0 C278.0 177.2 296.0 186.5 314.0 198.9 C332.0 211.3 359.0 236.8 368.0 244.4" fill="none" stroke="#e8590c" stroke-width="4" stroke-dasharray="9 5"/>
-<path d="M44.0 179.9 C53.0 178.4 80.0 172.4 98.0 170.8 C116.0 169.1 134.0 168.5 152.0 170.0 C170.0 171.5 188.0 174.5 206.0 179.9 C224.0 185.3 242.0 192.4 260.0 202.2 C278.0 212.1 296.0 224.1 314.0 239.2 C332.0 254.2 359.0 283.8 368.0 292.7" fill="none" stroke="#23261f" stroke-width="4"/>
-<circle cx="152" cy="170" r="4.5" fill="#23261f"/><text x="152" y="190" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">0</text>
-<circle cx="206" cy="180" r="4.5" fill="#23261f"/><text x="206" y="200" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">-4</text>
-<circle cx="260" cy="202" r="4.5" fill="#23261f"/><text x="260" y="222" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">-12</text>
-<circle cx="314" cy="239" r="4.5" fill="#23261f"/><text x="314" y="259" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">-27</text>
-<circle cx="368" cy="293" r="4.5" fill="#23261f"/><text x="358" y="298" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">-47</text>
-<circle cx="152" cy="154" r="4.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="152" y="144" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">+6</text>
-<circle cx="206" cy="156" r="4.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="206" y="146" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">+6</text>
-<circle cx="260" cy="170" r="4.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="260" y="160" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">0</text>
-<circle cx="314" cy="199" r="4.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="314" y="189" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">-11</text>
-<circle cx="368" cy="244" r="4.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="368" y="234" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">-29</text>
-<line x1="30" y1="352" x2="70" y2="352" stroke="#23261f" stroke-width="4"/><text x="78" y="357" font-size="14" fill="#23261f">100 m zero</text>
-<line x1="200" y1="352" x2="240" y2="352" stroke="#e8590c" stroke-width="4" stroke-dasharray="9 5"/><text x="248" y="357" font-size="14" fill="#23261f">200 m zero</text>
-<text x="200" y="380" font-size="13" fill="#6b4f35" text-anchor="middle">Federal Power Shok 150 gr, factory test barrel.</text>
-<text x="200" y="395" font-size="13" fill="#6b4f35" text-anchor="middle">Your 20 inch barrel: a little more drop. Check at 200 m.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420.0" font-family="sans-serif" role="img" aria-label="Bullet path chart for a .308 with 150 grain Federal Power Shok, factory test barrel, numbers in centimetres, height scale exaggerated. With a 100 metre zero: 0 at 100 m (109 yd), 4 low at 150 m (164 yd), 12 low at 200 m (219 yd), 27 low at 250 m (273 yd), 47 low at 300 m (328 yd). With a 200 metre zero: 6 high at 100 m, 6 high at 150 m, 0 at 200 m, 11 low at 250 m, 29 low at 300 m. Your 20 inch barrel gives a little more drop, so check at 200 m.">
+<rect width="400" height="420.0" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">.308, 150 gr: 100 m zero vs 200 m zero</text>
+<text x="200" y="46" font-size="14" fill="#6b5b4b" text-anchor="middle">Numbers in cm. Height scale exaggerated.</text>
+<path d="M143.0 90 V280.0" stroke="#c9c2ae" stroke-width="1.2" stroke-dasharray="3 4"/>
+<path d="M199.5 90 V280.0" stroke="#c9c2ae" stroke-width="1.2" stroke-dasharray="3 4"/>
+<path d="M256.0 90 V280.0" stroke="#c9c2ae" stroke-width="1.2" stroke-dasharray="3 4"/>
+<path d="M312.5 90 V280.0" stroke="#c9c2ae" stroke-width="1.2" stroke-dasharray="3 4"/>
+<path d="M369.0 90 V280.0" stroke="#c9c2ae" stroke-width="1.2" stroke-dasharray="3 4"/>
+<g transform="translate(26.0 128)"><path d="M-28 -2 H6 V3 H-14 L-20 10 H-28z" fill="#8b5a2b"/><rect x="-24" y="-10" width="22" height="5" rx="2" fill="#2f3a2b"/></g>
+<path d="M30.0 120 H377.0" stroke="#2f3a2b" stroke-width="1.6" stroke-dasharray="7 5"/>
+<line x1="61.64" y1="118" x2="61.64" y2="106" stroke="#2f3a2b" stroke-width="1.2"/>
+<rect x="13.2" y="80.0" width="96.9" height="26.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="61.64" y="98" font-size="14" fill="#2f3a2b" text-anchor="middle">Line of sight</text>
+<path d="M30.0 132.8 C48.8 130.7 114.8 120.0 143.0 120.0 C171.2 120.0 180.7 126.4 199.5 132.8 C218.3 139.2 237.2 146.1 256.0 158.4 C274.8 170.7 293.7 187.7 312.5 206.4 C331.3 225.1 359.6 259.7 369.0 270.4" fill="none" stroke="#2f3a2b" stroke-width="3.4"/>
+<path d="M30.0 132.8 C48.8 127.5 114.8 106.1 143.0 100.8 C171.2 95.5 180.7 97.6 199.5 100.8 C218.3 104.0 237.2 110.9 256.0 120.0 C274.8 129.1 293.7 139.7 312.5 155.2 C331.3 170.7 359.6 203.2 369.0 212.8" fill="none" stroke="#e8590c" stroke-width="3.4" stroke-dasharray="9 5"/>
+<circle cx="143.0" cy="120.0" r="4.5" fill="#2f3a2b"/>
+<text x="133" y="140" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">0</text>
+<circle cx="199.5" cy="132.8" r="4.5" fill="#2f3a2b"/>
+<text x="189.5" y="152.8" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">-4</text>
+<circle cx="256.0" cy="158.4" r="4.5" fill="#2f3a2b"/>
+<text x="246" y="178.4" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">-12</text>
+<circle cx="312.5" cy="206.4" r="4.5" fill="#2f3a2b"/>
+<text x="302.5" y="226.4" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">-27</text>
+<circle cx="369.0" cy="270.4" r="4.5" fill="#2f3a2b"/>
+<text x="359" y="290.4" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">-47</text>
+<circle cx="143.0" cy="100.8" r="4.5" fill="#e8590c"/>
+<text x="149" y="90.8" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">+6</text>
+<circle cx="199.5" cy="100.8" r="4.5" fill="#e8590c"/>
+<text x="205.5" y="90.8" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">+6</text>
+<circle cx="256.0" cy="120.0" r="4.5" fill="#e8590c"/>
+<text x="262" y="110" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">0</text>
+<circle cx="312.5" cy="155.2" r="4.5" fill="#e8590c"/>
+<text x="318.5" y="145.2" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">-11</text>
+<circle cx="369.0" cy="212.8" r="4.5" fill="#e8590c"/>
+<text x="375" y="202.8" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">-29</text>
+<text x="143" y="314" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">100 m</text>
+<text x="143" y="332" font-size="14" fill="#6b5b4b" text-anchor="middle">109 yd</text>
+<text x="199.5" y="314" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">150 m</text>
+<text x="199.5" y="332" font-size="14" fill="#6b5b4b" text-anchor="middle">164 yd</text>
+<text x="256" y="314" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">200 m</text>
+<text x="256" y="332" font-size="14" fill="#6b5b4b" text-anchor="middle">219 yd</text>
+<text x="312.5" y="314" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">250 m</text>
+<text x="312.5" y="332" font-size="14" fill="#6b5b4b" text-anchor="middle">273 yd</text>
+<text x="369" y="314" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">300 m</text>
+<text x="369" y="332" font-size="14" fill="#6b5b4b" text-anchor="middle">328 yd</text>
+<path d="M30 358.0 H70" stroke="#2f3a2b" stroke-width="3.4"/><text x="78" y="363" font-size="15" font-weight="bold" fill="#2f3a2b">100 m zero</text>
+<path d="M210 358.0 H250" stroke="#e8590c" stroke-width="3.4" stroke-dasharray="9 5"/><text x="258" y="363" font-size="15" font-weight="bold" fill="#c2410c">200 m zero</text>
+<text x="200" y="388" font-size="14" fill="#2f3a2b" text-anchor="middle">Federal Power Shok 150 gr, factory test barrel.</text>
+<text x="200" y="408" font-size="14" fill="#8b5a2b" text-anchor="middle">Your 20 inch barrel: a little more drop. Check at 200 m.</text>
 </svg>

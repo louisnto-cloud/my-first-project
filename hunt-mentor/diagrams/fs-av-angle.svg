@@ -1,4 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Slope angle chart from Avalanche Canada: most avalanches start on slopes between 30 and 45 degrees. 25 to 30 degrees, less common. Over 45 degrees, snow usually sluffs off often so slabs form less. Avalanches can run out onto flat ground below.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Slope angle: where avalanches start</text><path d="M60 250 L290 250 A230 230 0 0 0 268 153 Z" fill="#e3eef8"/><path d="M60 250 L268 153 A230 230 0 0 0 259 135 Z" fill="#ffe3a3"/><path d="M60 250 L259 135 A230 230 0 0 0 223 87 Z" fill="#f3a58a"/><path d="M60 250 L223 87 A230 230 0 0 0 175 51 Z" fill="#d7dde3"/><text x="278" y="154" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">25°</text><text x="268" y="136" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">30°</text><text x="231" y="87" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">45°</text><text x="215" y="240" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Under 25: rare</text><text x="300" y="200" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">25 to 30: less common</text><text x="190" y="130" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">30 to 45: most</text><text x="120" y="66" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Over 45: sluffs</text><text x="200" y="290" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Slides can run out onto flat ground</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 306" font-family="sans-serif" role="img" aria-label="Fan chart of slope angles from flat to steep. Under 25 degrees: avalanches are rare. 25 to 30 degrees: less common. 30 to 45 degrees, in orange: where most avalanches start, 80 percent. Over 45 degrees: snow sluffs off often, so slabs form less. Slides can run out onto flat ground.">
+<rect width="400" height="306" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Slope angle: where avalanches start</text>
+<path d="M22 262 L252.0 262.0 A230 230 0 0 0 230.5 164.8z" fill="#dbe8f1" stroke="#fffaf0" stroke-width="1.5"/>
+<path d="M22 262 L230.5 164.8 A230 230 0 0 0 221.2 147.0z" fill="#f2d98a" stroke="#fffaf0" stroke-width="1.5"/>
+<path d="M22 262 L221.2 147.0 A230 230 0 0 0 184.6 99.4z" fill="#ee8a5b" stroke="#fffaf0" stroke-width="1.5"/>
+<path d="M22 262 L184.6 99.4 A230 230 0 0 0 130.0 58.9z" fill="#cfd4da" stroke="#fffaf0" stroke-width="1.5"/>
+<path d="M22 262 H258" stroke="#2f3a2b" stroke-width="3"/>
+<path d="M22 262 L234.1 163.1" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="245.1" y="164.9" font-size="16" font-weight="bold" fill="#2f3a2b" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">25°</text>
+<path d="M22 262 L224.6 145.0" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="235.3" y="146" font-size="16" font-weight="bold" fill="#2f3a2b" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">30°</text>
+<path d="M22 262 L187.5 96.5" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="196.5" y="95.5" font-size="16" font-weight="bold" fill="#2f3a2b" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">45°</text>
+<line x1="213.7" y1="221.2" x2="265.35" y2="228.5" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="213.7" cy="221.2" r="2.6" fill="#2f3a2b"/>
+<rect x="265.4" y="214.0" width="126.6" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="328.675" y="234.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Under 25: rare</text>
+<line x1="195.9" y1="171.5" x2="272.883" y2="180.5" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="195.9" cy="171.5" r="2.6" fill="#2f3a2b"/>
+<rect x="272.9" y="156.0" width="119.1" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="332.442" y="176.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">25 to 30:</text>
+<text x="332.442" y="196.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">less common</text>
+<line x1="177.5" y1="142.7" x2="261.584" y2="116.5" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="177.5" cy="142.7" r="2.6" fill="#2f3a2b"/>
+<rect x="261.6" y="102.0" width="130.4" height="29.0" rx="5" fill="#c2410c" stroke="#c2410c" stroke-width="1.2"/>
+<text x="326.792" y="122.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">30 to 45: most</text>
+<line x1="121.9" y1="124.5" x2="84.4256" y2="93" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="121.9" cy="124.5" r="2.6" fill="#2f3a2b"/>
+<rect x="10.0" y="44.0" width="80.4" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="50.2128" y="64.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Over 45:</text>
+<text x="50.2128" y="84.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">sluffs</text>
+<text x="22" y="292" font-size="16" font-weight="bold" fill="#c2410c">Slides can run out onto flat ground.</text>
 </svg>

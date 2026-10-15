@@ -1,17 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 6: ring cap seen from above with 4 screws. Tighten a little at a time in a cross pattern: 1, 2, 3, 4. Keep the gaps even on both sides. Finish with a torque wrench to the ring maker's number, then a paint pen line across each screw.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tighten in a cross</text>
-  <rect x="40" y="110" width="200" height="40" fill="#2f3a2b"/>
-  <rect x="100" y="70" width="80" height="120" rx="6" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/>
-  <g fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"><circle cx="118" cy="88" r="9"/><circle cx="162" cy="172" r="9"/><circle cx="162" cy="88" r="9"/><circle cx="118" cy="172" r="9"/></g>
-  <g stroke="#e8590c" stroke-width="2"><line x1="112" y1="88" x2="124" y2="88"/><line x1="156" y1="172" x2="168" y2="172"/><line x1="156" y1="88" x2="168" y2="88"/><line x1="112" y1="172" x2="124" y2="172"/></g>
-  <g font-size="18" font-weight="bold" fill="#e8590c"><text x="84" y="94">1</text><text x="176" y="178">2</text><text x="176" y="94">3</text><text x="84" y="178">4</text></g>
-  <path d="M126 96 L154 164 M154 96 L126 164" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 4"/>
-  <!-- torque wrench -->
-  <rect x="262" y="96" width="110" height="18" rx="9" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/><circle cx="268" cy="105" r="14" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/>
-  <text x="316" y="140" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Torque wrench</text>
-  <text x="316" y="158" font-size="14" fill="#2f3a2b" text-anchor="middle">to the maker's number</text>
-  <text x="140" y="222" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Even gaps both sides</text>
-  <text x="200" y="262" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Paint pen line on each screw</text>
-  <text x="200" y="282" font-size="14" fill="#2f3a2b" text-anchor="middle">A broken line means it moved</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 6: ring cap seen from above with 4 screws. Tighten a little at a time in a cross pattern: 1, 2, 3, 4. Keep the gaps even on both sides. Finish with a torque wrench to the ring maker&#x27;s number, then a paint pen line across each screw.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tighten in a cross</text>
+<rect x="20" y="112" width="234" height="36" fill="#2f3a2b"/>
+<rect x="92" y="62" width="96" height="136" rx="6" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/>
+<path d="M92 72 V188 M188 72 V188" stroke="#fffaf0" stroke-width="1.2" opacity=".5"/>
+<path d="M114 86 L166 174 M166 86 L114 174" stroke="#e8590c" stroke-width="2.2" stroke-dasharray="5 4"/>
+<circle cx="114" cy="86" r="11" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<path d="M107 86 H121" stroke="#2f3a2b" stroke-width="2.2"/>
+<path d="M99 89 L129 83" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/>
+<circle cx="70.0" cy="86.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="70" y="91" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<circle cx="166" cy="174" r="11" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<path d="M159 174 H173" stroke="#2f3a2b" stroke-width="2.2"/>
+<path d="M151 177 L181 171" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/>
+<circle cx="210.0" cy="174.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="210" y="179" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<circle cx="166" cy="86" r="11" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<path d="M159 86 H173" stroke="#2f3a2b" stroke-width="2.2"/>
+<path d="M151 89 L181 83" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/>
+<circle cx="210.0" cy="86.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="210" y="91" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<circle cx="114" cy="174" r="11" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<path d="M107 174 H121" stroke="#2f3a2b" stroke-width="2.2"/>
+<path d="M99 177 L129 171" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/>
+<circle cx="70.0" cy="174.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="70" y="179" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<rect x="276" y="96" width="112" height="14" rx="7" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/>
+<rect x="340" y="92" width="44" height="22" rx="8" fill="#2f3a2b"/>
+<circle cx="274" cy="103" r="13" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/><rect x="268" y="97" width="12" height="12" fill="#2f3a2b"/>
+<path d="M300 100 v6 M308 100 v6 M316 100 v6 M324 100 v6" stroke="#fffaf0" stroke-width="1.4"/>
+<text x="326" y="142" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Torque wrench</text>
+<text x="326" y="162" font-size="15" fill="#2f3a2b" text-anchor="middle">to the maker&#x27;s</text>
+<text x="326" y="180" font-size="15" fill="#2f3a2b" text-anchor="middle">number</text>
+<text x="140" y="228" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Even gaps both sides</text>
+<text x="200" y="262" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Paint pen line on each screw</text>
+<text x="200" y="284" font-size="15" fill="#2f3a2b" text-anchor="middle">A broken line means it moved</text>
 </svg>

@@ -1,39 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="400" fill="#fffaf0"/>
-  <text x="200" y="26" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">.308, 150 gr, 100 yd zero</text>
-  <text x="200" y="46" font-size="14" fill="#23261f" text-anchor="middle">APPROXIMATE. Drop exaggerated to show shape</text>
-
-  <!-- line of sight -->
-  <line x1="40" y1="150" x2="380" y2="150" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="8 5"/>
-  <text x="44" y="138" font-size="14" fill="#2f3a2b">Line of sight (crosshair)</text>
-  <!-- rifle -->
-  <rect x="14" y="156" width="36" height="10" fill="#6b4f35" stroke="#23261f" stroke-width="1.5"/>
-  <rect x="18" y="143" width="26" height="8" fill="#23261f" stroke="#23261f" stroke-width="1"/>
-  <!-- bullet path -->
-  <path d="M50,161 C90,148 120,147 157,150 C200,153 240,168 263,180 C300,200 340,232 370,261" fill="none" stroke="#e8590c" stroke-width="4"/>
-  <text x="300" y="196" font-size="14" fill="#e8590c" font-weight="bold">Bullet path</text>
-
-  <!-- zero point -->
-  <circle cx="157" cy="150" r="7" fill="#e8590c" stroke="#23261f" stroke-width="2"/>
-  <text x="157" y="118" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Zero</text>
-  <text x="157" y="100" font-size="14" fill="#23261f" text-anchor="middle">91 m (100 yd)</text>
-
-  <!-- 200 yd -->
-  <line x1="263" y1="150" x2="263" y2="180" stroke="#23261f" stroke-width="2"/>
-  <circle cx="263" cy="180" r="5" fill="#23261f" stroke="#23261f" stroke-width="1"/>
-  <text x="200" y="232" font-size="14" fill="#23261f">183 m (200 yd):</text>
-  <text x="200" y="250" font-size="14" fill="#23261f" font-weight="bold">about 10 cm low</text>
-  <line x1="240" y1="218" x2="260" y2="186" stroke="#23261f" stroke-width="1.5"/>
-
-  <!-- 300 yd -->
-  <line x1="370" y1="150" x2="370" y2="261" stroke="#23261f" stroke-width="2"/>
-  <circle cx="370" cy="261" r="5" fill="#23261f" stroke="#23261f" stroke-width="1"/>
-  <text x="385" y="290" font-size="14" fill="#23261f" text-anchor="end">274 m (300 yd):</text>
-  <text x="385" y="308" font-size="14" fill="#23261f" font-weight="bold" text-anchor="end">about 37 cm low</text>
-
-  <!-- footnote -->
-  <rect x="10" y="326" width="380" height="66" fill="#8a9a6b" fill-opacity="0.25" stroke="#8a9a6b" stroke-width="1"/>
-  <text x="20" y="346" font-size="14" fill="#23261f">Source: Federal Power Shok 150 gr, 2,820 fps,</text>
-  <text x="20" y="364" font-size="14" fill="#23261f">factory test barrel. Your 20 in barrel is slower:</text>
-  <text x="20" y="382" font-size="14" fill="#23261f">expect more drop. Confirm on paper.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 488" font-family="sans-serif" role="img" aria-label="Trajectory sketch for a .308 Winchester, 150 grain bullet, zeroed at 100 yards. Approximate, with the drop exaggerated to show the shape. The dashed line of sight runs straight from the scope; the bullet path starts below it, meets it at the zero, 91 m (100 yd), then falls away: about 10 cm low at 183 m (200 yd) and about 37 cm low at 274 m (300 yd). Source: Federal Power Shok 150 grain at 2,820 feet per second from a factory test barrel. Your 20 inch barrel is slower, so expect more drop. Confirm on paper.">
+<rect width="400" height="488" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">.308, 150 gr, 100 yd zero</text>
+<text x="200" y="50" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">APPROXIMATE. Drop exaggerated to show shape</text>
+<g transform="translate(6.0 167) scale(0.25 0.25)"><path d="M2 -8 L80 -3 C90 -1 96 1 102 4 L250 4 C254 5 255 9 252 12 L150 13 C136 13 128 15 124 20 C121 27 116 33 109 35 C104 30 102 24 96 20 C76 21 44 26 6 31 L2 31z" fill="#8b5a2b" stroke="#5e3a1a" stroke-width="1.4" stroke-linejoin="round"/><path d="M14 -4 L76 0 C86 2 92 5 98 9" fill="none" stroke="#a87442" stroke-width="2"/><rect x="-3" y="-9" width="6" height="41" rx="2" fill="#2b2b2b"/><rect x="100" y="-7" width="92" height="12" rx="3" fill="#3a3f44"/><path d="M190 -5.5 L360 -3.2 L360 1.8 L190 3.5z" fill="#3a3f44"/><rect x="353" y="-4" width="7" height="6.2" fill="#24282c"/><path d="M122 -2 L113 11" stroke="#3a3f44" stroke-width="4" stroke-linecap="round"/><circle cx="111.5" cy="13" r="4.4" fill="#3a3f44"/><path d="M128 5 C127 20 148 22 154 13 L155 5" fill="none" stroke="#3a3f44" stroke-width="2.6"/><path d="M139 5 C141 10 141 13 137 16" fill="none" stroke="#3a3f44" stroke-width="2.4" stroke-linecap="round"/><rect x="122" y="-12" width="8" height="5" fill="#3a3f44"/><rect x="170" y="-12" width="8" height="5" fill="#3a3f44"/><path d="M104 -25 L118 -22 L184 -22 L202 -26 L206 -26 L206 -11 L202 -11 L184 -15 L118 -15 L104 -12z" fill="#22262a"/><rect x="145" y="-26" width="8" height="5" rx="1" fill="#22262a"/><path d="M120 -20 L180 -20" stroke="#4d555c" stroke-width="1.4"/></g>
+<line x1="96" y1="162" x2="382" y2="162" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="392" y="152" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">Line of sight (crosshair)</text>
+<polyline points="96.0,167.0 98.0,166.8 100.0,166.6 102.0,166.4 104.0,166.2 106.0,166.0 108.0,165.8 110.0,165.6 112.0,165.4 114.0,165.2 116.0,165.1 118.0,164.9 120.0,164.7 122.0,164.6 124.0,164.4 126.0,164.3 128.0,164.1 130.0,164.0 132.0,163.9 134.0,163.7 136.0,163.6 138.0,163.5 140.0,163.4 142.0,163.2 144.0,163.1 146.0,163.0 148.0,162.9 150.0,162.9 152.0,162.8 154.0,162.7 156.0,162.6 158.0,162.5 160.0,162.5 162.0,162.4 164.0,162.3 166.0,162.3 168.0,162.2 170.0,162.2 172.0,162.2 174.0,162.1 176.0,162.1 178.0,162.1 180.0,162.0 182.0,162.0 184.0,162.0 186.0,162.0 188.0,162.0 190.0,162.0 192.0,162.1 194.0,162.2 196.0,162.3 198.0,162.5 200.0,162.7 202.0,162.9 204.0,163.2 206.0,163.5 208.0,163.9 210.0,164.3 212.0,164.7 214.0,165.2 216.0,165.7 218.0,166.2 220.0,166.8 222.0,167.4 224.0,168.1 226.0,168.7 228.0,169.5 230.0,170.2 232.0,171.0 234.0,171.9 236.0,172.7 238.0,173.6 240.0,174.6 242.0,175.5 244.0,176.6 246.0,177.6 248.0,178.7 250.0,179.8 252.0,181.0 254.0,182.2 256.0,183.4 258.0,184.6 260.0,185.9 262.0,187.3 264.0,188.6 266.0,190.0 268.0,191.5 270.0,192.9 272.0,194.5 274.0,196.0 276.0,197.6 278.0,199.2 280.0,200.8 282.0,202.5 284.0,204.2 286.0,206.0 288.0,207.8 290.0,209.6 292.0,211.4 294.0,213.3 296.0,215.2 298.0,217.2 300.0,219.2 302.0,221.2 304.0,223.2 306.0,225.3 308.0,227.5 310.0,229.6 312.0,231.8 314.0,234.0 316.0,236.3 318.0,238.6 320.0,240.9 322.0,243.2 324.0,245.6 326.0,248.1 328.0,250.5 330.0,253.0 332.0,255.5 334.0,258.1 336.0,260.6 338.0,263.3 340.0,265.9 342.0,268.6 344.0,271.3 346.0,274.0 348.0,276.8 350.0,279.6 352.0,282.5 354.0,285.4 356.0,288.3 358.0,291.2 360.0,294.2 362.0,297.2 364.0,300.2 366.0,303.3 368.0,306.4 370.0,309.5 372.0,312.6" fill="none" stroke="#e8590c" stroke-width="4" stroke-linecap="round"/>
+<text x="96" y="196" font-size="16" font-weight="bold" fill="#c2410c">Bullet path</text>
+<circle cx="188.0" cy="162" r="7" fill="#e8590c" stroke="#2f3a2b" stroke-width="2"/>
+<line x1="188" y1="154" x2="188" y2="117" stroke="#2f3a2b" stroke-width="1.4"/><rect x="125.0" y="68.0" width="126.0" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="188" y="88.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Zero</text>
+<text x="188" y="108" font-size="15" fill="#2f3a2b" text-anchor="middle">91 m (100 yd)</text>
+<line x1="280.0" y1="162" x2="280.0" y2="200.8" stroke="#2f3a2b" stroke-width="2"/><circle cx="280.0" cy="200.8" r="5" fill="#2f3a2b"/>
+<line x1="276" y1="204.83" x2="265.595" y2="236" stroke="#2f3a2b" stroke-width="1.4"/><rect x="126.4" y="224.0" width="139.2" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="196" y="243" font-size="15" fill="#2f3a2b" text-anchor="middle">183 m (200 yd)</text>
+<text x="196" y="261.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">about 10 cm low</text>
+<line x1="372.0" y1="162" x2="372.0" y2="312.6" stroke="#2f3a2b" stroke-width="2"/><circle cx="372.0" cy="312.6" r="5" fill="#2f3a2b"/>
+<rect x="252.8" y="324.6" width="139.2" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="322.405" y="343.6" font-size="15" fill="#2f3a2b" text-anchor="middle">274 m (300 yd)</text>
+<text x="322.405" y="362.1" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">about 37 cm low</text>
+<rect x="8" y="402.63808" width="384" height="78" rx="8" fill="#e6ebdc" stroke="#8a9a6b" stroke-width="1.2"/>
+<text x="18" y="425.638" font-size="15" fill="#2f3a2b">Source: Federal Power Shok 150 gr, 2,820 fps,</text>
+<text x="18" y="446.638" font-size="15" fill="#2f3a2b">factory test barrel. Your 20 in barrel is slower:</text>
+<text x="18" y="467.638" font-size="15" font-weight="bold" fill="#2f3a2b">expect more drop. Confirm on paper.</text>
 </svg>

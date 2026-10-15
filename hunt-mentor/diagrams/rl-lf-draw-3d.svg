@@ -1,13 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Sketch of a draw in the Hunt Map 3D view. Two slopes meet in a small valley that runs toward you. A blue creek and a strip of brush and trees fill the bottom. Contour lines bend uphill, away from you, where they cross the draw.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Draw in 3D</text><rect x="0" y="36" width="400" height="70" fill="#e3ecf3"/><text x="388" y="24" font-size="13" fill="#2f3a2b" text-anchor="end">Hunt Map 3D view (sketch)</text>
-  <path d="M0 120 Q 120 96 190 150 L205 268 L0 268 Z" fill="#e9edd9"/>
-  <path d="M400 120 Q 280 96 214 150 L205 268 L400 268 Z" fill="#a9b68e"/>
-  <path d="M190 150 Q 202 140 214 150 L205 268 Z" fill="#b9c79a"/>
-  <path d="M0 196 Q 130 186 196 160 L202 152 L208 160 Q 280 186 400 196" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
-  <path d="M0 250 Q 130 240 199 212 L204 204 L209 212 Q 280 240 400 250" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
-  <path d="M202 140 C 204 180, 200 220, 205 268" stroke="#4a7fb0" stroke-width="4" fill="none"/>
-  <path d="M186 174.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="184.65" y="201.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M220 178.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="218.65" y="205.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M192 214.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="190.65" y="241.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M216 218.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="214.65" y="245.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M200 148.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="198.65" y="175.4" width="2.7" height="4.5" fill="#6b4f35"/>
-  <rect x="168" y="116" width="226" height="24" rx="6" fill="#e8590c"/><text x="281.0" y="133" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Draw: brush, water, shade</text>
-  <text x="200" y="292" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Lines bend up (away from you) in the draw</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 302" font-family="sans-serif" role="img" aria-label="Sketch of a draw in the Hunt Map 3D view. Two slopes, a sunny side and a shady side, meet in a small valley that runs toward you. A blue creek and a strip of brush and trees fill the bottom. Contour lines bend uphill, away from you, where they cross the draw. Label: draw, brush, water and shade.">
+<rect width="400" height="302" fill="#fffaf0"/>
+<text x="12" y="26" font-size="18" font-weight="bold" fill="#2f3a2b">Draw in 3D</text>
+<text x="388" y="26" font-size="14" fill="#6b5b4b" text-anchor="end">Hunt Map 3D view (sketch)</text>
+<rect x="0" y="38" width="400" height="232" fill="#e3ecf3"/>
+<path d="M0 112 C 80 96, 150 100, 196 126 C 200 170, 196 220, 204 270 L0 270z" fill="#ecebcf"/>
+<path d="M196 126 C 250 100, 320 94, 400 110 L400 270 L204 270 C 196 220, 200 170, 196 126z" fill="#a3b086"/>
+<path d="M184 134 C 188 170, 182 220, 180 270 L232 270 C 222 220, 210 170, 210 132 C 204 128, 192 128, 184 134z" fill="#c9cfa6" opacity=".9"/>
+<path d="M0 178 C 80 180, 150 178, 182 161 L198 152 L214 161 C 250 178, 330 176, 400 174" fill="none" stroke="#8b5a2b" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M0 220 C 80 222, 150 222, 184 205 L200 196 L216 205 C 250 222, 330 218, 400 216" fill="none" stroke="#8b5a2b" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M0 256 C 80 258, 150 262, 185 245 L201 236 L217 245 C 250 262, 330 254, 400 252" fill="none" stroke="#8b5a2b" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M0 112 C 80 96, 150 100, 196 126 C 250 100, 320 94, 400 110" fill="none" stroke="#2f3a2b" stroke-width="3.2"/>
+<circle cx="186" cy="160" r="6" fill="#6f8a4a"/><circle cx="190.8" cy="162" r="4.8" fill="#6f8a4a"/><circle cx="181.2" cy="162" r="4.5" fill="#6f8a4a"/>
+<circle cx="210" cy="170" r="6" fill="#6f8a4a"/><circle cx="214.8" cy="172" r="4.8" fill="#6f8a4a"/><circle cx="205.2" cy="172" r="4.5" fill="#6f8a4a"/>
+<circle cx="182" cy="206" r="8" fill="#6f8a4a"/><circle cx="188.4" cy="208" r="6.4" fill="#6f8a4a"/><circle cx="175.6" cy="208" r="6.0" fill="#6f8a4a"/>
+<circle cx="222" cy="214" r="8" fill="#6f8a4a"/><circle cx="228.4" cy="216" r="6.4" fill="#6f8a4a"/><circle cx="215.6" cy="216" r="6.0" fill="#6f8a4a"/>
+<circle cx="176" cy="252" r="9" fill="#6f8a4a"/><circle cx="183.2" cy="254" r="7.2" fill="#6f8a4a"/><circle cx="168.8" cy="254" r="6.8" fill="#6f8a4a"/>
+<circle cx="230" cy="256" r="9" fill="#6f8a4a"/><circle cx="237.2" cy="258" r="7.2" fill="#6f8a4a"/><circle cx="222.8" cy="258" r="6.8" fill="#6f8a4a"/>
+<g transform="translate(214 150) scale(0.8)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(190 186) scale(0.9)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(220 236) scale(1.1)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(168 230) scale(1.0)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<path d="M198 132 C 202 170, 196 220, 204 270" stroke="#4a7fb0" stroke-width="4" fill="none"/>
+<g transform="translate(340 210) scale(1.0)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(366 240) scale(1.1)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(312 258) scale(1.0)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<circle cx="40" cy="70" r="15" fill="#f2c14e"/><path d="M40 70 m12 0 l6 0" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/><path d="M40 70 m-12 0 l-6 0" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/><path d="M40 70 m0 12 l0 6" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/><path d="M40 70 m0 -12 l0 -6" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/><path d="M40 70 m8.399999999999999 8.399999999999999 l4.199999999999999 4.199999999999999" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/><path d="M40 70 m-8.399999999999999 8.399999999999999 l-4.199999999999999 4.199999999999999" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/><path d="M40 70 m8.399999999999999 -8.399999999999999 l4.199999999999999 -4.199999999999999" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/><path d="M40 70 m-8.399999999999999 -8.399999999999999 l-4.199999999999999 -4.199999999999999" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="204" y1="176" x2="230" y2="73" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="204" cy="176" r="2.6" fill="#2f3a2b"/>
+<rect x="184.8" y="46.0" width="210.5" height="27.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="290" y="65" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Draw: brush, water, shade</text>
+<rect x="45.2" y="124.0" width="93.6" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="92" y="143" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">sunny side</text>
+<rect x="279.2" y="124.0" width="93.6" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="326" y="143" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">shady side</text>
+<text x="200" y="292" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Lines bend up (away from you) in the draw</text>
 </svg>

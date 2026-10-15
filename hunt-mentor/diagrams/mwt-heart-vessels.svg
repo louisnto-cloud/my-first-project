@@ -1,4 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Front view of a deer chest cut just behind the shoulders. The spine is at the top with the aorta, the main artery, just below it. Two large lungs fill the left and right of the chest. The heart sits low in the middle between them, near the bottom of the chest." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="22" font-size="17" fill="#23261f" text-anchor="middle" font-weight="bold">Chest cut behind the shoulder (front view)</text><ellipse cx="200" cy="150" rx="110" ry="105" fill="#e9dcc2" stroke="#6b4f35" stroke-width="3"/><path d="M110 90 Q 200 70 290 90" fill="none" stroke="#d6c4a2" stroke-width="2"/><path d="M114 120 Q 200 100 286 120" fill="none" stroke="#d6c4a2" stroke-width="2"/><path d="M118 150 Q 200 130 282 150" fill="none" stroke="#d6c4a2" stroke-width="2"/><path d="M122 180 Q 200 160 278 180" fill="none" stroke="#d6c4a2" stroke-width="2"/><path d="M126 210 Q 200 190 274 210" fill="none" stroke="#d6c4a2" stroke-width="2"/><rect x="185" y="46" width="30" height="26" rx="6" fill="#f4efe4" stroke="#23261f" stroke-width="2"/><circle cx="200" cy="86" r="9" fill="#9b2c1c"/><ellipse cx="148" cy="148" rx="44" ry="66" fill="#f2b48e" stroke="#e8590c" stroke-width="2"/><ellipse cx="252" cy="148" rx="44" ry="66" fill="#f2b48e" stroke="#e8590c" stroke-width="2"/><ellipse cx="200" cy="214" rx="26" ry="30" fill="#9b2c1c"/><text x="232" y="56" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Spine</text><text x="214" y="100" font-size="14" fill="#9b2c1c" text-anchor="start" font-weight="bold">Aorta (main artery)</text><text x="148" y="152" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Lung</text><text x="252" y="152" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Lung</text><text x="200" y="219" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Heart</text><text x="200" y="284" font-size="14" fill="#6b4f35" text-anchor="middle">Heart sits low. Big vessels run under the spine.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 296" font-family="sans-serif" role="img" aria-label="Front view of a deer chest cut just behind the shoulders. The spine is at the top, with the backstrap muscles either side, and the aorta, the main artery, just below it. Two large lungs fill the left and right of the chest inside the ribs. The heart sits low in the middle between them, near the bottom of the chest, roughly level with the elbows. Caption: heart sits low, big vessels run under the spine.">
+<rect width="400" height="296" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Chest cut behind the shoulder (front view)</text>
+<path d="M200 46 C240 46 274 62 278 100 C282 140 266 190 236 226 C222 242 212 250 200 252 C188 250 178 242 164 226 C134 190 118 140 122 100 C126 62 160 46 200 46z" fill="#b98b5e" stroke="#6b4f35" stroke-width="2"/>
+<path d="M200 54 C236 54 266 68 269 102 C272 140 258 186 230 220 C218 234 210 241 200 243 C190 241 182 234 170 220 C142 186 128 140 131 102 C134 68 164 54 200 54z" fill="#c96f63"/>
+<path d="M200 92 C232 92 256 104 258 128 C260 160 248 192 226 214 C216 224 208 230 200 231 C192 230 184 224 174 214 C152 192 140 160 142 128 C144 104 168 92 200 92z" fill="none" stroke="#ecdfc3" stroke-width="7" stroke-dasharray="14 5"/>
+<path d="M200 92 C232 92 256 104 258 128 C260 160 248 192 226 214 C216 224 208 230 200 231 C192 230 184 224 174 214 C152 192 140 160 142 128 C144 104 168 92 200 92z" fill="#e9d3c4"/>
+<ellipse cx="178" cy="74" rx="20" ry="13" fill="#a94f45"/><ellipse cx="222" cy="74" rx="20" ry="13" fill="#a94f45"/>
+<rect x="196" y="52" width="8" height="30" rx="3" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.2"/>
+<circle cx="200" cy="90" r="13" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.5"/><circle cx="200" cy="90" r="4" fill="#d9c49b"/>
+<path d="M196 108 C186 104 162 106 154 126 C146 150 150 184 170 204 C180 214 190 212 194 200 C190 182 190 150 196 108z" fill="#f2a99a" stroke="#c96f63" stroke-width="1.5"/>
+<path d="M204 108 C214 104 238 106 246 126 C254 150 250 184 230 204 C220 214 210 212 206 200 C210 182 210 150 204 108z" fill="#f2a99a" stroke="#c96f63" stroke-width="1.5"/>
+<path d="M200 160 C214 156 226 166 224 184 C222 204 210 218 200 228 C190 218 178 204 176 184 C174 166 186 156 200 160z" fill="#9b2226" stroke="#6e1418" stroke-width="1.5"/>
+<circle cx="200" cy="113" r="7" fill="#b3261e" stroke="#6e1418" stroke-width="1.5"/>
+<rect x="194" y="236" width="12" height="9" rx="3" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1"/>
+<line x1="188" y1="90" x2="91.0848" y2="80" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="188" cy="90" r="2.6" fill="#2f3a2b"/>
+<rect x="32.9" y="68.0" width="58.2" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="62" y="88.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Spine</text>
+<line x1="193" y1="114" x2="114.197" y2="138" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="193" cy="114" r="2.6" fill="#2f3a2b"/>
+<rect x="9.8" y="118.0" width="104.4" height="49.0" rx="5" fill="#fffaf0" stroke="#c0392b" stroke-width="1.2"/>
+<text x="62" y="138.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Aorta</text>
+<text x="62" y="158" font-size="15" fill="#2f3a2b" text-anchor="middle">main artery</text>
+<line x1="238" y1="144" x2="311.312" y2="124" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="238" cy="144" r="2.6" fill="#2f3a2b"/>
+<rect x="311.3" y="112.0" width="53.4" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="338" y="132.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Lung</text>
+<line x1="212" y1="196" x2="309.771" y2="199" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="212" cy="196" r="2.6" fill="#2f3a2b"/>
+<rect x="309.8" y="186.0" width="56.5" height="29.0" rx="5" fill="#fffaf0" stroke="#9b2226" stroke-width="1.2"/>
+<text x="338" y="206.5" font-size="16" font-weight="bold" fill="#9b2226" text-anchor="middle">Heart</text>
+<line x1="166" y1="170" x2="88.688" y2="208" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="166" cy="170" r="2.6" fill="#2f3a2b"/>
+<rect x="35.3" y="196.0" width="53.4" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="62" y="216.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Lung</text>
+<text x="200" y="280" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Heart sits low. Big vessels run under the spine.</text>
 </svg>
