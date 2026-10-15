@@ -32,18 +32,7 @@
 <text x="330" y="188" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">all year</text>
 <text x="14" y="260" font-size="17" font-weight="bold" fill="#2f3a2b">Region 3 season (98%)</text>
 <text x="386" y="260" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="end">10 a day</text>
-<rect x="14.0" y="270" width="31.6" height="22" fill="#efe8d6"/>
-<rect x="45.6" y="270" width="28.5" height="22" fill="#f8f3e6"/>
-<rect x="74.1" y="270" width="31.6" height="22" fill="#efe8d6"/>
-<rect x="105.7" y="270" width="30.6" height="22" fill="#f8f3e6"/>
-<rect x="136.3" y="270" width="31.6" height="22" fill="#efe8d6"/>
-<rect x="167.9" y="270" width="30.6" height="22" fill="#f8f3e6"/>
-<rect x="198.5" y="270" width="31.6" height="22" fill="#efe8d6"/>
-<rect x="230.1" y="270" width="31.6" height="22" fill="#f8f3e6"/>
-<rect x="261.7" y="270" width="30.6" height="22" fill="#efe8d6"/>
-<rect x="292.2" y="270" width="31.6" height="22" fill="#f8f3e6"/>
-<rect x="323.8" y="270" width="30.6" height="22" fill="#efe8d6"/>
-<rect x="354.4" y="270" width="31.6" height="22" fill="#f8f3e6"/>
+<rect x="14" y="270" width="372" height="22" fill="#efe8d6"/>
 <rect x="14" y="271" width="122.3" height="20" rx="3" fill="#2f6e3b"/>
 <rect x="230.1" y="271" width="155.9" height="20" rx="3" fill="#2f6e3b"/>
 <text x="22" y="286" font-size="14" font-weight="bold" fill="#fffaf0">to Apr 30</text>

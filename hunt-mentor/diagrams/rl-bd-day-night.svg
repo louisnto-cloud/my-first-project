@@ -33,7 +33,7 @@
 <path d="M75 235 l-2 -6 M75 235 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
 <path d="M14 255 l-2 -6 M14 255 l2 -7" stroke="#9a9a5e" stroke-width="1.2"/>
 </g>
-<rect x="8" y="40" width="188" height="30" rx="10" fill="#f2a516"/><rect x="8" y="60" width="188" height="10" fill="#f2a516"/>
+<path d="M8 70 V50 a10 10 0 0 1 10 -10 H186 a10 10 0 0 1 10 10 V70z" fill="#f2a516"/>
 <text x="102" y="61" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cold day</text>
 <text x="102" y="284" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">sun on rock</text>
 <text x="102" y="304" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">gathers heat</text>
@@ -62,18 +62,18 @@
 <rect x="228" y="120" width="8" height="112" fill="#5a4330"/>
 <rect x="296" y="120" width="8" height="112" fill="#5a4330"/>
 <rect x="362" y="120" width="8" height="112" fill="#5a4330"/>
-<path d="M214 96 L240 140 L188 140z" fill="#2f5236"/>
-<path d="M246 92 L272 136 L220 136z" fill="#2f5236"/>
-<path d="M282 98 L308 142 L256 142z" fill="#2f5236"/>
-<path d="M318 90 L344 134 L292 134z" fill="#2f5236"/>
-<path d="M352 96 L378 140 L326 140z" fill="#2f5236"/>
-<path d="M388 92 L414 136 L362 136z" fill="#2f5236"/>
+<path d="M226 96 L252 140 L200 140z" fill="#2f5236"/>
+<path d="M256 92 L282 136 L230 136z" fill="#2f5236"/>
+<path d="M288 98 L314 142 L262 142z" fill="#2f5236"/>
+<path d="M320 90 L346 134 L294 134z" fill="#2f5236"/>
+<path d="M348 96 L374 140 L322 140z" fill="#2f5236"/>
+<path d="M370 92 L396 136 L344 136z" fill="#2f5236"/>
 <path d="M204 128 Q300 140 392 128 V146 Q300 156 204 146z" fill="#2a4a31"/>
 <path d="M290 188 C286 176 294 164 290 156 Q296 142 301 156 C304 166 298 174 302 180" fill="none" stroke="#e8590c" stroke-width="2.4"/><path d="M302 188 l-5 -9 h10z" fill="#e8590c"/>
 <path d="M326 188 C322 176 330 164 326 156 Q332 142 337 156 C340 166 334 174 338 180" fill="none" stroke="#e8590c" stroke-width="2.4"/><path d="M338 188 l-5 -9 h10z" fill="#e8590c"/>
 <g transform="translate(322 234) scale(1.5 1.5)"><ellipse cx="4" cy="-6" rx="14" ry="6.5" fill="#8a6848"/><path d="M-8 -8 L-12 -20 L-7 -21 L-3 -10z" fill="#8a6848"/><path d="M-12 -20 C-16 -21 -19 -18 -19 -16 L-14 -15 C-12 -16 -10 -17 -9 -19z" fill="#8a6848"/><path d="M-11 -21 L-15 -27 L-9 -22z M-9 -21 L-6 -27 L-7 -21z" fill="#8a6848"/><ellipse cx="16" cy="-6" rx="2.4" ry="3" fill="#f3ead8"/><path d="M-6 -1 H8" stroke="#5a3e26" stroke-width="2" stroke-linecap="round"/></g>
 </g>
-<rect x="204" y="40" width="188" height="30" rx="10" fill="#1b2436"/><rect x="204" y="60" width="188" height="10" fill="#1b2436"/>
+<path d="M204 70 V50 a10 10 0 0 1 10 -10 H382 a10 10 0 0 1 10 10 V70z" fill="#1b2436"/>
 <text x="298" y="61" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Clear cold night</text>
 <text x="298" y="284" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">canopy</text>
 <text x="298" y="304" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">holds heat in</text>

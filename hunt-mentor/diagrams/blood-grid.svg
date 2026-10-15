@@ -5,13 +5,8 @@
 <g clip-path="url(#blood-grid-c)"><rect x="8" y="42" width="384" height="222" fill="#f3f6f8"/>
 <path d="M371 249 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M33 64 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
-<path d="M326 203 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
-<path d="M264 112 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
-<path d="M240 176 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
-<path d="M231 80 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M174 130 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M284 259 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
-<path d="M369 162 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M179 103 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M26 52 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M187 114 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
@@ -20,18 +15,12 @@
 <path d="M101 51 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M134 75 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M204 260 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
-<path d="M266 85 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
-<path d="M348 217 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M288 240 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
-<path d="M299 215 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M145 256 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
-<path d="M374 80 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
-<path d="M296 199 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M185 159 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M196 244 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M200 224 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M145 235 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
-<path d="M350 145 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M225 243 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
 <path d="M250 268 C290 236 330 236 400 216" stroke="#4a7fb0" stroke-width="9" fill="none" stroke-linecap="round"/>
 </g>
@@ -53,11 +42,13 @@
 <text x="312" y="75" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">LAST BLOOD</text>
 <text x="312" y="93" font-size="15" fill="#2f3a2b" text-anchor="middle">flag it, return here</text>
 <line x1="162" y1="144" x2="237.59" y2="93" stroke="#2f3a2b" stroke-width="1.4"/>
-<rect x="94.8" y="172.0" width="110.5" height="26.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
-<text x="150" y="190" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1: circle 20 m</text>
-<rect x="94.8" y="236.0" width="110.5" height="26.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
-<text x="150" y="254" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2: circle 40 m</text>
-<line x1="300" y1="158" x2="330" y2="206" stroke="#2f3a2b" stroke-width="2.6" marker-end="url(#blood-grid-ah)"/>
+<rect x="244.0" y="162.0" width="110.5" height="26.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="299.236" y="180" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1: circle 20 m</text>
+<line x1="184" y1="150" x2="244" y2="174" stroke="#2f3a2b" stroke-width="1.4"/>
+<rect x="244.0" y="198.0" width="110.5" height="26.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="299.236" y="216" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2: circle 40 m</text>
+<line x1="224" y1="184" x2="244" y2="210" stroke="#2f3a2b" stroke-width="1.4"/>
+<line x1="372" y1="152" x2="372" y2="214" stroke="#2f3a2b" stroke-width="2.6" marker-end="url(#blood-grid-ah)"/>
 <rect x="241.5" y="112.0" width="153.0" height="43.0" rx="5" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.2"/>
 <text x="318" y="130" font-size="14" font-weight="bold" fill="#2c5d86" text-anchor="middle">Downhill and water:</text>
 <text x="318" y="147" font-size="14" font-weight="bold" fill="#2c5d86" text-anchor="middle">check these first</text>
