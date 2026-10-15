@@ -146,6 +146,6 @@ hunt-mentor/
 - 2026-10-12: Diagram redraw batch 1 (20 worst, mix of field guide A and infographic B) published; owner approved.
 - 2026-10-12 PAUSED by owner. State:
   - Live: everything up to diagram batch 1 and the Rule Book "answers first" rewrite.
-  - Saved, NOT published (awaiting owner "go"): diagram batch 2 (50 diagrams, ranks 21 to 70 of the diagram audit). Before versions kept in the session scratchpad only.
+  - Saved, NOT published: diagram batch 2 (50 diagrams). Owner 2026-10-15: HOLD until the AI images (IMAGE-PROMPTS.md) are in, then publish together.
   - Next: owner reviews batch 2, then batch 3 (next 50, start with field dressing steps sk-gut-1, 2, 4 to 8 so the sequence matches).
   - Open owner decisions: AI images (allow for scenes only, or keep all hand drawn); 13 "ask a conservation officer" rules; 42 VERIFY items in moose, elk, bear, skills Masterclasses.
