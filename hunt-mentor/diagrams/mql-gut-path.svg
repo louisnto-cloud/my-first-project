@@ -1,30 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Flow chart of a quail digestive tract. Beak picks seeds and leaves. Crop stores a meal. Glandular stomach adds acid. Gizzard grinds food with grit. Gut and two caeca absorb and ferment. Vent passes droppings. Poultry anatomy, 70 percent. Field trick, a Tip: open the crop after the hunt to see what the birds eat right now.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Food path: crop and gizzard</text>
-<rect x="14" y="42" width="118" height="74" rx="8" fill="#dfe6d3"/>
-<text x="73" y="72" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Beak</text>
-<text x="73" y="96" font-size="14" fill="#2f3a2b" text-anchor="middle">picks seeds, leaves</text>
-<line x1="132" y1="79" x2="142" y2="79" stroke="#2f3a2b" stroke-width="2"/><polygon points="142,79 133.0,83.3 133.0,74.7" fill="#2f3a2b"/>
-<rect x="142" y="42" width="118" height="74" rx="8" fill="#e8590c"/>
-<text x="201" y="72" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Crop</text>
-<text x="201" y="96" font-size="14" fill="#fff" text-anchor="middle">stores a meal</text>
-<line x1="260" y1="79" x2="270" y2="79" stroke="#2f3a2b" stroke-width="2"/><polygon points="270,79 261.0,83.3 261.0,74.7" fill="#2f3a2b"/>
-<rect x="270" y="42" width="118" height="74" rx="8" fill="#dfe6d3"/>
-<text x="329" y="72" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Stomach</text>
-<text x="329" y="96" font-size="14" fill="#2f3a2b" text-anchor="middle">acid starts work</text>
-<rect x="14" y="138" width="118" height="74" rx="8" fill="#e8590c"/>
-<text x="73" y="168" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Gizzard</text>
-<text x="73" y="192" font-size="14" fill="#fff" text-anchor="middle">grinds with grit</text>
-<line x1="132" y1="175" x2="142" y2="175" stroke="#2f3a2b" stroke-width="2"/><polygon points="142,175 133.0,179.3 133.0,170.7" fill="#2f3a2b"/>
-<rect x="142" y="138" width="118" height="74" rx="8" fill="#dfe6d3"/>
-<text x="201" y="168" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Gut + 2 caeca</text>
-<text x="201" y="192" font-size="14" fill="#2f3a2b" text-anchor="middle">absorbs, ferments</text>
-<line x1="260" y1="175" x2="270" y2="175" stroke="#2f3a2b" stroke-width="2"/><polygon points="270,175 261.0,179.3 261.0,170.7" fill="#2f3a2b"/>
-<rect x="270" y="138" width="118" height="74" rx="8" fill="#dfe6d3"/>
-<text x="329" y="168" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Vent</text>
-<text x="329" y="192" font-size="14" fill="#2f3a2b" text-anchor="middle">droppings out</text>
-<line x1="330" y1="116" x2="330" y2="138" stroke="#2f3a2b" stroke-width="2"/><polygon points="330,138 325.7,129.0 334.3,129.0" fill="#2f3a2b"/>
-<rect x="10" y="236" width="380" height="56" rx="8" fill="#2f3a2b"/>
-<text x="200" y="259" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Field trick: open the crop after the hunt.</text>
-<text x="200" y="281" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">It shows what they eat right now (Tip)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" font-family="sans-serif" role="img" aria-label="Side view of a quail with its food path drawn inside, numbered. 1 Beak picks seeds and leaves. 2 Crop, a pouch at the base of the neck, stores a meal. 3 Glandular stomach adds acid. 4 Gizzard grinds food with grit. 5 Gut and two caeca absorb and ferment. 6 Vent passes droppings. Poultry anatomy, 70 percent. Field trick, a Tip: open the crop after the hunt to see what the birds eat right now.">
+<rect width="400" height="480" fill="#fffaf0"/>
+<text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Food path: crop and gizzard</text>
+<g transform="translate(24 -16) scale(0.82)">
+<path d="M106 214 C112 268 170 300 238 298 C300 296 344 266 352 226 L376 206 L350 200 C346 160 300 132 236 128 C186 126 150 136 132 150 C124 140 118 132 114 124 L90 150 C96 166 102 186 106 214z" fill="#efe4d0" stroke="#7a5c3e" stroke-width="2"/>
+<circle cx="92" cy="116" r="30" fill="#efe4d0" stroke="#7a5c3e" stroke-width="2"/>
+<path d="M64 112 L46 120 L64 126z" fill="#4a3a2a"/><circle cx="82" cy="108" r="3" fill="#2a1e14"/>
+<path d="M96 86 C94 72 84 64 72 66 C80 70 84 76 86 86z" fill="#3a2e24"/>
+<path d="M210 296 L206 318 M240 296 L244 318 M198 318 h16 M236 318 h16" stroke="#8a6a4a" stroke-width="3" stroke-linecap="round"/>
+<path d="M64 122 C86 144 102 160 116 176" fill="none" stroke="#c98a6a" stroke-width="6" stroke-linecap="round"/>
+<path d="M138 192 C162 204 184 214 202 228" fill="none" stroke="#c98a6a" stroke-width="6" stroke-linecap="round"/>
+<ellipse cx="128" cy="184" rx="18" ry="14" fill="#f0c766" stroke="#b8902e" stroke-width="1.6"/>
+<ellipse cx="214" cy="236" rx="15" ry="8" fill="#d9776f" stroke="#a24a44" stroke-width="1.4" transform="rotate(32 214 236)"/>
+<path d="M318 244 C300 234 282 228 262 230" fill="none" stroke="#6f7d4f" stroke-width="7" stroke-linecap="round"/>
+<path d="M318 253 C300 243 282 237 262 239" fill="none" stroke="#6f7d4f" stroke-width="7" stroke-linecap="round"/>
+<path d="M262 246 C284 262 300 276 282 282 C262 288 268 266 290 270 C310 274 312 262 318 252" fill="none" stroke="#c98a6a" stroke-width="6" stroke-linecap="round"/>
+<ellipse cx="246" cy="254" rx="22" ry="17" fill="#8b5a2b"/><ellipse cx="242" cy="250" rx="9" ry="6" fill="#a9774a"/>
+<path d="M318 250 C332 246 342 238 349 230" fill="none" stroke="#c98a6a" stroke-width="6" stroke-linecap="round"/>
+<circle cx="350" cy="229" r="4.5" fill="#4a3a2a"/>
+</g>
+<circle cx="51.9" cy="69.3" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="51.9" y="74.3" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<circle cx="129.0" cy="116.8" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="129" y="121.8" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<circle cx="184.7" cy="190.6" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="184.7" y="195.6" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<circle cx="225.7" cy="216.9" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="225.7" y="221.9" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<circle cx="263.4" cy="161.1" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="263.4" y="166.1" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text>
+<circle cx="325.8" cy="179.2" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="325.8" y="184.2" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">6</text>
+<circle cx="25.0" cy="267.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="25" y="272" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<text x="44" y="264" font-size="16" font-weight="bold" fill="#2f3a2b">Beak</text>
+<text x="44" y="283" font-size="15" fill="#2f3a2b">picks seeds, leaves</text>
+<circle cx="25.0" cy="315.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="25" y="320" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="44" y="312" font-size="16" font-weight="bold" fill="#2f3a2b">Crop</text>
+<text x="44" y="331" font-size="15" fill="#2f3a2b">stores a meal</text>
+<circle cx="25.0" cy="363.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="25" y="368" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="44" y="360" font-size="16" font-weight="bold" fill="#2f3a2b">Stomach</text>
+<text x="44" y="379" font-size="15" fill="#2f3a2b">acid starts work</text>
+<circle cx="221.0" cy="267.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="221" y="272" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<text x="240" y="264" font-size="16" font-weight="bold" fill="#2f3a2b">Gizzard</text>
+<text x="240" y="283" font-size="15" fill="#2f3a2b">grinds with grit</text>
+<circle cx="221.0" cy="315.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="221" y="320" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text>
+<text x="240" y="312" font-size="16" font-weight="bold" fill="#2f3a2b">Gut + 2 caeca</text>
+<text x="240" y="331" font-size="15" fill="#2f3a2b">absorbs, ferments</text>
+<circle cx="221.0" cy="363.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="221" y="368" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">6</text>
+<text x="240" y="360" font-size="16" font-weight="bold" fill="#2f3a2b">Vent</text>
+<text x="240" y="379" font-size="15" fill="#2f3a2b">droppings out</text>
+<rect x="8" y="396" width="384" height="56" rx="9" fill="#2f3a2b"/>
+<text x="200" y="419" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Field trick: open the crop after the hunt.</text>
+<text x="200" y="440" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">It shows what they eat right now (Tip)</text>
+<text x="200" y="472" font-size="14" fill="#6b5b4b" text-anchor="middle">Poultry anatomy (70%)</text>
 </svg>

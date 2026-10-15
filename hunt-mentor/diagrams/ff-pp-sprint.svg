@@ -1,4 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A 10 day sprint before the first hunts. Day 1: confirm zero at 100 m with 3 shots. Days 2 to 4: 10 minutes of dry fire, sticks and get downs. Day 5: range with a cold plate shot, then 150 and 200 m. Days 6 to 8: dry fire and pattern the shotgun once. Day 9: gear check and inspect rounds. Day 10: rest, pack, sleep.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">First hunts soon: a 10 day sprint</text><rect x="14" y="44" width="372" height="32" rx="8" fill="#dfe6d3" stroke="none" stroke-width="2"/><rect x="14" y="44" width="8" height="34" rx="3" fill="#e8590c" stroke="none" stroke-width="2"/><text x="32" y="66" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="start">Day 1</text><text x="140" y="66" font-size="14" fill="#23261f" text-anchor="start">Confirm zero, 100 m, 3 shots</text><rect x="14" y="82" width="372" height="32" rx="8" fill="#dfe6d3" stroke="none" stroke-width="2"/><rect x="14" y="82" width="8" height="34" rx="3" fill="#4a7fb0" stroke="none" stroke-width="2"/><text x="32" y="104" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="start">Days 2 to 4</text><text x="140" y="104" font-size="14" fill="#23261f" text-anchor="start">Dry fire 10 min, sticks, get downs</text><rect x="14" y="120" width="372" height="32" rx="8" fill="#dfe6d3" stroke="none" stroke-width="2"/><rect x="14" y="120" width="8" height="34" rx="3" fill="#e8590c" stroke="none" stroke-width="2"/><text x="32" y="142" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="start">Day 5</text><text x="140" y="142" font-size="14" fill="#23261f" text-anchor="start">Range: cold plate, 150 and 200 m</text><rect x="14" y="158" width="372" height="32" rx="8" fill="#dfe6d3" stroke="none" stroke-width="2"/><rect x="14" y="158" width="8" height="34" rx="3" fill="#4a7fb0" stroke="none" stroke-width="2"/><text x="32" y="180" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="start">Days 6 to 8</text><text x="140" y="180" font-size="14" fill="#23261f" text-anchor="start">Dry fire, pattern shotgun once</text><rect x="14" y="196" width="372" height="32" rx="8" fill="#dfe6d3" stroke="none" stroke-width="2"/><rect x="14" y="196" width="8" height="34" rx="3" fill="#8a9a6b" stroke="none" stroke-width="2"/><text x="32" y="218" font-size="15" font-weight="bold" fill="#8a9a6b" text-anchor="start">Day 9</text><text x="140" y="218" font-size="14" fill="#23261f" text-anchor="start">Gear check, rounds inspected</text><rect x="14" y="234" width="372" height="32" rx="8" fill="#dfe6d3" stroke="none" stroke-width="2"/><rect x="14" y="234" width="8" height="34" rx="3" fill="#2f3a2b" stroke="none" stroke-width="2"/><text x="32" y="256" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Day 10</text><text x="140" y="256" font-size="14" fill="#23261f" text-anchor="start">Rest. Pack. Sleep.</text><text x="200.0" y="290" font-size="13" fill="#2f3a2b" text-anchor="middle">Opinion: a plan, not a rule</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 406" font-family="sans-serif" role="img" aria-label="A 10 day sprint before the first hunts, an opinion: a plan, not a rule. Day 1: confirm zero at 100 m with 3 shots. Days 2 to 4: 10 minutes of dry fire, sticks and get downs. Day 5: range with a cold plate shot, then 150 and 200 m. Days 6 to 8: dry fire and pattern the shotgun once. Day 9: gear check and inspect rounds. Day 10: rest, pack, sleep.">
+<rect width="400" height="406" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">First hunts soon: a 10 day sprint</text>
+<rect x="8" y="42" width="384" height="50" rx="8" fill="#f4eedf"/>
+<rect x="8" y="42" width="104" height="50" rx="8" fill="#e8590c"/><rect x="100" y="42" width="12" height="50" fill="#e8590c"/>
+<text x="60" y="73" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Day 1</text>
+<g transform="translate(140 67.0)" fill="none" stroke="#e8590c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle r="12"/><circle r="5"/><path d="M0 -17 V-8 M0 8 V17 M-17 0 H-8 M8 0 H17"/></g>
+<text x="170" y="63" font-size="16" font-weight="bold" fill="#2f3a2b">Confirm zero</text>
+<text x="170" y="83" font-size="15" fill="#2f3a2b">100 m, 3 shots</text>
+<rect x="8" y="98" width="384" height="50" rx="8" fill="#f4eedf"/>
+<rect x="8" y="98" width="104" height="50" rx="8" fill="#4a7fb0"/><rect x="100" y="98" width="12" height="50" fill="#4a7fb0"/>
+<text x="60" y="129" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Days 2 to 4</text>
+<g transform="translate(140 123.0)" fill="none" stroke="#4a7fb0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-17 4 H6 L10 -1 H17 M-17 4 L-16 9 M-2 4 L0 9"/><path d="M-8 -9 L-4 -3 M0 -10 V-4 M8 -9 L4 -3" stroke-width="2"/></g>
+<text x="170" y="119" font-size="16" font-weight="bold" fill="#2f3a2b">Dry fire 10 min</text>
+<text x="170" y="139" font-size="15" fill="#2f3a2b">Sticks, get downs</text>
+<rect x="8" y="154" width="384" height="50" rx="8" fill="#f4eedf"/>
+<rect x="8" y="154" width="104" height="50" rx="8" fill="#e8590c"/><rect x="100" y="154" width="12" height="50" fill="#e8590c"/>
+<text x="60" y="185" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Day 5</text>
+<g transform="translate(140 179.0)" fill="none" stroke="#e8590c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="-5" y="-15" width="18" height="22" rx="1"/><circle cx="4" cy="-4" r="5"/><path d="M4 7 V15 M-17 15 H15"/><path d="M-15 -2 H-9 M-15 4 H-9" stroke-dasharray="2 2"/></g>
+<text x="170" y="175" font-size="16" font-weight="bold" fill="#2f3a2b">Range</text>
+<text x="170" y="195" font-size="15" fill="#2f3a2b">Cold plate, then 150 and 200 m</text>
+<rect x="8" y="210" width="384" height="50" rx="8" fill="#f4eedf"/>
+<rect x="8" y="210" width="104" height="50" rx="8" fill="#4a7fb0"/><rect x="100" y="210" width="12" height="50" fill="#4a7fb0"/>
+<text x="60" y="241" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Days 6 to 8</text>
+<g transform="translate(140 235.0)" fill="none" stroke="#4a7fb0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-17 4 H6 L10 -1 H17 M-17 4 L-16 9 M-2 4 L0 9"/><path d="M-8 -9 L-4 -3 M0 -10 V-4 M8 -9 L4 -3" stroke-width="2"/></g>
+<text x="170" y="231" font-size="16" font-weight="bold" fill="#2f3a2b">Dry fire</text>
+<text x="170" y="251" font-size="15" fill="#2f3a2b">Pattern the shotgun once</text>
+<rect x="8" y="266" width="384" height="50" rx="8" fill="#f4eedf"/>
+<rect x="8" y="266" width="104" height="50" rx="8" fill="#5b6b3e"/><rect x="100" y="266" width="12" height="50" fill="#5b6b3e"/>
+<text x="60" y="297" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Day 9</text>
+<g transform="translate(140 291.0)" fill="none" stroke="#5b6b3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-11 -6 C-11 -14 11 -14 11 -6 V14 H-11z"/><path d="M-6 -14 C-6 -18 6 -18 6 -14 M-11 2 H11"/><path d="M-4 8 L-1 11 L5 4" stroke-width="2.6"/></g>
+<text x="170" y="287" font-size="16" font-weight="bold" fill="#2f3a2b">Gear check</text>
+<text x="170" y="307" font-size="15" fill="#2f3a2b">Rounds inspected</text>
+<rect x="8" y="322" width="384" height="50" rx="8" fill="#f4eedf"/>
+<rect x="8" y="322" width="104" height="50" rx="8" fill="#2f3a2b"/><rect x="100" y="322" width="12" height="50" fill="#2f3a2b"/>
+<text x="60" y="353" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Day 10</text>
+<g transform="translate(140 347.0)" fill="none" stroke="#2f3a2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 -14 A13 13 0 1 0 14 6 A10 10 0 0 1 6 -14z" fill="#2f3a2b" stroke="none"/></g>
+<text x="170" y="353" font-size="16" font-weight="bold" fill="#2f3a2b">Rest. Pack. Sleep.</text>
+<text x="200" y="394" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Opinion: a plan, not a rule</text>
 </svg>

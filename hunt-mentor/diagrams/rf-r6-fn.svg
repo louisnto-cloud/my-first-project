@@ -1,46 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 412" role="img" aria-label="Six cards of First Nations notices in Region 6, requests not regulations. Haida Gwaii: complete the Haida Gwaii Pledge before you travel. Lake Babine Nation, 6-5 to 6-8: call 250 692 4780 to share parts you would leave. Teslin Tlingit Council, 6-25: Game Guardians 867 390 2532, extension 377 or 373. Gitxsan Laxyip: office 250 842 0755. Kaska Nation, 6-23 to 6-25: drop off parts you would leave. Nass Valley: the Nisga&#x27;a Government warns of many mushroom pickers in hunting season." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="412" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Notices from First Nations</text>
-<rect x="6" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
-<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
-<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Haida Gwaii</text>
-<rect x="19.0" y="82" width="22" height="28" rx="2" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/><line x1="24.0" y1="89" x2="36.0" y2="89" stroke="#2f3a2b" stroke-width="2"/><line x1="24.0" y1="95" x2="36.0" y2="95" stroke="#2f3a2b" stroke-width="2"/><line x1="24.0" y1="101" x2="36.0" y2="101" stroke="#2f3a2b" stroke-width="2"/><line x1="24.0" y1="107" x2="36.0" y2="107" stroke="#2f3a2b" stroke-width="2"/>
-<text x="52" y="88" font-size="14" fill="#23261f" text-anchor="start">Complete the Haida</text>
-<text x="52" y="106" font-size="14" fill="#23261f" text-anchor="start">Gwaii Pledge</text>
-<text x="52" y="124" font-size="14" fill="#23261f" text-anchor="start">before you travel</text>
-<rect x="204" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
-<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
-<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Lake Babine Nation</text>
-<rect x="220.0" y="81" width="16" height="30" rx="3" fill="#2f3a2b"/><rect x="223.0" y="85" width="10" height="18" fill="#ffffff"/>
-<text x="250" y="88" font-size="14" fill="#23261f" text-anchor="start">MUs 6-5 to 6-8.</text>
-<text x="250" y="106" font-size="14" fill="#23261f" text-anchor="start">Share parts you</text>
-<text x="250" y="124" font-size="14" fill="#23261f" text-anchor="start">would leave: 250</text>
-<text x="250" y="142" font-size="14" fill="#23261f" text-anchor="start">692 4780</text>
-<rect x="6" y="162" width="190" height="132" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
-<path d="M6 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
-<text x="101" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Teslin Tlingit</text>
-<text x="101" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Council</text>
-<rect x="22.0" y="221" width="16" height="30" rx="3" fill="#2f3a2b"/><rect x="25.0" y="225" width="10" height="18" fill="#ffffff"/>
-<text x="52" y="228" font-size="14" fill="#23261f" text-anchor="start">MU 6-25. Game</text>
-<text x="52" y="246" font-size="14" fill="#23261f" text-anchor="start">Guardians 867 390</text>
-<text x="52" y="264" font-size="14" fill="#23261f" text-anchor="start">2532, ext. 377 or</text>
-<text x="52" y="282" font-size="14" fill="#23261f" text-anchor="start">373</text>
-<rect x="204" y="162" width="190" height="132" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
-<path d="M204 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
-<text x="299" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Gitxsan Laxyip</text>
-<rect x="220.0" y="221" width="16" height="30" rx="3" fill="#2f3a2b"/><rect x="223.0" y="225" width="10" height="18" fill="#ffffff"/>
-<text x="250" y="228" font-size="14" fill="#23261f" text-anchor="start">Office 250 842</text>
-<text x="250" y="246" font-size="14" fill="#23261f" text-anchor="start">0755</text>
-<rect x="6" y="302" width="190" height="96" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
-<path d="M6 312 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
-<text x="101" y="320" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Kaska Nation</text>
-<text x="14" y="350" font-size="14" fill="#23261f" text-anchor="start">MUs 6-23 to 6-25. Drop</text>
-<text x="14" y="368" font-size="14" fill="#23261f" text-anchor="start">off parts you would</text>
-<text x="14" y="386" font-size="14" fill="#23261f" text-anchor="start">leave</text>
-<rect x="204" y="302" width="190" height="96" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
-<path d="M204 312 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
-<text x="299" y="320" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Nass Valley</text>
-<text x="212" y="350" font-size="14" fill="#23261f" text-anchor="start">Nisga&#x27;a Government:</text>
-<text x="212" y="368" font-size="14" fill="#23261f" text-anchor="start">many mushroom pickers</text>
-<text x="212" y="386" font-size="14" fill="#23261f" text-anchor="start">in season</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 497" font-family="sans-serif" role="img" aria-label="Six First Nations notices in Region 6, requests not regulations. Haida Gwaii: complete the Haida Gwaii Pledge before you travel. Lake Babine Nation, 6-5 to 6-8: call 250 692 4780 to share parts you would leave. Teslin Tlingit Council, 6-25: Game Guardians 867 390 2532, extension 377 or 373. Gitxsan Laxyip: office 250 842 0755. Kaska Nation, 6-23 to 6-25: drop off parts you would leave. Nass Valley: the Nisga&#x27;a Government warns of many mushroom pickers in hunting season.">
+<rect width="400" height="497" fill="#fffaf0"/>
+<rect x="8" y="8" width="384" height="30" rx="6" fill="#2f3a2b"/>
+<text x="18" y="29" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">REQUESTS FROM FIRST NATIONS</text>
+<rect x="8" y="44" width="384" height="74" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="81.0" r="20" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<g transform="translate(41.0 81.0) scale(0.8)" fill="#2f3a2b" stroke="none"><path d="M-10 -14 H5 L11 -8 V14 H-10z"/><path d="M5 -14 V-8 H11" fill="#fffaf0" opacity=".5"/><path d="M-6 -5 H6 M-6 0 H6 M-6 5 H6 M-6 10 H2" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="78" y="67" font-size="16" font-weight="bold" fill="#2f3a2b">Haida Gwaii</text>
+<text x="78" y="86" font-size="15" fill="#2f3a2b">Complete the Haida Gwaii Pledge before</text>
+<text x="78" y="105" font-size="15" fill="#2f3a2b">you travel</text>
+<circle cx="41.0" cy="157.0" r="20" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<g transform="translate(41.0 157.0) scale(0.8)" fill="#2f3a2b" stroke="none"><rect x="-8" y="-14" width="16" height="28" rx="3"/><rect x="-5.5" y="-10" width="11" height="17" fill="#fffaf0"/><circle cy="10.5" r="1.6" fill="#fffaf0"/></g>
+<text x="78" y="143" font-size="16" font-weight="bold" fill="#2f3a2b">Lake Babine Nation</text>
+<text x="78" y="162" font-size="15" fill="#2f3a2b">MUs 6-5 to 6-8. Share parts you would</text>
+<text x="78" y="181" font-size="15" fill="#2f3a2b">leave: 250 692 4780</text>
+<rect x="8" y="196" width="384" height="74" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="233.0" r="20" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<g transform="translate(41.0 233.0) scale(0.8)" fill="#2f3a2b" stroke="none"><rect x="-8" y="-14" width="16" height="28" rx="3"/><rect x="-5.5" y="-10" width="11" height="17" fill="#fffaf0"/><circle cy="10.5" r="1.6" fill="#fffaf0"/></g>
+<text x="78" y="219" font-size="16" font-weight="bold" fill="#2f3a2b">Teslin Tlingit Council</text>
+<text x="78" y="238" font-size="15" fill="#2f3a2b">MU 6-25. Game Guardians 867 390 2532,</text>
+<text x="78" y="257" font-size="15" fill="#2f3a2b">ext. 377 or 373</text>
+<circle cx="41.0" cy="299.5" r="20" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<g transform="translate(41.0 299.5) scale(0.8)" fill="#2f3a2b" stroke="none"><rect x="-8" y="-14" width="16" height="28" rx="3"/><rect x="-5.5" y="-10" width="11" height="17" fill="#fffaf0"/><circle cy="10.5" r="1.6" fill="#fffaf0"/></g>
+<text x="78" y="295" font-size="16" font-weight="bold" fill="#2f3a2b">Gitxsan Laxyip</text>
+<text x="78" y="314" font-size="15" fill="#2f3a2b">Office 250 842 0755</text>
+<rect x="8" y="329" width="384" height="74" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="366.0" r="20" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<g transform="translate(41.0 366.0) scale(0.8)" fill="#2f3a2b" stroke="none"><path d="M-12 8 L10 -8" stroke="#2f3a2b" stroke-width="4"/><circle cx="-13" cy="5" r="3.6"/><circle cx="-10" cy="11" r="3.6"/><circle cx="9" cy="-11" r="3.6"/><circle cx="13" cy="-6" r="3.6"/></g>
+<text x="78" y="352" font-size="16" font-weight="bold" fill="#2f3a2b">Kaska Nation</text>
+<text x="78" y="371" font-size="15" fill="#2f3a2b">MUs 6-23 to 6-25. Drop off parts you</text>
+<text x="78" y="390" font-size="15" fill="#2f3a2b">would leave</text>
+<circle cx="41.0" cy="442.0" r="20" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<g transform="translate(41.0 442.0) scale(0.8)" fill="#2f3a2b" stroke="none"><path d="M-14 0 C-14 -10 14 -10 14 0z"/><path d="M-5 0 H5 L4 12 H-4z"/></g>
+<text x="78" y="428" font-size="16" font-weight="bold" fill="#2f3a2b">Nass Valley</text>
+<text x="78" y="447" font-size="15" fill="#2f3a2b">Nisga&#x27;a Government: many mushroom</text>
+<text x="78" y="466" font-size="15" fill="#2f3a2b">pickers in season</text>
 </svg>

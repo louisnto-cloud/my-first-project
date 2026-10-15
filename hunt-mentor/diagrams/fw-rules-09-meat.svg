@@ -1,24 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 266" role="img" aria-label="Four cards. Your own kill: your species licence travels with the meat. Someone else kill: you need a Record of Receipt from the hunter. Selling or trading wildlife meat: never. A true gift with nothing back is not trafficking, this app reading at 90 percent." font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="266" fill="#fffaf0"/>
-  <text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Moving game meat</text>
-  <rect x="6" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
-  <rect x="6" y="40" width="191" height="30" rx="10" fill="#5c7a3a"/><rect x="6" y="58" width="191" height="12" fill="#5c7a3a"/>
-  <text x="101.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Your kill</text>
-  <text x="101.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">Your species</text>
-  <text x="101.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">licence with it</text>
-  <rect x="203" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
-  <rect x="203" y="40" width="191" height="30" rx="10" fill="#5c7a3a"/><rect x="203" y="58" width="191" height="12" fill="#5c7a3a"/>
-  <text x="298.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Their kill</text>
-  <text x="298.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">A Record of</text>
-  <text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">Receipt with it</text>
-  <rect x="6" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
-  <rect x="6" y="150" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="6" y="168" width="191" height="12" fill="#b03a2e"/>
-  <text x="101.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Sell or trade</text>
-  <text x="101.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Never. Not even</text>
-  <text x="101.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">an offer</text>
-  <rect x="203" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
-  <rect x="203" y="150" width="191" height="30" rx="10" fill="#8a9a6b"/><rect x="203" y="168" width="191" height="12" fill="#8a9a6b"/>
-  <text x="298.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Gift</text>
-  <text x="298.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Nothing back:</text>
-  <text x="298.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">not trafficking (90%)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 306" font-family="sans-serif" role="img" aria-label="Moving game meat, four cases. Your own kill: your species licence travels with the meat. Someone else kill: you need a Record of Receipt from the hunter. Selling or trading wildlife meat: never, not even an offer. A true gift with nothing back is not trafficking, this app reading at 90 percent.">
+<rect width="400" height="306" fill="#fffaf0"/>
+<rect x="8" y="8" width="384" height="36" rx="6" fill="#2f6e3b"/>
+<text x="200" y="33" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">Moving game meat</text>
+<rect x="8" y="52" width="384" height="60" rx="6" fill="#f4eedf"/>
+<circle cx="44" cy="82.0" r="26" fill="#fffaf0" stroke="#d8cfb8" stroke-width="1.4"/>
+<g transform="translate(44 82.0) scale(1.15)" fill="#2f6e3b" stroke="none"><rect x="-15" y="-10" width="30" height="20" rx="3"/><circle cx="-7" cy="-2" r="4" fill="#fffaf0"/><path d="M-12 7 C-11 3 -3 3 -2 7z" fill="#fffaf0"/><path d="M2 -4 H11 M2 1 H11 M2 6 H8" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="86" y="78" font-size="17" font-weight="bold" fill="#2f3a2b">Your kill</text>
+<text x="86" y="98" font-size="15" fill="#2f3a2b">Your species licence with it</text>
+<circle cx="44" cy="144.0" r="26" fill="#fffaf0" stroke="#d8cfb8" stroke-width="1.4"/>
+<g transform="translate(44 144.0) scale(1.15)" fill="#2f6e3b" stroke="none"><path d="M-10 -14 H5 L11 -8 V14 H-10z"/><path d="M5 -14 V-8 H11" fill="#fffaf0" opacity=".5"/><path d="M-6 -5 H6 M-6 0 H6 M-6 5 H6 M-6 10 H2" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="86" y="140" font-size="17" font-weight="bold" fill="#2f3a2b">Their kill</text>
+<text x="86" y="160" font-size="15" fill="#2f3a2b">A Record of Receipt with it</text>
+<rect x="8" y="176" width="384" height="60" rx="6" fill="#f4eedf"/>
+<circle cx="44" cy="206.0" r="26" fill="#fffaf0" stroke="#d8cfb8" stroke-width="1.4"/>
+<g transform="translate(44 206.0) scale(1.15)" fill="#c0392b" stroke="none"><circle r="13"/><text y="6" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">$</text></g>
+<circle cx="44" cy="206.0" r="26" fill="none" stroke="#c0392b" stroke-width="3"/><path d="M25.8 187.8 L62.2 224.2" stroke="#c0392b" stroke-width="3"/>
+<text x="86" y="202" font-size="17" font-weight="bold" fill="#2f3a2b">Sell or trade</text>
+<text x="86" y="222" font-size="15" fill="#2f3a2b">Never. Not even an offer</text>
+<circle cx="44" cy="268.0" r="26" fill="#fffaf0" stroke="#d8cfb8" stroke-width="1.4"/>
+<g transform="translate(44 268.0) scale(1.15)" fill="#8a9a6b" stroke="none"><rect x="-13" y="-4" width="26" height="17" rx="2"/><rect x="-15" y="-10" width="30" height="7" rx="2"/><path d="M0 -10 V13" stroke="#fffaf0" stroke-width="3"/><path d="M0 -10 C-4 -17 -11 -14 -6 -10 M0 -10 C4 -17 11 -14 6 -10" stroke="#8a9a6b" stroke-width="2.2" fill="none"/></g>
+<text x="86" y="264" font-size="17" font-weight="bold" fill="#2f3a2b">Gift</text>
+<text x="86" y="284" font-size="15" fill="#2f3a2b">Nothing back: not trafficking (90%)</text>
 </svg>

@@ -1,18 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 196" role="img" aria-label="Deer, elk or moose killed in the Chronic Wasting Disease Management Zone, Management Units 4-1 to 4-8 and 4-20 to 4-25. Stays in the zone: brain tissue and the spinal column, including vertebrae and nerve tissue. May leave: the tail, and meat boned out, which is this app&#x27;s reading." font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="196" fill="#fffaf0"/>
-<text x="200.0" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">CWD zone: MU 4-1 to 4-8, 4-20 to 4-25</text>
-<text x="200.0" y="48" font-size="14" fill="#2f3a2b" text-anchor="middle">Deer, elk, moose. Regions 3 and 8 are not in it.</text>
-<rect x="6" y="58" width="191" height="128" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
-<rect x="6" y="58" width="191" height="30" rx="10" fill="#c92a2a"/><rect x="6" y="76" width="191" height="12" fill="#c92a2a"/>
-<text x="101.5" y="79" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Stays in zone</text>
-<text x="101.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">Brain tissue</text>
-<text x="101.5" y="128" font-size="14" fill="#23261f" text-anchor="middle">Spinal column,</text>
-<text x="101.5" y="146" font-size="14" fill="#23261f" text-anchor="middle">vertebrae, nerve</text>
-<text x="101.5" y="164" font-size="14" fill="#23261f" text-anchor="middle">tissue</text>
-<rect x="203" y="58" width="191" height="128" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
-<rect x="203" y="58" width="191" height="30" rx="10" fill="#5c7a3a"/><rect x="203" y="76" width="191" height="12" fill="#5c7a3a"/>
-<text x="298.5" y="79" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">May leave</text>
-<text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">The tail</text>
-<text x="298.5" y="128" font-size="14" fill="#23261f" text-anchor="middle">Meat boned out</text>
-<text x="298.5" y="146" font-size="14" fill="#23261f" text-anchor="middle">(my reading, 95%)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 264" font-family="sans-serif" role="img" aria-label="Deer, elk or moose killed in the Chronic Wasting Disease Management Zone, Management Units 4-1 to 4-8 and 4-20 to 4-25. Regions 3 and 8 are not in it. Stays in the zone, shown as a skull and a row of vertebrae: brain tissue and the spinal column, including vertebrae and nerve tissue. May leave, shown as a deer tail and a boned out piece of meat: the tail, and meat boned out, which is this app&#x27;s reading, 95 percent.">
+<rect width="400" height="264" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">CWD zone: MU 4-1 to 4-8, 4-20 to 4-25</text>
+<text x="200" y="48" font-size="15" fill="#2f3a2b" text-anchor="middle">Deer, elk, moose. Regions 3 and 8 are not in it.</text>
+<rect x="6" y="60" width="190" height="196" rx="9" fill="#ffffff" stroke="#c0392b" stroke-width="2.4"/>
+<path d="M6 69 a9 9 0 0 1 9 -9 h172 a9 9 0 0 1 9 9 v23 h-190z" fill="#c0392b"/>
+<text x="101" y="83" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Stays in zone</text>
+<rect x="204" y="60" width="190" height="196" rx="9" fill="#ffffff" stroke="#4f6b2f" stroke-width="2.4"/>
+<path d="M204 69 a9 9 0 0 1 9 -9 h172 a9 9 0 0 1 9 9 v23 h-190z" fill="#4f6b2f"/>
+<text x="299" y="83" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">May leave</text>
+<g transform="translate(58 132)"><path d="M-30 -10 C-30 -26 -12 -32 4 -28 C14 -26 22 -20 34 -14 C44 -9 50 -4 50 2 C44 6 34 6 24 4 C14 4 8 10 -2 12 C-16 14 -30 8 -30 -10 Z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.6"/><ellipse cx="6" cy="-14" rx="7" ry="6" fill="#6b4f35"/><path d="M-22 6 C-20 14 -14 18 -6 16" stroke="#6b4f35" stroke-width="1.6" fill="none"/><path d="M-30 -10 C-34 -8 -36 -2 -34 4" stroke="#6b4f35" stroke-width="1.6" fill="none"/></g>
+<rect x="112" y="128" width="13" height="12" rx="3" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.4"/><path d="M118.5 128 l-3 -12 h6z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.2"/>
+<rect x="128" y="128" width="13" height="12" rx="3" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.4"/><path d="M134.5 128 l-3 -12 h6z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.2"/>
+<rect x="144" y="128" width="13" height="12" rx="3" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.4"/><path d="M150.5 128 l-3 -12 h6z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.2"/>
+<rect x="160" y="128" width="13" height="12" rx="3" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.4"/><path d="M166.5 128 l-3 -12 h6z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.2"/>
+<rect x="176" y="128" width="13" height="12" rx="3" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.4"/><path d="M182.5 128 l-3 -12 h6z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.2"/>
+<path d="M110 134 H192" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="3 3"/>
+<text x="101" y="186" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Brain tissue</text>
+<text x="101" y="207" font-size="15" fill="#2f3a2b" text-anchor="middle">Spinal column,</text>
+<text x="101" y="228" font-size="15" fill="#2f3a2b" text-anchor="middle">vertebrae, nerve tissue</text>
+<g transform="translate(250 132)"><path d="M-6 -26 C6 -24 12 -10 10 6 C8 18 0 26 -8 24 C-16 20 -18 6 -16 -8 C-14 -20 -12 -26 -6 -26 Z" fill="#8b5a2b" stroke="#5c3b1c" stroke-width="1.4"/><path d="M-6 -18 C2 -16 6 -6 4 6 C2 14 -2 18 -6 16 C-10 12 -11 2 -10 -8 Z" fill="#ffffff"/></g>
+<g transform="translate(330 134)"><path d="M-36 -8 C-30 -24 0 -26 22 -18 C36 -12 38 6 26 14 C10 24 -24 22 -34 10 C-38 4 -38 -2 -36 -8 Z" fill="#b5523b" stroke="#7a2e1e" stroke-width="1.4"/><path d="M-28 -6 C-14 -14 8 -12 24 -4 M-30 6 C-12 2 10 4 26 8" stroke="#f3e3cf" stroke-width="2.6" fill="none" stroke-linecap="round"/></g>
+<text x="299" y="186" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The tail</text>
+<text x="299" y="207" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Meat boned out</text>
+<text x="299" y="228" font-size="15" fill="#6b5b4b" text-anchor="middle">(my reading, 95%)</text>
 </svg>

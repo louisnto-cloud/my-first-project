@@ -1,4 +1,124 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" font-family="sans-serif" role="img" aria-label="An elk year. Calves are born late May to June, peak in the first week of June. Velvet is shed in August and bachelor groups split up. The rut runs September to mid October. Region 8 hunting: bow only 1 to 9 September, rifle 10 September to 20 October. In late fall and winter herds move down to low open winter range. Antlers drop in late winter.">
-<rect x="0" y="0" width="400" height="280" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">An elk year</text><rect x="120.0" y="52" width="22.7" height="204" fill="#dfe6d3" opacity=".6"/><text x="131.33333333333334" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">J</text><text x="154.0" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">F</text><rect x="165.3" y="52" width="22.7" height="204" fill="#dfe6d3" opacity=".6"/><text x="176.66666666666669" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">M</text><text x="199.33333333333334" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A</text><rect x="210.7" y="52" width="22.7" height="204" fill="#dfe6d3" opacity=".6"/><text x="222.00000000000003" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">M</text><text x="244.66666666666669" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">J</text><rect x="256.0" y="52" width="22.7" height="204" fill="#dfe6d3" opacity=".6"/><text x="267.3333333333333" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">J</text><text x="290.0" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A</text><rect x="301.3" y="52" width="22.7" height="204" fill="#dfe6d3" opacity=".6"/><text x="312.6666666666667" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">S</text><text x="335.3333333333333" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">O</text><rect x="346.7" y="52" width="22.7" height="204" fill="#dfe6d3" opacity=".6"/><text x="358.0" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">N</text><text x="380.6666666666667" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">D</text><text x="8" y="77" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Calves born</text><rect x="228.8" y="60" width="27.2" height="24" rx="5" fill="#8b5a2b"/><text x="260.0" y="77" font-size="14" font-weight="bold" fill="#8b5a2b" text-anchor="start">late May to June</text><text x="8" y="111" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Velvet shed</text><rect x="278.7" y="94" width="22.7" height="24" rx="5" fill="#8a9a6b"/><text x="305.33333333333337" y="111" font-size="14" font-weight="bold" fill="#8a9a6b" text-anchor="start">Aug</text><text x="8" y="145" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Rut</text><rect x="301.3" y="128" width="34.0" height="24" rx="5" fill="#e8590c"/><text x="297.33333333333337" y="145" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">Sep to mid Oct</text><text x="8" y="179" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Region 8 hunt</text><rect x="301.3" y="162" width="6.8" height="24" rx="5" fill="#2f3a2b"/><rect x="308.1" y="162" width="30.6" height="24" rx="5" fill="#4a7fb0"/><text x="304.1333333333333" y="179" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="end">bow, then rifle</text><text x="8" y="213" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Winter range</text><rect x="346.7" y="196" width="45.3" height="24" rx="5" fill="#8a9a6b"/><rect x="120.0" y="196" width="68.0" height="24" rx="5" fill="#8a9a6b"/><text x="192.0" y="213" font-size="14" font-weight="bold" fill="#8a9a6b" text-anchor="start">low open slopes</text><text x="8" y="247" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Antlers drop</text><rect x="142.7" y="230" width="34.0" height="24" rx="5" fill="#2f3a2b"/><text x="180.66666666666666" y="247" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">late winter</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" font-family="sans-serif" role="img" aria-label="An elk year, January to December. Calves are born late May to June, peak in the first week of June. Velvet is shed in August and bachelor groups split up. The rut runs September to mid October. Region 8 hunting: bow only 1 to 9 September, rifle 10 September to 20 October. In late fall and winter, November to March, herds move down to low open winter range. Antlers drop in late winter.">
+<rect width="400" height="480" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">An elk year</text>
+<text x="29.8" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="59.9" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">F</text>
+<text x="89.9" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="121" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="152.1" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="183.2" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="214.3" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="245.9" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="276.9" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">S</text>
+<text x="308" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">O</text>
+<text x="339.1" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">N</text>
+<text x="370.2" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">D</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">Calves born</text>
+<text x="386" y="72" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">late May to June</text>
+<text x="14" y="92" font-size="14" fill="#6b5b4b">Peak: first week of June</text>
+<rect x="14.0" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="99" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="74.1" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="105.7" y="99" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="136.3" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="167.9" y="99" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="198.5" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="230.1" y="99" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="99" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="292.2" y="99" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="99" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="354.4" y="99" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="159.7" y="100" width="38.7" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="145" font-size="16" font-weight="bold" fill="#2f3a2b">Velvet shed</text>
+<text x="386" y="145" font-size="15" font-weight="bold" fill="#5b6b3e" text-anchor="end">August</text>
+<text x="14" y="165" font-size="14" fill="#6b5b4b">Bachelor groups split up</text>
+<rect x="14.0" y="172" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="172" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="74.1" y="172" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="105.7" y="172" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="136.3" y="172" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="167.9" y="172" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="198.5" y="172" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="230.1" y="172" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="172" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="292.2" y="172" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="172" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="354.4" y="172" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="230.1" y="173" width="31.6" height="14" rx="3" fill="#8a9a6b"/>
+<text x="14" y="218" font-size="16" font-weight="bold" fill="#2f3a2b">Rut</text>
+<text x="386" y="218" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sep to mid Oct</text>
+<rect x="14.0" y="226" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="226" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="74.1" y="226" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="105.7" y="226" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="136.3" y="226" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="167.9" y="226" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="198.5" y="226" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="230.1" y="226" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="226" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="292.2" y="226" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="226" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="354.4" y="226" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="227" width="45.9" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="272" font-size="16" font-weight="bold" fill="#2f3a2b">Region 8 hunt, bow</text>
+<text x="386" y="272" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">Sep 1 to 9</text>
+<rect x="14.0" y="280" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="280" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="74.1" y="280" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="105.7" y="280" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="136.3" y="280" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="167.9" y="280" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="198.5" y="280" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="230.1" y="280" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="280" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="292.2" y="280" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="280" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="354.4" y="280" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="281" width="9.2" height="14" rx="3" fill="#2f3a2b"/>
+<text x="14" y="326" font-size="16" font-weight="bold" fill="#2f3a2b">Region 8 hunt, rifle</text>
+<text x="386" y="326" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">Sep 10 to Oct 20</text>
+<rect x="14.0" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="334" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="74.1" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="105.7" y="334" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="136.3" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="167.9" y="334" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="198.5" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="230.1" y="334" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="334" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="292.2" y="334" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="334" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="354.4" y="334" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="270.8" y="335" width="41.8" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="380" font-size="16" font-weight="bold" fill="#2f3a2b">Winter range</text>
+<text x="386" y="380" font-size="15" font-weight="bold" fill="#5b6b3e" text-anchor="end">low open slopes</text>
+<rect x="14.0" y="388" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="388" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="74.1" y="388" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="105.7" y="388" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="136.3" y="388" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="167.9" y="388" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="198.5" y="388" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="230.1" y="388" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="388" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="292.2" y="388" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="388" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="354.4" y="388" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="389" width="62.2" height="14" rx="3" fill="#8a9a6b"/>
+<rect x="14.0" y="389" width="91.7" height="14" rx="3" fill="#8a9a6b"/>
+<text x="14" y="434" font-size="16" font-weight="bold" fill="#2f3a2b">Antlers drop</text>
+<text x="386" y="434" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">late winter</text>
+<rect x="14.0" y="442" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="442" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="74.1" y="442" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="105.7" y="442" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="136.3" y="442" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="167.9" y="442" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="198.5" y="442" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="230.1" y="442" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="442" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="292.2" y="442" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="442" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="354.4" y="442" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="45.6" y="443" width="60.1" height="14" rx="3" fill="#8b5a2b"/>
 </svg>

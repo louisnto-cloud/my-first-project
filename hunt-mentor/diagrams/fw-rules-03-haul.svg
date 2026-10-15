@@ -1,29 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 376" role="img" aria-label="In a Motor Vehicle for Hunting Closed Area, or an ATV for hunting closure, four uses are banned: hunting from or with the vehicle, carrying hunters to the animals, carrying hunting gear and supplies, and hauling game out. Region 3 example: MU 3-28, ATVs and electric bicycles, 1 September to 10 December." font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="376" fill="#fffaf0"/>
-  <text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Closed for hunting? All of this counts</text>
-  <rect x="6" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
-  <rect x="6" y="40" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="6" y="58" width="191" height="12" fill="#b03a2e"/>
-  <text x="101.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Hunting</text>
-  <text x="101.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">No riding the</text>
-  <text x="101.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">vehicle to hunt</text>
-  <rect x="203" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
-  <rect x="203" y="40" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="203" y="58" width="191" height="12" fill="#b03a2e"/>
-  <text x="298.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Carry hunters</text>
-  <text x="298.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">No ride to</text>
-  <text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">the animals</text>
-  <rect x="6" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
-  <rect x="6" y="150" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="6" y="168" width="191" height="12" fill="#b03a2e"/>
-  <text x="101.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Carry gear</text>
-  <text x="101.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">No hunting gear</text>
-  <text x="101.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">or supplies</text>
-  <rect x="203" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
-  <rect x="203" y="150" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="203" y="168" width="191" height="12" fill="#b03a2e"/>
-  <text x="298.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Haul game</text>
-  <text x="298.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">No hauling</text>
-  <text x="298.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">the deer out</text>
-  <rect x="6" y="260" width="388" height="104" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-  <rect x="6" y="260" width="388" height="30" rx="10" fill="#4a7fb0"/><rect x="6" y="278" width="388" height="12" fill="#4a7fb0"/>
-  <text x="200.0" y="281" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Region 3 example</text>
-  <text x="200.0" y="312" font-size="14" fill="#23261f" text-anchor="middle">MU 3-28: no ATV or e bike for hunting,</text>
-  <text x="200.0" y="330" font-size="14" fill="#23261f" text-anchor="middle">1 September to 10 December</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 396" font-family="sans-serif" role="img" aria-label="In a Motor Vehicle for Hunting Closed Area, or an ATV (All Terrain Vehicle) for hunting closure, four uses are banned: hunting from or with the vehicle, carrying hunters to the animals, carrying hunting gear and supplies, and hauling game out. Region 3 example: MU 3-28, no ATVs or electric bicycles for hunting, 1 September to 10 December.">
+<rect width="400" height="396" fill="#fffaf0"/>
+<rect x="8" y="8" width="384" height="38" rx="6" fill="#c0392b"/>
+<text x="200" y="34" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">Closed for hunting? All of this counts</text>
+<rect x="8" y="54" width="384" height="60" rx="6" fill="#f4eedf"/>
+<circle cx="44" cy="84.0" r="26" fill="#fffaf0" stroke="#d8cfb8" stroke-width="1.4"/>
+<g transform="translate(44 87.0) scale(1.15) translate(-44 -87.0)"><g transform="translate(44 87.0)"><circle cx="2" cy="-17" r="4" fill="#d8b48a"/><path d="M-4 -12 H7 L6 -2 H-3z" fill="#e8590c"/><path d="M-6 -12 L18 -22" stroke="#8b5a2b" stroke-width="2.6" stroke-linecap="round"/><path d="M10 -19 L20 -23" stroke="#3b3f45" stroke-width="1.8"/><path d="M-20 2 L-17 -3 H17 L20 2 L16 4 H-16z" fill="#2c5d86"/><path d="M-6 -3 H6 L5 -6 H-5z" fill="#24272b"/><path d="M12 -3 L15 -10 H19" stroke="#24272b" stroke-width="2" fill="none"/><circle cx="-12" cy="7" r="7" fill="#24272b"/><circle cx="12" cy="7" r="7" fill="#24272b"/><circle cx="-12" cy="7" r="2.4" fill="#9aa3ad"/><circle cx="12" cy="7" r="2.4" fill="#9aa3ad"/></g></g>
+<circle cx="44" cy="84.0" r="26" fill="none" stroke="#c0392b" stroke-width="3"/><path d="M25.8 65.8 L62.2 102.2" stroke="#c0392b" stroke-width="3"/>
+<text x="86" y="80" font-size="17" font-weight="bold" fill="#2f3a2b">Hunting</text>
+<text x="86" y="101" font-size="15" fill="#2f3a2b">No riding the vehicle to hunt</text>
+<circle cx="44" cy="146.0" r="26" fill="#fffaf0" stroke="#d8cfb8" stroke-width="1.4"/>
+<g transform="translate(44 149.0) scale(1.15) translate(-44 -149.0)"><g transform="translate(44 149.0)"><circle cx="2" cy="-17" r="4" fill="#d8b48a"/><path d="M-4 -12 H7 L6 -2 H-3z" fill="#e8590c"/><circle cx="-10" cy="-15" r="4" fill="#d8b48a"/><path d="M-15 -10 H-5 L-6 -2 H-14z" fill="#5b6b3e"/><path d="M-20 2 L-17 -3 H17 L20 2 L16 4 H-16z" fill="#2c5d86"/><path d="M-6 -3 H6 L5 -6 H-5z" fill="#24272b"/><path d="M12 -3 L15 -10 H19" stroke="#24272b" stroke-width="2" fill="none"/><circle cx="-12" cy="7" r="7" fill="#24272b"/><circle cx="12" cy="7" r="7" fill="#24272b"/><circle cx="-12" cy="7" r="2.4" fill="#9aa3ad"/><circle cx="12" cy="7" r="2.4" fill="#9aa3ad"/></g></g>
+<circle cx="44" cy="146.0" r="26" fill="none" stroke="#c0392b" stroke-width="3"/><path d="M25.8 127.8 L62.2 164.2" stroke="#c0392b" stroke-width="3"/>
+<text x="86" y="142" font-size="17" font-weight="bold" fill="#2f3a2b">Carry hunters</text>
+<text x="86" y="163" font-size="15" fill="#2f3a2b">No ride to the animals</text>
+<rect x="8" y="178" width="384" height="60" rx="6" fill="#f4eedf"/>
+<circle cx="44" cy="208.0" r="26" fill="#fffaf0" stroke="#d8cfb8" stroke-width="1.4"/>
+<g transform="translate(44 211.0) scale(1.15) translate(-44 -211.0)"><g transform="translate(44 211.0)"><rect x="-19" y="-14" width="13" height="12" rx="3" fill="#5b6b3e"/><path d="M-17 -10 H-8" stroke="#fffaf0" stroke-width="1.4"/><rect x="-4" y="-10" width="10" height="8" rx="1.5" fill="#8b5a2b"/><path d="M-20 2 L-17 -3 H17 L20 2 L16 4 H-16z" fill="#2c5d86"/><path d="M-6 -3 H6 L5 -6 H-5z" fill="#24272b"/><path d="M12 -3 L15 -10 H19" stroke="#24272b" stroke-width="2" fill="none"/><circle cx="-12" cy="7" r="7" fill="#24272b"/><circle cx="12" cy="7" r="7" fill="#24272b"/><circle cx="-12" cy="7" r="2.4" fill="#9aa3ad"/><circle cx="12" cy="7" r="2.4" fill="#9aa3ad"/></g></g>
+<circle cx="44" cy="208.0" r="26" fill="none" stroke="#c0392b" stroke-width="3"/><path d="M25.8 189.8 L62.2 226.2" stroke="#c0392b" stroke-width="3"/>
+<text x="86" y="204" font-size="17" font-weight="bold" fill="#2f3a2b">Carry gear</text>
+<text x="86" y="225" font-size="15" fill="#2f3a2b">No hunting gear or supplies</text>
+<circle cx="44" cy="270.0" r="26" fill="#fffaf0" stroke="#d8cfb8" stroke-width="1.4"/>
+<g transform="translate(44 273.0) scale(1.15) translate(-44 -273.0)"><g transform="translate(44 273.0)"><ellipse cx="-9" cy="-7" rx="12" ry="5" fill="#8b5a2b"/><path d="M-19 -6 L-24 -2 M-17 -4 L-21 1" stroke="#8b5a2b" stroke-width="2"/><ellipse cx="3" cy="-11" rx="3.5" ry="2.6" fill="#8b5a2b"/><path d="M4 -13 L6 -19 M6 -16 L9 -18 M4 -13 L1 -19" stroke="#6b4f35" stroke-width="1.3" fill="none"/><path d="M-20 2 L-17 -3 H17 L20 2 L16 4 H-16z" fill="#2c5d86"/><path d="M-6 -3 H6 L5 -6 H-5z" fill="#24272b"/><path d="M12 -3 L15 -10 H19" stroke="#24272b" stroke-width="2" fill="none"/><circle cx="-12" cy="7" r="7" fill="#24272b"/><circle cx="12" cy="7" r="7" fill="#24272b"/><circle cx="-12" cy="7" r="2.4" fill="#9aa3ad"/><circle cx="12" cy="7" r="2.4" fill="#9aa3ad"/></g></g>
+<circle cx="44" cy="270.0" r="26" fill="none" stroke="#c0392b" stroke-width="3"/><path d="M25.8 251.8 L62.2 288.2" stroke="#c0392b" stroke-width="3"/>
+<text x="86" y="266" font-size="17" font-weight="bold" fill="#2f3a2b">Haul game</text>
+<text x="86" y="287" font-size="15" fill="#2f3a2b">No hauling the deer out</text>
+<rect x="8" y="310" width="384" height="78" rx="8" fill="#e7eef5" stroke="#4a7fb0" stroke-width="1.8"/>
+<path d="M16 310 H384 A8 8 0 0 1 392 318 V340 H8 V318 A8 8 0 0 1 16 310z" fill="#4a7fb0"/>
+<text x="20" y="331" font-size="16" font-weight="bold" fill="#fffaf0">Region 3 example</text>
+<text x="20" y="361" font-size="15" font-weight="bold" fill="#2f3a2b">MU 3-28: no ATV or e bike for hunting,</text>
+<text x="20" y="380" font-size="15" font-weight="bold" fill="#2f3a2b">1 September to 10 December</text>
 </svg>

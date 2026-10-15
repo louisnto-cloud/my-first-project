@@ -1,4 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Chart of a 40 grain .22 long rifle bullet at 1,235 feet per second with a 50 m zero and the scope 4 cm above the bore. It stays within 1.5 cm of the aim point from 15 to 55 m, then drops: 2 cm low at 60 m, 6 cm at 75 m, 19 cm at 100 m and 38 cm at 125 m.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">.22 LR, 40 gr at 1,235 fps, 50 m zero</text><line x1="50" y1="118.0" x2="380" y2="118.0" stroke="#d9d4c7" stroke-width="1" stroke-linecap="round"/><text x="44" y="123.0" font-size="12" fill="#23261f" text-anchor="end">5</text><line x1="50" y1="130.0" x2="380" y2="130.0" stroke="#d9d4c7" stroke-width="1" stroke-linecap="round"/><text x="44" y="135.0" font-size="12" fill="#23261f" text-anchor="end">0</text><line x1="50" y1="154.0" x2="380" y2="154.0" stroke="#d9d4c7" stroke-width="1" stroke-linecap="round"/><text x="44" y="159.0" font-size="12" fill="#23261f" text-anchor="end">-10</text><line x1="50" y1="178.0" x2="380" y2="178.0" stroke="#d9d4c7" stroke-width="1" stroke-linecap="round"/><text x="44" y="183.0" font-size="12" fill="#23261f" text-anchor="end">-20</text><line x1="50" y1="202.0" x2="380" y2="202.0" stroke="#d9d4c7" stroke-width="1" stroke-linecap="round"/><text x="44" y="207.0" font-size="12" fill="#23261f" text-anchor="end">-30</text><line x1="50" y1="226.0" x2="380" y2="226.0" stroke="#d9d4c7" stroke-width="1" stroke-linecap="round"/><text x="44" y="231.0" font-size="12" fill="#23261f" text-anchor="end">-40</text><line x1="50" y1="130.0" x2="380" y2="130.0" stroke="#2f3a2b" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 4"/><path d="M50.0 139.6 L72.0 133.8 L83.0 131.7 L94.0 130.0 L105.0 128.8 L116.0 128.1 L138.0 128.1 L160.0 130.0 L182.0 134.3 L215.0 144.9 L270.0 174.9 L325.0 221.2" fill="none" stroke="#e8590c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="83.0" y="126.4" width="88.0" height="7.199999999999989" rx="0" fill="#2f6e3b" stroke="none" stroke-width="0" opacity=".18"/><text x="127.0" y="120.4" font-size="13" font-weight="bold" fill="#2f6e3b" text-anchor="middle">within 1.5 cm: 15 to 55 m</text><text x="105.0" y="248" font-size="13" fill="#23261f" text-anchor="middle">25 m</text><text x="160.0" y="248" font-size="13" fill="#23261f" text-anchor="middle">50 m</text><text x="215.0" y="248" font-size="13" fill="#23261f" text-anchor="middle">75 m</text><text x="270.0" y="248" font-size="13" fill="#23261f" text-anchor="middle">100 m</text><text x="325.0" y="248" font-size="13" fill="#23261f" text-anchor="middle">125 m</text><text x="304.0" y="178.88" font-size="13" font-weight="bold" fill="#e8590c" text-anchor="start">19 cm low</text><text x="30" y="52" font-size="12" fill="#23261f" text-anchor="start">cm</text><text x="200.0" y="284" font-size="13" fill="#2f3a2b" text-anchor="middle">Hunt Mentor model, scope 4 cm above bore</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Chart of a 40 grain .22 long rifle bullet at 1,235 feet per second with a 50 m zero and the scope 4 cm above the bore, Hunt Mentor model. It stays within 1.5 cm of the aim point from 15 to 55 m, then drops: 2 cm low at 60 m, 6 cm at 75 m, 19 cm at 100 m and 38 cm at 125 m.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">.22 LR, 40 gr at 1,235 fps, 50 m zero</text>
+<rect x="89.7" y="73.0" width="100.5" height="12.7" fill="#cfe3c4"/>
+<line x1="52" y1="79.3" x2="366" y2="79.3" stroke="#2f3a2b" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="46" y="84.3" font-size="14" fill="#2f3a2b" text-anchor="end">0</text>
+<line x1="52" y1="121.5" x2="366" y2="121.5" stroke="#ddd6c6" stroke-width="1"/>
+<text x="46" y="126.5" font-size="14" fill="#2f3a2b" text-anchor="end">-10</text>
+<line x1="52" y1="163.7" x2="366" y2="163.7" stroke="#ddd6c6" stroke-width="1"/>
+<text x="46" y="168.7" font-size="14" fill="#2f3a2b" text-anchor="end">-20</text>
+<line x1="52" y1="205.8" x2="366" y2="205.8" stroke="#ddd6c6" stroke-width="1"/>
+<text x="46" y="210.8" font-size="14" fill="#2f3a2b" text-anchor="end">-30</text>
+<line x1="52" y1="248.0" x2="366" y2="248.0" stroke="#ddd6c6" stroke-width="1"/>
+<text x="46" y="253" font-size="14" fill="#2f3a2b" text-anchor="end">-40</text>
+<text x="46" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">cm</text>
+<text x="114.8" y="270" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">25 m</text>
+<text x="177.6" y="270" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">50 m</text>
+<text x="240.4" y="270" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">75 m</text>
+<text x="303.2" y="270" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">100 m</text>
+<text x="366" y="270" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">125 m</text>
+<path d="M52.0 96.2 C56.2 94.5 70.8 88.4 77.1 86.1 C83.4 83.7 85.5 83.4 89.7 82.3 C93.9 81.1 98.1 80.1 102.2 79.3 C106.4 78.5 110.6 77.8 114.8 77.2 C119.0 76.6 121.1 76.1 127.4 75.9 C133.6 75.7 144.1 75.4 152.5 75.9 C160.9 76.5 169.2 77.5 177.6 79.3 C186.0 81.1 192.3 82.5 202.7 86.9 C213.2 91.3 223.7 93.6 240.4 105.5 C257.1 117.3 282.3 135.8 303.2 158.2 C324.1 180.5 355.5 226.0 366.0 239.6" fill="none" stroke="#e8590c" stroke-width="3.4" stroke-linecap="round"/>
+<line x1="165.04" y1="72.9783" x2="165.04" y2="60.9783" stroke="#2f6e3b" stroke-width="1.4"/><rect x="118.6" y="37.0" width="208.2" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="222.72" y="56" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">within 1.5 cm: 15 to 55 m</text>
+<circle cx="240.4" cy="105.5" r="4.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/>
+<text x="230.4" y="127.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">6 cm low</text>
+<circle cx="303.2" cy="158.2" r="4.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/>
+<text x="293.2" y="162.2" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">19 cm low</text>
+<circle cx="366.0" cy="239.6" r="4.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/>
+<text x="356" y="243.6" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">38 cm low</text>
+<text x="14" y="292" font-size="14" fill="#6b5b4b">Hunt Mentor model, scope 4 cm above bore</text>
 </svg>

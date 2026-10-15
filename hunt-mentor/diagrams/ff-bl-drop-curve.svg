@@ -1,4 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Line chart of drop below the crosshair with a 100 m zero. 150 grain at box speed: 4 cm at 150 m, 13 at 200, 28 at 250, 48 at 300, 76 at 350 and 112 at 400. The same bullet from your 20 inch barrel drops a little more: 14, 30, 52 and 121 cm at 200, 250, 300 and 400 m. The 165 grain Fusion is close to the 150 grain box line.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Drop below the crosshair, 100 m zero</text><line x1="50" y1="60.0" x2="380" y2="60.0" stroke="#d9d4c7" stroke-width="1" stroke-linecap="round"/><text x="44" y="65.0" font-size="13" fill="#23261f" text-anchor="end">0</text><line x1="50" y1="97.5" x2="380" y2="97.5" stroke="#d9d4c7" stroke-width="1" stroke-linecap="round"/><text x="44" y="102.5" font-size="13" fill="#23261f" text-anchor="end">25</text><line x1="50" y1="135.0" x2="380" y2="135.0" stroke="#d9d4c7" stroke-width="1" stroke-linecap="round"/><text x="44" y="140.0" font-size="13" fill="#23261f" text-anchor="end">50</text><line x1="50" y1="172.5" x2="380" y2="172.5" stroke="#d9d4c7" stroke-width="1" stroke-linecap="round"/><text x="44" y="177.5" font-size="13" fill="#23261f" text-anchor="end">75</text><line x1="50" y1="210.0" x2="380" y2="210.0" stroke="#d9d4c7" stroke-width="1" stroke-linecap="round"/><text x="44" y="215.0" font-size="13" fill="#23261f" text-anchor="end">100</text><line x1="50" y1="247.5" x2="380" y2="247.5" stroke="#d9d4c7" stroke-width="1" stroke-linecap="round"/><text x="44" y="252.5" font-size="13" fill="#23261f" text-anchor="end">125</text><text x="20" y="50" font-size="13" fill="#23261f" text-anchor="start">cm</text><path d="M132.5 60.0 L173.8 66.3 L215.0 79.8 L256.2 101.4 L297.5 132.4 L338.8 174.0 L380.0 228.0" fill="none" stroke="#e8590c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M132.5 60.0 L173.8 66.9 L215.0 81.6 L256.2 105.0 L297.5 138.4 L338.8 183.4 L380.0 241.8" fill="none" stroke="#b3261e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M132.5 60.0 L173.8 66.6 L215.0 80.1 L256.2 101.4 L297.5 131.1 L338.8 170.1 L380.0 219.1" fill="none" stroke="#4a7fb0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="30" y1="288" x2="48" y2="288" stroke="#e8590c" stroke-width="4" stroke-linecap="round"/><text x="52" y="293" font-size="12" fill="#23261f" text-anchor="start">150 gr, box speed</text><line x1="155" y1="288" x2="173" y2="288" stroke="#b3261e" stroke-width="4" stroke-linecap="round"/><text x="177" y="293" font-size="12" fill="#23261f" text-anchor="start">150 gr, your 20 in</text><line x1="280" y1="288" x2="298" y2="288" stroke="#4a7fb0" stroke-width="4" stroke-linecap="round"/><text x="302" y="293" font-size="12" fill="#23261f" text-anchor="start">165 gr Fusion</text><text x="132.5" y="263.5" font-size="13" fill="#23261f" text-anchor="middle">100 m</text><text x="215.0" y="263.5" font-size="13" fill="#23261f" text-anchor="middle">200 m</text><text x="297.5" y="263.5" font-size="13" fill="#23261f" text-anchor="middle">300 m</text><text x="380.0" y="263.5" font-size="13" fill="#23261f" text-anchor="middle">400 m</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Line chart of drop below the crosshair with a 100 m zero, Hunt Mentor model, 75 percent. 150 grain at box speed: 4 cm at 150 m, 13 at 200, 28 at 250, 48 at 300, 76 at 350 and 112 at 400. The same bullet from your 20 inch barrel drops a little more: 14, 30, 52 and 121 cm at 200, 250, 300 and 400 m. The 165 grain Fusion is close to the 150 grain box line. Past 300 m the curve gets steep fast.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Drop below the crosshair, 100 m zero</text>
+<line x1="14" y1="44" x2="34" y2="44" stroke="#e8590c" stroke-width="4" stroke-linecap="round"/>
+<text x="40" y="49" font-size="14" font-weight="bold" fill="#2f3a2b">150 gr, box</text>
+<line x1="135.896" y1="44" x2="155.896" y2="44" stroke="#b3261e" stroke-width="4" stroke-linecap="round"/>
+<text x="161.896" y="49" font-size="14" font-weight="bold" fill="#2f3a2b">150 gr, 20 in</text>
+<line x1="267.97839999999997" y1="44" x2="287.97839999999997" y2="44" stroke="#4a7fb0" stroke-width="4" stroke-linecap="round"/>
+<text x="293.978" y="49" font-size="14" font-weight="bold" fill="#2f3a2b">165 gr Fusion</text>
+<line x1="52" y1="72.0" x2="366" y2="72.0" stroke="#ddd6c6" stroke-width="1"/>
+<text x="46" y="77" font-size="14" fill="#2f3a2b" text-anchor="end">0</text>
+<line x1="52" y1="105.6" x2="366" y2="105.6" stroke="#ddd6c6" stroke-width="1"/>
+<text x="46" y="110.6" font-size="14" fill="#2f3a2b" text-anchor="end">25</text>
+<line x1="52" y1="139.2" x2="366" y2="139.2" stroke="#ddd6c6" stroke-width="1"/>
+<text x="46" y="144.2" font-size="14" fill="#2f3a2b" text-anchor="end">50</text>
+<line x1="52" y1="172.8" x2="366" y2="172.8" stroke="#ddd6c6" stroke-width="1"/>
+<text x="46" y="177.8" font-size="14" fill="#2f3a2b" text-anchor="end">75</text>
+<line x1="52" y1="206.4" x2="366" y2="206.4" stroke="#ddd6c6" stroke-width="1"/>
+<text x="46" y="211.4" font-size="14" fill="#2f3a2b" text-anchor="end">100</text>
+<line x1="52" y1="240.0" x2="366" y2="240.0" stroke="#ddd6c6" stroke-width="1"/>
+<text x="46" y="245" font-size="14" fill="#2f3a2b" text-anchor="end">125</text>
+<text x="46" y="62" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">cm</text>
+<text x="52" y="262" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">100 m</text>
+<text x="156.7" y="262" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">200 m</text>
+<text x="261.3" y="262" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">300 m</text>
+<text x="366" y="262" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">400 m</text>
+<path d="M52.0 72.0 C60.7 72.9 86.9 74.5 104.3 77.4 C121.8 80.3 139.2 84.1 156.7 89.5 C174.1 94.8 191.6 102.0 209.0 109.6 C226.4 117.2 243.9 125.1 261.3 135.2 C278.8 145.2 296.2 156.9 313.7 170.1 C331.1 183.3 357.3 207.1 366.0 214.5" fill="none" stroke="#4a7fb0" stroke-width="3.2" stroke-linecap="round"/>
+<path d="M52.0 72.0 C60.7 73.1 86.9 75.6 104.3 78.7 C121.8 81.9 139.2 85.2 156.7 90.8 C174.1 96.4 191.6 103.8 209.0 112.3 C226.4 120.8 243.9 130.2 261.3 141.9 C278.8 153.5 296.2 166.8 313.7 182.2 C331.1 197.7 357.3 225.9 366.0 234.6" fill="none" stroke="#b3261e" stroke-width="3.2" stroke-linecap="round"/>
+<path d="M52.0 72.0 C60.7 72.9 86.9 74.5 104.3 77.4 C121.8 80.3 139.2 84.1 156.7 89.5 C174.1 94.8 191.6 101.8 209.0 109.6 C226.4 117.5 243.9 125.8 261.3 136.5 C278.8 147.3 296.2 159.8 313.7 174.1 C331.1 188.5 357.3 214.5 366.0 222.5" fill="none" stroke="#e8590c" stroke-width="3.2" stroke-linecap="round"/>
+<circle cx="156.7" cy="89.5" r="4.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/>
+<text x="150.7" y="107.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">13 cm</text>
+<circle cx="261.3" cy="136.5" r="4.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/>
+<text x="253.3" y="154.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">48 cm</text>
+<circle cx="366.0" cy="222.5" r="4.5" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/>
+<text x="352" y="240.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">112 cm</text>
+<text x="14" y="290" font-size="14" fill="#6b5b4b">Hunt Mentor model (75%). Steep past 300 m.</text>
 </svg>

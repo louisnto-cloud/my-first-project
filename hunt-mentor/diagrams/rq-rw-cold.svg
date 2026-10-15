@@ -1,36 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 364" role="img" aria-label="Decision chart, tips built on the app bush safety session. Shivering and cold hands: stop, add a dry layer, eat, find shelter. Fumbles, mumbles, stumbles and grumbles: turn back now, together. Shivering stopped with confusion and stiffness: an emergency, call for help. Otherwise keep hunting and eat and drink every hour.">
-<rect x="0" y="0" width="400" height="364" fill="#fffaf0"/>
-<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cold, wet, windy: when to stop (Tip)</text>
-<rect x="10" y="42" width="230" height="62" rx="10" fill="#f5f1e4" stroke="#2f3a2b" stroke-width="2"/>
-<text x="22" y="64" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Shivering, cold hands?</text>
-<g><line x1="242" y1="73.0" x2="268" y2="73.0" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/><polygon points="268.0,73.0 260.8,76.5 260.8,69.5" fill="#e8590c"/></g>
-<rect x="272" y="46" width="118" height="54" rx="10" fill="#e8590c" stroke="#e8590c" stroke-width="2"/>
-<text x="331" y="66" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Stop: dry</text>
-<text x="331" y="81" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">layer, food,</text>
-<text x="331" y="96" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">shelter</text>
-<text x="255" y="67.0" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e8590c" text-anchor="middle">yes</text>
-<g><line x1="125" y1="104" x2="125" y2="124" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="125.0,124.0 121.5,116.8 128.5,116.8" fill="#2f3a2b"/></g>
-<text x="134" y="119" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2f3a2b" text-anchor="start">no</text>
-<rect x="10" y="126" width="230" height="62" rx="10" fill="#f5f1e4" stroke="#2f3a2b" stroke-width="2"/>
-<text x="22" y="148" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Fumbles, mumbles, stumbles,</text>
-<text x="22" y="164" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">grumbles?</text>
-<g><line x1="242" y1="157.0" x2="268" y2="157.0" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/><polygon points="268.0,157.0 260.8,160.5 260.8,153.5" fill="#e8590c"/></g>
-<rect x="272" y="130" width="118" height="54" rx="10" fill="#e8590c" stroke="#e8590c" stroke-width="2"/>
-<text x="331" y="150" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Turn back now,</text>
-<text x="331" y="165" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">together</text>
-<text x="255" y="151.0" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e8590c" text-anchor="middle">yes</text>
-<g><line x1="125" y1="188" x2="125" y2="208" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="125.0,208.0 121.5,200.8 128.5,200.8" fill="#2f3a2b"/></g>
-<text x="134" y="203" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2f3a2b" text-anchor="start">no</text>
-<rect x="10" y="210" width="230" height="62" rx="10" fill="#f5f1e4" stroke="#2f3a2b" stroke-width="2"/>
-<text x="22" y="232" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Shivering stopped,</text>
-<text x="22" y="248" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">confused, stiff?</text>
-<g><line x1="242" y1="241.0" x2="268" y2="241.0" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/><polygon points="268.0,241.0 260.8,244.5 260.8,237.5" fill="#e8590c"/></g>
-<rect x="272" y="214" width="118" height="54" rx="10" fill="#e8590c" stroke="#e8590c" stroke-width="2"/>
-<text x="331" y="234" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Emergency:</text>
-<text x="331" y="249" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">call for help</text>
-<text x="255" y="235.0" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e8590c" text-anchor="middle">yes</text>
-<g><line x1="125" y1="272" x2="125" y2="292" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="125.0,292.0 121.5,284.8 128.5,284.8" fill="#2f3a2b"/></g>
-<text x="134" y="287" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2f3a2b" text-anchor="start">no</text>
-<rect x="10" y="294" width="380" height="54" rx="10" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="2"/>
-<text x="200" y="316" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Fine: keep hunting, eat and drink every hour</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 364" font-family="sans-serif" role="img" aria-label="Decision chart, tips built on the app bush safety session. Shivering and cold hands: stop, add a dry layer, eat, find shelter. Fumbles, mumbles, stumbles and grumbles: turn back now, together. Shivering stopped with confusion and stiffness: an emergency, call for help. Otherwise you are fine: keep hunting, and eat and drink every hour.">
+<rect width="400" height="364" fill="#fffaf0"/>
+<text x="14" y="28" font-size="18" font-weight="bold" fill="#2f3a2b">Cold, wet, windy: when to stop (Tip)</text>
+<rect x="10" y="44" width="214" height="54" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="22" y="76" font-size="16" font-weight="bold" fill="#2f3a2b">Shivering, cold hands?</text>
+<line x1="224" y1="71.0" x2="254" y2="71.0" stroke="#c2410c" stroke-width="2.4"/><path d="M262 71.0 l-9 -5 v10z" fill="#c2410c"/>
+<text x="241" y="63" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">Yes</text>
+<rect x="262" y="47" width="128" height="48" rx="8" fill="#c2410c"/>
+<text x="326" y="66.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Stop: dry layer,</text>
+<text x="326" y="85.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">food, shelter</text>
+<line x1="60" y1="98" x2="60" y2="116" stroke="#2f3a2b" stroke-width="2.4"/><path d="M60 124 l-5 -9 h10z" fill="#2f3a2b"/>
+<text x="70" y="116" font-size="14" font-weight="bold" fill="#2f3a2b">No</text>
+<rect x="10" y="124" width="214" height="58" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="22" y="148" font-size="16" font-weight="bold" fill="#2f3a2b">Fumbles, mumbles,</text>
+<text x="22" y="168" font-size="16" font-weight="bold" fill="#2f3a2b">stumbles, grumbles?</text>
+<line x1="224" y1="153.0" x2="254" y2="153.0" stroke="#d9480f" stroke-width="2.4"/><path d="M262 153.0 l-9 -5 v10z" fill="#d9480f"/>
+<text x="241" y="145" font-size="14" font-weight="bold" fill="#d9480f" text-anchor="middle">Yes</text>
+<rect x="262" y="127" width="128" height="52" rx="8" fill="#d9480f"/>
+<text x="326" y="148.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Turn back</text>
+<text x="326" y="167.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">now, together</text>
+<line x1="60" y1="182" x2="60" y2="200" stroke="#2f3a2b" stroke-width="2.4"/><path d="M60 208 l-5 -9 h10z" fill="#2f3a2b"/>
+<text x="70" y="200" font-size="14" font-weight="bold" fill="#2f3a2b">No</text>
+<rect x="10" y="208" width="214" height="58" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="22" y="232" font-size="16" font-weight="bold" fill="#2f3a2b">Shivering stopped,</text>
+<text x="22" y="252" font-size="16" font-weight="bold" fill="#2f3a2b">confused, stiff?</text>
+<line x1="224" y1="237.0" x2="254" y2="237.0" stroke="#c0392b" stroke-width="2.4"/><path d="M262 237.0 l-9 -5 v10z" fill="#c0392b"/>
+<text x="241" y="229" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Yes</text>
+<rect x="262" y="211" width="128" height="52" rx="8" fill="#c0392b"/>
+<text x="326" y="232.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Emergency:</text>
+<text x="326" y="251.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">call for help</text>
+<line x1="60" y1="266" x2="60" y2="284" stroke="#2f3a2b" stroke-width="2.4"/><path d="M60 292 l-5 -9 h10z" fill="#2f3a2b"/>
+<text x="70" y="284" font-size="14" font-weight="bold" fill="#2f3a2b">No</text>
+<rect x="10" y="292" width="380" height="64" rx="12" fill="#2f3a2b"/>
+<text x="200" y="321" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Fine: keep hunting</text>
+<text x="200" y="341" font-size="15" fill="#e9e3d3" text-anchor="middle">Eat and drink every hour</text>
 </svg>

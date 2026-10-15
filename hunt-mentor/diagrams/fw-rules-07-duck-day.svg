@@ -1,34 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 376" role="img" aria-label="Six duck day checks. Non toxic shot only, none other in the pocket or boat. Plug in: 3 shells total. Stop at 8 ducks for the day. One feathered wing or the head stays on until the bird is preserved. Unpreserved birds in the fridge count toward the possession limit of 24. No shooting from a motor or sail boat while it still moves, even gliding." font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="376" fill="#fffaf0"/>
-  <text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Duck day: six checks</text>
-  <rect x="6" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-  <rect x="6" y="40" width="191" height="30" rx="10" fill="#4a7fb0"/><rect x="6" y="58" width="191" height="12" fill="#4a7fb0"/>
-  <text x="101.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Shot</text>
-  <text x="101.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">Non toxic only.</text>
-  <text x="101.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">No lead in the bag</text>
-  <rect x="203" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-  <rect x="203" y="40" width="191" height="30" rx="10" fill="#4a7fb0"/><rect x="203" y="58" width="191" height="12" fill="#4a7fb0"/>
-  <text x="298.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Plug</text>
-  <text x="298.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">3 shells total,</text>
-  <text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">chamber included</text>
-  <rect x="6" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-  <rect x="6" y="150" width="191" height="30" rx="10" fill="#4a7fb0"/><rect x="6" y="168" width="191" height="12" fill="#4a7fb0"/>
-  <text x="101.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Limit</text>
-  <text x="101.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">8 ducks a day,</text>
-  <text x="101.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">then stop</text>
-  <rect x="203" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-  <rect x="203" y="150" width="191" height="30" rx="10" fill="#4a7fb0"/><rect x="203" y="168" width="191" height="12" fill="#4a7fb0"/>
-  <text x="298.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Wing on</text>
-  <text x="298.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">One feathered wing</text>
-  <text x="298.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">or the head</text>
-  <rect x="6" y="260" width="191" height="104" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-  <rect x="6" y="260" width="191" height="30" rx="10" fill="#4a7fb0"/><rect x="6" y="278" width="191" height="12" fill="#4a7fb0"/>
-  <text x="101.5" y="281" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Fridge counts</text>
-  <text x="101.5" y="312" font-size="14" fill="#23261f" text-anchor="middle">24 in possession</text>
-  <text x="101.5" y="330" font-size="14" fill="#23261f" text-anchor="middle">until preserved</text>
-  <rect x="203" y="260" width="191" height="104" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-  <rect x="203" y="260" width="191" height="30" rx="10" fill="#4a7fb0"/><rect x="203" y="278" width="191" height="12" fill="#4a7fb0"/>
-  <text x="298.5" y="281" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Boat</text>
-  <text x="298.5" y="312" font-size="14" fill="#23261f" text-anchor="middle">Dead still before</text>
-  <text x="298.5" y="330" font-size="14" fill="#23261f" text-anchor="middle">you shoot</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 430" font-family="sans-serif" role="img" aria-label="Six duck day checks. Non toxic shot only, none other in the pocket or boat. Plug in: 3 shells total, chamber included. Stop at 8 ducks for the day. One feathered wing or the head stays on until the bird is preserved. Unpreserved birds in the fridge count toward the possession limit of 24. No shooting from a motor or sail boat while it still moves, even gliding.">
+<rect width="400" height="430" fill="#fffaf0"/>
+<rect x="8" y="8" width="384" height="36" rx="6" fill="#4a7fb0"/>
+<text x="200" y="33" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">Duck day: six checks</text>
+<rect x="8" y="52" width="384" height="60" rx="6" fill="#f4eedf"/>
+<circle cx="44" cy="82.0" r="26" fill="#fffaf0" stroke="#d8cfb8" stroke-width="1.4"/>
+<g transform="translate(44 82.0) scale(1.15)" fill="#2f3a2b" stroke="none"><rect x="-6" y="-14" width="12" height="20" rx="2"/><rect x="-7" y="6" width="14" height="8" rx="1" fill="#b08d3c"/></g>
+<text x="86" y="78" font-size="17" font-weight="bold" fill="#2f3a2b">Shot</text>
+<text x="86" y="98" font-size="15" fill="#2f3a2b">Non toxic only. No lead in the bag</text>
+<circle cx="44" cy="144.0" r="26" fill="#e8590c"/>
+<text x="44" y="153" font-size="25" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="86" y="140" font-size="17" font-weight="bold" fill="#2f3a2b">Plug</text>
+<text x="86" y="160" font-size="15" fill="#2f3a2b">3 shells total, chamber included</text>
+<rect x="8" y="176" width="384" height="60" rx="6" fill="#f4eedf"/>
+<circle cx="44" cy="206.0" r="26" fill="#e8590c"/>
+<text x="44" y="215" font-size="25" font-weight="bold" fill="#fffaf0" text-anchor="middle">8</text>
+<text x="86" y="202" font-size="17" font-weight="bold" fill="#2f3a2b">Limit</text>
+<text x="86" y="222" font-size="15" fill="#2f3a2b">8 ducks a day, then stop</text>
+<circle cx="44" cy="268.0" r="26" fill="#fffaf0" stroke="#d8cfb8" stroke-width="1.4"/>
+<g transform="translate(44 268.0) scale(1.15)" fill="#8b5a2b" stroke="none"><path d="M-15 8 C-8 -8 6 -14 15 -12 C12 -6 10 -2 4 2 C8 2 10 4 8 6 C2 10 -8 11 -15 8z"/><path d="M-2 4 L6 -2 M-6 6 L2 -1" stroke="#fffaf0" stroke-width="1.6"/></g>
+<text x="86" y="264" font-size="17" font-weight="bold" fill="#2f3a2b">Wing on</text>
+<text x="86" y="284" font-size="15" fill="#2f3a2b">One feathered wing or the head</text>
+<rect x="8" y="300" width="384" height="60" rx="6" fill="#f4eedf"/>
+<circle cx="44" cy="330.0" r="26" fill="#e8590c"/>
+<text x="44" y="339" font-size="23" font-weight="bold" fill="#fffaf0" text-anchor="middle">24</text>
+<text x="86" y="326" font-size="17" font-weight="bold" fill="#2f3a2b">Fridge counts</text>
+<text x="86" y="346" font-size="15" fill="#2f3a2b">24 in possession until preserved</text>
+<circle cx="44" cy="392.0" r="26" fill="#fffaf0" stroke="#d8cfb8" stroke-width="1.4"/>
+<g transform="translate(44 392.0) scale(1.15)" fill="#4a7fb0" stroke="none"><path d="M-16 2 H16 L11 10 H-11z"/><path d="M-2 2 V-14 L10 0z" fill="#4a7fb0"/></g>
+<text x="86" y="388" font-size="17" font-weight="bold" fill="#2f3a2b">Boat</text>
+<text x="86" y="408" font-size="15" fill="#2f3a2b">Dead still before you shoot</text>
 </svg>

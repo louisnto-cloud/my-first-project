@@ -1,14 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Sketch of a spur in the Hunt Map 3D view. A main ridge runs across the back. A short finger of high ground runs off it toward you, with a draw on each side holding timber. Contour lines bend downhill around the nose of the spur.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Spur (finger ridge) in 3D</text><rect x="0" y="36" width="400" height="70" fill="#e3ecf3"/><text x="388" y="24" font-size="13" fill="#2f3a2b" text-anchor="end">Hunt Map 3D view (sketch)</text>
-  <path d="M0 110 Q 200 70 400 110 L400 268 L0 268 Z" fill="#a9b68e"/>
-  <path d="M0 110 Q 200 70 400 110" stroke="#2f3a2b" stroke-width="3" fill="none"/>
-  <path d="M200 88 C 196 150, 210 210, 205 268 L120 268 C 140 200, 170 130, 200 88 Z" fill="#e9edd9"/>
-  <path d="M200 88 C 196 150, 210 210, 205 268 L290 268 C 260 200, 230 130, 200 88 Z" fill="#c3cdaa"/>
-  <path d="M200 88 C 196 150, 210 210, 205 268" stroke="#2f3a2b" stroke-width="2.5" fill="none"/>
-  <path d="M0 150 Q 90 128 150 140 Q 196 168 202 170 Q 212 168 250 140 Q 320 128 400 150" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
-  <path d="M0 196 Q 80 176 130 190 Q 190 226 206 228 Q 222 226 275 190 Q 330 176 400 196" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
-  <path d="M60 156 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="58.5" y="186" width="3" height="5" fill="#6b4f35"/><path d="M88 176 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="86.5" y="206" width="3" height="5" fill="#6b4f35"/><path d="M340 162 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="338.5" y="192" width="3" height="5" fill="#6b4f35"/><path d="M366 186 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="364.5" y="216" width="3" height="5" fill="#6b4f35"/>
-  <rect x="40" y="116" width="100" height="24" rx="6" fill="#2f3a2b"/><text x="90.0" y="133" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Main ridge</text><rect x="220" y="150" width="49" height="24" rx="6" fill="#e8590c"/><text x="244.5" y="167" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Spur</text>
-  <text x="200" y="292" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">A short ridge that runs off the main one</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 302" font-family="sans-serif" role="img" aria-label="Sketch of a spur, or finger ridge, in the Hunt Map 3D view. A main ridge runs across the back. A short finger of high ground runs off it toward you, with a draw on each side holding timber. Contour lines bend downhill, toward you, on the spur and uphill in the draws.">
+<rect width="400" height="302" fill="#fffaf0"/>
+<text x="12" y="26" font-size="18" font-weight="bold" fill="#2f3a2b">Spur (finger ridge)</text>
+<text x="388" y="26" font-size="14" fill="#6b5b4b" text-anchor="end">Hunt Map 3D view (sketch)</text>
+<rect x="0" y="38" width="400" height="232" fill="#e3ecf3"/>
+<path d="M0 128 C 70 112, 140 98, 200 96 C 260 96, 330 108, 400 122 L400 270 L0 270z" fill="#c9cfa6"/>
+<path d="M150 100 C 120 150, 80 210, 60 270 L150 270 C 150 210, 150 150, 176 98z" fill="#a3b086"/>
+<path d="M240 98 C 260 150, 270 210, 280 270 L370 270 C 340 210, 300 150, 262 100z" fill="#a3b086"/>
+<path d="M176 98 C 160 160, 150 220, 150 270 L280 270 C 270 220, 252 160, 240 98z" fill="#ecebcf"/>
+<path d="M0 168 C 50 166, 80 150, 108 150 C 150 150, 170 190, 212 190 C 254 190, 280 150, 312 150 C 344 150, 370 164, 400 162" fill="none" stroke="#8b5a2b" stroke-width="1.8"/>
+<path d="M0 214 C 50 212, 80 196, 108 196 C 150 196, 170 238, 212 238 C 254 238, 280 196, 312 196 C 344 196, 370 210, 400 208" fill="none" stroke="#8b5a2b" stroke-width="1.8"/>
+<path d="M0 254 C 50 252, 80 238, 108 238 C 150 238, 170 268, 212 268 C 254 268, 280 238, 312 238 C 344 238, 370 250, 400 248" fill="none" stroke="#8b5a2b" stroke-width="1.8"/>
+<path d="M206 97 C 206 160, 212 220, 214 270" fill="none" stroke="#2f3a2b" stroke-width="2.4" stroke-dasharray="6 4"/>
+<path d="M0 128 C 70 112, 140 98, 200 96 C 260 96, 330 108, 400 122" fill="none" stroke="#2f3a2b" stroke-width="3.6"/>
+<g transform="translate(112 206) scale(1.0)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(96 246) scale(1.15)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(130 240) scale(0.9)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(300 206) scale(1.0)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(318 248) scale(1.15)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(290 238) scale(0.9)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<line x1="76" y1="113" x2="76" y2="79" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="76" cy="113" r="2.6" fill="#2f3a2b"/>
+<rect x="30.2" y="52.0" width="91.7" height="27.0" rx="5" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="1.2"/>
+<text x="76" y="71" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Main ridge</text>
+<line x1="214" y1="150" x2="288" y2="79" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="214" cy="150" r="2.6" fill="#2f3a2b"/>
+<rect x="276.0" y="52.0" width="48.0" height="27.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="300" y="71" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Spur</text>
+<rect x="20.5" y="166.0" width="50.9" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="46" y="185" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">draw</text>
+<rect x="332.5" y="166.0" width="50.9" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="358" y="185" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">draw</text>
+<text x="200" y="292" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">A short ridge that runs off the main one</text>
 </svg>

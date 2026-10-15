@@ -1,41 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="600" fill="#fffaf0"/>
-  <text x="200" y="28" font-size="19" font-weight="bold" fill="#23261f" text-anchor="middle">How the LEH draw runs</text>
-  <defs>
-    <marker id="lehah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#23261f"/></marker>
-  </defs>
-  <g font-size="14" fill="#23261f">
-    <rect x="30" y="48" width="340" height="52" rx="8" fill="#e9eedd" stroke="#2f3a2b" stroke-width="2"/>
-    <text x="200" y="70" text-anchor="middle" font-weight="bold">1. Every application gets a random number</text>
-    <text x="200" y="90" text-anchor="middle">Name, FWID, date sent: no effect at all</text>
-    <rect x="30" y="124" width="340" height="52" rx="8" fill="#e9eedd" stroke="#2f3a2b" stroke-width="2"/>
-    <text x="200" y="146" text-anchor="middle" font-weight="bold">2. Sorted lowest number first</text>
-    <text x="200" y="166" text-anchor="middle">Winners last year get a flag (not deer, bear, turkey)</text>
-    <rect x="30" y="200" width="340" height="66" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
-    <text x="200" y="222" text-anchor="middle" font-weight="bold">3. Pass 1: first choice hunts</text>
-    <text x="200" y="242" text-anchor="middle">Each flagged application is skipped</text>
-    <text x="200" y="259" text-anchor="middle">(every other flag for 50%, two of three for 66%)</text>
-    <rect x="30" y="290" width="340" height="52" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
-    <text x="200" y="312" text-anchor="middle" font-weight="bold">4. Pass 2: first choice again, no flags</text>
-    <text x="200" y="332" text-anchor="middle">Fills hunts that still have authorizations</text>
-    <rect x="30" y="366" width="340" height="52" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
-    <text x="200" y="388" text-anchor="middle" font-weight="bold">5. Pass 3: second choice hunts</text>
-    <text x="200" y="408" text-anchor="middle">Only for applications still without a draw</text>
-    <rect x="30" y="442" width="340" height="52" rx="8" fill="#e9eedd" stroke="#2f3a2b" stroke-width="2"/>
-    <text x="200" y="464" text-anchor="middle" font-weight="bold">6. Authorizations posted to your FWID profile</text>
-    <text x="200" y="484" text-anchor="middle">Check WILD. Nothing is mailed.</text>
-  </g>
-  <g stroke="#23261f" stroke-width="2.5" fill="none" marker-end="url(#lehah)">
-    <line x1="200" y1="100" x2="200" y2="122"/>
-    <line x1="200" y1="176" x2="200" y2="198"/>
-    <line x1="200" y1="266" x2="200" y2="288"/>
-    <line x1="200" y1="342" x2="200" y2="364"/>
-    <line x1="200" y1="418" x2="200" y2="440"/>
-  </g>
-  <g font-size="13" fill="#23261f">
-    <text x="30" y="524">Group hunt: one random number for the whole group.</text>
-    <text x="30" y="544">Shared hunt (moose, bison): each member is entered,</text>
-    <text x="30" y="562">one hit draws the whole group.</text>
-    <text x="30" y="586" fill="#6b4f35">Source: How Limited Entry Hunting Works, gov.bc.ca</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 669" font-family="sans-serif" role="img" aria-label="How the LEH (Limited Entry Hunting) draw runs, in 6 steps. 1: every application gets a random number; name, FWID (Fish and Wildlife ID) and the date sent have no effect at all. 2: applications are sorted, lowest number first; winners last year get a flag, except for deer, bear and turkey. 3: pass 1, first choice hunts; each flagged application is skipped (every other flag for 50 percent hunts, two of three for 66 percent). 4: pass 2, first choice again with no flags, fills hunts that still have authorizations. 5: pass 3, second choice hunts, only for applications still without a draw. 6: authorizations are posted to your FWID profile; check WILD, nothing is mailed. Group hunt: one random number for the whole group. Shared hunt (moose, bison): each member is entered, and one hit draws the whole group. Source: How Limited Entry Hunting Works, gov.bc.ca.">
+<rect width="400" height="669" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How the LEH draw runs</text>
+<line x1="26" y1="66" x2="26" y2="429" stroke="#c9bfa6" stroke-width="3"/>
+<rect x="52" y="44" width="344" height="57" rx="8" fill="#f4eedf"/>
+<text x="60" y="70" font-size="16" font-weight="bold" fill="#2f3a2b">Every application gets a random number</text>
+<text x="60" y="90" font-size="15" fill="#2f3a2b">Name, FWID, date sent: no effect at all</text>
+<rect x="52" y="109" width="344" height="76" rx="8" fill="#f4eedf"/>
+<text x="60" y="135" font-size="16" font-weight="bold" fill="#2f3a2b">Sorted, lowest number first</text>
+<text x="60" y="155" font-size="15" fill="#2f3a2b">Winners last year get a flag (not deer, bear,</text>
+<text x="60" y="174" font-size="15" fill="#2f3a2b">turkey)</text>
+<rect x="52" y="193" width="344" height="76" rx="8" fill="#fbe6d8"/>
+<text x="60" y="219" font-size="16" font-weight="bold" fill="#2f3a2b">Pass 1: first choice hunts</text>
+<text x="60" y="239" font-size="15" fill="#2f3a2b">Each flagged application is skipped</text>
+<text x="60" y="258" font-size="15" fill="#2f3a2b">(every other flag for 50%, two of three for 66%)</text>
+<rect x="52" y="277" width="344" height="57" rx="8" fill="#fbe6d8"/>
+<text x="60" y="303" font-size="16" font-weight="bold" fill="#2f3a2b">Pass 2: first choice again, no flags</text>
+<text x="60" y="323" font-size="15" fill="#2f3a2b">Fills hunts that still have authorizations</text>
+<rect x="52" y="342" width="344" height="57" rx="8" fill="#fbe6d8"/>
+<text x="60" y="368" font-size="16" font-weight="bold" fill="#2f3a2b">Pass 3: second choice hunts</text>
+<text x="60" y="388" font-size="15" fill="#2f3a2b">Only for applications still without a draw</text>
+<rect x="52" y="407" width="344" height="77" rx="8" fill="#f4eedf"/>
+<text x="60" y="433" font-size="16" font-weight="bold" fill="#2f3a2b">Authorizations posted to your FWID</text>
+<text x="60" y="453" font-size="16" font-weight="bold" fill="#2f3a2b">profile</text>
+<text x="60" y="473" font-size="15" fill="#2f3a2b">Check WILD. Nothing is mailed.</text>
+<circle cx="26" cy="66" r="15" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/>
+<text x="26" y="72" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<circle cx="26" cy="131" r="15" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/>
+<text x="26" y="137" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<circle cx="26" cy="215" r="15" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="26" y="221" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<circle cx="26" cy="299" r="15" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="26" y="305" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<circle cx="26" cy="364" r="15" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="26" y="370" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text>
+<circle cx="26" cy="429" r="15" fill="#2f6e3b" stroke="#fffaf0" stroke-width="2"/>
+<text x="26" y="435" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">6</text>
+<rect x="8" y="496" width="384" height="57" rx="8" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.6"/>
+<text x="20" y="522" font-size="16" font-weight="bold" fill="#2c5d86">Group hunt</text>
+<text x="20" y="542" font-size="15" fill="#2f3a2b">One random number for the whole group</text>
+<rect x="8" y="559" width="384" height="76" rx="8" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.6"/>
+<text x="20" y="585" font-size="16" font-weight="bold" fill="#2c5d86">Shared hunt (moose, bison)</text>
+<text x="20" y="605" font-size="15" fill="#2f3a2b">Each member is entered. One hit draws the whole</text>
+<text x="20" y="624" font-size="15" fill="#2f3a2b">group</text>
+<text x="14" y="657" font-size="14" fill="#6b5b4b">Source: How Limited Entry Hunting Works, gov.bc.ca</text>
 </svg>

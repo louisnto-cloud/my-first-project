@@ -1,27 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A ruler from 0 to 50 metres from your hide. A green band marks the shooting zone, inside 35 metres. A goose at about 33 metres is ticked. A goose at 50 metres is crossed out: it looks close because it is big, but it is too far. Wait for feet down inside 35 metres, 38 yards, and aim at the head. Tip.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Geese look close. Count the metres (Tip)</text>
-  <line x1="30" y1="230" x2="390" y2="230" stroke="#2f3a2b" stroke-width="2"/>
-  <line x1="30.0" y1="224" x2="30.0" y2="236" stroke="#2f3a2b" stroke-width="2"/>
-  <text x="30.0" y="254" font-size="13" fill="#2f3a2b" text-anchor="middle">0 m</text>
-  <line x1="94.0" y1="224" x2="94.0" y2="236" stroke="#2f3a2b" stroke-width="2"/>
-  <text x="94.0" y="254" font-size="13" fill="#2f3a2b" text-anchor="middle">10 m</text>
-  <line x1="158.0" y1="224" x2="158.0" y2="236" stroke="#2f3a2b" stroke-width="2"/>
-  <text x="158.0" y="254" font-size="13" fill="#2f3a2b" text-anchor="middle">20 m</text>
-  <line x1="222.0" y1="224" x2="222.0" y2="236" stroke="#2f3a2b" stroke-width="2"/>
-  <text x="222.0" y="254" font-size="13" fill="#2f3a2b" text-anchor="middle">30 m</text>
-  <line x1="286.0" y1="224" x2="286.0" y2="236" stroke="#2f3a2b" stroke-width="2"/>
-  <text x="286.0" y="254" font-size="13" fill="#2f3a2b" text-anchor="middle">40 m</text>
-  <line x1="350.0" y1="224" x2="350.0" y2="236" stroke="#2f3a2b" stroke-width="2"/>
-  <text x="350.0" y="254" font-size="13" fill="#2f3a2b" text-anchor="middle">50 m</text>
-  <rect x="30" y="200" width="224.0" height="22" fill="#2f6e3b" opacity=".25"/>
-  <text x="142.0" y="216" font-size="14" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Shoot: inside 35 m</text>
-  <rect x="20" y="214" width="22" height="16" rx="3" fill="#8a9a6b"/>
-  <text x="32" y="276" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You</text>
-  <g transform="translate(241.20000000000002 150) scale(1.0)"><ellipse rx="18" ry="5" fill="#7a6a58"/><circle cx="18" cy="-1" r="4.5" fill="#7a6a58"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#7a6a58"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#7a6a58"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#7a6a58"/></g>
-  <path d="M271.20000000000005 150 l8.0 8.0 l16.0 -20.0" fill="none" stroke="#2f6e3b" stroke-width="5"/>
-  <g transform="translate(350.0 110) scale(1.0)"><ellipse rx="18" ry="5" fill="#7a6a58"/><circle cx="18" cy="-1" r="4.5" fill="#7a6a58"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#7a6a58"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#7a6a58"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#7a6a58"/></g>
-  <path d="M340.0 50 l20 20 M360.0 50 l-20 20" stroke="#c0392b" stroke-width="5"/>
-  <text x="350.0" y="156" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">50 m: too far</text>
-  <text x="200" y="292" font-size="14" fill="#2f3a2b" text-anchor="middle">Feet down, inside 35 m (38 yd). Aim at the head</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A ruler from 0 to 50 metres from your hide. A green band marks the shooting zone, inside 35 metres. A Canada goose landing at about 33 metres, wings cupped and feet down, is ticked. A goose at 50 metres is crossed out: it looks close because it is big, but it is too far. Wait for feet down inside 35 metres, 38 yards, and aim at the head. Tip.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Geese look close. Count the metres (Tip)</text>
+<rect x="0" y="214" width="400" height="86" fill="#e7ecdc"/>
+<rect x="34" y="188" width="224" height="22" rx="4" fill="#2f6e3b" opacity=".22"/>
+<text x="156" y="204" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Shoot: inside 35 m</text>
+<line x1="34" y1="214" x2="390" y2="214" stroke="#2f3a2b" stroke-width="2"/>
+<line x1="34.0" y1="208" x2="34.0" y2="220" stroke="#2f3a2b" stroke-width="2"/>
+<text x="34" y="238" font-size="15" fill="#2f3a2b" text-anchor="middle">0 m</text>
+<line x1="98.0" y1="208" x2="98.0" y2="220" stroke="#2f3a2b" stroke-width="2"/>
+<text x="98" y="238" font-size="15" fill="#2f3a2b" text-anchor="middle">10 m</text>
+<line x1="162.0" y1="208" x2="162.0" y2="220" stroke="#2f3a2b" stroke-width="2"/>
+<text x="162" y="238" font-size="15" fill="#2f3a2b" text-anchor="middle">20 m</text>
+<line x1="226.0" y1="208" x2="226.0" y2="220" stroke="#2f3a2b" stroke-width="2"/>
+<text x="226" y="238" font-size="15" fill="#2f3a2b" text-anchor="middle">30 m</text>
+<line x1="290.0" y1="208" x2="290.0" y2="220" stroke="#2f3a2b" stroke-width="2"/>
+<text x="290" y="238" font-size="15" fill="#2f3a2b" text-anchor="middle">40 m</text>
+<line x1="354.0" y1="208" x2="354.0" y2="220" stroke="#2f3a2b" stroke-width="2"/>
+<text x="350" y="238" font-size="15" fill="#2f3a2b" text-anchor="middle">50 m</text>
+<path d="M12 214 L16 180 L22 194 L26 174 L32 192 L38 176 L44 194 L50 184 L54 214 Z" fill="#8a9a6b" stroke="#5b6b3e" stroke-width="1.2"/>
+<text x="34" y="260" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You</text>
+<g transform="translate(245.20000000000002 150) scale(-0.62 0.62)"><path d="M-2 14 L-6 32 M8 14 L8 32" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/><path d="M-12 34 L-6 31 L0 35 M2 34 L8 31 L14 34" stroke="#2a2a2a" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M-6 -8 C-18 -34 -34 -50 -50 -56 C-40 -40 -30 -22 -18 -4 Z" fill="#5c4e40" stroke="#2f3a2b" stroke-width="2.258064516129032"/><path d="M-46 2 C-34 -12 0 -16 22 -12 C38 -9 44 2 36 12 C26 22 -8 22 -28 14 C-38 10 -44 8 -46 2 Z" fill="#8a7a66" stroke="#2f3a2b" stroke-width="2.258064516129032"/><path d="M36 12 C26 22 -8 22 -28 14 C-10 14 16 12 30 0 Z" fill="#d9cdb8"/><path d="M-46 2 C-42 8 -36 12 -28 14 C-34 8 -38 4 -40 0 Z" fill="#ffffff"/><path d="M-46 2 L-54 -2 L-50 6 Z" fill="#1f2420"/><path d="M26 -8 C34 -20 38 -30 46 -36" stroke="#2f3a2b" stroke-width="15.516129032258064" fill="none" stroke-linecap="round"/><path d="M26 -8 C34 -20 38 -30 46 -36" stroke="#1f2420" stroke-width="11" fill="none" stroke-linecap="round"/><ellipse cx="51" cy="-38" rx="10" ry="7" transform="rotate(-18 51 -38)" fill="#1f2420"/><path d="M59 -42 C64 -43 68 -42 70 -40 C66 -38 62 -37 59 -37 Z" fill="#1f2420"/><path d="M44 -36 C48 -33 52 -32 55 -33 C53 -29 48 -28 44 -30 Z" fill="#ffffff"/><path d="M-2 -6 C-4 -36 -12 -60 -26 -74 C-6 -64 10 -40 14 -10 Z" fill="#6b5b4b" stroke="#2f3a2b" stroke-width="2.258064516129032"/><path d="M-26 -74 C-20 -70 -16 -66 -13 -60 L-20 -62 Z" fill="#1f2420"/></g>
+<path d="M275 110 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5" stroke-linecap="round"/>
+<text x="241.2" y="94" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Feet down</text>
+<g transform="translate(340.0 96) scale(-0.62 0.62)"><path d="M-2 14 L-6 32 M8 14 L8 32" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/><path d="M-12 34 L-6 31 L0 35 M2 34 L8 31 L14 34" stroke="#2a2a2a" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M-6 -8 C-18 -34 -34 -50 -50 -56 C-40 -40 -30 -22 -18 -4 Z" fill="#5c4e40" stroke="#2f3a2b" stroke-width="2.258064516129032"/><path d="M-46 2 C-34 -12 0 -16 22 -12 C38 -9 44 2 36 12 C26 22 -8 22 -28 14 C-38 10 -44 8 -46 2 Z" fill="#8a7a66" stroke="#2f3a2b" stroke-width="2.258064516129032"/><path d="M36 12 C26 22 -8 22 -28 14 C-10 14 16 12 30 0 Z" fill="#d9cdb8"/><path d="M-46 2 C-42 8 -36 12 -28 14 C-34 8 -38 4 -40 0 Z" fill="#ffffff"/><path d="M-46 2 L-54 -2 L-50 6 Z" fill="#1f2420"/><path d="M26 -8 C34 -20 38 -30 46 -36" stroke="#2f3a2b" stroke-width="15.516129032258064" fill="none" stroke-linecap="round"/><path d="M26 -8 C34 -20 38 -30 46 -36" stroke="#1f2420" stroke-width="11" fill="none" stroke-linecap="round"/><ellipse cx="51" cy="-38" rx="10" ry="7" transform="rotate(-18 51 -38)" fill="#1f2420"/><path d="M59 -42 C64 -43 68 -42 70 -40 C66 -38 62 -37 59 -37 Z" fill="#1f2420"/><path d="M44 -36 C48 -33 52 -32 55 -33 C53 -29 48 -28 44 -30 Z" fill="#ffffff"/><path d="M-2 -6 C-4 -36 -12 -60 -26 -74 C-6 -64 10 -40 14 -10 Z" fill="#6b5b4b" stroke="#2f3a2b" stroke-width="2.258064516129032"/><path d="M-26 -74 C-20 -70 -16 -66 -13 -60 L-20 -62 Z" fill="#1f2420"/></g>
+<path d="M332.0 132 l16 16 M348.0 132 l-16 16" stroke="#c0392b" stroke-width="5" stroke-linecap="round"/>
+<text x="336" y="172" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">50 m: too far</text>
+<text x="200" y="288" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Inside 35 m (38 yd). Aim at the head</text>
 </svg>

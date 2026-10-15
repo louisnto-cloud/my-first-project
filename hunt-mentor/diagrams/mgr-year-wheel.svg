@@ -1,38 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" role="img" aria-label="Year wheel for grouse. January and February: winter, buds, needles and snow roosts. March to May: drumming, hooting and leks. May and June: nests, hatch in June. July and August: broods grow, adults moult. September and October: families split and young birds move. November and December: dusky grouse move uphill into conifers, winter starts. Region 3 general season: September 10 to November 30." font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="520" fill="#fffaf0"/>
-<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">The grouse year</text>
-<path d="M200 210 L200.0 60.0 A150 150 0 0 1 329.9 135.0 Z" fill="#cfe0ef" opacity="0.9"/>
-<path d="M200 210 L329.9 135.0 A150 150 0 0 1 275.0 339.9 Z" fill="#e9c46a" opacity="0.9"/>
-<path d="M200 210 L329.9 285.0 A150 150 0 0 1 200.0 360.0 Z" fill="#f2b38f" opacity="0.9"/>
-<path d="M200 210 L200.0 360.0 A150 150 0 0 1 70.1 285.0 Z" fill="#8a9a6b" opacity="0.9"/>
-<path d="M200 210 L70.1 285.0 A150 150 0 0 1 70.1 135.0 Z" fill="#e8590c" opacity="0.9"/>
-<path d="M200 210 L70.1 135.0 A150 150 0 0 1 200.0 60.0 Z" fill="#6b4f35" opacity="0.9"/>
-<circle cx="200" cy="210" r="78" fill="#fffaf0" stroke="none" stroke-width="0"/>
-<text x="230.28182827699493" y="102.98667832417901" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">J</text>
-<text x="282.73149339882605" y="133.26850660117395" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">F</text>
-<text x="313.013321675821" y="185.71817172300507" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">M</text>
-<text x="313.013321675821" y="246.28182827699493" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">A</text>
-<text x="282.73149339882605" y="298.73149339882605" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">M</text>
-<text x="230.28182827699496" y="329.013321675821" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">J</text>
-<text x="169.71817172300507" y="329.013321675821" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">J</text>
-<text x="117.26850660117395" y="298.73149339882605" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">A</text>
-<text x="86.98667832417901" y="246.28182827699493" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">S</text>
-<text x="86.986678324179" y="185.71817172300513" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">O</text>
-<text x="117.26850660117393" y="133.26850660117395" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">N</text>
-<text x="169.71817172300507" y="102.98667832417901" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">D</text>
-<text x="200" y="190" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Season</text>
-<text x="200" y="209" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Sept 10 to</text>
-<text x="200" y="228" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Nov 30 (R3)</text>
-<rect x="14" y="369" width="16" height="16" rx="3" fill="#cfe0ef" stroke="none" stroke-width="0"/>
-<text x="38" y="382" font-size="14" fill="#23261f" text-anchor="start">Winter: buds, needles, snow roosts</text>
-<rect x="14" y="391" width="16" height="16" rx="3" fill="#e9c46a" stroke="none" stroke-width="0"/>
-<text x="38" y="404" font-size="14" fill="#23261f" text-anchor="start">Drumming, hooting, leks</text>
-<rect x="14" y="413" width="16" height="16" rx="3" fill="#f2b38f" stroke="none" stroke-width="0"/>
-<text x="38" y="426" font-size="14" fill="#23261f" text-anchor="start">Nests, hatch in June</text>
-<rect x="14" y="435" width="16" height="16" rx="3" fill="#8a9a6b" stroke="none" stroke-width="0"/>
-<text x="38" y="448" font-size="14" fill="#23261f" text-anchor="start">Broods grow, moult</text>
-<rect x="14" y="457" width="16" height="16" rx="3" fill="#e8590c" stroke="none" stroke-width="0"/>
-<text x="38" y="470" font-size="14" fill="#23261f" text-anchor="start">Families split, young move</text>
-<rect x="14" y="479" width="16" height="16" rx="3" fill="#6b4f35" stroke="none" stroke-width="0"/>
-<text x="38" y="492" font-size="14" fill="#23261f" text-anchor="start">Uphill, into conifers</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 540" font-family="sans-serif" role="img" aria-label="Year wheel for grouse. January and February: winter, buds, needles and snow roosts. March to May: drumming, hooting and leks. May and June: nests, hatch in June. July and August: broods grow, adults moult. September and October: families split and young birds move. November and December: dusky grouse move uphill into conifers, winter starts. Orange arc: Region 3 general season, September 10 to November 30.">
+<rect width="400" height="540" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The grouse year</text>
+<path d="M200.0 68.0 A122 122 0 0 1 261.0 84.3 L238.0 124.2 A76 76 0 0 0 200.0 114.0z" fill="#cfe0ef" stroke="#fffaf0" stroke-width="2"/>
+<path d="M261.0 84.3 A122 122 0 0 1 305.7 129.0 L265.8 152.0 A76 76 0 0 0 238.0 124.2z" fill="#cfe0ef" stroke="#fffaf0" stroke-width="2"/>
+<path d="M305.7 129.0 A122 122 0 0 1 322.0 190.0 L276.0 190.0 A76 76 0 0 0 265.8 152.0z" fill="#e9c46a" stroke="#fffaf0" stroke-width="2"/>
+<path d="M322.0 190.0 A122 122 0 0 1 305.7 251.0 L265.8 228.0 A76 76 0 0 0 276.0 190.0z" fill="#e9c46a" stroke="#fffaf0" stroke-width="2"/>
+<path d="M305.7 251.0 A122 122 0 0 1 286.3 276.3 L253.7 243.7 A76 76 0 0 0 265.8 228.0z" fill="#e9c46a" stroke="#fffaf0" stroke-width="2"/>
+<path d="M286.3 276.3 A122 122 0 0 1 261.0 295.7 L238.0 255.8 A76 76 0 0 0 253.7 243.7z" fill="#f2b38f" stroke="#fffaf0" stroke-width="2"/>
+<path d="M261.0 295.7 A122 122 0 0 1 200.0 312.0 L200.0 266.0 A76 76 0 0 0 238.0 255.8z" fill="#f2b38f" stroke="#fffaf0" stroke-width="2"/>
+<path d="M200.0 312.0 A122 122 0 0 1 139.0 295.7 L162.0 255.8 A76 76 0 0 0 200.0 266.0z" fill="#8a9a6b" stroke="#fffaf0" stroke-width="2"/>
+<path d="M139.0 295.7 A122 122 0 0 1 94.3 251.0 L134.2 228.0 A76 76 0 0 0 162.0 255.8z" fill="#8a9a6b" stroke="#fffaf0" stroke-width="2"/>
+<path d="M94.3 251.0 A122 122 0 0 1 78.0 190.0 L124.0 190.0 A76 76 0 0 0 134.2 228.0z" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<path d="M78.0 190.0 A122 122 0 0 1 94.3 129.0 L134.2 152.0 A76 76 0 0 0 124.0 190.0z" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<path d="M94.3 129.0 A122 122 0 0 1 139.0 84.3 L162.0 124.2 A76 76 0 0 0 134.2 152.0z" fill="#6b4f35" stroke="#fffaf0" stroke-width="2"/>
+<path d="M139.0 84.3 A122 122 0 0 1 200.0 68.0 L200.0 114.0 A76 76 0 0 0 162.0 124.2z" fill="#6b4f35" stroke="#fffaf0" stroke-width="2"/>
+<text x="236.2" y="60.8" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">J</text>
+<text x="299" y="97" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">F</text>
+<text x="335.2" y="159.8" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">M</text>
+<text x="335.2" y="232.2" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A</text>
+<text x="299" y="295" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">M</text>
+<text x="236.2" y="331.2" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">J</text>
+<text x="163.8" y="331.2" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">J</text>
+<text x="101" y="295" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A</text>
+<text x="64.8" y="232.2" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">S</text>
+<text x="64.8" y="159.8" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">O</text>
+<text x="101" y="97" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">N</text>
+<text x="163.8" y="60.8" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">D</text>
+<path d="M137.5 214.0 A67 67 0 0 1 166.5 132.0" fill="none" stroke="#e8590c" stroke-width="8" stroke-linecap="round"/>
+<text x="200" y="178" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Season</text>
+<text x="200" y="198" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Sept 10 to</text>
+<text x="200" y="216" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Nov 30 (R3)</text>
+<rect x="20" y="352" width="18" height="18" rx="4" fill="#cfe0ef"/>
+<text x="48" y="367" font-size="16" fill="#2f3a2b">Winter: buds, needles, snow roosts</text>
+<rect x="20" y="378" width="18" height="18" rx="4" fill="#e9c46a"/>
+<text x="48" y="393" font-size="16" fill="#2f3a2b">Drumming, hooting, leks</text>
+<rect x="20" y="404" width="18" height="18" rx="4" fill="#f2b38f"/>
+<text x="48" y="419" font-size="16" fill="#2f3a2b">Nests, hatch in June</text>
+<rect x="20" y="430" width="18" height="18" rx="4" fill="#8a9a6b"/>
+<text x="48" y="445" font-size="16" fill="#2f3a2b">Broods grow, moult</text>
+<rect x="20" y="456" width="18" height="18" rx="4" fill="#e8590c"/>
+<text x="48" y="471" font-size="16" fill="#2f3a2b">Families split, young move</text>
+<rect x="20" y="482" width="18" height="18" rx="4" fill="#6b4f35"/>
+<text x="48" y="497" font-size="16" fill="#2f3a2b">Uphill, into conifers</text>
+<path d="M24 517 H38" stroke="#e8590c" stroke-width="7" stroke-linecap="round"/>
+<text x="48" y="523" font-size="16" fill="#2f3a2b">Region 3 general season</text>
 </svg>

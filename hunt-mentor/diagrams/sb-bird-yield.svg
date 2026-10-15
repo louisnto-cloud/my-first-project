@@ -1,30 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" font-family="sans-serif" role="img" aria-label="Bar chart of meat per bird in grams, hunter estimates, Tip, about 60 percent. Quail 60 to 80. Chukar and partridge 150 to 250. Ruffed grouse 200 to 280. Mallard 350 to 450. Pheasant cock 450 to 600. Canada goose about 1 kilogram of boned breast. A dusky grouse gives about twice a ruffed grouse; a teal is one serving.">
-  <rect width="400" height="330" fill="#fffaf0"/>
-  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Meat per bird, grams (Tip, 60%)</text>
-  <text x="142" y="64" font-size="14" fill="#2f3a2b" text-anchor="end">Quail</text>
-  <rect x="150" y="50" width="13" height="22" rx="4" fill="#8b5a2b"/>
-  <rect x="163" y="50" width="4" height="22" fill="#8b5a2b" opacity=".45"/>
-  <text x="172.8" y="66" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="start">60 to 80</text>
-  <text x="142" y="104" font-size="14" fill="#2f3a2b" text-anchor="end">Chukar, partridge</text>
-  <rect x="150" y="90" width="32" height="22" rx="4" fill="#8b5a2b"/>
-  <rect x="182" y="90" width="21" height="22" fill="#8b5a2b" opacity=".45"/>
-  <text x="208.5" y="106" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="start">150 to 250</text>
-  <text x="142" y="144" font-size="14" fill="#2f3a2b" text-anchor="end">Ruffed grouse</text>
-  <rect x="150" y="130" width="42" height="22" rx="4" fill="#8b5a2b"/>
-  <rect x="192" y="130" width="17" height="22" fill="#8b5a2b" opacity=".45"/>
-  <text x="214.8" y="146" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="start">200 to 280</text>
-  <text x="142" y="184" font-size="14" fill="#2f3a2b" text-anchor="end">Mallard</text>
-  <rect x="150" y="170" width="74" height="22" rx="4" fill="#8b5a2b"/>
-  <rect x="224" y="170" width="21" height="22" fill="#8b5a2b" opacity=".45"/>
-  <text x="250.5" y="186" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="start">350 to 450</text>
-  <text x="142" y="224" font-size="14" fill="#2f3a2b" text-anchor="end">Pheasant cock</text>
-  <rect x="150" y="210" width="94" height="22" rx="4" fill="#8b5a2b"/>
-  <rect x="244" y="210" width="32" height="22" fill="#8b5a2b" opacity=".45"/>
-  <text x="282.0" y="226" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="start">450 to 600</text>
-  <text x="142" y="264" font-size="14" fill="#2f3a2b" text-anchor="end">Canada goose</text>
-  <rect x="150" y="250" width="189" height="22" rx="4" fill="#8b5a2b"/>
-  <rect x="339" y="250" width="42" height="22" fill="#8b5a2b" opacity=".45"/>
-  <text x="250" y="266" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">about 1 kg breast</text>
-  <text x="200" y="296" font-size="14" fill="#2f3a2b" text-anchor="middle">Dusky grouse: about twice a ruffed grouse</text>
-  <text x="200" y="316" font-size="14" fill="#2f3a2b" text-anchor="middle">Teal: one serving</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 402" font-family="sans-serif" role="img" aria-label="Bar chart of meat per bird in grams, hunter estimates, Tip, about 60 percent. Quail 60 to 80. Chukar and partridge 150 to 250. Ruffed grouse 200 to 280. Mallard 350 to 450. Pheasant cock 450 to 600. Canada goose about 1 kilogram of boned breast. A dusky grouse gives about twice a ruffed grouse; a teal is one serving.">
+<rect width="400" height="402" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Meat per bird, grams (Tip, 60%)</text>
+<line x1="14.0" y1="42" x2="14.0" y2="318" stroke="#ddd6c6" stroke-width="1"/>
+<line x1="98.5" y1="42" x2="98.5" y2="318" stroke="#ddd6c6" stroke-width="1"/>
+<line x1="183.1" y1="42" x2="183.1" y2="318" stroke="#ddd6c6" stroke-width="1"/>
+<line x1="267.6" y1="42" x2="267.6" y2="318" stroke="#ddd6c6" stroke-width="1"/>
+<line x1="352.2" y1="42" x2="352.2" y2="318" stroke="#ddd6c6" stroke-width="1"/>
+<text x="14" y="58" font-size="16" font-weight="bold" fill="#2f3a2b">Quail</text>
+<text x="386" y="58" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end">60 to 80</text>
+<rect x="14" y="64" width="372" height="14" rx="3" fill="#efe8d6"/>
+<rect x="14" y="64" width="20.3" height="14" rx="3" fill="#8b5a2b" opacity=".35"/>
+<rect x="34.3" y="64" width="6.8" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="104" font-size="16" font-weight="bold" fill="#2f3a2b">Chukar, partridge</text>
+<text x="386" y="104" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end">150 to 250</text>
+<rect x="14" y="110" width="372" height="14" rx="3" fill="#efe8d6"/>
+<rect x="14" y="110" width="50.7" height="14" rx="3" fill="#8b5a2b" opacity=".35"/>
+<rect x="64.7" y="110" width="33.8" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="150" font-size="16" font-weight="bold" fill="#2f3a2b">Ruffed grouse</text>
+<text x="386" y="150" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end">200 to 280</text>
+<rect x="14" y="156" width="372" height="14" rx="3" fill="#efe8d6"/>
+<rect x="14" y="156" width="67.6" height="14" rx="3" fill="#8b5a2b" opacity=".35"/>
+<rect x="81.6" y="156" width="27.1" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="196" font-size="16" font-weight="bold" fill="#2f3a2b">Mallard</text>
+<text x="386" y="196" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end">350 to 450</text>
+<rect x="14" y="202" width="372" height="14" rx="3" fill="#efe8d6"/>
+<rect x="14" y="202" width="118.4" height="14" rx="3" fill="#8b5a2b" opacity=".35"/>
+<rect x="132.4" y="202" width="33.8" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="242" font-size="16" font-weight="bold" fill="#2f3a2b">Pheasant cock</text>
+<text x="386" y="242" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end">450 to 600</text>
+<rect x="14" y="248" width="372" height="14" rx="3" fill="#efe8d6"/>
+<rect x="14" y="248" width="152.2" height="14" rx="3" fill="#8b5a2b" opacity=".35"/>
+<rect x="166.2" y="248" width="50.7" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="288" font-size="16" font-weight="bold" fill="#2f3a2b">Canada goose, breast</text>
+<text x="386" y="288" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end">about 1 kg</text>
+<rect x="14" y="294" width="372" height="14" rx="3" fill="#efe8d6"/>
+<rect x="14" y="294" width="338.2" height="14" rx="3" fill="#8b5a2b" opacity=".35"/>
+<circle cx="352.2" cy="301" r="8" fill="#e8590c"/>
+<text x="14" y="330" font-size="14" fill="#6b5b4b">0 g</text>
+<text x="98.5" y="330" font-size="14" fill="#6b5b4b" text-anchor="middle">250 g</text>
+<text x="183.1" y="330" font-size="14" fill="#6b5b4b" text-anchor="middle">500 g</text>
+<text x="267.6" y="330" font-size="14" fill="#6b5b4b" text-anchor="middle">750 g</text>
+<text x="352.2" y="330" font-size="14" fill="#6b5b4b" text-anchor="middle">1 kg</text>
+<rect x="8" y="342" width="384" height="52" rx="8" fill="#f4eedf"/>
+<text x="20" y="363" font-size="16" fill="#2f3a2b">Dusky grouse: about twice a ruffed grouse</text>
+<text x="20" y="384" font-size="16" fill="#2f3a2b">Teal: one serving</text>
 </svg>

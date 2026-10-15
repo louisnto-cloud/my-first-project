@@ -1,34 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 317" role="img" aria-label="Grid: Region 8 deer bag limits. All deer together, one licence year: 3. Antlerless at most, only 1 of each species: 2. Mule deer: 1. Antlerless mule deer: draw only: LEH. White tailed deer: at most 1 buck, 1 antlerless: 2. Mule deer buck from Regions 3, 4, 5, 6, 7A, 7B and 8 combined: 1." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="317" fill="#fffaf0"/>
-<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 8 deer bag limits</text>
-<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 67, and page 14 for the province</text>
-<rect x="6.0" y="69" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<text x="68.0" y="103" font-size="26" font-weight="bold" fill="#e8590c" text-anchor="middle">3</text>
-<text x="68.0" y="127" font-size="14" fill="#23261f" text-anchor="middle">All deer</text>
-<text x="68.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">together, one</text>
-<text x="68.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">licence year</text>
-<rect x="138.0" y="69" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
-<text x="200.0" y="103" font-size="26" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2</text>
-<text x="200.0" y="127" font-size="14" fill="#23261f" text-anchor="middle">Antlerless at</text>
-<text x="200.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">most, only 1 of</text>
-<text x="200.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">each species</text>
-<rect x="270.0" y="69" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
-<text x="332.0" y="103" font-size="26" font-weight="bold" fill="#8b5a2b" text-anchor="middle">1</text>
-<text x="332.0" y="127" font-size="14" fill="#23261f" text-anchor="middle">Mule deer</text>
-<rect x="6.0" y="183" width="124.0" height="124" rx="9" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
-<text x="68.0" y="217" font-size="26" font-weight="bold" fill="#2f3a2b" text-anchor="middle">LEH</text>
-<text x="68.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">Antlerless mule</text>
-<text x="68.0" y="259" font-size="14" fill="#23261f" text-anchor="middle">deer: draw only</text>
-<rect x="138.0" y="183" width="124.0" height="124" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
-<text x="200.0" y="217" font-size="26" font-weight="bold" fill="#8b5a2b" text-anchor="middle">2</text>
-<text x="200.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">White tailed</text>
-<text x="200.0" y="259" font-size="14" fill="#23261f" text-anchor="middle">deer: at most 1</text>
-<text x="200.0" y="277" font-size="14" fill="#23261f" text-anchor="middle">buck, 1</text>
-<text x="200.0" y="295" font-size="14" fill="#23261f" text-anchor="middle">antlerless</text>
-<rect x="270.0" y="183" width="124.0" height="124" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
-<text x="332.0" y="217" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">1</text>
-<text x="332.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">Mule deer buck</text>
-<text x="332.0" y="259" font-size="14" fill="#23261f" text-anchor="middle">from Regions 3,</text>
-<text x="332.0" y="277" font-size="14" fill="#23261f" text-anchor="middle">4, 5, 6, 7A, 7B</text>
-<text x="332.0" y="295" font-size="14" fill="#23261f" text-anchor="middle">and 8 combined</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 443" font-family="sans-serif" role="img" aria-label="Region 8 deer bag limits, synopsis page 67, and page 14 for the province. All deer together, in one licence year: 3. Antlerless: at most 2, and only 1 of each species. Mule deer: 1. Antlerless mule deer: draw only, by LEH, Limited Entry Hunting. White tailed deer: 2, at most 1 buck and 1 antlerless. Province wide: 1 mule deer buck from Regions 3, 4, 5, 6, 7A, 7B and 8 combined.">
+<rect width="400" height="443" fill="#fffaf0"/>
+<text x="14" y="30" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">REGION 8, PAGE 67</text>
+<line x1="187" y1="25" x2="392" y2="25" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="40" width="384" height="58" rx="6" fill="#f4eedf"/>
+<text x="64" y="77.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">3</text>
+<text x="130" y="64" font-size="16" fill="#2f3a2b">All deer together, one licence</text>
+<text x="130" y="85" font-size="16" fill="#2f3a2b">year</text>
+<text x="64" y="137.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">2</text>
+<text x="130" y="124" font-size="16" fill="#2f3a2b">Antlerless at most, only 1 of</text>
+<text x="130" y="145" font-size="16" fill="#2f3a2b">each species</text>
+<rect x="8" y="160" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="190.6" font-size="24" font-weight="bold" fill="#8b5a2b" text-anchor="middle">1</text>
+<text x="130" y="187.5" font-size="16" fill="#2f3a2b">Mule deer</text>
+<text x="64" y="236.6" font-size="24" font-weight="bold" fill="#8b5a2b" text-anchor="middle">LEH</text>
+<text x="130" y="233.5" font-size="16" fill="#2f3a2b">Antlerless mule deer: draw only</text>
+<rect x="8" y="252" width="384" height="58" rx="6" fill="#f4eedf"/>
+<text x="64" y="289.6" font-size="24" font-weight="bold" fill="#4a7fb0" text-anchor="middle">2</text>
+<text x="130" y="276" font-size="16" fill="#2f3a2b">White tailed deer: at most 1 buck,</text>
+<text x="130" y="297" font-size="16" fill="#2f3a2b">1 antlerless</text>
+<text x="14" y="338" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">PROVINCE, PAGE 14</text>
+<line x1="194" y1="333" x2="392" y2="333" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="348" width="384" height="58" rx="6" fill="#f4eedf"/>
+<text x="64" y="385.6" font-size="24" font-weight="bold" fill="#c0392b" text-anchor="middle">1</text>
+<text x="130" y="372" font-size="16" fill="#2f3a2b">Mule deer buck from Regions 3,</text>
+<text x="130" y="393" font-size="16" fill="#2f3a2b">4, 5, 6, 7A, 7B and 8 combined</text>
+<text x="14" y="432" font-size="14" fill="#6b5b4b">LEH: Limited Entry Hunting (the draw)</text>
 </svg>
