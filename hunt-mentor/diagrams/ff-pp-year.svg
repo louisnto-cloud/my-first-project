@@ -1,4 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A year timeline. January to March: off season, dry fire and the .22. April to June: build, range days and positions. July to September: tune, field drills, zero and the range test. October to December: season, confirm zero, hunt and log. A marker shows you are here on 11 October. Season dates come from the Rule Book.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A shooter&#x27;s year in BC</text><text x="30" y="70" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">J</text><text x="60" y="70" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">F</text><text x="90" y="70" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">M</text><text x="120" y="70" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A</text><text x="150" y="70" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">M</text><text x="180" y="70" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">J</text><text x="210" y="70" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">J</text><text x="240" y="70" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A</text><text x="270" y="70" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">S</text><text x="300" y="70" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">O</text><text x="330" y="70" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">N</text><text x="360" y="70" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">D</text><rect x="18" y="100" width="90" height="22" rx="4" fill="#8a9a6b" stroke="none" stroke-width="2"/><rect x="108" y="135" width="90" height="22" rx="4" fill="#4a7fb0" stroke="none" stroke-width="2"/><rect x="198" y="170" width="90" height="22" rx="4" fill="#e8590c" stroke="none" stroke-width="2"/><rect x="288" y="205" width="90" height="22" rx="4" fill="#b3261e" stroke="none" stroke-width="2"/><text x="22" y="96" font-size="13" font-weight="bold" fill="#8a9a6b" text-anchor="start">Off season: dry fire, .22</text><text x="112" y="131" font-size="13" font-weight="bold" fill="#4a7fb0" text-anchor="start">Build: range days, positions</text><text x="202" y="166" font-size="13" font-weight="bold" fill="#e8590c" text-anchor="start">Tune: field drills, zero, test</text><text x="388" y="201" font-size="13" font-weight="bold" fill="#b3261e" text-anchor="end">Season: confirm, hunt, log</text><line x1="300.0" y1="80" x2="300.0" y2="240" stroke="#2f3a2b" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/><text x="300.0" y="258" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">you are here: 11 Oct</text><text x="200.0" y="284" font-size="13" fill="#2f3a2b" text-anchor="middle">Season dates: see the Rule Book for your area</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 336" font-family="sans-serif" role="img" aria-label="A shooter&#x27;s year in BC, opinion. January to March: off season, dry fire and the .22. April to June: build, range days and positions. July to September: tune, field drills, zero and the range test. October to December: season, confirm zero, hunt and log. A marker shows you are here on 11 October. Season dates come from the Rule Book for your area.">
+<rect width="400" height="336" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A shooter&#x27;s year in BC</text>
+<text x="31.3" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="62" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">F</text>
+<text x="92.7" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="123.3" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="154" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="184.7" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="215.3" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="246" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="276.7" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">S</text>
+<text x="307.3" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">O</text>
+<text x="338" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">N</text>
+<text x="368.7" y="56" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">D</text>
+<rect x="16.0" y="64" width="92.0" height="18" fill="#6f7f52" stroke="#fffaf0" stroke-width="1.5"/>
+<rect x="108.0" y="64" width="92.0" height="18" fill="#4a7fb0" stroke="#fffaf0" stroke-width="1.5"/>
+<rect x="200.0" y="64" width="92.0" height="18" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/>
+<rect x="292.0" y="64" width="92.0" height="18" fill="#b3261e" stroke="#fffaf0" stroke-width="1.5"/>
+<line x1="302.4" y1="60" x2="302.4" y2="92" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M302.4 92 l-7 10 h14z" fill="#2f3a2b"/>
+<text x="312.4" y="118" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">you are here: 11 Oct</text>
+<rect x="8" y="130" width="384" height="40" rx="6" fill="#f4eedf"/>
+<rect x="8" y="130" width="112" height="40" rx="6" fill="#6f7f52"/>
+<text x="64" y="156" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Jan to Mar</text>
+<text x="132" y="148" font-size="16" font-weight="bold" fill="#2f3a2b">Off season</text>
+<text x="132" y="165" font-size="15" fill="#2f3a2b">dry fire, .22</text>
+<rect x="8" y="174" width="384" height="40" rx="6" fill="#f4eedf"/>
+<rect x="8" y="174" width="112" height="40" rx="6" fill="#4a7fb0"/>
+<text x="64" y="200" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Apr to Jun</text>
+<text x="132" y="192" font-size="16" font-weight="bold" fill="#2f3a2b">Build</text>
+<text x="132" y="209" font-size="15" fill="#2f3a2b">range days, positions</text>
+<rect x="8" y="218" width="384" height="40" rx="6" fill="#f4eedf"/>
+<rect x="8" y="218" width="112" height="40" rx="6" fill="#e8590c"/>
+<text x="64" y="244" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Jul to Sep</text>
+<text x="132" y="236" font-size="16" font-weight="bold" fill="#2f3a2b">Tune</text>
+<text x="132" y="253" font-size="15" fill="#2f3a2b">field drills, zero, test</text>
+<rect x="8" y="262" width="384" height="40" rx="6" fill="#f4eedf"/>
+<rect x="8" y="262" width="112" height="40" rx="6" fill="#b3261e"/>
+<text x="64" y="288" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Oct to Dec</text>
+<text x="132" y="280" font-size="16" font-weight="bold" fill="#2f3a2b">Season</text>
+<text x="132" y="297" font-size="15" fill="#2f3a2b">confirm, hunt, log</text>
+<text x="200" y="324" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Season dates: see the Rule Book for your area</text>
 </svg>

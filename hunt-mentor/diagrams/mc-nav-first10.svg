@@ -1,4 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A 10 minute clock split three ways: 0 to 3 minutes sit down, drink and eat; 3 to 6 minutes think about your last sure point; 6 to 10 minutes observe with map and land. Then plan. STOP from AdventureSmart, 75 percent; the minute split is a Tip.">
 <rect width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="26" font-size="19" fill="#2f3a2b" text-anchor="middle" font-weight="bold">The first 10 minutes</text><path d="M110 165 L110.0 75.0 A90 90 0 0 1 195.6 192.8 Z" fill="#e8590c"/><path d="M110 165 L195.6 192.8 A90 90 0 0 1 57.1 237.8 Z" fill="#8a9a6b"/><path d="M110 165 L57.1 237.8 A90 90 0 0 1 110.0 75.0 Z" fill="#4a7fb0"/><circle cx="110" cy="165" r="30" fill="#fffaf0"/><text x="110" y="171" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">10 min</text><rect x="222" y="80" width="16" height="16" rx="3" fill="#e8590c"/><text x="246" y="94" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">0 to 3 min</text><text x="246" y="112" font-size="14" fill="#23261f" text-anchor="start">Sit. Water. Food</text><rect x="222" y="130" width="16" height="16" rx="3" fill="#8a9a6b"/><text x="246" y="144" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">3 to 6 min</text><text x="246" y="162" font-size="14" fill="#23261f" text-anchor="start">Think: last sure?</text><rect x="222" y="180" width="16" height="16" rx="3" fill="#4a7fb0"/><text x="246" y="194" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">6 to 10 min</text><text x="246" y="212" font-size="14" fill="#23261f" text-anchor="start">Observe: map, land</text><text x="246" y="250" font-size="16" fill="#2f3a2b" text-anchor="start" font-weight="bold">Then Plan.</text><text x="200" y="293" font-size="14" fill="#6b4f35" text-anchor="middle">STOP: AdventureSmart (75%). Minutes: Tip</text>
+<text x="14" y="28" font-size="18" font-weight="bold" fill="#2f3a2b">The first 10 minutes</text>
+<path d="M105.9 88.0 A62 62 0 0 1 163.5 167.4" stroke="#e8590c" stroke-width="38" fill="none"/>
+<path d="M162.4 170.9 A62 62 0 0 1 69.1 201.2" stroke="#8a9a6b" stroke-width="38" fill="none"/>
+<path d="M66.1 199.0 A62 62 0 0 1 102.1 88.0" stroke="#4a7fb0" stroke-width="38" fill="none"/>
+<text x="104" y="61" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">0</text>
+<text x="193.399" y="184.048" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">3</text>
+<text x="48.7482" y="231.048" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">6</text>
+<text x="104" y="156" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">10 min</text>
+<rect x="212" y="66" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="232" y="79" font-size="16" font-weight="bold" fill="#2f3a2b">0 to 3 min</text>
+<text x="232" y="100" font-size="15" fill="#2f3a2b">Sit. Water. Food</text>
+<rect x="212" y="122" width="14" height="14" rx="3" fill="#8a9a6b"/>
+<text x="232" y="135" font-size="16" font-weight="bold" fill="#2f3a2b">3 to 6 min</text>
+<text x="232" y="156" font-size="15" fill="#2f3a2b">Think: last sure?</text>
+<rect x="212" y="178" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="232" y="191" font-size="16" font-weight="bold" fill="#2f3a2b">6 to 10 min</text>
+<text x="232" y="212" font-size="15" fill="#2f3a2b">Observe: map, land</text>
+<rect x="212" y="232" width="174" height="30" rx="6" fill="#2f3a2b"/>
+<text x="299" y="253" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Then Plan.</text>
+<text x="14" y="268" font-size="14" fill="#6b5b4b">STOP: AdventureSmart (75%).</text>
+<text x="14" y="288" font-size="14" fill="#6b5b4b">Minute split: Tip.</text>
 </svg>

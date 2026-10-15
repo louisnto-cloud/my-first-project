@@ -1,15 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Bar chart. Penn State collared does showed no real change in movement before 30 winter storms and moved less during them. Glassing the calm after is a tip, not a finding.">
-<rect x="0" y="0" width="400" height="250" fill="#fffaf0"/>
-<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Collared deer around a storm</text>
-<text x="14" y="64" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Day before the storm</text>
-<rect x="14" y="70" width="223" height="20" rx="4" fill="#8a9a6b"/>
-<text x="243.2" y="85" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">no real change</text>
-<text x="14" y="116" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">During the storm</text>
-<rect x="14" y="122" width="112" height="20" rx="4" fill="#e8590c"/>
-<text x="131.6" y="137" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">moved less</text>
-<text x="14" y="168" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">Calm after the storm</text>
-<rect x="14" y="174" width="223" height="20" rx="4" fill="#8a9a6b"/>
-<text x="243.2" y="189" font-family="sans-serif" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">glass it (Tip)</text>
-<text x="14" y="226" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Penn State, 30 storms, collared does (80%). After</text>
-<text x="14" y="242" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">the storm: Tip only.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 302" font-family="sans-serif" role="img" aria-label="Bar chart. Penn State collared does showed no real change in movement the day before 30 winter storms, 80 percent, and moved less during them. Glassing the calm after the storm is a tip, not a finding.">
+<rect width="400" height="302" fill="#fffaf0"/>
+<text x="14" y="28" font-size="18" font-weight="bold" fill="#2f3a2b">Collared deer around a storm</text>
+<circle cx="26" cy="55" r="6" fill="#f2b33d"/><path d="M34.0 55.0 L37.0 55.0" stroke="#f2b33d" stroke-width="2" stroke-linecap="round"/><path d="M31.7 60.7 L33.8 62.8" stroke="#f2b33d" stroke-width="2" stroke-linecap="round"/><path d="M26.0 63.0 L26.0 66.0" stroke="#f2b33d" stroke-width="2" stroke-linecap="round"/><path d="M20.3 60.7 L18.2 62.8" stroke="#f2b33d" stroke-width="2" stroke-linecap="round"/><path d="M18.0 55.0 L15.0 55.0" stroke="#f2b33d" stroke-width="2" stroke-linecap="round"/><path d="M20.3 49.3 L18.2 47.2" stroke="#f2b33d" stroke-width="2" stroke-linecap="round"/><path d="M26.0 47.0 L26.0 44.0" stroke="#f2b33d" stroke-width="2" stroke-linecap="round"/><path d="M31.7 49.3 L33.8 47.2" stroke="#f2b33d" stroke-width="2" stroke-linecap="round"/>
+<text x="44" y="61" font-size="16" font-weight="bold" fill="#2f3a2b">Day before the storm</text>
+<rect x="14" y="70" width="372" height="28" rx="5" fill="#efe8d6"/><rect x="14" y="70" width="372.0" height="28" rx="5" fill="#8a9a6b"/>
+<text x="376" y="89" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="end">no real change</text>
+<path d="M15 128 C13 121 21 117 25 120 C29 115 37 118 36 124 C40 125 39 130 35 130H17C14 130 14 129 15 128z" fill="#6b7a8a"/><path d="M21 133 l-2 5 M26 133 l-2 5 M31 133 l-2 5" stroke="#4a7fb0" stroke-width="2" stroke-linecap="round"/>
+<text x="44" y="131" font-size="16" font-weight="bold" fill="#2f3a2b">During the storm</text>
+<rect x="14" y="140" width="372" height="28" rx="5" fill="#efe8d6"/><rect x="14" y="140" width="156.2" height="28" rx="5" fill="#e8590c"/>
+<text x="180.24" y="159" font-size="16" font-weight="bold" fill="#c2410c">moved less</text>
+<path d="M15 199 C13 192 21 188 25 191 C29 186 37 189 36 195 C40 196 39 201 35 201H17C14 201 14 200 15 199z" fill="#cfd8e0"/>
+<text x="44" y="201" font-size="16" font-weight="bold" fill="#2f3a2b">Calm after the storm</text>
+<rect x="14" y="210" width="372" height="28" rx="5" fill="#efe8d6"/><rect x="14" y="210" width="372.0" height="28" rx="5" fill="#8a9a6b"/>
+<text x="376" y="229" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="end">glass it (Tip)</text>
+<text x="14" y="268" font-size="14" fill="#6b5b4b">Penn State, 30 storms, collared does (80%). After the</text>
+<text x="14" y="288" font-size="14" fill="#6b5b4b">storm: Tip only.</text>
 </svg>
