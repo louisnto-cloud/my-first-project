@@ -11,7 +11,7 @@
 <line x1="326" y1="56" x2="326" y2="62" stroke="#6b5b4b" stroke-width="1.5"/>
 <text x="10" y="88" font-size="16" font-weight="bold" fill="#23261f">Mid October</text>
 <rect x="224.8" y="70" width="35.2" height="24" rx="5" fill="#8a9a6b"/>
-<text x="242.4" y="88" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">early</text>
+<text x="266" y="88" font-size="16" font-weight="bold" fill="#5f6e45">early</text>
 <text x="10" y="120" font-size="16" font-weight="bold" fill="#23261f">Early Nov</text>
 <rect x="260.0" y="102" width="33.0" height="24" rx="5" fill="#e8590c"/>
 <text x="299" y="120" font-size="16" font-weight="bold" fill="#e8590c">best</text>

@@ -4,20 +4,20 @@
 <rect x="10" y="40" width="276" height="196" fill="#eef0e2" stroke="#2f3a2b" stroke-width="2"/>
 <rect x="262" y="40" width="24" height="196" fill="#b9b2a4" stroke="#23261f" stroke-width="2"/>
 <path d="M262 64 h24" stroke="#9a9384" stroke-width="1"/><path d="M262 88 h24" stroke="#9a9384" stroke-width="1"/><path d="M262 112 h24" stroke="#9a9384" stroke-width="1"/><path d="M262 136 h24" stroke="#9a9384" stroke-width="1"/><path d="M262 160 h24" stroke="#9a9384" stroke-width="1"/><path d="M262 184 h24" stroke="#9a9384" stroke-width="1"/><path d="M262 208 h24" stroke="#9a9384" stroke-width="1"/><path d="M262 232 h24" stroke="#9a9384" stroke-width="1"/>
-<circle cx="262" cy="150" r="5" fill="#e8590c"/>
+<circle cx="262" cy="199" r="5" fill="#e8590c"/>
 <path d="M10 236 H286" stroke="#2f3a2b" stroke-width="3"/>
-<path d="M156 236 L164 186 L192 186 L200 236z" fill="#6b5b4b"/><ellipse cx="178" cy="184" rx="20" ry="7" fill="#a08a6a"/>
-<g transform="translate(30 196) scale(0.9)"><path d="M0 0 L2 -22 L14 -24 L60 -16 L110 -16 L118 -8 L80 -6 L60 -2 L38 2 Z" fill="#7a4a24" stroke="#3b2a1a" stroke-width="1.2"/><rect x="62" y="-24" width="54" height="9" rx="2" fill="#4a4d50"/><rect x="116" y="-22" width="92" height="5" rx="1.5" fill="#4a4d50"/><path d="M66 -24 L66 -30 M108 -24 L108 -30" stroke="#2b2b2b" stroke-width="3"/><rect x="56" y="-38" width="64" height="10" rx="5" fill="#2b2b2b"/><path d="M50 -40 L58 -36 L58 -30 L50 -26z M118 -36 L128 -40 L128 -26 L118 -30z" fill="#2b2b2b"/><path d="M92 -16 L96 -6" stroke="#2b2b2b" stroke-width="2"/><circle cx="104" cy="-28" r="3.2" fill="#2b2b2b"/></g>
-<rect x="106" y="173" width="12" height="7" rx="2" fill="#e8590c" stroke="#2f3a2b" stroke-width="1"/>
-<line x1="219" y1="176" x2="256" y2="152" stroke="#e8590c" stroke-width="1.6" stroke-dasharray="5 4"/>
-<path d="M257.0 151.5 L249.0 152.1 L253.2 158.5z" fill="#e8590c"/>
-<rect x="112.6" y="54.0" width="142.7" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
-<text x="184" y="74.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Basement wall</text>
-<text x="184" y="94" font-size="15" fill="#2f3a2b" text-anchor="middle">2 cm dot at 5 m</text><line x1="258" y1="146" x2="230" y2="100" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="258" cy="146" r="2.6" fill="#2f3a2b"/>
-<rect x="14.0" y="54.0" width="111.9" height="69.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
-<text x="70" y="74.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Snap cap in</text>
-<text x="70" y="94.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">the chamber</text>
-<text x="70" y="114" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">(orange)</text><line x1="112" y1="172" x2="92" y2="120" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="112" cy="172" r="2.6" fill="#2f3a2b"/>
+<path d="M168 236 L174 214 L198 214 L204 236z" fill="#6b5b4b"/><ellipse cx="186" cy="213" rx="18" ry="6" fill="#a08a6a"/>
+<g transform="translate(24 226) scale(0.95)"><path d="M0 0 L2 -22 L14 -24 L60 -16 L110 -16 L118 -8 L80 -6 L60 -2 L38 2 Z" fill="#7a4a24" stroke="#3b2a1a" stroke-width="1.2"/><rect x="62" y="-24" width="54" height="9" rx="2" fill="#4a4d50"/><rect x="116" y="-22" width="92" height="5" rx="1.5" fill="#4a4d50"/><path d="M66 -24 L66 -30 M108 -24 L108 -30" stroke="#2b2b2b" stroke-width="3"/><rect x="56" y="-38" width="64" height="10" rx="5" fill="#2b2b2b"/><path d="M50 -40 L58 -36 L58 -30 L50 -26z M118 -36 L128 -40 L128 -26 L118 -30z" fill="#2b2b2b"/><path d="M92 -16 L96 -6" stroke="#2b2b2b" stroke-width="2"/><circle cx="104" cy="-28" r="3.2" fill="#2b2b2b"/></g>
+<rect x="104" y="201" width="12" height="7" rx="2" fill="#e8590c" stroke="#2f3a2b" stroke-width="1"/>
+<line x1="222" y1="203" x2="254" y2="200" stroke="#e8590c" stroke-width="1.6" stroke-dasharray="5 4"/>
+<path d="M256.0 199.8 L248.7 196.6 L249.4 204.2z" fill="#e8590c"/>
+<rect x="128.7" y="50.0" width="134.7" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="196" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Basement wall</text>
+<text x="196" y="87" font-size="15" fill="#2f3a2b" text-anchor="middle">2 cm dot at 5 m</text><line x1="259" y1="194" x2="236" y2="96" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="259" cy="194" r="2.6" fill="#2f3a2b"/>
+<rect x="14.0" y="50.0" width="111.9" height="69.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="70" y="70.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Snap cap in</text>
+<text x="70" y="90.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">the chamber</text>
+<text x="70" y="110" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">(orange)</text><line x1="110" y1="200" x2="92" y2="120" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="110" cy="200" r="2.6" fill="#2f3a2b"/>
 <g transform="translate(340 124)"><rect x="-30" y="-20" width="60" height="40" rx="4" fill="#5a6b3a" stroke="#2f3a2b" stroke-width="2"/><rect x="-22" y="-34" width="8" height="16" rx="3" fill="#c8a24a" stroke="#6b4f35" stroke-width="1"/><rect x="-10" y="-34" width="8" height="16" rx="3" fill="#c8a24a" stroke="#6b4f35" stroke-width="1"/><rect x="2" y="-34" width="8" height="16" rx="3" fill="#c8a24a" stroke="#6b4f35" stroke-width="1"/><rect x="14" y="-34" width="8" height="16" rx="3" fill="#c8a24a" stroke="#6b4f35" stroke-width="1"/><rect x="-20" y="-6" width="40" height="12" rx="2" fill="#e9dfc4"/></g>
 <circle cx="340" cy="118" r="44" fill="none" stroke="#c0392b" stroke-width="5"/><path d="M309 87 L371 149" stroke="#c0392b" stroke-width="5"/>
 <text x="340" y="186" font-size="16" font-weight="bold" fill="#23261f" text-anchor="middle">All ammo</text><text x="340" y="206" font-size="16" font-weight="bold" fill="#23261f" text-anchor="middle">out of</text><text x="340" y="226" font-size="16" font-weight="bold" fill="#23261f" text-anchor="middle">the room</text>

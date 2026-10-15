@@ -13,8 +13,8 @@
 <line x1="192" y1="136" x2="227.3" y2="97.2" stroke="#6b7a52" stroke-width="2.5"/><path d="M232.0 92.0 L223.4 95.0 L229.9 100.9z" fill="#6b7a52"/>
 <line x1="232" y1="72" x2="119.0" y2="72.0" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="6 4"/><path d="M112.0 72.0 L120.0 76.4 L120.0 67.6z" fill="#e8590c"/>
 <text x="172" y="54" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">cud: back up</text>
-<line x1="348" y1="98" x2="348.0" y2="135.0" stroke="#6b7a52" stroke-width="2.5"/><path d="M348.0 142.0 L352.4 134.0 L343.6 134.0z" fill="#6b7a52"/><line x1="348" y1="178" x2="348.0" y2="205.0" stroke="#6b7a52" stroke-width="2.5"/><path d="M348.0 212.0 L352.4 204.0 L343.6 204.0z" fill="#6b7a52"/><line x1="348" y1="248" x2="348.0" y2="267.0" stroke="#6b7a52" stroke-width="2.5"/><path d="M348.0 274.0 L352.4 266.0 L343.6 266.0z" fill="#6b7a52"/>
-<text x="338" y="272" font-size="15" fill="#23261f" text-anchor="end">to the gut</text>
+<line x1="348" y1="98" x2="348.0" y2="135.0" stroke="#6b7a52" stroke-width="2.5"/><path d="M348.0 142.0 L352.4 134.0 L343.6 134.0z" fill="#6b7a52"/><line x1="348" y1="178" x2="348.0" y2="205.0" stroke="#6b7a52" stroke-width="2.5"/><path d="M348.0 212.0 L352.4 204.0 L343.6 204.0z" fill="#6b7a52"/><line x1="348" y1="248" x2="348.0" y2="261.0" stroke="#6b7a52" stroke-width="2.5"/><path d="M348.0 268.0 L352.4 260.0 L343.6 260.0z" fill="#6b7a52"/>
+<text x="338" y="270" font-size="15" fill="#23261f" text-anchor="end">to the gut</text>
 <text x="200" y="293" font-size="14" fill="#6b5b4b" text-anchor="middle">Elk: bigger rumen for body size than mule deer (80%)</text>
-<circle r="8" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"><animateMotion dur="9s" fill="freeze" path="M52 98 L52 200 L150 214 L176 208 L240 92 L232 80 L112 80 L90 96 L90 200 L170 214 L246 96 L348 96 L348 276"/></circle>
+<circle r="8" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"><animateMotion dur="9s" fill="freeze" path="M52 98 L52 200 L150 214 L176 208 L240 92 L232 80 L112 80 L90 96 L90 200 L170 214 L246 96 L348 96 L348 268"/></circle>
 </svg>

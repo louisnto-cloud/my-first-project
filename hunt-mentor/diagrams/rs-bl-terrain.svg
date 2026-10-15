@@ -8,7 +8,7 @@
 <path d="M250 40 C224 100 220 190 242 260" stroke="#8b5a2b" stroke-width="1.4" fill="none" opacity=".7"/>
 <path d="M296 40 C270 100 266 190 288 260" stroke="#8b5a2b" stroke-width="1.4" fill="none" opacity=".7"/>
 <path d="M206 104 C236 92 272 104 282 130 C292 160 276 196 246 200 C218 204 196 182 194 156 C192 132 194 112 206 104z" fill="#7f9465"/>
-<path d="M214 113 L208 125 H220z" fill="#3e5b37"/><path d="M234 103 L228 115 H240z" fill="#3e5b37"/><path d="M258 109 L252 121 H264z" fill="#3e5b37"/><path d="M272 131 L266 143 H278z" fill="#3e5b37"/><path d="M222 141 L216 153 H228z" fill="#3e5b37"/><path d="M246 131 L240 143 H252z" fill="#3e5b37"/><path d="M264 159 L258 171 H270z" fill="#3e5b37"/><path d="M234 167 L228 179 H240z" fill="#3e5b37"/><path d="M210 163 L204 175 H216z" fill="#3e5b37"/><path d="M250 181 L244 193 H256z" fill="#3e5b37"/>
+<path d="M214 113 L208 125 H220z" fill="#3e5b37"/><path d="M234 103 L228 115 H240z" fill="#3e5b37"/><path d="M258 109 L252 121 H264z" fill="#3e5b37"/><path d="M272 131 L266 143 H278z" fill="#3e5b37"/><path d="M264 163 L258 175 H270z" fill="#3e5b37"/><path d="M234 173 L228 185 H240z" fill="#3e5b37"/><path d="M210 163 L204 175 H216z" fill="#3e5b37"/><path d="M250 183 L244 195 H256z" fill="#3e5b37"/>
 <path d="M320 40 C306 100 304 180 330 260" stroke="#4a7fb0" stroke-width="7" fill="none"/>
 <path d="M70 120 C130 130 180 144 214 160 C250 176 286 198 312 214" stroke="#8b5a2b" stroke-width="2" stroke-dasharray="2 4" fill="none"/>
 <path d="M76 120 C130 130 180 144 214 160 C250 176 284 196 304 208" stroke="#c92a2a" stroke-width="3" stroke-dasharray="7 5" fill="none"/><path d="M312.0 213.0 L305.9 202.0 L299.5 212.3z" fill="#c92a2a"/>
@@ -20,9 +20,7 @@
 <text x="72" y="98.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">hit</text>
 <rect x="18.0" y="48.0" width="95.2" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
 <text x="65.6065" y="67" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">ridge, open</text>
-<line x1="238" y1="102" x2="238" y2="75" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="238" cy="102" r="2.6" fill="#2f3a2b"/>
-<rect x="212.9" y="48.0" width="50.3" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
-<text x="238" y="67" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">thick</text>
+<text x="240" y="158" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">thick</text>
 <line x1="312" y1="130" x2="331.554" y2="131" stroke="#4a7fb0" stroke-width="1.3"/><circle cx="312" cy="130" r="2.6" fill="#4a7fb0"/>
 <rect x="331.6" y="118.0" width="54.4" height="27.0" rx="5" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.2"/>
 <text x="358.777" y="137" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">creek</text>

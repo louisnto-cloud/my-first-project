@@ -32,7 +32,7 @@
 <path d="M330 138.0 L70 242.0" stroke="#4a7fb0" stroke-width="3" stroke-dasharray="7 5" fill="none"/><path d="M62.0 245.2 L74.5 246.7 L70.0 235.5z" fill="#4a7fb0"/>
 <rect x="14.0" y="52.0" width="233.8" height="29.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
 <text x="130.91" y="72.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Sunny: up over the treetops</text>
-<line x1="240" y1="173" x2="250" y2="240" stroke="#4a7fb0" stroke-width="1.3"/><circle cx="240" cy="173" r="2.6" fill="#4a7fb0"/>
+<line x1="240" y1="173" x2="250" y2="238" stroke="#4a7fb0" stroke-width="1.3"/><circle cx="240" cy="173" r="2.6" fill="#4a7fb0"/>
 <rect x="213.1" y="240.0" width="172.9" height="45.0" rx="5" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.2"/>
 <text x="299.553" y="259" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">Shady floor: thin cool</text>
 <text x="299.553" y="277" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">air still sinks</text>
