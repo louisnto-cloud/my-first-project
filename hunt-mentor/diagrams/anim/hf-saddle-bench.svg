@@ -1,32 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation on a contour map. A deer comes over the ridge at the saddle, the low point between two peaks, walks down the slope and stops on a bench, a flat step with wide spaced lines. It beds there with a view of the slope below. Saddles are crossings, benches are beds (Tip).">
-<rect width="400" height="300" fill="#fffaf0"/>
-<rect width="400" height="300" fill="#eef1e4"/>
-<path d="M0 150 C 120 144, 280 156, 400 150 L400 206 C 280 212, 120 200, 0 206 Z" fill="#f6d9c4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 318" font-family="sans-serif" role="img" aria-label="Animation on a contour map. A deer comes over the ridge at the saddle, the low point between two peaks, walks down the slope and stops on a bench, a flat step with wide spaced lines. It beds there with a view of the slope below. Saddles are crossings, benches are beds (Tip).">
+<rect width="400" height="318" fill="#fffaf0"/>
+<rect width="400" height="318" fill="#eef1e4"/>
+<path d="M0 154 C 120 148, 280 160, 400 154 L400 210 C 280 216, 120 204, 0 210 Z" fill="#f6d9c4"/>
 <g fill="none" stroke="#8b5a2b" stroke-width="1.8">
-<ellipse cx="104" cy="66" rx="14.0" ry="10"/><ellipse cx="296" cy="66" rx="14.0" ry="10"/>
-<ellipse cx="104" cy="66" rx="30.799999999999997" ry="22"/><ellipse cx="296" cy="66" rx="30.799999999999997" ry="22"/>
-<path d="M200 54 C 172 24, 48 18, 48 66 C 48 112, 168 104, 200 80 C 232 104, 352 112, 352 66 C 352 18, 228 24, 200 54 Z" stroke-width="2.8"/>
-<path d="M0 112 C 100 120, 300 120, 400 112"/>
-<path d="M0 126 C 100 134, 300 134, 400 126"/>
-<path d="M0 140 C 100 148, 300 148, 400 140"/>
-<path d="M0 150 C 120 144, 280 156, 400 150" stroke-width="2.8"/>
-<path d="M0 206 C 120 200, 280 212, 400 205"/>
-<path d="M0 220 C 120 214, 280 226, 400 219"/>
+<ellipse cx="104" cy="82" rx="36" ry="22"/><ellipse cx="296" cy="82" rx="36" ry="22"/>
+<path d="M200 70 C 172 40, 44 34, 44 82 C 44 128, 168 120, 200 96 C 232 120, 356 128, 356 82 C 356 34, 228 40, 200 70 Z" stroke-width="2.8"/>
+<path d="M0 130 C 100 138, 300 138, 400 130"/>
+<path d="M0 142 C 100 150, 300 150, 400 142"/>
+<path d="M0 154 C 120 148, 280 160, 400 154" stroke-width="2.8"/>
+<path d="M0 210 C 120 204, 280 216, 400 209"/>
+<path d="M0 222 C 120 216, 280 228, 400 221"/>
 <path d="M0 234 C 120 228, 280 240, 400 233"/>
-<path d="M0 248 C 120 242, 280 254, 400 247"/>
 </g>
-<path d="M0 280 C 120 272, 280 288, 400 278" fill="none" stroke="#4a7fb0" stroke-width="4.5"/>
-<text x="356" y="298" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="middle">creek</text>
-<rect x="78.5" y="54.0" width="50.9" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
-<text x="104" y="73" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Peak</text><rect x="270.5" y="54.0" width="50.9" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
-<text x="296" y="73" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Peak</text>
-<line x1="204" y1="70" x2="219.962" y2="98" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="204" cy="70" r="2.6" fill="#2f3a2b"/>
-<rect x="220.0" y="88.0" width="64.1" height="27.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
-<text x="252" y="107" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Saddle</text>
-<rect x="308.7" y="166.0" width="62.6" height="29.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
-<text x="340" y="186.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Bench</text>
-<path id="hf-saddle-bench-path" d="M200 4 C 200 40, 196 60, 200 76 S 210 128, 180 160 S 140 176, 130 178" fill="none" stroke="#8b5a2b" stroke-width="2.4" stroke-dasharray="2 6" stroke-linecap="round"/>
+<path d="M0 290 C 120 282, 280 298, 400 288" fill="none" stroke="#4a7fb0" stroke-width="4.5"/>
+<text x="14" y="310" font-size="15" font-weight="bold" fill="#4a7fb0">creek</text>
+<text x="104" y="88" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Peak</text><text x="296" y="88" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Peak</text>
+<circle cx="200" cy="83" r="6" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/>
+<line x1="204" y1="78" x2="267.962" y2="27" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="204" cy="78" r="2.6" fill="#2f3a2b"/>
+<rect x="268.0" y="6.0" width="64.1" height="27.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="300" y="25" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Saddle</text>
+<rect x="325.4" y="170.0" width="62.6" height="29.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="356.69" y="190.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Bench</text>
+<path id="hf-saddle-bench-path" d="M200 4 C 200 40, 196 70, 200 88 S 210 132, 180 164 S 140 180, 130 182" fill="none" stroke="#8b5a2b" stroke-width="2.4" stroke-dasharray="2 6" stroke-linecap="round"/>
 <g><g transform="rotate(180) scale(0.95)"><ellipse cx="0" cy="2" rx="7" ry="13" fill="#8b5a2b"/><path d="M-2 -10 L-2 -16 L2 -16 L2 -10z" fill="#8b5a2b"/><ellipse cx="0" cy="-19" rx="3.6" ry="5" fill="#8b5a2b"/><path d="M-3 -21 l-5 -3 M3 -21 l5 -3" stroke="#8b5a2b" stroke-width="2.4" stroke-linecap="round"/><path d="M-6 -6 l-4 -4 M6 -6 l4 -4 M-6 12 l-4 4 M6 12 l4 4" stroke="#5a3e26" stroke-width="2" stroke-linecap="round"/><ellipse cx="0" cy="13" rx="3" ry="2.5" fill="#f3ead8"/></g><animateMotion dur="7s" fill="freeze" calcMode="linear"><mpath href="#hf-saddle-bench-path"/></animateMotion></g>
-<g opacity="0"><animate attributeName="opacity" values="0;1" begin="1.6s" dur="0.4s" fill="freeze"/><rect x="8" y="6" width="190" height="30" rx="8" fill="#2f3a2b"/><text x="103" y="26.6" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Crosses at the saddle</text></g>
-<g opacity="0"><animate attributeName="opacity" values="0;1" begin="7s" dur="0.5s" fill="freeze"/><rect x="186" y="226" width="206" height="30" rx="8" fill="#2f3a2b"/><text x="289" y="246.6" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Beds on the bench (Tip)</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="1.6s" dur="0.4s" fill="freeze"/><rect x="8" y="4" width="186" height="30" rx="8" fill="#2f3a2b"/><text x="101" y="24.6" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Crosses at the saddle</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="7s" dur="0.5s" fill="freeze"/><rect x="186" y="246" width="206" height="30" rx="8" fill="#2f3a2b"/><text x="289" y="266.6" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Beds on the bench (Tip)</text></g>
 </svg>
