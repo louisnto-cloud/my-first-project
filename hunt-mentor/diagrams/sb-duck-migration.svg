@@ -1,36 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" font-family="sans-serif" role="img" aria-label="Timeline chart, August to December, of when ducks move south, 75 percent. Blue winged teal: August to early September. Shoveler and pintail: August to early September. Green winged teal: September and October. Mallard, wigeon and gadwall: September and October, staying while water is open into December. Ring necked duck: October. Canvasback and redhead: October and November. Goldeneyes and bufflehead: mid to late October, with the ice. Common merganser: late October to November, one of the last.">
-  <rect width="400" height="380" fill="#fffaf0"/>
-  <text x="200" y="26" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">When they leave (75%)</text>
-  <line x1="150.0" y1="50" x2="150.0" y2="336" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
-  <text x="174.0" y="46" font-size="14" fill="#2f3a2b" text-anchor="middle">Aug</text>
-  <line x1="198.0" y1="50" x2="198.0" y2="336" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
-  <text x="222.0" y="46" font-size="14" fill="#2f3a2b" text-anchor="middle">Sep</text>
-  <line x1="246.0" y1="50" x2="246.0" y2="336" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
-  <text x="270.0" y="46" font-size="14" fill="#2f3a2b" text-anchor="middle">Oct</text>
-  <line x1="294.0" y1="50" x2="294.0" y2="336" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
-  <text x="318.0" y="46" font-size="14" fill="#2f3a2b" text-anchor="middle">Nov</text>
-  <line x1="342.0" y1="50" x2="342.0" y2="336" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 3"/>
-  <text x="366.0" y="46" font-size="14" fill="#2f3a2b" text-anchor="middle">Dec</text>
-  <text x="142" y="78.5" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Blue winged teal</text>
-  <rect x="150.0" y="60.5" width="64.0" height="26.0" rx="4" fill="#8b5a2b"/>
-  <text x="142" y="113.5" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Shoveler, pintail</text>
-  <rect x="150.0" y="95.5" width="64.0" height="26.0" rx="4" fill="#8b5a2b"/>
-  <text x="142" y="148.5" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Green winged teal</text>
-  <rect x="198.0" y="130.5" width="96.0" height="26.0" rx="4" fill="#8b5a2b"/>
-  <text x="142" y="178.5" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Mallard, wigeon</text>
-  <text x="142" y="194.5" font-size="12" fill="#2f3a2b" text-anchor="end">and gadwall</text>
-  <rect x="198.0" y="165.5" width="96.0" height="26.0" rx="4" fill="#8b5a2b"/>
-  <rect x="294.0" y="165.5" width="96.0" height="26.0" rx="4" fill="#c9b79c"/>
-  <text x="142" y="218.5" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Ring necked</text>
-  <rect x="246.0" y="200.5" width="48.0" height="26.0" rx="4" fill="#4a7fb0"/>
-  <text x="142" y="248.5" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Canvasback</text>
-  <text x="142" y="264.5" font-size="12" fill="#2f3a2b" text-anchor="end">and redhead</text>
-  <rect x="246.0" y="235.5" width="96.0" height="26.0" rx="4" fill="#4a7fb0"/>
-  <text x="142" y="283.5" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Goldeneyes</text>
-  <text x="142" y="299.5" font-size="12" fill="#2f3a2b" text-anchor="end">and bufflehead</text>
-  <rect x="267.7" y="270.5" width="26.3" height="26.0" rx="4" fill="#4a7fb0"/>
-  <text x="142" y="318.5" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Merganser</text>
-  <text x="142" y="334.5" font-size="12" fill="#2f3a2b" text-anchor="end">common</text>
-  <rect x="275.4" y="305.5" width="66.6" height="26.0" rx="4" fill="#4a7fb0"/>
-  <text x="200" y="366" font-size="13" fill="#2f3a2b" text-anchor="middle">Pale bar: stay while water stays open</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 547" font-family="sans-serif" role="img" aria-label="Timeline chart, August to December, of when ducks move south, 75 percent. Blue winged teal, shoveler and pintail: August to early September. Green winged teal: September and October. Mallard, wigeon and gadwall: September and October, staying while water is open into December. Ring necked duck: October. Canvasback and redhead: October and November. Goldeneyes and bufflehead: mid to late October, with the ice. Common merganser: late October to November, one of the last.">
+<rect width="400" height="547" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#2f3a2b">When they leave (75%)</text>
+<text x="51.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Aug</text>
+<text x="125.8" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
+<text x="200" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="274.2" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="348.3" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">Blue winged teal, shoveler, pintail</text>
+<text x="14" y="92" font-size="15" font-weight="bold" fill="#8b5a2b">Aug to early Sept</text>
+<rect x="14.0" y="100" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="89.4" y="100" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="100" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="237.7" y="100" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="100" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="14.0" y="101" width="99.7" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="146" font-size="16" font-weight="bold" fill="#2f3a2b">Green winged teal</text>
+<text x="386" y="146" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Sept to Oct</text>
+<rect x="14.0" y="154" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="89.4" y="154" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="154" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="237.7" y="154" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="154" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="89.4" y="155" width="148.3" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="200" font-size="16" font-weight="bold" fill="#2f3a2b">Mallard, wigeon, gadwall</text>
+<text x="386" y="200" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Sept to Oct</text>
+<text x="14" y="220" font-size="14" fill="#6b5b4b">Pale: stay while water stays open</text>
+<rect x="14.0" y="227" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="89.4" y="227" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="227" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="237.7" y="227" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="227" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="89.4" y="228" width="148.3" height="14" rx="3" fill="#8b5a2b"/>
+<rect x="237.7" y="228" width="148.3" height="14" rx="3" fill="#d9cbb0"/>
+<text x="14" y="273" font-size="16" font-weight="bold" fill="#2f3a2b">Ring necked duck</text>
+<text x="386" y="273" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">Oct</text>
+<rect x="14.0" y="281" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="89.4" y="281" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="281" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="237.7" y="281" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="281" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="162.3" y="282" width="75.4" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="327" font-size="16" font-weight="bold" fill="#2f3a2b">Canvasback, redhead</text>
+<text x="386" y="327" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">Oct to Nov</text>
+<rect x="14.0" y="335" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="89.4" y="335" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="335" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="237.7" y="335" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="335" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="162.3" y="336" width="148.3" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="381" font-size="16" font-weight="bold" fill="#2f3a2b">Goldeneyes, bufflehead</text>
+<text x="386" y="381" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">mid to late Oct</text>
+<text x="14" y="401" font-size="14" fill="#6b5b4b">They go with the ice</text>
+<rect x="14.0" y="408" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="89.4" y="408" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="408" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="237.7" y="408" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="408" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="196.4" y="409" width="41.3" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="454" font-size="16" font-weight="bold" fill="#2f3a2b">Common merganser</text>
+<text x="386" y="454" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">late Oct to Nov</text>
+<text x="14" y="474" font-size="14" fill="#6b5b4b">One of the last</text>
+<rect x="14.0" y="481" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="89.4" y="481" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="481" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="237.7" y="481" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="481" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="208.5" y="482" width="102.1" height="14" rx="3" fill="#4a7fb0"/>
+<rect x="14" y="516" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="34" y="528" font-size="14" fill="#2f3a2b">Puddle ducks</text>
+<rect x="138.51999999999998" y="516" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="158.52" y="528" font-size="14" fill="#2f3a2b">Divers</text>
+<rect x="217.67999999999998" y="516" width="14" height="14" rx="3" fill="#d9cbb0"/>
+<text x="237.68" y="528" font-size="14" fill="#2f3a2b">Stay while open</text>
 </svg>

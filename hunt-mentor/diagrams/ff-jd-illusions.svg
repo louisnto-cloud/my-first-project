@@ -1,4 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Two lists from Canadian Army fieldcraft. Objects look nearer in bright light with the sun behind you, when the colour stands out, over water or snow, in clear mountain air, with a hidden dip between, or when they are big. Objects look farther in poor light or fog, with the sun in your eyes, when only part shows, when they blend in, down a tree lined road, or when you are lying down.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tricks the eye plays</text><rect x="12" y="42" width="184" height="230" rx="8" fill="#f8e3cf" stroke="none" stroke-width="2"/><text x="104.0" y="64" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Looks NEARER</text><text x="104.0" y="86" font-size="13" fill="#23261f" text-anchor="middle">bright sun behind you</text><text x="104.0" y="103" font-size="13" fill="#23261f" text-anchor="middle">colour stands out</text><text x="104.0" y="120" font-size="13" fill="#23261f" text-anchor="middle">over water or snow</text><text x="104.0" y="137" font-size="13" fill="#23261f" text-anchor="middle">clear mountain air</text><text x="104.0" y="154" font-size="13" fill="#23261f" text-anchor="middle">hidden dip between</text><text x="104.0" y="171" font-size="13" fill="#23261f" text-anchor="middle">big object</text><rect x="204" y="42" width="184" height="230" rx="8" fill="#e3edf5" stroke="none" stroke-width="2"/><text x="296.0" y="64" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Looks FARTHER</text><text x="296.0" y="86" font-size="13" fill="#23261f" text-anchor="middle">poor light, fog</text><text x="296.0" y="103" font-size="13" fill="#23261f" text-anchor="middle">sun in your eyes</text><text x="296.0" y="120" font-size="13" fill="#23261f" text-anchor="middle">only part showing</text><text x="296.0" y="137" font-size="13" fill="#23261f" text-anchor="middle">blends with cover</text><text x="296.0" y="154" font-size="13" fill="#23261f" text-anchor="middle">down a tree lined road</text><text x="296.0" y="171" font-size="13" fill="#23261f" text-anchor="middle">you lying down</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 314" font-family="sans-serif" role="img" aria-label="Two lists from Canadian Army fieldcraft. Objects look nearer in bright light with the sun behind you, when the colour stands out, over water or snow, in clear mountain air, with a hidden dip between, or when they are big. Objects look farther in poor light or fog, with the sun in your eyes, when only part shows, when they blend in, down a tree lined road, or when you are lying down.">
+<rect width="400" height="314" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tricks the eye plays</text>
+<rect x="8" y="40" width="384" height="128" rx="8" fill="#fbe9dc"/>
+<rect x="8" y="40" width="384" height="34" rx="8" fill="#e8590c"/><rect x="8" y="60" width="384" height="14" fill="#e8590c"/>
+<text x="200" y="64" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">Looks NEARER</text>
+<circle cx="22" cy="97" r="3.2" fill="#e8590c"/>
+<text x="32" y="102" font-size="15" fill="#2f3a2b">bright sun behind you</text>
+<circle cx="210" cy="97" r="3.2" fill="#e8590c"/>
+<text x="220" y="102" font-size="15" fill="#2f3a2b">colour stands out</text>
+<circle cx="22" cy="125" r="3.2" fill="#e8590c"/>
+<text x="32" y="130" font-size="15" fill="#2f3a2b">over water or snow</text>
+<circle cx="210" cy="125" r="3.2" fill="#e8590c"/>
+<text x="220" y="130" font-size="15" fill="#2f3a2b">clear mountain air</text>
+<circle cx="22" cy="153" r="3.2" fill="#e8590c"/>
+<text x="32" y="158" font-size="15" fill="#2f3a2b">hidden dip between</text>
+<circle cx="210" cy="153" r="3.2" fill="#e8590c"/>
+<text x="220" y="158" font-size="15" fill="#2f3a2b">big object</text>
+<rect x="8" y="178" width="384" height="128" rx="8" fill="#e3edf6"/>
+<rect x="8" y="178" width="384" height="34" rx="8" fill="#4a7fb0"/><rect x="8" y="198" width="384" height="14" fill="#4a7fb0"/>
+<text x="200" y="202" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">Looks FARTHER</text>
+<circle cx="22" cy="235" r="3.2" fill="#4a7fb0"/>
+<text x="32" y="240" font-size="15" fill="#2f3a2b">poor light, fog</text>
+<circle cx="210" cy="235" r="3.2" fill="#4a7fb0"/>
+<text x="220" y="240" font-size="15" fill="#2f3a2b">sun in your eyes</text>
+<circle cx="22" cy="263" r="3.2" fill="#4a7fb0"/>
+<text x="32" y="268" font-size="15" fill="#2f3a2b">only part showing</text>
+<circle cx="210" cy="263" r="3.2" fill="#4a7fb0"/>
+<text x="220" y="268" font-size="15" fill="#2f3a2b">blends with cover</text>
+<circle cx="22" cy="291" r="3.2" fill="#4a7fb0"/>
+<text x="32" y="296" font-size="15" fill="#2f3a2b">down a tree lined road</text>
+<circle cx="210" cy="291" r="3.2" fill="#4a7fb0"/>
+<text x="220" y="296" font-size="15" fill="#2f3a2b">you lying down</text>
 </svg>

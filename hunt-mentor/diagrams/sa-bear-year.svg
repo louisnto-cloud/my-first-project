@@ -1,4 +1,111 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 302" font-family="sans-serif" role="img" aria-label="A black bear year. Bears leave the den lean and hungry from late March to May. Mating season is June to July. August to October is the big fall feed, called hyperphagia. Den entry runs mid October to late November in the nearest study. Cubs are born in the den in January or February. Region 3 seasons: spring 1 April to 30 June, fall 1 September to 30 November in most MUs.">
-<rect x="0" y="0" width="400" height="302" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">A black bear year</text><rect x="110.0" y="52" width="23.5" height="204" fill="#dfe6d3" opacity=".6"/><text x="121.75" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">J</text><text x="145.25" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">F</text><rect x="157.0" y="52" width="23.5" height="204" fill="#dfe6d3" opacity=".6"/><text x="168.75" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">M</text><text x="192.25" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A</text><rect x="204.0" y="52" width="23.5" height="204" fill="#dfe6d3" opacity=".6"/><text x="215.75" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">M</text><text x="239.25" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">J</text><rect x="251.0" y="52" width="23.5" height="204" fill="#dfe6d3" opacity=".6"/><text x="262.75" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">J</text><text x="286.25" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A</text><rect x="298.0" y="52" width="23.5" height="204" fill="#dfe6d3" opacity=".6"/><text x="309.75" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">S</text><text x="333.25" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">O</text><rect x="345.0" y="52" width="23.5" height="204" fill="#dfe6d3" opacity=".6"/><text x="356.75" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">N</text><text x="380.25" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">D</text><text x="8" y="77" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Leave den</text><rect x="173.4" y="60" width="54.0" height="24" rx="5" fill="#8a9a6b"/><text x="231.5" y="77" font-size="14" font-weight="bold" fill="#8a9a6b" text-anchor="start">late Mar to May</text><text x="8" y="111" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Mating</text><rect x="227.5" y="94" width="47.0" height="24" rx="5" fill="#8b5a2b"/><text x="278.5" y="111" font-size="14" font-weight="bold" fill="#8b5a2b" text-anchor="start">June to July</text><text x="8" y="145" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Big fall feed</text><rect x="274.5" y="128" width="70.5" height="24" rx="5" fill="#e8590c"/><text x="270.5" y="145" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">Aug to Oct</text><text x="8" y="179" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Den entry</text><rect x="333.2" y="162" width="35.2" height="24" rx="5" fill="#2f3a2b"/><text x="329.25" y="179" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">mid Oct to Nov</text><text x="8" y="213" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Cubs born</text><rect x="110.0" y="196" width="47.0" height="24" rx="5" fill="#8b5a2b"/><text x="161.0" y="213" font-size="14" font-weight="bold" fill="#8b5a2b" text-anchor="start">Jan to Feb</text><text x="8" y="247" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">R3 seasons</text><rect x="180.5" y="230" width="70.5" height="24" rx="5" fill="#4a7fb0"/><text x="215.75" y="247" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">spring</text><rect x="298.0" y="230" width="70.5" height="24" rx="5" fill="#4a7fb0"/><text x="333.25" y="247" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">fall</text><text x="200" y="290" font-size="14" fill="#6b4f35" text-anchor="middle">R3 = Region 3. Some males den later or not at all.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 486" font-family="sans-serif" role="img" aria-label="A black bear year, January to December. Bears leave the den lean and hungry from late March to May. Mating season is June to July. August to October is the big fall feed, called hyperphagia. Den entry runs mid October to late November in the nearest study. Cubs are born in the den in January or February. Region 3 seasons: spring 1 April to 30 June, fall 1 September to 30 November in most MUs (Management Units). Some males den later or not at all.">
+<rect width="400" height="486" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">A black bear year</text>
+<text x="29.8" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="59.9" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">F</text>
+<text x="89.9" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="121" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="152.1" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="183.2" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="214.3" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="245.9" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="276.9" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">S</text>
+<text x="308" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">O</text>
+<text x="339.1" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">N</text>
+<text x="370.2" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">D</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">Leave den</text>
+<text x="386" y="72" font-size="15" font-weight="bold" fill="#5b6b3e" text-anchor="end">late Mar to May</text>
+<text x="14" y="92" font-size="14" fill="#6b5b4b">Lean and hungry</text>
+<rect x="14.0" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="99" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="74.1" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="105.7" y="99" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="136.3" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="167.9" y="99" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="198.5" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="230.1" y="99" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="99" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="292.2" y="99" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="99" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="354.4" y="99" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="93.5" y="100" width="74.4" height="14" rx="3" fill="#8a9a6b"/>
+<text x="14" y="145" font-size="16" font-weight="bold" fill="#2f3a2b">Mating</text>
+<text x="386" y="145" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">June to July</text>
+<rect x="14.0" y="153" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="153" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="74.1" y="153" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="105.7" y="153" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="136.3" y="153" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="167.9" y="153" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="198.5" y="153" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="230.1" y="153" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="153" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="292.2" y="153" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="153" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="354.4" y="153" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="167.9" y="154" width="62.2" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="199" font-size="16" font-weight="bold" fill="#2f3a2b">Big fall feed</text>
+<text x="386" y="199" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Aug to Oct</text>
+<rect x="14.0" y="207" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="207" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="74.1" y="207" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="105.7" y="207" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="136.3" y="207" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="167.9" y="207" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="198.5" y="207" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="230.1" y="207" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="207" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="292.2" y="207" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="207" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="354.4" y="207" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="230.1" y="208" width="93.8" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="253" font-size="16" font-weight="bold" fill="#2f3a2b">Den entry</text>
+<text x="386" y="253" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">mid Oct to Nov</text>
+<rect x="14.0" y="261" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="261" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="74.1" y="261" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="105.7" y="261" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="136.3" y="261" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="167.9" y="261" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="198.5" y="261" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="230.1" y="261" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="261" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="292.2" y="261" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="261" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="354.4" y="261" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="306.5" y="262" width="47.9" height="14" rx="3" fill="#2f3a2b"/>
+<text x="14" y="307" font-size="16" font-weight="bold" fill="#2f3a2b">Cubs born</text>
+<text x="386" y="307" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Jan to Feb</text>
+<text x="14" y="327" font-size="14" fill="#6b5b4b">In the den</text>
+<rect x="14.0" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="334" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="74.1" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="105.7" y="334" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="136.3" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="167.9" y="334" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="198.5" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="230.1" y="334" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="334" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="292.2" y="334" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="334" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="354.4" y="334" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="14.0" y="335" width="60.1" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="380" font-size="16" font-weight="bold" fill="#2f3a2b">Region 3 seasons</text>
+<text x="14" y="400" font-size="15" font-weight="bold" fill="#2c5d86">Apr 1 to June 30, Sept 1 to Nov 30</text>
+<text x="14" y="420" font-size="14" fill="#6b5b4b">Most MUs</text>
+<rect x="14.0" y="427" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="427" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="74.1" y="427" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="105.7" y="427" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="136.3" y="427" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="167.9" y="427" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="198.5" y="427" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="230.1" y="427" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="427" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="292.2" y="427" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="427" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="354.4" y="427" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="105.7" y="428" width="92.7" height="14" rx="3" fill="#4a7fb0"/>
+<rect x="261.7" y="428" width="92.7" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="472" font-size="14" fill="#2f3a2b">Some males den later or not at all.</text>
 </svg>

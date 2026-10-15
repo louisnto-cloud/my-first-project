@@ -1,33 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 210" role="img" aria-label="Bar chart of Region 4 migratory bird seasons in all Management Units. Mourning and Eurasian collared doves: 1 to 30 September. Ducks, all geese, coots and common snipe: 8 September to 23 December. Creston Valley Wildlife Management Area opens 1 October, with an access permit." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="210" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Doves, ducks, geese, coots, snipe</text>
-<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">Creston Valley WMA: opens Oct 1, permit needed</text>
-<rect x="14.0" y="60" width="31.6" height="114" fill="#dfe6d3" opacity=".55"/>
-<text x="30" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
-<text x="61" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
-<rect x="77.2" y="60" width="30.6" height="114" fill="#dfe6d3" opacity=".55"/>
-<text x="92" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">S</text>
-<text x="124" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">O</text>
-<rect x="139.4" y="60" width="30.6" height="114" fill="#dfe6d3" opacity=".55"/>
-<text x="155" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">N</text>
-<text x="186" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">D</text>
-<rect x="201.5" y="60" width="31.6" height="114" fill="#dfe6d3" opacity=".55"/>
-<text x="217" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
-<text x="247" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">F</text>
-<rect x="261.7" y="60" width="31.6" height="114" fill="#dfe6d3" opacity=".55"/>
-<text x="277" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
-<text x="309" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">A</text>
-<rect x="323.8" y="60" width="31.6" height="114" fill="#dfe6d3" opacity=".55"/>
-<text x="340" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">M</text>
-<text x="371" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">J</text>
-<text x="14" y="96" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Mourning and Eurasian collared doves</text>
-<rect x="77.2" y="102" width="30.6" height="20" rx="4" fill="#e8590c"/>
-<text x="112" y="117" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 1 to Sept 30</text>
-<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Ducks, geese, coots, snipe</text>
-<rect x="84.3" y="148" width="109.1" height="20" rx="4" fill="#4a7fb0"/>
-<text x="197" y="163" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sept 8 to Dec 23</text>
-<rect x="14" y="184" width="14" height="14" rx="3" fill="#e8590c"/>
-<text x="32" y="196" font-size="14" fill="#23261f" text-anchor="start">General season</text>
-<rect x="149.60000000000002" y="184" width="14" height="14" rx="3" fill="#4a7fb0"/>
-<text x="168" y="196" font-size="14" fill="#23261f" text-anchor="start">Ducks, geese, coots, snipe</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 259" font-family="sans-serif" role="img" aria-label="Bar chart of Region 4 migratory bird seasons in all Management Units. Mourning and Eurasian collared doves: 1 to 30 September. Ducks, all geese, coots and common snipe: 8 September to 23 December. Creston Valley Wildlife Management Area opens 1 October, with an access permit.">
+<rect width="400" height="259" fill="#fffaf0"/>
+<text x="51.7" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Aug</text>
+<text x="125.8" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
+<text x="200" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="274.2" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="348.3" y="24" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<text x="14" y="50" font-size="16" font-weight="bold" fill="#2f3a2b">Mourning and Eurasian collared doves</text>
+<text x="14" y="70" font-size="15" font-weight="bold" fill="#c2410c">Sept 1 to Sept 30</text>
+<text x="14" y="90" font-size="14" fill="#6b5b4b">All MUs</text>
+<rect x="14.0" y="97" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="89.4" y="97" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="97" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="237.7" y="97" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="97" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="89.4" y="98" width="72.9" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="143" font-size="16" font-weight="bold" fill="#2f3a2b">Ducks, geese, coots, snipe</text>
+<text x="386" y="143" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">Sept 8 to Dec 23</text>
+<text x="14" y="163" font-size="14" fill="#6b5b4b">All MUs</text>
+<rect x="14.0" y="170" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="89.4" y="170" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="170" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="237.7" y="170" width="72.9" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="170" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="106.4" y="171" width="260.2" height="14" rx="3" fill="#4a7fb0"/>
+<rect x="14" y="205" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="34" y="217" font-size="14" fill="#2f3a2b">General season</text>
+<rect x="151.12" y="205" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="171.12" y="217" font-size="14" fill="#2f3a2b">Ducks, geese, coots, snipe</text>
+<text x="14" y="245" font-size="15" font-weight="bold" fill="#2f3a2b">Creston Valley WMA: opens Oct 1, permit needed</text>
 </svg>
