@@ -1,34 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 376" role="img" aria-label="Six cards. Cultivated field: the owner, lessee or occupant. Grazing lease with livestock on it: the lessee or occupant. Fenced or signed private land: the owner. Indian reserve: the band office, to hunt on it or cross it. BC Park: its own park page must say hunting is allowed. Within 100 metres of an occupied house or farm building: nobody can make it legal to hunt there." font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="376" fill="#fffaf0"/>
-  <text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Whose yes do you need?</text>
-  <rect x="6" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
-  <rect x="6" y="40" width="191" height="30" rx="10" fill="#5c7a3a"/><rect x="6" y="58" width="191" height="12" fill="#5c7a3a"/>
-  <text x="101.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Crop field</text>
-  <text x="101.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">Owner, lessee</text>
-  <text x="101.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">or occupant</text>
-  <rect x="203" y="40" width="191" height="104" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
-  <rect x="203" y="40" width="191" height="30" rx="10" fill="#5c7a3a"/><rect x="203" y="58" width="191" height="12" fill="#5c7a3a"/>
-  <text x="298.5" y="61" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Grazing lease</text>
-  <text x="298.5" y="92" font-size="14" fill="#23261f" text-anchor="middle">Livestock on it:</text>
-  <text x="298.5" y="110" font-size="14" fill="#23261f" text-anchor="middle">lessee or occupant</text>
-  <rect x="6" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
-  <rect x="6" y="150" width="191" height="30" rx="10" fill="#5c7a3a"/><rect x="6" y="168" width="191" height="12" fill="#5c7a3a"/>
-  <text x="101.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Fence or signs</text>
-  <text x="101.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">The owner.</text>
-  <text x="101.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">Trespass Act</text>
-  <rect x="203" y="150" width="191" height="104" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
-  <rect x="203" y="150" width="191" height="30" rx="10" fill="#5c7a3a"/><rect x="203" y="168" width="191" height="12" fill="#5c7a3a"/>
-  <text x="298.5" y="171" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Reserve</text>
-  <text x="298.5" y="202" font-size="14" fill="#23261f" text-anchor="middle">Band office, to</text>
-  <text x="298.5" y="220" font-size="14" fill="#23261f" text-anchor="middle">hunt on or cross</text>
-  <rect x="6" y="260" width="191" height="104" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-  <rect x="6" y="260" width="191" height="30" rx="10" fill="#4a7fb0"/><rect x="6" y="278" width="191" height="12" fill="#4a7fb0"/>
-  <text x="101.5" y="281" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">BC Park</text>
-  <text x="101.5" y="312" font-size="14" fill="#23261f" text-anchor="middle">Its own page</text>
-  <text x="101.5" y="330" font-size="14" fill="#23261f" text-anchor="middle">must say yes</text>
-  <rect x="203" y="260" width="191" height="104" rx="10" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
-  <rect x="203" y="260" width="191" height="30" rx="10" fill="#b03a2e"/><rect x="203" y="278" width="191" height="12" fill="#b03a2e"/>
-  <text x="298.5" y="281" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">100 m of a house</text>
-  <text x="298.5" y="312" font-size="14" fill="#23261f" text-anchor="middle">Nobody can</text>
-  <text x="298.5" y="330" font-size="14" fill="#23261f" text-anchor="middle">make it legal</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 428" font-family="sans-serif" role="img" aria-label="Six places and whose yes you need before you hunt. Cultivated crop field: the owner, lessee or occupant. Crown grazing lease with livestock on it: the lessee or occupant. Fenced or signed private land: the owner, under the Trespass Act. Indian reserve: the band office, to hunt on it or even cross it. BC Park: its own park page must say hunting is allowed. Within 100 metres of an occupied house or farm building: nobody can make it legal to hunt there.">
+<rect width="400" height="428" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Whose yes do you need?</text>
+<text x="62" y="54" font-size="14" font-weight="bold" fill="#6b5b4b">Place</text>
+<text x="388" y="54" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">Who says yes</text>
+<rect x="4" y="62" width="392" height="58" rx="6" fill="#f4eedf"/>
+<circle cx="32" cy="91.0" r="21" fill="#fffaf0" stroke="#5b7a3a" stroke-width="2"/>
+<g transform="translate(32 91.0)"><path d="M-10 12 V-8" stroke="#5b7a3a" stroke-width="2"/><ellipse cx="-12.6" cy="-8" rx="2.4" ry="3.6" transform="rotate(-25 -12.6 -8)" fill="#5b7a3a"/><ellipse cx="-7.4" cy="-8" rx="2.4" ry="3.6" transform="rotate(25 -7.4 -8)" fill="#5b7a3a"/><ellipse cx="-12.6" cy="-3" rx="2.4" ry="3.6" transform="rotate(-25 -12.6 -3)" fill="#5b7a3a"/><ellipse cx="-7.4" cy="-3" rx="2.4" ry="3.6" transform="rotate(25 -7.4 -3)" fill="#5b7a3a"/><ellipse cx="-12.6" cy="2" rx="2.4" ry="3.6" transform="rotate(-25 -12.6 2)" fill="#5b7a3a"/><ellipse cx="-7.4" cy="2" rx="2.4" ry="3.6" transform="rotate(25 -7.4 2)" fill="#5b7a3a"/><path d="M0 12 V-8" stroke="#5b7a3a" stroke-width="2"/><ellipse cx="-2.6" cy="-8" rx="2.4" ry="3.6" transform="rotate(-25 -2.6 -8)" fill="#5b7a3a"/><ellipse cx="2.6" cy="-8" rx="2.4" ry="3.6" transform="rotate(25 2.6 -8)" fill="#5b7a3a"/><ellipse cx="-2.6" cy="-3" rx="2.4" ry="3.6" transform="rotate(-25 -2.6 -3)" fill="#5b7a3a"/><ellipse cx="2.6" cy="-3" rx="2.4" ry="3.6" transform="rotate(25 2.6 -3)" fill="#5b7a3a"/><ellipse cx="-2.6" cy="2" rx="2.4" ry="3.6" transform="rotate(-25 -2.6 2)" fill="#5b7a3a"/><ellipse cx="2.6" cy="2" rx="2.4" ry="3.6" transform="rotate(25 2.6 2)" fill="#5b7a3a"/><path d="M10 12 V-8" stroke="#5b7a3a" stroke-width="2"/><ellipse cx="7.4" cy="-8" rx="2.4" ry="3.6" transform="rotate(-25 7.4 -8)" fill="#5b7a3a"/><ellipse cx="12.6" cy="-8" rx="2.4" ry="3.6" transform="rotate(25 12.6 -8)" fill="#5b7a3a"/><ellipse cx="7.4" cy="-3" rx="2.4" ry="3.6" transform="rotate(-25 7.4 -3)" fill="#5b7a3a"/><ellipse cx="12.6" cy="-3" rx="2.4" ry="3.6" transform="rotate(25 12.6 -3)" fill="#5b7a3a"/><ellipse cx="7.4" cy="2" rx="2.4" ry="3.6" transform="rotate(-25 7.4 2)" fill="#5b7a3a"/><ellipse cx="12.6" cy="2" rx="2.4" ry="3.6" transform="rotate(25 12.6 2)" fill="#5b7a3a"/><path d="M-16 12 H16" stroke="#5b7a3a" stroke-width="2"/></g>
+<text x="62" y="97" font-size="16" font-weight="bold" fill="#2f3a2b">Crop field</text>
+<text x="388" y="87" font-size="16" font-weight="bold" fill="#3f5a26" text-anchor="end">Owner, lessee</text>
+<text x="388" y="107" font-size="15" fill="#3f5a26" text-anchor="end">or occupant</text>
+<circle cx="32" cy="151.0" r="21" fill="#fffaf0" stroke="#5b7a3a" stroke-width="2"/>
+<g transform="translate(32 151.0)" fill="#5b7a3a"><path d="M-13 -6 C-13 -9 -8 -9 6 -9 L8 -9 L8 4 L-13 4z"/><path d="M7 -8 L15 -8 L17 0 L12 2 L8 -2z"/><path d="M9 -8 L7 -12 M14 -8 L16 -12" stroke="#5b7a3a" stroke-width="1.6"/><path d="M-11 4 V12 M-7 4 V12 M3 4 V12 M7 4 V12" stroke="#5b7a3a" stroke-width="2.6"/><path d="M-13 -6 C-16 -3 -16 3 -15 7" stroke="#5b7a3a" stroke-width="1.6" fill="none"/><circle cx="-4" cy="-3" r="2.6" fill="#fffaf0"/></g>
+<text x="62" y="157" font-size="16" font-weight="bold" fill="#2f3a2b">Grazing lease</text>
+<text x="388" y="147" font-size="16" font-weight="bold" fill="#3f5a26" text-anchor="end">Livestock on it:</text>
+<text x="388" y="167" font-size="15" fill="#3f5a26" text-anchor="end">lessee or occupant</text>
+<rect x="4" y="182" width="392" height="58" rx="6" fill="#f4eedf"/>
+<circle cx="32" cy="211.0" r="21" fill="#fffaf0" stroke="#5b7a3a" stroke-width="2"/>
+<g transform="translate(32 211.0)"><path d="M-14 -6 V12 M0 -6 V12 M14 -6 V12" stroke="#5b7a3a" stroke-width="3"/><path d="M-16 -1 H16 M-16 6 H16" stroke="#5b7a3a" stroke-width="1.8"/><rect x="-7" y="-14" width="14" height="10" rx="1.5" fill="#5b7a3a"/></g>
+<text x="62" y="217" font-size="16" font-weight="bold" fill="#2f3a2b">Fence or signs</text>
+<text x="388" y="207" font-size="16" font-weight="bold" fill="#3f5a26" text-anchor="end">The owner.</text>
+<text x="388" y="227" font-size="15" fill="#3f5a26" text-anchor="end">Trespass Act</text>
+<circle cx="32" cy="271.0" r="21" fill="#fffaf0" stroke="#5b7a3a" stroke-width="2"/>
+<g transform="translate(32 271.0) scale(0.82)" fill="#5b7a3a" stroke="none"><rect x="-15" y="-10" width="3.5" height="23"/><rect x="11.5" y="-10" width="3.5" height="23"/><path d="M-12 -5 H12 M-12 3 H12 M-12 3 L12 -5" stroke="#5b7a3a" stroke-width="2.6"/></g>
+<text x="62" y="277" font-size="16" font-weight="bold" fill="#2f3a2b">Reserve</text>
+<text x="388" y="267" font-size="16" font-weight="bold" fill="#3f5a26" text-anchor="end">Band office, to</text>
+<text x="388" y="287" font-size="15" fill="#3f5a26" text-anchor="end">hunt on or cross</text>
+<rect x="4" y="302" width="392" height="58" rx="6" fill="#f4eedf"/>
+<circle cx="32" cy="331.0" r="21" fill="#fffaf0" stroke="#4a7fb0" stroke-width="2"/>
+<g transform="translate(32 331.0) scale(0.82)" fill="#4a7fb0" stroke="none"><path d="M-8 -14 L-1 0 L-4 0 L1 9 L-17 9 L-12 0 L-15 0z"/><path d="M8 -10 L14 1 L12 1 L16 10 L0 10 L4 1 L2 1z"/><rect x="-9.5" y="9" width="3" height="4"/><rect x="6.5" y="10" width="3" height="3"/></g>
+<text x="62" y="337" font-size="16" font-weight="bold" fill="#2f3a2b">BC Park</text>
+<text x="388" y="327" font-size="16" font-weight="bold" fill="#2c5d86" text-anchor="end">Its own page</text>
+<text x="388" y="347" font-size="15" fill="#2c5d86" text-anchor="end">must say yes</text>
+<circle cx="32" cy="391.0" r="21" fill="#fffaf0" stroke="#c0392b" stroke-width="2"/>
+<g transform="translate(32 391.0)"><circle r="15" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-dasharray="3 2.4"/></g><g transform="translate(32 392.0) scale(0.55)" fill="#c0392b" stroke="none"><path d="M-14 0 L0 -13 L14 0z"/><rect x="-10" y="0" width="20" height="13"/><rect x="-3" y="5" width="6" height="8" fill="#fffaf0"/></g>
+<text x="62" y="397" font-size="16" font-weight="bold" fill="#2f3a2b">100 m of a house</text>
+<text x="388" y="387" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="end">Nobody can</text>
+<text x="388" y="407" font-size="15" fill="#c0392b" text-anchor="end">make it legal</text>
 </svg>

@@ -1,33 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 451" role="img" aria-label="Season bar chart: Region 8 mule deer: open dates. ★ 4 point bucks: 8-1 to 8-11, 8-21 to 8-26: Sept 10 to Sept 30. ★ 4 point bucks: 8-12 to 8-15: Sept 10 to Nov 10. Bucks (any antlered buck): 8-1 to 8-11, 8-21 to 8-26: Oct 1 to Oct 31. ★ 4 point bucks: 8-1 to 8-11, 8-21 to 8-26: Nov 1 to Nov 10. Youth Only bucks: 8-1 to 8-15, 8-21 to 8-26: Sept 1 to Sept 30. Bow Only bucks: 8-1 to 8-15, 8-21 to 8-26: Sept 1 to Sept 9." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="451" fill="#fffaf0"/>
-<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 8 mule deer: open dates</text>
-<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 68. Brown: 4 point bucks. Orange: any buck.</text>
-<text x="58.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
-<text x="152.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
-<text x="246.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
-<text x="340.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
-<line x1="12.0" y1="91" x2="12.0" y2="441" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="104.5" y1="91" x2="104.5" y2="441" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="200.0" y1="91" x2="200.0" y2="441" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="292.5" y1="91" x2="292.5" y2="441" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="388.0" y1="91" x2="388.0" y2="441" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<text x="12" y="107" font-size="14" font-weight="bold" fill="#23261f">★ 4 point bucks: 8-1 to 8-11, 8-21 to 8-26</text>
-<rect x="39.7" y="113" width="64.7" height="22" rx="3" fill="#8b5a2b"/>
-<text x="110.5" y="129" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Sept 30</text>
-<text x="12" y="163" font-size="14" font-weight="bold" fill="#23261f">★ 4 point bucks: 8-12 to 8-15</text>
-<rect x="39.7" y="169" width="191.1" height="22" rx="3" fill="#8b5a2b"/>
-<text x="236.8" y="185" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Nov 10</text>
-<text x="12" y="219" font-size="14" font-weight="bold" fill="#23261f">Bucks (any antlered buck): 8-1 to 8-11, 8-21</text>
-<text x="12" y="237" font-size="14" font-weight="bold" fill="#23261f">to 8-26</text>
-<rect x="104.5" y="243" width="95.5" height="22" rx="3" fill="#e8590c"/>
-<text x="206.0" y="259" font-size="14" font-weight="bold" fill="#23261f">Oct 1 to Oct 31</text>
-<text x="12" y="293" font-size="14" font-weight="bold" fill="#23261f">★ 4 point bucks: 8-1 to 8-11, 8-21 to 8-26</text>
-<rect x="200.0" y="299" width="30.8" height="22" rx="3" fill="#8b5a2b"/>
-<text x="236.8" y="315" font-size="14" font-weight="bold" fill="#23261f">Nov 1 to Nov 10</text>
-<text x="12" y="349" font-size="14" font-weight="bold" fill="#23261f">Youth Only bucks: 8-1 to 8-15, 8-21 to 8-26</text>
-<rect x="12.0" y="355" width="92.5" height="22" rx="3" fill="#8a9a6b"/>
-<text x="110.5" y="371" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 30</text>
-<text x="12" y="405" font-size="14" font-weight="bold" fill="#23261f">Bow Only bucks: 8-1 to 8-15, 8-21 to 8-26</text>
-<rect x="12.0" y="411" width="27.7" height="22" rx="3" fill="#4a7fb0"/>
-<text x="45.7" y="427" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 9</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 554" font-family="sans-serif" role="img" aria-label="Season bars for Region 8 mule deer, September to December, synopsis page 68. Star, 4 point bucks: 10 to 30 September in 8-1 to 8-11 and 8-21 to 8-26; 10 September to 10 November in 8-12 to 8-15. Bucks, any antlered buck: 1 to 31 October in 8-1 to 8-11 and 8-21 to 8-26. Star, 4 point bucks: 1 to 10 November in 8-1 to 8-11 and 8-21 to 8-26. Youth Only bucks: 1 to 30 September in 8-1 to 8-15 and 8-21 to 8-26. Bow Only bucks: 1 to 9 September in 8-1 to 8-15 and 8-21 to 8-26.">
+<rect width="400" height="554" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">Region 8 mule deer, page 68</text>
+<text x="59.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
+<text x="152.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="245.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="338.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">★ 4 point bucks</text>
+<text x="386" y="72" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Sept 10 to 30</text>
+<text x="14" y="92" font-size="14" fill="#6b5b4b">8-1 to 8-11, 8-21 to 8-26</text>
+<rect x="14.0" y="99" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="99" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="99" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="99" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="41.4" y="100" width="64.0" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="145" font-size="16" font-weight="bold" fill="#2f3a2b">★ 4 point bucks</text>
+<text x="386" y="145" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Sept 10 to Nov 10</text>
+<text x="14" y="165" font-size="14" fill="#6b5b4b">8-12 to 8-15</text>
+<rect x="14.0" y="172" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="172" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="172" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="172" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="41.4" y="173" width="189.0" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="218" font-size="16" font-weight="bold" fill="#2f3a2b">Bucks (any antlered buck)</text>
+<text x="386" y="218" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Oct 1 to 31</text>
+<text x="14" y="238" font-size="14" fill="#6b5b4b">8-1 to 8-11, 8-21 to 8-26</text>
+<rect x="14.0" y="245" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="245" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="245" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="245" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="105.5" y="246" width="94.5" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="291" font-size="16" font-weight="bold" fill="#2f3a2b">★ 4 point bucks</text>
+<text x="386" y="291" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Nov 1 to 10</text>
+<text x="14" y="311" font-size="14" fill="#6b5b4b">8-1 to 8-11, 8-21 to 8-26</text>
+<rect x="14.0" y="318" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="318" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="318" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="318" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="319" width="30.5" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="364" font-size="16" font-weight="bold" fill="#2f3a2b">Youth Only bucks</text>
+<text x="386" y="364" font-size="15" font-weight="bold" fill="#5b6b3e" text-anchor="end">Sept 1 to 30</text>
+<text x="14" y="384" font-size="14" fill="#6b5b4b">8-1 to 8-15, 8-21 to 8-26</text>
+<rect x="14.0" y="391" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="391" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="391" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="391" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="14.0" y="392" width="91.5" height="14" rx="3" fill="#8a9a6b"/>
+<text x="14" y="437" font-size="16" font-weight="bold" fill="#2f3a2b">Bow Only bucks</text>
+<text x="386" y="437" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">Sept 1 to 9</text>
+<text x="14" y="457" font-size="14" fill="#6b5b4b">8-1 to 8-15, 8-21 to 8-26</text>
+<rect x="14.0" y="464" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="464" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="464" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="464" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="14.0" y="465" width="27.4" height="14" rx="3" fill="#4a7fb0"/>
+<rect x="14" y="499" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="34" y="511" font-size="14" fill="#2f3a2b">4 point bucks</text>
+<rect x="139.36" y="499" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="159.36" y="511" font-size="14" fill="#2f3a2b">Any buck</text>
+<rect x="237.28000000000003" y="499" width="14" height="14" rx="3" fill="#8a9a6b"/>
+<text x="257.28" y="511" font-size="14" fill="#2f3a2b">Youth only</text>
+<rect x="14" y="523" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="34" y="535" font-size="14" fill="#2f3a2b">Bow only</text>
 </svg>

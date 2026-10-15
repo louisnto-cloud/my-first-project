@@ -1,4 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Bar chart of elevation ranges from 0 to 2,400 m. California quail mostly 250 to 750 m. Chukar 195 to 610 m in a 1962 study. Bighorn sheep winter and spring ranges 300 to 1,825 m. Mule deer winter range below about 1,500 m in shallow and moderate snow zones. Ruffed grouse most common 750 to 1,250 m. Dusky grouse often 1,500 to 2,250 m.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Who lives how high</text><text x="388" y="24" font-size="14" fill="#2f3a2b" text-anchor="end">metres above sea level</text><path d="M140 44 V250" stroke="#8a9a6b" stroke-width="1" opacity=".6"/><text x="140.0" y="266" font-size="12" fill="#2f3a2b" text-anchor="middle">0</text><path d="M217 44 V250" stroke="#8a9a6b" stroke-width="1" opacity=".6"/><text x="217.33333333333331" y="266" font-size="12" fill="#2f3a2b" text-anchor="middle">800</text><path d="M295 44 V250" stroke="#8a9a6b" stroke-width="1" opacity=".6"/><text x="294.66666666666663" y="266" font-size="12" fill="#2f3a2b" text-anchor="middle">1,600</text><path d="M372 44 V250" stroke="#8a9a6b" stroke-width="1" opacity=".6"/><text x="372.0" y="266" font-size="12" fill="#2f3a2b" text-anchor="middle">2,400</text><text x="132" y="74" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="end">California quail</text><rect x="164" y="60" width="48" height="20" rx="5" fill="#a8c83a"/><text x="132" y="106" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="end">Chukar (1962)</text><rect x="159" y="92" width="40" height="20" rx="5" fill="#f2c70c"/><text x="132" y="138" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="end">Bighorn winter</text><rect x="169" y="124" width="147" height="20" rx="5" fill="#e8590c"/><text x="132" y="170" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="end">Mule deer winter</text><rect x="169" y="156" width="116" height="20" rx="5" fill="#8b5a2b"/><text x="132" y="202" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="end">Ruffed grouse</text><rect x="212" y="188" width="48" height="20" rx="5" fill="#8a9a6b"/><text x="132" y="234" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="end">Dusky grouse</text><rect x="285" y="220" width="72" height="20" rx="5" fill="#2f6fd6"/><text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Ranges from BC sources; see More</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 378" font-family="sans-serif" role="img" aria-label="Bar chart of elevation ranges from 0 to 2,400 metres above sea level, from BC sources. California quail mostly 250 to 750 m. Chukar 195 to 610 m in a 1962 study. Bighorn sheep winter and spring ranges 300 to 1,825 m. Mule deer winter range below about 1,500 m in shallow and moderate snow zones. Ruffed grouse most common 750 to 1,250 m. Dusky grouse often 1,500 to 2,250 m.">
+<rect width="400" height="378" fill="#fffaf0"/>
+<rect width="400" height="388" fill="#fffaf0"/>
+<line x1="275.3" y1="54" x2="275.3" y2="350" stroke="#d6cdb6" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="164.7" y1="54" x2="164.7" y2="350" stroke="#d6cdb6" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="12" y="22" font-size="14" font-weight="bold" fill="#6b5b4b">Metres above sea level</text>
+<text x="54" y="48" font-size="14" font-weight="bold" fill="#6b5b4b">0</text>
+<text x="164.667" y="48" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">800</text>
+<text x="275.333" y="48" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">1,600</text>
+<text x="386" y="48" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">2,400</text>
+<g><g transform="translate(28 82) scale(1.5)"><path d="M-2 -2 v2 M2 -2 v2" stroke="#6b5b4b" stroke-width="1"/><ellipse cx="0" cy="-7" rx="8" ry="5.5" fill="#7d8590"/><path d="M-2 -5 C2 -3 6 -4 8 -7" stroke="#c9a46a" stroke-width="1.4" fill="none"/><circle cx="-6" cy="-12" r="3.6" fill="#5a5f66"/><path d="M-6 -15 C-8 -20 -4 -21 -3 -19" stroke="#1d1a16" stroke-width="1.6" fill="none"/><path d="M-9.5 -12 l-2 .8 l2 .6z" fill="#1d1a16"/><path d="M6 -9 L11 -10 L10 -6z" fill="#5a5f66"/></g></g>
+<text x="54" y="74" font-size="16" font-weight="bold" fill="#2f3a2b">California quail</text>
+
+<text x="386" y="74" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">250 to 750 m (mostly)</text>
+<rect x="54" y="82" width="332" height="14" fill="#efe8d6"/>
+<rect x="88.6" y="82" width="69.2" height="14" rx="3" fill="#9aa63a"/>
+<g><g transform="translate(28 132) scale(1.5)"><path d="M-2 -2 v2 M2 -2 v2" stroke="#6b5b4b" stroke-width="1"/><ellipse cx="0" cy="-7" rx="8" ry="5.5" fill="#b9a58a"/><path d="M-2 -5 C2 -3 6 -4 8 -7" stroke="#c9a46a" stroke-width="1.4" fill="none"/><circle cx="-6" cy="-12" r="3.6" fill="#9a8f80"/><path d="M-9.5 -12 l-2 .8 l2 .6z" fill="#1d1a16"/><path d="M6 -9 L11 -10 L10 -6z" fill="#9a8f80"/></g></g>
+<text x="54" y="124" font-size="16" font-weight="bold" fill="#2f3a2b">Chukar (1962)</text>
+
+<text x="386" y="124" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">195 to 610 m</text>
+<rect x="54" y="132" width="332" height="14" fill="#efe8d6"/>
+<rect x="81.0" y="132" width="57.4" height="14" rx="3" fill="#c99a1e"/>
+<g><g transform="translate(28 174) scale(1.0)"><path d="M-12 -6 C-12 -12 10 -12 12 -6 C14 0 10 4 6 4 H-8 C-12 4 -13 0 -12 -6z" fill="#a08867"/><path d="M-8 3 V12 M-4 3 V12 M6 3 V12 M9 3 V12" stroke="#5a4630" stroke-width="2"/><path d="M-12 -8 L-17 -14 L-21 -12 L-20 -8 L-14 -4z" fill="#a08867"/><ellipse cx="9" cy="-3" rx="3" ry="3" fill="#efe6d4"/><path d="M-15 -13 C-12 -20 -5 -17 -8 -11 C-10 -9 -13 -10 -13 -12" stroke="#7a6248" stroke-width="2.6" fill="none"/></g></g>
+<text x="54" y="174" font-size="16" font-weight="bold" fill="#2f3a2b">Bighorn winter</text>
+
+<text x="386" y="174" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">300 to 1,825 m</text>
+<rect x="54" y="182" width="332" height="14" fill="#efe8d6"/>
+<rect x="95.5" y="182" width="211.0" height="14" rx="3" fill="#e8590c"/>
+<g><g transform="translate(30 235) scale(0.55 0.55)"><path d="M-8 -18 L-10 0 M-4 -18 L-3 0 M12 -18 L13 0 M16 -18 L18 0" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/><path d="M-12 -28 C-12 -34 -4 -34 6 -34 C14 -34 20 -32 20 -26 C20 -20 16 -17 8 -17 L-6 -17 C-10 -17 -12 -21 -12 -28z" fill="#9a7350"/><path d="M-10 -30 L-16 -42 L-12 -44 L-6 -32z" fill="#9a7350"/><path d="M-16 -42 C-20 -43 -24 -40 -24 -38 L-20 -37 C-17 -37 -14 -39 -13 -41z" fill="#9a7350"/><path d="M-14 -44 L-18 -50 L-12 -45z M-12 -44 L-9 -50 L-10 -44z" fill="#9a7350"/><ellipse cx="18" cy="-27" rx="3" ry="4" fill="#f3ead8"/><circle cx="-18" cy="-41" r=".9" fill="#111"/></g></g>
+<text x="54" y="224" font-size="16" font-weight="bold" fill="#2f3a2b">Mule deer winter</text>
+
+<text x="386" y="224" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">below about 1,500 m</text>
+<rect x="54" y="232" width="332" height="14" fill="#efe8d6"/>
+<rect x="54.0" y="232" width="207.5" height="14" rx="3" fill="#8b5a2b"/>
+<g><g transform="translate(28 282) scale(1.5)"><path d="M-2 -2 v2 M2 -2 v2" stroke="#6b5b4b" stroke-width="1"/><ellipse cx="0" cy="-7" rx="8" ry="5.5" fill="#8b6a4a"/><path d="M-2 -5 C2 -3 6 -4 8 -7" stroke="#c9a46a" stroke-width="1.4" fill="none"/><circle cx="-6" cy="-12" r="3.6" fill="#7a5a3a"/><path d="M-9.5 -12 l-2 .8 l2 .6z" fill="#1d1a16"/><path d="M6 -9 L11 -10 L10 -6z" fill="#7a5a3a"/></g></g>
+<text x="54" y="274" font-size="16" font-weight="bold" fill="#2f3a2b">Ruffed grouse</text>
+
+<text x="386" y="274" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">750 to 1,250 m</text>
+<rect x="54" y="282" width="332" height="14" fill="#efe8d6"/>
+<rect x="157.8" y="282" width="69.2" height="14" rx="3" fill="#8a9a6b"/>
+<g><g transform="translate(28 332) scale(1.5)"><path d="M-2 -2 v2 M2 -2 v2" stroke="#6b5b4b" stroke-width="1"/><ellipse cx="0" cy="-7" rx="8" ry="5.5" fill="#5d6470"/><path d="M-2 -5 C2 -3 6 -4 8 -7" stroke="#c9a46a" stroke-width="1.4" fill="none"/><circle cx="-6" cy="-12" r="3.6" fill="#4a505a"/><path d="M-9.5 -12 l-2 .8 l2 .6z" fill="#1d1a16"/><path d="M6 -9 L11 -10 L10 -6z" fill="#4a505a"/></g></g>
+<text x="54" y="324" font-size="16" font-weight="bold" fill="#2f3a2b">Dusky grouse</text>
+
+<text x="386" y="324" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">1,500 to 2,250 m</text>
+<rect x="54" y="332" width="332" height="14" fill="#efe8d6"/>
+<rect x="261.5" y="332" width="103.8" height="14" rx="3" fill="#2c64c8"/>
+<text x="12" y="368" font-size="14" fill="#6b5b4b">Ranges from BC sources; see More</text>
 </svg>

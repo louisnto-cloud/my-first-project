@@ -1,4 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Frame 4: lost the trail? Go back to the last flag and circle out in bigger loops.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Frame 4: lost the trail? Go back to the last flag and circle out from it, small loops first, then bigger loops.">
 <rect width="400" height="300" fill="#fffaf0"/>
-<rect x="0" y="36" width="400" height="264" fill="#eef0e6"/><rect x="84" y="220" width="10" height="30" fill="#e8590c"/><circle cx="90" cy="235" r="40" fill="none" stroke="#8b5a2b" stroke-width="2"/><circle cx="90" cy="235" r="75" fill="none" stroke="#8b5a2b" stroke-width="2"/><circle cx="90" cy="235" r="110" fill="none" stroke="#8b5a2b" stroke-width="2"/><text x="250" y="290" font-size="15" fill="#23261f" text-anchor="middle">Small loops first, then bigger</text><text x="200" y="26" font-size="17" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Lost it? Circle from the flag</text><circle cx="30" cy="60" r="18" fill="#e8590c"/><text x="30" y="66" font-size="16" fill="#fffaf0" text-anchor="middle" font-weight="bold">4</text>
+<rect x="0" y="36" width="400" height="264" fill="#eef0e6"/>
+<path d="M68 262 C 65.68 262 65.68 254.5 69.136 250 C 67 253 68 256 68 262 Z" fill="#8b5a2b" stroke="#23261f" stroke-width="1.5"/><path d="M72 262 C 74.32 262 74.32 254.5 70.864 250 C 73 253 72 256 72 262 Z" fill="#8b5a2b" stroke="#23261f" stroke-width="1.5"/>
+<path d="M100 246 C 97.68 246 97.68 238.5 101.136 234 C 99 237 100 240 100 246 Z" fill="#8b5a2b" stroke="#23261f" stroke-width="1.5"/><path d="M104 246 C 106.32 246 106.32 238.5 102.864 234 C 105 237 104 240 104 246 Z" fill="#8b5a2b" stroke="#23261f" stroke-width="1.5"/>
+<path d="M132 222 C 129.68 222 129.68 214.5 133.136 210 C 131 213 132 216 132 222 Z" fill="#8b5a2b" stroke="#23261f" stroke-width="1.5"/><path d="M136 222 C 138.32 222 138.32 214.5 134.864 210 C 137 213 136 216 136 222 Z" fill="#8b5a2b" stroke="#23261f" stroke-width="1.5"/>
+<path d="M164 206 C 161.68 206 161.68 198.5 165.136 194 C 163 197 164 200 164 206 Z" fill="#8b5a2b" stroke="#23261f" stroke-width="1.5"/><path d="M168 206 C 170.32 206 170.32 198.5 166.864 194 C 169 197 168 200 168 206 Z" fill="#8b5a2b" stroke="#23261f" stroke-width="1.5"/>
+<path d="M194 182 C 191.68 182 191.68 174.5 195.136 170 C 193 173 194 176 194 182 Z" fill="#8b5a2b" stroke="#23261f" stroke-width="1.5"/><path d="M198 182 C 200.32 182 200.32 174.5 196.864 170 C 199 173 198 176 198 182 Z" fill="#8b5a2b" stroke="#23261f" stroke-width="1.5"/>
+<circle cx="210" cy="160" r="34" fill="none" stroke="#8b5a2b" stroke-width="3.0" stroke-dasharray="9 6"/>
+<path d="M203 119 L216 126 L203 133z" fill="#8b5a2b"/>
+<circle cx="210" cy="160" r="66" fill="none" stroke="#8b5a2b" stroke-width="2.6" stroke-dasharray="9 6"/>
+<path d="M203 87 L216 94 L203 101z" fill="#8b5a2b"/>
+<circle cx="210" cy="160" r="98" fill="none" stroke="#8b5a2b" stroke-width="2.2" stroke-dasharray="9 6"/>
+<path d="M203 55 L216 62 L203 69z" fill="#8b5a2b"/>
+<rect x="208" y="132" width="4" height="34" fill="#2f3a2b"/><path d="M212 132 L236 139 L212 147z" fill="#e8590c"/>
+<circle cx="236.0" cy="181.9" r="10" fill="#8b5a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="236" y="186.9" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<circle cx="260.6" cy="202.4" r="10" fill="#8b5a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="260.6" y="207.4" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<circle cx="285.1" cy="223.0" r="10" fill="#8b5a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="285.1" y="228" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="200" y="290" font-size="16" fill="#23261f" text-anchor="middle">Small loops first, then bigger</text>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Lost it? Circle from the flag</text>
+<circle cx="30" cy="60" r="18" fill="#e8590c"/><text x="30" y="66" font-size="16" fill="#fffaf0" text-anchor="middle" font-weight="bold">4</text>
 </svg>

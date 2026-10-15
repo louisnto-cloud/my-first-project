@@ -1,4 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Three cards for the owner bases. Heffley Creek, Region 3: 300 to 500 elk, increasing; no general open season. Mission, Region 2: Roosevelt elk, 2,200 to 2,800; no general open season; limited entry draws only. South Okanagan, Region 8: 2,500 to 3,500 elk; 6 point bulls 10 September to 20 October; about 4 percent resident success. Region 2 hunters took 407 elk from 2020 to 2024 by draw.">
-<rect width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Elk near your three bases</text><rect x="8" y="44" width="124" height="150" rx="8" fill="#fffaf0" stroke="#8a9a6b" stroke-width="1.5"/><rect x="8" y="44" width="124" height="26" rx="8" fill="#2f3a2b"/><rect x="8" y="58" width="124" height="12" rx="0" fill="#2f3a2b"/><text x="70.0" y="62" font-size="15" fill="#fffaf0" text-anchor="middle" font-weight="bold">Heffley Creek</text><text x="70.0" y="92" font-size="14" fill="#23261f" text-anchor="middle">R3</text><text x="70.0" y="114" font-size="14" fill="#23261f" text-anchor="middle">300 to 500 elk</text><text x="70.0" y="136" font-size="14" fill="#23261f" text-anchor="middle">increasing (90%)</text><text x="70.0" y="158" font-size="14" fill="#23261f" text-anchor="middle">No general season</text><text x="70.0" y="180" font-size="14" fill="#23261f" text-anchor="middle">(99%)</text><rect x="138" y="44" width="124" height="150" rx="8" fill="#fffaf0" stroke="#8a9a6b" stroke-width="1.5"/><rect x="138" y="44" width="124" height="26" rx="8" fill="#4a7fb0"/><rect x="138" y="58" width="124" height="12" rx="0" fill="#4a7fb0"/><text x="200.0" y="62" font-size="15" fill="#fffaf0" text-anchor="middle" font-weight="bold">Mission, R2</text><text x="200.0" y="92" font-size="14" fill="#23261f" text-anchor="middle">R2</text><text x="200.0" y="114" font-size="14" fill="#23261f" text-anchor="middle">Roosevelt elk</text><text x="200.0" y="136" font-size="14" fill="#23261f" text-anchor="middle">2,200 to 2,800</text><text x="200.0" y="158" font-size="14" fill="#23261f" text-anchor="middle">No general season</text><text x="200.0" y="180" font-size="14" fill="#23261f" text-anchor="middle">LEH draws only</text><rect x="268" y="44" width="124" height="150" rx="8" fill="#fffaf0" stroke="#8a9a6b" stroke-width="1.5"/><rect x="268" y="44" width="124" height="26" rx="8" fill="#e8590c"/><rect x="268" y="58" width="124" height="12" rx="0" fill="#e8590c"/><text x="330.0" y="62" font-size="15" fill="#fffaf0" text-anchor="middle" font-weight="bold">South Okanagan</text><text x="330.0" y="92" font-size="14" fill="#23261f" text-anchor="middle">R8</text><text x="330.0" y="114" font-size="14" fill="#23261f" text-anchor="middle">2,500 to 3,500</text><text x="330.0" y="136" font-size="14" fill="#23261f" text-anchor="middle">6 point bulls</text><text x="330.0" y="158" font-size="14" fill="#23261f" text-anchor="middle">10 Sept to 20 Oct</text><text x="330.0" y="180" font-size="14" fill="#23261f" text-anchor="middle">About 4% success</text><text x="200" y="226" font-size="14" fill="#6b4f35" text-anchor="middle">Estimates: BC 2022 table (90%)</text><text x="200" y="248" font-size="14" fill="#6b4f35" text-anchor="middle">Rules: Rule Book pages 28, 34, 68 (99%)</text><text x="200" y="274" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Region 2 harvest: 407 elk, 2020 to 2024,</text><text x="200" y="292" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">by draw (85%, my reading)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 512" font-family="sans-serif" role="img" aria-label="Three cards for the elk near the owner bases, each with a bar on the same 0 to 3,500 elk scale. Heffley Creek, Region 3: 300 to 500 elk, increasing (90%); no general open season (99%). Mission, Region 2: Roosevelt elk, 2,200 to 2,800; no general open season, Limited Entry Hunting draws only. South Okanagan, Region 8: 2,500 to 3,500 elk; 6 point bulls 10 September to 20 October; about 4 percent success. Region 2 hunters took 407 elk from 2020 to 2024 by draw (85%, my reading). Estimates from the BC 2022 table (90%). Rules from Rule Book pages 28, 34 and 68 (99%).">
+<rect width="400" height="512" fill="#fffaf0"/>
+<rect x="8" y="8" width="384" height="124" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.6"/>
+<path d="M8 38 V18 a10 10 0 0 1 10 -10 H382 a10 10 0 0 1 10 10 V38z" fill="#2f3a2b"/>
+<g transform="translate(28 35) scale(0.62)" fill="#fffaf0"><path d="M-10 -14 C-10 -19 4 -20 12 -18 C16 -17 17 -13 16 -9 L14 -8 L13 0 L11 0 L11 -8 L-2 -8 L-4 0 L-6 0 L-6 -8 C-9 -9 -10 -11 -10 -14z"/><path d="M-8 -16 L-14 -24 L-19 -23 L-20 -20 L-15 -20 L-11 -14z"/><path d="M-14 -24 C-14 -30 -10 -34 -4 -36 M-12 -29 L-17 -33 M-9 -32 L-11 -37" stroke="#fffaf0" stroke-width="1.6" fill="none"/></g>
+<text x="46" y="29" font-size="16" font-weight="bold" fill="#fffaf0">Heffley Creek</text>
+<text x="384" y="29" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">Region 3</text>
+<text x="16" y="63" font-size="20" font-weight="bold" fill="#2f3a2b">300 to 500 elk</text>
+<text x="384" y="63" font-size="15" fill="#2f3a2b" text-anchor="end">Increasing (90%)</text>
+<text x="16" y="88" font-size="15" fill="#2f3a2b">No general season (99%)</text>
+<rect x="16" y="100" width="368" height="12" rx="6" fill="#efe8d6"/>
+<rect x="46.7" y="100" width="20.4" height="12" rx="6" fill="#2f3a2b"/>
+<line x1="16.0" y1="113" x2="16.0" y2="117" stroke="#6b5b4b" stroke-width="1"/>
+<line x1="118.2" y1="113" x2="118.2" y2="117" stroke="#6b5b4b" stroke-width="1"/>
+<line x1="220.4" y1="113" x2="220.4" y2="117" stroke="#6b5b4b" stroke-width="1"/>
+<line x1="322.7" y1="113" x2="322.7" y2="117" stroke="#6b5b4b" stroke-width="1"/>
+<rect x="8" y="140" width="384" height="124" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="1.6"/>
+<path d="M8 170 V150 a10 10 0 0 1 10 -10 H382 a10 10 0 0 1 10 10 V170z" fill="#4a7fb0"/>
+<g transform="translate(28 167) scale(0.62)" fill="#fffaf0"><path d="M-10 -14 C-10 -19 4 -20 12 -18 C16 -17 17 -13 16 -9 L14 -8 L13 0 L11 0 L11 -8 L-2 -8 L-4 0 L-6 0 L-6 -8 C-9 -9 -10 -11 -10 -14z"/><path d="M-8 -16 L-14 -24 L-19 -23 L-20 -20 L-15 -20 L-11 -14z"/><path d="M-14 -24 C-14 -30 -10 -34 -4 -36 M-12 -29 L-17 -33 M-9 -32 L-11 -37" stroke="#fffaf0" stroke-width="1.6" fill="none"/></g>
+<text x="46" y="161" font-size="16" font-weight="bold" fill="#fffaf0">Mission</text>
+<text x="384" y="161" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">Region 2</text>
+<text x="16" y="195" font-size="20" font-weight="bold" fill="#2c5d86">2,200 to 2,800</text>
+<text x="384" y="195" font-size="15" fill="#2f3a2b" text-anchor="end">Roosevelt elk</text>
+<text x="16" y="220" font-size="15" fill="#2f3a2b">No general season. LEH draws only</text>
+<rect x="16" y="232" width="368" height="12" rx="6" fill="#efe8d6"/>
+<rect x="240.9" y="232" width="61.3" height="12" rx="6" fill="#4a7fb0"/>
+<line x1="16.0" y1="245" x2="16.0" y2="249" stroke="#6b5b4b" stroke-width="1"/>
+<line x1="118.2" y1="245" x2="118.2" y2="249" stroke="#6b5b4b" stroke-width="1"/>
+<line x1="220.4" y1="245" x2="220.4" y2="249" stroke="#6b5b4b" stroke-width="1"/>
+<line x1="322.7" y1="245" x2="322.7" y2="249" stroke="#6b5b4b" stroke-width="1"/>
+<rect x="8" y="272" width="384" height="124" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="1.6"/>
+<path d="M8 302 V282 a10 10 0 0 1 10 -10 H382 a10 10 0 0 1 10 10 V302z" fill="#e8590c"/>
+<g transform="translate(28 299) scale(0.62)" fill="#fffaf0"><path d="M-10 -14 C-10 -19 4 -20 12 -18 C16 -17 17 -13 16 -9 L14 -8 L13 0 L11 0 L11 -8 L-2 -8 L-4 0 L-6 0 L-6 -8 C-9 -9 -10 -11 -10 -14z"/><path d="M-8 -16 L-14 -24 L-19 -23 L-20 -20 L-15 -20 L-11 -14z"/><path d="M-14 -24 C-14 -30 -10 -34 -4 -36 M-12 -29 L-17 -33 M-9 -32 L-11 -37" stroke="#fffaf0" stroke-width="1.6" fill="none"/></g>
+<text x="46" y="293" font-size="16" font-weight="bold" fill="#fffaf0">South Okanagan</text>
+<text x="384" y="293" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">Region 8</text>
+<text x="16" y="327" font-size="20" font-weight="bold" fill="#c2410c">2,500 to 3,500</text>
+<text x="384" y="327" font-size="15" fill="#2f3a2b" text-anchor="end">6 point bulls, 10 Sept to 20 Oct</text>
+<text x="16" y="352" font-size="15" fill="#2f3a2b">About 4% success</text>
+<rect x="16" y="364" width="368" height="12" rx="6" fill="#efe8d6"/>
+<rect x="271.6" y="364" width="102.2" height="12" rx="6" fill="#e8590c"/>
+<line x1="16.0" y1="377" x2="16.0" y2="381" stroke="#6b5b4b" stroke-width="1"/>
+<line x1="118.2" y1="377" x2="118.2" y2="381" stroke="#6b5b4b" stroke-width="1"/>
+<line x1="220.4" y1="377" x2="220.4" y2="381" stroke="#6b5b4b" stroke-width="1"/>
+<line x1="322.7" y1="377" x2="322.7" y2="381" stroke="#6b5b4b" stroke-width="1"/>
+<text x="16" y="410" font-size="14" fill="#6b5b4b">0</text>
+<text x="118.2" y="410" font-size="14" fill="#6b5b4b" text-anchor="middle">1,000</text>
+<text x="220.4" y="410" font-size="14" fill="#6b5b4b" text-anchor="middle">2,000</text>
+<text x="322.7" y="410" font-size="14" fill="#6b5b4b" text-anchor="middle">3,000 elk</text>
+<text x="200" y="438" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Region 2 harvest: 407 elk, 2020 to 2024,</text>
+<text x="200" y="458" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">by draw (85%, my reading)</text>
+<text x="200" y="482" font-size="14" fill="#6b5b4b" text-anchor="middle">Estimates: BC 2022 table (90%)</text>
+<text x="200" y="501" font-size="14" fill="#6b5b4b" text-anchor="middle">Rules: Rule Book pages 28, 34, 68 (99%)</text>
 </svg>

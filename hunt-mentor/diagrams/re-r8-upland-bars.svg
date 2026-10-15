@@ -1,35 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 489" role="img" aria-label="Season bar chart: Region 8 grouse and upland birds. Grouse: dusky, ruffed, spruce: Sept 10 to Nov 30. Grouse, Youth Only: Sept 1 to Sept 9. Grouse, Bow Only: Dec 1 to Dec 10. Chukar partridge: Oct 1 to Nov 30. Gray (Hungarian) partridge: Oct 1 to Nov 30. Pheasant (cocks): Oct 1 to Nov 30. Quail: Oct 1 to Nov 30." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="489" fill="#fffaf0"/>
-<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 8 grouse and upland birds</text>
-<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 68. MUs 8-1 to 8-15, 8-21 to 8-26.</text>
-<text x="58.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
-<text x="152.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
-<text x="246.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
-<text x="340.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
-<line x1="12.0" y1="91" x2="12.0" y2="479" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="104.5" y1="91" x2="104.5" y2="479" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="200.0" y1="91" x2="200.0" y2="479" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="292.5" y1="91" x2="292.5" y2="479" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="388.0" y1="91" x2="388.0" y2="479" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<text x="12" y="107" font-size="14" font-weight="bold" fill="#23261f">Grouse: dusky, ruffed, spruce</text>
-<rect x="39.7" y="113" width="252.7" height="22" rx="3" fill="#8b5a2b"/>
-<text x="166.1" y="129" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 10 to Nov 30</text>
-<text x="12" y="163" font-size="14" font-weight="bold" fill="#23261f">Grouse, Youth Only</text>
-<rect x="12.0" y="169" width="27.7" height="22" rx="3" fill="#8a9a6b"/>
-<text x="45.7" y="185" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 9</text>
-<text x="12" y="219" font-size="14" font-weight="bold" fill="#23261f">Grouse, Bow Only</text>
-<rect x="292.5" y="225" width="30.8" height="22" rx="3" fill="#4a7fb0"/>
-<text x="286.5" y="241" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Dec 1 to Dec 10</text>
-<text x="12" y="275" font-size="14" font-weight="bold" fill="#23261f">Chukar partridge</text>
-<rect x="104.5" y="281" width="188.0" height="22" rx="3" fill="#e8590c"/>
-<text x="198.5" y="297" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Oct 1 to Nov 30</text>
-<text x="12" y="331" font-size="14" font-weight="bold" fill="#23261f">Gray (Hungarian) partridge</text>
-<rect x="104.5" y="337" width="188.0" height="22" rx="3" fill="#e8590c"/>
-<text x="198.5" y="353" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Oct 1 to Nov 30</text>
-<text x="12" y="387" font-size="14" font-weight="bold" fill="#23261f">Pheasant (cocks)</text>
-<rect x="104.5" y="393" width="188.0" height="22" rx="3" fill="#e8590c"/>
-<text x="198.5" y="409" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Oct 1 to Nov 30</text>
-<text x="12" y="443" font-size="14" font-weight="bold" fill="#23261f">Quail</text>
-<rect x="104.5" y="449" width="188.0" height="22" rx="3" fill="#e8590c"/>
-<text x="198.5" y="465" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Oct 1 to Nov 30</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 490" font-family="sans-serif" role="img" aria-label="Season bars for Region 8 grouse and upland birds, synopsis page 68, MUs 8-1 to 8-15 and 8-21 to 8-26. Grouse, dusky, ruffed and spruce: 10 September to 30 November. Grouse, Youth Only: 1 to 9 September. Grouse, Bow Only: 1 to 10 December. Chukar partridge: 1 October to 30 November. Gray (Hungarian) partridge: 1 October to 30 November. Pheasant cocks: 1 October to 30 November. Quail: 1 October to 30 November.">
+<rect width="400" height="490" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">Page 68. MUs 8-1 to 8-15, 8-21 to 8-26</text>
+<text x="59.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
+<text x="152.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="245.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="338.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">Grouse: dusky, ruffed, spruce</text>
+<text x="14" y="92" font-size="15" font-weight="bold" fill="#c2410c">Sept 10 to Nov 30</text>
+<rect x="14.0" y="100" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="100" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="100" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="100" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="41.4" y="101" width="250.0" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="146" font-size="16" font-weight="bold" fill="#2f3a2b">Grouse, Youth Only</text>
+<text x="386" y="146" font-size="15" font-weight="bold" fill="#5b6b3e" text-anchor="end">Sept 1 to Sept 9</text>
+<rect x="14.0" y="154" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="154" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="154" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="154" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="14.0" y="155" width="27.4" height="14" rx="3" fill="#8a9a6b"/>
+<text x="14" y="200" font-size="16" font-weight="bold" fill="#2f3a2b">Grouse, Bow Only</text>
+<text x="386" y="200" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">Dec 1 to Dec 10</text>
+<rect x="14.0" y="208" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="208" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="208" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="208" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="291.5" y="209" width="30.5" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="254" font-size="16" font-weight="bold" fill="#2f3a2b">Chukar partridge</text>
+<text x="386" y="254" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Oct 1 to Nov 30</text>
+<rect x="14.0" y="262" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="262" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="262" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="262" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="105.5" y="263" width="186.0" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="308" font-size="16" font-weight="bold" fill="#2f3a2b">Gray (Hungarian) partridge</text>
+<text x="386" y="308" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Oct 1 to Nov 30</text>
+<rect x="14.0" y="316" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="316" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="316" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="316" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="105.5" y="317" width="186.0" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="362" font-size="16" font-weight="bold" fill="#2f3a2b">Pheasant (cocks)</text>
+<text x="386" y="362" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Oct 1 to Nov 30</text>
+<rect x="14.0" y="370" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="370" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="370" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="370" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="105.5" y="371" width="186.0" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="416" font-size="16" font-weight="bold" fill="#2f3a2b">Quail</text>
+<text x="386" y="416" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Oct 1 to Nov 30</text>
+<rect x="14.0" y="424" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="424" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="424" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="424" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="105.5" y="425" width="186.0" height="14" rx="3" fill="#e8590c"/>
+<rect x="14" y="459" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="34" y="471" font-size="14" fill="#2f3a2b">General season</text>
+<rect x="151.12" y="459" width="14" height="14" rx="3" fill="#8a9a6b"/>
+<text x="171.12" y="471" font-size="14" fill="#2f3a2b">Youth only</text>
+<rect x="258.0" y="459" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="278" y="471" font-size="14" fill="#2f3a2b">Bow only</text>
 </svg>

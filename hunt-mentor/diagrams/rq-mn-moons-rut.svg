@@ -1,18 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Calendar from October to December 2026. New moons around 10 October, 9 November and 9 December; full moons around 26 October, 24 November and 24 December, about a day either way. Your hunts in mid to late October. The mule deer rut from mid November to mid December. The rut window stays put each year while the moon dates move.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Fall 2026: moons and the rut (approx.)</text>
-<line x1="20" y1="60" x2="20" y2="230" stroke="#e2dccb"/><text x="20.0" y="248" font-family="sans-serif" font-size="12" font-weight="bold" fill="#6b4f35" text-anchor="middle">Oct 1</text>
-<line x1="141" y1="60" x2="141" y2="230" stroke="#e2dccb"/><text x="141.30434782608694" y="248" font-family="sans-serif" font-size="12" font-weight="bold" fill="#6b4f35" text-anchor="middle">Nov 1</text>
-<line x1="259" y1="60" x2="259" y2="230" stroke="#e2dccb"/><text x="258.695652173913" y="248" font-family="sans-serif" font-size="12" font-weight="bold" fill="#6b4f35" text-anchor="middle">Dec 1</text>
-<line x1="376" y1="60" x2="376" y2="230" stroke="#e2dccb"/><text x="376.0869565217391" y="248" font-family="sans-serif" font-size="12" font-weight="bold" fill="#6b4f35" text-anchor="middle">Dec 31</text>
-<circle cx="55.21739130434783" cy="90" r="12" fill="#2f3a2b" stroke="#23261f" stroke-width="1.5"/>
-<circle cx="117.82608695652173" cy="90" r="12" fill="#f4e7b8" stroke="#23261f" stroke-width="1.5"/>
-<circle cx="172.6086956521739" cy="90" r="12" fill="#2f3a2b" stroke="#23261f" stroke-width="1.5"/>
-<circle cx="231.30434782608697" cy="90" r="12" fill="#f4e7b8" stroke="#23261f" stroke-width="1.5"/>
-<circle cx="290.0" cy="90" r="12" fill="#2f3a2b" stroke="#23261f" stroke-width="1.5"/>
-<circle cx="348.69565217391306" cy="90" r="12" fill="#f4e7b8" stroke="#23261f" stroke-width="1.5"/>
-<text x="200" y="66" font-family="sans-serif" font-size="12" fill="#23261f" text-anchor="middle">New and full moons, about a day either way (70%)</text>
-<rect x="75" y="130" width="67" height="18" rx="5" fill="#8a9a6b"/><text x="74.78260869565217" y="172" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="start">your hunts: mid to late Oct</text>
-<rect x="196" y="182" width="121" height="18" rx="5" fill="#e8590c"/><text x="317.39130434782606" y="212" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e8590c" text-anchor="end">mule deer rut: mid Nov to mid Dec (80%)</text>
-<text x="200" y="290" font-family="sans-serif" font-size="14" font-weight="bold" fill="#6b4f35" text-anchor="middle">Same rut window every year; moons move (Tip).</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 318" font-family="sans-serif" role="img" aria-label="Calendar from October to December 2026. New moons around 10 October, 9 November and 9 December; full moons around 26 October, 24 November and 24 December, about a day either way (70%). Your hunts in mid to late October. The mule deer rut from mid November to mid December (80%). The rut window stays put each year while the moon dates move (Tip).">
+<rect width="400" height="318" fill="#fffaf0"/>
+<text x="14" y="24" font-size="17" font-weight="bold" fill="#2f3a2b">Fall 2026: moons and the rut (approx.)</text>
+<text x="80" y="56" font-size="16" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="196.1" y="56" font-size="16" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="316.1" y="56" font-size="16" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<circle cx="56.8" cy="84" r="12" fill="#2f3a2b"/>
+<text x="56.8" y="116" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">10</text>
+<circle cx="118.7" cy="84" r="12" fill="#f5e7a8" stroke="#b39a3a" stroke-width="1.5"/>
+<text x="118.7" y="116" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">26</text>
+<circle cx="172.9" cy="84" r="12" fill="#2f3a2b"/>
+<text x="172.9" y="116" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">9</text>
+<circle cx="231.0" cy="84" r="12" fill="#f5e7a8" stroke="#b39a3a" stroke-width="1.5"/>
+<text x="231" y="116" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">24</text>
+<circle cx="289.0" cy="84" r="12" fill="#2f3a2b"/>
+<text x="289" y="116" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">9</text>
+<circle cx="347.0" cy="84" r="12" fill="#f5e7a8" stroke="#b39a3a" stroke-width="1.5"/>
+<text x="347" y="116" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">24</text>
+<circle cx="30" cy="136" r="7" fill="#2f3a2b"/><text x="42" y="141" font-size="14" fill="#2f3a2b">new</text>
+<circle cx="92" cy="136" r="7" fill="#f5e7a8" stroke="#b39a3a" stroke-width="1.5"/><text x="104" y="141" font-size="14" fill="#2f3a2b">full, about a day either way (70%)</text>
+<text x="22" y="172" font-size="15" font-weight="bold" fill="#5b6b3e">Your hunts: mid to late Oct</text>
+<rect x="76.2" y="180" width="65.8" height="16" rx="5" fill="#8a9a6b"/>
+<text x="22" y="220" font-size="15" font-weight="bold" fill="#c2410c">Mule deer rut: mid Nov to mid Dec (80%)</text>
+<rect x="196.1" y="228" width="120.0" height="16" rx="5" fill="#e8590c"/>
+<line x1="22" y1="258" x2="378" y2="258" stroke="#6b5b4b" stroke-width="1.6"/>
+<line x1="22.0" y1="252" x2="22.0" y2="264" stroke="#6b5b4b" stroke-width="1.6"/>
+<text x="22" y="280" font-size="14" font-weight="bold" fill="#6b5b4b">Oct 1</text>
+<line x1="142.0" y1="252" x2="142.0" y2="264" stroke="#6b5b4b" stroke-width="1.6"/>
+<text x="142" y="280" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov 1</text>
+<line x1="258.0" y1="252" x2="258.0" y2="264" stroke="#6b5b4b" stroke-width="1.6"/>
+<text x="258" y="280" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec 1</text>
+<line x1="378.0" y1="252" x2="378.0" y2="264" stroke="#6b5b4b" stroke-width="1.6"/>
+<text x="378" y="280" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">Dec 31</text>
+<text x="14" y="306" font-size="15" font-weight="bold" fill="#6b5b4b">Same rut window every year; moons move (Tip)</text>
 </svg>

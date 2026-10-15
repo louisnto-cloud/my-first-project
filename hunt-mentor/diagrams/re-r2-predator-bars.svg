@@ -1,51 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 494" role="img" aria-label="Season bar chart: Region 2 wolf, coyote, cougar, small game. Wolf: 2-5, 2-6, 2-11 to 2-16: Sept 10 to Mar 31, Apr 1 to June 15. Coyote: 2-2 to 2-19: Sept 10 to June 15. Raccoon, skunk: 2-2 to 2-19: Sept 1 to Mar 31. Snowshoe hare: 2-5 to 2-19: Aug 1 to Apr 30. Bobcat: 2-2 to 2-19: Nov 15 to Feb 15. Cougar: 2-2 to 2-19: Sept 10 to Mar 31, Apr 1 to June 15." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="494" fill="#fffaf0"/>
-<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 2 wolf, coyote, cougar, small</text>
-<text x="200" y="47" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">game</text>
-<text x="200" y="68" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 28. July to June.</text>
-<text x="28.0" y="104" font-size="14" fill="#23261f" text-anchor="middle">Jul</text>
-<text x="59.9" y="104" font-size="14" fill="#23261f" text-anchor="middle">Aug</text>
-<text x="91.3" y="104" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
-<text x="122.7" y="104" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
-<text x="154.2" y="104" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
-<text x="185.6" y="104" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
-<text x="217.5" y="104" font-size="14" fill="#23261f" text-anchor="middle">Jan</text>
-<text x="247.9" y="104" font-size="14" fill="#23261f" text-anchor="middle">Feb</text>
-<text x="278.3" y="104" font-size="14" fill="#23261f" text-anchor="middle">Mar</text>
-<text x="309.7" y="104" font-size="14" fill="#23261f" text-anchor="middle">Apr</text>
-<text x="341.1" y="104" font-size="14" fill="#23261f" text-anchor="middle">May</text>
-<text x="372.5" y="104" font-size="14" fill="#23261f" text-anchor="middle">Jun</text>
-<line x1="12.0" y1="112" x2="12.0" y2="484" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="43.9" y1="112" x2="43.9" y2="484" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="75.9" y1="112" x2="75.9" y2="484" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="106.8" y1="112" x2="106.8" y2="484" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="138.7" y1="112" x2="138.7" y2="484" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="169.6" y1="112" x2="169.6" y2="484" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="201.5" y1="112" x2="201.5" y2="484" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="233.5" y1="112" x2="233.5" y2="484" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="262.3" y1="112" x2="262.3" y2="484" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="294.3" y1="112" x2="294.3" y2="484" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="325.2" y1="112" x2="325.2" y2="484" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="357.1" y1="112" x2="357.1" y2="484" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="388.0" y1="112" x2="388.0" y2="484" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<text x="12" y="128" font-size="14" font-weight="bold" fill="#23261f">Wolf: 2-5, 2-6, 2-11 to 2-16</text>
-<rect x="85.1" y="134" width="209.1" height="22" rx="3" fill="#2f3a2b"/>
-<rect x="294.3" y="134" width="78.3" height="22" rx="3" fill="#2f3a2b"/>
-<text x="12" y="172" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Mar 31, Apr 1 to June 15</text>
-<text x="12" y="204" font-size="14" font-weight="bold" fill="#23261f">Coyote: 2-2 to 2-19</text>
-<rect x="85.1" y="210" width="287.4" height="22" rx="3" fill="#8a9a6b"/>
-<text x="228.8" y="226" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 10 to June 15</text>
-<text x="12" y="260" font-size="14" font-weight="bold" fill="#23261f">Raccoon, skunk: 2-2 to 2-19</text>
-<rect x="75.9" y="266" width="218.4" height="22" rx="3" fill="#8a9a6b"/>
-<text x="185.1" y="282" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 1 to Mar 31</text>
-<text x="12" y="316" font-size="14" font-weight="bold" fill="#23261f">Snowshoe hare: 2-5 to 2-19</text>
-<rect x="43.9" y="322" width="281.2" height="22" rx="3" fill="#8a9a6b"/>
-<text x="184.5" y="338" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Aug 1 to Apr 30</text>
-<text x="12" y="372" font-size="14" font-weight="bold" fill="#23261f">Bobcat: 2-2 to 2-19</text>
-<rect x="153.1" y="378" width="95.8" height="22" rx="3" fill="#e8590c"/>
-<text x="254.9" y="394" font-size="14" font-weight="bold" fill="#23261f">Nov 15 to Feb 15</text>
-<text x="12" y="428" font-size="14" font-weight="bold" fill="#23261f">Cougar: 2-2 to 2-19</text>
-<rect x="85.1" y="434" width="209.1" height="22" rx="3" fill="#e8590c"/>
-<rect x="294.3" y="434" width="78.3" height="22" rx="3" fill="#e8590c"/>
-<text x="12" y="472" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Mar 31, Apr 1 to June 15</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 426" font-family="sans-serif" role="img" aria-label="Season bars for Region 2 wolf, coyote, cougar and small game, synopsis page 28, July to June. Wolf in 2-5, 2-6 and 2-11 to 2-16: 10 September to 31 March and 1 April to 15 June. Coyote in 2-2 to 2-19: 10 September to 15 June. Raccoon and skunk in 2-2 to 2-19: 1 September to 31 March. Snowshoe hare in 2-5 to 2-19: 1 August to 30 April. Bobcat in 2-2 to 2-19: 15 November to 15 February. Cougar in 2-2 to 2-19: 10 September to 31 March and 1 April to 15 June.">
+<rect width="400" height="426" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">Page 28. MUs 2-2 to 2-19 unless listed</text>
+<text x="29.8" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="61.4" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="92.5" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">S</text>
+<text x="123.6" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">O</text>
+<text x="154.6" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">N</text>
+<text x="185.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">D</text>
+<text x="217.3" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="247.4" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">F</text>
+<text x="277.5" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="308.5" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="339.6" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="370.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">Wolf</text>
+<text x="386" y="72" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 10 to Mar 31, Apr 1 to June 15</text>
+<text x="14" y="92" font-size="14" fill="#6b5b4b">2-5, 2-6, 2-11 to 2-16</text>
+<rect x="14.0" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="99" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="99" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="99" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="99" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="99" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="99" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="99" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="99" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="86.4" y="100" width="206.9" height="14" rx="3" fill="#e8590c"/>
+<rect x="293.3" y="100" width="77.5" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="145" font-size="16" font-weight="bold" fill="#2f3a2b">Coyote</text>
+<text x="386" y="145" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 10 to June 15</text>
+<rect x="14.0" y="153" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="153" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="153" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="153" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="153" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="153" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="153" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="153" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="153" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="153" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="153" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="153" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="86.4" y="154" width="284.4" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="199" font-size="16" font-weight="bold" fill="#2f3a2b">Raccoon, skunk</text>
+<text x="386" y="199" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 1 to Mar 31</text>
+<rect x="14.0" y="207" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="207" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="207" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="207" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="207" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="207" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="207" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="207" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="207" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="207" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="207" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="207" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="208" width="216.1" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="253" font-size="16" font-weight="bold" fill="#2f3a2b">Snowshoe hare</text>
+<text x="386" y="253" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Aug 1 to Apr 30</text>
+<text x="14" y="273" font-size="14" fill="#6b5b4b">2-5 to 2-19</text>
+<rect x="14.0" y="280" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="280" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="280" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="280" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="280" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="280" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="280" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="280" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="280" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="280" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="280" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="280" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="45.6" y="281" width="278.2" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="326" font-size="16" font-weight="bold" fill="#2f3a2b">Bobcat</text>
+<text x="386" y="326" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Nov 15 to Feb 15</text>
+<rect x="14.0" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="334" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="334" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="334" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="334" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="334" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="334" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="334" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="334" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="334" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="153.6" y="335" width="94.8" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="380" font-size="16" font-weight="bold" fill="#2f3a2b">Cougar</text>
+<text x="386" y="380" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 10 to Mar 31, Apr 1 to June 15</text>
+<rect x="14.0" y="388" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="388" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="388" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="388" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="388" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="388" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="388" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="388" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="388" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="388" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="388" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="388" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="86.4" y="389" width="206.9" height="14" rx="3" fill="#e8590c"/>
+<rect x="293.3" y="389" width="77.5" height="14" rx="3" fill="#e8590c"/>
 </svg>

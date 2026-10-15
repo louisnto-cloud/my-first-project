@@ -1,14 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Sketch of one mountain in 3D with four deer beds: 1 just below the crest on a spur, 2 on a bench on the open face, 3 at the brushy head of a draw, 4 in thick cool timber on the shady face. Caption, a tip: a view below, wind behind, cover close.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Where beds sit (Tip)</text><rect x="0" y="36" width="400" height="70" fill="#e3ecf3"/><text x="388" y="24" font-size="13" fill="#2f3a2b" text-anchor="end">3D sketch</text>
-  <path d="M0 140 L120 76 L200 92 L280 70 L400 120 L400 268 L0 268 Z" fill="#e9edd9"/>
-  <path d="M280 70 L400 120 L400 268 L300 268 C 300 200, 290 140, 280 70 Z" fill="#a9b68e"/>
-  <path d="M0 140 L120 76 L200 92 L280 70 L400 120" stroke="#2f3a2b" stroke-width="3" fill="none"/>
-  <path d="M0 196 L180 178" stroke="#8b5a2b" stroke-width="6" opacity=".45"/>
-  <path d="M120 76 C 110 140, 100 190, 70 268" stroke="#2f3a2b" stroke-width="2" fill="none"/>
-  <path d="M330 118.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="328.65" y="145.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M350 148.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="348.65" y="175.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M370 128.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="368.65" y="155.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M320 168.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="318.65" y="195.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M360 188.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="358.65" y="215.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M210 128.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="208.65" y="155.4" width="2.7" height="4.5" fill="#6b4f35"/><path d="M226 146.4 l8.1 16.2 h-4.5 l6.3 10.8 h-19.8 l6.3 -10.8 h-4.5 Z" fill="#7f8f62"/><rect x="224.65" y="173.4" width="2.7" height="4.5" fill="#6b4f35"/>
-  <g transform="translate(110 104) scale(0.9)"><ellipse rx="13" ry="6" fill="#8b5a2b"/><circle cx="11" cy="-7" r="5" fill="#8b5a2b"/><path d="M9 -11 l-3 -6 M13 -11 l4 -5" stroke="#5c3b1c" stroke-width="2"/></g><g transform="translate(90 188) scale(0.9)"><ellipse rx="13" ry="6" fill="#8b5a2b"/><circle cx="11" cy="-7" r="5" fill="#8b5a2b"/><path d="M9 -11 l-3 -6 M13 -11 l4 -5" stroke="#5c3b1c" stroke-width="2"/></g><g transform="translate(220 186) scale(0.9)"><ellipse rx="13" ry="6" fill="#8b5a2b"/><circle cx="11" cy="-7" r="5" fill="#8b5a2b"/><path d="M9 -11 l-3 -6 M13 -11 l4 -5" stroke="#5c3b1c" stroke-width="2"/></g><g transform="translate(342 196) scale(0.9)"><ellipse rx="13" ry="6" fill="#8b5a2b"/><circle cx="11" cy="-7" r="5" fill="#8b5a2b"/><path d="M9 -11 l-3 -6 M13 -11 l4 -5" stroke="#5c3b1c" stroke-width="2"/></g>
-  <rect x="130" y="98" width="148" height="24" rx="6" fill="#e8590c"/><text x="204.0" y="115" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">1 Below the crest</text><rect x="8" y="210" width="70" height="24" rx="6" fill="#e8590c"/><text x="43.0" y="227" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">2 Bench</text>
-  <rect x="130" y="200" width="140" height="24" rx="6" fill="#e8590c"/><text x="200.0" y="217" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">3 Head of a draw</text><rect x="230" y="238" width="164" height="24" rx="6" fill="#e8590c"/><text x="312.0" y="255" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">4 Thick cool timber</text>
-  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A view below, wind behind, cover close</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 336" font-family="sans-serif" role="img" aria-label="Sketch of one mountain with four deer beds, a tip. 1 just below the crest, on the spur under the ridge top. 2 on a bench, a flat ledge on the open grassy face. 3 at the brushy head of a draw. 4 in thick cool timber on the shady face. Caption: a view below, wind behind, cover close.">
+<rect width="400" height="336" fill="#fffaf0"/>
+<defs><clipPath id="rl-bd-terrain-c"><rect x="8" y="34" width="384" height="230" rx="8"/></clipPath></defs>
+<text x="12" y="24" font-size="17" font-weight="bold" fill="#2f3a2b">Where beds sit (Tip)</text>
+<g clip-path="url(#rl-bd-terrain-c)">
+<rect x="8" y="34" width="384" height="230" fill="#dbe8f1"/>
+<path d="M8 150 C60 120 110 112 150 118 C200 96 260 92 320 106 C350 110 380 118 392 124 V264 H8z" fill="#b9c6c9"/>
+<path d="M8 264 V214 C40 196 80 168 120 140 C150 118 190 92 236 76 C270 88 310 112 350 136 C370 146 384 150 392 152 V264z" fill="#cfd39a"/>
+<path d="M236 76 C270 88 310 112 350 136 C370 146 384 150 392 152 V264 H262 C258 220 252 170 244 120 C242 104 240 90 236 76z" fill="#3f5e3c"/>
+<path d="M259 92 L264 108 L254 108z" fill="#24402a"/>
+<path d="M260 98 L265 112 L255 112z" fill="#2f4f33"/>
+<path d="M275 96 L280 116 L270 116z" fill="#2f4f33"/>
+<path d="M271 100 L276 116 L266 116z" fill="#2f4f33"/>
+<path d="M297 108 L302 122 L292 122z" fill="#24402a"/>
+<path d="M280 106 L285 124 L275 124z" fill="#355a39"/>
+<path d="M259 117 L264 131 L254 131z" fill="#355a39"/>
+<path d="M268 120 L273 134 L263 134z" fill="#24402a"/>
+<path d="M276 121 L281 136 L271 136z" fill="#355a39"/>
+<path d="M269 123 L274 139 L264 139z" fill="#355a39"/>
+<path d="M336 124 L341 141 L331 141z" fill="#24402a"/>
+<path d="M356 127 L361 146 L351 146z" fill="#2f4f33"/>
+<path d="M316 128 L321 148 L311 148z" fill="#24402a"/>
+<path d="M287 138 L292 156 L282 156z" fill="#2f4f33"/>
+<path d="M265 142 L270 159 L260 159z" fill="#24402a"/>
+<path d="M328 143 L333 159 L323 159z" fill="#24402a"/>
+<path d="M343 143 L348 160 L338 160z" fill="#355a39"/>
+<path d="M334 149 L339 164 L329 164z" fill="#24402a"/>
+<path d="M307 147 L312 165 L302 165z" fill="#24402a"/>
+<path d="M291 149 L296 167 L286 167z" fill="#2f4f33"/>
+<path d="M349 151 L354 170 L344 170z" fill="#24402a"/>
+<path d="M262 159 L267 173 L257 173z" fill="#2f4f33"/>
+<path d="M335 159 L340 174 L330 174z" fill="#24402a"/>
+<path d="M284 159 L289 179 L279 179z" fill="#2f4f33"/>
+<path d="M272 164 L277 180 L267 180z" fill="#24402a"/>
+<path d="M304 176 L309 193 L299 193z" fill="#2f4f33"/>
+<path d="M362 178 L367 195 L357 195z" fill="#355a39"/>
+<path d="M286 175 L291 195 L281 195z" fill="#2f4f33"/>
+<path d="M276 182 L281 196 L271 196z" fill="#24402a"/>
+<path d="M296 182 L301 197 L291 197z" fill="#24402a"/>
+<path d="M352 183 L357 198 L347 198z" fill="#2f4f33"/>
+<path d="M325 185 L330 202 L320 202z" fill="#355a39"/>
+<path d="M265 186 L270 205 L260 205z" fill="#2f4f33"/>
+<path d="M319 191 L324 210 L314 210z" fill="#2f4f33"/>
+<path d="M306 192 L311 211 L301 211z" fill="#24402a"/>
+<path d="M389 196 L394 215 L384 215z" fill="#24402a"/>
+<path d="M366 197 L371 216 L361 216z" fill="#355a39"/>
+<path d="M311 208 L316 226 L306 226z" fill="#2f4f33"/>
+<path d="M381 211 L386 230 L376 230z" fill="#2f4f33"/>
+<path d="M378 215 L383 233 L373 233z" fill="#2f4f33"/>
+<path d="M295 223 L300 236 L290 236z" fill="#355a39"/>
+<path d="M312 222 L317 238 L307 238z" fill="#2f4f33"/>
+<path d="M370 226 L375 245 L365 245z" fill="#24402a"/>
+<path d="M307 228 L312 246 L302 246z" fill="#24402a"/>
+<path d="M327 227 L332 247 L322 247z" fill="#24402a"/>
+<path d="M330 234 L335 248 L325 248z" fill="#2f4f33"/>
+<path d="M302 229 L307 248 L297 248z" fill="#24402a"/>
+<path d="M373 241 L378 258 L368 258z" fill="#355a39"/>
+<path d="M342 239 L347 259 L337 259z" fill="#355a39"/>
+<path d="M344 247 L349 267 L339 267z" fill="#24402a"/>
+<path d="M190 104 C186 140 178 190 168 264 H186 C192 200 198 150 200 108z" fill="#aeb57a"/>
+<path d="M195 106 C190 150 184 200 176 264" stroke="#8d955e" stroke-width="2" fill="none"/>
+<circle cx="188" cy="112" r="7" fill="#6f8a4a"/>
+<circle cx="198" cy="110" r="6" fill="#6f8a4a"/>
+<circle cx="192" cy="120" r="6" fill="#6f8a4a"/>
+<circle cx="184" cy="122" r="5" fill="#6f8a4a"/>
+<circle cx="200" cy="122" r="5" fill="#6f8a4a"/>
+<path d="M40 214 C70 204 110 200 140 202 L142 210 C112 208 72 212 42 222z" fill="#e3e3b5"/>
+<path d="M42 222 C72 212 112 208 142 210" stroke="#a5a873" stroke-width="2" fill="none"/>
+<path d="M108 167 l2 -6 M112 167 l0 -7 M116 167 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M22 244 l2 -6 M26 244 l0 -7 M30 244 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M56 183 l2 -6 M60 183 l0 -7 M64 183 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M159 207 l2 -6 M163 207 l0 -7 M167 207 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M109 175 l2 -6 M113 175 l0 -7 M117 175 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M109 247 l2 -6 M113 247 l0 -7 M117 247 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M93 234 l2 -6 M97 234 l0 -7 M101 234 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M114 166 l2 -6 M118 166 l0 -7 M122 166 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M62 163 l2 -6 M66 163 l0 -7 M70 163 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M121 248 l2 -6 M125 248 l0 -7 M129 248 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M120 252 l2 -6 M124 252 l0 -7 M128 252 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/>
+<path d="M8 214 C40 196 80 168 120 140 C150 118 190 92 236 76 C270 88 310 112 350 136 C370 146 384 150 392 152" stroke="#2f3a2b" stroke-width="1.6" fill="none"/>
+</g>
+<rect x="8" y="34" width="384" height="230" rx="8" fill="none" stroke="#6b5b4b" stroke-width="1.5"/>
+<g transform="translate(126 150) scale(1.0 1.0)"><ellipse cx="4" cy="-6" rx="14" ry="6.5" fill="#a17a52"/><path d="M-8 -8 L-12 -20 L-7 -21 L-3 -10z" fill="#a17a52"/><path d="M-12 -20 C-16 -21 -19 -18 -19 -16 L-14 -15 C-12 -16 -10 -17 -9 -19z" fill="#a17a52"/><path d="M-11 -21 L-15 -27 L-9 -22z M-9 -21 L-6 -27 L-7 -21z" fill="#a17a52"/><ellipse cx="16" cy="-6" rx="2.4" ry="3" fill="#f3ead8"/><path d="M-6 -1 H8" stroke="#5a3e26" stroke-width="2" stroke-linecap="round"/></g>
+<g transform="translate(92 210) scale(1.0 1.0)"><ellipse cx="4" cy="-6" rx="14" ry="6.5" fill="#a17a52"/><path d="M-8 -8 L-12 -20 L-7 -21 L-3 -10z" fill="#a17a52"/><path d="M-12 -20 C-16 -21 -19 -18 -19 -16 L-14 -15 C-12 -16 -10 -17 -9 -19z" fill="#a17a52"/><path d="M-11 -21 L-15 -27 L-9 -22z M-9 -21 L-6 -27 L-7 -21z" fill="#a17a52"/><ellipse cx="16" cy="-6" rx="2.4" ry="3" fill="#f3ead8"/><path d="M-6 -1 H8" stroke="#5a3e26" stroke-width="2" stroke-linecap="round"/></g>
+<g transform="translate(206 128) scale(1.0 1.0)"><ellipse cx="4" cy="-6" rx="14" ry="6.5" fill="#a17a52"/><path d="M-8 -8 L-12 -20 L-7 -21 L-3 -10z" fill="#a17a52"/><path d="M-12 -20 C-16 -21 -19 -18 -19 -16 L-14 -15 C-12 -16 -10 -17 -9 -19z" fill="#a17a52"/><path d="M-11 -21 L-15 -27 L-9 -22z M-9 -21 L-6 -27 L-7 -21z" fill="#a17a52"/><ellipse cx="16" cy="-6" rx="2.4" ry="3" fill="#f3ead8"/><path d="M-6 -1 H8" stroke="#5a3e26" stroke-width="2" stroke-linecap="round"/></g>
+<g transform="translate(318 214) scale(-1.0 1.0)"><ellipse cx="4" cy="-6" rx="14" ry="6.5" fill="#c49a6c"/><path d="M-8 -8 L-12 -20 L-7 -21 L-3 -10z" fill="#c49a6c"/><path d="M-12 -20 C-16 -21 -19 -18 -19 -16 L-14 -15 C-12 -16 -10 -17 -9 -19z" fill="#c49a6c"/><path d="M-11 -21 L-15 -27 L-9 -22z M-9 -21 L-6 -27 L-7 -21z" fill="#c49a6c"/><ellipse cx="16" cy="-6" rx="2.4" ry="3" fill="#f3ead8"/><path d="M-6 -1 H8" stroke="#5a3e26" stroke-width="2" stroke-linecap="round"/></g>
+<line x1="126" y1="138" x2="126" y2="71" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="126" cy="138" r="2.6" fill="#2f3a2b"/>
+<line x1="206" y1="116" x2="252.958" y2="71" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="206" cy="116" r="2.6" fill="#2f3a2b"/>
+<line x1="92" y1="198" x2="78.348" y2="272" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="92" cy="198" r="2.6" fill="#2f3a2b"/>
+<line x1="318" y1="202" x2="318" y2="272" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="318" cy="202" r="2.6" fill="#2f3a2b"/>
+<rect x="14.0" y="44.0" width="147.5" height="27.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="87.768" y="63" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">1 Below the crest</text>
+<rect x="243.0" y="44.0" width="143.0" height="27.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="314.479" y="63" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">3 Head of a draw</text>
+<rect x="14.0" y="272.0" width="74.3" height="27.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="51.174" y="291" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">2 Bench</text>
+<rect x="226.6" y="272.0" width="159.4" height="27.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="306.293" y="291" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">4 Thick cool timber</text>
+<text x="200" y="324" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A view below, wind behind, cover close</text>
 </svg>

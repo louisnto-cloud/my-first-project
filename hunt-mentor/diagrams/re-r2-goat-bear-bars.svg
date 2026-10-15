@@ -1,48 +1,114 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 433" role="img" aria-label="Season bar chart: Region 2 mountain goat and black bear. Goat: 2-5: Sept 10 to Oct 15. Goat: ★2-6 (see Map B9): Sept 10 to Sept 30. Goat: ▲2-12 to 2-15 (see Maps B18, B19): Sept 10 to Oct 31. Black bear: 2-2 to 2-19: Sept 10 to Nov 30. Black bear, spring: 2-2 to 2-19: Apr 1 to June 15. Black bear, Bow Only: 2-2 to 2-19: Sept 1 to Sept 9." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="433" fill="#fffaf0"/>
-<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 2 mountain goat and black bear</text>
-<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 28. July to June. Goat bag 1, bear 2 a year.</text>
-<text x="28.0" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jul</text>
-<text x="59.9" y="83" font-size="14" fill="#23261f" text-anchor="middle">Aug</text>
-<text x="91.3" y="83" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
-<text x="122.7" y="83" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
-<text x="154.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
-<text x="185.6" y="83" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
-<text x="217.5" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jan</text>
-<text x="247.9" y="83" font-size="14" fill="#23261f" text-anchor="middle">Feb</text>
-<text x="278.3" y="83" font-size="14" fill="#23261f" text-anchor="middle">Mar</text>
-<text x="309.7" y="83" font-size="14" fill="#23261f" text-anchor="middle">Apr</text>
-<text x="341.1" y="83" font-size="14" fill="#23261f" text-anchor="middle">May</text>
-<text x="372.5" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jun</text>
-<line x1="12.0" y1="91" x2="12.0" y2="423" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="43.9" y1="91" x2="43.9" y2="423" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="75.9" y1="91" x2="75.9" y2="423" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="106.8" y1="91" x2="106.8" y2="423" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="138.7" y1="91" x2="138.7" y2="423" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="169.6" y1="91" x2="169.6" y2="423" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="201.5" y1="91" x2="201.5" y2="423" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="233.5" y1="91" x2="233.5" y2="423" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="262.3" y1="91" x2="262.3" y2="423" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="294.3" y1="91" x2="294.3" y2="423" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="325.2" y1="91" x2="325.2" y2="423" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="357.1" y1="91" x2="357.1" y2="423" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="388.0" y1="91" x2="388.0" y2="423" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<text x="12" y="107" font-size="14" font-weight="bold" fill="#23261f">Goat: 2-5</text>
-<rect x="85.1" y="113" width="37.1" height="22" rx="3" fill="#2f3a2b"/>
-<text x="128.2" y="129" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Oct 15</text>
-<text x="12" y="163" font-size="14" font-weight="bold" fill="#23261f">Goat: ★2-6 (see Map B9)</text>
-<rect x="85.1" y="169" width="21.6" height="22" rx="3" fill="#2f3a2b"/>
-<text x="112.8" y="185" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Sept 30</text>
-<text x="12" y="219" font-size="14" font-weight="bold" fill="#23261f">Goat: ▲2-12 to 2-15 (see Maps B18, B19)</text>
-<rect x="85.1" y="225" width="53.6" height="22" rx="3" fill="#2f3a2b"/>
-<text x="144.7" y="241" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Oct 31</text>
-<text x="12" y="275" font-size="14" font-weight="bold" fill="#23261f">Black bear: 2-2 to 2-19</text>
-<rect x="85.1" y="281" width="84.5" height="22" rx="3" fill="#8b5a2b"/>
-<text x="175.6" y="297" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Nov 30</text>
-<text x="12" y="331" font-size="14" font-weight="bold" fill="#23261f">Black bear, spring: 2-2 to 2-19</text>
-<rect x="294.3" y="337" width="78.3" height="22" rx="3" fill="#8b5a2b"/>
-<text x="288.3" y="353" font-size="14" font-weight="bold" fill="#23261f" text-anchor="end">Apr 1 to June 15</text>
-<text x="12" y="387" font-size="14" font-weight="bold" fill="#23261f">Black bear, Bow Only: 2-2 to 2-19</text>
-<rect x="75.9" y="393" width="9.3" height="22" rx="3" fill="#4a7fb0"/>
-<text x="91.1" y="409" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 9</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 496" font-family="sans-serif" role="img" aria-label="Season bars for Region 2 mountain goat and black bear, synopsis page 28, July to June. Goat bag 1, bear 2 a year. Goat in 2-5: 10 September to 15 October. Goat in star 2-6, see Map B9: 10 to 30 September. Goat in triangle 2-12 to 2-15, see Maps B18 and B19: 10 September to 31 October. Black bear in 2-2 to 2-19: 10 September to 30 November; spring 1 April to 15 June; Bow Only 1 to 9 September.">
+<rect width="400" height="496" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">Page 28. Bear: 2-2 to 2-19</text>
+<text x="29.8" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="61.4" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="92.5" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">S</text>
+<text x="123.6" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">O</text>
+<text x="154.6" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">N</text>
+<text x="185.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">D</text>
+<text x="217.3" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="247.4" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">F</text>
+<text x="277.5" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="308.5" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="339.6" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="370.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">Goat</text>
+<text x="386" y="72" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 10 to Oct 15</text>
+<text x="14" y="92" font-size="14" fill="#6b5b4b">2-5</text>
+<rect x="14.0" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="99" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="99" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="99" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="99" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="99" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="99" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="99" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="99" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="99" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="86.4" y="100" width="36.7" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="145" font-size="16" font-weight="bold" fill="#2f3a2b">Goat</text>
+<text x="386" y="145" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 10 to 30</text>
+<text x="14" y="165" font-size="14" fill="#6b5b4b">★2-6, see Map B9</text>
+<rect x="14.0" y="172" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="172" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="172" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="172" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="172" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="172" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="172" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="172" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="172" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="172" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="172" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="172" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="86.4" y="173" width="21.4" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="218" font-size="16" font-weight="bold" fill="#2f3a2b">Goat</text>
+<text x="386" y="218" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 10 to Oct 31</text>
+<text x="14" y="238" font-size="14" fill="#6b5b4b">▲2-12 to 2-15, see Maps B18, B19</text>
+<rect x="14.0" y="245" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="245" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="245" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="245" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="245" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="245" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="245" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="245" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="245" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="245" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="245" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="245" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="86.4" y="246" width="53.0" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="291" font-size="16" font-weight="bold" fill="#2f3a2b">Black bear</text>
+<text x="386" y="291" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 10 to Nov 30</text>
+<rect x="14.0" y="299" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="299" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="299" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="299" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="299" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="299" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="299" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="299" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="299" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="299" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="299" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="299" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="86.4" y="300" width="83.6" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="345" font-size="16" font-weight="bold" fill="#2f3a2b">Black bear, spring</text>
+<text x="386" y="345" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Apr 1 to June 15</text>
+<rect x="14.0" y="353" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="353" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="353" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="353" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="353" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="353" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="353" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="353" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="353" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="353" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="353" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="353" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="293.3" y="354" width="77.5" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="399" font-size="16" font-weight="bold" fill="#2f3a2b">Black bear, Bow Only</text>
+<text x="386" y="399" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Sept 1 to 9</text>
+<rect x="14.0" y="407" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="45.6" y="407" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="407" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="107.8" y="407" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="139.4" y="407" width="30.6" height="16" fill="#efe8d6"/>
+<rect x="169.9" y="407" width="31.6" height="16" fill="#f8f3e6"/>
+<rect x="201.5" y="407" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="233.1" y="407" width="28.5" height="16" fill="#f8f3e6"/>
+<rect x="261.7" y="407" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="293.3" y="407" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="323.8" y="407" width="31.6" height="16" fill="#efe8d6"/>
+<rect x="355.4" y="407" width="30.6" height="16" fill="#f8f3e6"/>
+<rect x="77.2" y="408" width="9.2" height="14" rx="3" fill="#8b5a2b"/>
+<rect x="14" y="442" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="34" y="454" font-size="14" fill="#2f3a2b">General season</text>
+<rect x="151.12" y="442" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="171.12" y="454" font-size="14" fill="#2f3a2b">Bow only</text>
+<text x="14" y="482" font-size="15" font-weight="bold" fill="#2f3a2b">Goat bag 1, bear 2 a year</text>
 </svg>

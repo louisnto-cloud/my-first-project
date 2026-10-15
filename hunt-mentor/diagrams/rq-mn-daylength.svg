@@ -1,28 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 310" role="img" aria-label="Line chart of day length at Heffley Creek. 11.7 hours on 1 October, 9.8 hours on 31 October, 8.3 hours on 30 November, 7.9 hours on 21 December. Mid October loses about 3.8 minutes of daylight a day. Your hunts in mid to late October are shaded.">
-<rect x="0" y="0" width="400" height="310" fill="#fffaf0"/>
-<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Daylight at Heffley Creek, fall 2026</text>
-<line x1="50" y1="219" x2="380" y2="219" stroke="#e2dccb"/><text x="44" y="223.88888888888889" font-family="sans-serif" font-size="12" fill="#6b4f35" text-anchor="end">8 h</text>
-<line x1="50" y1="177" x2="380" y2="177" stroke="#e2dccb"/><text x="44" y="181.66666666666666" font-family="sans-serif" font-size="12" fill="#6b4f35" text-anchor="end">9 h</text>
-<line x1="50" y1="134" x2="380" y2="134" stroke="#e2dccb"/><text x="44" y="139.44444444444446" font-family="sans-serif" font-size="12" fill="#6b4f35" text-anchor="end">10 h</text>
-<line x1="50" y1="92" x2="380" y2="92" stroke="#e2dccb"/><text x="44" y="97.22222222222223" font-family="sans-serif" font-size="12" fill="#6b4f35" text-anchor="end">11 h</text>
-<line x1="50" y1="50" x2="380" y2="50" stroke="#e2dccb"/><text x="44" y="55.0" font-family="sans-serif" font-size="12" fill="#6b4f35" text-anchor="end">12 h</text>
-<polyline points="50,62 108,100 174,141 232,177 293,204 380,221" fill="none" stroke="#e8590c" stroke-width="4"/>
-<circle cx="50" cy="62" r="5" fill="#e8590c"/>
-<text x="50.0" y="260" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">Oct 1</text>
-<text x="60.0" y="52.24444444444441" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e8590c" text-anchor="start">11.7 h</text>
-<circle cx="108" cy="100" r="5" fill="#e8590c"/>
-<circle cx="174" cy="141" r="5" fill="#e8590c"/>
-<text x="173.75" y="260" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">Oct 31</text>
-<text x="183.75" y="131.2" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e8590c" text-anchor="start">9.8 h</text>
-<circle cx="232" cy="177" r="5" fill="#e8590c"/>
-<circle cx="293" cy="204" r="5" fill="#e8590c"/>
-<text x="293.375" y="260" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">Nov 30</text>
-<text x="303.375" y="194.11111111111111" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e8590c" text-anchor="start">8.3 h</text>
-<circle cx="380" cy="221" r="5" fill="#e8590c"/>
-<text x="380.0" y="260" font-family="sans-serif" font-size="12" font-weight="bold" fill="#23261f" text-anchor="middle">Dec 21</text>
-<text x="372.0" y="211.42222222222222" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e8590c" text-anchor="end">7.9 h</text>
-<rect x="108" y="50" width="66" height="190" fill="#e8590c" opacity=".08"/>
-<text x="140.75" y="66" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e8590c" text-anchor="middle">your hunts</text>
-<text x="14" y="284" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">Mid October: about 3.8 minutes less light each day. My</text>
-<text x="14" y="300" font-family="sans-serif" font-size="13" fill="#6b4f35" text-anchor="start">calculation, NOAA method (85%).</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" font-family="sans-serif" role="img" aria-label="Line chart of day length at Heffley Creek, fall 2026. 11.7 hours on 1 October, 10.8 hours on 15 October, 9.8 hours on 31 October, 8.3 hours on 30 November, 7.9 hours on 21 December. Mid October loses about 3.8 minutes of daylight a day. Your hunts in mid to late October are shaded. My calculation with the NOAA solar method, 85 percent.">
+<rect width="400" height="330" fill="#fffaf0"/>
+<text x="12" y="22" font-size="15" font-weight="bold" fill="#2f3a2b">Hours of daylight, Heffley Creek, fall 2026</text>
+<line x1="50" y1="192.0" x2="378" y2="192.0" stroke="#e2dac6" stroke-width="1"/>
+<text x="42" y="197" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">8 h</text>
+<line x1="50" y1="154.0" x2="378" y2="154.0" stroke="#e2dac6" stroke-width="1"/>
+<text x="42" y="159" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">9 h</text>
+<line x1="50" y1="116.0" x2="378" y2="116.0" stroke="#e2dac6" stroke-width="1"/>
+<text x="42" y="121" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">10 h</text>
+<line x1="50" y1="78.0" x2="378" y2="78.0" stroke="#e2dac6" stroke-width="1"/>
+<text x="42" y="83" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">11 h</text>
+<line x1="50" y1="40.0" x2="378" y2="40.0" stroke="#e2dac6" stroke-width="1"/>
+<text x="42" y="45" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">12 h</text>
+<rect x="106.7" y="34" width="64.8" height="196" fill="#e8590c" opacity="0.13"/>
+<text x="139.086" y="236" font-size="14" fill="#2f3a2b"></text>
+<path d="M50.0 230 L50.0 51.4 L106.7 85.6 L171.5 123.6 L293.0 180.6 L378.0 195.8 L378.0 230z" fill="#f6d77a" opacity="0.45"/>
+<path d="M50.0 51.4 L106.7 85.6 L171.5 123.6 L293.0 180.6 L378.0 195.8" stroke="#e8590c" stroke-width="3.5" fill="none" stroke-linejoin="round"/>
+<circle cx="50.0" cy="51.4" r="5" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="60" y="43.4" font-size="16" font-weight="bold" fill="#2f3a2b" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">11.7 h</text>
+<circle cx="106.7" cy="85.6" r="5" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="116.691" y="75.6" font-size="16" font-weight="bold" fill="#2f3a2b" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">10.8 h</text>
+<circle cx="171.5" cy="123.6" r="5" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="179.481" y="111.6" font-size="16" font-weight="bold" fill="#2f3a2b" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">9.8 h</text>
+<circle cx="293.0" cy="180.6" r="5" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="292.963" y="166.6" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">8.3 h</text>
+<circle cx="378.0" cy="195.8" r="5" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="378" y="181.8" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">7.9 h</text>
+<text x="139.086" y="220" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">hunts</text>
+<text x="139.086" y="202" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">your</text>
+<text x="44" y="250" font-size="14" font-weight="bold" fill="#2f3a2b">Oct 1</text>
+<line x1="50.0" y1="230" x2="50.0" y2="235" stroke="#2f3a2b" stroke-width="1.4"/>
+<text x="171.481" y="250" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Oct 31</text>
+<line x1="171.5" y1="230" x2="171.5" y2="235" stroke="#2f3a2b" stroke-width="1.4"/>
+<text x="292.963" y="250" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Nov 30</text>
+<line x1="293.0" y1="230" x2="293.0" y2="235" stroke="#2f3a2b" stroke-width="1.4"/>
+<text x="384" y="250" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Dec 21</text>
+<line x1="378.0" y1="230" x2="378.0" y2="235" stroke="#2f3a2b" stroke-width="1.4"/>
+<line x1="50" y1="230" x2="378" y2="230" stroke="#2f3a2b" stroke-width="1.4"/>
+<rect x="8" y="264" width="384" height="58" rx="9" fill="#f4eedf"/>
+<text x="20" y="288" font-size="15" fill="#2f3a2b">Mid October: about <tspan font-weight="bold" fill="#c2410c">3.8 minutes</tspan> less light</text>
+<text x="20" y="308" font-size="15" fill="#2f3a2b">each day. My calculation, NOAA method (85%).</text>
 </svg>

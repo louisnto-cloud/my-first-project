@@ -1,63 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 569" role="img" aria-label="Grid: Region 3 bird limits: day (possession). Grouse: dusky (blue), ruffed, spruce: 5 each (15 each). The three grouse together: 10 (30). Sharp tailed grouse: 5 (10). Ptarmigan: 5 (15). Chukar partridge: 5 (15). Gray partridge (Hungarian): 3 (9). Pheasant (cocks): 2 (6). Dove: mourning, Eurasian collared: 5 (15). Band tailed pigeons: 5 (15). Common snipe: 10 (30). Coots: 10 (30). Ducks: 8 (24). Geese: snow and Ross&#x27;s: 5 (15). Geese: white fronted: 5 (15). Geese: Canada and cackling: 10 (30)." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="569" fill="#fffaf0"/>
-<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 3 bird limits: day (possession)</text>
-<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 34. 5 (15): 5 a day, 15 in possession.</text>
-<rect x="6.0" y="69" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
-<text x="68.0" y="103" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">5 each (15 each)</text>
-<text x="68.0" y="127" font-size="14" fill="#23261f" text-anchor="middle">Grouse: dusky</text>
-<text x="68.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">(blue), ruffed,</text>
-<text x="68.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">spruce</text>
-<rect x="138.0" y="69" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
-<text x="200.0" y="103" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">10 (30)</text>
-<text x="200.0" y="127" font-size="14" fill="#23261f" text-anchor="middle">The three</text>
-<text x="200.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">grouse together</text>
-<rect x="270.0" y="69" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
-<text x="332.0" y="103" font-size="26" font-weight="bold" fill="#8b5a2b" text-anchor="middle">5 (10)</text>
-<text x="332.0" y="127" font-size="14" fill="#23261f" text-anchor="middle">Sharp tailed</text>
-<text x="332.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">grouse</text>
-<rect x="6.0" y="183" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
-<text x="68.0" y="217" font-size="26" font-weight="bold" fill="#8b5a2b" text-anchor="middle">5 (15)</text>
-<text x="68.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">Ptarmigan</text>
-<rect x="138.0" y="183" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
-<text x="200.0" y="217" font-size="26" font-weight="bold" fill="#8b5a2b" text-anchor="middle">5 (15)</text>
-<text x="200.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">Chukar</text>
-<text x="200.0" y="259" font-size="14" fill="#23261f" text-anchor="middle">partridge</text>
-<rect x="270.0" y="183" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
-<text x="332.0" y="217" font-size="26" font-weight="bold" fill="#8b5a2b" text-anchor="middle">3 (9)</text>
-<text x="332.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">Gray partridge</text>
-<text x="332.0" y="259" font-size="14" fill="#23261f" text-anchor="middle">(Hungarian)</text>
-<rect x="6.0" y="279" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<text x="68.0" y="313" font-size="26" font-weight="bold" fill="#e8590c" text-anchor="middle">2 (6)</text>
-<text x="68.0" y="337" font-size="14" fill="#23261f" text-anchor="middle">Pheasant</text>
-<text x="68.0" y="355" font-size="14" fill="#23261f" text-anchor="middle">(cocks)</text>
-<rect x="138.0" y="279" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
-<text x="200.0" y="313" font-size="26" font-weight="bold" fill="#8a9a6b" text-anchor="middle">5 (15)</text>
-<text x="200.0" y="337" font-size="14" fill="#23261f" text-anchor="middle">Dove: mourning,</text>
-<text x="200.0" y="355" font-size="14" fill="#23261f" text-anchor="middle">Eurasian</text>
-<text x="200.0" y="373" font-size="14" fill="#23261f" text-anchor="middle">collared</text>
-<rect x="270.0" y="279" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
-<text x="332.0" y="313" font-size="26" font-weight="bold" fill="#8a9a6b" text-anchor="middle">5 (15)</text>
-<text x="332.0" y="337" font-size="14" fill="#23261f" text-anchor="middle">Band tailed</text>
-<text x="332.0" y="355" font-size="14" fill="#23261f" text-anchor="middle">pigeons</text>
-<rect x="6.0" y="393" width="124.0" height="70" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<text x="68.0" y="427" font-size="26" font-weight="bold" fill="#4a7fb0" text-anchor="middle">10 (30)</text>
-<text x="68.0" y="451" font-size="14" fill="#23261f" text-anchor="middle">Common snipe</text>
-<rect x="138.0" y="393" width="124.0" height="70" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<text x="200.0" y="427" font-size="26" font-weight="bold" fill="#4a7fb0" text-anchor="middle">10 (30)</text>
-<text x="200.0" y="451" font-size="14" fill="#23261f" text-anchor="middle">Coots</text>
-<rect x="270.0" y="393" width="124.0" height="70" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<text x="332.0" y="427" font-size="26" font-weight="bold" fill="#4a7fb0" text-anchor="middle">8 (24)</text>
-<text x="332.0" y="451" font-size="14" fill="#23261f" text-anchor="middle">Ducks</text>
-<rect x="6.0" y="471" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<text x="68.0" y="505" font-size="26" font-weight="bold" fill="#4a7fb0" text-anchor="middle">5 (15)</text>
-<text x="68.0" y="529" font-size="14" fill="#23261f" text-anchor="middle">Geese: snow and</text>
-<text x="68.0" y="547" font-size="14" fill="#23261f" text-anchor="middle">Ross&#x27;s</text>
-<rect x="138.0" y="471" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<text x="200.0" y="505" font-size="26" font-weight="bold" fill="#4a7fb0" text-anchor="middle">5 (15)</text>
-<text x="200.0" y="529" font-size="14" fill="#23261f" text-anchor="middle">Geese: white</text>
-<text x="200.0" y="547" font-size="14" fill="#23261f" text-anchor="middle">fronted</text>
-<rect x="270.0" y="471" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<text x="332.0" y="505" font-size="26" font-weight="bold" fill="#4a7fb0" text-anchor="middle">10 (30)</text>
-<text x="332.0" y="529" font-size="14" fill="#23261f" text-anchor="middle">Geese: Canada</text>
-<text x="332.0" y="547" font-size="14" fill="#23261f" text-anchor="middle">and cackling</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 602" font-family="sans-serif" role="img" aria-label="Region 3 bird limits, day and possession, synopsis page 34. 5 (15) means 5 a day, 15 in possession. Grouse, dusky (blue), ruffed and spruce: 5 each (15 each); the three grouse together: 10 (30). Sharp tailed grouse: 5 (10). Ptarmigan: 5 (15). Chukar partridge: 5 (15). Gray partridge (Hungarian): 3 (9). Pheasant (cocks): 2 (6). Dove, mourning and Eurasian collared: 5 (15). Band tailed pigeons: 5 (15). Ducks: 8 (24). Common snipe: 10 (30). Coots: 10 (30). Geese, Canada and cackling: 10 (30). Geese, snow and Ross&#x27;s: 5 (15). Geese, white fronted: 5 (15).">
+<rect width="400" height="602" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Page 34. 5 (15): 5 a day, 15 in possession.</text>
+<text x="14" y="49" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">UPLAND BIRDS</text>
+<line x1="155" y1="44" x2="392" y2="44" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="59" width="384" height="58" rx="6" fill="#f4eedf"/>
+<text x="64" y="85" font-size="20" font-weight="bold" fill="#8b5a2b" text-anchor="middle">5 each</text>
+<text x="64" y="105" font-size="17" font-weight="bold" fill="#8b5a2b" text-anchor="middle">(15 each)</text>
+<text x="130" y="83" font-size="16" fill="#2f3a2b">Grouse: dusky (blue), ruffed,</text>
+<text x="130" y="104" font-size="16" fill="#2f3a2b">spruce</text>
+<text x="64" y="149.6" font-size="24" font-weight="bold" fill="#c0392b" text-anchor="middle">10 (30)</text>
+<text x="130" y="146.5" font-size="16" fill="#2f3a2b">The three grouse together</text>
+<rect x="8" y="165" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="195.6" font-size="24" font-weight="bold" fill="#8b5a2b" text-anchor="middle">5 (10)</text>
+<text x="130" y="192.5" font-size="16" fill="#2f3a2b">Sharp tailed grouse</text>
+<text x="64" y="259.1" font-size="24" font-weight="bold" fill="#8b5a2b" text-anchor="middle">5 (15)</text>
+<text x="130" y="235" font-size="16" fill="#2f3a2b">Ptarmigan, chukar partridge,</text>
+<text x="130" y="256" font-size="16" fill="#2f3a2b">dove: mourning, Eurasian</text>
+<text x="130" y="277" font-size="16" fill="#2f3a2b">collared, band tailed pigeons</text>
+<rect x="8" y="292" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="322.6" font-size="24" font-weight="bold" fill="#8b5a2b" text-anchor="middle">3 (9)</text>
+<text x="130" y="319.5" font-size="16" fill="#2f3a2b">Gray partridge (Hungarian)</text>
+<text x="64" y="368.6" font-size="24" font-weight="bold" fill="#8b5a2b" text-anchor="middle">2 (6)</text>
+<text x="130" y="365.5" font-size="16" fill="#2f3a2b">Pheasant (cocks)</text>
+<text x="14" y="410" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">WATERFOWL</text>
+<line x1="138" y1="405" x2="392" y2="405" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="420" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="450.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">8 (24)</text>
+<text x="130" y="447.5" font-size="16" fill="#2f3a2b">Ducks</text>
+<text x="64" y="503.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">10 (30)</text>
+<text x="130" y="490" font-size="16" fill="#2f3a2b">Common snipe, coots, geese:</text>
+<text x="130" y="511" font-size="16" fill="#2f3a2b">Canada and cackling</text>
+<rect x="8" y="526" width="384" height="58" rx="6" fill="#f4eedf"/>
+<text x="64" y="563.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">5 (15)</text>
+<text x="130" y="550" font-size="16" fill="#2f3a2b">Geese: snow and Ross&#x27;s, white</text>
+<text x="130" y="571" font-size="16" fill="#2f3a2b">fronted</text>
 </svg>

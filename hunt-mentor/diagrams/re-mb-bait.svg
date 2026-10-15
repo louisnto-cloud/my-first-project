@@ -1,40 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 449" role="img" aria-label="Cards: Bait, decoys, calls, vehicles. Bait: No hunting within 400 m until the bait has been gone 7 days. Not bait: Standing crops, flooded harvested fields, sheaves, grain spilled by normal farming. Calls: No live birds, no electronic calls. Mouth calls fine (95%, my reading). Vehicles, aircraft: No hunting from or with them. Exception: stationary, authorized mobility impaired hunter. Decoys: No limit on plastic decoys for permit hunters (90%, my reading)." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="449" fill="#fffaf0"/>
-<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Bait, decoys, calls, vehicles</text>
-<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">s. 1, 6, 36, 39, 40, 69</text>
-<rect x="6.0" y="69" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
-<path d="M6.0 97 V78 Q6.0 69 15.0 69 H187.0 Q196.0 69 196.0 78 V97 Z" fill="#c92a2a"/>
-<text x="14.0" y="89" font-size="14" font-weight="bold" fill="#ffffff">Bait</text>
-<text x="14.0" y="117" font-size="14" fill="#23261f">No hunting within 400 m</text>
-<text x="14.0" y="135" font-size="14" fill="#23261f">until the bait has been</text>
-<text x="14.0" y="153" font-size="14" fill="#23261f">gone 7 days</text>
-<rect x="204.0" y="69" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
-<path d="M204.0 97 V78 Q204.0 69 213.0 69 H385.0 Q394.0 69 394.0 78 V97 Z" fill="#8a9a6b"/>
-<text x="212.0" y="89" font-size="14" font-weight="bold" fill="#ffffff">Not bait</text>
-<text x="212.0" y="117" font-size="14" fill="#23261f">Standing crops, flooded</text>
-<text x="212.0" y="135" font-size="14" fill="#23261f">harvested fields,</text>
-<text x="212.0" y="153" font-size="14" fill="#23261f">sheaves, grain spilled</text>
-<text x="212.0" y="171" font-size="14" fill="#23261f">by normal farming</text>
-<rect x="6.0" y="189" width="190.0" height="130" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<path d="M6.0 217 V198 Q6.0 189 15.0 189 H187.0 Q196.0 189 196.0 198 V217 Z" fill="#e8590c"/>
-<text x="14.0" y="209" font-size="14" font-weight="bold" fill="#ffffff">Calls</text>
-<text x="14.0" y="237" font-size="14" fill="#23261f">No live birds, no</text>
-<text x="14.0" y="255" font-size="14" fill="#23261f">electronic calls. Mouth</text>
-<text x="14.0" y="273" font-size="14" fill="#23261f">calls fine (95%, my</text>
-<text x="14.0" y="291" font-size="14" fill="#23261f">reading)</text>
-<rect x="204.0" y="189" width="190.0" height="130" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
-<path d="M204.0 217 V198 Q204.0 189 213.0 189 H385.0 Q394.0 189 394.0 198 V217 Z" fill="#c92a2a"/>
-<text x="212.0" y="209" font-size="14" font-weight="bold" fill="#ffffff">Vehicles, aircraft</text>
-<text x="212.0" y="237" font-size="14" fill="#23261f">No hunting from or with</text>
-<text x="212.0" y="255" font-size="14" fill="#23261f">them. Exception:</text>
-<text x="212.0" y="273" font-size="14" fill="#23261f">stationary, authorized</text>
-<text x="212.0" y="291" font-size="14" fill="#23261f">mobility impaired</text>
-<text x="212.0" y="309" font-size="14" fill="#23261f">hunter</text>
-<rect x="6.0" y="327" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<path d="M6.0 355 V336 Q6.0 327 15.0 327 H187.0 Q196.0 327 196.0 336 V355 Z" fill="#4a7fb0"/>
-<text x="14.0" y="347" font-size="14" font-weight="bold" fill="#ffffff">Decoys</text>
-<text x="14.0" y="375" font-size="14" fill="#23261f">No limit on plastic</text>
-<text x="14.0" y="393" font-size="14" fill="#23261f">decoys for permit</text>
-<text x="14.0" y="411" font-size="14" fill="#23261f">hunters (90%, my</text>
-<text x="14.0" y="429" font-size="14" fill="#23261f">reading)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 507" font-family="sans-serif" role="img" aria-label="Migratory bird methods, federal rules sections 1, 6, 36, 39, 40 and 69, as icon cards. Bait: no hunting within 400 metres until the bait has been gone 7 days. Not bait: standing crops, flooded harvested fields, sheaves, and grain spilled by normal farming. Calls: no live birds and no electronic calls; mouth calls are fine (95%, my reading). Decoys: no limit on plastic decoys for permit hunters (90%, my reading). Vehicles and aircraft: no hunting from or with them, except a stationary, authorized mobility impaired hunter.">
+<rect width="400" height="507" fill="#fffaf0"/>
+<text x="12" y="22" font-size="14" font-weight="bold" fill="#6b5b4b">Federal rules, s. 1, 6, 36, 39, 40, 69</text>
+<rect x="10" y="32" width="380" height="79" rx="8" fill="#f8e9e5" stroke="#c0392b" stroke-width="1.3"/>
+<circle cx="48" cy="71.5" r="27" fill="#fffaf0" stroke="#c0392b" stroke-width="1.2"/>
+<g transform="translate(48.0 76.3) scale(1.2)"><path d="M-20 14 Q0 -10 20 14z" fill="#d9a521"/><ellipse cx="-10" cy="8" rx="2.6" ry="1.7" fill="#a87b12"/><ellipse cx="-4" cy="3" rx="2.6" ry="1.7" fill="#a87b12"/><ellipse cx="3" cy="6" rx="2.6" ry="1.7" fill="#a87b12"/><ellipse cx="9" cy="10" rx="2.6" ry="1.7" fill="#a87b12"/><ellipse cx="-2" cy="10" rx="2.6" ry="1.7" fill="#a87b12"/><ellipse cx="5" cy="-1" rx="2.6" ry="1.7" fill="#a87b12"/><ellipse cx="-7" cy="12" rx="2.6" ry="1.7" fill="#a87b12"/><ellipse cx="13" cy="12" rx="2.6" ry="1.7" fill="#a87b12"/></g>
+<text x="88" y="58" font-size="16" font-weight="bold" fill="#c0392b">Bait</text>
+<text x="88" y="80" font-size="15" fill="#2f3a2b">No hunting within 400 m until the</text>
+<text x="88" y="99" font-size="15" fill="#2f3a2b">bait has been gone 7 days</text>
+<rect x="317.5" y="58" width="62.5" height="26" rx="13.0" fill="#c0392b"/><text x="348.7" y="76.4" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">400 m</text>
+<rect x="10" y="119" width="380" height="98" rx="8" fill="#eef2e6" stroke="#2f6e3b" stroke-width="1.3"/>
+<circle cx="48" cy="168.0" r="27" fill="#fffaf0" stroke="#2f6e3b" stroke-width="1.2"/>
+<g transform="translate(48.0 170.4) scale(1.2)"><g transform="translate(-9 0) rotate(-12)"><path d="M0 16 V-4" stroke="#a87b12" stroke-width="2"/><ellipse cx="-3" cy="-6" rx="2.4" ry="4" transform="rotate(-25 -3 -6)" fill="#d9a521"/><ellipse cx="3" cy="-6" rx="2.4" ry="4" transform="rotate(25 3 -6)" fill="#d9a521"/><ellipse cx="-3" cy="-11" rx="2.4" ry="4" transform="rotate(-25 -3 -11)" fill="#d9a521"/><ellipse cx="3" cy="-11" rx="2.4" ry="4" transform="rotate(25 3 -11)" fill="#d9a521"/><ellipse cx="-3" cy="-16" rx="2.4" ry="4" transform="rotate(-25 -3 -16)" fill="#d9a521"/><ellipse cx="3" cy="-16" rx="2.4" ry="4" transform="rotate(25 3 -16)" fill="#d9a521"/><ellipse cx="0" cy="-20" rx="2.2" ry="4" fill="#d9a521"/></g><g transform="translate(0 0) rotate(0)"><path d="M0 16 V-4" stroke="#a87b12" stroke-width="2"/><ellipse cx="-3" cy="-6" rx="2.4" ry="4" transform="rotate(-25 -3 -6)" fill="#d9a521"/><ellipse cx="3" cy="-6" rx="2.4" ry="4" transform="rotate(25 3 -6)" fill="#d9a521"/><ellipse cx="-3" cy="-11" rx="2.4" ry="4" transform="rotate(-25 -3 -11)" fill="#d9a521"/><ellipse cx="3" cy="-11" rx="2.4" ry="4" transform="rotate(25 3 -11)" fill="#d9a521"/><ellipse cx="-3" cy="-16" rx="2.4" ry="4" transform="rotate(-25 -3 -16)" fill="#d9a521"/><ellipse cx="3" cy="-16" rx="2.4" ry="4" transform="rotate(25 3 -16)" fill="#d9a521"/><ellipse cx="0" cy="-20" rx="2.2" ry="4" fill="#d9a521"/></g><g transform="translate(9 0) rotate(12)"><path d="M0 16 V-4" stroke="#a87b12" stroke-width="2"/><ellipse cx="-3" cy="-6" rx="2.4" ry="4" transform="rotate(-25 -3 -6)" fill="#d9a521"/><ellipse cx="3" cy="-6" rx="2.4" ry="4" transform="rotate(25 3 -6)" fill="#d9a521"/><ellipse cx="-3" cy="-11" rx="2.4" ry="4" transform="rotate(-25 -3 -11)" fill="#d9a521"/><ellipse cx="3" cy="-11" rx="2.4" ry="4" transform="rotate(25 3 -11)" fill="#d9a521"/><ellipse cx="-3" cy="-16" rx="2.4" ry="4" transform="rotate(-25 -3 -16)" fill="#d9a521"/><ellipse cx="3" cy="-16" rx="2.4" ry="4" transform="rotate(25 3 -16)" fill="#d9a521"/><ellipse cx="0" cy="-20" rx="2.2" ry="4" fill="#d9a521"/></g></g>
+<text x="88" y="145" font-size="16" font-weight="bold" fill="#2f6e3b">Not bait</text>
+<text x="88" y="167" font-size="15" fill="#2f3a2b">Standing crops, flooded</text>
+<text x="88" y="186" font-size="15" fill="#2f3a2b">harvested fields, sheaves, grain</text>
+<text x="88" y="205" font-size="15" fill="#2f3a2b">spilled by normal farming</text>
+<rect x="342.2" y="155" width="37.8" height="26" rx="13.0" fill="#2f6e3b"/><text x="361.1" y="173.4" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">OK</text>
+<rect x="10" y="225" width="380" height="79" rx="8" fill="#f6f1e3" stroke="#d8cfb8" stroke-width="1.3"/>
+<circle cx="48" cy="264.5" r="27" fill="#fffaf0" stroke="#d8cfb8" stroke-width="1.2"/>
+<g transform="translate(48.0 264.5) scale(1.02)"><path d="M-20 -4 L4 -6 L4 6 L-20 4z" fill="#8b5a2b"/><path d="M4 -8 L18 -11 L18 11 L4 8z" fill="#3a3f3a"/><rect x="-22" y="-5" width="4" height="10" rx="1" fill="#3a3f3a"/></g>
+<text x="88" y="251" font-size="16" font-weight="bold" fill="#2f3a2b">Calls</text>
+<text x="88" y="273" font-size="15" fill="#2f3a2b">No live birds, no electronic calls. Mouth</text>
+<text x="88" y="292" font-size="15" fill="#2f3a2b">calls fine (95%, my reading)</text>
+<rect x="10" y="312" width="380" height="79" rx="8" fill="#eef2e6" stroke="#2f6e3b" stroke-width="1.3"/>
+<circle cx="48" cy="351.5" r="27" fill="#fffaf0" stroke="#2f6e3b" stroke-width="1.2"/>
+<g transform="translate(48.0 351.5) scale(1.14)"><path d="M-20 4 Q-20 -6 -6 -6 L4 -6 Q6 -16 14 -14 Q20 -12 18 -6 L24 -5 L18 -2 Q16 2 10 3 Q8 10 -6 10 Q-18 10 -20 4z" fill="#5c4a32"/><path d="M6 -10 Q10 -16 16 -12 Q18 -8 14 -6z" fill="#2f6e3b"/><circle cx="13" cy="-10" r="1.3" fill="#fffaf0"/><path d="M-16 0 Q-6 -3 4 0" stroke="#a5917a" stroke-width="2" fill="none"/><path d="M-24 13 Q-12 9 0 13 T24 13" stroke="#4a7fb0" stroke-width="2.2" fill="none"/></g>
+<text x="88" y="338" font-size="16" font-weight="bold" fill="#2f6e3b">Decoys</text>
+<text x="88" y="360" font-size="15" fill="#2f3a2b">No limit on plastic decoys for</text>
+<text x="88" y="379" font-size="15" fill="#2f3a2b">permit hunters (90%, my reading)</text>
+<rect x="342.2" y="338" width="37.8" height="26" rx="13.0" fill="#2f6e3b"/><text x="361.1" y="356.4" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">OK</text>
+<rect x="10" y="399" width="380" height="98" rx="8" fill="#f8e9e5" stroke="#c0392b" stroke-width="1.3"/>
+<circle cx="48" cy="448.0" r="27" fill="#fffaf0" stroke="#c0392b" stroke-width="1.2"/>
+<g transform="translate(48.0 455.2) scale(0.9)"><path d="M-22 6 V-4 H-2 V-12 H12 L20 -3 H22 V6z" fill="#3a3f3a"/><path d="M1 -9 H11 L16 -3 H1z" fill="#fffaf0"/><circle cx="-12" cy="7" r="5" fill="#3a3f3a" stroke="#fffaf0" stroke-width="2"/><circle cx="12" cy="7" r="5" fill="#3a3f3a" stroke="#fffaf0" stroke-width="2"/></g>
+<g transform="translate(48.0 436.0) scale(0.72)"><path d="M-20 0 Q-20 -3 -14 -3 H14 Q22 -3 22 0 Q22 3 14 3 H-14 Q-20 3 -20 0z" fill="#3a3f3a"/><path d="M-2 -2 L-10 -16 H-5 L8 -2z M-2 2 L-10 16 H-5 L8 2z M-18 -1 L-22 -9 H-18 L-13 -2z" fill="#3a3f3a"/></g>
+<text x="88" y="425" font-size="16" font-weight="bold" fill="#c0392b">Vehicles, aircraft</text>
+<text x="88" y="447" font-size="15" fill="#2f3a2b">No hunting from or with them.</text>
+<text x="88" y="466" font-size="15" fill="#2f3a2b">Exception: stationary, authorized</text>
+<text x="88" y="485" font-size="15" fill="#2f3a2b">mobility impaired hunter</text>
+<rect x="342.2" y="435" width="37.8" height="26" rx="13.0" fill="#c0392b"/><text x="361.1" y="453.4" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">NO</text>
 </svg>

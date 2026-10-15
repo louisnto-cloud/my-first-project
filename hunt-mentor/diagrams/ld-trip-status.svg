@@ -1,55 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" font-family="sans-serif" role="img" aria-label="Grid comparing five trips for a BC resident. Yukon calls you a non resident Canadian: birds and small game with no guide on a small game licence, deer are Yukon residents only. Alberta calls you a non resident: birds need no host, deer need a hunter host or outfitter. Saskatchewan calls you a Canadian resident: birds on a game bird licence, white tailed deer with no guide through a draw. Manitoba calls you a Canadian resident: birds on a game bird licence, white tailed deer with no guide in listed Game Hunting Areas. Alaska calls you a nonresident alien: small game and waterfowl with no guide, 80 percent, and a guide for every big game animal.">
-<rect x="0" y="0" width="400" height="480" fill="#fffaf0"/>
-<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Five trips: what a BC hunter may do</text>
-<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">Official pages, search previews (80 to 85%)</text>
-<text x="228" y="74" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Birds, no</text>
-<text x="228" y="91" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">guide</text>
-<text x="332" y="74" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Deer, no</text>
-<text x="332" y="91" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">guide</text>
-<rect x="8" y="100" width="384" height="72" fill="#dfe6d3" rx="4"/>
-<text x="14" y="123" font-size="14" font-weight="bold" fill="#2f3a2b">Yukon: non</text>
-<text x="14" y="141" font-size="14" font-weight="bold" fill="#2f3a2b">resident</text>
-<text x="14" y="159" font-size="14" font-weight="bold" fill="#2f3a2b">Canadian</text>
-<circle cx="228.0" cy="120" r="12" fill="#8a9a6b"/><path d="M222.6 120 l3.5999999999999996 4.199999999999999 l7.199999999999999 -8.399999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-<text x="228" y="148" font-size="14" fill="#2f3a2b" text-anchor="middle">Small game</text>
-<text x="228" y="164" font-size="14" fill="#2f3a2b" text-anchor="middle">licence</text>
-<circle cx="332.0" cy="120" r="12" fill="#e8590c"/><path d="M327.2 115.2 L336.8 124.8 M336.8 115.2 L327.2 124.8" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
-<text x="332" y="148" font-size="14" fill="#2f3a2b" text-anchor="middle">Residents</text>
-<text x="332" y="164" font-size="14" fill="#2f3a2b" text-anchor="middle">only</text>
-<text x="14" y="204" font-size="14" font-weight="bold" fill="#2f3a2b">Alberta: non</text>
-<text x="14" y="222" font-size="14" font-weight="bold" fill="#2f3a2b">resident</text>
-<circle cx="228.0" cy="192" r="12" fill="#8a9a6b"/><path d="M222.6 192 l3.5999999999999996 4.199999999999999 l7.199999999999999 -8.399999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-<text x="228" y="220" font-size="14" fill="#2f3a2b" text-anchor="middle">No host</text>
-<text x="228" y="236" font-size="14" fill="#2f3a2b" text-anchor="middle">needed</text>
-<circle cx="332.0" cy="192" r="12" fill="#e8590c"/><path d="M327.2 187.2 L336.8 196.8 M336.8 187.2 L327.2 196.8" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
-<text x="332" y="220" font-size="14" fill="#2f3a2b" text-anchor="middle">Host or</text>
-<text x="332" y="236" font-size="14" fill="#2f3a2b" text-anchor="middle">outfitter</text>
-<rect x="8" y="244" width="384" height="72" fill="#dfe6d3" rx="4"/>
-<text x="14" y="267" font-size="14" font-weight="bold" fill="#2f3a2b">Saskatchewan:</text>
-<text x="14" y="285" font-size="14" font-weight="bold" fill="#2f3a2b">Canadian</text>
-<text x="14" y="303" font-size="14" font-weight="bold" fill="#2f3a2b">resident</text>
-<circle cx="228.0" cy="264" r="12" fill="#8a9a6b"/><path d="M222.6 264 l3.5999999999999996 4.199999999999999 l7.199999999999999 -8.399999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-<text x="228" y="292" font-size="14" fill="#2f3a2b" text-anchor="middle">Game bird</text>
-<text x="228" y="308" font-size="14" fill="#2f3a2b" text-anchor="middle">licence</text>
-<circle cx="332.0" cy="264" r="12" fill="#8a9a6b"/><path d="M326.6 264 l3.5999999999999996 4.199999999999999 l7.199999999999999 -8.399999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-<text x="332" y="292" font-size="14" fill="#2f3a2b" text-anchor="middle">White tail,</text>
-<text x="332" y="308" font-size="14" fill="#2f3a2b" text-anchor="middle">by draw</text>
-<text x="14" y="339" font-size="14" font-weight="bold" fill="#2f3a2b">Manitoba:</text>
-<text x="14" y="357" font-size="14" font-weight="bold" fill="#2f3a2b">Canadian</text>
-<text x="14" y="375" font-size="14" font-weight="bold" fill="#2f3a2b">resident</text>
-<circle cx="228.0" cy="336" r="12" fill="#8a9a6b"/><path d="M222.6 336 l3.5999999999999996 4.199999999999999 l7.199999999999999 -8.399999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-<text x="228" y="364" font-size="14" fill="#2f3a2b" text-anchor="middle">Game bird</text>
-<text x="228" y="380" font-size="14" fill="#2f3a2b" text-anchor="middle">licence</text>
-<circle cx="332.0" cy="336" r="12" fill="#8a9a6b"/><path d="M326.6 336 l3.5999999999999996 4.199999999999999 l7.199999999999999 -8.399999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-<text x="332" y="364" font-size="14" fill="#2f3a2b" text-anchor="middle">White tail,</text>
-<text x="332" y="380" font-size="14" fill="#2f3a2b" text-anchor="middle">listed GHAs</text>
-<rect x="8" y="388" width="384" height="72" fill="#dfe6d3" rx="4"/>
-<text x="14" y="411" font-size="14" font-weight="bold" fill="#2f3a2b">Alaska:</text>
-<text x="14" y="429" font-size="14" font-weight="bold" fill="#2f3a2b">nonresident</text>
-<text x="14" y="447" font-size="14" font-weight="bold" fill="#2f3a2b">alien</text>
-<circle cx="228.0" cy="408" r="12" fill="#8a9a6b"/><path d="M222.6 408 l3.5999999999999996 4.199999999999999 l7.199999999999999 -8.399999999999999" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-<text x="228" y="436" font-size="14" fill="#2f3a2b" text-anchor="middle">80%</text>
-<circle cx="332.0" cy="408" r="12" fill="#e8590c"/><path d="M327.2 403.2 L336.8 412.8 M336.8 403.2 L327.2 412.8" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
-<text x="332" y="436" font-size="14" fill="#2f3a2b" text-anchor="middle">Guide for all</text>
-<text x="332" y="452" font-size="14" fill="#2f3a2b" text-anchor="middle">big game</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 537" font-family="sans-serif" role="img" aria-label="Grid comparing five trips for a BC resident, from official pages and search previews, 80 to 85 percent. Columns: birds with no guide, and deer with no guide. Yukon calls you a non resident Canadian: birds and small game with no guide on a small game licence; deer are Yukon residents only. Alberta calls you a non resident: birds need no host; deer need a hunter host or outfitter. Saskatchewan calls you a Canadian resident: birds on a game bird licence; white tailed deer with no guide through a draw. Manitoba calls you a Canadian resident: birds on a game bird licence; white tailed deer with no guide in listed Game Hunting Areas. Alaska calls you a nonresident alien: small game and waterfowl with no guide, 80 percent; a guide for every big game animal.">
+<rect width="400" height="537" fill="#fffaf0"/>
+<text x="12" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">Official pages, search previews (80 to 85%)</text>
+<g transform="translate(214 66) scale(1.1)" fill="#2f3a2b"><ellipse cx="2" cy="2" rx="13" ry="8"/><circle cx="-11" cy="-6" r="5.5"/><path d="M-16 -6 L-21 -4 L-16 -3z"/><path d="M12 0 L20 -5 L18 4z"/><path d="M-12 -11 C-14 -17 -9 -18 -8 -15" stroke="#2f3a2b" stroke-width="2" fill="none"/></g>
+<g transform="translate(332 80) scale(0.85 0.85)"><path d="M-8 -18 L-10 0 M-4 -18 L-3 0 M12 -18 L13 0 M16 -18 L18 0" stroke="#2f3a2b" stroke-width="2.4" stroke-linecap="round"/><path d="M-12 -28 C-12 -34 -4 -34 6 -34 C14 -34 20 -32 20 -26 C20 -20 16 -17 8 -17 L-6 -17 C-10 -17 -12 -21 -12 -28z" fill="#2f3a2b"/><path d="M-10 -30 L-16 -42 L-12 -44 L-6 -32z" fill="#2f3a2b"/><path d="M-16 -42 C-20 -43 -24 -40 -24 -38 L-20 -37 C-17 -37 -14 -39 -13 -41z" fill="#2f3a2b"/><path d="M-14 -44 L-18 -50 L-12 -45z M-12 -44 L-9 -50 L-10 -44z" fill="#2f3a2b"/><ellipse cx="18" cy="-27" rx="3" ry="4" fill="#f3ead8"/><circle cx="-18" cy="-41" r=".9" fill="#111"/><path d="M-14 -46 C-16 -54 -10 -60 -4 -60 M-11 -54 L-14 -60" stroke="#6b4f35" stroke-width="1.6" fill="none"/></g>
+<text x="214" y="104" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Birds, no guide</text>
+<text x="326" y="104" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Deer, no guide</text>
+<rect x="8" y="116" width="384" height="74" rx="8" fill="#f4eedf" stroke="#d9cfb8" stroke-width="1"/>
+<text x="18" y="142" font-size="17" font-weight="bold" fill="#2f3a2b">Yukon</text>
+<text x="18" y="162" font-size="14" fill="#6b5b4b">non resident</text>
+<text x="18" y="179" font-size="14" fill="#6b5b4b">Canadian</text>
+<circle cx="214" cy="136" r="12" fill="#2f6e3b"/><path d="M209.1 137.0 l4.2 4.2 l8.5 -9.3" fill="none" stroke="#fffaf0" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="214" y="166" font-size="14" fill="#2f3a2b" text-anchor="middle">Small game</text>
+<text x="214" y="183" font-size="14" fill="#2f3a2b" text-anchor="middle">licence</text>
+<circle cx="326" cy="136" r="12" fill="#c92a2a"/><path d="M321.2 131.2 l9.6 9.6 M330.8 131.2 l-9.6 9.6" stroke="#fffaf0" stroke-width="2.6" stroke-linecap="round"/>
+<text x="326" y="166" font-size="14" fill="#2f3a2b" text-anchor="middle">Residents only</text>
+<rect x="8" y="196" width="384" height="74" rx="8" fill="#fffaf0" stroke="#d9cfb8" stroke-width="1"/>
+<text x="18" y="222" font-size="17" font-weight="bold" fill="#2f3a2b">Alberta</text>
+<text x="18" y="242" font-size="14" fill="#6b5b4b">non resident</text>
+<circle cx="214" cy="216" r="12" fill="#2f6e3b"/><path d="M209.1 217.0 l4.2 4.2 l8.5 -9.3" fill="none" stroke="#fffaf0" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="214" y="246" font-size="14" fill="#2f3a2b" text-anchor="middle">No host needed</text>
+<circle cx="326" cy="216" r="12" fill="#c92a2a"/><path d="M321.2 211.2 l9.6 9.6 M330.8 211.2 l-9.6 9.6" stroke="#fffaf0" stroke-width="2.6" stroke-linecap="round"/>
+<text x="326" y="246" font-size="14" fill="#2f3a2b" text-anchor="middle">Host or</text>
+<text x="326" y="263" font-size="14" fill="#2f3a2b" text-anchor="middle">outfitter</text>
+<rect x="8" y="276" width="384" height="74" rx="8" fill="#f4eedf" stroke="#d9cfb8" stroke-width="1"/>
+<text x="18" y="302" font-size="17" font-weight="bold" fill="#2f3a2b">Saskatchewan</text>
+<text x="18" y="322" font-size="14" fill="#6b5b4b">Canadian resident</text>
+<circle cx="214" cy="296" r="12" fill="#2f6e3b"/><path d="M209.1 297.0 l4.2 4.2 l8.5 -9.3" fill="none" stroke="#fffaf0" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="214" y="326" font-size="14" fill="#2f3a2b" text-anchor="middle">Game bird</text>
+<text x="214" y="343" font-size="14" fill="#2f3a2b" text-anchor="middle">licence</text>
+<circle cx="326" cy="296" r="12" fill="#2f6e3b"/><path d="M321.1 297.0 l4.2 4.2 l8.5 -9.3" fill="none" stroke="#fffaf0" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="326" y="326" font-size="14" fill="#2f3a2b" text-anchor="middle">White tail,</text>
+<text x="326" y="343" font-size="14" fill="#2f3a2b" text-anchor="middle">by draw</text>
+<rect x="8" y="356" width="384" height="91" rx="8" fill="#fffaf0" stroke="#d9cfb8" stroke-width="1"/>
+<text x="18" y="382" font-size="17" font-weight="bold" fill="#2f3a2b">Manitoba</text>
+<text x="18" y="402" font-size="14" fill="#6b5b4b">Canadian resident</text>
+<circle cx="214" cy="376" r="12" fill="#2f6e3b"/><path d="M209.1 377.0 l4.2 4.2 l8.5 -9.3" fill="none" stroke="#fffaf0" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="214" y="406" font-size="14" fill="#2f3a2b" text-anchor="middle">Game bird</text>
+<text x="214" y="423" font-size="14" fill="#2f3a2b" text-anchor="middle">licence</text>
+<circle cx="326" cy="376" r="12" fill="#2f6e3b"/><path d="M321.1 377.0 l4.2 4.2 l8.5 -9.3" fill="none" stroke="#fffaf0" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="326" y="406" font-size="14" fill="#2f3a2b" text-anchor="middle">White tail, listed</text>
+<text x="326" y="423" font-size="14" fill="#2f3a2b" text-anchor="middle">Game Hunting</text>
+<text x="326" y="440" font-size="14" fill="#2f3a2b" text-anchor="middle">Areas</text>
+<rect x="8" y="453" width="384" height="74" rx="8" fill="#f4eedf" stroke="#d9cfb8" stroke-width="1"/>
+<text x="18" y="479" font-size="17" font-weight="bold" fill="#2f3a2b">Alaska</text>
+<text x="18" y="499" font-size="14" fill="#6b5b4b">nonresident alien</text>
+<circle cx="214" cy="473" r="12" fill="#2f6e3b"/><path d="M209.1 474.0 l4.2 4.2 l8.5 -9.3" fill="none" stroke="#fffaf0" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="214" y="503" font-size="14" fill="#2f3a2b" text-anchor="middle">80%</text>
+<circle cx="326" cy="473" r="12" fill="#c92a2a"/><path d="M321.2 468.2 l9.6 9.6 M330.8 468.2 l-9.6 9.6" stroke="#fffaf0" stroke-width="2.6" stroke-linecap="round"/>
+<text x="326" y="503" font-size="14" fill="#2f3a2b" text-anchor="middle">Guide for all</text>
+<text x="326" y="520" font-size="14" fill="#2f3a2b" text-anchor="middle">big game</text>
 </svg>

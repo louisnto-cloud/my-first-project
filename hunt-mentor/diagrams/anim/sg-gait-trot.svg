@@ -2,7 +2,7 @@
 <rect width="400" height="300" fill="#fffaf0"/>
 <text x="200" y="28" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Trot</text>
 <rect x="0" y="110" width="400" height="110" fill="#dfe6d3"/>
-<path id="sg-gait-trot-path" d="M0 80 L350 80" fill="none" stroke="none"/>
+<path id="sg-gait-trot-path" d="M34 80 L352 80" fill="none" stroke="none"/>
 <g transform="translate(30 175) rotate(90) scale(.7)" fill="#6b4f35" opacity="0"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/><animate attributeName="opacity" from="0" to="1" begin="0.30s" dur=".2s" fill="freeze"/></g>
 <g transform="translate(100 160) rotate(90) scale(.7)" fill="#6b4f35" opacity="0"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/><animate attributeName="opacity" from="0" to="1" begin="0.75s" dur=".2s" fill="freeze"/></g>
 <g transform="translate(170 175) rotate(90) scale(.7)" fill="#6b4f35" opacity="0"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/><animate attributeName="opacity" from="0" to="1" begin="1.20s" dur=".2s" fill="freeze"/></g>

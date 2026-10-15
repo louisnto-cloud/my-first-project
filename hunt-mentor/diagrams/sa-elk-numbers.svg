@@ -1,4 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 206" font-family="sans-serif" role="img" aria-label="Elk numbers from the 2022 provincial estimates. Region 3 Thompson: about 300 to 500, increasing. Region 8 Okanagan: about 2,500 to 3,500, stable to increasing. Near Heffley Creek elk are rare.">
-<rect x="0" y="0" width="400" height="206" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">How many elk? 2022 estimates</text><text x="8" y="78.0" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Region 3 Thompson</text><rect x="150" y="56" width="15.1" height="34" rx="4" fill="#e8590c"/><rect x="165.1" y="56" width="10.1" height="34" rx="4" fill="#e8590c" opacity=".45"/><text x="180.20833333333334" y="78.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">300 to 500, rising</text><text x="8" y="136.0" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Region 8 Okanagan</text><rect x="150" y="114" width="126.0" height="34" rx="4" fill="#8b5a2b"/><rect x="276.0" y="114" width="50.4" height="34" rx="4" fill="#8b5a2b" opacity=".45"/><text x="321.45833333333337" y="136.0" font-size="14" font-weight="bold" fill="#fff" text-anchor="end">2,500 to 3,500</text><text x="200" y="194" font-size="14" fill="#6b4f35" text-anchor="middle">Near Heffley Creek: rare. Okanagan: common.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="sans-serif" role="img" aria-label="Elk numbers from the 2022 provincial estimates, bars on a scale of 0 to 4,000. Region 3 Thompson: about 300 to 500, increasing. Region 8 Okanagan: about 2,500 to 3,500, stable to increasing. Near Heffley Creek elk are rare; in the Okanagan they are common.">
+<rect width="400" height="260" fill="#fffaf0"/>
+<text x="14" y="24" font-size="17" font-weight="bold" fill="#2f3a2b">How many elk? 2022 estimates</text>
+<line x1="20.0" y1="200" x2="20.0" y2="206" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="20" y="222" font-size="14" fill="#6b5b4b">0</text>
+<line x1="110.0" y1="200" x2="110.0" y2="206" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="110" y="222" font-size="14" fill="#6b5b4b" text-anchor="middle">1,000</text>
+<line x1="200.0" y1="200" x2="200.0" y2="206" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="200" y="222" font-size="14" fill="#6b5b4b" text-anchor="middle">2,000</text>
+<line x1="290.0" y1="200" x2="290.0" y2="206" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="290" y="222" font-size="14" fill="#6b5b4b" text-anchor="middle">3,000</text>
+<line x1="380.0" y1="200" x2="380.0" y2="206" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="380" y="222" font-size="14" fill="#6b5b4b" text-anchor="end">4,000</text>
+<text x="20" y="66" font-size="16" font-weight="bold" fill="#2f3a2b">Region 3 Thompson</text>
+<line x1="110.0" y1="74" x2="110.0" y2="100" stroke="#e3dccb" stroke-width="1.2"/>
+<line x1="200.0" y1="74" x2="200.0" y2="100" stroke="#e3dccb" stroke-width="1.2"/>
+<line x1="290.0" y1="74" x2="290.0" y2="100" stroke="#e3dccb" stroke-width="1.2"/>
+<line x1="380.0" y1="74" x2="380.0" y2="100" stroke="#e3dccb" stroke-width="1.2"/>
+<rect x="20" y="76" width="27.0" height="22" fill="#e8590c" opacity=".85"/>
+<rect x="47.0" y="76" width="18.0" height="22" fill="#e8590c" opacity=".4"/>
+<text x="73" y="92" font-size="15" font-weight="bold" fill="#e8590c">300 to 500, rising</text>
+<text x="20" y="142" font-size="16" font-weight="bold" fill="#2f3a2b">Region 8 Okanagan</text>
+<line x1="110.0" y1="150" x2="110.0" y2="176" stroke="#e3dccb" stroke-width="1.2"/>
+<line x1="200.0" y1="150" x2="200.0" y2="176" stroke="#e3dccb" stroke-width="1.2"/>
+<line x1="290.0" y1="150" x2="290.0" y2="176" stroke="#e3dccb" stroke-width="1.2"/>
+<line x1="380.0" y1="150" x2="380.0" y2="176" stroke="#e3dccb" stroke-width="1.2"/>
+<rect x="20" y="152" width="225.0" height="22" fill="#8b5a2b" opacity=".85"/>
+<rect x="245.0" y="152" width="90.0" height="22" fill="#8b5a2b" opacity=".4"/>
+<text x="335" y="192" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">2,500 to 3,500, stable to rising</text>
+<line x1="20" y1="200" x2="380" y2="200" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="14" y="248" font-size="15" fill="#2f3a2b">Near Heffley Creek: rare. Okanagan: common.</text>
 </svg>

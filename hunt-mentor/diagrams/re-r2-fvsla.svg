@@ -1,31 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 329" role="img" aria-label="Cards: Fraser Valley Special Area. Where: All of MU 2-4. MU 2-8 inside Maple Ridge, Pitt Meadows, Mission, Coquitlam (Map B10). You need: Special Area licence, $10.00, plus $1,000,000 liability insurance. Gulf Islands Special Area: Region 1 islands only, $2.00. Bowen, Texada do not need it (95%, my reading). Format: Electronic only, on your FWID profile." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="329" fill="#fffaf0"/>
-<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Fraser Valley Special Area</text>
-<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Pages 8, 27, 29. FWID: Fish and Wildlife ID.</text>
-<rect x="6.0" y="69" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<path d="M6.0 97 V78 Q6.0 69 15.0 69 H187.0 Q196.0 69 196.0 78 V97 Z" fill="#e8590c"/>
-<text x="14.0" y="89" font-size="14" font-weight="bold" fill="#ffffff">Where</text>
-<text x="14.0" y="117" font-size="14" fill="#23261f">All of MU 2-4. MU 2-8</text>
-<text x="14.0" y="135" font-size="14" fill="#23261f">inside Maple Ridge,</text>
-<text x="14.0" y="153" font-size="14" fill="#23261f">Pitt Meadows, Mission,</text>
-<text x="14.0" y="171" font-size="14" fill="#23261f">Coquitlam (Map B10)</text>
-<rect x="204.0" y="69" width="190.0" height="112" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
-<path d="M204.0 97 V78 Q204.0 69 213.0 69 H385.0 Q394.0 69 394.0 78 V97 Z" fill="#c92a2a"/>
-<text x="212.0" y="89" font-size="14" font-weight="bold" fill="#ffffff">You need</text>
-<text x="212.0" y="117" font-size="14" fill="#23261f">Special Area licence,</text>
-<text x="212.0" y="135" font-size="14" fill="#23261f">$10.00, plus $1,000,000</text>
-<text x="212.0" y="153" font-size="14" fill="#23261f">liability insurance</text>
-<rect x="6.0" y="189" width="190.0" height="130" rx="9" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
-<path d="M6.0 235 V198 Q6.0 189 15.0 189 H187.0 Q196.0 189 196.0 198 V235 Z" fill="#8a9a6b"/>
-<text x="14.0" y="209" font-size="14" font-weight="bold" fill="#ffffff">Gulf Islands Special</text>
-<text x="14.0" y="227" font-size="14" font-weight="bold" fill="#ffffff">Area</text>
-<text x="14.0" y="255" font-size="14" fill="#23261f">Region 1 islands only,</text>
-<text x="14.0" y="273" font-size="14" fill="#23261f">$2.00. Bowen, Texada do</text>
-<text x="14.0" y="291" font-size="14" fill="#23261f">not need it (95%, my</text>
-<text x="14.0" y="309" font-size="14" fill="#23261f">reading)</text>
-<rect x="204.0" y="189" width="190.0" height="130" rx="9" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
-<path d="M204.0 235 V198 Q204.0 189 213.0 189 H385.0 Q394.0 189 394.0 198 V235 Z" fill="#2f3a2b"/>
-<text x="212.0" y="209" font-size="14" font-weight="bold" fill="#ffffff">Format</text>
-<text x="212.0" y="255" font-size="14" fill="#23261f">Electronic only, on</text>
-<text x="212.0" y="273" font-size="14" fill="#23261f">your FWID profile</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 386" font-family="sans-serif" role="img" aria-label="Fraser Valley Special Area, synopsis pages 8, 27 and 29, as icon cards. Where: all of MU 2-4, and MU 2-8 inside Maple Ridge, Pitt Meadows, Mission and Coquitlam (Map B10). You need: the Special Area licence, $10.00, plus $1,000,000 liability insurance. Format: electronic only, on your FWID (Fish and Wildlife ID) profile. Gulf Islands Special Area: Region 1 islands only, $2.00; Bowen and Texada do not need it (95%, my reading).">
+<rect width="400" height="386" fill="#fffaf0"/>
+<text x="12" y="22" font-size="14" font-weight="bold" fill="#6b5b4b">Pages 8, 27, 29. FWID: Fish and Wildlife ID.</text>
+<rect x="10" y="32" width="380" height="98" rx="8" fill="#f6f1e3" stroke="#d8cfb8" stroke-width="1.3"/>
+<circle cx="48" cy="81.0" r="27" fill="#fffaf0" stroke="#d8cfb8" stroke-width="1.2"/>
+<g transform="translate(48.0 81.0) scale(1.2)"><path d="M0 18 C-6 8 -14 2 -14 -6 a14 14 0 0 1 28 0 C14 2 6 8 0 18z" fill="#e8590c"/><circle cy="-6" r="5.5" fill="#fffaf0"/></g>
+<text x="88" y="58" font-size="16" font-weight="bold" fill="#e8590c">Where</text>
+<text x="88" y="80" font-size="15" fill="#2f3a2b">All of MU 2-4. MU 2-8 inside Maple</text>
+<text x="88" y="99" font-size="15" fill="#2f3a2b">Ridge, Pitt Meadows, Mission,</text>
+<text x="88" y="118" font-size="15" fill="#2f3a2b">Coquitlam (Map B10)</text>
+<rect x="10" y="138" width="380" height="79" rx="8" fill="#f8e9e5" stroke="#c0392b" stroke-width="1.3"/>
+<circle cx="48" cy="177.5" r="27" fill="#fffaf0" stroke="#c0392b" stroke-width="1.2"/>
+<g transform="translate(48.0 177.5) scale(1.2)"><rect x="-20" y="-13" width="40" height="26" rx="3" fill="#fffaf0" stroke="#3a3f3a" stroke-width="2"/><rect x="-15" y="-7" width="10" height="12" rx="1" fill="#8a9a6b"/><path d="M-1 -5 H15 M-1 0 H15 M-1 5 H10" stroke="#3a3f3a" stroke-width="2"/></g>
+<text x="88" y="164" font-size="16" font-weight="bold" fill="#c0392b">You need</text>
+<text x="88" y="186" font-size="15" fill="#2f3a2b">Special Area licence, $10.00, plus</text>
+<text x="88" y="205" font-size="15" fill="#2f3a2b">$1,000,000 liability insurance</text>
+<rect x="10" y="225" width="380" height="64" rx="8" fill="#f6f1e3" stroke="#d8cfb8" stroke-width="1.3"/>
+<circle cx="48" cy="257.0" r="27" fill="#fffaf0" stroke="#d8cfb8" stroke-width="1.2"/>
+<g transform="translate(48.0 257.0) scale(1.2)"><rect x="-11" y="-18" width="22" height="36" rx="4" fill="#3a3f3a"/><rect x="-8" y="-13" width="16" height="23" fill="#fffaf0"/><circle cy="14" r="1.8" fill="#fffaf0"/><path d="M-5 -8 H5 M-5 -3 H5 M-5 2 H2" stroke="#3a3f3a" stroke-width="1.6"/></g>
+<text x="88" y="253" font-size="16" font-weight="bold" fill="#2f3a2b">Format</text>
+<text x="88" y="275" font-size="15" fill="#2f3a2b">Electronic only, on your FWID profile</text>
+<rect x="10" y="297" width="380" height="79" rx="8" fill="#eef2e6" stroke="#2f6e3b" stroke-width="1.3"/>
+<circle cx="48" cy="336.5" r="27" fill="#fffaf0" stroke="#2f6e3b" stroke-width="1.2"/>
+<g transform="translate(48.0 336.5) scale(1.2)"><path d="M-22 10 Q0 4 22 10" stroke="#4a7fb0" stroke-width="2.4" fill="none"/><path d="M-14 7 Q-8 -8 4 -6 Q14 -4 16 7z" fill="#8a9a6b"/><path d="M-6 -4 L-2 -14 L2 -4z" fill="#2f6e3b"/><path d="M2 -3 L6 -12 L10 -3z" fill="#2f6e3b"/><path d="M-24 15 Q0 10 24 15" stroke="#4a7fb0" stroke-width="2" fill="none"/></g>
+<text x="88" y="323" font-size="16" font-weight="bold" fill="#5b6b3e">Gulf Islands Special Area</text>
+<text x="88" y="345" font-size="15" fill="#2f3a2b">Region 1 islands only, $2.00. Bowen,</text>
+<text x="88" y="364" font-size="15" fill="#2f3a2b">Texada do not need it (95%, my reading)</text>
 </svg>

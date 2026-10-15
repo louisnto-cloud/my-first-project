@@ -1,33 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 325" role="img" aria-label="Season bar chart: Region 3 geese: open dates. Snow and Ross&#x27;s geese: Sept 8 to Dec 23. White fronted geese: Sept 8 to Dec 23. Canada and cackling geese: 3 periods: Sept 8 to Sept 20, Oct 1 to Dec 23, Mar 1 to Mar 10. Closed Sept 21 to Sept 30." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="325" fill="#fffaf0"/>
-<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 3 geese: open dates</text>
-<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 34. MUs 3-12 to 3-20, 3-26 to 3-44.</text>
-<text x="38.6" y="83" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
-<text x="92.7" y="83" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
-<text x="146.8" y="83" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
-<text x="200.9" y="83" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
-<text x="255.9" y="83" font-size="14" fill="#23261f" text-anchor="middle">Jan</text>
-<text x="308.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Feb</text>
-<text x="360.5" y="83" font-size="14" fill="#23261f" text-anchor="middle">Mar</text>
-<line x1="12.0" y1="91" x2="12.0" y2="315" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="65.2" y1="91" x2="65.2" y2="315" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="120.2" y1="91" x2="120.2" y2="315" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="173.4" y1="91" x2="173.4" y2="315" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="228.4" y1="91" x2="228.4" y2="315" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="283.4" y1="91" x2="283.4" y2="315" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="333.0" y1="91" x2="333.0" y2="315" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="388.0" y1="91" x2="388.0" y2="315" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<text x="12" y="107" font-size="14" font-weight="bold" fill="#23261f">Snow and Ross&#x27;s geese</text>
-<rect x="24.4" y="113" width="189.8" height="22" rx="3" fill="#4a7fb0"/>
-<text x="220.2" y="129" font-size="14" font-weight="bold" fill="#23261f">Sept 8 to Dec 23</text>
-<text x="12" y="163" font-size="14" font-weight="bold" fill="#23261f">White fronted geese</text>
-<rect x="24.4" y="169" width="189.8" height="22" rx="3" fill="#4a7fb0"/>
-<text x="220.2" y="185" font-size="14" font-weight="bold" fill="#23261f">Sept 8 to Dec 23</text>
-<text x="12" y="219" font-size="14" font-weight="bold" fill="#23261f">Canada and cackling geese: 3 periods</text>
-<rect x="24.4" y="225" width="23.1" height="22" rx="3" fill="#8b5a2b"/>
-<rect x="65.2" y="225" width="149.0" height="22" rx="3" fill="#8b5a2b"/>
-<rect x="333.0" y="225" width="17.7" height="22" rx="3" fill="#8b5a2b"/>
-<text x="12" y="263" font-size="14" font-weight="bold" fill="#23261f">Sept 8 to Sept 20, Oct 1 to Dec 23, Mar 1 to</text>
-<text x="12" y="281" font-size="14" font-weight="bold" fill="#23261f">Mar 10</text>
-<text x="12" y="303" font-size="14" fill="#e8590c">Closed Sept 21 to Sept 30</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 289" font-family="sans-serif" role="img" aria-label="Season bars for Region 3 geese, synopsis page 34, in MUs 3-12 to 3-20 and 3-26 to 3-44, September to March. Snow and Ross&#x27;s geese: 8 September to 23 December. White fronted geese: 8 September to 23 December. Canada and cackling geese, 3 periods: 8 to 20 September, 1 October to 23 December, and 1 to 10 March. Closed 21 to 30 September.">
+<rect width="400" height="289" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">Region 3, page 34. MUs 3-12 to 3-20, 3-26 to 3-44.</text>
+<text x="40.3" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
+<text x="93.8" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="147.4" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="200.9" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<text x="255.3" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Jan</text>
+<text x="307" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Feb</text>
+<text x="358.8" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Mar</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">Snow and Ross&#x27;s geese</text>
+<text x="386" y="72" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">Sept 8 to Dec 23</text>
+<rect x="14.0" y="80" width="52.6" height="16" fill="#efe8d6"/>
+<rect x="66.6" y="80" width="54.4" height="16" fill="#f8f3e6"/>
+<rect x="121.0" y="80" width="52.6" height="16" fill="#efe8d6"/>
+<rect x="173.7" y="80" width="54.4" height="16" fill="#f8f3e6"/>
+<rect x="228.1" y="80" width="54.4" height="16" fill="#efe8d6"/>
+<rect x="282.5" y="80" width="49.1" height="16" fill="#f8f3e6"/>
+<rect x="331.6" y="80" width="54.4" height="16" fill="#efe8d6"/>
+<rect x="26.3" y="81" width="187.8" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="126" font-size="16" font-weight="bold" fill="#2f3a2b">White fronted geese</text>
+<text x="386" y="126" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">Sept 8 to Dec 23</text>
+<rect x="14.0" y="134" width="52.6" height="16" fill="#efe8d6"/>
+<rect x="66.6" y="134" width="54.4" height="16" fill="#f8f3e6"/>
+<rect x="121.0" y="134" width="52.6" height="16" fill="#efe8d6"/>
+<rect x="173.7" y="134" width="54.4" height="16" fill="#f8f3e6"/>
+<rect x="228.1" y="134" width="54.4" height="16" fill="#efe8d6"/>
+<rect x="282.5" y="134" width="49.1" height="16" fill="#f8f3e6"/>
+<rect x="331.6" y="134" width="54.4" height="16" fill="#efe8d6"/>
+<rect x="26.3" y="135" width="187.8" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="180" font-size="16" font-weight="bold" fill="#2f3a2b">Canada and cackling geese</text>
+<text x="386" y="180" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">3 periods</text>
+<text x="14" y="201" font-size="15" font-weight="bold" fill="#2c5d86">Sept 8 to 20, Oct 1 to Dec 23,</text>
+<text x="14" y="221" font-size="15" font-weight="bold" fill="#2c5d86">Mar 1 to 10</text>
+<rect x="14.0" y="228" width="52.6" height="16" fill="#efe8d6"/>
+<rect x="66.6" y="228" width="54.4" height="16" fill="#f8f3e6"/>
+<rect x="121.0" y="228" width="52.6" height="16" fill="#efe8d6"/>
+<rect x="173.7" y="228" width="54.4" height="16" fill="#f8f3e6"/>
+<rect x="228.1" y="228" width="54.4" height="16" fill="#efe8d6"/>
+<rect x="282.5" y="228" width="49.1" height="16" fill="#f8f3e6"/>
+<rect x="331.6" y="228" width="54.4" height="16" fill="#efe8d6"/>
+<rect x="26.3" y="229" width="22.8" height="14" rx="3" fill="#4a7fb0"/>
+<rect x="66.6" y="229" width="147.4" height="14" rx="3" fill="#4a7fb0"/>
+<rect x="331.6" y="229" width="17.5" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="275" font-size="15" font-weight="bold" fill="#c0392b">Closed Sept 21 to 30</text>
 </svg>

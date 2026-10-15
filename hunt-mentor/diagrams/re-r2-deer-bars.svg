@@ -1,41 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 572" role="img" aria-label="Season bar chart: Region 2 black tailed deer: general, youth, senior. Bucks: 2-2 to 2-4, 2-6 to 2-8, 2-13 to 2-15, 2-17 to 2-19: Sept 10 to Dec 15. Bucks: 2-9 to 2-11: Sept 10 to Nov 30. Bucks: ◆ 2-5, 2-12: Sept 10 to Nov 30. ◆ bag 1 buck. Bucks: ▲2-16: Sept 10 to Dec 15. Antlerless: ▲2-16: Nov 5 to Nov 20. Antlerless, Youth/Senior Only ***: 2-11**: Sept 10 to Sept 30. ** Map B20 Pemberton zone only. Antlerless, Youth Only *: ▲2-16: Oct 21 to Oct 31." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="572" fill="#fffaf0"/>
-<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 2 black tailed deer: general,</text>
-<text x="200" y="47" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">youth, senior</text>
-<text x="200" y="68" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 28. Mule deer (black tailed).</text>
-<text x="48.9" y="104" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
-<text x="123.8" y="104" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
-<text x="198.8" y="104" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
-<text x="273.7" y="104" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
-<text x="349.9" y="104" font-size="14" fill="#23261f" text-anchor="middle">Jan</text>
-<line x1="12.0" y1="112" x2="12.0" y2="562" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="85.7" y1="112" x2="85.7" y2="562" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="161.9" y1="112" x2="161.9" y2="562" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="235.6" y1="112" x2="235.6" y2="562" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="311.8" y1="112" x2="311.8" y2="562" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<line x1="388.0" y1="112" x2="388.0" y2="562" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
-<text x="12" y="128" font-size="14" font-weight="bold" fill="#23261f">Bucks: 2-2 to 2-4, 2-6 to 2-8, 2-13 to 2-15,</text>
-<text x="12" y="146" font-size="14" font-weight="bold" fill="#23261f">2-17 to 2-19</text>
-<rect x="34.1" y="152" width="238.4" height="22" rx="3" fill="#e8590c"/>
-<text x="153.3" y="168" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 10 to Dec 15</text>
-<text x="12" y="202" font-size="14" font-weight="bold" fill="#23261f">Bucks: 2-9 to 2-11</text>
-<rect x="34.1" y="208" width="201.5" height="22" rx="3" fill="#e8590c"/>
-<text x="241.6" y="224" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Nov 30</text>
-<text x="12" y="258" font-size="14" font-weight="bold" fill="#23261f">Bucks: ◆ 2-5, 2-12</text>
-<rect x="34.1" y="264" width="201.5" height="22" rx="3" fill="#e8590c"/>
-<text x="241.6" y="280" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Nov 30</text>
-<text x="12" y="304" font-size="14" fill="#e8590c">◆ bag 1 buck</text>
-<text x="12" y="336" font-size="14" font-weight="bold" fill="#23261f">Bucks: ▲2-16</text>
-<rect x="34.1" y="342" width="238.4" height="22" rx="3" fill="#e8590c"/>
-<text x="153.3" y="358" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 10 to Dec 15</text>
-<text x="12" y="392" font-size="14" font-weight="bold" fill="#23261f">Antlerless: ▲2-16</text>
-<rect x="171.7" y="398" width="39.3" height="22" rx="3" fill="#2f3a2b"/>
-<text x="217.1" y="414" font-size="14" font-weight="bold" fill="#23261f">Nov 5 to Nov 20</text>
-<text x="12" y="448" font-size="14" font-weight="bold" fill="#23261f">Antlerless, Youth/Senior Only ***: 2-11**</text>
-<rect x="34.1" y="454" width="51.6" height="22" rx="3" fill="#8a9a6b"/>
-<text x="91.7" y="470" font-size="14" font-weight="bold" fill="#23261f">Sept 10 to Sept 30</text>
-<text x="12" y="494" font-size="14" fill="#e8590c">** Map B20 Pemberton zone only</text>
-<text x="12" y="526" font-size="14" font-weight="bold" fill="#23261f">Antlerless, Youth Only *: ▲2-16</text>
-<rect x="134.9" y="532" width="27.0" height="22" rx="3" fill="#8a9a6b"/>
-<text x="167.9" y="548" font-size="14" font-weight="bold" fill="#23261f">Oct 21 to Oct 31</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 627" font-family="sans-serif" role="img" aria-label="Season bars for Region 2 black tailed deer, the mule deer rows on synopsis page 28: general, youth and senior seasons. Bucks in 2-2 to 2-4, 2-6 to 2-8, 2-13 to 2-15 and 2-17 to 2-19: 10 September to 15 December. Bucks in 2-9 to 2-11: 10 September to 30 November. Bucks in diamond 2-5 and 2-12: 10 September to 30 November, diamond means bag 1 buck. Bucks in triangle 2-16: 10 September to 15 December. Antlerless in triangle 2-16: 5 to 20 November. Antlerless, Youth/Senior Only, three stars, in 2-11 two stars, Map B20 Pemberton zone only: 10 to 30 September. Antlerless, Youth Only, one star, in triangle 2-16: 21 to 31 October.">
+<rect width="400" height="627" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">Page 28. Mule deer (black tailed)</text>
+<text x="50.5" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
+<text x="124.6" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="198.8" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="272.9" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<text x="348.3" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Jan</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">Bucks</text>
+<text x="386" y="72" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 10 to Dec 15</text>
+<text x="14" y="92" font-size="14" fill="#6b5b4b">2-2 to 2-4, 2-6 to 2-8, 2-13 to 2-15, 2-17 to 2-19</text>
+<rect x="14.0" y="99" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="86.9" y="99" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="99" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="235.3" y="99" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="99" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="35.9" y="100" width="235.8" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="145" font-size="16" font-weight="bold" fill="#2f3a2b">Bucks</text>
+<text x="386" y="145" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 10 to Nov 30</text>
+<text x="14" y="165" font-size="14" fill="#6b5b4b">2-9 to 2-11</text>
+<rect x="14.0" y="172" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="86.9" y="172" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="172" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="235.3" y="172" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="172" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="35.9" y="173" width="199.4" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="218" font-size="16" font-weight="bold" fill="#2f3a2b">Bucks, ◆ bag 1 buck</text>
+<text x="386" y="218" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 10 to Nov 30</text>
+<text x="14" y="238" font-size="14" fill="#6b5b4b">◆ 2-5, 2-12</text>
+<rect x="14.0" y="245" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="86.9" y="245" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="245" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="235.3" y="245" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="245" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="35.9" y="246" width="199.4" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="291" font-size="16" font-weight="bold" fill="#2f3a2b">Bucks</text>
+<text x="386" y="291" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 10 to Dec 15</text>
+<text x="14" y="311" font-size="14" fill="#6b5b4b">▲2-16</text>
+<rect x="14.0" y="318" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="86.9" y="318" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="318" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="235.3" y="318" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="318" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="35.9" y="319" width="235.8" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="364" font-size="16" font-weight="bold" fill="#2f3a2b">Antlerless</text>
+<text x="386" y="364" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Nov 5 to 20</text>
+<text x="14" y="384" font-size="14" fill="#6b5b4b">▲2-16</text>
+<rect x="14.0" y="391" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="86.9" y="391" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="391" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="235.3" y="391" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="391" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="172.0" y="392" width="38.9" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="437" font-size="16" font-weight="bold" fill="#2f3a2b">Antlerless ***</text>
+<text x="386" y="437" font-size="15" font-weight="bold" fill="#6a4c93" text-anchor="end">Sept 10 to 30</text>
+<text x="14" y="457" font-size="14" fill="#6b5b4b">2-11**: Map B20 Pemberton zone only</text>
+<rect x="14.0" y="464" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="86.9" y="464" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="464" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="235.3" y="464" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="464" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="35.9" y="465" width="51.1" height="14" rx="3" fill="#6a4c93"/>
+<text x="14" y="510" font-size="16" font-weight="bold" fill="#2f3a2b">Antlerless *</text>
+<text x="386" y="510" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">Oct 21 to 31</text>
+<text x="14" y="530" font-size="14" fill="#6b5b4b">▲2-16</text>
+<rect x="14.0" y="537" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="86.9" y="537" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="537" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="235.3" y="537" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="537" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="135.6" y="538" width="26.7" height="14" rx="3" fill="#4a7fb0"/>
+<rect x="14" y="572" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="34" y="584" font-size="14" fill="#2f3a2b">General</text>
+<rect x="100.72" y="572" width="14" height="14" rx="3" fill="#6a4c93"/>
+<text x="120.72" y="584" font-size="14" fill="#2f3a2b">*** Youth/Senior Only</text>
+<rect x="14" y="596" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="34" y="608" font-size="14" fill="#2f3a2b">* Youth Only</text>
 </svg>

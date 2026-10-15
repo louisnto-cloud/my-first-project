@@ -1,26 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Animation: a hunter walks the six stops of the made up drill area: parks by the road, walks in, climbs to the glassing point by the draw, reads sign on the bench, sits a seat below the timber, and walks back out. Final label: out, then the Journal.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The drill walk</text>
-<rect x="0" y="40" width="400" height="260" fill="#dfe6d3"/>
-<path d="M0 40 L400 40 L400 90 Q 300 110 200 95 Q 100 80 0 100 Z" fill="#3d5a3a"/>
-<text x="200" y="62" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Ridge with timber (made up)</text>
-<path d="M60 150 Q 200 130 330 155 L330 175 Q 200 155 60 172 Z" fill="#cdd8b8"/>
-<text x="110" y="166" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2f3a2b" text-anchor="middle">grass bench</text>
-<path d="M340 95 Q 330 170 360 300" stroke="#4a7fb0" stroke-width="5" fill="none"/>
-<text x="370" y="220" font-family="sans-serif" font-size="12" font-weight="bold" fill="#4a7fb0" text-anchor="middle">draw</text>
-<rect x="0" y="180" width="70" height="80" fill="#c0392b" opacity=".45"/><text x="35" y="225" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">private</text>
-<rect x="0" y="272" width="400" height="10" fill="#23261f"/>
-<circle cx="150" cy="255" r="26" fill="none" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 3"/><text x="150" y="259" font-family="sans-serif" font-size="11" font-weight="bold" fill="#e8590c" text-anchor="middle">rec site</text>
-<g><polygon points="102.3,125 110,103 117.7,125" fill="#3d5a3a"/><rect x="108" y="125" width="4" height="4.4" fill="#6b4f35"/></g>
-<g><polygon points="242.3,120 250,98 257.7,120" fill="#3d5a3a"/><rect x="248" y="120" width="4" height="4.4" fill="#6b4f35"/></g>
-<g><polygon points="282.3,128 290,106 297.7,128" fill="#3d5a3a"/><rect x="288" y="128" width="4" height="4.4" fill="#6b4f35"/></g>
-<path id="rq-dr-path" d="M230 268 L260 230 L300 200 L230 185 L180 140 L300 235" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 4"/>
-<circle cx="230" cy="268" r="9" fill="#e8590c" opacity=".7"/>
-<circle cx="260" cy="230" r="9" fill="#e8590c" opacity=".7"/>
-<circle cx="300" cy="200" r="9" fill="#e8590c" opacity=".7"/>
-<circle cx="230" cy="185" r="9" fill="#e8590c" opacity=".7"/>
-<circle cx="180" cy="140" r="9" fill="#e8590c" opacity=".7"/>
-<circle cx="300" cy="235" r="9" fill="#e8590c" opacity=".7"/>
-<g><g transform="translate(0 -8) scale(0.8)"><circle cy="-14" r="6" fill="#e8590c"/><rect x="-6" y="-8" width="12" height="16" rx="3" fill="#e8590c"/><rect x="-5" y="8" width="4" height="10" fill="#2f3a2b"/><rect x="1" y="8" width="4" height="10" fill="#2f3a2b"/></g><animateMotion dur="9s" fill="freeze" calcMode="linear"><mpath href="#rq-dr-path"/></animateMotion></g>
-<g opacity="0"><animate attributeName="opacity" values="0;1" begin="8.5s" dur="0.5s" fill="freeze"/><rect x="110" y="196" width="180" height="30" rx="8" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="2"/><text x="200" y="216" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Out, then the Journal</text></g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 384" font-family="sans-serif" role="img" aria-label="Animation on a made up drill area map: a timbered ridge, a grass bench, a draw with a creek, a private block, a road with a rec site. A hunter walks the six stops: 1 parks by the road, 2 walks in, 3 climbs to the glassing point by the draw, 4 reads sign on the bench, 5 sits a seat below the timber, and 6 walks back out. Final label: out, then the Journal.">
+<rect width="400" height="384" fill="#fffaf0"/>
+<defs><clipPath id="rq-dr-walk-map"><rect x="8" y="8" width="384" height="300" rx="8"/></clipPath><pattern id="rq-dr-walk-hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#ead9cf"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c98d7a" stroke-width="2"/></pattern></defs>
+<text x="200" y="24" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The drill walk</text>
+<g transform="translate(0 30)">
+<g clip-path="url(#rq-dr-walk-map)">
+<rect x="8" y="8" width="384" height="300" fill="#e3e8cf"/>
+<path d="M8 8 H392 V92 C340 104 300 100 250 92 C200 84 150 100 100 96 C60 93 30 100 8 104z" fill="#4f6b3f"/>
+<path d="M320 -2 L327 18 L313 18z" fill="#2f4a2a"/>
+<path d="M346 2 L353 21 L339 21z" fill="#2f4a2a"/>
+<path d="M190 2 L197 21 L183 21z" fill="#3a5a31"/>
+<path d="M355 5 L362 22 L348 22z" fill="#3a5a31"/>
+<path d="M99 -2 L106 22 L92 22z" fill="#456b3a"/>
+<path d="M74 6 L81 23 L67 23z" fill="#2f4a2a"/>
+<path d="M179 6 L186 25 L172 25z" fill="#2f4a2a"/>
+<path d="M160 10 L167 27 L153 27z" fill="#2f4a2a"/>
+<path d="M202 12 L209 29 L195 29z" fill="#2f4a2a"/>
+<path d="M121 9 L128 30 L114 30z" fill="#2f4a2a"/>
+<path d="M315 9 L322 30 L308 30z" fill="#456b3a"/>
+<path d="M391 10 L398 30 L384 30z" fill="#2f4a2a"/>
+<path d="M302 16 L309 32 L295 32z" fill="#456b3a"/>
+<path d="M32 14 L39 33 L25 33z" fill="#3a5a31"/>
+<path d="M15 20 L22 38 L8 38z" fill="#3a5a31"/>
+<path d="M70 23 L77 39 L63 39z" fill="#3a5a31"/>
+<path d="M99 22 L106 41 L92 41z" fill="#456b3a"/>
+<path d="M34 24 L41 47 L27 47z" fill="#3a5a31"/>
+<path d="M76 34 L83 52 L69 52z" fill="#456b3a"/>
+<path d="M357 38 L364 61 L350 61z" fill="#2f4a2a"/>
+<path d="M302 46 L309 64 L295 64z" fill="#3a5a31"/>
+<path d="M26 45 L33 65 L19 65z" fill="#456b3a"/>
+<path d="M24 50 L31 71 L17 71z" fill="#456b3a"/>
+<path d="M379 58 L386 78 L372 78z" fill="#2f4a2a"/>
+<path d="M360 60 L367 80 L353 80z" fill="#456b3a"/>
+<path d="M326 57 L333 80 L319 80z" fill="#2f4a2a"/>
+<path d="M347 62 L354 84 L340 84z" fill="#456b3a"/>
+<path d="M289 66 L296 84 L282 84z" fill="#3a5a31"/>
+<path d="M367 65 L374 85 L360 85z" fill="#456b3a"/>
+<path d="M90 68 L97 90 L83 90z" fill="#3a5a31"/>
+<path d="M166 73 L173 91 L159 91z" fill="#3a5a31"/>
+<path d="M352 69 L359 92 L345 92z" fill="#2f4a2a"/>
+<path d="M290 70 L297 93 L283 93z" fill="#3a5a31"/>
+<path d="M40 150 C120 132 220 134 320 150 L318 194 C220 180 120 178 44 194z" fill="#cdd9a8"/>
+<path d="M291 174 l2 -6 M295 174 l0 -7 M299 174 l-2 -6" stroke="#9fb06e" stroke-width="1.3" fill="none"/>
+<path d="M91 185 l2 -6 M95 185 l0 -7 M99 185 l-2 -6" stroke="#9fb06e" stroke-width="1.3" fill="none"/>
+<path d="M220 152 l2 -6 M224 152 l0 -7 M228 152 l-2 -6" stroke="#9fb06e" stroke-width="1.3" fill="none"/>
+<path d="M197 177 l2 -6 M201 177 l0 -7 M205 177 l-2 -6" stroke="#9fb06e" stroke-width="1.3" fill="none"/>
+<path d="M283 158 l2 -6 M287 158 l0 -7 M291 158 l-2 -6" stroke="#9fb06e" stroke-width="1.3" fill="none"/>
+<path d="M248 182 l2 -6 M252 182 l0 -7 M256 182 l-2 -6" stroke="#9fb06e" stroke-width="1.3" fill="none"/>
+<path d="M192 182 l2 -6 M196 182 l0 -7 M200 182 l-2 -6" stroke="#9fb06e" stroke-width="1.3" fill="none"/>
+<path d="M334 96 C326 150 340 220 352 308 H392 V96z" fill="#c9d3b4"/>
+<circle cx="338" cy="120" r="7" fill="#6f8a55"/>
+<circle cx="346" cy="160" r="7" fill="#6f8a55"/>
+<circle cx="352" cy="200" r="7" fill="#6f8a55"/>
+<circle cx="380" cy="130" r="7" fill="#6f8a55"/>
+<circle cx="384" cy="180" r="7" fill="#6f8a55"/>
+<path d="M352 96 C344 140 356 180 352 220 C348 250 346 280 344 308" fill="none" stroke="#4a7fb0" stroke-width="4" stroke-linecap="round"/>
+<rect x="8" y="196" width="92" height="74" fill="url(#rq-dr-walk-hatch)"/>
+<path d="M8 196 H100 V270" fill="none" stroke="#7a5a3a" stroke-width="1.6" stroke-dasharray="6 3"/>
+<rect x="8" y="276" width="384" height="20" fill="#b9b19c"/><line x1="8" y1="286" x2="392" y2="286" stroke="#f5efdc" stroke-width="1.6" stroke-dasharray="10 8"/>
+<circle cx="150" cy="248" r="22" fill="#f3e8d5" stroke="#6b5b4b" stroke-width="1.6" stroke-dasharray="4 3"/>
+<path d="M138 258 L150 236 L162 258z" fill="#c26a2c"/><path d="M150 246 L146 258 H154z" fill="#f3e8d5"/>
+<line x1="232" y1="262" x2="262" y2="226" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" opacity="0.55"/>
+<line x1="262" y1="226" x2="300" y2="204" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" opacity="0.55"/>
+<line x1="300" y1="204" x2="232" y2="170" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" opacity="0.55"/>
+<line x1="232" y1="170" x2="182" y2="126" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" opacity="0.55"/>
+<line x1="182" y1="126" x2="196" y2="240" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" opacity="0.55"/>
+</g>
+<rect x="8" y="8" width="384" height="300" rx="8" fill="none" stroke="#6b5b4b" stroke-width="1.5"/>
+<text x="200" y="52" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">timbered ridge (made up)</text>
+<text x="118" y="172" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">grass bench</text>
+<text x="54" y="239" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">private</text>
+<text x="150" y="214" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">rec site</text>
+<text x="389" y="252" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">draw</text>
+<g opacity="0.35"><set attributeName="opacity" to="1" begin="0.00s" fill="freeze"/><circle cx="232.0" cy="262.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="232" y="267" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text></g>
+<g opacity="0.35"><set attributeName="opacity" to="1" begin="1.21s" fill="freeze"/><circle cx="262.0" cy="226.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="262" y="231" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text></g>
+<g opacity="0.35"><set attributeName="opacity" to="1" begin="2.35s" fill="freeze"/><circle cx="300.0" cy="204.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="300" y="209" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text></g>
+<g opacity="0.35"><set attributeName="opacity" to="1" begin="4.31s" fill="freeze"/><circle cx="232.0" cy="170.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="232" y="175" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text></g>
+<g opacity="0.35"><set attributeName="opacity" to="1" begin="6.03s" fill="freeze"/><circle cx="182.0" cy="126.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="182" y="131" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text></g>
+<g opacity="0.35"><set attributeName="opacity" to="1" begin="9.00s" fill="freeze"/><circle cx="196.0" cy="240.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="196" y="245" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">6</text></g>
+<path id="rq-dr-walk-path" d="M232 262 L262 226 L300 204 L232 170 L182 126 L196 240" fill="none" stroke="none"/>
+<g><g transform="translate(14 -10)"><g transform="translate(0 0) scale(0.62 0.62)"><path d="M-5 -20 L-6 0 M4 -20 L6 0" stroke="#4a4136" stroke-width="5" stroke-linecap="round"/><path d="M-8 -40 C-8 -44 8 -44 8 -40 L7 -19 H-7z" fill="#e8590c"/><circle cx="0" cy="-47" r="5.5" fill="#e0b48c"/><path d="M-6 -49 C-6 -56 6 -56 6 -49z" fill="#e8590c"/><path d="M4 -36 L22 -42" stroke="#3b2a1a" stroke-width="2.6" stroke-linecap="round"/><path d="M4 -36 L10 -31" stroke="#e0b48c" stroke-width="3" stroke-linecap="round"/></g></g><animateMotion dur="9s" fill="freeze" calcMode="linear"><mpath href="#rq-dr-walk-path"/></animateMotion></g>
+</g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="0.00s" fill="freeze"/><set attributeName="opacity" to="0" begin="1.21s" fill="freeze"/><circle cx="146.0" cy="361.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="146" y="366" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text><text x="166" y="367" font-size="17" font-weight="bold" fill="#2f3a2b">park</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="1.21s" fill="freeze"/><set attributeName="opacity" to="0" begin="2.35s" fill="freeze"/><circle cx="146.0" cy="361.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="146" y="366" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text><text x="166" y="367" font-size="17" font-weight="bold" fill="#2f3a2b">walk in</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="2.35s" fill="freeze"/><set attributeName="opacity" to="0" begin="4.31s" fill="freeze"/><circle cx="146.0" cy="361.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="146" y="366" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text><text x="166" y="367" font-size="17" font-weight="bold" fill="#2f3a2b">glass</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="4.31s" fill="freeze"/><set attributeName="opacity" to="0" begin="6.03s" fill="freeze"/><circle cx="146.0" cy="361.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="146" y="366" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text><text x="166" y="367" font-size="17" font-weight="bold" fill="#2f3a2b">read sign</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="6.03s" fill="freeze"/><set attributeName="opacity" to="0" begin="9.00s" fill="freeze"/><circle cx="146.0" cy="361.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="146" y="366" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text><text x="166" y="367" font-size="17" font-weight="bold" fill="#2f3a2b">sit</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="9.00s" fill="freeze"/><set attributeName="opacity" to="0" begin="8.50s" fill="freeze"/><circle cx="146.0" cy="361.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="146" y="366" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">6</text><text x="166" y="367" font-size="17" font-weight="bold" fill="#2f3a2b">walk out</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="8.5s" dur="0.5s" fill="freeze"/><rect x="96" y="346" width="208" height="30" rx="8" fill="#2f3a2b"/><text x="200" y="367" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Out, then the Journal</text></g>
 </svg>

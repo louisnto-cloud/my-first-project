@@ -1,4 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Remove the choke with its wrench. Clean and lightly oil the threads.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Choke out, clean the threads</text><rect x="120" y="120" width="80" height="40" rx="0" fill="#b6b9b3" stroke="#2f3a2b" stroke-width="2"/><path d="M210 124 l12 0 m-12 8 l12 0 m-12 8 l12 0 m-12 8 l12 0 m-12 8 l12 0" fill="none" stroke="#2f3a2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="200" y="220" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">threads clean and oiled</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 2 of cleaning a shotgun: remove the choke tube with its wrench, then clean the threads and lightly oil them.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Choke out, clean the threads</text>
+<g transform="translate(5 -36) scale(1.3)">
+<rect x="10" y="111" width="132" height="34" fill="#3a3f3a"/>
+<rect x="10" y="119" width="132" height="18" fill="#6c716b"/>
+<line x1="104.0" y1="119" x2="106.0" y2="125" stroke="#fffaf0" stroke-width="1.4"/><line x1="104.0" y1="137" x2="106.0" y2="131" stroke="#fffaf0" stroke-width="1.4"/>
+<line x1="108.4" y1="119" x2="110.4" y2="125" stroke="#fffaf0" stroke-width="1.4"/><line x1="108.4" y1="137" x2="110.4" y2="131" stroke="#fffaf0" stroke-width="1.4"/>
+<line x1="112.8" y1="119" x2="114.8" y2="125" stroke="#fffaf0" stroke-width="1.4"/><line x1="112.8" y1="137" x2="114.8" y2="131" stroke="#fffaf0" stroke-width="1.4"/>
+<line x1="117.2" y1="119" x2="119.2" y2="125" stroke="#fffaf0" stroke-width="1.4"/><line x1="117.2" y1="137" x2="119.2" y2="131" stroke="#fffaf0" stroke-width="1.4"/>
+<line x1="121.6" y1="119" x2="123.6" y2="125" stroke="#fffaf0" stroke-width="1.4"/><line x1="121.6" y1="137" x2="123.6" y2="131" stroke="#fffaf0" stroke-width="1.4"/>
+<line x1="126.0" y1="119" x2="128.0" y2="125" stroke="#fffaf0" stroke-width="1.4"/><line x1="126.0" y1="137" x2="128.0" y2="131" stroke="#fffaf0" stroke-width="1.4"/>
+<line x1="130.4" y1="119" x2="132.4" y2="125" stroke="#fffaf0" stroke-width="1.4"/><line x1="130.4" y1="137" x2="132.4" y2="131" stroke="#fffaf0" stroke-width="1.4"/>
+<line x1="134.8" y1="119" x2="136.8" y2="125" stroke="#fffaf0" stroke-width="1.4"/><line x1="134.8" y1="137" x2="136.8" y2="131" stroke="#fffaf0" stroke-width="1.4"/>
+<line x1="139.2" y1="119" x2="141.2" y2="125" stroke="#fffaf0" stroke-width="1.4"/><line x1="139.2" y1="137" x2="141.2" y2="131" stroke="#fffaf0" stroke-width="1.4"/>
+<rect x="176" y="117" width="96" height="22" rx="2" fill="#b6b9b3" stroke="#2f3a2b" stroke-width="1.6"/>
+<line x1="180.0" y1="117" x2="182.5" y2="139" stroke="#2f3a2b" stroke-width="1.3"/>
+<line x1="184.4" y1="117" x2="186.9" y2="139" stroke="#2f3a2b" stroke-width="1.3"/>
+<line x1="188.8" y1="117" x2="191.3" y2="139" stroke="#2f3a2b" stroke-width="1.3"/>
+<line x1="193.2" y1="117" x2="195.7" y2="139" stroke="#2f3a2b" stroke-width="1.3"/>
+<line x1="197.6" y1="117" x2="200.1" y2="139" stroke="#2f3a2b" stroke-width="1.3"/>
+<line x1="202.0" y1="117" x2="204.5" y2="139" stroke="#2f3a2b" stroke-width="1.3"/>
+<line x1="206.4" y1="117" x2="208.9" y2="139" stroke="#2f3a2b" stroke-width="1.3"/>
+<line x1="210.8" y1="117" x2="213.3" y2="139" stroke="#2f3a2b" stroke-width="1.3"/>
+<line x1="215.2" y1="117" x2="217.7" y2="139" stroke="#2f3a2b" stroke-width="1.3"/>
+<line x1="219.6" y1="117" x2="222.1" y2="139" stroke="#2f3a2b" stroke-width="1.3"/>
+<rect x="256" y="114" width="16" height="28" rx="2" fill="#9ea29b" stroke="#2f3a2b" stroke-width="1.6"/>
+<line x1="258" y1="118" x2="270" y2="118" stroke="#2f3a2b" stroke-width="1.2"/>
+<line x1="258" y1="125" x2="270" y2="125" stroke="#2f3a2b" stroke-width="1.2"/>
+<line x1="258" y1="132" x2="270" y2="132" stroke="#2f3a2b" stroke-width="1.2"/>
+<line x1="258" y1="139" x2="270" y2="139" stroke="#2f3a2b" stroke-width="1.2"/>
+<path d="M146 128 h24 m-8 -7 l9 7 l-9 7" fill="none" stroke="#e8590c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M206 82 C200 92 197 97 197 102 a9 9 0 0 0 18 0 C215 97 212 92 206 82z" fill="#d9a521" stroke="#2f3a2b" stroke-width="1.3"/>
+<path d="M206 113 v3" stroke="#d9a521" stroke-width="3" stroke-linecap="round"/>
+</g>
+<g transform="translate(52 238) rotate(-12)"><rect x="0" y="-7" width="84" height="14" rx="7" fill="#3a3f3a"/><circle cx="0" cy="0" r="17" fill="#3a3f3a"/><path d="M-9 -7 h18 v-12 h-18z" fill="#fffaf0"/></g>
+<line x1="150" y1="138" x2="110" y2="176" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="150" cy="138" r="2.6" fill="#2f3a2b"/><rect x="38.2" y="176.0" width="123.6" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="100" y="196.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">barrel threads</text>
+<line x1="300" y1="146" x2="300" y2="176" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="300" cy="146" r="2.6" fill="#2f3a2b"/><rect x="249.9" y="176.0" width="100.3" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="300" y="196.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">choke tube</text>
+<line x1="284" y1="84" x2="318" y2="72" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="284" cy="84" r="2.6" fill="#2f3a2b"/><rect x="315.4" y="60.0" width="73.2" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="352" y="80.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">light oil</text>
+<rect x="150.0" y="214.0" width="71.9" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="185.933" y="234.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">wrench</text>
+<text x="200" y="282" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Threads clean and oiled</text>
 </svg>
