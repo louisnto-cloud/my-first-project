@@ -3,6 +3,7 @@
 <text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bring to inspection (CI)</text>
 <text x="200" y="47" font-size="15" fill="#8b5a2b" text-anchor="middle">Compulsory Inspection: the ram skull plate</text>
 <rect x="8" y="58" width="384" height="186" rx="8" fill="#eef1e4"/>
+<g transform="translate(-20 4)">
 <path d="M90 172 C88 164 94 156 104 152 L150 130 C162 122 172 112 184 104 C204 92 240 96 258 112 C270 124 270 146 262 162 L250 172 L200 176 C170 178 140 180 116 182 L98 184 C92 184 89 178 90 172z" fill="#f1e6cc" stroke="#6b4f35" stroke-width="1.6"/>
 <path d="M98 184 L250 172" stroke="#6b4f35" stroke-width="2" stroke-dasharray="2 3"/>
 <path d="M94 170 C110 160 132 150 160 136" stroke="#6b4f35" stroke-width="1.8" fill="none"/>
@@ -30,16 +31,17 @@
 <ellipse cx="189.8" cy="97.1" rx="20.0" ry="7" transform="rotate(-128.0 189.8 97.1)" fill="#a37a4c" stroke="#4e3620" stroke-width="1.4"/>
 <path d="M202.1 112.9 C185.8 107.1 197.8 111.1 177.5 81.4" fill="none" stroke="#6b4f35" stroke-width="1.4"/>
 <circle cx="287.8" cy="129.5" r="6" fill="#d5d8dc" stroke="#4b5560" stroke-width="1.6"/><circle cx="287.8" cy="129.5" r="2" fill="#4b5560"/>
-<line x1="126" y1="154" x2="60" y2="97" stroke="#e8590c" stroke-width="1.6"/><circle cx="126" cy="154" r="2.6" fill="#e8590c"/>
+</g>
+<line x1="106" y1="158" x2="50" y2="97" stroke="#e8590c" stroke-width="1.6"/><circle cx="106" cy="158" r="2.6" fill="#e8590c"/>
 <rect x="14.0" y="70.0" width="104.5" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
 <text x="66.261" y="89" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Nasal bones</text>
-<line x1="168" y1="162" x2="130" y2="206" stroke="#e8590c" stroke-width="1.6"/><circle cx="168" cy="162" r="2.6" fill="#e8590c"/>
-<rect x="37.5" y="206.0" width="145.0" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
-<text x="110" y="225" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Whole eye socket</text>
-<line x1="262" y1="96" x2="285.477" y2="93" stroke="#e8590c" stroke-width="1.6"/><circle cx="262" cy="96" r="2.6" fill="#e8590c"/>
-<rect x="255.5" y="66.0" width="130.5" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
-<text x="320.738" y="85" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Horns, attached</text>
-<line x1="290.818" y1="132.479" x2="277.946" y2="206" stroke="#4a7fb0" stroke-width="1.6"/><circle cx="290.818" cy="132.479" r="2.6" fill="#4a7fb0"/>
+<line x1="148" y1="166" x2="116" y2="210" stroke="#e8590c" stroke-width="1.6"/><circle cx="148" cy="166" r="2.6" fill="#e8590c"/>
+<rect x="23.5" y="210.0" width="145.0" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="96" y="229" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Whole eye socket</text>
+<line x1="258" y1="110" x2="291.477" y2="91" stroke="#e8590c" stroke-width="1.6"/><circle cx="258" cy="110" r="2.6" fill="#e8590c"/>
+<rect x="261.5" y="64.0" width="130.5" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="326.738" y="83" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Horns, attached</text>
+<line x1="270.818" y1="136.479" x2="277.946" y2="206" stroke="#4a7fb0" stroke-width="1.6"/><circle cx="270.818" cy="136.479" r="2.6" fill="#4a7fb0"/>
 <rect x="257.9" y="206.0" width="134.1" height="45.0" rx="5" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.2"/>
 <text x="324.973" y="225" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">Numbered plug</text>
 <text x="324.973" y="243" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">goes in the horn</text>
