@@ -1,24 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Sketch of southern BC, not to scale. The Chronic Wasting Disease Management Zone is an orange patch in Region 4, the Kootenay, around Cranbrook, near the Alberta and US borders. Kamloops and Mission are marked in blue, well outside the zone." font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Where is the CWD zone?</text>
-<text x="200.0" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">Southern BC sketch, not to scale</text>
-<rect x="10" y="56" width="380" height="234" fill="#dfe6d3"/>
-<path d="M248.9 56 L390 56 L390 279 L378.1 279 Z" fill="#ece6d4"/>
-<path d="M248.9 56 L378.1 279" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="6 4"/>
-<rect x="10" y="279" width="380" height="11" fill="#ece6d4"/>
-<path d="M10 279 H390" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="6 4"/>
-<path d="M10 56 L40 56 C50 120 70 200 85.4 257.1 L60 279 L10 279 Z" fill="#c9dcea"/>
-<text x="372" y="80" font-size="13" fill="#8b5a2b" text-anchor="end">Alberta</text>
-<text x="200" y="286" font-size="13" fill="#8b5a2b" text-anchor="middle">USA</text>
-<path d="M275.1 162.2 C314.3 133 350.3 176.8 366.6 235.2 L360.1 279 L294.7 279 C268.5 235.2 262.0 191.4 275.1 162.2 Z" fill="#e8590c" opacity="0.55" stroke="#e8590c" stroke-width="2"/>
-<circle cx="320.8" cy="242.5" r="5" fill="#2f3a2b"/>
-<text x="320.8" y="232.5" font-size="13" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Cranbrook</text>
-<circle cx="173.7" cy="154.9" r="6" fill="#4a7fb0"/>
-<text x="173.7" y="142.9" font-size="14" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Kamloops</text>
-<circle cx="108.3" cy="271.7" r="5" fill="#4a7fb0"/>
-<text x="108.3" y="261.7" font-size="13" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Mission</text>
-<rect x="150" y="64" width="150" height="58" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
-<text x="225.0" y="89.5" font-size="13" fill="#23261f" text-anchor="middle" font-weight="bold">Orange: CWD zone,</text>
-<text x="225.0" y="105.5" font-size="13" fill="#23261f" text-anchor="middle" font-weight="bold">Region 4 (Kootenay)</text>
-<text x="173.7" y="178.9" font-size="13" fill="#4a7fb0" text-anchor="middle" font-weight="bold">Outside the zone</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 318" font-family="sans-serif" role="img" aria-label="Sketch map of southern BC, not to scale; zone shape and town positions are approximate. See the official CWD map. The Chronic Wasting Disease (CWD) Management Zone is an orange patch in Region 4, the Kootenay, around Cranbrook, near the Alberta and US borders. Kamloops and Mission are marked in blue, well outside the zone.">
+<rect width="400" height="318" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Where is the CWD zone?</text>
+<text x="200" y="47" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Southern BC sketch, not to scale</text>
+<defs><clipPath id="sc-cwd-zone-map"><rect x="8" y="60" width="384" height="190.9" rx="8"/></clipPath></defs>
+<g clip-path="url(#sc-cwd-zone-map)">
+<rect x="8" y="60" width="384" height="190.9" fill="#e6e9d4"/>
+<path d="M257.4 60.0 306.6 101.3 332.9 134.8 360.8 173.5 383.1 225.1 392.0 225.1 392.0 60.0z" fill="#f1ead6"/>
+<rect x="8" y="225.1" width="384" height="25.8" fill="#f1ead6"/>
+<path d="M8.0 60.0 8.0 60.0 8.0 245.8 93.3 245.8 88.4 225.1 86.8 209.6 60.5 194.2 34.3 168.4 14.6 142.6 8.0 111.6z" fill="#c4dbe9"/>
+<path d="M311.6 225.1 308.3 194.2 316.5 168.4 328.0 155.5 344.4 163.2 357.5 189.0 367.4 209.6 370.6 225.1z" fill="#e8590c" fill-opacity=".55" stroke="#e8590c" stroke-width="2"/>
+</g>
+<path d="M257.4 60.0 306.6 101.3 332.9 134.8 360.8 173.5 383.1 225.1" fill="none" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="7 4"/>
+<path d="M8 225.1 H392" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="7 4"/>
+<rect x="8" y="60" width="384" height="190.9" rx="8" fill="none" stroke="#6b5b4b" stroke-width="1.5"/>
+<circle cx="177.7" cy="138.9" r="6" fill="#2c5d86" stroke="#fffaf0" stroke-width="2"/>
+<text x="177.7" y="126.9" font-size="16" font-weight="bold" fill="#2c5d86" text-anchor="middle" stroke="#e6e9d4" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Kamloops</text>
+<circle cx="112.7" cy="218.4" r="6" fill="#2c5d86" stroke="#fffaf0" stroke-width="2"/>
+<text x="121.7" y="210.4" font-size="16" font-weight="bold" fill="#2c5d86" stroke="#e6e9d4" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Mission</text>
+<circle cx="327.3" cy="198.8" r="6" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/>
+<text x="317.3" y="203.8" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end" stroke="#e6e9d4" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Cranbrook</text>
+<text x="372" y="86" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end" stroke="#f1ead6" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Alberta</text>
+<text x="200" y="243.12" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle" stroke="#f1ead6" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">USA</text>
+<text x="14" y="205.5" font-size="15" font-weight="bold" fill="#2c5d86" stroke="#c4dbe9" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Pacific</text>
+<rect x="14" y="262.9200000000002" width="26" height="16" rx="4" fill="#e8590c" fill-opacity=".55" stroke="#e8590c" stroke-width="1.6"/>
+<text x="48" y="275.92" font-size="16" font-weight="bold" fill="#b8450a">CWD zone: Region 4 (Kootenay)</text>
+<circle cx="27" cy="296.9200000000002" r="6" fill="#2c5d86" stroke="#fffaf0" stroke-width="2"/>
+<text x="48" y="301.92" font-size="16" font-weight="bold" fill="#2c5d86">Kamloops, Mission: outside the zone</text>
 </svg>
