@@ -1,4 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Three overlapping circles: food (grass, sedges, forbs), cover (timber that hides an elk) and water with wallows. Elk live where they overlap, at the edge. A BC habitat model defines security cover as vegetation that hides 90 percent of a standing elk at 61 m.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="An edge scene. Dark timber on the left is cover that hides an elk. An open meadow of grass, sedge and forbs is food. A pond with a mud wallow is water. A bull elk stands where the timber meets the meadow: the edge, where elk live with food, cover and water close together. A BC habitat model defines security cover as vegetation that hides 90 percent of a standing elk at 61 m, 80 percent.">
 <rect width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Food, cover, water: the edge</text><circle cx="130" cy="130" r="70" fill="#9bb07a" opacity="0.7"/><circle cx="270" cy="130" r="70" fill="#2f3a2b" opacity="0.55"/><circle cx="200" cy="210" r="70" fill="#4a7fb0" opacity="0.5"/><text x="110" y="110" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">Food</text><text x="110" y="130" font-size="14" fill="#23261f" text-anchor="middle">grass, sedge,</text><text x="110" y="148" font-size="14" fill="#23261f" text-anchor="middle">forbs</text><text x="290" y="110" font-size="16" fill="#fffaf0" text-anchor="middle" font-weight="bold">Cover</text><text x="290" y="130" font-size="14" fill="#fffaf0" text-anchor="middle">timber that</text><text x="290" y="148" font-size="14" fill="#fffaf0" text-anchor="middle">hides you</text><text x="200" y="238" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">Water</text><text x="200" y="256" font-size="14" fill="#23261f" text-anchor="middle">and wallows</text><text x="200" y="160" font-size="16" fill="#e8590c" text-anchor="middle" font-weight="bold">Edge</text><text x="200" y="292" font-size="14" fill="#6b4f35" text-anchor="middle">Cover hides 90% of an elk at 61 m (80%)</text>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Food, cover, water: the edge</text>
+<rect x="0" y="38" width="400" height="226" fill="#e3edf3"/>
+<path d="M0 122 C60 110 120 116 180 108 C250 100 320 112 400 104 V140 H0z" fill="#b9c7b0"/>
+<path d="M0 132 C80 126 200 130 400 124 V264 H0z" fill="#dfe6c8"/>
+<path d="M0 132 C40 126 90 128 150 134 L156 252 H0z" fill="#2f4a2b"/>
+<rect x="7.7" y="172.0" width="3" height="5" fill="#5a3d22"/><path d="M9.2 123.5 L21.3 147.1 L15.8 147.1 L31.3 173.0 L-12.9 173.0 L2.6 147.1 L-2.9 147.1z" fill="#3a5a31"/>
+<rect x="23.1" y="172.0" width="3" height="5" fill="#5a3d22"/><path d="M24.6 118.9 L37.8 144.6 L31.8 144.6 L48.6 173.0 L0.6 173.0 L17.4 144.6 L11.4 144.6z" fill="#3a5a31"/>
+<rect x="41.4" y="172.0" width="3" height="5" fill="#5a3d22"/><path d="M42.9 120.5 L55.7 145.5 L49.9 145.5 L66.2 173.0 L19.6 173.0 L35.9 145.5 L30.1 145.5z" fill="#3a5a31"/>
+<rect x="58.6" y="172.0" width="3" height="5" fill="#5a3d22"/><path d="M60.1 127.2 L71.3 149.2 L66.2 149.2 L80.6 173.0 L39.6 173.0 L53.9 149.2 L48.8 149.2z" fill="#3a5a31"/>
+<rect x="74.0" y="172.0" width="3" height="5" fill="#5a3d22"/><path d="M75.5 127.5 L86.7 149.3 L81.6 149.3 L95.8 173.0 L55.1 173.0 L69.4 149.3 L64.3 149.3z" fill="#3a5a31"/>
+<rect x="87.2" y="172.0" width="3" height="5" fill="#5a3d22"/><path d="M88.7 127.0 L100.0 149.1 L94.9 149.1 L109.3 173.0 L68.2 173.0 L82.6 149.1 L77.4 149.1z" fill="#3a5a31"/>
+<rect x="109.1" y="172.0" width="3" height="5" fill="#5a3d22"/><path d="M110.6 122.1 L123.1 146.3 L117.4 146.3 L133.3 173.0 L88.0 173.0 L103.8 146.3 L98.2 146.3z" fill="#3a5a31"/>
+<rect x="120.3" y="172.0" width="3" height="5" fill="#5a3d22"/><path d="M121.8 126.3 L133.3 148.6 L128.1 148.6 L142.7 173.0 L100.9 173.0 L115.5 148.6 L110.3 148.6z" fill="#3a5a31"/>
+<rect x="142.1" y="172.0" width="3" height="5" fill="#5a3d22"/><path d="M143.6 119.2 L156.7 144.8 L150.7 144.8 L167.4 173.0 L119.7 173.0 L136.4 144.8 L130.5 144.8z" fill="#3a5a31"/>
+<rect x="7.7" y="214.0" width="3" height="5" fill="#5a3d22"/><path d="M9.2 149.6 L25.0 180.4 L17.8 180.4 L37.9 215.0 L-19.5 215.0 L0.6 180.4 L-6.6 180.4z" fill="#34512c"/>
+<rect x="22.9" y="214.0" width="3" height="5" fill="#5a3d22"/><path d="M24.4 142.4 L41.8 176.4 L33.9 176.4 L56.1 215.0 L-7.4 215.0 L14.9 176.4 L6.9 176.4z" fill="#34512c"/>
+<rect x="42.8" y="214.0" width="3" height="5" fill="#5a3d22"/><path d="M44.3 144.5 L61.3 177.6 L53.6 177.6 L75.2 215.0 L13.5 215.0 L35.1 177.6 L27.3 177.6z" fill="#34512c"/>
+<rect x="59.4" y="214.0" width="3" height="5" fill="#5a3d22"/><path d="M60.9 157.4 L74.9 184.7 L68.6 184.7 L86.4 215.0 L35.5 215.0 L53.3 184.7 L46.9 184.7z" fill="#34512c"/>
+<rect x="83.0" y="214.0" width="3" height="5" fill="#5a3d22"/><path d="M84.5 154.4 L99.2 183.0 L92.5 183.0 L111.2 215.0 L57.8 215.0 L76.5 183.0 L69.8 183.0z" fill="#34512c"/>
+<rect x="99.2" y="214.0" width="3" height="5" fill="#5a3d22"/><path d="M100.7 156.7 L114.8 184.3 L108.4 184.3 L126.4 215.0 L74.9 215.0 L92.9 184.3 L86.5 184.3z" fill="#34512c"/>
+<rect x="115.5" y="214.0" width="3" height="5" fill="#5a3d22"/><path d="M117.0 148.5 L133.0 179.8 L125.7 179.8 L146.2 215.0 L87.8 215.0 L108.2 179.8 L100.9 179.8z" fill="#34512c"/>
+<rect x="131.0" y="214.0" width="3" height="5" fill="#5a3d22"/><path d="M132.5 150.1 L148.2 180.7 L141.1 180.7 L161.0 215.0 L104.0 215.0 L124.0 180.7 L116.8 180.7z" fill="#34512c"/>
+<rect x="10.1" y="252.0" width="3" height="5" fill="#5a3d22"/><path d="M11.6 188.8 L27.2 219.0 L20.1 219.0 L39.9 253.0 L-16.6 253.0 L3.2 219.0 L-3.9 219.0z" fill="#2c4626"/>
+<rect x="33.9" y="252.0" width="3" height="5" fill="#5a3d22"/><path d="M35.4 176.4 L53.8 212.2 L45.5 212.2 L68.9 253.0 L2.0 253.0 L25.4 212.2 L17.0 212.2z" fill="#2c4626"/>
+<rect x="57.2" y="252.0" width="3" height="5" fill="#5a3d22"/><path d="M58.7 183.7 L75.4 216.2 L67.8 216.2 L89.0 253.0 L28.3 253.0 L49.6 216.2 L42.0 216.2z" fill="#2c4626"/>
+<rect x="76.9" y="252.0" width="3" height="5" fill="#5a3d22"/><path d="M78.4 180.9 L95.7 214.7 L87.9 214.7 L109.9 253.0 L46.9 253.0 L68.9 214.7 L61.1 214.7z" fill="#2c4626"/>
+<rect x="102.1" y="252.0" width="3" height="5" fill="#5a3d22"/><path d="M103.6 174.1 L122.5 211.0 L113.9 211.0 L138.0 253.0 L69.2 253.0 L93.3 211.0 L84.7 211.0z" fill="#2c4626"/>
+<rect x="123.1" y="252.0" width="3" height="5" fill="#5a3d22"/><path d="M124.6 185.1 L141.0 217.0 L133.5 217.0 L154.4 253.0 L94.8 253.0 L115.7 217.0 L108.2 217.0z" fill="#2c4626"/>
+<rect x="147.5" y="252.0" width="3" height="5" fill="#5a3d22"/><path d="M149.0 179.5 L166.7 213.9 L158.6 213.9 L181.1 253.0 L116.9 253.0 L139.4 213.9 L131.3 213.9z" fill="#2c4626"/>
+<path d="M216 206 l2 -6 M220 206 l0 -7 M224 206 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M247 214 l2 -6 M251 214 l0 -7 M255 214 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M163 242 l2 -6 M167 242 l0 -7 M171 242 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M221 169 l2 -6 M225 169 l0 -7 M229 169 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M395 197 l2 -6 M399 197 l0 -7 M403 197 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M357 198 l2 -6 M361 198 l0 -7 M365 198 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M283 230 l2 -6 M287 230 l0 -7 M291 230 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M339 212 l2 -6 M343 212 l0 -7 M347 212 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M231 144 l2 -6 M235 144 l0 -7 M239 144 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M364 198 l2 -6 M368 198 l0 -7 M372 198 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M253 238 l2 -6 M257 238 l0 -7 M261 238 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M265 254 l2 -6 M269 254 l0 -7 M273 254 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M192 166 l2 -6 M196 166 l0 -7 M200 166 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M388 193 l2 -6 M392 193 l0 -7 M396 193 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M280 187 l2 -6 M284 187 l0 -7 M288 187 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M243 211 l2 -6 M247 211 l0 -7 M251 211 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M374 209 l2 -6 M378 209 l0 -7 M382 209 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M356 210 l2 -6 M360 210 l0 -7 M364 210 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M227 148 l2 -6 M231 148 l0 -7 M235 148 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M181 238 l2 -6 M185 238 l0 -7 M189 238 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M257 158 l2 -6 M261 158 l0 -7 M265 158 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M229 234 l2 -6 M233 234 l0 -7 M237 234 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M279 262 l2 -6 M283 262 l0 -7 M287 262 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M233 149 l2 -6 M237 149 l0 -7 M241 149 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M207 190 l2 -6 M211 190 l0 -7 M215 190 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/>
+<circle cx="264" cy="231" r="2.2" fill="#e0b52d"/>
+<circle cx="381" cy="193" r="2.2" fill="#f4efe4"/>
+<circle cx="188" cy="209" r="2.2" fill="#b46ab0"/>
+<circle cx="247" cy="185" r="2.2" fill="#b46ab0"/>
+<circle cx="301" cy="197" r="2.2" fill="#e0b52d"/>
+<circle cx="383" cy="199" r="2.2" fill="#f4efe4"/>
+<circle cx="185" cy="228" r="2.2" fill="#b46ab0"/>
+<circle cx="257" cy="221" r="2.2" fill="#e0b52d"/>
+<circle cx="308" cy="201" r="2.2" fill="#e0b52d"/>
+<circle cx="226" cy="190" r="2.2" fill="#b46ab0"/>
+<circle cx="188" cy="196" r="2.2" fill="#f4efe4"/>
+<circle cx="233" cy="161" r="2.2" fill="#b46ab0"/>
+<circle cx="264" cy="186" r="2.2" fill="#b46ab0"/>
+<circle cx="210" cy="172" r="2.2" fill="#e0b52d"/>
+<circle cx="173" cy="239" r="2.2" fill="#e0b52d"/>
+<circle cx="229" cy="146" r="2.2" fill="#b46ab0"/>
+<circle cx="242" cy="160" r="2.2" fill="#f4efe4"/>
+<ellipse cx="342" cy="240" rx="62" ry="16" fill="#8a6a48"/><ellipse cx="350" cy="239" rx="50" ry="12" fill="#8fb6d4"/><path d="M318 236 q8 -3 16 0 M350 242 q8 -3 16 0" stroke="#d8e8f2" stroke-width="1.6" fill="none"/>
+<g transform="translate(304 127) scale(-0.42 0.42)">
+  <path d="M200 216 L212 218 L214 260 L216 298 L206 300 L204 262 L198 236z" fill="#4a3324"/>
+  <path d="M290 212 L314 216 L318 248 L322 296 L312 298 L306 252 L294 230z" fill="#4a3324"/>
+  
+  <path d="M62 128 C62 122 70 116 80 112 L98 102 C104 98 112 98 116 104 C128 118 148 138 172 147 C210 143 270 145 316 149 C330 151 338 157 342 166 C344 188 340 208 330 222 L326 246 L330 296 L320 298 L316 250 C312 236 306 226 300 220 C270 228 222 230 196 222 L194 246 L196 296 L186 298 L184 250 C182 238 178 230 170 226 C158 222 150 212 148 198 C140 174 118 150 100 138 C92 136 80 134 70 134 L62 130z" fill="#b98d5c" stroke="#5a3e26" stroke-width="1.6" stroke-linejoin="round"/>
+  
+  <path d="M200 220 C230 226 270 224 298 216 C290 208 250 214 200 212z" fill="#c9a37a"/>
+  <path d="M104 140 C116 150 128 160 136 172 C126 168 114 158 104 148z" fill="#f3ead8"/>
+  <path d="M336 160 C344 172 344 196 336 208 C332 196 332 176 336 160z" fill="#f3ead8"/>
+  <path d="M340 158 C350 162 352 176 346 186 C342 178 340 168 340 158z" fill="#f3ead8" stroke="#5a3e26" stroke-width="1"/>
+  <path d="M62 128 C62 122 70 116 80 112 L98 102 C104 98 112 98 116 104 C128 118 148 138 160 146 C150 160 146 172 144 184 C138 168 118 150 100 138 C92 136 80 134 70 134 L62 130z" fill="#5a3f2a" stroke="#3a2818" stroke-width="1.6" stroke-linejoin="round"/><path d="M184 250 L186 298 L196 296 L194 246z M316 250 L320 298 L330 296 L326 246z" fill="#4a3324"/><path d="M316 150 C334 150 344 170 342 196 C336 214 324 214 318 200 C312 184 310 162 316 150z" fill="#ead6a6"/><path d="M110 102 C116 86 126 76 134 72 C134 86 126 100 116 106z" fill="#5a3f2a" stroke="#3a2818" stroke-width="1.4"/><circle cx="90" cy="114" r="2.6" fill="#120b06"/><ellipse cx="64" cy="126" rx="3.4" ry="2.6" fill="#120b06"/><path d="M106 100 C112 70 132 44 168 28 M110 86 C96 80 84 74 76 64 M114 76 C102 66 96 56 94 46 M126 58 C120 44 120 34 124 22 M146 40 C146 28 150 18 156 10" fill="none" stroke="#6b4f35" stroke-width="6" stroke-linecap="round"/><path d="M106 100 C112 70 132 44 168 28 M110 86 C96 80 84 74 76 64 M114 76 C102 66 96 56 94 46 M126 58 C120 44 120 34 124 22 M146 40 C146 28 150 18 156 10" fill="none" stroke="#ecdfc3" stroke-width="3.2" stroke-linecap="round"/>
+</g>
+<path d="M152 132 C150 160 156 200 152 254" stroke="#e8590c" stroke-width="2.4" stroke-dasharray="6 5" fill="none"/>
+<line x1="153" y1="138" x2="186" y2="80" stroke="#e8590c" stroke-width="1.4"/><circle cx="153" cy="138" r="2.6" fill="#e8590c"/>
+<rect x="170.0" y="50.0" width="52.9" height="30.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="196.458" y="71.5" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Edge</text>
+<rect x="8.0" y="46.0" width="164.6" height="50.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="90.3115" y="67.5" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cover</text>
+<text x="90.3115" y="86.5" font-size="15" fill="#2f3a2b" text-anchor="middle">timber hides the elk</text>
+<line x1="242" y1="160" x2="300" y2="96" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="242" cy="160" r="2.6" fill="#2f3a2b"/>
+<rect x="234.1" y="46.0" width="157.9" height="50.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="313.059" y="67.5" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Food</text>
+<text x="313.059" y="86.5" font-size="15" fill="#2f3a2b" text-anchor="middle">grass, sedge, forbs</text>
+<line x1="356" y1="234" x2="360" y2="180" stroke="#4a7fb0" stroke-width="1.4"/><circle cx="356" cy="234" r="2.6" fill="#4a7fb0"/>
+<rect x="281.6" y="132.0" width="110.4" height="50.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="336.813" y="153.5" font-size="17" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Water</text>
+<text x="336.813" y="172.5" font-size="15" fill="#2f3a2b" text-anchor="middle">and wallows</text>
+<rect x="0" y="264" width="400" height="36" fill="#fffaf0"/>
+<text x="200" y="288" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cover hides 90% of an elk at 61 m (80%)</text>
 </svg>

@@ -1,10 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Map step 3. Turn on the Slope direction terrain tool. North faces are cool and hold conifers. South and east faces are warm, where aspen and berry shrubs often grow. Then check Sun and shade." font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Step 3: slope direction (aspect)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Map step 3. Turn on the Slope direction terrain tool on a hill drawn with contour lines. North faces are cool and hold conifers. South and east faces are warm, where aspen and berry shrubs often grow. Then check Sun and shade.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Step 3: slope direction (aspect)</text>
 <rect x="10" y="40" width="380" height="210" rx="10" fill="#eef1e6" stroke="#8a9a6b" stroke-width="2"/>
-<ellipse cx="200" cy="145" rx="150" ry="85" fill="#cfd8c0"/><ellipse cx="200" cy="145" rx="90" ry="50" fill="#b8c4a4"/><ellipse cx="200" cy="145" rx="35" ry="20" fill="#a3b08c"/>
-<path d="M200 145 L200 60 A150 85 0 0 0 52 135 Z" fill="#4a7fb0" opacity=".25"/><path d="M200 145 L348 150 A150 85 0 0 1 200 230 Z" fill="#e8590c" opacity=".3"/>
-<text x="130" y="95" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">North: cool, conifer</text>
-<text x="280" y="205" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">South, east: warm</text>
-<text x="200" y="280" font-size="14" fill="#23261f" text-anchor="middle">Terrain: Slope direction, then Sun and shade</text>
+<defs><clipPath id="mgr-map-3-clip"><ellipse cx="200" cy="150" rx="130" ry="72"/></clipPath></defs>
+<g clip-path="url(#mgr-map-3-clip)">
+<rect x="40" y="60" width="320" height="180" fill="#d9e3d0"/>
+<path d="M200 150 L40 130 L40 50 H360 V130z" fill="#9fb8a8"/>
+<path d="M200 150 L360 130 V250 H170z" fill="#e2b98a"/>
+</g>
+<ellipse cx="200" cy="150" rx="130" ry="72" fill="none" stroke="#8b5a2b" stroke-width="1.8"/>
+<ellipse cx="200" cy="150" rx="94" ry="52" fill="none" stroke="#8b5a2b" stroke-width="1.8"/>
+<ellipse cx="200" cy="150" rx="60" ry="33" fill="none" stroke="#8b5a2b" stroke-width="2.6"/>
+<ellipse cx="200" cy="150" rx="29" ry="16" fill="none" stroke="#8b5a2b" stroke-width="1.8"/>
+<path d="M126 95 L120 107 H132z" fill="#2f5a33"/><path d="M150 83 L144 95 H156z" fill="#2f5a33"/><path d="M178 79 L172 91 H184z" fill="#2f5a33"/><path d="M224 79 L218 91 H230z" fill="#2f5a33"/><path d="M250 85 L244 97 H256z" fill="#2f5a33"/><path d="M104 115 L98 127 H110z" fill="#2f5a33"/><path d="M276 99 L270 111 H282z" fill="#2f5a33"/><path d="M164 103 L158 115 H170z" fill="#2f5a33"/>
+<circle cx="246" cy="170" r="4.5" fill="#d9a441" stroke="#9a7426" stroke-width="1"/><circle cx="270" cy="184" r="4.5" fill="#d9a441" stroke="#9a7426" stroke-width="1"/><circle cx="228" cy="196" r="4.5" fill="#d9a441" stroke="#9a7426" stroke-width="1"/><circle cx="294" cy="158" r="4.5" fill="#d9a441" stroke="#9a7426" stroke-width="1"/><circle cx="312" cy="142" r="4.5" fill="#d9a441" stroke="#9a7426" stroke-width="1"/><circle cx="256" cy="204" r="4.5" fill="#d9a441" stroke="#9a7426" stroke-width="1"/><circle cx="288" cy="192" r="4.5" fill="#d9a441" stroke="#9a7426" stroke-width="1"/>
+<line x1="150" y1="96" x2="120" y2="75" stroke="#2c5d86" stroke-width="1.4"/><circle cx="150" cy="96" r="2.6" fill="#2c5d86"/>
+<rect x="18.0" y="46.0" width="165.0" height="29.0" rx="5" fill="#fffaf0" stroke="#2c5d86" stroke-width="1.2"/>
+<text x="100.499" y="66.5" font-size="16" font-weight="bold" fill="#2c5d86" text-anchor="middle">North: cool, conifer</text>
+<line x1="286" y1="180" x2="330" y2="222" stroke="#c2410c" stroke-width="1.4"/><circle cx="286" cy="180" r="2.6" fill="#c2410c"/>
+<rect x="223.8" y="222.0" width="160.2" height="29.0" rx="5" fill="#fffaf0" stroke="#c2410c" stroke-width="1.2"/>
+<text x="303.898" y="242.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">South, east: warm</text>
+<text x="200" y="282" font-size="15" fill="#2f3a2b" text-anchor="middle">Terrain: Slope direction, then Sun and shade</text>
 </svg>

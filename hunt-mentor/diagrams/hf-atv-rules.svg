@@ -1,17 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="ATV rules. Left: on the ATV the rifle has an empty chamber and no loaded magazine attached. Loaded means a round in the chamber or in an attached magazine. No shooting from the machine. Right: on a 2 lane public road, no hunting or shooting within 15 metres each side of the centre, and never across the road.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <rect x="8" y="8" width="188" height="284" rx="10" fill="#dfe6d3"/><rect x="204" y="8" width="188" height="284" rx="10" fill="#efe6cf"/>
-  <text x="102" y="34" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">On the ATV</text>
-  <rect x="40" y="110" width="110" height="34" rx="8" fill="#2f6e3b"/><circle cx="56" cy="152" r="16" fill="#2f3a2b"/><circle cx="134" cy="152" r="16" fill="#2f3a2b"/>
-  <path d="M30 96 L170 96" stroke="#6b4f35" stroke-width="7"/>
-  <g font-size="14" fill="#2f3a2b"><text x="22" y="200" font-weight="bold">Chamber: empty</text><text x="22" y="220" font-weight="bold">Magazine: off</text><text x="22" y="240">or empty</text></g>
-  <text x="102" y="276" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Never shoot from it</text>
-  <text x="298" y="34" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Public road</text>
-  <rect x="260" y="50" width="76" height="190" fill="#9a9a9a"/>
-  <line x1="298" y1="50" x2="298" y2="240" stroke="#ffd34d" stroke-width="3" stroke-dasharray="10 8"/>
-  <rect x="240" y="50" width="116" height="190" fill="#c0392b" opacity=".18"/>
-  <path d="M298 140 L354 140" stroke="#c0392b" stroke-width="2.5"/><polygon points="350,134 350,146 360,140" fill="#c0392b"/>
-  <text x="330" y="132" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">15 m</text>
-  <text x="298" y="264" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">No shots in or across</text>
-  <text x="298" y="282" font-size="14" fill="#2f3a2b" text-anchor="middle">FSRs: VERIFY</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 306" font-family="sans-serif" role="img" aria-label="ATV rules. Left: on the ATV the rifle on the rack has an empty chamber and the magazine off or empty. Loaded means a round in the chamber or in an attached magazine. Never shoot from the machine. Right: a 2 lane public road drawn to scale from above: no hunting or shooting within 15 metres each side of the centre, and never across the road. Whether Forest Service Roads count: VERIFY.">
+<rect width="400" height="306" fill="#fffaf0"/>
+<rect x="8" y="8" width="186" height="290" rx="10" fill="#e3eedc"/><rect x="202" y="8" width="190" height="290" rx="10" fill="#f3e6d6"/>
+<text x="101" y="34" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">On the ATV</text><text x="297" y="34" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Public road</text>
+<g transform="translate(101 138)"><path d="M-62 -26 H58" stroke="#5a3a22" stroke-width="4" stroke-linecap="round"/><path d="M-50 -26 V-18 M46 -26 V-18" stroke="#5a3a22" stroke-width="3"/><path d="M-60 -6 L-50 -18 H-16 L-8 -28 H12 L20 -18 H52 L60 -6 L56 2 H-58z" fill="#2f6e3b" stroke="#1f4a28" stroke-width="1.4"/><path d="M-14 -28 L-10 -34 H8 L12 -28z" fill="#2b2b2b"/><path d="M16 -28 L24 -42 M18 -42 H32" stroke="#2b2b2b" stroke-width="3.4" stroke-linecap="round"/><circle cx="-40" cy="6" r="17" fill="#2b2b2b"/><circle cx="-40" cy="6" r="7" fill="#9a9a9a"/><circle cx="40" cy="6" r="17" fill="#2b2b2b"/><circle cx="40" cy="6" r="7" fill="#9a9a9a"/><g transform="translate(-6 -34)"><g transform="translate(0 0) rotate(0) scale(1.9)"><path d="M-26 -1 L-8 -3 L-6 -1 L26 -1 V1.5 L-4 1.5 L-10 6 L-24 6 L-26 3z" fill="#3b2a1a"/><rect x="-2" y="-5" width="12" height="3" rx="1" fill="#2b2b2b"/></g></g></g>
+<text x="18" y="180" font-size="16" font-weight="bold" fill="#2f3a2b">Chamber:</text><text x="98.3008" y="180" font-size="16" font-weight="bold" fill="#2f6e3b">empty</text>
+<text x="18" y="202" font-size="16" font-weight="bold" fill="#2f3a2b">Magazine:</text><text x="103.779" y="202" font-size="16" font-weight="bold" fill="#2f6e3b">off</text>
+<text x="18" y="224" font-size="16" font-weight="bold" fill="#2f6e3b">or empty</text>
+<rect x="16" y="238" width="170" height="34" rx="6" fill="#c92a2a"/><text x="101" y="261" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Never shoot from it</text>
+<rect x="237.0" y="48" width="120.0" height="168" fill="#c92a2a" opacity=".16"/>
+<path d="M237.0 48 V216 M357.0 48 V216" stroke="#c92a2a" stroke-width="1.6" stroke-dasharray="5 4"/>
+<rect x="282.6" y="48" width="28.8" height="168" fill="#8f8d86"/><path d="M297 50 V216" stroke="#f2c94c" stroke-width="2" stroke-dasharray="8 6"/>
+<path d="M282.6 48 V216 M311.4 48 V216" stroke="#f4f1e6" stroke-width="1.4"/>
+<g transform="translate(304 92) rotate(90)"><rect x="-17" y="-8" width="34" height="16" rx="4" fill="#3d5a80"/><rect x="-6" y="-7" width="11" height="14" rx="2" fill="#c9d6e0"/><rect x="7" y="-7" width="5" height="14" rx="1" fill="#2a3b52"/></g>
+<line x1="297.0" y1="196.0" x2="243.4" y2="196.0" stroke="#c92a2a" stroke-width="2"/><path d="M237.0 196.0 L245.0 200.4 L245.0 191.6z" fill="#c92a2a"/>
+<line x1="297.0" y1="196.0" x2="350.6" y2="196.0" stroke="#c92a2a" stroke-width="2"/><path d="M357.0 196.0 L349.0 191.6 L349.0 200.4z" fill="#c92a2a"/>
+<text x="267" y="190" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="middle" stroke="#f3e6d6" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">15 m</text><text x="327" y="190" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="middle" stroke="#f3e6d6" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">15 m</text>
+<text x="297" y="240" font-size="16" font-weight="bold" fill="#c92a2a" text-anchor="middle">No shots in or across</text>
+<text x="297" y="262" font-size="14" fill="#6b5b4b" text-anchor="middle">2 lane road, from the centre</text>
+<text x="297" y="284" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">FSRs: VERIFY</text>
 </svg>

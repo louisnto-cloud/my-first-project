@@ -1,4 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Contour lines bend into Vs around a creek that flows down the page. One thick line carries the number 900 with its top facing uphill. Three clues show uphill: number tops face uphill, water runs in the bottom of the Vs, and the Vs point upstream.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<path d="M30 80 L150 80 L180 40 L210 80 L250 80" fill="none" stroke="#8b5a2b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M30 130 L150 130 L180 90 L210 130 L250 130" fill="none" stroke="#8b5a2b" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><path d="M30 180 L150 180 L180 140 L210 180 L250 180" fill="none" stroke="#8b5a2b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M30 230 L150 230 L180 190 L210 230 L250 230" fill="none" stroke="#8b5a2b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M180 30 L180 270" fill="none" stroke="#4a7fb0" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><line x1="180" y1="240" x2="180.0" y2="277.3" stroke="#4a7fb0" stroke-width="3" stroke-linecap="round"/><polygon points="180.0,285.0 186.1,274.0 173.9,274.0" fill="#4a7fb0"/><rect x="70" y="118" width="50" height="24" rx="0" fill="#fffaf0" stroke="none" stroke-width="2"/><text x="95" y="136" font-family="sans-serif" font-size="16" fill="#8b5a2b" text-anchor="middle" font-weight="bold">900</text><text x="20" y="30" font-family="sans-serif" font-size="17" fill="#2f3a2b" text-anchor="start" font-weight="bold">Three uphill clues</text><rect x="258" y="95" width="138" height="120" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/><text x="266" y="120" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">1 Number tops</text><text x="282" y="137" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">face uphill</text><text x="266" y="160" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">2 Water in the</text><text x="282" y="177" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">V bottom</text><text x="266" y="200" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">3 Vs point up</text><text x="330" y="250" font-family="sans-serif" font-size="15" fill="#e8590c" text-anchor="middle" font-weight="bold">Uphill: top</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 286" font-family="sans-serif" role="img" aria-label="Contour lines bend into Vs around a creek that flows down the page. One thick index line carries the number 900 with its top facing uphill. Three uphill clues: number tops face uphill, water runs in the bottom of the Vs, and the Vs point upstream. Here uphill is the top of the page.">
+<rect width="400" height="286" fill="#fffaf0"/>
+<text x="14" y="26" font-size="18" font-weight="bold" fill="#2f3a2b">Three uphill clues</text>
+<rect x="10" y="40" width="244" height="236" rx="6" fill="#f4efe1"/>
+<path d="M20 86 C60 90 96 88 116 74 L132 54 L148 74 C168 88 206 90 246 86" fill="none" stroke="#8b5a2b" stroke-width="2" stroke-linejoin="round"/>
+<path d="M20 128 L30 128.6 M90 130.4 C104 130 110 126 116 116 L132 96 L148 116 C168 130 206 132 246 128" fill="none" stroke="#8b5a2b" stroke-width="4" stroke-linejoin="round"/>
+<text x="60" y="135" font-size="18" font-weight="bold" fill="#8b5a2b" text-anchor="middle">900</text>
+<path d="M20 170 C60 174 96 172 116 158 L132 138 L148 158 C168 172 206 174 246 170" fill="none" stroke="#8b5a2b" stroke-width="2" stroke-linejoin="round"/>
+<path d="M20 212 C60 216 96 214 116 200 L132 180 L148 200 C168 214 206 216 246 212" fill="none" stroke="#8b5a2b" stroke-width="2" stroke-linejoin="round"/>
+<path d="M20 254 C60 258 96 256 116 242 L132 222 L148 242 C168 256 206 258 246 254" fill="none" stroke="#8b5a2b" stroke-width="2" stroke-linejoin="round"/>
+<path d="M132 52 C128 100 136 160 132 262" stroke="#4a7fb0" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<path d="M132.0 272.0 L138.1 261.0 L126.0 261.0z" fill="#4a7fb0"/>
+<text x="146" y="268" font-size="15" font-weight="bold" fill="#2f5f8a" stroke="#f4efe1" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">creek</text>
+<path d="M230 120 V64" stroke="#e8590c" stroke-width="4" stroke-linecap="round"/><path d="M230.0 54.0 L223.4 66.0 L236.6 66.0z" fill="#e8590c"/>
+<rect x="262" y="44" width="130" height="58" rx="8" fill="#f1ead9"/>
+<circle cx="278.0" cy="62.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="278" y="67" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<text x="294" y="67" font-size="15" font-weight="bold" fill="#2f3a2b">Number tops</text>
+<text x="294" y="86" font-size="15" font-weight="bold" fill="#2f3a2b">face uphill</text>
+<rect x="262" y="110" width="130" height="58" rx="8" fill="#f1ead9"/>
+<circle cx="278.0" cy="128.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="278" y="133" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="294" y="133" font-size="15" font-weight="bold" fill="#2f3a2b">Water in the</text>
+<text x="294" y="152" font-size="15" font-weight="bold" fill="#2f3a2b">V bottom</text>
+<rect x="262" y="176" width="130" height="58" rx="8" fill="#f1ead9"/>
+<circle cx="278.0" cy="194.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="278" y="199" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="294" y="199" font-size="15" font-weight="bold" fill="#2f3a2b">Vs point</text>
+<text x="294" y="218" font-size="15" font-weight="bold" fill="#2f3a2b">upstream</text>
+<text x="327" y="260" font-size="17" font-weight="bold" fill="#e8590c" text-anchor="middle">Uphill: top</text>
 </svg>

@@ -1,4 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 401" font-family="sans-serif" role="img" aria-label="Timeline. 1982: section 35 of the Constitution Act recognizes and affirms existing Aboriginal and treaty rights, 99 percent. 1990: in Sparrow, the Supreme Court of Canada agreed the Musqueam held an Aboriginal right to fish for food, social and ceremonial purposes, 80 percent. The test: government may limit a right only with a valid objective such as conservation, as little infringement as possible, consultation, and the Crown&#x27;s fiduciary duty, 80 percent.">
-<rect x="0" y="0" width="400" height="401" fill="#fffaf0"/>
-<text x="200.0" y="26" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Section 35 and the Sparrow case</text><line x1="40" y1="60" x2="40" y2="300" stroke="#8a9a6b" stroke-width="4"/><circle cx="40" cy="70" r="9" fill="#e8590c"/><text x="60" y="76" font-size="17" font-weight="bold" fill="#e8590c" text-anchor="start">1982</text><text x="60" y="98" font-size="15" fill="#23261f" text-anchor="start">Section 35: existing Aboriginal and</text><text x="60" y="117" font-size="15" fill="#23261f" text-anchor="start">treaty rights recognized and affirmed</text><text x="60" y="140" font-size="13" fill="#6b4f35" text-anchor="start">99%</text><circle cx="40" cy="174" r="9" fill="#e8590c"/><text x="60" y="180" font-size="17" font-weight="bold" fill="#e8590c" text-anchor="start">1990</text><text x="60" y="202" font-size="15" fill="#23261f" text-anchor="start">Sparrow: Musqueam right to fish for</text><text x="60" y="221" font-size="15" fill="#23261f" text-anchor="start">food, social and ceremonial purposes</text><text x="60" y="244" font-size="13" fill="#6b4f35" text-anchor="start">80%</text><circle cx="40" cy="278" r="9" fill="#e8590c"/><text x="60" y="284" font-size="17" font-weight="bold" fill="#e8590c" text-anchor="start">Test</text><text x="60" y="306" font-size="15" fill="#23261f" text-anchor="start">Limits need a valid goal like</text><text x="60" y="325" font-size="15" fill="#23261f" text-anchor="start">conservation, least harm, consultation,</text><text x="60" y="344" font-size="15" fill="#23261f" text-anchor="start">and the Crown&#x27;s duty</text><text x="60" y="367" font-size="13" fill="#6b4f35" text-anchor="start">80%</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 384" font-family="sans-serif" role="img" aria-label="Timeline. 1982: section 35 of the Constitution Act recognizes and affirms existing Aboriginal and treaty rights, 99 percent. 1990: in Sparrow, the Supreme Court of Canada agreed the Musqueam held an Aboriginal right to fish for food, social and ceremonial purposes, 80 percent. The test: government may limit a right only with a valid objective such as conservation, as little infringement as possible, consultation, and the Crown&#x27;s fiduciary duty, 80 percent.">
+<rect width="400" height="384" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Section 35 and the Sparrow case</text>
+<rect x="64" y="46" width="328" height="96" rx="8" fill="#f4eedf"/>
+<g transform="translate(364 70)"><path d="M-13 -16 H8 L14 -10 V16 H-13z" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/><path d="M-8 -8 H8 M-8 -2 H8 M-8 4 H8 M-8 10 H2" stroke="#6b5b4b" stroke-width="1.6"/></g>
+<text x="78" y="72" font-size="20" font-weight="bold" fill="#c2410c">1982</text>
+<text x="78" y="96" font-size="15" fill="#2f3a2b">Section 35: existing Aboriginal and</text>
+<text x="78" y="116" font-size="15" fill="#2f3a2b">treaty rights recognized and affirmed</text>
+<text x="78" y="136" font-size="14" font-weight="bold" fill="#6b5b4b">99%</text>
+<rect x="64" y="152" width="328" height="96" rx="8" fill="#f4eedf"/>
+<g transform="translate(364 176)"><path d="M-14 0 C-8 -9 6 -9 10 0 C6 9 -8 9 -14 0z" fill="#c0563f"/><path d="M8 0 L17 -7 V7z" fill="#c0563f"/><circle cx="-8" cy="-2" r="1.6" fill="#fffaf0"/><path d="M-16 13 Q-8 9 0 13 T16 13" stroke="#4a7fb0" stroke-width="2" fill="none"/></g>
+<text x="78" y="178" font-size="20" font-weight="bold" fill="#c2410c">1990</text>
+<text x="78" y="202" font-size="15" fill="#2f3a2b">Sparrow: Musqueam right to fish for</text>
+<text x="78" y="222" font-size="15" fill="#2f3a2b">food, social and ceremonial purposes</text>
+<text x="78" y="242" font-size="14" font-weight="bold" fill="#6b5b4b">80%</text>
+<rect x="64" y="258" width="328" height="116" rx="8" fill="#f4eedf"/>
+<g transform="translate(364 282)" stroke="#2f3a2b" stroke-width="2" fill="none"><path d="M0 -14 V14 M-10 14 H10 M-15 -9 H15"/><path d="M-15 -9 L-20 3 H-10z M15 -9 L10 3 H20z" fill="#e3d6b8"/></g>
+<text x="78" y="284" font-size="20" font-weight="bold" fill="#c2410c">Test</text>
+<text x="78" y="308" font-size="15" fill="#2f3a2b">Limits need a valid goal like</text>
+<text x="78" y="328" font-size="15" fill="#2f3a2b">conservation, least harm,</text>
+<text x="78" y="348" font-size="15" fill="#2f3a2b">consultation, and the Crown&#x27;s duty</text>
+<text x="78" y="368" font-size="14" font-weight="bold" fill="#6b5b4b">80%</text>
+<line x1="34" y1="66" x2="34" y2="278" stroke="#8a9a6b" stroke-width="4"/>
+<circle cx="34" cy="66" r="9" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/><path d="M44 66 H64" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="34" cy="172" r="9" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/><path d="M44 172 H64" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="34" cy="278" r="9" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/><path d="M44 278 H64" stroke="#8a9a6b" stroke-width="2"/>
 </svg>

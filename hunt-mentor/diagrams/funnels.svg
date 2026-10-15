@@ -1,90 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 470" font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="470" fill="#fffaf0"/>
-  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bird's eye view: where the deer must walk</text>
-
-  <!-- bedding timber band, north slope -->
-  <rect x="10" y="52" width="380" height="60" fill="#2f3a2b" fill-opacity="0.18" stroke="#2f3a2b" stroke-width="1"/>
-  <g fill="#2f3a2b" stroke="none">
-    <path d="M30 100 L40 72 L50 100 Z"/>
-    <path d="M60 104 L70 76 L80 104 Z"/>
-    <path d="M90 100 L100 72 L110 100 Z"/>
-    <path d="M120 104 L130 76 L140 104 Z"/>
-    <path d="M150 100 L160 72 L170 100 Z"/>
-    <path d="M230 100 L240 72 L250 100 Z"/>
-    <path d="M260 104 L270 76 L280 104 Z"/>
-    <path d="M290 100 L300 72 L310 100 Z"/>
-    <path d="M320 104 L330 76 L340 104 Z"/>
-    <path d="M350 100 L360 72 L370 100 Z"/>
-  </g>
-  <text x="200" y="46" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bedding: timber on the cool north slope</text>
-
-  <!-- two high points with the saddle between -->
-  <ellipse cx="105" cy="150" rx="88" ry="42" fill="#8a9a6b" fill-opacity="0.45" stroke="#6b4f35" stroke-width="1.5"/>
-  <ellipse cx="105" cy="150" rx="55" ry="24" fill="#8a9a6b" fill-opacity="0.45" stroke="#6b4f35" stroke-width="1"/>
-  <ellipse cx="105" cy="150" rx="22" ry="9" fill="#6b4f35" fill-opacity="0.5" stroke="#6b4f35" stroke-width="1"/>
-  <ellipse cx="295" cy="150" rx="88" ry="42" fill="#8a9a6b" fill-opacity="0.45" stroke="#6b4f35" stroke-width="1.5"/>
-  <ellipse cx="295" cy="150" rx="55" ry="24" fill="#8a9a6b" fill-opacity="0.45" stroke="#6b4f35" stroke-width="1"/>
-  <ellipse cx="295" cy="150" rx="22" ry="9" fill="#6b4f35" fill-opacity="0.5" stroke="#6b4f35" stroke-width="1"/>
-  <text x="62" y="210" font-size="14" fill="#23261f" text-anchor="middle">High point</text>
-  <text x="338" y="210" font-size="14" fill="#23261f" text-anchor="middle">High point</text>
-  <text x="200" y="200" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Saddle</text>
-
-  <!-- bench: flat shelf below the ridge -->
-  <path d="M40 232 C120 222 280 222 360 232 L360 250 C280 240 120 240 40 250 Z" fill="#fffaf0" stroke="#6b4f35" stroke-width="1.5" stroke-dasharray="6 4"/>
-  <text x="134" y="244" font-size="14" font-weight="bold" fill="#23261f">Bench</text>
-
-  <!-- creek -->
-  <path d="M10 300 C60 290 90 320 130 305 C170 290 190 300 200 300 C230 300 250 312 290 300 C330 288 360 305 390 298" stroke="#2f3a2b" stroke-width="7" fill="none" stroke-linecap="round"/>
-  <path d="M10 300 C60 290 90 320 130 305 C170 290 190 300 200 300 C230 300 250 312 290 300 C330 288 360 305 390 298" stroke="#8a9a6b" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <ellipse cx="200" cy="300" rx="16" ry="7" fill="#fffaf0" stroke="#6b4f35" stroke-width="1.5"/>
-  <text x="200" y="330" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Creek crossing = pinch point</text>
-
-  <!-- feeding field -->
-  <rect x="10" y="350" width="380" height="72" fill="#8a9a6b" fill-opacity="0.25" stroke="#23261f" stroke-width="1" stroke-dasharray="2 4"/>
-  <g stroke="#2f3a2b" stroke-width="1.5" fill="none">
-    <path d="M40 405 L44 393 L48 405"/>
-    <path d="M90 408 L94 396 L98 408"/>
-    <path d="M140 404 L144 392 L148 404"/>
-    <path d="M260 406 L264 394 L268 406"/>
-    <path d="M310 403 L314 391 L318 403"/>
-    <path d="M360 408 L364 396 L368 408"/>
-  </g>
-  <text x="200" y="376" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Feeding: grassland, cut block or hayfield</text>
-
-  <!-- deer movement arrows -->
-  <g stroke="#e8590c" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M200 112 L200 185"/>
-    <path d="M70 112 C110 140 160 160 196 184"/>
-    <path d="M330 112 C290 140 240 160 204 184"/>
-    <path d="M200 205 L200 232"/>
-    <path d="M60 240 C110 238 160 260 196 292"/>
-    <path d="M340 240 C290 238 240 260 204 292"/>
-    <path d="M200 250 L200 290"/>
-    <path d="M200 310 L200 360"/>
-  </g>
-  <g fill="#e8590c" stroke="none">
-    <path d="M200 192 L193 180 L207 180 Z"/>
-    <path d="M200 240 L193 228 L207 228 Z"/>
-    <path d="M200 296 L193 284 L207 284 Z"/>
-    <path d="M200 368 L193 356 L207 356 Z"/>
-    <path d="M198 186 L186 182 L192 172 Z"/>
-    <path d="M202 186 L208 172 L214 182 Z"/>
-    <path d="M198 294 L186 290 L190 280 Z"/>
-    <path d="M202 294 L210 280 L214 290 Z"/>
-  </g>
-  <text x="50" y="280" font-size="14" fill="#e8590c">deer lines</text>
-
-  <!-- the hunter -->
-  <path d="M285 262 L290 274 L303 275 L293 283 L296 296 L285 289 L274 296 L277 283 L267 275 L280 274 Z" fill="#e8590c" stroke="#23261f" stroke-width="1"/>
-  <text x="285" y="257" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">You</text>
-  <text x="309" y="270" font-size="14" fill="#23261f">100 to 150 m</text>
-  <text x="309" y="285" font-size="14" fill="#23261f">downwind</text>
-  <g stroke="#23261f" stroke-width="2" stroke-dasharray="5 4" fill="none">
-    <line x1="222" y1="268" x2="256" y2="268"/>
-  </g>
-  <path d="M264 268 L254 263 L254 273 Z" fill="#23261f" stroke="none"/>
-  <text x="240" y="287" font-size="14" fill="#23261f" text-anchor="middle">wind</text>
-
-  <text x="200" y="442" font-size="14" fill="#2f3a2b" text-anchor="middle">Bed above, feed below. Every line meets at the crossing.</text>
-  <text x="200" y="460" font-size="14" fill="#2f3a2b" text-anchor="middle">Sit beside it, not on it.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" font-family="sans-serif" role="img" aria-label="Bird&#x27;s eye view of a funnel. At the top, bedding timber on the cool north slope. Below it, two high points with a saddle between them. Deer lines come out of the timber and through the saddle, cross a bench, and every line meets at a creek crossing, the pinch point, then goes on down to the feeding area: grassland, a cut block or a hayfield. You sit beside the crossing, 100 to 150 m off and downwind, a tip. Bed above, feed below. Sit beside it, not on it.">
+<rect width="400" height="520" fill="#fffaf0"/>
+<text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bird&#x27;s eye view: where the deer must walk</text>
+<rect x="0" y="36" width="400" height="434" fill="#e9eedb"/>
+<rect x="0" y="36" width="400" height="78" fill="#4c6a42"/>
+<circle cx="373.3" cy="104.9" r="7.2" fill="#000" opacity=".12"/><circle cx="373.3" cy="102.9" r="7.2" fill="#2f4a2b"/><circle cx="371.1" cy="100.7" r="3.3" fill="#fff" opacity=".12"/>
+<circle cx="317.4" cy="99.2" r="8.0" fill="#000" opacity=".12"/><circle cx="317.4" cy="97.2" r="8.0" fill="#2f4a2b"/><circle cx="315.0" cy="94.8" r="3.6" fill="#fff" opacity=".12"/>
+<circle cx="240.6" cy="82.9" r="7.6" fill="#000" opacity=".12"/><circle cx="240.6" cy="80.9" r="7.6" fill="#3a5a31"/><circle cx="238.3" cy="78.6" r="3.4" fill="#fff" opacity=".12"/>
+<circle cx="252.6" cy="96.2" r="10.4" fill="#000" opacity=".12"/><circle cx="252.6" cy="94.2" r="10.4" fill="#34512c"/><circle cx="249.5" cy="91.1" r="4.7" fill="#fff" opacity=".12"/>
+<circle cx="370.8" cy="80.7" r="8.8" fill="#000" opacity=".12"/><circle cx="370.8" cy="78.7" r="8.8" fill="#3a5a31"/><circle cx="368.2" cy="76.1" r="4.0" fill="#fff" opacity=".12"/>
+<circle cx="352.5" cy="100.3" r="8.5" fill="#000" opacity=".12"/><circle cx="352.5" cy="98.3" r="8.5" fill="#3a5a31"/><circle cx="350.0" cy="95.8" r="3.8" fill="#fff" opacity=".12"/>
+<circle cx="354.9" cy="73.4" r="10.5" fill="#000" opacity=".12"/><circle cx="354.9" cy="71.4" r="10.5" fill="#2f4a2b"/><circle cx="351.7" cy="68.2" r="4.7" fill="#fff" opacity=".12"/>
+<circle cx="19.1" cy="67.5" r="7.5" fill="#000" opacity=".12"/><circle cx="19.1" cy="65.5" r="7.5" fill="#34512c"/><circle cx="16.8" cy="63.2" r="3.4" fill="#fff" opacity=".12"/>
+<circle cx="222.8" cy="107.7" r="8.8" fill="#000" opacity=".12"/><circle cx="222.8" cy="105.7" r="8.8" fill="#3a5a31"/><circle cx="220.2" cy="103.1" r="4.0" fill="#fff" opacity=".12"/>
+<circle cx="289.1" cy="102.4" r="10.1" fill="#000" opacity=".12"/><circle cx="289.1" cy="100.4" r="10.1" fill="#34512c"/><circle cx="286.1" cy="97.4" r="4.5" fill="#fff" opacity=".12"/>
+<circle cx="144.4" cy="106.9" r="10.8" fill="#000" opacity=".12"/><circle cx="144.4" cy="104.9" r="10.8" fill="#2f4a2b"/><circle cx="141.1" cy="101.6" r="4.9" fill="#fff" opacity=".12"/>
+<circle cx="372.9" cy="72.0" r="10.0" fill="#000" opacity=".12"/><circle cx="372.9" cy="70.0" r="10.0" fill="#34512c"/><circle cx="369.9" cy="67.0" r="4.5" fill="#fff" opacity=".12"/>
+<circle cx="361.4" cy="78.1" r="10.3" fill="#000" opacity=".12"/><circle cx="361.4" cy="76.1" r="10.3" fill="#3a5a31"/><circle cx="358.3" cy="73.0" r="4.6" fill="#fff" opacity=".12"/>
+<circle cx="353.2" cy="69.0" r="9.9" fill="#000" opacity=".12"/><circle cx="353.2" cy="67.0" r="9.9" fill="#34512c"/><circle cx="350.2" cy="64.0" r="4.5" fill="#fff" opacity=".12"/>
+<circle cx="355.0" cy="64.1" r="10.6" fill="#000" opacity=".12"/><circle cx="355.0" cy="62.1" r="10.6" fill="#3a5a31"/><circle cx="351.8" cy="58.9" r="4.8" fill="#fff" opacity=".12"/>
+<circle cx="125.3" cy="96.0" r="10.3" fill="#000" opacity=".12"/><circle cx="125.3" cy="94.0" r="10.3" fill="#34512c"/><circle cx="122.2" cy="90.9" r="4.6" fill="#fff" opacity=".12"/>
+<circle cx="206.7" cy="87.1" r="9.4" fill="#000" opacity=".12"/><circle cx="206.7" cy="85.1" r="9.4" fill="#3a5a31"/><circle cx="203.9" cy="82.3" r="4.2" fill="#fff" opacity=".12"/>
+<circle cx="149.3" cy="89.1" r="10.5" fill="#000" opacity=".12"/><circle cx="149.3" cy="87.1" r="10.5" fill="#3a5a31"/><circle cx="146.1" cy="83.9" r="4.7" fill="#fff" opacity=".12"/>
+<circle cx="285.9" cy="102.5" r="7.8" fill="#000" opacity=".12"/><circle cx="285.9" cy="100.5" r="7.8" fill="#34512c"/><circle cx="283.6" cy="98.2" r="3.5" fill="#fff" opacity=".12"/>
+<circle cx="50.3" cy="82.5" r="7.2" fill="#000" opacity=".12"/><circle cx="50.3" cy="80.5" r="7.2" fill="#34512c"/><circle cx="48.1" cy="78.3" r="3.2" fill="#fff" opacity=".12"/>
+<circle cx="96.1" cy="100.5" r="7.4" fill="#000" opacity=".12"/><circle cx="96.1" cy="98.5" r="7.4" fill="#34512c"/><circle cx="93.9" cy="96.3" r="3.3" fill="#fff" opacity=".12"/>
+<circle cx="323.4" cy="104.6" r="7.2" fill="#000" opacity=".12"/><circle cx="323.4" cy="102.6" r="7.2" fill="#34512c"/><circle cx="321.2" cy="100.4" r="3.3" fill="#fff" opacity=".12"/>
+<circle cx="18.9" cy="54.9" r="7.3" fill="#000" opacity=".12"/><circle cx="18.9" cy="52.9" r="7.3" fill="#2f4a2b"/><circle cx="16.7" cy="50.7" r="3.3" fill="#fff" opacity=".12"/>
+<circle cx="107.2" cy="96.8" r="7.6" fill="#000" opacity=".12"/><circle cx="107.2" cy="94.8" r="7.6" fill="#2f4a2b"/><circle cx="104.9" cy="92.5" r="3.4" fill="#fff" opacity=".12"/>
+<circle cx="234.0" cy="95.6" r="8.0" fill="#000" opacity=".12"/><circle cx="234.0" cy="93.6" r="8.0" fill="#2f4a2b"/><circle cx="231.6" cy="91.2" r="3.6" fill="#fff" opacity=".12"/>
+<circle cx="11.6" cy="104.3" r="9.5" fill="#000" opacity=".12"/><circle cx="11.6" cy="102.3" r="9.5" fill="#34512c"/><circle cx="8.7" cy="99.4" r="4.3" fill="#fff" opacity=".12"/>
+<circle cx="21.7" cy="74.9" r="10.1" fill="#000" opacity=".12"/><circle cx="21.7" cy="72.9" r="10.1" fill="#34512c"/><circle cx="18.7" cy="69.9" r="4.5" fill="#fff" opacity=".12"/>
+<circle cx="27.4" cy="63.8" r="8.6" fill="#000" opacity=".12"/><circle cx="27.4" cy="61.8" r="8.6" fill="#34512c"/><circle cx="24.8" cy="59.2" r="3.9" fill="#fff" opacity=".12"/>
+<circle cx="95.7" cy="87.6" r="8.3" fill="#000" opacity=".12"/><circle cx="95.7" cy="85.6" r="8.3" fill="#2f4a2b"/><circle cx="93.2" cy="83.1" r="3.7" fill="#fff" opacity=".12"/>
+<circle cx="19.2" cy="95.3" r="10.8" fill="#000" opacity=".12"/><circle cx="19.2" cy="93.3" r="10.8" fill="#34512c"/><circle cx="16.0" cy="90.1" r="4.9" fill="#fff" opacity=".12"/>
+<circle cx="374.7" cy="63.5" r="9.4" fill="#000" opacity=".12"/><circle cx="374.7" cy="61.5" r="9.4" fill="#3a5a31"/><circle cx="371.9" cy="58.7" r="4.2" fill="#fff" opacity=".12"/>
+<circle cx="258.3" cy="90.0" r="10.8" fill="#000" opacity=".12"/><circle cx="258.3" cy="88.0" r="10.8" fill="#34512c"/><circle cx="255.0" cy="84.7" r="4.9" fill="#fff" opacity=".12"/>
+<circle cx="31.6" cy="50.0" r="7.6" fill="#000" opacity=".12"/><circle cx="31.6" cy="48.0" r="7.6" fill="#2f4a2b"/><circle cx="29.3" cy="45.7" r="3.4" fill="#fff" opacity=".12"/>
+<circle cx="358.2" cy="90.5" r="7.1" fill="#000" opacity=".12"/><circle cx="358.2" cy="88.5" r="7.1" fill="#2f4a2b"/><circle cx="356.1" cy="86.4" r="3.2" fill="#fff" opacity=".12"/>
+<circle cx="105.3" cy="83.5" r="9.5" fill="#000" opacity=".12"/><circle cx="105.3" cy="81.5" r="9.5" fill="#34512c"/><circle cx="102.5" cy="78.7" r="4.3" fill="#fff" opacity=".12"/>
+<circle cx="11.8" cy="50.1" r="8.6" fill="#000" opacity=".12"/><circle cx="11.8" cy="48.1" r="8.6" fill="#2f4a2b"/><circle cx="9.2" cy="45.5" r="3.9" fill="#fff" opacity=".12"/>
+<circle cx="48.7" cy="49.2" r="10.0" fill="#000" opacity=".12"/><circle cx="48.7" cy="47.2" r="10.0" fill="#2f4a2b"/><circle cx="45.7" cy="44.2" r="4.5" fill="#fff" opacity=".12"/>
+<circle cx="354.5" cy="105.8" r="9.9" fill="#000" opacity=".12"/><circle cx="354.5" cy="103.8" r="9.9" fill="#3a5a31"/><circle cx="351.5" cy="100.8" r="4.5" fill="#fff" opacity=".12"/>
+<circle cx="234.7" cy="100.9" r="10.7" fill="#000" opacity=".12"/><circle cx="234.7" cy="98.9" r="10.7" fill="#34512c"/><circle cx="231.5" cy="95.7" r="4.8" fill="#fff" opacity=".12"/>
+<circle cx="207.3" cy="103.3" r="9.4" fill="#000" opacity=".12"/><circle cx="207.3" cy="101.3" r="9.4" fill="#3a5a31"/><circle cx="204.5" cy="98.5" r="4.2" fill="#fff" opacity=".12"/>
+<circle cx="272.3" cy="103.9" r="8.2" fill="#000" opacity=".12"/><circle cx="272.3" cy="101.9" r="8.2" fill="#34512c"/><circle cx="269.8" cy="99.4" r="3.7" fill="#fff" opacity=".12"/>
+<rect x="45.6" y="44.0" width="308.8" height="28.0" rx="5" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="1.2"/>
+<text x="200" y="63.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Bedding: timber on the cool north slope</text>
+<ellipse cx="98" cy="152" rx="86" ry="40" fill="#dbe2c4" stroke="#a07850" stroke-width="1.5"/>
+<ellipse cx="98" cy="152" rx="56" ry="26" fill="#cfd7b4" stroke="#a07850" stroke-width="1.5"/>
+<ellipse cx="98" cy="152" rx="26" ry="12" fill="#c3cca4" stroke="#a07850" stroke-width="1.5"/>
+<path d="M98 147 l5 8 h-10z" fill="#2f3a2b"/>
+<ellipse cx="302" cy="152" rx="86" ry="40" fill="#dbe2c4" stroke="#a07850" stroke-width="1.5"/>
+<ellipse cx="302" cy="152" rx="56" ry="26" fill="#cfd7b4" stroke="#a07850" stroke-width="1.5"/>
+<ellipse cx="302" cy="152" rx="26" ry="12" fill="#c3cca4" stroke="#a07850" stroke-width="1.5"/>
+<path d="M302 147 l5 8 h-10z" fill="#2f3a2b"/>
+<text x="14" y="210" font-size="15" font-weight="bold" fill="#2f3a2b">High point</text>
+<text x="386" y="210" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">High point</text>
+<path d="M20 228 C120 220 280 220 380 228 L380 248 C280 240 120 240 20 248z" fill="#f4efdf" stroke="#8b6a48" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="14" y="268" font-size="15" font-weight="bold" fill="#2f3a2b">Bench</text>
+<path d="M0 306 C60 296 90 324 130 310 C170 296 190 306 200 306 C230 306 250 318 290 306 C330 294 360 312 400 304" stroke="#4a7fb0" stroke-width="8" fill="none" stroke-linecap="round"/>
+<ellipse cx="200" cy="306" rx="16" ry="8" fill="#d8ccb2" stroke="#8b6a48" stroke-width="1.5"/>
+<rect x="14" y="410" width="372" height="54" rx="6" fill="#dfe8b8" stroke="#8a9a6b" stroke-width="1.4" stroke-dasharray="5 4"/>
+<path d="M103 460 l2 -6 M107 460 l0 -7 M111 460 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M67 456 l2 -6 M71 456 l0 -7 M75 456 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M52 451 l2 -6 M56 451 l0 -7 M60 451 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M380 451 l2 -6 M384 451 l0 -7 M388 451 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M252 454 l2 -6 M256 454 l0 -7 M260 454 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M184 454 l2 -6 M188 454 l0 -7 M192 454 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M91 458 l2 -6 M95 458 l0 -7 M99 458 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M54 451 l2 -6 M58 451 l0 -7 M62 451 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M29 451 l2 -6 M33 451 l0 -7 M37 451 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M168 459 l2 -6 M172 459 l0 -7 M176 459 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M158 449 l2 -6 M162 449 l0 -7 M166 449 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M114 460 l2 -6 M118 460 l0 -7 M122 460 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M45 455 l2 -6 M49 455 l0 -7 M53 455 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M157 456 l2 -6 M161 456 l0 -7 M165 456 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M143 456 l2 -6 M147 456 l0 -7 M151 456 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M200 456 l2 -6 M204 456 l0 -7 M208 456 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/>
+<text x="200" y="436" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Feeding: grassland, cut block or hayfield</text>
+<path d="M200 112 V176" stroke="#e8590c" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M112 112 C132 140 172 160 196 176" stroke="#e8590c" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M288 112 C268 140 228 160 204 176" stroke="#e8590c" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M200 176 V296" stroke="#e8590c" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M24 238 C100 236 160 250 194 298" stroke="#e8590c" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M376 238 C300 236 240 250 206 298" stroke="#e8590c" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M200 314 V406" stroke="#e8590c" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M200.0 408.0 L206.1 397.0 L193.9 397.0z" fill="#e8590c"/><path d="M200.0 296.0 L205.5 286.0 L194.5 286.0z" fill="#e8590c"/>
+<rect x="210.0" y="194.0" width="62.1" height="26.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="241.038" y="212.5" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Saddle</text>
+<line x1="186" y1="310" x2="140" y2="334" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="186" cy="310" r="2.6" fill="#2f3a2b"/><rect x="14.0" y="322.0" width="124.7" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="76.3725" y="341" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Creek crossing</text>
+<text x="76.3725" y="359" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">= pinch point</text>
+<path d="M222 346 H286" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="5 4"/><path d="M294.0 346.0 L285.0 341.1 L285.0 350.9z" fill="#2f3a2b"/>
+<text x="254" y="340" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">wind</text>
+<path d="M208 316 C212 330 216 340 222 346" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+<polygon points="312.0,333.0 315.2,341.6 324.4,342.0 317.2,347.7 319.6,356.5 312.0,351.5 304.4,356.5 306.8,347.7 299.6,342.0 308.8,341.6" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.4"/>
+<text x="330" y="352" font-size="16" font-weight="bold" fill="#2f3a2b">You</text>
+<rect x="259.2" y="362.0" width="128.8" height="44.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="323.578" y="380.5" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">100 to 150 m</text>
+<text x="323.578" y="398.5" font-size="15" fill="#2f3a2b" text-anchor="middle">downwind (Tip)</text>
+<text x="200" y="486" font-size="14.0" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bed above, feed below. Every line meets at the crossing.</text>
+<path d="M20 505 H50" stroke="#e8590c" stroke-width="3"/><text x="58" y="510" font-size="15" fill="#e8590c">deer lines</text>
+<text x="388" y="510" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">Sit beside it, not on it.</text>
 </svg>
