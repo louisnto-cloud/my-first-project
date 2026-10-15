@@ -163,7 +163,7 @@ fn-cam-s6 | Movement: head down, move. Head up, freeze.
 - An animal that has seen you and walks off stiff legged is gone. Let it go and plan again (Tip).
 ```
 
-```anim rq-mg-freeze Hold still. Let it go back to feeding.
+```diagram fn-ft-freeze
 ```
 
 ## Two hunters, one shape

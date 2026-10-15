@@ -1,20 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Top view of a dawn turkey setup. A roost tree on a ridge holds a tom. You sit 100 metres away, set up before light, with your back against a tree wider than your shoulders. A hen decoy sits in front of you. The tom flies down and walks in to the decoy. Tip.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Roost and call at dawn, top view (Tip)</text>
-  <rect x="0" y="36" width="400" height="264" fill="#dfe6d3"/>
-  <path d="M0 90 Q200 50 400 80" stroke="#8b5a2b" stroke-width="3" fill="none" stroke-dasharray="8 6"/>
-  <text x="360" y="64" font-size="13" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Ridge</text>
-  <g fill="#2f3a2b" transform="translate(80 96) scale(1.6)"><polygon points="-12,0 0,-34 12,0"/><rect x="-3" y="0" width="6" height="8"/></g>
-  <ellipse cx="82" cy="70" rx="8" ry="5" fill="#4a3b2c"/>
-  <text x="80" y="122" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Roost tree</text>
-  <circle cx="300" cy="230" r="22" fill="#2f3a2b"/>
-  <g transform="translate(300 262) scale(1.0)"><circle r="9" fill="#e8590c"/></g>
-  <text x="300" y="290" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You, back to a wide tree</text>
-  <g transform="translate(220 200) scale(0.4)"><path d="M-24 -6 L-48 -2 L-24 6Z" fill="#8a6e4f"/><ellipse cx="0" cy="0" rx="28" ry="20" fill="#8a6e4f"/><path d="M18 -8 Q26 -30 30 -40" stroke="#8fa3b8" stroke-width="7" fill="none"/><circle cx="31" cy="-42" r="7" fill="#8fa3b8"/><path d="M37 -43 L44 -41 L37 -39Z" fill="#2f3a2b"/><path d="M-4 18 L-6 34 M8 18 L10 34" stroke="#b07a5a" stroke-width="3"/></g>
-  <text x="214" y="236" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hen decoy</text>
-  <path d="M80 130 Q120 200 196 196" stroke="#e8590c" stroke-width="3" fill="none" stroke-dasharray="6 5"/>
-  <text x="130" y="220" font-size="13" font-weight="bold" fill="#e8590c" text-anchor="middle">Tom walks in</text>
-  <path d="M100 140 L276 222 M266.0 222.1 L276 222 L269.7 214.3" stroke="#2f3a2b" stroke-width="1.5" stroke-dasharray="3 4" fill="none" stroke-linecap="round"/>
-  <text x="170" y="160" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">100 m</text>
-  <text x="80" y="280" font-size="13" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Set up before light</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 308" font-family="sans-serif" role="img" aria-label="Top view of a dawn turkey setup, Tip. A roost tree on a ridge holds a tom. You sit 100 metres away, set up before light, with your back against a tree wider than your shoulders. A hen decoy sits in front of you. The tom flies down and walks in to the decoy.">
+<rect width="400" height="308" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Roost and call at dawn, top view (Tip)</text>
+<rect x="0" y="38" width="400" height="236" fill="#e3e8cf"/>
+<path d="M0 38 H400 V70 C330 80 260 66 200 74 C140 82 70 70 0 80z" fill="#b9c49a"/>
+<path d="M0 78 C70 68 140 80 200 72 C260 64 330 78 400 68" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="9 6" fill="none"/>
+<text x="392" y="60" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end" stroke="#b9c49a" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Ridge</text>
+<circle cx="30.0" cy="56.0" r="10.0" fill="#000" opacity=".12"/><circle cx="30.0" cy="54.0" r="10.0" fill="#557a43"/><circle cx="27.0" cy="51.0" r="4.5" fill="#fff" opacity=".12"/><circle cx="150.0" cy="58.0" r="10.0" fill="#000" opacity=".12"/><circle cx="150.0" cy="56.0" r="10.0" fill="#557a43"/><circle cx="147.0" cy="53.0" r="4.5" fill="#fff" opacity=".12"/><circle cx="250.0" cy="54.0" r="10.0" fill="#000" opacity=".12"/><circle cx="250.0" cy="52.0" r="10.0" fill="#557a43"/><circle cx="247.0" cy="49.0" r="4.5" fill="#fff" opacity=".12"/><circle cx="330.0" cy="52.0" r="10.0" fill="#000" opacity=".12"/><circle cx="330.0" cy="50.0" r="10.0" fill="#557a43"/><circle cx="327.0" cy="47.0" r="4.5" fill="#fff" opacity=".12"/><circle cx="290.0" cy="98.0" r="10.0" fill="#000" opacity=".12"/><circle cx="290.0" cy="96.0" r="10.0" fill="#557a43"/><circle cx="287.0" cy="93.0" r="4.5" fill="#fff" opacity=".12"/><circle cx="360.0" cy="112.0" r="10.0" fill="#000" opacity=".12"/><circle cx="360.0" cy="110.0" r="10.0" fill="#557a43"/><circle cx="357.0" cy="107.0" r="4.5" fill="#fff" opacity=".12"/>
+<circle cx="92.0" cy="102.0" r="26.0" fill="#000" opacity=".12"/><circle cx="92.0" cy="100.0" r="26.0" fill="#2f5a33"/><circle cx="84.2" cy="92.2" r="11.7" fill="#fff" opacity=".12"/>
+<g transform="translate(92 100)"><ellipse cx="0" cy="0" rx="6" ry="9" fill="#3e3024"/><path d="M-6 6 L0 16 L6 6z" fill="#3e3024"/><circle cx="0" cy="-10" r="3" fill="#a9c8e4"/></g>
+<rect x="46.3" y="132.0" width="91.4" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="92" y="151" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Roost tree</text>
+<circle cx="304.0" cy="228.0" r="22.0" fill="#000" opacity=".12"/><circle cx="304.0" cy="226.0" r="22.0" fill="#4f7a3a"/><circle cx="297.4" cy="219.4" r="9.9" fill="#fff" opacity=".12"/>
+<circle cx="294" cy="210" r="9" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<rect x="201.0" y="242.0" width="197.9" height="27.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="300" y="261" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">You, back to a wide tree</text>
+<g transform="translate(232 176)"><ellipse cx="0" cy="0" rx="8" ry="5" fill="#7d6244"/><circle cx="-8" cy="-3" r="2.6" fill="#a9c8e4"/></g>
+<line x1="232" y1="172" x2="232" y2="167" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="232" cy="172" r="2.6" fill="#2f3a2b"/>
+<rect x="186.3" y="140.0" width="91.4" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="232" y="159" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hen decoy</text>
+<path d="M108 118 L286 204" stroke="#2f3a2b" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="190" y="178" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#e3e8cf" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">100 m</text>
+<path d="M96 124 C 104 170, 150 200, 222 182" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 5" fill="none"/><path d="M226.0 181.0 L215.1 177.7 L217.4 188.5z" fill="#e8590c"/>
+<text x="40" y="222" font-size="16" font-weight="bold" fill="#c2410c" stroke="#e3e8cf" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Tom walks in</text>
+<rect x="0" y="274" width="400" height="34" fill="#2f3a2b"/><text x="200" y="297" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Set up before light</text>
 </svg>
