@@ -1,17 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, map view. A lake on the left and cliffs on the right leave a narrow gap of land between them. Four dotted game trails from the open ground below all converge on that gap, ringed orange as the pinch point, and one trail continues beyond. A deer walks one trail through the gap.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">The land squeezes the trails</text><text x="388" y="24" font-size="14" fill="#2f3a2b" text-anchor="end">map view</text>
-  <rect x="0" y="36" width="400" height="232" fill="#dfe6d3" opacity=".7"/>
-  <path d="M0 36 H200 C 190 90, 170 130, 180 150 C 150 160, 60 150, 0 170 Z" fill="#4a7fb0" opacity=".55"/>
-  <path d="M400 36 H230 C 226 80, 214 120, 222 150 C 260 160, 340 150, 400 170 Z" fill="#9a8f7c"/>
-  <path d="M222 150 C 214 120, 226 80, 230 36" stroke="#2f3a2b" stroke-width="2" fill="none"/>
-  <text x="80" y="80" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">lake</text><text x="320" y="90" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">cliffs</text>
-  <g stroke="#8b5a2b" stroke-width="2.5" stroke-dasharray="3 5" fill="none">
-    <path d="M40 268 C 120 220, 180 180, 201 150 C 205 120, 202 80, 210 36"/><path d="M120 268 C 160 220, 190 190, 201 150"/>
-    <path d="M300 268 C 260 220, 220 190, 201 150"/><path d="M380 268 C 300 210, 230 180, 201 150"/></g>
-  <path id="rl-pp-hourglass-p" d="M380 268 C 300 210, 230 180, 201 150 C 205 120, 202 80, 210 36" fill="none"/>
-  <g><g transform="translate(0 0) scale(0.9)"><ellipse rx="14" ry="7" fill="#8b5a2b"/><circle cx="12" cy="-10" r="5.5" fill="#8b5a2b"/><path d="M9 -14 l-3 -7 M14 -14 l4 -6" stroke="#5c3b1c" stroke-width="2"/><path d="M-9 5 v9 M-4 5 v9 M6 5 v9 M10 5 v9" stroke="#8b5a2b" stroke-width="2.5"/></g><animateMotion dur="7s" fill="freeze" rotate="0"><mpath href="#rl-pp-hourglass-p"/></animateMotion></g>
-  <circle cx="201" cy="150" r="14" fill="none" stroke="#e8590c" stroke-width="4"/>
-  <rect x="240" y="196" width="108" height="24" rx="6" fill="#e8590c"/><text x="294.0" y="213" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Pinch point</text>
-  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Four trails in, one way through</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 296" font-family="sans-serif" role="img" aria-label="Animation, map view. A lake on the left and cliffs on the right leave a narrow gap of land between them. Four dotted game trails from the open ground below all converge on that gap, ringed orange as the pinch point, and one trail continues beyond. A deer walks one trail through the gap. Four trails in, one way through.">
+<rect width="400" height="296" fill="#fffaf0"/>
+<text x="14" y="24" font-size="18" font-weight="bold" fill="#2f3a2b">The land squeezes the trails</text>
+<text x="386" y="24" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">map view</text>
+<rect x="0" y="36" width="400" height="226" fill="#e9eddf"/>
+<path d="M0 36 H196 C190 70 176 104 184 128 C190 142 176 152 150 156 C100 162 50 158 0 172z" fill="#7fa6c9"/>
+<path d="M0 36 H196 C190 70 176 104 184 128 C190 142 176 152 150 156 C100 162 50 158 0 172" fill="none" stroke="#4a7fb0" stroke-width="2"/>
+<path d="M40 70 c5 -3 10 -3 15 0" stroke="#d6e4f0" stroke-width="1.8" fill="none"/><path d="M96 96 c5 -3 10 -3 15 0" stroke="#d6e4f0" stroke-width="1.8" fill="none"/><path d="M130 62 c5 -3 10 -3 15 0" stroke="#d6e4f0" stroke-width="1.8" fill="none"/><path d="M58 128 c5 -3 10 -3 15 0" stroke="#d6e4f0" stroke-width="1.8" fill="none"/>
+<path d="M400 36 H226 C222 70 212 104 220 130 C226 146 250 152 290 156 C330 160 370 162 400 172z" fill="#b9ad98"/>
+<clipPath id="rl-pp-hourglass-rk"><path d="M400 36 H226 C222 70 212 104 220 130 C226 146 250 152 290 156 C330 160 370 162 400 172z"/></clipPath>
+<g clip-path="url(#rl-pp-hourglass-rk)" stroke="#8b7a60" stroke-width="1.6"><path d="M230 30 l-30 150"/><path d="M246 30 l-30 150"/><path d="M262 30 l-30 150"/><path d="M278 30 l-30 150"/><path d="M294 30 l-30 150"/><path d="M310 30 l-30 150"/><path d="M326 30 l-30 150"/><path d="M342 30 l-30 150"/><path d="M358 30 l-30 150"/><path d="M374 30 l-30 150"/><path d="M390 30 l-30 150"/><path d="M406 30 l-30 150"/><path d="M422 30 l-30 150"/><path d="M438 30 l-30 150"/><path d="M454 30 l-30 150"/><path d="M470 30 l-30 150"/><path d="M486 30 l-30 150"/><path d="M502 30 l-30 150"/><path d="M518 30 l-30 150"/><path d="M534 30 l-30 150"/><path d="M550 30 l-30 150"/></g>
+<path d="M226 36 C222 70 212 104 220 130 C226 146 250 152 290 156 C330 160 370 162 400 172" fill="none" stroke="#5a4a36" stroke-width="3"/>
+<rect x="68.7" y="84.0" width="46.5" height="29.0" rx="5" fill="#4a7fb0" stroke="#4a7fb0" stroke-width="1.2"/>
+<text x="92" y="104.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">lake</text>
+<rect x="294.8" y="84.0" width="54.4" height="29.0" rx="5" fill="#5a4a36" stroke="#5a4a36" stroke-width="1.2"/>
+<text x="322" y="104.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">cliffs</text>
+<circle cx="28.0" cy="224.0" r="8.0" fill="#000" opacity=".12"/><circle cx="28.0" cy="222.0" r="8.0" fill="#4f7a3a"/><circle cx="25.6" cy="219.6" r="3.6" fill="#fff" opacity=".12"/><circle cx="70.0" cy="202.0" r="8.0" fill="#000" opacity=".12"/><circle cx="70.0" cy="200.0" r="8.0" fill="#4f7a3a"/><circle cx="67.6" cy="197.6" r="3.6" fill="#fff" opacity=".12"/><circle cx="340.0" cy="206.0" r="8.0" fill="#000" opacity=".12"/><circle cx="340.0" cy="204.0" r="8.0" fill="#4f7a3a"/><circle cx="337.6" cy="201.6" r="3.6" fill="#fff" opacity=".12"/><circle cx="380.0" cy="234.0" r="8.0" fill="#000" opacity=".12"/><circle cx="380.0" cy="232.0" r="8.0" fill="#4f7a3a"/><circle cx="377.6" cy="229.6" r="3.6" fill="#fff" opacity=".12"/><circle cx="220.0" cy="248.0" r="8.0" fill="#000" opacity=".12"/><circle cx="220.0" cy="246.0" r="8.0" fill="#4f7a3a"/><circle cx="217.6" cy="243.6" r="3.6" fill="#fff" opacity=".12"/><circle cx="160.0" cy="252.0" r="8.0" fill="#000" opacity=".12"/><circle cx="160.0" cy="250.0" r="8.0" fill="#4f7a3a"/><circle cx="157.6" cy="247.6" r="3.6" fill="#fff" opacity=".12"/>
+<g stroke="#8b5a2b" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round" fill="none"><path d="M30 262 C 110 220, 176 186, 201 146"/><path d="M120 262 C 160 222, 188 186, 201 146"/><path d="M290 262 C 256 222, 220 186, 201 146"/><path d="M384 262 C 300 214, 232 182, 201 146"/><path d="M201 146 C 205 116, 200 76, 208 36"/></g>
+<path id="rl-pp-hourglass-p" d="M384 262 C 300 214, 232 182, 201 146 C 205 116, 200 76, 208 36" fill="none"/>
+<g><g transform="rotate(90) scale(0.9)"><ellipse cx="0" cy="2" rx="7" ry="13" fill="#8b5a2b"/><path d="M-2 -10 L-2 -16 L2 -16 L2 -10z" fill="#8b5a2b"/><ellipse cx="0" cy="-19" rx="3.6" ry="5" fill="#8b5a2b"/><path d="M-3 -21 l-5 -3 M3 -21 l5 -3" stroke="#8b5a2b" stroke-width="2.4" stroke-linecap="round"/><path d="M-6 -6 l-4 -4 M6 -6 l4 -4 M-6 12 l-4 4 M6 12 l4 4" stroke="#5a3e26" stroke-width="2" stroke-linecap="round"/><ellipse cx="0" cy="13" rx="3" ry="2.5" fill="#f3ead8"/></g><animateMotion dur="7s" fill="freeze" rotate="auto" ><mpath href="#rl-pp-hourglass-p"/></animateMotion></g>
+<circle cx="201" cy="146" r="17" fill="none" stroke="#e8590c" stroke-width="4"/>
+<line x1="214" y1="158" x2="258.488" y2="196" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="214" cy="158" r="2.6" fill="#2f3a2b"/>
+<rect x="248.5" y="196.0" width="103.0" height="29.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="300" y="216.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Pinch point</text>
+<text x="200" y="285" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Four trails in, one way through</text>
 </svg>
