@@ -156,7 +156,7 @@ bobcat | Bobcat: spots, short tufts.
 ```more every inspection and report rule
 - **Cougar:** CI in any MU within 30 days (4 days in Region 6) (98%). Bring the skull and the hide with a testicle or part of the penis, or a portion of the teats or mammary gland, naturally attached (98%). By appointment at the Kamloops office or a listed inspector (95%).
 - 2026 change: evidence of sex must be naturally attached for cougar CI (95%).
-- **Lynx in Region 3, bobcat in Regions 2 and 3, wolverine anywhere:** a Compulsory Report within 30 days with location, date, days hunted, weapon and class (98%). File it in WILD (Wildlife Information and Licensing Data), at FrontCounter BC, or by mail (98%).
+- **Lynx in Regions 3, 6, 7A and 7B, bobcat in Regions 2 and 3, wolverine anywhere:** a Compulsory Report within 30 days with location, date, days hunted, weapon and class (98%). File it in WILD (Wildlife Information and Licensing Data), at FrontCounter BC, or by mail (98%).
 - **Wolf:** Compulsory Report only in Regions 1 and 2, not Region 3 (98%).
 - You are not in legal possession of a cougar until CI is done (98%).
 ```

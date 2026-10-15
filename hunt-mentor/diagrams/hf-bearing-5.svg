@@ -1,16 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 5. Along the bearing line, the hunter picks a tree, walks to it, then picks the next tree on the same line and repeats, instead of staring at the needle while walking.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <rect y="40" width="400" height="260" fill="#dfe6d3" opacity=".6"/>
-  <text x="12" y="28" font-size="16" font-weight="bold" fill="#e8590c">Step 5</text>
-  <text x="90" y="28" font-size="15" fill="#2f3a2b">Pick a tree. Walk to it. Repeat.</text>
-  <g fill="#2f3a2b">
-    <polygon points="150,210 162,175 174,210"/><polygon points="215,150 227,115 239,150"/><polygon points="280,95 292,60 304,95"/>
-    <polygon points="60,120 70,95 80,120" opacity=".5"/><polygon points="330,200 340,175 350,200" opacity=".5"/><polygon points="110,80 120,55 130,80" opacity=".5"/>
-  </g>
-  <g stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5" fill="none"><path d="M95 275 L158 215"/><path d="M168 205 L222 155"/><path d="M232 145 L288 100"/></g>
-  <circle cx="92" cy="278" r="9" fill="#e8590c"/>
-  <g font-size="15" font-weight="bold" fill="#e8590c"><text x="180" y="200">1</text><text x="245" y="140">2</text><text x="312" y="86">3</text></g>
-  <text x="110" y="290" font-size="14" fill="#2f3a2b">You</text>
-  <text x="250" y="270" font-size="14" fill="#2f3a2b">Eyes on the tree,</text>
-  <text x="250" y="288" font-size="14" fill="#2f3a2b">not the needle (Tip)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 5. Along the bearing line, the hunter picks a tree, walks to it, then picks the next tree on the same line and repeats, instead of staring at the needle while walking. Eyes on the tree, not the needle, a tip.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="40" font-size="16" font-weight="bold" fill="#e8590c">Step 5</text>
+<text x="12" y="66" font-size="16" fill="#2f3a2b">Pick a tree. Walk to it. Repeat.</text>
+<rect x="8" y="80" width="384" height="212" rx="10" fill="#e3e8cf"/>
+<rect x="58.5" y="146.0" width="3" height="5" fill="#5a3d22"/><path d="M60.0 116.0 L67.9 131.3 L64.3 131.3 L74.3 147.0 L45.7 147.0 L55.7 131.3 L52.1 131.3z" fill="#8fa078"/>
+<rect x="118.5" y="116.0" width="3" height="5" fill="#5a3d22"/><path d="M120.0 90.0 L126.9 103.5 L123.8 103.5 L132.6 117.0 L107.4 117.0 L116.2 103.5 L113.1 103.5z" fill="#8fa078"/>
+<rect x="38.5" y="246.0" width="3" height="5" fill="#5a3d22"/><path d="M40.0 220.0 L46.9 233.5 L43.8 233.5 L52.6 247.0 L27.4 247.0 L36.2 233.5 L33.1 233.5z" fill="#8fa078"/>
+<rect x="368.5" y="136.0" width="3" height="5" fill="#5a3d22"/><path d="M370.0 110.0 L376.9 123.5 L373.8 123.5 L382.6 137.0 L357.4 137.0 L366.2 123.5 L363.1 123.5z" fill="#8fa078"/>
+<path d="M104 266 L160 224" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5"/>
+<path d="M176 216 L230 172" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5"/>
+<path d="M246 164 L298 120" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5"/>
+<rect x="166.5" y="222.0" width="3" height="5" fill="#5a3d22"/><path d="M168.0 182.0 L178.2 201.8 L173.5 201.8 L186.5 223.0 L149.5 223.0 L162.5 201.8 L157.8 201.8z" fill="#2f5a2b"/>
+<circle cx="142.0" cy="200.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="142" y="205" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<rect x="236.5" y="170.0" width="3" height="5" fill="#5a3d22"/><path d="M238.0 130.0 L248.2 149.8 L243.5 149.8 L256.5 171.0 L219.5 171.0 L232.5 149.8 L227.8 149.8z" fill="#2f5a2b"/>
+<circle cx="212.0" cy="148.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="212" y="153" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<rect x="304.5" y="118.0" width="3" height="5" fill="#5a3d22"/><path d="M306.0 78.0 L316.2 97.8 L311.5 97.8 L324.5 119.0 L287.5 119.0 L300.5 97.8 L295.8 97.8z" fill="#2f5a2b"/>
+<circle cx="280.0" cy="96.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="280" y="101" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<circle cx="96" cy="272" r="10" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="118" y="284" font-size="16" font-weight="bold" fill="#2f3a2b">You</text>
+<rect x="215.2" y="236.0" width="170.8" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="300.59" y="256.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Eyes on the tree,</text>
+<text x="300.59" y="276.5" font-size="16" fill="#2f3a2b" text-anchor="middle">not the needle (Tip)</text>
 </svg>

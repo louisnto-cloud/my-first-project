@@ -1,8 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 3: Find steep, thick, far ground. Over 1 km, steeper, darker timber (Tip).">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<circle cx="30" cy="30" r="20" fill="#e8590c"/>
-<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
-<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Find steep, thick, far ground</text>
-<path d="M80 230 L200 90 L320 230 Z" fill="#8a9a6b"/><g><polygon points="238.1,200 250,166 261.9,200" fill="#2f3a2b"/><rect x="248" y="200" width="4" height="6.800000000000001" fill="#6b4f35"/></g><g><polygon points="264.5,210 275,180 285.5,210" fill="#2f3a2b"/><rect x="273" y="210" width="4" height="6.0" fill="#6b4f35"/></g><g transform="translate(230 170) scale(0.7)"><ellipse rx="20" ry="9" fill="#8b5a2b"/><circle cx="19" cy="-10" r="6.5" fill="#8b5a2b"/><rect x="-15" y="5" width="3.5" height="14" fill="#8b5a2b"/><rect x="-6" y="5" width="3.5" height="14" fill="#8b5a2b"/><rect x="7" y="5" width="3.5" height="14" fill="#8b5a2b"/><rect x="13" y="5" width="3.5" height="14" fill="#8b5a2b"/><ellipse cx="-20" cy="-2" rx="4" ry="5" fill="#f3ead8"/><path d="M19 -15 l-5 -10 m3 5 l-6 -2 M23 -15 l5 -10 m-3 5 l6 -2" stroke="#5c3b1c" stroke-width="2" fill="none"/></g><text x="200" y="255" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Steep, thick, far: the refuge</text>
-<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Over 1 km, steeper, darker timber (Tip).</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 3: Find steep, thick, far ground. Map sketch: well away from the road, tight contour rings of dark timber where deer hide. Steep, thick, far: the refuge. Over 1 km, steeper, darker timber (Tip).">
+<rect width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/><text x="30" y="37" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">3</text><text x="60" y="26" font-size="16" font-weight="bold" fill="#2f3a2b">Find steep, thick, far ground</text>
+<rect x="60" y="72" width="280" height="164" fill="#dfe6d3" stroke="#8a9a6b"/>
+<clipPath id="rq-pr-step-3-c"><rect x="60" y="72" width="280" height="164"/></clipPath>
+<g clip-path="url(#rq-pr-step-3-c)"><path d="M60 214 C90 210 110 200 120 236" stroke="#e8590c" stroke-width="58" fill="none" opacity=".33"/><path d="M60 220 C90 214 110 204 120 236" stroke="#23261f" stroke-width="5" fill="none"/></g>
+<ellipse cx="256" cy="150" rx="70" ry="64" fill="#9fb08a" stroke="#8b5a2b" stroke-width="1.2"/>
+<ellipse cx="256" cy="150" rx="54" ry="50" fill="#7f9a6c" stroke="#8b5a2b" stroke-width="1.2"/>
+<ellipse cx="256" cy="150" rx="38" ry="36" fill="#5f7f50" stroke="#8b5a2b" stroke-width="1.2"/>
+<ellipse cx="256" cy="150" rx="22" ry="22" fill="#4a6b3e" stroke="#8b5a2b" stroke-width="1.2"/>
+<rect x="234.5" y="108.0" width="3" height="5" fill="#5a3d22"/><path d="M236.0 96.0 L239.7 103.2 L238.0 103.2 L242.7 109.0 L229.3 109.0 L234.0 103.2 L232.3 103.2z" fill="#2c4527"/>
+<rect x="268.5" y="112.0" width="3" height="5" fill="#5a3d22"/><path d="M270.0 100.0 L273.7 107.2 L272.0 107.2 L276.7 113.0 L263.3 113.0 L268.0 107.2 L266.3 107.2z" fill="#2c4527"/>
+<rect x="254.5" y="146.0" width="3" height="5" fill="#5a3d22"/><path d="M256.0 134.0 L259.7 141.2 L258.0 141.2 L262.7 147.0 L249.3 147.0 L254.0 141.2 L252.3 141.2z" fill="#2c4527"/>
+<rect x="228.5" y="172.0" width="3" height="5" fill="#5a3d22"/><path d="M230.0 160.0 L233.7 167.2 L232.0 167.2 L236.7 173.0 L223.3 173.0 L228.0 167.2 L226.3 167.2z" fill="#2c4527"/>
+<rect x="280.5" y="174.0" width="3" height="5" fill="#5a3d22"/><path d="M282.0 162.0 L285.7 169.2 L284.0 169.2 L288.7 175.0 L275.3 175.0 L280.0 169.2 L278.3 169.2z" fill="#2c4527"/>
+<rect x="254.5" y="198.0" width="3" height="5" fill="#5a3d22"/><path d="M256.0 186.0 L259.7 193.2 L258.0 193.2 L262.7 199.0 L249.3 199.0 L254.0 193.2 L252.3 193.2z" fill="#2c4527"/>
+<rect x="298.5" y="142.0" width="3" height="5" fill="#5a3d22"/><path d="M300.0 130.0 L303.7 137.2 L302.0 137.2 L306.7 143.0 L293.3 143.0 L298.0 137.2 L296.3 137.2z" fill="#2c4527"/>
+<rect x="210.5" y="142.0" width="3" height="5" fill="#5a3d22"/><path d="M212.0 130.0 L215.7 137.2 L214.0 137.2 L218.7 143.0 L205.3 143.0 L210.0 137.2 L208.3 137.2z" fill="#2c4527"/>
+<g transform="translate(262 168) scale(0.6 0.6)"><path d="M-8 -18 L-10 0 M-4 -18 L-3 0 M12 -18 L13 0 M16 -18 L18 0" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/><path d="M-12 -28 C-12 -34 -4 -34 6 -34 C14 -34 20 -32 20 -26 C20 -20 16 -17 8 -17 L-6 -17 C-10 -17 -12 -21 -12 -28z" fill="#9a7350"/><path d="M-10 -30 L-16 -42 L-12 -44 L-6 -32z" fill="#9a7350"/><path d="M-16 -42 C-20 -43 -24 -40 -24 -38 L-20 -37 C-17 -37 -14 -39 -13 -41z" fill="#9a7350"/><path d="M-14 -44 L-18 -50 L-12 -45z M-12 -44 L-9 -50 L-10 -44z" fill="#9a7350"/><ellipse cx="18" cy="-27" rx="3" ry="4" fill="#f3ead8"/><circle cx="-18" cy="-41" r=".9" fill="#111"/></g>
+<text x="116" y="108" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">over 1 km</text>
+<path d="M84 116 H168" stroke="#2f3a2b" stroke-width="1.6"/><path d="M176.0 116.0 L167.0 111.0 L167.0 121.0z" fill="#2f3a2b"/>
+<rect x="90.4" y="244.0" width="219.1" height="27.0" rx="5" fill="#fffaf0" stroke="#3f5a35" stroke-width="1.2"/>
+<text x="200" y="263" font-size="15" font-weight="bold" fill="#3f5a35" text-anchor="middle">Steep, thick, far: the refuge</text>
+<text x="200" y="290" font-size="14" fill="#2f3a2b" text-anchor="middle">Over 1 km, steeper, darker timber (Tip).</text>
 </svg>

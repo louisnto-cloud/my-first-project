@@ -4,13 +4,13 @@
 <rect x="40" y="56" width="200" height="150" rx="8" fill="#dfe6d3" stroke="#23261f" stroke-width="2"/>
 <path d="M50 180 C90 120 130 150 170 90 C190 70 220 80 230 70" stroke="#8a9a6b" stroke-width="3" fill="none"/>
 <path d="M140 110 c-12 -20 -12 -34 0 -34 c12 0 12 14 0 34 Z" fill="#e8590c"/><circle cx="140" cy="88" r="5" fill="#fff"/>
-<text x="320" y="100" font-size="15" fill="#2f3a2b" text-anchor="middle">Write the</text>
-<text x="320" y="119" font-size="15" fill="#2f3a2b" text-anchor="middle">location on</text>
-<text x="320" y="138" font-size="15" fill="#2f3a2b" text-anchor="middle">your phone</text>
-<text x="320" y="157" font-size="15" fill="#2f3a2b" text-anchor="middle">before you</text>
-<text x="320" y="176" font-size="15" fill="#2f3a2b" text-anchor="middle">leave the site</text>
+<text x="320" y="100" font-size="16" fill="#2f3a2b" text-anchor="middle">Write the</text>
+<text x="320" y="120" font-size="16" fill="#2f3a2b" text-anchor="middle">location on</text>
+<text x="320" y="140" font-size="16" fill="#2f3a2b" text-anchor="middle">your phone</text>
+<text x="320" y="160" font-size="16" fill="#2f3a2b" text-anchor="middle">before you</text>
+<text x="320" y="180" font-size="16" fill="#2f3a2b" text-anchor="middle">leave the site</text>
 <rect x="10" y="222" width="380" height="70" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
-<text x="200.0" y="243.9" font-size="14" fill="#23261f" text-anchor="middle">The province asks for the harvest</text>
-<text x="200.0" y="261.9" font-size="14" fill="#23261f" text-anchor="middle">location through an online tool (95%).</text>
-<text x="200.0" y="279.9" font-size="14" fill="#23261f" text-anchor="middle">Hold the meat until the result (Tip).</text>
+<text font-weight="bold" x="200.0" y="243.9" font-size="15" fill="#23261f" text-anchor="middle">The province asks for the harvest</text>
+<text font-weight="bold" x="200.0" y="261.9" font-size="15" fill="#23261f" text-anchor="middle">location through an online tool (95%).</text>
+<text font-weight="bold" x="200.0" y="279.9" font-size="15" fill="#23261f" text-anchor="middle">Hold the meat until the result (Tip).</text>
 </svg>

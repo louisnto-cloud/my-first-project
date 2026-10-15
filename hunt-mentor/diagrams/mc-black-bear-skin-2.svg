@@ -1,4 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Hide step 2 of 4: paws. Cut around the pads, skin the toes out to the last joint and leave the claws attached to the hide.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<rect x="8" y="8" width="384" height="34" rx="8" fill="#2f3a2b"/><text x="20" y="31" font-size="16" font-weight="bold" fill="#fff" text-anchor="start">Hide 2 of 4: paws</text><ellipse cx="200" cy="160" rx="70" ry="44" fill="#1d1d1b"/><ellipse cx="170" cy="112" rx="8" ry="10" fill="#1d1d1b"/><line x1="170" y1="102" x2="168" y2="84" stroke="#d8d0c0" stroke-width="4"/><ellipse cx="185" cy="112" rx="8" ry="10" fill="#1d1d1b"/><line x1="185" y1="102" x2="183" y2="84" stroke="#d8d0c0" stroke-width="4"/><ellipse cx="200" cy="112" rx="8" ry="10" fill="#1d1d1b"/><line x1="200" y1="102" x2="198" y2="84" stroke="#d8d0c0" stroke-width="4"/><ellipse cx="215" cy="112" rx="8" ry="10" fill="#1d1d1b"/><line x1="215" y1="102" x2="213" y2="84" stroke="#d8d0c0" stroke-width="4"/><ellipse cx="230" cy="112" rx="8" ry="10" fill="#1d1d1b"/><line x1="230" y1="102" x2="228" y2="84" stroke="#d8d0c0" stroke-width="4"/><line x1="130" y1="210" x2="270" y2="210" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 4"/><text x="200" y="232" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Claws stay on the hide</text><rect x="8" y="256" width="384" height="36" rx="8" fill="#2f3a2b"/><text x="200" y="280" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Skin to the last toe joint.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Hide step 2 of 4: paws. Cut around the pads, skin the toes out to the last joint and leave the claws attached to the hide. Claws stay on the hide. Skin to the last toe joint.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<rect x="12" y="12" width="376" height="34" rx="6" fill="#2f3a2b"/>
+<text x="26" y="35" font-size="18" font-weight="bold" fill="#ffffff">Hide 2 of 4: paws</text>
+<rect x="12" y="254" width="376" height="36" rx="6" fill="#2f3a2b"/>
+<text x="200" y="278" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Skin to the last toe joint.</text>
+<rect x="12" y="52" width="376" height="196" rx="8" fill="#e9e2cf"/>
+<path d="M120 246 C110 200 120 170 150 156 C190 140 226 146 252 160 C276 172 286 204 280 246z" fill="#2b2622"/>
+<path d="M150 214 C146 192 166 178 200 176 C234 178 252 192 248 214 C246 230 220 236 200 236 C178 236 152 230 150 214z" fill="#3e3631"/>
+<ellipse cx="134" cy="150" rx="15" ry="13" fill="#3e3631"/>
+<path d="M127.6 142.3 q-1.6 -17.3 -16.5 -20.1" stroke="#e9e0cc" stroke-width="5" fill="none" stroke-linecap="round"/>
+<ellipse cx="164" cy="128" rx="15" ry="13" fill="#3e3631"/>
+<path d="M160.7 118.6 q2.0 -19.3 -8.7 -24.5" stroke="#e9e0cc" stroke-width="5" fill="none" stroke-linecap="round"/>
+<ellipse cx="200" cy="120" rx="15" ry="13" fill="#3e3631"/>
+<path d="M200.0 110.0 q6.0 -20.0 0.0 -26.0" stroke="#e9e0cc" stroke-width="5" fill="none" stroke-linecap="round"/>
+<ellipse cx="236" cy="128" rx="15" ry="13" fill="#3e3631"/>
+<path d="M239.3 118.6 q10.0 -19.3 8.7 -24.5" stroke="#e9e0cc" stroke-width="5" fill="none" stroke-linecap="round"/>
+<ellipse cx="266" cy="150" rx="15" ry="13" fill="#3e3631"/>
+<path d="M272.4 142.3 q13.6 -17.3 16.5 -20.1" stroke="#e9e0cc" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M146 214 C140 186 166 168 200 168 C236 168 260 186 254 214 C250 240 150 240 146 214z" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 4" fill="none"/>
+<circle cx="134" cy="150" r="18" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 4" fill="none"/>
+<circle cx="164" cy="128" r="18" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 4" fill="none"/>
+<circle cx="200" cy="120" r="18" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 4" fill="none"/>
+<circle cx="236" cy="128" r="18" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 4" fill="none"/>
+<circle cx="266" cy="150" r="18" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 4" fill="none"/>
+<rect x="266.9" y="80.0" width="98.1" height="45.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="316" y="99" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Claws stay</text>
+<text x="316" y="117" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">on the hide</text>
+<line x1="292" y1="132" x2="284.949" y2="125" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="292" cy="132" r="2.6" fill="#2f3a2b"/>
+<rect x="30.0" y="80.0" width="92.0" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="76" y="99" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">cut around</text>
+<text x="76" y="117" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">the pads</text>
+<line x1="148" y1="200" x2="102.002" y2="125" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="148" cy="200" r="2.6" fill="#2f3a2b"/>
 </svg>

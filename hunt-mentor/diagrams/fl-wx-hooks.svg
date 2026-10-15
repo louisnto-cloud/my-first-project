@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" font-family="sans-serif" role="img" aria-label="Memory hooks for time and weather. One before, one after: big game legal hours, 99 percent. Half for birds: ducks, half an hour, 99 percent. Seven behind: BC is UTC minus 7 all year, 95 percent. October loses 2 hours of daylight, 90 percent. Snow is a fact: check the bench, not the town.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" font-family="sans-serif" role="img" aria-label="Memory hooks for time and weather. One before, one after: big game legal hours, 99 percent. Half for birds: ducks, half an hour, 99 percent. Seven behind: BC is UTC minus 7 all year, 95 percent. October loses 2 hours of daylight, 90 percent. Valley is not the bench: higher is usually colder.">
 <rect width="400" height="340" fill="#fffaf0"/>
 <text x="200" y="30" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Memory hooks: time and weather</text>
 <rect x="8" y="46" width="384" height="54" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
@@ -22,5 +22,5 @@
 <text x="74" y="252" font-size="18" font-weight="bold" fill="#2f3a2b">October loses 2 hours</text>
 <text x="74" y="273" font-size="15.5" fill="#23261f">of daylight (90%)</text>
 <rect x="8" y="294" width="384" height="38" rx="8" fill="#2f3a2b"/>
-<text x="200" y="319" font-size="15.5" font-weight="bold" fill="#fffaf0" text-anchor="middle">Snow is a fact. Check the bench, not the town</text>
+<text x="200" y="319" font-size="15.5" font-weight="bold" fill="#fffaf0" text-anchor="middle">Valley is not the bench: higher is usually colder</text>
 </svg>

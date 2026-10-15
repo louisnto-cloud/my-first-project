@@ -6,7 +6,7 @@
 <line x1="262" y1="94" x2="262" y2="166" stroke="#23261f" stroke-width="2"/><line x1="226" y1="130" x2="298" y2="130" stroke="#23261f" stroke-width="2"/>
 <ellipse cx="200" cy="185" rx="60" ry="26" fill="#c23b22" opacity=".35"/>
 <text x="320" y="70" font-size="16" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Aim here</text>
-<text x="140" y="262" font-size="15" fill="#c23b22" text-anchor="middle" font-weight="bold">Breast = the meat. Not here.</text>
-<text x="395" y="260" font-size="14" fill="#23261f" text-anchor="end">Inside 25 m</text>
-<text x="395" y="278" font-size="14" fill="#23261f" text-anchor="end">(27 yd), Tip</text>
+<text x="136" y="264" font-size="16" fill="#c23b22" text-anchor="middle" font-weight="bold">Breast = the meat. Not here.</text>
+<text x="395" y="260" font-size="15" fill="#23261f" text-anchor="end">Inside 25 m</text>
+<text x="395" y="278" font-size="15" fill="#23261f" text-anchor="end">(27 yd), Tip</text>
 </svg>

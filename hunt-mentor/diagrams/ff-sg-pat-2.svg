@@ -1,4 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Shoot one shell per sheet from a padded rest, head on the stock as you shoot birds.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Shoot from a rest, head as in the field</text><g transform="translate(40 140) scale(0.8)"><path d="M0 20 L100 12 L112 12 L122 36 L210 34 L210 44 L112 50 L94 62 L80 56 L0 74 Z" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="-8" y="18" width="10" height="58" rx="3" fill="#2f3a2b" stroke="none" stroke-width="2"/><rect x="100" y="8" width="70" height="18" rx="0" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/><rect x="170" y="10" width="200" height="8" rx="0" fill="#6b6f68" stroke="#2f3a2b" stroke-width="1"/><rect x="170" y="20" width="150" height="7" rx="0" fill="#6b6f68" stroke="#2f3a2b" stroke-width="1"/><path d="M120 48 q 2 14 20 12 l2 -12" fill="none" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="368" cy="9" r="2" fill="#c9a227" stroke="none" stroke-width="2"/></g><text x="200" y="262" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">one shell per sheet</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" font-family="sans-serif" role="img" aria-label="Step 2 of patterning a shotgun: shoot one shell per sheet from a padded rest, with your head on the stock as you shoot birds in the field.">
+<rect width="400" height="290" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Shoot from a rest, head as in the field</text>
+<rect x="0" y="226" width="400" height="74" fill="#e3e8cf"/><line x1="0" y1="226" x2="400" y2="226" stroke="#a9b37f" stroke-width="2"/>
+<rect x="96" y="166" width="170" height="10" rx="2" fill="#8a5a2b"/><path d="M112 176 V226 M250 176 V226" stroke="#5a3a1a" stroke-width="6"/>
+<path d="M206 166 C206 150 238 150 238 166z" fill="#c9b48a" stroke="#8a7a5a" stroke-width="1.4"/>
+<rect x="26" y="190" width="40" height="8" rx="3" fill="#8a5a2b"/><path d="M32 198 V226 M60 198 V226" stroke="#5a3a1a" stroke-width="4"/>
+<path d="M46 188 L92 192 L96 222" stroke="#4a5a3a" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M88 218 h20 v8 h-20z" fill="#3b2a1a"/>
+<path d="M34 190 C30 166 44 140 66 130 L84 140 C86 160 74 182 60 194z" fill="#e8590c" stroke="#a63d07" stroke-width="1.2"/>
+<g transform="translate(186 150) rotate(0) scale(0.75)"><path d="M-150 -6 C-120 -6 -90 -4 -62 -2 L-40 -6 V7 C-46 9 -52 16 -56 20 L-64 19 C-62 13 -64 9 -68 8 C-96 12 -124 18 -150 22z" fill="#8a5a2b" stroke="#5a3a1a" stroke-width="1"/><path d="M-150 -6 V22" stroke="#2b2b2b" stroke-width="4"/><rect x="-42" y="-8" width="46" height="16" rx="2" fill="#3a3f3a"/><rect x="4" y="-6.5" width="150" height="6" rx="2" fill="#2b2b2b"/><rect x="4" y="1" width="112" height="5" rx="2" fill="#4a4f4a"/><rect x="30" y="-1" width="40" height="10" rx="4" fill="#8a5a2b" stroke="#5a3a1a" stroke-width="1"/><circle cx="152" cy="-6" r="1.8" fill="#d9b13c"/><path d="M-36 8 C-36 15 -26 15 -24 9" stroke="#2b2b2b" stroke-width="1.8" fill="none"/></g>
+<circle cx="86" cy="134" r="12" fill="#e2b48c"/><path d="M74 130 C74 118 98 118 98 130z" fill="#e8590c"/><path d="M96 129 h8" stroke="#e8590c" stroke-width="3"/>
+<path d="M72 146 L120 156 L152 150" stroke="#a63d07" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="152" cy="150" r="4.5" fill="#e2b48c"/>
+<rect x="326" y="84" width="62" height="62" fill="#f6f1e3" stroke="#6b5b4b" stroke-width="1.6"/><path d="M332 146 V226 M382 146 V226" stroke="#8b5a2b" stroke-width="5"/>
+<circle cx="357" cy="115" r="4" fill="#e8590c"/>
+<rect x="95.7" y="48.0" width="160.5" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="176" y="68.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">head on the stock,</text>
+<text x="176" y="88.5" font-size="16" fill="#2f3a2b" text-anchor="middle">as in the field</text>
+<line x1="92" y1="136" x2="109.726" y2="97" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="92" cy="136" r="2.6" fill="#2f3a2b"/>
+<rect x="136.8" y="196.0" width="106.4" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="190" y="216.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">padded rest</text>
+<line x1="226" y1="160" x2="227.224" y2="196" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="226" cy="160" r="2.6" fill="#2f3a2b"/>
+<text x="200" y="270" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">One shell per sheet</text>
 </svg>

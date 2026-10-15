@@ -108,7 +108,7 @@ Drop below the crosshair in cm, 100 m zero, Hunt Mentor model (75%).
 ```
 
 - Wind from 3 or 9 o'clock: full value (85%).
-- From 1, 2, 4, 5, 7, 8, 10, 11: about 70% (85%).
+- From 1, 5, 7 or 11: about half (85%). From 2, 4, 8 or 10: most of it, close to full (80%, sine of 60 degrees is 0.87).
 - From 12 or 6: ignore at hunting range (Tip).
 
 ```more the wind clock in full

@@ -3,9 +3,11 @@
 <text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Step 1: MU and Forest Service roads</text>
 <rect x="10" y="40" width="380" height="210" rx="10" fill="#eef1e6" stroke="#8a9a6b" stroke-width="2"/>
 <path d="M20 60 Q150 90 200 70 T380 90" fill="none" stroke="#23261f" stroke-width="3" stroke-dasharray="10 6"/>
-<text x="30" y="85" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">MU line</text>
+<rect x="30.0" y="86.0" width="74.6" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="67.3024" y="106.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">MU line</text>
 <path d="M30 240 Q120 200 180 170 Q240 140 300 160 Q350 175 380 130" fill="none" stroke="#e8590c" stroke-width="5"/>
 <path d="M180 170 Q200 210 260 235" fill="none" stroke="#e8590c" stroke-width="3"/>
-<text x="240" y="128" font-size="15" fill="#e8590c" text-anchor="start" font-weight="bold">FSR</text>
-<text x="200" y="280" font-size="14" fill="#23261f" text-anchor="middle">Layers: Management Units, Forest Service roads</text>
+<rect x="240.0" y="112.0" width="48.9" height="29.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="264.462" y="132.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">FSR</text>
+<text x="200" y="280" font-size="15" fill="#23261f" text-anchor="middle">Layers: Management Units, Forest Service roads</text>
 </svg>

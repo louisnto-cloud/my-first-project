@@ -1,14 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Forest Service Road habit 2. A loaded logging truck comes down the road. Your car pulls right onto the shoulder and stops to let it pass.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <rect x="120" y="0" width="160" height="300" fill="#c9b79c"/>
-  <rect x="140" y="30" width="56" height="130" rx="6" fill="#8b5a2b"/>
-  <g fill="#6b4f35"><rect x="146" y="60" width="44" height="12" rx="6"/><rect x="146" y="78" width="44" height="12" rx="6"/><rect x="146" y="96" width="44" height="12" rx="6"/><rect x="146" y="114" width="44" height="12" rx="6"/></g>
-  <rect x="146" y="134" width="44" height="24" rx="4" fill="#2f3a2b"/>
-  <path d="M168 170 L168 200" stroke="#2f3a2b" stroke-width="3"/><polygon points="160,196 176,196 168,210" fill="#2f3a2b"/>
-  <rect x="236" y="190" width="36" height="60" rx="6" fill="#4a7fb0"/>
-  <path d="M220 280 C 230 250, 250 250, 254 252" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 4"/>
-  <text x="12" y="200" font-size="15" font-weight="bold" fill="#2f3a2b">Loaded truck</text>
-  <text x="12" y="218" font-size="15" fill="#2f3a2b">coming down</text>
-  <text x="300" y="150" font-size="16" font-weight="bold" fill="#e8590c">Pull right.</text>
-  <text x="300" y="170" font-size="16" font-weight="bold" fill="#e8590c">Stop.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Forest Service Road habit 2. A loaded logging truck comes down the road toward you. Your car pulls right onto the shoulder and stops to let it pass.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<rect x="0" y="0" width="400" height="300" fill="#e3ecf3"/>
+<path d="M0 112 C60 100 120 108 170 98 C230 86 300 102 400 92 V300 H0z" fill="#6f8a55"/>
+<path d="M30 84 L40 118 L20 118z" fill="#3f5a37"/>
+<path d="M62 82 L71 112 L53 112z" fill="#3f5a37"/>
+<path d="M318 78 L327 108 L309 108z" fill="#3f5a37"/>
+<path d="M346 76 L354 104 L338 104z" fill="#3f5a37"/>
+<path d="M372 78 L382 110 L362 110z" fill="#3f5a37"/>
+<path d="M96 300 L186 104 L222 104 L380 300z" fill="#c9b79c"/>
+<path d="M290 300 L214 104 L222 104 L380 300z" fill="#b8a586"/>
+<path d="M204 112 L203 130 M201 148 L199 170 M196 192 L193 220 M189 244 L185 276" stroke="#e8dcc6" stroke-width="3"/>
+<rect x="128" y="104" width="80" height="34" rx="4" fill="#8b5a2b"/>
+<circle cx="136" cy="130" r="8" fill="#c9a46a" stroke="#6b4f35" stroke-width="1.4"/><circle cx="136" cy="130" r="3" fill="none" stroke="#8b5a2b" stroke-width="1"/>
+<circle cx="152" cy="130" r="8" fill="#c9a46a" stroke="#6b4f35" stroke-width="1.4"/><circle cx="152" cy="130" r="3" fill="none" stroke="#8b5a2b" stroke-width="1"/>
+<circle cx="168" cy="130" r="8" fill="#c9a46a" stroke="#6b4f35" stroke-width="1.4"/><circle cx="168" cy="130" r="3" fill="none" stroke="#8b5a2b" stroke-width="1"/>
+<circle cx="184" cy="130" r="8" fill="#c9a46a" stroke="#6b4f35" stroke-width="1.4"/><circle cx="184" cy="130" r="3" fill="none" stroke="#8b5a2b" stroke-width="1"/>
+<circle cx="200" cy="130" r="8" fill="#c9a46a" stroke="#6b4f35" stroke-width="1.4"/><circle cx="200" cy="130" r="3" fill="none" stroke="#8b5a2b" stroke-width="1"/>
+<circle cx="144" cy="114" r="8" fill="#c9a46a" stroke="#6b4f35" stroke-width="1.4"/>
+<circle cx="160" cy="114" r="8" fill="#c9a46a" stroke="#6b4f35" stroke-width="1.4"/>
+<circle cx="176" cy="114" r="8" fill="#c9a46a" stroke="#6b4f35" stroke-width="1.4"/>
+<circle cx="192" cy="114" r="8" fill="#c9a46a" stroke="#6b4f35" stroke-width="1.4"/>
+<rect x="124" y="138" width="88" height="50" rx="6" fill="#c0392b"/><rect x="134" y="144" width="68" height="20" rx="3" fill="#c9d6e0"/>
+<rect x="146" y="168" width="44" height="14" fill="#7a7a72"/><path d="M148 172 H188 M148 177 H188" stroke="#4a4a44" stroke-width="1.6"/>
+<circle cx="134" cy="178" r="6" fill="#ffd34d"/><circle cx="202" cy="178" r="6" fill="#ffd34d"/>
+<rect x="124" y="186" width="16" height="14" rx="2" fill="#2b2b2b"/><rect x="196" y="186" width="16" height="14" rx="2" fill="#2b2b2b"/>
+<path d="M278 232 C282 212 354 212 358 232z" fill="#3a6690"/>
+<path d="M288 230 C292 216 344 216 348 230z" fill="#c9d6e0"/>
+<rect x="272" y="230" width="92" height="30" rx="6" fill="#4a7fb0"/>
+<rect x="278" y="238" width="16" height="8" rx="2" fill="#e03131"/><rect x="342" y="238" width="16" height="8" rx="2" fill="#e03131"/>
+<rect x="276" y="258" width="14" height="12" rx="2" fill="#2b2b2b"/><rect x="346" y="258" width="14" height="12" rx="2" fill="#2b2b2b"/>
+<path d="M262 296 C270 280 280 272 292 268" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 5" fill="none"/>
+<rect x="10.0" y="12.0" width="119.1" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="69.5584" y="32.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Loaded truck</text>
+<text x="69.5584" y="52.5" font-size="16" fill="#2f3a2b" text-anchor="middle">coming down</text>
+<line x1="130" y1="120" x2="109.117" y2="61" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="130" cy="120" r="2.6" fill="#2f3a2b"/>
+<rect x="294.1" y="140.0" width="95.9" height="51.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="342.072" y="161.5" font-size="17" font-weight="bold" fill="#c2410c" text-anchor="middle">Pull right.</text>
+<text x="342.072" y="182.5" font-size="17" font-weight="bold" fill="#c2410c" text-anchor="middle">Stop.</text>
+<line x1="328" y1="216" x2="324.145" y2="191" stroke="#e8590c" stroke-width="1.4"/><circle cx="328" cy="216" r="2.6" fill="#e8590c"/>
 </svg>

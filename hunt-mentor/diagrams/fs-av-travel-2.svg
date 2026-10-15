@@ -1,4 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Travel step 2: travel on ridges, low angle slopes and dense trees, away from slopes over 30 degrees and what is above you.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Pick low angle routes</text><path d="M0 260 L140 110 L200 90 L260 110 L400 260 Z" fill="#f4f7fb" stroke="#c9d6e3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 250 L140 120 L200 96" fill="none" stroke="#2e7d32" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 6"/><text x="110" y="90" font-size="15" font-weight="bold" fill="#2e7d32" text-anchor="middle">ridge route</text><text x="200" y="288" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Ridges and low angle, not open faces</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Travel step 2: travel on ridges, low angle slopes and dense trees, away from open slopes over 30 degrees and what is above you. Ridges and low angle, not open faces.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Pick low angle routes</text>
+<path d="M0 270 L130 120 C150 104 170 100 196 98 L232 108 L330 186 L400 238 V300 H0z" fill="#f4f7fb" stroke="#c9d6e3" stroke-width="2"/>
+<path d="M196 98 L232 108 L330 186 L268 196 z" fill="#e3ecf5"/>
+<path d="M92 162 L81 190 H103z M92 174 L79 198 H105z" fill="#3a5a31"/><rect x="90" y="198" width="4" height="6" fill="#5a3e26"/>
+<path d="M110 144 L99 172 H121z M110 156 L97 180 H123z" fill="#3a5a31"/><rect x="108" y="180" width="4" height="6" fill="#5a3e26"/>
+<path d="M128 126 L117 154 H139z M128 138 L115 162 H141z" fill="#3a5a31"/><rect x="126" y="162" width="4" height="6" fill="#5a3e26"/>
+<path d="M76 188 L65 216 H87z M76 200 L63 224 H89z" fill="#3a5a31"/><rect x="74" y="224" width="4" height="6" fill="#5a3e26"/>
+<path d="M146 112 L135 140 H157z M146 124 L133 148 H159z" fill="#3a5a31"/><rect x="144" y="148" width="4" height="6" fill="#5a3e26"/>
+<path d="M40 268 C70 236 110 196 140 158 C160 132 180 112 200 102" stroke="#2f6e3b" stroke-width="3.4" stroke-dasharray="8 5" fill="none"/>
+<g transform="translate(60 250) scale(0.8)"><line x1="-4" y1="0" x2="-1" y2="-24" stroke="#2f3a2b" stroke-width="5.6" stroke-linecap="round"/><line x1="9" y1="-2" x2="3" y2="-24" stroke="#2f3a2b" stroke-width="5.6" stroke-linecap="round"/><rect x="-9" y="-46" width="18" height="25" rx="4.8" fill="#e8590c"/><line x1="-8" y1="-42" x2="-14" y2="-25" stroke="#2f3a2b" stroke-width="4.8" stroke-linecap="round"/><line x1="8" y1="-42" x2="14" y2="-25" stroke="#2f3a2b" stroke-width="4.8" stroke-linecap="round"/><circle cx="0" cy="-53" r="8" fill="#d9b48f"/></g>
+<rect x="14.5" y="84.0" width="98.9" height="29.0" rx="5" fill="#fffaf0" stroke="#2f6e3b" stroke-width="1.2"/>
+<text x="64" y="104.5" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">ridge route</text>
+<line x1="118" y1="172" x2="44.5424" y2="113" stroke="#2f6e3b" stroke-width="1.4"/><circle cx="118" cy="172" r="2.6" fill="#2f6e3b"/>
+<rect x="263.5" y="50.0" width="133.1" height="45.0" rx="5" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.2"/>
+<text x="330" y="69" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="middle">open face</text>
+<text x="330" y="87" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="middle">over 30 degrees</text>
+<line x1="262" y1="150" x2="293.454" y2="95" stroke="#c92a2a" stroke-width="1.4"/><circle cx="262" cy="150" r="2.6" fill="#c92a2a"/>
+<path d="M320.4 200.4 l19.2 19.2 M339.6 200.4 l-19.2 19.2" stroke="#c92a2a" stroke-width="5.1" stroke-linecap="round"/>
+<text x="200" y="288" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Ridges and low angle, not open faces</text>
 </svg>
