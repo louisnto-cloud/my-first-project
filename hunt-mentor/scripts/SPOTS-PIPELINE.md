@@ -13,6 +13,7 @@ Script: `scripts/spots-pipeline.py` (Python 3.11). Rerunnable. Every download is
 - Areas D and E (2026-10-04): `--areas D,E --steps fetch,dem,layers,spots,migration`, then `--areas A,B,C,D,E --steps manifest`.
 - Area F (2026-10-04): `--areas F --steps fetch,dem,layers,spots,migration`, then `--areas A,B,C,D,E,F --steps manifest`. Fetch also caches a few OpenStreetMap outlines from Nominatim (`osm/`, 1.5 s apart) for Region 4 map areas that have no official polygon.
 - Area G (2026-10-04): `--areas G --steps fetch,dem,layers,spots,migration`, then `--areas A,B,C,D,E,F,G --steps manifest`.
+- No shooting / no hunting areas (2026-10-16): separate script `python3 scripts/build-noshoot.py --cache /path/outside/repo` writes `data/layers/bc/no_hunting.geojson`, `data/addons/noshoot/unmapped.json` and the `no_hunting` manifest entry (the pipeline's `manifest` step keeps hand added layers). Never name the MU layer (WAA_WILDLIFE_MGMT_UNITS) in another layer's `source`: layers.js picks the MU layer by that text.
 - Run `manifest` with all areas, so every area stays listed. The manifest also carries `areaBoxes` and `areaNames` for the app.
 - The cache used on 2026-10-03 and 04: the session scratchpad `.../scratchpad/gis/` (`raw/`, `dem/12/`, `work/`).
 
