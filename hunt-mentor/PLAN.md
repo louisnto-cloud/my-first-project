@@ -156,3 +156,4 @@ hunt-mentor/
 - 2026-10-16: owner home base is Mission (Home default and map first view); priority animals black bear and deer.
 - 2026-10-16: owner focus is deer near Mission (Harrison area fine, about 60 km); no bear hunting near Mission.
 - 2026-10-16: published practice shooting (50 ranges from OpenStreetMap, 15 rules, Where can I practise? check). Known: glassing sheet can reopen over another tool if its slow calculation finishes after you switch (seen only on a slow network).
+- 2026-10-16: published 60 big game photos (bg-*, data/photos/bg.json, 7.9 MB).
