@@ -9,17 +9,17 @@
   const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   // Preset places. MU (Management Unit) found by point in polygon on data/layers/bc/mu.geojson at these points (checked 2026-10-04).
   const PLACES = {
+    mission: { label: 'Mission', short: 'Mission', base: 'mission', mu: '2-8' }, // owner's home base (2026-10-16)
     heffley: { label: 'Heffley Creek', short: 'Heffley', base: 'heffley', mu: '3-27' },
-    mission: { label: 'Mission', short: 'Mission', base: 'mission', mu: '2-8' },
     oliver: { label: 'Okanagan (Oliver)', short: 'Oliver', lat: 49.183, lon: -119.55, mu: '8-1' }, // Assumption: approximate town centre
     gps: { label: 'My location', short: 'My spot' },
   };
   // Species shown on the card, in this order. Ducks and geese come from the federal table (migratory.json).
   const GROUPS = [
     ['Deer', (s) => s === 'mule deer' || s === 'white tailed deer'],
+    ['Black bear', (s) => s === 'black bear'],
     ['Grouse', (s) => s.includes('grouse')],
     ['Quail', (s) => s.includes('quail')],
-    ['Black bear', (s) => s === 'black bear'],
     ['Moose', (s) => s === 'moose'],
     ['Elk', (s) => s === 'elk'],
   ];
@@ -75,7 +75,7 @@
         for (const r of M.rows || []) {
           if (r.district !== dk || (r.mus && !r.mus.includes(mu))) continue;
           const sp = String(r.species || '').toLowerCase();
-          const g = sp === 'ducks' ? 1 : sp.includes('geese') ? 2 : -1;
+          const g = sp === 'ducks' ? 1.5 : sp.includes('geese') ? 1.6 : -1; // after deer and black bear (owner priority), before grouse
           if (g < 0 || !openOn(r, t)) continue;
           out.push({ g, sp: cap(sp), cls: r.daily ? `${r.daily} a day, ${r.possession} in possession` : '', note: '', tag: '',
             open: r.open, close: r.close, left: daysLeft(r.close, iso), src: `Federal Migratory Birds Regulations, ${r.item || 'Schedule 3'}`, cert: r.cert });
@@ -169,7 +169,7 @@
   function render(view, C, opts) {
     const S = C.S;
     const st = (S.settings.home = S.settings.home || {});
-    const where = PLACES[st.where] ? st.where : 'heffley';
+    const where = PLACES[st.where] ? st.where : 'mission';
     const place = PLACES[where];
     const base = place.base && (window.HM.bases || []).find((b) => b.id === place.base);
     const gps = st.gps || null;
