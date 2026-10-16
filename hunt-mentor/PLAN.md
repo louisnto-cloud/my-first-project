@@ -159,3 +159,4 @@ hunt-mentor/
 - 2026-10-16: published 60 big game photos (bg-*, data/photos/bg.json, 7.9 MB).
 - 2026-10-16: published 31 track, sign and terrain photos (ts-*).
 - 2026-10-16: published Crown land, tenures and Where you can likely hunt for all of BC (about 41 MB PMTiles, read by range).
+- 2026-10-16: published 29 bird photos (bd-*).
