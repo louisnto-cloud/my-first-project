@@ -132,7 +132,7 @@
         else { const b = boxOf(svg, el); if (!b) return; x = b.x + b.w - Math.min(6, b.w / 2); y = b.y + Math.min(6, b.h / 2); }
         x = Math.max(v.x + 10, Math.min(v.x + v.width - 10, x)); y = Math.max(v.y + 10, Math.min(v.y + v.height - 10, y));
         const g = mk('g', { class: 'hm-dot', 'data-tip-i': i, transform: `translate(${x.toFixed(1)} ${y.toFixed(1)})` });
-        g.appendChild(mk('circle', { class: 'hm-dot-ring', r: 9 })); g.appendChild(mk('circle', { class: 'hm-dot-core', r: 5.5 }));
+        g.appendChild(mk('circle', { class: 'hm-dot-hit', r: 11 })); g.appendChild(mk('circle', { class: 'hm-dot-ring', r: 9 })); g.appendChild(mk('circle', { class: 'hm-dot-core', r: 5.5 }));
         layer.appendChild(g); drawn++;
       });
       if (drawn) { svg.appendChild(layer); svg.dataset.hmDots = '1'; }

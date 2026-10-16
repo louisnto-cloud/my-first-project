@@ -490,6 +490,8 @@ details.pl-cat[open] > summary::after { transform: rotate(-135deg); margin-botto
 .has-tips [data-tip]:focus { outline: none; }
 .has-tips [data-tip]:focus-visible { outline: 3px solid #e8590c; outline-offset: 2px; }
 .hm-dot { cursor: pointer; }
+.hm-dot-hit { fill: #fffaf0; fill-opacity: 0; pointer-events: all; }
+.hm-dot-ring { pointer-events: none; }
 .hm-dot-core { fill: #e8590c; stroke: #fffaf0; stroke-width: 2; }
 .hm-dot-ring { fill: none; stroke: #e8590c; stroke-width: 2; transform-box: fill-box; transform-origin: center; animation: hm-pulse 2.2s ease-out infinite; }
 .hm-dot.on .hm-dot-core { fill: #2f3a2b; }

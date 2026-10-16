@@ -1,18 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 414" font-family="sans-serif" role="img" aria-label="Deer, elk, moose or caribou killed outside BC. May enter BC: the edible meat of the four quarters, loins, neck and ribs; and the hide, antlers and skull plate only if cleaned of ALL tissue before crossing into BC. Stays behind: head and brain, eyes, spinal column, bone in the neck or back, lymph nodes, guts and organs, an uncleaned skull cap, a hide with flesh on it. Bone out the meat and clean the skull plate before you leave the kill area. Source: BC synopsis 2026 to 2028, page 12, item 50.">
-<rect width="400" height="414" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 468" font-family="sans-serif" role="img" aria-label="Deer, elk, moose or caribou killed outside BC. May enter BC: the edible meat of the four quarters, loins, neck and ribs; and the hide, antlers and skull plate only if cleaned of ALL tissue before crossing into BC. Stays behind: head and brain, eyes, spinal column, bone in the neck or back, lymph nodes, guts and organs, an uncleaned skull cap, a hide with flesh on it. Bone out the meat and clean the skull plate before you leave the kill area. Source: BC synopsis 2026 to 2028, page 12, item 50.">
+<rect width="400" height="468" fill="#fffaf0"/>
 <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Deer, elk, moose, caribou</text>
 <text x="200" y="48" font-size="16" fill="#2f3a2b" text-anchor="middle">from outside BC</text>
 <rect x="8" y="62" width="188" height="292" rx="10" fill="#e7efe0" stroke="#9db58c"/>
 <path d="M8 98 V72 a10 10 0 0 1 10 -10 H186 a10 10 0 0 1 10 10 V98z" fill="#2f6e3b"/>
 <path d="M22 80 l6 6 l12 -12" fill="none" stroke="#fffaf0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
 <text x="48" y="87" font-size="16" font-weight="bold" fill="#fffaf0">MAY ENTER BC</text>
+<g data-tip="Meat that may enter|The edible meat of the four quarters, loins, neck and ribs (99%, synopsis page 12, item 50).">
 <g transform="translate(102 136)"><path d="M-40 -6 C-38 -22 -10 -26 10 -22 C34 -18 44 -4 38 8 C30 20 -6 22 -24 16 C-38 12 -42 4 -40 -6z" fill="#b8473c" stroke="#7a2a22" stroke-width="2"/><path d="M-26 -4 C-12 -12 8 -12 24 -4 M-20 6 C-4 0 12 2 26 8" fill="none" stroke="#f1d6c8" stroke-width="3" stroke-linecap="round"/></g>
 <text x="102" y="186" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Meat: 4 quarters,</text>
 <text x="102" y="205" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">loins, neck, ribs</text>
+</g>
+<g data-tip="Hide, antlers, skull plate|Allowed only if cleaned of all tissue before it is brought into BC (99%, item 50).">
 <g transform="translate(102 262)"><path d="M-6 -2 C-14 -16 -26 -24 -40 -26 M-22 -18 C-26 -28 -24 -34 -20 -38 M6 -2 C14 -16 26 -24 40 -26 M22 -18 C26 -28 24 -34 20 -38" fill="none" stroke="#6b4f35" stroke-width="7" stroke-linecap="round"/><path d="M-6 -2 C-14 -16 -26 -24 -40 -26 M-22 -18 C-26 -28 -24 -34 -20 -38 M6 -2 C14 -16 26 -24 40 -26 M22 -18 C26 -28 24 -34 20 -38" fill="none" stroke="#ecdfc3" stroke-width="4" stroke-linecap="round"/><path d="M-16 -4 C-10 -8 10 -8 16 -4 C18 4 10 10 0 10 C-10 10 -18 4 -16 -4z" fill="#f6f1e4" stroke="#6b4f35" stroke-width="2"/></g>
 <text x="102" y="296" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hide, antlers,</text>
 <text x="102" y="314" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">skull plate: cleaned</text>
 <text x="102" y="336" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">of ALL tissue first</text>
+</g>
+<g data-tip="Everything else stays behind|You may not possess any other part of a deer, elk, moose or caribou killed outside BC (99%, item 50). CWD (Chronic Wasting Disease) drives this rule.">
 <rect x="204" y="62" width="188" height="292" rx="10" fill="#f6e7e2" stroke="#e2c4bb"/>
 <path d="M204 98 V72 a10 10 0 0 1 10 -10 H382 a10 10 0 0 1 10 10 V98z" fill="#c0392b"/>
 <path d="M220 74 l12 12 M232 74 l-12 12" stroke="#fffaf0" stroke-width="3.5" stroke-linecap="round"/>
@@ -31,6 +36,15 @@
 <text x="234" y="282" font-size="15" fill="#2f3a2b">Uncleaned skull cap</text>
 <path d="M216 302 l8 8 M224 302 l-8 8" stroke="#c0392b" stroke-width="2.4" stroke-linecap="round"/>
 <text x="234" y="312" font-size="15" fill="#2f3a2b">Hide with flesh on</text>
+</g>
+<g data-tip="Bone out at the kill|Only the meat and a clean skull plate come home.">
 <text x="200" y="380" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bone out at the kill</text>
 <text x="200" y="402" font-size="14" fill="#6b5b4b" text-anchor="middle">Synopsis page 12, item 50</text>
+</g>
+<g data-tip="No outside scents|Using any deer, elk, moose or caribou part or product from outside BC, such as urine scents, for hunting in BC is unlawful (99%, item 51).">
+<rect x="8" y="414" width="384" height="46" rx="10" fill="#fffaf0" stroke="#c0392b" stroke-width="2"/>
+<path d="M30 426 h14 v6 c6 4 6 18 0 22 h-14 c-6 -4 -6 -18 0 -22z" fill="#e8d7a0" stroke="#6b4f35" stroke-width="1.5"/>
+<path d="M24 422 L50 456" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
+<text x="62" y="443" font-size="16" font-weight="bold" fill="#c0392b">No urine lures from outside BC</text>
+</g>
 </svg>

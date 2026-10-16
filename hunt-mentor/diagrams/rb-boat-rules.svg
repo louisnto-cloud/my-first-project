@@ -1,27 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 344" role="img" aria-label="Four boat panels. Motor pushing the boat: no hunting anything. Boat still gliding after the motor is cut: no shooting ducks, it still counts as moving. Boat anchored or beached, stopped: ducks are OK, 95 percent. Deer or grouse with the motor not pushing the boat: allowed by the rule, but the tip is to skip it." font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="344" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 430" role="img" aria-label="Four boat panels. Motor pushing the boat: no hunting anything. Boat still gliding after the motor is cut: no shooting ducks, it still counts as moving. Boat anchored or beached, stopped: ducks are OK, 99 percent. Deer or grouse with the motor not pushing the boat: allowed by the rule, but the tip is to skip it. Load only with the motor off. A kayak has no motor." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="430" fill="#fffaf0"/>
 <text x="200" y="24" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Your boat: when can you shoot?</text>
+<g data-tip="Motor pushing it|No hunting wildlife from a boat its motor is propelling (99%, page 11 item 23). No hunting migratory birds from a moving boat with a motor or sail (99%, item 24).">
 <rect x="8" y="40" width="188" height="142" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
-<text x="102" y="62" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Motor pushing it</text>
+<circle cx="26" cy="58" r="11" fill="#c92a2a"/><text x="26" y="63" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">1</text><text x="110" y="63" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Motor pushing it</text>
 <g transform="translate(102 102) scale(1.1)"><path d="M-34 -4 L30 -4 L22 10 L-28 10 Z" fill="#8b5a2b"/><rect x="-42" y="-14" width="10" height="12" rx="2" fill="#2f3a2b"/><rect x="-39" y="-2" width="4" height="16" fill="#2f3a2b"/><path d="M-46 16 q 8 -5 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0" fill="none" stroke="#4a7fb0" stroke-width="2.5"/></g>
 <path d="M38 110 l-16 -4 M38 116 l-18 2" stroke="#4a7fb0" stroke-width="3"/>
 <text x="102" y="148" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">No hunting</text>
 <text x="102" y="167" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">anything</text>
+</g>
+<g data-tip="Gliding after the motor is cut|A boat that keeps moving from motion its motor or sail gave it counts as moving (99%, Hunting Regulation section 17(1.2)). Ducks: no shot.">
 <rect x="204" y="40" width="188" height="142" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
-<text x="298" y="62" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Glides after motor cut</text>
+<circle cx="222" cy="58" r="11" fill="#c92a2a"/><text x="222" y="63" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">2</text><text x="306" y="63" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Gliding, motor cut</text>
 <g transform="translate(298 102) scale(1.1)"><path d="M-34 -4 L30 -4 L22 10 L-28 10 Z" fill="#8b5a2b"/><rect x="-42" y="-14" width="10" height="12" rx="2" fill="#2f3a2b"/><rect x="-39" y="-2" width="4" height="16" fill="#2f3a2b"/><path d="M-46 16 q 8 -5 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0" fill="none" stroke="#4a7fb0" stroke-width="2.5"/></g>
 <path d="M354 98 l14 0 m-5 -5 l5 5 l-5 5" stroke="#23261f" stroke-width="2.5" fill="none"/>
 <text x="298" y="148" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">Ducks: NO.</text>
 <text x="298" y="167" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">Still moving</text>
+</g>
+<g data-tip="Stopped: anchored, beached, tied|Shoot ducks only from a stopped boat (99%). Retrieving a bird with a boat is lawful when no motor or sail is propelling it (99%, page 12).">
 <rect x="8" y="190" width="188" height="142" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
-<text x="102" y="212" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Anchored or beached</text>
+<circle cx="26" cy="208" r="11" fill="#5c7a3a"/><text x="26" y="213" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">3</text><text x="110" y="213" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Anchored, beached</text>
 <g transform="translate(102 252) scale(1.1)"><path d="M-34 -4 L30 -4 L22 10 L-28 10 Z" fill="#8b5a2b"/><rect x="-42" y="-14" width="10" height="12" rx="2" fill="#2f3a2b"/><rect x="-39" y="-2" width="4" height="16" fill="#2f3a2b"/><path d="M-46 16 q 8 -5 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0" fill="none" stroke="#4a7fb0" stroke-width="2.5"/></g>
 <path d="M128 262 l0 22 m-8 -6 q8 10 16 0" stroke="#2f3a2b" stroke-width="2.5" fill="none"/>
 <text x="102" y="298" font-size="15" fill="#5c7a3a" text-anchor="middle" font-weight="bold">Ducks: OK</text>
-<text x="102" y="317" font-size="15" fill="#5c7a3a" text-anchor="middle" font-weight="bold">(95%)</text>
+<text x="102" y="317" font-size="15" fill="#5c7a3a" text-anchor="middle" font-weight="bold">(99%)</text>
+</g>
+<g data-tip="Deer or grouse|Allowed with the motor not propelling the boat, or only holding you still against current, tide or wind (99%, item 23). Never shoot a deer while it swims unless it is already wounded (99%). Tip: no deer from the boat.">
 <rect x="204" y="190" width="188" height="142" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
-<text x="298" y="212" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Deer or grouse</text>
+<circle cx="222" cy="208" r="11" fill="#5c7a3a"/><text x="222" y="213" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">4</text><text x="306" y="213" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Deer or grouse</text>
 <g transform="translate(298 252) scale(1.1)"><path d="M-34 -4 L30 -4 L22 10 L-28 10 Z" fill="#8b5a2b"/><rect x="-42" y="-14" width="10" height="12" rx="2" fill="#2f3a2b"/><rect x="-39" y="-2" width="4" height="16" fill="#2f3a2b"/><path d="M-46 16 q 8 -5 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0" fill="none" stroke="#4a7fb0" stroke-width="2.5"/></g>
 <text x="298" y="298" font-size="15" fill="#5c7a3a" text-anchor="middle" font-weight="bold">Motor not pushing:</text>
 <text x="298" y="317" font-size="15" fill="#5c7a3a" text-anchor="middle" font-weight="bold">allowed. Tip: skip it</text>
+</g>
+<g data-tip="Loaded firearm in a boat|Since 1 October 2026 a loaded firearm in or on a boat is banned. The exemption covers hunting from a boat with no motor, or one its motor is not propelling (99%). Tip: load only with the motor off.">
+<rect x="8" y="344" width="188" height="78" rx="10" fill="#2f3a2b"/>
+<text x="102" y="374" font-size="16" fill="#fffaf0" text-anchor="middle" font-weight="bold">Load only with</text>
+<text x="102" y="398" font-size="16" fill="#f6b98f" text-anchor="middle" font-weight="bold">the motor off</text>
+</g>
+<g data-tip="Kayak or paddled boat|No motor, so the moving boat rule does not apply to it (95%). Deer from a kayak: exempt since 1 October 2026, but Tip: do not.">
+<rect x="204" y="344" width="188" height="78" rx="10" fill="#e6eef5" stroke="#4a7fb0" stroke-width="2"/>
+<path d="M232 392 C250 400 282 400 300 392 L294 388 L238 388z" fill="#e8590c"/>
+<circle cx="266" cy="376" r="6" fill="#2f3a2b"/><path d="M262 382 L270 382 L272 390 L260 390z" fill="#2f3a2b"/><path d="M238 380 L294 372" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round"/><ellipse cx="236" cy="380" rx="6" ry="3" fill="#2f3a2b" transform="rotate(-8 236 380)"/><ellipse cx="296" cy="372" rx="6" ry="3" fill="#2f3a2b" transform="rotate(-8 296 372)"/>
+<text x="350" y="380" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">Kayak:</text>
+<text x="350" y="400" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">no motor</text>
+</g>
 </svg>
