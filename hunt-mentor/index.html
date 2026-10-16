@@ -31,7 +31,7 @@
 <div class="sheet" id="sheet" hidden><div class="sheet-card"><div id="sheet-body"></div><button class="btn" id="sheet-close">Close</button></div></div>
 <script src="content.js"></script>
 <script src="home.js"></script><script src="plan.js"></script>
-<script src="ask.js"></script><script src="places.js"></script><script src="app.js"></script>
+<script src="ask.js"></script><script src="places.js"></script><script src="addons/safety.js"></script><script src="addons/train.js"></script><script src="app.js"></script>
 <script>if("serviceWorker" in navigator)addEventListener("load",function(){var sw=navigator.serviceWorker,had=!!sw.controller,shown=0;sw.register("sw.js").then(function(r){document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")r.update().catch(function(){});});});sw.addEventListener("controllerchange",function(){if(!had||shown)return;shown=1;var b=document.createElement("button");b.type="button";b.className="hm-update";b.textContent="New version ready. Tap to update.";b.onclick=function(){location.reload();};document.body.appendChild(b);});});</script>
 </body>
 </html>
