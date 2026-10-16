@@ -106,6 +106,9 @@ rs-dr-4 | Note where it lies: trail, bed, roost, scrape.
 - Deer: about 1.3 cm, pointed at one end (85%).
 - Moose: about 1.9 cm across and 2.5 to 3.8 cm long (80%).
 
+```photo ts-moose-pellets Moose pellets: oblong, rounded both ends, in a pile.
+```
+
 ```more pellet details
 | Animal | Size | Shape notes |
 |---|---|---|

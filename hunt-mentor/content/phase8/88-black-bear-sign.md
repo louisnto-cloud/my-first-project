@@ -108,6 +108,11 @@ commons-black-bear-marking | A black bear rubbing and marking trees.
 - Rub trees: hair stuck in the bark, often by a trail (90%).
 - Bites and claw marks at head height: marking (90%).
 
+```gallery
+ts-bear-rub-tree | Rub tree: bark worn off at bear height.
+ts-bear-rub-jasper | Scat on the trail, rubbed trunks behind.
+```
+
 ```more marking in detail
 - BC account (90%): claw and bite marks where a bear "marked the trunk with scent during mating season or chewed at the bark to get at the cambium"; bears "frequently use rubbing trees, either as a scratching post or to mark their home range".
 - Boar behaviour includes rubbing on trees and breaking saplings (65%, Boone and Crockett, Jim Shockey).

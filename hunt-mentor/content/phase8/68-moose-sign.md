@@ -67,6 +67,11 @@ hab-moose-trail-snow | A moose trail: a trough with deep holes.
 - Fall and winter: big oval pellets, like pressed sawdust (65%).
 - Summer: soft clumps or patties (65%).
 
+```gallery
+ts-moose-pellets | Winter pellets: big ovals, like pressed sawdust.
+ts-moose-pellets-snow | A winter pile on a snowy trail.
+```
+
 ```more droppings in detail
 - App sign table: moose pellets about 1.5 to 2 cm across and 2.5 to 4 cm long; winter pellets look like pressed sawdust; summer droppings are loose patties (65%, [reading sign](#/s/sign)).
 - Habitat tour: big oval pellets about 2.5 to 3 cm long, in large piles (75%).

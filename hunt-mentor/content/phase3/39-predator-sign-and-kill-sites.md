@@ -47,6 +47,11 @@ g-coyote-snow | Coyote: tracks and scat everywhere in Region 3.
 - Torn logs, dug anthills, fresh scat, tracks: recent bear activity (85%).
 - Ravens, magpies, crows or jays: maybe a carcass that drew a bear (85%).
 
+```gallery
+ts-bear-rub-jasper | Bear scat on a trail, rub trees behind.
+ts-wolf-track-birch | Wolf track in creek mud, knife for scale.
+```
+
 ```more sign in full
 - Alberta's hunter bear guide lists "fresh signs that indicate recent bear activity: tracks, scat, overturned logs or dug up anthills" and areas where bears may be feeding: berry patches, digging sites, near animal carcasses, grain fields (85%, Alberta Environment, Be BearSmart).
 - "Watch for ravens, magpies, crows or jays. These birds could be at a carcass or gut pile that may have also attracted a bear" (85%, same source).

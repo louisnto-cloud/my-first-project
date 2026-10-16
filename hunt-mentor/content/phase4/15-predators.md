@@ -207,6 +207,11 @@ commons-cougar-trailcam | Cougars use the same trails as deer. Hunters rarely se
 
 - Fresh cougar kill? Leave at once and call 1 877 952 7277 (85%).
 
+```gallery
+ts-cougar-track-wa | Cougar: round, no claws, 3 lobed heel pad.
+ts-wolf-front-hind | Wolf: claws show, small heel pad. Front is bigger.
+```
+
 ```more every track and sign
 - Cougar track: round, no claws, four toes, about 8 to 10 cm; a covered carcass with leaves and debris raked over it (85%).
 - Wolf track: 10 to 13 cm long with claws, in a straight travel line; coyote about 6 to 7 cm (60%).

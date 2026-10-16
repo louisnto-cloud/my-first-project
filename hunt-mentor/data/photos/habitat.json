@@ -697,5 +697,68 @@
     "licence": "CC BY-SA 4.0",
     "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Rosa_woodsii_along_Douglas_Creek,_Douglas_County_Washington.jpg"
+  },
+  {
+    "id": "ts-cougar-track-wa",
+    "species": "Cougar",
+    "caption": "Cougar track in dust, Washington. Round print, big heel pad with 3 lobes at the back, no claw marks.",
+    "author": "Marshal Hedin from San Diego",
+    "licence": "CC BY-SA 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mountain_lion_tracks,_west_of_Trout_Lake,_WA_(18789663531).jpg"
+  },
+  {
+    "id": "ts-wolf-front-hind",
+    "species": "Grey wolf",
+    "caption": "Wolf front (left) and hind (right) tracks in mud, Oregon. Ruler for scale. Claws show, heel pad small: a canine track.",
+    "author": "Oregon Department of Fish & Wildlife",
+    "licence": "CC BY-SA 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Wolf_tracks_(17292442642).jpg"
+  },
+  {
+    "id": "ts-wolf-track-birch",
+    "species": "Grey wolf",
+    "caption": "Wolf tracks in creek mud, Alaska. A pocket knife for scale. Four toes with claw marks.",
+    "author": "BLM Alaska",
+    "licence": "CC BY 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Birch_Creek_wolf_tracks.jpg"
+  },
+  {
+    "id": "ts-moose-pellets",
+    "species": "Moose",
+    "caption": "Moose winter pellets. Each about 2.5 cm (1 in) long, oval, like pressed sawdust.",
+    "author": "Ivan Kristensen",
+    "licence": "CC BY-SA 3.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Alces_alces_scat.jpg"
+  },
+  {
+    "id": "ts-moose-pellets-snow",
+    "species": "Moose",
+    "caption": "Moose pellets on a snowy trail, Alaska. Dark, firm winter pellets in a pile.",
+    "author": "Beeblebrox",
+    "licence": "CC BY-SA 3.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Snowpoop.JPG"
+  },
+  {
+    "id": "ts-bear-rub-tree",
+    "species": "Grizzly bear",
+    "caption": "Grizzly rub tree, Glacier National Park, Montana. Bark worn and torn off at bear height.",
+    "author": "Glacier National Park",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Rub_tree_(Northern_Divide_Grizzly_Bear_Project)_(4427395613).jpg"
+  },
+  {
+    "id": "ts-bear-rub-jasper",
+    "species": "Black bear",
+    "caption": "Bear sign on a trail, Jasper, Alberta. A pile of scat on the path and rub trees with bark stripped behind.",
+    "author": "Dwayne Reilander",
+    "licence": "CC BY 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jasper-Bear-Hunt-28.jpg"
   }
 ]
