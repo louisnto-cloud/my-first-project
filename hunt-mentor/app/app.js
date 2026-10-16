@@ -217,6 +217,7 @@
     if (window.HMHome) try { window.HMHome.render(view, { S, save, daysTo, sunEvent, hhmm, addMin, certBadge, mentorUrl: MENTOR_URL, hasSession: (id) => !!byId[id], refresh: home, planCard }); } catch (e) { console.warn("Home dashboard", e); }
     else if (planCard) view.insertAdjacentHTML('afterbegin', planCard());
     view.insertAdjacentHTML('afterbegin', startCard('cont-home'));
+    const today = view.querySelector('.pl-today'); if (today) view.prepend(today); // the study task for the next hunt goes first
     const warm = resumeInfo() ? resumeInfo().s : nextSession();
     if (warm) idle(() => loadLesson(warm).catch(() => {}));
   }
@@ -934,6 +935,115 @@
     $('#fc-no').onclick = () => { S.cards[card.id] = 0; save(); cards(deckArg); window.scrollTo(0, 0); };
   }
 
+  // ---------- My next hunt: study path (must know first) and daily spaced repetition (SM-2 style) ----------
+  // Path: legal, shot and meat lessons plus the Masterclass hunt chapters first, then every other Masterclass chapter and lesson.
+  // Daily task: lesson screens worth about 8 minutes plus 10 cards from all decks (about 2 minutes). Pace "fit" spreads the rest over the days left.
+  const dayISO = (d = new Date()) => d.toLocaleDateString('en-CA', { timeZone: TZ });
+  const addDays = (iso, n) => { const d = new Date(iso + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+  const dayDiff = (a, b) => Math.round((Date.parse(b + 'T12:00:00Z') - Date.parse(a + 'T12:00:00Z')) / 864e5);
+  const MUST_RE = /^(rb-|tagging-legal|shot-placement|blood-trailing|field-dressing|meat-care|cwd|first-)/;
+  const MUST_ALL = ['mc-skills-10', 'mc-nav-07']; // safety and first aid; what to do when lost
+  const STUDY_MIN = 8, DAY_CARDS = 10;
+  const seenOf = (s) => { const n = stepsOf(s).length; return S.done[s.id] ? n : S.max[s.id] != null ? Math.min(n, S.max[s.id] + 1) : 0; };
+  function studyPath(spId, lessons) {
+    const mc = sessions.filter((s) => s.id.startsWith('mc-' + spId + '-')).map((s) => s.id).sort();
+    const les = (lessons || []).filter((id) => byId[id]);
+    const mcMust = mc.filter((id) => /-(09|10)$/.test(id));
+    const rank = (id) => (/^rb-/.test(id) ? 0 : /^tagging-legal/.test(id) ? 1 : /^first-/.test(id) ? 5 : 2);
+    const must = [...new Set([...les.filter((id) => MUST_RE.test(id)).sort((a, b) => rank(a) - rank(b)), ...mcMust, ...MUST_ALL.filter((id) => byId[id])])];
+    const rest = [...new Set([...mc, ...les])].filter((id) => !must.includes(id));
+    return { must, rest, all: must.concat(rest) };
+  }
+  function pathStats(ids) {
+    let total = 0, seen = 0, min = 0, next = null, minLeft = 0;
+    for (const id of ids) {
+      const s = byId[id], n = stepsOf(s).length, k = seenOf(s), per = (s.minutes || n) / n;
+      total += n; seen += k; min += per * n; minLeft += per * (n - k);
+      if (!next && k < n) next = { id, i: k, title: s.title };
+    }
+    return { total, seen, left: total - seen, perScreen: total ? min / total : 1, minLeft, next };
+  }
+  function studyDay() {
+    const t = dayISO();
+    if (!S.study || S.study.date !== t) S.study = Object.assign({}, S.study, { date: t, base: {}, q: null, cardsDone: 0 });
+    S.study.base = S.study.base || {};
+    return S.study;
+  }
+  // today's task for one plan: { path, st, must, todayN, doneToday, leftToday, finish, mustFinish, daysToGo, pace }
+  function studyToday(plan, lessons) {
+    const P = studyPath(plan.species, lessons), st = pathStats(P.all), ms = pathStats(P.must);
+    const day = studyDay(), t = day.date, pace = plan.pace || '10';
+    const daysToGo = plan.from ? dayDiff(t, plan.from) : null;
+    if (!day.base[plan.id]) {
+      const per10 = Math.max(1, Math.round(STUDY_MIN / Math.max(0.3, st.perScreen)));
+      const fit = (left) => (daysToGo > 0 ? Math.ceil(left / daysToGo) : left);
+      day.base[plan.id] = { seen: st.seen, n: pace === 'fit' ? Math.max(per10, fit(st.left)) : pace === 'must' ? Math.max(per10, fit(ms.left)) : per10 };
+      save();
+    }
+    const b = day.base[plan.id], doneToday = Math.max(0, st.seen - b.seen), leftToday = Math.max(0, b.n - doneToday);
+    const finish = st.left ? addDays(t, Math.max(0, Math.ceil((st.left - leftToday) / b.n))) : t;
+    const mustFinish = ms.left ? addDays(t, Math.max(0, Math.ceil((ms.left - leftToday) / b.n))) : t;
+    const perDay = (left) => (daysToGo > 0 ? Math.round((left / daysToGo) * st.perScreen) + 2 : null); // minutes a day to finish by the first hunt day
+    return { path: P, st, must: ms, todayN: b.n, doneToday, leftToday, finish, mustFinish, daysToGo, pace, minPerDay: Math.round(b.n * st.perScreen) + 2, mustPerDay: perDay(ms.left), allPerDay: perDay(st.left) };
+  }
+  // ---------- spaced repetition: S.srs[id] = { e: ease, i: interval days, r: repetitions, d: due date } ----------
+  function grade(id, knew) {
+    S.srs = S.srs || {};
+    const c = S.srs[id] || { e: 2.5, i: 0, r: 0 }, t = dayISO();
+    if (knew) { c.r += 1; c.i = c.r === 1 ? 1 : c.r === 2 ? 6 : Math.round(c.i * c.e); }
+    else { c.r = 0; c.i = 1; c.e = Math.max(1.3, c.e - 0.32); }
+    c.d = addDays(t, c.i);
+    S.srs[id] = c;
+    S.cards = S.cards || {}; S.cards[id] = knew ? Math.min(2, (S.cards[id] || 0) + 1) : 0; // keep the deck counts in step
+  }
+  function dailyQueue() {
+    const day = studyDay();
+    if (day.q) return day.q;
+    const all = allCards(), t = dayISO(), srs = S.srs || {};
+    const due = all.filter((c) => srs[c.id] && srs[c.id].d <= t).sort((a, b) => (srs[a.id].d < srs[b.id].d ? -1 : 1)).map((c) => c.id);
+    // new cards: quiz questions from lessons already read come first, then every deck in turn (all decks mixed)
+    const fresh = all.filter((c) => !srs[c.id]);
+    const readQuiz = fresh.filter((c) => { const m = c.id.match(/^q:(.+)#/); return m && byId[m[1]] && seenOf(byId[m[1]]) > 0; });
+    const byDeck = {};
+    fresh.filter((c) => !readQuiz.includes(c)).forEach((c) => (byDeck[c.deck] = byDeck[c.deck] || []).push(c));
+    const decks = Object.keys(byDeck), mixed = [];
+    for (let k = 0; mixed.length < DAY_CARDS * 2 && decks.some((d) => byDeck[d].length); k++) { const d = decks[k % decks.length]; if (byDeck[d].length) mixed.push(byDeck[d].shift()); }
+    const newIds = readQuiz.concat(mixed).map((c) => c.id);
+    day.q = due.concat(newIds).slice(0, Math.max(DAY_CARDS, Math.min(due.length, 50)));
+    day.dueCount = due.length;
+    save();
+    return day.q;
+  }
+  function daily() {
+    setTitle('Today\'s cards'); tab('home');
+    const day = studyDay(), q = dailyQueue(), all = allCards(), byCard = Object.fromEntries(all.map((c) => [c.id, c]));
+    const left = q.filter((id) => byCard[id]);
+    if (!left.length) {
+      view.innerHTML = `<div class="card"><h2>Cards done for today</h2><p>${day.cardsDone || 0} cards reviewed. Cards you knew come back in 1 day, then 6 days, then further apart. Cards you missed come back tomorrow.</p>
+        <div class="btn-row"><a class="btn primary" href="#/">Home</a><button class="btn" id="dl-more">10 more cards</button><a class="btn" href="#/cards">All decks</a></div></div>`;
+      $('#dl-more').onclick = () => { day.q = null; if (!dailyQueue().length) toast('No more cards for today.'); daily(); };
+      return;
+    }
+    const card = byCard[left[0]];
+    view.innerHTML = `<div class="muted">Card ${(day.cardsDone || 0) + 1} of ${(day.cardsDone || 0) + left.length}. Deck: ${esc(card.deck)}${S.srs && S.srs[card.id] ? '. Review' : '. New'}</div>
+      <div class="card fc" id="fc"><div class="fc-front"><h2>${card.front}</h2>${card.diagram ? `<figure class="diagram">${card.diagram}</figure>` : ''}${card.photo || ''}<p class="muted">Tap to flip</p></div>
+      <div class="fc-back" hidden><p>${card.back}</p></div></div>
+      <div class="btn-row" id="fc-btns" hidden><button class="btn" id="fc-no">Missed it</button><button class="btn primary" id="fc-yes">Knew it</button></div>
+      <div class="btn-row"><a class="btn" href="#/">Stop for now</a></div>`;
+    const fc = $('#fc');
+    linkPlaces(fc.querySelector('.fc-back'));
+    fc.onclick = (e) => { if (e.target.closest('.hmp')) return; fc.querySelector('.fc-back').hidden = false; $('#fc-btns').hidden = false; };
+    const next = (knew) => {
+      grade(card.id, knew); q.splice(q.indexOf(card.id), 1);
+      if (!knew && !(day.again || []).includes(card.id)) { day.again = (day.again || []).concat(card.id); q.push(card.id); } // one more try at the end of today
+      else day.cardsDone = (day.cardsDone || 0) + 1;
+      save(); daily(); window.scrollTo(0, 0);
+    };
+    $('#fc-yes').onclick = () => next(true);
+    $('#fc-no').onclick = () => next(false);
+  }
+  const Study = { today: studyToday, path: studyPath, stats: pathStats, queue: dailyQueue, dayISO, dayDiff, seenOf, cardsLeft: () => { const q = dailyQueue(), have = new Set(allCards().map((c) => c.id)); return q.filter((id) => have.has(id)).length; }, cardsDone: () => studyDay().cardsDone || 0 };
+
   // ---------- print pocket cards ----------
   function printCards() {
     setTitle('Pocket cards'); tab('more');
@@ -1062,6 +1172,7 @@
     return {
       get S() { return S; }, save, setTitle, tab, sunEvent, hhmm, addMin, certBadge, toast, copyText,
       hasSession: (id) => !!byId[id], lessonTitle: (id) => (byId[id] ? byId[id].title : id), link: linkPlaces,
+      study: Study, refresh: () => { if (!location.hash || location.hash === '#/' || location.hash === '#') home(); },
     };
   }
 
@@ -1098,6 +1209,7 @@
     else if (a === 'sources') sources();
     else if (a === 'install') install();
     else if (a === 'cards') cards(b);
+    else if (a === 'daily') daily();
     else if (a === 'print') printCards();
     else if (a === 'credits') credits();
     else if (a === 'journal') journal(b === 'new' ? -1 : b != null ? +b : undefined);
