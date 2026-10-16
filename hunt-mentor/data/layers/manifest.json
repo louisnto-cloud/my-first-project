@@ -700,6 +700,126 @@
    "bytes": 1199761
   },
   {
+   "id": "ranges",
+   "group": "Practice shooting",
+   "label": "Shooting ranges and clubs",
+   "type": "circle",
+   "minzoom": 5,
+   "paint": {
+    "circle-color": [
+     "match",
+     [
+      "get",
+      "kind"
+     ],
+     "rifle",
+     "#ffab00",
+     "shotgun",
+     "#6200ea",
+     "archery",
+     "#00bfa5",
+     "#3e2723"
+    ],
+    "circle-radius": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     5,
+     4,
+     10,
+     7,
+     14,
+     9
+    ],
+    "circle-stroke-color": "#ffffff",
+    "circle-stroke-width": 2
+   },
+   "popup": [
+    [
+     "Type",
+     "types"
+    ],
+    [
+     "Parts",
+     "parts"
+    ],
+    [
+     "Access",
+     "access"
+    ],
+    [
+     "Indoor",
+     "indoor"
+    ],
+    [
+     "Website",
+     "website"
+    ],
+    [
+     "Phone",
+     "phone"
+    ],
+    [
+     "Email",
+     "email"
+    ],
+    [
+     "Hours",
+     "hours"
+    ],
+    [
+     "Operator",
+     "operator"
+    ],
+    [
+     "MU (Management Unit)",
+     "mu"
+    ],
+    [
+     "Fees",
+     "note"
+    ],
+    [
+     "OSM (OpenStreetMap) id",
+     "osm"
+    ]
+   ],
+   "labelField": "name",
+   "legal": false,
+   "source": "OpenStreetMap contributors, through the Overpass API: leisure=shooting_ground, sport=shooting or archery, shooting=*",
+   "attribution": "© OpenStreetMap contributors (ODbL)",
+   "about": "Shooting ranges, gun clubs and archery ranges mapped in OpenStreetMap, all of BC. Volunteer mapped: some clubs are missing, some may have closed. Website and phone only where the data has them. Membership or day fees may apply: call first (Tip).",
+   "cert": 70,
+   "file": "data/addons/practice/ranges.geojson",
+   "areas": "BC",
+   "licence": "ODbL (Open Database Licence), OpenStreetMap contributors",
+   "dataDate": "2026-05-31",
+   "bytes": 19471,
+   "features": 50,
+   "legend": [
+    [
+     "Rifle",
+     "#ffab00"
+    ],
+    [
+     "Shotgun: trap, skeet or clays",
+     "#6200ea"
+    ],
+    [
+     "Archery",
+     "#00bfa5"
+    ],
+    [
+     "Pistol, more than one type, or type not in the data",
+     "#3e2723"
+    ]
+   ]
+  },
+  {
    "id": "uwr_mule_deer",
    "group": "Habitat and migration",
    "label": "Mule deer winter range",

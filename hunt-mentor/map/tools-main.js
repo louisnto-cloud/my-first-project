@@ -33,6 +33,7 @@ export default async function init(H) {
   H.overlayChip = chip;
   H.hintOnce = hintOnce;
   backGuard();
+  import('./hunt-practice.js').then((m) => m.init(H)).catch((err) => console.warn('Practice shooting tool failed', err)); // Where can I practise? (#/map/tool/practice)
   css.then(buttonNames); // labels are measured, so they need tools.css first
   await refresh();
 }
@@ -280,6 +281,7 @@ const I = {
   rings: '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="10"/></svg>',
   cone: '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M5 19 19 7l-2 11Z" fill="currentColor" fill-opacity=".25"/><circle cx="5" cy="19" r="2" fill="currentColor"/></svg>',
   wind: '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h8"/></svg>',
+  target: '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.6" fill="#ffab00" stroke="none"/></svg>',
   clear: '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg>',
 };
 function toolsSheet() {
@@ -292,6 +294,8 @@ function toolsSheet() {
     <div class="hmt-tiles">${tile('line', I.line, 'Line or route', 'Distance and climb')}${tile('area', I.area, 'Area', 'Hectares, perimeter')}${tile('measure', I.ruler, 'Measure', 'Quick ruler')}${tile('rings', I.rings, 'Range rings', '100, 200, 300 m')}${tile('profile', H.icons.profile, 'Elevation profile', 'Climb on a line')}</div>
     ${wind ? `<h3 class="hmm-h">Wind</h3>
     <div class="hmt-tiles">${tile('cone', I.cone, 'Scent cone', 'From map centre')}${tile('cone-g', I.cone, 'Scent cone', 'From my location')}${tile('weather', H.icons.weather, 'Weather', 'Wind and forecast')}</div>` : ''}
+    <h3 class="hmm-h">Practice shooting</h3>
+    <div class="hmt-tiles">${tile('practice', I.target, 'Where can I practise?', 'Ranges, rules, check a spot')}</div>
     <h3 class="hmm-h">Map files</h3>
     <div class="hmt-tiles">${tile('files', H.icons.content, 'Import or export', 'GPX, KML, GeoJSON')}${tile('track', H.icons.track, 'Record a track', 'Go & Track')}</div>
     ${o.rings ? `<div class="hmm-btnrow"><button class="hmm-btn2" data-t="clear">${I.clear}<span>Clear range rings</span></button></div>` : ''}` });
@@ -306,6 +310,7 @@ function toolsSheet() {
     else if (t === 'files') ctx.contentSheet();
     else if (t === 'track') H.els.bar.querySelector('[data-bar="track"]').click();
     else if (t === 'clear') { setRings(null); H.closeSheet(); }
+    else if (t === 'practice') { if (H.practice) H.practice.open(); else H.toast('The practice tool is still loading. Try again in a moment.', 3500); }
   });
 }
 
@@ -583,7 +588,7 @@ function spotMenu(ll) {
   ctx.overlays.marker = p; drawOverlays();
   const body = H.openSheet({ title: 'This spot', onClose: () => { ctx.overlays.marker = null; drawOverlays(); }, html: `
     <p class="hmm-muted">${esc(txt)}</p>
-    <div class="hmt-tiles">${tile('wpt', wptSvg('other', '#e8590c', 26), 'Drop waypoint')}${tile('rings', I.rings, 'Range rings')}${tile('measure', I.ruler, 'Measure from here')}${typeof H.scentCone === 'function' ? tile('cone', I.cone, 'Scent cone') : ''}${typeof H.insightsAt === 'function' ? tile('insights', H.icons.insights, 'Insights') : ''}${H.hunt ? tile('canhunt', H.hunt.IC.canhunt, 'Can I hunt here?') : ''}${H.hunt && H.sightings ? tile('sight', H.hunt.IC.sightings, 'Log a sighting') : ''}</div>` });
+    <div class="hmt-tiles">${tile('wpt', wptSvg('other', '#e8590c', 26), 'Drop waypoint')}${tile('rings', I.rings, 'Range rings')}${tile('measure', I.ruler, 'Measure from here')}${typeof H.scentCone === 'function' ? tile('cone', I.cone, 'Scent cone') : ''}${typeof H.insightsAt === 'function' ? tile('insights', H.icons.insights, 'Insights') : ''}${H.hunt ? tile('canhunt', H.hunt.IC.canhunt, 'Can I hunt here?') : ''}${H.practice ? tile('practice', I.target, 'Shoot for practice here?') : ''}${H.hunt && H.sightings ? tile('sight', H.hunt.IC.sightings, 'Log a sighting') : ''}</div>` });
   body.querySelectorAll('[data-t]').forEach((b) => b.onclick = () => {
     const t = b.dataset.t; ctx.overlays.marker = null;
     if (t === 'wpt') dropWaypoint(p);
@@ -592,6 +597,7 @@ function spotMenu(ll) {
     else if (t === 'cone') { H.closeSheet(); H.scentCone(p); }
     else if (t === 'insights') H.insightsAt(p);
     else if (t === 'canhunt') H.hunt.open('canhunt', p);
+    else if (t === 'practice') H.practice.open(p);
     else if (t === 'sight') H.sightings.logAt(p);
   });
 }
