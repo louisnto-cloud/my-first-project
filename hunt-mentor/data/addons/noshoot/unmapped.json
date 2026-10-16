@@ -1,0 +1,1741 @@
+{
+ "built": "2026-10-16",
+ "source": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028",
+ "note": "Closures whose boundary is a description or a map picture, not an official polygon. Not drawn on the map. Quoted from the app lessons (content/phase7).",
+ "items": [
+  {
+   "region": "3",
+   "map": "C7",
+   "name": "Kamloops",
+   "mus": [
+    "3-19",
+    "3-20",
+    "3-26",
+    "3-27",
+    "3-28"
+   ],
+   "text": "No Shooting or Hunting Area and No Shooting Area: a band along the South Thompson River from Kamloops east to the Pritchard Bridge.",
+   "page": 35,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 35"
+  },
+  {
+   "region": "3",
+   "map": "C11",
+   "name": "Sun Peaks",
+   "mus": [
+    "3-27"
+   ],
+   "text": "No hunting or shooting within 400 m (437 yd) of any ski lift, run, facility or development of Sun Peaks Resort.",
+   "page": 35,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 35"
+  },
+  {
+   "region": "3",
+   "map": "C4",
+   "name": "Highland Valley",
+   "mus": [
+    "3-18"
+   ],
+   "text": "No Shooting Area around the Highland Valley mines.",
+   "page": 35,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 35"
+  },
+  {
+   "region": "3",
+   "map": "C8",
+   "name": "Blind Bay",
+   "mus": [
+    "3-26"
+   ],
+   "text": "No Shooting Area from Reedman Point to the Sorrento Eagle Bay Road.",
+   "page": 35,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 35"
+  },
+  {
+   "region": "3",
+   "map": "C9",
+   "name": "Sicamous",
+   "mus": [
+    "3-26"
+   ],
+   "text": "No Shooting or Hunting Area on Mara and Shuswap lake water near Sicamous.",
+   "page": 35,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 35"
+  },
+  {
+   "region": "3",
+   "map": "C10",
+   "name": "Salmon Arm",
+   "mus": [
+    "3-26"
+   ],
+   "text": "No Shooting or Hunting Area on Shuswap Lake southeast of the Salmon Arm wharf line.",
+   "page": 35,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 35"
+  },
+  {
+   "region": "3",
+   "map": "C14",
+   "name": "Marble Canyon",
+   "mus": [
+    "3-17"
+   ],
+   "text": "No Shooting or Hunting Area. Drawn on this map from the park outline; the legal line is on Map C14.",
+   "page": 35,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 35"
+  },
+  {
+   "region": "3",
+   "map": "C17",
+   "name": "Tranquille",
+   "mus": [
+    "3-29"
+   ],
+   "text": "No Shooting or Hunting Area. Drawn from the WMA outline; the legal line also takes in Lot 341.",
+   "page": 35,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 35"
+  },
+  {
+   "region": "3",
+   "map": "",
+   "name": "Roderick Haig Brown Recreation Area, near Chase",
+   "mus": [
+    "3-37"
+   ],
+   "text": "No hunting or shooting south of the Squilax Anglemont Road and downstream of the Adams River bridge. Closed Areas Regulation, Schedule 3 s. 31 (not printed in the synopsis).",
+   "page": null,
+   "cert": 99,
+   "src": "Closed Areas Regulation (BC Wildlife Act)"
+  },
+  {
+   "region": "3",
+   "map": "",
+   "name": "Trophy Mountain, near Wells Gray Park",
+   "mus": [],
+   "text": "No Shooting or Hunting Area of about 6,934 hectares around Moul Creek and the south slopes of Trophy Mountain. Closed Areas Regulation, Schedule 3 s. 46 (not printed in the synopsis).",
+   "page": null,
+   "cert": 99,
+   "src": "Closed Areas Regulation (BC Wildlife Act)"
+  },
+  {
+   "region": "1",
+   "map": "A2",
+   "name": "",
+   "mus": [
+    "1-1"
+   ],
+   "text": "Map A2 Ganges - No Shooting Area (MU 1-1).",
+   "page": 22,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 22"
+  },
+  {
+   "region": "1",
+   "map": "A3",
+   "name": "",
+   "mus": [
+    "1-4"
+   ],
+   "text": "Map A3 Cherry Point No Shooting Area (MU 1-4).",
+   "page": 22,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 22"
+  },
+  {
+   "region": "1",
+   "map": "A4",
+   "name": "",
+   "mus": [
+    "1-1"
+   ],
+   "text": "Map A4 Saturna Island - No Shooting or Hunting Area (MU 1-1).",
+   "page": 22,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 22"
+  },
+  {
+   "region": "1",
+   "map": "A5",
+   "name": "",
+   "mus": [
+    "1-4"
+   ],
+   "text": "Map A5 Nitinat River - No Shooting or Hunting Area (MU 1-4).",
+   "page": 22,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 22"
+  },
+  {
+   "region": "1",
+   "map": "A6",
+   "name": "",
+   "mus": [
+    "1-4"
+   ],
+   "text": "Map A6 Cowichan Lake - No Shooting or Hunting Area (MU 1-4).",
+   "page": 22,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 22"
+  },
+  {
+   "region": "1",
+   "map": "A7",
+   "name": "",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3"
+   ],
+   "text": "Map A7 Sooke/Metchosin - No Shooting Area and No Shooting or Hunting Area (MUs 1-1, 1-2, and 1-3).",
+   "page": 22,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 22"
+  },
+  {
+   "region": "1",
+   "map": "A8",
+   "name": "",
+   "mus": [
+    "1-4"
+   ],
+   "text": "Map A8 Cowichan Bay (MU 1-4) No Shooting Area, Seasonal No Shooting Area and Ex-Dinsdale Property.",
+   "page": 22,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 22"
+  },
+  {
+   "region": "1",
+   "map": "A9",
+   "name": "",
+   "mus": [
+    "1-4"
+   ],
+   "text": "Map A9 Mayo Lake - No Shooting Area (MU 1-4). Note: Cowichan River No Shooting Area within 100 m of the river from Holt Creek Trail to the municipality of Lake Cowichan.",
+   "page": 22,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 22"
+  },
+  {
+   "region": "1",
+   "map": "A10",
+   "name": "",
+   "mus": [
+    "1-5"
+   ],
+   "text": "Map A10 Nanaimo/Ladysmith - No Shooting Area and Bow or Discharge of Firearms Using Shot Only Area (MU 1-5) and special antlerless mule deer season (east of the powerline). Michael Lake No Shooting Area on Michael Lake to the high water mark.",
+   "page": 22,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 22"
+  },
+  {
+   "region": "1",
+   "map": "A11",
+   "name": "",
+   "mus": [
+    "1-5"
+   ],
+   "text": "Map A11 Englishman River - No Shooting Area (MU 1-5).",
+   "page": 22,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 22"
+  },
+  {
+   "region": "1",
+   "map": "A13",
+   "name": "",
+   "mus": [
+    "1-2",
+    "1-4",
+    "1-5"
+   ],
+   "text": "Map A13 Ladysmith/Malahat - Bow or Discharge of Firearms Using Shot Only Area (MUs 1-2, 1-4, 1-5) and special antlerless mule deer season.",
+   "page": 22,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 22"
+  },
+  {
+   "region": "1",
+   "map": "A14",
+   "name": "",
+   "mus": [
+    "1-5"
+   ],
+   "text": "Map A14 Nanaimo - No Shooting Area and Bow or Discharge of Firearms Using Shot Only Area (MU 1-5) and special antlerless mule deer season.",
+   "page": 22,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 22"
+  },
+  {
+   "region": "1",
+   "map": "A15",
+   "name": "",
+   "mus": [
+    "1-5"
+   ],
+   "text": "Map A15 York Lake - No Shooting Area (MU 1-5).",
+   "page": 22,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 22"
+  },
+  {
+   "region": "1",
+   "map": "A18",
+   "name": "",
+   "mus": [
+    "1-6"
+   ],
+   "text": "Map A18 Woodhus Slough No Hunting Area (MU 1-6).",
+   "page": 24,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 24"
+  },
+  {
+   "region": "1",
+   "map": "A19",
+   "name": "",
+   "mus": [
+    "1-6"
+   ],
+   "text": "Map A19 Courtenay/Campbell River - Bow or Firearms Using Shot Only Area (MU 1-6) and special antlerless mule deer season. Gulf Island Special Licence is required on Denman and Hornby Islands - see page 20.",
+   "page": 24,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 24"
+  },
+  {
+   "region": "1",
+   "map": "A20",
+   "name": "",
+   "mus": [
+    "1-5",
+    "1-6"
+   ],
+   "text": "Map A20 Qualicum/Parksville - Bow or Firearms Using Shot Only Area (MUs 1-5, 1-6) and special antlerless mule deer season.",
+   "page": 24,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 24"
+  },
+  {
+   "region": "1",
+   "map": "A21",
+   "name": "",
+   "mus": [
+    "1-6"
+   ],
+   "text": "Map A21 Lazo Marsh No Shooting or Hunting Area (MU 1-6).",
+   "page": 24,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 24"
+  },
+  {
+   "region": "1",
+   "map": "A22",
+   "name": "",
+   "mus": [
+    "1-6"
+   ],
+   "text": "Map A22 Comox Harbour No Shooting Area (MU 1-6).",
+   "page": 24,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 24"
+  },
+  {
+   "region": "1",
+   "map": "A23",
+   "name": "",
+   "mus": [
+    "1-6"
+   ],
+   "text": "Map A23 Lukwa Lake No Hunting Area (MU 1-6).",
+   "page": 24,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 24"
+  },
+  {
+   "region": "1",
+   "map": "A24",
+   "name": "",
+   "mus": [
+    "1-6"
+   ],
+   "text": "Map A24 Quinsam Coal Mine Site No Shooting Area (MU 1-6).",
+   "page": 24,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 24"
+  },
+  {
+   "region": "1",
+   "map": "A25",
+   "name": "",
+   "mus": [
+    "1-7"
+   ],
+   "text": "Map A25 Shoemaker Bay No Shooting Area (MU 1-7).",
+   "page": 24,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 24"
+  },
+  {
+   "region": "1",
+   "map": "A27",
+   "name": "",
+   "mus": [
+    "1-8"
+   ],
+   "text": "Map A27 Ucluelet Inlet No Hunting or Shooting Area (MU 1-8).",
+   "page": 24,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 24"
+  },
+  {
+   "region": "1",
+   "map": "A32",
+   "name": "",
+   "mus": [
+    "1-15"
+   ],
+   "text": "Map A32 Quadra Island Bow or Discharge of Firearms Using Shot Only Area (MU 1-15) and special antlerless mule deer season.",
+   "page": 25,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 25"
+  },
+  {
+   "region": "1",
+   "map": "A33",
+   "name": "",
+   "mus": [
+    "1-6"
+   ],
+   "text": "Map A33 Beaver Lodge Trust Lands No Hunting Area (MU 1-6).",
+   "page": 25,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 25"
+  },
+  {
+   "region": "1",
+   "map": "A34",
+   "name": "",
+   "mus": [
+    "1-6"
+   ],
+   "text": "Map A34 Buckley Bay No Shooting Area (MU 1-6).",
+   "page": 25,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 25"
+  },
+  {
+   "region": "1",
+   "map": "A37",
+   "name": "",
+   "mus": [
+    "1-7"
+   ],
+   "text": "Map A37 Stamp Lagoon Firearms Using Shot Only Area (MU 1-7).",
+   "page": 25,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 25"
+  },
+  {
+   "region": "2",
+   "map": "B11",
+   "name": "",
+   "mus": [
+    "2-6"
+   ],
+   "text": "Map B11 Squamish River Valley No Shooting Areas. Discharge of firearms for the purpose of hunting permitted (MU 2-6).",
+   "page": 29,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 29"
+  },
+  {
+   "region": "2",
+   "map": "B33",
+   "name": "",
+   "mus": [
+    "2-19"
+   ],
+   "text": "Map B33 Chehalis-Fleetwood No Shooting Area. Discharge of firearms for the purpose of hunting permitted (MU 2-19).",
+   "page": 31,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 31"
+  },
+  {
+   "region": "2",
+   "map": "B1",
+   "name": "",
+   "mus": [
+    "2-17",
+    "2-2"
+   ],
+   "text": "Map B1 Hope - No Shooting Area (MUs 2-2 and 2-17).",
+   "page": 29,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 29"
+  },
+  {
+   "region": "2",
+   "map": "B2",
+   "name": "",
+   "mus": [
+    "2-3"
+   ],
+   "text": "Map B2 Popkum - No Shooting Area (MU 2-3).",
+   "page": 29,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 29"
+  },
+  {
+   "region": "2",
+   "map": "B3",
+   "name": "",
+   "mus": [
+    "2-3"
+   ],
+   "text": "Map B3 Chilliwack Valley - Firearms Using Shot Only Area (MU 2-3).",
+   "page": 29,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 29"
+  },
+  {
+   "region": "2",
+   "map": "B4",
+   "name": "",
+   "mus": [
+    "2-3"
+   ],
+   "text": "Map B4 Provincial Jail Camp No. 1 No Shooting Area (MU 2-3).",
+   "page": 29,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 29"
+  },
+  {
+   "region": "2",
+   "map": "B5",
+   "name": "",
+   "mus": [
+    "2-5"
+   ],
+   "text": "Map B5 Pender Harbour - No Shooting Area and Firearms Using Shot Only Area (MU 2-5).",
+   "page": 29,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 29"
+  },
+  {
+   "region": "2",
+   "map": "B6",
+   "name": "",
+   "mus": [
+    "2-6"
+   ],
+   "text": "Map B6 Evans Lake - No Shooting Area (MU 2-6).",
+   "page": 29,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 29"
+  },
+  {
+   "region": "2",
+   "map": "B7",
+   "name": "",
+   "mus": [
+    "2-5"
+   ],
+   "text": "Map B7 Sechelt/Gibsons - No Shooting Area and Firearms Using Shot Only Area (MU 2-5).",
+   "page": 29,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 29"
+  },
+  {
+   "region": "2",
+   "map": "B8",
+   "name": "",
+   "mus": [
+    "2-5"
+   ],
+   "text": "Map B8 Waugh Lake/Skookumchuck - No Shooting Area (MU 2-5).",
+   "page": 29,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 29"
+  },
+  {
+   "region": "2",
+   "map": "B12",
+   "name": "",
+   "mus": [
+    "2-8"
+   ],
+   "text": "Map B12 Buntzen Lake - No Shooting Area (MU 2-8).",
+   "page": 30,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 30"
+  },
+  {
+   "region": "2",
+   "map": "B13",
+   "name": "",
+   "mus": [
+    "2-8"
+   ],
+   "text": "Map B13 Squamish - No Shooting Area (MU 2-8).",
+   "page": 30,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 30"
+  },
+  {
+   "region": "2",
+   "map": "B14",
+   "name": "",
+   "mus": [
+    "2-8"
+   ],
+   "text": "Map B14 Lion’s Bay - No Shooting Area (MU 2-8).",
+   "page": 30,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 30"
+  },
+  {
+   "region": "2",
+   "map": "B15",
+   "name": "",
+   "mus": [
+    "2-10",
+    "2-11",
+    "2-9"
+   ],
+   "text": "Map B15 Pemberton - Firearms Using Shot Only Area (MUs 2-9, 2-10, and 2-11).",
+   "page": 30,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 30"
+  },
+  {
+   "region": "2",
+   "map": "B16",
+   "name": "",
+   "mus": [
+    "2-6",
+    "2-7"
+   ],
+   "text": "Map B16 Garibaldi - No Shooting Area and Garibaldi Civil Defence Zone (MUs 2-6 and 2-7). This is a high risk slide area. People who hunt or trap in this area do so at their own risk.",
+   "page": 30,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 30"
+  },
+  {
+   "region": "2",
+   "map": "B17",
+   "name": "",
+   "mus": [
+    "2-11",
+    "2-9"
+   ],
+   "text": "Map B17 Whistler - No Shooting Area (MUs 2-09 and 2-11).",
+   "page": 30,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 30"
+  },
+  {
+   "region": "2",
+   "map": "B21",
+   "name": "",
+   "mus": [
+    "2-12"
+   ],
+   "text": "Map B21 Powell River Firearms Using Shot Only Area (MU 2-12).",
+   "page": 30,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 30"
+  },
+  {
+   "region": "2",
+   "map": "B22",
+   "name": "",
+   "mus": [
+    "2-12"
+   ],
+   "text": "Map B22 Lund - No Shooting Area and Savary Island Firearms Using Shot Only Area (MU 2-12).",
+   "page": 30,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 30"
+  },
+  {
+   "region": "2",
+   "map": "B23",
+   "name": "",
+   "mus": [
+    "2-12"
+   ],
+   "text": "Map B23 Saltery Bay - No Shooting Area (MU 2-12).",
+   "page": 30,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 30"
+  },
+  {
+   "region": "2",
+   "map": "B24",
+   "name": "",
+   "mus": [
+    "2-16"
+   ],
+   "text": "Map B24 Blubber Bay - No Shooting Area (MU 2-16).",
+   "page": 31,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 31"
+  },
+  {
+   "region": "2",
+   "map": "B25",
+   "name": "",
+   "mus": [
+    "2-16"
+   ],
+   "text": "Map B25 Gillies Bay - No Shooting Area (MU 2-16).",
+   "page": 31,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 31"
+  },
+  {
+   "region": "2",
+   "map": "B26",
+   "name": "",
+   "mus": [
+    "2-16"
+   ],
+   "text": "Map B26 Vananda - No Shooting Area (MU 2-16).",
+   "page": 31,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 31"
+  },
+  {
+   "region": "2",
+   "map": "B27",
+   "name": "",
+   "mus": [
+    "2-16"
+   ],
+   "text": "Map B27 Pipeline/Bell Road - No Shooting Area (MU 2-16).",
+   "page": 31,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 31"
+  },
+  {
+   "region": "2",
+   "map": "B28",
+   "name": "",
+   "mus": [
+    "2-16"
+   ],
+   "text": "Map B28 Central Road/ Shelter Point Road - No Shooting Area (MU 2-16).",
+   "page": 31,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 31"
+  },
+  {
+   "region": "2",
+   "map": "B29",
+   "name": "",
+   "mus": [
+    "2-19"
+   ],
+   "text": "Map B29 Elbow Lake - No Shooting Area (MU 2-19).",
+   "page": 31,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 31"
+  },
+  {
+   "region": "2",
+   "map": "B30",
+   "name": "",
+   "mus": [
+    "2-18"
+   ],
+   "text": "Map B30 Yale - No Shooting Area (MU 2-18).",
+   "page": 31,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 31"
+  },
+  {
+   "region": "2",
+   "map": "B31",
+   "name": "",
+   "mus": [
+    "2-16"
+   ],
+   "text": "Map B31 North Thormanby Island - No Shooting or Hunting Area (MU 2-16).",
+   "page": 31,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 31"
+  },
+  {
+   "region": "2",
+   "map": "B32",
+   "name": "",
+   "mus": [
+    "2-19"
+   ],
+   "text": "Map B32 Hemlock Valley - No Shooting Area (MU 2-19).",
+   "page": 31,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 31"
+  },
+  {
+   "region": "4",
+   "map": "D1",
+   "name": "",
+   "mus": [
+    "4-1"
+   ],
+   "text": "Map D1 McDougall Wildlife Sanctuary (MU 4-1). No Shooting, Hunting, or Trapping Area and Motor Vehicle Closed Area.",
+   "page": 40,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 40"
+  },
+  {
+   "region": "4",
+   "map": "D2",
+   "name": "",
+   "mus": [
+    "4-3"
+   ],
+   "text": "Map D2 Elizabeth Lake No Hunting, Shooting, or Trapping Area and Motor Vehicle Closed Area AMA (MU 4-3).",
+   "page": 40,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 40"
+  },
+  {
+   "region": "4",
+   "map": "D3",
+   "name": "",
+   "mus": [
+    "4-6"
+   ],
+   "text": "Map D3 Crawford Bay No Shooting Area (MU 4-6).",
+   "page": 40,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 40"
+  },
+  {
+   "region": "4",
+   "map": "D4",
+   "name": "",
+   "mus": [
+    "4-7"
+   ],
+   "text": "Map D4 Summit Creek Campground and Recreation Area and Corn Creek Marsh No Hunting Areas (MU 4-7).",
+   "page": 40,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 40"
+  },
+  {
+   "region": "4",
+   "map": "D5",
+   "name": "",
+   "mus": [
+    "4-7",
+    "4-8"
+   ],
+   "text": "Map D5 Selkirk No Shooting Area (MUs 4-7 and 4-8). Watch for mountain caribou.",
+   "page": 40,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 40"
+  },
+  {
+   "region": "4",
+   "map": "D6",
+   "name": "",
+   "mus": [
+    "4-17"
+   ],
+   "text": "Map D6 Walter Clough Wildlife Management Area No Shooting or Hunting Area (MU 4-17).",
+   "page": 40,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 40"
+  },
+  {
+   "region": "4",
+   "map": "D7",
+   "name": "",
+   "mus": [
+    "4-19"
+   ],
+   "text": "Map D7 Argenta Marsh Wildlife Management Area No Shooting or Hunting Area (MU 4-19).",
+   "page": 40,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 40"
+  },
+  {
+   "region": "4",
+   "map": "D8",
+   "name": "",
+   "mus": [
+    "4-19"
+   ],
+   "text": "Map D8 Fry Creek No Shooting Area (MU 4-19).",
+   "page": 40,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 40"
+  },
+  {
+   "region": "4",
+   "map": "D9",
+   "name": "",
+   "mus": [
+    "4-20"
+   ],
+   "text": "Map D9 Skookumchuck Pulp Mill No Shooting Area (MU 4-20).",
+   "page": 40,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 40"
+  },
+  {
+   "region": "4",
+   "map": "D10",
+   "name": "",
+   "mus": [
+    "4-21"
+   ],
+   "text": "Map D10 Wasa Slough Wildlife Sanctuary (MU 4-21) No Shooting, Hunting or Trapping Area.",
+   "page": 40,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 40"
+  },
+  {
+   "region": "4",
+   "map": "D13",
+   "name": "",
+   "mus": [
+    "4-23"
+   ],
+   "text": "Map D13 Teck Coal Limited Coal Mountain Mine No Shooting Area (MU 4-23).",
+   "page": 41,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 41"
+  },
+  {
+   "region": "4",
+   "map": "D14",
+   "name": "",
+   "mus": [
+    "4-23"
+   ],
+   "text": "Map D14 Hwy 3 No Hunting/Shooting Area (MU 4-23).",
+   "page": 41,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 41"
+  },
+  {
+   "region": "4",
+   "map": "D15",
+   "name": "",
+   "mus": [
+    "4-25"
+   ],
+   "text": "Map D15 Mount Assiniboine Park No Hunting Area (MU 4-25).",
+   "page": 41,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 41"
+  },
+  {
+   "region": "4",
+   "map": "D16",
+   "name": "",
+   "mus": [
+    "4-23"
+   ],
+   "text": "Map D16 Fording River, Greenhills, Line Creek, Elkview, Coal Mountain Operations No Hunting/No Shooting and No Shooting Areas (MU 4-23) are situated on private property and permission from companies is required prior to entry. Detailed maps for each mine are available at gate houses.",
+   "page": 41,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 41"
+  },
+  {
+   "region": "4",
+   "map": "D17",
+   "name": "",
+   "mus": [
+    "4-25"
+   ],
+   "text": "Map D17 Canal Flats Firearms Using Shot Only Area (MU 4-25).",
+   "page": 41,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 41"
+  },
+  {
+   "region": "4",
+   "map": "D18",
+   "name": "",
+   "mus": [
+    "4-25"
+   ],
+   "text": "Map D18 Sunshine Meadows No Hunting Area (MU 4-25).",
+   "page": 41,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 41"
+  },
+  {
+   "region": "4",
+   "map": "D19",
+   "name": "",
+   "mus": [
+    "4-25"
+   ],
+   "text": "Map D19 Fairmont No Shooting Area (MU 4-25).",
+   "page": 41,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 41"
+  },
+  {
+   "region": "4",
+   "map": "D20",
+   "name": "",
+   "mus": [
+    "4-25"
+   ],
+   "text": "Map D20 Windermere No Shooting Area (MU 4-25).",
+   "page": 41,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 41"
+  },
+  {
+   "region": "4",
+   "map": "D22",
+   "name": "",
+   "mus": [
+    "4-25",
+    "4-35"
+   ],
+   "text": "Map D22 Radium No Shooting or Hunting Area (MUs 4-25 and 4-35).",
+   "page": 41,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 41"
+  },
+  {
+   "region": "4",
+   "map": "D23",
+   "name": "",
+   "mus": [
+    "4-25",
+    "4-26"
+   ],
+   "text": "Map D23 Columbia Lake and River Wildlife Sanctuary (MUs 4-25 and 4-26) No Shooting, Hunting or Trapping Area.",
+   "page": 41,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 41"
+  },
+  {
+   "region": "4",
+   "map": "D25",
+   "name": "",
+   "mus": [
+    "4-35"
+   ],
+   "text": "Map D25 Edgewater No Shooting or Hunting Area (MU 4-35).",
+   "page": 41,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 41"
+  },
+  {
+   "region": "4",
+   "map": "D26",
+   "name": "",
+   "mus": [
+    "4-36"
+   ],
+   "text": "Map D26 Bergenham and Moberly Marsh Wildlife Sanctuaries (MU 4-36) No Shooting, Hunting or Trapping Areas.",
+   "page": 41,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 41"
+  },
+  {
+   "region": "6",
+   "map": "F1",
+   "name": "",
+   "mus": [
+    "6-1",
+    "6-2"
+   ],
+   "text": "Map F1 Tweedsmuir Park No Hunting Areas (MUs 6-1 and 6-2). The general open hunting season for bull moose in that portion of 6-2 located within Tweedsmuir Park is Oct 20 - Nov 15.",
+   "page": 51,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 51"
+  },
+  {
+   "region": "6",
+   "map": "F3",
+   "name": "",
+   "mus": [
+    "6-8"
+   ],
+   "text": "Map F3 Babine River No Shooting Area (year-round) 1 km on either side of river (MU 6-8).",
+   "page": 51,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 51"
+  },
+  {
+   "region": "6",
+   "map": "F5",
+   "name": "",
+   "mus": [
+    "6-9"
+   ],
+   "text": "Map F5 Tatlow Road No Shooting Area 0.4 km either side of road (MU 6-9).",
+   "page": 51,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 51"
+  },
+  {
+   "region": "6",
+   "map": "F7",
+   "name": "",
+   "mus": [
+    "6-9"
+   ],
+   "text": "Map F7 Grantham Road No Shooting Area (MU 6-9).",
+   "page": 51,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 51"
+  },
+  {
+   "region": "6",
+   "map": "F8",
+   "name": "",
+   "mus": [
+    "6-9"
+   ],
+   "text": "Map F8 Kathlyn Lake No Shooting Area (MU 6-9).",
+   "page": 51,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 51"
+  },
+  {
+   "region": "6",
+   "map": "F9",
+   "name": "",
+   "mus": [
+    "6-9"
+   ],
+   "text": "Map F9 Hudson Bay Mountain and Smithers Community Forest No Shooting Area (MU 6-9).",
+   "page": 51,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 51"
+  },
+  {
+   "region": "6",
+   "map": "F11",
+   "name": "",
+   "mus": [
+    "6-9"
+   ],
+   "text": "Map F11 Equity Mines Property No Shooting Area (MU 6-9).",
+   "page": 51,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 51"
+  },
+  {
+   "region": "6",
+   "map": "F12",
+   "name": "",
+   "mus": [
+    "6-9"
+   ],
+   "text": "Map F12 Houston Community Forest No Shooting Area (MU 6-9).",
+   "page": 51,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 51"
+  },
+  {
+   "region": "6",
+   "map": "F14",
+   "name": "",
+   "mus": [
+    "5-9",
+    "6-11",
+    "6-3"
+   ],
+   "text": "Map F14 Black Bear No Hunting Areas, portions of M.U.s 5-9, 6-3, and 6-11.",
+   "page": 52,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 52"
+  },
+  {
+   "region": "6",
+   "map": "F15",
+   "name": "",
+   "mus": [
+    "6-11",
+    "6-15"
+   ],
+   "text": "Map F15 City of Terrace No Shooting Area (MUs 6-11 and 6-15).",
+   "page": 52,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 52"
+  },
+  {
+   "region": "6",
+   "map": "F16",
+   "name": "",
+   "mus": [
+    "6-11"
+   ],
+   "text": "Map F16 Lakelse Lake No Shooting Area and Firearms Using Shot Only Area (MU 6-11).",
+   "page": 52,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 52"
+  },
+  {
+   "region": "6",
+   "map": "F17",
+   "name": "",
+   "mus": [
+    "6-12"
+   ],
+   "text": "Map F17 Sandspit No Shooting Area (MU 6-12).",
+   "page": 52,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 52"
+  },
+  {
+   "region": "6",
+   "map": "F18",
+   "name": "",
+   "mus": [
+    "6-13"
+   ],
+   "text": "Map F18 Queen Charlotte City No Shooting Area (MU 6-13).",
+   "page": 52,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 52"
+  },
+  {
+   "region": "6",
+   "map": "F19",
+   "name": "",
+   "mus": [
+    "6-13"
+   ],
+   "text": "Map F19 Masset No Shooting Area (MU 6-13) and Delkatla Slough Wildlife Sanctuary No Shooting, Hunting or Trapping Area.",
+   "page": 52,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 52"
+  },
+  {
+   "region": "6",
+   "map": "F20",
+   "name": "",
+   "mus": [
+    "6-13"
+   ],
+   "text": "Map F20 Port Clements No Shooting Area and Kumdis Bay Firearms Using Shot Only Area (MU 6-13).",
+   "page": 52,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 52"
+  },
+  {
+   "region": "6",
+   "map": "F21",
+   "name": "",
+   "mus": [
+    "6-13"
+   ],
+   "text": "Map F21 Naikoon Park No Shooting or Hunting Area (MU 6-13). The 50 m strips along the banks of the Tlell River are open for Firearms Using Shot Only as indicated on map (closed along Hwy).",
+   "page": 52,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 52"
+  },
+  {
+   "region": "6",
+   "map": "F23",
+   "name": "",
+   "mus": [
+    "6-15"
+   ],
+   "text": "Map F23 North Kitsumkalum Lake No Shooting or Hunting Area (MU 6-15).",
+   "page": 52,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 52"
+  },
+  {
+   "region": "6",
+   "map": "F27",
+   "name": "",
+   "mus": [
+    "6-20"
+   ],
+   "text": "Map F27 Todagin Mountain No Shooting/Archery only Area and Mountain Goat Closed Area (MU 6-20). See page 49 for mining access road restrictions.",
+   "page": 52,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 52"
+  },
+  {
+   "region": "6",
+   "map": "F28",
+   "name": "",
+   "mus": [
+    "6-20"
+   ],
+   "text": "Map F28 Spatsizi (Gladys Lake) Ecological Reserve No Hunting Area (MU 6-20). Cold Fish Lake Camp No Shooting Area: The discharge of firearms is prohibited within 1 km of Cold Fish Lake Camp.",
+   "page": 52,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 52"
+  },
+  {
+   "region": "6",
+   "map": "F33",
+   "name": "",
+   "mus": [
+    "6-25",
+    "6-27"
+   ],
+   "text": "Map F33 Atlin Mountain Goat Closed Area and No Hunting Area (MUs 6-25, 6-27).",
+   "page": 53,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 53"
+  },
+  {
+   "region": "6",
+   "map": "F35",
+   "name": "",
+   "mus": [
+    "6-25",
+    "6-27"
+   ],
+   "text": "Map F35 Atlin Park No Hunting Area in portions of MUs 6-25 and 6-27.",
+   "page": 53,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 53"
+  },
+  {
+   "region": "6",
+   "map": "F38",
+   "name": "",
+   "mus": [
+    "6-11"
+   ],
+   "text": "Map F38 K’waal Kitkiata No Hunting Area from Jan 1 - Oct 31 (MU 6-11).",
+   "page": 53,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 53"
+  },
+  {
+   "region": "7A",
+   "map": "G2",
+   "name": "",
+   "mus": [
+    "7-2"
+   ],
+   "text": "Map G2 Robert W. Starratt Wildlife Sanctuary No Shooting, Hunting or Trapping Area (MU 7-2).",
+   "page": 58,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 58"
+  },
+  {
+   "region": "7A",
+   "map": "G11",
+   "name": "",
+   "mus": [
+    "7-9"
+   ],
+   "text": "Map G11 Tabor Mtn No Shooting or Hunting Area (MU 7-9).",
+   "page": 58,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 58"
+  },
+  {
+   "region": "7A",
+   "map": "G12",
+   "name": "",
+   "mus": [
+    "7-10"
+   ],
+   "text": "Map G12 Red Rock Seed Orchard. No Shooting Area (MU 7-10).",
+   "page": 58,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 58"
+  },
+  {
+   "region": "7A",
+   "map": "G14",
+   "name": "",
+   "mus": [
+    "7-13",
+    "7-25"
+   ],
+   "text": "Map G14 Paaren’s Beach No Shooting Area (MUs 7-13 and 7-25).",
+   "page": 58,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 58"
+  },
+  {
+   "region": "7A",
+   "map": "G17",
+   "name": "",
+   "mus": [
+    "7-15"
+   ],
+   "text": "Map G17 No Shooting Area (MU 7-15).",
+   "page": 59,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 59"
+  },
+  {
+   "region": "7A",
+   "map": "G20",
+   "name": "",
+   "mus": [
+    "7-23"
+   ],
+   "text": "Map G20 Kennedy Siding No Shooting or Hunting Area (MU 7-23). Hunting and discharge of firearms is prohibited from Sept 1 - Mar 31.",
+   "page": 59,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 59"
+  },
+  {
+   "region": "7B",
+   "map": "H1",
+   "name": "",
+   "mus": [
+    "7-19"
+   ],
+   "text": "Map H1 Kakwa Park and Recreation Area No Hunting Area (MU 7-19).",
+   "page": 63,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 63"
+  },
+  {
+   "region": "7B",
+   "map": "H2",
+   "name": "",
+   "mus": [
+    "7-20"
+   ],
+   "text": "Map H2 Bear Mountain No Hunting Area (MU 7-20), from June 1 - Oct 15.",
+   "page": 63,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 63"
+  },
+  {
+   "region": "7B",
+   "map": "H3",
+   "name": "",
+   "mus": [
+    "7-20"
+   ],
+   "text": "Map H3 One Island Pasture Firearms Using Shot Only Area (MU 7-20) from June 1 - Oct 15.",
+   "page": 63,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 63"
+  },
+  {
+   "region": "7B",
+   "map": "H4",
+   "name": "",
+   "mus": [
+    "7-20"
+   ],
+   "text": "Map H4 Bear Mountain Nordic Ski Area - No Shooting Area (MU 7-20).",
+   "page": 63,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 63"
+  },
+  {
+   "region": "7B",
+   "map": "H5",
+   "name": "",
+   "mus": [
+    "7-21"
+   ],
+   "text": "Map H5 Mt. Bergeron-Tumbler Ridge No Shooting or Hunting Area (MU 7-21).",
+   "page": 63,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 63"
+  },
+  {
+   "region": "7B",
+   "map": "H8",
+   "name": "",
+   "mus": [
+    "7-21"
+   ],
+   "text": "Map H8 Groundbirch Firearms Using Shot Only Area (MU 7-21) from June 1 - Oct 31.",
+   "page": 63,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 63"
+  },
+  {
+   "region": "7B",
+   "map": "H9",
+   "name": "",
+   "mus": [
+    "7-22",
+    "7-31"
+   ],
+   "text": "Map H9 Dokie Subdivision No Shooting Area (MUs 7-22 and 7-31).",
+   "page": 64,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 64"
+  },
+  {
+   "region": "7B",
+   "map": "H10",
+   "name": "",
+   "mus": [
+    "7-22"
+   ],
+   "text": "Map H10 Lower Burnt River No Hunting Area (MU 7-22).",
+   "page": 64,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 64"
+  },
+  {
+   "region": "7B",
+   "map": "H13",
+   "name": "",
+   "mus": [
+    "7-32"
+   ],
+   "text": "Map H13 Sunset Prairie No Hunting Area (MU 7-32) from June 1 - Oct 31.",
+   "page": 64,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 64"
+  },
+  {
+   "region": "7B",
+   "map": "H14",
+   "name": "",
+   "mus": [
+    "7-33"
+   ],
+   "text": "Map H14 Dawson Creek Environmental Demonstration - No Shooting Area between 9:30 and 3:30 pm daily. (MU 7-33).",
+   "page": 64,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 64"
+  },
+  {
+   "region": "7B",
+   "map": "H15",
+   "name": "",
+   "mus": [
+    "7-33"
+   ],
+   "text": "Map H15 Cecil Lake Community Pasture No Hunting Area (MU 7-33) from June 1 - Oct 15.",
+   "page": 64,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 64"
+  },
+  {
+   "region": "7B",
+   "map": "H16",
+   "name": "",
+   "mus": [
+    "7-33"
+   ],
+   "text": "Map H16 Charlie Lake. No Shooting Area (MU 7-33).",
+   "page": 64,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 64"
+  },
+  {
+   "region": "7B",
+   "map": "H19",
+   "name": "",
+   "mus": [
+    "7-44"
+   ],
+   "text": "Map H19 Upper Halfway No Shooting Area (MU 7-44).",
+   "page": 64,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 64"
+  },
+  {
+   "region": "7B",
+   "map": "H24",
+   "name": "",
+   "mus": [
+    "7-47",
+    "7-48",
+    "7-56"
+   ],
+   "text": "Map H24 Fontas No Hunting Area (MUs 7-47, 7-48, and 7-56)",
+   "page": 64,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 64"
+  },
+  {
+   "region": "8",
+   "map": "J1",
+   "name": "",
+   "mus": [
+    "8-1"
+   ],
+   "text": "Map J1 Osoyoos Oxbows Motor Vehicle Closed Area and No Shooting or Hunting Area (MU 8-1). The operation of vehicles is restricted to established road shown as open lines. No shooting or hunting from Mar 1 - Sept 30, in the restricted area, including the roadways.",
+   "page": 69,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 69"
+  },
+  {
+   "region": "8",
+   "map": "J10",
+   "name": "",
+   "mus": [
+    "8-1",
+    "8-8",
+    "8-9"
+   ],
+   "text": "Map J10 Kaleden, and Okanagan Falls No Shooting Areas and Skaha Lake Firearms Using Shot Only Area (MUs 8-1, 8-8 and 8-9).",
+   "page": 69,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 69"
+  },
+  {
+   "region": "8",
+   "map": "J8",
+   "name": "",
+   "mus": [
+    "8-9"
+   ],
+   "text": "Map J8 Upper Carmi Road No Shooting Area (MU 8-9). The Upper Carmi Road No Shooting Area is almost entirely private land, and it is unlawful to hunt private land without consent of the appropriate landowner.",
+   "page": 69,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 69"
+  },
+  {
+   "region": "8",
+   "map": "J11",
+   "name": "",
+   "mus": [
+    "8-9"
+   ],
+   "text": "Map J11 Naramata No Shooting Area and Firearms Using Shot Only Area (MU 8-9).",
+   "page": 70,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 70"
+  },
+  {
+   "region": "8",
+   "map": "J9",
+   "name": "",
+   "mus": [
+    "8-8"
+   ],
+   "text": "Map J9 Brenda Mines No Shooting Area (MU 8-8).",
+   "page": 69,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 69"
+  },
+  {
+   "region": "8",
+   "map": "J16",
+   "name": "",
+   "mus": [
+    "8-22",
+    "8-25",
+    "8-26"
+   ],
+   "text": "Map J16 Silver Star Park No Hunting Area (MUs 8-22, 8-25, and 8-26). Contact Ministry offices in Vernon or Penticton for details.",
+   "page": 70,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 70"
+  },
+  {
+   "region": "8",
+   "map": "J17",
+   "name": "",
+   "mus": [
+    "8-22"
+   ],
+   "text": "Map J17 Swan Lake No Shooting or Hunting Area (MU 8-22).",
+   "page": 70,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 70"
+  },
+  {
+   "region": "8",
+   "map": "J18",
+   "name": "",
+   "mus": [
+    "8-22"
+   ],
+   "text": "Map J18 Kalamalka Lake Park No Shooting or Hunting Area (MU 8-22).",
+   "page": 70,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 70"
+  },
+  {
+   "region": "8",
+   "map": "J3",
+   "name": "",
+   "mus": [
+    "8-4",
+    "8-5"
+   ],
+   "text": "Map J3 Similkameen Mining Co. Ltd. No Shooting or Hunting Area (MUs 8-4 and 8-5).",
+   "page": 69,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 69"
+  },
+  {
+   "region": "8",
+   "map": "J5",
+   "name": "",
+   "mus": [
+    "8-6"
+   ],
+   "text": "Map J5 Willow Heights No Shooting Area (MU 8-6).",
+   "page": 69,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 69"
+  },
+  {
+   "region": "8",
+   "map": "J6",
+   "name": "",
+   "mus": [
+    "8-7"
+   ],
+   "text": "Map J6 Mascot Gold Mines No Shooting Area (MU 8-7).",
+   "page": 69,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 69"
+  },
+  {
+   "region": "8",
+   "map": "J12",
+   "name": "",
+   "mus": [
+    "8-14"
+   ],
+   "text": "Map J12 Jewel Lake No Shooting or Hunting Area (MU 8-14).",
+   "page": 69,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 69"
+  },
+  {
+   "region": "8",
+   "map": "J15",
+   "name": "",
+   "mus": [
+    "8-15"
+   ],
+   "text": "Map J15 Ward Lake No Hunting, Shooting or Trapping Area (MU 8-15).",
+   "page": 69,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 69"
+  },
+  {
+   "region": "8",
+   "map": "J19",
+   "name": "",
+   "mus": [
+    "8-23"
+   ],
+   "text": "Map J19 Monashee Park Addition (MU 8-23) No Hunting Area.",
+   "page": 69,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 69"
+  }
+ ]
+}
