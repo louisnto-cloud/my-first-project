@@ -1,26 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Small tracks. Snowshoe hare: two big hind prints side by side land ahead of two small front prints, making a Y that points the way it went. Grouse: 3 toes forward and 1 short toe back, about 5 to 7 cm, in a single zig zag line.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hare and grouse</text>
-  <rect x="15" y="45" width="175" height="190" rx="10" fill="#eef2f6"/>
-  <rect x="210" y="45" width="175" height="190" rx="10" fill="#eef2f6"/>
-  <g fill="#8b5a2b">
-    <ellipse cx="80" cy="85" rx="12" ry="24"/><ellipse cx="125" cy="85" rx="12" ry="24"/>
-    <circle cx="102" cy="140" r="8"/><circle cx="100" cy="170" r="8"/>
-  </g>
-  <path d="M102 225 V200" stroke="#e8590c" stroke-width="3"/>
-  <path d="M102 60 l-8 14 h16 Z" fill="#e8590c"/>
-  <text x="140" y="140" font-size="14" fill="#2f3a2b">front</text>
-  <text x="140" y="156" font-size="14" fill="#2f3a2b">small</text>
-  <text x="30" y="128" font-size="14" fill="#2f3a2b">hind</text>
-  <text x="30" y="144" font-size="14" fill="#2f3a2b">big</text>
-  <g stroke="#8b5a2b" stroke-width="4" stroke-linecap="round" fill="none">
-    <g transform="translate(275 200)"><path d="M0 0 V-22 M0 0 L-12 -18 M0 0 L12 -18 M0 0 V7"/></g>
-    <g transform="translate(320 150)"><path d="M0 0 V-22 M0 0 L-12 -18 M0 0 L12 -18 M0 0 V7"/></g>
-    <g transform="translate(278 100)"><path d="M0 0 V-22 M0 0 L-12 -18 M0 0 L12 -18 M0 0 V7"/></g>
-  </g>
-  <path d="M355 120 l-8 14 h16 Z" fill="#e8590c"/><path d="M355 220 V134" stroke="#e8590c" stroke-width="3"/>
-  <text x="102" y="260" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hare: a Y</text>
-  <text x="102" y="282" font-size="14" fill="#2f3a2b" text-anchor="middle">big hind prints lead</text>
-  <text x="297" y="260" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Grouse: 3 + 1</text>
-  <text x="297" y="282" font-size="14" fill="#2f3a2b" text-anchor="middle">5 to 7 cm, one line</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 312" font-family="sans-serif" role="img" aria-label="Small tracks. Snowshoe hare: two big hind prints side by side land ahead of two small front prints, making a Y that points the way it went. Grouse: 3 toes forward and 1 short toe back, about 5 to 7 cm, in a single zig zag line.">
+<rect width="400" height="312" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hare and grouse</text>
+<rect x="8" y="40" width="188" height="224" rx="10" fill="#eef2f6"/>
+<rect x="204" y="40" width="188" height="224" rx="10" fill="#eef2f6"/>
+<g data-tip="Which way it went|The Y points the way the hare went. Runways in brush are 10 to 15 cm wide and packed down in snow.">
+<path d="M102 132 V62" stroke="#e8590c" stroke-width="3"/><path d="M102 50 l-8 14 h16 Z" fill="#e8590c"/>
+</g>
+<g data-tip="Hind feet|Long and triangular, up to about 12 cm. In winter up to 15 cm with the fur spread. They land ahead of the front feet.">
+<path d="M80 70 C90 70 94 84 93 100 C92 116 87 130 80 130 C73 130 68 116 67 100 C66 84 70 70 80 70 Z" fill="#8b5a2b"/>
+<path d="M124 70 C134 70 138 84 137 100 C136 116 131 130 124 130 C117 130 112 116 111 100 C110 84 114 70 124 70 Z" fill="#8b5a2b"/>
+<text x="62" y="96" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">hind</text>
+<text x="62" y="114" font-size="15" fill="#2f3a2b" text-anchor="end">to 12 cm</text>
+</g>
+<g data-tip="Front feet|Round, about 4.5 cm. They land behind the two big hind prints.">
+<circle cx="102" cy="156" r="11" fill="#8b5a2b"/><circle cx="100" cy="186" r="11" fill="#8b5a2b"/>
+<text x="122" y="166" font-size="15" font-weight="bold" fill="#2f3a2b">front</text>
+<text x="122" y="184" font-size="15" fill="#2f3a2b">4.5 cm</text>
+</g>
+<g data-tip="Snowshoe hare, Region 3|Season 1 August to 30 April, 10 a day (page 34). Look at dawn, dusk and on grey days.">
+<rect x="14" y="208" width="176" height="52" fill="#eef2f6"/>
+<text x="102" y="230" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hare: a Y</text>
+<text x="102" y="251" font-size="15" fill="#2f3a2b" text-anchor="middle">big hind prints lead</text>
+</g>
+<g data-tip="Grouse foot|3 toes forward and 1 short toe back, about 5 to 7 cm long. In winter, comb like fringes on the toes make the track look wider and fuzzy.">
+<rect x="210" y="62" width="130" height="146" fill="#eef2f6"/>
+<g stroke="#8b5a2b" stroke-width="4" stroke-linecap="round" fill="none">
+<g transform="translate(264 194)"><path d="M0 0 V-22 M0 0 L-12 -18 M0 0 L12 -18 M0 0 V7"/></g>
+<g transform="translate(310 146)"><path d="M0 0 V-22 M0 0 L-12 -18 M0 0 L12 -18 M0 0 V7"/></g>
+<g transform="translate(266 98)"><path d="M0 0 V-22 M0 0 L-12 -18 M0 0 L12 -18 M0 0 V7"/></g>
+</g>
+<text x="284" y="82" font-size="15" font-weight="bold" fill="#2f3a2b">3 forward</text>
+<text x="250" y="206" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">1 back</text>
+</g>
+<g data-tip="One line|The bird walks in a line, often zig zag. Wing marks in snow show where it flushed.">
+<path d="M366 194 V68" stroke="#e8590c" stroke-width="3"/><path d="M366 56 l-8 14 h16 Z" fill="#e8590c"/>
+</g>
+<g data-tip="Grouse|3 toes forward, 1 back, in one line. A pile of droppings means a roost or a drum log.">
+<rect x="210" y="208" width="176" height="52" fill="#eef2f6"/>
+<text x="298" y="230" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Grouse: 3 + 1</text>
+<text x="298" y="251" font-size="15" fill="#2f3a2b" text-anchor="middle">5 to 7 cm, one line</text>
+</g>
+<path d="M150 286 h25" stroke="#2f3a2b" stroke-width="3"/><path d="M150 280 v12 M175 280 v12" stroke="#2f3a2b" stroke-width="2"/>
+<text x="183" y="291" font-size="15" fill="#2f3a2b">5 cm, both drawn to scale</text>
 </svg>

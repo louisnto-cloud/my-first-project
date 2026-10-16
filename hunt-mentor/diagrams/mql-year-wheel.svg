@@ -1,43 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Year wheel for California quail in BC. January and February: big winter coveys. March: coveys break up. April: pairs. May: nests. June: peak hatch. July: broods. August: families join together. September: coveys form. October and November: the Region 8 season, 1 October to 30 November, 99 percent. December: winter coveys. Biology 65 to 80 percent.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The quail year</text>
-<path d="M200.0 68.0 A96 96 0 0 1 248.0 80.9 L225.0 120.7 A50 50 0 0 0 200.0 114.0 Z" fill="#4a7fb0" stroke="#fffaf0" stroke-width="2"/>
-<text x="218.89379029248403" y="98.48741468089801" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Jan</text>
-<text x="227.95245687107223" y="62.748159108202486" font-size="14" fill="#2f3a2b" text-anchor="start">coveys</text>
-<path d="M248.0 80.9 A96 96 0 0 1 283.1 116.0 L243.3 139.0 A50 50 0 0 0 225.0 120.7 Z" fill="#4a7fb0" stroke="#fffaf0" stroke-width="2"/>
-<text x="251.618795026618" y="117.38120497338204" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Feb</text>
-<text x="276.3675323681471" y="91.21825406947978" font-size="14" fill="#2f3a2b" text-anchor="start">coveys</text>
-<path d="M283.1 116.0 A96 96 0 0 1 296.0 164.0 L250.0 164.0 A50 50 0 0 0 243.3 139.0 Z" fill="#8a9a6b" stroke="#fffaf0" stroke-width="2"/>
-<text x="270.51258531910196" y="150.10620970751597" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Mar</text>
-<text x="304.31998923921935" y="140.52990503872272" font-size="14" fill="#2f3a2b" text-anchor="start">break up</text>
-<path d="M296.0 164.0 A96 96 0 0 1 283.1 212.0 L243.3 189.0 A50 50 0 0 0 250.0 164.0 Z" fill="#8a9a6b" stroke="#fffaf0" stroke-width="2"/>
-<text x="270.51258531910196" y="187.89379029248403" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Apr</text>
-<text x="304.31998923921935" y="197.47009496127728" font-size="14" fill="#2f3a2b" text-anchor="start">pairs</text>
-<path d="M283.1 212.0 A96 96 0 0 1 248.0 247.1 L225.0 207.3 A50 50 0 0 0 243.3 189.0 Z" fill="#b9a88a" stroke="#fffaf0" stroke-width="2"/>
-<text x="251.618795026618" y="220.61879502661796" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">May</text>
-<text x="276.3675323681471" y="246.78174593052023" font-size="14" fill="#2f3a2b" text-anchor="start">nests</text>
-<path d="M248.0 247.1 A96 96 0 0 1 200.0 260.0 L200.0 214.0 A50 50 0 0 0 225.0 207.3 Z" fill="#b9a88a" stroke="#fffaf0" stroke-width="2"/>
-<text x="218.89379029248403" y="239.512585319102" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Jun</text>
-<text x="227.95245687107223" y="275.25184089179754" font-size="14" fill="#2f3a2b" text-anchor="start">hatch</text>
-<path d="M200.0 260.0 A96 96 0 0 1 152.0 247.1 L175.0 207.3 A50 50 0 0 0 200.0 214.0 Z" fill="#b9a88a" stroke="#fffaf0" stroke-width="2"/>
-<text x="181.10620970751597" y="239.512585319102" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Jul</text>
-<text x="172.04754312892774" y="275.25184089179754" font-size="14" fill="#2f3a2b" text-anchor="end">broods</text>
-<path d="M152.0 247.1 A96 96 0 0 1 116.9 212.0 L156.7 189.0 A50 50 0 0 0 175.0 207.3 Z" fill="#8a9a6b" stroke="#fffaf0" stroke-width="2"/>
-<text x="148.38120497338204" y="220.618795026618" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Aug</text>
-<text x="123.63246763185288" y="246.78174593052023" font-size="14" fill="#2f3a2b" text-anchor="end">families</text>
-<path d="M116.9 212.0 A96 96 0 0 1 104.0 164.0 L150.0 164.0 A50 50 0 0 0 156.7 189.0 Z" fill="#8a9a6b" stroke="#fffaf0" stroke-width="2"/>
-<text x="129.48741468089804" y="187.89379029248403" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Sep</text>
-<text x="95.68001076078063" y="197.4700949612773" font-size="14" fill="#2f3a2b" text-anchor="end">coveys</text>
-<path d="M104.0 164.0 A96 96 0 0 1 116.9 116.0 L156.7 139.0 A50 50 0 0 0 150.0 164.0 Z" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
-<text x="129.487414680898" y="150.10620970751597" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Oct</text>
-<text x="95.68001076078062" y="140.52990503872272" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">SEASON</text>
-<path d="M116.9 116.0 A96 96 0 0 1 152.0 80.9 L175.0 120.7 A50 50 0 0 0 156.7 139.0 Z" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
-<text x="148.381204973382" y="117.38120497338204" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Nov</text>
-<text x="123.63246763185285" y="91.21825406947978" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">SEASON</text>
-<path d="M152.0 80.9 A96 96 0 0 1 200.0 68.0 L200.0 114.0 A50 50 0 0 0 175.0 120.7 Z" fill="#4a7fb0" stroke="#fffaf0" stroke-width="2"/>
-<text x="181.106209707516" y="98.48741468089801" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Dec</text>
-<text x="172.04754312892777" y="62.748159108202486" font-size="14" fill="#2f3a2b" text-anchor="end">coveys</text>
-<text x="200" y="160" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Oct 1 to</text>
-<text x="200" y="178" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Nov 30</text>
-<text x="200" y="196" font-size="14" fill="#2f3a2b" text-anchor="middle">(99%)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 412" font-family="sans-serif" role="img" aria-label="Year wheel for California quail in BC. January and February: big winter coveys. March: coveys break up. April: pairs. May: nests. June: peak hatch. July: broods. August: families join together. September: coveys form. October and November: the Region 8 season, 1 October to 30 November, 99 percent. December: winter coveys. Biology 65 to 80 percent.">
+<rect width="400" height="412" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The quail year</text>
+<g data-tip="Winter coveys|Big coveys near farms, orchards and thick brush, on the same small range all winter. No season now: scout only."><path d="M200.0 68.0 A112 112 0 0 1 256.0 83.0 L228.0 131.5 A56 56 0 0 0 200.0 124.0 Z" fill="#4a7fb0" stroke="#fffaf0" stroke-width="2.4"/><text x="221.7" y="104.4" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Jan</text><text x="232.1" y="63.2" font-size="15" fill="#2f3a2b" text-anchor="start">coveys</text>
+<path d="M256.0 83.0 A112 112 0 0 1 297.0 124.0 L248.5 152.0 A56 56 0 0 0 228.0 131.5 Z" fill="#4a7fb0" stroke="#fffaf0" stroke-width="2.4"/><text x="259.4" y="126.1" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Feb</text><text x="287.7" y="95.3" font-size="15" fill="#2f3a2b" text-anchor="start">coveys</text>
+<path d="M144.0 83.0 A112 112 0 0 1 200.0 68.0 L200.0 124.0 A56 56 0 0 0 172.0 131.5 Z" fill="#4a7fb0" stroke="#fffaf0" stroke-width="2.4"/><text x="178.3" y="104.4" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Dec</text><text x="167.9" y="63.2" font-size="15" fill="#2f3a2b" text-anchor="end">coveys</text></g>
+<g data-tip="Break up and pair|Coveys break up in March. Pairing takes about 2 months, from March to early May."><path d="M297.0 124.0 A112 112 0 0 1 312.0 180.0 L256.0 180.0 A56 56 0 0 0 248.5 152.0 Z" fill="#7a9a52" stroke="#fffaf0" stroke-width="2.4"/><text x="281.1" y="163.8" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Mar</text><text x="319.8" y="152.9" font-size="15" fill="#2f3a2b" text-anchor="start">break up</text>
+<path d="M312.0 180.0 A112 112 0 0 1 297.0 236.0 L248.5 208.0 A56 56 0 0 0 256.0 180.0 Z" fill="#7a9a52" stroke="#fffaf0" stroke-width="2.4"/><text x="281.1" y="207.2" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Apr</text><text x="319.8" y="217.1" font-size="15" fill="#2f3a2b" text-anchor="start">pairs</text></g>
+<g data-tip="Nests and broods|About 14 eggs, and the hen sits 22 to 23 days. Most hatch in June, and the chicks run at once."><path d="M297.0 236.0 A112 112 0 0 1 256.0 277.0 L228.0 228.5 A56 56 0 0 0 248.5 208.0 Z" fill="#b39a6e" stroke="#fffaf0" stroke-width="2.4"/><text x="259.4" y="244.9" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">May</text><text x="287.7" y="280.7" font-size="15" fill="#2f3a2b" text-anchor="start">nests</text>
+<path d="M256.0 277.0 A112 112 0 0 1 200.0 292.0 L200.0 236.0 A56 56 0 0 0 228.0 228.5 Z" fill="#b39a6e" stroke="#fffaf0" stroke-width="2.4"/><text x="221.7" y="266.6" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Jun</text><text x="232.1" y="312.8" font-size="15" fill="#2f3a2b" text-anchor="start">hatch</text>
+<path d="M200.0 292.0 A112 112 0 0 1 144.0 277.0 L172.0 228.5 A56 56 0 0 0 200.0 236.0 Z" fill="#b39a6e" stroke="#fffaf0" stroke-width="2.4"/><text x="178.3" y="266.6" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Jul</text><text x="167.9" y="312.8" font-size="15" fill="#2f3a2b" text-anchor="end">broods</text></g>
+<g data-tip="Families join|Family groups join into coveys in August. Coveys of 20 or more by September."><path d="M144.0 277.0 A112 112 0 0 1 103.0 236.0 L151.5 208.0 A56 56 0 0 0 172.0 228.5 Z" fill="#a8642e" stroke="#fffaf0" stroke-width="2.4"/><text x="140.6" y="244.9" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Aug</text><text x="112.3" y="280.7" font-size="15" fill="#2f3a2b" text-anchor="end">families</text>
+<path d="M103.0 236.0 A112 112 0 0 1 88.0 180.0 L144.0 180.0 A56 56 0 0 0 151.5 208.0 Z" fill="#a8642e" stroke="#fffaf0" stroke-width="2.4"/><text x="118.9" y="207.2" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Sep</text><text x="80.2" y="217.1" font-size="15" fill="#2f3a2b" text-anchor="end">coveys</text></g>
+<g data-tip="The season|Region 8: 1 October to 30 November, 10 a day, 30 in possession."><path d="M88.0 180.0 A112 112 0 0 1 103.0 124.0 L151.5 152.0 A56 56 0 0 0 144.0 180.0 Z" fill="#e8590c" stroke="#fffaf0" stroke-width="2.4"/><text x="118.9" y="163.8" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Oct</text><text x="80.2" y="152.9" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">SEASON</text>
+<path d="M103.0 124.0 A112 112 0 0 1 144.0 83.0 L172.0 131.5 A56 56 0 0 0 151.5 152.0 Z" fill="#e8590c" stroke="#fffaf0" stroke-width="2.4"/><text x="140.6" y="126.1" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Nov</text><text x="112.3" y="95.3" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">SEASON</text></g>
+<g data-tip="No migration|Quail stay in the same low country all year. Most timing data come from California studies, so BC dates may run later."><circle cx="200" cy="180" r="53" fill="#fffaf0"/><text x="200" y="168" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">1 Oct to</text><text x="200" y="186" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">30 Nov</text><text x="200" y="204" font-size="14" fill="#2f3a2b" text-anchor="middle">Region 8</text></g>
+<rect x="16" y="338" width="18" height="18" rx="4" fill="#4a7fb0"/><text x="40" y="352" font-size="15" fill="#2f3a2b">Winter coveys</text>
+<rect x="146" y="338" width="18" height="18" rx="4" fill="#7a9a52"/><text x="170" y="352" font-size="15" fill="#2f3a2b">Break up, pairs</text>
+<rect x="276" y="338" width="18" height="18" rx="4" fill="#b39a6e"/><text x="300" y="352" font-size="15" fill="#2f3a2b">Nests, broods</text>
+<rect x="16" y="368" width="18" height="18" rx="4" fill="#a8642e"/><text x="40" y="382" font-size="15" fill="#2f3a2b">Families join</text>
+<rect x="146" y="368" width="18" height="18" rx="4" fill="#e8590c"/><text x="170" y="382" font-size="15" fill="#2f3a2b">Season</text>
+<text x="384" y="382" font-size="14" fill="#6b5b4b" text-anchor="end">Biology 65 to 80%</text>
 </svg>

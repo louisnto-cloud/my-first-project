@@ -1,4 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="What kills Trichinella in bear meat. Freezing does not: the northern species, Trichinella nativa, survives months or years frozen. Cooking does: 71 degrees Celsius, 160 Fahrenheit, inside the thickest part, checked with a thermometer, because colour is not a reliable sign on dark bear meat. In a 2005 outbreak in Victoria, BC, the bear meat had been frozen before cooking.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<rect x="8" y="8" width="384" height="34" rx="8" fill="#2f3a2b"/><text x="20" y="31" font-size="16" font-weight="bold" fill="#fff" text-anchor="start">Bear meat: what kills Trichinella?</text><rect x="10" y="52" width="186" height="190" rx="8" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/><rect x="204" y="52" width="186" height="190" rx="8" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/><text x="103" y="80" font-size="17" font-weight="bold" fill="#e8590c" text-anchor="middle">Freezing</text><text x="297" y="80" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cooking</text><g stroke="#e8590c" stroke-width="10" stroke-linecap="round"><line x1="70" y1="110" x2="136" y2="176"/><line x1="136" y1="110" x2="70" y2="176"/></g><path d="M262 140 l22 22 l44 -50" fill="none" stroke="#2f3a2b" stroke-width="10" stroke-linecap="round"/><text x="103" y="206" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Northern type survives</text><text x="103" y="224" font-size="14" fill="#23261f" text-anchor="middle">months in the freezer</text><text x="297" y="206" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">71 C (160 F) inside</text><text x="297" y="224" font-size="14" fill="#23261f" text-anchor="middle">check with a thermometer</text><text x="200" y="268" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Colour lies on dark meat. Use the probe.</text><text x="200" y="290" font-size="14" fill="#23261f" text-anchor="middle">BC outbreak 2005: frozen bear meat (75%)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 314" font-family="sans-serif" role="img" aria-label="What kills Trichinella in bear meat. Freezing does not: the northern species, Trichinella nativa, survives months or years frozen. Cooking does: 71 degrees Celsius, 160 Fahrenheit, inside the thickest part, checked with a thermometer, because colour is not a reliable sign on dark bear meat. In a 2005 outbreak in Victoria, BC, the bear meat had been frozen before cooking.">
+<rect x="0" y="0" width="400" height="314" fill="#fffaf0"/>
+<g data-tip="Trichinella|A parasite in bear meat that causes trichinosis. Most Canadian outbreaks are the northern species.">
+<rect x="8" y="8" width="384" height="36" rx="8" fill="#2f3a2b"/>
+<text x="200" y="32" font-size="17" font-weight="bold" fill="#fff" text-anchor="middle">Bear meat: what kills Trichinella?</text>
+</g>
+<g data-tip="Freezing: no|Trichinella nativa, the northern species in bears, survives freezing for months or years. Freezing does not make bear meat safe.">
+<rect x="10" y="54" width="186" height="192" rx="8" fill="#fff4ec" stroke="#e8590c" stroke-width="2.4"/>
+<text x="103" y="80" font-size="18" font-weight="bold" fill="#c2410c" text-anchor="middle">Freezing</text>
+<rect x="72" y="94" width="62" height="86" rx="6" fill="#dfe9f0" stroke="#4a6a80" stroke-width="2"/>
+<line x1="72" y1="124" x2="134" y2="124" stroke="#4a6a80" stroke-width="2"/>
+<line x1="124" y1="102" x2="124" y2="116" stroke="#4a6a80" stroke-width="3" stroke-linecap="round"/>
+<line x1="124" y1="132" x2="124" y2="150" stroke="#4a6a80" stroke-width="3" stroke-linecap="round"/>
+<g stroke="#4a6a80" stroke-width="2" stroke-linecap="round"><path d="M98 140 v26 M87 147 l22 12 M87 159 l22 -12"/></g>
+<circle cx="140" cy="100" r="17" fill="#e8590c" stroke="#fffaf0" stroke-width="2.4"/>
+<path d="M133 93 l14 14 M147 93 l-14 14" stroke="#fffaf0" stroke-width="3.6" stroke-linecap="round"/>
+<text x="103" y="208" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Northern type lives</text>
+<text x="103" y="230" font-size="15" fill="#23261f" text-anchor="middle">months or years frozen</text>
+</g>
+<g data-tip="Cooking: yes|Cook every cut to 71 °C (160 °F) inside, in the thickest part.">
+<rect x="204" y="54" width="186" height="192" rx="8" fill="#eef2e6" stroke="#2f6e3b" stroke-width="2.4"/>
+<text x="297" y="80" font-size="18" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Cooking</text>
+<path d="M232 156 C232 136 256 126 290 128 C324 130 348 140 348 160 C348 178 320 186 288 184 C254 182 232 174 232 156 Z" fill="#7a2e1e" stroke="#4a1a10" stroke-width="1.6"/>
+<path d="M246 156 C268 146 306 146 334 158" stroke="#a8503a" stroke-width="3" fill="none" stroke-linecap="round"/>
+<line x1="290" y1="160" x2="318" y2="112" stroke="#8a8378" stroke-width="3.4" stroke-linecap="round"/>
+<circle cx="322" cy="104" r="14" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<path d="M322 104 l7 -7" stroke="#c0392b" stroke-width="2.4" stroke-linecap="round"/>
+<circle cx="240" cy="100" r="17" fill="#2f6e3b" stroke="#fffaf0" stroke-width="2.4"/>
+<path d="M232 100 l6 6 l11 -12" stroke="#fffaf0" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="297" y="208" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">71 °C (160 °F) inside</text>
+<text x="297" y="230" font-size="15" fill="#23261f" text-anchor="middle">at the thickest part</text>
+</g>
+<g data-tip="Use a thermometer|Bear meat is dark, so colour is not a reliable sign it is done. Probe it.">
+<rect x="8" y="254" width="384" height="26" fill="#fffaf0"/>
+<text x="200" y="273" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Colour lies on dark meat. Use the probe.</text>
+</g>
+<g data-tip="Victoria, 2005|Black bear meat frozen at least 3 days, then cooked, gave 26 probable cases among 42 people who ate it.">
+<rect x="8" y="282" width="384" height="26" fill="#fffaf0"/>
+<text x="200" y="301" font-size="15" fill="#6b5b4b" text-anchor="middle">BC outbreak 2005: frozen bear meat (75%)</text>
+</g>
 </svg>

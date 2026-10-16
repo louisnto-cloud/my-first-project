@@ -1,10 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 368" font-family="sans-serif" role="img" aria-label="Where to look for quail, map view. A creek with brushy edges runs down the left. Blackberry and rose thickets sit beside an orchard and a grain field, and a small covey of quail is near one. A dirt road along the bottom shows tyre tracks and dusting spots near the brush. Orange stars mark the best spots: thick brush right beside food (Tip).">
-<rect width="400" height="368" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 396" font-family="sans-serif" role="img" aria-label="Where to look for quail, map view. A creek with brushy edges runs down the left. Blackberry and rose thickets sit beside an orchard and a grain field, and a small covey of quail is near one. A dirt road along the bottom shows tyre tracks and dusting spots near the brush. Orange stars mark the best spots: thick brush right beside food (Tip).">
+<rect width="400" height="396" fill="#fffaf0"/>
 <defs><pattern id="hf-quail-cover-rows" width="16" height="12" patternUnits="userSpaceOnUse"><rect width="16" height="12" fill="#d6dcb4"/><circle cx="10" cy="7.5" r="5.2" fill="#3e6230"/><circle cx="8" cy="6" r="5.2" fill="#5b8a43"/><circle cx="6.6" cy="4.8" r="2.3" fill="#7fae5b"/></pattern><pattern id="hf-quail-cover-grain" width="8" height="6" patternUnits="userSpaceOnUse"><rect width="8" height="6" fill="#e3c97a"/><path d="M0 3 H8" stroke="#c9a94f" stroke-width="1.4"/></pattern><clipPath id="hf-quail-cover-map"><rect x="8" y="8" width="384" height="292" rx="8"/></clipPath></defs>
-<g clip-path="url(#hf-quail-cover-map)">
-<rect x="8" y="8" width="384" height="292" fill="#ece6cc"/>
-<rect x="262" y="8" width="130" height="136" fill="url(#hf-quail-cover-rows)"/>
-<rect x="262" y="166" width="130" height="134" fill="url(#hf-quail-cover-grain)"/>
+<rect x="8" y="8" width="384" height="292" rx="8" fill="#ece6cc"/>
+<g data-tip="Orchard|Food beside cover. Feeding quail seldom go more than 15 to 30 m out from cover.">
+<rect x="262" y="8" width="130" height="136" fill="url(#hf-quail-cover-rows)" clip-path="url(#hf-quail-cover-map)"/>
+<text x="327" y="136" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#f1edda" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">orchard</text>
+</g>
+<g data-tip="Grain field|Food. Quail feed mornings and evenings, then loaf in shrubs at midday.">
+<rect x="262" y="166" width="130" height="134" fill="url(#hf-quail-cover-grain)" clip-path="url(#hf-quail-cover-map)"/>
+<text x="327" y="238" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#f1e3b4" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">grain</text>
+</g>
+<g data-tip="Brushy creek|Quail use riparian brush. Creek edges near grain or orchards are a good place to look (Tip).">
 <circle cx="99.5" cy="22.5" r="8.8" fill="#7d9a5f"/>
 <circle cx="134.8" cy="22.5" r="8.8" fill="#6f8a55"/>
 <circle cx="101.3" cy="29.9" r="7.7" fill="#5f7a48"/>
@@ -58,26 +64,34 @@
 <circle cx="118.6" cy="286.2" r="7.3" fill="#6f8a55"/>
 <circle cx="144.8" cy="286.2" r="10.0" fill="#7d9a5f"/>
 <path d="M112 8 C 136 80, 96 160, 136 300" fill="none" stroke="#4a7fb0" stroke-width="6"/>
-<path d="M8 270 L262 260" stroke="#c9b79c" stroke-width="20"/>
-<path d="M8 266 L262 256 M8 275 L262 265" stroke="#b3a184" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="58" y="130" font-size="16" font-weight="bold" fill="#4a7fb0" text-anchor="middle">creek</text>
+</g>
+<g data-tip="Dirt road|Look for dusting spots and tracks on dirt roads near cover (Tip).">
+<path d="M8 270 L262 260" stroke="#c9b79c" stroke-width="20" clip-path="url(#hf-quail-cover-map)"/>
+<path d="M8 266 L262 256 M8 275 L262 265" stroke="#b3a184" stroke-width="1.6" stroke-dasharray="6 4" clip-path="url(#hf-quail-cover-map)"/>
 <ellipse cx="180" cy="263.0" rx="6" ry="3.5" fill="#a8946f"/>
 <ellipse cx="204" cy="262.0" rx="6" ry="3.5" fill="#a8946f"/>
 <ellipse cx="226" cy="261.2" rx="6" ry="3.5" fill="#a8946f"/>
+<rect x="12" y="346" width="24" height="14" rx="3" fill="#c9b79c"/><ellipse cx="24" cy="353" rx="5" ry="3" fill="#a8946f"/>
+<text x="44" y="358" font-size="16" fill="#2f3a2b">Dirt road: tracks, dust spots</text>
+</g>
+<g data-tip="Thickets|Blackberry and wild rose thickets are quail hiding cover (Tip). No brush, no quail.">
 <g transform="translate(226 92) scale(1.0)"><circle cx="-12" cy="0" r="13" fill="#3f5e33"/><circle cx="2" cy="-8" r="14" fill="#3f5e33"/><circle cx="14" cy="2" r="12" fill="#3f5e33"/><circle cx="0" cy="8" r="12" fill="#3f5e33"/><circle cx="-2.2" cy="-14.2" r="2.2" fill="#2b1d3a"/><circle cx="-8.7" cy="-0.1" r="2.2" fill="#2b1d3a"/><circle cx="-16.3" cy="-11.8" r="2.2" fill="#2b1d3a"/><circle cx="19.2" cy="3.7" r="2.2" fill="#d95f7a"/><circle cx="0.9" cy="12.4" r="2.2" fill="#d95f7a"/><circle cx="-18.6" cy="-15.5" r="2.2" fill="#2b1d3a"/><circle cx="8.0" cy="12.9" r="2.2" fill="#2b1d3a"/><circle cx="3.9" cy="-13.8" r="2.2" fill="#2b1d3a"/><circle cx="9.2" cy="-6.4" r="2.2" fill="#2b1d3a"/><circle cx="-17.0" cy="0.4" r="2.2" fill="#d95f7a"/></g>
 <g transform="translate(222 152) scale(1.15)"><circle cx="-12" cy="0" r="13" fill="#3f5e33"/><circle cx="2" cy="-8" r="14" fill="#3f5e33"/><circle cx="14" cy="2" r="12" fill="#3f5e33"/><circle cx="0" cy="8" r="12" fill="#3f5e33"/><circle cx="-18.2" cy="12.1" r="2.2" fill="#d95f7a"/><circle cx="8.1" cy="7.8" r="2.2" fill="#2b1d3a"/><circle cx="-5.9" cy="4.6" r="2.2" fill="#2b1d3a"/><circle cx="14.8" cy="-3.5" r="2.2" fill="#2b1d3a"/><circle cx="14.5" cy="1.2" r="2.2" fill="#d95f7a"/><circle cx="6.5" cy="-4.6" r="2.2" fill="#2b1d3a"/><circle cx="4.4" cy="-13.6" r="2.2" fill="#d95f7a"/><circle cx="-15.4" cy="-8.3" r="2.2" fill="#2b1d3a"/><circle cx="9.1" cy="-4.3" r="2.2" fill="#d95f7a"/><circle cx="7.8" cy="-2.3" r="2.2" fill="#2b1d3a"/></g>
 <g transform="translate(230 196) scale(1.0)"><circle cx="-12" cy="0" r="13" fill="#3f5e33"/><circle cx="2" cy="-8" r="14" fill="#3f5e33"/><circle cx="14" cy="2" r="12" fill="#3f5e33"/><circle cx="0" cy="8" r="12" fill="#3f5e33"/><circle cx="13.5" cy="-13.5" r="2.2" fill="#d95f7a"/><circle cx="-18.8" cy="2.0" r="2.2" fill="#2b1d3a"/><circle cx="-19.1" cy="12.7" r="2.2" fill="#2b1d3a"/><circle cx="-0.1" cy="2.4" r="2.2" fill="#2b1d3a"/><circle cx="-9.8" cy="-15.7" r="2.2" fill="#2b1d3a"/><circle cx="-14.3" cy="2.4" r="2.2" fill="#d95f7a"/><circle cx="-13.2" cy="11.2" r="2.2" fill="#d95f7a"/><circle cx="17.2" cy="-1.1" r="2.2" fill="#2b1d3a"/><circle cx="-6.9" cy="4.0" r="2.2" fill="#2b1d3a"/><circle cx="5.4" cy="8.1" r="2.2" fill="#2b1d3a"/></g>
 <g transform="translate(196 40) scale(0.85)"><circle cx="-12" cy="0" r="13" fill="#3f5e33"/><circle cx="2" cy="-8" r="14" fill="#3f5e33"/><circle cx="14" cy="2" r="12" fill="#3f5e33"/><circle cx="0" cy="8" r="12" fill="#3f5e33"/><circle cx="15.2" cy="-4.5" r="2.2" fill="#d95f7a"/><circle cx="16.8" cy="-9.7" r="2.2" fill="#2b1d3a"/><circle cx="-0.1" cy="9.1" r="2.2" fill="#2b1d3a"/><circle cx="8.4" cy="12.5" r="2.2" fill="#2b1d3a"/><circle cx="12.9" cy="-12.6" r="2.2" fill="#2b1d3a"/><circle cx="-9.0" cy="-9.6" r="2.2" fill="#2b1d3a"/><circle cx="-4.7" cy="-0.4" r="2.2" fill="#d95f7a"/><circle cx="-7.4" cy="9.2" r="2.2" fill="#d95f7a"/><circle cx="-1.9" cy="-13.8" r="2.2" fill="#2b1d3a"/><circle cx="-8.9" cy="2.2" r="2.2" fill="#d95f7a"/></g>
+<text x="180" y="124" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">thickets</text>
+</g>
+<g data-tip="Covey|A fall flock. They run before they fly, and a lookout bird calls the alarm.">
+<circle cx="245" cy="176" r="16" fill="#ece6cc" opacity="0"/>
 <g transform="translate(244 172)"><ellipse rx="6" ry="4.2" fill="#6d6e72"/><circle cx="5" cy="-3" r="2.8" fill="#4a4a4e"/><path d="M5 -5.5 q2 -4 -1 -5" stroke="#1d1d1f" stroke-width="1.3" fill="none"/></g>
 <g transform="translate(250 178)"><ellipse rx="6" ry="4.2" fill="#6d6e72"/><circle cx="5" cy="-3" r="2.8" fill="#4a4a4e"/><path d="M5 -5.5 q2 -4 -1 -5" stroke="#1d1d1f" stroke-width="1.3" fill="none"/></g>
 <g transform="translate(240 180)"><ellipse rx="6" ry="4.2" fill="#6d6e72"/><circle cx="5" cy="-3" r="2.8" fill="#4a4a4e"/><path d="M5 -5.5 q2 -4 -1 -5" stroke="#1d1d1f" stroke-width="1.3" fill="none"/></g>
+<g transform="translate(22 381) scale(1.3)"><ellipse rx="6" ry="4.2" fill="#6d6e72"/><circle cx="5" cy="-3" r="2.8" fill="#4a4a4e"/><path d="M5 -5.5 q2 -4 -1 -5" stroke="#1d1d1f" stroke-width="1.3" fill="none"/></g><text x="44" y="387" font-size="16" fill="#2f3a2b">Covey: feeds 15 to 30 m from cover</text>
+</g>
+<g data-tip="Best spots|Thick brush right beside food, on brushy edges next to food (Tip).">
 <polygon points="248.0,115.0 250.4,120.7 256.6,121.2 251.9,125.3 253.3,131.3 248.0,128.1 242.7,131.3 244.1,125.3 239.4,121.2 245.6,120.7" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><polygon points="250.0,205.0 252.4,210.7 258.6,211.2 253.9,215.3 255.3,221.3 250.0,218.1 244.7,221.3 246.1,215.3 241.4,211.2 247.6,210.7" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/>
+<polygon points="24.0,313.0 26.9,320.0 34.5,320.6 28.7,325.5 30.5,332.9 24.0,328.9 17.5,332.9 19.3,325.5 13.5,320.6 21.1,320.0" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="44" y="330" font-size="16" font-weight="bold" fill="#2f3a2b">Thick brush beside food (Tip)</text>
 </g>
 <rect x="8" y="8" width="384" height="292" rx="8" fill="none" stroke="#6b5b4b" stroke-width="1.5"/>
-<text x="327" y="136" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#f1edda" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">orchard</text>
-<text x="327" y="238" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#f1e3b4" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">grain</text>
-<text x="58" y="130" font-size="16" font-weight="bold" fill="#4a7fb0" text-anchor="middle">creek</text>
-<text x="180" y="124" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">thickets</text>
-<polygon points="24.0,313.0 26.9,320.0 34.5,320.6 28.7,325.5 30.5,332.9 24.0,328.9 17.5,332.9 19.3,325.5 13.5,320.6 21.1,320.0" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="44" y="330" font-size="16" font-weight="bold" fill="#2f3a2b">Thick brush beside food (Tip)</text>
-<rect x="12" y="346" width="24" height="14" rx="3" fill="#c9b79c"/><ellipse cx="24" cy="353" rx="5" ry="3" fill="#a8946f"/>
-<text x="44" y="358" font-size="16" fill="#2f3a2b">Dirt road: tracks, dust spots</text>
 </svg>
