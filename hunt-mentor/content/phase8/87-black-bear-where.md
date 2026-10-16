@@ -49,6 +49,9 @@ g-bb-tofino | Coastal bear turning rocks at low tide.
 - Plants about 80% of the diet (75%).
 - Rich, easy food beats everything (90%).
 
+```photo ts-clearcut-holmes Spring food: the bright green avalanche chutes on the far slope green up early.
+```
+
 ```more foods in detail
 - Spring (90%, BC account): meadows, estuaries, riparian strips, skunk cabbage swamps, avalanche chutes, grassy south facing slopes, burns; newborn deer, elk, moose and caribou.
 - Summer (90%): insects and larvae, fruits, berries, salmon, carrion.

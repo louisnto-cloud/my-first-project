@@ -131,6 +131,9 @@ commons-moose-bull | A bull moose feeding.
 - Wider stream, wider strip (95%).
 - In logged country, the creek strip is the cover (Tip).
 
+```photo ts-riparian-willow-creek Dry country: the only lush cover is the strip along the creek.
+```
+
 ```more the law and the wetland widths
 - Forest Planning and Practices Regulation, section 47: fish streams and streams in community watersheds get riparian classes by width (95%, BC Laws, read directly).
   - S1A: 100 m or wider (or flood plain 100 m or wider): 100 m management zone, no reserve unless the minister sets one.

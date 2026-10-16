@@ -868,5 +868,32 @@
     "licence": "Public domain",
     "licenceUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:Animal_Damage_-_Oregon_-_DPLA_-_b7734b7d3d58dedab92cee584199b42a.jpg"
+  },
+  {
+    "id": "ts-riparian-willow-creek",
+    "species": "Habitat: riparian strip",
+    "caption": "Riparian zone along Willow Creek, Trout Creek Mountains, Oregon. Trees, shrubs and green grass on the banks; dry sagebrush a few steps away.",
+    "author": "Bureau of Land Management",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Willow_Creek,_Trout_Creek_Mountains,_Oregon.jpg"
+  },
+  {
+    "id": "ts-clearcut-holmes",
+    "species": "Terrain: avalanche chutes",
+    "caption": "View from a clearcut at the end of the Holmes logging road, British Columbia. Bright green avalanche chutes run down the timbered slope below the peaks.",
+    "author": "Lub0t",
+    "licence": "CC BY 3.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:View_from_a_helicopter_access_clearcut_at_the_end_of_the_Holmes_logging_road_-_panoramio.jpg"
+  },
+  {
+    "id": "ts-browse-subalpine-fir",
+    "species": "Deer browse",
+    "caption": "Subalpine fir hedged by deer browsing. The low branches are clipped into a dense skirt; the top has grown out of reach and grows normally.",
+    "author": "Tyler Finvold",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Abies_lasiocarpa_with_deer_browsing_damage.jpg"
   }
 ]
