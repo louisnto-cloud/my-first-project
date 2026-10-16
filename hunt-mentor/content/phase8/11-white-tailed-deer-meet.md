@@ -79,6 +79,9 @@ g-wt-run | Runs low and smooth, no bounce.
 ```diagram mwt-antler-parts
 ```
 
+```photo bg-wt-rack-rear
+```
+
 - One main beam sweeps forward. Tines rise off it (85%).
 - Mule deer antlers fork, and fork again (85%).
 
@@ -93,6 +96,11 @@ g-wt-run | Runs low and smooth, no bounce.
 ## Age a buck by its body
 
 ```diagram mwt-age-bodies
+```
+
+```gallery
+bg-wt-young-spikes | Young buck: short spikes, slim neck.
+bg-wt-buck-rack | Mature buck: thick neck, big rack.
 ```
 
 - Body first, antlers second (65%).

@@ -237,6 +237,11 @@ yt-pack-out-meat | Heavy meat high and close to your back.
 ```diagram moose-antlers
 ```
 
+```gallery
+bg-moose-young-bull | Yearling: count every point.
+bg-moose-big-bull | Mature bull: wide palms.
+```
+
 ## Cheat sheet
 
 | Fact | Number | % |

@@ -70,6 +70,8 @@ g-moose-calf-winter | Calf in its first winter: stubby face.
 
 ```gallery
 g-moose-young-bull | Young bull: spike and fork. Count each antler.
+bg-moose-young-bull | Yearling: short antlers. Count each side.
+bg-moose-young-bull-points | Young bull, 3 or more points a side: not spike fork.
 ```
 
 ```more antlers, age and the spike fork rule
@@ -115,6 +117,9 @@ g-moose-young-bull | Young bull: spike and fork. Count each antler.
 ```diagram mc-moose-size
 ```
 
+```photo bg-moose-yearling-bc
+```
+
 - Bull: nearly 2 m at the shoulder, 450 to 500 kg (90%).
 - Cow: 1.8 m, 340 to 420 kg (99%).
 
@@ -130,6 +135,9 @@ g-moose-young-bull | Young bull: spike and fork. Count each antler.
 ## Three races in BC
 
 ```diagram mc-moose-subspecies
+```
+
+```photo bg-moose-shiras
 ```
 
 - One species, Alces alces, three races in BC (90%).

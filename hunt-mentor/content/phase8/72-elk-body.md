@@ -92,6 +92,9 @@ checked: 2026-10-11
 ```diagram mc-elk-coat
 ```
 
+```photo bg-elk-winter-coat
+```
+
 - Summer: sleek, reddish. Winter: grey body, dark neck (90%).
 - Hot days: beds in shade on north slopes (75%).
 

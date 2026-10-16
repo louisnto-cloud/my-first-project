@@ -141,6 +141,11 @@ g-elk-bulls-distance | At range, body size and neck tell age first.
 ```diagram mc-elk-races
 ```
 
+```gallery
+bg-elk-roosevelt-cow | Roosevelt elk cow, Vancouver Island.
+bg-elk-rocky-bull | Rocky Mountain elk bull, Banff.
+```
+
 - Coast: Roosevelt elk. Interior: Rocky Mountain elk (90%).
 - They look alike. Range tells them apart (90%).
 

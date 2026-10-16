@@ -34,6 +34,9 @@ checked: 2026-10-11
 ```diagram mc-elk-snow-depth
 ```
 
+```photo bg-elk-winter-range
+```
+
 - Deep snow is the limit: restricted past about 46 cm (80%).
 - Antlers drop late February to early April (90%).
 
@@ -77,6 +80,9 @@ checked: 2026-10-11
 ```diagram mc-elk-antler-growth
 ```
 
+```photo bg-elk-velvet
+```
+
 - Antlers grow up to about 1.7 cm a day (80%).
 - Velvet off late August or early September (90%).
 
@@ -92,6 +98,9 @@ checked: 2026-10-11
 ## September: the rut
 
 ```diagram mc-elk-rut-calendar
+```
+
+```photo bg-elk-bugle
 ```
 
 - Most cows bred mid to late September (90%).

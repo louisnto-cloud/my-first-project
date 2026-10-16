@@ -84,6 +84,9 @@ hab-willow-shrub | Willow leaves: summer salad.
 ```diagram mc-moose-antler-year
 ```
 
+```photo bg-moose-velvet
+```
+
 - Antlers full size by early September (90%).
 - Velvet dries and is rubbed off (90%).
 
@@ -98,6 +101,9 @@ hab-willow-shrub | Willow leaves: summer salad.
 ## The rut
 
 ```diagram mc-moose-rut-timeline
+```
+
+```photo bg-moose-sparring
 ```
 
 - Over 80% of calves are conceived in 2 weeks (90%).

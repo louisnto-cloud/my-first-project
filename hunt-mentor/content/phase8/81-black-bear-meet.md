@@ -79,6 +79,8 @@ g-bb-brown | Brown, but no hump and a straight face: black bear.
 g-bb-cinnamon | Cinnamon black bear eating dandelions.
 g-bb-blonde | Pale black bear. Same body shape.
 g-bb-sow-cubs | One family: a black cub and a cinnamon cub.
+bg-bb-kermode | White (Kermode) phase: never legal.
+bg-bb-glacier-cubs | Black sow, two blue grey cubs.
 ```
 
 ```more colour phases in BC
@@ -120,6 +122,9 @@ commons-grizzly-bear | Grizzly: shoulder hump, dished face, short round ears.
 ## Boar, sow and cubs
 
 ```diagram mc-black-bear-age-classes
+```
+
+```photo bg-bb-yearling
 ```
 
 - A bear under 2, or any bear with one: never (99%).

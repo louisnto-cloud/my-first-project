@@ -58,6 +58,11 @@ commons-elk-cow-calf | A cow elk and calf on a game trail. No antlers, smaller b
 ```diagram elk-antlers
 ```
 
+```gallery
+bg-elk-antlers-count | Count one side: brow tine first.
+bg-elk-spike-bc | Young bull: spikes only. Not 6 point.
+```
+
 - At least 6 tines on **one** antler (98%).
 - The brow tine counts (98%).
 

@@ -97,6 +97,9 @@ checked: 2026-10-11
 ```diagram mc-elk-calf-hide
 ```
 
+```photo bg-elk-calf
+```
+
 - Calf hides 2 to 3 weeks, then joins the cow group (90%).
 - Bears take many calves in the first weeks (80%).
 
@@ -138,6 +141,11 @@ commons-elk-cow-calf | A cow and calf: a calf follows close by fall.
 ## Old bull, young bull
 
 ```diagram mc-elk-old-young
+```
+
+```gallery
+bg-elk-spike-bc | Young bull: spikes in velvet.
+bg-elk-spikes | Young bulls together: spikes.
 ```
 
 - Herd bulls move cows away from trouble (Tip).

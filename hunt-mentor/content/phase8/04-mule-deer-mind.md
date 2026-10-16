@@ -109,6 +109,9 @@ g-md-run-away | Leaving: white rump, black tip.
 ```diagram mmd-social
 ```
 
+```photo bg-md-buck-group
+```
+
 - Doe clans: related females. Bucks: unrelated (90%).
 - Sparring is bonding, not fighting (90%).
 

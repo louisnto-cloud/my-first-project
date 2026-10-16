@@ -25,6 +25,9 @@ checked: 2026-10-11
 ```diagram vitals-moose
 ```
 
+```photo bg-moose-bell
+```
+
 - Long legs carry a body over logs, muskeg and deep snow (90%).
 - The hump fools your eye: aim low (Tip).
 
@@ -117,6 +120,9 @@ commons-moose-bull | A bull browsing: twigs and leaves, not grass.
 ```diagram mc-moose-snow
 ```
 
+```photo bg-moose-snow
+```
+
 - Easy to 40 cm of snow; slight trouble at 40 to 70 cm (90%).
 - Moose often winter where snow is 50 cm or more (90%).
 
@@ -159,6 +165,9 @@ hab-moose-willows | Winter browse: a tick hit moose eats less.
 ```diagram mc-moose-ghost
 ```
 
+```photo bg-moose-ghost
+```
+
 - Grey patches on neck, shoulders and rump: tick hair loss (85%).
 - Seen January to April; report it (85%).
 
@@ -173,6 +182,9 @@ hab-moose-willows | Winter browse: a tick hit moose eats less.
 ## Lifespan and age
 
 ```diagram mc-moose-antler-year
+```
+
+```photo bg-moose-velvet-early
 ```
 
 - Wild moose rarely live past 16 years (85%).

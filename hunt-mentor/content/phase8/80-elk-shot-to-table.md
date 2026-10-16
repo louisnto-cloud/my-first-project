@@ -203,6 +203,9 @@ yt-gutless-vs-gutting | Gutless or gutting: take the meat, leave the guts.
 ```diagram elk-antlers
 ```
 
+```photo bg-elk-antlers-count
+```
+
 ## Cheat sheet
 
 | Fact | Number | % |

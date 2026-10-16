@@ -149,6 +149,11 @@ g-wt-buck-flag | White tail: wide flag.
 ```diagram mmd-bc-subspecies
 ```
 
+```gallery
+bg-md-blacktail-vi | Black tailed buck, Vancouver Island.
+bg-md-sitka-haida | Sitka black tailed doe, Haida Gwaii.
+```
+
 - Interior: mule deer. Coast: black tails. Haida Gwaii: Sitka (90%).
 - The Coast Range splits them, mostly in winter (90%).
 

@@ -46,6 +46,11 @@ checked: 2026-10-11
 ```diagram mmd-winter-canopy
 ```
 
+```gallery
+bg-md-winter-kelowna | Winter near Kelowna: grey coats.
+bg-md-one-antler | One antler left: check both sides.
+```
+
 ## April and May: green up and the move up
 
 ```anim sg-mig-snowline Snow line rises, deer follow it up.
@@ -111,6 +116,9 @@ checked: 2026-10-11
 ```diagram mmd-antler-growth
 ```
 
+```photo bg-md-velvet-sunpeaks
+```
+
 - Velvet comes off in 24 to 48 hours (85%).
 - 4 point bucks open 10 to 30 September in 3-27 and 3-28 (99%).
 
@@ -151,6 +159,9 @@ checked: 2026-10-11
 ## November: the rut
 
 ```diagram sg-deer-rut-phases
+```
+
+```photo bg-md-rut
 ```
 
 - Rut mid November to mid December, peak mid November (80%).

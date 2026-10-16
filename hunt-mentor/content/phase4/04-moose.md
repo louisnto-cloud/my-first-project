@@ -61,6 +61,12 @@ g-moose-calf-winter | Calf: small body, stubby face.
 ```diagram moose-antlers
 ```
 
+```gallery
+bg-moose-young-bull | Yearling: short antlers. Count each side.
+bg-moose-young-bull-points | 3 or more points a side: not spike fork.
+bg-moose-big-bull | Mature bull: wide palms, many points.
+```
+
 ```more the synopsis definitions
 Synopsis definitions, pages 3 and 4 (98%):
 - **Spike fork bull:** "a bull moose having no more than two tines (points) on one antler. (Includes tines on main antler and brow palms.) Does not include a calf."

@@ -94,6 +94,9 @@ checked: 2026-10-11
 ```diagram mmd-coat
 ```
 
+```photo bg-md-winter-coat
+```
+
 - Tawny summer coat, grey brown winter coat (90%).
 - In winter it keeps warm mostly by picking warm slopes (85%).
 

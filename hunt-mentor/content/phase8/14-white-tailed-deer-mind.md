@@ -132,6 +132,11 @@ g-wt-run | Low, smooth gallop to cover.
 ```diagram mwt-social-groups
 ```
 
+```gallery
+bg-wt-doe-fawn | Doe and fawn: the basic family group.
+bg-wt-fawn | Summer fawn: white spots.
+```
+
 - Does live in family groups with their daughters (80%).
 - About 70% of yearling bucks leave home (80%).
 

@@ -69,6 +69,9 @@ hab-saskatoon-flowers | Saskatoon blooms: green up time.
 ```diagram mwt-antler-cycle
 ```
 
+```photo bg-wt-young-velvet
+```
+
 - Bucks in bachelor groups, antlers in velvet (80%).
 - Fawns start following the doe at 3 to 4 weeks (70%).
 
@@ -119,6 +122,9 @@ hab-saskatoon-flowers | Saskatoon blooms: green up time.
 ## November: the rut
 
 ```diagram hf-rut-calendar
+```
+
+```photo bg-wt-sparring
 ```
 
 - Peak breeding mid November (80%).
