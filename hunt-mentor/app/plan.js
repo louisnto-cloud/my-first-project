@@ -825,7 +825,8 @@
       <div class="pl-kv"><span>Must know done</span><b>${T.must.left ? fmtDay(T.mustFinish) : 'Done &#10003;'}${mustLate ? ' <span class="pl-late">after hunt starts</span>' : ''}</b></div>
       ${mustLate && T.mustPerDay ? `<p class="pl-small"><b>Heads up:</b> at this pace the must know screens finish after your hunt starts. About ${T.mustPerDay} minutes a day gets them done first. Change the pace in the plan, part 5.</p>` : ''}
       <div class="pl-kv"><span>Whole path done</span><b>${st.left ? fmtDay(T.finish) : 'Done &#10003;'}${late ? ' <span class="pl-late">after hunt starts</span>' : ''}</b></div>
-      <div class="btn-row">${T.leftToday && st.next ? `<a class="btn primary" href="${go}">Read: ${esc(st.next.title.replace(/^.*Masterclass \d+: /, ''))}</a>` : st.next ? `<a class="btn" href="${go}">Read ahead</a>` : ''}${cl ? '<a class="btn primary" href="#/daily">Review cards</a>' : ''}</div>
+      ${st.next ? `<div class="muted pl-small">Next: ${esc(st.next.title)}</div>` : ''}
+      <div class="btn-row">${T.leftToday && st.next ? `<a class="btn primary" href="${go}">Read today's screens</a>` : st.next ? `<a class="btn" href="${go}">Read ahead</a>` : ''}${cl ? '<a class="btn primary" href="#/daily">Review cards</a>' : ''}</div>
     </div>` };
   }
   function homeCard(C) {
