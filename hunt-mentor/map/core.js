@@ -33,7 +33,7 @@ import * as search from './search.js';
 import * as layers from './layers.js';
 import * as offline from './offline.js';
 
-const PLUGINS = ['./tools-main.js', './tools-track.js', './tools-wind.js', './tools-insights.js', './tools-terrain.js', './tools-analyze.js']; // for example './tools.js', './track.js'
+const PLUGINS = ['./tools-main.js', './tools-track.js', './tools-wind.js', './tools-insights.js', './tools-terrain.js', './tools-analyze.js', './tools-hunt.js']; // for example './tools.js', './track.js'
 const DEFAULT_VIEW = { lng: -120.2687, lat: 50.8581, zoom: 12, bearing: 0, pitch: 0 }; // Heffley Creek base (SPOTS.md)
 const EXAG = 1.5; // default 3D height boost
 const exag = () => clamp(+prefs.exag || EXAG, 1, 2.5);
@@ -83,8 +83,18 @@ export async function open(param) {
   }
   ev.emit('open');
   // #/map/mu/3-27, #/map/region/3, #/map/place/<id>: fit and outline (map/focus.js, from the "Open on Hunt Map" pop up in places.js)
+  // #/map/tool/canhunt, glass, scent, sightings: open a hunt helper once the plugins are in (tools-hunt.js)
+  const tm = String(param || '').match(/^tool\/(canhunt|glass|scent|sightings)$/);
+  if (tm) whenHunt().then((h) => h.open(tm[1])).catch((err) => console.warn('Hunt Map tool', err));
   if (/^(mu|region|place)\/[\w-]+$/.test(String(param || ''))) HuntMap.ready.then(() => import('./focus.js')).then((m) => m.default(HuntMap, String(param))).catch((err) => console.warn('Hunt Map focus', err));
   return HuntMap;
+}
+function whenHunt() {
+  if (HuntMap.hunt) return Promise.resolve(HuntMap.hunt);
+  return new Promise((res, rej) => {
+    const off = ev.on('hunt-ready', () => { if (off) off(); res(HuntMap.hunt); });
+    setTimeout(() => (HuntMap.hunt ? res(HuntMap.hunt) : rej(new Error('hunt tools did not load'))), 30000);
+  });
 }
 export function close() {
   wanted = false;

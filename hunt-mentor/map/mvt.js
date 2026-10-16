@@ -80,7 +80,7 @@ function readFeature(r, [s, e], L) {
   }
   return { props, type, parts };
 }
-function decodeTile(buf) {
+export function decodeTile(buf) {
   const r = reader(buf), layers = [];
   while (r.pos < r.len) {
     const tag = r.varint(), f = tag >> 3, t = tag & 7;
@@ -127,6 +127,9 @@ async function file(url) {
   }
   return f;
 }
+export function pmTile(url, z, x, y) { return tile(url, z, x, y); }
+/** PMTiles header (minZoom, maxZoom, ...) of a file. */
+export const pmHeader = (url) => file(url).then((f) => f.header);
 function tile(url, z, x, y) {
   const k = `${url}|${z}/${x}/${y}`;
   if (tiles.has(k)) return tiles.get(k);

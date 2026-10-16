@@ -2,7 +2,9 @@
    Weather button (3 day mini forecast at the map centre), wind arrows on a small grid over the view, scent cone.
    Weather data by Open-Meteo (CC BY 4.0), free, no key, open to browsers (CORS).
    Offline: the last forecast is kept in localStorage (hm.wx.v1) and shown with the time it was fetched.
-   Sets on HuntMap: H.wx (forecast helpers, used by tools-insights.js) and H.scentCone([lng, lat]). */
+   Scent and thermals panel (hunt helper): the cone for any hour in the next 24 (hour slider) and a thermal arrow from the
+   terrain slope and the sun (Tip). Thermals work offline where the terrain is saved; the wind needs a forecast.
+   Sets on HuntMap: H.wx (forecast helpers, used by tools-insights.js), H.scentCone([lng, lat]) and H.scentPanel([lng, lat]). */
 import { esc, compass8, debounce, haversine } from './util.js';
 
 export const TZ = 'America/Vancouver';
@@ -99,10 +101,11 @@ export default function init(api) {
   H = api; map = H.map;
   // Arrow image and layers are added the first time wind arrows or a scent cone are shown (lazy).
   map.on('moveend', debounce(() => { if (gridOn && H.isOpen) loadGrid(); }, 900));
-  H.on('units', () => { if (gridOn) loadGrid(); if (coneData) drawCone(); });
+  H.on('units', () => { if (gridOn) loadGrid(); if (coneData) { drawCone(); updatePanel(); } });
   H.setBarAction('weather', weatherSheet);
   H.onClick(onTap);
-  H.scentCone = (p) => cone(p);
+  H.scentCone = (p) => scentPanel(p);
+  H.scentPanel = (p) => scentPanel(p);
   H.wx = { forecast, windAt, hourIndex, sky, pressureTrend, speed, temp, windWords, arrow, staleNote, ATTRIB, failMsg, TZ };
 }
 
@@ -125,8 +128,10 @@ function addLayers() {
     'icon-size': ['interpolate', ['linear'], ['get', 'kmh'], 0, 0.75, 30, 1.3],
     'text-field': ['get', 'label'], 'text-font': ['Noto Sans Bold'], 'text-size': 12, 'text-offset': [0, 1.9], 'text-allow-overlap': true, 'text-ignore-placement': true,
   }, paint: { 'text-color': '#0b4f8a', 'text-halo-color': 'rgba(255,255,255,0.95)', 'text-halo-width': 1.8 } });
-  map.addLayer({ id: 'hm-scent-fill', type: 'fill', source: SRC_C, filter: ['==', ['geometry-type'], 'Polygon'], paint: { 'fill-color': '#7b2cbf', 'fill-opacity': 0.22 } });
-  map.addLayer({ id: 'hm-scent-line', type: 'line', source: SRC_C, filter: ['==', ['geometry-type'], 'Polygon'], paint: { 'line-color': '#7b2cbf', 'line-width': 2, 'line-dasharray': [2, 1.2] } });
+  map.addLayer({ id: 'hm-scent-fill', type: 'fill', source: SRC_C, filter: ['==', ['get', 'k'], 'cone'], paint: { 'fill-color': '#7b2cbf', 'fill-opacity': 0.22 } });
+  map.addLayer({ id: 'hm-scent-line', type: 'line', source: SRC_C, filter: ['==', ['get', 'k'], 'cone'], paint: { 'line-color': '#7b2cbf', 'line-width': 2, 'line-dasharray': [2, 1.2] } });
+  map.addLayer({ id: 'hm-therm-line', type: 'line', source: SRC_C, filter: ['==', ['get', 'k'], 'therm'], layout: { 'line-cap': 'round' }, paint: { 'line-color': ['match', ['get', 'mode'], 'up', '#d6336c', '#1c7ed6'], 'line-width': 5 } });
+  map.addLayer({ id: 'hm-therm-head', type: 'fill', source: SRC_C, filter: ['==', ['get', 'k'], 'therm-head'], paint: { 'fill-color': ['match', ['get', 'mode'], 'up', '#d6336c', '#1c7ed6'] } });
   map.addLayer({ id: 'hm-scent-dot', type: 'circle', source: SRC_C, filter: ['==', ['get', 'k'], 'origin'], paint: { 'circle-radius': 6, 'circle-color': '#7b2cbf', 'circle-stroke-color': '#fff', 'circle-stroke-width': 2 } });
   map.addLayer({ id: 'hm-scent-label', type: 'symbol', source: SRC_C, filter: ['==', ['get', 'k'], 'label'], layout: {
     'text-field': ['get', 'text'], 'text-font': ['Noto Sans Bold'], 'text-size': 13, 'text-max-width': 9, 'text-allow-overlap': true, 'text-ignore-placement': true,
@@ -158,26 +163,75 @@ async function loadGrid() {
   }
 }
 
-// ---------- scent cone (opinion): 30 degrees wide, 400 m long, pointing downwind ----------
+// ---------- scent cone (opinion): 30 degrees wide, 400 m long, pointing downwind; thermals by the hour (Tip) ----------
 function dest(p, dist, brg) {
   const d = dist / RE, t = brg * D2R, la = p[1] * D2R, lo = p[0] * D2R;
   const la2 = Math.asin(Math.sin(la) * Math.cos(d) + Math.cos(la) * Math.sin(d) * Math.cos(t));
   const lo2 = lo + Math.atan2(Math.sin(t) * Math.sin(d) * Math.cos(la), Math.cos(d) - Math.sin(la) * Math.sin(la2));
   return [lo2 * R2D, la2 * R2D];
 }
-export async function cone(p) {
-  H.toast('Checking the wind here');
-  let f;
-  try { f = await forecast(p[0], p[1]); } catch (err) { H.toast('The scent cone needs the wind, and the wind needs a connection.', 4500); return; }
-  const c = f.v.current;
-  coneData = { p, from: c.wind_direction_10m, kmh: c.wind_speed_10m, f };
+const PANEL = 'Scent and thermals';
+const HOURS = 24;
+const TIPB = '<span class="hmm-cert tip">Tip</span>';
+const localKey = (d) => d.toLocaleString('sv-SE', { timeZone: TZ }).replace(' ', 'T').slice(0, 13); // 2026-10-16T07, matches hourly.time
+const minOfDay = (d) => { const [h, m] = d.toLocaleTimeString('en-GB', { timeZone: TZ, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).split(':').map(Number); return (h % 24) * 60 + m; };
+const hourLabel = (d, k) => (k === 0 ? 'now' : d.toLocaleTimeString('en-CA', { timeZone: TZ, hour: 'numeric' }));
+
+/** Downhill direction and steepness at p from the terrain tiles (4 samples 40 m away). null when the terrain is not available. */
+async function fallLine(p) {
+  try {
+    const at = (b) => H.elevationAt(dest(p, 40, b));
+    const [n, e, s, w] = await Promise.all([at(0), at(90), at(180), at(270)]);
+    if ([n, e, s, w].some((v) => v == null || !isFinite(v))) return null;
+    const gx = (e - w) / 80, gy = (n - s) / 80; // rise per metre to the east and to the north
+    const slope = Math.atan(Math.hypot(gx, gy)) * R2D;
+    const down = (Math.atan2(-gx, -gy) * R2D + 360) % 360; // bearing that goes downhill
+    return { slope, down };
+  } catch (err) { return null; }
+}
+/** Thermal direction for a time at p (Tip): night and early morning down, warm day up, evening down again.
+    Direction: lesson "Wind and thermals" (75%). The switch times are my rule of thumb (Tip). */
+export function thermalAt(p, d) {
+  const S = window.HuntMentor;
+  if (!S || !S.sunEvent) return { mode: 'unknown', t: 'Sun times are not loaded, so no thermal estimate.' };
+  const [y, m, dd] = d.toLocaleDateString('en-CA', { timeZone: TZ }).split('-').map(Number);
+  const noon = new Date(y, m - 1, dd, 12), rise = S.sunEvent(noon, p[1], p[0], true), set = S.sunEvent(noon, p[1], p[0], false);
+  if (!rise || !set) return { mode: 'unknown', t: 'The sun does not rise or set here that day.' };
+  const t = minOfDay(d), r = minOfDay(rise), s = minOfDay(set), hh = S.hhmm;
+  const sun = `Sunrise ${hh(rise)}, sunset ${hh(set)}`.replace(/\.?$/, '.');
+  if (t < r + 90) return { mode: 'down', t: `Cool air from the night still sinks downhill until the sun warms the slope. ${sun}` };
+  if (t < r + 150) return { mode: 'switch', t: `Switching: the sun is warming the slopes, so air turns from downhill to uphill. Expect swirls. ${sun}` };
+  if (t < s - 60) return { mode: 'up', t: `Warm air rises uphill while the sun heats the slopes. ${sun}` };
+  if (t < s + 30) return { mode: 'switch', t: `Switching: slopes cool near sunset and air turns to sink downhill. Expect swirls. ${sun}` };
+  return { mode: 'down', t: `Cool air sinks downhill into draws and valley bottoms. ${sun}` };
+}
+
+/** Scent and thermals panel for a point: cone from the forecast wind for the chosen hour, thermal arrow from the terrain and sun. */
+export async function scentPanel(p) {
+  if (!p) p = coneData ? coneData.p : H.lastPosition ? [H.lastPosition.lng, H.lastPosition.lat] : [map.getCenter().lng, map.getCenter().lat];
+  const my = (coneData = { p, k: 0, f: null, fl: null, slots: [], loading: true });
+  const now = new Date(); now.setMinutes(0, 0, 0);
+  my.slots = Array.from({ length: HOURS }, (_, k) => new Date(+now + k * 36e5));
+  openPanel();
   drawCone();
-  const pad = { top: 120, bottom: 160, left: 50, right: 50 };
-  const ring = coneRing(p, coneData.from);
+  const [f, fl] = await Promise.all([forecast(p[0], p[1]).catch(() => null), fallLine(p)]);
+  if (coneData !== my) return;
+  my.f = f; my.fl = fl; my.loading = false;
+  drawCone(); updatePanel();
+  const w = windFor(my), ring = (w ? coneRing(p, w.from) : [p]).concat([dest(p, 260, 0), dest(p, 260, 180), dest(p, 260, 90), dest(p, 260, 270)]);
   const xs = ring.map((q) => q[0]), ys = ring.map((q) => q[1]);
-  map.fitBounds([[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], { padding: pad, maxZoom: Math.max(map.getZoom(), 15), duration: 600 });
-  H.toast(`${windWords(coneData.from, coneData.kmh)}${f.offline ? ' (saved forecast)' : ''}. Tap the cone for details.`, 5000);
-  if (H.hintOnce) setTimeout(() => H.hintOnce('cone', 'Tip: keep the shaded wedge off where you expect animals. Tap the Scent cone chip to clear it.'), 5200);
+  map.fitBounds([[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], { padding: { top: 120, bottom: (H.els.sheet.hidden ? 0 : Math.round(H.els.sheet.getBoundingClientRect().height)) + 30, left: 40, right: 70 }, maxZoom: Math.max(map.getZoom(), 15), duration: 600 });
+  if (H.hintOnce) H.hintOnce('cone', 'Tip: keep the shaded wedge and the arrow off where you expect animals. Slide the hour to plan ahead.');
+}
+export const cone = scentPanel;
+/** Wind for the chosen hour: { from, kmh } or null (no forecast, or the saved forecast does not reach that hour). */
+function windFor(c) {
+  if (!c || !c.f) return null;
+  const v = c.f.v, h = v.hourly, key = localKey(c.slots[c.k]);
+  const i = h.time.findIndex((t) => t.slice(0, 13) === key);
+  if (i < 0) return null;
+  if (c.k === 0 && !c.f.offline && v.current) return { from: v.current.wind_direction_10m, kmh: v.current.wind_speed_10m };
+  return { from: h.wind_direction_10m[i], kmh: h.wind_speed_10m[i] };
 }
 function coneRing(p, from) {
   const to = (from + 180) % 360, ring = [p];
@@ -189,41 +243,82 @@ function drawCone() {
   if (H.overlayChip) H.overlayChip('cone', coneData ? 'Scent cone' : '', clearCone);
   if (!coneData) { if (map.getSource(SRC_C)) map.getSource(SRC_C).setData(empty()); return; }
   addLayers();
-  const { p, from, kmh } = coneData, to = (from + 180) % 360;
-  const calm = kmh < 2;
-  map.getSource(SRC_C).setData({ type: 'FeatureCollection', features: [
-    { type: 'Feature', properties: { k: 'cone' }, geometry: { type: 'Polygon', coordinates: [coneRing(p, from)] } },
-    { type: 'Feature', properties: { k: 'origin' }, geometry: { type: 'Point', coordinates: p } },
-    { type: 'Feature', properties: { k: 'label', text: calm ? 'Tip: calm air, scent pools around you' : 'Tip: your scent drifts this way' }, geometry: { type: 'Point', coordinates: dest(p, 250, to) } },
-  ] });
+  const c = coneData, p = c.p, w = windFor(c), feats = [{ type: 'Feature', properties: { k: 'origin' }, geometry: { type: 'Point', coordinates: p } }];
+  if (w) {
+    const to = (w.from + 180) % 360, calm = w.kmh < 2;
+    feats.push({ type: 'Feature', properties: { k: 'cone' }, geometry: { type: 'Polygon', coordinates: [coneRing(p, w.from)] } });
+    feats.push({ type: 'Feature', properties: { k: 'label', text: calm ? 'Tip: calm air, scent pools around you' : `Tip: your scent drifts this way${c.k ? ` (${hourLabel(c.slots[c.k], c.k)})` : ''}` }, geometry: { type: 'Point', coordinates: dest(p, 250, to) } });
+  }
+  const th = thermalAt(p, c.slots[c.k]);
+  if (c.fl && c.fl.slope >= 3 && (th.mode === 'up' || th.mode === 'down')) {
+    const dir = th.mode === 'down' ? c.fl.down : (c.fl.down + 180) % 360, end = dest(p, 220, dir);
+    feats.push({ type: 'Feature', properties: { k: 'therm', mode: th.mode }, geometry: { type: 'LineString', coordinates: [p, end] } });
+    feats.push({ type: 'Feature', properties: { k: 'therm-head', mode: th.mode }, geometry: { type: 'Polygon', coordinates: [[dest(end, 30, dir), dest(end, 40, dir + 140), dest(end, 40, dir - 140), dest(end, 30, dir)]] } });
+    feats.push({ type: 'Feature', properties: { k: 'label', text: `Tip: thermal ${th.mode === 'up' ? 'uphill' : 'downhill'}` }, geometry: { type: 'Point', coordinates: dest(p, 150, dir + 30) } });
+  }
+  map.getSource(SRC_C).setData({ type: 'FeatureCollection', features: feats });
 }
-function clearCone() { coneData = null; drawCone(); }
-function coneSheet() {
-  const { from, kmh, f } = coneData;
-  const body = H.openSheet({ title: 'Scent cone', html: `
-    <p><span class="hmm-cert tip">Tip</span> Opinion, not a rule. The shaded wedge shows where your scent most likely drifts: 30 degrees wide and 400 m (437 yd) long, downwind of the dot.</p>
-    <div class="hmw-now">${arrow(from, 40)}<div><b>${windWords(from, kmh)}</b><span>Forecast wind for this spot, 10 m above the ground.</span></div></div>
-    <ul class="hmw-list"><li>Wind swirls in timber and around ridges, so the real cone is wider.</li><li>Thermals rise as the sun warms a slope in the morning and sink in the evening.</li><li>Keep the cone off where you expect the animals to be.</li></ul>
-    ${staleNote(f)}
-    <div class="hmm-btnrow"><button class="hmm-btn2" data-c="clear">Clear the scent cone</button><button class="hmm-btn2" data-c="pick">Move it: tap the map</button></div>
-    <p class="hmm-muted">${ATTRIB}</p>` });
-  body.querySelector('[data-c="clear"]').onclick = () => { clearCone(); H.closeSheet(); };
-  body.querySelector('[data-c="pick"]').onclick = () => { H.closeSheet(); startPick(); };
+function clearCone() { coneData = null; drawCone(); if (H.els.sheetT.textContent === PANEL && !H.els.sheet.hidden) H.closeSheet(); }
+function openPanel() {
+  const c = coneData;
+  const body = H.openSheet({ title: PANEL, bar: 'tools', modal: false, html: `
+    <p class="hh-what"><b>What this tells you:</b> where your scent goes from the dot, hour by hour: wedge for wind, arrow for thermals.</p>
+    <details class="hh-how"><summary>How to use it</summary><ol><li>Put the dot where you will sit or walk (buttons below).</li><li>The purple wedge follows the forecast wind. The arrow shows the thermal: air sliding up or down the slope.</li><li>Slide the hour to when you will be there.</li><li>Keep the wedge and the arrow off where you expect the animals. Come in from the other side.</li></ol></details>
+    <label class="hh-hour"><span>Hour: <b data-out="hr">Now</b></span><input type="range" min="0" max="${c.slots.length - 1}" step="1" value="${c.k}" data-sc="hour" aria-label="Hour"></label>
+    <div data-out="sc"><p class="hmm-muted">Getting the wind and the slope</p></div>
+    <div class="hmm-btnrow"><button class="hmm-btn2" data-sc="gps">Move to my location</button><button class="hmm-btn2" data-sc="pick">Move it: tap the map</button><button class="hmm-btn2" data-sc="clear">Clear</button></div>
+    <p class="hmm-muted">${ATTRIB}. Terrain from Terrain Tiles (Mapzen, AWS (Amazon Web Services) Open Data).</p>`, onClose: () => H.els.sheet.classList.remove('hh-peek') });
+  H.els.sheet.classList.add('hh-peek'); // short sheet: the cone stays in view above it
+  const inp = body.querySelector('[data-sc="hour"]');
+  let raf = 0;
+  inp.oninput = () => { if (coneData) coneData.k = +inp.value; if (!raf) raf = requestAnimationFrame(() => { raf = 0; drawCone(); updatePanel(); }); };
+  body.querySelector('[data-sc="gps"]').onclick = () => fromGps();
+  body.querySelector('[data-sc="pick"]').onclick = () => { H.closeSheet(); startPick(); };
+  body.querySelector('[data-sc="clear"]').onclick = () => clearCone();
+  updatePanel();
+}
+function updatePanel() {
+  const c = coneData, body = H.els.sheetB;
+  if (!c || H.els.sheetT.textContent !== PANEL || H.els.sheet.hidden) return;
+  const hr = body.querySelector('[data-out="hr"]'), d = c.slots[c.k];
+  if (hr) hr.textContent = c.k === 0 ? 'Now' : d.toLocaleString('en-CA', { timeZone: TZ, weekday: 'long', hour: 'numeric', minute: '2-digit' });
+  const o = body.querySelector('[data-out="sc"]'); if (!o || c.loading) return;
+  const w = windFor(c), th = thermalAt(c.p, d), fl = c.fl;
+  let wind;
+  if (w) wind = `<div class="hmw-now">${arrow(w.from, 40)}<div><b>${windWords(w.from, w.kmh)}</b><span>Forecast wind, 10 m above the ground. Your scent goes ${w.kmh < 2 ? 'all around you' : `to the ${compass8(w.from + 180)}`}.</span></div></div>${staleNote(c.f)}`;
+  else if (c.f) wind = '<p class="hh-gap">The saved forecast does not reach this hour. Go online to refresh it. The thermal below still works.</p>';
+  else wind = `<p class="hh-gap">${esc(failMsg())} The thermal below still works offline.</p>`;
+  const word = (m) => (m === 'up' ? 'uphill' : m === 'down' ? 'downhill' : 'switching');
+  let therm;
+  if (th.mode === 'unknown') therm = `<p class="hh-gap">${esc(th.t)}</p>`;
+  else if (!fl) therm = `<p><b>Thermal: ${word(th.mode)}</b> ${TIPB}<br>${esc(th.t)}</p><p class="hh-gap">The terrain here is not on this phone, so the arrow cannot be drawn. Save this area in Offline Maps.</p>`;
+  else if (fl.slope < 3) therm = `<p><b>Flat ground (${Math.round(fl.slope)}° slope)</b> ${TIPB}<br>No clear uphill here. ${th.mode === 'down' ? 'Cool air pools and drifts slowly.' : 'Air drifts with the wind.'}</p>`;
+  else {
+    const dir = th.mode === 'down' ? fl.down : (fl.down + 180) % 360;
+    therm = `<p><b>Thermal: ${th.mode === 'switch' ? 'switching' : `${word(th.mode)}, toward the ${compass8(dir)}`}</b> ${TIPB}<br>${esc(th.t)} Slope here ${Math.round(fl.slope)}°, facing ${compass8(fl.down)}.</p>`;
+  }
+  let who = '';
+  if (w && th.mode !== 'unknown') who = w.kmh < 8 ? 'Light wind: the thermal likely decides where your scent goes.' : w.kmh >= 15 ? 'Steady wind: the wind likely wins over the thermal.' : 'Both matter: scent may drift between the wedge and the arrow.';
+  o.innerHTML = `${wind}<h3 class="hmm-h">Thermals</h3>${therm}
+    ${who ? `<p class="hmw-tip">${TIPB} <b>${who}</b></p>` : ''}
+    <ul class="hmw-list"><li>Morning sun warms slopes and air rises uphill. Evening slopes cool and air sinks downhill (75%, lesson <a href="#/s/wind-thermals/0">Wind and thermals</a>).</li>
+    <li>${TIPB} The switch times are a rule of thumb: about 1.5 to 2.5 hours after sunrise, and from 1 hour before sunset. Sunny slopes switch first, shady draws last.</li>
+    <li>${TIPB} The wedge is 30 degrees wide and 400 m (437 yd) long. Wind swirls in timber and around ridges, so the real cone is wider.</li></ul>`;
 }
 function fromGps() {
   const g = H.lastPosition;
   if (!g) { H.toast('Turn on your location first: tap the locate button, then try again.', 4500); return; }
-  cone([g.lng, g.lat]);
+  scentPanel([g.lng, g.lat]);
 }
 function startPick() {
   picking = true;
   H.toast('Tap the map where you will stand. The scent cone starts there.', 6000);
 }
 function onTap(e) {
-  if (picking) { picking = null; cone([e.lngLat.lng, e.lngLat.lat]); return true; }
+  if (picking) { picking = null; scentPanel([e.lngLat.lng, e.lngLat.lat]); return true; }
   if (coneData && map.getLayer('hm-scent-fill')) {
-    const hit = map.queryRenderedFeatures([[e.point.x - 6, e.point.y - 6], [e.point.x + 6, e.point.y + 6]], { layers: ['hm-scent-fill', 'hm-scent-dot', 'hm-scent-label'] });
-    if (hit.length) { coneSheet(); return true; }
+    const hit = map.queryRenderedFeatures([[e.point.x - 6, e.point.y - 6], [e.point.x + 6, e.point.y + 6]], { layers: ['hm-scent-fill', 'hm-scent-dot', 'hm-scent-label', 'hm-therm-line'] });
+    if (hit.length) { if (H.els.sheetT.textContent !== PANEL || H.els.sheet.hidden) openPanel(); return true; }
   }
   return false;
 }
