@@ -140,6 +140,7 @@ export async function evaluate(p, sp, now = new Date()) {
   // 1. MU
   const muId = mu && mu.state === 'ok' && mu.id ? mu.id : null;
   if (muId) add('ok', `MU (Management Unit) ${esc(muId)}`, `${esc(mu.region || '')}`, `${esc(mu.source || '')} ${cert(95)}`);
+  else if (mu && mu.state === 'outside' && !(await muFileLoaded(p))) add('check', 'MU (Management Unit) unknown', 'The MU map for this area is not on this phone yet. Open the map once with signal, or save this area in Offline Maps.');
   else if (mu && mu.state === 'outside') add('check', 'MU (Management Unit) not found', 'This point is not inside a BC MU in the map data (out of BC, or in water at the edge). The app cannot check seasons here.');
   else add('check', 'MU (Management Unit) unknown', 'The MU layer could not be read here. Open the map once with signal, or save this area in Offline Maps.');
 
@@ -259,6 +260,11 @@ function lightItem(p, sp, now, add) {
   const src = `${esc(h.text || '')} ${cert(h.certainty)}`;
   if (now >= a && now <= b) add('ok', `Legal light now (${sp.mig ? 'ducks and geese' : 'game other than migratory birds'})`, `${span} Hours left: ${fmtLeft(b - now)}.`, src);
   else add('no', 'Outside legal hunting hours now', `${span} ${now < a ? `Starts in ${fmtLeft(a - now)}.` : 'Ended for today.'}`, src);
+}
+/** muAt says "outside" both when the point is outside every MU and when the MU file could not be read (offline, not saved). */
+async function muFileLoaded(p) {
+  const fc = await safe(layers.getLayerData('mu', { near: p }));
+  return !!(fc && fc.features && fc.features.length);
 }
 const fmtLeft = (ms) => { const m = Math.max(0, Math.round(ms / 6e4)); return m >= 60 ? `${Math.floor(m / 60)} h ${m % 60} min` : `${m} min`; };
 

@@ -258,6 +258,7 @@ function summaryHtml(R) {
   return `
     <h3 class="hmm-h">Walk in zone</h3>
     ${R.haveMap ? `<p class="hh-big"><i class="hh-sw walk"></i> ${R.walkPct}% of the view is more than 1 km (0.6 mi) from any road or track on the map.</p>` : ''}
+    ${R.haveMap && !R.fsr.ok ? '<p class="hh-gap"><b>Forest Service roads are missing from this check</b> (not on this phone, or no data here), so some shaded land may be close to a logging road.</p>' : ''}
     <p>${TIP} <b>Walk in zone: less pressure.</b> Most hunters stay close to roads, so land a long walk from any road usually sees fewer people and calmer animals. 1 km is a rule of thumb, not a rule.</p>
     <p class="hmm-muted">Roads: ${R.osm.roads} road and track lines from OpenStreetMap${R.fsr.ok ? ` and ${R.fsr.n} BC Forest Service road lines` : ''}. A road on the map can be gated, closed or gone, and some tracks are missing. Walk in land can still be private land or closed: check the land status layers and use “Can I hunt here now?”.</p>
     <h3 class="hmm-h">Glassing spots</h3>

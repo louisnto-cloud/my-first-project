@@ -23,7 +23,7 @@ export const TOOLS = [
   ['canhunt', 'Can I hunt here now?', 'Yes, no or check'],
   ['glass', 'Glassing and walk in', 'High points, quiet land'],
   ['scent', 'Scent and thermals', 'Wind by the hour'],
-  ['sightings', 'Sightings log', 'Log, heatmap, CSV'],
+  ['sightings', 'Sightings log', 'Log, heatmap, export'],
 ];
 
 export default function init(api) {
