@@ -583,7 +583,7 @@ function spotMenu(ll) {
   ctx.overlays.marker = p; drawOverlays();
   const body = H.openSheet({ title: 'This spot', onClose: () => { ctx.overlays.marker = null; drawOverlays(); }, html: `
     <p class="hmm-muted">${esc(txt)}</p>
-    <div class="hmt-tiles">${tile('wpt', wptSvg('other', '#e8590c', 26), 'Drop waypoint')}${tile('rings', I.rings, 'Range rings')}${tile('measure', I.ruler, 'Measure from here')}${typeof H.scentCone === 'function' ? tile('cone', I.cone, 'Scent cone') : ''}${typeof H.insightsAt === 'function' ? tile('insights', H.icons.insights, 'Insights') : ''}</div>` });
+    <div class="hmt-tiles">${tile('wpt', wptSvg('other', '#e8590c', 26), 'Drop waypoint')}${tile('rings', I.rings, 'Range rings')}${tile('measure', I.ruler, 'Measure from here')}${typeof H.scentCone === 'function' ? tile('cone', I.cone, 'Scent cone') : ''}${typeof H.insightsAt === 'function' ? tile('insights', H.icons.insights, 'Insights') : ''}${H.hunt ? tile('canhunt', H.hunt.IC.canhunt, 'Can I hunt here?') : ''}${H.hunt && H.sightings ? tile('sight', H.hunt.IC.sightings, 'Log a sighting') : ''}</div>` });
   body.querySelectorAll('[data-t]').forEach((b) => b.onclick = () => {
     const t = b.dataset.t; ctx.overlays.marker = null;
     if (t === 'wpt') dropWaypoint(p);
@@ -591,5 +591,7 @@ function spotMenu(ll) {
     else if (t === 'measure') { startDraw('measure'); addDraftPoint(p); }
     else if (t === 'cone') { H.closeSheet(); H.scentCone(p); }
     else if (t === 'insights') H.insightsAt(p);
+    else if (t === 'canhunt') H.hunt.open('canhunt', p);
+    else if (t === 'sight') H.sightings.logAt(p);
   });
 }
