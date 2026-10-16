@@ -44,8 +44,8 @@
     if (!a) return null;
     if (a === 's') return '#/learn';
     if (a === 'plan' && b != null && b !== '') return '#/plan';
-    if ((a === 'field' || a === 'lists' || a === 'cards' || a === 'journal') && b != null && b !== '') return '#/' + a;
-    if (['glossary', 'review', 'sources', 'install', 'print', 'credits', 'journal', 'cards', 'ask'].includes(a)) return '#/more';
+    if ((a === 'field' || a === 'lists' || a === 'cards' || a === 'journal' || a === 'safety' || a === 'train') && b != null && b !== '') return '#/' + a;
+    if (['glossary', 'review', 'sources', 'install', 'print', 'credits', 'journal', 'cards', 'ask', 'train'].includes(a)) return '#/more';
     return '#/';
   };
   $('#btn-back').onclick = () => {
@@ -784,6 +784,8 @@
         ${[['', 'Auto'], ['light', 'Light'], ['dark', 'Dark'], ['sun', 'Sunlight']].map(([v, l]) => `<button data-v="${v}" class="${th === v ? 'on' : ''}">${l}</button>`).join('')}</div></div>
       <div class="card"><h2>First hunt date</h2><input type="date" id="fh" value="${esc(firstHunt())}"></div>
       <div class="card list">
+        <a class="item" href="#/safety"><span class="grow">Safety: emergency card, trip plan, turnaround alarm, bears, conditions</span></a>
+        <a class="item" href="#/daily"><span class="grow">Today's cards (spaced review, all decks)</span></a>
         <a class="item" href="#/ask"><span class="grow">Ask the app (works with no signal)</span></a>
         <a class="item" href="#/cards"><span class="grow">Flashcards</span></a>
         <a class="item" href="#/glossary"><span class="grow">Glossary</span></a>
@@ -803,7 +805,8 @@
     $('#exp').onclick = async () => {
       let mp = null; try { mp = JSON.parse(localStorage.getItem(MAP_KEY) || 'null'); } catch (e) { mp = null; }
       let md = null; try { const m = await mapStore(); if (m) md = await m.exportAll(); } catch (e) { md = null; }
-      download(`hunt-mentor-backup-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(Object.assign({}, S, mp ? { mapPrefs: mp } : {}, md ? { mapData: md } : {})), 'application/json');
+      const ad = {}; try { for (let k = 0; k < localStorage.length; k++) { const key = localStorage.key(k); if (/^hm\.(safety|train|sight)\./.test(key)) ad[key] = localStorage.getItem(key); } } catch (e) { /* storage blocked */ } // add on data (app/addons)
+      download(`hunt-mentor-backup-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(Object.assign({}, S, mp ? { mapPrefs: mp } : {}, md ? { mapData: md } : {}, Object.keys(ad).length ? { addonData: ad } : {})), 'application/json');
     };
     $('#imp').onchange = (e) => {
       const f = e.target.files[0]; if (!f) return;
@@ -811,6 +814,7 @@
         try {
           const o = JSON.parse(t);
           if (o.mapPrefs) { try { localStorage.setItem(MAP_KEY, JSON.stringify(o.mapPrefs)); } catch (e) { /* storage blocked */ } delete o.mapPrefs; }
+          if (o.addonData) { try { for (const [k, v] of Object.entries(o.addonData)) if (/^hm\.(safety|train|sight)\./.test(k)) localStorage.setItem(k, v); } catch (e) { /* storage blocked */ } delete o.addonData; }
           const md = o.mapData; delete o.mapData;
           S = Object.assign({}, blank, o); S.pos = S.pos || {}; S.max = S.max || {}; save(); applyTheme();
           const done = (n) => { alert(n ? "Backup restored, including your map items." : 'Backup restored.'); more(); };

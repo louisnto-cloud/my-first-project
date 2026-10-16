@@ -221,7 +221,7 @@
       ${pt ? `<div class="card hmd-card" id="hmd-wx"><h2>Wind and weather</h2><p class="muted">Loading forecast...</p></div>` : ''}
       ${sunMoon}
       <div class="hmd-links">
-        <a class="btn" href="#/map">Map</a><a class="btn primary" href="#/field">Field Mode</a>
+        <a class="btn" href="#/map">Map</a><a class="btn primary" href="#/field">Field Mode</a><a class="btn" href="#/safety">Safety</a>
         ${C.mentorUrl ? `<a class="btn" href="${esc(C.mentorUrl)}" target="_blank" rel="noopener">Ask the mentor</a>` : ''}<a class="btn" href="#/lists">Checklists</a>${C.planCard ? '<a class="btn" href="#/plan">My hunt plans</a>' : ''}
       </div></section>`;
     view.insertAdjacentHTML('afterbegin', html);
