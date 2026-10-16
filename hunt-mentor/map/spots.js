@@ -12,8 +12,11 @@ import { esc, prefs, units, parseMonths, monthsText, fmtNum, haversine } from '.
 import { SPOT_CATS, spotIconSvg } from './style.js';
 import { getJSON as sharedJSON } from './spot-rundown.js';
 import { manifest as layersManifest } from './layers.js';
+import { spotExtrasHtml, fillSpotExtras } from './place-card.js';
 
-export const SPECIES = ['deer', 'moose', 'elk', 'bear', 'grouse', 'duck', 'goose', 'quail', 'turkey', 'chukar', 'sheep', 'goat'];
+export const SPECIES = ['deer', 'bear', 'moose', 'elk', 'grouse', 'duck', 'goose', 'quail', 'turkey', 'chukar', 'sheep', 'goat'];
+// popularity (estimate, scripts/spots-pipeline.py popularity()): ring colour under the spot icon
+export const POP = { popular: ['Popular (more hunters)', '#ff1744'], quiet: ['Less popular (quieter)', '#ffd600'] };
 export const isSpotLayer = (l) => l.group === 'Spots' && (l.kind === 'spots' || l.type === 'circle' || l.type === 'symbol');
 export const iconHtml = (cat, size) => spotIconSvg(cat, size);
 
@@ -24,7 +27,8 @@ export function prep(p) {
   p._cat = SPOT_CATS[c] && c !== 'other' ? c : ((CAT_SYN.find(([re]) => re.test(c)) || [0, 'other'])[1]);
   p._name = String(p.name ?? p.NAME ?? p.title ?? p.label ?? 'Candidate spot');
   p._score = num(p.score ?? p.SCORE);
-  p._sp = speciesList(p.species ?? p.SPECIES ?? p.tags);
+  p._sp = speciesList(p.species ?? p.SPECIES ?? (Array.isArray(p.tags) && typeof p.tags[0] === 'string' ? p.tags : null));
+  if (p.pop) p._pop = p.pop;
 }
 function parseMaybe(v) { if (typeof v === 'string' && /^\s*[[{]/.test(v)) { try { return JSON.parse(v); } catch (e) { return v; } } return v; }
 function speciesList(v) {
@@ -40,9 +44,10 @@ const cap = (s) => String(s).charAt(0).toUpperCase() + String(s).slice(1);
 export const CATS = ['drive', 'atv', 'walk', 'backcountry', 'camp'];
 const CAT_CHIP = { drive: 'Drive', atv: 'ATV', walk: 'Walk', backcountry: 'Backcountry', camp: 'Camp' };
 export function filter(feats) {
-  const sp = prefs.species || 'all', cat = prefs.spotCat || 'all';
-  if (sp === 'all' && cat === 'all') return feats;
-  return feats.filter((f) => (sp === 'all' || (f.properties._sp || []).includes(sp)) && (cat === 'all' || f.properties._cat === cat));
+  const sp = prefs.species || 'all', cat = prefs.spotCat || 'all', pop = prefs.spotPop || 'all';
+  if (sp === 'all' && cat === 'all' && pop === 'all') return feats;
+  return feats.filter((f) => (sp === 'all' || (f.properties._sp || []).includes(sp)) && (cat === 'all' || f.properties._cat === cat)
+    && (pop === 'all' || f.properties._pop === pop));
 }
 export function subtitle(p) {
   return [(SPOT_CATS[p._cat] || SPOT_CATS.other).label, (p._sp || []).map(cap).join(', ')].filter(Boolean).join(', ');
@@ -55,7 +60,9 @@ export function chipsHtml(feats) {
     ${['all', ...CATS].map((c) => `<button class="hmm-chip ${cc === c ? 'on' : ''}" data-cat="${c}" ${c === 'atv' ? 'aria-label="ATV (all terrain vehicle)"' : ''}>${c === 'all' ? 'All' : `${spotIconSvg(c, 16)} ${CAT_CHIP[c]}`}</button>`).join('')}</div>
     <div class="hmm-chiprow" role="group" aria-label="Species"><span class="hmm-chiplabel">Species</span>
     ${['all', ...list].map((s) => `<button class="hmm-chip ${cur === s ? 'on' : ''}" data-sp="${esc(s)}">${s === 'all' ? 'All' : esc(cap(s))}</button>`).join('')}</div>
-    <p class="hmm-muted hmm-tight">ATV means all terrain vehicle. Filters change the spots on the map.</p>`;
+    <div class="hmm-chiprow" role="group" aria-label="Hunters (estimate)"><span class="hmm-chiplabel">Hunters</span>
+    ${['all', 'popular', 'quiet'].map((k) => `<button class="hmm-chip ${(prefs.spotPop || 'all') === k ? 'on' : ''}" data-pop="${k}">${k === 'all' ? 'All' : `<i style="display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:5px;background:${POP[k][1]}"></i>${k === 'popular' ? 'Popular' : 'Quieter'}`}</button>`).join('')}</div>
+    <p class="hmm-muted hmm-tight">ATV means all terrain vehicle. Filters change the spots on the map. Popular and quieter are estimates (about 50% sure): red ring popular, green ring quieter.</p>`;
 }
 
 export function addLayers(H, l, src) {
@@ -70,13 +77,17 @@ export function addLayers(H, l, src) {
   map.addLayer({ id: `${id}-count`, type: 'symbol', source: src, filter: ['has', 'point_count'], layout: {
     'text-field': ['get', 'point_count_abbreviated'], 'text-font': ['Noto Sans Bold'], 'text-size': 13, 'text-allow-overlap': true, 'text-ignore-placement': true,
   }, paint: { 'text-color': '#ffffff' } }, before);
+  map.addLayer({ id: `${id}-pop`, type: 'circle', source: src, filter: ['all', ['!', ['has', 'point_count']], ['has', '_pop']], paint: {
+    'circle-color': ['match', ['get', '_pop'], 'popular', POP.popular[1], POP.quiet[1]], 'circle-opacity': 0.95,
+    'circle-radius': ['interpolate', ['linear'], ['zoom'], 8, 16, 14, 20], 'circle-stroke-color': ['match', ['get', '_pop'], 'popular', '#b2102f', '#00a152'], 'circle-stroke-width': 2.5,
+  } }, before);
   map.addLayer({ id, type: 'symbol', source: src, filter: ['!', ['has', 'point_count']], layout: {
     'icon-image': ['concat', 'spot-', ['coalesce', ['get', '_cat'], 'other']], 'icon-overlap': ['step', ['zoom'], 'never', 14, 'always'], 'icon-padding': 1,
     'symbol-sort-key': ['-', 100, ['coalesce', ['get', '_score'], 0]],
     'text-field': ['step', ['zoom'], '', 13, ['get', '_name']], 'text-font': ['Noto Sans Bold'], 'text-size': 11.5, 'text-padding': 4,
     'text-anchor': 'top', 'text-offset': [0, 1.4], 'text-optional': true, 'text-max-width': 9,
   }, paint: { 'text-color': '#24261f', 'text-halo-color': 'rgba(255,255,255,0.95)', 'text-halo-width': 1.6 } }, before);
-  return [`${id}-cluster`, `${id}-count`, id];
+  return [`${id}-cluster`, `${id}-count`, `${id}-pop`, id];
 }
 
 export function onHit(H, feat, getRaw) {
@@ -215,6 +226,8 @@ function renderCard(H, l, f, failed) {
       ${busy ? `<div><small>Hunters</small><b>${esc(cap(String(busy)))}</b><em>estimate</em></div>` : ''}
       ${months.length ? `<div><small>Months</small><b>${esc(monthsText(months))}</b></div>` : ''}
     </div>
+    ${!failed && p.plan ? spotExtrasHtml(p, lng, lat) : ''}
+    ${!failed && p.plan ? suitsHtml(p) : ''}
     ${!failed && p.id ? '<div class="hmm-btnrow"><button type="button" class="hmm-btn2" data-rundown>Full rundown: where, animals, camp, tips, risks</button></div>' : ''}
     ${failed ? `<p class="hmm-muted">The full plan did not load. ${navigator.onLine ? 'Try again in a moment.' : 'You are offline and this area is not saved.'}</p>` : ''}
     ${H.ui.linksHtml(lat, lng, p._name, park)}
@@ -231,7 +244,39 @@ function renderCard(H, l, f, failed) {
   selMk = new H.maplibregl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map);
   const body = H.openSheet({ title: p._name, html, modal: false, tall: true, onClose: () => { if (selMk) { selMk.remove(); selMk = null; } } });
   const rb = body.querySelector('[data-rundown]'); if (rb) rb.onclick = () => openRundown(H, l, f);
+  if (!failed && p.plan) { fillSpotExtras(H, body, p, lng, lat); fillBestTimes(body, p); }
   const b = map.getBounds(); if (!b.contains([lng, lat])) map.easeTo({ center: [lng, lat], duration: 500 });
+}
+
+// ---------- species it suits, best times (Tip, from the species playbooks in data/plans/species.json) ----------
+const SP_NAME = { deer: 'Deer', bear: 'Black bear', moose: 'Moose', elk: 'Elk', grouse: 'Grouse', duck: 'Ducks and geese', quail: 'California quail', turkey: 'Wild turkey', sheep: 'Bighorn sheep' };
+const PLAY = { deer: 'mule-deer', bear: 'black-bear', moose: 'moose', elk: 'elk' };
+function suitsHtml(p) {
+  const ev = parseMaybe(p.evidence) || [], prim = p.primary || (p._sp || [])[0];
+  const sps = [...new Set([prim, ...(p._sp || [])].filter((x) => x && x !== 'camp'))];
+  if (!sps.length) return '';
+  const groups = sps.map((sp) => {
+    const lines = ev.filter((e) => (e.tag ? e.tag === sp : sp === prim)).map((e) => (typeof e === 'string' ? e : e.t || e.text)).filter(Boolean);
+    const name = sp === 'deer' && String(p.region) === '2' ? 'Deer (black tailed deer here)' : (SP_NAME[sp] || cap(sp));
+    return `<li><b>${esc(name)}${sp === prim ? ', scored for this spot' : ', also here'}</b>${lines.length ? `<ul>${lines.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : '<small>No species specific reason in the data: tagged from the habitat around it.</small>'}
+      ${PLAY[sp] ? `<div data-best="${esc(PLAY[sp])}"></div>` : ''}</li>`;
+  });
+  return `<h3 class="hmm-h">Species it suits and why</h3><ul class="hmm-evid">${groups.join('')}</ul>
+    <p class="hmm-muted">Habitat, elevation ${p.elev != null ? esc(units.elev(p.elev)) : 'not listed'}, slope ${p.slope != null ? `${esc(p.slope)} degrees` : 'not listed'}, ${esc(p.aspect || '')} facing. From open data, not animal counts.</p>`;
+}
+let playP = null;
+function fillBestTimes(body, p) {
+  const boxes = body.querySelectorAll('[data-best]'); if (!boxes.length) return;
+  playP = playP || fetch('data/plans/species.json').then((r) => r.json()).catch(() => { playP = null; return null; });
+  playP.then((d) => {
+    const m = new Date().getMonth() + 1;
+    boxes.forEach((b) => {
+      const s = d && (d.species || []).find((x) => x.id === b.dataset.best); if (!s || !b.isConnected) return;
+      const ph = (s.phases || []).find((x) => (x.months || []).includes(m)) || null;
+      const when = ph ? (ph.when || []).slice(0, 3) : [];
+      b.innerHTML = when.length ? `<small><b>Best times this month</b> (Tip, ${esc(s.name)} playbook, ${esc(ph.label)}; written for Region 3, check your region's dates): ${when.map(esc).join('; ')}.</small>` : '';
+    });
+  });
 }
 
 // ---------- Full rundown (spot-rundown.js, loaded on first open, then cached per spot) ----------
