@@ -292,6 +292,11 @@
   const firstDefault = (C) => !plansOf(C).some((p) => p.to && p.to < todayIso());
 
   // ---------- wizard ----------
+  // Harrison Lake area: Harrison Hot Springs, approximate town centre (Assumption), in MU 2-18 (point in polygon on the MU layer, checked 2026-10-16). Deer near Mission are black tailed deer; the Rule Book season rows list them as mule deer.
+  const PRESETS = {
+    'harrison-deer-two': { species: 'mule-deer', where: { id: 'harrison', mu: '2-18', label: 'Harrison Lake area (black tailed deer)', lat: 49.30, lon: -121.785, src: 'preset' }, method: 'rifle', access: ['truck'], party: 'two', firstHunt: true },
+    'harrison-deer-solo': { species: 'mule-deer', where: { id: 'harrison', mu: '2-18', label: 'Harrison Lake area (black tailed deer)', lat: 49.30, lon: -121.785, src: 'preset' }, method: 'rifle', access: ['truck'], party: 'solo', firstHunt: true },
+  };
   const STEPS = ['animal', 'where', 'when', 'how', 'access', 'overnight', 'party', 'first'];
   const Q = { animal: 'What animal?', where: 'Where?', when: 'When?', how: 'How will you hunt?', access: 'How do you get in?', overnight: 'Staying overnight?', party: 'Who is going?', first: 'Is this your first hunt?' };
   let draft = null;
@@ -839,6 +844,7 @@
     }
     return `${study}<div class="card pl-home"><h2>Plan a hunt</h2><p>Pick an animal, a place and dates. Get the rules, your odds, a day by day plan and a full checklist.</p>
       <a class="btn primary block" href="#/plan/new/0">Plan a hunt</a>
+      <div class="btn-row"><a class="btn" href="#/plan/preset/harrison-deer-two">Deer near Harrison, with my brother</a><a class="btn" href="#/plan/preset/harrison-deer-solo">Deer near Harrison, solo</a></div>
       ${all.length ? `<div class="list pl-home-list">${all.map((p) => `<a class="item" href="#/plan/${esc(p.id)}"><span class="grow"><b>${esc(planTitle(p, null))}</b><br><span class="muted">${esc(rangeLabel(p.from, p.to))}</span></span></a>`).join('')}</div>${plansOf(C).length > 3 ? '<a href="#/plan">All my plans</a>' : ''}` : ''}</div>`;
   }
 
@@ -848,6 +854,8 @@
     const [a, b] = args || [];
     view.onchange = null;
     if (!a) return listView(view, C);
+    // ready made starts (owner, 2026-10-16): deer near Harrison with a rifle, with the brother or solo; the wizard opens at "When?" with the rest filled in
+    if (a === 'preset' && PRESETS[b]) { draft = Object.assign({}, PRESETS[b]); saveDraft(); return goStep(STEPS.indexOf('when')); }
     if (a === 'new') { if (b == null || b === '') { draft = {}; saveDraft(); } return wizard(view, Math.max(0, Math.min(STEPS.length - 1, +b || 0)), C); }
     return planView(view, a, C);
   }
