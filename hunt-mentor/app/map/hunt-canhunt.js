@@ -95,8 +95,8 @@ export function open(p) {
   active = true;
   const body = H.openSheet({ title: TITLE, modal: false, bar: 'tools',
     onClose: peek(() => { active = false; setMarker(null); }),
-    html: `${intro('a quick YES, NO or CHECK for one spot, one animal and right now: the MU (Management Unit), the season today, legal light and the land status layers.',
-      ['Pick the animal.', 'Tap any point on the map (the sheet stays open), or use the buttons below.', 'Read every line, not just the light. CHECK means the app cannot be sure: the reason is shown.'])}
+    html: `${intro('a quick YES, NO or CHECK for one spot, one animal, right now.',
+      ['Pick the animal.', 'Tap any point on the map (the sheet stays open), or use the buttons below.', 'It checks the MU (Management Unit), the season today, legal light, and land layers (private land, parks, reserves, city limits, closures).', 'Read every line, not just the light. CHECK means the app cannot be sure: the reason is shown.'])}
     <label class="hmm-field">Animal<select data-ch="sp" class="hh-select">${SPECIES.map((s) => `<option value="${s.k}" ${s.k === sp.k ? 'selected' : ''}>${esc(s.l)}</option>`).join('')}</select></label>
     <div data-out="ch">${lastP ? '' : '<p class="hh-tapnow">Tap any point on the map.</p>'}</div>
     <div class="hmm-btnrow"><button class="hmm-btn2" data-ch="centre">Check the map centre</button><button class="hmm-btn2" data-ch="gps">Check my location</button></div>

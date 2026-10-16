@@ -32,7 +32,7 @@ export function init(api) {
 
 export function open() {
   const body = H.openSheet({ title: TITLE, bar: 'tools', modal: false, onClose: peek(), html: `
-    ${intro('where to sit and look (high points that see a lot of open slope), and which land is far from roads, where fewer hunters go.',
+    ${intro('high points that see lots of open slope, and land far from roads where fewer hunters go.',
       ['Move the map to the area you want to hunt. Zoom in so the screen shows about 2 to 6 km across.', 'Tap “Find spots in this view”. It takes a few seconds.', 'Shaded green land is the walk in zone. Numbered dots are glassing spots: tap one for details.', 'Scout before you trust it. Check land status and access first.'])}
     <button class="hmm-primary block" data-g="run">Find spots in this view</button>
     <div data-out="g">${last ? summaryHtml(last) : ''}</div>
