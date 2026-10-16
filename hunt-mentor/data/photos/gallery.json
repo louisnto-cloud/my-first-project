@@ -1741,5 +1741,23 @@
   "licence": "CC BY-SA 3.0",
   "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
   "source": "https://commons.wikimedia.org/wiki/File:Canada_Goose_(Branta_canadensis)_with_goslings.JPG"
+ },
+ {
+  "id": "bd-sharptail-standing",
+  "species": "Sharp tailed grouse",
+  "caption": "Sharp tailed grouse on a dancing ground, Upper Souris National Wildlife Refuge, North Dakota. Pale with dark V marks below; males behind show yellow combs.",
+  "author": "David Schultz, USFWS Mountain Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Sharp_tailed_grouse_on_Upper_Souris_NWR_(32807127107).jpg"
+ },
+ {
+  "id": "bd-red-breasted-merganser",
+  "species": "Red breasted merganser",
+  "caption": "Red breasted merganser drake, Barnegat Inlet, New Jersey. Shaggy crest, thin red bill, white collar, speckled chest. Mostly a coastal bird in BC.",
+  "author": "Needsmoreritalin",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Red-breasted_Merganser_male_(Mergus_serrator),_Barnegat_Inlet,_New_Jersey,_USA.jpg"
  }
 ]

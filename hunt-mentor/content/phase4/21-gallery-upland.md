@@ -94,6 +94,7 @@ commons-quail-male | Male California quail: black face, curled plume.
 
 ```gallery
 g-chukar | Chukar. Red bill and legs, black necklace, barred flanks.
+bd-gray-partridge | Look alike: gray (Hungarian) partridge pair, Sweden. Orange face, no necklace.
 g-pheasant-rooster | Pheasant rooster, South Dakota. Green head, red face, white ring, long tail.
 g-pheasant-hen | Pheasant hen, England. Buff brown, long pointed tail.
 bd-pheasant-cock-flight | Rooster flushing, South Dakota. In the air: dark green head, white ring, copper body.

@@ -178,6 +178,7 @@ yt-shotgun-three-leads | Three lead methods. Pick one and practise it.
 
 ```gallery
 sharp-tailed-grouse | Sharp tail country: grass, shrubs, aspen.
+bd-sharptail-standing | Sharp tails in open grass. Pale, spotted, they sit tight in the cover.
 g-ptarmigan-summer | Ptarmigan country: alpine rock.
 ```
 
