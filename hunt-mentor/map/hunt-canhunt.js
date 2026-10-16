@@ -4,9 +4,12 @@
      Open today: data/seasons/region*.json (synopsis rows) and data/seasons/migratory.json (federal ducks and geese), like Home "Open today"
      Legal light now: app sun times (window.HuntMentor.sunEvent) and the hours in data/regs.json (window.HM.regs.hours)
      Land: private land, reserves, parks, city limits, WMAs, motor vehicle closures (manifest layers, tools-insights.js nearLayer)
+     No shooting / no hunting areas: manifest layer no_hunting (scripts/build-noshoot.py). Each area says what it means for a rifle,
+       a shotgun with shot and a bow ("no", "check" or "ok"), so the method the hunter picks decides NO or CHECK.
+     Closures that are not drawn (their line is only on a synopsis map): data/addons/noshoot/unmapped.json, listed by MU under "Still check yourself"
      Buildings and roads near the point: OpenStreetMap map detail tiles (hunt-osm.js)
    Rule: any NO gives NO; else anything unknown or needing a check gives CHECK; YES only when every check the app can do passes.
-   No Shooting Areas are not mapped in the app, so they are always listed under "Still check yourself". */
+   Most No Shooting Areas are not drawn, so the ones in this MU and local bylaws stay under "Still check yourself". */
 import { esc, haversine } from './util.js';
 import * as layers from './layers.js';
 import { nearLayer } from './tools-insights.js';
@@ -39,6 +42,12 @@ export const SPECIES = [
   { k: 'ducks', l: 'Ducks', fed: /^ducks$/, mig: true },
   { k: 'geese', l: 'Geese', fed: /geese/, mig: true },
 ];
+// how the hunter will shoot: a rule can ban firearms but not bows (No Shooting Area), or rifles but not shot (Shot Only Area)
+export const METHODS = [
+  { k: 'rifle', l: 'Rifle (or shotgun slug)' },
+  { k: 'shot', l: 'Shotgun with shot' },
+  { k: 'bow', l: 'Bow or crossbow' },
+];
 const SYN = 'BC Hunting and Trapping Regulations Synopsis 2026 to 2028';
 const SYN_URL = 'https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf';
 // Rules quoted in the app lessons (content/phase3/49-build-your-hunting-map.md, content/phase1/12-legal-to-shoot.md), synopsis read directly 2026-10-02.
@@ -47,7 +56,7 @@ const RULE = {
   reserve: { t: 'Indian Reserves are private land. Permission must be obtained (from the Nation).', page: 9, cert: 99 },
   m100: { t: 'No hunting or shooting within 100 m (109 yd) of a dwelling, or a farm or ranch building occupied by people or animals.', page: 10, cert: 99 },
   road15: { t: 'Not within 15 m (16 yd) of the centre of a numbered highway or 2 lane public road, and no shooting across a road allowance.', page: 10, cert: 99 },
-  noShoot: { t: 'No Shooting Areas and closed areas are drawn on the synopsis maps for each region. They are not on this map yet.', page: 10, cert: 99 },
+  noShoot: { t: 'Other No Shooting Areas and closed areas are drawn only on the synopsis maps for each region. Town and city bylaws can also ban shooting.', page: 10, cert: 99 },
 };
 
 export function init(api) {
@@ -62,6 +71,8 @@ export function init(api) {
 
 const spOf = (k) => SPECIES.find((s) => s.k === k) || SPECIES[0];
 const pref = () => spOf(H.prefs.chSp || 'muledeer');
+const methodOf = (k) => METHODS.find((m) => m.k === k) || METHODS[0];
+const prefMethod = (sp) => methodOf(H.prefs.chMethod || (sp && sp.mig ? 'shot' : 'rifle'));
 const cert = (v) => (H.ui && H.ui.cert ? H.ui.cert(v) : `${v}%`);
 const fmtMD = (md) => { const [m, d] = String(md).split('-').map(Number); return m && d ? `${d} ${MON[m - 1]}` : String(md); };
 const jsonCache = new Map();
@@ -96,13 +107,16 @@ export function open(p) {
   const body = H.openSheet({ title: TITLE, modal: false, bar: 'tools',
     onClose: peek(() => { active = false; setMarker(null); }),
     html: `${intro('a quick YES, NO or CHECK for one spot, one animal, right now.',
-      ['Pick the animal.', 'Tap any point on the map (the sheet stays open), or use the buttons below.', 'It checks the MU (Management Unit), the season today, legal light, and land layers (private land, parks, reserves, city limits, closures).', 'Read every line, not just the light. CHECK means the app cannot be sure: the reason is shown.'])}
+      ['Pick the animal and how you will shoot.', 'Tap any point on the map (the sheet stays open), or use the buttons below.', 'It checks the MU (Management Unit), the season today, legal light, land layers (private land, parks, reserves, city limits, closures) and the mapped no shooting and no hunting areas.', 'Read every line, not just the light. CHECK means the app cannot be sure: the reason is shown.'])}
     <label class="hmm-field">Animal<select data-ch="sp" class="hh-select">${SPECIES.map((s) => `<option value="${s.k}" ${s.k === sp.k ? 'selected' : ''}>${esc(s.l)}</option>`).join('')}</select></label>
+    <label class="hmm-field">How you will shoot<select data-ch="method" class="hh-select">${METHODS.map((m) => `<option value="${m.k}" ${m.k === prefMethod(sp).k ? 'selected' : ''}>${esc(m.l)}</option>`).join('')}</select></label>
     <div data-out="ch">${lastP ? '' : '<p class="hh-tapnow">Tap any point on the map.</p>'}</div>
     <div class="hmm-btnrow"><button class="hmm-btn2" data-ch="centre">Check the map centre</button><button class="hmm-btn2" data-ch="gps">Check my location</button></div>
     ${BANNER}` });
   const sel = body.querySelector('[data-ch="sp"]');
   sel.onchange = () => { H.prefs.chSp = sel.value; H.savePrefs(); if (lastP) check(lastP); };
+  const msel = body.querySelector('[data-ch="method"]');
+  msel.onchange = () => { H.prefs.chMethod = msel.value; H.savePrefs(); if (lastP) check(lastP); };
   body.querySelector('[data-ch="centre"]').onclick = () => check(here('centre'));
   body.querySelector('[data-ch="gps"]').onclick = () => { const q = here('gps'); if (q) check(q); };
   if (p) check(p); else if (lastP && haversine(lastP, [map.getCenter().lng, map.getCenter().lat]) < 20000) check(lastP);
@@ -117,7 +131,7 @@ export async function check(p) {
   setMarker(p);
   const out = body.querySelector('[data-out="ch"]');
   if (out) { out.innerHTML = `<p class="hh-tapnow">Checking ${esc(H.units.coord(p[0], p[1]))}</p>`; toTop(body, out); }
-  const R = await evaluate(p, pref());
+  const R = await evaluate(p, pref(), new Date(), prefMethod(pref()).k);
   if (my !== tok || H.els.sheetB !== body || H.els.sheet.hidden) return R;
   const o = body.querySelector('[data-out="ch"]');
   if (o) { o.innerHTML = render(R); toTop(body, o); } // the light at the top of the sheet
@@ -127,14 +141,16 @@ export async function check(p) {
 const toTop = (body, el) => { body.scrollTop = Math.max(0, body.scrollTop + el.getBoundingClientRect().top - body.getBoundingClientRect().top - 6); };
 
 // ---------- the checks ----------
-/** Every check for point p and species sp, now. Returns { light: 'yes' | 'no' | 'check', items: [{ st: ok | no | check | info, h, t, src }], ... }. */
-export async function evaluate(p, sp, now = new Date()) {
+/** Every check for point p, species sp and method (rifle | shot | bow), now. Returns { light: 'yes' | 'no' | 'check', items: [{ st: ok | no | check | info, h, t, src }], ... }. */
+export async function evaluate(p, sp, now = new Date(), method) {
+  const meth = methodOf(method || (H.prefs && H.prefs.chMethod) || (sp.mig ? 'shot' : 'rifle'));
   const items = [], today = todayPacific(now);
   const add = (st, h, t, src) => items.push({ st, h, t, src: src || '' });
   const synSrc = (page, c) => `${SYN}, page ${page}. ${cert(c)} <a href="${SYN_URL}" target="_blank" rel="noopener">Synopsis PDF</a>`;
-  const [mu, priv, res, park, city, wma, clos, osm] = await Promise.all([
+  const [mu, priv, res, park, city, wma, clos, nsh, unm, osm] = await Promise.all([
     safe(layers.muAt(p)), safe(nearLayer('private_land', p, 0)), safe(nearLayer('reserves', p, 0)), safe(nearLayer('parks', p, 0)),
-    safe(nearLayer('city_limits', p, 0)), safe(nearLayer('wma', p, 0)), safe(nearLayer('closures', p, 0)),
+    safe(nearLayer('city_limits', p, 0)), safe(nearLayer('wma', p, 0)), safe(nearLayer('closures', p, 0)), safe(nearLayer('no_hunting', p, 0)),
+    safe(getJSON('data/addons/noshoot/unmapped.json')),
     safe(osmArea(map, bboxAround(p, 160), ['building', 'transportation'])),
   ]);
   // 1. MU
@@ -170,13 +186,23 @@ export async function evaluate(p, sp, now = new Date()) {
   if (ct) add('check', `Inside ${esc(ct.props.name || ct.props.abbr || 'city or town limits')}`, 'Most cities and towns ban shooting inside their limits by bylaw. Check the local bylaw.', `Map: ${lay(city)}`);
   if (wm) add('check', `Wildlife Management Area (WMA)${wm.props.name ? `: ${esc(wm.props.name)}` : ''}`, 'Hunting is often allowed, but some WMAs have their own rules. “Before hunting in a Conservation Land, please contact your regional office.”', `${synSrc(9, 99)}<br>Map: ${lay(wma)}`);
   for (const h of cl) add('check', `Motor vehicle closure${h.props.name ? `: ${esc(h.props.name)}` : ''}`, `Limits driving, not always hunting. ${esc(h.props.dates || '')}${h.props.map ? ` Synopsis map ${esc(h.props.map)}.` : ''} Read the closure before you drive in.`, `Map: ${lay(clos)}`);
+  // no shooting / no hunting areas: the method decides (a No Shooting Area bans firearms, not bows)
+  for (const h of nsh && nsh.hits ? nsh.hits.filter((x) => x.dist === 0) : []) {
+    const x = h.props, v = x[meth.k] || 'check', head = `${esc(x.ban || 'No shooting or hunting area')} ${esc(x.name || '')}`;
+    const src = `${esc(x.src || SYN)}${x.map ? `, Map ${esc(x.map)}` : ''}. ${x.page ? `<a href="${SYN_URL}" target="_blank" rel="noopener">Synopsis PDF</a>. ` : ''}Area ${cert(x.cert || 80)}<br>Boundary: ${esc(x.boundary || '')}`;
+    const why = `${esc(x.rule || '')}<br>${esc(x.methods || '')}<br>You picked: ${esc(meth.l.toLowerCase())}.`;
+    if (v === 'no') add('no', head, `${why} Not allowed here.`, src);
+    else if (v === 'check') add('check', head, `${why} ${x.kind === 'noshoot' ? 'Read the synopsis map for a bow restriction before you hunt here.' :'The app cannot tell if this exact spot is closed. Read the rule and the map before you shoot.'}`, src);
+    else add('info', head, `${why} This rule does not ban it.`, src);
+  }
+  if (!nsh || nsh.state !== 'ok') add('check', 'No shooting and no hunting areas: not checked', nsh && nsh.state === 'missing' ? 'This map has no no shooting layer yet. Open the map with signal to update it.' : 'The no shooting layer is not on this phone here. Open the map with signal, or save this area in Offline Maps.');
   const covers = (id) => { const st = layers.stateOf(id); return !!(st && st.files.some((f) => !f.box || (p[0] >= f.box[0] && p[0] <= f.box[2] && p[1] >= f.box[1] && p[1] <= f.box[3]))); };
   const LAND = [['private land', 'private_land', priv], ['reserves', 'reserves', res], ['parks', 'parks', park], ['city limits', 'city_limits', city]];
   const noData = LAND.filter(([, id, x]) => !read(x) && !covers(id)).map(([n]) => n);
   const unread = LAND.filter(([, id, x]) => !read(x) && covers(id)).map(([n]) => n);
   if (noData.length) add('check', 'No land data for this area in the app', `Not checked here: ${noData.join(', ')}. The app has this layer only for the hunting areas it covers. Check a land status map or ask the land owner.`);
   if (unread.length) add('check', 'Some land layers are not on this phone here', `Not checked: ${unread.join(', ')}. Open the map with signal, or save this area in Offline Maps.`);
-  if (!noData.length && !unread.length && !pv && !rv && !pk && !ct && !wm && !cl.length) add('ok', 'Land status layers', 'No private land, reserve, park, city limits, WMA or motor vehicle closure at this point in the loaded layers. Signs on the ground still rule.');
+  if (!noData.length && !unread.length && !pv && !rv && !pk && !ct && !wm && !cl.length) add('ok', 'Land status layers', 'No private land, reserve, park, city limits, WMA, motor vehicle closure or mapped no shooting area at this point in the loaded layers. Signs on the ground still rule.');
 
   // 5. buildings and roads near the point (OpenStreetMap: not every building is mapped)
   const remind = [];
@@ -191,10 +217,16 @@ export async function evaluate(p, sp, now = new Date()) {
     if (rd <= 15) add('check', `Road ${Math.round(rd)} m away on the map`, RULE.road15.t, `${synSrc(RULE.road15.page, RULE.road15.cert)}<br>Map: OpenStreetMap roads`);
     else remind.push(RULE.road15);
   } else remind.push(RULE.m100, RULE.road15);
-  remind.unshift(RULE.noShoot);
+  // closures in this MU that are not drawn (their line is only on a synopsis map), then the general reminder
+  const RG = region ? region.toUpperCase() : '';
+  const inRegion = (x) => RG && String(x.region).startsWith(RG); // MU 7-xx: regions 7A and 7B
+  const um = ((unm && unm.items) || []).filter((x) => (muId && (x.mus || []).includes(muId)) || (!(x.mus || []).length && inRegion(x)));
+  remind.unshift(...um.map((x) => ({ t: `${[x.map && `Map ${x.map}`, x.name].filter(Boolean).join(' ')}: ${x.text} Not drawn on this map: ${x.page ? `check the synopsis map, page ${x.page}` : 'read the regulation'}.`, page: x.page, cert: x.cert, src: x.page ? '' : x.src })));
+  if (RG && unm && !(unm.items || []).some(inRegion)) remind.unshift({ t: `The app has no list of No Shooting Areas for Region ${RG} yet. Check that region's synopsis map pages.`, page: 10, cert: 99 });
+  remind.push(RULE.noShoot);
 
   const light = items.some((i) => i.st === 'no') ? 'no' : items.some((i) => i.st === 'check') ? 'check' : 'yes';
-  return { p, sp, light, items, remind, muId, osm: !!(osm && osm.got), when: now };
+  return { p, sp, method: meth.k, light, items, remind, muId, osm: !!(osm && osm.got), when: now };
 }
 
 function seasonItems(sp, muId, regs, today, add, synSrc) {
@@ -304,7 +336,7 @@ function render(R) {
     <p class="hmm-muted">At ${esc(H.units.coord(R.p[0], R.p[1]))}</p>
     <ul class="hh-checks">${R.items.map((i) => `<li class="${ST[i.st][1]}"><em>${ST[i.st][0]}</em><div><b>${i.h}</b>${i.t ? `<p>${i.t}</p>` : ''}${i.src ? `<small>${i.src}</small>` : ''}</div></li>`).join('')}</ul>
     <h3 class="hmm-h">Still check yourself</h3>
-    <ul class="hh-remind">${R.remind.map((x) => `<li>${esc(x.t)} <small>${esc(SYN)}, page ${x.page}. ${cert(x.cert)}</small></li>`).join('')}
+    <ul class="hh-remind">${R.remind.map((x) => `<li>${esc(x.t)} <small>${x.src ? esc(x.src) : `${esc(SYN)}, page ${x.page}`}. ${cert(x.cert)}</small></li>`).join('')}
       <li>Carry your hunting licence and the species licence for this animal. <small>${esc(SYN)}, pages 5 and 8. ${cert(99)}</small></li></ul>`;
 }
 

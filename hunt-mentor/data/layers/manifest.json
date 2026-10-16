@@ -195,6 +195,73 @@
    "bytes": 96703
   },
   {
+   "id": "no_hunting",
+   "group": "Land status",
+   "label": "No shooting / no hunting areas",
+   "type": "fill",
+   "minzoom": 6,
+   "paint": {
+    "fill-color": [
+     "match",
+     [
+      "get",
+      "kind"
+     ],
+     "noshoot",
+     "#ef6c00",
+     "check",
+     "#f9a825",
+     "#d32f2f"
+    ],
+    "fill-opacity": 0.1
+   },
+   "popup": [
+    [
+     "What is banned",
+     "ban"
+    ],
+    [
+     "Rule",
+     "rule"
+    ],
+    [
+     "Rifle, shotgun, bow",
+     "methods"
+    ],
+    [
+     "Source",
+     "src"
+    ],
+    [
+     "Synopsis map",
+     "map"
+    ],
+    [
+     "Boundary",
+     "boundary"
+    ],
+    [
+     "Certainty",
+     "certText"
+    ],
+    [
+     "MU (Management Unit)",
+     "mu"
+    ]
+   ],
+   "labelField": "name",
+   "legal": true,
+   "source": "Synopsis 2026 to 2028 and Closed Areas Regulation rules, drawn on official outlines: TA_PARK_ECORES_PA_SVW, CLAB_NATIONAL_PARKS, ABMS_MUNICIPALITIES_SP, TA_WILDLIFE_MGMT_AREAS_SVW, FWA_LAKES_POLY and the MU 3-45 outline",
+   "about": "Areas where hunting or shooting is banned, drawn only where the legal area is an official outline (BC wide: ecological reserves and national parks; Region 3: the closures listed in the Rule Book that follow an official outline). Most No Shooting Areas are not drawn: see the synopsis maps.",
+   "cert": 90,
+   "file": "data/layers/bc/no_hunting.geojson",
+   "areas": "BC",
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-16",
+   "bytes": 551787,
+   "features": 258
+  },
+  {
    "id": "mu",
    "group": "Hunting",
    "label": "Management Units",
