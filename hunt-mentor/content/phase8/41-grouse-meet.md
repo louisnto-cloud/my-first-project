@@ -35,6 +35,7 @@ checked: 2026-10-11
 ```gallery
 g-ruffed-grey | Grey phase male displaying. Unbroken black tail band.
 ruffed-grouse-hen | Hen in leaves. Small crest, barred brown.
+bd-ruffed-male-tail | Male fanning his tail in display, Alberta. Read the dark band near the tip.
 ```
 
 ```more every mark, with numbers
@@ -51,6 +52,7 @@ ruffed-grouse-hen | Hen in leaves. Small crest, barred brown.
 ```gallery
 g-spruce-male | Male: black throat and breast, red comb.
 spruce-grouse-hen | Hen: heavy black and white barring.
+bd-spruce-pair-bc | Pair near Nelson, BC. Franklin's male: white spots above a black tail. Hen behind.
 ```
 
 - Male black below with a red comb; hen barred grey or rust (80%).
@@ -143,6 +145,7 @@ g-sooty-male | Sooty male: the coast form.
 ```gallery
 sharp-tailed-grouse | Pale, spotted belly, short pointed tail.
 sharp-tailed-grouse-snow | In snow near Fort St. John, BC.
+bd-sharptail-dance | Male dancing on a spring lek. Pointed tail up, purple neck sac.
 ```
 
 - Pale, V marks on a white breast, pointed tail (85%).
@@ -167,6 +170,10 @@ sharp-tailed-grouse-snow | In snow near Fort St. John, BC.
 ```gallery
 g-ptarmigan-summer | White tailed ptarmigan in summer: mottled.
 g-ptarmigan-winter | Willow ptarmigan in winter: white, black tail.
+bd-wt-ptarmigan-fall | White tailed ptarmigan, Alberta Rockies. White tail, white wings.
+bd-willow-ptarmigan-spring | Willow ptarmigan male in spring, northern BC. Chestnut head, red comb.
+bd-rock-ptarmigan-male-winter | Rock ptarmigan male in winter. Black stripe through the eye.
+bd-wt-ptarmigan-winter | White tailed ptarmigan in winter, Colorado. All white on snow.
 ```
 
 - Three kinds; white wings all year, feathered feet (85%).

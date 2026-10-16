@@ -170,6 +170,9 @@ lesser-scaup-hen | Scaup hen: white at the bill.
 ```diagram mdk-noshot-flow
 ```
 
+```photo bd-american-coot Coot: slate black, white chicken bill, red eye. Own limit of 10.
+```
+
 - Loons, grebes and swans: no open season (90%).
 - Coots are legal with their own limit of 10 (99%).
 

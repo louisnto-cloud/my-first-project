@@ -60,6 +60,10 @@ g-sooty-male | Sooty grouse male: the coast blue grouse.
 ```gallery
 g-ptarmigan-summer | Ptarmigan in summer: mottled, above timberline.
 g-ptarmigan-winter | Ptarmigan in winter: white.
+bd-sharptail-dance | Sharp tailed male dancing in spring. Short pointed tail held up.
+bd-wt-ptarmigan-fall | White tailed ptarmigan, Alberta Rockies. White tail, white wings.
+bd-rock-ptarmigan-male-winter | Rock ptarmigan male in winter. Black stripe through the eye.
+bd-willow-ptarmigan-spring | Willow ptarmigan male in spring, northern BC. Chestnut head and neck.
 ```
 
 - Sharp tailed: only MUs (Management Units) 3-30 and 3-31 in Region 3 (99%).

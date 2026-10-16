@@ -21,6 +21,8 @@ g-ruffed-grey | Grey phase male displaying, Peace River country, BC. Grey tail, 
 ruffed-grouse-hen | In fall leaves. Barred brown, small crest, fan tail.
 g-ruffed-snow | In snow, Oregon. Crest, barred body, long tail with a dark band.
 g-ruffed-tree | In a tree, Glacier National Park. Grouse eat buds up in aspen and birch.
+bd-ruffed-male-display | Male in fall display, Elk Island National Park, Alberta. Black neck ruff raised.
+bd-ruffed-male-tail | The same male fanning his tail. The dark band runs across near the tip.
 ```
 
 - Grey and red (brown) colour phases. The tail band is the same in both (80%).
@@ -49,6 +51,7 @@ commons-dusky-grouse | A male dusky (blue) grouse showing off for a hen.
 ```gallery
 g-spruce-male | Male displaying, Ontario. Black throat and breast, red comb.
 spruce-grouse-hen | Hen. Heavy black and white barring on brown.
+bd-spruce-pair-bc | Pair near Nelson, BC. Franklin's male: white spots above a black tail. Hen behind.
 ```
 
 - Dark conifer forest, often on the ground near spruce and lodgepole pine (80%).
@@ -62,6 +65,8 @@ sharp-tailed-grouse | Sharp tailed grouse in summer grass. Pale, spotted, short 
 sharp-tailed-grouse-snow | Sharp tailed grouse in snow near Fort St. John, BC.
 g-ptarmigan-summer | White tailed ptarmigan in summer, Mount Rainier. Mottled, on alpine rock.
 g-ptarmigan-winter | Willow ptarmigan in winter, Alaska. White, with black tail feathers.
+bd-wt-ptarmigan-fall | White tailed ptarmigan, Alberta Rockies. White tail and wings, mottled body.
+bd-rock-ptarmigan-male-winter | Rock ptarmigan male in winter, Alaska. Black stripe through the eye.
 ```
 
 - Sharp tailed grouse: pale, with a short pointed tail that shows white in flight (80%).
@@ -91,6 +96,7 @@ commons-quail-male | Male California quail: black face, curled plume.
 g-chukar | Chukar. Red bill and legs, black necklace, barred flanks.
 g-pheasant-rooster | Pheasant rooster, South Dakota. Green head, red face, white ring, long tail.
 g-pheasant-hen | Pheasant hen, England. Buff brown, long pointed tail.
+bd-pheasant-cock-flight | Rooster flushing, South Dakota. In the air: dark green head, white ring, copper body.
 ```
 
 - Chukar: steep rocky slopes and cheatgrass; runs uphill, flies downhill (80%).
@@ -121,6 +127,7 @@ snowshoe-hare-winter | Winter coat. White, with huge furred hind feet.
 
 ```gallery
 g-sage-grouse | Greater sage grouse male displaying. Spiky tail, white chest.
+bd-mountain-quail | Mountain quail, California. Long straight plume, chestnut throat, white bars on red sides.
 ```
 
 > [!warn] Study aid only. The official regulations are the law.

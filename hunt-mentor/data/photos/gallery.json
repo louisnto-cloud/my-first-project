@@ -1456,5 +1456,134 @@
   "licence": "CC BY-SA 4.0",
   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "source": "https://commons.wikimedia.org/wiki/File:Black_Brant_at_Vacation_Isle,_San_Diego.jpg"
+ },
+ {
+  "id": "bd-mountain-quail",
+  "species": "Mountain quail",
+  "caption": "Mountain quail, California. Long straight plume, chestnut throat, bold white bars on red brown sides. No open season in BC.",
+  "author": "Alan Schmierer",
+  "licence": "CC0",
+  "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Mountainquail_(cropped).jpg",
+  "card": true,
+  "cardBack": "Mountain quail: straight plume, white bars on red sides. No open season. Never shoot it.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "bd-ruffed-male-display",
+  "species": "Ruffed grouse",
+  "caption": "Ruffed grouse male in fall display, Elk Island National Park, Alberta. Black neck ruff raised, tail cocked.",
+  "author": "Rhododendrites",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Ruffed_grouse_(80585).jpg"
+ },
+ {
+  "id": "bd-ruffed-male-tail",
+  "species": "Ruffed grouse",
+  "caption": "Ruffed grouse male fanning his tail, Elk Island National Park, Alberta. Read the dark band near the tip.",
+  "author": "Rhododendrites",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Ruffed_grouse_(80685).jpg"
+ },
+ {
+  "id": "bd-spruce-pair-bc",
+  "species": "Spruce grouse",
+  "caption": "Spruce grouse pair near Nelson, BC. Franklin's male: red comb, black tail with white spots above it. Barred hen behind.",
+  "author": "Pymaxio",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Male_and_female_spruce_grouse_Nelson_BC.jpg",
+  "card": true,
+  "cardBack": "Spruce grouse (Franklin's form): male black with a red comb and white spots above the tail; hen barred.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "bd-sharptail-dance",
+  "species": "Sharp tailed grouse",
+  "caption": "Sharp tailed grouse male dancing on a spring lek, North Dakota. Short pointed tail up, purple neck sac, yellow comb.",
+  "author": "U.S. Fish and Wildlife Service Headquarters",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Male_sharp-tailed_grouse_dancing_(6862203403).jpg"
+ },
+ {
+  "id": "bd-wt-ptarmigan-fall",
+  "species": "White tailed ptarmigan",
+  "caption": "White tailed ptarmigan, Alberta Rockies. White tail and wings, mottled grey brown body, feathered feet.",
+  "author": "John Hill",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:White-tailed_Ptarmigan,_Rocky_Mountains,_Alberta.jpg",
+  "card": true,
+  "cardBack": "White tailed ptarmigan: white tail in every season. Willow and rock ptarmigan have black tails.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "bd-wt-ptarmigan-winter",
+  "species": "White tailed ptarmigan",
+  "caption": "White tailed ptarmigan in winter, Guanella Pass, Colorado. All white, dark eye and bill.",
+  "author": "USFWS Mountain-Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:White-tailed_Ptarmigan_on_Guanella_Pass_in_Winter_(7090693425).jpg"
+ },
+ {
+  "id": "bd-willow-ptarmigan-spring",
+  "species": "Willow ptarmigan",
+  "caption": "Willow ptarmigan male in spring, Haines Highway, northern BC. Chestnut head and neck, red comb, white wings and belly.",
+  "author": "Murray Foubister",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Willow_Ptarmigan,_British_Columbia_by_Highway_7_to_Haines_1.jpg"
+ },
+ {
+  "id": "bd-rock-ptarmigan-male-winter",
+  "species": "Rock ptarmigan",
+  "caption": "Rock ptarmigan male in winter, Alaska. All white with a black stripe from the bill through the eye.",
+  "author": "Tim Bowman",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Lagopus_muta2.jpg",
+  "card": true,
+  "cardBack": "Rock ptarmigan male in winter: all white with a black stripe through the eye.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "bd-pheasant-cock-flight",
+  "species": "Ring necked pheasant",
+  "caption": "Ring necked pheasant cock flushing, Lacreek National Wildlife Refuge, South Dakota. Dark green head, red face, white neck ring, copper body, long barred tail.",
+  "author": "Tom Koerner, USFWS Mountain-Prairie",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Ring-necked_pheasant_flying_Lacreek_National_Wildlife_Refuge_(15008410261).jpg",
+  "card": true,
+  "cardBack": "Pheasant cock in the air: dark head, white ring, copper body. Legal. A plain brown bird with a long tail is a hen.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "bd-american-coot",
+  "species": "American coot",
+  "caption": "American coot, Gray Lodge Wildlife Area, California, November. Slate black, white chicken bill, red eye. Not a duck: its own limit.",
+  "author": "Frank Schulenburg",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:American_coot_at_Gray_Lodge_Wildlife_Area-0097.jpg",
+  "card": true,
+  "cardBack": "American coot: slate black, white chicken bill. Not a duck; its own daily limit.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "bd-pied-billed-grebe",
+  "species": "Pied billed grebe",
+  "caption": "Pied billed grebe in fall plumage, Sacramento National Wildlife Refuge, California, October. Small, brown, thick pale bill. A grebe: no open season.",
+  "author": "Frank Schulenburg",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Non-breeding_pied-billed_grebe-6514.jpg",
+  "card": true,
+  "cardBack": "Pied billed grebe: small brown diver, thick pale bill. Grebes have no open season.",
+  "cardDeck": "Photo ID"
  }
 ]

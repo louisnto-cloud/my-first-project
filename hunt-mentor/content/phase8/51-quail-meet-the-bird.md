@@ -76,6 +76,9 @@ g-quail-pair | A pair. The female is plainer and smaller in the plume.
 ```diagram mql-lookalikes
 ```
 
+```photo bd-mountain-quail Mountain quail: long straight plume, white bars on red sides. No open season.
+```
+
 > [!warn]
 > Study aid only. The official regulations are the law.
 

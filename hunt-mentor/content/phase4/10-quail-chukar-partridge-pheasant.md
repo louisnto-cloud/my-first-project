@@ -29,6 +29,7 @@ g-quail-male-vernon | Male: black face outlined in white, big plume.
 g-quail-female | Female: grey brown head, small plume.
 g-quail-pair | A pair: male on the left.
 hab-quail-vernon | Quail live in brushy farm and town edges.
+bd-mountain-quail | Look alike: mountain quail. Straight plume, white bars on red sides. No season.
 ```
 
 - Smallest here: 140 to 230 g (80%). Curved black topknot.
@@ -85,6 +86,7 @@ hab-quail-vernon | Quail live in brushy farm and town edges.
 ```gallery
 g-pheasant-rooster | Cock: green head, red wattles, white ring. Legal.
 g-pheasant-hen | Hen: brown, long tail. Never legal.
+bd-pheasant-cock-flight | Cock on the flush: dark head, white ring, copper body. See these first.
 ```
 
 - **Cocks only** in Regions 2, 3 and 8 (99%).

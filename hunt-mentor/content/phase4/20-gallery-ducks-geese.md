@@ -169,6 +169,7 @@ g-western-grebe | Western grebes. Long white neck, thin yellow bill.
 g-horned-grebe | Horned grebe in winter. Small, black cap, white cheeks.
 g-trumpeter-swan | Trumpeter swan. Huge, all white, black bill.
 g-tundra-swans-flight | Tundra swans in flight. No black wing tips.
+bd-pied-billed-grebe | Pied billed grebe in fall, California. Small, brown, thick pale bill. Pond look alike.
 ```
 
 > [!warn] Study aid only. The official regulations are the law.
