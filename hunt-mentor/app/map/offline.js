@@ -275,12 +275,18 @@ const overlap = (a, b) => { if (!b) return 1; const w = Math.max(0, Math.min(a[2
 async function areaFiles(bbox) {
   await layers.loadManifest();
   const out = new Map();
-  const hit = (b) => !b || (b[0] <= bbox[2] && b[2] >= bbox[0] && b[1] <= bbox[3] && b[3] >= bbox[1]);
+  const hit = (b, a = bbox) => !b || (b[0] <= a[2] && b[2] >= a[0] && b[1] <= a[3] && b[3] >= a[1]);
+  // layers.js opens a PMTiles file once its box is near the view (half a screen of padding), so a file just outside the area
+  // is still asked for its header offline: save the header and index of those too (pmRanges adds no tiles outside the area)
+  const d = Math.max(bbox[2] - bbox[0], bbox[3] - bbox[1]) * 0.5 + 0.3, near = [bbox[0] - d, bbox[1] - d, bbox[2] + d, bbox[3] + d];
   for (const l of layers.layerList()) {
     const st = layers.stateOf(l.id);
     if (!st || st.unsupported) continue;
     const part = st.spot || l.group === 'Spots' ? 'spots' : 'layers';
-    for (const f of st.files) if (hit(f.box)) out.set(f.url, { url: f.url, box: f.box, pm: /\.pmtiles(\?|$)/i.test(f.url), part, minzoom: l.minzoom });
+    for (const f of st.files) {
+      const pm = /\.pmtiles(\?|$)/i.test(f.url);
+      if (hit(f.box) || (pm && hit(f.box, near))) out.set(f.url, { url: f.url, box: f.box, pm, part, minzoom: l.minzoom });
+    }
     if (st.spot) for (const u of spots.detailFiles(l, bbox)) out.set(u, { url: u, box: null, pm: false, part: 'spots' });
   }
   return [...out.values()];

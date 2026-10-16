@@ -1,5 +1,6 @@
-/* Hunt Map plugin: "Hunt helpers", four beginner tools in the Tools sheet.
+/* Hunt Map plugin: "Hunt helpers", five beginner tools in the Tools sheet.
      canhunt    Can I hunt here now? (hunt-canhunt.js): YES / NO / CHECK for a tapped point
+     where      Where can I hunt? (hunt-where.js): turns on the "Where you can likely hunt" layer and explains it
      glass      Glassing spots and walk in zones (hunt-glass.js): from terrain and roads, worked out on the phone
      scent      Wind, scent cone and thermals with an hour slider (tools-wind.js, H.scentPanel)
      sightings  Sightings log and heatmap (hunt-sightings.js): saved on this phone, CSV export
@@ -9,7 +10,7 @@ import { esc } from './util.js';
 import * as ui from './hunt-ui.js';
 
 // each tool is its own module, loaded here (a tool that fails to load leaves the others working)
-const MODS = { canhunt: './hunt-canhunt.js', glass: './hunt-glass.js', sightings: './hunt-sightings.js' };
+const MODS = { canhunt: './hunt-canhunt.js', where: './hunt-where.js', glass: './hunt-glass.js', sightings: './hunt-sightings.js' };
 const mods = {};
 
 let H, map;
@@ -17,10 +18,12 @@ const IC = {
   canhunt: '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="4"/><circle cx="12" cy="7" r="2" fill="#c62828" stroke="none"/><circle cx="12" cy="12" r="2" fill="#b26a00" stroke="none"/><circle cx="12" cy="17" r="2" fill="#2e7d32" stroke="none"/></svg>',
   glass: '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="15" r="4"/><circle cx="17" cy="15" r="4"/><path d="M11 15h2M5 11l2-6h2M19 11l-2-6h-2"/></svg>',
   scent: '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="2.2" fill="currentColor"/><path d="M7 11 21 5v14L7 13" fill="#7b2cbf" fill-opacity=".25"/><path d="M12 20c1-2 3-2 4 0" stroke="#d6336c"/></svg>',
+  where: '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/><path d="M15 6l6-3v15l-6 3z" fill="#00c853" fill-opacity=".35" stroke="none"/></svg>',
   sightings: '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.6" fill="currentColor"/><path d="M19 3v4M17 5h4"/></svg>',
 };
 export const TOOLS = [
   ['canhunt', 'Can I hunt here now?', 'Yes, no or check'],
+  ['where', 'Where can I hunt?', 'Likely open land'],
   ['glass', 'Glassing and walk in', 'High points, quiet land'],
   ['scent', 'Scent and thermals', 'Wind by the hour'],
   ['sightings', 'Sightings log', 'Log, heatmap, export'],

@@ -20,7 +20,14 @@ const MU_TEXT = ['to-string', ['coalesce', ['get', 'MU'], ['get', 'mu'], ['get',
    short: name in the Land chip. label: replaces the manifest label. legend: [text, colour] rows. */
 export const STYLE = {
   // Land status: bold where you cannot just walk in, almost clear where you can
-  crown: { short: 'Crown', paint: { 'fill-color': '#ffffff', 'fill-opacity': 0.06 }, outline: { color: '#7c8b5a', width: zw(0.5, 1, 1.6) } },
+  // Crown land (scripts/build-crown.py): cls crown (provincial parcel), likely (no titled parcel, derived), federal (CHECK)
+  crown_land: { short: 'Crown', paint: { 'fill-color': ['match', ['get', 'cls'], 'crown', '#66bb6a', 'federal', '#00b0ff', '#c5e1a5'], 'fill-opacity': ['match', ['get', 'cls'], 'likely', 0.3, 0.2] },
+    outline: { color: ['match', ['get', 'cls'], 'crown', '#388e3c', 'federal', '#0091ea', '#9ccc65'], width: zw(0.4, 0.8, 1.4) },
+    legend: [['Crown land (provincial parcel)', '#66bb6a'], ['Likely Crown land (no titled parcel)', '#c5e1a5'], ['Federal land: CHECK', '#00b0ff']] },
+  crown_tenures: { short: 'Tenure', paint: { 'fill-color': '#8d6e63', 'fill-opacity': 0.08 }, hatch: '#8d6e63', outline: { color: '#5d4037', width: zw(0.6, 1.2, 2) } },
+  hunt_likely: { short: 'Likely open', paint: { 'fill-color': ['match', ['get', 'cls'], 'open', '#00c853', '#9e9e9e'], 'fill-opacity': ['match', ['get', 'cls'], 'open', 0.26, 0.32] },
+    outline: { color: ['match', ['get', 'cls'], 'open', '#1b5e20', '#616161'], width: zw(0.4, 0.9, 1.5) },
+    legend: [['Likely open to hunt (check season, MU and signs)', '#00c853'], ['Check first: tenure, federal land or park', '#9e9e9e']] },
   private_land: { short: 'Private', paint: { 'fill-color': '#ff8f00', 'fill-opacity': 0.3 }, outline: { color: '#d84315', width: zw(0.5, 1.3, 2.6), casing: 13 } },
   parks: { short: 'Park', paint: { 'fill-color': '#2e7d32', 'fill-opacity': 0.2 }, outline: { color: '#1b5e20', width: zw(1.2, 2.2, 3), casing: true } },
   reserves: { short: 'Reserve', label: 'First Nations reserves (Indian Reserves)', paint: { 'fill-color': '#ffeb3b', 'fill-opacity': 0.34 }, outline: { color: '#d4a000', width: zw(1.6, 2.6, 3.4), casing: true } },
@@ -44,7 +51,9 @@ export const STYLE = {
 
 /* Plain English: what it shows, why a hunter cares, and where the rules are. */
 export const GUIDE = {
-  crown: { what: 'Crown land: public land owned by the province. Left almost clear so the map shows through.', why: 'Most BC hunting happens here, in an open season, outside closures and parks that ban it.', links: [RB_WHERE, L_LAND] },
+  crown_land: { what: 'Green = public land you can usually hunt on in season. Always still check closures, parks, no shooting areas and posted signs. Mid green: Crown land parcels in ParcelMap BC (90% sure it is Crown land). Light green: likely Crown land, worked out by the app as land with no titled parcel, reserve, treaty land, park or town (80%). Blue: federal land, CHECK. Shows from zoom 8.', why: 'On Crown land the open seasons apply (synopsis page 11). Most BC hunting happens here. A green colour is never a sure yes: use Can I hunt here now? for one spot.', links: [RB_WHERE, L_LAND] },
+  crown_tenures: { what: 'Leases, licences of occupation, permits and rights of way on Crown land, brown stripes. Tap one for its type and purpose.', why: 'Hunting is often allowed, but buildings, fences, posted signs and the 100 m (109 yd) dwelling rule may apply: CHECK. A grazing lease with livestock on it needs the lessee\'s consent, and leased land is under the Trespass Act (synopsis page 9).', links: [RB_WHERE] },
+  hunt_likely: { what: 'Bright green: likely open to hunt. It is Crown land (or likely Crown land) with the mapped no hunting and no shooting areas, towns, tenures and federal land taken out. Grey: check first (a tenure, federal land, or a park where rules differ). Worked out by the app, about 75% sure.', why: 'A fast first look at where to start. Never a sure yes: the season, the MU (Management Unit), signs, most No Shooting Areas (not drawn) and the 100 m (109 yd) rule still decide. Motor vehicle closures are not taken out: they limit driving, not hunting.', links: [RB_WHERE, L_LAND] },
   private_land: { what: 'Private parcels from ParcelMap BC, merged into blocks. Orange with a strong outline.', why: 'You need the owner\'s permission to hunt or cross. Owner names are not open data. Not every parcel is fenced or signed.', links: [RB_WHERE, L_LAND] },
   parks: { what: 'Provincial parks, ecological reserves and protected areas. Green with a dark green edge.', why: 'Many parks ban hunting and shooting. Ecological reserves are closed to hunting. Check the park\'s own page and the Rule Book before you go.', links: [RB_WHERE] },
   reserves: { what: 'First Nations reserves (called Indian Reserves in the official data and the synopsis). Yellow with a gold edge.', why: 'The synopsis treats a reserve like private land. Ask the band office before you hunt on it or cross it.', links: [RB_WHERE] },
@@ -85,7 +94,8 @@ export const GUIDE = {
 // New or renamed layers from the data pipeline: match by words in id, label or source
 const KEYS = [
   [/no[ _]?(hunt|shoot)|closed[ _]to[ _]hunt|ecolog/i, 'no_hunting'],
-  [/crown/i, 'crown'],
+  [/tenure/i, 'crown_tenures'],
+  [/crown/i, 'crown_land'],
   [/private|parcel/i, 'private_land'],
   [/indian[ _]?reserve|first[ _]nation|clab|^reserves?$/i, 'reserves'],
   [/park|protected/i, 'parks'],
