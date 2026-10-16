@@ -965,7 +965,7 @@
   }
   function studyDay() {
     const t = dayISO();
-    if (!S.study || S.study.date !== t) S.study = Object.assign({}, S.study, { date: t, base: {}, q: null, cardsDone: 0 });
+    if (!S.study || S.study.date !== t) S.study = Object.assign({}, S.study, { date: t, base: {}, q: null, cardsDone: 0, again: [] });
     S.study.base = S.study.base || {};
     return S.study;
   }
@@ -974,17 +974,18 @@
     const P = studyPath(plan.species, lessons), st = pathStats(P.all), ms = pathStats(P.must);
     const day = studyDay(), t = day.date, pace = plan.pace || 'must'; // owner default 2026-10-16: must know by the hunt
     const daysToGo = plan.from ? dayDiff(t, plan.from) : null;
-    if (!day.base[plan.id]) {
+    const key = plan.id + ':' + plan.species; // a changed animal starts a fresh count
+    if (!day.base[key]) {
       const per10 = Math.max(1, Math.round(STUDY_MIN / Math.max(0.3, st.perScreen)));
-      const fit = (left) => (daysToGo > 0 ? Math.ceil(left / daysToGo) : left);
-      day.base[plan.id] = { seen: st.seen, n: pace === 'fit' ? Math.max(per10, fit(st.left)) : pace === 'must' ? Math.max(per10, fit(ms.left)) : per10 };
+      const fit = (left) => (daysToGo > 0 ? Math.ceil(left / daysToGo) : 0); // no days left before the hunt: keep the 10 minute pace
+      day.base[key] = { seen: st.seen, n: pace === 'fit' ? Math.max(per10, fit(st.left)) : pace === 'must' ? Math.max(per10, fit(ms.left)) : per10 };
       save();
     }
-    const b = day.base[plan.id], doneToday = Math.max(0, st.seen - b.seen), leftToday = Math.max(0, b.n - doneToday);
+    const b = day.base[key], doneToday = Math.max(0, st.seen - b.seen), leftToday = Math.min(st.left, Math.max(0, b.n - doneToday));
     const finish = st.left ? addDays(t, Math.max(0, Math.ceil((st.left - leftToday) / b.n))) : t;
     const mustFinish = ms.left ? addDays(t, Math.max(0, Math.ceil((ms.left - leftToday) / b.n))) : t;
     const perDay = (left) => (daysToGo > 0 ? Math.round((left / daysToGo) * st.perScreen) + 2 : null); // minutes a day to finish by the first hunt day
-    return { path: P, st, must: ms, todayN: b.n, doneToday, leftToday, finish, mustFinish, daysToGo, pace, minPerDay: Math.round(b.n * st.perScreen) + 2, mustPerDay: perDay(ms.left), allPerDay: perDay(st.left) };
+    return { path: P, st, must: ms, todayN: b.n, doneToday, leftToday, finish, mustFinish, daysToGo, pace, minPerDay: Math.round(Math.min(b.n, doneToday + st.left) * st.perScreen) + 2, mustPerDay: perDay(ms.left), allPerDay: perDay(st.left) };
   }
   // ---------- spaced repetition: S.srs[id] = { e: ease, i: interval days, r: repetitions, d: due date } ----------
   function grade(id, knew) {
@@ -996,7 +997,7 @@
     S.srs[id] = c;
     S.cards = S.cards || {}; S.cards[id] = knew ? Math.min(2, (S.cards[id] || 0) + 1) : 0; // keep the deck counts in step
   }
-  function dailyQueue() {
+  function dailyQueue(more) {
     const day = studyDay();
     if (day.q) return day.q;
     const all = allCards(), t = dayISO(), srs = S.srs || {};
@@ -1009,7 +1010,7 @@
     const decks = Object.keys(byDeck), mixed = [];
     for (let k = 0; mixed.length < DAY_CARDS * 2 && decks.some((d) => byDeck[d].length); k++) { const d = decks[k % decks.length]; if (byDeck[d].length) mixed.push(byDeck[d].shift()); }
     const newIds = readQuiz.concat(mixed).map((c) => c.id);
-    day.q = due.concat(newIds).slice(0, Math.max(DAY_CARDS, Math.min(due.length, 50)));
+    day.q = due.concat(newIds).slice(0, more ? DAY_CARDS : Math.max(DAY_CARDS, Math.min(due.length, 50)));
     day.dueCount = due.length;
     save();
     return day.q;
@@ -1021,7 +1022,7 @@
     if (!left.length) {
       view.innerHTML = `<div class="card"><h2>Cards done for today</h2><p>${day.cardsDone || 0} cards reviewed. Cards you knew come back in 1 day, then 6 days, then further apart. Cards you missed come back tomorrow.</p>
         <div class="btn-row"><a class="btn primary" href="#/">Home</a><button class="btn" id="dl-more">10 more cards</button><a class="btn" href="#/cards">All decks</a></div></div>`;
-      $('#dl-more').onclick = () => { day.q = null; if (!dailyQueue().length) toast('No more cards for today.'); daily(); };
+      $('#dl-more').onclick = () => { day.q = null; if (!dailyQueue(true).length) toast('No more cards for today.'); daily(); };
       return;
     }
     const card = byCard[left[0]];

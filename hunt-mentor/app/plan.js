@@ -819,7 +819,7 @@
     const go = st.next ? `#/s/${esc(st.next.id)}/${st.next.i}` : '#/learn';
     return { T, html: `<div class="pl-study">
       <div class="pl-kv"><span>Today</span><b>${T.leftToday ? `${T.leftToday} screen${T.leftToday === 1 ? '' : 's'}` : 'Screens done &#10003;'}, ${cl ? `${cl} card${cl === 1 ? '' : 's'}` : 'cards done &#10003;'}</b></div>
-      ${T.daysToGo != null ? `<div class="pl-kv"><span>Hunt starts</span><b>${T.daysToGo > 0 ? `${T.daysToGo} day${T.daysToGo === 1 ? '' : 's'} to go` : 'Now'}</b></div>` : ''}
+      ${T.daysToGo != null && (p.to || p.from) >= C.study.dayISO() ? `<div class="pl-kv"><span>Hunt starts</span><b>${T.daysToGo > 0 ? `${T.daysToGo} day${T.daysToGo === 1 ? '' : 's'} to go` : 'Now'}</b></div>` : ''}
       <div class="muted pl-small">Path: ${st.seen} of ${st.total} screens read. Must know: ${T.must.seen} of ${T.must.total}.</div>
       <div class="bar"><i style="width:${Math.round((st.seen / Math.max(1, st.total)) * 100)}%"></i></div>
       <div class="pl-kv"><span>Must know done</span><b>${T.must.left ? fmtDay(T.mustFinish) : 'Done &#10003;'}${mustLate ? ' <span class="pl-late">after hunt starts</span>' : ''}</b></div>
